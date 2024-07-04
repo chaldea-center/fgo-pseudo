@@ -1,18 +1,17 @@
 void __fastcall CombineCostumeMaster___ctor(CombineCostumeMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_438B1CC & 1) == 0 )
+  if ( (byte_48E25CC & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string___ctor__);
-    byte_438B1CC = 1;
+    sub_1B00CCC(&Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string___ctor__, method);
+    byte_48E25CC = 1;
   }
-  DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
-    (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
+  DataMasterBase_object__object__object____ctor(
+    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     204,
-    (const MethodInfo_21FBC48 *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string___ctor__);
+    (const MethodInfo_2FE6D64 *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall CombineCostumeMaster__CheckNeedCombineInfo(
         CombineCostumeMaster_o *this,
         int32_t svtId,
@@ -22,60 +21,39 @@ void __fastcall CombineCostumeMaster__CheckNeedCombineInfo(
         int32_t *qp,
         const MethodInfo *method)
 {
-  System_Int32_array *v7; // x7
-  System_String_array **v14; // x2
-  System_String_array **v15; // x3
-  System_Boolean_array **v16; // x4
-  System_Int32_array **v17; // x5
-  System_Int32_array *v18; // x6
-  System_Int32_array *v19; // x7
-  const MethodInfo *v20; // x4
-  _BOOL8 v21; // x0
-  __int64 v22; // x1
-  System_String_array **v23; // x2
-  System_String_array **v24; // x3
-  System_Boolean_array **v25; // x4
-  System_Int32_array **v26; // x5
-  System_Int32_array *v27; // x6
-  System_Int32_array *v28; // x7
-  System_Int32_array *v29; // x1
-  System_String_array **v30; // x2
-  System_String_array **v31; // x3
-  System_Boolean_array **v32; // x4
-  System_Int32_array **v33; // x5
-  System_Int32_array *v34; // x6
-  System_Int32_array *v35; // x7
-  System_Int32_array *v36; // x1
+  int32_t v13; // w2
+  int32_t v14; // w3
+  const MethodInfo *v15; // x4
+  _BOOL8 v16; // x0
+  __int64 v17; // x1
+  int32_t v18; // w2
+  int32_t v19; // w3
+  System_Int32_array *v20; // x1
+  int32_t v21; // w2
+  int32_t v22; // w3
+  System_Int32_array *v23; // x1
   CombineCostumeEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
   entity = 0LL;
   *itemIds = 0LL;
-  sub_B77560(
-    (BattleServantConfConponent_o *)itemIds,
-    0LL,
-    *(System_String_array ***)&costumeId,
-    (System_String_array **)itemIds,
-    (System_Boolean_array **)itemNums,
-    (System_Int32_array **)qp,
-    (System_Int32_array *)method,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)itemIds, 0, costumeId, (int32_t)itemIds);
   *itemNums = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)itemNums, 0LL, v14, v15, v16, v17, v18, v19);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)itemNums, 0, v13, v14);
   *qp = 0;
-  v21 = CombineCostumeMaster__TryGetEntity(this, &entity, svtId, costumeId, v20);
-  if ( v21 )
+  v16 = CombineCostumeMaster__TryGetEntity(this, &entity, svtId, costumeId, v15);
+  if ( v16 )
   {
     if ( !entity
-      || (v29 = entity->fields.itemIds,
-          *itemIds = v29,
-          sub_B77560((BattleServantConfConponent_o *)itemIds, (System_Int32_array **)v29, v23, v24, v25, v26, v27, v28),
+      || (v20 = entity->fields.itemIds,
+          *itemIds = v20,
+          sub_1B00C70((ServantStatusBattleListViewItem_o *)itemIds, (int32_t)v20, v18, v19),
           !entity)
-      || (v36 = entity->fields.itemNums,
-          *itemNums = v36,
-          sub_B77560((BattleServantConfConponent_o *)itemNums, (System_Int32_array **)v36, v30, v31, v32, v33, v34, v35),
+      || (v23 = entity->fields.itemNums,
+          *itemNums = v23,
+          sub_1B00C70((ServantStatusBattleListViewItem_o *)itemNums, (int32_t)v23, v21, v22),
           !entity) )
     {
-      sub_B7769C(v21, v22);
+      sub_1B00F28(v16, v17);
     }
     *qp = entity->fields.qp;
   }
@@ -89,119 +67,119 @@ CombineCostumeEntity_o *__fastcall CombineCostumeMaster__GetEntity(
         int32_t costumeId,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x1
+  Il2CppObject *PK; // x1
 
-  if ( (byte_438B1CA & 1) == 0 )
+  if ( (byte_48E25CA & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__GetEntity__);
-    byte_438B1CA = 1;
+    sub_1B00CCC(
+      &Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__GetEntity__,
+      *(_QWORD *)&svtId);
+    byte_48E25CA = 1;
   }
-  PK = CombineCostumeEntity__CreatePK(svtId, costumeId, *(const MethodInfo **)&costumeId);
-  return (CombineCostumeEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
-                                     (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
+  PK = (Il2CppObject *)CombineCostumeEntity__CreatePK(svtId, costumeId, *(const MethodInfo **)&costumeId);
+  return (CombineCostumeEntity_o *)DataMasterBase_object__object__object___GetEntity(
+                                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      PK,
-                                     (const MethodInfo_21FBCE4 *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__GetEntity__);
+                                     (const MethodInfo_2FE6DA4 *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__GetEntity__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall CombineCostumeMaster__IsClearCombineCondition(
         CombineCostumeMaster_o *this,
         int32_t svtId,
         int32_t costumeId,
         const MethodInfo *method)
 {
+  __int64 v7; // x1
   UserGameEntity_o *SelfUserGame; // x19
-  const MethodInfo *v8; // x4
-  DataManager_o *Instance; // x0
-  __int64 v10; // x1
-  CombineCostumeEntity_o *v11; // x8
+  const MethodInfo *v9; // x4
+  Il2CppObject *Instance; // x0
+  __int64 v11; // x1
+  CombineCostumeEntity_o *v12; // x8
   struct System_Int32_array *itemIds; // x9
-  __int64 v13; // x20
-  __int64 v14; // x21
-  struct System_Int32_array *v15; // x8
+  __int64 v14; // x20
+  il2cpp_array_size_t v15; // w21
+  struct System_Int32_array *v16; // x8
   struct System_Int32_array *itemNums; // x10
-  __int64 v18; // x0
-  UserItemEntity_o *v19; // [xsp+0h] [xbp-40h] BYREF
-  CombineCostumeEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
+  UserItemEntity_o *v19; // [xsp+8h] [xbp-48h] BYREF
+  CombineCostumeEntity_o *entity; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_438B1CD & 1) == 0 )
+  if ( (byte_48E25CD & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438B1CD = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_UserItemMaster___, *(_QWORD *)&svtId);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    byte_48E25CD = 1;
   }
-  v19 = 0LL;
   entity = 0LL;
+  v19 = 0LL;
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
-  Instance = (DataManager_o *)CombineCostumeMaster__TryGetEntity(this, &entity, svtId, costumeId, v8);
+  Instance = (Il2CppObject *)CombineCostumeMaster__TryGetEntity(this, &entity, svtId, costumeId, v9);
   if ( ((unsigned __int8)Instance & 1) == 0 )
     return 1;
-  v11 = entity;
+  v12 = entity;
   if ( !entity )
     goto LABEL_28;
   itemIds = entity->fields.itemIds;
   if ( itemIds )
   {
-    v13 = *(_QWORD *)&itemIds->max_length;
-    if ( v13 )
+    v14 = *(_QWORD *)&itemIds->max_length;
+    if ( v14 )
     {
-      if ( (int)v13 >= 1 )
+      if ( (int)v14 >= 1 )
       {
-        v14 = 8LL;
+        v15 = 0;
         while ( 1 )
         {
-          Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( !Instance )
             break;
-          Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                        Instance,
-                                        (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserItemMaster___);
+          Instance = DataManager__GetMasterData_object_(
+                       (DataManager_o *)Instance,
+                       (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_UserItemMaster___);
           if ( !SelfUserGame )
             break;
           if ( !entity )
             break;
-          v15 = entity->fields.itemIds;
-          if ( !v15 )
+          v16 = entity->fields.itemIds;
+          if ( !v16 )
             break;
-          if ( (unsigned int)(v14 - 8) >= v15->max_length )
+          if ( v15 >= v16->max_length )
             goto LABEL_29;
           if ( !Instance )
             break;
-          Instance = (DataManager_o *)UserItemMaster__TryGetEntity(
-                                        (UserItemMaster_o *)Instance,
-                                        &v19,
-                                        SelfUserGame->fields.userId,
-                                        *((_DWORD *)&v15->obj.klass + v14),
-                                        0LL);
+          Instance = (Il2CppObject *)UserItemMaster__TryGetEntity(
+                                       (UserItemMaster_o *)Instance,
+                                       &v19,
+                                       SelfUserGame->fields.userId,
+                                       v16->m_Items[v15 + 1],
+                                       0LL);
           if ( ((unsigned __int8)Instance & 1) == 0 )
             return 0;
           if ( !v19 )
             break;
-          v11 = entity;
+          v12 = entity;
           if ( !entity )
             break;
           itemNums = entity->fields.itemNums;
           if ( !itemNums )
             break;
-          if ( (unsigned int)(v14 - 8) >= itemNums->max_length )
-          {
+          if ( v15 >= itemNums->max_length )
 LABEL_29:
-            v18 = sub_B776C8(Instance);
-            sub_B77668(v18, 0LL);
-          }
-          if ( v19->fields.num < *((_DWORD *)&itemNums->obj.klass + v14) )
+            sub_1B00F30(Instance, v11);
+          if ( v19->fields.num < itemNums->m_Items[v15 + 1] )
             return 0;
-          if ( (int)++v14 - 8 >= (int)v13 )
-            return SelfUserGame->fields.qp >= v11->fields.qp;
+          if ( (_DWORD)v14 == ++v15 )
+            return SelfUserGame->fields.qp >= v12->fields.qp;
         }
 LABEL_28:
-        sub_B7769C(Instance, v10);
+        sub_1B00F28(Instance, v11);
       }
     }
   }
   if ( !SelfUserGame )
     goto LABEL_28;
-  return SelfUserGame->fields.qp >= v11->fields.qp;
+  return SelfUserGame->fields.qp >= v12->fields.qp;
 }
 
 
@@ -213,17 +191,17 @@ bool __fastcall CombineCostumeMaster__TryGetEntity(
         int32_t costumeId,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x2
+  Il2CppObject *PK; // x2
 
-  if ( (byte_438B1CB & 1) == 0 )
+  if ( (byte_48E25CB & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__TryGetEntity__);
-    byte_438B1CB = 1;
+    sub_1B00CCC(&Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__TryGetEntity__, entity);
+    byte_48E25CB = 1;
   }
-  PK = CombineCostumeEntity__CreatePK(svtId, costumeId, *(const MethodInfo **)&svtId);
-  return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
-           (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
-           (WarQuestSelectionEntity_o **)entity,
+  PK = (Il2CppObject *)CombineCostumeEntity__CreatePK(svtId, costumeId, *(const MethodInfo **)&svtId);
+  return DataMasterBase_object__object__object___TryGetEntity(
+           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
+           (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_21FBD3C *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__TryGetEntity__);
+           (const MethodInfo_2FE6DF4 *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__TryGetEntity__);
 }

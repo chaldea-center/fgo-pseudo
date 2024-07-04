@@ -6,20 +6,24 @@ void __fastcall BattleObserver___ctor(BattleObserver_o *this, const MethodInfo *
 
 void __fastcall BattleObserver__Add(BattleObserver_o *this, BattleSubject_o *subject, const MethodInfo *method)
 {
+  int32_t v5; // w2
+  int32_t v6; // w3
+
   if ( subject )
   {
-    BattleSubject__Add(subject, this, 0LL);
+    BattleSubject__Add(subject, this, method);
     this->fields.battleSubject = subject;
-    sub_B77560(&this->fields);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)subject, v5, v6);
   }
 }
 
 
 void __fastcall BattleObserver__Remove(BattleObserver_o *this, const MethodInfo *method)
 {
+  const MethodInfo *v2; // x2
   BattleSubject_o *battleSubject; // x0
 
   battleSubject = this->fields.battleSubject;
   if ( battleSubject )
-    BattleSubject__Remove(battleSubject, this, 0LL);
+    BattleSubject__Remove(battleSubject, this, v2);
 }

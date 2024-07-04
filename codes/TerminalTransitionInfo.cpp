@@ -9,22 +9,30 @@ void __fastcall TerminalTransitionInfo___ctor(TerminalTransitionInfo_o *this, co
 
 void __fastcall TerminalTransitionInfo__Init(TerminalTransitionInfo_o *this, const MethodInfo *method)
 {
-  struct System_String_array **p_afterActionVals; // x19
+  int32_t v2; // w2
+  int32_t v3; // w3
+  int32_t v5; // w2
+  int32_t v6; // w3
+  int32_t v7; // w1
+  struct System_String_o **p_voiceAssetName; // x19
+  int32_t v9; // w2
+  int32_t v10; // w3
 
-  if ( (byte_4387A28 & 1) == 0 )
+  if ( (byte_48DFDE3 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_4387A28 = 1;
+    sub_1B00CCC(&StringLiteral_1/*""*/, method);
+    byte_48DFDE3 = 1;
   }
   this->fields.missionId = 0;
   this->fields.beforeActionVals = 0LL;
-  sub_B77560(&this->fields.beforeActionVals);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.beforeActionVals, 0, v2, v3);
   this->fields.afterActionVals = 0LL;
-  p_afterActionVals = &this->fields.afterActionVals;
-  sub_B77560(p_afterActionVals);
-  p_afterActionVals[1] = (struct System_String_array *)StringLiteral_1/*""*/;
-  sub_B77560(p_afterActionVals + 1);
-  *((_DWORD *)p_afterActionVals + 4) = 0;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.afterActionVals, 0, v5, v6);
+  v7 = (int)StringLiteral_1/*""*/;
+  this->fields.voiceAssetName = (struct System_String_o *)StringLiteral_1/*""*/;
+  p_voiceAssetName = &this->fields.voiceAssetName;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)p_voiceAssetName, v7, v9, v10);
+  *((_DWORD *)p_voiceAssetName + 2) = 0;
 }
 
 
@@ -33,9 +41,17 @@ void __fastcall TerminalTransitionInfo__SetParameters(
         TerminalTransitionInfo_o *info,
         const MethodInfo *method)
 {
+  int32_t v3; // w3
+  struct System_String_o *voiceAssetName; // x1
+
   if ( !info )
-    sub_B7769C(this, 0LL);
+    sub_1B00F28(this, 0LL);
   this->fields.missionId = info->fields.missionId;
-  this->fields.voiceAssetName = info->fields.voiceAssetName;
-  sub_B77560(&this->fields.voiceAssetName);
+  voiceAssetName = info->fields.voiceAssetName;
+  this->fields.voiceAssetName = voiceAssetName;
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields.voiceAssetName,
+    (int32_t)voiceAssetName,
+    (int32_t)method,
+    v3);
 }

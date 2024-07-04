@@ -42,7 +42,7 @@ void __fastcall SubmarinePanelPositionCalculator__LoadSettings(
         const MethodInfo *method)
 {
   if ( !settings )
-    sub_B7769C(this, 0LL);
+    sub_1B00F28(this, 0LL);
   this->fields._OffsetX_k__BackingField = settings->fields._BoardOffset_k__BackingField.fields.x;
   this->fields._OffsetY_k__BackingField = settings->fields._BoardOffset_k__BackingField.fields.y;
   this->fields._PanelUnitSize_k__BackingField = settings->fields._PanelUnitSize_k__BackingField;
@@ -57,44 +57,29 @@ int32_t __fastcall SubmarinePanelPositionCalculator__get_HorizontalPanelNum(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 UnityEngine_Vector3_o __fastcall SubmarinePanelPositionCalculator__get_LeftBottomEdgePos(
         SubmarinePanelPositionCalculator_o *this,
         const MethodInfo *method)
 {
-  struct UnityEngine_Vector2_o PanelUnitSize_k__BackingField; // d0 OVERLAPPED
-  float32x2_t v4; // d1
-  float32x2_t v5; // d9
-  float Item; // s0
-  float v7; // s2
-  unsigned __int64 v8; // d0
-  float v9; // s1
-  float x; // [xsp+0h] [xbp-30h]
-  struct UnityEngine_Vector2_o v11; // [xsp+28h] [xbp-8h] BYREF
-  UnityEngine_Vector2_o v12; // 0:s0.4,4:s1.4
+  unsigned __int64 v2; // d0
+  float v3; // s1
+  float v4; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  PanelUnitSize_k__BackingField = this->fields._PanelUnitSize_k__BackingField;
-  v4.n64_u64[0] = vmul_f32(
-                    vmul_f32(
-                      (float32x2_t)PanelUnitSize_k__BackingField,
-                      vcvt_f32_s32(
-                        vsub_s32(
-                          (int32x2_t)0x100000001LL,
-                          *(int32x2_t *)&this->fields._HorizontalPanelNum_k__BackingField))),
-                    (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
-  v5.n64_u64[0] = vadd_f32(*(float32x2_t *)&this->fields._OffsetX_k__BackingField, v4).n64_u64[0];
-  v11 = PanelUnitSize_k__BackingField;
-  v12.fields.x = UnityEngine_Vector2__get_Item(PanelUnitSize_k__BackingField, (int32_t)&v11, 0LL);
-  x = v12.fields.x;
-  v11 = this->fields._PanelUnitSize_k__BackingField;
-  Item = UnityEngine_Vector2__get_Item(v12, (int32_t)&v11, (const MethodInfo *)((unsigned int)&dword_0 + 1));
-  v7 = 0.0;
-  v8 = vsub_f32(v5, vmul_f32((float32x2_t)__PAIR64__(LODWORD(Item), LODWORD(x)), (float32x2_t)0x3F0000003F000000LL)).n64_u64[0];
-  v9 = *((float *)&v8 + 1);
-  result.fields.x = *(float *)&v8;
-  result.fields.z = v7;
-  result.fields.y = v9;
+  v2 = vsub_f32(
+         vadd_f32(
+           *(float32x2_t *)&this->fields._OffsetX_k__BackingField,
+           vmul_f32(
+             vmul_f32(
+               (float32x2_t)this->fields._PanelUnitSize_k__BackingField,
+               vcvt_f32_s32(vsub_s32((int32x2_t)0x100000001LL, *(int32x2_t *)&this->fields._HorizontalPanelNum_k__BackingField))),
+             (float32x2_t)0x3F0000003F000000LL)),
+         vmul_f32((float32x2_t)this->fields._PanelUnitSize_k__BackingField, (float32x2_t)0x3F0000003F000000LL)).n64_u64[0];
+  v3 = *((float *)&v2 + 1);
+  v4 = 0.0;
+  result.fields.x = *(float *)&v2;
+  result.fields.z = v4;
+  result.fields.y = v3;
   return result;
 }
 
@@ -139,7 +124,7 @@ int32_t __fastcall SubmarinePanelPositionCalculator__get_PanelUnitSizeX(
 
   x = this->fields._PanelUnitSize_k__BackingField.fields.x;
   if ( x == INFINITY )
-    return (int)-x;
+    return 0x80000000;
   else
     return (int)x;
 }
@@ -153,54 +138,38 @@ int32_t __fastcall SubmarinePanelPositionCalculator__get_PanelUnitSizeY(
 
   y = this->fields._PanelUnitSize_k__BackingField.fields.y;
   if ( y == INFINITY )
-    return (int)-y;
+    return 0x80000000;
   else
     return (int)y;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 UnityEngine_Vector3_o __fastcall SubmarinePanelPositionCalculator__get_RightTopEdgePos(
         SubmarinePanelPositionCalculator_o *this,
         const MethodInfo *method)
 {
-  struct UnityEngine_Vector2_o PanelUnitSize_k__BackingField; // d0 OVERLAPPED
-  float32x2_t v4; // d1
-  float32x2_t v5; // d9
-  float Item; // s0
-  float v7; // s2
-  unsigned __int64 v8; // d0
-  float v9; // s1
-  float x; // [xsp+0h] [xbp-30h]
-  struct UnityEngine_Vector2_o v11; // [xsp+28h] [xbp-8h] BYREF
-  UnityEngine_Vector2_o v12; // 0:s0.4,4:s1.4
+  unsigned __int64 v2; // d0
+  float v3; // s1
+  float v4; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  PanelUnitSize_k__BackingField = this->fields._PanelUnitSize_k__BackingField;
-  v4.n64_u64[0] = vmul_f32(
-                    vmul_f32(
-                      (float32x2_t)PanelUnitSize_k__BackingField,
-                      vcvt_f32_s32(
-                        vsub_s32(
-                          (int32x2_t)(vadd_s32(
-                                        vshl_n_s32(
-                                          *(int32x2_t *)&this->fields._HorizontalPanelNum_k__BackingField,
-                                          1uLL),
-                                        (int32x2_t)0x100000001LL).n64_u64[0] | 0x100000001LL),
-                          *(int32x2_t *)&this->fields._HorizontalPanelNum_k__BackingField))),
-                    (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
-  v5.n64_u64[0] = vadd_f32(*(float32x2_t *)&this->fields._OffsetX_k__BackingField, v4).n64_u64[0];
-  v11 = PanelUnitSize_k__BackingField;
-  v12.fields.x = UnityEngine_Vector2__get_Item(PanelUnitSize_k__BackingField, (int32_t)&v11, 0LL);
-  x = v12.fields.x;
-  v11 = this->fields._PanelUnitSize_k__BackingField;
-  Item = UnityEngine_Vector2__get_Item(v12, (int32_t)&v11, (const MethodInfo *)((unsigned int)&dword_0 + 1));
-  v7 = 0.0;
-  v8 = vadd_f32(v5, vmul_f32((float32x2_t)__PAIR64__(LODWORD(Item), LODWORD(x)), (float32x2_t)0x3F0000003F000000LL)).n64_u64[0];
-  v9 = *((float *)&v8 + 1);
-  result.fields.x = *(float *)&v8;
-  result.fields.z = v7;
-  result.fields.y = v9;
+  v2 = vadd_f32(
+         vmul_f32((float32x2_t)this->fields._PanelUnitSize_k__BackingField, (float32x2_t)0x3F0000003F000000LL),
+         vadd_f32(
+           *(float32x2_t *)&this->fields._OffsetX_k__BackingField,
+           vmul_f32(
+             vmul_f32(
+               (float32x2_t)this->fields._PanelUnitSize_k__BackingField,
+               vcvt_f32_s32(
+                 vadd_s32(
+                   vmvn_s8(*(int8x8_t *)&this->fields._HorizontalPanelNum_k__BackingField),
+                   vshl_n_s32(*(int32x2_t *)&this->fields._HorizontalPanelNum_k__BackingField, 1uLL)))),
+             (float32x2_t)0x3F0000003F000000LL))).n64_u64[0];
+  v3 = *((float *)&v2 + 1);
+  v4 = 0.0;
+  result.fields.x = *(float *)&v2;
+  result.fields.z = v4;
+  result.fields.y = v3;
   return result;
 }
 

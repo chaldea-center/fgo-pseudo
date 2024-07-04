@@ -19,12 +19,12 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawVoice__SetCvName(
         System_String_o *cvName,
         const MethodInfo *method)
 {
-  ServantStatusFlavorTextListViewItemDrawVoice_c *klass; // x0
+  UIRangeLabel_o *cvRangeLabel; // x0
 
-  klass = this[1].klass;
-  if ( !klass )
-    sub_B7769C(0LL, cvName);
-  UIRangeLabel__Set((UIRangeLabel_o *)klass, cvName, 0LL, 1, 0, 0LL);
+  cvRangeLabel = this->fields.cvRangeLabel;
+  if ( !cvRangeLabel )
+    sub_1B00F28(0LL, cvName);
+  UIRangeLabel__Set(cvRangeLabel, cvName, 0LL, 1, 0, 0LL);
 }
 
 
@@ -38,50 +38,49 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawVoice__SetItem(
         int32_t mode,
         const MethodInfo *method)
 {
-  struct UIRangeLabel_o *illustRangeLabel; // x21
-  System_String_o *cvTitleLabel; // x0
-  __int64 v13; // x1
-  struct UIRangeLabel_o *cvRangeLabel; // x21
-  const MethodInfo *v15; // x4
-  bool isPlayVoice; // [xsp+Ch] [xbp-34h] BYREF
-  System_String_o *voice; // [xsp+10h] [xbp-30h] BYREF
+  __int64 v11; // x1
+  __int64 v12; // x1
+  UILabel_o *illustTitleLabel; // x21
+  System_String_o *illustRangeLabel; // x0
+  __int64 v15; // x1
+  UILabel_o *cvTitleLabel; // x21
+  const MethodInfo *v17; // x4
+  bool isPlayVoice; // [xsp+4h] [xbp-3Ch] BYREF
+  System_String_o *voice; // [xsp+8h] [xbp-38h] BYREF
   System_String_o *illust; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4392913 & 1) == 0 )
+  if ( (byte_48DF190 & 1) == 0 )
   {
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&StringLiteral_12228/*"SERVANT_STATUS_PROFILE_ILLUST_TITLE"*/);
-    sub_B775C4(&StringLiteral_12227/*"SERVANT_STATUS_PROFILE_CV_TITLE"*/);
-    byte_4392913 = 1;
+    sub_1B00CCC(&LocalizationManager_TypeInfo, item);
+    sub_1B00CCC(&StringLiteral_11700/*"SERVANT_STATUS_PROFILE_ILLUST_TITLE"*/, v11);
+    sub_1B00CCC(&StringLiteral_11699/*"SERVANT_STATUS_PROFILE_CV_TITLE"*/, v12);
+    byte_48DF190 = 1;
   }
-  voice = 0LL;
   illust = 0LL;
+  voice = 0LL;
   isPlayVoice = 0;
-  LODWORD(this->fields.illustTitleLabel) = mode;
+  this->fields.dispMode = mode;
   if ( item && mode )
   {
-    illustRangeLabel = this->fields.illustRangeLabel;
-    if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
+    illustTitleLabel = this->fields.illustTitleLabel;
+    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    }
-    cvTitleLabel = LocalizationManager__Get((System_String_o *)StringLiteral_12228/*"SERVANT_STATUS_PROFILE_ILLUST_TITLE"*/, 0LL);
-    if ( !illustRangeLabel )
-      goto LABEL_14;
-    UILabel__set_text((UILabel_o *)illustRangeLabel, cvTitleLabel, 0LL);
-    cvRangeLabel = this->fields.cvRangeLabel;
-    cvTitleLabel = LocalizationManager__Get((System_String_o *)StringLiteral_12227/*"SERVANT_STATUS_PROFILE_CV_TITLE"*/, 0LL);
-    if ( !cvRangeLabel
-      || (UILabel__set_text((UILabel_o *)cvRangeLabel, cvTitleLabel, 0LL),
-          ServantStatusListViewItem__GetVoiceInfo(item, &illust, &voice, &isPlayVoice, v15),
-          (cvTitleLabel = (System_String_o *)this->fields.cvTitleLabel) == 0LL)
-      || (UIRangeLabel__Set((UIRangeLabel_o *)cvTitleLabel, illust, 0LL, 1, 0, 0LL),
-          (cvTitleLabel = (System_String_o *)this[1].klass) == 0LL) )
+    illustRangeLabel = LocalizationManager__Get((System_String_o *)StringLiteral_11700/*"SERVANT_STATUS_PROFILE_ILLUST_TITLE"*/, 0LL);
+    if ( !illustTitleLabel )
+      goto LABEL_13;
+    UILabel__set_text(illustTitleLabel, illustRangeLabel, 0LL);
+    cvTitleLabel = this->fields.cvTitleLabel;
+    illustRangeLabel = LocalizationManager__Get((System_String_o *)StringLiteral_11699/*"SERVANT_STATUS_PROFILE_CV_TITLE"*/, 0LL);
+    if ( !cvTitleLabel
+      || (UILabel__set_text(cvTitleLabel, illustRangeLabel, 0LL),
+          ServantStatusListViewItem__GetVoiceInfo(item, &illust, &voice, &isPlayVoice, v17),
+          (illustRangeLabel = (System_String_o *)this->fields.illustRangeLabel) == 0LL)
+      || (UIRangeLabel__Set((UIRangeLabel_o *)illustRangeLabel, illust, 0LL, 1, 0, 0LL),
+          (illustRangeLabel = (System_String_o *)this->fields.cvRangeLabel) == 0LL) )
     {
-LABEL_14:
-      sub_B7769C(cvTitleLabel, v13);
+LABEL_13:
+      sub_1B00F28(illustRangeLabel, v15);
     }
-    UIRangeLabel__Set((UIRangeLabel_o *)cvTitleLabel, voice, 0LL, 1, 0, 0LL);
+    UIRangeLabel__Set((UIRangeLabel_o *)illustRangeLabel, voice, 0LL, 1, 0, 0LL);
   }
 }

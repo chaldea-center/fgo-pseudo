@@ -2,31 +2,32 @@ void __fastcall EventBonusFilterGroupMemberEntity___ctor(
         EventBonusFilterGroupMemberEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_438E83E & 1) == 0 )
+  if ( (byte_48E26D0 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    byte_438E83E = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
+    byte_48E26D0 = 1;
   }
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventBonusFilterGroupMemberEntity__CreatePK(
         int32_t groupId,
         int32_t svtId,
         const MethodInfo *method)
 {
-  if ( (byte_438E83D & 1) == 0 )
+  if ( (byte_48E26CF & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_438E83D = 1;
+    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&svtId);
+    byte_48E26CF = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            groupId,
            svtId,
-           (const MethodInfo_1D171BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2D60E34 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

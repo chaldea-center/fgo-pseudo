@@ -4,27 +4,23 @@ void __fastcall MaterialEventLogListViewItem___ctor(MaterialEventLogListViewItem
 }
 
 
-void __fastcall MaterialEventLogListViewItem___ctor_32459752(
+void __fastcall MaterialEventLogListViewItem___ctor_30352168(
         MaterialEventLogListViewItem_o *this,
         int32_t index,
         int32_t kind,
         MaterialEventLogListViewItem_Info_o *info,
         const MethodInfo *method)
 {
-  BattleServantConfConponent_o *v7; // x21
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
+  MaterialEventLogListViewItem_o *v7; // x21
+  int32_t v8; // w2
+  int32_t v9; // w3
 
-  v7 = (BattleServantConfConponent_o *)this;
-  ListViewItem___ctor_24167012((ListViewItem_o *)this, index, 0LL);
-  v7->fields.npdetail = (struct UILabel_o *)info;
-  v7 = (BattleServantConfConponent_o *)((char *)v7 + 120);
-  *(_DWORD *)&v7[-1].fields.isOpenAfter = kind;
-  sub_B77560(v7, (System_Int32_array **)info, v8, v9, v10, v11, v12, v13);
+  v7 = this;
+  ListViewItem___ctor_39415512((ListViewItem_o *)this, index, 0LL);
+  v7->fields._info_k__BackingField = info;
+  v7 = (MaterialEventLogListViewItem_o *)((char *)v7 + 120);
+  LODWORD(v7[-1].fields._info_k__BackingField) = kind;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)v7, (int32_t)info, v8, v9);
 }
 
 
@@ -35,60 +31,56 @@ bool __fastcall MaterialEventLogListViewItem__CheckPlayableMaterial(
         const MethodInfo *method)
 {
   MaterialEventLogListViewItem_o *v4; // x20
+  __int64 v5; // x1
+  __int64 v6; // x1
   struct MaterialEventLogListViewItem_Info_o *info_k__BackingField; // x8
   CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *voiceId; // x21
-  System_String_o *v7; // x0
-  struct MaterialEventLogListViewItem_Info_o *v9; // x8
-  VoiceMaterialCondMaster_o *v10; // x20
+  System_String_o *v9; // x0
+  struct MaterialEventLogListViewItem_Info_o *v11; // x8
+  VoiceMaterialCondMaster_o *v12; // x20
   int32_t svtVoiceId; // w22
   int32_t voicePrefix; // w21
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *v13; // x23
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *v15; // x23
 
   v4 = this;
-  if ( (byte_438EE6E & 1) == 0 )
+  if ( (byte_48DE337 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_VoiceMaterialCondMaster___);
-    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-    this = (MaterialEventLogListViewItem_o *)sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438EE6E = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_VoiceMaterialCondMaster___, *(_QWORD *)&limitCount);
+    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v5);
+    this = (MaterialEventLogListViewItem_o *)sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_48DE337 = 1;
   }
   info_k__BackingField = v4->fields._info_k__BackingField;
   if ( !info_k__BackingField )
-    goto LABEL_16;
+    goto LABEL_14;
   voiceId = info_k__BackingField->fields.voiceId;
-  if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
-  {
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-  }
-  v7 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_45464420(voiceId, 0LL);
-  if ( System_String__IsNullOrEmpty(v7, 0LL) )
+  v9 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_45348888(voiceId, 0LL);
+  if ( System_String__IsNullOrEmpty(v9, 0LL) )
     return 1;
-  this = (MaterialEventLogListViewItem_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (MaterialEventLogListViewItem_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
-    goto LABEL_16;
-  this = (MaterialEventLogListViewItem_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+    goto LABEL_14;
+  this = (MaterialEventLogListViewItem_o *)DataManager__GetMasterData_object_(
                                              (DataManager_o *)this,
-                                             (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_VoiceMaterialCondMaster___);
-  v9 = v4->fields._info_k__BackingField;
-  if ( !v9 )
-    goto LABEL_16;
-  v10 = (VoiceMaterialCondMaster_o *)this;
-  svtVoiceId = v9->fields.svtVoiceId;
-  voicePrefix = v9->fields.voicePrefix;
-  v13 = v9->fields.voiceId;
-  if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
-  {
+                                             (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_VoiceMaterialCondMaster___);
+  v11 = v4->fields._info_k__BackingField;
+  if ( !v11 )
+    goto LABEL_14;
+  v12 = (VoiceMaterialCondMaster_o *)this;
+  svtVoiceId = v11->fields.svtVoiceId;
+  voicePrefix = v11->fields.voicePrefix;
+  v15 = v11->fields.voiceId;
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-  }
-  this = (MaterialEventLogListViewItem_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_45464420(
-                                             v13,
+  this = (MaterialEventLogListViewItem_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_45348888(
+                                             v15,
                                              0LL);
-  if ( !v10 )
-LABEL_16:
-    sub_B7769C(this, *(_QWORD *)&limitCount);
-  return VoiceMaterialCondMaster__IsVoicePlay(v10, svtVoiceId, voicePrefix, (System_String_o *)this, limitCount, 0LL);
+  if ( !v12 )
+LABEL_14:
+    sub_1B00F28(this, *(_QWORD *)&limitCount);
+  return VoiceMaterialCondMaster__IsVoicePlay(v12, svtVoiceId, voicePrefix, (System_String_o *)this, limitCount, 0LL);
 }
 
 
@@ -123,113 +115,111 @@ bool __fastcall MaterialEventLogListViewItem__IsMatchServantFilter(
         ListViewSort_o *sort,
         const MethodInfo *method)
 {
-  FilterKindList_c *v5; // x0
-  System_Collections_Generic_List_Voice_BATTLE__o *ClassGroupFilterKindList; // x0
-  ListViewSort_FilterKind_array *v7; // x0
-  FilterKindList_c *v8; // x0
-  ListViewSort_FilterKind_array *v9; // x0
+  __int64 v5; // x1
+  FilterKindList_c *v6; // x0
+  System_Collections_Generic_List_T__o *ClassGroupFilterKindList; // x0
+  ListViewSort_FilterKind_array *v8; // x0
+  FilterKindList_c *v9; // x0
+  ListViewSort_FilterKind_array *v10; // x0
   struct MaterialEventLogListViewItem_Info_o *info_k__BackingField; // x8
-  struct MaterialEventLogListViewItem_Info_o *v11; // x8
-  FilterKindList_c *v12; // x0
-  struct System_Collections_Generic_List_ListViewSort_FilterKind__o *RarityFilterKindList; // x8
-  ListViewSort_FilterKind_array *v14; // x21
-  ListViewSort_FilterKind_array *v15; // x0
-  struct MaterialEventLogListViewItem_Info_o *v16; // x8
+  struct MaterialEventLogListViewItem_Info_o *v12; // x8
+  FilterKindList_c *v13; // x0
+  System_Collections_Generic_List_T__o *RarityFilterKindList; // x8
+  ListViewSort_FilterKind_array *v15; // x21
+  ListViewSort_FilterKind_array *v16; // x0
+  struct MaterialEventLogListViewItem_Info_o *v17; // x8
 
-  if ( (byte_438EE70 & 1) == 0 )
+  if ( (byte_48DE339 & 1) == 0 )
   {
-    sub_B775C4(&FilterKindList_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
-    byte_438EE70 = 1;
+    sub_1B00CCC(&FilterKindList_TypeInfo, sort);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__, v5);
+    byte_48DE339 = 1;
   }
   if ( !sort )
     return 0;
-  v5 = FilterKindList_TypeInfo;
-  if ( (BYTE3(FilterKindList_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !FilterKindList_TypeInfo->_2.cctor_finished )
+  v6 = FilterKindList_TypeInfo;
+  if ( !FilterKindList_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(FilterKindList_TypeInfo);
-    v5 = FilterKindList_TypeInfo;
+    v6 = FilterKindList_TypeInfo;
   }
-  ClassGroupFilterKindList = (System_Collections_Generic_List_Voice_BATTLE__o *)v5->static_fields->ClassGroupFilterKindList;
+  ClassGroupFilterKindList = (System_Collections_Generic_List_T__o *)v6->static_fields->ClassGroupFilterKindList;
   if ( !ClassGroupFilterKindList )
-    goto LABEL_30;
-  v7 = (ListViewSort_FilterKind_array *)System_Collections_Generic_List_Voice_BATTLE___ToArray(
+    goto LABEL_27;
+  v8 = (ListViewSort_FilterKind_array *)System_Collections_Generic_List_Int32Enum___ToArray(
                                           ClassGroupFilterKindList,
-                                          (const MethodInfo_30EAECC *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
-  ClassGroupFilterKindList = (System_Collections_Generic_List_Voice_BATTLE__o *)ListViewSort__IsUnSelectedAllTargetFilters(
-                                                                                  sort,
-                                                                                  v7,
-                                                                                  0LL);
+                                          (const MethodInfo_33A8C90 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+  ClassGroupFilterKindList = (System_Collections_Generic_List_T__o *)ListViewSort__IsUnSelectedAllTargetFilters(
+                                                                       sort,
+                                                                       v8,
+                                                                       0LL);
   if ( ((unsigned __int8)ClassGroupFilterKindList & 1) != 0 )
   {
-    v8 = FilterKindList_TypeInfo;
-    if ( (BYTE3(FilterKindList_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !FilterKindList_TypeInfo->_2.cctor_finished )
+    v9 = FilterKindList_TypeInfo;
+    if ( !FilterKindList_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(FilterKindList_TypeInfo);
-      v8 = FilterKindList_TypeInfo;
+      v9 = FilterKindList_TypeInfo;
     }
-    ClassGroupFilterKindList = (System_Collections_Generic_List_Voice_BATTLE__o *)v8->static_fields->ClassFilterKindList;
+    ClassGroupFilterKindList = (System_Collections_Generic_List_T__o *)v9->static_fields->ClassFilterKindList;
     if ( !ClassGroupFilterKindList )
-      goto LABEL_30;
-    v9 = (ListViewSort_FilterKind_array *)System_Collections_Generic_List_Voice_BATTLE___ToArray(
-                                            ClassGroupFilterKindList,
-                                            (const MethodInfo_30EAECC *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
-    ClassGroupFilterKindList = (System_Collections_Generic_List_Voice_BATTLE__o *)ListViewSort__IsUnSelectedAllTargetFilters(
-                                                                                    sort,
-                                                                                    v9,
-                                                                                    0LL);
+      goto LABEL_27;
+    v10 = (ListViewSort_FilterKind_array *)System_Collections_Generic_List_Int32Enum___ToArray(
+                                             ClassGroupFilterKindList,
+                                             (const MethodInfo_33A8C90 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+    ClassGroupFilterKindList = (System_Collections_Generic_List_T__o *)ListViewSort__IsUnSelectedAllTargetFilters(
+                                                                         sort,
+                                                                         v10,
+                                                                         0LL);
     if ( ((unsigned __int8)ClassGroupFilterKindList & 1) == 0 )
     {
       info_k__BackingField = this->fields._info_k__BackingField;
       if ( !info_k__BackingField )
-        goto LABEL_30;
+        goto LABEL_27;
       if ( !ListViewSort__IsMatchClassFilter(sort, info_k__BackingField->fields.servantEntity, 0LL) )
         return 0;
     }
   }
   else
   {
-    v11 = this->fields._info_k__BackingField;
-    if ( !v11 )
-      goto LABEL_30;
-    if ( !ListViewSort__IsMatchClassGroupFilter(sort, v11->fields.servantEntity, 0LL) )
+    v12 = this->fields._info_k__BackingField;
+    if ( !v12 )
+      goto LABEL_27;
+    if ( !ListViewSort__IsMatchClassGroupFilter(sort, v12->fields.servantEntity, 0LL) )
       return 0;
   }
-  v12 = FilterKindList_TypeInfo;
-  if ( (BYTE3(FilterKindList_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !FilterKindList_TypeInfo->_2.cctor_finished )
+  v13 = FilterKindList_TypeInfo;
+  if ( !FilterKindList_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(FilterKindList_TypeInfo);
-    v12 = FilterKindList_TypeInfo;
+    v13 = FilterKindList_TypeInfo;
   }
-  ClassGroupFilterKindList = (System_Collections_Generic_List_Voice_BATTLE__o *)v12->static_fields->RarityFilterKindList;
+  ClassGroupFilterKindList = (System_Collections_Generic_List_T__o *)v13->static_fields->RarityFilterKindList;
   if ( !ClassGroupFilterKindList )
-    goto LABEL_30;
-  ClassGroupFilterKindList = (System_Collections_Generic_List_Voice_BATTLE__o *)System_Collections_Generic_List_Voice_BATTLE___ToArray(
-                                                                                  ClassGroupFilterKindList,
-                                                                                  (const MethodInfo_30EAECC *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
-  RarityFilterKindList = FilterKindList_TypeInfo->static_fields->RarityFilterKindList;
+    goto LABEL_27;
+  ClassGroupFilterKindList = (System_Collections_Generic_List_T__o *)System_Collections_Generic_List_Int32Enum___ToArray(
+                                                                       ClassGroupFilterKindList,
+                                                                       (const MethodInfo_33A8C90 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+  RarityFilterKindList = (System_Collections_Generic_List_T__o *)FilterKindList_TypeInfo->static_fields->RarityFilterKindList;
   if ( !RarityFilterKindList )
-    goto LABEL_30;
-  v14 = (ListViewSort_FilterKind_array *)ClassGroupFilterKindList;
-  v15 = (ListViewSort_FilterKind_array *)System_Collections_Generic_List_Voice_BATTLE___ToArray(
-                                           (System_Collections_Generic_List_Voice_BATTLE__o *)RarityFilterKindList,
-                                           (const MethodInfo_30EAECC *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
-  if ( ListViewSort__IsUnSelectedAllTargetFilters(sort, v15, 0LL) )
+    goto LABEL_27;
+  v15 = (ListViewSort_FilterKind_array *)ClassGroupFilterKindList;
+  v16 = (ListViewSort_FilterKind_array *)System_Collections_Generic_List_Int32Enum___ToArray(
+                                           RarityFilterKindList,
+                                           (const MethodInfo_33A8C90 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+  if ( ListViewSort__IsUnSelectedAllTargetFilters(sort, v16, 0LL) )
     return 1;
-  ClassGroupFilterKindList = (System_Collections_Generic_List_Voice_BATTLE__o *)ListViewSort__IsSelectedAllTargetFilters(
-                                                                                  sort,
-                                                                                  v14,
-                                                                                  0LL);
+  ClassGroupFilterKindList = (System_Collections_Generic_List_T__o *)ListViewSort__IsSelectedAllTargetFilters(
+                                                                       sort,
+                                                                       v15,
+                                                                       0LL);
   if ( ((unsigned __int8)ClassGroupFilterKindList & 1) != 0 )
     return 1;
-  v16 = this->fields._info_k__BackingField;
-  if ( !v16 )
-LABEL_30:
-    sub_B7769C(ClassGroupFilterKindList, sort);
-  return ListViewSort__IsMatchRarityFilter(sort, v16->fields.rarity, 0LL);
+  v17 = this->fields._info_k__BackingField;
+  if ( !v17 )
+LABEL_27:
+    sub_1B00F28(ClassGroupFilterKindList, sort);
+  return ListViewSort__IsMatchRarityFilter(sort, v17->fields.rarity, 0LL);
 }
 
 
@@ -239,46 +229,41 @@ bool __fastcall MaterialEventLogListViewItem__SetSortValue(
         const MethodInfo *method)
 {
   MaterialEventLogListViewItem_c *klass; // x8
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
-  char v12; // w8
-  bool result; // w0
+  int32_t v6; // w2
+  int32_t v7; // w3
+  char v8; // w20
   int64_t index; // x8
-  System_Int32_array **v15; // x1
+  int32_t v10; // w1
+  struct System_String_o **p_sortStr1; // x19
 
-  if ( (byte_438EE6F & 1) == 0 )
+  if ( (byte_48DE338 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438EE6F = 1;
+    sub_1B00CCC(&StringLiteral_1/*""*/, sort);
+    byte_48DE338 = 1;
   }
   klass = this->klass;
   *(_WORD *)&this->fields.isTermination = 0;
   this->fields.sortValue1 = -1LL;
-  v12 = ((__int64 (__fastcall *)(MaterialEventLogListViewItem_o *, ListViewSort_o *, void *))klass->vtable._5_IsMatchFilter.method)(
-          this,
-          sort,
-          klass[1]._1.image);
-  result = 0;
-  if ( (v12 & 1) != 0 )
+  v8 = ((__int64 (__fastcall *)(MaterialEventLogListViewItem_o *, ListViewSort_o *, void *))klass->vtable._5_IsMatchFilter.method)(
+         this,
+         sort,
+         klass[1]._1.image);
+  if ( (v8 & 1) != 0 )
   {
     index = this->fields.index;
     this->fields.sortValue0 = 0LL;
     this->fields.sortValue0B = 0LL;
     this->fields.sortValue1 = index;
-    v15 = (System_Int32_array **)StringLiteral_1/*""*/;
+    v10 = (int)StringLiteral_1/*""*/;
     this->fields.sortStr1 = (struct System_String_o *)StringLiteral_1/*""*/;
-    sub_B77560((BattleServantConfConponent_o *)&this->fields.sortStr1, v15, v6, v7, v8, v9, v10, v11);
-    result = 1;
-    this->fields.sortValue1B = 0LL;
-    this->fields.sortValue2 = 0LL;
-    *(_WORD *)&this->fields.isTermination = 0;
-    this->fields.sortValue2B = 0LL;
+    p_sortStr1 = &this->fields.sortStr1;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)p_sortStr1, v10, v6, v7);
+    p_sortStr1[1] = 0LL;
+    p_sortStr1[2] = 0LL;
+    *((_WORD *)p_sortStr1 + 16) = 0;
+    p_sortStr1[3] = 0LL;
   }
-  return result;
+  return v8 & 1;
 }
 
 
@@ -290,7 +275,7 @@ int32_t __fastcall MaterialEventLogListViewItem__get_genderType(
 
   info_k__BackingField = this->fields._info_k__BackingField;
   if ( !info_k__BackingField )
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   return info_k__BackingField->fields.genderType;
 }
 
@@ -316,22 +301,14 @@ void __fastcall MaterialEventLogListViewItem__set_info(
         MaterialEventLogListViewItem_Info_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._info_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._info_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._info_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -348,20 +325,23 @@ void __fastcall MaterialEventLogListViewItem_Info___ctor(
         MaterialEventLogListViewItem_Info_o *this,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_int__o *v3; // x20
+  __int64 v3; // x1
+  System_Collections_Generic_List_int__o *v4; // x20
+  int32_t v5; // w2
+  int32_t v6; // w3
 
-  if ( (byte_43889C3 & 1) == 0 )
+  if ( (byte_48DE33B & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_int___ctor___69397304);
-    sub_B775C4(&System_Collections_Generic_List_int__TypeInfo);
-    byte_43889C3 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_int___ctor__, method);
+    sub_1B00CCC(&System_Collections_Generic_List_int__TypeInfo, v3);
+    byte_48DE33B = 1;
   }
-  v3 = (System_Collections_Generic_List_int__o *)sub_B77694(System_Collections_Generic_List_int__TypeInfo);
+  v4 = (System_Collections_Generic_List_int__o *)sub_1B00F18(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v3,
-    (const MethodInfo_30E508C *)Method_System_Collections_Generic_List_int___ctor___69397304);
-  this->fields.playableLimitCountlist = v3;
-  sub_B77560(&this->fields.playableLimitCountlist);
+    v4,
+    (const MethodInfo_33A4158 *)Method_System_Collections_Generic_List_int___ctor__);
+  this->fields.playableLimitCountlist = v4;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.playableLimitCountlist, (int32_t)v4, v5, v6);
   this->fields.genderType = -1;
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
@@ -371,165 +351,206 @@ MaterialEventLogListViewItem_Info_o *__fastcall MaterialEventLogListViewItem_Inf
         MaterialEventLogListViewItem_Info_o *this,
         const MethodInfo *method)
 {
-  MaterialEventLogListViewItem_Info_o *v3; // x20
-  const MethodInfo *v4; // x1
+  __int64 *v2; // x21
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x20
+  const MethodInfo *v12; // x1
   System_String_o *IsNullOrEmpty; // x0
-  struct System_String_o *v6; // x1
-  bool v7; // w0
-  Il2CppObject *v8; // x0
-  long double v9; // q0
+  int32_t v14; // w2
+  int32_t v15; // w3
+  Il2CppObject *v16; // x1
+  bool v17; // w0
+  int32_t v18; // w2
+  int32_t v19; // w3
+  Il2CppObject *v20; // x0
+  int32_t v21; // w2
+  int32_t v22; // w3
   struct System_Action_MaterialEventLogListViewItem__o *on_click_act; // x0
-  System_Action_MaterialEventLogListViewItem__c **v11; // x0
-  __int64 v12; // x1
-  System_Collections_Generic_List_int__o *playableLimitCountlist; // x0
-  bool v14; // w0
-  Il2CppObject *v15; // x0
-  void *v17; // x0
-  int v18; // w1
-  __int64 v19; // x21
-  System_Collections_Generic_List_Enumerator_int__o v20; // [xsp+8h] [xbp-58h] BYREF
-  System_Collections_Generic_List_Enumerator_int__o i; // [xsp+20h] [xbp-40h] BYREF
+  __int64 v24; // x0
+  __int64 v25; // x21
+  __int64 v26; // x1
+  struct CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *voiceId; // x1
+  int32_t v28; // w2
+  int32_t v29; // w3
+  struct System_String_o *commonString; // x1
+  int32_t v31; // w2
+  int32_t v32; // w3
+  struct MaterialEventLogListViewItem_o *itm; // x1
+  int32_t v34; // w2
+  int32_t v35; // w3
+  __int64 v36; // x1
+  System_Collections_Generic_List_int__o *v37; // x0
+  __int64 current; // x1
+  struct System_Int32_array *items; // x8
+  _QWORD *v40; // x9
+  __int64 size; // x10
+  bool v42; // w0
+  int32_t v43; // w2
+  int32_t v44; // w3
+  Il2CppObject *v45; // x0
+  __int64 *v47; // x0
+  const MethodInfo_313A148 **v48; // x23
+  int v49; // w1
+  __int64 v50; // x22
+  System_Collections_Generic_List_Enumerator_int__o v51; // [xsp+8h] [xbp-68h] BYREF
+  System_Collections_Generic_List_Enumerator_int__o v52; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_43889C2 & 1) == 0 )
+  v2 = &qword_48DE000;
+  if ( (byte_48DE33A & 1) == 0 )
   {
-    sub_B775C4(&System_Action_MaterialEventLogListViewItem__TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
-    sub_B775C4(&MaterialEventLogListViewItem_Info_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_int__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_int__GetEnumerator__);
-    sub_B775C4(&string_TypeInfo);
-    byte_43889C2 = 1;
+    sub_1B00CCC(&System_Action_MaterialEventLogListViewItem__TypeInfo, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__, v4);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__, v6);
+    sub_1B00CCC(&MaterialEventLogListViewItem_Info_TypeInfo, v7);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_int__Add__, v8);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_int__GetEnumerator__, v9);
+    sub_1B00CCC(&string_TypeInfo, v10);
+    byte_48DE33A = 1;
   }
-  memset(&i, 0, sizeof(i));
-  v3 = (MaterialEventLogListViewItem_Info_o *)sub_B77694(MaterialEventLogListViewItem_Info_TypeInfo);
-  MaterialEventLogListViewItem_Info___ctor(v3, v4);
+  memset(&v52, 0, sizeof(v52));
+  v11 = sub_1B00F18(MaterialEventLogListViewItem_Info_TypeInfo);
+  MaterialEventLogListViewItem_Info___ctor((MaterialEventLogListViewItem_Info_o *)v11, v12);
   IsNullOrEmpty = (System_String_o *)System_String__IsNullOrEmpty(this->fields.str, 0LL);
-  v6 = 0LL;
+  v16 = 0LL;
   if ( ((unsigned __int8)IsNullOrEmpty & 1) == 0 )
   {
     IsNullOrEmpty = this->fields.str;
     if ( !IsNullOrEmpty )
-      goto LABEL_29;
+      goto LABEL_33;
     IsNullOrEmpty = (System_String_o *)System_String__Clone(IsNullOrEmpty, 0LL);
-    v6 = IsNullOrEmpty;
+    v16 = (Il2CppObject *)IsNullOrEmpty;
     if ( IsNullOrEmpty && IsNullOrEmpty->klass != string_TypeInfo )
-      goto LABEL_30;
+      goto LABEL_34;
   }
-  if ( !v3 )
-LABEL_29:
-    sub_B7769C(IsNullOrEmpty, v6);
-  v3->fields.str = v6;
-  sub_B77560(&v3->fields);
-  v7 = System_String__IsNullOrEmpty(this->fields.ruby, 0LL);
-  v6 = 0LL;
-  if ( !v7 )
+  if ( !v11 )
+LABEL_33:
+    sub_1B00F28(IsNullOrEmpty, v16);
+  *(_QWORD *)(v11 + 16) = v16;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v11 + 16), (int32_t)v16, v14, v15);
+  v17 = System_String__IsNullOrEmpty(this->fields.ruby, 0LL);
+  v16 = 0LL;
+  if ( !v17 )
   {
     IsNullOrEmpty = this->fields.ruby;
     if ( !IsNullOrEmpty )
-      goto LABEL_29;
-    v8 = System_String__Clone(IsNullOrEmpty, 0LL);
-    v6 = (struct System_String_o *)v8;
-    if ( v8 && (System_String_c *)v8->klass != string_TypeInfo )
-      goto LABEL_30;
+      goto LABEL_33;
+    v20 = System_String__Clone(IsNullOrEmpty, 0LL);
+    v16 = v20;
+    if ( v20 && (System_String_c *)v20->klass != string_TypeInfo )
+      goto LABEL_34;
   }
-  v3->fields.ruby = v6;
-  *(__n128 *)&v9 = sub_B77560(&v3->fields.ruby);
-  v3->fields.mPriority = this->fields.mPriority;
-  v3->fields.event_id = this->fields.event_id;
-  v3->fields.war_id = this->fields.war_id;
-  v3->fields.quest_id = this->fields.quest_id;
-  v3->fields.phase_max = this->fields.phase_max;
-  v3->fields.clear_phase_max = this->fields.clear_phase_max;
-  v3->fields.svt_id = this->fields.svt_id;
-  v3->fields.limit_count = this->fields.limit_count;
-  v3->fields.flag = this->fields.flag;
-  v3->fields.font_size = this->fields.font_size;
+  *(_QWORD *)(v11 + 24) = v16;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v11 + 24), (int32_t)v16, v18, v19);
+  *(_OWORD *)(v11 + 32) = *(_OWORD *)&this->fields.mPriority;
+  *(_OWORD *)(v11 + 52) = *(_OWORD *)&this->fields.phase_max;
+  *(_QWORD *)(v11 + 68) = *(_QWORD *)&this->fields.flag;
   on_click_act = this->fields.on_click_act;
-  if ( !on_click_act )
+  if ( on_click_act )
   {
-    v6 = 0LL;
-    goto LABEL_17;
-  }
-  v11 = (System_Action_MaterialEventLogListViewItem__c **)((__int64 (__fastcall *)(struct System_Action_MaterialEventLogListViewItem__o *, Il2CppMethodPointer, long double))on_click_act->klass->vtable._6_Clone.method)(
-                                                            on_click_act,
-                                                            on_click_act->klass->vtable._7_GetMethodImpl.methodPtr,
-                                                            v9);
-  v6 = (struct System_String_o *)v11;
-  if ( !v11 || *v11 == System_Action_MaterialEventLogListViewItem__TypeInfo )
-  {
-LABEL_17:
-    v3->fields.on_click_act = (struct System_Action_MaterialEventLogListViewItem__o *)v6;
-    sub_B77560(&v3->fields.on_click_act);
-    v3->fields.voiceId = this->fields.voiceId;
-    sub_B77560(&v3->fields.voiceId);
-    v3->fields.svtVoiceType = this->fields.svtVoiceType;
-    v3->fields.voiceCondValue = this->fields.voiceCondValue;
-    v3->fields.svtVoiceId = this->fields.svtVoiceId;
-    v3->fields.win_result = this->fields.win_result;
-    v3->fields.genderType = this->fields.genderType;
-    v3->fields.commonString = this->fields.commonString;
-    sub_B77560(&v3->fields.commonString);
-    v3->fields.itm = this->fields.itm;
-    sub_B77560(&v3->fields.itm);
-    IsNullOrEmpty = (System_String_o *)this->fields.playableLimitCountlist;
-    if ( IsNullOrEmpty )
+    v24 = ((__int64 (__fastcall *)(struct System_Action_MaterialEventLogListViewItem__o *, Il2CppMethodPointer))on_click_act->klass->vtable._6_Clone.method)(
+            on_click_act,
+            on_click_act->klass->vtable._7_GetMethodImpl.methodPtr);
+    if ( v24 )
     {
-      System_Collections_Generic_List_int___GetEnumerator(
-        (System_Collections_Generic_List_Enumerator_T__o *)&v20,
-        (System_Collections_Generic_List_int__o *)IsNullOrEmpty,
-        (const MethodInfo_30E6C2C *)Method_System_Collections_Generic_List_int__GetEnumerator__);
-      for ( i = v20;
-            System_Collections_Generic_List_Enumerator_int___MoveNext(
-              &i,
-              (const MethodInfo_225A1B4 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
-            System_Collections_Generic_List_int___Add(
-              playableLimitCountlist,
-              i.fields.current,
-              (const MethodInfo_30E5DE8 *)Method_System_Collections_Generic_List_int__Add__) )
-      {
-        playableLimitCountlist = v3->fields.playableLimitCountlist;
-        if ( !playableLimitCountlist )
-          sub_B7769C(0LL, v12);
-      }
-      System_Collections_Generic_List_Enumerator_int___Dispose(
-        &i,
-        (const MethodInfo_225A1B0 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-      goto LABEL_23;
+      v25 = v24;
+      v26 = sub_1B00E08(v24, System_Action_MaterialEventLogListViewItem__TypeInfo);
+      if ( v26 )
+        goto LABEL_17;
+      sub_1B011E8(v25);
     }
-    goto LABEL_29;
   }
-  do
+  v26 = 0LL;
+LABEL_17:
+  *(_QWORD *)(v11 + 80) = v26;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v11 + 80), v26, v21, v22);
+  voiceId = this->fields.voiceId;
+  *(_QWORD *)(v11 + 96) = voiceId;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v11 + 96), (int32_t)voiceId, v28, v29);
+  *(_OWORD *)(v11 + 104) = *(_OWORD *)&this->fields.svtVoiceType;
+  *(_DWORD *)(v11 + 140) = this->fields.genderType;
+  commonString = this->fields.commonString;
+  *(_QWORD *)(v11 + 144) = commonString;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v11 + 144), (int32_t)commonString, v31, v32);
+  itm = this->fields.itm;
+  *(_QWORD *)(v11 + 88) = itm;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v11 + 88), (int32_t)itm, v34, v35);
+  IsNullOrEmpty = (System_String_o *)this->fields.playableLimitCountlist;
+  if ( !IsNullOrEmpty )
+    goto LABEL_33;
+  v2 = &Method_System_Collections_Generic_List_Enumerator_int__Dispose__;
+  System_Collections_Generic_List_int___GetEnumerator(
+    (System_Collections_Generic_List_Enumerator_T__o *)&v51,
+    (System_Collections_Generic_List_int__o *)IsNullOrEmpty,
+    (const MethodInfo_33A5480 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+  v52 = v51;
+  while ( System_Collections_Generic_List_Enumerator_int___MoveNext(
+            &v52,
+            (const MethodInfo_313A14C *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
   {
-LABEL_30:
-    v17 = (void *)sub_B77990(v6);
-    if ( v18 != 1 )
-      _Unwind_Resume(v17);
-    v19 = *(_QWORD *)__cxa_begin_catch(v17);
-    __cxa_end_catch();
-    System_Collections_Generic_List_Enumerator_int___Dispose(
-      &i,
-      (const MethodInfo_225A1B0 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-    if ( v19 )
-      sub_B77668(v19, 0LL);
-LABEL_23:
-    v14 = System_String__IsNullOrEmpty(this->fields.playLimitCountMessage, 0LL);
-    v6 = 0LL;
-    if ( v14 )
+    v37 = *(System_Collections_Generic_List_int__o **)(v11 + 120);
+    if ( !v37 )
+      sub_1B00F28(0LL, v36);
+    current = (unsigned int)v52.fields._current;
+    items = v37->fields._items;
+    v40 = Method_System_Collections_Generic_List_int__Add__;
+    ++v37->fields._version;
+    if ( !items )
+      sub_1B00F28(v37, current);
+    size = v37->fields._size;
+    if ( (unsigned int)size >= items->max_length )
+    {
+      System_Collections_Generic_List_int___AddWithResize(
+        v37,
+        current,
+        *(const MethodInfo_33A49AC **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
+    }
+    else
+    {
+      v37->fields._size = size + 1;
+      items->m_Items[size + 1] = current;
+    }
+  }
+  System_Collections_Generic_List_Enumerator_int___Dispose(
+    &v52,
+    (const MethodInfo_313A148 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+  while ( 1 )
+  {
+    v42 = System_String__IsNullOrEmpty(this->fields.playLimitCountMessage, 0LL);
+    v16 = 0LL;
+    if ( v42 )
       break;
     IsNullOrEmpty = this->fields.playLimitCountMessage;
     if ( !IsNullOrEmpty )
-      goto LABEL_29;
-    v15 = System_String__Clone(IsNullOrEmpty, 0LL);
-    v6 = (struct System_String_o *)v15;
-    if ( !v15 )
+      goto LABEL_33;
+    v45 = System_String__Clone(IsNullOrEmpty, 0LL);
+    v16 = v45;
+    if ( !v45 || (System_String_c *)v45->klass == string_TypeInfo )
       break;
+LABEL_34:
+    v47 = (__int64 *)sub_1B011E8(v16);
+    v48 = (const MethodInfo_313A148 **)v2;
+    v2 = v47;
+    if ( v49 != 1 )
+    {
+      System_Collections_Generic_List_Enumerator_int___Dispose(&v52, *v48);
+      sub_1BEB75C(v2);
+    }
+    v50 = *(_QWORD *)__cxa_begin_catch(v47);
+    __cxa_end_catch();
+    System_Collections_Generic_List_Enumerator_int___Dispose(&v52, *v48);
+    if ( v50 )
+      sub_1B00F20(v50);
   }
-  while ( (System_String_c *)v15->klass != string_TypeInfo );
-  v3->fields.playLimitCountMessage = v6;
-  sub_B77560(&v3->fields.playLimitCountMessage);
-  return v3;
+  *(_QWORD *)(v11 + 128) = v16;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v11 + 128), (int32_t)v16, v43, v44);
+  return (MaterialEventLogListViewItem_Info_o *)v11;
 }
 
 

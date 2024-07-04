@@ -1,16 +1,10 @@
-void __fastcall DeckSetupResponseCommand___ctor(DeckSetupResponseCommand_o *this, const MethodInfo *method)
-{
-  ResponseCommandBase___ctor((ResponseCommandBase_o *)this, 0LL);
-}
-
-
 int32_t __fastcall DeckSetupResponseCommand__ExecuteResponse(
         DeckSetupResponseCommand_o *this,
         ResponseData_o *data,
         const MethodInfo *method)
 {
   if ( !data )
-    sub_B7769C(this, 0LL);
+    sub_1B00F28(this, 0LL);
   return data->fields.success == 0LL;
 }
 

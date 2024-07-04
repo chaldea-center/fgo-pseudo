@@ -4,31 +4,33 @@ void __fastcall LimitCntUpItemComponent___ctor(LimitCntUpItemComponent_o *this, 
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall LimitCntUpItemComponent__CloseItemDetail(
         LimitCntUpItemComponent_o *this,
         bool isDecide,
         const MethodInfo *method)
 {
-  _QWORD *v3; // x0
-  System_Reflection_MethodBase_o *v4; // x0
-  CommonUI_o *Instance; // x0
-  __int64 v6; // x1
+  __int64 v3; // x1
+  _QWORD *v4; // x0
+  System_Reflection_MethodBase_o *v5; // x0
+  Il2CppObject *Instance; // x0
+  __int64 v7; // x1
 
-  if ( (byte_438A78E & 1) == 0 )
+  if ( (byte_48E5E90 & 1) == 0 )
   {
-    sub_B775C4(&Method_LimitCntUpItemComponent_CloseItemDetail__);
-    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_438A78E = 1;
+    sub_1B00CCC(&Method_LimitCntUpItemComponent_CloseItemDetail__, isDecide);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
+    byte_48E5E90 = 1;
   }
-  v3 = Method_LimitCntUpItemComponent_CloseItemDetail__;
-  if ( (*((_BYTE *)Method_LimitCntUpItemComponent_CloseItemDetail__ + 75) & 2) != 0 )
-    v3 = (_QWORD *)sub_B775CC(Method_LimitCntUpItemComponent_CloseItemDetail__);
-  v4 = (System_Reflection_MethodBase_o *)sub_B775A8(v3, v3[3]);
-  OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v4 = Method_LimitCntUpItemComponent_CloseItemDetail__;
+  if ( (*((_BYTE *)Method_LimitCntUpItemComponent_CloseItemDetail__ + 83) & 2) != 0 )
+    v4 = (_QWORD *)sub_1B00CE4(Method_LimitCntUpItemComponent_CloseItemDetail__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v4, v4[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0LL);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_B7769C(0LL, v6);
-  CommonUI__CloseItemDetailDialog(Instance, 0LL);
+    sub_1B00F28(0LL, v7);
+  CommonUI__CloseItemDetailDialog((CommonUI_o *)Instance, 0LL);
 }
 
 
@@ -51,109 +53,102 @@ ItemEntity_o *__fastcall LimitCntUpItemComponent__GetItemEntity(
 
 void __fastcall LimitCntUpItemComponent__OnClickItem(LimitCntUpItemComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_Object_o *maskSprite; // x20
+  __int64 v3; // x1
   __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  UnityEngine_Object_o *maskSprite; // x20
+  __int64 v8; // x1
   UnityEngine_Component_o *gameObject; // x0
-  WebViewManager_o *Instance; // x0
+  _QWORD *v10; // x0
+  System_Reflection_MethodBase_o *v11; // x0
+  Il2CppObject *Instance; // x0
   ItemEntity_o *itemEnt; // x20
-  CommonUI_o *v8; // x21
-  ItemDetailInfoComponent_CallbackFunc_o *v9; // x22
+  CommonUI_o *v14; // x21
+  ItemDetailInfoComponent_CallbackFunc_o *v15; // x22
 
-  if ( (byte_438A78D & 1) == 0 )
+  if ( (byte_48E5E8F & 1) == 0 )
   {
-    sub_B775C4(&ItemDetailInfoComponent_CallbackFunc_TypeInfo);
-    sub_B775C4(&Method_LimitCntUpItemComponent_CloseItemDetail__);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B775C4(&SoundManager_TypeInfo);
-    byte_438A78D = 1;
+    sub_1B00CCC(&ItemDetailInfoComponent_CallbackFunc_TypeInfo, method);
+    sub_1B00CCC(&Method_LimitCntUpItemComponent_CloseItemDetail__, v3);
+    sub_1B00CCC(&Method_LimitCntUpItemComponent_OnClickItem__, v4);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v5);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    byte_48E5E8F = 1;
   }
   maskSprite = (UnityEngine_Object_o *)this->fields.maskSprite;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(maskSprite, 0LL, 0LL) )
   {
     gameObject = (UnityEngine_Component_o *)this->fields.maskSprite;
     if ( !gameObject )
-      goto LABEL_17;
+      goto LABEL_15;
     gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL);
     if ( !gameObject )
-      goto LABEL_17;
+      goto LABEL_15;
     if ( UnityEngine_GameObject__get_activeInHierarchy((UnityEngine_GameObject_o *)gameObject, 0LL) )
       return;
   }
   if ( !this->fields.disableOpenItemDetailDialog )
   {
-    if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !SoundManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    }
-    SoundManager__playSystemSe(0, 0LL);
-    Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v10 = Method_LimitCntUpItemComponent_OnClickItem__;
+    if ( (*((_BYTE *)Method_LimitCntUpItemComponent_OnClickItem__ + 83) & 2) != 0 )
+      v10 = (_QWORD *)sub_1B00CE4(Method_LimitCntUpItemComponent_OnClickItem__);
+    v11 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v10, v10[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v11, 0, 0LL);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     itemEnt = this->fields.itemEnt;
-    v8 = (CommonUI_o *)Instance;
-    v9 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_B77694(ItemDetailInfoComponent_CallbackFunc_TypeInfo);
+    v14 = (CommonUI_o *)Instance;
+    v15 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_1B00F18(ItemDetailInfoComponent_CallbackFunc_TypeInfo);
     ItemDetailInfoComponent_CallbackFunc___ctor(
-      v9,
+      v15,
       (Il2CppObject *)this,
       (intptr_t)Method_LimitCntUpItemComponent_CloseItemDetail__,
       0LL);
-    if ( v8 )
+    if ( v14 )
     {
-      CommonUI__OpenItemDetailDialog(v8, itemEnt, v9, 51, 0LL);
+      CommonUI__OpenItemDetailDialog(v14, itemEnt, v15, 51, 0LL);
       return;
     }
-LABEL_17:
-    sub_B7769C(gameObject, v4);
+LABEL_15:
+    sub_1B00F28(gameObject, v8);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall LimitCntUpItemComponent__SetItemEntity(
         LimitCntUpItemComponent_o *this,
         int32_t id,
         const MethodInfo *method)
 {
-  DataMasterBase_WarMaster__WarEntity__int__o *Master_WarQuestSelectionMaster; // x0
+  __int64 v5; // x1
   __int64 v6; // x1
-  struct ItemEntity_o *Entity; // x0
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
+  Il2CppObject *Master_object; // x0
+  __int64 v8; // x1
+  Il2CppObject *Entity; // x0
+  int32_t v10; // w2
+  int32_t v11; // w3
 
-  if ( (byte_438A78C & 1) == 0 )
+  if ( (byte_48E5E8E & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_B775C4(&DataManager_TypeInfo);
-    sub_B775C4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    byte_438A78C = 1;
+    sub_1B00CCC(&Method_DataManager_GetMaster_ItemMaster___, *(_QWORD *)&id);
+    sub_1B00CCC(&DataManager_TypeInfo, v5);
+    sub_1B00CCC(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v6);
+    byte_48E5E8E = 1;
   }
-  if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ItemMaster___);
-  if ( !Master_WarQuestSelectionMaster )
-    sub_B7769C(0LL, v6);
-  Entity = (struct ItemEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-                                    Master_WarQuestSelectionMaster,
-                                    id,
-                                    (const MethodInfo_21FB894 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-  this->fields.itemEnt = Entity;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.itemEnt,
-    (System_Int32_array **)Entity,
-    v8,
-    v9,
-    v10,
-    v11,
-    v12,
-    v13);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_ItemMaster___);
+  if ( !Master_object )
+    sub_1B00F28(0LL, v8);
+  Entity = DataMasterBase_object__object__int___GetEntity(
+             (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
+             id,
+             (const MethodInfo_2FE6A4C *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+  this->fields.itemEnt = (struct ItemEntity_o *)Entity;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.itemEnt, (int32_t)Entity, v10, v11);
 }
 
 
@@ -163,22 +158,20 @@ void __fastcall LimitCntUpItemComponent__SetItemIcon(
         int32_t itemId,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
+  __int64 v6; // x1
   UnityEngine_GameObject_o *itemInfo; // x0
-  struct ItemEntity_o *Entity; // x0
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
+  Il2CppObject *Entity; // x0
+  int32_t v9; // w2
+  int32_t v10; // w3
   ItemIconComponent_o *itemIconComp; // x8
 
-  if ( (byte_438A78B & 1) == 0 )
+  if ( (byte_48E5E8D & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_B775C4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438A78B = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_ItemMaster___, *(_QWORD *)&itemId);
+    sub_1B00CCC(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v5);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_48E5E8D = 1;
   }
   itemInfo = this->fields.itemInfo;
   if ( !itemInfo )
@@ -189,27 +182,19 @@ void __fastcall LimitCntUpItemComponent__SetItemIcon(
     goto LABEL_10;
   UnityEngine_GameObject__SetActive(itemInfo, 0, 0LL);
   this->fields.currentItemId = itemId;
-  itemInfo = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  itemInfo = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !itemInfo )
     goto LABEL_10;
-  itemInfo = (UnityEngine_GameObject_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+  itemInfo = (UnityEngine_GameObject_o *)DataManager__GetMasterData_object_(
                                            (DataManager_o *)itemInfo,
-                                           (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ItemMaster___);
+                                           (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !itemInfo
-    || (Entity = (struct ItemEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-                                          (DataMasterBase_WarMaster__WarEntity__int__o *)itemInfo,
-                                          this->fields.currentItemId,
-                                          (const MethodInfo_21FB894 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__),
-        this->fields.itemEnt = Entity,
-        sub_B77560(
-          (BattleServantConfConponent_o *)&this->fields.itemEnt,
-          (System_Int32_array **)Entity,
-          v7,
-          v8,
-          v9,
-          v10,
-          v11,
-          v12),
+    || (Entity = DataMasterBase_object__object__int___GetEntity(
+                   (DataMasterBase_TMaster__TEntity__PKType__o *)itemInfo,
+                   this->fields.currentItemId,
+                   (const MethodInfo_2FE6A4C *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__),
+        this->fields.itemEnt = (struct ItemEntity_o *)Entity,
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.itemEnt, (int32_t)Entity, v9, v10),
         (itemInfo = (UnityEngine_GameObject_o *)this->fields.itemEnt) == 0LL)
     || (itemInfo = (UnityEngine_GameObject_o *)ItemEntity__GetImageId((ItemEntity_o *)itemInfo, 0LL),
         itemIconComp = this->fields.itemIconComp,
@@ -217,12 +202,13 @@ void __fastcall LimitCntUpItemComponent__SetItemIcon(
         !itemIconComp) )
   {
 LABEL_10:
-    sub_B7769C(itemInfo, *(_QWORD *)&itemId);
+    sub_1B00F28(itemInfo, *(_QWORD *)&itemId);
   }
   ItemIconComponent__SetCombineItem(itemIconComp, itemId, -1, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall LimitCntUpItemComponent__SetMaskSprite(
         LimitCntUpItemComponent_o *this,
         bool isActive,
@@ -232,24 +218,21 @@ void __fastcall LimitCntUpItemComponent__SetMaskSprite(
   __int64 v6; // x1
   UnityEngine_Component_o *gameObject; // x0
 
-  if ( (byte_438A78F & 1) == 0 )
+  if ( (byte_48E5E91 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438A78F = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, isActive);
+    byte_48E5E91 = 1;
   }
   maskSprite = (UnityEngine_Object_o *)this->fields.maskSprite;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( !UnityEngine_Object__op_Equality(maskSprite, 0LL, 0LL) )
   {
     gameObject = (UnityEngine_Component_o *)this->fields.maskSprite;
     if ( !gameObject
       || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL)) == 0LL )
     {
-      sub_B7769C(gameObject, v6);
+      sub_1B00F28(gameObject, v6);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, isActive, 0LL);
   }
@@ -268,7 +251,7 @@ void __fastcall LimitCntUpItemComponent__enableDispItemInfo(LimitCntUpItemCompon
 
   itemInfo = this->fields.itemInfo;
   if ( !itemInfo )
-    sub_B7769C(0LL, method);
+    sub_1B00F28(0LL, method);
   UnityEngine_GameObject__SetActive(itemInfo, 0, 0LL);
 }
 
@@ -285,7 +268,6 @@ int32_t __fastcall LimitCntUpItemComponent__getItemImgId(LimitCntUpItemComponent
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall LimitCntUpItemComponent__setLimitUpItemInfo(
         LimitCntUpItemComponent_o *this,
         int64_t usrId,
@@ -293,234 +275,220 @@ void __fastcall LimitCntUpItemComponent__setLimitUpItemInfo(
         int32_t needNum,
         const MethodInfo *method)
 {
-  DataMasterBase_WarMaster__WarEntity__int__o *Master_WarQuestSelectionMaster; // x0
+  __int64 v9; // x1
   __int64 v10; // x1
-  struct ItemEntity_o *Entity; // x0
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  DataMasterBase_TMaster__TEntity__PKType__o *Master_object; // x0
+  __int64 v19; // x1
+  Il2CppObject *v20; // x0
   struct ItemEntity_o **p_itemEnt; // x22
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
+  int32_t v22; // w2
+  int32_t v23; // w3
   struct ItemEntity_o *itemEnt; // x8
-  const Il2CppType *return_type; // x8
+  _DWORD *v25; // x8
   UILabel_o *needTitleLb; // x20
   UILabel_o *haveTitleLb; // x20
   UILabel_o *haveNumLb; // x20
-  __int64 v24; // x2
-  Il2CppObject *v25; // x0
+  __int64 v29; // x2
+  __int64 v30; // x3
+  __int64 v31; // x4
+  Il2CppObject *v32; // x0
   UILabel_o *needNumLb; // x20
-  __int64 v27; // x2
-  Il2CppObject *v28; // x0
-  int v29; // s3
-  float v30; // s4
-  float v31; // s5
-  float v32; // s6
-  UIWidget_o *v33; // x20
-  int v34; // s1
-  int v35; // s0
-  int v36; // s2
-  UIWidget_o *v37; // x20
-  float v38; // s4
-  float v39; // s5
-  float v40; // s6
-  int methodPointer; // s0
-  int methodPointer_high; // s1
-  int invoker_method; // s2
-  int invoker_method_high; // s3
-  UIWidget_o *v45; // x20
-  int v46; // s0
-  MethodInfo methoda; // [xsp+8h] [xbp-68h] BYREF
-  UnityEngine_Color_o v51; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  __int64 v34; // x2
+  __int64 v35; // x3
+  __int64 v36; // x4
+  Il2CppObject *v37; // x0
+  float v38; // s8
+  float v39; // s9
+  float v40; // s10
+  float v41; // s11
+  int32_t needItemNum; // [xsp+0h] [xbp-70h] BYREF
+  int32_t haveItemNum; // [xsp+4h] [xbp-6Ch] BYREF
+  UserSvtCoinEntity_o *entity; // [xsp+8h] [xbp-68h] BYREF
+  UserItemEntity_o *v45; // [xsp+38h] [xbp-38h] BYREF
+  UnityEngine_Color_o v46; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v47; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v48; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_438A78A & 1) == 0 )
+  if ( (byte_48E5E8C & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_B775C4(&Method_DataManager_GetMaster_UserItemMaster___);
-    sub_B775C4(&Method_DataManager_GetMaster_UserSvtCoinMaster___);
-    sub_B775C4(&DataManager_TypeInfo);
-    sub_B775C4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_B775C4(&int_TypeInfo);
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&StringLiteral_23975/*"{0:#,0}"*/);
-    sub_B775C4(&StringLiteral_3308/*"COMBINE_ITEM_INFO_HAVE"*/);
-    sub_B775C4(&StringLiteral_3309/*"COMBINE_ITEM_INFO_NEED"*/);
-    byte_438A78A = 1;
+    sub_1B00CCC(&Method_DataManager_GetMaster_ItemMaster___, usrId);
+    sub_1B00CCC(&Method_DataManager_GetMaster_UserItemMaster___, v9);
+    sub_1B00CCC(&Method_DataManager_GetMaster_UserSvtCoinMaster___, v10);
+    sub_1B00CCC(&DataManager_TypeInfo, v11);
+    sub_1B00CCC(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v12);
+    sub_1B00CCC(&int_TypeInfo, v13);
+    sub_1B00CCC(&LocalizationManager_TypeInfo, v14);
+    sub_1B00CCC(&StringLiteral_24569/*"{0:#,0}"*/, v15);
+    sub_1B00CCC(&StringLiteral_3636/*"COMBINE_ITEM_INFO_HAVE"*/, v16);
+    sub_1B00CCC(&StringLiteral_3637/*"COMBINE_ITEM_INFO_NEED"*/, v17);
+    byte_48E5E8C = 1;
   }
-  *(_QWORD *)&methoda.token = 0LL;
-  methoda.return_type = 0LL;
-  this->fields.currentItemId = itemId;
+  v45 = 0LL;
+  entity = 0LL;
   this->fields.haveItemNum = 0;
   this->fields.needItemNum = needNum;
-  if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+  this->fields.currentItemId = itemId;
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ItemMaster___);
-  if ( !Master_WarQuestSelectionMaster )
-    goto LABEL_42;
-  Entity = (struct ItemEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-                                    Master_WarQuestSelectionMaster,
-                                    this->fields.currentItemId,
-                                    (const MethodInfo_21FB894 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_ItemMaster___);
+  if ( !Master_object )
+    goto LABEL_39;
+  v20 = DataMasterBase_object__object__int___GetEntity(
+          Master_object,
+          this->fields.currentItemId,
+          (const MethodInfo_2FE6A4C *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+  this->fields.itemEnt = (struct ItemEntity_o *)v20;
   p_itemEnt = &this->fields.itemEnt;
-  this->fields.itemEnt = Entity;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.itemEnt,
-    (System_Int32_array **)Entity,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18);
-  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)this->fields.itemEnt;
-  if ( !Master_WarQuestSelectionMaster )
-    goto LABEL_42;
-  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)ItemEntity__GetImageId(
-                                                                                    (ItemEntity_o *)Master_WarQuestSelectionMaster,
-                                                                                    0LL);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.itemEnt, (int32_t)v20, v22, v23);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.itemEnt;
+  if ( !Master_object )
+    goto LABEL_39;
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)ItemEntity__GetImageId(
+                                                                  (ItemEntity_o *)Master_object,
+                                                                  0LL);
   itemEnt = this->fields.itemEnt;
-  this->fields.itemImgId = (int)Master_WarQuestSelectionMaster;
+  this->fields.itemImgId = (int)Master_object;
   if ( !itemEnt )
-    goto LABEL_42;
+    goto LABEL_39;
   if ( itemEnt->fields.type == 29 )
   {
-    methoda.return_type = 0LL;
-    if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+    entity = 0LL;
+    if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
-    if ( !*p_itemEnt || !Master_WarQuestSelectionMaster )
-      goto LABEL_42;
+    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
+    if ( !*p_itemEnt || !Master_object )
+      goto LABEL_39;
     UserSvtCoinMaster__TryGetEntity(
-      (UserSvtCoinMaster_o *)Master_WarQuestSelectionMaster,
-      (UserSvtCoinEntity_o **)&methoda.return_type,
+      (UserSvtCoinMaster_o *)Master_object,
+      &entity,
       usrId,
       (*p_itemEnt)->fields.value,
       0LL);
-    return_type = methoda.return_type;
-    if ( !methoda.return_type )
-      goto LABEL_24;
-    goto LABEL_23;
+    v25 = entity;
+    if ( !entity )
+      goto LABEL_21;
+    goto LABEL_20;
   }
-  if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_UserItemMaster___);
-  if ( !Master_WarQuestSelectionMaster )
-    goto LABEL_42;
-  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)UserItemMaster__TryGetEntity(
-                                                                                    (UserItemMaster_o *)Master_WarQuestSelectionMaster,
-                                                                                    (UserItemEntity_o **)&methoda.token,
-                                                                                    usrId,
-                                                                                    itemId,
-                                                                                    0LL);
-  if ( ((unsigned __int8)Master_WarQuestSelectionMaster & 1) != 0 )
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_UserItemMaster___);
+  if ( !Master_object )
+    goto LABEL_39;
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UserItemMaster__TryGetEntity(
+                                                                  (UserItemMaster_o *)Master_object,
+                                                                  &v45,
+                                                                  usrId,
+                                                                  itemId,
+                                                                  0LL);
+  if ( ((unsigned __int8)Master_object & 1) != 0 )
   {
-    return_type = *(const Il2CppType **)&methoda.token;
-    if ( !*(_QWORD *)&methoda.token )
-      goto LABEL_42;
-LABEL_23:
-    LODWORD(return_type) = *(&return_type[1].bits + 1);
-LABEL_24:
-    this->fields.haveItemNum = (int)return_type;
+    v25 = v45;
+    if ( !v45 )
+      goto LABEL_39;
+LABEL_20:
+    LODWORD(v25) = v25[7];
+LABEL_21:
+    this->fields.haveItemNum = (int)v25;
   }
-  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)this->fields.itemIconComp;
-  if ( !Master_WarQuestSelectionMaster )
-    goto LABEL_42;
-  ItemIconComponent__SetCombineItem((ItemIconComponent_o *)Master_WarQuestSelectionMaster, itemId, -1, 0LL);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.itemIconComp;
+  if ( !Master_object )
+    goto LABEL_39;
+  ItemIconComponent__SetCombineItem((ItemIconComponent_o *)Master_object, itemId, -1, 0LL);
   needTitleLb = this->fields.needTitleLb;
-  if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !LocalizationManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  }
-  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)LocalizationManager__Get(
-                                                                                    (System_String_o *)StringLiteral_3309/*"COMBINE_ITEM_INFO_NEED"*/,
-                                                                                    0LL);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)LocalizationManager__Get(
+                                                                  (System_String_o *)StringLiteral_3637/*"COMBINE_ITEM_INFO_NEED"*/,
+                                                                  0LL);
   if ( !needTitleLb )
-    goto LABEL_42;
-  UILabel__set_text(needTitleLb, (System_String_o *)Master_WarQuestSelectionMaster, 0LL);
+    goto LABEL_39;
+  UILabel__set_text(needTitleLb, (System_String_o *)Master_object, 0LL);
   haveTitleLb = this->fields.haveTitleLb;
-  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)LocalizationManager__Get(
-                                                                                    (System_String_o *)StringLiteral_3308/*"COMBINE_ITEM_INFO_HAVE"*/,
-                                                                                    0LL);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)LocalizationManager__Get(
+                                                                  (System_String_o *)StringLiteral_3636/*"COMBINE_ITEM_INFO_HAVE"*/,
+                                                                  0LL);
   if ( !haveTitleLb )
-    goto LABEL_42;
-  UILabel__set_text(haveTitleLb, (System_String_o *)Master_WarQuestSelectionMaster, 0LL);
+    goto LABEL_39;
+  UILabel__set_text(haveTitleLb, (System_String_o *)Master_object, 0LL);
   haveNumLb = this->fields.haveNumLb;
-  LODWORD(methoda.name) = this->fields.haveItemNum;
-  v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &methoda.name, v24);
-  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)System_String__Format(
-                                                                                    (System_String_o *)StringLiteral_23975/*"{0:#,0}"*/,
-                                                                                    v25,
-                                                                                    0LL);
+  haveItemNum = this->fields.haveItemNum;
+  v32 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &haveItemNum, v29, v30, v31);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)System_String__Format(
+                                                                  (System_String_o *)StringLiteral_24569/*"{0:#,0}"*/,
+                                                                  v32,
+                                                                  0LL);
   if ( !haveNumLb )
-    goto LABEL_42;
-  UILabel__set_text(haveNumLb, (System_String_o *)Master_WarQuestSelectionMaster, 0LL);
+    goto LABEL_39;
+  UILabel__set_text(haveNumLb, (System_String_o *)Master_object, 0LL);
   needNumLb = this->fields.needNumLb;
-  LODWORD(methoda.methodPointer) = this->fields.needItemNum;
-  v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &methoda, v27);
-  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)System_String__Format(
-                                                                                    (System_String_o *)StringLiteral_23975/*"{0:#,0}"*/,
-                                                                                    v28,
-                                                                                    0LL);
+  needItemNum = this->fields.needItemNum;
+  v37 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &needItemNum, v34, v35, v36);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)System_String__Format(
+                                                                  (System_String_o *)StringLiteral_24569/*"{0:#,0}"*/,
+                                                                  v37,
+                                                                  0LL);
   if ( !needNumLb )
-    goto LABEL_42;
-  UILabel__set_text(needNumLb, (System_String_o *)Master_WarQuestSelectionMaster, 0LL);
-  if ( this->fields.haveItemNum < this->fields.needItemNum )
+    goto LABEL_39;
+  UILabel__set_text(needNumLb, (System_String_o *)Master_object, 0LL);
+  if ( this->fields.haveItemNum >= this->fields.needItemNum )
   {
-    v33 = (UIWidget_o *)this->fields.needTitleLb;
-    v34 = 0;
-    v35 = 1062920520;
-    v36 = 1050924810;
-    this->fields.isItemNum = 0;
-    methoda.name = 0LL;
-    methoda.klass = 0LL;
-    UnityEngine_Color___ctor_41410832(
-      *(UnityEngine_Color_o *)(&v29 - 3),
-      v30,
-      v31,
-      v32,
-      (const MethodInfo *)&methoda.name);
-    if ( v33 )
+    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.needTitleLb;
+    this->fields.isItemNum = 1;
+    if ( Master_object )
     {
-      UIWidget__set_color(v33, *(UnityEngine_Color_o *)&methoda.name, 0LL);
-      v37 = (UIWidget_o *)this->fields.needNumLb;
-      v51.fields.g = 0.0;
-      v51.fields.r = 0.855;
-      v51.fields.b = 0.32;
-      methoda.methodPointer = 0LL;
-      methoda.invoker_method = 0LL;
-      UnityEngine_Color___ctor_41410832(v51, v38, v39, v40, &methoda);
-      if ( v37 )
+      v47.fields.r = 1.0;
+      v47.fields.g = 1.0;
+      v47.fields.b = 1.0;
+      v47.fields.a = 1.0;
+      v38 = 1.0;
+      UIWidget__set_color((UIWidget_o *)Master_object, v47, 0LL);
+      Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.needNumLb;
+      if ( Master_object )
       {
-        methodPointer_high = HIDWORD(methoda.methodPointer);
-        methodPointer = (int)methoda.methodPointer;
-        invoker_method_high = HIDWORD(methoda.invoker_method);
-        invoker_method = (int)methoda.invoker_method;
-        goto LABEL_39;
+        v40 = 1.0;
+        v39 = 1.0;
+        v41 = 1.0;
+        goto LABEL_36;
       }
     }
-LABEL_42:
-    sub_B7769C(Master_WarQuestSelectionMaster, v10);
-  }
-  v45 = (UIWidget_o *)this->fields.needTitleLb;
-  this->fields.isItemNum = 1;
-  *(UnityEngine_Color_o *)&v46 = UnityEngine_Color__get_white(0LL);
-  if ( !v45 )
-    goto LABEL_42;
-  UIWidget__set_color(v45, *(UnityEngine_Color_o *)&v46, 0LL);
-  v37 = (UIWidget_o *)this->fields.needNumLb;
-  *(UnityEngine_Color_o *)&methodPointer = UnityEngine_Color__get_white(0LL);
-  if ( !v37 )
-    goto LABEL_42;
 LABEL_39:
-  UIWidget__set_color(v37, *(UnityEngine_Color_o *)&methodPointer, 0LL);
-  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)this->fields.itemInfo;
-  if ( !Master_WarQuestSelectionMaster )
-    goto LABEL_42;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_WarQuestSelectionMaster, 1, 0LL);
-  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)this->fields.statusInfo;
-  if ( !Master_WarQuestSelectionMaster )
-    goto LABEL_42;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_WarQuestSelectionMaster, 1, 0LL);
+    sub_1B00F28(Master_object, v19);
+  }
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.needTitleLb;
+  this->fields.isItemNum = 0;
+  if ( !Master_object )
+    goto LABEL_39;
+  v38 = 0.855;
+  v39 = 0.32;
+  v46.fields.g = 0.0;
+  v46.fields.a = 1.0;
+  v46.fields.r = 0.855;
+  v46.fields.b = 0.32;
+  v40 = 0.0;
+  v41 = 1.0;
+  UIWidget__set_color((UIWidget_o *)Master_object, v46, 0LL);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.needNumLb;
+  if ( !Master_object )
+    goto LABEL_39;
+LABEL_36:
+  v48.fields.r = v38;
+  v48.fields.g = v40;
+  v48.fields.b = v39;
+  v48.fields.a = v41;
+  UIWidget__set_color((UIWidget_o *)Master_object, v48, 0LL);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.itemInfo;
+  if ( !Master_object )
+    goto LABEL_39;
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, 1, 0LL);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.statusInfo;
+  if ( !Master_object )
+    goto LABEL_39;
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, 1, 0LL);
 }

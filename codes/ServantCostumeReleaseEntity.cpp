@@ -1,16 +1,17 @@
 void __fastcall ServantCostumeReleaseEntity___ctor(ServantCostumeReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438E8AA & 1) == 0 )
+  if ( (byte_48E2E5A & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    byte_438E8AA = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
+    byte_48E2E5A = 1;
   }
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall ServantCostumeReleaseEntity__CreatePK(
         int32_t svtId,
         int32_t releaseType,
@@ -19,10 +20,10 @@ System_String_o *__fastcall ServantCostumeReleaseEntity__CreatePK(
         int32_t condTargetId,
         const MethodInfo *method)
 {
-  if ( (byte_438E8A8 & 1) == 0 )
+  if ( (byte_48E2E58 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___);
-    byte_438E8A8 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___, *(_QWORD *)&releaseType);
+    byte_48E2E58 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int__int_(
            svtId,
@@ -30,7 +31,7 @@ System_String_o *__fastcall ServantCostumeReleaseEntity__CreatePK(
            costumeId,
            condType,
            condTargetId,
-           (const MethodInfo_1D17DEC *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___);
+           (const MethodInfo_2D61C2C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___);
 }
 
 
@@ -59,17 +60,17 @@ bool __fastcall ServantCostumeReleaseEntity__IsAvailable(ServantCostumeReleaseEn
   int32_t v7; // w1
   int32_t condTargetId; // w21
 
-  if ( (byte_438E8A9 & 1) == 0 )
+  if ( (byte_48E2E59 & 1) == 0 )
   {
-    sub_B775C4(&CondType_TypeInfo);
-    byte_438E8A9 = 1;
+    sub_1B00CCC(&CondType_TypeInfo, method);
+    byte_48E2E59 = 1;
   }
   condType = this->fields.condType;
   if ( condType == 64 )
   {
     svtId = this->fields.svtId;
     costumeId = this->fields.costumeId;
-    if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
+    if ( !CondType_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
     v6 = 64;
     v7 = svtId;
@@ -78,7 +79,7 @@ bool __fastcall ServantCostumeReleaseEntity__IsAvailable(ServantCostumeReleaseEn
   {
     condTargetId = this->fields.condTargetId;
     costumeId = this->fields.condNum;
-    if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
+    if ( !CondType_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
     v6 = condType;
     v7 = condTargetId;

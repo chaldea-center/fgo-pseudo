@@ -1,32 +1,37 @@
 void __fastcall ExcludeMotionEntity___ctor(ExcludeMotionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4389FC2 & 1) == 0 )
+  if ( (byte_48E2A2B & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    byte_4389FC2 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
+    byte_48E2A2B = 1;
   }
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall ExcludeMotionEntity__CreatePK(
-        int32_t idx,
+        int32_t targetIdType,
+        int32_t targetId,
+        int32_t targetSvtType,
         System_String_o *stateName,
         int32_t weaponGroup,
         const MethodInfo *method)
 {
-  if ( (byte_4389FC0 & 1) == 0 )
+  if ( (byte_48E2A29 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__string__int___);
-    byte_4389FC0 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_int__int__int__string__int___, *(_QWORD *)&targetId);
+    byte_48E2A29 = 1;
   }
-  return DataEntityBase__CreateMultiplePK_int__string__int_(
-           idx,
-           stateName,
+  return DataEntityBase__CreateMultiplePK_int__int__int__object__int_(
+           targetIdType,
+           targetId,
+           targetSvtType,
+           (Il2CppObject *)stateName,
            weaponGroup,
-           (const MethodInfo_1D177DC *)Method_DataEntityBase_CreateMultiplePK_int__string__int___);
+           (const MethodInfo_2D61D84 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__string__int___);
 }
 
 
@@ -34,142 +39,93 @@ System_String_o *__fastcall ExcludeMotionEntity__CreatePrimaryKey(
         ExcludeMotionEntity_o *this,
         const MethodInfo *method)
 {
-  const MethodInfo *v2; // x3
+  const MethodInfo *v2; // x5
 
-  return ExcludeMotionEntity__CreatePK(this->fields.idx, this->fields.stateName, this->fields.weaponGroup, v2);
+  return ExcludeMotionEntity__CreatePK(
+           this->fields.targetIdType,
+           this->fields.targetId,
+           this->fields.targetSvtType,
+           this->fields.stateName,
+           this->fields.weaponGroup,
+           v2);
 }
 
 
-bool __fastcall ExcludeMotionEntity__IsSatisfyExcludeCond(ExcludeMotionEntity_o *this, const MethodInfo *method)
+int32_t __fastcall ExcludeMotionEntity__GetTargetSvtType(BattleServantData_o *svtData, const MethodInfo *method)
 {
-  ExcludeMotionEntity_o *v2; // x19
-  struct ExcludeMotionCond_array *excludeCondJson; // x20
-  int max_length; // w8
-  unsigned int v5; // w21
-  ExcludeMotionCond_o *v6; // x26
-  int32_t warId; // w27
-  int32_t questId; // w27
-  int32_t questPhase; // w26
-  __int64 v11; // x0
-
-  v2 = this;
-  if ( (byte_4389FC1 & 1) == 0 )
-  {
-    this = (ExcludeMotionEntity_o *)sub_B775C4(&TerminalPramsManager_TypeInfo);
-    byte_4389FC1 = 1;
-  }
-  excludeCondJson = v2->fields.excludeCondJson;
-  if ( !excludeCondJson )
-LABEL_42:
-    sub_B7769C(this, method);
-  max_length = excludeCondJson->max_length;
-  if ( max_length < 1 )
-    return 0;
-  v5 = 0;
-  while ( 1 )
-  {
-    if ( v5 >= max_length )
-    {
-      v11 = sub_B776C8(this);
-      sub_B77668(v11, 0LL);
-    }
-    v6 = excludeCondJson->m_Items[v5];
-    if ( !v6 )
-      goto LABEL_42;
-    warId = v6->fields.warId;
-    if ( warId )
-    {
-      if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !TerminalPramsManager_TypeInfo->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      }
-      if ( !byte_4387465 )
-      {
-        sub_B775C4(&TerminalPramsManager_TypeInfo);
-        byte_4387465 = 1;
-      }
-      this = (ExcludeMotionEntity_o *)TerminalPramsManager_TypeInfo;
-      if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !TerminalPramsManager_TypeInfo->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-        this = (ExcludeMotionEntity_o *)TerminalPramsManager_TypeInfo;
-      }
-      if ( warId == HIDWORD(this[3].fields.excludeCondJson->obj.klass) )
-        return 1;
-    }
-    questId = v6->fields.questId;
-    if ( questId )
-    {
-      if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !TerminalPramsManager_TypeInfo->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      }
-      if ( !byte_4387478 )
-      {
-        sub_B775C4(&TerminalPramsManager_TypeInfo);
-        byte_4387478 = 1;
-      }
-      this = (ExcludeMotionEntity_o *)TerminalPramsManager_TypeInfo;
-      if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !TerminalPramsManager_TypeInfo->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-        this = (ExcludeMotionEntity_o *)TerminalPramsManager_TypeInfo;
-      }
-      if ( questId == LODWORD(this[3].fields.excludeCondJson->bounds) )
-      {
-        questPhase = v6->fields.questPhase;
-        if ( !questPhase )
-          return 1;
-        if ( (this[6].fields.idx & 0x4000000) != 0 && !this[4].fields.weaponGroup )
-          j_il2cpp_runtime_class_init_0(this);
-        if ( !byte_4387479 )
-        {
-          sub_B775C4(&TerminalPramsManager_TypeInfo);
-          byte_4387479 = 1;
-        }
-        this = (ExcludeMotionEntity_o *)TerminalPramsManager_TypeInfo;
-        if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !TerminalPramsManager_TypeInfo->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-          this = (ExcludeMotionEntity_o *)TerminalPramsManager_TypeInfo;
-        }
-        if ( questPhase == HIDWORD(this[3].fields.excludeCondJson->bounds) + 1 )
-          return 1;
-      }
-    }
-    max_length = excludeCondJson->max_length;
-    if ( (int)++v5 >= max_length )
-      return 0;
-  }
+  if ( !svtData )
+    sub_1B00F28(0LL, method);
+  if ( svtData->fields.isEnemy )
+    return (unsigned int)&dword_0 + 1;
+  if ( BattleServantData__IsNpc(svtData, 0LL) )
+    return 2;
+  return 3;
 }
 
 
-bool __fastcall ExcludeMotionEntity__IsSatisfyTargetSvtType(
+// local variable allocation has failed, the output may be wrong!
+bool __fastcall ExcludeMotionEntity__IsSatisfyPhaseCond(
         ExcludeMotionEntity_o *this,
-        bool isEnemy,
-        bool isNpc,
+        int32_t currentPhase,
         const MethodInfo *method)
 {
-  int v4; // w8
-  int v5; // w10
-  int v6; // w11
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x21
+  __int64 v9; // x0
+  __int64 v10; // x1
+  struct System_Int32_array *phases; // x20
+  System_Func_int__bool__o *v12; // x19
 
-  if ( isEnemy )
-    v4 = 2;
-  else
-    v4 = 0;
-  v5 = v4 | 4;
-  v6 = v4 | 8;
-  if ( isNpc )
-    v4 |= 4u;
-  if ( !isNpc )
-    v5 = v6;
-  if ( !isEnemy )
-    v4 = v5;
-  return (this->fields.targetSvtType & v4) != 0;
+  if ( (byte_48E2A2A & 1) == 0 )
+  {
+    sub_1B00CCC(&Method_BasicHelper_Any_int____74581360, *(_QWORD *)&currentPhase);
+    sub_1B00CCC(&System_Func_int__bool__TypeInfo, v5);
+    sub_1B00CCC(&Method_ExcludeMotionEntity___c__DisplayClass12_0__IsSatisfyPhaseCond_b__0__, v6);
+    sub_1B00CCC(&ExcludeMotionEntity___c__DisplayClass12_0_TypeInfo, v7);
+    byte_48E2A2A = 1;
+  }
+  v8 = sub_1B00F18(ExcludeMotionEntity___c__DisplayClass12_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v8, 0LL);
+  phases = this->fields.phases;
+  if ( !phases )
+    goto LABEL_8;
+  if ( *(_QWORD *)&phases->max_length )
+  {
+    if ( v8 )
+    {
+      *(_DWORD *)(v8 + 16) = currentPhase + 1;
+      v12 = (System_Func_int__bool__o *)sub_1B00F18(System_Func_int__bool__TypeInfo);
+      System_Func_int__bool____ctor(
+        v12,
+        (Il2CppObject *)v8,
+        Method_ExcludeMotionEntity___c__DisplayClass12_0__IsSatisfyPhaseCond_b__0__,
+        0LL);
+      return BasicHelper__Any_int__47506688(
+               phases,
+               (System_Func_T__bool__o *)v12,
+               (const MethodInfo_2D4E500 *)Method_BasicHelper_Any_int____74581360);
+    }
+LABEL_8:
+    sub_1B00F28(v9, v10);
+  }
+  return 1;
+}
+
+
+void __fastcall ExcludeMotionEntity___c__DisplayClass12_0___ctor(
+        ExcludeMotionEntity___c__DisplayClass12_0_o *this,
+        const MethodInfo *method)
+{
+  System_Object___ctor((Il2CppObject *)this, 0LL);
+}
+
+
+bool __fastcall ExcludeMotionEntity___c__DisplayClass12_0___IsSatisfyPhaseCond_b__0(
+        ExcludeMotionEntity___c__DisplayClass12_0_o *this,
+        int32_t x,
+        const MethodInfo *method)
+{
+  return this->fields.currentPhaseOffset == x;
 }

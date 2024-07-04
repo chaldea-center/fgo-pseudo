@@ -1,6 +1,7 @@
+// attributes: thunk
 void __fastcall MasterMissionListViewObject___ctor(MasterMissionListViewObject_o *this, const MethodInfo *method)
 {
-  MissionListViewObject___ctor((MissionListViewObject_o *)this, 0LL);
+  MissionListViewObject___ctor((MissionListViewObject_o *)this, method);
 }
 
 
@@ -9,20 +10,20 @@ MasterMissionListViewItem_o *__fastcall MasterMissionListViewObject__GetItem(
         const MethodInfo *method)
 {
   struct ListViewItem_o *linkItem; // x8
-  __int64 v4; // x11
+  __int64 methodPtr_low; // x11
 
-  if ( (byte_438BB6A & 1) == 0 )
+  if ( (byte_48E5244 & 1) == 0 )
   {
-    sub_B775C4(&MasterMissionListViewItem_TypeInfo);
-    byte_438BB6A = 1;
+    sub_1B00CCC(&MasterMissionListViewItem_TypeInfo, method);
+    byte_48E5244 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
     return 0LL;
-  v4 = *(&MasterMissionListViewItem_TypeInfo->_2.bitflags2 + 1);
-  if ( *(&linkItem->klass->_2.bitflags2 + 1) < (unsigned int)v4 )
+  methodPtr_low = LOBYTE(MasterMissionListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
+  if ( LOBYTE(linkItem->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low )
     return 0LL;
-  if ( (MasterMissionListViewItem_c *)linkItem->klass->_2.typeHierarchy[v4 - 1] == MasterMissionListViewItem_TypeInfo )
+  if ( (MasterMissionListViewItem_c *)linkItem->klass->_2.typeHierarchy[methodPtr_low - 1] == MasterMissionListViewItem_TypeInfo )
     return (MasterMissionListViewItem_o *)this->fields.linkItem;
   return 0LL;
 }
@@ -34,26 +35,26 @@ void __fastcall MasterMissionListViewObject__OnChangeAlphaAnim(
 {
   const MethodInfo *v3; // x1
   struct ListViewManager_o *manager; // x8
-  __int64 v5; // x11
+  __int64 methodPtr_low; // x11
   struct ListViewManager_o *v6; // x20
   MasterMissionListViewItemDraw_o *MasterMissionItemDraw; // x0
   __int64 v8; // x1
   const MethodInfo *v9; // x2
 
-  if ( (byte_438BB6B & 1) == 0 )
+  if ( (byte_48E5245 & 1) == 0 )
   {
-    sub_B775C4(&MasterMissionListViewManager_TypeInfo);
-    byte_438BB6B = 1;
+    sub_1B00CCC(&MasterMissionListViewManager_TypeInfo, method);
+    byte_48E5245 = 1;
   }
   if ( this->fields.linkItem )
   {
     MasterMissionListViewObject__GetItem(this, method);
     manager = this->fields.manager;
     if ( manager
-      && (v5 = *(&MasterMissionListViewManager_TypeInfo->_2.bitflags2 + 1),
-          *(&manager->klass->_2.bitflags2 + 1) >= (unsigned int)v5) )
+      && (methodPtr_low = LOBYTE(MasterMissionListViewManager_TypeInfo->vtable._0_Equals.methodPtr),
+          LOBYTE(manager->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low) )
     {
-      if ( (MasterMissionListViewManager_c *)manager->klass->_2.typeHierarchy[v5 - 1] == MasterMissionListViewManager_TypeInfo )
+      if ( (MasterMissionListViewManager_c *)manager->klass->_2.typeHierarchy[methodPtr_low - 1] == MasterMissionListViewManager_TypeInfo )
         v6 = this->fields.manager;
       else
         v6 = 0LL;
@@ -64,7 +65,7 @@ void __fastcall MasterMissionListViewObject__OnChangeAlphaAnim(
     }
     MasterMissionItemDraw = MasterMissionListViewObject__get_MasterMissionItemDraw(this, v3);
     if ( !MasterMissionItemDraw )
-      sub_B7769C(0LL, v8);
+      sub_1B00F28(0LL, v8);
     MasterMissionListViewItemDraw__ChangeNextRewardIcon(MasterMissionItemDraw, (MasterMissionListViewManager_o *)v6, v9);
   }
 }
@@ -77,28 +78,28 @@ void __fastcall MasterMissionListViewObject__Update(MasterMissionListViewObject_
   const MethodInfo *v5; // x1
   struct ListViewManager_o *manager; // x8
   MasterMissionListViewItem_o *v7; // x20
-  __int64 v8; // x11
+  __int64 methodPtr_low; // x11
   struct ListViewManager_o *v9; // x21
   MasterMissionListViewItemDraw_o *MasterMissionItemDraw; // x0
   __int64 v11; // x1
   const MethodInfo *v12; // x4
 
-  if ( (byte_438BB69 & 1) == 0 )
+  if ( (byte_48E5243 & 1) == 0 )
   {
-    sub_B775C4(&MasterMissionListViewManager_TypeInfo);
-    byte_438BB69 = 1;
+    sub_1B00CCC(&MasterMissionListViewManager_TypeInfo, method);
+    byte_48E5243 = 1;
   }
-  MissionListViewObject__RedispResTime((MissionListViewObject_o *)this, 0LL);
+  MissionListViewObject__RedispResTime((MissionListViewObject_o *)this, method);
   if ( this->fields.linkItem )
   {
     Item = MasterMissionListViewObject__GetItem(this, v3);
     manager = this->fields.manager;
     v7 = Item;
     if ( manager
-      && (v8 = *(&MasterMissionListViewManager_TypeInfo->_2.bitflags2 + 1),
-          *(&manager->klass->_2.bitflags2 + 1) >= (unsigned int)v8) )
+      && (methodPtr_low = LOBYTE(MasterMissionListViewManager_TypeInfo->vtable._0_Equals.methodPtr),
+          LOBYTE(manager->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low) )
     {
-      if ( (MasterMissionListViewManager_c *)manager->klass->_2.typeHierarchy[v8 - 1] == MasterMissionListViewManager_TypeInfo )
+      if ( (MasterMissionListViewManager_c *)manager->klass->_2.typeHierarchy[methodPtr_low - 1] == MasterMissionListViewManager_TypeInfo )
         v9 = this->fields.manager;
       else
         v9 = 0LL;
@@ -109,7 +110,7 @@ void __fastcall MasterMissionListViewObject__Update(MasterMissionListViewObject_
     }
     MasterMissionItemDraw = MasterMissionListViewObject__get_MasterMissionItemDraw(this, v5);
     if ( !MasterMissionItemDraw )
-      sub_B7769C(0LL, v11);
+      sub_1B00F28(0LL, v11);
     MasterMissionListViewItemDraw__UpdateItem(
       MasterMissionItemDraw,
       v7,
@@ -125,20 +126,20 @@ MasterMissionListViewItemDraw_o *__fastcall MasterMissionListViewObject__get_Mas
         const MethodInfo *method)
 {
   struct MissionListViewItemDraw_o *itemDraw; // x8
-  __int64 v4; // x11
+  __int64 methodPtr_low; // x11
 
-  if ( (byte_438BB68 & 1) == 0 )
+  if ( (byte_48E5242 & 1) == 0 )
   {
-    sub_B775C4(&MasterMissionListViewItemDraw_TypeInfo);
-    byte_438BB68 = 1;
+    sub_1B00CCC(&MasterMissionListViewItemDraw_TypeInfo, method);
+    byte_48E5242 = 1;
   }
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
     return 0LL;
-  v4 = *(&MasterMissionListViewItemDraw_TypeInfo->_2.bitflags2 + 1);
-  if ( *(&itemDraw->klass->_2.bitflags2 + 1) < (unsigned int)v4 )
+  methodPtr_low = LOBYTE(MasterMissionListViewItemDraw_TypeInfo->vtable._0_Equals.methodPtr);
+  if ( LOBYTE(itemDraw->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low )
     return 0LL;
-  if ( (MasterMissionListViewItemDraw_c *)itemDraw->klass->_2.typeHierarchy[v4 - 1] == MasterMissionListViewItemDraw_TypeInfo )
+  if ( (MasterMissionListViewItemDraw_c *)itemDraw->klass->_2.typeHierarchy[methodPtr_low - 1] == MasterMissionListViewItemDraw_TypeInfo )
     return (MasterMissionListViewItemDraw_o *)this->fields.itemDraw;
   return 0LL;
 }

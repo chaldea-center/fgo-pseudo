@@ -1,1518 +1,1726 @@
 void __fastcall ConditionsInformation___cctor(const MethodInfo *method)
 {
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *v1; // x19
-  ConditionsInformation_CheckInfo_o *v2; // x20
-  __int64 v3; // x0
+  __int64 v1; // x1
+  __int64 v2; // x1
+  __int64 v3; // x1
   __int64 v4; // x1
-  ConditionsInformation_CheckInfo_o *v5; // x20
-  ConditionsInformation_CheckInfo_o *v6; // x20
-  ConditionsInformation_CheckInfo_o *v7; // x20
-  ConditionsInformation_CheckInfo_o *v8; // x20
-  ConditionsInformation_CheckInfo_o *v9; // x20
-  ConditionsInformation_CheckInfo_o *v10; // x20
-  ConditionsInformation_CheckInfo_o *v11; // x20
-  ConditionsInformation_CheckInfo_o *v12; // x20
-  ConditionsInformation_CheckInfo_o *v13; // x20
-  ConditionsInformation_CheckInfo_o *v14; // x20
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  struct ConditionsInformation_StaticFields *static_fields; // x8
+  System_Collections_Generic_Dictionary_TKey__TValue__o *v14; // x19
   ConditionsInformation_CheckInfo_o *v15; // x20
-  ConditionsInformation_CheckInfo_o *v16; // x20
-  ConditionsInformation_CheckInfo_o *v17; // x20
-  ConditionsInformation_CheckInfo_o *v18; // x20
+  const MethodInfo *v16; // x1
+  __int64 v17; // x0
+  __int64 v18; // x1
   ConditionsInformation_CheckInfo_o *v19; // x20
-  ConditionsInformation_CheckInfo_o *v20; // x20
+  const MethodInfo *v20; // x4
   ConditionsInformation_CheckInfo_o *v21; // x20
-  ConditionsInformation_CheckInfo_o *v22; // x20
+  const MethodInfo *v22; // x4
   ConditionsInformation_CheckInfo_o *v23; // x20
-  ConditionsInformation_CheckInfo_o *v24; // x20
+  const MethodInfo *v24; // x4
   ConditionsInformation_CheckInfo_o *v25; // x20
-  ConditionsInformation_CheckInfo_o *v26; // x20
+  const MethodInfo *v26; // x4
   ConditionsInformation_CheckInfo_o *v27; // x20
-  System_String_o *v28; // x0
+  const MethodInfo *v28; // x4
   ConditionsInformation_CheckInfo_o *v29; // x20
-  System_String_o *v30; // x0
+  const MethodInfo *v30; // x4
   ConditionsInformation_CheckInfo_o *v31; // x20
-  ConditionsInformation_CheckInfo_o *v32; // x20
+  const MethodInfo *v32; // x4
   ConditionsInformation_CheckInfo_o *v33; // x20
-  ConditionsInformation_CheckInfo_o *v34; // x20
+  const MethodInfo *v34; // x4
   ConditionsInformation_CheckInfo_o *v35; // x20
-  System_String_o *v36; // x0
+  const MethodInfo *v36; // x4
   ConditionsInformation_CheckInfo_o *v37; // x20
-  ConditionsInformation_CheckInfo_o *v38; // x20
+  const MethodInfo *v38; // x4
   ConditionsInformation_CheckInfo_o *v39; // x20
-  ConditionsInformation_CheckInfo_o *v40; // x20
+  const MethodInfo *v40; // x4
   ConditionsInformation_CheckInfo_o *v41; // x20
-  ConditionsInformation_CheckInfo_o *v42; // x20
+  const MethodInfo *v42; // x4
   ConditionsInformation_CheckInfo_o *v43; // x20
-  ConditionsInformation_CheckInfo_o *v44; // x20
+  const MethodInfo *v44; // x4
   ConditionsInformation_CheckInfo_o *v45; // x20
-  ConditionsInformation_CheckInfo_o *v46; // x20
+  const MethodInfo *v46; // x4
   ConditionsInformation_CheckInfo_o *v47; // x20
-  ConditionsInformation_CheckInfo_o *v48; // x20
+  const MethodInfo *v48; // x4
   ConditionsInformation_CheckInfo_o *v49; // x20
-  ConditionsInformation_CheckInfo_o *v50; // x20
+  const MethodInfo *v50; // x4
   ConditionsInformation_CheckInfo_o *v51; // x20
-  ConditionsInformation_CheckInfo_o *v52; // x20
+  const MethodInfo *v52; // x4
   ConditionsInformation_CheckInfo_o *v53; // x20
-  ConditionsInformation_CheckInfo_o *v54; // x20
-  System_String_o *v55; // x0
-  ConditionsInformation_CheckInfo_o *v56; // x20
-  System_String_o *v57; // x0
-  ConditionsInformation_CheckInfo_o *v58; // x20
-  System_String_o *v59; // x0
-  ConditionsInformation_CheckInfo_o *v60; // x20
-  System_String_o *v61; // x0
-  ConditionsInformation_CheckInfo_o *v62; // x20
+  const MethodInfo *v54; // x4
+  ConditionsInformation_CheckInfo_o *v55; // x20
+  const MethodInfo *v56; // x4
+  ConditionsInformation_CheckInfo_o *v57; // x20
+  const MethodInfo *v58; // x4
+  ConditionsInformation_CheckInfo_o *v59; // x20
+  const MethodInfo *v60; // x4
+  ConditionsInformation_CheckInfo_o *v61; // x20
+  const MethodInfo *v62; // x4
   ConditionsInformation_CheckInfo_o *v63; // x20
-  ConditionsInformation_CheckInfo_o *v64; // x20
+  const MethodInfo *v64; // x4
   ConditionsInformation_CheckInfo_o *v65; // x20
-  ConditionsInformation_CheckInfo_o *v66; // x20
+  const MethodInfo *v66; // x4
   ConditionsInformation_CheckInfo_o *v67; // x20
-  ConditionsInformation_CheckInfo_o *v68; // x20
+  const MethodInfo *v68; // x4
   ConditionsInformation_CheckInfo_o *v69; // x20
-  ConditionsInformation_CheckInfo_o *v70; // x20
-  System_String_o *v71; // x0
-  ConditionsInformation_CheckInfo_o *v72; // x20
-  System_String_o *v73; // x0
-  ConditionsInformation_CheckInfo_o *v74; // x20
+  const MethodInfo *v70; // x4
+  ConditionsInformation_CheckInfo_o *v71; // x20
+  const MethodInfo *v72; // x4
+  ConditionsInformation_CheckInfo_o *v73; // x20
+  const MethodInfo *v74; // x4
   ConditionsInformation_CheckInfo_o *v75; // x20
-  ConditionsInformation_CheckInfo_o *v76; // x20
+  const MethodInfo *v76; // x4
   ConditionsInformation_CheckInfo_o *v77; // x20
-  ConditionsInformation_CheckInfo_o *v78; // x20
+  const MethodInfo *v78; // x4
   ConditionsInformation_CheckInfo_o *v79; // x20
-  ConditionsInformation_CheckInfo_o *v80; // x20
+  const MethodInfo *v80; // x4
   ConditionsInformation_CheckInfo_o *v81; // x20
-  ConditionsInformation_CheckInfo_o *v82; // x20
+  const MethodInfo *v82; // x4
   ConditionsInformation_CheckInfo_o *v83; // x20
-  ConditionsInformation_CheckInfo_o *v84; // x20
+  const MethodInfo *v84; // x4
   ConditionsInformation_CheckInfo_o *v85; // x20
-  ConditionsInformation_HigherBuffIndividualitySumCheckInfo_o *v86; // x20
-  ConditionsInformation_HigherBuffIndividualitySumCheckInfo_o *v87; // x20
-  ConditionsInformation_HigherBuffIndividualitySumCheckInfo_o *v88; // x20
-  ConditionsInformation_HigherBuffIndividualitySumCheckInfo_o *v89; // x20
-  ConditionsInformation_HigherBuffIndividualitySumCheckInfo_o *v90; // x20
-  ConditionsInformation_LowerBuffIndividualitySumCheckInfo_o *v91; // x20
-  ConditionsInformation_LowerBuffIndividualitySumCheckInfo_o *v92; // x20
-  ConditionsInformation_LowerBuffIndividualitySumCheckInfo_o *v93; // x20
-  ConditionsInformation_LowerBuffIndividualitySumCheckInfo_o *v94; // x20
-  ConditionsInformation_LowerBuffIndividualitySumCheckInfo_o *v95; // x20
-  ConditionsInformation_EqualBuffIndividualitySumCheckInfo_o *v96; // x20
-  ConditionsInformation_EqualBuffIndividualitySumCheckInfo_o *v97; // x20
-  ConditionsInformation_EqualBuffIndividualitySumCheckInfo_o *v98; // x20
-  ConditionsInformation_EqualBuffIndividualitySumCheckInfo_o *v99; // x20
-  ConditionsInformation_EqualBuffIndividualitySumCheckInfo_o *v100; // x20
-  ConditionsInformation_ExistIndividualityCheckInfo_o *v101; // x20
-  ConditionsInformation_ExistIndividualityCheckInfo_o *v102; // x20
-  ConditionsInformation_ExistIndividualityCheckInfo_o *v103; // x20
-  ConditionsInformation_TotalCountHigherIndividualityCheckInfo_o *v104; // x20
-  ConditionsInformation_TotalCountHigherIndividualityCheckInfo_o *v105; // x20
-  ConditionsInformation_TotalCountHigherIndividualityCheckInfo_o *v106; // x20
-  ConditionsInformation_TotalCountHigherIndividualityCheckInfo_o *v107; // x20
-  ConditionsInformation_TotalCountHigherIndividualityCheckInfo_o *v108; // x20
-  ConditionsInformation_TotalCountLowerIndividualityCheckInfo_o *v109; // x20
-  ConditionsInformation_TotalCountLowerIndividualityCheckInfo_o *v110; // x20
-  ConditionsInformation_TotalCountLowerIndividualityCheckInfo_o *v111; // x20
-  ConditionsInformation_TotalCountLowerIndividualityCheckInfo_o *v112; // x20
-  ConditionsInformation_TotalCountLowerIndividualityCheckInfo_o *v113; // x20
-  ConditionsInformation_TotalCountEqualIndividualityCheckInfo_o *v114; // x20
-  ConditionsInformation_TotalCountEqualIndividualityCheckInfo_o *v115; // x20
-  ConditionsInformation_TotalCountEqualIndividualityCheckInfo_o *v116; // x20
-  ConditionsInformation_TotalCountEqualIndividualityCheckInfo_o *v117; // x20
-  ConditionsInformation_TotalCountEqualIndividualityCheckInfo_o *v118; // x20
+  const MethodInfo *v86; // x4
+  ConditionsInformation_CheckInfo_o *v87; // x20
+  const MethodInfo *v88; // x4
+  ConditionsInformation_CheckInfo_o *v89; // x20
+  const MethodInfo *v90; // x4
+  ConditionsInformation_CheckInfo_o *v91; // x20
+  const MethodInfo *v92; // x4
+  ConditionsInformation_CheckInfo_o *v93; // x20
+  const MethodInfo *v94; // x4
+  ConditionsInformation_CheckInfo_o *v95; // x20
+  const MethodInfo *v96; // x4
+  ConditionsInformation_CheckInfo_o *v97; // x20
+  const MethodInfo *v98; // x4
+  ConditionsInformation_CheckInfo_o *v99; // x20
+  const MethodInfo *v100; // x4
+  ConditionsInformation_CheckInfo_o *v101; // x20
+  const MethodInfo *v102; // x4
+  ConditionsInformation_CheckInfo_o *v103; // x20
+  const MethodInfo *v104; // x4
+  ConditionsInformation_CheckInfo_o *v105; // x20
+  const MethodInfo *v106; // x4
+  ConditionsInformation_CheckInfo_o *v107; // x20
+  const MethodInfo *v108; // x4
+  ConditionsInformation_CheckInfo_o *v109; // x20
+  const MethodInfo *v110; // x4
+  ConditionsInformation_CheckInfo_o *v111; // x20
+  const MethodInfo *v112; // x4
+  ConditionsInformation_CheckInfo_o *v113; // x20
+  const MethodInfo *v114; // x4
+  ConditionsInformation_CheckInfo_o *v115; // x20
+  const MethodInfo *v116; // x4
+  ConditionsInformation_CheckInfo_o *v117; // x20
+  const MethodInfo *v118; // x4
   ConditionsInformation_CheckInfo_o *v119; // x20
-  System_String_o *v120; // x0
+  const MethodInfo *v120; // x4
   ConditionsInformation_CheckInfo_o *v121; // x20
-  System_String_o *v122; // x0
+  const MethodInfo *v122; // x4
   ConditionsInformation_CheckInfo_o *v123; // x20
-  System_String_o *v124; // x0
-  ConditionsInformation_HigherBuffIndividualitySumCheckInfo_o *v125; // x20
-  ConditionsInformation_HigherBuffIndividualitySumCheckInfo_o *v126; // x20
-  ConditionsInformation_HigherBuffIndividualitySumCheckInfo_o *v127; // x20
-  ConditionsInformation_HigherBuffIndividualitySumCheckInfo_o *v128; // x20
-  ConditionsInformation_HigherBuffIndividualitySumCheckInfo_o *v129; // x20
-  ConditionsInformation_HigherBuffIndividualitySumCheckInfo_o *v130; // x20
-  ConditionsInformation_LowerBuffIndividualitySumCheckInfo_o *v131; // x20
-  ConditionsInformation_LowerBuffIndividualitySumCheckInfo_o *v132; // x20
-  ConditionsInformation_LowerBuffIndividualitySumCheckInfo_o *v133; // x20
-  ConditionsInformation_LowerBuffIndividualitySumCheckInfo_o *v134; // x20
-  ConditionsInformation_LowerBuffIndividualitySumCheckInfo_o *v135; // x20
-  ConditionsInformation_LowerBuffIndividualitySumCheckInfo_o *v136; // x20
-  ConditionsInformation_EqualBuffIndividualitySumCheckInfo_o *v137; // x20
-  ConditionsInformation_EqualBuffIndividualitySumCheckInfo_o *v138; // x20
-  ConditionsInformation_EqualBuffIndividualitySumCheckInfo_o *v139; // x20
-  ConditionsInformation_EqualBuffIndividualitySumCheckInfo_o *v140; // x20
-  ConditionsInformation_EqualBuffIndividualitySumCheckInfo_o *v141; // x20
-  ConditionsInformation_EqualBuffIndividualitySumCheckInfo_o *v142; // x20
+  const MethodInfo *v124; // x4
+  ConditionsInformation_CheckInfo_o *v125; // x20
+  const MethodInfo *v126; // x4
+  ConditionsInformation_CheckInfo_o *v127; // x20
+  const MethodInfo *v128; // x4
+  ConditionsInformation_CheckInfo_o *v129; // x20
+  const MethodInfo *v130; // x4
+  ConditionsInformation_CheckInfo_o *v131; // x20
+  const MethodInfo *v132; // x4
+  ConditionsInformation_CheckInfo_o *v133; // x20
+  const MethodInfo *v134; // x4
+  ConditionsInformation_CheckInfo_o *v135; // x20
+  const MethodInfo *v136; // x4
+  ConditionsInformation_CheckInfo_o *v137; // x20
+  const MethodInfo *v138; // x4
+  ConditionsInformation_CheckInfo_o *v139; // x20
+  const MethodInfo *v140; // x4
+  ConditionsInformation_CheckInfo_o *v141; // x20
+  const MethodInfo *v142; // x4
   ConditionsInformation_CheckInfo_o *v143; // x20
-  ConditionsInformation_CheckInfo_o *v144; // x20
+  const MethodInfo *v144; // x4
   ConditionsInformation_CheckInfo_o *v145; // x20
-  ConditionsInformation_CheckInfo_o *v146; // x20
+  const MethodInfo *v146; // x4
   ConditionsInformation_CheckInfo_o *v147; // x20
-  ConditionsInformation_CheckInfo_o *v148; // x20
+  const MethodInfo *v148; // x4
   ConditionsInformation_CheckInfo_o *v149; // x20
-  ConditionsInformation_CheckInfo_o *v150; // x20
+  const MethodInfo *v150; // x4
   ConditionsInformation_CheckInfo_o *v151; // x20
-  ConditionsInformation_CheckInfo_o *v152; // x20
-  System_String_o *v153; // x0
-  ConditionsInformation_CheckInfo_o *v154; // x20
-  System_String_o *v155; // x0
-  ConditionsInformation_CheckInfo_o *v156; // x20
-  System_String_o *v157; // x0
-  ConditionsInformation_CheckInfo_o *v158; // x20
-  System_String_o *v159; // x0
-  ConditionsInformation_CheckInfo_o *v160; // x20
-  System_String_o *v161; // x0
-  ConditionsInformation_CheckInfo_o *v162; // x20
-  System_String_o *v163; // x0
-  ConditionsInformation_CheckInfo_o *v164; // x20
-  System_String_o *v165; // x0
-  ConditionsInformation_CheckInfo_o *v166; // x20
-  System_String_o *v167; // x0
-  ConditionsInformation_CheckInfo_o *v168; // x20
-  System_String_o *v169; // x0
-  ConditionsInformation_CheckInfo_o *v170; // x20
-  System_String_o *v171; // x0
-  ConditionsInformation_CheckInfo_o *v172; // x20
-  System_String_o *v173; // x0
-  ConditionsInformation_CheckInfo_o *v174; // x20
-  System_String_o *v175; // x0
-  ConditionsInformation_CheckInfo_o *v176; // x20
-  System_String_o *v177; // x0
-  ConditionsInformation_CheckInfo_o *v178; // x20
-  System_String_o *v179; // x0
-  ConditionsInformation_CheckInfo_o *v180; // x20
+  const MethodInfo *v152; // x4
+  ConditionsInformation_CheckInfo_o *v153; // x20
+  const MethodInfo *v154; // x4
+  ConditionsInformation_CheckInfo_o *v155; // x20
+  const MethodInfo *v156; // x4
+  ConditionsInformation_CheckInfo_o *v157; // x20
+  const MethodInfo *v158; // x4
+  ConditionsInformation_CheckInfo_o *v159; // x20
+  const MethodInfo *v160; // x4
+  ConditionsInformation_CheckInfo_o *v161; // x20
+  const MethodInfo *v162; // x4
+  ConditionsInformation_CheckInfo_o *v163; // x20
+  const MethodInfo *v164; // x4
+  ConditionsInformation_CheckInfo_o *v165; // x20
+  const MethodInfo *v166; // x4
+  ConditionsInformation_CheckInfo_o *v167; // x20
+  const MethodInfo *v168; // x4
+  ConditionsInformation_CheckInfo_o *v169; // x20
+  const MethodInfo *v170; // x4
+  ConditionsInformation_CheckInfo_o *v171; // x20
+  const MethodInfo *v172; // x4
+  ConditionsInformation_CheckInfo_o *v173; // x20
+  const MethodInfo *v174; // x4
+  ConditionsInformation_CheckInfo_o *v175; // x20
+  const MethodInfo *v176; // x4
+  ConditionsInformation_CheckInfo_o *v177; // x20
+  const MethodInfo *v178; // x4
+  ConditionsInformation_CheckInfo_o *v179; // x20
+  const MethodInfo *v180; // x4
   ConditionsInformation_CheckInfo_o *v181; // x20
-  ConditionsInformation_CheckInfo_o *v182; // x20
+  const MethodInfo *v182; // x4
   ConditionsInformation_CheckInfo_o *v183; // x20
-  ConditionsInformation_CheckInfo_o *v184; // x20
+  const MethodInfo *v184; // x4
   ConditionsInformation_CheckInfo_o *v185; // x20
-  ConditionsInformation_CheckInfo_o *v186; // x20
+  const MethodInfo *v186; // x4
   ConditionsInformation_CheckInfo_o *v187; // x20
-  ConditionsInformation_CheckInfo_o *v188; // x20
+  const MethodInfo *v188; // x4
   ConditionsInformation_CheckInfo_o *v189; // x20
-  ConditionsInformation_CheckInfo_o *v190; // x20
+  const MethodInfo *v190; // x4
   ConditionsInformation_CheckInfo_o *v191; // x20
-  ConditionsInformation_CheckInfo_o *v192; // x20
+  const MethodInfo *v192; // x4
   ConditionsInformation_CheckInfo_o *v193; // x20
-  ConditionsInformation_CheckInfo_o *v194; // x20
+  const MethodInfo *v194; // x4
   ConditionsInformation_CheckInfo_o *v195; // x20
-  ConditionsInformation_CheckInfo_o *v196; // x20
+  const MethodInfo *v196; // x4
   ConditionsInformation_CheckInfo_o *v197; // x20
-  ConditionsInformation_CheckInfo_o *v198; // x20
+  const MethodInfo *v198; // x4
   ConditionsInformation_CheckInfo_o *v199; // x20
-  struct ConditionsInformation_StaticFields *static_fields; // x0
-  System_String_array **v201; // x2
-  System_String_array **v202; // x3
-  System_Boolean_array **v203; // x4
-  System_Int32_array **v204; // x5
-  System_Int32_array *v205; // x6
-  System_Int32_array *v206; // x7
+  const MethodInfo *v200; // x4
+  ConditionsInformation_CheckInfo_o *v201; // x20
+  const MethodInfo *v202; // x4
+  ConditionsInformation_CheckInfo_o *v203; // x20
+  const MethodInfo *v204; // x4
+  ConditionsInformation_CheckInfo_o *v205; // x20
+  const MethodInfo *v206; // x4
+  ConditionsInformation_CheckInfo_o *v207; // x20
+  const MethodInfo *v208; // x4
+  ConditionsInformation_CheckInfo_o *v209; // x20
+  const MethodInfo *v210; // x4
+  ConditionsInformation_CheckInfo_o *v211; // x20
+  const MethodInfo *v212; // x4
+  ConditionsInformation_CheckInfo_o *v213; // x20
+  const MethodInfo *v214; // x4
+  ConditionsInformation_CheckInfo_o *v215; // x20
+  const MethodInfo *v216; // x4
+  ConditionsInformation_CheckInfo_o *v217; // x20
+  const MethodInfo *v218; // x4
+  ConditionsInformation_CheckInfo_o *v219; // x20
+  const MethodInfo *v220; // x4
+  ConditionsInformation_CheckInfo_o *v221; // x20
+  const MethodInfo *v222; // x4
+  ConditionsInformation_CheckInfo_o *v223; // x20
+  const MethodInfo *v224; // x4
+  ConditionsInformation_CheckInfo_o *v225; // x20
+  const MethodInfo *v226; // x4
+  ConditionsInformation_CheckInfo_o *v227; // x20
+  const MethodInfo *v228; // x4
+  ConditionsInformation_CheckInfo_o *v229; // x20
+  const MethodInfo *v230; // x4
+  ConditionsInformation_CheckInfo_o *v231; // x20
+  const MethodInfo *v232; // x4
+  ConditionsInformation_CheckInfo_o *v233; // x20
+  const MethodInfo *v234; // x4
+  ConditionsInformation_CheckInfo_o *v235; // x20
+  const MethodInfo *v236; // x4
+  ConditionsInformation_CheckInfo_o *v237; // x20
+  const MethodInfo *v238; // x4
+  ConditionsInformation_CheckInfo_o *v239; // x20
+  const MethodInfo *v240; // x4
+  ConditionsInformation_CheckInfo_o *v241; // x20
+  const MethodInfo *v242; // x4
+  ConditionsInformation_CheckInfo_o *v243; // x20
+  const MethodInfo *v244; // x4
+  ConditionsInformation_CheckInfo_o *v245; // x20
+  const MethodInfo *v246; // x4
+  ConditionsInformation_CheckInfo_o *v247; // x20
+  const MethodInfo *v248; // x4
+  ConditionsInformation_CheckInfo_o *v249; // x20
+  const MethodInfo *v250; // x4
+  ConditionsInformation_CheckInfo_o *v251; // x20
+  const MethodInfo *v252; // x4
+  ConditionsInformation_CheckInfo_o *v253; // x20
+  const MethodInfo *v254; // x4
+  ConditionsInformation_CheckInfo_o *v255; // x20
+  const MethodInfo *v256; // x4
+  ConditionsInformation_CheckInfo_o *v257; // x20
+  const MethodInfo *v258; // x4
+  ConditionsInformation_CheckInfo_o *v259; // x20
+  const MethodInfo *v260; // x4
+  ConditionsInformation_CheckInfo_o *v261; // x20
+  const MethodInfo *v262; // x4
+  ConditionsInformation_CheckInfo_o *v263; // x20
+  const MethodInfo *v264; // x4
+  ConditionsInformation_CheckInfo_o *v265; // x20
+  const MethodInfo *v266; // x4
+  ConditionsInformation_CheckInfo_o *v267; // x20
+  const MethodInfo *v268; // x4
+  ConditionsInformation_CheckInfo_o *v269; // x20
+  const MethodInfo *v270; // x4
+  ConditionsInformation_CheckInfo_o *v271; // x20
+  const MethodInfo *v272; // x4
+  ConditionsInformation_CheckInfo_o *v273; // x20
+  const MethodInfo *v274; // x4
+  ConditionsInformation_CheckInfo_o *v275; // x20
+  const MethodInfo *v276; // x4
+  ConditionsInformation_CheckInfo_o *v277; // x20
+  const MethodInfo *v278; // x4
+  ConditionsInformation_CheckInfo_o *v279; // x20
+  const MethodInfo *v280; // x4
+  ConditionsInformation_CheckInfo_o *v281; // x20
+  const MethodInfo *v282; // x4
+  ConditionsInformation_CheckInfo_o *v283; // x20
+  const MethodInfo *v284; // x4
+  ConditionsInformation_CheckInfo_o *v285; // x20
+  const MethodInfo *v286; // x4
+  ConditionsInformation_CheckInfo_o *v287; // x20
+  const MethodInfo *v288; // x4
+  ConditionsInformation_CheckInfo_o *v289; // x20
+  const MethodInfo *v290; // x4
+  ConditionsInformation_CheckInfo_o *v291; // x20
+  const MethodInfo *v292; // x4
+  ConditionsInformation_CheckInfo_o *v293; // x20
+  const MethodInfo *v294; // x4
+  ConditionsInformation_CheckInfo_o *v295; // x20
+  const MethodInfo *v296; // x4
+  ConditionsInformation_CheckInfo_o *v297; // x20
+  const MethodInfo *v298; // x4
+  ConditionsInformation_CheckInfo_o *v299; // x20
+  const MethodInfo *v300; // x4
+  ConditionsInformation_CheckInfo_o *v301; // x20
+  const MethodInfo *v302; // x4
+  ConditionsInformation_CheckInfo_o *v303; // x20
+  const MethodInfo *v304; // x4
+  ConditionsInformation_CheckInfo_o *v305; // x20
+  const MethodInfo *v306; // x4
+  ConditionsInformation_CheckInfo_o *v307; // x20
+  const MethodInfo *v308; // x4
+  ConditionsInformation_CheckInfo_o *v309; // x20
+  const MethodInfo *v310; // x4
+  ConditionsInformation_CheckInfo_o *v311; // x20
+  const MethodInfo *v312; // x4
+  ConditionsInformation_CheckInfo_o *v313; // x20
+  const MethodInfo *v314; // x4
+  ConditionsInformation_CheckInfo_o *v315; // x20
+  const MethodInfo *v316; // x4
+  ConditionsInformation_CheckInfo_o *v317; // x20
+  const MethodInfo *v318; // x4
+  ConditionsInformation_CheckInfo_o *v319; // x20
+  const MethodInfo *v320; // x4
+  ConditionsInformation_CheckInfo_o *v321; // x20
+  const MethodInfo *v322; // x4
+  ConditionsInformation_CheckInfo_o *v323; // x20
+  const MethodInfo *v324; // x4
+  ConditionsInformation_CheckInfo_o *v325; // x20
+  const MethodInfo *v326; // x4
+  ConditionsInformation_CheckInfo_o *v327; // x20
+  const MethodInfo *v328; // x4
+  ConditionsInformation_CheckInfo_o *v329; // x20
+  const MethodInfo *v330; // x4
+  ConditionsInformation_CheckInfo_o *v331; // x20
+  const MethodInfo *v332; // x4
+  ConditionsInformation_CheckInfo_o *v333; // x20
+  const MethodInfo *v334; // x4
+  ConditionsInformation_CheckInfo_o *v335; // x20
+  const MethodInfo *v336; // x4
+  ConditionsInformation_CheckInfo_o *v337; // x20
+  const MethodInfo *v338; // x4
+  ConditionsInformation_CheckInfo_o *v339; // x20
+  const MethodInfo *v340; // x4
+  ConditionsInformation_CheckInfo_o *v341; // x20
+  const MethodInfo *v342; // x4
+  ConditionsInformation_CheckInfo_o *v343; // x20
+  const MethodInfo *v344; // x4
+  ConditionsInformation_CheckInfo_o *v345; // x20
+  const MethodInfo *v346; // x4
+  ConditionsInformation_CheckInfo_o *v347; // x20
+  const MethodInfo *v348; // x4
+  ConditionsInformation_CheckInfo_o *v349; // x20
+  const MethodInfo *v350; // x4
+  ConditionsInformation_CheckInfo_o *v351; // x20
+  const MethodInfo *v352; // x4
+  ConditionsInformation_CheckInfo_o *v353; // x20
+  const MethodInfo *v354; // x4
+  ConditionsInformation_CheckInfo_o *v355; // x20
+  const MethodInfo *v356; // x4
+  struct ConditionsInformation_StaticFields *v357; // x0
+  int32_t v358; // w2
+  int32_t v359; // w3
 
-  if ( (byte_438CC75 & 1) == 0 )
+  if ( (byte_48E50D0 & 1) == 0 )
   {
-    sub_B775C4(&ConditionsInformation_CheckInfo_TypeInfo);
-    sub_B775C4(&ConditionsInformation_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo___ctor__);
-    sub_B775C4(&System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__TypeInfo);
-    sub_B775C4(&ConditionsInformation_EqualBuffIndividualitySumCheckInfo_TypeInfo);
-    sub_B775C4(&ConditionsInformation_ExistIndividualityCheckInfo_TypeInfo);
-    sub_B775C4(&ConditionsInformation_HigherBuffIndividualitySumCheckInfo_TypeInfo);
-    sub_B775C4(&ConditionsInformation_LowerBuffIndividualitySumCheckInfo_TypeInfo);
-    sub_B775C4(&ConditionsInformation_TotalCountEqualIndividualityCheckInfo_TypeInfo);
-    sub_B775C4(&ConditionsInformation_TotalCountHigherIndividualityCheckInfo_TypeInfo);
-    sub_B775C4(&ConditionsInformation_TotalCountLowerIndividualityCheckInfo_TypeInfo);
-    byte_438CC75 = 1;
+    sub_1B00CCC(&ConditionsInformation_CheckInfo_TypeInfo, v1);
+    sub_1B00CCC(&ConditionsInformation_TypeInfo, v2);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__, v3);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo___ctor__, v4);
+    sub_1B00CCC(&System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__TypeInfo, v5);
+    sub_1B00CCC(&ConditionsInformation_EqualBuffIndividualitySumCheckInfo_TypeInfo, v6);
+    sub_1B00CCC(&ConditionsInformation_ExistIndividualityCheckInfo_TypeInfo, v7);
+    sub_1B00CCC(&ConditionsInformation_HigherBuffIndividualitySumCheckInfo_TypeInfo, v8);
+    sub_1B00CCC(&ConditionsInformation_LowerBuffIndividualitySumCheckInfo_TypeInfo, v9);
+    sub_1B00CCC(&ConditionsInformation_TotalCountEqualIndividualityCheckInfo_TypeInfo, v10);
+    sub_1B00CCC(&ConditionsInformation_TotalCountHigherIndividualityCheckInfo_TypeInfo, v11);
+    sub_1B00CCC(&ConditionsInformation_TotalCountLowerIndividualityCheckInfo_TypeInfo, v12);
+    byte_48E50D0 = 1;
   }
-  ConditionsInformation_TypeInfo->static_fields->BETWEEN_MIN_IDX = 0;
-  ConditionsInformation_TypeInfo->static_fields->BETWEEN_MAX_IDX = 1;
-  ConditionsInformation_TypeInfo->static_fields->BETWEEN_VALUE_SIZE = 2;
-  v1 = (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)sub_B77694(System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__TypeInfo);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string____ctor(
-    v1,
-    (const MethodInfo_2F9F080 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo___ctor__);
-  v2 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor(v2, 0LL);
-  if ( !v1 )
+  static_fields = ConditionsInformation_TypeInfo->static_fields;
+  *(_QWORD *)&static_fields->BETWEEN_MIN_IDX = 0x100000000LL;
+  static_fields->BETWEEN_VALUE_SIZE = 2;
+  v14 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1B00F18(System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__TypeInfo);
+  System_Collections_Generic_Dictionary_Int32Enum__object____ctor(
+    v14,
+    (const MethodInfo_30634E8 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo___ctor__);
+  v15 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor(v15, v16);
+  if ( !v14 )
     goto LABEL_31;
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     0,
-    (System_String_o *)v2,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v5 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v5, 2, 5, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v15,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v19 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v19, 2, 5, 3, v20);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     10,
-    (System_String_o *)v5,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v6 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v6, 2, 5, 4, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v19,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v21 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v21, 2, 5, 4, v22);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     11,
-    (System_String_o *)v6,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v7 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v7, 2, 8, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v21,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v23 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v23, 2, 8, 1, v24);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     20,
-    (System_String_o *)v7,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v8 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v8, 2, 8, 5, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v23,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v25 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v25, 2, 8, 5, v26);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     21,
-    (System_String_o *)v8,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v9 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v9, 1, 1, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v25,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v27 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v27, 1, 1, 1, v28);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     30,
-    (System_String_o *)v9,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v10 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v10, 1, 1, 5, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v27,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v29 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v29, 1, 1, 5, v30);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     31,
-    (System_String_o *)v10,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v11 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v11, 2, 3, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v29,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v31 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v31, 2, 3, 1, v32);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     40,
-    (System_String_o *)v11,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v12 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v12, 2, 4, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v31,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v33 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v33, 2, 4, 1, v34);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     41,
-    (System_String_o *)v12,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v13 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v13, 2, 3, 2, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v33,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v35 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v35, 2, 3, 2, v36);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     42,
-    (System_String_o *)v13,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v14 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v14, 2, 4, 2, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v35,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v37 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v37, 2, 4, 2, v38);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     43,
-    (System_String_o *)v14,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v15 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v15, 2, 12, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v37,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v39 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v39, 2, 12, 6, v40);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     50,
-    (System_String_o *)v15,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v16 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v16, 2, 13, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v39,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v41 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v41, 2, 13, 6, v42);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     51,
-    (System_String_o *)v16,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v17 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v17, 2, 15, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v41,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v43 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v43, 2, 15, 6, v44);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     57,
-    (System_String_o *)v17,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v18 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v18, 3, 12, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v43,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v45 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v45, 3, 12, 6, v46);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     52,
-    (System_String_o *)v18,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v19 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v19, 3, 13, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v45,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v47 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v47, 3, 13, 6, v48);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     53,
-    (System_String_o *)v19,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v20 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v20, 3, 15, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v47,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v49 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v49, 3, 15, 6, v50);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     58,
-    (System_String_o *)v20,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v21 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v21, 4, 12, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v49,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v51 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v51, 4, 12, 6, v52);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     55,
-    (System_String_o *)v21,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v22 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v22, 4, 13, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v51,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v53 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v53, 4, 13, 6, v54);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     56,
-    (System_String_o *)v22,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v23 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v23, 4, 15, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v53,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v55 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v55, 4, 15, 6, v56);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     59,
-    (System_String_o *)v23,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v24 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v24, 2, 7, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v55,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v57 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v57, 2, 7, 6, v58);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     60,
-    (System_String_o *)v24,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v25 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v25, 4, 6, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v57,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v59 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v59, 4, 6, 3, v60);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     62,
-    (System_String_o *)v25,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v26 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v26, 2, 9, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v59,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v61 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v61, 2, 9, 1, v62);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     63,
-    (System_String_o *)v26,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v27 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v27, 3, 5, 3, 0LL);
-  if ( !v27 )
+    (Il2CppObject *)v61,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v63 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v63, 3, 5, 3, v64);
+  if ( !v63 )
     goto LABEL_31;
-  v28 = (System_String_o *)ConditionsInformation_CheckInfo__setIsIndiv(v27, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+  v63->fields.isIndiv = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     64,
-    v28,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v29 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v29, 3, 5, 4, 0LL);
-  if ( !v29 )
+    (Il2CppObject *)v63,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v65 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v65, 3, 5, 4, v66);
+  if ( !v65 )
     goto LABEL_31;
-  v30 = (System_String_o *)ConditionsInformation_CheckInfo__setIsIndiv(v29, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+  v65->fields.isIndiv = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     65,
-    v30,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v31 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v31, 2, 14, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v65,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v67 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v67, 2, 14, 6, v68);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     66,
-    (System_String_o *)v31,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v32 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v32, 2, 11, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v67,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v69 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v69, 2, 11, 1, v70);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     67,
-    (System_String_o *)v32,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v33 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v33, 2, 10, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v69,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v71 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v71, 2, 10, 1, v72);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     68,
-    (System_String_o *)v33,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v34 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v34, 2, 10, 5, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v71,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v73 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v73, 2, 10, 5, v74);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     69,
-    (System_String_o *)v34,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v35 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v35, 3, 7, 1, 0LL);
-  if ( !v35 )
+    (Il2CppObject *)v73,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v75 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v75, 3, 7, 1, v76);
+  if ( !v75 )
     goto LABEL_31;
-  v36 = (System_String_o *)ConditionsInformation_CheckInfo__setRefine(v35, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+  v75->fields.refine = 3;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     70,
-    v36,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v37 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v37, 2, 16, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v75,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v77 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v77, 2, 16, 3, v78);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     71,
-    (System_String_o *)v37,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v38 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v38, 2, 16, 4, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v77,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v79 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v79, 2, 16, 4, v80);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     72,
-    (System_String_o *)v38,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v39 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v39, 2, 17, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v79,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v81 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v81, 2, 17, 3, v82);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     73,
-    (System_String_o *)v39,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v40 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v40, 2, 17, 4, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v81,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v83 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v83, 2, 17, 4, v84);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     74,
-    (System_String_o *)v40,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v41 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v41, 2, 18, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v83,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v85 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v85, 2, 18, 3, v86);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     75,
-    (System_String_o *)v41,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v42 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v42, 2, 18, 4, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v85,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v87 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v87, 2, 18, 4, v88);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     76,
-    (System_String_o *)v42,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v43 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v43, 2, 2, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v87,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v89 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v89, 2, 2, 3, v90);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     77,
-    (System_String_o *)v43,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v44 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v44, 1, 1, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v89,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v91 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v91, 1, 1, 3, v92);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     78,
-    (System_String_o *)v44,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v45 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v45, 1, 1, 4, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v91,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v93 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v93, 1, 1, 4, v94);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     79,
-    (System_String_o *)v45,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v46 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v46, 2, 10, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v93,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v95 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v95, 2, 10, 3, v96);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     80,
-    (System_String_o *)v46,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v47 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v47, 2, 10, 4, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v95,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v97 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v97, 2, 10, 4, v98);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     81,
-    (System_String_o *)v47,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v48 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v48, 5, 19, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v97,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v99 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v99, 5, 19, 1, v100);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     82,
-    (System_String_o *)v48,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v49 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v49, 6, 19, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v99,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v101 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v101, 6, 19, 1, v102);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     83,
-    (System_String_o *)v49,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v50 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v50, 5, 20, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v101,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v103 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v103, 5, 20, 3, v104);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     84,
-    (System_String_o *)v50,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v51 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v51, 5, 20, 4, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v103,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v105 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v105, 5, 20, 4, v106);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     85,
-    (System_String_o *)v51,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v52 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v52, 6, 20, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v105,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v107 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v107, 6, 20, 3, v108);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     86,
-    (System_String_o *)v52,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v53 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v53, 6, 20, 4, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v107,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v109 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v109, 6, 20, 4, v110);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     87,
-    (System_String_o *)v53,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v54 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v54, 1, 21, 3, 0LL);
-  if ( !v54 )
+    (Il2CppObject *)v109,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v111 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v111, 1, 21, 3, v112);
+  if ( !v111 )
     goto LABEL_31;
-  v55 = (System_String_o *)ConditionsInformation_CheckInfo__setParams(v54, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+  v111->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     88,
-    v55,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v56 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v56, 1, 21, 4, 0LL);
-  if ( !v56 )
+    (Il2CppObject *)v111,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v113 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v113, 1, 21, 4, v114);
+  if ( !v113 )
     goto LABEL_31;
-  v57 = (System_String_o *)ConditionsInformation_CheckInfo__setParams(v56, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+  v113->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     89,
-    v57,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v58 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v58, 2, 22, 1, 0LL);
-  if ( !v58 )
+    (Il2CppObject *)v113,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v115 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v115, 2, 22, 1, v116);
+  if ( !v115 )
     goto LABEL_31;
-  v59 = (System_String_o *)ConditionsInformation_CheckInfo__setParams(v58, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+  v115->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     90,
-    v59,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v60 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v60, 3, 22, 1, 0LL);
-  if ( !v60 )
+    (Il2CppObject *)v115,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v117 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v117, 3, 22, 1, v118);
+  if ( !v117 )
     goto LABEL_31;
-  v61 = (System_String_o *)ConditionsInformation_CheckInfo__setParams(v60, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+  v117->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     91,
-    v61,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v62 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v62, 2, 23, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v117,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v119 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v119, 2, 23, 6, v120);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     92,
-    (System_String_o *)v62,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v63 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v63, 3, 23, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v119,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v121 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v121, 3, 23, 6, v122);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     93,
-    (System_String_o *)v63,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v64 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v64, 4, 23, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v121,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v123 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v123, 4, 23, 6, v124);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     94,
-    (System_String_o *)v64,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v65 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v65, 1, 24, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v123,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v125 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v125, 1, 24, 3, v126);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     95,
-    (System_String_o *)v65,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v66 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v66, 7, 13, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v125,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v127 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v127, 7, 13, 6, v128);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     96,
-    (System_String_o *)v66,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v67 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v67, 8, 13, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v127,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v129 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v129, 8, 13, 6, v130);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     97,
-    (System_String_o *)v67,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v68 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v68, 1, 25, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v129,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v131 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v131, 1, 25, 3, v132);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     98,
-    (System_String_o *)v68,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v69 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v69, 1, 25, 4, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v131,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v133 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v133, 1, 25, 4, v134);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     99,
-    (System_String_o *)v69,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v70 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v70, 4, 5, 3, 0LL);
-  if ( !v70 )
+    (Il2CppObject *)v133,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v135 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v135, 4, 5, 3, v136);
+  if ( !v135 )
     goto LABEL_31;
-  v71 = (System_String_o *)ConditionsInformation_CheckInfo__setIsIndiv(v70, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+  v135->fields.isIndiv = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     100,
-    v71,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v72 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v72, 4, 5, 4, 0LL);
-  if ( !v72 )
+    (Il2CppObject *)v135,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v137 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v137, 4, 5, 4, v138);
+  if ( !v137 )
     goto LABEL_31;
-  v73 = (System_String_o *)ConditionsInformation_CheckInfo__setIsIndiv(v72, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+  v137->fields.isIndiv = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     101,
-    v73,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v74 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v74, 4, 26, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v137,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v139 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v139, 4, 26, 6, v140);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     102,
-    (System_String_o *)v74,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v75 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v75, 2, 14, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v139,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v141 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v141, 2, 14, 6, v142);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     103,
-    (System_String_o *)v75,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v76 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v76, 3, 14, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v141,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v143 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v143, 3, 14, 6, v144);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     104,
-    (System_String_o *)v76,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v77 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v77, 4, 14, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v143,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v145 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v145, 4, 14, 6, v146);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     105,
-    (System_String_o *)v77,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v78 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v78, 7, 12, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v145,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v147 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v147, 7, 12, 6, v148);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     106,
-    (System_String_o *)v78,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v79 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v79, 8, 12, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v147,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v149 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v149, 8, 12, 6, v150);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     107,
-    (System_String_o *)v79,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v80 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v80, 7, 15, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v149,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v151 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v151, 7, 15, 6, v152);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     108,
-    (System_String_o *)v80,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v81 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v81, 8, 15, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v151,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v153 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v153, 8, 15, 6, v154);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     109,
-    (System_String_o *)v81,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v82 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v82, 5, 20, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v153,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v155 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v155, 5, 20, 1, v156);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     110,
-    (System_String_o *)v82,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v83 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v83, 6, 20, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v155,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v157 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v157, 6, 20, 1, v158);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     111,
-    (System_String_o *)v83,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v84 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v84, 7, 23, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v157,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v159 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v159, 7, 23, 6, v160);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     112,
-    (System_String_o *)v84,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v85 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v85, 8, 23, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v159,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v161 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v161, 8, 23, 6, v162);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     113,
-    (System_String_o *)v85,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v86 = (ConditionsInformation_HigherBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_HigherBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_HigherBuffIndividualitySumCheckInfo___ctor(v86, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v161,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v163 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_HigherBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v163, 3, 27, 3, v164);
+  v163->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     114,
-    (System_String_o *)v86,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v87 = (ConditionsInformation_HigherBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_HigherBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_HigherBuffIndividualitySumCheckInfo___ctor(v87, 7, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v163,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v165 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_HigherBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v165, 7, 27, 3, v166);
+  v165->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     115,
-    (System_String_o *)v87,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v88 = (ConditionsInformation_HigherBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_HigherBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_HigherBuffIndividualitySumCheckInfo___ctor(v88, 4, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v165,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v167 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_HigherBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v167, 4, 27, 3, v168);
+  v167->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     116,
-    (System_String_o *)v88,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v89 = (ConditionsInformation_HigherBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_HigherBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_HigherBuffIndividualitySumCheckInfo___ctor(v89, 8, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v167,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v169 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_HigherBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v169, 8, 27, 3, v170);
+  v169->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     117,
-    (System_String_o *)v89,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v90 = (ConditionsInformation_HigherBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_HigherBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_HigherBuffIndividualitySumCheckInfo___ctor(v90, 2, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v169,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v171 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_HigherBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v171, 2, 27, 3, v172);
+  v171->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     118,
-    (System_String_o *)v90,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v91 = (ConditionsInformation_LowerBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_LowerBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_LowerBuffIndividualitySumCheckInfo___ctor(v91, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v171,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v173 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_LowerBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v173, 3, 27, 4, v174);
+  v173->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     119,
-    (System_String_o *)v91,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v92 = (ConditionsInformation_LowerBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_LowerBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_LowerBuffIndividualitySumCheckInfo___ctor(v92, 7, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v173,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v175 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_LowerBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v175, 7, 27, 4, v176);
+  v175->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     120,
-    (System_String_o *)v92,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v93 = (ConditionsInformation_LowerBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_LowerBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_LowerBuffIndividualitySumCheckInfo___ctor(v93, 4, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v175,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v177 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_LowerBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v177, 4, 27, 4, v178);
+  v177->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     121,
-    (System_String_o *)v93,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v94 = (ConditionsInformation_LowerBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_LowerBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_LowerBuffIndividualitySumCheckInfo___ctor(v94, 8, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v177,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v179 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_LowerBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v179, 8, 27, 4, v180);
+  v179->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     122,
-    (System_String_o *)v94,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v95 = (ConditionsInformation_LowerBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_LowerBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_LowerBuffIndividualitySumCheckInfo___ctor(v95, 2, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v179,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v181 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_LowerBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v181, 2, 27, 4, v182);
+  v181->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     123,
-    (System_String_o *)v95,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v96 = (ConditionsInformation_EqualBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_EqualBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_EqualBuffIndividualitySumCheckInfo___ctor(v96, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v181,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v183 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_EqualBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v183, 3, 27, 1, v184);
+  v183->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     124,
-    (System_String_o *)v96,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v97 = (ConditionsInformation_EqualBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_EqualBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_EqualBuffIndividualitySumCheckInfo___ctor(v97, 7, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v183,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v185 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_EqualBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v185, 7, 27, 1, v186);
+  v185->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     125,
-    (System_String_o *)v97,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v98 = (ConditionsInformation_EqualBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_EqualBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_EqualBuffIndividualitySumCheckInfo___ctor(v98, 4, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v185,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v187 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_EqualBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v187, 4, 27, 1, v188);
+  v187->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     126,
-    (System_String_o *)v98,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v99 = (ConditionsInformation_EqualBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_EqualBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_EqualBuffIndividualitySumCheckInfo___ctor(v99, 8, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v187,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v189 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_EqualBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v189, 8, 27, 1, v190);
+  v189->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     127,
-    (System_String_o *)v99,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v100 = (ConditionsInformation_EqualBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_EqualBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_EqualBuffIndividualitySumCheckInfo___ctor(v100, 2, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v189,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v191 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_EqualBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v191, 2, 27, 1, v192);
+  v191->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     128,
-    (System_String_o *)v100,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v101 = (ConditionsInformation_ExistIndividualityCheckInfo_o *)sub_B77694(ConditionsInformation_ExistIndividualityCheckInfo_TypeInfo);
-  ConditionsInformation_ExistIndividualityCheckInfo___ctor(v101, 9, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v191,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v193 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_ExistIndividualityCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v193, 9, 13, 6, v194);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     129,
-    (System_String_o *)v101,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v102 = (ConditionsInformation_ExistIndividualityCheckInfo_o *)sub_B77694(ConditionsInformation_ExistIndividualityCheckInfo_TypeInfo);
-  ConditionsInformation_ExistIndividualityCheckInfo___ctor(v102, 10, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v193,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v195 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_ExistIndividualityCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v195, 10, 13, 6, v196);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     130,
-    (System_String_o *)v102,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v103 = (ConditionsInformation_ExistIndividualityCheckInfo_o *)sub_B77694(ConditionsInformation_ExistIndividualityCheckInfo_TypeInfo);
-  ConditionsInformation_ExistIndividualityCheckInfo___ctor(v103, 11, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v195,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v197 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_ExistIndividualityCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v197, 11, 13, 6, v198);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     131,
-    (System_String_o *)v103,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v104 = (ConditionsInformation_TotalCountHigherIndividualityCheckInfo_o *)sub_B77694(ConditionsInformation_TotalCountHigherIndividualityCheckInfo_TypeInfo);
-  ConditionsInformation_TotalCountHigherIndividualityCheckInfo___ctor(v104, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v197,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v199 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_TotalCountHigherIndividualityCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v199, 3, 27, 3, v200);
+  v199->fields.isParams = 1;
+  v199->fields.refine = 4;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     132,
-    (System_String_o *)v104,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v105 = (ConditionsInformation_TotalCountHigherIndividualityCheckInfo_o *)sub_B77694(ConditionsInformation_TotalCountHigherIndividualityCheckInfo_TypeInfo);
-  ConditionsInformation_TotalCountHigherIndividualityCheckInfo___ctor(v105, 7, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v199,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v201 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_TotalCountHigherIndividualityCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v201, 7, 27, 3, v202);
+  v201->fields.isParams = 1;
+  v201->fields.refine = 4;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     133,
-    (System_String_o *)v105,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v106 = (ConditionsInformation_TotalCountHigherIndividualityCheckInfo_o *)sub_B77694(ConditionsInformation_TotalCountHigherIndividualityCheckInfo_TypeInfo);
-  ConditionsInformation_TotalCountHigherIndividualityCheckInfo___ctor(v106, 4, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v201,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v203 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_TotalCountHigherIndividualityCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v203, 4, 27, 3, v204);
+  v203->fields.isParams = 1;
+  v203->fields.refine = 4;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     134,
-    (System_String_o *)v106,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v107 = (ConditionsInformation_TotalCountHigherIndividualityCheckInfo_o *)sub_B77694(ConditionsInformation_TotalCountHigherIndividualityCheckInfo_TypeInfo);
-  ConditionsInformation_TotalCountHigherIndividualityCheckInfo___ctor(v107, 8, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v203,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v205 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_TotalCountHigherIndividualityCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v205, 8, 27, 3, v206);
+  v205->fields.isParams = 1;
+  v205->fields.refine = 4;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     135,
-    (System_String_o *)v107,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v108 = (ConditionsInformation_TotalCountHigherIndividualityCheckInfo_o *)sub_B77694(ConditionsInformation_TotalCountHigherIndividualityCheckInfo_TypeInfo);
-  ConditionsInformation_TotalCountHigherIndividualityCheckInfo___ctor(v108, 12, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v205,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v207 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_TotalCountHigherIndividualityCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v207, 12, 27, 3, v208);
+  v207->fields.isParams = 1;
+  v207->fields.refine = 4;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     136,
-    (System_String_o *)v108,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v109 = (ConditionsInformation_TotalCountLowerIndividualityCheckInfo_o *)sub_B77694(ConditionsInformation_TotalCountLowerIndividualityCheckInfo_TypeInfo);
-  ConditionsInformation_TotalCountLowerIndividualityCheckInfo___ctor(v109, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v207,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v209 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_TotalCountLowerIndividualityCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v209, 3, 27, 4, v210);
+  v209->fields.isParams = 1;
+  v209->fields.refine = 4;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     137,
-    (System_String_o *)v109,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v110 = (ConditionsInformation_TotalCountLowerIndividualityCheckInfo_o *)sub_B77694(ConditionsInformation_TotalCountLowerIndividualityCheckInfo_TypeInfo);
-  ConditionsInformation_TotalCountLowerIndividualityCheckInfo___ctor(v110, 7, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v209,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v211 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_TotalCountLowerIndividualityCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v211, 7, 27, 4, v212);
+  v211->fields.isParams = 1;
+  v211->fields.refine = 4;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     138,
-    (System_String_o *)v110,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v111 = (ConditionsInformation_TotalCountLowerIndividualityCheckInfo_o *)sub_B77694(ConditionsInformation_TotalCountLowerIndividualityCheckInfo_TypeInfo);
-  ConditionsInformation_TotalCountLowerIndividualityCheckInfo___ctor(v111, 4, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v211,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v213 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_TotalCountLowerIndividualityCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v213, 4, 27, 4, v214);
+  v213->fields.isParams = 1;
+  v213->fields.refine = 4;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     139,
-    (System_String_o *)v111,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v112 = (ConditionsInformation_TotalCountLowerIndividualityCheckInfo_o *)sub_B77694(ConditionsInformation_TotalCountLowerIndividualityCheckInfo_TypeInfo);
-  ConditionsInformation_TotalCountLowerIndividualityCheckInfo___ctor(v112, 8, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v213,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v215 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_TotalCountLowerIndividualityCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v215, 8, 27, 4, v216);
+  v215->fields.isParams = 1;
+  v215->fields.refine = 4;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     140,
-    (System_String_o *)v112,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v113 = (ConditionsInformation_TotalCountLowerIndividualityCheckInfo_o *)sub_B77694(ConditionsInformation_TotalCountLowerIndividualityCheckInfo_TypeInfo);
-  ConditionsInformation_TotalCountLowerIndividualityCheckInfo___ctor(v113, 12, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v215,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v217 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_TotalCountLowerIndividualityCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v217, 12, 27, 4, v218);
+  v217->fields.isParams = 1;
+  v217->fields.refine = 4;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     141,
-    (System_String_o *)v113,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v114 = (ConditionsInformation_TotalCountEqualIndividualityCheckInfo_o *)sub_B77694(ConditionsInformation_TotalCountEqualIndividualityCheckInfo_TypeInfo);
-  ConditionsInformation_TotalCountEqualIndividualityCheckInfo___ctor(v114, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v217,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v219 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_TotalCountEqualIndividualityCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v219, 3, 27, 1, v220);
+  v219->fields.isParams = 1;
+  v219->fields.refine = 4;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     142,
-    (System_String_o *)v114,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v115 = (ConditionsInformation_TotalCountEqualIndividualityCheckInfo_o *)sub_B77694(ConditionsInformation_TotalCountEqualIndividualityCheckInfo_TypeInfo);
-  ConditionsInformation_TotalCountEqualIndividualityCheckInfo___ctor(v115, 7, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v219,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v221 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_TotalCountEqualIndividualityCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v221, 7, 27, 1, v222);
+  v221->fields.isParams = 1;
+  v221->fields.refine = 4;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     143,
-    (System_String_o *)v115,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v116 = (ConditionsInformation_TotalCountEqualIndividualityCheckInfo_o *)sub_B77694(ConditionsInformation_TotalCountEqualIndividualityCheckInfo_TypeInfo);
-  ConditionsInformation_TotalCountEqualIndividualityCheckInfo___ctor(v116, 4, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v221,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v223 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_TotalCountEqualIndividualityCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v223, 4, 27, 1, v224);
+  v223->fields.isParams = 1;
+  v223->fields.refine = 4;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     144,
-    (System_String_o *)v116,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v117 = (ConditionsInformation_TotalCountEqualIndividualityCheckInfo_o *)sub_B77694(ConditionsInformation_TotalCountEqualIndividualityCheckInfo_TypeInfo);
-  ConditionsInformation_TotalCountEqualIndividualityCheckInfo___ctor(v117, 8, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v223,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v225 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_TotalCountEqualIndividualityCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v225, 8, 27, 1, v226);
+  v225->fields.isParams = 1;
+  v225->fields.refine = 4;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     145,
-    (System_String_o *)v117,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v118 = (ConditionsInformation_TotalCountEqualIndividualityCheckInfo_o *)sub_B77694(ConditionsInformation_TotalCountEqualIndividualityCheckInfo_TypeInfo);
-  ConditionsInformation_TotalCountEqualIndividualityCheckInfo___ctor(v118, 12, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v225,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v227 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_TotalCountEqualIndividualityCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v227, 12, 27, 1, v228);
+  v227->fields.isParams = 1;
+  v227->fields.refine = 4;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     146,
-    (System_String_o *)v118,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v119 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v119, 13, 28, 1, 0LL);
-  if ( !v119 )
+    (Il2CppObject *)v227,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v229 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v229, 13, 28, 1, v230);
+  if ( !v229 )
     goto LABEL_31;
-  v120 = (System_String_o *)ConditionsInformation_CheckInfo__setRevival(v119, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+  v229->fields.isRevival = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     147,
-    v120,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v121 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v121, 14, 28, 1, 0LL);
-  if ( !v121 )
+    (Il2CppObject *)v229,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v231 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v231, 14, 28, 1, v232);
+  if ( !v231 )
     goto LABEL_31;
-  v122 = (System_String_o *)ConditionsInformation_CheckInfo__setRevival(v121, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+  v231->fields.isRevival = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     148,
-    v122,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v123 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v123, 15, 28, 1, 0LL);
-  if ( !v123 )
+    (Il2CppObject *)v231,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v233 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v233, 15, 28, 1, v234);
+  if ( !v233 )
     goto LABEL_31;
-  v124 = (System_String_o *)ConditionsInformation_CheckInfo__setRevival(v123, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+  v233->fields.isRevival = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     149,
-    v124,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v125 = (ConditionsInformation_HigherBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_HigherBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_HigherBuffIndividualitySumCheckInfo___ctor(v125, 13, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v233,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v235 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_HigherBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v235, 13, 27, 3, v236);
+  v235->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     150,
-    (System_String_o *)v125,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v126 = (ConditionsInformation_HigherBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_HigherBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_HigherBuffIndividualitySumCheckInfo___ctor(v126, 14, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v235,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v237 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_HigherBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v237, 14, 27, 3, v238);
+  v237->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     151,
-    (System_String_o *)v126,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v127 = (ConditionsInformation_HigherBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_HigherBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_HigherBuffIndividualitySumCheckInfo___ctor(v127, 15, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v237,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v239 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_HigherBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v239, 15, 27, 3, v240);
+  v239->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     152,
-    (System_String_o *)v127,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v128 = (ConditionsInformation_HigherBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_HigherBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_HigherBuffIndividualitySumCheckInfo___ctor(v128, 9, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v239,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v241 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_HigherBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v241, 9, 27, 3, v242);
+  v241->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     153,
-    (System_String_o *)v128,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v129 = (ConditionsInformation_HigherBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_HigherBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_HigherBuffIndividualitySumCheckInfo___ctor(v129, 10, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v241,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v243 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_HigherBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v243, 10, 27, 3, v244);
+  v243->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     154,
-    (System_String_o *)v129,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v130 = (ConditionsInformation_HigherBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_HigherBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_HigherBuffIndividualitySumCheckInfo___ctor(v130, 11, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v243,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v245 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_HigherBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v245, 11, 27, 3, v246);
+  v245->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     155,
-    (System_String_o *)v130,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v131 = (ConditionsInformation_LowerBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_LowerBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_LowerBuffIndividualitySumCheckInfo___ctor(v131, 13, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v245,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v247 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_LowerBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v247, 13, 27, 4, v248);
+  v247->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     156,
-    (System_String_o *)v131,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v132 = (ConditionsInformation_LowerBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_LowerBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_LowerBuffIndividualitySumCheckInfo___ctor(v132, 14, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v247,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v249 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_LowerBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v249, 14, 27, 4, v250);
+  v249->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     157,
-    (System_String_o *)v132,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v133 = (ConditionsInformation_LowerBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_LowerBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_LowerBuffIndividualitySumCheckInfo___ctor(v133, 15, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v249,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v251 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_LowerBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v251, 15, 27, 4, v252);
+  v251->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     158,
-    (System_String_o *)v133,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v134 = (ConditionsInformation_LowerBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_LowerBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_LowerBuffIndividualitySumCheckInfo___ctor(v134, 9, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v251,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v253 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_LowerBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v253, 9, 27, 4, v254);
+  v253->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     159,
-    (System_String_o *)v134,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v135 = (ConditionsInformation_LowerBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_LowerBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_LowerBuffIndividualitySumCheckInfo___ctor(v135, 10, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v253,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v255 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_LowerBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v255, 10, 27, 4, v256);
+  v255->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     160,
-    (System_String_o *)v135,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v136 = (ConditionsInformation_LowerBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_LowerBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_LowerBuffIndividualitySumCheckInfo___ctor(v136, 11, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v255,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v257 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_LowerBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v257, 11, 27, 4, v258);
+  v257->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     161,
-    (System_String_o *)v136,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v137 = (ConditionsInformation_EqualBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_EqualBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_EqualBuffIndividualitySumCheckInfo___ctor(v137, 13, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v257,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v259 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_EqualBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v259, 13, 27, 1, v260);
+  v259->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     162,
-    (System_String_o *)v137,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v138 = (ConditionsInformation_EqualBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_EqualBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_EqualBuffIndividualitySumCheckInfo___ctor(v138, 14, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v259,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v261 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_EqualBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v261, 14, 27, 1, v262);
+  v261->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     163,
-    (System_String_o *)v138,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v139 = (ConditionsInformation_EqualBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_EqualBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_EqualBuffIndividualitySumCheckInfo___ctor(v139, 15, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v261,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v263 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_EqualBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v263, 15, 27, 1, v264);
+  v263->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     164,
-    (System_String_o *)v139,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v140 = (ConditionsInformation_EqualBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_EqualBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_EqualBuffIndividualitySumCheckInfo___ctor(v140, 9, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v263,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v265 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_EqualBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v265, 9, 27, 1, v266);
+  v265->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     165,
-    (System_String_o *)v140,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v141 = (ConditionsInformation_EqualBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_EqualBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_EqualBuffIndividualitySumCheckInfo___ctor(v141, 10, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v265,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v267 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_EqualBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v267, 10, 27, 1, v268);
+  v267->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     166,
-    (System_String_o *)v141,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v142 = (ConditionsInformation_EqualBuffIndividualitySumCheckInfo_o *)sub_B77694(ConditionsInformation_EqualBuffIndividualitySumCheckInfo_TypeInfo);
-  ConditionsInformation_EqualBuffIndividualitySumCheckInfo___ctor(v142, 11, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v267,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v269 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_EqualBuffIndividualitySumCheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v269, 11, 27, 1, v270);
+  v269->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     167,
-    (System_String_o *)v142,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v143 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v143, 1, 29, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v269,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v271 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v271, 1, 29, 1, v272);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     168,
-    (System_String_o *)v143,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v144 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v144, 1, 30, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v271,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v273 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v273, 1, 30, 3, v274);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     169,
-    (System_String_o *)v144,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v145 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v145, 1, 30, 4, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v273,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v275 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v275, 1, 30, 4, v276);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     170,
-    (System_String_o *)v145,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v146 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v146, 1, 31, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v275,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v277 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v277, 1, 31, 3, v278);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     171,
-    (System_String_o *)v146,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v147 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v147, 1, 31, 4, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v277,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v279 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v279, 1, 31, 4, v280);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     172,
-    (System_String_o *)v147,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v148 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v148, 1, 31, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v279,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v281 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v281, 1, 31, 1, v282);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     173,
-    (System_String_o *)v148,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v149 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v149, 1, 32, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v281,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v283 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v283, 1, 32, 1, v284);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     174,
-    (System_String_o *)v149,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v150 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v150, 2, 7, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v283,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v285 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v285, 2, 7, 3, v286);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     175,
-    (System_String_o *)v150,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v151 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v151, 2, 7, 4, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v285,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v287 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v287, 2, 7, 4, v288);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     176,
-    (System_String_o *)v151,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v152 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v152, 1, 33, 3, 0LL);
-  if ( !v152 )
+    (Il2CppObject *)v287,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v289 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v289, 1, 33, 3, v290);
+  if ( !v289 )
     goto LABEL_31;
-  v153 = (System_String_o *)ConditionsInformation_CheckInfo__setParams(v152, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+  v289->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     178,
-    v153,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v154 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v154, 1, 33, 4, 0LL);
-  if ( !v154 )
+    (Il2CppObject *)v289,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v291 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v291, 1, 33, 4, v292);
+  if ( !v291 )
     goto LABEL_31;
-  v155 = (System_String_o *)ConditionsInformation_CheckInfo__setParams(v154, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+  v291->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     179,
-    v155,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v156 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v156, 1, 33, 1, 0LL);
-  if ( !v156 )
+    (Il2CppObject *)v291,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v293 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v293, 1, 33, 1, v294);
+  if ( !v293 )
     goto LABEL_31;
-  v157 = (System_String_o *)ConditionsInformation_CheckInfo__setParams(v156, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+  v293->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     180,
-    v157,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v158 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v158, 1, 34, 1, 0LL);
-  if ( !v158 )
+    (Il2CppObject *)v293,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v295 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v295, 1, 34, 1, v296);
+  if ( !v295 )
     goto LABEL_31;
-  v159 = (System_String_o *)ConditionsInformation_CheckInfo__setParams(v158, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+  v295->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     177,
-    v159,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v160 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v160, 1, 35, 6, 0LL);
-  if ( !v160 )
+    (Il2CppObject *)v295,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v297 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v297, 1, 35, 6, v298);
+  if ( !v297 )
     goto LABEL_31;
-  v161 = (System_String_o *)ConditionsInformation_CheckInfo__setParams(v160, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+  v297->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     181,
-    v161,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v162 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v162, 1, 36, 3, 0LL);
-  if ( !v162 )
+    (Il2CppObject *)v297,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v299 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v299, 1, 36, 3, v300);
+  if ( !v299 )
     goto LABEL_31;
-  v163 = (System_String_o *)ConditionsInformation_CheckInfo__setParams(v162, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+  v299->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     182,
-    v163,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v164 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v164, 1, 36, 4, 0LL);
-  if ( !v164 )
+    (Il2CppObject *)v299,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v301 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v301, 1, 36, 4, v302);
+  if ( !v301 )
     goto LABEL_31;
-  v165 = (System_String_o *)ConditionsInformation_CheckInfo__setParams(v164, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+  v301->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     183,
-    v165,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v166 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v166, 1, 36, 1, 0LL);
-  if ( !v166 )
+    (Il2CppObject *)v301,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v303 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v303, 1, 36, 1, v304);
+  if ( !v303 )
     goto LABEL_31;
-  v167 = (System_String_o *)ConditionsInformation_CheckInfo__setParams(v166, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+  v303->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     184,
-    v167,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v168 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v168, 1, 37, 3, 0LL);
-  if ( !v168 )
+    (Il2CppObject *)v303,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v305 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v305, 1, 37, 3, v306);
+  if ( !v305 )
     goto LABEL_31;
-  v169 = (System_String_o *)ConditionsInformation_CheckInfo__setParams(v168, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+  v305->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     185,
-    v169,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v170 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v170, 1, 37, 4, 0LL);
-  if ( !v170 )
+    (Il2CppObject *)v305,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v307 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v307, 1, 37, 4, v308);
+  if ( !v307 )
     goto LABEL_31;
-  v171 = (System_String_o *)ConditionsInformation_CheckInfo__setParams(v170, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+  v307->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     186,
-    v171,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v172 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v172, 1, 37, 1, 0LL);
-  if ( !v172 )
+    (Il2CppObject *)v307,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v309 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v309, 1, 37, 1, v310);
+  if ( !v309 )
     goto LABEL_31;
-  v173 = (System_String_o *)ConditionsInformation_CheckInfo__setParams(v172, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+  v309->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     187,
-    v173,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v174 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v174, 1, 38, 3, 0LL);
-  if ( !v174 )
+    (Il2CppObject *)v309,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v311 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v311, 1, 38, 3, v312);
+  if ( !v311 )
     goto LABEL_31;
-  v175 = (System_String_o *)ConditionsInformation_CheckInfo__setParams(v174, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+  v311->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     188,
-    v175,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v176 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v176, 1, 38, 4, 0LL);
-  if ( !v176
-    || (v177 = (System_String_o *)ConditionsInformation_CheckInfo__setParams(v176, 1, 0LL),
-        System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-          v1,
+    (Il2CppObject *)v311,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v313 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v313, 1, 38, 4, v314);
+  if ( !v313
+    || (v313->fields.isParams = 1,
+        System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+          v14,
           189,
-          v177,
-          (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__),
-        v178 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo),
-        ConditionsInformation_CheckInfo___ctor_21450952(v178, 1, 38, 1, 0LL),
-        !v178) )
+          (Il2CppObject *)v313,
+          (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__),
+        v315 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo),
+        ConditionsInformation_CheckInfo___ctor_41909864(v315, 1, 38, 1, v316),
+        !v315) )
   {
 LABEL_31:
-    sub_B7769C(v3, v4);
+    sub_1B00F28(v17, v18);
   }
-  v179 = (System_String_o *)ConditionsInformation_CheckInfo__setParams(v178, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+  v315->fields.isParams = 1;
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     190,
-    v179,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v180 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v180, 1, 39, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v315,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v317 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v317, 1, 39, 3, v318);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     191,
-    (System_String_o *)v180,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v181 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v181, 1, 39, 4, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v317,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v319 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v319, 1, 39, 4, v320);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     192,
-    (System_String_o *)v181,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v182 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v182, 1, 39, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v319,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v321 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v321, 1, 39, 1, v322);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     193,
-    (System_String_o *)v182,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v183 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v183, 1, 40, 6, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v321,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v323 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v323, 1, 40, 6, v324);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     194,
-    (System_String_o *)v183,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v184 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v184, 3, 6, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v323,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v325 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v325, 3, 6, 3, v326);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     195,
-    (System_String_o *)v184,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v185 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v185, 2, 6, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v325,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v327 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v327, 2, 6, 3, v328);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     196,
-    (System_String_o *)v185,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v186 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v186, 1, 41, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v327,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v329 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v329, 1, 41, 3, v330);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     197,
-    (System_String_o *)v186,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v187 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v187, 1, 41, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v329,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v331 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v331, 1, 41, 1, v332);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     198,
-    (System_String_o *)v187,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v188 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v188, 1, 41, 2, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v331,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v333 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v333, 1, 41, 2, v334);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     199,
-    (System_String_o *)v188,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v189 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v189, 1, 41, 4, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v333,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v335 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v335, 1, 41, 4, v336);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     200,
-    (System_String_o *)v189,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v190 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v190, 1, 41, 7, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v335,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v337 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v337, 1, 41, 7, v338);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     201,
-    (System_String_o *)v190,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v191 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v191, 1, 41, 8, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v337,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v339 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v339, 1, 41, 8, v340);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     202,
-    (System_String_o *)v191,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v192 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v192, 1, 42, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v339,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v341 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v341, 1, 42, 1, v342);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     203,
-    (System_String_o *)v192,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v193 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v193, 1, 43, 9, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v341,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v343 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v343, 1, 43, 9, v344);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     204,
-    (System_String_o *)v193,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v194 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v194, 1, 44, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v343,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v345 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v345, 1, 44, 3, v346);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     205,
-    (System_String_o *)v194,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v195 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v195, 1, 44, 4, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v345,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v347 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v347, 1, 44, 4, v348);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     206,
-    (System_String_o *)v195,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v196 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v196, 1, 44, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v347,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v349 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v349, 1, 44, 1, v350);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     207,
-    (System_String_o *)v196,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v197 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v197, 1, 45, 3, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v349,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v351 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v351, 1, 45, 3, v352);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     208,
-    (System_String_o *)v197,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v198 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v198, 1, 45, 4, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v351,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v353 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v353, 1, 45, 4, v354);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     209,
-    (System_String_o *)v198,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  v199 = (ConditionsInformation_CheckInfo_o *)sub_B77694(ConditionsInformation_CheckInfo_TypeInfo);
-  ConditionsInformation_CheckInfo___ctor_21450952(v199, 1, 45, 1, 0LL);
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v1,
+    (Il2CppObject *)v353,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v355 = (ConditionsInformation_CheckInfo_o *)sub_1B00F18(ConditionsInformation_CheckInfo_TypeInfo);
+  ConditionsInformation_CheckInfo___ctor_41909864(v355, 1, 45, 1, v356);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v14,
     210,
-    (System_String_o *)v199,
-    (const MethodInfo_2F9FC34 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
-  static_fields = ConditionsInformation_TypeInfo->static_fields;
-  static_fields->FuncList = (struct System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__o *)v1;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&static_fields->FuncList,
-    (System_Int32_array **)v1,
-    v201,
-    v202,
-    v203,
-    v204,
-    v205,
-    v206);
+    (Il2CppObject *)v355,
+    (const MethodInfo_3063EBC *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__Add__);
+  v357 = ConditionsInformation_TypeInfo->static_fields;
+  v357->FuncList = (struct System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__o *)v14;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v357->FuncList, (int32_t)v14, v358, v359);
 }
 
 
@@ -1527,49 +1735,53 @@ bool __fastcall ConditionsInformation__IsAllExists(
         System_Int64_array *entVals,
         const MethodInfo *method)
 {
-  unsigned __int64 max_length; // x8
-  unsigned __int64 v4; // x9
-  unsigned __int64 v5; // x12
-  unsigned __int64 v6; // x13
-  double v7; // d1
-  __int64 v9; // x0
+  __int64 max_length; // x10
+  __int64 v4; // x9
+  __int64 v5; // x14
+  __int64 v6; // x16
+  double *i; // x17
+  int v8; // w2
 
   if ( !entVals )
-LABEL_19:
-    sub_B7769C(selfVals, entVals);
+    goto LABEL_16;
   max_length = entVals->max_length;
-  if ( (__int64)(max_length << 32) < 1 )
-    return 1;
   v4 = 0LL;
-  while ( 1 )
+  if ( max_length << 32 >= 1 )
   {
-    if ( v4 >= max_length )
-    {
-LABEL_18:
-      v9 = sub_B776C8(selfVals);
-      sub_B77668(v9, 0LL);
-    }
-    if ( !selfVals )
-      goto LABEL_19;
-    v5 = selfVals->max_length;
-    if ( (__int64)(v5 << 32) < 1 )
-      return 0;
-    v6 = 0LL;
     while ( 1 )
     {
-      if ( v6 >= v5 )
-        goto LABEL_18;
-      v7 = selfVals->m_Items[v6];
-      if ( v7 == INFINITY )
-        v7 = -INFINITY;
-      if ( (int)v7 == LODWORD(entVals->m_Items[v4]) )
+      if ( v4 == max_length )
+LABEL_15:
+        sub_1B00F30(selfVals, entVals);
+      if ( !selfVals )
         break;
-      if ( (__int64)++v6 >= (int)v5 )
-        return 0;
+      v5 = selfVals->max_length;
+      if ( v5 << 32 >= 1 )
+      {
+        v6 = (int)v5;
+        for ( i = selfVals->m_Items; ; ++i )
+        {
+          if ( !v5 )
+            goto LABEL_15;
+          v8 = (int)*i;
+          if ( *i == INFINITY )
+            v8 = 0x80000000;
+          if ( v8 == LODWORD(entVals->m_Items[v4]) )
+            break;
+          --v6;
+          --v5;
+          if ( !v6 )
+            return v4 >= (int)max_length;
+        }
+        if ( ++v4 != (int)max_length )
+          continue;
+      }
+      return v4 >= (int)max_length;
     }
-    if ( (__int64)++v4 >= (int)max_length )
-      return 1;
+LABEL_16:
+    sub_1B00F28(selfVals, entVals);
   }
+  return v4 >= (int)max_length;
 }
 
 
@@ -1579,73 +1791,67 @@ bool __fastcall ConditionsInformation__IsBetween(
         const MethodInfo *method)
 {
   System_Double_array *v4; // x19
-  ConditionsInformation_c *v5; // x0
-  ConditionsInformation_c *v6; // x8
-  System_Int64_array *v7; // x21
+  __int64 v5; // x1
+  ConditionsInformation_c *v6; // x0
+  ConditionsInformation_c *v7; // x8
+  System_Int64_array *v8; // x21
   __int64 BETWEEN_MIN_IDX; // x8
-  const MethodInfo *v9; // x2
+  const MethodInfo *v10; // x2
   __int64 BETWEEN_MAX_IDX; // x8
-  System_Int64_array *v11; // x22
-  const MethodInfo *v12; // x2
-  __int64 v14; // x0
+  System_Int64_array *v12; // x22
+  const MethodInfo *v13; // x2
 
   v4 = selfVals;
-  if ( (byte_438CC72 & 1) == 0 )
+  if ( (byte_48E50CD & 1) == 0 )
   {
-    sub_B775C4(&ConditionsInformation_TypeInfo);
-    selfVals = (System_Double_array *)sub_B775C4(&long___TypeInfo);
-    byte_438CC72 = 1;
+    sub_1B00CCC(&ConditionsInformation_TypeInfo, entVals);
+    selfVals = (System_Double_array *)sub_1B00CCC(&long___TypeInfo, v5);
+    byte_48E50CD = 1;
   }
   if ( !entVals )
-    goto LABEL_23;
-  v5 = ConditionsInformation_TypeInfo;
-  if ( (BYTE3(ConditionsInformation_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ConditionsInformation_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(ConditionsInformation_TypeInfo);
-    v5 = ConditionsInformation_TypeInfo;
-  }
-  if ( v5->static_fields->BETWEEN_VALUE_SIZE != entVals->max_length )
-    return 0;
-  selfVals = (System_Double_array *)sub_B775DC(long___TypeInfo, 1LL);
+    goto LABEL_20;
   v6 = ConditionsInformation_TypeInfo;
-  v7 = (System_Int64_array *)selfVals;
-  if ( (BYTE3(ConditionsInformation_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ConditionsInformation_TypeInfo->_2.cctor_finished )
+  if ( !ConditionsInformation_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ConditionsInformation_TypeInfo);
     v6 = ConditionsInformation_TypeInfo;
   }
-  BETWEEN_MIN_IDX = v6->static_fields->BETWEEN_MIN_IDX;
+  if ( v6->static_fields->BETWEEN_VALUE_SIZE != entVals->max_length )
+    return 0;
+  selfVals = (System_Double_array *)sub_1B00D74(long___TypeInfo, 1LL);
+  v7 = ConditionsInformation_TypeInfo;
+  v8 = (System_Int64_array *)selfVals;
+  if ( !ConditionsInformation_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(ConditionsInformation_TypeInfo);
+    v7 = ConditionsInformation_TypeInfo;
+  }
+  BETWEEN_MIN_IDX = v7->static_fields->BETWEEN_MIN_IDX;
   if ( (unsigned int)BETWEEN_MIN_IDX >= entVals->max_length )
-    goto LABEL_24;
-  if ( !v7 )
-    goto LABEL_23;
-  if ( !v7->max_length
-    || (v7->m_Items[0] = entVals->m_Items[BETWEEN_MIN_IDX],
-        selfVals = (System_Double_array *)sub_B775DC(long___TypeInfo, 1LL),
+    goto LABEL_21;
+  if ( !v8 )
+    goto LABEL_20;
+  if ( !v8->max_length
+    || (v8->m_Items[0] = entVals->m_Items[BETWEEN_MIN_IDX],
+        selfVals = (System_Double_array *)sub_1B00D74(long___TypeInfo, 1LL),
         BETWEEN_MAX_IDX = ConditionsInformation_TypeInfo->static_fields->BETWEEN_MAX_IDX,
         (unsigned int)BETWEEN_MAX_IDX >= entVals->max_length) )
   {
-LABEL_24:
-    v14 = sub_B776C8(selfVals);
-    sub_B77668(v14, 0LL);
+LABEL_21:
+    sub_1B00F30(selfVals, entVals);
   }
-  v11 = (System_Int64_array *)selfVals;
+  v12 = (System_Int64_array *)selfVals;
   if ( !selfVals )
-LABEL_23:
-    sub_B7769C(selfVals, entVals);
+LABEL_20:
+    sub_1B00F28(selfVals, entVals);
   if ( !selfVals->max_length )
-    goto LABEL_24;
+    goto LABEL_21;
   *(_QWORD *)&selfVals->m_Items[0] = entVals->m_Items[BETWEEN_MAX_IDX];
-  if ( !ConditionsInformation__isHigher(v4, v7, v9) )
+  if ( !ConditionsInformation__isHigher(v4, v8, v10) )
     return 0;
-  if ( (BYTE3(ConditionsInformation_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ConditionsInformation_TypeInfo->_2.cctor_finished )
-  {
+  if ( !ConditionsInformation_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ConditionsInformation_TypeInfo);
-  }
-  return ConditionsInformation__isLower(v4, v11, v12);
+  return ConditionsInformation__isLower(v4, v12, v13);
 }
 
 
@@ -1654,16 +1860,13 @@ bool __fastcall ConditionsInformation__IsNotBetween(
         System_Int64_array *entVals,
         const MethodInfo *method)
 {
-  if ( (byte_438CC73 & 1) == 0 )
+  if ( (byte_48E50CE & 1) == 0 )
   {
-    sub_B775C4(&ConditionsInformation_TypeInfo);
-    byte_438CC73 = 1;
+    sub_1B00CCC(&ConditionsInformation_TypeInfo, entVals);
+    byte_48E50CE = 1;
   }
-  if ( (BYTE3(ConditionsInformation_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ConditionsInformation_TypeInfo->_2.cctor_finished )
-  {
+  if ( !ConditionsInformation_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ConditionsInformation_TypeInfo);
-  }
   return !ConditionsInformation__IsBetween(selfVals, entVals, method);
 }
 
@@ -1672,29 +1875,29 @@ ConditionsInformation_CheckInfo_o *__fastcall ConditionsInformation__getCheckFun
         int32_t cond,
         const MethodInfo *method)
 {
-  ConditionsInformation_c *v3; // x0
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *FuncList; // x0
+  __int64 v3; // x1
+  ConditionsInformation_c *v4; // x0
+  System_Collections_Generic_Dictionary_TKey__TValue__o *FuncList; // x0
 
-  if ( (byte_438CC74 & 1) == 0 )
+  if ( (byte_48E50CF & 1) == 0 )
   {
-    sub_B775C4(&ConditionsInformation_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__get_Item__);
-    byte_438CC74 = 1;
+    sub_1B00CCC(&ConditionsInformation_TypeInfo, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__get_Item__, v3);
+    byte_48E50CF = 1;
   }
-  v3 = ConditionsInformation_TypeInfo;
-  if ( (BYTE3(ConditionsInformation_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ConditionsInformation_TypeInfo->_2.cctor_finished )
+  v4 = ConditionsInformation_TypeInfo;
+  if ( !ConditionsInformation_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ConditionsInformation_TypeInfo);
-    v3 = ConditionsInformation_TypeInfo;
+    v4 = ConditionsInformation_TypeInfo;
   }
-  FuncList = (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)v3->static_fields->FuncList;
+  FuncList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v4->static_fields->FuncList;
   if ( !FuncList )
-    sub_B7769C(0LL, method);
-  return (ConditionsInformation_CheckInfo_o *)System_Collections_Generic_Dictionary_Voice_BATTLE__string___get_Item(
+    sub_1B00F28(0LL, method);
+  return (ConditionsInformation_CheckInfo_o *)System_Collections_Generic_Dictionary_Int32Enum__object___get_Item(
                                                 FuncList,
                                                 cond,
-                                                (const MethodInfo_2F9FB70 *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__get_Item__);
+                                                (const MethodInfo_3063E1C *)Method_System_Collections_Generic_Dictionary_Ai_COND__ConditionsInformation_CheckInfo__get_Item__);
 }
 
 
@@ -1703,33 +1906,29 @@ bool __fastcall ConditionsInformation__isEqual(
         System_Int64_array *entVals,
         const MethodInfo *method)
 {
-  unsigned __int64 max_length; // x8
+  __int64 max_length; // x8
   unsigned __int64 v4; // x9
   unsigned __int64 v5; // x13
-  __int64 v7; // x0
 
   if ( !selfVals )
-LABEL_14:
-    sub_B7769C(selfVals, entVals);
+LABEL_13:
+    sub_1B00F28(selfVals, entVals);
   max_length = selfVals->max_length;
-  if ( (__int64)(max_length << 32) < 1 )
+  if ( max_length << 32 < 1 )
     return 1;
   v4 = 0LL;
   while ( 1 )
   {
     if ( !entVals )
-      goto LABEL_14;
+      goto LABEL_13;
     v5 = entVals->max_length;
     if ( (__int64)v4 >= (int)v5 )
       return 1;
-    if ( v4 >= max_length || v4 >= v5 )
-    {
-      v7 = sub_B776C8(selfVals);
-      sub_B77668(v7, 0LL);
-    }
+    if ( max_length == v4 || v4 >= v5 )
+      sub_1B00F30(selfVals, entVals);
     if ( selfVals->m_Items[v4] != (double)entVals->m_Items[v4] )
       return 0;
-    if ( (__int64)++v4 >= (int)max_length )
+    if ( (int)max_length == ++v4 )
       return 1;
   }
 }
@@ -1740,50 +1939,49 @@ bool __fastcall ConditionsInformation__isExist(
         System_Int64_array *entVals,
         const MethodInfo *method)
 {
-  unsigned __int64 max_length; // x8
-  unsigned __int64 v4; // x9
-  double v5; // d1
-  signed int v6; // w11
-  unsigned int v7; // w12
-  __int64 v9; // x0
+  __int64 max_length; // x10
+  __int64 v4; // x9
+  double v5; // d0
+  int v6; // w13
+  signed int v7; // w14
+  int v8; // w15
 
   if ( !selfVals )
-LABEL_18:
-    sub_B7769C(selfVals, entVals);
+LABEL_15:
+    sub_1B00F28(selfVals, entVals);
   max_length = selfVals->max_length;
-  if ( (__int64)(max_length << 32) < 1 )
-    return 0;
   v4 = 0LL;
-  while ( 1 )
+  if ( max_length << 32 >= 1 )
   {
-    if ( v4 >= max_length )
+    while ( 1 )
     {
-LABEL_17:
-      v9 = sub_B776C8(selfVals);
-      sub_B77668(v9, 0LL);
+      if ( v4 == max_length )
+        goto LABEL_14;
+      v5 = selfVals->m_Items[v4];
+      v6 = (int)v5;
+      if ( v5 == INFINITY )
+        v6 = 0x80000000;
+      if ( !entVals )
+        goto LABEL_15;
+      v7 = entVals->max_length;
+      if ( v7 >= 1 )
+        break;
+LABEL_12:
+      if ( ++v4 == (int)max_length )
+        return v4 < (int)max_length;
     }
-    v5 = selfVals->m_Items[v4];
-    if ( v5 == INFINITY )
-      v5 = -INFINITY;
-    if ( !entVals )
-      goto LABEL_18;
-    v6 = entVals->max_length;
-    if ( v6 >= 1 )
-      break;
-LABEL_13:
-    if ( (__int64)++v4 >= (int)max_length )
-      return 0;
+    v8 = 0;
+    while ( v7 != v8 )
+    {
+      if ( v6 == LODWORD(entVals->m_Items[v8]) )
+        return v4 < (int)max_length;
+      if ( v7 == ++v8 )
+        goto LABEL_12;
+    }
+LABEL_14:
+    sub_1B00F30(selfVals, entVals);
   }
-  v7 = 0;
-  while ( 1 )
-  {
-    if ( v7 >= v6 )
-      goto LABEL_17;
-    if ( (int)v5 == LODWORD(entVals->m_Items[v7]) )
-      return 1;
-    if ( (int)++v7 >= v6 )
-      goto LABEL_13;
-  }
+  return v4 < (int)max_length;
 }
 
 
@@ -1792,18 +1990,17 @@ bool __fastcall ConditionsInformation__isHigher(
         System_Int64_array *entVals,
         const MethodInfo *method)
 {
-  unsigned __int64 max_length; // x9
+  __int64 max_length; // x9
   char v4; // w8
   unsigned __int64 v5; // x10
   unsigned __int64 v6; // x14
   __int64 v7; // d0
   double v8; // d1
-  __int64 v10; // x0
 
   if ( !selfVals )
     goto LABEL_13;
   max_length = selfVals->max_length;
-  if ( (__int64)(max_length << 32) >= 1 )
+  if ( max_length << 32 >= 1 )
   {
     v4 = 0;
     v5 = 0LL;
@@ -1812,21 +2009,18 @@ bool __fastcall ConditionsInformation__isHigher(
       v6 = entVals->max_length;
       if ( (__int64)v5 < (int)v6 )
       {
-        if ( v5 >= v6 || v5 >= max_length )
-        {
-          v10 = sub_B776C8(selfVals);
-          sub_B77668(v10, 0LL);
-        }
+        if ( v5 >= v6 || max_length == v5 )
+          sub_1B00F30(selfVals, entVals);
         v7 = entVals->m_Items[v5];
         v8 = selfVals->m_Items[v5++];
         v4 |= v8 >= (double)v7;
-        if ( (__int64)v5 < (int)max_length )
+        if ( (int)max_length != v5 )
           continue;
       }
       return v4 & 1;
     }
 LABEL_13:
-    sub_B7769C(selfVals, entVals);
+    sub_1B00F28(selfVals, entVals);
   }
   v4 = 0;
   return v4 & 1;
@@ -1838,18 +2032,17 @@ bool __fastcall ConditionsInformation__isLower(
         System_Int64_array *entVals,
         const MethodInfo *method)
 {
-  unsigned __int64 max_length; // x9
+  __int64 max_length; // x9
   char v4; // w8
   unsigned __int64 v5; // x10
   unsigned __int64 v6; // x14
   __int64 v7; // d0
   double v8; // d1
-  __int64 v10; // x0
 
   if ( !selfVals )
     goto LABEL_13;
   max_length = selfVals->max_length;
-  if ( (__int64)(max_length << 32) >= 1 )
+  if ( max_length << 32 >= 1 )
   {
     v4 = 0;
     v5 = 0LL;
@@ -1858,21 +2051,18 @@ bool __fastcall ConditionsInformation__isLower(
       v6 = entVals->max_length;
       if ( (__int64)v5 < (int)v6 )
       {
-        if ( v5 >= max_length || v5 >= v6 )
-        {
-          v10 = sub_B776C8(selfVals);
-          sub_B77668(v10, 0LL);
-        }
+        if ( max_length == v5 || v5 >= v6 )
+          sub_1B00F30(selfVals, entVals);
         v7 = entVals->m_Items[v5];
         v8 = selfVals->m_Items[v5++];
         v4 |= v8 <= (double)v7;
-        if ( (__int64)v5 < (int)max_length )
+        if ( (int)max_length != v5 )
           continue;
       }
       return v4 & 1;
     }
 LABEL_13:
-    sub_B7769C(selfVals, entVals);
+    sub_1B00F28(selfVals, entVals);
   }
   v4 = 0;
   return v4 & 1;
@@ -1884,46 +2074,43 @@ bool __fastcall ConditionsInformation__isMultiple(
         System_Int64_array *entVals,
         const MethodInfo *method)
 {
-  __int64 v3; // x8
-  char v6; // w21
-  unsigned __int64 v7; // x22
-  int64_t *m_Items; // x23
-  unsigned __int64 max_length; // x9
+  __int64 max_length; // x21
+  char v5; // w20
+  unsigned __int64 v6; // x22
+  int64_t *m_Items; // x24
+  double *v8; // x25
+  unsigned __int64 v9; // x8
   double v10; // d0
-  __int64 v12; // x0
 
   if ( !selfVals )
     goto LABEL_13;
-  v3 = *(_QWORD *)&selfVals->max_length;
-  if ( (int)v3 >= 1 )
+  max_length = selfVals->max_length;
+  if ( max_length << 32 >= 1 )
   {
-    v6 = 0;
-    v7 = 0LL;
+    v5 = 0;
+    v6 = 0LL;
     m_Items = entVals->m_Items;
+    v8 = selfVals->m_Items;
     while ( entVals )
     {
-      max_length = entVals->max_length;
-      if ( (__int64)v7 < (int)max_length )
+      v9 = entVals->max_length;
+      if ( (__int64)v6 < (int)v9 )
       {
-        if ( v7 >= (unsigned int)v3 || v7 >= max_length )
-        {
-          v12 = sub_B776C8(selfVals);
-          sub_B77668(v12, 0LL);
-        }
-        v10 = fmod(selfVals->m_Items[v7], (double)m_Items[v7]);
-        LODWORD(v3) = selfVals->max_length;
-        ++v7;
-        v6 |= v10 == 0.0;
-        if ( (__int64)v7 < (int)v3 )
+        if ( max_length == v6 || v6 >= v9 )
+          sub_1B00F30(selfVals, entVals);
+        v10 = fmod(v8[v6], (double)m_Items[v6]);
+        ++v6;
+        v5 |= v10 == 0.0;
+        if ( (int)max_length != v6 )
           continue;
       }
-      return v6 & 1;
+      return v5 & 1;
     }
 LABEL_13:
-    sub_B7769C(selfVals, entVals);
+    sub_1B00F28(selfVals, entVals);
   }
-  v6 = 0;
-  return v6 & 1;
+  v5 = 0;
+  return v5 & 1;
 }
 
 
@@ -1941,16 +2128,13 @@ bool __fastcall ConditionsInformation__isNotEqual(
         System_Int64_array *entVals,
         const MethodInfo *method)
 {
-  if ( (byte_438CC71 & 1) == 0 )
+  if ( (byte_48E50CC & 1) == 0 )
   {
-    sub_B775C4(&ConditionsInformation_TypeInfo);
-    byte_438CC71 = 1;
+    sub_1B00CCC(&ConditionsInformation_TypeInfo, entVals);
+    byte_48E50CC = 1;
   }
-  if ( (BYTE3(ConditionsInformation_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ConditionsInformation_TypeInfo->_2.cctor_finished )
-  {
+  if ( !ConditionsInformation_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ConditionsInformation_TypeInfo);
-  }
   return !ConditionsInformation__isEqual(selfVals, entVals, method);
 }
 
@@ -1963,7 +2147,7 @@ void __fastcall ConditionsInformation_BuffIndividualitySumCheckInfo___ctor(
 {
   const MethodInfo *v4; // x4
 
-  ConditionsInformation_CheckInfo___ctor_21450952((ConditionsInformation_CheckInfo_o *)this, inTarget, 27, inCheck, v4);
+  ConditionsInformation_CheckInfo___ctor_41909864((ConditionsInformation_CheckInfo_o *)this, inTarget, 27, inCheck, v4);
   this->fields.isParams = 1;
 }
 
@@ -1972,147 +2156,108 @@ void __fastcall ConditionsInformation_CheckInfo___ctor(
         ConditionsInformation_CheckInfo_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x20
-  __int64 v4; // x9
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
+  __int64 v3; // x1
+  ConditionsInformation_ISCheckFunction_o *v4; // x20
+  const MethodInfo *v5; // x3
+  int32_t v6; // w2
+  int32_t v7; // w3
 
-  if ( (byte_43890EB & 1) == 0 )
+  if ( (byte_48E50D1 & 1) == 0 )
   {
-    sub_B775C4(&Method_ConditionsInformation_isNone__);
-    sub_B775C4(&ConditionsInformation_ISCheckFunction_TypeInfo);
-    byte_43890EB = 1;
+    sub_1B00CCC(&Method_ConditionsInformation_isNone__, method);
+    sub_1B00CCC(&ConditionsInformation_ISCheckFunction_TypeInfo, v3);
+    byte_48E50D1 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.check = 0;
   *(_QWORD *)&this->fields.target = 1LL;
-  v3 = sub_B77694(ConditionsInformation_ISCheckFunction_TypeInfo);
-  v4 = *(_QWORD *)Method_ConditionsInformation_isNone__;
-  *(_QWORD *)(v3 + 40) = Method_ConditionsInformation_isNone__;
-  *(_QWORD *)(v3 + 16) = v4;
-  *(_QWORD *)(v3 + 32) = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)(v3 + 32), 0LL, v5, v6, v7, v8, v9, v10);
-  this->fields.func = (struct ConditionsInformation_ISCheckFunction_o *)v3;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.func,
-    (System_Int32_array **)v3,
-    v11,
-    v12,
-    v13,
-    v14,
-    v15,
-    v16);
+  v4 = (ConditionsInformation_ISCheckFunction_o *)sub_1B00F18(ConditionsInformation_ISCheckFunction_TypeInfo);
+  ConditionsInformation_ISCheckFunction___ctor(v4, 0LL, Method_ConditionsInformation_isNone__, v5);
+  this->fields.func = v4;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.func, (int32_t)v4, v6, v7);
 }
 
 
-void __fastcall ConditionsInformation_CheckInfo___ctor_21450952(
+// local variable allocation has failed, the output may be wrong!
+void __fastcall ConditionsInformation_CheckInfo___ctor_41909864(
         ConditionsInformation_CheckInfo_o *this,
         int32_t inTarget,
         int32_t inParamater,
         int32_t inCheck,
         const MethodInfo *method)
 {
-  __int64 v9; // x0
-  System_String_array **v10; // x2
-  System_String_array **v11; // x3
-  System_Boolean_array **v12; // x4
-  System_Int32_array **v13; // x5
-  System_Int32_array *v14; // x6
-  System_Int32_array *v15; // x7
-  void **v16; // x8
-  struct ConditionsInformation_ISCheckFunction_o *v17; // x20
-  __int64 *v18; // x8
-  __int64 v19; // x9
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  int v18; // w9
+  __int64 *v19; // x20
+  ConditionsInformation_ISCheckFunction_o *v20; // x0
+  __int64 v21; // x2
+  struct ConditionsInformation_ISCheckFunction_o *v22; // x20
+  const MethodInfo *v23; // x3
+  int32_t v24; // w2
+  int32_t v25; // w3
 
-  if ( (byte_43890EC & 1) == 0 )
+  if ( (byte_48E50D2 & 1) == 0 )
   {
-    sub_B775C4(&Method_ConditionsInformation_IsAllExists__);
-    sub_B775C4(&Method_ConditionsInformation_IsBetween__);
-    sub_B775C4(&Method_ConditionsInformation_IsNotBetween__);
-    sub_B775C4(&Method_ConditionsInformation_isEqual__);
-    sub_B775C4(&Method_ConditionsInformation_isExist__);
-    sub_B775C4(&Method_ConditionsInformation_isHigher__);
-    sub_B775C4(&Method_ConditionsInformation_isLower__);
-    sub_B775C4(&Method_ConditionsInformation_isMultiple__);
-    sub_B775C4(&Method_ConditionsInformation_isNotEqual__);
-    sub_B775C4(&ConditionsInformation_ISCheckFunction_TypeInfo);
-    byte_43890EC = 1;
+    sub_1B00CCC(&Method_ConditionsInformation_IsAllExists__, *(_QWORD *)&inTarget);
+    sub_1B00CCC(&Method_ConditionsInformation_IsBetween__, v9);
+    sub_1B00CCC(&Method_ConditionsInformation_IsNotBetween__, v10);
+    sub_1B00CCC(&Method_ConditionsInformation_isEqual__, v11);
+    sub_1B00CCC(&Method_ConditionsInformation_isExist__, v12);
+    sub_1B00CCC(&Method_ConditionsInformation_isHigher__, v13);
+    sub_1B00CCC(&Method_ConditionsInformation_isLower__, v14);
+    sub_1B00CCC(&Method_ConditionsInformation_isMultiple__, v15);
+    sub_1B00CCC(&Method_ConditionsInformation_isNotEqual__, v16);
+    sub_1B00CCC(&ConditionsInformation_ISCheckFunction_TypeInfo, v17);
+    byte_48E50D2 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
+  v18 = inCheck - 1;
   this->fields.target = inTarget;
   this->fields.paramater = inParamater;
   this->fields.check = inCheck;
-  switch ( inCheck )
+  v19 = &Method_ConditionsInformation_isEqual__;
+  switch ( v18 )
   {
+    case 0:
+      goto LABEL_12;
     case 1:
-      v9 = sub_B77694(ConditionsInformation_ISCheckFunction_TypeInfo);
-      v16 = &Method_ConditionsInformation_isEqual__;
-      goto LABEL_13;
+      v19 = &Method_ConditionsInformation_isNotEqual__;
+      goto LABEL_12;
     case 2:
-      v9 = sub_B77694(ConditionsInformation_ISCheckFunction_TypeInfo);
-      v16 = &Method_ConditionsInformation_isNotEqual__;
-      goto LABEL_13;
+      v19 = &Method_ConditionsInformation_isHigher__;
+      goto LABEL_12;
     case 3:
-      v9 = sub_B77694(ConditionsInformation_ISCheckFunction_TypeInfo);
-      v16 = &Method_ConditionsInformation_isHigher__;
-      goto LABEL_13;
+      v19 = &Method_ConditionsInformation_isLower__;
+      goto LABEL_12;
     case 4:
-      v9 = sub_B77694(ConditionsInformation_ISCheckFunction_TypeInfo);
-      v16 = &Method_ConditionsInformation_isLower__;
-      goto LABEL_13;
+      v19 = &Method_ConditionsInformation_isMultiple__;
+      goto LABEL_12;
     case 5:
-      v9 = sub_B77694(ConditionsInformation_ISCheckFunction_TypeInfo);
-      v16 = &Method_ConditionsInformation_isMultiple__;
-      goto LABEL_13;
+      v19 = &Method_ConditionsInformation_isExist__;
+      goto LABEL_12;
     case 6:
-      v9 = sub_B77694(ConditionsInformation_ISCheckFunction_TypeInfo);
-      v16 = &Method_ConditionsInformation_isExist__;
-      goto LABEL_13;
+      v19 = &Method_ConditionsInformation_IsBetween__;
+      goto LABEL_12;
     case 7:
-      v9 = sub_B77694(ConditionsInformation_ISCheckFunction_TypeInfo);
-      v16 = &Method_ConditionsInformation_IsBetween__;
-      goto LABEL_13;
+      v19 = &Method_ConditionsInformation_IsNotBetween__;
+      goto LABEL_12;
     case 8:
-      v9 = sub_B77694(ConditionsInformation_ISCheckFunction_TypeInfo);
-      v16 = &Method_ConditionsInformation_IsNotBetween__;
-      goto LABEL_13;
-    case 9:
-      v9 = sub_B77694(ConditionsInformation_ISCheckFunction_TypeInfo);
-      v16 = &Method_ConditionsInformation_IsAllExists__;
-LABEL_13:
-      v17 = (struct ConditionsInformation_ISCheckFunction_o *)v9;
-      v18 = (__int64 *)*v16;
-      v19 = *v18;
-      *(_QWORD *)(v9 + 40) = v18;
-      *(_QWORD *)(v9 + 16) = v19;
-      *(_QWORD *)(v9 + 32) = 0LL;
-      sub_B77560((BattleServantConfConponent_o *)(v9 + 32), 0LL, v10, v11, v12, v13, v14, v15);
-      this->fields.func = v17;
-      sub_B77560(
-        (BattleServantConfConponent_o *)&this->fields.func,
-        (System_Int32_array **)v17,
-        v20,
-        v21,
-        v22,
-        v23,
-        v24,
-        v25);
+      v19 = &Method_ConditionsInformation_IsAllExists__;
+LABEL_12:
+      v20 = (ConditionsInformation_ISCheckFunction_o *)sub_1B00F18(ConditionsInformation_ISCheckFunction_TypeInfo);
+      v21 = *v19;
+      v22 = v20;
+      ConditionsInformation_ISCheckFunction___ctor(v20, 0LL, v21, v23);
+      this->fields.func = v22;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.func, (int32_t)v22, v24, v25);
       break;
     default:
       return;
@@ -2175,7 +2320,7 @@ void __fastcall ConditionsInformation_EqualBuffIndividualitySumCheckInfo___ctor(
 {
   const MethodInfo *v3; // x4
 
-  ConditionsInformation_CheckInfo___ctor_21450952((ConditionsInformation_CheckInfo_o *)this, inTarget, 27, 1, v3);
+  ConditionsInformation_CheckInfo___ctor_41909864((ConditionsInformation_CheckInfo_o *)this, inTarget, 27, 1, v3);
   this->fields.isParams = 1;
 }
 
@@ -2187,7 +2332,7 @@ void __fastcall ConditionsInformation_ExistIndividualityCheckInfo___ctor(
 {
   const MethodInfo *v3; // x4
 
-  ConditionsInformation_CheckInfo___ctor_21450952((ConditionsInformation_CheckInfo_o *)this, inTarget, 13, 6, v3);
+  ConditionsInformation_CheckInfo___ctor_41909864((ConditionsInformation_CheckInfo_o *)this, inTarget, 13, 6, v3);
 }
 
 
@@ -2198,7 +2343,7 @@ void __fastcall ConditionsInformation_HigherBuffIndividualitySumCheckInfo___ctor
 {
   const MethodInfo *v3; // x4
 
-  ConditionsInformation_CheckInfo___ctor_21450952((ConditionsInformation_CheckInfo_o *)this, inTarget, 27, 3, v3);
+  ConditionsInformation_CheckInfo___ctor_41909864((ConditionsInformation_CheckInfo_o *)this, inTarget, 27, 3, v3);
   this->fields.isParams = 1;
 }
 
@@ -2210,27 +2355,46 @@ void __fastcall ConditionsInformation_ISCheckFunction___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  struct BattleServantClassBoardSkillEffectListComponent_o *v8; // x8
-  BattleServantConfConponent_o *p_method; // x0
+  __int64 v4; // x8
+  __int64 v6; // x21
+  int v8; // w22
+  Il2CppObject *v9; // x8
+  struct System_Reflection_MethodInfo_o *v10; // x9
+  __int64 v11; // x0
 
-  v8 = **(struct BattleServantClassBoardSkillEffectListComponent_o ***)&method;
+  v4 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
+  *(_QWORD *)&this->fields.extra_arg = *(_QWORD *)&method;
+  v6 = *(_QWORD *)&method;
+  *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  p_method = (BattleServantConfConponent_o *)&this->fields.method;
-  p_method->monitor = *(void **)&method;
-  p_method[-1].fields.classBoardSkillObj = v8;
-  sub_B77560(
-    p_method,
-    (System_Int32_array **)object,
-    *(System_String_array ***)&method,
-    (System_String_array **)a4,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  v8 = *(unsigned __int8 *)(v6 + 82);
+  this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
+  if ( (sub_1B00D8C(v6) & 1) == 0 )
+  {
+    if ( v8 == 1 )
+    {
+      v9 = (Il2CppObject *)sub_194D8F0;
+      goto LABEL_6;
+    }
+    if ( !object )
+    {
+      v11 = sub_1B00F44(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B00DF4(v11, 0LL);
+    }
+LABEL_8:
+    v10 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
+    this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
+    this->fields.original_method_info = v10;
+    goto LABEL_9;
+  }
+  if ( v8 != 2 )
+    goto LABEL_8;
+  v9 = (Il2CppObject *)sub_194D914;
+LABEL_6:
+  this->fields.m_target = v9;
+LABEL_9:
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_194D88C;
 }
 
 
@@ -2242,12 +2406,11 @@ System_IAsyncResult_o *__fastcall ConditionsInformation_ISCheckFunction__BeginIn
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v7[3]; // [xsp+8h] [xbp-18h] BYREF
+  __int64 v7[2]; // [xsp+8h] [xbp-28h] BYREF
 
-  v7[1] = (__int64)entVals;
-  v7[2] = 0LL;
   v7[0] = (__int64)selfVals;
-  return (System_IAsyncResult_o *)sub_B77568(this, v7, callback, object);
+  v7[1] = (__int64)entVals;
+  return (System_IAsyncResult_o *)sub_1B00C80(this, v7, callback, object);
 }
 
 
@@ -2258,11 +2421,13 @@ bool __fastcall ConditionsInformation_ISCheckFunction__EndInvoke(
 {
   __int64 v3; // x0
   __int64 v4; // x1
+  __int64 v5; // x2
+  __int64 v6; // x3
 
-  v3 = sub_B7756C(result, 0LL, method);
+  v3 = sub_1B00C84(result, 0LL, method);
   if ( !v3 )
-    sub_B7769C(0LL, v4);
-  return *(_BYTE *)j_il2cpp_object_unbox_0(v3);
+    sub_1B00F28(0LL, v4);
+  return *(_BYTE *)j_il2cpp_object_unbox_0(v3, v4, v5, v6);
 }
 
 
@@ -2272,263 +2437,11 @@ bool __fastcall ConditionsInformation_ISCheckFunction__Invoke(
         System_Int64_array *entVals,
         const MethodInfo *method)
 {
-  __int64 v4; // x8
-  __int64 v8; // x25
-  ConditionsInformation_ISCheckFunction_o **v9; // x26
-  __int64 v10; // x27
-  unsigned int v11; // w23
-  __int64 class_0; // x0
-  Il2CppClass *v13; // x8
-  unsigned __int64 v14; // x10
-  int32_t *v15; // x11
-  __int64 v16; // x0
-  Il2CppMethodPointer methodPtr; // x0
-  char v18; // w0
-  unsigned int v19; // w24
-  __int64 v20; // x0
-  __int64 v21; // x8
-  unsigned __int64 v22; // x10
-  _DWORD *v23; // x11
-  __int64 v24; // x0
-  __int64 v25; // x0
-  __int64 p_method; // x0
-  __int64 (__fastcall **v27)(System_Double_array *, System_Int64_array *, _QWORD); // x0
-  __int64 v28; // x0
-  __int64 (__fastcall **v29)(__int64 *, System_Double_array *, System_Int64_array *, _QWORD); // x0
-  ConditionsInformation_ISCheckFunction_o *v30; // x8
-  __int64 v31; // x22
-  __int64 *v32; // x23
-  __int64 (__fastcall *v33)(System_Double_array *, System_Int64_array *, __int64); // x24
-  char v34; // w0
-  int v35; // w8
-  char v36; // w24
-  char v37; // w0
-  __int64 v38; // x8
-  __int64 v39; // x1
-  __int64 v40; // x2
-  unsigned __int64 v41; // x10
-  _DWORD *v42; // x11
-  char v43; // w23
-  char v44; // w0
-  Il2CppClass *klass; // x8
-  __int64 v46; // x1
-  __int64 v47; // x2
-  unsigned __int64 v48; // x10
-  int32_t *p_offset; // x11
-  ConditionsInformation_ISCheckFunction_o *v51; // [xsp+8h] [xbp-48h] BYREF
-
-  v51 = this;
-  v4 = *(_QWORD *)&this[1].fields.method_ptr;
-  if ( !v4 )
-  {
-    v9 = &v51;
-    v8 = 1LL;
-    goto LABEL_5;
-  }
-  v8 = *(_QWORD *)(v4 + 24);
-  if ( v8 )
-  {
-    v9 = (ConditionsInformation_ISCheckFunction_o **)(v4 + 32);
-LABEL_5:
-    v10 = 0LL;
-    while ( 1 )
-    {
-      v30 = v9[v10];
-      v32 = *(__int64 **)&v30->fields.method;
-      v31 = *(_QWORD *)&v30->fields.extra_arg;
-      v33 = *(__int64 (__fastcall **)(System_Double_array *, System_Int64_array *, __int64))&v30->fields.method_ptr;
-      if ( *(__int16 *)(v31 + 72) == -1 )
-        sub_B77680(*(_QWORD *)&v30->fields.extra_arg, selfVals);
-      v34 = sub_B775F4(v31);
-      v35 = *(unsigned __int8 *)(v31 + 74);
-      if ( (v34 & 1) != 0 )
-      {
-        if ( v35 == 2 )
-          goto LABEL_58;
-      }
-      else
-      {
-        if ( v35 != 2 )
-        {
-          if ( *(__int16 *)(v31 + 72) != -1 && this->fields.m_target )
-          {
-            v43 = sub_B775EC(v31);
-            v44 = sub_B779F0(v31);
-            if ( (v43 & 1) != 0 )
-            {
-              if ( (v44 & 1) != 0 )
-              {
-                klass = selfVals->obj.klass;
-                v46 = *(_QWORD *)(v31 + 24);
-                v47 = *(unsigned __int16 *)(v31 + 72);
-                if ( *(_WORD *)&selfVals->obj.klass->_2.bitflags1 )
-                {
-                  v48 = 0LL;
-                  p_offset = &klass->_1.interfaceOffsets->offset;
-                  while ( *((_QWORD *)p_offset - 1) != v46 )
-                  {
-                    ++v48;
-                    p_offset += 4;
-                    if ( v48 >= *(unsigned __int16 *)&selfVals->obj.klass->_2.bitflags1 )
-                      goto LABEL_57;
-                  }
-                  p_method = (__int64)&klass->vtable[*p_offset + (int)v47].method;
-                }
-                else
-                {
-LABEL_57:
-                  p_method = sub_B0F4C0(selfVals, v46, v47);
-                }
-                methodPtr = *(Il2CppMethodPointer *)(p_method + 8);
-              }
-              else
-              {
-                methodPtr = selfVals->obj.klass->vtable[*(unsigned __int16 *)(v31 + 72) + 1].methodPtr;
-              }
-              v27 = (__int64 (__fastcall **)(System_Double_array *, System_Int64_array *, _QWORD))sub_B77674(
-                                                                                                    methodPtr,
-                                                                                                    v31);
-              v18 = (*v27)(selfVals, entVals, v27);
-            }
-            else
-            {
-              v11 = *(unsigned __int16 *)(v31 + 72);
-              if ( (v44 & 1) != 0 )
-              {
-                class_0 = j_il2cpp_method_get_class_0(v31);
-                v13 = selfVals->obj.klass;
-                if ( *(_WORD *)&selfVals->obj.klass->_2.bitflags1 )
-                {
-                  v14 = 0LL;
-                  v15 = &v13->_1.interfaceOffsets->offset;
-                  while ( *((_QWORD *)v15 - 1) != class_0 )
-                  {
-                    ++v14;
-                    v15 += 4;
-                    if ( v14 >= *(unsigned __int16 *)&selfVals->obj.klass->_2.bitflags1 )
-                      goto LABEL_11;
-                  }
-                  v16 = (__int64)&v13->vtable[*v15 + v11].method;
-                }
-                else
-                {
-LABEL_11:
-                  v16 = sub_B0F4C0(selfVals, class_0, v11);
-                }
-                v18 = (*(__int64 (__fastcall **)(System_Double_array *, System_Int64_array *, _QWORD))v16)(
-                        selfVals,
-                        entVals,
-                        *(_QWORD *)(v16 + 8));
-              }
-              else
-              {
-                v18 = ((__int64 (__fastcall *)(System_Double_array *, System_Int64_array *, Il2CppMethodPointer))selfVals->obj.klass->vtable[*(unsigned __int16 *)(v31 + 72)].method)(
-                        selfVals,
-                        entVals,
-                        selfVals->obj.klass->vtable[*(unsigned __int16 *)(v31 + 72) + 1].methodPtr);
-              }
-            }
-            goto LABEL_59;
-          }
-LABEL_58:
-          v18 = v33(selfVals, entVals, v31);
-          goto LABEL_59;
-        }
-        if ( !v32 )
-          goto LABEL_58;
-        if ( *(__int16 *)(v31 + 72) != -1 && (*(_BYTE *)(*v32 + 277) & 1) == 0 && this->fields.m_target )
-        {
-          v36 = sub_B775EC(v31);
-          v37 = sub_B779F0(v31);
-          if ( (v36 & 1) != 0 )
-          {
-            if ( (v37 & 1) != 0 )
-            {
-              v38 = *v32;
-              v39 = *(_QWORD *)(v31 + 24);
-              v40 = *(unsigned __int16 *)(v31 + 72);
-              if ( *(_WORD *)(*v32 + 298) )
-              {
-                v41 = 0LL;
-                v42 = (_DWORD *)(*(_QWORD *)(v38 + 176) + 8LL);
-                while ( *((_QWORD *)v42 - 1) != v39 )
-                {
-                  ++v41;
-                  v42 += 4;
-                  if ( v41 >= *(unsigned __int16 *)(*v32 + 298) )
-                    goto LABEL_48;
-                }
-                v28 = v38 + 16LL * (*v42 + (int)v40) + 312;
-              }
-              else
-              {
-LABEL_48:
-                v28 = sub_B0F4C0(v32, v39, v40);
-              }
-              v25 = *(_QWORD *)(v28 + 8);
-            }
-            else
-            {
-              v25 = *(_QWORD *)(*v32 + 16LL * *(unsigned __int16 *)(v31 + 72) + 320);
-            }
-            v29 = (__int64 (__fastcall **)(__int64 *, System_Double_array *, System_Int64_array *, _QWORD))sub_B77674(v25, v31);
-            v18 = (*v29)(v32, selfVals, entVals, v29);
-          }
-          else
-          {
-            v19 = *(unsigned __int16 *)(v31 + 72);
-            if ( (v37 & 1) != 0 )
-            {
-              v20 = j_il2cpp_method_get_class_0(v31);
-              v21 = *v32;
-              if ( *(_WORD *)(*v32 + 298) )
-              {
-                v22 = 0LL;
-                v23 = (_DWORD *)(*(_QWORD *)(v21 + 176) + 8LL);
-                while ( *((_QWORD *)v23 - 1) != v20 )
-                {
-                  ++v22;
-                  v23 += 4;
-                  if ( v22 >= *(unsigned __int16 *)(*v32 + 298) )
-                    goto LABEL_19;
-                }
-                v24 = v21 + 16LL * (int)(*v23 + v19) + 312;
-              }
-              else
-              {
-LABEL_19:
-                v24 = sub_B0F4C0(v32, v20, v19);
-              }
-              v18 = (*(__int64 (__fastcall **)(__int64 *, System_Double_array *, System_Int64_array *, _QWORD))v24)(
-                      v32,
-                      selfVals,
-                      entVals,
-                      *(_QWORD *)(v24 + 8));
-            }
-            else
-            {
-              v18 = (*(__int64 (__fastcall **)(__int64 *, System_Double_array *, System_Int64_array *, _QWORD))(*v32 + 16LL * *(unsigned __int16 *)(v31 + 72) + 312))(
-                      v32,
-                      selfVals,
-                      entVals,
-                      *(_QWORD *)(*v32 + 16LL * *(unsigned __int16 *)(v31 + 72) + 320));
-            }
-          }
-          goto LABEL_59;
-        }
-      }
-      v18 = ((__int64 (__fastcall *)(__int64 *, System_Double_array *, System_Int64_array *, __int64))v33)(
-              v32,
-              selfVals,
-              entVals,
-              v31);
-LABEL_59:
-      if ( ++v10 == v8 )
-        return v18 & 1;
-    }
-  }
-  v18 = 0;
-  return v18 & 1;
+  return ((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_Double_array *, System_Int64_array *, _QWORD))this->fields.m_target)(
+           this->fields.original_method_info,
+           selfVals,
+           entVals,
+           *(_QWORD *)&this->fields.extra_arg);
 }
 
 
@@ -2539,7 +2452,7 @@ void __fastcall ConditionsInformation_LowerBuffIndividualitySumCheckInfo___ctor(
 {
   const MethodInfo *v3; // x4
 
-  ConditionsInformation_CheckInfo___ctor_21450952((ConditionsInformation_CheckInfo_o *)this, inTarget, 27, 4, v3);
+  ConditionsInformation_CheckInfo___ctor_41909864((ConditionsInformation_CheckInfo_o *)this, inTarget, 27, 4, v3);
   this->fields.isParams = 1;
 }
 
@@ -2551,7 +2464,7 @@ void __fastcall ConditionsInformation_TotalCountEqualIndividualityCheckInfo___ct
 {
   const MethodInfo *v3; // x4
 
-  ConditionsInformation_CheckInfo___ctor_21450952((ConditionsInformation_CheckInfo_o *)this, inTarget, 27, 1, v3);
+  ConditionsInformation_CheckInfo___ctor_41909864((ConditionsInformation_CheckInfo_o *)this, inTarget, 27, 1, v3);
   this->fields.isParams = 1;
   this->fields.refine = 4;
 }
@@ -2564,7 +2477,7 @@ void __fastcall ConditionsInformation_TotalCountHigherIndividualityCheckInfo___c
 {
   const MethodInfo *v3; // x4
 
-  ConditionsInformation_CheckInfo___ctor_21450952((ConditionsInformation_CheckInfo_o *)this, inTarget, 27, 3, v3);
+  ConditionsInformation_CheckInfo___ctor_41909864((ConditionsInformation_CheckInfo_o *)this, inTarget, 27, 3, v3);
   this->fields.isParams = 1;
   this->fields.refine = 4;
 }
@@ -2577,7 +2490,7 @@ void __fastcall ConditionsInformation_TotalCountLowerIndividualityCheckInfo___ct
 {
   const MethodInfo *v3; // x4
 
-  ConditionsInformation_CheckInfo___ctor_21450952((ConditionsInformation_CheckInfo_o *)this, inTarget, 27, 4, v3);
+  ConditionsInformation_CheckInfo___ctor_41909864((ConditionsInformation_CheckInfo_o *)this, inTarget, 27, 4, v3);
   this->fields.isParams = 1;
   this->fields.refine = 4;
 }

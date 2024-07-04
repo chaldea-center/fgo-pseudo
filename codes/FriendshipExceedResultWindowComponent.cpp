@@ -2,12 +2,12 @@ void __fastcall FriendshipExceedResultWindowComponent___ctor(
         FriendshipExceedResultWindowComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_438D8CA & 1) == 0 )
+  if ( (byte_48E5E6D & 1) == 0 )
   {
-    sub_B775C4(&BaseDialog_TypeInfo);
-    byte_438D8CA = 1;
+    sub_1B00CCC(&BaseDialog_TypeInfo, method);
+    byte_48E5E6D = 1;
   }
-  if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
+  if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0LL);
 }
@@ -20,98 +20,104 @@ void __fastcall FriendshipExceedResultWindowComponent__SetFriendshipExceedInfo(
 {
   const MethodInfo *v3; // x3
 
-  FriendshipExceedResultWindowComponent__SetFriendshipExceedInfo_29675988(this, userServantEntity, 0, v3);
+  FriendshipExceedResultWindowComponent__SetFriendshipExceedInfo_43481620(this, userServantEntity, 0, v3);
 }
 
 
-void __fastcall FriendshipExceedResultWindowComponent__SetFriendshipExceedInfo_29675988(
+void __fastcall FriendshipExceedResultWindowComponent__SetFriendshipExceedInfo_43481620(
         FriendshipExceedResultWindowComponent_o *this,
         UserServantEntity_o *userServantEntity,
         int32_t currentMax,
         const MethodInfo *method)
 {
-  DataManager_o *Instance; // x0
+  __int64 v7; // x1
   __int64 v8; // x1
-  DataMasterBase_WarMaster__WarEntity__int__o *v9; // x22
-  __int64 v10; // x23
-  __int64 v11; // x24
-  WarQuestSelectionMaster_o *MasterData_WarQuestSelectionMaster; // x0
-  __int128 v13; // q1
-  UserServantCollectionMaster_o *v14; // x22
-  int64_t v15; // x23
-  const MethodInfo *v16; // x6
-  System_Action_o *v17; // x20
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v18; // [xsp+0h] [xbp-80h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v19; // [xsp+20h] [xbp-60h]
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v20; // 0:x0.16
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  _QWORD *v15; // x0
+  System_Reflection_MethodBase_o *v16; // x0
+  DataManager_o *Instance; // x0
+  __int64 v18; // x1
+  DataMasterBase_TMaster__TEntity__PKType__o *v19; // x22
+  __int64 v20; // x23
+  __int64 v21; // x24
+  Il2CppObject *MasterData_object; // x0
+  __int128 v23; // q0
+  UserServantCollectionMaster_o *v24; // x22
+  int64_t v25; // x23
+  const MethodInfo *v26; // x6
+  System_Action_o *v27; // x20
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v28; // [xsp+0h] [xbp-80h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v29; // [xsp+20h] [xbp-60h]
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v30; // 0:x0.16
 
-  if ( (byte_438D8C9 & 1) == 0 )
+  if ( (byte_48E5E6C & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&Method_BaseDialog_EndOpenBaseDialog__);
-    sub_B775C4(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_B775C4(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
-    sub_B775C4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B775C4(&SoundManager_TypeInfo);
-    byte_438D8C9 = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, userServantEntity);
+    sub_1B00CCC(&Method_BaseDialog_EndOpenBaseDialog__, v7);
+    sub_1B00CCC(&Method_DataManager_GetMasterData_ServantMaster___, v8);
+    sub_1B00CCC(&Method_DataManager_GetMasterData_UserServantCollectionMaster___, v9);
+    sub_1B00CCC(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v10);
+    sub_1B00CCC(&Method_FriendshipExceedResultWindowComponent_SetFriendshipExceedInfo__, v11);
+    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v12);
+    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v13);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
+    byte_48E5E6C = 1;
   }
-  if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  SoundManager__playSystemSe(6, 0LL);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v15 = Method_FriendshipExceedResultWindowComponent_SetFriendshipExceedInfo__;
+  if ( (*((_BYTE *)Method_FriendshipExceedResultWindowComponent_SetFriendshipExceedInfo__ + 83) & 2) != 0 )
+    v15 = (_QWORD *)sub_1B00CE4(Method_FriendshipExceedResultWindowComponent_SetFriendshipExceedInfo__);
+  v16 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v15, v15[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v16, 6, 0LL);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_19;
-  Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+    goto LABEL_16;
+  Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( !userServantEntity )
-    goto LABEL_19;
-  v9 = (DataMasterBase_WarMaster__WarEntity__int__o *)Instance;
-  v11 = *(_QWORD *)&userServantEntity->fields.svtId.fields.currentCryptoKey;
-  v10 = *(_QWORD *)&userServantEntity->fields.svtId.fields.fakeValue;
-  if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-  {
+    goto LABEL_16;
+  v19 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
+  v21 = *(_QWORD *)&userServantEntity->fields.svtId.fields.currentCryptoKey;
+  v20 = *(_QWORD *)&userServantEntity->fields.svtId.fields.fakeValue;
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  }
-  *(_QWORD *)&v20.fields.currentCryptoKey = v11;
-  *(_QWORD *)&v20.fields.fakeValue = v10;
-  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v20, 0LL);
-  if ( !v9 )
-    goto LABEL_19;
-  DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-    v9,
+  *(_QWORD *)&v30.fields.currentCryptoKey = v21;
+  *(_QWORD *)&v30.fields.fakeValue = v20;
+  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(v30, 0LL);
+  if ( !v19 )
+    goto LABEL_16;
+  DataMasterBase_object__object__int___GetEntity(
+    v19,
     (int32_t)Instance,
-    (const MethodInfo_21FB894 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    (const MethodInfo_2FE6A4C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_19;
-  MasterData_WarQuestSelectionMaster = DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                         Instance,
-                                         (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
-  v13 = *(_OWORD *)&userServantEntity->fields.userId.fields.fakeValue;
-  v14 = (UserServantCollectionMaster_o *)MasterData_WarQuestSelectionMaster;
-  *(_OWORD *)&v19.fields.currentCryptoKey = *(_OWORD *)&userServantEntity->fields.userId.fields.currentCryptoKey;
-  *(_OWORD *)&v19.fields.fakeValue = v13;
-  if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
-  {
+    goto LABEL_16;
+  MasterData_object = DataManager__GetMasterData_object_(
+                        Instance,
+                        (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+  v23 = *(_OWORD *)&userServantEntity->fields.userId.fields.fakeValue;
+  v24 = (UserServantCollectionMaster_o *)MasterData_object;
+  *(_OWORD *)&v29.fields.currentCryptoKey = *(_OWORD *)&userServantEntity->fields.userId.fields.currentCryptoKey;
+  *(_OWORD *)&v29.fields.fakeValue = v23;
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  }
-  v18 = v19;
-  v15 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45429112(&v18, 0LL);
-  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(
+  v28 = v29;
+  v25 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45316568(&v28, 0LL);
+  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(
                                 userServantEntity->fields.svtId,
                                 0LL);
-  if ( !v14
-    || (Instance = (DataManager_o *)UserServantCollectionMaster__GetEntity(v14, v15, (int32_t)Instance, 0LL),
+  if ( !v24
+    || (Instance = (DataManager_o *)UserServantCollectionMaster__GetEntity(v24, v25, (int32_t)Instance, 0LL),
         !this->fields.friendshipExceedInfoComponent) )
   {
-LABEL_19:
-    sub_B7769C(Instance, v8);
+LABEL_16:
+    sub_1B00F28(Instance, v18);
   }
   FriendshipExceedInfoComponent__SetInfo(
     this->fields.friendshipExceedInfoComponent,
@@ -120,8 +126,8 @@ LABEL_19:
     1,
     1,
     currentMax,
-    v16);
-  v17 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-  System_Action___ctor(v17, (Il2CppObject *)this, Method_BaseDialog_EndOpenBaseDialog__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v17, 0, 0LL);
+    v26);
+  v27 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+  System_Action___ctor(v27, (Il2CppObject *)this, Method_BaseDialog_EndOpenBaseDialog__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v27, 0, 0LL);
 }

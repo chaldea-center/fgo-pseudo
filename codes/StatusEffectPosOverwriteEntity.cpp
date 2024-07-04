@@ -1,32 +1,33 @@
 void __fastcall StatusEffectPosOverwriteEntity___ctor(StatusEffectPosOverwriteEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438BFD2 & 1) == 0 )
+  if ( (byte_48E319C & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    byte_438BFD2 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
+    byte_48E319C = 1;
   }
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall StatusEffectPosOverwriteEntity__CreatePK(
         int32_t statusEffectId,
         int32_t svtId,
         int32_t svtLimitCount,
         const MethodInfo *method)
 {
-  if ( (byte_438BFD1 & 1) == 0 )
+  if ( (byte_48E319B & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_438BFD1 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&svtId);
+    byte_48E319B = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            statusEffectId,
            svtId,
            svtLimitCount,
-           (const MethodInfo_1D175E4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2D612C4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -49,19 +50,19 @@ UnityEngine_Vector3_o __fastcall StatusEffectPosOverwriteEntity__GetOffset(
         bool isFlip,
         const MethodInfo *method)
 {
-  float v3; // s0
-  unsigned __int64 v4; // d1
+  unsigned __int64 v3; // d1
+  float offsetX; // s0
   float v5; // s0
   float v6; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  v3 = 1.0;
-  if ( isFlip )
-    v3 = -1.0;
-  v4 = vdiv_f32(vcvt_f32_s32(*(int32x2_t *)&this->fields.offsetY), vdup_n_s32(0x447A0000u)).n64_u64[0];
-  v5 = (float)(v3 * (float)this->fields.offsetX) / 1000.0;
-  v6 = *((float *)&v4 + 1);
-  result.fields.y = *(float *)&v4;
+  v3 = vdiv_f32(vcvt_f32_s32(*(int32x2_t *)&this->fields.offsetY), vdup_n_s32(0x447A0000u)).n64_u64[0];
+  offsetX = -(float)this->fields.offsetX;
+  if ( !isFlip )
+    offsetX = (float)this->fields.offsetX;
+  v5 = offsetX / 1000.0;
+  v6 = *((float *)&v3 + 1);
+  result.fields.y = *(float *)&v3;
   result.fields.z = v6;
   result.fields.x = v5;
   return result;

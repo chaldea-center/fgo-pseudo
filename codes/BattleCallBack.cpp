@@ -1,24 +1,22 @@
 void __fastcall BattleCallBack___ctor(BattleCallBack_o *this, System_Action_o *callBack, const MethodInfo *method)
 {
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  int32_t v5; // w2
+  int32_t v6; // w3
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.callBack = callBack;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)callBack, v5, v6, v7, v8, v9, v10);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)callBack, v5, v6);
 }
 
 
 void __fastcall BattleCallBack__call(BattleCallBack_o *this, const MethodInfo *method)
 {
-  System_Action_o *callBack; // x0
+  struct System_Action_o *callBack; // x8
 
   callBack = this->fields.callBack;
   if ( !callBack )
-    sub_B7769C(0LL, method);
-  System_Action__Invoke(callBack, 0LL);
+    sub_1B00F28(this, method);
+  ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))callBack->fields.m_target)(
+    callBack->fields.original_method_info,
+    *(_QWORD *)&callBack->fields.extra_arg);
 }

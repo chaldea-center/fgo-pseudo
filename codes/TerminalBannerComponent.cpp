@@ -1,18 +1,16 @@
 void __fastcall TerminalBannerComponent___cctor(const MethodInfo *method)
 {
-  TerminalBannerComponent_c *v1; // x8
+  __int64 v1; // x1
+  struct TerminalBannerComponent_StaticFields *static_fields; // x8
 
-  if ( (byte_438834D & 1) == 0 )
+  if ( (byte_48DFDE1 & 1) == 0 )
   {
-    sub_B775C4(&TerminalBannerComponent_TypeInfo);
-    byte_438834D = 1;
+    sub_1B00CCC(&TerminalBannerComponent_TypeInfo, v1);
+    byte_48DFDE1 = 1;
   }
-  TerminalBannerComponent_TypeInfo->static_fields->BANNER_RETRY_MAX = 3;
-  TerminalBannerComponent_TypeInfo->static_fields->BANNER_INTERVAL_POS = 480.0;
-  v1 = TerminalBannerComponent_TypeInfo;
-  TerminalBannerComponent_TypeInfo->static_fields->BANNER_AUTO_MOVE_TIME_START = 4.0;
-  v1->static_fields->BANNER_AUTO_MOVE_TIME_INTERVAL = 3.0;
-  v1->static_fields->TGT_SPD_RATE = 0.25;
+  static_fields = TerminalBannerComponent_TypeInfo->static_fields;
+  static_fields->BANNER_RETRY_MAX = 3;
+  *(_OWORD *)&static_fields->BANNER_INTERVAL_POS = xmmword_B707B0;
 }
 
 
@@ -25,42 +23,40 @@ void __fastcall TerminalBannerComponent___ctor(TerminalBannerComponent_o *this, 
 void __fastcall TerminalBannerComponent__DestroyBanner(TerminalBannerComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Networking_UnityWebRequest_o *mBannerWWW; // x0
-  struct UnityEngine_Texture2D_o **p_mBannerTex2D; // x19
-  UnityEngine_Object_o *v5; // x20
-  struct UnityEngine_Texture2D_o *mBannerTex2D; // t1
+  int32_t v4; // w2
+  int32_t v5; // w3
+  ServantStatusBattleListViewItem_o *p_mBannerTex2D; // x19
   UnityEngine_Object_o *v7; // x20
+  struct UnityEngine_Texture2D_o *mBannerTex2D; // t1
+  UnityEngine_Object_o *klass; // x20
+  int32_t v10; // w2
+  int32_t v11; // w3
 
-  if ( (byte_4388346 & 1) == 0 )
+  if ( (byte_48DFDDA & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_4388346 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    byte_48DFDDA = 1;
   }
   mBannerWWW = this->fields.mBannerWWW;
   if ( mBannerWWW )
   {
     UnityEngine_Networking_UnityWebRequest__Dispose(mBannerWWW, 0LL);
     this->fields.mBannerWWW = 0LL;
-    sub_B77560(&this->fields.mBannerWWW);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.mBannerWWW, 0, v4, v5);
   }
   mBannerTex2D = this->fields.mBannerTex2D;
-  p_mBannerTex2D = &this->fields.mBannerTex2D;
-  v5 = (UnityEngine_Object_o *)mBannerTex2D;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  p_mBannerTex2D = (ServantStatusBattleListViewItem_o *)&this->fields.mBannerTex2D;
+  v7 = (UnityEngine_Object_o *)mBannerTex2D;
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  if ( UnityEngine_Object__op_Inequality(v5, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v7, 0LL, 0LL) )
   {
-    v7 = (UnityEngine_Object_o *)*p_mBannerTex2D;
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+    klass = (UnityEngine_Object_o *)p_mBannerTex2D->klass;
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
-    UnityEngine_Object__Destroy_36309980(v7, 0LL);
-    *p_mBannerTex2D = 0LL;
-    sub_B77560(p_mBannerTex2D);
+    UnityEngine_Object__Destroy_68077656(klass, 0LL);
+    p_mBannerTex2D->klass = 0LL;
+    sub_1B00C70(p_mBannerTex2D, 0, v10, v11);
   }
 }
 
@@ -77,31 +73,32 @@ float __fastcall TerminalBannerComponent__GetPos(TerminalBannerComponent_o *this
 int32_t __fastcall TerminalBannerComponent__GetPosIdx(TerminalBannerComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
-  float LocalPositionX; // s8
+  float LocalPositionX; // s0
   TerminalBannerComponent_c *v5; // x0
-  float v6; // s0
+  float v6; // s8
+  float v7; // s0
+  int32_t v8; // w8
 
-  if ( (byte_438834B & 1) == 0 )
+  if ( (byte_48DFDDF & 1) == 0 )
   {
-    sub_B775C4(&TerminalBannerComponent_TypeInfo);
-    byte_438834B = 1;
+    sub_1B00CCC(&TerminalBannerComponent_TypeInfo, method);
+    byte_48DFDDF = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   LocalPositionX = GameObjectExtensions__GetLocalPositionX(gameObject, 0LL);
   v5 = TerminalBannerComponent_TypeInfo;
-  if ( (BYTE3(TerminalBannerComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !TerminalBannerComponent_TypeInfo->_2.cctor_finished )
+  v6 = LocalPositionX;
+  if ( !TerminalBannerComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalBannerComponent_TypeInfo);
     v5 = TerminalBannerComponent_TypeInfo;
   }
-  v6 = floorf(
-         (float)(LocalPositionX + (float)(v5->static_fields->BANNER_INTERVAL_POS * 0.5))
-       / v5->static_fields->BANNER_INTERVAL_POS);
-  if ( v6 == INFINITY )
-    return (int)-v6;
+  v7 = (float)(v6 + (float)(v5->static_fields->BANNER_INTERVAL_POS * 0.5)) / v5->static_fields->BANNER_INTERVAL_POS;
+  v8 = vcvtms_s32_f32(v7);
+  if ( floorf(v7) == INFINITY )
+    return 0x80000000;
   else
-    return (int)v6;
+    return v8;
 }
 
 
@@ -123,22 +120,23 @@ void __fastcall TerminalBannerComponent__Move(
   float v9; // s8
   float mTgtPos; // s0
   float v11; // s0
-  float v12; // s9
-  TerminalBannerComponent_c *v13; // x0
+  float v12; // s1
+  float v13; // s9
+  TerminalBannerComponent_c *v14; // x0
   float mPosMin; // s0
-  float v15; // s8
+  float v16; // s8
   float mPosMax; // s1
-  UnityEngine_GameObject_o *v17; // x0
+  UnityEngine_GameObject_o *v18; // x0
 
-  if ( (byte_438834A & 1) == 0 )
+  if ( (byte_48DFDDE & 1) == 0 )
   {
-    sub_B775C4(&TerminalBannerComponent_TypeInfo);
-    byte_438834A = 1;
+    sub_1B00CCC(&TerminalBannerComponent_TypeInfo, questBoardDraw);
+    byte_48DFDDE = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   LocalPositionX = GameObjectExtensions__GetLocalPositionX(gameObject, 0LL);
   if ( !questBoardDraw )
-    sub_B7769C(v6, v7);
+    sub_1B00F28(v6, v7);
   v9 = LocalPositionX;
   mTgtPos = this->fields.mTgtPos;
   if ( questBoardDraw->fields.mIsEnableDragX )
@@ -146,25 +144,21 @@ void __fastcall TerminalBannerComponent__Move(
     v11 = mTgtPos + questBoardDraw->fields.mTouchPosDif;
     this->fields.mTgtPos = v11;
     v12 = v11 - v9;
-    if ( questBoardDraw->fields.mIsEnableDragX )
-      goto LABEL_12;
   }
   else
   {
-    v12 = mTgtPos - v9;
+    v13 = mTgtPos - v9;
+    v14 = TerminalBannerComponent_TypeInfo;
+    if ( !TerminalBannerComponent_TypeInfo->_2.cctor_finished )
+    {
+      j_il2cpp_runtime_class_init_0(TerminalBannerComponent_TypeInfo);
+      v14 = TerminalBannerComponent_TypeInfo;
+    }
+    v12 = v13 * v14->static_fields->TGT_SPD_RATE;
   }
-  v13 = TerminalBannerComponent_TypeInfo;
-  if ( (BYTE3(TerminalBannerComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !TerminalBannerComponent_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(TerminalBannerComponent_TypeInfo);
-    v13 = TerminalBannerComponent_TypeInfo;
-  }
-  v12 = v12 * v13->static_fields->TGT_SPD_RATE;
-LABEL_12:
   mPosMin = this->fields.mPosMin;
-  v15 = v9 + v12;
-  if ( v15 <= mPosMin )
+  v16 = v9 + v12;
+  if ( v16 <= mPosMin )
   {
     mPosMax = this->fields.mPosMin;
     mPosMin = this->fields.mPosMax;
@@ -172,14 +166,14 @@ LABEL_12:
   else
   {
     mPosMax = this->fields.mPosMax;
-    if ( v15 <= mPosMax )
-      goto LABEL_17;
+    if ( v16 <= mPosMax )
+      goto LABEL_14;
   }
-  v15 = mPosMin + (float)(v15 - mPosMax);
+  v16 = mPosMin + (float)(v16 - mPosMax);
   this->fields.mTgtPos = mPosMin + (float)(this->fields.mTgtPos - mPosMax);
-LABEL_17:
-  v17 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  GameObjectExtensions__SetLocalPositionX(v17, v15, 0LL);
+LABEL_14:
+  v18 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  GameObjectExtensions__SetLocalPositionX(v18, v16, 0LL);
 }
 
 
@@ -211,24 +205,27 @@ void __fastcall TerminalBannerComponent__OnPull(
         QuestBoardListViewItemDraw_o *qdraw,
         const MethodInfo *method)
 {
-  const MethodInfo *v5; // x2
-  int32_t v6; // w1
+  const MethodInfo *v5; // x1
+  int32_t PosIdx; // w0
+  const MethodInfo *v7; // x2
+  int v8; // w8
+  bool IsFlickR; // w20
+  const MethodInfo *v10; // x1
 
   if ( !qdraw )
-    sub_B7769C(this, 0LL);
+    sub_1B00F28(this, 0LL);
   if ( QuestBoardListViewItemDraw__IsFlickL(qdraw, 0LL) )
   {
-    v6 = 1;
-  }
-  else if ( QuestBoardListViewItemDraw__IsFlickR(qdraw, 0LL) )
-  {
-    v6 = 2;
+    PosIdx = TerminalBannerComponent__GetPosIdx(this, v5);
+    v8 = -1;
   }
   else
   {
-    v6 = 0;
+    IsFlickR = QuestBoardListViewItemDraw__IsFlickR(qdraw, 0LL);
+    PosIdx = TerminalBannerComponent__GetPosIdx(this, v10);
+    v8 = IsFlickR;
   }
-  TerminalBannerComponent__StartAutoMove(this, v6, v5);
+  TerminalBannerComponent__SetTgtPos_ByPosIdx(this, v8 + PosIdx, v7);
 }
 
 
@@ -253,7 +250,7 @@ void __fastcall TerminalBannerComponent__SetBannerTexture(
         (mBannerTex = (UnityEngine_Component_o *)this->fields.mLoadingSp) == 0LL)
     || (mBannerTex = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(mBannerTex, 0LL)) == 0LL )
   {
-    sub_B7769C(mBannerTex, tex);
+    sub_1B00F28(mBannerTex, tex);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)mBannerTex, 0, 0LL);
   TerminalBannerComponent__StartLoadAndDisp_BannerNext(this, v5);
@@ -269,6 +266,7 @@ void __fastcall TerminalBannerComponent__SetPos(TerminalBannerComponent_o *this,
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall TerminalBannerComponent__SetTgtPos_ByPosIdx(
         TerminalBannerComponent_o *this,
         int32_t posIndex,
@@ -276,14 +274,13 @@ void __fastcall TerminalBannerComponent__SetTgtPos_ByPosIdx(
 {
   TerminalBannerComponent_c *v5; // x0
 
-  if ( (byte_438834C & 1) == 0 )
+  if ( (byte_48DFDE0 & 1) == 0 )
   {
-    sub_B775C4(&TerminalBannerComponent_TypeInfo);
-    byte_438834C = 1;
+    sub_1B00CCC(&TerminalBannerComponent_TypeInfo, *(_QWORD *)&posIndex);
+    byte_48DFDE0 = 1;
   }
   v5 = TerminalBannerComponent_TypeInfo;
-  if ( (BYTE3(TerminalBannerComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !TerminalBannerComponent_TypeInfo->_2.cctor_finished )
+  if ( !TerminalBannerComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalBannerComponent_TypeInfo);
     v5 = TerminalBannerComponent_TypeInfo;
@@ -292,6 +289,7 @@ void __fastcall TerminalBannerComponent__SetTgtPos_ByPosIdx(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall TerminalBannerComponent__Setup(
         TerminalBannerComponent_o *this,
         int32_t idx,
@@ -303,38 +301,43 @@ void __fastcall TerminalBannerComponent__Setup(
   __int64 v11; // x0
   __int64 v12; // x1
   int32_t BannerId; // w0
-  TerminalBannerComponent_c *v14; // x0
+  int32_t v14; // w2
+  int32_t v15; // w3
+  TerminalBannerComponent_c *v16; // x0
   UnityEngine_GameObject_o *gameObject; // x0
-  TerminalBannerComponent_c *v16; // x8
+  float BANNER_INTERVAL_POS; // s0
 
-  if ( (byte_4388347 & 1) == 0 )
+  if ( (byte_48DFDDB & 1) == 0 )
   {
-    sub_B775C4(&TerminalBannerComponent_TypeInfo);
-    byte_4388347 = 1;
+    sub_1B00CCC(&TerminalBannerComponent_TypeInfo, *(_QWORD *)&idx);
+    byte_48DFDDB = 1;
   }
   this->fields.mBannerEntity = bannerEnt;
   this->fields.mIdx = idx;
-  sub_B77560(&this->fields.mBannerEntity);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields.mBannerEntity,
+    (int32_t)bannerEnt,
+    (int32_t)bannerEnt,
+    bannerCount);
   if ( !bannerEnt )
-    sub_B7769C(v11, v12);
+    sub_1B00F28(v11, v12);
   BannerId = BannerEntity__GetBannerId(bannerEnt, 0LL);
   this->fields.mBannerNext = bannerNext;
   this->fields.mBannerId = BannerId;
   this->fields.mBannerCount = bannerCount;
-  sub_B77560(&this->fields.mBannerNext);
-  v14 = TerminalBannerComponent_TypeInfo;
-  if ( (BYTE3(TerminalBannerComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !TerminalBannerComponent_TypeInfo->_2.cctor_finished )
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.mBannerNext, (int32_t)bannerNext, v14, v15);
+  v16 = TerminalBannerComponent_TypeInfo;
+  if ( !TerminalBannerComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalBannerComponent_TypeInfo);
-    v14 = TerminalBannerComponent_TypeInfo;
+    v16 = TerminalBannerComponent_TypeInfo;
   }
-  this->fields.mTgtPos = v14->static_fields->BANNER_INTERVAL_POS * (float)idx;
+  this->fields.mTgtPos = v16->static_fields->BANNER_INTERVAL_POS * (float)idx;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   GameObjectExtensions__SetLocalPositionX(gameObject, this->fields.mTgtPos, 0LL);
-  v16 = TerminalBannerComponent_TypeInfo;
-  this->fields.mPosMin = -TerminalBannerComponent_TypeInfo->static_fields->BANNER_INTERVAL_POS;
-  this->fields.mPosMax = v16->static_fields->BANNER_INTERVAL_POS * (float)(bannerCount - 1);
+  BANNER_INTERVAL_POS = TerminalBannerComponent_TypeInfo->static_fields->BANNER_INTERVAL_POS;
+  this->fields.mPosMin = -BANNER_INTERVAL_POS;
+  this->fields.mPosMax = BANNER_INTERVAL_POS * (float)(bannerCount - 1);
 }
 
 
@@ -344,20 +347,18 @@ void __fastcall TerminalBannerComponent__StartAutoMove(
         int32_t dir,
         const MethodInfo *method)
 {
-  int32_t PosIdx; // w1
+  int32_t PosIdx; // w0
   const MethodInfo *v6; // x2
   int v7; // w8
 
   PosIdx = TerminalBannerComponent__GetPosIdx(this, *(const MethodInfo **)&dir);
-  if ( dir )
-  {
-    if ( dir == 1 )
-      v7 = -1;
-    else
-      v7 = 1;
-    PosIdx += v7;
-  }
-  TerminalBannerComponent__SetTgtPos_ByPosIdx(this, PosIdx, v6);
+  if ( dir == 1 )
+    v7 = -1;
+  else
+    v7 = 1;
+  if ( !dir )
+    v7 = 0;
+  TerminalBannerComponent__SetTgtPos_ByPosIdx(this, PosIdx + v7, v6);
 }
 
 
@@ -385,72 +386,73 @@ System_Collections_IEnumerator_o *__fastcall TerminalBannerComponent__StartDownl
         TerminalBannerComponent_o *this,
         const MethodInfo *method)
 {
-  TerminalBannerComponent__StartDownloadBanner_d__24_o *v3; // x20
-  __int64 v4; // x0
-  __int64 v5; // x1
+  __int64 v3; // x20
+  int32_t v4; // w2
+  int32_t v5; // w3
 
-  if ( (byte_4388345 & 1) == 0 )
+  if ( (byte_48DFDD9 & 1) == 0 )
   {
-    sub_B775C4(&TerminalBannerComponent__StartDownloadBanner_d__24_TypeInfo);
-    byte_4388345 = 1;
+    sub_1B00CCC(&TerminalBannerComponent__StartDownloadBanner_d__24_TypeInfo, method);
+    byte_48DFDD9 = 1;
   }
-  v3 = (TerminalBannerComponent__StartDownloadBanner_d__24_o *)sub_B77694(TerminalBannerComponent__StartDownloadBanner_d__24_TypeInfo);
-  TerminalBannerComponent__StartDownloadBanner_d__24___ctor(v3, 0, 0LL);
-  if ( !v3 )
-    sub_B7769C(v4, v5);
-  v3->fields.__4__this = this;
-  sub_B77560(&v3->fields.__4__this);
+  v3 = sub_1B00F18(TerminalBannerComponent__StartDownloadBanner_d__24_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v3, 0LL);
+  *(_DWORD *)(v3 + 16) = 0;
+  *(_QWORD *)(v3 + 32) = this;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
 
 void __fastcall TerminalBannerComponent__StartLoadAndDisp(TerminalBannerComponent_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
   UnityEngine_Object_o *mBannerTex2D; // x20
-  const MethodInfo *v4; // x2
-  System_String_o *WebViewAddress_26221564; // x20
-  __int64 v6; // x2
-  Il2CppObject *v7; // x0
-  const MethodInfo *v8; // x1
+  const MethodInfo *v6; // x2
+  System_String_o *WebViewAddress_37274204; // x20
+  __int64 v8; // x2
+  __int64 v9; // x3
+  __int64 v10; // x4
+  Il2CppObject *v11; // x0
+  struct System_String_o *v12; // x0
+  int32_t v13; // w2
+  int32_t v14; // w3
+  const MethodInfo *v15; // x1
   UnityEngine_Component_o *mBannerTex; // x0
   System_Collections_IEnumerator_o *started; // x0
-  int32_t mBannerId; // [xsp+Ch] [xbp-14h] BYREF
+  int32_t mBannerId; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4388348 & 1) == 0 )
+  if ( (byte_48DFDDC & 1) == 0 )
   {
-    sub_B775C4(&int_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_4388348 = 1;
+    sub_1B00CCC(&int_TypeInfo, method);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v3);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v4);
+    byte_48DFDDC = 1;
   }
   mBannerTex2D = (UnityEngine_Object_o *)this->fields.mBannerTex2D;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Equality(mBannerTex2D, 0LL, 0LL) )
   {
-    if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !NetworkManager_TypeInfo->_2.cctor_finished )
-    {
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    }
-    WebViewAddress_26221564 = NetworkManager__getWebViewAddress_26221564(7, 0LL);
+    WebViewAddress_37274204 = NetworkManager__getWebViewAddress_37274204(7, 0LL);
     mBannerId = this->fields.mBannerId;
-    v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &mBannerId, v6);
-    this->fields.mBannerUrl = System_String__Format(WebViewAddress_26221564, v7, 0LL);
-    sub_B77560(&this->fields.mBannerUrl);
+    v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &mBannerId, v8, v9, v10);
+    v12 = System_String__Format(WebViewAddress_37274204, v11, 0LL);
+    this->fields.mBannerUrl = v12;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.mBannerUrl, (int32_t)v12, v13, v14);
     mBannerTex = (UnityEngine_Component_o *)this->fields.mBannerTex;
     if ( !mBannerTex )
-      goto LABEL_20;
+      goto LABEL_18;
     mBannerTex = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(mBannerTex, 0LL);
     if ( !mBannerTex )
-      goto LABEL_20;
+      goto LABEL_18;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)mBannerTex, 1, 0LL);
     mBannerTex = (UnityEngine_Component_o *)this->fields.mBannerTex;
     if ( !mBannerTex )
-      goto LABEL_20;
+      goto LABEL_18;
     ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, const char *))mBannerTex->klass[2]._1.gc_desc)(
       mBannerTex,
       0LL,
@@ -458,24 +460,24 @@ void __fastcall TerminalBannerComponent__StartLoadAndDisp(TerminalBannerComponen
     this->fields.mBannerRetryCount = 0;
     mBannerTex = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !mBannerTex )
-      goto LABEL_20;
+      goto LABEL_18;
     if ( UnityEngine_GameObject__get_activeInHierarchy((UnityEngine_GameObject_o *)mBannerTex, 0LL) )
     {
-      started = TerminalBannerComponent__StartDownloadBanner(this, v8);
-      UnityEngine_MonoBehaviour__StartCoroutine_36304832((UnityEngine_MonoBehaviour_o *)this, started, 0LL);
+      started = TerminalBannerComponent__StartDownloadBanner(this, v15);
+      UnityEngine_MonoBehaviour__StartCoroutine_68062928((UnityEngine_MonoBehaviour_o *)this, started, 0LL);
     }
     mBannerTex = (UnityEngine_Component_o *)this->fields.mLoadingSp;
     if ( !mBannerTex
       || (mBannerTex = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(mBannerTex, 0LL)) == 0LL )
     {
-LABEL_20:
-      sub_B7769C(mBannerTex, v8);
+LABEL_18:
+      sub_1B00F28(mBannerTex, v15);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)mBannerTex, 1, 0LL);
   }
   else
   {
-    TerminalBannerComponent__SetBannerTexture(this, this->fields.mBannerTex2D, v4);
+    TerminalBannerComponent__SetBannerTexture(this, this->fields.mBannerTex2D, v6);
   }
 }
 
@@ -488,22 +490,19 @@ void __fastcall TerminalBannerComponent__StartLoadAndDisp_BannerNext(
   const MethodInfo *v4; // x1
   TerminalBannerComponent_o *v5; // x0
 
-  if ( (byte_4388349 & 1) == 0 )
+  if ( (byte_48DFDDD & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_4388349 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    byte_48DFDDD = 1;
   }
   mBannerNext = (UnityEngine_Object_o *)this->fields.mBannerNext;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(mBannerNext, 0LL, 0LL) )
   {
     v5 = this->fields.mBannerNext;
     if ( !v5 )
-      sub_B7769C(0LL, v4);
+      sub_1B00F28(0LL, v4);
     TerminalBannerComponent__StartLoadAndDisp(v5, v4);
   }
 }
@@ -538,33 +537,56 @@ bool __fastcall TerminalBannerComponent__StartDownloadBanner_d__24__MoveNext(
         const MethodInfo *method)
 {
   TerminalBannerComponent__StartDownloadBanner_d__24_o *v2; // x21
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
   int32_t _1__state; // w8
   struct TerminalBannerComponent_o *_4__this; // x19
   System_String_o *mBannerUrl; // x20
-  UnityEngine_Networking_UnityWebRequest_o *v6; // x22
-  TerminalBannerComponent__StartDownloadBanner_d__24_o **v7; // x20
-  UnityEngine_Networking_DownloadHandlerTexture_o *v8; // x23
-  Il2CppObject **p__2__current; // x21
-  TerminalBannerComponent__StartDownloadBanner_d__24_o *v10; // x0
+  UnityEngine_Networking_UnityWebRequest_o *v10; // x22
+  ServantStatusBattleListViewItem_o *v11; // x19
+  int32_t v12; // w2
+  int32_t v13; // w3
+  UnityEngine_Networking_DownloadHandlerTexture_o *v14; // x22
+  int32_t v15; // w2
+  int32_t v16; // w3
+  UnityEngine_Networking_UnityWebRequestAsyncOperation_o *v17; // x0
+  ServantStatusBattleListViewItem_o *p__2__current; // x21
+  int32_t v19; // w2
+  int32_t v20; // w3
+  TerminalBannerComponent__StartDownloadBanner_d__24_o *v21; // x0
   UnityEngine_Networking_UnityWebRequest_o *mBannerWWW; // x0
   TerminalBannerComponent__StartDownloadBanner_d__24_o **p_mBannerWWW; // x20
   System_String_o *error; // x0
-  TerminalBannerComponent__StartDownloadBanner_d__24_o *v14; // x22
-  UnityEngine_Object_o *texture; // x21
-  System_String_o *v16; // x0
+  TerminalBannerComponent__StartDownloadBanner_d__24_o *v25; // x22
+  int32_t v26; // w24
+  int32_t v27; // w25
+  int32_t format; // w26
+  UnityEngine_Texture2D_o *v29; // x23
+  System_Byte_array *data; // x0
+  System_String_o *v31; // x0
   bool IsNullOrEmpty; // w0
-  int v18; // w21
-  TerminalBannerComponent_c *v19; // x0
+  int32_t v33; // w2
+  int32_t v34; // w3
+  int v35; // w21
+  TerminalBannerComponent_c *v36; // x0
   System_Collections_IEnumerator_o *started; // x0
+  int32_t v38; // w2
+  int32_t v39; // w3
+  const MethodInfo *v40; // x2
 
   v2 = this;
-  if ( (byte_43886FA & 1) == 0 )
+  if ( (byte_48DFDE2 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Networking_DownloadHandlerTexture_TypeInfo);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&TerminalBannerComponent_TypeInfo);
-    this = (TerminalBannerComponent__StartDownloadBanner_d__24_o *)sub_B775C4(&UnityEngine_Networking_UnityWebRequest_TypeInfo);
-    byte_43886FA = 1;
+    sub_1B00CCC(&UnityEngine_Networking_DownloadHandlerTexture_TypeInfo, method);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v3);
+    sub_1B00CCC(&TerminalBannerComponent_TypeInfo, v4);
+    sub_1B00CCC(&UnityEngine_Texture2D_TypeInfo, v5);
+    this = (TerminalBannerComponent__StartDownloadBanner_d__24_o *)sub_1B00CCC(
+                                                                     &UnityEngine_Networking_UnityWebRequest_TypeInfo,
+                                                                     v6);
+    byte_48DFDE2 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -572,131 +594,154 @@ bool __fastcall TerminalBannerComponent__StartDownloadBanner_d__24__MoveNext(
   {
     v2->fields.__1__state = -1;
     if ( !_4__this )
-      goto LABEL_39;
+      goto LABEL_43;
     p_mBannerWWW = (TerminalBannerComponent__StartDownloadBanner_d__24_o **)&_4__this->fields.mBannerWWW;
     mBannerWWW = _4__this->fields.mBannerWWW;
     if ( !mBannerWWW )
-      goto LABEL_28;
+      goto LABEL_33;
     if ( !UnityEngine_Networking_UnityWebRequest__get_isDone(mBannerWWW, 0LL) )
-      goto LABEL_17;
+      goto LABEL_23;
     this = *p_mBannerWWW;
     if ( !*p_mBannerWWW )
-      goto LABEL_39;
+      goto LABEL_43;
     error = UnityEngine_Networking_UnityWebRequest__get_error((UnityEngine_Networking_UnityWebRequest_o *)this, 0LL);
     if ( System_String__IsNullOrEmpty(error, 0LL) )
     {
       this = (TerminalBannerComponent__StartDownloadBanner_d__24_o *)v2->fields._texDl_5__2;
+      if ( !this )
+        goto LABEL_43;
+      this = (TerminalBannerComponent__StartDownloadBanner_d__24_o *)UnityEngine_Networking_DownloadHandler__get_data(
+                                                                       (UnityEngine_Networking_DownloadHandler_o *)this,
+                                                                       0LL);
+      if ( !v2->fields._texDl_5__2 )
+        goto LABEL_43;
+      v25 = this;
+      this = (TerminalBannerComponent__StartDownloadBanner_d__24_o *)UnityEngine_Networking_DownloadHandlerTexture__get_texture(
+                                                                       v2->fields._texDl_5__2,
+                                                                       0LL);
+      if ( !this )
+        goto LABEL_43;
+      this = (TerminalBannerComponent__StartDownloadBanner_d__24_o *)((__int64 (__fastcall *)(TerminalBannerComponent__StartDownloadBanner_d__24_o *, Il2CppMethodPointer))this->klass->vtable._4_System_Collections_Generic_IEnumerator_System_Object__get_Current.method)(
+                                                                       this,
+                                                                       this->klass->vtable._5_System_IDisposable_Dispose.methodPtr);
+      if ( !v2->fields._texDl_5__2 )
+        goto LABEL_43;
+      v26 = (int)this;
+      this = (TerminalBannerComponent__StartDownloadBanner_d__24_o *)UnityEngine_Networking_DownloadHandlerTexture__get_texture(
+                                                                       v2->fields._texDl_5__2,
+                                                                       0LL);
       if ( !this
-        || (this = (TerminalBannerComponent__StartDownloadBanner_d__24_o *)UnityEngine_Networking_DownloadHandler__get_data(
-                                                                             (UnityEngine_Networking_DownloadHandler_o *)this,
-                                                                             0LL),
-            !v2->fields._texDl_5__2) )
+        || (this = (TerminalBannerComponent__StartDownloadBanner_d__24_o *)((__int64 (__fastcall *)(TerminalBannerComponent__StartDownloadBanner_d__24_o *, Il2CppMethodPointer))this->klass->vtable._6_MoveNext.method)(
+                                                                             this,
+                                                                             this->klass->vtable._7_System_Collections_IEnumerator_get_Current.methodPtr),
+            !v2->fields._texDl_5__2)
+        || (v27 = (int)this,
+            (this = (TerminalBannerComponent__StartDownloadBanner_d__24_o *)UnityEngine_Networking_DownloadHandlerTexture__get_texture(
+                                                                              v2->fields._texDl_5__2,
+                                                                              0LL)) == 0LL)
+        || (format = UnityEngine_Texture2D__get_format((UnityEngine_Texture2D_o *)this, 0LL),
+            v29 = (UnityEngine_Texture2D_o *)sub_1B00F18(UnityEngine_Texture2D_TypeInfo),
+            UnityEngine_Texture2D___ctor_67965920(v29, v26, v27, format, 0, 0LL),
+            (this = (TerminalBannerComponent__StartDownloadBanner_d__24_o *)v2->fields._texDl_5__2) == 0LL) )
       {
-LABEL_39:
-        sub_B7769C(this, method);
+LABEL_43:
+        sub_1B00F28(this, method);
       }
-      v14 = this;
-      texture = (UnityEngine_Object_o *)UnityEngine_Networking_DownloadHandlerTexture__get_texture(
-                                          v2->fields._texDl_5__2,
-                                          0LL);
+      data = UnityEngine_Networking_DownloadHandler__get_data((UnityEngine_Networking_DownloadHandler_o *)this, 0LL);
+      UnityEngine_ImageConversion__LoadImage_68182516(v29, data, 0LL);
     }
     else
     {
-LABEL_17:
-      texture = 0LL;
-      v14 = 0LL;
+LABEL_23:
+      v29 = 0LL;
+      v25 = 0LL;
     }
     if ( !*p_mBannerWWW
       || !UnityEngine_Networking_UnityWebRequest__get_isDone(
             (UnityEngine_Networking_UnityWebRequest_o *)*p_mBannerWWW,
             0LL) )
     {
-      goto LABEL_28;
+      goto LABEL_33;
     }
     this = *p_mBannerWWW;
     if ( !*p_mBannerWWW )
-      goto LABEL_39;
-    v16 = UnityEngine_Networking_UnityWebRequest__get_error((UnityEngine_Networking_UnityWebRequest_o *)this, 0LL);
-    IsNullOrEmpty = System_String__IsNullOrEmpty(v16, 0LL);
-    if ( !v14 || !IsNullOrEmpty || !v14->fields.__2__current )
-      goto LABEL_28;
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+      goto LABEL_43;
+    v31 = UnityEngine_Networking_UnityWebRequest__get_error((UnityEngine_Networking_UnityWebRequest_o *)this, 0LL);
+    IsNullOrEmpty = System_String__IsNullOrEmpty(v31, 0LL);
+    if ( !v25 || !IsNullOrEmpty || !v25->fields.__2__current )
+      goto LABEL_33;
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
-    if ( !UnityEngine_Object__op_Equality(texture, 0LL, 0LL) )
+    if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v29, 0LL, 0LL) )
     {
-      _4__this->fields.mBannerTex2D = (struct UnityEngine_Texture2D_o *)texture;
-      sub_B77560(&_4__this->fields.mBannerTex2D);
-      TerminalBannerComponent__SetBannerTexture(_4__this, _4__this->fields.mBannerTex2D, 0LL);
+      _4__this->fields.mBannerTex2D = v29;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&_4__this->fields.mBannerTex2D, (int32_t)v29, v33, v34);
+      TerminalBannerComponent__SetBannerTexture(_4__this, _4__this->fields.mBannerTex2D, v40);
     }
     else
     {
-LABEL_28:
-      v18 = _4__this->fields.mBannerRetryCount + 1;
-      _4__this->fields.mBannerRetryCount = v18;
-      v19 = TerminalBannerComponent_TypeInfo;
-      if ( (BYTE3(TerminalBannerComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !TerminalBannerComponent_TypeInfo->_2.cctor_finished )
+LABEL_33:
+      v35 = _4__this->fields.mBannerRetryCount + 1;
+      _4__this->fields.mBannerRetryCount = v35;
+      v36 = TerminalBannerComponent_TypeInfo;
+      if ( !TerminalBannerComponent_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(TerminalBannerComponent_TypeInfo);
-        v19 = TerminalBannerComponent_TypeInfo;
+        v36 = TerminalBannerComponent_TypeInfo;
       }
-      if ( v18 <= v19->static_fields->BANNER_RETRY_MAX )
+      if ( v35 <= v36->static_fields->BANNER_RETRY_MAX )
       {
-        started = TerminalBannerComponent__StartDownloadBanner(_4__this, 0LL);
-        UnityEngine_MonoBehaviour__StartCoroutine_36304832((UnityEngine_MonoBehaviour_o *)_4__this, started, 0LL);
+        started = TerminalBannerComponent__StartDownloadBanner(_4__this, method);
+        UnityEngine_MonoBehaviour__StartCoroutine_68062928((UnityEngine_MonoBehaviour_o *)_4__this, started, 0LL);
       }
       else
       {
-        TerminalBannerComponent__StartLoadAndDisp_BannerNext(_4__this, 0LL);
+        TerminalBannerComponent__StartLoadAndDisp_BannerNext(_4__this, method);
       }
     }
-    v10 = *p_mBannerWWW;
+    v21 = *p_mBannerWWW;
     if ( !*p_mBannerWWW )
-      return (char)v10;
-    UnityEngine_Networking_UnityWebRequest__Dispose((UnityEngine_Networking_UnityWebRequest_o *)v10, 0LL);
+      return (char)v21;
+    UnityEngine_Networking_UnityWebRequest__Dispose((UnityEngine_Networking_UnityWebRequest_o *)v21, 0LL);
     *p_mBannerWWW = 0LL;
-    sub_B77560(&_4__this->fields.mBannerWWW);
-LABEL_36:
-    LOBYTE(v10) = 0;
-    return (char)v10;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&_4__this->fields.mBannerWWW, 0, v38, v39);
+LABEL_40:
+    LOBYTE(v21) = 0;
+    return (char)v21;
   }
   if ( _1__state )
-    goto LABEL_36;
+    goto LABEL_40;
   v2->fields.__1__state = -1;
   if ( !_4__this )
-    goto LABEL_39;
-  TerminalBannerComponent__DestroyBanner(_4__this, 0LL);
+    goto LABEL_43;
+  TerminalBannerComponent__DestroyBanner(_4__this, method);
   mBannerUrl = _4__this->fields.mBannerUrl;
-  v6 = (UnityEngine_Networking_UnityWebRequest_o *)sub_B77694(UnityEngine_Networking_UnityWebRequest_TypeInfo);
-  UnityEngine_Networking_UnityWebRequest___ctor(v6, mBannerUrl, 0LL);
-  v7 = (TerminalBannerComponent__StartDownloadBanner_d__24_o **)&_4__this->fields.mBannerWWW;
-  _4__this->fields.mBannerWWW = v6;
-  sub_B77560(&_4__this->fields.mBannerWWW);
-  v8 = (UnityEngine_Networking_DownloadHandlerTexture_o *)sub_B77694(UnityEngine_Networking_DownloadHandlerTexture_TypeInfo);
-  UnityEngine_Networking_DownloadHandlerTexture___ctor(v8, 0, 0LL);
-  v2->fields._texDl_5__2 = v8;
-  sub_B77560(&v2->fields._texDl_5__2);
-  this = (TerminalBannerComponent__StartDownloadBanner_d__24_o *)_4__this->fields.mBannerWWW;
-  if ( !this )
-    goto LABEL_39;
+  v10 = (UnityEngine_Networking_UnityWebRequest_o *)sub_1B00F18(UnityEngine_Networking_UnityWebRequest_TypeInfo);
+  UnityEngine_Networking_UnityWebRequest___ctor(v10, mBannerUrl, 0LL);
+  _4__this->fields.mBannerWWW = v10;
+  v11 = (ServantStatusBattleListViewItem_o *)&_4__this->fields.mBannerWWW;
+  sub_1B00C70(v11, (int32_t)v10, v12, v13);
+  v14 = (UnityEngine_Networking_DownloadHandlerTexture_o *)sub_1B00F18(UnityEngine_Networking_DownloadHandlerTexture_TypeInfo);
+  UnityEngine_Networking_DownloadHandlerTexture___ctor(v14, 0, 0LL);
+  v2->fields._texDl_5__2 = v14;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._texDl_5__2, (int32_t)v14, v15, v16);
+  this = (TerminalBannerComponent__StartDownloadBanner_d__24_o *)v11->klass;
+  if ( !v11->klass )
+    goto LABEL_43;
   UnityEngine_Networking_UnityWebRequest__set_downloadHandler(
     (UnityEngine_Networking_UnityWebRequest_o *)this,
     (UnityEngine_Networking_DownloadHandler_o *)v2->fields._texDl_5__2,
     0LL);
-  this = *v7;
-  if ( !*v7 )
-    goto LABEL_39;
-  v2->fields.__2__current = (Il2CppObject *)UnityEngine_Networking_UnityWebRequest__SendWebRequest(
-                                              (UnityEngine_Networking_UnityWebRequest_o *)this,
-                                              0LL);
-  p__2__current = &v2->fields.__2__current;
-  sub_B77560(p__2__current);
-  LOBYTE(v10) = 1;
-  *((_DWORD *)p__2__current - 2) = 1;
-  return (char)v10;
+  this = (TerminalBannerComponent__StartDownloadBanner_d__24_o *)v11->klass;
+  if ( !v11->klass )
+    goto LABEL_43;
+  v17 = UnityEngine_Networking_UnityWebRequest__SendWebRequest((UnityEngine_Networking_UnityWebRequest_o *)this, 0LL);
+  v2->fields.__2__current = (Il2CppObject *)v17;
+  p__2__current = (ServantStatusBattleListViewItem_o *)&v2->fields.__2__current;
+  sub_1B00C70(p__2__current, (int32_t)v17, v19, v20);
+  LOBYTE(v21) = 1;
+  *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
+  return (char)v21;
 }
 
 
@@ -716,11 +761,11 @@ void __fastcall __noreturn TerminalBannerComponent__StartDownloadBanner_d__24__S
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
+  v2 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B00F18(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B775C8(&Method_TerminalBannerComponent__StartDownloadBanner_d__24_System_Collections_IEnumerator_Reset__);
-  sub_B77668(v3, v4);
+  v4 = sub_1B00CE0(&Method_TerminalBannerComponent__StartDownloadBanner_d__24_System_Collections_IEnumerator_Reset__);
+  sub_1B00DF4(v3, v4);
 }
 
 

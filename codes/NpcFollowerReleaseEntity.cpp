@@ -1,32 +1,33 @@
 void __fastcall NpcFollowerReleaseEntity___ctor(NpcFollowerReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438A236 & 1) == 0 )
+  if ( (byte_48E2BBF & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    byte_438A236 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
+    byte_48E2BBF = 1;
   }
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall NpcFollowerReleaseEntity__CreatePK(
         int64_t id,
         int32_t questId,
         int32_t questPhase,
         const MethodInfo *method)
 {
-  if ( (byte_438A234 & 1) == 0 )
+  if ( (byte_48E2BBD & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
-    byte_438A234 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_long__int__int___, *(_QWORD *)&questId);
+    byte_48E2BBD = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            id,
            questId,
            questPhase,
-           (const MethodInfo_1D17884 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_2D61480 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 
@@ -52,15 +53,15 @@ bool __fastcall NpcFollowerReleaseEntity__IsEnable(NpcFollowerReleaseEntity_o *t
   int32_t condType; // w21
   int64_t condValue; // x19
 
-  if ( (byte_438A235 & 1) == 0 )
+  if ( (byte_48E2BBE & 1) == 0 )
   {
-    sub_B775C4(&CondType_TypeInfo);
-    byte_438A235 = 1;
+    sub_1B00CCC(&CondType_TypeInfo, method);
+    byte_48E2BBE = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;
   condValue = this->fields.condValue;
-  if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
+  if ( !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
   return CondType__IsOpen(condType, condTargetId, condValue, 0, 0LL);
 }

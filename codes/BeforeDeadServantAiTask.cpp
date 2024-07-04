@@ -4,7 +4,9 @@ void __fastcall BeforeDeadServantAiTask___ctor(
         BattleLogic_o *logic,
         const MethodInfo *method)
 {
-  BattleLogicServantAiTask___ctor((BattleLogicServantAiTask_o *)this, 17, svtData, logic, 0LL);
+  const MethodInfo *v4; // x4
+
+  BattleLogicServantAiTask___ctor((BattleLogicServantAiTask_o *)this, 17, svtData, logic, v4);
 }
 
 
@@ -13,9 +15,7 @@ bool __fastcall BeforeDeadServantAiTask__IsActable(
         BattleLogic_o *logic,
         const MethodInfo *method)
 {
-  BattleLogicReaction_o *logicReaction; // x8
-
-  if ( !logic || (logicReaction = logic->fields.logicReaction) == 0LL )
-    sub_B7769C(this, logic);
-  return BattleLogicReaction__CheckExecutableDead(logicReaction, this->fields.svtData, 0LL);
+  if ( !logic || !logic->fields.logicReaction )
+    sub_1B00F28(this, logic);
+  return BattleLogicReaction__CheckExecutableDead((BattleLogicReaction_o *)this, this->fields.svtData, method);
 }

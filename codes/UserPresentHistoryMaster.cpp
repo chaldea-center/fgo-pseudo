@@ -1,14 +1,14 @@
 void __fastcall UserPresentHistoryMaster___ctor(UserPresentHistoryMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_43892DB & 1) == 0 )
+  if ( (byte_48E34DF & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_UserPresentHistoryMaster__UserPresentHistoryEntity__long___ctor__);
-    byte_43892DB = 1;
+    sub_1B00CCC(&Method_DataMasterBase_UserPresentHistoryMaster__UserPresentHistoryEntity__long___ctor__, method);
+    byte_48E34DF = 1;
   }
-  DataMasterBase_UserSubEquipMaster__UserSubEquipEntity__long____ctor(
-    (DataMasterBase_UserSubEquipMaster__UserSubEquipEntity__long__o *)this,
+  DataMasterBase_object__object__long____ctor(
+    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     154,
-    (const MethodInfo_21FBA20 *)Method_DataMasterBase_UserPresentHistoryMaster__UserPresentHistoryEntity__long___ctor__);
+    (const MethodInfo_2FE6BB8 *)Method_DataMasterBase_UserPresentHistoryMaster__UserPresentHistoryEntity__long___ctor__);
 }
 
 
@@ -16,79 +16,67 @@ System_Collections_Generic_List_UserPresentHistoryEntity__o *__fastcall UserPres
         UserPresentHistoryMaster_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  UserPresentHistoryMaster___c_c *v7; // x0
   System_Collections_ObjectModel_ObservableCollection_T__o *list; // x19
-  UserPresentHistoryMaster___c_c *v4; // x0
-  struct UserPresentHistoryMaster___c_StaticFields *static_fields; // x8
-  System_Converter_string__string__o *_9__1_0; // x20
-  Il2CppObject *v7; // x21
-  struct UserPresentHistoryMaster___c_StaticFields *v8; // x0
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
-  System_Collections_Generic_List_TOutput__o *v15; // x0
-  __int64 v16; // x1
-  System_Collections_Generic_List_UserPresentHistoryEntity__o *v17; // x19
+  System_Converter_TInput__TOutput__o *_9__1_0; // x20
+  Il2CppObject *v10; // x21
+  struct UserPresentHistoryMaster___c_StaticFields *static_fields; // x0
+  int32_t v12; // w2
+  int32_t v13; // w3
+  System_Collections_Generic_List_object__o *v14; // x0
+  __int64 v15; // x1
+  System_Collections_Generic_List_UserPresentHistoryEntity__o *v16; // x19
 
-  if ( (byte_43892DC & 1) == 0 )
+  if ( (byte_48E34E0 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Converter_DataEntityBase__UserPresentHistoryEntity___ctor__);
-    sub_B775C4(&System_Converter_DataEntityBase__UserPresentHistoryEntity__TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_UserPresentHistoryEntity__Sort__);
-    sub_B775C4(&Method_ObservableCollectionExtensions_ConvertAll_DataEntityBase__UserPresentHistoryEntity___);
-    sub_B775C4(&Method_UserPresentHistoryMaster___c__GetEntityList_b__1_0__);
-    sub_B775C4(&UserPresentHistoryMaster___c_TypeInfo);
-    byte_43892DC = 1;
+    sub_1B00CCC(&System_Converter_DataEntityBase__UserPresentHistoryEntity__TypeInfo, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_UserPresentHistoryEntity__Sort__, v3);
+    sub_1B00CCC(&Method_ObservableCollectionExtensions_ConvertAll_DataEntityBase__UserPresentHistoryEntity___, v4);
+    sub_1B00CCC(&Method_UserPresentHistoryMaster___c__GetEntityList_b__1_0__, v5);
+    sub_1B00CCC(&UserPresentHistoryMaster___c_TypeInfo, v6);
+    byte_48E34E0 = 1;
   }
+  v7 = UserPresentHistoryMaster___c_TypeInfo;
   list = (System_Collections_ObjectModel_ObservableCollection_T__o *)this->fields.list;
-  v4 = UserPresentHistoryMaster___c_TypeInfo;
-  if ( (BYTE3(UserPresentHistoryMaster___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UserPresentHistoryMaster___c_TypeInfo->_2.cctor_finished )
+  if ( !UserPresentHistoryMaster___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UserPresentHistoryMaster___c_TypeInfo);
-    v4 = UserPresentHistoryMaster___c_TypeInfo;
+    v7 = UserPresentHistoryMaster___c_TypeInfo;
   }
-  static_fields = v4->static_fields;
-  _9__1_0 = (System_Converter_string__string__o *)static_fields->__9__1_0;
+  _9__1_0 = (System_Converter_TInput__TOutput__o *)v7->static_fields->__9__1_0;
   if ( !_9__1_0 )
   {
-    if ( (BYTE3(v4->vtable._0_Equals.methodPtr) & 4) != 0 && !v4->_2.cctor_finished )
+    if ( !v7->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v4);
-      static_fields = UserPresentHistoryMaster___c_TypeInfo->static_fields;
+      j_il2cpp_runtime_class_init_0(v7);
+      v7 = UserPresentHistoryMaster___c_TypeInfo;
     }
-    v7 = (Il2CppObject *)static_fields->__9;
-    _9__1_0 = (System_Converter_string__string__o *)sub_B77694(System_Converter_DataEntityBase__UserPresentHistoryEntity__TypeInfo);
-    System_Converter_string__string____ctor(
+    v10 = (Il2CppObject *)v7->static_fields->__9;
+    _9__1_0 = (System_Converter_TInput__TOutput__o *)sub_1B00F18(System_Converter_DataEntityBase__UserPresentHistoryEntity__TypeInfo);
+    System_Converter_object__object____ctor(
       _9__1_0,
-      v7,
-      Method_UserPresentHistoryMaster___c__GetEntityList_b__1_0__,
-      (const MethodInfo_21F7E10 *)Method_System_Converter_DataEntityBase__UserPresentHistoryEntity___ctor__);
-    v8 = UserPresentHistoryMaster___c_TypeInfo->static_fields;
-    v8->__9__1_0 = (struct System_Converter_DataEntityBase__UserPresentHistoryEntity__o *)_9__1_0;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&v8->__9__1_0,
-      (System_Int32_array **)_9__1_0,
-      v9,
       v10,
-      v11,
-      v12,
-      v13,
-      v14);
+      Method_UserPresentHistoryMaster___c__GetEntityList_b__1_0__,
+      0LL);
+    static_fields = UserPresentHistoryMaster___c_TypeInfo->static_fields;
+    static_fields->__9__1_0 = (struct System_Converter_DataEntityBase__UserPresentHistoryEntity__o *)_9__1_0;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->__9__1_0, (int32_t)_9__1_0, v12, v13);
   }
-  v15 = ObservableCollectionExtensions__ConvertAll_object__object_(
-          list,
-          (System_Converter_T__TOutput__o *)_9__1_0,
-          (const MethodInfo_1DF9FB4 *)Method_ObservableCollectionExtensions_ConvertAll_DataEntityBase__UserPresentHistoryEntity___);
-  if ( !v15 )
-    sub_B7769C(0LL, v16);
-  v17 = (System_Collections_Generic_List_UserPresentHistoryEntity__o *)v15;
-  System_Collections_Generic_List_UserPresentHistoryEntity___Sort(
-    (System_Collections_Generic_List_UserPresentHistoryEntity__o *)v15,
-    (const MethodInfo_30551F8 *)Method_System_Collections_Generic_List_UserPresentHistoryEntity__Sort__);
-  return v17;
+  v14 = (System_Collections_Generic_List_object__o *)ObservableCollectionExtensions__ConvertAll_object__object_(
+                                                       list,
+                                                       (System_Converter_T__TOutput__o *)_9__1_0,
+                                                       (const MethodInfo_2DD6584 *)Method_ObservableCollectionExtensions_ConvertAll_DataEntityBase__UserPresentHistoryEntity___);
+  if ( !v14 )
+    sub_1B00F28(0LL, v15);
+  v16 = (System_Collections_Generic_List_UserPresentHistoryEntity__o *)v14;
+  System_Collections_Generic_List_object___Sort(
+    v14,
+    (const MethodInfo_33C33B4 *)Method_System_Collections_Generic_List_UserPresentHistoryEntity__Sort__);
+  return v16;
 }
 
 
@@ -96,50 +84,58 @@ System_Collections_Generic_IEnumerator_UserPresentHistoryEntity__o *__fastcall U
         UserPresentHistoryMaster_o *this,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *EntityList; // x0
-  __int64 v4; // x1
-  __int64 v5; // x2
-  System_Collections_Generic_List_Enumerator_T__o v7; // [xsp+0h] [xbp-40h] BYREF
-  System_Collections_Generic_List_Enumerator_T__o v8; // [xsp+18h] [xbp-28h] BYREF
+  __int64 v3; // x1
+  System_Collections_Generic_List_object__o *EntityList; // x0
+  __int64 v5; // x1
+  __int64 v6; // x2
+  __int64 v7; // x3
+  __int64 v8; // x4
+  System_Collections_Generic_List_Enumerator_T__o v10; // [xsp+0h] [xbp-50h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v11; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_43892DD & 1) == 0 )
+  if ( (byte_48E34E1 & 1) == 0 )
   {
-    sub_B775C4(&System_Collections_Generic_List_Enumerator_UserPresentHistoryEntity__TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_UserPresentHistoryEntity__GetEnumerator__);
-    byte_43892DD = 1;
+    sub_1B00CCC(&System_Collections_Generic_List_Enumerator_UserPresentHistoryEntity__TypeInfo, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_UserPresentHistoryEntity__GetEnumerator__, v3);
+    byte_48E34E1 = 1;
   }
-  EntityList = (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)UserPresentHistoryMaster__GetEntityList(
-                                                                                                this,
-                                                                                                method);
+  EntityList = (System_Collections_Generic_List_object__o *)UserPresentHistoryMaster__GetEntityList(this, method);
   if ( !EntityList )
-    sub_B7769C(0LL, v4);
-  System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-    &v8,
+    sub_1B00F28(0LL, v5);
+  System_Collections_Generic_List_object___GetEnumerator(
+    &v11,
     EntityList,
-    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_UserPresentHistoryEntity__GetEnumerator__);
-  v7 = v8;
+    (const MethodInfo_33C24C8 *)Method_System_Collections_Generic_List_UserPresentHistoryEntity__GetEnumerator__);
+  v10 = v11;
   return (System_Collections_Generic_IEnumerator_UserPresentHistoryEntity__o *)j_il2cpp_value_box_0(
                                                                                  System_Collections_Generic_List_Enumerator_UserPresentHistoryEntity__TypeInfo,
-                                                                                 &v7,
-                                                                                 v5);
+                                                                                 &v10,
+                                                                                 v6,
+                                                                                 v7,
+                                                                                 v8);
 }
 
 
 void __fastcall UserPresentHistoryMaster___c___cctor(const MethodInfo *method)
 {
-  Il2CppObject *v1; // x19
-  struct UserPresentHistoryMaster___c_StaticFields *static_fields; // x0
+  __int64 v1; // x1
+  Il2CppObject *v2; // x19
+  int32_t v3; // w2
+  int32_t v4; // w3
 
-  if ( (byte_438890B & 1) == 0 )
+  if ( (byte_48E34E2 & 1) == 0 )
   {
-    sub_B775C4(&UserPresentHistoryMaster___c_TypeInfo);
-    byte_438890B = 1;
+    sub_1B00CCC(&UserPresentHistoryMaster___c_TypeInfo, v1);
+    byte_48E34E2 = 1;
   }
-  v1 = (Il2CppObject *)sub_B77694(UserPresentHistoryMaster___c_TypeInfo);
-  System_Object___ctor(v1, 0LL);
-  static_fields = UserPresentHistoryMaster___c_TypeInfo->static_fields;
-  static_fields->__9 = (struct UserPresentHistoryMaster___c_o *)v1;
-  sub_B77560(static_fields);
+  v2 = (Il2CppObject *)sub_1B00F18(UserPresentHistoryMaster___c_TypeInfo);
+  System_Object___ctor(v2, 0LL);
+  UserPresentHistoryMaster___c_TypeInfo->static_fields->__9 = (struct UserPresentHistoryMaster___c_o *)v2;
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)UserPresentHistoryMaster___c_TypeInfo->static_fields,
+    (int32_t)v2,
+    v3,
+    v4);
 }
 
 
@@ -154,19 +150,19 @@ UserPresentHistoryEntity_o *__fastcall UserPresentHistoryMaster___c___GetEntityL
         DataEntityBase_o *entity,
         const MethodInfo *method)
 {
-  __int64 v4; // x10
+  __int64 methodPtr_low; // x10
 
-  if ( (byte_438890C & 1) == 0 )
+  if ( (byte_48E34E3 & 1) == 0 )
   {
-    sub_B775C4(&UserPresentHistoryEntity_TypeInfo);
-    byte_438890C = 1;
+    sub_1B00CCC(&UserPresentHistoryEntity_TypeInfo, entity);
+    byte_48E34E3 = 1;
   }
   if ( !entity )
     return 0LL;
-  v4 = *(&UserPresentHistoryEntity_TypeInfo->_2.bitflags2 + 1);
-  if ( *(&entity->klass->_2.bitflags2 + 1) < (unsigned int)v4 )
+  methodPtr_low = LOBYTE(UserPresentHistoryEntity_TypeInfo->vtable._0_Equals.methodPtr);
+  if ( LOBYTE(entity->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low )
     return 0LL;
-  if ( (UserPresentHistoryEntity_c *)entity->klass->_2.typeHierarchy[v4 - 1] == UserPresentHistoryEntity_TypeInfo )
+  if ( (UserPresentHistoryEntity_c *)entity->klass->_2.typeHierarchy[methodPtr_low - 1] == UserPresentHistoryEntity_TypeInfo )
     return (UserPresentHistoryEntity_o *)entity;
   return 0LL;
 }

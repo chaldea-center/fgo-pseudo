@@ -1,17 +1,17 @@
 void __fastcall SpotRoadEntity___ctor(SpotRoadEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438BF1F & 1) == 0 )
+  if ( (byte_48E314F & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_int___ctor__);
-    byte_438BF1F = 1;
+    sub_1B00CCC(&Method_DataEntityBase_int___ctor__, method);
+    byte_48E314F = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_2FE684C *)Method_DataEntityBase_int___ctor__);
 }
 
 
-void __fastcall SpotRoadEntity___ctor_26721356(
+void __fastcall SpotRoadEntity___ctor_38624688(
         SpotRoadEntity_o *this,
         SpotRoadEntity_o *cSrc,
         const MethodInfo *method)
@@ -19,27 +19,20 @@ void __fastcall SpotRoadEntity___ctor_26721356(
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_438BF20 & 1) == 0 )
+  if ( (byte_48E3150 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_int___ctor__);
-    byte_438BF20 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_int___ctor__, cSrc);
+    byte_48E3150 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_2FE684C *)Method_DataEntityBase_int___ctor__);
   if ( !cSrc )
-    sub_B7769C(v5, v6);
-  this->fields.id = cSrc->fields.id;
-  this->fields.mapId = cSrc->fields.mapId;
-  this->fields.srcSpotId = cSrc->fields.srcSpotId;
-  this->fields.dstSpotId = cSrc->fields.dstSpotId;
-  this->fields.type = cSrc->fields.type;
-  this->fields.imageId = cSrc->fields.imageId;
-  this->fields.dispCondType = cSrc->fields.dispCondType;
-  this->fields.dispTargetId = cSrc->fields.dispTargetId;
+    sub_1B00F28(v5, v6);
+  *(_OWORD *)&this->fields.id = *(_OWORD *)&cSrc->fields.id;
+  *(_OWORD *)&this->fields.type = *(_OWORD *)&cSrc->fields.type;
   this->fields.dispTargetValue = cSrc->fields.dispTargetValue;
-  this->fields.activeCondType = cSrc->fields.activeCondType;
-  this->fields.activeTargetId = cSrc->fields.activeTargetId;
+  *(_QWORD *)&this->fields.activeCondType = *(_QWORD *)&cSrc->fields.activeCondType;
   this->fields.activeTargetValue = cSrc->fields.activeTargetValue;
 }
 

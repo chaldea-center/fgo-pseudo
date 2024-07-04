@@ -7,29 +7,27 @@ void __fastcall BattleDropItem___ctor(BattleDropItem_o *this, const MethodInfo *
 
 DropInfo_o *__fastcall BattleDropItem__GetDropInfo(BattleDropItem_o *this, const MethodInfo *method)
 {
-  DropInfo_o *v3; // x20
+  __int64 v3; // x20
   __int64 v4; // x0
   __int64 v5; // x1
   DropInfo_o *result; // x0
 
-  if ( (byte_4389BC3 & 1) == 0 )
+  if ( (byte_48E4C2C & 1) == 0 )
   {
-    sub_B775C4(&DropInfo_TypeInfo);
-    byte_4389BC3 = 1;
+    sub_1B00CCC(&DropInfo_TypeInfo, method);
+    byte_48E4C2C = 1;
   }
-  v3 = (DropInfo_o *)sub_B77694(DropInfo_TypeInfo);
-  DropInfo___ctor(v3, 0LL);
+  v3 = sub_1B00F18(DropInfo_TypeInfo);
+  DropInfo___ctor((DropInfo_o *)v3, 0LL);
   if ( !v3 )
-    sub_B7769C(v4, v5);
-  result = v3;
-  v3->fields.type = this->fields.type;
-  v3->fields.objectId = this->fields.objectId;
-  v3->fields.limitCount = this->fields.limitCount;
-  v3->fields.num = this->fields.num;
-  v3->fields.isRateUp = this->fields.isRateUp;
-  v3->fields.originalNum = this->fields.originalNum;
-  v3->fields.rarity = this->fields.rarity;
-  v3->fields.isAdd = this->fields.isAdd;
+    sub_1B00F28(v4, v5);
+  result = (DropInfo_o *)v3;
+  *(_QWORD *)(v3 + 16) = *(_QWORD *)&this->fields.type;
+  *(int32x2_t *)(v3 + 24) = vrev64_s32(*(int32x2_t *)&this->fields.limitCount);
+  *(_BYTE *)(v3 + 40) = this->fields.isRateUp;
+  *(_DWORD *)(v3 + 44) = this->fields.originalNum;
+  *(_DWORD *)(v3 + 36) = this->fields.rarity;
+  *(_BYTE *)(v3 + 52) = this->fields.isAdd;
   return result;
 }
 
@@ -126,14 +124,13 @@ void __fastcall BattleDropItem__setData(BattleDropItem_o *this, DropInfo_o *info
   int32_t num; // w8
 
   if ( !info )
-    sub_B7769C(this, 0LL);
-  this->fields.type = info->fields.type;
-  this->fields.objectId = info->fields.objectId;
+    sub_1B00F28(this, 0LL);
+  *(_QWORD *)&this->fields.type = *(_QWORD *)&info->fields.type;
   this->fields.limitCount = info->fields.limitCount;
   num = info->fields.num;
   this->fields.num = num;
   this->fields.isRateUp = info->fields.isRateUp;
-  if ( info->fields.originalNum >= 1 )
+  if ( info->fields.originalNum > 0 )
     num = info->fields.originalNum;
   this->fields.originalNum = num;
   this->fields.rarity = info->fields.rarity;

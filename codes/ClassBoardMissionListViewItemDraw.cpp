@@ -2,21 +2,17 @@ void __fastcall ClassBoardMissionListViewItemDraw___ctor(
         ClassBoardMissionListViewItemDraw_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_438D3DB & 1) == 0 )
+  if ( (byte_48E59FC & 1) == 0 )
   {
-    sub_B775C4(&MissionListViewItemDraw_TypeInfo);
-    byte_438D3DB = 1;
+    sub_1B00CCC(&MissionListViewItemDraw_TypeInfo, method);
+    byte_48E59FC = 1;
   }
-  if ( (BYTE3(MissionListViewItemDraw_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !MissionListViewItemDraw_TypeInfo->_2.cctor_finished )
-  {
+  if ( !MissionListViewItemDraw_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MissionListViewItemDraw_TypeInfo);
-  }
   MissionListViewItemDraw___ctor((MissionListViewItemDraw_o *)this, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool __fastcall ClassBoardMissionListViewItemDraw__SetItem(
         ClassBoardMissionListViewItemDraw_o *this,
         MissionListViewItem_o *missionListViewItem,
@@ -24,106 +20,103 @@ bool __fastcall ClassBoardMissionListViewItemDraw__SetItem(
         ListViewManager_o *listViewManager,
         const MethodInfo *method)
 {
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
   UnityEngine_Object_o *conditionTitle; // x23
-  UILabel_o *v10; // x23
-  System_String_o *v11; // x0
-  __int64 v12; // x1
+  UILabel_o *v13; // x23
+  System_String_o *missionCondLb; // x0
+  __int64 v15; // x1
   UnityEngine_Object_o *progLabel; // x23
-  UILabel_o *v14; // x23
-  UIWidget_o *missionCondLb; // x20
-  int v16; // s0
-  __int64 v20; // x0
+  UILabel_o *v17; // x23
   struct UnityEngine_GameObject_array *disableDispObjList; // x19
-  __int64 v22; // x8
-  __int64 v23; // x20
-  __int64 v25; // x0
+  __int64 v19; // x8
+  _BOOL8 v20; // x0
+  __int64 v21; // x20
+  UnityEngine_Color_o v23; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_438D3DA & 1) == 0 )
+  if ( (byte_48E59FB & 1) == 0 )
   {
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&StringLiteral_3142/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_TITLE"*/);
-    sub_B775C4(&StringLiteral_3141/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_PROG"*/);
-    byte_438D3DA = 1;
+    sub_1B00CCC(&LocalizationManager_TypeInfo, missionListViewItem);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v9);
+    sub_1B00CCC(&StringLiteral_3469/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_TITLE"*/, v10);
+    sub_1B00CCC(&StringLiteral_3468/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_PROG"*/, v11);
+    byte_48E59FB = 1;
   }
   conditionTitle = (UnityEngine_Object_o *)this->fields.conditionTitle;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(conditionTitle, 0LL, 0LL) )
   {
-    v10 = this->fields.conditionTitle;
-    if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
+    v13 = this->fields.conditionTitle;
+    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    }
-    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_3142/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_TITLE"*/, 0LL);
-    if ( !v10 )
-      goto LABEL_32;
-    UILabel__set_text(v10, v11, 0LL);
+    missionCondLb = LocalizationManager__Get((System_String_o *)StringLiteral_3469/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_TITLE"*/, 0LL);
+    if ( !v13 )
+      goto LABEL_29;
+    UILabel__set_text(v13, missionCondLb, 0LL);
   }
   progLabel = (UnityEngine_Object_o *)this->fields.progLabel;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(progLabel, 0LL, 0LL) )
   {
-    v14 = this->fields.progLabel;
-    if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
+    v17 = this->fields.progLabel;
+    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    }
-    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_3141/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_PROG"*/, 0LL);
-    if ( !v14 )
-      goto LABEL_32;
-    UILabel__set_text(v14, v11, 0LL);
+    missionCondLb = LocalizationManager__Get((System_String_o *)StringLiteral_3468/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_PROG"*/, 0LL);
+    if ( !v17 )
+      goto LABEL_29;
+    UILabel__set_text(v17, missionCondLb, 0LL);
   }
-  if ( !MissionListViewItemDraw__SetItem(
-          (MissionListViewItemDraw_o *)this,
-          missionListViewItem,
-          mode,
-          listViewManager,
-          0LL) )
-    return 0;
-  missionCondLb = (UIWidget_o *)this->fields.missionCondLb;
-  *(UnityEngine_Color_o *)&v16 = UnityEngine_Color__get_black(0LL);
-  if ( !missionCondLb )
-    goto LABEL_32;
-  UIWidget__set_color(missionCondLb, *(UnityEngine_Color_o *)&v16, 0LL);
-  disableDispObjList = this->fields.disableDispObjList;
-  if ( disableDispObjList )
+  if ( MissionListViewItemDraw__SetItem(
+         (MissionListViewItemDraw_o *)this,
+         missionListViewItem,
+         mode,
+         listViewManager,
+         0LL) )
   {
-    v22 = *(_QWORD *)&disableDispObjList->max_length;
-    if ( v22 )
+    missionCondLb = (System_String_o *)this->fields.missionCondLb;
+    if ( !missionCondLb )
+      goto LABEL_29;
+    v23.fields.r = 0.0;
+    v23.fields.g = 0.0;
+    v23.fields.b = 0.0;
+    v23.fields.a = 1.0;
+    UIWidget__set_color((UIWidget_o *)missionCondLb, v23, 0LL);
+    disableDispObjList = this->fields.disableDispObjList;
+    if ( disableDispObjList )
     {
-      if ( (int)v22 >= 1 )
+      v19 = *(_QWORD *)&disableDispObjList->max_length;
+      v20 = 1LL;
+      if ( v19 && (int)v19 >= 1 )
       {
-        v23 = 0LL;
+        v21 = 0LL;
         while ( 1 )
         {
-          if ( (unsigned int)v23 >= (unsigned int)v22 )
-          {
-            v25 = sub_B776C8(v20);
-            sub_B77668(v25, 0LL);
-          }
-          v11 = (System_String_o *)disableDispObjList->m_Items[v23];
-          if ( !v11 )
+          if ( (unsigned int)v21 >= (unsigned int)v19 )
+            sub_1B00F30(v20, v15);
+          missionCondLb = (System_String_o *)disableDispObjList->m_Items[v21];
+          if ( !missionCondLb )
             break;
-          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v11, 0, 0LL);
-          LODWORD(v22) = disableDispObjList->max_length;
-          if ( (int)++v23 >= (int)v22 )
-            return 1;
+          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)missionCondLb, 0, 0LL);
+          LODWORD(v19) = disableDispObjList->max_length;
+          if ( (int)++v21 >= (int)v19 )
+            goto LABEL_26;
         }
-LABEL_32:
-        sub_B7769C(v11, v12);
+LABEL_29:
+        sub_1B00F28(missionCondLb, v15);
       }
     }
+    else
+    {
+LABEL_26:
+      LOBYTE(v20) = 1;
+    }
   }
-  return 1;
+  else
+  {
+    LOBYTE(v20) = 0;
+  }
+  return v20;
 }

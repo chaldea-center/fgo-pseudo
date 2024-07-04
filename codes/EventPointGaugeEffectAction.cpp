@@ -8,23 +8,21 @@ void __fastcall EventPointGaugeEffectAction__OnPlayGaugeBarAnime(
         EventPointGaugeEffectAction_o *this,
         const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  BattleServantConfConponent_o *p_gaugeStartAction; // x0
-  System_Action_o *v9; // x19
+  int32_t v2; // w2
+  int32_t v3; // w3
+  ServantStatusBattleListViewItem_o *p_gaugeStartAction; // x0
+  struct System_Action_o *v5; // x19
   struct System_Action_o *gaugeStartAction; // t1
 
   gaugeStartAction = this->fields.gaugeStartAction;
-  p_gaugeStartAction = (BattleServantConfConponent_o *)&this->fields.gaugeStartAction;
-  v9 = gaugeStartAction;
+  p_gaugeStartAction = (ServantStatusBattleListViewItem_o *)&this->fields.gaugeStartAction;
+  v5 = gaugeStartAction;
   p_gaugeStartAction->klass = 0LL;
-  sub_B77560(p_gaugeStartAction, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1B00C70(p_gaugeStartAction, 0, v2, v3);
   if ( gaugeStartAction )
-    System_Action__Invoke(v9, 0LL);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v5->fields.m_target)(
+      v5->fields.original_method_info,
+      *(_QWORD *)&v5->fields.extra_arg);
 }
 
 
@@ -33,20 +31,12 @@ void __fastcall EventPointGaugeEffectAction__Setup(
         System_Action_o *gaugeStartAct,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields.gaugeStartAction = gaugeStartAct;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.gaugeStartAction,
-    (System_Int32_array **)gaugeStartAct,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields.gaugeStartAction,
+    (int32_t)gaugeStartAct,
+    (int32_t)method,
+    v3);
 }

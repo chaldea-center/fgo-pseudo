@@ -4,24 +4,16 @@ void __fastcall BattleStartServantAiResetChecker___ctor(
         BattleWarBoardInfo_WarBoardServantInfo_o *svtInfo,
         const MethodInfo *method)
 {
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  int32_t v7; // w2
+  int32_t v8; // w3
+  int32_t v9; // w2
+  int32_t v10; // w3
 
-  ServantAiResetChecker___ctor((ServantAiResetChecker_o *)this, svtData, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0LL);
+  this->fields.svtData = svtData;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)svtData, v7, v8);
   this->fields.warBoardSvtInfo = svtInfo;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.warBoardSvtInfo,
-    (System_Int32_array **)svtInfo,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10,
-    v11);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.warBoardSvtInfo, (int32_t)svtInfo, v9, v10);
 }
 
 
@@ -33,6 +25,6 @@ bool __fastcall BattleStartServantAiResetChecker__IsDead(
 
   warBoardSvtInfo = this->fields.warBoardSvtInfo;
   if ( !warBoardSvtInfo )
-    sub_B7769C(0LL, method);
+    sub_1B00F28(0LL, method);
   return BattleWarBoardInfo_WarBoardServantInfo__IsBrokenPointInBoard(warBoardSvtInfo, 0LL);
 }

@@ -42,7 +42,7 @@ int32_t __fastcall FuncList__getRate(int32_t intype, System_Int32_array *vals, c
 }
 
 
-int32_t __fastcall FuncList__getRate_29693052(int32_t type, System_Int32_array *vals, const MethodInfo *method)
+int32_t __fastcall FuncList__getRate_36487012(int32_t type, System_Int32_array *vals, const MethodInfo *method)
 {
   if ( vals && (int)vals->max_length >= 1 )
     return vals->m_Items[1];
@@ -60,10 +60,10 @@ int32_t __fastcall FuncList__getTransformIndex(int32_t type, System_Int32_array 
   result = 0;
   if ( v3 && vals )
   {
-    if ( (int)vals->max_length < 3 )
-      return 0;
-    else
+    if ( (int)vals->max_length >= 3 )
       return vals->m_Items[3];
+    else
+      return 0;
   }
   return result;
 }
@@ -91,41 +91,39 @@ int32_t __fastcall FuncList__getValue(int32_t type, System_Int32_array *vals, co
 {
   signed int max_length; // w8
 
-  if ( type == 16 || type == 1 )
+  if ( type != 16 && type != 1 )
   {
-    if ( !vals )
-      return 0;
-    max_length = vals->max_length;
-    if ( max_length >= 4 )
-      return vals->m_Items[4];
+    if ( vals )
+    {
+      max_length = vals->max_length;
+      goto LABEL_8;
+    }
+    return 0;
   }
-  else
-  {
-    if ( !vals )
-      return 0;
-    max_length = vals->max_length;
-  }
-  if ( max_length >= 2 )
-    return vals->m_Items[2];
-  return 0;
+  if ( !vals )
+    return 0;
+  max_length = vals->max_length;
+  if ( max_length >= 4 )
+    return vals->m_Items[4];
+LABEL_8:
+  if ( max_length < 2 )
+    return 0;
+  return vals->m_Items[2];
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall FuncList__getValueFronIndex(System_Int32_array *vals, int32_t index, const MethodInfo *method)
 {
-  int32_t max_length; // w8
-  __int64 v4; // x0
+  il2cpp_array_size_t max_length; // w8
 
   if ( vals )
   {
     max_length = vals->max_length;
-    if ( max_length >= index )
+    if ( (int)max_length >= index )
     {
-      if ( max_length <= (unsigned int)index )
-      {
-        v4 = sub_B776C8(vals);
-        sub_B77668(v4, 0LL);
-      }
+      if ( max_length <= index )
+        sub_1B00F30(vals, *(_QWORD *)&index);
       LODWORD(vals) = vals->m_Items[index + 1];
     }
     else
@@ -147,33 +145,25 @@ bool __fastcall FuncList__isAddState(int32_t func, const MethodInfo *method)
 
 bool __fastcall FuncList__isDamage(int32_t funcType, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x0
+  __int64 v3; // x1
+  System_String_o *v4; // x0
   __int64 v5; // x1
-  __int64 v6; // x20
-  System_String_o *v7; // x19
-  int32_t v9; // [xsp+Ch] [xbp-14h] BYREF
+  System_Enum_o v7; // [xsp+8h] [xbp-38h] BYREF
+  int32_t v8; // [xsp+18h] [xbp-28h]
 
-  if ( (byte_438D8FC & 1) == 0 )
+  if ( (byte_48E1857 & 1) == 0 )
   {
-    sub_B775C4(&FuncList_TYPE_TypeInfo);
-    sub_B775C4(&StringLiteral_4687/*"DAMAGE"*/);
-    byte_438D8FC = 1;
+    sub_1B00CCC(&FuncList_TYPE_TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_4939/*"DAMAGE"*/, v3);
+    byte_48E1857 = 1;
   }
-  v9 = funcType;
-  v4 = j_il2cpp_value_box_0(FuncList_TYPE_TypeInfo, &v9, v2);
-  if ( !v4
-    || (v6 = v4,
-        v7 = (System_String_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)v4 + 360LL))(
-                                  v4,
-                                  *(_QWORD *)(*(_QWORD *)v4 + 368LL)),
-        v4 = j_il2cpp_object_unbox_0(v6),
-        v9 = *(_DWORD *)v4,
-        !v7) )
-  {
-    sub_B7769C(v4, v5);
-  }
-  return System_String__Contains(v7, (System_String_o *)StringLiteral_4687/*"DAMAGE"*/, 0LL);
+  v7.klass = (System_Enum_c *)FuncList_TYPE_TypeInfo;
+  v7.monitor = (void *)-1LL;
+  v8 = funcType;
+  v4 = System_Enum__ToString(&v7, 0LL);
+  if ( !v4 )
+    sub_1B00F28(0LL, v5);
+  return System_String__Contains(v4, (System_String_o *)StringLiteral_4939/*"DAMAGE"*/, 0LL);
 }
 
 

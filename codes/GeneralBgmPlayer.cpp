@@ -1,4 +1,5 @@
 void __fastcall GeneralBgmPlayer___ctor(GeneralBgmPlayer_o *this, const MethodInfo *method)
 {
-  BgmPlayerBase___ctor((BgmPlayerBase_o *)this, 0LL);
+  this->fields.bgmFadeTime = -1.0;
+  System_Object___ctor((Il2CppObject *)this, 0LL);
 }

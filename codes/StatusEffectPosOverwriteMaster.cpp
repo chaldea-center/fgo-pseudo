@@ -1,14 +1,16 @@
 void __fastcall StatusEffectPosOverwriteMaster___ctor(StatusEffectPosOverwriteMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_438BFD5 & 1) == 0 )
+  if ( (byte_48E319F & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string___ctor__);
-    byte_438BFD5 = 1;
+    sub_1B00CCC(
+      &Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string___ctor__,
+      method);
+    byte_48E319F = 1;
   }
-  DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
-    (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
+  DataMasterBase_object__object__object____ctor(
+    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     300,
-    (const MethodInfo_21FBC48 *)Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string___ctor__);
+    (const MethodInfo_2FE6D64 *)Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string___ctor__);
 }
 
 
@@ -20,22 +22,24 @@ StatusEffectPosOverwriteEntity_o *__fastcall StatusEffectPosOverwriteMaster__Get
         int32_t svtLimitCount,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x1
+  Il2CppObject *PK; // x1
 
-  if ( (byte_438BFD3 & 1) == 0 )
+  if ( (byte_48E319D & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__GetEntity__);
-    byte_438BFD3 = 1;
+    sub_1B00CCC(
+      &Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__GetEntity__,
+      *(_QWORD *)&statusEffectId);
+    byte_48E319D = 1;
   }
-  PK = StatusEffectPosOverwriteEntity__CreatePK(
-         statusEffectId,
-         svtId,
-         svtLimitCount,
-         *(const MethodInfo **)&svtLimitCount);
-  return (StatusEffectPosOverwriteEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
-                                               (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
+  PK = (Il2CppObject *)StatusEffectPosOverwriteEntity__CreatePK(
+                         statusEffectId,
+                         svtId,
+                         svtLimitCount,
+                         *(const MethodInfo **)&svtLimitCount);
+  return (StatusEffectPosOverwriteEntity_o *)DataMasterBase_object__object__object___GetEntity(
+                                               (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                PK,
-                                               (const MethodInfo_21FBCE4 *)Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__GetEntity__);
+                                               (const MethodInfo_2FE6DA4 *)Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__GetEntity__);
 }
 
 
@@ -48,17 +52,23 @@ bool __fastcall StatusEffectPosOverwriteMaster__TryGetEntity(
         int32_t svtLimitCount,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x2
+  Il2CppObject *PK; // x2
 
-  if ( (byte_438BFD4 & 1) == 0 )
+  if ( (byte_48E319E & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__TryGetEntity__);
-    byte_438BFD4 = 1;
+    sub_1B00CCC(
+      &Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__TryGetEntity__,
+      entity);
+    byte_48E319E = 1;
   }
-  PK = StatusEffectPosOverwriteEntity__CreatePK(statusEffectId, svtId, svtLimitCount, *(const MethodInfo **)&svtId);
-  return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
-           (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
-           (WarQuestSelectionEntity_o **)entity,
+  PK = (Il2CppObject *)StatusEffectPosOverwriteEntity__CreatePK(
+                         statusEffectId,
+                         svtId,
+                         svtLimitCount,
+                         *(const MethodInfo **)&svtId);
+  return DataMasterBase_object__object__object___TryGetEntity(
+           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
+           (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_21FBD3C *)Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__TryGetEntity__);
+           (const MethodInfo_2FE6DF4 *)Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__TryGetEntity__);
 }

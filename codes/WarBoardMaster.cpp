@@ -1,12 +1,12 @@
 void __fastcall WarBoardMaster___ctor(WarBoardMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_438AE81 & 1) == 0 )
+  if ( (byte_48E3722 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_WarBoardMaster__WarBoardEntity__int___ctor__);
-    byte_438AE81 = 1;
+    sub_1B00CCC(&Method_DataMasterBase_WarBoardMaster__WarBoardEntity__int___ctor__, method);
+    byte_48E3722 = 1;
   }
-  DataMasterBase_WarMaster__WarEntity__int____ctor(
-    (DataMasterBase_WarMaster__WarEntity__int__o *)this,
+  DataMasterBase_object__object__int____ctor(
+    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     318,
-    (const MethodInfo_21FB7F8 *)Method_DataMasterBase_WarBoardMaster__WarBoardEntity__int___ctor__);
+    (const MethodInfo_2FE6A0C *)Method_DataMasterBase_WarBoardMaster__WarBoardEntity__int___ctor__);
 }

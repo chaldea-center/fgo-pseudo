@@ -9,22 +9,10 @@ void __fastcall BillBoardAroundLocalAxis__SetTargetTransform(
         UnityEngine_Transform_o *trans,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields.targetTrans = trans;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.targetTrans,
-    (System_Int32_array **)trans,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.targetTrans, (int32_t)trans, (int32_t)method, v3);
 }
 
 
@@ -33,17 +21,14 @@ void __fastcall BillBoardAroundLocalAxis__Update(BillBoardAroundLocalAxis_o *thi
   UnityEngine_Object_o *targetTrans; // x20
   const MethodInfo *v4; // x1
 
-  if ( (byte_438A94B & 1) == 0 )
+  if ( (byte_48E1CAD & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438A94B = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    byte_48E1CAD = 1;
   }
   targetTrans = (UnityEngine_Object_o *)this->fields.targetTrans;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Implicit(targetTrans, 0LL) )
     BillBoardAroundLocalAxis__UpdateAngles(this, v4);
 }
@@ -53,37 +38,47 @@ void __fastcall BillBoardAroundLocalAxis__Update(BillBoardAroundLocalAxis_o *thi
 void __fastcall BillBoardAroundLocalAxis__UpdateAngles(BillBoardAroundLocalAxis_o *this, const MethodInfo *method)
 {
   UnityEngine_Transform_o *targetTrans; // x0
-  float x; // s8
-  float y; // s9
-  float z; // s10
-  float v7; // s11
-  float v8; // s12
-  float v9; // s13
-  float v10; // s11
-  float v11; // s9
-  float v12; // s8
-  float v13; // s8
-  int v14; // s1
-  float v15; // s2
-  float v17; // s0
-  float v18; // s8
-  float v19; // s9
-  UnityEngine_Quaternion_o v20; // [xsp+0h] [xbp-60h] BYREF
-  MethodInfo methoda; // [xsp+10h] [xbp-50h] BYREF
+  float x; // s12
+  float y; // s14
+  float z; // s15
+  float v7; // s8
+  float v8; // s9
+  float v9; // s10
+  float w; // s11
+  float v11; // s13
+  float v12; // s14
+  float v13; // s12
+  float v14; // s15
+  float v15; // s8
+  float v16; // s9
+  float v17; // s10
+  float v18; // s12
+  float v19; // s2
+  float v20; // s10
+  float v21; // s8
+  float v22; // s8
+  float v23; // s9
+  float v24; // s10
+  float v25; // s11
+  float rotation; // [xsp+4h] [xbp-5Ch]
+  float v27; // [xsp+8h] [xbp-58h]
+  float v28; // [xsp+Ch] [xbp-54h]
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o Positive; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o forward; // 0:s3.4,4:s4.4,8:s5.4
-  UnityEngine_Vector3_o v26; // 0:s4.4,4:s5.4,8:s6.4
   UnityEngine_Quaternion_o localRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Quaternion_o v28; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Quaternion_o v29; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Quaternion_o v30; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v38; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v39; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v40; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v41; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v42; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v43; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  methoda.methodPointer = 0LL;
-  methoda.invoker_method = 0LL;
-  *(_QWORD *)&v20.fields.x = 0LL;
-  *(_QWORD *)&v20.fields.z = 0LL;
   targetTrans = this->fields.targetTrans;
   if ( !targetTrans )
     goto LABEL_11;
@@ -94,48 +89,81 @@ void __fastcall BillBoardAroundLocalAxis__UpdateAngles(BillBoardAroundLocalAxis_
   targetTrans = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !targetTrans )
     goto LABEL_11;
-  v23 = UnityEngine_Transform__get_position(targetTrans, 0LL);
-  v7 = v23.fields.x;
-  v8 = v23.fields.y;
-  v9 = v23.fields.z;
+  v30 = UnityEngine_Transform__get_position(targetTrans, 0LL);
+  v7 = v30.fields.x;
+  v8 = v30.fields.y;
+  v9 = v30.fields.z;
   targetTrans = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !targetTrans )
     goto LABEL_11;
   localRotation = UnityEngine_Transform__get_localRotation(targetTrans, 0LL);
-  methoda.methodPointer = *(Il2CppMethodPointer *)&localRotation.fields.x;
-  methoda.invoker_method = *(void **)&localRotation.fields.z;
+  v27 = localRotation.fields.y;
+  v28 = localRotation.fields.x;
+  rotation = localRotation.fields.z;
+  w = localRotation.fields.w;
   targetTrans = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !targetTrans )
     goto LABEL_11;
-  v10 = x - v7;
-  v11 = y - v8;
-  v12 = z - v9;
+  v11 = x - v7;
+  v12 = y - v8;
+  v13 = z - v9;
   forward = UnityEngine_Transform__get_forward(targetTrans, 0LL);
-  v24.fields.x = v10;
-  v24.fields.y = v11;
-  v24.fields.z = z - v9;
-  v20 = UnityEngine_Quaternion__LookRotation(v24, forward, 0LL);
+  v31.fields.x = v11;
+  v31.fields.y = v12;
+  v31.fields.z = z - v9;
+  v38 = UnityEngine_Quaternion__LookRotation(v31, forward, 0LL);
+  v14 = v38.fields.x;
+  v15 = v38.fields.y;
+  v16 = v38.fields.z;
+  v17 = v38.fields.w;
   targetTrans = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !targetTrans )
     goto LABEL_11;
-  *(UnityEngine_Vector3_o *)&v28.fields.x = UnityEngine_Transform__get_forward(targetTrans, 0LL);
-  v28.fields.x = (float)(v10 * v28.fields.x) + (float)(v11 * v28.fields.y);
-  v28.fields.y = v12 * v28.fields.z;
-  v13 = (float)(v12 * v28.fields.z) + v28.fields.x;
-  *(UnityEngine_Vector3_o *)(&v14 - 1) = UnityEngine_Quaternion__get_eulerAngles(v28, (const MethodInfo *)&v20);
-  v18 = v13 <= 0.0 ? -v15 : v15;
-  v17 = -v15;
-  *(UnityEngine_Vector3_o *)&v29.fields.x = UnityEngine_Quaternion__get_eulerAngles(
-                                              *(UnityEngine_Quaternion_o *)(&v14 - 1),
-                                              &methoda);
-  v19 = v29.fields.x;
-  *(UnityEngine_Vector3_o *)&v30.fields.x = UnityEngine_Quaternion__get_eulerAngles(v29, &methoda);
-  v30.fields.x = v19;
-  v30.fields.z = v18;
-  UnityEngine_Quaternion__set_eulerAngles(v30, v26, (const MethodInfo *)&v20);
+  *(UnityEngine_Vector3_o *)&v39.fields.x = UnityEngine_Transform__get_forward(targetTrans, 0LL);
+  v18 = (float)(v13 * v39.fields.z) + (float)((float)(v11 * v39.fields.x) + (float)(v12 * v39.fields.y));
+  v39.fields.x = v14;
+  v39.fields.y = v15;
+  v39.fields.z = v16;
+  v39.fields.w = v17;
+  v32 = UnityEngine_Quaternion__Internal_ToEulerRad(v39, 0LL);
+  v32.fields.x = v32.fields.x * 57.296;
+  v32.fields.y = v32.fields.y * 57.296;
+  v32.fields.z = v32.fields.z * 57.296;
+  *(UnityEngine_Vector3_o *)(&v19 - 2) = UnityEngine_Quaternion__Internal_MakePositive(v32, 0LL);
+  v20 = v18 <= 0.0 ? -v19 : v19;
+  v40.fields.x = v28;
+  v40.fields.y = v27;
+  v40.fields.z = rotation;
+  v40.fields.w = w;
+  v33 = UnityEngine_Quaternion__Internal_ToEulerRad(v40, 0LL);
+  v33.fields.x = v33.fields.x * 57.296;
+  v33.fields.y = v33.fields.y * 57.296;
+  v33.fields.z = v33.fields.z * 57.296;
+  v21 = COERCE_FLOAT(UnityEngine_Quaternion__Internal_MakePositive(v33, 0LL));
+  v41.fields.x = v28;
+  v41.fields.y = v27;
+  v41.fields.z = rotation;
+  v41.fields.w = w;
+  v34 = UnityEngine_Quaternion__Internal_ToEulerRad(v41, 0LL);
+  v34.fields.x = v34.fields.x * 57.296;
+  v34.fields.y = v34.fields.y * 57.296;
+  v34.fields.z = v34.fields.z * 57.296;
+  Positive = UnityEngine_Quaternion__Internal_MakePositive(v34, 0LL);
+  Positive.fields.x = v21 * 0.017453;
+  Positive.fields.y = Positive.fields.y * 0.017453;
+  Positive.fields.z = v20 * 0.017453;
+  v42 = UnityEngine_Quaternion__Internal_FromEulerRad(Positive, 0LL);
+  v22 = v42.fields.x;
+  v23 = v42.fields.y;
+  v24 = v42.fields.z;
+  v25 = v42.fields.w;
   targetTrans = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !targetTrans )
 LABEL_11:
-    sub_B7769C(targetTrans, method);
-  UnityEngine_Transform__set_localRotation(targetTrans, v20, 0LL);
+    sub_1B00F28(targetTrans, method);
+  v43.fields.x = v22;
+  v43.fields.y = v23;
+  v43.fields.z = v24;
+  v43.fields.w = v25;
+  UnityEngine_Transform__set_localRotation(targetTrans, v43, 0LL);
 }

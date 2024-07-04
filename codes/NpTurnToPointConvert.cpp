@@ -1,6 +1,6 @@
 void __fastcall NpTurnToPointConvert___ctor(NpTurnToPointConvert_o *this, const MethodInfo *method)
 {
-  BaseNpGaugeConvert___ctor((BaseNpGaugeConvert_o *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 

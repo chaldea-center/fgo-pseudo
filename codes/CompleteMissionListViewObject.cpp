@@ -9,20 +9,20 @@ CompleteMissionListViewItem_o *__fastcall CompleteMissionListViewObject__GetItem
         const MethodInfo *method)
 {
   struct ListViewItem_o *linkItem; // x8
-  __int64 v4; // x11
+  __int64 methodPtr_low; // x11
 
-  if ( (byte_438ACB3 & 1) == 0 )
+  if ( (byte_48E16EB & 1) == 0 )
   {
-    sub_B775C4(&CompleteMissionListViewItem_TypeInfo);
-    byte_438ACB3 = 1;
+    sub_1B00CCC(&CompleteMissionListViewItem_TypeInfo, method);
+    byte_48E16EB = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
     return 0LL;
-  v4 = *(&CompleteMissionListViewItem_TypeInfo->_2.bitflags2 + 1);
-  if ( *(&linkItem->klass->_2.bitflags2 + 1) < (unsigned int)v4 )
+  methodPtr_low = LOBYTE(CompleteMissionListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
+  if ( LOBYTE(linkItem->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low )
     return 0LL;
-  if ( (CompleteMissionListViewItem_c *)linkItem->klass->_2.typeHierarchy[v4 - 1] == CompleteMissionListViewItem_TypeInfo )
+  if ( (CompleteMissionListViewItem_c *)linkItem->klass->_2.typeHierarchy[methodPtr_low - 1] == CompleteMissionListViewItem_TypeInfo )
     return (CompleteMissionListViewItem_o *)this->fields.linkItem;
   return 0LL;
 }
@@ -34,26 +34,26 @@ void __fastcall CompleteMissionListViewObject__OnChangeAlphaAnim(
 {
   const MethodInfo *v3; // x1
   struct ListViewManager_o *manager; // x8
-  __int64 v5; // x11
+  __int64 methodPtr_low; // x11
   struct ListViewManager_o *v6; // x20
   CompleteMissionListViewItemDraw_o *CompleteMissionItemDraw; // x0
   __int64 v8; // x1
   const MethodInfo *v9; // x2
 
-  if ( (byte_438ACB4 & 1) == 0 )
+  if ( (byte_48E16EC & 1) == 0 )
   {
-    sub_B775C4(&CompleteMissionListViewManager_TypeInfo);
-    byte_438ACB4 = 1;
+    sub_1B00CCC(&CompleteMissionListViewManager_TypeInfo, method);
+    byte_48E16EC = 1;
   }
   if ( this->fields.linkItem )
   {
     CompleteMissionListViewObject__GetItem(this, method);
     manager = this->fields.manager;
     if ( manager
-      && (v5 = *(&CompleteMissionListViewManager_TypeInfo->_2.bitflags2 + 1),
-          *(&manager->klass->_2.bitflags2 + 1) >= (unsigned int)v5) )
+      && (methodPtr_low = LOBYTE(CompleteMissionListViewManager_TypeInfo->vtable._0_Equals.methodPtr),
+          LOBYTE(manager->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low) )
     {
-      if ( (CompleteMissionListViewManager_c *)manager->klass->_2.typeHierarchy[v5 - 1] == CompleteMissionListViewManager_TypeInfo )
+      if ( (CompleteMissionListViewManager_c *)manager->klass->_2.typeHierarchy[methodPtr_low - 1] == CompleteMissionListViewManager_TypeInfo )
         v6 = this->fields.manager;
       else
         v6 = 0LL;
@@ -64,7 +64,7 @@ void __fastcall CompleteMissionListViewObject__OnChangeAlphaAnim(
     }
     CompleteMissionItemDraw = CompleteMissionListViewObject__get_CompleteMissionItemDraw(this, v3);
     if ( !CompleteMissionItemDraw )
-      sub_B7769C(0LL, v8);
+      sub_1B00F28(0LL, v8);
     CompleteMissionListViewItemDraw__ChangeNextRewardIcon(
       CompleteMissionItemDraw,
       (CompleteMissionListViewManager_o *)v6,
@@ -84,20 +84,20 @@ CompleteMissionListViewItemDraw_o *__fastcall CompleteMissionListViewObject__get
         const MethodInfo *method)
 {
   struct MissionListViewItemDraw_o *itemDraw; // x8
-  __int64 v4; // x11
+  __int64 methodPtr_low; // x11
 
-  if ( (byte_438ACB2 & 1) == 0 )
+  if ( (byte_48E16EA & 1) == 0 )
   {
-    sub_B775C4(&CompleteMissionListViewItemDraw_TypeInfo);
-    byte_438ACB2 = 1;
+    sub_1B00CCC(&CompleteMissionListViewItemDraw_TypeInfo, method);
+    byte_48E16EA = 1;
   }
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
     return 0LL;
-  v4 = *(&CompleteMissionListViewItemDraw_TypeInfo->_2.bitflags2 + 1);
-  if ( *(&itemDraw->klass->_2.bitflags2 + 1) < (unsigned int)v4 )
+  methodPtr_low = LOBYTE(CompleteMissionListViewItemDraw_TypeInfo->vtable._0_Equals.methodPtr);
+  if ( LOBYTE(itemDraw->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low )
     return 0LL;
-  if ( (CompleteMissionListViewItemDraw_c *)itemDraw->klass->_2.typeHierarchy[v4 - 1] == CompleteMissionListViewItemDraw_TypeInfo )
+  if ( (CompleteMissionListViewItemDraw_c *)itemDraw->klass->_2.typeHierarchy[methodPtr_low - 1] == CompleteMissionListViewItemDraw_TypeInfo )
     return (CompleteMissionListViewItemDraw_o *)this->fields.itemDraw;
   return 0LL;
 }

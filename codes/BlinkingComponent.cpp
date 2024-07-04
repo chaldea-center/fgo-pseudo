@@ -7,24 +7,25 @@ void __fastcall BlinkingComponent___ctor(BlinkingComponent_o *this, const Method
 void __fastcall BlinkingComponent__Awake(BlinkingComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
+  const MethodInfo *v4; // x1
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  *(UnityEngine_Vector3_o *)&this->fields.mOrgScl.fields.y = GameObjectExtensions__GetLocalScale(gameObject, 0LL);
+  this->fields.mOrgScl = GameObjectExtensions__GetLocalScale(gameObject, v4);
 }
 
 
 void __fastcall BlinkingComponent__OnEnable(BlinkingComponent_o *this, const MethodInfo *method)
 {
-  this->fields.mOrgScl.fields.x = 0.0;
-  LOBYTE(this[1].klass) = 1;
+  this->fields.mOldTime = 0.0;
+  this->fields.mIsPlay = 1;
   BlinkingComponent__PlayExec(this, method);
 }
 
 
 void __fastcall BlinkingComponent__Play(BlinkingComponent_o *this, const MethodInfo *method)
 {
-  this->fields.mOrgScl.fields.x = 0.0;
-  LOBYTE(this[1].klass) = 1;
+  this->fields.mOldTime = 0.0;
+  this->fields.mIsPlay = 1;
   BlinkingComponent__PlayExec(this, method);
 }
 
@@ -33,49 +34,60 @@ void __fastcall BlinkingComponent__PlayExec(BlinkingComponent_o *this, const Met
 {
   const MethodInfo *v3; // x2
   float realtimeSinceStartup; // s0
-  int v5; // w8
+  _BOOL4 mIsDisp; // w8
 
-  if ( LOBYTE(this[1].klass) )
+  if ( this->fields.mIsPlay )
   {
     realtimeSinceStartup = UnityEngine_Time__get_realtimeSinceStartup(0LL);
-    if ( (float)(realtimeSinceStartup - this->fields.mOrgScl.fields.x) >= 0.75 )
+    if ( (float)(realtimeSinceStartup - this->fields.mOldTime) >= 0.75 )
     {
-      v5 = BYTE1(this[1].klass);
-      this->fields.mOrgScl.fields.x = realtimeSinceStartup;
-      BlinkingComponent__SetDisp(this, v5 == 0, v3);
+      mIsDisp = this->fields.mIsDisp;
+      this->fields.mOldTime = realtimeSinceStartup;
+      BlinkingComponent__SetDisp(this, !mIsDisp, v3);
     }
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall BlinkingComponent__SetDisp(BlinkingComponent_o *this, bool is_disp, const MethodInfo *method)
 {
-  float y; // s8
-  float z; // s9
-  float v6; // s10
+  struct UnityEngine_Vector3_StaticFields *p_mOrgScl; // x8
+  float *p_y; // x9
+  float *p_z; // x10
+  float x; // s8
+  float v8; // s9
+  float v9; // s10
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_Vector3_o zero; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
+  const MethodInfo *v11; // x1
+  UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
 
-  BYTE1(this[1].klass) = is_disp;
+  this->fields.mIsDisp = is_disp;
   if ( is_disp )
   {
-    y = this->fields.mOrgScl.fields.y;
-    z = this->fields.mOrgScl.fields.z;
-    v6 = *(float *)&this->fields.mIsPlay;
+    p_mOrgScl = (struct UnityEngine_Vector3_StaticFields *)&this->fields.mOrgScl;
+    p_y = &this->fields.mOrgScl.fields.y;
+    p_z = &this->fields.mOrgScl.fields.z;
   }
   else
   {
-    zero = UnityEngine_Vector3__get_zero(0LL);
-    y = zero.fields.x;
-    z = zero.fields.y;
-    v6 = zero.fields.z;
+    if ( !byte_48DD9F1 )
+    {
+      sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, is_disp);
+      byte_48DD9F1 = 1;
+    }
+    p_mOrgScl = UnityEngine_Vector3_TypeInfo->static_fields;
+    p_y = &p_mOrgScl->zeroVector.fields.y;
+    p_z = &p_mOrgScl->zeroVector.fields.z;
   }
+  x = p_mOrgScl->zeroVector.fields.x;
+  v8 = *p_y;
+  v9 = *p_z;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  v9.fields.x = y;
-  v9.fields.y = z;
-  v9.fields.z = v6;
-  GameObjectExtensions__SetLocalScale(gameObject, v9, 0LL);
+  v12.fields.x = x;
+  v12.fields.y = v8;
+  v12.fields.z = v9;
+  GameObjectExtensions__SetLocalScale(gameObject, v12, v11);
 }
 
 
@@ -83,7 +95,7 @@ void __fastcall BlinkingComponent__Stop(BlinkingComponent_o *this, const MethodI
 {
   const MethodInfo *v2; // x2
 
-  LOBYTE(this[1].klass) = 0;
+  this->fields.mIsPlay = 0;
   BlinkingComponent__SetDisp(this, 0, v2);
 }
 

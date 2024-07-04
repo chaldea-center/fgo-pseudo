@@ -18,12 +18,12 @@ System_Int64_array *__fastcall BaseBattleEvent__GetForceDeadSvtIdArray(
         BaseBattleEvent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4388C94 & 1) == 0 )
+  if ( (byte_48E4C67 & 1) == 0 )
   {
-    sub_B775C4(&long___TypeInfo);
-    byte_4388C94 = 1;
+    sub_1B00CCC(&long___TypeInfo, method);
+    byte_48E4C67 = 1;
   }
-  return (System_Int64_array *)sub_B775DC(long___TypeInfo, 0LL);
+  return (System_Int64_array *)sub_1B00D74(long___TypeInfo, 0LL);
 }
 
 
@@ -36,26 +36,26 @@ int32_t __fastcall BaseBattleEvent__GetProgressBuffTurnCond(
   __int64 v6; // x1
   int32_t type; // w19
 
-  if ( (byte_4388C92 & 1) == 0 )
+  if ( (byte_48E4C65 & 1) == 0 )
   {
-    sub_B775C4(&BuffList_TypeInfo);
-    byte_4388C92 = 1;
+    sub_1B00CCC(&BuffList_TypeInfo, buffEnt);
+    byte_48E4C65 = 1;
   }
   IsBattleEndReduceBuffTurn = BaseBattleEvent__get_IsBattleEndReduceBuffTurn(this, (const MethodInfo *)buffEnt);
   if ( !IsBattleEndReduceBuffTurn )
   {
     if ( buffEnt )
       goto LABEL_8;
-LABEL_12:
-    sub_B7769C(IsBattleEndReduceBuffTurn, v6);
+LABEL_11:
+    sub_1B00F28(IsBattleEndReduceBuffTurn, v6);
   }
   if ( !buffEnt )
-    goto LABEL_12;
+    goto LABEL_11;
   if ( !BuffEntity__IsBattleEndNotReduceTurn(buffEnt, 0LL) )
     return 0;
 LABEL_8:
   type = buffEnt->fields.type;
-  if ( (BYTE3(BuffList_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BuffList_TypeInfo->_2.cctor_finished )
+  if ( !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
   return BuffList__GetProgressTurnCond(type, 0LL);
 }
@@ -80,16 +80,16 @@ BaseBattleServantEvent_o *__fastcall BaseBattleEvent__GetServantEvent(
         BaseBattleEvent_o *this,
         const MethodInfo *method)
 {
-  Il2CppObject *v2; // x19
+  BaseBattleServantEvent_o *v2; // x19
 
-  if ( (byte_4388C91 & 1) == 0 )
+  if ( (byte_48E4C64 & 1) == 0 )
   {
-    sub_B775C4(&BaseBattleServantEvent_TypeInfo);
-    byte_4388C91 = 1;
+    sub_1B00CCC(&BaseBattleServantEvent_TypeInfo, method);
+    byte_48E4C64 = 1;
   }
-  v2 = (Il2CppObject *)sub_B77694(BaseBattleServantEvent_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  return (BaseBattleServantEvent_o *)v2;
+  v2 = (BaseBattleServantEvent_o *)sub_1B00F18(BaseBattleServantEvent_TypeInfo);
+  BaseBattleServantEvent___ctor(v2, 0LL);
+  return v2;
 }
 
 
@@ -109,8 +109,10 @@ bool __fastcall BaseBattleEvent__GoNextScene(BaseBattleEvent_o *this, const Meth
 
 void __fastcall BaseBattleEvent__Init(BaseBattleEvent_o *this, BattleData_o *data, const MethodInfo *method)
 {
+  int32_t v3; // w3
+
   this->fields._Data_k__BackingField = data;
-  sub_B77560(&this->fields);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)data, (int32_t)method, v3);
 }
 
 
@@ -121,11 +123,15 @@ void __fastcall BaseBattleEvent__InitAtkManager(
         const MethodInfo *method)
 {
   struct BattleLogic_o *logic; // x8
+  struct BattleAttackManager_o *v6; // x1
+  int32_t v7; // w2
+  int32_t v8; // w3
 
   if ( !data || (logic = data->fields.logic) == 0LL )
-    sub_B7769C(this, isPrecedingPlayer);
-  data->fields.battleAtkManager = BattleAttackManager__Make(isPrecedingPlayer, logic->fields.logiclist, 0LL);
-  sub_B77560(&data->fields.battleAtkManager);
+    sub_1B00F28(this, isPrecedingPlayer);
+  v6 = BattleAttackManager__Make(isPrecedingPlayer, logic->fields.logiclist, 0LL);
+  data->fields.battleAtkManager = v6;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&data->fields.battleAtkManager, (int32_t)v6, v7, v8);
 }
 
 
@@ -211,7 +217,7 @@ bool __fastcall BaseBattleEvent__IsPossibleAddBuffParam(
         const MethodInfo *method)
 {
   if ( !svtData )
-    sub_B7769C(this, 0LL);
+    sub_1B00F28(this, 0LL);
   return BattleServantData__isAlive(svtData, 0, 0LL);
 }
 
@@ -245,37 +251,34 @@ bool __fastcall BaseBattleEvent__IsUseDefeatPointReady(
 BaseBattleEvent_o *__fastcall BaseBattleEvent__MakeBattleEvent(BattleData_o *data, const MethodInfo *method)
 {
   BattleData_o *v2; // x19
+  __int64 v3; // x1
   struct QuestEntity_o *quest_ent; // x21
-  __int64 v4; // x20
+  __int64 v5; // x20
+  const MethodInfo *v6; // x1
 
   v2 = data;
-  if ( (byte_4388C8F & 1) == 0 )
+  if ( (byte_48E4C62 & 1) == 0 )
   {
-    sub_B775C4(&BaseBattleEvent_TypeInfo);
-    data = (BattleData_o *)sub_B775C4(&WarBoardBattleEvent_TypeInfo);
-    byte_4388C8F = 1;
+    sub_1B00CCC(&BaseBattleEvent_TypeInfo, method);
+    data = (BattleData_o *)sub_1B00CCC(&WarBoardBattleEvent_TypeInfo, v3);
+    byte_48E4C62 = 1;
   }
-  if ( !v2 )
-    goto LABEL_9;
-  quest_ent = v2->fields.quest_ent;
-  v4 = sub_B77694(BaseBattleEvent_TypeInfo);
-  *(_DWORD *)(v4 + 24) = -1;
-  System_Object___ctor((Il2CppObject *)v4, 0LL);
-  if ( !quest_ent )
-    goto LABEL_9;
-  if ( quest_ent->fields.type == 7 )
+  if ( !v2
+    || (quest_ent = v2->fields.quest_ent,
+        v5 = sub_1B00F18(BaseBattleEvent_TypeInfo),
+        *(_DWORD *)(v5 + 24) = -1,
+        System_Object___ctor((Il2CppObject *)v5, 0LL),
+        !quest_ent)
+    || quest_ent->fields.type == 7
+    && (v5 = sub_1B00F18(WarBoardBattleEvent_TypeInfo), WarBoardBattleEvent___ctor((WarBoardBattleEvent_o *)v5, v6), !v5) )
   {
-    v4 = sub_B77694(WarBoardBattleEvent_TypeInfo);
-    WarBoardBattleEvent___ctor((WarBoardBattleEvent_o *)v4, 0LL);
+    sub_1B00F28(data, method);
   }
-  if ( !v4 )
-LABEL_9:
-    sub_B7769C(data, method);
-  (*(void (__fastcall **)(__int64, BattleData_o *, _QWORD))(*(_QWORD *)v4 + 392LL))(
-    v4,
+  (*(void (__fastcall **)(__int64, BattleData_o *, _QWORD))(*(_QWORD *)v5 + 392LL))(
+    v5,
     v2,
-    *(_QWORD *)(*(_QWORD *)v4 + 400LL));
-  return (BaseBattleEvent_o *)v4;
+    *(_QWORD *)(*(_QWORD *)v5 + 400LL));
+  return (BaseBattleEvent_o *)v5;
 }
 
 
@@ -313,18 +316,15 @@ void __fastcall BaseBattleEvent__ProgressBuffTurn(
         const MethodInfo *method)
 {
   if ( !buffData )
-    goto LABEL_6;
+    goto LABEL_9;
   this = (BaseBattleEvent_o *)BattleBuffData__ProgressBuffTurn(buffData, buff, 0LL);
-  if ( ((unsigned __int8)this & 1) != 0 )
-  {
-    if ( buff )
-    {
-      BattleBuffData_BuffData__TryExtendLife(buff, isEndEnemyTurn, 0LL);
-      return;
-    }
-LABEL_6:
-    sub_B7769C(this, buffData);
-  }
+  if ( ((unsigned __int8)this & 1) == 0 )
+    return;
+  if ( !buff )
+LABEL_9:
+    sub_1B00F28(this, buffData);
+  if ( !isEndEnemyTurn && !buff->fields.turn && buff->fields.isDelayRemoveIfExpiredOnPlayerTurn )
+    buff->fields._IsExtendingLife_k__BackingField = 1;
 }
 
 
@@ -334,74 +334,83 @@ void __fastcall BaseBattleEvent__ProgressNoExecJoinServantsBuff(
         bool isEndEnemyTurn,
         const MethodInfo *method)
 {
-  BaseBattleEvent___c__DisplayClass44_0_o *v7; // x19
-  BattleData_o *Data_k__BackingField; // x0
+  __int64 v7; // x1
+  __int64 v8; // x1
   __int64 v9; // x1
-  BattleData_o *v10; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v11; // x20
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x19
+  BattleData_o *Data_k__BackingField; // x0
+  __int64 v16; // x1
+  int32_t v17; // w2
+  int32_t v18; // w3
+  int32_t v19; // w2
+  int32_t v20; // w3
+  BattleData_o *v21; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v22; // x20
   System_Collections_Generic_IEnumerable_TSource__o *SubServantArray; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v13; // x20
-  System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *v14; // x21
-  System_Collections_Generic_IEnumerable_T__o *v15; // x20
-  System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *v16; // x21
+  System_Collections_Generic_IEnumerable_TSource__o *v24; // x20
+  System_Func_object__bool__o *v25; // x21
+  System_Collections_Generic_IEnumerable_T__o *v26; // x20
+  System_Action_object__o *v27; // x21
 
-  if ( (byte_4388C93 & 1) == 0 )
+  if ( (byte_48E4C66 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Action_BattleServantData___ctor__);
-    sub_B775C4(&System_Action_BattleServantData__TypeInfo);
-    sub_B775C4(&Method_BasicHelper_ForEach_BattleServantData___);
-    sub_B775C4(&Method_System_Linq_Enumerable_Concat_BattleServantData___);
-    sub_B775C4(&Method_System_Linq_Enumerable_Where_BattleServantData___);
-    sub_B775C4(&Method_System_Func_BattleServantData__bool___ctor__);
-    sub_B775C4(&System_Func_BattleServantData__bool__TypeInfo);
-    sub_B775C4(&Method_BaseBattleEvent___c__DisplayClass44_0__ProgressNoExecJoinServantsBuff_b__0__);
-    sub_B775C4(&Method_BaseBattleEvent___c__DisplayClass44_0__ProgressNoExecJoinServantsBuff_b__1__);
-    sub_B775C4(&BaseBattleEvent___c__DisplayClass44_0_TypeInfo);
-    byte_4388C93 = 1;
+    sub_1B00CCC(&System_Action_BattleServantData__TypeInfo, execUniqueIds);
+    sub_1B00CCC(&Method_BasicHelper_ForEach_BattleServantData___, v7);
+    sub_1B00CCC(&Method_System_Linq_Enumerable_Concat_BattleServantData___, v8);
+    sub_1B00CCC(&Method_System_Linq_Enumerable_Where_BattleServantData___, v9);
+    sub_1B00CCC(&System_Func_BattleServantData__bool__TypeInfo, v10);
+    sub_1B00CCC(&Method_BaseBattleEvent___c__DisplayClass44_0__ProgressNoExecJoinServantsBuff_b__0__, v11);
+    sub_1B00CCC(&Method_BaseBattleEvent___c__DisplayClass44_0__ProgressNoExecJoinServantsBuff_b__1__, v12);
+    sub_1B00CCC(&BaseBattleEvent___c__DisplayClass44_0_TypeInfo, v13);
+    byte_48E4C66 = 1;
   }
-  v7 = (BaseBattleEvent___c__DisplayClass44_0_o *)sub_B77694(BaseBattleEvent___c__DisplayClass44_0_TypeInfo);
-  BaseBattleEvent___c__DisplayClass44_0___ctor(v7, 0LL);
-  if ( !v7 )
+  v14 = sub_1B00F18(BaseBattleEvent___c__DisplayClass44_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v14, 0LL);
+  if ( !v14 )
     goto LABEL_7;
-  v7->fields.__4__this = this;
-  sub_B77560(&v7->fields);
-  v7->fields.execUniqueIds = execUniqueIds;
-  sub_B77560(&v7->fields.execUniqueIds);
-  v7->fields.isEndEnemyTurn = isEndEnemyTurn;
+  *(_QWORD *)(v14 + 16) = this;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v14 + 16), (int32_t)this, v17, v18);
+  *(_QWORD *)(v14 + 24) = execUniqueIds;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v14 + 24), (int32_t)execUniqueIds, v19, v20);
+  *(_BYTE *)(v14 + 32) = isEndEnemyTurn;
   Data_k__BackingField = this->fields._Data_k__BackingField;
   if ( !Data_k__BackingField
     || (Data_k__BackingField = (BattleData_o *)BattleData__GetSubServantArray(Data_k__BackingField, 0, 0LL),
-        (v10 = this->fields._Data_k__BackingField) == 0LL) )
+        (v21 = this->fields._Data_k__BackingField) == 0LL) )
   {
 LABEL_7:
-    sub_B7769C(Data_k__BackingField, v9);
+    sub_1B00F28(Data_k__BackingField, v16);
   }
-  v11 = (System_Collections_Generic_IEnumerable_TSource__o *)Data_k__BackingField;
-  SubServantArray = (System_Collections_Generic_IEnumerable_TSource__o *)BattleData__GetSubServantArray(v10, 1, 0LL);
-  v13 = System_Linq_Enumerable__Concat_WarBoardTaskBase_(
-          v11,
+  v22 = (System_Collections_Generic_IEnumerable_TSource__o *)Data_k__BackingField;
+  SubServantArray = (System_Collections_Generic_IEnumerable_TSource__o *)BattleData__GetSubServantArray(v21, 1, 0LL);
+  v24 = System_Linq_Enumerable__Concat_object_(
+          v22,
           SubServantArray,
-          (const MethodInfo_1D2A114 *)Method_System_Linq_Enumerable_Concat_BattleServantData___);
-  v14 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B77694(System_Func_BattleServantData__bool__TypeInfo);
-  System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool____ctor(
-    v14,
-    (Il2CppObject *)v7,
+          (const MethodInfo_2D7A0FC *)Method_System_Linq_Enumerable_Concat_BattleServantData___);
+  v25 = (System_Func_object__bool__o *)sub_1B00F18(System_Func_BattleServantData__bool__TypeInfo);
+  System_Func_object__bool____ctor(
+    v25,
+    (Il2CppObject *)v14,
     Method_BaseBattleEvent___c__DisplayClass44_0__ProgressNoExecJoinServantsBuff_b__0__,
-    (const MethodInfo_29E92C4 *)Method_System_Func_BattleServantData__bool___ctor__);
-  v15 = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__Where_WarBoardManager_WarBoardOnboardSkillTarget_(
-                                                         v13,
-                                                         (System_Func_TSource__bool__o *)v14,
-                                                         (const MethodInfo_1D41C94 *)Method_System_Linq_Enumerable_Where_BattleServantData___);
-  v16 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B77694(System_Action_BattleServantData__TypeInfo);
-  System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData____ctor(
-    v16,
-    (Il2CppObject *)v7,
+    0LL);
+  v26 = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__Where_object_(
+                                                         v24,
+                                                         (System_Func_TSource__bool__o *)v25,
+                                                         (const MethodInfo_2D9D054 *)Method_System_Linq_Enumerable_Where_BattleServantData___);
+  v27 = (System_Action_object__o *)sub_1B00F18(System_Action_BattleServantData__TypeInfo);
+  System_Action_object____ctor(
+    v27,
+    (Il2CppObject *)v14,
     Method_BaseBattleEvent___c__DisplayClass44_0__ProgressNoExecJoinServantsBuff_b__1__,
-    (const MethodInfo_26A0868 *)Method_System_Action_BattleServantData___ctor__);
-  BasicHelper__ForEach_DrawLotsDisplayMessage_DisplayedInGroup_SaveData_(
-    v15,
-    (System_Action_T__o *)v16,
-    (const MethodInfo_1C676E8 *)Method_BasicHelper_ForEach_BattleServantData___);
+    0LL);
+  BasicHelper__ForEach_object_(
+    v26,
+    (System_Action_T__o *)v27,
+    (const MethodInfo_2D50464 *)Method_BasicHelper_ForEach_BattleServantData___);
 }
 
 
@@ -457,7 +466,7 @@ BattleEntity_o *__fastcall BaseBattleEvent__get_BattleEnt(BaseBattleEvent_o *thi
 
   Data_k__BackingField = this->fields._Data_k__BackingField;
   if ( !Data_k__BackingField )
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   return Data_k__BackingField->fields.battle_ent;
 }
 
@@ -469,7 +478,7 @@ BattleInfoData_o *__fastcall BaseBattleEvent__get_BattleInfo(BaseBattleEvent_o *
 
   Data_k__BackingField = this->fields._Data_k__BackingField;
   if ( !Data_k__BackingField || (battle_ent = Data_k__BackingField->fields.battle_ent) == 0LL )
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   return battle_ent->fields.battleInfo;
 }
 
@@ -482,19 +491,19 @@ BattleData_o *__fastcall BaseBattleEvent__get_Data(BaseBattleEvent_o *this, cons
 
 bool __fastcall BaseBattleEvent__get_IsBattleEndReduceBuffTurn(BaseBattleEvent_o *this, const MethodInfo *method)
 {
-  int32_t battleEndReduceBuffTurnFlag; // w0
+  int32_t battleEndReduceBuffTurnFlag; // w8
   int32_t Value; // w0
 
-  if ( (byte_4388C90 & 1) == 0 )
+  if ( (byte_48E4C63 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_15588/*"WAR_BOARD_BATTLE_END_REDUCE_BUFF_TURN_FLAG"*/);
-    byte_4388C90 = 1;
+    sub_1B00CCC(&StringLiteral_15250/*"WAR_BOARD_BATTLE_END_REDUCE_BUFF_TURN_FLAG"*/, method);
+    byte_48E4C63 = 1;
   }
   battleEndReduceBuffTurnFlag = this->fields.battleEndReduceBuffTurnFlag;
   if ( (battleEndReduceBuffTurnFlag & 0x80000000) != 0 )
   {
-    Value = ConstantMaster__getValue((System_String_o *)StringLiteral_15588/*"WAR_BOARD_BATTLE_END_REDUCE_BUFF_TURN_FLAG"*/, 0LL);
-    battleEndReduceBuffTurnFlag = UnityEngine_Mathf__Max_41473772(0, Value, 0LL);
+    Value = ConstantMaster__getValue((System_String_o *)StringLiteral_15250/*"WAR_BOARD_BATTLE_END_REDUCE_BUFF_TURN_FLAG"*/, 0LL);
+    battleEndReduceBuffTurnFlag = Value & ~(Value >> 31);
     this->fields.battleEndReduceBuffTurnFlag = battleEndReduceBuffTurnFlag;
   }
   return battleEndReduceBuffTurnFlag > 0;
@@ -509,8 +518,10 @@ bool __fastcall BaseBattleEvent__get_IsPrecedingPlayer(BaseBattleEvent_o *this, 
 
 void __fastcall BaseBattleEvent__set_Data(BaseBattleEvent_o *this, BattleData_o *value, const MethodInfo *method)
 {
+  int32_t v3; // w3
+
   this->fields._Data_k__BackingField = value;
-  sub_B77560(&this->fields);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -533,14 +544,14 @@ bool __fastcall BaseBattleEvent___c__DisplayClass44_0___ProgressNoExecJoinServan
   _BOOL4 v7; // w0
 
   v4 = this;
-  if ( (byte_4389F6C & 1) == 0 )
+  if ( (byte_48E4C68 & 1) == 0 )
   {
-    this = (BaseBattleEvent___c__DisplayClass44_0_o *)sub_B775C4(&Method_System_Array_IndexOf_int___);
-    byte_4389F6C = 1;
+    this = (BaseBattleEvent___c__DisplayClass44_0_o *)sub_1B00CCC(&Method_System_Array_IndexOf_int___, x);
+    byte_48E4C68 = 1;
   }
   _4__this = v4->fields.__4__this;
   if ( !_4__this || (Data_k__BackingField = _4__this->fields._Data_k__BackingField) == 0LL || !x )
-    sub_B7769C(this, x);
+    sub_1B00F28(this, x);
   if ( BattleServantData__IsMoveToSubMember(
          x,
          Data_k__BackingField->fields.wavecount,
@@ -550,7 +561,7 @@ bool __fastcall BaseBattleEvent___c__DisplayClass44_0___ProgressNoExecJoinServan
     return (unsigned int)System_Array__IndexOf_int_(
                            v4->fields.execUniqueIds,
                            x->fields.uniqueId,
-                           (const MethodInfo_2005430 *)Method_System_Array_IndexOf_int___) >> 31;
+                           (const MethodInfo_2E47BB4 *)Method_System_Array_IndexOf_int___) >> 31;
   }
   else
   {
@@ -574,7 +585,7 @@ void __fastcall BaseBattleEvent___c__DisplayClass44_0___ProgressNoExecJoinServan
     || (Data_k__BackingField = _4__this->fields._Data_k__BackingField) == 0LL
     || (buffData = x->fields.buffData) == 0LL )
   {
-    sub_B7769C(this, x);
+    sub_1B00F28(this, x);
   }
   BattleBuffData__turnProgressing(
     buffData,

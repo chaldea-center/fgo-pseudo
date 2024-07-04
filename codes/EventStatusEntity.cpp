@@ -1,27 +1,28 @@
 void __fastcall EventStatusEntity___ctor(EventStatusEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438ED1A & 1) == 0 )
+  if ( (byte_48E2974 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    byte_438ED1A = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
+    byte_48E2974 = 1;
   }
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventStatusEntity__CreatePK(int32_t eventId, int32_t statusId, const MethodInfo *method)
 {
-  if ( (byte_438ED19 & 1) == 0 )
+  if ( (byte_48E2973 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_438ED19 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&statusId);
+    byte_48E2973 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            eventId,
            statusId,
-           (const MethodInfo_1D171BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2D60E34 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -35,20 +36,15 @@ System_String_o *__fastcall EventStatusEntity__CreatePrimaryKey(EventStatusEntit
 
 int32_t __fastcall EventStatusEntity__GetDay(EventStatusEntity_o *this, const MethodInfo *method)
 {
-  int32_t status; // w8
-  int32_t result; // w0
-  unsigned int v4; // w10
+  int v2; // w8
 
-  status = this->fields.status;
-  for ( result = 1; ; ++result )
+  v2 = 2;
+  while ( (((unsigned int)this->fields.status >> v2) & 1) == 0 )
   {
-    v4 = result + 1;
-    if ( (status & (1 << (result + 1))) != 0 )
-      break;
-    if ( v4 >= 8 )
+    if ( ++v2 == 9 )
       return 0;
   }
-  return result;
+  return v2 - 1;
 }
 
 

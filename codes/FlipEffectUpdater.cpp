@@ -11,112 +11,92 @@ void __fastcall FlipEffectUpdater__LateUpdate(FlipEffectUpdater_o *this, const M
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *ConnectTarget; // x19
   UnityEngine_Transform_o **p_mTrans; // x19
-  UnityEngine_Object_o *mTrans; // x21
+  UnityEngine_Object_o *mTrans; // x20
   __int64 v6; // x1
   struct UnityEngine_Transform_o *transform; // x0
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
+  int32_t v8; // w2
+  int32_t v9; // w3
   UnityEngine_Transform_o *parent; // x0
-  UnityEngine_Transform_o *v15; // x21
-  UnityEngine_Transform_o *v16; // x20
-  int v17; // s0
-  UnityEngine_Transform_o *v20; // x20
-  int v21; // s0
-  UnityEngine_Transform_o *v24; // x20
-  int v25; // s0
+  UnityEngine_Transform_o *v11; // x20
+  UnityEngine_Transform_o *v12; // x21
+  UnityEngine_Transform_o *v13; // x21
+  UnityEngine_Transform_o *v14; // x21
 
-  if ( (byte_4389748 & 1) == 0 )
+  if ( (byte_48E1D15 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_4389748 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    byte_48E1D15 = 1;
   }
   ConnectTarget = (UnityEngine_Object_o *)this->fields.ConnectTarget;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(ConnectTarget, 0LL, 0LL) )
   {
     p_mTrans = &this->fields.mTrans;
     mTrans = (UnityEngine_Object_o *)this->fields.mTrans;
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
     if ( UnityEngine_Object__op_Equality(mTrans, 0LL, 0LL) )
     {
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
       this->fields.mTrans = transform;
-      sub_B77560(
-        (BattleServantConfConponent_o *)&this->fields.mTrans,
-        (System_Int32_array **)transform,
-        v8,
-        v9,
-        v10,
-        v11,
-        v12,
-        v13);
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.mTrans, (int32_t)transform, v8, v9);
     }
     parent = *p_mTrans;
     if ( !*p_mTrans )
-      goto LABEL_20;
+      goto LABEL_24;
     parent = UnityEngine_Transform__get_parent(parent, 0LL);
     if ( !*p_mTrans )
-      goto LABEL_20;
-    v15 = parent;
+      goto LABEL_24;
+    v11 = parent;
     UnityEngine_Transform__set_parent(*p_mTrans, this->fields.ConnectTarget, 0LL);
-    v16 = this->fields.mTrans;
-    *(UnityEngine_Vector3_o *)&v17 = UnityEngine_Vector3__get_zero(0LL);
-    if ( !v16 )
-      goto LABEL_20;
-    UnityEngine_Transform__set_localPosition(v16, *(UnityEngine_Vector3_o *)&v17, 0LL);
-    v20 = *p_mTrans;
-    *(UnityEngine_Vector3_o *)&v21 = UnityEngine_Vector3__get_zero(0LL);
-    if ( !v20
-      || (UnityEngine_Transform__set_localEulerAngles(v20, *(UnityEngine_Vector3_o *)&v21, 0LL),
-          v24 = *p_mTrans,
-          *(UnityEngine_Vector3_o *)&v25 = UnityEngine_Vector3__get_one(0LL),
-          !v24)
-      || (UnityEngine_Transform__set_localScale(v24, *(UnityEngine_Vector3_o *)&v25, 0LL), (parent = *p_mTrans) == 0LL) )
+    v12 = this->fields.mTrans;
+    if ( !byte_48DD9F1 )
     {
-LABEL_20:
-      sub_B7769C(parent, v6);
+      parent = (UnityEngine_Transform_o *)sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, v6);
+      byte_48DD9F1 = 1;
     }
-    UnityEngine_Transform__set_parent(parent, v15, 0LL);
+    if ( !v12 )
+      goto LABEL_24;
+    UnityEngine_Transform__set_localPosition(v12, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
+    v13 = *p_mTrans;
+    if ( !byte_48DD9F1 )
+    {
+      parent = (UnityEngine_Transform_o *)sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, v6);
+      byte_48DD9F1 = 1;
+    }
+    if ( !v13 )
+      goto LABEL_24;
+    UnityEngine_Transform__set_localEulerAngles(v13, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
+    v14 = *p_mTrans;
+    if ( !byte_48DD9F6 )
+    {
+      parent = (UnityEngine_Transform_o *)sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, v6);
+      byte_48DD9F6 = 1;
+    }
+    if ( !v14
+      || (UnityEngine_Transform__set_localScale(v14, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL),
+          (parent = *p_mTrans) == 0LL) )
+    {
+LABEL_24:
+      sub_1B00F28(parent, v6);
+    }
+    UnityEngine_Transform__set_parent(parent, v11, 0LL);
   }
 }
 
 
 void __fastcall FlipEffectUpdater__Start(FlipEffectUpdater_o *this, const MethodInfo *method)
 {
-  struct UnityEngine_Transform_o *transform; // x1
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
+  struct UnityEngine_Transform_o *transform; // x0
+  int32_t v4; // w2
+  int32_t v5; // w3
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   this->fields.mTrans = transform;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.mTrans,
-    (System_Int32_array **)transform,
-    v4,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5);
 }

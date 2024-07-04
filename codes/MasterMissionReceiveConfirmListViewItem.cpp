@@ -4,24 +4,12 @@ void __fastcall MasterMissionReceiveConfirmListViewItem___ctor(
         System_String_o *message,
         const MethodInfo *method)
 {
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  int32_t v6; // w2
+  int32_t v7; // w3
 
-  ListViewItem___ctor_24167012((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_39415512((ListViewItem_o *)this, index, 0LL);
   this->fields._Message_k__BackingField = message;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._Message_k__BackingField,
-    (System_Int32_array **)message,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10,
-    v11);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields._Message_k__BackingField, (int32_t)message, v6, v7);
 }
 
 
@@ -38,20 +26,12 @@ void __fastcall MasterMissionReceiveConfirmListViewItem__set_Message(
         System_String_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._Message_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._Message_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._Message_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }

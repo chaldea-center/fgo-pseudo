@@ -1,23 +1,25 @@
 void __fastcall DeckWaveServantData___ctor(DeckWaveServantData_o *this, const MethodInfo *method)
 {
-  BalanceConfig_c *v3; // x0
+  __int64 v3; // x1
+  BalanceConfig_c *v4; // x0
+  struct System_Int32_array *v5; // x0
+  int32_t v6; // w2
+  int32_t v7; // w3
 
-  if ( (byte_4386E22 & 1) == 0 )
+  if ( (byte_48E23C2 & 1) == 0 )
   {
-    sub_B775C4(&BalanceConfig_TypeInfo);
-    sub_B775C4(&int___TypeInfo);
-    byte_4386E22 = 1;
+    sub_1B00CCC(&BalanceConfig_TypeInfo, method);
+    sub_1B00CCC(&int___TypeInfo, v3);
+    byte_48E23C2 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v3 = BalanceConfig_TypeInfo;
-  if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !BalanceConfig_TypeInfo->_2.cctor_finished )
+  v4 = BalanceConfig_TypeInfo;
+  if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v3 = BalanceConfig_TypeInfo;
+    v4 = BalanceConfig_TypeInfo;
   }
-  this->fields.uniqueIds = (struct System_Int32_array *)sub_B775DC(
-                                                          int___TypeInfo,
-                                                          (unsigned int)v3->static_fields->DeckMainMemberMax);
-  sub_B77560(&this->fields.uniqueIds);
+  v5 = (struct System_Int32_array *)sub_1B00D74(int___TypeInfo, (unsigned int)v4->static_fields->DeckMainMemberMax);
+  this->fields.uniqueIds = v5;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.uniqueIds, (int32_t)v5, v6, v7);
 }

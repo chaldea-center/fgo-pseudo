@@ -8,19 +8,17 @@ System_String_o *__fastcall UserPresentHistoryRequest__getURL(
         UserPresentHistoryRequest_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_43892DE & 1) == 0 )
+  if ( (byte_48E40D9 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&StringLiteral_21975/*"present/history"*/);
-    byte_43892DE = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_22279/*"present/history"*/, v2);
+    byte_48E40D9 = 1;
   }
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_44901936(BaseUrl, (System_String_o *)StringLiteral_21975/*"present/history"*/, 0LL);
+  return System_String__Concat_60325748(BaseUrl, (System_String_o *)StringLiteral_22279/*"present/history"*/, 0LL);
 }

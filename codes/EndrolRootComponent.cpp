@@ -1,30 +1,18 @@
 void __fastcall EndrolRootComponent___ctor(EndrolRootComponent_o *this, const MethodInfo *method)
 {
   struct System_Int32_array *v3; // x0
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
+  int32_t v4; // w2
+  int32_t v5; // w3
 
-  if ( (byte_438FA99 & 1) == 0 )
+  if ( (byte_48E623D & 1) == 0 )
   {
-    sub_B775C4(&int___TypeInfo);
-    byte_438FA99 = 1;
+    sub_1B00CCC(&int___TypeInfo, method);
+    byte_48E623D = 1;
   }
   this->fields.nowDispIndex = -1;
-  v3 = (struct System_Int32_array *)sub_B775DC(int___TypeInfo, 2LL);
+  v3 = (struct System_Int32_array *)sub_1B00D74(int___TypeInfo, 2LL);
   this->fields.effectWave = v3;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.effectWave,
-    (System_Int32_array **)v3,
-    v4,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.effectWave, (int32_t)v3, v4, v5);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
 
@@ -34,26 +22,31 @@ int32_t __fastcall EndrolRootComponent__CheckNextDispContent(
         System_String_o *nextDispText,
         const MethodInfo *method)
 {
-  if ( (byte_438FA93 & 1) == 0 )
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+
+  if ( (byte_48E6238 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_17864/*"column=3"*/);
-    sub_B775C4(&StringLiteral_17863/*"column=2"*/);
-    sub_B775C4(&StringLiteral_1307/*"<"*/);
-    sub_B775C4(&StringLiteral_1567/*"@"*/);
-    this = (EndrolRootComponent_o *)sub_B775C4(&StringLiteral_7653/*"Image"*/);
-    byte_438FA93 = 1;
+    sub_1B00CCC(&StringLiteral_17819/*"column=3"*/, nextDispText);
+    sub_1B00CCC(&StringLiteral_17818/*"column=2"*/, v4);
+    sub_1B00CCC(&StringLiteral_1593/*"<"*/, v5);
+    sub_1B00CCC(&StringLiteral_1882/*"@"*/, v6);
+    this = (EndrolRootComponent_o *)sub_1B00CCC(&StringLiteral_7391/*"Image"*/, v7);
+    byte_48E6238 = 1;
   }
   if ( !nextDispText )
-    sub_B7769C(this, nextDispText);
-  if ( System_String__Contains(nextDispText, (System_String_o *)StringLiteral_7653/*"Image"*/, 0LL) )
+    sub_1B00F28(this, nextDispText);
+  if ( System_String__Contains(nextDispText, (System_String_o *)StringLiteral_7391/*"Image"*/, 0LL) )
     return 2;
-  if ( System_String__StartsWith(nextDispText, (System_String_o *)StringLiteral_1567/*"@"*/, 0LL) )
+  if ( System_String__StartsWith(nextDispText, (System_String_o *)StringLiteral_1882/*"@"*/, 0LL) )
     return 3;
-  if ( !System_String__StartsWith(nextDispText, (System_String_o *)StringLiteral_1307/*"<"*/, 0LL) )
+  if ( !System_String__StartsWith(nextDispText, (System_String_o *)StringLiteral_1593/*"<"*/, 0LL) )
     return 1;
-  if ( System_String__Contains(nextDispText, (System_String_o *)StringLiteral_17863/*"column=2"*/, 0LL) )
+  if ( System_String__Contains(nextDispText, (System_String_o *)StringLiteral_17818/*"column=2"*/, 0LL) )
     return 5;
-  if ( System_String__Contains(nextDispText, (System_String_o *)StringLiteral_17864/*"column=3"*/, 0LL) )
+  if ( System_String__Contains(nextDispText, (System_String_o *)StringLiteral_17819/*"column=3"*/, 0LL) )
     return 5;
   return 4;
 }
@@ -61,702 +54,565 @@ int32_t __fastcall EndrolRootComponent__CheckNextDispContent(
 
 void __fastcall EndrolRootComponent__CheckOrderEndrol(EndrolRootComponent_o *this, const MethodInfo *method)
 {
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v3; // x21
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
-  __int64 v10; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
   __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  __int64 v18; // x1
+  __int64 v19; // x1
+  __int64 v20; // x1
+  __int64 v21; // x1
+  System_Collections_Generic_List_object__o *v22; // x21
+  struct System_Collections_Generic_List_string__o **p_creditText; // x20
+  int32_t v24; // w2
+  int32_t v25; // w3
+  System_String_o *klass; // x0
+  __int64 v27; // x1
   int32_t txtLength; // w8
-  System_String_o **v13; // x24
-  char v14; // w25
-  int32_t i; // w26
-  struct System_String_array *v16; // x8
-  struct System_String_array *v17; // x8
-  System_String_o *v18; // x23
-  struct System_String_array *v19; // x8
-  System_String_o *v20; // x23
-  System_String_o *v21; // x23
-  struct System_Int32_array *effectWave; // x20
-  System_String_o **v23; // x22
-  System_String_o *v24; // x24
-  struct System_Int32_array *v25; // x20
-  System_String_o *v26; // x24
-  struct System_String_array *v27; // x9
-  char v28; // w8
-  System_Int32_array **v29; // x0
-  System_String_array **v30; // x2
-  System_String_array **v31; // x3
-  System_Boolean_array **v32; // x4
-  System_Int32_array **v33; // x5
-  System_Int32_array *v34; // x6
-  System_Int32_array *v35; // x7
-  System_String_o *klass; // x23
-  System_String_array **v37; // x2
-  System_String_array **v38; // x3
-  System_Boolean_array **v39; // x4
-  System_Int32_array **v40; // x5
-  System_Int32_array *v41; // x6
-  System_Int32_array *v42; // x7
-  struct System_String_o *v43; // x1
-  struct System_String_array *v44; // x8
-  System_String_o *v45; // x23
-  struct System_String_array *v46; // x8
-  System_String_o *v47; // x23
-  struct System_String_array *v48; // x8
-  System_String_o *v49; // x23
-  System_String_array **v50; // x2
-  System_String_array **v51; // x3
-  System_Boolean_array **v52; // x4
-  System_Int32_array **v53; // x5
-  System_Int32_array *v54; // x6
-  System_Int32_array *v55; // x7
-  System_Int32_array **v56; // x1
+  char v29; // w24
+  il2cpp_array_size_t v30; // w26
   struct System_String_array *allCreditText; // x8
-  struct System_String_array *v58; // x8
-  struct System_String_array *v59; // x8
-  struct System_String_array *v60; // x8
-  System_String_o **v61; // x22
+  struct System_String_array *v32; // x8
+  struct System_String_array *v33; // x8
+  struct System_String_array *v34; // x9
+  char v35; // w8
+  struct System_String_array *v36; // x8
+  int32_t v37; // w2
+  int32_t v38; // w3
+  System_Collections_Generic_List_object__o *v39; // x8
+  struct System_Object_array *items; // x9
+  _QWORD *v41; // x10
+  __int64 size; // x11
+  System_String_o *v43; // x1
+  Il2CppClass **v44; // x0
+  struct System_String_array *v45; // x9
+  char v46; // w8
+  struct System_String_array *v47; // x8
   int32_t defaultFontSize; // w24
-  struct System_String_array *v63; // x8
-  System_String_o *v64; // x23
-  int v65; // w8
-  _DWORD *v66; // x23
-  unsigned int v67; // w20
-  _DWORD *v68; // x25
-  BattleServantConfConponent_o *v69; // x25
-  __int64 v70; // t1
-  System_String_array **v71; // x2
-  System_String_array **v72; // x3
-  System_Boolean_array **v73; // x4
-  System_Int32_array **v74; // x5
-  System_Int32_array *v75; // x6
-  System_Int32_array *v76; // x7
-  System_Int32_array **v77; // x24
-  System_String_array **v78; // x2
-  System_String_array **v79; // x3
-  System_Boolean_array **v80; // x4
-  System_Int32_array **v81; // x5
-  System_Int32_array *v82; // x6
-  System_Int32_array *v83; // x7
-  System_Int32_array **v84; // x24
-  System_String_o *v85; // x24
-  float v86; // s0
-  struct System_String_array *v87; // x8
-  struct System_String_array *v88; // x8
-  System_String_o *v89; // x23
-  struct System_String_array *v90; // x8
-  System_String_o *v91; // x23
-  __int64 v92; // x0
-  __int64 v93; // x0
-  BattleServantConfConponent_o *p_defaultTextColor; // [xsp+0h] [xbp-70h]
-  BattleServantConfConponent_o *p_bgmName; // [xsp+8h] [xbp-68h]
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o **p_creditText; // [xsp+18h] [xbp-58h]
+  struct System_String_array *v49; // x8
+  int v50; // w8
+  System_String_o *v51; // x23
+  unsigned int v52; // w27
+  System_String_c **v53; // x25
+  ServantStatusBattleListViewItem_o *v54; // x25
+  System_String_o *v55; // t1
+  int32_t v56; // w2
+  int32_t v57; // w3
+  int32_t v58; // w2
+  int32_t v59; // w3
+  struct System_String_array *v60; // x8
+  struct System_String_array *v61; // x9
+  char v62; // w8
+  struct System_String_array *v63; // x9
+  char v64; // w8
+  System_String_o *fields; // x23
+  float v66; // s0
+  struct System_Int32_array *effectWave; // x25
+  struct System_Int32_array *v68; // x25
+  struct System_String_array *v69; // x9
+  char v70; // w8
+  System_String_o *v71; // x0
+  int32_t v72; // w2
+  int32_t v73; // w3
+  int32_t v74; // w2
+  int32_t v75; // w3
+  struct System_String_o *v76; // x1
+  struct System_String_array *v77; // x9
+  char v78; // w8
+  struct System_String_array *v79; // x9
+  char v80; // w8
+  struct System_String_array *v81; // x8
+  int32_t v82; // w2
+  int32_t v83; // w3
+  ServantStatusBattleListViewItem_c *v84; // x1
+  ServantStatusBattleListViewItem_o *p_defaultTextColor; // [xsp+8h] [xbp-78h]
+  ServantStatusBattleListViewItem_o *p_bgmName; // [xsp+18h] [xbp-68h]
 
-  if ( (byte_438FA98 & 1) == 0 )
+  if ( (byte_48E623C & 1) == 0 )
   {
-    sub_B775C4(&char___TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_string___ctor___69407008);
-    sub_B775C4(&System_Collections_Generic_List_string__TypeInfo);
-    sub_B775C4(&StringLiteral_18587/*"effect"*/);
-    sub_B775C4(&StringLiteral_6889/*"FontSize"*/);
-    sub_B775C4(&StringLiteral_22394/*"scroll"*/);
-    sub_B775C4(&StringLiteral_22739/*"start"*/);
-    sub_B775C4(&StringLiteral_17037/*"bgm"*/);
-    sub_B775C4(&StringLiteral_18301/*"default_text_color"*/);
-    sub_B775C4(&StringLiteral_1307/*"<"*/);
-    sub_B775C4(&StringLiteral_9562/*"NULL"*/);
-    sub_B775C4(&StringLiteral_23673/*"wait"*/);
-    sub_B775C4(&StringLiteral_18709/*"end"*/);
-    sub_B775C4(&StringLiteral_1567/*"@"*/);
-    sub_B775C4(&StringLiteral_18300/*"default_font_size"*/);
-    sub_B775C4(&StringLiteral_17024/*"begine_time"*/);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    sub_B775C4(&StringLiteral_69/*"\r"*/);
-    sub_B775C4(&StringLiteral_1542/*">"*/);
-    sub_B775C4(&StringLiteral_18299/*"default_clearance"*/);
-    byte_438FA98 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__Add__, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string___ctor__, v3);
+    sub_1B00CCC(&System_Collections_Generic_List_string__TypeInfo, v4);
+    sub_1B00CCC(&StringLiteral_18616/*"effect"*/, v5);
+    sub_1B00CCC(&StringLiteral_6701/*"FontSize"*/, v6);
+    sub_1B00CCC(&StringLiteral_22731/*"scroll"*/, v7);
+    sub_1B00CCC(&StringLiteral_23133/*"start"*/, v8);
+    sub_1B00CCC(&StringLiteral_16938/*"bgm"*/, v9);
+    sub_1B00CCC(&StringLiteral_18293/*"default_text_color"*/, v10);
+    sub_1B00CCC(&StringLiteral_1593/*"<"*/, v11);
+    sub_1B00CCC(&StringLiteral_9234/*"NULL"*/, v12);
+    sub_1B00CCC(&StringLiteral_24237/*"wait"*/, v13);
+    sub_1B00CCC(&StringLiteral_18747/*"end"*/, v14);
+    sub_1B00CCC(&StringLiteral_1882/*"@"*/, v15);
+    sub_1B00CCC(&StringLiteral_18292/*"default_font_size"*/, v16);
+    sub_1B00CCC(&StringLiteral_16924/*"begine_time"*/, v17);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v18);
+    sub_1B00CCC(&StringLiteral_86/*"\r"*/, v19);
+    sub_1B00CCC(&StringLiteral_1857/*">"*/, v20);
+    sub_1B00CCC(&StringLiteral_18291/*"default_clearance"*/, v21);
+    byte_48E623C = 1;
   }
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_string__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v3,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_string___ctor___69407008);
-  this->fields.creditText = (struct System_Collections_Generic_List_string__o *)v3;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.creditText,
-    (System_Int32_array **)v3,
-    v4,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9);
+  v22 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_string__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v22,
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_string___ctor__);
+  this->fields.creditText = (struct System_Collections_Generic_List_string__o *)v22;
+  p_creditText = &this->fields.creditText;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.creditText, (int32_t)v22, v24, v25);
   txtLength = this->fields.txtLength;
-  p_creditText = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o **)&this->fields.creditText;
   this->fields.lastPostion = 0.0;
   if ( txtLength >= 1 )
   {
-    p_bgmName = (BattleServantConfConponent_o *)&this->fields.bgmName;
-    p_defaultTextColor = (BattleServantConfConponent_o *)&this->fields.defaultTextColor;
-    v13 = (System_String_o **)&StringLiteral_1567/*"@"*/;
-    v14 = 0;
-    for ( i = 0; i < this->fields.txtLength; ++i )
+    v29 = 0;
+    v30 = 0;
+    p_defaultTextColor = (ServantStatusBattleListViewItem_o *)&this->fields.defaultTextColor;
+    p_bgmName = (ServantStatusBattleListViewItem_o *)&this->fields.bgmName;
+    while ( 1 )
     {
       allCreditText = this->fields.allCreditText;
       if ( !allCreditText )
-        goto LABEL_173;
-      if ( i >= allCreditText->max_length )
-        goto LABEL_174;
-      v10 = (__int64)allCreditText->m_Items[i];
-      if ( !v10 )
-LABEL_173:
-        sub_B7769C(v10, v11);
-      v10 = System_String__StartsWith((System_String_o *)v10, *v13, 0LL);
-      if ( (v10 & 1) != 0 )
+        goto LABEL_136;
+      if ( v30 >= allCreditText->max_length )
+        goto LABEL_137;
+      klass = allCreditText->m_Items[v30];
+      if ( !klass )
+LABEL_136:
+        sub_1B00F28(klass, v27);
+      klass = (System_String_o *)System_String__StartsWith(klass, (System_String_o *)StringLiteral_1882/*"@"*/, 0LL);
+      if ( ((unsigned __int8)klass & 1) == 0 )
+        break;
+      v32 = this->fields.allCreditText;
+      if ( !v32 )
+        goto LABEL_136;
+      if ( v30 >= v32->max_length )
+        goto LABEL_137;
+      klass = v32->m_Items[v30];
+      if ( !klass )
+        goto LABEL_136;
+      klass = (System_String_o *)System_String__Contains(klass, (System_String_o *)StringLiteral_23133/*"start"*/, 0LL);
+      if ( ((unsigned __int8)klass & 1) != 0 )
+        goto LABEL_65;
+      v33 = this->fields.allCreditText;
+      if ( !v33 )
+        goto LABEL_136;
+      if ( v30 >= v33->max_length )
+        goto LABEL_137;
+      klass = v33->m_Items[v30];
+      if ( !klass )
+        goto LABEL_136;
+      klass = (System_String_o *)System_String__Contains(klass, (System_String_o *)StringLiteral_16924/*"begine_time"*/, 0LL);
+      v34 = this->fields.allCreditText;
+      if ( !v34 )
+        goto LABEL_136;
+      if ( v30 >= v34->max_length )
+        goto LABEL_137;
+      v35 = (char)klass;
+      klass = v34->m_Items[v30];
+      if ( !klass )
+        goto LABEL_136;
+      if ( (v35 & 1) != 0 )
       {
-        v58 = this->fields.allCreditText;
-        if ( !v58 )
-          goto LABEL_173;
-        if ( i >= v58->max_length )
-          goto LABEL_174;
-        v10 = (__int64)v58->m_Items[i];
-        if ( !v10 )
-          goto LABEL_173;
-        v10 = System_String__Contains((System_String_o *)v10, (System_String_o *)StringLiteral_22739/*"start"*/, 0LL);
-        if ( (v10 & 1) != 0 )
-        {
-          v14 = 1;
-        }
-        else
-        {
-          v87 = this->fields.allCreditText;
-          if ( !v87 )
-            goto LABEL_173;
-          if ( i >= v87->max_length )
-            goto LABEL_174;
-          v10 = (__int64)v87->m_Items[i];
-          if ( !v10 )
-            goto LABEL_173;
-          v10 = System_String__Contains((System_String_o *)v10, (System_String_o *)StringLiteral_17024/*"begine_time"*/, 0LL);
-          v88 = this->fields.allCreditText;
-          if ( !v88 )
-            goto LABEL_173;
-          if ( i >= v88->max_length )
-            goto LABEL_174;
-          v89 = v88->m_Items[i];
-          if ( (v10 & 1) != 0 )
-          {
-            v10 = sub_B775DC(char___TypeInfo, 1LL);
-            if ( !v10 )
-              goto LABEL_173;
-            v11 = v10;
-            if ( !*(_DWORD *)(v10 + 24) )
-              goto LABEL_174;
-            *(_WORD *)(v10 + 32) = 61;
-            if ( !v89 )
-              goto LABEL_173;
-            v10 = (__int64)System_String__Split(v89, (System_Char_array *)v10, 0LL);
-            if ( !v10 )
-              goto LABEL_173;
-            if ( *(_DWORD *)(v10 + 24) <= 1u )
-              goto LABEL_174;
-            this->fields.startWaitTime = System_Single__Parse(*(System_String_o **)(v10 + 40), 0LL) / 10.0;
-          }
-          else
-          {
-            if ( !v89 )
-              goto LABEL_173;
-            v10 = System_String__Contains(v89, (System_String_o *)StringLiteral_22394/*"scroll"*/, 0LL);
-            v90 = this->fields.allCreditText;
-            if ( !v90 )
-              goto LABEL_173;
-            if ( i >= v90->max_length )
-              goto LABEL_174;
-            v91 = v90->m_Items[i];
-            if ( (v10 & 1) != 0 )
-            {
-              v10 = sub_B775DC(char___TypeInfo, 1LL);
-              if ( !v10 )
-                goto LABEL_173;
-              v11 = v10;
-              if ( !*(_DWORD *)(v10 + 24) )
-                goto LABEL_174;
-              *(_WORD *)(v10 + 32) = 61;
-              if ( !v91 )
-                goto LABEL_173;
-              v10 = (__int64)System_String__Split(v91, (System_Char_array *)v10, 0LL);
-              if ( !v10 )
-                goto LABEL_173;
-              if ( *(_DWORD *)(v10 + 24) <= 1u )
-                goto LABEL_174;
-              this->fields.endrolTotalTime = System_Single__Parse(*(System_String_o **)(v10 + 40), 0LL) / 10.0;
-            }
-            else
-            {
-              if ( !v91 )
-                goto LABEL_173;
-              v10 = System_String__Contains(v91, (System_String_o *)StringLiteral_18709/*"end"*/, 0LL);
-              if ( (v10 & 1) != 0 )
-              {
-LABEL_170:
-                v14 = 0;
-                continue;
-              }
-              v16 = this->fields.allCreditText;
-              if ( !v16 )
-                goto LABEL_173;
-              if ( i >= v16->max_length )
-                goto LABEL_174;
-              v10 = (__int64)v16->m_Items[i];
-              if ( !v10 )
-                goto LABEL_173;
-              v10 = System_String__Contains((System_String_o *)v10, (System_String_o *)StringLiteral_23673/*"wait"*/, 0LL);
-              v17 = this->fields.allCreditText;
-              if ( !v17 )
-                goto LABEL_173;
-              if ( i >= v17->max_length )
-                goto LABEL_174;
-              v18 = v17->m_Items[i];
-              if ( (v10 & 1) != 0 )
-              {
-                v10 = sub_B775DC(char___TypeInfo, 1LL);
-                if ( !v10 )
-                  goto LABEL_173;
-                v11 = v10;
-                if ( !*(_DWORD *)(v10 + 24) )
-                  goto LABEL_174;
-                *(_WORD *)(v10 + 32) = 61;
-                if ( !v18 )
-                  goto LABEL_173;
-                v10 = (__int64)System_String__Split(v18, (System_Char_array *)v10, 0LL);
-                if ( !v10 )
-                  goto LABEL_173;
-                if ( *(_DWORD *)(v10 + 24) <= 1u )
-                  goto LABEL_174;
-                this->fields.endWaitTime = System_Single__Parse(*(System_String_o **)(v10 + 40), 0LL) / 10.0;
-              }
-              else
-              {
-                if ( !v18 )
-                  goto LABEL_173;
-                v10 = System_String__Contains(v18, (System_String_o *)StringLiteral_18587/*"effect"*/, 0LL);
-                v19 = this->fields.allCreditText;
-                if ( !v19 )
-                  goto LABEL_173;
-                if ( i >= v19->max_length )
-                  goto LABEL_174;
-                v20 = v19->m_Items[i];
-                if ( (v10 & 1) != 0 )
-                {
-                  v10 = sub_B775DC(char___TypeInfo, 1LL);
-                  if ( !v10 )
-                    goto LABEL_173;
-                  v11 = v10;
-                  if ( !*(_DWORD *)(v10 + 24) )
-                    goto LABEL_174;
-                  *(_WORD *)(v10 + 32) = 61;
-                  if ( !v20 )
-                    goto LABEL_173;
-                  v10 = (__int64)System_String__Split(v20, (System_Char_array *)v10, 0LL);
-                  if ( !v10 )
-                    goto LABEL_173;
-                  if ( *(_DWORD *)(v10 + 24) <= 1u )
-                    goto LABEL_174;
-                  v21 = *(System_String_o **)(v10 + 40);
-                  v10 = sub_B775DC(char___TypeInfo, 1LL);
-                  if ( !v10 )
-                    goto LABEL_173;
-                  v11 = v10;
-                  if ( !*(_DWORD *)(v10 + 24) )
-                    goto LABEL_174;
-                  *(_WORD *)(v10 + 32) = 126;
-                  if ( !v21 )
-                    goto LABEL_173;
-                  v10 = (__int64)System_String__Split(v21, (System_Char_array *)v10, 0LL);
-                  if ( !v10 )
-                    goto LABEL_173;
-                  if ( !*(_DWORD *)(v10 + 24) )
-                    goto LABEL_174;
-                  this->fields.effectTime = System_Single__Parse(*(System_String_o **)(v10 + 32), 0LL) / 10.0;
-                  effectWave = this->fields.effectWave;
-                  v10 = sub_B775DC(char___TypeInfo, 1LL);
-                  if ( !v10 )
-                    goto LABEL_173;
-                  if ( !*(_DWORD *)(v10 + 24) )
-                    goto LABEL_174;
-                  *(_WORD *)(v10 + 32) = 126;
-                  v10 = (__int64)System_String__Split(v21, (System_Char_array *)v10, 0LL);
-                  if ( !v10 )
-                    goto LABEL_173;
-                  if ( *(_DWORD *)(v10 + 24) <= 1u )
-                    goto LABEL_174;
-                  v23 = v13;
-                  v24 = *(System_String_o **)(v10 + 40);
-                  v10 = sub_B775DC(char___TypeInfo, 1LL);
-                  if ( !v10 )
-                    goto LABEL_173;
-                  v11 = v10;
-                  if ( !*(_DWORD *)(v10 + 24) )
-                    goto LABEL_174;
-                  *(_WORD *)(v10 + 32) = 45;
-                  if ( !v24 )
-                    goto LABEL_173;
-                  v10 = (__int64)System_String__Split(v24, (System_Char_array *)v10, 0LL);
-                  if ( !v10 )
-                    goto LABEL_173;
-                  if ( !*(_DWORD *)(v10 + 24) )
-                    goto LABEL_174;
-                  v10 = System_Int32__Parse(*(System_String_o **)(v10 + 32), 0LL);
-                  if ( !effectWave )
-                    goto LABEL_173;
-                  if ( !effectWave->max_length )
-                    goto LABEL_174;
-                  effectWave->m_Items[1] = v10;
-                  v25 = this->fields.effectWave;
-                  v10 = sub_B775DC(char___TypeInfo, 1LL);
-                  if ( !v10 )
-                    goto LABEL_173;
-                  if ( !*(_DWORD *)(v10 + 24) )
-                    goto LABEL_174;
-                  *(_WORD *)(v10 + 32) = 126;
-                  v10 = (__int64)System_String__Split(v21, (System_Char_array *)v10, 0LL);
-                  if ( !v10 )
-                    goto LABEL_173;
-                  if ( *(_DWORD *)(v10 + 24) <= 1u )
-                    goto LABEL_174;
-                  v26 = *(System_String_o **)(v10 + 40);
-                  v10 = sub_B775DC(char___TypeInfo, 1LL);
-                  if ( !v10 )
-                    goto LABEL_173;
-                  v11 = v10;
-                  if ( !*(_DWORD *)(v10 + 24) )
-                    goto LABEL_174;
-                  *(_WORD *)(v10 + 32) = 45;
-                  if ( !v26 )
-                    goto LABEL_173;
-                  v10 = (__int64)System_String__Split(v26, (System_Char_array *)v10, 0LL);
-                  if ( !v10 )
-                    goto LABEL_173;
-                  if ( *(_DWORD *)(v10 + 24) <= 1u )
-                    goto LABEL_174;
-                  v13 = v23;
-                  v10 = System_Int32__Parse(*(System_String_o **)(v10 + 40), 0LL);
-                  if ( !v25 )
-                    goto LABEL_173;
-                  if ( v25->max_length <= 1 )
-                    goto LABEL_174;
-                  v25->m_Items[2] = v10;
-                  v10 = sub_B775DC(char___TypeInfo, 1LL);
-                  if ( !v10 )
-                    goto LABEL_173;
-                  if ( !*(_DWORD *)(v10 + 24) )
-                    goto LABEL_174;
-                  *(_WORD *)(v10 + 32) = 126;
-                  v10 = (__int64)System_String__Split(v21, (System_Char_array *)v10, 0LL);
-                  if ( !v10 )
-                    goto LABEL_173;
-                  if ( *(_DWORD *)(v10 + 24) <= 2u )
-                    goto LABEL_174;
-                  this->fields.effectOverlap = System_Single__Parse(*(System_String_o **)(v10 + 48), 0LL);
-                }
-                else
-                {
-                  if ( !v20 )
-                    goto LABEL_173;
-                  v10 = System_String__Contains(v20, (System_String_o *)StringLiteral_17037/*"bgm"*/, 0LL);
-                  v27 = this->fields.allCreditText;
-                  if ( !v27 )
-                    goto LABEL_173;
-                  if ( i >= v27->max_length )
-                    goto LABEL_174;
-                  v28 = v10;
-                  v10 = (__int64)v27->m_Items[i];
-                  if ( !v10 )
-                    goto LABEL_173;
-                  if ( (v28 & 1) != 0 )
-                  {
-                    v29 = (System_Int32_array **)System_String__Replace_44909172(
-                                                   (System_String_o *)v10,
-                                                   (System_String_o *)StringLiteral_69/*"\r"*/,
-                                                   (System_String_o *)StringLiteral_1/*""*/,
-                                                   0LL);
-                    p_bgmName->klass = (BattleServantConfConponent_c *)v29;
-                    sub_B77560(p_bgmName, v29, v30, v31, v32, v33, v34, v35);
-                    klass = (System_String_o *)p_bgmName->klass;
-                    v10 = sub_B775DC(char___TypeInfo, 1LL);
-                    if ( !v10 )
-                      goto LABEL_173;
-                    v11 = v10;
-                    if ( !*(_DWORD *)(v10 + 24) )
-                      goto LABEL_174;
-                    *(_WORD *)(v10 + 32) = 61;
-                    if ( !klass )
-                      goto LABEL_173;
-                    v10 = (__int64)System_String__Split(klass, (System_Char_array *)v10, 0LL);
-                    if ( !v10 )
-                      goto LABEL_173;
-                    if ( *(_DWORD *)(v10 + 24) <= 1u )
-                      goto LABEL_174;
-                    v43 = *(struct System_String_o **)(v10 + 40);
-                    this->fields.bgmName = v43;
-                    sub_B77560(p_bgmName, (System_Int32_array **)v43, v37, v38, v39, v40, v41, v42);
-                    v10 = System_String__op_Inequality(this->fields.bgmName, (System_String_o *)StringLiteral_9562/*"NULL"*/, 0LL);
-                    this->fields.isBgmPlay = v10 & 1;
-                  }
-                  else
-                  {
-                    v10 = System_String__Contains((System_String_o *)v10, (System_String_o *)StringLiteral_18300/*"default_font_size"*/, 0LL);
-                    v44 = this->fields.allCreditText;
-                    if ( !v44 )
-                      goto LABEL_173;
-                    if ( i >= v44->max_length )
-                      goto LABEL_174;
-                    v45 = v44->m_Items[i];
-                    if ( (v10 & 1) != 0 )
-                    {
-                      v10 = sub_B775DC(char___TypeInfo, 1LL);
-                      if ( !v10 )
-                        goto LABEL_173;
-                      v11 = v10;
-                      if ( !*(_DWORD *)(v10 + 24) )
-                        goto LABEL_174;
-                      *(_WORD *)(v10 + 32) = 61;
-                      if ( !v45 )
-                        goto LABEL_173;
-                      v10 = (__int64)System_String__Split(v45, (System_Char_array *)v10, 0LL);
-                      if ( !v10 )
-                        goto LABEL_173;
-                      if ( *(_DWORD *)(v10 + 24) <= 1u )
-                        goto LABEL_174;
-                      v10 = System_Int32__Parse(*(System_String_o **)(v10 + 40), 0LL);
-                      this->fields.defaultFontSize = v10;
-                    }
-                    else
-                    {
-                      if ( !v45 )
-                        goto LABEL_173;
-                      v10 = System_String__Contains(v45, (System_String_o *)StringLiteral_18299/*"default_clearance"*/, 0LL);
-                      v46 = this->fields.allCreditText;
-                      if ( !v46 )
-                        goto LABEL_173;
-                      if ( i >= v46->max_length )
-                        goto LABEL_174;
-                      v47 = v46->m_Items[i];
-                      if ( (v10 & 1) != 0 )
-                      {
-                        v10 = sub_B775DC(char___TypeInfo, 1LL);
-                        if ( !v10 )
-                          goto LABEL_173;
-                        v11 = v10;
-                        if ( !*(_DWORD *)(v10 + 24) )
-                          goto LABEL_174;
-                        *(_WORD *)(v10 + 32) = 61;
-                        if ( !v47 )
-                          goto LABEL_173;
-                        v10 = (__int64)System_String__Split(v47, (System_Char_array *)v10, 0LL);
-                        if ( !v10 )
-                          goto LABEL_173;
-                        if ( *(_DWORD *)(v10 + 24) <= 1u )
-                          goto LABEL_174;
-                        v10 = System_Int32__Parse(*(System_String_o **)(v10 + 40), 0LL);
-                        this->fields.defaultClearance = v10;
-                      }
-                      else
-                      {
-                        if ( !v47 )
-                          goto LABEL_173;
-                        v10 = System_String__Contains(v47, (System_String_o *)StringLiteral_18301/*"default_text_color"*/, 0LL);
-                        if ( (v10 & 1) != 0 )
-                        {
-                          v48 = this->fields.allCreditText;
-                          if ( !v48 )
-                            goto LABEL_173;
-                          if ( i >= v48->max_length )
-                            goto LABEL_174;
-                          v49 = v48->m_Items[i];
-                          v10 = sub_B775DC(char___TypeInfo, 1LL);
-                          if ( !v10 )
-                            goto LABEL_173;
-                          v11 = v10;
-                          if ( !*(_DWORD *)(v10 + 24) )
-                            goto LABEL_174;
-                          *(_WORD *)(v10 + 32) = 61;
-                          if ( !v49 )
-                            goto LABEL_173;
-                          v10 = (__int64)System_String__Split(v49, (System_Char_array *)v10, 0LL);
-                          if ( !v10 )
-                            goto LABEL_173;
-                          if ( *(_DWORD *)(v10 + 24) <= 1u )
-                            goto LABEL_174;
-                          v56 = *(System_Int32_array ***)(v10 + 40);
-                          p_defaultTextColor->klass = (BattleServantConfConponent_c *)v56;
-                          sub_B77560(p_defaultTextColor, v56, v50, v51, v52, v53, v54, v55);
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
+        klass = (System_String_o *)System_String__Split(klass, 0x3Du, 0, 0LL);
+        if ( !klass )
+          goto LABEL_136;
+        if ( LODWORD(klass[1].klass) <= 1 )
+          goto LABEL_137;
+        this->fields.startWaitTime = System_Single__Parse(*(System_String_o **)&klass[1].fields, 0LL) / 10.0;
       }
       else
       {
-        if ( (v14 & 1) == 0 )
-          goto LABEL_170;
-        v59 = this->fields.allCreditText;
-        if ( !v59 )
-          goto LABEL_173;
-        if ( i >= v59->max_length )
-          goto LABEL_174;
-        v10 = (__int64)v59->m_Items[i];
-        if ( !v10 )
-          goto LABEL_173;
-        v10 = (__int64)System_String__Replace_44909172(
-                         (System_String_o *)v10,
-                         (System_String_o *)StringLiteral_69/*"\r"*/,
-                         (System_String_o *)StringLiteral_1/*""*/,
-                         0LL);
-        if ( !*p_creditText )
-          goto LABEL_173;
-        System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-          *p_creditText,
-          (EventMissionProgressRequest_Argument_ProgressData_o *)v10,
-          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_string__Add__);
-        v60 = this->fields.allCreditText;
-        if ( !v60 )
-          goto LABEL_173;
-        if ( i >= v60->max_length )
-          goto LABEL_174;
-        v10 = (__int64)v60->m_Items[i];
-        if ( !v10 )
-          goto LABEL_173;
-        v61 = v13;
-        defaultFontSize = this->fields.defaultFontSize;
-        v10 = System_String__Contains((System_String_o *)v10, (System_String_o *)StringLiteral_6889/*"FontSize"*/, 0LL);
-        if ( (v10 & 1) != 0 )
+        klass = (System_String_o *)System_String__Contains(klass, (System_String_o *)StringLiteral_22731/*"scroll"*/, 0LL);
+        v45 = this->fields.allCreditText;
+        if ( !v45 )
+          goto LABEL_136;
+        if ( v30 >= v45->max_length )
+          goto LABEL_137;
+        v46 = (char)klass;
+        klass = v45->m_Items[v30];
+        if ( !klass )
+          goto LABEL_136;
+        if ( (v46 & 1) != 0 )
         {
-          v63 = this->fields.allCreditText;
-          if ( !v63 )
-            goto LABEL_173;
-          if ( i >= v63->max_length )
-            goto LABEL_174;
-          v64 = v63->m_Items[i];
-          v10 = sub_B775DC(char___TypeInfo, 1LL);
-          if ( !v10 )
-            goto LABEL_173;
-          v11 = v10;
-          if ( !*(_DWORD *)(v10 + 24) )
-            goto LABEL_174;
-          *(_WORD *)(v10 + 32) = 126;
-          if ( !v64 )
-            goto LABEL_173;
-          v10 = (__int64)System_String__Split(v64, (System_Char_array *)v10, 0LL);
-          if ( !v10 )
-            goto LABEL_173;
-          v65 = *(_DWORD *)(v10 + 24);
-          v66 = (_DWORD *)v10;
-          if ( v65 >= 1 )
+          klass = (System_String_o *)System_String__Split(klass, 0x3Du, 0, 0LL);
+          if ( !klass )
+            goto LABEL_136;
+          if ( LODWORD(klass[1].klass) <= 1 )
+            goto LABEL_137;
+          this->fields.endrolTotalTime = System_Single__Parse(*(System_String_o **)&klass[1].fields, 0LL) / 10.0;
+        }
+        else
+        {
+          klass = (System_String_o *)System_String__Contains(klass, (System_String_o *)StringLiteral_18747/*"end"*/, 0LL);
+          if ( ((unsigned __int8)klass & 1) != 0 )
           {
-            v67 = 0;
-            while ( v67 < v65 )
+LABEL_67:
+            v29 = 0;
+            goto LABEL_68;
+          }
+          v60 = this->fields.allCreditText;
+          if ( !v60 )
+            goto LABEL_136;
+          if ( v30 >= v60->max_length )
+            goto LABEL_137;
+          klass = v60->m_Items[v30];
+          if ( !klass )
+            goto LABEL_136;
+          klass = (System_String_o *)System_String__Contains(klass, (System_String_o *)StringLiteral_24237/*"wait"*/, 0LL);
+          v61 = this->fields.allCreditText;
+          if ( !v61 )
+            goto LABEL_136;
+          if ( v30 >= v61->max_length )
+            goto LABEL_137;
+          v62 = (char)klass;
+          klass = v61->m_Items[v30];
+          if ( !klass )
+            goto LABEL_136;
+          if ( (v62 & 1) != 0 )
+          {
+            klass = (System_String_o *)System_String__Split(klass, 0x3Du, 0, 0LL);
+            if ( !klass )
+              goto LABEL_136;
+            if ( LODWORD(klass[1].klass) <= 1 )
+              goto LABEL_137;
+            this->fields.endWaitTime = System_Single__Parse(*(System_String_o **)&klass[1].fields, 0LL) / 10.0;
+          }
+          else
+          {
+            klass = (System_String_o *)System_String__Contains(klass, (System_String_o *)StringLiteral_18616/*"effect"*/, 0LL);
+            v63 = this->fields.allCreditText;
+            if ( !v63 )
+              goto LABEL_136;
+            if ( v30 >= v63->max_length )
+              goto LABEL_137;
+            v64 = (char)klass;
+            klass = v63->m_Items[v30];
+            if ( !klass )
+              goto LABEL_136;
+            if ( (v64 & 1) != 0 )
             {
-              v68 = &v66[2 * v67];
-              v70 = *((_QWORD *)v68 + 4);
-              v69 = (BattleServantConfConponent_o *)(v68 + 8);
-              v10 = v70;
-              if ( !v70 )
-                goto LABEL_173;
-              v10 = System_String__Contains((System_String_o *)v10, (System_String_o *)StringLiteral_6889/*"FontSize"*/, 0LL);
-              if ( (v10 & 1) != 0 )
+              klass = (System_String_o *)System_String__Split(klass, 0x3Du, 0, 0LL);
+              if ( !klass )
+                goto LABEL_136;
+              if ( LODWORD(klass[1].klass) <= 1 )
+                goto LABEL_137;
+              fields = (System_String_o *)klass[1].fields;
+              if ( !fields )
+                goto LABEL_136;
+              klass = (System_String_o *)System_String__Split(*(System_String_o **)&klass[1].fields, 0x7Eu, 0, 0LL);
+              if ( !klass )
+                goto LABEL_136;
+              if ( !LODWORD(klass[1].klass) )
+                goto LABEL_137;
+              v66 = System_Single__Parse((System_String_o *)klass[1].monitor, 0LL);
+              effectWave = this->fields.effectWave;
+              this->fields.effectTime = v66 / 10.0;
+              klass = (System_String_o *)System_String__Split(fields, 0x7Eu, 0, 0LL);
+              if ( !klass )
+                goto LABEL_136;
+              if ( LODWORD(klass[1].klass) <= 1 )
+                goto LABEL_137;
+              klass = (System_String_o *)klass[1].fields;
+              if ( !klass )
+                goto LABEL_136;
+              klass = (System_String_o *)System_String__Split(klass, 0x2Du, 0, 0LL);
+              if ( !klass )
+                goto LABEL_136;
+              if ( !LODWORD(klass[1].klass) )
+                goto LABEL_137;
+              klass = (System_String_o *)System_Int32__Parse((System_String_o *)klass[1].monitor, 0LL);
+              if ( !effectWave )
+                goto LABEL_136;
+              if ( !effectWave->max_length )
+                goto LABEL_137;
+              effectWave->m_Items[1] = (int)klass;
+              v68 = this->fields.effectWave;
+              klass = (System_String_o *)System_String__Split(fields, 0x7Eu, 0, 0LL);
+              if ( !klass )
+                goto LABEL_136;
+              if ( LODWORD(klass[1].klass) <= 1 )
+                goto LABEL_137;
+              klass = (System_String_o *)klass[1].fields;
+              if ( !klass )
+                goto LABEL_136;
+              klass = (System_String_o *)System_String__Split(klass, 0x2Du, 0, 0LL);
+              if ( !klass )
+                goto LABEL_136;
+              if ( LODWORD(klass[1].klass) <= 1 )
+                goto LABEL_137;
+              klass = (System_String_o *)System_Int32__Parse(*(System_String_o **)&klass[1].fields, 0LL);
+              if ( !v68 )
+                goto LABEL_136;
+              if ( v68->max_length <= 1 )
+                goto LABEL_137;
+              v68->m_Items[2] = (int)klass;
+              klass = (System_String_o *)System_String__Split(fields, 0x7Eu, 0, 0LL);
+              if ( !klass )
+                goto LABEL_136;
+              if ( LODWORD(klass[1].klass) <= 2 )
+                goto LABEL_137;
+              this->fields.effectOverlap = System_Single__Parse((System_String_o *)klass[2].klass, 0LL);
+            }
+            else
+            {
+              klass = (System_String_o *)System_String__Contains(klass, (System_String_o *)StringLiteral_16938/*"bgm"*/, 0LL);
+              v69 = this->fields.allCreditText;
+              if ( !v69 )
+                goto LABEL_136;
+              if ( v30 >= v69->max_length )
+                goto LABEL_137;
+              v70 = (char)klass;
+              klass = v69->m_Items[v30];
+              if ( !klass )
+                goto LABEL_136;
+              if ( (v70 & 1) != 0 )
               {
-                if ( v67 >= v66[6] )
-                  break;
-                v10 = (__int64)v69->klass;
-                if ( !v69->klass )
-                  goto LABEL_173;
-                v10 = (__int64)System_String__Replace_44909172(
-                                 (System_String_o *)v10,
-                                 (System_String_o *)StringLiteral_1307/*"<"*/,
-                                 (System_String_o *)StringLiteral_1/*""*/,
-                                 0LL);
-                v77 = (System_Int32_array **)v10;
-                if ( v10 )
+                v71 = System_String__Replace_60345368(
+                        klass,
+                        (System_String_o *)StringLiteral_86/*"\r"*/,
+                        (System_String_o *)StringLiteral_1/*""*/,
+                        0LL);
+                p_bgmName->klass = (ServantStatusBattleListViewItem_c *)v71;
+                sub_1B00C70(p_bgmName, (int32_t)v71, v72, v73);
+                klass = (System_String_o *)p_bgmName->klass;
+                if ( !p_bgmName->klass )
+                  goto LABEL_136;
+                klass = (System_String_o *)System_String__Split(klass, 0x3Du, 0, 0LL);
+                if ( !klass )
+                  goto LABEL_136;
+                if ( LODWORD(klass[1].klass) <= 1 )
+                  goto LABEL_137;
+                v76 = (struct System_String_o *)klass[1].fields;
+                this->fields.bgmName = v76;
+                sub_1B00C70(p_bgmName, (int32_t)v76, v74, v75);
+                klass = (System_String_o *)System_String__op_Inequality(
+                                             this->fields.bgmName,
+                                             (System_String_o *)StringLiteral_9234/*"NULL"*/,
+                                             0LL);
+                this->fields.isBgmPlay = (unsigned __int8)klass & 1;
+              }
+              else
+              {
+                klass = (System_String_o *)System_String__Contains(klass, (System_String_o *)StringLiteral_18292/*"default_font_size"*/, 0LL);
+                v77 = this->fields.allCreditText;
+                if ( !v77 )
+                  goto LABEL_136;
+                if ( v30 >= v77->max_length )
+                  goto LABEL_137;
+                v78 = (char)klass;
+                klass = v77->m_Items[v30];
+                if ( !klass )
+                  goto LABEL_136;
+                if ( (v78 & 1) != 0 )
                 {
-                  v10 = sub_B77684(v10, *(_QWORD *)(*(_QWORD *)v66 + 64LL));
-                  if ( !v10 )
-                    goto LABEL_175;
+                  klass = (System_String_o *)System_String__Split(klass, 0x3Du, 0, 0LL);
+                  if ( !klass )
+                    goto LABEL_136;
+                  if ( LODWORD(klass[1].klass) <= 1 )
+                    goto LABEL_137;
+                  klass = (System_String_o *)System_Int32__Parse(*(System_String_o **)&klass[1].fields, 0LL);
+                  this->fields.defaultFontSize = (int)klass;
                 }
-                if ( v67 >= v66[6] )
-                  break;
-                v69->klass = (BattleServantConfConponent_c *)v77;
-                sub_B77560(v69, v77, v71, v72, v73, v74, v75, v76);
-                if ( v67 >= v66[6] )
-                  break;
-                v10 = (__int64)v69->klass;
-                if ( !v69->klass )
-                  goto LABEL_173;
-                v10 = (__int64)System_String__Replace_44909172(
-                                 (System_String_o *)v10,
-                                 (System_String_o *)StringLiteral_1542/*">"*/,
-                                 (System_String_o *)StringLiteral_1/*""*/,
-                                 0LL);
-                v84 = (System_Int32_array **)v10;
-                if ( v10 )
+                else
                 {
-                  v10 = sub_B77684(v10, *(_QWORD *)(*(_QWORD *)v66 + 64LL));
-                  if ( !v10 )
+                  klass = (System_String_o *)System_String__Contains(klass, (System_String_o *)StringLiteral_18291/*"default_clearance"*/, 0LL);
+                  v79 = this->fields.allCreditText;
+                  if ( !v79 )
+                    goto LABEL_136;
+                  if ( v30 >= v79->max_length )
+                    goto LABEL_137;
+                  v80 = (char)klass;
+                  klass = v79->m_Items[v30];
+                  if ( !klass )
+                    goto LABEL_136;
+                  if ( (v80 & 1) != 0 )
                   {
-LABEL_175:
-                    v93 = sub_B776BC(v10);
-                    sub_B77668(v93, 0LL);
+                    klass = (System_String_o *)System_String__Split(klass, 0x3Du, 0, 0LL);
+                    if ( !klass )
+                      goto LABEL_136;
+                    if ( LODWORD(klass[1].klass) <= 1 )
+                      goto LABEL_137;
+                    klass = (System_String_o *)System_Int32__Parse(*(System_String_o **)&klass[1].fields, 0LL);
+                    this->fields.defaultClearance = (int)klass;
+                  }
+                  else
+                  {
+                    klass = (System_String_o *)System_String__Contains(
+                                                 klass,
+                                                 (System_String_o *)StringLiteral_18293/*"default_text_color"*/,
+                                                 0LL);
+                    if ( ((unsigned __int8)klass & 1) != 0 )
+                    {
+                      v81 = this->fields.allCreditText;
+                      if ( !v81 )
+                        goto LABEL_136;
+                      if ( v30 >= v81->max_length )
+                        goto LABEL_137;
+                      klass = v81->m_Items[v30];
+                      if ( !klass )
+                        goto LABEL_136;
+                      klass = (System_String_o *)System_String__Split(klass, 0x3Du, 0, 0LL);
+                      if ( !klass )
+                        goto LABEL_136;
+                      if ( LODWORD(klass[1].klass) <= 1 )
+                        goto LABEL_137;
+                      v84 = (ServantStatusBattleListViewItem_c *)klass[1].fields;
+                      p_defaultTextColor->klass = v84;
+                      sub_1B00C70(p_defaultTextColor, (int32_t)v84, v82, v83);
+                    }
                   }
                 }
-                if ( v67 >= v66[6] )
-                  break;
-                v69->klass = (BattleServantConfConponent_c *)v84;
-                sub_B77560(v69, v84, v78, v79, v80, v81, v82, v83);
-                if ( v67 >= v66[6] )
-                  break;
-                v85 = (System_String_o *)v69->klass;
-                v10 = sub_B775DC(char___TypeInfo, 1LL);
-                if ( !v10 )
-                  goto LABEL_173;
-                v11 = v10;
-                if ( !*(_DWORD *)(v10 + 24) )
-                  break;
-                *(_WORD *)(v10 + 32) = 61;
-                if ( !v85 )
-                  goto LABEL_173;
-                v10 = (__int64)System_String__Split(v85, (System_Char_array *)v10, 0LL);
-                if ( !v10 )
-                  goto LABEL_173;
-                if ( *(_DWORD *)(v10 + 24) <= 1u )
-                  break;
-                v10 = System_Int32__Parse(*(System_String_o **)(v10 + 40), 0LL);
-                defaultFontSize = v10;
               }
-              v65 = v66[6];
-              if ( (int)++v67 >= v65 )
-                goto LABEL_145;
             }
-LABEL_174:
-            v92 = sub_B776C8(v10);
-            sub_B77668(v92, 0LL);
           }
         }
-LABEL_145:
-        v14 = 1;
-        v86 = this->fields.lastPostion + (float)(this->fields.defaultClearance + defaultFontSize);
-        v13 = v61;
-        this->fields.lastPostion = v86;
+      }
+LABEL_68:
+      if ( (signed int)++v30 >= this->fields.txtLength )
+        return;
+    }
+    if ( (v29 & 1) == 0 )
+      goto LABEL_67;
+    v36 = this->fields.allCreditText;
+    if ( !v36 )
+      goto LABEL_136;
+    if ( v30 >= v36->max_length )
+      goto LABEL_137;
+    klass = v36->m_Items[v30];
+    if ( !klass )
+      goto LABEL_136;
+    klass = System_String__Replace_60345368(
+              klass,
+              (System_String_o *)StringLiteral_86/*"\r"*/,
+              (System_String_o *)StringLiteral_1/*""*/,
+              0LL);
+    v39 = (System_Collections_Generic_List_object__o *)*p_creditText;
+    if ( !*p_creditText )
+      goto LABEL_136;
+    items = v39->fields._items;
+    v41 = Method_System_Collections_Generic_List_string__Add__;
+    ++v39->fields._version;
+    if ( !items )
+      goto LABEL_136;
+    size = v39->fields._size;
+    v43 = klass;
+    if ( (unsigned int)size >= items->max_length )
+    {
+      System_Collections_Generic_List_object___AddWithResize(
+        v39,
+        (Il2CppObject *)klass,
+        *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
+    }
+    else
+    {
+      v44 = &items->obj.klass + size;
+      v39->fields._size = size + 1;
+      v44[4] = (Il2CppClass *)v43;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v44 + 4), (int32_t)v43, v37, v38);
+    }
+    v47 = this->fields.allCreditText;
+    if ( !v47 )
+      goto LABEL_136;
+    if ( v30 >= v47->max_length )
+      goto LABEL_137;
+    klass = v47->m_Items[v30];
+    if ( !klass )
+      goto LABEL_136;
+    defaultFontSize = this->fields.defaultFontSize;
+    klass = (System_String_o *)System_String__Contains(klass, (System_String_o *)StringLiteral_6701/*"FontSize"*/, 0LL);
+    if ( ((unsigned __int8)klass & 1) != 0 )
+    {
+      v49 = this->fields.allCreditText;
+      if ( !v49 )
+        goto LABEL_136;
+      if ( v30 >= v49->max_length )
+        goto LABEL_137;
+      klass = v49->m_Items[v30];
+      if ( !klass )
+        goto LABEL_136;
+      klass = (System_String_o *)System_String__Split(klass, 0x7Eu, 0, 0LL);
+      if ( !klass )
+        goto LABEL_136;
+      v50 = (int)klass[1].klass;
+      v51 = klass;
+      if ( v50 >= 1 )
+      {
+        v52 = 0;
+        while ( v52 < v50 )
+        {
+          v53 = &v51->klass + (int)v52;
+          v55 = (System_String_o *)v53[4];
+          v54 = (ServantStatusBattleListViewItem_o *)(v53 + 4);
+          klass = v55;
+          if ( !v55 )
+            goto LABEL_136;
+          klass = (System_String_o *)System_String__Contains(klass, (System_String_o *)StringLiteral_6701/*"FontSize"*/, 0LL);
+          if ( ((unsigned __int8)klass & 1) != 0 )
+          {
+            if ( v52 >= LODWORD(v51[1].klass) )
+              break;
+            klass = (System_String_o *)v54->klass;
+            if ( !v54->klass )
+              goto LABEL_136;
+            klass = System_String__Replace_60345368(
+                      klass,
+                      (System_String_o *)StringLiteral_1593/*"<"*/,
+                      (System_String_o *)StringLiteral_1/*""*/,
+                      0LL);
+            if ( v52 >= LODWORD(v51[1].klass) )
+              break;
+            v54->klass = (ServantStatusBattleListViewItem_c *)klass;
+            sub_1B00C70(v54, (int32_t)klass, v56, v57);
+            if ( v52 >= LODWORD(v51[1].klass) )
+              break;
+            klass = (System_String_o *)v54->klass;
+            if ( !v54->klass )
+              goto LABEL_136;
+            klass = System_String__Replace_60345368(
+                      klass,
+                      (System_String_o *)StringLiteral_1857/*">"*/,
+                      (System_String_o *)StringLiteral_1/*""*/,
+                      0LL);
+            if ( v52 >= LODWORD(v51[1].klass) )
+              break;
+            v54->klass = (ServantStatusBattleListViewItem_c *)klass;
+            sub_1B00C70(v54, (int32_t)klass, v58, v59);
+            if ( v52 >= LODWORD(v51[1].klass) )
+              break;
+            klass = (System_String_o *)v54->klass;
+            if ( !v54->klass )
+              goto LABEL_136;
+            klass = (System_String_o *)System_String__Split(klass, 0x3Du, 0, 0LL);
+            if ( !klass )
+              goto LABEL_136;
+            if ( LODWORD(klass[1].klass) <= 1 )
+              break;
+            klass = (System_String_o *)System_Int32__Parse(*(System_String_o **)&klass[1].fields, 0LL);
+            defaultFontSize = (int)klass;
+          }
+          v50 = (int)v51[1].klass;
+          if ( (int)++v52 >= v50 )
+            goto LABEL_64;
+        }
+LABEL_137:
+        sub_1B00F30(klass, v27);
       }
     }
+LABEL_64:
+    this->fields.lastPostion = this->fields.lastPostion + (float)(this->fields.defaultClearance + defaultFontSize);
+LABEL_65:
+    v29 = 1;
+    goto LABEL_68;
   }
 }
 
@@ -766,63 +622,62 @@ void __fastcall EndrolRootComponent__ClippingItem(
         EndrolContentItem_o *item,
         const MethodInfo *method)
 {
-  EndrolRootComponent_o *v4; // x19
-  struct System_Collections_Generic_List_string__o *creditText; // x22
-  int v6; // w21
-  int size; // w8
-  const MethodInfo *v8; // x4
-  struct System_Collections_Generic_List_string__o *v9; // x22
-  __int64 nowDispIndex; // x23
-  int32_t lastObjectPosY; // w20
+  __int64 v5; // x1
+  System_Collections_Generic_List_object__o *creditText; // x0
+  const MethodInfo *v7; // x1
+  Il2CppObject *v8; // x0
+  const MethodInfo *v9; // x2
+  int32_t v10; // w0
+  int32_t v11; // w21
+  Il2CppObject *v12; // x0
+  const MethodInfo *v13; // x4
+  int32_t lastObjectPosY; // w21
 
-  v4 = this;
-  if ( (byte_438FA92 & 1) == 0 )
+  if ( (byte_48E6237 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_string__get_Count__);
-    this = (EndrolRootComponent_o *)sub_B775C4(&Method_System_Collections_Generic_List_string__get_Item__);
-    byte_438FA92 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__get_Count__, item);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__get_Item__, v5);
+    byte_48E6237 = 1;
   }
-  creditText = v4->fields.creditText;
-  v6 = v4->fields.nowDispIndex + 1;
-  v4->fields.nowDispIndex = v6;
+  creditText = (System_Collections_Generic_List_object__o *)this->fields.creditText;
+  v7 = (const MethodInfo *)(unsigned int)(this->fields.nowDispIndex + 1);
+  this->fields.nowDispIndex = (int)v7;
   if ( !creditText )
-    goto LABEL_14;
-  size = creditText->fields._size;
-  if ( v6 < size )
+    goto LABEL_10;
+  if ( (int)v7 < creditText->fields._size )
   {
-    if ( size <= (unsigned int)v6 )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-    this = (EndrolRootComponent_o *)EndrolRootComponent__CheckNextDispContent(
-                                      this,
-                                      creditText->fields._items->m_Items[v6],
-                                      method);
-    if ( (_DWORD)this != 3 )
+    v8 = System_Collections_Generic_List_object___get_Item(
+           creditText,
+           (int32_t)v7,
+           (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_string__get_Item__);
+    v10 = EndrolRootComponent__CheckNextDispContent((EndrolRootComponent_o *)v8, (System_String_o *)v8, v9);
+    if ( v10 != 3 )
     {
-      v9 = v4->fields.creditText;
-      if ( v9 )
+      v11 = v10;
+      creditText = (System_Collections_Generic_List_object__o *)this->fields.creditText;
+      if ( creditText )
       {
-        nowDispIndex = v4->fields.nowDispIndex;
-        if ( v9->fields._size <= (unsigned int)nowDispIndex )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-        this = (EndrolRootComponent_o *)EndrolRootComponent__SetItemInfo(
-                                          v4,
-                                          v9->fields._items->m_Items[nowDispIndex],
-                                          item,
-                                          (int32_t)this,
-                                          v8);
-        if ( this )
+        v12 = System_Collections_Generic_List_object___get_Item(
+                creditText,
+                this->fields.nowDispIndex,
+                (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_string__get_Item__);
+        creditText = (System_Collections_Generic_List_object__o *)EndrolRootComponent__SetItemInfo(
+                                                                    this,
+                                                                    (System_String_o *)v12,
+                                                                    item,
+                                                                    v11,
+                                                                    v13);
+        if ( item )
         {
-          lastObjectPosY = v4->fields.lastObjectPosY;
-          v4->fields.lastObjectPosY = lastObjectPosY
-                                    - EndrolContentItem__get_contentHeight(
-                                        (EndrolContentItem_o *)this,
-                                        (const MethodInfo *)item)
-                                    - v4->fields.defaultClearance;
+          lastObjectPosY = this->fields.lastObjectPosY;
+          this->fields.lastObjectPosY = lastObjectPosY
+                                      - EndrolContentItem__get_contentHeight(item, v7)
+                                      - this->fields.defaultClearance;
           return;
         }
       }
-LABEL_14:
-      sub_B7769C(this, item);
+LABEL_10:
+      sub_1B00F28(creditText, v7);
     }
   }
 }
@@ -831,85 +686,92 @@ LABEL_14:
 // local variable allocation has failed, the output may be wrong!
 void __fastcall EndrolRootComponent__CreateText(EndrolRootComponent_o *this, int32_t index, const MethodInfo *method)
 {
+  __int64 v5; // x1
+  __int64 v6; // x1
   UnityEngine_Component_o *contentPref; // x0
   UnityEngine_GameObject_o *endrolContentParent; // x21
   UnityEngine_GameObject_o *gameObject; // x22
-  const MethodInfo *v8; // x2
-  struct System_Collections_Generic_List_string__o *creditText; // x22
   EndrolContentItem_o *v10; // x21
-  const MethodInfo *v11; // x4
-  struct System_Collections_Generic_List_string__o *v12; // x23
+  Il2CppObject *Item; // x0
+  const MethodInfo *v12; // x2
+  int32_t v13; // w22
+  Il2CppObject *v14; // x0
+  const MethodInfo *v15; // x4
   int32_t lastObjectPosY; // w20
 
-  if ( (byte_438FA91 & 1) == 0 )
+  if ( (byte_48E6236 & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_EndrolContentItem___);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_B775C4(&NGUITools_TypeInfo);
-    byte_438FA91 = 1;
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_EndrolContentItem___, *(_QWORD *)&index);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__get_Item__, v5);
+    sub_1B00CCC(&NGUITools_TypeInfo, v6);
+    byte_48E6236 = 1;
   }
   contentPref = (UnityEngine_Component_o *)this->fields.contentPref;
   ++this->fields.nowDispIndex;
   if ( !contentPref )
-    goto LABEL_16;
+    goto LABEL_11;
   endrolContentParent = this->fields.endrolContentParent;
   gameObject = UnityEngine_Component__get_gameObject(contentPref, 0LL);
-  if ( (BYTE3(NGUITools_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !NGUITools_TypeInfo->_2.cctor_finished )
+  if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  contentPref = (UnityEngine_Component_o *)NGUITools__AddChild_39774560(endrolContentParent, gameObject, 0LL);
-  if ( !contentPref )
-    goto LABEL_16;
-  contentPref = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                             (UnityEngine_GameObject_o *)contentPref,
-                                             (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_EndrolContentItem___);
-  creditText = this->fields.creditText;
-  if ( !creditText )
-    goto LABEL_16;
-  v10 = (EndrolContentItem_o *)contentPref;
-  if ( creditText->fields._size <= (unsigned int)index )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-  contentPref = (UnityEngine_Component_o *)EndrolRootComponent__CheckNextDispContent(
-                                             (EndrolRootComponent_o *)contentPref,
-                                             creditText->fields._items->m_Items[index],
-                                             v8);
-  v12 = this->fields.creditText;
-  if ( !v12 )
-    goto LABEL_16;
-  if ( v12->fields._size <= (unsigned int)index )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-  contentPref = (UnityEngine_Component_o *)EndrolRootComponent__SetItemInfo(
-                                             this,
-                                             v12->fields._items->m_Items[index],
-                                             v10,
-                                             (int32_t)contentPref,
-                                             v11);
-  if ( !contentPref )
-LABEL_16:
-    sub_B7769C(contentPref, *(_QWORD *)&index);
+  contentPref = (UnityEngine_Component_o *)NGUITools__AddChild_45725768(endrolContentParent, gameObject, 0LL);
+  if ( !contentPref
+    || (contentPref = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
+                                                   (UnityEngine_GameObject_o *)contentPref,
+                                                   (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_EndrolContentItem___),
+        !this->fields.creditText)
+    || (v10 = (EndrolContentItem_o *)contentPref,
+        Item = System_Collections_Generic_List_object___get_Item(
+                 (System_Collections_Generic_List_object__o *)this->fields.creditText,
+                 index,
+                 (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_string__get_Item__),
+        contentPref = (UnityEngine_Component_o *)EndrolRootComponent__CheckNextDispContent(
+                                                   (EndrolRootComponent_o *)Item,
+                                                   (System_String_o *)Item,
+                                                   v12),
+        !this->fields.creditText)
+    || (v13 = (int)contentPref,
+        v14 = System_Collections_Generic_List_object___get_Item(
+                (System_Collections_Generic_List_object__o *)this->fields.creditText,
+                index,
+                (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_string__get_Item__),
+        contentPref = (UnityEngine_Component_o *)EndrolRootComponent__SetItemInfo(
+                                                   this,
+                                                   (System_String_o *)v14,
+                                                   v10,
+                                                   v13,
+                                                   v15),
+        !v10) )
+  {
+LABEL_11:
+    sub_1B00F28(contentPref, *(_QWORD *)&index);
+  }
   lastObjectPosY = this->fields.lastObjectPosY;
   this->fields.lastObjectPosY = lastObjectPosY
-                              - EndrolContentItem__get_contentHeight(
-                                  (EndrolContentItem_o *)contentPref,
-                                  *(const MethodInfo **)&index)
+                              - EndrolContentItem__get_contentHeight(v10, *(const MethodInfo **)&index)
                               - this->fields.defaultClearance;
 }
 
 
 void __fastcall EndrolRootComponent__EndFadeout(EndrolRootComponent_o *this, const MethodInfo *method)
 {
-  CommonUI_o *Instance; // x0
-  __int64 v4; // x1
+  __int64 v3; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v5; // x1
 
-  if ( (byte_438FA8F & 1) == 0 )
+  if ( (byte_48E6234 & 1) == 0 )
   {
-    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_438FA8F = 1;
+    sub_1B00CCC(&UnityEngine_Application_TypeInfo, method);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
+    byte_48E6234 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_B7769C(0LL, v4);
-  CommonUI__CloseConfirmDialog(Instance, 0LL);
+    sub_1B00F28(0LL, v5);
+  CommonUI__CloseConfirmDialog((CommonUI_o *)Instance, 0LL);
   UnityEngine_QualitySettings__set_vSyncCount(0, 0LL);
+  if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
   UnityEngine_Application__set_targetFrameRate(30, 0LL);
   ActionExtensions__Call(this->fields.mEndAct, 0LL);
 }
@@ -917,68 +779,73 @@ void __fastcall EndrolRootComponent__EndFadeout(EndrolRootComponent_o *this, con
 
 void __fastcall EndrolRootComponent__OnClickEndrol(EndrolRootComponent_o *this, const MethodInfo *method)
 {
-  CommonUI_o *Instance; // x20
-  System_String_o *v4; // x21
-  System_String_o *v5; // x22
-  System_String_o *v6; // x23
-  System_String_o *v7; // x24
-  CommonConfirmDialog_ClickDelegate_o *v8; // x25
-  __int64 v9; // x0
-  __int64 v10; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  Il2CppObject *Instance; // x20
+  System_String_o *v11; // x21
+  System_String_o *v12; // x22
+  System_String_o *v13; // x23
+  System_String_o *v14; // x24
+  CommonConfirmDialog_ClickDelegate_o *v15; // x25
+  __int64 v16; // x0
+  __int64 v17; // x1
 
-  if ( (byte_438FA96 & 1) == 0 )
+  if ( (byte_48E623B & 1) == 0 )
   {
-    sub_B775C4(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_B775C4(&Method_EndrolRootComponent_callbackConfirmDlg__);
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B775C4(&StringLiteral_5616/*"ENDROLL_TITLE"*/);
-    sub_B775C4(&StringLiteral_5615/*"ENDROLL_MESSAGE"*/);
-    sub_B775C4(&StringLiteral_5613/*"ENDROLL_CANCEL"*/);
-    sub_B775C4(&StringLiteral_5614/*"ENDROLL_DECIDE"*/);
-    byte_438FA96 = 1;
+    sub_1B00CCC(&CommonConfirmDialog_ClickDelegate_TypeInfo, method);
+    sub_1B00CCC(&Method_EndrolRootComponent_callbackConfirmDlg__, v3);
+    sub_1B00CCC(&LocalizationManager_TypeInfo, v4);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    sub_1B00CCC(&StringLiteral_5407/*"ENDROLL_TITLE"*/, v6);
+    sub_1B00CCC(&StringLiteral_5406/*"ENDROLL_MESSAGE"*/, v7);
+    sub_1B00CCC(&StringLiteral_5404/*"ENDROLL_CANCEL"*/, v8);
+    sub_1B00CCC(&StringLiteral_5405/*"ENDROLL_DECIDE"*/, v9);
+    byte_48E623B = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !LocalizationManager_TypeInfo->_2.cctor_finished )
-  {
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  }
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_5616/*"ENDROLL_TITLE"*/, 0LL);
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_5615/*"ENDROLL_MESSAGE"*/, 0LL);
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_5614/*"ENDROLL_DECIDE"*/, 0LL);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_5613/*"ENDROLL_CANCEL"*/, 0LL);
-  v8 = (CommonConfirmDialog_ClickDelegate_o *)sub_B77694(CommonConfirmDialog_ClickDelegate_TypeInfo);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_5407/*"ENDROLL_TITLE"*/, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5406/*"ENDROLL_MESSAGE"*/, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_5405/*"ENDROLL_DECIDE"*/, 0LL);
+  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_5404/*"ENDROLL_CANCEL"*/, 0LL);
+  v15 = (CommonConfirmDialog_ClickDelegate_o *)sub_1B00F18(CommonConfirmDialog_ClickDelegate_TypeInfo);
   CommonConfirmDialog_ClickDelegate___ctor(
-    v8,
+    v15,
     (Il2CppObject *)this,
     Method_EndrolRootComponent_callbackConfirmDlg__,
     0LL);
   if ( !Instance )
-    sub_B7769C(v9, v10);
-  CommonUI__OpenConfirmDialog_18055364(Instance, v4, v5, v6, v7, v8, 0, 0, 0, 0LL);
+    sub_1B00F28(v16, v17);
+  CommonUI__OpenConfirmDialog_29936704((CommonUI_o *)Instance, v11, v12, v13, v14, v15, 0, 0, 0, 0LL);
 }
 
 
 void __fastcall EndrolRootComponent__OnScrollEnd(EndrolRootComponent_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   float endWaitTime; // s8
-  System_Action_o *v4; // x20
-  EndrolRootComponent_o *v5; // x0
-  const MethodInfo *v6; // x2
-  System_Collections_IEnumerator_o *v7; // x1
+  System_Action_o *v5; // x20
+  EndrolRootComponent_o *v6; // x0
+  const MethodInfo *v7; // x2
+  System_Collections_IEnumerator_o *v8; // x1
 
-  if ( (byte_438FA8B & 1) == 0 )
+  if ( (byte_48E6230 & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&Method_EndrolRootComponent__OnScrollEnd_b__29_0__);
-    byte_438FA8B = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, method);
+    sub_1B00CCC(&Method_EndrolRootComponent__OnScrollEnd_b__28_0__, v3);
+    byte_48E6230 = 1;
   }
   endWaitTime = this->fields.endWaitTime;
-  v4 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-  System_Action___ctor(v4, (Il2CppObject *)this, Method_EndrolRootComponent__OnScrollEnd_b__29_0__, 0LL);
-  v7 = EndrolRootComponent__Wait(v5, endWaitTime, v4, v6);
-  UnityEngine_MonoBehaviour__StartCoroutine_36304832((UnityEngine_MonoBehaviour_o *)this, v7, 0LL);
+  v5 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+  System_Action___ctor(v5, (Il2CppObject *)this, Method_EndrolRootComponent__OnScrollEnd_b__28_0__, 0LL);
+  v8 = EndrolRootComponent__Wait(v6, endWaitTime, v5, v7);
+  UnityEngine_MonoBehaviour__StartCoroutine_68062928((UnityEngine_MonoBehaviour_o *)this, v8, 0LL);
 }
 
 
@@ -998,7 +865,7 @@ void __fastcall EndrolRootComponent__OnUpdateScroll(EndrolRootComponent_o *this,
         UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)panel, v7, 0LL),
         (panel = (UnityEngine_Component_o *)this->fields.panel) == 0LL) )
   {
-    sub_B7769C(panel, method);
+    sub_1B00F28(panel, method);
   }
   v6.fields.y = -value;
   v6.fields.x = 0.0;
@@ -1012,54 +879,43 @@ void __fastcall EndrolRootComponent__Open(
         System_Action_o *endCallback,
         const MethodInfo *method)
 {
-  __int64 v7; // x22
-  __int64 v8; // x0
+  __int64 v7; // x1
+  __int64 v8; // x1
   __int64 v9; // x1
-  System_String_array **v10; // x2
-  System_String_array **v11; // x3
-  System_Boolean_array **v12; // x4
-  System_Int32_array **v13; // x5
-  System_Int32_array *v14; // x6
-  System_Int32_array *v15; // x7
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
-  System_Action_o *v22; // x21
-  const MethodInfo *v23; // x3
+  __int64 v10; // x21
+  __int64 v11; // x0
+  __int64 v12; // x1
+  int32_t v13; // w2
+  int32_t v14; // w3
+  int32_t v15; // w2
+  int32_t v16; // w3
+  System_Action_o *v17; // x22
+  const MethodInfo *v18; // x3
 
-  if ( (byte_438FA8D & 1) == 0 )
+  if ( (byte_48E6232 & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&Method_EndrolRootComponent___c__DisplayClass31_0__Open_b__0__);
-    sub_B775C4(&EndrolRootComponent___c__DisplayClass31_0_TypeInfo);
-    byte_438FA8D = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, assetData);
+    sub_1B00CCC(&UnityEngine_Application_TypeInfo, v7);
+    sub_1B00CCC(&Method_EndrolRootComponent___c__DisplayClass30_0__Open_b__0__, v8);
+    sub_1B00CCC(&EndrolRootComponent___c__DisplayClass30_0_TypeInfo, v9);
+    byte_48E6232 = 1;
   }
-  v7 = sub_B77694(EndrolRootComponent___c__DisplayClass31_0_TypeInfo);
-  EndrolRootComponent___c__DisplayClass31_0___ctor((EndrolRootComponent___c__DisplayClass31_0_o *)v7, 0LL);
-  if ( !v7 )
-    sub_B7769C(v8, v9);
-  *(_QWORD *)(v7 + 16) = this;
-  sub_B77560((BattleServantConfConponent_o *)(v7 + 16), (System_Int32_array **)this, v10, v11, v12, v13, v14, v15);
-  *(_QWORD *)(v7 + 24) = endCallback;
-  sub_B77560(
-    (BattleServantConfConponent_o *)(v7 + 24),
-    (System_Int32_array **)endCallback,
-    v16,
-    v17,
-    v18,
-    v19,
-    v20,
-    v21);
-  this->fields.isScroll = 0;
+  v10 = sub_1B00F18(EndrolRootComponent___c__DisplayClass30_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v10, 0LL);
+  if ( !v10 )
+    sub_1B00F28(v11, v12);
+  *(_QWORD *)(v10 + 16) = this;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v10 + 16), (int32_t)this, v13, v14);
+  *(_QWORD *)(v10 + 24) = endCallback;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v10 + 24), (int32_t)endCallback, v15, v16);
   UnityEngine_QualitySettings__set_vSyncCount(1, 0LL);
+  if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
   UnityEngine_Application__set_targetFrameRate(60, 0LL);
   this->fields.lastObjectPosY = 0;
-  v22 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-  System_Action___ctor(v22, (Il2CppObject *)v7, Method_EndrolRootComponent___c__DisplayClass31_0__Open_b__0__, 0LL);
-  EndrolRootComponent__SetAssetStorageData(this, assetData, v22, v23);
+  v17 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+  System_Action___ctor(v17, (Il2CppObject *)v10, Method_EndrolRootComponent___c__DisplayClass30_0__Open_b__0__, 0LL);
+  EndrolRootComponent__SetAssetStorageData(this, assetData, v17, v18);
 }
 
 
@@ -1068,49 +924,22 @@ void __fastcall EndrolRootComponent__OpenTextFile(
         UnityEngine_TextAsset_o *assetData,
         const MethodInfo *method)
 {
-  UnityEngine_TextAsset_o *v3; // x20
-  EndrolRootComponent_o *v4; // x19
-  System_String_o *text; // x20
-  System_Int32_array **v6; // x0
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
+  EndrolRootComponent_o *v3; // x19
+  System_String_array *v4; // x0
+  int32_t v5; // w2
+  int32_t v6; // w3
   struct System_String_array *allCreditText; // x8
-  __int64 v14; // x0
 
-  v3 = assetData;
-  v4 = this;
-  if ( (byte_438FA97 & 1) == 0 )
+  if ( !assetData
+    || (v3 = this, (this = (EndrolRootComponent_o *)UnityEngine_TextAsset__get_text(assetData, 0LL)) == 0LL)
+    || (v4 = System_String__Split((System_String_o *)this, 0xAu, 0, 0LL),
+        v3->fields.allCreditText = v4,
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v3->fields.allCreditText, (int32_t)v4, v5, v6),
+        (allCreditText = v3->fields.allCreditText) == 0LL) )
   {
-    this = (EndrolRootComponent_o *)sub_B775C4(&char___TypeInfo);
-    byte_438FA97 = 1;
+    sub_1B00F28(this, assetData);
   }
-  if ( !v3 )
-    goto LABEL_9;
-  text = UnityEngine_TextAsset__get_text(v3, 0LL);
-  this = (EndrolRootComponent_o *)sub_B775DC(char___TypeInfo, 1LL);
-  if ( !this )
-    goto LABEL_9;
-  assetData = (UnityEngine_TextAsset_o *)this;
-  if ( !LODWORD(this->fields.contentPref) )
-  {
-    v14 = sub_B776C8(this);
-    sub_B77668(v14, 0LL);
-  }
-  LOWORD(this->fields.endrolContentParent) = 10;
-  if ( !text
-    || (v6 = (System_Int32_array **)System_String__Split(text, (System_Char_array *)this, 0LL),
-        v4->fields.allCreditText = (struct System_String_array *)v6,
-        sub_B77560((BattleServantConfConponent_o *)&v4->fields.allCreditText, v6, v7, v8, v9, v10, v11, v12),
-        (allCreditText = v4->fields.allCreditText) == 0LL) )
-  {
-LABEL_9:
-    sub_B7769C(this, assetData);
-  }
-  v4->fields.txtLength = *(_QWORD *)&allCreditText->max_length;
+  v3->fields.txtLength = *(_QWORD *)&allCreditText->max_length;
 }
 
 
@@ -1121,27 +950,30 @@ void __fastcall EndrolRootComponent__SetAssetStorageData(
         const MethodInfo *method)
 {
   EndrolRootComponent_o *v6; // x20
-  UnityEngine_TextAsset_o *Object_WarBoardWaitTimeSetting; // x0
-  const MethodInfo *v8; // x2
+  __int64 v7; // x1
+  Il2CppObject *Object_object__47470892; // x0
+  const MethodInfo *v9; // x2
 
   v6 = this;
-  if ( (byte_438FA8C & 1) == 0 )
+  if ( (byte_48E6231 & 1) == 0 )
   {
-    sub_B775C4(&Method_AssetData_GetObject_TextAsset____69465424);
-    this = (EndrolRootComponent_o *)sub_B775C4(&StringLiteral_18115/*"credit"*/);
-    byte_438FA8C = 1;
+    sub_1B00CCC(&Method_AssetData_GetObject_TextAsset____74577952, data);
+    this = (EndrolRootComponent_o *)sub_1B00CCC(&StringLiteral_18080/*"credit"*/, v7);
+    byte_48E6231 = 1;
   }
   if ( !data
-    || (Object_WarBoardWaitTimeSetting = (UnityEngine_TextAsset_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
-                                                                      data,
-                                                                      (System_String_o *)StringLiteral_18115/*"credit"*/,
-                                                                      (const MethodInfo_1C5FDDC *)Method_AssetData_GetObject_TextAsset____69465424),
-        EndrolRootComponent__OpenTextFile(v6, Object_WarBoardWaitTimeSetting, v8),
+    || (Object_object__47470892 = AssetData__GetObject_object__47470892(
+                                    data,
+                                    (System_String_o *)StringLiteral_18080/*"credit"*/,
+                                    (const MethodInfo_2D4592C *)Method_AssetData_GetObject_TextAsset____74577952),
+        EndrolRootComponent__OpenTextFile(v6, (UnityEngine_TextAsset_o *)Object_object__47470892, v9),
         !endCallback) )
   {
-    sub_B7769C(this, data);
+    sub_1B00F28(this, data);
   }
-  System_Action__Invoke(endCallback, 0LL);
+  ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))endCallback->fields.m_target)(
+    endCallback->fields.original_method_info,
+    *(_QWORD *)&endCallback->fields.extra_arg);
 }
 
 
@@ -1152,905 +984,793 @@ EndrolContentItem_o *__fastcall EndrolRootComponent__SetItemInfo(
         int32_t type,
         const MethodInfo *method)
 {
-  System_String_o *v7; // x21
   EndrolRootComponent_o *v8; // x20
-  const MethodInfo *v9; // x4
-  int v10; // w8
-  EndrolRootComponent_o *v11; // x21
-  System_String_o *v12; // x22
-  unsigned int v13; // w25
-  float v14; // s9
-  float v15; // s8
-  EndrolRootComponent_c **v16; // x28
-  EndrolRootComponent_o **v17; // x28
-  EndrolRootComponent_o *v18; // t1
-  char v19; // w8
-  EndrolRootComponent_o *v20; // x22
-  EndrolRootComponent_o *v21; // x23
-  EndrolRootComponent_o *v22; // x23
-  System_String_o *v23; // x0
-  const MethodInfo *v24; // x6
-  int v25; // w8
-  int32_t v26; // w23
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  __int64 v18; // x1
+  __int64 v19; // x1
+  __int64 v20; // x1
+  __int64 v21; // x1
+  __int64 v22; // x1
+  __int64 v23; // x1
+  __int64 v24; // x1
+  const MethodInfo *v25; // x4
+  int v26; // w8
   EndrolRootComponent_o *v27; // x21
   EndrolRootComponent_o *v28; // x22
-  unsigned int v29; // w27
-  int klass; // w24
-  EndrolRootComponent_c **v31; // x25
-  EndrolRootComponent_o **v32; // x25
-  EndrolRootComponent_o *v33; // t1
-  char v34; // w8
-  System_String_array **v35; // x2
-  System_String_array **v36; // x3
-  System_Boolean_array **v37; // x4
-  System_Int32_array **v38; // x5
-  System_Int32_array *v39; // x6
-  System_Int32_array *v40; // x7
-  System_Int32_array **v41; // x26
-  System_String_array **v42; // x2
-  System_String_array **v43; // x3
-  System_Boolean_array **v44; // x4
-  System_Int32_array **v45; // x5
-  System_Int32_array *v46; // x6
-  System_Int32_array *v47; // x7
-  System_Int32_array **v48; // x26
-  EndrolRootComponent_o *v49; // x26
-  unsigned int v50; // w8
-  System_String_o *v51; // x24
-  System_String_o *v52; // x0
-  System_String_o *v53; // x24
-  intptr_t v54; // w25
-  System_Type_o *TypeFromHandle; // x25
-  EndrolRootComponent_o *v56; // x21
+  unsigned int v29; // w23
+  float v30; // s9
+  float v31; // s8
+  EndrolRootComponent_c **v32; // x29
+  EndrolRootComponent_o **v33; // x29
+  EndrolRootComponent_o *v34; // t1
+  char v35; // w8
+  char v36; // w8
+  System_String_o *v37; // x0
+  EndrolRootComponent_o *v38; // x21
   int32_t defaultFontSize; // w22
-  System_String_o *v58; // x23
-  unsigned int v59; // w0
-  const MethodInfo *v60; // x5
-  int contentPref; // w8
-  System_String_array *v62; // x23
-  il2cpp_array_size_t v63; // w19
-  EndrolRootComponent_o **p_panel; // x24
-  unsigned int v65; // w28
-  char v66; // w8
-  System_String_array **v67; // x2
-  System_String_array **v68; // x3
-  System_Boolean_array **v69; // x4
-  System_Int32_array **v70; // x5
-  System_Int32_array *v71; // x6
-  System_Int32_array *v72; // x7
-  System_Int32_array **v73; // x25
-  System_String_array **v74; // x2
-  System_String_array **v75; // x3
-  System_Boolean_array **v76; // x4
-  System_Int32_array **v77; // x5
-  System_Int32_array *v78; // x6
-  System_Int32_array *v79; // x7
-  System_Int32_array **v80; // x25
-  EndrolRootComponent_o *v81; // x22
-  System_String_array **v82; // x2
-  System_String_array **v83; // x3
-  System_Boolean_array **v84; // x4
-  System_Int32_array **v85; // x5
-  System_Int32_array *v86; // x6
-  System_Int32_array *v87; // x7
-  unsigned int v88; // w8
-  EndrolRootComponent_o *v89; // x25
-  Il2CppClass **v90; // x0
+  unsigned int v40; // w0
+  const MethodInfo *v41; // x5
+  int m_CancellationTokenSource; // w8
+  System_String_array *v43; // x23
+  il2cpp_array_size_t v44; // w27
+  EndrolRootComponent_o **p_endrolContentParent; // x24
+  unsigned int v46; // w28
+  char v47; // w8
+  int32_t v48; // w2
+  int32_t v49; // w3
+  int32_t v50; // w2
+  int32_t v51; // w3
+  int32_t v52; // w2
+  int32_t v53; // w3
+  unsigned int v54; // w8
+  EndrolRootComponent_o *v55; // x1
+  Il2CppClass **v56; // x0
   int32_t lastObjectPosY; // w1
-  struct System_Collections_Generic_List_string__o *creditText; // x19
-  __int64 nowDispIndex; // x21
-  struct System_Collections_Generic_List_string__o *v94; // x19
-  __int64 v95; // x21
-  System_String_o *v96; // x2
-  struct System_Collections_Generic_List_string__o *v97; // x19
-  __int64 v98; // x22
-  int32_t v99; // w3
-  int32_t v100; // w1
-  int32_t v101; // w4
-  EndrolContentItem_o *v102; // x0
+  const MethodInfo *v58; // x6
+  int v59; // w8
+  int32_t v60; // w22
+  EndrolRootComponent_o *v61; // x21
+  EndrolRootComponent_o *v62; // x23
+  unsigned int v63; // w27
+  int klass; // w24
+  EndrolRootComponent_c **v65; // x25
+  EndrolRootComponent_o **v66; // x25
+  EndrolRootComponent_o *v67; // t1
+  char v68; // w8
+  int32_t v69; // w2
+  int32_t v70; // w3
+  int32_t v71; // w2
+  int32_t v72; // w3
+  char v73; // w8
+  unsigned int v74; // w8
+  EndrolRootComponent_o *v75; // x24
+  System_String_o *v76; // x0
+  System_String_o *v77; // x24
+  intptr_t v78; // w25
+  System_Type_o *TypeFromHandle; // x25
+  __int64 v80; // x2
+  __int64 v81; // x3
+  struct System_Collections_Generic_List_string__o *creditText; // x8
+  System_String_o *defaultTextColor; // x21
+  Il2CppObject *v84; // x0
+  EndrolRootComponent_o *v85; // x2
+  int32_t v86; // w3
+  int32_t v87; // w1
+  int32_t v88; // w4
+  EndrolContentItem_o *v89; // x0
   EndrolContentItem_o *result; // x0
-  __int64 v104; // x0
-  __int64 v105; // x0
-  EndrolRootComponent_o *v106; // x0
-  bool v107; // w1
-  const MethodInfo *v108; // x2
-  EndrolContentItem_o *v109; // [xsp+8h] [xbp-68h]
-  EndrolContentItem_o *v110; // [xsp+8h] [xbp-68h]
-  EndrolContentItem_o *v111; // [xsp+8h] [xbp-68h]
-  System_RuntimeTypeHandle_o v112; // 0:w0.4
-  UnityEngine_Vector2_o v113; // 0:s0.4,4:s1.4
+  EndrolRootComponent_o *v91; // x0
+  bool v92; // w1
+  const MethodInfo *v93; // x2
+  EndrolContentItem_o *v94; // [xsp+8h] [xbp-78h]
+  System_RuntimeTypeHandle_o v95; // 0:w0.4
+  UnityEngine_Vector2_o v96; // 0:s0.4,4:s1.4
 
-  v7 = nextDispString;
   v8 = this;
-  if ( (byte_438FA94 & 1) == 0 )
+  if ( (byte_48E6239 & 1) == 0 )
   {
-    sub_B775C4(&char___TypeInfo);
-    sub_B775C4(&System_Enum_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_B775C4(&UIWidget_Pivot_var);
-    sub_B775C4(&UIWidget_Pivot_TypeInfo);
-    sub_B775C4(&string___TypeInfo);
-    sub_B775C4(&System_Type_TypeInfo);
-    sub_B775C4(&StringLiteral_1533/*"="*/);
-    sub_B775C4(&StringLiteral_19515/*"height"*/);
-    sub_B775C4(&StringLiteral_1307/*"<"*/);
-    sub_B775C4(&StringLiteral_20617/*"left"*/);
-    sub_B775C4(&StringLiteral_22297/*"right"*/);
-    sub_B775C4(&StringLiteral_298/*"\""*/);
-    sub_B775C4(&StringLiteral_15925/*"["*/);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    sub_B775C4(&StringLiteral_23763/*"width"*/);
-    sub_B775C4(&StringLiteral_1542/*">"*/);
-    this = (EndrolRootComponent_o *)sub_B775C4(&StringLiteral_17604/*"center"*/);
-    byte_438FA94 = 1;
+    sub_1B00CCC(&System_Enum_TypeInfo, nextDispString);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__get_Item__, v9);
+    sub_1B00CCC(&UIWidget_Pivot_var, v10);
+    sub_1B00CCC(&UIWidget_Pivot_TypeInfo, v11);
+    sub_1B00CCC(&string___TypeInfo, v12);
+    sub_1B00CCC(&System_Type_TypeInfo, v13);
+    sub_1B00CCC(&StringLiteral_1848/*"="*/, v14);
+    sub_1B00CCC(&StringLiteral_19630/*"height"*/, v15);
+    sub_1B00CCC(&StringLiteral_1593/*"<"*/, v16);
+    sub_1B00CCC(&StringLiteral_20785/*"left"*/, v17);
+    sub_1B00CCC(&StringLiteral_22624/*"right"*/, v18);
+    sub_1B00CCC(&StringLiteral_369/*"\""*/, v19);
+    sub_1B00CCC(&StringLiteral_15581/*"["*/, v20);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v21);
+    sub_1B00CCC(&StringLiteral_24333/*"width"*/, v22);
+    sub_1B00CCC(&StringLiteral_1857/*">"*/, v23);
+    this = (EndrolRootComponent_o *)sub_1B00CCC(&StringLiteral_17551/*"center"*/, v24);
+    byte_48E6239 = 1;
   }
   if ( type == 5 )
   {
-    this = (EndrolRootComponent_o *)sub_B775DC(char___TypeInfo, 1LL);
+    if ( !nextDispString )
+      goto LABEL_145;
+    this = (EndrolRootComponent_o *)System_String__Split(nextDispString, 0x7Eu, 0, 0LL);
     if ( !this )
-      goto LABEL_182;
-    nextDispString = (System_String_o *)this;
-    if ( !LODWORD(this->fields.contentPref) )
-      goto LABEL_181;
-    LOWORD(this->fields.endrolContentParent) = 126;
-    if ( !v7 )
-      goto LABEL_182;
-    this = (EndrolRootComponent_o *)System_String__Split(v7, (System_Char_array *)this, 0LL);
-    if ( !this )
-      goto LABEL_182;
-    v56 = this;
-    if ( !LODWORD(this->fields.contentPref) )
-      goto LABEL_181;
-    this = (EndrolRootComponent_o *)this->fields.endrolContentParent;
-    v111 = item;
-    if ( !this )
-      goto LABEL_182;
-    defaultFontSize = v8->fields.defaultFontSize;
-    this = (EndrolRootComponent_o *)System_String__Replace_44909172(
-                                      (System_String_o *)this,
-                                      (System_String_o *)StringLiteral_1307/*"<"*/,
-                                      (System_String_o *)StringLiteral_1/*""*/,
-                                      0LL);
-    if ( !LODWORD(v56->fields.contentPref) )
-      goto LABEL_181;
-    this = (EndrolRootComponent_o *)v56->fields.endrolContentParent;
-    if ( !this )
-      goto LABEL_182;
-    v58 = System_String__Replace_44909172(
-            (System_String_o *)this,
-            (System_String_o *)StringLiteral_1542/*">"*/,
-            (System_String_o *)StringLiteral_1/*""*/,
-            0LL);
-    this = (EndrolRootComponent_o *)sub_B775DC(char___TypeInfo, 1LL);
-    if ( !this )
-      goto LABEL_182;
-    nextDispString = (System_String_o *)this;
-    if ( !LODWORD(this->fields.contentPref) )
-      goto LABEL_181;
-    LOWORD(this->fields.endrolContentParent) = 61;
-    if ( !v58 )
-      goto LABEL_182;
-    this = (EndrolRootComponent_o *)System_String__Split(v58, (System_Char_array *)this, 0LL);
-    if ( !this )
-      goto LABEL_182;
-    if ( LODWORD(this->fields.contentPref) <= 1 )
-      goto LABEL_181;
-    v59 = System_Int32__Parse((System_String_o *)this->fields.panel, 0LL);
-    this = (EndrolRootComponent_o *)sub_B775DC(string___TypeInfo, v59);
-    contentPref = (int)v56->fields.contentPref;
-    v62 = (System_String_array *)this;
-    if ( contentPref < 2 )
+      goto LABEL_145;
+    v38 = this;
+    if ( LODWORD(this->fields.m_CancellationTokenSource) )
     {
-LABEL_153:
-      if ( v62 )
-      {
-        item = v111;
-        if ( v111 )
-        {
-          lastObjectPosY = v8->fields.lastObjectPosY;
-          if ( v62->max_length == 2 )
-            EndrolContentItem__SetDoubleColumnText(v111, lastObjectPosY, v62, defaultFontSize, v8, v60);
-          else
-            EndrolContentItem__SetTripleColumnText(v111, lastObjectPosY, v62, defaultFontSize, v8, v60);
-          return item;
-        }
-      }
-      goto LABEL_182;
-    }
-    v63 = 0;
-    p_panel = (EndrolRootComponent_o **)&v56->fields.panel;
-    v65 = 1;
-    while ( 1 )
-    {
-      if ( v65 >= contentPref )
-        goto LABEL_181;
-      this = *p_panel;
-      if ( !*p_panel )
-        goto LABEL_182;
-      this = (EndrolRootComponent_o *)System_String__StartsWith(
-                                        (System_String_o *)this,
-                                        (System_String_o *)StringLiteral_1307/*"<"*/,
-                                        0LL);
-      if ( v65 >= LODWORD(v56->fields.contentPref) )
-        goto LABEL_181;
-      v66 = (char)this;
-      this = *p_panel;
-      if ( !*p_panel )
-        goto LABEL_182;
-      if ( (v66 & 1) == 0 )
-        break;
-      this = (EndrolRootComponent_o *)System_String__Replace_44909172(
-                                        (System_String_o *)this,
-                                        (System_String_o *)StringLiteral_1307/*"<"*/,
-                                        (System_String_o *)StringLiteral_1/*""*/,
-                                        0LL);
-      v73 = (System_Int32_array **)this;
-      if ( this )
-      {
-        this = (EndrolRootComponent_o *)sub_B77684(this, v56->klass->_1.element_class);
-        if ( !this )
-          goto LABEL_183;
-      }
-      if ( v65 >= LODWORD(v56->fields.contentPref) )
-        goto LABEL_181;
-      *p_panel = (EndrolRootComponent_o *)v73;
-      sub_B77560((BattleServantConfConponent_o *)p_panel, v73, v67, v68, v69, v70, v71, v72);
-      if ( v65 >= LODWORD(v56->fields.contentPref) )
-        goto LABEL_181;
-      this = *p_panel;
-      if ( !*p_panel )
-        goto LABEL_182;
-      this = (EndrolRootComponent_o *)System_String__Replace_44909172(
-                                        (System_String_o *)this,
-                                        (System_String_o *)StringLiteral_1542/*">"*/,
-                                        (System_String_o *)StringLiteral_1/*""*/,
-                                        0LL);
-      v80 = (System_Int32_array **)this;
-      if ( this )
-      {
-        this = (EndrolRootComponent_o *)sub_B77684(this, v56->klass->_1.element_class);
-        if ( !this )
-        {
-LABEL_183:
-          v105 = sub_B776BC(this);
-          sub_B77668(v105, 0LL);
-        }
-      }
-      if ( v65 >= LODWORD(v56->fields.contentPref) )
-        goto LABEL_181;
-      *p_panel = (EndrolRootComponent_o *)v80;
-      sub_B77560((BattleServantConfConponent_o *)p_panel, v80, v74, v75, v76, v77, v78, v79);
-      if ( v65 >= LODWORD(v56->fields.contentPref) )
-        goto LABEL_181;
-      this = *p_panel;
-      if ( !*p_panel )
-        goto LABEL_182;
-      this = (EndrolRootComponent_o *)System_String__Contains(
-                                        (System_String_o *)this,
-                                        (System_String_o *)StringLiteral_1533/*"="*/,
-                                        0LL);
-      if ( ((unsigned __int8)this & 1) != 0 )
-      {
-        if ( v65 >= LODWORD(v56->fields.contentPref) )
-          goto LABEL_181;
-        v81 = *p_panel;
-        this = (EndrolRootComponent_o *)sub_B775DC(char___TypeInfo, 1LL);
-        if ( !this )
-          goto LABEL_182;
-        nextDispString = (System_String_o *)this;
-        if ( !LODWORD(this->fields.contentPref) )
-          goto LABEL_181;
-        LOWORD(this->fields.endrolContentParent) = 61;
-        if ( !v81 )
-          goto LABEL_182;
-        this = (EndrolRootComponent_o *)System_String__Split((System_String_o *)v81, (System_Char_array *)this, 0LL);
-        if ( !this )
-          goto LABEL_182;
-        if ( LODWORD(this->fields.contentPref) <= 1 )
-          goto LABEL_181;
-        this = (EndrolRootComponent_o *)System_Int32__Parse((System_String_o *)this->fields.panel, 0LL);
-        defaultFontSize = (int)this;
-      }
-LABEL_152:
-      contentPref = (int)v56->fields.contentPref;
-      ++v65;
-      ++p_panel;
-      if ( (int)v65 >= contentPref )
-        goto LABEL_153;
-    }
-    this = (EndrolRootComponent_o *)System_String__Contains(
-                                      (System_String_o *)this,
-                                      (System_String_o *)StringLiteral_15925/*"["*/,
-                                      0LL);
-    v88 = (unsigned int)v56->fields.contentPref;
-    if ( ((unsigned __int8)this & 1) != 0 )
-    {
-      if ( v65 >= v88 )
-        goto LABEL_181;
-      if ( !v62 )
-        goto LABEL_182;
-      v89 = *p_panel;
-      if ( !*p_panel )
-        goto LABEL_150;
-    }
-    else
-    {
-      if ( v65 >= v88 )
-        goto LABEL_181;
-      this = (EndrolRootComponent_o *)System_String__Concat_44901936(
-                                        v8->fields.defaultTextColor,
-                                        (System_String_o *)*p_panel,
-                                        0LL);
-      if ( !v62 )
-        goto LABEL_182;
-      v89 = this;
+      this = (EndrolRootComponent_o *)this->fields.contentPref;
       if ( !this )
-        goto LABEL_150;
+        goto LABEL_145;
+      defaultFontSize = v8->fields.defaultFontSize;
+      this = (EndrolRootComponent_o *)System_String__Replace_60345368(
+                                        (System_String_o *)this,
+                                        (System_String_o *)StringLiteral_1593/*"<"*/,
+                                        (System_String_o *)StringLiteral_1/*""*/,
+                                        0LL);
+      if ( LODWORD(v38->fields.m_CancellationTokenSource) )
+      {
+        this = (EndrolRootComponent_o *)v38->fields.contentPref;
+        if ( !this )
+          goto LABEL_145;
+        this = (EndrolRootComponent_o *)System_String__Replace_60345368(
+                                          (System_String_o *)this,
+                                          (System_String_o *)StringLiteral_1857/*">"*/,
+                                          (System_String_o *)StringLiteral_1/*""*/,
+                                          0LL);
+        if ( !this )
+          goto LABEL_145;
+        this = (EndrolRootComponent_o *)System_String__Split((System_String_o *)this, 0x3Du, 0, 0LL);
+        if ( !this )
+          goto LABEL_145;
+        if ( LODWORD(this->fields.m_CancellationTokenSource) > 1 )
+        {
+          v94 = item;
+          v40 = System_Int32__Parse((System_String_o *)this->fields.endrolContentParent, 0LL);
+          this = (EndrolRootComponent_o *)sub_1B00D74(string___TypeInfo, v40);
+          m_CancellationTokenSource = (int)v38->fields.m_CancellationTokenSource;
+          v43 = (System_String_array *)this;
+          if ( m_CancellationTokenSource < 2 )
+          {
+LABEL_76:
+            if ( !v43 )
+              goto LABEL_145;
+            item = v94;
+            if ( !v94 )
+              goto LABEL_145;
+            lastObjectPosY = v8->fields.lastObjectPosY;
+            if ( v43->max_length == 2 )
+              EndrolContentItem__SetDoubleColumnText(v94, lastObjectPosY, v43, defaultFontSize, v8, v41);
+            else
+              EndrolContentItem__SetTripleColumnText(v94, lastObjectPosY, v43, defaultFontSize, v8, v41);
+            return item;
+          }
+          v44 = 0;
+          p_endrolContentParent = (EndrolRootComponent_o **)&v38->fields.endrolContentParent;
+          v46 = 1;
+          while ( v46 < m_CancellationTokenSource )
+          {
+            this = *p_endrolContentParent;
+            if ( !*p_endrolContentParent )
+              goto LABEL_145;
+            this = (EndrolRootComponent_o *)System_String__StartsWith(
+                                              (System_String_o *)this,
+                                              (System_String_o *)StringLiteral_1593/*"<"*/,
+                                              0LL);
+            if ( v46 >= LODWORD(v38->fields.m_CancellationTokenSource) )
+              break;
+            v47 = (char)this;
+            this = *p_endrolContentParent;
+            if ( !*p_endrolContentParent )
+              goto LABEL_145;
+            if ( (v47 & 1) != 0 )
+            {
+              this = (EndrolRootComponent_o *)System_String__Replace_60345368(
+                                                (System_String_o *)this,
+                                                (System_String_o *)StringLiteral_1593/*"<"*/,
+                                                (System_String_o *)StringLiteral_1/*""*/,
+                                                0LL);
+              if ( v46 >= LODWORD(v38->fields.m_CancellationTokenSource) )
+                break;
+              *p_endrolContentParent = this;
+              sub_1B00C70((ServantStatusBattleListViewItem_o *)p_endrolContentParent, (int32_t)this, v48, v49);
+              if ( v46 >= LODWORD(v38->fields.m_CancellationTokenSource) )
+                break;
+              this = *p_endrolContentParent;
+              if ( !*p_endrolContentParent )
+                goto LABEL_145;
+              this = (EndrolRootComponent_o *)System_String__Replace_60345368(
+                                                (System_String_o *)this,
+                                                (System_String_o *)StringLiteral_1857/*">"*/,
+                                                (System_String_o *)StringLiteral_1/*""*/,
+                                                0LL);
+              if ( v46 >= LODWORD(v38->fields.m_CancellationTokenSource) )
+                break;
+              *p_endrolContentParent = this;
+              sub_1B00C70((ServantStatusBattleListViewItem_o *)p_endrolContentParent, (int32_t)this, v50, v51);
+              if ( v46 >= LODWORD(v38->fields.m_CancellationTokenSource) )
+                break;
+              this = *p_endrolContentParent;
+              if ( !*p_endrolContentParent )
+                goto LABEL_145;
+              this = (EndrolRootComponent_o *)System_String__Contains(
+                                                (System_String_o *)this,
+                                                (System_String_o *)StringLiteral_1848/*"="*/,
+                                                0LL);
+              if ( ((unsigned __int8)this & 1) != 0 )
+              {
+                if ( v46 >= LODWORD(v38->fields.m_CancellationTokenSource) )
+                  break;
+                this = *p_endrolContentParent;
+                if ( !*p_endrolContentParent )
+                  goto LABEL_145;
+                this = (EndrolRootComponent_o *)System_String__Split((System_String_o *)this, 0x3Du, 0, 0LL);
+                if ( !this )
+                  goto LABEL_145;
+                if ( LODWORD(this->fields.m_CancellationTokenSource) <= 1 )
+                  break;
+                this = (EndrolRootComponent_o *)System_Int32__Parse(
+                                                  (System_String_o *)this->fields.endrolContentParent,
+                                                  0LL);
+                defaultFontSize = (int)this;
+              }
+            }
+            else
+            {
+              this = (EndrolRootComponent_o *)System_String__Contains(
+                                                (System_String_o *)this,
+                                                (System_String_o *)StringLiteral_15581/*"["*/,
+                                                0LL);
+              v54 = (unsigned int)v38->fields.m_CancellationTokenSource;
+              if ( ((unsigned __int8)this & 1) != 0 )
+              {
+                if ( v46 >= v54 )
+                  break;
+                if ( !v43 )
+                  goto LABEL_145;
+                if ( v44 >= v43->max_length )
+                  break;
+                v55 = *p_endrolContentParent;
+              }
+              else
+              {
+                if ( v46 >= v54 )
+                  break;
+                this = (EndrolRootComponent_o *)System_String__Concat_60325748(
+                                                  v8->fields.defaultTextColor,
+                                                  (System_String_o *)*p_endrolContentParent,
+                                                  0LL);
+                if ( !v43 )
+                  goto LABEL_145;
+                if ( v44 >= v43->max_length )
+                  break;
+                v55 = this;
+              }
+              v56 = &v43->obj.klass + (int)v44;
+              v56[4] = (Il2CppClass *)v55;
+              sub_1B00C70((ServantStatusBattleListViewItem_o *)(v56 + 4), (int32_t)v55, v52, v53);
+              ++v44;
+            }
+            m_CancellationTokenSource = (int)v38->fields.m_CancellationTokenSource;
+            ++v46;
+            ++p_endrolContentParent;
+            if ( (int)v46 >= m_CancellationTokenSource )
+              goto LABEL_76;
+          }
+        }
+      }
     }
-    this = (EndrolRootComponent_o *)sub_B77684(v89, v62->obj.klass->_1.element_class);
-    if ( !this )
-      goto LABEL_183;
-LABEL_150:
-    if ( v63 >= v62->max_length )
-      goto LABEL_181;
-    v90 = &v62->obj.klass + (int)v63;
-    v90[4] = (Il2CppClass *)v89;
-    sub_B77560((BattleServantConfConponent_o *)(v90 + 4), (System_Int32_array **)v89, v82, v83, v84, v85, v86, v87);
-    ++v63;
-    goto LABEL_152;
+LABEL_144:
+    sub_1B00F30(this, nextDispString);
   }
   if ( type != 4 )
   {
     if ( type == 2 )
     {
-      this = (EndrolRootComponent_o *)sub_B775DC(char___TypeInfo, 1LL);
-      if ( this )
+      if ( !nextDispString )
+        goto LABEL_145;
+      this = (EndrolRootComponent_o *)System_String__Split(nextDispString, 0x7Eu, 0, 0LL);
+      if ( !this )
+        goto LABEL_145;
+      v26 = (int)this->fields.m_CancellationTokenSource;
+      v27 = this;
+      v28 = (EndrolRootComponent_o *)StringLiteral_1/*""*/;
+      if ( v26 < 1 )
       {
-        nextDispString = (System_String_o *)this;
-        if ( !LODWORD(this->fields.contentPref) )
-          goto LABEL_181;
-        LOWORD(this->fields.endrolContentParent) = 126;
-        if ( v7 )
-        {
-          this = (EndrolRootComponent_o *)System_String__Split(v7, (System_Char_array *)this, 0LL);
-          if ( this )
-          {
-            v109 = item;
-            v10 = (int)this->fields.contentPref;
-            v11 = this;
-            v12 = (System_String_o *)StringLiteral_1/*""*/;
-            if ( v10 >= 1 )
-            {
-              v13 = 0;
-              v14 = 0.0;
-              v15 = 0.0;
-              while ( v13 < v10 )
-              {
-                v16 = &v11->klass + (int)v13;
-                v18 = (EndrolRootComponent_o *)v16[4];
-                v17 = (EndrolRootComponent_o **)(v16 + 4);
-                this = v18;
-                if ( !v18 )
-                  goto LABEL_182;
-                this = (EndrolRootComponent_o *)System_String__StartsWith(
-                                                  (System_String_o *)this,
-                                                  (System_String_o *)StringLiteral_1307/*"<"*/,
-                                                  0LL);
-                if ( v13 >= LODWORD(v11->fields.contentPref) )
-                  break;
-                v19 = (char)this;
-                this = *v17;
-                if ( !*v17 )
-                  goto LABEL_182;
-                if ( (v19 & 1) != 0 )
-                {
-                  this = (EndrolRootComponent_o *)System_String__Replace_44909172(
-                                                    (System_String_o *)this,
-                                                    (System_String_o *)StringLiteral_1307/*"<"*/,
-                                                    (System_String_o *)StringLiteral_1/*""*/,
-                                                    0LL);
-                  if ( v13 >= LODWORD(v11->fields.contentPref) )
-                    break;
-                  v20 = *v17;
-                  this = (EndrolRootComponent_o *)sub_B775DC(char___TypeInfo, 1LL);
-                  if ( !this )
-                    goto LABEL_182;
-                  nextDispString = (System_String_o *)this;
-                  if ( !LODWORD(this->fields.contentPref) )
-                    break;
-                  LOWORD(this->fields.endrolContentParent) = 61;
-                  if ( !v20 )
-                    goto LABEL_182;
-                  this = (EndrolRootComponent_o *)System_String__Split(
-                                                    (System_String_o *)v20,
-                                                    (System_Char_array *)this,
-                                                    0LL);
-                  if ( !this )
-                    goto LABEL_182;
-                  if ( LODWORD(this->fields.contentPref) <= 1 )
-                    break;
-                  this = (EndrolRootComponent_o *)this->fields.panel;
-                  if ( !this )
-                    goto LABEL_182;
-                  this = (EndrolRootComponent_o *)System_String__Replace_44909172(
-                                                    (System_String_o *)this,
-                                                    (System_String_o *)StringLiteral_298/*"\""*/,
-                                                    (System_String_o *)StringLiteral_1/*""*/,
-                                                    0LL);
-                  v12 = (System_String_o *)this;
-                }
-                else
-                {
-                  this = (EndrolRootComponent_o *)System_String__Contains(
-                                                    (System_String_o *)this,
-                                                    (System_String_o *)StringLiteral_23763/*"width"*/,
-                                                    0LL);
-                  if ( v13 >= LODWORD(v11->fields.contentPref) )
-                    break;
-                  v21 = *v17;
-                  if ( ((unsigned __int8)this & 1) != 0 )
-                  {
-                    this = (EndrolRootComponent_o *)sub_B775DC(char___TypeInfo, 1LL);
-                    if ( !this )
-                      goto LABEL_182;
-                    nextDispString = (System_String_o *)this;
-                    if ( !LODWORD(this->fields.contentPref) )
-                      break;
-                    LOWORD(this->fields.endrolContentParent) = 61;
-                    if ( !v21 )
-                      goto LABEL_182;
-                    this = (EndrolRootComponent_o *)System_String__Split(
-                                                      (System_String_o *)v21,
-                                                      (System_Char_array *)this,
-                                                      0LL);
-                    if ( !this )
-                      goto LABEL_182;
-                    if ( LODWORD(this->fields.contentPref) <= 1 )
-                      break;
-                    v15 = System_Single__Parse((System_String_o *)this->fields.panel, 0LL);
-                  }
-                  else
-                  {
-                    if ( !v21 )
-                      goto LABEL_182;
-                    this = (EndrolRootComponent_o *)System_String__Contains(
-                                                      (System_String_o *)*v17,
-                                                      (System_String_o *)StringLiteral_19515/*"height"*/,
-                                                      0LL);
-                    if ( ((unsigned __int8)this & 1) != 0 )
-                    {
-                      if ( v13 >= LODWORD(v11->fields.contentPref) )
-                        break;
-                      v22 = *v17;
-                      this = (EndrolRootComponent_o *)sub_B775DC(char___TypeInfo, 1LL);
-                      if ( !this )
-                        goto LABEL_182;
-                      nextDispString = (System_String_o *)this;
-                      if ( !LODWORD(this->fields.contentPref) )
-                        break;
-                      LOWORD(this->fields.endrolContentParent) = 61;
-                      if ( !v22 )
-                        goto LABEL_182;
-                      this = (EndrolRootComponent_o *)System_String__Split(
-                                                        (System_String_o *)v22,
-                                                        (System_Char_array *)this,
-                                                        0LL);
-                      if ( !this )
-                        goto LABEL_182;
-                      if ( LODWORD(this->fields.contentPref) <= 1 )
-                        break;
-                      this = (EndrolRootComponent_o *)this->fields.panel;
-                      if ( !this )
-                        goto LABEL_182;
-                      v23 = System_String__Replace_44909172(
-                              (System_String_o *)this,
-                              (System_String_o *)StringLiteral_1542/*">"*/,
-                              (System_String_o *)StringLiteral_1/*""*/,
-                              0LL);
-                      v14 = System_Single__Parse(v23, 0LL);
-                    }
-                  }
-                }
-                v10 = (int)v11->fields.contentPref;
-                if ( (int)++v13 >= v10 )
-                  goto LABEL_178;
-              }
-LABEL_181:
-              v104 = sub_B776C8(this);
-              sub_B77668(v104, 0LL);
-            }
-            v15 = 0.0;
-            v14 = 0.0;
-LABEL_178:
-            item = v109;
-            if ( v109 )
-            {
-              v113.fields.x = v15;
-              v113.fields.y = v14;
-              EndrolContentItem__SetImage(v109, v8->fields.lastObjectPosY, v12, v113, v8, v9);
-              return item;
-            }
-          }
-        }
-      }
-LABEL_182:
-      sub_B7769C(this, nextDispString);
-    }
-    creditText = v8->fields.creditText;
-    if ( !creditText )
-      goto LABEL_182;
-    nowDispIndex = v8->fields.nowDispIndex;
-    if ( creditText->fields._size <= (unsigned int)nowDispIndex )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-    this = (EndrolRootComponent_o *)creditText->fields._items->m_Items[nowDispIndex];
-    if ( !this )
-      goto LABEL_182;
-    this = (EndrolRootComponent_o *)System_String__Contains(
-                                      (System_String_o *)this,
-                                      (System_String_o *)StringLiteral_15925/*"["*/,
-                                      0LL);
-    if ( ((unsigned __int8)this & 1) != 0 )
-    {
-      v94 = v8->fields.creditText;
-      if ( !v94 )
-        goto LABEL_182;
-      v95 = v8->fields.nowDispIndex;
-      if ( v94->fields._size <= (unsigned int)v95 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-      v96 = v94->fields._items->m_Items[v95];
-      if ( !item )
-        goto LABEL_182;
-    }
-    else
-    {
-      v97 = v8->fields.creditText;
-      if ( !v97 )
-        goto LABEL_182;
-      v98 = v8->fields.nowDispIndex;
-      if ( v97->fields._size <= (unsigned int)v98 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-      this = (EndrolRootComponent_o *)System_String__Concat_44901936(
-                                        v8->fields.defaultTextColor,
-                                        v97->fields._items->m_Items[v98],
-                                        0LL);
-      v96 = (System_String_o *)this;
-      if ( !item )
-        goto LABEL_182;
-    }
-    v99 = v8->fields.defaultFontSize;
-    v100 = v8->fields.lastObjectPosY;
-    v101 = 4;
-    v102 = item;
-LABEL_176:
-    EndrolContentItem__SetText(v102, v100, v96, v99, v101, v8, v24);
-    return item;
-  }
-  this = (EndrolRootComponent_o *)sub_B775DC(char___TypeInfo, 1LL);
-  if ( !this )
-    goto LABEL_182;
-  nextDispString = (System_String_o *)this;
-  if ( !LODWORD(this->fields.contentPref) )
-    goto LABEL_181;
-  LOWORD(this->fields.endrolContentParent) = 126;
-  if ( !v7 )
-    goto LABEL_182;
-  this = (EndrolRootComponent_o *)System_String__Split(v7, (System_Char_array *)this, 0LL);
-  if ( !this )
-    goto LABEL_182;
-  v110 = item;
-  v25 = (int)this->fields.contentPref;
-  v26 = v8->fields.defaultFontSize;
-  v27 = this;
-  v28 = (EndrolRootComponent_o *)StringLiteral_1/*""*/;
-  if ( v25 < 1 )
-  {
-    klass = 4;
-LABEL_174:
-    item = v110;
-    if ( !v110 )
-      goto LABEL_182;
-    v100 = v8->fields.lastObjectPosY;
-    v102 = v110;
-    v96 = (System_String_o *)v28;
-    v99 = v26;
-    v101 = klass;
-    goto LABEL_176;
-  }
-  v29 = 0;
-  klass = 4;
-  while ( 1 )
-  {
-    if ( v29 >= v25 )
-      goto LABEL_181;
-    v31 = &v27->klass + (int)v29;
-    v33 = (EndrolRootComponent_o *)v31[4];
-    v32 = (EndrolRootComponent_o **)(v31 + 4);
-    this = v33;
-    if ( !v33 )
-      goto LABEL_182;
-    this = (EndrolRootComponent_o *)System_String__StartsWith(
-                                      (System_String_o *)this,
-                                      (System_String_o *)StringLiteral_1307/*"<"*/,
-                                      0LL);
-    if ( v29 >= LODWORD(v27->fields.contentPref) )
-      goto LABEL_181;
-    v34 = (char)this;
-    this = *v32;
-    if ( !*v32 )
-      goto LABEL_182;
-    if ( (v34 & 1) == 0 )
-    {
-      this = (EndrolRootComponent_o *)System_String__Contains(
-                                        (System_String_o *)this,
-                                        (System_String_o *)StringLiteral_15925/*"["*/,
-                                        0LL);
-      v50 = (unsigned int)v27->fields.contentPref;
-      if ( ((unsigned __int8)this & 1) != 0 )
-      {
-        if ( v29 >= v50 )
-          goto LABEL_181;
-        v28 = *v32;
+        v31 = 0.0;
+        v30 = 0.0;
+        if ( !item )
+          goto LABEL_145;
       }
       else
       {
-        if ( v29 >= v50 )
-          goto LABEL_181;
-        this = (EndrolRootComponent_o *)System_String__Concat_44901936(
-                                          v8->fields.defaultTextColor,
-                                          (System_String_o *)*v32,
-                                          0LL);
-        v28 = this;
+        v29 = 0;
+        v30 = 0.0;
+        v31 = 0.0;
+        do
+        {
+          if ( v29 >= v26 )
+            goto LABEL_144;
+          v32 = &v27->klass + (int)v29;
+          v34 = (EndrolRootComponent_o *)v32[4];
+          v33 = (EndrolRootComponent_o **)(v32 + 4);
+          this = v34;
+          if ( !v34 )
+            goto LABEL_145;
+          this = (EndrolRootComponent_o *)System_String__StartsWith(
+                                            (System_String_o *)this,
+                                            (System_String_o *)StringLiteral_1593/*"<"*/,
+                                            0LL);
+          if ( v29 >= LODWORD(v27->fields.m_CancellationTokenSource) )
+            goto LABEL_144;
+          v35 = (char)this;
+          this = *v33;
+          if ( !*v33 )
+            goto LABEL_145;
+          if ( (v35 & 1) != 0 )
+          {
+            this = (EndrolRootComponent_o *)System_String__Replace_60345368(
+                                              (System_String_o *)this,
+                                              (System_String_o *)StringLiteral_1593/*"<"*/,
+                                              (System_String_o *)StringLiteral_1/*""*/,
+                                              0LL);
+            if ( v29 >= LODWORD(v27->fields.m_CancellationTokenSource) )
+              goto LABEL_144;
+            this = *v33;
+            if ( !*v33 )
+              goto LABEL_145;
+            this = (EndrolRootComponent_o *)System_String__Split((System_String_o *)this, 0x3Du, 0, 0LL);
+            if ( !this )
+              goto LABEL_145;
+            if ( LODWORD(this->fields.m_CancellationTokenSource) <= 1 )
+              goto LABEL_144;
+            this = (EndrolRootComponent_o *)this->fields.endrolContentParent;
+            if ( !this )
+              goto LABEL_145;
+            this = (EndrolRootComponent_o *)System_String__Replace_60345368(
+                                              (System_String_o *)this,
+                                              (System_String_o *)StringLiteral_369/*"\""*/,
+                                              (System_String_o *)StringLiteral_1/*""*/,
+                                              0LL);
+            v28 = this;
+          }
+          else
+          {
+            this = (EndrolRootComponent_o *)System_String__Contains(
+                                              (System_String_o *)this,
+                                              (System_String_o *)StringLiteral_24333/*"width"*/,
+                                              0LL);
+            if ( v29 >= LODWORD(v27->fields.m_CancellationTokenSource) )
+              goto LABEL_144;
+            v36 = (char)this;
+            this = *v33;
+            if ( !*v33 )
+              goto LABEL_145;
+            if ( (v36 & 1) != 0 )
+            {
+              this = (EndrolRootComponent_o *)System_String__Split((System_String_o *)this, 0x3Du, 0, 0LL);
+              if ( !this )
+                goto LABEL_145;
+              if ( LODWORD(this->fields.m_CancellationTokenSource) <= 1 )
+                goto LABEL_144;
+              v31 = System_Single__Parse((System_String_o *)this->fields.endrolContentParent, 0LL);
+            }
+            else
+            {
+              this = (EndrolRootComponent_o *)System_String__Contains(
+                                                (System_String_o *)this,
+                                                (System_String_o *)StringLiteral_19630/*"height"*/,
+                                                0LL);
+              if ( ((unsigned __int8)this & 1) != 0 )
+              {
+                if ( v29 >= LODWORD(v27->fields.m_CancellationTokenSource) )
+                  goto LABEL_144;
+                this = *v33;
+                if ( !*v33 )
+                  goto LABEL_145;
+                this = (EndrolRootComponent_o *)System_String__Split((System_String_o *)this, 0x3Du, 0, 0LL);
+                if ( !this )
+                  goto LABEL_145;
+                if ( LODWORD(this->fields.m_CancellationTokenSource) <= 1 )
+                  goto LABEL_144;
+                this = (EndrolRootComponent_o *)this->fields.endrolContentParent;
+                if ( !this )
+                  goto LABEL_145;
+                v37 = System_String__Replace_60345368(
+                        (System_String_o *)this,
+                        (System_String_o *)StringLiteral_1857/*">"*/,
+                        (System_String_o *)StringLiteral_1/*""*/,
+                        0LL);
+                v30 = System_Single__Parse(v37, 0LL);
+              }
+            }
+          }
+          v26 = (int)v27->fields.m_CancellationTokenSource;
+          ++v29;
+        }
+        while ( (int)v29 < v26 );
+        if ( !item )
+          goto LABEL_145;
       }
-      goto LABEL_101;
+      v96.fields.x = v31;
+      v96.fields.y = v30;
+      EndrolContentItem__SetImage(item, v8->fields.lastObjectPosY, (System_String_o *)v28, v96, v8, v25);
+      return item;
     }
-    this = (EndrolRootComponent_o *)System_String__Replace_44909172(
-                                      (System_String_o *)this,
-                                      (System_String_o *)StringLiteral_1307/*"<"*/,
-                                      (System_String_o *)StringLiteral_1/*""*/,
-                                      0LL);
-    v41 = (System_Int32_array **)this;
+    this = (EndrolRootComponent_o *)v8->fields.creditText;
     if ( this )
     {
-      this = (EndrolRootComponent_o *)sub_B77684(this, v27->klass->_1.element_class);
-      if ( !this )
-        goto LABEL_183;
+      this = (EndrolRootComponent_o *)System_Collections_Generic_List_object___get_Item(
+                                        (System_Collections_Generic_List_object__o *)this,
+                                        v8->fields.nowDispIndex,
+                                        (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_string__get_Item__);
+      if ( this )
+      {
+        this = (EndrolRootComponent_o *)System_String__Contains(
+                                          (System_String_o *)this,
+                                          (System_String_o *)StringLiteral_15581/*"["*/,
+                                          0LL);
+        creditText = v8->fields.creditText;
+        if ( ((unsigned __int8)this & 1) != 0 )
+        {
+          if ( !creditText )
+            goto LABEL_145;
+          this = (EndrolRootComponent_o *)System_Collections_Generic_List_object___get_Item(
+                                            (System_Collections_Generic_List_object__o *)v8->fields.creditText,
+                                            v8->fields.nowDispIndex,
+                                            (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_string__get_Item__);
+        }
+        else
+        {
+          if ( !creditText )
+            goto LABEL_145;
+          defaultTextColor = v8->fields.defaultTextColor;
+          v84 = System_Collections_Generic_List_object___get_Item(
+                  (System_Collections_Generic_List_object__o *)v8->fields.creditText,
+                  v8->fields.nowDispIndex,
+                  (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_string__get_Item__);
+          this = (EndrolRootComponent_o *)System_String__Concat_60325748(defaultTextColor, (System_String_o *)v84, 0LL);
+        }
+        v85 = this;
+        if ( item )
+        {
+          v86 = v8->fields.defaultFontSize;
+          v87 = v8->fields.lastObjectPosY;
+          v88 = 4;
+          v89 = item;
+LABEL_142:
+          EndrolContentItem__SetText(v89, v87, (System_String_o *)v85, v86, v88, v8, v58);
+          return item;
+        }
+      }
     }
-    if ( v29 >= LODWORD(v27->fields.contentPref) )
-      goto LABEL_181;
-    *v32 = (EndrolRootComponent_o *)v41;
-    sub_B77560((BattleServantConfConponent_o *)v32, v41, v35, v36, v37, v38, v39, v40);
-    if ( v29 >= LODWORD(v27->fields.contentPref) )
-      goto LABEL_181;
-    this = *v32;
-    if ( !*v32 )
-      goto LABEL_182;
-    this = (EndrolRootComponent_o *)System_String__Replace_44909172(
-                                      (System_String_o *)this,
-                                      (System_String_o *)StringLiteral_1542/*">"*/,
-                                      (System_String_o *)StringLiteral_1/*""*/,
-                                      0LL);
-    v48 = (System_Int32_array **)this;
-    if ( this )
-    {
-      this = (EndrolRootComponent_o *)sub_B77684(this, v27->klass->_1.element_class);
-      if ( !this )
-        goto LABEL_183;
-    }
-    if ( v29 >= LODWORD(v27->fields.contentPref) )
-      goto LABEL_181;
-    *v32 = (EndrolRootComponent_o *)v48;
-    sub_B77560((BattleServantConfConponent_o *)v32, v48, v42, v43, v44, v45, v46, v47);
-    if ( v29 >= LODWORD(v27->fields.contentPref) )
-      goto LABEL_181;
-    this = *v32;
-    if ( !*v32 )
-      goto LABEL_182;
-    this = (EndrolRootComponent_o *)System_String__Contains(
-                                      (System_String_o *)this,
-                                      (System_String_o *)StringLiteral_1533/*"="*/,
-                                      0LL);
-    if ( v29 >= LODWORD(v27->fields.contentPref) )
-      goto LABEL_181;
-    v49 = *v32;
-    if ( ((unsigned __int8)this & 1) != 0 )
-    {
-      this = (EndrolRootComponent_o *)sub_B775DC(char___TypeInfo, 1LL);
-      if ( !this )
-        goto LABEL_182;
-      nextDispString = (System_String_o *)this;
-      if ( !LODWORD(this->fields.contentPref) )
-        goto LABEL_181;
-      LOWORD(this->fields.endrolContentParent) = 61;
-      if ( !v49 )
-        goto LABEL_182;
-      this = (EndrolRootComponent_o *)System_String__Split((System_String_o *)v49, (System_Char_array *)this, 0LL);
-      if ( !this )
-        goto LABEL_182;
-      if ( LODWORD(this->fields.contentPref) <= 1 )
-        goto LABEL_181;
-      this = (EndrolRootComponent_o *)System_Int32__Parse((System_String_o *)this->fields.panel, 0LL);
-      v26 = (int)this;
-      goto LABEL_101;
-    }
-    if ( !v49 )
-      goto LABEL_182;
-    this = (EndrolRootComponent_o *)System_String__Contains(
-                                      (System_String_o *)*v32,
-                                      (System_String_o *)StringLiteral_17604/*"center"*/,
-                                      0LL);
-    if ( ((unsigned __int8)this & 1) != 0 )
-      break;
-    if ( v29 >= LODWORD(v27->fields.contentPref) )
-      goto LABEL_181;
-    this = *v32;
-    if ( !*v32 )
-      goto LABEL_182;
-    this = (EndrolRootComponent_o *)System_String__Contains(
-                                      (System_String_o *)this,
-                                      (System_String_o *)StringLiteral_20617/*"left"*/,
-                                      0LL);
-    if ( ((unsigned __int8)this & 1) != 0 )
-      break;
-    if ( v29 >= LODWORD(v27->fields.contentPref) )
-      goto LABEL_181;
-    this = *v32;
-    if ( !*v32 )
-      goto LABEL_182;
-    this = (EndrolRootComponent_o *)System_String__Contains(
-                                      (System_String_o *)this,
-                                      (System_String_o *)StringLiteral_22297/*"right"*/,
-                                      0LL);
-    if ( ((unsigned __int8)this & 1) != 0 )
-      break;
-LABEL_101:
-    v25 = (int)v27->fields.contentPref;
-    if ( (int)++v29 >= v25 )
-      goto LABEL_174;
+    goto LABEL_145;
   }
-  if ( v29 >= LODWORD(v27->fields.contentPref) )
-    goto LABEL_181;
-  this = *v32;
-  if ( !*v32 )
-    goto LABEL_182;
-  this = (EndrolRootComponent_o *)System_String__Substring_44965672((System_String_o *)this, 0, 1, 0LL);
+  if ( !nextDispString )
+    goto LABEL_145;
+  this = (EndrolRootComponent_o *)System_String__Split(nextDispString, 0x7Eu, 0, 0LL);
   if ( !this )
-    goto LABEL_182;
+    goto LABEL_145;
+  v59 = (int)this->fields.m_CancellationTokenSource;
+  v60 = v8->fields.defaultFontSize;
+  v61 = this;
+  v62 = (EndrolRootComponent_o *)StringLiteral_1/*""*/;
+  if ( v59 < 1 )
+  {
+    klass = 4;
+LABEL_140:
+    if ( item )
+    {
+      v87 = v8->fields.lastObjectPosY;
+      v89 = item;
+      v85 = v62;
+      v86 = v60;
+      v88 = klass;
+      goto LABEL_142;
+    }
+LABEL_145:
+    sub_1B00F28(this, nextDispString);
+  }
+  v63 = 0;
+  klass = 4;
+  while ( 1 )
+  {
+    if ( v63 >= v59 )
+      goto LABEL_144;
+    v65 = &v61->klass + (int)v63;
+    v67 = (EndrolRootComponent_o *)v65[4];
+    v66 = (EndrolRootComponent_o **)(v65 + 4);
+    this = v67;
+    if ( !v67 )
+      goto LABEL_145;
+    this = (EndrolRootComponent_o *)System_String__StartsWith(
+                                      (System_String_o *)this,
+                                      (System_String_o *)StringLiteral_1593/*"<"*/,
+                                      0LL);
+    if ( v63 >= LODWORD(v61->fields.m_CancellationTokenSource) )
+      goto LABEL_144;
+    v68 = (char)this;
+    this = *v66;
+    if ( !*v66 )
+      goto LABEL_145;
+    if ( (v68 & 1) == 0 )
+    {
+      this = (EndrolRootComponent_o *)System_String__Contains(
+                                        (System_String_o *)this,
+                                        (System_String_o *)StringLiteral_15581/*"["*/,
+                                        0LL);
+      v74 = (unsigned int)v61->fields.m_CancellationTokenSource;
+      if ( ((unsigned __int8)this & 1) != 0 )
+      {
+        if ( v63 >= v74 )
+          goto LABEL_144;
+        v62 = *v66;
+      }
+      else
+      {
+        if ( v63 >= v74 )
+          goto LABEL_144;
+        this = (EndrolRootComponent_o *)System_String__Concat_60325748(
+                                          v8->fields.defaultTextColor,
+                                          (System_String_o *)*v66,
+                                          0LL);
+        v62 = this;
+      }
+      goto LABEL_125;
+    }
+    this = (EndrolRootComponent_o *)System_String__Replace_60345368(
+                                      (System_String_o *)this,
+                                      (System_String_o *)StringLiteral_1593/*"<"*/,
+                                      (System_String_o *)StringLiteral_1/*""*/,
+                                      0LL);
+    if ( v63 >= LODWORD(v61->fields.m_CancellationTokenSource) )
+      goto LABEL_144;
+    *v66 = this;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)v66, (int32_t)this, v69, v70);
+    if ( v63 >= LODWORD(v61->fields.m_CancellationTokenSource) )
+      goto LABEL_144;
+    this = *v66;
+    if ( !*v66 )
+      goto LABEL_145;
+    this = (EndrolRootComponent_o *)System_String__Replace_60345368(
+                                      (System_String_o *)this,
+                                      (System_String_o *)StringLiteral_1857/*">"*/,
+                                      (System_String_o *)StringLiteral_1/*""*/,
+                                      0LL);
+    if ( v63 >= LODWORD(v61->fields.m_CancellationTokenSource) )
+      goto LABEL_144;
+    *v66 = this;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)v66, (int32_t)this, v71, v72);
+    if ( v63 >= LODWORD(v61->fields.m_CancellationTokenSource) )
+      goto LABEL_144;
+    this = *v66;
+    if ( !*v66 )
+      goto LABEL_145;
+    this = (EndrolRootComponent_o *)System_String__Contains(
+                                      (System_String_o *)this,
+                                      (System_String_o *)StringLiteral_1848/*"="*/,
+                                      0LL);
+    if ( v63 >= LODWORD(v61->fields.m_CancellationTokenSource) )
+      goto LABEL_144;
+    v73 = (char)this;
+    this = *v66;
+    if ( !*v66 )
+      goto LABEL_145;
+    if ( (v73 & 1) != 0 )
+    {
+      this = (EndrolRootComponent_o *)System_String__Split((System_String_o *)this, 0x3Du, 0, 0LL);
+      if ( !this )
+        goto LABEL_145;
+      if ( LODWORD(this->fields.m_CancellationTokenSource) <= 1 )
+        goto LABEL_144;
+      this = (EndrolRootComponent_o *)System_Int32__Parse((System_String_o *)this->fields.endrolContentParent, 0LL);
+      v60 = (int)this;
+      goto LABEL_125;
+    }
+    this = (EndrolRootComponent_o *)System_String__Contains(
+                                      (System_String_o *)this,
+                                      (System_String_o *)StringLiteral_17551/*"center"*/,
+                                      0LL);
+    if ( ((unsigned __int8)this & 1) != 0 )
+      break;
+    if ( v63 >= LODWORD(v61->fields.m_CancellationTokenSource) )
+      goto LABEL_144;
+    this = *v66;
+    if ( !*v66 )
+      goto LABEL_145;
+    this = (EndrolRootComponent_o *)System_String__Contains(
+                                      (System_String_o *)this,
+                                      (System_String_o *)StringLiteral_20785/*"left"*/,
+                                      0LL);
+    if ( ((unsigned __int8)this & 1) != 0 )
+      break;
+    if ( v63 >= LODWORD(v61->fields.m_CancellationTokenSource) )
+      goto LABEL_144;
+    this = *v66;
+    if ( !*v66 )
+      goto LABEL_145;
+    this = (EndrolRootComponent_o *)System_String__Contains(
+                                      (System_String_o *)this,
+                                      (System_String_o *)StringLiteral_22624/*"right"*/,
+                                      0LL);
+    if ( ((unsigned __int8)this & 1) != 0 )
+      break;
+LABEL_125:
+    v59 = (int)v61->fields.m_CancellationTokenSource;
+    if ( (int)++v63 >= v59 )
+      goto LABEL_140;
+  }
+  if ( v63 >= LODWORD(v61->fields.m_CancellationTokenSource) )
+    goto LABEL_144;
+  this = *v66;
+  if ( !*v66 )
+    goto LABEL_145;
+  this = (EndrolRootComponent_o *)System_String__Substring_60344744((System_String_o *)this, 0, 1, 0LL);
+  if ( !this )
+    goto LABEL_145;
   this = (EndrolRootComponent_o *)System_String__ToUpper((System_String_o *)this, 0LL);
-  if ( v29 >= LODWORD(v27->fields.contentPref) )
-    goto LABEL_181;
-  v51 = (System_String_o *)this;
-  this = *v32;
-  if ( !*v32 )
-    goto LABEL_182;
-  v52 = System_String__Substring((System_String_o *)this, 1, 0LL);
-  v53 = System_String__Concat_44901936(v51, v52, 0LL);
-  v54 = (int)UIWidget_Pivot_var;
-  if ( (BYTE3(System_Type_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !System_Type_TypeInfo->_2.cctor_finished )
+  if ( v63 >= LODWORD(v61->fields.m_CancellationTokenSource) )
+    goto LABEL_144;
+  v75 = this;
+  this = *v66;
+  if ( !*v66 )
+    goto LABEL_145;
+  v76 = System_String__Substring((System_String_o *)this, 1, 0LL);
+  v77 = System_String__Concat_60325748((System_String_o *)v75, v76, 0LL);
+  v78 = (int)UIWidget_Pivot_var;
+  if ( !System_Type_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-  v112.fields.value = v54;
-  TypeFromHandle = System_Type__GetTypeFromHandle(v112, 0LL);
-  if ( (BYTE3(System_Enum_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !System_Enum_TypeInfo->_2.cctor_finished )
+  v95.fields.value = v78;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v95, 0LL);
+  if ( !System_Enum_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Enum_TypeInfo);
-  this = (EndrolRootComponent_o *)System_Enum__Parse(TypeFromHandle, v53, 0LL);
+  this = (EndrolRootComponent_o *)System_Enum__Parse(TypeFromHandle, v77, 0LL);
   if ( !this )
-    goto LABEL_182;
+    goto LABEL_145;
   if ( this->klass->_1.element_class == UIWidget_Pivot_TypeInfo->_1.element_class )
   {
-    this = (EndrolRootComponent_o *)j_il2cpp_object_unbox_0(this);
+    this = (EndrolRootComponent_o *)j_il2cpp_object_unbox_0(this, UIWidget_Pivot_TypeInfo, v80, v81);
     klass = (int)this->klass;
-    goto LABEL_101;
+    goto LABEL_125;
   }
-  sub_B77990(this);
-  EndrolRootComponent__callbackConfirmDlg(v106, v107, v108);
+  sub_1B011E8(this);
+  EndrolRootComponent__callbackConfirmDlg(v91, v92, v93);
   return result;
 }
 
 
 void __fastcall EndrolRootComponent__StartEndroll(EndrolRootComponent_o *this, const MethodInfo *method)
 {
-  float lastPostion; // s8
-  System_Collections_Hashtable_o *v4; // x20
-  __int64 v5; // x2
-  __int64 v6; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
-  __int64 v8; // x2
-  __int64 v9; // x0
-  __int64 v10; // x2
-  __int64 v11; // x0
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  float lastPostion; // s8
+  System_Collections_Hashtable_o *v14; // x20
+  __int64 v15; // x2
+  __int64 v16; // x3
+  __int64 v17; // x4
+  __int64 v18; // x0
+  __int64 v19; // x1
+  __int64 v20; // x2
+  __int64 v21; // x3
+  __int64 v22; // x4
+  __int64 v23; // x0
+  __int64 v24; // x2
+  __int64 v25; // x3
+  __int64 v26; // x4
+  __int64 v27; // x0
   UnityEngine_GameObject_o *gameObject; // x19
-  float endrolTotalTime; // [xsp+4h] [xbp-2Ch] BYREF
-  float v14; // [xsp+8h] [xbp-28h] BYREF
-  int v15; // [xsp+Ch] [xbp-24h] BYREF
+  float endrolTotalTime; // [xsp+4h] [xbp-6Ch] BYREF
+  float v30; // [xsp+8h] [xbp-68h] BYREF
+  int v31; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_438FA8A & 1) == 0 )
+  if ( (byte_48E622F & 1) == 0 )
   {
-    sub_B775C4(&System_Collections_Hashtable_TypeInfo);
-    sub_B775C4(&int_TypeInfo);
-    sub_B775C4(&float_TypeInfo);
-    sub_B775C4(&StringLiteral_10253/*"OnUpdateScroll"*/);
-    sub_B775C4(&StringLiteral_19296/*"from"*/);
-    sub_B775C4(&StringLiteral_23154/*"time"*/);
-    sub_B775C4(&StringLiteral_21711/*"onupdate"*/);
-    sub_B775C4(&StringLiteral_10230/*"OnScrollEnd"*/);
-    sub_B775C4(&StringLiteral_23192/*"to"*/);
-    sub_B775C4(&StringLiteral_21702/*"oncomplete"*/);
-    sub_B775C4(&iTween_TypeInfo);
-    byte_438FA8A = 1;
+    sub_1B00CCC(&System_Collections_Hashtable_TypeInfo, method);
+    sub_1B00CCC(&int_TypeInfo, v3);
+    sub_1B00CCC(&float_TypeInfo, v4);
+    sub_1B00CCC(&StringLiteral_9861/*"OnUpdateScroll"*/, v5);
+    sub_1B00CCC(&StringLiteral_19387/*"from"*/, v6);
+    sub_1B00CCC(&StringLiteral_23574/*"time"*/, v7);
+    sub_1B00CCC(&StringLiteral_21979/*"onupdate"*/, v8);
+    sub_1B00CCC(&StringLiteral_9838/*"OnScrollEnd"*/, v9);
+    sub_1B00CCC(&StringLiteral_23614/*"to"*/, v10);
+    sub_1B00CCC(&StringLiteral_21971/*"oncomplete"*/, v11);
+    sub_1B00CCC(&iTween_TypeInfo, v12);
+    byte_48E622F = 1;
   }
   lastPostion = this->fields.lastPostion;
-  v4 = (System_Collections_Hashtable_o *)sub_B77694(System_Collections_Hashtable_TypeInfo);
-  System_Collections_Hashtable___ctor_39511352(v4, 0LL);
-  v15 = 0;
-  v6 = j_il2cpp_value_box_0(int_TypeInfo, &v15, v5);
-  if ( !v4 )
-    sub_B7769C(v6, v7);
-  ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v4->klass->vtable._23_Add.method)(
-    v4,
-    StringLiteral_19296/*"from"*/,
-    v6,
-    v4->klass->vtable._24_Clear.methodPtr);
-  v14 = lastPostion + 580.0;
-  v9 = j_il2cpp_value_box_0(float_TypeInfo, &v14, v8);
-  ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v4->klass->vtable._23_Add.method)(
-    v4,
-    StringLiteral_23192/*"to"*/,
-    v9,
-    v4->klass->vtable._24_Clear.methodPtr);
+  v14 = (System_Collections_Hashtable_o *)sub_1B00F18(System_Collections_Hashtable_TypeInfo);
+  System_Collections_Hashtable___ctor_60905040(v14, 0LL);
+  v31 = 0;
+  v18 = j_il2cpp_value_box_0(int_TypeInfo, &v31, v15, v16, v17);
+  if ( !v14 )
+    sub_1B00F28(v18, v19);
+  ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v14->klass->vtable._23_Add.method)(
+    v14,
+    StringLiteral_19387/*"from"*/,
+    v18,
+    v14->klass->vtable._24_Clear.methodPtr);
+  v30 = lastPostion + 580.0;
+  v23 = j_il2cpp_value_box_0(float_TypeInfo, &v30, v20, v21, v22);
+  ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v14->klass->vtable._23_Add.method)(
+    v14,
+    StringLiteral_23614/*"to"*/,
+    v23,
+    v14->klass->vtable._24_Clear.methodPtr);
   endrolTotalTime = this->fields.endrolTotalTime;
-  v11 = j_il2cpp_value_box_0(float_TypeInfo, &endrolTotalTime, v10);
-  ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v4->klass->vtable._23_Add.method)(
-    v4,
-    StringLiteral_23154/*"time"*/,
-    v11,
-    v4->klass->vtable._24_Clear.methodPtr);
-  ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v4->klass->vtable._23_Add.method)(
-    v4,
-    StringLiteral_21711/*"onupdate"*/,
-    StringLiteral_10253/*"OnUpdateScroll"*/,
-    v4->klass->vtable._24_Clear.methodPtr);
-  ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v4->klass->vtable._23_Add.method)(
-    v4,
-    StringLiteral_21702/*"oncomplete"*/,
-    StringLiteral_10230/*"OnScrollEnd"*/,
-    v4->klass->vtable._24_Clear.methodPtr);
+  v27 = j_il2cpp_value_box_0(float_TypeInfo, &endrolTotalTime, v24, v25, v26);
+  ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v14->klass->vtable._23_Add.method)(
+    v14,
+    StringLiteral_23574/*"time"*/,
+    v27,
+    v14->klass->vtable._24_Clear.methodPtr);
+  ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v14->klass->vtable._23_Add.method)(
+    v14,
+    StringLiteral_21979/*"onupdate"*/,
+    StringLiteral_9861/*"OnUpdateScroll"*/,
+    v14->klass->vtable._24_Clear.methodPtr);
+  ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v14->klass->vtable._23_Add.method)(
+    v14,
+    StringLiteral_21971/*"oncomplete"*/,
+    StringLiteral_9838/*"OnScrollEnd"*/,
+    v14->klass->vtable._24_Clear.methodPtr);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  if ( (BYTE3(iTween_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !iTween_TypeInfo->_2.cctor_finished )
+  if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  iTween__ValueTo(gameObject, v4, 0LL);
+  iTween__ValueTo(gameObject, v14, 0LL);
 }
 
 
 void __fastcall EndrolRootComponent__StopEndrol(EndrolRootComponent_o *this, const MethodInfo *method)
 {
-  CommonUI_o *Instance; // x20
-  AvalonSceneManager_c *v4; // x8
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  Il2CppObject *Instance; // x0
+  AvalonSceneManager_c *v7; // x8
+  CommonUI_o *v8; // x20
   float DEFAULT_FADE_TIME; // s8
-  System_Action_o *v6; // x21
-  __int64 v7; // x0
-  __int64 v8; // x1
+  System_Action_o *v10; // x21
+  __int64 v11; // x0
+  __int64 v12; // x1
 
-  if ( (byte_438FA8E & 1) == 0 )
+  if ( (byte_48E6233 & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&AvalonSceneManager_TypeInfo);
-    sub_B775C4(&Method_EndrolRootComponent_EndFadeout__);
-    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_438FA8E = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, method);
+    sub_1B00CCC(&AvalonSceneManager_TypeInfo, v3);
+    sub_1B00CCC(&Method_EndrolRootComponent_EndFadeout__, v4);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    byte_48E6233 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v4 = AvalonSceneManager_TypeInfo;
-  if ( (BYTE3(AvalonSceneManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !AvalonSceneManager_TypeInfo->_2.cctor_finished )
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v7 = AvalonSceneManager_TypeInfo;
+  v8 = (CommonUI_o *)Instance;
+  if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
-    v4 = AvalonSceneManager_TypeInfo;
+    v7 = AvalonSceneManager_TypeInfo;
   }
-  DEFAULT_FADE_TIME = v4->static_fields->DEFAULT_FADE_TIME;
-  v6 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-  System_Action___ctor(v6, (Il2CppObject *)this, Method_EndrolRootComponent_EndFadeout__, 0LL);
-  if ( !Instance )
-    sub_B7769C(v7, v8);
-  CommonUI__maskFadeout(Instance, 1, DEFAULT_FADE_TIME, v6, 0LL);
+  DEFAULT_FADE_TIME = v7->static_fields->DEFAULT_FADE_TIME;
+  v10 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+  System_Action___ctor(v10, (Il2CppObject *)this, Method_EndrolRootComponent_EndFadeout__, 0LL);
+  if ( !v8 )
+    sub_1B00F28(v11, v12);
+  CommonUI__maskFadeout(v8, 1, DEFAULT_FADE_TIME, v10, 0LL);
 }
 
 
@@ -2061,56 +1781,50 @@ System_Collections_IEnumerator_o *__fastcall EndrolRootComponent__Wait(
         const MethodInfo *method)
 {
   __int64 v6; // x20
-  __int64 v7; // x0
-  __int64 v8; // x1
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
+  int32_t v7; // w2
+  int32_t v8; // w3
 
-  if ( (byte_438FA90 & 1) == 0 )
+  if ( (byte_48E6235 & 1) == 0 )
   {
-    sub_B775C4(&EndrolRootComponent__Wait_d__34_TypeInfo);
-    byte_438FA90 = 1;
+    sub_1B00CCC(&EndrolRootComponent__Wait_d__33_TypeInfo, callback);
+    byte_48E6235 = 1;
   }
-  v6 = sub_B77694(EndrolRootComponent__Wait_d__34_TypeInfo);
-  EndrolRootComponent__Wait_d__34___ctor((EndrolRootComponent__Wait_d__34_o *)v6, 0, 0LL);
-  if ( !v6 )
-    sub_B7769C(v7, v8);
+  v6 = sub_1B00F18(EndrolRootComponent__Wait_d__33_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v6, 0LL);
+  *(_DWORD *)(v6 + 16) = 0;
   *(float *)(v6 + 32) = waitTime;
   *(_QWORD *)(v6 + 40) = callback;
-  sub_B77560((BattleServantConfConponent_o *)(v6 + 40), (System_Int32_array **)callback, v9, v10, v11, v12, v13, v14);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v6 + 40), (int32_t)callback, v7, v8);
   return (System_Collections_IEnumerator_o *)v6;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall EndrolRootComponent__callbackConfirmDlg(
         EndrolRootComponent_o *this,
         bool isSkip,
         const MethodInfo *method)
 {
-  CommonUI_o *Instance; // x0
+  Il2CppObject *Instance; // x0
   __int64 v6; // x1
   const MethodInfo *v7; // x1
 
-  if ( (byte_438FA95 & 1) == 0 )
+  if ( (byte_48E623A & 1) == 0 )
   {
-    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_438FA95 = 1;
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isSkip);
+    byte_48E623A = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_B7769C(0LL, v6);
-  CommonUI__CloseConfirmDialog(Instance, 0LL);
+    sub_1B00F28(0LL, v6);
+  CommonUI__CloseConfirmDialog((CommonUI_o *)Instance, 0LL);
   if ( isSkip )
     EndrolRootComponent__StopEndrol(this, v7);
 }
 
 
-void __fastcall EndrolRootComponent__Wait_d__34___ctor(
-        EndrolRootComponent__Wait_d__34_o *this,
+void __fastcall EndrolRootComponent__Wait_d__33___ctor(
+        EndrolRootComponent__Wait_d__33_o *this,
         int32_t 1__state,
         const MethodInfo *method)
 {
@@ -2119,200 +1833,207 @@ void __fastcall EndrolRootComponent__Wait_d__34___ctor(
 }
 
 
-bool __fastcall EndrolRootComponent__Wait_d__34__MoveNext(
-        EndrolRootComponent__Wait_d__34_o *this,
+bool __fastcall EndrolRootComponent__Wait_d__33__MoveNext(
+        EndrolRootComponent__Wait_d__33_o *this,
         const MethodInfo *method)
 {
+  EndrolRootComponent__Wait_d__33_o *v2; // x19
   int32_t _1__state; // w8
   float waitTime; // s8
   UnityEngine_WaitForSeconds_o *v5; // x20
+  int32_t v6; // w2
+  int32_t v7; // w3
   bool result; // w0
-  System_Action_o *callback; // x0
+  struct System_Action_o *callback; // x8
 
-  if ( (byte_4388604 & 1) == 0 )
+  v2 = this;
+  if ( (byte_48E623F & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_WaitForSeconds_TypeInfo);
-    byte_4388604 = 1;
+    this = (EndrolRootComponent__Wait_d__33_o *)sub_1B00CCC(&UnityEngine_WaitForSeconds_TypeInfo, method);
+    byte_48E623F = 1;
   }
-  _1__state = this->fields.__1__state;
+  _1__state = v2->fields.__1__state;
   if ( _1__state == 1 )
   {
-    callback = this->fields.callback;
-    this->fields.__1__state = -1;
+    callback = v2->fields.callback;
+    v2->fields.__1__state = -1;
     if ( !callback )
-      sub_B7769C(0LL, method);
-    System_Action__Invoke(callback, 0LL);
+      sub_1B00F28(this, method);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))callback->fields.m_target)(
+      callback->fields.original_method_info,
+      *(_QWORD *)&callback->fields.extra_arg);
   }
   else if ( !_1__state )
   {
-    this->fields.__1__state = -1;
-    waitTime = this->fields.waitTime;
-    v5 = (UnityEngine_WaitForSeconds_o *)sub_B77694(UnityEngine_WaitForSeconds_TypeInfo);
+    v2->fields.__1__state = -1;
+    waitTime = v2->fields.waitTime;
+    v5 = (UnityEngine_WaitForSeconds_o *)sub_1B00F18(UnityEngine_WaitForSeconds_TypeInfo);
     UnityEngine_WaitForSeconds___ctor(v5, waitTime, 0LL);
-    this->fields.__2__current = (Il2CppObject *)v5;
-    sub_B77560(&this->fields.__2__current);
+    v2->fields.__2__current = (Il2CppObject *)v5;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields.__2__current, (int32_t)v5, v6, v7);
     result = 1;
-    this->fields.__1__state = 1;
+    v2->fields.__1__state = 1;
     return result;
   }
   return 0;
 }
 
 
-Il2CppObject *__fastcall EndrolRootComponent__Wait_d__34__System_Collections_Generic_IEnumerator_System_Object__get_Current(
-        EndrolRootComponent__Wait_d__34_o *this,
+Il2CppObject *__fastcall EndrolRootComponent__Wait_d__33__System_Collections_Generic_IEnumerator_System_Object__get_Current(
+        EndrolRootComponent__Wait_d__33_o *this,
         const MethodInfo *method)
 {
   return this->fields.__2__current;
 }
 
 
-void __fastcall __noreturn EndrolRootComponent__Wait_d__34__System_Collections_IEnumerator_Reset(
-        EndrolRootComponent__Wait_d__34_o *this,
+void __fastcall __noreturn EndrolRootComponent__Wait_d__33__System_Collections_IEnumerator_Reset(
+        EndrolRootComponent__Wait_d__33_o *this,
         const MethodInfo *method)
 {
   __int64 v2; // x0
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
+  v2 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B00F18(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B775C8(&Method_EndrolRootComponent__Wait_d__34_System_Collections_IEnumerator_Reset__);
-  sub_B77668(v3, v4);
+  v4 = sub_1B00CE0(&Method_EndrolRootComponent__Wait_d__33_System_Collections_IEnumerator_Reset__);
+  sub_1B00DF4(v3, v4);
 }
 
 
-Il2CppObject *__fastcall EndrolRootComponent__Wait_d__34__System_Collections_IEnumerator_get_Current(
-        EndrolRootComponent__Wait_d__34_o *this,
+Il2CppObject *__fastcall EndrolRootComponent__Wait_d__33__System_Collections_IEnumerator_get_Current(
+        EndrolRootComponent__Wait_d__33_o *this,
         const MethodInfo *method)
 {
   return this->fields.__2__current;
 }
 
 
-void __fastcall EndrolRootComponent__Wait_d__34__System_IDisposable_Dispose(
-        EndrolRootComponent__Wait_d__34_o *this,
+void __fastcall EndrolRootComponent__Wait_d__33__System_IDisposable_Dispose(
+        EndrolRootComponent__Wait_d__33_o *this,
         const MethodInfo *method)
 {
   ;
 }
 
 
-void __fastcall EndrolRootComponent___c__DisplayClass31_0___ctor(
-        EndrolRootComponent___c__DisplayClass31_0_o *this,
+void __fastcall EndrolRootComponent___c__DisplayClass30_0___ctor(
+        EndrolRootComponent___c__DisplayClass30_0_o *this,
         const MethodInfo *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 
-void __fastcall EndrolRootComponent___c__DisplayClass31_0___Open_b__0(
-        EndrolRootComponent___c__DisplayClass31_0_o *this,
+void __fastcall EndrolRootComponent___c__DisplayClass30_0___Open_b__0(
+        EndrolRootComponent___c__DisplayClass30_0_o *this,
         const MethodInfo *method)
 {
-  EndrolRootComponent_o *_4__this; // x0
-  struct EndrolRootComponent_o *v4; // x8
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  char *_4__this; // x0
+  struct EndrolRootComponent_o *v8; // x8
   System_String_o *bgmName; // x20
-  unsigned int v6; // w20
-  CommonUI_o *v7; // x20
-  struct EndrolRootComponent_o *v8; // x20
+  const MethodInfo *v10; // x2
+  int32_t i; // w20
+  int32_t v12; // w3
+  struct System_Action_o *endCallback; // x1
+  CommonUI_o *v14; // x20
+  const MethodInfo *v15; // x2
+  struct EndrolRootComponent_o *v16; // x20
   float startWaitTime; // s8
   System_Action_o *_9__1; // x22
-  System_Collections_IEnumerator_o *v11; // x1
+  int32_t v19; // w2
+  int32_t v20; // w3
+  System_Collections_IEnumerator_o *v21; // x1
 
-  if ( (byte_4388603 & 1) == 0 )
+  if ( (byte_48E623E & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&AvalonSceneManager_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B775C4(&SoundManager_TypeInfo);
-    sub_B775C4(&Method_EndrolRootComponent___c__DisplayClass31_0__Open_b__1__);
-    byte_4388603 = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, method);
+    sub_1B00CCC(&AvalonSceneManager_TypeInfo, v3);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
+    sub_1B00CCC(&SoundManager_TypeInfo, v5);
+    sub_1B00CCC(&Method_EndrolRootComponent___c__DisplayClass30_0__Open_b__1__, v6);
+    byte_48E623E = 1;
   }
-  _4__this = this->fields.__4__this;
+  _4__this = (char *)this->fields.__4__this;
   if ( !_4__this )
-    goto LABEL_25;
-  EndrolRootComponent__CheckOrderEndrol(_4__this, 0LL);
-  v4 = this->fields.__4__this;
-  if ( !v4 )
-    goto LABEL_25;
-  if ( v4->fields.isBgmPlay )
+    goto LABEL_23;
+  EndrolRootComponent__CheckOrderEndrol((EndrolRootComponent_o *)_4__this, method);
+  v8 = this->fields.__4__this;
+  if ( !v8 )
+    goto LABEL_23;
+  if ( v8->fields.isBgmPlay )
   {
-    bgmName = v4->fields.bgmName;
-    if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !SoundManager_TypeInfo->_2.cctor_finished )
-    {
+    bgmName = v8->fields.bgmName;
+    if ( !SoundManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    }
     SoundManager__playJingle(bgmName, 0LL);
-    v4 = this->fields.__4__this;
-    if ( !v4 )
-      goto LABEL_25;
+    v8 = this->fields.__4__this;
+    if ( !v8 )
+      goto LABEL_23;
   }
-  _4__this = (EndrolRootComponent_o *)v4->fields.effectManager;
+  _4__this = (char *)v8->fields.effectManager;
   if ( !_4__this )
-    goto LABEL_25;
-  EndrolEffectManager__EndEffect((EndrolEffectManager_o *)_4__this, 0LL);
-  _4__this = this->fields.__4__this;
-  v6 = -1;
-  do
+    goto LABEL_23;
+  EndrolEffectManager__EndEffect((EndrolEffectManager_o *)_4__this, method);
+  _4__this = (char *)this->fields.__4__this;
+  for ( i = 0; i != 30; ++i )
   {
     if ( !_4__this )
-      goto LABEL_25;
-    EndrolRootComponent__CreateText(_4__this, ++v6, 0LL);
-    _4__this = this->fields.__4__this;
+      goto LABEL_23;
+    EndrolRootComponent__CreateText((EndrolRootComponent_o *)_4__this, i, v10);
+    _4__this = (char *)this->fields.__4__this;
   }
-  while ( v6 < 0x1D );
   if ( !_4__this )
-    goto LABEL_25;
-  _4__this->fields.mEndAct = this->fields.endCallback;
-  sub_B77560(&_4__this->fields.mEndAct);
-  _4__this = (EndrolRootComponent_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v7 = (CommonUI_o *)_4__this;
-  if ( (BYTE3(AvalonSceneManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !AvalonSceneManager_TypeInfo->_2.cctor_finished )
-  {
+    goto LABEL_23;
+  endCallback = this->fields.endCallback;
+  *((_QWORD *)_4__this + 20) = endCallback;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(_4__this + 160), (int32_t)endCallback, (int32_t)v10, v12);
+  _4__this = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v14 = (CommonUI_o *)_4__this;
+  if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
-  }
-  if ( !v7
-    || (CommonUI__maskFadein(v7, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0LL, 0LL),
-        (_4__this = this->fields.__4__this) == 0LL)
-    || (_4__this = (EndrolRootComponent_o *)UnityEngine_Component__get_gameObject(
-                                              (UnityEngine_Component_o *)_4__this,
-                                              0LL)) == 0LL
+  if ( !v14
+    || (CommonUI__maskFadein(v14, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0LL, 0LL),
+        (_4__this = (char *)this->fields.__4__this) == 0LL)
+    || (_4__this = (char *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)_4__this, 0LL)) == 0LL
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)_4__this, 1, 0LL),
-        (v8 = this->fields.__4__this) == 0LL) )
+        (v16 = this->fields.__4__this) == 0LL) )
   {
-LABEL_25:
-    sub_B7769C(_4__this, method);
+LABEL_23:
+    sub_1B00F28(_4__this, method);
   }
-  startWaitTime = v8->fields.startWaitTime;
+  startWaitTime = v16->fields.startWaitTime;
   _9__1 = this->fields.__9__1;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)this,
-      Method_EndrolRootComponent___c__DisplayClass31_0__Open_b__1__,
+      Method_EndrolRootComponent___c__DisplayClass30_0__Open_b__1__,
       0LL);
     this->fields.__9__1 = _9__1;
-    sub_B77560(&this->fields.__9__1);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.__9__1, (int32_t)_9__1, v19, v20);
   }
-  v11 = EndrolRootComponent__Wait(v8, startWaitTime, _9__1, 0LL);
-  UnityEngine_MonoBehaviour__StartCoroutine_36304832((UnityEngine_MonoBehaviour_o *)v8, v11, 0LL);
+  v21 = EndrolRootComponent__Wait((EndrolRootComponent_o *)_4__this, startWaitTime, _9__1, v15);
+  UnityEngine_MonoBehaviour__StartCoroutine_68062928((UnityEngine_MonoBehaviour_o *)v16, v21, 0LL);
 }
 
 
-void __fastcall EndrolRootComponent___c__DisplayClass31_0___Open_b__1(
-        EndrolRootComponent___c__DisplayClass31_0_o *this,
+void __fastcall EndrolRootComponent___c__DisplayClass30_0___Open_b__1(
+        EndrolRootComponent___c__DisplayClass30_0_o *this,
         const MethodInfo *method)
 {
   EndrolRootComponent_o *_4__this; // x0
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_B7769C(0LL, method);
-  EndrolRootComponent__StartEndroll(_4__this, 0LL);
+    sub_1B00F28(0LL, method);
+  EndrolRootComponent__StartEndroll(_4__this, method);
 }

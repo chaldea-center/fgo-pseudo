@@ -10,50 +10,66 @@ void __fastcall LimitUpResultInfoComponent__Awake(LimitUpResultInfoComponent_o *
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall LimitUpResultInfoComponent__Open(
         LimitUpResultInfoComponent_o *this,
         UnityEngine_Transform_o *parent,
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_Transform_o *transform; // x20
-  UnityEngine_GameObject_o *v7; // x0
-  __int64 v8; // x1
-  int v9; // s0
-  UnityEngine_Transform_o *v12; // x20
-  int v13; // s0
-  UnityEngine_Transform_o *v16; // x20
-  int v17; // s0
-  UnityEngine_Transform_o *v20; // x20
-  int v21; // s0
+  UnityEngine_GameObject_o *transform; // x0
+  __int64 v7; // x1
+  UnityEngine_Transform_o *v8; // x20
+  UnityEngine_Transform_o *v9; // x20
+  UnityEngine_Transform_o *v10; // x20
+  UnityEngine_Transform_o *v11; // x20
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   GameObjectExtensions__SetParent(gameObject, (UnityEngine_Component_o *)parent, 0LL);
-  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  *(UnityEngine_Vector3_o *)&v9 = UnityEngine_Vector3__get_zero(0LL);
-  if ( !transform )
-    goto LABEL_7;
-  UnityEngine_Transform__set_position(transform, *(UnityEngine_Vector3_o *)&v9, 0LL);
-  v12 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  *(UnityEngine_Vector3_o *)&v13 = UnityEngine_Vector3__get_zero(0LL);
-  if ( !v12 )
-    goto LABEL_7;
-  UnityEngine_Transform__set_localPosition(v12, *(UnityEngine_Vector3_o *)&v13, 0LL);
-  v16 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  *(UnityEngine_Vector3_o *)&v17 = UnityEngine_Vector3__get_zero(0LL);
-  if ( !v16
-    || (UnityEngine_Transform__set_eulerAngles(v16, *(UnityEngine_Vector3_o *)&v17, 0LL),
-        v20 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL),
-        *(UnityEngine_Vector3_o *)&v21 = UnityEngine_Vector3__get_one(0LL),
-        !v20)
-    || (UnityEngine_Transform__set_localScale(v20, *(UnityEngine_Vector3_o *)&v21, 0LL),
-        (v7 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
+  transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+  v8 = (UnityEngine_Transform_o *)transform;
+  if ( !byte_48DD9F1 )
   {
-LABEL_7:
-    sub_B7769C(v7, v8);
+    transform = (UnityEngine_GameObject_o *)sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, v7);
+    byte_48DD9F1 = 1;
   }
-  UnityEngine_GameObject__SetActive(v7, 1, 0LL);
+  if ( !v8 )
+    goto LABEL_15;
+  UnityEngine_Transform__set_position(v8, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
+  transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+  v9 = (UnityEngine_Transform_o *)transform;
+  if ( !byte_48DD9F1 )
+  {
+    transform = (UnityEngine_GameObject_o *)sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, v7);
+    byte_48DD9F1 = 1;
+  }
+  if ( !v9 )
+    goto LABEL_15;
+  UnityEngine_Transform__set_localPosition(v9, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
+  transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+  v10 = (UnityEngine_Transform_o *)transform;
+  if ( !byte_48DD9F1 )
+  {
+    transform = (UnityEngine_GameObject_o *)sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, v7);
+    byte_48DD9F1 = 1;
+  }
+  if ( !v10 )
+    goto LABEL_15;
+  UnityEngine_Transform__set_eulerAngles(v10, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
+  transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+  v11 = (UnityEngine_Transform_o *)transform;
+  if ( !byte_48DD9F6 )
+  {
+    transform = (UnityEngine_GameObject_o *)sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, v7);
+    byte_48DD9F6 = 1;
+  }
+  if ( !v11
+    || (UnityEngine_Transform__set_localScale(v11, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL),
+        (transform = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
+  {
+LABEL_15:
+    sub_1B00F28(transform, v7);
+  }
+  UnityEngine_GameObject__SetActive(transform, 1, 0LL);
 }
 
 
@@ -63,14 +79,15 @@ void __fastcall LimitUpResultInfoComponent__Setup(
         System_String_o *detail,
         const MethodInfo *method)
 {
+  __int64 v7; // x1
   UILabel_o *titleLabel; // x0
   UISprite_o *lineSprite; // x19
 
-  if ( (byte_438A7A1 & 1) == 0 )
+  if ( (byte_48E5F78 & 1) == 0 )
   {
-    sub_B775C4(&AtlasManager_TypeInfo);
-    sub_B775C4(&StringLiteral_20645/*"line_whiteAlpha"*/);
-    byte_438A7A1 = 1;
+    sub_1B00CCC(&AtlasManager_TypeInfo, title);
+    sub_1B00CCC(&StringLiteral_20835/*"line_whiteAlpha"*/, v7);
+    byte_48E5F78 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
@@ -78,11 +95,11 @@ void __fastcall LimitUpResultInfoComponent__Setup(
     || (WrapControlText__textAdjust(titleLabel, detail, titleLabel->fields.mFontSize, 0, 0, 0LL),
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B7769C(titleLabel, title);
+    sub_1B00F28(titleLabel, title);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0LL);
   lineSprite = this->fields.lineSprite;
-  if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
+  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI(lineSprite, (System_String_o *)StringLiteral_20645/*"line_whiteAlpha"*/, 0LL);
+  AtlasManager__SetEventUI(lineSprite, (System_String_o *)StringLiteral_20835/*"line_whiteAlpha"*/, 0LL);
 }

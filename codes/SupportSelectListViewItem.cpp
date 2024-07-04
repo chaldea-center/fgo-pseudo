@@ -5,40 +5,24 @@ void __fastcall SupportSelectListViewItem___ctor(
         EventCampaignEntity_array *friendPointCampaigns,
         const MethodInfo *method)
 {
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
-  System_String_array **v14; // x2
-  System_String_array **v15; // x3
-  System_Boolean_array **v16; // x4
-  System_Int32_array **v17; // x5
-  System_Int32_array *v18; // x6
-  System_Int32_array *v19; // x7
+  int32_t v8; // w2
+  int32_t v9; // w3
+  int32_t v10; // w2
+  int32_t v11; // w3
 
-  ListViewItem___ctor_24167012((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_39415512((ListViewItem_o *)this, index, 0LL);
   this->fields.supportServantData = supportServantData;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.supportServantData,
-    (System_Int32_array **)supportServantData,
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields.supportServantData,
+    (int32_t)supportServantData,
     v8,
-    v9,
-    v10,
-    v11,
-    v12,
-    v13);
+    v9);
   this->fields.eventFriendPoints = friendPointCampaigns;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.eventFriendPoints,
-    (System_Int32_array **)friendPointCampaigns,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18,
-    v19);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields.eventFriendPoints,
+    (int32_t)friendPointCampaigns,
+    v10,
+    v11);
 }
 
 
@@ -47,22 +31,14 @@ void __fastcall SupportSelectListViewItem__ResetEventCampaign(
         EventCampaignEntity_array *friendPointCampaigns,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields.eventFriendPoints = friendPointCampaigns;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.eventFriendPoints,
-    (System_Int32_array **)friendPointCampaigns,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields.eventFriendPoints,
+    (int32_t)friendPointCampaigns,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -74,7 +50,7 @@ System_String_o *__fastcall SupportSelectListViewItem__get_DeckName(
 
   supportServantData = this->fields.supportServantData;
   if ( !supportServantData )
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   return supportServantData->fields._deckName_k__BackingField;
 }
 
@@ -92,22 +68,14 @@ void __fastcall SupportSelectListViewItem__set_listObj(
         SupportSelectListViewObject_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._listObj_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._listObj_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._listObj_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -116,32 +84,24 @@ void __fastcall SupportSelectListViewItem__setuplistObj(
         SupportSelectListViewObject_o *obj,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
   SupportSelectListViewObject_o **p_listObj_k__BackingField; // x20
-  __int64 v10; // x1
-  const MethodInfo *v11; // x4
+  __int64 v6; // x1
+  const MethodInfo *v7; // x4
 
   this->fields._listObj_k__BackingField = obj;
   p_listObj_k__BackingField = &this->fields._listObj_k__BackingField;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._listObj_k__BackingField,
-    (System_Int32_array **)obj,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._listObj_k__BackingField,
+    (int32_t)obj,
+    (int32_t)method,
+    v3);
   if ( !*p_listObj_k__BackingField )
-    sub_B7769C(0LL, v10);
+    sub_1B00F28(0LL, v6);
   SupportSelectListViewObject__Init(
     *p_listObj_k__BackingField,
     this->fields.supportServantData,
     this->fields.eventFriendPoints,
     this->fields.index,
-    v11);
+    v7);
 }

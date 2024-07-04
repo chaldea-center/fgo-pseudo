@@ -1,34 +1,37 @@
 void __fastcall ChainableActionBase___ctor(ChainableActionBase_o *this, const MethodInfo *method)
 {
   ChainableActionBase_o *v2; // x19
-  System_String_array **v3; // x2
-  System_String_array **v4; // x3
-  System_Boolean_array **v5; // x4
-  System_Int32_array **v6; // x5
-  System_Int32_array *v7; // x6
-  System_Int32_array *v8; // x7
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
+  int32_t v3; // w2
+  int32_t v4; // w3
+  int32_t v5; // w2
+  int32_t v6; // w3
 
   v2 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v2->fields.endCallback = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&v2->fields, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields, 0, v3, v4);
   v2->fields.nextAction = 0LL;
   v2 = (ChainableActionBase_o *)((char *)v2 + 24);
-  sub_B77560((BattleServantConfConponent_o *)v2, 0LL, v9, v10, v11, v12, v13, v14);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)v2, 0, v5, v6);
   LOBYTE(v2->monitor) = 0;
 }
 
 
 void __fastcall ChainableActionBase__End(ChainableActionBase_o *this, const MethodInfo *method)
 {
-  ActionExtensions__Call(this->fields.endCallback, 0LL);
-  ActionExtensions__Call(this->fields.nextAction, 0LL);
+  struct System_Action_o *endCallback; // x8
+  struct System_Action_o *nextAction; // x8
+
+  endCallback = this->fields.endCallback;
+  if ( endCallback )
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))endCallback->fields.m_target)(
+      endCallback->fields.original_method_info,
+      *(_QWORD *)&endCallback->fields.extra_arg);
+  nextAction = this->fields.nextAction;
+  if ( nextAction )
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))nextAction->fields.m_target)(
+      nextAction->fields.original_method_info,
+      *(_QWORD *)&nextAction->fields.extra_arg);
 }
 
 
@@ -56,55 +59,51 @@ ChainableActionBase_o *__fastcall ChainableActionBase__Final(
   __int64 v5; // x8
   unsigned __int64 v6; // x22
   System_Delegate_o **p_fields; // x21
-  System_Int32_array **v8; // x0
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
-  __int64 v16; // x0
+  System_Delegate_o *v8; // x0
+  int32_t v9; // w2
+  int32_t v10; // w3
+  System_Action_c *v11; // x1
 
   v4 = this;
-  if ( (byte_438E463 & 1) == 0 )
+  if ( (byte_48E706E & 1) == 0 )
   {
-    this = (ChainableActionBase_o *)sub_B775C4(&System_Action_TypeInfo);
-    byte_438E463 = 1;
+    this = (ChainableActionBase_o *)sub_1B00CCC(&System_Action_TypeInfo, endCallbacks);
+    byte_48E706E = 1;
   }
   if ( !v4->fields._IsExecuted_k__BackingField )
   {
     if ( !endCallbacks )
-      goto LABEL_14;
+      sub_1B00F28(this, endCallbacks);
     v5 = *(_QWORD *)&endCallbacks->max_length;
     if ( (int)v5 >= 1 )
     {
       v6 = 0LL;
       p_fields = (System_Delegate_o **)&v4->fields;
-      while ( 1 )
+      do
       {
         if ( v6 >= (unsigned int)v5 )
-        {
-          v16 = sub_B776C8(this);
-          sub_B77668(v16, 0LL);
-        }
-        v8 = (System_Int32_array **)System_Delegate__Combine(
-                                      *p_fields,
-                                      (System_Delegate_o *)endCallbacks->m_Items[v6],
-                                      0LL);
+          goto LABEL_16;
+        v8 = System_Delegate__Combine(*p_fields, (System_Delegate_o *)endCallbacks->m_Items[v6], 0LL);
         if ( v8 )
         {
-          if ( *v8 != (System_Int32_array *)System_Action_TypeInfo )
-            break;
+          v11 = System_Action_TypeInfo;
+          if ( (System_Action_c *)v8->klass != System_Action_TypeInfo
+            || (*p_fields = v8, (System_Action_c *)v8->klass != v11) )
+          {
+            sub_1B011E8(v8);
+LABEL_16:
+            sub_1B00F30(this, endCallbacks);
+          }
         }
-        *p_fields = (System_Delegate_o *)v8;
-        sub_B77560((BattleServantConfConponent_o *)&v4->fields, v8, v9, v10, v11, v12, v13, v14);
+        else
+        {
+          *p_fields = 0LL;
+        }
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v4->fields, (int32_t)v8, v9, v10);
         LODWORD(v5) = endCallbacks->max_length;
-        if ( (__int64)++v6 >= (int)v5 )
-          return v4;
+        ++v6;
       }
-      sub_B77990(v8);
-LABEL_14:
-      sub_B7769C(this, endCallbacks);
+      while ( (__int64)v6 < (int)v5 );
     }
   }
   return v4;
@@ -116,22 +115,10 @@ void __fastcall ChainableActionBase__SetNextAction(
         System_Action_o *nextAction,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields.nextAction = nextAction;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.nextAction,
-    (System_Int32_array **)nextAction,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.nextAction, (int32_t)nextAction, (int32_t)method, v3);
 }
 
 

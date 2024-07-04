@@ -4,16 +4,12 @@ void __fastcall ScriptAssetListViewItem___ctor(
         System_String_o *path,
         const MethodInfo *method)
 {
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  int32_t v6; // w2
+  int32_t v7; // w3
 
-  ListViewItem___ctor_24167012((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_39415512((ListViewItem_o *)this, index, 0LL);
   this->fields.path = path;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.path, (System_Int32_array **)path, v6, v7, v8, v9, v10, v11);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.path, (int32_t)path, v6, v7);
 }
 
 
@@ -46,7 +42,7 @@ System_String_o *__fastcall ScriptAssetListViewItem__get_TitleText(
     if ( this->fields.path )
       return System_String__Substring(this->fields.path, (int)path + 1, 0LL);
 LABEL_6:
-    sub_B7769C(path, method);
+    sub_1B00F28(path, method);
   }
   return this->fields.path;
 }

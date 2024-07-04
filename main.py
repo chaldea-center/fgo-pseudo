@@ -23,13 +23,15 @@ def download_apk():
     apk_folder: Path = Path(__file__).resolve().parent / "apk"
     resp = httpx.get(f"https://fgo.bigcereal.com/apk/current_ver.json?v={int(time.time())}")
     ver: str = resp.json()["JP"]
+    # ver = '2.93.5'
     apk_fn = f"com.aniplex.fategrandorder.v{ver}.apk"
     apk_fp = apk_folder / ver / apk_fn
     if not apk_fp.exists():
         apk_fp.parent.mkdir(exist_ok=True, parents=True)
-        url = f"https://fgo.bigcereal.com/apk/{apk_fn}"
+        url = f"https://static.atlasacademy.io/apk/{apk_fn}"
         print("[download] getting ", url)
-        resp = httpx.get(url)
+        resp = httpx.get(url,follow_redirects=True)
+        assert resp.content
         apk_fp.write_bytes(resp.content)
     print("[download]", apk_fp)
     return apk_fp
@@ -53,6 +55,9 @@ def extract_apk(apk_fp: str, output_folder: str) -> None:
 
 
 def dump_cs(apk_folder: str, il2cppdumper: str, dump_folder: str) -> None:
+    """
+    il2cppdumper config.json, anykey=false
+    """
     Path(dump_folder).mkdir(exist_ok=True, parents=True)
     print("[dump]", dump_folder)
 
@@ -101,12 +106,14 @@ def main(il2cppdumper: str):
     dump_folder = apk_folder / "dump"
     extract_apk(apk_fp, apk_folder)
     dump_cs(apk_folder, il2cppdumper, dump_folder)
-    get_class_names(dump_folder, pwd / "01_class_names.txt")
+    # get_class_names(dump_folder, pwd / "01_class_names.txt")
     stringliterals:dict = load_json(dump_folder/'stringliteral.json')
     stringliterals2 = {}
     for index, item in enumerate(stringliterals):
         stringliterals2[f'StringLiteral_{index+1}']=item['value']
     dum_json(stringliterals2, pwd/'04_stringliteral.json')
+    dump_folder.joinpath('ida_with_struct_py3.py').write_bytes(Path('ida_scripts/ida_with_struct_py3.py').read_bytes())
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Download apk and run il2cppdump")

@@ -2,16 +2,13 @@ void __fastcall SupportDeckFixErrorListViewObject___ctor(
         SupportDeckFixErrorListViewObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_438F3DC & 1) == 0 )
+  if ( (byte_48DF28F & 1) == 0 )
   {
-    sub_B775C4(&ListViewObject_TypeInfo);
-    byte_438F3DC = 1;
+    sub_1B00CCC(&ListViewObject_TypeInfo, method);
+    byte_48DF28F = 1;
   }
-  if ( (BYTE3(ListViewObject_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ListViewObject_TypeInfo->_2.cctor_finished )
-  {
+  if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
-  }
   ListViewObject___ctor((ListViewObject_o *)this, 0LL);
 }
 
@@ -22,36 +19,24 @@ void __fastcall SupportDeckFixErrorListViewObject__Awake(
 {
   __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
-  struct SupportDeckFixErrorListViewItemDraw_o *Component_srcLineSprite; // x0
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  Il2CppObject *Component_object; // x0
+  int32_t v6; // w2
+  int32_t v7; // w3
 
-  if ( (byte_438F3DA & 1) == 0 )
+  if ( (byte_48DF28D & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_SupportDeckFixErrorListViewItemDraw___);
-    byte_438F3DA = 1;
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_SupportDeckFixErrorListViewItemDraw___, method);
+    byte_48DF28D = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_B7769C(0LL, v3);
-  Component_srcLineSprite = (struct SupportDeckFixErrorListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                                                              dispObject,
-                                                                              (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_SupportDeckFixErrorListViewItemDraw___);
-  this->fields.itemDraw = Component_srcLineSprite;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.itemDraw,
-    (System_Int32_array **)Component_srcLineSprite,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10,
-    v11);
+    sub_1B00F28(0LL, v3);
+  Component_object = UnityEngine_GameObject__GetComponent_object_(
+                       dispObject,
+                       (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_SupportDeckFixErrorListViewItemDraw___);
+  this->fields.itemDraw = (struct SupportDeckFixErrorListViewItemDraw_o *)Component_object;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
 }
 
 
@@ -59,43 +44,41 @@ void __fastcall SupportDeckFixErrorListViewObject__Init(
         SupportDeckFixErrorListViewObject_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
   struct ListViewItem_o *linkItem; // x8
-  __int64 v4; // x11
-  SupportDeckFixErrorListViewItem_c *v5; // x10
-  struct ListViewItem_o *v6; // x21
+  __int64 methodPtr_low; // x11
+  SupportDeckFixErrorListViewItem_c *v6; // x10
+  struct ListViewItem_o *v7; // x21
   UnityEngine_Object_o *itemDraw; // x20
   UILabel_o *messageLabel; // x0
-  __int64 v9; // x1
-  struct SupportDeckFixErrorListViewItemDraw_o *v10; // x8
+  __int64 v10; // x1
+  struct SupportDeckFixErrorListViewItemDraw_o *v11; // x8
 
-  if ( (byte_438F3DB & 1) == 0 )
+  if ( (byte_48DF28E & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&SupportDeckFixErrorListViewItem_TypeInfo);
-    byte_438F3DB = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    sub_1B00CCC(&SupportDeckFixErrorListViewItem_TypeInfo, v3);
+    byte_48DF28E = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem )
   {
-    v4 = *(&SupportDeckFixErrorListViewItem_TypeInfo->_2.bitflags2 + 1);
-    if ( *(&linkItem->klass->_2.bitflags2 + 1) >= (unsigned int)v4 )
+    methodPtr_low = LOBYTE(SupportDeckFixErrorListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
+    if ( LOBYTE(linkItem->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low )
     {
-      v5 = (SupportDeckFixErrorListViewItem_c *)linkItem->klass->_2.typeHierarchy[v4 - 1];
-      v6 = v5 == SupportDeckFixErrorListViewItem_TypeInfo ? this->fields.linkItem : 0LL;
-      if ( v5 == SupportDeckFixErrorListViewItem_TypeInfo )
+      v6 = (SupportDeckFixErrorListViewItem_c *)linkItem->klass->_2.typeHierarchy[methodPtr_low - 1];
+      v7 = v6 == SupportDeckFixErrorListViewItem_TypeInfo ? this->fields.linkItem : 0LL;
+      if ( v6 == SupportDeckFixErrorListViewItem_TypeInfo )
       {
         itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
-        if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        {
+        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        }
         messageLabel = (UILabel_o *)UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL);
         if ( ((unsigned __int8)messageLabel & 1) != 0 )
         {
-          if ( !v6 || (v10 = this->fields.itemDraw) == 0LL || (messageLabel = v10->fields.messageLabel) == 0LL )
-            sub_B7769C(messageLabel, v9);
-          UILabel__set_text(messageLabel, (System_String_o *)v6[1].klass, 0LL);
+          if ( !v7 || (v11 = this->fields.itemDraw) == 0LL || (messageLabel = v11->fields.messageLabel) == 0LL )
+            sub_1B00F28(messageLabel, v10);
+          UILabel__set_text(messageLabel, (System_String_o *)v7[1].klass, 0LL);
         }
       }
     }

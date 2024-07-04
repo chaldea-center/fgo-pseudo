@@ -1,85 +1,85 @@
 int64_t __fastcall SupportSelectCommonFunction__GetEventFriendCampaignStartedAt(const MethodInfo *method)
 {
-  DataManager_o *Instance; // x0
+  __int64 v1; // x1
   __int64 v2; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v6; // x1
   EventCampaignEntity_array *FriendPointCampaigns; // x0
-  EventCampaignEntity_array *v4; // x19
+  EventCampaignEntity_array *v8; // x19
   int max_length; // w8
-  DataMasterBase_WarMaster__WarEntity__int__o *v6; // x21
-  __int64 v7; // x22
-  int64_t targetId; // x20
-  EventCampaignEntity_o *v9; // x8
-  __int64 v11; // x0
-  WarEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
+  DataMasterBase_TMaster__TEntity__PKType__o *v10; // x21
+  __int64 v11; // x22
+  void *monitor; // x20
+  EventCampaignEntity_o *v13; // x8
+  Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_438F3EE & 1) == 0 )
+  if ( (byte_48DF29F & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_EventCampaignMaster___);
-    sub_B775C4(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_B775C4(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438F3EE = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_EventCampaignMaster___, v1);
+    sub_1B00CCC(&Method_DataManager_GetMasterData_EventMaster___, v2);
+    sub_1B00CCC(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v3);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_48DF29F = 1;
   }
   entity = 0LL;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_23;
-  Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                Instance,
-                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventCampaignMaster___);
+  Instance = DataManager__GetMasterData_object_(
+               (DataManager_o *)Instance,
+               (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_EventCampaignMaster___);
   if ( !Instance )
     goto LABEL_23;
   FriendPointCampaigns = EventCampaignMaster__GetFriendPointCampaigns((EventCampaignMaster_o *)Instance, 1, 0LL);
   if ( FriendPointCampaigns )
   {
-    v4 = FriendPointCampaigns;
-    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    v8 = FriendPointCampaigns;
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_23;
-    Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                  Instance,
-                                  (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventMaster___);
-    max_length = v4->max_length;
+    Instance = DataManager__GetMasterData_object_(
+                 (DataManager_o *)Instance,
+                 (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_EventMaster___);
+    max_length = v8->max_length;
     if ( max_length >= 1 )
     {
-      v6 = (DataMasterBase_WarMaster__WarEntity__int__o *)Instance;
-      v7 = 0LL;
-      targetId = 0LL;
+      v10 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
+      v11 = 0LL;
+      monitor = 0LL;
       while ( 1 )
       {
-        if ( (unsigned int)v7 >= max_length )
-        {
-          v11 = sub_B776C8(Instance);
-          sub_B77668(v11, 0LL);
-        }
-        v9 = v4->m_Items[v7];
-        if ( !v9 || !v6 )
+        if ( (unsigned int)v11 >= max_length )
+          sub_1B00F30(Instance, v6);
+        v13 = v8->m_Items[v11];
+        if ( !v13 || !v10 )
           break;
-        Instance = (DataManager_o *)DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
-                                      v6,
-                                      &entity,
-                                      v9->fields.eventId,
-                                      (const MethodInfo_21FB8F0 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
+        Instance = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
+                                     v10,
+                                     &entity,
+                                     v13->fields.eventId,
+                                     (const MethodInfo_2FE6AA0 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)Instance & 1) != 0 )
         {
           if ( !entity )
             break;
-          if ( targetId )
+          if ( monitor )
           {
-            if ( entity->fields.targetId < targetId )
-              targetId = entity->fields.targetId;
+            if ( (__int64)entity[5].monitor < (__int64)monitor )
+              monitor = entity[5].monitor;
           }
           else
           {
-            targetId = entity->fields.targetId;
+            monitor = entity[5].monitor;
           }
         }
-        max_length = v4->max_length;
-        if ( (int)++v7 >= max_length )
-          return targetId;
+        max_length = v8->max_length;
+        if ( (int)++v11 >= max_length )
+          return (int64_t)monitor;
       }
 LABEL_23:
-      sub_B7769C(Instance, v2);
+      sub_1B00F28(Instance, v6);
     }
   }
   return 0LL;

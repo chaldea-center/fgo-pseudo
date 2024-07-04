@@ -1,17 +1,62 @@
 bool __fastcall EmojiUtility__IsEmojiChar(uint16_t ch, const MethodInfo *method)
 {
+  bool result; // w0
   int v4; // w9
 
-  if ( (byte_438FA5E & 1) == 0 )
+  if ( (byte_48E1CD7 & 1) == 0 )
   {
-    sub_B775C4(&char_TypeInfo);
-    byte_438FA5E = 1;
+    sub_1B00CCC(&char_TypeInfo, method);
+    byte_48E1CD7 = 1;
   }
-  if ( (BYTE3(char_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !char_TypeInfo->_2.cctor_finished )
+  if ( !char_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(char_TypeInfo);
   if ( System_Char__IsSurrogate(ch, 0LL) )
     return 1;
-  if ( ch <= 0x26BCu )
+  result = 1;
+  if ( ch > 0x26BCu )
+  {
+    if ( ch <= 0x2743u )
+    {
+      if ( ((unsigned int)ch - 9917 > 0x3D || ((1LL << ((unsigned __int8)ch + 67)) & 0x3DF8300000D60983LL) == 0)
+        && ((unsigned int)ch - 9981 > 0x37 || ((1LL << ((unsigned __int8)ch + 3)) & 0xC0080002A4F921LL) == 0) )
+      {
+        return 0;
+      }
+      return result;
+    }
+    if ( ch <= 0x2B04u )
+    {
+      if ( ((unsigned int)ch - 10052 > 0x20 || ((1LL << ((unsigned __int8)ch - 68)) & 0x1000B8509LL) == 0)
+        && ((unsigned int)ch - 10133 > 0x2A || ((1LL << ((unsigned __int8)ch + 107)) & 0x40008001007LL) == 0)
+        && (unsigned int)ch - 10548 >= 2 )
+      {
+        return 0;
+      }
+      return result;
+    }
+    if ( ch <= 0x302Fu )
+    {
+      if ( ((unsigned int)ch - 11035 > 0x3A || ((1LL << ((unsigned __int8)ch - 27)) & 0x420000000000003LL) == 0)
+        && (unsigned int)ch - 11013 >= 3 )
+      {
+        return 0;
+      }
+      return result;
+    }
+    if ( ch > 0x3298u )
+    {
+      if ( (unsigned int)ch - 65038 < 2 )
+        return result;
+      v4 = 12953;
+    }
+    else
+    {
+      if ( ch == 12336 || ch == 12349 )
+        return result;
+      v4 = 12951;
+    }
+  }
+  else
   {
     if ( ch > 0x25A9u )
     {
@@ -61,7 +106,7 @@ bool __fastcall EmojiUtility__IsEmojiChar(uint16_t ch, const MethodInfo *method)
         case 0x26B0u:
         case 0x26B1u:
         case 0x26B2u:
-          return 1;
+          return result;
         case 0x2654u:
         case 0x2655u:
         case 0x2656u:
@@ -125,91 +170,51 @@ bool __fastcall EmojiUtility__IsEmojiChar(uint16_t ch, const MethodInfo *method)
         case 0x26ADu:
         case 0x26AEu:
         case 0x26AFu:
-          return ch == 10175;
+          return 0;
         default:
           if ( ((unsigned int)ch - 9723 > 0x3F || ((1LL << ((unsigned __int8)ch + 5)) & 0x800000042648006FLL) == 0)
             && ((unsigned int)ch - 9642 > 0x16 || ((1 << (ch + 86)) & 0x401003) == 0) )
           {
-            return ch == 10175;
+            return 0;
           }
-          return 1;
+          break;
       }
+      return result;
     }
     if ( ch > 0x2319u )
     {
       if ( (unsigned int)ch - 9167 <= 0x2B && ((1LL << ((unsigned __int8)ch + 49)) & 0xE1FFC000001LL) != 0
         || (unsigned int)ch - 8986 <= 0xE && ((1 << (ch - 26)) & 0x4003) != 0 )
       {
-        return 1;
+        return result;
       }
       v4 = 9410;
-      goto LABEL_56;
     }
-    if ( ch > 0x2121u )
+    else if ( ch > 0x2121u )
     {
       if ( (unsigned int)ch - 8596 <= 0x16 && ((1 << (ch + 108)) & 0x60003F) != 0 || ch == 8482 )
-        return 1;
+        return result;
       v4 = 8505;
-      goto LABEL_56;
     }
-    if ( ch > 0x2001u )
+    else
     {
+      if ( ch <= 0x2001u )
+      {
+        if ( ch != 169 && ch != 174 )
+          return 0;
+        return result;
+      }
       if ( (unsigned int)ch - 8194 <= 0x3A && ((1LL << ((unsigned __int8)ch - 2)) & 0x40000000000080BLL) != 0
         || ch == 8265 )
       {
-        return 1;
+        return result;
       }
       v4 = 8419;
-      goto LABEL_56;
     }
-    if ( ch != 169 && ch != 174 )
-      return ch == 10175;
-    return 1;
   }
-  if ( ch <= 0x2743u )
-  {
-    if ( ((unsigned int)ch - 9917 > 0x3D || ((1LL << ((unsigned __int8)ch + 67)) & 0x3DF8300000D60983LL) == 0)
-      && ((unsigned int)ch - 9981 > 0x37 || ((1LL << ((unsigned __int8)ch + 3)) & 0xC0080002A4F921LL) == 0) )
-    {
-      return ch == 10175;
-    }
-    return 1;
-  }
-  if ( ch <= 0x2B04u )
-  {
-    if ( ((unsigned int)ch - 10052 > 0x20 || ((1LL << ((unsigned __int8)ch - 68)) & 0x1000B8509LL) == 0)
-      && ((unsigned int)ch - 10133 > 0x1B || ((1 << (ch + 107)) & 0x8001007) == 0)
-      && (unsigned int)ch - 10548 >= 2 )
-    {
-      return ch == 10175;
-    }
-    return 1;
-  }
-  if ( ch <= 0x302Fu )
-  {
-    if ( ((unsigned int)ch - 11035 > 0x3A || ((1LL << ((unsigned __int8)ch - 27)) & 0x420000000000003LL) == 0)
-      && (unsigned int)ch - 11013 >= 3 )
-    {
-      return ch == 10175;
-    }
-    return 1;
-  }
-  if ( ch > 0x3298u )
-  {
-    if ( (unsigned int)ch - 65038 >= 2 )
-    {
-      v4 = 12953;
-      goto LABEL_56;
-    }
-    return 1;
-  }
-  if ( ch == 12336 || ch == 12349 )
-    return 1;
-  v4 = 12951;
-LABEL_56:
-  if ( ch == v4 )
-    return 1;
-  return ch == 10175;
+  if ( ch != v4 )
+    return 0;
+  return result;
 }
 
 

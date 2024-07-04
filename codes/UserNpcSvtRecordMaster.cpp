@@ -1,14 +1,14 @@
 void __fastcall UserNpcSvtRecordMaster___ctor(UserNpcSvtRecordMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4389DBD & 1) == 0 )
+  if ( (byte_48E34C9 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string___ctor__);
-    byte_4389DBD = 1;
+    sub_1B00CCC(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string___ctor__, method);
+    byte_48E34C9 = 1;
   }
-  DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
-    (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
+  DataMasterBase_object__object__object____ctor(
+    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     410,
-    (const MethodInfo_21FBC48 *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string___ctor__);
+    (const MethodInfo_2FE6D64 *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string___ctor__);
 }
 
 
@@ -19,21 +19,22 @@ UserNpcSvtRecordEntity_o *__fastcall UserNpcSvtRecordMaster__GetEntity(
         int32_t svtId,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x1
+  Il2CppObject *PK; // x1
 
-  if ( (byte_4389DBE & 1) == 0 )
+  if ( (byte_48E34CA & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__GetEntity__);
-    byte_4389DBE = 1;
+    sub_1B00CCC(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__GetEntity__, userId);
+    byte_48E34CA = 1;
   }
-  PK = UserNpcSvtRecordEntity__CreatePK(userId, svtId, *(const MethodInfo **)&svtId);
-  return (UserNpcSvtRecordEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
-                                       (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
+  PK = (Il2CppObject *)UserNpcSvtRecordEntity__CreatePK(userId, svtId, *(const MethodInfo **)&svtId);
+  return (UserNpcSvtRecordEntity_o *)DataMasterBase_object__object__object___GetEntity(
+                                       (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                        PK,
-                                       (const MethodInfo_21FBCE4 *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__GetEntity__);
+                                       (const MethodInfo_2FE6DA4 *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__GetEntity__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_Int32_array *__fastcall UserNpcSvtRecordMaster__GetTdPlayed(
         UserNpcSvtRecordMaster_o *this,
         int32_t svtId,
@@ -44,26 +45,23 @@ System_Int32_array *__fastcall UserNpcSvtRecordMaster__GetTdPlayed(
   __int64 v7; // x1
   bool v8; // w8
   System_Int32_array *result; // x0
-  UserNpcSvtRecordEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
+  UserNpcSvtRecordEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4389DC0 & 1) == 0 )
+  if ( (byte_48E34CC & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_4389DC0 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, *(_QWORD *)&svtId);
+    byte_48E34CC = 1;
   }
   entity = 0LL;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
   UserId = NetworkManager__get_UserId(0LL);
   v8 = UserNpcSvtRecordMaster__TryGetEntity(this, &entity, UserId, svtId, v6);
   result = 0LL;
   if ( v8 )
   {
     if ( !entity )
-      sub_B7769C(0LL, v7);
+      sub_1B00F28(0LL, v7);
     return entity->fields.tdPlayed;
   }
   return result;
@@ -77,17 +75,17 @@ bool __fastcall UserNpcSvtRecordMaster__TryGetEntity(
         int32_t svtId,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x2
+  Il2CppObject *PK; // x2
 
-  if ( (byte_4389DBF & 1) == 0 )
+  if ( (byte_48E34CB & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__TryGetEntity__);
-    byte_4389DBF = 1;
+    sub_1B00CCC(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__TryGetEntity__, entity);
+    byte_48E34CB = 1;
   }
-  PK = UserNpcSvtRecordEntity__CreatePK(userId, svtId, (const MethodInfo *)userId);
-  return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
-           (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
-           (WarQuestSelectionEntity_o **)entity,
+  PK = (Il2CppObject *)UserNpcSvtRecordEntity__CreatePK(userId, svtId, (const MethodInfo *)userId);
+  return DataMasterBase_object__object__object___TryGetEntity(
+           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
+           (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_21FBD3C *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__TryGetEntity__);
+           (const MethodInfo_2FE6DF4 *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__TryGetEntity__);
 }

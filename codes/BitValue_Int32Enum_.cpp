@@ -1,38 +1,87 @@
-bool __fastcall BitValue_Int32Enum___CheckAndOff(BitValue_T__o *this, int32_t val, const MethodInfo_2CB8198 *method)
+void __fastcall BitValue_Int32Enum____ctor(
+        BitValue_T__o *this,
+        System_Func_T__int__o *func,
+        const MethodInfo_2F6B3A0 *method)
 {
-  const MethodInfo_2CB8198 *v3; // x21
-  char v6; // w0
+  int32_t v5; // w2
+  int32_t v6; // w3
+
+  System_Object___ctor((Il2CppObject *)this, 0LL);
+  this->fields.convertFunc = func;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.convertFunc, (int32_t)func, v5, v6);
+}
+
+
+bool __fastcall BitValue_Int32Enum___Check(BitValue_T__o *this, int32_t val, const MethodInfo_2F6B450 *method)
+{
+  struct System_Func_T__int__o *convertFunc; // x8
+  int32_t value; // w19
+  int v5; // w0
+  char v6; // vf
+
+  convertFunc = this->fields.convertFunc;
+  if ( !convertFunc )
+    sub_1B00F28(this, val);
+  value = this->fields.value;
+  v5 = ((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, int32_t, _QWORD))convertFunc->fields.m_target)(
+         convertFunc->fields.original_method_info,
+         val,
+         *(_QWORD *)&convertFunc->fields.extra_arg);
+  return !(((v5 & value) < 0) ^ v6 | ((v5 & value) == 0));
+}
+
+
+bool __fastcall BitValue_Int32Enum___CheckAndOff(BitValue_T__o *this, int32_t val, const MethodInfo_2F6B484 *method)
+{
+  const MethodInfo_2F6B484 *v3; // x19
+  bool v6; // w0
   BitValue_T__c *klass; // x8
 
-  if ( !this )
-    sub_B7769C(0LL, val);
   v3 = method;
-  v6 = ((__int64 (*)(void))method->klass->rgctx_data->_1_BitValue_T__Check->methodPointer)();
+  v6 = BitValue_Int32Enum___Check(
+         this,
+         val,
+         (const MethodInfo_2F6B450 *)method->klass->rgctx_data->_4_BitValue_T__Check);
   klass = v3->klass;
   LOBYTE(v3) = v6;
-  ((void (__fastcall *)(BitValue_T__o *, _QWORD))klass->rgctx_data->_2_BitValue_T__Off->methodPointer)(
-    this,
-    (unsigned int)val);
+  BitValue_Int32Enum___Off(this, val, (const MethodInfo_2F6B410 *)klass->rgctx_data->_5_BitValue_T__Off);
   return (unsigned __int8)v3 & 1;
 }
 
 
-void __fastcall BitValue_Int32Enum___Off(BitValue_T__o *this, int32_t val, const MethodInfo_2CB8108 *method)
+void __fastcall BitValue_Int32Enum___Off(BitValue_T__o *this, int32_t val, const MethodInfo_2F6B410 *method)
 {
-  struct System_Func_T__int__o *convertFunc; // x0
+  struct System_Func_T__int__o *convertFunc; // x8
   int32_t value; // w20
 
   convertFunc = this->fields.convertFunc;
   if ( !convertFunc )
-    sub_B7769C(0LL, val);
+    sub_1B00F28(this, val);
   value = this->fields.value;
-  this->fields.value = value & ~((__int64 (__fastcall *)(struct System_Func_T__int__o *, int32_t))method->klass->rgctx_data->_0_System_Func_T__int__Invoke->methodPointer)(
-                                  convertFunc,
-                                  val);
+  this->fields.value = value & ~((unsigned __int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, int32_t, _QWORD))convertFunc->fields.m_target)(
+                                  convertFunc->fields.original_method_info,
+                                  val,
+                                  *(_QWORD *)&convertFunc->fields.extra_arg);
 }
 
 
-void __fastcall BitValue_Int32Enum___Reset(BitValue_T__o *this, const MethodInfo_2CB8204 *method)
+void __fastcall BitValue_Int32Enum___On(BitValue_T__o *this, int32_t val, const MethodInfo_2F6B3D0 *method)
+{
+  struct System_Func_T__int__o *convertFunc; // x8
+  int32_t value; // w20
+
+  convertFunc = this->fields.convertFunc;
+  if ( !convertFunc )
+    sub_1B00F28(this, val);
+  value = this->fields.value;
+  this->fields.value = ((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, int32_t, _QWORD))convertFunc->fields.m_target)(
+                         convertFunc->fields.original_method_info,
+                         val,
+                         *(_QWORD *)&convertFunc->fields.extra_arg) | value;
+}
+
+
+void __fastcall BitValue_Int32Enum___Reset(BitValue_T__o *this, const MethodInfo_2F6B4D4 *method)
 {
   this->fields.value = 0;
 }

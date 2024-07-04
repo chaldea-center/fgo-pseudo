@@ -1,14 +1,14 @@
 void __fastcall EventScriptReleaseMaster___ctor(EventScriptReleaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_438EC7A & 1) == 0 )
+  if ( (byte_48E2949 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_EventScriptReleaseMaster__EventScriptReleaseEntity__string___ctor__);
-    byte_438EC7A = 1;
+    sub_1B00CCC(&Method_DataMasterBase_EventScriptReleaseMaster__EventScriptReleaseEntity__string___ctor__, method);
+    byte_48E2949 = 1;
   }
-  DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
-    (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
+  DataMasterBase_object__object__object____ctor(
+    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     215,
-    (const MethodInfo_21FBC48 *)Method_DataMasterBase_EventScriptReleaseMaster__EventScriptReleaseEntity__string___ctor__);
+    (const MethodInfo_2FE6D64 *)Method_DataMasterBase_EventScriptReleaseMaster__EventScriptReleaseEntity__string___ctor__);
 }
 
 
@@ -21,18 +21,25 @@ EventScriptReleaseEntity_o *__fastcall EventScriptReleaseMaster__GetEntity(
         int32_t targetId,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x1
+  Il2CppObject *PK; // x1
 
-  if ( (byte_438EC78 & 1) == 0 )
+  if ( (byte_48E2947 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_EventScriptReleaseMaster__EventScriptReleaseEntity__string__GetEntity__);
-    byte_438EC78 = 1;
+    sub_1B00CCC(
+      &Method_DataMasterBase_EventScriptReleaseMaster__EventScriptReleaseEntity__string__GetEntity__,
+      *(_QWORD *)&eventId);
+    byte_48E2947 = 1;
   }
-  PK = EventScriptReleaseEntity__CreatePK(eventId, flagId, type, targetId, *(const MethodInfo **)&targetId);
-  return (EventScriptReleaseEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
-                                         (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
+  PK = (Il2CppObject *)EventScriptReleaseEntity__CreatePK(
+                         eventId,
+                         flagId,
+                         type,
+                         targetId,
+                         *(const MethodInfo **)&targetId);
+  return (EventScriptReleaseEntity_o *)DataMasterBase_object__object__object___GetEntity(
+                                         (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                          PK,
-                                         (const MethodInfo_21FBCE4 *)Method_DataMasterBase_EventScriptReleaseMaster__EventScriptReleaseEntity__string__GetEntity__);
+                                         (const MethodInfo_2FE6DA4 *)Method_DataMasterBase_EventScriptReleaseMaster__EventScriptReleaseEntity__string__GetEntity__);
 }
 
 
@@ -46,19 +53,21 @@ bool __fastcall EventScriptReleaseMaster__TryGetEntity(
         int32_t targetId,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x2
+  Il2CppObject *PK; // x2
 
-  if ( (byte_438EC79 & 1) == 0 )
+  if ( (byte_48E2948 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_EventScriptReleaseMaster__EventScriptReleaseEntity__string__TryGetEntity__);
-    byte_438EC79 = 1;
+    sub_1B00CCC(
+      &Method_DataMasterBase_EventScriptReleaseMaster__EventScriptReleaseEntity__string__TryGetEntity__,
+      entity);
+    byte_48E2948 = 1;
   }
-  PK = EventScriptReleaseEntity__CreatePK(eventId, flagId, type, targetId, *(const MethodInfo **)&type);
-  return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
-           (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
-           (WarQuestSelectionEntity_o **)entity,
+  PK = (Il2CppObject *)EventScriptReleaseEntity__CreatePK(eventId, flagId, type, targetId, *(const MethodInfo **)&type);
+  return DataMasterBase_object__object__object___TryGetEntity(
+           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
+           (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_21FBD3C *)Method_DataMasterBase_EventScriptReleaseMaster__EventScriptReleaseEntity__string__TryGetEntity__);
+           (const MethodInfo_2FE6DF4 *)Method_DataMasterBase_EventScriptReleaseMaster__EventScriptReleaseEntity__string__TryGetEntity__);
 }
 
 
@@ -69,45 +78,47 @@ bool __fastcall EventScriptReleaseMaster__isAvailable(
         int32_t flag,
         const MethodInfo *method)
 {
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
+  __int64 v7; // x1
+  __int64 v8; // x1
+  System_Collections_ObjectModel_Collection_T__o *list; // x0
   int32_t Count; // w0
-  int32_t v9; // w22
-  bool v10; // w24
-  int32_t v11; // w23
-  __int64 v12; // x10
+  int32_t v11; // w22
+  bool v12; // w26
+  int32_t v13; // w23
+  __int64 methodPtr_low; // x10
 
-  if ( (byte_438EC7B & 1) == 0 )
+  if ( (byte_48E294A & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B775C4(&EventScriptReleaseEntity_TypeInfo);
-    byte_438EC7B = 1;
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
+    sub_1B00CCC(&EventScriptReleaseEntity_TypeInfo, v8);
+    byte_48E294A = 1;
   }
-  list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
+  list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_18;
-  Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
+  Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_2F836B0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
-    v9 = Count;
-    v10 = 0;
-    v11 = 0;
+    v11 = Count;
+    v12 = 0;
+    v13 = 0;
     while ( 1 )
     {
-      list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
+      list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
       if ( !list )
         break;
-      list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
-                                                                                           list,
-                                                                                           v11,
-                                                                                           (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+      list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
+                                                                 list,
+                                                                 v13,
+                                                                 (const MethodInfo_2F83740 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( !list )
         break;
-      v12 = *(&EventScriptReleaseEntity_TypeInfo->_2.bitflags2 + 1);
-      if ( *(&list->klass->_2.bitflags2 + 1) < (unsigned int)v12
-        || (EventScriptReleaseEntity_c *)list->klass->_2.typeHierarchy[v12 - 1] != EventScriptReleaseEntity_TypeInfo )
+      methodPtr_low = LOBYTE(EventScriptReleaseEntity_TypeInfo->vtable._0_Equals.methodPtr);
+      if ( LOBYTE(list->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
+        || (EventScriptReleaseEntity_c *)list->klass->_2.typeHierarchy[methodPtr_low - 1] != EventScriptReleaseEntity_TypeInfo )
       {
         break;
       }
@@ -115,13 +126,13 @@ bool __fastcall EventScriptReleaseMaster__isAvailable(
       {
         if ( !EventScriptReleaseEntity__isAvailable((EventScriptReleaseEntity_o *)list, *(const MethodInfo **)&eventId) )
           return 0;
-        v10 = 1;
+        v12 = 1;
       }
-      if ( ++v11 >= v9 )
-        return v10;
+      if ( v11 == ++v13 )
+        return v12;
     }
 LABEL_18:
-    sub_B7769C(list, *(_QWORD *)&eventId);
+    sub_1B00F28(list, *(_QWORD *)&eventId);
   }
   return 0;
 }

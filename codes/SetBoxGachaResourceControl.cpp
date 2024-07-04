@@ -8,38 +8,52 @@ void __fastcall SetBoxGachaResourceControl__ClickMultiGacha(
         SetBoxGachaResourceControl_o *this,
         const MethodInfo *method)
 {
-  SetBoxGachaResourceControl_ClickDelegate_o *clickCallbackFunc; // x0
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  struct SetBoxGachaResourceControl_ClickDelegate_o *clickCallbackFunc; // x8
 
-  if ( (byte_438DA07 & 1) == 0 )
+  if ( (byte_48E65D7 & 1) == 0 )
   {
-    sub_B775C4(&SoundManager_TypeInfo);
-    byte_438DA07 = 1;
+    sub_1B00CCC(&Method_SetBoxGachaResourceControl_ClickMultiGacha__, method);
+    byte_48E65D7 = 1;
   }
-  if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  SoundManager__playSystemSe(8, 0LL);
+  v3 = Method_SetBoxGachaResourceControl_ClickMultiGacha__;
+  if ( (*((_BYTE *)Method_SetBoxGachaResourceControl_ClickMultiGacha__ + 83) & 2) != 0 )
+    v3 = (_QWORD *)sub_1B00CE4(Method_SetBoxGachaResourceControl_ClickMultiGacha__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v3, v3[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0LL);
   clickCallbackFunc = this->fields.clickCallbackFunc;
   if ( clickCallbackFunc )
-    SetBoxGachaResourceControl_ClickDelegate__Invoke(clickCallbackFunc, this->fields.gachaTime, 0LL);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))clickCallbackFunc->fields.m_target)(
+      clickCallbackFunc->fields.original_method_info,
+      (unsigned int)this->fields.gachaTime,
+      *(_QWORD *)&clickCallbackFunc->fields.extra_arg);
 }
 
 
 void __fastcall SetBoxGachaResourceControl__ClickOneGacha(SetBoxGachaResourceControl_o *this, const MethodInfo *method)
 {
-  SetBoxGachaResourceControl_ClickDelegate_o *clickCallbackFunc; // x0
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  struct SetBoxGachaResourceControl_ClickDelegate_o *clickCallbackFunc; // x8
 
-  if ( (byte_438DA06 & 1) == 0 )
+  if ( (byte_48E65D6 & 1) == 0 )
   {
-    sub_B775C4(&SoundManager_TypeInfo);
-    byte_438DA06 = 1;
+    sub_1B00CCC(&Method_SetBoxGachaResourceControl_ClickOneGacha__, method);
+    byte_48E65D6 = 1;
   }
-  if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  SoundManager__playSystemSe(8, 0LL);
+  v3 = Method_SetBoxGachaResourceControl_ClickOneGacha__;
+  if ( (*((_BYTE *)Method_SetBoxGachaResourceControl_ClickOneGacha__ + 83) & 2) != 0 )
+    v3 = (_QWORD *)sub_1B00CE4(Method_SetBoxGachaResourceControl_ClickOneGacha__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v3, v3[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0LL);
   clickCallbackFunc = this->fields.clickCallbackFunc;
   this->fields.gachaTime = 1;
   if ( clickCallbackFunc )
-    SetBoxGachaResourceControl_ClickDelegate__Invoke(clickCallbackFunc, 1, 0LL);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))clickCallbackFunc->fields.m_target)(
+      clickCallbackFunc->fields.original_method_info,
+      1LL,
+      *(_QWORD *)&clickCallbackFunc->fields.extra_arg);
 }
 
 
@@ -52,12 +66,12 @@ void __fastcall SetBoxGachaResourceControl__SetLimitReset(
   UnityEngine_Behaviour_o *oneBoxGachaBtn; // x0
   unsigned int v6; // w21
   struct UICommonButton_o *v7; // x8
-  unsigned __int128 v8; // [xsp+0h] [xbp-30h] BYREF
+  unsigned __int128 v8; // [xsp+0h] [xbp-40h] BYREF
 
-  if ( (byte_438DA08 & 1) == 0 )
+  if ( (byte_48E65D8 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_362/*"#4C4C4C"*/);
-    byte_438DA08 = 1;
+    sub_1B00CCC(&StringLiteral_438/*"#4C4C4C"*/, isReset);
+    byte_48E65D8 = 1;
   }
   v8 = 0uLL;
   oneBoxGachaBtn = (UnityEngine_Behaviour_o *)this->fields.oneBoxGachaBtn;
@@ -70,10 +84,10 @@ void __fastcall SetBoxGachaResourceControl__SetLimitReset(
   oneBoxGachaBtn = (UnityEngine_Behaviour_o *)this->fields.oneBoxGachaBtn;
   if ( !oneBoxGachaBtn )
     goto LABEL_18;
-  UnityEngine_Behaviour__set_enabled(oneBoxGachaBtn, isReset, 0LL);
   v6 = isReset ? 0 : 3;
+  UnityEngine_Behaviour__set_enabled(oneBoxGachaBtn, isReset, 0LL);
   oneBoxGachaBtn = (UnityEngine_Behaviour_o *)UnityEngine_ColorUtility__TryParseHtmlString(
-                                                (System_String_o *)StringLiteral_362/*"#4C4C4C"*/,
+                                                (System_String_o *)StringLiteral_438/*"#4C4C4C"*/,
                                                 (UnityEngine_Color_o *)&v8,
                                                 0LL);
   v7 = this->fields.oneBoxGachaBtn;
@@ -124,7 +138,7 @@ void __fastcall SetBoxGachaResourceControl__SetLimitReset(
         (oneBoxGachaBtn = (UnityEngine_Behaviour_o *)this->fields.boxGachaDetailBtn) == 0LL) )
   {
 LABEL_18:
-    sub_B7769C(oneBoxGachaBtn, isReset);
+    sub_1B00F28(oneBoxGachaBtn, isReset);
   }
   ((void (__fastcall *)(UnityEngine_Behaviour_o *, bool, void *))oneBoxGachaBtn->klass[1]._1.namespaze)(
     oneBoxGachaBtn,
@@ -138,79 +152,70 @@ void __fastcall SetBoxGachaResourceControl__init(
         BoxGachaEntity_o *boxGachaEnt,
         const MethodInfo *method)
 {
-  BoxGachaEntity_o *v3; // x8
-  SetBoxGachaResourceControl_o *v4; // x19
+  SetBoxGachaResourceControl_o *v3; // x19
+  __int64 v4; // d0
 
   this->fields.gachaTime = 10;
   if ( !boxGachaEnt )
     goto LABEL_7;
-  v3 = boxGachaEnt;
-  boxGachaEnt = (BoxGachaEntity_o *)(unsigned int)boxGachaEnt->fields.payTargetId;
-  v4 = this;
-  this->fields.itemId = (int)boxGachaEnt;
+  v3 = this;
+  v4 = *(_QWORD *)&boxGachaEnt->fields.payTargetId;
   this = (SetBoxGachaResourceControl_o *)this->fields.eventBoxGachaItemInfo;
-  v4->fields.payValue = v3->fields.payValue;
+  *(_QWORD *)&v3->fields.itemId = v4;
   if ( !this
-    || (EventItemComponent__Set((EventItemComponent_o *)this, (int32_t)boxGachaEnt, 0LL),
-        (this = (SetBoxGachaResourceControl_o *)v4->fields.oneBoxGachaInfo) == 0LL)
-    || (BoxGachaItemComponent__Set((BoxGachaItemComponent_o *)this, v4->fields.itemId, v4->fields.payValue, 0LL),
-        (this = (SetBoxGachaResourceControl_o *)v4->fields.singleBoxGachaInfo) == 0LL)
-    || (BoxGachaItemComponent__Set((BoxGachaItemComponent_o *)this, v4->fields.itemId, v4->fields.payValue, 0LL),
-        (this = (SetBoxGachaResourceControl_o *)v4->fields.multiBoxGachaInfo) == 0LL) )
+    || (EventItemComponent__Set((EventItemComponent_o *)this, v4, 0LL),
+        (this = (SetBoxGachaResourceControl_o *)v3->fields.oneBoxGachaInfo) == 0LL)
+    || (BoxGachaItemComponent__Set((BoxGachaItemComponent_o *)this, v3->fields.itemId, v3->fields.payValue, 0LL),
+        (this = (SetBoxGachaResourceControl_o *)v3->fields.singleBoxGachaInfo) == 0LL)
+    || (BoxGachaItemComponent__Set((BoxGachaItemComponent_o *)this, v3->fields.itemId, v3->fields.payValue, 0LL),
+        (this = (SetBoxGachaResourceControl_o *)v3->fields.multiBoxGachaInfo) == 0LL) )
   {
 LABEL_7:
-    sub_B7769C(this, boxGachaEnt);
+    sub_1B00F28(this, boxGachaEnt);
   }
   BoxGachaItemComponent__Set(
     (BoxGachaItemComponent_o *)this,
-    v4->fields.itemId,
-    v4->fields.payValue * v4->fields.gachaTime,
+    v3->fields.itemId,
+    v3->fields.payValue * v3->fields.gachaTime,
     0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall SetBoxGachaResourceControl__setBoxGachaItemInfo(
         SetBoxGachaResourceControl_o *this,
         int32_t canDrawNum,
         SetBoxGachaResourceControl_ClickDelegate_o *callback,
         const MethodInfo *method)
 {
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  __int64 v11; // x1
+  __int64 v7; // x1
   UnityEngine_GameObject_o *oneBoxGachaObj; // x0
   int32_t gachaTime; // w20
-  __int64 v14; // x1
-  int32_t v15; // w22
+  __int64 v10; // x1
+  int32_t v11; // w22
   UISprite_o *multiPoint2DigitNumImg; // x20
   UISprite_o *multiPoint1DigitNumImg; // x21
   UISprite_o *multiPoint3DigitNumImg; // x19
 
-  if ( (byte_438DA05 & 1) == 0 )
+  if ( (byte_48E65D5 & 1) == 0 )
   {
-    sub_B775C4(&BoxGachaUtility_TypeInfo);
-    byte_438DA05 = 1;
+    sub_1B00CCC(&BoxGachaUtility_TypeInfo, *(_QWORD *)&canDrawNum);
+    byte_48E65D5 = 1;
   }
   this->fields.clickCallbackFunc = callback;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.clickCallbackFunc,
-    (System_Int32_array **)callback,
-    (System_String_array **)callback,
-    (System_String_array **)method,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields.clickCallbackFunc,
+    (int32_t)callback,
+    (int32_t)callback,
+    (int32_t)method);
   oneBoxGachaObj = this->fields.oneBoxGachaObj;
   this->fields.gachaTime = canDrawNum;
   if ( !oneBoxGachaObj )
-    goto LABEL_20;
+    goto LABEL_19;
   UnityEngine_GameObject__SetActive(oneBoxGachaObj, 0, 0LL);
   oneBoxGachaObj = this->fields.multiBoxGachaObj;
   if ( !oneBoxGachaObj )
-    goto LABEL_20;
+    goto LABEL_19;
   UnityEngine_GameObject__SetActive(oneBoxGachaObj, 0, 0LL);
   if ( canDrawNum < 2 )
   {
@@ -234,12 +239,12 @@ void __fastcall SetBoxGachaResourceControl__setBoxGachaItemInfo(
           if ( oneBoxGachaObj )
           {
             if ( gachaTime <= 0 )
-              v14 = 3LL;
+              v10 = 3LL;
             else
-              v14 = 0LL;
+              v10 = 0LL;
             ((void (__fastcall *)(UnityEngine_GameObject_o *, __int64, _QWORD, Il2CppRuntimeInterfaceOffsetPair *))oneBoxGachaObj->klass[1]._1.implementedInterfaces)(
               oneBoxGachaObj,
-              v14,
+              v10,
               0LL,
               oneBoxGachaObj->klass[1]._1.interfaceOffsets);
             return;
@@ -247,32 +252,29 @@ void __fastcall SetBoxGachaResourceControl__setBoxGachaItemInfo(
         }
       }
     }
-LABEL_20:
-    sub_B7769C(oneBoxGachaObj, v11);
+LABEL_19:
+    sub_1B00F28(oneBoxGachaObj, v7);
   }
   oneBoxGachaObj = this->fields.multiBoxGachaObj;
   if ( !oneBoxGachaObj )
-    goto LABEL_20;
+    goto LABEL_19;
   UnityEngine_GameObject__SetActive(oneBoxGachaObj, 1, 0LL);
   oneBoxGachaObj = (UnityEngine_GameObject_o *)this->fields.multiBoxGachaInfo;
   if ( !oneBoxGachaObj )
-    goto LABEL_20;
+    goto LABEL_19;
   BoxGachaItemComponent__Set(
     (BoxGachaItemComponent_o *)oneBoxGachaObj,
     this->fields.itemId,
     this->fields.payValue * this->fields.gachaTime,
     0LL);
-  v15 = this->fields.gachaTime;
+  v11 = this->fields.gachaTime;
   multiPoint1DigitNumImg = this->fields.multiPoint1DigitNumImg;
   multiPoint2DigitNumImg = this->fields.multiPoint2DigitNumImg;
   multiPoint3DigitNumImg = this->fields.multiPoint3DigitNumImg;
-  if ( (BYTE3(BoxGachaUtility_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !BoxGachaUtility_TypeInfo->_2.cctor_finished )
-  {
+  if ( !BoxGachaUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BoxGachaUtility_TypeInfo);
-  }
   BoxGachaUtility__SetMultiGachaButtonDigitNum(
-    v15,
+    v11,
     multiPoint1DigitNumImg,
     multiPoint2DigitNumImg,
     multiPoint3DigitNumImg,
@@ -287,30 +289,44 @@ void __fastcall SetBoxGachaResourceControl_ClickDelegate___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  struct BattleServantClassBoardSkillEffectListComponent_o *v8; // x8
-  BattleServantConfConponent_o *p_method; // x0
+  __int64 v4; // x8
+  __int64 v6; // x21
+  int v8; // w22
+  struct System_Reflection_MethodInfo_o *v9; // x9
+  __int64 v10; // x0
 
-  v8 = **(struct BattleServantClassBoardSkillEffectListComponent_o ***)&method;
+  v4 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
+  *(_QWORD *)&this->fields.extra_arg = *(_QWORD *)&method;
+  v6 = *(_QWORD *)&method;
+  *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  p_method = (BattleServantConfConponent_o *)&this->fields.method;
-  p_method->monitor = *(void **)&method;
-  p_method[-1].fields.classBoardSkillObj = v8;
-  sub_B77560(
-    p_method,
-    (System_Int32_array **)object,
-    *(System_String_array ***)&method,
-    (System_String_array **)a4,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  v8 = *(unsigned __int8 *)(v6 + 82);
+  this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
+  if ( (sub_1B00D8C(v6) & 1) == 0 )
+  {
+    if ( !object )
+    {
+      v10 = sub_1B00F44(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B00DF4(v10, 0LL);
+    }
+    goto LABEL_5;
+  }
+  if ( v8 != 1 )
+  {
+LABEL_5:
+    v9 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
+    this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
+    this->fields.original_method_info = v9;
+    goto LABEL_6;
+  }
+  this->fields.m_target = (Il2CppObject *)sub_1950240;
+LABEL_6:
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19501F8;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_IAsyncResult_o *__fastcall SetBoxGachaResourceControl_ClickDelegate__BeginInvoke(
         SetBoxGachaResourceControl_ClickDelegate_o *this,
         int32_t gachaTime,
@@ -318,18 +334,18 @@ System_IAsyncResult_o *__fastcall SetBoxGachaResourceControl_ClickDelegate__Begi
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v9[2]; // [xsp+8h] [xbp-38h] BYREF
-  int32_t v10; // [xsp+1Ch] [xbp-24h] BYREF
+  __int64 v9[2]; // [xsp+8h] [xbp-48h] BYREF
+  int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = gachaTime;
-  if ( (byte_4388E68 & 1) == 0 )
+  if ( (byte_48E65D9 & 1) == 0 )
   {
-    sub_B775C4(&int_TypeInfo);
-    byte_4388E68 = 1;
+    sub_1B00CCC(&int_TypeInfo, *(_QWORD *)&gachaTime);
+    byte_48E65D9 = 1;
   }
   v9[1] = 0LL;
-  v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10, callback);
-  return (System_IAsyncResult_o *)sub_B77568(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10, callback, object, method);
+  return (System_IAsyncResult_o *)sub_1B00C80(this, v9, callback, object);
 }
 
 
@@ -338,150 +354,17 @@ void __fastcall SetBoxGachaResourceControl_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B7756C(result, 0LL, method);
+  sub_1B00C84(result, 0LL, method);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall SetBoxGachaResourceControl_ClickDelegate__Invoke(
         SetBoxGachaResourceControl_ClickDelegate_o *this,
         int32_t gachaTime,
         const MethodInfo *method)
 {
-  __int64 v3; // x8
-  __int64 v6; // x24
-  SetBoxGachaResourceControl_ClickDelegate_o **v7; // x25
-  __int64 v8; // x26
-  unsigned int v9; // w23
-  __int64 class_0; // x0
-  __int64 v11; // x8
-  unsigned __int64 v12; // x10
-  _DWORD *v13; // x11
-  __int64 v14; // x0
-  __int64 v15; // x0
-  __int64 v16; // x0
-  void (__fastcall **v17)(__int64 *, _QWORD, _QWORD); // x0
-  SetBoxGachaResourceControl_ClickDelegate_o *v18; // x8
-  __int64 *v19; // x21
-  __int64 v20; // x22
-  void (__fastcall *v21)(_QWORD, __int64); // x23
-  char v22; // w23
-  char v23; // w0
-  __int64 v24; // x8
-  __int64 v25; // x1
-  __int64 v26; // x2
-  unsigned __int64 v27; // x10
-  _DWORD *v28; // x11
-  SetBoxGachaResourceControl_ClickDelegate_o *v29; // [xsp+8h] [xbp-48h] BYREF
-
-  v29 = this;
-  v3 = *(_QWORD *)&this[1].fields.method_ptr;
-  if ( !v3 )
-  {
-    v7 = &v29;
-    v6 = 1LL;
-    goto LABEL_5;
-  }
-  v6 = *(_QWORD *)(v3 + 24);
-  if ( v6 )
-  {
-    v7 = (SetBoxGachaResourceControl_ClickDelegate_o **)(v3 + 32);
-LABEL_5:
-    v8 = 0LL;
-    while ( 1 )
-    {
-      v18 = v7[v8];
-      v19 = *(__int64 **)&v18->fields.method;
-      v20 = *(_QWORD *)&v18->fields.extra_arg;
-      v21 = *(void (__fastcall **)(_QWORD, __int64))&v18->fields.method_ptr;
-      if ( *(__int16 *)(v20 + 72) == -1 )
-        sub_B77680(*(_QWORD *)&v18->fields.extra_arg, *(_QWORD *)&gachaTime);
-      if ( (sub_B775F4(v20) & 1) == 0 )
-        break;
-      if ( *(_BYTE *)(v20 + 74) != 1 )
-        goto LABEL_36;
-      v21((unsigned int)gachaTime, v20);
-LABEL_37:
-      if ( ++v8 == v6 )
-        return;
-    }
-    if ( v19 && *(__int16 *)(v20 + 72) != -1 && (*(_BYTE *)(*v19 + 277) & 1) == 0 && this->fields.m_target )
-    {
-      v22 = sub_B775EC(v20);
-      v23 = sub_B779F0(v20);
-      if ( (v22 & 1) != 0 )
-      {
-        if ( (v23 & 1) != 0 )
-        {
-          v24 = *v19;
-          v25 = *(_QWORD *)(v20 + 24);
-          v26 = *(unsigned __int16 *)(v20 + 72);
-          if ( *(_WORD *)(*v19 + 298) )
-          {
-            v27 = 0LL;
-            v28 = (_DWORD *)(*(_QWORD *)(v24 + 176) + 8LL);
-            while ( *((_QWORD *)v28 - 1) != v25 )
-            {
-              ++v27;
-              v28 += 4;
-              if ( v27 >= *(unsigned __int16 *)(*v19 + 298) )
-                goto LABEL_35;
-            }
-            v16 = v24 + 16LL * (*v28 + (int)v26) + 312;
-          }
-          else
-          {
-LABEL_35:
-            v16 = sub_B0F4C0(v19, v25, v26);
-          }
-          v15 = *(_QWORD *)(v16 + 8);
-        }
-        else
-        {
-          v15 = *(_QWORD *)(*v19 + 16LL * *(unsigned __int16 *)(v20 + 72) + 320);
-        }
-        v17 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD))sub_B77674(v15, v20);
-        (*v17)(v19, (unsigned int)gachaTime, v17);
-      }
-      else
-      {
-        v9 = *(unsigned __int16 *)(v20 + 72);
-        if ( (v23 & 1) != 0 )
-        {
-          class_0 = j_il2cpp_method_get_class_0(v20);
-          v11 = *v19;
-          if ( *(_WORD *)(*v19 + 298) )
-          {
-            v12 = 0LL;
-            v13 = (_DWORD *)(*(_QWORD *)(v11 + 176) + 8LL);
-            while ( *((_QWORD *)v13 - 1) != class_0 )
-            {
-              ++v12;
-              v13 += 4;
-              if ( v12 >= *(unsigned __int16 *)(*v19 + 298) )
-                goto LABEL_11;
-            }
-            v14 = v11 + 16LL * (int)(*v13 + v9) + 312;
-          }
-          else
-          {
-LABEL_11:
-            v14 = sub_B0F4C0(v19, class_0, v9);
-          }
-          (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD))v14)(v19, (unsigned int)gachaTime, *(_QWORD *)(v14 + 8));
-        }
-        else
-        {
-          (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD))(*v19 + 16LL * *(unsigned __int16 *)(v20 + 72) + 312))(
-            v19,
-            (unsigned int)gachaTime,
-            *(_QWORD *)(*v19 + 16LL * *(unsigned __int16 *)(v20 + 72) + 320));
-        }
-      }
-      goto LABEL_37;
-    }
-LABEL_36:
-    ((void (__fastcall *)(__int64 *, _QWORD, __int64))v21)(v19, (unsigned int)gachaTime, v20);
-    goto LABEL_37;
-  }
+  ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, int32_t, _QWORD))this->fields.m_target)(
+    this->fields.original_method_info,
+    gachaTime,
+    *(_QWORD *)&this->fields.extra_arg);
 }

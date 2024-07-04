@@ -4,7 +4,9 @@ void __fastcall DeadServantAiTask___ctor(
         BattleLogic_o *logic,
         const MethodInfo *method)
 {
-  BattleLogicServantAiTask___ctor((BattleLogicServantAiTask_o *)this, 2, svtData, logic, 0LL);
+  const MethodInfo *v4; // x4
+
+  BattleLogicServantAiTask___ctor((BattleLogicServantAiTask_o *)this, 2, svtData, logic, v4);
 }
 
 
@@ -20,6 +22,6 @@ bool __fastcall DeadServantAiTask__IsActable(DeadServantAiTask_o *this, BattleLo
     return 0;
   if ( !logic || (svtData = (BattleServantData_o *)logic->fields.data) == 0LL )
 LABEL_7:
-    sub_B7769C(svtData, logic);
+    sub_1B00F28(svtData, logic);
   return BattleData__checkAlivePlayers((BattleData_o *)svtData, 0LL);
 }

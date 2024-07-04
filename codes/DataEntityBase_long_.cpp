@@ -1,22 +1,19 @@
-void __fastcall DataEntityBase_long____ctor(DataEntityBase_long__o *this, const MethodInfo_21FB798 *method)
+void __fastcall DataEntityBase_long____ctor(DataEntityBase_long__o *this, const MethodInfo_2FE6894 *method)
 {
-  if ( !this )
-    sub_B7769C(0LL, method);
   DataEntityBase___ctor((DataEntityBase_o *)this, 0LL);
 }
 
 
 System_String_o *__fastcall DataEntityBase_long___get_PrimaryKey(
         DataEntityBase_long__o *this,
-        const MethodInfo_21FB758 *method)
+        const MethodInfo_2FE6854 *method)
 {
-  __int64 v3; // [xsp+8h] [xbp-8h] BYREF
+  __int64 v4; // [xsp+8h] [xbp-18h] BYREF
 
-  v3 = 0LL;
-  if ( !this )
-    sub_B7769C(0LL, method);
-  v3 = ((__int64 (__fastcall *)(DataEntityBase_long__o *, const char *))this->klass[1]._1.gc_desc)(
+  v4 = ((__int64 (__fastcall *)(DataEntityBase_long__o *, const char *))this->klass[1]._1.gc_desc)(
          this,
          this->klass[1]._1.name);
-  return System_Int64__ToString((int64_t)&v3, 0LL);
+  return System_Int64__ToString(
+           (int64_t)&v4,
+           (const MethodInfo *)method->klass->rgctx_data[1]._0_DataEntityBase_PKType_);
 }

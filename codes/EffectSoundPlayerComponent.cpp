@@ -9,99 +9,63 @@ void __fastcall EffectSoundPlayerComponent__ChangeVolumeBgm(
         System_String_o *name,
         const MethodInfo *method)
 {
-  System_Char_array *BgmName; // x0
-  System_Char_array *v5; // x1
-  System_Char_array *v6; // x19
-  System_String_o *v7; // x20
-  System_String_o *v8; // x19
-  float v9; // s8
-  System_String_o *v10; // x20
-  System_String_o *v11; // x21
-  float v12; // s0
-  float v13; // s8
-  float v14; // s9
-  __int64 v15; // x0
+  __int64 v4; // x1
+  __int64 v5; // x1
+  EffectSoundPlayerComponent_o *v6; // x20
+  int m_CancellationTokenSource; // w22
+  System_String_o *BgmName; // x0
+  __int64 v9; // x1
+  System_String_o *v10; // x19
+  System_String_o *klass; // x21
+  float v12; // s8
+  float v13; // s9
 
-  if ( (byte_438FA57 & 1) == 0 )
+  if ( (byte_48E3AD6 & 1) == 0 )
   {
-    sub_B775C4(&BgmManager_TypeInfo);
-    sub_B775C4(&char___TypeInfo);
-    sub_B775C4(&System_Convert_TypeInfo);
-    sub_B775C4(&SoundManager_TypeInfo);
-    byte_438FA57 = 1;
+    sub_1B00CCC(&BgmManager_TypeInfo, name);
+    sub_1B00CCC(&System_Convert_TypeInfo, v4);
+    this = (EffectSoundPlayerComponent_o *)sub_1B00CCC(&SoundManager_TypeInfo, v5);
+    byte_48E3AD6 = 1;
   }
-  BgmName = (System_Char_array *)sub_B775DC(char___TypeInfo, 1LL);
-  if ( !BgmName )
-    goto LABEL_31;
-  v5 = BgmName;
-  if ( !BgmName->max_length )
-    goto LABEL_32;
-  BgmName->m_Items[2] = 58;
-  if ( !name || (BgmName = (System_Char_array *)System_String__Split(name, BgmName, 0LL)) == 0LL )
-LABEL_31:
-    sub_B7769C(BgmName, v5);
-  v6 = BgmName;
-  if ( (int)BgmName->max_length < 2 )
-  {
-    if ( (WORD1(BgmManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
-      && !BgmManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-    }
-    BgmName = (System_Char_array *)BgmManager__GetBgmName(0LL);
-    if ( v6->max_length )
-    {
-      v7 = (System_String_o *)BgmName;
-      v8 = *(System_String_o **)&v6->m_Items[2];
-      if ( (BYTE3(System_Convert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !System_Convert_TypeInfo->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-      }
-      v9 = System_Convert__ToSingle_42786048(v8, 0LL);
-      if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !SoundManager_TypeInfo->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-      }
-      SoundManager__playBgm_23532608(v7, v9, 0LL);
-      return;
-    }
-LABEL_32:
-    v15 = sub_B776C8(BgmName);
-    sub_B77668(v15, 0LL);
-  }
-  if ( (WORD1(BgmManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0 && !BgmManager_TypeInfo->_2.cctor_finished )
+  if ( !name || (this = (EffectSoundPlayerComponent_o *)System_String__Split(name, 0x3Au, 0, 0LL)) == 0LL )
+    sub_1B00F28(this, name);
+  v6 = this;
+  m_CancellationTokenSource = (int)this->fields.m_CancellationTokenSource;
+  if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-  BgmName = (System_Char_array *)BgmManager__GetBgmName(0LL);
-  if ( !v6->max_length )
-    goto LABEL_32;
-  v10 = (System_String_o *)BgmName;
-  v11 = *(System_String_o **)&v6->m_Items[2];
-  if ( (BYTE3(System_Convert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !System_Convert_TypeInfo->_2.cctor_finished )
-  {
+  BgmName = BgmManager__GetBgmName(0LL);
+  if ( !LODWORD(v6->fields.m_CancellationTokenSource) )
+    goto LABEL_19;
+  v10 = BgmName;
+  klass = (System_String_o *)v6[1].klass;
+  if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
+  v12 = System_Convert__ToSingle_60986860(klass, 0LL);
+  if ( m_CancellationTokenSource < 2 )
+  {
+    if ( !SoundManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
+    SoundManager__playBgm_37475784(v10, v12, 0LL);
+    return;
   }
-  v12 = System_Convert__ToSingle_42786048(v11, 0LL);
-  if ( v6->max_length <= 1 )
-    goto LABEL_32;
-  v13 = v12;
-  v14 = System_Convert__ToSingle_42786048(*(System_String_o **)&v6->m_Items[6], 0LL);
-  if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
+  if ( LODWORD(v6->fields.m_CancellationTokenSource) <= 1 )
+LABEL_19:
+    sub_1B00F30(BgmName, v9);
+  v13 = System_Convert__ToSingle_60986860((System_String_o *)v6[1].monitor, 0LL);
+  if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  SoundManager__playBgm_23532736(v10, v13, v14, 0LL);
+  SoundManager__playBgm_37475900(v10, v12, v13, 0LL);
 }
 
 
 void __fastcall EffectSoundPlayerComponent__PauseBgm(EffectSoundPlayerComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_438FA55 & 1) == 0 )
+  if ( (byte_48E3AD4 & 1) == 0 )
   {
-    sub_B775C4(&BgmManager_TypeInfo);
-    byte_438FA55 = 1;
+    sub_1B00CCC(&BgmManager_TypeInfo, method);
+    byte_48E3AD4 = 1;
   }
-  if ( (BYTE3(BgmManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BgmManager_TypeInfo->_2.cctor_finished )
+  if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
   BgmManager__PauseBgm(1, 0LL);
 }
@@ -112,46 +76,49 @@ void __fastcall EffectSoundPlayerComponent__PlayBgm(
         System_String_o *bgmId,
         const MethodInfo *method)
 {
-  DataMasterBase_WarMaster__WarEntity__int__o *Master_WarQuestSelectionMaster; // x20
-  __int64 IsNullOrEmpty; // x0
+  __int64 v4; // x1
+  __int64 v5; // x1
   __int64 v6; // x1
-  System_String_o *age; // x19
-  WarEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
+  Il2CppObject *Master_object; // x20
+  __int64 IsNullOrEmpty; // x0
+  __int64 v9; // x1
+  System_String_o *monitor; // x19
+  Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_438FA53 & 1) == 0 )
+  if ( (byte_48E3AD2 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMaster_BgmMaster___);
-    sub_B775C4(&DataManager_TypeInfo);
-    sub_B775C4(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
-    sub_B775C4(&SoundManager_TypeInfo);
-    byte_438FA53 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMaster_BgmMaster___, bgmId);
+    sub_1B00CCC(&DataManager_TypeInfo, v4);
+    sub_1B00CCC(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__, v5);
+    sub_1B00CCC(&SoundManager_TypeInfo, v6);
+    byte_48E3AD2 = 1;
   }
   entity = 0LL;
-  if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_BgmMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_BgmMaster___);
   IsNullOrEmpty = System_Int32__Parse(bgmId, 0LL);
-  if ( !Master_WarQuestSelectionMaster )
-    goto LABEL_16;
-  IsNullOrEmpty = DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
-                    Master_WarQuestSelectionMaster,
+  if ( !Master_object )
+    goto LABEL_14;
+  IsNullOrEmpty = DataMasterBase_object__object__int___TryGetEntity(
+                    (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                     &entity,
                     IsNullOrEmpty,
-                    (const MethodInfo_21FB8F0 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
+                    (const MethodInfo_2FE6AA0 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
   if ( (IsNullOrEmpty & 1) == 0 )
     return;
   if ( !entity )
-    goto LABEL_16;
-  IsNullOrEmpty = System_String__IsNullOrEmpty(entity->fields.age, 0LL);
+    goto LABEL_14;
+  IsNullOrEmpty = System_String__IsNullOrEmpty((System_String_o *)entity[1].monitor, 0LL);
   if ( (IsNullOrEmpty & 1) != 0 )
     return;
   if ( !entity )
-LABEL_16:
-    sub_B7769C(IsNullOrEmpty, v6);
-  age = entity->fields.age;
-  if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
+LABEL_14:
+    sub_1B00F28(IsNullOrEmpty, v9);
+  monitor = (System_String_o *)entity[1].monitor;
+  if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  SoundManager__playBgm(age, 0LL);
+  SoundManager__playBgm(monitor, 0LL);
 }
 
 
@@ -160,56 +127,39 @@ void __fastcall EffectSoundPlayerComponent__PlaySe(
         System_String_o *name,
         const MethodInfo *method)
 {
-  System_String_array *v4; // x0
-  System_String_array *v5; // x1
-  int max_length; // w8
-  System_String_o *v7; // x19
-  System_String_o *v8; // x20
-  __int64 v9; // x0
+  EffectSoundPlayerComponent_o *v4; // x19
+  int m_CancellationTokenSource; // w20
+  _QWORD *v6; // x0
+  System_Reflection_MethodBase_o *v7; // x0
+  System_String_o *klass; // x1
+  unsigned int v9; // w8
 
-  if ( (byte_438FA51 & 1) == 0 )
+  if ( (byte_48E3AD0 & 1) == 0 )
   {
-    sub_B775C4(&char___TypeInfo);
-    sub_B775C4(&SoundManager_TypeInfo);
-    byte_438FA51 = 1;
+    this = (EffectSoundPlayerComponent_o *)sub_1B00CCC(&Method_EffectSoundPlayerComponent_PlaySe__, name);
+    byte_48E3AD0 = 1;
   }
-  v4 = (System_String_array *)sub_B775DC(char___TypeInfo, 1LL);
-  if ( !v4 )
-    goto LABEL_17;
-  v5 = v4;
-  if ( !v4->max_length )
-    goto LABEL_18;
-  LOWORD(v4->m_Items[0]) = 58;
-  if ( !name || (v4 = System_String__Split(name, (System_Char_array *)v4, 0LL)) == 0LL )
-LABEL_17:
-    sub_B7769C(v4, v5);
-  max_length = v4->max_length;
-  if ( !max_length )
+  if ( !name || (this = (EffectSoundPlayerComponent_o *)System_String__Split(name, 0x3Au, 0, 0LL)) == 0LL )
+    sub_1B00F28(this, name);
+  v4 = this;
+  m_CancellationTokenSource = (int)this->fields.m_CancellationTokenSource;
+  v6 = Method_EffectSoundPlayerComponent_PlaySe__;
+  if ( (*((_BYTE *)Method_EffectSoundPlayerComponent_PlaySe__ + 83) & 2) != 0 )
+    v6 = (_QWORD *)sub_1B00CE4(Method_EffectSoundPlayerComponent_PlaySe__);
+  v7 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v6, v6[4]);
+  v9 = (unsigned int)v4->fields.m_CancellationTokenSource;
+  if ( !v9 )
+    goto LABEL_13;
+  klass = (System_String_o *)v4[1].klass;
+  if ( m_CancellationTokenSource < 2 )
   {
-LABEL_18:
-    v9 = sub_B776C8(v4);
-    sub_B77668(v9, 0LL);
+    OverwriteAssetSoundName__PlaySe(v7, klass, 0LL);
+    return;
   }
-  v7 = v4->m_Items[0];
-  if ( max_length >= 2 )
-  {
-    v8 = v4->m_Items[1];
-    if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !SoundManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    }
-    SoundManager__playSe_23512032(v7, v8, 0LL);
-  }
-  else
-  {
-    if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !SoundManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    }
-    SoundManager__playSe(v7, 0LL);
-  }
+  if ( v9 <= 1 )
+LABEL_13:
+    sub_1B00F30(v7, klass);
+  OverwriteAssetSoundName__PlaySe_37315800(v7, klass, (System_String_o *)v4[1].monitor, 1.0, 0LL, 0LL);
 }
 
 
@@ -218,67 +168,50 @@ void __fastcall EffectSoundPlayerComponent__PlaySeContinue(
         System_String_o *name,
         const MethodInfo *method)
 {
-  System_String_array *v4; // x0
-  System_String_array *v5; // x1
-  int max_length; // w8
-  System_String_o *v7; // x19
-  System_String_o *v8; // x20
-  __int64 v9; // x0
+  EffectSoundPlayerComponent_o *v4; // x19
+  int m_CancellationTokenSource; // w20
+  _QWORD *v6; // x0
+  System_Reflection_MethodBase_o *v7; // x0
+  System_String_o *klass; // x1
+  unsigned int v9; // w8
 
-  if ( (byte_438FA52 & 1) == 0 )
+  if ( (byte_48E3AD1 & 1) == 0 )
   {
-    sub_B775C4(&char___TypeInfo);
-    sub_B775C4(&SoundManager_TypeInfo);
-    byte_438FA52 = 1;
+    this = (EffectSoundPlayerComponent_o *)sub_1B00CCC(&Method_EffectSoundPlayerComponent_PlaySeContinue__, name);
+    byte_48E3AD1 = 1;
   }
-  v4 = (System_String_array *)sub_B775DC(char___TypeInfo, 1LL);
-  if ( !v4 )
-    goto LABEL_17;
-  v5 = v4;
-  if ( !v4->max_length )
-    goto LABEL_18;
-  LOWORD(v4->m_Items[0]) = 58;
-  if ( !name || (v4 = System_String__Split(name, (System_Char_array *)v4, 0LL)) == 0LL )
-LABEL_17:
-    sub_B7769C(v4, v5);
-  max_length = v4->max_length;
-  if ( !max_length )
+  if ( !name || (this = (EffectSoundPlayerComponent_o *)System_String__Split(name, 0x3Au, 0, 0LL)) == 0LL )
+    sub_1B00F28(this, name);
+  v4 = this;
+  m_CancellationTokenSource = (int)this->fields.m_CancellationTokenSource;
+  v6 = Method_EffectSoundPlayerComponent_PlaySeContinue__;
+  if ( (*((_BYTE *)Method_EffectSoundPlayerComponent_PlaySeContinue__ + 83) & 2) != 0 )
+    v6 = (_QWORD *)sub_1B00CE4(Method_EffectSoundPlayerComponent_PlaySeContinue__);
+  v7 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v6, v6[4]);
+  v9 = (unsigned int)v4->fields.m_CancellationTokenSource;
+  if ( !v9 )
+    goto LABEL_13;
+  klass = (System_String_o *)v4[1].klass;
+  if ( m_CancellationTokenSource < 2 )
   {
-LABEL_18:
-    v9 = sub_B776C8(v4);
-    sub_B77668(v9, 0LL);
+    OverwriteAssetSoundName__PlaySeContinue(v7, klass, 0LL);
+    return;
   }
-  v7 = v4->m_Items[0];
-  if ( max_length >= 2 )
-  {
-    v8 = v4->m_Items[1];
-    if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !SoundManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    }
-    SoundManager__playSeContinue_23535368(v7, v8, 0LL);
-  }
-  else
-  {
-    if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !SoundManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    }
-    SoundManager__playSeContinue(v7, 0LL);
-  }
+  if ( v9 <= 1 )
+LABEL_13:
+    sub_1B00F30(v7, klass);
+  OverwriteAssetSoundName__PlaySeContinue_37315096(v7, klass, (System_String_o *)v4[1].monitor, 0LL);
 }
 
 
 void __fastcall EffectSoundPlayerComponent__ResumeBgm(EffectSoundPlayerComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_438FA56 & 1) == 0 )
+  if ( (byte_48E3AD5 & 1) == 0 )
   {
-    sub_B775C4(&BgmManager_TypeInfo);
-    byte_438FA56 = 1;
+    sub_1B00CCC(&BgmManager_TypeInfo, method);
+    byte_48E3AD5 = 1;
   }
-  if ( (BYTE3(BgmManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BgmManager_TypeInfo->_2.cctor_finished )
+  if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
   BgmManager__PauseBgm(0, 0LL);
 }
@@ -286,12 +219,12 @@ void __fastcall EffectSoundPlayerComponent__ResumeBgm(EffectSoundPlayerComponent
 
 void __fastcall EffectSoundPlayerComponent__StopBgm(EffectSoundPlayerComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_438FA54 & 1) == 0 )
+  if ( (byte_48E3AD3 & 1) == 0 )
   {
-    sub_B775C4(&SoundManager_TypeInfo);
-    byte_438FA54 = 1;
+    sub_1B00CCC(&SoundManager_TypeInfo, method);
+    byte_48E3AD3 = 1;
   }
-  if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
+  if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__stopBgm(0LL);
 }

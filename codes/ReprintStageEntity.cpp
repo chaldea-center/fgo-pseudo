@@ -1,17 +1,17 @@
 void __fastcall ReprintStageEntity___ctor(ReprintStageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438EF5E & 1) == 0 )
+  if ( (byte_48E2DA0 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    byte_438EF5E = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
+    byte_48E2DA0 = 1;
   }
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-void __fastcall ReprintStageEntity___ctor_32561924(
+void __fastcall ReprintStageEntity___ctor_38316640(
         ReprintStageEntity_o *this,
         ReprintStageEntity_o *cSrc,
         const MethodInfo *method)
@@ -19,41 +19,38 @@ void __fastcall ReprintStageEntity___ctor_32561924(
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_438EF5F & 1) == 0 )
+  if ( (byte_48E2DA1 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    byte_438EF5F = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, cSrc);
+    byte_48E2DA1 = 1;
   }
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
   if ( !cSrc )
-    sub_B7769C(v5, v6);
-  this->fields.questId = cSrc->fields.questId;
-  this->fields.questPhase = cSrc->fields.questPhase;
-  this->fields.wave = cSrc->fields.wave;
-  this->fields.remapQuestId = cSrc->fields.remapQuestId;
-  this->fields.remapPhase = cSrc->fields.remapPhase;
-  this->fields.remapWave = cSrc->fields.remapWave;
+    sub_1B00F28(v5, v6);
+  *(_OWORD *)&this->fields.questId = *(_OWORD *)&cSrc->fields.questId;
+  *(_QWORD *)&this->fields.remapPhase = *(_QWORD *)&cSrc->fields.remapPhase;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall ReprintStageEntity__CreatePK(
         int32_t questId,
         int32_t questPhase,
         int32_t wave,
         const MethodInfo *method)
 {
-  if ( (byte_438EF5D & 1) == 0 )
+  if ( (byte_48E2D9F & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_438EF5D = 1;
+    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&questPhase);
+    byte_48E2D9F = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            questId,
            questPhase,
            wave,
-           (const MethodInfo_1D175E4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2D612C4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

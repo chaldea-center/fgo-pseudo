@@ -1,9 +1,4 @@
-void __fastcall CardStatusSyncRequest___ctor(CardStatusSyncRequest_o *this, const MethodInfo *method)
-{
-  RequestBase___ctor((RequestBase_o *)this, 0LL);
-}
-
-
+// local variable allocation has failed, the output may be wrong!
 void __fastcall CardStatusSyncRequest__beginRequest(
         CardStatusSyncRequest_o *this,
         System_Int64_array *changeUserSvtIds,
@@ -13,89 +8,101 @@ void __fastcall CardStatusSyncRequest__beginRequest(
         bool isChoice,
         const MethodInfo *method)
 {
-  System_String_o *v13; // x0
-  System_String_o *v14; // x0
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  System_String_o *v18; // x0
+  const MethodInfo *v19; // x3
+  System_String_o *v20; // x0
+  const MethodInfo *v21; // x3
 
-  if ( (byte_438E416 & 1) == 0 )
+  if ( (byte_48E3E83 & 1) == 0 )
   {
-    sub_B775C4(&JsonManager_TypeInfo);
-    sub_B775C4(&StringLiteral_20365/*"isStorage"*/);
-    sub_B775C4(&StringLiteral_17629/*"changeUserSvtIds"*/);
-    sub_B775C4(&StringLiteral_20346/*"isLock"*/);
-    sub_B775C4(&StringLiteral_20331/*"isChoice"*/);
-    sub_B775C4(&StringLiteral_22284/*"revokeUserSvtIds"*/);
-    byte_438E416 = 1;
+    sub_1B00CCC(&JsonManager_TypeInfo, changeUserSvtIds);
+    sub_1B00CCC(&StringLiteral_20538/*"isStorage"*/, v13);
+    sub_1B00CCC(&StringLiteral_17575/*"changeUserSvtIds"*/, v14);
+    sub_1B00CCC(&StringLiteral_20517/*"isLock"*/, v15);
+    sub_1B00CCC(&StringLiteral_20502/*"isChoice"*/, v16);
+    sub_1B00CCC(&StringLiteral_22610/*"revokeUserSvtIds"*/, v17);
+    byte_48E3E83 = 1;
   }
   if ( changeUserSvtIds && *(_QWORD *)&changeUserSvtIds->max_length )
   {
-    if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
+    if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v13 = JsonManager__toJson(&changeUserSvtIds->obj, 0, 0, 0LL);
-    RequestBase__addField_32565392((RequestBase_o *)this, (System_String_o *)StringLiteral_17629/*"changeUserSvtIds"*/, v13, 0LL);
+    v18 = JsonManager__toJson(&changeUserSvtIds->obj, 0, 0, 0LL);
+    RequestBase__addField_39752868((RequestBase_o *)this, (System_String_o *)StringLiteral_17575/*"changeUserSvtIds"*/, v18, v19);
   }
   if ( revokeUserSvtIds && *(_QWORD *)&revokeUserSvtIds->max_length )
   {
-    if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
+    if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v14 = JsonManager__toJson(&revokeUserSvtIds->obj, 0, 0, 0LL);
-    RequestBase__addField_32565392((RequestBase_o *)this, (System_String_o *)StringLiteral_22284/*"revokeUserSvtIds"*/, v14, 0LL);
+    v20 = JsonManager__toJson(&revokeUserSvtIds->obj, 0, 0, 0LL);
+    RequestBase__addField_39752868((RequestBase_o *)this, (System_String_o *)StringLiteral_22610/*"revokeUserSvtIds"*/, v20, v21);
   }
   if ( !isStorage )
   {
     if ( !isLock )
-      goto LABEL_17;
-LABEL_21:
-    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20346/*"isLock"*/, 1, 0LL);
-    if ( !isChoice )
-      goto LABEL_19;
-    goto LABEL_18;
-  }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20365/*"isStorage"*/, 1, 0LL);
-  if ( isLock )
-    goto LABEL_21;
-LABEL_17:
-  if ( isChoice )
-LABEL_18:
-    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20331/*"isChoice"*/, 1, 0LL);
+      goto LABEL_15;
 LABEL_19:
-  RequestBase__beginRequest((RequestBase_o *)this, 0LL);
+    RequestBase__addField(
+      (RequestBase_o *)this,
+      (System_String_o *)StringLiteral_20517/*"isLock"*/,
+      1,
+      (const MethodInfo *)isStorage);
+    if ( !isChoice )
+      goto LABEL_17;
+    goto LABEL_16;
+  }
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20538/*"isStorage"*/, 1, (const MethodInfo *)isStorage);
+  if ( isLock )
+    goto LABEL_19;
+LABEL_15:
+  if ( isChoice )
+LABEL_16:
+    RequestBase__addField(
+      (RequestBase_o *)this,
+      (System_String_o *)StringLiteral_20502/*"isChoice"*/,
+      1,
+      (const MethodInfo *)isStorage);
+LABEL_17:
+  RequestBase__beginRequest((RequestBase_o *)this, (const MethodInfo *)changeUserSvtIds);
 }
 
 
 System_String_o *__fastcall CardStatusSyncRequest__getMockData(CardStatusSyncRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_438E415 & 1) == 0 )
+  __int64 v2; // x1
+
+  if ( (byte_48E3E82 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438E415 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v2);
+    byte_48E3E82 = 1;
   }
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
   return NetworkManager__getMockFile((System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
 
 
 System_String_o *__fastcall CardStatusSyncRequest__getURL(CardStatusSyncRequest_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_438E414 & 1) == 0 )
+  if ( (byte_48E3E81 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&StringLiteral_17569/*"card/statusSync"*/);
-    byte_438E414 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_17513/*"card/statusSync"*/, v2);
+    byte_48E3E81 = 1;
   }
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_44901936(BaseUrl, (System_String_o *)StringLiteral_17569/*"card/statusSync"*/, 0LL);
+  return System_String__Concat_60325748(BaseUrl, (System_String_o *)StringLiteral_17513/*"card/statusSync"*/, 0LL);
 }
 
 
@@ -104,25 +111,39 @@ void __fastcall CardStatusSyncRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  ResponseData_o *v5; // x0
-  __int64 *v6; // x8
+  __int64 v5; // x1
+  __int64 v6; // x1
+  ResponseData_o *v7; // x0
+  const MethodInfo *v8; // x2
+  struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
+  __int64 *v10; // x9
 
-  if ( (byte_438E417 & 1) == 0 )
+  if ( (byte_48E3E84 & 1) == 0 )
   {
-    sub_B775C4(&ResponseCommandKind_TypeInfo);
-    sub_B775C4(&StringLiteral_21657/*"ok"*/);
-    sub_B775C4(&StringLiteral_21504/*"ng"*/);
-    byte_438E417 = 1;
+    sub_1B00CCC(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1B00CCC(&StringLiteral_21923/*"ok"*/, v5);
+    sub_1B00CCC(&StringLiteral_21754/*"ng"*/, v6);
+    byte_48E3E84 = 1;
   }
-  if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ResponseCommandKind_TypeInfo->_2.cctor_finished )
-  {
+  if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
+  v7 = ResponseCommandKind__SearchData(70, responseList, 0LL);
+  if ( v7 && ResponseData__checkError(v7, v7->fields.resCode, v8) )
+  {
+    CallBack = this->fields.CallBack;
+    if ( !CallBack )
+      return;
+    v10 = &StringLiteral_21923/*"ok"*/;
   }
-  v5 = ResponseCommandKind__SearchData(70, responseList, 0LL);
-  if ( v5 && ResponseData__checkError_30128096(v5, 0LL) )
-    v6 = &StringLiteral_21657/*"ok"*/;
   else
-    v6 = &StringLiteral_21504/*"ng"*/;
-  RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v6, 0LL);
+  {
+    CallBack = this->fields.CallBack;
+    if ( !CallBack )
+      return;
+    v10 = &StringLiteral_21754/*"ng"*/;
+  }
+  ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
+    CallBack->fields.original_method_info,
+    *v10,
+    *(_QWORD *)&CallBack->fields.extra_arg);
 }

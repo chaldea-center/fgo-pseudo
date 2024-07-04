@@ -6,141 +6,87 @@ void __fastcall CompensateArgForShowAll___ctor(
         System_Int32_array *extraEffectIdArray,
         const MethodInfo *method)
 {
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
-  System_String_array **v17; // x2
-  System_String_array **v18; // x3
-  System_Boolean_array **v19; // x4
-  System_Int32_array **v20; // x5
-  System_Int32_array *v21; // x6
-  System_Int32_array *v22; // x7
-  CompensateArgForShowAll___c_c *v23; // x0
-  struct CompensateArgForShowAll___c_StaticFields *static_fields; // x8
-  System_Func_CompensateArgForShowAll_EffectType__int__o *_9__13_0; // x22
-  Il2CppObject *v26; // x23
-  struct CompensateArgForShowAll___c_StaticFields *v27; // x0
-  System_String_array **v28; // x2
-  System_String_array **v29; // x3
-  System_Boolean_array **v30; // x4
-  System_Int32_array **v31; // x5
-  System_Int32_array *v32; // x6
-  System_Int32_array *v33; // x7
-  BitValue_CompensateArgForShowAll_EffectType__o *v34; // x23
-  System_String_array **v35; // x2
-  System_String_array **v36; // x3
-  System_Boolean_array **v37; // x4
-  System_Int32_array **v38; // x5
-  System_Int32_array *v39; // x6
-  System_Int32_array *v40; // x7
-  System_Action_ShopRootConstants_State__o *v41; // x22
-  System_String_array **v42; // x2
-  System_String_array **v43; // x3
-  System_Boolean_array **v44; // x4
-  System_Int32_array **v45; // x5
-  System_Int32_array *v46; // x6
-  System_Int32_array *v47; // x7
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  int32_t v18; // w2
+  int32_t v19; // w3
+  int32_t v20; // w2
+  int32_t v21; // w3
+  CompensateArgForShowAll___c_c *v22; // x0
+  System_Func_T__TResult__o *_9__13_0; // x22
+  Il2CppObject *v24; // x23
+  struct CompensateArgForShowAll___c_StaticFields *static_fields; // x0
+  int32_t v26; // w2
+  int32_t v27; // w3
+  BitValue_T__o *v28; // x23
+  int32_t v29; // w2
+  int32_t v30; // w3
+  System_Action_T__o *v31; // x22
+  int32_t v32; // w2
+  int32_t v33; // w3
 
-  if ( (byte_438AC76 & 1) == 0 )
+  if ( (byte_48E47CF & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Action_CompensateArgForShowAll_EffectType___ctor__);
-    sub_B775C4(&System_Action_CompensateArgForShowAll_EffectType__TypeInfo);
-    sub_B775C4(&Method_BasicHelper_ForEach_CompensateArgForShowAll_EffectType___);
-    sub_B775C4(&Method_BitValue_CompensateArgForShowAll_EffectType___ctor__);
-    sub_B775C4(&BitValue_CompensateArgForShowAll_EffectType__TypeInfo);
-    sub_B775C4(&Method_CompensateArgForShowAll___ctor_b__13_1__);
-    sub_B775C4(&Method_System_Func_CompensateArgForShowAll_EffectType__int___ctor__);
-    sub_B775C4(&System_Func_CompensateArgForShowAll_EffectType__int__TypeInfo);
-    sub_B775C4(&Method_CompensateArgForShowAll___c___ctor_b__13_0__);
-    sub_B775C4(&CompensateArgForShowAll___c_TypeInfo);
-    byte_438AC76 = 1;
+    sub_1B00CCC(&System_Action_CompensateArgForShowAll_EffectType__TypeInfo, perf);
+    sub_1B00CCC(&Method_BasicHelper_ForEach_CompensateArgForShowAll_EffectType___, v11);
+    sub_1B00CCC(&Method_BitValue_CompensateArgForShowAll_EffectType___ctor__, v12);
+    sub_1B00CCC(&BitValue_CompensateArgForShowAll_EffectType__TypeInfo, v13);
+    sub_1B00CCC(&Method_CompensateArgForShowAll___ctor_b__13_1__, v14);
+    sub_1B00CCC(&System_Func_CompensateArgForShowAll_EffectType__int__TypeInfo, v15);
+    sub_1B00CCC(&Method_CompensateArgForShowAll___c___ctor_b__13_0__, v16);
+    sub_1B00CCC(&CompensateArgForShowAll___c_TypeInfo, v17);
+    byte_48E47CF = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._Perf_k__BackingField = perf;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)perf, v11, v12, v13, v14, v15, v16);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)perf, v18, v19);
   this->fields._ActObj_k__BackingField = actObj;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._ActObj_k__BackingField,
-    (System_Int32_array **)actObj,
-    v17,
-    v18,
-    v19,
-    v20,
-    v21,
-    v22);
-  v23 = CompensateArgForShowAll___c_TypeInfo;
-  if ( (BYTE3(CompensateArgForShowAll___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CompensateArgForShowAll___c_TypeInfo->_2.cctor_finished )
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields._ActObj_k__BackingField, (int32_t)actObj, v20, v21);
+  v22 = CompensateArgForShowAll___c_TypeInfo;
+  if ( !CompensateArgForShowAll___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CompensateArgForShowAll___c_TypeInfo);
-    v23 = CompensateArgForShowAll___c_TypeInfo;
+    v22 = CompensateArgForShowAll___c_TypeInfo;
   }
-  static_fields = v23->static_fields;
-  _9__13_0 = static_fields->__9__13_0;
+  _9__13_0 = (System_Func_T__TResult__o *)v22->static_fields->__9__13_0;
   if ( !_9__13_0 )
   {
-    if ( (BYTE3(v23->vtable._0_Equals.methodPtr) & 4) != 0 && !v23->_2.cctor_finished )
+    if ( !v22->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v23);
-      static_fields = CompensateArgForShowAll___c_TypeInfo->static_fields;
+      j_il2cpp_runtime_class_init_0(v22);
+      v22 = CompensateArgForShowAll___c_TypeInfo;
     }
-    v26 = (Il2CppObject *)static_fields->__9;
-    _9__13_0 = (System_Func_CompensateArgForShowAll_EffectType__int__o *)sub_B77694(System_Func_CompensateArgForShowAll_EffectType__int__TypeInfo);
-    System_Func_CompensateArgForShowAll_EffectType__int____ctor(
-      _9__13_0,
-      v26,
-      Method_CompensateArgForShowAll___c___ctor_b__13_0__,
-      (const MethodInfo_29E5480 *)Method_System_Func_CompensateArgForShowAll_EffectType__int___ctor__);
-    v27 = CompensateArgForShowAll___c_TypeInfo->static_fields;
-    v27->__9__13_0 = _9__13_0;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&v27->__9__13_0,
-      (System_Int32_array **)_9__13_0,
-      v28,
-      v29,
-      v30,
-      v31,
-      v32,
-      v33);
+    v24 = (Il2CppObject *)v22->static_fields->__9;
+    _9__13_0 = (System_Func_T__TResult__o *)sub_1B00F18(System_Func_CompensateArgForShowAll_EffectType__int__TypeInfo);
+    System_Func_Int32Enum__int____ctor(_9__13_0, v24, Method_CompensateArgForShowAll___c___ctor_b__13_0__, 0LL);
+    static_fields = CompensateArgForShowAll___c_TypeInfo->static_fields;
+    static_fields->__9__13_0 = (struct System_Func_CompensateArgForShowAll_EffectType__int__o *)_9__13_0;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->__9__13_0, (int32_t)_9__13_0, v26, v27);
   }
-  v34 = (BitValue_CompensateArgForShowAll_EffectType__o *)sub_B77694(BitValue_CompensateArgForShowAll_EffectType__TypeInfo);
-  BitValue_CompensateArgForShowAll_EffectType____ctor(
-    v34,
+  v28 = (BitValue_T__o *)sub_1B00F18(BitValue_CompensateArgForShowAll_EffectType__TypeInfo);
+  BitValue_Int32Enum____ctor(
+    v28,
     (System_Func_T__int__o *)_9__13_0,
-    (const MethodInfo_2CB8084 *)Method_BitValue_CompensateArgForShowAll_EffectType___ctor__);
-  this->fields._EffectTypeBit_k__BackingField = v34;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._EffectTypeBit_k__BackingField,
-    (System_Int32_array **)v34,
-    v35,
-    v36,
-    v37,
-    v38,
-    v39,
-    v40);
-  v41 = (System_Action_ShopRootConstants_State__o *)sub_B77694(System_Action_CompensateArgForShowAll_EffectType__TypeInfo);
-  System_Action_ShopRootConstants_State____ctor(
-    v41,
-    (Il2CppObject *)this,
-    Method_CompensateArgForShowAll___ctor_b__13_1__,
-    (const MethodInfo_269F5AC *)Method_System_Action_CompensateArgForShowAll_EffectType___ctor__);
-  BasicHelper__ForEach_CompensateArgForShowAll_EffectType_(
+    (const MethodInfo_2F6B3A0 *)Method_BitValue_CompensateArgForShowAll_EffectType___ctor__);
+  this->fields._EffectTypeBit_k__BackingField = (struct BitValue_CompensateArgForShowAll_EffectType__o *)v28;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields._EffectTypeBit_k__BackingField, (int32_t)v28, v29, v30);
+  v31 = (System_Action_T__o *)sub_1B00F18(System_Action_CompensateArgForShowAll_EffectType__TypeInfo);
+  System_Action_Int32Enum____ctor(v31, (Il2CppObject *)this, Method_CompensateArgForShowAll___ctor_b__13_1__, 0LL);
+  BasicHelper__ForEach_Int32Enum_(
     (System_Collections_Generic_IEnumerable_T__o *)effectTypes,
-    (System_Action_T__o *)v41,
-    (const MethodInfo_1C67414 *)Method_BasicHelper_ForEach_CompensateArgForShowAll_EffectType___);
+    v31,
+    (const MethodInfo_2D50164 *)Method_BasicHelper_ForEach_CompensateArgForShowAll_EffectType___);
   this->fields._ExtraEffectIdArray_k__BackingField = extraEffectIdArray;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._ExtraEffectIdArray_k__BackingField,
-    (System_Int32_array **)extraEffectIdArray,
-    v42,
-    v43,
-    v44,
-    v45,
-    v46,
-    v47);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._ExtraEffectIdArray_k__BackingField,
+    (int32_t)extraEffectIdArray,
+    v32,
+    v33);
 }
 
 
@@ -150,20 +96,20 @@ void __fastcall CompensateArgForShowAll____ctor_b__13_1(
         int32_t x,
         const MethodInfo *method)
 {
-  BitValue_CompensateArgForShowAll_EffectType__o *EffectTypeBit_k__BackingField; // x0
+  BitValue_T__o *EffectTypeBit_k__BackingField; // x0
 
-  if ( (byte_438AC77 & 1) == 0 )
+  if ( (byte_48E47D0 & 1) == 0 )
   {
-    sub_B775C4(&Method_BitValue_CompensateArgForShowAll_EffectType__On__);
-    byte_438AC77 = 1;
+    sub_1B00CCC(&Method_BitValue_CompensateArgForShowAll_EffectType__On__, *(_QWORD *)&x);
+    byte_48E47D0 = 1;
   }
-  EffectTypeBit_k__BackingField = this->fields._EffectTypeBit_k__BackingField;
+  EffectTypeBit_k__BackingField = (BitValue_T__o *)this->fields._EffectTypeBit_k__BackingField;
   if ( !EffectTypeBit_k__BackingField )
-    sub_B7769C(0LL, *(_QWORD *)&x);
-  BitValue_CompensateArgForShowAll_EffectType___On(
+    sub_1B00F28(0LL, *(_QWORD *)&x);
+  BitValue_Int32Enum___On(
     EffectTypeBit_k__BackingField,
     x,
-    (const MethodInfo_2CB80C0 *)Method_BitValue_CompensateArgForShowAll_EffectType__On__);
+    (const MethodInfo_2F6B3D0 *)Method_BitValue_CompensateArgForShowAll_EffectType__On__);
 }
 
 
@@ -201,25 +147,24 @@ BattlePerformance_o *__fastcall CompensateArgForShowAll__get_Perf(
 
 void __fastcall CompensateArgForShowAll___c___cctor(const MethodInfo *method)
 {
-  Il2CppObject *v1; // x19
-  BattleServantConfConponent_o *static_fields; // x0
-  System_String_array **v3; // x2
-  System_String_array **v4; // x3
-  System_Boolean_array **v5; // x4
-  System_Int32_array **v6; // x5
-  System_Int32_array *v7; // x6
-  System_Int32_array *v8; // x7
+  __int64 v1; // x1
+  Il2CppObject *v2; // x19
+  int32_t v3; // w2
+  int32_t v4; // w3
 
-  if ( (byte_43890CB & 1) == 0 )
+  if ( (byte_48E47D1 & 1) == 0 )
   {
-    sub_B775C4(&CompensateArgForShowAll___c_TypeInfo);
-    byte_43890CB = 1;
+    sub_1B00CCC(&CompensateArgForShowAll___c_TypeInfo, v1);
+    byte_48E47D1 = 1;
   }
-  v1 = (Il2CppObject *)sub_B77694(CompensateArgForShowAll___c_TypeInfo);
-  System_Object___ctor(v1, 0LL);
-  static_fields = (BattleServantConfConponent_o *)CompensateArgForShowAll___c_TypeInfo->static_fields;
-  static_fields->klass = (BattleServantConfConponent_c *)v1;
-  sub_B77560(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
+  v2 = (Il2CppObject *)sub_1B00F18(CompensateArgForShowAll___c_TypeInfo);
+  System_Object___ctor(v2, 0LL);
+  CompensateArgForShowAll___c_TypeInfo->static_fields->__9 = (struct CompensateArgForShowAll___c_o *)v2;
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)CompensateArgForShowAll___c_TypeInfo->static_fields,
+    (int32_t)v2,
+    v3,
+    v4);
 }
 
 

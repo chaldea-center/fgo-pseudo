@@ -1,19 +1,13 @@
 void __fastcall BattleItemData___ctor(BattleItemData_o *this, const MethodInfo *method)
 {
-  if ( (byte_438810C & 1) == 0 )
+  if ( (byte_48E4D21 & 1) == 0 )
   {
-    sub_B775C4(&Method_SingletonTemplate_BattleItemData___ctor__);
-    sub_B775C4(&SingletonTemplate_BattleItemData__TypeInfo);
-    byte_438810C = 1;
+    sub_1B00CCC(&Method_SingletonTemplate_BattleItemData___ctor__, method);
+    byte_48E4D21 = 1;
   }
-  if ( (BYTE3(SingletonTemplate_BattleItemData__TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !SingletonTemplate_BattleItemData__TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(SingletonTemplate_BattleItemData__TypeInfo);
-  }
-  SingletonTemplate_clsQuestCheck____ctor(
-    (SingletonTemplate_clsQuestCheck__o *)this,
-    (const MethodInfo_2D16BA8 *)Method_SingletonTemplate_BattleItemData___ctor__);
+  SingletonTemplate_object____ctor(
+    (SingletonTemplate_CLASS__o *)this,
+    (const MethodInfo_35FC108 *)Method_SingletonTemplate_BattleItemData___ctor__);
 }
 
 
@@ -60,23 +54,22 @@ int32_t __fastcall BattleItemData__GetItemId(BattleItemData_o *this, const Metho
 
 BattleItemData_SaveData_o *__fastcall BattleItemData__GetSaveData(BattleItemData_o *this, const MethodInfo *method)
 {
-  BattleItemData_SaveData_o *v3; // x20
+  Il2CppObject *v3; // x20
   __int64 v4; // x0
   __int64 v5; // x1
   BattleItemData_SaveData_o *result; // x0
 
-  if ( (byte_438810B & 1) == 0 )
+  if ( (byte_48E4D20 & 1) == 0 )
   {
-    sub_B775C4(&BattleItemData_SaveData_TypeInfo);
-    byte_438810B = 1;
+    sub_1B00CCC(&BattleItemData_SaveData_TypeInfo, method);
+    byte_48E4D20 = 1;
   }
-  v3 = (BattleItemData_SaveData_o *)sub_B77694(BattleItemData_SaveData_TypeInfo);
-  BattleItemData_SaveData___ctor(v3, 0LL);
+  v3 = (Il2CppObject *)sub_1B00F18(BattleItemData_SaveData_TypeInfo);
+  System_Object___ctor(v3, 0LL);
   if ( !v3 )
-    sub_B7769C(v4, v5);
-  result = v3;
-  v3->fields.id = this->fields.itemId;
-  v3->fields.number = this->fields.itemNumber;
+    sub_1B00F28(v4, v5);
+  result = (BattleItemData_SaveData_o *)v3;
+  v3[1].klass = *(Il2CppClass **)&this->fields.itemId;
   return result;
 }
 
@@ -117,14 +110,13 @@ void __fastcall BattleItemData__SetSaveData(
         BattleItemData_SaveData_o *saveData,
         const MethodInfo *method)
 {
-  int32_t number; // w8
+  BattleItemData_SaveData_Fields fields; // d0
 
   if ( saveData )
   {
-    this->fields.itemId = saveData->fields.id;
-    number = saveData->fields.number;
+    fields = saveData->fields;
     this->fields.isLoadedFromSaveData = 1;
-    this->fields.itemNumber = number;
+    *(BattleItemData_SaveData_Fields *)&this->fields.itemId = fields;
   }
 }
 

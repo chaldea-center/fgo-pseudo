@@ -6,7 +6,7 @@ void __fastcall WarBoardEventData___ctor(WarBoardEventData_o *this, const Method
 }
 
 
-void __fastcall WarBoardEventData___ctor_18879640(
+void __fastcall WarBoardEventData___ctor_34396088(
         WarBoardEventData_o *this,
         int32_t id,
         int32_t playedTurn,
@@ -19,7 +19,7 @@ void __fastcall WarBoardEventData___ctor_18879640(
 }
 
 
-void __fastcall WarBoardEventData___ctor_18879700(
+void __fastcall WarBoardEventData___ctor_34396136(
         WarBoardEventData_o *this,
         WarBoardEventData_SaveData_o *saveData,
         const MethodInfo *method)
@@ -29,9 +29,8 @@ void __fastcall WarBoardEventData___ctor_18879700(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !saveData )
-    sub_B7769C(v5, v6);
-  this->fields._eventId_k__BackingField = saveData->fields.eventId;
-  this->fields._latestPlayedTurn_k__BackingField = saveData->fields.latestPlayedTurn;
+    sub_1B00F28(v5, v6);
+  *(_QWORD *)&this->fields._eventId_k__BackingField = *(_QWORD *)&saveData->fields.eventId;
   this->fields._firstPlayedTurn_k__BackingField = saveData->fields.firstPlayedTurn;
 }
 
@@ -95,7 +94,7 @@ void __fastcall WarBoardEventData_SaveData___ctor(WarBoardEventData_SaveData_o *
 }
 
 
-void __fastcall WarBoardEventData_SaveData___ctor_21266972(
+void __fastcall WarBoardEventData_SaveData___ctor_34386664(
         WarBoardEventData_SaveData_o *this,
         WarBoardEventData_o *eventData,
         const MethodInfo *method)
@@ -105,8 +104,7 @@ void __fastcall WarBoardEventData_SaveData___ctor_21266972(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !eventData )
-    sub_B7769C(v5, v6);
-  this->fields.eventId = eventData->fields._eventId_k__BackingField;
-  this->fields.latestPlayedTurn = eventData->fields._latestPlayedTurn_k__BackingField;
+    sub_1B00F28(v5, v6);
+  *(_QWORD *)&this->fields.eventId = *(_QWORD *)&eventData->fields._eventId_k__BackingField;
   this->fields.firstPlayedTurn = eventData->fields._firstPlayedTurn_k__BackingField;
 }

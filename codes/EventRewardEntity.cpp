@@ -1,16 +1,17 @@
 void __fastcall EventRewardEntity___ctor(EventRewardEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4387EC5 & 1) == 0 )
+  if ( (byte_48E290D & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    byte_4387EC5 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
+    byte_48E290D = 1;
   }
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventRewardEntity__CreatePK(
         int32_t eventId,
         int32_t slot,
@@ -18,17 +19,17 @@ System_String_o *__fastcall EventRewardEntity__CreatePK(
         int64_t point,
         const MethodInfo *method)
 {
-  if ( (byte_4387EC0 & 1) == 0 )
+  if ( (byte_48E2908 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
-    byte_4387EC0 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_int__int__int__long___, *(_QWORD *)&slot);
+    byte_48E2908 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__long_(
            eventId,
            slot,
            groupId,
            point,
-           (const MethodInfo_1D17B2C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
+           (const MethodInfo_2D61820 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
 }
 
 
@@ -51,77 +52,94 @@ void __fastcall EventRewardEntity__GetInfo(
         System_String_o **countText,
         const MethodInfo *method)
 {
-  const MethodInfo *v7; // x1
+  int32_t v7; // w2
+  int32_t v8; // w3
+  const MethodInfo *v9; // x1
   int32_t type; // w8
   GiftEntity_o *GiftData; // x0
+  int32_t v12; // w1
+  int32_t v13; // w2
+  int32_t v14; // w3
+  int32_t v15; // w1
+  int32_t v16; // w2
+  int32_t v17; // w3
   EventRewardSetEntity_o *RewardSetData; // x0
+  int32_t v19; // w2
+  int32_t v20; // w3
   System_String_o *name; // x1
   EventRewardExtraEntity_o *SetRewardData; // x0
-  System_String_o *v13; // [xsp+0h] [xbp-30h] BYREF
-  System_String_o *nameTexta; // [xsp+8h] [xbp-28h] BYREF
+  System_String_o *v23; // [xsp+0h] [xbp-40h] BYREF
+  System_String_o *nameTexta; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4387EC4 & 1) == 0 )
+  if ( (byte_48E290C & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_4387EC4 = 1;
+    sub_1B00CCC(&StringLiteral_1/*""*/, nameText);
+    byte_48E290C = 1;
   }
-  v13 = 0LL;
+  v23 = 0LL;
   nameTexta = 0LL;
   *nameText = (System_String_o *)StringLiteral_1/*""*/;
-  sub_B77560(nameText);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)nameText,
+    (int32_t)StringLiteral_1/*""*/,
+    (int32_t)countText,
+    (int32_t)method);
   *countText = (System_String_o *)StringLiteral_1/*""*/;
-  sub_B77560(countText);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)countText, (int32_t)StringLiteral_1/*""*/, v7, v8);
   type = this->fields.type;
   if ( type == 1 )
   {
-    GiftData = EventRewardEntity__getGiftData(this, v7);
+    GiftData = EventRewardEntity__getGiftData(this, v9);
     if ( GiftData )
     {
-      GiftEntity__GetInfo(GiftData, &nameTexta, &v13, 0LL);
+      GiftEntity__GetInfo(GiftData, &nameTexta, &v23, 0LL);
+      v12 = (int)nameTexta;
       *nameText = nameTexta;
-      sub_B77560(nameText);
-      *countText = v13;
-      sub_B77560(countText);
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)nameText, v12, v13, v14);
+      v15 = (int)v23;
+      *countText = v23;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)countText, v15, v16, v17);
     }
     type = this->fields.type;
   }
   if ( type == 3 )
   {
-    RewardSetData = EventRewardEntity__getRewardSetData(this, v7);
+    RewardSetData = EventRewardEntity__getRewardSetData(this, v9);
     if ( !RewardSetData )
       return;
     name = RewardSetData->fields.name;
   }
   else
   {
-    SetRewardData = EventRewardEntity__getSetRewardData(this, v7);
+    SetRewardData = EventRewardEntity__getSetRewardData(this, v9);
     if ( !SetRewardData )
       return;
     name = SetRewardData->fields.name;
   }
   *nameText = name;
-  sub_B77560(nameText);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)nameText, (int32_t)name, v19, v20);
 }
 
 
 GiftEntity_o *__fastcall EventRewardEntity__getGiftData(EventRewardEntity_o *this, const MethodInfo *method)
 {
-  DataManager_o *Instance; // x0
-  __int64 v4; // x1
+  __int64 v3; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v5; // x1
 
-  if ( (byte_4387EC1 & 1) == 0 )
+  if ( (byte_48E2909 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_GiftMaster___);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4387EC1 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_GiftMaster___, method);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_48E2909 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
-    || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                      Instance,
-                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_GiftMaster___)) == 0LL )
+    || (Instance = DataManager__GetMasterData_object_(
+                     (DataManager_o *)Instance,
+                     (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_GiftMaster___)) == 0LL )
   {
-    sub_B7769C(Instance, v4);
+    sub_1B00F28(Instance, v5);
   }
   return GiftMaster__getDataById((GiftMaster_o *)Instance, this->fields.giftId, 0LL);
 }
@@ -131,29 +149,31 @@ EventRewardSetEntity_o *__fastcall EventRewardEntity__getRewardSetData(
         EventRewardEntity_o *this,
         const MethodInfo *method)
 {
-  DataManager_o *Instance; // x0
-  __int64 v4; // x1
+  __int64 v3; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v5; // x1
+  const MethodInfo *v6; // x4
 
-  if ( (byte_4387EC3 & 1) == 0 )
+  if ( (byte_48E290B & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_EventRewardSetMaster___);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4387EC3 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_EventRewardSetMaster___, method);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_48E290B = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
-    || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                      Instance,
-                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventRewardSetMaster___)) == 0LL )
+    || (Instance = DataManager__GetMasterData_object_(
+                     (DataManager_o *)Instance,
+                     (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_EventRewardSetMaster___)) == 0LL )
   {
-    sub_B7769C(Instance, v4);
+    sub_1B00F28(Instance, v5);
   }
   return EventRewardSetMaster__GetEntity(
            (EventRewardSetMaster_o *)Instance,
            2,
            this->fields.eventId,
            this->fields.giftId,
-           0LL);
+           v6);
 }
 
 
@@ -161,48 +181,45 @@ EventRewardExtraEntity_o *__fastcall EventRewardEntity__getSetRewardData(
         EventRewardEntity_o *this,
         const MethodInfo *method)
 {
-  void *Instance; // x0
-  __int64 v4; // x1
-  int v5; // w9
-  unsigned int v6; // w10
-  EventRewardExtraEntity_o *v7; // x8
-  __int64 v9; // x0
+  __int64 v3; // x1
+  System_Object_array *Instance; // x0
+  __int64 v5; // x1
+  int max_length; // w9
+  int v7; // w10
+  EventRewardExtraEntity_o *v8; // x8
 
-  if ( (byte_4387EC2 & 1) == 0 )
+  if ( (byte_48E290A & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_getEntitys_EventRewardExtraMaster__EventRewardExtraEntity___);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4387EC2 = 1;
+    sub_1B00CCC(&Method_DataManager_getEntitys_EventRewardExtraMaster__EventRewardExtraEntity___, method);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_48E290A = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (System_Object_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
-  Instance = DataManager__getEntitys_WarMaster__WarEntity_(
+  Instance = DataManager__getEntitys_object__object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_1D18684 *)Method_DataManager_getEntitys_EventRewardExtraMaster__EventRewardExtraEntity___);
+               (const MethodInfo_2D62E70 *)Method_DataManager_getEntitys_EventRewardExtraMaster__EventRewardExtraEntity___);
   if ( !Instance )
     goto LABEL_14;
-  v5 = *((_DWORD *)Instance + 6);
-  if ( v5 >= 1 )
+  max_length = Instance->max_length;
+  if ( max_length >= 1 )
   {
-    v6 = 0;
+    v7 = 0;
     while ( 1 )
     {
-      if ( v6 >= v5 )
-      {
-        v9 = sub_B776C8(Instance);
-        sub_B77668(v9, 0LL);
-      }
-      v7 = (EventRewardExtraEntity_o *)*((_QWORD *)Instance + (int)v6 + 4);
-      if ( !v7 )
+      if ( max_length == v7 )
+        sub_1B00F30(Instance, v5);
+      v8 = (EventRewardExtraEntity_o *)Instance->m_Items[v7];
+      if ( !v8 )
         break;
-      if ( v7->fields.eventId == this->fields.eventId && v7->fields.point == this->fields.point )
-        return v7;
-      if ( (int)++v6 >= v5 )
+      if ( v8->fields.eventId == this->fields.eventId && v8->fields.point == this->fields.point )
+        return v8;
+      if ( max_length == ++v7 )
         return 0LL;
     }
 LABEL_14:
-    sub_B7769C(Instance, v4);
+    sub_1B00F28(Instance, v5);
   }
   return 0LL;
 }

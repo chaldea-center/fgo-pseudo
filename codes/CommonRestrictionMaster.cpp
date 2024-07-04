@@ -1,64 +1,67 @@
 void __fastcall CommonRestrictionMaster___cctor(const MethodInfo *method)
 {
-  System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *v1; // x19
-  struct CommonRestrictionMaster_StaticFields *static_fields; // x0
+  __int64 v1; // x1
+  __int64 v2; // x1
+  __int64 v3; // x1
+  System_Collections_Generic_Dictionary_int__object__o *v4; // x19
+  int32_t v5; // w2
+  int32_t v6; // w3
 
-  if ( (byte_4387597 & 1) == 0 )
+  if ( (byte_48E264C & 1) == 0 )
   {
-    sub_B775C4(&CommonRestrictionMaster_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__List_int____ctor__);
-    sub_B775C4(&System_Collections_Generic_Dictionary_int__List_int___TypeInfo);
-    byte_4387597 = 1;
+    sub_1B00CCC(&CommonRestrictionMaster_TypeInfo, v1);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_int__List_int____ctor__, v2);
+    sub_1B00CCC(&System_Collections_Generic_Dictionary_int__List_int___TypeInfo, v3);
+    byte_48E264C = 1;
   }
-  v1 = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)sub_B77694(System_Collections_Generic_Dictionary_int__List_int___TypeInfo);
-  System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare____ctor(
-    v1,
-    (const MethodInfo_2FF35C4 *)Method_System_Collections_Generic_Dictionary_int__List_int____ctor__);
-  static_fields = CommonRestrictionMaster_TypeInfo->static_fields;
-  static_fields->restrictionCache = (struct System_Collections_Generic_Dictionary_int__List_int___o *)v1;
-  sub_B77560(static_fields);
+  v4 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1B00F18(System_Collections_Generic_Dictionary_int__List_int___TypeInfo);
+  System_Collections_Generic_Dictionary_int__object____ctor(
+    v4,
+    (const MethodInfo_3035B58 *)Method_System_Collections_Generic_Dictionary_int__List_int____ctor__);
+  CommonRestrictionMaster_TypeInfo->static_fields->restrictionCache = (struct System_Collections_Generic_Dictionary_int__List_int___o *)v4;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)CommonRestrictionMaster_TypeInfo->static_fields, (int32_t)v4, v5, v6);
 }
 
 
 void __fastcall CommonRestrictionMaster___ctor(CommonRestrictionMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_438758F & 1) == 0 )
+  if ( (byte_48E2644 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_CommonRestrictionMaster__CommonRestrictionEntity__int___ctor__);
-    byte_438758F = 1;
+    sub_1B00CCC(&Method_DataMasterBase_CommonRestrictionMaster__CommonRestrictionEntity__int___ctor__, method);
+    byte_48E2644 = 1;
   }
-  DataMasterBase_WarMaster__WarEntity__int____ctor(
-    (DataMasterBase_WarMaster__WarEntity__int__o *)this,
+  DataMasterBase_object__object__int____ctor(
+    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     259,
-    (const MethodInfo_21FB7F8 *)Method_DataMasterBase_CommonRestrictionMaster__CommonRestrictionEntity__int___ctor__);
+    (const MethodInfo_2FE6A0C *)Method_DataMasterBase_CommonRestrictionMaster__CommonRestrictionEntity__int___ctor__);
 }
 
 
 void __fastcall CommonRestrictionMaster__ClearRestrictionCacheList(const MethodInfo *method)
 {
   __int64 v1; // x1
-  CommonRestrictionMaster_c *v2; // x0
-  System_Collections_Generic_Dictionary_int__WarBoardAIRoute_PiecePersonality__o *restrictionCache; // x0
+  __int64 v2; // x1
+  CommonRestrictionMaster_c *v3; // x0
+  System_Collections_Generic_Dictionary_int__object__o *restrictionCache; // x0
 
-  if ( (byte_4387593 & 1) == 0 )
+  if ( (byte_48E2648 & 1) == 0 )
   {
-    sub_B775C4(&CommonRestrictionMaster_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__List_int___Clear__);
-    byte_4387593 = 1;
+    sub_1B00CCC(&CommonRestrictionMaster_TypeInfo, v1);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_int__List_int___Clear__, v2);
+    byte_48E2648 = 1;
   }
-  v2 = CommonRestrictionMaster_TypeInfo;
-  if ( (BYTE3(CommonRestrictionMaster_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CommonRestrictionMaster_TypeInfo->_2.cctor_finished )
+  v3 = CommonRestrictionMaster_TypeInfo;
+  if ( !CommonRestrictionMaster_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CommonRestrictionMaster_TypeInfo);
-    v2 = CommonRestrictionMaster_TypeInfo;
+    v3 = CommonRestrictionMaster_TypeInfo;
   }
-  restrictionCache = (System_Collections_Generic_Dictionary_int__WarBoardAIRoute_PiecePersonality__o *)v2->static_fields->restrictionCache;
+  restrictionCache = (System_Collections_Generic_Dictionary_int__object__o *)v3->static_fields->restrictionCache;
   if ( !restrictionCache )
-    sub_B7769C(0LL, v1);
-  System_Collections_Generic_Dictionary_int__WarBoardAIRoute_PiecePersonality___Clear(
+    sub_1B00F28(0LL, v1);
+  System_Collections_Generic_Dictionary_int__object___Clear(
     restrictionCache,
-    (const MethodInfo_2FF4354 *)Method_System_Collections_Generic_Dictionary_int__List_int___Clear__);
+    (const MethodInfo_30366B4 *)Method_System_Collections_Generic_Dictionary_int__List_int___Clear__);
 }
 
 
@@ -69,49 +72,49 @@ int32_t __fastcall CommonRestrictionMaster__GetIncludedRestrictionId(
         const MethodInfo *method)
 {
   System_Collections_Generic_List_int__o *v4; // x20
-  int size; // w8
-  unsigned __int64 v6; // x22
-  signed __int64 v7; // x23
+  __int64 v5; // x1
+  __int64 v6; // x1
+  int size; // w23
   int32_t v8; // w21
+  const MethodInfo *v9; // x1
+  int32_t Item; // w22
   CommonRestrictionEntity_o *RestrictionEntityFromId; // x0
-  const MethodInfo *v10; // x2
+  const MethodInfo *v12; // x2
 
   v4 = restrictionList;
-  if ( (byte_4387595 & 1) == 0 )
+  if ( (byte_48E264A & 1) == 0 )
   {
-    sub_B775C4(&CommonRestrictionMaster_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_int__get_Count__);
-    restrictionList = (System_Collections_Generic_List_int__o *)sub_B775C4(&Method_System_Collections_Generic_List_int__get_Item__);
-    byte_4387595 = 1;
+    sub_1B00CCC(&CommonRestrictionMaster_TypeInfo, *(_QWORD *)&baseSvtId);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_int__get_Count__, v5);
+    restrictionList = (System_Collections_Generic_List_int__o *)sub_1B00CCC(
+                                                                  &Method_System_Collections_Generic_List_int__get_Item__,
+                                                                  v6);
+    byte_48E264A = 1;
   }
   if ( !v4 )
-    sub_B7769C(restrictionList, *(_QWORD *)&baseSvtId);
+    sub_1B00F28(restrictionList, *(_QWORD *)&baseSvtId);
   size = v4->fields._size;
   if ( size < 1 )
     return -1;
-  v6 = 0LL;
-  v7 = size;
+  v8 = 0;
   while ( 1 )
   {
-    if ( v6 >= (unsigned int)size )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-    v8 = v4->fields._items->m_Items[v6 + 1];
-    if ( (BYTE3(CommonRestrictionMaster_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !CommonRestrictionMaster_TypeInfo->_2.cctor_finished )
-    {
+    Item = System_Collections_Generic_List_int___get_Item(
+             v4,
+             v8,
+             (const MethodInfo_33A46BC *)Method_System_Collections_Generic_List_int__get_Item__);
+    if ( !CommonRestrictionMaster_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CommonRestrictionMaster_TypeInfo);
-    }
-    RestrictionEntityFromId = CommonRestrictionMaster__GetRestrictionEntityFromId(v8, *(const MethodInfo **)&baseSvtId);
+    RestrictionEntityFromId = CommonRestrictionMaster__GetRestrictionEntityFromId(Item, v9);
     if ( RestrictionEntityFromId )
     {
-      if ( CommonRestrictionEntity__IsIncludedSvt(RestrictionEntityFromId, baseSvtId, v10) )
+      if ( CommonRestrictionEntity__IsIncludedSvt(RestrictionEntityFromId, baseSvtId, v12) )
         break;
     }
-    if ( (__int64)++v6 >= v7 )
+    if ( size == ++v8 )
       return -1;
-    size = v4->fields._size;
   }
-  return v8;
+  return Item;
 }
 
 
@@ -125,25 +128,19 @@ int32_t __fastcall CommonRestrictionMaster__GetIncludedRestrictionIds(
   const MethodInfo *v6; // x2
   System_Collections_Generic_List_int__o *v7; // x20
 
-  if ( (byte_4387596 & 1) == 0 )
+  if ( (byte_48E264B & 1) == 0 )
   {
-    sub_B775C4(&CommonRestrictionMaster_TypeInfo);
-    byte_4387596 = 1;
+    sub_1B00CCC(&CommonRestrictionMaster_TypeInfo, *(_QWORD *)&baseSvtId);
+    byte_48E264B = 1;
   }
-  if ( (BYTE3(CommonRestrictionMaster_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CommonRestrictionMaster_TypeInfo->_2.cctor_finished )
-  {
+  if ( !CommonRestrictionMaster_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonRestrictionMaster_TypeInfo);
-  }
   RestrictionIdList = CommonRestrictionMaster__GetRestrictionIdList(cachedBaseSvtId, *(const MethodInfo **)&baseSvtId);
   if ( !RestrictionIdList )
     return -1;
   v7 = RestrictionIdList;
-  if ( (BYTE3(CommonRestrictionMaster_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CommonRestrictionMaster_TypeInfo->_2.cctor_finished )
-  {
+  if ( !CommonRestrictionMaster_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonRestrictionMaster_TypeInfo);
-  }
   return CommonRestrictionMaster__GetIncludedRestrictionId(v7, baseSvtId, v6);
 }
 
@@ -152,52 +149,56 @@ CommonRestrictionEntity_o *__fastcall CommonRestrictionMaster__GetRestrictionEnt
         int32_t id,
         const MethodInfo *method)
 {
-  DataManager_o *Instance; // x0
+  __int64 v3; // x1
   __int64 v4; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v6; // x1
 
-  if ( (byte_4387590 & 1) == 0 )
+  if ( (byte_48E2645 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_CommonRestrictionMaster___);
-    sub_B775C4(&Method_DataMasterBase_CommonRestrictionMaster__CommonRestrictionEntity__int__GetEntity__);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4387590 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_CommonRestrictionMaster___, method);
+    sub_1B00CCC(&Method_DataMasterBase_CommonRestrictionMaster__CommonRestrictionEntity__int__GetEntity__, v3);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_48E2645 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
-    || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                      Instance,
-                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_CommonRestrictionMaster___)) == 0LL )
+    || (Instance = DataManager__GetMasterData_object_(
+                     (DataManager_o *)Instance,
+                     (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_CommonRestrictionMaster___)) == 0LL )
   {
-    sub_B7769C(Instance, v4);
+    sub_1B00F28(Instance, v6);
   }
-  return (CommonRestrictionEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-                                        (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
+  return (CommonRestrictionEntity_o *)DataMasterBase_object__object__int___GetEntity(
+                                        (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                         id,
-                                        (const MethodInfo_21FB894 *)Method_DataMasterBase_CommonRestrictionMaster__CommonRestrictionEntity__int__GetEntity__);
+                                        (const MethodInfo_2FE6A4C *)Method_DataMasterBase_CommonRestrictionMaster__CommonRestrictionEntity__int__GetEntity__);
 }
 
 
 System_Collections_ObjectModel_ObservableCollection_DataEntityBase__o *__fastcall CommonRestrictionMaster__GetRestrictionEntityList(
         const MethodInfo *method)
 {
-  WebViewManager_o *Instance; // x0
+  __int64 v1; // x1
   __int64 v2; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v4; // x1
   System_Collections_ObjectModel_ObservableCollection_DataEntityBase__o *result; // x0
 
-  if ( (byte_4387592 & 1) == 0 )
+  if ( (byte_48E2647 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_CommonRestrictionMaster___);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4387592 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_CommonRestrictionMaster___, v1);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
+    byte_48E2647 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_B7769C(0LL, v2);
-  result = (System_Collections_ObjectModel_ObservableCollection_DataEntityBase__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+    sub_1B00F28(0LL, v4);
+  result = (System_Collections_ObjectModel_ObservableCollection_DataEntityBase__o *)DataManager__GetMasterData_object_(
                                                                                       (DataManager_o *)Instance,
-                                                                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_CommonRestrictionMaster___);
+                                                                                      (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_CommonRestrictionMaster___);
   if ( result )
-    return (System_Collections_ObjectModel_ObservableCollection_DataEntityBase__o *)result->fields.CollectionChanged;
+    return *(System_Collections_ObjectModel_ObservableCollection_DataEntityBase__o **)&result->fields._blockReentrancyCount;
   return result;
 }
 
@@ -206,139 +207,162 @@ System_Collections_Generic_List_int__o *__fastcall CommonRestrictionMaster__GetR
         int32_t baseSvtId,
         const MethodInfo *method)
 {
-  CommonRestrictionMaster_c *v3; // x0
-  WarBoardEvalValueSquare_EvalValueSquare_o *restrictionCache; // x0
-  CommonRestrictionMaster_c *v5; // x0
-  System_Collections_Generic_Dictionary_int__WarBoardAIRoute_RouteData__o *v6; // x20
-  System_Collections_Generic_List_int__o *v7; // x21
-  const MethodInfo *v8; // x0
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *RestrictionEntityList; // x0
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *v10; // x20
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  CommonRestrictionMaster_c *v12; // x0
+  Il2CppObject *restrictionCache; // x0
+  CommonRestrictionMaster_c *v14; // x0
+  System_Collections_Generic_Dictionary_int__object__o *v15; // x20
+  System_Collections_Generic_List_int__o *v16; // x21
+  const MethodInfo *v17; // x0
+  System_Collections_ObjectModel_Collection_T__o *RestrictionEntityList; // x0
+  System_Collections_ObjectModel_Collection_T__o *v19; // x20
   int32_t Count; // w0
-  int32_t v12; // w21
+  int32_t v21; // w21
   int32_t i; // w22
-  System_Net_NetworkInformation_UnicastIPAddressInformation_o *Item; // x0
-  const MethodInfo *v15; // x2
-  System_Net_NetworkInformation_UnicastIPAddressInformation_o *v16; // x23
-  __int64 v17; // x10
-  CommonRestrictionMaster_c *v18; // x0
-  CommonRestrictionMaster_c *v19; // x0
+  Il2CppObject *Item; // x0
+  const MethodInfo *v24; // x2
+  Il2CppObject *v25; // x23
+  __int64 methodPtr_low; // x10
+  CommonRestrictionMaster_c *v27; // x0
+  Il2CppClass *klass; // x8
+  _QWORD *v29; // x9
+  __int64 monitor_low; // x10
+  CommonRestrictionMaster_c *v31; // x0
 
-  if ( (byte_4387594 & 1) == 0 )
+  if ( (byte_48E2649 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B775C4(&CommonRestrictionEntity_TypeInfo);
-    sub_B775C4(&CommonRestrictionMaster_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__List_int___ContainsKey__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__List_int___get_Item__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__List_int___set_Item__);
-    sub_B775C4(&Method_System_Collections_Generic_List_int__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_int___ctor___69397304);
-    sub_B775C4(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4387594 = 1;
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, method);
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v3);
+    sub_1B00CCC(&CommonRestrictionEntity_TypeInfo, v4);
+    sub_1B00CCC(&CommonRestrictionMaster_TypeInfo, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_int__List_int___ContainsKey__, v6);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_int__List_int___get_Item__, v7);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_int__List_int___set_Item__, v8);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_int__Add__, v9);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_int___ctor__, v10);
+    sub_1B00CCC(&System_Collections_Generic_List_int__TypeInfo, v11);
+    byte_48E2649 = 1;
   }
-  v3 = CommonRestrictionMaster_TypeInfo;
-  if ( (BYTE3(CommonRestrictionMaster_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CommonRestrictionMaster_TypeInfo->_2.cctor_finished )
+  v12 = CommonRestrictionMaster_TypeInfo;
+  if ( !CommonRestrictionMaster_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CommonRestrictionMaster_TypeInfo);
-    v3 = CommonRestrictionMaster_TypeInfo;
+    v12 = CommonRestrictionMaster_TypeInfo;
   }
-  restrictionCache = (WarBoardEvalValueSquare_EvalValueSquare_o *)v3->static_fields->restrictionCache;
+  restrictionCache = (Il2CppObject *)v12->static_fields->restrictionCache;
   if ( !restrictionCache )
-    goto LABEL_31;
-  if ( System_Collections_Generic_Dictionary_int__WarBoardAIRoute_RouteData___ContainsKey(
-         (System_Collections_Generic_Dictionary_int__WarBoardAIRoute_RouteData__o *)restrictionCache,
+    goto LABEL_30;
+  if ( System_Collections_Generic_Dictionary_int__object___ContainsKey(
+         (System_Collections_Generic_Dictionary_int__object__o *)restrictionCache,
          baseSvtId,
-         (const MethodInfo_2FF43EC *)Method_System_Collections_Generic_Dictionary_int__List_int___ContainsKey__) )
+         (const MethodInfo_3036720 *)Method_System_Collections_Generic_Dictionary_int__List_int___ContainsKey__) )
   {
     goto LABEL_26;
   }
-  v5 = CommonRestrictionMaster_TypeInfo;
-  if ( (BYTE3(CommonRestrictionMaster_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CommonRestrictionMaster_TypeInfo->_2.cctor_finished )
+  v14 = CommonRestrictionMaster_TypeInfo;
+  if ( !CommonRestrictionMaster_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CommonRestrictionMaster_TypeInfo);
-    v5 = CommonRestrictionMaster_TypeInfo;
+    v14 = CommonRestrictionMaster_TypeInfo;
   }
-  v6 = (System_Collections_Generic_Dictionary_int__WarBoardAIRoute_RouteData__o *)v5->static_fields->restrictionCache;
-  v7 = (System_Collections_Generic_List_int__o *)sub_B77694(System_Collections_Generic_List_int__TypeInfo);
+  v15 = (System_Collections_Generic_Dictionary_int__object__o *)v14->static_fields->restrictionCache;
+  v16 = (System_Collections_Generic_List_int__o *)sub_1B00F18(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v7,
-    (const MethodInfo_30E508C *)Method_System_Collections_Generic_List_int___ctor___69397304);
-  if ( !v6 )
-LABEL_31:
-    sub_B7769C(restrictionCache, method);
-  System_Collections_Generic_Dictionary_int__WarBoardAIRoute_RouteData___set_Item(
-    v6,
+    v16,
+    (const MethodInfo_33A4158 *)Method_System_Collections_Generic_List_int___ctor__);
+  if ( !v15 )
+LABEL_30:
+    sub_1B00F28(restrictionCache, method);
+  System_Collections_Generic_Dictionary_int__object___set_Item(
+    v15,
     baseSvtId,
-    (WarBoardAIRoute_RouteData_o *)v7,
-    (const MethodInfo_2FF4150 *)Method_System_Collections_Generic_Dictionary_int__List_int___set_Item__);
-  RestrictionEntityList = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)CommonRestrictionMaster__GetRestrictionEntityList(v8);
+    (Il2CppObject *)v16,
+    (const MethodInfo_3036518 *)Method_System_Collections_Generic_Dictionary_int__List_int___set_Item__);
+  RestrictionEntityList = (System_Collections_ObjectModel_Collection_T__o *)CommonRestrictionMaster__GetRestrictionEntityList(v17);
   if ( RestrictionEntityList )
   {
-    v10 = RestrictionEntityList;
-    Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
+    v19 = RestrictionEntityList;
+    Count = System_Collections_ObjectModel_Collection_object___get_Count(
               RestrictionEntityList,
-              (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+              (const MethodInfo_2F836B0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
     if ( Count >= 1 )
     {
-      v12 = Count;
-      for ( i = 0; i < v12; ++i )
+      v21 = Count;
+      for ( i = 0; v21 != i; ++i )
       {
-        Item = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
-                 v10,
+        Item = System_Collections_ObjectModel_Collection_object___get_Item(
+                 v19,
                  i,
-                 (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                 (const MethodInfo_2F83740 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
         if ( Item )
         {
-          v16 = Item;
-          v17 = *(&CommonRestrictionEntity_TypeInfo->_2.bitflags2 + 1);
-          if ( *(&Item->klass->_2.bitflags2 + 1) >= (unsigned int)v17
-            && (CommonRestrictionEntity_c *)Item->klass->_2.typeHierarchy[v17 - 1] == CommonRestrictionEntity_TypeInfo
-            && CommonRestrictionEntity__IsIncludedSvt((CommonRestrictionEntity_o *)Item, baseSvtId, v15) )
+          v25 = Item;
+          methodPtr_low = LOBYTE(CommonRestrictionEntity_TypeInfo->vtable._0_Equals.methodPtr);
+          if ( LOBYTE(Item->klass->vtable[0].methodPtr) >= (unsigned int)methodPtr_low
+            && (CommonRestrictionEntity_c *)Item->klass->_2.typeHierarchy[methodPtr_low - 1] == CommonRestrictionEntity_TypeInfo
+            && CommonRestrictionEntity__IsIncludedSvt((CommonRestrictionEntity_o *)Item, baseSvtId, v24) )
           {
-            v18 = CommonRestrictionMaster_TypeInfo;
-            if ( (BYTE3(CommonRestrictionMaster_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-              && !CommonRestrictionMaster_TypeInfo->_2.cctor_finished )
+            v27 = CommonRestrictionMaster_TypeInfo;
+            if ( !CommonRestrictionMaster_TypeInfo->_2.cctor_finished )
             {
               j_il2cpp_runtime_class_init_0(CommonRestrictionMaster_TypeInfo);
-              v18 = CommonRestrictionMaster_TypeInfo;
+              v27 = CommonRestrictionMaster_TypeInfo;
             }
-            restrictionCache = (WarBoardEvalValueSquare_EvalValueSquare_o *)v18->static_fields->restrictionCache;
+            restrictionCache = (Il2CppObject *)v27->static_fields->restrictionCache;
             if ( !restrictionCache )
-              goto LABEL_31;
-            restrictionCache = System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___get_Item(
-                                 (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)restrictionCache,
+              goto LABEL_30;
+            restrictionCache = System_Collections_Generic_Dictionary_int__object___get_Item(
+                                 (System_Collections_Generic_Dictionary_int__object__o *)restrictionCache,
                                  baseSvtId,
-                                 (const MethodInfo_2FF40B4 *)Method_System_Collections_Generic_Dictionary_int__List_int___get_Item__);
+                                 (const MethodInfo_303648C *)Method_System_Collections_Generic_Dictionary_int__List_int___get_Item__);
             if ( !restrictionCache )
-              goto LABEL_31;
-            System_Collections_Generic_List_int___Add(
-              (System_Collections_Generic_List_int__o *)restrictionCache,
-              (int32_t)v16[1].klass,
-              (const MethodInfo_30E5DE8 *)Method_System_Collections_Generic_List_int__Add__);
+              goto LABEL_30;
+            method = (const MethodInfo *)LODWORD(v25[1].klass);
+            klass = restrictionCache[1].klass;
+            v29 = Method_System_Collections_Generic_List_int__Add__;
+            ++HIDWORD(restrictionCache[1].monitor);
+            if ( !klass )
+              goto LABEL_30;
+            monitor_low = SLODWORD(restrictionCache[1].monitor);
+            if ( (unsigned int)monitor_low >= LODWORD(klass->_1.namespaze) )
+            {
+              System_Collections_Generic_List_int___AddWithResize(
+                (System_Collections_Generic_List_int__o *)restrictionCache,
+                (int32_t)method,
+                *(const MethodInfo_33A49AC **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
+            }
+            else
+            {
+              LODWORD(restrictionCache[1].monitor) = monitor_low + 1;
+              *((_DWORD *)&klass->_1.byval_arg.data + monitor_low) = (_DWORD)method;
+            }
           }
         }
       }
     }
   }
 LABEL_26:
-  v19 = CommonRestrictionMaster_TypeInfo;
-  if ( (BYTE3(CommonRestrictionMaster_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CommonRestrictionMaster_TypeInfo->_2.cctor_finished )
+  v31 = CommonRestrictionMaster_TypeInfo;
+  if ( !CommonRestrictionMaster_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CommonRestrictionMaster_TypeInfo);
-    v19 = CommonRestrictionMaster_TypeInfo;
+    v31 = CommonRestrictionMaster_TypeInfo;
   }
-  restrictionCache = (WarBoardEvalValueSquare_EvalValueSquare_o *)v19->static_fields->restrictionCache;
+  restrictionCache = (Il2CppObject *)v31->static_fields->restrictionCache;
   if ( !restrictionCache )
-    goto LABEL_31;
-  return (System_Collections_Generic_List_int__o *)System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___get_Item(
-                                                     (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)restrictionCache,
+    goto LABEL_30;
+  return (System_Collections_Generic_List_int__o *)System_Collections_Generic_Dictionary_int__object___get_Item(
+                                                     (System_Collections_Generic_Dictionary_int__object__o *)restrictionCache,
                                                      baseSvtId,
-                                                     (const MethodInfo_2FF40B4 *)Method_System_Collections_Generic_Dictionary_int__List_int___get_Item__);
+                                                     (const MethodInfo_303648C *)Method_System_Collections_Generic_Dictionary_int__List_int___get_Item__);
 }
 
 
@@ -346,16 +370,13 @@ System_String_o *__fastcall CommonRestrictionMaster__GetRestrictionMessageFromId
 {
   System_String_o *result; // x0
 
-  if ( (byte_4387591 & 1) == 0 )
+  if ( (byte_48E2646 & 1) == 0 )
   {
-    sub_B775C4(&CommonRestrictionMaster_TypeInfo);
-    byte_4387591 = 1;
+    sub_1B00CCC(&CommonRestrictionMaster_TypeInfo, method);
+    byte_48E2646 = 1;
   }
-  if ( (BYTE3(CommonRestrictionMaster_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CommonRestrictionMaster_TypeInfo->_2.cctor_finished )
-  {
+  if ( !CommonRestrictionMaster_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonRestrictionMaster_TypeInfo);
-  }
   result = (System_String_o *)CommonRestrictionMaster__GetRestrictionEntityFromId(id, method);
   if ( result )
     return (System_String_o *)result[1].monitor;

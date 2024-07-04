@@ -1,11 +1,13 @@
-__int64 __fastcall Flush(__int64 a1)
+__int64 __fastcall Flush(_BYTE *a1)
 {
   __int64 result; // x0
 
-  if ( !*(_BYTE *)(a1 + 32) )
+  if ( !a1[32] )
     return 0LL;
-  result = sub_AD1934(*(_QWORD *)a1, 1LL);
+  if ( !*(_DWORD *)(*(_QWORD *)a1 + 8LL) )
+    return sub_1B4D284(a1);
+  result = sub_1B89364();
   if ( (unsigned int)result <= 1 )
-    return sub_B6D244(a1);
+    return sub_1B4D284(a1);
   return result;
 }

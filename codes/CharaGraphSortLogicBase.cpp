@@ -1,64 +1,41 @@
 void __fastcall CharaGraphSortLogicBase___ctor(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
 {
   struct IconLabelInfo_o *v3; // x0
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
-  const MethodInfo *v10; // x0
-  struct IconLabelInfo_o *v11; // x0
-  System_String_array **v12; // x2
-  System_String_array **v13; // x3
-  System_Boolean_array **v14; // x4
-  System_Int32_array **v15; // x5
-  System_Int32_array *v16; // x6
-  System_Int32_array *v17; // x7
+  int32_t v4; // w2
+  int32_t v5; // w3
+  const MethodInfo *v6; // x0
+  struct IconLabelInfo_o *v7; // x0
+  int32_t v8; // w2
+  int32_t v9; // w3
 
   v3 = CharaGraphSortLogicBase__ClearedIcon((const MethodInfo *)this);
   this->fields._IconInfo1_k__BackingField = v3;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._IconInfo1_k__BackingField,
-    (System_Int32_array **)v3,
-    v4,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9);
-  v11 = CharaGraphSortLogicBase__ClearedIcon(v10);
-  this->fields._IconInfo2_k__BackingField = v11;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._IconInfo2_k__BackingField,
-    (System_Int32_array **)v11,
-    v12,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields._IconInfo1_k__BackingField, (int32_t)v3, v4, v5);
+  v7 = CharaGraphSortLogicBase__ClearedIcon(v6);
+  this->fields._IconInfo2_k__BackingField = v7;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 
 IconLabelInfo_o *__fastcall CharaGraphSortLogicBase__ClearedIcon(const MethodInfo *method)
 {
-  IconLabelInfo_o *v1; // x19
-  __int64 v2; // x0
-  __int64 v3; // x1
+  __int64 v1; // x1
+  IconLabelInfo_o *v2; // x19
+  __int64 v3; // x0
+  __int64 v4; // x1
 
-  if ( (byte_438E33A & 1) == 0 )
+  if ( (byte_48E1C64 & 1) == 0 )
   {
-    sub_B775C4(&IconLabelInfo_TypeInfo);
-    byte_438E33A = 1;
+    sub_1B00CCC(&IconLabelInfo_TypeInfo, v1);
+    byte_48E1C64 = 1;
   }
-  v1 = (IconLabelInfo_o *)sub_B77694(IconLabelInfo_TypeInfo);
-  IconLabelInfo___ctor(v1, 0LL);
-  if ( !v1 )
-    sub_B7769C(v2, v3);
-  IconLabelInfo__Clear(v1, 0LL);
-  return v1;
+  v2 = (IconLabelInfo_o *)sub_1B00F18(IconLabelInfo_TypeInfo);
+  IconLabelInfo___ctor(v2, 0LL);
+  if ( !v2 )
+    sub_1B00F28(v3, v4);
+  IconLabelInfo__Clear(v2, 0LL);
+  return v2;
 }
 
 
@@ -66,19 +43,17 @@ void __fastcall CharaGraphSortLogicBase__InitSortValue(CharaGraphSortLogicBase_o
 {
   IconLabelInfo_o *IconInfo1_k__BackingField; // x0
 
-  this->fields._SortValue0_k__BackingField = 0LL;
-  this->fields._SortValue0B_k__BackingField = 0LL;
   IconInfo1_k__BackingField = this->fields._IconInfo1_k__BackingField;
-  this->fields._SortValue2_k__BackingField = 0LL;
-  this->fields._SortValue2B_k__BackingField = 0LL;
+  *(_OWORD *)&this->fields._SortValue0_k__BackingField = 0u;
   this->fields._SortValue1_k__BackingField = -1LL;
   this->fields._SortValue1B_k__BackingField = 0LL;
+  *(_OWORD *)&this->fields._SortValue2_k__BackingField = 0u;
   this->fields._AmountSortValue_k__BackingField = -1LL;
   if ( !IconInfo1_k__BackingField
     || (IconLabelInfo__Clear(IconInfo1_k__BackingField, 0LL),
         (IconInfo1_k__BackingField = this->fields._IconInfo2_k__BackingField) == 0LL) )
   {
-    sub_B7769C(IconInfo1_k__BackingField, method);
+    sub_1B00F28(IconInfo1_k__BackingField, method);
   }
   IconLabelInfo__Clear(IconInfo1_k__BackingField, 0LL);
 }
@@ -89,22 +64,10 @@ void __fastcall CharaGraphSortLogicBase__SetListViewItem(
         CharaGraphListViewItemBase_o *inputItem,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields.item = inputItem;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.item,
-    (System_Int32_array **)inputItem,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.item, (int32_t)inputItem, (int32_t)method, v3);
 }
 
 
@@ -113,22 +76,10 @@ void __fastcall CharaGraphSortLogicBase__SetListViewSort(
         ListViewSort_o *inputSort,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields.sort = inputSort;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields,
-    (System_Int32_array **)inputSort,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)inputSort, (int32_t)method, v3);
 }
 
 
@@ -154,7 +105,7 @@ void __fastcall CharaGraphSortLogicBase__SetSortValueLocal(CharaGraphSortLogicBa
   sort = this->fields.sort;
   if ( !sort )
 LABEL_7:
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   if ( sort->fields.isChoiceSort )
     this->fields._SortValue0_k__BackingField = 10LL;
 }
@@ -234,22 +185,14 @@ void __fastcall CharaGraphSortLogicBase__set_IconInfo1(
         IconLabelInfo_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._IconInfo1_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._IconInfo1_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._IconInfo1_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -258,22 +201,14 @@ void __fastcall CharaGraphSortLogicBase__set_IconInfo2(
         IconLabelInfo_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._IconInfo2_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._IconInfo2_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._IconInfo2_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 

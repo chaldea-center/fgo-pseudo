@@ -6,19 +6,16 @@ void __fastcall BattleTreasureDeviceCommandData___ctor(
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_438A89A & 1) == 0 )
+  if ( (byte_48E4F94 & 1) == 0 )
   {
-    sub_B775C4(&BattleCommandData_TypeInfo);
-    byte_438A89A = 1;
+    sub_1B00CCC(&BattleCommandData_TypeInfo, svtData);
+    byte_48E4F94 = 1;
   }
-  if ( (BYTE3(BattleCommandData_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !BattleCommandData_TypeInfo->_2.cctor_finished )
-  {
+  if ( !BattleCommandData_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleCommandData_TypeInfo);
-  }
-  BattleCommandData___ctor((BattleCommandData_o *)this, 0LL);
+  BattleCommandData___ctor((BattleCommandData_o *)this, (const MethodInfo *)svtData);
   if ( !svtData )
-    sub_B7769C(v5, v6);
+    sub_1B00F28(v5, v6);
   this->fields._type = BattleServantData__getTreasureDvcCardId(svtData, 0LL);
   this->fields.svtlimit = BattleServantData__getDispLimitCount(svtData, 1, 0LL);
   this->fields.uniqueId = svtData->fields.uniqueId;

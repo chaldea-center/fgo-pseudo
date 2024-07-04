@@ -6,23 +6,22 @@ void __fastcall EasingObject___ctor(EasingObject_o *this, const MethodInfo *meth
 
 void __fastcall EasingObject__Awake(EasingObject_o *this, const MethodInfo *method)
 {
-  LOBYTE(this->fields.mFrom) = 0;
-  BYTE4(this[1].klass) = 0;
+  *(_WORD *)&this->fields.mIsSkip = 0;
 }
 
 
 float __fastcall EasingObject__Now(EasingObject_o *this, const MethodInfo *method)
 {
-  return this->fields.mStartTime;
+  return this->fields.mNow;
 }
 
 
 void __fastcall EasingObject__Pause(EasingObject_o *this, const MethodInfo *method)
 {
-  if ( !LOBYTE(this->fields.mEasingType) )
+  if ( !this->fields._IsPause_k__BackingField )
   {
-    LOBYTE(this->fields.mEasingType) = 1;
-    *(float *)&this->fields.mIsSkip = UnityEngine_Time__get_time(0LL);
+    this->fields._IsPause_k__BackingField = 1;
+    this->fields.mPauseStartTime = UnityEngine_Time__get_time(0LL);
   }
 }
 
@@ -36,11 +35,11 @@ void __fastcall EasingObject__Play(
         int32_t easingType,
         const MethodInfo *method)
 {
-  EasingObject__Play_34159032(this, 0.0, 1.0, sec, procAct, endAct, delay, easingType, method);
+  EasingObject__Play_45433808(this, 0.0, 1.0, sec, procAct, endAct, delay, easingType, method);
 }
 
 
-void __fastcall EasingObject__Play_34159032(
+void __fastcall EasingObject__Play_45433808(
         EasingObject_o *this,
         float from,
         float to,
@@ -52,56 +51,46 @@ void __fastcall EasingObject__Play_34159032(
         const MethodInfo *method)
 {
   float v15; // s10
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
-  struct System_Action_o **p_mEndAct; // x22
-  System_String_array **v23; // x2
-  System_String_array **v24; // x3
-  System_Boolean_array **v25; // x4
-  System_Int32_array **v26; // x5
-  System_Int32_array *v27; // x6
-  System_Int32_array *v28; // x7
+  int32_t v16; // w2
+  int32_t v17; // w3
+  struct System_Action_o **p_mProcessAct; // x22
+  int32_t v19; // w2
+  int32_t v20; // w3
+  struct System_Action_o *v21; // x8
 
-  LOBYTE(this->fields.mFrom) = 1;
-  this->fields.mTo = from;
-  this->fields.mNow = to;
-  if ( sec > 0.0 )
-    v15 = sec;
-  else
+  this->fields._IsMoving_k__BackingField = 1;
+  this->fields.mFrom = from;
+  this->fields.mTo = to;
+  if ( sec <= 0.0 )
     v15 = 0.0001;
-  this->fields.mTime = UnityEngine_Time__get_time(0LL);
-  this->fields.mDelay = v15;
-  *(_QWORD *)&this->fields.mIsPause = endAct;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.mIsPause,
-    (System_Int32_array **)endAct,
-    v16,
-    v17,
-    v18,
-    v19,
-    v20,
-    v21);
-  this->fields.mEndAct = procAct;
-  p_mEndAct = &this->fields.mEndAct;
-  *((float *)p_mEndAct - 5) = from;
-  sub_B77560((BattleServantConfConponent_o *)p_mEndAct, (System_Int32_array **)procAct, v23, v24, v25, v26, v27, v28);
-  *((_DWORD *)p_mEndAct + 6) = easingType;
-  *((float *)p_mEndAct - 2) = delay;
-  *((_BYTE *)p_mEndAct + 28) = 0;
-  ActionExtensions__Call(*p_mEndAct, 0LL);
+  else
+    v15 = sec;
+  this->fields.mStartTime = UnityEngine_Time__get_time(0LL);
+  this->fields.mTime = v15;
+  this->fields.mEndAct = endAct;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.mEndAct, (int32_t)endAct, v16, v17);
+  this->fields.mProcessAct = procAct;
+  p_mProcessAct = &this->fields.mProcessAct;
+  *((float *)p_mProcessAct - 6) = from;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)p_mProcessAct, (int32_t)procAct, v19, v20);
+  v21 = *p_mProcessAct;
+  *((_DWORD *)p_mProcessAct + 4) = easingType;
+  *((float *)p_mProcessAct - 3) = delay;
+  *((_BYTE *)p_mProcessAct + 20) = 0;
+  if ( v21 )
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v21->fields.m_target)(
+      v21->fields.original_method_info,
+      *(_QWORD *)&v21->fields.extra_arg);
 }
 
 
 void __fastcall EasingObject__Resume(EasingObject_o *this, const MethodInfo *method)
 {
-  if ( LOBYTE(this->fields.mEasingType) )
+  if ( this->fields._IsPause_k__BackingField )
   {
-    LOBYTE(this->fields.mEasingType) = 0;
-    this->fields.mTime = this->fields.mTime + (float)(UnityEngine_Time__get_time(0LL) - *(float *)&this->fields.mIsSkip);
+    this->fields._IsPause_k__BackingField = 0;
+    this->fields.mStartTime = this->fields.mStartTime
+                            + (float)(UnityEngine_Time__get_time(0LL) - this->fields.mPauseStartTime);
   }
 }
 
@@ -110,73 +99,80 @@ void __fastcall EasingObject__SetPause(EasingObject_o *this, bool isPause, const
 {
   if ( isPause )
   {
-    if ( !LOBYTE(this->fields.mEasingType) )
+    if ( !this->fields._IsPause_k__BackingField )
     {
-      LOBYTE(this->fields.mEasingType) = 1;
-      *(float *)&this->fields.mIsSkip = UnityEngine_Time__get_time(0LL);
+      this->fields._IsPause_k__BackingField = 1;
+      this->fields.mPauseStartTime = UnityEngine_Time__get_time(0LL);
     }
   }
-  else if ( LOBYTE(this->fields.mEasingType) )
+  else if ( this->fields._IsPause_k__BackingField )
   {
-    LOBYTE(this->fields.mEasingType) = 0;
-    this->fields.mTime = this->fields.mTime + (float)(UnityEngine_Time__get_time(0LL) - *(float *)&this->fields.mIsSkip);
+    this->fields._IsPause_k__BackingField = 0;
+    this->fields.mStartTime = this->fields.mStartTime
+                            + (float)(UnityEngine_Time__get_time(0LL) - this->fields.mPauseStartTime);
   }
 }
 
 
 void __fastcall EasingObject__Skip(EasingObject_o *this, const MethodInfo *method)
 {
-  BYTE4(this[1].klass) = 1;
+  this->fields.mIsSkip = 1;
 }
 
 
 void __fastcall EasingObject__Stop(EasingObject_o *this, const MethodInfo *method)
 {
-  LOBYTE(this->fields.mFrom) = 0;
+  this->fields._IsMoving_k__BackingField = 0;
 }
 
 
 void __fastcall EasingObject__Update(EasingObject_o *this, const MethodInfo *method)
 {
-  float mTime; // s8
-  float v4; // s9
-  float time; // s0
-  const MethodInfo *v6; // x1
-  float v7; // s0
-  float v8; // s8
-  float v9; // s0
-  System_Action_o *mEndAct; // x0
-  System_Action_o *v11; // x0
+  float mStartTime; // s8
+  float mDelay; // s9
+  const MethodInfo *v5; // x1
+  float v6; // s3
+  float v7; // s2
+  bool v8; // nf
+  float v9; // s3
+  float v10; // s8
+  float v11; // s0
+  struct System_Action_o *mProcessAct; // x8
+  struct System_Action_o *mEndAct; // x8
 
-  if ( LOBYTE(this->fields.mFrom) )
+  if ( this->fields._IsMoving_k__BackingField && !this->fields._IsPause_k__BackingField )
   {
-    if ( !LOBYTE(this->fields.mEasingType) )
+    if ( this->fields.mIsSkip
+      || (mStartTime = this->fields.mStartTime,
+          mDelay = this->fields.mDelay,
+          (float)(mStartTime + mDelay) <= UnityEngine_Time__get_time(0LL)) )
     {
-      if ( BYTE4(this[1].klass)
-        || (mTime = this->fields.mTime,
-            v4 = *(float *)&this->fields.mProcessAct,
-            (float)(mTime + v4) <= UnityEngine_Time__get_time(0LL)) )
+      v6 = (float)(UnityEngine_Time__get_time(0LL) - (float)(this->fields.mStartTime + this->fields.mDelay))
+         / this->fields.mTime;
+      v7 = 0.0;
+      v8 = v6 < 0.0;
+      v9 = fminf(v6, 1.0);
+      if ( !v8 )
+        v7 = v9;
+      if ( this->fields.mIsSkip )
+        v10 = 1.0;
+      else
+        v10 = v7;
+      v11 = Easing__Func_45432632(this->fields.mFrom, this->fields.mTo, v10, this->fields.mEasingType, v5);
+      mProcessAct = this->fields.mProcessAct;
+      this->fields.mNow = v11;
+      if ( mProcessAct )
+        ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))mProcessAct->fields.m_target)(
+          mProcessAct->fields.original_method_info,
+          *(_QWORD *)&mProcessAct->fields.extra_arg);
+      if ( v10 >= 1.0 )
       {
-        time = UnityEngine_Time__get_time(0LL);
-        v7 = UnityEngine_Mathf__Clamp01(
-               (float)(time - (float)(this->fields.mTime + *(float *)&this->fields.mProcessAct)) / this->fields.mDelay,
-               0LL);
-        if ( BYTE4(this[1].klass) )
-          v8 = 1.0;
-        else
-          v8 = v7;
-        v9 = Easing__Func_34149472(this->fields.mTo, this->fields.mNow, v8, (int32_t)this[1].klass, v6);
         mEndAct = this->fields.mEndAct;
-        this->fields.mStartTime = v9;
+        this->fields._IsMoving_k__BackingField = 0;
         if ( mEndAct )
-          System_Action__Invoke(mEndAct, 0LL);
-        if ( v8 >= 1.0 )
-        {
-          v11 = *(System_Action_o **)&this->fields.mIsPause;
-          LOBYTE(this->fields.mFrom) = 0;
-          if ( v11 )
-            System_Action__Invoke(v11, 0LL);
-        }
+          ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))mEndAct->fields.m_target)(
+            mEndAct->fields.original_method_info,
+            *(_QWORD *)&mEndAct->fields.extra_arg);
       }
     }
   }
@@ -185,11 +181,23 @@ void __fastcall EasingObject__Update(EasingObject_o *this, const MethodInfo *met
 
 bool __fastcall EasingObject__get_IsMoving(EasingObject_o *this, const MethodInfo *method)
 {
-  return LOBYTE(this->fields.mFrom);
+  return this->fields._IsMoving_k__BackingField;
 }
 
 
 bool __fastcall EasingObject__get_IsPause(EasingObject_o *this, const MethodInfo *method)
 {
-  return this->fields.mEasingType;
+  return this->fields._IsPause_k__BackingField;
+}
+
+
+void __fastcall EasingObject__set_IsMoving(EasingObject_o *this, bool value, const MethodInfo *method)
+{
+  this->fields._IsMoving_k__BackingField = value;
+}
+
+
+void __fastcall EasingObject__set_IsPause(EasingObject_o *this, bool value, const MethodInfo *method)
+{
+  this->fields._IsPause_k__BackingField = value;
 }

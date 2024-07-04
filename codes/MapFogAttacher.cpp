@@ -6,15 +6,15 @@ void __fastcall MapFogAttacher___ctor(MapFogAttacher_o *this, const MethodInfo *
 
 void __fastcall MapFogAttacher__Attach(MapFogAttacher_o *this, const MethodInfo *method)
 {
-  WebViewManager_o *Instance; // x0
+  Il2CppObject *Instance; // x0
   const MethodInfo *v4; // x2
 
-  if ( (byte_438E54A & 1) == 0 )
+  if ( (byte_48DF738 & 1) == 0 )
   {
-    sub_B775C4(&Method_SingletonMonoBehaviour_MapFogManager__get_Instance__);
-    byte_438E54A = 1;
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_MapFogManager__get_Instance__, method);
+    byte_48DF738 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_MapFogManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_MapFogManager__get_Instance__);
   if ( Instance )
     MapFogManager__Attach((MapFogManager_o *)Instance, this->fields.fogData, v4);
 }
@@ -23,56 +23,50 @@ void __fastcall MapFogAttacher__Attach(MapFogAttacher_o *this, const MethodInfo 
 void __fastcall MapFogAttacher__OnDestroy(MapFogAttacher_o *this, const MethodInfo *method)
 {
   MapFogAttacher_o *v2; // x19
+  __int64 v3; // x1
   struct MapFogData_o *fogData; // x8
-  struct MapFogData_o *v4; // x8
-  MapFogAttacher_o *v5; // x20
-  unsigned __int64 v6; // x22
-  UnityEngine_Object_o *v7; // x21
-  WebViewManager_o *Instance; // x0
-  const MethodInfo *v9; // x2
-  __int64 v10; // x0
+  struct System_Threading_CancellationTokenSource_o *m_CancellationTokenSource; // x8
+  MapFogAttacher_o *v6; // x20
+  unsigned __int64 v7; // x22
+  UnityEngine_Object_o *v8; // x21
+  Il2CppObject *Instance; // x0
+  const MethodInfo *v10; // x2
 
   v2 = this;
-  if ( (byte_438E549 & 1) == 0 )
+  if ( (byte_48DF737 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    this = (MapFogAttacher_o *)sub_B775C4(&Method_SingletonMonoBehaviour_MapFogManager__get_Instance__);
-    byte_438E549 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    this = (MapFogAttacher_o *)sub_1B00CCC(&Method_SingletonMonoBehaviour_MapFogManager__get_Instance__, v3);
+    byte_48DF737 = 1;
   }
   fogData = v2->fields.fogData;
   if ( !fogData
     || (this = (MapFogAttacher_o *)fogData->fields.renderer) == 0LL
     || (this = (MapFogAttacher_o *)UnityEngine_Renderer__get_materials((UnityEngine_Renderer_o *)this, 0LL)) == 0LL )
   {
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   }
-  v4 = this->fields.fogData;
-  v5 = this;
-  if ( (int)v4 >= 1 )
+  m_CancellationTokenSource = this->fields.m_CancellationTokenSource;
+  v6 = this;
+  if ( (int)m_CancellationTokenSource >= 1 )
   {
-    v6 = 0LL;
+    v7 = 0LL;
     do
     {
-      if ( v6 >= (unsigned int)v4 )
-      {
-        v10 = sub_B776C8(this);
-        sub_B77668(v10, 0LL);
-      }
-      v7 = (UnityEngine_Object_o *)*((_QWORD *)&v5[1].klass + v6);
-      if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      {
+      if ( v7 >= (unsigned int)m_CancellationTokenSource )
+        sub_1B00F30(this, method);
+      v8 = (UnityEngine_Object_o *)*((_QWORD *)&v6->fields.fogData + v7);
+      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      }
-      UnityEngine_Object__Destroy_36309980(v7, 0LL);
-      LODWORD(v4) = v5->fields.fogData;
-      ++v6;
+      UnityEngine_Object__Destroy_68077656(v8, 0LL);
+      LODWORD(m_CancellationTokenSource) = v6->fields.m_CancellationTokenSource;
+      ++v7;
     }
-    while ( (__int64)v6 < (int)v4 );
+    while ( (__int64)v7 < (int)m_CancellationTokenSource );
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_MapFogManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_MapFogManager__get_Instance__);
   if ( Instance )
-    MapFogManager__Detach((MapFogManager_o *)Instance, v2->fields.fogData, v9);
+    MapFogManager__Detach((MapFogManager_o *)Instance, v2->fields.fogData, v10);
 }
 
 

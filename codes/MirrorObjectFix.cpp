@@ -1,145 +1,120 @@
 void __fastcall MirrorObjectFix___ctor(MirrorObjectFix_o *this, const MethodInfo *method)
 {
-  __int128 v3; // q0
-  System_Int32_array **v4; // x1
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
-  UnityEngine_Bounds_o v11; // [xsp+8h] [xbp-28h] BYREF
-  UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v13; // 0:s3.4,4:s4.4,8:s5.4
+  int32_t v2; // w2
+  int32_t v3; // w3
+  int32_t v5; // w1
 
-  if ( (byte_4389AEF & 1) == 0 )
+  if ( (byte_48E5394 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_20480/*"joint_all_Base/joint_all"*/);
-    byte_4389AEF = 1;
+    sub_1B00CCC(&StringLiteral_20668/*"joint_all_Base/joint_all"*/, method);
+    byte_48E5394 = 1;
   }
-  v12.fields.y = 0.78;
-  v13.fields.x = 0.2;
-  v13.fields.y = 1.4;
-  v13.fields.z = 0.6;
-  v12.fields.x = 0.0;
-  v12.fields.z = 0.0;
-  memset(&v11, 0, sizeof(v11));
-  UnityEngine_Bounds___ctor(&v11, v12, v13, 0LL);
-  v3 = *(_OWORD *)&v11.fields.m_Center.fields.x;
-  *(_QWORD *)&this->fields.mirrorBounds.fields.m_Extents.fields.z = *(_QWORD *)&v11.fields.m_Extents.fields.y;
-  *(_OWORD *)&this->fields.mirrorBounds.fields.m_Center.fields.y = v3;
-  v4 = (System_Int32_array **)StringLiteral_20480/*"joint_all_Base/joint_all"*/;
-  this->fields.rootTransformPath = (struct System_String_o *)StringLiteral_20480/*"joint_all_Base/joint_all"*/;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.rootTransformPath, v4, v5, v6, v7, v8, v9, v10);
+  *(_OWORD *)&this->fields.mirrorBounds.fields.m_Center.fields.x = xmmword_B700E0;
+  *(_QWORD *)&this->fields.mirrorBounds.fields.m_Extents.fields.y = 0x3E99999A3F333333LL;
+  v5 = StringLiteral_20668/*"joint_all_Base/joint_all"*/;
+  this->fields.rootTransformPath = (struct System_String_o *)StringLiteral_20668/*"joint_all_Base/joint_all"*/;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.rootTransformPath, v5, v2, v3);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 UnityEngine_Bounds_o *__fastcall MirrorObjectFix__GetBounds(
         UnityEngine_Bounds_o *retstr,
         MirrorObjectFix_o *this,
         const MethodInfo *method)
 {
-  __int128 v4; // q0
-  UnityEngine_Transform_o *RootTransform; // x20
-  __int64 v6; // x0
-  __int64 v7; // x1
-  int v8; // s0
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  UnityEngine_Transform_o *RootTransform; // x0
+  __int64 v8; // x1
   UnityEngine_Bounds_o *result; // x0
-  __int128 v12; // q0
-  UnityEngine_Bounds_o v13; // [xsp+0h] [xbp-30h] BYREF
-  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
+  struct UnityEngine_Vector3_o m_Extents; // [xsp+0h] [xbp-40h]
+  UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
 
-  v4 = *(_OWORD *)&this->fields.mirrorBounds.fields.m_Center.fields.y;
-  *(_QWORD *)&v13.fields.m_Extents.fields.y = *(_QWORD *)&this->fields.mirrorBounds.fields.m_Extents.fields.z;
-  *(_OWORD *)&v13.fields.m_Center.fields.x = v4;
+  x = this->fields.mirrorBounds.fields.m_Center.fields.x;
+  y = this->fields.mirrorBounds.fields.m_Center.fields.y;
+  z = this->fields.mirrorBounds.fields.m_Center.fields.z;
+  m_Extents = this->fields.mirrorBounds.fields.m_Extents;
   RootTransform = MirrorObjectFix__get_RootTransform(this, method);
-  *(UnityEngine_Vector3_o *)&v8 = UnityEngine_Bounds__get_center(&v13, 0LL);
   if ( !RootTransform )
-    sub_B7769C(v6, v7);
-  v14 = UnityEngine_Transform__TransformPoint(RootTransform, *(UnityEngine_Vector3_o *)&v8, 0LL);
-  UnityEngine_Bounds__set_center(&v13, v14, 0LL);
-  v12 = *(_OWORD *)&v13.fields.m_Center.fields.x;
-  *(_QWORD *)&retstr->fields.m_Extents.fields.y = *(_QWORD *)&v13.fields.m_Extents.fields.y;
-  *(_OWORD *)&retstr->fields.m_Center.fields.x = v12;
+    sub_1B00F28(0LL, v8);
+  v11.fields.x = x;
+  v11.fields.y = y;
+  v11.fields.z = z;
+  retstr->fields.m_Center = UnityEngine_Transform__TransformPoint(RootTransform, v11, 0LL);
+  retstr->fields.m_Extents = m_Extents;
   return result;
 }
 
 
 void __fastcall MirrorObjectFix__OnDrawGizmos(MirrorObjectFix_o *this, const MethodInfo *method)
 {
-  float x; // s8
-  float y; // s9
-  float z; // s10
-  const MethodInfo *v6; // x1
+  __int128 v3; // kr00_16
+  const MethodInfo *v4; // x1
   UnityEngine_Transform_o *RootTransform; // x0
-  __int64 v8; // x1
-  float v9; // s11
-  float v10; // s12
-  float v11; // s13
+  __int64 v6; // x1
+  float x; // s11
+  float y; // s12
+  float z; // s13
   float w; // s14
-  float v13; // s8
-  float v14; // s9
-  float v15; // s10
-  UnityEngine_Vector3_o lossyScale; // [xsp+0h] [xbp-180h]
-  UnityEngine_Matrix4x4_o v17; // [xsp+10h] [xbp-170h] BYREF
-  UnityEngine_Matrix4x4_o v18; // [xsp+50h] [xbp-130h] BYREF
-  UnityEngine_Matrix4x4_o v19; // [xsp+90h] [xbp-F0h] BYREF
-  UnityEngine_Matrix4x4_o v20; // [xsp+D0h] [xbp-B0h]
-  UnityEngine_Bounds_o v21; // [xsp+118h] [xbp-68h] BYREF
-  UnityEngine_Vector3_o center; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o zero; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o size; // 0:s3.4,4:s4.4,8:s5.4
-  UnityEngine_Color_o yellow; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  __int64 v11; // x1
+  UnityEngine_Vector3_o lossyScale; // [xsp+0h] [xbp-170h]
+  UnityEngine_Matrix4x4_o v13; // [xsp+10h] [xbp-160h] BYREF
+  UnityEngine_Matrix4x4_o v14; // [xsp+50h] [xbp-120h] BYREF
+  UnityEngine_Matrix4x4_o v15; // [xsp+90h] [xbp-E0h] BYREF
+  UnityEngine_Matrix4x4_o v16; // [xsp+D0h] [xbp-A0h] BYREF
+  float m11; // [xsp+158h] [xbp-18h]
+  float m01; // [xsp+15Ch] [xbp-14h]
+  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v20; // 0:s3.4,4:s4.4,8:s5.4
+  UnityEngine_Color_o v21; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Quaternion_o v29; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
+  UnityEngine_Quaternion_o v23; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
 
-  memset(&v21, 0, sizeof(v21));
-  MirrorObjectFix__GetBounds(&v21, this, method);
-  UnityEngine_Gizmos__get_matrix(&v19, 0LL);
-  v20 = v19;
-  yellow = UnityEngine_Color__get_yellow(0LL);
-  UnityEngine_Gizmos__set_color(yellow, 0LL);
-  center = UnityEngine_Bounds__get_center(&v21, 0LL);
-  x = center.fields.x;
-  y = center.fields.y;
-  z = center.fields.z;
-  RootTransform = MirrorObjectFix__get_RootTransform(this, v6);
+  MirrorObjectFix__GetBounds((UnityEngine_Bounds_o *)&v16, this, method);
+  v3 = *(_OWORD *)&v16.fields.m00;
+  m11 = v16.fields.m11;
+  m01 = v16.fields.m01;
+  UnityEngine_Gizmos__get_matrix(&v15, 0LL);
+  v16 = v15;
+  v21.fields.g = 0.92157;
+  v21.fields.b = 0.015686;
+  v21.fields.r = 1.0;
+  v21.fields.a = 1.0;
+  UnityEngine_Gizmos__set_color(v21, 0LL);
+  RootTransform = MirrorObjectFix__get_RootTransform(this, v4);
   if ( !RootTransform
     || (rotation = UnityEngine_Transform__get_rotation(RootTransform, 0LL),
-        v9 = rotation.fields.x,
-        v10 = rotation.fields.y,
-        v11 = rotation.fields.z,
+        x = rotation.fields.x,
+        y = rotation.fields.y,
+        z = rotation.fields.z,
         w = rotation.fields.w,
         (RootTransform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B7769C(RootTransform, v8);
+    sub_1B00F28(RootTransform, v6);
   }
   lossyScale = UnityEngine_Transform__get_lossyScale(RootTransform, 0LL);
+  *(_QWORD *)&v19.fields.x = v3;
+  v19.fields.z = *((float *)&v3 + 2);
   v23.fields.x = x;
   v23.fields.y = y;
   v23.fields.z = z;
-  v29.fields.x = v9;
-  v29.fields.y = v10;
-  v29.fields.z = v11;
-  v29.fields.w = w;
-  UnityEngine_Matrix4x4__TRS(&v19, v23, v29, lossyScale, 0LL);
-  v18 = v19;
-  UnityEngine_Gizmos__set_matrix(&v18, 0LL);
-  zero = UnityEngine_Vector3__get_zero(0LL);
-  v13 = zero.fields.x;
-  v14 = zero.fields.y;
-  v15 = zero.fields.z;
-  size = UnityEngine_Bounds__get_size(&v21, 0LL);
-  v25.fields.x = v13;
-  v25.fields.y = v14;
-  v25.fields.z = v15;
-  UnityEngine_Gizmos__DrawWireCube(v25, size, 0LL);
-  v17 = v20;
-  UnityEngine_Gizmos__set_matrix(&v17, 0LL);
+  v23.fields.w = w;
+  UnityEngine_Matrix4x4__TRS(&v15, v19, v23, lossyScale, 0LL);
+  v14 = v15;
+  UnityEngine_Gizmos__set_matrix(&v14, 0LL);
+  if ( !byte_48DD9F1 )
+  {
+    sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, v11);
+    byte_48DD9F1 = 1;
+  }
+  v20.fields.x = *((float *)&v3 + 3) + *((float *)&v3 + 3);
+  v20.fields.y = m01 + m01;
+  v20.fields.z = m11 + m11;
+  UnityEngine_Gizmos__DrawWireCube(UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, v20, 0LL);
+  v13 = v16;
+  UnityEngine_Gizmos__set_matrix(&v13, 0LL);
 }
 
 
@@ -150,89 +125,62 @@ UnityEngine_Transform_o *__fastcall MirrorObjectFix__get_RootTransform(
   UnityEngine_Transform_o **p_cacheRootTransform; // x20
   UnityEngine_Object_o *cacheRootTransform; // x21
   UnityEngine_Object_o *rootTransform; // x21
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
-  struct UnityEngine_Transform_o *v12; // x1
-  UnityEngine_Transform_o *transform; // x0
-  __int64 v14; // x1
-  UnityEngine_Transform_o *v15; // x21
-  struct UnityEngine_Transform_o *v16; // x0
-  System_String_array **v17; // x2
-  System_String_array **v18; // x3
-  System_Boolean_array **v19; // x4
-  System_Int32_array **v20; // x5
-  System_Int32_array *v21; // x6
-  System_Int32_array *v22; // x7
+  int32_t v6; // w2
+  int32_t v7; // w3
+  struct UnityEngine_Transform_o *v8; // x1
+  UnityEngine_Transform_o *v9; // x0
+  __int64 v10; // x1
+  UnityEngine_Transform_o *v11; // x21
+  struct UnityEngine_Transform_o *transform; // x0
+  int32_t v13; // w2
+  int32_t v14; // w3
 
-  if ( (byte_4389AEE & 1) == 0 )
+  if ( (byte_48E5393 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_4389AEE = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    byte_48E5393 = 1;
   }
   p_cacheRootTransform = &this->fields.cacheRootTransform;
   cacheRootTransform = (UnityEngine_Object_o *)this->fields.cacheRootTransform;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Equality(cacheRootTransform, 0LL, 0LL) )
   {
     rootTransform = (UnityEngine_Object_o *)this->fields.rootTransform;
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
     if ( UnityEngine_Object__op_Inequality(rootTransform, 0LL, 0LL) )
     {
-      v12 = this->fields.rootTransform;
-      this->fields.cacheRootTransform = v12;
+      v8 = this->fields.rootTransform;
     }
     else
     {
       if ( System_String__IsNullOrEmpty(this->fields.rootTransformPath, 0LL) )
-        goto LABEL_16;
-      transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-      if ( !transform )
-        sub_B7769C(0LL, v14);
-      v12 = UnityEngine_Transform__Find(transform, this->fields.rootTransformPath, 0LL);
-      this->fields.cacheRootTransform = v12;
+      {
+LABEL_14:
+        v11 = *p_cacheRootTransform;
+        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+        if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v11, 0LL, 0LL) )
+        {
+          transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+          this->fields.cacheRootTransform = transform;
+          sub_1B00C70(
+            (ServantStatusBattleListViewItem_o *)&this->fields.cacheRootTransform,
+            (int32_t)transform,
+            v13,
+            v14);
+        }
+        return *p_cacheRootTransform;
+      }
+      v9 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+      if ( !v9 )
+        sub_1B00F28(0LL, v10);
+      v8 = UnityEngine_Transform__Find(v9, this->fields.rootTransformPath, 0LL);
     }
-    sub_B77560(
-      (BattleServantConfConponent_o *)&this->fields.cacheRootTransform,
-      (System_Int32_array **)v12,
-      v6,
-      v7,
-      v8,
-      v9,
-      v10,
-      v11);
-LABEL_16:
-    v15 = *p_cacheRootTransform;
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
-    if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v15, 0LL, 0LL) )
-    {
-      v16 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-      this->fields.cacheRootTransform = v16;
-      sub_B77560(
-        (BattleServantConfConponent_o *)&this->fields.cacheRootTransform,
-        (System_Int32_array **)v16,
-        v17,
-        v18,
-        v19,
-        v20,
-        v21,
-        v22);
-    }
+    *p_cacheRootTransform = v8;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.cacheRootTransform, (int32_t)v8, v6, v7);
+    goto LABEL_14;
   }
   return *p_cacheRootTransform;
 }

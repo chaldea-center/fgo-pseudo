@@ -1,121 +1,119 @@
-void __fastcall ResponseData___cctor(const MethodInfo *method)
-{
-  ;
-}
-
-
 void __fastcall ResponseData___ctor(ResponseData_o *this, const MethodInfo *method)
 {
-  ResponseData_c *v3; // x0
+  __int64 v3; // x1
 
-  if ( (byte_438DBC7 & 1) == 0 )
+  if ( (byte_48E3F8D & 1) == 0 )
   {
-    sub_B775C4(&ResponseData___TypeInfo);
-    sub_B775C4(&ResponseData_TypeInfo);
-    byte_438DBC7 = 1;
+    sub_1B00CCC(&ResponseData___TypeInfo, method);
+    sub_1B00CCC(&ResponseData_TypeInfo, v3);
+    byte_48E3F8D = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v3 = ResponseData_TypeInfo;
-  if ( (BYTE3(ResponseData_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !ResponseData_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(ResponseData_TypeInfo);
-    v3 = ResponseData_TypeInfo;
-  }
-  if ( v3->static_fields->_never )
-    sub_B775DC(ResponseData___TypeInfo, 1LL);
+  if ( ResponseData_TypeInfo->static_fields->_never )
+    sub_1B00D74(ResponseData___TypeInfo, 1LL);
 }
 
 
 bool __fastcall ResponseData__checkError(ResponseData_o *this, System_String_o *resCode, const MethodInfo *method)
 {
-  uint32_t v4; // w0
-  __int64 *v5; // x8
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  uint32_t v14; // w0
+  __int64 *v15; // x8
 
-  if ( (byte_438DBC8 & 1) == 0 )
+  if ( (byte_48E3F8E & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_1242/*"89"*/);
-    sub_B775C4(&StringLiteral_998/*"01"*/);
-    sub_B775C4(&StringLiteral_1003/*"03"*/);
-    sub_B775C4(&StringLiteral_1248/*"99"*/);
-    sub_B775C4(&StringLiteral_1002/*"02"*/);
-    sub_B775C4(&StringLiteral_1241/*"88"*/);
-    sub_B775C4(&StringLiteral_1246/*"98"*/);
-    sub_B775C4(&StringLiteral_1123/*"11"*/);
-    sub_B775C4(&StringLiteral_1233/*"71"*/);
-    sub_B775C4(&StringLiteral_1004/*"04"*/);
-    sub_B775C4(&StringLiteral_989/*"00"*/);
-    byte_438DBC8 = 1;
+    sub_1B00CCC(&StringLiteral_1530/*"89"*/, resCode);
+    sub_1B00CCC(&StringLiteral_1225/*"01"*/, v4);
+    sub_1B00CCC(&StringLiteral_1232/*"03"*/, v5);
+    sub_1B00CCC(&StringLiteral_1536/*"99"*/, v6);
+    sub_1B00CCC(&StringLiteral_1231/*"02"*/, v7);
+    sub_1B00CCC(&StringLiteral_1529/*"88"*/, v8);
+    sub_1B00CCC(&StringLiteral_1534/*"98"*/, v9);
+    sub_1B00CCC(&StringLiteral_1399/*"11"*/, v10);
+    sub_1B00CCC(&StringLiteral_1523/*"71"*/, v11);
+    sub_1B00CCC(&StringLiteral_1233/*"04"*/, v12);
+    sub_1B00CCC(&StringLiteral_1216/*"00"*/, v13);
+    byte_48E3F8E = 1;
   }
   if ( !resCode )
     return 0;
-  v4 = PrivateImplementationDetails___ComputeStringHash_28503548(resCode, 0LL);
-  if ( v4 > 0x1EED6D94 )
+  v14 = PrivateImplementationDetails___ComputeStringHash(resCode, 0LL);
+  if ( v14 > 0x1EED6D94 )
   {
-    if ( v4 > 0x21ED724D )
+    if ( v14 > 0x21ED724D )
     {
-      switch ( v4 )
+      switch ( v14 )
       {
         case 0x90E5D245:
-          v5 = &StringLiteral_1233/*"71"*/;
+          v15 = &StringLiteral_1523/*"71"*/;
           goto LABEL_30;
         case 0x9901B55A:
-          v5 = &StringLiteral_1242/*"89"*/;
+          v15 = &StringLiteral_1530/*"89"*/;
           goto LABEL_30;
         case 0x9A01B6ED:
-          v5 = &StringLiteral_1241/*"88"*/;
+          v15 = &StringLiteral_1529/*"88"*/;
           goto LABEL_30;
       }
     }
     else
     {
-      if ( v4 == 535654183 )
+      if ( v14 == 535654183 )
       {
-        v5 = &StringLiteral_1002/*"02"*/;
+        v15 = &StringLiteral_1231/*"02"*/;
         goto LABEL_30;
       }
-      if ( v4 == 552431802 )
+      if ( v14 == 552431802 )
       {
-        v5 = &StringLiteral_998/*"01"*/;
+        v15 = &StringLiteral_1225/*"01"*/;
         goto LABEL_30;
       }
-      if ( v4 == 569209421 && System_String__op_Equality(resCode, (System_String_o *)StringLiteral_989/*"00"*/, 0LL) )
+      if ( v14 == 569209421 && System_String__op_Equality(resCode, (System_String_o *)StringLiteral_1216/*"00"*/, 0LL) )
         return 1;
     }
   }
-  else if ( v4 > 0x14FEA6F7 )
+  else if ( v14 > 0x14FEA6F7 )
   {
-    switch ( v4 )
+    switch ( v14 )
     {
       case 0x1CEB2BD7u:
-        v5 = &StringLiteral_1123/*"11"*/;
+        v15 = &StringLiteral_1399/*"11"*/;
         goto LABEL_30;
       case 0x1DED6C01u:
-        v5 = &StringLiteral_1004/*"04"*/;
+        v15 = &StringLiteral_1233/*"04"*/;
         goto LABEL_30;
       case 0x1EED6D94u:
-        v5 = &StringLiteral_1003/*"03"*/;
+        v15 = &StringLiteral_1232/*"03"*/;
         goto LABEL_30;
     }
   }
   else
   {
-    if ( v4 == 335455588 )
+    if ( v14 == 335455588 )
     {
-      v5 = &StringLiteral_1246/*"98"*/;
+      v15 = &StringLiteral_1534/*"98"*/;
       goto LABEL_30;
     }
-    if ( v4 == 352233207 )
+    if ( v14 == 352233207 )
     {
-      v5 = &StringLiteral_1248/*"99"*/;
+      v15 = &StringLiteral_1536/*"99"*/;
 LABEL_30:
-      System_String__op_Equality(resCode, (System_String_o *)*v5, 0LL);
+      System_String__op_Equality(resCode, (System_String_o *)*v15, 0LL);
     }
   }
   return 0;
 }
 
 
-bool __fastcall ResponseData__checkError_30128096(ResponseData_o *this, const MethodInfo *method)
+bool __fastcall ResponseData__checkError_39752340(ResponseData_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
 
@@ -132,34 +130,36 @@ void __fastcall ResponseData__debugPrint(ResponseData_o *this, const MethodInfo 
 System_String_o *__fastcall ResponseData__getErrorMessage(ResponseData_o *this, const MethodInfo *method)
 {
   ResponseData_o *v2; // x19
-  System_Collections_Generic_Dictionary_Type__IStoreExtension__o *fail; // x19
+  __int64 v3; // x1
+  __int64 v4; // x1
+  System_Collections_Generic_Dictionary_object__object__o *fail; // x19
 
   v2 = this;
-  if ( (byte_438DBC9 & 1) == 0 )
+  if ( (byte_48E3F8F & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    this = (ResponseData_o *)sub_B775C4(&StringLiteral_18354/*"detail"*/);
-    byte_438DBC9 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v3);
+    this = (ResponseData_o *)sub_1B00CCC(&StringLiteral_18348/*"detail"*/, v4);
+    byte_48E3F8F = 1;
   }
-  fail = (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v2->fields.fail;
+  fail = (System_Collections_Generic_Dictionary_object__object__o *)v2->fields.fail;
   if ( !fail )
     goto LABEL_8;
-  if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
-         (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)fail,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_18354/*"detail"*/,
-         (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+  if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
+         fail,
+         (Il2CppObject *)StringLiteral_18348/*"detail"*/,
+         (const MethodInfo_308DC3C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
-    this = (ResponseData_o *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
+    this = (ResponseData_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                fail,
-                               (System_Type_o *)StringLiteral_18354/*"detail"*/,
-                               (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                               (Il2CppObject *)StringLiteral_18348/*"detail"*/,
+                               (const MethodInfo_308D9C8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( this )
       return (System_String_o *)((__int64 (__fastcall *)(ResponseData_o *, void *))this->klass->vtable._3_ToString.method)(
                                   this,
                                   this->klass[1]._1.image);
 LABEL_8:
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   }
   return 0LL;
 }

@@ -10,169 +10,155 @@ bool __fastcall WarBoardOverlayEffectComponent__CheckRubyText(
         System_String_o *message,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  WarBoardOverlayEffectComponent_o *v9; // x20
-  int32_t m_stringLength; // w24
-  System_Int32_array **v11; // x1
-  struct System_String_o **p_mainText; // x20
-  System_Int32_array **v13; // x1
-  System_String_o **v14; // x21
-  System_String_array **v15; // x2
-  System_String_array **v16; // x3
-  System_Boolean_array **v17; // x4
-  System_Int32_array **v18; // x5
-  System_Int32_array *v19; // x6
-  System_Int32_array *v20; // x7
-  bool v21; // w25
-  char v22; // w27
-  char v23; // w26
-  int32_t v24; // w22
-  System_String_o *v25; // x23
-  System_String_o *v26; // x0
-  System_Int32_array **v27; // x0
-  System_String_array **v28; // x2
-  System_String_array **v29; // x3
-  System_Boolean_array **v30; // x4
-  System_Int32_array **v31; // x5
-  System_Int32_array *v32; // x6
-  System_Int32_array *v33; // x7
-  System_String_o *v34; // x23
-  System_String_o *v35; // x0
-  System_Int32_array **v36; // x0
-  System_String_array **v37; // x2
-  System_String_array **v38; // x3
-  System_Boolean_array **v39; // x4
-  System_Int32_array **v40; // x5
-  System_Int32_array *v41; // x6
-  System_Int32_array *v42; // x7
+  int32_t v3; // w3
+  WarBoardOverlayEffectComponent_o *v5; // x20
+  __int64 v6; // x1
+  int32_t stringLength; // w24
+  int32_t v8; // w1
+  ServantStatusBattleListViewItem_o *p_mainText; // x21
+  int32_t v10; // w1
+  ServantStatusBattleListViewItem_o *p_rubyText; // x20
+  int32_t v12; // w2
+  int32_t v13; // w3
+  bool v14; // w25
+  char v15; // w28
+  char v16; // w27
+  int32_t v17; // w22
   uint16_t Chars; // w0
-  System_String_o *v44; // x23
-  System_String_o *v45; // x0
-  System_Int32_array **v46; // x0
-  System_String_array **v47; // x2
-  System_String_array **v48; // x3
-  System_Boolean_array **v49; // x4
-  System_Int32_array **v50; // x5
-  System_Int32_array *v51; // x6
-  System_Int32_array *v52; // x7
-  System_String_o *v53; // x23
-  System_String_o *v54; // x0
-  System_Int32_array **v55; // x0
-  System_String_array **v56; // x2
-  System_String_array **v57; // x3
-  System_Boolean_array **v58; // x4
-  System_Int32_array **v59; // x5
-  System_Int32_array *v60; // x6
-  System_Int32_array *v61; // x7
-  __int16 v63[2]; // [xsp+Ch] [xbp-44h] BYREF
+  System_String_o *v19; // x23
+  System_String_o *v20; // x0
+  System_String_o *v21; // x0
+  int32_t v22; // w2
+  int32_t v23; // w3
+  System_String_o *v24; // x23
+  System_String_o *v25; // x0
+  System_String_o *v26; // x0
+  int32_t v27; // w2
+  int32_t v28; // w3
+  System_String_o *v29; // x23
+  System_String_o *v30; // x0
+  System_String_o *v31; // x0
+  int32_t v32; // w2
+  int32_t v33; // w3
+  System_String_o *klass; // x23
+  System_String_o *v35; // x0
+  System_String_o *v36; // x0
+  int32_t v37; // w2
+  int32_t v38; // w3
+  __int16 v40[2]; // [xsp+Ch] [xbp-54h] BYREF
 
-  v9 = this;
-  if ( (byte_438AEC3 & 1) == 0 )
+  v5 = this;
+  if ( (byte_48E0320 & 1) == 0 )
   {
-    this = (WarBoardOverlayEffectComponent_o *)sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438AEC3 = 1;
+    sub_1B00CCC(&char_TypeInfo, message);
+    this = (WarBoardOverlayEffectComponent_o *)sub_1B00CCC(&StringLiteral_1/*""*/, v6);
+    byte_48E0320 = 1;
   }
-  v63[0] = 0;
+  v40[0] = 0;
   if ( !message )
-    sub_B7769C(this, message);
-  m_stringLength = message->fields.m_stringLength;
-  v11 = (System_Int32_array **)StringLiteral_1/*""*/;
-  v9->fields.mainText = (struct System_String_o *)StringLiteral_1/*""*/;
-  p_mainText = &v9->fields.mainText;
-  sub_B77560((BattleServantConfConponent_o *)p_mainText, v11, (System_String_array **)method, v3, v4, v5, v6, v7);
-  v13 = (System_Int32_array **)StringLiteral_1/*""*/;
-  v14 = p_mainText + 1;
-  p_mainText[1] = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B77560((BattleServantConfConponent_o *)(p_mainText + 1), v13, v15, v16, v17, v18, v19, v20);
-  if ( m_stringLength >= 1 )
+    sub_1B00F28(this, message);
+  stringLength = message->fields._stringLength;
+  v8 = (int)StringLiteral_1/*""*/;
+  v5->fields.mainText = (struct System_String_o *)StringLiteral_1/*""*/;
+  p_mainText = (ServantStatusBattleListViewItem_o *)&v5->fields.mainText;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v5->fields.mainText, v8, (int32_t)method, v3);
+  v10 = (int)StringLiteral_1/*""*/;
+  v5->fields.rubyText = (struct System_String_o *)StringLiteral_1/*""*/;
+  p_rubyText = (ServantStatusBattleListViewItem_o *)&v5->fields.rubyText;
+  sub_1B00C70(p_rubyText, v10, v12, v13);
+  if ( stringLength >= 1 )
   {
-    v21 = 0;
-    v22 = 0;
-    v23 = 0;
-    v24 = 0;
+    v14 = 0;
+    v15 = 0;
+    v16 = 0;
+    v17 = 0;
     while ( 1 )
     {
-      Chars = System_String__get_Chars(message, v24, 0LL);
-      v63[0] = Chars;
+      Chars = System_String__get_Chars(message, v17, 0LL);
+      v40[0] = Chars;
       if ( Chars > 0x5Au )
         break;
       if ( Chars == 35 )
       {
-        if ( (v22 & 1) == 0 )
-          goto LABEL_23;
+        if ( (v15 & 1) == 0 )
+          goto LABEL_21;
       }
       else
       {
         if ( Chars != 58 )
-          goto LABEL_19;
-        if ( (v22 & 1) == 0 )
-          goto LABEL_23;
-        v23 = 1;
+          goto LABEL_15;
+        if ( (v15 & 1) == 0 )
+          goto LABEL_21;
+        v16 = 1;
       }
-      v22 = 1;
-LABEL_25:
-      if ( m_stringLength == ++v24 )
-        return v21;
+      v15 = 1;
+LABEL_33:
+      if ( stringLength == ++v17 )
+        return v14;
     }
     if ( Chars == 91 )
     {
-      if ( System_String__get_Chars(message, v24 + 1, 0LL) == 35 )
+      if ( System_String__get_Chars(message, v17 + 1, 0LL) == 35 )
       {
-        v22 = 1;
-        v21 = 1;
+        v15 = 1;
+        v14 = 1;
       }
       else
       {
-        v34 = *p_mainText;
-        v35 = System_Char__ToString((uint16_t)v63, 0LL);
-        v36 = (System_Int32_array **)System_String__Concat_44901936(v34, v35, 0LL);
-        *p_mainText = (struct System_String_o *)v36;
-        sub_B77560((BattleServantConfConponent_o *)p_mainText, v36, v37, v38, v39, v40, v41, v42);
+        klass = (System_String_o *)p_mainText->klass;
+        if ( !char_TypeInfo->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(char_TypeInfo);
+        v35 = System_Char__ToString((uint16_t)v40, 0LL);
+        v36 = System_String__Concat_60325748(klass, v35, 0LL);
+        p_mainText->klass = (ServantStatusBattleListViewItem_c *)v36;
+        sub_1B00C70(p_mainText, (int32_t)v36, v37, v38);
       }
-      goto LABEL_25;
+      goto LABEL_33;
     }
     if ( Chars != 93 )
     {
-LABEL_19:
-      if ( (v23 & 1) != 0 )
+LABEL_15:
+      if ( (v16 & 1) != 0 )
       {
-        v44 = *v14;
-        v45 = System_Char__ToString((uint16_t)v63, 0LL);
-        v46 = (System_Int32_array **)System_String__Concat_44901936(v44, v45, 0LL);
-        *v14 = (System_String_o *)v46;
-        sub_B77560((BattleServantConfConponent_o *)(p_mainText + 1), v46, v47, v48, v49, v50, v51, v52);
-        v23 = 1;
+        v19 = (System_String_o *)p_rubyText->klass;
+        if ( !char_TypeInfo->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(char_TypeInfo);
+        v20 = System_Char__ToString((uint16_t)v40, 0LL);
+        v21 = System_String__Concat_60325748(v19, v20, 0LL);
+        p_rubyText->klass = (ServantStatusBattleListViewItem_c *)v21;
+        sub_1B00C70(p_rubyText, (int32_t)v21, v22, v23);
+        v16 = 1;
       }
       else
       {
-        v25 = *p_mainText;
-        v26 = System_Char__ToString((uint16_t)v63, 0LL);
-        v27 = (System_Int32_array **)System_String__Concat_44901936(v25, v26, 0LL);
-        *p_mainText = (struct System_String_o *)v27;
-        sub_B77560((BattleServantConfConponent_o *)p_mainText, v27, v28, v29, v30, v31, v32, v33);
-        v23 = 0;
+        v29 = (System_String_o *)p_mainText->klass;
+        if ( !char_TypeInfo->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(char_TypeInfo);
+        v30 = System_Char__ToString((uint16_t)v40, 0LL);
+        v31 = System_String__Concat_60325748(v29, v30, 0LL);
+        p_mainText->klass = (ServantStatusBattleListViewItem_c *)v31;
+        sub_1B00C70(p_mainText, (int32_t)v31, v32, v33);
+        v16 = 0;
       }
-      goto LABEL_25;
+      goto LABEL_33;
     }
-    if ( (v22 & 1) != 0 )
+    if ( (v15 & 1) != 0 )
     {
-      v23 = 0;
+      v16 = 0;
     }
     else
     {
-LABEL_23:
-      v53 = *p_mainText;
-      v54 = System_Char__ToString((uint16_t)v63, 0LL);
-      v55 = (System_Int32_array **)System_String__Concat_44901936(v53, v54, 0LL);
-      *p_mainText = (struct System_String_o *)v55;
-      sub_B77560((BattleServantConfConponent_o *)p_mainText, v55, v56, v57, v58, v59, v60, v61);
+LABEL_21:
+      v24 = (System_String_o *)p_mainText->klass;
+      if ( !char_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(char_TypeInfo);
+      v25 = System_Char__ToString((uint16_t)v40, 0LL);
+      v26 = System_String__Concat_60325748(v24, v25, 0LL);
+      p_mainText->klass = (ServantStatusBattleListViewItem_c *)v26;
+      sub_1B00C70(p_mainText, (int32_t)v26, v27, v28);
     }
-    v22 = 0;
-    goto LABEL_25;
+    v15 = 0;
+    goto LABEL_33;
   }
   return 0;
 }
@@ -183,139 +169,175 @@ System_String_o *__fastcall WarBoardOverlayEffectComponent__GetFormalText(
         System_String_o *labelText,
         const MethodInfo *method)
 {
-  System_String_o *v5; // x22
-  System_Collections_Generic_List_char__o *v6; // x21
-  System_String_o *Chars; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
   __int64 v8; // x1
-  int32_t v9; // w23
-  char v10; // w28
-  char v11; // w19
-  char v12; // w26
-  System_String_o *v13; // x24
-  System_String_o *v14; // x0
-  System_String_o *v15; // x0
-  System_String_o *v16; // x1
-  System_String_o *v17; // x0
-  const MethodInfo *v18; // x2
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  System_String_o *v12; // x22
+  System_Collections_Generic_List_char__o *v13; // x21
+  System_String_o *Chars; // x0
+  __int64 v15; // x1
+  int32_t v16; // w23
+  char v17; // w29
+  char v18; // w19
+  char v19; // w26
+  System_String_o *v20; // x24
+  System_String_o *v21; // x0
+  System_String_o *v22; // x0
+  struct System_Char_array *items; // x8
+  _QWORD *v24; // x9
+  __int64 size; // x10
+  System_String_o *v26; // x1
+  System_String_o *v27; // x0
+  const MethodInfo *v28; // x2
   struct UILabel_o *mainLabel; // x8
-  WarBoardOverlayEffectComponent_o *v21; // [xsp+0h] [xbp-60h]
-  __int16 v22[2]; // [xsp+Ch] [xbp-54h] BYREF
+  WarBoardOverlayEffectComponent_o *v31; // [xsp+0h] [xbp-70h]
+  __int16 v32[2]; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_438AEC4 & 1) == 0 )
+  if ( (byte_48E0321 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_char__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_char___ctor__);
-    sub_B775C4(&System_Collections_Generic_List_char__TypeInfo);
-    sub_B775C4(&StringLiteral_15928/*"[#"*/);
-    sub_B775C4(&StringLiteral_1252/*":"*/);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    sub_B775C4(&StringLiteral_16162/*"]"*/);
-    byte_438AEC4 = 1;
+    sub_1B00CCC(&char_TypeInfo, labelText);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_char__Add__, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_char___ctor__, v6);
+    sub_1B00CCC(&System_Collections_Generic_List_char__TypeInfo, v7);
+    sub_1B00CCC(&StringLiteral_15593/*"[#"*/, v8);
+    sub_1B00CCC(&StringLiteral_1540/*":"*/, v9);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v10);
+    sub_1B00CCC(&StringLiteral_15837/*"]"*/, v11);
+    byte_48E0321 = 1;
   }
-  v22[0] = 0;
-  v5 = (System_String_o *)StringLiteral_1/*""*/;
-  v6 = (System_Collections_Generic_List_char__o *)sub_B77694(System_Collections_Generic_List_char__TypeInfo);
+  v12 = (System_String_o *)StringLiteral_1/*""*/;
+  v32[0] = 0;
+  v13 = (System_Collections_Generic_List_char__o *)sub_1B00F18(System_Collections_Generic_List_char__TypeInfo);
   System_Collections_Generic_List_char____ctor(
-    v6,
-    (const MethodInfo_30A5324 *)Method_System_Collections_Generic_List_char___ctor__);
+    v13,
+    (const MethodInfo_337D1E0 *)Method_System_Collections_Generic_List_char___ctor__);
   if ( !labelText )
-    goto LABEL_34;
-  v21 = this;
-  if ( labelText->fields.m_stringLength >= 1 )
+    goto LABEL_42;
+  v31 = this;
+  if ( labelText->fields._stringLength >= 1 )
   {
-    v9 = 0;
-    v10 = 0;
-    v11 = 0;
-    v12 = 1;
-    v13 = v5;
+    v16 = 0;
+    v17 = 0;
+    v18 = 0;
+    v19 = 1;
+    v20 = v12;
     while ( 1 )
     {
-      v22[0] = System_String__get_Chars(labelText, v9, 0LL);
-      v14 = System_Char__ToString((uint16_t)v22, 0LL);
-      v5 = System_String__Concat_44901936(v5, v14, 0LL);
-      if ( (v11 & 1) != 0 )
+      v32[0] = System_String__get_Chars(labelText, v16, 0LL);
+      if ( !char_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(char_TypeInfo);
+      v21 = System_Char__ToString((uint16_t)v32, 0LL);
+      v12 = System_String__Concat_60325748(v12, v21, 0LL);
+      if ( (v18 & 1) != 0 )
       {
-        v22[0] = System_String__get_Chars(labelText, v9, 0LL);
-        v15 = System_Char__ToString((uint16_t)v22, 0LL);
-        v13 = System_String__Concat_44901936(v13, v15, 0LL);
+        v32[0] = System_String__get_Chars(labelText, v16, 0LL);
+        if ( !char_TypeInfo->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(char_TypeInfo);
+        v22 = System_Char__ToString((uint16_t)v32, 0LL);
+        v20 = System_String__Concat_60325748(v20, v22, 0LL);
       }
-      Chars = (System_String_o *)System_String__get_Chars(labelText, v9, 0LL);
-      if ( !v6 )
-        goto LABEL_34;
-      System_Collections_Generic_List_char___Add(
-        v6,
-        (uint16_t)Chars,
-        (const MethodInfo_30A6080 *)Method_System_Collections_Generic_List_char__Add__);
-      if ( System_String__get_Chars(labelText, v9, 0LL) == 91 && System_String__get_Chars(labelText, v9 + 1, 0LL) == 35 )
+      Chars = (System_String_o *)System_String__get_Chars(labelText, v16, 0LL);
+      if ( !v13 )
+        goto LABEL_42;
+      items = v13->fields._items;
+      v24 = Method_System_Collections_Generic_List_char__Add__;
+      ++v13->fields._version;
+      if ( !items )
+        goto LABEL_42;
+      size = v13->fields._size;
+      if ( (unsigned int)size >= items->max_length )
       {
-        v12 = 0;
+        System_Collections_Generic_List_char___AddWithResize(
+          v13,
+          (uint16_t)Chars,
+          *(const MethodInfo_337DA34 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
       }
       else
       {
-        Chars = (System_String_o *)System_String__get_Chars(labelText, v9, 0LL);
-        if ( (unsigned __int16)Chars != 35 || (v10 & 1) == 0 )
+        v13->fields._size = size + 1;
+        items->m_Items[size + 2] = (unsigned __int16)Chars;
+      }
+      if ( System_String__get_Chars(labelText, v16, 0LL) == 91
+        && System_String__get_Chars(labelText, v16 + 1, 0LL) == 35 )
+      {
+        v19 = 0;
+      }
+      else
+      {
+        Chars = (System_String_o *)System_String__get_Chars(labelText, v16, 0LL);
+        if ( (unsigned __int16)Chars != 35 || (v17 & 1) == 0 )
         {
-          if ( ((unsigned __int8)v10 & (System_String__get_Chars(labelText, v9, 0LL) == 58)) != 0 )
+          if ( ((unsigned __int8)v17 & (System_String__get_Chars(labelText, v16, 0LL) == 58)) != 0 )
           {
-            v10 = 1;
-            v11 = 1;
+            v17 = 1;
+            v18 = 1;
           }
           else
           {
-            Chars = (System_String_o *)System_String__get_Chars(labelText, v9, 0LL);
-            if ( (unsigned __int16)Chars == 93 && (v10 & 1) != 0 )
+            Chars = (System_String_o *)System_String__get_Chars(labelText, v16, 0LL);
+            if ( (unsigned __int16)Chars == 93 && (v17 & 1) != 0 )
             {
-              if ( (v11 & 1) != 0 )
+              if ( (v18 & 1) != 0 )
               {
-                Chars = System_String__Concat_44901936((System_String_o *)StringLiteral_1252/*":"*/, v13, 0LL);
-                if ( !v5 )
-                  goto LABEL_34;
-                v16 = Chars;
+                Chars = System_String__Concat_60325748((System_String_o *)StringLiteral_1540/*":"*/, v20, 0LL);
+                if ( !v12 )
+                  goto LABEL_42;
+                v26 = Chars;
               }
               else
               {
-                if ( !v5 )
-                  goto LABEL_34;
-                v16 = (System_String_o *)StringLiteral_16162/*"]"*/;
+                if ( !v12 )
+                  goto LABEL_42;
+                v26 = (System_String_o *)StringLiteral_15837/*"]"*/;
               }
-              v17 = System_String__Replace_44909172(v5, v16, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-              v13 = (System_String_o *)StringLiteral_1/*""*/;
-              v5 = v17;
-              v10 = 0;
-              v11 = 0;
+              v27 = System_String__Replace_60345368(v12, v26, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+              v20 = (System_String_o *)StringLiteral_1/*""*/;
+              v12 = v27;
+              v17 = 0;
+              v18 = 0;
             }
           }
-          goto LABEL_25;
+          goto LABEL_33;
         }
-        if ( !v5 )
-          goto LABEL_34;
-        v5 = System_String__Replace_44909172(
-               v5,
-               (System_String_o *)StringLiteral_15928/*"[#"*/,
-               (System_String_o *)StringLiteral_1/*""*/,
-               0LL);
+        if ( !v12 )
+          goto LABEL_42;
+        v12 = System_String__Replace_60345368(
+                v12,
+                (System_String_o *)StringLiteral_15593/*"[#"*/,
+                (System_String_o *)StringLiteral_1/*""*/,
+                0LL);
       }
-      v10 = 1;
-LABEL_25:
-      if ( ++v9 >= labelText->fields.m_stringLength )
-        goto LABEL_28;
+      v17 = 1;
+LABEL_33:
+      if ( ++v16 >= labelText->fields._stringLength )
+        goto LABEL_36;
     }
   }
-  v12 = 1;
-LABEL_28:
-  Chars = (System_String_o *)v21->fields.mainLabel;
+  v19 = 1;
+LABEL_36:
+  Chars = (System_String_o *)v31->fields.mainLabel;
   if ( !Chars )
-    goto LABEL_34;
-  Chars = (System_String_o *)WrapControlText__textAdjust((UILabel_o *)Chars, v5, (int32_t)Chars[17].monitor, 0, 0, 0LL);
-  if ( (v12 & 1) != 0 )
+    goto LABEL_42;
+  Chars = (System_String_o *)WrapControlText__textAdjust(
+                               (UILabel_o *)Chars,
+                               v12,
+                               Chars[17].fields._stringLength,
+                               0,
+                               0,
+                               0LL);
+  if ( (v19 & 1) != 0 )
   {
-    mainLabel = v21->fields.mainLabel;
+    mainLabel = v31->fields.mainLabel;
     if ( mainLabel )
       return mainLabel->fields.mText;
-LABEL_34:
-    sub_B7769C(Chars, v8);
+LABEL_42:
+    sub_1B00F28(Chars, v15);
   }
-  return WarBoardOverlayEffectComponent__TextFormalAdjust(v21, v6, v18);
+  return WarBoardOverlayEffectComponent__TextFormalAdjust(v31, v13, v28);
 }
 
 
@@ -357,26 +379,20 @@ void __fastcall WarBoardOverlayEffectComponent__Init(
   const MethodInfo *v11; // x2
   struct UILabel_o *v12; // x0
 
-  if ( (byte_438AEC2 & 1) == 0 )
+  if ( (byte_48E031F & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438AEC2 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, text);
+    byte_48E031F = 1;
   }
   mainLabel = (UnityEngine_Object_o *)this->fields.mainLabel;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   v6 = UnityEngine_Object__op_Inequality(mainLabel, 0LL, 0LL);
   if ( text && v6 )
   {
     rubyLabel = (UnityEngine_Object_o *)this->fields.rubyLabel;
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
     if ( UnityEngine_Object__op_Inequality(rubyLabel, 0LL, 0LL)
       && (FormalText = WarBoardOverlayEffectComponent__GetFormalText(this, text, v9),
           WarBoardOverlayEffectComponent__CheckRubyText(this, FormalText, v11)) )
@@ -387,7 +403,7 @@ void __fastcall WarBoardOverlayEffectComponent__Init(
     {
       v12 = this->fields.mainLabel;
       if ( !v12 )
-        sub_B7769C(0LL, v8);
+        sub_1B00F28(0LL, v8);
       WrapControlText__fontSizeAdjust(v12, text, v12->fields.mFontSize, 0LL);
     }
   }
@@ -429,11 +445,11 @@ void __fastcall WarBoardOverlayEffectComponent__SetMainObject(
     mainLabel = this->fields.rubyLabel;
     if ( mainLabel )
     {
-      UILabel__SetCondensedScale_41780892(mainLabel, v6, 0LL);
+      UILabel__SetCondensedScale_45902176(mainLabel, v6, 0LL);
       return;
     }
 LABEL_10:
-    sub_B7769C(mainLabel, method);
+    sub_1B00F28(mainLabel, method);
   }
 }
 
@@ -444,178 +460,196 @@ System_String_o *__fastcall WarBoardOverlayEffectComponent__TextFormalAdjust(
         const MethodInfo *method)
 {
   WarBoardOverlayEffectComponent_o *v4; // x20
-  int32_t size; // w8
-  System_String_o *v6; // x22
-  unsigned int v7; // w24
-  int32_t v8; // w21
-  struct UILabel_o *v9; // x8
-  System_String_o *v10; // x0
-  struct UILabel_o *v11; // x8
-  struct System_String_o *v12; // x8
-  System_String_o *v13; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  System_String_o *v8; // x22
+  int32_t v9; // w23
+  int32_t v10; // w21
   struct UILabel_o *mainLabel; // x8
-  int v15; // w26
-  System_String_o *v16; // x0
-  struct UILabel_o *v17; // x8
+  unsigned __int16 v12; // w24
+  uint16_t Chars; // w25
+  System_String_o *v14; // x0
+  struct UILabel_o *v15; // x8
   struct System_String_o *mText; // x9
-  int32_t v19; // w8
-  unsigned int v20; // w25
-  struct UILabel_o *v21; // x8
-  int v22; // w26
-  struct UILabel_o *v23; // x8
+  int32_t v17; // w24
+  struct UILabel_o *v18; // x8
+  unsigned __int16 v19; // w26
+  struct UILabel_o *v20; // x8
+  System_String_o *v21; // x0
+  struct UILabel_o *v22; // x8
+  struct System_String_o *v23; // x8
   System_String_o *v24; // x0
   struct UILabel_o *v25; // x8
-  struct System_String_o *v26; // x8
-  System_String_o *v27; // x0
-  __int16 v29[2]; // [xsp+Ch] [xbp-44h] BYREF
+  System_String_o *v26; // x0
+  struct UILabel_o *v27; // x8
+  struct System_String_o *v28; // x8
+  System_String_o *v29; // x0
+  __int16 v31[2]; // [xsp+Ch] [xbp-54h] BYREF
 
   v4 = this;
-  if ( (byte_438AEC5 & 1) == 0 )
+  if ( (byte_48E0322 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_char__get_Count__);
-    sub_B775C4(&Method_System_Collections_Generic_List_char__get_Item__);
-    this = (WarBoardOverlayEffectComponent_o *)sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438AEC5 = 1;
+    sub_1B00CCC(&char_TypeInfo, localMainTextList);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_char__get_Count__, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_char__get_Item__, v6);
+    this = (WarBoardOverlayEffectComponent_o *)sub_1B00CCC(&StringLiteral_1/*""*/, v7);
+    byte_48E0322 = 1;
   }
-  v29[0] = 0;
+  v31[0] = 0;
   if ( !localMainTextList )
-LABEL_53:
-    sub_B7769C(this, localMainTextList);
-  size = localMainTextList->fields._size;
-  v6 = (System_String_o *)StringLiteral_1/*""*/;
-  if ( size >= 1 )
+LABEL_52:
+    sub_1B00F28(this, localMainTextList);
+  v8 = (System_String_o *)StringLiteral_1/*""*/;
+  if ( localMainTextList->fields._size >= 1 )
   {
-    v7 = 0;
-    v8 = 0;
+    v9 = 0;
+    v10 = 0;
     do
     {
-      if ( size <= v7 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
+      this = (WarBoardOverlayEffectComponent_o *)System_Collections_Generic_List_char___get_Item(
+                                                   localMainTextList,
+                                                   v9,
+                                                   (const MethodInfo_337D744 *)Method_System_Collections_Generic_List_char__get_Item__);
       mainLabel = v4->fields.mainLabel;
       if ( !mainLabel )
-        goto LABEL_53;
+        goto LABEL_52;
+      v12 = (unsigned __int16)this;
       this = (WarBoardOverlayEffectComponent_o *)mainLabel->fields.mText;
       if ( !this )
-        goto LABEL_53;
-      v15 = localMainTextList->fields._items->m_Items[v7 + 2];
-      this = (WarBoardOverlayEffectComponent_o *)System_String__get_Chars((System_String_o *)this, v8, 0LL);
-      if ( localMainTextList->fields._size <= v7 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-      if ( v15 == (unsigned __int16)this )
+        goto LABEL_52;
+      Chars = System_String__get_Chars((System_String_o *)this, v10, 0LL);
+      this = (WarBoardOverlayEffectComponent_o *)System_Collections_Generic_List_char___get_Item(
+                                                   localMainTextList,
+                                                   v9,
+                                                   (const MethodInfo_337D744 *)Method_System_Collections_Generic_List_char__get_Item__);
+      if ( v12 == Chars )
       {
-        v29[0] = localMainTextList->fields._items->m_Items[v7 + 2];
-        v16 = System_Char__ToString((uint16_t)v29, 0LL);
-        this = (WarBoardOverlayEffectComponent_o *)System_String__Concat_44901936(v6, v16, 0LL);
-        v17 = v4->fields.mainLabel;
-        if ( !v17 )
-          goto LABEL_53;
-        mText = v17->fields.mText;
+        v31[0] = (__int16)this;
+        if ( !char_TypeInfo->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(char_TypeInfo);
+        v14 = System_Char__ToString((uint16_t)v31, 0LL);
+        this = (WarBoardOverlayEffectComponent_o *)System_String__Concat_60325748(v8, v14, 0LL);
+        v15 = v4->fields.mainLabel;
+        if ( !v15 )
+          goto LABEL_52;
+        mText = v15->fields.mText;
         if ( !mText )
-          goto LABEL_53;
-        v6 = (System_String_o *)this;
-        if ( v8 < mText->fields.m_stringLength - 1 )
-          ++v8;
+          goto LABEL_52;
+        v8 = (System_String_o *)this;
+        if ( v10 < mText->fields._stringLength - 1 )
+          ++v10;
       }
       else
       {
-        if ( localMainTextList->fields._items->m_Items[v7 + 2] != 10 )
+        if ( (unsigned __int16)this != 10 )
         {
-          if ( localMainTextList->fields._size <= v7 )
-            System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-          v29[0] = localMainTextList->fields._items->m_Items[v7 + 2];
-          v27 = System_Char__ToString((uint16_t)v29, 0LL);
-          this = (WarBoardOverlayEffectComponent_o *)System_String__Concat_44901936(v6, v27, 0LL);
-          v6 = (System_String_o *)this;
-          goto LABEL_51;
+          v31[0] = System_Collections_Generic_List_char___get_Item(
+                     localMainTextList,
+                     v9,
+                     (const MethodInfo_337D744 *)Method_System_Collections_Generic_List_char__get_Item__);
+          if ( !char_TypeInfo->_2.cctor_finished )
+            j_il2cpp_runtime_class_init_0(char_TypeInfo);
+          v24 = System_Char__ToString((uint16_t)v31, 0LL);
+          v8 = System_String__Concat_60325748(v8, v24, 0LL);
+          goto LABEL_36;
         }
-        v17 = v4->fields.mainLabel;
-        if ( !v17 )
-          goto LABEL_53;
+        v15 = v4->fields.mainLabel;
+        if ( !v15 )
+          goto LABEL_52;
       }
-      this = (WarBoardOverlayEffectComponent_o *)v17->fields.mText;
+      this = (WarBoardOverlayEffectComponent_o *)v15->fields.mText;
       if ( !this )
-        goto LABEL_53;
-      this = (WarBoardOverlayEffectComponent_o *)System_String__get_Chars((System_String_o *)this, v8, 0LL);
+        goto LABEL_52;
+      this = (WarBoardOverlayEffectComponent_o *)System_String__get_Chars((System_String_o *)this, v10, 0LL);
       if ( (unsigned __int16)this == 10 )
       {
-        v19 = localMainTextList->fields._size;
-        v20 = v7 + 1;
-        if ( (int)(v7 + 1) >= v19 )
-          goto LABEL_41;
-        if ( v19 <= v20 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-        v21 = v4->fields.mainLabel;
-        if ( !v21 )
-          goto LABEL_53;
-        this = (WarBoardOverlayEffectComponent_o *)v21->fields.mText;
+        v17 = v9 + 1;
+        if ( v9 + 1 >= localMainTextList->fields._size )
+          goto LABEL_24;
+        this = (WarBoardOverlayEffectComponent_o *)System_Collections_Generic_List_char___get_Item(
+                                                     localMainTextList,
+                                                     v17,
+                                                     (const MethodInfo_337D744 *)Method_System_Collections_Generic_List_char__get_Item__);
+        v18 = v4->fields.mainLabel;
+        if ( !v18 )
+          goto LABEL_52;
+        v19 = (unsigned __int16)this;
+        this = (WarBoardOverlayEffectComponent_o *)v18->fields.mText;
         if ( !this )
-          goto LABEL_53;
-        v22 = localMainTextList->fields._items->m_Items[v20 + 2];
-        this = (WarBoardOverlayEffectComponent_o *)System_String__get_Chars((System_String_o *)this, v8 + 1, 0LL);
-        if ( v22 == (unsigned __int16)this )
+          goto LABEL_52;
+        this = (WarBoardOverlayEffectComponent_o *)System_String__get_Chars((System_String_o *)this, v10 + 1, 0LL);
+        if ( v19 == (unsigned __int16)this )
         {
-LABEL_41:
-          v23 = v4->fields.mainLabel;
-          if ( !v23 )
-            goto LABEL_53;
-          this = (WarBoardOverlayEffectComponent_o *)v23->fields.mText;
+LABEL_24:
+          v20 = v4->fields.mainLabel;
+          if ( !v20 )
+            goto LABEL_52;
+          this = (WarBoardOverlayEffectComponent_o *)v20->fields.mText;
           if ( !this )
-            goto LABEL_53;
-          v29[0] = System_String__get_Chars((System_String_o *)this, v8, 0LL);
-          v24 = System_Char__ToString((uint16_t)v29, 0LL);
-          this = (WarBoardOverlayEffectComponent_o *)System_String__Concat_44901936(v6, v24, 0LL);
-          v25 = v4->fields.mainLabel;
-          if ( !v25 )
-            goto LABEL_53;
-          v26 = v25->fields.mText;
-          if ( !v26 )
-            goto LABEL_53;
-          v6 = (System_String_o *)this;
-          if ( v8 < v26->fields.m_stringLength - 1 )
-            ++v8;
+            goto LABEL_52;
+          v31[0] = System_String__get_Chars((System_String_o *)this, v10, 0LL);
+          if ( !char_TypeInfo->_2.cctor_finished )
+            j_il2cpp_runtime_class_init_0(char_TypeInfo);
+          v21 = System_Char__ToString((uint16_t)v31, 0LL);
+          this = (WarBoardOverlayEffectComponent_o *)System_String__Concat_60325748(v8, v21, 0LL);
+          v22 = v4->fields.mainLabel;
+          if ( !v22 )
+            goto LABEL_52;
+          v23 = v22->fields.mText;
+          if ( !v23 )
+            goto LABEL_52;
+          v8 = (System_String_o *)this;
+          if ( v10 < v23->fields._stringLength - 1 )
+            ++v10;
         }
         else
         {
-          if ( localMainTextList->fields._size <= v20 )
-            System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-          if ( localMainTextList->fields._items->m_Items[v20 + 2] == 10 )
+          this = (WarBoardOverlayEffectComponent_o *)System_Collections_Generic_List_char___get_Item(
+                                                       localMainTextList,
+                                                       v17,
+                                                       (const MethodInfo_337D744 *)Method_System_Collections_Generic_List_char__get_Item__);
+          if ( (unsigned __int16)this == 10 )
           {
-            v9 = v4->fields.mainLabel;
-            if ( !v9 )
-              goto LABEL_53;
-            this = (WarBoardOverlayEffectComponent_o *)v9->fields.mText;
+            v25 = v4->fields.mainLabel;
+            if ( !v25 )
+              goto LABEL_52;
+            this = (WarBoardOverlayEffectComponent_o *)v25->fields.mText;
             if ( !this )
-              goto LABEL_53;
-            v29[0] = System_String__get_Chars((System_String_o *)this, v8, 0LL);
-            v10 = System_Char__ToString((uint16_t)v29, 0LL);
-            this = (WarBoardOverlayEffectComponent_o *)System_String__Concat_44901936(v6, v10, 0LL);
-            v11 = v4->fields.mainLabel;
-            if ( !v11 )
-              goto LABEL_53;
-            v12 = v11->fields.mText;
-            if ( !v12 )
-              goto LABEL_53;
-            v6 = (System_String_o *)this;
-            if ( v8 < v12->fields.m_stringLength - 1 )
-              ++v8;
+              goto LABEL_52;
+            v31[0] = System_String__get_Chars((System_String_o *)this, v10, 0LL);
+            if ( !char_TypeInfo->_2.cctor_finished )
+              j_il2cpp_runtime_class_init_0(char_TypeInfo);
+            v26 = System_Char__ToString((uint16_t)v31, 0LL);
+            this = (WarBoardOverlayEffectComponent_o *)System_String__Concat_60325748(v8, v26, 0LL);
+            v27 = v4->fields.mainLabel;
+            if ( !v27 )
+              goto LABEL_52;
+            v28 = v27->fields.mText;
+            if ( !v28 )
+              goto LABEL_52;
+            v8 = (System_String_o *)this;
+            if ( v10 < v28->fields._stringLength - 1 )
+              ++v10;
           }
           else
           {
-            if ( localMainTextList->fields._size <= v20 )
-              System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-            v29[0] = localMainTextList->fields._items->m_Items[v20 + 2];
-            v13 = System_Char__ToString((uint16_t)v29, 0LL);
-            this = (WarBoardOverlayEffectComponent_o *)System_String__Concat_44901936(v6, v13, 0LL);
-            v6 = (System_String_o *)this;
-            ++v7;
+            v31[0] = System_Collections_Generic_List_char___get_Item(
+                       localMainTextList,
+                       v17,
+                       (const MethodInfo_337D744 *)Method_System_Collections_Generic_List_char__get_Item__);
+            if ( !char_TypeInfo->_2.cctor_finished )
+              j_il2cpp_runtime_class_init_0(char_TypeInfo);
+            v29 = System_Char__ToString((uint16_t)v31, 0LL);
+            v8 = System_String__Concat_60325748(v8, v29, 0LL);
+            ++v9;
           }
         }
       }
-LABEL_51:
-      size = localMainTextList->fields._size;
-      ++v7;
+LABEL_36:
+      ++v9;
     }
-    while ( (int)v7 < size );
+    while ( v9 < localMainTextList->fields._size );
   }
-  return v6;
+  return v8;
 }

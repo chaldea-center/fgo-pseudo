@@ -1,6 +1,6 @@
 void __fastcall UVScroll___ctor(UVScroll_o *this, const MethodInfo *method)
 {
-  *(_QWORD *)&this->fields.m_Offset.fields.y = 0LL;
+  this->fields.m_Offset = 0LL;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -20,70 +20,73 @@ void __fastcall UVScroll__Update(UVScroll_o *this, const MethodInfo *method)
 
 void __fastcall UVScroll__UpdateUV(UVScroll_o *this, const MethodInfo *method)
 {
-  UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v3; // x1
   __int64 v4; // x1
-  UnityEngine_Renderer_o *Component_srcLineSprite; // x20
-  UnityEngine_Material_o *v6; // x21
+  __int64 v5; // x1
+  __int64 v6; // x1
+  UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v8; // x1
+  Il2CppObject *Component_object; // x20
+  UnityEngine_Material_o *v10; // x21
   UnityEngine_Object_o *sharedMaterial; // x21
-  UnityEngine_Material_o *v8; // x22
+  UnityEngine_Material_o *v12; // x22
 
-  if ( (byte_438F809 & 1) == 0 )
+  if ( (byte_48E1760 & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_Renderer___);
-    sub_B775C4(&UnityEngine_Material_TypeInfo);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&StringLiteral_16311/*"_MainTex"*/);
-    byte_438F809 = 1;
+    sub_1B00CCC(&UnityEngine_Application_TypeInfo, method);
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_Renderer___, v3);
+    sub_1B00CCC(&UnityEngine_Material_TypeInfo, v4);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v5);
+    sub_1B00CCC(&StringLiteral_16030/*"_MainTex"*/, v6);
+    byte_48E1760 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    goto LABEL_19;
-  Component_srcLineSprite = (UnityEngine_Renderer_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                                        gameObject,
-                                                        (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+    goto LABEL_21;
+  Component_object = UnityEngine_GameObject__GetComponent_object_(
+                       gameObject,
+                       (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_srcLineSprite, 0LL, 0LL) )
+  if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
   {
+    if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_Application__get_isPlaying(0LL);
-    if ( !Component_srcLineSprite )
-      goto LABEL_19;
+    if ( !Component_object )
+      goto LABEL_21;
     if ( ((unsigned __int8)gameObject & 1) != 0 )
     {
-      gameObject = (UnityEngine_GameObject_o *)UnityEngine_Renderer__get_material(Component_srcLineSprite, 0LL);
-      v6 = (UnityEngine_Material_o *)gameObject;
+      gameObject = (UnityEngine_GameObject_o *)UnityEngine_Renderer__get_material(
+                                                 (UnityEngine_Renderer_o *)Component_object,
+                                                 0LL);
+      v10 = (UnityEngine_Material_o *)gameObject;
       if ( gameObject )
-        goto LABEL_11;
-      goto LABEL_19;
-    }
-    sharedMaterial = (UnityEngine_Object_o *)UnityEngine_Renderer__get_sharedMaterial(Component_srcLineSprite, 0LL);
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
-    if ( !UnityEngine_Object__op_Equality(sharedMaterial, 0LL, 0LL) )
-    {
-      v8 = UnityEngine_Renderer__get_sharedMaterial(Component_srcLineSprite, 0LL);
-      v6 = (UnityEngine_Material_o *)sub_B77694(UnityEngine_Material_TypeInfo);
-      UnityEngine_Material___ctor_41464292(v6, v8, 0LL);
-      if ( v6 )
       {
-LABEL_11:
-        UnityEngine_Material__SetTextureOffset(
-          v6,
-          (System_String_o *)StringLiteral_16311/*"_MainTex"*/,
-          *(UnityEngine_Vector2_o *)&this->fields.m_Offset.fields.y,
-          0LL);
+LABEL_12:
+        UnityEngine_Material__SetTextureOffset(v10, (System_String_o *)StringLiteral_16030/*"_MainTex"*/, this->fields.m_Offset, 0LL);
+        if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
         if ( !UnityEngine_Application__get_isPlaying(0LL) )
-          UnityEngine_Renderer__set_sharedMaterial(Component_srcLineSprite, v6, 0LL);
+          UnityEngine_Renderer__set_sharedMaterial((UnityEngine_Renderer_o *)Component_object, v10, 0LL);
         return;
       }
-LABEL_19:
-      sub_B7769C(gameObject, v4);
+LABEL_21:
+      sub_1B00F28(gameObject, v8);
+    }
+    sharedMaterial = (UnityEngine_Object_o *)UnityEngine_Renderer__get_sharedMaterial(
+                                               (UnityEngine_Renderer_o *)Component_object,
+                                               0LL);
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !UnityEngine_Object__op_Equality(sharedMaterial, 0LL, 0LL) )
+    {
+      v12 = UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)Component_object, 0LL);
+      v10 = (UnityEngine_Material_o *)sub_1B00F18(UnityEngine_Material_TypeInfo);
+      UnityEngine_Material___ctor_67941016(v10, v12, 0LL);
+      if ( v10 )
+        goto LABEL_12;
+      goto LABEL_21;
     }
   }
 }

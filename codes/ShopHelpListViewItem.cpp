@@ -4,16 +4,12 @@ void __fastcall ShopHelpListViewItem___ctor(
         ShopHelpItemInfo_o *info,
         const MethodInfo *method)
 {
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  int32_t v6; // w2
+  int32_t v7; // w3
 
-  ListViewItem___ctor_24167012((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_39415512((ListViewItem_o *)this, index, 0LL);
   this->fields.info = info;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.info, (System_Int32_array **)info, v6, v7, v8, v9, v10, v11);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.info, (int32_t)info, v6, v7);
 }
 
 
@@ -23,7 +19,7 @@ System_String_o *__fastcall ShopHelpListViewItem__get_ImageName(ShopHelpListView
 
   info = this->fields.info;
   if ( !info )
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   return info->fields._ImageName_k__BackingField;
 }
 
@@ -41,20 +37,17 @@ System_String_o *__fastcall ShopHelpListViewItem__get_InfoText(ShopHelpListViewI
   System_String_o *TextCode_k__BackingField; // x19
 
   v2 = this;
-  if ( (byte_438CF54 & 1) == 0 )
+  if ( (byte_48DEF6B & 1) == 0 )
   {
-    this = (ShopHelpListViewItem_o *)sub_B775C4(&LocalizationManager_TypeInfo);
-    byte_438CF54 = 1;
+    this = (ShopHelpListViewItem_o *)sub_1B00CCC(&LocalizationManager_TypeInfo, method);
+    byte_48DEF6B = 1;
   }
   info = v2->fields.info;
   if ( !info )
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   TextCode_k__BackingField = info->fields._TextCode_k__BackingField;
-  if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !LocalizationManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  }
   return LocalizationManager__Get(TextCode_k__BackingField, 0LL);
 }
 
@@ -65,7 +58,7 @@ bool __fastcall ShopHelpListViewItem__get_IsStone(ShopHelpListViewItem_o *this, 
 
   info = this->fields.info;
   if ( !info )
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   return info->fields._Kind_k__BackingField == 6;
 }
 
@@ -76,6 +69,6 @@ int32_t __fastcall ShopHelpListViewItem__get_LineCount(ShopHelpListViewItem_o *t
 
   info = this->fields.info;
   if ( !info )
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   return info->fields._Line_k__BackingField;
 }

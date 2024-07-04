@@ -6,7 +6,7 @@ void __fastcall SyncTransformComponent___ctor(SyncTransformComponent_o *this, co
 
 void __fastcall SyncTransformComponent__LateUpdate(SyncTransformComponent_o *this, const MethodInfo *method)
 {
-  if ( LOBYTE(this->fields.child) )
+  if ( this->fields.isEnable )
     SyncTransformComponent__sync(this, method);
 }
 
@@ -16,19 +16,20 @@ void __fastcall SyncTransformComponent__setChild(
         UnityEngine_Transform_o *trans,
         const MethodInfo *method)
 {
-  const MethodInfo *v4; // x1
+  int32_t v3; // w3
+  const MethodInfo *v5; // x1
 
-  this[1].klass = (SyncTransformComponent_c *)trans;
-  sub_B77560(&this[1]);
-  LOBYTE(this->fields.child) = 1;
-  SyncTransformComponent__sync(this, v4);
+  this->fields.child = trans;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.child, (int32_t)trans, (int32_t)method, v3);
+  this->fields.isEnable = 1;
+  SyncTransformComponent__sync(this, v5);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 void __fastcall SyncTransformComponent__sync(SyncTransformComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_Object_o *klass; // x20
+  UnityEngine_Object_o *child; // x20
   __int64 v4; // x1
   UnityEngine_Component_o *gameObject; // x0
   UnityEngine_Transform_o *transform; // x20
@@ -38,42 +39,39 @@ void __fastcall SyncTransformComponent__sync(SyncTransformComponent_o *this, con
   UnityEngine_Transform_o *v15; // x20
   int v16; // s0
 
-  if ( (byte_43882E4 & 1) == 0 )
+  if ( (byte_48E1E03 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_43882E4 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    byte_48E1E03 = 1;
   }
-  klass = (UnityEngine_Object_o *)this[1].klass;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  child = (UnityEngine_Object_o *)this->fields.child;
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  if ( UnityEngine_Object__op_Implicit(klass, 0LL) )
+  if ( UnityEngine_Object__op_Implicit(child, 0LL) )
   {
-    gameObject = (UnityEngine_Component_o *)this[1].klass;
+    gameObject = (UnityEngine_Component_o *)this->fields.child;
     if ( !gameObject )
-      goto LABEL_21;
+      goto LABEL_20;
     transform = UnityEngine_Component__get_transform(gameObject, 0LL);
     gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !gameObject )
-      goto LABEL_21;
+      goto LABEL_20;
     gameObject = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(
                                               (UnityEngine_GameObject_o *)gameObject,
                                               0LL);
     if ( !gameObject )
-      goto LABEL_21;
+      goto LABEL_20;
     *(UnityEngine_Vector3_o *)&v7 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)gameObject, 0LL);
     if ( !transform )
-      goto LABEL_21;
+      goto LABEL_20;
     UnityEngine_Transform__set_position(transform, *(UnityEngine_Vector3_o *)&v7, 0LL);
-    gameObject = (UnityEngine_Component_o *)this[1].klass;
+    gameObject = (UnityEngine_Component_o *)this->fields.child;
     if ( !gameObject )
-      goto LABEL_21;
+      goto LABEL_20;
     v10 = UnityEngine_Component__get_transform(gameObject, 0LL);
     gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !gameObject )
-      goto LABEL_21;
+      goto LABEL_20;
     gameObject = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(
                                               (UnityEngine_GameObject_o *)gameObject,
                                               0LL);
@@ -83,7 +81,7 @@ void __fastcall SyncTransformComponent__sync(SyncTransformComponent_o *this, con
                                                 0LL),
           !v10)
       || (UnityEngine_Transform__set_rotation(v10, *(UnityEngine_Quaternion_o *)&v11, 0LL),
-          (gameObject = (UnityEngine_Component_o *)this[1].klass) == 0LL)
+          (gameObject = (UnityEngine_Component_o *)this->fields.child) == 0LL)
       || (v15 = UnityEngine_Component__get_transform(gameObject, 0LL),
           (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(
                                                      (UnityEngine_Component_o *)this,
@@ -96,13 +94,13 @@ void __fastcall SyncTransformComponent__sync(SyncTransformComponent_o *this, con
                                              0LL),
           !v15) )
     {
-LABEL_21:
-      sub_B7769C(gameObject, v4);
+LABEL_20:
+      sub_1B00F28(gameObject, v4);
     }
     UnityEngine_Transform__set_localScale(v15, *(UnityEngine_Vector3_o *)&v16, 0LL);
   }
   else
   {
-    LOBYTE(this->fields.child) = 0;
+    this->fields.isEnable = 0;
   }
 }

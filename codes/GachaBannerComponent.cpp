@@ -6,140 +6,137 @@ void __fastcall GachaBannerComponent___ctor(GachaBannerComponent_o *this, const 
 
 void __fastcall GachaBannerComponent__OnClickDetail(GachaBannerComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x0
+  __int64 v3; // x1
   __int64 v4; // x1
+  __int64 v5; // x1
+  _QWORD *v6; // x0
+  System_Reflection_MethodBase_o *v7; // x0
+  __int64 v8; // x0
+  __int64 v9; // x1
   struct VaildGachaInfo_o *info; // x8
   System_String_o *detailUrl; // x19
-  System_String_o *v7; // x20
+  System_String_o *v12; // x20
 
-  if ( (byte_438F130 & 1) == 0 )
+  if ( (byte_48DF0AD & 1) == 0 )
   {
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&SoundManager_TypeInfo);
-    sub_B775C4(&WebViewManager_TypeInfo);
-    sub_B775C4(&StringLiteral_15660/*"WEB_VIEW_TITLE_SUMMON"*/);
-    byte_438F130 = 1;
+    sub_1B00CCC(&Method_GachaBannerComponent_OnClickDetail__, method);
+    sub_1B00CCC(&LocalizationManager_TypeInfo, v3);
+    sub_1B00CCC(&WebViewManager_TypeInfo, v4);
+    sub_1B00CCC(&StringLiteral_15323/*"WEB_VIEW_TITLE_SUMMON"*/, v5);
+    byte_48DF0AD = 1;
   }
-  if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  SoundManager__playSystemSe(0, 0LL);
+  v6 = Method_GachaBannerComponent_OnClickDetail__;
+  if ( (*((_BYTE *)Method_GachaBannerComponent_OnClickDetail__ + 83) & 2) != 0 )
+    v6 = (_QWORD *)sub_1B00CE4(Method_GachaBannerComponent_OnClickDetail__);
+  v7 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v6, v6[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v7, 0, 0LL);
   info = this->fields.info;
   if ( !info )
-    sub_B7769C(v3, v4);
+    sub_1B00F28(v8, v9);
   detailUrl = info->fields.detailUrl;
-  if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !LocalizationManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  }
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_15660/*"WEB_VIEW_TITLE_SUMMON"*/, 0LL);
-  if ( (BYTE3(WebViewManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !WebViewManager_TypeInfo->_2.cctor_finished )
-  {
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_15323/*"WEB_VIEW_TITLE_SUMMON"*/, 0LL);
+  if ( !WebViewManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(WebViewManager_TypeInfo);
-  }
-  WebViewManager__OpenView(v7, detailUrl, 0LL, 0LL);
+  WebViewManager__OpenView(v12, detailUrl, 0LL, 0LL);
 }
 
 
 void __fastcall GachaBannerComponent__UpdateDisplay(GachaBannerComponent_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
   int64_t info; // x0
-  char v4; // w20
-  UserGachaMaster_o *MasterData_WarQuestSelectionMaster; // x20
-  struct VaildGachaInfo_o *v6; // x8
-  System_String_o *v7; // x0
-  struct VaildGachaInfo_o *v8; // x8
-  System_String_o *v9; // x20
-  struct VaildGachaInfo_o *v10; // x8
-  Il2CppObject *v11; // x21
+  char v9; // w20
+  Il2CppObject *MasterData_object; // x20
+  struct VaildGachaInfo_o *v11; // x8
+  System_String_o *v12; // x0
+  struct VaildGachaInfo_o *v13; // x8
+  System_String_o *v14; // x20
+  struct VaildGachaInfo_o *v15; // x8
+  Il2CppObject *v16; // x21
   Il2CppObject *DateTimeDayOfWeek; // x0
-  UserGachaEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
+  UserGachaEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_438F12E & 1) == 0 )
+  if ( (byte_48DF0AB & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_UserGachaMaster___);
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B775C4(&StringLiteral_6991/*"GACHA_PC_MESSAGE"*/);
-    sub_B775C4(&StringLiteral_6992/*"GACHA_PC_MESSAGE_END"*/);
-    byte_438F12E = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_UserGachaMaster___, method);
+    sub_1B00CCC(&LocalizationManager_TypeInfo, v3);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v4);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    sub_1B00CCC(&StringLiteral_6809/*"GACHA_PC_MESSAGE"*/, v6);
+    sub_1B00CCC(&StringLiteral_6810/*"GACHA_PC_MESSAGE_END"*/, v7);
+    byte_48DF0AB = 1;
   }
   entity = 0LL;
   info = (int64_t)this->fields.info;
   if ( !info )
-    goto LABEL_29;
+    goto LABEL_27;
   info = VaildGachaInfo__HasFlag((VaildGachaInfo_o *)info, 2, 0LL);
   if ( !this->fields.pickupMessageParent )
-    goto LABEL_29;
-  v4 = info;
+    goto LABEL_27;
+  v9 = info;
   info = (int64_t)UnityEngine_GameObject__get_gameObject(this->fields.pickupMessageParent, 0LL);
   if ( !info )
-    goto LABEL_29;
-  if ( (v4 & 1) == 0 )
+    goto LABEL_27;
+  if ( (v9 & 1) == 0 )
   {
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)info, 0, 0LL);
     return;
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)info, 1, 0LL);
-  info = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  info = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !info )
-    goto LABEL_29;
-  MasterData_WarQuestSelectionMaster = (UserGachaMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                              (DataManager_o *)info,
-                                                              (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserGachaMaster___);
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+    goto LABEL_27;
+  MasterData_object = DataManager__GetMasterData_object_(
+                        (DataManager_o *)info,
+                        (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_UserGachaMaster___);
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
   info = NetworkManager__get_UserId(0LL);
-  v6 = this->fields.info;
-  if ( !v6 || !MasterData_WarQuestSelectionMaster )
-    goto LABEL_29;
-  if ( !UserGachaMaster__TryGetEntity(MasterData_WarQuestSelectionMaster, &entity, info, v6->fields.id, 0LL) )
-    goto LABEL_32;
+  v11 = this->fields.info;
+  if ( !v11 || !MasterData_object )
+    goto LABEL_27;
+  if ( !UserGachaMaster__TryGetEntity((UserGachaMaster_o *)MasterData_object, &entity, info, v11->fields.id, 0LL) )
+    goto LABEL_30;
   info = (int64_t)entity;
   if ( !entity )
-    goto LABEL_29;
+    goto LABEL_27;
   if ( !UserGachaEntity__HasStatus(entity, 2, 0LL) )
   {
-LABEL_32:
-    if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
+LABEL_30:
+    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    }
-    info = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_6991/*"GACHA_PC_MESSAGE"*/, 0LL);
-    v8 = this->fields.info;
-    if ( v8 )
+    info = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_6809/*"GACHA_PC_MESSAGE"*/, 0LL);
+    v13 = this->fields.info;
+    if ( v13 )
     {
-      v9 = (System_String_o *)info;
-      info = (int64_t)LocalizationManager__GetDateTimeDayOfWeek(v8->fields.openedAt, 0LL);
-      v10 = this->fields.info;
-      if ( v10 )
+      v14 = (System_String_o *)info;
+      info = (int64_t)LocalizationManager__GetDateTimeDayOfWeek(v13->fields.openedAt, 0LL);
+      v15 = this->fields.info;
+      if ( v15 )
       {
-        v11 = (Il2CppObject *)info;
-        DateTimeDayOfWeek = (Il2CppObject *)LocalizationManager__GetDateTimeDayOfWeek(v10->fields.closedAt, 0LL);
-        v7 = System_String__Format_44897472(v9, v11, DateTimeDayOfWeek, 0LL);
-        goto LABEL_27;
+        v16 = (Il2CppObject *)info;
+        DateTimeDayOfWeek = (Il2CppObject *)LocalizationManager__GetDateTimeDayOfWeek(v15->fields.closedAt, 0LL);
+        v12 = System_String__Format_60340120(v14, v16, DateTimeDayOfWeek, 0LL);
+        goto LABEL_24;
       }
     }
-LABEL_29:
-    sub_B7769C(info, method);
-  }
-  if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !LocalizationManager_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  }
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_6992/*"GACHA_PC_MESSAGE_END"*/, 0LL);
 LABEL_27:
-  method = (const MethodInfo *)v7;
+    sub_1B00F28(info, method);
+  }
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_6810/*"GACHA_PC_MESSAGE_END"*/, 0LL);
+LABEL_24:
+  method = (const MethodInfo *)v12;
   info = (int64_t)this->fields.pickupMessage;
   if ( !info )
-    goto LABEL_29;
+    goto LABEL_27;
   UILabel__set_text((UILabel_o *)info, (System_String_o *)method, 0LL);
 }
 
@@ -164,7 +161,6 @@ int32_t __fastcall GachaBannerComponent__getMoveBannerIdx(GachaBannerComponent_o
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall GachaBannerComponent__setBannerGachaInfo(
         GachaBannerComponent_o *this,
         VaildGachaInfo_o *data,
@@ -174,107 +170,89 @@ void __fastcall GachaBannerComponent__setBannerGachaInfo(
         System_String_o *imgName,
         const MethodInfo *method)
 {
-  System_Int32_array *v7; // x7
+  __int64 v13; // x1
   int32_t width; // w22
-  int32_t height; // w0
+  UIAtlas_o *height; // x0
   __int64 v16; // x1
-  float v17; // s0
-  UIPanel_o *clipPanel; // x0
-  float v19; // s8
-  UIPanel_o *v20; // x22
-  float v21; // s4
-  float v22; // s5
-  float v23; // s6
-  float v24; // s7
-  const MethodInfo *v25; // x1
-  MethodInfo v26; // [xsp+0h] [xbp-50h] BYREF
-  UnityEngine_Vector4_o clipRange; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Vector4_o v28; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  struct UIPanel_o *clipPanel; // x8
+  float v18; // s2
+  float v19; // s5
+  float v20; // s2
+  const MethodInfo *v21; // x1
+  UnityEngine_Vector4_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_438F12D & 1) == 0 )
+  if ( (byte_48DF0AA & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438F12D = 1;
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, data);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v13);
+    byte_48DF0AA = 1;
   }
   this->fields.info = data;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.info,
-    (System_Int32_array **)data,
-    *(System_String_array ***)&idx,
-    *(System_String_array ***)&moveIdx,
-    (System_Boolean_array **)bannerAtlas,
-    (System_Int32_array **)imgName,
-    (System_Int32_array *)method,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.info, (int32_t)data, idx, moveIdx);
   this->fields.bannerIdx = idx;
   this->fields.moveBannerIdx = moveIdx;
   width = UnityEngine_Screen__get_width(0LL);
-  height = UnityEngine_Screen__get_height(0LL);
-  v17 = UnityEngine_Mathf__Clamp((float)width / (float)height, 1.7778, 2.3333, 0LL);
+  height = (UIAtlas_o *)UnityEngine_Screen__get_height(0LL);
   clipPanel = this->fields.clipPanel;
   if ( !clipPanel )
     goto LABEL_14;
-  v19 = v17 / 1.7778;
-  clipRange = UIPanel__get_clipRange(clipPanel, 0LL);
-  v20 = this->fields.clipPanel;
-  clipRange.fields.z = floorf(v19 * 1024.0);
-  v26.methodPointer = 0LL;
-  v26.invoker_method = 0LL;
-  UnityEngine_Vector4___ctor(clipRange, v21, v22, v23, v24, &v26);
-  if ( !v20 )
-    goto LABEL_14;
-  *(_QWORD *)&v28.fields.x = v26.methodPointer;
-  *(_QWORD *)&v28.fields.z = v26.invoker_method;
-  UIPanel__set_clipRange(v20, v28, 0LL);
-  GachaBannerComponent__UpdateDisplay(this, v25);
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  v18 = (float)width / (float)(int)height;
+  v19 = (float)(fminf(v18, 2.3333) / 1.7778) * 1024.0;
+  if ( v18 < 1.7778 )
+    v20 = 1024.0;
+  else
+    v20 = v19;
+  v22.fields.z = floorf(v20);
+  v22.fields.x = clipPanel->fields.mClipRange.fields.x;
+  v22.fields.y = clipPanel->fields.mClipRange.fields.y;
+  v22.fields.w = clipPanel->fields.mClipRange.fields.w;
+  UIPanel__set_baseClipRegion(this->fields.clipPanel, v22, 0LL);
+  GachaBannerComponent__UpdateDisplay(this, v21);
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  clipPanel = (UIPanel_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)bannerAtlas, 0LL, 0LL);
-  if ( ((unsigned __int8)clipPanel & 1) == 0 )
+  height = (UIAtlas_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)bannerAtlas, 0LL, 0LL);
+  if ( ((unsigned __int8)height & 1) == 0 )
   {
     if ( bannerAtlas )
     {
-      clipPanel = (UIPanel_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                 bannerAtlas,
-                                 (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+      height = (UIAtlas_o *)UnityEngine_GameObject__GetComponent_object_(
+                              bannerAtlas,
+                              (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
       if ( this->fields.bannerImg )
       {
-        UISprite__set_atlas(this->fields.bannerImg, (UIAtlas_o *)clipPanel, 0LL);
-        clipPanel = (UIPanel_o *)this->fields.bannerImg;
-        if ( clipPanel )
+        UISprite__set_atlas(this->fields.bannerImg, height, 0LL);
+        height = (UIAtlas_o *)this->fields.bannerImg;
+        if ( height )
         {
-          UISprite__set_spriteName((UISprite_o *)clipPanel, imgName, 0LL);
+          UISprite__set_spriteName((UISprite_o *)height, imgName, 0LL);
           return;
         }
       }
     }
 LABEL_14:
-    sub_B7769C(clipPanel, v16);
+    sub_1B00F28(height, v16);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall GachaBannerComponent__setEnabledCollider(
         GachaBannerComponent_o *this,
         bool isEnable,
         const MethodInfo *method)
 {
-  UnityEngine_Collider_o *Component_WebViewObject; // x0
+  Il2CppObject *Component_object; // x0
   __int64 v6; // x1
 
-  if ( (byte_438F12F & 1) == 0 )
+  if ( (byte_48DF0AC & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_Component_GetComponent_Collider___);
-    byte_438F12F = 1;
+    sub_1B00CCC(&Method_UnityEngine_Component_GetComponent_Collider___, isEnable);
+    byte_48DF0AC = 1;
   }
-  Component_WebViewObject = (UnityEngine_Collider_o *)UnityEngine_Component__GetComponent_WebViewObject_(
-                                                        (UnityEngine_Component_o *)this,
-                                                        (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_Collider___);
-  if ( !Component_WebViewObject )
-    sub_B7769C(0LL, v6);
-  UnityEngine_Collider__set_enabled(Component_WebViewObject, isEnable, 0LL);
+  Component_object = UnityEngine_Component__GetComponent_object_(
+                       (UnityEngine_Component_o *)this,
+                       (const MethodInfo_2D596B4 *)Method_UnityEngine_Component_GetComponent_Collider___);
+  if ( !Component_object )
+    sub_1B00F28(0LL, v6);
+  UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isEnable, 0LL);
 }

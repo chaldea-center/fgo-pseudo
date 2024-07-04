@@ -8,7 +8,7 @@ void __fastcall BattleServantSnapShot___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !svtData )
-    sub_B7769C(v5, v6);
+    sub_1B00F28(v5, v6);
   this->fields._UniqueId_k__BackingField = svtData->fields.uniqueId;
 }
 
@@ -124,22 +124,14 @@ void __fastcall BattleServantSnapShot__set_BuffArray(
         BattleBuffData_BuffData_array *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._BuffArray_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._BuffArray_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._BuffArray_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -148,22 +140,10 @@ void __fastcall BattleServantSnapShot__set_CheckIndividualitiesData(
         BattleBuffData_CheckIndividualitiesData_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._CheckIndividualitiesData_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 

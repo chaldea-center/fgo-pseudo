@@ -1,13 +1,13 @@
 void __fastcall MapGimmickEntity___ctor(MapGimmickEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438E57C & 1) == 0 )
+  if ( (byte_48E2B50 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_int___ctor__);
-    byte_438E57C = 1;
+    sub_1B00CCC(&Method_DataEntityBase_int___ctor__, method);
+    byte_48E2B50 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_2FE684C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -23,12 +23,12 @@ System_String_o *__fastcall MapGimmickEntity__GetColorCodeFromScript(
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_438E575 & 1) == 0 )
+  if ( (byte_48E2B49 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_17856/*"color"*/);
-    byte_438E575 = 1;
+    sub_1B00CCC(&StringLiteral_17807/*"color"*/, method);
+    byte_48E2B49 = 1;
   }
-  return MapGimmickEntity__GetStringFromScript(this, (System_String_o *)StringLiteral_17856/*"color"*/, v2);
+  return MapGimmickEntity__GetStringFromScript(this, (System_String_o *)StringLiteral_17807/*"color"*/, v2);
 }
 
 
@@ -36,67 +36,86 @@ System_Collections_Generic_List_int__o *__fastcall MapGimmickEntity__GetEventMis
         MapGimmickEntity_o *this,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_int__o *v3; // x19
-  const MethodInfo *v4; // x2
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  System_Collections_Generic_List_int__o *v6; // x19
+  const MethodInfo *v7; // x2
   System_String_o *StringFromScript; // x21
-  const MethodInfo *v6; // x1
-  System_String_array *v7; // x0
-  System_String_array *v8; // x1
-  __int64 v9; // x8
-  System_String_array *v10; // x20
-  unsigned __int64 v11; // x21
-  __int64 v13; // x0
+  const MethodInfo *v9; // x1
+  System_String_array *ScriptType; // x0
+  __int64 v11; // x1
+  __int64 v12; // x8
+  System_String_array *v13; // x20
+  unsigned __int64 v14; // x21
+  struct System_Int32_array *items; // x8
+  _QWORD *v16; // x9
+  __int64 size; // x10
 
-  if ( (byte_438E56E & 1) == 0 )
+  if ( (byte_48E2B42 & 1) == 0 )
   {
-    sub_B775C4(&char___TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_int__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_int___ctor___69397304);
-    sub_B775C4(&System_Collections_Generic_List_int__TypeInfo);
-    sub_B775C4(&StringLiteral_20206/*"info"*/);
-    byte_438E56E = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_int__Add__, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_int___ctor__, v3);
+    sub_1B00CCC(&System_Collections_Generic_List_int__TypeInfo, v4);
+    sub_1B00CCC(&StringLiteral_20368/*"info"*/, v5);
+    byte_48E2B42 = 1;
   }
-  v3 = (System_Collections_Generic_List_int__o *)sub_B77694(System_Collections_Generic_List_int__TypeInfo);
+  v6 = (System_Collections_Generic_List_int__o *)sub_1B00F18(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v3,
-    (const MethodInfo_30E508C *)Method_System_Collections_Generic_List_int___ctor___69397304);
-  StringFromScript = MapGimmickEntity__GetStringFromScript(this, (System_String_o *)StringLiteral_20206/*"info"*/, v4);
-  if ( !System_String__IsNullOrEmpty(StringFromScript, 0LL) && MapGimmickEntity__GetScriptType(this, v6) == 1 )
+    v6,
+    (const MethodInfo_33A4158 *)Method_System_Collections_Generic_List_int___ctor__);
+  StringFromScript = MapGimmickEntity__GetStringFromScript(this, (System_String_o *)StringLiteral_20368/*"info"*/, v7);
+  if ( !System_String__IsNullOrEmpty(StringFromScript, 0LL) )
   {
-    v7 = (System_String_array *)sub_B775DC(char___TypeInfo, 1LL);
-    if ( !v7 )
-      goto LABEL_16;
-    v8 = v7;
-    if ( !v7->max_length )
-      goto LABEL_15;
-    LOWORD(v7->m_Items[0]) = 47;
-    if ( !StringFromScript || (v7 = System_String__Split(StringFromScript, (System_Char_array *)v7, 0LL)) == 0LL )
-LABEL_16:
-      sub_B7769C(v7, v8);
-    v9 = *(_QWORD *)&v7->max_length;
-    v10 = v7;
-    if ( (int)v9 >= 1 )
+    ScriptType = (System_String_array *)MapGimmickEntity__GetScriptType(this, v9);
+    if ( (_DWORD)ScriptType == 1 )
     {
-      v11 = 0LL;
-      while ( v11 < (unsigned int)v9 )
+      if ( !StringFromScript )
+        goto LABEL_17;
+      ScriptType = System_String__Split(StringFromScript, 0x2Fu, 0, 0LL);
+      if ( !ScriptType )
+        goto LABEL_17;
+      v12 = *(_QWORD *)&ScriptType->max_length;
+      v13 = ScriptType;
+      if ( (int)v12 >= 1 )
       {
-        v7 = (System_String_array *)System_Int32__Parse(v10->m_Items[v11], 0LL);
-        if ( !v3 )
-          goto LABEL_16;
-        System_Collections_Generic_List_int___Add(
-          v3,
-          (int32_t)v7,
-          (const MethodInfo_30E5DE8 *)Method_System_Collections_Generic_List_int__Add__);
-        LODWORD(v9) = v10->max_length;
-        if ( (__int64)++v11 >= (int)v9 )
-          return v3;
+        v14 = 0LL;
+        while ( 1 )
+        {
+          if ( v14 >= (unsigned int)v12 )
+            sub_1B00F30(ScriptType, v11);
+          ScriptType = (System_String_array *)System_Int32__Parse(v13->m_Items[v14], 0LL);
+          if ( !v6 )
+            break;
+          items = v6->fields._items;
+          v16 = Method_System_Collections_Generic_List_int__Add__;
+          ++v6->fields._version;
+          if ( !items )
+            break;
+          size = v6->fields._size;
+          v11 = (unsigned int)ScriptType;
+          if ( (unsigned int)size >= items->max_length )
+          {
+            System_Collections_Generic_List_int___AddWithResize(
+              v6,
+              (int32_t)ScriptType,
+              *(const MethodInfo_33A49AC **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+          }
+          else
+          {
+            v6->fields._size = size + 1;
+            items->m_Items[size + 1] = (int)ScriptType;
+          }
+          LODWORD(v12) = v13->max_length;
+          if ( (__int64)++v14 >= (int)v12 )
+            return v6;
+        }
+LABEL_17:
+        sub_1B00F28(ScriptType, v11);
       }
-LABEL_15:
-      v13 = sub_B776C8(v7);
-      sub_B77668(v13, 0LL);
     }
   }
-  return v3;
+  return v6;
 }
 
 
@@ -105,33 +124,31 @@ int32_t __fastcall MapGimmickEntity__GetIntFromScript(
         System_String_o *key,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
-  Il2CppObject *v6; // x19
-  System_Xml_Schema_XmlSchemaObject_o *value; // [xsp+8h] [xbp-18h] BYREF
+  Il2CppObject *v7; // x19
+  Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_438E579 & 1) == 0 )
+  if ( (byte_48E2B4D & 1) == 0 )
   {
-    sub_B775C4(&System_Convert_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    byte_438E579 = 1;
+    sub_1B00CCC(&System_Convert_TypeInfo, key);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, v5);
+    byte_48E2B4D = 1;
   }
   value = 0LL;
   script = this->fields.script;
   if ( script )
   {
-    if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
-           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-           (System_Xml_XmlQualifiedName_o *)key,
+    if ( System_Collections_Generic_Dictionary_object__object___TryGetValue(
+           (System_Collections_Generic_Dictionary_object__object__o *)script,
+           (Il2CppObject *)key,
            &value,
-           (const MethodInfo_2F7F3F8 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_308F254 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
-      v6 = (Il2CppObject *)value;
-      if ( (BYTE3(System_Convert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !System_Convert_TypeInfo->_2.cctor_finished )
-      {
+      v7 = value;
+      if ( !System_Convert_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-      }
-      LODWORD(script) = System_Convert__ToInt32(v6, 0LL);
+      LODWORD(script) = System_Convert__ToInt32(v7, 0LL);
     }
     else
     {
@@ -177,12 +194,12 @@ int32_t __fastcall MapGimmickEntity__GetRaidDispSpotIdFromScript(MapGimmickEntit
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_438E574 & 1) == 0 )
+  if ( (byte_48E2B48 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_22134/*"raidDispSpotId"*/);
-    byte_438E574 = 1;
+    sub_1B00CCC(&StringLiteral_22446/*"raidDispSpotId"*/, method);
+    byte_48E2B48 = 1;
   }
-  return MapGimmickEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22134/*"raidDispSpotId"*/, v2);
+  return MapGimmickEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22446/*"raidDispSpotId"*/, v2);
 }
 
 
@@ -190,12 +207,12 @@ int32_t __fastcall MapGimmickEntity__GetScriptType(MapGimmickEntity_o *this, con
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_438E56D & 1) == 0 )
+  if ( (byte_48E2B41 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_23314/*"type"*/);
-    byte_438E56D = 1;
+    sub_1B00CCC(&StringLiteral_23754/*"type"*/, method);
+    byte_48E2B41 = 1;
   }
-  return MapGimmickEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23314/*"type"*/, v2);
+  return MapGimmickEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23754/*"type"*/, v2);
 }
 
 
@@ -204,24 +221,26 @@ System_String_o *__fastcall MapGimmickEntity__GetStringFromScript(
         System_String_o *key,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
+  __int64 v6; // x1
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
-  System_Xml_Schema_XmlSchemaObject_o *value; // [xsp+8h] [xbp-18h] BYREF
+  Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_438E578 & 1) == 0 )
+  if ( (byte_48E2B4C & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_B775C4(&string_TypeInfo);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438E578 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
+    sub_1B00CCC(&string_TypeInfo, v5);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v6);
+    byte_48E2B4C = 1;
   }
   value = 0LL;
   script = this->fields.script;
   if ( !script
-    || !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
-          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-          (System_Xml_XmlQualifiedName_o *)key,
+    || !System_Collections_Generic_Dictionary_object__object___TryGetValue(
+          (System_Collections_Generic_Dictionary_object__object__o *)script,
+          (Il2CppObject *)key,
           &value,
-          (const MethodInfo_2F7F3F8 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+          (const MethodInfo_308F254 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
     return (System_String_o *)StringLiteral_1/*""*/;
   }
@@ -237,12 +256,12 @@ System_String_o *__fastcall MapGimmickEntity__GetSubTitleFromScript(MapGimmickEn
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_438E573 & 1) == 0 )
+  if ( (byte_48E2B47 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_22881/*"subTitle"*/);
-    byte_438E573 = 1;
+    sub_1B00CCC(&StringLiteral_23291/*"subTitle"*/, method);
+    byte_48E2B47 = 1;
   }
-  return MapGimmickEntity__GetStringFromScript(this, (System_String_o *)StringLiteral_22881/*"subTitle"*/, v2);
+  return MapGimmickEntity__GetStringFromScript(this, (System_String_o *)StringLiteral_23291/*"subTitle"*/, v2);
 }
 
 
@@ -250,40 +269,41 @@ System_String_o *__fastcall MapGimmickEntity__GetTitleFromScript(MapGimmickEntit
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_438E572 & 1) == 0 )
+  if ( (byte_48E2B46 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_23180/*"title"*/);
-    byte_438E572 = 1;
+    sub_1B00CCC(&StringLiteral_23602/*"title"*/, method);
+    byte_48E2B46 = 1;
   }
-  return MapGimmickEntity__GetStringFromScript(this, (System_String_o *)StringLiteral_23180/*"title"*/, v2);
+  return MapGimmickEntity__GetStringFromScript(this, (System_String_o *)StringLiteral_23602/*"title"*/, v2);
 }
 
 
 UnityEngine_Vector3_o __fastcall MapGimmickEntity__GetTouchSize(MapGimmickEntity_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
+  __int64 v4; // x1
   int32_t IntFromScript; // w20
-  const MethodInfo *v5; // x2
-  int32_t v6; // w0
-  float v7; // s0
-  float v8; // s1
-  float v9; // s2
+  const MethodInfo *v6; // x2
+  int32_t v7; // w0
+  float v8; // s0
+  float v9; // s1
+  float v10; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_438E56F & 1) == 0 )
+  if ( (byte_48E2B43 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_23218/*"touchH"*/);
-    sub_B775C4(&StringLiteral_23219/*"touchW"*/);
-    byte_438E56F = 1;
+    sub_1B00CCC(&StringLiteral_23645/*"touchH"*/, method);
+    sub_1B00CCC(&StringLiteral_23646/*"touchW"*/, v4);
+    byte_48E2B43 = 1;
   }
-  IntFromScript = MapGimmickEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23219/*"touchW"*/, v2);
-  v6 = MapGimmickEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23218/*"touchH"*/, v5);
-  v7 = (float)IntFromScript;
-  v8 = (float)v6;
-  v9 = 0.0;
-  result.fields.z = v9;
-  result.fields.y = v8;
-  result.fields.x = v7;
+  IntFromScript = MapGimmickEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23646/*"touchW"*/, v2);
+  v7 = MapGimmickEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23645/*"touchH"*/, v6);
+  v8 = (float)IntFromScript;
+  v9 = (float)v7;
+  v10 = 0.0;
+  result.fields.z = v10;
+  result.fields.y = v9;
+  result.fields.x = v8;
   return result;
 }
 
@@ -292,12 +312,12 @@ int32_t __fastcall MapGimmickEntity__GetUseAnimFromScript(MapGimmickEntity_o *th
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_438E576 & 1) == 0 )
+  if ( (byte_48E2B4A & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_23455/*"useAnim"*/);
-    byte_438E576 = 1;
+    sub_1B00CCC(&StringLiteral_23998/*"useAnim"*/, method);
+    byte_48E2B4A = 1;
   }
-  return MapGimmickEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23455/*"useAnim"*/, v2);
+  return MapGimmickEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23998/*"useAnim"*/, v2);
 }
 
 
@@ -305,12 +325,12 @@ bool __fastcall MapGimmickEntity__IsCheckRaidProgress(MapGimmickEntity_o *this, 
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_438E57B & 1) == 0 )
+  if ( (byte_48E2B4F & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_20330/*"isCheckRaidProgress"*/);
-    byte_438E57B = 1;
+    sub_1B00CCC(&StringLiteral_20501/*"isCheckRaidProgress"*/, method);
+    byte_48E2B4F = 1;
   }
-  return MapGimmickEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_20330/*"isCheckRaidProgress"*/, v2) > 0;
+  return MapGimmickEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_20501/*"isCheckRaidProgress"*/, v2) > 0;
 }
 
 
@@ -324,12 +344,12 @@ bool __fastcall MapGimmickEntity__IsEnabledBillBoard(MapGimmickEntity_o *this, c
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_438E577 & 1) == 0 )
+  if ( (byte_48E2B4B & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_20335/*"isEnabledBillBoard"*/);
-    byte_438E577 = 1;
+    sub_1B00CCC(&StringLiteral_20506/*"isEnabledBillBoard"*/, method);
+    byte_48E2B4B = 1;
   }
-  return MapGimmickEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_20335/*"isEnabledBillBoard"*/, v2) > 0;
+  return MapGimmickEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_20506/*"isEnabledBillBoard"*/, v2) > 0;
 }
 
 
@@ -343,12 +363,12 @@ bool __fastcall MapGimmickEntity__IsMonoColorRect(MapGimmickEntity_o *this, cons
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_438E57A & 1) == 0 )
+  if ( (byte_48E2B4E & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_19445/*"gimmickType"*/);
-    byte_438E57A = 1;
+    sub_1B00CCC(&StringLiteral_19549/*"gimmickType"*/, method);
+    byte_48E2B4E = 1;
   }
-  return MapGimmickEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_19445/*"gimmickType"*/, -1, v2) == 1;
+  return MapGimmickEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_19549/*"gimmickType"*/, -1, v2) == 1;
 }
 
 
@@ -361,22 +381,24 @@ int32_t __fastcall MapGimmickEntity__getScriptIntParam(
 {
   int32_t v4; // w19
   Il2CppObject *ScriptObj; // x0
-  MapGimmickEntity_o *v9; // x0
-  const MethodInfo *v10; // x1
+  __int64 v8; // x2
+  __int64 v9; // x3
+  MapGimmickEntity_o *v11; // x0
+  const MethodInfo *v12; // x1
 
   v4 = defVal;
-  if ( (byte_438E571 & 1) == 0 )
+  if ( (byte_48E2B45 & 1) == 0 )
   {
-    sub_B775C4(&long_TypeInfo);
-    byte_438E571 = 1;
+    sub_1B00CCC(&long_TypeInfo, key);
+    byte_48E2B45 = 1;
   }
   ScriptObj = MapGimmickEntity__getScriptObj(this, key, *(const MethodInfo **)&defVal);
   if ( !ScriptObj )
     return v4;
   if ( ScriptObj->klass->_1.element_class == long_TypeInfo->_1.element_class )
-    return *(_DWORD *)j_il2cpp_object_unbox_0(ScriptObj);
-  sub_B77990(ScriptObj);
-  return (unsigned int)MapGimmickEntity__GetTitleFromScript(v9, v10);
+    return *(_DWORD *)j_il2cpp_object_unbox_0(ScriptObj, long_TypeInfo, v8, v9);
+  sub_1B011E8(ScriptObj);
+  return (unsigned int)MapGimmickEntity__GetTitleFromScript(v11, v12);
 }
 
 
@@ -386,25 +408,24 @@ Il2CppObject *__fastcall MapGimmickEntity__getScriptObj(
         const MethodInfo *method)
 {
   Il2CppObject *result; // x0
-  System_Xml_Schema_XmlSchemaObject_o *value; // [xsp+8h] [xbp-18h] BYREF
+  Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_438E570 & 1) == 0 )
+  if ( (byte_48E2B44 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    byte_438E570 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
+    byte_48E2B44 = 1;
   }
-  value = 0LL;
   result = (Il2CppObject *)this->fields.script;
   if ( result )
   {
     value = 0LL;
-    if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
-           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)result,
-           (System_Xml_XmlQualifiedName_o *)key,
+    if ( System_Collections_Generic_Dictionary_object__object___TryGetValue(
+           (System_Collections_Generic_Dictionary_object__object__o *)result,
+           (Il2CppObject *)key,
            &value,
-           (const MethodInfo_2F7F3F8 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_308F254 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
-      return (Il2CppObject *)value;
+      return value;
     }
     else
     {
@@ -417,34 +438,36 @@ Il2CppObject *__fastcall MapGimmickEntity__getScriptObj(
 
 int32_t __fastcall MapGimmickEntity__get_z(MapGimmickEntity_o *this, const MethodInfo *method)
 {
-  WarQuestSelectionMaster_o *Master_WarQuestSelectionMaster; // x0
+  __int64 v3; // x1
   __int64 v4; // x1
-  WarEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
+  Il2CppObject *Master_object; // x0
+  __int64 v6; // x1
+  Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_438E56C & 1) == 0 )
+  if ( (byte_48E2B40 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMaster_MapGimmickLayerMaster___);
-    sub_B775C4(&DataManager_TypeInfo);
-    sub_B775C4(&Method_DataMasterBase_MapGimmickLayerMaster__MapGimmickLayerEntity__int__TryGetEntity__);
-    byte_438E56C = 1;
+    sub_1B00CCC(&Method_DataManager_GetMaster_MapGimmickLayerMaster___, method);
+    sub_1B00CCC(&DataManager_TypeInfo, v3);
+    sub_1B00CCC(&Method_DataMasterBase_MapGimmickLayerMaster__MapGimmickLayerEntity__int__TryGetEntity__, v4);
+    byte_48E2B40 = 1;
   }
   entity = 0LL;
-  if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_MapGimmickLayerMaster___);
-  if ( !Master_WarQuestSelectionMaster )
-    goto LABEL_12;
-  Master_WarQuestSelectionMaster = (WarQuestSelectionMaster_o *)DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
-                                                                  (DataMasterBase_WarMaster__WarEntity__int__o *)Master_WarQuestSelectionMaster,
-                                                                  &entity,
-                                                                  this->fields.id,
-                                                                  (const MethodInfo_21FB8F0 *)Method_DataMasterBase_MapGimmickLayerMaster__MapGimmickLayerEntity__int__TryGetEntity__);
-  if ( ((unsigned __int8)Master_WarQuestSelectionMaster & 1) != 0 )
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_MapGimmickLayerMaster___);
+  if ( !Master_object )
+    goto LABEL_11;
+  Master_object = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
+                                    (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
+                                    &entity,
+                                    this->fields.id,
+                                    (const MethodInfo_2FE6AA0 *)Method_DataMasterBase_MapGimmickLayerMaster__MapGimmickLayerEntity__int__TryGetEntity__);
+  if ( ((unsigned __int8)Master_object & 1) != 0 )
   {
     if ( entity )
-      return *(&entity->fields.id + 1);
-LABEL_12:
-    sub_B7769C(Master_WarQuestSelectionMaster, v4);
+      return HIDWORD(entity[1].klass);
+LABEL_11:
+    sub_1B00F28(Master_object, v6);
   }
   return 0;
 }

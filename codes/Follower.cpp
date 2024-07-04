@@ -6,9 +6,13 @@ bool __fastcall Follower__IsAnySupport(int32_t type, const MethodInfo *method)
 
 bool __fastcall Follower__IsNotNpc(int32_t type, const MethodInfo *method)
 {
-  if ( type )
-    LOBYTE(type) = (unsigned int)(type - 3) > 1;
-  return type;
+  _BOOL4 v2; // w0
+
+  if ( (unsigned int)type > 4 )
+    LOBYTE(v2) = 1;
+  else
+    return (6u >> type) & 1;
+  return v2;
 }
 
 

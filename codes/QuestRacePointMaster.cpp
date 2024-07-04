@@ -1,14 +1,14 @@
 void __fastcall QuestRacePointMaster___ctor(QuestRacePointMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_438FD0F & 1) == 0 )
+  if ( (byte_48E2D16 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string___ctor__);
-    byte_438FD0F = 1;
+    sub_1B00CCC(&Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string___ctor__, method);
+    byte_48E2D16 = 1;
   }
-  DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
-    (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
+  DataMasterBase_object__object__object____ctor(
+    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     212,
-    (const MethodInfo_21FBC48 *)Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string___ctor__);
+    (const MethodInfo_2FE6D64 *)Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string___ctor__);
 }
 
 
@@ -19,24 +19,24 @@ QuestRacePointEntity_o *__fastcall QuestRacePointMaster__GetEntity(
         int32_t itemId,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x1
+  __int64 v7; // x1
+  Il2CppObject *PK; // x1
 
-  if ( (byte_438FD0D & 1) == 0 )
+  if ( (byte_48E2D14 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string__GetEntity__);
-    sub_B775C4(&QuestRacePointEntity_TypeInfo);
-    byte_438FD0D = 1;
+    sub_1B00CCC(
+      &Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string__GetEntity__,
+      *(_QWORD *)&questId);
+    sub_1B00CCC(&QuestRacePointEntity_TypeInfo, v7);
+    byte_48E2D14 = 1;
   }
-  if ( (BYTE3(QuestRacePointEntity_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !QuestRacePointEntity_TypeInfo->_2.cctor_finished )
-  {
+  if ( !QuestRacePointEntity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(QuestRacePointEntity_TypeInfo);
-  }
-  PK = QuestRacePointEntity__CreatePK(questId, itemId, *(const MethodInfo **)&itemId);
-  return (QuestRacePointEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
-                                     (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
+  PK = (Il2CppObject *)QuestRacePointEntity__CreatePK(questId, itemId, *(const MethodInfo **)&itemId);
+  return (QuestRacePointEntity_o *)DataMasterBase_object__object__object___GetEntity(
+                                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      PK,
-                                     (const MethodInfo_21FBCE4 *)Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string__GetEntity__);
+                                     (const MethodInfo_2FE6DA4 *)Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string__GetEntity__);
 }
 
 
@@ -48,23 +48,21 @@ bool __fastcall QuestRacePointMaster__TryGetEntity(
         int32_t itemId,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x2
+  __int64 v9; // x1
+  Il2CppObject *PK; // x2
 
-  if ( (byte_438FD0E & 1) == 0 )
+  if ( (byte_48E2D15 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string__TryGetEntity__);
-    sub_B775C4(&QuestRacePointEntity_TypeInfo);
-    byte_438FD0E = 1;
+    sub_1B00CCC(&Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string__TryGetEntity__, entity);
+    sub_1B00CCC(&QuestRacePointEntity_TypeInfo, v9);
+    byte_48E2D15 = 1;
   }
-  if ( (BYTE3(QuestRacePointEntity_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !QuestRacePointEntity_TypeInfo->_2.cctor_finished )
-  {
+  if ( !QuestRacePointEntity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(QuestRacePointEntity_TypeInfo);
-  }
-  PK = QuestRacePointEntity__CreatePK(questId, itemId, *(const MethodInfo **)&questId);
-  return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
-           (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
-           (WarQuestSelectionEntity_o **)entity,
+  PK = (Il2CppObject *)QuestRacePointEntity__CreatePK(questId, itemId, *(const MethodInfo **)&questId);
+  return DataMasterBase_object__object__object___TryGetEntity(
+           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
+           (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_21FBD3C *)Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string__TryGetEntity__);
+           (const MethodInfo_2FE6DF4 *)Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string__TryGetEntity__);
 }

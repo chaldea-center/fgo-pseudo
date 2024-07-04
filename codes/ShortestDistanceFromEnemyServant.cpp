@@ -2,7 +2,7 @@ void __fastcall ShortestDistanceFromEnemyServant___ctor(
         ShortestDistanceFromEnemyServant_o *this,
         const MethodInfo *method)
 {
-  WarBoardRatingBase___ctor((WarBoardRatingBase_o *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 
@@ -16,71 +16,64 @@ float __fastcall ShortestDistanceFromEnemyServant__GetRatingBase(
         System_Collections_Generic_List_WarBoardAIRoute_RouteData__o *routeDataList,
         const MethodInfo *method)
 {
-  WarBoardRatingBase_o *v10; // x19
-  int32_t squareIndex_k__BackingField; // w22
+  ShortestDistanceFromEnemyServant_o *v10; // x19
+  __int64 v11; // x1
+  int32_t squareIndex_k__BackingField; // w20
   WarBoardPieceData_o *EnemyPieceSquareIndex; // x0
-  WarBoardPieceData_o *v13; // x22
-  int32_t v14; // w23
-  int32_t v15; // w24
-  System_Int32_array *v16; // x0
-  il2cpp_array_size_t max_length; // w20
-  float BreakPoint; // s0
+  WarBoardPieceData_o *v14; // x20
+  int32_t v15; // w22
+  int32_t v16; // w21
+  ShortestDistanceFromEnemyServant_c *klass; // x21
   struct WarBoardRatingBaseEntity_o *ratingBase; // x8
 
-  v10 = (WarBoardRatingBase_o *)this;
-  if ( (byte_438C005 & 1) == 0 )
+  v10 = this;
+  if ( (byte_48E03D6 & 1) == 0 )
   {
-    sub_B775C4(&AStarSearch_TypeInfo);
-    this = (ShortestDistanceFromEnemyServant_o *)sub_B775C4(&WarBoardAIManager_TypeInfo);
-    byte_438C005 = 1;
+    sub_1B00CCC(&AStarSearch_TypeInfo, *(_QWORD *)&forceId);
+    this = (ShortestDistanceFromEnemyServant_o *)sub_1B00CCC(&WarBoardAIManager_TypeInfo, v11);
+    byte_48E03D6 = 1;
   }
   if ( !targetSquare )
-    goto LABEL_22;
+    goto LABEL_18;
   squareIndex_k__BackingField = targetSquare->fields._squareIndex_k__BackingField;
-  if ( (BYTE3(WarBoardAIManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !WarBoardAIManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !WarBoardAIManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo);
-  }
-  EnemyPieceSquareIndex = WarBoardAIManager__GetEnemyPieceSquareIndex(squareIndex_k__BackingField, 0LL);
+  EnemyPieceSquareIndex = WarBoardAIManager__GetEnemyPieceSquareIndex(
+                            squareIndex_k__BackingField,
+                            *(const MethodInfo **)&forceId);
   if ( EnemyPieceSquareIndex )
   {
-    v13 = EnemyPieceSquareIndex;
+    v14 = EnemyPieceSquareIndex;
     if ( EnemyPieceSquareIndex->fields._forceId_k__BackingField != forceId )
     {
       this = (ShortestDistanceFromEnemyServant_o *)WarBoardPieceData__get_isMaster(EnemyPieceSquareIndex, 0LL);
       if ( ((unsigned __int8)this & 1) == 0 )
       {
         if ( !calcSquare )
-          goto LABEL_22;
-        v14 = calcSquare->fields._squareIndex_k__BackingField;
-        v15 = targetSquare->fields._squareIndex_k__BackingField;
-        if ( (BYTE3(AStarSearch_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !AStarSearch_TypeInfo->_2.cctor_finished )
-        {
+          goto LABEL_18;
+        v15 = calcSquare->fields._squareIndex_k__BackingField;
+        v16 = targetSquare->fields._squareIndex_k__BackingField;
+        if ( !AStarSearch_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(AStarSearch_TypeInfo);
-        }
-        v16 = AStarSearch__RouteSearch(v13, v14, v15, 0, 0LL, 0LL);
-        if ( v16 )
+        this = (ShortestDistanceFromEnemyServant_o *)AStarSearch__RouteSearch(v14, v15, v16, 0, 0LL, 0LL);
+        if ( this )
         {
-          max_length = v16->max_length;
-          if ( (BYTE3(WarBoardAIManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-            && !WarBoardAIManager_TypeInfo->_2.cctor_finished )
-          {
+          klass = this[1].klass;
+          if ( !WarBoardAIManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo);
-          }
-          BreakPoint = WarBoardAIManager__GetBreakPoint(v13, 0LL);
           ratingBase = v10->fields.ratingBase;
           if ( ratingBase )
             return fmaxf(
-                     (float)((float)(1.0 - BreakPoint) * (float)ratingBase->fields.adjustmentValueB)
-                   + (float)(int)(ratingBase->fields.adjustmentValueA1
-                                - ratingBase->fields.adjustmentValueA2 * (max_length - 1)),
+                     (float)((float)(1.0
+                                   - (float)((float)(v14->fields._breakPoint_k__BackingField + 1)
+                                           / (float)(v14->fields._breakPointMax_k__BackingField + 1)))
+                           * (float)ratingBase->fields.adjustmentValueB)
+                   + (float)(ratingBase->fields.adjustmentValueA1
+                           - ratingBase->fields.adjustmentValueA2 * ((int)klass - 1)),
                      0.0);
-LABEL_22:
-          sub_B7769C(this, *(_QWORD *)&forceId);
+LABEL_18:
+          sub_1B00F28(this, *(_QWORD *)&forceId);
         }
-        WarBoardRatingBase__DebugLog(v10, calcSquare, targetSquare, 0LL);
       }
     }
   }

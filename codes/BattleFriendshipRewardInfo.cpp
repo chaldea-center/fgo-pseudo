@@ -8,22 +8,23 @@ GiftEntity_o *__fastcall BattleFriendshipRewardInfo__getGiftEntity(
         BattleFriendshipRewardInfo_o *this,
         const MethodInfo *method)
 {
-  DataManager_o *Instance; // x0
-  __int64 v4; // x1
+  __int64 v3; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v5; // x1
 
-  if ( (byte_43880CB & 1) == 0 )
+  if ( (byte_48E4D19 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_GiftMaster___);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43880CB = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_GiftMaster___, method);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_48E4D19 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
-    || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                      Instance,
-                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_GiftMaster___)) == 0LL )
+    || (Instance = DataManager__GetMasterData_object_(
+                     (DataManager_o *)Instance,
+                     (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_GiftMaster___)) == 0LL )
   {
-    sub_B7769C(Instance, v4);
+    sub_1B00F28(Instance, v5);
   }
   return GiftMaster__GetEntity(
            (GiftMaster_o *)Instance,
@@ -36,36 +37,37 @@ GiftEntity_o *__fastcall BattleFriendshipRewardInfo__getGiftEntity(
 
 bool __fastcall BattleFriendshipRewardInfo__isShow(BattleFriendshipRewardInfo_o *this, const MethodInfo *method)
 {
-  WebViewManager_o *Instance; // x0
-  WebViewManager_o *v4; // x1
-  DataMasterBase_o *MasterData_WarQuestSelectionMaster; // x20
-  __int64 v7; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
+  Il2CppObject *Instance; // x0
+  Il2CppObject *v6; // x1
+  Il2CppObject *MasterData_object; // x20
 
-  if ( (byte_43880CC & 1) == 0 )
+  if ( (byte_48E4D1A & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_B775C4(&long___TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43880CC = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_UserServantMaster___, method);
+    sub_1B00CCC(&long___TypeInfo, v3);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_48E4D1A = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_8;
-  MasterData_WarQuestSelectionMaster = (DataMasterBase_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                             (DataManager_o *)Instance,
-                                                             (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserServantMaster___);
-  Instance = (WebViewManager_o *)sub_B775DC(long___TypeInfo, 1LL);
+  MasterData_object = DataManager__GetMasterData_object_(
+                        (DataManager_o *)Instance,
+                        (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_UserServantMaster___);
+  Instance = (Il2CppObject *)sub_1B00D74(long___TypeInfo, 1LL);
   if ( !Instance )
     goto LABEL_8;
-  v4 = Instance;
-  if ( !LODWORD(Instance->fields.basePanel) )
-  {
-    v7 = sub_B776C8(Instance);
-    sub_B77668(v7, 0LL);
-  }
-  Instance->fields.baseWindow = (struct UIWidget_o *)this->fields.userSvtId;
-  if ( !MasterData_WarQuestSelectionMaster )
+  v6 = Instance;
+  if ( !LODWORD(Instance[1].monitor) )
+    sub_1B00F30(Instance, Instance);
+  Instance[2].klass = (Il2CppClass *)this->fields.userSvtId;
+  if ( !MasterData_object )
 LABEL_8:
-    sub_B7769C(Instance, v4);
-  return DataMasterBase__isEntityExistsFromId(MasterData_WarQuestSelectionMaster, (System_Int64_array *)Instance, 0LL);
+    sub_1B00F28(Instance, v6);
+  return DataMasterBase__isEntityExistsFromId(
+           (DataMasterBase_o *)MasterData_object,
+           (System_Int64_array *)Instance,
+           0LL);
 }

@@ -11,7 +11,7 @@ void __fastcall NotificationPluginScript__ClearAll(const MethodInfo *method)
 
   v1 = NotificationPluginScript__Setup(method);
   if ( !v1 )
-    sub_B7769C(0LL, v2);
+    sub_1B00F28(0LL, v2);
   ((void (__fastcall *)(LocalNotificationService_o *, void *))v1->klass->vtable._6_CancelAll.method)(
     v1,
     v1->klass[1]._1.image);
@@ -25,7 +25,7 @@ void __fastcall NotificationPluginScript__ClearLocalNotification(System_String_o
 
   v3 = NotificationPluginScript__Setup((const MethodInfo *)key);
   if ( !v3 )
-    sub_B7769C(0LL, v4);
+    sub_1B00F28(0LL, v4);
   ((void (__fastcall *)(LocalNotificationService_o *, System_String_o *, Il2CppMethodPointer))v3->klass->vtable._5_Cancel.method)(
     v3,
     key,
@@ -45,7 +45,7 @@ void __fastcall NotificationPluginScript__SetLocalNotification(
 
   v7 = NotificationPluginScript__Setup(*(const MethodInfo **)&interval);
   if ( !v7 )
-    sub_B7769C(0LL, v8);
+    sub_1B00F28(0LL, v8);
   ((void (__fastcall *)(LocalNotificationService_o *, System_String_o *, System_String_o *, _QWORD, Il2CppMethodPointer))v7->klass->vtable._4_Schedule.method)(
     v7,
     key,
@@ -57,30 +57,31 @@ void __fastcall NotificationPluginScript__SetLocalNotification(
 
 LocalNotificationService_o *__fastcall NotificationPluginScript__Setup(const MethodInfo *method)
 {
+  __int64 v1; // x1
+  __int64 v2; // x1
   LocalNotificationService_o *result; // x0
-  LocalNotificationServiceAndroid_o *v2; // x19
-  BattleServantConfConponent_o *static_fields; // x0
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
+  LocalNotificationServiceAndroid_o *v4; // x19
+  const MethodInfo *v5; // x1
+  int32_t v6; // w2
+  int32_t v7; // w3
 
-  if ( (byte_438BAB9 & 1) == 0 )
+  if ( (byte_48E3E0C & 1) == 0 )
   {
-    sub_B775C4(&LocalNotificationServiceAndroid_TypeInfo);
-    sub_B775C4(&NotificationPluginScript_TypeInfo);
-    byte_438BAB9 = 1;
+    sub_1B00CCC(&LocalNotificationServiceAndroid_TypeInfo, v1);
+    sub_1B00CCC(&NotificationPluginScript_TypeInfo, v2);
+    byte_48E3E0C = 1;
   }
   result = NotificationPluginScript_TypeInfo->static_fields->_service;
   if ( !result )
   {
-    v2 = (LocalNotificationServiceAndroid_o *)sub_B77694(LocalNotificationServiceAndroid_TypeInfo);
-    LocalNotificationServiceAndroid___ctor(v2, 0LL);
-    static_fields = (BattleServantConfConponent_o *)NotificationPluginScript_TypeInfo->static_fields;
-    static_fields->klass = (BattleServantConfConponent_c *)v2;
-    sub_B77560(static_fields, (System_Int32_array **)v2, v4, v5, v6, v7, v8, v9);
+    v4 = (LocalNotificationServiceAndroid_o *)sub_1B00F18(LocalNotificationServiceAndroid_TypeInfo);
+    LocalNotificationServiceAndroid___ctor(v4, v5);
+    NotificationPluginScript_TypeInfo->static_fields->_service = (struct LocalNotificationService_o *)v4;
+    sub_1B00C70(
+      (ServantStatusBattleListViewItem_o *)NotificationPluginScript_TypeInfo->static_fields,
+      (int32_t)v4,
+      v6,
+      v7);
     return NotificationPluginScript_TypeInfo->static_fields->_service;
   }
   return result;

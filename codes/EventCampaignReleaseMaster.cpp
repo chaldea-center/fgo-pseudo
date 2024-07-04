@@ -1,14 +1,14 @@
 void __fastcall EventCampaignReleaseMaster___ctor(EventCampaignReleaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_438DD91 & 1) == 0 )
+  if ( (byte_48E271E & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string___ctor__);
-    byte_438DD91 = 1;
+    sub_1B00CCC(&Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string___ctor__, method);
+    byte_48E271E = 1;
   }
-  DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
-    (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
+  DataMasterBase_object__object__object____ctor(
+    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     264,
-    (const MethodInfo_21FBC48 *)Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string___ctor__);
+    (const MethodInfo_2FE6D64 *)Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string___ctor__);
 }
 
 
@@ -20,18 +20,20 @@ EventCampaignReleaseEntity_o *__fastcall EventCampaignReleaseMaster__GetEntity(
         int32_t idx,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x1
+  Il2CppObject *PK; // x1
 
-  if ( (byte_438DD8F & 1) == 0 )
+  if ( (byte_48E271C & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__GetEntity__);
-    byte_438DD8F = 1;
+    sub_1B00CCC(
+      &Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__GetEntity__,
+      *(_QWORD *)&eventId);
+    byte_48E271C = 1;
   }
-  PK = EventCampaignReleaseEntity__CreatePK(eventId, target, idx, *(const MethodInfo **)&idx);
-  return (EventCampaignReleaseEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
-                                           (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
+  PK = (Il2CppObject *)EventCampaignReleaseEntity__CreatePK(eventId, target, idx, *(const MethodInfo **)&idx);
+  return (EventCampaignReleaseEntity_o *)DataMasterBase_object__object__object___GetEntity(
+                                           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                            PK,
-                                           (const MethodInfo_21FBCE4 *)Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__GetEntity__);
+                                           (const MethodInfo_2FE6DA4 *)Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__GetEntity__);
 }
 
 
@@ -44,123 +46,131 @@ bool __fastcall EventCampaignReleaseMaster__TryGetEntity(
         int32_t idx,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x2
+  Il2CppObject *PK; // x2
 
-  if ( (byte_438DD90 & 1) == 0 )
+  if ( (byte_48E271D & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__TryGetEntity__);
-    byte_438DD90 = 1;
+    sub_1B00CCC(
+      &Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__TryGetEntity__,
+      entity);
+    byte_48E271D = 1;
   }
-  PK = EventCampaignReleaseEntity__CreatePK(eventId, target, idx, *(const MethodInfo **)&target);
-  return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
-           (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
-           (WarQuestSelectionEntity_o **)entity,
+  PK = (Il2CppObject *)EventCampaignReleaseEntity__CreatePK(eventId, target, idx, *(const MethodInfo **)&target);
+  return DataMasterBase_object__object__object___TryGetEntity(
+           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
+           (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_21FBD3C *)Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__TryGetEntity__);
+           (const MethodInfo_2FE6DF4 *)Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__TryGetEntity__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall EventCampaignReleaseMaster__isRelease(
         EventCampaignReleaseMaster_o *this,
         int32_t eventId,
         int32_t target,
         const MethodInfo *method)
 {
-  int monitor; // w26
+  __int64 v7; // x1
+  __int64 v8; // x1
+  int monitor; // w28
   bool IsOpen; // w8
-  int32_t v9; // w22
+  int32_t v11; // w22
+  bool v12; // w25
+  System_String_o *Primarykey; // x23
   System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__o *lookup; // x0
-  __int64 v11; // x9
-  int32_t v12; // w23
+  __int64 v15; // x1
+  System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c *klass; // x8
+  System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__o *v17; // x24
+  __int64 v18; // x9
+  System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **p_offset; // x10
+  __int64 p_method; // x0
+  __int64 methodPtr_low; // x9
+  int32_t v22; // w23
   int32_t monitor_high; // w25
   int64_t klass_high; // x24
-  bool v15; // w25
-  System_String_o *Primarykey; // x23
-  __int64 v17; // x1
-  System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c *klass; // x8
-  System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__o *v19; // x24
-  unsigned __int64 v20; // x10
-  System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **p_offset; // x11
-  __int64 p_method; // x0
-  System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__o *v24; // [xsp+8h] [xbp-58h] BYREF
+  EventCombineCostumeEntity_o *v26; // x0
+  const MethodInfo *v27; // x1
+  System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__o *v28; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_438DD92 & 1) == 0 )
+  if ( (byte_48E271F & 1) == 0 )
   {
-    sub_B775C4(&CondType_TypeInfo);
-    sub_B775C4(&EventCampaignReleaseEntity_TypeInfo);
-    sub_B775C4(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo);
-    byte_438DD92 = 1;
+    sub_1B00CCC(&CondType_TypeInfo, *(_QWORD *)&eventId);
+    sub_1B00CCC(&EventCampaignReleaseEntity_TypeInfo, v7);
+    sub_1B00CCC(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, v8);
+    byte_48E271F = 1;
   }
-  v24 = 0LL;
   monitor = 0;
   IsOpen = 1;
-  v9 = 1;
+  v11 = 1;
+  v28 = 0LL;
   while ( 1 )
   {
-    v15 = IsOpen;
-    Primarykey = EventCampaignReleaseEntity__getCreatePrimarykey(eventId, target, v9, method);
+    v12 = IsOpen;
+    Primarykey = EventCampaignReleaseEntity__getCreatePrimarykey(eventId, target, v11, method);
     lookup = DataMasterBase__get_lookup((DataMasterBase_o *)this, 0LL);
     if ( !lookup )
-      goto LABEL_25;
+LABEL_23:
+      sub_1B00F28(lookup, v15);
     klass = lookup->klass;
-    v19 = lookup;
-    if ( *(_WORD *)&lookup->klass->_2.bitflags1 )
+    v17 = lookup;
+    v18 = *(unsigned __int16 *)(&lookup->klass->_2.bitflags2 + 3);
+    if ( *(_WORD *)(&lookup->klass->_2.bitflags2 + 3) )
     {
-      v20 = 0LL;
       p_offset = (System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **)&klass->_1.interfaceOffsets->offset;
       while ( *(p_offset - 1) != System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo )
       {
-        ++v20;
+        --v18;
         p_offset += 2;
-        if ( v20 >= *(unsigned __int16 *)&lookup->klass->_2.bitflags1 )
-          goto LABEL_20;
+        if ( !v18 )
+          goto LABEL_9;
       }
       p_method = (__int64)&klass->vtable[*(_DWORD *)p_offset + 1].method;
     }
     else
     {
-LABEL_20:
-      p_method = sub_B0F4C0(
+LABEL_9:
+      p_method = sub_1B52CAC(
                    lookup,
                    System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo,
                    1LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__o *, System_String_o *, System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__o **, _QWORD))p_method)(
-            v19,
+            v17,
             Primarykey,
-            &v24,
+            &v28,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
-      return v15;
-    lookup = v24;
-    if ( !v24 )
-      goto LABEL_25;
-    v11 = *(&EventCampaignReleaseEntity_TypeInfo->_2.bitflags2 + 1);
-    if ( *(&v24->klass->_2.bitflags2 + 1) < (unsigned int)v11
-      || (EventCampaignReleaseEntity_c *)v24->klass->_2.typeHierarchy[v11 - 1] != EventCampaignReleaseEntity_TypeInfo )
+      return v12;
+    lookup = v28;
+    if ( !v28 )
+      goto LABEL_23;
+    methodPtr_low = LOBYTE(EventCampaignReleaseEntity_TypeInfo->vtable._0_Equals.methodPtr);
+    if ( LOBYTE(v28->klass->vtable[0].methodPtr) < (unsigned int)methodPtr_low
+      || (EventCampaignReleaseEntity_c *)v28->klass->_2.typeHierarchy[methodPtr_low - 1] != EventCampaignReleaseEntity_TypeInfo )
     {
-      sub_B77990(v24);
-LABEL_25:
-      sub_B7769C(lookup, v17);
+      break;
     }
-    ++v9;
-    if ( monitor == LODWORD(v24[2].monitor) )
+    ++v11;
+    if ( monitor == LODWORD(v28[2].monitor) )
     {
       IsOpen = 0;
-      if ( v15 )
-        goto LABEL_11;
+      if ( v12 )
+        goto LABEL_19;
     }
     else
     {
-      monitor = (int)v24[2].monitor;
-      if ( v15 )
-        return v15;
-LABEL_11:
-      monitor_high = HIDWORD(v24[1].monitor);
-      v12 = (int32_t)v24[2].klass;
-      klass_high = SHIDWORD(v24[2].klass);
-      if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
+      monitor = (int)v28[2].monitor;
+      if ( v12 )
+        return v12;
+LABEL_19:
+      monitor_high = HIDWORD(v28[1].monitor);
+      v22 = (int32_t)v28[2].klass;
+      klass_high = SHIDWORD(v28[2].klass);
+      if ( !CondType_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-      IsOpen = CondType__IsOpen(monitor_high, v12, klass_high, 0, 0LL);
+      IsOpen = CondType__IsOpen(monitor_high, v22, klass_high, 0, 0LL);
     }
   }
+  sub_1B011E8(v28);
+  return (unsigned __int8)EventCombineCostumeEntity__CreatePrimaryKey(v26, v27);
 }

@@ -4,46 +4,57 @@ void __fastcall CommandAssistListViewManager___ctor(CommandAssistListViewManager
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall CommandAssistListViewManager__CreateList(
         CommandAssistListViewManager_o *this,
         int32_t eventId,
         const MethodInfo *method)
 {
-  SkillLvMaster_o *Master_WarQuestSelectionMaster; // x21
-  void *ValidEntityList; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
   __int64 v5; // x1
-  void *v6; // x22
-  unsigned int v7; // w8
-  __int64 i; // x23
-  __int64 v9; // x20
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  Il2CppObject *Master_object; // x21
+  void *ValidEntityList; // x0
+  __int64 v12; // x1
+  int v13; // w20
+  System_Collections_Generic_List_object__o *v14; // x22
+  int32_t v15; // w23
+  void *v16; // x25
   SkillLvEntity_o *Entity; // x0
-  System_String_o *Empty; // x25
-  int32_t v12; // w27
-  int32_t v13; // w28
-  System_String_o *v14; // x20
-  struct System_Collections_Generic_List_ListViewItem__o *itemList; // x24
-  int v16; // w19
-  CommandAssistListViewItem_o *v17; // x26
-  const MethodInfo *v18; // [xsp+0h] [xbp-70h]
-  int v19; // [xsp+10h] [xbp-60h]
+  System_String_o *Empty; // x26
+  int32_t v19; // w27
+  int32_t v20; // w28
+  System_String_o *v21; // x29
+  System_Collections_Generic_List_object__o *itemList; // x24
+  int32_t size; // w19
+  CommandAssistListViewItem_o *v24; // x25
+  struct System_Object_array *items; // x8
+  _QWORD *v26; // x9
+  __int64 v27; // x10
+  Il2CppClass **v28; // x0
+  const MethodInfo *v29; // [xsp+0h] [xbp-80h]
 
-  if ( (byte_438DEC5 & 1) == 0 )
+  if ( (byte_48DDE19 & 1) == 0 )
   {
-    sub_B775C4(&CommandAssistListViewItem_TypeInfo);
-    sub_B775C4(&Method_DataManager_GetMaster_EventCommandAssistMaster___);
-    sub_B775C4(&Method_DataManager_GetMaster_SkillLvMaster___);
-    sub_B775C4(&DataManager_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventCommandAssistEntity__get_Count__);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventCommandAssistEntity__get_Item__);
-    sub_B775C4(&string_TypeInfo);
-    byte_438DEC5 = 1;
+    sub_1B00CCC(&CommandAssistListViewItem_TypeInfo, *(_QWORD *)&eventId);
+    sub_1B00CCC(&Method_DataManager_GetMaster_EventCommandAssistMaster___, v3);
+    sub_1B00CCC(&Method_DataManager_GetMaster_SkillLvMaster___, v4);
+    sub_1B00CCC(&DataManager_TypeInfo, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_ListViewItem__Add__, v6);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventCommandAssistEntity__get_Count__, v7);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventCommandAssistEntity__get_Item__, v8);
+    sub_1B00CCC(&string_TypeInfo, v9);
+    byte_48DDE19 = 1;
   }
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0LL);
-  if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (SkillLvMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_SkillLvMaster___);
-  ValidEntityList = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_SkillLvMaster___);
+  ValidEntityList = DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
   if ( !ValidEntityList )
     goto LABEL_22;
   ValidEntityList = EventCommandAssistMaster__GetValidEntityList(
@@ -53,40 +64,61 @@ void __fastcall CommandAssistListViewManager__CreateList(
                       0LL);
   if ( !ValidEntityList )
     goto LABEL_22;
-  v6 = ValidEntityList;
-  v19 = *((_DWORD *)ValidEntityList + 6);
-  if ( v19 >= 1 )
+  v13 = *((_DWORD *)ValidEntityList + 6);
+  v14 = (System_Collections_Generic_List_object__o *)ValidEntityList;
+  if ( v13 >= 1 )
   {
-    v7 = *((_DWORD *)ValidEntityList + 6);
-    for ( i = 0LL; ; ++i )
+    v15 = 0;
+    while ( 1 )
     {
-      if ( v7 <= (unsigned int)i )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-      v9 = *(_QWORD *)(*((_QWORD *)v6 + 2) + 8 * i + 32);
-      if ( !v9 || !Master_WarQuestSelectionMaster )
+      ValidEntityList = System_Collections_Generic_List_object___get_Item(
+                          v14,
+                          v15,
+                          (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_EventCommandAssistEntity__get_Item__);
+      if ( !ValidEntityList || !Master_object )
         break;
-      Entity = SkillLvMaster__GetEntity(Master_WarQuestSelectionMaster, *(_DWORD *)(v9 + 52), *(_DWORD *)(v9 + 56), 0LL);
-      if ( !Entity || (Empty = SkillLvEntity__getDetail_26832724(Entity, Entity->fields.lv, 0, 0LL)) == 0LL )
+      v16 = ValidEntityList;
+      Entity = SkillLvMaster__GetEntity(
+                 (SkillLvMaster_o *)Master_object,
+                 *((_DWORD *)ValidEntityList + 13),
+                 *((_DWORD *)ValidEntityList + 14),
+                 0LL);
+      if ( !Entity || (Empty = SkillLvEntity__getDetail_38593460(Entity, Entity->fields.lv, 0, 0LL)) == 0LL )
         Empty = string_TypeInfo->static_fields->Empty;
-      v12 = *(_DWORD *)(v9 + 16);
-      v13 = *(_DWORD *)(v9 + 48);
-      v14 = *(System_String_o **)(v9 + 32);
-      itemList = this->fields.itemList;
-      v16 = *((_DWORD *)v6 + 6);
-      v17 = (CommandAssistListViewItem_o *)sub_B77694(CommandAssistListViewItem_TypeInfo);
-      CommandAssistListViewItem___ctor(v17, i, eventId, v12, v13, v14, Empty, (_DWORD)i == v16 - 1, v18);
+      v19 = *((_DWORD *)v16 + 4);
+      v20 = *((_DWORD *)v16 + 12);
+      v21 = (System_String_o *)*((_QWORD *)v16 + 4);
+      itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
+      size = v14->fields._size;
+      v24 = (CommandAssistListViewItem_o *)sub_1B00F18(CommandAssistListViewItem_TypeInfo);
+      CommandAssistListViewItem___ctor(v24, v15, eventId, v19, v20, v21, Empty, v15 == size - 1, v29);
       if ( !itemList )
         break;
-      System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-        (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)itemList,
-        (EventMissionProgressRequest_Argument_ProgressData_o *)v17,
-        (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_ListViewItem__Add__);
-      if ( (int)i + 1 >= v19 )
+      items = itemList->fields._items;
+      v26 = Method_System_Collections_Generic_List_ListViewItem__Add__;
+      ++itemList->fields._version;
+      if ( !items )
+        break;
+      v27 = itemList->fields._size;
+      if ( (unsigned int)v27 >= items->max_length )
+      {
+        System_Collections_Generic_List_object___AddWithResize(
+          itemList,
+          (Il2CppObject *)v24,
+          *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+      }
+      else
+      {
+        v28 = &items->obj.klass + v27;
+        itemList->fields._size = v27 + 1;
+        v28[4] = (Il2CppClass *)v24;
+        sub_1B00C70(v28 + 4);
+      }
+      if ( v13 == ++v15 )
         goto LABEL_20;
-      v7 = *((_DWORD *)v6 + 6);
     }
 LABEL_22:
-    sub_B7769C(ValidEntityList, v5);
+    sub_1B00F28(ValidEntityList, v12);
   }
 LABEL_20:
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 1, -1, 0LL);

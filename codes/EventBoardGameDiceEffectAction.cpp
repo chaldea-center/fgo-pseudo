@@ -11,26 +11,20 @@ void __fastcall EventBoardGameDiceEffectAction__EndAnimation(
   UnityEngine_Object_o *modelObj; // x20
   UnityEngine_Object_o *v4; // x20
 
-  if ( (byte_438E817 & 1) == 0 )
+  if ( (byte_48E6245 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438E817 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    byte_48E6245 = 1;
   }
   modelObj = (UnityEngine_Object_o *)this->fields.modelObj;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(modelObj, 0LL, 0LL) )
   {
     v4 = (UnityEngine_Object_o *)this->fields.modelObj;
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
-    UnityEngine_Object__Destroy_36309980(v4, 0LL);
+    UnityEngine_Object__Destroy_68077656(v4, 0LL);
   }
   ActionExtensions__Call(this->fields.endAction, 0LL);
 }
@@ -40,40 +34,37 @@ void __fastcall EventBoardGameDiceEffectAction__PlayDiceVoice(
         EventBoardGameDiceEffectAction_o *this,
         const MethodInfo *method)
 {
-  System_String_o *VoiceAssetName_30265396; // x0
+  __int64 v3; // x1
+  System_String_o *VoiceAssetName_38497884; // x0
+  SeManager_c *v5; // x8
   System_String_o *voiceCueName; // x19
-  System_String_o *v5; // x20
-  SeManager_c *v6; // x8
+  System_String_o *v7; // x20
 
-  if ( (byte_438E816 & 1) == 0 )
+  if ( (byte_48E6244 & 1) == 0 )
   {
-    sub_B775C4(&SeManager_TypeInfo);
-    sub_B775C4(&SoundManager_TypeInfo);
-    byte_438E816 = 1;
+    sub_1B00CCC(&SeManager_TypeInfo, method);
+    sub_1B00CCC(&SoundManager_TypeInfo, v3);
+    byte_48E6244 = 1;
   }
   if ( !System_String__IsNullOrEmpty(this->fields.voiceCueName, 0LL) )
   {
-    if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !SoundManager_TypeInfo->_2.cctor_finished )
-    {
+    if ( !SoundManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    }
     SoundManager__stopVoiceAll(0.0, 0LL);
-    VoiceAssetName_30265396 = ServantVoiceEntity__getVoiceAssetName_30265396(this->fields.servantId, 0LL);
+    VoiceAssetName_38497884 = ServantVoiceEntity__getVoiceAssetName_38497884(this->fields.servantId, 0LL);
+    v5 = SeManager_TypeInfo;
     voiceCueName = this->fields.voiceCueName;
-    v5 = VoiceAssetName_30265396;
-    v6 = SeManager_TypeInfo;
-    if ( (BYTE3(SeManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SeManager_TypeInfo->_2.cctor_finished )
+    v7 = VoiceAssetName_38497884;
+    if ( !SeManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
-      v6 = SeManager_TypeInfo;
+      v5 = SeManager_TypeInfo;
     }
-    SoundManager__playVoice_23512556(v5, voiceCueName, v6->static_fields->DEFAULT_VOLUME, 0LL, 0LL);
+    SoundManager__playVoice_37481500(v7, voiceCueName, v5->static_fields->DEFAULT_VOLUME, 0LL, 0LL);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall EventBoardGameDiceEffectAction__Setup(
         EventBoardGameDiceEffectAction_o *this,
         AssetData_o *asset,
@@ -84,88 +75,50 @@ void __fastcall EventBoardGameDiceEffectAction__Setup(
         System_Action_o *endAction,
         const MethodInfo *method)
 {
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
+  __int64 v13; // x1
+  int32_t v14; // w2
+  int32_t v15; // w3
   System_String_o *name; // x0
-  __int64 v20; // x1
+  __int64 v17; // x1
   struct UnityEngine_GameObject_array *diceModelObjList; // x8
-  UnityEngine_UI_Dropdown_DropdownItem_o *v22; // x20
-  struct UnityEngine_GameObject_o *v23; // x0
-  System_String_array **v24; // x2
-  System_String_array **v25; // x3
-  System_Boolean_array **v26; // x4
-  System_Int32_array **v27; // x5
-  System_Int32_array *v28; // x6
-  System_Int32_array *v29; // x7
+  Il2CppObject *v19; // x20
+  Il2CppObject *v20; // x0
+  int32_t v21; // w2
+  int32_t v22; // w3
   UnityEngine_Object_o *modelObj; // x21
-  __int64 v31; // x0
 
-  if ( (byte_438E815 & 1) == 0 )
+  if ( (byte_48E6243 & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438E815 = 1;
+    sub_1B00CCC(&Method_UnityEngine_Object_Instantiate_GameObject___, asset);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v13);
+    byte_48E6243 = 1;
   }
   this->fields.servantId = servantId;
   this->fields.voiceCueName = voiceCueName;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.voiceCueName,
-    (System_Int32_array **)voiceCueName,
-    *(System_String_array ***)&diceType,
-    *(System_String_array ***)&diceNum,
-    *(System_Boolean_array ***)&servantId,
-    (System_Int32_array **)voiceCueName,
-    (System_Int32_array *)endAction,
-    (System_Int32_array *)method);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.voiceCueName, (int32_t)voiceCueName, diceType, diceNum);
   this->fields.endAction = endAction;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.endAction,
-    (System_Int32_array **)endAction,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.endAction, (int32_t)endAction, v14, v15);
   diceModelObjList = this->fields.diceModelObjList;
   if ( !diceModelObjList )
-    goto LABEL_11;
+    goto LABEL_10;
   if ( diceType - 1 >= diceModelObjList->max_length )
-  {
-    v31 = sub_B776C8(name);
-    sub_B77668(v31, 0LL);
-  }
-  v22 = (UnityEngine_UI_Dropdown_DropdownItem_o *)diceModelObjList->m_Items[diceType - 1];
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+    sub_1B00F30(name, v17);
+  v19 = (Il2CppObject *)diceModelObjList->m_Items[diceType - 1];
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  v23 = (struct UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
-                                             v22,
-                                             (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-  this->fields.modelObj = v23;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.modelObj,
-    (System_Int32_array **)v23,
-    v24,
-    v25,
-    v26,
-    v27,
-    v28,
-    v29);
-  if ( !v22
+  v20 = UnityEngine_Object__Instantiate_object_(
+          v19,
+          (const MethodInfo_2DD5AE8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+  this->fields.modelObj = (struct UnityEngine_GameObject_o *)v20;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.modelObj, (int32_t)v20, v21, v22);
+  if ( !v19
     || (modelObj = (UnityEngine_Object_o *)this->fields.modelObj,
-        name = UnityEngine_Object__get_name((UnityEngine_Object_o *)v22, 0LL),
+        name = UnityEngine_Object__get_name((UnityEngine_Object_o *)v19, 0LL),
         !modelObj) )
   {
-LABEL_11:
-    sub_B7769C(name, v20);
+LABEL_10:
+    sub_1B00F28(name, v17);
   }
   UnityEngine_Object__set_name(modelObj, name, 0LL);
-  GameObjectExtensions__SafeSetParent_32813688(this->fields.modelObj, this->fields.rootDiceObj, 0LL);
+  GameObjectExtensions__SafeSetParent_32541256(this->fields.modelObj, this->fields.rootDiceObj, 0LL);
 }

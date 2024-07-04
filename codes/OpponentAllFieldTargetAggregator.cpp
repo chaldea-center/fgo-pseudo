@@ -2,7 +2,7 @@ void __fastcall OpponentAllFieldTargetAggregator___ctor(
         OpponentAllFieldTargetAggregator_o *this,
         const MethodInfo *method)
 {
-  TargetAggregator___ctor((TargetAggregator_o *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 
@@ -10,28 +10,35 @@ System_Int32_array *__fastcall OpponentAllFieldTargetAggregator__GetCandidate(
         OpponentAllFieldTargetAggregator_o *this,
         const MethodInfo *method)
 {
-  BattleData_o *battleData; // x20
-  BattleData_o *actorId; // x0
-  __int64 v5; // x1
-  bool isEnemyID; // w21
-  BattleData_o *v7; // x20
+  struct TargetAggregator_Args_o *args; // x8
+  TargetAggregator_o *v3; // x19
+  struct TargetAggregator_Args_o *v4; // x8
+  BattleData_o *battleData_k__BackingField; // x20
 
-  battleData = TargetAggregator__get_battleData((TargetAggregator_o *)this, 0LL);
-  actorId = (BattleData_o *)TargetAggregator__get_actorId((TargetAggregator_o *)this, 0LL);
-  if ( !battleData )
-    goto LABEL_7;
-  isEnemyID = BattleData__isEnemyID(battleData, (int32_t)actorId, 0LL);
-  actorId = TargetAggregator__get_battleData((TargetAggregator_o *)this, 0LL);
-  v7 = actorId;
-  if ( isEnemyID )
+  args = this->fields.args;
+  if ( !args )
+    goto LABEL_9;
+  v3 = (TargetAggregator_o *)this;
+  this = (OpponentAllFieldTargetAggregator_o *)args->fields._battleData_k__BackingField;
+  if ( !this )
+    goto LABEL_9;
+  this = (OpponentAllFieldTargetAggregator_o *)BattleData__isEnemyID(
+                                                 (BattleData_o *)this,
+                                                 args->fields._actorId_k__BackingField,
+                                                 0LL);
+  v4 = v3->fields.args;
+  if ( !v4 )
+    goto LABEL_9;
+  battleData_k__BackingField = v4->fields._battleData_k__BackingField;
+  if ( ((unsigned __int8)this & 1) != 0 )
   {
-    if ( actorId )
-      return BattleData__getFieldPlayerServantIDList(actorId, 0LL, 0LL);
-LABEL_7:
-    sub_B7769C(actorId, v5);
+    if ( battleData_k__BackingField )
+      return BattleData__getFieldPlayerServantIDList(v4->fields._battleData_k__BackingField, 0LL, 0LL);
+LABEL_9:
+    sub_1B00F28(this, method);
   }
-  actorId = (BattleData_o *)TargetAggregator__get_IsOpponentTargetOnly((TargetAggregator_o *)this, 0LL);
-  if ( !v7 )
-    goto LABEL_7;
-  return BattleData__getFieldEnemyServantIDList(v7, (unsigned __int8)actorId & 1, 0LL);
+  this = (OpponentAllFieldTargetAggregator_o *)TargetAggregator__get_IsOpponentTargetOnly(v3, method);
+  if ( !battleData_k__BackingField )
+    goto LABEL_9;
+  return BattleData__getFieldEnemyServantIDList(battleData_k__BackingField, (unsigned __int8)this & 1, 0LL);
 }

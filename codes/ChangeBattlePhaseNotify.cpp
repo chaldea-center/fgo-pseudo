@@ -1,54 +1,52 @@
 void __fastcall ChangeBattlePhaseNotify___ctor(ChangeBattlePhaseNotify_o *this, const MethodInfo *method)
 {
-  System_Collections_Generic_Dictionary_TitleInfoControl_TitleKind__TutorialFlag_ImageId__o *v3; // x20
-  __int64 v4; // x0
-  __int64 v5; // x1
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  __int64 v3; // x1
+  __int64 v4; // x1
+  System_Collections_Generic_Dictionary_TKey__TValue__o *v5; // x20
+  __int64 v6; // x0
+  __int64 v7; // x1
+  int32_t v8; // w2
+  int32_t v9; // w3
+  const MethodInfo *v10; // x1
 
-  if ( (byte_438E468 & 1) == 0 )
+  if ( (byte_48E53A0 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType___ctor__);
-    sub_B775C4(&System_Collections_Generic_Dictionary_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType__TypeInfo);
-    byte_438E468 = 1;
+    sub_1B00CCC(
+      &Method_System_Collections_Generic_Dictionary_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType__Add__,
+      method);
+    sub_1B00CCC(
+      &Method_System_Collections_Generic_Dictionary_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType___ctor__,
+      v3);
+    sub_1B00CCC(
+      &System_Collections_Generic_Dictionary_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType__TypeInfo,
+      v4);
+    byte_48E53A0 = 1;
   }
-  v3 = (System_Collections_Generic_Dictionary_TitleInfoControl_TitleKind__TutorialFlag_ImageId__o *)sub_B77694(System_Collections_Generic_Dictionary_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType__TypeInfo);
-  System_Collections_Generic_Dictionary_TitleInfoControl_TitleKind__TutorialFlag_ImageId____ctor(
-    v3,
-    (const MethodInfo_2F9B4D0 *)Method_System_Collections_Generic_Dictionary_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType___ctor__);
-  if ( !v3 )
-    sub_B7769C(v4, v5);
-  System_Collections_Generic_Dictionary_TitleInfoControl_TitleKind__TutorialFlag_ImageId___Add(
-    v3,
+  v5 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1B00F18(System_Collections_Generic_Dictionary_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType__TypeInfo);
+  System_Collections_Generic_Dictionary_Int32Enum__Int32Enum____ctor(
+    v5,
+    (const MethodInfo_304D49C *)Method_System_Collections_Generic_Dictionary_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType___ctor__);
+  if ( !v5 )
+    sub_1B00F28(v6, v7);
+  System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___Add(
+    v5,
     4,
     3,
-    (const MethodInfo_2F9C074 *)Method_System_Collections_Generic_Dictionary_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType__Add__);
-  this->fields.dicDetailToPhase = (struct System_Collections_Generic_Dictionary_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType__o *)v3;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.dicDetailToPhase,
-    (System_Int32_array **)v3,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10,
-    v11);
-  BattleSubject___ctor((BattleSubject_o *)this, 0LL);
+    (const MethodInfo_304DE60 *)Method_System_Collections_Generic_Dictionary_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType__Add__);
+  this->fields.dicDetailToPhase = (struct System_Collections_Generic_Dictionary_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType__o *)v5;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.dicDetailToPhase, (int32_t)v5, v8, v9);
+  BattleSubject___ctor((BattleSubject_o *)this, v10);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ChangeBattlePhaseNotify__UpdatePhase(
         ChangeBattlePhaseNotify_o *this,
         int32_t phase,
         const MethodInfo *method)
 {
   this->fields._DetailPhase_k__BackingField = phase;
-  BattleSubject__Notify((BattleSubject_o *)this, 0LL);
+  BattleSubject__Notify((BattleSubject_o *)this, *(const MethodInfo **)&phase);
 }
 
 
@@ -60,16 +58,18 @@ int32_t __fastcall ChangeBattlePhaseNotify__get_DetailPhase(ChangeBattlePhaseNot
 
 int32_t __fastcall ChangeBattlePhaseNotify__get_Phase(ChangeBattlePhaseNotify_o *this, const MethodInfo *method)
 {
-  if ( (byte_438E467 & 1) == 0 )
+  if ( (byte_48E539F & 1) == 0 )
   {
-    sub_B775C4(&Method_BasicHelper_GetValue_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType___);
-    byte_438E467 = 1;
+    sub_1B00CCC(
+      &Method_BasicHelper_GetValue_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType___,
+      method);
+    byte_48E539F = 1;
   }
-  return BasicHelper__GetValue_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType_(
+  return BasicHelper__GetValue_Int32Enum__Int32Enum_(
            (System_Collections_Generic_Dictionary_K__V__o *)this->fields.dicDetailToPhase,
            this->fields._DetailPhase_k__BackingField,
            this->fields._DetailPhase_k__BackingField,
-           (const MethodInfo_1C680B4 *)Method_BasicHelper_GetValue_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType___);
+           (const MethodInfo_2D514CC *)Method_BasicHelper_GetValue_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType___);
 }
 
 
@@ -82,11 +82,12 @@ void __fastcall ChangeBattlePhaseNotify__set_DetailPhase(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ChangeBattlePhaseNotify__set_Phase(
         ChangeBattlePhaseNotify_o *this,
         int32_t value,
         const MethodInfo *method)
 {
   this->fields._DetailPhase_k__BackingField = value;
-  BattleSubject__Notify((BattleSubject_o *)this, 0LL);
+  BattleSubject__Notify((BattleSubject_o *)this, *(const MethodInfo **)&value);
 }

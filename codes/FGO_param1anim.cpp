@@ -6,72 +6,61 @@ void __fastcall FGO_param1anim___ctor(FGO_param1anim_o *this, const MethodInfo *
 
 void __fastcall FGO_param1anim__Start(FGO_param1anim_o *this, const MethodInfo *method)
 {
-  WebViewObject_o *Component_WebViewObject; // x0
-  UnityEngine_Renderer_o **v4; // x20
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
-  __int64 v11; // x1
-  UnityEngine_Renderer_o *klass; // x0
+  __int64 v3; // x1
+  Il2CppObject *Component_object; // x0
+  struct UnityEngine_Renderer_o **p_renderer; // x20
+  int32_t v6; // w2
+  int32_t v7; // w3
+  __int64 v8; // x1
+  UnityEngine_Renderer_o *renderer; // x0
 
-  if ( (byte_438B8BF & 1) == 0 )
+  if ( (byte_48E174A & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_B775C4(&StringLiteral_16470/*"_oneValue"*/);
-    byte_438B8BF = 1;
+    sub_1B00CCC(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
+    sub_1B00CCC(&StringLiteral_16327/*"_oneValue"*/, v3);
+    byte_48E174A = 1;
   }
-  Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
-                              (UnityEngine_Component_o *)this,
-                              (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
-  v4 = (UnityEngine_Renderer_o **)&this[1];
-  this[1].klass = (FGO_param1anim_c *)Component_WebViewObject;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this[1],
-    (System_Int32_array **)Component_WebViewObject,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10);
-  klass = (UnityEngine_Renderer_o *)this[1].klass;
-  if ( !klass
-    || (klass = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(klass, 0LL)) == 0LL
+  Component_object = UnityEngine_Component__GetComponent_object_(
+                       (UnityEngine_Component_o *)this,
+                       (const MethodInfo_2D596B4 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+  this->fields._renderer = (struct UnityEngine_Renderer_o *)Component_object;
+  p_renderer = &this->fields._renderer;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields._renderer, (int32_t)Component_object, v6, v7);
+  renderer = this->fields._renderer;
+  if ( !renderer
+    || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL
     || (UnityEngine_Material__EnableKeyword(
-          (UnityEngine_Material_o *)klass,
-          (System_String_o *)StringLiteral_16470/*"_oneValue"*/,
+          (UnityEngine_Material_o *)renderer,
+          (System_String_o *)StringLiteral_16327/*"_oneValue"*/,
           0LL),
-        (klass = *v4) == 0LL)
-    || (klass = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(klass, 0LL)) == 0LL )
+        (renderer = *p_renderer) == 0LL)
+    || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL )
   {
-    sub_B7769C(klass, v11);
+    sub_1B00F28(renderer, v8);
   }
   UnityEngine_Material__SetFloat(
-    (UnityEngine_Material_o *)klass,
-    (System_String_o *)StringLiteral_16470/*"_oneValue"*/,
-    *(float *)&this->fields._renderer,
+    (UnityEngine_Material_o *)renderer,
+    (System_String_o *)StringLiteral_16327/*"_oneValue"*/,
+    this->fields.one_value,
     0LL);
 }
 
 
 void __fastcall FGO_param1anim__Update(FGO_param1anim_o *this, const MethodInfo *method)
 {
-  UnityEngine_Renderer_o *klass; // x0
+  UnityEngine_Renderer_o *renderer; // x0
 
-  if ( (byte_438B8C0 & 1) == 0 )
+  if ( (byte_48E174B & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_16470/*"_oneValue"*/);
-    byte_438B8C0 = 1;
+    sub_1B00CCC(&StringLiteral_16327/*"_oneValue"*/, method);
+    byte_48E174B = 1;
   }
-  klass = (UnityEngine_Renderer_o *)this[1].klass;
-  if ( !klass || (klass = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(klass, 0LL)) == 0LL )
-    sub_B7769C(klass, method);
+  renderer = this->fields._renderer;
+  if ( !renderer || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL )
+    sub_1B00F28(renderer, method);
   UnityEngine_Material__SetFloat(
-    (UnityEngine_Material_o *)klass,
-    (System_String_o *)StringLiteral_16470/*"_oneValue"*/,
-    *(float *)&this->fields._renderer,
+    (UnityEngine_Material_o *)renderer,
+    (System_String_o *)StringLiteral_16327/*"_oneValue"*/,
+    this->fields.one_value,
     0LL);
 }

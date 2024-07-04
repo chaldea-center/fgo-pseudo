@@ -1,176 +1,133 @@
 void __fastcall UserServantLeaderEntity___ctor(UserServantLeaderEntity_o *this, const MethodInfo *method)
 {
-  System_String_array **v3; // x2
-  System_String_array **v4; // x3
-  System_Boolean_array **v5; // x4
-  System_Int32_array **v6; // x5
-  System_Int32_array *v7; // x6
-  System_Int32_array *v8; // x7
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
+  int32_t v3; // w2
+  int32_t v4; // w3
+  int32_t v5; // w2
+  int32_t v6; // w3
   struct EquipTargetInfo_o **p_equipTarget1; // x19
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
+  int32_t v8; // w2
+  int32_t v9; // w3
 
-  if ( (byte_43911EC & 1) == 0 )
+  if ( (byte_48E35E5 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    byte_43911EC = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
+    byte_48E35E5 = 1;
   }
   this->fields.supportDeckId = 1;
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
   this->fields.userServantEntity = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, 0, v3, v4);
   this->fields.servantLeaderInfo = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.servantLeaderInfo, 0LL, v9, v10, v11, v12, v13, v14);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.servantLeaderInfo, 0, v5, v6);
   this->fields.supportDeckId = 1;
   this->fields.equipTarget1 = 0LL;
   p_equipTarget1 = &this->fields.equipTarget1;
   *(struct EquipTargetInfo_o **)((char *)p_equipTarget1 + 28) = 0LL;
   *(struct EquipTargetInfo_o **)((char *)p_equipTarget1 + 20) = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)p_equipTarget1, 0LL, v16, v17, v18, v19, v20, v21);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)p_equipTarget1, 0, v8, v9);
 }
 
 
-void __fastcall UserServantLeaderEntity___ctor_35662004(
+// local variable allocation has failed, the output may be wrong!
+void __fastcall UserServantLeaderEntity___ctor_38959000(
         UserServantLeaderEntity_o *this,
         int32_t classPos,
         int32_t supportDeckId,
         const MethodInfo *method)
 {
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
+  int32_t v7; // w2
+  int32_t v8; // w3
+  int32_t v9; // w2
+  int32_t v10; // w3
   struct EquipTargetInfo_o **p_equipTarget1; // x20
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
+  int32_t v12; // w2
+  int32_t v13; // w3
 
-  if ( (byte_43911ED & 1) == 0 )
+  if ( (byte_48E35E6 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    byte_43911ED = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, *(_QWORD *)&classPos);
+    byte_48E35E6 = 1;
   }
   this->fields.supportDeckId = 1;
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
   this->fields.userServantEntity = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields, 0LL, v7, v8, v9, v10, v11, v12);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, 0, v7, v8);
   this->fields.servantLeaderInfo = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.servantLeaderInfo, 0LL, v13, v14, v15, v16, v17, v18);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.servantLeaderInfo, 0, v9, v10);
   this->fields.supportDeckId = supportDeckId;
   this->fields.equipTarget1 = 0LL;
   p_equipTarget1 = &this->fields.equipTarget1;
   *((_DWORD *)p_equipTarget1 + 8) = 0;
   p_equipTarget1[3] = 0LL;
   *((_DWORD *)p_equipTarget1 + 5) = classPos;
-  sub_B77560((BattleServantConfConponent_o *)p_equipTarget1, 0LL, v20, v21, v22, v23, v24, v25);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)p_equipTarget1, 0, v12, v13);
 }
 
 
-void __fastcall UserServantLeaderEntity___ctor_35662168(
+void __fastcall UserServantLeaderEntity___ctor_38959160(
         UserServantLeaderEntity_o *this,
         UserServantLeaderEntity_o *src,
         const MethodInfo *method)
 {
   __int64 v5; // x0
   __int64 v6; // x1
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
+  int32_t v7; // w2
+  int32_t v8; // w3
   struct UserServantEntity_o *userServantEntity; // x1
   struct ServantLeaderInfo_o *servantLeaderInfo; // x1
-  System_String_array **v15; // x2
-  System_String_array **v16; // x3
-  System_Boolean_array **v17; // x4
-  System_Int32_array **v18; // x5
-  System_Int32_array *v19; // x6
-  System_Int32_array *v20; // x7
-  const MethodInfo *v21; // x2
+  int32_t v11; // w2
+  int32_t v12; // w3
+  const MethodInfo *v13; // x2
 
-  if ( (byte_43911EE & 1) == 0 )
+  if ( (byte_48E35E7 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    byte_43911EE = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, src);
+    byte_48E35E7 = 1;
   }
   this->fields.supportDeckId = 1;
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
   if ( !src )
-    sub_B7769C(v5, v6);
+    sub_1B00F28(v5, v6);
   userServantEntity = src->fields.userServantEntity;
   this->fields.userServantEntity = userServantEntity;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields,
-    (System_Int32_array **)userServantEntity,
-    v7,
-    v8,
-    v9,
-    v10,
-    v11,
-    v12);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)userServantEntity, v7, v8);
   servantLeaderInfo = src->fields.servantLeaderInfo;
   this->fields.servantLeaderInfo = servantLeaderInfo;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.servantLeaderInfo,
-    (System_Int32_array **)servantLeaderInfo,
-    v15,
-    v16,
-    v17,
-    v18,
-    v19,
-    v20);
-  this->fields.supportDeckId = src->fields.supportDeckId;
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields.servantLeaderInfo,
+    (int32_t)servantLeaderInfo,
+    v11,
+    v12);
   this->fields.svtId = src->fields.svtId;
   this->fields.userSvtId = src->fields.userSvtId;
-  this->fields.classId = src->fields.classId;
-  UserServantLeaderEntity__setEquipTargetInfo(this, src->fields.equipTarget1, v21);
+  *(_QWORD *)&this->fields.supportDeckId = *(_QWORD *)&src->fields.supportDeckId;
+  UserServantLeaderEntity__setEquipTargetInfo(this, src->fields.equipTarget1, v13);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall UserServantLeaderEntity__CreatePK(
         int64_t userId,
         int32_t classId,
         int32_t supportDeckId,
         const MethodInfo *method)
 {
-  if ( (byte_43911EB & 1) == 0 )
+  if ( (byte_48E35E4 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
-    byte_43911EB = 1;
+    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_long__int__int___, *(_QWORD *)&classId);
+    byte_48E35E4 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            userId,
            classId,
            supportDeckId,
-           (const MethodInfo_1D17884 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_2D61480 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 
@@ -197,14 +154,14 @@ int64_t __fastcall UserServantLeaderEntity__getEquipUserSvtId(
         const MethodInfo *method)
 {
   struct EquipTargetInfo_o *equipTarget1; // x8
-  __int128 v4; // q1
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v6; // [xsp+0h] [xbp-50h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v7; // [xsp+20h] [xbp-30h]
+  __int128 v4; // q0
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v6; // [xsp+0h] [xbp-60h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v7; // [xsp+20h] [xbp-40h]
 
-  if ( (byte_43911EF & 1) == 0 )
+  if ( (byte_48E35E8 & 1) == 0 )
   {
-    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_43911EF = 1;
+    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method);
+    byte_48E35E8 = 1;
   }
   equipTarget1 = this->fields.equipTarget1;
   if ( !equipTarget1 )
@@ -212,13 +169,10 @@ int64_t __fastcall UserServantLeaderEntity__getEquipUserSvtId(
   v4 = *(_OWORD *)&equipTarget1->fields.userSvtId.fields.fakeValue;
   *(_OWORD *)&v7.fields.currentCryptoKey = *(_OWORD *)&equipTarget1->fields.userSvtId.fields.currentCryptoKey;
   *(_OWORD *)&v7.fields.fakeValue = v4;
-  if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
-  {
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  }
   v6 = v7;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45429112(&v6, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45316568(&v6, 0LL);
 }
 
 
@@ -236,34 +190,21 @@ void __fastcall UserServantLeaderEntity__setEquipTargetInfo(
         const MethodInfo *method)
 {
   EquipTargetInfo_o *v5; // x21
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  int32_t v6; // w2
+  int32_t v7; // w3
 
-  if ( (byte_43911F0 & 1) == 0 )
+  if ( (byte_48E35E9 & 1) == 0 )
   {
-    sub_B775C4(&EquipTargetInfo_TypeInfo);
-    byte_43911F0 = 1;
+    sub_1B00CCC(&EquipTargetInfo_TypeInfo, equipTargetInfo);
+    byte_48E35E9 = 1;
   }
-  v5 = (EquipTargetInfo_o *)sub_B77694(EquipTargetInfo_TypeInfo);
-  EquipTargetInfo___ctor_31638944(v5, equipTargetInfo, 0LL);
+  v5 = (EquipTargetInfo_o *)sub_1B00F18(EquipTargetInfo_TypeInfo);
+  EquipTargetInfo___ctor_37657056(v5, equipTargetInfo, 0LL);
   this->fields.equipTarget1 = v5;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.equipTarget1,
-    (System_Int32_array **)v5,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10,
-    v11);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.equipTarget1, (int32_t)v5, v6, v7);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall UserServantLeaderEntity__setUserServantEntity(
         UserServantLeaderEntity_o *this,
         UserServantEntity_o *entity,
@@ -271,146 +212,95 @@ void __fastcall UserServantLeaderEntity__setUserServantEntity(
         int32_t supportDeckId,
         const MethodInfo *method)
 {
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  System_String_array **v12; // x2
-  System_String_array **v13; // x3
-  System_Boolean_array **v14; // x4
-  System_Int32_array **v15; // x5
-  System_Int32_array *v16; // x6
-  System_Int32_array *v17; // x7
-  __int64 v18; // x0
-  __int64 v19; // x1
-  __int128 v20; // q1
-  __int128 v21; // q0
-  __int64 v22; // x20
-  __int64 v23; // x21
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v24; // [xsp+0h] [xbp-90h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v25; // [xsp+20h] [xbp-70h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v26; // [xsp+40h] [xbp-50h]
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v27; // 0:x0.16
+  __int64 v9; // x1
+  int32_t v10; // w2
+  int32_t v11; // w3
+  __int64 v12; // x0
+  __int64 v13; // x1
+  __int128 v14; // q1
+  __int128 v15; // q1
+  __int64 v16; // x20
+  __int64 v17; // x21
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v18; // [xsp+0h] [xbp-90h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v19; // [xsp+20h] [xbp-70h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v20; // [xsp+40h] [xbp-50h]
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v21; // 0:x0.16
 
-  if ( (byte_43911F1 & 1) == 0 )
+  if ( (byte_48E35EA & 1) == 0 )
   {
-    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_43911F1 = 1;
+    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, entity);
+    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v9);
+    byte_48E35EA = 1;
   }
   this->fields.userServantEntity = entity;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields,
-    (System_Int32_array **)entity,
-    *(System_String_array ***)&classPos,
-    *(System_String_array ***)&supportDeckId,
-    (System_Boolean_array **)method,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)entity, classPos, supportDeckId);
   this->fields.servantLeaderInfo = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.servantLeaderInfo, 0LL, v12, v13, v14, v15, v16, v17);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.servantLeaderInfo, 0, v10, v11);
   if ( !entity )
-    sub_B7769C(v18, v19);
-  v20 = *(_OWORD *)&entity->fields.userId.fields.fakeValue;
-  *(_OWORD *)&v26.fields.currentCryptoKey = *(_OWORD *)&entity->fields.userId.fields.currentCryptoKey;
-  *(_OWORD *)&v26.fields.fakeValue = v20;
-  if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
-  {
+    sub_1B00F28(v12, v13);
+  v14 = *(_OWORD *)&entity->fields.userId.fields.fakeValue;
+  *(_OWORD *)&v20.fields.currentCryptoKey = *(_OWORD *)&entity->fields.userId.fields.currentCryptoKey;
+  *(_OWORD *)&v20.fields.fakeValue = v14;
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  }
-  v25 = v26;
-  this->fields.userId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45429112(&v25, 0LL);
+  v19 = v20;
+  this->fields.userId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45316568(&v19, 0LL);
   this->fields.supportDeckId = supportDeckId;
   this->fields.classId = classPos;
-  v21 = *(_OWORD *)&entity->fields.id.fields.fakeValue;
-  *(_OWORD *)&v24.fields.currentCryptoKey = *(_OWORD *)&entity->fields.id.fields.currentCryptoKey;
-  *(_OWORD *)&v24.fields.fakeValue = v21;
-  this->fields.userSvtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45429112(&v24, 0LL);
-  v23 = *(_QWORD *)&entity->fields.svtId.fields.currentCryptoKey;
-  v22 = *(_QWORD *)&entity->fields.svtId.fields.fakeValue;
-  if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-  {
+  v15 = *(_OWORD *)&entity->fields.id.fields.fakeValue;
+  *(_OWORD *)&v18.fields.currentCryptoKey = *(_OWORD *)&entity->fields.id.fields.currentCryptoKey;
+  *(_OWORD *)&v18.fields.fakeValue = v15;
+  this->fields.userSvtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45316568(&v18, 0LL);
+  v17 = *(_QWORD *)&entity->fields.svtId.fields.currentCryptoKey;
+  v16 = *(_QWORD *)&entity->fields.svtId.fields.fakeValue;
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  }
-  *(_QWORD *)&v27.fields.currentCryptoKey = v23;
-  *(_QWORD *)&v27.fields.fakeValue = v22;
-  this->fields.svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v27, 0LL);
+  *(_QWORD *)&v21.fields.currentCryptoKey = v17;
+  *(_QWORD *)&v21.fields.fakeValue = v16;
+  this->fields.svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(v21, 0LL);
 }
 
 
-void __fastcall UserServantLeaderEntity__setUserServantEntity_35662908(
+void __fastcall UserServantLeaderEntity__setUserServantEntity_38959844(
         UserServantLeaderEntity_o *this,
         ServantLeaderInfo_o *info,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  System_String_array **v10; // x2
-  System_String_array **v11; // x3
-  System_Boolean_array **v12; // x4
-  System_Int32_array **v13; // x5
-  System_Int32_array *v14; // x6
-  System_Int32_array *v15; // x7
-  __int64 v16; // x0
-  __int64 v17; // x1
-  __int64 v18; // x21
-  __int64 v19; // x22
+  int32_t v3; // w3
+  int32_t v6; // w2
+  int32_t v7; // w3
+  __int64 v8; // x0
+  __int64 v9; // x1
+  __int64 v10; // x21
+  __int64 v11; // x22
   struct EquipTargetInfo_o *equipTarget1; // x1
-  System_String_array **v21; // x2
-  System_String_array **v22; // x3
-  System_Boolean_array **v23; // x4
-  System_Int32_array **v24; // x5
-  System_Int32_array *v25; // x6
-  System_Int32_array *v26; // x7
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v27; // 0:x0.16
+  int32_t v13; // w2
+  int32_t v14; // w3
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v15; // 0:x0.16
 
-  if ( (byte_43911F2 & 1) == 0 )
+  if ( (byte_48E35EB & 1) == 0 )
   {
-    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_43911F2 = 1;
+    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, info);
+    byte_48E35EB = 1;
   }
   this->fields.userServantEntity = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields, 0LL, (System_String_array **)method, v3, v4, v5, v6, v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, 0, (int32_t)method, v3);
   this->fields.servantLeaderInfo = info;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.servantLeaderInfo,
-    (System_Int32_array **)info,
-    v10,
-    v11,
-    v12,
-    v13,
-    v14,
-    v15);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.servantLeaderInfo, (int32_t)info, v6, v7);
   if ( !info )
-    sub_B7769C(v16, v17);
+    sub_1B00F28(v8, v9);
   this->fields.userId = info->fields.userId;
   this->fields.supportDeckId = info->fields.supportDeckId;
   this->fields.classId = info->fields.classId;
   this->fields.userSvtId = info->fields.userSvtId;
-  v19 = *(_QWORD *)&info->fields.svtId.fields.currentCryptoKey;
-  v18 = *(_QWORD *)&info->fields.svtId.fields.fakeValue;
-  if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-  {
+  v11 = *(_QWORD *)&info->fields.svtId.fields.currentCryptoKey;
+  v10 = *(_QWORD *)&info->fields.svtId.fields.fakeValue;
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  }
-  *(_QWORD *)&v27.fields.currentCryptoKey = v19;
-  *(_QWORD *)&v27.fields.fakeValue = v18;
-  this->fields.svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v27, 0LL);
+  *(_QWORD *)&v15.fields.currentCryptoKey = v11;
+  *(_QWORD *)&v15.fields.fakeValue = v10;
+  this->fields.svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(v15, 0LL);
   equipTarget1 = info->fields.equipTarget1;
   this->fields.equipTarget1 = equipTarget1;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.equipTarget1,
-    (System_Int32_array **)equipTarget1,
-    v21,
-    v22,
-    v23,
-    v24,
-    v25,
-    v26);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.equipTarget1, (int32_t)equipTarget1, v13, v14);
 }

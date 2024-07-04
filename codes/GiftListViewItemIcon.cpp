@@ -6,25 +6,26 @@ void __fastcall GiftListViewItemIcon___ctor(GiftListViewItemIcon_o *this, const 
 
 void __fastcall GiftListViewItemIcon__OnClick(GiftListViewItemIcon_o *this, const MethodInfo *method)
 {
-  int32_t gifttype; // w8
+  _BOOL8 IsServant; // x0
   struct GiftEntity_o *itemData; // x1
+  struct GiftListViewItemIcon_ClickDelegate_o *callbackFunc; // x8
 
-  gifttype = this->fields.gifttype;
-  if ( (unsigned int)(gifttype - 6) < 2 || gifttype == 2 || gifttype == 1 )
+  IsServant = Gift__IsServant(this->fields.gifttype, 0LL);
+  if ( IsServant || this->fields.gifttype == 2 )
   {
     itemData = this->fields.itemData;
     if ( !itemData )
-      goto LABEL_9;
+      goto LABEL_8;
     if ( itemData->fields.objectId >= 1 )
     {
-      this = (GiftListViewItemIcon_o *)this->fields.callbackFunc;
-      if ( this )
+      callbackFunc = this->fields.callbackFunc;
+      if ( callbackFunc )
       {
-        GiftListViewItemIcon_ClickDelegate__Invoke((GiftListViewItemIcon_ClickDelegate_o *)this, itemData, 0LL);
+        ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *))callbackFunc->fields.m_target)(callbackFunc->fields.original_method_info);
         return;
       }
-LABEL_9:
-      sub_B7769C(this, itemData);
+LABEL_8:
+      sub_1B00F28(IsServant, itemData);
     }
   }
 }
@@ -32,74 +33,71 @@ LABEL_9:
 
 void __fastcall GiftListViewItemIcon__Set(GiftListViewItemIcon_o *this, GiftEntity_o *indata, const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
   struct GiftEntity_o **p_itemData; // x20
-  ItemIconComponent_o *item; // x0
-  __int64 type; // x1
-  const MethodInfo *v12; // x3
-  const MethodInfo *v13; // x5
-  const MethodInfo *v14; // x6
-  struct GiftEntity_o *v15; // x8
-  int32_t objectId; // w2
-  const MethodInfo *num; // x3
+  ItemIconComponent_o *IsServant; // x0
+  __int64 gifttype; // x1
+  int32_t type; // w0
+  struct GiftEntity_o *itemData; // x8
+  struct GiftEntity_o *v10; // x8
+  struct GiftEntity_o *v11; // x8
 
   this->fields.itemData = indata;
   p_itemData = &this->fields.itemData;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.itemData,
-    (System_Int32_array **)indata,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
-  v15 = *p_itemData;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.itemData, (int32_t)indata, (int32_t)method, v3);
   if ( !*p_itemData )
-    goto LABEL_14;
-  type = (unsigned int)v15->fields.type;
+    goto LABEL_17;
+  type = (*p_itemData)->fields.type;
   this->fields.gifttype = type;
-  if ( (unsigned int)(type - 6) < 2 )
+  IsServant = (ItemIconComponent_o *)Gift__IsServant(type, 0LL);
+  if ( ((unsigned __int8)IsServant & 1) != 0 )
   {
-LABEL_5:
-    item = this->fields.item;
-    if ( item )
+    itemData = this->fields.itemData;
+    if ( itemData )
     {
-      ItemIconComponent__SetFaceImage(item, v15->fields.objectId, v15->fields.limitCount, v15->fields.num, 1, 0, v14);
-      return;
+      IsServant = this->fields.item;
+      if ( IsServant )
+      {
+        ItemIconComponent__SetFaceImage(
+          IsServant,
+          itemData->fields.objectId,
+          itemData->fields.limitCount,
+          itemData->fields.num,
+          1,
+          0,
+          0LL);
+        return;
+      }
     }
-LABEL_14:
-    sub_B7769C(item, type);
+LABEL_17:
+    sub_1B00F28(IsServant, gifttype);
   }
-  if ( (_DWORD)type == 11 )
+  gifttype = (unsigned int)this->fields.gifttype;
+  if ( (_DWORD)gifttype == 11 )
   {
-    item = this->fields.item;
-    if ( !item )
-      goto LABEL_14;
-    ItemIconComponent__SetCommandCodeImage(item, v15->fields.objectId, v15->fields.num, v12);
+    v10 = this->fields.itemData;
+    if ( !v10 )
+      goto LABEL_17;
+    IsServant = this->fields.item;
+    if ( !IsServant )
+      goto LABEL_17;
+    ItemIconComponent__SetCommandCodeImage(IsServant, v10->fields.objectId, v10->fields.num, 0LL);
   }
   else
   {
-    if ( (_DWORD)type == 1 )
-      goto LABEL_5;
-    item = this->fields.item;
-    objectId = v15->fields.objectId;
-    num = (const MethodInfo *)(unsigned int)v15->fields.num;
-    if ( (_DWORD)type == 2 )
+    IsServant = this->fields.item;
+    v11 = this->fields.itemData;
+    if ( (_DWORD)gifttype == 2 )
     {
-      if ( !item )
-        goto LABEL_14;
-      ItemIconComponent__SetItem(item, objectId, (int32_t)num, num);
+      if ( !v11 || !IsServant )
+        goto LABEL_17;
+      ItemIconComponent__SetItem(IsServant, v11->fields.objectId, v11->fields.num, 0LL);
     }
     else
     {
-      if ( !item )
-        goto LABEL_14;
-      ItemIconComponent__SetGift(item, type, objectId, (int32_t)num, 0, v13);
+      if ( !v11 || !IsServant )
+        goto LABEL_17;
+      ItemIconComponent__SetGift(IsServant, gifttype, v11->fields.objectId, v11->fields.num, 0, 0LL);
     }
   }
 }
@@ -110,58 +108,48 @@ void __fastcall GiftListViewItemIcon__SetCallBack(
         GiftListViewItemIcon_ClickDelegate_o *call,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields.callbackFunc = call;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.callbackFunc,
-    (System_Int32_array **)call,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)call, (int32_t)method, v3);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall GiftListViewItemIcon__SetTouch(GiftListViewItemIcon_o *this, bool flg, const MethodInfo *method)
 {
+  __int64 v5; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v6; // x1
-  UnityEngine_Object_o *Component_srcLineSprite; // x20
+  __int64 v7; // x1
+  Il2CppObject *Component_object; // x20
 
-  if ( (byte_438C8E2 & 1) == 0 )
+  if ( (byte_48E49EB & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_Collider___);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438C8E2 = 1;
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_Collider___, flg);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v5);
+    byte_48E49EB = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    goto LABEL_11;
-  Component_srcLineSprite = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                                      gameObject,
-                                                      (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+    goto LABEL_10;
+  Component_object = UnityEngine_GameObject__GetComponent_object_(
+                       gameObject,
+                       (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(Component_srcLineSprite, 0LL, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
+                                             (UnityEngine_Object_o *)Component_object,
+                                             0LL,
+                                             0LL);
   if ( ((unsigned __int8)gameObject & 1) != 0 )
   {
-    if ( Component_srcLineSprite )
+    if ( Component_object )
     {
-      UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_srcLineSprite, flg, 0LL);
+      UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, flg, 0LL);
       return;
     }
-LABEL_11:
-    sub_B7769C(gameObject, v6);
+LABEL_10:
+    sub_1B00F28(gameObject, v7);
   }
 }
 
@@ -173,7 +161,7 @@ void __fastcall GiftListViewItemIcon__Show(GiftListViewItemIcon_o *this, const M
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7769C(0LL, v3);
+    sub_1B00F28(0LL, v3);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
 }
 
@@ -186,14 +174,73 @@ void __fastcall GiftListViewItemIcon_ClickDelegate___ctor(
         const MethodInfo *a4)
 {
   __int64 v4; // x8
-  intptr_t *p_method; // x0
+  __int64 v6; // x20
+  int v8; // w22
+  Il2CppObject *v9; // x8
+  struct System_Reflection_MethodInfo_o *v10; // x9
+  char v11; // w21
+  char v12; // w0
+  __int64 v13; // x0
 
-  v4 = **(_QWORD **)&method;
+  v4 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
+  *(_QWORD *)&this->fields.extra_arg = *(_QWORD *)&method;
+  v6 = *(_QWORD *)&method;
+  *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  p_method = &this->fields.method;
-  *((_QWORD *)p_method + 1) = *(_QWORD *)&method;
-  *((_QWORD *)p_method - 2) = v4;
-  sub_B77560(p_method);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  v8 = *(unsigned __int8 *)(v6 + 82);
+  this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
+  if ( (sub_1B00D8C(v6) & 1) != 0 )
+  {
+    if ( v8 == 1 )
+    {
+      v9 = (Il2CppObject *)sub_194D118;
+LABEL_16:
+      this->fields.m_target = v9;
+      goto LABEL_17;
+    }
+  }
+  else
+  {
+    if ( !v8 )
+    {
+      if ( LOBYTE(this[1].fields.method_ptr) )
+      {
+        v11 = sub_1B00D84(v6);
+        v12 = sub_1B01240(v6);
+        if ( (v11 & 1) != 0 )
+        {
+          if ( (v12 & 1) != 0 )
+            v9 = (Il2CppObject *)sub_194D214;
+          else
+            v9 = (Il2CppObject *)sub_194D1D8;
+        }
+        else if ( (v12 & 1) != 0 )
+        {
+          v9 = (Il2CppObject *)sub_194D154;
+        }
+        else
+        {
+          v9 = (Il2CppObject *)sub_194D128;
+        }
+      }
+      else
+      {
+        v9 = (Il2CppObject *)sub_194D0F8;
+      }
+      goto LABEL_16;
+    }
+    if ( !object )
+    {
+      v13 = sub_1B00F44(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B00DF4(v13, 0LL);
+    }
+  }
+  v10 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
+  this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
+  this->fields.original_method_info = v10;
+LABEL_17:
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_194D0B0;
 }
 
 
@@ -204,11 +251,10 @@ System_IAsyncResult_o *__fastcall GiftListViewItemIcon_ClickDelegate__BeginInvok
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v6[2]; // [xsp+0h] [xbp-10h] BYREF
+  GiftEntity_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
-  v6[0] = (__int64)gift;
-  v6[1] = 0LL;
-  return (System_IAsyncResult_o *)sub_B77568(this, v6, callback, object);
+  v6 = gift;
+  return (System_IAsyncResult_o *)sub_1B00C80(this, &v6, callback, object);
 }
 
 
@@ -217,7 +263,7 @@ void __fastcall GiftListViewItemIcon_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B7756C(result, 0LL, method);
+  sub_1B00C84(result, 0LL, method);
 }
 
 
@@ -226,242 +272,8 @@ void __fastcall GiftListViewItemIcon_ClickDelegate__Invoke(
         GiftEntity_o *gift,
         const MethodInfo *method)
 {
-  __int64 v3; // x8
-  __int64 v6; // x24
-  GiftListViewItemIcon_ClickDelegate_o **v7; // x25
-  __int64 i; // x26
-  unsigned int v9; // w22
-  __int64 class_0; // x0
-  GiftEntity_c *v11; // x8
-  unsigned __int64 v12; // x10
-  int32_t *v13; // x11
-  __int64 v14; // x0
-  __int64 v15; // x0
-  unsigned int v16; // w23
-  __int64 v17; // x0
-  __int64 v18; // x8
-  unsigned __int64 v19; // x10
-  _DWORD *v20; // x11
-  __int64 v21; // x0
-  __int64 v22; // x0
-  __int64 v23; // x0
-  void (__fastcall **v24)(GiftEntity_o *, _QWORD); // x0
-  __int64 v25; // x0
-  void (__fastcall **v26)(__int64 *, GiftEntity_o *, _QWORD); // x0
-  GiftListViewItemIcon_ClickDelegate_o *v27; // x8
-  __int64 v28; // x21
-  __int64 *v29; // x22
-  void (__fastcall *v30)(GiftEntity_o *, __int64); // x23
-  char v31; // w0
-  int v32; // w8
-  char v33; // w23
-  char v34; // w0
-  __int64 v35; // x8
-  __int64 v36; // x1
-  __int64 v37; // x2
-  unsigned __int64 v38; // x10
-  _DWORD *v39; // x11
-  char v40; // w22
-  char v41; // w0
-  GiftEntity_c *klass; // x8
-  __int64 v43; // x1
-  __int64 v44; // x2
-  unsigned __int64 v45; // x10
-  int32_t *p_offset; // x11
-  GiftListViewItemIcon_ClickDelegate_o *v47; // [xsp+8h] [xbp-48h] BYREF
-
-  v47 = this;
-  v3 = *(_QWORD *)&this[1].fields.method_ptr;
-  if ( !v3 )
-  {
-    v7 = &v47;
-    v6 = 1LL;
-    goto LABEL_5;
-  }
-  v6 = *(_QWORD *)(v3 + 24);
-  if ( v6 )
-  {
-    v7 = (GiftListViewItemIcon_ClickDelegate_o **)(v3 + 32);
-LABEL_5:
-    for ( i = 0LL; i != v6; ++i )
-    {
-      v27 = v7[i];
-      v29 = *(__int64 **)&v27->fields.method;
-      v28 = *(_QWORD *)&v27->fields.extra_arg;
-      v30 = *(void (__fastcall **)(GiftEntity_o *, __int64))&v27->fields.method_ptr;
-      if ( *(__int16 *)(v28 + 72) == -1 )
-        sub_B77680(*(_QWORD *)&v27->fields.extra_arg, gift);
-      v31 = sub_B775F4(v28);
-      v32 = *(unsigned __int8 *)(v28 + 74);
-      if ( (v31 & 1) != 0 )
-      {
-        if ( v32 == 1 )
-          goto LABEL_58;
-      }
-      else
-      {
-        if ( v32 != 1 )
-        {
-          if ( *(__int16 *)(v28 + 72) != -1 && this->fields.m_target )
-          {
-            v40 = sub_B775EC(v28);
-            v41 = sub_B779F0(v28);
-            if ( (v40 & 1) != 0 )
-            {
-              if ( (v41 & 1) != 0 )
-              {
-                klass = gift->klass;
-                v43 = *(_QWORD *)(v28 + 24);
-                v44 = *(unsigned __int16 *)(v28 + 72);
-                if ( *(_WORD *)&gift->klass->_2.bitflags1 )
-                {
-                  v45 = 0LL;
-                  p_offset = &klass->_1.interfaceOffsets->offset;
-                  while ( *((_QWORD *)p_offset - 1) != v43 )
-                  {
-                    ++v45;
-                    p_offset += 4;
-                    if ( v45 >= *(unsigned __int16 *)&gift->klass->_2.bitflags1 )
-                      goto LABEL_57;
-                  }
-                  v23 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset + 2 * (int)v44);
-                }
-                else
-                {
-LABEL_57:
-                  v23 = sub_B0F4C0(gift, v43, v44);
-                }
-                v15 = *(_QWORD *)(v23 + 8);
-              }
-              else
-              {
-                v15 = *((_QWORD *)&gift->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v28 + 72));
-              }
-              v24 = (void (__fastcall **)(GiftEntity_o *, _QWORD))sub_B77674(v15, v28);
-              (*v24)(gift, v24);
-            }
-            else
-            {
-              v9 = *(unsigned __int16 *)(v28 + 72);
-              if ( (v41 & 1) != 0 )
-              {
-                class_0 = j_il2cpp_method_get_class_0(v28);
-                v11 = gift->klass;
-                if ( *(_WORD *)&gift->klass->_2.bitflags1 )
-                {
-                  v12 = 0LL;
-                  v13 = &v11->_1.interfaceOffsets->offset;
-                  while ( *((_QWORD *)v13 - 1) != class_0 )
-                  {
-                    ++v12;
-                    v13 += 4;
-                    if ( v12 >= *(unsigned __int16 *)&gift->klass->_2.bitflags1 )
-                      goto LABEL_11;
-                  }
-                  v14 = (__int64)(&v11->vtable._0_Equals.method + 2 * (int)(*v13 + v9));
-                }
-                else
-                {
-LABEL_11:
-                  v14 = sub_B0F4C0(gift, class_0, v9);
-                }
-                (*(void (__fastcall **)(GiftEntity_o *, _QWORD))v14)(gift, *(_QWORD *)(v14 + 8));
-              }
-              else
-              {
-                (*((void (__fastcall **)(GiftEntity_o *, _QWORD))&gift->klass->vtable._0_Equals.method
-                 + 2 * *(unsigned __int16 *)(v28 + 72)))(
-                  gift,
-                  *((_QWORD *)&gift->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v28 + 72)));
-              }
-            }
-            continue;
-          }
-LABEL_58:
-          v30(gift, v28);
-          continue;
-        }
-        if ( !v29 )
-          goto LABEL_58;
-        if ( *(__int16 *)(v28 + 72) != -1 && (*(_BYTE *)(*v29 + 277) & 1) == 0 && this->fields.m_target )
-        {
-          v33 = sub_B775EC(v28);
-          v34 = sub_B779F0(v28);
-          if ( (v33 & 1) != 0 )
-          {
-            if ( (v34 & 1) != 0 )
-            {
-              v35 = *v29;
-              v36 = *(_QWORD *)(v28 + 24);
-              v37 = *(unsigned __int16 *)(v28 + 72);
-              if ( *(_WORD *)(*v29 + 298) )
-              {
-                v38 = 0LL;
-                v39 = (_DWORD *)(*(_QWORD *)(v35 + 176) + 8LL);
-                while ( *((_QWORD *)v39 - 1) != v36 )
-                {
-                  ++v38;
-                  v39 += 4;
-                  if ( v38 >= *(unsigned __int16 *)(*v29 + 298) )
-                    goto LABEL_48;
-                }
-                v25 = v35 + 16LL * (*v39 + (int)v37) + 312;
-              }
-              else
-              {
-LABEL_48:
-                v25 = sub_B0F4C0(v29, v36, v37);
-              }
-              v22 = *(_QWORD *)(v25 + 8);
-            }
-            else
-            {
-              v22 = *(_QWORD *)(*v29 + 16LL * *(unsigned __int16 *)(v28 + 72) + 320);
-            }
-            v26 = (void (__fastcall **)(__int64 *, GiftEntity_o *, _QWORD))sub_B77674(v22, v28);
-            (*v26)(v29, gift, v26);
-          }
-          else
-          {
-            v16 = *(unsigned __int16 *)(v28 + 72);
-            if ( (v34 & 1) != 0 )
-            {
-              v17 = j_il2cpp_method_get_class_0(v28);
-              v18 = *v29;
-              if ( *(_WORD *)(*v29 + 298) )
-              {
-                v19 = 0LL;
-                v20 = (_DWORD *)(*(_QWORD *)(v18 + 176) + 8LL);
-                while ( *((_QWORD *)v20 - 1) != v17 )
-                {
-                  ++v19;
-                  v20 += 4;
-                  if ( v19 >= *(unsigned __int16 *)(*v29 + 298) )
-                    goto LABEL_19;
-                }
-                v21 = v18 + 16LL * (int)(*v20 + v16) + 312;
-              }
-              else
-              {
-LABEL_19:
-                v21 = sub_B0F4C0(v29, v17, v16);
-              }
-              (*(void (__fastcall **)(__int64 *, GiftEntity_o *, _QWORD))v21)(v29, gift, *(_QWORD *)(v21 + 8));
-            }
-            else
-            {
-              (*(void (__fastcall **)(__int64 *, GiftEntity_o *, _QWORD))(*v29
-                                                                        + 16LL * *(unsigned __int16 *)(v28 + 72)
-                                                                        + 312))(
-                v29,
-                gift,
-                *(_QWORD *)(*v29 + 16LL * *(unsigned __int16 *)(v28 + 72) + 320));
-            }
-          }
-          continue;
-        }
-      }
-      ((void (__fastcall *)(__int64 *, GiftEntity_o *, __int64))v30)(v29, gift, v28);
-    }
-  }
+  ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, GiftEntity_o *, _QWORD))this->fields.m_target)(
+    this->fields.original_method_info,
+    gift,
+    *(_QWORD *)&this->fields.extra_arg);
 }

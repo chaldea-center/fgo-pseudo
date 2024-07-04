@@ -1,34 +1,35 @@
 void __fastcall MapShakerComponent___ctor(MapShakerComponent_o *this, const MethodInfo *method)
 {
-  LODWORD(this->fields.toShake) = 1;
-  *(_OWORD *)&this->fields.MagnitudeXMin = xmmword_332FA90;
-  LODWORD(this[1].klass) = 1;
+  this->fields.shakeType = 1;
+  *(_OWORD *)&this->fields.MagnitudeXMax = xmmword_B703F0;
+  this->fields.flag = 1;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
 
 void __fastcall MapShakerComponent__OnDisable(MapShakerComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_Object_o *v3; // x20
-  UnityEngine_GameObject_o *v4; // x19
-  UnityEngine_Vector3_o zero; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Object_o *toShake; // x20
+  __int64 v4; // x1
+  UnityEngine_GameObject_o *v5; // x19
 
-  if ( (byte_438E5B4 & 1) == 0 )
+  if ( (byte_48DF777 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438E5B4 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    byte_48DF777 = 1;
   }
-  v3 = *(UnityEngine_Object_o **)&this->fields.flag;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  toShake = (UnityEngine_Object_o *)this->fields.toShake;
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  if ( UnityEngine_Object__op_Inequality(v3, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(toShake, 0LL, 0LL) )
   {
-    v4 = *(UnityEngine_GameObject_o **)&this->fields.flag;
-    zero = UnityEngine_Vector3__get_zero(0LL);
-    GameObjectExtensions__SetLocalPosition(v4, zero, 0LL);
+    v5 = this->fields.toShake;
+    if ( !byte_48DD9F1 )
+    {
+      sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, v4);
+      byte_48DD9F1 = 1;
+    }
+    GameObjectExtensions__SetLocalPosition(v5, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
   }
 }
 
@@ -42,97 +43,88 @@ void __fastcall MapShakerComponent__Start(MapShakerComponent_o *this, const Meth
 
 void __fastcall MapShakerComponent__Update(MapShakerComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_Object_o *v3; // x20
+  UnityEngine_Object_o *toShake; // x20
   const MethodInfo *v4; // x1
-  int toShake; // w8
+  int32_t shakeType; // w8
   int32_t v6; // w0
-  float MagnitudeYMax; // s0
-  float MagnitudeXMin; // s1
+  float MagnitudeXMin; // s0
+  float MagnitudeXMax; // s1
   UnityEngine_GameObject_o *v9; // x20
-  int v10; // w8
+  int32_t v10; // w8
   float v11; // s0
   int32_t v12; // w0
-  float v13; // s0
-  float MagnitudeYMin; // s1
+  float MagnitudeYMin; // s0
+  float MagnitudeYMax; // s1
   UnityEngine_GameObject_o *v15; // x20
-  int v16; // w8
+  int32_t v16; // w8
   float v17; // s0
   UnityEngine_GameObject_o *v18; // x20
   float v19; // s0
-  float v20; // s1
-  UnityEngine_GameObject_o *v21; // x20
-  float v22; // s0
-  float v23; // s1
+  UnityEngine_GameObject_o *v20; // x20
+  float v21; // s0
+  UnityEngine_GameObject_o *v22; // x20
+  float v23; // s0
   UnityEngine_GameObject_o *v24; // x20
   float v25; // s0
-  UnityEngine_GameObject_o *v26; // x20
-  float v27; // s0
 
-  if ( (byte_438E5B3 & 1) == 0 )
+  if ( (byte_48DF776 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438E5B3 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    byte_48DF776 = 1;
   }
-  v3 = *(UnityEngine_Object_o **)&this->fields.flag;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  toShake = (UnityEngine_Object_o *)this->fields.toShake;
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  if ( UnityEngine_Object__op_Equality(v3, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Equality(toShake, 0LL, 0LL) )
     MapShakerComponent__getMap(this, v4);
-  toShake = (int)this->fields.toShake;
-  switch ( toShake )
+  shakeType = this->fields.shakeType;
+  switch ( shakeType )
   {
     case 2:
-      v18 = *(UnityEngine_GameObject_o **)&this->fields.flag;
-      v19 = UnityEngine_Random__Range(this->fields.MagnitudeYMax, this->fields.MagnitudeXMin, 0LL);
-      if ( (float)((float)((float)SHIDWORD(this[1].klass) * 3.1416) / 1.4) >= 0.0 )
-        v20 = 1.0;
-      else
-        v20 = -1.0;
-      GameObjectExtensions__SetLocalPositionX(v18, v19 * v20, 0LL);
-      v21 = *(UnityEngine_GameObject_o **)&this->fields.flag;
-      v22 = UnityEngine_Random__Range(*(float *)&this->fields.shakeType, this->fields.MagnitudeYMin, 0LL);
-      if ( (float)((float)SHIDWORD(this[1].klass) * 3.1416) >= 0.0 )
-        v23 = 1.0;
-      else
-        v23 = -1.0;
-      GameObjectExtensions__SetLocalPositionY(v21, v22 * v23, 0LL);
-      ++HIDWORD(this[1].klass);
+      v18 = this->fields.toShake;
+      v19 = UnityEngine_Random__Range(this->fields.MagnitudeXMin, this->fields.MagnitudeXMax, 0LL);
+      if ( (float)((float)((float)this->fields.frameCnt * 3.1416) / 1.4) < 0.0 )
+        v19 = -v19;
+      GameObjectExtensions__SetLocalPositionX(v18, v19, 0LL);
+      v20 = this->fields.toShake;
+      v21 = UnityEngine_Random__Range(this->fields.MagnitudeYMin, this->fields.MagnitudeYMax, 0LL);
+      if ( (float)((float)this->fields.frameCnt * 3.1416) < 0.0 )
+        v21 = -v21;
+      GameObjectExtensions__SetLocalPositionY(v20, v21, 0LL);
+      ++this->fields.frameCnt;
       break;
     case 1:
-      v24 = *(UnityEngine_GameObject_o **)&this->fields.flag;
-      v25 = UnityEngine_Random__Range(this->fields.MagnitudeYMax, this->fields.MagnitudeXMin, 0LL);
-      GameObjectExtensions__SetLocalPositionX(v24, v25 * (float)SLODWORD(this[1].klass), 0LL);
-      v26 = *(UnityEngine_GameObject_o **)&this->fields.flag;
-      v27 = UnityEngine_Random__Range(*(float *)&this->fields.shakeType, this->fields.MagnitudeYMin, 0LL);
-      GameObjectExtensions__SetLocalPositionY(v26, v27 * (float)SLODWORD(this[1].klass), 0LL);
-      LODWORD(this[1].klass) = -LODWORD(this[1].klass);
+      v22 = this->fields.toShake;
+      v23 = UnityEngine_Random__Range(this->fields.MagnitudeXMin, this->fields.MagnitudeXMax, 0LL);
+      GameObjectExtensions__SetLocalPositionX(v22, v23 * (float)this->fields.flag, 0LL);
+      v24 = this->fields.toShake;
+      v25 = UnityEngine_Random__Range(this->fields.MagnitudeYMin, this->fields.MagnitudeYMax, 0LL);
+      GameObjectExtensions__SetLocalPositionY(v24, v25 * (float)this->fields.flag, 0LL);
+      this->fields.flag = -this->fields.flag;
       break;
     case 0:
-      v6 = UnityEngine_Random__Range_36343764(0, 2, 0LL);
+      v6 = UnityEngine_Random__Range_68037396(0, 2, 0LL);
+      MagnitudeXMax = this->fields.MagnitudeXMax;
       MagnitudeXMin = this->fields.MagnitudeXMin;
-      MagnitudeYMax = this->fields.MagnitudeYMax;
-      v9 = *(UnityEngine_GameObject_o **)&this->fields.flag;
+      v9 = this->fields.toShake;
       if ( v6 )
         v10 = 1;
       else
         v10 = -1;
-      LODWORD(this[1].klass) = v10;
-      v11 = UnityEngine_Random__Range(MagnitudeYMax, MagnitudeXMin, 0LL);
-      GameObjectExtensions__SetLocalPositionX(v9, v11 * (float)SLODWORD(this[1].klass), 0LL);
-      v12 = UnityEngine_Random__Range_36343764(0, 2, 0LL);
+      this->fields.flag = v10;
+      v11 = UnityEngine_Random__Range(MagnitudeXMin, MagnitudeXMax, 0LL);
+      GameObjectExtensions__SetLocalPositionX(v9, v11 * (float)this->fields.flag, 0LL);
+      v12 = UnityEngine_Random__Range_68037396(0, 2, 0LL);
+      MagnitudeYMax = this->fields.MagnitudeYMax;
       MagnitudeYMin = this->fields.MagnitudeYMin;
-      v13 = *(float *)&this->fields.shakeType;
-      v15 = *(UnityEngine_GameObject_o **)&this->fields.flag;
+      v15 = this->fields.toShake;
       if ( v12 )
         v16 = 1;
       else
         v16 = -1;
-      LODWORD(this[1].klass) = v16;
-      v17 = UnityEngine_Random__Range(v13, MagnitudeYMin, 0LL);
-      GameObjectExtensions__SetLocalPositionY(v15, v17 * (float)SLODWORD(this[1].klass), 0LL);
+      this->fields.flag = v16;
+      v17 = UnityEngine_Random__Range(MagnitudeYMin, MagnitudeYMax, 0LL);
+      GameObjectExtensions__SetLocalPositionY(v15, v17 * (float)this->fields.flag, 0LL);
       break;
   }
 }
@@ -140,43 +132,35 @@ void __fastcall MapShakerComponent__Update(MapShakerComponent_o *this, const Met
 
 void __fastcall MapShakerComponent__getMap(MapShakerComponent_o *this, const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  TerminalSceneComponent_c *v9; // x0
+  int32_t v2; // w2
+  int32_t v3; // w3
+  TerminalSceneComponent_c *v5; // x0
   struct TerminalSceneComponent_o *mInstance; // x8
   struct ScrTerminalMap_o *mTerminalMap; // x8
-  System_Int32_array **mapButtonGrid; // x1
+  struct UnityEngine_GameObject_o *dispRoot; // x1
 
-  if ( (byte_438E5B5 & 1) == 0 )
+  if ( (byte_48DF778 & 1) == 0 )
   {
-    sub_B775C4(&TerminalSceneComponent_TypeInfo);
-    byte_438E5B5 = 1;
+    sub_1B00CCC(&TerminalSceneComponent_TypeInfo, method);
+    byte_48DF778 = 1;
   }
-  if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
+  if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
+  if ( !byte_48DDF7C )
+  {
+    sub_1B00CCC(&TerminalSceneComponent_TypeInfo, method);
+    byte_48DDF7C = 1;
+  }
+  v5 = TerminalSceneComponent_TypeInfo;
+  if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
+    v5 = TerminalSceneComponent_TypeInfo;
   }
-  if ( !byte_4387463 )
-  {
-    sub_B775C4(&TerminalSceneComponent_TypeInfo);
-    byte_4387463 = 1;
-  }
-  v9 = TerminalSceneComponent_TypeInfo;
-  if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    v9 = TerminalSceneComponent_TypeInfo;
-  }
-  mInstance = v9->static_fields->mInstance;
+  mInstance = v5->static_fields->mInstance;
   if ( !mInstance || (mTerminalMap = mInstance->fields.mTerminalMap) == 0LL )
-    sub_B7769C(v9, method);
-  mapButtonGrid = (System_Int32_array **)mTerminalMap->fields.mapButtonGrid;
-  *(_QWORD *)&this->fields.flag = mapButtonGrid;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.flag, mapButtonGrid, v2, v3, v4, v5, v6, v7);
+    sub_1B00F28(v5, method);
+  dispRoot = mTerminalMap->fields.dispRoot;
+  this->fields.toShake = dispRoot;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.toShake, (int32_t)dispRoot, v2, v3);
 }

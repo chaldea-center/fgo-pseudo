@@ -1,6 +1,17 @@
 void __fastcall FSAutoScale___ctor(FSAutoScale_o *this, const MethodInfo *method)
 {
-  *(UnityEngine_Vector3_o *)&this->fields.defaultScale.fields.y = UnityEngine_Vector3__get_one(0LL);
+  struct UnityEngine_Vector3_StaticFields *static_fields; // x8
+  float z; // s1
+
+  if ( !byte_48DD9F6 )
+  {
+    sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, method);
+    byte_48DD9F6 = 1;
+  }
+  static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
+  z = static_fields->oneVector.fields.z;
+  *(_QWORD *)&this->fields.defaultScale.fields.x = *(_QWORD *)&static_fields->oneVector.fields.x;
+  this->fields.defaultScale.fields.z = z;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -23,12 +34,12 @@ void __fastcall FSAutoScale__Awake(FSAutoScale_o *this, const MethodInfo *method
         y = localScale.fields.y,
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B7769C(transform, v4);
+    sub_1B00F28(transform, v4);
   }
   v9 = UnityEngine_Transform__get_localScale(transform, 0LL);
-  this->fields.defaultScale.fields.y = v5;
-  this->fields.defaultScale.fields.z = y;
-  *(float *)&this[1].klass = v9.fields.z;
+  this->fields.defaultScale.fields.x = v5;
+  this->fields.defaultScale.fields.y = y;
+  this->fields.defaultScale.fields.z = v9.fields.z;
   FSAutoScale__UpdateScale(this, v7);
 }
 
@@ -40,9 +51,9 @@ void __fastcall FSAutoScale__UpdateScale(FSAutoScale_o *this, const MethodInfo *
   float v4; // s9
   UnityEngine_Transform_o *transform; // x0
   __int64 v6; // x1
-  float v7; // s2
-  float z; // s1
-  float y; // s0
+  float z; // s2
+  float y; // s1
+  float x; // s0
 
   width = UnityEngine_Screen__get_width(0LL);
   v4 = (float)width / (float)UnityEngine_Screen__get_height(0LL);
@@ -51,20 +62,20 @@ void __fastcall FSAutoScale__UpdateScale(FSAutoScale_o *this, const MethodInfo *
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
     if ( transform )
     {
-      z = this->fields.defaultScale.fields.z;
-      v7 = *(float *)&this[1].klass;
       y = this->fields.defaultScale.fields.y;
+      z = this->fields.defaultScale.fields.z;
+      x = this->fields.defaultScale.fields.x;
       goto LABEL_6;
     }
 LABEL_7:
-    sub_B7769C(transform, v6);
+    sub_1B00F28(transform, v6);
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
     goto LABEL_7;
-  v7 = (float)(v4 / 1.7778) * *(float *)&this[1].klass;
   z = (float)(v4 / 1.7778) * this->fields.defaultScale.fields.z;
   y = (float)(v4 / 1.7778) * this->fields.defaultScale.fields.y;
+  x = (float)(v4 / 1.7778) * this->fields.defaultScale.fields.x;
 LABEL_6:
-  UnityEngine_Transform__set_localScale(transform, *(UnityEngine_Vector3_o *)&y, 0LL);
+  UnityEngine_Transform__set_localScale(transform, *(UnityEngine_Vector3_o *)&x, 0LL);
 }

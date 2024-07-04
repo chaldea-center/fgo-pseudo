@@ -1,13 +1,13 @@
 void __fastcall ServantAddEntity___ctor(ServantAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438C482 & 1) == 0 )
+  if ( (byte_48E2DC9 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_int___ctor__);
-    byte_438C482 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_int___ctor__, method);
+    byte_48E2DC9 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_2FE684C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -17,21 +17,18 @@ int32_t __fastcall ServantAddEntity__CreatePrimaryKey(ServantAddEntity_o *this, 
   __int64 v4; // x20
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v6; // 0:x0.16
 
-  if ( (byte_438C47E & 1) == 0 )
+  if ( (byte_48E2DC5 & 1) == 0 )
   {
-    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_438C47E = 1;
+    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
+    byte_48E2DC5 = 1;
   }
   v4 = *(_QWORD *)&this->fields.svtId.fields.currentCryptoKey;
   v3 = *(_QWORD *)&this->fields.svtId.fields.fakeValue;
-  if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-  {
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  }
   *(_QWORD *)&v6.fields.currentCryptoKey = v4;
   *(_QWORD *)&v6.fields.fakeValue = v3;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v6, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(v6, 0LL);
 }
 
 
@@ -39,30 +36,32 @@ System_String_o *__fastcall ServantAddEntity__GetOverwriteServantShortName(
         ServantAddEntity_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
   System_String_o *result; // x0
-  System_Xml_Schema_XmlSchemaObject_o *value; // [xsp+8h] [xbp-18h] BYREF
+  Il2CppObject *value; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_438C481 & 1) == 0 )
+  if ( (byte_48E2DC8 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_B775C4(&string_TypeInfo);
-    sub_B775C4(&StringLiteral_21778/*"overWriteServantShortName"*/);
-    byte_438C481 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, method);
+    sub_1B00CCC(&string_TypeInfo, v3);
+    sub_1B00CCC(&StringLiteral_22055/*"overWriteServantShortName"*/, v4);
+    byte_48E2DC8 = 1;
   }
   value = 0LL;
   result = (System_String_o *)this->fields.script;
   if ( result )
   {
-    if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
-            (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)result,
-            (System_Xml_XmlQualifiedName_o *)StringLiteral_21778/*"overWriteServantShortName"*/,
+    if ( !System_Collections_Generic_Dictionary_object__object___TryGetValue(
+            (System_Collections_Generic_Dictionary_object__object__o *)result,
+            (Il2CppObject *)StringLiteral_22055/*"overWriteServantShortName"*/,
             &value,
-            (const MethodInfo_2F7F3F8 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+            (const MethodInfo_308F254 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
       return 0LL;
     result = (System_String_o *)value;
     if ( value && (System_String_c *)value->klass != string_TypeInfo )
     {
-      sub_B77990(value);
+      sub_1B011E8(value);
       return 0LL;
     }
   }
@@ -75,14 +74,13 @@ int32_t __fastcall ServantAddEntity__GetPresentDialogMessageId(ServantAddEntity_
   const MethodInfo *v2; // x3
   ServantAddMaster_c *v4; // x0
 
-  if ( (byte_438C480 & 1) == 0 )
+  if ( (byte_48E2DC7 & 1) == 0 )
   {
-    sub_B775C4(&ServantAddMaster_TypeInfo);
-    byte_438C480 = 1;
+    sub_1B00CCC(&ServantAddMaster_TypeInfo, method);
+    byte_48E2DC7 = 1;
   }
   v4 = ServantAddMaster_TypeInfo;
-  if ( (BYTE3(ServantAddMaster_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ServantAddMaster_TypeInfo->_2.cctor_finished )
+  if ( !ServantAddMaster_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ServantAddMaster_TypeInfo);
     v4 = ServantAddMaster_TypeInfo;
@@ -97,33 +95,36 @@ int32_t __fastcall ServantAddEntity__GetScript(
         int32_t defaultValue,
         const MethodInfo *method)
 {
+  __int64 v7; // x1
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
-  __int64 v8; // x1
-  ServantAddEntity_o *v10; // x0
-  const MethodInfo *v11; // x1
-  System_Xml_Schema_XmlSchemaObject_o *value; // [xsp+8h] [xbp-28h] BYREF
+  __int64 v9; // x1
+  __int64 v10; // x2
+  __int64 v11; // x3
+  ServantAddEntity_o *v13; // x0
+  const MethodInfo *v14; // x1
+  Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_438C47F & 1) == 0 )
+  if ( (byte_48E2DC6 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_B775C4(&long_TypeInfo);
-    byte_438C47F = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
+    sub_1B00CCC(&long_TypeInfo, v7);
+    byte_48E2DC6 = 1;
   }
   value = 0LL;
   script = this->fields.script;
   if ( !script
-    || !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
-          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-          (System_Xml_XmlQualifiedName_o *)key,
+    || !System_Collections_Generic_Dictionary_object__object___TryGetValue(
+          (System_Collections_Generic_Dictionary_object__object__o *)script,
+          (Il2CppObject *)key,
           &value,
-          (const MethodInfo_2F7F3F8 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+          (const MethodInfo_308F254 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
     return defaultValue;
   }
   if ( !value )
-    sub_B7769C(0LL, v8);
+    sub_1B00F28(0LL, v9);
   if ( value->klass->_1.element_class == long_TypeInfo->_1.element_class )
-    return *(_DWORD *)j_il2cpp_object_unbox_0(value);
-  v10 = (ServantAddEntity_o *)sub_B77990(value);
-  return ServantAddEntity__GetPresentDialogMessageId(v10, v11);
+    return *(_DWORD *)j_il2cpp_object_unbox_0(value, long_TypeInfo, v10, v11);
+  sub_1B011E8(value);
+  return ServantAddEntity__GetPresentDialogMessageId(v13, v14);
 }

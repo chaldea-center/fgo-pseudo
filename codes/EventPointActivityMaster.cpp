@@ -1,17 +1,18 @@
 void __fastcall EventPointActivityMaster___ctor(EventPointActivityMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_438B54D & 1) == 0 )
+  if ( (byte_48E286E & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_EventPointActivityMaster__EventPointActivityEntity__string___ctor__);
-    byte_438B54D = 1;
+    sub_1B00CCC(&Method_DataMasterBase_EventPointActivityMaster__EventPointActivityEntity__string___ctor__, method);
+    byte_48E286E = 1;
   }
-  DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
-    (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
+  DataMasterBase_object__object__object____ctor(
+    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     267,
-    (const MethodInfo_21FBC48 *)Method_DataMasterBase_EventPointActivityMaster__EventPointActivityEntity__string___ctor__);
+    (const MethodInfo_2FE6D64 *)Method_DataMasterBase_EventPointActivityMaster__EventPointActivityEntity__string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 EventPointActivityEntity_o *__fastcall EventPointActivityMaster__GetEntity(
         EventPointActivityMaster_o *this,
         int32_t eventId,
@@ -21,24 +22,26 @@ EventPointActivityEntity_o *__fastcall EventPointActivityMaster__GetEntity(
         int64_t objectValue,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x1
+  Il2CppObject *PK; // x1
 
-  if ( (byte_438B54B & 1) == 0 )
+  if ( (byte_48E286C & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_EventPointActivityMaster__EventPointActivityEntity__string__GetEntity__);
-    byte_438B54B = 1;
+    sub_1B00CCC(
+      &Method_DataMasterBase_EventPointActivityMaster__EventPointActivityEntity__string__GetEntity__,
+      *(_QWORD *)&eventId);
+    byte_48E286C = 1;
   }
-  PK = EventPointActivityEntity__CreatePK(
-         eventId,
-         groupId,
-         objectType,
-         objectId,
-         objectValue,
-         (const MethodInfo *)objectValue);
-  return (EventPointActivityEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
-                                         (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
+  PK = (Il2CppObject *)EventPointActivityEntity__CreatePK(
+                         eventId,
+                         groupId,
+                         objectType,
+                         objectId,
+                         objectValue,
+                         (const MethodInfo *)objectValue);
+  return (EventPointActivityEntity_o *)DataMasterBase_object__object__object___GetEntity(
+                                         (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                          PK,
-                                         (const MethodInfo_21FBCE4 *)Method_DataMasterBase_EventPointActivityMaster__EventPointActivityEntity__string__GetEntity__);
+                                         (const MethodInfo_2FE6DA4 *)Method_DataMasterBase_EventPointActivityMaster__EventPointActivityEntity__string__GetEntity__);
 }
 
 
@@ -53,102 +56,133 @@ bool __fastcall EventPointActivityMaster__TryGetEntity(
         int64_t objectValue,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x2
+  Il2CppObject *PK; // x2
 
-  if ( (byte_438B54C & 1) == 0 )
+  if ( (byte_48E286D & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_EventPointActivityMaster__EventPointActivityEntity__string__TryGetEntity__);
-    byte_438B54C = 1;
+    sub_1B00CCC(
+      &Method_DataMasterBase_EventPointActivityMaster__EventPointActivityEntity__string__TryGetEntity__,
+      entity);
+    byte_48E286D = 1;
   }
-  PK = EventPointActivityEntity__CreatePK(
-         eventId,
-         groupId,
-         objectType,
-         objectId,
-         objectValue,
-         *(const MethodInfo **)&objectId);
-  return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
-           (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
-           (WarQuestSelectionEntity_o **)entity,
+  PK = (Il2CppObject *)EventPointActivityEntity__CreatePK(
+                         eventId,
+                         groupId,
+                         objectType,
+                         objectId,
+                         objectValue,
+                         *(const MethodInfo **)&objectId);
+  return DataMasterBase_object__object__object___TryGetEntity(
+           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
+           (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_21FBD3C *)Method_DataMasterBase_EventPointActivityMaster__EventPointActivityEntity__string__TryGetEntity__);
+           (const MethodInfo_2FE6DF4 *)Method_DataMasterBase_EventPointActivityMaster__EventPointActivityEntity__string__TryGetEntity__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 EventPointActivityEntity_array *__fastcall EventPointActivityMaster__getEntityList(
         EventPointActivityMaster_o *this,
         int32_t eventId,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v5; // x21
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *v6; // x1
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
-  int32_t v8; // w22
-  int32_t v9; // w23
-  __int64 v10; // x10
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  System_Collections_Generic_List_object__o *v11; // x21
+  System_Collections_ObjectModel_Collection_T__o *v12; // x1
+  System_Collections_ObjectModel_Collection_T__o *list; // x0
+  int v14; // w22
+  int32_t v15; // w23
+  int32_t v16; // w2
+  int32_t v17; // w3
+  __int64 methodPtr_low; // x10
+  struct System_Object_array *items; // x8
+  _QWORD *v20; // x9
+  __int64 size; // x10
+  Il2CppClass **v22; // x0
 
-  if ( (byte_438B54E & 1) == 0 )
+  if ( (byte_48E286F & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B775C4(&EventPointActivityEntity_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventPointActivityEntity__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventPointActivityEntity__ToArray__);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventPointActivityEntity___ctor__);
-    sub_B775C4(&System_Collections_Generic_List_EventPointActivityEntity__TypeInfo);
-    byte_438B54E = 1;
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
+    sub_1B00CCC(&EventPointActivityEntity_TypeInfo, v6);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventPointActivityEntity__Add__, v7);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventPointActivityEntity__ToArray__, v8);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventPointActivityEntity___ctor__, v9);
+    sub_1B00CCC(&System_Collections_Generic_List_EventPointActivityEntity__TypeInfo, v10);
+    byte_48E286F = 1;
   }
-  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_EventPointActivityEntity__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v5,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_EventPointActivityEntity___ctor__);
-  list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
+  v11 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_EventPointActivityEntity__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v11,
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_EventPointActivityEntity___ctor__);
+  list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    goto LABEL_16;
-  list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
-                                                                                       list,
-                                                                                       (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    goto LABEL_19;
+  list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Count(
+                                                             list,
+                                                             (const MethodInfo_2F836B0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( (int)list >= 1 )
   {
-    v8 = (int)list;
-    v9 = 0;
+    v14 = (int)list;
+    v15 = 0;
     while ( 1 )
     {
-      list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
+      list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
       if ( !list )
         break;
-      list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
-                                                                                           list,
-                                                                                           v9,
-                                                                                           (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+      list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
+                                                                 list,
+                                                                 v15,
+                                                                 (const MethodInfo_2F83740 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( !list )
         break;
-      v6 = list;
-      v10 = *(&EventPointActivityEntity_TypeInfo->_2.bitflags2 + 1);
-      if ( *(&list->klass->_2.bitflags2 + 1) < (unsigned int)v10
-        || (EventPointActivityEntity_c *)list->klass->_2.typeHierarchy[v10 - 1] != EventPointActivityEntity_TypeInfo )
+      v12 = list;
+      methodPtr_low = LOBYTE(EventPointActivityEntity_TypeInfo->vtable._0_Equals.methodPtr);
+      if ( LOBYTE(list->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
+        || (EventPointActivityEntity_c *)list->klass->_2.typeHierarchy[methodPtr_low - 1] != EventPointActivityEntity_TypeInfo )
       {
         break;
       }
       if ( LODWORD(list->fields.items) == eventId )
       {
-        if ( !v5 )
+        if ( !v11 )
           break;
-        System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-          v5,
-          (EventMissionProgressRequest_Argument_ProgressData_o *)list,
-          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_EventPointActivityEntity__Add__);
+        items = v11->fields._items;
+        v20 = Method_System_Collections_Generic_List_EventPointActivityEntity__Add__;
+        ++v11->fields._version;
+        if ( !items )
+          break;
+        size = v11->fields._size;
+        if ( (unsigned int)size >= items->max_length )
+        {
+          System_Collections_Generic_List_object___AddWithResize(
+            v11,
+            (Il2CppObject *)list,
+            *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+        }
+        else
+        {
+          v22 = &items->obj.klass + size;
+          v11->fields._size = size + 1;
+          v22[4] = (Il2CppClass *)v12;
+          sub_1B00C70((ServantStatusBattleListViewItem_o *)(v22 + 4), (int32_t)v12, v16, v17);
+        }
       }
-      if ( ++v9 >= v8 )
-        goto LABEL_14;
+      if ( v14 == ++v15 )
+        goto LABEL_17;
     }
-LABEL_16:
-    sub_B7769C(list, v6);
+LABEL_19:
+    sub_1B00F28(list, v12);
   }
-LABEL_14:
-  if ( !v5 )
-    goto LABEL_16;
-  return (EventPointActivityEntity_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
-                                             (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v5,
-                                             (const MethodInfo_30553E4 *)Method_System_Collections_Generic_List_EventPointActivityEntity__ToArray__);
+LABEL_17:
+  if ( !v11 )
+    goto LABEL_19;
+  return (EventPointActivityEntity_array *)System_Collections_Generic_List_object___ToArray(
+                                             v11,
+                                             (const MethodInfo_33C3528 *)Method_System_Collections_Generic_List_EventPointActivityEntity__ToArray__);
 }

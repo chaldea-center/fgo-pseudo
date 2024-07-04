@@ -8,99 +8,84 @@ void __fastcall EventBoardGameTokenItem__DestroyItem(EventBoardGameTokenItem_o *
 {
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_438E822 & 1) == 0 )
+  if ( (byte_48E6274 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438E822 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    byte_48E6274 = 1;
   }
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  UnityEngine_Object__Destroy_36309980(gameObject, 0LL);
+  UnityEngine_Object__Destroy_68077656(gameObject, 0LL);
 }
 
 
 void __fastcall EventBoardGameTokenItem__Init(EventBoardGameTokenItem_o *this, const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  System_Int32_array **v9; // x1
-  System_Int32_array **v10; // x1
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
-  __int64 v17; // x1
+  int32_t v2; // w2
+  int32_t v3; // w3
+  int32_t v5; // w1
+  int32_t v6; // w1
+  int32_t v7; // w2
+  int32_t v8; // w3
+  __int64 v9; // x1
   UILabel_o *tokenNameLabel; // x0
-  System_String_array **v19; // x2
-  System_String_array **v20; // x3
-  System_Boolean_array **v21; // x4
-  System_Int32_array **v22; // x5
-  System_Int32_array *v23; // x6
-  System_Int32_array *v24; // x7
+  int32_t v11; // w2
+  int32_t v12; // w3
 
-  if ( (byte_438E81E & 1) == 0 )
+  if ( (byte_48E6270 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438E81E = 1;
+    sub_1B00CCC(&StringLiteral_1/*""*/, method);
+    byte_48E6270 = 1;
   }
-  *(_DWORD *)&this->fields.haved = 0;
-  *(&this->fields.haved + 4) = 0;
-  v9 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.index = 0;
+  this->fields.haved = 0;
+  v5 = (int)StringLiteral_1/*""*/;
   this->fields.tokenName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.tokenName, v9, v2, v3, v4, v5, v6, v7);
-  v10 = (System_Int32_array **)StringLiteral_1/*""*/;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.tokenName, v5, v2, v3);
+  v6 = (int)StringLiteral_1/*""*/;
   this->fields.tokenImageId = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.tokenImageId, v10, v11, v12, v13, v14, v15, v16);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.tokenImageId, v6, v7, v8);
   tokenNameLabel = this->fields.tokenNameLabel;
   if ( !tokenNameLabel )
-    sub_B7769C(0LL, v17);
+    sub_1B00F28(0LL, v9);
   UILabel__set_text(tokenNameLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.callback = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.callback, 0LL, v19, v20, v21, v22, v23, v24);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.callback, 0, v11, v12);
 }
 
 
 void __fastcall EventBoardGameTokenItem__OnClickItem(EventBoardGameTokenItem_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  System_Action_int__o *callback; // x0
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  __int64 v5; // x0
+  __int64 v6; // x1
+  struct System_Action_int__o *callback; // x8
 
-  if ( (byte_438E821 & 1) == 0 )
+  if ( (byte_48E6273 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Action_int__Invoke__);
-    sub_B775C4(&SoundManager_TypeInfo);
-    byte_438E821 = 1;
+    sub_1B00CCC(&Method_EventBoardGameTokenItem_OnClickItem__, method);
+    byte_48E6273 = 1;
   }
-  if ( this->fields.callback && *(&this->fields.haved + 4) )
+  if ( this->fields.callback && this->fields.haved )
   {
-    if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !SoundManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    }
-    SoundManager__playSystemSe(0, 0LL);
+    v3 = Method_EventBoardGameTokenItem_OnClickItem__;
+    if ( (*((_BYTE *)Method_EventBoardGameTokenItem_OnClickItem__ + 83) & 2) != 0 )
+      v3 = (_QWORD *)sub_1B00CE4(Method_EventBoardGameTokenItem_OnClickItem__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     callback = this->fields.callback;
     if ( !callback )
-      sub_B7769C(0LL, v3);
-    System_Action_int___Invoke(
-      callback,
-      *(_DWORD *)&this->fields.haved,
-      (const MethodInfo_269F2EC *)Method_System_Action_int__Invoke__);
+      sub_1B00F28(v5, v6);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))callback->fields.m_target)(
+      callback->fields.original_method_info,
+      (unsigned int)this->fields.index,
+      *(_QWORD *)&callback->fields.extra_arg);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall EventBoardGameTokenItem__SetItem(
         EventBoardGameTokenItem_o *this,
         EventBoardGameTokenItem_o **item,
@@ -109,174 +94,124 @@ void __fastcall EventBoardGameTokenItem__SetItem(
         System_Action_int__o *callback,
         const MethodInfo *method)
 {
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  EventBoardGameTokenItem_o *v12; // x20
-  EventBoardGameTokenItem_o *v13; // x24
-  System_String_array **v14; // x2
-  System_String_array **v15; // x3
-  System_Boolean_array **v16; // x4
-  System_Int32_array **v17; // x5
-  System_Int32_array *v18; // x6
-  System_Int32_array *v19; // x7
-  EventBoardGameTokenItem_o *v20; // x8
-  System_Int32_array **v21; // x1
-  struct System_String_o **p_tokenImageId; // x0
-  const MethodInfo *v23; // x3
-  System_String_array **v24; // x2
-  System_String_array **v25; // x3
-  System_Boolean_array **v26; // x4
-  System_Int32_array **v27; // x5
-  System_Int32_array *v28; // x6
-  System_Int32_array *v29; // x7
+  EventBoardGameTokenItem_o *v10; // x20
+  EventBoardGameTokenItem_o *v11; // x22
+  System_String_o *v12; // x0
+  int32_t v13; // w2
+  char v14; // w3
+  EventBoardGameTokenItem_o *v15; // x1
+  const MethodInfo *v16; // x3
+  int32_t v17; // w2
+  char v18; // w3
 
-  v12 = this;
-  if ( (byte_438E81F & 1) == 0 )
+  v10 = this;
+  if ( (byte_48E6271 & 1) == 0 )
   {
-    this = (EventBoardGameTokenItem_o *)sub_B775C4(&StringLiteral_23200/*"token_enpty"*/);
-    byte_438E81F = 1;
+    this = (EventBoardGameTokenItem_o *)sub_1B00CCC(&StringLiteral_23623/*"token_enpty"*/, item);
+    byte_48E6271 = 1;
   }
+  v11 = *item;
   if ( ent )
   {
+    if ( !v11 )
+      goto LABEL_14;
+    v11->fields.index = ent->fields.tokenId;
+    v12 = System_Int32__ToString((int)ent + 20, 0LL);
+    v11->fields.tokenName = v12;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&v11->fields.tokenName, (int32_t)v12, v13, v14);
+    v11 = *item;
     if ( !*item )
-      goto LABEL_15;
-    *(_DWORD *)&(*item)->fields.haved = ent->fields.tokenId;
-    v13 = *item;
-    this = (EventBoardGameTokenItem_o *)System_Int32__ToString((int)ent + 20, 0LL);
-    if ( !v13 )
-      goto LABEL_15;
-    v13->fields.tokenName = (struct System_String_o *)this;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&v13->fields.tokenName,
-      (System_Int32_array **)this,
-      v14,
-      v15,
-      v16,
-      v17,
-      v18,
-      v19);
-    if ( !*item )
-      goto LABEL_15;
-    *(&(*item)->fields.haved + 4) = haved;
+      goto LABEL_14;
+    v11->fields.haved = haved;
     if ( haved )
     {
       this = (EventBoardGameTokenItem_o *)System_Int32__ToString((int)ent + 44, 0LL);
-      v20 = *item;
+      v11 = *item;
       if ( *item )
       {
-        v20->fields.tokenImageId = (struct System_String_o *)this;
-        v21 = (System_Int32_array **)this;
-        p_tokenImageId = &v20->fields.tokenImageId;
-        goto LABEL_12;
+        v15 = this;
+        goto LABEL_11;
       }
-LABEL_15:
-      sub_B7769C(this, item);
+LABEL_14:
+      sub_1B00F28(this, item);
     }
   }
-  this = *item;
-  if ( !*item )
-    goto LABEL_15;
-  v21 = (System_Int32_array **)StringLiteral_23200/*"token_enpty"*/;
-  this->fields.tokenImageId = (struct System_String_o *)StringLiteral_23200/*"token_enpty"*/;
-  p_tokenImageId = &this->fields.tokenImageId;
-LABEL_12:
-  sub_B77560(
-    (BattleServantConfConponent_o *)p_tokenImageId,
-    v21,
-    (System_String_array **)ent,
-    (System_String_array **)haved,
-    (System_Boolean_array **)callback,
-    (System_Int32_array **)method,
-    v6,
-    v7);
-  EventBoardGameTokenItem__SetTokenInfo(v12, *item, 1, v23);
+  else if ( !v11 )
+  {
+    goto LABEL_14;
+  }
+  v15 = (EventBoardGameTokenItem_o *)StringLiteral_23623/*"token_enpty"*/;
+LABEL_11:
+  v11->fields.tokenImageId = (struct System_String_o *)v15;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v11->fields.tokenImageId, (int32_t)v15, (int32_t)ent, haved);
+  EventBoardGameTokenItem__SetTokenInfo(v10, *item, 1, v16);
   if ( callback )
   {
-    v12->fields.callback = callback;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&v12->fields.callback,
-      (System_Int32_array **)callback,
-      v24,
-      v25,
-      v26,
-      v27,
-      v28,
-      v29);
+    v10->fields.callback = callback;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&v10->fields.callback, (int32_t)callback, v17, v18);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall EventBoardGameTokenItem__SetTokenInfo(
         EventBoardGameTokenItem_o *this,
         EventBoardGameTokenItem_o *item,
         bool dispNo,
         const MethodInfo *method)
 {
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  EventBoardGameTokenItem_o *v10; // x20
-  System_Int32_array **tokenName; // x1
-  System_Int32_array **tokenImageId; // x1
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
-  System_String_o *v19; // x1
+  EventBoardGameTokenItem_o *v6; // x20
+  struct System_String_o *tokenName; // x1
+  System_String_o **p_tokenName; // x23
+  struct System_String_o *tokenImageId; // x1
+  char v10; // w2
+  int32_t v11; // w3
 
-  v10 = this;
-  if ( (byte_438E820 & 1) == 0 )
+  v6 = this;
+  if ( (byte_48E6272 & 1) == 0 )
   {
-    this = (EventBoardGameTokenItem_o *)sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438E820 = 1;
+    this = (EventBoardGameTokenItem_o *)sub_1B00CCC(&StringLiteral_1/*""*/, item);
+    byte_48E6272 = 1;
   }
   if ( !item )
     goto LABEL_13;
-  *(_DWORD *)&v10->fields.haved = *(_DWORD *)&item->fields.haved;
-  *(&v10->fields.haved + 4) = *(&item->fields.haved + 4);
-  tokenName = (System_Int32_array **)item->fields.tokenName;
-  v10->fields.tokenName = (struct System_String_o *)tokenName;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&v10->fields.tokenName,
-    tokenName,
-    (System_String_array **)dispNo,
-    (System_String_array **)method,
-    v4,
-    v5,
-    v6,
-    v7);
-  tokenImageId = (System_Int32_array **)item->fields.tokenImageId;
-  v10->fields.tokenImageId = (struct System_String_o *)tokenImageId;
-  sub_B77560((BattleServantConfConponent_o *)&v10->fields.tokenImageId, tokenImageId, v13, v14, v15, v16, v17, v18);
-  this = (EventBoardGameTokenItem_o *)v10->fields.tokenNameLabel;
+  v6->fields.index = item->fields.index;
+  v6->fields.haved = item->fields.haved;
+  p_tokenName = &item->fields.tokenName;
+  tokenName = item->fields.tokenName;
+  v6->fields.tokenName = tokenName;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v6->fields.tokenName, (int32_t)tokenName, dispNo, (int32_t)method);
+  tokenImageId = item->fields.tokenImageId;
+  v6->fields.tokenImageId = tokenImageId;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v6->fields.tokenImageId, (int32_t)tokenImageId, v10, v11);
+  this = (EventBoardGameTokenItem_o *)v6->fields.tokenNameLabel;
   if ( dispNo )
   {
     if ( !this )
       goto LABEL_13;
-    v19 = item->fields.tokenName;
   }
   else
   {
     if ( !this )
       goto LABEL_13;
-    v19 = (System_String_o *)StringLiteral_1/*""*/;
+    p_tokenName = (System_String_o **)&StringLiteral_1/*""*/;
   }
-  UILabel__set_text((UILabel_o *)this, v19, 0LL);
-  if ( System_String__IsNullOrEmpty(item->fields.tokenImageId, 0LL) )
-    return;
-  this = (EventBoardGameTokenItem_o *)v10->fields.tokenImage;
-  if ( !this
-    || (UISprite__set_atlas((UISprite_o *)this, item->fields.eventAtlas, 0LL),
-        (this = (EventBoardGameTokenItem_o *)v10->fields.tokenImage) == 0LL) )
+  UILabel__set_text((UILabel_o *)this, *p_tokenName, 0LL);
+  if ( !System_String__IsNullOrEmpty(item->fields.tokenImageId, 0LL) )
   {
+    this = (EventBoardGameTokenItem_o *)v6->fields.tokenImage;
+    if ( this )
+    {
+      UISprite__set_atlas((UISprite_o *)this, item->fields.eventAtlas, 0LL);
+      this = (EventBoardGameTokenItem_o *)v6->fields.tokenImage;
+      if ( this )
+      {
+        UISprite__set_spriteName((UISprite_o *)this, item->fields.tokenImageId, 0LL);
+        return;
+      }
+    }
 LABEL_13:
-    sub_B7769C(this, item);
+    sub_1B00F28(this, item);
   }
-  UISprite__set_spriteName((UISprite_o *)this, item->fields.tokenImageId, 0LL);
 }
 
 

@@ -1,21 +1,17 @@
 void __fastcall WarBoardTaskBase___ctor(WarBoardTaskBase_o *this, const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  System_Int32_array **v9; // x1
+  int32_t v2; // w2
+  int32_t v3; // w3
+  int32_t v5; // w1
 
-  if ( (byte_438D2F6 & 1) == 0 )
+  if ( (byte_48E07E6 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438D2F6 = 1;
+    sub_1B00CCC(&StringLiteral_1/*""*/, method);
+    byte_48E07E6 = 1;
   }
-  v9 = (System_Int32_array **)StringLiteral_1/*""*/;
+  v5 = (int)StringLiteral_1/*""*/;
   this->fields.Key = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, v5, v2, v3);
   this->fields.IsEnabled = 1;
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
@@ -25,27 +21,30 @@ System_Collections_IEnumerator_o *__fastcall WarBoardTaskBase__Execute(
         WarBoardTaskBase_o *this,
         const MethodInfo *method)
 {
-  WarBoardTaskBase__Execute_d__15_o *v2; // x19
+  __int64 v2; // x19
 
-  if ( (byte_438D2F5 & 1) == 0 )
+  if ( (byte_48E07E5 & 1) == 0 )
   {
-    sub_B775C4(&WarBoardTaskBase__Execute_d__15_TypeInfo);
-    byte_438D2F5 = 1;
+    sub_1B00CCC(&WarBoardTaskBase__Execute_d__15_TypeInfo, method);
+    byte_48E07E5 = 1;
   }
-  v2 = (WarBoardTaskBase__Execute_d__15_o *)sub_B77694(WarBoardTaskBase__Execute_d__15_TypeInfo);
-  WarBoardTaskBase__Execute_d__15___ctor(v2, 0, 0LL);
+  v2 = sub_1B00F18(WarBoardTaskBase__Execute_d__15_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v2, 0LL);
+  *(_DWORD *)(v2 + 16) = 0;
   return (System_Collections_IEnumerator_o *)v2;
 }
 
 
 void __fastcall WarBoardTaskBase__OnEnd(WarBoardTaskBase_o *this, const MethodInfo *method)
 {
-  WarBoardTaskBase_TaskCallback_o *EndCallback; // x0
+  struct WarBoardTaskBase_TaskCallback_o *EndCallback; // x8
 
   EndCallback = this->fields.EndCallback;
   this->fields._isPlaying_k__BackingField = 0;
   if ( EndCallback )
-    WarBoardTaskBase_TaskCallback__Invoke(EndCallback, 0LL);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))EndCallback->fields.m_target)(
+      EndCallback->fields.original_method_info,
+      *(_QWORD *)&EndCallback->fields.extra_arg);
 }
 
 
@@ -63,12 +62,14 @@ void __fastcall WarBoardTaskBase__OnResume(WarBoardTaskBase_o *this, const Metho
 
 void __fastcall WarBoardTaskBase__OnStart(WarBoardTaskBase_o *this, const MethodInfo *method)
 {
-  WarBoardTaskBase_TaskCallback_o *StartCallback; // x0
+  struct WarBoardTaskBase_TaskCallback_o *StartCallback; // x8
 
   StartCallback = this->fields.StartCallback;
   this->fields._isPlaying_k__BackingField = 1;
   if ( StartCallback )
-    WarBoardTaskBase_TaskCallback__Invoke(StartCallback, 0LL);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))StartCallback->fields.m_target)(
+      StartCallback->fields.original_method_info,
+      *(_QWORD *)&StartCallback->fields.extra_arg);
 }
 
 
@@ -103,27 +104,40 @@ void __fastcall WarBoardTaskBase_TaskCallback___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  struct BattleServantClassBoardSkillEffectListComponent_o *v8; // x8
-  BattleServantConfConponent_o *p_method; // x0
+  __int64 v4; // x8
+  __int64 v6; // x21
+  int v8; // w22
+  struct System_Reflection_MethodInfo_o *v9; // x9
+  __int64 v10; // x0
 
-  v8 = **(struct BattleServantClassBoardSkillEffectListComponent_o ***)&method;
+  v4 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
+  *(_QWORD *)&this->fields.extra_arg = *(_QWORD *)&method;
+  v6 = *(_QWORD *)&method;
+  *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  p_method = (BattleServantConfConponent_o *)&this->fields.method;
-  p_method->monitor = *(void **)&method;
-  p_method[-1].fields.classBoardSkillObj = v8;
-  sub_B77560(
-    p_method,
-    (System_Int32_array **)object,
-    *(System_String_array ***)&method,
-    (System_String_array **)a4,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  v8 = *(unsigned __int8 *)(v6 + 82);
+  this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
+  if ( (sub_1B00D8C(v6) & 1) == 0 )
+  {
+    if ( !object )
+    {
+      v10 = sub_1B00F44(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B00DF4(v10, 0LL);
+    }
+    goto LABEL_5;
+  }
+  if ( v8 )
+  {
+LABEL_5:
+    v9 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
+    this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
+    this->fields.original_method_info = v9;
+    goto LABEL_6;
+  }
+  this->fields.m_target = (Il2CppObject *)sub_1949400;
+LABEL_6:
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19493C0;
 }
 
 
@@ -136,7 +150,7 @@ System_IAsyncResult_o *__fastcall WarBoardTaskBase_TaskCallback__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0LL;
-  return (System_IAsyncResult_o *)sub_B77568(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1B00C80(this, &v5, callback, object);
 }
 
 
@@ -145,147 +159,15 @@ void __fastcall WarBoardTaskBase_TaskCallback__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B7756C(result, 0LL, method);
+  sub_1B00C84(result, 0LL, method);
 }
 
 
 void __fastcall WarBoardTaskBase_TaskCallback__Invoke(WarBoardTaskBase_TaskCallback_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x8
-  __int64 v4; // x23
-  WarBoardTaskBase_TaskCallback_o **v5; // x24
-  __int64 v6; // x25
-  unsigned int v7; // w22
-  __int64 class_0; // x0
-  __int64 v9; // x8
-  unsigned __int64 v10; // x10
-  _DWORD *v11; // x11
-  __int64 v12; // x0
-  __int64 v13; // x0
-  __int64 v14; // x0
-  void (__fastcall **v15)(__int64 *, _QWORD); // x0
-  WarBoardTaskBase_TaskCallback_o *v16; // x8
-  __int64 *v17; // x20
-  __int64 v18; // x21
-  void (__fastcall *v19)(__int64); // x22
-  char v20; // w22
-  char v21; // w0
-  __int64 v22; // x8
-  __int64 v23; // x1
-  __int64 v24; // x2
-  unsigned __int64 v25; // x10
-  _DWORD *v26; // x11
-  WarBoardTaskBase_TaskCallback_o *v27; // [xsp+8h] [xbp-38h] BYREF
-
-  v27 = this;
-  v2 = *(_QWORD *)&this[1].fields.method_ptr;
-  if ( !v2 )
-  {
-    v5 = &v27;
-    v4 = 1LL;
-    goto LABEL_5;
-  }
-  v4 = *(_QWORD *)(v2 + 24);
-  if ( v4 )
-  {
-    v5 = (WarBoardTaskBase_TaskCallback_o **)(v2 + 32);
-LABEL_5:
-    v6 = 0LL;
-    while ( 1 )
-    {
-      v16 = v5[v6];
-      v17 = *(__int64 **)&v16->fields.method;
-      v18 = *(_QWORD *)&v16->fields.extra_arg;
-      v19 = *(void (__fastcall **)(__int64))&v16->fields.method_ptr;
-      if ( *(__int16 *)(v18 + 72) == -1 )
-        sub_B77680(*(_QWORD *)&v16->fields.extra_arg, method);
-      if ( (sub_B775F4(v18) & 1) == 0 )
-        break;
-      if ( *(_BYTE *)(v18 + 74) )
-        goto LABEL_35;
-      v19(v18);
-LABEL_36:
-      if ( ++v6 == v4 )
-        return;
-    }
-    if ( v17 && *(__int16 *)(v18 + 72) != -1 && (*(_BYTE *)(*v17 + 277) & 1) == 0 && this->fields.m_target )
-    {
-      v20 = sub_B775EC(v18);
-      v21 = sub_B779F0(v18);
-      if ( (v20 & 1) != 0 )
-      {
-        if ( (v21 & 1) != 0 )
-        {
-          v22 = *v17;
-          v23 = *(_QWORD *)(v18 + 24);
-          v24 = *(unsigned __int16 *)(v18 + 72);
-          if ( *(_WORD *)(*v17 + 298) )
-          {
-            v25 = 0LL;
-            v26 = (_DWORD *)(*(_QWORD *)(v22 + 176) + 8LL);
-            while ( *((_QWORD *)v26 - 1) != v23 )
-            {
-              ++v25;
-              v26 += 4;
-              if ( v25 >= *(unsigned __int16 *)(*v17 + 298) )
-                goto LABEL_34;
-            }
-            v14 = v22 + 16LL * (*v26 + (int)v24) + 312;
-          }
-          else
-          {
-LABEL_34:
-            v14 = sub_B0F4C0(v17, v23, v24);
-          }
-          v13 = *(_QWORD *)(v14 + 8);
-        }
-        else
-        {
-          v13 = *(_QWORD *)(*v17 + 16LL * *(unsigned __int16 *)(v18 + 72) + 320);
-        }
-        v15 = (void (__fastcall **)(__int64 *, _QWORD))sub_B77674(v13, v18);
-        (*v15)(v17, v15);
-      }
-      else
-      {
-        v7 = *(unsigned __int16 *)(v18 + 72);
-        if ( (v21 & 1) != 0 )
-        {
-          class_0 = j_il2cpp_method_get_class_0(v18);
-          v9 = *v17;
-          if ( *(_WORD *)(*v17 + 298) )
-          {
-            v10 = 0LL;
-            v11 = (_DWORD *)(*(_QWORD *)(v9 + 176) + 8LL);
-            while ( *((_QWORD *)v11 - 1) != class_0 )
-            {
-              ++v10;
-              v11 += 4;
-              if ( v10 >= *(unsigned __int16 *)(*v17 + 298) )
-                goto LABEL_11;
-            }
-            v12 = v9 + 16LL * (int)(*v11 + v7) + 312;
-          }
-          else
-          {
-LABEL_11:
-            v12 = sub_B0F4C0(v17, class_0, v7);
-          }
-          (*(void (__fastcall **)(__int64 *, _QWORD))v12)(v17, *(_QWORD *)(v12 + 8));
-        }
-        else
-        {
-          (*(void (__fastcall **)(__int64 *, _QWORD))(*v17 + 16LL * *(unsigned __int16 *)(v18 + 72) + 312))(
-            v17,
-            *(_QWORD *)(*v17 + 16LL * *(unsigned __int16 *)(v18 + 72) + 320));
-        }
-      }
-      goto LABEL_36;
-    }
-LABEL_35:
-    ((void (__fastcall *)(__int64 *, __int64))v19)(v17, v18);
-    goto LABEL_36;
-  }
+  ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))this->fields.m_target)(
+    this->fields.original_method_info,
+    *(_QWORD *)&this->fields.extra_arg);
 }
 
 
@@ -325,11 +207,11 @@ void __fastcall __noreturn WarBoardTaskBase__Execute_d__15__System_Collections_I
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
+  v2 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B00F18(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B775C8(&Method_WarBoardTaskBase__Execute_d__15_System_Collections_IEnumerator_Reset__);
-  sub_B77668(v3, v4);
+  v4 = sub_1B00CE0(&Method_WarBoardTaskBase__Execute_d__15_System_Collections_IEnumerator_Reset__);
+  sub_1B00DF4(v3, v4);
 }
 
 

@@ -6,44 +6,16 @@ void __fastcall WarBoardAPIWallAttackRequestTask___ctor(
         bool onStartBeginRequest,
         const MethodInfo *method)
 {
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
-  System_String_array **v15; // x2
-  System_String_array **v16; // x3
-  System_Boolean_array **v17; // x4
-  System_Int32_array **v18; // x5
-  System_Int32_array *v19; // x6
-  System_Int32_array *v20; // x7
+  int32_t v9; // w2
+  int32_t v10; // w3
+  int32_t v11; // w2
+  int32_t v12; // w3
 
-  WarBoardAPIRequestTask___ctor_21364956(
-    (WarBoardAPIRequestTask_o *)this,
-    resultCallback,
-    onStartBeginRequest,
-    (const MethodInfo *)resultCallback);
+  WarBoardAPIRequestTask___ctor_34519832((WarBoardAPIRequestTask_o *)this, resultCallback, onStartBeginRequest, 0LL);
   this->fields.attackPieceData = attacker;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.attackPieceData,
-    (System_Int32_array **)attacker,
-    v9,
-    v10,
-    v11,
-    v12,
-    v13,
-    v14);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.attackPieceData, (int32_t)attacker, v9, v10);
   this->fields.targetWallData = target;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.targetWallData,
-    (System_Int32_array **)target,
-    v15,
-    v16,
-    v17,
-    v18,
-    v19,
-    v20);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.targetWallData, (int32_t)target, v11, v12);
 }
 
 
@@ -51,50 +23,46 @@ void __fastcall WarBoardAPIWallAttackRequestTask__SetRequest(
         WarBoardAPIWallAttackRequestTask_o *this,
         const MethodInfo *method)
 {
-  void *Instance; // x0
+  __int64 v3; // x1
   __int64 v4; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v6; // x1
   WarBoardData_o *warBoardData; // x20
-  WarBoardWallAttackRequest_o *v6; // x21
+  WarBoardWallAttackRequest_o *v8; // x21
   struct WarBoardPieceData_o *attackPieceData; // x8
   struct WarBoardWallData_o *targetWallData; // x9
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
+  int32_t v11; // w2
+  int32_t v12; // w3
 
-  if ( (byte_4389015 & 1) == 0 )
+  if ( (byte_48E07A6 & 1) == 0 )
   {
-    sub_B775C4(&Method_NetworkManager_getRequest_WarBoardWallAttackRequest___);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_4389015 = 1;
+    sub_1B00CCC(&Method_NetworkManager_getRequest_WarBoardWallAttackRequest___, method);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v3);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
+    byte_48E07A6 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  WarBoardAPIRequestTask__SetRequest((WarBoardAPIRequestTask_o *)this, 0LL);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_12;
-  warBoardData = (WarBoardData_o *)*((_QWORD *)Instance + 54);
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+    goto LABEL_11;
+  warBoardData = (WarBoardData_o *)Instance[27].monitor;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  Instance = NetworkManager__getRequest_WarBoardWallAttackRequest_(
+  Instance = NetworkManager__getRequest_object_(
                0LL,
-               (const MethodInfo_1DF8BE8 *)Method_NetworkManager_getRequest_WarBoardWallAttackRequest___);
+               (const MethodInfo_2DD4818 *)Method_NetworkManager_getRequest_WarBoardWallAttackRequest___);
   if ( !warBoardData
-    || (v6 = (WarBoardWallAttackRequest_o *)Instance,
-        Instance = (void *)WarBoardData__get_id(warBoardData, 0LL),
+    || (v8 = (WarBoardWallAttackRequest_o *)Instance,
+        Instance = (Il2CppObject *)WarBoardData__get_id(warBoardData, 0LL),
         (attackPieceData = this->fields.attackPieceData) == 0LL)
     || (targetWallData = this->fields.targetWallData) == 0LL
-    || !v6 )
+    || !v8 )
   {
-LABEL_12:
-    sub_B7769C(Instance, v4);
+LABEL_11:
+    sub_1B00F28(Instance, v6);
   }
   WarBoardWallAttackRequest__beginRequest(
-    v6,
+    v8,
     (int32_t)Instance,
     attackPieceData->fields._forceId_k__BackingField,
     attackPieceData->fields._groupId_k__BackingField,
@@ -104,14 +72,6 @@ LABEL_12:
     targetWallData->fields._squareIndex_k__BackingField,
     warBoardData,
     0LL);
-  this->fields.request = (struct RequestBase_o *)v6;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.request,
-    (System_Int32_array **)v6,
-    v9,
-    v10,
-    v11,
-    v12,
-    v13,
-    v14);
+  this->fields.request = (struct RequestBase_o *)v8;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.request, (int32_t)v8, v11, v12);
 }

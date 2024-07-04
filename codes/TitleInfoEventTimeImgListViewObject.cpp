@@ -13,40 +13,28 @@ void __fastcall TitleInfoEventTimeImgListViewObject__Init(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *dispObject; // x0
-  struct TitleInfoEventTimeImgListViewDraw_o *Component_srcLineSprite; // x0
+  Il2CppObject *Component_object; // x0
   struct TitleInfoEventTimeImgListViewDraw_o **p_itemDraw; // x20
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
-  const MethodInfo *v14; // x2
+  int32_t v8; // w2
+  int32_t v9; // w3
+  const MethodInfo *v10; // x2
 
-  if ( (byte_4389143 & 1) == 0 )
+  if ( (byte_48E1373 & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___);
-    byte_4389143 = 1;
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___, *(_QWORD *)&state);
+    byte_48E1373 = 1;
   }
   dispObject = this->fields.dispObject;
   if ( !dispObject
-    || (Component_srcLineSprite = (struct TitleInfoEventTimeImgListViewDraw_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                                                                  dispObject,
-                                                                                  (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___),
-        this->fields.itemDraw = Component_srcLineSprite,
+    || (Component_object = UnityEngine_GameObject__GetComponent_object_(
+                             dispObject,
+                             (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___),
+        this->fields.itemDraw = (struct TitleInfoEventTimeImgListViewDraw_o *)Component_object,
         p_itemDraw = &this->fields.itemDraw,
-        sub_B77560(
-          (BattleServantConfConponent_o *)p_itemDraw,
-          (System_Int32_array **)Component_srcLineSprite,
-          v8,
-          v9,
-          v10,
-          v11,
-          v12,
-          v13),
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)p_itemDraw, (int32_t)Component_object, v8, v9),
         (dispObject = (UnityEngine_GameObject_o *)*p_itemDraw) == 0LL) )
   {
-    sub_B7769C(dispObject, *(_QWORD *)&state);
+    sub_1B00F28(dispObject, *(_QWORD *)&state);
   }
-  TitleInfoEventTimeImgListViewDraw__SetItem((TitleInfoEventTimeImgListViewDraw_o *)dispObject, state, v14);
+  TitleInfoEventTimeImgListViewDraw__SetItem((TitleInfoEventTimeImgListViewDraw_o *)dispObject, state, v10);
 }

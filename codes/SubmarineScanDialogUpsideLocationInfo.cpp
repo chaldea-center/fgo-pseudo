@@ -1,12 +1,3 @@
-// attributes: thunk
-void __fastcall SubmarineScanDialogUpsideLocationInfo___ctor(
-        SubmarineScanDialogUpsideLocationInfo_o *this,
-        const MethodInfo *method)
-{
-  Submarine2DUILocationInfo___ctor((Submarine2DUILocationInfo_o *)this, method);
-}
-
-
 // local variable allocation has failed, the output may be wrong!
 UnityEngine_Rect_o __fastcall SubmarineScanDialogUpsideLocationInfo__GetScanDialogRect(
         SubmarineScanDialogUpsideLocationInfo_o *this,

@@ -1,46 +1,44 @@
 void __fastcall BattleServantSnapShotGroupBase___ctor(BattleServantSnapShotGroupBase_o *this, const MethodInfo *method)
 {
-  System_Collections_Generic_LinkedList_WebOperation__o *v3; // x20
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
+  __int64 v3; // x1
+  System_Collections_Generic_LinkedList_T__o *v4; // x20
+  int32_t v5; // w2
+  int32_t v6; // w3
 
-  if ( (byte_438E20D & 1) == 0 )
+  if ( (byte_48E4FA8 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_LinkedList_BattleServantSnapShot___ctor__);
-    sub_B775C4(&System_Collections_Generic_LinkedList_BattleServantSnapShot__TypeInfo);
-    byte_438E20D = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_LinkedList_BattleServantSnapShot___ctor__, method);
+    sub_1B00CCC(&System_Collections_Generic_LinkedList_BattleServantSnapShot__TypeInfo, v3);
+    byte_48E4FA8 = 1;
   }
-  v3 = (System_Collections_Generic_LinkedList_WebOperation__o *)sub_B77694(System_Collections_Generic_LinkedList_BattleServantSnapShot__TypeInfo);
-  System_Collections_Generic_LinkedList_WebOperation____ctor(
-    v3,
-    (const MethodInfo_2EE8DC8 *)Method_System_Collections_Generic_LinkedList_BattleServantSnapShot___ctor__);
-  this->fields._SnapShotLinkedList_k__BackingField = (struct System_Collections_Generic_LinkedList_BattleServantSnapShot__o *)v3;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v3, v4, v5, v6, v7, v8, v9);
+  v4 = (System_Collections_Generic_LinkedList_T__o *)sub_1B00F18(System_Collections_Generic_LinkedList_BattleServantSnapShot__TypeInfo);
+  System_Collections_Generic_LinkedList_object____ctor(
+    v4,
+    (const MethodInfo_3305918 *)Method_System_Collections_Generic_LinkedList_BattleServantSnapShot___ctor__);
+  this->fields._SnapShotLinkedList_k__BackingField = (struct System_Collections_Generic_LinkedList_BattleServantSnapShot__o *)v4;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)v4, v5, v6);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 
 void __fastcall BattleServantSnapShotGroupBase__Clear(BattleServantSnapShotGroupBase_o *this, const MethodInfo *method)
 {
-  System_Collections_Generic_LinkedList_WebOperation__o *SnapShotLinkedList_k__BackingField; // x0
+  __int64 v3; // x1
+  System_Collections_Generic_LinkedList_T__o *SnapShotLinkedList_k__BackingField; // x0
 
-  if ( (byte_438E20C & 1) == 0 )
+  if ( (byte_48E4FA7 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_LinkedList_BattleServantSnapShot__Clear__);
-    sub_B775C4(&Method_System_Collections_Generic_LinkedList_BattleServantSnapShot__get_Count__);
-    byte_438E20C = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_LinkedList_BattleServantSnapShot__Clear__, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_LinkedList_BattleServantSnapShot__get_Count__, v3);
+    byte_48E4FA7 = 1;
   }
-  SnapShotLinkedList_k__BackingField = (System_Collections_Generic_LinkedList_WebOperation__o *)this->fields._SnapShotLinkedList_k__BackingField;
+  SnapShotLinkedList_k__BackingField = (System_Collections_Generic_LinkedList_T__o *)this->fields._SnapShotLinkedList_k__BackingField;
   if ( !SnapShotLinkedList_k__BackingField )
-    sub_B7769C(0LL, method);
+    sub_1B00F28(0LL, method);
   if ( SnapShotLinkedList_k__BackingField->fields.count >= 1 )
-    System_Collections_Generic_LinkedList_WebOperation___Clear(
+    System_Collections_Generic_LinkedList_object___Clear(
       SnapShotLinkedList_k__BackingField,
-      (const MethodInfo_2EE94FC *)Method_System_Collections_Generic_LinkedList_BattleServantSnapShot__Clear__);
+      (const MethodInfo_3305EA4 *)Method_System_Collections_Generic_LinkedList_BattleServantSnapShot__Clear__);
 }
 
 

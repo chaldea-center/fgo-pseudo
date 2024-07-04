@@ -1,13 +1,13 @@
 void __fastcall BlankEarthSpotEntity___ctor(BlankEarthSpotEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438ADD6 & 1) == 0 )
+  if ( (byte_48E24EF & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_int___ctor__);
-    byte_438ADD6 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_int___ctor__, method);
+    byte_48E24EF = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_2FE684C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -38,20 +38,21 @@ bool __fastcall BlankEarthSpotEntity__IsOpen(BlankEarthSpotEntity_o *this, const
   int32_t condTargetType; // w21
   int64_t condTargetNum; // x19
 
-  if ( (byte_438ADD4 & 1) == 0 )
+  if ( (byte_48E24ED & 1) == 0 )
   {
-    sub_B775C4(&CondType_TypeInfo);
-    byte_438ADD4 = 1;
+    sub_1B00CCC(&CondType_TypeInfo, method);
+    byte_48E24ED = 1;
   }
   condTargetType = this->fields.condTargetType;
   condTargetId = this->fields.condTargetId;
   condTargetNum = this->fields.condTargetNum;
-  if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
+  if ( !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
   return CondType__IsOpen(condTargetType, condTargetId, condTargetNum, 0, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall BlankEarthSpotEntity__IsOpenForQAA(
         BlankEarthSpotEntity_o *this,
         int32_t beforeClearQuestId,
@@ -62,15 +63,15 @@ bool __fastcall BlankEarthSpotEntity__IsOpenForQAA(
   int32_t condTargetType; // w23
   int64_t condTargetNum; // x21
 
-  if ( (byte_438ADD5 & 1) == 0 )
+  if ( (byte_48E24EE & 1) == 0 )
   {
-    sub_B775C4(&CondType_TypeInfo);
-    byte_438ADD5 = 1;
+    sub_1B00CCC(&CondType_TypeInfo, *(_QWORD *)&beforeClearQuestId);
+    byte_48E24EE = 1;
   }
   condTargetType = this->fields.condTargetType;
   condTargetId = this->fields.condTargetId;
   condTargetNum = this->fields.condTargetNum;
-  if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
+  if ( !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
   return CondType__IsOpenExcludeBeforeClearQuest(
            condTargetType,

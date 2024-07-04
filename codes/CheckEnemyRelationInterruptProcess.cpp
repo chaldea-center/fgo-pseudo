@@ -3,8 +3,11 @@ void __fastcall CheckEnemyRelationInterruptProcess___ctor(
         bool isClearTemp,
         const MethodInfo *method)
 {
-  BaseTaskInterruptProcess___ctor((BaseTaskInterruptProcess_o *)this, 0LL);
-  this->fields.isClearTempDead = isClearTemp;
+  bool v3; // w20
+
+  v3 = isClearTemp;
+  System_Object___ctor((Il2CppObject *)this, 0LL);
+  this->fields.isClearTempDead = v3;
 }
 
 
@@ -16,7 +19,7 @@ void __fastcall CheckEnemyRelationInterruptProcess__AfterCreateAction(
   if ( this->fields.isClearTempDead )
   {
     if ( !logic || (this = (CheckEnemyRelationInterruptProcess_o *)logic->fields.logicEnemyAi) == 0LL )
-      sub_B7769C(this, logic);
+      sub_1B00F28(this, logic);
     BattleLogicEnemyAi__ClearTempDeadSvt((BattleLogicEnemyAi_o *)this, 0LL);
   }
 }

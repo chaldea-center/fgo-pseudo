@@ -2,10 +2,11 @@ void __fastcall ServantStatusListViewItemDrawRandomLimitCountSetting___ctor(
         ServantStatusListViewItemDrawRandomLimitCountSetting_o *this,
         const MethodInfo *method)
 {
-  LODWORD(this->fields.MASK_SIZE_ALL.fields.x) = 550;
-  *(_OWORD *)&this->fields.MASK_SIZE_ALL.fields.y = xmmword_3330690;
-  *(_QWORD *)&this->fields.MASK_LABEL_POS_ALL.fields.y = 0xC130000000000000LL;
-  ServantStatusListViewItemDraw___ctor((ServantStatusListViewItemDraw_o *)this, 0LL);
+  this->fields.MASK_POS_ALL.fields.y = 0.0;
+  this->fields.MASK_LABEL_POS_ALL.fields.x = 0.0;
+  *(_OWORD *)&this->fields.MASK_LABEL_MAX_WIDTH = xmmword_B71AC0;
+  this->fields.MASK_LABEL_POS_ALL.fields.y = -11.0;
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
 
@@ -25,144 +26,138 @@ void __fastcall ServantStatusListViewItemDrawRandomLimitCountSetting__SetButtonT
         bool isSelectedButton,
         const MethodInfo *method)
 {
-  void *Component_WebViewObject; // x0
+  __int64 v8; // x1
   __int64 v9; // x1
-  __int64 *v10; // x8
-  UIWidget_o *ComponentInChildren_UIWidget; // x21
-  float *v12; // x8
-  float v13; // s8
-  float v14; // s9
-  float v15; // s10
-  float v16; // s11
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  void *Component_object; // x0
+  __int64 v14; // x1
+  __int64 *v15; // x8
+  Il2CppObject *ComponentInChildren_object__47552792; // x21
   float *v17; // x8
-  float v18; // s12
-  float v19; // s13
-  float v20; // s14
-  float v21; // s15
-  float v22; // s3
-  float v23; // s2
-  float v24; // s1
-  float v25; // s0
+  float v18; // s10
+  float v19; // s11
+  float v20; // s8
+  float v21; // s9
+  float *v22; // x8
+  float v23; // s12
+  float v24; // s13
+  float v25; // s14
+  float v26; // s15
+  float v27; // s0
+  float v28; // s1
+  float v29; // s2
+  float v30; // s3
 
-  if ( (byte_438F2E3 & 1) == 0 )
+  if ( (byte_48DF9BE & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
-    sub_B775C4(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&StringLiteral_17304/*"btn_bg_20"*/);
-    sub_B775C4(&StringLiteral_17305/*"btn_bg_21"*/);
-    byte_438F2E3 = 1;
+    sub_1B00CCC(&Method_UnityEngine_Component_GetComponentInChildren_UILabel___, targetButton);
+    sub_1B00CCC(&Method_UnityEngine_Component_GetComponent_UISprite___, v8);
+    sub_1B00CCC(&LocalizationManager_TypeInfo, v9);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v10);
+    sub_1B00CCC(&StringLiteral_17241/*"btn_bg_20"*/, v11);
+    sub_1B00CCC(&StringLiteral_17242/*"btn_bg_21"*/, v12);
+    byte_48DF9BE = 1;
   }
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  Component_WebViewObject = (void *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)targetButton, 0LL, 0LL);
-  if ( ((unsigned __int8)Component_WebViewObject & 1) != 0 )
+  Component_object = (void *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)targetButton, 0LL, 0LL);
+  if ( ((unsigned __int8)Component_object & 1) != 0 )
   {
     if ( !targetButton )
-      goto LABEL_43;
-    Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
-                                (UnityEngine_Component_o *)targetButton,
-                                (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_UISprite___);
-    if ( !Component_WebViewObject )
-      goto LABEL_43;
-    v10 = &StringLiteral_17305/*"btn_bg_21"*/;
+      goto LABEL_38;
+    Component_object = UnityEngine_Component__GetComponent_object_(
+                         (UnityEngine_Component_o *)targetButton,
+                         (const MethodInfo_2D596B4 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+    if ( !Component_object )
+      goto LABEL_38;
+    v15 = &StringLiteral_17242/*"btn_bg_21"*/;
     if ( !isSelectedButton )
-      v10 = &StringLiteral_17304/*"btn_bg_20"*/;
-    UISprite__set_spriteName((UISprite_o *)Component_WebViewObject, (System_String_o *)*v10, 0LL);
-    ComponentInChildren_UIWidget = UnityEngine_Component__GetComponentInChildren_UIWidget_(
-                                     (UnityEngine_Component_o *)targetButton,
-                                     (const MethodInfo_1C6D75C *)Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+      v15 = &StringLiteral_17241/*"btn_bg_20"*/;
+    UISprite__set_spriteName((UISprite_o *)Component_object, (System_String_o *)*v15, 0LL);
+    ComponentInChildren_object__47552792 = UnityEngine_Component__GetComponentInChildren_object__47552792(
+                                             (UnityEngine_Component_o *)targetButton,
+                                             (const MethodInfo_2D59918 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
-    if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)ComponentInChildren_UIWidget, 0LL, 0LL) )
+    if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)ComponentInChildren_object__47552792, 0LL, 0LL) )
     {
-      if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !LocalizationManager_TypeInfo->_2.cctor_finished )
+      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+      if ( !byte_48DE046 )
+      {
+        sub_1B00CCC(&LocalizationManager_TypeInfo, v14);
+        byte_48DE046 = 1;
+      }
+      Component_object = LocalizationManager_TypeInfo;
+      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+        Component_object = LocalizationManager_TypeInfo;
       }
-      if ( !byte_4387FCE )
+      v17 = (float *)*((_QWORD *)Component_object + 23);
+      v19 = v17[20];
+      v18 = v17[21];
+      v21 = v17[22];
+      v20 = v17[23];
+      if ( !byte_48DE047 )
       {
-        sub_B775C4(&LocalizationManager_TypeInfo);
-        byte_4387FCE = 1;
+        sub_1B00CCC(&LocalizationManager_TypeInfo, v14);
+        Component_object = LocalizationManager_TypeInfo;
+        byte_48DE047 = 1;
       }
-      Component_WebViewObject = LocalizationManager_TypeInfo;
-      if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !LocalizationManager_TypeInfo->_2.cctor_finished )
+      if ( !*((_DWORD *)Component_object + 56) )
       {
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        Component_WebViewObject = LocalizationManager_TypeInfo;
+        j_il2cpp_runtime_class_init_0(Component_object);
+        Component_object = LocalizationManager_TypeInfo;
       }
-      v12 = (float *)*((_QWORD *)Component_WebViewObject + 23);
-      v13 = v12[20];
-      v14 = v12[21];
-      v15 = v12[22];
-      v16 = v12[23];
-      if ( !byte_4387FCF )
+      if ( ComponentInChildren_object__47552792 )
       {
-        sub_B775C4(&LocalizationManager_TypeInfo);
-        Component_WebViewObject = LocalizationManager_TypeInfo;
-        byte_4387FCF = 1;
-      }
-      if ( (*((_BYTE *)Component_WebViewObject + 307) & 4) != 0 && !*((_DWORD *)Component_WebViewObject + 56) )
-      {
-        j_il2cpp_runtime_class_init_0(Component_WebViewObject);
-        Component_WebViewObject = LocalizationManager_TypeInfo;
-      }
-      if ( ComponentInChildren_UIWidget )
-      {
-        v17 = (float *)*((_QWORD *)Component_WebViewObject + 23);
-        v18 = v17[24];
-        v19 = v17[25];
-        v20 = v17[26];
-        v21 = v17[27];
-        UILabel__set_text((UILabel_o *)ComponentInChildren_UIWidget, text, 0LL);
+        v22 = (float *)*((_QWORD *)Component_object + 23);
+        v23 = v22[24];
+        v24 = v22[25];
+        v25 = v22[26];
+        v26 = v22[27];
+        UILabel__set_text((UILabel_o *)ComponentInChildren_object__47552792, text, 0LL);
         if ( isSelectedButton )
-          v22 = v21;
+          v27 = v23;
         else
-          v22 = v16;
+          v27 = v19;
         if ( isSelectedButton )
-          v23 = v20;
+          v28 = v24;
         else
-          v23 = v15;
+          v28 = v18;
         if ( isSelectedButton )
-          v24 = v19;
+          v29 = v25;
         else
-          v24 = v14;
+          v29 = v21;
         if ( isSelectedButton )
-          v25 = v18;
+          v30 = v26;
         else
-          v25 = v13;
-        UILabel__set_effectColor((UILabel_o *)ComponentInChildren_UIWidget, *(UnityEngine_Color_o *)(&v22 - 3), 0LL);
+          v30 = v20;
+        UILabel__set_effectColor((UILabel_o *)ComponentInChildren_object__47552792, *(UnityEngine_Color_o *)&v27, 0LL);
         return;
       }
-LABEL_43:
-      sub_B7769C(Component_WebViewObject, v9);
+LABEL_38:
+      sub_1B00F28(Component_object, v14);
     }
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ServantStatusListViewItemDrawRandomLimitCountSetting__SetItem(
         ServantStatusListViewItemDrawRandomLimitCountSetting_o *this,
         ServantStatusListViewItem_o *item,
         int32_t mode,
         const MethodInfo *method)
 {
-  const MethodInfo *v7; // x2
-
-  ServantStatusListViewItemDraw__SetItem((ServantStatusListViewItemDraw_o *)this, item, mode, 0LL);
+  this->fields.dispMode = mode;
   if ( item )
   {
     if ( mode )
-      ServantStatusListViewItemDrawRandomLimitCountSetting__Setup(this, item, v7);
+      ServantStatusListViewItemDrawRandomLimitCountSetting__Setup(this, item, *(const MethodInfo **)&mode);
   }
 }
 
@@ -172,61 +167,62 @@ void __fastcall ServantStatusListViewItemDrawRandomLimitCountSetting__Setup(
         ServantStatusListViewItem_o *item,
         const MethodInfo *method)
 {
-  ServantStatusListViewItemDrawRandomLimitCountSetting_CategoryInfo_o *myServantInfo; // x21
-  int32_t ownRandomSettingButtonIndex; // w22
-  System_String_o *v7; // x23
-  System_String_o *v8; // x0
-  ServantStatusListViewItem_o *v9; // x2
-  const MethodInfo *v10; // x6
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  ServantStatusListViewItemDrawRandomLimitCountSetting_CategoryInfo_o *myServantInfo; // x22
+  int32_t ownRandomSettingButtonIndex; // w21
+  System_String_o *v11; // x23
+  System_String_o *v12; // x0
+  ServantStatusListViewItem_o *v13; // x2
+  const MethodInfo *v14; // x6
   ServantStatusListViewItemDrawRandomLimitCountSetting_CategoryInfo_o *supportServantInfo; // x21
   int32_t SupportRandomSettingParam; // w22
-  System_String_o *v13; // x23
-  System_String_o *v14; // x0
-  ServantStatusListViewItem_o *v15; // x2
-  const MethodInfo *v16; // x6
-  const MethodInfo *v17; // x2
+  System_String_o *v17; // x23
+  System_String_o *v18; // x0
+  ServantStatusListViewItem_o *v19; // x2
+  const MethodInfo *v20; // x6
+  const MethodInfo *v21; // x2
 
-  if ( (byte_438F2E1 & 1) == 0 )
+  if ( (byte_48DF9BC & 1) == 0 )
   {
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&StringLiteral_12253/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_OWN"*/);
-    sub_B775C4(&StringLiteral_12254/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_OWN_EXPLANATION"*/);
-    sub_B775C4(&StringLiteral_12257/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_SUPPORT"*/);
-    sub_B775C4(&StringLiteral_12258/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_SUPPORT_EXPLANATION"*/);
-    byte_438F2E1 = 1;
+    sub_1B00CCC(&LocalizationManager_TypeInfo, item);
+    sub_1B00CCC(&StringLiteral_11725/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_OWN"*/, v5);
+    sub_1B00CCC(&StringLiteral_11726/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_OWN_EXPLANATION"*/, v6);
+    sub_1B00CCC(&StringLiteral_11729/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_SUPPORT"*/, v7);
+    sub_1B00CCC(&StringLiteral_11730/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_SUPPORT_EXPLANATION"*/, v8);
+    byte_48DF9BC = 1;
   }
   if ( item )
   {
     myServantInfo = this->fields.myServantInfo;
     ownRandomSettingButtonIndex = item->fields.ownRandomSettingButtonIndex;
-    if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
+    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    }
-    v7 = LocalizationManager__Get((System_String_o *)StringLiteral_12253/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_OWN"*/, 0LL);
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_12254/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_OWN_EXPLANATION"*/, 0LL);
+    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_11725/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_OWN"*/, 0LL);
+    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_11726/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_OWN_EXPLANATION"*/, 0LL);
     ServantStatusListViewItemDrawRandomLimitCountSetting__SetupCategoryInfo(
       this,
       myServantInfo,
-      v9,
+      v13,
       ownRandomSettingButtonIndex,
-      v7,
-      v8,
-      v10);
+      v11,
+      v12,
+      v14);
     supportServantInfo = this->fields.supportServantInfo;
     SupportRandomSettingParam = ServantStatusListViewItem__get_SupportRandomSettingParam(item, 0LL);
-    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_12257/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_SUPPORT"*/, 0LL);
-    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_12258/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_SUPPORT_EXPLANATION"*/, 0LL);
+    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_11729/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_SUPPORT"*/, 0LL);
+    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_11730/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_SUPPORT_EXPLANATION"*/, 0LL);
     ServantStatusListViewItemDrawRandomLimitCountSetting__SetupCategoryInfo(
       this,
       supportServantInfo,
-      v15,
+      v19,
       SupportRandomSettingParam,
-      v13,
-      v14,
-      v16);
-    ServantStatusListViewItemDrawRandomLimitCountSetting__SetupMask(this, item, v17);
+      v17,
+      v18,
+      v20);
+    ServantStatusListViewItemDrawRandomLimitCountSetting__SetupMask(this, item, v21);
   }
 }
 
@@ -241,145 +237,116 @@ void __fastcall ServantStatusListViewItemDrawRandomLimitCountSetting__SetupCateg
         const MethodInfo *method)
 {
   ServantStatusListViewItemDrawRandomLimitCountSetting_o *v11; // x22
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  __int64 v18; // x1
   UnityEngine_Object_o *NameTxt; // x24
-  System_String_o *v13; // x0
-  const MethodInfo *v14; // x4
-  System_String_o *v15; // x2
-  __int64 *v16; // x8
-  __int64 *v17; // x8
+  ServantStatusListViewItemDrawRandomLimitCountSetting_o *v20; // x0
+  const MethodInfo *v21; // x4
+  System_String_o *v22; // x2
+  bool RandomLimitCountOwn; // w23
+  System_String_o **v24; // x8
+  bool RandomLimitCountFriend; // w22
+  System_String_o **v26; // x8
   UICommonButton_o *SettingRandomOn; // x22
-  System_String_o *v19; // x0
-  const MethodInfo *v20; // x4
+  ServantStatusListViewItemDrawRandomLimitCountSetting_o *v28; // x0
+  const MethodInfo *v29; // x4
   UICommonButton_o *SettingRandomOff; // x22
-  System_String_o *v22; // x0
-  const MethodInfo *v23; // x4
+  ServantStatusListViewItemDrawRandomLimitCountSetting_o *v31; // x0
+  const MethodInfo *v32; // x4
   UnityEngine_Object_o *explanationLabel; // x21
 
   v11 = this;
-  if ( (byte_438F2E2 & 1) == 0 )
+  if ( (byte_48DF9BD & 1) == 0 )
   {
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&OptionManager_TypeInfo);
-    sub_B775C4(&StringLiteral_12256/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_RANDOM_ON_BUTTON"*/);
-    sub_B775C4(&StringLiteral_12251/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_All_ON_BUTTON"*/);
-    sub_B775C4(&StringLiteral_12255/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_RANDOM_OFF_BUTTON"*/);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)sub_B775C4(&StringLiteral_12250/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_All_OFF_BUTTON"*/);
-    byte_438F2E2 = 1;
+    sub_1B00CCC(&LocalizationManager_TypeInfo, target);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v12);
+    sub_1B00CCC(&OptionManager_TypeInfo, v13);
+    sub_1B00CCC(&StringLiteral_11728/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_RANDOM_ON_BUTTON"*/, v14);
+    sub_1B00CCC(&StringLiteral_11723/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_All_ON_BUTTON"*/, v15);
+    sub_1B00CCC(&StringLiteral_11727/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_RANDOM_OFF_BUTTON"*/, v16);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v17);
+    this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)sub_1B00CCC(&StringLiteral_11722/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_All_OFF_BUTTON"*/, v18);
+    byte_48DF9BD = 1;
   }
   if ( !target )
-    goto LABEL_51;
+    goto LABEL_35;
   NameTxt = (UnityEngine_Object_o *)target->fields.NameTxt;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( !UnityEngine_Object__op_Equality(NameTxt, 0LL, 0LL) )
   {
     this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)target->fields.NameTxt;
     if ( !this )
-      goto LABEL_51;
+      goto LABEL_35;
     UILabel__set_text((UILabel_o *)this, buttonText, 0LL);
-    if ( v11->fields.myServantInfo == target )
+    if ( target == v11->fields.myServantInfo )
     {
-      if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !OptionManager_TypeInfo->_2.cctor_finished )
-      {
+      if ( !OptionManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-      }
-      if ( OptionManager__GetRandomLimitCountOwn(0LL) )
-      {
-        if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
-          && !LocalizationManager_TypeInfo->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        }
-        v16 = &StringLiteral_12251/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_All_ON_BUTTON"*/;
-      }
-      else
-      {
-        if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
-          && !LocalizationManager_TypeInfo->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        }
-        v16 = &StringLiteral_12250/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_All_OFF_BUTTON"*/;
-      }
-      v13 = LocalizationManager__Get((System_String_o *)*v16, 0LL);
-      v15 = v13;
+      RandomLimitCountOwn = OptionManager__GetRandomLimitCountOwn(0LL);
+      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+      v24 = (System_String_o **)&StringLiteral_11723/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_All_ON_BUTTON"*/;
+      if ( !RandomLimitCountOwn )
+        v24 = (System_String_o **)&StringLiteral_11722/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_All_OFF_BUTTON"*/;
+      v20 = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)LocalizationManager__Get(*v24, 0LL);
+      v22 = (System_String_o *)v20;
     }
     else
     {
-      v15 = (System_String_o *)StringLiteral_1/*""*/;
+      v22 = (System_String_o *)StringLiteral_1/*""*/;
     }
-    if ( v11->fields.supportServantInfo == target )
+    if ( target == v11->fields.supportServantInfo )
     {
-      if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !OptionManager_TypeInfo->_2.cctor_finished )
-      {
+      if ( !OptionManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-      }
-      if ( OptionManager__GetRandomLimitCountFriend(0LL) )
-      {
-        if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
-          && !LocalizationManager_TypeInfo->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        }
-        v17 = &StringLiteral_12251/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_All_ON_BUTTON"*/;
-      }
-      else
-      {
-        if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
-          && !LocalizationManager_TypeInfo->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        }
-        v17 = &StringLiteral_12250/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_All_OFF_BUTTON"*/;
-      }
-      v13 = LocalizationManager__Get((System_String_o *)*v17, 0LL);
-      v15 = v13;
+      RandomLimitCountFriend = OptionManager__GetRandomLimitCountFriend(0LL);
+      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+      v26 = (System_String_o **)&StringLiteral_11723/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_All_ON_BUTTON"*/;
+      if ( !RandomLimitCountFriend )
+        v26 = (System_String_o **)&StringLiteral_11722/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_All_OFF_BUTTON"*/;
+      v20 = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)LocalizationManager__Get(*v26, 0LL);
+      v22 = (System_String_o *)v20;
     }
     ServantStatusListViewItemDrawRandomLimitCountSetting__SetButtonText(
-      (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v13,
+      v20,
       target->fields.SettingAll,
-      v15,
-      selectedButtonIndex == 0,
-      v14);
-    SettingRandomOn = target->fields.SettingRandomOn;
-    if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    }
-    v19 = LocalizationManager__Get((System_String_o *)StringLiteral_12256/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_RANDOM_ON_BUTTON"*/, 0LL);
-    ServantStatusListViewItemDrawRandomLimitCountSetting__SetButtonText(
-      (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v19,
-      SettingRandomOn,
-      v19,
-      selectedButtonIndex == 1,
-      v20);
-    SettingRandomOff = target->fields.SettingRandomOff;
-    if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    }
-    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_12255/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_RANDOM_OFF_BUTTON"*/, 0LL);
-    ServantStatusListViewItemDrawRandomLimitCountSetting__SetButtonText(
-      (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v22,
-      SettingRandomOff,
       v22,
+      selectedButtonIndex == 0,
+      v21);
+    SettingRandomOn = target->fields.SettingRandomOn;
+    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    v28 = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)LocalizationManager__Get(
+                                                                      (System_String_o *)StringLiteral_11728/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_RANDOM_ON_BUTTON"*/,
+                                                                      0LL);
+    ServantStatusListViewItemDrawRandomLimitCountSetting__SetButtonText(
+      v28,
+      SettingRandomOn,
+      (System_String_o *)v28,
+      selectedButtonIndex == 1,
+      v29);
+    SettingRandomOff = target->fields.SettingRandomOff;
+    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    v31 = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)LocalizationManager__Get(
+                                                                      (System_String_o *)StringLiteral_11727/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_RANDOM_OFF_BUTTON"*/,
+                                                                      0LL);
+    ServantStatusListViewItemDrawRandomLimitCountSetting__SetButtonText(
+      v31,
+      SettingRandomOff,
+      (System_String_o *)v31,
       selectedButtonIndex == 2,
-      v23);
+      v32);
     explanationLabel = (UnityEngine_Object_o *)target->fields.explanationLabel;
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
     if ( UnityEngine_Object__op_Inequality(explanationLabel, 0LL, 0LL) )
     {
       this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)target->fields.explanationLabel;
@@ -388,8 +355,8 @@ void __fastcall ServantStatusListViewItemDrawRandomLimitCountSetting__SetupCateg
         UILabel__set_text((UILabel_o *)this, explanationText, 0LL);
         return;
       }
-LABEL_51:
-      sub_B7769C(this, target);
+LABEL_35:
+      sub_1B00F28(this, target);
     }
   }
 }
@@ -403,206 +370,206 @@ void __fastcall ServantStatusListViewItemDrawRandomLimitCountSetting__SetupMask(
   struct UserServantEntity_o *userSvtEntity; // x8
   __int64 v6; // x20
   __int64 v7; // x21
-  ServantStatusListViewItemDrawRandomLimitCountSetting_o *v8; // x0
-  int32_t v9; // w1
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v10; // 0:x0.16
+  _BOOL4 v8; // w1
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v9; // 0:x0.16
 
-  if ( (byte_438F2E4 & 1) == 0 )
+  if ( (byte_48DF9BF & 1) == 0 )
   {
-    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_438F2E4 = 1;
+    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, item);
+    byte_48DF9BF = 1;
   }
   if ( item )
   {
     userSvtEntity = item->fields.userSvtEntity;
-    if ( !userSvtEntity )
-      goto LABEL_10;
-    v7 = *(_QWORD *)&userSvtEntity->fields.limitCount.fields.currentCryptoKey;
-    v6 = *(_QWORD *)&userSvtEntity->fields.limitCount.fields.fakeValue;
-    if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
+    if ( userSvtEntity )
     {
-      j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    }
-    *(_QWORD *)&v10.fields.currentCryptoKey = v7;
-    *(_QWORD *)&v10.fields.fakeValue = v6;
-    if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v10, 0LL) )
-    {
-      v8 = this;
-      v9 = 0;
+      v7 = *(_QWORD *)&userSvtEntity->fields.limitCount.fields.currentCryptoKey;
+      v6 = *(_QWORD *)&userSvtEntity->fields.limitCount.fields.fakeValue;
+      if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+      *(_QWORD *)&v9.fields.currentCryptoKey = v7;
+      *(_QWORD *)&v9.fields.fakeValue = v6;
+      v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(v9, 0LL) == 0;
     }
     else
     {
-LABEL_10:
-      v9 = 1;
-      v8 = this;
+      v8 = 1;
     }
-    ServantStatusListViewItemDrawRandomLimitCountSetting__SetupMask_32983692(v8, v9, method);
+    ServantStatusListViewItemDrawRandomLimitCountSetting__SetupMask_32967856(this, v8, method);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ServantStatusListViewItemDrawRandomLimitCountSetting__SetupMask_32983692(
+void __fastcall ServantStatusListViewItemDrawRandomLimitCountSetting__SetupMask_32967856(
         ServantStatusListViewItemDrawRandomLimitCountSetting_o *this,
         int32_t maskType,
         const MethodInfo *method)
 {
   ServantStatusListViewItemDrawRandomLimitCountSetting_o *v4; // x19
+  __int64 v5; // x1
+  __int64 v6; // x1
   struct UISprite_o *baseSprite; // x8
-  UnityEngine_Transform_o *transform; // x21
-  UnityEngine_Vector2_o zero; // kr00_8
-  int v8; // s2
-  UnityEngine_Transform_o *v9; // x21
-  int v10; // s0
-  float y; // s12
-  float x; // s13
-  UnityEngine_Vector2_o v15; // kr08_8
-  float v16; // s10
-  float v17; // s11
-  UnityEngine_Vector2_o v18; // kr10_8
-  UnityEngine_Vector2_o v19; // kr18_8
-  float v20; // s8
-  float v21; // s9
+  ServantStatusListViewItemDrawRandomLimitCountSetting_o *v8; // x21
+  struct UnityEngine_Vector2_StaticFields *static_fields; // x8
+  ServantStatusListViewItemDrawRandomLimitCountSetting_o *v10; // x21
+  struct UnityEngine_Vector2_StaticFields *v11; // x8
+  float y; // s8
+  float x; // s10
+  float v14; // s9
+  float v15; // s11
   System_String_o *Empty; // x21
-  double v23; // d0
-  double v24; // d0
+  float v17; // s12
+  float v18; // s13
+  int32_t v19; // w1
+  int32_t v20; // w1
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_GameObject_o *v26; // x0
-  UnityEngine_Vector2_o v27; // 0:s0.4,4:s1.4
-  UnityEngine_Vector2_o v28; // 0:s0.4,4:s1.4
+  UnityEngine_GameObject_o *v22; // x0
+  UnityEngine_Vector2_o v23; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v24; // 0:s0.4,4:s1.4
+  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
-  if ( (byte_438F2E5 & 1) == 0 )
+  if ( (byte_48DF9C0 & 1) == 0 )
   {
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&string_TypeInfo);
-    this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)sub_B775C4(&StringLiteral_12252/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_INFO_COMBINE"*/);
-    byte_438F2E5 = 1;
+    sub_1B00CCC(&LocalizationManager_TypeInfo, *(_QWORD *)&maskType);
+    sub_1B00CCC(&string_TypeInfo, v5);
+    this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)sub_1B00CCC(&StringLiteral_11724/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_INFO_COMBINE"*/, v6);
+    byte_48DF9C0 = 1;
   }
   baseSprite = v4->fields.baseSprite;
   if ( !baseSprite )
-    goto LABEL_32;
+    goto LABEL_40;
   this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v4->fields.maskSprite;
   if ( !this )
-    goto LABEL_32;
+    goto LABEL_40;
   UIWidget__set_height((UIWidget_o *)this, baseSprite->fields.mHeight, 0LL);
   this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v4->fields.maskSprite;
   if ( !this )
-    goto LABEL_32;
-  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  zero = UnityEngine_Vector2__get_zero(0LL);
-  if ( !transform )
-    goto LABEL_32;
-  v8 = 0;
-  UnityEngine_Transform__set_localPosition(transform, *(UnityEngine_Vector3_o *)&zero.fields.x, 0LL);
+    goto LABEL_40;
+  this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)UnityEngine_Component__get_transform(
+                                                                     (UnityEngine_Component_o *)this,
+                                                                     0LL);
+  v8 = this;
+  if ( !byte_48DD8EA )
+  {
+    this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)sub_1B00CCC(
+                                                                       &UnityEngine_Vector2_TypeInfo,
+                                                                       *(_QWORD *)&maskType);
+    byte_48DD8EA = 1;
+  }
+  if ( !v8 )
+    goto LABEL_40;
+  v25.fields.z = 0.0;
+  static_fields = UnityEngine_Vector2_TypeInfo->static_fields;
+  v25.fields.x = static_fields->zeroVector.fields.x;
+  v25.fields.y = static_fields->zeroVector.fields.y;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)v8, v25, 0LL);
   this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v4->fields.informationLabel;
   if ( !this )
-    goto LABEL_32;
-  v9 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  *(UnityEngine_Vector3_o *)&v10 = UnityEngine_Vector3__get_zero(0LL);
-  if ( !v9 )
-    goto LABEL_32;
-  UnityEngine_Transform__set_localPosition(v9, *(UnityEngine_Vector3_o *)&v10, 0LL);
+    goto LABEL_40;
+  this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)UnityEngine_Component__get_transform(
+                                                                     (UnityEngine_Component_o *)this,
+                                                                     0LL);
+  v10 = this;
+  if ( !byte_48DD9F1 )
+  {
+    this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)sub_1B00CCC(
+                                                                       &UnityEngine_Vector3_TypeInfo,
+                                                                       *(_QWORD *)&maskType);
+    byte_48DD9F1 = 1;
+  }
+  if ( !v10 )
+    goto LABEL_40;
+  UnityEngine_Transform__set_localPosition(
+    (UnityEngine_Transform_o *)v10,
+    UnityEngine_Vector3_TypeInfo->static_fields->zeroVector,
+    0LL);
   this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v4->fields.maskBase;
   if ( !this )
-    goto LABEL_32;
-  if ( maskType )
+    goto LABEL_40;
+  if ( !maskType )
   {
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-    this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v4->fields.lineSprite;
-    if ( this )
-    {
-      this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)UnityEngine_Component__get_transform(
-                                                                         (UnityEngine_Component_o *)this,
-                                                                         0LL);
-      if ( this )
-      {
-        UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0LL);
-        v15 = UnityEngine_Vector2__get_zero(0LL);
-        y = v15.fields.y;
-        x = v15.fields.x;
-        v18 = UnityEngine_Vector2__get_zero(0LL);
-        v17 = v18.fields.y;
-        v16 = v18.fields.x;
-        v19 = UnityEngine_Vector2__get_zero(0LL);
-        this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v4->fields.informationLabel;
-        if ( this )
-        {
-          v20 = v19.fields.x;
-          v21 = v19.fields.y;
-          Empty = string_TypeInfo->static_fields->Empty;
-          UILabel__set_overflowMethod((UILabel_o *)this, 2, 0LL);
-          if ( maskType == 1 )
-          {
-            x = v4->fields.MASK_SIZE_ALL.fields.y;
-            y = v4->fields.MASK_POS_ALL.fields.x;
-            v16 = v4->fields.MASK_POS_ALL.fields.y;
-            v17 = v4->fields.MASK_LABEL_POS_ALL.fields.x;
-            v20 = v4->fields.MASK_LABEL_POS_ALL.fields.y;
-            v21 = *((float *)&v4->fields.MASK_LABEL_POS_ALL + 2);
-            if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-              && !LocalizationManager_TypeInfo->_2.cctor_finished )
-            {
-              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            }
-            Empty = LocalizationManager__Get((System_String_o *)StringLiteral_12252/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_INFO_COMBINE"*/, 0LL);
-          }
-          this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v4->fields.maskSprite;
-          if ( this )
-          {
-            v23 = x;
-            if ( x == INFINITY )
-              v23 = -x;
-            UIWidget__set_width((UIWidget_o *)this, (int)v23, 0LL);
-            this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v4->fields.maskSprite;
-            if ( this )
-            {
-              v24 = y;
-              if ( y == INFINITY )
-                v24 = -INFINITY;
-              UIWidget__set_height((UIWidget_o *)this, (int)v24, 0LL);
-              this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v4->fields.maskSprite;
-              if ( this )
-              {
-                UIWidget__ResizeCollider((UIWidget_o *)this, 0LL);
-                this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v4->fields.maskSprite;
-                if ( this )
-                {
-                  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-                  v27.fields.x = v16;
-                  v27.fields.y = v17;
-                  GameObjectExtensions__SetLocalPosition_32807552(gameObject, v27, 0LL);
-                  this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v4->fields.informationLabel;
-                  if ( this )
-                  {
-                    v26 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-                    v28.fields.x = v20;
-                    v28.fields.y = v21;
-                    GameObjectExtensions__SetLocalPosition_32807552(v26, v28, 0LL);
-                    this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v4->fields.informationLabel;
-                    if ( this )
-                    {
-                      UILabel__set_text((UILabel_o *)this, Empty, 0LL);
-                      this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v4->fields.informationLabel;
-                      if ( this )
-                      {
-                        UILabel__SetCondensedScale((UILabel_o *)this, LODWORD(v4->fields.MASK_SIZE_ALL.fields.x), 0LL);
-                        return;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-LABEL_32:
-    sub_B7769C(this, *(_QWORD *)&maskType);
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
+    return;
   }
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
+  this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v4->fields.lineSprite;
+  if ( !this )
+    goto LABEL_40;
+  this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)UnityEngine_Component__get_transform(
+                                                                     (UnityEngine_Component_o *)this,
+                                                                     0LL);
+  if ( !this )
+    goto LABEL_40;
+  UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0LL);
+  if ( !byte_48DD8EA )
+  {
+    sub_1B00CCC(&UnityEngine_Vector2_TypeInfo, *(_QWORD *)&maskType);
+    byte_48DD8EA = 1;
+  }
+  this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v4->fields.informationLabel;
+  if ( !this )
+    goto LABEL_40;
+  v11 = UnityEngine_Vector2_TypeInfo->static_fields;
+  x = v11->zeroVector.fields.x;
+  y = v11->zeroVector.fields.y;
+  v14 = v11->zeroVector.fields.x;
+  v15 = y;
+  Empty = string_TypeInfo->static_fields->Empty;
+  UILabel__set_overflowMethod((UILabel_o *)this, 2, 0LL);
+  if ( maskType == 1 )
+  {
+    v18 = v4->fields.MASK_SIZE_ALL.fields.x;
+    v17 = v4->fields.MASK_SIZE_ALL.fields.y;
+    x = v4->fields.MASK_POS_ALL.fields.x;
+    v15 = v4->fields.MASK_POS_ALL.fields.y;
+    v14 = v4->fields.MASK_LABEL_POS_ALL.fields.x;
+    y = v4->fields.MASK_LABEL_POS_ALL.fields.y;
+    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    Empty = LocalizationManager__Get((System_String_o *)StringLiteral_11724/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_INFO_COMBINE"*/, 0LL);
+  }
+  else
+  {
+    v17 = y;
+    v18 = x;
+  }
+  this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v4->fields.maskSprite;
+  if ( !this )
+    goto LABEL_40;
+  v19 = v18 == INFINITY ? 0x80000000 : (int)v18;
+  UIWidget__set_width((UIWidget_o *)this, v19, 0LL);
+  this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v4->fields.maskSprite;
+  if ( !this )
+    goto LABEL_40;
+  v20 = v17 == INFINITY ? 0x80000000 : (int)v17;
+  UIWidget__set_height((UIWidget_o *)this, v20, 0LL);
+  this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v4->fields.maskSprite;
+  if ( !this )
+    goto LABEL_40;
+  UIWidget__ResizeCollider((UIWidget_o *)this, 0LL);
+  this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v4->fields.maskSprite;
+  if ( !this )
+    goto LABEL_40;
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  v23.fields.x = x;
+  v23.fields.y = v15;
+  GameObjectExtensions__SetLocalPosition_32535360(gameObject, v23, 0LL);
+  this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v4->fields.informationLabel;
+  if ( !this
+    || (v22 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL),
+        v24.fields.x = v14,
+        v24.fields.y = y,
+        GameObjectExtensions__SetLocalPosition_32535360(v22, v24, 0LL),
+        (this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v4->fields.informationLabel) == 0LL)
+    || (UILabel__set_text((UILabel_o *)this, Empty, 0LL),
+        (this = (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v4->fields.informationLabel) == 0LL) )
+  {
+LABEL_40:
+    sub_1B00F28(this, *(_QWORD *)&maskType);
+  }
+  UILabel__SetCondensedScale((UILabel_o *)this, v4->fields.MASK_LABEL_MAX_WIDTH, 0LL);
 }
 
 

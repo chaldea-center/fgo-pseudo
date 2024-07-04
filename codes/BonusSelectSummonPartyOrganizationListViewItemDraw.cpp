@@ -29,36 +29,39 @@ System_String_o *__fastcall BonusSelectSummonPartyOrganizationListViewItemDraw__
         bool isUpperOn,
         const MethodInfo *method)
 {
-  __int64 v9; // x22
-  System_String_o **v10; // x8
-  Il2CppObject *v11; // x1
-  System_String_o *v12; // x0
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v12; // x22
+  System_String_o **v13; // x8
+  Il2CppObject *v14; // x1
+  System_String_o *v15; // x0
 
-  if ( (byte_438AE34 & 1) == 0 )
+  if ( (byte_48DF075 & 1) == 0 )
   {
-    sub_B775C4(&string_TypeInfo);
-    sub_B775C4(&StringLiteral_16471/*"_on{0}"*/);
-    sub_B775C4(&StringLiteral_19706/*"icon_class{0}"*/);
-    sub_B775C4(&StringLiteral_16469/*"_off{0}"*/);
-    byte_438AE34 = 1;
+    sub_1B00CCC(&string_TypeInfo, classIconId);
+    sub_1B00CCC(&StringLiteral_16328/*"_on{0}"*/, v8);
+    sub_1B00CCC(&StringLiteral_19852/*"icon_class{0}"*/, v9);
+    sub_1B00CCC(&StringLiteral_16326/*"_off{0}"*/, v10);
+    byte_48DF075 = 1;
   }
   if ( System_String__IsNullOrEmpty(classIconId, 0LL) )
     return string_TypeInfo->static_fields->Empty;
-  v9 = StringLiteral_19706/*"icon_class{0}"*/;
+  v12 = StringLiteral_19852/*"icon_class{0}"*/;
   if ( isUpper )
   {
-    v10 = (System_String_o **)&StringLiteral_16471/*"_on{0}"*/;
+    v13 = (System_String_o **)&StringLiteral_16328/*"_on{0}"*/;
     if ( !isUpperOn )
-      v10 = (System_String_o **)&StringLiteral_16469/*"_off{0}"*/;
-    v11 = (Il2CppObject *)System_String__Format(*v10, (Il2CppObject *)classIconId, 0LL);
-    v12 = (System_String_o *)v9;
+      v13 = (System_String_o **)&StringLiteral_16326/*"_off{0}"*/;
+    v14 = (Il2CppObject *)System_String__Format(*v13, (Il2CppObject *)classIconId, 0LL);
+    v15 = (System_String_o *)v12;
   }
   else
   {
-    v12 = (System_String_o *)StringLiteral_19706/*"icon_class{0}"*/;
-    v11 = (Il2CppObject *)classIconId;
+    v15 = (System_String_o *)StringLiteral_19852/*"icon_class{0}"*/;
+    v14 = (Il2CppObject *)classIconId;
   }
-  return System_String__Format(v12, v11, 0LL);
+  return System_String__Format(v15, v14, 0LL);
 }
 
 
@@ -90,7 +93,7 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewItemDraw__SetItem(
     gameObject = (UnityEngine_GameObject_o *)this->fields.baseButton;
     if ( !gameObject )
 LABEL_11:
-      sub_B7769C(gameObject, v8);
+      sub_1B00F28(gameObject, v8);
     ((void (__fastcall *)(UnityEngine_GameObject_o *, _QWORD, __int64, Il2CppRuntimeInterfaceOffsetPair *))gameObject->klass[1]._1.implementedInterfaces)(
       gameObject,
       0LL,
@@ -112,28 +115,28 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewItemDraw__SetRestricti
   UISprite_o *v9; // x21
   System_String_o *v10; // x20
 
-  if ( (byte_438AE33 & 1) == 0 )
+  if ( (byte_48DF074 & 1) == 0 )
   {
-    sub_B775C4(&AtlasManager_TypeInfo);
-    byte_438AE33 = 1;
+    sub_1B00CCC(&AtlasManager_TypeInfo, item);
+    byte_48DF074 = 1;
   }
   restrictionClassSprite = (UnityEngine_Component_o *)this->fields.restrictionClassSprite;
   if ( !restrictionClassSprite )
-    goto LABEL_17;
+    goto LABEL_16;
   restrictionClassSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(restrictionClassSprite, 0LL);
   if ( !restrictionClassSprite )
-    goto LABEL_17;
+    goto LABEL_16;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)restrictionClassSprite, 1, 0LL);
   if ( !item )
-    goto LABEL_17;
+    goto LABEL_16;
   restrictionClassSprite = (UnityEngine_Component_o *)item->fields.gachaBonusSelectEntity;
   if ( !restrictionClassSprite )
-    goto LABEL_17;
+    goto LABEL_16;
   restrictionClassSprite = (UnityEngine_Component_o *)GachaBonusSelectEntity__GetClassIconId(
                                                         (GachaBonusSelectEntity_o *)restrictionClassSprite,
                                                         0LL);
   if ( !restrictionClassSprite )
-    goto LABEL_17;
+    goto LABEL_16;
   v6 = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)((__int64 (__fastcall *)(UnityEngine_Component_o *, void *))restrictionClassSprite->klass->vtable._3_ToString.method)(
                                                                  restrictionClassSprite,
                                                                  restrictionClassSprite->klass[1]._1.image);
@@ -145,7 +148,7 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewItemDraw__SetRestricti
                           v7);
   v9 = this->fields.restrictionClassSprite;
   v10 = ClassIconSpriteName;
-  if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
+  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   if ( !AtlasManager__SetPartyOrganizationImage(v9, v10, 0LL) )
   {
@@ -157,16 +160,16 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewItemDraw__SetRestricti
       if ( restrictionClassSprite )
       {
         UISprite__set_spriteName((UISprite_o *)restrictionClassSprite, v10, 0LL);
-        goto LABEL_15;
+        goto LABEL_14;
       }
     }
-LABEL_17:
-    sub_B7769C(restrictionClassSprite, item);
+LABEL_16:
+    sub_1B00F28(restrictionClassSprite, item);
   }
-LABEL_15:
+LABEL_14:
   restrictionClassSprite = (UnityEngine_Component_o *)this->fields.restrictionClassSprite;
   if ( !restrictionClassSprite )
-    goto LABEL_17;
+    goto LABEL_16;
   ((void (__fastcall *)(UnityEngine_Component_o *, void *))restrictionClassSprite->klass[2]._1.typeMetadataHandle)(
     restrictionClassSprite,
     restrictionClassSprite->klass[2]._1.interopData);
@@ -187,21 +190,21 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewItemDraw__SetUpperClas
   System_String_o *v11; // x20
 
   v6 = this;
-  if ( (byte_438AE32 & 1) == 0 )
+  if ( (byte_48DF073 & 1) == 0 )
   {
-    this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)sub_B775C4(&AtlasManager_TypeInfo);
-    byte_438AE32 = 1;
+    this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)sub_1B00CCC(&AtlasManager_TypeInfo, item);
+    byte_48DF073 = 1;
   }
   if ( !item )
-    goto LABEL_13;
+    goto LABEL_12;
   this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)item->fields.gachaBonusSelectEntity;
   if ( !this )
-    goto LABEL_13;
+    goto LABEL_12;
   this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)GachaBonusSelectEntity__GetClassIconId(
                                                                    (GachaBonusSelectEntity_o *)this,
                                                                    0LL);
   if ( !this )
-    goto LABEL_13;
+    goto LABEL_12;
   v7 = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)((__int64 (__fastcall *)(BonusSelectSummonPartyOrganizationListViewItemDraw_o *, void *))this->klass->vtable._3_ToString.method)(
                                                                  this,
                                                                  this->klass[1]._1.image);
@@ -213,7 +216,7 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewItemDraw__SetUpperClas
                           v8);
   upperClassSprite = v6->fields.upperClassSprite;
   v11 = ClassIconSpriteName;
-  if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
+  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   if ( !AtlasManager__SetPartyOrganizationImage(upperClassSprite, v11, 0LL) )
   {
@@ -228,8 +231,8 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewItemDraw__SetUpperClas
         return;
       }
     }
-LABEL_13:
-    sub_B7769C(this, item);
+LABEL_12:
+    sub_1B00F28(this, item);
   }
 }
 
@@ -240,144 +243,163 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewItemDraw__SvtDisp(
         const MethodInfo *method)
 {
   BonusSelectSummonPartyOrganizationListViewItemDraw_o *v4; // x20
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
   UINarrowFigureTexture_o *servantNarrowTexture; // x21
   struct ServantEntity_o *servantEntity; // x8
   ServantClassIconComponent_o *servantClassIcon; // x21
   int32_t classId; // w22
-  const MethodInfo *v9; // x3
-  const MethodInfo *v10; // x1
+  const MethodInfo *v13; // x3
+  const MethodInfo *v14; // x1
   int32_t RarityId; // w21
   System_String_o *Icon; // x0
   UISprite_o *raritySprite; // x22
-  System_String_o *v14; // x21
-  const MethodInfo *v15; // x1
+  System_String_o *v18; // x21
+  const MethodInfo *v19; // x1
   UserServantEntity_o *userServantEntity; // x0
   UIIconLabel_o *treasureDeviceIconLabel; // x21
   int32_t tdLevel; // w22
-  const MethodInfo *v19; // x1
+  const MethodInfo *v23; // x1
   UISprite_o *treasureDeviceIconBg; // x21
   UISprite_o *baseSprite; // x21
-  const MethodInfo *v22; // x1
+  const MethodInfo *v26; // x1
   int32_t FrameType; // w0
   UISprite_o *base2Sprite; // x20
-  const MethodInfo *v25; // x1
-  __int64 v26; // x2
-  Il2CppObject *v27; // x0
-  System_String_o *v28; // x0
-  int32_t v29; // [xsp+1Ch] [xbp-34h] BYREF
-  TreasureDvcInfo_o *tdInfo; // [xsp+28h] [xbp-28h] BYREF
+  const MethodInfo *v29; // x1
+  __int64 v30; // x2
+  __int64 v31; // x3
+  __int64 v32; // x4
+  Il2CppObject *v33; // x0
+  System_String_o *v34; // x0
+  int32_t v35; // [xsp+1Ch] [xbp-44h] BYREF
+  TreasureDvcInfo_o *tdInfo; // [xsp+28h] [xbp-38h] BYREF
 
   v4 = this;
-  if ( (byte_438AE30 & 1) == 0 )
+  if ( (byte_48DF071 & 1) == 0 )
   {
-    sub_B775C4(&AtlasManager_TypeInfo);
-    sub_B775C4(&int_TypeInfo);
-    sub_B775C4(&Rarity_TypeInfo);
-    sub_B775C4(&StringLiteral_17035/*"bg_white"*/);
-    this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)sub_B775C4(&StringLiteral_17218/*"bonus_select_frame_{0}"*/);
-    byte_438AE30 = 1;
+    sub_1B00CCC(&AtlasManager_TypeInfo, item);
+    sub_1B00CCC(&int_TypeInfo, v5);
+    sub_1B00CCC(&Rarity_TypeInfo, v6);
+    sub_1B00CCC(&StringLiteral_16936/*"bg_white"*/, v7);
+    this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)sub_1B00CCC(&StringLiteral_17124/*"bonus_select_frame_{0}"*/, v8);
+    byte_48DF071 = 1;
   }
   tdInfo = 0LL;
   if ( !item )
-    goto LABEL_29;
+    goto LABEL_26;
   servantNarrowTexture = v4->fields.servantNarrowTexture;
   this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)BonusSelectSummonPartyOrganizationListViewItem__get_SvtId(
                                                                    item,
                                                                    (const MethodInfo *)item);
   if ( !servantNarrowTexture )
-    goto LABEL_29;
+    goto LABEL_26;
   UINarrowFigureTexture__SetCharacter(servantNarrowTexture, (int32_t)this, 0, 0LL, 0LL);
   servantEntity = item->fields.servantEntity;
   if ( !servantEntity )
-    goto LABEL_29;
+    goto LABEL_26;
   servantClassIcon = v4->fields.servantClassIcon;
   classId = servantEntity->fields.classId;
   this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)BonusSelectSummonPartyOrganizationListViewItem__get_FrameType(
                                                                    item,
                                                                    (const MethodInfo *)item);
   if ( !servantClassIcon )
-    goto LABEL_29;
+    goto LABEL_26;
   ServantClassIconComponent__SetImage(servantClassIcon, classId, (int32_t)this, 0LL);
   this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)v4->fields.restrictionClassSprite;
   if ( !this )
-    goto LABEL_29;
+    goto LABEL_26;
   this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)UnityEngine_Component__get_gameObject(
                                                                    (UnityEngine_Component_o *)this,
                                                                    0LL);
   if ( !this )
-    goto LABEL_29;
+    goto LABEL_26;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
-  BonusSelectSummonPartyOrganizationListViewItemDraw__SetUpperClassSprite(v4, item, 1, v9);
-  RarityId = BonusSelectSummonPartyOrganizationListViewItem__get_RarityId(item, v10);
-  if ( (BYTE3(Rarity_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !Rarity_TypeInfo->_2.cctor_finished )
+  BonusSelectSummonPartyOrganizationListViewItemDraw__SetUpperClassSprite(v4, item, 1, v13);
+  RarityId = BonusSelectSummonPartyOrganizationListViewItem__get_RarityId(item, v14);
+  if ( !Rarity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Rarity_TypeInfo);
   Icon = Rarity__getIcon(RarityId, 0LL);
   raritySprite = v4->fields.raritySprite;
-  v14 = Icon;
-  if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
+  v18 = Icon;
+  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   AtlasManager__SetCommon(raritySprite, 0LL);
   this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)v4->fields.raritySprite;
   if ( !this )
-    goto LABEL_29;
-  UISprite__set_spriteName((UISprite_o *)this, v14, 0LL);
+    goto LABEL_26;
+  UISprite__set_spriteName((UISprite_o *)this, v18, 0LL);
   this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)v4->fields.raritySprite;
   if ( !this )
-    goto LABEL_29;
+    goto LABEL_26;
   ((void (__fastcall *)(BonusSelectSummonPartyOrganizationListViewItemDraw_o *, void *))this->klass[2]._1.typeMetadataHandle)(
     this,
     this->klass[2]._1.interopData);
   userServantEntity = item->fields.userServantEntity;
-  if ( !userServantEntity )
+  if ( userServantEntity )
   {
-    treasureDeviceIconLabel = v4->fields.treasureDeviceIconLabel;
-    tdLevel = BonusSelectSummonPartyOrganizationListViewItem__get_tdLevel(item, v15);
-    this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)BonusSelectSummonPartyOrganizationListViewItem__get_tdMaxLevel(
-                                                                     item,
-                                                                     v19);
-    if ( treasureDeviceIconLabel )
+    this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)UserServantEntity__getTreasureDeviceInfo(
+                                                                     userServantEntity,
+                                                                     &tdInfo,
+                                                                     -1,
+                                                                     -1,
+                                                                     0,
+                                                                     0LL);
+    if ( tdInfo )
     {
-      UIIconLabel__Set_41716724(treasureDeviceIconLabel, 33, tdLevel, (int32_t)this, 0, 0LL, 0, 0, 0, 0LL);
-      goto LABEL_25;
+      this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)v4->fields.treasureDeviceIconLabel;
+      if ( this )
+      {
+        UIIconLabel__Set_37024000(
+          (UIIconLabel_o *)this,
+          33,
+          tdInfo->fields.lv,
+          tdInfo->fields.maxLv,
+          0,
+          0LL,
+          0,
+          0,
+          0,
+          0LL);
+        this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)v4->fields.restrictionClassSprite;
+        if ( this )
+        {
+          this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)UnityEngine_Component__get_gameObject(
+                                                                           (UnityEngine_Component_o *)this,
+                                                                           0LL);
+          if ( this )
+          {
+            UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
+            goto LABEL_23;
+          }
+        }
+      }
     }
-LABEL_29:
-    sub_B7769C(this, item);
+LABEL_26:
+    sub_1B00F28(this, item);
   }
-  this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)UserServantEntity__getTreasureDeviceInfo(
-                                                                   userServantEntity,
-                                                                   &tdInfo,
-                                                                   -1,
-                                                                   -1,
-                                                                   0,
-                                                                   0LL);
-  if ( !tdInfo )
-    goto LABEL_29;
-  this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)v4->fields.treasureDeviceIconLabel;
-  if ( !this )
-    goto LABEL_29;
-  UIIconLabel__Set_41716724((UIIconLabel_o *)this, 33, tdInfo->fields.lv, tdInfo->fields.maxLv, 0, 0LL, 0, 0, 0, 0LL);
-  this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)v4->fields.restrictionClassSprite;
-  if ( !this )
-    goto LABEL_29;
-  this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)UnityEngine_Component__get_gameObject(
-                                                                   (UnityEngine_Component_o *)this,
-                                                                   0LL);
-  if ( !this )
-    goto LABEL_29;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
-LABEL_25:
+  treasureDeviceIconLabel = v4->fields.treasureDeviceIconLabel;
+  tdLevel = BonusSelectSummonPartyOrganizationListViewItem__get_tdLevel(item, v19);
+  this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)BonusSelectSummonPartyOrganizationListViewItem__get_tdMaxLevel(
+                                                                   item,
+                                                                   v23);
+  if ( !treasureDeviceIconLabel )
+    goto LABEL_26;
+  UIIconLabel__Set_37024000(treasureDeviceIconLabel, 33, tdLevel, (int32_t)this, 0, 0LL, 0, 0, 0, 0LL);
+LABEL_23:
   treasureDeviceIconBg = v4->fields.treasureDeviceIconBg;
-  if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
+  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetPartyOrganizationImage(treasureDeviceIconBg, (System_String_o *)StringLiteral_17035/*"bg_white"*/, 0LL);
+  AtlasManager__SetPartyOrganizationImage(treasureDeviceIconBg, (System_String_o *)StringLiteral_16936/*"bg_white"*/, 0LL);
   baseSprite = v4->fields.baseSprite;
-  FrameType = BonusSelectSummonPartyOrganizationListViewItem__get_FrameType(item, v22);
+  FrameType = BonusSelectSummonPartyOrganizationListViewItem__get_FrameType(item, v26);
   AtlasManager__SetFormationBase(baseSprite, FrameType, v4->fields.partyOrganizationAtlas, 0, 0LL);
   base2Sprite = v4->fields.base2Sprite;
-  v29 = BonusSelectSummonPartyOrganizationListViewItem__get_FrameType(item, v25);
-  v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v29, v26);
-  v28 = System_String__Format((System_String_o *)StringLiteral_17218/*"bonus_select_frame_{0}"*/, v27, 0LL);
-  AtlasManager__SetEventSprite(base2Sprite, v28, 0LL);
+  v35 = BonusSelectSummonPartyOrganizationListViewItem__get_FrameType(item, v29);
+  v33 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v35, v30, v31, v32);
+  v34 = System_String__Format((System_String_o *)StringLiteral_17124/*"bonus_select_frame_{0}"*/, v33, 0LL);
+  AtlasManager__SetEventSprite(base2Sprite, v34, 0LL);
 }
 
 
@@ -386,48 +408,49 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewItemDraw__SvtNotDisp(
         BonusSelectSummonPartyOrganizationListViewItem_o *item,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
   UINarrowFigureTexture_o *servantNarrowTexture; // x0
-  const MethodInfo *v6; // x2
-  const MethodInfo *v7; // x3
+  const MethodInfo *v7; // x2
+  const MethodInfo *v8; // x3
   UISprite_o *baseSprite; // x20
   UIAtlas_o *partyOrganizationAtlas; // x21
 
-  if ( (byte_438AE31 & 1) == 0 )
+  if ( (byte_48DF072 & 1) == 0 )
   {
-    sub_B775C4(&AtlasManager_TypeInfo);
-    sub_B775C4(&string_TypeInfo);
-    byte_438AE31 = 1;
+    sub_1B00CCC(&AtlasManager_TypeInfo, item);
+    sub_1B00CCC(&string_TypeInfo, v5);
+    byte_48DF072 = 1;
   }
   servantNarrowTexture = this->fields.servantNarrowTexture;
   if ( !servantNarrowTexture )
-    goto LABEL_13;
+    goto LABEL_12;
   UINarrowFigureTexture__ReleaseCharacter(servantNarrowTexture, 0LL);
   servantNarrowTexture = (UINarrowFigureTexture_o *)this->fields.servantClassIcon;
   if ( !servantNarrowTexture )
-    goto LABEL_13;
+    goto LABEL_12;
   ServantClassIconComponent__Clear((ServantClassIconComponent_o *)servantNarrowTexture, 0LL);
   servantNarrowTexture = (UINarrowFigureTexture_o *)this->fields.raritySprite;
   if ( !servantNarrowTexture )
-    goto LABEL_13;
+    goto LABEL_12;
   UISprite__set_spriteName((UISprite_o *)servantNarrowTexture, 0LL, 0LL);
   servantNarrowTexture = (UINarrowFigureTexture_o *)this->fields.treasureDeviceIconLabel;
   if ( !servantNarrowTexture )
-    goto LABEL_13;
+    goto LABEL_12;
   UIIconLabel__Clear((UIIconLabel_o *)servantNarrowTexture, 0LL);
   servantNarrowTexture = (UINarrowFigureTexture_o *)this->fields.treasureDeviceIconBg;
   if ( !servantNarrowTexture )
-    goto LABEL_13;
+    goto LABEL_12;
   UISprite__set_spriteName((UISprite_o *)servantNarrowTexture, 0LL, 0LL);
-  BonusSelectSummonPartyOrganizationListViewItemDraw__SetRestrictionClassSprite(this, item, v6);
-  BonusSelectSummonPartyOrganizationListViewItemDraw__SetUpperClassSprite(this, item, 0, v7);
+  BonusSelectSummonPartyOrganizationListViewItemDraw__SetRestrictionClassSprite(this, item, v7);
+  BonusSelectSummonPartyOrganizationListViewItemDraw__SetUpperClassSprite(this, item, 0, v8);
   baseSprite = this->fields.baseSprite;
   partyOrganizationAtlas = this->fields.partyOrganizationAtlas;
-  if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
+  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   AtlasManager__SetFormationBase(baseSprite, 9, partyOrganizationAtlas, 0, 0LL);
   servantNarrowTexture = (UINarrowFigureTexture_o *)this->fields.base2Sprite;
   if ( !servantNarrowTexture )
-LABEL_13:
-    sub_B7769C(servantNarrowTexture, item);
+LABEL_12:
+    sub_1B00F28(servantNarrowTexture, item);
   UISprite__set_spriteName((UISprite_o *)servantNarrowTexture, string_TypeInfo->static_fields->Empty, 0LL);
 }

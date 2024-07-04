@@ -1,14 +1,14 @@
 void __fastcall BlankEarthGimmickMaster___ctor(BlankEarthGimmickMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_438AD9A & 1) == 0 )
+  if ( (byte_48E24E3 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_BlankEarthGimmickMaster__BlankEarthGimmickEntity__int___ctor__);
-    byte_438AD9A = 1;
+    sub_1B00CCC(&Method_DataMasterBase_BlankEarthGimmickMaster__BlankEarthGimmickEntity__int___ctor__, method);
+    byte_48E24E3 = 1;
   }
-  DataMasterBase_WarMaster__WarEntity__int____ctor(
-    (DataMasterBase_WarMaster__WarEntity__int__o *)this,
+  DataMasterBase_object__object__int____ctor(
+    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     461,
-    (const MethodInfo_21FB7F8 *)Method_DataMasterBase_BlankEarthGimmickMaster__BlankEarthGimmickEntity__int___ctor__);
+    (const MethodInfo_2FE6A0C *)Method_DataMasterBase_BlankEarthGimmickMaster__BlankEarthGimmickEntity__int___ctor__);
 }
 
 
@@ -16,69 +16,97 @@ BlankEarthGimmickEntity_array *__fastcall BlankEarthGimmickMaster__GetAllGimmick
         BlankEarthGimmickMaster_o *this,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v3; // x20
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *v4; // x1
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
-  int32_t v6; // w21
-  __int64 v7; // x10
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  System_Collections_Generic_List_object__o *v9; // x20
+  System_Collections_ObjectModel_Collection_T__o *v10; // x1
+  System_Collections_ObjectModel_Collection_T__o *list; // x0
+  int32_t v12; // w21
+  int32_t v13; // w2
+  int32_t v14; // w3
+  __int64 methodPtr_low; // x10
+  struct System_Object_array *items; // x8
+  _QWORD *v17; // x9
+  __int64 size; // x10
+  Il2CppClass **v19; // x0
 
-  if ( (byte_438AD99 & 1) == 0 )
+  if ( (byte_48E24E2 & 1) == 0 )
   {
-    sub_B775C4(&BlankEarthGimmickEntity_TypeInfo);
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B775C4(&Method_System_Collections_Generic_List_BlankEarthGimmickEntity__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_BlankEarthGimmickEntity__ToArray__);
-    sub_B775C4(&Method_System_Collections_Generic_List_BlankEarthGimmickEntity___ctor__);
-    sub_B775C4(&System_Collections_Generic_List_BlankEarthGimmickEntity__TypeInfo);
-    byte_438AD99 = 1;
+    sub_1B00CCC(&BlankEarthGimmickEntity_TypeInfo, method);
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, v3);
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v4);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_BlankEarthGimmickEntity__Add__, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_BlankEarthGimmickEntity__ToArray__, v6);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_BlankEarthGimmickEntity___ctor__, v7);
+    sub_1B00CCC(&System_Collections_Generic_List_BlankEarthGimmickEntity__TypeInfo, v8);
+    byte_48E24E2 = 1;
   }
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_BlankEarthGimmickEntity__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v3,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_BlankEarthGimmickEntity___ctor__);
-  list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
+  v9 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_BlankEarthGimmickEntity__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v9,
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_BlankEarthGimmickEntity___ctor__);
+  list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    goto LABEL_16;
-  v6 = 0;
+    goto LABEL_19;
+  v12 = 0;
   while ( 1 )
   {
-    list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
-                                                                                         list,
-                                                                                         (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    if ( v6 >= (int)list )
+    list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Count(
+                                                               list,
+                                                               (const MethodInfo_2F836B0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    if ( v12 >= (int)list )
       break;
-    list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
+    list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
     if ( !list )
-      goto LABEL_16;
-    list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
-                                                                                         list,
-                                                                                         v6,
-                                                                                         (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+      goto LABEL_19;
+    list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
+                                                               list,
+                                                               v12,
+                                                               (const MethodInfo_2F83740 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
     if ( list )
     {
-      v4 = list;
-      v7 = *(&BlankEarthGimmickEntity_TypeInfo->_2.bitflags2 + 1);
-      if ( *(&list->klass->_2.bitflags2 + 1) >= (unsigned int)v7
-        && (BlankEarthGimmickEntity_c *)list->klass->_2.typeHierarchy[v7 - 1] == BlankEarthGimmickEntity_TypeInfo )
+      v10 = list;
+      methodPtr_low = LOBYTE(BlankEarthGimmickEntity_TypeInfo->vtable._0_Equals.methodPtr);
+      if ( LOBYTE(list->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low
+        && (BlankEarthGimmickEntity_c *)list->klass->_2.typeHierarchy[methodPtr_low - 1] == BlankEarthGimmickEntity_TypeInfo )
       {
-        if ( !v3 )
-          goto LABEL_16;
-        System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-          v3,
-          (EventMissionProgressRequest_Argument_ProgressData_o *)list,
-          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_BlankEarthGimmickEntity__Add__);
+        if ( !v9 )
+          goto LABEL_19;
+        items = v9->fields._items;
+        v17 = Method_System_Collections_Generic_List_BlankEarthGimmickEntity__Add__;
+        ++v9->fields._version;
+        if ( !items )
+          goto LABEL_19;
+        size = v9->fields._size;
+        if ( (unsigned int)size >= items->max_length )
+        {
+          System_Collections_Generic_List_object___AddWithResize(
+            v9,
+            (Il2CppObject *)list,
+            *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+        }
+        else
+        {
+          v19 = &items->obj.klass + size;
+          v9->fields._size = size + 1;
+          v19[4] = (Il2CppClass *)v10;
+          sub_1B00C70((ServantStatusBattleListViewItem_o *)(v19 + 4), (int32_t)v10, v13, v14);
+        }
       }
     }
-    list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
-    ++v6;
+    list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
+    ++v12;
     if ( !list )
-      goto LABEL_16;
+      goto LABEL_19;
   }
-  if ( !v3 )
-LABEL_16:
-    sub_B7769C(list, v4);
-  return (BlankEarthGimmickEntity_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
-                                            (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v3,
-                                            (const MethodInfo_30553E4 *)Method_System_Collections_Generic_List_BlankEarthGimmickEntity__ToArray__);
+  if ( !v9 )
+LABEL_19:
+    sub_1B00F28(list, v10);
+  return (BlankEarthGimmickEntity_array *)System_Collections_Generic_List_object___ToArray(
+                                            v9,
+                                            (const MethodInfo_33C3528 *)Method_System_Collections_Generic_List_BlankEarthGimmickEntity__ToArray__);
 }

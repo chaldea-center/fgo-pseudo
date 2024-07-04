@@ -1,14 +1,14 @@
 void __fastcall SpotPathMaster___ctor(SpotPathMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_438BF1D & 1) == 0 )
+  if ( (byte_48E314D & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__);
-    byte_438BF1D = 1;
+    sub_1B00CCC(&Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__, method);
+    byte_48E314D = 1;
   }
-  DataMasterBase_WarMaster__WarEntity__int____ctor(
-    (DataMasterBase_WarMaster__WarEntity__int__o *)this,
+  DataMasterBase_object__object__int____ctor(
+    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     216,
-    (const MethodInfo_21FB7F8 *)Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__);
+    (const MethodInfo_2FE6A0C *)Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__);
 }
 
 
@@ -42,55 +42,57 @@ SpotPathEntity_o *__fastcall SpotPathMaster__GetSpotPathEntity(
         int32_t groupId,
         const MethodInfo *method)
 {
+  __int64 v9; // x1
+  __int64 v10; // x1
   SpotPathEntity_o *result; // x0
   int32_t Count; // w0
-  int v11; // w23
-  int32_t v12; // w21
-  int32_t v13; // w22
-  __int64 v14; // x10
+  int32_t v13; // w21
+  int32_t v14; // w22
+  int v15; // w23
+  __int64 methodPtr_low; // x10
 
-  if ( (byte_438BF1E & 1) == 0 )
+  if ( (byte_48E314E & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B775C4(&SpotPathEntity_TypeInfo);
-    byte_438BF1E = 1;
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v9);
+    sub_1B00CCC(&SpotPathEntity_TypeInfo, v10);
+    byte_48E314E = 1;
   }
   result = (SpotPathEntity_o *)this->fields.list;
   if ( !result )
     goto LABEL_16;
-  Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
-            (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)result,
-            (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+  Count = System_Collections_ObjectModel_Collection_object___get_Count(
+            (System_Collections_ObjectModel_Collection_T__o *)result,
+            (const MethodInfo_2F836B0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
-    v11 = termId + 100 * eventId;
-    v12 = Count;
-    v13 = 0;
+    v13 = Count;
+    v14 = 0;
+    v15 = termId + 100 * eventId;
     while ( 1 )
     {
       result = (SpotPathEntity_o *)this->fields.list;
       if ( !result )
         break;
-      result = (SpotPathEntity_o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
-                                     (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)result,
-                                     v13,
-                                     (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+      result = (SpotPathEntity_o *)System_Collections_ObjectModel_Collection_object___get_Item(
+                                     (System_Collections_ObjectModel_Collection_T__o *)result,
+                                     v14,
+                                     (const MethodInfo_2F83740 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( !result )
         break;
-      v14 = *(&SpotPathEntity_TypeInfo->_2.bitflags2 + 1);
-      if ( *(&result->klass->_2.bitflags2 + 1) < (unsigned int)v14
-        || (SpotPathEntity_c *)result->klass->_2.typeHierarchy[v14 - 1] != SpotPathEntity_TypeInfo )
+      methodPtr_low = LOBYTE(SpotPathEntity_TypeInfo->vtable._0_Equals.methodPtr);
+      if ( LOBYTE(result->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
+        || (SpotPathEntity_c *)result->klass->_2.typeHierarchy[methodPtr_low - 1] != SpotPathEntity_TypeInfo )
       {
         break;
       }
-      if ( result->fields.valueType == 1 && result->fields.targetId == v11 && result->fields.targetValue == groupId )
+      if ( result->fields.valueType == 1 && result->fields.targetId == v15 && result->fields.targetValue == groupId )
         return result;
-      if ( ++v13 >= v12 )
+      if ( v13 == ++v14 )
         return 0LL;
     }
 LABEL_16:
-    sub_B7769C(result, *(_QWORD *)&eventId);
+    sub_1B00F28(result, *(_QWORD *)&eventId);
   }
   return 0LL;
 }

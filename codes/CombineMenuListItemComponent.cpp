@@ -16,55 +16,56 @@ void __fastcall CombineMenuListItemComponent__InitButton(
         CombineMenuListItemComponent_o *this,
         const MethodInfo *method)
 {
-  UILabel_o *preparationLabel; // x20
-  System_String_o *v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
   __int64 v5; // x1
+  __int64 v6; // x1
+  UILabel_o *preparationLabel; // x20
+  System_String_o *v8; // x0
+  __int64 v9; // x1
   struct UICommonButton_o *button; // x8
-  struct UICommonButton_o *v7; // x8
-  struct UICommonButton_o *v8; // x8
-  unsigned __int128 v9; // [xsp+0h] [xbp-40h] BYREF
-  UnityEngine_Color_o v10; // [xsp+10h] [xbp-30h] BYREF
-  UnityEngine_Color_o color; // [xsp+20h] [xbp-20h] BYREF
+  struct UICommonButton_o *v11; // x8
+  struct UICommonButton_o *v12; // x8
+  unsigned __int128 v13; // [xsp+0h] [xbp-60h] BYREF
+  UnityEngine_Color_o v14; // [xsp+10h] [xbp-50h] BYREF
+  UnityEngine_Color_o color; // [xsp+20h] [xbp-40h] BYREF
 
-  if ( (byte_438B261 & 1) == 0 )
+  if ( (byte_48E5D77 & 1) == 0 )
   {
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&StringLiteral_3321/*"COMBINE_PREPARATION"*/);
-    sub_B775C4(&StringLiteral_364/*"#6B6B6B"*/);
-    sub_B775C4(&StringLiteral_370/*"#E1C896"*/);
-    sub_B775C4(&StringLiteral_368/*"#B7A37B"*/);
-    byte_438B261 = 1;
+    sub_1B00CCC(&LocalizationManager_TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_3649/*"COMBINE_PREPARATION"*/, v3);
+    sub_1B00CCC(&StringLiteral_440/*"#6B6B6B"*/, v4);
+    sub_1B00CCC(&StringLiteral_447/*"#E1C896"*/, v5);
+    sub_1B00CCC(&StringLiteral_445/*"#B7A37B"*/, v6);
+    byte_48E5D77 = 1;
   }
   *(_QWORD *)&color.fields.r = 0LL;
   *(_QWORD *)&color.fields.b = 0LL;
-  *(_QWORD *)&v10.fields.b = 0LL;
-  *(_QWORD *)&v10.fields.r = 0LL;
-  v9 = 0uLL;
+  *(_QWORD *)&v14.fields.r = 0LL;
+  *(_QWORD *)&v14.fields.b = 0LL;
+  v13 = 0uLL;
   preparationLabel = this->fields.preparationLabel;
-  if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !LocalizationManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  }
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_3321/*"COMBINE_PREPARATION"*/, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3649/*"COMBINE_PREPARATION"*/, 0LL);
   if ( !preparationLabel )
-    goto LABEL_11;
-  UILabel__set_text(preparationLabel, v4, 0LL);
-  UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_370/*"#E1C896"*/, &color, 0LL);
-  UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_368/*"#B7A37B"*/, &v10, 0LL);
-  v4 = (System_String_o *)UnityEngine_ColorUtility__TryParseHtmlString(
-                            (System_String_o *)StringLiteral_364/*"#6B6B6B"*/,
-                            (UnityEngine_Color_o *)&v9,
+    goto LABEL_10;
+  UILabel__set_text(preparationLabel, v8, 0LL);
+  UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_447/*"#E1C896"*/, &color, 0LL);
+  UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_445/*"#B7A37B"*/, &v14, 0LL);
+  v8 = (System_String_o *)UnityEngine_ColorUtility__TryParseHtmlString(
+                            (System_String_o *)StringLiteral_440/*"#6B6B6B"*/,
+                            (UnityEngine_Color_o *)&v13,
                             0LL);
   button = this->fields.button;
   if ( !button
-    || (button->fields.specifyHoverColor = color, (v7 = this->fields.button) == 0LL)
-    || (v7->fields.specifyPressedColor = v10, (v8 = this->fields.button) == 0LL) )
+    || (button->fields.specifyHoverColor = color, (v11 = this->fields.button) == 0LL)
+    || (v11->fields.specifyPressedColor = v14, (v12 = this->fields.button) == 0LL) )
   {
-LABEL_11:
-    sub_B7769C(v4, v5);
+LABEL_10:
+    sub_1B00F28(v8, v9);
   }
-  v8->fields.specifyDisabledColor = (struct UnityEngine_Color_o)v9;
+  v12->fields.specifyDisabledColor = (struct UnityEngine_Color_o)v13;
 }
 
 
@@ -78,7 +79,7 @@ void __fastcall CombineMenuListItemComponent__ResetDisableState(
   {
     button = this->fields.button;
     if ( !button )
-      sub_B7769C(0LL, method);
+      sub_1B00F28(0LL, method);
     ((void (__fastcall *)(struct UICommonButton_o *, __int64, __int64, Il2CppMethodPointer))button->klass->vtable._14_SetState.method)(
       button,
       3LL,
@@ -95,30 +96,27 @@ void __fastcall CombineMenuListItemComponent__SetButtonState(
         bool immediate,
         const MethodInfo *method)
 {
-  bool v7; // w1
+  unsigned int v5; // w19
   struct UICommonButton_o *button; // x0
 
-  if ( state == 3 )
+  v5 = state;
+  if ( state )
   {
-    v7 = 1;
+    if ( state != 3 )
+      goto LABEL_5;
+    LOBYTE(state) = 1;
   }
-  else
-  {
-    if ( state )
-      goto LABEL_6;
-    v7 = 0;
-  }
-  CombineMenuListItemComponent__SetDisableUiActivity(this, v7, (const MethodInfo *)immediate);
-LABEL_6:
+  CombineMenuListItemComponent__SetDisableUiActivity(this, state, (const MethodInfo *)immediate);
+LABEL_5:
   button = this->fields.button;
   if ( !button )
-    sub_B7769C(0LL, *(_QWORD *)&state);
+    sub_1B00F28(0LL, *(_QWORD *)&state);
   ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, bool, Il2CppMethodPointer))button->klass->vtable._14_SetState.method)(
     button,
-    (unsigned int)state,
+    v5,
     immediate,
     button->klass->vtable._15_OnPress.methodPtr);
-  this->fields.currentState = state;
+  this->fields.currentState = v5;
 }
 
 
@@ -131,7 +129,7 @@ void __fastcall CombineMenuListItemComponent__SetDisableMessage(
 
   disableMessageLabel = this->fields.disableMessageLabel;
   if ( !disableMessageLabel )
-    sub_B7769C(0LL, disableMessage);
+    sub_1B00F28(0LL, disableMessage);
   UILabel__set_text(disableMessageLabel, disableMessage, 0LL);
 }
 
@@ -151,7 +149,7 @@ void __fastcall CombineMenuListItemComponent__SetDisableUiActivity(
         (preparationLabel = (UnityEngine_Component_o *)this->fields.disableMessageLabel) == 0LL)
     || (preparationLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(preparationLabel, 0LL)) == 0LL )
   {
-    sub_B7769C(preparationLabel, isActive);
+    sub_1B00F28(preparationLabel, isActive);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)preparationLabel, isActive, 0LL);
 }
@@ -164,13 +162,13 @@ void __fastcall CombineMenuListItemComponent__SetEventSprite(
 {
   UISprite_o *baseSprite; // x20
 
-  if ( (byte_438B262 & 1) == 0 )
+  if ( (byte_48E5D78 & 1) == 0 )
   {
-    sub_B775C4(&AtlasManager_TypeInfo);
-    byte_438B262 = 1;
+    sub_1B00CCC(&AtlasManager_TypeInfo, spriteName);
+    byte_48E5D78 = 1;
   }
   baseSprite = this->fields.baseSprite;
-  if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
+  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   AtlasManager__SetEventSprite(baseSprite, spriteName, 0LL);
 }

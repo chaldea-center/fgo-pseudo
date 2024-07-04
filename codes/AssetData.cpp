@@ -1,61 +1,49 @@
 void __fastcall AssetData___cctor(const MethodInfo *method)
 {
-  if ( (byte_438A9BF & 1) == 0 )
+  __int64 v1; // x1
+
+  if ( (byte_48E1901 & 1) == 0 )
   {
-    sub_B775C4(&AssetData_TypeInfo);
-    byte_438A9BF = 1;
+    sub_1B00CCC(&AssetData_TypeInfo, v1);
+    byte_48E1901 = 1;
   }
-  AssetData_TypeInfo->static_fields->ASSETBUNDLE_SPLIT_BASE_CHAR = 47;
-  AssetData_TypeInfo->static_fields->ASSETBUNDLE_SPLIT_CACHE_CHAR = 64;
-  AssetData_TypeInfo->static_fields->ASSETBUNDLE_SPLIT_HASH_CHAR = 64;
-  AssetData_TypeInfo->static_fields->ASSETBUNDLE_SPLIT_NOT_HASH_CHAR = 95;
+  *AssetData_TypeInfo->static_fields = *(struct AssetData_StaticFields *)asc_B6F458;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall AssetData___ctor(AssetData_o *this, int32_t type, System_String_o *name, const MethodInfo *method)
 {
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
-  System_Int32_array **v13; // x1
-  System_String_array **v14; // x2
-  System_String_array **v15; // x3
-  System_Boolean_array **v16; // x4
-  System_Int32_array **v17; // x5
-  System_Int32_array *v18; // x6
-  System_Int32_array *v19; // x7
+  int32_t v7; // w2
+  int32_t v8; // w3
+  int32_t v9; // w1
+  int32_t v10; // w2
+  int32_t v11; // w3
   struct System_String_o **p_keyType; // x19
-  System_String_array **v21; // x2
-  System_String_array **v22; // x3
-  System_Boolean_array **v23; // x4
-  System_Int32_array **v24; // x5
-  System_Int32_array *v25; // x6
-  System_Int32_array *v26; // x7
+  int32_t v13; // w2
+  int32_t v14; // w3
 
-  if ( (byte_438A9B5 & 1) == 0 )
+  if ( (byte_48E18F7 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438A9B5 = 1;
+    sub_1B00CCC(&StringLiteral_1/*""*/, *(_QWORD *)&type);
+    byte_48E18F7 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.type = type;
   this->fields.name = name;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.name, (System_Int32_array **)name, v7, v8, v9, v10, v11, v12);
-  v13 = (System_Int32_array **)StringLiteral_1/*""*/;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.name, (int32_t)name, v7, v8);
+  v9 = (int)StringLiteral_1/*""*/;
   this->fields.attrib = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.attrib, v13, v14, v15, v16, v17, v18, v19);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.attrib, v9, v10, v11);
   this->fields.keyType = 0LL;
   p_keyType = &this->fields.keyType;
   *(p_keyType - 2) = 0LL;
   *(p_keyType - 1) = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)p_keyType, 0LL, v21, v22, v23, v24, v25, v26);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)p_keyType, 0, v13, v14);
 }
 
 
-void __fastcall AssetData___ctor_24382008(
+void __fastcall AssetData___ctor_36563176(
         AssetData_o *this,
         int32_t type,
         System_String_o *name,
@@ -67,59 +55,31 @@ void __fastcall AssetData___ctor_24382008(
         const MethodInfo *method)
 {
   AssetData_o *v16; // x26
-  System_String_array **v17; // x2
-  System_String_array **v18; // x3
-  System_Boolean_array **v19; // x4
-  System_Int32_array **v20; // x5
-  System_Int32_array *v21; // x6
-  System_Int32_array *v22; // x7
-  System_String_array **v23; // x2
-  System_String_array **v24; // x3
-  System_Boolean_array **v25; // x4
-  System_Int32_array **v26; // x5
-  System_Int32_array *v27; // x6
-  System_Int32_array *v28; // x7
-  System_String_array **v29; // x2
-  System_String_array **v30; // x3
-  System_Boolean_array **v31; // x4
-  System_Int32_array **v32; // x5
-  System_Int32_array *v33; // x6
-  System_Int32_array *v34; // x7
+  int32_t v17; // w2
+  int32_t v18; // w3
+  int32_t v19; // w2
+  int32_t v20; // w3
+  int32_t v21; // w2
+  int32_t v22; // w3
 
   v16 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v16->fields.type = type;
   v16->fields.name = name;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&v16->fields.name,
-    (System_Int32_array **)name,
-    v17,
-    v18,
-    v19,
-    v20,
-    v21,
-    v22);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v16->fields.name, (int32_t)name, v17, v18);
   v16->fields.attrib = attrib;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&v16->fields.attrib,
-    (System_Int32_array **)attrib,
-    v23,
-    v24,
-    v25,
-    v26,
-    v27,
-    v28);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v16->fields.attrib, (int32_t)attrib, v19, v20);
   v16->fields.keyType = keyType;
   v16 = (AssetData_o *)((char *)v16 + 56);
   LODWORD(v16[-1].fields.objectList) = version;
   HIDWORD(v16[-1].fields.objectList) = version;
   *(_DWORD *)&v16[-1].fields.isLoadResources = size;
   v16[-1].fields.entryCount = crc;
-  sub_B77560((BattleServantConfConponent_o *)v16, (System_Int32_array **)keyType, v29, v30, v31, v32, v33, v34);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)v16, (int32_t)keyType, v21, v22);
 }
 
 
-void __fastcall AssetData___ctor_24382152(
+void __fastcall AssetData___ctor_36563316(
         AssetData_o *this,
         int32_t type,
         System_String_o *name,
@@ -132,55 +92,27 @@ void __fastcall AssetData___ctor_24382152(
         const MethodInfo *method)
 {
   AssetData_o *v17; // x27
-  System_String_array **v18; // x2
-  System_String_array **v19; // x3
-  System_Boolean_array **v20; // x4
-  System_Int32_array **v21; // x5
-  System_Int32_array *v22; // x6
-  System_Int32_array *v23; // x7
-  System_String_array **v24; // x2
-  System_String_array **v25; // x3
-  System_Boolean_array **v26; // x4
-  System_Int32_array **v27; // x5
-  System_Int32_array *v28; // x6
-  System_Int32_array *v29; // x7
-  System_String_array **v30; // x2
-  System_String_array **v31; // x3
-  System_Boolean_array **v32; // x4
-  System_Int32_array **v33; // x5
-  System_Int32_array *v34; // x6
-  System_Int32_array *v35; // x7
+  int32_t v18; // w2
+  int32_t v19; // w3
+  int32_t v20; // w2
+  int32_t v21; // w3
+  int32_t v22; // w2
+  int32_t v23; // w3
 
   v17 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v17->fields.type = type;
   v17->fields.name = name;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&v17->fields.name,
-    (System_Int32_array **)name,
-    v18,
-    v19,
-    v20,
-    v21,
-    v22,
-    v23);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v17->fields.name, (int32_t)name, v18, v19);
   v17->fields.attrib = attrib;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&v17->fields.attrib,
-    (System_Int32_array **)attrib,
-    v24,
-    v25,
-    v26,
-    v27,
-    v28,
-    v29);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v17->fields.attrib, (int32_t)attrib, v20, v21);
   v17->fields.keyType = keyType;
   v17 = (AssetData_o *)((char *)v17 + 56);
   LODWORD(v17[-1].fields.objectList) = nowVersion;
   HIDWORD(v17[-1].fields.objectList) = newVersion;
   *(_DWORD *)&v17[-1].fields.isLoadResources = size;
   v17[-1].fields.entryCount = crc;
-  sub_B77560((BattleServantConfConponent_o *)v17, (System_Int32_array **)keyType, v30, v31, v32, v33, v34, v35);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)v17, (int32_t)keyType, v22, v23);
 }
 
 
@@ -220,16 +152,16 @@ System_String_o *__fastcall AssetData__GetBaseName(AssetData_o *this, const Meth
       v7 = this->fields.name;
       if ( !v7 )
         goto LABEL_13;
-      LODWORD(IndexOf) = v7->fields.m_stringLength;
+      LODWORD(IndexOf) = v7->fields._stringLength;
     }
     v8 = (_DWORD)IndexOf - v5;
     if ( (int)IndexOf > (int)v5 )
     {
       IndexOf = this->fields.name;
       if ( IndexOf )
-        return System_String__Substring_44965672(IndexOf, v5, v8, 0LL);
+        return System_String__Substring_60344744(IndexOf, v5, v8, 0LL);
 LABEL_13:
-      sub_B7769C(IndexOf, v5);
+      sub_1B00F28(IndexOf, v5);
     }
   }
   return 0LL;
@@ -243,118 +175,114 @@ System_String_o *__fastcall AssetData__GetDecryptObjectText(
         const MethodInfo *method)
 {
   AssetData_o *v6; // x21
+  __int64 v7; // x1
+  __int64 v8; // x1
   struct UnityEngine_Object_array *objectList; // x22
-  __int64 v8; // x11
-  __int64 v9; // x23
-  UnityEngine_TextAsset_o *v10; // x21
+  __int64 v10; // x10
+  __int64 v11; // x23
+  UnityEngine_TextAsset_o *v12; // x21
   UnityEngine_TextAsset_c *klass; // x8
-  unsigned int v12; // w9
-  __int64 v13; // x11
-  __int64 v14; // x11
-  __int64 v15; // x8
-  UnityEngine_TextAsset_o *v16; // x0
-  UnityEngine_TextAsset_c *v17; // x13
-  __int64 v18; // x15
-  unsigned int v19; // w14
-  __int64 v20; // x15
+  unsigned int methodPtr_low; // w9
+  __int64 v15; // x11
+  __int64 v16; // x11
+  __int64 v17; // x10
+  UnityEngine_TextAsset_o **i; // x11
+  UnityEngine_TextAsset_o *v19; // x0
+  UnityEngine_TextAsset_c *v20; // x12
+  __int64 v21; // x14
+  unsigned int v22; // w13
+  __int64 v23; // x14
   System_String_o *monitor; // x20
-  CatAndMouseGame_c *v23; // x0
-  __int64 v24; // x0
+  CatAndMouseGame_c *v26; // x0
 
   v6 = this;
-  if ( (byte_438A9BD & 1) == 0 )
+  if ( (byte_48E18FF & 1) == 0 )
   {
-    sub_B775C4(&CatAndMouseGame_TypeInfo);
-    sub_B775C4(&DataAsset_TypeInfo);
-    this = (AssetData_o *)sub_B775C4(&UnityEngine_TextAsset_TypeInfo);
-    byte_438A9BD = 1;
+    sub_1B00CCC(&CatAndMouseGame_TypeInfo, name);
+    sub_1B00CCC(&DataAsset_TypeInfo, v7);
+    this = (AssetData_o *)sub_1B00CCC(&UnityEngine_TextAsset_TypeInfo, v8);
+    byte_48E18FF = 1;
   }
   objectList = v6->fields.objectList;
   if ( !objectList )
     return 0LL;
-  v8 = *(_QWORD *)&objectList->max_length;
+  v10 = *(_QWORD *)&objectList->max_length;
   if ( name )
   {
-    if ( (int)v8 >= 1 )
+    if ( (int)v10 >= 1 )
     {
-      v9 = 0LL;
+      v11 = 0LL;
       while ( 1 )
       {
-        if ( (unsigned int)v9 >= (unsigned int)v8 )
-        {
-          v24 = sub_B776C8(this);
-          sub_B77668(v24, 0LL);
-        }
-        v10 = (UnityEngine_TextAsset_o *)objectList->m_Items[v9];
-        if ( !v10 || (this = (AssetData_o *)UnityEngine_Object__get_name(objectList->m_Items[v9], 0LL)) == 0LL )
-          sub_B7769C(this, name);
-        this = (AssetData_o *)System_String__Equals_44889276((System_String_o *)this, name, 0LL);
+        if ( (unsigned int)v11 >= (unsigned int)v10 )
+          sub_1B00F30(this, name);
+        v12 = (UnityEngine_TextAsset_o *)objectList->m_Items[v11];
+        if ( !v12 || (this = (AssetData_o *)UnityEngine_Object__get_name(objectList->m_Items[v11], 0LL)) == 0LL )
+          sub_1B00F28(this, name);
+        this = (AssetData_o *)System_String__Equals_60334064((System_String_o *)this, name, 0LL);
         if ( ((unsigned __int8)this & 1) != 0 )
         {
-          klass = v10->klass;
-          v12 = *(&v10->klass->_2.bitflags2 + 1);
-          v13 = *(&UnityEngine_TextAsset_TypeInfo->_2.bitflags2 + 1);
-          if ( v12 >= (unsigned int)v13
-            && (UnityEngine_TextAsset_c *)klass->_2.typeHierarchy[v13 - 1] == UnityEngine_TextAsset_TypeInfo )
+          klass = v12->klass;
+          methodPtr_low = LOBYTE(v12->klass->vtable._0_Equals.methodPtr);
+          v15 = LOBYTE(UnityEngine_TextAsset_TypeInfo->vtable._0_Equals.methodPtr);
+          if ( methodPtr_low >= (unsigned int)v15
+            && (UnityEngine_TextAsset_c *)klass->_2.typeHierarchy[v15 - 1] == UnityEngine_TextAsset_TypeInfo )
           {
-            v16 = v10;
+            v19 = v12;
             goto LABEL_28;
           }
-          v14 = *(&DataAsset_TypeInfo->_2.bitflags2 + 1);
-          if ( v12 >= (unsigned int)v14 && (DataAsset_c *)klass->_2.typeHierarchy[v14 - 1] == DataAsset_TypeInfo )
+          v16 = LOBYTE(DataAsset_TypeInfo->vtable._0_Equals.methodPtr);
+          if ( methodPtr_low >= (unsigned int)v16
+            && (DataAsset_c *)klass->_2.typeHierarchy[v16 - 1] == DataAsset_TypeInfo )
+          {
             break;
+          }
         }
-        LODWORD(v8) = objectList->max_length;
-        if ( (int)++v9 >= (int)v8 )
+        LODWORD(v10) = objectList->max_length;
+        if ( (int)++v11 >= (int)v10 )
           return 0LL;
       }
-      monitor = (System_String_o *)v10[1].monitor;
-      v23 = CatAndMouseGame_TypeInfo;
-      if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) == 0
-        || CatAndMouseGame_TypeInfo->_2.cctor_finished )
-      {
-        return CatAndMouseGame__MouseGame3_31155692(monitor, key, 0LL);
-      }
-      goto LABEL_36;
+      monitor = (System_String_o *)v12[1].monitor;
+      v26 = CatAndMouseGame_TypeInfo;
+      if ( CatAndMouseGame_TypeInfo->_2.cctor_finished )
+        return CatAndMouseGame__MouseGame3_37145712(monitor, key, 0LL);
+      goto LABEL_34;
     }
     return 0LL;
   }
-  if ( !v8 || (int)v8 < 1 )
+  if ( !v10 || (int)v10 < 1 )
     return 0LL;
-  v15 = 0LL;
-  while ( 1 )
+  v17 = (unsigned int)*(_QWORD *)&objectList->max_length;
+  for ( i = (UnityEngine_TextAsset_o **)objectList->m_Items; ; ++i )
   {
-    v16 = (UnityEngine_TextAsset_o *)objectList->m_Items[v15];
-    if ( v16 )
+    v19 = *i;
+    if ( *i )
     {
-      v17 = v16->klass;
-      v18 = *(&UnityEngine_TextAsset_TypeInfo->_2.bitflags2 + 1);
-      v19 = *(&v16->klass->_2.bitflags2 + 1);
-      if ( v19 >= (unsigned int)v18
-        && (UnityEngine_TextAsset_c *)v17->_2.typeHierarchy[v18 - 1] == UnityEngine_TextAsset_TypeInfo )
+      v20 = v19->klass;
+      v21 = LOBYTE(UnityEngine_TextAsset_TypeInfo->vtable._0_Equals.methodPtr);
+      v22 = LOBYTE(v19->klass->vtable._0_Equals.methodPtr);
+      if ( v22 >= (unsigned int)v21
+        && (UnityEngine_TextAsset_c *)v20->_2.typeHierarchy[v21 - 1] == UnityEngine_TextAsset_TypeInfo )
       {
 LABEL_28:
-        monitor = UnityEngine_TextAsset__get_text(v16, 0LL);
-        goto LABEL_33;
+        monitor = UnityEngine_TextAsset__get_text(v19, 0LL);
+        goto LABEL_32;
       }
-      v20 = *(&DataAsset_TypeInfo->_2.bitflags2 + 1);
-      if ( v19 >= (unsigned int)v20 && (DataAsset_c *)v17->_2.typeHierarchy[v20 - 1] == DataAsset_TypeInfo )
+      v23 = LOBYTE(DataAsset_TypeInfo->vtable._0_Equals.methodPtr);
+      if ( v22 >= (unsigned int)v23 && (DataAsset_c *)v20->_2.typeHierarchy[v23 - 1] == DataAsset_TypeInfo )
         break;
     }
-    if ( ++v15 >= (int)v8 )
+    if ( !--v17 )
       return 0LL;
   }
-  monitor = (System_String_o *)v16[1].monitor;
-LABEL_33:
-  if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) == 0
-    || CatAndMouseGame_TypeInfo->_2.cctor_finished )
-  {
-    return CatAndMouseGame__MouseGame3_31155692(monitor, key, 0LL);
-  }
-  v23 = CatAndMouseGame_TypeInfo;
-LABEL_36:
-  j_il2cpp_runtime_class_init_0(v23);
-  return CatAndMouseGame__MouseGame3_31155692(monitor, key, 0LL);
+  monitor = (System_String_o *)v19[1].monitor;
+LABEL_32:
+  if ( CatAndMouseGame_TypeInfo->_2.cctor_finished )
+    return CatAndMouseGame__MouseGame3_37145712(monitor, key, 0LL);
+  v26 = CatAndMouseGame_TypeInfo;
+LABEL_34:
+  j_il2cpp_runtime_class_init_0(v26);
+  return CatAndMouseGame__MouseGame3_37145712(monitor, key, 0LL);
 }
 
 
@@ -373,8 +301,8 @@ System_String_o *__fastcall AssetData__GetExt(AssetData_o *this, const MethodInf
     return 0LL;
   v6 = this->fields.name;
   if ( !v6 )
-    sub_B7769C(IndexOf, v5);
-  if ( v6->fields.m_stringLength <= (int)IndexOf )
+    sub_1B00F28(IndexOf, v5);
+  if ( v6->fields._stringLength <= (int)IndexOf )
     return 0LL;
   else
     return System_String__Substring(this->fields.name, (int)IndexOf + 1, 0LL);
@@ -385,119 +313,128 @@ UnityEngine_Networking_UnityWebRequest_o *__fastcall AssetData__GetLoadRequest(
         AssetData_o *this,
         const MethodInfo *method)
 {
-  const MethodInfo *v4; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  const MethodInfo *v14; // x1
   System_String_o *Ext; // x20
-  NetworkManager_c *v6; // x8
+  NetworkManager_c *v16; // x8
   System_String_o *FILE_URL_SCHEME; // x19
   System_String_o *Path; // x0
-  const MethodInfo *v9; // x1
-  System_String_o *v10; // x19
-  uint32_t v11; // w0
-  int32_t v12; // w1
+  const MethodInfo *v19; // x1
+  System_String_o *v20; // x19
+  uint32_t v21; // w0
+  int32_t v22; // w1
   System_String_o *Key; // x1
-  __int64 *v14; // x8
-  __int64 *v15; // x8
+  __int64 *v24; // x8
+  __int64 *v25; // x8
 
-  if ( (byte_438A9B7 & 1) == 0 )
+  if ( (byte_48E18F9 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&StringLiteral_23313/*"txt"*/);
-    sub_B775C4(&StringLiteral_21955/*"png"*/);
-    sub_B775C4(&StringLiteral_20485/*"jpeg"*/);
-    sub_B775C4(&StringLiteral_19587/*"htm"*/);
-    sub_B775C4(&StringLiteral_17501/*"bytes"*/);
-    sub_B775C4(&StringLiteral_20486/*"jpg"*/);
-    sub_B775C4(&StringLiteral_23735/*"wav"*/);
-    sub_B775C4(&StringLiteral_23869/*"xml"*/);
-    sub_B775C4(&StringLiteral_21654/*"ogg"*/);
-    sub_B775C4(&StringLiteral_19588/*"html"*/);
-    byte_438A9B7 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_23753/*"txt"*/, v3);
+    sub_1B00CCC(&StringLiteral_22256/*"png"*/, v4);
+    sub_1B00CCC(&StringLiteral_20673/*"jpeg"*/, v5);
+    sub_1B00CCC(&StringLiteral_19718/*"htm"*/, v6);
+    sub_1B00CCC(&StringLiteral_17441/*"bytes"*/, v7);
+    sub_1B00CCC(&StringLiteral_20674/*"jpg"*/, v8);
+    sub_1B00CCC(&StringLiteral_24300/*"wav"*/, v9);
+    sub_1B00CCC(&StringLiteral_24459/*"xml"*/, v10);
+    sub_1B00CCC(&StringLiteral_21919/*"ogg"*/, v11);
+    sub_1B00CCC(&StringLiteral_19719/*"html"*/, v12);
+    byte_48E18F9 = 1;
   }
   if ( this->fields.type )
     return 0LL;
   Ext = AssetData__GetExt(this, method);
-  v6 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v16 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v6 = NetworkManager_TypeInfo;
+    v16 = NetworkManager_TypeInfo;
   }
-  FILE_URL_SCHEME = v6->static_fields->FILE_URL_SCHEME;
-  Path = AssetData__get_Path(this, v4);
-  v10 = System_String__Concat_44901936(FILE_URL_SCHEME, Path, 0LL);
+  FILE_URL_SCHEME = v16->static_fields->FILE_URL_SCHEME;
+  Path = AssetData__get_Path(this, v14);
+  v20 = System_String__Concat_60325748(FILE_URL_SCHEME, Path, 0LL);
   if ( !Ext )
   {
-    Key = AssetData__get_Key(this, v9);
-    return UnityWebRequestDecryptFileWithCrc__CreateRequest(v10, Key, 0LL);
+    Key = AssetData__get_Key(this, v19);
+    return UnityWebRequestDecryptFileWithCrc__CreateRequest(v20, Key, 0LL);
   }
-  v11 = PrivateImplementationDetails___ComputeStringHash_28503548(Ext, 0LL);
-  if ( v11 <= 0xA535A9EF )
+  v21 = PrivateImplementationDetails___ComputeStringHash(Ext, 0LL);
+  if ( v21 <= 0xA535A9EF )
   {
-    if ( v11 <= 0x13E2BD39 )
+    if ( v21 <= 0x13E2BD39 )
     {
-      if ( v11 != 126868124 )
+      if ( v21 != 126868124 )
       {
-        if ( v11 == 333626681 && System_String__op_Equality(Ext, (System_String_o *)StringLiteral_23735/*"wav"*/, 0LL) )
+        if ( v21 == 333626681 && System_String__op_Equality(Ext, (System_String_o *)StringLiteral_24300/*"wav"*/, 0LL) )
         {
-          v12 = 20;
-          return UnityEngine_Networking_UnityWebRequestMultimedia__GetAudioClip(v10, v12, 0LL);
+          v22 = 20;
+          return UnityEngine_Networking_UnityWebRequestMultimedia__GetAudioClip(v20, v22, 0LL);
         }
         return 0LL;
       }
-      v15 = &StringLiteral_19587/*"htm"*/;
-      goto LABEL_38;
+      v25 = &StringLiteral_19718/*"htm"*/;
+      goto LABEL_37;
     }
-    switch ( v11 )
+    switch ( v21 )
     {
       case 0xA535A9EF:
-        v15 = &StringLiteral_23313/*"txt"*/;
+        v25 = &StringLiteral_23753/*"txt"*/;
         break;
       case 0x65B1D004u:
-        v15 = &StringLiteral_17501/*"bytes"*/;
+        v25 = &StringLiteral_17441/*"bytes"*/;
         break;
       case 0x6835C29Cu:
-        v14 = &StringLiteral_21955/*"png"*/;
-        goto LABEL_32;
+        v24 = &StringLiteral_22256/*"png"*/;
+        goto LABEL_31;
       default:
         return 0LL;
     }
-LABEL_38:
-    if ( !System_String__op_Equality(Ext, (System_String_o *)*v15, 0LL) )
+LABEL_37:
+    if ( !System_String__op_Equality(Ext, (System_String_o *)*v25, 0LL) )
       return 0LL;
-    return UnityEngine_Networking_UnityWebRequest__Get(v10, 0LL);
+    return UnityEngine_Networking_UnityWebRequest__Get(v20, 0LL);
   }
-  if ( v11 <= 0xCC3CFC94 )
+  if ( v21 <= 0xCC3CFC94 )
   {
-    if ( v11 != -1092644061 )
+    if ( v21 != -1092644061 )
     {
-      if ( v11 == -868418412 && System_String__op_Equality(Ext, (System_String_o *)StringLiteral_21654/*"ogg"*/, 0LL) )
+      if ( v21 == -868418412 && System_String__op_Equality(Ext, (System_String_o *)StringLiteral_21919/*"ogg"*/, 0LL) )
       {
-        v12 = 14;
-        return UnityEngine_Networking_UnityWebRequestMultimedia__GetAudioClip(v10, v12, 0LL);
+        v22 = 14;
+        return UnityEngine_Networking_UnityWebRequestMultimedia__GetAudioClip(v20, v22, 0LL);
       }
       return 0LL;
     }
-    v14 = &StringLiteral_20485/*"jpeg"*/;
-    goto LABEL_32;
+    v24 = &StringLiteral_20673/*"jpeg"*/;
+    goto LABEL_31;
   }
-  if ( v11 == -680155184 )
+  if ( v21 == -680155184 )
   {
-    v15 = &StringLiteral_19588/*"html"*/;
-    goto LABEL_38;
+    v25 = &StringLiteral_19719/*"html"*/;
+    goto LABEL_37;
   }
-  if ( v11 == -630165834 )
+  if ( v21 == -630165834 )
   {
-    v15 = &StringLiteral_23869/*"xml"*/;
-    goto LABEL_38;
+    v25 = &StringLiteral_24459/*"xml"*/;
+    goto LABEL_37;
   }
-  if ( v11 != -624468176 )
+  if ( v21 != -624468176 )
     return 0LL;
-  v14 = &StringLiteral_20486/*"jpg"*/;
-LABEL_32:
-  if ( !System_String__op_Equality(Ext, (System_String_o *)*v14, 0LL) )
+  v24 = &StringLiteral_20674/*"jpg"*/;
+LABEL_31:
+  if ( !System_String__op_Equality(Ext, (System_String_o *)*v24, 0LL) )
     return 0LL;
-  return UnityEngine_Networking_UnityWebRequestTexture__GetTexture(v10, 0LL);
+  return UnityEngine_Networking_UnityWebRequestTexture__GetTexture(v20, 0LL);
 }
 
 
@@ -505,7 +442,6 @@ UnityEngine_Object_o *__fastcall AssetData__GetObject(AssetData_o *this, const M
 {
   struct UnityEngine_Object_array *objectList; // x8
   __int64 v3; // x9
-  __int64 v5; // x0
 
   objectList = this->fields.objectList;
   if ( !objectList )
@@ -514,10 +450,7 @@ UnityEngine_Object_o *__fastcall AssetData__GetObject(AssetData_o *this, const M
   if ( !v3 )
     return 0LL;
   if ( !(_DWORD)v3 )
-  {
-    v5 = sub_B776C8(this);
-    sub_B77668(v5, 0LL);
-  }
+    sub_1B00F30(this, method);
   return objectList->m_Items[0];
 }
 
@@ -528,196 +461,214 @@ UnityEngine_Object_array *__fastcall AssetData__GetObjectList(AssetData_o *this,
 }
 
 
-UnityEngine_Texture2D_array *__fastcall AssetData__GetObjectList_Texture2D_(
-        AssetData_o *this,
-        const MethodInfo_1C5FF90 *method)
+System_Object_array *__fastcall AssetData__GetObjectList_object_(AssetData_o *this, const MethodInfo_2D45AE4 *method)
 {
-  struct UnityEngine_Object_array *objectList; // x24
-  __int64 v3; // x8
-  AssetData_o *v4; // x20
-  unsigned __int64 v6; // x25
+  const MethodInfo_2D45AE4 *v2; // x19
+  AssetData_o *v3; // x20
+  struct UnityEngine_Object_array *objectList; // x23
+  __int64 v5; // x8
+  unsigned __int64 v6; // x24
   unsigned int v7; // w21
-  UnityEngine_Object_o *v8; // x23
-  Il2CppClass *_0_T; // x22
-  Il2CppClass *_1_T; // x22
-  __int64 v11; // x1
-  struct UnityEngine_Object_array *v12; // x23
-  __int64 v13; // x8
-  UnityEngine_Texture2D_array *v14; // x20
-  il2cpp_array_size_t v15; // w26
+  UnityEngine_Object_o *v8; // x22
+  __int64 _0_T; // x1
+  __int64 _1_T; // x0
+  struct UnityEngine_Object_array *v11; // x23
+  __int64 v12; // x8
+  System_Object_array *v13; // x20
+  il2cpp_array_size_t v14; // w26
   unsigned __int64 i; // x24
-  UnityEngine_Object_o *v17; // x21
-  Il2CppClass *v18; // x22
-  Il2CppClass *v19; // x22
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
-  AssetData_o *v26; // x22
-  Il2CppClass *v27; // x21
-  System_Int32_array **v28; // x1
-  Il2CppClass **v29; // x0
-  __int64 v30; // x0
-  Il2CppObject **v31; // x0
-  System_String_o *v32; // x1
-  System_String_o *v33; // x2
-  const MethodInfo_1C60178 *v34; // x3
+  UnityEngine_Object_o *v16; // x21
+  __int64 v17; // x1
+  __int64 v18; // x1
+  int32_t v19; // w2
+  int32_t v20; // w3
+  AssetData_o *v21; // x22
+  AssetData_o *v22; // x21
+  Il2CppClass **v23; // x0
+  Il2CppObject **v24; // x0
+  System_String_o *v25; // x1
+  System_String_o *v26; // x2
+  const MethodInfo_2D45CCC *v27; // x3
 
-  objectList = this->fields.objectList;
+  v2 = method;
+  v3 = this;
+  if ( !method->rgctx_data )
+    this = (AssetData_o *)sub_1B52C04(method);
+  objectList = v3->fields.objectList;
   if ( !objectList )
     return 0LL;
-  v3 = *(_QWORD *)&objectList->max_length;
-  if ( (int)v3 < 1 )
+  v5 = *(_QWORD *)&objectList->max_length;
+  if ( (int)v5 < 1 )
     return 0LL;
-  v4 = this;
   v6 = 0LL;
   v7 = 0;
   do
   {
-    if ( v6 >= (unsigned int)v3 )
-    {
-LABEL_35:
-      v30 = sub_B776C8(this);
-      sub_B77668(v30, 0LL);
-    }
+    if ( v6 >= (unsigned int)v5 )
+LABEL_37:
+      sub_1B00F30(this, method);
     v8 = objectList->m_Items[v6];
-    _0_T = method->rgctx_data->_0_T;
-    if ( (BYTE2(_0_T->vtable[0].methodPtr) & 1) == 0 )
-      sub_B0F2C4(method->rgctx_data->_0_T);
-    this = (AssetData_o *)sub_B77684(v8, _0_T);
-    LODWORD(v3) = objectList->max_length;
+    _0_T = (__int64)v2->rgctx_data->_0_T;
+    if ( (*(_BYTE *)(_0_T + 309) & 1) == 0 )
+      _0_T = sub_1B52BA8(v2->rgctx_data->_0_T);
+    this = (AssetData_o *)sub_1B00E08(v8, _0_T);
+    LODWORD(v5) = objectList->max_length;
     ++v6;
     if ( this )
       ++v7;
   }
-  while ( (__int64)v6 < (int)v3 );
+  while ( (__int64)v6 < (int)v5 );
   if ( !v7 )
     return 0LL;
-  _1_T = method->rgctx_data->_1_T__;
-  if ( (BYTE2(_1_T->vtable[0].methodPtr) & 1) == 0 )
-    sub_B0F2C4(method->rgctx_data->_1_T__);
-  this = (AssetData_o *)sub_B775DC(_1_T, v7);
-  v12 = v4->fields.objectList;
-  if ( !v12 )
-LABEL_36:
-    sub_B7769C(this, v11);
-  v13 = *(_QWORD *)&v12->max_length;
-  v14 = (UnityEngine_Texture2D_array *)this;
-  if ( (int)v13 >= 1 )
+  _1_T = (__int64)v2->rgctx_data->_1_T__;
+  if ( (*(_BYTE *)(_1_T + 309) & 1) == 0 )
+    _1_T = sub_1B52BA8(_1_T);
+  this = (AssetData_o *)sub_1B00D74(_1_T, v7);
+  v11 = v3->fields.objectList;
+  if ( !v11 )
+LABEL_38:
+    sub_1B00F28(this, method);
+  v12 = *(_QWORD *)&v11->max_length;
+  v13 = (System_Object_array *)this;
+  if ( (int)v12 >= 1 )
   {
-    v15 = 0;
-    for ( i = 0LL; (__int64)i < (int)v13; ++i )
+    v14 = 0;
+    for ( i = 0LL; (__int64)i < (int)v12; ++i )
     {
-      if ( i >= (unsigned int)v13 )
-        goto LABEL_35;
-      v17 = v12->m_Items[i];
-      v18 = method->rgctx_data->_0_T;
-      if ( (BYTE2(v18->vtable[0].methodPtr) & 1) == 0 )
-        sub_B0F2C4(method->rgctx_data->_0_T);
-      this = (AssetData_o *)sub_B77684(v17, v18);
+      if ( i >= (unsigned int)v12 )
+        goto LABEL_37;
+      v16 = v11->m_Items[i];
+      v17 = (__int64)v2->rgctx_data->_0_T;
+      if ( (*(_BYTE *)(v17 + 309) & 1) == 0 )
+        v17 = sub_1B52BA8(v2->rgctx_data->_0_T);
+      this = (AssetData_o *)sub_1B00E08(v16, v17);
       if ( this )
       {
-        if ( !v14 )
-          goto LABEL_36;
-        v19 = method->rgctx_data->_0_T;
-        if ( (BYTE2(v19->vtable[0].methodPtr) & 1) == 0 )
-          sub_B0F2C4(method->rgctx_data->_0_T);
-        this = (AssetData_o *)sub_B77684(v17, v19);
-        v26 = this;
-        v27 = method->rgctx_data->_0_T;
-        if ( (BYTE2(v27->vtable[0].methodPtr) & 1) == 0 )
-          this = (AssetData_o *)sub_B0F2C4(method->rgctx_data->_0_T);
-        if ( v26 )
+        if ( !v13 )
+          goto LABEL_38;
+        v18 = (__int64)v2->rgctx_data->_0_T;
+        if ( (*(_BYTE *)(v18 + 309) & 1) == 0 )
+          v18 = sub_1B52BA8(v2->rgctx_data->_0_T);
+        this = (AssetData_o *)sub_1B00E08(v16, v18);
+        v21 = this;
+        v22 = (AssetData_o *)v2->rgctx_data->_0_T;
+        if ( (v22[3].fields.newVersion & 0x100) == 0 )
         {
-          this = (AssetData_o *)sub_B77684(v26, v27);
-          v28 = (System_Int32_array **)this;
+          this = (AssetData_o *)sub_1B52BA8(v2->rgctx_data->_0_T);
+          v22 = this;
+        }
+        if ( v21 )
+        {
+          this = (AssetData_o *)sub_1B00E08(v21, v22);
+          method = (const MethodInfo_2D45AE4 *)this;
           if ( !this )
           {
-            sub_B77990(v26);
-            return (UnityEngine_Texture2D_array *)AssetManager__TryGetAssetObject_object_(v31, v32, v33, v34);
+            sub_1B011E8(v21);
+            return (System_Object_array *)AssetManager__TryGetAssetObject_object_(v24, v25, v26, v27);
           }
         }
         else
         {
-          v28 = 0LL;
+          method = 0LL;
         }
-        if ( v15 >= v14->max_length )
-          goto LABEL_35;
-        v29 = &v14->obj.klass + (int)v15;
-        v29[4] = (Il2CppClass *)v28;
-        sub_B77560((BattleServantConfConponent_o *)(v29 + 4), v28, v20, v21, v22, v23, v24, v25);
-        ++v15;
+        if ( v14 >= v13->max_length )
+          goto LABEL_37;
+        v23 = &v13->obj.klass + (int)v14;
+        v23[4] = (Il2CppClass *)method;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)(v23 + 4), (int32_t)method, v19, v20);
+        ++v14;
       }
-      LODWORD(v13) = v12->max_length;
+      LODWORD(v12) = v11->max_length;
     }
   }
-  return v14;
+  return v13;
 }
 
 
 System_String_array *__fastcall AssetData__GetObjectNameList(AssetData_o *this, const MethodInfo *method)
 {
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v3; // x19
-  System_String_o *name; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
   __int64 v5; // x1
+  System_Collections_Generic_List_object__o *v6; // x19
+  UnityEngine_Object_o *name; // x0
+  __int64 v8; // x1
   struct UnityEngine_Object_array *objectList; // x20
   int max_length; // w8
-  __int64 v8; // x21
-  __int64 v10; // x0
+  __int64 v11; // x21
+  int32_t v12; // w2
+  int32_t v13; // w3
+  struct System_Object_array *items; // x8
+  _QWORD *v15; // x9
+  __int64 size; // x10
+  UnityEngine_Object_o *v17; // x1
+  Il2CppClass **v18; // x0
 
-  if ( (byte_438A9BC & 1) == 0 )
+  if ( (byte_48E18FE & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_string__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__ToArray__);
-    sub_B775C4(&Method_System_Collections_Generic_List_string___ctor___69407008);
-    sub_B775C4(&System_Collections_Generic_List_string__TypeInfo);
-    byte_438A9BC = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__Add__, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__ToArray__, v3);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string___ctor__, v4);
+    sub_1B00CCC(&System_Collections_Generic_List_string__TypeInfo, v5);
+    byte_48E18FE = 1;
   }
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_string__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v3,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_string___ctor___69407008);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_string__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v6,
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_string___ctor__);
   objectList = this->fields.objectList;
   if ( objectList )
   {
     max_length = objectList->max_length;
     if ( max_length >= 1 )
     {
-      v8 = 0LL;
+      v11 = 0LL;
       while ( 1 )
       {
-        if ( (unsigned int)v8 >= max_length )
-        {
-          v10 = sub_B776C8(name);
-          sub_B77668(v10, 0LL);
-        }
-        name = (System_String_o *)objectList->m_Items[v8];
+        if ( (unsigned int)v11 >= max_length )
+          sub_1B00F30(name, v8);
+        name = objectList->m_Items[v11];
         if ( !name )
           break;
-        name = UnityEngine_Object__get_name((UnityEngine_Object_o *)name, 0LL);
-        if ( !v3 )
+        name = (UnityEngine_Object_o *)UnityEngine_Object__get_name(name, 0LL);
+        if ( !v6 )
           break;
-        System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-          v3,
-          (EventMissionProgressRequest_Argument_ProgressData_o *)name,
-          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_string__Add__);
+        items = v6->fields._items;
+        v15 = Method_System_Collections_Generic_List_string__Add__;
+        ++v6->fields._version;
+        if ( !items )
+          break;
+        size = v6->fields._size;
+        v17 = name;
+        if ( (unsigned int)size >= items->max_length )
+        {
+          System_Collections_Generic_List_object___AddWithResize(
+            v6,
+            (Il2CppObject *)name,
+            *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+        }
+        else
+        {
+          v18 = &items->obj.klass + size;
+          v6->fields._size = size + 1;
+          v18[4] = (Il2CppClass *)v17;
+          sub_1B00C70((ServantStatusBattleListViewItem_o *)(v18 + 4), (int32_t)v17, v12, v13);
+        }
         max_length = objectList->max_length;
-        if ( (int)++v8 >= max_length )
-          return (System_String_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
-                                          (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v3,
-                                          (const MethodInfo_30553E4 *)Method_System_Collections_Generic_List_string__ToArray__);
+        if ( (int)++v11 >= max_length )
+          return (System_String_array *)System_Collections_Generic_List_object___ToArray(
+                                          v6,
+                                          (const MethodInfo_33C3528 *)Method_System_Collections_Generic_List_string__ToArray__);
       }
-LABEL_13:
-      sub_B7769C(name, v5);
+LABEL_17:
+      sub_1B00F28(name, v8);
     }
   }
-  if ( !v3 )
-    goto LABEL_13;
-  return (System_String_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
-                                  (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v3,
-                                  (const MethodInfo_30553E4 *)Method_System_Collections_Generic_List_string__ToArray__);
+  if ( !v6 )
+    goto LABEL_17;
+  return (System_String_array *)System_Collections_Generic_List_object___ToArray(
+                                  v6,
+                                  (const MethodInfo_33C3528 *)Method_System_Collections_Generic_List_string__ToArray__);
 }
 
 
@@ -727,104 +678,105 @@ System_String_o *__fastcall AssetData__GetObjectText(
         const MethodInfo *method)
 {
   AssetData_o *v4; // x20
+  __int64 v5; // x1
   struct UnityEngine_Object_array *objectList; // x21
-  __int64 v6; // x11
-  __int64 v7; // x22
-  System_String_o **v8; // x20
-  System_String_o *v9; // x8
-  unsigned int v10; // w9
-  __int64 v11; // x11
-  __int64 v12; // x11
+  __int64 v7; // x10
+  __int64 v8; // x22
+  System_String_o **v9; // x20
+  System_String_o *v10; // x8
+  unsigned int stringLength_low; // w9
+  __int64 methodPtr_low; // x11
+  __int64 v13; // x11
   System_String_o *result; // x0
-  __int64 v14; // x8
-  System_String_o **v15; // x0
-  System_String_o *v16; // x13
-  __int64 v17; // x15
-  unsigned int v18; // w14
-  __int64 v19; // x15
-  __int64 v20; // x0
+  __int64 v15; // x10
+  System_String_o ***i; // x11
+  System_String_o **v17; // x0
+  System_String_o *v18; // x12
+  __int64 v19; // x14
+  unsigned int v20; // w13
+  __int64 v21; // x14
 
   v4 = this;
-  if ( (byte_438A9BE & 1) == 0 )
+  if ( (byte_48E1900 & 1) == 0 )
   {
-    sub_B775C4(&DataAsset_TypeInfo);
-    this = (AssetData_o *)sub_B775C4(&UnityEngine_TextAsset_TypeInfo);
-    byte_438A9BE = 1;
+    sub_1B00CCC(&DataAsset_TypeInfo, name);
+    this = (AssetData_o *)sub_1B00CCC(&UnityEngine_TextAsset_TypeInfo, v5);
+    byte_48E1900 = 1;
   }
   objectList = v4->fields.objectList;
   if ( !objectList )
     return 0LL;
-  v6 = *(_QWORD *)&objectList->max_length;
+  v7 = *(_QWORD *)&objectList->max_length;
   if ( name )
   {
-    if ( (int)v6 >= 1 )
+    if ( (int)v7 >= 1 )
     {
-      v7 = 0LL;
+      v8 = 0LL;
       while ( 1 )
       {
-        if ( (unsigned int)v7 >= (unsigned int)v6 )
-        {
-          v20 = sub_B776C8(this);
-          sub_B77668(v20, 0LL);
-        }
-        v8 = (System_String_o **)objectList->m_Items[v7];
-        if ( !v8 || (this = (AssetData_o *)UnityEngine_Object__get_name(objectList->m_Items[v7], 0LL)) == 0LL )
-          sub_B7769C(this, name);
-        this = (AssetData_o *)System_String__Equals_44889276((System_String_o *)this, name, 0LL);
+        if ( (unsigned int)v8 >= (unsigned int)v7 )
+          sub_1B00F30(this, name);
+        v9 = (System_String_o **)objectList->m_Items[v8];
+        if ( !v9 || (this = (AssetData_o *)UnityEngine_Object__get_name(objectList->m_Items[v8], 0LL)) == 0LL )
+          sub_1B00F28(this, name);
+        this = (AssetData_o *)System_String__Equals_60334064((System_String_o *)this, name, 0LL);
         if ( ((unsigned __int8)this & 1) != 0 )
         {
-          v9 = *v8;
-          v10 = BYTE4((*v8)[12].monitor);
-          v11 = *(&UnityEngine_TextAsset_TypeInfo->_2.bitflags2 + 1);
-          if ( v10 >= (unsigned int)v11
-            && *((UnityEngine_TextAsset_c **)v9[8].monitor + v11 - 1) == UnityEngine_TextAsset_TypeInfo )
+          v10 = *v9;
+          stringLength_low = LOBYTE((*v9)[12].fields._stringLength);
+          methodPtr_low = LOBYTE(UnityEngine_TextAsset_TypeInfo->vtable._0_Equals.methodPtr);
+          if ( stringLength_low >= (unsigned int)methodPtr_low
+            && *((UnityEngine_TextAsset_c **)v10[8].monitor + methodPtr_low - 1) == UnityEngine_TextAsset_TypeInfo )
           {
-            v15 = v8;
-            return UnityEngine_TextAsset__get_text((UnityEngine_TextAsset_o *)v15, 0LL);
+            v17 = v9;
+            return UnityEngine_TextAsset__get_text((UnityEngine_TextAsset_o *)v17, 0LL);
           }
-          v12 = *(&DataAsset_TypeInfo->_2.bitflags2 + 1);
-          if ( v10 >= (unsigned int)v12 && *((DataAsset_c **)v9[8].monitor + v12 - 1) == DataAsset_TypeInfo )
+          v13 = LOBYTE(DataAsset_TypeInfo->vtable._0_Equals.methodPtr);
+          if ( stringLength_low >= (unsigned int)v13
+            && *((DataAsset_c **)v10[8].monitor + v13 - 1) == DataAsset_TypeInfo )
+          {
             break;
+          }
         }
-        LODWORD(v6) = objectList->max_length;
-        if ( (int)++v7 >= (int)v6 )
+        LODWORD(v7) = objectList->max_length;
+        if ( (int)++v8 >= (int)v7 )
           return 0LL;
       }
-      return v8[4];
+      return v9[4];
     }
     return 0LL;
   }
   result = 0LL;
-  if ( v6 && (int)v6 >= 1 )
+  if ( v7 && (int)v7 >= 1 )
   {
-    v14 = 0LL;
-    while ( 1 )
+    v15 = (unsigned int)*(_QWORD *)&objectList->max_length;
+    for ( i = (System_String_o ***)objectList->m_Items; ; ++i )
     {
-      v15 = (System_String_o **)objectList->m_Items[v14];
-      if ( v15 )
+      v17 = *i;
+      if ( *i )
       {
-        v16 = *v15;
-        v17 = *(&UnityEngine_TextAsset_TypeInfo->_2.bitflags2 + 1);
-        v18 = BYTE4((*v15)[12].monitor);
-        if ( v18 >= (unsigned int)v17
-          && *((UnityEngine_TextAsset_c **)v16[8].monitor + v17 - 1) == UnityEngine_TextAsset_TypeInfo )
+        v18 = *v17;
+        v19 = LOBYTE(UnityEngine_TextAsset_TypeInfo->vtable._0_Equals.methodPtr);
+        v20 = LOBYTE((*v17)[12].fields._stringLength);
+        if ( v20 >= (unsigned int)v19
+          && *((UnityEngine_TextAsset_c **)v18[8].monitor + v19 - 1) == UnityEngine_TextAsset_TypeInfo )
         {
-          return UnityEngine_TextAsset__get_text((UnityEngine_TextAsset_o *)v15, 0LL);
+          return UnityEngine_TextAsset__get_text((UnityEngine_TextAsset_o *)v17, 0LL);
         }
-        v19 = *(&DataAsset_TypeInfo->_2.bitflags2 + 1);
-        if ( v18 >= (unsigned int)v19 && *((DataAsset_c **)v16[8].monitor + v19 - 1) == DataAsset_TypeInfo )
+        v21 = LOBYTE(DataAsset_TypeInfo->vtable._0_Equals.methodPtr);
+        if ( v20 >= (unsigned int)v21 && *((DataAsset_c **)v18[8].monitor + v21 - 1) == DataAsset_TypeInfo )
           break;
       }
-      if ( ++v14 >= (int)v6 )
+      if ( !--v15 )
         return 0LL;
     }
-    return v15[4];
+    return v17[4];
   }
   return result;
 }
 
 
-UnityEngine_Object_o *__fastcall AssetData__GetObject_24386524(
+UnityEngine_Object_o *__fastcall AssetData__GetObject_36567772(
         AssetData_o *this,
         System_String_o *name,
         const MethodInfo *method)
@@ -833,7 +785,6 @@ UnityEngine_Object_o *__fastcall AssetData__GetObject_24386524(
   __int64 v4; // x8
   __int64 v6; // x22
   UnityEngine_Object_o *v7; // x20
-  __int64 v9; // x0
 
   objectList = this->fields.objectList;
   if ( !objectList )
@@ -848,8 +799,8 @@ UnityEngine_Object_o *__fastcall AssetData__GetObject_24386524(
       {
         v7 = objectList->m_Items[v6];
         if ( !v7 || (this = (AssetData_o *)UnityEngine_Object__get_name(objectList->m_Items[v6], 0LL)) == 0LL )
-          sub_B7769C(this, name);
-        this = (AssetData_o *)System_String__Equals_44889276((System_String_o *)this, name, 0LL);
+          sub_1B00F28(this, name);
+        this = (AssetData_o *)System_String__Equals_60334064((System_String_o *)this, name, 0LL);
         if ( ((unsigned __int8)this & 1) != 0 )
           return v7;
         LODWORD(v4) = objectList->max_length;
@@ -857,8 +808,7 @@ UnityEngine_Object_o *__fastcall AssetData__GetObject_24386524(
           return 0LL;
       }
 LABEL_17:
-      v9 = sub_B776C8(this);
-      sub_B77668(v9, 0LL);
+      sub_1B00F30(this, name);
     }
     return 0LL;
   }
@@ -870,59 +820,57 @@ LABEL_17:
 }
 
 
-UnityEngine_Texture2D_o *__fastcall AssetData__GetObject_Texture2D_(
-        AssetData_o *this,
-        const MethodInfo_1C5FCD8 *method)
+Il2CppObject *__fastcall AssetData__GetObject_object_(AssetData_o *this, const MethodInfo_2D45824 *method)
 {
-  struct UnityEngine_Object_array *objectList; // x22
-  __int64 v3; // x8
-  unsigned __int64 v5; // x23
-  UnityEngine_Object_o *v6; // x20
-  Il2CppClass *_0_T; // x21
-  Il2CppClass *v8; // x21
-  __int64 v9; // x20
-  Il2CppClass *v10; // x19
-  UnityEngine_Texture2D_o *result; // x0
-  __int64 v12; // x0
+  AssetData_o *v3; // x20
+  struct UnityEngine_Object_array *objectList; // x21
+  __int64 v5; // x8
+  unsigned __int64 v6; // x22
+  UnityEngine_Object_o *v7; // x20
+  Il2CppClass *_0_T; // x1
+  Il2CppClass *v9; // x1
+  __int64 v10; // x20
+  Il2CppClass *v11; // x19
+  Il2CppObject *result; // x0
 
-  objectList = this->fields.objectList;
+  v3 = this;
+  if ( !method->rgctx_data )
+    this = (AssetData_o *)sub_1B52C04(method);
+  objectList = v3->fields.objectList;
   if ( objectList )
   {
-    v3 = *(_QWORD *)&objectList->max_length;
-    if ( (int)v3 >= 1 )
+    v5 = *(_QWORD *)&objectList->max_length;
+    if ( (int)v5 >= 1 )
     {
-      v5 = 0LL;
+      v6 = 0LL;
       while ( 1 )
       {
-        if ( v5 >= (unsigned int)v3 )
-        {
-          v12 = sub_B776C8(this);
-          sub_B77668(v12, 0LL);
-        }
-        v6 = objectList->m_Items[v5];
+        if ( v6 >= (unsigned int)v5 )
+          sub_1B00F30(this, method);
+        v7 = objectList->m_Items[v6];
         _0_T = method->rgctx_data->_0_T;
-        if ( (BYTE2(_0_T->vtable[0].methodPtr) & 1) == 0 )
-          sub_B0F2C4(method->rgctx_data->_0_T);
-        this = (AssetData_o *)sub_B77684(v6, _0_T);
+        if ( (BYTE5(_0_T->vtable[0].methodPtr) & 1) == 0 )
+          _0_T = (Il2CppClass *)sub_1B52BA8(method->rgctx_data->_0_T);
+        this = (AssetData_o *)sub_1B00E08(v7, _0_T);
         if ( this )
           break;
-        LODWORD(v3) = objectList->max_length;
-        if ( (__int64)++v5 >= (int)v3 )
+        LODWORD(v5) = objectList->max_length;
+        if ( (__int64)++v6 >= (int)v5 )
           return 0LL;
       }
-      v8 = method->rgctx_data->_0_T;
-      if ( (BYTE2(v8->vtable[0].methodPtr) & 1) == 0 )
-        sub_B0F2C4(method->rgctx_data->_0_T);
-      v9 = sub_B77684(v6, v8);
-      v10 = method->rgctx_data->_0_T;
-      if ( (BYTE2(v10->vtable[0].methodPtr) & 1) == 0 )
-        sub_B0F2C4(v10);
-      if ( v9 )
+      v9 = method->rgctx_data->_0_T;
+      if ( (BYTE5(v9->vtable[0].methodPtr) & 1) == 0 )
+        v9 = (Il2CppClass *)sub_1B52BA8(method->rgctx_data->_0_T);
+      v10 = sub_1B00E08(v7, v9);
+      v11 = method->rgctx_data->_0_T;
+      if ( (BYTE5(v11->vtable[0].methodPtr) & 1) == 0 )
+        v11 = (Il2CppClass *)sub_1B52BA8(v11);
+      if ( v10 )
       {
-        result = (UnityEngine_Texture2D_o *)sub_B77684(v9, v10);
+        result = (Il2CppObject *)sub_1B00E08(v10, v11);
         if ( result )
           return result;
-        sub_B77990(v9);
+        sub_1B011E8(v10);
       }
     }
   }
@@ -930,104 +878,100 @@ UnityEngine_Texture2D_o *__fastcall AssetData__GetObject_Texture2D_(
 }
 
 
-WarBoardWaitTimeSetting_o *__fastcall AssetData__GetObject_WarBoardWaitTimeSetting_(
+Il2CppObject *__fastcall AssetData__GetObject_object__47470892(
         AssetData_o *this,
         System_String_o *name,
-        const MethodInfo_1C5FDDC *method)
+        const MethodInfo_2D4592C *method)
 {
-  struct UnityEngine_Object_array *objectList; // x23
-  __int64 v4; // x8
-  __int64 v7; // x24
-  UnityEngine_Object_o *v8; // x21
-  Il2CppClass *_0_T; // x22
-  unsigned __int64 v10; // x22
-  UnityEngine_Object_o *v11; // x20
-  Il2CppClass *v12; // x21
-  Il2CppClass *v13; // x20
-  UnityEngine_Object_o *v14; // x0
-  Il2CppClass *v15; // x1
-  Il2CppClass *v16; // x21
-  __int64 v17; // x20
-  Il2CppClass *v18; // x19
-  WarBoardWaitTimeSetting_o *result; // x0
-  __int64 v20; // x0
+  AssetData_o *v5; // x21
+  struct UnityEngine_Object_array *objectList; // x22
+  __int64 v7; // x8
+  __int64 v8; // x23
+  UnityEngine_Object_o *v9; // x21
+  Il2CppClass *_0_T; // x1
+  unsigned __int64 v11; // x21
+  UnityEngine_Object_o *v12; // x20
+  Il2CppClass *v13; // x1
+  Il2CppClass *v14; // x1
+  UnityEngine_Object_o *v15; // x0
+  __int64 v16; // x20
+  Il2CppClass *v17; // x19
+  Il2CppObject *result; // x0
 
-  objectList = this->fields.objectList;
+  v5 = this;
+  if ( !method->rgctx_data )
+    this = (AssetData_o *)sub_1B52C04(method);
+  objectList = v5->fields.objectList;
   if ( !objectList )
     return 0LL;
-  v4 = *(_QWORD *)&objectList->max_length;
+  v7 = *(_QWORD *)&objectList->max_length;
   if ( name )
   {
-    if ( (int)v4 < 1 )
+    if ( (int)v7 < 1 )
       return 0LL;
-    v7 = 0LL;
+    v8 = 0LL;
     while ( 1 )
     {
-      if ( (unsigned int)v7 >= (unsigned int)v4 )
-        goto LABEL_36;
-      v8 = objectList->m_Items[v7];
-      if ( !v8 || (this = (AssetData_o *)UnityEngine_Object__get_name(objectList->m_Items[v7], 0LL)) == 0LL )
-        sub_B7769C(this, name);
-      this = (AssetData_o *)System_String__Equals_44889276((System_String_o *)this, name, 0LL);
+      if ( (unsigned int)v8 >= (unsigned int)v7 )
+        goto LABEL_38;
+      v9 = objectList->m_Items[v8];
+      if ( !v9 || (this = (AssetData_o *)UnityEngine_Object__get_name(objectList->m_Items[v8], 0LL)) == 0LL )
+        sub_1B00F28(this, name);
+      this = (AssetData_o *)System_String__Equals_60334064((System_String_o *)this, name, 0LL);
       if ( ((unsigned __int8)this & 1) != 0 )
       {
         _0_T = method->rgctx_data->_0_T;
-        if ( (BYTE2(_0_T->vtable[0].methodPtr) & 1) == 0 )
-          sub_B0F2C4(method->rgctx_data->_0_T);
-        this = (AssetData_o *)sub_B77684(v8, _0_T);
+        if ( (BYTE5(_0_T->vtable[0].methodPtr) & 1) == 0 )
+          _0_T = (Il2CppClass *)sub_1B52BA8(method->rgctx_data->_0_T);
+        this = (AssetData_o *)sub_1B00E08(v9, _0_T);
         if ( this )
           break;
       }
-      LODWORD(v4) = objectList->max_length;
-      if ( (int)++v7 >= (int)v4 )
+      LODWORD(v7) = objectList->max_length;
+      if ( (int)++v8 >= (int)v7 )
         return 0LL;
     }
-    v13 = method->rgctx_data->_0_T;
-    if ( (BYTE2(v13->vtable[0].methodPtr) & 1) == 0 )
-      sub_B0F2C4(method->rgctx_data->_0_T);
-    v14 = v8;
-    v15 = v13;
+    v14 = method->rgctx_data->_0_T;
+    if ( (BYTE5(v14->vtable[0].methodPtr) & 1) == 0 )
+      v14 = (Il2CppClass *)sub_1B52BA8(method->rgctx_data->_0_T);
+    v15 = v9;
   }
   else
   {
-    if ( (int)v4 < 1 )
+    if ( (int)v7 < 1 )
       return 0LL;
-    v10 = 0LL;
+    v11 = 0LL;
     while ( 1 )
     {
-      if ( v10 >= (unsigned int)v4 )
-      {
-LABEL_36:
-        v20 = sub_B776C8(this);
-        sub_B77668(v20, 0LL);
-      }
-      v11 = objectList->m_Items[v10];
-      v12 = method->rgctx_data->_0_T;
-      if ( (BYTE2(v12->vtable[0].methodPtr) & 1) == 0 )
-        sub_B0F2C4(method->rgctx_data->_0_T);
-      this = (AssetData_o *)sub_B77684(v11, v12);
+      if ( v11 >= (unsigned int)v7 )
+LABEL_38:
+        sub_1B00F30(this, name);
+      v12 = objectList->m_Items[v11];
+      v13 = method->rgctx_data->_0_T;
+      if ( (BYTE5(v13->vtable[0].methodPtr) & 1) == 0 )
+        v13 = (Il2CppClass *)sub_1B52BA8(method->rgctx_data->_0_T);
+      this = (AssetData_o *)sub_1B00E08(v12, v13);
       if ( this )
         break;
-      LODWORD(v4) = objectList->max_length;
-      if ( (__int64)++v10 >= (int)v4 )
+      LODWORD(v7) = objectList->max_length;
+      if ( (__int64)++v11 >= (int)v7 )
         return 0LL;
     }
-    v16 = method->rgctx_data->_0_T;
-    if ( (BYTE2(v16->vtable[0].methodPtr) & 1) == 0 )
-      sub_B0F2C4(method->rgctx_data->_0_T);
-    v14 = v11;
-    v15 = v16;
+    v14 = method->rgctx_data->_0_T;
+    if ( (BYTE5(v14->vtable[0].methodPtr) & 1) == 0 )
+      v14 = (Il2CppClass *)sub_1B52BA8(method->rgctx_data->_0_T);
+    v15 = v12;
   }
-  v17 = sub_B77684(v14, v15);
-  v18 = method->rgctx_data->_0_T;
-  if ( (BYTE2(v18->vtable[0].methodPtr) & 1) == 0 )
-    sub_B0F2C4(v18);
-  if ( v17 )
+  v16 = sub_1B00E08(v15, v14);
+  v17 = method->rgctx_data->_0_T;
+  if ( (BYTE5(v17->vtable[0].methodPtr) & 1) == 0 )
+    v17 = (Il2CppClass *)sub_1B52BA8(v17);
+  if ( v16 )
   {
-    result = (WarBoardWaitTimeSetting_o *)sub_B77684(v17, v18);
+    result = (Il2CppObject *)sub_1B00E08(v16, v17);
     if ( result )
       return result;
-    sub_B77990(v17);
+    sub_1B011E8(v16);
   }
   return 0LL;
 }
@@ -1054,12 +998,12 @@ bool __fastcall AssetData__IsSame(AssetData_o *this, System_String_o *name, cons
 
   v3 = this->fields.name;
   if ( !v3 )
-    sub_B7769C(0LL, name);
-  return System_String__Equals_44889276(v3, name, 0LL);
+    sub_1B00F28(0LL, name);
+  return System_String__Equals_60334064(v3, name, 0LL);
 }
 
 
-bool __fastcall AssetData__IsSame_24382336(
+bool __fastcall AssetData__IsSame_36563488(
         AssetData_o *this,
         int32_t type,
         System_String_o *name,
@@ -1071,84 +1015,76 @@ bool __fastcall AssetData__IsSame_24382336(
     return 0;
   v4 = this->fields.name;
   if ( !v4 )
-    sub_B7769C(0LL, type);
-  return System_String__Equals_44889276(v4, name, 0LL);
+    sub_1B00F28(0LL, type);
+  return System_String__Equals_60334064(v4, name, 0LL);
 }
 
 
 bool __fastcall AssetData__ReleaseData(AssetData_o *this, const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  BattleServantConfConponent_o *p_objectList; // x0
-  struct UnityEngine_Object_array *objectList; // x12
-  unsigned __int64 max_length; // x8
+  int32_t v2; // w2
+  int32_t v3; // w3
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  ServantStatusBattleListViewItem_o *p_objectList; // x0
+  struct UnityEngine_Object_array *objectList; // x10
   char isSavedMemoryMode; // w20
-  unsigned __int64 v13; // x9
-  UnityEngine_Object_o **m_Items; // x12
-  UnityEngine_Object_o *v15; // x13
-  __int64 v16; // x15
+  __int64 v13; // x8
+  UnityEngine_Object_o **m_Items; // x10
+  UnityEngine_Object_o *v15; // x11
+  __int64 methodPtr_low; // x13
   struct UnityEngine_AssetBundle_o **p_assetBundle; // x20
   UnityEngine_Object_o *assetBundle; // x21
-  System_String_array **v19; // x2
-  System_String_array **v20; // x3
-  System_Boolean_array **v21; // x4
-  System_Int32_array **v22; // x5
-  System_Int32_array *v23; // x6
-  System_Int32_array *v24; // x7
-  System_String_array **v25; // x2
-  System_String_array **v26; // x3
-  System_Boolean_array **v27; // x4
-  System_Int32_array **v28; // x5
-  System_Int32_array *v29; // x6
-  System_Int32_array *v30; // x7
-  struct UnityEngine_Object_array *v31; // x24
-  __int64 v32; // x8
-  unsigned __int64 v33; // x25
-  UnityEngine_GameObject_c **v34; // x8
-  UnityEngine_Object_o *v35; // x21
-  UnityEngine_Object_o *Component_srcLineSprite; // x22
-  struct UnityEngine_GameObject_o *closeBtnObject; // x8
-  BattleServantConfConponent_o *v38; // x21
-  unsigned __int64 v39; // x26
-  UnityEngine_Object_o *v40; // x22
-  __int64 v42; // x0
+  int32_t v19; // w2
+  int32_t v20; // w3
+  int32_t v21; // w2
+  int32_t v22; // w3
+  struct UnityEngine_Object_array *v23; // x24
+  __int64 v24; // x8
+  unsigned __int64 v25; // x25
+  UnityEngine_GameObject_c **v26; // x8
+  UnityEngine_Object_o *v27; // x21
+  Il2CppObject *Component_object; // x22
+  __int64 v29; // x8
+  ServantStatusBattleListViewItem_o *v30; // x21
+  unsigned __int64 v31; // x29
+  UnityEngine_Object_o *v32; // x22
+  bool result; // w0
 
-  if ( (byte_438A9BB & 1) == 0 )
+  if ( (byte_48E18FD & 1) == 0 )
   {
-    sub_B775C4(&DataAsset_TypeInfo);
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_Camera___);
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponentsInChildren_Camera____69525880);
-    sub_B775C4(&UnityEngine_GameObject_TypeInfo);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&OptionManager_TypeInfo);
-    byte_438A9BB = 1;
+    sub_1B00CCC(&DataAsset_TypeInfo, method);
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_Camera___, v5);
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponentsInChildren_Camera____74643744, v6);
+    sub_1B00CCC(&UnityEngine_GameObject_TypeInfo, v7);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v8);
+    sub_1B00CCC(&OptionManager_TypeInfo, v9);
+    byte_48E18FD = 1;
   }
   if ( this->fields.type == 1 )
   {
-    p_objectList = (BattleServantConfConponent_o *)&this->fields.objectList;
+    p_objectList = (ServantStatusBattleListViewItem_o *)&this->fields.objectList;
     objectList = this->fields.objectList;
     if ( objectList )
     {
-      max_length = objectList->max_length;
-      if ( (__int64)(max_length << 32) >= 1 )
+      isSavedMemoryMode = 0;
+      if ( (int)*(_QWORD *)&objectList->max_length >= 1 )
       {
+        v13 = (unsigned int)*(_QWORD *)&objectList->max_length;
         isSavedMemoryMode = 0;
-        v13 = 0LL;
         m_Items = objectList->m_Items;
-        while ( v13 < max_length )
+        do
         {
-          v15 = m_Items[v13];
-          if ( v15 )
+          v15 = *m_Items;
+          if ( *m_Items )
           {
-            v16 = *(&DataAsset_TypeInfo->_2.bitflags2 + 1);
-            if ( *(&v15->klass->_2.bitflags2 + 1) >= (unsigned int)v16 )
+            methodPtr_low = LOBYTE(DataAsset_TypeInfo->vtable._0_Equals.methodPtr);
+            if ( LOBYTE(v15->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low )
             {
-              if ( (DataAsset_c *)v15->klass->_2.typeHierarchy[v16 - 1] != DataAsset_TypeInfo )
+              if ( (DataAsset_c *)v15->klass->_2.typeHierarchy[methodPtr_low - 1] != DataAsset_TypeInfo )
                 v15 = 0LL;
             }
             else
@@ -1156,145 +1092,127 @@ bool __fastcall AssetData__ReleaseData(AssetData_o *this, const MethodInfo *meth
               v15 = 0LL;
             }
           }
-          ++v13;
+          --v13;
           isSavedMemoryMode |= v15 == 0LL;
-          if ( (__int64)v13 >= (int)max_length )
-            goto LABEL_58;
+          ++m_Items;
         }
-        goto LABEL_60;
+        while ( v13 );
       }
-      isSavedMemoryMode = 0;
-LABEL_58:
       p_objectList->klass = 0LL;
-      sub_B77560(p_objectList, 0LL, v2, v3, v4, v5, v6, v7);
-      goto LABEL_59;
+      sub_1B00C70(p_objectList, 0, v2, v3);
+      goto LABEL_51;
     }
-LABEL_61:
-    sub_B7769C(p_objectList, method);
+LABEL_53:
+    sub_1B00F28(p_objectList, method);
   }
   p_assetBundle = &this->fields.assetBundle;
   assetBundle = (UnityEngine_Object_o *)this->fields.assetBundle;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  p_objectList = (BattleServantConfConponent_o *)UnityEngine_Object__op_Inequality(assetBundle, 0LL, 0LL);
+  p_objectList = (ServantStatusBattleListViewItem_o *)UnityEngine_Object__op_Inequality(assetBundle, 0LL, 0LL);
   if ( ((unsigned __int8)p_objectList & 1) != 0 )
   {
-    p_objectList = (BattleServantConfConponent_o *)*p_assetBundle;
+    p_objectList = (ServantStatusBattleListViewItem_o *)*p_assetBundle;
     if ( !*p_assetBundle )
-      goto LABEL_61;
+      goto LABEL_53;
     UnityEngine_AssetBundle__Unload((UnityEngine_AssetBundle_o *)p_objectList, 0, 0LL);
     *p_assetBundle = 0LL;
-    sub_B77560((BattleServantConfConponent_o *)&this->fields.assetBundle, 0LL, v25, v26, v27, v28, v29, v30);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.assetBundle, 0, v21, v22);
   }
-  v31 = this->fields.objectList;
-  if ( v31 )
+  v23 = this->fields.objectList;
+  if ( v23 )
   {
-    v32 = *(_QWORD *)&v31->max_length;
-    if ( (int)v32 >= 1 )
+    v24 = *(_QWORD *)&v23->max_length;
+    if ( (int)v24 >= 1 )
     {
-      v33 = 0LL;
+      v25 = 0LL;
       while ( 1 )
       {
-        if ( v33 >= (unsigned int)v32 )
-          goto LABEL_60;
-        v34 = (UnityEngine_GameObject_c **)v31->m_Items[v33];
-        if ( v34 )
+        if ( v25 >= (unsigned int)v24 )
+          goto LABEL_52;
+        v26 = (UnityEngine_GameObject_c **)v23->m_Items[v25];
+        if ( v26 )
         {
-          if ( *v34 == UnityEngine_GameObject_TypeInfo )
-            v35 = v31->m_Items[v33];
+          if ( *v26 == UnityEngine_GameObject_TypeInfo )
+            v27 = v23->m_Items[v25];
           else
-            v35 = 0LL;
+            v27 = 0LL;
         }
         else
         {
-          v35 = 0LL;
+          v27 = 0LL;
         }
-        if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        {
+        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        }
-        p_objectList = (BattleServantConfConponent_o *)UnityEngine_Object__op_Equality(v35, 0LL, 0LL);
+        p_objectList = (ServantStatusBattleListViewItem_o *)UnityEngine_Object__op_Equality(v27, 0LL, 0LL);
         if ( ((unsigned __int8)p_objectList & 1) == 0 )
         {
-          if ( !v35 )
-            goto LABEL_61;
-          Component_srcLineSprite = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                                              (UnityEngine_GameObject_o *)v35,
-                                                              (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_Camera___);
-          if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-            && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          {
+          if ( !v27 )
+            goto LABEL_53;
+          Component_object = UnityEngine_GameObject__GetComponent_object_(
+                               (UnityEngine_GameObject_o *)v27,
+                               (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_Camera___);
+          if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          }
-          p_objectList = (BattleServantConfConponent_o *)UnityEngine_Object__op_Inequality(
-                                                           Component_srcLineSprite,
-                                                           0LL,
-                                                           0LL);
+          p_objectList = (ServantStatusBattleListViewItem_o *)UnityEngine_Object__op_Inequality(
+                                                                (UnityEngine_Object_o *)Component_object,
+                                                                0LL,
+                                                                0LL);
           if ( ((unsigned __int8)p_objectList & 1) != 0 )
           {
-            if ( !Component_srcLineSprite )
-              goto LABEL_61;
-            UnityEngine_Camera__set_targetTexture((UnityEngine_Camera_o *)Component_srcLineSprite, 0LL, 0LL);
+            if ( !Component_object )
+              goto LABEL_53;
+            UnityEngine_Camera__set_targetTexture((UnityEngine_Camera_o *)Component_object, 0LL, 0LL);
           }
-          p_objectList = (BattleServantConfConponent_o *)UnityEngine_GameObject__GetComponentsInChildren_changeVColor_(
-                                                           (UnityEngine_GameObject_o *)v35,
-                                                           1,
-                                                           (const MethodInfo_1DEC424 *)Method_UnityEngine_GameObject_GetComponentsInChildren_Camera____69525880);
+          p_objectList = (ServantStatusBattleListViewItem_o *)UnityEngine_GameObject__GetComponentsInChildren_object_(
+                                                                (UnityEngine_GameObject_o *)v27,
+                                                                1,
+                                                                (const MethodInfo_2DAEAA8 *)Method_UnityEngine_GameObject_GetComponentsInChildren_Camera____74643744);
           if ( p_objectList )
           {
-            closeBtnObject = p_objectList->fields._closeBtnObject;
-            v38 = p_objectList;
-            if ( (int)closeBtnObject >= 1 )
+            v29 = *(_QWORD *)&p_objectList->fields.sortIndex;
+            v30 = p_objectList;
+            if ( (int)v29 >= 1 )
               break;
           }
         }
-LABEL_52:
-        LODWORD(v32) = v31->max_length;
-        if ( (__int64)++v33 >= (int)v32 )
-          goto LABEL_53;
+LABEL_47:
+        LODWORD(v24) = v23->max_length;
+        if ( (__int64)++v25 >= (int)v24 )
+          goto LABEL_48;
       }
-      v39 = 0LL;
-      while ( v39 < (unsigned int)closeBtnObject )
+      v31 = 0LL;
+      while ( v31 < (unsigned int)v29 )
       {
-        v40 = (UnityEngine_Object_o *)*((_QWORD *)&v38->fields.call_openComp + v39);
-        if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        {
+        v32 = (UnityEngine_Object_o *)*(&v30->fields.sortValue0 + v31);
+        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        }
-        p_objectList = (BattleServantConfConponent_o *)UnityEngine_Object__op_Equality(v40, 0LL, 0LL);
+        p_objectList = (ServantStatusBattleListViewItem_o *)UnityEngine_Object__op_Equality(v32, 0LL, 0LL);
         if ( ((unsigned __int8)p_objectList & 1) == 0 )
         {
-          if ( !v40 )
-            goto LABEL_61;
-          UnityEngine_Camera__set_targetTexture((UnityEngine_Camera_o *)v40, 0LL, 0LL);
+          if ( !v32 )
+            goto LABEL_53;
+          UnityEngine_Camera__set_targetTexture((UnityEngine_Camera_o *)v32, 0LL, 0LL);
         }
-        LODWORD(closeBtnObject) = v38->fields._closeBtnObject;
-        if ( (__int64)++v39 >= (int)closeBtnObject )
-          goto LABEL_52;
+        LODWORD(v29) = v30->fields.sortIndex;
+        if ( (__int64)++v31 >= (int)v29 )
+          goto LABEL_47;
       }
-LABEL_60:
-      v42 = sub_B776C8(p_objectList);
-      sub_B77668(v42, 0LL);
+LABEL_52:
+      sub_1B00F30(p_objectList, method);
     }
   }
-LABEL_53:
+LABEL_48:
   this->fields.objectList = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.objectList, 0LL, v19, v20, v21, v22, v23, v24);
-  if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !OptionManager_TypeInfo->_2.cctor_finished )
-  {
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.objectList, 0, v19, v20);
+  if ( !OptionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-  }
   isSavedMemoryMode = OptionManager__isSavedMemoryMode(0LL);
-LABEL_59:
+LABEL_51:
   this->fields.entryCount = 0;
+  result = isSavedMemoryMode & 1;
   this->fields.isLoadResources = 0;
-  return isSavedMemoryMode & 1;
+  return result;
 }
 
 
@@ -1303,14 +1221,14 @@ bool __fastcall AssetData__RemoveEntry(AssetData_o *this, const MethodInfo *meth
   int32_t entryCount; // w8
   bool v4; // vf
   int32_t v5; // w8
-  AssetManager_o *Instance; // x0
+  Il2CppObject *Instance; // x0
   __int64 v8; // x1
   const MethodInfo *v9; // x2
 
-  if ( (byte_438A9B9 & 1) == 0 )
+  if ( (byte_48E18FB & 1) == 0 )
   {
-    sub_B775C4(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_438A9B9 = 1;
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__, method);
+    byte_48E18FB = 1;
   }
   entryCount = this->fields.entryCount;
   v4 = __OFSUB__(entryCount, 1);
@@ -1320,33 +1238,36 @@ bool __fastcall AssetData__RemoveEntry(AssetData_o *this, const MethodInfo *meth
   this->fields.entryCount = v5;
   if ( v5 )
     return 0;
-  Instance = (AssetManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !Instance )
-    sub_B7769C(0LL, v8);
-  AssetManager__ReleaseReservation(Instance, this, v9);
+    sub_1B00F28(0LL, v8);
+  AssetManager__ReleaseReservation((AssetManager_o *)Instance, this, v9);
   return 1;
 }
 
 
 bool __fastcall AssetData__RemoveEntryAll(AssetData_o *this, const MethodInfo *method)
 {
-  AssetManager_o *Instance; // x0
-  __int64 v4; // x1
-  const MethodInfo *v5; // x2
+  int32_t entryCount; // w20
+  Il2CppObject *Instance; // x0
+  __int64 v5; // x1
+  const MethodInfo *v6; // x2
 
-  if ( (byte_438A9BA & 1) == 0 )
+  if ( (byte_48E18FC & 1) == 0 )
   {
-    sub_B775C4(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_438A9BA = 1;
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__, method);
+    byte_48E18FC = 1;
   }
-  if ( this->fields.entryCount < 1 )
-    return 0;
-  this->fields.entryCount = 0;
-  Instance = (AssetManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-  if ( !Instance )
-    sub_B7769C(0LL, v4);
-  AssetManager__ReleaseReservation(Instance, this, v5);
-  return 1;
+  entryCount = this->fields.entryCount;
+  if ( entryCount >= 1 )
+  {
+    this->fields.entryCount = 0;
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    if ( !Instance )
+      sub_1B00F28(0LL, v5);
+    AssetManager__ReleaseReservation((AssetManager_o *)Instance, this, v6);
+  }
+  return entryCount > 0;
 }
 
 
@@ -1363,50 +1284,27 @@ System_Collections_IEnumerator_o *__fastcall AssetData__SetAssetBundleData(
         const MethodInfo *method)
 {
   __int64 v7; // x22
-  __int64 v8; // x0
-  __int64 v9; // x1
-  System_String_array **v10; // x2
-  System_String_array **v11; // x3
-  System_Boolean_array **v12; // x4
-  System_Int32_array **v13; // x5
-  System_Int32_array *v14; // x6
-  System_Int32_array *v15; // x7
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
-  System_String_array **v22; // x2
-  System_String_array **v23; // x3
-  System_Boolean_array **v24; // x4
-  System_Int32_array **v25; // x5
-  System_Int32_array *v26; // x6
-  System_Int32_array *v27; // x7
+  int32_t v8; // w2
+  int32_t v9; // w3
+  int32_t v10; // w2
+  int32_t v11; // w3
+  int32_t v12; // w2
+  int32_t v13; // w3
 
-  if ( (byte_438A9B6 & 1) == 0 )
+  if ( (byte_48E18F8 & 1) == 0 )
   {
-    sub_B775C4(&AssetData__SetAssetBundleData_d__61_TypeInfo);
-    byte_438A9B6 = 1;
+    sub_1B00CCC(&AssetData__SetAssetBundleData_d__61_TypeInfo, bundle);
+    byte_48E18F8 = 1;
   }
-  v7 = sub_B77694(AssetData__SetAssetBundleData_d__61_TypeInfo);
-  AssetData__SetAssetBundleData_d__61___ctor((AssetData__SetAssetBundleData_d__61_o *)v7, 0, 0LL);
-  if ( !v7 )
-    sub_B7769C(v8, v9);
+  v7 = sub_1B00F18(AssetData__SetAssetBundleData_d__61_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v7, 0LL);
+  *(_DWORD *)(v7 + 16) = 0;
   *(_QWORD *)(v7 + 40) = this;
-  sub_B77560((BattleServantConfConponent_o *)(v7 + 40), (System_Int32_array **)this, v10, v11, v12, v13, v14, v15);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v7 + 40), (int32_t)this, v8, v9);
   *(_QWORD *)(v7 + 48) = bundle;
-  sub_B77560((BattleServantConfConponent_o *)(v7 + 48), (System_Int32_array **)bundle, v16, v17, v18, v19, v20, v21);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v7 + 48), (int32_t)bundle, v10, v11);
   *(_QWORD *)(v7 + 32) = resourceNames;
-  sub_B77560(
-    (BattleServantConfConponent_o *)(v7 + 32),
-    (System_Int32_array **)resourceNames,
-    v22,
-    v23,
-    v24,
-    v25,
-    v26,
-    v27);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v7 + 32), (int32_t)resourceNames, v12, v13);
   return (System_Collections_IEnumerator_o *)v7;
 }
 
@@ -1416,208 +1314,246 @@ bool __fastcall AssetData__SetData(
         UnityEngine_Networking_DownloadHandler_o *handler,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  __int64 v18; // x1
+  __int64 v19; // x1
   struct UnityEngine_Object_array **p_objectList; // x20
   System_String_o *Ext; // x0
-  System_String_o *v7; // x22
-  uint32_t v8; // w0
-  __int64 *v9; // x8
-  bool v10; // w0
-  DataAsset_o *v11; // x22
-  DataAsset_o *texture; // x0
-  __int64 *v13; // x8
-  __int64 *v14; // x8
-  bool v15; // w0
-  bool v16; // w0
+  System_String_o *v22; // x22
+  uint32_t v23; // w0
+  __int64 *v24; // x8
+  bool v25; // w0
+  DataAsset_o *audioClip; // x22
+  __int64 *v27; // x8
+  __int64 *v28; // x8
+  bool v29; // w0
+  bool v30; // w0
   System_Byte_array *data; // x21
-  bool v18; // w0
+  bool v32; // w0
   System_String_o *text; // x21
-  const MethodInfo *v20; // x1
-  System_String_o *BaseName; // x0
-  __int64 v22; // x1
-  System_Int32_array **v23; // x0
-  System_String_array **v24; // x2
-  System_String_array **v25; // x3
-  System_Boolean_array **v26; // x4
-  System_Int32_array **v27; // x5
-  System_Int32_array *v28; // x6
-  System_Int32_array *v29; // x7
-  struct UnityEngine_Object_array *v30; // x19
-  __int64 v31; // x0
-  System_String_array **v32; // x2
-  System_String_array **v33; // x3
-  System_Boolean_array **v34; // x4
-  System_Int32_array **v35; // x5
-  System_Int32_array *v36; // x6
-  System_Int32_array *v37; // x7
-  __int64 v38; // x0
-  __int64 v39; // x0
+  UnityEngine_Texture2D_o *texture; // x0
+  __int64 v35; // x1
+  int32_t v36; // w23
+  int32_t v37; // w24
+  int32_t format; // w25
+  System_Byte_array *v39; // x0
+  const MethodInfo *v40; // x1
+  __int64 v41; // x0
+  int32_t v42; // w2
+  int32_t v43; // w3
+  struct UnityEngine_Object_array *v44; // x19
+  __int64 v45; // x0
+  __int64 v46; // x1
+  int32_t v47; // w2
+  int32_t v48; // w3
+  __int64 v49; // x0
 
-  if ( (byte_438A9B8 & 1) == 0 )
+  if ( (byte_48E18FA & 1) == 0 )
   {
-    sub_B775C4(&DataAsset_TypeInfo);
-    sub_B775C4(&UnityEngine_Networking_DownloadHandlerAudioClip_TypeInfo);
-    sub_B775C4(&UnityEngine_Networking_DownloadHandlerTexture_TypeInfo);
-    sub_B775C4(&UnityEngine_Object___TypeInfo);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&StringLiteral_23313/*"txt"*/);
-    sub_B775C4(&StringLiteral_21955/*"png"*/);
-    sub_B775C4(&StringLiteral_20485/*"jpeg"*/);
-    sub_B775C4(&StringLiteral_19587/*"htm"*/);
-    sub_B775C4(&StringLiteral_17501/*"bytes"*/);
-    sub_B775C4(&StringLiteral_20486/*"jpg"*/);
-    sub_B775C4(&StringLiteral_23735/*"wav"*/);
-    sub_B775C4(&StringLiteral_23869/*"xml"*/);
-    sub_B775C4(&StringLiteral_21654/*"ogg"*/);
-    sub_B775C4(&StringLiteral_19588/*"html"*/);
-    byte_438A9B8 = 1;
+    sub_1B00CCC(&DataAsset_TypeInfo, handler);
+    sub_1B00CCC(&UnityEngine_Networking_DownloadHandlerAudioClip_TypeInfo, v5);
+    sub_1B00CCC(&UnityEngine_Networking_DownloadHandlerTexture_TypeInfo, v6);
+    sub_1B00CCC(&UnityEngine_Object___TypeInfo, v7);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v8);
+    sub_1B00CCC(&UnityEngine_Texture2D_TypeInfo, v9);
+    sub_1B00CCC(&StringLiteral_23753/*"txt"*/, v10);
+    sub_1B00CCC(&StringLiteral_22256/*"png"*/, v11);
+    sub_1B00CCC(&StringLiteral_20673/*"jpeg"*/, v12);
+    sub_1B00CCC(&StringLiteral_19718/*"htm"*/, v13);
+    sub_1B00CCC(&StringLiteral_17441/*"bytes"*/, v14);
+    sub_1B00CCC(&StringLiteral_20674/*"jpg"*/, v15);
+    sub_1B00CCC(&StringLiteral_24300/*"wav"*/, v16);
+    sub_1B00CCC(&StringLiteral_24459/*"xml"*/, v17);
+    sub_1B00CCC(&StringLiteral_21919/*"ogg"*/, v18);
+    sub_1B00CCC(&StringLiteral_19719/*"html"*/, v19);
+    byte_48E18FA = 1;
   }
   p_objectList = &this->fields.objectList;
   if ( this->fields.objectList )
     goto LABEL_4;
   LOBYTE(Ext) = 0;
-  if ( !handler )
-    return (char)Ext;
-  if ( this->fields.type )
-    return (char)Ext;
-  Ext = AssetData__GetExt(this, (const MethodInfo *)handler);
-  if ( !Ext )
-    return (char)Ext;
-  v7 = Ext;
-  v8 = PrivateImplementationDetails___ComputeStringHash_28503548(Ext, 0LL);
-  if ( v8 <= 0xA535A9EF )
+  if ( handler )
   {
-    if ( v8 <= 0x13E2BD39 )
+    if ( !this->fields.type )
     {
-      if ( v8 != 126868124 )
+      Ext = AssetData__GetExt(this, (const MethodInfo *)handler);
+      if ( Ext )
       {
-        if ( v8 == 333626681 )
+        v22 = Ext;
+        v23 = PrivateImplementationDetails___ComputeStringHash(Ext, 0LL);
+        if ( v23 > 0xA535A9EF )
         {
-          v9 = &StringLiteral_23735/*"wav"*/;
-          goto LABEL_18;
-        }
-LABEL_33:
-        v11 = 0LL;
-        goto LABEL_43;
-      }
-      v14 = &StringLiteral_19587/*"htm"*/;
-LABEL_39:
-      v18 = System_String__op_Equality(v7, (System_String_o *)*v14, 0LL);
-      v11 = 0LL;
-      if ( v18 )
-      {
-        text = UnityEngine_Networking_DownloadHandler__get_text(handler, 0LL);
-        v11 = (DataAsset_o *)sub_B77694(DataAsset_TypeInfo);
-        DataAsset___ctor_28019924(v11, text, 0LL);
-      }
-      goto LABEL_43;
-    }
-    if ( v8 == -1523209745 )
-    {
-      v14 = &StringLiteral_23313/*"txt"*/;
-      goto LABEL_39;
-    }
-    if ( v8 == 1706151940 )
-    {
-      v16 = System_String__op_Equality(v7, (System_String_o *)StringLiteral_17501/*"bytes"*/, 0LL);
-      v11 = 0LL;
-      if ( v16 )
-      {
-        data = UnityEngine_Networking_DownloadHandler__get_data(handler, 0LL);
-        v11 = (DataAsset_o *)sub_B77694(DataAsset_TypeInfo);
-        DataAsset___ctor(v11, data, 0LL);
-      }
-      goto LABEL_43;
-    }
-    if ( v8 != 1748353692 )
-      goto LABEL_33;
-    v13 = &StringLiteral_21955/*"png"*/;
-    goto LABEL_31;
-  }
-  if ( v8 > 0xCC3CFC94 )
-  {
-    if ( v8 == -680155184 )
-    {
-      v14 = &StringLiteral_19588/*"html"*/;
-      goto LABEL_39;
-    }
-    if ( v8 == -630165834 )
-    {
-      v14 = &StringLiteral_23869/*"xml"*/;
-      goto LABEL_39;
-    }
-    if ( v8 != -624468176 )
-      goto LABEL_33;
-    v13 = &StringLiteral_20486/*"jpg"*/;
-LABEL_31:
-    v15 = System_String__op_Equality(v7, (System_String_o *)*v13, 0LL);
-    v11 = 0LL;
-    if ( !v15 )
-      goto LABEL_43;
-    if ( (UnityEngine_Networking_DownloadHandlerTexture_c *)handler->klass == UnityEngine_Networking_DownloadHandlerTexture_TypeInfo )
-    {
-      texture = (DataAsset_o *)UnityEngine_Networking_DownloadHandlerTexture__get_texture(
-                                 (UnityEngine_Networking_DownloadHandlerTexture_o *)handler,
-                                 0LL);
-      goto LABEL_42;
-    }
-    goto LABEL_33;
-  }
-  if ( v8 == -1092644061 )
-  {
-    v13 = &StringLiteral_20485/*"jpeg"*/;
-    goto LABEL_31;
-  }
-  if ( v8 != -868418412 )
-    goto LABEL_33;
-  v9 = &StringLiteral_21654/*"ogg"*/;
+          if ( v23 <= 0xCC3CFC94 )
+          {
+            if ( v23 != -1092644061 )
+            {
+              if ( v23 == -868418412 )
+              {
+                v24 = &StringLiteral_21919/*"ogg"*/;
 LABEL_18:
-  v10 = System_String__op_Equality(v7, (System_String_o *)*v9, 0LL);
-  v11 = 0LL;
-  if ( !v10 )
-    goto LABEL_43;
-  if ( (UnityEngine_Networking_DownloadHandlerAudioClip_c *)handler->klass != UnityEngine_Networking_DownloadHandlerAudioClip_TypeInfo )
-    goto LABEL_33;
-  texture = (DataAsset_o *)UnityEngine_Networking_DownloadHandlerAudioClip__get_audioClip(
-                             (UnityEngine_Networking_DownloadHandlerAudioClip_o *)handler,
-                             0LL);
-LABEL_42:
-  v11 = texture;
-LABEL_43:
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v11, 0LL, 0LL) )
-  {
+                v25 = System_String__op_Equality(v22, (System_String_o *)*v24, 0LL);
+                audioClip = 0LL;
+                if ( !v25 )
+                  goto LABEL_45;
+                if ( (UnityEngine_Networking_DownloadHandlerAudioClip_c *)handler->klass == UnityEngine_Networking_DownloadHandlerAudioClip_TypeInfo )
+                {
+                  audioClip = (DataAsset_o *)UnityEngine_Networking_DownloadHandlerAudioClip__get_audioClip(
+                                               (UnityEngine_Networking_DownloadHandlerAudioClip_o *)handler,
+                                               0LL);
+                  goto LABEL_45;
+                }
+              }
+LABEL_33:
+              audioClip = 0LL;
+              goto LABEL_45;
+            }
+            v27 = &StringLiteral_20673/*"jpeg"*/;
+            goto LABEL_31;
+          }
+          switch ( v23 )
+          {
+            case 0xD775A7D0:
+              v28 = &StringLiteral_19719/*"html"*/;
+              break;
+            case 0xDA706EB6:
+              v28 = &StringLiteral_24459/*"xml"*/;
+              break;
+            case 0xDAC75F30:
+              v27 = &StringLiteral_20674/*"jpg"*/;
+              goto LABEL_31;
+            default:
+              goto LABEL_33;
+          }
+        }
+        else
+        {
+          if ( v23 <= 0x13E2BD39 )
+          {
+            if ( v23 != 126868124 )
+            {
+              if ( v23 == 333626681 )
+              {
+                v24 = &StringLiteral_24300/*"wav"*/;
+                goto LABEL_18;
+              }
+              goto LABEL_33;
+            }
+            v28 = &StringLiteral_19718/*"htm"*/;
+            goto LABEL_39;
+          }
+          if ( v23 != -1523209745 )
+          {
+            if ( v23 == 1706151940 )
+            {
+              v30 = System_String__op_Equality(v22, (System_String_o *)StringLiteral_17441/*"bytes"*/, 0LL);
+              audioClip = 0LL;
+              if ( v30 )
+              {
+                data = UnityEngine_Networking_DownloadHandler__get_data(handler, 0LL);
+                audioClip = (DataAsset_o *)sub_1B00F18(DataAsset_TypeInfo);
+                DataAsset___ctor(audioClip, data, 0LL);
+              }
+              goto LABEL_45;
+            }
+            if ( v23 != 1748353692 )
+              goto LABEL_33;
+            v27 = &StringLiteral_22256/*"png"*/;
+LABEL_31:
+            v29 = System_String__op_Equality(v22, (System_String_o *)*v27, 0LL);
+            audioClip = 0LL;
+            if ( !v29 )
+              goto LABEL_45;
+            if ( (UnityEngine_Networking_DownloadHandlerTexture_c *)handler->klass != UnityEngine_Networking_DownloadHandlerTexture_TypeInfo )
+              goto LABEL_33;
+            texture = UnityEngine_Networking_DownloadHandlerTexture__get_texture(
+                        (UnityEngine_Networking_DownloadHandlerTexture_o *)handler,
+                        0LL);
+            if ( !texture )
+              goto LABEL_53;
+            v36 = ((__int64 (__fastcall *)(UnityEngine_Texture2D_o *, Il2CppMethodPointer))texture->klass->vtable._4_get_width.method)(
+                    texture,
+                    texture->klass->vtable._5_set_width.methodPtr);
+            texture = UnityEngine_Networking_DownloadHandlerTexture__get_texture(
+                        (UnityEngine_Networking_DownloadHandlerTexture_o *)handler,
+                        0LL);
+            if ( !texture )
+              goto LABEL_53;
+            v37 = ((__int64 (__fastcall *)(UnityEngine_Texture2D_o *, Il2CppMethodPointer))texture->klass->vtable._6_get_height.method)(
+                    texture,
+                    texture->klass->vtable._7_set_height.methodPtr);
+            texture = UnityEngine_Networking_DownloadHandlerTexture__get_texture(
+                        (UnityEngine_Networking_DownloadHandlerTexture_o *)handler,
+                        0LL);
+            if ( !texture )
+              goto LABEL_53;
+            format = UnityEngine_Texture2D__get_format(texture, 0LL);
+            audioClip = (DataAsset_o *)sub_1B00F18(UnityEngine_Texture2D_TypeInfo);
+            UnityEngine_Texture2D___ctor_67965920((UnityEngine_Texture2D_o *)audioClip, v36, v37, format, 0, 0LL);
+            v39 = UnityEngine_Networking_DownloadHandler__get_data(handler, 0LL);
+            UnityEngine_ImageConversion__LoadImage_68182516((UnityEngine_Texture2D_o *)audioClip, v39, 0LL);
+LABEL_45:
+            if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+              j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+            if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)audioClip, 0LL, 0LL) )
+            {
 LABEL_4:
-    LOBYTE(Ext) = 0;
-    return (char)Ext;
+              LOBYTE(Ext) = 0;
+              return (char)Ext;
+            }
+            texture = (UnityEngine_Texture2D_o *)AssetData__GetBaseName(this, v40);
+            if ( audioClip )
+            {
+              UnityEngine_Object__set_name((UnityEngine_Object_o *)audioClip, (System_String_o *)texture, 0LL);
+              v41 = sub_1B00D74(UnityEngine_Object___TypeInfo, 1LL);
+              *p_objectList = (struct UnityEngine_Object_array *)v41;
+              sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.objectList, v41, v42, v43);
+              v44 = *p_objectList;
+              if ( *p_objectList )
+              {
+                v45 = sub_1B00E08(audioClip, v44->obj.klass->_1.element_class);
+                if ( !v45 )
+                {
+                  v49 = sub_1B00F4C(0LL);
+                  sub_1B00DF4(v49, 0LL);
+                }
+                if ( !v44->max_length )
+                  sub_1B00F30(v45, v46);
+                v44->m_Items[0] = (UnityEngine_Object_o *)audioClip;
+                sub_1B00C70((ServantStatusBattleListViewItem_o *)v44->m_Items, (int32_t)audioClip, v47, v48);
+                LOBYTE(Ext) = 1;
+                return (char)Ext;
+              }
+            }
+LABEL_53:
+            sub_1B00F28(texture, v35);
+          }
+          v28 = &StringLiteral_23753/*"txt"*/;
+        }
+LABEL_39:
+        v32 = System_String__op_Equality(v22, (System_String_o *)*v28, 0LL);
+        audioClip = 0LL;
+        if ( v32 )
+        {
+          text = UnityEngine_Networking_DownloadHandler__get_text(handler, 0LL);
+          audioClip = (DataAsset_o *)sub_1B00F18(DataAsset_TypeInfo);
+          DataAsset___ctor_36710572(audioClip, text, 0LL);
+        }
+        goto LABEL_45;
+      }
+    }
   }
-  BaseName = AssetData__GetBaseName(this, v20);
-  if ( !v11
-    || (UnityEngine_Object__set_name((UnityEngine_Object_o *)v11, BaseName, 0LL),
-        v23 = (System_Int32_array **)sub_B775DC(UnityEngine_Object___TypeInfo, 1LL),
-        *p_objectList = (struct UnityEngine_Object_array *)v23,
-        sub_B77560((BattleServantConfConponent_o *)&this->fields.objectList, v23, v24, v25, v26, v27, v28, v29),
-        (v30 = *p_objectList) == 0LL) )
-  {
-    sub_B7769C(BaseName, v22);
-  }
-  v31 = sub_B77684(v11, v30->obj.klass->_1.element_class);
-  if ( !v31 )
-  {
-    v38 = sub_B776BC(0LL);
-    sub_B77668(v38, 0LL);
-  }
-  if ( !v30->max_length )
-  {
-    v39 = sub_B776C8(v31);
-    sub_B77668(v39, 0LL);
-  }
-  v30->m_Items[0] = (UnityEngine_Object_o *)v11;
-  sub_B77560((BattleServantConfConponent_o *)v30->m_Items, (System_Int32_array **)v11, v32, v33, v34, v35, v36, v37);
-  LOBYTE(Ext) = 1;
   return (char)Ext;
 }
 
@@ -1626,51 +1562,34 @@ bool __fastcall AssetData__SetResource(AssetData_o *this, const MethodInfo *meth
 {
   struct UnityEngine_Object_array **p_objectList; // x19
   System_String_o *Path; // x0
-  struct UnityEngine_Object_array *All_36374252; // x0
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
-  __int64 v12; // x0
-  __int64 v13; // x1
-  System_String_array **v14; // x2
-  System_String_array **v15; // x3
-  System_Boolean_array **v16; // x4
-  System_Int32_array **v17; // x5
-  System_Int32_array *v18; // x6
-  System_Int32_array *v19; // x7
+  struct UnityEngine_Object_array *All_68039088; // x0
+  int32_t v6; // w2
+  int32_t v7; // w3
+  __int64 v8; // x0
+  __int64 v9; // x1
+  int32_t v10; // w2
+  int32_t v11; // w3
   struct UnityEngine_Object_array *objectList; // x8
 
   p_objectList = &this->fields.objectList;
   if ( !this->fields.objectList && this->fields.type == 1 )
   {
     Path = AssetData__get_Path(this, method);
-    All_36374252 = UnityEngine_Resources__LoadAll_36374252(Path, 0LL);
-    this->fields.objectList = All_36374252;
-    sub_B77560(
-      (BattleServantConfConponent_o *)p_objectList,
-      (System_Int32_array **)All_36374252,
-      v6,
-      v7,
-      v8,
-      v9,
-      v10,
-      v11);
+    All_68039088 = UnityEngine_Resources__LoadAll_68039088(Path, 0LL);
+    this->fields.objectList = All_68039088;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)p_objectList, (int32_t)All_68039088, v6, v7);
     objectList = this->fields.objectList;
     if ( !objectList )
-      sub_B7769C(v12, v13);
+      sub_1B00F28(v8, v9);
     if ( *(_QWORD *)&objectList->max_length )
       return 1;
     *p_objectList = 0LL;
-    sub_B77560((BattleServantConfConponent_o *)p_objectList, 0LL, v14, v15, v16, v17, v18, v19);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)p_objectList, 0, v10, v11);
   }
   return 0;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool __fastcall AssetData__SetUpdateInfo(
         AssetData_o *this,
         int32_t version,
@@ -1680,37 +1599,16 @@ bool __fastcall AssetData__SetUpdateInfo(
         System_String_o *keyType,
         const MethodInfo *method)
 {
-  System_Int32_array *v7; // x7
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
+  int32_t v12; // w2
+  int32_t v13; // w3
   int32_t nowVersion; // w8
 
   this->fields.newVersion = version;
   this->fields.attrib = attrib;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.attrib,
-    (System_Int32_array **)attrib,
-    (System_String_array **)attrib,
-    *(System_String_array ***)&size,
-    *(System_Boolean_array ***)&crc,
-    (System_Int32_array **)keyType,
-    (System_Int32_array *)method,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.attrib, (int32_t)attrib, (int32_t)attrib, size);
   this->fields.keyType = keyType;
   this->fields.size = size;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.keyType,
-    (System_Int32_array **)keyType,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.keyType, (int32_t)keyType, v12, v13);
   if ( this->fields.crc == crc )
   {
     nowVersion = this->fields.nowVersion;
@@ -1745,66 +1643,57 @@ System_String_o *__fastcall AssetData__get_Attrib(AssetData_o *this, const Metho
 
 System_String_o *__fastcall AssetData__get_CacheName(AssetData_o *this, const MethodInfo *method)
 {
-  System_String_o *Ext; // x0
+  __int64 v3; // x1
   __int64 v4; // x1
-  System_String_o *name; // x19
-  AssetData_c *v6; // x8
-  System_String_o *v7; // x19
-  System_String_o *v9; // x0
-  const MethodInfo *v10; // x1
-  System_String_o *v11; // x19
+  __int64 v5; // x1
+  System_String_o *Ext; // x0
+  __int64 v7; // x1
+  AssetData_c *v8; // x8
+  System_String_o *name; // x20
+  System_String_o *v10; // x19
+  System_String_o *v11; // x0
+  System_String_o *v12; // x20
+  const MethodInfo *v14; // x1
+  System_String_o *v15; // x19
 
-  if ( (byte_438A9B2 & 1) == 0 )
+  if ( (byte_48E18F4 & 1) == 0 )
   {
-    sub_B775C4(&AndroidUtil_TypeInfo);
-    sub_B775C4(&AssetData_TypeInfo);
-    sub_B775C4(&AssetManager_TypeInfo);
-    sub_B775C4(&StringLiteral_889/*".unity3d"*/);
-    byte_438A9B2 = 1;
+    sub_1B00CCC(&AndroidUtil_TypeInfo, method);
+    sub_1B00CCC(&AssetData_TypeInfo, v3);
+    sub_1B00CCC(&AssetManager_TypeInfo, v4);
+    sub_1B00CCC(&StringLiteral_1117/*".unity3d"*/, v5);
+    byte_48E18F4 = 1;
   }
   Ext = AssetData__GetExt(this, method);
+  v8 = AssetData_TypeInfo;
   name = this->fields.name;
-  v6 = AssetData_TypeInfo;
-  if ( Ext )
-  {
-    if ( (WORD1(AssetData_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0 && !AssetData_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(AssetData_TypeInfo);
-      v6 = AssetData_TypeInfo;
-    }
-    if ( name )
-    {
-      v7 = System_String__Replace(
-             name,
-             v6->static_fields->ASSETBUNDLE_SPLIT_BASE_CHAR,
-             v6->static_fields->ASSETBUNDLE_SPLIT_CACHE_CHAR,
-             0LL);
-      if ( (BYTE3(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !AndroidUtil_TypeInfo->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
-      }
-      return AndroidUtil__ConvertFileNameIfNeed(v7, 0LL);
-    }
-LABEL_20:
-    sub_B7769C(Ext, v4);
-  }
-  if ( (WORD1(AssetData_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0 && !AssetData_TypeInfo->_2.cctor_finished )
+  v10 = Ext;
+  if ( !AssetData_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(AssetData_TypeInfo);
-    v6 = AssetData_TypeInfo;
+    v8 = AssetData_TypeInfo;
   }
   if ( !name )
-    goto LABEL_20;
-  v9 = System_String__Replace(
-         name,
-         v6->static_fields->ASSETBUNDLE_SPLIT_BASE_CHAR,
-         v6->static_fields->ASSETBUNDLE_SPLIT_CACHE_CHAR,
-         0LL);
-  v11 = System_String__Concat_44901936(v9, (System_String_o *)StringLiteral_889/*".unity3d"*/, 0LL);
-  if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  return AssetManager__getShaName(v11, v10);
+    sub_1B00F28(Ext, v7);
+  v11 = System_String__Replace(
+          name,
+          v8->static_fields->ASSETBUNDLE_SPLIT_BASE_CHAR,
+          v8->static_fields->ASSETBUNDLE_SPLIT_CACHE_CHAR,
+          0LL);
+  v12 = v11;
+  if ( v10 )
+  {
+    if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
+    return AndroidUtil__ConvertFileNameIfNeed(v12, 0LL);
+  }
+  else
+  {
+    v15 = System_String__Concat_60325748(v11, (System_String_o *)StringLiteral_1117/*".unity3d"*/, 0LL);
+    if ( !AssetManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
+    return AssetManager__getShaName(v15, v14);
+  }
 }
 
 
@@ -1822,56 +1711,54 @@ int32_t __fastcall AssetData__get_DataType(AssetData_o *this, const MethodInfo *
 
 System_String_o *__fastcall AssetData__get_DownloadName(AssetData_o *this, const MethodInfo *method)
 {
-  System_String_o *Ext; // x0
+  __int64 v3; // x1
   __int64 v4; // x1
-  System_String_o *name; // x19
+  System_String_o *Ext; // x0
   AssetData_c *v6; // x8
-  System_String_o *v8; // x0
-  const MethodInfo *v9; // x1
-  System_String_o *v10; // x19
+  System_String_o *name; // x19
+  System_String_o *v8; // x20
+  struct AssetData_StaticFields *static_fields; // x8
+  __int64 ASSETBUNDLE_SPLIT_BASE_CHAR; // x1
+  System_String_o *v12; // x0
+  const MethodInfo *v13; // x1
+  System_String_o *v14; // x19
 
-  if ( (byte_438A9B1 & 1) == 0 )
+  if ( (byte_48E18F3 & 1) == 0 )
   {
-    sub_B775C4(&AssetData_TypeInfo);
-    sub_B775C4(&AssetManager_TypeInfo);
-    sub_B775C4(&StringLiteral_889/*".unity3d"*/);
-    byte_438A9B1 = 1;
+    sub_1B00CCC(&AssetData_TypeInfo, method);
+    sub_1B00CCC(&AssetManager_TypeInfo, v3);
+    sub_1B00CCC(&StringLiteral_1117/*".unity3d"*/, v4);
+    byte_48E18F3 = 1;
   }
   Ext = AssetData__GetExt(this, method);
-  name = this->fields.name;
   v6 = AssetData_TypeInfo;
-  if ( Ext )
-  {
-    if ( (WORD1(AssetData_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0 && !AssetData_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(AssetData_TypeInfo);
-      v6 = AssetData_TypeInfo;
-    }
-    if ( name )
-      return System_String__Replace(
-               name,
-               v6->static_fields->ASSETBUNDLE_SPLIT_BASE_CHAR,
-               v6->static_fields->ASSETBUNDLE_SPLIT_NOT_HASH_CHAR,
-               0LL);
-LABEL_17:
-    sub_B7769C(Ext, v4);
-  }
-  if ( (WORD1(AssetData_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0 && !AssetData_TypeInfo->_2.cctor_finished )
+  name = this->fields.name;
+  v8 = Ext;
+  if ( !AssetData_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(AssetData_TypeInfo);
     v6 = AssetData_TypeInfo;
   }
+  static_fields = v6->static_fields;
+  ASSETBUNDLE_SPLIT_BASE_CHAR = static_fields->ASSETBUNDLE_SPLIT_BASE_CHAR;
+  if ( v8 )
+  {
+    if ( name )
+      return System_String__Replace(
+               name,
+               ASSETBUNDLE_SPLIT_BASE_CHAR,
+               static_fields->ASSETBUNDLE_SPLIT_NOT_HASH_CHAR,
+               0LL);
+LABEL_12:
+    sub_1B00F28(Ext, ASSETBUNDLE_SPLIT_BASE_CHAR);
+  }
   if ( !name )
-    goto LABEL_17;
-  v8 = System_String__Replace(
-         name,
-         v6->static_fields->ASSETBUNDLE_SPLIT_BASE_CHAR,
-         v6->static_fields->ASSETBUNDLE_SPLIT_HASH_CHAR,
-         0LL);
-  v10 = System_String__Concat_44901936(v8, (System_String_o *)StringLiteral_889/*".unity3d"*/, 0LL);
-  if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
+    goto LABEL_12;
+  v12 = System_String__Replace(name, ASSETBUNDLE_SPLIT_BASE_CHAR, static_fields->ASSETBUNDLE_SPLIT_HASH_CHAR, 0LL);
+  v14 = System_String__Concat_60325748(v12, (System_String_o *)StringLiteral_1117/*".unity3d"*/, 0LL);
+  if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  return AssetManager__getShaName(v10, v9);
+  return AssetManager__getShaName(v14, v13);
 }
 
 
@@ -1903,19 +1790,16 @@ System_String_o *__fastcall AssetData__get_Key(AssetData_o *this, const MethodIn
 {
   System_String_o *keyType; // x19
 
-  if ( (byte_438A9B4 & 1) == 0 )
+  if ( (byte_48E18F6 & 1) == 0 )
   {
-    sub_B775C4(&CatAndMouseGame_TypeInfo);
-    byte_438A9B4 = 1;
+    sub_1B00CCC(&CatAndMouseGame_TypeInfo, method);
+    byte_48E18F6 = 1;
   }
   if ( System_String__IsNullOrEmpty(this->fields.keyType, 0LL) )
     return 0LL;
   keyType = this->fields.keyType;
-  if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
-  {
+  if ( !CatAndMouseGame_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-  }
   return CatAndMouseGame__GetAssetbundleKey(keyType, 0LL);
 }
 
@@ -1933,7 +1817,7 @@ System_String_o *__fastcall AssetData__get_LastName(AssetData_o *this, const Met
     if ( this->fields.name )
       return System_String__Substring(this->fields.name, (int)name + 1, 0LL);
 LABEL_6:
-    sub_B7769C(name, method);
+    sub_1B00F28(name, method);
   }
   return this->fields.name;
 }
@@ -1953,38 +1837,39 @@ int32_t __fastcall AssetData__get_NowVersion(AssetData_o *this, const MethodInfo
 
 System_String_o *__fastcall AssetData__get_Path(AssetData_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   int32_t type; // w8
-  AssetManager_c *v4; // x0
+  AssetManager_c *v5; // x0
   System_String_o *cachePathName; // x20
   System_String_o *CacheName; // x1
 
-  if ( (byte_438A9B3 & 1) == 0 )
+  if ( (byte_48E18F5 & 1) == 0 )
   {
-    sub_B775C4(&AssetManager_TypeInfo);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438A9B3 = 1;
+    sub_1B00CCC(&AssetManager_TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v3);
+    byte_48E18F5 = 1;
   }
   type = this->fields.type;
   if ( type == 1 )
     return this->fields.name;
   if ( type )
     return (System_String_o *)StringLiteral_1/*""*/;
-  if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
+  if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  if ( !byte_4388EFE )
+  if ( !byte_48E1A6B )
   {
-    sub_B775C4(&AssetManager_TypeInfo);
-    byte_4388EFE = 1;
+    sub_1B00CCC(&AssetManager_TypeInfo, method);
+    byte_48E1A6B = 1;
   }
-  v4 = AssetManager_TypeInfo;
-  if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
+  v5 = AssetManager_TypeInfo;
+  if ( !AssetManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    v4 = AssetManager_TypeInfo;
+    v5 = AssetManager_TypeInfo;
   }
-  cachePathName = v4->static_fields->cachePathName;
+  cachePathName = v5->static_fields->cachePathName;
   CacheName = AssetData__get_CacheName(this, method);
-  return System_String__Concat_44901936(cachePathName, CacheName, 0LL);
+  return System_String__Concat_60325748(cachePathName, CacheName, 0LL);
 }
 
 
@@ -1996,20 +1881,21 @@ int32_t __fastcall AssetData__get_Size(AssetData_o *this, const MethodInfo *meth
 
 System_String_o *__fastcall AssetData__get_Url(AssetData_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   int32_t nowVersion; // w8
 
-  if ( (byte_438A9B0 & 1) == 0 )
+  if ( (byte_48E18F2 & 1) == 0 )
   {
-    sub_B775C4(&AssetManager_TypeInfo);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438A9B0 = 1;
+    sub_1B00CCC(&AssetManager_TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v3);
+    byte_48E18F2 = 1;
   }
   nowVersion = this->fields.nowVersion;
   if ( (nowVersion & 0x80000000) != 0 || nowVersion == this->fields.newVersion )
     return (System_String_o *)StringLiteral_1/*""*/;
-  if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
+  if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  return AssetManager__getUrlString_24378960(this, method);
+  return AssetManager__getUrlString_36560624(this, method);
 }
 
 
@@ -2028,105 +1914,64 @@ bool __fastcall AssetData__SetAssetBundleData_d__61__MoveNext(
         const MethodInfo *method)
 {
   AssetData__SetAssetBundleData_d__61_o *v2; // x19
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
   int32_t _1__state; // w8
   struct AssetData_o *_4__this; // x20
   struct System_String_array *resourceNames; // x8
   UnityEngine_Object_o *bundle; // x21
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v7; // x22
+  const MethodInfo *v11; // x1
+  System_Collections_Generic_List_object__o *v12; // x22
   AssetData__SetAssetBundleData_d__61_o **p_list_5__3; // x21
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
-  System_String_array **v15; // x2
-  System_String_array **v16; // x3
-  System_Boolean_array **v17; // x4
-  System_Int32_array **v18; // x5
-  System_Int32_array *v19; // x6
-  System_Int32_array *v20; // x7
-  System_Int32_array **v21; // x1
-  BattleServantConfConponent_o *p__7__wrap3; // x21
-  System_String_array **v23; // x2
-  System_String_array **v24; // x3
-  System_Boolean_array **v25; // x4
-  System_Int32_array **v26; // x5
-  System_Int32_array *v27; // x6
-  System_Int32_array *v28; // x7
-  int v29; // w8
-  BattleServantConfConponent_o *p_asyncRep_5__2; // x21
-  System_String_array **v31; // x2
-  System_String_array **v32; // x3
-  System_Boolean_array **v33; // x4
-  System_Int32_array **v34; // x5
-  System_Int32_array *v35; // x6
-  System_Int32_array *v36; // x7
-  struct UnityEngine_Object_array **p_objectList; // x20
-  System_String_array **v38; // x2
-  System_String_array **v39; // x3
-  System_Boolean_array **v40; // x4
-  System_Int32_array **v41; // x5
-  System_Int32_array *v42; // x6
-  System_Int32_array *v43; // x7
-  System_Collections_Generic_List_TimeZoneInfo_AdjustmentRule__o *list_5__3; // x22
-  System_String_array **v45; // x2
-  System_String_array **v46; // x3
-  System_Boolean_array **v47; // x4
-  System_Int32_array **v48; // x5
-  System_Int32_array *v49; // x6
-  System_Int32_array *v50; // x7
-  BattleServantConfConponent_c *klass; // x9
-  int namespaze; // w10
-  System_Int32_array **AssetAsync; // x0
-  BattleServantConfConponent_o *v54; // x19
-  System_String_array **v55; // x2
-  System_String_array **v56; // x3
-  System_Boolean_array **v57; // x4
-  System_Int32_array **v58; // x5
-  System_Int32_array *v59; // x6
-  System_Int32_array *v60; // x7
-  System_Int32_array **v61; // x1
-  System_String_array **v62; // x2
-  System_String_array **v63; // x3
-  System_Boolean_array **v64; // x4
-  System_Int32_array **v65; // x5
-  System_Int32_array *v66; // x6
-  System_Int32_array *v67; // x7
+  int32_t v14; // w2
+  int32_t v15; // w3
+  int32_t v16; // w2
+  int32_t v17; // w3
+  struct System_String_array *v18; // x1
+  int32_t v19; // w2
+  int32_t v20; // w3
+  int v21; // w8
+  System_Collections_Generic_List_object__o *list_5__3; // x22
+  int32_t v23; // w2
+  int32_t v24; // w3
+  struct System_String_array *_7__wrap3; // x9
+  int max_length; // w10
+  UnityEngine_AssetBundleRequest_o *AssetAsync; // x0
+  int32_t v28; // w2
+  int32_t v29; // w3
+  Il2CppObject *asyncRep_5__2; // x1
+  ServantStatusBattleListViewItem_o *p__2__current; // x19
+  int32_t v32; // w2
+  int32_t v33; // w3
   bool result; // w0
-  System_String_array **v69; // x2
-  System_String_array **v70; // x3
-  System_Boolean_array **v71; // x4
-  System_Int32_array **v72; // x5
-  System_Int32_array *v73; // x6
-  System_Int32_array *v74; // x7
-  struct UnityEngine_Object_array **v75; // x20
-  System_Int32_array **AllAssetsAsync; // x0
-  BattleServantConfConponent_o *v77; // x19
-  System_String_array **v78; // x2
-  System_String_array **v79; // x3
-  System_Boolean_array **v80; // x4
-  System_Int32_array **v81; // x5
-  System_Int32_array *v82; // x6
-  System_Int32_array *v83; // x7
-  System_Int32_array **v84; // x1
-  System_String_array **v85; // x2
-  System_String_array **v86; // x3
-  System_Boolean_array **v87; // x4
-  System_Int32_array **v88; // x5
-  System_Int32_array *v89; // x6
-  System_Int32_array *v90; // x7
-  __int64 v91; // x0
+  ServantStatusBattleListViewItem_o *p_asyncRep_5__2; // x21
+  int32_t v36; // w2
+  int32_t v37; // w3
+  struct UnityEngine_Object_array **p_objectList; // x20
+  int32_t v39; // w2
+  int32_t v40; // w3
+  int32_t v41; // w2
+  int32_t v42; // w3
+  struct UnityEngine_Object_array **v43; // x20
+  UnityEngine_AssetBundleRequest_o *AllAssetsAsync; // x0
+  int32_t v45; // w2
+  int32_t v46; // w3
+  Il2CppObject *v47; // x1
+  ServantStatusBattleListViewItem_o *v48; // x19
+  int32_t v49; // w2
+  int32_t v50; // w3
 
   v2 = this;
-  if ( (byte_4389F35 & 1) == 0 )
+  if ( (byte_48E1902 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_Object__AddRange__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Object__ToArray__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Object___ctor__);
-    sub_B775C4(&System_Collections_Generic_List_Object__TypeInfo);
-    this = (AssetData__SetAssetBundleData_d__61_o *)sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_4389F35 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Object__AddRange__, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Object__ToArray__, v3);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Object___ctor__, v4);
+    sub_1B00CCC(&System_Collections_Generic_List_Object__TypeInfo, v5);
+    this = (AssetData__SetAssetBundleData_d__61_o *)sub_1B00CCC(&UnityEngine_Object_TypeInfo, v6);
+    byte_48E1902 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -2135,46 +1980,45 @@ bool __fastcall AssetData__SetAssetBundleData_d__61__MoveNext(
     this = (AssetData__SetAssetBundleData_d__61_o *)v2->fields._asyncRep_5__2;
     v2->fields.__1__state = -1;
     if ( !this )
-      goto LABEL_41;
-    list_5__3 = (System_Collections_Generic_List_TimeZoneInfo_AdjustmentRule__o *)v2->fields._list_5__3;
+      goto LABEL_40;
+    list_5__3 = (System_Collections_Generic_List_object__o *)v2->fields._list_5__3;
     this = (AssetData__SetAssetBundleData_d__61_o *)UnityEngine_AssetBundleRequest__get_allAssets(
                                                       (UnityEngine_AssetBundleRequest_o *)this,
                                                       0LL);
     if ( !list_5__3 )
-      goto LABEL_41;
-    System_Collections_Generic_List_TimeZoneInfo_AdjustmentRule___AddRange(
+      goto LABEL_40;
+    System_Collections_Generic_List_object___AddRange(
       list_5__3,
       (System_Collections_Generic_IEnumerable_T__o *)this,
-      (const MethodInfo_30534E8 *)Method_System_Collections_Generic_List_Object__AddRange__);
+      (const MethodInfo_33C1BDC *)Method_System_Collections_Generic_List_Object__AddRange__);
     v2->fields._asyncRep_5__2 = 0LL;
-    sub_B77560((BattleServantConfConponent_o *)&v2->fields._asyncRep_5__2, 0LL, v45, v46, v47, v48, v49, v50);
-    p__7__wrap3 = (BattleServantConfConponent_o *)&v2->fields.__7__wrap3;
-    v29 = v2->fields.__7__wrap4 + 1;
-    v2->fields.__7__wrap4 = v29;
-    goto LABEL_25;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._asyncRep_5__2, 0, v23, v24);
+    v21 = v2->fields.__7__wrap4 + 1;
+    v2->fields.__7__wrap4 = v21;
+    goto LABEL_21;
   }
   if ( _1__state == 1 )
   {
-    p_asyncRep_5__2 = (BattleServantConfConponent_o *)&v2->fields._asyncRep_5__2;
+    p_asyncRep_5__2 = (ServantStatusBattleListViewItem_o *)&v2->fields._asyncRep_5__2;
     this = (AssetData__SetAssetBundleData_d__61_o *)v2->fields._asyncRep_5__2;
     v2->fields.__1__state = -1;
     if ( !this )
-      goto LABEL_41;
+      goto LABEL_40;
     this = (AssetData__SetAssetBundleData_d__61_o *)UnityEngine_AssetBundleRequest__get_allAssets(
                                                       (UnityEngine_AssetBundleRequest_o *)this,
                                                       0LL);
     if ( !_4__this )
-      goto LABEL_41;
+      goto LABEL_40;
     _4__this->fields.objectList = (struct UnityEngine_Object_array *)this;
     p_objectList = &_4__this->fields.objectList;
-    sub_B77560((BattleServantConfConponent_o *)p_objectList, (System_Int32_array **)this, v31, v32, v33, v34, v35, v36);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)p_objectList, (int32_t)this, v36, v37);
     *((_BYTE *)p_objectList + 8) = 0;
-LABEL_33:
+LABEL_32:
     p_asyncRep_5__2->klass = 0LL;
-    sub_B77560(p_asyncRep_5__2, 0LL, v38, v39, v40, v41, v42, v43);
+    sub_1B00C70(p_asyncRep_5__2, 0, v39, v40);
     this = (AssetData__SetAssetBundleData_d__61_o *)v2->fields.bundle;
     if ( !this )
-      goto LABEL_41;
+      goto LABEL_40;
     UnityEngine_AssetBundle__Unload((UnityEngine_AssetBundle_o *)this, 0, 0LL);
     return 0;
   }
@@ -2185,121 +2029,105 @@ LABEL_33:
   if ( resourceNames )
   {
     if ( !_4__this )
-      goto LABEL_41;
+      goto LABEL_40;
   }
   else
   {
     if ( !_4__this )
-      goto LABEL_41;
+      goto LABEL_40;
     if ( _4__this->fields.objectList )
       return 0;
   }
   if ( _4__this->fields.type )
     return 0;
   bundle = (UnityEngine_Object_o *)v2->fields.bundle;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  if ( UnityEngine_Object__op_Equality(bundle, 0LL, 0LL) || AssetData__GetExt(_4__this, 0LL) )
+  if ( UnityEngine_Object__op_Equality(bundle, 0LL, 0LL) || AssetData__GetExt(_4__this, v11) )
     return 0;
   if ( v2->fields.resourceNames )
   {
-    v7 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_Object__TypeInfo);
-    System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-      v7,
-      (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_Object___ctor__);
-    v2->fields._list_5__3 = (struct System_Collections_Generic_List_Object__o *)v7;
-    p_list_5__3 = (AssetData__SetAssetBundleData_d__61_o **)&v2->fields._list_5__3;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&v2->fields._list_5__3,
-      (System_Int32_array **)v7,
-      v9,
-      v10,
-      v11,
+    v12 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_Object__TypeInfo);
+    System_Collections_Generic_List_object____ctor(
       v12,
-      v13,
-      v14);
+      (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_Object___ctor__);
+    v2->fields._list_5__3 = (struct System_Collections_Generic_List_Object__o *)v12;
+    p_list_5__3 = (AssetData__SetAssetBundleData_d__61_o **)&v2->fields._list_5__3;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._list_5__3, (int32_t)v12, v14, v15);
     method = (const MethodInfo *)_4__this->fields.objectList;
     if ( method )
     {
       this = *p_list_5__3;
       if ( !*p_list_5__3 )
-        goto LABEL_41;
-      System_Collections_Generic_List_TimeZoneInfo_AdjustmentRule___AddRange(
-        (System_Collections_Generic_List_TimeZoneInfo_AdjustmentRule__o *)this,
+        goto LABEL_40;
+      System_Collections_Generic_List_object___AddRange(
+        (System_Collections_Generic_List_object__o *)this,
         (System_Collections_Generic_IEnumerable_T__o *)method,
-        (const MethodInfo_30534E8 *)Method_System_Collections_Generic_List_Object__AddRange__);
+        (const MethodInfo_33C1BDC *)Method_System_Collections_Generic_List_Object__AddRange__);
     }
-    v21 = (System_Int32_array **)v2->fields.resourceNames;
-    p__7__wrap3 = (BattleServantConfConponent_o *)&v2->fields.__7__wrap3;
-    v2->fields.__7__wrap3 = (struct System_String_array *)v21;
-    sub_B77560((BattleServantConfConponent_o *)&v2->fields.__7__wrap3, v21, v15, v16, v17, v18, v19, v20);
-    v29 = 0;
+    v18 = v2->fields.resourceNames;
+    v2->fields.__7__wrap3 = v18;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields.__7__wrap3, (int32_t)v18, v16, v17);
+    v21 = 0;
     v2->fields.__7__wrap4 = 0;
-LABEL_25:
-    klass = p__7__wrap3->klass;
-    if ( !p__7__wrap3->klass )
-      goto LABEL_41;
-    namespaze = (int)klass->_1.namespaze;
-    if ( v29 < namespaze )
+LABEL_21:
+    this = (AssetData__SetAssetBundleData_d__61_o *)&v2->fields.__7__wrap3;
+    _7__wrap3 = v2->fields.__7__wrap3;
+    if ( !_7__wrap3 )
+      goto LABEL_40;
+    max_length = _7__wrap3->max_length;
+    if ( v21 < max_length )
     {
-      if ( v29 >= (unsigned int)namespaze )
-      {
-        v91 = sub_B776C8(this);
-        sub_B77668(v91, 0LL);
-      }
+      if ( v21 >= (unsigned int)max_length )
+        sub_1B00F30(this, method);
       this = (AssetData__SetAssetBundleData_d__61_o *)v2->fields.bundle;
       if ( this )
       {
-        AssetAsync = (System_Int32_array **)UnityEngine_AssetBundle__LoadAssetAsync(
-                                              (UnityEngine_AssetBundle_o *)this,
-                                              *((System_String_o **)&klass->_1.byval_arg.data + v29),
-                                              0LL);
-        v2->fields._asyncRep_5__2 = (struct UnityEngine_AssetBundleRequest_o *)AssetAsync;
-        v54 = (BattleServantConfConponent_o *)&v2->fields._asyncRep_5__2;
-        sub_B77560(v54, AssetAsync, v55, v56, v57, v58, v59, v60);
-        v61 = (System_Int32_array **)v54->klass;
-        v54[-1].fields.BattleAssetUIAtlas = (struct UIAtlas_o *)v54->klass;
-        sub_B77560((BattleServantConfConponent_o *)((char *)v54 - 32), v61, v62, v63, v64, v65, v66, v67);
-        LODWORD(v54[-1].fields.data) = 2;
+        AssetAsync = UnityEngine_AssetBundle__LoadAssetAsync(
+                       (UnityEngine_AssetBundle_o *)this,
+                       _7__wrap3->m_Items[v21],
+                       0LL);
+        v2->fields._asyncRep_5__2 = AssetAsync;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._asyncRep_5__2, (int32_t)AssetAsync, v28, v29);
+        asyncRep_5__2 = (Il2CppObject *)v2->fields._asyncRep_5__2;
+        v2->fields.__2__current = asyncRep_5__2;
+        p__2__current = (ServantStatusBattleListViewItem_o *)&v2->fields.__2__current;
+        sub_1B00C70(p__2__current, (int32_t)asyncRep_5__2, v32, v33);
+        *(_DWORD *)&p__2__current[-1].fields.isMine = 2;
         return 1;
       }
-LABEL_41:
-      sub_B7769C(this, method);
+LABEL_40:
+      sub_1B00F28(this, method);
     }
     v2->fields.__7__wrap3 = 0LL;
-    sub_B77560(p__7__wrap3, 0LL, v23, v24, v25, v26, v27, v28);
-    p_asyncRep_5__2 = (BattleServantConfConponent_o *)&v2->fields._list_5__3;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)this, 0, v19, v20);
+    p_asyncRep_5__2 = (ServantStatusBattleListViewItem_o *)&v2->fields._list_5__3;
     this = (AssetData__SetAssetBundleData_d__61_o *)v2->fields._list_5__3;
     if ( !this )
-      goto LABEL_41;
-    this = (AssetData__SetAssetBundleData_d__61_o *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
-                                                      (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)this,
-                                                      (const MethodInfo_30553E4 *)Method_System_Collections_Generic_List_Object__ToArray__);
+      goto LABEL_40;
+    this = (AssetData__SetAssetBundleData_d__61_o *)System_Collections_Generic_List_object___ToArray(
+                                                      (System_Collections_Generic_List_object__o *)this,
+                                                      (const MethodInfo_33C3528 *)Method_System_Collections_Generic_List_Object__ToArray__);
     if ( !_4__this )
-      goto LABEL_41;
+      goto LABEL_40;
     _4__this->fields.objectList = (struct UnityEngine_Object_array *)this;
-    v75 = &_4__this->fields.objectList;
-    sub_B77560((BattleServantConfConponent_o *)v75, (System_Int32_array **)this, v69, v70, v71, v72, v73, v74);
-    *((_BYTE *)v75 + 8) = 1;
-    goto LABEL_33;
+    v43 = &_4__this->fields.objectList;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)v43, (int32_t)this, v41, v42);
+    *((_BYTE *)v43 + 8) = 1;
+    goto LABEL_32;
   }
   this = (AssetData__SetAssetBundleData_d__61_o *)v2->fields.bundle;
   if ( !this )
-    goto LABEL_41;
-  AllAssetsAsync = (System_Int32_array **)UnityEngine_AssetBundle__LoadAllAssetsAsync(
-                                            (UnityEngine_AssetBundle_o *)this,
-                                            0LL);
-  v2->fields._asyncRep_5__2 = (struct UnityEngine_AssetBundleRequest_o *)AllAssetsAsync;
-  v77 = (BattleServantConfConponent_o *)&v2->fields._asyncRep_5__2;
-  sub_B77560(v77, AllAssetsAsync, v78, v79, v80, v81, v82, v83);
-  v84 = (System_Int32_array **)v77->klass;
-  v77[-1].fields.BattleAssetUIAtlas = (struct UIAtlas_o *)v77->klass;
-  sub_B77560((BattleServantConfConponent_o *)((char *)v77 - 32), v84, v85, v86, v87, v88, v89, v90);
+    goto LABEL_40;
+  AllAssetsAsync = UnityEngine_AssetBundle__LoadAllAssetsAsync((UnityEngine_AssetBundle_o *)this, 0LL);
+  v2->fields._asyncRep_5__2 = AllAssetsAsync;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._asyncRep_5__2, (int32_t)AllAssetsAsync, v45, v46);
+  v47 = (Il2CppObject *)v2->fields._asyncRep_5__2;
+  v2->fields.__2__current = v47;
+  v48 = (ServantStatusBattleListViewItem_o *)&v2->fields.__2__current;
+  sub_1B00C70(v48, (int32_t)v47, v49, v50);
   result = 1;
-  LODWORD(v77[-1].fields.data) = 1;
+  *(_DWORD *)&v48[-1].fields.isMine = 1;
   return result;
 }
 
@@ -2320,11 +2148,11 @@ void __fastcall __noreturn AssetData__SetAssetBundleData_d__61__System_Collectio
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
+  v2 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B00F18(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B775C8(&Method_AssetData__SetAssetBundleData_d__61_System_Collections_IEnumerator_Reset__);
-  sub_B77668(v3, v4);
+  v4 = sub_1B00CE0(&Method_AssetData__SetAssetBundleData_d__61_System_Collections_IEnumerator_Reset__);
+  sub_1B00DF4(v3, v4);
 }
 
 

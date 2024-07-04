@@ -11,168 +11,157 @@ void __fastcall SelectImageLimitListViewItemDraw__SetButton(
         SelectImageLimitListViewItem_o *item,
         const MethodInfo *method)
 {
-  ServantCostumeMaster_o *Master_WarQuestSelectionMaster; // x0
+  __int64 v5; // x1
   __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  ServantCostumeMaster_o *Master_object; // x0
+  __int64 v11; // x1
   UIRangeLabel_o *limitCountRangeLabel; // x21
-  struct UIRangeLabel_o **p_limitCountRangeLabel; // x23
-  System_String_o *v9; // x1
-  System_String_o *v10; // x0
-  System_String_o *v11; // x22
-  UIRangeLabel_o *v12; // x21
-  float *v13; // x11
-  float *v14; // x8
-  float *v15; // x9
-  float *v16; // x10
-  float *v17; // x11
+  System_String_o *v13; // x1
+  System_String_o *v14; // x0
+  System_String_o *v15; // x22
+  UIRangeLabel_o *v16; // x21
+  _BOOL4 isSelected; // w22
+  float *v18; // x11
+  float *v19; // x8
+  float *v20; // x9
+  float *v21; // x10
+  float *v22; // x11
   float *lookup; // x11
-  __int64 *v19; // x8
+  __int64 *v24; // x8
   int32_t limitCount; // [xsp+4h] [xbp-3Ch] BYREF
   ServantCostumeEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
-  UnityEngine_Color_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v27; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4390D61 & 1) == 0 )
+  if ( (byte_48DE3F5 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMaster_ServantCostumeMaster___);
-    sub_B775C4(&DataManager_TypeInfo);
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&StringLiteral_12222/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/);
-    sub_B775C4(&StringLiteral_17304/*"btn_bg_20"*/);
-    sub_B775C4(&StringLiteral_17305/*"btn_bg_21"*/);
-    byte_4390D61 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMaster_ServantCostumeMaster___, item);
+    sub_1B00CCC(&DataManager_TypeInfo, v5);
+    sub_1B00CCC(&LocalizationManager_TypeInfo, v6);
+    sub_1B00CCC(&StringLiteral_11694/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v7);
+    sub_1B00CCC(&StringLiteral_17241/*"btn_bg_20"*/, v8);
+    sub_1B00CCC(&StringLiteral_17242/*"btn_bg_21"*/, v9);
+    byte_48DE3F5 = 1;
   }
   entity = 0LL;
   limitCount = 0;
-  if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (ServantCostumeMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ServantCostumeMaster___);
-  if ( !item || !Master_WarQuestSelectionMaster )
-    goto LABEL_53;
-  if ( ServantCostumeMaster__TryGetEntity(
-         Master_WarQuestSelectionMaster,
-         &entity,
-         item->fields.svtId,
-         item->fields.limitCount,
-         0LL) )
+  Master_object = (ServantCostumeMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_ServantCostumeMaster___);
+  if ( !item || !Master_object )
+    goto LABEL_43;
+  if ( ServantCostumeMaster__TryGetEntity(Master_object, &entity, item->fields.svtId, item->fields.limitCount, 0LL) )
   {
-    p_limitCountRangeLabel = &this->fields.limitCountRangeLabel;
-    limitCountRangeLabel = this->fields.limitCountRangeLabel;
-    Master_WarQuestSelectionMaster = (ServantCostumeMaster_o *)entity;
+    Master_object = (ServantCostumeMaster_o *)entity;
     if ( !entity )
-      goto LABEL_53;
-    Master_WarQuestSelectionMaster = (ServantCostumeMaster_o *)ServantCostumeEntity__getShortName(entity, 0LL);
+      goto LABEL_43;
+    limitCountRangeLabel = this->fields.limitCountRangeLabel;
+    Master_object = (ServantCostumeMaster_o *)ServantCostumeEntity__getShortName(entity, 0LL);
     if ( !limitCountRangeLabel )
-      goto LABEL_53;
-LABEL_27:
-    v9 = (System_String_o *)Master_WarQuestSelectionMaster;
-    goto LABEL_28;
+      goto LABEL_43;
+LABEL_23:
+    v13 = (System_String_o *)Master_object;
+    goto LABEL_24;
   }
-  p_limitCountRangeLabel = &this->fields.limitCountRangeLabel;
   limitCountRangeLabel = this->fields.limitCountRangeLabel;
   if ( item->fields.limitCount <= 3 )
   {
     limitCount = item->fields.limitCount;
-    v10 = System_Int32__ToString((int32_t)&limitCount, 0LL);
-    v11 = System_String__Concat_44901936((System_String_o *)StringLiteral_12222/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v10, 0LL);
-    if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
+    v14 = System_Int32__ToString((int32_t)&limitCount, 0LL);
+    v15 = System_String__Concat_60325748((System_String_o *)StringLiteral_11694/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v14, 0LL);
+    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    }
-    Master_WarQuestSelectionMaster = (ServantCostumeMaster_o *)LocalizationManager__Get(v11, 0LL);
+    Master_object = (ServantCostumeMaster_o *)LocalizationManager__Get(v15, 0LL);
     if ( !limitCountRangeLabel )
-      goto LABEL_53;
-    goto LABEL_27;
+      goto LABEL_43;
+    goto LABEL_23;
   }
-  if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !LocalizationManager_TypeInfo->_2.cctor_finished )
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+  if ( !byte_48DE045 )
+  {
+    sub_1B00CCC(&LocalizationManager_TypeInfo, v11);
+    byte_48DE045 = 1;
+  }
+  Master_object = (ServantCostumeMaster_o *)LocalizationManager_TypeInfo;
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  }
-  if ( !byte_4388DC6 )
-  {
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    byte_4388DC6 = 1;
-  }
-  Master_WarQuestSelectionMaster = (ServantCostumeMaster_o *)LocalizationManager_TypeInfo;
-  if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !LocalizationManager_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Master_WarQuestSelectionMaster = (ServantCostumeMaster_o *)LocalizationManager_TypeInfo;
+    Master_object = (ServantCostumeMaster_o *)LocalizationManager_TypeInfo;
   }
   if ( !limitCountRangeLabel )
-    goto LABEL_53;
-  v9 = *(System_String_o **)&Master_WarQuestSelectionMaster[2].fields._lookup->fields.count;
-LABEL_28:
-  UIRangeLabel__Set(limitCountRangeLabel, v9, 0LL, 1, 0, 0LL);
-  v12 = *p_limitCountRangeLabel;
-  if ( !item->fields.isSelected )
+    goto LABEL_43;
+  v13 = *(System_String_o **)&Master_object[2].fields._lookup->fields._count;
+LABEL_24:
+  UIRangeLabel__Set(limitCountRangeLabel, v13, 0LL, 1, 0, 0LL);
+  v16 = this->fields.limitCountRangeLabel;
+  isSelected = item->fields.isSelected;
+  if ( LocalizationManager_TypeInfo->_2.cctor_finished )
   {
-    if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
+    if ( item->fields.isSelected )
+      goto LABEL_26;
+    goto LABEL_33;
+  }
+  j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+  if ( !isSelected )
+  {
+LABEL_33:
+    if ( !byte_48DE046 )
+    {
+      sub_1B00CCC(&LocalizationManager_TypeInfo, v11);
+      byte_48DE046 = 1;
+    }
+    Master_object = (ServantCostumeMaster_o *)LocalizationManager_TypeInfo;
+    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+      Master_object = (ServantCostumeMaster_o *)LocalizationManager_TypeInfo;
     }
-    if ( !byte_4387FCE )
-    {
-      sub_B775C4(&LocalizationManager_TypeInfo);
-      byte_4387FCE = 1;
-    }
-    Master_WarQuestSelectionMaster = (ServantCostumeMaster_o *)LocalizationManager_TypeInfo;
-    if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      Master_WarQuestSelectionMaster = (ServantCostumeMaster_o *)LocalizationManager_TypeInfo;
-    }
-    lookup = (float *)Master_WarQuestSelectionMaster[2].fields._lookup;
-    v14 = lookup + 20;
-    v15 = lookup + 21;
-    v16 = lookup + 22;
-    v17 = lookup + 23;
-    if ( v12 )
-      goto LABEL_48;
-LABEL_53:
-    sub_B7769C(Master_WarQuestSelectionMaster, v6);
+    lookup = (float *)Master_object[2].fields._lookup;
+    v19 = lookup + 20;
+    v20 = lookup + 21;
+    v21 = lookup + 22;
+    v22 = lookup + 23;
+    if ( v16 )
+      goto LABEL_38;
+LABEL_43:
+    sub_1B00F28(Master_object, v11);
   }
-  if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
-    && !LocalizationManager_TypeInfo->_2.cctor_finished )
+LABEL_26:
+  if ( !byte_48DE047 )
+  {
+    sub_1B00CCC(&LocalizationManager_TypeInfo, v11);
+    byte_48DE047 = 1;
+  }
+  Master_object = (ServantCostumeMaster_o *)LocalizationManager_TypeInfo;
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    Master_object = (ServantCostumeMaster_o *)LocalizationManager_TypeInfo;
   }
-  if ( !byte_4387FCF )
-  {
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    byte_4387FCF = 1;
-  }
-  Master_WarQuestSelectionMaster = (ServantCostumeMaster_o *)LocalizationManager_TypeInfo;
-  if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !LocalizationManager_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Master_WarQuestSelectionMaster = (ServantCostumeMaster_o *)LocalizationManager_TypeInfo;
-  }
-  v13 = (float *)Master_WarQuestSelectionMaster[2].fields._lookup;
-  v14 = v13 + 24;
-  v15 = v13 + 25;
-  v16 = v13 + 26;
-  v17 = v13 + 27;
-  if ( !v12 )
-    goto LABEL_53;
-LABEL_48:
-  v22.fields.b = *v16;
-  v22.fields.g = *v15;
-  v22.fields.r = *v14;
-  v22.fields.a = *v17;
-  UIRangeLabel__set_effectColor(v12, v22, 0LL);
-  Master_WarQuestSelectionMaster = (ServantCostumeMaster_o *)this->fields.limitCountButtonSprite;
-  if ( !Master_WarQuestSelectionMaster )
-    goto LABEL_53;
+  v18 = (float *)Master_object[2].fields._lookup;
+  v19 = v18 + 24;
+  v20 = v18 + 25;
+  v21 = v18 + 26;
+  v22 = v18 + 27;
+  if ( !v16 )
+    goto LABEL_43;
+LABEL_38:
+  v27.fields.a = *v22;
+  v27.fields.b = *v21;
+  v27.fields.g = *v20;
+  v27.fields.r = *v19;
+  UIRangeLabel__set_effectColor(v16, v27, 0LL);
+  Master_object = (ServantCostumeMaster_o *)this->fields.limitCountButtonSprite;
+  if ( !Master_object )
+    goto LABEL_43;
   if ( item->fields.isSelected )
-    v19 = &StringLiteral_17305/*"btn_bg_21"*/;
+    v24 = &StringLiteral_17242/*"btn_bg_21"*/;
   else
-    v19 = &StringLiteral_17304/*"btn_bg_20"*/;
-  UISprite__set_spriteName((UISprite_o *)Master_WarQuestSelectionMaster, (System_String_o *)*v19, 0LL);
+    v24 = &StringLiteral_17241/*"btn_bg_20"*/;
+  UISprite__set_spriteName((UISprite_o *)Master_object, (System_String_o *)*v24, 0LL);
 }
 
 
@@ -182,57 +171,53 @@ void __fastcall SelectImageLimitListViewItemDraw__SetInput(
         bool isInput,
         const MethodInfo *method)
 {
-  UnityEngine_Object_o *baseButton; // x22
+  __int64 v7; // x1
   __int64 v8; // x1
-  UnityEngine_Component_o *Component_WebViewObject; // x0
+  UnityEngine_Object_o *baseButton; // x22
+  __int64 v10; // x1
+  UnityEngine_Component_o *Component_object; // x0
   UISprite_o *servantFaceIconSprite; // x23
   int32_t limitCount; // w21
   int32_t svtId; // w22
-  const MethodInfo *v13; // x2
+  const MethodInfo *v15; // x2
 
-  if ( (byte_4390D60 & 1) == 0 )
+  if ( (byte_48DE3F4 & 1) == 0 )
   {
-    sub_B775C4(&AtlasManager_TypeInfo);
-    sub_B775C4(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_4390D60 = 1;
+    sub_1B00CCC(&AtlasManager_TypeInfo, item);
+    sub_1B00CCC(&Method_UnityEngine_Component_GetComponent_Collider___, v7);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v8);
+    byte_48DE3F4 = 1;
   }
   if ( item )
   {
     baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
     if ( UnityEngine_Object__op_Inequality(baseButton, 0LL, 0LL) )
     {
-      Component_WebViewObject = (UnityEngine_Component_o *)this->fields.baseButton;
-      if ( !Component_WebViewObject
-        || (Component_WebViewObject = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_WebViewObject_(
-                                                                   Component_WebViewObject,
-                                                                   (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
-        || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_WebViewObject, isInput, 0LL),
-            (Component_WebViewObject = (UnityEngine_Component_o *)this->fields.baseButton) == 0LL) )
+      Component_object = (UnityEngine_Component_o *)this->fields.baseButton;
+      if ( !Component_object
+        || (Component_object = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
+                                                            Component_object,
+                                                            (const MethodInfo_2D596B4 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
+        || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0LL),
+            (Component_object = (UnityEngine_Component_o *)this->fields.baseButton) == 0LL) )
       {
-        sub_B7769C(Component_WebViewObject, v8);
+        sub_1B00F28(Component_object, v10);
       }
-      ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, __int64, Il2CppRuntimeInterfaceOffsetPair *))Component_WebViewObject->klass[1]._1.implementedInterfaces)(
-        Component_WebViewObject,
+      ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, __int64, Il2CppRuntimeInterfaceOffsetPair *))Component_object->klass[1]._1.implementedInterfaces)(
+        Component_object,
         0LL,
         1LL,
-        Component_WebViewObject->klass[1]._1.interfaceOffsets);
+        Component_object->klass[1]._1.interfaceOffsets);
     }
     servantFaceIconSprite = this->fields.servantFaceIconSprite;
     svtId = item->fields.svtId;
     limitCount = item->fields.limitCount;
-    if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !AtlasManager_TypeInfo->_2.cctor_finished )
-    {
+    if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    }
     AtlasManager__SetFaceImage(servantFaceIconSprite, svtId, limitCount, 0LL);
-    SelectImageLimitListViewItemDraw__SetButton(this, item, v13);
+    SelectImageLimitListViewItemDraw__SetButton(this, item, v15);
   }
 }
 
@@ -248,21 +233,18 @@ void __fastcall SelectImageLimitListViewItemDraw__SetItem(
   int32_t svtId; // w22
   const MethodInfo *v10; // x2
 
-  if ( (byte_4390D5F & 1) == 0 )
+  if ( (byte_48DE3F3 & 1) == 0 )
   {
-    sub_B775C4(&AtlasManager_TypeInfo);
-    byte_4390D5F = 1;
+    sub_1B00CCC(&AtlasManager_TypeInfo, item);
+    byte_48DE3F3 = 1;
   }
   if ( item && mode )
   {
     servantFaceIconSprite = this->fields.servantFaceIconSprite;
     svtId = item->fields.svtId;
     limitCount = item->fields.limitCount;
-    if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !AtlasManager_TypeInfo->_2.cctor_finished )
-    {
+    if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    }
     AtlasManager__SetFaceImage(servantFaceIconSprite, svtId, limitCount, 0LL);
     SelectImageLimitListViewItemDraw__SetButton(this, item, v10);
   }

@@ -4,41 +4,42 @@ void __fastcall TreasureBoxDrawRequest___ctor(TreasureBoxDrawRequest_o *this, co
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall TreasureBoxDrawRequest__beginRequest(
         TreasureBoxDrawRequest_o *this,
         int32_t treasureBoxId,
         int32_t drawNum,
         const MethodInfo *method)
 {
-  if ( (byte_438D63C & 1) == 0 )
+  __int64 v7; // x1
+
+  if ( (byte_48E40C1 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_21609/*"num"*/);
-    sub_B775C4(&StringLiteral_23260/*"treasureBoxId"*/);
-    byte_438D63C = 1;
+    sub_1B00CCC(&StringLiteral_21876/*"num"*/, *(_QWORD *)&treasureBoxId);
+    sub_1B00CCC(&StringLiteral_23699/*"treasureBoxId"*/, v7);
+    byte_48E40C1 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23260/*"treasureBoxId"*/, treasureBoxId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21609/*"num"*/, drawNum, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23699/*"treasureBoxId"*/, treasureBoxId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21876/*"num"*/, drawNum, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
 
 System_String_o *__fastcall TreasureBoxDrawRequest__getURL(TreasureBoxDrawRequest_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_438D63B & 1) == 0 )
+  if ( (byte_48E40C0 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&StringLiteral_23259/*"treasureBox/draw"*/);
-    byte_438D63B = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_23698/*"treasureBox/draw"*/, v2);
+    byte_48E40C0 = 1;
   }
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_44901936(BaseUrl, (System_String_o *)StringLiteral_23259/*"treasureBox/draw"*/, 0LL);
+  return System_String__Concat_60325748(BaseUrl, (System_String_o *)StringLiteral_23698/*"treasureBox/draw"*/, 0LL);
 }
 
 
@@ -47,35 +48,34 @@ void __fastcall TreasureBoxDrawRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  ResponseData_o *v5; // x0
-  ResponseData_o *v6; // x20
+  __int64 v5; // x1
+  __int64 v6; // x1
+  ResponseData_o *v7; // x0
+  ResponseData_o *v8; // x20
   Il2CppObject *success; // x20
-  System_String_o *v8; // x1
+  System_String_o *v10; // x1
 
-  if ( (byte_438D63D & 1) == 0 )
+  if ( (byte_48E40C2 & 1) == 0 )
   {
-    sub_B775C4(&JsonManager_TypeInfo);
-    sub_B775C4(&ResponseCommandKind_TypeInfo);
-    sub_B775C4(&StringLiteral_21504/*"ng"*/);
-    byte_438D63D = 1;
+    sub_1B00CCC(&JsonManager_TypeInfo, responseList);
+    sub_1B00CCC(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B00CCC(&StringLiteral_21754/*"ng"*/, v6);
+    byte_48E40C2 = 1;
   }
-  if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ResponseCommandKind_TypeInfo->_2.cctor_finished )
-  {
+  if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  }
-  v5 = ResponseCommandKind__SearchData(109, responseList, 0LL);
-  if ( v5
-    && (v6 = v5, ResponseData__checkError_30128096(v5, 0LL))
-    && (success = (Il2CppObject *)v6->fields.success) != 0LL )
+  v7 = ResponseCommandKind__SearchData(109, responseList, 0LL);
+  if ( v7
+    && (v8 = v7, ResponseData__checkError_39752340(v7, 0LL))
+    && (success = (Il2CppObject *)v8->fields.success) != 0LL )
   {
-    if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
+    if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v8 = JsonManager__toJson(success, 0, 0, 0LL);
+    v10 = JsonManager__toJson(success, 0, 0, 0LL);
   }
   else
   {
-    v8 = (System_String_o *)StringLiteral_21504/*"ng"*/;
+    v10 = (System_String_o *)StringLiteral_21754/*"ng"*/;
   }
-  RequestBase__completed((RequestBase_o *)this, v8, 0LL);
+  RequestBase__completed((RequestBase_o *)this, v10, 0LL);
 }

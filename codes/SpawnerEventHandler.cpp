@@ -1,77 +1,67 @@
 void __fastcall SpawnerEventHandler___ctor(SpawnerEventHandler_o *this, const MethodInfo *method)
 {
-  LOBYTE(this->fields.particleArray) = 1;
+  this->fields.isReset = 1;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
 
 void __fastcall SpawnerEventHandler__Init(SpawnerEventHandler_o *this, const MethodInfo *method)
 {
-  System_Int32_array **ComponentsInChildren_USTimelineContainer; // x0
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
+  System_Object_array *ComponentsInChildren_object__47554852; // x0
+  struct UnityEngine_ParticleSystem_array **p_particleArray; // x19
+  int32_t v5; // w2
+  int32_t v6; // w3
 
-  if ( (byte_438BEBE & 1) == 0 )
+  if ( (byte_48E58EF & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
-    byte_438BEBE = 1;
+    sub_1B00CCC(&Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___, method);
+    byte_48E58EF = 1;
   }
-  ComponentsInChildren_USTimelineContainer = (System_Int32_array **)UnityEngine_Component__GetComponentsInChildren_USTimelineContainer_(
-                                                                      (UnityEngine_Component_o *)this,
-                                                                      (const MethodInfo_1C6DAB8 *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
-  *(_QWORD *)&this->fields.isInitilized = ComponentsInChildren_USTimelineContainer;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.isInitilized,
-    ComponentsInChildren_USTimelineContainer,
-    v4,
+  ComponentsInChildren_object__47554852 = UnityEngine_Component__GetComponentsInChildren_object__47554852(
+                                            (UnityEngine_Component_o *)this,
+                                            (const MethodInfo_2D5A124 *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
+  this->fields.particleArray = (struct UnityEngine_ParticleSystem_array *)ComponentsInChildren_object__47554852;
+  p_particleArray = &this->fields.particleArray;
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)p_particleArray,
+    (int32_t)ComponentsInChildren_object__47554852,
     v5,
-    v6,
-    v7,
-    v8,
-    v9);
-  LOBYTE(this[1].klass) = 1;
+    v6);
+  *((_BYTE *)p_particleArray + 8) = 1;
 }
 
 
 void __fastcall SpawnerEventHandler__OnDespawn(SpawnerEventHandler_o *this, const MethodInfo *method)
 {
   SpawnerEventHandler_o *v2; // x19
-  __int64 v3; // x8
+  struct UnityEngine_ParticleSystem_array *particleArray; // x8
   __int64 v4; // x20
-  int v5; // w9
-  __int64 v6; // x0
+  int max_length; // w9
 
   v2 = this;
-  if ( !LOBYTE(this[1].klass) )
+  if ( !this->fields.isInitilized )
     SpawnerEventHandler__Init(this, method);
-  v3 = *(_QWORD *)&v2->fields.isInitilized;
-  if ( v3 && LOBYTE(v2->fields.particleArray) )
+  particleArray = v2->fields.particleArray;
+  if ( particleArray && v2->fields.isReset )
   {
     v4 = 0LL;
     while ( 1 )
     {
-      v5 = *(_DWORD *)(v3 + 24);
-      if ( (int)v4 >= v5 )
+      max_length = particleArray->max_length;
+      if ( (int)v4 >= max_length )
         break;
-      if ( (unsigned int)v4 >= v5 )
-      {
-        v6 = sub_B776C8(this);
-        sub_B77668(v6, 0LL);
-      }
-      this = *(SpawnerEventHandler_o **)(v3 + 8 * v4 + 32);
+      if ( (unsigned int)v4 >= max_length )
+        sub_1B00F30(this, method);
+      this = (SpawnerEventHandler_o *)particleArray->m_Items[v4];
       if ( this )
       {
         UnityEngine_ParticleSystem__set_time((UnityEngine_ParticleSystem_o *)this, 0.0, 0LL);
-        v3 = *(_QWORD *)&v2->fields.isInitilized;
+        particleArray = v2->fields.particleArray;
         ++v4;
-        if ( v3 )
+        if ( particleArray )
           continue;
       }
-      sub_B7769C(this, method);
+      sub_1B00F28(this, method);
     }
   }
 }
@@ -79,6 +69,6 @@ void __fastcall SpawnerEventHandler__OnDespawn(SpawnerEventHandler_o *this, cons
 
 void __fastcall SpawnerEventHandler__OnSpawn(SpawnerEventHandler_o *this, const MethodInfo *method)
 {
-  if ( !LOBYTE(this[1].klass) )
+  if ( !this->fields.isInitilized )
     SpawnerEventHandler__Init(this, method);
 }

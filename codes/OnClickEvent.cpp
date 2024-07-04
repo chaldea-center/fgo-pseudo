@@ -1,54 +1,31 @@
 void __fastcall OnClickEvent___ctor(OnClickEvent_o *this, const MethodInfo *method)
 {
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v3; // x20
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v10; // x20
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
+  __int64 v3; // x1
+  System_Collections_Generic_List_object__o *v4; // x20
+  int32_t v5; // w2
+  int32_t v6; // w3
+  System_Collections_Generic_List_object__o *v7; // x20
+  int32_t v8; // w2
+  int32_t v9; // w3
 
-  if ( (byte_438A251 & 1) == 0 )
+  if ( (byte_48E621C & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
-    sub_B775C4(&System_Collections_Generic_List_EventDelegate__TypeInfo);
-    byte_438A251 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventDelegate___ctor__, method);
+    sub_1B00CCC(&System_Collections_Generic_List_EventDelegate__TypeInfo, v3);
+    byte_48E621C = 1;
   }
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_EventDelegate__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v3,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
-  this->fields.onSingleClick = (struct System_Collections_Generic_List_EventDelegate__o *)v3;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.onSingleClick,
-    (System_Int32_array **)v3,
+  v4 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
     v4,
-    v5,
-    v6,
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+  this->fields.onSingleClick = (struct System_Collections_Generic_List_EventDelegate__o *)v4;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.onSingleClick, (int32_t)v4, v5, v6);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
     v7,
-    v8,
-    v9);
-  v10 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_EventDelegate__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v10,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
-  this->fields.onDoubleClick = (struct System_Collections_Generic_List_EventDelegate__o *)v10;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.onDoubleClick,
-    (System_Int32_array **)v10,
-    v11,
-    v12,
-    v13,
-    v14,
-    v15,
-    v16);
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+  this->fields.onDoubleClick = (struct System_Collections_Generic_List_EventDelegate__o *)v7;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.onDoubleClick, (int32_t)v7, v8, v9);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -67,22 +44,19 @@ void __fastcall OnClickEvent__OnDoubleClick(OnClickEvent_o *this, const MethodIn
 {
   System_Collections_Generic_List_EventDelegate__o *onDoubleClick; // x19
 
-  if ( (byte_438A250 & 1) == 0 )
+  if ( (byte_48E621B & 1) == 0 )
   {
-    sub_B775C4(&EventDelegate_TypeInfo);
-    byte_438A250 = 1;
+    sub_1B00CCC(&EventDelegate_TypeInfo, method);
+    byte_48E621B = 1;
   }
   if ( this->fields.clickFlag )
   {
     this->fields.clickFlag = 0;
     this->fields.clickTime = 0.0;
     onDoubleClick = this->fields.onDoubleClick;
-    if ( (BYTE3(EventDelegate_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !EventDelegate_TypeInfo->_2.cctor_finished )
-    {
+    if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    }
-    EventDelegate__Execute_30349004(onDoubleClick, 0LL);
+    EventDelegate__Execute_45624868(onDoubleClick, 0LL);
   }
 }
 
@@ -98,20 +72,17 @@ void __fastcall OnClickEvent__Update(OnClickEvent_o *this, const MethodInfo *met
 {
   System_Collections_Generic_List_EventDelegate__o *onSingleClick; // x20
 
-  if ( (byte_438A24F & 1) == 0 )
+  if ( (byte_48E621A & 1) == 0 )
   {
-    sub_B775C4(&EventDelegate_TypeInfo);
-    byte_438A24F = 1;
+    sub_1B00CCC(&EventDelegate_TypeInfo, method);
+    byte_48E621A = 1;
   }
   if ( this->fields.clickFlag && UnityEngine_Time__get_time(0LL) > (float)(this->fields.clickTime + 0.36) )
   {
     onSingleClick = this->fields.onSingleClick;
-    if ( (BYTE3(EventDelegate_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !EventDelegate_TypeInfo->_2.cctor_finished )
-    {
+    if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    }
-    EventDelegate__Execute_30349004(onSingleClick, 0LL);
+    EventDelegate__Execute_45624868(onSingleClick, 0LL);
     this->fields.clickFlag = 0;
     this->fields.clickTime = -1.0;
   }

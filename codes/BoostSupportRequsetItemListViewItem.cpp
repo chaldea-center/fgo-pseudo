@@ -1,3 +1,4 @@
+// local variable allocation has failed, the output may be wrong!
 void __fastcall BoostSupportRequsetItemListViewItem___ctor(
         BoostSupportRequsetItemListViewItem_o *this,
         int32_t index,
@@ -6,113 +7,72 @@ void __fastcall BoostSupportRequsetItemListViewItem___ctor(
         System_Int32_array *recommendedBoostIds,
         const MethodInfo *method)
 {
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
   struct BoostEntity_o **p_boostEntity; // x22
-  System_String_array **v12; // x2
-  System_String_array **v13; // x3
-  System_Boolean_array **v14; // x4
-  System_Int32_array **v15; // x5
-  System_Int32_array *v16; // x6
-  System_Int32_array *v17; // x7
-  System_String_array **v18; // x2
-  System_String_array **v19; // x3
-  System_Boolean_array **v20; // x4
-  System_Int32_array **v21; // x5
-  System_Int32_array *v22; // x6
-  System_Int32_array *v23; // x7
-  DataManager_o *Instance; // x0
-  __int64 v25; // x1
-  struct CommonConsumeEntity_array *IdEntityList; // x0
-  System_String_array **v27; // x2
-  System_String_array **v28; // x3
-  System_Boolean_array **v29; // x4
-  System_Int32_array **v30; // x5
-  System_Int32_array *v31; // x6
-  System_Int32_array *v32; // x7
-  bool v33; // w8
+  Il2CppObject *Instance; // x0
+  __int64 v16; // x1
+  bool v17; // w0
 
-  if ( (byte_438D739 & 1) == 0 )
+  if ( (byte_48DDDCD & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_CommonConsumeMaster___);
-    sub_B775C4(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
-    sub_B775C4(&Method_System_Linq_Enumerable_Contains_int___);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438D739 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_CommonConsumeMaster___, *(_QWORD *)&index);
+    sub_1B00CCC(&Method_DataManager_GetMasterData_CommonReleaseMaster___, v11);
+    sub_1B00CCC(&Method_System_Linq_Enumerable_Contains_int___, v12);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
+    byte_48DDDCD = 1;
   }
-  ListViewItem___ctor_24167012((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_39415512((ListViewItem_o *)this, index, 0LL);
   this->fields.boostEntity = boostEntity;
   p_boostEntity = &this->fields.boostEntity;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.boostEntity,
-    (System_Int32_array **)boostEntity,
-    v12,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17);
+  sub_1B00C70(&this->fields.boostEntity);
   this->fields.usrItemEntityList = usrItemEntityList;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.usrItemEntityList,
-    (System_Int32_array **)usrItemEntityList,
-    v18,
-    v19,
-    v20,
-    v21,
-    v22,
-    v23);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1B00C70(&this->fields.usrItemEntityList);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
-  Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                Instance,
-                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
+  Instance = DataManager__GetMasterData_object_(
+               (DataManager_o *)Instance,
+               (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
   if ( !*p_boostEntity )
     goto LABEL_14;
   if ( !Instance )
     goto LABEL_14;
-  IdEntityList = CommonConsumeMaster__GetIdEntityList(
-                   (CommonConsumeMaster_o *)Instance,
-                   (*p_boostEntity)->fields.commonConsumeId,
-                   0LL);
-  this->fields.commonConsumeEntity = IdEntityList;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.commonConsumeEntity,
-    (System_Int32_array **)IdEntityList,
-    v27,
-    v28,
-    v29,
-    v30,
-    v31,
-    v32);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this->fields.commonConsumeEntity = CommonConsumeMaster__GetIdEntityList(
+                                       (CommonConsumeMaster_o *)Instance,
+                                       (*p_boostEntity)->fields.commonConsumeId,
+                                       0LL);
+  sub_1B00C70(&this->fields.commonConsumeEntity);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
-  Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                Instance,
-                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
+  Instance = DataManager__GetMasterData_object_(
+               (DataManager_o *)Instance,
+               (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
   if ( !*p_boostEntity || !Instance )
     goto LABEL_14;
-  Instance = (DataManager_o *)CommonReleaseMaster__IsOpen(
-                                (CommonReleaseMaster_o *)Instance,
-                                (*p_boostEntity)->fields.commonReleaseId,
-                                0LL,
-                                0,
-                                0LL);
+  Instance = (Il2CppObject *)CommonReleaseMaster__IsOpen(
+                               (CommonReleaseMaster_o *)Instance,
+                               (*p_boostEntity)->fields.commonReleaseId,
+                               0LL,
+                               0,
+                               0LL);
   this->fields.isRelease = (unsigned __int8)Instance & 1;
   if ( !recommendedBoostIds )
   {
-    v33 = 0;
+    v17 = 0;
     goto LABEL_13;
   }
   if ( !boostEntity )
 LABEL_14:
-    sub_B7769C(Instance, v25);
-  v33 = System_Linq_Enumerable__Contains_int_(
+    sub_1B00F28(Instance, v16);
+  v17 = System_Linq_Enumerable__Contains_int_(
           (System_Collections_Generic_IEnumerable_TSource__o *)recommendedBoostIds,
           boostEntity->fields.id,
-          (const MethodInfo_1D2A620 *)Method_System_Linq_Enumerable_Contains_int___);
+          (const MethodInfo_2D7A61C *)Method_System_Linq_Enumerable_Contains_int___);
 LABEL_13:
-  this->fields.isRecommended = v33;
+  this->fields.isRecommended = v17;
 }
 
 

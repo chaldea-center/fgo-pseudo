@@ -1,9 +1,10 @@
+// local variable allocation has failed, the output may be wrong!
 void __fastcall WarBoardChangeWinConditionTask___ctor(
         WarBoardChangeWinConditionTask_o *this,
         int32_t condId,
         const MethodInfo *method)
 {
-  WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, 0LL);
+  WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, *(const MethodInfo **)&condId);
   *(_DWORD *)(&this->fields._isPause_k__BackingField + 3) = condId;
 }
 
@@ -13,26 +14,19 @@ System_Collections_IEnumerator_o *__fastcall WarBoardChangeWinConditionTask__Exe
         const MethodInfo *method)
 {
   __int64 v3; // x20
-  __int64 v4; // x0
-  __int64 v5; // x1
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  int32_t v4; // w2
+  int32_t v5; // w3
 
-  if ( (byte_43899E3 & 1) == 0 )
+  if ( (byte_48E07AF & 1) == 0 )
   {
-    sub_B775C4(&WarBoardChangeWinConditionTask__Execute_d__2_TypeInfo);
-    byte_43899E3 = 1;
+    sub_1B00CCC(&WarBoardChangeWinConditionTask__Execute_d__2_TypeInfo, method);
+    byte_48E07AF = 1;
   }
-  v3 = sub_B77694(WarBoardChangeWinConditionTask__Execute_d__2_TypeInfo);
-  WarBoardChangeWinConditionTask__Execute_d__2___ctor((WarBoardChangeWinConditionTask__Execute_d__2_o *)v3, 0, 0LL);
-  if ( !v3 )
-    sub_B7769C(v4, v5);
+  v3 = sub_1B00F18(WarBoardChangeWinConditionTask__Execute_d__2_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v3, 0LL);
+  *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_B77560((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -56,25 +50,25 @@ bool __fastcall WarBoardChangeWinConditionTask__Execute_d__2__MoveNext(
   __int64 v5; // x1
   struct WarBoardData_o *warBoardData_k__BackingField; // x8
 
-  if ( (byte_4388F3A & 1) == 0 )
+  if ( (byte_48E07B0 & 1) == 0 )
   {
-    sub_B775C4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_4388F3A = 1;
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
+    byte_48E07B0 = 1;
   }
   if ( !this->fields.__1__state )
   {
     _4__this = this->fields.__4__this;
     this->fields.__1__state = -1;
-    Instance = (WarBoardManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
     if ( !Instance
       || !_4__this
       || (warBoardData_k__BackingField = Instance->fields._warBoardData_k__BackingField) == 0LL
       || (warBoardData_k__BackingField->fields.winCondId = *(_DWORD *)(&_4__this->fields._isPause_k__BackingField + 3),
-          (Instance = (WarBoardManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__)) == 0LL)
+          (Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__)) == 0LL)
       || (WarBoardManager__UpdateRuleButton(Instance, 0LL),
-          (Instance = (WarBoardManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__)) == 0LL) )
+          (Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__)) == 0LL) )
     {
-      sub_B7769C(Instance, v5);
+      sub_1B00F28(Instance, v5);
     }
     WarBoardManager__JudgmentGameSet(Instance, 0LL);
   }
@@ -98,11 +92,11 @@ void __fastcall __noreturn WarBoardChangeWinConditionTask__Execute_d__2__System_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
+  v2 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B00F18(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B775C8(&Method_WarBoardChangeWinConditionTask__Execute_d__2_System_Collections_IEnumerator_Reset__);
-  sub_B77668(v3, v4);
+  v4 = sub_1B00CE0(&Method_WarBoardChangeWinConditionTask__Execute_d__2_System_Collections_IEnumerator_Reset__);
+  sub_1B00DF4(v3, v4);
 }
 
 

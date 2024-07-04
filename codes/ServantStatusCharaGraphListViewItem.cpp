@@ -6,18 +6,14 @@ void __fastcall ServantStatusCharaGraphListViewItem___ctor(
         const MethodInfo *method)
 {
   ServantStatusCharaGraphListViewItem_o *v7; // x21
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
+  int32_t v8; // w2
+  int32_t v9; // w3
 
   v7 = this;
-  ListViewItem___ctor_24167012((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_39415512((ListViewItem_o *)this, index, 0LL);
   v7->fields.mainInfo = mainInfo;
   v7 = (ServantStatusCharaGraphListViewItem_o *)((char *)v7 + 112);
-  sub_B77560((BattleServantConfConponent_o *)v7, (System_Int32_array **)mainInfo, v8, v9, v10, v11, v12, v13);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)v7, (int32_t)mainInfo, v8, v9);
   LODWORD(v7->monitor) = imageLimitCount;
 }
 

@@ -8,26 +8,24 @@ void __fastcall UIRangeLabel___ctor(UIRangeLabel_o *this, const MethodInfo *meth
 void __fastcall UIRangeLabel__Clear(UIRangeLabel_o *this, const MethodInfo *method)
 {
   __int64 v3; // x1
+  __int64 v4; // x1
   UILabel_o *textLabel; // x0
   UnityEngine_Object_o *iconSprite; // x20
 
-  if ( (byte_4393BC6 & 1) == 0 )
+  if ( (byte_48E1E0E & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_4393BC6 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v3);
+    byte_48E1E0E = 1;
   }
   UIRangeLabel__InitParam(this, method);
   textLabel = this->fields.textLabel;
   if ( !textLabel )
-    goto LABEL_11;
+    goto LABEL_10;
   UILabel__set_text(textLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   iconSprite = (UnityEngine_Object_o *)this->fields.iconSprite;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(iconSprite, 0LL, 0LL) )
   {
     textLabel = (UILabel_o *)this->fields.iconSprite;
@@ -36,8 +34,8 @@ void __fastcall UIRangeLabel__Clear(UIRangeLabel_o *this, const MethodInfo *meth
       UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)textLabel, 0, 0LL);
       return;
     }
-LABEL_11:
-    sub_B7769C(textLabel, v3);
+LABEL_10:
+    sub_1B00F28(textLabel, v4);
   }
 }
 
@@ -50,7 +48,7 @@ void __fastcall UIRangeLabel__InitParam(UIRangeLabel_o *this, const MethodInfo *
   {
     textLabel = (UIWidget_o *)this->fields.textLabel;
     if ( !textLabel )
-      sub_B7769C(this, method);
+      sub_1B00F28(this, method);
     this->fields.textWidth = textLabel->fields.mWidth;
     UIWidget__set_width(textLabel, 1000, 0LL);
   }
@@ -82,28 +80,28 @@ void __fastcall UIRangeLabel__Set(
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4393BC7 & 1) == 0 )
+  if ( (byte_48E1E0F & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_4393BC7 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, text);
+    byte_48E1E0F = 1;
   }
   UIRangeLabel__InitParam(this, (const MethodInfo *)text);
   textLabel = this->fields.textLabel;
   if ( !textLabel )
-    goto LABEL_39;
+    goto LABEL_38;
   UILabel__set_text(textLabel, text, 0LL);
   textLabel = this->fields.textLabel;
   if ( !textLabel )
-    goto LABEL_39;
+    goto LABEL_38;
   LODWORD(v13) = *(_QWORD *)&UILabel__get_printedSize(textLabel, 0LL);
   textLabel = this->fields.textLabel;
   if ( !textLabel )
-    goto LABEL_39;
+    goto LABEL_38;
   textWidth = this->fields.textWidth;
   v15 = v13;
   textLabel = (UILabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)textLabel, 0LL);
   if ( !textLabel )
-    goto LABEL_39;
+    goto LABEL_38;
   v16 = (float)textWidth;
   if ( v15 > (float)textWidth )
     v16 = v15;
@@ -112,11 +110,8 @@ void __fastcall UIRangeLabel__Set(
   v24.fields.z = 1.0;
   UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)textLabel, v24, 0LL);
   iconSprite = (UnityEngine_Object_o *)this->fields.iconSprite;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(iconSprite, 0LL, 0LL) )
   {
     textLabel = (UILabel_o *)System_String__IsNullOrEmpty(iconName, 0LL);
@@ -137,7 +132,7 @@ void __fastcall UIRangeLabel__Set(
         {
           textLabel = (UILabel_o *)this->fields.iconSprite;
           if ( !textLabel )
-            goto LABEL_39;
+            goto LABEL_38;
           ((void (__fastcall *)(UILabel_o *, Il2CppMethodPointer))textLabel->klass->vtable._33_MakePixelPerfect.method)(
             textLabel,
             textLabel->klass->vtable._34_get_minWidth.methodPtr);
@@ -158,12 +153,12 @@ void __fastcall UIRangeLabel__Set(
             if ( ((unsigned __int8)textLabel & 1) != 0 )
             {
               if ( !v21 )
-                goto LABEL_39;
+                goto LABEL_38;
               v15 = v15 - (float)v21->fields.mSpacingX;
             }
             else if ( !v21 )
             {
-              goto LABEL_39;
+              goto LABEL_38;
             }
             mAlignment = v21->fields.mAlignment;
             switch ( mAlignment )
@@ -198,8 +193,8 @@ void __fastcall UIRangeLabel__Set(
         }
       }
     }
-LABEL_39:
-    sub_B7769C(textLabel, v11);
+LABEL_38:
+    sub_1B00F28(textLabel, v11);
   }
 }
 
@@ -215,7 +210,7 @@ UnityEngine_Color_o __fastcall UIRangeLabel__get_color(UIRangeLabel_o *this, con
 
   textLabel = this->fields.textLabel;
   if ( !textLabel )
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   r = textLabel->fields.mColor.fields.r;
   g = textLabel->fields.mColor.fields.g;
   b = textLabel->fields.mColor.fields.b;
@@ -239,7 +234,7 @@ UnityEngine_Color_o __fastcall UIRangeLabel__get_effectColor(UIRangeLabel_o *thi
 
   textLabel = this->fields.textLabel;
   if ( !textLabel )
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   r = textLabel->fields.mEffectColor.fields.r;
   g = textLabel->fields.mEffectColor.fields.g;
   b = textLabel->fields.mEffectColor.fields.b;
@@ -259,7 +254,7 @@ void __fastcall UIRangeLabel__set_color(UIRangeLabel_o *this, UnityEngine_Color_
 
   textLabel = (UIWidget_o *)this->fields.textLabel;
   if ( !textLabel )
-    sub_B7769C(0LL, method);
+    sub_1B00F28(0LL, method);
   UIWidget__set_color(textLabel, value, 0LL);
 }
 
@@ -274,6 +269,6 @@ void __fastcall UIRangeLabel__set_effectColor(
 
   textLabel = this->fields.textLabel;
   if ( !textLabel )
-    sub_B7769C(0LL, method);
+    sub_1B00F28(0LL, method);
   UILabel__set_effectColor(textLabel, value, 0LL);
 }

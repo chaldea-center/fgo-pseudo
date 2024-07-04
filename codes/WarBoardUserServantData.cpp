@@ -11,91 +11,85 @@ void __fastcall WarBoardUserServantData__FromBattleServantData(
         const MethodInfo *method)
 {
   WarBoardUserServantData_o *v4; // x19
-  System_Int32_array **buffData; // x1
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
-  System_Int32_array **SaveData; // x0
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
-  struct System_Collections_Generic_List_BattleSkillInfoData__o *skillInfoList; // x9
-  int size; // w21
-  BattleSkillInfoData_o *v21; // x9
-  struct System_Collections_Generic_List_BattleSkillInfoData__o *v22; // x22
-  BattleSkillInfoData_o *v23; // x8
-  struct System_Collections_Generic_List_BattleSkillInfoData__o *v24; // x20
-  BattleSkillInfoData_o *v25; // x8
+  __int64 v5; // x1
+  struct BattleBuffData_o *buffData; // x1
+  int32_t v7; // w2
+  int32_t v8; // w3
+  BattleBuffData_o *v9; // x0
+  BattleBuffData_SaveData_o *SaveData; // x0
+  int32_t v11; // w2
+  int32_t v12; // w3
+  int hiddenValue; // w22
 
   v4 = this;
-  if ( (byte_438BDEC & 1) == 0 )
+  if ( (byte_48E0703 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_BattleSkillInfoData__get_Count__);
-    this = (WarBoardUserServantData_o *)sub_B775C4(&Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__);
-    byte_438BDEC = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_BattleSkillInfoData__get_Count__, servantData);
+    this = (WarBoardUserServantData_o *)sub_1B00CCC(
+                                          &Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__,
+                                          v5);
+    byte_48E0703 = 1;
   }
   if ( !servantData )
-    goto LABEL_21;
+    goto LABEL_17;
   v4->fields.currentHp = ((__int64 (__fastcall *)(BattleServantData_o *, Il2CppMethodPointer, const MethodInfo *))servantData->klass->vtable._9_get_hp.method)(
                            servantData,
                            servantData->klass->vtable._10_set_hp.methodPtr,
                            method);
   v4->fields.currentNp = servantData->fields.np;
   v4->fields.nextNpTurn = servantData->fields.nexttpturn;
-  buffData = (System_Int32_array **)servantData->fields.buffData;
-  v4->fields.buffData = (struct BattleBuffData_o *)buffData;
-  sub_B77560((BattleServantConfConponent_o *)&v4->fields.buffData, buffData, v6, v7, v8, v9, v10, v11);
-  this = (WarBoardUserServantData_o *)v4->fields.buffData;
-  if ( this )
+  buffData = servantData->fields.buffData;
+  v4->fields.buffData = buffData;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v4->fields.buffData, (int32_t)buffData, v7, v8);
+  v9 = v4->fields.buffData;
+  if ( v9 )
   {
-    SaveData = (System_Int32_array **)BattleBuffData__getSaveData((BattleBuffData_o *)this, 0LL);
-    v4->fields.buffDataSave = (struct BattleBuffData_SaveData_o *)SaveData;
-    sub_B77560((BattleServantConfConponent_o *)&v4->fields.buffDataSave, SaveData, v13, v14, v15, v16, v17, v18);
+    SaveData = BattleBuffData__getSaveData(v9, 0LL);
+    v4->fields.buffDataSave = SaveData;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&v4->fields.buffDataSave, (int32_t)SaveData, v11, v12);
   }
-  v4->fields.transformIndex = servantData->fields.transformIndex;
-  v4->fields.transformLimitCount = servantData->fields.transformLimitCount;
+  *(_QWORD *)&v4->fields.transformIndex = *(_QWORD *)&servantData->fields.transformIndex;
   v4->fields.isSleepWaitMode = servantData->fields.isSleepWaitMode;
   *(_QWORD *)&v4->fields.skill1Ct = 0LL;
   v4->fields.skill3Ct = 0;
-  skillInfoList = servantData->fields.skillInfoList;
-  if ( !skillInfoList )
-    goto LABEL_21;
-  size = skillInfoList->fields._size;
-  if ( size < 1 )
+  this = (WarBoardUserServantData_o *)servantData->fields.skillInfoList;
+  if ( !this )
+    goto LABEL_17;
+  hiddenValue = this->fields.id.fields.hiddenValue;
+  if ( hiddenValue < 1 )
     return;
-  v21 = skillInfoList->fields._items->m_Items[0];
-  if ( !v21 )
-    goto LABEL_21;
-  v4->fields.skill1Ct = v21->fields.chargeTurn;
-  if ( size < 2 )
+  this = (WarBoardUserServantData_o *)System_Collections_Generic_List_object___get_Item(
+                                        (System_Collections_Generic_List_object__o *)this,
+                                        0,
+                                        (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__);
+  if ( !this )
+    goto LABEL_17;
+  v4->fields.skill1Ct = *(_DWORD *)&this->fields.id.fields.inited;
+  if ( hiddenValue < 2 )
     return;
-  v22 = servantData->fields.skillInfoList;
-  if ( !v22 )
-    goto LABEL_21;
-  if ( v22->fields._size <= 1u )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-  v23 = v22->fields._items->m_Items[1];
-  if ( !v23 )
-    goto LABEL_21;
-  v4->fields.skill2Ct = v23->fields.chargeTurn;
-  if ( size < 3 )
+  this = (WarBoardUserServantData_o *)servantData->fields.skillInfoList;
+  if ( !this )
+    goto LABEL_17;
+  this = (WarBoardUserServantData_o *)System_Collections_Generic_List_object___get_Item(
+                                        (System_Collections_Generic_List_object__o *)this,
+                                        1,
+                                        (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__);
+  if ( !this )
+    goto LABEL_17;
+  v4->fields.skill2Ct = *(_DWORD *)&this->fields.id.fields.inited;
+  if ( hiddenValue < 3 )
     return;
-  v24 = servantData->fields.skillInfoList;
-  if ( !v24 )
-    goto LABEL_21;
-  if ( v24->fields._size <= 2u )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-  v25 = v24->fields._items->m_Items[2];
-  if ( !v25 )
-LABEL_21:
-    sub_B7769C(this, servantData);
-  v4->fields.skill3Ct = v25->fields.chargeTurn;
+  this = (WarBoardUserServantData_o *)servantData->fields.skillInfoList;
+  if ( !this
+    || (this = (WarBoardUserServantData_o *)System_Collections_Generic_List_object___get_Item(
+                                              (System_Collections_Generic_List_object__o *)this,
+                                              2,
+                                              (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__)) == 0LL )
+  {
+LABEL_17:
+    sub_1B00F28(this, servantData);
+  }
+  v4->fields.skill3Ct = *(_DWORD *)&this->fields.id.fields.inited;
 }
 
 
@@ -103,47 +97,45 @@ WarBoardUserServantData_o *__fastcall WarBoardUserServantData__FromJson(
         System_String_o *json,
         const MethodInfo *method)
 {
-  TerminalPramsManager_ClearData_o *v3; // x19
-  BattleBuffData_o *v4; // x21
-  BattleBuffData_o **v5; // x20
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
-  __int64 v12; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  Il2CppObject *v5; // x19
+  BattleBuffData_o *v6; // x21
+  BattleBuffData_o **v7; // x20
+  int32_t v8; // w2
+  int32_t v9; // w3
+  __int64 v10; // x1
   BattleBuffData_o *klass; // x0
 
-  if ( (byte_438BDEF & 1) == 0 )
+  if ( (byte_48E0706 & 1) == 0 )
   {
-    sub_B775C4(&BattleBuffData_TypeInfo);
-    sub_B775C4(&Method_JsonManager_Deserialize_WarBoardUserServantData___);
-    sub_B775C4(&JsonManager_TypeInfo);
-    byte_438BDEF = 1;
+    sub_1B00CCC(&BattleBuffData_TypeInfo, method);
+    sub_1B00CCC(&Method_JsonManager_Deserialize_WarBoardUserServantData___, v3);
+    sub_1B00CCC(&JsonManager_TypeInfo, v4);
+    byte_48E0706 = 1;
   }
-  if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
+  if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-  v3 = JsonManager__Deserialize_TerminalPramsManager_ClearData_(
+  v5 = JsonManager__Deserialize_object_(
          (Il2CppObject *)json,
-         (const MethodInfo_1DF1654 *)Method_JsonManager_Deserialize_WarBoardUserServantData___);
-  if ( v3 )
+         (const MethodInfo_2DB835C *)Method_JsonManager_Deserialize_WarBoardUserServantData___);
+  if ( v5 )
   {
-    v4 = (BattleBuffData_o *)sub_B77694(BattleBuffData_TypeInfo);
-    BattleBuffData___ctor(v4, 0LL);
-    v5 = (BattleBuffData_o **)&v3[3];
-    v3[3].klass = (TerminalPramsManager_ClearData_c *)v4;
-    sub_B77560((BattleServantConfConponent_o *)&v3[3], (System_Int32_array **)v4, v6, v7, v8, v9, v10, v11);
-    klass = (BattleBuffData_o *)v3[3].klass;
+    v6 = (BattleBuffData_o *)sub_1B00F18(BattleBuffData_TypeInfo);
+    BattleBuffData___ctor(v6, 0LL);
+    v7 = (BattleBuffData_o **)&v5[39];
+    v5[39].klass = (Il2CppClass *)v6;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&v5[39], (int32_t)v6, v8, v9);
+    klass = (BattleBuffData_o *)v5[39].klass;
     if ( !klass
-      || (BattleBuffData__Initialize(klass, 0LL), (klass = *v5) == 0LL)
-      || (BattleBuffData__clearAuraBuff(klass, 0LL), (klass = *v5) == 0LL) )
+      || (BattleBuffData__Initialize(klass, 0LL), (klass = *v7) == 0LL)
+      || (BattleBuffData__clearAuraBuff(klass, 0LL), (klass = *v7) == 0LL) )
     {
-      sub_B7769C(klass, v12);
+      sub_1B00F28(klass, v10);
     }
-    BattleBuffData__setSaveData(klass, *(BattleBuffData_SaveData_o **)&v3[2].fields.EventActivityPointEffectState, 0LL);
+    BattleBuffData__setSaveData(klass, (BattleBuffData_SaveData_o *)v5[36].klass, 0LL);
   }
-  return (WarBoardUserServantData_o *)v3;
+  return (WarBoardUserServantData_o *)v5;
 }
 
 
@@ -165,36 +157,32 @@ void __fastcall WarBoardUserServantData__SetBattleServantData(
         const MethodInfo *method)
 {
   WarBoardUserServantData_o *v4; // x20
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
   struct System_Int32_array *breakHp; // x8
   int max_length; // w11
-  int v7; // w9
+  int v10; // w9
   struct BattleBuffData_SaveData_o *buffDataSave; // x8
-  struct System_Collections_Generic_List_BattleSkillInfoData__o *skillInfoList; // x8
-  int size; // w21
-  BattleSkillInfoData_o *v11; // x8
-  struct System_Collections_Generic_List_BattleSkillInfoData__o *v12; // x22
-  BattleSkillInfoData_o *v13; // x8
-  struct System_Collections_Generic_List_BattleSkillInfoData__o *v14; // x21
-  BattleSkillInfoData_o *v15; // x8
+  int hiddenValue; // w22
   int32_t transformIndex; // w8
-  System_Int32_array *v17; // x1
-  __int64 v18; // x0
+  System_Int32_array *v14; // x1
 
   v4 = this;
-  if ( (byte_438BDED & 1) == 0 )
+  if ( (byte_48E0704 & 1) == 0 )
   {
-    sub_B775C4(&int___TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_BattleSkillInfoData__get_Count__);
-    sub_B775C4(&Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__);
-    this = (WarBoardUserServantData_o *)sub_B775C4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_438BDED = 1;
+    sub_1B00CCC(&int___TypeInfo, servantData);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_BattleSkillInfoData__get_Count__, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__, v6);
+    this = (WarBoardUserServantData_o *)sub_1B00CCC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v7);
+    byte_48E0704 = 1;
   }
   if ( !servantData )
-    goto LABEL_35;
-  this = (WarBoardUserServantData_o *)((__int64 (__fastcall *)(BattleServantData_o *, _QWORD, Il2CppMethodPointer))servantData->klass->vtable._10_set_hp.method)(
-                                        servantData,
-                                        (unsigned int)v4->fields.currentHp,
-                                        servantData->klass->vtable._11_get_reducedhp.methodPtr);
+    goto LABEL_31;
+  ((void (__fastcall *)(BattleServantData_o *, _QWORD, Il2CppMethodPointer))servantData->klass->vtable._10_set_hp.method)(
+    servantData,
+    (unsigned int)v4->fields.currentHp,
+    servantData->klass->vtable._11_get_reducedhp.methodPtr);
   if ( v4->fields.maxDefeatPoint > v4->fields.defeatPoint )
   {
     this = (WarBoardUserServantData_o *)BasicHelper__IsNullOrEmpty(
@@ -204,17 +192,14 @@ void __fastcall WarBoardUserServantData__SetBattleServantData(
     {
       breakHp = v4->fields.breakHp;
       if ( !breakHp )
-        goto LABEL_35;
+        goto LABEL_31;
       max_length = breakHp->max_length;
-      v7 = v4->fields.maxDefeatPoint + ~v4->fields.defeatPoint;
-      if ( v7 < max_length )
+      v10 = v4->fields.maxDefeatPoint + ~v4->fields.defeatPoint;
+      if ( v10 < max_length )
       {
-        if ( v7 >= (unsigned int)max_length )
-        {
-          v18 = sub_B776C8(this);
-          sub_B77668(v18, 0LL);
-        }
-        servantData->fields.maxhp = breakHp->m_Items[v7 + 1];
+        if ( v10 >= (unsigned int)max_length )
+          sub_1B00F30(this, servantData);
+        servantData->fields.maxhp = breakHp->m_Items[v10 + 1];
       }
     }
   }
@@ -225,49 +210,54 @@ void __fastcall WarBoardUserServantData__SetBattleServantData(
   {
     this = (WarBoardUserServantData_o *)servantData->fields.buffData;
     if ( !this )
-      goto LABEL_35;
+      goto LABEL_31;
     BattleBuffData__Initialize((BattleBuffData_o *)this, 0LL);
     this = (WarBoardUserServantData_o *)servantData->fields.buffData;
     if ( !this )
-      goto LABEL_35;
+      goto LABEL_31;
     BattleBuffData__clearAuraBuff((BattleBuffData_o *)this, 0LL);
     this = (WarBoardUserServantData_o *)servantData->fields.buffData;
     if ( !this )
-      goto LABEL_35;
+      goto LABEL_31;
     BattleBuffData__setSaveData((BattleBuffData_o *)this, v4->fields.buffDataSave, 0LL);
   }
-  skillInfoList = servantData->fields.skillInfoList;
-  if ( !skillInfoList )
-    goto LABEL_35;
-  size = skillInfoList->fields._size;
-  if ( size >= 1 )
+  this = (WarBoardUserServantData_o *)servantData->fields.skillInfoList;
+  if ( !this )
+    goto LABEL_31;
+  hiddenValue = this->fields.id.fields.hiddenValue;
+  if ( hiddenValue >= 1 )
   {
-    v11 = skillInfoList->fields._items->m_Items[0];
-    if ( !v11 )
-      goto LABEL_35;
-    v11->fields.chargeTurn = v4->fields.skill1Ct;
-    if ( size >= 2 )
+    this = (WarBoardUserServantData_o *)System_Collections_Generic_List_object___get_Item(
+                                          (System_Collections_Generic_List_object__o *)this,
+                                          0,
+                                          (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__);
+    if ( !this )
+      goto LABEL_31;
+    *(_DWORD *)&this->fields.id.fields.inited = v4->fields.skill1Ct;
+    if ( hiddenValue >= 2 )
     {
-      v12 = servantData->fields.skillInfoList;
-      if ( !v12 )
-        goto LABEL_35;
-      if ( v12->fields._size <= 1u )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-      v13 = v12->fields._items->m_Items[1];
-      if ( !v13 )
-        goto LABEL_35;
-      v13->fields.chargeTurn = v4->fields.skill2Ct;
-      if ( size >= 3 )
+      this = (WarBoardUserServantData_o *)servantData->fields.skillInfoList;
+      if ( !this )
+        goto LABEL_31;
+      this = (WarBoardUserServantData_o *)System_Collections_Generic_List_object___get_Item(
+                                            (System_Collections_Generic_List_object__o *)this,
+                                            1,
+                                            (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__);
+      if ( !this )
+        goto LABEL_31;
+      *(_DWORD *)&this->fields.id.fields.inited = v4->fields.skill2Ct;
+      if ( hiddenValue >= 3 )
       {
-        v14 = servantData->fields.skillInfoList;
-        if ( !v14 )
-          goto LABEL_35;
-        if ( v14->fields._size <= 2u )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-        v15 = v14->fields._items->m_Items[2];
-        if ( !v15 )
-          goto LABEL_35;
-        v15->fields.chargeTurn = v4->fields.skill3Ct;
+        this = (WarBoardUserServantData_o *)servantData->fields.skillInfoList;
+        if ( !this )
+          goto LABEL_31;
+        this = (WarBoardUserServantData_o *)System_Collections_Generic_List_object___get_Item(
+                                              (System_Collections_Generic_List_object__o *)this,
+                                              2,
+                                              (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__);
+        if ( !this )
+          goto LABEL_31;
+        *(_DWORD *)&this->fields.id.fields.inited = v4->fields.skill3Ct;
       }
     }
   }
@@ -276,27 +266,27 @@ void __fastcall WarBoardUserServantData__SetBattleServantData(
   {
     servantData->fields.transformIndex = transformIndex;
     servantData->fields.transformLimitCount = v4->fields.transformLimitCount;
-    this = (WarBoardUserServantData_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    this = (WarBoardUserServantData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
     if ( this )
     {
       BattleServantData__setTransformServant(
         servantData,
-        (BattleData_o *)this->fields.buffDataSave,
+        *(BattleData_o **)&this->fields.forceId,
         v4->fields.transformIndex,
         v4->fields.transformLimitCount,
         1,
         0LL,
         0LL);
-      goto LABEL_34;
+      goto LABEL_30;
     }
-LABEL_35:
-    sub_B7769C(this, servantData);
+LABEL_31:
+    sub_1B00F28(this, servantData);
   }
-LABEL_34:
+LABEL_30:
   servantData->fields.isSleepWaitMode = v4->fields.isSleepWaitMode;
   BattleServantData__updateResultState(servantData, 0LL);
-  v17 = (System_Int32_array *)sub_B775DC(int___TypeInfo, 0LL);
-  BattleServantData__updateConditionsBuff(servantData, v17, 0LL, 0LL);
+  v14 = (System_Int32_array *)sub_1B00D74(int___TypeInfo, 0LL);
+  BattleServantData__updateConditionsBuff(servantData, v14, 0LL, 0LL);
 }
 
 
@@ -305,31 +295,17 @@ void __fastcall WarBoardUserServantData__SetSaveData(
         WarBoardPieceData_SaveData_o *saveData,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
   struct BattleBuffData_SaveData_o *buffSave; // x1
 
   if ( !saveData )
-    sub_B7769C(this, 0LL);
-  this->fields.currentActionPoint = saveData->fields.actionCount;
-  this->fields.squareIndex = saveData->fields.squareIndex;
+    sub_1B00F28(this, 0LL);
+  *(_QWORD *)&this->fields.squareIndex = *(_QWORD *)&saveData->fields.squareIndex;
   buffSave = saveData->fields.buffSave;
   this->fields.buffDataSave = buffSave;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.buffDataSave,
-    (System_Int32_array **)buffSave,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.buffDataSave, (int32_t)buffSave, (int32_t)method, v3);
   this->fields.attackCount = saveData->fields.attackCount;
-  this->fields.currentHp = saveData->fields.hp;
-  this->fields.currentNp = saveData->fields.np;
+  *(_QWORD *)&this->fields.currentHp = *(_QWORD *)&saveData->fields.hp;
   this->fields.nextNpTurn = saveData->fields.tdTurn;
   this->fields.criticalStars = saveData->fields.criticalStars;
   this->fields.currentPieceActionPoint = saveData->fields.currentActionPoint;
@@ -341,34 +317,22 @@ System_String_o *__fastcall WarBoardUserServantData__ToJson(WarBoardUserServantD
 {
   BattleBuffData_o *buffData; // x0
   struct BattleBuffData_SaveData_o *SaveData; // x0
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  int32_t v5; // w2
+  int32_t v6; // w3
 
-  if ( (byte_438BDEE & 1) == 0 )
+  if ( (byte_48E0705 & 1) == 0 )
   {
-    sub_B775C4(&JsonManager_TypeInfo);
-    byte_438BDEE = 1;
+    sub_1B00CCC(&JsonManager_TypeInfo, method);
+    byte_48E0705 = 1;
   }
   buffData = this->fields.buffData;
   if ( buffData )
   {
     SaveData = BattleBuffData__getSaveData(buffData, 0LL);
     this->fields.buffDataSave = SaveData;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&this->fields.buffDataSave,
-      (System_Int32_array **)SaveData,
-      v5,
-      v6,
-      v7,
-      v8,
-      v9,
-      v10);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.buffDataSave, (int32_t)SaveData, v5, v6);
   }
-  if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
+  if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   return JsonManager__toJson((Il2CppObject *)this, 0, 0, 0LL);
 }

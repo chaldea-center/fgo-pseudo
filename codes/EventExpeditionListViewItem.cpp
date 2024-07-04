@@ -1,3 +1,4 @@
+// local variable allocation has failed, the output may be wrong!
 void __fastcall EventExpeditionListViewItem___ctor(
         EventExpeditionListViewItem_o *this,
         int32_t index,
@@ -7,83 +8,45 @@ void __fastcall EventExpeditionListViewItem___ctor(
         System_Action_o *updateNoticeNum,
         const MethodInfo *method)
 {
+  __int64 v13; // x1
+  __int64 v14; // x1
   struct EventExpeditionEntity_o **p_eventExpeditionEnt; // x20
-  System_String_array **v14; // x2
-  System_String_array **v15; // x3
-  System_Boolean_array **v16; // x4
-  System_Int32_array **v17; // x5
-  System_Int32_array *v18; // x6
-  System_Int32_array *v19; // x7
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
-  System_String_array **v26; // x2
-  System_String_array **v27; // x3
-  System_Boolean_array **v28; // x4
-  System_Int32_array **v29; // x5
-  System_Int32_array *v30; // x6
-  System_Int32_array *v31; // x7
-  DataManager_o *Instance; // x0
-  __int64 v33; // x1
+  int32_t v16; // w2
+  int32_t v17; // w3
+  int32_t v18; // w2
+  int32_t v19; // w3
+  int32_t v20; // w2
+  int32_t v21; // w3
+  Il2CppObject *Instance; // x0
+  __int64 v23; // x1
   struct CommonConsumeEntity_array *IdEntityList; // x0
-  System_String_array **v35; // x2
-  System_String_array **v36; // x3
-  System_Boolean_array **v37; // x4
-  System_Int32_array **v38; // x5
-  System_Int32_array *v39; // x6
-  System_Int32_array *v40; // x7
+  int32_t v25; // w2
+  int32_t v26; // w3
   struct EventExpeditionEntity_o *eventExpeditionEnt; // x8
-  char IsOpen; // w8
+  bool IsOpen; // w0
 
-  if ( (byte_438DE2D & 1) == 0 )
+  if ( (byte_48E6290 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_CommonConsumeMaster___);
-    sub_B775C4(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438DE2D = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_CommonConsumeMaster___, *(_QWORD *)&index);
+    sub_1B00CCC(&Method_DataManager_GetMasterData_CommonReleaseMaster___, v13);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
+    byte_48E6290 = 1;
   }
-  ListViewItem___ctor_24167012((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_39415512((ListViewItem_o *)this, index, 0LL);
   this->fields.eventExpeditionEnt = evExpeditionEnt;
   p_eventExpeditionEnt = &this->fields.eventExpeditionEnt;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.eventExpeditionEnt,
-    (System_Int32_array **)evExpeditionEnt,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18,
-    v19);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.eventExpeditionEnt, (int32_t)evExpeditionEnt, v16, v17);
   this->fields.currentEventId = eventId;
   this->fields.asset = asset;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.asset,
-    (System_Int32_array **)asset,
-    v20,
-    v21,
-    v22,
-    v23,
-    v24,
-    v25);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.asset, (int32_t)asset, v18, v19);
   this->fields.updateNoticeNum = updateNoticeNum;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.updateNoticeNum,
-    (System_Int32_array **)updateNoticeNum,
-    v26,
-    v27,
-    v28,
-    v29,
-    v30,
-    v31);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.updateNoticeNum, (int32_t)updateNoticeNum, v20, v21);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
-  Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                Instance,
-                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
+  Instance = DataManager__GetMasterData_object_(
+               (DataManager_o *)Instance,
+               (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
   if ( !*p_eventExpeditionEnt )
     goto LABEL_14;
   if ( !Instance )
@@ -93,15 +56,7 @@ void __fastcall EventExpeditionListViewItem___ctor(
                    (*p_eventExpeditionEnt)->fields.commonConsumeId,
                    0LL);
   this->fields.commonConsumeEntity = IdEntityList;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.commonConsumeEntity,
-    (System_Int32_array **)IdEntityList,
-    v35,
-    v36,
-    v37,
-    v38,
-    v39,
-    v40);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.commonConsumeEntity, (int32_t)IdEntityList, v25, v26);
   eventExpeditionEnt = this->fields.eventExpeditionEnt;
   if ( !eventExpeditionEnt )
     goto LABEL_14;
@@ -110,16 +65,16 @@ void __fastcall EventExpeditionListViewItem___ctor(
     IsOpen = 1;
     goto LABEL_13;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
-    || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                      Instance,
-                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_CommonReleaseMaster___),
+    || (Instance = DataManager__GetMasterData_object_(
+                     (DataManager_o *)Instance,
+                     (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_CommonReleaseMaster___),
         !*p_eventExpeditionEnt)
     || !Instance )
   {
 LABEL_14:
-    sub_B7769C(Instance, v33);
+    sub_1B00F28(Instance, v23);
   }
   IsOpen = CommonReleaseMaster__IsOpen(
              (CommonReleaseMaster_o *)Instance,
@@ -140,17 +95,14 @@ void __fastcall EventExpeditionListViewItem__CheckExpeditionCondition(
   int64_t Time; // x0
   int32_t pieceIdx; // w8
 
-  if ( (byte_438DE2F & 1) == 0 )
+  if ( (byte_48E6292 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438DE2F = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    byte_48E6292 = 1;
   }
   ExpeditionInfo = EventExpeditionListViewItem__GetExpeditionInfo(this, method);
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
   Time = NetworkManager__getTime(0LL);
   if ( ExpeditionInfo )
   {
@@ -161,7 +113,7 @@ void __fastcall EventExpeditionListViewItem__CheckExpeditionCondition(
       {
         LOBYTE(pieceIdx) = 0;
         this->fields.isComplete = 1;
-        goto LABEL_13;
+        goto LABEL_12;
       }
       LOBYTE(pieceIdx) = 1;
     }
@@ -171,7 +123,7 @@ void __fastcall EventExpeditionListViewItem__CheckExpeditionCondition(
     LOBYTE(pieceIdx) = 0;
   }
   this->fields.isComplete = 0;
-LABEL_13:
+LABEL_12:
   this->fields.isRunning = pieceIdx;
 }
 
@@ -186,25 +138,26 @@ ExpeditionInfo_o *__fastcall EventExpeditionListViewItem__GetExpeditionInfo(
         EventExpeditionListViewItem_o *this,
         const MethodInfo *method)
 {
-  DataManager_o *Instance; // x0
-  __int64 v4; // x1
+  __int64 v3; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v5; // x1
   struct EventExpeditionEntity_o *eventExpeditionEnt; // x8
 
-  if ( (byte_438DE2E & 1) == 0 )
+  if ( (byte_48E6291 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_UserEventExpeditionMaster___);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438DE2E = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_UserEventExpeditionMaster___, method);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_48E6291 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
-    || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                      Instance,
-                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserEventExpeditionMaster___),
+    || (Instance = DataManager__GetMasterData_object_(
+                     (DataManager_o *)Instance,
+                     (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_UserEventExpeditionMaster___),
         (eventExpeditionEnt = this->fields.eventExpeditionEnt) == 0LL)
     || !Instance )
   {
-    sub_B7769C(Instance, v4);
+    sub_1B00F28(Instance, v5);
   }
   return UserEventExpeditionMaster__GetExpeditionInfo(
            (UserEventExpeditionMaster_o *)Instance,
@@ -223,8 +176,8 @@ UnityEngine_GameObject_o *__fastcall EventExpeditionListViewItem__GetRunningAnim
 
   asset = this->fields.asset;
   if ( !asset )
-    sub_B7769C(0LL, idx);
-  return ExpeditionAssetManager__GetRunEffect(asset, idx, 0LL);
+    sub_1B00F28(0LL, idx);
+  return ExpeditionAssetManager__GetRunEffect(asset, idx, method);
 }
 
 

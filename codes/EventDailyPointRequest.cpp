@@ -1,41 +1,37 @@
-void __fastcall EventDailyPointRequest___ctor(EventDailyPointRequest_o *this, const MethodInfo *method)
-{
-  RequestBase___ctor((RequestBase_o *)this, 0LL);
-}
-
-
+// local variable allocation has failed, the output may be wrong!
 void __fastcall EventDailyPointRequest__beginRequest(
         EventDailyPointRequest_o *this,
         int32_t eventId,
         const MethodInfo *method)
 {
-  if ( (byte_438DDC7 & 1) == 0 )
+  const MethodInfo *v3; // x3
+  const MethodInfo *v6; // x1
+
+  if ( (byte_48E3EDE & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_18839/*"eventId"*/);
-    byte_438DDC7 = 1;
+    sub_1B00CCC(&StringLiteral_18880/*"eventId"*/, *(_QWORD *)&eventId);
+    byte_48E3EDE = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18839/*"eventId"*/, eventId, 0LL);
-  RequestBase__beginRequest((RequestBase_o *)this, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18880/*"eventId"*/, eventId, v3);
+  RequestBase__beginRequest((RequestBase_o *)this, v6);
 }
 
 
 System_String_o *__fastcall EventDailyPointRequest__getURL(EventDailyPointRequest_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_438DDC6 & 1) == 0 )
+  if ( (byte_48E3EDD & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&StringLiteral_18822/*"event/dailyPoint"*/);
-    byte_438DDC6 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_18861/*"event/dailyPoint"*/, v2);
+    byte_48E3EDD = 1;
   }
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_44901936(BaseUrl, (System_String_o *)StringLiteral_18822/*"event/dailyPoint"*/, 0LL);
+  return System_String__Concat_60325748(BaseUrl, (System_String_o *)StringLiteral_18861/*"event/dailyPoint"*/, 0LL);
 }
 
 
@@ -44,35 +40,47 @@ void __fastcall EventDailyPointRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  ResponseData_o *v5; // x0
-  ResponseData_o *v6; // x20
+  __int64 v5; // x1
+  __int64 v6; // x1
+  ResponseData_o *v7; // x0
+  const MethodInfo *v8; // x2
+  ResponseData_o *v9; // x20
   Il2CppObject *success; // x20
-  System_String_o *v8; // x1
+  System_String_o *v11; // x0
+  struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
+  struct NetworkManager_ResultCallbackFunc_o *v13; // x8
 
-  if ( (byte_438DDC8 & 1) == 0 )
+  if ( (byte_48E3EDF & 1) == 0 )
   {
-    sub_B775C4(&JsonManager_TypeInfo);
-    sub_B775C4(&ResponseCommandKind_TypeInfo);
-    sub_B775C4(&StringLiteral_21504/*"ng"*/);
-    byte_438DDC8 = 1;
+    sub_1B00CCC(&JsonManager_TypeInfo, responseList);
+    sub_1B00CCC(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B00CCC(&StringLiteral_21754/*"ng"*/, v6);
+    byte_48E3EDF = 1;
   }
-  if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ResponseCommandKind_TypeInfo->_2.cctor_finished )
-  {
+  if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  }
-  v5 = ResponseCommandKind__SearchData(83, responseList, 0LL);
-  if ( v5
-    && (v6 = v5, ResponseData__checkError_30128096(v5, 0LL))
-    && (success = (Il2CppObject *)v6->fields.success) != 0LL )
+  v7 = ResponseCommandKind__SearchData(83, responseList, 0LL);
+  if ( v7
+    && (v9 = v7, ResponseData__checkError(v7, v7->fields.resCode, v8))
+    && (success = (Il2CppObject *)v9->fields.success) != 0LL )
   {
-    if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
+    if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v8 = JsonManager__toJson(success, 0, 0, 0LL);
+    v11 = JsonManager__toJson(success, 0, 0, 0LL);
+    CallBack = this->fields.CallBack;
+    if ( CallBack )
+      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))CallBack->fields.m_target)(
+        CallBack->fields.original_method_info,
+        v11,
+        *(_QWORD *)&CallBack->fields.extra_arg);
   }
   else
   {
-    v8 = (System_String_o *)StringLiteral_21504/*"ng"*/;
+    v13 = this->fields.CallBack;
+    if ( v13 )
+      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v13->fields.m_target)(
+        v13->fields.original_method_info,
+        StringLiteral_21754/*"ng"*/,
+        *(_QWORD *)&v13->fields.extra_arg);
   }
-  RequestBase__completed((RequestBase_o *)this, v8, 0LL);
 }

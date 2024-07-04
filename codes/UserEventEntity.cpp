@@ -1,30 +1,30 @@
 void __fastcall UserEventEntity___ctor(UserEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438CB69 & 1) == 0 )
+  if ( (byte_48E33C3 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    byte_438CB69 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
+    byte_48E33C3 = 1;
   }
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-void __fastcall UserEventEntity___ctor_28301780(
+void __fastcall UserEventEntity___ctor_38805224(
         UserEventEntity_o *this,
         int64_t userId,
         int32_t eventId,
         const MethodInfo *method)
 {
-  if ( (byte_438CB6A & 1) == 0 )
+  if ( (byte_48E33C4 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    byte_438CB6A = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, userId);
+    byte_48E33C4 = 1;
   }
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
   this->fields.userId = userId;
   this->fields.eventId = eventId;
   this->fields.updatedAt = 0LL;
@@ -34,17 +34,18 @@ void __fastcall UserEventEntity___ctor_28301780(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall UserEventEntity__CreatePK(int64_t userId, int32_t eventId, const MethodInfo *method)
 {
-  if ( (byte_438CB68 & 1) == 0 )
+  if ( (byte_48E33C2 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_438CB68 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&eventId);
+    byte_48E33C2 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            eventId,
-           (const MethodInfo_1D172EC *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_2D60F3C *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -58,20 +59,20 @@ System_String_o *__fastcall UserEventEntity__CreatePrimaryKey(UserEventEntity_o 
 
 bool __fastcall UserEventEntity__getEventFlag(UserEventEntity_o *this, int32_t flagId, const MethodInfo *method)
 {
-  return (this->fields.flag & (1 << flagId)) != 0;
+  return ((unsigned int)this->fields.flag >> flagId) & 1;
 }
 
 
-bool __fastcall UserEventEntity__getEventFlag_28301996(
+bool __fastcall UserEventEntity__getEventFlag_38805416(
         UserEventEntity_o *this,
         int32_t flagId,
         const MethodInfo *method)
 {
-  return (this->fields.flag & (1 << flagId)) != 0;
+  return ((unsigned int)this->fields.flag >> flagId) & 1;
 }
 
 
-bool __fastcall UserEventEntity__getEventFlag_28302020(UserEventEntity_o *this, int32_t flag, const MethodInfo *method)
+bool __fastcall UserEventEntity__getEventFlag_38805432(UserEventEntity_o *this, int32_t flag, const MethodInfo *method)
 {
   return (this->fields.flag & flag) != 0;
 }
@@ -79,25 +80,25 @@ bool __fastcall UserEventEntity__getEventFlag_28302020(UserEventEntity_o *this, 
 
 bool __fastcall UserEventEntity__getScriptFlag(UserEventEntity_o *this, int32_t flagId, const MethodInfo *method)
 {
-  return (this->fields.scriptFlag & (1 << flagId)) != 0;
+  return ((unsigned int)this->fields.scriptFlag >> flagId) & 1;
 }
 
 
 bool __fastcall UserEventEntity__getTutorialFlag(UserEventEntity_o *this, int32_t flagId, const MethodInfo *method)
 {
-  bool v3; // zf
-
-  if ( (unsigned int)(flagId - 1) > 0x3F )
+  if ( (unsigned int)(flagId - 1) <= 0x3F )
   {
-    if ( flagId < 65 )
-      return 0;
-    v3 = (this->fields.tutorial2 & (1LL << flagId)) == 0;
+    LODWORD(this) = ((unsigned int)this->fields.tutorial >> flagId) & 1;
+  }
+  else if ( flagId >= 65 )
+  {
+    return ((unsigned __int64)this->fields.tutorial2 >> flagId) & 1;
   }
   else
   {
-    v3 = (this->fields.tutorial & (1 << flagId)) == 0;
+    LOBYTE(this) = 0;
   }
-  return !v3;
+  return (char)this;
 }
 
 

@@ -10,37 +10,17 @@ void __fastcall CommandAssistListViewItem___ctor(
         const MethodInfo *method)
 {
   CommandAssistListViewItem_o *v15; // x25
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
-  System_String_array **v22; // x2
-  System_String_array **v23; // x3
-  System_Boolean_array **v24; // x4
-  System_Int32_array **v25; // x5
-  System_Int32_array *v26; // x6
-  System_Int32_array *v27; // x7
 
   v15 = this;
-  ListViewItem___ctor_24167012((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_39415512((ListViewItem_o *)this, index, 0LL);
   v15->fields._EventId_k__BackingField = eventId;
   v15->fields._AssistId_k__BackingField = assistId;
   v15->fields._IconImageId_k__BackingField = iconImageId;
   v15->fields._Name_k__BackingField = name;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&v15->fields._Name_k__BackingField,
-    (System_Int32_array **)name,
-    v16,
-    v17,
-    v18,
-    v19,
-    v20,
-    v21);
+  sub_1B00C70(&v15->fields._Name_k__BackingField);
   v15->fields._Detail_k__BackingField = detail;
   v15 = (CommandAssistListViewItem_o *)((char *)v15 + 136);
-  sub_B77560((BattleServantConfConponent_o *)v15, (System_Int32_array **)detail, v22, v23, v24, v25, v26, v27);
+  sub_1B00C70(v15);
   LOBYTE(v15->monitor) = isLast;
 }
 
@@ -101,22 +81,8 @@ void __fastcall CommandAssistListViewItem__set_Detail(
         System_String_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-
   this->fields._Detail_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._Detail_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(&this->fields._Detail_k__BackingField);
 }
 
 
@@ -152,20 +118,6 @@ void __fastcall CommandAssistListViewItem__set_Name(
         System_String_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-
   this->fields._Name_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._Name_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(&this->fields._Name_k__BackingField);
 }

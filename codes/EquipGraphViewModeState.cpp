@@ -14,16 +14,17 @@ void __fastcall EquipGraphViewModeState___ctor(EquipGraphViewModeState_o *this, 
 
 void __fastcall EquipGraphViewModeState__AutoPlayView(EquipGraphViewModeState_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   int32_t AutoPlayMode; // w8
-  UnityEngine_Object_o *v4; // x20
+  UnityEngine_Object_o *v5; // x20
   UIEquipGraphV_o *uiEquipGraphV; // x0
-  int32_t v6; // w1
+  int32_t v7; // w1
 
-  if ( (byte_438E7CE & 1) == 0 )
+  if ( (byte_48E0039 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&StringLiteral_2291/*"AutoPlayView"*/);
-    byte_438E7CE = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_2613/*"AutoPlayView"*/, v3);
+    byte_48E0039 = 1;
   }
   AutoPlayMode = this->fields.AutoPlayMode;
   if ( AutoPlayMode == 2 )
@@ -32,11 +33,11 @@ void __fastcall EquipGraphViewModeState__AutoPlayView(EquipGraphViewModeState_o 
     this->fields.AutoPlayMode = 3;
     if ( uiEquipGraphV )
     {
-      v6 = 1;
-      goto LABEL_17;
+      v7 = 1;
+      goto LABEL_14;
     }
-LABEL_22:
-    sub_B7769C(uiEquipGraphV, method);
+LABEL_21:
+    sub_1B00F28(uiEquipGraphV, method);
   }
   if ( AutoPlayMode == 1 )
   {
@@ -46,34 +47,25 @@ LABEL_22:
     if ( uiEquipGraphV )
     {
       UIEquipGraphV__SetRotateButton(uiEquipGraphV, 0, 0LL);
-LABEL_18:
-      UnityEngine_MonoBehaviour__Invoke(
-        (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_2291/*"AutoPlayView"*/,
-        this->fields.AutoPlayInterval,
-        0LL);
-      return;
+      goto LABEL_17;
     }
-    goto LABEL_22;
+    goto LABEL_21;
   }
   if ( AutoPlayMode )
   {
     uiEquipGraphV = (UIEquipGraphV_o *)this->fields.scriptManager;
     if ( !uiEquipGraphV )
-      goto LABEL_22;
+      goto LABEL_21;
     ScriptManager__OnClickFowardView((ScriptManager_o *)uiEquipGraphV, 0LL);
   }
   else
   {
     this->fields.AutoPlayMode = 1;
     this->fields._rotbtn_k__BackingField = 1;
-    v4 = (UnityEngine_Object_o *)this->fields.uiEquipGraphV;
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+    v5 = (UnityEngine_Object_o *)this->fields.uiEquipGraphV;
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
-    if ( UnityEngine_Object__op_Inequality(v4, 0LL, 0LL) )
+    if ( UnityEngine_Object__op_Inequality(v5, 0LL, 0LL) )
     {
       uiEquipGraphV = this->fields.uiEquipGraphV;
       if ( uiEquipGraphV )
@@ -82,13 +74,19 @@ LABEL_18:
         uiEquipGraphV = this->fields.uiEquipGraphV;
         if ( uiEquipGraphV )
         {
-          v6 = 2;
+          v7 = 2;
+LABEL_14:
+          UIEquipGraphV__SetAllButton(uiEquipGraphV, v7, 0LL);
 LABEL_17:
-          UIEquipGraphV__SetAllButton(uiEquipGraphV, v6, 0LL);
-          goto LABEL_18;
+          UnityEngine_MonoBehaviour__Invoke(
+            (UnityEngine_MonoBehaviour_o *)this,
+            (System_String_o *)StringLiteral_2613/*"AutoPlayView"*/,
+            this->fields.AutoPlayInterval,
+            0LL);
+          return;
         }
       }
-      goto LABEL_22;
+      goto LABEL_21;
     }
   }
 }
@@ -106,7 +104,7 @@ void __fastcall EquipGraphViewModeState__FowardView(EquipGraphViewModeState_o *t
 
   scriptManager = this->fields.scriptManager;
   if ( !scriptManager )
-    sub_B7769C(0LL, method);
+    sub_1B00F28(0LL, method);
   ScriptManager__OnClickFowardView(scriptManager, 0LL);
 }
 
@@ -139,7 +137,7 @@ void __fastcall EquipGraphViewModeState__OnClickAutoPlayButton(
       return;
     }
 LABEL_9:
-    sub_B7769C(autoPlaySprite, isSetting);
+    sub_1B00F28(autoPlaySprite, isSetting);
   }
   UnityEngine_Behaviour__set_enabled(autoPlaySprite, 0, 0LL);
   if ( !this->fields._quickAutobtn_k__BackingField )
@@ -155,10 +153,10 @@ void __fastcall EquipGraphViewModeState__OnClickQuickAutoPlayButton(
 {
   UnityEngine_Behaviour_o *quickAutoPlaySprite; // x0
 
-  if ( (byte_438E7CD & 1) == 0 )
+  if ( (byte_48E0038 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_6934/*"FowardView"*/);
-    byte_438E7CD = 1;
+    sub_1B00CCC(&StringLiteral_6752/*"FowardView"*/, isSetting);
+    byte_48E0038 = 1;
   }
   if ( !isSetting )
     this->fields._quickAutobtn_k__BackingField ^= 1u;
@@ -176,13 +174,13 @@ void __fastcall EquipGraphViewModeState__OnClickQuickAutoPlayButton(
       UnityEngine_MonoBehaviour__CancelInvoke((UnityEngine_MonoBehaviour_o *)this, 0LL);
       UnityEngine_MonoBehaviour__Invoke(
         (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_6934/*"FowardView"*/,
+        (System_String_o *)StringLiteral_6752/*"FowardView"*/,
         this->fields.AutoPlayInterval,
         0LL);
       return;
     }
 LABEL_11:
-    sub_B7769C(quickAutoPlaySprite, isSetting);
+    sub_1B00F28(quickAutoPlaySprite, isSetting);
   }
   UnityEngine_Behaviour__set_enabled(quickAutoPlaySprite, 0, 0LL);
   if ( !this->fields._autobtn_k__BackingField )

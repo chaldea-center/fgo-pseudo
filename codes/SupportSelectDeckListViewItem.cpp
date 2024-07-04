@@ -6,21 +6,21 @@ void __fastcall SupportSelectDeckListViewItem___ctor(
         bool isPossibleCopy,
         const MethodInfo *method)
 {
-  SupportSelectDeckListViewItem_o *v9; // x22
-  System_String_array **v10; // x2
-  System_String_array **v11; // x3
-  System_Boolean_array **v12; // x4
-  System_Int32_array **v13; // x5
-  System_Int32_array *v14; // x6
-  System_Int32_array *v15; // x7
+  SupportSelectDeckListViewItem_o *v7; // x20
+  bool v8; // w21
+  bool v9; // w22
+  int32_t v10; // w2
+  int32_t v11; // w3
 
-  v9 = this;
-  ListViewItem___ctor_24167012((ListViewItem_o *)this, index, 0LL);
-  v9->fields.supportData = data;
-  v9 = (SupportSelectDeckListViewItem_o *)((char *)v9 + 112);
-  sub_B77560((BattleServantConfConponent_o *)v9, (System_Int32_array **)data, v10, v11, v12, v13, v14, v15);
-  LOBYTE(v9->monitor) = isSameKind;
-  BYTE1(v9->monitor) = isPossibleCopy;
+  v7 = this;
+  v8 = isSameKind;
+  v9 = isPossibleCopy;
+  ListViewItem___ctor_39415512((ListViewItem_o *)this, index, 0LL);
+  v7->fields.supportData = data;
+  v7 = (SupportSelectDeckListViewItem_o *)((char *)v7 + 112);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)v7, (int32_t)data, v10, v11);
+  LOBYTE(v7->monitor) = v8;
+  BYTE1(v7->monitor) = v9;
 }
 
 

@@ -1,32 +1,33 @@
 void __fastcall EventCooltimeRewardEntity___ctor(EventCooltimeRewardEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438DDC0 & 1) == 0 )
+  if ( (byte_48E2746 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    byte_438DDC0 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
+    byte_48E2746 = 1;
   }
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventCooltimeRewardEntity__CreatePK(
         int32_t eventId,
         int32_t spotId,
         int32_t lv,
         const MethodInfo *method)
 {
-  if ( (byte_438DDBC & 1) == 0 )
+  if ( (byte_48E2742 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_438DDBC = 1;
+    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&spotId);
+    byte_48E2742 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            eventId,
            spotId,
            lv,
-           (const MethodInfo_1D175E4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2D612C4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -52,21 +53,22 @@ GiftEntity_o *__fastcall EventCooltimeRewardEntity__GetGiftEntity(
         EventCooltimeRewardEntity_o *this,
         const MethodInfo *method)
 {
-  GiftMaster_o *Master_WarQuestSelectionMaster; // x0
-  __int64 v4; // x1
+  __int64 v3; // x1
+  Il2CppObject *Master_object; // x0
+  __int64 v5; // x1
 
-  if ( (byte_438DDBF & 1) == 0 )
+  if ( (byte_48E2745 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMaster_GiftMaster___);
-    sub_B775C4(&DataManager_TypeInfo);
-    byte_438DDBF = 1;
+    sub_1B00CCC(&Method_DataManager_GetMaster_GiftMaster___, method);
+    sub_1B00CCC(&DataManager_TypeInfo, v3);
+    byte_48E2745 = 1;
   }
-  if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (GiftMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_GiftMaster___);
-  if ( !Master_WarQuestSelectionMaster )
-    sub_B7769C(0LL, v4);
-  return GiftMaster__getDataById(Master_WarQuestSelectionMaster, this->fields.giftId, 0LL);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_GiftMaster___);
+  if ( !Master_object )
+    sub_1B00F28(0LL, v5);
+  return GiftMaster__getDataById((GiftMaster_o *)Master_object, this->fields.giftId, 0LL);
 }
 
 
@@ -75,19 +77,33 @@ EventCooltimeRewardEntity_GiftMakingVelocityInfo_o *__fastcall EventCooltimeRewa
         const MethodInfo *method)
 {
   int32_t cooltime; // w20
-  int32_t upperLimitGiftNum; // w19
-  EventCooltimeRewardEntity_GiftMakingVelocityInfo_o *v5; // x21
+  int32_t upperLimitGiftNum; // w21
+  __int64 v5; // x19
+  int v6; // w8
+  int v7; // w9
 
-  if ( (byte_438DDBD & 1) == 0 )
+  if ( (byte_48E2743 & 1) == 0 )
   {
-    sub_B775C4(&EventCooltimeRewardEntity_GiftMakingVelocityInfo_TypeInfo);
-    byte_438DDBD = 1;
+    sub_1B00CCC(&EventCooltimeRewardEntity_GiftMakingVelocityInfo_TypeInfo, method);
+    byte_48E2743 = 1;
   }
   cooltime = this->fields.cooltime;
   upperLimitGiftNum = this->fields.upperLimitGiftNum;
-  v5 = (EventCooltimeRewardEntity_GiftMakingVelocityInfo_o *)sub_B77694(EventCooltimeRewardEntity_GiftMakingVelocityInfo_TypeInfo);
-  EventCooltimeRewardEntity_GiftMakingVelocityInfo___ctor(v5, cooltime, upperLimitGiftNum, 0LL);
-  return v5;
+  v5 = sub_1B00F18(EventCooltimeRewardEntity_GiftMakingVelocityInfo_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0LL);
+  if ( cooltime >= upperLimitGiftNum )
+  {
+    v7 = cooltime / upperLimitGiftNum;
+    v6 = 1;
+  }
+  else
+  {
+    v6 = upperLimitGiftNum / cooltime;
+    v7 = 1;
+  }
+  *(_DWORD *)(v5 + 16) = v7;
+  *(_DWORD *)(v5 + 20) = v6;
+  return (EventCooltimeRewardEntity_GiftMakingVelocityInfo_o *)v5;
 }
 
 
@@ -107,21 +123,22 @@ int32_t __fastcall EventCooltimeRewardEntity__GetRewardUnitTime(
 
 bool __fastcall EventCooltimeRewardEntity__IsOpen(EventCooltimeRewardEntity_o *this, const MethodInfo *method)
 {
-  CommonReleaseMaster_o *Master_WarQuestSelectionMaster; // x0
-  __int64 v4; // x1
+  __int64 v3; // x1
+  Il2CppObject *Master_object; // x0
+  __int64 v5; // x1
 
-  if ( (byte_438DDBE & 1) == 0 )
+  if ( (byte_48E2744 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMaster_CommonReleaseMaster___);
-    sub_B775C4(&DataManager_TypeInfo);
-    byte_438DDBE = 1;
+    sub_1B00CCC(&Method_DataManager_GetMaster_CommonReleaseMaster___, method);
+    sub_1B00CCC(&DataManager_TypeInfo, v3);
+    byte_48E2744 = 1;
   }
-  if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (CommonReleaseMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
-  if ( !Master_WarQuestSelectionMaster )
-    sub_B7769C(0LL, v4);
-  return CommonReleaseMaster__IsOpen(Master_WarQuestSelectionMaster, this->fields.commonReleaseId, 0LL, 0, 0LL);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  if ( !Master_object )
+    sub_1B00F28(0LL, v5);
+  return CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Master_object, this->fields.commonReleaseId, 0LL, 0, 0LL);
 }
 
 

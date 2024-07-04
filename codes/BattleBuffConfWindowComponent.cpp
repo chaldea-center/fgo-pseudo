@@ -33,47 +33,50 @@ bool __fastcall BattleBuffConfWindowComponent__checkBuffId(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall BattleBuffConfWindowComponent__setData(
         BattleBuffConfWindowComponent_o *this,
         int32_t buffId,
         const MethodInfo *method)
 {
-  DataManager_o *Instance; // x0
+  __int64 v5; // x1
   __int64 v6; // x1
-  DataManager_o *v7; // x21
+  DataManager_o *Instance; // x0
+  __int64 v8; // x1
+  DataManager_o *v9; // x21
 
-  if ( (byte_438EB46 & 1) == 0 )
+  if ( (byte_48E54A3 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_BuffMaster___);
-    sub_B775C4(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438EB46 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_BuffMaster___, *(_QWORD *)&buffId);
+    sub_1B00CCC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v5);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_48E54A3 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
-  Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+  Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_BuffMaster___);
+                                (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_BuffMaster___);
   if ( !Instance )
     goto LABEL_10;
-  Instance = (DataManager_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-                                (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
+  Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
+                                (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                 buffId,
-                                (const MethodInfo_21FB894 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+                                (const MethodInfo_2FE6A4C *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
   this->fields.buffId = buffId;
   if ( !Instance
-    || (v7 = Instance, (Instance = (DataManager_o *)this->fields.buffIcon) == 0LL)
+    || (v9 = Instance, (Instance = (DataManager_o *)this->fields.buffIcon) == 0LL)
     || (BattleServantBuffIconComponent__setIcon(
           (BattleServantBuffIconComponent_o *)Instance,
-          v7->fields.m_CachedPtr,
+          v9->fields.m_CachedPtr,
           0LL),
         (Instance = (DataManager_o *)this->fields.nameLabel) == 0LL)
-    || (UILabel__set_text((UILabel_o *)Instance, (System_String_o *)v7->fields.datalist, 0LL),
+    || (UILabel__set_text((UILabel_o *)Instance, (System_String_o *)v9->fields.m_CancellationTokenSource, 0LL),
         (Instance = (DataManager_o *)this->fields.detailLabel) == 0LL) )
   {
 LABEL_10:
-    sub_B7769C(Instance, v6);
+    sub_1B00F28(Instance, v8);
   }
-  UILabel__set_text((UILabel_o *)Instance, (System_String_o *)v7->fields.lookup, 0LL);
+  UILabel__set_text((UILabel_o *)Instance, *(System_String_o **)&v9->fields._DispLog, 0LL);
 }

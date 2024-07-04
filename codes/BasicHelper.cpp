@@ -1,345 +1,611 @@
-UIWidget_o *__fastcall BasicHelper__AddNotExistComponent_UIWidget_(
+Il2CppObject *__fastcall BasicHelper__AddNotExistComponent_object_(
         UnityEngine_Transform_o *self,
-        const MethodInfo_1C65D24 *method)
+        const MethodInfo_2D4E394 *method)
 {
   UnityEngine_Component_o *v3; // x20
-  UnityEngine_Object_o *v4; // x21
+  Il2CppObject *Component_object; // x21
 
   v3 = (UnityEngine_Component_o *)self;
-  if ( (byte_438D973 & 1) == 0 )
+  if ( !method->rgctx_data )
   {
-    self = (UnityEngine_Transform_o *)sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438D973 = 1;
+    self = (UnityEngine_Transform_o *)sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    if ( !method->rgctx_data )
+      self = (UnityEngine_Transform_o *)sub_1B52C04(method);
   }
   if ( !v3 )
     goto LABEL_12;
   self = (UnityEngine_Transform_o *)UnityEngine_Component__get_gameObject(v3, 0LL);
   if ( !self )
     goto LABEL_12;
-  v4 = (UnityEngine_Object_o *)((__int64 (*)(void))method->rgctx_data->_0_UnityEngine_GameObject_GetComponent_T_->methodPointer)();
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  Component_object = UnityEngine_GameObject__GetComponent_object_(
+                       (UnityEngine_GameObject_o *)self,
+                       (const MethodInfo_2DADE08 *)method->rgctx_data->_0_UnityEngine_GameObject_GetComponent_T_);
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  if ( UnityEngine_Object__op_Equality(v4, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
   {
     self = (UnityEngine_Transform_o *)UnityEngine_Component__get_gameObject(v3, 0LL);
     if ( self )
-      return (UIWidget_o *)((__int64 (*)(void))method->rgctx_data->_2_UnityEngine_GameObject_AddComponent_T_->methodPointer)();
+      return UnityEngine_GameObject__AddComponent_object_(
+               (UnityEngine_GameObject_o *)self,
+               (const MethodInfo_2DADD20 *)method->rgctx_data->_2_UnityEngine_GameObject_AddComponent_T_);
 LABEL_12:
-    sub_B7769C(self, method);
+    sub_1B00F28(self, method);
   }
-  return (UIWidget_o *)v4;
+  return Component_object;
 }
 
 
 bool __fastcall BasicHelper__Any_BattleResultEventItemComponent_EventDropItemInfo_(
         System_Collections_Generic_List_T__o *list,
         System_Func_T__bool__o *func,
-        const MethodInfo_1C66294 *method)
+        const MethodInfo_2D4EB60 *method)
+{
+  System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__o *v5; // x21
+  int size; // w23
+  int32_t v7; // w22
+  bool v8; // w24
+  BattleResultEventItemComponent_EventDropItemInfo_o v10; // [xsp+20h] [xbp-60h] BYREF
+
+  v5 = (System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__o *)list;
+  if ( !method->rgctx_data )
+    list = (System_Collections_Generic_List_T__o *)sub_1B52C04(method);
+  if ( !v5 )
+    goto LABEL_12;
+  size = v5->fields._size;
+  if ( size >= 1 )
+  {
+    v7 = 0;
+    v8 = 1;
+    while ( 1 )
+    {
+      list = (System_Collections_Generic_List_T__o *)System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo___get_Item(
+                                                       &v10,
+                                                       v5,
+                                                       v7,
+                                                       (const MethodInfo_3428640 *)method->rgctx_data->_3_System_Collections_Generic_List_T__get_Item);
+      if ( !func )
+        break;
+      if ( (((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, BattleResultEventItemComponent_EventDropItemInfo_o *, _QWORD))func->fields.m_target)(
+              func->fields.original_method_info,
+              &v10,
+              *(_QWORD *)&func->fields.extra_arg) & 1) == 0 )
+      {
+        v8 = ++v7 < size;
+        if ( size != v7 )
+          continue;
+      }
+      return v8;
+    }
+LABEL_12:
+    sub_1B00F28(list, func);
+  }
+  return 0;
+}
+
+
+bool __fastcall BasicHelper__Any_Int32Enum_(
+        System_Collections_Generic_List_T__o *list,
+        System_Func_T__bool__o *func,
+        const MethodInfo_2D4E59C *method)
 {
   System_Collections_Generic_List_T__o *v5; // x21
-  int v6; // w0
-  int v7; // w22
-  unsigned int v8; // w23
-  const MethodInfo_1C66294_RGCTXs *rgctx_data; // x8
-  __int64 (__fastcall *methodPointer)(System_Func_T__bool__o *, __int128 *, MethodInfo *); // x9
-  __int128 v12[4]; // [xsp+0h] [xbp-90h] BYREF
-  __int128 v13; // [xsp+40h] [xbp-50h]
-  __int128 v14; // [xsp+50h] [xbp-40h]
+  int size; // w23
+  int32_t v7; // w22
+  bool v8; // w24
 
-  if ( !list )
-LABEL_10:
-    sub_B7769C(list, func);
   v5 = list;
-  v6 = ((__int64 (*)(void))method->rgctx_data->_0_System_Collections_Generic_List_T__get_Count->methodPointer)();
-  if ( v6 < 1 )
-    return 0;
-  v7 = v6;
-  v8 = 0;
-  while ( 1 )
+  if ( !method->rgctx_data )
+    list = (System_Collections_Generic_List_T__o *)sub_1B52C04(method);
+  if ( !v5 )
+    goto LABEL_12;
+  size = v5->fields._size;
+  if ( size >= 1 )
   {
-    list = (System_Collections_Generic_List_T__o *)((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *, _QWORD))method->rgctx_data->_1_System_Collections_Generic_List_T__get_Item->methodPointer)(
-                                                     v5,
-                                                     v8);
-    v13 = v12[2];
-    v14 = v12[3];
-    if ( !func )
-      goto LABEL_10;
+    v7 = 0;
+    v8 = 1;
+    while ( 1 )
+    {
+      list = (System_Collections_Generic_List_T__o *)System_Collections_Generic_List_Int32Enum___get_Item(
+                                                       v5,
+                                                       v7,
+                                                       (const MethodInfo_33A6EE8 *)method->rgctx_data->_3_System_Collections_Generic_List_T__get_Item);
+      if ( !func )
+        break;
+      if ( (((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))func->fields.m_target)(
+              func->fields.original_method_info,
+              (unsigned int)list,
+              *(_QWORD *)&func->fields.extra_arg) & 1) == 0 )
+      {
+        v8 = ++v7 < size;
+        if ( size != v7 )
+          continue;
+      }
+      return v8;
+    }
+LABEL_12:
+    sub_1B00F28(list, func);
+  }
+  return 0;
+}
+
+
+bool __fastcall BasicHelper__Any_Int32Enum__47507016(
+        System_Int32Enum_array *array,
+        System_Func_T__bool__o *func,
+        const MethodInfo_2D4E648 *method)
+{
+  System_Int32Enum_array *v4; // x20
+  __int64 v5; // x8
+  bool v6; // w21
+  unsigned __int64 v7; // x22
+
+  v4 = array;
+  if ( !method->rgctx_data )
+    array = (System_Int32Enum_array *)sub_1B52C04(method);
+  if ( !v4 )
+    goto LABEL_12;
+  v5 = *(_QWORD *)&v4->max_length;
+  v6 = (int)v5 > 0;
+  if ( (int)v5 >= 1 )
+  {
+    v7 = 0LL;
+    while ( 1 )
+    {
+      if ( v7 >= (unsigned int)v5 )
+        sub_1B00F30(array, func);
+      if ( !func )
+        break;
+      array = (System_Int32Enum_array *)((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))func->fields.m_target)(
+                                          func->fields.original_method_info,
+                                          (unsigned int)v4->m_Items[v7 + 1],
+                                          *(_QWORD *)&func->fields.extra_arg);
+      if ( ((unsigned __int8)array & 1) == 0 )
+      {
+        LODWORD(v5) = v4->max_length;
+        v6 = (__int64)++v7 < (int)v5;
+        if ( (__int64)v7 < (int)v5 )
+          continue;
+      }
+      return v6;
+    }
+LABEL_12:
+    sub_1B00F28(array, func);
+  }
+  return v6;
+}
+
+
+bool __fastcall BasicHelper__Any_ListViewSort_BonusFilterInfo_(
+        System_Collections_Generic_List_T__o *list,
+        System_Func_T__bool__o *func,
+        const MethodInfo_2D4EC28 *method)
+{
+  System_Collections_Generic_List_ListViewSort_BonusFilterInfo__o *v5; // x21
+  int size; // w23
+  int32_t v7; // w22
+  bool v8; // w24
+  ListViewSort_BonusFilterInfo_o v10; // [xsp+20h] [xbp-60h] BYREF
+
+  v5 = (System_Collections_Generic_List_ListViewSort_BonusFilterInfo__o *)list;
+  if ( !method->rgctx_data )
+    list = (System_Collections_Generic_List_T__o *)sub_1B52C04(method);
+  if ( !v5 )
+    goto LABEL_12;
+  size = v5->fields._size;
+  if ( size >= 1 )
+  {
+    v7 = 0;
+    v8 = 1;
+    while ( 1 )
+    {
+      list = (System_Collections_Generic_List_T__o *)System_Collections_Generic_List_ListViewSort_BonusFilterInfo___get_Item(
+                                                       &v10,
+                                                       v5,
+                                                       v7,
+                                                       (const MethodInfo_343DE88 *)method->rgctx_data->_3_System_Collections_Generic_List_T__get_Item);
+      if ( !func )
+        break;
+      if ( (((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, ListViewSort_BonusFilterInfo_o *, _QWORD))func->fields.m_target)(
+              func->fields.original_method_info,
+              &v10,
+              *(_QWORD *)&func->fields.extra_arg) & 1) == 0 )
+      {
+        v8 = ++v7 < size;
+        if ( size != v7 )
+          continue;
+      }
+      return v8;
+    }
+LABEL_12:
+    sub_1B00F28(list, func);
+  }
+  return 0;
+}
+
+
+bool __fastcall BasicHelper__Any___Il2CppFullySharedGenericType_(
+        System_Collections_Generic_List_T__o *list,
+        System_Func_T__bool__o *func,
+        const MethodInfo_2D4E8C8 *method)
+{
+  System_Collections_Generic_List_T__o *v5; // x21
+  const MethodInfo_2D4E8C8_RGCTXs *rgctx_data; // x8
+  __int64 *v7; // x22
+  int v8; // w0
+  int v9; // w23
+  int v10; // w26
+  bool v11; // w25
+  MethodInfo *_3_System_Collections_Generic_List_T__get_Item; // x1
+  Il2CppMethodPointer methodPointer; // x0
+  const MethodInfo_2D4E8C8_RGCTXs *v14; // x8
+  __int64 v15; // x9
+  MethodInfo *_5_System_Func_T__bool__Invoke; // x1
+  void (__fastcall *v17)(); // x0
+  __int64 v19[2]; // [xsp+0h] [xbp-20h] BYREF
+  int v20; // [xsp+14h] [xbp-Ch] BYREF
+  __int64 v21; // [xsp+18h] [xbp-8h]
+
+  v5 = list;
+  v21 = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
+  rgctx_data = method->rgctx_data;
+  if ( !rgctx_data )
+  {
+    list = (System_Collections_Generic_List_T__o *)sub_1B52C04(method);
     rgctx_data = method->rgctx_data;
-    methodPointer = (__int64 (__fastcall *)(System_Func_T__bool__o *, __int128 *, MethodInfo *))rgctx_data->_2_System_Func_T__bool__Invoke->methodPointer;
-    v12[0] = v13;
-    v12[1] = v14;
-    if ( (methodPointer(func, v12, rgctx_data->_2_System_Func_T__bool__Invoke) & 1) != 0 )
-      return 1;
-    if ( (int)++v8 >= v7 )
-      return 0;
   }
-}
-
-
-bool __fastcall BasicHelper__Any_ListViewSort_FilterCategoryKind_(
-        ListViewSort_FilterCategoryKind_array *array,
-        System_Func_T__bool__o *func,
-        const MethodInfo_1C65FFC *method)
-{
-  __int64 v3; // x8
-  ListViewSort_FilterCategoryKind_array *v4; // x21
-  unsigned __int64 v7; // x22
-  __int64 v9; // x0
-
-  if ( !array )
-LABEL_11:
-    sub_B7769C(array, func);
-  v3 = *(_QWORD *)&array->max_length;
-  v4 = array;
-  if ( (int)v3 < 1 )
-    return 0;
-  v7 = 0LL;
-  while ( 1 )
+  v7 = (__int64 *)((char *)v19 - (((unsigned int)rgctx_data->_4_T->_2.native_size + 15LL) & 0x1FFFFFFF0LL));
+  if ( !v5 )
+    goto LABEL_14;
+  v8 = ((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *))rgctx_data->_1_System_Collections_Generic_List_T__get_Count->methodPointer)(v5);
+  if ( v8 >= 1 )
   {
-    if ( v7 >= (unsigned int)v3 )
+    v9 = v8;
+    v10 = 0;
+    v11 = 1;
+    while ( 1 )
     {
-      v9 = sub_B776C8(array);
-      sub_B77668(v9, 0LL);
+      _3_System_Collections_Generic_List_T__get_Item = method->rgctx_data->_3_System_Collections_Generic_List_T__get_Item;
+      methodPointer = _3_System_Collections_Generic_List_T__get_Item->methodPointer;
+      v20 = v10;
+      v19[0] = (__int64)&v20;
+      v19[1] = (__int64)v7;
+      list = (System_Collections_Generic_List_T__o *)((__int64 (__fastcall *)(Il2CppMethodPointer, MethodInfo *, System_Collections_Generic_List_T__o *, __int64 *, __int64 *))_3_System_Collections_Generic_List_T__get_Item->invoker_method)(
+                                                       methodPointer,
+                                                       _3_System_Collections_Generic_List_T__get_Item,
+                                                       v5,
+                                                       v19,
+                                                       v7);
+      if ( !func )
+        break;
+      v14 = method->rgctx_data;
+      v15 = (__int64)v7;
+      if ( (v14->_4_T->_1.byval_arg.bits & 0x80000000) == 0 )
+        v15 = *v7;
+      _5_System_Func_T__bool__Invoke = v14->_5_System_Func_T__bool__Invoke;
+      v17 = _5_System_Func_T__bool__Invoke->methodPointer;
+      v19[0] = v15;
+      _5_System_Func_T__bool__Invoke->invoker_method(v17, _5_System_Func_T__bool__Invoke, func, (void **)v19, &v20);
+      if ( !(_BYTE)v20 )
+      {
+        v11 = ++v10 < v9;
+        if ( v9 != v10 )
+          continue;
+      }
+      return v11;
     }
-    if ( !func )
-      goto LABEL_11;
-    array = (ListViewSort_FilterCategoryKind_array *)((__int64 (__fastcall *)(System_Func_T__bool__o *, _QWORD))method->rgctx_data->_0_System_Func_T__bool__Invoke->methodPointer)(
-                                                       func,
-                                                       (unsigned int)v4->m_Items[v7 + 1]);
-    if ( ((unsigned __int8)array & 1) != 0 )
-      return 1;
-    LODWORD(v3) = v4->max_length;
-    if ( (__int64)++v7 >= (int)v3 )
-      return 0;
+LABEL_14:
+    sub_1B00F28(list, func);
   }
+  return 0;
 }
 
 
-bool __fastcall BasicHelper__Any_USFGOPlayBgmEventConditional_CondBGM_(
-        WellFired_USFGOPlayBgmEventConditional_CondBGM_array *array,
+bool __fastcall BasicHelper__Any___Il2CppFullySharedGenericType__47508000(
+        Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *array,
         System_Func_T__bool__o *func,
-        const MethodInfo_1C661F0 *method)
+        const MethodInfo_2D4EA20 *method)
 {
-  __int64 v3; // x8
-  WellFired_USFGOPlayBgmEventConditional_CondBGM_array *v4; // x21
-  unsigned __int64 v7; // x22
-  __int64 v9; // x0
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *v5; // x21
+  const MethodInfo_2D4EA20_RGCTXs *rgctx_data; // x8
+  __int64 native_size; // x22
+  __int64 v8; // x8
+  bool v9; // w25
+  unsigned __int64 v10; // x26
+  const MethodInfo_2D4EA20_RGCTXs *v11; // x8
+  char *v12; // x9
+  MethodInfo *_3_System_Func_T__bool__Invoke; // x1
+  Il2CppMethodPointer methodPointer; // x0
+  __int64 v16; // [xsp+0h] [xbp-20h] BYREF
+  char *v17; // [xsp+8h] [xbp-18h] BYREF
+  char v18[4]; // [xsp+14h] [xbp-Ch] BYREF
+  __int64 v19; // [xsp+18h] [xbp-8h]
 
-  if ( !array )
-LABEL_11:
-    sub_B7769C(array, func);
-  v3 = *(_QWORD *)&array->max_length;
-  v4 = array;
-  if ( (int)v3 < 1 )
-    return 0;
-  v7 = 0LL;
-  while ( 1 )
+  v5 = array;
+  v19 = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
+  rgctx_data = method->rgctx_data;
+  if ( !rgctx_data )
   {
-    if ( v7 >= (unsigned int)v3 )
+    array = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *)sub_1B52C04(method);
+    rgctx_data = method->rgctx_data;
+  }
+  native_size = (unsigned int)rgctx_data->_2_T->_2.native_size;
+  if ( !v5 )
+    goto LABEL_13;
+  v8 = *(_QWORD *)&v5->max_length;
+  v9 = (int)v8 > 0;
+  if ( (int)v8 >= 1 )
+  {
+    v10 = 0LL;
+    while ( 1 )
     {
-      v9 = sub_B776C8(array);
-      sub_B77668(v9, 0LL);
+      if ( v10 >= (unsigned int)v8 )
+        sub_1B00F30(array, func);
+      array = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *)memcpy(
+                                                                              (char *)&v16
+                                                                            - ((native_size + 15) & 0x1FFFFFFF0LL),
+                                                                              (char *)v5->m_Items
+                                                                            + v10
+                                                                            * v5->obj.klass->_2.thread_static_fields_size,
+                                                                              native_size);
+      if ( !func )
+        break;
+      v11 = method->rgctx_data;
+      v12 = (char *)&v16 - ((native_size + 15) & 0x1FFFFFFF0LL);
+      if ( (v11->_2_T->_1.byval_arg.bits & 0x80000000) == 0 )
+        v12 = *(char **)((char *)&v16 - ((native_size + 15) & 0x1FFFFFFF0LL));
+      _3_System_Func_T__bool__Invoke = v11->_3_System_Func_T__bool__Invoke;
+      methodPointer = _3_System_Func_T__bool__Invoke->methodPointer;
+      v17 = v12;
+      array = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *)((__int64 (__fastcall *)(Il2CppMethodPointer, MethodInfo *, System_Func_T__bool__o *, char **, char *))_3_System_Func_T__bool__Invoke->invoker_method)(
+                                                                              methodPointer,
+                                                                              _3_System_Func_T__bool__Invoke,
+                                                                              func,
+                                                                              &v17,
+                                                                              v18);
+      if ( !v18[0] )
+      {
+        LODWORD(v8) = v5->max_length;
+        v9 = (__int64)++v10 < (int)v8;
+        if ( (__int64)v10 < (int)v8 )
+          continue;
+      }
+      return v9;
     }
-    if ( !func )
-      goto LABEL_11;
-    array = (WellFired_USFGOPlayBgmEventConditional_CondBGM_array *)((__int64 (__fastcall *)(System_Func_T__bool__o *, WellFired_USFGOPlayBgmEventConditional_CondBGM_o *))method->rgctx_data->_0_System_Func_T__bool__Invoke->methodPointer)(
-                                                                      func,
-                                                                      v4->m_Items[v7]);
-    if ( ((unsigned __int8)array & 1) != 0 )
-      return 1;
-    LODWORD(v3) = v4->max_length;
-    if ( (__int64)++v7 >= (int)v3 )
-      return 0;
+LABEL_13:
+    sub_1B00F28(array, func);
   }
-}
-
-
-bool __fastcall BasicHelper__Any_Voice_BATTLE_(
-        System_Collections_Generic_List_T__o *list,
-        System_Func_T__bool__o *func,
-        const MethodInfo_1C65F50 *method)
-{
-  System_Collections_Generic_List_T__o *v5; // x21
-  int v6; // w0
-  int v7; // w22
-  unsigned int v8; // w23
-
-  if ( !list )
-LABEL_9:
-    sub_B7769C(list, func);
-  v5 = list;
-  v6 = ((__int64 (*)(void))method->rgctx_data->_0_System_Collections_Generic_List_T__get_Count->methodPointer)();
-  if ( v6 < 1 )
-    return 0;
-  v7 = v6;
-  v8 = 0;
-  while ( 1 )
-  {
-    list = (System_Collections_Generic_List_T__o *)((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *, _QWORD))method->rgctx_data->_1_System_Collections_Generic_List_T__get_Item->methodPointer)(
-                                                     v5,
-                                                     v8);
-    if ( !func )
-      goto LABEL_9;
-    if ( (((__int64 (__fastcall *)(System_Func_T__bool__o *, _QWORD))method->rgctx_data->_2_System_Func_T__bool__Invoke->methodPointer)(
-            func,
-            (unsigned int)list) & 1) != 0 )
-      return 1;
-    if ( (int)++v8 >= v7 )
-      return 0;
-  }
-}
-
-
-bool __fastcall BasicHelper__Any_WarBoardData_SquareRangeSearch_(
-        System_Collections_Generic_List_T__o *list,
-        System_Func_T__bool__o *func,
-        const MethodInfo_1C66144 *method)
-{
-  System_Collections_Generic_List_T__o *v5; // x21
-  int v6; // w0
-  int v7; // w22
-  unsigned int v8; // w23
-
-  if ( !list )
-LABEL_9:
-    sub_B7769C(list, func);
-  v5 = list;
-  v6 = ((__int64 (*)(void))method->rgctx_data->_0_System_Collections_Generic_List_T__get_Count->methodPointer)();
-  if ( v6 < 1 )
-    return 0;
-  v7 = v6;
-  v8 = 0;
-  while ( 1 )
-  {
-    list = (System_Collections_Generic_List_T__o *)((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *, _QWORD))method->rgctx_data->_1_System_Collections_Generic_List_T__get_Item->methodPointer)(
-                                                     v5,
-                                                     v8);
-    if ( !func )
-      goto LABEL_9;
-    if ( (((__int64 (__fastcall *)(System_Func_T__bool__o *, System_Collections_Generic_List_T__o *))method->rgctx_data->_2_System_Func_T__bool__Invoke->methodPointer)(
-            func,
-            list) & 1) != 0 )
-      return 1;
-    if ( (int)++v8 >= v7 )
-      return 0;
-  }
+  return v9;
 }
 
 
 bool __fastcall BasicHelper__Any_int_(
         System_Collections_Generic_List_T__o *list,
         System_Func_T__bool__o *func,
-        const MethodInfo_1C65E00 *method)
+        const MethodInfo_2D4E454 *method)
 {
-  System_Collections_Generic_List_T__o *v5; // x21
-  int v6; // w0
-  int v7; // w22
-  unsigned int v8; // w23
+  System_Collections_Generic_List_int__o *v5; // x21
+  int size; // w23
+  int32_t v7; // w22
+  bool v8; // w24
 
-  if ( !list )
-LABEL_9:
-    sub_B7769C(list, func);
-  v5 = list;
-  v6 = ((__int64 (*)(void))method->rgctx_data->_0_System_Collections_Generic_List_T__get_Count->methodPointer)();
-  if ( v6 < 1 )
-    return 0;
-  v7 = v6;
-  v8 = 0;
-  while ( 1 )
+  v5 = (System_Collections_Generic_List_int__o *)list;
+  if ( !method->rgctx_data )
+    list = (System_Collections_Generic_List_T__o *)sub_1B52C04(method);
+  if ( !v5 )
+    goto LABEL_12;
+  size = v5->fields._size;
+  if ( size >= 1 )
   {
-    list = (System_Collections_Generic_List_T__o *)((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *, _QWORD))method->rgctx_data->_1_System_Collections_Generic_List_T__get_Item->methodPointer)(
-                                                     v5,
-                                                     v8);
-    if ( !func )
-      goto LABEL_9;
-    if ( (((__int64 (__fastcall *)(System_Func_T__bool__o *, _QWORD))method->rgctx_data->_2_System_Func_T__bool__Invoke->methodPointer)(
-            func,
-            (unsigned int)list) & 1) != 0 )
-      return 1;
-    if ( (int)++v8 >= v7 )
-      return 0;
+    v7 = 0;
+    v8 = 1;
+    while ( 1 )
+    {
+      list = (System_Collections_Generic_List_T__o *)System_Collections_Generic_List_int___get_Item(
+                                                       v5,
+                                                       v7,
+                                                       (const MethodInfo_33A46BC *)method->rgctx_data->_3_System_Collections_Generic_List_T__get_Item);
+      if ( !func )
+        break;
+      if ( (((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))func->fields.m_target)(
+              func->fields.original_method_info,
+              (unsigned int)list,
+              *(_QWORD *)&func->fields.extra_arg) & 1) == 0 )
+      {
+        v8 = ++v7 < size;
+        if ( size != v7 )
+          continue;
+      }
+      return v8;
+    }
+LABEL_12:
+    sub_1B00F28(list, func);
   }
+  return 0;
 }
 
 
-bool __fastcall BasicHelper__Any_int__29777580(
+bool __fastcall BasicHelper__Any_int__47506688(
         System_Int32_array *array,
         System_Func_T__bool__o *func,
-        const MethodInfo_1C65EAC *method)
+        const MethodInfo_2D4E500 *method)
 {
-  __int64 v3; // x8
-  System_Int32_array *v4; // x21
+  System_Int32_array *v4; // x20
+  __int64 v5; // x8
+  bool v6; // w21
   unsigned __int64 v7; // x22
-  __int64 v9; // x0
 
-  if ( !array )
-LABEL_11:
-    sub_B7769C(array, func);
-  v3 = *(_QWORD *)&array->max_length;
   v4 = array;
-  if ( (int)v3 < 1 )
-    return 0;
-  v7 = 0LL;
-  while ( 1 )
+  if ( !method->rgctx_data )
+    array = (System_Int32_array *)sub_1B52C04(method);
+  if ( !v4 )
+    goto LABEL_12;
+  v5 = *(_QWORD *)&v4->max_length;
+  v6 = (int)v5 > 0;
+  if ( (int)v5 >= 1 )
   {
-    if ( v7 >= (unsigned int)v3 )
+    v7 = 0LL;
+    while ( 1 )
     {
-      v9 = sub_B776C8(array);
-      sub_B77668(v9, 0LL);
+      if ( v7 >= (unsigned int)v5 )
+        sub_1B00F30(array, func);
+      if ( !func )
+        break;
+      array = (System_Int32_array *)((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))func->fields.m_target)(
+                                      func->fields.original_method_info,
+                                      (unsigned int)v4->m_Items[v7 + 1],
+                                      *(_QWORD *)&func->fields.extra_arg);
+      if ( ((unsigned __int8)array & 1) == 0 )
+      {
+        LODWORD(v5) = v4->max_length;
+        v6 = (__int64)++v7 < (int)v5;
+        if ( (__int64)v7 < (int)v5 )
+          continue;
+      }
+      return v6;
     }
-    if ( !func )
-      goto LABEL_11;
-    array = (System_Int32_array *)((__int64 (__fastcall *)(System_Func_T__bool__o *, _QWORD))method->rgctx_data->_0_System_Func_T__bool__Invoke->methodPointer)(
-                                    func,
-                                    (unsigned int)v4->m_Items[v7 + 1]);
-    if ( ((unsigned __int8)array & 1) != 0 )
-      return 1;
-    LODWORD(v3) = v4->max_length;
-    if ( (__int64)++v7 >= (int)v3 )
-      return 0;
+LABEL_12:
+    sub_1B00F28(array, func);
   }
+  return v6;
 }
 
 
 bool __fastcall BasicHelper__Any_long_(
         System_Int64_array *array,
         System_Func_T__bool__o *func,
-        const MethodInfo_1C660A0 *method)
+        const MethodInfo_2D4E6E4 *method)
 {
-  __int64 v3; // x8
-  System_Int64_array *v4; // x21
+  System_Int64_array *v4; // x20
+  __int64 v5; // x8
+  bool v6; // w21
   unsigned __int64 v7; // x22
-  __int64 v9; // x0
 
-  if ( !array )
-LABEL_11:
-    sub_B7769C(array, func);
-  v3 = *(_QWORD *)&array->max_length;
   v4 = array;
-  if ( (int)v3 < 1 )
-    return 0;
-  v7 = 0LL;
-  while ( 1 )
+  if ( !method->rgctx_data )
+    array = (System_Int64_array *)sub_1B52C04(method);
+  if ( !v4 )
+    goto LABEL_12;
+  v5 = *(_QWORD *)&v4->max_length;
+  v6 = (int)v5 > 0;
+  if ( (int)v5 >= 1 )
   {
-    if ( v7 >= (unsigned int)v3 )
+    v7 = 0LL;
+    while ( 1 )
     {
-      v9 = sub_B776C8(array);
-      sub_B77668(v9, 0LL);
+      if ( v7 >= (unsigned int)v5 )
+        sub_1B00F30(array, func);
+      if ( !func )
+        break;
+      array = (System_Int64_array *)((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, int64_t, _QWORD))func->fields.m_target)(
+                                      func->fields.original_method_info,
+                                      v4->m_Items[v7],
+                                      *(_QWORD *)&func->fields.extra_arg);
+      if ( ((unsigned __int8)array & 1) == 0 )
+      {
+        LODWORD(v5) = v4->max_length;
+        v6 = (__int64)++v7 < (int)v5;
+        if ( (__int64)v7 < (int)v5 )
+          continue;
+      }
+      return v6;
     }
-    if ( !func )
-      goto LABEL_11;
-    array = (System_Int64_array *)((__int64 (__fastcall *)(System_Func_T__bool__o *, int64_t))method->rgctx_data->_0_System_Func_T__bool__Invoke->methodPointer)(
-                                    func,
-                                    v4->m_Items[v7]);
-    if ( ((unsigned __int8)array & 1) != 0 )
-      return 1;
-    LODWORD(v3) = v4->max_length;
-    if ( (__int64)++v7 >= (int)v3 )
-      return 0;
+LABEL_12:
+    sub_1B00F28(array, func);
   }
+  return v6;
+}
+
+
+bool __fastcall BasicHelper__Any_object_(
+        System_Collections_Generic_List_T__o *list,
+        System_Func_T__bool__o *func,
+        const MethodInfo_2D4E780 *method)
+{
+  System_Collections_Generic_List_object__o *v5; // x21
+  int size; // w23
+  int32_t v7; // w22
+  bool v8; // w24
+
+  v5 = (System_Collections_Generic_List_object__o *)list;
+  if ( !method->rgctx_data )
+    list = (System_Collections_Generic_List_T__o *)sub_1B52C04(method);
+  if ( !v5 )
+    goto LABEL_12;
+  size = v5->fields._size;
+  if ( size >= 1 )
+  {
+    v7 = 0;
+    v8 = 1;
+    while ( 1 )
+    {
+      list = (System_Collections_Generic_List_T__o *)System_Collections_Generic_List_object___get_Item(
+                                                       v5,
+                                                       v7,
+                                                       (const MethodInfo_33C1700 *)method->rgctx_data->_3_System_Collections_Generic_List_T__get_Item);
+      if ( !func )
+        break;
+      if ( (((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_Collections_Generic_List_T__o *, _QWORD))func->fields.m_target)(
+              func->fields.original_method_info,
+              list,
+              *(_QWORD *)&func->fields.extra_arg) & 1) == 0 )
+      {
+        v8 = ++v7 < size;
+        if ( size != v7 )
+          continue;
+      }
+      return v8;
+    }
+LABEL_12:
+    sub_1B00F28(list, func);
+  }
+  return 0;
+}
+
+
+bool __fastcall BasicHelper__Any_object__47507500(
+        System_Object_array *array,
+        System_Func_T__bool__o *func,
+        const MethodInfo_2D4E82C *method)
+{
+  System_Object_array *v4; // x20
+  __int64 v5; // x8
+  bool v6; // w21
+  unsigned __int64 v7; // x22
+
+  v4 = array;
+  if ( !method->rgctx_data )
+    array = (System_Object_array *)sub_1B52C04(method);
+  if ( !v4 )
+    goto LABEL_12;
+  v5 = *(_QWORD *)&v4->max_length;
+  v6 = (int)v5 > 0;
+  if ( (int)v5 >= 1 )
+  {
+    v7 = 0LL;
+    while ( 1 )
+    {
+      if ( v7 >= (unsigned int)v5 )
+        sub_1B00F30(array, func);
+      if ( !func )
+        break;
+      array = (System_Object_array *)((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, Il2CppObject *, _QWORD))func->fields.m_target)(
+                                       func->fields.original_method_info,
+                                       v4->m_Items[v7],
+                                       *(_QWORD *)&func->fields.extra_arg);
+      if ( ((unsigned __int8)array & 1) == 0 )
+      {
+        LODWORD(v5) = v4->max_length;
+        v6 = (__int64)++v7 < (int)v5;
+        if ( (__int64)v7 < (int)v5 )
+          continue;
+      }
+      return v6;
+    }
+LABEL_12:
+    sub_1B00F28(array, func);
+  }
+  return v6;
 }
 
 
@@ -364,117 +630,157 @@ int32_t __fastcall BasicHelper__Clamp(int32_t value, int32_t min, int32_t max, c
 }
 
 
+bool __fastcall BasicHelper__ContainsSelfNotNull___Il2CppFullySharedGenericType_(
+        System_Collections_Generic_HashSet_T__o *self,
+        Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o item,
+        const MethodInfo_2D4ED58 *method)
+{
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x20
+  __int64 v5; // x23
+  _QWORD *monitor; // x21
+  __int64 v7; // x8
+  __int64 v8; // x2
+  _QWORD *v9; // x21
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **v10; // x1
+  __int64 *v11; // x1
+  __int64 v12; // x0
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v14; // [xsp+0h] [xbp-20h] BYREF
+  _QWORD *v15; // [xsp+8h] [xbp-18h] BYREF
+  char v16[4]; // [xsp+14h] [xbp-Ch] BYREF
+  __int64 v17; // [xsp+18h] [xbp-8h]
+
+  klass = item.klass;
+  v17 = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
+  v14 = item.klass;
+  v5 = *((_QWORD *)item.monitor + 7);
+  if ( !v5 )
+  {
+    monitor = item.monitor;
+    sub_1B52C04(item.monitor);
+    v5 = monitor[7];
+  }
+  v7 = *(_QWORD *)(v5 + 8);
+  v8 = *(unsigned int *)(v7 + 252);
+  v9 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **)((char *)&v14 - ((v8 + 15) & 0x1FFFFFFF0LL));
+  if ( !self )
+    return 0;
+  if ( *(int *)(v7 + 40) >= 0 )
+    v10 = &v14;
+  else
+    v10 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **)klass;
+  memcpy((char *)&v14 - ((v8 + 15) & 0x1FFFFFFF0LL), v10, v8);
+  v11 = *(__int64 **)(v5 + 16);
+  v12 = *v11;
+  if ( (*(_DWORD *)(*(_QWORD *)(v5 + 8) + 40LL) & 0x80000000) == 0 )
+    v9 = (_QWORD *)*v9;
+  v15 = v9;
+  ((void (__fastcall *)(__int64, __int64 *, System_Collections_Generic_HashSet_T__o *, _QWORD **, char *))v11[2])(
+    v12,
+    v11,
+    self,
+    &v15,
+    v16);
+  return v16[0] != 0;
+}
+
+
 bool __fastcall BasicHelper__ContainsSelfNotNull_int_(
         System_Collections_Generic_HashSet_T__o *self,
         int32_t item,
-        const MethodInfo_1C66360 *method)
+        const MethodInfo_2D4ED00 *method)
 {
-  if ( self )
-    LOBYTE(self) = ((__int64 (__fastcall *)(System_Collections_Generic_HashSet_T__o *, int32_t))method->rgctx_data->_0_System_Collections_Generic_HashSet_T__Contains->methodPointer)(
-                     self,
-                     item);
-  return (char)self;
+  if ( method->rgctx_data )
+  {
+    if ( self )
+      return System_Collections_Generic_HashSet_int___Contains(
+               (System_Collections_Generic_HashSet_int__o *)self,
+               item,
+               (const MethodInfo_327A530 *)method->rgctx_data->_2_System_Collections_Generic_HashSet_T__Contains);
+  }
+  else
+  {
+    sub_1B52C04(method);
+    if ( self )
+      return System_Collections_Generic_HashSet_int___Contains(
+               (System_Collections_Generic_HashSet_int__o *)self,
+               item,
+               (const MethodInfo_327A530 *)method->rgctx_data->_2_System_Collections_Generic_HashSet_T__Contains);
+  }
+  return 0;
 }
 
 
-bool __fastcall BasicHelper__ContainsSelfNotNull_object_(
-        System_Collections_Generic_HashSet_T__o *self,
-        Il2CppObject *item,
-        const MethodInfo_1C66378 *method)
-{
-  if ( self )
-    LOBYTE(self) = ((__int64 (__fastcall *)(System_Collections_Generic_HashSet_T__o *, Il2CppObject *))method->rgctx_data->_0_System_Collections_Generic_HashSet_T__Contains->methodPointer)(
-                     self,
-                     item);
-  return (char)self;
-}
-
-
+// local variable allocation has failed, the output may be wrong!
 System_Int32_array *__fastcall BasicHelper__Convert2IntArray(
         System_String_o *self,
         uint16_t separator,
         const MethodInfo *method)
 {
-  __int64 v5; // x0
-  __int64 v6; // x1
-  System_String_array *v7; // x0
-  System_String_array *v8; // x19
-  __int64 v9; // x8
-  System_Int32_array *v10; // x20
-  unsigned __int64 v11; // x21
-  __int64 v13; // x0
-  int32_t result; // [xsp+Ch] [xbp-24h] BYREF
+  System_String_o *v4; // x20
+  System_String_array *v5; // x0
+  System_String_array *v6; // x19
+  __int64 v7; // x8
+  System_Int32_array *v8; // x20
+  unsigned __int64 v9; // x21
+  int32_t result; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_43897AE & 1) == 0 )
+  v4 = self;
+  if ( (byte_48E3DE8 & 1) == 0 )
   {
-    sub_B775C4(&char___TypeInfo);
-    sub_B775C4(&int___TypeInfo);
-    byte_43897AE = 1;
+    self = (System_String_o *)sub_1B00CCC(&int___TypeInfo, separator);
+    byte_48E3DE8 = 1;
   }
-  result = 0;
-  v5 = sub_B775DC(char___TypeInfo, 1LL);
+  if ( !v4 )
+LABEL_17:
+    sub_1B00F28(self, separator);
+  v5 = System_String__Split(v4, separator, 0, 0LL);
   if ( !v5 )
-    goto LABEL_19;
-  v6 = v5;
-  if ( !*(_DWORD *)(v5 + 24) )
-    goto LABEL_18;
-  *(_WORD *)(v5 + 32) = separator;
-  if ( !self )
-LABEL_19:
-    sub_B7769C(v5, v6);
-  v7 = System_String__Split(self, (System_Char_array *)v5, 0LL);
-  if ( !v7 )
     return 0LL;
-  v8 = v7;
-  v5 = sub_B775DC(int___TypeInfo, v7->max_length);
-  v9 = *(_QWORD *)&v8->max_length;
-  v10 = (System_Int32_array *)v5;
-  if ( (int)v9 >= 1 )
+  v6 = v5;
+  self = (System_String_o *)sub_1B00D74(int___TypeInfo, v5->max_length);
+  v7 = *(_QWORD *)&v6->max_length;
+  v8 = (System_Int32_array *)self;
+  if ( (int)v7 >= 1 )
   {
-    v11 = 0LL;
+    v9 = 0LL;
     while ( 1 )
     {
       result = 0;
-      if ( v11 >= (unsigned int)v9 )
+      if ( v9 >= (unsigned int)v7 )
         break;
-      v5 = System_Int32__TryParse(v8->m_Items[v11], &result, 0LL);
-      if ( (v5 & 1) != 0 )
+      self = (System_String_o *)System_Int32__TryParse(v6->m_Items[v9], &result, 0LL);
+      if ( ((unsigned __int8)self & 1) != 0 )
       {
-        if ( !v10 )
-          goto LABEL_19;
-        if ( v11 >= v10->max_length )
+        if ( !v8 )
+          goto LABEL_17;
+        if ( v9 >= v8->max_length )
           break;
-        v10->m_Items[v11 + 1] = result;
+        v8->m_Items[v9 + 1] = result;
       }
-      LODWORD(v9) = v8->max_length;
-      if ( (__int64)++v11 >= (int)v9 )
-        return v10;
+      LODWORD(v7) = v6->max_length;
+      if ( (__int64)++v9 >= (int)v7 )
+        return v8;
     }
-LABEL_18:
-    v13 = sub_B776C8(v5);
-    sub_B77668(v13, 0LL);
+    sub_1B00F30(self, separator);
   }
-  return v10;
+  return v8;
 }
 
 
 int32_t __fastcall BasicHelper__DecryptValue(int32_t self, const MethodInfo *method)
 {
-  if ( (byte_43897A7 & 1) == 0 )
+  if ( (byte_48E3DE1 & 1) == 0 )
   {
-    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_43897A7 = 1;
+    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
+    byte_48E3DE1 = 1;
   }
-  if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-  {
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  }
   return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__Decrypt(self, 0LL);
 }
 
 
-int32_t __fastcall BasicHelper__DecryptValue_22415800(
+int32_t __fastcall BasicHelper__DecryptValue_39735744(
         CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o self,
         const MethodInfo *method)
 {
@@ -484,79 +790,67 @@ int32_t __fastcall BasicHelper__DecryptValue_22415800(
 
   v2 = *(_QWORD *)&self.fields.fakeValue;
   v3 = *(_QWORD *)&self.fields.currentCryptoKey;
-  if ( (byte_43897A8 & 1) == 0 )
+  if ( (byte_48E3DE2 & 1) == 0 )
   {
-    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_43897A8 = 1;
+    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, *(_QWORD *)&self.fields.fakeValue);
+    byte_48E3DE2 = 1;
   }
-  if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-  {
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  }
   *(_QWORD *)&v5.fields.currentCryptoKey = v3;
   *(_QWORD *)&v5.fields.fakeValue = v2;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v5, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(v5, 0LL);
 }
 
 
-System_String_o *__fastcall BasicHelper__DecryptValue_22416016(
+System_String_o *__fastcall BasicHelper__DecryptValue_39735936(
         CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *self,
         const MethodInfo *method)
 {
-  if ( (byte_43897AA & 1) == 0 )
+  if ( (byte_48E3DE4 & 1) == 0 )
   {
-    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-    byte_43897AA = 1;
+    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, method);
+    byte_48E3DE4 = 1;
   }
-  if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
-  {
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-  }
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_45464420(self, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_45348888(self, 0LL);
 }
 
 
-int64_t __fastcall BasicHelper__DecryptValue_22416116(int64_t self, const MethodInfo *method)
+int64_t __fastcall BasicHelper__DecryptValue_39736024(int64_t self, const MethodInfo *method)
 {
-  if ( (byte_43897AB & 1) == 0 )
+  if ( (byte_48E3DE5 & 1) == 0 )
   {
-    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_43897AB = 1;
+    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method);
+    byte_48E3DE5 = 1;
   }
-  if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
-  {
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  }
   return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__Decrypt(self, 0LL);
 }
 
 
-int64_t __fastcall BasicHelper__DecryptValue_22416216(
+int64_t __fastcall BasicHelper__DecryptValue_39736112(
         CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *self,
         const MethodInfo *method)
 {
-  __int128 v3; // q1
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v5; // [xsp+0h] [xbp-50h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v6; // [xsp+20h] [xbp-30h]
+  __int128 v3; // q0
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v5; // [xsp+0h] [xbp-60h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v6; // [xsp+20h] [xbp-40h]
 
-  if ( (byte_43897AC & 1) == 0 )
+  if ( (byte_48E3DE6 & 1) == 0 )
   {
-    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_43897AC = 1;
+    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method);
+    byte_48E3DE6 = 1;
   }
   v3 = *(_OWORD *)&self->fields.fakeValue;
   *(_OWORD *)&v6.fields.currentCryptoKey = *(_OWORD *)&self->fields.currentCryptoKey;
   *(_OWORD *)&v6.fields.fakeValue = v3;
-  if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
-  {
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  }
   v5 = v6;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45429112(&v5, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45316568(&v5, 0LL);
 }
 
 
@@ -566,27 +860,20 @@ System_Collections_IEnumerator_o *__fastcall BasicHelper__DelayCall(
         const MethodInfo *method)
 {
   __int64 v5; // x20
-  __int64 v6; // x0
-  __int64 v7; // x1
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
+  int32_t v6; // w2
+  int32_t v7; // w3
 
-  if ( (byte_43897B2 & 1) == 0 )
+  if ( (byte_48E3DEB & 1) == 0 )
   {
-    sub_B775C4(&BasicHelper__DelayCall_d__35_TypeInfo);
-    byte_43897B2 = 1;
+    sub_1B00CCC(&BasicHelper__DelayCall_d__35_TypeInfo, method);
+    byte_48E3DEB = 1;
   }
-  v5 = sub_B77694(BasicHelper__DelayCall_d__35_TypeInfo);
-  BasicHelper__DelayCall_d__35___ctor((BasicHelper__DelayCall_d__35_o *)v5, 0, 0LL);
-  if ( !v5 )
-    sub_B7769C(v6, v7);
+  v5 = sub_1B00F18(BasicHelper__DelayCall_d__35_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0LL);
+  *(_DWORD *)(v5 + 16) = 0;
   *(float *)(v5 + 32) = delay;
   *(_QWORD *)(v5 + 40) = action;
-  sub_B77560((BattleServantConfConponent_o *)(v5 + 40), (System_Int32_array **)action, v8, v9, v10, v11, v12, v13);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v5 + 40), (int32_t)action, v6, v7);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -595,47 +882,99 @@ System_Collections_IEnumerator_o *__fastcall BasicHelper__DelayCall_ShowAllEx_Da
         float delay,
         System_Action_T__o *action,
         HutongGames_PlayMaker_Actions_ShowAllEx_DamageFuncArgument_o *arg,
-        const MethodInfo_1C66430 *method)
+        const MethodInfo_2D4F030 *method)
 {
-  Il2CppClass *_0_BasicHelper__DelayCall_d__36_T; // x22
-  __int64 v9; // x0
-  const MethodInfo_1C66430_RGCTXs *rgctx_data; // x8
-  __int64 v11; // x21
+  const MethodInfo_2D4F030_RGCTXs *rgctx_data; // x8
+  __int64 _0_BasicHelper__DelayCall_d__36_T; // x0
+  BasicHelper__DelayCall_d__36_T__o *v10; // x0
+  const MethodInfo_2D4F030_RGCTXs *v11; // x8
+  BasicHelper__DelayCall_d__36_T__o *v12; // x21
+  __int64 v13; // x0
+  __int64 v14; // x1
+  int32_t v15; // w2
+  int32_t v16; // w3
+  __int128 v17; // q0
+  int32_t v18; // w2
+  int32_t v19; // w3
+
+  rgctx_data = method->rgctx_data;
+  if ( !rgctx_data )
+  {
+    sub_1B52C04(method);
+    rgctx_data = method->rgctx_data;
+  }
+  _0_BasicHelper__DelayCall_d__36_T = (__int64)rgctx_data->_0_BasicHelper__DelayCall_d__36_T_;
+  if ( (BYTE5(rgctx_data->_0_BasicHelper__DelayCall_d__36_T_->vtable[0].methodPtr) & 1) == 0 )
+    _0_BasicHelper__DelayCall_d__36_T = sub_1B52BA8(_0_BasicHelper__DelayCall_d__36_T);
+  v10 = (BasicHelper__DelayCall_d__36_T__o *)sub_1B00F18(_0_BasicHelper__DelayCall_d__36_T);
+  v11 = method->rgctx_data;
+  v12 = v10;
+  BasicHelper__DelayCall_d__36_ShowAllEx_DamageFuncArgument____ctor(
+    v10,
+    0,
+    (const MethodInfo_2F22F78 *)v11->_1_BasicHelper__DelayCall_d__36_T___ctor);
+  if ( !v12 )
+    sub_1B00F28(v13, v14);
+  v12->fields.delay = delay;
+  v12->fields.action = action;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v12->fields.action, (int32_t)action, v15, v16);
+  v17 = *(_OWORD *)&arg->fields.perf;
+  v12[1].monitor = *(void **)&arg->fields.damageIndex;
+  *(_OWORD *)&v12->fields.arg = v17;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v12->fields.arg, 0, v18, v19);
+  return (System_Collections_IEnumerator_o *)v12;
+}
+
+
+// local variable allocation has failed, the output may be wrong!
+System_Collections_IEnumerator_o *__fastcall BasicHelper__DelayCall___Il2CppFullySharedGenericType_(
+        float delay,
+        System_Action_T__o *action,
+        Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg,
+        const MethodInfo_2D4EEDC *method)
+{
+  _QWORD *monitor; // x20
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x19
+  __int64 *v7; // x8
+  long double v8; // q8
+  __int64 v9; // x21
+  __int64 v10; // x0
+  System_Collections_IEnumerator_o *v11; // x24
   __int64 v12; // x0
   __int64 v13; // x1
-  System_String_array **v14; // x2
-  System_String_array **v15; // x3
-  System_Boolean_array **v16; // x4
-  System_Int32_array **v17; // x5
-  System_Int32_array *v18; // x6
-  System_Int32_array *v19; // x7
-  __int128 v20; // q0
-  System_String_array **v21; // x2
-  System_String_array **v22; // x3
-  System_Boolean_array **v23; // x4
-  System_Int32_array **v24; // x5
-  System_Int32_array *v25; // x6
-  System_Int32_array *v26; // x7
+  _QWORD *v14; // x20
+  __int64 *v15; // x1
+  __int64 v17[2]; // [xsp+0h] [xbp-18h] BYREF
 
-  _0_BasicHelper__DelayCall_d__36_T = method->rgctx_data->_0_BasicHelper__DelayCall_d__36_T_;
-  if ( (BYTE2(_0_BasicHelper__DelayCall_d__36_T->vtable[0].methodPtr) & 1) == 0 )
-    sub_B0F2C4(method->rgctx_data->_0_BasicHelper__DelayCall_d__36_T_);
-  v9 = sub_B77694(_0_BasicHelper__DelayCall_d__36_T);
-  rgctx_data = method->rgctx_data;
-  v11 = v9;
-  v12 = ((__int64 (__fastcall *)(__int64, _QWORD))rgctx_data->_1_BasicHelper__DelayCall_d__36_T___ctor->methodPointer)(
-          v9,
-          0LL);
+  monitor = arg.monitor;
+  klass = arg.klass;
+  v17[1] = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
+  v17[0] = (__int64)arg.klass;
+  v7 = (__int64 *)*((_QWORD *)arg.monitor + 7);
+  v8 = *(long double *)&delay;
+  if ( !v7 )
+  {
+    sub_1B52C04(arg.monitor);
+    v7 = (__int64 *)monitor[7];
+  }
+  v9 = *(unsigned int *)(v7[3] + 252);
+  v10 = *v7;
+  if ( (*(_BYTE *)(*v7 + 309) & 1) == 0 )
+    v10 = sub_1B52BA8(v10);
+  v11 = (System_Collections_IEnumerator_o *)sub_1B00F18(v10);
+  v12 = (**(__int64 (__fastcall ***)(System_Collections_IEnumerator_o *, _QWORD))(monitor[7] + 8LL))(v11, 0LL);
   if ( !v11 )
-    sub_B7769C(v12, v13);
-  *(float *)(v11 + 32) = delay;
-  *(_QWORD *)(v11 + 40) = action;
-  sub_B77560((BattleServantConfConponent_o *)(v11 + 40), (System_Int32_array **)action, v14, v15, v16, v17, v18, v19);
-  v20 = *(_OWORD *)&arg->fields.perf;
-  *(_QWORD *)(v11 + 64) = *(_QWORD *)&arg->fields.damageIndex;
-  *(_OWORD *)(v11 + 48) = v20;
-  sub_B77560((BattleServantConfConponent_o *)(v11 + 48), 0LL, v21, v22, v23, v24, v25, v26);
-  return (System_Collections_IEnumerator_o *)v11;
+    sub_1B00F28(v12, v13);
+  sub_1955A10(v11, *(_QWORD *)(*(_QWORD *)monitor[7] + 128LL) + 64LL, v8);
+  sub_19556E4(v11, *(_QWORD *)(*(_QWORD *)monitor[7] + 128LL) + 96LL, action);
+  v14 = (_QWORD *)monitor[7];
+  if ( *(int *)(v14[3] + 40LL) >= 0 )
+    v15 = v17;
+  else
+    v15 = (__int64 *)klass;
+  memcpy((char *)v17 - ((v9 + 15) & 0x1FFFFFFF0LL), v15, v9);
+  sub_1B00CF4(v11, *(_QWORD *)(*v14 + 128LL) + 128LL, (char *)v17 - ((v9 + 15) & 0x1FFFFFFF0LL), (unsigned int)v9);
+  return v11;
 }
 
 
@@ -643,59 +982,56 @@ System_Collections_IEnumerator_o *__fastcall BasicHelper__DelayCall_object_(
         float delay,
         System_Action_T__o *action,
         Il2CppObject *arg,
-        const MethodInfo_1C66390 *method)
+        const MethodInfo_2D4EE44 *method)
 {
-  Il2CppClass *_0_BasicHelper__DelayCall_d__36_T; // x22
-  __int64 v9; // x0
-  const MethodInfo_1C66390_RGCTXs *rgctx_data; // x8
-  __int64 v11; // x21
-  __int64 v12; // x0
-  __int64 v13; // x1
-  System_String_array **v14; // x2
-  System_String_array **v15; // x3
-  System_Boolean_array **v16; // x4
-  System_Int32_array **v17; // x5
-  System_Int32_array *v18; // x6
-  System_Int32_array *v19; // x7
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
+  const MethodInfo_2D4EE44_RGCTXs *rgctx_data; // x8
+  __int64 _0_BasicHelper__DelayCall_d__36_T; // x0
+  BasicHelper__DelayCall_d__36_T__o *v10; // x0
+  const MethodInfo_2D4EE44_RGCTXs *v11; // x8
+  BasicHelper__DelayCall_d__36_T__o *v12; // x21
+  __int64 v13; // x0
+  __int64 v14; // x1
+  int32_t v15; // w2
+  int32_t v16; // w3
+  int32_t v17; // w2
+  int32_t v18; // w3
 
-  _0_BasicHelper__DelayCall_d__36_T = method->rgctx_data->_0_BasicHelper__DelayCall_d__36_T_;
-  if ( (BYTE2(_0_BasicHelper__DelayCall_d__36_T->vtable[0].methodPtr) & 1) == 0 )
-    sub_B0F2C4(method->rgctx_data->_0_BasicHelper__DelayCall_d__36_T_);
-  v9 = sub_B77694(_0_BasicHelper__DelayCall_d__36_T);
   rgctx_data = method->rgctx_data;
-  v11 = v9;
-  v12 = ((__int64 (__fastcall *)(__int64, _QWORD))rgctx_data->_1_BasicHelper__DelayCall_d__36_T___ctor->methodPointer)(
-          v9,
-          0LL);
-  if ( !v11 )
-    sub_B7769C(v12, v13);
-  *(float *)(v11 + 32) = delay;
-  *(_QWORD *)(v11 + 40) = action;
-  sub_B77560((BattleServantConfConponent_o *)(v11 + 40), (System_Int32_array **)action, v14, v15, v16, v17, v18, v19);
-  *(_QWORD *)(v11 + 48) = arg;
-  sub_B77560((BattleServantConfConponent_o *)(v11 + 48), (System_Int32_array **)arg, v20, v21, v22, v23, v24, v25);
-  return (System_Collections_IEnumerator_o *)v11;
+  if ( !rgctx_data )
+  {
+    sub_1B52C04(method);
+    rgctx_data = method->rgctx_data;
+  }
+  _0_BasicHelper__DelayCall_d__36_T = (__int64)rgctx_data->_0_BasicHelper__DelayCall_d__36_T_;
+  if ( (BYTE5(rgctx_data->_0_BasicHelper__DelayCall_d__36_T_->vtable[0].methodPtr) & 1) == 0 )
+    _0_BasicHelper__DelayCall_d__36_T = sub_1B52BA8(_0_BasicHelper__DelayCall_d__36_T);
+  v10 = (BasicHelper__DelayCall_d__36_T__o *)sub_1B00F18(_0_BasicHelper__DelayCall_d__36_T);
+  v11 = method->rgctx_data;
+  v12 = v10;
+  BasicHelper__DelayCall_d__36_object____ctor(
+    v10,
+    0,
+    (const MethodInfo_2F22B7C *)v11->_1_BasicHelper__DelayCall_d__36_T___ctor);
+  if ( !v12 )
+    sub_1B00F28(v13, v14);
+  v12->fields.delay = delay;
+  v12->fields.action = action;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v12->fields.action, (int32_t)action, v15, v16);
+  v12->fields.arg = arg;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v12->fields.arg, (int32_t)arg, v17, v18);
+  return (System_Collections_IEnumerator_o *)v12;
 }
 
 
 System_String_o *__fastcall BasicHelper__EncryptDecryptValue(System_String_o *self, const MethodInfo *method)
 {
-  if ( (byte_43897A9 & 1) == 0 )
+  if ( (byte_48E3DE3 & 1) == 0 )
   {
-    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-    byte_43897A9 = 1;
+    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, method);
+    byte_48E3DE3 = 1;
   }
-  if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
-  {
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-  }
   return CodeStage_AntiCheat_ObscuredTypes_ObscuredString__EncryptDecrypt(self, 0LL);
 }
 
@@ -714,135 +1050,180 @@ bool __fastcall BasicHelper__EqualExceptNullOrEmpty(
   if ( IsNullOrEmpty )
     return 0;
   if ( !self )
-    sub_B7769C(IsNullOrEmpty, v6);
-  return System_String__Equals_44889276(self, target, 0LL);
+    sub_1B00F28(IsNullOrEmpty, v6);
+  return System_String__Equals_60334064(self, target, 0LL);
 }
 
 
-System_Collections_Generic_IEnumerable_T__o *__fastcall BasicHelper__ExcludeNull_BlankEarthSpotAnimStateManager_SpotStateData_(
+System_Collections_Generic_IEnumerable_T__o *__fastcall BasicHelper__ExcludeNull___Il2CppFullySharedGenericType_(
         System_Collections_Generic_IEnumerable_T__o *sequence,
-        const MethodInfo_1C664DC *method)
+        const MethodInfo_2D4F20C *method)
 {
-  Il2CppClass *_0_BasicHelper___c__26_T; // x21
-  __int16 v5; // w8
-  Il2CppClass *v6; // x21
-  Il2CppClass *v7; // x21
-  Il2CppClass *v8; // x21
-  System_Int32_array **v9; // x21
-  Il2CppClass *v10; // x21
-  __int16 v11; // w8
-  Il2CppClass *v12; // x21
-  Il2CppClass *v13; // x21
-  const MethodInfo_1C664DC_RGCTXs *rgctx_data; // x8
-  Il2CppClass *v15; // x21
-  Il2CppClass *_2_System_Func_T__bool; // x23
-  __int64 v17; // x22
-  System_String_array **v18; // x2
-  System_String_array **v19; // x3
-  System_Boolean_array **v20; // x4
-  System_Int32_array **v21; // x5
-  System_Int32_array *v22; // x6
-  System_Int32_array *v23; // x7
-  Il2CppClass *v24; // x22
-  char *static_fields; // x0
+  const MethodInfo_2D4F20C_RGCTXs *rgctx_data; // x8
+  __int64 _3_BasicHelper___c__26_T; // x0
+  Il2CppClass *v6; // x0
+  __int64 v7; // x21
+  Il2CppClass *v8; // x0
+  const MethodInfo_2D4F20C_RGCTXs *v9; // x8
+  __int64 v10; // x0
+  __int64 _2_System_Func_T__bool; // x8
+  __int64 v12; // x22
+  int32_t v13; // w2
+  int32_t v14; // w3
+  Il2CppClass *v15; // x0
+  Il2CppClass *v16; // x0
 
-  _0_BasicHelper___c__26_T = method->rgctx_data->_0_BasicHelper___c__26_T_;
-  v5 = WORD1(_0_BasicHelper___c__26_T->vtable[0].methodPtr);
-  if ( (v5 & 1) == 0 )
+  rgctx_data = method->rgctx_data;
+  if ( !rgctx_data )
   {
-    sub_B0F2C4(method->rgctx_data->_0_BasicHelper___c__26_T_);
-    v5 = WORD1(_0_BasicHelper___c__26_T->vtable[0].methodPtr);
-  }
-  if ( (v5 & 0x400) != 0 )
-  {
-    v6 = method->rgctx_data->_0_BasicHelper___c__26_T_;
-    if ( (BYTE2(v6->vtable[0].methodPtr) & 1) == 0 )
-      sub_B0F2C4(method->rgctx_data->_0_BasicHelper___c__26_T_);
-    if ( !v6->_2.cctor_finished )
-    {
-      v7 = method->rgctx_data->_0_BasicHelper___c__26_T_;
-      if ( (BYTE2(v7->vtable[0].methodPtr) & 1) == 0 )
-        sub_B0F2C4(method->rgctx_data->_0_BasicHelper___c__26_T_);
-      j_il2cpp_runtime_class_init_0(v7);
-    }
-  }
-  v8 = method->rgctx_data->_0_BasicHelper___c__26_T_;
-  if ( (BYTE2(v8->vtable[0].methodPtr) & 1) == 0 )
-    sub_B0F2C4(method->rgctx_data->_0_BasicHelper___c__26_T_);
-  v9 = (System_Int32_array **)*((_QWORD *)v8->static_fields + 1);
-  if ( !v9 )
-  {
-    v10 = method->rgctx_data->_0_BasicHelper___c__26_T_;
-    v11 = WORD1(v10->vtable[0].methodPtr);
-    if ( (v11 & 1) == 0 )
-    {
-      sub_B0F2C4(method->rgctx_data->_0_BasicHelper___c__26_T_);
-      v11 = WORD1(v10->vtable[0].methodPtr);
-    }
-    if ( (v11 & 0x400) != 0 )
-    {
-      v12 = method->rgctx_data->_0_BasicHelper___c__26_T_;
-      if ( (BYTE2(v12->vtable[0].methodPtr) & 1) == 0 )
-        sub_B0F2C4(method->rgctx_data->_0_BasicHelper___c__26_T_);
-      if ( !v12->_2.cctor_finished )
-      {
-        v13 = method->rgctx_data->_0_BasicHelper___c__26_T_;
-        if ( (BYTE2(v13->vtable[0].methodPtr) & 1) == 0 )
-          sub_B0F2C4(method->rgctx_data->_0_BasicHelper___c__26_T_);
-        j_il2cpp_runtime_class_init_0(v13);
-      }
-    }
+    sub_1B52C04(method);
     rgctx_data = method->rgctx_data;
-    v15 = rgctx_data->_0_BasicHelper___c__26_T_;
-    if ( (BYTE2(rgctx_data->_0_BasicHelper___c__26_T_->vtable[0].methodPtr) & 1) == 0 )
-    {
-      sub_B0F2C4(rgctx_data->_0_BasicHelper___c__26_T_);
-      rgctx_data = method->rgctx_data;
-    }
-    _2_System_Func_T__bool = rgctx_data->_2_System_Func_T__bool_;
-    v17 = *(_QWORD *)v15->static_fields;
-    if ( (BYTE2(_2_System_Func_T__bool->vtable[0].methodPtr) & 1) == 0 )
-      sub_B0F2C4(_2_System_Func_T__bool);
-    v9 = (System_Int32_array **)sub_B77694(_2_System_Func_T__bool);
-    ((void (__fastcall *)(System_Int32_array **, __int64, MethodInfo *))method->rgctx_data->_3_System_Func_T__bool___ctor->methodPointer)(
-      v9,
-      v17,
-      method->rgctx_data->_1_BasicHelper___c__26_T___ExcludeNull_b__26_0);
-    v24 = method->rgctx_data->_0_BasicHelper___c__26_T_;
-    if ( (BYTE2(v24->vtable[0].methodPtr) & 1) == 0 )
-      sub_B0F2C4(method->rgctx_data->_0_BasicHelper___c__26_T_);
-    static_fields = (char *)v24->static_fields;
-    *((_QWORD *)static_fields + 1) = v9;
-    sub_B77560((BattleServantConfConponent_o *)(static_fields + 8), v9, v18, v19, v20, v21, v22, v23);
   }
-  return (System_Collections_Generic_IEnumerable_T__o *)((__int64 (__fastcall *)(System_Collections_Generic_IEnumerable_T__o *, System_Int32_array **))method->rgctx_data->_4_System_Linq_Enumerable_Where_T_->methodPointer)(
+  _3_BasicHelper___c__26_T = (__int64)rgctx_data->_3_BasicHelper___c__26_T_;
+  if ( (*(_BYTE *)(_3_BasicHelper___c__26_T + 309) & 1) == 0 )
+    _3_BasicHelper___c__26_T = sub_1B52BA8(_3_BasicHelper___c__26_T);
+  if ( !*(_DWORD *)(_3_BasicHelper___c__26_T + 224) )
+    j_il2cpp_runtime_class_init_0(_3_BasicHelper___c__26_T);
+  v6 = method->rgctx_data->_3_BasicHelper___c__26_T_;
+  if ( (BYTE5(v6->vtable[0].methodPtr) & 1) == 0 )
+    v6 = (Il2CppClass *)sub_1B52BA8(v6);
+  v7 = *((_QWORD *)v6->static_fields + 1);
+  if ( !v7 )
+  {
+    v8 = method->rgctx_data->_3_BasicHelper___c__26_T_;
+    if ( (BYTE5(v8->vtable[0].methodPtr) & 1) == 0 )
+      v8 = (Il2CppClass *)sub_1B52BA8(v8);
+    if ( !v8->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(v8);
+    v9 = method->rgctx_data;
+    v10 = (__int64)v9->_3_BasicHelper___c__26_T_;
+    if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
+    {
+      v10 = sub_1B52BA8(v10);
+      v9 = method->rgctx_data;
+    }
+    _2_System_Func_T__bool = (__int64)v9->_2_System_Func_T__bool_;
+    v12 = **(_QWORD **)(v10 + 184);
+    if ( (*(_BYTE *)(_2_System_Func_T__bool + 309) & 1) == 0 )
+      _2_System_Func_T__bool = sub_1B52BA8(_2_System_Func_T__bool);
+    v7 = sub_1B00F18(_2_System_Func_T__bool);
+    ((void (__fastcall *)(__int64, __int64, MethodInfo *))method->rgctx_data->_5_System_Func_T__bool___ctor->methodPointer)(
+      v7,
+      v12,
+      method->rgctx_data->_4_BasicHelper___c__26_T___ExcludeNull_b__26_0);
+    v15 = method->rgctx_data->_3_BasicHelper___c__26_T_;
+    if ( (BYTE5(v15->vtable[0].methodPtr) & 1) == 0 )
+      v15 = (Il2CppClass *)sub_1B52BA8(v15);
+    *((_QWORD *)v15->static_fields + 1) = v7;
+    v16 = method->rgctx_data->_3_BasicHelper___c__26_T_;
+    if ( (BYTE5(v16->vtable[0].methodPtr) & 1) == 0 )
+      v16 = (Il2CppClass *)sub_1B52BA8(v16);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)((char *)v16->static_fields + 8), v7, v13, v14);
+  }
+  return (System_Collections_Generic_IEnumerable_T__o *)((__int64 (__fastcall *)(System_Collections_Generic_IEnumerable_T__o *, __int64))method->rgctx_data->_6_System_Linq_Enumerable_Where_T_->methodPointer)(
                                                           sequence,
-                                                          v9);
+                                                          v7);
+}
+
+
+System_Collections_Generic_IEnumerable_T__o *__fastcall BasicHelper__ExcludeNull_object_(
+        System_Collections_Generic_IEnumerable_T__o *sequence,
+        const MethodInfo_2D4F0D4 *method)
+{
+  const MethodInfo_2D4F0D4_RGCTXs *rgctx_data; // x8
+  __int64 _3_BasicHelper___c__26_T; // x0
+  Il2CppClass *v6; // x0
+  System_Func_object__bool__o *v7; // x21
+  Il2CppClass *v8; // x0
+  const MethodInfo_2D4F0D4_RGCTXs *v9; // x8
+  __int64 v10; // x0
+  __int64 _2_System_Func_T__bool; // x8
+  Il2CppObject *v12; // x22
+  int32_t v13; // w2
+  int32_t v14; // w3
+  Il2CppClass *v15; // x0
+  Il2CppClass *v16; // x0
+
+  rgctx_data = method->rgctx_data;
+  if ( !rgctx_data )
+  {
+    sub_1B52C04(method);
+    rgctx_data = method->rgctx_data;
+  }
+  _3_BasicHelper___c__26_T = (__int64)rgctx_data->_3_BasicHelper___c__26_T_;
+  if ( (*(_BYTE *)(_3_BasicHelper___c__26_T + 309) & 1) == 0 )
+    _3_BasicHelper___c__26_T = sub_1B52BA8(_3_BasicHelper___c__26_T);
+  if ( !*(_DWORD *)(_3_BasicHelper___c__26_T + 224) )
+    j_il2cpp_runtime_class_init_0(_3_BasicHelper___c__26_T);
+  v6 = method->rgctx_data->_3_BasicHelper___c__26_T_;
+  if ( (BYTE5(v6->vtable[0].methodPtr) & 1) == 0 )
+    v6 = (Il2CppClass *)sub_1B52BA8(v6);
+  v7 = (System_Func_object__bool__o *)*((_QWORD *)v6->static_fields + 1);
+  if ( !v7 )
+  {
+    v8 = method->rgctx_data->_3_BasicHelper___c__26_T_;
+    if ( (BYTE5(v8->vtable[0].methodPtr) & 1) == 0 )
+      v8 = (Il2CppClass *)sub_1B52BA8(v8);
+    if ( !v8->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(v8);
+    v9 = method->rgctx_data;
+    v10 = (__int64)v9->_3_BasicHelper___c__26_T_;
+    if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
+    {
+      v10 = sub_1B52BA8(v10);
+      v9 = method->rgctx_data;
+    }
+    _2_System_Func_T__bool = (__int64)v9->_2_System_Func_T__bool_;
+    v12 = **(Il2CppObject ***)(v10 + 184);
+    if ( (*(_BYTE *)(_2_System_Func_T__bool + 309) & 1) == 0 )
+      _2_System_Func_T__bool = sub_1B52BA8(_2_System_Func_T__bool);
+    v7 = (System_Func_object__bool__o *)sub_1B00F18(_2_System_Func_T__bool);
+    System_Func_object__bool____ctor(
+      v7,
+      v12,
+      (intptr_t)method->rgctx_data->_4_BasicHelper___c__26_T___ExcludeNull_b__26_0,
+      (const MethodInfo_323A3F0 *)method->rgctx_data->_5_System_Func_T__bool___ctor);
+    v15 = method->rgctx_data->_3_BasicHelper___c__26_T_;
+    if ( (BYTE5(v15->vtable[0].methodPtr) & 1) == 0 )
+      v15 = (Il2CppClass *)sub_1B52BA8(v15);
+    *((_QWORD *)v15->static_fields + 1) = v7;
+    v16 = method->rgctx_data->_3_BasicHelper___c__26_T_;
+    if ( (BYTE5(v16->vtable[0].methodPtr) & 1) == 0 )
+      v16 = (Il2CppClass *)sub_1B52BA8(v16);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)((char *)v16->static_fields + 8), (int32_t)v7, v13, v14);
+  }
+  return (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__Where_object_(
+                                                          (System_Collections_Generic_IEnumerable_TSource__o *)sequence,
+                                                          (System_Func_TSource__bool__o *)v7,
+                                                          (const MethodInfo_2D9D054 *)method->rgctx_data->_6_System_Linq_Enumerable_Where_T_);
 }
 
 
 Il2CppObject *__fastcall BasicHelper__FindComponent_object_(
         UnityEngine_GameObject_array *array,
         System_Func_T__bool__o *func,
-        const MethodInfo_1C6673C *method)
+        const MethodInfo_2D4F3FC *method)
 {
   UnityEngine_GameObject_array *v5; // x21
   __int64 v6; // x8
   unsigned __int64 v7; // x23
   UnityEngine_GameObject_o **m_Items; // x24
   UnityEngine_Object_o *v9; // x22
-  __int64 v10; // x1
-  UnityEngine_Object_o *v11; // x22
-  __int64 v13; // x0
+  Il2CppObject *Component_object; // x22
 
   v5 = array;
-  if ( (byte_438D974 & 1) == 0 )
+  if ( method->rgctx_data
+    || (array = (UnityEngine_GameObject_array *)sub_1B00CCC(&UnityEngine_Object_TypeInfo, func), method->rgctx_data) )
   {
-    array = (UnityEngine_GameObject_array *)sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438D974 = 1;
+    if ( !v5 )
+      return 0LL;
   }
-  if ( !v5 )
-    return 0LL;
+  else
+  {
+    array = (UnityEngine_GameObject_array *)sub_1B52C04(method);
+    if ( !v5 )
+      return 0LL;
+  }
   v6 = *(_QWORD *)&v5->max_length;
   if ( (int)v6 < 1 )
     return 0LL;
@@ -851,19 +1232,13 @@ Il2CppObject *__fastcall BasicHelper__FindComponent_object_(
   while ( 1 )
   {
     if ( v7 >= (unsigned int)v6 )
-    {
 LABEL_23:
-      v13 = sub_B776C8(array);
-      sub_B77668(v13, 0LL);
-    }
+      sub_1B00F30(array, func);
     v9 = (UnityEngine_Object_o *)m_Items[v7];
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
     array = (UnityEngine_GameObject_array *)UnityEngine_Object__op_Inequality(v9, 0LL, 0LL);
-    v11 = 0LL;
+    Component_object = 0LL;
     if ( ((unsigned __int8)array & 1) != 0 )
     {
       if ( v7 >= v5->max_length )
@@ -871,24 +1246,27 @@ LABEL_23:
       array = (UnityEngine_GameObject_array *)m_Items[v7];
       if ( !array )
 LABEL_24:
-        sub_B7769C(array, v10);
-      v11 = (UnityEngine_Object_o *)((__int64 (*)(void))method->rgctx_data->_0_UnityEngine_GameObject_GetComponent_T_->methodPointer)();
+        sub_1B00F28(array, func);
+      Component_object = UnityEngine_GameObject__GetComponent_object_(
+                           (UnityEngine_GameObject_o *)array,
+                           (const MethodInfo_2DADE08 *)method->rgctx_data->_1_UnityEngine_GameObject_GetComponent_T_);
     }
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
-    array = (UnityEngine_GameObject_array *)UnityEngine_Object__op_Equality(v11, 0LL, 0LL);
+    array = (UnityEngine_GameObject_array *)UnityEngine_Object__op_Equality(
+                                              (UnityEngine_Object_o *)Component_object,
+                                              0LL,
+                                              0LL);
     if ( ((unsigned __int8)array & 1) == 0 )
     {
       if ( !func )
         goto LABEL_24;
-      array = (UnityEngine_GameObject_array *)((__int64 (__fastcall *)(System_Func_T__bool__o *, UnityEngine_Object_o *))method->rgctx_data->_2_System_Func_T__bool__Invoke->methodPointer)(
-                                                func,
-                                                v11);
+      array = (UnityEngine_GameObject_array *)((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, Il2CppObject *, _QWORD))func->fields.m_target)(
+                                                func->fields.original_method_info,
+                                                Component_object,
+                                                *(_QWORD *)&func->fields.extra_arg);
       if ( ((unsigned __int8)array & 1) != 0 )
-        return (Il2CppObject *)v11;
+        return Component_object;
     }
     LODWORD(v6) = v5->max_length;
     if ( (__int64)++v7 >= (int)v6 )
@@ -897,612 +1275,858 @@ LABEL_24:
 }
 
 
-WellFired_USFGOActorBattleActionEventConditional_OverwriteParamCondition_o *__fastcall BasicHelper__Find_USFGOActorBattleActionEventConditional_OverwriteParamCondition_(
-        WellFired_USFGOActorBattleActionEventConditional_OverwriteParamCondition_o *array,
+Il2CppObject *__fastcall BasicHelper__Find_object_(
+        System_Object_array *array,
         System_Func_T__bool__o *func,
-        const MethodInfo_1C66688 *method)
+        const MethodInfo_2D4F34C *method)
 {
-  __int64 v3; // x8
-  WellFired_USFGOActorBattleActionEventConditional_OverwriteParamCondition_o *v4; // x19
-  unsigned __int64 v7; // x22
-  __int64 v8; // x0
+  System_Object_array *v4; // x19
+  __int64 v5; // x8
+  unsigned __int64 v6; // x21
 
-  if ( array )
+  v4 = array;
+  if ( method->rgctx_data )
   {
-    v3 = *(_QWORD *)&array->fields.isExecute;
-    v4 = array;
-    if ( (int)v3 < 1 )
-    {
+    if ( !array )
       return 0LL;
-    }
-    else
-    {
-      v7 = 0LL;
-      while ( 1 )
-      {
-        if ( v7 >= (unsigned int)v3 )
-          goto LABEL_13;
-        if ( !func )
-          sub_B7769C(array, func);
-        array = (WellFired_USFGOActorBattleActionEventConditional_OverwriteParamCondition_o *)((__int64 (__fastcall *)(System_Func_T__bool__o *, _QWORD))method->rgctx_data->_0_System_Func_T__bool__Invoke->methodPointer)(
-                                                                                                func,
-                                                                                                *((_QWORD *)&v4[1].klass
-                                                                                                + v7));
-        if ( ((unsigned __int8)array & 1) != 0 )
-          break;
-        LODWORD(v3) = *(_DWORD *)&v4->fields.isExecute;
-        if ( (__int64)++v7 >= (int)v3 )
-          return 0LL;
-      }
-      if ( (unsigned int)v7 >= *(_DWORD *)&v4->fields.isExecute )
-      {
-LABEL_13:
-        v8 = sub_B776C8(array);
-        sub_B77668(v8, 0LL);
-      }
-      return (WellFired_USFGOActorBattleActionEventConditional_OverwriteParamCondition_o *)*((_QWORD *)&v4[1].klass + v7);
-    }
   }
-  return array;
+  else
+  {
+    array = (System_Object_array *)sub_1B52C04(method);
+    if ( !v4 )
+      return 0LL;
+  }
+  v5 = *(_QWORD *)&v4->max_length;
+  if ( (int)v5 < 1 )
+    return 0LL;
+  v6 = 0LL;
+  while ( 1 )
+  {
+    if ( v6 >= (unsigned int)v5 )
+      goto LABEL_15;
+    if ( !func )
+      sub_1B00F28(array, func);
+    array = (System_Object_array *)((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, Il2CppObject *, _QWORD))func->fields.m_target)(
+                                     func->fields.original_method_info,
+                                     v4->m_Items[v6],
+                                     *(_QWORD *)&func->fields.extra_arg);
+    if ( ((unsigned __int8)array & 1) != 0 )
+      break;
+    LODWORD(v5) = v4->max_length;
+    if ( (__int64)++v6 >= (int)v5 )
+      return 0LL;
+  }
+  if ( (unsigned int)v6 >= v4->max_length )
+LABEL_15:
+    sub_1B00F30(array, func);
+  return v4->m_Items[v6];
 }
 
 
-void __fastcall BasicHelper__ForEach_CompensateArgForShowAll_EffectType_(
+void __fastcall BasicHelper__ForEach_Int32Enum_(
         System_Collections_Generic_IEnumerable_T__o *sequence,
         System_Action_T__o *action,
-        const MethodInfo_1C67414 *method)
+        const MethodInfo_2D50164 *method)
 {
-  Il2CppClass *_0_System_Collections_Generic_IEnumerable_T; // x22
+  __int64 v6; // x1
+  Il2CppClass *_0_System_Collections_Generic_IEnumerable_T; // x1
   System_Collections_Generic_IEnumerable_T__c *klass; // x8
-  unsigned __int64 v8; // x10
-  int32_t *p_offset; // x11
+  __int64 v9; // x9
+  int32_t *p_offset; // x10
   __int64 p_method; // x0
-  __int64 v11; // x1
-  __int64 v12; // x19
-  __int64 v13; // x8
-  unsigned __int64 v14; // x10
-  int *v15; // x11
-  __int64 v16; // x0
-  Il2CppClass *_1_System_Collections_Generic_IEnumerator_T; // x22
-  __int64 v18; // x8
-  unsigned __int64 v19; // x10
-  int *v20; // x11
-  __int64 v21; // x0
+  __int64 v12; // x1
+  __int64 v13; // x19
+  __int64 v14; // x8
+  __int64 v15; // x9
+  int *v16; // x10
+  __int64 v17; // x0
+  Il2CppClass *_2_System_Collections_Generic_IEnumerator_T; // x1
+  __int64 v19; // x8
+  __int64 v20; // x9
+  int *v21; // x10
   __int64 v22; // x0
-  __int64 v23; // x8
-  unsigned __int64 v24; // x10
-  int *v25; // x11
-  __int64 v26; // x0
-
-  if ( (byte_438D979 & 1) == 0 )
-  {
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
-    byte_438D979 = 1;
-  }
-  if ( sequence )
-  {
-    _0_System_Collections_Generic_IEnumerable_T = method->rgctx_data->_0_System_Collections_Generic_IEnumerable_T_;
-    if ( (BYTE2(_0_System_Collections_Generic_IEnumerable_T->vtable[0].methodPtr) & 1) == 0 )
-      sub_B0F2C4(method->rgctx_data->_0_System_Collections_Generic_IEnumerable_T_);
-    klass = sequence->klass;
-    if ( *(_WORD *)&sequence->klass->_2.bitflags1 )
-    {
-      v8 = 0LL;
-      p_offset = &klass->_1.interfaceOffsets->offset;
-      while ( *((Il2CppClass **)p_offset - 1) != _0_System_Collections_Generic_IEnumerable_T )
-      {
-        ++v8;
-        p_offset += 4;
-        if ( v8 >= *(unsigned __int16 *)&sequence->klass->_2.bitflags1 )
-          goto LABEL_10;
-      }
-      p_method = (__int64)&klass->vtable[*p_offset].method;
-    }
-    else
-    {
-LABEL_10:
-      p_method = sub_B0F4C0(sequence, _0_System_Collections_Generic_IEnumerable_T, 0LL);
-    }
-    v12 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_T__o *, _QWORD))p_method)(
-            sequence,
-            *(_QWORD *)(p_method + 8));
-    if ( !v12 )
-      sub_B7769C(0LL, v11);
-    while ( 1 )
-    {
-      v13 = *(_QWORD *)v12;
-      if ( *(_WORD *)(*(_QWORD *)v12 + 298LL) )
-      {
-        v14 = 0LL;
-        v15 = (int *)(*(_QWORD *)(v13 + 176) + 8LL);
-        while ( *((System_Collections_IEnumerator_c **)v15 - 1) != System_Collections_IEnumerator_TypeInfo )
-        {
-          ++v14;
-          v15 += 4;
-          if ( v14 >= *(unsigned __int16 *)(*(_QWORD *)v12 + 298LL) )
-            goto LABEL_17;
-        }
-        v16 = v13 + 16LL * *v15 + 312;
-      }
-      else
-      {
-LABEL_17:
-        v16 = sub_B0F4C0(v12, System_Collections_IEnumerator_TypeInfo, 0LL);
-      }
-      if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v16)(v12, *(_QWORD *)(v16 + 8)) & 1) == 0 )
-        break;
-      _1_System_Collections_Generic_IEnumerator_T = method->rgctx_data->_1_System_Collections_Generic_IEnumerator_T_;
-      if ( (BYTE2(_1_System_Collections_Generic_IEnumerator_T->vtable[0].methodPtr) & 1) == 0 )
-        sub_B0F2C4(method->rgctx_data->_1_System_Collections_Generic_IEnumerator_T_);
-      v18 = *(_QWORD *)v12;
-      if ( *(_WORD *)(*(_QWORD *)v12 + 298LL) )
-      {
-        v19 = 0LL;
-        v20 = (int *)(*(_QWORD *)(v18 + 176) + 8LL);
-        while ( *((Il2CppClass **)v20 - 1) != _1_System_Collections_Generic_IEnumerator_T )
-        {
-          ++v19;
-          v20 += 4;
-          if ( v19 >= *(unsigned __int16 *)(*(_QWORD *)v12 + 298LL) )
-            goto LABEL_26;
-        }
-        v21 = v18 + 16LL * *v20 + 312;
-      }
-      else
-      {
-LABEL_26:
-        v21 = sub_B0F4C0(v12, _1_System_Collections_Generic_IEnumerator_T, 0LL);
-      }
-      v22 = (*(__int64 (__fastcall **)(__int64, _QWORD))v21)(v12, *(_QWORD *)(v21 + 8));
-      if ( !action )
-        sub_B7769C(v22, (unsigned int)v22);
-      ((void (__fastcall *)(System_Action_T__o *, _QWORD, MethodInfo *))method->rgctx_data->_2_System_Action_T__Invoke->methodPointer)(
-        action,
-        (unsigned int)v22,
-        method->rgctx_data->_2_System_Action_T__Invoke);
-    }
-    v23 = *(_QWORD *)v12;
-    if ( *(_WORD *)(*(_QWORD *)v12 + 298LL) )
-    {
-      v24 = 0LL;
-      v25 = (int *)(*(_QWORD *)(v23 + 176) + 8LL);
-      while ( *((System_IDisposable_c **)v25 - 1) != System_IDisposable_TypeInfo )
-      {
-        ++v24;
-        v25 += 4;
-        if ( v24 >= *(unsigned __int16 *)(*(_QWORD *)v12 + 298LL) )
-          goto LABEL_34;
-      }
-      v26 = v23 + 16LL * *v25 + 312;
-    }
-    else
-    {
-LABEL_34:
-      v26 = sub_B0F4C0(v12, System_IDisposable_TypeInfo, 0LL);
-    }
-    (*(void (__fastcall **)(__int64, _QWORD))v26)(v12, *(_QWORD *)(v26 + 8));
-  }
-}
-
-
-void __fastcall BasicHelper__ForEach_DrawLotsDisplayMessage_DisplayedInGroup_SaveData_(
-        System_Collections_Generic_IEnumerable_T__o *sequence,
-        System_Action_T__o *action,
-        const MethodInfo_1C676E8 *method)
-{
-  Il2CppClass *_0_System_Collections_Generic_IEnumerable_T; // x22
-  System_Collections_Generic_IEnumerable_T__c *klass; // x8
-  unsigned __int64 v8; // x10
-  int32_t *p_offset; // x11
-  __int64 p_method; // x0
-  __int64 v11; // x1
-  __int64 v12; // x19
-  __int64 v13; // x8
-  unsigned __int64 v14; // x10
-  int *v15; // x11
-  __int64 v16; // x0
-  Il2CppClass *_1_System_Collections_Generic_IEnumerator_T; // x22
-  __int64 v18; // x8
-  unsigned __int64 v19; // x10
-  int *v20; // x11
-  __int64 v21; // x0
-  __int64 v22; // x0
-  __int64 v23; // x8
-  unsigned __int64 v24; // x10
-  int *v25; // x11
-  __int64 v26; // x0
-
-  if ( (byte_438D97A & 1) == 0 )
-  {
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
-    byte_438D97A = 1;
-  }
-  if ( sequence )
-  {
-    _0_System_Collections_Generic_IEnumerable_T = method->rgctx_data->_0_System_Collections_Generic_IEnumerable_T_;
-    if ( (BYTE2(_0_System_Collections_Generic_IEnumerable_T->vtable[0].methodPtr) & 1) == 0 )
-      sub_B0F2C4(method->rgctx_data->_0_System_Collections_Generic_IEnumerable_T_);
-    klass = sequence->klass;
-    if ( *(_WORD *)&sequence->klass->_2.bitflags1 )
-    {
-      v8 = 0LL;
-      p_offset = &klass->_1.interfaceOffsets->offset;
-      while ( *((Il2CppClass **)p_offset - 1) != _0_System_Collections_Generic_IEnumerable_T )
-      {
-        ++v8;
-        p_offset += 4;
-        if ( v8 >= *(unsigned __int16 *)&sequence->klass->_2.bitflags1 )
-          goto LABEL_10;
-      }
-      p_method = (__int64)&klass->vtable[*p_offset].method;
-    }
-    else
-    {
-LABEL_10:
-      p_method = sub_B0F4C0(sequence, _0_System_Collections_Generic_IEnumerable_T, 0LL);
-    }
-    v12 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_T__o *, _QWORD))p_method)(
-            sequence,
-            *(_QWORD *)(p_method + 8));
-    if ( !v12 )
-      sub_B7769C(0LL, v11);
-    while ( 1 )
-    {
-      v13 = *(_QWORD *)v12;
-      if ( *(_WORD *)(*(_QWORD *)v12 + 298LL) )
-      {
-        v14 = 0LL;
-        v15 = (int *)(*(_QWORD *)(v13 + 176) + 8LL);
-        while ( *((System_Collections_IEnumerator_c **)v15 - 1) != System_Collections_IEnumerator_TypeInfo )
-        {
-          ++v14;
-          v15 += 4;
-          if ( v14 >= *(unsigned __int16 *)(*(_QWORD *)v12 + 298LL) )
-            goto LABEL_17;
-        }
-        v16 = v13 + 16LL * *v15 + 312;
-      }
-      else
-      {
-LABEL_17:
-        v16 = sub_B0F4C0(v12, System_Collections_IEnumerator_TypeInfo, 0LL);
-      }
-      if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v16)(v12, *(_QWORD *)(v16 + 8)) & 1) == 0 )
-        break;
-      _1_System_Collections_Generic_IEnumerator_T = method->rgctx_data->_1_System_Collections_Generic_IEnumerator_T_;
-      if ( (BYTE2(_1_System_Collections_Generic_IEnumerator_T->vtable[0].methodPtr) & 1) == 0 )
-        sub_B0F2C4(method->rgctx_data->_1_System_Collections_Generic_IEnumerator_T_);
-      v18 = *(_QWORD *)v12;
-      if ( *(_WORD *)(*(_QWORD *)v12 + 298LL) )
-      {
-        v19 = 0LL;
-        v20 = (int *)(*(_QWORD *)(v18 + 176) + 8LL);
-        while ( *((Il2CppClass **)v20 - 1) != _1_System_Collections_Generic_IEnumerator_T )
-        {
-          ++v19;
-          v20 += 4;
-          if ( v19 >= *(unsigned __int16 *)(*(_QWORD *)v12 + 298LL) )
-            goto LABEL_26;
-        }
-        v21 = v18 + 16LL * *v20 + 312;
-      }
-      else
-      {
-LABEL_26:
-        v21 = sub_B0F4C0(v12, _1_System_Collections_Generic_IEnumerator_T, 0LL);
-      }
-      v22 = (*(__int64 (__fastcall **)(__int64, _QWORD))v21)(v12, *(_QWORD *)(v21 + 8));
-      if ( !action )
-        sub_B7769C(v22, v22);
-      ((void (__fastcall *)(System_Action_T__o *, __int64, MethodInfo *))method->rgctx_data->_2_System_Action_T__Invoke->methodPointer)(
-        action,
-        v22,
-        method->rgctx_data->_2_System_Action_T__Invoke);
-    }
-    v23 = *(_QWORD *)v12;
-    if ( *(_WORD *)(*(_QWORD *)v12 + 298LL) )
-    {
-      v24 = 0LL;
-      v25 = (int *)(*(_QWORD *)(v23 + 176) + 8LL);
-      while ( *((System_IDisposable_c **)v25 - 1) != System_IDisposable_TypeInfo )
-      {
-        ++v24;
-        v25 += 4;
-        if ( v24 >= *(unsigned __int16 *)(*(_QWORD *)v12 + 298LL) )
-          goto LABEL_34;
-      }
-      v26 = v23 + 16LL * *v25 + 312;
-    }
-    else
-    {
-LABEL_34:
-      v26 = sub_B0F4C0(v12, System_IDisposable_TypeInfo, 0LL);
-    }
-    (*(void (__fastcall **)(__int64, _QWORD))v26)(v12, *(_QWORD *)(v26 + 8));
-  }
-}
-
-
-void __fastcall BasicHelper__ForEach_KeyValuePair_int__PlayMakerFSM__(
-        System_Collections_Generic_IEnumerable_T__o *sequence,
-        System_Action_T__o *action,
-        const MethodInfo_1C66894 *method)
-{
-  Il2CppClass *_0_System_Collections_Generic_IEnumerable_T; // x22
-  System_Collections_Generic_IEnumerable_T__c *klass; // x8
-  unsigned __int64 v8; // x10
-  int32_t *p_offset; // x11
-  __int64 p_method; // x0
-  __int64 v11; // x1
-  __int64 v12; // x19
-  __int64 v13; // x8
-  unsigned __int64 v14; // x10
-  int *v15; // x11
-  __int64 v16; // x0
-  Il2CppClass *_1_System_Collections_Generic_IEnumerator_T; // x22
-  __int64 v18; // x8
-  unsigned __int64 v19; // x10
-  int *v20; // x11
-  __int64 v21; // x0
-  __int64 v22; // x0
-  __int64 v23; // x1
+  __int64 v23; // x0
   __int64 v24; // x8
-  unsigned __int64 v25; // x10
-  int *v26; // x11
+  __int64 v25; // x9
+  int *v26; // x10
   __int64 v27; // x0
 
-  if ( (byte_438D975 & 1) == 0 )
+  if ( method->rgctx_data
+    || (sub_1B00CCC(&System_IDisposable_TypeInfo, action),
+        sub_1B00CCC(&System_Collections_IEnumerator_TypeInfo, v6),
+        method->rgctx_data) )
   {
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
-    byte_438D975 = 1;
+    if ( !sequence )
+      return;
   }
+  else
+  {
+    sub_1B52C04(method);
+    if ( !sequence )
+      return;
+  }
+  _0_System_Collections_Generic_IEnumerable_T = method->rgctx_data->_0_System_Collections_Generic_IEnumerable_T_;
+  if ( (BYTE5(_0_System_Collections_Generic_IEnumerable_T->vtable[0].methodPtr) & 1) == 0 )
+    _0_System_Collections_Generic_IEnumerable_T = (Il2CppClass *)sub_1B52BA8(method->rgctx_data->_0_System_Collections_Generic_IEnumerable_T_);
+  klass = sequence->klass;
+  v9 = *(unsigned __int16 *)(&sequence->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&sequence->klass->_2.bitflags2 + 3) )
+  {
+    p_offset = &klass->_1.interfaceOffsets->offset;
+    while ( *((Il2CppClass **)p_offset - 1) != _0_System_Collections_Generic_IEnumerable_T )
+    {
+      --v9;
+      p_offset += 4;
+      if ( !v9 )
+        goto LABEL_10;
+    }
+    p_method = (__int64)&klass->vtable[*p_offset].method;
+  }
+  else
+  {
+LABEL_10:
+    p_method = sub_1B52CAC(sequence, _0_System_Collections_Generic_IEnumerable_T, 0LL);
+  }
+  v13 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_T__o *, _QWORD))p_method)(
+          sequence,
+          *(_QWORD *)(p_method + 8));
+  if ( !v13 )
+    sub_1B00F28(0LL, v12);
+  while ( 1 )
+  {
+    v14 = *(_QWORD *)v13;
+    v15 = *(unsigned __int16 *)(*(_QWORD *)v13 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v13 + 302LL) )
+    {
+      v16 = (int *)(*(_QWORD *)(v14 + 176) + 8LL);
+      while ( *((System_Collections_IEnumerator_c **)v16 - 1) != System_Collections_IEnumerator_TypeInfo )
+      {
+        --v15;
+        v16 += 4;
+        if ( !v15 )
+          goto LABEL_17;
+      }
+      v17 = v14 + 16LL * *v16 + 312;
+    }
+    else
+    {
+LABEL_17:
+      v17 = sub_1B52CAC(v13, System_Collections_IEnumerator_TypeInfo, 0LL);
+    }
+    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v17)(v13, *(_QWORD *)(v17 + 8)) & 1) == 0 )
+      break;
+    _2_System_Collections_Generic_IEnumerator_T = method->rgctx_data->_2_System_Collections_Generic_IEnumerator_T_;
+    if ( (BYTE5(_2_System_Collections_Generic_IEnumerator_T->vtable[0].methodPtr) & 1) == 0 )
+      _2_System_Collections_Generic_IEnumerator_T = (Il2CppClass *)sub_1B52BA8(method->rgctx_data->_2_System_Collections_Generic_IEnumerator_T_);
+    v19 = *(_QWORD *)v13;
+    v20 = *(unsigned __int16 *)(*(_QWORD *)v13 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v13 + 302LL) )
+    {
+      v21 = (int *)(*(_QWORD *)(v19 + 176) + 8LL);
+      while ( *((Il2CppClass **)v21 - 1) != _2_System_Collections_Generic_IEnumerator_T )
+      {
+        --v20;
+        v21 += 4;
+        if ( !v20 )
+          goto LABEL_26;
+      }
+      v22 = v19 + 16LL * *v21 + 312;
+    }
+    else
+    {
+LABEL_26:
+      v22 = sub_1B52CAC(v13, _2_System_Collections_Generic_IEnumerator_T, 0LL);
+    }
+    v23 = (*(__int64 (__fastcall **)(__int64, _QWORD))v22)(v13, *(_QWORD *)(v22 + 8));
+    if ( !action )
+      sub_1B00F28(v23, (unsigned int)v23);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))action->fields.m_target)(
+      action->fields.original_method_info,
+      (unsigned int)v23,
+      *(_QWORD *)&action->fields.extra_arg);
+  }
+  v24 = *(_QWORD *)v13;
+  v25 = *(unsigned __int16 *)(*(_QWORD *)v13 + 302LL);
+  if ( *(_WORD *)(*(_QWORD *)v13 + 302LL) )
+  {
+    v26 = (int *)(*(_QWORD *)(v24 + 176) + 8LL);
+    while ( *((System_IDisposable_c **)v26 - 1) != System_IDisposable_TypeInfo )
+    {
+      --v25;
+      v26 += 4;
+      if ( !v25 )
+        goto LABEL_34;
+    }
+    v27 = v24 + 16LL * *v26 + 312;
+  }
+  else
+  {
+LABEL_34:
+    v27 = sub_1B52CAC(v13, System_IDisposable_TypeInfo, 0LL);
+  }
+  (*(void (__fastcall **)(__int64, _QWORD))v27)(v13, *(_QWORD *)(v27 + 8));
+}
+
+
+void __fastcall BasicHelper__ForEach_KeyValuePair_int__object__(
+        System_Collections_Generic_IEnumerable_T__o *sequence,
+        System_Action_T__o *action,
+        const MethodInfo_2D4F534 *method)
+{
+  __int64 v6; // x1
+  Il2CppClass *_0_System_Collections_Generic_IEnumerable_T; // x1
+  System_Collections_Generic_IEnumerable_T__c *klass; // x8
+  __int64 v9; // x9
+  int32_t *p_offset; // x10
+  __int64 p_method; // x0
+  __int64 v12; // x1
+  __int64 v13; // x19
+  __int64 v14; // x8
+  __int64 v15; // x9
+  int *v16; // x10
+  __int64 v17; // x0
+  Il2CppClass *_2_System_Collections_Generic_IEnumerator_T; // x1
+  __int64 v19; // x8
+  __int64 v20; // x9
+  int *v21; // x10
+  __int64 v22; // x0
+  __int64 v23; // x0
+  __int64 v24; // x1
+  __int64 v25; // x8
+  __int64 v26; // x9
+  int *v27; // x10
+  __int64 v28; // x0
+
+  if ( method->rgctx_data
+    || (sub_1B00CCC(&System_IDisposable_TypeInfo, action),
+        sub_1B00CCC(&System_Collections_IEnumerator_TypeInfo, v6),
+        method->rgctx_data) )
+  {
+    if ( !sequence )
+      return;
+  }
+  else
+  {
+    sub_1B52C04(method);
+    if ( !sequence )
+      return;
+  }
+  _0_System_Collections_Generic_IEnumerable_T = method->rgctx_data->_0_System_Collections_Generic_IEnumerable_T_;
+  if ( (BYTE5(_0_System_Collections_Generic_IEnumerable_T->vtable[0].methodPtr) & 1) == 0 )
+    _0_System_Collections_Generic_IEnumerable_T = (Il2CppClass *)sub_1B52BA8(method->rgctx_data->_0_System_Collections_Generic_IEnumerable_T_);
+  klass = sequence->klass;
+  v9 = *(unsigned __int16 *)(&sequence->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&sequence->klass->_2.bitflags2 + 3) )
+  {
+    p_offset = &klass->_1.interfaceOffsets->offset;
+    while ( *((Il2CppClass **)p_offset - 1) != _0_System_Collections_Generic_IEnumerable_T )
+    {
+      --v9;
+      p_offset += 4;
+      if ( !v9 )
+        goto LABEL_10;
+    }
+    p_method = (__int64)&klass->vtable[*p_offset].method;
+  }
+  else
+  {
+LABEL_10:
+    p_method = sub_1B52CAC(sequence, _0_System_Collections_Generic_IEnumerable_T, 0LL);
+  }
+  v13 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_T__o *, _QWORD))p_method)(
+          sequence,
+          *(_QWORD *)(p_method + 8));
+  if ( !v13 )
+    sub_1B00F28(0LL, v12);
+  while ( 1 )
+  {
+    v14 = *(_QWORD *)v13;
+    v15 = *(unsigned __int16 *)(*(_QWORD *)v13 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v13 + 302LL) )
+    {
+      v16 = (int *)(*(_QWORD *)(v14 + 176) + 8LL);
+      while ( *((System_Collections_IEnumerator_c **)v16 - 1) != System_Collections_IEnumerator_TypeInfo )
+      {
+        --v15;
+        v16 += 4;
+        if ( !v15 )
+          goto LABEL_17;
+      }
+      v17 = v14 + 16LL * *v16 + 312;
+    }
+    else
+    {
+LABEL_17:
+      v17 = sub_1B52CAC(v13, System_Collections_IEnumerator_TypeInfo, 0LL);
+    }
+    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v17)(v13, *(_QWORD *)(v17 + 8)) & 1) == 0 )
+      break;
+    _2_System_Collections_Generic_IEnumerator_T = method->rgctx_data->_2_System_Collections_Generic_IEnumerator_T_;
+    if ( (BYTE5(_2_System_Collections_Generic_IEnumerator_T->vtable[0].methodPtr) & 1) == 0 )
+      _2_System_Collections_Generic_IEnumerator_T = (Il2CppClass *)sub_1B52BA8(method->rgctx_data->_2_System_Collections_Generic_IEnumerator_T_);
+    v19 = *(_QWORD *)v13;
+    v20 = *(unsigned __int16 *)(*(_QWORD *)v13 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v13 + 302LL) )
+    {
+      v21 = (int *)(*(_QWORD *)(v19 + 176) + 8LL);
+      while ( *((Il2CppClass **)v21 - 1) != _2_System_Collections_Generic_IEnumerator_T )
+      {
+        --v20;
+        v21 += 4;
+        if ( !v20 )
+          goto LABEL_26;
+      }
+      v22 = v19 + 16LL * *v21 + 312;
+    }
+    else
+    {
+LABEL_26:
+      v22 = sub_1B52CAC(v13, _2_System_Collections_Generic_IEnumerator_T, 0LL);
+    }
+    v23 = (*(__int64 (__fastcall **)(__int64, _QWORD))v22)(v13, *(_QWORD *)(v22 + 8));
+    if ( !action )
+      sub_1B00F28(v23, v24);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, __int64, _QWORD))action->fields.m_target)(
+      action->fields.original_method_info,
+      v23,
+      v24,
+      *(_QWORD *)&action->fields.extra_arg);
+  }
+  v25 = *(_QWORD *)v13;
+  v26 = *(unsigned __int16 *)(*(_QWORD *)v13 + 302LL);
+  if ( *(_WORD *)(*(_QWORD *)v13 + 302LL) )
+  {
+    v27 = (int *)(*(_QWORD *)(v25 + 176) + 8LL);
+    while ( *((System_IDisposable_c **)v27 - 1) != System_IDisposable_TypeInfo )
+    {
+      --v26;
+      v27 += 4;
+      if ( !v26 )
+        goto LABEL_34;
+    }
+    v28 = v25 + 16LL * *v27 + 312;
+  }
+  else
+  {
+LABEL_34:
+    v28 = sub_1B52CAC(v13, System_IDisposable_TypeInfo, 0LL);
+  }
+  (*(void (__fastcall **)(__int64, _QWORD))v28)(v13, *(_QWORD *)(v28 + 8));
+}
+
+
+void __fastcall BasicHelper__ForEach_KeyValuePair_object__object__(
+        System_Collections_Generic_IEnumerable_T__o *sequence,
+        System_Action_T__o *action,
+        const MethodInfo_2D4F840 *method)
+{
+  __int64 v6; // x1
+  Il2CppClass *_0_System_Collections_Generic_IEnumerable_T; // x1
+  System_Collections_Generic_IEnumerable_T__c *klass; // x8
+  __int64 v9; // x9
+  int32_t *p_offset; // x10
+  __int64 p_method; // x0
+  __int64 v12; // x1
+  __int64 v13; // x19
+  __int64 v14; // x8
+  __int64 v15; // x9
+  int *v16; // x10
+  __int64 v17; // x0
+  Il2CppClass *_2_System_Collections_Generic_IEnumerator_T; // x1
+  __int64 v19; // x8
+  __int64 v20; // x9
+  int *v21; // x10
+  __int64 v22; // x0
+  __int64 v23; // x0
+  __int64 v24; // x1
+  __int64 v25; // x8
+  __int64 v26; // x9
+  int *v27; // x10
+  __int64 v28; // x0
+
+  if ( method->rgctx_data
+    || (sub_1B00CCC(&System_IDisposable_TypeInfo, action),
+        sub_1B00CCC(&System_Collections_IEnumerator_TypeInfo, v6),
+        method->rgctx_data) )
+  {
+    if ( !sequence )
+      return;
+  }
+  else
+  {
+    sub_1B52C04(method);
+    if ( !sequence )
+      return;
+  }
+  _0_System_Collections_Generic_IEnumerable_T = method->rgctx_data->_0_System_Collections_Generic_IEnumerable_T_;
+  if ( (BYTE5(_0_System_Collections_Generic_IEnumerable_T->vtable[0].methodPtr) & 1) == 0 )
+    _0_System_Collections_Generic_IEnumerable_T = (Il2CppClass *)sub_1B52BA8(method->rgctx_data->_0_System_Collections_Generic_IEnumerable_T_);
+  klass = sequence->klass;
+  v9 = *(unsigned __int16 *)(&sequence->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&sequence->klass->_2.bitflags2 + 3) )
+  {
+    p_offset = &klass->_1.interfaceOffsets->offset;
+    while ( *((Il2CppClass **)p_offset - 1) != _0_System_Collections_Generic_IEnumerable_T )
+    {
+      --v9;
+      p_offset += 4;
+      if ( !v9 )
+        goto LABEL_10;
+    }
+    p_method = (__int64)&klass->vtable[*p_offset].method;
+  }
+  else
+  {
+LABEL_10:
+    p_method = sub_1B52CAC(sequence, _0_System_Collections_Generic_IEnumerable_T, 0LL);
+  }
+  v13 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_T__o *, _QWORD))p_method)(
+          sequence,
+          *(_QWORD *)(p_method + 8));
+  if ( !v13 )
+    sub_1B00F28(0LL, v12);
+  while ( 1 )
+  {
+    v14 = *(_QWORD *)v13;
+    v15 = *(unsigned __int16 *)(*(_QWORD *)v13 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v13 + 302LL) )
+    {
+      v16 = (int *)(*(_QWORD *)(v14 + 176) + 8LL);
+      while ( *((System_Collections_IEnumerator_c **)v16 - 1) != System_Collections_IEnumerator_TypeInfo )
+      {
+        --v15;
+        v16 += 4;
+        if ( !v15 )
+          goto LABEL_17;
+      }
+      v17 = v14 + 16LL * *v16 + 312;
+    }
+    else
+    {
+LABEL_17:
+      v17 = sub_1B52CAC(v13, System_Collections_IEnumerator_TypeInfo, 0LL);
+    }
+    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v17)(v13, *(_QWORD *)(v17 + 8)) & 1) == 0 )
+      break;
+    _2_System_Collections_Generic_IEnumerator_T = method->rgctx_data->_2_System_Collections_Generic_IEnumerator_T_;
+    if ( (BYTE5(_2_System_Collections_Generic_IEnumerator_T->vtable[0].methodPtr) & 1) == 0 )
+      _2_System_Collections_Generic_IEnumerator_T = (Il2CppClass *)sub_1B52BA8(method->rgctx_data->_2_System_Collections_Generic_IEnumerator_T_);
+    v19 = *(_QWORD *)v13;
+    v20 = *(unsigned __int16 *)(*(_QWORD *)v13 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v13 + 302LL) )
+    {
+      v21 = (int *)(*(_QWORD *)(v19 + 176) + 8LL);
+      while ( *((Il2CppClass **)v21 - 1) != _2_System_Collections_Generic_IEnumerator_T )
+      {
+        --v20;
+        v21 += 4;
+        if ( !v20 )
+          goto LABEL_26;
+      }
+      v22 = v19 + 16LL * *v21 + 312;
+    }
+    else
+    {
+LABEL_26:
+      v22 = sub_1B52CAC(v13, _2_System_Collections_Generic_IEnumerator_T, 0LL);
+    }
+    v23 = (*(__int64 (__fastcall **)(__int64, _QWORD))v22)(v13, *(_QWORD *)(v22 + 8));
+    if ( !action )
+      sub_1B00F28(v23, v24);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, __int64, _QWORD))action->fields.m_target)(
+      action->fields.original_method_info,
+      v23,
+      v24,
+      *(_QWORD *)&action->fields.extra_arg);
+  }
+  v25 = *(_QWORD *)v13;
+  v26 = *(unsigned __int16 *)(*(_QWORD *)v13 + 302LL);
+  if ( *(_WORD *)(*(_QWORD *)v13 + 302LL) )
+  {
+    v27 = (int *)(*(_QWORD *)(v25 + 176) + 8LL);
+    while ( *((System_IDisposable_c **)v27 - 1) != System_IDisposable_TypeInfo )
+    {
+      --v26;
+      v27 += 4;
+      if ( !v26 )
+        goto LABEL_34;
+    }
+    v28 = v25 + 16LL * *v27 + 312;
+  }
+  else
+  {
+LABEL_34:
+    v28 = sub_1B52CAC(v13, System_IDisposable_TypeInfo, 0LL);
+  }
+  (*(void (__fastcall **)(__int64, _QWORD))v28)(v13, *(_QWORD *)(v28 + 8));
+}
+
+
+void __fastcall BasicHelper__ForEach___Il2CppFullySharedGenericType_(
+        System_Collections_Generic_IEnumerable_T__o *sequence,
+        System_Action_T__o *action,
+        const MethodInfo_2D50764 *method)
+{
+  const MethodInfo_2D50764_RGCTXs *rgctx_data; // x27
+  __int64 v7; // x1
+  __int64 native_size; // x22
+  __int64 _0_System_Collections_Generic_IEnumerable_T; // x1
+  System_Collections_Generic_IEnumerable_T__c *klass; // x8
+  __int64 v11; // x9
+  int32_t *p_offset; // x10
+  __int64 p_method; // x0
+  __int64 v14; // x1
+  __int64 v15; // x19
+  __int64 v16; // x8
+  __int64 v17; // x9
+  int *v18; // x10
+  __int64 v19; // x0
+  Il2CppClass *_2_System_Collections_Generic_IEnumerator_T; // x1
+  __int64 v21; // x8
+  __int64 v22; // x9
+  int *v23; // x10
+  __int64 v24; // x0
+  void *v25; // x0
+  __int64 v26; // x1
+  const MethodInfo_2D50764_RGCTXs *v27; // x8
+  char *v28; // x4
+  MethodInfo *_6_System_Action_T__Invoke; // x1
+  Il2CppMethodPointer methodPointer; // x0
+  __int64 v31; // x8
+  __int64 v32; // x9
+  int *v33; // x10
+  __int64 v34; // x0
+  __int64 v35[2]; // [xsp+0h] [xbp-10h] BYREF
+
+  v35[1] = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
+  rgctx_data = method->rgctx_data;
+  if ( !rgctx_data )
+  {
+    sub_1B00CCC(&System_IDisposable_TypeInfo, action);
+    sub_1B00CCC(&System_Collections_IEnumerator_TypeInfo, v7);
+    rgctx_data = method->rgctx_data;
+    if ( !rgctx_data )
+    {
+      sub_1B52C04(method);
+      rgctx_data = method->rgctx_data;
+    }
+  }
+  native_size = (unsigned int)rgctx_data->_4_T->_2.native_size;
+  memset((char *)v35 - ((native_size + 15) & 0x1FFFFFFF0LL), 0, rgctx_data->_4_T->_2.native_size);
   if ( sequence )
   {
-    _0_System_Collections_Generic_IEnumerable_T = method->rgctx_data->_0_System_Collections_Generic_IEnumerable_T_;
-    if ( (BYTE2(_0_System_Collections_Generic_IEnumerable_T->vtable[0].methodPtr) & 1) == 0 )
-      sub_B0F2C4(method->rgctx_data->_0_System_Collections_Generic_IEnumerable_T_);
+    _0_System_Collections_Generic_IEnumerable_T = (__int64)rgctx_data->_0_System_Collections_Generic_IEnumerable_T_;
+    if ( (BYTE5(rgctx_data->_0_System_Collections_Generic_IEnumerable_T_->vtable[0].methodPtr) & 1) == 0 )
+      _0_System_Collections_Generic_IEnumerable_T = sub_1B52BA8(rgctx_data->_0_System_Collections_Generic_IEnumerable_T_);
     klass = sequence->klass;
-    if ( *(_WORD *)&sequence->klass->_2.bitflags1 )
+    v11 = *(unsigned __int16 *)(&sequence->klass->_2.bitflags2 + 3);
+    if ( *(_WORD *)(&sequence->klass->_2.bitflags2 + 3) )
     {
-      v8 = 0LL;
       p_offset = &klass->_1.interfaceOffsets->offset;
-      while ( *((Il2CppClass **)p_offset - 1) != _0_System_Collections_Generic_IEnumerable_T )
+      while ( *((_QWORD *)p_offset - 1) != _0_System_Collections_Generic_IEnumerable_T )
       {
-        ++v8;
+        --v11;
         p_offset += 4;
-        if ( v8 >= *(unsigned __int16 *)&sequence->klass->_2.bitflags1 )
-          goto LABEL_10;
+        if ( !v11 )
+          goto LABEL_11;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
     }
     else
     {
-LABEL_10:
-      p_method = sub_B0F4C0(sequence, _0_System_Collections_Generic_IEnumerable_T, 0LL);
+LABEL_11:
+      p_method = sub_1B52CAC(sequence, _0_System_Collections_Generic_IEnumerable_T, 0LL);
     }
-    v12 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_T__o *, _QWORD))p_method)(
+    v15 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_T__o *, _QWORD))p_method)(
             sequence,
             *(_QWORD *)(p_method + 8));
-    if ( !v12 )
-      sub_B7769C(0LL, v11);
+    if ( !v15 )
+      sub_1B00F28(0LL, v14);
     while ( 1 )
     {
-      v13 = *(_QWORD *)v12;
-      if ( *(_WORD *)(*(_QWORD *)v12 + 298LL) )
+      v16 = *(_QWORD *)v15;
+      v17 = *(unsigned __int16 *)(*(_QWORD *)v15 + 302LL);
+      if ( *(_WORD *)(*(_QWORD *)v15 + 302LL) )
       {
-        v14 = 0LL;
-        v15 = (int *)(*(_QWORD *)(v13 + 176) + 8LL);
-        while ( *((System_Collections_IEnumerator_c **)v15 - 1) != System_Collections_IEnumerator_TypeInfo )
+        v18 = (int *)(*(_QWORD *)(v16 + 176) + 8LL);
+        while ( *((System_Collections_IEnumerator_c **)v18 - 1) != System_Collections_IEnumerator_TypeInfo )
         {
-          ++v14;
-          v15 += 4;
-          if ( v14 >= *(unsigned __int16 *)(*(_QWORD *)v12 + 298LL) )
-            goto LABEL_17;
+          --v17;
+          v18 += 4;
+          if ( !v17 )
+            goto LABEL_18;
         }
-        v16 = v13 + 16LL * *v15 + 312;
+        v19 = v16 + 16LL * *v18 + 312;
       }
       else
       {
-LABEL_17:
-        v16 = sub_B0F4C0(v12, System_Collections_IEnumerator_TypeInfo, 0LL);
+LABEL_18:
+        v19 = sub_1B52CAC(v15, System_Collections_IEnumerator_TypeInfo, 0LL);
       }
-      if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v16)(v12, *(_QWORD *)(v16 + 8)) & 1) == 0 )
+      if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v19)(v15, *(_QWORD *)(v19 + 8)) & 1) == 0 )
         break;
-      _1_System_Collections_Generic_IEnumerator_T = method->rgctx_data->_1_System_Collections_Generic_IEnumerator_T_;
-      if ( (BYTE2(_1_System_Collections_Generic_IEnumerator_T->vtable[0].methodPtr) & 1) == 0 )
-        sub_B0F2C4(method->rgctx_data->_1_System_Collections_Generic_IEnumerator_T_);
-      v18 = *(_QWORD *)v12;
-      if ( *(_WORD *)(*(_QWORD *)v12 + 298LL) )
+      _2_System_Collections_Generic_IEnumerator_T = method->rgctx_data->_2_System_Collections_Generic_IEnumerator_T_;
+      if ( (BYTE5(_2_System_Collections_Generic_IEnumerator_T->vtable[0].methodPtr) & 1) == 0 )
+        _2_System_Collections_Generic_IEnumerator_T = (Il2CppClass *)sub_1B52BA8(method->rgctx_data->_2_System_Collections_Generic_IEnumerator_T_);
+      v21 = *(_QWORD *)v15;
+      v22 = *(unsigned __int16 *)(*(_QWORD *)v15 + 302LL);
+      if ( *(_WORD *)(*(_QWORD *)v15 + 302LL) )
       {
-        v19 = 0LL;
-        v20 = (int *)(*(_QWORD *)(v18 + 176) + 8LL);
-        while ( *((Il2CppClass **)v20 - 1) != _1_System_Collections_Generic_IEnumerator_T )
+        v23 = (int *)(*(_QWORD *)(v21 + 176) + 8LL);
+        while ( *((Il2CppClass **)v23 - 1) != _2_System_Collections_Generic_IEnumerator_T )
         {
-          ++v19;
-          v20 += 4;
-          if ( v19 >= *(unsigned __int16 *)(*(_QWORD *)v12 + 298LL) )
-            goto LABEL_26;
+          --v22;
+          v23 += 4;
+          if ( !v22 )
+            goto LABEL_27;
         }
-        v21 = v18 + 16LL * *v20 + 312;
+        v24 = v21 + 16LL * *v23 + 312;
       }
       else
       {
-LABEL_26:
-        v21 = sub_B0F4C0(v12, _1_System_Collections_Generic_IEnumerator_T, 0LL);
+LABEL_27:
+        v24 = sub_1B52CAC(v15, _2_System_Collections_Generic_IEnumerator_T, 0LL);
       }
-      v22 = (*(__int64 (__fastcall **)(__int64, _QWORD))v21)(v12, *(_QWORD *)(v21 + 8));
+      v35[0] = (__int64)v35 - ((native_size + 15) & 0x1FFFFFFF0LL);
+      (*(void (__fastcall **)(_QWORD, _QWORD, __int64, __int64 *, __int64))(*(_QWORD *)(v24 + 8) + 16LL))(
+        *(_QWORD *)(*(_QWORD *)(v24 + 8) + 8LL),
+        *(_QWORD *)(v24 + 8),
+        v15,
+        v35,
+        v35[0]);
+      memcpy(
+        (char *)v35 - ((native_size + 15) & 0x1FFFFFFF0LL),
+        (char *)v35 - ((native_size + 15) & 0x1FFFFFFF0LL),
+        native_size);
+      v25 = memcpy(
+              (char *)v35 - ((native_size + 15) & 0x1FFFFFFF0LL),
+              (char *)v35 - ((native_size + 15) & 0x1FFFFFFF0LL),
+              native_size);
       if ( !action )
-        sub_B7769C(v22, v23);
-      ((void (__fastcall *)(System_Action_T__o *, __int64, __int64, MethodInfo *))method->rgctx_data->_2_System_Action_T__Invoke->methodPointer)(
+        sub_1B00F28(v25, v26);
+      v27 = method->rgctx_data;
+      v28 = (char *)v35 - ((native_size + 15) & 0x1FFFFFFF0LL);
+      if ( (v27->_4_T->_1.byval_arg.bits & 0x80000000) == 0 )
+        v28 = *(char **)((char *)v35 - ((native_size + 15) & 0x1FFFFFFF0LL));
+      _6_System_Action_T__Invoke = v27->_6_System_Action_T__Invoke;
+      methodPointer = _6_System_Action_T__Invoke->methodPointer;
+      v35[0] = (__int64)v28;
+      ((void (__fastcall *)(Il2CppMethodPointer, MethodInfo *, System_Action_T__o *, __int64 *))_6_System_Action_T__Invoke->invoker_method)(
+        methodPointer,
+        _6_System_Action_T__Invoke,
         action,
-        v22,
-        v23,
-        method->rgctx_data->_2_System_Action_T__Invoke);
+        v35);
     }
-    v24 = *(_QWORD *)v12;
-    if ( *(_WORD *)(*(_QWORD *)v12 + 298LL) )
+    v31 = *(_QWORD *)v15;
+    v32 = *(unsigned __int16 *)(*(_QWORD *)v15 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v15 + 302LL) )
     {
-      v25 = 0LL;
-      v26 = (int *)(*(_QWORD *)(v24 + 176) + 8LL);
-      while ( *((System_IDisposable_c **)v26 - 1) != System_IDisposable_TypeInfo )
+      v33 = (int *)(*(_QWORD *)(v31 + 176) + 8LL);
+      while ( *((System_IDisposable_c **)v33 - 1) != System_IDisposable_TypeInfo )
       {
-        ++v25;
-        v26 += 4;
-        if ( v25 >= *(unsigned __int16 *)(*(_QWORD *)v12 + 298LL) )
-          goto LABEL_34;
+        --v32;
+        v33 += 4;
+        if ( !v32 )
+          goto LABEL_37;
       }
-      v27 = v24 + 16LL * *v26 + 312;
+      v34 = v31 + 16LL * *v33 + 312;
     }
     else
     {
-LABEL_34:
-      v27 = sub_B0F4C0(v12, System_IDisposable_TypeInfo, 0LL);
+LABEL_37:
+      v34 = sub_1B52CAC(v15, System_IDisposable_TypeInfo, 0LL);
     }
-    (*(void (__fastcall **)(__int64, _QWORD))v27)(v12, *(_QWORD *)(v27 + 8));
+    (*(void (__fastcall **)(__int64, _QWORD))v34)(v15, *(_QWORD *)(v34 + 8));
   }
 }
 
 
-void __fastcall BasicHelper__ForEach_KeyValuePair_string__object__(
+void __fastcall BasicHelper__ForEach___Il2CppFullySharedGenericType__47516468(
         System_Collections_Generic_IEnumerable_T__o *sequence,
-        System_Action_T__o *action,
-        const MethodInfo_1C66B74 *method)
+        System_Action_int__T__o *action,
+        const MethodInfo_2D50B34 *method)
 {
-  Il2CppClass *_0_System_Collections_Generic_IEnumerable_T; // x22
+  unsigned __int64 StatusReg; // x27
+  const MethodInfo_2D50B34_RGCTXs *rgctx_data; // x26
+  __int64 v8; // x1
+  __int64 native_size; // x22
+  __int64 _0_System_Collections_Generic_IEnumerable_T; // x1
   System_Collections_Generic_IEnumerable_T__c *klass; // x8
-  unsigned __int64 v8; // x10
-  int32_t *p_offset; // x11
+  __int64 v12; // x9
+  int32_t *p_offset; // x10
   __int64 p_method; // x0
-  __int64 v11; // x1
-  __int64 v12; // x19
-  __int64 v13; // x8
-  unsigned __int64 v14; // x10
-  int *v15; // x11
-  __int64 v16; // x0
-  Il2CppClass *_1_System_Collections_Generic_IEnumerator_T; // x22
-  __int64 v18; // x8
-  unsigned __int64 v19; // x10
-  int *v20; // x11
-  __int64 v21; // x0
-  __int64 v22; // x0
-  __int64 v23; // x1
-  __int64 v24; // x8
-  unsigned __int64 v25; // x10
-  int *v26; // x11
-  __int64 v27; // x0
+  __int64 v15; // x1
+  __int64 (__fastcall *v16)(System_Collections_Generic_IEnumerable_T__o *, __int64); // x8
+  __int64 v17; // x1
+  __int64 v18; // x19
+  int i; // w27
+  __int64 v20; // x8
+  __int64 v21; // x9
+  int *v22; // x10
+  __int64 v23; // x0
+  Il2CppClass *_2_System_Collections_Generic_IEnumerator_T; // x1
+  __int64 v25; // x8
+  __int64 v26; // x9
+  int *v27; // x10
+  __int64 v28; // x0
+  void *v29; // x0
+  __int64 v30; // x1
+  const MethodInfo_2D50B34_RGCTXs *v31; // x8
+  char *v32; // x4
+  MethodInfo *_6_System_Action_int__T__Invoke; // x1
+  Il2CppMethodPointer methodPointer; // x0
+  __int64 v35; // x8
+  __int64 v36; // x9
+  int *v37; // x10
+  __int64 v38; // x0
+  _QWORD v39[2]; // [xsp+0h] [xbp-30h] BYREF
+  __int64 v40[2]; // [xsp+10h] [xbp-20h] BYREF
+  int v41; // [xsp+24h] [xbp-Ch] BYREF
+  __int64 v42; // [xsp+28h] [xbp-8h]
 
-  if ( (byte_438D976 & 1) == 0 )
+  StatusReg = _ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2));
+  v42 = *(_QWORD *)(StatusReg + 40);
+  rgctx_data = method->rgctx_data;
+  if ( !rgctx_data )
   {
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
-    byte_438D976 = 1;
+    sub_1B00CCC(&System_IDisposable_TypeInfo, action);
+    sub_1B00CCC(&System_Collections_IEnumerator_TypeInfo, v8);
+    rgctx_data = method->rgctx_data;
+    if ( !rgctx_data )
+    {
+      sub_1B52C04(method);
+      rgctx_data = method->rgctx_data;
+    }
   }
+  native_size = (unsigned int)rgctx_data->_4_T->_2.native_size;
+  memset((char *)v39 - ((native_size + 15) & 0x1FFFFFFF0LL), 0, rgctx_data->_4_T->_2.native_size);
   if ( sequence )
   {
-    _0_System_Collections_Generic_IEnumerable_T = method->rgctx_data->_0_System_Collections_Generic_IEnumerable_T_;
-    if ( (BYTE2(_0_System_Collections_Generic_IEnumerable_T->vtable[0].methodPtr) & 1) == 0 )
-      sub_B0F2C4(method->rgctx_data->_0_System_Collections_Generic_IEnumerable_T_);
+    _0_System_Collections_Generic_IEnumerable_T = (__int64)rgctx_data->_0_System_Collections_Generic_IEnumerable_T_;
+    if ( (BYTE5(rgctx_data->_0_System_Collections_Generic_IEnumerable_T_->vtable[0].methodPtr) & 1) == 0 )
+      _0_System_Collections_Generic_IEnumerable_T = sub_1B52BA8(rgctx_data->_0_System_Collections_Generic_IEnumerable_T_);
     klass = sequence->klass;
-    if ( *(_WORD *)&sequence->klass->_2.bitflags1 )
+    v12 = *(unsigned __int16 *)(&sequence->klass->_2.bitflags2 + 3);
+    if ( *(_WORD *)(&sequence->klass->_2.bitflags2 + 3) )
     {
-      v8 = 0LL;
       p_offset = &klass->_1.interfaceOffsets->offset;
-      while ( *((Il2CppClass **)p_offset - 1) != _0_System_Collections_Generic_IEnumerable_T )
+      while ( *((_QWORD *)p_offset - 1) != _0_System_Collections_Generic_IEnumerable_T )
       {
-        ++v8;
+        --v12;
         p_offset += 4;
-        if ( v8 >= *(unsigned __int16 *)&sequence->klass->_2.bitflags1 )
-          goto LABEL_10;
+        if ( !v12 )
+          goto LABEL_11;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
     }
     else
     {
-LABEL_10:
-      p_method = sub_B0F4C0(sequence, _0_System_Collections_Generic_IEnumerable_T, 0LL);
+LABEL_11:
+      p_method = sub_1B52CAC(sequence, _0_System_Collections_Generic_IEnumerable_T, 0LL);
     }
-    v12 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_T__o *, _QWORD))p_method)(
-            sequence,
-            *(_QWORD *)(p_method + 8));
-    if ( !v12 )
-      sub_B7769C(0LL, v11);
-    while ( 1 )
+    v16 = *(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_T__o *, __int64))p_method;
+    v15 = *(_QWORD *)(p_method + 8);
+    v39[1] = StatusReg;
+    v18 = v16(sequence, v15);
+    if ( !v18 )
+      sub_1B00F28(0LL, v17);
+    for ( i = 0; ; ++i )
     {
-      v13 = *(_QWORD *)v12;
-      if ( *(_WORD *)(*(_QWORD *)v12 + 298LL) )
+      v20 = *(_QWORD *)v18;
+      v21 = *(unsigned __int16 *)(*(_QWORD *)v18 + 302LL);
+      if ( *(_WORD *)(*(_QWORD *)v18 + 302LL) )
       {
-        v14 = 0LL;
-        v15 = (int *)(*(_QWORD *)(v13 + 176) + 8LL);
-        while ( *((System_Collections_IEnumerator_c **)v15 - 1) != System_Collections_IEnumerator_TypeInfo )
+        v22 = (int *)(*(_QWORD *)(v20 + 176) + 8LL);
+        while ( *((System_Collections_IEnumerator_c **)v22 - 1) != System_Collections_IEnumerator_TypeInfo )
         {
-          ++v14;
-          v15 += 4;
-          if ( v14 >= *(unsigned __int16 *)(*(_QWORD *)v12 + 298LL) )
-            goto LABEL_17;
+          --v21;
+          v22 += 4;
+          if ( !v21 )
+            goto LABEL_19;
         }
-        v16 = v13 + 16LL * *v15 + 312;
+        v23 = v20 + 16LL * *v22 + 312;
       }
       else
       {
-LABEL_17:
-        v16 = sub_B0F4C0(v12, System_Collections_IEnumerator_TypeInfo, 0LL);
+LABEL_19:
+        v23 = sub_1B52CAC(v18, System_Collections_IEnumerator_TypeInfo, 0LL);
       }
-      if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v16)(v12, *(_QWORD *)(v16 + 8)) & 1) == 0 )
+      if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v23)(v18, *(_QWORD *)(v23 + 8)) & 1) == 0 )
         break;
-      _1_System_Collections_Generic_IEnumerator_T = method->rgctx_data->_1_System_Collections_Generic_IEnumerator_T_;
-      if ( (BYTE2(_1_System_Collections_Generic_IEnumerator_T->vtable[0].methodPtr) & 1) == 0 )
-        sub_B0F2C4(method->rgctx_data->_1_System_Collections_Generic_IEnumerator_T_);
-      v18 = *(_QWORD *)v12;
-      if ( *(_WORD *)(*(_QWORD *)v12 + 298LL) )
+      _2_System_Collections_Generic_IEnumerator_T = method->rgctx_data->_2_System_Collections_Generic_IEnumerator_T_;
+      if ( (BYTE5(_2_System_Collections_Generic_IEnumerator_T->vtable[0].methodPtr) & 1) == 0 )
+        _2_System_Collections_Generic_IEnumerator_T = (Il2CppClass *)sub_1B52BA8(method->rgctx_data->_2_System_Collections_Generic_IEnumerator_T_);
+      v25 = *(_QWORD *)v18;
+      v26 = *(unsigned __int16 *)(*(_QWORD *)v18 + 302LL);
+      if ( *(_WORD *)(*(_QWORD *)v18 + 302LL) )
       {
-        v19 = 0LL;
-        v20 = (int *)(*(_QWORD *)(v18 + 176) + 8LL);
-        while ( *((Il2CppClass **)v20 - 1) != _1_System_Collections_Generic_IEnumerator_T )
+        v27 = (int *)(*(_QWORD *)(v25 + 176) + 8LL);
+        while ( *((Il2CppClass **)v27 - 1) != _2_System_Collections_Generic_IEnumerator_T )
         {
-          ++v19;
-          v20 += 4;
-          if ( v19 >= *(unsigned __int16 *)(*(_QWORD *)v12 + 298LL) )
-            goto LABEL_26;
+          --v26;
+          v27 += 4;
+          if ( !v26 )
+            goto LABEL_28;
         }
-        v21 = v18 + 16LL * *v20 + 312;
+        v28 = v25 + 16LL * *v27 + 312;
       }
       else
       {
-LABEL_26:
-        v21 = sub_B0F4C0(v12, _1_System_Collections_Generic_IEnumerator_T, 0LL);
+LABEL_28:
+        v28 = sub_1B52CAC(v18, _2_System_Collections_Generic_IEnumerator_T, 0LL);
       }
-      v22 = (*(__int64 (__fastcall **)(__int64, _QWORD))v21)(v12, *(_QWORD *)(v21 + 8));
+      v40[0] = (__int64)v39 - ((native_size + 15) & 0x1FFFFFFF0LL);
+      (*(void (__fastcall **)(_QWORD, _QWORD, __int64, __int64 *, __int64))(*(_QWORD *)(v28 + 8) + 16LL))(
+        *(_QWORD *)(*(_QWORD *)(v28 + 8) + 8LL),
+        *(_QWORD *)(v28 + 8),
+        v18,
+        v40,
+        v40[0]);
+      memcpy(
+        (char *)v39 - ((native_size + 15) & 0x1FFFFFFF0LL),
+        (char *)v39 - ((native_size + 15) & 0x1FFFFFFF0LL),
+        native_size);
+      v29 = memcpy(
+              (char *)v39 - ((native_size + 15) & 0x1FFFFFFF0LL),
+              (char *)v39 - ((native_size + 15) & 0x1FFFFFFF0LL),
+              native_size);
       if ( !action )
-        sub_B7769C(v22, v23);
-      ((void (__fastcall *)(System_Action_T__o *, __int64, __int64, MethodInfo *))method->rgctx_data->_2_System_Action_T__Invoke->methodPointer)(
+        sub_1B00F28(v29, v30);
+      v31 = method->rgctx_data;
+      v32 = (char *)v39 - ((native_size + 15) & 0x1FFFFFFF0LL);
+      if ( (v31->_4_T->_1.byval_arg.bits & 0x80000000) == 0 )
+        v32 = *(char **)((char *)v39 - ((native_size + 15) & 0x1FFFFFFF0LL));
+      _6_System_Action_int__T__Invoke = v31->_6_System_Action_int__T__Invoke;
+      methodPointer = _6_System_Action_int__T__Invoke->methodPointer;
+      v41 = i;
+      v40[0] = (__int64)&v41;
+      v40[1] = (__int64)v32;
+      ((void (__fastcall *)(Il2CppMethodPointer, MethodInfo *, System_Action_int__T__o *, __int64 *))_6_System_Action_int__T__Invoke->invoker_method)(
+        methodPointer,
+        _6_System_Action_int__T__Invoke,
         action,
-        v22,
-        v23,
-        method->rgctx_data->_2_System_Action_T__Invoke);
+        v40);
     }
-    v24 = *(_QWORD *)v12;
-    if ( *(_WORD *)(*(_QWORD *)v12 + 298LL) )
+    v35 = *(_QWORD *)v18;
+    v36 = *(unsigned __int16 *)(*(_QWORD *)v18 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v18 + 302LL) )
     {
-      v25 = 0LL;
-      v26 = (int *)(*(_QWORD *)(v24 + 176) + 8LL);
-      while ( *((System_IDisposable_c **)v26 - 1) != System_IDisposable_TypeInfo )
+      v37 = (int *)(*(_QWORD *)(v35 + 176) + 8LL);
+      while ( *((System_IDisposable_c **)v37 - 1) != System_IDisposable_TypeInfo )
       {
-        ++v25;
-        v26 += 4;
-        if ( v25 >= *(unsigned __int16 *)(*(_QWORD *)v12 + 298LL) )
-          goto LABEL_34;
+        --v36;
+        v37 += 4;
+        if ( !v36 )
+          goto LABEL_38;
       }
-      v27 = v24 + 16LL * *v26 + 312;
+      v38 = v35 + 16LL * *v37 + 312;
     }
     else
     {
-LABEL_34:
-      v27 = sub_B0F4C0(v12, System_IDisposable_TypeInfo, 0LL);
+LABEL_38:
+      v38 = sub_1B52CAC(v18, System_IDisposable_TypeInfo, 0LL);
     }
-    (*(void (__fastcall **)(__int64, _QWORD))v27)(v12, *(_QWORD *)(v27 + 8));
+    (*(void (__fastcall **)(__int64, _QWORD))v38)(v18, *(_QWORD *)(v38 + 8));
   }
 }
 
@@ -1510,483 +2134,721 @@ LABEL_34:
 void __fastcall BasicHelper__ForEach_int_(
         System_Collections_Generic_IEnumerable_T__o *sequence,
         System_Action_T__o *action,
-        const MethodInfo_1C66E54 *method)
+        const MethodInfo_2D4FB4C *method)
 {
-  Il2CppClass *_0_System_Collections_Generic_IEnumerable_T; // x22
+  __int64 v6; // x1
+  Il2CppClass *_0_System_Collections_Generic_IEnumerable_T; // x1
   System_Collections_Generic_IEnumerable_T__c *klass; // x8
-  unsigned __int64 v8; // x10
-  int32_t *p_offset; // x11
+  __int64 v9; // x9
+  int32_t *p_offset; // x10
   __int64 p_method; // x0
-  __int64 v11; // x1
-  __int64 v12; // x19
-  __int64 v13; // x8
-  unsigned __int64 v14; // x10
-  int *v15; // x11
-  __int64 v16; // x0
-  Il2CppClass *_1_System_Collections_Generic_IEnumerator_T; // x22
-  __int64 v18; // x8
-  unsigned __int64 v19; // x10
-  int *v20; // x11
-  __int64 v21; // x0
+  __int64 v12; // x1
+  __int64 v13; // x19
+  __int64 v14; // x8
+  __int64 v15; // x9
+  int *v16; // x10
+  __int64 v17; // x0
+  Il2CppClass *_2_System_Collections_Generic_IEnumerator_T; // x1
+  __int64 v19; // x8
+  __int64 v20; // x9
+  int *v21; // x10
   __int64 v22; // x0
-  __int64 v23; // x8
-  unsigned __int64 v24; // x10
-  int *v25; // x11
-  __int64 v26; // x0
+  __int64 v23; // x0
+  __int64 v24; // x8
+  __int64 v25; // x9
+  int *v26; // x10
+  __int64 v27; // x0
 
-  if ( (byte_438D977 & 1) == 0 )
+  if ( method->rgctx_data
+    || (sub_1B00CCC(&System_IDisposable_TypeInfo, action),
+        sub_1B00CCC(&System_Collections_IEnumerator_TypeInfo, v6),
+        method->rgctx_data) )
   {
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
-    byte_438D977 = 1;
+    if ( !sequence )
+      return;
   }
-  if ( sequence )
+  else
   {
-    _0_System_Collections_Generic_IEnumerable_T = method->rgctx_data->_0_System_Collections_Generic_IEnumerable_T_;
-    if ( (BYTE2(_0_System_Collections_Generic_IEnumerable_T->vtable[0].methodPtr) & 1) == 0 )
-      sub_B0F2C4(method->rgctx_data->_0_System_Collections_Generic_IEnumerable_T_);
-    klass = sequence->klass;
-    if ( *(_WORD *)&sequence->klass->_2.bitflags1 )
+    sub_1B52C04(method);
+    if ( !sequence )
+      return;
+  }
+  _0_System_Collections_Generic_IEnumerable_T = method->rgctx_data->_0_System_Collections_Generic_IEnumerable_T_;
+  if ( (BYTE5(_0_System_Collections_Generic_IEnumerable_T->vtable[0].methodPtr) & 1) == 0 )
+    _0_System_Collections_Generic_IEnumerable_T = (Il2CppClass *)sub_1B52BA8(method->rgctx_data->_0_System_Collections_Generic_IEnumerable_T_);
+  klass = sequence->klass;
+  v9 = *(unsigned __int16 *)(&sequence->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&sequence->klass->_2.bitflags2 + 3) )
+  {
+    p_offset = &klass->_1.interfaceOffsets->offset;
+    while ( *((Il2CppClass **)p_offset - 1) != _0_System_Collections_Generic_IEnumerable_T )
     {
-      v8 = 0LL;
-      p_offset = &klass->_1.interfaceOffsets->offset;
-      while ( *((Il2CppClass **)p_offset - 1) != _0_System_Collections_Generic_IEnumerable_T )
-      {
-        ++v8;
-        p_offset += 4;
-        if ( v8 >= *(unsigned __int16 *)&sequence->klass->_2.bitflags1 )
-          goto LABEL_10;
-      }
-      p_method = (__int64)&klass->vtable[*p_offset].method;
+      --v9;
+      p_offset += 4;
+      if ( !v9 )
+        goto LABEL_10;
     }
-    else
-    {
+    p_method = (__int64)&klass->vtable[*p_offset].method;
+  }
+  else
+  {
 LABEL_10:
-      p_method = sub_B0F4C0(sequence, _0_System_Collections_Generic_IEnumerable_T, 0LL);
-    }
-    v12 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_T__o *, _QWORD))p_method)(
-            sequence,
-            *(_QWORD *)(p_method + 8));
-    if ( !v12 )
-      sub_B7769C(0LL, v11);
-    while ( 1 )
+    p_method = sub_1B52CAC(sequence, _0_System_Collections_Generic_IEnumerable_T, 0LL);
+  }
+  v13 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_T__o *, _QWORD))p_method)(
+          sequence,
+          *(_QWORD *)(p_method + 8));
+  if ( !v13 )
+    sub_1B00F28(0LL, v12);
+  while ( 1 )
+  {
+    v14 = *(_QWORD *)v13;
+    v15 = *(unsigned __int16 *)(*(_QWORD *)v13 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v13 + 302LL) )
     {
-      v13 = *(_QWORD *)v12;
-      if ( *(_WORD *)(*(_QWORD *)v12 + 298LL) )
+      v16 = (int *)(*(_QWORD *)(v14 + 176) + 8LL);
+      while ( *((System_Collections_IEnumerator_c **)v16 - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        v14 = 0LL;
-        v15 = (int *)(*(_QWORD *)(v13 + 176) + 8LL);
-        while ( *((System_Collections_IEnumerator_c **)v15 - 1) != System_Collections_IEnumerator_TypeInfo )
-        {
-          ++v14;
-          v15 += 4;
-          if ( v14 >= *(unsigned __int16 *)(*(_QWORD *)v12 + 298LL) )
-            goto LABEL_17;
-        }
-        v16 = v13 + 16LL * *v15 + 312;
+        --v15;
+        v16 += 4;
+        if ( !v15 )
+          goto LABEL_17;
       }
-      else
-      {
-LABEL_17:
-        v16 = sub_B0F4C0(v12, System_Collections_IEnumerator_TypeInfo, 0LL);
-      }
-      if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v16)(v12, *(_QWORD *)(v16 + 8)) & 1) == 0 )
-        break;
-      _1_System_Collections_Generic_IEnumerator_T = method->rgctx_data->_1_System_Collections_Generic_IEnumerator_T_;
-      if ( (BYTE2(_1_System_Collections_Generic_IEnumerator_T->vtable[0].methodPtr) & 1) == 0 )
-        sub_B0F2C4(method->rgctx_data->_1_System_Collections_Generic_IEnumerator_T_);
-      v18 = *(_QWORD *)v12;
-      if ( *(_WORD *)(*(_QWORD *)v12 + 298LL) )
-      {
-        v19 = 0LL;
-        v20 = (int *)(*(_QWORD *)(v18 + 176) + 8LL);
-        while ( *((Il2CppClass **)v20 - 1) != _1_System_Collections_Generic_IEnumerator_T )
-        {
-          ++v19;
-          v20 += 4;
-          if ( v19 >= *(unsigned __int16 *)(*(_QWORD *)v12 + 298LL) )
-            goto LABEL_26;
-        }
-        v21 = v18 + 16LL * *v20 + 312;
-      }
-      else
-      {
-LABEL_26:
-        v21 = sub_B0F4C0(v12, _1_System_Collections_Generic_IEnumerator_T, 0LL);
-      }
-      v22 = (*(__int64 (__fastcall **)(__int64, _QWORD))v21)(v12, *(_QWORD *)(v21 + 8));
-      if ( !action )
-        sub_B7769C(v22, (unsigned int)v22);
-      ((void (__fastcall *)(System_Action_T__o *, _QWORD, MethodInfo *))method->rgctx_data->_2_System_Action_T__Invoke->methodPointer)(
-        action,
-        (unsigned int)v22,
-        method->rgctx_data->_2_System_Action_T__Invoke);
-    }
-    v23 = *(_QWORD *)v12;
-    if ( *(_WORD *)(*(_QWORD *)v12 + 298LL) )
-    {
-      v24 = 0LL;
-      v25 = (int *)(*(_QWORD *)(v23 + 176) + 8LL);
-      while ( *((System_IDisposable_c **)v25 - 1) != System_IDisposable_TypeInfo )
-      {
-        ++v24;
-        v25 += 4;
-        if ( v24 >= *(unsigned __int16 *)(*(_QWORD *)v12 + 298LL) )
-          goto LABEL_34;
-      }
-      v26 = v23 + 16LL * *v25 + 312;
+      v17 = v14 + 16LL * *v16 + 312;
     }
     else
     {
-LABEL_34:
-      v26 = sub_B0F4C0(v12, System_IDisposable_TypeInfo, 0LL);
+LABEL_17:
+      v17 = sub_1B52CAC(v13, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
-    (*(void (__fastcall **)(__int64, _QWORD))v26)(v12, *(_QWORD *)(v26 + 8));
+    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v17)(v13, *(_QWORD *)(v17 + 8)) & 1) == 0 )
+      break;
+    _2_System_Collections_Generic_IEnumerator_T = method->rgctx_data->_2_System_Collections_Generic_IEnumerator_T_;
+    if ( (BYTE5(_2_System_Collections_Generic_IEnumerator_T->vtable[0].methodPtr) & 1) == 0 )
+      _2_System_Collections_Generic_IEnumerator_T = (Il2CppClass *)sub_1B52BA8(method->rgctx_data->_2_System_Collections_Generic_IEnumerator_T_);
+    v19 = *(_QWORD *)v13;
+    v20 = *(unsigned __int16 *)(*(_QWORD *)v13 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v13 + 302LL) )
+    {
+      v21 = (int *)(*(_QWORD *)(v19 + 176) + 8LL);
+      while ( *((Il2CppClass **)v21 - 1) != _2_System_Collections_Generic_IEnumerator_T )
+      {
+        --v20;
+        v21 += 4;
+        if ( !v20 )
+          goto LABEL_26;
+      }
+      v22 = v19 + 16LL * *v21 + 312;
+    }
+    else
+    {
+LABEL_26:
+      v22 = sub_1B52CAC(v13, _2_System_Collections_Generic_IEnumerator_T, 0LL);
+    }
+    v23 = (*(__int64 (__fastcall **)(__int64, _QWORD))v22)(v13, *(_QWORD *)(v22 + 8));
+    if ( !action )
+      sub_1B00F28(v23, (unsigned int)v23);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))action->fields.m_target)(
+      action->fields.original_method_info,
+      (unsigned int)v23,
+      *(_QWORD *)&action->fields.extra_arg);
   }
+  v24 = *(_QWORD *)v13;
+  v25 = *(unsigned __int16 *)(*(_QWORD *)v13 + 302LL);
+  if ( *(_WORD *)(*(_QWORD *)v13 + 302LL) )
+  {
+    v26 = (int *)(*(_QWORD *)(v24 + 176) + 8LL);
+    while ( *((System_IDisposable_c **)v26 - 1) != System_IDisposable_TypeInfo )
+    {
+      --v25;
+      v26 += 4;
+      if ( !v25 )
+        goto LABEL_34;
+    }
+    v27 = v24 + 16LL * *v26 + 312;
+  }
+  else
+  {
+LABEL_34:
+    v27 = sub_1B52CAC(v13, System_IDisposable_TypeInfo, 0LL);
+  }
+  (*(void (__fastcall **)(__int64, _QWORD))v27)(v13, *(_QWORD *)(v27 + 8));
 }
 
 
-void __fastcall BasicHelper__ForEach_int__29782312(
+void __fastcall BasicHelper__ForEach_int__47513164(
         System_Collections_Generic_IEnumerable_T__o *sequence,
         System_Action_int__T__o *action,
-        const MethodInfo_1C67128 *method)
+        const MethodInfo_2D4FE4C *method)
 {
-  Il2CppClass *_0_System_Collections_Generic_IEnumerable_T; // x22
+  __int64 v6; // x1
+  Il2CppClass *_0_System_Collections_Generic_IEnumerable_T; // x1
   System_Collections_Generic_IEnumerable_T__c *klass; // x8
-  unsigned __int64 v8; // x10
-  int32_t *p_offset; // x11
+  __int64 v9; // x9
+  int32_t *p_offset; // x10
   __int64 p_method; // x0
-  __int64 v11; // x1
-  __int64 v12; // x19
+  __int64 v12; // x1
+  __int64 v13; // x19
   unsigned int i; // w22
-  __int64 v14; // x8
-  unsigned __int64 v15; // x10
-  int *v16; // x11
-  __int64 v17; // x0
-  Il2CppClass *_1_System_Collections_Generic_IEnumerator_T; // x23
-  __int64 v19; // x8
-  unsigned __int64 v20; // x10
-  int *v21; // x11
-  __int64 v22; // x0
+  __int64 v15; // x8
+  __int64 v16; // x9
+  int *v17; // x10
+  __int64 v18; // x0
+  Il2CppClass *_2_System_Collections_Generic_IEnumerator_T; // x1
+  __int64 v20; // x8
+  __int64 v21; // x9
+  int *v22; // x10
   __int64 v23; // x0
-  __int64 v24; // x1
-  __int64 v25; // x8
-  unsigned __int64 v26; // x10
-  int *v27; // x11
-  __int64 v28; // x0
+  __int64 v24; // x0
+  __int64 v25; // x1
+  __int64 v26; // x8
+  __int64 v27; // x9
+  int *v28; // x10
+  __int64 v29; // x0
 
-  if ( (byte_438D978 & 1) == 0 )
+  if ( method->rgctx_data
+    || (sub_1B00CCC(&System_IDisposable_TypeInfo, action),
+        sub_1B00CCC(&System_Collections_IEnumerator_TypeInfo, v6),
+        method->rgctx_data) )
   {
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
-    byte_438D978 = 1;
+    if ( !sequence )
+      return;
   }
-  if ( sequence )
+  else
   {
-    _0_System_Collections_Generic_IEnumerable_T = method->rgctx_data->_0_System_Collections_Generic_IEnumerable_T_;
-    if ( (BYTE2(_0_System_Collections_Generic_IEnumerable_T->vtable[0].methodPtr) & 1) == 0 )
-      sub_B0F2C4(method->rgctx_data->_0_System_Collections_Generic_IEnumerable_T_);
-    klass = sequence->klass;
-    if ( *(_WORD *)&sequence->klass->_2.bitflags1 )
+    sub_1B52C04(method);
+    if ( !sequence )
+      return;
+  }
+  _0_System_Collections_Generic_IEnumerable_T = method->rgctx_data->_0_System_Collections_Generic_IEnumerable_T_;
+  if ( (BYTE5(_0_System_Collections_Generic_IEnumerable_T->vtable[0].methodPtr) & 1) == 0 )
+    _0_System_Collections_Generic_IEnumerable_T = (Il2CppClass *)sub_1B52BA8(method->rgctx_data->_0_System_Collections_Generic_IEnumerable_T_);
+  klass = sequence->klass;
+  v9 = *(unsigned __int16 *)(&sequence->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&sequence->klass->_2.bitflags2 + 3) )
+  {
+    p_offset = &klass->_1.interfaceOffsets->offset;
+    while ( *((Il2CppClass **)p_offset - 1) != _0_System_Collections_Generic_IEnumerable_T )
     {
-      v8 = 0LL;
-      p_offset = &klass->_1.interfaceOffsets->offset;
-      while ( *((Il2CppClass **)p_offset - 1) != _0_System_Collections_Generic_IEnumerable_T )
-      {
-        ++v8;
-        p_offset += 4;
-        if ( v8 >= *(unsigned __int16 *)&sequence->klass->_2.bitflags1 )
-          goto LABEL_10;
-      }
-      p_method = (__int64)&klass->vtable[*p_offset].method;
+      --v9;
+      p_offset += 4;
+      if ( !v9 )
+        goto LABEL_10;
     }
-    else
-    {
+    p_method = (__int64)&klass->vtable[*p_offset].method;
+  }
+  else
+  {
 LABEL_10:
-      p_method = sub_B0F4C0(sequence, _0_System_Collections_Generic_IEnumerable_T, 0LL);
-    }
-    v12 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_T__o *, _QWORD))p_method)(
-            sequence,
-            *(_QWORD *)(p_method + 8));
-    if ( !v12 )
-      sub_B7769C(0LL, v11);
-    for ( i = 0; ; ++i )
+    p_method = sub_1B52CAC(sequence, _0_System_Collections_Generic_IEnumerable_T, 0LL);
+  }
+  v13 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_T__o *, _QWORD))p_method)(
+          sequence,
+          *(_QWORD *)(p_method + 8));
+  if ( !v13 )
+    sub_1B00F28(0LL, v12);
+  for ( i = 0; ; ++i )
+  {
+    v15 = *(_QWORD *)v13;
+    v16 = *(unsigned __int16 *)(*(_QWORD *)v13 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v13 + 302LL) )
     {
-      v14 = *(_QWORD *)v12;
-      if ( *(_WORD *)(*(_QWORD *)v12 + 298LL) )
+      v17 = (int *)(*(_QWORD *)(v15 + 176) + 8LL);
+      while ( *((System_Collections_IEnumerator_c **)v17 - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        v15 = 0LL;
-        v16 = (int *)(*(_QWORD *)(v14 + 176) + 8LL);
-        while ( *((System_Collections_IEnumerator_c **)v16 - 1) != System_Collections_IEnumerator_TypeInfo )
-        {
-          ++v15;
-          v16 += 4;
-          if ( v15 >= *(unsigned __int16 *)(*(_QWORD *)v12 + 298LL) )
-            goto LABEL_18;
-        }
-        v17 = v14 + 16LL * *v16 + 312;
+        --v16;
+        v17 += 4;
+        if ( !v16 )
+          goto LABEL_18;
       }
-      else
-      {
-LABEL_18:
-        v17 = sub_B0F4C0(v12, System_Collections_IEnumerator_TypeInfo, 0LL);
-      }
-      if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v17)(v12, *(_QWORD *)(v17 + 8)) & 1) == 0 )
-        break;
-      _1_System_Collections_Generic_IEnumerator_T = method->rgctx_data->_1_System_Collections_Generic_IEnumerator_T_;
-      if ( (BYTE2(_1_System_Collections_Generic_IEnumerator_T->vtable[0].methodPtr) & 1) == 0 )
-        sub_B0F2C4(method->rgctx_data->_1_System_Collections_Generic_IEnumerator_T_);
-      v19 = *(_QWORD *)v12;
-      if ( *(_WORD *)(*(_QWORD *)v12 + 298LL) )
-      {
-        v20 = 0LL;
-        v21 = (int *)(*(_QWORD *)(v19 + 176) + 8LL);
-        while ( *((Il2CppClass **)v21 - 1) != _1_System_Collections_Generic_IEnumerator_T )
-        {
-          ++v20;
-          v21 += 4;
-          if ( v20 >= *(unsigned __int16 *)(*(_QWORD *)v12 + 298LL) )
-            goto LABEL_27;
-        }
-        v22 = v19 + 16LL * *v21 + 312;
-      }
-      else
-      {
-LABEL_27:
-        v22 = sub_B0F4C0(v12, _1_System_Collections_Generic_IEnumerator_T, 0LL);
-      }
-      v23 = (*(__int64 (__fastcall **)(__int64, _QWORD))v22)(v12, *(_QWORD *)(v22 + 8));
-      if ( !action )
-        sub_B7769C(v23, v24);
-      ((void (__fastcall *)(System_Action_int__T__o *, _QWORD, _QWORD, MethodInfo *))method->rgctx_data->_2_System_Action_int__T__Invoke->methodPointer)(
-        action,
-        i,
-        (unsigned int)v23,
-        method->rgctx_data->_2_System_Action_int__T__Invoke);
-    }
-    v25 = *(_QWORD *)v12;
-    if ( *(_WORD *)(*(_QWORD *)v12 + 298LL) )
-    {
-      v26 = 0LL;
-      v27 = (int *)(*(_QWORD *)(v25 + 176) + 8LL);
-      while ( *((System_IDisposable_c **)v27 - 1) != System_IDisposable_TypeInfo )
-      {
-        ++v26;
-        v27 += 4;
-        if ( v26 >= *(unsigned __int16 *)(*(_QWORD *)v12 + 298LL) )
-          goto LABEL_35;
-      }
-      v28 = v25 + 16LL * *v27 + 312;
+      v18 = v15 + 16LL * *v17 + 312;
     }
     else
     {
-LABEL_35:
-      v28 = sub_B0F4C0(v12, System_IDisposable_TypeInfo, 0LL);
+LABEL_18:
+      v18 = sub_1B52CAC(v13, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
-    (*(void (__fastcall **)(__int64, _QWORD))v28)(v12, *(_QWORD *)(v28 + 8));
+    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v18)(v13, *(_QWORD *)(v18 + 8)) & 1) == 0 )
+      break;
+    _2_System_Collections_Generic_IEnumerator_T = method->rgctx_data->_2_System_Collections_Generic_IEnumerator_T_;
+    if ( (BYTE5(_2_System_Collections_Generic_IEnumerator_T->vtable[0].methodPtr) & 1) == 0 )
+      _2_System_Collections_Generic_IEnumerator_T = (Il2CppClass *)sub_1B52BA8(method->rgctx_data->_2_System_Collections_Generic_IEnumerator_T_);
+    v20 = *(_QWORD *)v13;
+    v21 = *(unsigned __int16 *)(*(_QWORD *)v13 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v13 + 302LL) )
+    {
+      v22 = (int *)(*(_QWORD *)(v20 + 176) + 8LL);
+      while ( *((Il2CppClass **)v22 - 1) != _2_System_Collections_Generic_IEnumerator_T )
+      {
+        --v21;
+        v22 += 4;
+        if ( !v21 )
+          goto LABEL_27;
+      }
+      v23 = v20 + 16LL * *v22 + 312;
+    }
+    else
+    {
+LABEL_27:
+      v23 = sub_1B52CAC(v13, _2_System_Collections_Generic_IEnumerator_T, 0LL);
+    }
+    v24 = (*(__int64 (__fastcall **)(__int64, _QWORD))v23)(v13, *(_QWORD *)(v23 + 8));
+    if ( !action )
+      sub_1B00F28(v24, v25);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD, _QWORD))action->fields.m_target)(
+      action->fields.original_method_info,
+      i,
+      (unsigned int)v24,
+      *(_QWORD *)&action->fields.extra_arg);
   }
+  v26 = *(_QWORD *)v13;
+  v27 = *(unsigned __int16 *)(*(_QWORD *)v13 + 302LL);
+  if ( *(_WORD *)(*(_QWORD *)v13 + 302LL) )
+  {
+    v28 = (int *)(*(_QWORD *)(v26 + 176) + 8LL);
+    while ( *((System_IDisposable_c **)v28 - 1) != System_IDisposable_TypeInfo )
+    {
+      --v27;
+      v28 += 4;
+      if ( !v27 )
+        goto LABEL_35;
+    }
+    v29 = v26 + 16LL * *v28 + 312;
+  }
+  else
+  {
+LABEL_35:
+    v29 = sub_1B52CAC(v13, System_IDisposable_TypeInfo, 0LL);
+  }
+  (*(void (__fastcall **)(__int64, _QWORD))v29)(v13, *(_QWORD *)(v29 + 8));
 }
 
 
 void __fastcall BasicHelper__ForEach_object_(
         System_Collections_Generic_IEnumerable_T__o *sequence,
-        System_Action_int__T__o *action,
-        const MethodInfo_1C679BC *method)
+        System_Action_T__o *action,
+        const MethodInfo_2D50464 *method)
 {
-  Il2CppClass *_0_System_Collections_Generic_IEnumerable_T; // x22
+  __int64 v6; // x1
+  Il2CppClass *_0_System_Collections_Generic_IEnumerable_T; // x1
   System_Collections_Generic_IEnumerable_T__c *klass; // x8
-  unsigned __int64 v8; // x10
-  int32_t *p_offset; // x11
+  __int64 v9; // x9
+  int32_t *p_offset; // x10
   __int64 p_method; // x0
-  __int64 v11; // x1
-  __int64 v12; // x19
-  unsigned int i; // w22
+  __int64 v12; // x1
+  __int64 v13; // x19
   __int64 v14; // x8
-  unsigned __int64 v15; // x10
-  int *v16; // x11
+  __int64 v15; // x9
+  int *v16; // x10
   __int64 v17; // x0
-  Il2CppClass *_1_System_Collections_Generic_IEnumerator_T; // x23
+  Il2CppClass *_2_System_Collections_Generic_IEnumerator_T; // x1
   __int64 v19; // x8
-  unsigned __int64 v20; // x10
-  int *v21; // x11
+  __int64 v20; // x9
+  int *v21; // x10
   __int64 v22; // x0
   __int64 v23; // x0
-  __int64 v24; // x1
-  __int64 v25; // x8
-  unsigned __int64 v26; // x10
-  int *v27; // x11
-  __int64 v28; // x0
+  __int64 v24; // x8
+  __int64 v25; // x9
+  int *v26; // x10
+  __int64 v27; // x0
 
-  if ( (byte_438D97B & 1) == 0 )
+  if ( method->rgctx_data
+    || (sub_1B00CCC(&System_IDisposable_TypeInfo, action),
+        sub_1B00CCC(&System_Collections_IEnumerator_TypeInfo, v6),
+        method->rgctx_data) )
   {
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
-    byte_438D97B = 1;
+    if ( !sequence )
+      return;
   }
-  if ( sequence )
+  else
   {
-    _0_System_Collections_Generic_IEnumerable_T = method->rgctx_data->_0_System_Collections_Generic_IEnumerable_T_;
-    if ( (BYTE2(_0_System_Collections_Generic_IEnumerable_T->vtable[0].methodPtr) & 1) == 0 )
-      sub_B0F2C4(method->rgctx_data->_0_System_Collections_Generic_IEnumerable_T_);
-    klass = sequence->klass;
-    if ( *(_WORD *)&sequence->klass->_2.bitflags1 )
+    sub_1B52C04(method);
+    if ( !sequence )
+      return;
+  }
+  _0_System_Collections_Generic_IEnumerable_T = method->rgctx_data->_0_System_Collections_Generic_IEnumerable_T_;
+  if ( (BYTE5(_0_System_Collections_Generic_IEnumerable_T->vtable[0].methodPtr) & 1) == 0 )
+    _0_System_Collections_Generic_IEnumerable_T = (Il2CppClass *)sub_1B52BA8(method->rgctx_data->_0_System_Collections_Generic_IEnumerable_T_);
+  klass = sequence->klass;
+  v9 = *(unsigned __int16 *)(&sequence->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&sequence->klass->_2.bitflags2 + 3) )
+  {
+    p_offset = &klass->_1.interfaceOffsets->offset;
+    while ( *((Il2CppClass **)p_offset - 1) != _0_System_Collections_Generic_IEnumerable_T )
     {
-      v8 = 0LL;
-      p_offset = &klass->_1.interfaceOffsets->offset;
-      while ( *((Il2CppClass **)p_offset - 1) != _0_System_Collections_Generic_IEnumerable_T )
-      {
-        ++v8;
-        p_offset += 4;
-        if ( v8 >= *(unsigned __int16 *)&sequence->klass->_2.bitflags1 )
-          goto LABEL_10;
-      }
-      p_method = (__int64)&klass->vtable[*p_offset].method;
+      --v9;
+      p_offset += 4;
+      if ( !v9 )
+        goto LABEL_10;
     }
-    else
-    {
+    p_method = (__int64)&klass->vtable[*p_offset].method;
+  }
+  else
+  {
 LABEL_10:
-      p_method = sub_B0F4C0(sequence, _0_System_Collections_Generic_IEnumerable_T, 0LL);
-    }
-    v12 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_T__o *, _QWORD))p_method)(
-            sequence,
-            *(_QWORD *)(p_method + 8));
-    if ( !v12 )
-      sub_B7769C(0LL, v11);
-    for ( i = 0; ; ++i )
+    p_method = sub_1B52CAC(sequence, _0_System_Collections_Generic_IEnumerable_T, 0LL);
+  }
+  v13 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_T__o *, _QWORD))p_method)(
+          sequence,
+          *(_QWORD *)(p_method + 8));
+  if ( !v13 )
+    sub_1B00F28(0LL, v12);
+  while ( 1 )
+  {
+    v14 = *(_QWORD *)v13;
+    v15 = *(unsigned __int16 *)(*(_QWORD *)v13 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v13 + 302LL) )
     {
-      v14 = *(_QWORD *)v12;
-      if ( *(_WORD *)(*(_QWORD *)v12 + 298LL) )
+      v16 = (int *)(*(_QWORD *)(v14 + 176) + 8LL);
+      while ( *((System_Collections_IEnumerator_c **)v16 - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        v15 = 0LL;
-        v16 = (int *)(*(_QWORD *)(v14 + 176) + 8LL);
-        while ( *((System_Collections_IEnumerator_c **)v16 - 1) != System_Collections_IEnumerator_TypeInfo )
-        {
-          ++v15;
-          v16 += 4;
-          if ( v15 >= *(unsigned __int16 *)(*(_QWORD *)v12 + 298LL) )
-            goto LABEL_18;
-        }
-        v17 = v14 + 16LL * *v16 + 312;
+        --v15;
+        v16 += 4;
+        if ( !v15 )
+          goto LABEL_17;
       }
-      else
-      {
-LABEL_18:
-        v17 = sub_B0F4C0(v12, System_Collections_IEnumerator_TypeInfo, 0LL);
-      }
-      if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v17)(v12, *(_QWORD *)(v17 + 8)) & 1) == 0 )
-        break;
-      _1_System_Collections_Generic_IEnumerator_T = method->rgctx_data->_1_System_Collections_Generic_IEnumerator_T_;
-      if ( (BYTE2(_1_System_Collections_Generic_IEnumerator_T->vtable[0].methodPtr) & 1) == 0 )
-        sub_B0F2C4(method->rgctx_data->_1_System_Collections_Generic_IEnumerator_T_);
-      v19 = *(_QWORD *)v12;
-      if ( *(_WORD *)(*(_QWORD *)v12 + 298LL) )
-      {
-        v20 = 0LL;
-        v21 = (int *)(*(_QWORD *)(v19 + 176) + 8LL);
-        while ( *((Il2CppClass **)v21 - 1) != _1_System_Collections_Generic_IEnumerator_T )
-        {
-          ++v20;
-          v21 += 4;
-          if ( v20 >= *(unsigned __int16 *)(*(_QWORD *)v12 + 298LL) )
-            goto LABEL_27;
-        }
-        v22 = v19 + 16LL * *v21 + 312;
-      }
-      else
-      {
-LABEL_27:
-        v22 = sub_B0F4C0(v12, _1_System_Collections_Generic_IEnumerator_T, 0LL);
-      }
-      v23 = (*(__int64 (__fastcall **)(__int64, _QWORD))v22)(v12, *(_QWORD *)(v22 + 8));
-      if ( !action )
-        sub_B7769C(v23, v24);
-      ((void (__fastcall *)(System_Action_int__T__o *, _QWORD, __int64, MethodInfo *))method->rgctx_data->_2_System_Action_int__T__Invoke->methodPointer)(
-        action,
-        i,
-        v23,
-        method->rgctx_data->_2_System_Action_int__T__Invoke);
-    }
-    v25 = *(_QWORD *)v12;
-    if ( *(_WORD *)(*(_QWORD *)v12 + 298LL) )
-    {
-      v26 = 0LL;
-      v27 = (int *)(*(_QWORD *)(v25 + 176) + 8LL);
-      while ( *((System_IDisposable_c **)v27 - 1) != System_IDisposable_TypeInfo )
-      {
-        ++v26;
-        v27 += 4;
-        if ( v26 >= *(unsigned __int16 *)(*(_QWORD *)v12 + 298LL) )
-          goto LABEL_35;
-      }
-      v28 = v25 + 16LL * *v27 + 312;
+      v17 = v14 + 16LL * *v16 + 312;
     }
     else
     {
-LABEL_35:
-      v28 = sub_B0F4C0(v12, System_IDisposable_TypeInfo, 0LL);
+LABEL_17:
+      v17 = sub_1B52CAC(v13, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
-    (*(void (__fastcall **)(__int64, _QWORD))v28)(v12, *(_QWORD *)(v28 + 8));
+    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v17)(v13, *(_QWORD *)(v17 + 8)) & 1) == 0 )
+      break;
+    _2_System_Collections_Generic_IEnumerator_T = method->rgctx_data->_2_System_Collections_Generic_IEnumerator_T_;
+    if ( (BYTE5(_2_System_Collections_Generic_IEnumerator_T->vtable[0].methodPtr) & 1) == 0 )
+      _2_System_Collections_Generic_IEnumerator_T = (Il2CppClass *)sub_1B52BA8(method->rgctx_data->_2_System_Collections_Generic_IEnumerator_T_);
+    v19 = *(_QWORD *)v13;
+    v20 = *(unsigned __int16 *)(*(_QWORD *)v13 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v13 + 302LL) )
+    {
+      v21 = (int *)(*(_QWORD *)(v19 + 176) + 8LL);
+      while ( *((Il2CppClass **)v21 - 1) != _2_System_Collections_Generic_IEnumerator_T )
+      {
+        --v20;
+        v21 += 4;
+        if ( !v20 )
+          goto LABEL_26;
+      }
+      v22 = v19 + 16LL * *v21 + 312;
+    }
+    else
+    {
+LABEL_26:
+      v22 = sub_1B52CAC(v13, _2_System_Collections_Generic_IEnumerator_T, 0LL);
+    }
+    v23 = (*(__int64 (__fastcall **)(__int64, _QWORD))v22)(v13, *(_QWORD *)(v22 + 8));
+    if ( !action )
+      sub_1B00F28(v23, v23);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))action->fields.m_target)(
+      action->fields.original_method_info,
+      v23,
+      *(_QWORD *)&action->fields.extra_arg);
   }
+  v24 = *(_QWORD *)v13;
+  v25 = *(unsigned __int16 *)(*(_QWORD *)v13 + 302LL);
+  if ( *(_WORD *)(*(_QWORD *)v13 + 302LL) )
+  {
+    v26 = (int *)(*(_QWORD *)(v24 + 176) + 8LL);
+    while ( *((System_IDisposable_c **)v26 - 1) != System_IDisposable_TypeInfo )
+    {
+      --v25;
+      v26 += 4;
+      if ( !v25 )
+        goto LABEL_34;
+    }
+    v27 = v24 + 16LL * *v26 + 312;
+  }
+  else
+  {
+LABEL_34:
+    v27 = sub_1B52CAC(v13, System_IDisposable_TypeInfo, 0LL);
+  }
+  (*(void (__fastcall **)(__int64, _QWORD))v27)(v13, *(_QWORD *)(v27 + 8));
 }
 
 
-int32_t __fastcall BasicHelper__GetValue_AiLogic_PROC_STATE__int_(
+int32_t __fastcall BasicHelper__GetValue_Int32Enum__Int32Enum_(
         System_Collections_Generic_Dictionary_K__V__o *dic,
         int32_t key,
         int32_t def,
-        const MethodInfo_1C68044 *method)
+        const MethodInfo_2D514CC *method)
 {
-  if ( dic
-    && (((__int64 (*)(void))method->rgctx_data->_0_System_Collections_Generic_Dictionary_K__V__ContainsKey->methodPointer)() & 1) != 0 )
+  if ( method->rgctx_data )
   {
-    return ((__int64 (__fastcall *)(System_Collections_Generic_Dictionary_K__V__o *, _QWORD))method->rgctx_data->_1_System_Collections_Generic_Dictionary_K__V__get_Item->methodPointer)(
-             dic,
-             (unsigned int)key);
+    if ( !dic )
+      return def;
   }
   else
   {
-    return def;
+    sub_1B52C04(method);
+    if ( !dic )
+      return def;
   }
+  if ( System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___ContainsKey(
+         (System_Collections_Generic_Dictionary_TKey__TValue__o *)dic,
+         key,
+         (const MethodInfo_304E04C *)method->rgctx_data->_2_System_Collections_Generic_Dictionary_K__V__ContainsKey) )
+  {
+    return System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___get_Item(
+             (System_Collections_Generic_Dictionary_TKey__TValue__o *)dic,
+             key,
+             (const MethodInfo_304DDC4 *)method->rgctx_data->_3_System_Collections_Generic_Dictionary_K__V__get_Item);
+  }
+  return def;
 }
 
 
-System_Collections_Generic_List_BattleBuffData_BuffData__o *__fastcall BasicHelper__GetValue_BuffList_TYPE__List_BattleBuffData_BuffData__(
-        System_Collections_Generic_Dictionary_K__V__o *dic,
-        int32_t key,
-        System_Collections_Generic_List_BattleBuffData_BuffData__o *def,
-        const MethodInfo_1C68124 *method)
-{
-  if ( dic
-    && (((__int64 (*)(void))method->rgctx_data->_0_System_Collections_Generic_Dictionary_K__V__ContainsKey->methodPointer)() & 1) != 0 )
-  {
-    return (System_Collections_Generic_List_BattleBuffData_BuffData__o *)((__int64 (__fastcall *)(System_Collections_Generic_Dictionary_K__V__o *, _QWORD))method->rgctx_data->_1_System_Collections_Generic_Dictionary_K__V__get_Item->methodPointer)(
-                                                                           dic,
-                                                                           (unsigned int)key);
-  }
-  else
-  {
-    return def;
-  }
-}
-
-
-int32_t __fastcall BasicHelper__GetValue_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType_(
+int32_t __fastcall BasicHelper__GetValue_Int32Enum__int_(
         System_Collections_Generic_Dictionary_K__V__o *dic,
         int32_t key,
         int32_t def,
-        const MethodInfo_1C680B4 *method)
+        const MethodInfo_2D51448 *method)
 {
-  if ( dic
-    && (((__int64 (*)(void))method->rgctx_data->_0_System_Collections_Generic_Dictionary_K__V__ContainsKey->methodPointer)() & 1) != 0 )
+  if ( method->rgctx_data )
   {
-    return ((__int64 (__fastcall *)(System_Collections_Generic_Dictionary_K__V__o *, _QWORD))method->rgctx_data->_1_System_Collections_Generic_Dictionary_K__V__get_Item->methodPointer)(
-             dic,
-             (unsigned int)key);
+    if ( !dic )
+      return def;
   }
   else
   {
-    return def;
+    sub_1B52C04(method);
+    if ( !dic )
+      return def;
   }
+  if ( System_Collections_Generic_Dictionary_Int32Enum__int___ContainsKey(
+         (System_Collections_Generic_Dictionary_TKey__TValue__o *)dic,
+         key,
+         (const MethodInfo_304B264 *)method->rgctx_data->_2_System_Collections_Generic_Dictionary_K__V__ContainsKey) )
+  {
+    return System_Collections_Generic_Dictionary_Int32Enum__int___get_Item(
+             (System_Collections_Generic_Dictionary_TKey__TValue__o *)dic,
+             key,
+             (const MethodInfo_304AFDC *)method->rgctx_data->_3_System_Collections_Generic_Dictionary_K__V__get_Item);
+  }
+  return def;
+}
+
+
+Il2CppObject *__fastcall BasicHelper__GetValue_Int32Enum__object_(
+        System_Collections_Generic_Dictionary_K__V__o *dic,
+        int32_t key,
+        Il2CppObject *def,
+        const MethodInfo_2D51550 *method)
+{
+  if ( method->rgctx_data )
+  {
+    if ( !dic )
+      return def;
+  }
+  else
+  {
+    sub_1B52C04(method);
+    if ( !dic )
+      return def;
+  }
+  if ( System_Collections_Generic_Dictionary_Int32Enum__object___ContainsKey(
+         (System_Collections_Generic_Dictionary_TKey__TValue__o *)dic,
+         key,
+         (const MethodInfo_30640B0 *)method->rgctx_data->_2_System_Collections_Generic_Dictionary_K__V__ContainsKey) )
+  {
+    return System_Collections_Generic_Dictionary_Int32Enum__object___get_Item(
+             (System_Collections_Generic_Dictionary_TKey__TValue__o *)dic,
+             key,
+             (const MethodInfo_3063E1C *)method->rgctx_data->_3_System_Collections_Generic_Dictionary_K__V__get_Item);
+  }
+  return def;
+}
+
+
+// local variable allocation has failed, the output may be wrong!
+Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o __fastcall BasicHelper__GetValue___Il2CppFullySharedGenericType_(
+        System_Collections_Generic_Dictionary_string__object__o *dic,
+        System_String_o *key,
+        Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o def,
+        const MethodInfo_2D511DC *method)
+{
+  void *monitor; // x19
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x21
+  const MethodInfo_2D511DC_RGCTXs *rgctx_data; // x8
+  __int64 v10; // x1
+  Il2CppClass *_0_T; // x8
+  __int64 native_size; // x20
+  Il2CppObject *Item; // x21
+  Il2CppClass *v14; // x1
+  char *v15; // x1
+  void *v16; // x0
+  __int64 *v17; // x1
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v18; // x0 OVERLAPPED
+  void *v19; // x1
+  __int64 v20[2]; // [xsp+0h] [xbp-10h] BYREF
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o result; // 0:x0.16
+
+  monitor = def.monitor;
+  klass = def.klass;
+  v20[1] = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
+  v20[0] = (__int64)def.klass;
+  rgctx_data = method->rgctx_data;
+  if ( !rgctx_data )
+  {
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v10);
+    rgctx_data = method->rgctx_data;
+    if ( !rgctx_data )
+    {
+      sub_1B52C04(method);
+      rgctx_data = method->rgctx_data;
+    }
+  }
+  _0_T = rgctx_data->_0_T;
+  native_size = (unsigned int)_0_T->_2.native_size;
+  if ( !dic )
+    goto LABEL_10;
+  if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
+          (System_Collections_Generic_Dictionary_object__object__o *)dic,
+          (Il2CppObject *)key,
+          (const MethodInfo_308DC3C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+  {
+    _0_T = method->rgctx_data->_0_T;
+LABEL_10:
+    if ( (_0_T->_1.byval_arg.bits & 0x80000000) == 0 )
+      v17 = v20;
+    else
+      v17 = (__int64 *)klass;
+    memcpy((char *)v20 - ((native_size + 15) & 0x1FFFFFFF0LL), v17, native_size);
+    v16 = monitor;
+    v15 = (char *)v20 - ((native_size + 15) & 0x1FFFFFFF0LL);
+    goto LABEL_14;
+  }
+  Item = System_Collections_Generic_Dictionary_object__object___get_Item(
+           (System_Collections_Generic_Dictionary_object__object__o *)dic,
+           (Il2CppObject *)key,
+           (const MethodInfo_308D9C8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+  v14 = method->rgctx_data->_0_T;
+  if ( (BYTE5(v14->vtable[0].methodPtr) & 1) == 0 )
+    v14 = (Il2CppClass *)sub_1B52BA8(method->rgctx_data->_0_T);
+  v15 = (char *)sub_1B00E18(Item, v14, (char *)v20 - ((native_size + 15) & 0x1FFFFFFF0LL));
+  v16 = monitor;
+LABEL_14:
+  v18 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(v16, v15, native_size);
+  result.monitor = v19;
+  result.klass = v18;
+  return result;
+}
+
+
+// local variable allocation has failed, the output may be wrong!
+Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o __fastcall BasicHelper__GetValue___Il2CppFullySharedGenericType____Il2CppFullySharedGenericType_(
+        System_Collections_Generic_Dictionary_K__V__o *dic,
+        Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o key,
+        Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o def,
+        const MethodInfo_2D516DC *method)
+{
+  _QWORD *monitor; // x25
+  void **v5; // x23
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v6; // x24
+  _QWORD *v7; // x19
+  __int64 v9; // x9
+  __int64 v10; // x8
+  __int64 v11; // x27
+  __int64 v12; // x20
+  char *v13; // x26
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **v14; // x1
+  __int64 *v15; // x1
+  __int64 v16; // x0
+  char *v17; // x8
+  _QWORD *v18; // x19
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **v19; // x1
+  __int64 *v20; // x1
+  __int64 v21; // x0
+  void **v22; // x1
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v23; // x0 OVERLAPPED
+  void *v24; // x1
+  __int64 v25; // [xsp+0h] [xbp-40h] BYREF
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // [xsp+8h] [xbp-38h]
+  void *v27; // [xsp+10h] [xbp-30h] BYREF
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v28; // [xsp+18h] [xbp-28h] BYREF
+  char *v29; // [xsp+20h] [xbp-20h] BYREF
+  __int64 v30; // [xsp+28h] [xbp-18h]
+  char v31[4]; // [xsp+34h] [xbp-Ch] BYREF
+  __int64 v32; // [xsp+38h] [xbp-8h]
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o result; // 0:x0.16
+
+  klass = def.klass;
+  monitor = def.monitor;
+  v5 = (void **)key.monitor;
+  v6 = key.klass;
+  v32 = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
+  v27 = key.monitor;
+  v28 = key.klass;
+  v7 = (_QWORD *)*((_QWORD *)def.monitor + 7);
+  if ( !v7 )
+  {
+    sub_1B52C04(def.monitor);
+    v7 = (_QWORD *)monitor[7];
+  }
+  v9 = v7[1];
+  v10 = v7[4];
+  v11 = *(unsigned int *)(v9 + 252);
+  v12 = *(unsigned int *)(v10 + 252);
+  v13 = (char *)&v25 - ((v11 + 15) & 0x1FFFFFFF0LL);
+  if ( dic )
+  {
+    if ( *(int *)(v9 + 40) >= 0 )
+      v14 = &v28;
+    else
+      v14 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **)v6;
+    memcpy((char *)&v25 - ((v11 + 15) & 0x1FFFFFFF0LL), v14, *(_DWORD *)(v9 + 252));
+    v15 = (__int64 *)v7[2];
+    v16 = *v15;
+    v17 = (char *)&v25 - ((v11 + 15) & 0x1FFFFFFF0LL);
+    if ( (*(_DWORD *)(v7[1] + 40LL) & 0x80000000) == 0 )
+      v17 = *(char **)v13;
+    v29 = v17;
+    ((void (__fastcall *)(__int64, __int64 *, System_Collections_Generic_Dictionary_K__V__o *, char **, char *))v15[2])(
+      v16,
+      v15,
+      dic,
+      &v29,
+      v31);
+    v18 = (_QWORD *)monitor[7];
+    if ( v31[0] )
+    {
+      if ( *(int *)(v18[1] + 40LL) >= 0 )
+        v19 = &v28;
+      else
+        v19 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **)v6;
+      memcpy((char *)&v25 - ((v11 + 15) & 0x1FFFFFFF0LL), v19, v11);
+      v20 = (__int64 *)v18[3];
+      v21 = *v20;
+      if ( (*(_DWORD *)(v18[1] + 40LL) & 0x80000000) == 0 )
+        v13 = *(char **)v13;
+      v29 = v13;
+      v30 = (__int64)&v25 - ((v12 + 15) & 0x1FFFFFFF0LL);
+      ((void (__fastcall *)(__int64, __int64 *, System_Collections_Generic_Dictionary_K__V__o *, char **, __int64))v20[2])(
+        v21,
+        v20,
+        dic,
+        &v29,
+        v30);
+      goto LABEL_21;
+    }
+    v10 = v18[4];
+  }
+  if ( *(int *)(v10 + 40) >= 0 )
+    v22 = &v27;
+  else
+    v22 = v5;
+  memcpy((char *)&v25 - ((v12 + 15) & 0x1FFFFFFF0LL), v22, v12);
+LABEL_21:
+  v23 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
+                                                                    klass,
+                                                                    (char *)&v25 - ((v12 + 15) & 0x1FFFFFFF0LL),
+                                                                    v12);
+  result.monitor = v24;
+  result.klass = v23;
+  return result;
 }
 
 
@@ -1994,46 +2856,58 @@ double __fastcall BasicHelper__GetValue_double_(
         System_Collections_Generic_Dictionary_string__object__o *dic,
         System_String_o *key,
         double def,
-        const MethodInfo_1C67CA8 *method)
+        const MethodInfo_2D50F1C *method)
 {
-  UnityEngine_Purchasing_IStoreExtension_o *Item; // x0
-  __int64 v9; // x1
-  UnityEngine_Purchasing_IStoreExtension_o *v10; // x20
-  Il2CppClass *_0_T; // x19
+  __int64 v8; // x1
+  Il2CppObject *Item; // x0
+  __int64 v10; // x2
+  __int64 v11; // x3
+  const MethodInfo_2D50F1C_RGCTXs *rgctx_data; // x8
+  Il2CppObject *v13; // x19
+  _QWORD *p_image; // x1
   double result; // d0
-  System_Collections_Generic_Dictionary_string__object__o *v13; // x0
-  System_String_o *v14; // x1
-  int64_t v15; // x2
-  const MethodInfo_1C67D94 *v16; // x3
+  System_Collections_Generic_Dictionary_string__object__o *v16; // x0
+  System_String_o *v17; // x1
+  int64_t v18; // x2
+  const MethodInfo_2D51008 *v19; // x3
 
-  if ( (byte_438D97C & 1) == 0 )
+  if ( method->rgctx_data
+    || (sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key),
+        sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v8),
+        method->rgctx_data) )
   {
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    byte_438D97C = 1;
+    if ( !dic )
+      return def;
   }
-  if ( !dic
-    || !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
-          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)dic,
-          (System_Xml_XmlQualifiedName_o *)key,
-          (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+  else
   {
+    sub_1B52C04(method);
+    if ( !dic )
+      return def;
+  }
+  if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
+          (System_Collections_Generic_Dictionary_object__object__o *)dic,
+          (Il2CppObject *)key,
+          (const MethodInfo_308DC3C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     return def;
+  Item = System_Collections_Generic_Dictionary_object__object___get_Item(
+           (System_Collections_Generic_Dictionary_object__object__o *)dic,
+           (Il2CppObject *)key,
+           (const MethodInfo_308D9C8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+  rgctx_data = method->rgctx_data;
+  v13 = Item;
+  p_image = &rgctx_data->_0_T->_1.image;
+  if ( (BYTE5(rgctx_data->_0_T->vtable[0].methodPtr) & 1) == 0 )
+  {
+    Item = (Il2CppObject *)sub_1B52BA8(p_image);
+    p_image = &Item->klass;
   }
-  Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-           (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)dic,
-           (System_Type_o *)key,
-           (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-  v10 = Item;
-  _0_T = method->rgctx_data->_0_T;
-  if ( (BYTE2(_0_T->vtable[0].methodPtr) & 1) == 0 )
-    Item = (UnityEngine_Purchasing_IStoreExtension_o *)sub_B0F2C4(_0_T);
-  if ( !v10 )
-    sub_B7769C(Item, v9);
-  if ( v10->klass->_1.element_class == _0_T->_1.element_class )
-    return *(double *)j_il2cpp_object_unbox_0(v10);
-  sub_B77990(v10);
-  BasicHelper__GetValue_long_(v13, v14, v15, v16);
+  if ( !v13 )
+    sub_1B00F28(Item, p_image);
+  if ( v13->klass->_1.element_class == (Il2CppClass *)p_image[8] )
+    return *(double *)j_il2cpp_object_unbox_0(v13, p_image, v10, v11);
+  sub_1B011E8(v13);
+  BasicHelper__GetValue_long_(v16, v17, v18, v19);
   return result;
 }
 
@@ -2042,19 +2916,30 @@ int64_t __fastcall BasicHelper__GetValue_int__long_(
         System_Collections_Generic_Dictionary_K__V__o *dic,
         int32_t key,
         int64_t def,
-        const MethodInfo_1C67F64 *method)
+        const MethodInfo_2D51340 *method)
 {
-  if ( dic
-    && (((__int64 (*)(void))method->rgctx_data->_0_System_Collections_Generic_Dictionary_K__V__ContainsKey->methodPointer)() & 1) != 0 )
+  if ( method->rgctx_data )
   {
-    return ((__int64 (__fastcall *)(System_Collections_Generic_Dictionary_K__V__o *, _QWORD))method->rgctx_data->_1_System_Collections_Generic_Dictionary_K__V__get_Item->methodPointer)(
-             dic,
-             (unsigned int)key);
+    if ( !dic )
+      return def;
   }
   else
   {
-    return def;
+    sub_1B52C04(method);
+    if ( !dic )
+      return def;
   }
+  if ( System_Collections_Generic_Dictionary_int__long___ContainsKey(
+         (System_Collections_Generic_Dictionary_int__long__o *)dic,
+         key,
+         (const MethodInfo_3033860 *)method->rgctx_data->_2_System_Collections_Generic_Dictionary_K__V__ContainsKey) )
+  {
+    return System_Collections_Generic_Dictionary_int__long___get_Item(
+             (System_Collections_Generic_Dictionary_int__long__o *)dic,
+             key,
+             (const MethodInfo_30335CC *)method->rgctx_data->_3_System_Collections_Generic_Dictionary_K__V__get_Item);
+  }
+  return def;
 }
 
 
@@ -2062,19 +2947,30 @@ Il2CppObject *__fastcall BasicHelper__GetValue_int__object_(
         System_Collections_Generic_Dictionary_K__V__o *dic,
         int32_t key,
         Il2CppObject *def,
-        const MethodInfo_1C67FD4 *method)
+        const MethodInfo_2D513C4 *method)
 {
-  if ( dic
-    && (((__int64 (*)(void))method->rgctx_data->_0_System_Collections_Generic_Dictionary_K__V__ContainsKey->methodPointer)() & 1) != 0 )
+  if ( method->rgctx_data )
   {
-    return (Il2CppObject *)((__int64 (__fastcall *)(System_Collections_Generic_Dictionary_K__V__o *, _QWORD))method->rgctx_data->_1_System_Collections_Generic_Dictionary_K__V__get_Item->methodPointer)(
-                             dic,
-                             (unsigned int)key);
+    if ( !dic )
+      return def;
   }
   else
   {
-    return def;
+    sub_1B52C04(method);
+    if ( !dic )
+      return def;
   }
+  if ( System_Collections_Generic_Dictionary_int__object___ContainsKey(
+         (System_Collections_Generic_Dictionary_int__object__o *)dic,
+         key,
+         (const MethodInfo_3036720 *)method->rgctx_data->_2_System_Collections_Generic_Dictionary_K__V__ContainsKey) )
+  {
+    return System_Collections_Generic_Dictionary_int__object___get_Item(
+             (System_Collections_Generic_Dictionary_int__object__o *)dic,
+             key,
+             (const MethodInfo_303648C *)method->rgctx_data->_3_System_Collections_Generic_Dictionary_K__V__get_Item);
+  }
+  return def;
 }
 
 
@@ -2082,45 +2978,57 @@ int64_t __fastcall BasicHelper__GetValue_long_(
         System_Collections_Generic_Dictionary_string__object__o *dic,
         System_String_o *key,
         int64_t def,
-        const MethodInfo_1C67D94 *method)
+        const MethodInfo_2D51008 *method)
 {
-  UnityEngine_Purchasing_IStoreExtension_o *Item; // x0
-  __int64 v9; // x1
-  UnityEngine_Purchasing_IStoreExtension_o *v10; // x20
-  Il2CppClass *_0_T; // x19
-  System_Collections_Generic_Dictionary_string__object__o *v13; // x0
-  System_String_o *v14; // x1
-  System_String_o *v15; // x2
-  const MethodInfo_1C67E80 *v16; // x3
+  __int64 v8; // x1
+  Il2CppObject *Item; // x0
+  __int64 v10; // x2
+  __int64 v11; // x3
+  const MethodInfo_2D51008_RGCTXs *rgctx_data; // x8
+  Il2CppObject *v13; // x19
+  _QWORD *p_image; // x1
+  System_Collections_Generic_Dictionary_string__object__o *v16; // x0
+  System_String_o *v17; // x1
+  Il2CppObject *v18; // x2
+  const MethodInfo_2D510F4 *v19; // x3
 
-  if ( (byte_438D97D & 1) == 0 )
+  if ( method->rgctx_data
+    || (sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key),
+        sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v8),
+        method->rgctx_data) )
   {
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    byte_438D97D = 1;
+    if ( !dic )
+      return def;
   }
-  if ( !dic
-    || !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
-          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)dic,
-          (System_Xml_XmlQualifiedName_o *)key,
-          (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+  else
   {
+    sub_1B52C04(method);
+    if ( !dic )
+      return def;
+  }
+  if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
+          (System_Collections_Generic_Dictionary_object__object__o *)dic,
+          (Il2CppObject *)key,
+          (const MethodInfo_308DC3C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     return def;
+  Item = System_Collections_Generic_Dictionary_object__object___get_Item(
+           (System_Collections_Generic_Dictionary_object__object__o *)dic,
+           (Il2CppObject *)key,
+           (const MethodInfo_308D9C8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+  rgctx_data = method->rgctx_data;
+  v13 = Item;
+  p_image = &rgctx_data->_0_T->_1.image;
+  if ( (BYTE5(rgctx_data->_0_T->vtable[0].methodPtr) & 1) == 0 )
+  {
+    Item = (Il2CppObject *)sub_1B52BA8(p_image);
+    p_image = &Item->klass;
   }
-  Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-           (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)dic,
-           (System_Type_o *)key,
-           (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-  v10 = Item;
-  _0_T = method->rgctx_data->_0_T;
-  if ( (BYTE2(_0_T->vtable[0].methodPtr) & 1) == 0 )
-    Item = (UnityEngine_Purchasing_IStoreExtension_o *)sub_B0F2C4(_0_T);
-  if ( !v10 )
-    sub_B7769C(Item, v9);
-  if ( v10->klass->_1.element_class == _0_T->_1.element_class )
-    return *(_QWORD *)j_il2cpp_object_unbox_0(v10);
-  sub_B77990(v10);
-  return (int64_t)BasicHelper__GetValue_string_(v13, v14, v15, v16);
+  if ( !v13 )
+    sub_1B00F28(Item, p_image);
+  if ( v13->klass->_1.element_class == (Il2CppClass *)p_image[8] )
+    return *(_QWORD *)j_il2cpp_object_unbox_0(v13, p_image, v10, v11);
+  sub_1B011E8(v13);
+  return (int64_t)BasicHelper__GetValue_object_(v16, v17, v18, v19);
 }
 
 
@@ -2128,104 +3036,133 @@ int32_t __fastcall BasicHelper__GetValue_long__int_(
         System_Collections_Generic_Dictionary_K__V__o *dic,
         int64_t key,
         int32_t def,
-        const MethodInfo_1C68194 *method)
+        const MethodInfo_2D515D4 *method)
 {
-  if ( dic
-    && (((__int64 (*)(void))method->rgctx_data->_0_System_Collections_Generic_Dictionary_K__V__ContainsKey->methodPointer)() & 1) != 0 )
+  if ( method->rgctx_data )
   {
-    return ((__int64 (__fastcall *)(System_Collections_Generic_Dictionary_K__V__o *, int64_t))method->rgctx_data->_1_System_Collections_Generic_Dictionary_K__V__get_Item->methodPointer)(
-             dic,
-             key);
+    if ( !dic )
+      return def;
   }
   else
   {
-    return def;
+    sub_1B52C04(method);
+    if ( !dic )
+      return def;
   }
+  if ( System_Collections_Generic_Dictionary_long__int___ContainsKey(
+         (System_Collections_Generic_Dictionary_long__int__o *)dic,
+         key,
+         (const MethodInfo_30701CC *)method->rgctx_data->_2_System_Collections_Generic_Dictionary_K__V__ContainsKey) )
+  {
+    return System_Collections_Generic_Dictionary_long__int___get_Item(
+             (System_Collections_Generic_Dictionary_long__int__o *)dic,
+             key,
+             (const MethodInfo_306FF38 *)method->rgctx_data->_3_System_Collections_Generic_Dictionary_K__V__get_Item);
+  }
+  return def;
 }
 
 
-System_String_o *__fastcall BasicHelper__GetValue_string_(
+Il2CppObject *__fastcall BasicHelper__GetValue_object_(
         System_Collections_Generic_Dictionary_string__object__o *dic,
         System_String_o *key,
-        System_String_o *def,
-        const MethodInfo_1C67E80 *method)
+        Il2CppObject *def,
+        const MethodInfo_2D510F4 *method)
 {
-  UnityEngine_Purchasing_IStoreExtension_o *Item; // x21
-  Il2CppClass *_0_T; // x19
+  const MethodInfo_2D510F4 *_0_T; // x19
+  Il2CppObject *Item; // x21
+  __int64 v8; // x1
 
-  if ( (byte_438D97E & 1) == 0 )
+  _0_T = method;
+  Item = (Il2CppObject *)key;
+  if ( !method->rgctx_data )
   {
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    byte_438D97E = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v8);
+    if ( !_0_T->rgctx_data )
+      goto LABEL_10;
   }
-  if ( dic
-    && System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
-         (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)dic,
-         (System_Xml_XmlQualifiedName_o *)key,
-         (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+  if ( dic )
   {
-    Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-             (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)dic,
-             (System_Type_o *)key,
-             (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    _0_T = method->rgctx_data->_0_T;
-    if ( (BYTE2(_0_T->vtable[0].methodPtr) & 1) == 0 )
-      sub_B0F2C4(_0_T);
-    if ( !Item )
-      return 0LL;
-    def = (System_String_o *)sub_B77684(Item, _0_T);
-    if ( !def )
+    while ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
+              (System_Collections_Generic_Dictionary_object__object__o *)dic,
+              Item,
+              (const MethodInfo_308DC3C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     {
-      sub_B77990(Item);
-      return 0LL;
+      Item = System_Collections_Generic_Dictionary_object__object___get_Item(
+               (System_Collections_Generic_Dictionary_object__object__o *)dic,
+               Item,
+               (const MethodInfo_308D9C8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+      _0_T = (const MethodInfo_2D510F4 *)_0_T->rgctx_data->_0_T;
+      if ( (BYTE5(_0_T[3].return_type) & 1) == 0 )
+        _0_T = (const MethodInfo_2D510F4 *)sub_1B52BA8(_0_T);
+      if ( !Item )
+        return 0LL;
+      def = (Il2CppObject *)sub_1B00E08(Item, _0_T);
+      if ( !def )
+      {
+        sub_1B011E8(Item);
+LABEL_10:
+        sub_1B52C04(_0_T);
+        if ( dic )
+          continue;
+      }
+      return def;
     }
   }
   return def;
 }
 
 
-BattleActorAnimationEffect_array *__fastcall BasicHelper__GetValue_string__BattleActorAnimationEffect___(
+Il2CppObject *__fastcall BasicHelper__GetValue_object__object_(
         System_Collections_Generic_Dictionary_K__V__o *dic,
-        System_String_o *key,
-        BattleActorAnimationEffect_array *def,
-        const MethodInfo_1C68204 *method)
+        Il2CppObject *key,
+        Il2CppObject *def,
+        const MethodInfo_2D51658 *method)
 {
-  if ( dic
-    && (((__int64 (*)(void))method->rgctx_data->_0_System_Collections_Generic_Dictionary_K__V__ContainsKey->methodPointer)() & 1) != 0 )
+  if ( method->rgctx_data )
   {
-    return (BattleActorAnimationEffect_array *)((__int64 (__fastcall *)(System_Collections_Generic_Dictionary_K__V__o *, System_String_o *))method->rgctx_data->_1_System_Collections_Generic_Dictionary_K__V__get_Item->methodPointer)(
-                                                 dic,
-                                                 key);
+    if ( !dic )
+      return def;
   }
   else
   {
-    return def;
+    sub_1B52C04(method);
+    if ( !dic )
+      return def;
   }
+  if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
+         (System_Collections_Generic_Dictionary_object__object__o *)dic,
+         key,
+         (const MethodInfo_308DC3C *)method->rgctx_data->_2_System_Collections_Generic_Dictionary_K__V__ContainsKey) )
+  {
+    return System_Collections_Generic_Dictionary_object__object___get_Item(
+             (System_Collections_Generic_Dictionary_object__object__o *)dic,
+             key,
+             (const MethodInfo_308D9C8 *)method->rgctx_data->_3_System_Collections_Generic_Dictionary_K__V__get_Item);
+  }
+  return def;
 }
 
 
-int32_t __fastcall BasicHelper__IndexValue_BattleLogic_LOGICTYPE_(
-        BattleLogic_LOGICTYPE_array *array,
+// local variable allocation has failed, the output may be wrong!
+int32_t __fastcall BasicHelper__IndexValue_Int32Enum_(
+        System_Int32Enum_array *array,
         int32_t index,
         int32_t def,
-        const MethodInfo_1C683F0 *method)
+        const MethodInfo_2D519F0 *method)
 {
-  int32_t max_length; // w8
-  __int64 v6; // x0
+  il2cpp_array_size_t max_length; // w8
 
   if ( array )
   {
     if ( (index & 0x80000000) == 0 )
     {
       max_length = array->max_length;
-      if ( max_length > index )
+      if ( (int)max_length > index )
       {
-        if ( max_length <= (unsigned int)index )
-        {
-          v6 = sub_B776C8(array);
-          sub_B77668(v6, 0LL);
-        }
+        if ( max_length <= index )
+          sub_1B00F30(array, *(_QWORD *)&index);
         return array->m_Items[index + 1];
       }
     }
@@ -2235,109 +3172,231 @@ int32_t __fastcall BasicHelper__IndexValue_BattleLogic_LOGICTYPE_(
 
 
 // local variable allocation has failed, the output may be wrong!
-System_Collections_Generic_KeyValuePair_string__int__o __fastcall BasicHelper__IndexValue_KeyValuePair_string__int__(
+System_Collections_Generic_KeyValuePair_object__int__o __fastcall BasicHelper__IndexValue_KeyValuePair_object__int__(
         System_Collections_Generic_List_T__o *list,
         int32_t index,
-        System_Collections_Generic_KeyValuePair_string__int__o def,
-        const MethodInfo_1C68274 *method)
+        System_Collections_Generic_KeyValuePair_object__int__o def,
+        const MethodInfo_2D51880 *method)
 {
-  __int64 v4; // x19
-  struct System_String_o *key; // x20
-  __int64 v9; // x1
-  struct System_String_o *v10; // x0 OVERLAPPED
-  __int64 v11; // x1
-  System_Collections_Generic_KeyValuePair_string__int__o result; // 0:x0.16
+  __int64 v5; // x19
+  Il2CppObject *key; // x21
+  Il2CppObject *v9; // x0 OVERLAPPED
+  __int64 v10; // x1
+  System_Collections_Generic_KeyValuePair_object__int__o Item; // kr00_16
+  System_Collections_Generic_KeyValuePair_object__int__o result; // 0:x0.16
 
-  v4 = *(_QWORD *)&def.fields.value;
+  v5 = *(_QWORD *)&def.fields.value;
   key = def.fields.key;
-  if ( list
-    && (index & 0x80000000) == 0
-    && ((__int64 (*)(void))method->rgctx_data->_0_System_Collections_Generic_List_T__get_Count->methodPointer)() > index )
+  if ( method->rgctx_data )
   {
-    key = (struct System_String_o *)((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *, _QWORD))method->rgctx_data->_1_System_Collections_Generic_List_T__get_Item->methodPointer)(
-                                      list,
-                                      (unsigned int)index);
-    v4 = v9;
+    if ( !list )
+      goto LABEL_8;
   }
-  v10 = key;
-  v11 = v4;
-  *(_QWORD *)&result.fields.value = v11;
-  result.fields.key = v10;
+  else
+  {
+    sub_1B52C04(method);
+    if ( !list )
+    {
+LABEL_8:
+      v9 = key;
+      v10 = v5;
+      goto LABEL_9;
+    }
+  }
+  if ( (index & 0x80000000) != 0 || list->fields._size <= index )
+    goto LABEL_8;
+  Item = System_Collections_Generic_List_KeyValuePair_object__int____get_Item(
+           list,
+           index,
+           (const MethodInfo_3319674 *)method->rgctx_data->_2_System_Collections_Generic_List_T__get_Item);
+  v10 = *(_QWORD *)&Item.fields.value;
+  v9 = Item.fields.key;
+LABEL_9:
+  *(_QWORD *)&result.fields.value = v10;
+  result.fields.key = v9;
   return result;
 }
 
 
-WellFired_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_o *__fastcall BasicHelper__IndexValue_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_(
-        WellFired_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_array *array,
+// local variable allocation has failed, the output may be wrong!
+ListViewSort_BonusFilterInfo_o *__fastcall BasicHelper__IndexValue_ListViewSort_BonusFilterInfo_(
+        ListViewSort_BonusFilterInfo_o *retstr,
+        ListViewSort_BonusFilterInfo_o *array,
         int32_t index,
-        WellFired_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_o *def,
-        const MethodInfo_1C684A4 *method)
+        ListViewSort_BonusFilterInfo_o *def,
+        const MethodInfo_2D51DA8 *method)
 {
-  int32_t max_length; // w8
-  __int64 v6; // x0
+  int32_t priority; // w9
+  __int128 v6; // q0
 
   if ( array )
   {
     if ( (index & 0x80000000) == 0 )
     {
-      max_length = array->max_length;
-      if ( max_length > index )
+      priority = array[1].fields.priority;
+      if ( priority > index )
       {
-        if ( max_length <= (unsigned int)index )
-        {
-          v6 = sub_B776C8(array);
-          sub_B77668(v6, 0LL);
-        }
-        return array->m_Items[index];
+        if ( priority <= (unsigned int)index )
+          sub_1B00F30(array, *(_QWORD *)&index);
+        def = (ListViewSort_BonusFilterInfo_o *)&array[(unsigned int)index + 1].fields.eventId;
       }
     }
   }
-  return def;
+  v6 = *(_OWORD *)&def->fields.priority;
+  retstr->fields.buttonText = def->fields.buttonText;
+  *(_OWORD *)&retstr->fields.priority = v6;
+  return array;
 }
 
 
-WarBoardAIRoute_RouteData_o *__fastcall BasicHelper__IndexValue_WarBoardAIRoute_RouteData_(
-        System_Collections_Generic_List_T__o *list,
+// local variable allocation has failed, the output may be wrong!
+Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o __fastcall BasicHelper__IndexValue___Il2CppFullySharedGenericType_(
+        Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *array,
         int32_t index,
-        WarBoardAIRoute_RouteData_o *def,
-        const MethodInfo_1C6842C *method)
+        Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o def,
+        const MethodInfo_2D51CA4 *method)
 {
-  if ( !list
-    || (index & 0x80000000) != 0
-    || ((__int64 (*)(void))method->rgctx_data->_0_System_Collections_Generic_List_T__get_Count->methodPointer)() <= index )
+  void *monitor; // x19
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x22
+  const MethodInfo_2D51CA4_RGCTXs *rgctx_data; // x8
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *v8; // x24
+  Il2CppClass *_1_T; // x8
+  __int64 native_size; // x20
+  int32_t max_length; // w9
+  __int64 *v13; // x1
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v14; // x0 OVERLAPPED
+  void *v15; // x1
+  __int64 v16[2]; // [xsp+0h] [xbp-10h] BYREF
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o result; // 0:x0.16
+
+  monitor = def.monitor;
+  klass = def.klass;
+  v16[1] = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
+  v16[0] = (__int64)def.klass;
+  rgctx_data = method->rgctx_data;
+  v8 = array;
+  if ( !rgctx_data )
   {
-    return def;
+    array = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *)sub_1B52C04(method);
+    rgctx_data = method->rgctx_data;
+  }
+  _1_T = rgctx_data->_1_T;
+  native_size = (unsigned int)_1_T->_2.native_size;
+  if ( !v8 || (index & 0x80000000) != 0 || (max_length = v8->max_length, max_length <= index) )
+  {
+    if ( (_1_T->_1.byval_arg.bits & 0x80000000) == 0 )
+      v13 = v16;
+    else
+      v13 = (__int64 *)klass;
   }
   else
   {
-    return (WarBoardAIRoute_RouteData_o *)((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *, _QWORD))method->rgctx_data->_1_System_Collections_Generic_List_T__get_Item->methodPointer)(
-                                            list,
-                                            (unsigned int)index);
+    if ( max_length <= (unsigned int)index )
+      sub_1B00F30(array, *(_QWORD *)&index);
+    v13 = (__int64 *)((char *)v8->m_Items
+                    + v8->obj.klass->_2.thread_static_fields_size * (unsigned __int64)(unsigned int)index);
   }
+  memcpy((char *)v16 - ((native_size + 15) & 0x1FFFFFFF0LL), v13, native_size);
+  v14 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
+                                                                    monitor,
+                                                                    (char *)v16 - ((native_size + 15) & 0x1FFFFFFF0LL),
+                                                                    native_size);
+  result.monitor = v15;
+  result.klass = v14;
+  return result;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
+Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o __fastcall BasicHelper__IndexValue___Il2CppFullySharedGenericType__47520640(
+        System_Collections_Generic_List_T__o *list,
+        int32_t index,
+        Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o def,
+        const MethodInfo_2D51B80 *method)
+{
+  void *monitor; // x19
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x21
+  const MethodInfo_2D51B80_RGCTXs *rgctx_data; // x8
+  Il2CppClass *_3_T; // x9
+  __int64 native_size; // x20
+  MethodInfo *_2_System_Collections_Generic_List_T__get_Item; // x1
+  void (__fastcall *methodPointer)(); // x0
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **v14; // x1
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v15; // x0 OVERLAPPED
+  void *v16; // x1
+  __int64 v17; // [xsp+0h] [xbp-30h] BYREF
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v18; // [xsp+8h] [xbp-28h] BYREF
+  int32_t *v19; // [xsp+10h] [xbp-20h] BYREF
+  char *v20; // [xsp+18h] [xbp-18h]
+  int32_t v21; // [xsp+24h] [xbp-Ch] BYREF
+  __int64 v22; // [xsp+28h] [xbp-8h]
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o result; // 0:x0.16
+
+  monitor = def.monitor;
+  klass = def.klass;
+  v22 = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
+  v18 = def.klass;
+  rgctx_data = method->rgctx_data;
+  if ( !rgctx_data )
+  {
+    sub_1B52C04(method);
+    rgctx_data = method->rgctx_data;
+  }
+  _3_T = rgctx_data->_3_T;
+  native_size = (unsigned int)_3_T->_2.native_size;
+  if ( list && (index & 0x80000000) == 0 )
+  {
+    if ( ((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *))rgctx_data->_1_System_Collections_Generic_List_T__get_Count->methodPointer)(list) > index )
+    {
+      _2_System_Collections_Generic_List_T__get_Item = method->rgctx_data->_2_System_Collections_Generic_List_T__get_Item;
+      methodPointer = _2_System_Collections_Generic_List_T__get_Item->methodPointer;
+      v21 = index;
+      v19 = &v21;
+      v20 = (char *)&v17 - ((native_size + 15) & 0x1FFFFFFF0LL);
+      _2_System_Collections_Generic_List_T__get_Item->invoker_method(
+        methodPointer,
+        _2_System_Collections_Generic_List_T__get_Item,
+        list,
+        (void **)&v19,
+        v20);
+      goto LABEL_12;
+    }
+    _3_T = method->rgctx_data->_3_T;
+  }
+  if ( (_3_T->_1.byval_arg.bits & 0x80000000) == 0 )
+    v14 = &v18;
+  else
+    v14 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **)klass;
+  memcpy((char *)&v17 - ((native_size + 15) & 0x1FFFFFFF0LL), v14, native_size);
+LABEL_12:
+  v15 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
+                                                                    monitor,
+                                                                    (char *)&v17 - ((native_size + 15) & 0x1FFFFFFF0LL),
+                                                                    native_size);
+  result.monitor = v16;
+  result.klass = v15;
+  return result;
+}
+
+
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall BasicHelper__IndexValue_bool_(
         System_Boolean_array *array,
         int32_t index,
         bool def,
-        const MethodInfo_1C682F8 *method)
+        const MethodInfo_2D51904 *method)
 {
-  int32_t max_length; // w8
-  __int64 v6; // x0
+  il2cpp_array_size_t max_length; // w8
 
   if ( array )
   {
     if ( (index & 0x80000000) == 0 )
     {
       max_length = array->max_length;
-      if ( max_length > index )
+      if ( (int)max_length > index )
       {
-        if ( max_length <= (unsigned int)index )
-        {
-          v6 = sub_B776C8(array);
-          sub_B77668(v6, 0LL);
-        }
+        if ( max_length <= index )
+          sub_1B00F30(array, *(_QWORD *)&index);
         return array->m_Items[index + 4];
       }
     }
@@ -2346,27 +3405,24 @@ bool __fastcall BasicHelper__IndexValue_bool_(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 float __fastcall BasicHelper__IndexValue_float_(
         System_Single_array *array,
         int32_t index,
         float def,
-        const MethodInfo_1C68564 *method)
+        const MethodInfo_2D51B50 *method)
 {
-  int32_t max_length; // w8
-  __int64 v5; // x0
+  il2cpp_array_size_t max_length; // w8
 
   if ( array )
   {
     if ( (index & 0x80000000) == 0 )
     {
       max_length = array->max_length;
-      if ( max_length > index )
+      if ( (int)max_length > index )
       {
-        if ( max_length <= (unsigned int)index )
-        {
-          v5 = sub_B776C8(array);
-          sub_B77668(v5, 0LL);
-        }
+        if ( max_length <= index )
+          sub_1B00F30(array, *(_QWORD *)&index);
         return array->m_Items[index + 1];
       }
     }
@@ -2375,48 +3431,50 @@ float __fastcall BasicHelper__IndexValue_float_(
 }
 
 
-float __fastcall BasicHelper__IndexValue_float__29787360(
+float __fastcall BasicHelper__IndexValue_float__47520468(
         System_Collections_Generic_List_T__o *list,
         int32_t index,
         float def,
-        const MethodInfo_1C684E0 *method)
+        const MethodInfo_2D51AD4 *method)
 {
-  float result; // s0
-
-  if ( !list
-    || (index & 0x80000000) != 0
-    || ((__int64 (*)(void))method->rgctx_data->_0_System_Collections_Generic_List_T__get_Count->methodPointer)() <= index )
+  if ( method->rgctx_data )
   {
-    return def;
+    if ( !list )
+      return def;
   }
-  ((void (__fastcall *)(System_Collections_Generic_List_T__o *, _QWORD))method->rgctx_data->_1_System_Collections_Generic_List_T__get_Item->methodPointer)(
-    list,
-    (unsigned int)index);
-  return result;
+  else
+  {
+    sub_1B52C04(method);
+    if ( !list )
+      return def;
+  }
+  if ( (index & 0x80000000) == 0 && list->fields._size > index )
+    return System_Collections_Generic_List_float___get_Item(
+             (System_Collections_Generic_List_float__o *)list,
+             index,
+             (const MethodInfo_33E1E54 *)method->rgctx_data->_2_System_Collections_Generic_List_T__get_Item);
+  return def;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall BasicHelper__IndexValue_int_(
         System_Int32_array *array,
         int32_t index,
         int32_t def,
-        const MethodInfo_1C683B4 *method)
+        const MethodInfo_2D519BC *method)
 {
-  int32_t max_length; // w8
-  __int64 v6; // x0
+  il2cpp_array_size_t max_length; // w8
 
   if ( array )
   {
     if ( (index & 0x80000000) == 0 )
     {
       max_length = array->max_length;
-      if ( max_length > index )
+      if ( (int)max_length > index )
       {
-        if ( max_length <= (unsigned int)index )
-        {
-          v6 = sub_B776C8(array);
-          sub_B77668(v6, 0LL);
-        }
+        if ( max_length <= index )
+          sub_1B00F30(array, *(_QWORD *)&index);
         return array->m_Items[index + 1];
       }
     }
@@ -2425,51 +3483,108 @@ int32_t __fastcall BasicHelper__IndexValue_int_(
 }
 
 
-int32_t __fastcall BasicHelper__IndexValue_int__29786940(
+int32_t __fastcall BasicHelper__IndexValue_int__47520064(
         System_Collections_Generic_List_T__o *list,
         int32_t index,
         int32_t def,
-        const MethodInfo_1C6833C *method)
+        const MethodInfo_2D51940 *method)
 {
-  if ( !list
-    || (index & 0x80000000) != 0
-    || ((__int64 (*)(void))method->rgctx_data->_0_System_Collections_Generic_List_T__get_Count->methodPointer)() <= index )
+  if ( method->rgctx_data )
   {
-    return def;
+    if ( !list )
+      return def;
   }
   else
   {
-    return ((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *, _QWORD))method->rgctx_data->_1_System_Collections_Generic_List_T__get_Item->methodPointer)(
-             list,
-             (unsigned int)index);
+    sub_1B52C04(method);
+    if ( !list )
+      return def;
   }
+  if ( (index & 0x80000000) == 0 && list->fields._size > index )
+    return System_Collections_Generic_List_int___get_Item(
+             (System_Collections_Generic_List_int__o *)list,
+             index,
+             (const MethodInfo_33A46BC *)method->rgctx_data->_2_System_Collections_Generic_List_T__get_Item);
+  return def;
+}
+
+
+// local variable allocation has failed, the output may be wrong!
+Il2CppObject *__fastcall BasicHelper__IndexValue_object_(
+        System_Object_array *array,
+        int32_t index,
+        Il2CppObject *def,
+        const MethodInfo_2D51AA0 *method)
+{
+  il2cpp_array_size_t max_length; // w8
+
+  if ( array )
+  {
+    if ( (index & 0x80000000) == 0 )
+    {
+      max_length = array->max_length;
+      if ( (int)max_length > index )
+      {
+        if ( max_length <= index )
+          sub_1B00F30(array, *(_QWORD *)&index);
+        return array->m_Items[index];
+      }
+    }
+  }
+  return def;
+}
+
+
+Il2CppObject *__fastcall BasicHelper__IndexValue_object__47520292(
+        System_Collections_Generic_List_T__o *list,
+        int32_t index,
+        Il2CppObject *def,
+        const MethodInfo_2D51A24 *method)
+{
+  if ( method->rgctx_data )
+  {
+    if ( !list )
+      return def;
+  }
+  else
+  {
+    sub_1B52C04(method);
+    if ( !list )
+      return def;
+  }
+  if ( (index & 0x80000000) == 0 && list->fields._size > index )
+    return System_Collections_Generic_List_object___get_Item(
+             (System_Collections_Generic_List_object__o *)list,
+             index,
+             (const MethodInfo_33C1700 *)method->rgctx_data->_2_System_Collections_Generic_List_T__get_Item);
+  return def;
 }
 
 
 bool __fastcall BasicHelper__IsNullOrEmpty(System_Collections_ICollection_o *self, const MethodInfo *method)
 {
   System_Collections_ICollection_c *klass; // x8
-  unsigned __int64 v4; // x10
-  int32_t *p_offset; // x11
+  __int64 v4; // x9
+  int32_t *p_offset; // x10
   __int64 p_method; // x0
 
-  if ( (byte_43897B0 & 1) == 0 )
+  if ( (byte_48E3DEA & 1) == 0 )
   {
-    sub_B775C4(&System_Collections_ICollection_TypeInfo);
-    byte_43897B0 = 1;
+    sub_1B00CCC(&System_Collections_ICollection_TypeInfo, method);
+    byte_48E3DEA = 1;
   }
   if ( !self )
     return 1;
   klass = self->klass;
-  if ( *(_WORD *)&self->klass->_2.bitflags1 )
+  v4 = *(unsigned __int16 *)(&self->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&self->klass->_2.bitflags2 + 3) )
   {
-    v4 = 0LL;
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_Collections_ICollection_c **)p_offset - 1) != System_Collections_ICollection_TypeInfo )
     {
-      ++v4;
+      --v4;
       p_offset += 4;
-      if ( v4 >= *(unsigned __int16 *)&self->klass->_2.bitflags1 )
+      if ( !v4 )
         goto LABEL_8;
     }
     p_method = (__int64)&klass->vtable[*p_offset + 1].method;
@@ -2477,7 +3592,7 @@ bool __fastcall BasicHelper__IsNullOrEmpty(System_Collections_ICollection_o *sel
   else
   {
 LABEL_8:
-    p_method = sub_B0F4C0(self, System_Collections_ICollection_TypeInfo, 1LL);
+    p_method = sub_1B52CAC(self, System_Collections_ICollection_TypeInfo, 1LL);
   }
   return (*(int (__fastcall **)(System_Collections_ICollection_o *, _QWORD))p_method)(self, *(_QWORD *)(p_method + 8)) < 1;
 }
@@ -2486,7 +3601,43 @@ LABEL_8:
 bool __fastcall BasicHelper__IsValidIndex_Vector3_(
         UnityEngine_Vector3_array *array,
         int32_t index,
-        const MethodInfo_1C68624 *method)
+        const MethodInfo_2D51E2C *method)
+{
+  bool result; // w0
+
+  result = 0;
+  if ( array )
+  {
+    if ( (index & 0x80000000) == 0 )
+      return (signed int)array->max_length > index;
+  }
+  return result;
+}
+
+
+bool __fastcall BasicHelper__IsValidIndex___Il2CppFullySharedGenericType_(
+        System_Collections_Generic_List_T__o *list,
+        int32_t index,
+        const MethodInfo_2D51E4C *method)
+{
+  bool result; // w0
+
+  if ( !method->rgctx_data )
+    sub_1B52C04(method);
+  result = 0;
+  if ( list )
+  {
+    if ( (index & 0x80000000) == 0 )
+      return ((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *))method->rgctx_data->_1_System_Collections_Generic_List_T__get_Count->methodPointer)(list) > index;
+  }
+  return result;
+}
+
+
+bool __fastcall BasicHelper__IsValidIndex___Il2CppFullySharedGenericType__47521444(
+        Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *array,
+        int32_t index,
+        const MethodInfo_2D51EA4 *method)
 {
   bool result; // w0
 
@@ -2503,7 +3654,7 @@ bool __fastcall BasicHelper__IsValidIndex_Vector3_(
 bool __fastcall BasicHelper__IsValidIndex_int_(
         System_Int32_array *array,
         int32_t index,
-        const MethodInfo_1C6859C *method)
+        const MethodInfo_2D51DEC *method)
 {
   bool result; // w0
 
@@ -2518,26 +3669,9 @@ bool __fastcall BasicHelper__IsValidIndex_int_(
 
 
 bool __fastcall BasicHelper__IsValidIndex_object_(
-        System_Collections_Generic_List_T__o *list,
-        int32_t index,
-        const MethodInfo_1C685BC *method)
-{
-  bool result; // w0
-
-  result = 0;
-  if ( list )
-  {
-    if ( (index & 0x80000000) == 0 )
-      return ((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *))method->rgctx_data->_0_System_Collections_Generic_List_T__get_Count->methodPointer)(list) > index;
-  }
-  return result;
-}
-
-
-bool __fastcall BasicHelper__IsValidIndex_object__29787652(
         System_Object_array *array,
         int32_t index,
-        const MethodInfo_1C68604 *method)
+        const MethodInfo_2D51E0C *method)
 {
   bool result; // w0
 
@@ -2553,26 +3687,41 @@ bool __fastcall BasicHelper__IsValidIndex_object__29787652(
 
 void __fastcall BasicHelper__Loop(int32_t loopCount, System_Action_int__o *action, const MethodInfo *method)
 {
-  int32_t v5; // w21
+  unsigned int i; // w21
 
-  if ( (byte_43897B1 & 1) == 0 )
-  {
-    sub_B775C4(&Method_System_Action_int__Invoke__);
-    byte_43897B1 = 1;
-  }
   if ( action && loopCount >= 1 )
   {
-    v5 = 0;
-    do
-      System_Action_int___Invoke(action, v5++, (const MethodInfo_269F2EC *)Method_System_Action_int__Invoke__);
-    while ( loopCount != v5 );
+    for ( i = 0; i != loopCount; ++i )
+      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))action->fields.m_target)(
+        action->fields.original_method_info,
+        i,
+        *(_QWORD *)&action->fields.extra_arg);
   }
 }
 
 
 bool __fastcall BasicHelper__NearbyOrGreaterThan(float self, float toCompare, const MethodInfo *method)
 {
-  return self >= toCompare || UnityEngine_Mathf__Approximately(self, toCompare, 0LL);
+  __int64 v3; // x1
+  float v6; // s1
+  float v7; // s2
+  float v8; // s0
+
+  if ( self >= toCompare )
+    return 1;
+  if ( !byte_48DD9F5 )
+  {
+    sub_1B00CCC(&UnityEngine_Mathf_TypeInfo, v3);
+    byte_48DD9F5 = 1;
+  }
+  v6 = fabsf(self);
+  v7 = fabsf(toCompare);
+  if ( v6 <= v7 )
+    v6 = v7;
+  v8 = v6 * 0.000001;
+  if ( (float)(v6 * 0.000001) <= (float)(UnityEngine_Mathf_TypeInfo->static_fields->Epsilon * 8.0) )
+    v8 = UnityEngine_Mathf_TypeInfo->static_fields->Epsilon * 8.0;
+  return vabds_f32(toCompare, self) < v8;
 }
 
 
@@ -2588,108 +3737,369 @@ System_Collections_IEnumerator_o *__fastcall BasicHelper__RealDelayCall(
         const MethodInfo *method)
 {
   __int64 v5; // x20
-  __int64 v6; // x0
-  __int64 v7; // x1
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
+  int32_t v6; // w2
+  int32_t v7; // w3
 
-  if ( (byte_43897B3 & 1) == 0 )
+  if ( (byte_48E3DEC & 1) == 0 )
   {
-    sub_B775C4(&BasicHelper__RealDelayCall_d__37_TypeInfo);
-    byte_43897B3 = 1;
+    sub_1B00CCC(&BasicHelper__RealDelayCall_d__37_TypeInfo, method);
+    byte_48E3DEC = 1;
   }
-  v5 = sub_B77694(BasicHelper__RealDelayCall_d__37_TypeInfo);
-  BasicHelper__RealDelayCall_d__37___ctor((BasicHelper__RealDelayCall_d__37_o *)v5, 0, 0LL);
-  if ( !v5 )
-    sub_B7769C(v6, v7);
+  v5 = sub_1B00F18(BasicHelper__RealDelayCall_d__37_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0LL);
+  *(_DWORD *)(v5 + 16) = 0;
   *(float *)(v5 + 32) = delay;
   *(_QWORD *)(v5 + 40) = action;
-  sub_B77560((BattleServantConfConponent_o *)(v5 + 40), (System_Int32_array **)action, v8, v9, v10, v11, v12, v13);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v5 + 40), (int32_t)action, v6, v7);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
 
-System_Collections_IEnumerator_o *__fastcall BasicHelper__RealDelayCall_FGODisplayMessage_Argument_(
+// local variable allocation has failed, the output may be wrong!
+System_Collections_IEnumerator_o *__fastcall BasicHelper__RealDelayCall___Il2CppFullySharedGenericType_(
         float delay,
         System_Action_T__o *action,
-        HutongGames_PlayMaker_Actions_FGODisplayMessage_Argument_o *arg,
-        const MethodInfo_1C68644 *method)
+        Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg,
+        const MethodInfo_2D51F5C *method)
 {
-  Il2CppClass *_0_BasicHelper__RealDelayCall_d__38_T; // x22
-  __int64 v9; // x0
-  const MethodInfo_1C68644_RGCTXs *rgctx_data; // x8
-  __int64 v11; // x21
+  _QWORD *monitor; // x20
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x19
+  __int64 *v7; // x8
+  long double v8; // q8
+  __int64 v9; // x21
+  __int64 v10; // x0
+  System_Collections_IEnumerator_o *v11; // x24
   __int64 v12; // x0
   __int64 v13; // x1
-  System_String_array **v14; // x2
-  System_String_array **v15; // x3
-  System_Boolean_array **v16; // x4
-  System_Int32_array **v17; // x5
-  System_Int32_array *v18; // x6
-  System_Int32_array *v19; // x7
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
+  _QWORD *v14; // x20
+  __int64 *v15; // x1
+  __int64 v17[2]; // [xsp+0h] [xbp-18h] BYREF
 
-  _0_BasicHelper__RealDelayCall_d__38_T = method->rgctx_data->_0_BasicHelper__RealDelayCall_d__38_T_;
-  if ( (BYTE2(_0_BasicHelper__RealDelayCall_d__38_T->vtable[0].methodPtr) & 1) == 0 )
-    sub_B0F2C4(method->rgctx_data->_0_BasicHelper__RealDelayCall_d__38_T_);
-  v9 = sub_B77694(_0_BasicHelper__RealDelayCall_d__38_T);
-  rgctx_data = method->rgctx_data;
-  v11 = v9;
-  v12 = ((__int64 (__fastcall *)(__int64, _QWORD))rgctx_data->_1_BasicHelper__RealDelayCall_d__38_T___ctor->methodPointer)(
-          v9,
-          0LL);
+  monitor = arg.monitor;
+  klass = arg.klass;
+  v17[1] = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
+  v17[0] = (__int64)arg.klass;
+  v7 = (__int64 *)*((_QWORD *)arg.monitor + 7);
+  v8 = *(long double *)&delay;
+  if ( !v7 )
+  {
+    sub_1B52C04(arg.monitor);
+    v7 = (__int64 *)monitor[7];
+  }
+  v9 = *(unsigned int *)(v7[3] + 252);
+  v10 = *v7;
+  if ( (*(_BYTE *)(*v7 + 309) & 1) == 0 )
+    v10 = sub_1B52BA8(v10);
+  v11 = (System_Collections_IEnumerator_o *)sub_1B00F18(v10);
+  v12 = (**(__int64 (__fastcall ***)(System_Collections_IEnumerator_o *, _QWORD))(monitor[7] + 8LL))(v11, 0LL);
   if ( !v11 )
-    sub_B7769C(v12, v13);
-  *(float *)(v11 + 32) = delay;
-  *(_QWORD *)(v11 + 40) = action;
-  sub_B77560((BattleServantConfConponent_o *)(v11 + 40), (System_Int32_array **)action, v14, v15, v16, v17, v18, v19);
-  *(_QWORD *)(v11 + 48) = arg;
-  sub_B77560((BattleServantConfConponent_o *)(v11 + 48), (System_Int32_array **)arg, v20, v21, v22, v23, v24, v25);
-  return (System_Collections_IEnumerator_o *)v11;
+    sub_1B00F28(v12, v13);
+  sub_1955A10(v11, *(_QWORD *)(*(_QWORD *)monitor[7] + 128LL) + 64LL, v8);
+  sub_19556E4(v11, *(_QWORD *)(*(_QWORD *)monitor[7] + 128LL) + 96LL, action);
+  v14 = (_QWORD *)monitor[7];
+  if ( *(int *)(v14[3] + 40LL) >= 0 )
+    v15 = v17;
+  else
+    v15 = (__int64 *)klass;
+  memcpy((char *)v17 - ((v9 + 15) & 0x1FFFFFFF0LL), v15, v9);
+  sub_1B00CF4(v11, *(_QWORD *)(*v14 + 128LL) + 128LL, (char *)v17 - ((v9 + 15) & 0x1FFFFFFF0LL), (unsigned int)v9);
+  return v11;
 }
 
 
-void __fastcall BasicHelper__RemoveElements_MapControl_SpotInfo_(
+System_Collections_IEnumerator_o *__fastcall BasicHelper__RealDelayCall_object_(
+        float delay,
+        System_Action_T__o *action,
+        Il2CppObject *arg,
+        const MethodInfo_2D51EC4 *method)
+{
+  const MethodInfo_2D51EC4_RGCTXs *rgctx_data; // x8
+  __int64 _0_BasicHelper__RealDelayCall_d__38_T; // x0
+  BasicHelper__RealDelayCall_d__38_T__o *v10; // x0
+  const MethodInfo_2D51EC4_RGCTXs *v11; // x8
+  BasicHelper__RealDelayCall_d__38_T__o *v12; // x21
+  __int64 v13; // x0
+  __int64 v14; // x1
+  int32_t v15; // w2
+  int32_t v16; // w3
+  int32_t v17; // w2
+  int32_t v18; // w3
+
+  rgctx_data = method->rgctx_data;
+  if ( !rgctx_data )
+  {
+    sub_1B52C04(method);
+    rgctx_data = method->rgctx_data;
+  }
+  _0_BasicHelper__RealDelayCall_d__38_T = (__int64)rgctx_data->_0_BasicHelper__RealDelayCall_d__38_T_;
+  if ( (BYTE5(rgctx_data->_0_BasicHelper__RealDelayCall_d__38_T_->vtable[0].methodPtr) & 1) == 0 )
+    _0_BasicHelper__RealDelayCall_d__38_T = sub_1B52BA8(_0_BasicHelper__RealDelayCall_d__38_T);
+  v10 = (BasicHelper__RealDelayCall_d__38_T__o *)sub_1B00F18(_0_BasicHelper__RealDelayCall_d__38_T);
+  v11 = method->rgctx_data;
+  v12 = v10;
+  BasicHelper__RealDelayCall_d__38_object____ctor(
+    v10,
+    0,
+    (const MethodInfo_2F344D4 *)v11->_1_BasicHelper__RealDelayCall_d__38_T___ctor);
+  if ( !v12 )
+    sub_1B00F28(v13, v14);
+  v12->fields.delay = delay;
+  v12->fields.action = action;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v12->fields.action, (int32_t)action, v15, v16);
+  v12->fields.arg = arg;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v12->fields.arg, (int32_t)arg, v17, v18);
+  return (System_Collections_IEnumerator_o *)v12;
+}
+
+
+void __fastcall BasicHelper__RemoveElements___Il2CppFullySharedGenericType_(
         System_Collections_Generic_List_T__o *self,
         System_Func_T__bool__o *cond,
-        const MethodInfo_1C68B54 *method)
+        const MethodInfo_2D525D8 *method)
 {
   System_Collections_Generic_List_T__o *v5; // x21
-  int v6; // w22
+  const MethodInfo_2D525D8_RGCTXs *rgctx_data; // x8
+  __int64 *v7; // x22
+  int v8; // w23
+  MethodInfo *_3_System_Collections_Generic_List_T__get_Item; // x1
+  Il2CppMethodPointer methodPointer; // x0
+  const MethodInfo_2D525D8_RGCTXs *v11; // x8
+  __int64 v12; // x9
+  MethodInfo *_5_System_Func_T__bool__Invoke; // x1
+  void (__fastcall *v14)(); // x0
+  __int64 v15[2]; // [xsp+0h] [xbp-20h] BYREF
+  int v16; // [xsp+14h] [xbp-Ch] BYREF
+  __int64 v17; // [xsp+18h] [xbp-8h]
 
-  if ( !self )
-    goto LABEL_8;
   v5 = self;
-  v6 = ((__int64 (*)(void))method->rgctx_data->_0_System_Collections_Generic_List_T__get_Count->methodPointer)() - 1;
+  v17 = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
+  rgctx_data = method->rgctx_data;
+  if ( !rgctx_data )
+  {
+    self = (System_Collections_Generic_List_T__o *)sub_1B52C04(method);
+    rgctx_data = method->rgctx_data;
+  }
+  v7 = (__int64 *)((char *)v15 - (((unsigned int)rgctx_data->_4_T->_2.native_size + 15LL) & 0x1FFFFFFF0LL));
+  if ( !v5 )
+    goto LABEL_12;
+  v8 = ((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *))rgctx_data->_1_System_Collections_Generic_List_T__get_Count->methodPointer)(v5)
+     - 1;
+  if ( v8 >= 0 )
+  {
+    while ( 1 )
+    {
+      _3_System_Collections_Generic_List_T__get_Item = method->rgctx_data->_3_System_Collections_Generic_List_T__get_Item;
+      methodPointer = _3_System_Collections_Generic_List_T__get_Item->methodPointer;
+      v16 = v8;
+      v15[0] = (__int64)&v16;
+      v15[1] = (__int64)v7;
+      self = (System_Collections_Generic_List_T__o *)((__int64 (__fastcall *)(Il2CppMethodPointer, MethodInfo *, System_Collections_Generic_List_T__o *, __int64 *, __int64 *))_3_System_Collections_Generic_List_T__get_Item->invoker_method)(
+                                                       methodPointer,
+                                                       _3_System_Collections_Generic_List_T__get_Item,
+                                                       v5,
+                                                       v15,
+                                                       v7);
+      if ( !cond )
+        break;
+      v11 = method->rgctx_data;
+      v12 = (__int64)v7;
+      if ( (v11->_4_T->_1.byval_arg.bits & 0x80000000) == 0 )
+        v12 = *v7;
+      _5_System_Func_T__bool__Invoke = v11->_5_System_Func_T__bool__Invoke;
+      v14 = _5_System_Func_T__bool__Invoke->methodPointer;
+      v15[0] = v12;
+      _5_System_Func_T__bool__Invoke->invoker_method(v14, _5_System_Func_T__bool__Invoke, cond, (void **)v15, &v16);
+      if ( (_BYTE)v16 )
+        ((void (__fastcall *)(System_Collections_Generic_List_T__o *, _QWORD))method->rgctx_data->_6_System_Collections_Generic_List_T__RemoveAt->methodPointer)(
+          v5,
+          (unsigned int)v8);
+      if ( --v8 < 0 )
+        return;
+    }
+LABEL_12:
+    sub_1B00F28(self, cond);
+  }
+}
+
+
+void __fastcall BasicHelper__RemoveElements_object_(
+        System_Collections_Generic_List_T__o *self,
+        System_Func_T__bool__o *cond,
+        const MethodInfo_2D52540 *method)
+{
+  System_Collections_Generic_List_object__o *v5; // x21
+  int32_t v6; // w22
+
+  v5 = (System_Collections_Generic_List_object__o *)self;
+  if ( !method->rgctx_data )
+    self = (System_Collections_Generic_List_T__o *)sub_1B52C04(method);
+  if ( !v5 )
+    goto LABEL_10;
+  v6 = v5->fields._size - 1;
   if ( v6 >= 0 )
   {
     while ( 1 )
     {
-      self = (System_Collections_Generic_List_T__o *)((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *, _QWORD))method->rgctx_data->_1_System_Collections_Generic_List_T__get_Item->methodPointer)(
+      self = (System_Collections_Generic_List_T__o *)System_Collections_Generic_List_object___get_Item(
                                                        v5,
-                                                       (unsigned int)v6);
+                                                       v6,
+                                                       (const MethodInfo_33C1700 *)method->rgctx_data->_3_System_Collections_Generic_List_T__get_Item);
       if ( !cond )
         break;
-      if ( (((__int64 (__fastcall *)(System_Func_T__bool__o *, System_Collections_Generic_List_T__o *))method->rgctx_data->_2_System_Func_T__bool__Invoke->methodPointer)(
-              cond,
-              self) & 1) != 0 )
-        ((void (__fastcall *)(System_Collections_Generic_List_T__o *, _QWORD))method->rgctx_data->_3_System_Collections_Generic_List_T__RemoveAt->methodPointer)(
+      if ( (((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_Collections_Generic_List_T__o *, _QWORD))cond->fields.m_target)(
+              cond->fields.original_method_info,
+              self,
+              *(_QWORD *)&cond->fields.extra_arg) & 1) != 0 )
+        System_Collections_Generic_List_object___RemoveAt(
           v5,
-          (unsigned int)v6);
+          v6,
+          (const MethodInfo_33C31A4 *)method->rgctx_data->_6_System_Collections_Generic_List_T__RemoveAt);
       if ( --v6 < 0 )
         return;
     }
-LABEL_8:
-    sub_B7769C(self, cond);
+LABEL_10:
+    sub_1B00F28(self, cond);
+  }
+}
+
+
+void __fastcall BasicHelper__Remove___Il2CppFullySharedGenericType____Il2CppFullySharedGenericType_(
+        System_Collections_Generic_Dictionary_K__V__o *dic,
+        System_Func_KeyValuePair_K__V___bool__o *cond,
+        const MethodInfo_2D52280 *method)
+{
+  const MethodInfo_2D52280_RGCTXs *rgctx_data; // x26
+  __int64 native_size; // x21
+  __int64 v8; // x25
+  long double inited; // q0
+  Il2CppClass *_6_BasicHelper___c__22_K__V; // x8
+  Il2CppClass *v11; // x0
+  __int64 v12; // x26
+  Il2CppClass *v13; // x0
+  const MethodInfo_2D52280_RGCTXs *v14; // x8
+  __int64 v15; // x0
+  __int64 _5_System_Func_KeyValuePair_K__V___K; // x8
+  __int64 v17; // x27
+  int32_t v18; // w2
+  int32_t v19; // w3
+  Il2CppClass *v20; // x0
+  Il2CppClass *v21; // x0
+  __int64 v22; // x0
+  __int64 v23; // x0
+  __int64 v24; // x1
+  __int64 v25; // x8
+  _DWORD *v26; // x25
+  unsigned __int64 v27; // x26
+  const MethodInfo_2D52280_RGCTXs *v28; // x8
+  char *v29; // x9
+  MethodInfo *_14_System_Collections_Generic_Dictionary_K__V__Remove; // x1
+  Il2CppMethodPointer methodPointer; // x0
+  __int64 v32; // [xsp+0h] [xbp-20h] BYREF
+  char *v33; // [xsp+8h] [xbp-18h] BYREF
+  char v34[4]; // [xsp+14h] [xbp-Ch] BYREF
+  __int64 v35; // [xsp+18h] [xbp-8h]
+
+  v35 = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
+  rgctx_data = method->rgctx_data;
+  if ( !rgctx_data )
+  {
+    sub_1B52C04(method);
+    rgctx_data = method->rgctx_data;
+  }
+  native_size = (unsigned int)rgctx_data->_13_K->_2.native_size;
+  memset((char *)&v32 - ((native_size + 15) & 0x1FFFFFFF0LL), 0, rgctx_data->_13_K->_2.native_size);
+  if ( dic )
+  {
+    v8 = ((__int64 (__fastcall *)(System_Collections_Generic_Dictionary_K__V__o *, System_Func_KeyValuePair_K__V___bool__o *))rgctx_data->_2_System_Linq_Enumerable_Where_KeyValuePair_K__V__->methodPointer)(
+           dic,
+           cond);
+    _6_BasicHelper___c__22_K__V = method->rgctx_data->_6_BasicHelper___c__22_K__V_;
+    if ( (BYTE5(_6_BasicHelper___c__22_K__V->vtable[0].methodPtr) & 1) == 0 )
+      _6_BasicHelper___c__22_K__V = (Il2CppClass *)sub_1B52BA8(method->rgctx_data->_6_BasicHelper___c__22_K__V_);
+    if ( !_6_BasicHelper___c__22_K__V->_2.cctor_finished )
+      inited = j_il2cpp_runtime_class_init_0(_6_BasicHelper___c__22_K__V);
+    v11 = method->rgctx_data->_6_BasicHelper___c__22_K__V_;
+    if ( (BYTE5(v11->vtable[0].methodPtr) & 1) == 0 )
+      v11 = (Il2CppClass *)sub_1B52BA8(v11);
+    v12 = *((_QWORD *)v11->static_fields + 1);
+    if ( !v12 )
+    {
+      v13 = method->rgctx_data->_6_BasicHelper___c__22_K__V_;
+      if ( (BYTE5(v13->vtable[0].methodPtr) & 1) == 0 )
+        v13 = (Il2CppClass *)sub_1B52BA8(v13);
+      if ( !v13->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(v13);
+      v14 = method->rgctx_data;
+      v15 = (__int64)v14->_6_BasicHelper___c__22_K__V_;
+      if ( (*(_BYTE *)(v15 + 309) & 1) == 0 )
+      {
+        v15 = sub_1B52BA8(v15);
+        v14 = method->rgctx_data;
+      }
+      _5_System_Func_KeyValuePair_K__V___K = (__int64)v14->_5_System_Func_KeyValuePair_K__V___K_;
+      v17 = **(_QWORD **)(v15 + 184);
+      if ( (*(_BYTE *)(_5_System_Func_KeyValuePair_K__V___K + 309) & 1) == 0 )
+        _5_System_Func_KeyValuePair_K__V___K = sub_1B52BA8(_5_System_Func_KeyValuePair_K__V___K);
+      v12 = sub_1B00F18(_5_System_Func_KeyValuePair_K__V___K);
+      ((void (__fastcall *)(__int64, __int64, MethodInfo *))method->rgctx_data->_8_System_Func_KeyValuePair_K__V___K___ctor->methodPointer)(
+        v12,
+        v17,
+        method->rgctx_data->_7_BasicHelper___c__22_K__V___Remove_b__22_0);
+      v20 = method->rgctx_data->_6_BasicHelper___c__22_K__V_;
+      if ( (BYTE5(v20->vtable[0].methodPtr) & 1) == 0 )
+        v20 = (Il2CppClass *)sub_1B52BA8(v20);
+      *((_QWORD *)v20->static_fields + 1) = v12;
+      v21 = method->rgctx_data->_6_BasicHelper___c__22_K__V_;
+      if ( (BYTE5(v21->vtable[0].methodPtr) & 1) == 0 )
+        v21 = (Il2CppClass *)sub_1B52BA8(v21);
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)((char *)v21->static_fields + 8), v12, v18, v19);
+    }
+    v22 = ((__int64 (__fastcall *)(__int64, __int64, long double))method->rgctx_data->_9_System_Linq_Enumerable_Select_KeyValuePair_K__V___K_->methodPointer)(
+            v8,
+            v12,
+            inited);
+    v23 = ((__int64 (__fastcall *)(__int64))method->rgctx_data->_11_System_Linq_Enumerable_ToArray_K_->methodPointer)(v22);
+    if ( !v23 )
+      sub_1B00F28(0LL, v24);
+    v25 = *(_QWORD *)(v23 + 24);
+    v26 = (_DWORD *)v23;
+    if ( (int)v25 >= 1 )
+    {
+      v27 = 0LL;
+      do
+      {
+        if ( v27 >= (unsigned int)v25 )
+          sub_1B00F30(v23, v24);
+        memcpy(
+          (char *)&v32 - ((native_size + 15) & 0x1FFFFFFF0LL),
+          (char *)v26 + v27 * *(unsigned int *)(*(_QWORD *)v26 + 260LL) + 32,
+          native_size);
+        memcpy(
+          (char *)&v32 - ((native_size + 15) & 0x1FFFFFFF0LL),
+          (char *)&v32 - ((native_size + 15) & 0x1FFFFFFF0LL),
+          native_size);
+        memcpy(
+          (char *)&v32 - ((native_size + 15) & 0x1FFFFFFF0LL),
+          (char *)&v32 - ((native_size + 15) & 0x1FFFFFFF0LL),
+          native_size);
+        v28 = method->rgctx_data;
+        v29 = (char *)&v32 - ((native_size + 15) & 0x1FFFFFFF0LL);
+        if ( (v28->_13_K->_1.byval_arg.bits & 0x80000000) == 0 )
+          v29 = *(char **)((char *)&v32 - ((native_size + 15) & 0x1FFFFFFF0LL));
+        _14_System_Collections_Generic_Dictionary_K__V__Remove = v28->_14_System_Collections_Generic_Dictionary_K__V__Remove;
+        methodPointer = _14_System_Collections_Generic_Dictionary_K__V__Remove->methodPointer;
+        v33 = v29;
+        v23 = ((__int64 (__fastcall *)(Il2CppMethodPointer, MethodInfo *, System_Collections_Generic_Dictionary_K__V__o *, char **, char *))_14_System_Collections_Generic_Dictionary_K__V__Remove->invoker_method)(
+                methodPointer,
+                _14_System_Collections_Generic_Dictionary_K__V__Remove,
+                dic,
+                &v33,
+                v34);
+        LODWORD(v25) = v26[6];
+        ++v27;
+      }
+      while ( (__int64)v27 < (int)v25 );
+    }
   }
 }
 
@@ -2697,509 +4107,661 @@ LABEL_8:
 void __fastcall BasicHelper__Remove_int__object_(
         System_Collections_Generic_Dictionary_K__V__o *dic,
         System_Func_KeyValuePair_K__V___bool__o *cond,
-        const MethodInfo_1C686E4 *method)
+        const MethodInfo_2D520B0 *method)
 {
-  __int64 v5; // x21
-  long double v6; // q0
-  Il2CppClass *_1_BasicHelper___c__22_K__V; // x22
-  __int16 v8; // w8
-  Il2CppClass *v9; // x22
-  Il2CppClass *v10; // x22
-  Il2CppClass *v11; // x22
-  System_Int32_array **v12; // x22
-  Il2CppClass *v13; // x22
-  __int16 v14; // w8
-  Il2CppClass *v15; // x22
-  Il2CppClass *v16; // x22
-  const MethodInfo_1C686E4_RGCTXs *rgctx_data; // x8
-  Il2CppClass *v18; // x22
-  Il2CppClass *_3_System_Func_KeyValuePair_K__V___K; // x24
-  __int64 v20; // x23
-  System_String_array **v21; // x2
-  System_String_array **v22; // x3
-  System_Boolean_array **v23; // x4
-  System_Int32_array **v24; // x5
-  System_Int32_array *v25; // x6
-  System_Int32_array *v26; // x7
-  Il2CppClass *v27; // x23
-  char *static_fields; // x0
-  __int64 v29; // x0
-  __int64 v30; // x0
-  __int64 v31; // x1
-  __int64 v32; // x8
-  __int64 v33; // x21
-  unsigned __int64 v34; // x22
-  __int64 v35; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v6; // x21
+  Il2CppClass *_6_BasicHelper___c__22_K__V; // x8
+  Il2CppClass *v8; // x0
+  System_Func_T__TResult__o *v9; // x22
+  Il2CppClass *v10; // x0
+  const MethodInfo_2D520B0_RGCTXs *rgctx_data; // x8
+  __int64 v12; // x0
+  __int64 _5_System_Func_KeyValuePair_K__V___K; // x8
+  Il2CppObject *v14; // x23
+  int32_t v15; // w2
+  int32_t v16; // w3
+  Il2CppClass *v17; // x0
+  Il2CppClass *v18; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v19; // x0
+  System_Int32_array *v20; // x0
+  __int64 v21; // x1
+  __int64 v22; // x8
+  System_Int32_array *v23; // x21
+  unsigned __int64 v24; // x22
 
-  if ( dic )
+  if ( method->rgctx_data )
   {
-    v5 = ((__int64 (__fastcall *)(System_Collections_Generic_Dictionary_K__V__o *, System_Func_KeyValuePair_K__V___bool__o *))method->rgctx_data->_0_System_Linq_Enumerable_Where_KeyValuePair_K__V__->methodPointer)(
-           dic,
-           cond);
-    _1_BasicHelper___c__22_K__V = method->rgctx_data->_1_BasicHelper___c__22_K__V_;
-    v8 = WORD1(_1_BasicHelper___c__22_K__V->vtable[0].methodPtr);
-    if ( (v8 & 1) == 0 )
+    if ( !dic )
+      return;
+  }
+  else
+  {
+    sub_1B52C04(method);
+    if ( !dic )
+      return;
+  }
+  v6 = System_Linq_Enumerable__Where_KeyValuePair_int__object__(
+         (System_Collections_Generic_IEnumerable_TSource__o *)dic,
+         (System_Func_TSource__bool__o *)cond,
+         (const MethodInfo_2D9B9B4 *)method->rgctx_data->_2_System_Linq_Enumerable_Where_KeyValuePair_K__V__);
+  _6_BasicHelper___c__22_K__V = method->rgctx_data->_6_BasicHelper___c__22_K__V_;
+  if ( (BYTE5(_6_BasicHelper___c__22_K__V->vtable[0].methodPtr) & 1) == 0 )
+    _6_BasicHelper___c__22_K__V = (Il2CppClass *)sub_1B52BA8(method->rgctx_data->_6_BasicHelper___c__22_K__V_);
+  if ( !_6_BasicHelper___c__22_K__V->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(_6_BasicHelper___c__22_K__V);
+  v8 = method->rgctx_data->_6_BasicHelper___c__22_K__V_;
+  if ( (BYTE5(v8->vtable[0].methodPtr) & 1) == 0 )
+    v8 = (Il2CppClass *)sub_1B52BA8(v8);
+  v9 = (System_Func_T__TResult__o *)*((_QWORD *)v8->static_fields + 1);
+  if ( !v9 )
+  {
+    v10 = method->rgctx_data->_6_BasicHelper___c__22_K__V_;
+    if ( (BYTE5(v10->vtable[0].methodPtr) & 1) == 0 )
+      v10 = (Il2CppClass *)sub_1B52BA8(v10);
+    if ( !v10->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(v10);
+    rgctx_data = method->rgctx_data;
+    v12 = (__int64)rgctx_data->_6_BasicHelper___c__22_K__V_;
+    if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
     {
-      sub_B0F2C4(method->rgctx_data->_1_BasicHelper___c__22_K__V_);
-      v8 = WORD1(_1_BasicHelper___c__22_K__V->vtable[0].methodPtr);
-    }
-    if ( (v8 & 0x400) != 0 )
-    {
-      v9 = method->rgctx_data->_1_BasicHelper___c__22_K__V_;
-      if ( (BYTE2(v9->vtable[0].methodPtr) & 1) == 0 )
-        sub_B0F2C4(method->rgctx_data->_1_BasicHelper___c__22_K__V_);
-      if ( !v9->_2.cctor_finished )
-      {
-        v10 = method->rgctx_data->_1_BasicHelper___c__22_K__V_;
-        if ( (BYTE2(v10->vtable[0].methodPtr) & 1) == 0 )
-          sub_B0F2C4(method->rgctx_data->_1_BasicHelper___c__22_K__V_);
-        *(__n128 *)&v6 = j_il2cpp_runtime_class_init_0(v10);
-      }
-    }
-    v11 = method->rgctx_data->_1_BasicHelper___c__22_K__V_;
-    if ( (BYTE2(v11->vtable[0].methodPtr) & 1) == 0 )
-      sub_B0F2C4(method->rgctx_data->_1_BasicHelper___c__22_K__V_);
-    v12 = (System_Int32_array **)*((_QWORD *)v11->static_fields + 1);
-    if ( !v12 )
-    {
-      v13 = method->rgctx_data->_1_BasicHelper___c__22_K__V_;
-      v14 = WORD1(v13->vtable[0].methodPtr);
-      if ( (v14 & 1) == 0 )
-      {
-        sub_B0F2C4(method->rgctx_data->_1_BasicHelper___c__22_K__V_);
-        v14 = WORD1(v13->vtable[0].methodPtr);
-      }
-      if ( (v14 & 0x400) != 0 )
-      {
-        v15 = method->rgctx_data->_1_BasicHelper___c__22_K__V_;
-        if ( (BYTE2(v15->vtable[0].methodPtr) & 1) == 0 )
-          sub_B0F2C4(method->rgctx_data->_1_BasicHelper___c__22_K__V_);
-        if ( !v15->_2.cctor_finished )
-        {
-          v16 = method->rgctx_data->_1_BasicHelper___c__22_K__V_;
-          if ( (BYTE2(v16->vtable[0].methodPtr) & 1) == 0 )
-            sub_B0F2C4(method->rgctx_data->_1_BasicHelper___c__22_K__V_);
-          j_il2cpp_runtime_class_init_0(v16);
-        }
-      }
+      v12 = sub_1B52BA8(v12);
       rgctx_data = method->rgctx_data;
-      v18 = rgctx_data->_1_BasicHelper___c__22_K__V_;
-      if ( (BYTE2(v18->vtable[0].methodPtr) & 1) == 0 )
-      {
-        sub_B0F2C4(rgctx_data->_1_BasicHelper___c__22_K__V_);
-        rgctx_data = method->rgctx_data;
-      }
-      _3_System_Func_KeyValuePair_K__V___K = rgctx_data->_3_System_Func_KeyValuePair_K__V___K_;
-      v20 = *(_QWORD *)v18->static_fields;
-      if ( (BYTE2(_3_System_Func_KeyValuePair_K__V___K->vtable[0].methodPtr) & 1) == 0 )
-        sub_B0F2C4(_3_System_Func_KeyValuePair_K__V___K);
-      v12 = (System_Int32_array **)sub_B77694(_3_System_Func_KeyValuePair_K__V___K);
-      ((void (__fastcall *)(System_Int32_array **, __int64, MethodInfo *))method->rgctx_data->_4_System_Func_KeyValuePair_K__V___K___ctor->methodPointer)(
-        v12,
-        v20,
-        method->rgctx_data->_2_BasicHelper___c__22_K__V___Remove_b__22_0);
-      v27 = method->rgctx_data->_1_BasicHelper___c__22_K__V_;
-      if ( (BYTE2(v27->vtable[0].methodPtr) & 1) == 0 )
-        sub_B0F2C4(method->rgctx_data->_1_BasicHelper___c__22_K__V_);
-      static_fields = (char *)v27->static_fields;
-      *((_QWORD *)static_fields + 1) = v12;
-      sub_B77560((BattleServantConfConponent_o *)(static_fields + 8), v12, v21, v22, v23, v24, v25, v26);
     }
-    v29 = ((__int64 (__fastcall *)(__int64, System_Int32_array **, long double))method->rgctx_data->_5_System_Linq_Enumerable_Select_KeyValuePair_K__V___K_->methodPointer)(
-            v5,
-            v12,
-            v6);
-    v30 = ((__int64 (__fastcall *)(__int64))method->rgctx_data->_6_System_Linq_Enumerable_ToArray_K_->methodPointer)(v29);
-    if ( !v30 )
-      sub_B7769C(0LL, v31);
-    v32 = *(_QWORD *)(v30 + 24);
-    v33 = v30;
-    if ( (int)v32 >= 1 )
+    _5_System_Func_KeyValuePair_K__V___K = (__int64)rgctx_data->_5_System_Func_KeyValuePair_K__V___K_;
+    v14 = **(Il2CppObject ***)(v12 + 184);
+    if ( (*(_BYTE *)(_5_System_Func_KeyValuePair_K__V___K + 309) & 1) == 0 )
+      _5_System_Func_KeyValuePair_K__V___K = sub_1B52BA8(_5_System_Func_KeyValuePair_K__V___K);
+    v9 = (System_Func_T__TResult__o *)sub_1B00F18(_5_System_Func_KeyValuePair_K__V___K);
+    System_Func_KeyValuePair_int__object___int____ctor(
+      v9,
+      v14,
+      (intptr_t)method->rgctx_data->_7_BasicHelper___c__22_K__V___Remove_b__22_0,
+      (const MethodInfo_3235044 *)method->rgctx_data->_8_System_Func_KeyValuePair_K__V___K___ctor);
+    v17 = method->rgctx_data->_6_BasicHelper___c__22_K__V_;
+    if ( (BYTE5(v17->vtable[0].methodPtr) & 1) == 0 )
+      v17 = (Il2CppClass *)sub_1B52BA8(v17);
+    *((_QWORD *)v17->static_fields + 1) = v9;
+    v18 = method->rgctx_data->_6_BasicHelper___c__22_K__V_;
+    if ( (BYTE5(v18->vtable[0].methodPtr) & 1) == 0 )
+      v18 = (Il2CppClass *)sub_1B52BA8(v18);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)((char *)v18->static_fields + 8), (int32_t)v9, v15, v16);
+  }
+  v19 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_KeyValuePair_int__object___int_(
+                                                               v6,
+                                                               (System_Func_TSource__TResult__o *)v9,
+                                                               (const MethodInfo_2D8AF5C *)method->rgctx_data->_9_System_Linq_Enumerable_Select_KeyValuePair_K__V___K_);
+  v20 = System_Linq_Enumerable__ToArray_int_(
+          v19,
+          (const MethodInfo_2D97524 *)method->rgctx_data->_11_System_Linq_Enumerable_ToArray_K_);
+  if ( !v20 )
+    sub_1B00F28(0LL, v21);
+  v22 = *(_QWORD *)&v20->max_length;
+  v23 = v20;
+  if ( (int)v22 >= 1 )
+  {
+    v24 = 0LL;
+    do
     {
-      v34 = 0LL;
-      do
-      {
-        if ( v34 >= (unsigned int)v32 )
-        {
-          v35 = sub_B776C8(v30);
-          sub_B77668(v35, 0LL);
-        }
-        v30 = ((__int64 (__fastcall *)(System_Collections_Generic_Dictionary_K__V__o *, _QWORD))method->rgctx_data->_7_System_Collections_Generic_Dictionary_K__V__Remove->methodPointer)(
-                dic,
-                *(unsigned int *)(v33 + 32 + 4 * v34));
-        LODWORD(v32) = *(_DWORD *)(v33 + 24);
-        ++v34;
-      }
-      while ( (__int64)v34 < (int)v32 );
+      if ( v24 >= (unsigned int)v22 )
+        sub_1B00F30(v20, v21);
+      v20 = (System_Int32_array *)System_Collections_Generic_Dictionary_int__object___Remove(
+                                    (System_Collections_Generic_Dictionary_int__object__o *)dic,
+                                    v23->m_Items[v24 + 1],
+                                    (const MethodInfo_30379B4 *)method->rgctx_data->_14_System_Collections_Generic_Dictionary_K__V__Remove);
+      LODWORD(v22) = v23->max_length;
+      ++v24;
     }
+    while ( (__int64)v24 < (int)v22 );
   }
 }
 
 
-void __fastcall BasicHelper__Remove_object__object_(
-        System_Collections_Generic_Dictionary_K__V__o *dic,
-        System_Func_KeyValuePair_K__V___bool__o *cond,
-        const MethodInfo_1C6891C *method)
-{
-  __int64 v5; // x21
-  long double v6; // q0
-  Il2CppClass *_1_BasicHelper___c__22_K__V; // x22
-  __int16 v8; // w8
-  Il2CppClass *v9; // x22
-  Il2CppClass *v10; // x22
-  Il2CppClass *v11; // x22
-  System_Int32_array **v12; // x22
-  Il2CppClass *v13; // x22
-  __int16 v14; // w8
-  Il2CppClass *v15; // x22
-  Il2CppClass *v16; // x22
-  const MethodInfo_1C6891C_RGCTXs *rgctx_data; // x8
-  Il2CppClass *v18; // x22
-  Il2CppClass *_3_System_Func_KeyValuePair_K__V___K; // x24
-  __int64 v20; // x23
-  System_String_array **v21; // x2
-  System_String_array **v22; // x3
-  System_Boolean_array **v23; // x4
-  System_Int32_array **v24; // x5
-  System_Int32_array *v25; // x6
-  System_Int32_array *v26; // x7
-  Il2CppClass *v27; // x23
-  char *static_fields; // x0
-  __int64 v29; // x0
-  __int64 v30; // x0
-  __int64 v31; // x1
-  __int64 v32; // x8
-  __int64 v33; // x21
-  unsigned __int64 v34; // x22
-  __int64 v35; // x0
-
-  if ( dic )
-  {
-    v5 = ((__int64 (__fastcall *)(System_Collections_Generic_Dictionary_K__V__o *, System_Func_KeyValuePair_K__V___bool__o *))method->rgctx_data->_0_System_Linq_Enumerable_Where_KeyValuePair_K__V__->methodPointer)(
-           dic,
-           cond);
-    _1_BasicHelper___c__22_K__V = method->rgctx_data->_1_BasicHelper___c__22_K__V_;
-    v8 = WORD1(_1_BasicHelper___c__22_K__V->vtable[0].methodPtr);
-    if ( (v8 & 1) == 0 )
-    {
-      sub_B0F2C4(method->rgctx_data->_1_BasicHelper___c__22_K__V_);
-      v8 = WORD1(_1_BasicHelper___c__22_K__V->vtable[0].methodPtr);
-    }
-    if ( (v8 & 0x400) != 0 )
-    {
-      v9 = method->rgctx_data->_1_BasicHelper___c__22_K__V_;
-      if ( (BYTE2(v9->vtable[0].methodPtr) & 1) == 0 )
-        sub_B0F2C4(method->rgctx_data->_1_BasicHelper___c__22_K__V_);
-      if ( !v9->_2.cctor_finished )
-      {
-        v10 = method->rgctx_data->_1_BasicHelper___c__22_K__V_;
-        if ( (BYTE2(v10->vtable[0].methodPtr) & 1) == 0 )
-          sub_B0F2C4(method->rgctx_data->_1_BasicHelper___c__22_K__V_);
-        *(__n128 *)&v6 = j_il2cpp_runtime_class_init_0(v10);
-      }
-    }
-    v11 = method->rgctx_data->_1_BasicHelper___c__22_K__V_;
-    if ( (BYTE2(v11->vtable[0].methodPtr) & 1) == 0 )
-      sub_B0F2C4(method->rgctx_data->_1_BasicHelper___c__22_K__V_);
-    v12 = (System_Int32_array **)*((_QWORD *)v11->static_fields + 1);
-    if ( !v12 )
-    {
-      v13 = method->rgctx_data->_1_BasicHelper___c__22_K__V_;
-      v14 = WORD1(v13->vtable[0].methodPtr);
-      if ( (v14 & 1) == 0 )
-      {
-        sub_B0F2C4(method->rgctx_data->_1_BasicHelper___c__22_K__V_);
-        v14 = WORD1(v13->vtable[0].methodPtr);
-      }
-      if ( (v14 & 0x400) != 0 )
-      {
-        v15 = method->rgctx_data->_1_BasicHelper___c__22_K__V_;
-        if ( (BYTE2(v15->vtable[0].methodPtr) & 1) == 0 )
-          sub_B0F2C4(method->rgctx_data->_1_BasicHelper___c__22_K__V_);
-        if ( !v15->_2.cctor_finished )
-        {
-          v16 = method->rgctx_data->_1_BasicHelper___c__22_K__V_;
-          if ( (BYTE2(v16->vtable[0].methodPtr) & 1) == 0 )
-            sub_B0F2C4(method->rgctx_data->_1_BasicHelper___c__22_K__V_);
-          j_il2cpp_runtime_class_init_0(v16);
-        }
-      }
-      rgctx_data = method->rgctx_data;
-      v18 = rgctx_data->_1_BasicHelper___c__22_K__V_;
-      if ( (BYTE2(v18->vtable[0].methodPtr) & 1) == 0 )
-      {
-        sub_B0F2C4(rgctx_data->_1_BasicHelper___c__22_K__V_);
-        rgctx_data = method->rgctx_data;
-      }
-      _3_System_Func_KeyValuePair_K__V___K = rgctx_data->_3_System_Func_KeyValuePair_K__V___K_;
-      v20 = *(_QWORD *)v18->static_fields;
-      if ( (BYTE2(_3_System_Func_KeyValuePair_K__V___K->vtable[0].methodPtr) & 1) == 0 )
-        sub_B0F2C4(_3_System_Func_KeyValuePair_K__V___K);
-      v12 = (System_Int32_array **)sub_B77694(_3_System_Func_KeyValuePair_K__V___K);
-      ((void (__fastcall *)(System_Int32_array **, __int64, MethodInfo *))method->rgctx_data->_4_System_Func_KeyValuePair_K__V___K___ctor->methodPointer)(
-        v12,
-        v20,
-        method->rgctx_data->_2_BasicHelper___c__22_K__V___Remove_b__22_0);
-      v27 = method->rgctx_data->_1_BasicHelper___c__22_K__V_;
-      if ( (BYTE2(v27->vtable[0].methodPtr) & 1) == 0 )
-        sub_B0F2C4(method->rgctx_data->_1_BasicHelper___c__22_K__V_);
-      static_fields = (char *)v27->static_fields;
-      *((_QWORD *)static_fields + 1) = v12;
-      sub_B77560((BattleServantConfConponent_o *)(static_fields + 8), v12, v21, v22, v23, v24, v25, v26);
-    }
-    v29 = ((__int64 (__fastcall *)(__int64, System_Int32_array **, long double))method->rgctx_data->_5_System_Linq_Enumerable_Select_KeyValuePair_K__V___K_->methodPointer)(
-            v5,
-            v12,
-            v6);
-    v30 = ((__int64 (__fastcall *)(__int64))method->rgctx_data->_6_System_Linq_Enumerable_ToArray_K_->methodPointer)(v29);
-    if ( !v30 )
-      sub_B7769C(0LL, v31);
-    v32 = *(_QWORD *)(v30 + 24);
-    v33 = v30;
-    if ( (int)v32 >= 1 )
-    {
-      v34 = 0LL;
-      do
-      {
-        if ( v34 >= (unsigned int)v32 )
-        {
-          v35 = sub_B776C8(v30);
-          sub_B77668(v35, 0LL);
-        }
-        v30 = ((__int64 (__fastcall *)(System_Collections_Generic_Dictionary_K__V__o *, _QWORD))method->rgctx_data->_7_System_Collections_Generic_Dictionary_K__V__Remove->methodPointer)(
-                dic,
-                *(_QWORD *)(v33 + 32 + 8 * v34));
-        LODWORD(v32) = *(_DWORD *)(v33 + 24);
-        ++v34;
-      }
-      while ( (__int64)v34 < (int)v32 );
-    }
-  }
-}
-
-
+// local variable allocation has failed, the output may be wrong!
 void __fastcall BasicHelper__SetStopEffectCallBack(
         UnityEngine_GameObject_o *obj,
         bool isDestroy,
         System_Action_o *action,
         const MethodInfo *method)
 {
-  _BOOL8 v7; // x0
-  __int64 v8; // x1
-  UnityEngine_Object_o *Component_srcLineSprite; // x22
+  __int64 v7; // x1
+  _BOOL8 v8; // x0
+  __int64 v9; // x1
+  Il2CppObject *Component_object; // x22
 
-  if ( (byte_43897AF & 1) == 0 )
+  if ( (byte_48E3DE9 & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_43897AF = 1;
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___, isDestroy);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v7);
+    byte_48E3DE9 = 1;
   }
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)obj, 0LL, 0LL);
-  Component_srcLineSprite = 0LL;
-  if ( v7 )
+  v8 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)obj, 0LL, 0LL);
+  Component_object = 0LL;
+  if ( v8 )
   {
     if ( !obj )
-      goto LABEL_16;
-    Component_srcLineSprite = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                                        obj,
-                                                        (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
+      goto LABEL_14;
+    Component_object = UnityEngine_GameObject__GetComponent_object_(
+                         obj,
+                         (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
   }
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  v7 = UnityEngine_Object__op_Inequality(Component_srcLineSprite, 0LL, 0LL);
-  if ( v7 )
+  v8 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
+  if ( v8 )
   {
-    if ( Component_srcLineSprite )
+    if ( Component_object )
     {
-      ((void (__fastcall *)(UnityEngine_Object_o *, bool, System_Action_o *, Il2CppClass *))Component_srcLineSprite->klass[1]._1.castClass)(
-        Component_srcLineSprite,
+      ((void (__fastcall *)(Il2CppObject *, bool, System_Action_o *, Il2CppMethodPointer))Component_object->klass->vtable[8].method)(
+        Component_object,
         isDestroy,
         action,
-        Component_srcLineSprite->klass[1]._1.declaringType);
+        Component_object->klass->vtable[9].methodPtr);
       return;
     }
-LABEL_16:
-    sub_B7769C(v7, v8);
+LABEL_14:
+    sub_1B00F28(v8, v9);
   }
   ActionExtensions__Call(action, 0LL);
 }
 
 
+System_Collections_Generic_List_T__o *__fastcall BasicHelper__Shuffle___Il2CppFullySharedGenericType_(
+        System_Collections_Generic_List_T__o *list,
+        const MethodInfo_2D528BC *method)
+{
+  const MethodInfo_2D528BC_RGCTXs *rgctx_data; // x26
+  __int64 native_size; // x21
+  void *v6; // x0
+  __int64 v7; // x1
+  int v8; // w28
+  MethodInfo *_1_System_Collections_Generic_List_T__get_Item; // x1
+  void (__fastcall *methodPointer)(); // x0
+  int32_t v11; // w0
+  int32_t v12; // w26
+  MethodInfo *v13; // x1
+  void (__fastcall *v14)(); // x0
+  const MethodInfo_2D528BC_RGCTXs *v15; // x8
+  char *v16; // x4
+  MethodInfo *_4_System_Collections_Generic_List_T__set_Item; // x1
+  Il2CppMethodPointer v18; // x0
+  const MethodInfo_2D528BC_RGCTXs *v19; // x8
+  char *v20; // x4
+  MethodInfo *v21; // x1
+  Il2CppMethodPointer v22; // x0
+  __int64 v24; // [xsp+0h] [xbp-30h] BYREF
+  unsigned __int64 StatusReg; // [xsp+8h] [xbp-28h]
+  int *v26; // [xsp+10h] [xbp-20h] BYREF
+  char *v27; // [xsp+18h] [xbp-18h]
+  int v28; // [xsp+24h] [xbp-Ch] BYREF
+  __int64 v29; // [xsp+28h] [xbp-8h]
+
+  StatusReg = _ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2));
+  v29 = *(_QWORD *)(StatusReg + 40);
+  rgctx_data = method->rgctx_data;
+  if ( !rgctx_data )
+  {
+    sub_1B52C04(method);
+    rgctx_data = method->rgctx_data;
+  }
+  native_size = (unsigned int)rgctx_data->_2_T->_2.native_size;
+  v6 = memset((char *)&v24 - ((native_size + 15) & 0x1FFFFFFF0LL), 0, rgctx_data->_2_T->_2.native_size);
+  if ( !list )
+    sub_1B00F28(v6, v7);
+  if ( ((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *))rgctx_data->_3_System_Collections_Generic_List_T__get_Count->methodPointer)(list) >= 1 )
+  {
+    v8 = 0;
+    do
+    {
+      _1_System_Collections_Generic_List_T__get_Item = method->rgctx_data->_1_System_Collections_Generic_List_T__get_Item;
+      methodPointer = _1_System_Collections_Generic_List_T__get_Item->methodPointer;
+      v28 = v8;
+      v26 = &v28;
+      v27 = (char *)&v24 - ((native_size + 15) & 0x1FFFFFFF0LL);
+      _1_System_Collections_Generic_List_T__get_Item->invoker_method(
+        methodPointer,
+        _1_System_Collections_Generic_List_T__get_Item,
+        list,
+        (void **)&v26,
+        v27);
+      memcpy(
+        (char *)&v24 - ((native_size + 15) & 0x1FFFFFFF0LL),
+        (char *)&v24 - ((native_size + 15) & 0x1FFFFFFF0LL),
+        native_size);
+      v11 = ((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *))method->rgctx_data->_3_System_Collections_Generic_List_T__get_Count->methodPointer)(list);
+      v12 = UnityEngine_Random__Range_68037396(0, v11, 0LL);
+      v13 = method->rgctx_data->_1_System_Collections_Generic_List_T__get_Item;
+      v14 = v13->methodPointer;
+      v28 = v12;
+      v26 = &v28;
+      v27 = (char *)&v24 - ((native_size + 15) & 0x1FFFFFFF0LL);
+      v13->invoker_method(v14, v13, list, (void **)&v26, v27);
+      v15 = method->rgctx_data;
+      v16 = (char *)&v24 - ((native_size + 15) & 0x1FFFFFFF0LL);
+      if ( (v15->_2_T->_1.byval_arg.bits & 0x80000000) == 0 )
+        v16 = *(char **)((char *)&v24 - ((native_size + 15) & 0x1FFFFFFF0LL));
+      _4_System_Collections_Generic_List_T__set_Item = v15->_4_System_Collections_Generic_List_T__set_Item;
+      v18 = _4_System_Collections_Generic_List_T__set_Item->methodPointer;
+      v28 = v8;
+      v26 = &v28;
+      v27 = v16;
+      ((void (__fastcall *)(Il2CppMethodPointer, MethodInfo *, System_Collections_Generic_List_T__o *, int **))_4_System_Collections_Generic_List_T__set_Item->invoker_method)(
+        v18,
+        _4_System_Collections_Generic_List_T__set_Item,
+        list,
+        &v26);
+      memcpy(
+        (char *)&v24 - ((native_size + 15) & 0x1FFFFFFF0LL),
+        (char *)&v24 - ((native_size + 15) & 0x1FFFFFFF0LL),
+        native_size);
+      v19 = method->rgctx_data;
+      v20 = (char *)&v24 - ((native_size + 15) & 0x1FFFFFFF0LL);
+      v21 = v19->_4_System_Collections_Generic_List_T__set_Item;
+      v22 = v21->methodPointer;
+      if ( (v19->_2_T->_1.byval_arg.bits & 0x80000000) == 0 )
+        v20 = *(char **)((char *)&v24 - ((native_size + 15) & 0x1FFFFFFF0LL));
+      v28 = v12;
+      v26 = &v28;
+      v27 = v20;
+      ((void (__fastcall *)(Il2CppMethodPointer, MethodInfo *, System_Collections_Generic_List_T__o *, int **))v21->invoker_method)(
+        v22,
+        v21,
+        list,
+        &v26);
+      ++v8;
+    }
+    while ( v8 < ((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *))method->rgctx_data->_3_System_Collections_Generic_List_T__get_Count->methodPointer)(list) );
+  }
+  return list;
+}
+
+
 System_Collections_Generic_List_T__o *__fastcall BasicHelper__Shuffle_int_(
         System_Collections_Generic_List_T__o *list,
-        const MethodInfo_1C68BF8 *method)
+        const MethodInfo_2D5271C *method)
 {
-  unsigned int v4; // w21
-  unsigned int v5; // w22
-  int32_t v6; // w0
-  unsigned int v7; // w23
-  unsigned int v8; // w0
+  System_Collections_Generic_List_int__o *v3; // x20
+  int32_t v4; // w21
+  int32_t Item; // w22
+  int32_t v6; // w23
+  int32_t v7; // w0
 
-  if ( !list )
-    sub_B7769C(0LL, method);
-  if ( ((__int64 (*)(void))method->rgctx_data->_1_System_Collections_Generic_List_T__get_Count->methodPointer)() >= 1 )
+  v3 = (System_Collections_Generic_List_int__o *)list;
+  if ( !method->rgctx_data )
+    list = (System_Collections_Generic_List_T__o *)sub_1B52C04(method);
+  if ( !v3 )
+    sub_1B00F28(list, method);
+  if ( v3->fields._size >= 1 )
   {
     v4 = 0;
     do
     {
-      v5 = ((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *, _QWORD))method->rgctx_data->_0_System_Collections_Generic_List_T__get_Item->methodPointer)(
-             list,
-             v4);
-      v6 = ((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *))method->rgctx_data->_1_System_Collections_Generic_List_T__get_Count->methodPointer)(list);
-      v7 = UnityEngine_Random__Range_36343764(0, v6, 0LL);
-      v8 = ((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *, _QWORD))method->rgctx_data->_0_System_Collections_Generic_List_T__get_Item->methodPointer)(
-             list,
-             v7);
-      ((void (__fastcall *)(System_Collections_Generic_List_T__o *, _QWORD, _QWORD))method->rgctx_data->_2_System_Collections_Generic_List_T__set_Item->methodPointer)(
-        list,
+      Item = System_Collections_Generic_List_int___get_Item(
+               v3,
+               v4,
+               (const MethodInfo_33A46BC *)method->rgctx_data->_1_System_Collections_Generic_List_T__get_Item);
+      v6 = UnityEngine_Random__Range_68037396(0, v3->fields._size, 0LL);
+      v7 = System_Collections_Generic_List_int___get_Item(
+             v3,
+             v6,
+             (const MethodInfo_33A46BC *)method->rgctx_data->_1_System_Collections_Generic_List_T__get_Item);
+      System_Collections_Generic_List_int___set_Item(
+        v3,
         v4,
-        v8);
-      ((void (__fastcall *)(System_Collections_Generic_List_T__o *, _QWORD, _QWORD))method->rgctx_data->_2_System_Collections_Generic_List_T__set_Item->methodPointer)(
-        list,
         v7,
-        v5);
+        (const MethodInfo_33A4710 *)method->rgctx_data->_4_System_Collections_Generic_List_T__set_Item);
+      System_Collections_Generic_List_int___set_Item(
+        v3,
+        v6,
+        Item,
+        (const MethodInfo_33A4710 *)method->rgctx_data->_4_System_Collections_Generic_List_T__set_Item);
       ++v4;
     }
-    while ( (int)v4 < ((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *))method->rgctx_data->_1_System_Collections_Generic_List_T__get_Count->methodPointer)(list) );
+    while ( v4 < v3->fields._size );
   }
-  return list;
+  return (System_Collections_Generic_List_T__o *)v3;
 }
 
 
-System_Collections_Generic_List_T__o *__fastcall BasicHelper__Shuffle_string_(
+System_Collections_Generic_List_T__o *__fastcall BasicHelper__Shuffle_object_(
         System_Collections_Generic_List_T__o *list,
-        const MethodInfo_1C68D04 *method)
+        const MethodInfo_2D527EC *method)
 {
-  unsigned int v4; // w21
-  __int64 v5; // x22
-  int32_t v6; // w0
-  unsigned int v7; // w23
-  __int64 v8; // x0
+  System_Collections_Generic_List_object__o *v3; // x20
+  int32_t v4; // w21
+  Il2CppObject *Item; // x22
+  int32_t v6; // w23
+  Il2CppObject *v7; // x0
 
-  if ( !list )
-    sub_B7769C(0LL, method);
-  if ( ((__int64 (*)(void))method->rgctx_data->_1_System_Collections_Generic_List_T__get_Count->methodPointer)() >= 1 )
+  v3 = (System_Collections_Generic_List_object__o *)list;
+  if ( !method->rgctx_data )
+    list = (System_Collections_Generic_List_T__o *)sub_1B52C04(method);
+  if ( !v3 )
+    sub_1B00F28(list, method);
+  if ( v3->fields._size >= 1 )
   {
     v4 = 0;
     do
     {
-      v5 = ((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *, _QWORD))method->rgctx_data->_0_System_Collections_Generic_List_T__get_Item->methodPointer)(
-             list,
-             v4);
-      v6 = ((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *))method->rgctx_data->_1_System_Collections_Generic_List_T__get_Count->methodPointer)(list);
-      v7 = UnityEngine_Random__Range_36343764(0, v6, 0LL);
-      v8 = ((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *, _QWORD))method->rgctx_data->_0_System_Collections_Generic_List_T__get_Item->methodPointer)(
-             list,
-             v7);
-      ((void (__fastcall *)(System_Collections_Generic_List_T__o *, _QWORD, __int64))method->rgctx_data->_2_System_Collections_Generic_List_T__set_Item->methodPointer)(
-        list,
+      Item = System_Collections_Generic_List_object___get_Item(
+               v3,
+               v4,
+               (const MethodInfo_33C1700 *)method->rgctx_data->_1_System_Collections_Generic_List_T__get_Item);
+      v6 = UnityEngine_Random__Range_68037396(0, v3->fields._size, 0LL);
+      v7 = System_Collections_Generic_List_object___get_Item(
+             v3,
+             v6,
+             (const MethodInfo_33C1700 *)method->rgctx_data->_1_System_Collections_Generic_List_T__get_Item);
+      System_Collections_Generic_List_object___set_Item(
+        v3,
         v4,
-        v8);
-      ((void (__fastcall *)(System_Collections_Generic_List_T__o *, _QWORD, __int64))method->rgctx_data->_2_System_Collections_Generic_List_T__set_Item->methodPointer)(
-        list,
         v7,
-        v5);
+        (const MethodInfo_33C1754 *)method->rgctx_data->_4_System_Collections_Generic_List_T__set_Item);
+      System_Collections_Generic_List_object___set_Item(
+        v3,
+        v6,
+        Item,
+        (const MethodInfo_33C1754 *)method->rgctx_data->_4_System_Collections_Generic_List_T__set_Item);
       ++v4;
     }
-    while ( (int)v4 < ((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *))method->rgctx_data->_1_System_Collections_Generic_List_T__get_Count->methodPointer)(list) );
+    while ( v4 < v3->fields._size );
   }
-  return list;
+  return (System_Collections_Generic_List_T__o *)v3;
 }
 
 
-System_Collections_Generic_List_T__o *__fastcall BasicHelper__StableSort_QuestScriptMaterialOverwriteEntity_(
+System_Collections_Generic_List_T__o *__fastcall BasicHelper__StableSort___Il2CppFullySharedGenericType_(
         System_Collections_Generic_List_T__o *list,
         System_Func_T__int__o *priorityFunc,
         bool isDescending,
-        const MethodInfo_1C68E10 *method)
+        const MethodInfo_2D52C78 *method)
 {
-  int v8; // w23
-  __int64 v9; // x0
-  __int64 v10; // x1
-  int v11; // w0
-  int v12; // w25
-  unsigned int i; // w24
-  __int64 v14; // x26
-  int v15; // w0
-  _BOOL4 v16; // w8
-  int v17; // w27
-  unsigned int v18; // w28
-  __int64 v19; // x0
-  int v20; // w0
-  _BOOL4 v21; // w8
+  const MethodInfo_2D52C78_RGCTXs *rgctx_data; // x23
+  __int64 native_size; // x2
+  _QWORD *v10; // x24
+  _QWORD *v11; // x25
+  int v12; // w0
+  const MethodInfo_2D52C78_RGCTXs *v13; // x8
+  MethodInfo *_3_System_Collections_Generic_List_T__get_Item; // x1
+  Il2CppMethodPointer methodPointer; // x8
+  __int64 v16; // x0
+  __int64 v17; // x1
+  const MethodInfo_2D52C78_RGCTXs *v18; // x8
+  MethodInfo *_5_System_Func_T__int__Invoke; // x1
+  Il2CppClass *_4_T; // x9
+  __int64 v21; // x8
+  void (__fastcall *v22)(); // x0
+  int v23; // w26
+  unsigned int v24; // w28
+  MethodInfo *v25; // x1
+  void (__fastcall *v26)(); // x0
+  size_t v27; // w23
+  const void *v28; // x27
+  const MethodInfo_2D52C78_RGCTXs *v29; // x8
+  __int64 v30; // x9
+  MethodInfo *v31; // x1
+  void (__fastcall *v32)(); // x0
+  int v33; // w23
+  _BOOL4 v34; // w8
+  int v35; // w25
+  MethodInfo *v36; // x1
+  void (__fastcall *v37)(); // x0
+  MethodInfo *v38; // x1
+  void (__fastcall *v39)(); // x0
+  unsigned int bits; // w9
+  __int64 v41; // x8
+  const MethodInfo_2D52C78_RGCTXs *v42; // x8
+  __int64 v43; // x4
+  MethodInfo *_7_System_Collections_Generic_List_T__Insert; // x1
+  Il2CppMethodPointer v45; // x0
+  __int64 v47; // [xsp+0h] [xbp-50h] BYREF
+  unsigned __int64 StatusReg; // [xsp+8h] [xbp-48h]
+  _QWORD *v49; // [xsp+10h] [xbp-40h]
+  int v50; // [xsp+1Ch] [xbp-34h]
+  void *v51; // [xsp+20h] [xbp-30h]
+  __int64 v52; // [xsp+28h] [xbp-28h]
+  int *v53; // [xsp+30h] [xbp-20h] BYREF
+  _QWORD *v54; // [xsp+38h] [xbp-18h]
+  int v55; // [xsp+44h] [xbp-Ch] BYREF
+  __int64 v56; // [xsp+48h] [xbp-8h]
 
-  if ( list
-    && ((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *))method->rgctx_data->_0_System_Collections_Generic_List_T__get_Count->methodPointer)(list) >= 2 )
+  StatusReg = _ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2));
+  v56 = *(_QWORD *)(StatusReg + 40);
+  rgctx_data = method->rgctx_data;
+  if ( !rgctx_data )
   {
-    v8 = ((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *))method->rgctx_data->_0_System_Collections_Generic_List_T__get_Count->methodPointer)(list);
-    v9 = ((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *, _QWORD))method->rgctx_data->_1_System_Collections_Generic_List_T__get_Item->methodPointer)(
-           list,
-           0LL);
-    if ( !priorityFunc )
-      sub_B7769C(v9, v10);
-    v11 = ((__int64 (__fastcall *)(System_Func_T__int__o *, __int64))method->rgctx_data->_2_System_Func_T__int__Invoke->methodPointer)(
-            priorityFunc,
-            v9);
-    if ( v8 >= 2 )
+    sub_1B52C04(method);
+    rgctx_data = method->rgctx_data;
+  }
+  native_size = (unsigned int)rgctx_data->_4_T->_2.native_size;
+  v10 = (__int64 *)((char *)&v47 - ((native_size + 15) & 0x1FFFFFFF0LL));
+  v11 = v10;
+  v51 = v10;
+  v52 = native_size;
+  memset(v10, 0, native_size);
+  if ( !list
+    || ((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *))rgctx_data->_1_System_Collections_Generic_List_T__get_Count->methodPointer)(list) < 2 )
+  {
+    return list;
+  }
+  v12 = ((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *))method->rgctx_data->_1_System_Collections_Generic_List_T__get_Count->methodPointer)(list);
+  v13 = method->rgctx_data;
+  v50 = v12;
+  _3_System_Collections_Generic_List_T__get_Item = v13->_3_System_Collections_Generic_List_T__get_Item;
+  methodPointer = _3_System_Collections_Generic_List_T__get_Item->methodPointer;
+  v55 = 0;
+  v53 = &v55;
+  v54 = v10;
+  v16 = ((__int64 (__fastcall *)(Il2CppMethodPointer, MethodInfo *, System_Collections_Generic_List_T__o *, int **, _QWORD *))_3_System_Collections_Generic_List_T__get_Item->invoker_method)(
+          methodPointer,
+          _3_System_Collections_Generic_List_T__get_Item,
+          list,
+          &v53,
+          v10);
+  if ( !priorityFunc )
+    sub_1B00F28(v16, v17);
+  v18 = method->rgctx_data;
+  _4_T = v18->_4_T;
+  _5_System_Func_T__int__Invoke = v18->_5_System_Func_T__int__Invoke;
+  v21 = (__int64)v10;
+  v22 = _5_System_Func_T__int__Invoke->methodPointer;
+  if ( (_4_T->_1.byval_arg.bits & 0x80000000) == 0 )
+    v21 = *v10;
+  v53 = (int *)v21;
+  _5_System_Func_T__int__Invoke->invoker_method(v22, _5_System_Func_T__int__Invoke, priorityFunc, (void **)&v53, &v55);
+  if ( v50 < 2 )
+    return list;
+  v23 = v55;
+  v24 = 1;
+  v49 = v10;
+  do
+  {
+    v25 = method->rgctx_data->_3_System_Collections_Generic_List_T__get_Item;
+    v26 = v25->methodPointer;
+    v55 = v24;
+    v53 = &v55;
+    v54 = v10;
+    v25->invoker_method(v26, v25, list, (void **)&v53, v10);
+    v28 = v51;
+    v27 = v52;
+    memcpy(v51, v10, v52);
+    memcpy(v11, v28, v27);
+    v29 = method->rgctx_data;
+    v30 = (__int64)v11;
+    if ( (v29->_4_T->_1.byval_arg.bits & 0x80000000) == 0 )
+      v30 = *v11;
+    v31 = v29->_5_System_Func_T__int__Invoke;
+    v32 = v31->methodPointer;
+    v53 = (int *)v30;
+    v31->invoker_method(v32, v31, priorityFunc, (void **)&v53, &v55);
+    v33 = v55;
+    v34 = v55 > v23;
+    if ( !isDescending )
+      v34 = v55 < v23;
+    if ( !v34 )
+      goto LABEL_30;
+    ((void (__fastcall *)(System_Collections_Generic_List_T__o *, _QWORD))method->rgctx_data->_6_System_Collections_Generic_List_T__RemoveAt->methodPointer)(
+      list,
+      v24);
+    v35 = 0;
+    while ( 1 )
     {
-      v12 = v11;
-      for ( i = 1; i != v8; ++i )
+      v36 = method->rgctx_data->_3_System_Collections_Generic_List_T__get_Item;
+      v37 = v36->methodPointer;
+      v55 = v35;
+      v53 = &v55;
+      v54 = v10;
+      v36->invoker_method(v37, v36, list, (void **)&v53, v10);
+      v38 = method->rgctx_data->_5_System_Func_T__int__Invoke;
+      v39 = v38->methodPointer;
+      bits = method->rgctx_data->_4_T->_1.byval_arg.bits;
+      v41 = (__int64)v10;
+      if ( !isDescending )
+        break;
+      if ( (bits & 0x80000000) == 0 )
+        v41 = *v10;
+      v53 = (int *)v41;
+      v38->invoker_method(v39, v38, priorityFunc, (void **)&v53, &v55);
+      if ( v33 > v55 )
+        goto LABEL_26;
+LABEL_24:
+      if ( v24 == ++v35 )
+        goto LABEL_29;
+    }
+    if ( (bits & 0x80000000) == 0 )
+      v41 = *v10;
+    v53 = (int *)v41;
+    v38->invoker_method(v39, v38, priorityFunc, (void **)&v53, &v55);
+    if ( v33 >= v55 )
+      goto LABEL_24;
+LABEL_26:
+    memcpy(v10, v51, v52);
+    v42 = method->rgctx_data;
+    v43 = (__int64)v10;
+    if ( (v42->_4_T->_1.byval_arg.bits & 0x80000000) == 0 )
+      v43 = *v10;
+    _7_System_Collections_Generic_List_T__Insert = v42->_7_System_Collections_Generic_List_T__Insert;
+    v45 = _7_System_Collections_Generic_List_T__Insert->methodPointer;
+    v55 = v35;
+    v53 = &v55;
+    v54 = (_QWORD *)v43;
+    ((void (__fastcall *)(Il2CppMethodPointer, MethodInfo *, System_Collections_Generic_List_T__o *, int **))_7_System_Collections_Generic_List_T__Insert->invoker_method)(
+      v45,
+      _7_System_Collections_Generic_List_T__Insert,
+      list,
+      &v53);
+LABEL_29:
+    v11 = v49;
+    v33 = v23;
+LABEL_30:
+    ++v24;
+    v23 = v33;
+  }
+  while ( v24 != v50 );
+  return list;
+}
+
+
+System_Collections_Generic_List_T__o *__fastcall BasicHelper__StableSort_object_(
+        System_Collections_Generic_List_T__o *list,
+        System_Func_T__int__o *priorityFunc,
+        bool isDescending,
+        const MethodInfo_2D52AE4 *method)
+{
+  int32_t size; // w28
+  Il2CppObject *Item; // x0
+  __int64 v10; // x1
+  int v11; // w24
+  int32_t i; // w23
+  Il2CppObject *v13; // x25
+  int v14; // w0
+  _BOOL4 v15; // w8
+  int v16; // w26
+  int32_t v17; // w27
+  Il2CppObject *v18; // x0
+  int v19; // w0
+  _BOOL4 v20; // w8
+
+  if ( method->rgctx_data )
+  {
+    if ( !list )
+      return list;
+  }
+  else
+  {
+    sub_1B52C04(method);
+    if ( !list )
+      return list;
+  }
+  size = list->fields._size;
+  if ( size >= 2 )
+  {
+    Item = System_Collections_Generic_List_object___get_Item(
+             (System_Collections_Generic_List_object__o *)list,
+             0,
+             (const MethodInfo_33C1700 *)method->rgctx_data->_3_System_Collections_Generic_List_T__get_Item);
+    if ( !priorityFunc )
+      sub_1B00F28(Item, v10);
+    v11 = ((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, Il2CppObject *, _QWORD))priorityFunc->fields.m_target)(
+            priorityFunc->fields.original_method_info,
+            Item,
+            *(_QWORD *)&priorityFunc->fields.extra_arg);
+    for ( i = 1; i != size; ++i )
+    {
+      v13 = System_Collections_Generic_List_object___get_Item(
+              (System_Collections_Generic_List_object__o *)list,
+              i,
+              (const MethodInfo_33C1700 *)method->rgctx_data->_3_System_Collections_Generic_List_T__get_Item);
+      v14 = ((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, Il2CppObject *, _QWORD))priorityFunc->fields.m_target)(
+              priorityFunc->fields.original_method_info,
+              v13,
+              *(_QWORD *)&priorityFunc->fields.extra_arg);
+      v15 = v14 > v11;
+      if ( !isDescending )
+        v15 = v14 < v11;
+      v16 = v14;
+      if ( v15 )
       {
-        v14 = ((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *, _QWORD))method->rgctx_data->_1_System_Collections_Generic_List_T__get_Item->methodPointer)(
-                list,
-                i);
-        v15 = ((__int64 (__fastcall *)(System_Func_T__int__o *, __int64))method->rgctx_data->_2_System_Func_T__int__Invoke->methodPointer)(
-                priorityFunc,
-                v14);
-        v16 = v15 > v12;
-        if ( !isDescending )
-          v16 = v15 < v12;
-        v17 = v15;
-        if ( v16 )
+        System_Collections_Generic_List_object___RemoveAt(
+          (System_Collections_Generic_List_object__o *)list,
+          i,
+          (const MethodInfo_33C31A4 *)method->rgctx_data->_6_System_Collections_Generic_List_T__RemoveAt);
+        v17 = 0;
+        while ( 1 )
         {
-          ((void (__fastcall *)(System_Collections_Generic_List_T__o *, _QWORD))method->rgctx_data->_3_System_Collections_Generic_List_T__RemoveAt->methodPointer)(
-            list,
-            i);
-          v18 = 0;
-          while ( 1 )
-          {
-            v19 = ((__int64 (__fastcall *)(System_Collections_Generic_List_T__o *, _QWORD))method->rgctx_data->_1_System_Collections_Generic_List_T__get_Item->methodPointer)(
-                    list,
-                    v18);
-            v20 = ((__int64 (__fastcall *)(System_Func_T__int__o *, __int64))method->rgctx_data->_2_System_Func_T__int__Invoke->methodPointer)(
-                    priorityFunc,
-                    v19);
-            v21 = v17 > v20;
-            if ( !isDescending )
-              v21 = v17 < v20;
-            if ( v21 )
-              break;
-            if ( ++v18 >= i )
-              goto LABEL_16;
-          }
-          ((void (__fastcall *)(System_Collections_Generic_List_T__o *, _QWORD, __int64))method->rgctx_data->_4_System_Collections_Generic_List_T__Insert->methodPointer)(
-            list,
-            v18,
-            v14);
-LABEL_16:
-          v17 = v12;
+          v18 = System_Collections_Generic_List_object___get_Item(
+                  (System_Collections_Generic_List_object__o *)list,
+                  v17,
+                  (const MethodInfo_33C1700 *)method->rgctx_data->_3_System_Collections_Generic_List_T__get_Item);
+          v19 = ((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, Il2CppObject *, _QWORD))priorityFunc->fields.m_target)(
+                  priorityFunc->fields.original_method_info,
+                  v18,
+                  *(_QWORD *)&priorityFunc->fields.extra_arg);
+          v20 = v16 > v19;
+          if ( !isDescending )
+            v20 = v16 < v19;
+          if ( v20 )
+            break;
+          if ( i == ++v17 )
+            goto LABEL_18;
         }
-        v12 = v17;
+        System_Collections_Generic_List_object___Insert(
+          (System_Collections_Generic_List_object__o *)list,
+          v17,
+          v13,
+          (const MethodInfo_33C2780 *)method->rgctx_data->_7_System_Collections_Generic_List_T__Insert);
+LABEL_18:
+        v16 = v11;
       }
+      v11 = v16;
     }
   }
   return list;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall BasicHelper__SubstringLast(
         System_Text_StringBuilder_o *self,
         int32_t len,
@@ -3209,15 +4771,15 @@ System_String_o *__fastcall BasicHelper__SubstringLast(
   System_String_o *v7; // x21
   int32_t v8; // w0
 
-  if ( (byte_43897B4 & 1) == 0 )
+  if ( (byte_48E3DED & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_43897B4 = 1;
+    sub_1B00CCC(&StringLiteral_1/*""*/, *(_QWORD *)&len);
+    byte_48E3DED = 1;
   }
   if ( !self || System_Text_StringBuilder__get_Length(self, 0LL) < len )
     return (System_String_o *)StringLiteral_1/*""*/;
   Length = System_Text_StringBuilder__get_Length(self, 0LL);
-  v7 = System_Text_StringBuilder__ToString_42949060(self, Length - len, len, 0LL);
+  v7 = System_Text_StringBuilder__ToString_59484368(self, Length - len, len, 0LL);
   v8 = System_Text_StringBuilder__get_Length(self, 0LL);
   System_Text_StringBuilder__Remove(self, v8 - len, len, 0LL);
   return v7;
@@ -3270,19 +4832,19 @@ bool __fastcall BasicHelper__SynchronizeAnimation(
         {
           UnityEngine_AnimationState__set_time(Item, time, 0LL);
           UnityEngine_Animation__Sample(v8, 0LL);
-          UnityEngine_Animation__Play_51745976(v8, selfAnimStr, 0LL);
+          UnityEngine_Animation__Play_67822748(v8, selfAnimStr, 0LL);
           return 1;
         }
       }
 LABEL_13:
-      sub_B7769C(self, selfAnimStr);
+      sub_1B00F28(self, selfAnimStr);
     }
   }
   return 0;
 }
 
 
-bool __fastcall BasicHelper__SynchronizeAnimation_22416652(
+bool __fastcall BasicHelper__SynchronizeAnimation_39736524(
         SimpleAnimation_o *self,
         System_String_o *selfAnimStr,
         System_String_o *tgAnimStr,
@@ -3292,44 +4854,44 @@ bool __fastcall BasicHelper__SynchronizeAnimation_22416652(
   SimpleAnimation_o *v8; // x20
   SimpleAnimation_c *klass; // x8
   SimpleAnimation_o *v10; // x23
-  unsigned __int64 v11; // x10
-  int32_t *p_offset; // x11
+  __int64 v11; // x9
+  int32_t *p_offset; // x10
   __int64 v13; // x0
   int v14; // w23
   SimpleAnimation_c *v15; // x8
   SimpleAnimation_o *v16; // x24
-  unsigned __int64 v17; // x10
-  int32_t *v18; // x11
+  __int64 v17; // x9
+  int32_t *v18; // x10
   __int64 v19; // x0
   SimpleAnimation_c *v20; // x8
   SimpleAnimation_o *v21; // x23
-  unsigned __int64 v22; // x10
-  int32_t *v23; // x11
+  __int64 v22; // x9
+  int32_t *v23; // x10
   __int64 v24; // x0
   float v25; // s8
   SimpleAnimation_c *v26; // x8
   SimpleAnimation_o *v27; // x23
-  unsigned __int64 v28; // x10
-  int32_t *v29; // x11
+  __int64 v28; // x9
+  int32_t *v29; // x10
   __int64 v30; // x0
   SimpleAnimation_State_o *Item; // x23
   SimpleAnimation_c *v32; // x8
   SimpleAnimation_o *v33; // x21
-  unsigned __int64 v34; // x10
-  int32_t *v35; // x11
+  __int64 v34; // x9
+  int32_t *v35; // x10
   __int64 v36; // x0
   long double v38; // q0
   SimpleAnimation_State_c *v39; // x8
   long double v40; // q8
-  unsigned __int64 v41; // x10
-  SimpleAnimation_State_c **v42; // x11
+  __int64 v41; // x9
+  SimpleAnimation_State_c **v42; // x10
   __int64 p_method; // x0
 
   v8 = self;
-  if ( (byte_43897AD & 1) == 0 )
+  if ( (byte_48E3DE7 & 1) == 0 )
   {
-    self = (SimpleAnimation_o *)sub_B775C4(&SimpleAnimation_State_TypeInfo);
-    byte_43897AD = 1;
+    self = (SimpleAnimation_o *)sub_1B00CCC(&SimpleAnimation_State_TypeInfo, selfAnimStr);
+    byte_48E3DE7 = 1;
   }
   if ( !v8 )
     goto LABEL_51;
@@ -3338,15 +4900,15 @@ bool __fastcall BasicHelper__SynchronizeAnimation_22416652(
     goto LABEL_51;
   klass = self->klass;
   v10 = self;
-  if ( *(_WORD *)&self->klass->_2.bitflags1 )
+  v11 = *(unsigned __int16 *)(&self->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&self->klass->_2.bitflags2 + 3) )
   {
-    v11 = 0LL;
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((SimpleAnimation_State_c **)p_offset - 1) != SimpleAnimation_State_TypeInfo )
     {
-      ++v11;
+      --v11;
       p_offset += 4;
-      if ( v11 >= *(unsigned __int16 *)&self->klass->_2.bitflags1 )
+      if ( !v11 )
         goto LABEL_9;
     }
     v13 = (__int64)(&klass[1]._1.klass + 2 * *p_offset);
@@ -3354,7 +4916,7 @@ bool __fastcall BasicHelper__SynchronizeAnimation_22416652(
   else
   {
 LABEL_9:
-    v13 = sub_B0F4C0(self, SimpleAnimation_State_TypeInfo, 15LL);
+    v13 = sub_1B52CAC(self, SimpleAnimation_State_TypeInfo, 15LL);
   }
   self = (SimpleAnimation_o *)(*(__int64 (__fastcall **)(SimpleAnimation_o *, _QWORD))v13)(v10, *(_QWORD *)(v13 + 8));
   if ( !targetAnim )
@@ -3365,15 +4927,15 @@ LABEL_9:
     goto LABEL_51;
   v15 = self->klass;
   v16 = self;
-  if ( *(_WORD *)&self->klass->_2.bitflags1 )
+  v17 = *(unsigned __int16 *)(&self->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&self->klass->_2.bitflags2 + 3) )
   {
-    v17 = 0LL;
     v18 = &v15->_1.interfaceOffsets->offset;
     while ( *((SimpleAnimation_State_c **)v18 - 1) != SimpleAnimation_State_TypeInfo )
     {
-      ++v17;
+      --v17;
       v18 += 4;
-      if ( v17 >= *(unsigned __int16 *)&self->klass->_2.bitflags1 )
+      if ( !v17 )
         goto LABEL_17;
     }
     v19 = (__int64)(&v15[1]._1.klass + 2 * *v18);
@@ -3381,7 +4943,7 @@ LABEL_9:
   else
   {
 LABEL_17:
-    v19 = sub_B0F4C0(self, SimpleAnimation_State_TypeInfo, 15LL);
+    v19 = sub_1B52CAC(self, SimpleAnimation_State_TypeInfo, 15LL);
   }
   if ( v14 != (*(unsigned int (__fastcall **)(SimpleAnimation_o *, _QWORD))v19)(v16, *(_QWORD *)(v19 + 8)) )
     return 0;
@@ -3390,15 +4952,15 @@ LABEL_17:
     goto LABEL_51;
   v20 = self->klass;
   v21 = self;
-  if ( *(_WORD *)&self->klass->_2.bitflags1 )
+  v22 = *(unsigned __int16 *)(&self->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&self->klass->_2.bitflags2 + 3) )
   {
-    v22 = 0LL;
     v23 = &v20->_1.interfaceOffsets->offset;
     while ( *((SimpleAnimation_State_c **)v23 - 1) != SimpleAnimation_State_TypeInfo )
     {
-      ++v22;
+      --v22;
       v23 += 4;
-      if ( v22 >= *(unsigned __int16 *)&self->klass->_2.bitflags1 )
+      if ( !v22 )
         goto LABEL_25;
     }
     v24 = (__int64)(&v20[1]._1.parent + 2 * *v23);
@@ -3406,24 +4968,24 @@ LABEL_17:
   else
   {
 LABEL_25:
-    v24 = sub_B0F4C0(self, SimpleAnimation_State_TypeInfo, 13LL);
+    v24 = sub_1B52CAC(self, SimpleAnimation_State_TypeInfo, 13LL);
   }
   LODWORD(v25) = COERCE_UNSIGNED_INT128(((long double (__fastcall *)(SimpleAnimation_o *, _QWORD))*(_QWORD *)v24)(v21, *(_QWORD *)(v24 + 8)));
   self = (SimpleAnimation_o *)SimpleAnimation__get_Item(targetAnim, tgAnimStr, 0LL);
   if ( !self )
 LABEL_51:
-    sub_B7769C(self, selfAnimStr);
+    sub_1B00F28(self, selfAnimStr);
   v26 = self->klass;
   v27 = self;
-  if ( *(_WORD *)&self->klass->_2.bitflags1 )
+  v28 = *(unsigned __int16 *)(&self->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&self->klass->_2.bitflags2 + 3) )
   {
-    v28 = 0LL;
     v29 = &v26->_1.interfaceOffsets->offset;
     while ( *((SimpleAnimation_State_c **)v29 - 1) != SimpleAnimation_State_TypeInfo )
     {
-      ++v28;
+      --v28;
       v29 += 4;
-      if ( v28 >= *(unsigned __int16 *)&self->klass->_2.bitflags1 )
+      if ( !v28 )
         goto LABEL_32;
     }
     v30 = (__int64)(&v26[1]._1.parent + 2 * *v29);
@@ -3431,7 +4993,7 @@ LABEL_51:
   else
   {
 LABEL_32:
-    v30 = sub_B0F4C0(self, SimpleAnimation_State_TypeInfo, 13LL);
+    v30 = sub_1B52CAC(self, SimpleAnimation_State_TypeInfo, 13LL);
   }
   if ( v25 != (*(float (__fastcall **)(SimpleAnimation_o *, _QWORD))v30)(v27, *(_QWORD *)(v30 + 8)) )
     return 0;
@@ -3441,15 +5003,15 @@ LABEL_32:
     goto LABEL_51;
   v32 = self->klass;
   v33 = self;
-  if ( *(_WORD *)&self->klass->_2.bitflags1 )
+  v34 = *(unsigned __int16 *)(&self->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&self->klass->_2.bitflags2 + 3) )
   {
-    v34 = 0LL;
     v35 = &v32->_1.interfaceOffsets->offset;
     while ( *((SimpleAnimation_State_c **)v35 - 1) != SimpleAnimation_State_TypeInfo )
     {
-      ++v34;
+      --v34;
       v35 += 4;
-      if ( v34 >= *(unsigned __int16 *)&self->klass->_2.bitflags1 )
+      if ( !v34 )
         goto LABEL_40;
     }
     v36 = (__int64)(&v32->vtable._3_ToString.method + 2 * *v35);
@@ -3457,22 +5019,22 @@ LABEL_32:
   else
   {
 LABEL_40:
-    v36 = sub_B0F4C0(self, SimpleAnimation_State_TypeInfo, 3LL);
+    v36 = sub_1B52CAC(self, SimpleAnimation_State_TypeInfo, 3LL);
   }
   self = (SimpleAnimation_o *)(*(__int64 (__fastcall **)(SimpleAnimation_o *, _QWORD))v36)(v33, *(_QWORD *)(v36 + 8));
   if ( !Item )
     goto LABEL_51;
   v39 = Item->klass;
   v40 = v38;
-  if ( *(_WORD *)&Item->klass->_2.bitflags1 )
+  v41 = *(unsigned __int16 *)(&Item->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&Item->klass->_2.bitflags2 + 3) )
   {
-    v41 = 0LL;
     v42 = (SimpleAnimation_State_c **)&v39->_1.interfaceOffsets->offset;
     while ( *(v42 - 1) != SimpleAnimation_State_TypeInfo )
     {
-      ++v41;
+      --v41;
       v42 += 2;
-      if ( v41 >= *(unsigned __int16 *)&Item->klass->_2.bitflags1 )
+      if ( !v41 )
         goto LABEL_48;
     }
     p_method = (__int64)&v39->vtable[*(_DWORD *)v42 + 4].method;
@@ -3480,14 +5042,14 @@ LABEL_40:
   else
   {
 LABEL_48:
-    p_method = sub_B0F4C0(Item, SimpleAnimation_State_TypeInfo, 4LL);
+    p_method = sub_1B52CAC(Item, SimpleAnimation_State_TypeInfo, 4LL);
   }
   (*(void (__fastcall **)(SimpleAnimation_State_o *, _QWORD, long double))p_method)(
     Item,
     *(_QWORD *)(p_method + 8),
     v40);
   SimpleAnimation__Sample(v8, 0LL);
-  SimpleAnimation__Play_16815192(v8, selfAnimStr, 0LL);
+  SimpleAnimation__Play_62462980(v8, selfAnimStr, 0LL);
   return 1;
 }
 
@@ -3495,128 +5057,187 @@ LABEL_48:
 Il2CppObject *__fastcall BasicHelper__TakeIf_object_(
         Il2CppObject *self,
         System_Predicate_T__o *match,
-        const MethodInfo_1C68FD8 *method)
+        const MethodInfo_2D52FD4 *method)
 {
-  Il2CppObject *v3; // x19
+  Il2CppObject *v4; // x19
 
-  if ( !self )
-    return 0LL;
+  v4 = self;
+  if ( method->rgctx_data )
+  {
+    if ( !self )
+      return 0LL;
+  }
+  else
+  {
+    self = (Il2CppObject *)sub_1B52C04(method);
+    if ( !v4 )
+      return 0LL;
+  }
   if ( !match )
-    sub_B7769C(self, 0LL);
-  v3 = self;
-  if ( (((__int64 (__fastcall *)(System_Predicate_T__o *, Il2CppObject *))method->rgctx_data->_1_System_Predicate_T__Invoke->methodPointer)(
-          match,
-          self) & 1) == 0 )
+    sub_1B00F28(self, match);
+  if ( (((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, Il2CppObject *, _QWORD))match->fields.m_target)(
+          match->fields.original_method_info,
+          v4,
+          *(_QWORD *)&match->fields.extra_arg) & 1) == 0 )
     return 0LL;
-  return v3;
+  return v4;
 }
 
 
 System_String_o *__fastcall BasicHelper__ToCommaString(int32_t value, const MethodInfo *method)
 {
   __int64 v2; // x2
-  Il2CppObject *v4; // x0
-  int32_t v6; // [xsp+Ch] [xbp-14h] BYREF
+  __int64 v3; // x3
+  __int64 v4; // x4
+  __int64 v6; // x1
+  Il2CppObject *v7; // x0
+  int32_t v9; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_43897B5 & 1) == 0 )
+  if ( (byte_48E3DEE & 1) == 0 )
   {
-    sub_B775C4(&int_TypeInfo);
-    sub_B775C4(&StringLiteral_23975/*"{0:#,0}"*/);
-    byte_43897B5 = 1;
+    sub_1B00CCC(&int_TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_24569/*"{0:#,0}"*/, v6);
+    byte_48E3DEE = 1;
   }
-  v6 = value;
-  v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v6, v2);
-  return System_String__Format((System_String_o *)StringLiteral_23975/*"{0:#,0}"*/, v4, 0LL);
+  v9 = value;
+  v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9, v2, v3, v4);
+  return System_String__Format((System_String_o *)StringLiteral_24569/*"{0:#,0}"*/, v7, 0LL);
 }
 
 
-System_String_o *__fastcall BasicHelper__ToCommaString_22419268(int64_t value, const MethodInfo *method)
+System_String_o *__fastcall BasicHelper__ToCommaString_39739092(int64_t value, const MethodInfo *method)
 {
   __int64 v2; // x2
-  Il2CppObject *v4; // x0
-  int64_t v6; // [xsp+8h] [xbp-18h] BYREF
+  __int64 v3; // x3
+  __int64 v4; // x4
+  __int64 v6; // x1
+  Il2CppObject *v7; // x0
+  int64_t v9; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_43897B6 & 1) == 0 )
+  if ( (byte_48E3DEF & 1) == 0 )
   {
-    sub_B775C4(&long_TypeInfo);
-    sub_B775C4(&StringLiteral_23975/*"{0:#,0}"*/);
-    byte_43897B6 = 1;
+    sub_1B00CCC(&long_TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_24569/*"{0:#,0}"*/, v6);
+    byte_48E3DEF = 1;
   }
-  v6 = value;
-  v4 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v6, v2);
-  return System_String__Format((System_String_o *)StringLiteral_23975/*"{0:#,0}"*/, v4, 0LL);
+  v9 = value;
+  v7 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v9, v2, v3, v4);
+  return System_String__Format((System_String_o *)StringLiteral_24569/*"{0:#,0}"*/, v7, 0LL);
 }
 
 
-System_Collections_Generic_IEnumerable_T__o *__fastcall BasicHelper__ToIterator_RestockServantLogic_(
+System_Collections_Generic_IEnumerable_T__o *__fastcall BasicHelper__ToIterator___Il2CppFullySharedGenericType_(
         int32_t loopCount,
         System_Func_int__T__o *func,
-        const MethodInfo_1C69024 *method)
+        const MethodInfo_2D5312C *method)
 {
-  Il2CppClass *_0_BasicHelper__ToIterator_d__31_T; // x22
-  __int64 v7; // x0
-  const MethodInfo_1C69024_RGCTXs *rgctx_data; // x8
-  __int64 v9; // x21
-  __int64 v10; // x0
-  __int64 v11; // x1
-  System_String_array **v12; // x2
-  System_String_array **v13; // x3
-  System_Boolean_array **v14; // x4
-  System_Int32_array **v15; // x5
-  System_Int32_array *v16; // x6
-  System_Int32_array *v17; // x7
+  const MethodInfo_2D5312C_RGCTXs *rgctx_data; // x8
+  __int64 _0_BasicHelper__ToIterator_d__31_T; // x0
+  System_Collections_Generic_IEnumerable_T__o *v8; // x22
+  __int64 v9; // x0
+  __int64 v10; // x1
 
-  _0_BasicHelper__ToIterator_d__31_T = method->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_;
-  if ( (BYTE2(_0_BasicHelper__ToIterator_d__31_T->vtable[0].methodPtr) & 1) == 0 )
-    sub_B0F2C4(method->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_);
-  v7 = sub_B77694(_0_BasicHelper__ToIterator_d__31_T);
   rgctx_data = method->rgctx_data;
-  v9 = v7;
-  v10 = ((__int64 (__fastcall *)(__int64, __int64))rgctx_data->_1_BasicHelper__ToIterator_d__31_T___ctor->methodPointer)(
-          v7,
-          4294967294LL);
-  if ( !v9 )
-    sub_B7769C(v10, v11);
-  *(_DWORD *)(v9 + 60) = loopCount;
-  *(_QWORD *)(v9 + 48) = func;
-  sub_B77560((BattleServantConfConponent_o *)(v9 + 48), (System_Int32_array **)func, v12, v13, v14, v15, v16, v17);
-  return (System_Collections_Generic_IEnumerable_T__o *)v9;
+  if ( !rgctx_data )
+  {
+    sub_1B52C04(method);
+    rgctx_data = method->rgctx_data;
+  }
+  _0_BasicHelper__ToIterator_d__31_T = (__int64)rgctx_data->_0_BasicHelper__ToIterator_d__31_T_;
+  if ( (BYTE5(rgctx_data->_0_BasicHelper__ToIterator_d__31_T_->vtable[0].methodPtr) & 1) == 0 )
+    _0_BasicHelper__ToIterator_d__31_T = sub_1B52BA8(_0_BasicHelper__ToIterator_d__31_T);
+  v8 = (System_Collections_Generic_IEnumerable_T__o *)sub_1B00F18(_0_BasicHelper__ToIterator_d__31_T);
+  v9 = ((__int64 (__fastcall *)(System_Collections_Generic_IEnumerable_T__o *, __int64))method->rgctx_data->_1_BasicHelper__ToIterator_d__31_T___ctor->methodPointer)(
+         v8,
+         4294967294LL);
+  if ( !v8 )
+    sub_1B00F28(v9, v10);
+  sub_1955A60(
+    v8,
+    (char *)method->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_->_1.fields + 192,
+    (unsigned int)loopCount);
+  sub_19556E4(v8, (char *)method->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_->_1.fields + 128, func);
+  return v8;
 }
 
 
 System_Collections_Generic_IEnumerable_T__o *__fastcall BasicHelper__ToIterator_float_(
         int32_t loopCount,
         System_Func_int__T__o *func,
-        const MethodInfo_1C690A8 *method)
+        const MethodInfo_2D530B0 *method)
 {
-  Il2CppClass *_0_BasicHelper__ToIterator_d__31_T; // x22
-  __int64 v7; // x0
-  const MethodInfo_1C690A8_RGCTXs *rgctx_data; // x8
-  __int64 v9; // x21
-  __int64 v10; // x0
-  __int64 v11; // x1
-  System_String_array **v12; // x2
-  System_String_array **v13; // x3
-  System_Boolean_array **v14; // x4
-  System_Int32_array **v15; // x5
-  System_Int32_array *v16; // x6
-  System_Int32_array *v17; // x7
+  const MethodInfo_2D530B0_RGCTXs *rgctx_data; // x8
+  __int64 _0_BasicHelper__ToIterator_d__31_T; // x0
+  BasicHelper__ToIterator_d__31_T__o *v8; // x0
+  const MethodInfo_2D530B0_RGCTXs *v9; // x8
+  BasicHelper__ToIterator_d__31_T__o *v10; // x21
+  __int64 v11; // x0
+  __int64 v12; // x1
+  int32_t v13; // w2
+  int32_t v14; // w3
 
-  _0_BasicHelper__ToIterator_d__31_T = method->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_;
-  if ( (BYTE2(_0_BasicHelper__ToIterator_d__31_T->vtable[0].methodPtr) & 1) == 0 )
-    sub_B0F2C4(method->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_);
-  v7 = sub_B77694(_0_BasicHelper__ToIterator_d__31_T);
   rgctx_data = method->rgctx_data;
-  v9 = v7;
-  v10 = ((__int64 (__fastcall *)(__int64, __int64))rgctx_data->_1_BasicHelper__ToIterator_d__31_T___ctor->methodPointer)(
-          v7,
-          4294967294LL);
-  if ( !v9 )
-    sub_B7769C(v10, v11);
-  *(_DWORD *)(v9 + 52) = loopCount;
-  *(_QWORD *)(v9 + 40) = func;
-  sub_B77560((BattleServantConfConponent_o *)(v9 + 40), (System_Int32_array **)func, v12, v13, v14, v15, v16, v17);
-  return (System_Collections_Generic_IEnumerable_T__o *)v9;
+  if ( !rgctx_data )
+  {
+    sub_1B52C04(method);
+    rgctx_data = method->rgctx_data;
+  }
+  _0_BasicHelper__ToIterator_d__31_T = (__int64)rgctx_data->_0_BasicHelper__ToIterator_d__31_T_;
+  if ( (BYTE5(rgctx_data->_0_BasicHelper__ToIterator_d__31_T_->vtable[0].methodPtr) & 1) == 0 )
+    _0_BasicHelper__ToIterator_d__31_T = sub_1B52BA8(_0_BasicHelper__ToIterator_d__31_T);
+  v8 = (BasicHelper__ToIterator_d__31_T__o *)sub_1B00F18(_0_BasicHelper__ToIterator_d__31_T);
+  v9 = method->rgctx_data;
+  v10 = v8;
+  BasicHelper__ToIterator_d__31_float____ctor(
+    v8,
+    -2,
+    (const MethodInfo_2F40754 *)v9->_1_BasicHelper__ToIterator_d__31_T___ctor);
+  if ( !v10 )
+    sub_1B00F28(v11, v12);
+  HIDWORD(v10->fields.__3__func) = loopCount;
+  v10->fields.func = func;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v10->fields.func, (int32_t)func, v13, v14);
+  return (System_Collections_Generic_IEnumerable_T__o *)v10;
+}
+
+
+System_Collections_Generic_IEnumerable_T__o *__fastcall BasicHelper__ToIterator_object_(
+        int32_t loopCount,
+        System_Func_int__T__o *func,
+        const MethodInfo_2D53034 *method)
+{
+  const MethodInfo_2D53034_RGCTXs *rgctx_data; // x8
+  __int64 _0_BasicHelper__ToIterator_d__31_T; // x0
+  BasicHelper__ToIterator_d__31_T__o *v8; // x0
+  const MethodInfo_2D53034_RGCTXs *v9; // x8
+  BasicHelper__ToIterator_d__31_T__o *v10; // x21
+  __int64 v11; // x0
+  __int64 v12; // x1
+  int32_t v13; // w2
+  int32_t v14; // w3
+
+  rgctx_data = method->rgctx_data;
+  if ( !rgctx_data )
+  {
+    sub_1B52C04(method);
+    rgctx_data = method->rgctx_data;
+  }
+  _0_BasicHelper__ToIterator_d__31_T = (__int64)rgctx_data->_0_BasicHelper__ToIterator_d__31_T_;
+  if ( (BYTE5(rgctx_data->_0_BasicHelper__ToIterator_d__31_T_->vtable[0].methodPtr) & 1) == 0 )
+    _0_BasicHelper__ToIterator_d__31_T = sub_1B52BA8(_0_BasicHelper__ToIterator_d__31_T);
+  v8 = (BasicHelper__ToIterator_d__31_T__o *)sub_1B00F18(_0_BasicHelper__ToIterator_d__31_T);
+  v9 = method->rgctx_data;
+  v10 = v8;
+  BasicHelper__ToIterator_d__31_object____ctor(
+    v8,
+    -2,
+    (const MethodInfo_2F40594 *)v9->_1_BasicHelper__ToIterator_d__31_T___ctor);
+  if ( !v10 )
+    sub_1B00F28(v11, v12);
+  v10->fields.__3__loopCount = loopCount;
+  v10->fields.__3__func = func;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v10->fields.__3__func, (int32_t)func, v13, v14);
+  return (System_Collections_Generic_IEnumerable_T__o *)v10;
 }
 
 
@@ -3625,26 +5246,19 @@ System_Collections_IEnumerator_o *__fastcall BasicHelper__WaitForEndOfFrameCall(
         const MethodInfo *method)
 {
   __int64 v3; // x20
-  __int64 v4; // x0
-  __int64 v5; // x1
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  int32_t v4; // w2
+  int32_t v5; // w3
 
-  if ( (byte_43897B7 & 1) == 0 )
+  if ( (byte_48E3DF0 & 1) == 0 )
   {
-    sub_B775C4(&BasicHelper__WaitForEndOfFrameCall_d__43_TypeInfo);
-    byte_43897B7 = 1;
+    sub_1B00CCC(&BasicHelper__WaitForEndOfFrameCall_d__43_TypeInfo, method);
+    byte_48E3DF0 = 1;
   }
-  v3 = sub_B77694(BasicHelper__WaitForEndOfFrameCall_d__43_TypeInfo);
-  BasicHelper__WaitForEndOfFrameCall_d__43___ctor((BasicHelper__WaitForEndOfFrameCall_d__43_o *)v3, 0, 0LL);
-  if ( !v3 )
-    sub_B7769C(v4, v5);
+  v3 = sub_1B00F18(BasicHelper__WaitForEndOfFrameCall_d__43_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v3, 0LL);
+  *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = action;
-  sub_B77560((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)action, v6, v7, v8, v9, v10, v11);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)action, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -3664,19 +5278,15 @@ bool __fastcall BasicHelper__DelayCall_d__35__MoveNext(BasicHelper__DelayCall_d_
   int32_t _1__state; // w8
   float delay; // s8
   UnityEngine_WaitForSeconds_o *v5; // x20
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  int32_t v6; // w2
+  int32_t v7; // w3
   bool result; // w0
   System_Action_o *action; // x0
 
-  if ( (byte_4389F6D & 1) == 0 )
+  if ( (byte_48E3DF1 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_WaitForSeconds_TypeInfo);
-    byte_4389F6D = 1;
+    sub_1B00CCC(&UnityEngine_WaitForSeconds_TypeInfo, method);
+    byte_48E3DF1 = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
@@ -3689,18 +5299,10 @@ bool __fastcall BasicHelper__DelayCall_d__35__MoveNext(BasicHelper__DelayCall_d_
   {
     this->fields.__1__state = -1;
     delay = this->fields.delay;
-    v5 = (UnityEngine_WaitForSeconds_o *)sub_B77694(UnityEngine_WaitForSeconds_TypeInfo);
+    v5 = (UnityEngine_WaitForSeconds_o *)sub_1B00F18(UnityEngine_WaitForSeconds_TypeInfo);
     UnityEngine_WaitForSeconds___ctor(v5, delay, 0LL);
     this->fields.__2__current = (Il2CppObject *)v5;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&this->fields.__2__current,
-      (System_Int32_array **)v5,
-      v6,
-      v7,
-      v8,
-      v9,
-      v10,
-      v11);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.__2__current, (int32_t)v5, v6, v7);
     result = 1;
     this->fields.__1__state = 1;
     return result;
@@ -3725,11 +5327,11 @@ void __fastcall __noreturn BasicHelper__DelayCall_d__35__System_Collections_IEnu
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
+  v2 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B00F18(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B775C8(&Method_BasicHelper__DelayCall_d__35_System_Collections_IEnumerator_Reset__);
-  sub_B77668(v3, v4);
+  v4 = sub_1B00CE0(&Method_BasicHelper__DelayCall_d__35_System_Collections_IEnumerator_Reset__);
+  sub_1B00DF4(v3, v4);
 }
 
 
@@ -3752,10 +5354,8 @@ void __fastcall BasicHelper__DelayCall_d__35__System_IDisposable_Dispose(
 void __fastcall BasicHelper__DelayCall_d__36_ShowAllEx_DamageFuncArgument____ctor(
         BasicHelper__DelayCall_d__36_T__o *this,
         int32_t 1__state,
-        const MethodInfo_1F8F978 *method)
+        const MethodInfo_2F22F78 *method)
 {
-  if ( !this )
-    sub_B7769C(0LL, 1__state);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.__1__state = 1__state;
 }
@@ -3763,66 +5363,48 @@ void __fastcall BasicHelper__DelayCall_d__36_ShowAllEx_DamageFuncArgument____cto
 
 bool __fastcall BasicHelper__DelayCall_d__36_ShowAllEx_DamageFuncArgument___MoveNext(
         BasicHelper__DelayCall_d__36_T__o *this,
-        const MethodInfo_1F8F9B0 *method)
+        const MethodInfo_2F22FA4 *method)
 {
   int32_t _1__state; // w8
   float delay; // s8
   UnityEngine_WaitForSeconds_o *v6; // x20
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
+  int32_t v7; // w2
+  int32_t v8; // w3
   bool result; // w0
   void *monitor; // x9
-  __int128 v15; // q0
-  struct System_Action_T__o *action; // x0
-  __int64 v17; // x10
-  BasicHelper__DelayCall_d__36_T__RGCTXs *rgctx_data; // x8
-  void (__fastcall *methodPointer)(struct System_Action_T__o *, __int128 *, MethodInfo *); // x9
-  __int128 v20; // [xsp+0h] [xbp-60h] BYREF
-  __int64 v21; // [xsp+10h] [xbp-50h]
-  __int128 v22; // [xsp+20h] [xbp-40h]
-  void *v23; // [xsp+30h] [xbp-30h]
+  __int128 v11; // q0
+  System_Action_T__o *action; // x0
+  MethodInfo *_3_ActionExtensions_Call_T; // x2
+  HutongGames_PlayMaker_Actions_ShowAllEx_DamageFuncArgument_o v14; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_438F347 & 1) == 0 )
+  if ( (byte_48E83AB & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_WaitForSeconds_TypeInfo);
-    byte_438F347 = 1;
+    sub_1B00CCC(&UnityEngine_WaitForSeconds_TypeInfo, method);
+    byte_48E83AB = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
   {
     monitor = this[1].monitor;
-    v15 = *(_OWORD *)&this->fields.arg;
-    this->fields.__1__state = -1;
+    v11 = *(_OWORD *)&this->fields.arg;
     action = this->fields.action;
-    v23 = monitor;
-    v22 = v15;
-    v17 = (__int64)monitor;
-    rgctx_data = method->klass->rgctx_data;
-    methodPointer = (void (__fastcall *)(struct System_Action_T__o *, __int128 *, MethodInfo *))rgctx_data->_0_ActionExtensions_Call_T_->methodPointer;
-    v21 = v17;
-    v20 = v15;
-    methodPointer(action, &v20, rgctx_data->_0_ActionExtensions_Call_T_);
+    this->fields.__1__state = -1;
+    _3_ActionExtensions_Call_T = method->klass->rgctx_data->_3_ActionExtensions_Call_T_;
+    *(_OWORD *)&v14.fields.perf = v11;
+    *(_QWORD *)&v14.fields.damageIndex = monitor;
+    ActionExtensions__Call_ShowAllEx_DamageFuncArgument_(
+      action,
+      &v14,
+      (const MethodInfo_2CBB5D4 *)_3_ActionExtensions_Call_T);
   }
   else if ( !_1__state )
   {
     this->fields.__1__state = -1;
     delay = this->fields.delay;
-    v6 = (UnityEngine_WaitForSeconds_o *)sub_B77694(UnityEngine_WaitForSeconds_TypeInfo);
+    v6 = (UnityEngine_WaitForSeconds_o *)sub_1B00F18(UnityEngine_WaitForSeconds_TypeInfo);
     UnityEngine_WaitForSeconds___ctor(v6, delay, 0LL);
     this->fields.__2__current = (Il2CppObject *)v6;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&this->fields.__2__current,
-      (System_Int32_array **)v6,
-      v7,
-      v8,
-      v9,
-      v10,
-      v11,
-      v12);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.__2__current, (int32_t)v6, v7, v8);
     result = 1;
     this->fields.__1__state = 1;
     return result;
@@ -3833,7 +5415,7 @@ bool __fastcall BasicHelper__DelayCall_d__36_ShowAllEx_DamageFuncArgument___Move
 
 Il2CppObject *__fastcall BasicHelper__DelayCall_d__36_ShowAllEx_DamageFuncArgument___System_Collections_Generic_IEnumerator_System_Object__get_Current(
         BasicHelper__DelayCall_d__36_T__o *this,
-        const MethodInfo_1F8FAAC *method)
+        const MethodInfo_2F23084 *method)
 {
   return this->fields.__2__current;
 }
@@ -3841,23 +5423,21 @@ Il2CppObject *__fastcall BasicHelper__DelayCall_d__36_ShowAllEx_DamageFuncArgume
 
 void __fastcall __noreturn BasicHelper__DelayCall_d__36_ShowAllEx_DamageFuncArgument___System_Collections_IEnumerator_Reset(
         BasicHelper__DelayCall_d__36_T__o *this,
-        const MethodInfo_1F8FAB4 *method)
+        const MethodInfo_2F2308C *method)
 {
-  __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x0
+  System_NotSupportedException_o *v4; // x20
 
-  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B775C8(&Method_BasicHelper__DelayCall_d__36_ShowAllEx_DamageFuncArgument__System_Collections_IEnumerator_Reset__);
-  sub_B77668(v3, v4);
+  v3 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
+  v4 = (System_NotSupportedException_o *)sub_1B00F18(v3);
+  System_NotSupportedException___ctor(v4, 0LL);
+  sub_1B00DF4(v4, method);
 }
 
 
 Il2CppObject *__fastcall BasicHelper__DelayCall_d__36_ShowAllEx_DamageFuncArgument___System_Collections_IEnumerator_get_Current(
         BasicHelper__DelayCall_d__36_T__o *this,
-        const MethodInfo_1F8FAF4 *method)
+        const MethodInfo_2F230C0 *method)
 {
   return this->fields.__2__current;
 }
@@ -3865,7 +5445,124 @@ Il2CppObject *__fastcall BasicHelper__DelayCall_d__36_ShowAllEx_DamageFuncArgume
 
 void __fastcall BasicHelper__DelayCall_d__36_ShowAllEx_DamageFuncArgument___System_IDisposable_Dispose(
         BasicHelper__DelayCall_d__36_T__o *this,
-        const MethodInfo_1F8F9AC *method)
+        const MethodInfo_2F22FA0 *method)
+{
+  ;
+}
+
+
+void __fastcall BasicHelper__DelayCall_d__36___Il2CppFullySharedGenericType____ctor(
+        BasicHelper__DelayCall_d__36_T__o *this,
+        int32_t 1__state,
+        const MethodInfo_2F22CA8 *method)
+{
+  System_Object___ctor((Il2CppObject *)this, 0LL);
+  sub_1955A60(this, method->klass->rgctx_data->_0_BasicHelper__DelayCall_d__36_T_->_1.fields, (unsigned int)1__state);
+}
+
+
+bool __fastcall BasicHelper__DelayCall_d__36___Il2CppFullySharedGenericType___MoveNext(
+        BasicHelper__DelayCall_d__36_T__o *this,
+        const MethodInfo_2F22CEC *method)
+{
+  BasicHelper__DelayCall_d__36_T__RGCTXs *rgctx_data; // x8
+  __int64 native_size; // x22
+  _QWORD *v6; // x21
+  int v7; // w8
+  float v8; // s8
+  UnityEngine_WaitForSeconds_o *v9; // x21
+  BasicHelper__DelayCall_d__36_T__c *klass; // x8
+  bool v11; // w19
+  __int64 v12; // x24
+  const void *v13; // x0
+  BasicHelper__DelayCall_d__36_T__RGCTXs *v14; // x8
+  MethodInfo *_3_ActionExtensions_Call_T; // x1
+  void (__fastcall *methodPointer)(); // x0
+  __int64 v19[3]; // [xsp+8h] [xbp-28h] BYREF
+
+  v19[2] = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
+  if ( (byte_48E83AA & 1) == 0 )
+  {
+    sub_1B00CCC(&UnityEngine_WaitForSeconds_TypeInfo, method);
+    byte_48E83AA = 1;
+  }
+  rgctx_data = method->klass->rgctx_data;
+  native_size = (unsigned int)rgctx_data->_2_T->_2.native_size;
+  v6 = (__int64 *)((char *)&v19[-1] - ((native_size + 15) & 0x1FFFFFFF0LL));
+  v7 = *(_DWORD *)sub_1B00CF0(this, rgctx_data->_0_BasicHelper__DelayCall_d__36_T_->_1.fields);
+  if ( v7 == 1 )
+  {
+    sub_1955A60(this, method->klass->rgctx_data->_0_BasicHelper__DelayCall_d__36_T_->_1.fields, 0xFFFFFFFFLL);
+    v12 = *(_QWORD *)sub_1B00CF0(
+                       this,
+                       (char *)method->klass->rgctx_data->_0_BasicHelper__DelayCall_d__36_T_->_1.fields + 96);
+    v13 = (const void *)sub_1B00CF0(
+                          this,
+                          (char *)method->klass->rgctx_data->_0_BasicHelper__DelayCall_d__36_T_->_1.fields + 128);
+    memcpy((char *)&v19[-1] - ((native_size + 15) & 0x1FFFFFFF0LL), v13, native_size);
+    v14 = method->klass->rgctx_data;
+    _3_ActionExtensions_Call_T = v14->_3_ActionExtensions_Call_T_;
+    methodPointer = _3_ActionExtensions_Call_T->methodPointer;
+    if ( (v14->_2_T->_1.byval_arg.bits & 0x80000000) == 0 )
+      v6 = (_QWORD *)*v6;
+    v19[0] = v12;
+    v19[1] = (__int64)v6;
+    _3_ActionExtensions_Call_T->invoker_method(methodPointer, _3_ActionExtensions_Call_T, 0LL, (void **)v19, v6);
+    return 0;
+  }
+  if ( v7 )
+    return 0;
+  sub_1955A60(this, method->klass->rgctx_data->_0_BasicHelper__DelayCall_d__36_T_->_1.fields, 0xFFFFFFFFLL);
+  v8 = *(float *)sub_1B00CF0(
+                   this,
+                   (char *)method->klass->rgctx_data->_0_BasicHelper__DelayCall_d__36_T_->_1.fields + 64);
+  v9 = (UnityEngine_WaitForSeconds_o *)sub_1B00F18(UnityEngine_WaitForSeconds_TypeInfo);
+  UnityEngine_WaitForSeconds___ctor(v9, v8, 0LL);
+  sub_19556E4(this, (char *)method->klass->rgctx_data->_0_BasicHelper__DelayCall_d__36_T_->_1.fields + 32, v9);
+  klass = method->klass;
+  v11 = 1;
+  sub_1955A60(this, klass->rgctx_data->_0_BasicHelper__DelayCall_d__36_T_->_1.fields, 1LL);
+  return v11;
+}
+
+
+Il2CppObject *__fastcall BasicHelper__DelayCall_d__36___Il2CppFullySharedGenericType___System_Collections_Generic_IEnumerator_System_Object__get_Current(
+        BasicHelper__DelayCall_d__36_T__o *this,
+        const MethodInfo_2F22EF4 *method)
+{
+  return *(Il2CppObject **)sub_1B00CF0(
+                             this,
+                             (char *)method->klass->rgctx_data->_0_BasicHelper__DelayCall_d__36_T_->_1.fields + 32);
+}
+
+
+void __fastcall __noreturn BasicHelper__DelayCall_d__36___Il2CppFullySharedGenericType___System_Collections_IEnumerator_Reset(
+        BasicHelper__DelayCall_d__36_T__o *this,
+        const MethodInfo_2F22F1C *method)
+{
+  __int64 v3; // x0
+  System_NotSupportedException_o *v4; // x20
+
+  v3 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
+  v4 = (System_NotSupportedException_o *)sub_1B00F18(v3);
+  System_NotSupportedException___ctor(v4, 0LL);
+  sub_1B00DF4(v4, method);
+}
+
+
+Il2CppObject *__fastcall BasicHelper__DelayCall_d__36___Il2CppFullySharedGenericType___System_Collections_IEnumerator_get_Current(
+        BasicHelper__DelayCall_d__36_T__o *this,
+        const MethodInfo_2F22F50 *method)
+{
+  return *(Il2CppObject **)sub_1B00CF0(
+                             this,
+                             (char *)method->klass->rgctx_data->_0_BasicHelper__DelayCall_d__36_T_->_1.fields + 32);
+}
+
+
+void __fastcall BasicHelper__DelayCall_d__36___Il2CppFullySharedGenericType___System_IDisposable_Dispose(
+        BasicHelper__DelayCall_d__36_T__o *this,
+        const MethodInfo_2F22CE8 *method)
 {
   ;
 }
@@ -3874,10 +5571,8 @@ void __fastcall BasicHelper__DelayCall_d__36_ShowAllEx_DamageFuncArgument___Syst
 void __fastcall BasicHelper__DelayCall_d__36_object____ctor(
         BasicHelper__DelayCall_d__36_T__o *this,
         int32_t 1__state,
-        const MethodInfo_1F8F824 *method)
+        const MethodInfo_2F22B7C *method)
 {
-  if ( !this )
-    sub_B7769C(0LL, 1__state);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.__1__state = 1__state;
 }
@@ -3885,48 +5580,37 @@ void __fastcall BasicHelper__DelayCall_d__36_object____ctor(
 
 bool __fastcall BasicHelper__DelayCall_d__36_object___MoveNext(
         BasicHelper__DelayCall_d__36_T__o *this,
-        const MethodInfo_1F8F85C *method)
+        const MethodInfo_2F22BA8 *method)
 {
   int32_t _1__state; // w8
   float delay; // s8
   UnityEngine_WaitForSeconds_o *v6; // x20
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
+  int32_t v7; // w2
+  int32_t v8; // w3
   bool result; // w0
 
-  if ( (byte_438F346 & 1) == 0 )
+  if ( (byte_48E83A9 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_WaitForSeconds_TypeInfo);
-    byte_438F346 = 1;
+    sub_1B00CCC(&UnityEngine_WaitForSeconds_TypeInfo, method);
+    byte_48E83A9 = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
   {
     this->fields.__1__state = -1;
-    ((void (__fastcall *)(struct System_Action_T__o *, Il2CppObject *))method->klass->rgctx_data->_0_ActionExtensions_Call_T_->methodPointer)(
+    ActionExtensions__Call_object_(
       this->fields.action,
-      this->fields.arg);
+      this->fields.arg,
+      (const MethodInfo_2CBB45C *)method->klass->rgctx_data->_3_ActionExtensions_Call_T_);
   }
   else if ( !_1__state )
   {
     this->fields.__1__state = -1;
     delay = this->fields.delay;
-    v6 = (UnityEngine_WaitForSeconds_o *)sub_B77694(UnityEngine_WaitForSeconds_TypeInfo);
+    v6 = (UnityEngine_WaitForSeconds_o *)sub_1B00F18(UnityEngine_WaitForSeconds_TypeInfo);
     UnityEngine_WaitForSeconds___ctor(v6, delay, 0LL);
     this->fields.__2__current = (Il2CppObject *)v6;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&this->fields.__2__current,
-      (System_Int32_array **)v6,
-      v7,
-      v8,
-      v9,
-      v10,
-      v11,
-      v12);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.__2__current, (int32_t)v6, v7, v8);
     result = 1;
     this->fields.__1__state = 1;
     return result;
@@ -3937,7 +5621,7 @@ bool __fastcall BasicHelper__DelayCall_d__36_object___MoveNext(
 
 Il2CppObject *__fastcall BasicHelper__DelayCall_d__36_object___System_Collections_Generic_IEnumerator_System_Object__get_Current(
         BasicHelper__DelayCall_d__36_T__o *this,
-        const MethodInfo_1F8F928 *method)
+        const MethodInfo_2F22C64 *method)
 {
   return this->fields.__2__current;
 }
@@ -3945,23 +5629,21 @@ Il2CppObject *__fastcall BasicHelper__DelayCall_d__36_object___System_Collection
 
 void __fastcall __noreturn BasicHelper__DelayCall_d__36_object___System_Collections_IEnumerator_Reset(
         BasicHelper__DelayCall_d__36_T__o *this,
-        const MethodInfo_1F8F930 *method)
+        const MethodInfo_2F22C6C *method)
 {
-  __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x0
+  System_NotSupportedException_o *v4; // x20
 
-  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B775C8(&Method_BasicHelper__DelayCall_d__36_object__System_Collections_IEnumerator_Reset__);
-  sub_B77668(v3, v4);
+  v3 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
+  v4 = (System_NotSupportedException_o *)sub_1B00F18(v3);
+  System_NotSupportedException___ctor(v4, 0LL);
+  sub_1B00DF4(v4, method);
 }
 
 
 Il2CppObject *__fastcall BasicHelper__DelayCall_d__36_object___System_Collections_IEnumerator_get_Current(
         BasicHelper__DelayCall_d__36_T__o *this,
-        const MethodInfo_1F8F970 *method)
+        const MethodInfo_2F22CA0 *method)
 {
   return this->fields.__2__current;
 }
@@ -3969,7 +5651,7 @@ Il2CppObject *__fastcall BasicHelper__DelayCall_d__36_object___System_Collection
 
 void __fastcall BasicHelper__DelayCall_d__36_object___System_IDisposable_Dispose(
         BasicHelper__DelayCall_d__36_T__o *this,
-        const MethodInfo_1F8F858 *method)
+        const MethodInfo_2F22BA4 *method)
 {
   ;
 }
@@ -3992,19 +5674,15 @@ bool __fastcall BasicHelper__RealDelayCall_d__37__MoveNext(
   int32_t _1__state; // w8
   float delay; // s8
   UnityEngine_WaitForSecondsRealtime_o *v5; // x20
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  int32_t v6; // w2
+  int32_t v7; // w3
   bool result; // w0
   System_Action_o *action; // x0
 
-  if ( (byte_4389F6E & 1) == 0 )
+  if ( (byte_48E3DF2 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_WaitForSecondsRealtime_TypeInfo);
-    byte_4389F6E = 1;
+    sub_1B00CCC(&UnityEngine_WaitForSecondsRealtime_TypeInfo, method);
+    byte_48E3DF2 = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
@@ -4017,18 +5695,10 @@ bool __fastcall BasicHelper__RealDelayCall_d__37__MoveNext(
   {
     this->fields.__1__state = -1;
     delay = this->fields.delay;
-    v5 = (UnityEngine_WaitForSecondsRealtime_o *)sub_B77694(UnityEngine_WaitForSecondsRealtime_TypeInfo);
+    v5 = (UnityEngine_WaitForSecondsRealtime_o *)sub_1B00F18(UnityEngine_WaitForSecondsRealtime_TypeInfo);
     UnityEngine_WaitForSecondsRealtime___ctor(v5, delay, 0LL);
     this->fields.__2__current = (Il2CppObject *)v5;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&this->fields.__2__current,
-      (System_Int32_array **)v5,
-      v6,
-      v7,
-      v8,
-      v9,
-      v10,
-      v11);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.__2__current, (int32_t)v5, v6, v7);
     result = 1;
     this->fields.__1__state = 1;
     return result;
@@ -4053,11 +5723,11 @@ void __fastcall __noreturn BasicHelper__RealDelayCall_d__37__System_Collections_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
+  v2 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B00F18(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B775C8(&Method_BasicHelper__RealDelayCall_d__37_System_Collections_IEnumerator_Reset__);
-  sub_B77668(v3, v4);
+  v4 = sub_1B00CE0(&Method_BasicHelper__RealDelayCall_d__37_System_Collections_IEnumerator_Reset__);
+  sub_1B00DF4(v3, v4);
 }
 
 
@@ -4077,13 +5747,131 @@ void __fastcall BasicHelper__RealDelayCall_d__37__System_IDisposable_Dispose(
 }
 
 
+void __fastcall BasicHelper__RealDelayCall_d__38___Il2CppFullySharedGenericType____ctor(
+        BasicHelper__RealDelayCall_d__38_T__o *this,
+        int32_t 1__state,
+        const MethodInfo_2F34600 *method)
+{
+  System_Object___ctor((Il2CppObject *)this, 0LL);
+  sub_1955A60(
+    this,
+    method->klass->rgctx_data->_0_BasicHelper__RealDelayCall_d__38_T_->_1.fields,
+    (unsigned int)1__state);
+}
+
+
+bool __fastcall BasicHelper__RealDelayCall_d__38___Il2CppFullySharedGenericType___MoveNext(
+        BasicHelper__RealDelayCall_d__38_T__o *this,
+        const MethodInfo_2F34644 *method)
+{
+  BasicHelper__RealDelayCall_d__38_T__RGCTXs *rgctx_data; // x8
+  __int64 native_size; // x22
+  _QWORD *v6; // x21
+  int v7; // w8
+  float v8; // s8
+  UnityEngine_WaitForSecondsRealtime_o *v9; // x21
+  BasicHelper__RealDelayCall_d__38_T__c *klass; // x8
+  bool v11; // w19
+  __int64 v12; // x24
+  const void *v13; // x0
+  BasicHelper__RealDelayCall_d__38_T__RGCTXs *v14; // x8
+  MethodInfo *_3_ActionExtensions_Call_T; // x1
+  void (__fastcall *methodPointer)(); // x0
+  __int64 v19[3]; // [xsp+8h] [xbp-28h] BYREF
+
+  v19[2] = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
+  if ( (byte_48E83DC & 1) == 0 )
+  {
+    sub_1B00CCC(&UnityEngine_WaitForSecondsRealtime_TypeInfo, method);
+    byte_48E83DC = 1;
+  }
+  rgctx_data = method->klass->rgctx_data;
+  native_size = (unsigned int)rgctx_data->_2_T->_2.native_size;
+  v6 = (__int64 *)((char *)&v19[-1] - ((native_size + 15) & 0x1FFFFFFF0LL));
+  v7 = *(_DWORD *)sub_1B00CF0(this, rgctx_data->_0_BasicHelper__RealDelayCall_d__38_T_->_1.fields);
+  if ( v7 == 1 )
+  {
+    sub_1955A60(this, method->klass->rgctx_data->_0_BasicHelper__RealDelayCall_d__38_T_->_1.fields, 0xFFFFFFFFLL);
+    v12 = *(_QWORD *)sub_1B00CF0(
+                       this,
+                       (char *)method->klass->rgctx_data->_0_BasicHelper__RealDelayCall_d__38_T_->_1.fields + 96);
+    v13 = (const void *)sub_1B00CF0(
+                          this,
+                          (char *)method->klass->rgctx_data->_0_BasicHelper__RealDelayCall_d__38_T_->_1.fields + 128);
+    memcpy((char *)&v19[-1] - ((native_size + 15) & 0x1FFFFFFF0LL), v13, native_size);
+    v14 = method->klass->rgctx_data;
+    _3_ActionExtensions_Call_T = v14->_3_ActionExtensions_Call_T_;
+    methodPointer = _3_ActionExtensions_Call_T->methodPointer;
+    if ( (v14->_2_T->_1.byval_arg.bits & 0x80000000) == 0 )
+      v6 = (_QWORD *)*v6;
+    v19[0] = v12;
+    v19[1] = (__int64)v6;
+    _3_ActionExtensions_Call_T->invoker_method(methodPointer, _3_ActionExtensions_Call_T, 0LL, (void **)v19, v6);
+    return 0;
+  }
+  if ( v7 )
+    return 0;
+  sub_1955A60(this, method->klass->rgctx_data->_0_BasicHelper__RealDelayCall_d__38_T_->_1.fields, 0xFFFFFFFFLL);
+  v8 = *(float *)sub_1B00CF0(
+                   this,
+                   (char *)method->klass->rgctx_data->_0_BasicHelper__RealDelayCall_d__38_T_->_1.fields + 64);
+  v9 = (UnityEngine_WaitForSecondsRealtime_o *)sub_1B00F18(UnityEngine_WaitForSecondsRealtime_TypeInfo);
+  UnityEngine_WaitForSecondsRealtime___ctor(v9, v8, 0LL);
+  sub_19556E4(this, (char *)method->klass->rgctx_data->_0_BasicHelper__RealDelayCall_d__38_T_->_1.fields + 32, v9);
+  klass = method->klass;
+  v11 = 1;
+  sub_1955A60(this, klass->rgctx_data->_0_BasicHelper__RealDelayCall_d__38_T_->_1.fields, 1LL);
+  return v11;
+}
+
+
+Il2CppObject *__fastcall BasicHelper__RealDelayCall_d__38___Il2CppFullySharedGenericType___System_Collections_Generic_IEnumerator_System_Object__get_Current(
+        BasicHelper__RealDelayCall_d__38_T__o *this,
+        const MethodInfo_2F3484C *method)
+{
+  return *(Il2CppObject **)sub_1B00CF0(
+                             this,
+                             (char *)method->klass->rgctx_data->_0_BasicHelper__RealDelayCall_d__38_T_->_1.fields + 32);
+}
+
+
+void __fastcall __noreturn BasicHelper__RealDelayCall_d__38___Il2CppFullySharedGenericType___System_Collections_IEnumerator_Reset(
+        BasicHelper__RealDelayCall_d__38_T__o *this,
+        const MethodInfo_2F34874 *method)
+{
+  __int64 v3; // x0
+  System_NotSupportedException_o *v4; // x20
+
+  v3 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
+  v4 = (System_NotSupportedException_o *)sub_1B00F18(v3);
+  System_NotSupportedException___ctor(v4, 0LL);
+  sub_1B00DF4(v4, method);
+}
+
+
+Il2CppObject *__fastcall BasicHelper__RealDelayCall_d__38___Il2CppFullySharedGenericType___System_Collections_IEnumerator_get_Current(
+        BasicHelper__RealDelayCall_d__38_T__o *this,
+        const MethodInfo_2F348A8 *method)
+{
+  return *(Il2CppObject **)sub_1B00CF0(
+                             this,
+                             (char *)method->klass->rgctx_data->_0_BasicHelper__RealDelayCall_d__38_T_->_1.fields + 32);
+}
+
+
+void __fastcall BasicHelper__RealDelayCall_d__38___Il2CppFullySharedGenericType___System_IDisposable_Dispose(
+        BasicHelper__RealDelayCall_d__38_T__o *this,
+        const MethodInfo_2F34640 *method)
+{
+  ;
+}
+
+
 void __fastcall BasicHelper__RealDelayCall_d__38_object____ctor(
         BasicHelper__RealDelayCall_d__38_T__o *this,
         int32_t 1__state,
-        const MethodInfo_268ECFC *method)
+        const MethodInfo_2F344D4 *method)
 {
-  if ( !this )
-    sub_B7769C(0LL, 1__state);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.__1__state = 1__state;
 }
@@ -4091,48 +5879,37 @@ void __fastcall BasicHelper__RealDelayCall_d__38_object____ctor(
 
 bool __fastcall BasicHelper__RealDelayCall_d__38_object___MoveNext(
         BasicHelper__RealDelayCall_d__38_T__o *this,
-        const MethodInfo_268ED34 *method)
+        const MethodInfo_2F34500 *method)
 {
   int32_t _1__state; // w8
   float delay; // s8
   UnityEngine_WaitForSecondsRealtime_o *v6; // x20
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
+  int32_t v7; // w2
+  int32_t v8; // w3
   bool result; // w0
 
-  if ( (byte_4394EBA & 1) == 0 )
+  if ( (byte_48E83DB & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_WaitForSecondsRealtime_TypeInfo);
-    byte_4394EBA = 1;
+    sub_1B00CCC(&UnityEngine_WaitForSecondsRealtime_TypeInfo, method);
+    byte_48E83DB = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
   {
     this->fields.__1__state = -1;
-    ((void (__fastcall *)(struct System_Action_T__o *, Il2CppObject *))method->klass->rgctx_data->_0_ActionExtensions_Call_T_->methodPointer)(
+    ActionExtensions__Call_object_(
       this->fields.action,
-      this->fields.arg);
+      this->fields.arg,
+      (const MethodInfo_2CBB45C *)method->klass->rgctx_data->_3_ActionExtensions_Call_T_);
   }
   else if ( !_1__state )
   {
     this->fields.__1__state = -1;
     delay = this->fields.delay;
-    v6 = (UnityEngine_WaitForSecondsRealtime_o *)sub_B77694(UnityEngine_WaitForSecondsRealtime_TypeInfo);
+    v6 = (UnityEngine_WaitForSecondsRealtime_o *)sub_1B00F18(UnityEngine_WaitForSecondsRealtime_TypeInfo);
     UnityEngine_WaitForSecondsRealtime___ctor(v6, delay, 0LL);
     this->fields.__2__current = (Il2CppObject *)v6;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&this->fields.__2__current,
-      (System_Int32_array **)v6,
-      v7,
-      v8,
-      v9,
-      v10,
-      v11,
-      v12);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.__2__current, (int32_t)v6, v7, v8);
     result = 1;
     this->fields.__1__state = 1;
     return result;
@@ -4143,7 +5920,7 @@ bool __fastcall BasicHelper__RealDelayCall_d__38_object___MoveNext(
 
 Il2CppObject *__fastcall BasicHelper__RealDelayCall_d__38_object___System_Collections_Generic_IEnumerator_System_Object__get_Current(
         BasicHelper__RealDelayCall_d__38_T__o *this,
-        const MethodInfo_268EE00 *method)
+        const MethodInfo_2F345BC *method)
 {
   return this->fields.__2__current;
 }
@@ -4151,23 +5928,21 @@ Il2CppObject *__fastcall BasicHelper__RealDelayCall_d__38_object___System_Collec
 
 void __fastcall __noreturn BasicHelper__RealDelayCall_d__38_object___System_Collections_IEnumerator_Reset(
         BasicHelper__RealDelayCall_d__38_T__o *this,
-        const MethodInfo_268EE08 *method)
+        const MethodInfo_2F345C4 *method)
 {
-  __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x0
+  System_NotSupportedException_o *v4; // x20
 
-  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B775C8(&Method_BasicHelper__RealDelayCall_d__38_object__System_Collections_IEnumerator_Reset__);
-  sub_B77668(v3, v4);
+  v3 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
+  v4 = (System_NotSupportedException_o *)sub_1B00F18(v3);
+  System_NotSupportedException___ctor(v4, 0LL);
+  sub_1B00DF4(v4, method);
 }
 
 
 Il2CppObject *__fastcall BasicHelper__RealDelayCall_d__38_object___System_Collections_IEnumerator_get_Current(
         BasicHelper__RealDelayCall_d__38_T__o *this,
-        const MethodInfo_268EE48 *method)
+        const MethodInfo_2F345F8 *method)
 {
   return this->fields.__2__current;
 }
@@ -4175,7 +5950,234 @@ Il2CppObject *__fastcall BasicHelper__RealDelayCall_d__38_object___System_Collec
 
 void __fastcall BasicHelper__RealDelayCall_d__38_object___System_IDisposable_Dispose(
         BasicHelper__RealDelayCall_d__38_T__o *this,
-        const MethodInfo_268ED30 *method)
+        const MethodInfo_2F344FC *method)
+{
+  ;
+}
+
+
+void __fastcall BasicHelper__ToIterator_d__31___Il2CppFullySharedGenericType____ctor(
+        BasicHelper__ToIterator_d__31_T__o *this,
+        int32_t 1__state,
+        const MethodInfo_2F40928 *method)
+{
+  unsigned int CurrentManagedThreadId; // w0
+
+  System_Object___ctor((Il2CppObject *)this, 0LL);
+  sub_1955A60(this, method->klass->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_->_1.fields, (unsigned int)1__state);
+  CurrentManagedThreadId = System_Environment__get_CurrentManagedThreadId(0LL);
+  sub_1955A60(
+    this,
+    (char *)method->klass->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_->_1.fields + 64,
+    CurrentManagedThreadId);
+}
+
+
+bool __fastcall BasicHelper__ToIterator_d__31___Il2CppFullySharedGenericType___MoveNext(
+        BasicHelper__ToIterator_d__31_T__o *this,
+        const MethodInfo_2F40994 *method)
+{
+  BasicHelper__ToIterator_d__31_T__RGCTXs *rgctx_data; // x8
+  __int64 native_size; // x21
+  int v6; // w8
+  BasicHelper__ToIterator_d__31_T__o *v7; // x0
+  __int64 v8; // x2
+  BasicHelper__ToIterator_d__31_T__RGCTXs *v9; // x8
+  int v10; // w9
+  int v11; // w23
+  void *v12; // x23
+  int *v13; // x0
+  __int64 v14; // x1
+  MethodInfo *_2_System_Func_int__T__Invoke; // x1
+  int v16; // w8
+  void (__fastcall *methodPointer)(); // x0
+  BasicHelper__ToIterator_d__31_T__c *klass; // x8
+  bool v19; // w20
+  int *v21; // [xsp+0h] [xbp-20h] BYREF
+  char *v22; // [xsp+8h] [xbp-18h]
+  int v23; // [xsp+14h] [xbp-Ch] BYREF
+  __int64 v24; // [xsp+18h] [xbp-8h]
+
+  v24 = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
+  rgctx_data = method->klass->rgctx_data;
+  native_size = (unsigned int)rgctx_data->_3_T->_2.native_size;
+  v6 = *(_DWORD *)sub_1B00CF0(this, rgctx_data->_0_BasicHelper__ToIterator_d__31_T_->_1.fields);
+  if ( v6 == 1 )
+  {
+    sub_1955A60(this, method->klass->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_->_1.fields, 0xFFFFFFFFLL);
+    v10 = *(_DWORD *)sub_1B00CF0(
+                       this,
+                       (char *)method->klass->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_->_1.fields + 224);
+    v7 = this;
+    v9 = method->klass->rgctx_data;
+    v8 = (unsigned int)(v10 + 1);
+  }
+  else
+  {
+    if ( v6 )
+      return 0;
+    sub_1955A60(this, method->klass->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_->_1.fields, 0xFFFFFFFFLL);
+    if ( !*(_QWORD *)sub_1B00CF0(
+                       this,
+                       (char *)method->klass->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_->_1.fields + 96) )
+      return 0;
+    v7 = this;
+    v8 = 0LL;
+    v9 = method->klass->rgctx_data;
+  }
+  sub_1955A60(v7, (char *)v9->_0_BasicHelper__ToIterator_d__31_T_->_1.fields + 224, v8);
+  v11 = *(_DWORD *)sub_1B00CF0(
+                     this,
+                     (char *)method->klass->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_->_1.fields + 224);
+  if ( v11 >= *(_DWORD *)sub_1B00CF0(
+                           this,
+                           (char *)method->klass->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_->_1.fields + 160) )
+    return 0;
+  v12 = *(void **)sub_1B00CF0(
+                    this,
+                    (char *)method->klass->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_->_1.fields + 96);
+  v13 = (int *)sub_1B00CF0(
+                 this,
+                 (char *)method->klass->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_->_1.fields + 224);
+  if ( !v12 )
+    sub_1B00F28(v13, v14);
+  _2_System_Func_int__T__Invoke = method->klass->rgctx_data->_2_System_Func_int__T__Invoke;
+  v16 = *v13;
+  methodPointer = _2_System_Func_int__T__Invoke->methodPointer;
+  v23 = v16;
+  v21 = &v23;
+  v22 = (char *)&v21 - ((native_size + 15) & 0x1FFFFFFF0LL);
+  _2_System_Func_int__T__Invoke->invoker_method(methodPointer, _2_System_Func_int__T__Invoke, v12, (void **)&v21, v22);
+  sub_1B00CF4(
+    this,
+    (char *)method->klass->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_->_1.fields + 32,
+    (char *)&v21 - ((native_size + 15) & 0x1FFFFFFF0LL),
+    (unsigned int)native_size);
+  klass = method->klass;
+  v19 = 1;
+  sub_1955A60(this, klass->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_->_1.fields, 1LL);
+  return v19;
+}
+
+
+System_Collections_Generic_IEnumerator_T__o *__fastcall BasicHelper__ToIterator_d__31___Il2CppFullySharedGenericType___System_Collections_Generic_IEnumerable_T__GetEnumerator(
+        BasicHelper__ToIterator_d__31_T__o *this,
+        const MethodInfo_2F40D64 *method)
+{
+  int v4; // w21
+  BasicHelper__ToIterator_d__31_T__o *v5; // x21
+  Il2CppClass *_0_BasicHelper__ToIterator_d__31_T; // x0
+  unsigned int *v7; // x0
+  __int64 v8; // x1
+  _QWORD *v9; // x0
+
+  if ( *(_DWORD *)sub_1B00CF0(this, method->klass->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_->_1.fields) == -2
+    && (v4 = *(_DWORD *)sub_1B00CF0(
+                          this,
+                          (char *)method->klass->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_->_1.fields + 64),
+        v4 == System_Environment__get_CurrentManagedThreadId(0LL)) )
+  {
+    sub_1955A60(this, method->klass->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_->_1.fields, 0LL);
+    v5 = this;
+  }
+  else
+  {
+    _0_BasicHelper__ToIterator_d__31_T = method->klass->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_;
+    if ( (BYTE5(_0_BasicHelper__ToIterator_d__31_T->vtable[0].methodPtr) & 1) == 0 )
+      _0_BasicHelper__ToIterator_d__31_T = (Il2CppClass *)sub_1B52BA8(_0_BasicHelper__ToIterator_d__31_T);
+    v5 = (BasicHelper__ToIterator_d__31_T__o *)sub_1B00F18(_0_BasicHelper__ToIterator_d__31_T);
+    ((void (__fastcall *)(BasicHelper__ToIterator_d__31_T__o *, _QWORD))method->klass->rgctx_data->_4_BasicHelper__ToIterator_d__31_T___ctor->methodPointer)(
+      v5,
+      0LL);
+  }
+  v7 = (unsigned int *)sub_1B00CF0(
+                         this,
+                         (char *)method->klass->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_->_1.fields + 192);
+  if ( !v5 )
+    sub_1B00F28(v7, v8);
+  sub_1955A60(v5, (char *)method->klass->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_->_1.fields + 160, *v7);
+  v9 = (_QWORD *)sub_1B00CF0(
+                   this,
+                   (char *)method->klass->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_->_1.fields + 128);
+  sub_19556E4(v5, (char *)method->klass->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_->_1.fields + 96, *v9);
+  return (System_Collections_Generic_IEnumerator_T__o *)v5;
+}
+
+
+// local variable allocation has failed, the output may be wrong!
+Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o __fastcall BasicHelper__ToIterator_d__31___Il2CppFullySharedGenericType___System_Collections_Generic_IEnumerator_T__get_Current(
+        BasicHelper__ToIterator_d__31_T__o *this,
+        const MethodInfo_2F40BEC *method)
+{
+  __int64 v2; // x2
+  _QWORD *v4; // x8
+  __int64 v5; // x20
+  const void *v6; // x0
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v7; // x0 OVERLAPPED
+  void *v8; // x1
+  _QWORD v9[2]; // [xsp+0h] [xbp-10h] BYREF
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o result; // 0:x0.16
+
+  v9[1] = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
+  v4 = *(_QWORD **)(*(_QWORD *)(v2 + 32) + 192LL);
+  v5 = *(unsigned int *)(v4[3] + 252LL);
+  v6 = (const void *)sub_1B00CF0(this, *(_QWORD *)(*v4 + 128LL) + 32LL);
+  memcpy((char *)v9 - ((v5 + 15) & 0x1FFFFFFF0LL), v6, v5);
+  v7 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
+                                                                   (void *)method,
+                                                                   (char *)v9 - ((v5 + 15) & 0x1FFFFFFF0LL),
+                                                                   v5);
+  result.monitor = v8;
+  result.klass = v7;
+  return result;
+}
+
+
+System_Collections_IEnumerator_o *__fastcall BasicHelper__ToIterator_d__31___Il2CppFullySharedGenericType___System_Collections_IEnumerable_GetEnumerator(
+        BasicHelper__ToIterator_d__31_T__o *this,
+        const MethodInfo_2F40EB0 *method)
+{
+  return (System_Collections_IEnumerator_o *)((__int64 (__fastcall *)(BasicHelper__ToIterator_d__31_T__o *))method->klass->rgctx_data->_6_BasicHelper__ToIterator_d__31_T__System_Collections_Generic_IEnumerable_T__GetEnumerator->methodPointer)(this);
+}
+
+
+void __fastcall __noreturn BasicHelper__ToIterator_d__31___Il2CppFullySharedGenericType___System_Collections_IEnumerator_Reset(
+        BasicHelper__ToIterator_d__31_T__o *this,
+        const MethodInfo_2F40C8C *method)
+{
+  __int64 v3; // x0
+  System_NotSupportedException_o *v4; // x20
+
+  v3 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
+  v4 = (System_NotSupportedException_o *)sub_1B00F18(v3);
+  System_NotSupportedException___ctor(v4, 0LL);
+  sub_1B00DF4(v4, method);
+}
+
+
+Il2CppObject *__fastcall BasicHelper__ToIterator_d__31___Il2CppFullySharedGenericType___System_Collections_IEnumerator_get_Current(
+        BasicHelper__ToIterator_d__31_T__o *this,
+        const MethodInfo_2F40CC0 *method)
+{
+  BasicHelper__ToIterator_d__31_T__RGCTXs *rgctx_data; // x8
+  __int64 native_size; // x20
+  const void *v5; // x0
+  _QWORD v7[2]; // [xsp+0h] [xbp-10h] BYREF
+
+  v7[1] = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
+  rgctx_data = method->klass->rgctx_data;
+  native_size = (unsigned int)rgctx_data->_3_T->_2.native_size;
+  v5 = (const void *)sub_1B00CF0(this, (char *)rgctx_data->_0_BasicHelper__ToIterator_d__31_T_->_1.fields + 32);
+  memcpy((char *)v7 - ((native_size + 15) & 0x1FFFFFFF0LL), v5, native_size);
+  return (Il2CppObject *)j_il2cpp_value_box_0(
+                           method->klass->rgctx_data->_3_T,
+                           (char *)v7 - ((native_size + 15) & 0x1FFFFFFF0LL));
+}
+
+
+void __fastcall BasicHelper__ToIterator_d__31___Il2CppFullySharedGenericType___System_IDisposable_Dispose(
+        BasicHelper__ToIterator_d__31_T__o *this,
+        const MethodInfo_2F40990 *method)
 {
   ;
 }
@@ -4184,10 +6186,8 @@ void __fastcall BasicHelper__RealDelayCall_d__38_object___System_IDisposable_Dis
 void __fastcall BasicHelper__ToIterator_d__31_float____ctor(
         BasicHelper__ToIterator_d__31_T__o *this,
         int32_t 1__state,
-        const MethodInfo_2696CE8 *method)
+        const MethodInfo_2F40754 *method)
 {
-  if ( !this )
-    sub_B7769C(0LL, 1__state);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.__1__state = 1__state;
   LODWORD(this->fields.__2__current) = System_Environment__get_CurrentManagedThreadId(0LL);
@@ -4196,13 +6196,13 @@ void __fastcall BasicHelper__ToIterator_d__31_float____ctor(
 
 bool __fastcall BasicHelper__ToIterator_d__31_float___MoveNext(
         BasicHelper__ToIterator_d__31_T__o *this,
-        const MethodInfo_2696D2C *method)
+        const MethodInfo_2F4078C *method)
 {
   int32_t _1__state; // w8
   __int64 v4; // x8
-  int32_t v5; // w8
+  __int64 v5; // x1
   int32_t loopCount; // w8
-  __int64 v7; // x0
+  __int64 v7; // x8
   float v8; // s0
   bool result; // w0
 
@@ -4211,7 +6211,7 @@ bool __fastcall BasicHelper__ToIterator_d__31_float___MoveNext(
   {
     loopCount = this->fields.loopCount;
     this->fields.__1__state = -1;
-    v5 = loopCount + 1;
+    v5 = (unsigned int)(loopCount + 1);
     this->fields.loopCount = v5;
   }
   else
@@ -4222,17 +6222,15 @@ bool __fastcall BasicHelper__ToIterator_d__31_float___MoveNext(
     this->fields.__1__state = -1;
     if ( !v4 )
       return 0;
-    v5 = 0;
+    v5 = 0LL;
     this->fields.loopCount = 0;
   }
-  if ( v5 >= SLODWORD(this->fields.__3__func) )
+  if ( (int)v5 >= SLODWORD(this->fields.__3__func) )
     return 0;
   v7 = *(_QWORD *)&this->fields.__l__initialThreadId;
   if ( !v7 )
-    sub_B7769C(0LL, method);
-  v8 = ((float (__fastcall *)(__int64, _QWORD))method->klass->rgctx_data->_0_System_Func_int__T__Invoke->methodPointer)(
-         v7,
-         (unsigned int)v5);
+    sub_1B00F28(this, v5);
+  v8 = (*(float (__fastcall **)(_QWORD))(v7 + 24))(*(_QWORD *)(v7 + 64));
   result = 1;
   *((float *)&this->fields.__1__state + 1) = v8;
   this->fields.__1__state = 1;
@@ -4242,54 +6240,42 @@ bool __fastcall BasicHelper__ToIterator_d__31_float___MoveNext(
 
 System_Collections_Generic_IEnumerator_T__o *__fastcall BasicHelper__ToIterator_d__31_float___System_Collections_Generic_IEnumerable_T__GetEnumerator(
         BasicHelper__ToIterator_d__31_T__o *this,
-        const MethodInfo_2696E5C *method)
+        const MethodInfo_2F4087C *method)
 {
   int _2__current; // w21
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
-  BasicHelper__ToIterator_d__31_T__o *v11; // x20
-  Il2CppClass *_2_BasicHelper__ToIterator_d__31_T; // x21
-  __int64 v13; // x0
-  BasicHelper__ToIterator_d__31_T__c *klass; // x8
-  __int64 v15; // x0
-  __int64 v16; // x1
-  System_Int32_array **func; // x1
+  int32_t v5; // w2
+  int32_t v6; // w3
+  BasicHelper__ToIterator_d__31_T__o *v7; // x20
+  Il2CppClass *_0_BasicHelper__ToIterator_d__31_T; // x0
+  struct System_Func_int__T__o *func; // x1
 
   if ( this->fields.__1__state == -2
     && (_2__current = (int)this->fields.__2__current, _2__current == System_Environment__get_CurrentManagedThreadId(0LL)) )
   {
     this->fields.__1__state = 0;
-    v11 = this;
+    v7 = this;
   }
   else
   {
-    _2_BasicHelper__ToIterator_d__31_T = method->klass->rgctx_data->_2_BasicHelper__ToIterator_d__31_T_;
-    if ( (BYTE2(_2_BasicHelper__ToIterator_d__31_T->vtable[0].methodPtr) & 1) == 0 )
-      sub_B0F2C4(method->klass->rgctx_data->_2_BasicHelper__ToIterator_d__31_T_);
-    v13 = sub_B77694(_2_BasicHelper__ToIterator_d__31_T);
-    klass = method->klass;
-    v11 = (BasicHelper__ToIterator_d__31_T__o *)v13;
-    v15 = ((__int64 (__fastcall *)(__int64, _QWORD))klass->rgctx_data->_3_BasicHelper__ToIterator_d__31_T___ctor->methodPointer)(
-            v13,
-            0LL);
-    if ( !v11 )
-      sub_B7769C(v15, v16);
+    _0_BasicHelper__ToIterator_d__31_T = method->klass->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_;
+    if ( (BYTE5(_0_BasicHelper__ToIterator_d__31_T->vtable[0].methodPtr) & 1) == 0 )
+      _0_BasicHelper__ToIterator_d__31_T = (Il2CppClass *)sub_1B52BA8(_0_BasicHelper__ToIterator_d__31_T);
+    v7 = (BasicHelper__ToIterator_d__31_T__o *)sub_1B00F18(_0_BasicHelper__ToIterator_d__31_T);
+    System_Object___ctor((Il2CppObject *)v7, 0LL);
+    v7->fields.__1__state = 0;
+    LODWORD(v7->fields.__2__current) = System_Environment__get_CurrentManagedThreadId(0LL);
   }
-  LODWORD(v11->fields.__3__func) = HIDWORD(this->fields.__3__func);
-  func = (System_Int32_array **)this->fields.func;
-  *(_QWORD *)&v11->fields.__l__initialThreadId = func;
-  sub_B77560((BattleServantConfConponent_o *)&v11->fields.__l__initialThreadId, func, v5, v6, v7, v8, v9, v10);
-  return (System_Collections_Generic_IEnumerator_T__o *)v11;
+  LODWORD(v7->fields.__3__func) = HIDWORD(this->fields.__3__func);
+  func = this->fields.func;
+  *(_QWORD *)&v7->fields.__l__initialThreadId = func;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v7->fields.__l__initialThreadId, (int32_t)func, v5, v6);
+  return (System_Collections_Generic_IEnumerator_T__o *)v7;
 }
 
 
 float __fastcall BasicHelper__ToIterator_d__31_float___System_Collections_Generic_IEnumerator_T__get_Current(
         BasicHelper__ToIterator_d__31_T__o *this,
-        const MethodInfo_2696DCC *method)
+        const MethodInfo_2F40818 *method)
 {
   return *((float *)&this->fields.__1__state + 1);
 }
@@ -4297,49 +6283,42 @@ float __fastcall BasicHelper__ToIterator_d__31_float___System_Collections_Generi
 
 System_Collections_IEnumerator_o *__fastcall BasicHelper__ToIterator_d__31_float___System_Collections_IEnumerable_GetEnumerator(
         BasicHelper__ToIterator_d__31_T__o *this,
-        const MethodInfo_2696F14 *method)
+        const MethodInfo_2F40918 *method)
 {
-  if ( !this )
-    sub_B7769C(0LL, method);
-  return (System_Collections_IEnumerator_o *)((__int64 (*)(void))method->klass->rgctx_data->_4_BasicHelper__ToIterator_d__31_T__System_Collections_Generic_IEnumerable_T__GetEnumerator->methodPointer)();
+  return (System_Collections_IEnumerator_o *)BasicHelper__ToIterator_d__31_float___System_Collections_Generic_IEnumerable_T__GetEnumerator(
+                                               this,
+                                               (const MethodInfo_2F4087C *)method->klass->rgctx_data->_6_BasicHelper__ToIterator_d__31_T__System_Collections_Generic_IEnumerable_T__GetEnumerator);
 }
 
 
 void __fastcall __noreturn BasicHelper__ToIterator_d__31_float___System_Collections_IEnumerator_Reset(
         BasicHelper__ToIterator_d__31_T__o *this,
-        const MethodInfo_2696DD4 *method)
+        const MethodInfo_2F40820 *method)
 {
-  __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x0
+  System_NotSupportedException_o *v4; // x20
 
-  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B775C8(&Method_BasicHelper__ToIterator_d__31_float__System_Collections_IEnumerator_Reset__);
-  sub_B77668(v3, v4);
+  v3 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
+  v4 = (System_NotSupportedException_o *)sub_1B00F18(v3);
+  System_NotSupportedException___ctor(v4, 0LL);
+  sub_1B00DF4(v4, method);
 }
 
 
 Il2CppObject *__fastcall BasicHelper__ToIterator_d__31_float___System_Collections_IEnumerator_get_Current(
         BasicHelper__ToIterator_d__31_T__o *this,
-        const MethodInfo_2696E14 *method)
+        const MethodInfo_2F40854 *method)
 {
-  __int64 v2; // x2
-  Il2CppClass *_1_T; // x19
-  int v5; // [xsp+Ch] [xbp-4h] BYREF
+  int v3; // [xsp+Ch] [xbp-4h] BYREF
 
-  v5 = *(&this->fields.__1__state + 1);
-  _1_T = method->klass->rgctx_data->_1_T;
-  if ( (BYTE2(_1_T->vtable[0].methodPtr) & 1) == 0 )
-    sub_B0F2C4(method->klass->rgctx_data->_1_T);
-  return (Il2CppObject *)j_il2cpp_value_box_0(_1_T, &v5, v2);
+  v3 = *(&this->fields.__1__state + 1);
+  return (Il2CppObject *)j_il2cpp_value_box_0(method->klass->rgctx_data->_3_T, &v3);
 }
 
 
 void __fastcall BasicHelper__ToIterator_d__31_float___System_IDisposable_Dispose(
         BasicHelper__ToIterator_d__31_T__o *this,
-        const MethodInfo_2696D28 *method)
+        const MethodInfo_2F40788 *method)
 {
   ;
 }
@@ -4348,10 +6327,8 @@ void __fastcall BasicHelper__ToIterator_d__31_float___System_IDisposable_Dispose
 void __fastcall BasicHelper__ToIterator_d__31_object____ctor(
         BasicHelper__ToIterator_d__31_T__o *this,
         int32_t 1__state,
-        const MethodInfo_2696ACC *method)
+        const MethodInfo_2F40594 *method)
 {
-  if ( !this )
-    sub_B7769C(0LL, 1__state);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.__1__state = 1__state;
   this->fields.__l__initialThreadId = System_Environment__get_CurrentManagedThreadId(0LL);
@@ -4360,21 +6337,17 @@ void __fastcall BasicHelper__ToIterator_d__31_object____ctor(
 
 bool __fastcall BasicHelper__ToIterator_d__31_object___MoveNext(
         BasicHelper__ToIterator_d__31_T__o *this,
-        const MethodInfo_2696B10 *method)
+        const MethodInfo_2F405CC *method)
 {
   int32_t _1__state; // w8
   struct System_Func_int__T__o *func; // x8
-  int32_t v5; // w8
+  __int64 v5; // x1
   int32_t i_5__2; // w8
-  struct System_Func_int__T__o *v7; // x0
+  struct System_Func_int__T__o *v7; // x8
   Il2CppObject *v8; // x0
   Il2CppObject **p__2__current; // x19
-  System_String_array **v10; // x2
-  System_String_array **v11; // x3
-  System_Boolean_array **v12; // x4
-  System_Int32_array **v13; // x5
-  System_Int32_array *v14; // x6
-  System_Int32_array *v15; // x7
+  int32_t v10; // w2
+  int32_t v11; // w3
   bool result; // w0
 
   _1__state = this->fields.__1__state;
@@ -4382,7 +6355,7 @@ bool __fastcall BasicHelper__ToIterator_d__31_object___MoveNext(
   {
     i_5__2 = this->fields._i_5__2;
     this->fields.__1__state = -1;
-    v5 = i_5__2 + 1;
+    v5 = (unsigned int)(i_5__2 + 1);
     this->fields._i_5__2 = v5;
   }
   else
@@ -4393,20 +6366,18 @@ bool __fastcall BasicHelper__ToIterator_d__31_object___MoveNext(
     this->fields.__1__state = -1;
     if ( !func )
       return 0;
-    v5 = 0;
+    v5 = 0LL;
     this->fields._i_5__2 = 0;
   }
-  if ( v5 >= this->fields.loopCount )
+  if ( (int)v5 >= this->fields.loopCount )
     return 0;
   v7 = this->fields.func;
   if ( !v7 )
-    sub_B7769C(0LL, method);
-  v8 = (Il2CppObject *)((__int64 (__fastcall *)(struct System_Func_int__T__o *, _QWORD))method->klass->rgctx_data->_0_System_Func_int__T__Invoke->methodPointer)(
-                         v7,
-                         (unsigned int)v5);
+    sub_1B00F28(this, v5);
+  v8 = (Il2CppObject *)((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *))v7->fields.m_target)(v7->fields.original_method_info);
   this->fields.__2__current = v8;
   p__2__current = &this->fields.__2__current;
-  sub_B77560((BattleServantConfConponent_o *)p__2__current, (System_Int32_array **)v8, v10, v11, v12, v13, v14, v15);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)p__2__current, (int32_t)v8, v10, v11);
   result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
   return result;
@@ -4415,55 +6386,43 @@ bool __fastcall BasicHelper__ToIterator_d__31_object___MoveNext(
 
 System_Collections_Generic_IEnumerator_T__o *__fastcall BasicHelper__ToIterator_d__31_object___System_Collections_Generic_IEnumerable_T__GetEnumerator(
         BasicHelper__ToIterator_d__31_T__o *this,
-        const MethodInfo_2696C0C *method)
+        const MethodInfo_2F406A8 *method)
 {
   int32_t l__initialThreadId; // w21
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
-  BasicHelper__ToIterator_d__31_T__o *v11; // x20
-  Il2CppClass *_2_BasicHelper__ToIterator_d__31_T; // x21
-  __int64 v13; // x0
-  BasicHelper__ToIterator_d__31_T__c *klass; // x8
-  __int64 v15; // x0
-  __int64 v16; // x1
-  System_Int32_array **_3__func; // x1
+  int32_t v5; // w2
+  int32_t v6; // w3
+  BasicHelper__ToIterator_d__31_T__o *v7; // x20
+  Il2CppClass *_0_BasicHelper__ToIterator_d__31_T; // x0
+  struct System_Func_int__T__o *_3__func; // x1
 
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
         l__initialThreadId == System_Environment__get_CurrentManagedThreadId(0LL)) )
   {
     this->fields.__1__state = 0;
-    v11 = this;
+    v7 = this;
   }
   else
   {
-    _2_BasicHelper__ToIterator_d__31_T = method->klass->rgctx_data->_2_BasicHelper__ToIterator_d__31_T_;
-    if ( (BYTE2(_2_BasicHelper__ToIterator_d__31_T->vtable[0].methodPtr) & 1) == 0 )
-      sub_B0F2C4(method->klass->rgctx_data->_2_BasicHelper__ToIterator_d__31_T_);
-    v13 = sub_B77694(_2_BasicHelper__ToIterator_d__31_T);
-    klass = method->klass;
-    v11 = (BasicHelper__ToIterator_d__31_T__o *)v13;
-    v15 = ((__int64 (__fastcall *)(__int64, _QWORD))klass->rgctx_data->_3_BasicHelper__ToIterator_d__31_T___ctor->methodPointer)(
-            v13,
-            0LL);
-    if ( !v11 )
-      sub_B7769C(v15, v16);
+    _0_BasicHelper__ToIterator_d__31_T = method->klass->rgctx_data->_0_BasicHelper__ToIterator_d__31_T_;
+    if ( (BYTE5(_0_BasicHelper__ToIterator_d__31_T->vtable[0].methodPtr) & 1) == 0 )
+      _0_BasicHelper__ToIterator_d__31_T = (Il2CppClass *)sub_1B52BA8(_0_BasicHelper__ToIterator_d__31_T);
+    v7 = (BasicHelper__ToIterator_d__31_T__o *)sub_1B00F18(_0_BasicHelper__ToIterator_d__31_T);
+    System_Object___ctor((Il2CppObject *)v7, 0LL);
+    v7->fields.__1__state = 0;
+    v7->fields.__l__initialThreadId = System_Environment__get_CurrentManagedThreadId(0LL);
   }
-  v11->fields.loopCount = this->fields.__3__loopCount;
-  _3__func = (System_Int32_array **)this->fields.__3__func;
-  v11->fields.func = (struct System_Func_int__T__o *)_3__func;
-  sub_B77560((BattleServantConfConponent_o *)&v11->fields.func, _3__func, v5, v6, v7, v8, v9, v10);
-  return (System_Collections_Generic_IEnumerator_T__o *)v11;
+  v7->fields.loopCount = this->fields.__3__loopCount;
+  _3__func = this->fields.__3__func;
+  v7->fields.func = _3__func;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v7->fields.func, (int32_t)_3__func, v5, v6);
+  return (System_Collections_Generic_IEnumerator_T__o *)v7;
 }
 
 
 Il2CppObject *__fastcall BasicHelper__ToIterator_d__31_object___System_Collections_Generic_IEnumerator_T__get_Current(
         BasicHelper__ToIterator_d__31_T__o *this,
-        const MethodInfo_2696BBC *method)
+        const MethodInfo_2F40664 *method)
 {
   return this->fields.__2__current;
 }
@@ -4471,33 +6430,31 @@ Il2CppObject *__fastcall BasicHelper__ToIterator_d__31_object___System_Collectio
 
 System_Collections_IEnumerator_o *__fastcall BasicHelper__ToIterator_d__31_object___System_Collections_IEnumerable_GetEnumerator(
         BasicHelper__ToIterator_d__31_T__o *this,
-        const MethodInfo_2696CC4 *method)
+        const MethodInfo_2F40744 *method)
 {
-  if ( !this )
-    sub_B7769C(0LL, method);
-  return (System_Collections_IEnumerator_o *)((__int64 (*)(void))method->klass->rgctx_data->_4_BasicHelper__ToIterator_d__31_T__System_Collections_Generic_IEnumerable_T__GetEnumerator->methodPointer)();
+  return (System_Collections_IEnumerator_o *)BasicHelper__ToIterator_d__31_object___System_Collections_Generic_IEnumerable_T__GetEnumerator(
+                                               this,
+                                               (const MethodInfo_2F406A8 *)method->klass->rgctx_data->_6_BasicHelper__ToIterator_d__31_T__System_Collections_Generic_IEnumerable_T__GetEnumerator);
 }
 
 
 void __fastcall __noreturn BasicHelper__ToIterator_d__31_object___System_Collections_IEnumerator_Reset(
         BasicHelper__ToIterator_d__31_T__o *this,
-        const MethodInfo_2696BC4 *method)
+        const MethodInfo_2F4066C *method)
 {
-  __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x0
+  System_NotSupportedException_o *v4; // x20
 
-  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B775C8(&Method_BasicHelper__ToIterator_d__31_object__System_Collections_IEnumerator_Reset__);
-  sub_B77668(v3, v4);
+  v3 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
+  v4 = (System_NotSupportedException_o *)sub_1B00F18(v3);
+  System_NotSupportedException___ctor(v4, 0LL);
+  sub_1B00DF4(v4, method);
 }
 
 
 Il2CppObject *__fastcall BasicHelper__ToIterator_d__31_object___System_Collections_IEnumerator_get_Current(
         BasicHelper__ToIterator_d__31_T__o *this,
-        const MethodInfo_2696C04 *method)
+        const MethodInfo_2F406A0 *method)
 {
   return this->fields.__2__current;
 }
@@ -4505,7 +6462,7 @@ Il2CppObject *__fastcall BasicHelper__ToIterator_d__31_object___System_Collectio
 
 void __fastcall BasicHelper__ToIterator_d__31_object___System_IDisposable_Dispose(
         BasicHelper__ToIterator_d__31_T__o *this,
-        const MethodInfo_2696B0C *method)
+        const MethodInfo_2F405C8 *method)
 {
   ;
 }
@@ -4527,19 +6484,15 @@ bool __fastcall BasicHelper__WaitForEndOfFrameCall_d__43__MoveNext(
 {
   int32_t _1__state; // w8
   UnityEngine_WaitForEndOfFrame_o *v4; // x20
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  int32_t v5; // w2
+  int32_t v6; // w3
   bool result; // w0
   System_Action_o *action; // x0
 
-  if ( (byte_4389F6F & 1) == 0 )
+  if ( (byte_48E3DF3 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_WaitForEndOfFrame_TypeInfo);
-    byte_4389F6F = 1;
+    sub_1B00CCC(&UnityEngine_WaitForEndOfFrame_TypeInfo, method);
+    byte_48E3DF3 = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
@@ -4551,18 +6504,10 @@ bool __fastcall BasicHelper__WaitForEndOfFrameCall_d__43__MoveNext(
   else if ( !_1__state )
   {
     this->fields.__1__state = -1;
-    v4 = (UnityEngine_WaitForEndOfFrame_o *)sub_B77694(UnityEngine_WaitForEndOfFrame_TypeInfo);
+    v4 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B00F18(UnityEngine_WaitForEndOfFrame_TypeInfo);
     UnityEngine_WaitForEndOfFrame___ctor(v4, 0LL);
     this->fields.__2__current = (Il2CppObject *)v4;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&this->fields.__2__current,
-      (System_Int32_array **)v4,
-      v5,
-      v6,
-      v7,
-      v8,
-      v9,
-      v10);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.__2__current, (int32_t)v4, v5, v6);
     result = 1;
     this->fields.__1__state = 1;
     return result;
@@ -4587,11 +6532,11 @@ void __fastcall __noreturn BasicHelper__WaitForEndOfFrameCall_d__43__System_Coll
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
+  v2 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B00F18(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B775C8(&Method_BasicHelper__WaitForEndOfFrameCall_d__43_System_Collections_IEnumerator_Reset__);
-  sub_B77668(v3, v4);
+  v4 = sub_1B00CE0(&Method_BasicHelper__WaitForEndOfFrameCall_d__43_System_Collections_IEnumerator_Reset__);
+  sub_1B00DF4(v3, v4);
 }
 
 
@@ -4611,65 +6556,157 @@ void __fastcall BasicHelper__WaitForEndOfFrameCall_d__43__System_IDisposable_Dis
 }
 
 
-void __fastcall BasicHelper___c__22_int__object____cctor(const MethodInfo_1F8155C *method)
+void __fastcall BasicHelper___c__22___Il2CppFullySharedGenericType____Il2CppFullySharedGenericType____cctor(
+        const MethodInfo_2F11B40 *method)
 {
-  BasicHelper___c__22_K__V__c *klass; // x20
-  Il2CppClass *_0_BasicHelper___c__22_K__V; // x20
+  BasicHelper___c__22_K__V__c *klass; // x0
+  __int64 _0_BasicHelper___c__22_K__V; // x0
   __int64 v4; // x0
-  BasicHelper___c__22_K__V__c *v5; // x22
-  System_Int32_array **v6; // x20
-  __int16 v7; // w8
-  BasicHelper___c__22_K__V__c *v8; // x21
-  void (__fastcall *methodPointer)(System_Int32_array **, MethodInfo *); // x22
-  System_String_array **v10; // x2
-  System_String_array **v11; // x3
-  System_Boolean_array **v12; // x4
-  System_Int32_array **v13; // x5
-  System_Int32_array *v14; // x6
-  System_Int32_array *v15; // x7
-  BasicHelper___c__22_K__V__c *v16; // x19
-  Il2CppClass *_2_BasicHelper___c__22_K__V; // x19
-  BattleServantConfConponent_o *static_fields; // x0
+  BasicHelper___c__22_K__V__c *v5; // x8
+  __int64 v6; // x20
+  __int16 v7; // w9
+  BasicHelper___c__22_K__V__c *v8; // x0
+  void (__fastcall *methodPointer)(__int64, MethodInfo *); // x21
+  int32_t v10; // w2
+  int32_t v11; // w3
+  BasicHelper___c__22_K__V__c *v12; // x0
+  __int64 _2_BasicHelper___c__22_K__V; // x0
+  BasicHelper___c__22_K__V__c *v14; // x0
+  __int64 v15; // x0
 
   klass = method->klass;
-  if ( (BYTE2(klass->vtable._0_Equals.methodPtr) & 1) == 0 )
-    sub_B0F2C4(method->klass);
-  _0_BasicHelper___c__22_K__V = klass->rgctx_data->_0_BasicHelper___c__22_K__V_;
-  if ( (BYTE2(_0_BasicHelper___c__22_K__V->vtable[0].methodPtr) & 1) == 0 )
-    sub_B0F2C4(_0_BasicHelper___c__22_K__V);
-  v4 = sub_B77694(_0_BasicHelper___c__22_K__V);
+  if ( (BYTE5(klass->vtable._0_Equals.methodPtr) & 1) == 0 )
+    klass = (BasicHelper___c__22_K__V__c *)sub_1B52BA8(klass);
+  _0_BasicHelper___c__22_K__V = (__int64)klass->rgctx_data->_0_BasicHelper___c__22_K__V_;
+  if ( (*(_BYTE *)(_0_BasicHelper___c__22_K__V + 309) & 1) == 0 )
+    _0_BasicHelper___c__22_K__V = sub_1B52BA8(_0_BasicHelper___c__22_K__V);
+  v4 = sub_1B00F18(_0_BasicHelper___c__22_K__V);
   v5 = method->klass;
-  v6 = (System_Int32_array **)v4;
-  v7 = WORD1(v5->vtable._0_Equals.methodPtr);
-  v8 = v5;
-  if ( (v7 & 1) == 0 )
+  v6 = v4;
+  v7 = *(_WORD *)((char *)&v5->vtable._0_Equals.methodPtr + 5);
+  if ( (v7 & 1) != 0 )
   {
-    sub_B0F2C4(method->klass);
     v8 = method->klass;
-    v7 = WORD1(v8->vtable._0_Equals.methodPtr);
   }
-  methodPointer = (void (__fastcall *)(System_Int32_array **, MethodInfo *))v5->rgctx_data->_1_BasicHelper___c__22_K__V___ctor->methodPointer;
+  else
+  {
+    v8 = (BasicHelper___c__22_K__V__c *)sub_1B52BA8(method->klass);
+    v5 = method->klass;
+    v7 = *(_WORD *)((char *)&v5->vtable._0_Equals.methodPtr + 5);
+  }
+  methodPointer = (void (__fastcall *)(__int64, MethodInfo *))v8->rgctx_data->_1_BasicHelper___c__22_K__V___ctor->methodPointer;
   if ( (v7 & 1) == 0 )
-    sub_B0F2C4(v8);
-  methodPointer(v6, v8->rgctx_data->_1_BasicHelper___c__22_K__V___ctor);
-  v16 = method->klass;
-  if ( (BYTE2(v16->vtable._0_Equals.methodPtr) & 1) == 0 )
-    sub_B0F2C4(v16);
-  _2_BasicHelper___c__22_K__V = v16->rgctx_data->_2_BasicHelper___c__22_K__V_;
-  if ( (BYTE2(_2_BasicHelper___c__22_K__V->vtable[0].methodPtr) & 1) == 0 )
-    sub_B0F2C4(_2_BasicHelper___c__22_K__V);
-  static_fields = (BattleServantConfConponent_o *)_2_BasicHelper___c__22_K__V->static_fields;
-  static_fields->klass = (BattleServantConfConponent_c *)v6;
-  sub_B77560(static_fields, v6, v10, v11, v12, v13, v14, v15);
+    v5 = (BasicHelper___c__22_K__V__c *)sub_1B52BA8(v5);
+  methodPointer(v6, v5->rgctx_data->_1_BasicHelper___c__22_K__V___ctor);
+  v12 = method->klass;
+  if ( (BYTE5(v12->vtable._0_Equals.methodPtr) & 1) == 0 )
+    v12 = (BasicHelper___c__22_K__V__c *)sub_1B52BA8(v12);
+  _2_BasicHelper___c__22_K__V = (__int64)v12->rgctx_data->_2_BasicHelper___c__22_K__V_;
+  if ( (*(_BYTE *)(_2_BasicHelper___c__22_K__V + 309) & 1) == 0 )
+    _2_BasicHelper___c__22_K__V = sub_1B52BA8(_2_BasicHelper___c__22_K__V);
+  **(_QWORD **)(_2_BasicHelper___c__22_K__V + 184) = v6;
+  v14 = method->klass;
+  if ( (BYTE5(v14->vtable._0_Equals.methodPtr) & 1) == 0 )
+    v14 = (BasicHelper___c__22_K__V__c *)sub_1B52BA8(v14);
+  v15 = (__int64)v14->rgctx_data->_2_BasicHelper___c__22_K__V_;
+  if ( (*(_BYTE *)(v15 + 309) & 1) == 0 )
+    v15 = sub_1B52BA8(v15);
+  sub_1B00C70(*(ServantStatusBattleListViewItem_o **)(v15 + 184), v6, v10, v11);
+}
+
+
+void __fastcall BasicHelper___c__22___Il2CppFullySharedGenericType____Il2CppFullySharedGenericType____ctor(
+        BasicHelper___c__22_K__V__o *this,
+        const MethodInfo_2F11C34 *method)
+{
+  System_Object___ctor((Il2CppObject *)this, 0LL);
+}
+
+
+// local variable allocation has failed, the output may be wrong!
+Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o __fastcall BasicHelper___c__22___Il2CppFullySharedGenericType____Il2CppFullySharedGenericType____Remove_b__22_0(
+        BasicHelper___c__22_K__V__o *this,
+        System_Collections_Generic_KeyValuePair_K__V__o pair,
+        const MethodInfo_2F11C3C *method)
+{
+  Il2CppObject *value; // x19
+  Il2CppObject *key; // x2
+  BasicHelper___c__22_K__V__RGCTXs *rgctx_data; // x8
+  __int64 native_size; // x20
+  MethodInfo *_4_System_Collections_Generic_KeyValuePair_K__V__get_Key; // x1
+  void (__fastcall *methodPointer)(); // x0
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v9; // x0 OVERLAPPED
+  void *v10; // x1
+  __int64 v11[2]; // [xsp+0h] [xbp-10h] BYREF
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o result; // 0:x0.16
+
+  value = pair.fields.value;
+  key = pair.fields.key;
+  v11[1] = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
+  rgctx_data = method->klass->rgctx_data;
+  native_size = (unsigned int)rgctx_data->_6_K->_2.native_size;
+  _4_System_Collections_Generic_KeyValuePair_K__V__get_Key = rgctx_data->_4_System_Collections_Generic_KeyValuePair_K__V__get_Key;
+  methodPointer = _4_System_Collections_Generic_KeyValuePair_K__V__get_Key->methodPointer;
+  v11[0] = (__int64)v11 - ((native_size + 15) & 0x1FFFFFFF0LL);
+  _4_System_Collections_Generic_KeyValuePair_K__V__get_Key->invoker_method(
+    methodPointer,
+    _4_System_Collections_Generic_KeyValuePair_K__V__get_Key,
+    key,
+    (void **)v11,
+    (void *)v11[0]);
+  v9 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
+                                                                   value,
+                                                                   (char *)v11 - ((native_size + 15) & 0x1FFFFFFF0LL),
+                                                                   native_size);
+  result.monitor = v10;
+  result.klass = v9;
+  return result;
+}
+
+
+void __fastcall BasicHelper___c__22_int__object____cctor(const MethodInfo_2F11A74 *method)
+{
+  BasicHelper___c__22_K__V__c *klass; // x0
+  __int64 _0_BasicHelper___c__22_K__V; // x0
+  Il2CppObject *v4; // x20
+  int32_t v5; // w2
+  int32_t v6; // w3
+  BasicHelper___c__22_K__V__c *v7; // x0
+  __int64 _2_BasicHelper___c__22_K__V; // x0
+  BasicHelper___c__22_K__V__c *v9; // x0
+  __int64 v10; // x0
+
+  klass = method->klass;
+  if ( (BYTE5(klass->vtable._0_Equals.methodPtr) & 1) == 0 )
+    klass = (BasicHelper___c__22_K__V__c *)sub_1B52BA8(klass);
+  _0_BasicHelper___c__22_K__V = (__int64)klass->rgctx_data->_0_BasicHelper___c__22_K__V_;
+  if ( (*(_BYTE *)(_0_BasicHelper___c__22_K__V + 309) & 1) == 0 )
+    _0_BasicHelper___c__22_K__V = sub_1B52BA8(_0_BasicHelper___c__22_K__V);
+  v4 = (Il2CppObject *)sub_1B00F18(_0_BasicHelper___c__22_K__V);
+  if ( (BYTE5(method->klass->vtable._0_Equals.methodPtr) & 1) == 0 )
+    sub_1B52BA8(method->klass);
+  System_Object___ctor(v4, 0LL);
+  v7 = method->klass;
+  if ( (BYTE5(v7->vtable._0_Equals.methodPtr) & 1) == 0 )
+    v7 = (BasicHelper___c__22_K__V__c *)sub_1B52BA8(v7);
+  _2_BasicHelper___c__22_K__V = (__int64)v7->rgctx_data->_2_BasicHelper___c__22_K__V_;
+  if ( (*(_BYTE *)(_2_BasicHelper___c__22_K__V + 309) & 1) == 0 )
+    _2_BasicHelper___c__22_K__V = sub_1B52BA8(_2_BasicHelper___c__22_K__V);
+  **(_QWORD **)(_2_BasicHelper___c__22_K__V + 184) = v4;
+  v9 = method->klass;
+  if ( (BYTE5(v9->vtable._0_Equals.methodPtr) & 1) == 0 )
+    v9 = (BasicHelper___c__22_K__V__c *)sub_1B52BA8(v9);
+  v10 = (__int64)v9->rgctx_data->_2_BasicHelper___c__22_K__V_;
+  if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
+    v10 = sub_1B52BA8(v10);
+  sub_1B00C70(*(ServantStatusBattleListViewItem_o **)(v10 + 184), (int32_t)v4, v5, v6);
 }
 
 
 void __fastcall BasicHelper___c__22_int__object____ctor(
         BasicHelper___c__22_K__V__o *this,
-        const MethodInfo_1F81638 *method)
+        const MethodInfo_2F11B30 *method)
 {
-  if ( !this )
-    sub_B7769C(0LL, method);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -4677,141 +6714,142 @@ void __fastcall BasicHelper___c__22_int__object____ctor(
 int32_t __fastcall BasicHelper___c__22_int__object____Remove_b__22_0(
         BasicHelper___c__22_K__V__o *this,
         System_Collections_Generic_KeyValuePair_K__V__o pair,
-        const MethodInfo_1F81650 *method)
+        const MethodInfo_2F11B38 *method)
 {
   return (int32_t)pair.fields.key;
 }
 
 
-void __fastcall BasicHelper___c__22_object__object____cctor(const MethodInfo_1F81658 *method)
+void __fastcall BasicHelper___c__26___Il2CppFullySharedGenericType____cctor(const MethodInfo_2F121BC *method)
 {
-  BasicHelper___c__22_K__V__c *klass; // x20
-  Il2CppClass *_0_BasicHelper___c__22_K__V; // x20
+  BasicHelper___c__26_T__c *klass; // x0
+  __int64 _0_BasicHelper___c__26_T; // x0
   __int64 v4; // x0
-  BasicHelper___c__22_K__V__c *v5; // x22
-  System_Int32_array **v6; // x20
-  __int16 v7; // w8
-  BasicHelper___c__22_K__V__c *v8; // x21
-  void (__fastcall *methodPointer)(System_Int32_array **, MethodInfo *); // x22
-  System_String_array **v10; // x2
-  System_String_array **v11; // x3
-  System_Boolean_array **v12; // x4
-  System_Int32_array **v13; // x5
-  System_Int32_array *v14; // x6
-  System_Int32_array *v15; // x7
-  BasicHelper___c__22_K__V__c *v16; // x19
-  Il2CppClass *_2_BasicHelper___c__22_K__V; // x19
-  BattleServantConfConponent_o *static_fields; // x0
+  BasicHelper___c__26_T__c *v5; // x8
+  __int64 v6; // x20
+  __int16 v7; // w9
+  BasicHelper___c__26_T__c *v8; // x0
+  void (__fastcall *methodPointer)(__int64, MethodInfo *); // x21
+  int32_t v10; // w2
+  int32_t v11; // w3
+  BasicHelper___c__26_T__c *v12; // x0
+  __int64 _2_BasicHelper___c__26_T; // x0
+  BasicHelper___c__26_T__c *v14; // x0
+  __int64 v15; // x0
 
   klass = method->klass;
-  if ( (BYTE2(klass->vtable._0_Equals.methodPtr) & 1) == 0 )
-    sub_B0F2C4(method->klass);
-  _0_BasicHelper___c__22_K__V = klass->rgctx_data->_0_BasicHelper___c__22_K__V_;
-  if ( (BYTE2(_0_BasicHelper___c__22_K__V->vtable[0].methodPtr) & 1) == 0 )
-    sub_B0F2C4(_0_BasicHelper___c__22_K__V);
-  v4 = sub_B77694(_0_BasicHelper___c__22_K__V);
+  if ( (BYTE5(klass->vtable._0_Equals.methodPtr) & 1) == 0 )
+    klass = (BasicHelper___c__26_T__c *)sub_1B52BA8(klass);
+  _0_BasicHelper___c__26_T = (__int64)klass->rgctx_data->_0_BasicHelper___c__26_T_;
+  if ( (*(_BYTE *)(_0_BasicHelper___c__26_T + 309) & 1) == 0 )
+    _0_BasicHelper___c__26_T = sub_1B52BA8(_0_BasicHelper___c__26_T);
+  v4 = sub_1B00F18(_0_BasicHelper___c__26_T);
   v5 = method->klass;
-  v6 = (System_Int32_array **)v4;
-  v7 = WORD1(v5->vtable._0_Equals.methodPtr);
-  v8 = v5;
-  if ( (v7 & 1) == 0 )
+  v6 = v4;
+  v7 = *(_WORD *)((char *)&v5->vtable._0_Equals.methodPtr + 5);
+  if ( (v7 & 1) != 0 )
   {
-    sub_B0F2C4(method->klass);
     v8 = method->klass;
-    v7 = WORD1(v8->vtable._0_Equals.methodPtr);
   }
-  methodPointer = (void (__fastcall *)(System_Int32_array **, MethodInfo *))v5->rgctx_data->_1_BasicHelper___c__22_K__V___ctor->methodPointer;
+  else
+  {
+    v8 = (BasicHelper___c__26_T__c *)sub_1B52BA8(method->klass);
+    v5 = method->klass;
+    v7 = *(_WORD *)((char *)&v5->vtable._0_Equals.methodPtr + 5);
+  }
+  methodPointer = (void (__fastcall *)(__int64, MethodInfo *))v8->rgctx_data->_1_BasicHelper___c__26_T___ctor->methodPointer;
   if ( (v7 & 1) == 0 )
-    sub_B0F2C4(v8);
-  methodPointer(v6, v8->rgctx_data->_1_BasicHelper___c__22_K__V___ctor);
-  v16 = method->klass;
-  if ( (BYTE2(v16->vtable._0_Equals.methodPtr) & 1) == 0 )
-    sub_B0F2C4(v16);
-  _2_BasicHelper___c__22_K__V = v16->rgctx_data->_2_BasicHelper___c__22_K__V_;
-  if ( (BYTE2(_2_BasicHelper___c__22_K__V->vtable[0].methodPtr) & 1) == 0 )
-    sub_B0F2C4(_2_BasicHelper___c__22_K__V);
-  static_fields = (BattleServantConfConponent_o *)_2_BasicHelper___c__22_K__V->static_fields;
-  static_fields->klass = (BattleServantConfConponent_c *)v6;
-  sub_B77560(static_fields, v6, v10, v11, v12, v13, v14, v15);
+    v5 = (BasicHelper___c__26_T__c *)sub_1B52BA8(v5);
+  methodPointer(v6, v5->rgctx_data->_1_BasicHelper___c__26_T___ctor);
+  v12 = method->klass;
+  if ( (BYTE5(v12->vtable._0_Equals.methodPtr) & 1) == 0 )
+    v12 = (BasicHelper___c__26_T__c *)sub_1B52BA8(v12);
+  _2_BasicHelper___c__26_T = (__int64)v12->rgctx_data->_2_BasicHelper___c__26_T_;
+  if ( (*(_BYTE *)(_2_BasicHelper___c__26_T + 309) & 1) == 0 )
+    _2_BasicHelper___c__26_T = sub_1B52BA8(_2_BasicHelper___c__26_T);
+  **(_QWORD **)(_2_BasicHelper___c__26_T + 184) = v6;
+  v14 = method->klass;
+  if ( (BYTE5(v14->vtable._0_Equals.methodPtr) & 1) == 0 )
+    v14 = (BasicHelper___c__26_T__c *)sub_1B52BA8(v14);
+  v15 = (__int64)v14->rgctx_data->_2_BasicHelper___c__26_T_;
+  if ( (*(_BYTE *)(v15 + 309) & 1) == 0 )
+    v15 = sub_1B52BA8(v15);
+  sub_1B00C70(*(ServantStatusBattleListViewItem_o **)(v15 + 184), v6, v10, v11);
 }
 
 
-void __fastcall BasicHelper___c__22_object__object____ctor(
-        BasicHelper___c__22_K__V__o *this,
-        const MethodInfo_1F81734 *method)
+void __fastcall BasicHelper___c__26___Il2CppFullySharedGenericType____ctor(
+        BasicHelper___c__26_T__o *this,
+        const MethodInfo_2F122B0 *method)
 {
-  if ( !this )
-    sub_B7769C(0LL, method);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 
-Il2CppObject *__fastcall BasicHelper___c__22_object__object____Remove_b__22_0(
-        BasicHelper___c__22_K__V__o *this,
-        System_Collections_Generic_KeyValuePair_K__V__o pair,
-        const MethodInfo_1F8174C *method)
+bool __fastcall BasicHelper___c__26___Il2CppFullySharedGenericType____ExcludeNull_b__26_0(
+        BasicHelper___c__26_T__o *this,
+        Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o x,
+        const MethodInfo_2F122B8 *method)
 {
-  return pair.fields.key;
+  __int64 v3; // x21
+  __int64 v4; // x8
+  char *v5; // x19
+  __int64 v7[2]; // [xsp+0h] [xbp-10h] BYREF
+
+  v7[1] = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
+  v7[0] = (__int64)x.klass;
+  v3 = *((_QWORD *)x.monitor + 4);
+  v4 = *(_QWORD *)(*(_QWORD *)(v3 + 192) + 24LL);
+  x.monitor = (void *)*(unsigned int *)(v4 + 252);
+  v5 = (char *)v7 - (((__int64)x.monitor + 15) & 0x1FFFFFFF0LL);
+  if ( *(int *)(v4 + 40) >= 0 )
+    x.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)v7;
+  memcpy((char *)v7 - (((__int64)x.monitor + 15) & 0x1FFFFFFF0LL), x.klass, (size_t)x.monitor);
+  return sub_1B00EDC(*(_QWORD *)(*(_QWORD *)(v3 + 192) + 24LL), v5) & 1;
 }
 
 
-void __fastcall BasicHelper___c__26_object____cctor(const MethodInfo_1F81A4C *method)
+void __fastcall BasicHelper___c__26_object____cctor(const MethodInfo_2F120EC *method)
 {
-  BasicHelper___c__26_T__c *klass; // x20
-  Il2CppClass *_0_BasicHelper___c__26_T; // x20
-  __int64 v4; // x0
-  BasicHelper___c__26_T__c *v5; // x22
-  System_Int32_array **v6; // x20
-  __int16 v7; // w8
-  BasicHelper___c__26_T__c *v8; // x21
-  void (__fastcall *methodPointer)(System_Int32_array **, MethodInfo *); // x22
-  System_String_array **v10; // x2
-  System_String_array **v11; // x3
-  System_Boolean_array **v12; // x4
-  System_Int32_array **v13; // x5
-  System_Int32_array *v14; // x6
-  System_Int32_array *v15; // x7
-  BasicHelper___c__26_T__c *v16; // x19
-  Il2CppClass *_2_BasicHelper___c__26_T; // x19
-  BattleServantConfConponent_o *static_fields; // x0
+  BasicHelper___c__26_T__c *klass; // x0
+  __int64 _0_BasicHelper___c__26_T; // x0
+  Il2CppObject *v4; // x20
+  int32_t v5; // w2
+  int32_t v6; // w3
+  BasicHelper___c__26_T__c *v7; // x0
+  __int64 _2_BasicHelper___c__26_T; // x0
+  BasicHelper___c__26_T__c *v9; // x0
+  __int64 v10; // x0
 
   klass = method->klass;
-  if ( (BYTE2(klass->vtable._0_Equals.methodPtr) & 1) == 0 )
-    sub_B0F2C4(method->klass);
-  _0_BasicHelper___c__26_T = klass->rgctx_data->_0_BasicHelper___c__26_T_;
-  if ( (BYTE2(_0_BasicHelper___c__26_T->vtable[0].methodPtr) & 1) == 0 )
-    sub_B0F2C4(_0_BasicHelper___c__26_T);
-  v4 = sub_B77694(_0_BasicHelper___c__26_T);
-  v5 = method->klass;
-  v6 = (System_Int32_array **)v4;
-  v7 = WORD1(v5->vtable._0_Equals.methodPtr);
-  v8 = v5;
-  if ( (v7 & 1) == 0 )
-  {
-    sub_B0F2C4(method->klass);
-    v8 = method->klass;
-    v7 = WORD1(v8->vtable._0_Equals.methodPtr);
-  }
-  methodPointer = (void (__fastcall *)(System_Int32_array **, MethodInfo *))v5->rgctx_data->_1_BasicHelper___c__26_T___ctor->methodPointer;
-  if ( (v7 & 1) == 0 )
-    sub_B0F2C4(v8);
-  methodPointer(v6, v8->rgctx_data->_1_BasicHelper___c__26_T___ctor);
-  v16 = method->klass;
-  if ( (BYTE2(v16->vtable._0_Equals.methodPtr) & 1) == 0 )
-    sub_B0F2C4(v16);
-  _2_BasicHelper___c__26_T = v16->rgctx_data->_2_BasicHelper___c__26_T_;
-  if ( (BYTE2(_2_BasicHelper___c__26_T->vtable[0].methodPtr) & 1) == 0 )
-    sub_B0F2C4(_2_BasicHelper___c__26_T);
-  static_fields = (BattleServantConfConponent_o *)_2_BasicHelper___c__26_T->static_fields;
-  static_fields->klass = (BattleServantConfConponent_c *)v6;
-  sub_B77560(static_fields, v6, v10, v11, v12, v13, v14, v15);
+  if ( (BYTE5(klass->vtable._0_Equals.methodPtr) & 1) == 0 )
+    klass = (BasicHelper___c__26_T__c *)sub_1B52BA8(klass);
+  _0_BasicHelper___c__26_T = (__int64)klass->rgctx_data->_0_BasicHelper___c__26_T_;
+  if ( (*(_BYTE *)(_0_BasicHelper___c__26_T + 309) & 1) == 0 )
+    _0_BasicHelper___c__26_T = sub_1B52BA8(_0_BasicHelper___c__26_T);
+  v4 = (Il2CppObject *)sub_1B00F18(_0_BasicHelper___c__26_T);
+  if ( (BYTE5(method->klass->vtable._0_Equals.methodPtr) & 1) == 0 )
+    sub_1B52BA8(method->klass);
+  System_Object___ctor(v4, 0LL);
+  v7 = method->klass;
+  if ( (BYTE5(v7->vtable._0_Equals.methodPtr) & 1) == 0 )
+    v7 = (BasicHelper___c__26_T__c *)sub_1B52BA8(v7);
+  _2_BasicHelper___c__26_T = (__int64)v7->rgctx_data->_2_BasicHelper___c__26_T_;
+  if ( (*(_BYTE *)(_2_BasicHelper___c__26_T + 309) & 1) == 0 )
+    _2_BasicHelper___c__26_T = sub_1B52BA8(_2_BasicHelper___c__26_T);
+  **(_QWORD **)(_2_BasicHelper___c__26_T + 184) = v4;
+  v9 = method->klass;
+  if ( (BYTE5(v9->vtable._0_Equals.methodPtr) & 1) == 0 )
+    v9 = (BasicHelper___c__26_T__c *)sub_1B52BA8(v9);
+  v10 = (__int64)v9->rgctx_data->_2_BasicHelper___c__26_T_;
+  if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
+    v10 = sub_1B52BA8(v10);
+  sub_1B00C70(*(ServantStatusBattleListViewItem_o **)(v10 + 184), (int32_t)v4, v5, v6);
 }
 
 
-void __fastcall BasicHelper___c__26_object____ctor(BasicHelper___c__26_T__o *this, const MethodInfo_1F81B28 *method)
+void __fastcall BasicHelper___c__26_object____ctor(BasicHelper___c__26_T__o *this, const MethodInfo_2F121A8 *method)
 {
-  if ( !this )
-    sub_B7769C(0LL, method);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -4819,7 +6857,7 @@ void __fastcall BasicHelper___c__26_object____ctor(BasicHelper___c__26_T__o *thi
 bool __fastcall BasicHelper___c__26_object____ExcludeNull_b__26_0(
         BasicHelper___c__26_T__o *this,
         Il2CppObject *x,
-        const MethodInfo_1F81B40 *method)
+        const MethodInfo_2F121B0 *method)
 {
   return x != 0LL;
 }

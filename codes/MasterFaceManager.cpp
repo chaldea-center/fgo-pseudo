@@ -1,13 +1,13 @@
 void __fastcall MasterFaceManager___ctor(MasterFaceManager_o *this, const MethodInfo *method)
 {
-  if ( (byte_438E615 & 1) == 0 )
+  if ( (byte_48E1AB2 & 1) == 0 )
   {
-    sub_B775C4(&Method_SingletonMonoBehaviour_MasterFaceManager___ctor__);
-    byte_438E615 = 1;
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_MasterFaceManager___ctor__, method);
+    byte_48E1AB2 = 1;
   }
-  SingletonMonoBehaviour_WebViewManager____ctor(
-    (SingletonMonoBehaviour_WebViewManager__o *)this,
-    (const MethodInfo_2D168A8 *)Method_SingletonMonoBehaviour_MasterFaceManager___ctor__);
+  SingletonMonoBehaviour_object____ctor(
+    (SingletonMonoBehaviour_T__o *)this,
+    (const MethodInfo_35FC008 *)Method_SingletonMonoBehaviour_MasterFaceManager___ctor__);
 }
 
 
@@ -16,81 +16,91 @@ UIMasterFaceTexture_o *__fastcall MasterFaceManager__CreateLocal(
         UnityEngine_GameObject_o *parent,
         const MethodInfo *method)
 {
-  struct UnityEngine_GameObject_o *masterFacePrefab; // x20
-  UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
-  UnityEngine_GameObject_o *v8; // x22
-  UIMasterFaceRender_o *Component_srcLineSprite; // x20
+  Il2CppObject *masterFacePrefab; // x20
+  UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v10; // x1
+  UnityEngine_GameObject_o *v11; // x22
+  Il2CppObject *Component_object; // x20
   UnityEngine_Transform_o *transform; // x21
   float x; // s8
   float y; // s9
   float z; // s10
+  __int64 v17; // x1
+  __int64 v18; // x1
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o zero; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Quaternion_o identity; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_438E613 & 1) == 0 )
+  if ( (byte_48E1AB0 & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_UIMasterFaceTexture___);
-    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&StringLiteral_14935/*"UIMasterFace"*/);
-    byte_438E613 = 1;
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_UIMasterFaceTexture___, parent);
+    sub_1B00CCC(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v6);
+    sub_1B00CCC(&StringLiteral_14502/*"UIMasterFace"*/, v7);
+    byte_48E1AB0 = 1;
   }
-  masterFacePrefab = this->fields.masterFacePrefab;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  masterFacePrefab = (Il2CppObject *)this->fields.masterFacePrefab;
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
-                                             (UnityEngine_UI_Dropdown_DropdownItem_o *)masterFacePrefab,
-                                             (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+  gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
+                                             masterFacePrefab,
+                                             (const MethodInfo_2DD5AE8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !gameObject )
-    goto LABEL_13;
-  v8 = gameObject;
-  Component_srcLineSprite = (UIMasterFaceRender_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                                      gameObject,
-                                                      (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_UIMasterFaceTexture___);
-  transform = UnityEngine_GameObject__get_transform(v8, 0LL);
-  gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v8, 0LL);
+    goto LABEL_16;
+  v11 = gameObject;
+  Component_object = UnityEngine_GameObject__GetComponent_object_(
+                       gameObject,
+                       (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_UIMasterFaceTexture___);
+  transform = UnityEngine_GameObject__get_transform(v11, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v11, 0LL);
   if ( !gameObject )
-    goto LABEL_13;
+    goto LABEL_16;
   localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0LL);
   x = localScale.fields.x;
   y = localScale.fields.y;
   z = localScale.fields.z;
-  UnityEngine_Object__set_name((UnityEngine_Object_o *)v8, (System_String_o *)StringLiteral_14935/*"UIMasterFace"*/, 0LL);
+  UnityEngine_Object__set_name((UnityEngine_Object_o *)v11, (System_String_o *)StringLiteral_14502/*"UIMasterFace"*/, 0LL);
   if ( !parent )
-    goto LABEL_13;
+    goto LABEL_16;
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(parent, 0LL);
   if ( !transform )
-    goto LABEL_13;
+    goto LABEL_16;
   UnityEngine_Transform__set_parent(transform, (UnityEngine_Transform_o *)gameObject, 0LL);
-  zero = UnityEngine_Vector3__get_zero(0LL);
-  UnityEngine_Transform__set_localPosition(transform, zero, 0LL);
-  identity = UnityEngine_Quaternion__get_identity(0LL);
-  UnityEngine_Transform__set_localRotation(transform, identity, 0LL);
-  v17.fields.x = x;
-  v17.fields.y = y;
-  v17.fields.z = z;
-  UnityEngine_Transform__set_localScale(transform, v17, 0LL);
+  if ( !byte_48DD9F1 )
+  {
+    sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, v17);
+    byte_48DD9F1 = 1;
+  }
+  UnityEngine_Transform__set_localPosition(transform, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
+  if ( !byte_48DD9F7 )
+  {
+    sub_1B00CCC(&UnityEngine_Quaternion_TypeInfo, v18);
+    byte_48DD9F7 = 1;
+  }
+  UnityEngine_Transform__set_localRotation(
+    transform,
+    UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion,
+    0LL);
+  v21.fields.x = x;
+  v21.fields.y = y;
+  v21.fields.z = z;
+  UnityEngine_Transform__set_localScale(transform, v21, 0LL);
   gameObject = UnityEngine_GameObject__get_gameObject(parent, 0LL);
   if ( !gameObject
-    || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_layer(gameObject, 0LL),
-        !Component_srcLineSprite) )
+    || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_layer(gameObject, 0LL), !Component_object) )
   {
-LABEL_13:
-    sub_B7769C(gameObject, v7);
+LABEL_16:
+    sub_1B00F28(gameObject, v10);
   }
-  UIMasterFaceRender__SetLayer(Component_srcLineSprite, (int32_t)gameObject, 0LL);
-  return (UIMasterFaceTexture_o *)Component_srcLineSprite;
+  UIMasterFaceRender__SetLayer((UIMasterFaceRender_o *)Component_object, (int32_t)gameObject, 0LL);
+  return (UIMasterFaceTexture_o *)Component_object;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-UIMasterFaceTexture_o *__fastcall MasterFaceManager__CreateLocal_31345956(
+UIMasterFaceTexture_o *__fastcall MasterFaceManager__CreateLocal_36713728(
         MasterFaceManager_o *this,
         UnityEngine_GameObject_o *parent,
         int32_t dispType,
@@ -101,160 +111,83 @@ UIMasterFaceTexture_o *__fastcall MasterFaceManager__CreateLocal_31345956(
         int32_t overWriteImageId,
         const MethodInfo *method)
 {
-  UnityEngine_Component_o *Local; // x0
+  __int64 v15; // x1
   __int64 v16; // x1
-  UIMasterFaceTexture_o *v17; // x23
+  __int64 v17; // x1
+  char *Local; // x0
+  __int64 v19; // x1
+  UIMasterFaceTexture_o *v20; // x23
   UnityEngine_Object_o *gameObject; // x24
-  System_String_array **v19; // x2
-  System_String_array **v20; // x3
-  System_Boolean_array **v21; // x4
-  System_Int32_array **v22; // x5
-  System_Int32_array *v23; // x6
-  System_Int32_array *v24; // x7
-  System_String_array *v25; // x25
-  System_String_o *v26; // x0
-  System_Int32_array **v27; // x1
-  System_String_array **v28; // x2
-  System_String_array **v29; // x3
-  System_Boolean_array **v30; // x4
-  System_Int32_array **v31; // x5
-  System_Int32_array *v32; // x6
-  System_Int32_array *v33; // x7
-  System_Int32_array **v34; // x26
-  System_String_array **v35; // x2
-  System_String_array **v36; // x3
-  System_Boolean_array **v37; // x4
-  System_Int32_array **v38; // x5
-  System_Int32_array *v39; // x6
-  System_Int32_array *v40; // x7
-  System_Int32_array **v41; // x1
-  System_String_array **v42; // x2
-  System_String_array **v43; // x3
-  System_Boolean_array **v44; // x4
-  System_Int32_array **v45; // x5
-  System_Int32_array *v46; // x6
-  System_Int32_array *v47; // x7
-  System_Int32_array **v48; // x26
-  System_String_array **v49; // x2
-  System_String_array **v50; // x3
-  System_Boolean_array **v51; // x4
-  System_Int32_array **v52; // x5
-  System_Int32_array *v53; // x6
-  System_Int32_array *v54; // x7
-  System_Int32_array **v55; // x1
-  __int64 v57; // x0
-  __int64 v58; // x0
-  int32_t v59; // [xsp+8h] [xbp-48h] BYREF
-  int32_t v60; // [xsp+Ch] [xbp-44h] BYREF
+  int32_t v22; // w2
+  int32_t v23; // w3
+  char *v24; // x25
+  int32_t v25; // w1
+  int32_t v26; // w2
+  int32_t v27; // w3
+  int32_t v28; // w2
+  int32_t v29; // w3
+  int32_t v30; // w1
+  int32_t v31; // w2
+  int32_t v32; // w3
+  int32_t v33; // w2
+  int32_t v34; // w3
+  int32_t v35; // w1
+  int32_t v37; // [xsp+8h] [xbp-48h] BYREF
+  int32_t v38; // [xsp+Ch] [xbp-44h] BYREF
 
-  v59 = equipId;
-  v60 = genderType;
-  if ( (byte_438E614 & 1) == 0 )
+  v37 = equipId;
+  v38 = genderType;
+  if ( (byte_48E1AB1 & 1) == 0 )
   {
-    sub_B775C4(&string___TypeInfo);
-    sub_B775C4(&StringLiteral_762/*"-"*/);
-    sub_B775C4(&StringLiteral_665/*")"*/);
-    sub_B775C4(&StringLiteral_14936/*"UIMasterFace("*/);
-    byte_438E614 = 1;
+    sub_1B00CCC(&string___TypeInfo, parent);
+    sub_1B00CCC(&StringLiteral_916/*"-"*/, v15);
+    sub_1B00CCC(&StringLiteral_811/*")"*/, v16);
+    sub_1B00CCC(&StringLiteral_14503/*"UIMasterFace("*/, v17);
+    byte_48E1AB1 = 1;
   }
-  Local = (UnityEngine_Component_o *)MasterFaceManager__CreateLocal(this, parent, *(const MethodInfo **)&dispType);
-  if ( !Local
-    || (v17 = (UIMasterFaceTexture_o *)Local,
-        gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(Local, 0LL),
-        (Local = (UnityEngine_Component_o *)sub_B775DC(string___TypeInfo, 5LL)) == 0LL) )
+  Local = (char *)MasterFaceManager__CreateLocal(this, parent, *(const MethodInfo **)&dispType);
+  if ( !Local )
+    goto LABEL_13;
+  v20 = (UIMasterFaceTexture_o *)Local;
+  gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Local, 0LL);
+  Local = (char *)sub_1B00D74(string___TypeInfo, 5LL);
+  if ( !Local )
+    goto LABEL_13;
+  v24 = Local;
+  if ( !*((_DWORD *)Local + 6) )
+    goto LABEL_12;
+  v25 = StringLiteral_14503/*"UIMasterFace("*/;
+  *((_QWORD *)Local + 4) = StringLiteral_14503/*"UIMasterFace("*/;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(Local + 32), v25, v22, v23);
+  Local = (char *)System_Int32__ToString((int32_t)&v38, 0LL);
+  if ( *((_DWORD *)v24 + 6) <= 1u )
+    goto LABEL_12;
+  *((_QWORD *)v24 + 5) = Local;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v24 + 40), (int32_t)Local, v26, v27);
+  if ( *((_DWORD *)v24 + 6) <= 2u
+    || (v30 = (int)StringLiteral_916/*"-"*/,
+        *((_QWORD *)v24 + 6) = StringLiteral_916/*"-"*/,
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)(v24 + 48), v30, v28, v29),
+        Local = (char *)System_Int32__ToString((int32_t)&v37, 0LL),
+        *((_DWORD *)v24 + 6) <= 3u)
+    || (*((_QWORD *)v24 + 7) = Local,
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)(v24 + 56), (int32_t)Local, v31, v32),
+        *((_DWORD *)v24 + 6) <= 4u) )
   {
-LABEL_30:
-    sub_B7769C(Local, v16);
+LABEL_12:
+    sub_1B00F30(Local, v19);
   }
-  v25 = (System_String_array *)Local;
-  v26 = (System_String_o *)StringLiteral_14936/*"UIMasterFace("*/;
-  if ( StringLiteral_14936/*"UIMasterFace("*/ )
-  {
-    v26 = (System_String_o *)sub_B77684(StringLiteral_14936/*"UIMasterFace("*/, v25->obj.klass->_1.element_class);
-    if ( !v26 )
-      goto LABEL_29;
-    v27 = (System_Int32_array **)StringLiteral_14936/*"UIMasterFace("*/;
-  }
-  else
-  {
-    v27 = 0LL;
-  }
-  if ( !v25->max_length )
-    goto LABEL_28;
-  v25->m_Items[0] = (System_String_o *)v27;
-  sub_B77560((BattleServantConfConponent_o *)v25->m_Items, v27, v19, v20, v21, v22, v23, v24);
-  v26 = System_Int32__ToString((int32_t)&v60, 0LL);
-  v34 = (System_Int32_array **)v26;
-  if ( v26 )
-  {
-    v26 = (System_String_o *)sub_B77684(v26, v25->obj.klass->_1.element_class);
-    if ( !v26 )
-      goto LABEL_29;
-  }
-  if ( v25->max_length <= 1 )
-    goto LABEL_28;
-  v25->m_Items[1] = (System_String_o *)v34;
-  sub_B77560((BattleServantConfConponent_o *)&v25->m_Items[1], v34, v28, v29, v30, v31, v32, v33);
-  v26 = (System_String_o *)StringLiteral_762/*"-"*/;
-  if ( StringLiteral_762/*"-"*/ )
-  {
-    v26 = (System_String_o *)sub_B77684(StringLiteral_762/*"-"*/, v25->obj.klass->_1.element_class);
-    if ( !v26 )
-      goto LABEL_29;
-    v41 = (System_Int32_array **)StringLiteral_762/*"-"*/;
-  }
-  else
-  {
-    v41 = 0LL;
-  }
-  if ( v25->max_length <= 2 )
-    goto LABEL_28;
-  v25->m_Items[2] = (System_String_o *)v41;
-  sub_B77560((BattleServantConfConponent_o *)&v25->m_Items[2], v41, v35, v36, v37, v38, v39, v40);
-  v26 = System_Int32__ToString((int32_t)&v59, 0LL);
-  v48 = (System_Int32_array **)v26;
-  if ( v26 )
-  {
-    v26 = (System_String_o *)sub_B77684(v26, v25->obj.klass->_1.element_class);
-    if ( !v26 )
-    {
-LABEL_29:
-      v58 = sub_B776BC(v26);
-      sub_B77668(v58, 0LL);
-    }
-  }
-  if ( v25->max_length <= 3 )
-    goto LABEL_28;
-  v25->m_Items[3] = (System_String_o *)v48;
-  sub_B77560((BattleServantConfConponent_o *)&v25->m_Items[3], v48, v42, v43, v44, v45, v46, v47);
-  v26 = (System_String_o *)StringLiteral_665/*")"*/;
-  if ( StringLiteral_665/*")"*/ )
-  {
-    v26 = (System_String_o *)sub_B77684(StringLiteral_665/*")"*/, v25->obj.klass->_1.element_class);
-    if ( v26 )
-    {
-      v55 = (System_Int32_array **)StringLiteral_665/*")"*/;
-      goto LABEL_25;
-    }
-    goto LABEL_29;
-  }
-  v55 = 0LL;
-LABEL_25:
-  if ( v25->max_length <= 4 )
-  {
-LABEL_28:
-    v57 = sub_B776C8(v26);
-    sub_B77668(v57, 0LL);
-  }
-  v25->m_Items[4] = (System_String_o *)v55;
-  sub_B77560((BattleServantConfConponent_o *)&v25->m_Items[4], v55, v49, v50, v51, v52, v53, v54);
-  Local = (UnityEngine_Component_o *)System_String__Concat_44982964(v25, 0LL);
+  v35 = StringLiteral_811/*")"*/;
+  *((_QWORD *)v24 + 8) = StringLiteral_811/*")"*/;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v24 + 64), v35, v33, v34);
+  Local = (char *)System_String__Concat_60339276((System_String_array *)v24, 0LL);
   if ( !gameObject )
-    goto LABEL_30;
+LABEL_13:
+    sub_1B00F28(Local, v19);
   UnityEngine_Object__set_name(gameObject, (System_String_o *)Local, 0LL);
-  UIMasterFaceTexture__SetCharacter(v17, dispType, v60, v59, callbackFunc, overWriteImageId, 0LL);
-  UIMasterFaceTexture__SetDepth(v17, depth, 0LL);
-  return v17;
+  UIMasterFaceTexture__SetCharacter(v20, dispType, v38, v37, callbackFunc, overWriteImageId, 0LL);
+  UIMasterFaceTexture__SetDepth(v20, depth, 0LL);
+  return v20;
 }
 
 
@@ -262,23 +195,24 @@ UIMasterFaceTexture_o *__fastcall MasterFaceManager__CreatePrefab(
         UnityEngine_GameObject_o *parent,
         const MethodInfo *method)
 {
-  MasterFaceManager_o *Instance; // x0
+  Il2CppObject *Instance; // x0
   __int64 v4; // x1
   const MethodInfo *v5; // x2
 
-  if ( (byte_438E611 & 1) == 0 )
+  if ( (byte_48E1AAE & 1) == 0 )
   {
-    sub_B775C4(&Method_SingletonMonoBehaviour_MasterFaceManager__get_Instance__);
-    byte_438E611 = 1;
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_MasterFaceManager__get_Instance__, method);
+    byte_48E1AAE = 1;
   }
-  Instance = (MasterFaceManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_MasterFaceManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_MasterFaceManager__get_Instance__);
   if ( !Instance )
-    sub_B7769C(0LL, v4);
-  return MasterFaceManager__CreateLocal(Instance, parent, v5);
+    sub_1B00F28(0LL, v4);
+  return MasterFaceManager__CreateLocal((MasterFaceManager_o *)Instance, parent, v5);
 }
 
 
-UIMasterFaceTexture_o *__fastcall MasterFaceManager__CreatePrefab_31345784(
+// local variable allocation has failed, the output may be wrong!
+UIMasterFaceTexture_o *__fastcall MasterFaceManager__CreatePrefab_36713560(
         UnityEngine_GameObject_o *parent,
         int32_t dispType,
         int32_t genderType,
@@ -288,20 +222,20 @@ UIMasterFaceTexture_o *__fastcall MasterFaceManager__CreatePrefab_31345784(
         int32_t overWriteImageId,
         const MethodInfo *method)
 {
-  MasterFaceManager_o *Instance; // x0
+  Il2CppObject *Instance; // x0
   __int64 v16; // x1
-  const MethodInfo *v18; // [xsp+0h] [xbp-50h]
+  const MethodInfo *v18; // [xsp+0h] [xbp-60h]
 
-  if ( (byte_438E612 & 1) == 0 )
+  if ( (byte_48E1AAF & 1) == 0 )
   {
-    sub_B775C4(&Method_SingletonMonoBehaviour_MasterFaceManager__get_Instance__);
-    byte_438E612 = 1;
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_MasterFaceManager__get_Instance__, *(_QWORD *)&dispType);
+    byte_48E1AAF = 1;
   }
-  Instance = (MasterFaceManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_MasterFaceManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_MasterFaceManager__get_Instance__);
   if ( !Instance )
-    sub_B7769C(0LL, v16);
-  return MasterFaceManager__CreateLocal_31345956(
-           Instance,
+    sub_1B00F28(0LL, v16);
+  return MasterFaceManager__CreateLocal_36713728(
+           (MasterFaceManager_o *)Instance,
            parent,
            dispType,
            genderType,
@@ -313,6 +247,7 @@ UIMasterFaceTexture_o *__fastcall MasterFaceManager__CreatePrefab_31345784(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall MasterFaceManager__DownloadAsset(
         int32_t dispType,
         int32_t genderType,
@@ -322,38 +257,37 @@ void __fastcall MasterFaceManager__DownloadAsset(
 {
   System_String_array *AssetName; // x20
 
-  if ( (byte_438E60E & 1) == 0 )
+  if ( (byte_48E1AAB & 1) == 0 )
   {
-    sub_B775C4(&AssetManager_TypeInfo);
-    byte_438E60E = 1;
+    sub_1B00CCC(&AssetManager_TypeInfo, *(_QWORD *)&genderType);
+    byte_48E1AAB = 1;
   }
   AssetName = MasterFaceManager__GetAssetName(dispType, genderType, equipId, (const MethodInfo *)callback);
-  if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
+  if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__downloadAssetStorage_24407060(AssetName, callback, 0LL);
+  AssetManager__downloadAssetStorage_36594272(AssetName, callback, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_array *__fastcall MasterFaceManager__GetAssetName(
         int32_t dispType,
         int32_t genderType,
         int32_t equipId,
         const MethodInfo *method)
 {
-  if ( (byte_438E60D & 1) == 0 )
+  if ( (byte_48E1AAA & 1) == 0 )
   {
-    sub_B775C4(&UIMasterFaceRender_TypeInfo);
-    byte_438E60D = 1;
+    sub_1B00CCC(&UIMasterFaceRender_TypeInfo, *(_QWORD *)&genderType);
+    byte_48E1AAA = 1;
   }
-  if ( (BYTE3(UIMasterFaceRender_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UIMasterFaceRender_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UIMasterFaceRender_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UIMasterFaceRender_TypeInfo);
-  }
   return UIMasterFaceRender__GetAssetNameList(dispType, genderType, equipId, 0, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall MasterFaceManager__LoadAsset(
         int32_t dispType,
         int32_t genderType,
@@ -363,18 +297,19 @@ void __fastcall MasterFaceManager__LoadAsset(
 {
   System_String_array *AssetName; // x20
 
-  if ( (byte_438E60F & 1) == 0 )
+  if ( (byte_48E1AAC & 1) == 0 )
   {
-    sub_B775C4(&AssetManager_TypeInfo);
-    byte_438E60F = 1;
+    sub_1B00CCC(&AssetManager_TypeInfo, *(_QWORD *)&genderType);
+    byte_48E1AAC = 1;
   }
   AssetName = MasterFaceManager__GetAssetName(dispType, genderType, equipId, (const MethodInfo *)callback);
-  if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
+  if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage_24408996(AssetName, callback, 1, 0LL);
+  AssetManager__loadAssetStorage_36596448(AssetName, callback, 1, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall MasterFaceManager__ReleaseAsset(
         int32_t dispType,
         int32_t genderType,
@@ -383,13 +318,13 @@ void __fastcall MasterFaceManager__ReleaseAsset(
 {
   System_String_array *AssetName; // x19
 
-  if ( (byte_438E610 & 1) == 0 )
+  if ( (byte_48E1AAD & 1) == 0 )
   {
-    sub_B775C4(&AssetManager_TypeInfo);
-    byte_438E610 = 1;
+    sub_1B00CCC(&AssetManager_TypeInfo, *(_QWORD *)&genderType);
+    byte_48E1AAD = 1;
   }
   AssetName = MasterFaceManager__GetAssetName(dispType, genderType, equipId, method);
-  if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
+  if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__releaseAssetStorage_24411040(AssetName, 0LL);
+  AssetManager__releaseAssetStorage_36598596(AssetName, 0LL);
 }

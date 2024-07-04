@@ -8,34 +8,32 @@ void __fastcall BattleBoostSkillIconComponent__OnClickIcon(
         BattleBoostSkillIconComponent_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_Object_o *target; // x20
-  __int64 v4; // x1
-  UnityEngine_GameObject_o *Component_srcLineSprite; // x0
+  __int64 v5; // x1
+  UnityEngine_GameObject_o *Component_object; // x0
 
-  if ( (byte_438EB44 & 1) == 0 )
+  if ( (byte_48E54A1 & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438EB44 = 1;
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___, method);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v3);
+    byte_48E54A1 = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(target, 0LL, 0LL) )
   {
-    Component_srcLineSprite = this->fields.target;
-    if ( !Component_srcLineSprite
-      || (Component_srcLineSprite = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                                                  Component_srcLineSprite,
-                                                                  (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___)) == 0LL )
+    Component_object = this->fields.target;
+    if ( !Component_object
+      || (Component_object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
+                                                           Component_object,
+                                                           (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___)) == 0LL )
     {
-      sub_B7769C(Component_srcLineSprite, v4);
+      sub_1B00F28(Component_object, v5);
     }
     BattlePerformanceMaster__clickBoostSkillIcon(
-      (BattlePerformanceMaster_o *)Component_srcLineSprite,
+      (BattlePerformanceMaster_o *)Component_object,
       this->fields.skillInfo,
       0LL);
   }
@@ -49,20 +47,17 @@ void __fastcall BattleBoostSkillIconComponent__procFlash(
   UnityEngine_GameObject_o *flashEffect; // x0
   UnityEngine_Object_o *v4; // x19
 
-  if ( (byte_438EB45 & 1) == 0 )
+  if ( (byte_48E54A2 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438EB45 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    byte_48E54A2 = 1;
   }
   flashEffect = this->fields.flashEffect;
   if ( !flashEffect )
-    sub_B7769C(0LL, method);
+    sub_1B00F28(0LL, method);
   UnityEngine_GameObject__SetActive(flashEffect, 1, 0LL);
   v4 = (UnityEngine_Object_o *)this->fields.flashEffect;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   UnityEngine_Object__Destroy(v4, 3.0, 0LL);
 }

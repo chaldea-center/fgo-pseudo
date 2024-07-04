@@ -1,48 +1,37 @@
 void __fastcall FGO_uv1anim___ctor(FGO_uv1anim_o *this, const MethodInfo *method)
 {
-  *(_QWORD *)&this->fields.m_Offset.fields.y = 0LL;
+  this->fields.m_Offset = 0LL;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
 
 void __fastcall FGO_uv1anim__Start(FGO_uv1anim_o *this, const MethodInfo *method)
 {
-  struct UnityEngine_Renderer_o *Component_WebViewObject; // x0
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
-  __int64 v10; // x1
+  __int64 v3; // x1
+  Il2CppObject *Component_object; // x0
+  int32_t v5; // w2
+  int32_t v6; // w3
+  __int64 v7; // x1
   UnityEngine_Renderer_o *renderer; // x0
 
-  if ( (byte_438B8CD & 1) == 0 )
+  if ( (byte_48E175B & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_B775C4(&StringLiteral_16375/*"_SubTex"*/);
-    byte_438B8CD = 1;
+    sub_1B00CCC(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
+    sub_1B00CCC(&StringLiteral_16121/*"_SubTex"*/, v3);
+    byte_48E175B = 1;
   }
-  Component_WebViewObject = (struct UnityEngine_Renderer_o *)UnityEngine_Component__GetComponent_WebViewObject_(
-                                                               (UnityEngine_Component_o *)this,
-                                                               (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
-  this->fields._renderer = Component_WebViewObject;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._renderer,
-    (System_Int32_array **)Component_WebViewObject,
-    v4,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9);
+  Component_object = UnityEngine_Component__GetComponent_object_(
+                       (UnityEngine_Component_o *)this,
+                       (const MethodInfo_2D596B4 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+  this->fields._renderer = (struct UnityEngine_Renderer_o *)Component_object;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields._renderer, (int32_t)Component_object, v5, v6);
   renderer = this->fields._renderer;
   if ( !renderer || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL )
-    sub_B7769C(renderer, v10);
+    sub_1B00F28(renderer, v7);
   UnityEngine_Material__SetTextureOffset(
     (UnityEngine_Material_o *)renderer,
-    (System_String_o *)StringLiteral_16375/*"_SubTex"*/,
-    *(UnityEngine_Vector2_o *)&this->fields.m_Offset.fields.y,
+    (System_String_o *)StringLiteral_16121/*"_SubTex"*/,
+    this->fields.m_Offset,
     0LL);
 }
 
@@ -51,17 +40,17 @@ void __fastcall FGO_uv1anim__Update(FGO_uv1anim_o *this, const MethodInfo *metho
 {
   UnityEngine_Renderer_o *renderer; // x0
 
-  if ( (byte_438B8CE & 1) == 0 )
+  if ( (byte_48E175C & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_16375/*"_SubTex"*/);
-    byte_438B8CE = 1;
+    sub_1B00CCC(&StringLiteral_16121/*"_SubTex"*/, method);
+    byte_48E175C = 1;
   }
   renderer = this->fields._renderer;
   if ( !renderer || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL )
-    sub_B7769C(renderer, method);
+    sub_1B00F28(renderer, method);
   UnityEngine_Material__SetTextureOffset(
     (UnityEngine_Material_o *)renderer,
-    (System_String_o *)StringLiteral_16375/*"_SubTex"*/,
-    *(UnityEngine_Vector2_o *)&this->fields.m_Offset.fields.y,
+    (System_String_o *)StringLiteral_16121/*"_SubTex"*/,
+    this->fields.m_Offset,
     0LL);
 }

@@ -1,14 +1,14 @@
 void __fastcall GachaExtraGiftMaster___ctor(GachaExtraGiftMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_438F15C & 1) == 0 )
+  if ( (byte_48E2A90 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_GachaExtraGiftMaster__GachaExtraGiftEntity__string___ctor__);
-    byte_438F15C = 1;
+    sub_1B00CCC(&Method_DataMasterBase_GachaExtraGiftMaster__GachaExtraGiftEntity__string___ctor__, method);
+    byte_48E2A90 = 1;
   }
-  DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
-    (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
+  DataMasterBase_object__object__object____ctor(
+    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     457,
-    (const MethodInfo_21FBC48 *)Method_DataMasterBase_GachaExtraGiftMaster__GachaExtraGiftEntity__string___ctor__);
+    (const MethodInfo_2FE6D64 *)Method_DataMasterBase_GachaExtraGiftMaster__GachaExtraGiftEntity__string___ctor__);
 }
 
 
@@ -20,97 +20,129 @@ GachaExtraGiftEntity_o *__fastcall GachaExtraGiftMaster__GetEntity(
         int32_t giftId,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x1
+  Il2CppObject *PK; // x1
 
-  if ( (byte_438F15D & 1) == 0 )
+  if ( (byte_48E2A91 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_GachaExtraGiftMaster__GachaExtraGiftEntity__string__GetEntity__);
-    byte_438F15D = 1;
+    sub_1B00CCC(
+      &Method_DataMasterBase_GachaExtraGiftMaster__GachaExtraGiftEntity__string__GetEntity__,
+      *(_QWORD *)&gachaId);
+    byte_48E2A91 = 1;
   }
-  PK = GachaExtraGiftEntity__CreatePK(gachaId, idx, giftId, *(const MethodInfo **)&giftId);
-  return (GachaExtraGiftEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
-                                     (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
+  PK = (Il2CppObject *)GachaExtraGiftEntity__CreatePK(gachaId, idx, giftId, *(const MethodInfo **)&giftId);
+  return (GachaExtraGiftEntity_o *)DataMasterBase_object__object__object___GetEntity(
+                                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      PK,
-                                     (const MethodInfo_21FBCE4 *)Method_DataMasterBase_GachaExtraGiftMaster__GachaExtraGiftEntity__string__GetEntity__);
+                                     (const MethodInfo_2FE6DA4 *)Method_DataMasterBase_GachaExtraGiftMaster__GachaExtraGiftEntity__string__GetEntity__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 GachaExtraGiftEntity_array *__fastcall GachaExtraGiftMaster__GetListGachaExtraGift(
         GachaExtraGiftMaster_o *this,
         int32_t gachaId,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v5; // x21
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *v6; // x1
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
-  int32_t v8; // w22
-  int32_t v9; // w23
-  __int64 v10; // x10
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  System_Collections_Generic_List_object__o *v12; // x21
+  System_Collections_ObjectModel_Collection_T__o *v13; // x1
+  System_Collections_ObjectModel_Collection_T__o *list; // x0
+  int v15; // w22
+  int32_t v16; // w23
+  int32_t v17; // w2
+  int32_t v18; // w3
+  __int64 methodPtr_low; // x10
+  struct System_Object_array *items; // x8
+  _QWORD *v21; // x9
+  __int64 size; // x10
+  Il2CppClass **v23; // x0
 
-  if ( (byte_438F15B & 1) == 0 )
+  if ( (byte_48E2A8F & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B775C4(&GachaExtraGiftEntity_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_GachaExtraGiftEntity__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_GachaExtraGiftEntity__ToArray__);
-    sub_B775C4(&Method_System_Collections_Generic_List_GachaExtraGiftEntity___ctor__);
-    sub_B775C4(&Method_System_Collections_Generic_List_GachaExtraGiftEntity__get_Count__);
-    sub_B775C4(&System_Collections_Generic_List_GachaExtraGiftEntity__TypeInfo);
-    byte_438F15B = 1;
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&gachaId);
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
+    sub_1B00CCC(&GachaExtraGiftEntity_TypeInfo, v6);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_GachaExtraGiftEntity__Add__, v7);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_GachaExtraGiftEntity__ToArray__, v8);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_GachaExtraGiftEntity___ctor__, v9);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_GachaExtraGiftEntity__get_Count__, v10);
+    sub_1B00CCC(&System_Collections_Generic_List_GachaExtraGiftEntity__TypeInfo, v11);
+    byte_48E2A8F = 1;
   }
-  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_GachaExtraGiftEntity__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v5,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_GachaExtraGiftEntity___ctor__);
-  list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
+  v12 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_GachaExtraGiftEntity__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v12,
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_GachaExtraGiftEntity___ctor__);
+  list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    goto LABEL_18;
-  list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
-                                                                                       list,
-                                                                                       (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    goto LABEL_21;
+  list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Count(
+                                                             list,
+                                                             (const MethodInfo_2F836B0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( (int)list >= 1 )
   {
-    v8 = (int)list;
-    v9 = 0;
+    v15 = (int)list;
+    v16 = 0;
     while ( 1 )
     {
-      list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
+      list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
       if ( !list )
         break;
-      list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
-                                                                                           list,
-                                                                                           v9,
-                                                                                           (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+      list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
+                                                                 list,
+                                                                 v16,
+                                                                 (const MethodInfo_2F83740 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( list )
       {
-        v6 = list;
-        v10 = *(&GachaExtraGiftEntity_TypeInfo->_2.bitflags2 + 1);
-        if ( *(&list->klass->_2.bitflags2 + 1) >= (unsigned int)v10
-          && (GachaExtraGiftEntity_c *)list->klass->_2.typeHierarchy[v10 - 1] == GachaExtraGiftEntity_TypeInfo
+        v13 = list;
+        methodPtr_low = LOBYTE(GachaExtraGiftEntity_TypeInfo->vtable._0_Equals.methodPtr);
+        if ( LOBYTE(list->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low
+          && (GachaExtraGiftEntity_c *)list->klass->_2.typeHierarchy[methodPtr_low - 1] == GachaExtraGiftEntity_TypeInfo
           && LODWORD(list->fields.items) == gachaId )
         {
-          if ( !v5 )
+          if ( !v12 )
             break;
-          System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-            v5,
-            (EventMissionProgressRequest_Argument_ProgressData_o *)list,
-            (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_GachaExtraGiftEntity__Add__);
+          items = v12->fields._items;
+          v21 = Method_System_Collections_Generic_List_GachaExtraGiftEntity__Add__;
+          ++v12->fields._version;
+          if ( !items )
+            break;
+          size = v12->fields._size;
+          if ( (unsigned int)size >= items->max_length )
+          {
+            System_Collections_Generic_List_object___AddWithResize(
+              v12,
+              (Il2CppObject *)list,
+              *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+          }
+          else
+          {
+            v23 = &items->obj.klass + size;
+            v12->fields._size = size + 1;
+            v23[4] = (Il2CppClass *)v13;
+            sub_1B00C70((ServantStatusBattleListViewItem_o *)(v23 + 4), (int32_t)v13, v17, v18);
+          }
         }
       }
-      if ( ++v9 >= v8 )
-        goto LABEL_14;
+      if ( v15 == ++v16 )
+        goto LABEL_17;
     }
-LABEL_18:
-    sub_B7769C(list, v6);
+LABEL_21:
+    sub_1B00F28(list, v13);
   }
-LABEL_14:
-  if ( !v5 )
-    goto LABEL_18;
-  if ( v5->fields._size )
-    return (GachaExtraGiftEntity_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
-                                           (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v5,
-                                           (const MethodInfo_30553E4 *)Method_System_Collections_Generic_List_GachaExtraGiftEntity__ToArray__);
+LABEL_17:
+  if ( !v12 )
+    goto LABEL_21;
+  if ( v12->fields._size )
+    return (GachaExtraGiftEntity_array *)System_Collections_Generic_List_object___ToArray(
+                                           v12,
+                                           (const MethodInfo_33C3528 *)Method_System_Collections_Generic_List_GachaExtraGiftEntity__ToArray__);
   else
     return 0LL;
 }
@@ -125,17 +157,17 @@ bool __fastcall GachaExtraGiftMaster__TryGetEntity(
         int32_t giftId,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x2
+  Il2CppObject *PK; // x2
 
-  if ( (byte_438F15E & 1) == 0 )
+  if ( (byte_48E2A92 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_GachaExtraGiftMaster__GachaExtraGiftEntity__string__TryGetEntity__);
-    byte_438F15E = 1;
+    sub_1B00CCC(&Method_DataMasterBase_GachaExtraGiftMaster__GachaExtraGiftEntity__string__TryGetEntity__, entity);
+    byte_48E2A92 = 1;
   }
-  PK = GachaExtraGiftEntity__CreatePK(gachaId, idx, giftId, *(const MethodInfo **)&idx);
-  return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
-           (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
-           (WarQuestSelectionEntity_o **)entity,
+  PK = (Il2CppObject *)GachaExtraGiftEntity__CreatePK(gachaId, idx, giftId, *(const MethodInfo **)&idx);
+  return DataMasterBase_object__object__object___TryGetEntity(
+           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
+           (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_21FBD3C *)Method_DataMasterBase_GachaExtraGiftMaster__GachaExtraGiftEntity__string__TryGetEntity__);
+           (const MethodInfo_2FE6DF4 *)Method_DataMasterBase_GachaExtraGiftMaster__GachaExtraGiftEntity__string__TryGetEntity__);
 }

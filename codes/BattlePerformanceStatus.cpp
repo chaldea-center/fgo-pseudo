@@ -14,7 +14,7 @@ void __fastcall BattlePerformanceStatus__ChangeCriticalLabelColor(
 
   criticalpointlabel = this->fields.criticalpointlabel;
   if ( !criticalpointlabel )
-    sub_B7769C(0LL, method);
+    sub_1B00F28(0LL, method);
   DrumRollLabel__SetLabelColor(criticalpointlabel, color, 0LL);
 }
 
@@ -25,7 +25,7 @@ void __fastcall BattlePerformanceStatus__CloseBuffConf(BattlePerformanceStatus_o
 
   buffConfWindow = this->fields.buffConfWindow;
   if ( !buffConfWindow )
-    sub_B7769C(0LL, method);
+    sub_1B00F28(0LL, method);
   ((void (__fastcall *)(struct BattleBuffConfWindowComponent_o *, _QWORD, Il2CppMethodPointer))buffConfWindow->klass->vtable._12_Close.method)(
     buffConfWindow,
     0LL,
@@ -37,26 +37,25 @@ void __fastcall BattlePerformanceStatus__DeleteEnemyStatusAll(
         BattlePerformanceStatus_o *this,
         const MethodInfo *method)
 {
-  const MethodInfo *v2; // x2
   struct BattlePerformanceEnemy_o *enemyPref; // x0
-  int32_t v5; // w20
+  int32_t v4; // w20
   struct BattleServantParamComponent_array *svtParamList; // x8
 
   enemyPref = this->fields.enemyPref;
   if ( !enemyPref )
 LABEL_6:
-    sub_B7769C(enemyPref, method);
-  v5 = 0;
+    sub_1B00F28(enemyPref, method);
+  v4 = 0;
   while ( 1 )
   {
     svtParamList = enemyPref->fields.svtParamList;
     if ( !svtParamList )
       goto LABEL_6;
-    if ( v5 >= (signed int)svtParamList->max_length )
+    if ( v4 >= (signed int)svtParamList->max_length )
       break;
-    BattlePerformanceEnemy__deleteStatus(enemyPref, v5, v2);
+    BattlePerformanceEnemy__deleteStatus(enemyPref, v4, 0LL);
     enemyPref = this->fields.enemyPref;
-    ++v5;
+    ++v4;
     if ( !enemyPref )
       goto LABEL_6;
   }
@@ -72,29 +71,23 @@ void __fastcall BattlePerformanceStatus__DestroySkillSelectAddFuncConfWindow(
   UnityEngine_Component_o *v5; // x0
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_438B450 & 1) == 0 )
+  if ( (byte_48E5664 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438B450 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    byte_48E5664 = 1;
   }
   skillSelectAddFuncConfWindow = (UnityEngine_Object_o *)this->fields.skillSelectAddFuncConfWindow;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(skillSelectAddFuncConfWindow, 0LL, 0LL) )
   {
     v5 = (UnityEngine_Component_o *)this->fields.skillSelectAddFuncConfWindow;
     if ( !v5 )
-      sub_B7769C(0LL, v4);
+      sub_1B00F28(0LL, v4);
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v5, 0LL);
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
-    UnityEngine_Object__Destroy_36309980(gameObject, 0LL);
+    UnityEngine_Object__Destroy_68077656(gameObject, 0LL);
   }
 }
 
@@ -105,29 +98,19 @@ System_Collections_IEnumerator_o *__fastcall BattlePerformanceStatus__DoCreateCr
         const MethodInfo *method)
 {
   __int64 v5; // x20
-  __int64 v6; // x0
-  __int64 v7; // x1
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
+  int32_t v6; // w2
+  int32_t v7; // w3
 
-  if ( (byte_438B451 & 1) == 0 )
+  if ( (byte_48E5665 & 1) == 0 )
   {
-    sub_B775C4(&BattlePerformanceStatus__DoCreateCriticalEffect_d__56_TypeInfo);
-    byte_438B451 = 1;
+    sub_1B00CCC(&BattlePerformanceStatus__DoCreateCriticalEffect_d__56_TypeInfo, method);
+    byte_48E5665 = 1;
   }
-  v5 = sub_B77694(BattlePerformanceStatus__DoCreateCriticalEffect_d__56_TypeInfo);
-  BattlePerformanceStatus__DoCreateCriticalEffect_d__56___ctor(
-    (BattlePerformanceStatus__DoCreateCriticalEffect_d__56_o *)v5,
-    0,
-    0LL);
-  if ( !v5 )
-    sub_B7769C(v6, v7);
+  v5 = sub_1B00F18(BattlePerformanceStatus__DoCreateCriticalEffect_d__56_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0LL);
+  *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 40) = this;
-  sub_B77560((BattleServantConfConponent_o *)(v5 + 40), (System_Int32_array **)this, v8, v9, v10, v11, v12, v13);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v5 + 40), (int32_t)this, v6, v7);
   *(float *)(v5 + 32) = waitTime;
   return (System_Collections_IEnumerator_o *)v5;
 }
@@ -141,29 +124,25 @@ BattleServantParamComponent_o *__fastcall BattlePerformanceStatus__GetEnemySvtPa
 {
   BattlePerformanceEnemy_o *enemyPref; // x0
   UnityEngine_Object_o *SvtParamComponent; // x21
-  const MethodInfo *v7; // x2
 
-  if ( (byte_438B457 & 1) == 0 )
+  if ( (byte_48E566B & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438B457 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&uniqueId);
+    byte_48E566B = 1;
   }
   enemyPref = this->fields.enemyPref;
   if ( !enemyPref )
-    goto LABEL_11;
-  SvtParamComponent = (UnityEngine_Object_o *)BattlePerformanceEnemy__GetSvtParamComponent(enemyPref, uniqueId, method);
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+    goto LABEL_10;
+  SvtParamComponent = (UnityEngine_Object_o *)BattlePerformanceEnemy__GetSvtParamComponent(enemyPref, uniqueId, 0LL);
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Equality(SvtParamComponent, 0LL, 0LL) )
   {
     enemyPref = this->fields.enemyPref;
     if ( enemyPref )
-      return BattlePerformanceEnemy__GetSvtSuperBossParamComponent(enemyPref, uniqueId, v7);
-LABEL_11:
-    sub_B7769C(enemyPref, *(_QWORD *)&uniqueId);
+      return BattlePerformanceEnemy__GetSvtSuperBossParamComponent(enemyPref, uniqueId, 0LL);
+LABEL_10:
+    sub_1B00F28(enemyPref, *(_QWORD *)&uniqueId);
   }
   return (BattleServantParamComponent_o *)SvtParamComponent;
 }
@@ -175,81 +154,101 @@ void __fastcall BattlePerformanceStatus__GorgeousStarCommonFunc(
         int16_t starCount,
         const MethodInfo *method)
 {
-  int32_t v7; // w0
-  UnityEngine_ParticleSystem_o *ComponentInChildren_Dropdown_DropdownItem; // x0
-  __int64 v9; // x1
+  __int64 v7; // x1
+  UnityEngine_ParticleSystem_o *ComponentInChildren_object; // x0
+  unsigned int v9; // w8
   int16_t v10; // w20
   UnityEngine_ParticleSystem_o *v11; // x22
-  float startDelay; // s0
+  float constant; // s8
   struct UnityEngine_ParticleSystem_Burst_array *tempBurst; // x8
   UnityEngine_ParticleSystem_o *v14; // x21
   struct UnityEngine_ParticleSystem_Burst_array *v15; // x23
-  __int64 v16; // x0
-  struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+8h] [xbp-38h] BYREF
-  UnityEngine_ParticleSystem_EmissionModule_o v18; // 0:x0.8
+  UnityEngine_ParticleSystem_MinMaxCurve_o v16; // [xsp+8h] [xbp-98h] BYREF
+  struct UnityEngine_ParticleSystem_o *v17; // [xsp+28h] [xbp-78h] BYREF
+  UnityEngine_ParticleSystem_MinMaxCurve_o v18; // [xsp+30h] [xbp-70h] BYREF
+  struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+58h] [xbp-48h] BYREF
+  UnityEngine_ParticleSystem_MainModule_o v20; // 0:x0.8
+  UnityEngine_ParticleSystem_MainModule_o v21; // 0:x0.8
+  UnityEngine_ParticleSystem_EmissionModule_o v22; // 0:x0.8
 
-  if ( (byte_438B452 & 1) == 0 )
+  if ( (byte_48E5666 & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponentInChildren_ParticleSystem___);
-    sub_B775C4(&Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__);
-    byte_438B452 = 1;
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponentInChildren_ParticleSystem___, starEffectPrefab);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__, v7);
+    byte_48E5666 = 1;
   }
-  m_ParticleSystem = 0LL;
-  v7 = UnityEngine_Mathf__Abs_41473480(starCount, 0LL);
-  ComponentInChildren_Dropdown_DropdownItem = (UnityEngine_ParticleSystem_o *)UnityEngine_Mathf__Min_41473676(
-                                                                                v7,
-                                                                                50,
-                                                                                0LL);
+  memset(&v18, 0, sizeof(v18));
+  v17 = 0LL;
+  if ( !byte_48DE044 )
+  {
+    sub_1B00CCC(&System_Math_TypeInfo, starEffectPrefab);
+    byte_48DE044 = 1;
+  }
+  ComponentInChildren_object = (UnityEngine_ParticleSystem_o *)System_Math_TypeInfo;
+  if ( !System_Math_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
+  if ( starCount >= 0 )
+    v9 = starCount;
+  else
+    v9 = -starCount;
+  if ( v9 >= 0x32 )
+    v10 = 50;
+  else
+    v10 = v9;
   if ( !starEffectPrefab )
-    goto LABEL_16;
-  v10 = (__int16)ComponentInChildren_Dropdown_DropdownItem;
-  ComponentInChildren_Dropdown_DropdownItem = (UnityEngine_ParticleSystem_o *)UnityEngine_GameObject__GetComponentInChildren_Dropdown_DropdownItem_(
-                                                                                starEffectPrefab,
-                                                                                (const MethodInfo_1DEC070 *)Method_UnityEngine_GameObject_GetComponentInChildren_ParticleSystem___);
-  if ( !ComponentInChildren_Dropdown_DropdownItem )
-    goto LABEL_16;
-  v11 = ComponentInChildren_Dropdown_DropdownItem;
-  startDelay = UnityEngine_ParticleSystem__get_startDelay(ComponentInChildren_Dropdown_DropdownItem, 0LL);
-  this->fields.gorgeousStarEffectTime = startDelay + UnityEngine_ParticleSystem__get_startLifetime(v11, 0LL);
-  ComponentInChildren_Dropdown_DropdownItem = (UnityEngine_ParticleSystem_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__);
-  if ( !ComponentInChildren_Dropdown_DropdownItem )
-    goto LABEL_16;
-  if ( *((float *)&ComponentInChildren_Dropdown_DropdownItem[15].klass + 1) < 1.0 )
+    goto LABEL_26;
+  ComponentInChildren_object = (UnityEngine_ParticleSystem_o *)UnityEngine_GameObject__GetComponentInChildren_object_(
+                                                                 starEffectPrefab,
+                                                                 (const MethodInfo_2DAE06C *)Method_UnityEngine_GameObject_GetComponentInChildren_ParticleSystem___);
+  if ( !ComponentInChildren_object )
+    goto LABEL_26;
+  v11 = ComponentInChildren_object;
+  m_ParticleSystem = UnityEngine_ParticleSystem__get_main(ComponentInChildren_object, 0LL).fields.m_ParticleSystem;
+  v20.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+  UnityEngine_ParticleSystem_MainModule__get_startDelay(&v16, v20, 0LL);
+  v18 = v16;
+  constant = UnityEngine_ParticleSystem_MinMaxCurve__get_constant(&v18, 0LL);
+  m_ParticleSystem = UnityEngine_ParticleSystem__get_main(v11, 0LL).fields.m_ParticleSystem;
+  v21.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+  UnityEngine_ParticleSystem_MainModule__get_startLifetime(&v16, v21, 0LL);
+  v18 = v16;
+  this->fields.gorgeousStarEffectTime = constant + UnityEngine_ParticleSystem_MinMaxCurve__get_constant(&v18, 0LL);
+  ComponentInChildren_object = (UnityEngine_ParticleSystem_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__);
+  if ( !ComponentInChildren_object )
+    goto LABEL_26;
+  if ( *((float *)&ComponentInChildren_object[15].monitor + 1) < 1.0 )
     return;
-  ComponentInChildren_Dropdown_DropdownItem = (UnityEngine_ParticleSystem_o *)BaseMonoBehaviour__createObject(
-                                                                                (BaseMonoBehaviour_o *)this,
-                                                                                starEffectPrefab,
-                                                                                this->fields.criticalpointTr,
-                                                                                0LL,
-                                                                                0LL);
-  if ( !ComponentInChildren_Dropdown_DropdownItem )
-    goto LABEL_16;
-  ComponentInChildren_Dropdown_DropdownItem = (UnityEngine_ParticleSystem_o *)UnityEngine_GameObject__GetComponentInChildren_Dropdown_DropdownItem_(
-                                                                                (UnityEngine_GameObject_o *)ComponentInChildren_Dropdown_DropdownItem,
-                                                                                (const MethodInfo_1DEC070 *)Method_UnityEngine_GameObject_GetComponentInChildren_ParticleSystem___);
+  ComponentInChildren_object = (UnityEngine_ParticleSystem_o *)BaseMonoBehaviour__createObject(
+                                                                 (BaseMonoBehaviour_o *)this,
+                                                                 starEffectPrefab,
+                                                                 this->fields.criticalpointTr,
+                                                                 0LL,
+                                                                 0LL);
+  if ( !ComponentInChildren_object )
+    goto LABEL_26;
+  ComponentInChildren_object = (UnityEngine_ParticleSystem_o *)UnityEngine_GameObject__GetComponentInChildren_object_(
+                                                                 (UnityEngine_GameObject_o *)ComponentInChildren_object,
+                                                                 (const MethodInfo_2DAE06C *)Method_UnityEngine_GameObject_GetComponentInChildren_ParticleSystem___);
   tempBurst = this->fields.tempBurst;
   if ( !tempBurst )
-    goto LABEL_16;
+    goto LABEL_26;
   if ( !tempBurst->max_length )
-    goto LABEL_17;
-  v14 = ComponentInChildren_Dropdown_DropdownItem;
+    goto LABEL_27;
+  v14 = ComponentInChildren_object;
   UnityEngine_ParticleSystem_Burst__set_time(tempBurst->m_Items, 0.0, 0LL);
   v15 = this->fields.tempBurst;
   if ( !v15 )
-    goto LABEL_16;
+    goto LABEL_26;
   if ( !v15->max_length || (UnityEngine_ParticleSystem_Burst__set_maxCount(v15->m_Items, v10, 0LL), !v15->max_length) )
-  {
-LABEL_17:
-    v16 = sub_B776C8(ComponentInChildren_Dropdown_DropdownItem);
-    sub_B77668(v16, 0LL);
-  }
+LABEL_27:
+    sub_1B00F30(ComponentInChildren_object, starEffectPrefab);
   UnityEngine_ParticleSystem_Burst__set_minCount(v15->m_Items, v10, 0LL);
   if ( !v14 )
-LABEL_16:
-    sub_B7769C(ComponentInChildren_Dropdown_DropdownItem, v9);
-  m_ParticleSystem = UnityEngine_ParticleSystem__get_emission(v14, 0LL).fields.m_ParticleSystem;
-  v18.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
-  UnityEngine_ParticleSystem_EmissionModule__SetBursts(v18, this->fields.tempBurst, 0LL);
+LABEL_26:
+    sub_1B00F28(ComponentInChildren_object, starEffectPrefab);
+  v17 = UnityEngine_ParticleSystem__get_emission(v14, 0LL).fields.m_ParticleSystem;
+  v22.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v17;
+  UnityEngine_ParticleSystem_EmissionModule__SetBursts(v22, this->fields.tempBurst, 0LL);
 }
 
 
@@ -257,63 +256,65 @@ void __fastcall BattlePerformanceStatus__InitSkillSelectAddFuncConfWindow(
         BattlePerformanceStatus_o *this,
         const MethodInfo *method)
 {
-  BattleDataDefine_c *v3; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  BattleDataDefine_c *v9; // x0
   System_String_o *ASSET_BATTLE_COMMON; // x20
-  const MethodInfo *v5; // x1
-  Il2CppObject *v6; // x20
+  const MethodInfo *v11; // x1
+  Il2CppObject *v12; // x20
   UnityEngine_Transform_o *skillSelectAddFuncParent; // x21
   UnityEngine_GameObject_o *skillSelectAddFuncConfWindow; // x0
-  __int64 v9; // x1
+  __int64 v15; // x1
   struct BattleSkillSelectAddFuncConfComponent_o **p_skillSelectAddFuncConfWindow; // x20
-  Il2CppObject *data; // [xsp+8h] [xbp-18h] BYREF
+  Il2CppObject *data; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_438B44F & 1) == 0 )
+  if ( (byte_48E5663 & 1) == 0 )
   {
-    sub_B775C4(&Method_AssetManager_TryGetAssetObject_GameObject___);
-    sub_B775C4(&AssetManager_TypeInfo);
-    sub_B775C4(&BattleDataDefine_TypeInfo);
-    sub_B775C4(&Method_UnityEngine_GameObject_TryGetComponent_BattleSkillSelectAddFuncConfComponent___);
-    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject____69541584);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&StringLiteral_13134/*"SkillSelectAddFuncConfWindow"*/);
-    byte_438B44F = 1;
+    sub_1B00CCC(&Method_AssetManager_TryGetAssetObject_GameObject___, method);
+    sub_1B00CCC(&AssetManager_TypeInfo, v3);
+    sub_1B00CCC(&BattleDataDefine_TypeInfo, v4);
+    sub_1B00CCC(&Method_UnityEngine_GameObject_TryGetComponent_BattleSkillSelectAddFuncConfComponent___, v5);
+    sub_1B00CCC(&Method_UnityEngine_Object_Instantiate_GameObject____74661840, v6);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v7);
+    sub_1B00CCC(&StringLiteral_12582/*"SkillSelectAddFuncConfWindow"*/, v8);
+    byte_48E5663 = 1;
   }
+  v9 = BattleDataDefine_TypeInfo;
   data = 0LL;
-  v3 = BattleDataDefine_TypeInfo;
-  if ( (BYTE3(BattleDataDefine_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !BattleDataDefine_TypeInfo->_2.cctor_finished )
+  if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo);
-    v3 = BattleDataDefine_TypeInfo;
+    v9 = BattleDataDefine_TypeInfo;
   }
-  ASSET_BATTLE_COMMON = v3->static_fields->ASSET_BATTLE_COMMON;
-  if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
+  ASSET_BATTLE_COMMON = v9->static_fields->ASSET_BATTLE_COMMON;
+  if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   if ( AssetManager__TryGetAssetObject_object_(
          &data,
          ASSET_BATTLE_COMMON,
-         (System_String_o *)StringLiteral_13134/*"SkillSelectAddFuncConfWindow"*/,
-         (const MethodInfo_1C60178 *)Method_AssetManager_TryGetAssetObject_GameObject___) )
+         (System_String_o *)StringLiteral_12582/*"SkillSelectAddFuncConfWindow"*/,
+         (const MethodInfo_2D45CCC *)Method_AssetManager_TryGetAssetObject_GameObject___) )
   {
-    BattlePerformanceStatus__DestroySkillSelectAddFuncConfWindow(this, v5);
-    v6 = data;
+    BattlePerformanceStatus__DestroySkillSelectAddFuncConfWindow(this, v11);
+    v12 = data;
     skillSelectAddFuncParent = this->fields.skillSelectAddFuncParent;
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
-    skillSelectAddFuncConfWindow = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_UILabel_(
-                                                                 (UILabel_o *)v6,
+    skillSelectAddFuncConfWindow = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object__48061460(
+                                                                 v12,
                                                                  skillSelectAddFuncParent,
-                                                                 (const MethodInfo_1DF9A3C *)Method_UnityEngine_Object_Instantiate_GameObject____69541584);
+                                                                 (const MethodInfo_2DD5C14 *)Method_UnityEngine_Object_Instantiate_GameObject____74661840);
     if ( !skillSelectAddFuncConfWindow )
-      goto LABEL_19;
+      goto LABEL_16;
     p_skillSelectAddFuncConfWindow = &this->fields.skillSelectAddFuncConfWindow;
-    if ( !UnityEngine_GameObject__TryGetComponent_UITexture_(
+    if ( !UnityEngine_GameObject__TryGetComponent_object_(
             skillSelectAddFuncConfWindow,
-            (UITexture_o **)&this->fields.skillSelectAddFuncConfWindow,
-            (const MethodInfo_1DEC764 *)Method_UnityEngine_GameObject_TryGetComponent_BattleSkillSelectAddFuncConfComponent___) )
+            (Il2CppObject **)&this->fields.skillSelectAddFuncConfWindow,
+            (const MethodInfo_2DAF098 *)Method_UnityEngine_GameObject_TryGetComponent_BattleSkillSelectAddFuncConfComponent___) )
       return;
     skillSelectAddFuncConfWindow = (UnityEngine_GameObject_o *)*p_skillSelectAddFuncConfWindow;
     if ( !*p_skillSelectAddFuncConfWindow
@@ -323,8 +324,8 @@ void __fastcall BattlePerformanceStatus__InitSkillSelectAddFuncConfWindow(
             0LL),
           (skillSelectAddFuncConfWindow = (UnityEngine_GameObject_o *)this->fields.skillSelectAddFuncConfWindow) == 0LL) )
     {
-LABEL_19:
-      sub_B7769C(skillSelectAddFuncConfWindow, v9);
+LABEL_16:
+      sub_1B00F28(skillSelectAddFuncConfWindow, v15);
     }
     ((void (__fastcall *)(UnityEngine_GameObject_o *, void *))skillSelectAddFuncConfWindow->klass[1]._1.parent)(
       skillSelectAddFuncConfWindow,
@@ -340,86 +341,40 @@ void __fastcall BattlePerformanceStatus__Initialize(
         BattleLogic_o *inlogic,
         const MethodInfo *method)
 {
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  System_String_array **v12; // x2
-  System_String_array **v13; // x3
-  System_Boolean_array **v14; // x4
-  System_Int32_array **v15; // x5
-  System_Int32_array *v16; // x6
-  System_Int32_array *v17; // x7
-  System_String_array **v18; // x2
-  System_String_array **v19; // x3
-  System_Boolean_array **v20; // x4
-  System_Int32_array **v21; // x5
-  System_Int32_array *v22; // x6
-  System_Int32_array *v23; // x7
-  const MethodInfo *v24; // x1
-  const MethodInfo *v25; // x4
+  int32_t v9; // w2
+  int32_t v10; // w3
+  int32_t v11; // w2
+  int32_t v12; // w3
+  __int64 v13; // x1
+  const MethodInfo *v14; // x4
   char *playerPerf; // x0
-  const MethodInfo *v27; // x4
-  BattleLogic_o *v28; // x3
-  const MethodInfo *v29; // x4
-  System_String_array **v30; // x2
-  System_String_array **v31; // x3
-  System_Boolean_array **v32; // x4
-  System_Int32_array **v33; // x5
-  System_Int32_array *v34; // x6
-  System_Int32_array *v35; // x7
-  System_Int32_array **data; // x1
-  const MethodInfo *v37; // x1
+  int32_t v16; // w2
+  int32_t v17; // w3
+  struct BattleData_o *data; // x1
+  const MethodInfo *v19; // x1
   struct UnityEngine_GameObject_o *gameObject; // x0
-  System_String_array **v39; // x2
-  System_String_array **v40; // x3
-  System_Boolean_array **v41; // x4
-  System_Int32_array **v42; // x5
-  System_Int32_array *v43; // x6
-  System_Int32_array *v44; // x7
-  struct UnityEngine_ParticleSystem_Burst_array *v45; // x0
-  System_String_array **v46; // x2
-  System_String_array **v47; // x3
-  System_Boolean_array **v48; // x4
-  System_Int32_array **v49; // x5
-  System_Int32_array *v50; // x6
-  System_Int32_array *v51; // x7
-  const MethodInfo *v52; // x1
+  int32_t v21; // w2
+  int32_t v22; // w3
+  struct UnityEngine_ParticleSystem_Burst_array *v23; // x0
+  int32_t v24; // w2
+  int32_t v25; // w3
+  const MethodInfo *v26; // x1
 
-  if ( (byte_438B44E & 1) == 0 )
+  if ( (byte_48E5662 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_ParticleSystem_Burst___TypeInfo);
-    byte_438B44E = 1;
+    sub_1B00CCC(&UnityEngine_ParticleSystem_Burst___TypeInfo, inperf);
+    byte_48E5662 = 1;
   }
   this->fields.perf = inperf;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.perf,
-    (System_Int32_array **)inperf,
-    (System_String_array **)indata,
-    (System_String_array **)inlogic,
-    (System_Boolean_array **)method,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields.perf,
+    (int32_t)inperf,
+    (int32_t)indata,
+    (int32_t)inlogic);
   this->fields.data = indata;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.data,
-    (System_Int32_array **)indata,
-    v12,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.data, (int32_t)indata, v9, v10);
   this->fields.logic = inlogic;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.logic,
-    (System_Int32_array **)inlogic,
-    v18,
-    v19,
-    v20,
-    v21,
-    v22,
-    v23);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.logic, (int32_t)inlogic, v11, v12);
   playerPerf = (char *)this->fields.playerPerf;
   if ( !playerPerf )
     goto LABEL_20;
@@ -428,7 +383,7 @@ void __fastcall BattlePerformanceStatus__Initialize(
     this->fields.perf,
     this->fields.data,
     this->fields.logic,
-    v25);
+    v14);
   playerPerf = (char *)this->fields.masterPerf;
   if ( !playerPerf )
     goto LABEL_20;
@@ -437,7 +392,7 @@ void __fastcall BattlePerformanceStatus__Initialize(
     this->fields.perf,
     this->fields.data,
     this->fields.logic,
-    v27);
+    0LL);
   playerPerf = (char *)this->fields.enemyPref;
   if ( !playerPerf )
     goto LABEL_20;
@@ -445,14 +400,14 @@ void __fastcall BattlePerformanceStatus__Initialize(
     (BattlePerformanceEnemy_o *)playerPerf,
     this->fields.perf,
     this->fields.data,
-    v28,
-    v29);
+    this->fields.logic,
+    0LL);
   playerPerf = (char *)this->fields.enemyMasterPerf;
   if ( !playerPerf )
     goto LABEL_20;
-  data = (System_Int32_array **)this->fields.data;
-  *((_QWORD *)playerPerf + 3) = data;
-  sub_B77560((BattleServantConfConponent_o *)(playerPerf + 24), data, v30, v31, v32, v33, v34, v35);
+  data = this->fields.data;
+  *((_QWORD *)playerPerf + 4) = data;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(playerPerf + 32), (int32_t)data, v16, v17);
   playerPerf = (char *)this->fields.selectSvtWindow;
   if ( !playerPerf )
     goto LABEL_20;
@@ -492,40 +447,24 @@ void __fastcall BattlePerformanceStatus__Initialize(
     || ((*(void (__fastcall **)(char *, _QWORD))(*(_QWORD *)playerPerf + 456LL))(
           playerPerf,
           *(_QWORD *)(*(_QWORD *)playerPerf + 464LL)),
-        BattlePerformanceStatus__InitSkillSelectAddFuncConfWindow(this, v37),
+        BattlePerformanceStatus__InitSkillSelectAddFuncConfWindow(this, v19),
         (playerPerf = (char *)this->fields.InfoComp) == 0LL)
-    || (BattlePerformanceInfoComponent__Initialize((BattlePerformanceInfoComponent_o *)playerPerf, v24),
+    || (BattlePerformanceInfoComponent__Initialize((BattlePerformanceInfoComponent_o *)playerPerf, 0LL),
         (playerPerf = (char *)this->fields.totalCriticalpointlabel) == 0LL)
     || (playerPerf = (char *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)playerPerf, 0LL)) == 0LL
     || (playerPerf = (char *)UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)playerPerf, 0LL)) == 0LL )
   {
 LABEL_20:
-    sub_B7769C(playerPerf, v24);
+    sub_1B00F28(playerPerf, v13);
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)playerPerf, 0LL);
   this->fields.totalCriticalStarObj = gameObject;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.totalCriticalStarObj,
-    (System_Int32_array **)gameObject,
-    v39,
-    v40,
-    v41,
-    v42,
-    v43,
-    v44);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.totalCriticalStarObj, (int32_t)gameObject, v21, v22);
   this->fields.lastTotalCriticalPoint = 0;
-  v45 = (struct UnityEngine_ParticleSystem_Burst_array *)sub_B775DC(UnityEngine_ParticleSystem_Burst___TypeInfo, 1LL);
-  this->fields.tempBurst = v45;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.tempBurst,
-    (System_Int32_array **)v45,
-    v46,
-    v47,
-    v48,
-    v49,
-    v50,
-    v51);
-  BattlePerformanceStatus__initActionTouch(this, v52);
+  v23 = (struct UnityEngine_ParticleSystem_Burst_array *)sub_1B00D74(UnityEngine_ParticleSystem_Burst___TypeInfo, 1LL);
+  this->fields.tempBurst = v23;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.tempBurst, (int32_t)v23, v24, v25);
+  BattlePerformanceStatus__initActionTouch(this, v26);
 }
 
 
@@ -589,7 +528,7 @@ LABEL_12:
       }
     }
 LABEL_13:
-    sub_B7769C(this, *(_QWORD *)&Id);
+    sub_1B00F28(this, *(_QWORD *)&Id);
   }
 }
 
@@ -603,7 +542,7 @@ void __fastcall BattlePerformanceStatus__SetActiveTotalCriticalStar(
 
   totalCriticalStarObj = this->fields.totalCriticalStarObj;
   if ( !totalCriticalStarObj )
-    sub_B7769C(0LL, value);
+    sub_1B00F28(0LL, value);
   UnityEngine_GameObject__SetActive(totalCriticalStarObj, value, 0LL);
 }
 
@@ -614,31 +553,31 @@ void __fastcall BattlePerformanceStatus__ShowCriticalStarEffectForSkill(
         const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
-  int16_t v4; // w2
-  UnityEngine_GameObject_o *effect_increaseGorgeousStar; // x1
+  UnityEngine_GameObject_o **p_effect_increaseGorgeousStar; // x8
 
-  v4 = starCount;
   if ( starCount << 16 >= 0x10000 )
   {
-    effect_increaseGorgeousStar = this->fields.effect_increaseGorgeousStar;
+    p_effect_increaseGorgeousStar = &this->fields.effect_increaseGorgeousStar;
   }
   else
   {
     if ( !(_WORD)starCount )
       return;
-    effect_increaseGorgeousStar = this->fields.effect_reduceGorgeousStar;
+    p_effect_increaseGorgeousStar = &this->fields.effect_reduceGorgeousStar;
   }
-  BattlePerformanceStatus__GorgeousStarCommonFunc(this, effect_increaseGorgeousStar, v4, v3);
+  BattlePerformanceStatus__GorgeousStarCommonFunc(this, *p_effect_increaseGorgeousStar, starCount, v3);
 }
 
 
 void __fastcall BattlePerformanceStatus__actionTouchEvent(BattlePerformanceStatus_o *this, const MethodInfo *method)
 {
-  BattlePerformanceStatus_TouchEventDelegate_o *tapEvent; // x0
+  struct BattlePerformanceStatus_TouchEventDelegate_o *tapEvent; // x8
 
   tapEvent = this->fields.tapEvent;
   if ( tapEvent )
-    BattlePerformanceStatus_TouchEventDelegate__Invoke(tapEvent, 0LL);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))tapEvent->fields.m_target)(
+      tapEvent->fields.original_method_info,
+      *(_QWORD *)&tapEvent->fields.extra_arg);
 }
 
 
@@ -673,14 +612,14 @@ void __fastcall BattlePerformanceStatus__changeLayer(
   *(UnityEngine_Vector3_o *)&v7 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)this, 0LL);
   if ( !actorcamera )
     goto LABEL_9;
-  *(UnityEngine_Vector3_o *)&v10 = UnityEngine_Camera__WorldToViewportPoint_41408372(
+  *(UnityEngine_Vector3_o *)&v10 = UnityEngine_Camera__WorldToViewportPoint_67883956(
                                      actorcamera,
                                      *(UnityEngine_Vector3_o *)&v7,
                                      0LL);
   v13 = v6->fields.perf;
   if ( !v13
     || (this = (BattlePerformanceStatus_o *)v13->fields.uicamera) == 0LL
-    || (v17 = UnityEngine_Camera__ViewportToWorldPoint_41408380(
+    || (v17 = UnityEngine_Camera__ViewportToWorldPoint_67883964(
                 (UnityEngine_Camera_o *)this,
                 *(UnityEngine_Vector3_o *)&v10,
                 0LL),
@@ -690,7 +629,7 @@ void __fastcall BattlePerformanceStatus__changeLayer(
         (this = (BattlePerformanceStatus_o *)UnityEngine_GameObject__get_transform(obj, 0LL)) == 0LL) )
   {
 LABEL_9:
-    sub_B7769C(this, obj);
+    sub_1B00F28(this, obj);
   }
   v18.fields.x = x;
   v18.fields.y = y;
@@ -701,13 +640,12 @@ LABEL_9:
 
 bool __fastcall BattlePerformanceStatus__checkRaidHPUpdate(BattlePerformanceStatus_o *this, const MethodInfo *method)
 {
-  struct BattlePerformanceEnemy_o *enemyPref; // x8
-  struct BattleServantRaidParamComponent_o *raidParam; // x8
+  BattlePerformanceEnemy_o *enemyPref; // x0
 
   enemyPref = this->fields.enemyPref;
-  if ( !enemyPref || (raidParam = enemyPref->fields.raidParam) == 0LL )
-    sub_B7769C(this, method);
-  return raidParam->fields.flgUpdate;
+  if ( !enemyPref )
+    sub_1B00F28(0LL, method);
+  return BattlePerformanceEnemy__checkRaidUpdateHp(enemyPref, 0LL);
 }
 
 
@@ -717,26 +655,27 @@ void __fastcall BattlePerformanceStatus__clickServantWindow(
         int32_t index,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
   PlayMakerFSM_o *fsm; // x0
 
-  if ( (byte_438B454 & 1) == 0 )
+  if ( (byte_48E5668 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_21746/*"openSvtIndex"*/);
-    sub_B775C4(&StringLiteral_3204/*"CLICK_SVTWINDOW"*/);
-    byte_438B454 = 1;
+    sub_1B00CCC(&StringLiteral_22018/*"openSvtIndex"*/, *(_QWORD *)&index);
+    sub_1B00CCC(&StringLiteral_3531/*"CLICK_SVTWINDOW"*/, v5);
+    byte_48E5668 = 1;
   }
   fsm = this->fields.fsm;
   if ( !fsm
     || (fsm = (PlayMakerFSM_o *)PlayMakerFSM__get_FsmVariables(fsm, 0LL)) == 0LL
     || (fsm = (PlayMakerFSM_o *)HutongGames_PlayMaker_FsmVariables__GetFsmInt(
                                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                                  (System_String_o *)StringLiteral_21746/*"openSvtIndex"*/,
+                                  (System_String_o *)StringLiteral_22018/*"openSvtIndex"*/,
                                   0LL)) == 0LL
-    || (LODWORD(fsm[1].klass) = index, (fsm = this->fields.fsm) == 0LL) )
+    || (LODWORD(fsm->fields.addEventHandlers) = index, (fsm = this->fields.fsm) == 0LL) )
   {
-    sub_B7769C(fsm, *(_QWORD *)&index);
+    sub_1B00F28(fsm, *(_QWORD *)&index);
   }
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3204/*"CLICK_SVTWINDOW"*/, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3531/*"CLICK_SVTWINDOW"*/, 0LL);
 }
 
 
@@ -749,8 +688,8 @@ void __fastcall BattlePerformanceStatus__deleteEnemyStatus(
 
   enemyPref = this->fields.enemyPref;
   if ( !enemyPref )
-    sub_B7769C(0LL, index);
-  BattlePerformanceEnemy__deleteStatus(enemyPref, index, method);
+    sub_1B00F28(0LL, index);
+  BattlePerformanceEnemy__deleteStatus(enemyPref, index, 0LL);
 }
 
 
@@ -763,7 +702,7 @@ void __fastcall BattlePerformanceStatus__deletePlayerStatus(
 
   playerPerf = this->fields.playerPerf;
   if ( !playerPerf )
-    sub_B7769C(0LL, index);
+    sub_1B00F28(0LL, index);
   BattlePerformancePlayer__deleteStatus(playerPerf, index, method);
 }
 
@@ -778,12 +717,12 @@ void __fastcall BattlePerformanceStatus__endSkill(BattlePerformanceStatus_o *thi
         (perf = (BattlePerformance_o *)this->fields.playerPerf) == 0LL)
     || (BattlePerformancePlayer__endSkill((BattlePerformancePlayer_o *)perf, method),
         (perf = (BattlePerformance_o *)this->fields.enemyPref) == 0LL)
-    || (BattlePerformanceEnemy__endSkill((BattlePerformanceEnemy_o *)perf, method),
+    || (BattlePerformanceEnemy__endSkill((BattlePerformanceEnemy_o *)perf, 0LL),
         (perf = (BattlePerformance_o *)this->fields.masterPerf) == 0LL) )
   {
-    sub_B7769C(perf, method);
+    sub_1B00F28(perf, method);
   }
-  BattlePerformanceMaster__endSkill((BattlePerformanceMaster_o *)perf, method);
+  BattlePerformanceMaster__endSkill((BattlePerformanceMaster_o *)perf, 0LL);
 }
 
 
@@ -831,12 +770,12 @@ int64_t __fastcall BattlePerformanceStatus__getTurnSituationParam(
         BattlePerformanceStatus_o *this,
         const MethodInfo *method)
 {
-  struct BattlePerformanceEnemy_o *enemyPref; // x8
+  BattlePerformanceEnemy_o *enemyPref; // x0
 
   enemyPref = this->fields.enemyPref;
-  if ( !enemyPref || (this = (BattlePerformanceStatus_o *)enemyPref->fields.raidParam) == 0LL )
-    sub_B7769C(this, method);
-  return BattleServantRaidParamComponent__getTurnSituationParam((BattleServantRaidParamComponent_o *)this, 0LL);
+  if ( !enemyPref )
+    sub_1B00F28(0LL, method);
+  return BattlePerformanceEnemy__getTurnSituationParam(enemyPref, 0LL);
 }
 
 
@@ -851,40 +790,37 @@ BattleSkillSelectAddFuncConfComponent_o *__fastcall BattlePerformanceStatus__get
 void __fastcall BattlePerformanceStatus__initActionTouch(BattlePerformanceStatus_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *tapObject; // x0
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
+  int32_t v4; // w2
+  int32_t v5; // w3
 
   tapObject = this->fields.tapObject;
   if ( !tapObject )
-    sub_B7769C(0LL, method);
+    sub_1B00F28(0LL, method);
   UnityEngine_GameObject__SetActive(tapObject, 0, 0LL);
   this->fields.tapEvent = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.tapEvent, 0LL, v4, v5, v6, v7, v8, v9);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.tapEvent, 0, v4, v5);
 }
 
 
 void __fastcall BattlePerformanceStatus__initQuest(BattlePerformanceStatus_o *this, const MethodInfo *method)
 {
-  const MethodInfo *v2; // x2
+  BattlePerformanceInfoComponent_o *InfoComp; // x0
 
-  if ( !this->fields.InfoComp )
-    sub_B7769C(this, method);
-  BattlePerformanceInfoComponent__setQuest(this->fields.InfoComp, this->fields.data, v2);
+  InfoComp = this->fields.InfoComp;
+  if ( !InfoComp )
+    sub_1B00F28(0LL, method);
+  BattlePerformanceInfoComponent__setQuest(InfoComp, this->fields.data, 0LL);
 }
 
 
 bool __fastcall BattlePerformanceStatus__isLoading(BattlePerformanceStatus_o *this, const MethodInfo *method)
 {
-  struct BattlePerformanceEnemyMst_o *enemyMasterPerf; // x8
+  BattlePerformanceEnemyMst_o *enemyMasterPerf; // x0
 
   enemyMasterPerf = this->fields.enemyMasterPerf;
   if ( !enemyMasterPerf )
-    sub_B7769C(this, method);
-  return enemyMasterPerf->fields.loadStat != 0;
+    sub_1B00F28(0LL, method);
+  return BattlePerformanceEnemyMst__IsLoading(enemyMasterPerf, 0LL);
 }
 
 
@@ -892,43 +828,33 @@ bool __fastcall BattlePerformanceStatus__isOpenOrOpeningMainWindow(
         BattlePerformanceStatus_o *this,
         const MethodInfo *method)
 {
-  struct BattlePerformanceMaster_o *masterPerf; // x8
-  BattlePerformanceStatus_o *v3; // x19
-  struct BattlePerformanceMaster_o *v4; // x8
+  BattlePerformanceMaster_o *masterPerf; // x0
 
   masterPerf = this->fields.masterPerf;
   if ( !masterPerf )
-    goto LABEL_14;
-  v3 = this;
-  this = (BattlePerformanceStatus_o *)masterPerf->fields.win_Spell;
-  if ( !this )
-    goto LABEL_14;
-  this = (BattlePerformanceStatus_o *)BattleWindowComponent__isOpenOrOpening((BattleWindowComponent_o *)this, 0LL);
-  if ( ((unsigned __int8)this & 1) != 0 )
+    goto LABEL_12;
+  if ( BattlePerformanceMaster__isWinSpellWindowOpenOrOpening(masterPerf, 0LL) )
     return 1;
-  v4 = v3->fields.masterPerf;
-  if ( !v4 )
-    goto LABEL_14;
-  this = (BattlePerformanceStatus_o *)v4->fields.win_Menu;
-  if ( !this )
-    goto LABEL_14;
-  if ( BattleWindowComponent__isOpenOrOpening((BattleWindowComponent_o *)this, 0LL) )
+  masterPerf = this->fields.masterPerf;
+  if ( !masterPerf )
+    goto LABEL_12;
+  if ( BattlePerformanceMaster__isWinMenuWindowOpenOrOpening(masterPerf, 0LL) )
     return 1;
-  this = (BattlePerformanceStatus_o *)v3->fields.selectMainSubSvtWindow;
-  if ( !this )
-    goto LABEL_14;
-  if ( BattleWindowComponent__isOpenOrOpening((BattleWindowComponent_o *)this, 0LL) )
+  masterPerf = (BattlePerformanceMaster_o *)this->fields.selectMainSubSvtWindow;
+  if ( !masterPerf )
+    goto LABEL_12;
+  if ( BattleWindowComponent__isOpenOrOpening((BattleWindowComponent_o *)masterPerf, 0LL) )
     return 1;
-  this = (BattlePerformanceStatus_o *)v3->fields.selectSvtWindow;
-  if ( !this )
-    goto LABEL_14;
-  if ( BattleWindowComponent__isOpenOrOpening((BattleWindowComponent_o *)this, 0LL) )
+  masterPerf = (BattlePerformanceMaster_o *)this->fields.selectSvtWindow;
+  if ( !masterPerf )
+    goto LABEL_12;
+  if ( BattleWindowComponent__isOpenOrOpening((BattleWindowComponent_o *)masterPerf, 0LL) )
     return 1;
-  this = (BattlePerformanceStatus_o *)v3->fields.selectCommandTypeWindow;
-  if ( !this )
-LABEL_14:
-    sub_B7769C(this, method);
-  return BattleWindowComponent__isOpenOrOpening((BattleWindowComponent_o *)this, 0LL);
+  masterPerf = (BattlePerformanceMaster_o *)this->fields.selectCommandTypeWindow;
+  if ( !masterPerf )
+LABEL_12:
+    sub_1B00F28(masterPerf, method);
+  return BattleWindowComponent__isOpenOrOpening((BattleWindowComponent_o *)masterPerf, 0LL);
 }
 
 
@@ -938,12 +864,12 @@ void __fastcall BattlePerformanceStatus__loadEnemyMaster(BattlePerformanceStatus
 
   enemyMasterPerf = this->fields.enemyMasterPerf;
   if ( !enemyMasterPerf
-    || (BattlePerformanceEnemyMst__loadData(enemyMasterPerf, method),
+    || (BattlePerformanceEnemyMst__loadData(enemyMasterPerf, 0LL),
         (enemyMasterPerf = this->fields.enemyMasterPerf) == 0LL) )
   {
-    sub_B7769C(enemyMasterPerf, method);
+    sub_1B00F28(enemyMasterPerf, method);
   }
-  BattlePerformanceEnemyMst__OverwriteEnemyMasterFrame(enemyMasterPerf, method);
+  BattlePerformanceEnemyMst__OverwriteEnemyMasterFrame(enemyMasterPerf, 0LL);
 }
 
 
@@ -953,8 +879,8 @@ void __fastcall BattlePerformanceStatus__loadMaster(BattlePerformanceStatus_o *t
 
   masterPerf = this->fields.masterPerf;
   if ( !masterPerf )
-    sub_B7769C(0LL, method);
-  BattlePerformanceMaster__loadData(masterPerf, method);
+    sub_1B00F28(0LL, method);
+  BattlePerformanceMaster__loadData(masterPerf, 0LL);
 }
 
 
@@ -964,8 +890,8 @@ void __fastcall BattlePerformanceStatus__modeAction(BattlePerformanceStatus_o *t
 
   enemyPref = this->fields.enemyPref;
   if ( !enemyPref )
-    sub_B7769C(0LL, method);
-  BattlePerformanceEnemy__startAction(enemyPref, method);
+    sub_1B00F28(0LL, method);
+  BattlePerformanceEnemy__startAction(enemyPref, 0LL);
 }
 
 
@@ -977,12 +903,12 @@ void __fastcall BattlePerformanceStatus__modeCommand(BattlePerformanceStatus_o *
   if ( !playerPerf
     || (BattlePerformancePlayer__startCommand(playerPerf, method),
         (playerPerf = (BattlePerformancePlayer_o *)this->fields.masterPerf) == 0LL)
-    || (BattlePerformanceMaster__startCommand((BattlePerformanceMaster_o *)playerPerf, method),
+    || (BattlePerformanceMaster__startCommand((BattlePerformanceMaster_o *)playerPerf, 0LL),
         (playerPerf = (BattlePerformancePlayer_o *)this->fields.enemyPref) == 0LL)
-    || (BattlePerformanceEnemy__startCommand((BattlePerformanceEnemy_o *)playerPerf, method),
+    || (BattlePerformanceEnemy__startCommand((BattlePerformanceEnemy_o *)playerPerf, 0LL),
         (playerPerf = (BattlePerformancePlayer_o *)this->fields.perf) == 0LL) )
   {
-    sub_B7769C(playerPerf, method);
+    sub_1B00F28(playerPerf, method);
   }
   BattlePerformance__changeAttackButton((BattlePerformance_o *)playerPerf, 0, 0, 1, 0LL);
 }
@@ -994,8 +920,8 @@ void __fastcall BattlePerformanceStatus__modeStartWave(BattlePerformanceStatus_o
 
   enemyPref = this->fields.enemyPref;
   if ( !enemyPref )
-    sub_B7769C(0LL, method);
-  BattlePerformanceEnemy__startWave(enemyPref, method);
+    sub_1B00F28(0LL, method);
+  BattlePerformanceEnemy__startWave(enemyPref, 0LL);
 }
 
 
@@ -1012,10 +938,10 @@ void __fastcall BattlePerformanceStatus__modeTactical(BattlePerformanceStatus_o 
   playerPerf = (BattlePerformancePlayer_o *)this->fields.masterPerf;
   if ( !playerPerf )
     goto LABEL_9;
-  BattlePerformanceMaster__startTac((BattlePerformanceMaster_o *)playerPerf, method);
+  BattlePerformanceMaster__startTac((BattlePerformanceMaster_o *)playerPerf, 0LL);
   playerPerf = (BattlePerformancePlayer_o *)this->fields.enemyPref;
   if ( !playerPerf
-    || (BattlePerformanceEnemy__startTac((BattlePerformanceEnemy_o *)playerPerf, method),
+    || (BattlePerformanceEnemy__startTac((BattlePerformanceEnemy_o *)playerPerf, 0LL),
         (playerPerf = (BattlePerformancePlayer_o *)this->fields.perf) == 0LL)
     || (BattlePerformance__changeAttackButton((BattlePerformance_o *)playerPerf, 1, 1, 1, 0LL),
         (perf = this->fields.perf) == 0LL)
@@ -1023,7 +949,7 @@ void __fastcall BattlePerformanceStatus__modeTactical(BattlePerformanceStatus_o 
     || (playerPerf = (BattlePerformancePlayer_o *)statusPerf->fields.totalCriticalStarObj) == 0LL )
   {
 LABEL_9:
-    sub_B7769C(playerPerf, method);
+    sub_1B00F28(playerPerf, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)playerPerf, 1, 0LL);
 }
@@ -1038,7 +964,7 @@ void __fastcall BattlePerformanceStatus__playAttackEffect(
 
   playerPerf = this->fields.playerPerf;
   if ( !playerPerf )
-    sub_B7769C(0LL, uniqueID);
+    sub_1B00F28(0LL, uniqueID);
   BattlePerformancePlayer__playAttackEffect(playerPerf, uniqueID, method);
 }
 
@@ -1054,8 +980,8 @@ void __fastcall BattlePerformanceStatus__setEnemyParam(
 
   enemyPref = this->fields.enemyPref;
   if ( !enemyPref )
-    sub_B7769C(0LL, index);
-  BattlePerformanceEnemy__setParam(enemyPref, index, svtdata, obj, method);
+    sub_1B00F28(0LL, index);
+  BattlePerformanceEnemy__setParam(enemyPref, index, svtdata, obj, 0LL);
 }
 
 
@@ -1067,8 +993,8 @@ void __fastcall BattlePerformanceStatus__setEnemyParamPosition(
 
   enemyPref = this->fields.enemyPref;
   if ( !enemyPref )
-    sub_B7769C(0LL, method);
-  BattlePerformanceEnemy__setParamPosition(enemyPref, method);
+    sub_1B00F28(0LL, method);
+  BattlePerformanceEnemy__setParamPosition(enemyPref, 0LL);
 }
 
 
@@ -1078,8 +1004,8 @@ void __fastcall BattlePerformanceStatus__setOffTarget(BattlePerformanceStatus_o 
 
   enemyPref = this->fields.enemyPref;
   if ( !enemyPref )
-    sub_B7769C(0LL, method);
-  BattlePerformanceEnemy__setOffTarget(enemyPref, method);
+    sub_1B00F28(0LL, method);
+  BattlePerformanceEnemy__setOffTarget(enemyPref, 0LL);
 }
 
 
@@ -1093,7 +1019,7 @@ void __fastcall BattlePerformanceStatus__setPlayerParam(
 
   playerPerf = this->fields.playerPerf;
   if ( !playerPerf )
-    sub_B7769C(0LL, index);
+    sub_1B00F28(0LL, index);
   BattlePerformancePlayer__setParam(playerPerf, index, svtdata, method);
 }
 
@@ -1108,8 +1034,8 @@ void __fastcall BattlePerformanceStatus__setShowTurn(
 
   InfoComp = this->fields.InfoComp;
   if ( !InfoComp )
-    sub_B7769C(0LL, bdata);
-  BattlePerformanceInfoComponent__setShowTurn(InfoComp, bdata, addturn, method);
+    sub_1B00F28(0LL, bdata);
+  BattlePerformanceInfoComponent__setShowTurn(InfoComp, bdata, addturn, 0LL);
 }
 
 
@@ -1119,11 +1045,12 @@ void __fastcall BattlePerformanceStatus__setShowWave(
         int32_t max,
         const MethodInfo *method)
 {
-  const MethodInfo *v4; // x4
+  BattlePerformanceInfoComponent_o *InfoComp; // x0
 
-  if ( !this->fields.InfoComp )
-    sub_B7769C(this, now);
-  BattlePerformanceInfoComponent__setShowWave(this->fields.InfoComp, now, max, this->fields.data, v4);
+  InfoComp = this->fields.InfoComp;
+  if ( !InfoComp )
+    sub_1B00F28(0LL, now);
+  BattlePerformanceInfoComponent__setShowWave(InfoComp, now, max, this->fields.data, 0LL);
 }
 
 
@@ -1136,8 +1063,8 @@ void __fastcall BattlePerformanceStatus__setTargetParam(
 
   enemyPref = this->fields.enemyPref;
   if ( !enemyPref )
-    sub_B7769C(0LL, svtdata);
-  BattlePerformanceEnemy__setTarget(enemyPref, svtdata, method);
+    sub_1B00F28(0LL, svtdata);
+  BattlePerformanceEnemy__setTarget(enemyPref, svtdata, 0LL);
 }
 
 
@@ -1147,40 +1074,39 @@ void __fastcall BattlePerformanceStatus__setTouchOff(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *tapObject; // x0
-  BattleServantConfConponent_o *p_tapEvent; // x19
+  ServantStatusBattleListViewItem_o *p_tapEvent; // x19
   System_Delegate_o *tapEvent; // t1
-  System_Int32_array **v8; // x0
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
-  BattlePerformanceStatus_o *v15; // x0
-  const MethodInfo *v16; // x1
+  System_Delegate_o *v8; // x0
+  int32_t v9; // w2
+  int32_t v10; // w3
+  System_Delegate_o *v11; // x8
+  BattlePerformanceStatus_TouchEventDelegate_c *v12; // x1
 
-  if ( (byte_438B456 & 1) == 0 )
+  if ( (byte_48E566A & 1) == 0 )
   {
-    sub_B775C4(&BattlePerformanceStatus_TouchEventDelegate_TypeInfo);
-    byte_438B456 = 1;
+    sub_1B00CCC(&BattlePerformanceStatus_TouchEventDelegate_TypeInfo, inTapEvent);
+    byte_48E566A = 1;
   }
   tapObject = this->fields.tapObject;
   if ( !tapObject )
-    sub_B7769C(0LL, inTapEvent);
+    sub_1B00F28(0LL, inTapEvent);
   UnityEngine_GameObject__SetActive(tapObject, 0, 0LL);
   tapEvent = (System_Delegate_o *)this->fields.tapEvent;
-  p_tapEvent = (BattleServantConfConponent_o *)&this->fields.tapEvent;
-  v8 = (System_Int32_array **)System_Delegate__Remove(tapEvent, (System_Delegate_o *)inTapEvent, 0LL);
-  if ( v8 && *v8 != (System_Int32_array *)BattlePerformanceStatus_TouchEventDelegate_TypeInfo )
+  p_tapEvent = (ServantStatusBattleListViewItem_o *)&this->fields.tapEvent;
+  v8 = System_Delegate__Remove(tapEvent, (System_Delegate_o *)inTapEvent, 0LL);
+  v11 = v8;
+  if ( !v8 )
+    goto LABEL_8;
+  v12 = BattlePerformanceStatus_TouchEventDelegate_TypeInfo;
+  if ( (BattlePerformanceStatus_TouchEventDelegate_c *)v8->klass != BattlePerformanceStatus_TouchEventDelegate_TypeInfo
+    || (p_tapEvent->klass = (ServantStatusBattleListViewItem_c *)v8,
+        (BattlePerformanceStatus_TouchEventDelegate_c *)v8->klass != v12) )
   {
-    v15 = (BattlePerformanceStatus_o *)sub_B77990(v8);
-    BattlePerformanceStatus__setWinView(v15, v16);
+    sub_1B011E8(v8);
+LABEL_8:
+    p_tapEvent->klass = (ServantStatusBattleListViewItem_c *)v11;
   }
-  else
-  {
-    p_tapEvent->klass = (BattleServantConfConponent_c *)v8;
-    sub_B77560(p_tapEvent, v8, v9, v10, v11, v12, v13, v14);
-  }
+  sub_1B00C70(p_tapEvent, (int32_t)v11, v9, v10);
 }
 
 
@@ -1190,51 +1116,42 @@ void __fastcall BattlePerformanceStatus__setTouchOn(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *tapObject; // x0
-  System_Delegate_o *v6; // x0
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
-  BattlePerformanceStatus_o *v13; // x0
-  BattlePerformanceStatus_TouchEventDelegate_o *v14; // x1
-  const MethodInfo *v15; // x2
+  struct BattlePerformanceStatus_TouchEventDelegate_o **p_tapEvent; // x21
+  System_Delegate_o *v7; // x0
+  int32_t v8; // w2
+  int32_t v9; // w3
+  System_Delegate_o *v10; // x8
+  BattlePerformanceStatus_TouchEventDelegate_c *v11; // x1
 
-  if ( (byte_438B455 & 1) == 0 )
+  if ( (byte_48E5669 & 1) == 0 )
   {
-    sub_B775C4(&BattlePerformanceStatus_TouchEventDelegate_TypeInfo);
-    byte_438B455 = 1;
+    sub_1B00CCC(&BattlePerformanceStatus_TouchEventDelegate_TypeInfo, inTapEvent);
+    byte_48E5669 = 1;
   }
   tapObject = this->fields.tapObject;
   if ( !tapObject )
-    goto LABEL_8;
+LABEL_11:
+    sub_1B00F28(tapObject, inTapEvent);
   UnityEngine_GameObject__SetActive(tapObject, 0, 0LL);
-  v6 = System_Delegate__Combine((System_Delegate_o *)this->fields.tapEvent, (System_Delegate_o *)inTapEvent, 0LL);
-  if ( !v6
-    || (BattlePerformanceStatus_TouchEventDelegate_c *)v6->klass == BattlePerformanceStatus_TouchEventDelegate_TypeInfo )
+  p_tapEvent = &this->fields.tapEvent;
+  v7 = System_Delegate__Combine((System_Delegate_o *)this->fields.tapEvent, (System_Delegate_o *)inTapEvent, 0LL);
+  v10 = v7;
+  if ( !v7 )
+    goto LABEL_8;
+  v11 = BattlePerformanceStatus_TouchEventDelegate_TypeInfo;
+  if ( (BattlePerformanceStatus_TouchEventDelegate_c *)v7->klass != BattlePerformanceStatus_TouchEventDelegate_TypeInfo
+    || (*p_tapEvent = (struct BattlePerformanceStatus_TouchEventDelegate_o *)v7,
+        (BattlePerformanceStatus_TouchEventDelegate_c *)v7->klass != v11) )
   {
-    this->fields.tapEvent = (struct BattlePerformanceStatus_TouchEventDelegate_o *)v6;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&this->fields.tapEvent,
-      (System_Int32_array **)v6,
-      v7,
-      v8,
-      v9,
-      v10,
-      v11,
-      v12);
-    tapObject = this->fields.tapObject;
-    if ( tapObject )
-    {
-      UnityEngine_GameObject__SetActive(tapObject, 1, 0LL);
-      return;
-    }
+    sub_1B011E8(v7);
 LABEL_8:
-    sub_B7769C(tapObject, inTapEvent);
+    *p_tapEvent = (struct BattlePerformanceStatus_TouchEventDelegate_o *)v10;
   }
-  v13 = (BattlePerformanceStatus_o *)sub_B77990(v6);
-  BattlePerformanceStatus__setTouchOff(v13, v14, v15);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.tapEvent, (int32_t)v10, v8, v9);
+  tapObject = this->fields.tapObject;
+  if ( !tapObject )
+    goto LABEL_11;
+  UnityEngine_GameObject__SetActive(tapObject, 1, 0LL);
 }
 
 
@@ -1244,8 +1161,8 @@ void __fastcall BattlePerformanceStatus__setWinView(BattlePerformanceStatus_o *t
 
   enemyPref = this->fields.enemyPref;
   if ( !enemyPref )
-    sub_B7769C(0LL, method);
-  BattlePerformanceEnemy__setWinView(enemyPref, method);
+    sub_1B00F28(0LL, method);
+  BattlePerformanceEnemy__setWinView(enemyPref, 0LL);
 }
 
 
@@ -1255,7 +1172,6 @@ void __fastcall BattlePerformanceStatus__showSideEffect(
         const MethodInfo *method)
 {
   BattlePerformancePlayer_o *playerPerf; // x0
-  const MethodInfo *v6; // x2
 
   playerPerf = this->fields.playerPerf;
   if ( !playerPerf )
@@ -1265,15 +1181,14 @@ void __fastcall BattlePerformanceStatus__showSideEffect(
   playerPerf = (BattlePerformancePlayer_o *)this->fields.enemyPref;
   if ( !playerPerf )
 LABEL_5:
-    sub_B7769C(playerPerf, buffData);
-  BattlePerformanceEnemy__showSideEffect((BattlePerformanceEnemy_o *)playerPerf, buffData, v6);
+    sub_1B00F28(playerPerf, buffData);
+  BattlePerformanceEnemy__showSideEffect((BattlePerformanceEnemy_o *)playerPerf, buffData, 0LL);
 }
 
 
 void __fastcall BattlePerformanceStatus__startSkill(BattlePerformanceStatus_o *this, const MethodInfo *method)
 {
   BattlePerformance_o *perf; // x0
-  const MethodInfo *v4; // x2
 
   perf = this->fields.perf;
   if ( !perf
@@ -1281,19 +1196,20 @@ void __fastcall BattlePerformanceStatus__startSkill(BattlePerformanceStatus_o *t
         (perf = (BattlePerformance_o *)this->fields.playerPerf) == 0LL)
     || (BattlePerformancePlayer__startSkill((BattlePerformancePlayer_o *)perf, method),
         (perf = (BattlePerformance_o *)this->fields.enemyPref) == 0LL)
-    || (BattlePerformanceEnemy__startSkill((BattlePerformanceEnemy_o *)perf, method),
+    || (BattlePerformanceEnemy__startSkill((BattlePerformanceEnemy_o *)perf, 0LL),
         (perf = (BattlePerformance_o *)this->fields.masterPerf) == 0LL) )
   {
-    sub_B7769C(perf, method);
+    sub_1B00F28(perf, method);
   }
-  BattlePerformanceMaster__startSkill((BattlePerformanceMaster_o *)perf, (int32_t)method, v4);
+  BattlePerformanceMaster__startSkill((BattlePerformanceMaster_o *)perf, 0, 0LL);
 }
 
 
 void __fastcall BattlePerformanceStatus__updateBuff(BattlePerformanceStatus_o *this, const MethodInfo *method)
 {
-  if ( !this->fields.playerPerf || !this->fields.enemyPref )
-    sub_B7769C(this, method);
+  if ( !this->fields.playerPerf || (this = (BattlePerformanceStatus_o *)this->fields.enemyPref) == 0LL )
+    sub_1B00F28(this, method);
+  BattlePerformanceEnemy__updateBuff((BattlePerformanceEnemy_o *)this, 0LL);
 }
 
 
@@ -1321,7 +1237,7 @@ void __fastcall BattlePerformanceStatus__updateCriticalPoint(
   data = this->fields.data;
   if ( !data )
 LABEL_17:
-    sub_B7769C(criticalpointlabel, v8);
+    sub_1B00F28(criticalpointlabel, v8);
   totalCriticalStars = data->fields.totalCriticalStars;
   criticalstars = data->fields.criticalstars;
   this->fields.gorgeousStarEffectTime = 0.0;
@@ -1350,7 +1266,7 @@ LABEL_17:
     if ( v5 >= 1 )
     {
       CriticalEffect = BattlePerformanceStatus__DoCreateCriticalEffect(this, this->fields.gorgeousStarEffectTime, v16);
-      UnityEngine_MonoBehaviour__StartCoroutine_36304832((UnityEngine_MonoBehaviour_o *)this, CriticalEffect, 0LL);
+      UnityEngine_MonoBehaviour__StartCoroutine_68062928((UnityEngine_MonoBehaviour_o *)this, CriticalEffect, 0LL);
     }
   }
 }
@@ -1361,13 +1277,12 @@ void __fastcall BattlePerformanceStatus__updateDropItemCount(
         bool isPlayChangeEffect,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
   BattlePerformanceInfoComponent_o *InfoComp; // x0
 
   InfoComp = this->fields.InfoComp;
   if ( !InfoComp )
-    sub_B7769C(0LL, isPlayChangeEffect);
-  BattlePerformanceInfoComponent__updateDropItemCount(InfoComp, this->fields.data, isPlayChangeEffect, v3);
+    sub_1B00F28(0LL, isPlayChangeEffect);
+  BattlePerformanceInfoComponent__updateDropItemCount(InfoComp, this->fields.data, isPlayChangeEffect, 0LL);
 }
 
 
@@ -1375,22 +1290,23 @@ void __fastcall BattlePerformanceStatus__updateNokoriEnemyCount(
         BattlePerformanceStatus_o *this,
         const MethodInfo *method)
 {
-  const MethodInfo *v2; // x2
+  BattlePerformanceInfoComponent_o *InfoComp; // x0
 
-  if ( !this->fields.InfoComp )
-    sub_B7769C(this, method);
-  BattlePerformanceInfoComponent__updateNokoriEnemyCount(this->fields.InfoComp, this->fields.data, v2);
+  InfoComp = this->fields.InfoComp;
+  if ( !InfoComp )
+    sub_1B00F28(0LL, method);
+  BattlePerformanceInfoComponent__updateNokoriEnemyCount(InfoComp, this->fields.data, 0LL);
 }
 
 
 void __fastcall BattlePerformanceStatus__updateRaidHp(BattlePerformanceStatus_o *this, const MethodInfo *method)
 {
-  struct BattlePerformanceEnemy_o *enemyPref; // x8
+  BattlePerformanceEnemy_o *enemyPref; // x0
 
   enemyPref = this->fields.enemyPref;
-  if ( !enemyPref || (this = (BattlePerformanceStatus_o *)enemyPref->fields.raidParam) == 0LL )
-    sub_B7769C(this, method);
-  BattleServantRaidParamComponent__updateRaidHp((BattleServantRaidParamComponent_o *)this, 0LL);
+  if ( !enemyPref )
+    sub_1B00F28(0LL, method);
+  BattlePerformanceEnemy__updateRaidHp(enemyPref, 0LL);
 }
 
 
@@ -1404,19 +1320,19 @@ void __fastcall BattlePerformanceStatus__updateRaindInfo(
 
   enemyPref = this->fields.enemyPref;
   if ( !enemyPref )
-    sub_B7769C(0LL, infos);
-  BattlePerformanceEnemy__updateRaidInfos(enemyPref, infos, fixUpdate, method);
+    sub_1B00F28(0LL, infos);
+  BattlePerformanceEnemy__updateRaidInfos(enemyPref, infos, fixUpdate, 0LL);
 }
 
 
 void __fastcall BattlePerformanceStatus__updateStateString(BattlePerformanceStatus_o *this, const MethodInfo *method)
 {
-  struct BattlePerformanceEnemy_o *enemyPref; // x8
+  BattlePerformanceEnemy_o *enemyPref; // x0
 
   enemyPref = this->fields.enemyPref;
-  if ( !enemyPref || (this = (BattlePerformanceStatus_o *)enemyPref->fields.superbossParam) == 0LL )
-    sub_B7769C(this, method);
-  BattleServantSuperBossParamComponent__updateStateString((BattleServantSuperBossParamComponent_o *)this, 0LL);
+  if ( !enemyPref )
+    sub_1B00F28(0LL, method);
+  BattlePerformanceEnemy__updateStateString(enemyPref, 0LL);
 }
 
 
@@ -1430,8 +1346,8 @@ void __fastcall BattlePerformanceStatus__updateSuperBossInfo(
 
   enemyPref = this->fields.enemyPref;
   if ( !enemyPref )
-    sub_B7769C(0LL, infos);
-  BattlePerformanceEnemy__updateSuperBossInfos(enemyPref, infos, fixUpdate, method);
+    sub_1B00F28(0LL, infos);
+  BattlePerformanceEnemy__updateSuperBossInfos(enemyPref, infos, fixUpdate, 0LL);
 }
 
 
@@ -1446,21 +1362,20 @@ void __fastcall BattlePerformanceStatus__updateTotalCriticalPoint(
   int32_t totalCriticalStars; // [xsp+Ch] [xbp-14h] BYREF
 
   v2 = this;
-  if ( (byte_438B453 & 1) == 0 )
+  if ( (byte_48E5667 & 1) == 0 )
   {
-    this = (BattlePerformanceStatus_o *)sub_B775C4(&StringLiteral_660/*"({0})"*/);
-    byte_438B453 = 1;
+    this = (BattlePerformanceStatus_o *)sub_1B00CCC(&StringLiteral_803/*"({0})"*/, method);
+    byte_48E5667 = 1;
   }
-  totalCriticalStars = 0;
   data = v2->fields.data;
   if ( !data
     || (totalCriticalStars = data->fields.totalCriticalStars,
         totalCriticalpointlabel = v2->fields.totalCriticalpointlabel,
         v5 = (Il2CppObject *)System_Int32__ToString((int32_t)&totalCriticalStars, 0LL),
-        this = (BattlePerformanceStatus_o *)System_String__Format((System_String_o *)StringLiteral_660/*"({0})"*/, v5, 0LL),
+        this = (BattlePerformanceStatus_o *)System_String__Format((System_String_o *)StringLiteral_803/*"({0})"*/, v5, 0LL),
         !totalCriticalpointlabel) )
   {
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   }
   UILabel__set_text(totalCriticalpointlabel, (System_String_o *)this, 0LL);
 }
@@ -1475,9 +1390,9 @@ void __fastcall BattlePerformanceStatus__updateView(BattlePerformanceStatus_o *t
     || (BattlePerformancePlayer__updateView(playerPerf, method),
         (playerPerf = (BattlePerformancePlayer_o *)this->fields.enemyPref) == 0LL) )
   {
-    sub_B7769C(playerPerf, method);
+    sub_1B00F28(playerPerf, method);
   }
-  BattlePerformanceEnemy__updateView((BattlePerformanceEnemy_o *)playerPerf, method);
+  BattlePerformanceEnemy__updateView((BattlePerformanceEnemy_o *)playerPerf, 0LL);
 }
 
 
@@ -1488,27 +1403,40 @@ void __fastcall BattlePerformanceStatus_TouchEventDelegate___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  struct BattleServantClassBoardSkillEffectListComponent_o *v8; // x8
-  BattleServantConfConponent_o *p_method; // x0
+  __int64 v4; // x8
+  __int64 v6; // x21
+  int v8; // w22
+  struct System_Reflection_MethodInfo_o *v9; // x9
+  __int64 v10; // x0
 
-  v8 = **(struct BattleServantClassBoardSkillEffectListComponent_o ***)&method;
+  v4 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
+  *(_QWORD *)&this->fields.extra_arg = *(_QWORD *)&method;
+  v6 = *(_QWORD *)&method;
+  *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  p_method = (BattleServantConfConponent_o *)&this->fields.method;
-  p_method->monitor = *(void **)&method;
-  p_method[-1].fields.classBoardSkillObj = v8;
-  sub_B77560(
-    p_method,
-    (System_Int32_array **)object,
-    *(System_String_array ***)&method,
-    (System_String_array **)a4,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  v8 = *(unsigned __int8 *)(v6 + 82);
+  this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
+  if ( (sub_1B00D8C(v6) & 1) == 0 )
+  {
+    if ( !object )
+    {
+      v10 = sub_1B00F44(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B00DF4(v10, 0LL);
+    }
+    goto LABEL_5;
+  }
+  if ( v8 )
+  {
+LABEL_5:
+    v9 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
+    this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
+    this->fields.original_method_info = v9;
+    goto LABEL_6;
+  }
+  this->fields.m_target = (Il2CppObject *)sub_194E42C;
+LABEL_6:
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_194E3EC;
 }
 
 
@@ -1521,7 +1449,7 @@ System_IAsyncResult_o *__fastcall BattlePerformanceStatus_TouchEventDelegate__Be
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0LL;
-  return (System_IAsyncResult_o *)sub_B77568(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1B00C80(this, &v5, callback, object);
 }
 
 
@@ -1530,7 +1458,7 @@ void __fastcall BattlePerformanceStatus_TouchEventDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B7756C(result, 0LL, method);
+  sub_1B00C84(result, 0LL, method);
 }
 
 
@@ -1538,141 +1466,9 @@ void __fastcall BattlePerformanceStatus_TouchEventDelegate__Invoke(
         BattlePerformanceStatus_TouchEventDelegate_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x8
-  __int64 v4; // x23
-  BattlePerformanceStatus_TouchEventDelegate_o **v5; // x24
-  __int64 v6; // x25
-  unsigned int v7; // w22
-  __int64 class_0; // x0
-  __int64 v9; // x8
-  unsigned __int64 v10; // x10
-  _DWORD *v11; // x11
-  __int64 v12; // x0
-  __int64 v13; // x0
-  __int64 v14; // x0
-  void (__fastcall **v15)(__int64 *, _QWORD); // x0
-  BattlePerformanceStatus_TouchEventDelegate_o *v16; // x8
-  __int64 *v17; // x20
-  __int64 v18; // x21
-  void (__fastcall *v19)(__int64); // x22
-  char v20; // w22
-  char v21; // w0
-  __int64 v22; // x8
-  __int64 v23; // x1
-  __int64 v24; // x2
-  unsigned __int64 v25; // x10
-  _DWORD *v26; // x11
-  BattlePerformanceStatus_TouchEventDelegate_o *v27; // [xsp+8h] [xbp-38h] BYREF
-
-  v27 = this;
-  v2 = *(_QWORD *)&this[1].fields.method_ptr;
-  if ( !v2 )
-  {
-    v5 = &v27;
-    v4 = 1LL;
-    goto LABEL_5;
-  }
-  v4 = *(_QWORD *)(v2 + 24);
-  if ( v4 )
-  {
-    v5 = (BattlePerformanceStatus_TouchEventDelegate_o **)(v2 + 32);
-LABEL_5:
-    v6 = 0LL;
-    while ( 1 )
-    {
-      v16 = v5[v6];
-      v17 = *(__int64 **)&v16->fields.method;
-      v18 = *(_QWORD *)&v16->fields.extra_arg;
-      v19 = *(void (__fastcall **)(__int64))&v16->fields.method_ptr;
-      if ( *(__int16 *)(v18 + 72) == -1 )
-        sub_B77680(*(_QWORD *)&v16->fields.extra_arg, method);
-      if ( (sub_B775F4(v18) & 1) == 0 )
-        break;
-      if ( *(_BYTE *)(v18 + 74) )
-        goto LABEL_35;
-      v19(v18);
-LABEL_36:
-      if ( ++v6 == v4 )
-        return;
-    }
-    if ( v17 && *(__int16 *)(v18 + 72) != -1 && (*(_BYTE *)(*v17 + 277) & 1) == 0 && this->fields.m_target )
-    {
-      v20 = sub_B775EC(v18);
-      v21 = sub_B779F0(v18);
-      if ( (v20 & 1) != 0 )
-      {
-        if ( (v21 & 1) != 0 )
-        {
-          v22 = *v17;
-          v23 = *(_QWORD *)(v18 + 24);
-          v24 = *(unsigned __int16 *)(v18 + 72);
-          if ( *(_WORD *)(*v17 + 298) )
-          {
-            v25 = 0LL;
-            v26 = (_DWORD *)(*(_QWORD *)(v22 + 176) + 8LL);
-            while ( *((_QWORD *)v26 - 1) != v23 )
-            {
-              ++v25;
-              v26 += 4;
-              if ( v25 >= *(unsigned __int16 *)(*v17 + 298) )
-                goto LABEL_34;
-            }
-            v14 = v22 + 16LL * (*v26 + (int)v24) + 312;
-          }
-          else
-          {
-LABEL_34:
-            v14 = sub_B0F4C0(v17, v23, v24);
-          }
-          v13 = *(_QWORD *)(v14 + 8);
-        }
-        else
-        {
-          v13 = *(_QWORD *)(*v17 + 16LL * *(unsigned __int16 *)(v18 + 72) + 320);
-        }
-        v15 = (void (__fastcall **)(__int64 *, _QWORD))sub_B77674(v13, v18);
-        (*v15)(v17, v15);
-      }
-      else
-      {
-        v7 = *(unsigned __int16 *)(v18 + 72);
-        if ( (v21 & 1) != 0 )
-        {
-          class_0 = j_il2cpp_method_get_class_0(v18);
-          v9 = *v17;
-          if ( *(_WORD *)(*v17 + 298) )
-          {
-            v10 = 0LL;
-            v11 = (_DWORD *)(*(_QWORD *)(v9 + 176) + 8LL);
-            while ( *((_QWORD *)v11 - 1) != class_0 )
-            {
-              ++v10;
-              v11 += 4;
-              if ( v10 >= *(unsigned __int16 *)(*v17 + 298) )
-                goto LABEL_11;
-            }
-            v12 = v9 + 16LL * (int)(*v11 + v7) + 312;
-          }
-          else
-          {
-LABEL_11:
-            v12 = sub_B0F4C0(v17, class_0, v7);
-          }
-          (*(void (__fastcall **)(__int64 *, _QWORD))v12)(v17, *(_QWORD *)(v12 + 8));
-        }
-        else
-        {
-          (*(void (__fastcall **)(__int64 *, _QWORD))(*v17 + 16LL * *(unsigned __int16 *)(v18 + 72) + 312))(
-            v17,
-            *(_QWORD *)(*v17 + 16LL * *(unsigned __int16 *)(v18 + 72) + 320));
-        }
-      }
-      goto LABEL_36;
-    }
-LABEL_35:
-    ((void (__fastcall *)(__int64 *, __int64))v19)(v17, v18);
-    goto LABEL_36;
-  }
+  ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))this->fields.m_target)(
+    this->fields.original_method_info,
+    *(_QWORD *)&this->fields.extra_arg);
 }
 
 
@@ -1690,36 +1486,33 @@ bool __fastcall BattlePerformanceStatus__DoCreateCriticalEffect_d__56__MoveNext(
         BattlePerformanceStatus__DoCreateCriticalEffect_d__56_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
   int32_t _1__state; // w8
   float waitTime; // s8
-  UnityEngine_WaitForSeconds_o *v5; // x20
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  UnityEngine_WaitForSeconds_o *v6; // x20
+  int32_t v7; // w2
+  int32_t v8; // w3
   bool result; // w0
   struct BattlePerformanceStatus_o *_4__this; // x20
-  WebViewManager_o *Instance; // x0
-  __int64 v15; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v12; // x1
   UnityEngine_GameObject_o *Object; // x0
 
-  if ( (byte_4388DFD & 1) == 0 )
+  if ( (byte_48E566C & 1) == 0 )
   {
-    sub_B775C4(&Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__);
-    sub_B775C4(&UnityEngine_WaitForSeconds_TypeInfo);
-    byte_4388DFD = 1;
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__, method);
+    sub_1B00CCC(&UnityEngine_WaitForSeconds_TypeInfo, v3);
+    byte_48E566C = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
   {
     this->fields.__1__state = -1;
     _4__this = this->fields.__4__this;
-    Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__);
     if ( Instance )
     {
-      if ( *((float *)&Instance[3].fields.webViewScreen + 1) < 1.0 )
+      if ( *((float *)&Instance[23].klass + 1) < 1.0 )
         return 0;
       if ( _4__this )
       {
@@ -1733,24 +1526,16 @@ bool __fastcall BattlePerformanceStatus__DoCreateCriticalEffect_d__56__MoveNext(
         return 0;
       }
     }
-    sub_B7769C(Instance, v15);
+    sub_1B00F28(Instance, v12);
   }
   if ( !_1__state )
   {
     this->fields.__1__state = -1;
     waitTime = this->fields.waitTime;
-    v5 = (UnityEngine_WaitForSeconds_o *)sub_B77694(UnityEngine_WaitForSeconds_TypeInfo);
-    UnityEngine_WaitForSeconds___ctor(v5, waitTime, 0LL);
-    this->fields.__2__current = (Il2CppObject *)v5;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&this->fields.__2__current,
-      (System_Int32_array **)v5,
-      v6,
-      v7,
-      v8,
-      v9,
-      v10,
-      v11);
+    v6 = (UnityEngine_WaitForSeconds_o *)sub_1B00F18(UnityEngine_WaitForSeconds_TypeInfo);
+    UnityEngine_WaitForSeconds___ctor(v6, waitTime, 0LL);
+    this->fields.__2__current = (Il2CppObject *)v6;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.__2__current, (int32_t)v6, v7, v8);
     result = 1;
     this->fields.__1__state = 1;
     return result;
@@ -1775,11 +1560,11 @@ void __fastcall __noreturn BattlePerformanceStatus__DoCreateCriticalEffect_d__56
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
+  v2 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B00F18(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B775C8(&Method_BattlePerformanceStatus__DoCreateCriticalEffect_d__56_System_Collections_IEnumerator_Reset__);
-  sub_B77668(v3, v4);
+  v4 = sub_1B00CE0(&Method_BattlePerformanceStatus__DoCreateCriticalEffect_d__56_System_Collections_IEnumerator_Reset__);
+  sub_1B00DF4(v3, v4);
 }
 
 

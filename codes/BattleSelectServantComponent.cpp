@@ -1,9 +1,11 @@
 void __fastcall BattleSelectServantComponent___cctor(const MethodInfo *method)
 {
-  if ( (byte_4388273 & 1) == 0 )
+  __int64 v1; // x1
+
+  if ( (byte_48E5685 & 1) == 0 )
   {
-    sub_B775C4(&BattleSelectServantComponent_TypeInfo);
-    byte_4388273 = 1;
+    sub_1B00CCC(&BattleSelectServantComponent_TypeInfo, v1);
+    byte_48E5685 = 1;
   }
   BattleSelectServantComponent_TypeInfo->static_fields->SERVANT_NAME_FONT_SIZE = 15;
 }
@@ -24,7 +26,7 @@ void __fastcall BattleSelectServantComponent__ClearFaceAtlas(
 
   servantIcon = this->fields.servantIcon;
   if ( !servantIcon )
-    sub_B7769C(0LL, method);
+    sub_1B00F28(0LL, method);
   ServantFaceIconComponent__ClearFaceAtlas(servantIcon, 0LL);
 }
 
@@ -33,26 +35,32 @@ void __fastcall BattleSelectServantComponent__OnServantClick(
         BattleSelectServantComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  BattleSelectServantComponent_CallBack_o *selectCallBack; // x0
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  __int64 v5; // x0
+  __int64 v6; // x1
+  struct BattleSelectServantComponent_CallBack_o *selectCallBack; // x8
 
-  if ( (byte_4388272 & 1) == 0 )
+  if ( (byte_48E5684 & 1) == 0 )
   {
-    sub_B775C4(&SoundManager_TypeInfo);
-    byte_4388272 = 1;
+    sub_1B00CCC(&Method_BattleSelectServantComponent_OnServantClick__, method);
+    byte_48E5684 = 1;
   }
   if ( this->fields.isUse && this->fields.canSelectFlag )
   {
-    if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !SoundManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    }
-    SoundManager__playSystemSe(0, 0LL);
+    v3 = Method_BattleSelectServantComponent_OnServantClick__;
+    if ( (*((_BYTE *)Method_BattleSelectServantComponent_OnServantClick__ + 83) & 2) != 0 )
+      v3 = (_QWORD *)sub_1B00CE4(Method_BattleSelectServantComponent_OnServantClick__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     selectCallBack = this->fields.selectCallBack;
     if ( !selectCallBack )
-      sub_B7769C(0LL, v3);
-    BattleSelectServantComponent_CallBack__Invoke(selectCallBack, this->fields.position, this->fields.uniqueId, 0LL);
+      sub_1B00F28(v5, v6);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD, _QWORD))selectCallBack->fields.m_target)(
+      selectCallBack->fields.original_method_info,
+      (unsigned int)this->fields.position,
+      (unsigned int)this->fields.uniqueId,
+      *(_QWORD *)&selectCallBack->fields.extra_arg);
   }
 }
 
@@ -66,91 +74,93 @@ void __fastcall BattleSelectServantComponent__setData(
         const MethodInfo *method)
 {
   __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
   UnityEngine_GameObject_o *imageSvtId; // x0
-  IconLabelInfo_o *v12; // x22
-  int32_t level; // w2
-  int32_t maxleve; // w3
+  IconLabelInfo_o *v15; // x22
   ServantFaceIconComponent_o *servantIcon; // x23
   int32_t SvtId; // w24
   int32_t LimitCount; // w25
   int32_t IconImageLimitCount; // w0
-  __int64 v19; // x27
-  __int64 v20; // x28
-  int32_t v21; // w26
-  int32_t v22; // w0
+  __int64 v20; // x27
+  __int64 v21; // x28
+  int32_t v22; // w26
+  int32_t v23; // w0
   int32_t lv; // w28
-  int32_t v24; // w27
-  ServantFaceIconComponent_o *v25; // x23
+  int32_t v25; // w27
+  ServantFaceIconComponent_o *v26; // x23
   int32_t frameType_k__BackingField; // w22
   UILabel_o *nameLabel; // x22
-  System_String_o *ServantShortName; // x23
-  BattleSelectServantComponent_c *v29; // x8
+  System_String_o *ServantShortName; // x0
+  BattleSelectServantComponent_c *v30; // x8
+  System_String_o *v31; // x23
   UILabel_o *hpLabel; // x22
-  System_String_o *v31; // x1
+  System_String_o *v33; // x1
   BattleHpGaugeBarComponent_o *hpGauge; // x22
-  int32_t v33; // w23
-  struct BattleNpGaugeSystemComponent_o *npGauge; // x8
-  struct BattleNpGaugeSystemComponent_o *v35; // x22
-  BattleNpGaugeSystemComponent_o *v36; // x22
+  int32_t v35; // w23
+  struct BattleNpGaugeSystemComponent_o *npGauge; // x22
+  BattleNpGaugeSystemComponent_o *v37; // x22
   int32_t uniqueId; // w8
   int32_t NowHp; // [xsp+4Ch] [xbp-54h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v39; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v40; // 0:x0.16
 
-  if ( (byte_438826F & 1) == 0 )
+  if ( (byte_48E5681 & 1) == 0 )
   {
-    sub_B775C4(&BattleSelectServantComponent_TypeInfo);
-    sub_B775C4(&IconLabelInfo_TypeInfo);
-    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438826F = 1;
+    sub_1B00CCC(&BattleSelectServantComponent_TypeInfo, svtData);
+    sub_1B00CCC(&IconLabelInfo_TypeInfo, v10);
+    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v11);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v12);
+    byte_48E5681 = 1;
   }
   NowHp = 0;
   this->fields.selectCallBack = call;
-  sub_B77560(&this->fields.selectCallBack);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.selectCallBack, (int32_t)call, position, index);
   imageSvtId = this->fields.root;
   if ( !imageSvtId )
-    goto LABEL_29;
+    goto LABEL_23;
   UnityEngine_GameObject__SetActive(imageSvtId, 1, 0LL);
-  v12 = (IconLabelInfo_o *)sub_B77694(IconLabelInfo_TypeInfo);
-  IconLabelInfo___ctor(v12, 0LL);
+  v15 = (IconLabelInfo_o *)sub_1B00F18(IconLabelInfo_TypeInfo);
+  IconLabelInfo___ctor(v15, 0LL);
   if ( !svtData )
-    goto LABEL_29;
+    goto LABEL_23;
   imageSvtId = (UnityEngine_GameObject_o *)Follower__IsNpc(svtData->fields.followerType, 0LL);
-  if ( !v12 )
-    goto LABEL_29;
-  level = svtData->fields.level;
-  maxleve = svtData->fields.maxleve;
-  if ( ((unsigned __int8)imageSvtId & 1) != 0 )
-    IconLabelInfo__Set_28141596(v12, 2, level, maxleve, 0, 0, 1, 0, 0LL);
-  else
-    IconLabelInfo__Set_28141596(v12, 2, level, maxleve, 0, 0, 0, 0, 0LL);
+  if ( !v15 )
+    goto LABEL_23;
+  IconLabelInfo__Set_36930772(
+    v15,
+    2,
+    svtData->fields.level,
+    svtData->fields.maxleve,
+    0,
+    0,
+    (unsigned __int8)imageSvtId & 1,
+    0,
+    0LL);
   servantIcon = this->fields.servantIcon;
   SvtId = BattleServantData__getSvtId(svtData, 0LL);
   LimitCount = BattleServantData__getLimitCount(svtData, 0LL);
   IconImageLimitCount = BattleServantData__GetIconImageLimitCount(svtData, 0LL);
-  v20 = *(_QWORD *)&svtData->fields.exceedCount.fields.currentCryptoKey;
-  v19 = *(_QWORD *)&svtData->fields.exceedCount.fields.fakeValue;
-  v21 = IconImageLimitCount;
-  if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-  {
+  v21 = *(_QWORD *)&svtData->fields.exceedCount.fields.currentCryptoKey;
+  v20 = *(_QWORD *)&svtData->fields.exceedCount.fields.fakeValue;
+  v22 = IconImageLimitCount;
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  }
-  *(_QWORD *)&v39.fields.currentCryptoKey = v20;
-  *(_QWORD *)&v39.fields.fakeValue = v19;
-  v22 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v39, 0LL);
+  *(_QWORD *)&v40.fields.currentCryptoKey = v21;
+  *(_QWORD *)&v40.fields.fakeValue = v20;
+  v23 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(v40, 0LL);
   lv = svtData->fields.level;
-  v24 = v22;
+  v25 = v23;
   imageSvtId = (UnityEngine_GameObject_o *)BattleServantData__GetIconImageSvtId(svtData, 0LL);
   if ( !servantIcon )
-    goto LABEL_29;
-  ServantFaceIconComponent__Set_31755472(
+    goto LABEL_23;
+  ServantFaceIconComponent__Set_37004904(
     servantIcon,
     SvtId,
     LimitCount,
-    v21,
-    v24,
-    v12,
+    v22,
+    v25,
+    v15,
     0LL,
     2,
     0,
@@ -161,57 +171,53 @@ void __fastcall BattleSelectServantComponent__setData(
     (int32_t)imageSvtId,
     0,
     0LL);
-  v25 = this->fields.servantIcon;
+  v26 = this->fields.servantIcon;
   frameType_k__BackingField = svtData->fields._frameType_k__BackingField;
   imageSvtId = (UnityEngine_GameObject_o *)BattleServantData__getClassId(svtData, 0LL);
-  if ( !v25 )
-    goto LABEL_29;
-  ServantFaceIconComponent__ChangeClassIcon(v25, frameType_k__BackingField, (int32_t)imageSvtId, 0LL);
+  if ( !v26 )
+    goto LABEL_23;
+  ServantFaceIconComponent__ChangeClassIcon(v26, frameType_k__BackingField, (int32_t)imageSvtId, 0LL);
   nameLabel = this->fields.nameLabel;
   ServantShortName = BattleServantData__getServantShortName(svtData, 0LL);
-  v29 = BattleSelectServantComponent_TypeInfo;
-  if ( (BYTE3(BattleSelectServantComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !BattleSelectServantComponent_TypeInfo->_2.cctor_finished )
+  v30 = BattleSelectServantComponent_TypeInfo;
+  v31 = ServantShortName;
+  if ( !BattleSelectServantComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleSelectServantComponent_TypeInfo);
-    v29 = BattleSelectServantComponent_TypeInfo;
+    v30 = BattleSelectServantComponent_TypeInfo;
   }
-  WrapControlText__fontSizeAdjust(nameLabel, ServantShortName, v29->static_fields->SERVANT_NAME_FONT_SIZE, 0LL);
+  WrapControlText__fontSizeAdjust(nameLabel, v31, v30->static_fields->SERVANT_NAME_FONT_SIZE, 0LL);
   hpLabel = this->fields.hpLabel;
   NowHp = BattleServantData__getNowHp(svtData, 0LL);
   imageSvtId = (UnityEngine_GameObject_o *)System_Int32__ToString((int32_t)&NowHp, 0LL);
   if ( !hpLabel )
-    goto LABEL_29;
-  v31 = imageSvtId ? (System_String_o *)imageSvtId : (System_String_o *)StringLiteral_1/*""*/;
-  UILabel__set_text(hpLabel, v31, 0LL);
+    goto LABEL_23;
+  v33 = imageSvtId ? (System_String_o *)imageSvtId : (System_String_o *)StringLiteral_1/*""*/;
+  UILabel__set_text(hpLabel, v33, 0LL);
   hpGauge = this->fields.hpGauge;
-  v33 = BattleServantData__getNowHp(svtData, 0LL);
+  v35 = BattleServantData__getNowHp(svtData, 0LL);
   imageSvtId = (UnityEngine_GameObject_o *)BattleServantData__getMaxHp(svtData, 0LL);
   if ( !hpGauge )
-    goto LABEL_29;
-  BattleHpGaugeBarComponent__setInitValue(hpGauge, v33, (int32_t)imageSvtId, 0LL);
+    goto LABEL_23;
+  BattleHpGaugeBarComponent__setInitValue(hpGauge, v35, (int32_t)imageSvtId, 0LL);
   npGauge = this->fields.npGauge;
   if ( !npGauge )
-    goto LABEL_29;
+    goto LABEL_23;
   npGauge->fields.lineCount = 3;
-  v35 = this->fields.npGauge;
-  imageSvtId = (UnityEngine_GameObject_o *)BattleServantData__getCountMaxNp(svtData, 0LL);
-  if ( !v35 )
-    goto LABEL_29;
-  v35->fields.maxparam = (int)imageSvtId;
+  npGauge->fields.maxparam = BattleServantData__getCountMaxNp(svtData, 0LL);
   imageSvtId = (UnityEngine_GameObject_o *)this->fields.npGauge;
   if ( !imageSvtId
     || (BattleNpGaugeSystemComponent__InitSliderValue((BattleNpGaugeSystemComponent_o *)imageSvtId, 0LL),
         (imageSvtId = (UnityEngine_GameObject_o *)this->fields.npGauge) == 0LL)
     || (BattleNpGaugeSystemComponent__setNowParam((BattleNpGaugeSystemComponent_o *)imageSvtId, svtData->fields.np, 0LL),
-        v36 = this->fields.npGauge,
+        v37 = this->fields.npGauge,
         imageSvtId = (UnityEngine_GameObject_o *)BattleServantData__isAddNpGauge(svtData, 0LL),
-        !v36)
-    || (BattleNpGaugeSystemComponent__setUseNp(v36, (unsigned __int8)imageSvtId & 1, 0LL),
+        !v37)
+    || (BattleNpGaugeSystemComponent__setUseNp(v37, (unsigned __int8)imageSvtId & 1, 0LL),
         (imageSvtId = this->fields.targetObject) == 0LL) )
   {
-LABEL_29:
-    sub_B7769C(imageSvtId, v10);
+LABEL_23:
+    sub_1B00F28(imageSvtId, v13);
   }
   UnityEngine_GameObject__SetActive(imageSvtId, 0, 0LL);
   uniqueId = svtData->fields.uniqueId;
@@ -225,10 +231,10 @@ void __fastcall BattleSelectServantComponent__setNone(BattleSelectServantCompone
 {
   UnityEngine_GameObject_o *root; // x0
 
-  if ( (byte_4388270 & 1) == 0 )
+  if ( (byte_48E5682 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_4388270 = 1;
+    sub_1B00CCC(&StringLiteral_1/*""*/, method);
+    byte_48E5682 = 1;
   }
   root = this->fields.root;
   this->fields.isUse = 0;
@@ -245,7 +251,7 @@ void __fastcall BattleSelectServantComponent__setNone(BattleSelectServantCompone
     || (root = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)root, 0LL)) == 0LL )
   {
 LABEL_9:
-    sub_B7769C(root, method);
+    sub_1B00F28(root, method);
   }
   UnityEngine_GameObject__SetActive(root, 0, 0LL);
 }
@@ -258,48 +264,49 @@ void __fastcall BattleSelectServantComponent__setSelectMask(
         const MethodInfo *method)
 {
   bool v3; // w20
+  bool v5; // w21
+  __int64 v6; // x1
+  __int64 v7; // x1
   UnityEngine_GameObject_o *servantSelectMask; // x0
   UILabel_o *servantSelectMaskLabel; // x20
 
   v3 = canSelect;
-  if ( (byte_4388271 & 1) == 0 )
+  v5 = canSelect;
+  if ( (byte_48E5683 & 1) == 0 )
   {
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&StringLiteral_2507/*"BATTLE_DIALOG_CAN_NOT_REPLACE"*/);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_4388271 = 1;
+    sub_1B00CCC(&LocalizationManager_TypeInfo, canSelect);
+    sub_1B00CCC(&StringLiteral_2833/*"BATTLE_DIALOG_CAN_NOT_REPLACE"*/, v6);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v7);
+    byte_48E5683 = 1;
   }
   servantSelectMask = this->fields.servantSelectMask;
-  this->fields.canSelectFlag = v3;
+  this->fields.canSelectFlag = v5;
   if ( !servantSelectMask )
-    goto LABEL_14;
+    goto LABEL_13;
   UnityEngine_GameObject__SetActive(servantSelectMask, !v3, 0LL);
   servantSelectMaskLabel = this->fields.servantSelectMaskLabel;
   if ( !this->fields.canSelectFlag )
   {
-    if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
+    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    }
-    servantSelectMask = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2507/*"BATTLE_DIALOG_CAN_NOT_REPLACE"*/, 0LL);
+    servantSelectMask = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2833/*"BATTLE_DIALOG_CAN_NOT_REPLACE"*/, 0LL);
     *(_QWORD *)&canSelect = servantSelectMask;
     if ( servantSelectMaskLabel )
-      goto LABEL_11;
-LABEL_14:
-    sub_B7769C(servantSelectMask, canSelect);
+      goto LABEL_10;
+LABEL_13:
+    sub_1B00F28(servantSelectMask, canSelect);
   }
   *(_QWORD *)&canSelect = StringLiteral_1/*""*/;
   if ( !servantSelectMaskLabel )
-    goto LABEL_14;
-LABEL_11:
+    goto LABEL_13;
+LABEL_10:
   UILabel__set_text(servantSelectMaskLabel, (System_String_o *)canSelect, 0LL);
   servantSelectMask = (UnityEngine_GameObject_o *)this->fields.servantSelectMaskLabel;
   if ( !servantSelectMask )
-    goto LABEL_14;
+    goto LABEL_13;
   servantSelectMask = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)servantSelectMask, 0LL);
   if ( !servantSelectMask )
-    goto LABEL_14;
+    goto LABEL_13;
   UnityEngine_GameObject__SetActive(servantSelectMask, !this->fields.canSelectFlag, 0LL);
 }
 
@@ -312,7 +319,7 @@ void __fastcall BattleSelectServantComponent__setTarget(
   if ( this->fields.isUse && this->fields.canSelectFlag )
   {
     if ( !this->fields.targetObject )
-      sub_B7769C(this, selectUniqueId);
+      sub_1B00F28(this, selectUniqueId);
     UnityEngine_GameObject__SetActive(this->fields.targetObject, this->fields.uniqueId == selectUniqueId, 0LL);
   }
 }
@@ -325,27 +332,40 @@ void __fastcall BattleSelectServantComponent_CallBack___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  struct BattleServantClassBoardSkillEffectListComponent_o *v8; // x8
-  BattleServantConfConponent_o *p_method; // x0
+  __int64 v4; // x8
+  __int64 v6; // x21
+  int v8; // w22
+  struct System_Reflection_MethodInfo_o *v9; // x9
+  __int64 v10; // x0
 
-  v8 = **(struct BattleServantClassBoardSkillEffectListComponent_o ***)&method;
+  v4 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
+  *(_QWORD *)&this->fields.extra_arg = *(_QWORD *)&method;
+  v6 = *(_QWORD *)&method;
+  *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  p_method = (BattleServantConfConponent_o *)&this->fields.method;
-  p_method->monitor = *(void **)&method;
-  p_method[-1].fields.classBoardSkillObj = v8;
-  sub_B77560(
-    p_method,
-    (System_Int32_array **)object,
-    *(System_String_array ***)&method,
-    (System_String_array **)a4,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  v8 = *(unsigned __int8 *)(v6 + 82);
+  this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
+  if ( (sub_1B00D8C(v6) & 1) == 0 )
+  {
+    if ( !object )
+    {
+      v10 = sub_1B00F44(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B00DF4(v10, 0LL);
+    }
+    goto LABEL_5;
+  }
+  if ( v8 != 2 )
+  {
+LABEL_5:
+    v9 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
+    this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
+    this->fields.original_method_info = v9;
+    goto LABEL_6;
+  }
+  this->fields.m_target = (Il2CppObject *)sub_194E524;
+LABEL_6:
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_194E4CC;
 }
 
 
@@ -358,23 +378,31 @@ System_IAsyncResult_o *__fastcall BattleSelectServantComponent_CallBack__BeginIn
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v9; // x2
-  __int64 v11[3]; // [xsp+0h] [xbp-40h] BYREF
-  int32_t v12; // [xsp+18h] [xbp-28h] BYREF
-  int32_t v13; // [xsp+1Ch] [xbp-24h] BYREF
+  __int64 v9; // x1
+  __int64 v10; // x2
+  __int64 v11; // x3
+  __int64 v12; // x4
+  __int64 v14[3]; // [xsp+8h] [xbp-58h] BYREF
+  int32_t v15; // [xsp+28h] [xbp-38h] BYREF
+  int32_t v16; // [xsp+2Ch] [xbp-34h] BYREF
 
-  v12 = uniqueId;
-  v13 = position;
-  if ( (byte_4388E36 & 1) == 0 )
+  v15 = uniqueId;
+  v16 = position;
+  if ( (byte_48E5686 & 1) == 0 )
   {
-    sub_B775C4(&int_TypeInfo);
-    sub_B775C4(&BattleSelectMainSubServantWindow_POSITION_TypeInfo);
-    byte_4388E36 = 1;
+    sub_1B00CCC(&int_TypeInfo, *(_QWORD *)&position);
+    sub_1B00CCC(&BattleSelectMainSubServantWindow_POSITION_TypeInfo, v9);
+    byte_48E5686 = 1;
   }
-  v11[2] = 0LL;
-  v11[0] = j_il2cpp_value_box_0(BattleSelectMainSubServantWindow_POSITION_TypeInfo, &v13, *(_QWORD *)&uniqueId);
-  v11[1] = j_il2cpp_value_box_0(int_TypeInfo, &v12, v9);
-  return (System_IAsyncResult_o *)sub_B77568(this, v11, callback, object);
+  v14[2] = 0LL;
+  v14[0] = j_il2cpp_value_box_0(
+             BattleSelectMainSubServantWindow_POSITION_TypeInfo,
+             &v16,
+             *(_QWORD *)&uniqueId,
+             callback,
+             object);
+  v14[1] = j_il2cpp_value_box_0(int_TypeInfo, &v15, v10, v11, v12);
+  return (System_IAsyncResult_o *)sub_1B00C80(this, v14, callback, object);
 }
 
 
@@ -383,167 +411,19 @@ void __fastcall BattleSelectServantComponent_CallBack__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B7756C(result, 0LL, method);
+  sub_1B00C84(result, 0LL, method);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall BattleSelectServantComponent_CallBack__Invoke(
         BattleSelectServantComponent_CallBack_o *this,
         int32_t position,
         int32_t uniqueId,
         const MethodInfo *method)
 {
-  __int64 v4; // x8
-  __int64 v7; // x25
-  BattleSelectServantComponent_CallBack_o **v8; // x26
-  __int64 v9; // x27
-  unsigned int v10; // w24
-  __int64 class_0; // x0
-  __int64 v12; // x8
-  unsigned int v13; // w23
-  unsigned __int64 v14; // x10
-  _DWORD *v15; // x11
-  __int64 v16; // x0
-  __int64 v17; // x0
-  __int64 v18; // x0
-  void (__fastcall **v19)(__int64 *, _QWORD, _QWORD, _QWORD); // x0
-  BattleSelectServantComponent_CallBack_o *v20; // x8
-  __int64 *v21; // x22
-  __int64 v22; // x23
-  void (__fastcall *v23)(unsigned int *, _QWORD, __int64); // x24
-  char v24; // w24
-  char v25; // w0
-  unsigned int v26; // w24
-  __int64 v27; // x8
-  __int64 v28; // x1
-  __int64 v29; // x2
-  unsigned __int64 v30; // x10
-  _DWORD *v31; // x11
-  unsigned int v32; // [xsp+Ch] [xbp-54h] BYREF
-  BattleSelectServantComponent_CallBack_o *v33; // [xsp+18h] [xbp-48h] BYREF
-
-  v33 = this;
-  v32 = position;
-  v4 = *(_QWORD *)&this[1].fields.method_ptr;
-  if ( !v4 )
-  {
-    v8 = &v33;
-    v7 = 1LL;
-    goto LABEL_5;
-  }
-  v7 = *(_QWORD *)(v4 + 24);
-  if ( v7 )
-  {
-    v8 = (BattleSelectServantComponent_CallBack_o **)(v4 + 32);
-LABEL_5:
-    v9 = 0LL;
-    while ( 1 )
-    {
-      v20 = v8[v9];
-      v21 = *(__int64 **)&v20->fields.method;
-      v22 = *(_QWORD *)&v20->fields.extra_arg;
-      v23 = *(void (__fastcall **)(unsigned int *, _QWORD, __int64))&v20->fields.method_ptr;
-      if ( *(__int16 *)(v22 + 72) == -1 )
-        sub_B77680(*(_QWORD *)&v20->fields.extra_arg, *(_QWORD *)&position);
-      if ( (sub_B775F4(v22) & 1) == 0 )
-        break;
-      if ( *(_BYTE *)(v22 + 74) != 2 )
-        goto LABEL_36;
-      v23((unsigned int *)v32, (unsigned int)uniqueId, v22);
-LABEL_38:
-      if ( ++v9 == v7 )
-        return;
-    }
-    if ( !v21 )
-    {
-      v23(&v32 - 4, (unsigned int)uniqueId, v22);
-      goto LABEL_38;
-    }
-    if ( *(__int16 *)(v22 + 72) != -1 && (*(_BYTE *)(*v21 + 277) & 1) == 0 && this->fields.m_target )
-    {
-      v24 = sub_B775EC(v22);
-      v25 = sub_B779F0(v22);
-      if ( (v24 & 1) != 0 )
-      {
-        v26 = v32;
-        if ( (v25 & 1) != 0 )
-        {
-          v27 = *v21;
-          v28 = *(_QWORD *)(v22 + 24);
-          v29 = *(unsigned __int16 *)(v22 + 72);
-          if ( *(_WORD *)(*v21 + 298) )
-          {
-            v30 = 0LL;
-            v31 = (_DWORD *)(*(_QWORD *)(v27 + 176) + 8LL);
-            while ( *((_QWORD *)v31 - 1) != v28 )
-            {
-              ++v30;
-              v31 += 4;
-              if ( v30 >= *(unsigned __int16 *)(*v21 + 298) )
-                goto LABEL_35;
-            }
-            v18 = v27 + 16LL * (*v31 + (int)v29) + 312;
-          }
-          else
-          {
-LABEL_35:
-            v18 = sub_B0F4C0(v21, v28, v29);
-          }
-          v17 = *(_QWORD *)(v18 + 8);
-        }
-        else
-        {
-          v17 = *(_QWORD *)(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 320);
-        }
-        v19 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD, _QWORD))sub_B77674(v17, v22);
-        (*v19)(v21, v26, (unsigned int)uniqueId, v19);
-      }
-      else
-      {
-        v10 = *(unsigned __int16 *)(v22 + 72);
-        if ( (v25 & 1) != 0 )
-        {
-          class_0 = j_il2cpp_method_get_class_0(v22);
-          v12 = *v21;
-          v13 = v32;
-          if ( *(_WORD *)(*v21 + 298) )
-          {
-            v14 = 0LL;
-            v15 = (_DWORD *)(*(_QWORD *)(v12 + 176) + 8LL);
-            while ( *((_QWORD *)v15 - 1) != class_0 )
-            {
-              ++v14;
-              v15 += 4;
-              if ( v14 >= *(unsigned __int16 *)(*v21 + 298) )
-                goto LABEL_11;
-            }
-            v16 = v12 + 16LL * (int)(*v15 + v10) + 312;
-          }
-          else
-          {
-LABEL_11:
-            v16 = sub_B0F4C0(v21, class_0, v10);
-          }
-          (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD, _QWORD))v16)(
-            v21,
-            v13,
-            (unsigned int)uniqueId,
-            *(_QWORD *)(v16 + 8));
-        }
-        else
-        {
-          (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD, _QWORD))(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 312))(
-            v21,
-            v32,
-            (unsigned int)uniqueId,
-            *(_QWORD *)(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 320));
-        }
-      }
-      goto LABEL_38;
-    }
-LABEL_36:
-    ((void (__fastcall *)(__int64 *, _QWORD, _QWORD, __int64))v23)(v21, v32, (unsigned int)uniqueId, v22);
-    goto LABEL_38;
-  }
+  ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, int32_t, int32_t, _QWORD))this->fields.m_target)(
+    this->fields.original_method_info,
+    position,
+    uniqueId,
+    *(_QWORD *)&this->fields.extra_arg);
 }

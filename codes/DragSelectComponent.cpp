@@ -4,6 +4,7 @@ void __fastcall DragSelectComponent___ctor(DragSelectComponent_o *this, const Me
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall DragSelectComponent__Set(
         DragSelectComponent_o *this,
         int32_t selectNum,
@@ -12,52 +13,43 @@ void __fastcall DragSelectComponent__Set(
 {
   UnityEngine_Object_o *dragSelectObject; // x22
   __int64 v8; // x1
-  UnityEngine_GameObject_o *v9; // x0
+  void *v9; // x0
   UnityEngine_Object_o *dragSeletBase; // x22
   UnityEngine_Object_o *selectObject; // x21
   UILabel_o *selectTextLabel; // x21
   int v13; // w20
   int32_t condensedWidth; // w1
-  int v15; // [xsp+Ch] [xbp-24h] BYREF
+  int v15; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_438D0A5 & 1) == 0 )
+  if ( (byte_48E1CD6 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438D0A5 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&selectNum);
+    byte_48E1CD6 = 1;
   }
   v15 = 0;
   dragSelectObject = (UnityEngine_Object_o *)this->fields.dragSelectObject;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(dragSelectObject, 0LL, 0LL) )
   {
     v9 = this->fields.dragSelectObject;
     if ( !v9 )
-      goto LABEL_31;
-    UnityEngine_GameObject__SetActive(v9, dragSelectNum > 0, 0LL);
+      goto LABEL_28;
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v9, dragSelectNum > 0, 0LL);
   }
   dragSeletBase = (UnityEngine_Object_o *)this->fields.dragSeletBase;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(dragSeletBase, 0LL, 0LL) )
   {
     v9 = this->fields.dragSeletBase;
     if ( !v9 )
-      goto LABEL_31;
-    UnityEngine_GameObject__SetActive(v9, dragSelectNum >= 0, 0LL);
+      goto LABEL_28;
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v9, dragSelectNum >= 0, 0LL);
   }
   selectObject = (UnityEngine_Object_o *)this->fields.selectObject;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(selectObject, 0LL, 0LL) )
   {
     v9 = this->fields.selectObject;
@@ -65,39 +57,39 @@ void __fastcall DragSelectComponent__Set(
     {
       if ( (selectNum & 0x80000000) != 0 )
       {
-        UnityEngine_GameObject__SetActive(v9, 0, 0LL);
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v9, 0, 0LL);
         return;
       }
-      UnityEngine_GameObject__SetActive(v9, 1, 0LL);
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v9, 1, 0LL);
       selectTextLabel = this->fields.selectTextLabel;
       v13 = selectNum + 1;
       v15 = v13;
-      v9 = (UnityEngine_GameObject_o *)System_Int32__ToString((int32_t)&v15, 0LL);
+      v9 = System_Int32__ToString((int32_t)&v15, 0LL);
       if ( selectTextLabel )
       {
         UILabel__set_text(selectTextLabel, (System_String_o *)v9, 0LL);
         if ( !this->fields.isCondensedScale )
           return;
-        v9 = (UnityEngine_GameObject_o *)this->fields.selectTextLabel;
+        v9 = this->fields.selectTextLabel;
         if ( v13 >= 100 )
         {
           if ( v9 )
           {
             condensedWidth = this->fields.condensedWidth;
-            goto LABEL_29;
+            goto LABEL_26;
           }
         }
         else if ( v9 )
         {
-          condensedWidth = v9[6].fields.m_CachedPtr;
-LABEL_29:
+          condensedWidth = *((_DWORD *)v9 + 42);
+LABEL_26:
           UILabel__SetCondensedScale((UILabel_o *)v9, condensedWidth, 0LL);
           return;
         }
       }
     }
-LABEL_31:
-    sub_B7769C(v9, v8);
+LABEL_28:
+    sub_1B00F28(v9, v8);
   }
 }
 

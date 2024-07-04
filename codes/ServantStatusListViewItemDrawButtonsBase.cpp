@@ -11,15 +11,15 @@ int32_t __fastcall ServantStatusListViewItemDrawButtonsBase__GetButtonIndex(
         UICommonButton_o *buttonObj,
         const MethodInfo *method)
 {
-  if ( (byte_4392970 & 1) == 0 )
+  if ( (byte_48DF997 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Array_IndexOf_UICommonButton___);
-    byte_4392970 = 1;
+    sub_1B00CCC(&Method_System_Array_IndexOf_UICommonButton___, buttonObj);
+    byte_48DF997 = 1;
   }
-  return System_Array__IndexOf_UICommonButton_(
-           (UICommonButton_array *)this->fields.tdSpeedButtonSpriteList,
-           buttonObj,
-           (const MethodInfo_2005580 *)Method_System_Array_IndexOf_UICommonButton___);
+  return System_Array__IndexOf_object_(
+           (System_Object_array *)this->fields.tdSpeedButtonList,
+           (Il2CppObject *)buttonObj,
+           (const MethodInfo_2E47D4C *)Method_System_Array_IndexOf_UICommonButton___);
 }
 
 
@@ -27,7 +27,7 @@ int32_t __fastcall ServantStatusListViewItemDrawButtonsBase__GetKind(
         ServantStatusListViewItemDrawButtonsBase_o *this,
         const MethodInfo *method)
 {
-  return (int32_t)this[1].klass;
+  return this->fields.kind;
 }
 
 
@@ -45,7 +45,7 @@ void __fastcall ServantStatusListViewItemDrawButtonsBase__SetButtonKind(
         int32_t value,
         const MethodInfo *method)
 {
-  LODWORD(this[1].klass) = value;
+  this->fields.kind = value;
 }
 
 
@@ -56,154 +56,137 @@ void __fastcall ServantStatusListViewItemDrawButtonsBase__SetItem(
         int32_t mode,
         const MethodInfo *method)
 {
-  LocalizationManager_c *v7; // x0
+  __int64 v7; // x1
+  __int64 v8; // x1
+  LocalizationManager_c *v9; // x0
   float *static_fields; // x8
-  float v9; // s8
-  float v10; // s9
-  float v11; // s10
-  float v12; // s11
-  float *v13; // x8
-  float v14; // s12
-  float v15; // s13
-  float v16; // s14
-  float v17; // s15
-  UICommonButton_o *v18; // x0
-  __int64 v19; // x1
-  struct UISprite_array *tdSpeedButtonSpriteList; // x8
-  int max_length; // w21
-  int v22; // w20
-  int v23; // w22
-  bool v24; // w25
-  int v25; // w9
-  __int64 v26; // x26
-  struct UnityEngine_GameObject_o *clickEventObject; // x8
-  System_String_o **v28; // x8
+  float v11; // s8
+  float v12; // s9
+  float v13; // s10
+  float v14; // s11
+  float *v15; // x8
+  float v16; // s12
+  float v17; // s13
+  float v18; // s14
+  float v19; // s15
+  UICommonButton_o *v20; // x0
+  __int64 v21; // x1
   struct UICommonButton_array *tdSpeedButtonList; // x8
-  float v30; // s3
-  float v31; // s2
+  int max_length; // w9
+  int v24; // w20
+  il2cpp_array_size_t v25; // w9
+  int v26; // w21
+  bool v27; // w25
+  __int64 v28; // x24
+  struct UISprite_array *tdSpeedButtonSpriteList; // x8
+  System_String_o **v30; // x8
+  struct UIRangeLabel_array *tdSpeedRangeLabelList; // x8
   float v32; // s1
   float v33; // s0
-  __int64 v34; // x0
+  float v34; // s2
+  float v35; // s3
 
-  if ( (byte_439296F & 1) == 0 )
+  if ( (byte_48DF996 & 1) == 0 )
   {
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&StringLiteral_17304/*"btn_bg_20"*/);
-    sub_B775C4(&StringLiteral_17305/*"btn_bg_21"*/);
-    byte_439296F = 1;
+    sub_1B00CCC(&LocalizationManager_TypeInfo, item);
+    sub_1B00CCC(&StringLiteral_17241/*"btn_bg_20"*/, v7);
+    sub_1B00CCC(&StringLiteral_17242/*"btn_bg_21"*/, v8);
+    byte_48DF996 = 1;
   }
-  LODWORD(this->fields.collider) = mode;
+  this->fields.dispMode = mode;
   if ( item && mode )
   {
-    if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
+    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    if ( !byte_48DE046 )
+    {
+      sub_1B00CCC(&LocalizationManager_TypeInfo, item);
+      byte_48DE046 = 1;
+    }
+    v9 = LocalizationManager_TypeInfo;
+    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+      v9 = LocalizationManager_TypeInfo;
     }
-    if ( !byte_4387FCE )
+    static_fields = (float *)v9->static_fields;
+    v11 = static_fields[20];
+    v12 = static_fields[21];
+    v13 = static_fields[22];
+    v14 = static_fields[23];
+    if ( !byte_48DE047 )
     {
-      sub_B775C4(&LocalizationManager_TypeInfo);
-      byte_4387FCE = 1;
+      sub_1B00CCC(&LocalizationManager_TypeInfo, item);
+      v9 = LocalizationManager_TypeInfo;
+      byte_48DE047 = 1;
     }
-    v7 = LocalizationManager_TypeInfo;
-    if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
+    if ( !v9->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v7 = LocalizationManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v9);
+      v9 = LocalizationManager_TypeInfo;
     }
-    static_fields = (float *)v7->static_fields;
-    v9 = static_fields[20];
-    v10 = static_fields[21];
-    v11 = static_fields[22];
-    v12 = static_fields[23];
-    if ( !byte_4387FCF )
-    {
-      sub_B775C4(&LocalizationManager_TypeInfo);
-      v7 = LocalizationManager_TypeInfo;
-      byte_4387FCF = 1;
-    }
-    if ( (BYTE3(v7->vtable._0_Equals.methodPtr) & 4) != 0 && !v7->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(v7);
-      v7 = LocalizationManager_TypeInfo;
-    }
-    v13 = (float *)v7->static_fields;
-    v14 = v13[24];
-    v15 = v13[25];
-    v16 = v13[26];
-    v17 = v13[27];
-    v18 = (UICommonButton_o *)((__int64 (__fastcall *)(ServantStatusListViewItemDrawButtonsBase_o *, ServantStatusListViewItem_o *, void *, const MethodInfo *))this->klass->vtable._14_Selected.method)(
+    v15 = (float *)v9->static_fields;
+    v16 = v15[24];
+    v17 = v15[25];
+    v18 = v15[26];
+    v19 = v15[27];
+    v20 = (UICommonButton_o *)((__int64 (__fastcall *)(ServantStatusListViewItemDrawButtonsBase_o *, ServantStatusListViewItem_o *, void *, const MethodInfo *))this->klass->vtable._14_Selected.method)(
                                 this,
                                 item,
                                 this->klass[1]._1.image,
                                 method);
-    tdSpeedButtonSpriteList = this->fields.tdSpeedButtonSpriteList;
-    if ( !tdSpeedButtonSpriteList )
-      goto LABEL_46;
-    max_length = tdSpeedButtonSpriteList->max_length;
+    tdSpeedButtonList = this->fields.tdSpeedButtonList;
+    if ( !tdSpeedButtonList )
+      goto LABEL_43;
+    max_length = tdSpeedButtonList->max_length;
+    v24 = max_length - 1;
     if ( max_length >= 1 )
     {
-      v22 = (int)v18;
-      v23 = 1;
-      v24 = (_DWORD)v18 == 0;
+      v25 = 0;
+      v26 = (_DWORD)v20 - 1;
+      v27 = (_DWORD)v20 == 0;
       do
       {
-        v25 = v23 - 1;
-        if ( v23 - 1 >= tdSpeedButtonSpriteList->max_length )
-        {
-LABEL_48:
-          v34 = sub_B776C8(v18);
-          sub_B77668(v34, 0LL);
-        }
-        v26 = v25;
-        v18 = (UICommonButton_o *)tdSpeedButtonSpriteList->m_Items[v25];
-        if ( !v18 )
+        if ( v25 >= tdSpeedButtonList->max_length )
+LABEL_45:
+          sub_1B00F30(v20, v21);
+        v28 = (int)v25;
+        v20 = tdSpeedButtonList->m_Items[v25];
+        if ( !v20 )
           break;
-        UICommonButton__SetColliderEnable(v18, !v24, 1, 0LL);
-        clickEventObject = this->fields.clickEventObject;
-        if ( !clickEventObject )
-          break;
-        if ( (unsigned int)v26 >= LODWORD(clickEventObject[1].klass) )
-          goto LABEL_48;
-        v18 = (UICommonButton_o *)*((_QWORD *)&clickEventObject[1].monitor + v26);
-        if ( !v18 )
-          break;
-        v28 = (System_String_o **)(v24 ? &StringLiteral_17305/*"btn_bg_21"*/ : &StringLiteral_17304/*"btn_bg_20"*/);
-        UISprite__set_spriteName((UISprite_o *)v18, *v28, 0LL);
-        tdSpeedButtonList = this->fields.tdSpeedButtonList;
-        if ( !tdSpeedButtonList )
-          break;
-        if ( (unsigned int)v26 >= tdSpeedButtonList->max_length )
-          goto LABEL_48;
-        v18 = tdSpeedButtonList->m_Items[v26];
-        if ( !v18 )
-          break;
-        if ( v24 )
-          v30 = v17;
-        else
-          v30 = v12;
-        if ( v24 )
-          v31 = v16;
-        else
-          v31 = v11;
-        if ( v24 )
-          v32 = v15;
-        else
-          v32 = v10;
-        if ( v24 )
-          v33 = v14;
-        else
-          v33 = v9;
-        UIRangeLabel__set_effectColor((UIRangeLabel_o *)v18, *(UnityEngine_Color_o *)(&v30 - 3), 0LL);
-        if ( v23 >= max_length )
-          return;
+        UICommonButton__SetColliderEnable(v20, !v27, 1, 0LL);
         tdSpeedButtonSpriteList = this->fields.tdSpeedButtonSpriteList;
-        v24 = v22 == v23++;
+        if ( !tdSpeedButtonSpriteList )
+          break;
+        if ( (unsigned int)v28 >= tdSpeedButtonSpriteList->max_length )
+          goto LABEL_45;
+        v20 = (UICommonButton_o *)tdSpeedButtonSpriteList->m_Items[v28];
+        if ( !v20 )
+          break;
+        v30 = (System_String_o **)(v27 ? &StringLiteral_17242/*"btn_bg_21"*/ : &StringLiteral_17241/*"btn_bg_20"*/);
+        UISprite__set_spriteName((UISprite_o *)v20, *v30, 0LL);
+        tdSpeedRangeLabelList = this->fields.tdSpeedRangeLabelList;
+        if ( !tdSpeedRangeLabelList )
+          break;
+        if ( (unsigned int)v28 >= tdSpeedRangeLabelList->max_length )
+          goto LABEL_45;
+        v20 = (UICommonButton_o *)tdSpeedRangeLabelList->m_Items[v28];
+        v32 = v27 ? v17 : v12;
+        v33 = v27 ? v16 : v11;
+        v34 = v27 ? v18 : v13;
+        v35 = v27 ? v19 : v14;
+        if ( !v20 )
+          break;
+        UIRangeLabel__set_effectColor((UIRangeLabel_o *)v20, *(UnityEngine_Color_o *)(&v32 - 1), 0LL);
+        if ( v24 == (_DWORD)v28 )
+          return;
+        tdSpeedButtonList = this->fields.tdSpeedButtonList;
+        v25 = v28 + 1;
+        v27 = v26 == (_DWORD)v28;
       }
-      while ( tdSpeedButtonSpriteList );
-LABEL_46:
-      sub_B7769C(v18, v19);
+      while ( tdSpeedButtonList );
+LABEL_43:
+      sub_1B00F28(v20, v21);
     }
   }
 }

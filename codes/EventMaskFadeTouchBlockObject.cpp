@@ -8,22 +8,20 @@ void __fastcall EventMaskFadeTouchBlockObject__OnClickObject(
         EventMaskFadeTouchBlockObject_o *this,
         const MethodInfo *method)
 {
-  System_Action_o *onClickCallback; // x0
-  BattleServantConfConponent_o *p_onClickCallback; // x19
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
+  struct System_Action_o *onClickCallback; // x8
+  ServantStatusBattleListViewItem_o *p_onClickCallback; // x19
+  int32_t v4; // w2
+  int32_t v5; // w3
 
-  p_onClickCallback = (BattleServantConfConponent_o *)&this->fields.onClickCallback;
+  p_onClickCallback = (ServantStatusBattleListViewItem_o *)&this->fields.onClickCallback;
   onClickCallback = this->fields.onClickCallback;
   if ( onClickCallback )
   {
-    System_Action__Invoke(onClickCallback, 0LL);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))onClickCallback->fields.m_target)(
+      onClickCallback->fields.original_method_info,
+      *(_QWORD *)&onClickCallback->fields.extra_arg);
     p_onClickCallback->klass = 0LL;
-    sub_B77560(p_onClickCallback, 0LL, v4, v5, v6, v7, v8, v9);
+    sub_1B00C70(p_onClickCallback, 0, v4, v5);
   }
 }
 
@@ -32,23 +30,19 @@ void __fastcall EventMaskFadeTouchBlockObject__RemoveCallback(
         EventMaskFadeTouchBlockObject_o *this,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x2
-  System_String_array **v4; // x3
-  System_Boolean_array **v5; // x4
-  System_Int32_array **v6; // x5
-  System_Int32_array *v7; // x6
-  System_Int32_array *v8; // x7
-  BattleServantConfConponent_o *p_onClickCallback; // x19
+  int32_t v3; // w2
+  int32_t v4; // w3
+  ServantStatusBattleListViewItem_o *p_onClickCallback; // x19
   struct System_Action_o *onClickCallback; // t1
 
   if ( UnityEngine_Behaviour__get_isActiveAndEnabled((UnityEngine_Behaviour_o *)this, 0LL) )
   {
     onClickCallback = this->fields.onClickCallback;
-    p_onClickCallback = (BattleServantConfConponent_o *)&this->fields.onClickCallback;
+    p_onClickCallback = (ServantStatusBattleListViewItem_o *)&this->fields.onClickCallback;
     if ( onClickCallback )
     {
       p_onClickCallback->klass = 0LL;
-      sub_B77560(p_onClickCallback, 0LL, v3, v4, v5, v6, v7, v8);
+      sub_1B00C70(p_onClickCallback, 0, v3, v4);
     }
   }
 }
@@ -59,23 +53,19 @@ void __fastcall EventMaskFadeTouchBlockObject__SetCallback(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
-  BattleServantConfConponent_o *p_onClickCallback; // x20
+  int32_t v5; // w2
+  int32_t v6; // w3
+  ServantStatusBattleListViewItem_o *p_onClickCallback; // x20
   struct System_Action_o *onClickCallback; // t1
 
   if ( UnityEngine_Behaviour__get_isActiveAndEnabled((UnityEngine_Behaviour_o *)this, 0LL) )
   {
     onClickCallback = this->fields.onClickCallback;
-    p_onClickCallback = (BattleServantConfConponent_o *)&this->fields.onClickCallback;
+    p_onClickCallback = (ServantStatusBattleListViewItem_o *)&this->fields.onClickCallback;
     if ( !onClickCallback )
     {
-      p_onClickCallback->klass = (BattleServantConfConponent_c *)callback;
-      sub_B77560(p_onClickCallback, (System_Int32_array **)callback, v5, v6, v7, v8, v9, v10);
+      p_onClickCallback->klass = (ServantStatusBattleListViewItem_c *)callback;
+      sub_1B00C70(p_onClickCallback, (int32_t)callback, v5, v6);
     }
   }
 }

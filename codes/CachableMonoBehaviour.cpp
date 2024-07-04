@@ -8,42 +8,28 @@ UnityEngine_Renderer_o *__fastcall CachableMonoBehaviour__get_renderer(
         CachableMonoBehaviour_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_Object_o *mRenderer; // x21
-  struct UnityEngine_Renderer_o *Component_WebViewObject; // x0
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  Il2CppObject *Component_object; // x0
+  int32_t v6; // w2
+  int32_t v7; // w3
 
-  if ( (byte_438E3A9 & 1) == 0 )
+  if ( (byte_48DF688 & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438E3A9 = 1;
+    sub_1B00CCC(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v3);
+    byte_48DF688 = 1;
   }
   mRenderer = (UnityEngine_Object_o *)this->fields.mRenderer;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Equality(mRenderer, 0LL, 0LL) )
   {
-    Component_WebViewObject = (struct UnityEngine_Renderer_o *)UnityEngine_Component__GetComponent_WebViewObject_(
-                                                                 (UnityEngine_Component_o *)this,
-                                                                 (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
-    this->fields.mRenderer = Component_WebViewObject;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&this->fields.mRenderer,
-      (System_Int32_array **)Component_WebViewObject,
-      v5,
-      v6,
-      v7,
-      v8,
-      v9,
-      v10);
+    Component_object = UnityEngine_Component__GetComponent_object_(
+                         (UnityEngine_Component_o *)this,
+                         (const MethodInfo_2D596B4 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+    this->fields.mRenderer = (struct UnityEngine_Renderer_o *)Component_object;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.mRenderer, (int32_t)Component_object, v6, v7);
   }
   return this->fields.mRenderer;
 }
@@ -53,42 +39,28 @@ UnityEngine_Rigidbody_o *__fastcall CachableMonoBehaviour__get_rigidbody(
         CachableMonoBehaviour_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_Object_o *mRigidbody; // x21
-  struct UnityEngine_Rigidbody_o *Component_WebViewObject; // x0
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  Il2CppObject *Component_object; // x0
+  int32_t v6; // w2
+  int32_t v7; // w3
 
-  if ( (byte_438E3AA & 1) == 0 )
+  if ( (byte_48DF689 & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438E3AA = 1;
+    sub_1B00CCC(&Method_UnityEngine_Component_GetComponent_Rigidbody___, method);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v3);
+    byte_48DF689 = 1;
   }
   mRigidbody = (UnityEngine_Object_o *)this->fields.mRigidbody;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Equality(mRigidbody, 0LL, 0LL) )
   {
-    Component_WebViewObject = (struct UnityEngine_Rigidbody_o *)UnityEngine_Component__GetComponent_WebViewObject_(
-                                                                  (UnityEngine_Component_o *)this,
-                                                                  (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
-    this->fields.mRigidbody = Component_WebViewObject;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&this->fields.mRigidbody,
-      (System_Int32_array **)Component_WebViewObject,
-      v5,
-      v6,
-      v7,
-      v8,
-      v9,
-      v10);
+    Component_object = UnityEngine_Component__GetComponent_object_(
+                         (UnityEngine_Component_o *)this,
+                         (const MethodInfo_2D596B4 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
+    this->fields.mRigidbody = (struct UnityEngine_Rigidbody_o *)Component_object;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.mRigidbody, (int32_t)Component_object, v6, v7);
   }
   return this->fields.mRigidbody;
 }
@@ -98,42 +70,28 @@ UnityEngine_Transform_o *__fastcall CachableMonoBehaviour__get_transform(
         CachableMonoBehaviour_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_Object_o *mTransform; // x21
-  struct UnityEngine_Transform_o *Component_WebViewObject; // x0
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  Il2CppObject *Component_object; // x0
+  int32_t v6; // w2
+  int32_t v7; // w3
 
-  if ( (byte_438E3AB & 1) == 0 )
+  if ( (byte_48DF68A & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_Component_GetComponent_Transform___);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438E3AB = 1;
+    sub_1B00CCC(&Method_UnityEngine_Component_GetComponent_Transform___, method);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v3);
+    byte_48DF68A = 1;
   }
   mTransform = (UnityEngine_Object_o *)this->fields.mTransform;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Equality(mTransform, 0LL, 0LL) )
   {
-    Component_WebViewObject = (struct UnityEngine_Transform_o *)UnityEngine_Component__GetComponent_WebViewObject_(
-                                                                  (UnityEngine_Component_o *)this,
-                                                                  (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_Transform___);
-    this->fields.mTransform = Component_WebViewObject;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&this->fields.mTransform,
-      (System_Int32_array **)Component_WebViewObject,
-      v5,
-      v6,
-      v7,
-      v8,
-      v9,
-      v10);
+    Component_object = UnityEngine_Component__GetComponent_object_(
+                         (UnityEngine_Component_o *)this,
+                         (const MethodInfo_2D596B4 *)Method_UnityEngine_Component_GetComponent_Transform___);
+    this->fields.mTransform = (struct UnityEngine_Transform_o *)Component_object;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.mTransform, (int32_t)Component_object, v6, v7);
   }
   return this->fields.mTransform;
 }

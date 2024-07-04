@@ -3,24 +3,12 @@ void __fastcall ClassBoardLockUser___ctor(
         ClassBoardSquareEntity_o *masterEntity,
         const MethodInfo *method)
 {
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  int32_t v5; // w2
+  int32_t v6; // w3
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.squareEntity = masterEntity;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.squareEntity,
-    (System_Int32_array **)masterEntity,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.squareEntity, (int32_t)masterEntity, v5, v6);
 }
 
 
@@ -29,60 +17,57 @@ void __fastcall ClassBoardLockUser__RequestRelease(
         System_Action_IClassBoardSquareUser__o *callback,
         const MethodInfo *method)
 {
-  NetworkManager_ResultCallbackFunc_o *v5; // x21
-  ClassBoardReleaseLockRequest_o *Request_WarBoardWallAttackRequest; // x21
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
-  CommonUI_o *Instance; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  NetworkManager_ResultCallbackFunc_o *v9; // x21
+  Il2CppObject *Request_object; // x21
+  int32_t v11; // w2
+  int32_t v12; // w3
+  Il2CppObject *Instance; // x0
   __int64 v14; // x1
-  const MethodInfo *v15; // x2
   struct ClassBoardSquareEntity_o *squareEntity; // x8
-  ClassBoardReleaseRequestData_o v17; // 0:x1.8
+  int32_t classBoardBaseId; // w1
+  int32_t id; // w2
+  ClassBoardReleaseRequestData_o data; // [xsp+8h] [xbp-38h] BYREF
+  ClassBoardReleaseRequestData_o p_data; // 0:x0.8
+  ClassBoardReleaseRequestData_o v20; // 0:x1.8
 
-  if ( (byte_438D3D9 & 1) == 0 )
+  if ( (byte_48E5A79 & 1) == 0 )
   {
-    sub_B775C4(&Method_ClassBoardSquareUser_OnReleaseResponse__);
-    sub_B775C4(&Method_NetworkManager_getRequest_ClassBoardReleaseLockRequest___);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_438D3D9 = 1;
+    sub_1B00CCC(&Method_ClassBoardSquareUser_OnReleaseResponse__, callback);
+    sub_1B00CCC(&Method_NetworkManager_getRequest_ClassBoardReleaseLockRequest___, v5);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v6);
+    sub_1B00CCC(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
+    byte_48E5A79 = 1;
   }
-  v5 = (NetworkManager_ResultCallbackFunc_o *)sub_B77694(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v9 = (NetworkManager_ResultCallbackFunc_o *)sub_1B00F18(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
-    v5,
+    v9,
     (Il2CppObject *)this,
     Method_ClassBoardSquareUser_OnReleaseResponse__,
     0LL);
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  Request_WarBoardWallAttackRequest = (ClassBoardReleaseLockRequest_o *)NetworkManager__getRequest_WarBoardWallAttackRequest_(
-                                                                          v5,
-                                                                          (const MethodInfo_1DF8BE8 *)Method_NetworkManager_getRequest_ClassBoardReleaseLockRequest___);
+  Request_object = NetworkManager__getRequest_object_(
+                     v9,
+                     (const MethodInfo_2DD4818 *)Method_NetworkManager_getRequest_ClassBoardReleaseLockRequest___);
   this->fields.releaseResponseCallback = callback;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.releaseResponseCallback,
-    (System_Int32_array **)callback,
-    v7,
-    v8,
-    v9,
-    v10,
-    v11,
-    v12);
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.releaseResponseCallback, (int32_t)callback, v11, v12);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
-    || (CommonUI__SetConnect(Instance, 1, 0LL), (squareEntity = this->fields.squareEntity) == 0LL)
-    || !Request_WarBoardWallAttackRequest )
+    || (CommonUI__SetConnect((CommonUI_o *)Instance, 1, 0LL), (squareEntity = this->fields.squareEntity) == 0LL)
+    || (classBoardBaseId = squareEntity->fields.classBoardBaseId,
+        id = squareEntity->fields.id,
+        p_data = (ClassBoardReleaseRequestData_o)&data,
+        data = 0LL,
+        ClassBoardReleaseRequestData___ctor(p_data, classBoardBaseId, id, 0LL),
+        !Request_object) )
   {
-    sub_B7769C(Instance, v14);
+    sub_1B00F28(Instance, v14);
   }
-  v17 = *(ClassBoardReleaseRequestData_o *)&squareEntity->fields.classBoardBaseId;
-  ClassBoardReleaseLockRequest__beginRequest(Request_WarBoardWallAttackRequest, v17, v15);
+  v20 = data;
+  ClassBoardReleaseLockRequest__beginRequest((ClassBoardReleaseLockRequest_o *)Request_object, v20, 0LL);
 }

@@ -3,74 +3,53 @@ void __fastcall UserItemListViewItem___ctor(
         UserItemData_o *usrItemData,
         const MethodInfo *method)
 {
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
-  DataManager_o *Instance; // x0
-  __int64 v12; // x1
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
+  __int64 v5; // x1
+  __int64 v6; // x1
+  int32_t v7; // w2
+  int32_t v8; // w3
+  Il2CppObject *Instance; // x0
+  __int64 v10; // x1
+  int32_t v11; // w2
+  int32_t v12; // w3
+  int8x16_t v13; // q0
   struct System_String_o *name; // x1
-  WarEntity_o *Entity; // x0
+  Il2CppObject *Entity; // x0
 
-  if ( (byte_4389D5D & 1) == 0 )
+  if ( (byte_48DE1D4 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_B775C4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4389D5D = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_ItemMaster___, usrItemData);
+    sub_1B00CCC(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v5);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_48DE1D4 = 1;
   }
   ListViewItem___ctor((ListViewItem_o *)this, 0LL);
   this->fields.itemData = usrItemData;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.itemData,
-    (System_Int32_array **)usrItemData,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.itemData, (int32_t)usrItemData, v7, v8);
   if ( !usrItemData )
     goto LABEL_9;
-  this->fields.itemId = usrItemData->fields.itemId;
-  this->fields.itemType = usrItemData->fields.type;
-  this->fields.dispPriority = usrItemData->fields.dispPriority;
-  this->fields.itemImgId = usrItemData->fields.itemImgId;
+  v13 = vuzp1q_s32(
+          *(int32x4_t *)&usrItemData->fields.type,
+          vextq_s8(*(int8x16_t *)&usrItemData->fields.type, *(int8x16_t *)&usrItemData->fields.type, 0xCuLL));
+  *(int8x16_t *)&this->fields.dispPriority = vextq_s8(v13, v13, 0xCuLL);
   name = usrItemData->fields.name;
   this->fields.itemName = name;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.itemName,
-    (System_Int32_array **)name,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.itemName, (int32_t)name, v11, v12);
   this->fields.itemNum = usrItemData->fields.num;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
-    || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                      Instance,
-                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ItemMaster___)) == 0LL )
+    || (Instance = DataManager__GetMasterData_object_(
+                     (DataManager_o *)Instance,
+                     (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_ItemMaster___)) == 0LL )
   {
 LABEL_9:
-    sub_B7769C(Instance, v12);
+    sub_1B00F28(Instance, v10);
   }
-  Entity = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-             (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
+  Entity = DataMasterBase_object__object__int___GetEntity(
+             (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              this->fields.itemId,
-             (const MethodInfo_21FB894 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+             (const MethodInfo_2FE6A4C *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
   if ( Entity )
-    this->fields.itemLostTime = *(_QWORD *)&Entity->fields.eventId;
+    this->fields.itemLostTime = (int64_t)Entity[6].klass;
 }
 
 

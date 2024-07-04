@@ -2,8 +2,8 @@ void __fastcall EventInfoAreaImprovementSlideComponent___ctor(
         EventInfoAreaImprovementSlideComponent_o *this,
         const MethodInfo *method)
 {
+  *(_OWORD *)&this->fields.slideInStartedPosition.fields.x = xmmword_B70EE0;
   *(_QWORD *)&this->fields.slideDownEndedPosition.fields.y = 3251109888LL;
-  *(_OWORD *)&this->fields.slideInStartedPosition.fields.x = xmmword_331F970;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -12,19 +12,15 @@ void __fastcall EventInfoAreaImprovementSlideComponent__EndSlideDown(
         EventInfoAreaImprovementSlideComponent_o *this,
         const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  BattleServantConfConponent_o *p_endCallbackAction; // x0
+  int32_t v2; // w2
+  int32_t v3; // w3
+  ServantStatusBattleListViewItem_o *p_endCallbackAction; // x0
   System_Action_o *endCallbackAction; // t1
 
   endCallbackAction = this->fields.endCallbackAction;
-  p_endCallbackAction = (BattleServantConfConponent_o *)&this->fields.endCallbackAction;
+  p_endCallbackAction = (ServantStatusBattleListViewItem_o *)&this->fields.endCallbackAction;
   p_endCallbackAction->klass = 0LL;
-  sub_B77560(p_endCallbackAction, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1B00C70(p_endCallbackAction, 0, v2, v3);
   ActionExtensions__Call(endCallbackAction, 0LL);
 }
 
@@ -33,19 +29,15 @@ void __fastcall EventInfoAreaImprovementSlideComponent__EndSlideIn(
         EventInfoAreaImprovementSlideComponent_o *this,
         const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  BattleServantConfConponent_o *p_endCallbackAction; // x0
+  int32_t v2; // w2
+  int32_t v3; // w3
+  ServantStatusBattleListViewItem_o *p_endCallbackAction; // x0
   System_Action_o *endCallbackAction; // t1
 
   endCallbackAction = this->fields.endCallbackAction;
-  p_endCallbackAction = (BattleServantConfConponent_o *)&this->fields.endCallbackAction;
+  p_endCallbackAction = (ServantStatusBattleListViewItem_o *)&this->fields.endCallbackAction;
   p_endCallbackAction->klass = 0LL;
-  sub_B77560(p_endCallbackAction, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1B00C70(p_endCallbackAction, 0, v2, v3);
   ActionExtensions__Call(endCallbackAction, 0LL);
 }
 
@@ -69,22 +61,19 @@ void __fastcall EventInfoAreaImprovementSlideComponent__SetupDisp(
   __int64 v4; // x1
   UnityEngine_GameObject_o *v5; // x0
 
-  if ( (byte_438CC2A & 1) == 0 )
+  if ( (byte_48E32BF & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438CC2A = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    byte_48E32BF = 1;
   }
   infoObject = (UnityEngine_Object_o *)this->fields.infoObject;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( !UnityEngine_Object__op_Equality(infoObject, 0LL, 0LL) )
   {
     v5 = this->fields.infoObject;
     if ( !v5 )
-      sub_B7769C(0LL, v4);
+      sub_1B00F28(0LL, v4);
     UnityEngine_GameObject__SetActive(v5, 1, 0LL);
     GameObjectExtensions__ResetLocalPosition(this->fields.infoObject, 0LL);
   }
@@ -99,22 +88,19 @@ void __fastcall EventInfoAreaImprovementSlideComponent__SetupHidden(
   __int64 v4; // x1
   UnityEngine_GameObject_o *v5; // x0
 
-  if ( (byte_438CC2B & 1) == 0 )
+  if ( (byte_48E32C0 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438CC2B = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    byte_48E32C0 = 1;
   }
   infoObject = (UnityEngine_Object_o *)this->fields.infoObject;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( !UnityEngine_Object__op_Equality(infoObject, 0LL, 0LL) )
   {
     v5 = this->fields.infoObject;
     if ( !v5 )
-      sub_B7769C(0LL, v4);
+      sub_1B00F28(0LL, v4);
     UnityEngine_GameObject__SetActive(v5, 0, 0LL);
     GameObjectExtensions__SetLocalPosition(this->fields.infoObject, this->fields.slideInStartedPosition, 0LL);
   }
@@ -132,74 +118,96 @@ void __fastcall EventInfoAreaImprovementSlideComponent__SetupSlideDownPosition(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall EventInfoAreaImprovementSlideComponent__SlideDown(
         EventInfoAreaImprovementSlideComponent_o *this,
         System_Action_o *endCallbackAction,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v11; // x1
-  Firebase_Unity_UnitySynchronizationContext_SynchronizationContextBehavoir_o *v12; // x20
-  int v13; // s0
-  int v14; // s1
-  int v15; // s2
-  Firebase_Unity_UnitySynchronizationContext_SynchronizationContextBehavoir_c *v16; // x10
-  float z; // w11
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *klass; // x21
-  EventDelegate_o *v19; // x20
+  __int64 v10; // x1
+  UnityEngine_GameObject_o *v11; // x20
+  struct UnityEngine_Vector3_StaticFields *static_fields; // x8
+  float z; // s1
+  __int64 v14; // x10
+  float v15; // w11
+  System_Collections_Generic_List_object__o *klass; // x20
+  EventDelegate_o *v17; // x21
+  int32_t v18; // w2
+  int32_t v19; // w3
+  struct System_Object_array *items; // x8
+  _QWORD *v21; // x9
+  __int64 size; // x10
+  Il2CppClass **v23; // x0
 
-  if ( (byte_438CC2C & 1) == 0 )
+  if ( (byte_48E32C1 & 1) == 0 )
   {
-    sub_B775C4(&EventDelegate_TypeInfo);
-    sub_B775C4(&Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_B775C4(&StringLiteral_6131/*"EndSlideDown"*/);
-    byte_438CC2C = 1;
+    sub_1B00CCC(&EventDelegate_TypeInfo, endCallbackAction);
+    sub_1B00CCC(&Method_UnityEngine_GameObject_AddComponent_TweenPosition___, v6);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventDelegate__Add__, v7);
+    sub_1B00CCC(&StringLiteral_5933/*"EndSlideDown"*/, v8);
+    byte_48E32C1 = 1;
   }
   this->fields.endCallbackAction = endCallbackAction;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.endCallbackAction,
-    (System_Int32_array **)endCallbackAction,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields.endCallbackAction,
+    (int32_t)endCallbackAction,
+    (int32_t)method,
+    v3);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    goto LABEL_7;
-  v12 = UnityEngine_GameObject__AddComponent_UnitySynchronizationContext_SynchronizationContextBehavoir_(
-          gameObject,
-          (const MethodInfo_1DEBEC8 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
-  *(UnityEngine_Vector3_o *)&v13 = UnityEngine_Vector3__get_zero(0LL);
-  if ( !v12 )
-    goto LABEL_7;
-  LODWORD(v12[3].fields.callbackQueue) = v13;
-  HIDWORD(v12[3].fields.callbackQueue) = v14;
-  LODWORD(v12[4].klass) = v15;
-  v16 = *(Firebase_Unity_UnitySynchronizationContext_SynchronizationContextBehavoir_c **)&this->fields.slideDownEndedPosition.fields.x;
-  z = this->fields.slideDownEndedPosition.fields.z;
-  v12[1].fields.m_CachedPtr = 1045220557;
-  LODWORD(v12->fields.callbackQueue) = 3;
-  *(Firebase_Unity_UnitySynchronizationContext_SynchronizationContextBehavoir_c **)((char *)&v12[4].klass + 4) = v16;
-  *((float *)&v12[4].monitor + 1) = z;
-  klass = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)v12[2].klass;
-  v19 = (EventDelegate_o *)sub_B77694(EventDelegate_TypeInfo);
-  EventDelegate___ctor_30345964(v19, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_6131/*"EndSlideDown"*/, 0LL);
-  if ( !klass )
-LABEL_7:
-    sub_B7769C(gameObject, v11);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-    klass,
-    (EventMissionProgressRequest_Argument_ProgressData_o *)v19,
-    (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_EventDelegate__Add__);
+    goto LABEL_12;
+  gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__AddComponent_object_(
+                                             gameObject,
+                                             (const MethodInfo_2DADD20 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
+  v11 = gameObject;
+  if ( !byte_48DD9F1 )
+  {
+    gameObject = (UnityEngine_GameObject_o *)sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, v10);
+    byte_48DD9F1 = 1;
+  }
+  if ( !v11 )
+    goto LABEL_12;
+  static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
+  z = static_fields->zeroVector.fields.z;
+  v11[5].monitor = *(void **)&static_fields->zeroVector.fields.x;
+  *(float *)&v11[5].fields.m_CachedPtr = z;
+  v14 = *(_QWORD *)&this->fields.slideDownEndedPosition.fields.x;
+  v15 = this->fields.slideDownEndedPosition.fields.z;
+  LODWORD(v11[2].monitor) = 1045220557;
+  LODWORD(v11[1].monitor) = 3;
+  *((float *)&v11[6].klass + 1) = v15;
+  *(_QWORD *)(&v11[5].fields + 1) = v14;
+  klass = (System_Collections_Generic_List_object__o *)v11[3].klass;
+  v17 = (EventDelegate_o *)sub_1B00F18(EventDelegate_TypeInfo);
+  EventDelegate___ctor_45650468(v17, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_5933/*"EndSlideDown"*/, 0LL);
+  if ( !klass
+    || (items = klass->fields._items,
+        v21 = Method_System_Collections_Generic_List_EventDelegate__Add__,
+        ++klass->fields._version,
+        !items) )
+  {
+LABEL_12:
+    sub_1B00F28(gameObject, v10);
+  }
+  size = klass->fields._size;
+  if ( (unsigned int)size >= items->max_length )
+  {
+    System_Collections_Generic_List_object___AddWithResize(
+      klass,
+      (Il2CppObject *)v17,
+      *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+  }
+  else
+  {
+    klass->fields._size = size + 1;
+    v23 = &items->obj.klass + size;
+    v23[4] = (Il2CppClass *)v17;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)(v23 + 4), (int32_t)v17, v18, v19);
+  }
 }
 
 
@@ -208,35 +216,41 @@ void __fastcall EventInfoAreaImprovementSlideComponent__SlideIn(
         System_Action_o *endCallbackAction,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
   UnityEngine_Object_o *infoObject; // x21
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  int32_t v10; // w2
+  int32_t v11; // w3
   __int64 v12; // x1
   UnityEngine_GameObject_o *v13; // x0
-  float z; // w9
-  UnityEngine_GameObject_o *v15; // x20
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v16; // x21
-  EventDelegate_o *v17; // x20
+  UnityEngine_GameObject_o *v14; // x21
+  System_Collections_Generic_List_object__o *klass; // x20
+  struct UnityEngine_Vector3_StaticFields *static_fields; // x8
+  __int64 v17; // d0
+  float z; // s1
+  EventDelegate_o *v19; // x21
+  int32_t v20; // w2
+  int32_t v21; // w3
+  struct System_Object_array *items; // x8
+  _QWORD *v23; // x9
+  __int64 size; // x10
+  Il2CppClass **v25; // x0
+  void *v26; // [xsp+0h] [xbp-40h]
 
-  if ( (byte_438CC2D & 1) == 0 )
+  if ( (byte_48E32C2 & 1) == 0 )
   {
-    sub_B775C4(&EventDelegate_TypeInfo);
-    sub_B775C4(&Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&StringLiteral_6132/*"EndSlideIn"*/);
-    byte_438CC2D = 1;
+    sub_1B00CCC(&EventDelegate_TypeInfo, endCallbackAction);
+    sub_1B00CCC(&Method_UnityEngine_GameObject_AddComponent_TweenPosition___, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventDelegate__Add__, v6);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v7);
+    sub_1B00CCC(&StringLiteral_5934/*"EndSlideIn"*/, v8);
+    byte_48E32C2 = 1;
   }
   infoObject = (UnityEngine_Object_o *)this->fields.infoObject;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Equality(infoObject, 0LL, 0LL) )
   {
     ActionExtensions__Call(endCallbackAction, 0LL);
@@ -244,44 +258,66 @@ void __fastcall EventInfoAreaImprovementSlideComponent__SlideIn(
   else
   {
     this->fields.endCallbackAction = endCallbackAction;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&this->fields.endCallbackAction,
-      (System_Int32_array **)endCallbackAction,
-      v6,
-      v7,
-      v8,
-      v9,
+    sub_1B00C70(
+      (ServantStatusBattleListViewItem_o *)&this->fields.endCallbackAction,
+      (int32_t)endCallbackAction,
       v10,
       v11);
     v13 = this->fields.infoObject;
     if ( !v13 )
-      goto LABEL_13;
+      goto LABEL_17;
     UnityEngine_GameObject__SetActive(v13, 1, 0LL);
     v13 = this->fields.infoObject;
     if ( !v13 )
-      goto LABEL_13;
-    v13 = (UnityEngine_GameObject_o *)UnityEngine_GameObject__AddComponent_UnitySynchronizationContext_SynchronizationContextBehavoir_(
+      goto LABEL_17;
+    v13 = (UnityEngine_GameObject_o *)UnityEngine_GameObject__AddComponent_object_(
                                         v13,
-                                        (const MethodInfo_1DEBEC8 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
+                                        (const MethodInfo_2DADD20 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
+    v26 = *(void **)&this->fields.slideInStartedPosition.fields.x;
     if ( !v13 )
-      goto LABEL_13;
-    z = this->fields.slideInStartedPosition.fields.z;
-    v15 = v13;
-    v13[5].klass = *(UnityEngine_GameObject_c **)&this->fields.slideInStartedPosition.fields.x;
-    *(float *)&v13[5].monitor = z;
-    *(UnityEngine_Vector3_o *)((char *)&v13[5].monitor + 4) = UnityEngine_Vector3__get_zero(0LL);
-    LODWORD(v15[2].klass) = 1045220557;
-    LODWORD(v15[1].klass) = 2;
-    v16 = *(System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o **)&v15[2].fields.m_CachedPtr;
-    v17 = (EventDelegate_o *)sub_B77694(EventDelegate_TypeInfo);
-    EventDelegate___ctor_30345964(v17, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_6132/*"EndSlideIn"*/, 0LL);
-    if ( !v16 )
-LABEL_13:
-      sub_B7769C(v13, v12);
-    System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-      v16,
-      (EventMissionProgressRequest_Argument_ProgressData_o *)v17,
-      (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_EventDelegate__Add__);
+      goto LABEL_17;
+    v14 = v13;
+    v13[5].fields.m_CachedPtr = LODWORD(this->fields.slideInStartedPosition.fields.z);
+    v13[5].monitor = v26;
+    if ( !byte_48DD9F1 )
+    {
+      sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, v12);
+      byte_48DD9F1 = 1;
+    }
+    klass = (System_Collections_Generic_List_object__o *)v14[3].klass;
+    static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
+    v17 = *(_QWORD *)&static_fields->zeroVector.fields.x;
+    z = static_fields->zeroVector.fields.z;
+    LODWORD(v14[2].monitor) = 1045220557;
+    LODWORD(v14[1].monitor) = 2;
+    *(_QWORD *)(&v14[5].fields + 1) = v17;
+    *((float *)&v14[6].klass + 1) = z;
+    v19 = (EventDelegate_o *)sub_1B00F18(EventDelegate_TypeInfo);
+    EventDelegate___ctor_45650468(v19, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_5934/*"EndSlideIn"*/, 0LL);
+    if ( !klass
+      || (items = klass->fields._items,
+          v23 = Method_System_Collections_Generic_List_EventDelegate__Add__,
+          ++klass->fields._version,
+          !items) )
+    {
+LABEL_17:
+      sub_1B00F28(v13, v12);
+    }
+    size = klass->fields._size;
+    if ( (unsigned int)size >= items->max_length )
+    {
+      System_Collections_Generic_List_object___AddWithResize(
+        klass,
+        (Il2CppObject *)v19,
+        *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+    }
+    else
+    {
+      v25 = &items->obj.klass + size;
+      klass->fields._size = size + 1;
+      v25[4] = (Il2CppClass *)v19;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v25 + 4), (int32_t)v19, v20, v21);
+    }
   }
 }
 

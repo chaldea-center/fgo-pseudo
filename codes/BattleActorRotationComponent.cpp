@@ -1,6 +1,6 @@
 void __fastcall BattleActorRotationComponent___ctor(BattleActorRotationComponent_o *this, const MethodInfo *method)
 {
-  LOBYTE(this->fields.RotationSpeed_Y) = 1;
+  this->fields.IsRotation = 1;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -9,7 +9,7 @@ void __fastcall BattleActorRotationComponent__RotationReStart(
         BattleActorRotationComponent_o *this,
         const MethodInfo *method)
 {
-  LOBYTE(this->fields.RotationSpeed_Y) = 1;
+  this->fields.IsRotation = 1;
 }
 
 
@@ -18,21 +18,21 @@ void __fastcall BattleActorRotationComponent__RotationStop(
         BattleActorRotationComponent_o *this,
         const MethodInfo *method)
 {
-  UnityEngine_Transform_o *transform; // x0
-  float v4; // s1
-  UnityEngine_Transform_o *v5; // x19
-  __int64 v6; // x0
-  __int64 v7; // x1
-  int v8; // s0
+  UnityEngine_Transform_o *transform; // x19
+  __int64 v4; // x0
+  __int64 v5; // x1
+  int v6; // s0
+  UnityEngine_Vector3_o v10; // 0:s0.4,4:s1.4,8:s2.4
 
-  LOBYTE(this->fields.RotationSpeed_Y) = 0;
+  this->fields.IsRotation = 0;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  v4 = *((float *)&this->fields + 5);
-  v5 = transform;
-  *(UnityEngine_Quaternion_o *)&v8 = UnityEngine_Quaternion__Euler(0.0, v4, 0.0, 0LL);
-  if ( !v5 )
-    sub_B7769C(v6, v7);
-  UnityEngine_Transform__set_localRotation(v5, *(UnityEngine_Quaternion_o *)&v8, 0LL);
+  v10.fields.z = 0.0;
+  v10.fields.y = this->fields.ResetRotationY * 0.017453;
+  v10.fields.x = 0.0;
+  *(UnityEngine_Quaternion_o *)&v6 = UnityEngine_Quaternion__Internal_FromEulerRad(v10, 0LL);
+  if ( !transform )
+    sub_1B00F28(v4, v5);
+  UnityEngine_Transform__set_localRotation(transform, *(UnityEngine_Quaternion_o *)&v6, 0LL);
 }
 
 
@@ -40,48 +40,52 @@ void __fastcall BattleActorRotationComponent__Start(BattleActorRotationComponent
 {
   UnityEngine_Transform_o *transform; // x0
   __int64 v4; // x1
-  UnityEngine_Quaternion_o localRotation; // [xsp+0h] [xbp-20h] BYREF
-  UnityEngine_Vector3_o eulerAngles; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v5; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o Positive; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Quaternion_o localRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  *(_QWORD *)&localRotation.fields.x = 0LL;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
-    sub_B7769C(0LL, v4);
+    sub_1B00F28(0LL, v4);
   localRotation = UnityEngine_Transform__get_localRotation(transform, 0LL);
-  eulerAngles = UnityEngine_Quaternion__get_eulerAngles(localRotation, (const MethodInfo *)&localRotation);
-  this->fields.ResetRotationY = eulerAngles.fields.y;
-  *((_DWORD *)&this->fields + 5) = LODWORD(eulerAngles.fields.y);
+  v5 = UnityEngine_Quaternion__Internal_ToEulerRad(localRotation, 0LL);
+  v5.fields.x = v5.fields.x * 57.296;
+  v5.fields.y = v5.fields.y * 57.296;
+  v5.fields.z = v5.fields.z * 57.296;
+  Positive = UnityEngine_Quaternion__Internal_MakePositive(v5, 0LL);
+  this->fields.RotationY = Positive.fields.y;
+  this->fields.ResetRotationY = Positive.fields.y;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 void __fastcall BattleActorRotationComponent__Update(BattleActorRotationComponent_o *this, const MethodInfo *method)
 {
-  float ResetRotationY; // s8
+  float RotationY; // s8
   float v4; // s9
   float deltaTime; // s0
-  int RotationSpeed_Y_low; // w8
-  UnityEngine_Transform_o *transform; // x0
-  float v8; // s1
-  UnityEngine_Transform_o *v9; // x19
-  __int64 v10; // x0
-  __int64 v11; // x1
-  int v12; // s0
+  _BOOL4 IsRotation; // w8
+  UnityEngine_Transform_o *transform; // x19
+  __int64 v8; // x0
+  __int64 v9; // x1
+  int v10; // s0
+  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
 
-  ResetRotationY = this->fields.ResetRotationY;
-  v4 = this->fields.RotationY * 30.0;
+  RotationY = this->fields.RotationY;
+  v4 = this->fields.RotationSpeed_Y * 30.0;
   deltaTime = UnityEngine_Time__get_deltaTime(0LL);
-  RotationSpeed_Y_low = LOBYTE(this->fields.RotationSpeed_Y);
-  this->fields.ResetRotationY = ResetRotationY + (float)(v4 * deltaTime);
-  if ( RotationSpeed_Y_low )
+  IsRotation = this->fields.IsRotation;
+  this->fields.RotationY = RotationY + (float)(v4 * deltaTime);
+  if ( IsRotation )
   {
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-    v8 = this->fields.ResetRotationY;
-    v9 = transform;
-    *(UnityEngine_Quaternion_o *)&v12 = UnityEngine_Quaternion__Euler(0.0, v8, 0.0, 0LL);
-    if ( !v9 )
-      sub_B7769C(v10, v11);
-    UnityEngine_Transform__set_localRotation(v9, *(UnityEngine_Quaternion_o *)&v12, 0LL);
+    v14.fields.z = 0.0;
+    v14.fields.y = this->fields.RotationY * 0.017453;
+    v14.fields.x = 0.0;
+    *(UnityEngine_Quaternion_o *)&v10 = UnityEngine_Quaternion__Internal_FromEulerRad(v14, 0LL);
+    if ( !transform )
+      sub_1B00F28(v8, v9);
+    UnityEngine_Transform__set_localRotation(transform, *(UnityEngine_Quaternion_o *)&v10, 0LL);
   }
 }
 
@@ -90,5 +94,5 @@ float __fastcall BattleActorRotationComponent__get_RotationSpeedYPerSecond(
         BattleActorRotationComponent_o *this,
         const MethodInfo *method)
 {
-  return this->fields.RotationY * 30.0;
+  return this->fields.RotationSpeed_Y * 30.0;
 }

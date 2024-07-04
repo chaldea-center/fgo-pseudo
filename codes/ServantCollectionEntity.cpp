@@ -1,30 +1,31 @@
 void __fastcall ServantCollectionEntity___ctor(ServantCollectionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438C718 & 1) == 0 )
+  if ( (byte_48E2E09 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    byte_438C718 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
+    byte_48E2E09 = 1;
   }
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall ServantCollectionEntity__CreatePK(
         int32_t collectionNo,
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_438C716 & 1) == 0 )
+  if ( (byte_48E2E07 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_438C716 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&priority);
+    byte_48E2E07 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            collectionNo,
            priority,
-           (const MethodInfo_1D171BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2D60E34 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -48,32 +49,33 @@ int32_t __fastcall ServantCollectionEntity__GetCollectionEffectType(
 
 bool __fastcall ServantCollectionEntity__IsOpenCondition(ServantCollectionEntity_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x20
-  __int64 v4; // x20
-  DataManager_o *MasterData_WarQuestSelectionMaster; // x0
+  __int64 v3; // x1
+  __int64 v4; // x0
+  __int64 v5; // x0
+  Il2CppObject *MasterData_object; // x0
 
-  if ( (byte_438C717 & 1) == 0 )
+  if ( (byte_48E2E08 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    byte_438C717 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_CommonReleaseMaster___, method);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v3);
+    byte_48E2E08 = 1;
   }
-  v3 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 3);
-  if ( (*(_BYTE *)(v3 + 306) & 1) == 0 )
-    sub_B0F2C4(*((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 3));
-  v4 = **(_QWORD **)(v3 + 192);
-  if ( (*(_BYTE *)(v4 + 306) & 1) == 0 )
-    sub_B0F2C4(v4);
-  MasterData_WarQuestSelectionMaster = **(DataManager_o ***)(v4 + 184);
-  if ( !MasterData_WarQuestSelectionMaster
-    || (MasterData_WarQuestSelectionMaster = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                                MasterData_WarQuestSelectionMaster,
-                                                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL )
+  v4 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
+  if ( (*(_BYTE *)(v4 + 309) & 1) == 0 )
+    v4 = sub_1B52BA8(v4);
+  v5 = *(_QWORD *)(*(_QWORD *)(v4 + 192) + 16LL);
+  if ( (*(_BYTE *)(v5 + 309) & 1) == 0 )
+    v5 = sub_1B52BA8(v5);
+  MasterData_object = **(Il2CppObject ***)(v5 + 184);
+  if ( !MasterData_object
+    || (MasterData_object = DataManager__GetMasterData_object_(
+                              (DataManager_o *)MasterData_object,
+                              (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL )
   {
-    sub_B7769C(MasterData_WarQuestSelectionMaster, method);
+    sub_1B00F28(MasterData_object, method);
   }
   return CommonReleaseMaster__IsOpen(
-           (CommonReleaseMaster_o *)MasterData_WarQuestSelectionMaster,
+           (CommonReleaseMaster_o *)MasterData_object,
            this->fields.commonReleaseId,
            0LL,
            0,

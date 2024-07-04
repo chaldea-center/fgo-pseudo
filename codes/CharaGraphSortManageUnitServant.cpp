@@ -12,12 +12,12 @@ CharaGraphFilterLogicBase_o *__fastcall CharaGraphSortManageUnitServant__CreateF
 {
   ServantCharaGraphFilterLogic_o *v2; // x19
 
-  if ( (byte_438E341 & 1) == 0 )
+  if ( (byte_48E1C4F & 1) == 0 )
   {
-    sub_B775C4(&ServantCharaGraphFilterLogic_TypeInfo);
-    byte_438E341 = 1;
+    sub_1B00CCC(&ServantCharaGraphFilterLogic_TypeInfo, method);
+    byte_48E1C4F = 1;
   }
-  v2 = (ServantCharaGraphFilterLogic_o *)sub_B77694(ServantCharaGraphFilterLogic_TypeInfo);
+  v2 = (ServantCharaGraphFilterLogic_o *)sub_1B00F18(ServantCharaGraphFilterLogic_TypeInfo);
   ServantCharaGraphFilterLogic___ctor(v2, 0LL);
   return (CharaGraphFilterLogicBase_o *)v2;
 }
@@ -27,16 +27,17 @@ CharaGraphSortLogicBase_o *__fastcall CharaGraphSortManageUnitServant__CreateSor
         CharaGraphSortManageUnitServant_o *this,
         const MethodInfo *method)
 {
-  ServantCharaGraphSortLogic_o *v2; // x19
+  CharaGraphSortLogicBase_o *v2; // x19
+  const MethodInfo *v3; // x1
 
-  if ( (byte_438E340 & 1) == 0 )
+  if ( (byte_48E1C4E & 1) == 0 )
   {
-    sub_B775C4(&ServantCharaGraphSortLogic_TypeInfo);
-    byte_438E340 = 1;
+    sub_1B00CCC(&ServantCharaGraphSortLogic_TypeInfo, method);
+    byte_48E1C4E = 1;
   }
-  v2 = (ServantCharaGraphSortLogic_o *)sub_B77694(ServantCharaGraphSortLogic_TypeInfo);
-  ServantCharaGraphSortLogic___ctor(v2, 0LL);
-  return (CharaGraphSortLogicBase_o *)v2;
+  v2 = (CharaGraphSortLogicBase_o *)sub_1B00F18(ServantCharaGraphSortLogic_TypeInfo);
+  CharaGraphSortLogicBase___ctor(v2, v3);
+  return v2;
 }
 
 
@@ -76,10 +77,10 @@ System_String_o *__fastcall CharaGraphSortManageUnitServant__get_SortSaveKeySuff
         CharaGraphSortManageUnitServant_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_438E33F & 1) == 0 )
+  if ( (byte_48E1C4D & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_1033/*"1"*/);
-    byte_438E33F = 1;
+    sub_1B00CCC(&StringLiteral_1261/*"1"*/, method);
+    byte_48E1C4D = 1;
   }
-  return (System_String_o *)StringLiteral_1033/*"1"*/;
+  return (System_String_o *)StringLiteral_1261/*"1"*/;
 }

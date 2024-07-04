@@ -30,7 +30,13 @@ bool __fastcall AiAct__isAttackBuster(int32_t type, const MethodInfo *method)
 
 bool __fastcall AiAct__isAttackCritical(int32_t type, const MethodInfo *method)
 {
-  return type == 17 || type == 30 || (type | 1) == 19;
+  _BOOL4 v2; // w0
+
+  if ( (unsigned int)(type - 17) > 0xD )
+    LOBYTE(v2) = 0;
+  else
+    return (0x2007u >> (type - 17)) & 1;
+  return v2;
 }
 
 
@@ -42,13 +48,25 @@ bool __fastcall AiAct__isAttackQuick(int32_t type, const MethodInfo *method)
 
 bool __fastcall AiAct__isAttackType(int32_t type, const MethodInfo *method)
 {
-  return (unsigned int)type <= 0x1E && ((1 << type) & 0x4003C004) != 0 || (type | 1) == 19;
+  _BOOL4 v2; // w0
+
+  if ( (unsigned int)(type - 2) > 0x1C )
+    LOBYTE(v2) = 0;
+  else
+    return (0x1003F001u >> (type - 2)) & 1;
+  return v2;
 }
 
 
 bool __fastcall AiAct__isSkillType(int32_t type, const MethodInfo *method)
 {
-  return (unsigned int)(type - 11) < 3 || (type | 1) == 41;
+  _BOOL4 v2; // w0
+
+  if ( (unsigned int)(type - 11) > 0x1E )
+    LOBYTE(v2) = 0;
+  else
+    return (0x60000007u >> (type - 11)) & 1;
+  return v2;
 }
 
 
@@ -58,7 +76,7 @@ bool __fastcall AiAct__isThinkEnd(int32_t intype, const MethodInfo *method)
 }
 
 
-bool __fastcall AiAct__isThinkEnd_28609100(int32_t type, const MethodInfo *method)
+bool __fastcall AiAct__isThinkEnd_36364464(int32_t type, const MethodInfo *method)
 {
   return type != 99;
 }

@@ -1,13 +1,13 @@
 void __fastcall AiActEntity___ctor(AiActEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438A465 & 1) == 0 )
+  if ( (byte_48E2447 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_int___ctor__);
-    byte_438A465 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_int___ctor__, method);
+    byte_48E2447 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_2FE684C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -19,34 +19,34 @@ int32_t __fastcall AiActEntity__CreatePrimaryKey(AiActEntity_o *this, const Meth
 
 int32_t __fastcall AiActEntity__GetNoTargetNoActionType(AiActEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438A463 & 1) == 0 )
+  if ( (byte_48E2445 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_21539/*"noTargetNoActionType"*/);
-    byte_438A463 = 1;
+    sub_1B00CCC(&StringLiteral_21795/*"noTargetNoActionType"*/, method);
+    byte_48E2445 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21539/*"noTargetNoActionType"*/, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21795/*"noTargetNoActionType"*/, 0, 0LL);
 }
 
 
 bool __fastcall AiActEntity__IsIncludeDeathSvt(AiActEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438A461 & 1) == 0 )
+  if ( (byte_48E2443 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_20169/*"includeDeathSvt"*/);
-    byte_438A461 = 1;
+    sub_1B00CCC(&StringLiteral_20330/*"includeDeathSvt"*/, method);
+    byte_48E2443 = 1;
   }
-  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_20169/*"includeDeathSvt"*/, 0LL);
+  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_20330/*"includeDeathSvt"*/, 0LL);
 }
 
 
 bool __fastcall AiActEntity__IsNoCriticalOnAttack(AiActEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438A464 & 1) == 0 )
+  if ( (byte_48E2446 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_21531/*"noCriticalOnAttack"*/);
-    byte_438A464 = 1;
+    sub_1B00CCC(&StringLiteral_21787/*"noCriticalOnAttack"*/, method);
+    byte_48E2446 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21531/*"noCriticalOnAttack"*/, 0, 0LL) == 1;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21787/*"noCriticalOnAttack"*/, 0, 0LL) == 1;
 }
 
 
@@ -55,14 +55,14 @@ bool __fastcall AiActEntity__TryGetMultiIndividuality(
         System_Int32_array_array **resValues,
         const MethodInfo *method)
 {
-  if ( (byte_438A462 & 1) == 0 )
+  if ( (byte_48E2444 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_7742/*"Individuality"*/);
-    byte_438A462 = 1;
+    sub_1B00CCC(&StringLiteral_7482/*"Individuality"*/, resValues);
+    byte_48E2444 = 1;
   }
   return EntityScriptUtil__TryGet2DimensionalIntArray(
            this->fields.script,
-           (System_String_o *)StringLiteral_7742/*"Individuality"*/,
+           (System_String_o *)StringLiteral_7482/*"Individuality"*/,
            resValues,
            0LL);
 }

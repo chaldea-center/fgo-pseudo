@@ -4,79 +4,70 @@ void __fastcall UISkinnedEffectLoad___ctor(UISkinnedEffectLoad_o *this, const Me
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_array *__fastcall UISkinnedEffectLoad__GetEffectNames(
         UISkinnedEffectLoad_o *this,
         int32_t uiChangeType,
         const MethodInfo *method)
 {
-  System_String_array *result; // x0
+  __int64 v5; // x1
   __int64 v6; // x1
-  struct UISkinnedEffectLoad_skinEffect_array **p_skinEffects; // x21
+  __int64 v7; // x1
+  System_String_array *result; // x0
+  __int64 v9; // x1
   int32_t OverwriteUiVersion; // w0
-  const MethodInfo *v9; // x3
-  struct UISkinnedEffectLoad_ReplaceData_array *replaceDatas; // x8
-  __int64 v11; // x0
-  System_Collections_Generic_List_string__o *EffectNameList; // [xsp+8h] [xbp-18h] BYREF
+  const MethodInfo *v11; // x3
+  struct UISkinnedEffectLoad_skinEffect_array *skinEffects; // x8
+  System_Collections_Generic_List_string__o *EffectNameList; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_439522D & 1) == 0 )
+  if ( (byte_48E175F & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_TerminalOverwriteMaster___);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__ToArray__);
-    sub_B775C4(&ServantCommentManager_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_439522D = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_TerminalOverwriteMaster___, *(_QWORD *)&uiChangeType);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__ToArray__, v5);
+    sub_1B00CCC(&ServantCommentManager_TypeInfo, v6);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    byte_48E175F = 1;
   }
   EffectNameList = 0LL;
-  result = (System_String_array *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  result = (System_String_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !result )
-    goto LABEL_18;
-  result = (System_String_array *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+    goto LABEL_16;
+  result = (System_String_array *)DataManager__GetMasterData_object_(
                                     (DataManager_o *)result,
-                                    (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_TerminalOverwriteMaster___);
+                                    (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_TerminalOverwriteMaster___);
   if ( result )
   {
-    p_skinEffects = &this->fields.skinEffects;
     result = (System_String_array *)TerminalOverwriteMaster__TryGetOverwriteEffectNames(
                                       (TerminalOverwriteMaster_o *)result,
-                                      (int32_t)this->fields.skinEffects,
+                                      this->fields.skinType,
                                       &EffectNameList,
                                       0LL);
     if ( ((unsigned __int8)result & 1) != 0 )
     {
       result = (System_String_array *)EffectNameList;
       if ( EffectNameList )
-        return (System_String_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
-                                        (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)EffectNameList,
-                                        (const MethodInfo_30553E4 *)Method_System_Collections_Generic_List_string__ToArray__);
-LABEL_18:
-      sub_B7769C(result, v6);
+        return (System_String_array *)System_Collections_Generic_List_object___ToArray(
+                                        (System_Collections_Generic_List_object__o *)EffectNameList,
+                                        (const MethodInfo_33C3528 *)Method_System_Collections_Generic_List_string__ToArray__);
+LABEL_16:
+      sub_1B00F28(result, v9);
     }
   }
-  else
-  {
-    p_skinEffects = &this->fields.skinEffects;
-  }
-  if ( *(_DWORD *)p_skinEffects != 7 )
-    goto LABEL_14;
-  if ( (BYTE3(ServantCommentManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ServantCommentManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( this->fields.skinType != 7 )
+    goto LABEL_12;
+  if ( !ServantCommentManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantCommentManager_TypeInfo);
-  }
   OverwriteUiVersion = ServantCommentManager__GetOverwriteUiVersion(0LL);
-  result = UISkinnedEffectLoad__GetReplaceEffectnames(this, uiChangeType, OverwriteUiVersion, v9);
+  result = UISkinnedEffectLoad__GetReplaceEffectnames(this, uiChangeType, OverwriteUiVersion, v11);
   if ( !result )
   {
-LABEL_14:
-    replaceDatas = this->fields.replaceDatas;
-    if ( !replaceDatas )
-      goto LABEL_18;
-    if ( replaceDatas->max_length <= uiChangeType )
-    {
-      v11 = sub_B776C8(result);
-      sub_B77668(v11, 0LL);
-    }
-    return (System_String_array *)replaceDatas->m_Items[uiChangeType];
+LABEL_12:
+    skinEffects = this->fields.skinEffects;
+    if ( !skinEffects )
+      goto LABEL_16;
+    if ( skinEffects->max_length <= uiChangeType )
+      sub_1B00F30(result, v9);
+    return skinEffects->m_Items[uiChangeType].fields.EffectName;
   }
   return result;
 }
@@ -88,84 +79,77 @@ System_String_array *__fastcall UISkinnedEffectLoad__GetReplaceEffectnames(
         int32_t version,
         const MethodInfo *method)
 {
-  __int64 v4; // x10
-  int v5; // w8
-  __int64 v6; // x9
-  __int64 v7; // x10
-  __int64 v8; // x11
+  struct UISkinnedEffectLoad_ReplaceData_array *replaceDatas; // x8
+  int max_length; // w9
+  int v6; // w10
+  UISkinnedEffectLoad_ReplaceData_o *v7; // x11
 
-  v4 = *(_QWORD *)&this->fields.SetDepthZero;
-  if ( !v4 )
+  replaceDatas = this->fields.replaceDatas;
+  if ( !replaceDatas )
     return 0LL;
-  v5 = *(_DWORD *)(v4 + 24);
-  if ( v5 < 1 )
+  max_length = replaceDatas->max_length;
+  if ( max_length < 1 )
     return 0LL;
-  v6 = 0LL;
-  v7 = v4 + 32;
+  v6 = 0;
   while ( 1 )
   {
-    v8 = *(_QWORD *)(v7 + 8 * v6);
-    if ( !v8 )
-      sub_B7769C(this, uiChangeType);
-    if ( *(_DWORD *)(v8 + 16) == uiChangeType && *(_DWORD *)(v8 + 20) == version )
+    v7 = replaceDatas->m_Items[v6];
+    if ( !v7 )
+      sub_1B00F28(this, uiChangeType);
+    if ( v7->fields.UiChangeType == uiChangeType && v7->fields.Version == version )
       break;
-    if ( (int)++v6 >= v5 )
+    if ( max_length == ++v6 )
       return 0LL;
   }
-  return *(System_String_array **)(v8 + 24);
+  return v7->fields.EffectName;
 }
 
 
 void __fastcall UISkinnedEffectLoad__OnEnable(UISkinnedEffectLoad_o *this, const MethodInfo *method)
 {
-  if ( !LOBYTE(this[1].klass) )
+  if ( !this->fields.isSetEffectsDone )
   {
     UISkinnedEffectLoad__SetEffects(this, method);
-    LOBYTE(this[1].klass) = 1;
+    this->fields.isSetEffectsDone = 1;
   }
 }
 
 
 void __fastcall UISkinnedEffectLoad__SetEffects(UISkinnedEffectLoad_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   __int64 UiFlag; // x0
-  __int64 v4; // x1
-  const MethodInfo *v5; // x2
-  struct UISkinnedEffectLoad_ReplaceData_array *replaceDatas; // x8
+  __int64 v5; // x1
+  const MethodInfo *v6; // x2
+  struct UISkinnedEffectLoad_skinEffect_array *skinEffects; // x8
   System_String_array *EffectNames; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  int assetName_low; // w21
-  UnityEngine_GameObject_o *v10; // x19
+  _BOOL4 SetDepthZero; // w21
+  UnityEngine_GameObject_o *v11; // x19
 
-  if ( (byte_439522C & 1) == 0 )
+  if ( (byte_48E175E & 1) == 0 )
   {
-    sub_B775C4(&CommonEffectManager_TypeInfo);
-    sub_B775C4(&ServantCommentManager_TypeInfo);
-    byte_439522C = 1;
+    sub_1B00CCC(&CommonEffectManager_TypeInfo, method);
+    sub_1B00CCC(&ServantCommentManager_TypeInfo, v3);
+    byte_48E175E = 1;
   }
-  if ( this->fields.replaceDatas )
+  if ( this->fields.skinEffects )
   {
-    if ( (BYTE3(ServantCommentManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !ServantCommentManager_TypeInfo->_2.cctor_finished )
-    {
+    if ( !ServantCommentManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ServantCommentManager_TypeInfo);
-    }
     UiFlag = ServantCommentManager__GetUiFlag(0LL);
-    replaceDatas = this->fields.replaceDatas;
-    if ( !replaceDatas )
-      sub_B7769C(UiFlag, v4);
-    if ( (int)UiFlag < (signed int)replaceDatas->max_length )
+    skinEffects = this->fields.skinEffects;
+    if ( !skinEffects )
+      sub_1B00F28(UiFlag, v5);
+    if ( (int)UiFlag < (signed int)skinEffects->max_length )
     {
-      EffectNames = UISkinnedEffectLoad__GetEffectNames(this, UiFlag, v5);
+      EffectNames = UISkinnedEffectLoad__GetEffectNames(this, UiFlag, v6);
       gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-      assetName_low = LOBYTE(this->fields.assetName);
-      v10 = gameObject;
-      if ( (BYTE3(CommonEffectManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !CommonEffectManager_TypeInfo->_2.cctor_finished )
-      {
+      SetDepthZero = this->fields.SetDepthZero;
+      v11 = gameObject;
+      if ( !CommonEffectManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CommonEffectManager_TypeInfo);
-      }
-      CommonEffectManager__SetSkinEffects(EffectNames, v10, assetName_low != 0, 0LL);
+      CommonEffectManager__SetSkinEffects(EffectNames, v11, SetDepthZero, 0LL);
     }
   }
 }

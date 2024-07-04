@@ -4,24 +4,12 @@ void __fastcall SupportDeckFixErrorListViewItem___ctor(
         int32_t index,
         const MethodInfo *method)
 {
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  int32_t v6; // w2
+  int32_t v7; // w3
 
-  ListViewItem___ctor_24167012((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_39415512((ListViewItem_o *)this, index, 0LL);
   this->fields.message = message;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.message,
-    (System_Int32_array **)message,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10,
-    v11);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.message, (int32_t)message, v6, v7);
 }
 
 

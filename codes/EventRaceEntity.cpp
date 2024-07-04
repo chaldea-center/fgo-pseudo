@@ -1,27 +1,28 @@
 void __fastcall EventRaceEntity___ctor(EventRaceEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438BD1F & 1) == 0 )
+  if ( (byte_48E28B9 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    byte_438BD1F = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
+    byte_48E28B9 = 1;
   }
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventRaceEntity__CreatePK(int32_t eventId, int32_t termId, const MethodInfo *method)
 {
-  if ( (byte_438BD1D & 1) == 0 )
+  if ( (byte_48E28B7 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_438BD1D = 1;
+    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&termId);
+    byte_48E28B7 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            eventId,
            termId,
-           (const MethodInfo_1D171BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2D60E34 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -33,39 +34,42 @@ System_String_o *__fastcall EventRaceEntity__CreatePrimaryKey(EventRaceEntity_o 
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall EventRaceEntity__GetGroupIdx(EventRaceEntity_o *this, int32_t groupId, const MethodInfo *method)
 {
-  EventRaceEntity___c__DisplayClass12_0_o *v5; // x21
-  __int64 v6; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
+  __int64 v8; // x21
+  __int64 v9; // x0
+  __int64 v10; // x1
   System_Int32_array *groupIds; // x19
-  System_Predicate_int__o *v9; // x20
+  System_Predicate_int__o *v12; // x20
 
-  if ( (byte_438BD1E & 1) == 0 )
+  if ( (byte_48E28B8 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Array_FindIndex_int___);
-    sub_B775C4(&Method_System_Predicate_int___ctor__);
-    sub_B775C4(&System_Predicate_int__TypeInfo);
-    sub_B775C4(&Method_EventRaceEntity___c__DisplayClass12_0__GetGroupIdx_b__0__);
-    sub_B775C4(&EventRaceEntity___c__DisplayClass12_0_TypeInfo);
-    byte_438BD1E = 1;
+    sub_1B00CCC(&Method_System_Array_FindIndex_int___, *(_QWORD *)&groupId);
+    sub_1B00CCC(&System_Predicate_int__TypeInfo, v5);
+    sub_1B00CCC(&Method_EventRaceEntity___c__DisplayClass12_0__GetGroupIdx_b__0__, v6);
+    sub_1B00CCC(&EventRaceEntity___c__DisplayClass12_0_TypeInfo, v7);
+    byte_48E28B8 = 1;
   }
-  v5 = (EventRaceEntity___c__DisplayClass12_0_o *)sub_B77694(EventRaceEntity___c__DisplayClass12_0_TypeInfo);
-  EventRaceEntity___c__DisplayClass12_0___ctor(v5, 0LL);
-  if ( !v5 )
-    sub_B7769C(v6, v7);
-  v5->fields.groupId = groupId;
+  v8 = sub_1B00F18(EventRaceEntity___c__DisplayClass12_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v8, 0LL);
+  if ( !v8 )
+    sub_1B00F28(v9, v10);
+  *(_DWORD *)(v8 + 16) = groupId;
   groupIds = this->fields.groupIds;
-  v9 = (System_Predicate_int__o *)sub_B77694(System_Predicate_int__TypeInfo);
+  v12 = (System_Predicate_int__o *)sub_1B00F18(System_Predicate_int__TypeInfo);
   System_Predicate_int____ctor(
-    v9,
-    (Il2CppObject *)v5,
+    v12,
+    (Il2CppObject *)v8,
     Method_EventRaceEntity___c__DisplayClass12_0__GetGroupIdx_b__0__,
-    (const MethodInfo_2C30DC8 *)Method_System_Predicate_int___ctor__);
+    0LL);
   return System_Array__FindIndex_int_(
            groupIds,
-           (System_Predicate_T__o *)v9,
-           (const MethodInfo_2004618 *)Method_System_Array_FindIndex_int___);
+           (System_Predicate_T__o *)v12,
+           (const MethodInfo_2E466F0 *)Method_System_Array_FindIndex_int___);
 }
 
 

@@ -1,14 +1,3 @@
-void __fastcall AliveServantAiTask___ctor(
-        AliveServantAiTask_o *this,
-        int32_t procState,
-        BattleServantData_o *svtData,
-        BattleLogic_o *logic,
-        const MethodInfo *method)
-{
-  BattleLogicServantAiTask___ctor((BattleLogicServantAiTask_o *)this, procState, svtData, logic, 0LL);
-}
-
-
 bool __fastcall AliveServantAiTask__IsActable(
         AliveServantAiTask_o *this,
         BattleLogic_o *logic,
@@ -29,7 +18,7 @@ bool __fastcall AliveServantAiTask__IsActable(
         return BattleData__checkAlivePlayers((BattleData_o *)svtData, 0LL);
     }
 LABEL_7:
-    sub_B7769C(svtData, logic);
+    sub_1B00F28(svtData, logic);
   }
   return 0;
 }

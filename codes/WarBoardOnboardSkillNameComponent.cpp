@@ -2,35 +2,24 @@ void __fastcall WarBoardOnboardSkillNameComponent___ctor(
         WarBoardOnboardSkillNameComponent_o *this,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v3; // x20
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
+  __int64 v3; // x1
+  System_Collections_Generic_List_object__o *v4; // x20
+  int32_t v5; // w2
+  int32_t v6; // w3
 
-  if ( (byte_438AEBF & 1) == 0 )
+  if ( (byte_48E0868 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_string___ctor___69407008);
-    sub_B775C4(&System_Collections_Generic_List_string__TypeInfo);
-    byte_438AEBF = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string___ctor__, method);
+    sub_1B00CCC(&System_Collections_Generic_List_string__TypeInfo, v3);
+    byte_48E0868 = 1;
   }
   this->fields.skillNameDispAfterWait = 0.5;
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_string__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v3,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_string___ctor___69407008);
-  this->fields.skillNames = (struct System_Collections_Generic_List_string__o *)v3;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.skillNames,
-    (System_Int32_array **)v3,
+  v4 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_string__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
     v4,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9);
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_string___ctor__);
+  this->fields.skillNames = (struct System_Collections_Generic_List_string__o *)v4;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.skillNames, (int32_t)v4, v5, v6);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -40,20 +29,42 @@ void __fastcall WarBoardOnboardSkillNameComponent__AddSkillName(
         System_String_o *name,
         const MethodInfo *method)
 {
-  struct System_Collections_Generic_List_string__o *skillNames; // x0
+  int32_t v3; // w3
+  System_Collections_Generic_List_object__o *skillNames; // x0
+  struct System_Object_array *items; // x8
+  _QWORD *v8; // x9
+  __int64 size; // x10
+  Il2CppClass **v10; // x8
 
-  if ( (byte_438AEBE & 1) == 0 )
+  if ( (byte_48E0867 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_string__Add__);
-    byte_438AEBE = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__Add__, name);
+    byte_48E0867 = 1;
   }
-  skillNames = this->fields.skillNames;
-  if ( !skillNames )
-    sub_B7769C(0LL, name);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-    (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)skillNames,
-    (EventMissionProgressRequest_Argument_ProgressData_o *)name,
-    (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_string__Add__);
+  skillNames = (System_Collections_Generic_List_object__o *)this->fields.skillNames;
+  if ( !skillNames
+    || (items = skillNames->fields._items,
+        v8 = Method_System_Collections_Generic_List_string__Add__,
+        ++skillNames->fields._version,
+        !items) )
+  {
+    sub_1B00F28(skillNames, name);
+  }
+  size = skillNames->fields._size;
+  if ( (unsigned int)size >= items->max_length )
+  {
+    System_Collections_Generic_List_object___AddWithResize(
+      skillNames,
+      (Il2CppObject *)name,
+      *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+  }
+  else
+  {
+    v10 = &items->obj.klass + size;
+    skillNames->fields._size = size + 1;
+    v10[4] = (Il2CppClass *)name;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)(v10 + 4), (int32_t)name, (int32_t)method, v3);
+  }
 }
 
 
@@ -63,27 +74,34 @@ void __fastcall WarBoardOnboardSkillNameComponent__Clear(
 {
   const MethodInfo *v2; // x2
   __int64 v4; // x1
+  __int64 v5; // x1
   UILabel_o *skillName; // x0
+  struct System_Collections_Generic_List_string__o *skillNames; // x8
+  int32_t size; // w2
+  int v9; // w9
 
-  if ( (byte_438AEBC & 1) == 0 )
+  if ( (byte_48E0865 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_string__Clear__);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438AEBC = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__Clear__, method);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v4);
+    byte_48E0865 = 1;
   }
   WarBoardOnboardSkillNameComponent__SetActive(this, 0, v2);
   skillName = this->fields.skillName;
   if ( !skillName
     || (UILabel__set_text(skillName, (System_String_o *)StringLiteral_1/*""*/, 0LL),
-        skillName = (UILabel_o *)this->fields.skillNames,
+        skillNames = this->fields.skillNames,
         this->fields.skillDispIndex = 0,
-        !skillName) )
+        !skillNames) )
   {
-    sub_B7769C(skillName, v4);
+    sub_1B00F28(skillName, v5);
   }
-  System_Collections_Generic_List_XWeaponTrail_Element___Clear(
-    (System_Collections_Generic_List_XWeaponTrail_Element__o *)skillName,
-    (const MethodInfo_30536A0 *)Method_System_Collections_Generic_List_string__Clear__);
+  size = skillNames->fields._size;
+  v9 = skillNames->fields._version + 1;
+  skillNames->fields._size = 0;
+  skillNames->fields._version = v9;
+  if ( size >= 1 )
+    System_Array__Clear((System_Array_o *)skillNames->fields._items, 0, size, 0LL);
 }
 
 
@@ -113,7 +131,7 @@ void __fastcall WarBoardOnboardSkillNameComponent__SetActive(
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7769C(0LL, v5);
+    sub_1B00F28(0LL, v5);
   UnityEngine_GameObject__SetActive(gameObject, flag, 0LL);
 }
 
@@ -122,49 +140,44 @@ void __fastcall WarBoardOnboardSkillNameComponent__SetSkillNameDisp(
         WarBoardOnboardSkillNameComponent_o *this,
         const MethodInfo *method)
 {
-  WarBoardOnboardSkillNameComponent_o *v2; // x19
-  struct System_Collections_Generic_List_string__o *skillNames; // x20
-  int size; // w8
-  __int64 skillDispIndex; // x21
-  System_String_o *v6; // x20
-  const MethodInfo *v7; // x2
-  WarBoardOnboardSkillNameComponent_o *v8; // x0
-  bool v9; // w1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  struct System_Collections_Generic_List_string__o *skillNames; // x0
+  int32_t skillDispIndex; // w1
+  Il2CppObject *Item; // x20
+  System_String_o *v8; // x1
+  char v9; // w20
+  const MethodInfo *v10; // x2
 
-  v2 = this;
-  if ( (byte_438AEBD & 1) == 0 )
+  if ( (byte_48E0866 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__get_Item__);
-    this = (WarBoardOnboardSkillNameComponent_o *)sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438AEBD = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__get_Count__, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__get_Item__, v3);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v4);
+    byte_48E0866 = 1;
   }
-  skillNames = v2->fields.skillNames;
+  skillNames = this->fields.skillNames;
   if ( !skillNames )
-    goto LABEL_13;
-  size = skillNames->fields._size;
-  skillDispIndex = v2->fields.skillDispIndex;
-  if ( size <= (int)skillDispIndex )
+    goto LABEL_11;
+  skillDispIndex = this->fields.skillDispIndex;
+  if ( skillNames->fields._size <= skillDispIndex )
     return;
-  if ( size <= (unsigned int)skillDispIndex )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-  v6 = skillNames->fields._items->m_Items[skillDispIndex];
-  this = (WarBoardOnboardSkillNameComponent_o *)System_String__IsNullOrEmpty(v6, 0LL);
-  if ( !v2->fields.skillName )
-LABEL_13:
-    sub_B7769C(this, method);
-  if ( ((unsigned __int8)this & 1) != 0 )
-  {
-    UILabel__set_text(v2->fields.skillName, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-    v8 = v2;
-    v9 = 0;
-  }
+  Item = System_Collections_Generic_List_object___get_Item(
+           (System_Collections_Generic_List_object__o *)skillNames,
+           skillDispIndex,
+           (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_string__get_Item__);
+  skillNames = (struct System_Collections_Generic_List_string__o *)System_String__IsNullOrEmpty(
+                                                                     (System_String_o *)Item,
+                                                                     0LL);
+  if ( !this->fields.skillName )
+LABEL_11:
+    sub_1B00F28(skillNames, method);
+  if ( ((unsigned __int8)skillNames & 1) != 0 )
+    v8 = (System_String_o *)StringLiteral_1/*""*/;
   else
-  {
-    UILabel__set_text(v2->fields.skillName, v6, 0LL);
-    v9 = 1;
-    v8 = v2;
-  }
-  WarBoardOnboardSkillNameComponent__SetActive(v8, v9, v7);
-  ++v2->fields.skillDispIndex;
+    v8 = (System_String_o *)Item;
+  v9 = ~(_BYTE)skillNames;
+  UILabel__set_text(this->fields.skillName, v8, 0LL);
+  WarBoardOnboardSkillNameComponent__SetActive(this, v9 & 1, v10);
+  ++this->fields.skillDispIndex;
 }

@@ -1,87 +1,55 @@
 void __fastcall BattleSelectCommandComponent___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x0
+  __int64 v1; // x1
   __int64 v2; // x1
-  struct System_String_array *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
   __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v6; // x0
   __int64 v7; // x1
-  struct BattleSelectCommandComponent_StaticFields *static_fields; // x0
-  __int64 v9; // x0
-  __int64 v10; // x0
+  int32_t v8; // w2
+  int32_t v9; // w3
+  __int64 v10; // x19
+  int32_t v11; // w1
+  int32_t v12; // w2
+  int32_t v13; // w3
+  int32_t v14; // w1
+  int32_t v15; // w2
+  int32_t v16; // w3
+  int32_t v17; // w1
+  int32_t v18; // w2
+  int32_t v19; // w3
 
-  if ( (byte_438825F & 1) == 0 )
+  if ( (byte_48E4FA3 & 1) == 0 )
   {
-    sub_B775C4(&BattleSelectCommandComponent_TypeInfo);
-    sub_B775C4(&string___TypeInfo);
-    sub_B775C4(&StringLiteral_17965/*"commandcard_select_3rd"*/);
-    sub_B775C4(&StringLiteral_17964/*"commandcard_select_2nd"*/);
-    sub_B775C4(&StringLiteral_17963/*"commandcard_select_1st"*/);
-    byte_438825F = 1;
+    sub_1B00CCC(&BattleSelectCommandComponent_TypeInfo, v1);
+    sub_1B00CCC(&string___TypeInfo, v2);
+    sub_1B00CCC(&StringLiteral_17920/*"commandcard_select_3rd"*/, v3);
+    sub_1B00CCC(&StringLiteral_17919/*"commandcard_select_2nd"*/, v4);
+    sub_1B00CCC(&StringLiteral_17918/*"commandcard_select_1st"*/, v5);
+    byte_48E4FA3 = 1;
   }
-  v1 = sub_B775DC(string___TypeInfo, 3LL);
-  if ( !v1 )
-    sub_B7769C(0LL, v2);
-  v3 = (struct System_String_array *)v1;
-  v4 = StringLiteral_17963/*"commandcard_select_1st"*/;
-  if ( StringLiteral_17963/*"commandcard_select_1st"*/ )
+  v6 = sub_1B00D74(string___TypeInfo, 3LL);
+  if ( !v6 )
+    sub_1B00F28(0LL, v7);
+  v10 = v6;
+  if ( !*(_DWORD *)(v6 + 24)
+    || (v11 = StringLiteral_17918/*"commandcard_select_1st"*/,
+        *(_QWORD *)(v6 + 32) = StringLiteral_17918/*"commandcard_select_1st"*/,
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)(v6 + 32), v11, v8, v9),
+        *(_DWORD *)(v10 + 24) <= 1u)
+    || (v14 = StringLiteral_17919/*"commandcard_select_2nd"*/,
+        *(_QWORD *)(v10 + 40) = StringLiteral_17919/*"commandcard_select_2nd"*/,
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)(v10 + 40), v14, v12, v13),
+        *(_DWORD *)(v10 + 24) <= 2u) )
   {
-    v4 = sub_B77684(StringLiteral_17963/*"commandcard_select_1st"*/, v3->obj.klass->_1.element_class);
-    if ( !v4 )
-      goto LABEL_21;
-    v5 = StringLiteral_17963/*"commandcard_select_1st"*/;
+    sub_1B00F30(v6, v7);
   }
-  else
-  {
-    v5 = 0LL;
-  }
-  if ( !v3->max_length )
-    goto LABEL_20;
-  v3->m_Items[0] = (System_String_o *)v5;
-  sub_B77560(v3->m_Items);
-  v4 = StringLiteral_17964/*"commandcard_select_2nd"*/;
-  if ( StringLiteral_17964/*"commandcard_select_2nd"*/ )
-  {
-    v4 = sub_B77684(StringLiteral_17964/*"commandcard_select_2nd"*/, v3->obj.klass->_1.element_class);
-    if ( !v4 )
-      goto LABEL_21;
-    v6 = StringLiteral_17964/*"commandcard_select_2nd"*/;
-  }
-  else
-  {
-    v6 = 0LL;
-  }
-  if ( v3->max_length <= 1 )
-    goto LABEL_20;
-  v3->m_Items[1] = (System_String_o *)v6;
-  sub_B77560(&v3->m_Items[1]);
-  v4 = StringLiteral_17965/*"commandcard_select_3rd"*/;
-  if ( StringLiteral_17965/*"commandcard_select_3rd"*/ )
-  {
-    v4 = sub_B77684(StringLiteral_17965/*"commandcard_select_3rd"*/, v3->obj.klass->_1.element_class);
-    if ( v4 )
-    {
-      v7 = StringLiteral_17965/*"commandcard_select_3rd"*/;
-      goto LABEL_18;
-    }
-LABEL_21:
-    v10 = sub_B776BC();
-    sub_B77668(v10, 0LL);
-  }
-  v7 = 0LL;
-LABEL_18:
-  if ( v3->max_length <= 2 )
-  {
-LABEL_20:
-    v9 = sub_B776C8(v4);
-    sub_B77668(v9, 0LL);
-  }
-  v3->m_Items[2] = (System_String_o *)v7;
-  sub_B77560(&v3->m_Items[2]);
-  static_fields = BattleSelectCommandComponent_TypeInfo->static_fields;
-  static_fields->frameFileList = v3;
-  sub_B77560(static_fields);
+  v17 = StringLiteral_17920/*"commandcard_select_3rd"*/;
+  *(_QWORD *)(v10 + 48) = StringLiteral_17920/*"commandcard_select_3rd"*/;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v10 + 48), v17, v15, v16);
+  BattleSelectCommandComponent_TypeInfo->static_fields->frameFileList = (struct System_String_array *)v10;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)BattleSelectCommandComponent_TypeInfo->static_fields, v10, v18, v19);
 }
 
 
@@ -97,62 +65,59 @@ void __fastcall BattleSelectCommandComponent__setIndex(
         int32_t index,
         const MethodInfo *method)
 {
-  UISprite_o *markSprite; // x21
+  __int64 v5; // x1
+  __int64 v6; // x1
   UnityEngine_Component_o *gameObject; // x0
-  __int64 v7; // x8
-  UnityEngine_Object_o *Component_srcLineSprite; // x19
-  __int64 v9; // x0
+  UISprite_o *markSprite; // x21
+  __int64 v9; // x8
+  Il2CppObject *Component_object; // x19
 
-  if ( (byte_438825E & 1) == 0 )
+  if ( (byte_48E4FA2 & 1) == 0 )
   {
-    sub_B775C4(&BattleSelectCommandComponent_TypeInfo);
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_TweenScale___);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438825E = 1;
+    sub_1B00CCC(&BattleSelectCommandComponent_TypeInfo, *(_QWORD *)&index);
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_TweenScale___, v5);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v6);
+    byte_48E4FA2 = 1;
   }
-  markSprite = this->fields.markSprite;
   gameObject = (UnityEngine_Component_o *)BattleSelectCommandComponent_TypeInfo;
-  if ( (BYTE3(BattleSelectCommandComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !BattleSelectCommandComponent_TypeInfo->_2.cctor_finished )
+  markSprite = this->fields.markSprite;
+  if ( !BattleSelectCommandComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleSelectCommandComponent_TypeInfo);
     gameObject = (UnityEngine_Component_o *)BattleSelectCommandComponent_TypeInfo;
   }
-  v7 = **(_QWORD **)&gameObject[7].fields.m_CachedPtr;
-  if ( !v7 )
-    goto LABEL_18;
-  if ( *(_DWORD *)(v7 + 24) <= (unsigned int)index )
-  {
-    v9 = sub_B776C8(gameObject);
-    sub_B77668(v9, 0LL);
-  }
+  v9 = **(_QWORD **)&gameObject[7].fields.m_CachedPtr;
+  if ( !v9 )
+    goto LABEL_16;
+  if ( *(_DWORD *)(v9 + 24) <= (unsigned int)index )
+    sub_1B00F30(gameObject, *(_QWORD *)&index);
   if ( !markSprite )
-    goto LABEL_18;
-  UISprite__set_spriteName(markSprite, *(System_String_o **)(v7 + 8LL * index + 32), 0LL);
+    goto LABEL_16;
+  UISprite__set_spriteName(markSprite, *(System_String_o **)(v9 + 8LL * index + 32), 0LL);
   gameObject = (UnityEngine_Component_o *)this->fields.markSprite;
   if ( !gameObject )
-    goto LABEL_18;
+    goto LABEL_16;
   gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL);
   if ( !gameObject )
-    goto LABEL_18;
-  Component_srcLineSprite = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                                      (UnityEngine_GameObject_o *)gameObject,
-                                                      (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_TweenScale___);
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+    goto LABEL_16;
+  Component_object = UnityEngine_GameObject__GetComponent_object_(
+                       (UnityEngine_GameObject_o *)gameObject,
+                       (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_TweenScale___);
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  gameObject = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(Component_srcLineSprite, 0LL, 0LL);
+  gameObject = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(
+                                            (UnityEngine_Object_o *)Component_object,
+                                            0LL,
+                                            0LL);
   if ( ((unsigned __int8)gameObject & 1) != 0 )
   {
-    if ( Component_srcLineSprite )
+    if ( Component_object )
     {
-      UITweener__ResetToBeginning((UITweener_o *)Component_srcLineSprite, 0LL);
-      UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_srcLineSprite, 1, 0LL);
+      UITweener__ResetToBeginning((UITweener_o *)Component_object, 0LL);
+      UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 1, 0LL);
       return;
     }
-LABEL_18:
-    sub_B7769C(gameObject, *(_QWORD *)&index);
+LABEL_16:
+    sub_1B00F28(gameObject, *(_QWORD *)&index);
   }
 }

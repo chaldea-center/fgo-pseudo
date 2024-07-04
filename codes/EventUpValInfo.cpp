@@ -7,45 +7,30 @@ void __fastcall EventUpValInfo___ctor(
         int32_t npcFlag,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v13; // x25
-  System_String_array **v14; // x2
-  System_String_array **v15; // x3
-  System_Boolean_array **v16; // x4
-  System_Int32_array **v17; // x5
-  System_Int32_array *v18; // x6
-  System_Int32_array *v19; // x7
-  EventUpValInfo_Fields *p_fields; // x23
-  System_String_array **v21; // x2
-  System_String_array **v22; // x3
-  System_Boolean_array **v23; // x4
-  System_Int32_array **v24; // x5
-  System_Int32_array *v25; // x6
-  System_Int32_array *v26; // x7
+  __int64 v13; // x1
+  System_Collections_Generic_List_object__o *v14; // x25
+  int32_t v15; // w2
+  int32_t v16; // w3
+  EventUpValInfo_Fields *p_fields; // x22
+  int32_t v18; // w2
+  int32_t v19; // w3
 
-  if ( (byte_438A6FF & 1) == 0 )
+  if ( (byte_48E240B & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_EventDropUpValInfo___ctor__);
-    sub_B775C4(&System_Collections_Generic_List_EventDropUpValInfo__TypeInfo);
-    byte_438A6FF = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventDropUpValInfo___ctor__, setupInfo);
+    sub_1B00CCC(&System_Collections_Generic_List_EventDropUpValInfo__TypeInfo, v13);
+    byte_48E240B = 1;
   }
-  v13 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_EventDropUpValInfo__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v13,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_EventDropUpValInfo___ctor__);
-  this->fields.dropList = (struct System_Collections_Generic_List_EventDropUpValInfo__o *)v13;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.dropList,
-    (System_Int32_array **)v13,
+  v14 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_EventDropUpValInfo__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
     v14,
-    v15,
-    v16,
-    v17,
-    v18,
-    v19);
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_EventDropUpValInfo___ctor__);
+  this->fields.dropList = (struct System_Collections_Generic_List_EventDropUpValInfo__o *)v14;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.dropList, (int32_t)v14, v15, v16);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.setupInfo = setupInfo;
   p_fields = &this->fields;
-  sub_B77560((BattleServantConfConponent_o *)p_fields, (System_Int32_array **)setupInfo, v21, v22, v23, v24, v25, v26);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)p_fields, (int32_t)setupInfo, v18, v19);
   p_fields->svtId = svtId;
   p_fields->limitCount = limitCount;
   p_fields->dispLimitCount = dispLimitCount;
@@ -59,142 +44,197 @@ void __fastcall EventUpValInfo__ClearEquipSvtId(EventUpValInfo_o *this, const Me
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 EventDropItemUpValInfo_array *__fastcall EventUpValInfo__GetDropItemList(
         EventUpValInfo_o *this,
         int32_t member,
         const MethodInfo *method)
 {
-  DataManager_o *Instance; // x0
   __int64 v5; // x1
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v6; // x19
-  EventDropUpValInfo_o *current; // x23
-  unsigned int FuncType; // w0
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
   __int64 v9; // x1
-  int32_t equipSvtId; // w21
-  EventDropItemUpValInfo_o *v11; // x24
-  __int64 v12; // x0
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
   __int64 v13; // x1
-  ItemEntity_array *IndividualityList; // x0
-  __int64 v15; // x1
-  ItemEntity_array *v16; // x24
-  __int64 v17; // x8
-  unsigned __int64 v18; // x27
-  ItemEntity_o *v19; // x26
-  EventDropItemUpValInfo_o *v20; // x25
-  __int64 v21; // x0
-  __int64 v22; // x1
-  _BOOL8 v23; // x0
-  __int64 v24; // x1
+  __int64 v14; // x1
+  DataManager_o *Instance; // x0
+  __int64 v16; // x1
+  System_Collections_Generic_List_object__o *v17; // x19
+  _BOOL8 v18; // x0
+  __int64 v19; // x1
+  Il2CppObject *current; // x23
+  _DWORD *monitor; // x8
+  unsigned int v22; // w8
+  int32_t equipSvtId; // w22
+  EventDropItemUpValInfo_o *v24; // x24
+  const MethodInfo *v25; // x4
   __int64 v26; // x0
-  ItemMaster_o *MasterData_WarQuestSelectionMaster; // [xsp+8h] [xbp-98h]
-  System_Collections_Generic_List_Enumerator_T__o v29; // [xsp+18h] [xbp-88h] BYREF
-  System_Collections_Generic_List_Enumerator_T__o v30; // [xsp+30h] [xbp-70h] BYREF
+  __int64 v27; // x1
+  int32_t v28; // w2
+  int32_t v29; // w3
+  struct System_Object_array *items; // x8
+  _QWORD *v31; // x9
+  __int64 size; // x10
+  Il2CppClass **v33; // x0
+  ItemEntity_array *IndividualityList; // x0
+  __int64 v35; // x1
+  ItemEntity_array *v36; // x24
+  __int64 v37; // x8
+  unsigned __int64 v38; // x29
+  ItemEntity_o *v39; // x26
+  EventDropItemUpValInfo_o *v40; // x25
+  const MethodInfo *v41; // x4
+  __int64 v42; // x0
+  __int64 v43; // x1
+  int32_t v44; // w2
+  int32_t v45; // w3
+  struct System_Object_array *v46; // x8
+  _QWORD *v47; // x9
+  __int64 v48; // x10
+  Il2CppClass **v49; // x0
+  ItemMaster_o *MasterData_object; // [xsp+0h] [xbp-A0h]
+  System_Collections_Generic_List_Enumerator_object__o v52; // [xsp+8h] [xbp-98h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v53; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_438A701 & 1) == 0 )
+  if ( (byte_48E240D & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__Dispose__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__MoveNext__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__get_Current__);
-    sub_B775C4(&EventDropItemUpValInfo_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventDropItemUpValInfo__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventDropUpValInfo__GetEnumerator__);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventDropItemUpValInfo__ToArray__);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventDropItemUpValInfo___ctor__);
-    sub_B775C4(&System_Collections_Generic_List_EventDropItemUpValInfo__TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438A701 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_ItemMaster___, *(_QWORD *)&member);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__Dispose__, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__MoveNext__, v6);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__get_Current__, v7);
+    sub_1B00CCC(&EventDropItemUpValInfo_TypeInfo, v8);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventDropItemUpValInfo__Add__, v9);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventDropUpValInfo__GetEnumerator__, v10);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventDropItemUpValInfo__ToArray__, v11);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventDropItemUpValInfo___ctor__, v12);
+    sub_1B00CCC(&System_Collections_Generic_List_EventDropItemUpValInfo__TypeInfo, v13);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
+    byte_48E240D = 1;
   }
-  memset(&v30, 0, sizeof(v30));
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  memset(&v53, 0, sizeof(v53));
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_29;
-  MasterData_WarQuestSelectionMaster = (ItemMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                         Instance,
-                                                         (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ItemMaster___);
-  v6 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_EventDropItemUpValInfo__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v6,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_EventDropItemUpValInfo___ctor__);
+    goto LABEL_41;
+  MasterData_object = (ItemMaster_o *)DataManager__GetMasterData_object_(
+                                        Instance,
+                                        (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_ItemMaster___);
+  v17 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_EventDropItemUpValInfo__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v17,
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_EventDropItemUpValInfo___ctor__);
   Instance = (DataManager_o *)this->fields.dropList;
   if ( !Instance )
-    goto LABEL_29;
-  System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-    &v29,
-    (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)Instance,
-    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_EventDropUpValInfo__GetEnumerator__);
-  v30 = v29;
+    goto LABEL_41;
+  System_Collections_Generic_List_object___GetEnumerator(
+    (System_Collections_Generic_List_Enumerator_T__o *)&v52,
+    (System_Collections_Generic_List_object__o *)Instance,
+    (const MethodInfo_33C24C8 *)Method_System_Collections_Generic_List_EventDropUpValInfo__GetEnumerator__);
+  v53 = v52;
   while ( 1 )
   {
-    v23 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-            &v30,
-            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__MoveNext__);
-    if ( !v23 )
+    v18 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v53,
+            (const MethodInfo_313E218 *)Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__MoveNext__);
+    if ( !v18 )
       break;
-    current = (EventDropUpValInfo_o *)v30.fields.current;
-    if ( !v30.fields.current )
-      sub_B7769C(v23, v24);
-    FuncType = EventDropUpValInfo__GetFuncType((EventDropUpValInfo_o *)v30.fields.current, 0LL);
-    if ( FuncType - 111 <= 0x15 && ((1 << (FuncType - 111)) & 0x240019) != 0
-      || FuncType <= 0x10 && ((1 << FuncType) & 0x10082) != 0 )
+    current = v53.fields._current;
+    if ( !v53.fields._current )
+      sub_1B00F28(v18, v19);
+    monitor = v53.fields._current[1].monitor;
+    if ( !monitor )
+      sub_1B00F28(v18, v19);
+    v22 = monitor[6];
+    if ( v22 - 111 <= 0x15 && ((1 << (v22 - 111)) & 0x240019) != 0 || v22 <= 0x10 && ((1 << v22) & 0x10082) != 0 )
     {
       equipSvtId = this->fields.equipSvtId;
-      v11 = (EventDropItemUpValInfo_o *)sub_B77694(EventDropItemUpValInfo_TypeInfo);
-      EventDropItemUpValInfo___ctor(v11, member, current, equipSvtId > 0, 0LL);
-      if ( !v6 )
-        sub_B7769C(v12, v13);
-      System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-        v6,
-        (EventMissionProgressRequest_Argument_ProgressData_o *)v11,
-        (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_EventDropItemUpValInfo__Add__);
+      v24 = (EventDropItemUpValInfo_o *)sub_1B00F18(EventDropItemUpValInfo_TypeInfo);
+      EventDropItemUpValInfo___ctor(v24, member, (EventDropUpValInfo_o *)current, equipSvtId > 0, v25);
+      if ( !v17 )
+        sub_1B00F28(v26, v27);
+      items = v17->fields._items;
+      v31 = Method_System_Collections_Generic_List_EventDropItemUpValInfo__Add__;
+      ++v17->fields._version;
+      if ( !items )
+        sub_1B00F28(v26, v27);
+      size = v17->fields._size;
+      if ( (unsigned int)size >= items->max_length )
+      {
+        System_Collections_Generic_List_object___AddWithResize(
+          v17,
+          (Il2CppObject *)v24,
+          *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+      }
+      else
+      {
+        v33 = &items->obj.klass + size;
+        v17->fields._size = size + 1;
+        v33[4] = (Il2CppClass *)v24;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)(v33 + 4), (int32_t)v24, v28, v29);
+      }
     }
     else
     {
-      if ( !MasterData_WarQuestSelectionMaster )
-        sub_B7769C(0LL, v9);
+      if ( !MasterData_object )
+        sub_1B00F28(0LL, v19);
       IndividualityList = ItemMaster__GetIndividualityList(
-                            MasterData_WarQuestSelectionMaster,
-                            current->fields.individuality,
+                            MasterData_object,
+                            (int32_t)v53.fields._current[2].klass,
                             0LL);
-      v16 = IndividualityList;
+      v36 = IndividualityList;
       if ( !IndividualityList )
-        sub_B7769C(0LL, v15);
-      v17 = *(_QWORD *)&IndividualityList->max_length;
-      if ( (int)v17 >= 1 )
+        sub_1B00F28(0LL, v35);
+      v37 = *(_QWORD *)&IndividualityList->max_length;
+      if ( (int)v37 >= 1 )
       {
-        v18 = 0LL;
+        v38 = 0LL;
         do
         {
-          if ( v18 >= (unsigned int)v17 )
+          if ( v38 >= (unsigned int)v37 )
+            sub_1B00F30(IndividualityList, v35);
+          v39 = v36->m_Items[v38];
+          v40 = (EventDropItemUpValInfo_o *)sub_1B00F18(EventDropItemUpValInfo_TypeInfo);
+          EventDropItemUpValInfo___ctor_37663404(v40, member, (EventDropUpValInfo_o *)current, v39, v41);
+          if ( !v17 )
+            sub_1B00F28(v42, v43);
+          v46 = v17->fields._items;
+          v47 = Method_System_Collections_Generic_List_EventDropItemUpValInfo__Add__;
+          ++v17->fields._version;
+          if ( !v46 )
+            sub_1B00F28(v42, v43);
+          v48 = v17->fields._size;
+          if ( (unsigned int)v48 >= v46->max_length )
           {
-            v26 = sub_B776C8(IndividualityList);
-            sub_B77668(v26, 0LL);
+            System_Collections_Generic_List_object___AddWithResize(
+              v17,
+              (Il2CppObject *)v40,
+              *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v47[4] + 192LL) + 112LL));
           }
-          v19 = v16->m_Items[v18];
-          v20 = (EventDropItemUpValInfo_o *)sub_B77694(EventDropItemUpValInfo_TypeInfo);
-          EventDropItemUpValInfo___ctor_30358492(v20, member, current, v19, 0LL);
-          if ( !v6 )
-            sub_B7769C(v21, v22);
-          System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-            v6,
-            (EventMissionProgressRequest_Argument_ProgressData_o *)v20,
-            (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_EventDropItemUpValInfo__Add__);
-          LODWORD(v17) = v16->max_length;
-          ++v18;
+          else
+          {
+            v49 = &v46->obj.klass + v48;
+            v17->fields._size = v48 + 1;
+            v49[4] = (Il2CppClass *)v40;
+            sub_1B00C70((ServantStatusBattleListViewItem_o *)(v49 + 4), (int32_t)v40, v44, v45);
+          }
+          LODWORD(v37) = v36->max_length;
+          ++v38;
         }
-        while ( (__int64)v18 < (int)v17 );
+        while ( (__int64)v38 < (int)v37 );
       }
     }
   }
-  System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-    &v30,
-    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__Dispose__);
-  if ( !v6 )
-LABEL_29:
-    sub_B7769C(Instance, v5);
-  return (EventDropItemUpValInfo_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
-                                           (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v6,
-                                           (const MethodInfo_30553E4 *)Method_System_Collections_Generic_List_EventDropItemUpValInfo__ToArray__);
+  System_Collections_Generic_List_Enumerator_object___Dispose(
+    &v53,
+    (const MethodInfo_313E214 *)Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__Dispose__);
+  if ( !v17 )
+LABEL_41:
+    sub_1B00F28(Instance, v16);
+  return (EventDropItemUpValInfo_array *)System_Collections_Generic_List_object___ToArray(
+                                           v17,
+                                           (const MethodInfo_33C3528 *)Method_System_Collections_Generic_List_EventDropItemUpValInfo__ToArray__);
 }
 
 
@@ -204,14 +244,16 @@ bool __fastcall EventUpValInfo__IsEmpry(EventUpValInfo_o *this, const MethodInfo
   struct System_Collections_Generic_List_EventDropUpValInfo__o *dropList; // x8
 
   v2 = this;
-  if ( (byte_438A700 & 1) == 0 )
+  if ( (byte_48E240C & 1) == 0 )
   {
-    this = (EventUpValInfo_o *)sub_B775C4(&Method_System_Collections_Generic_List_EventDropUpValInfo__get_Count__);
-    byte_438A700 = 1;
+    this = (EventUpValInfo_o *)sub_1B00CCC(
+                                 &Method_System_Collections_Generic_List_EventDropUpValInfo__get_Count__,
+                                 method);
+    byte_48E240C = 1;
   }
   dropList = v2->fields.dropList;
   if ( !dropList )
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   return dropList->fields._size < 1;
 }
 
@@ -225,57 +267,63 @@ bool __fastcall EventUpValInfo__IsEquipSvtId(EventUpValInfo_o *this, const Metho
 // local variable allocation has failed, the output may be wrong!
 void __fastcall EventUpValInfo__RemoveDropItem(EventUpValInfo_o *this, int32_t funcId, const MethodInfo *method)
 {
-  struct System_Collections_Generic_List_EventDropUpValInfo__o *dropList; // x0
-  _BOOL8 v6; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
+  __int64 v8; // x1
+  System_Collections_Generic_List_object__o *dropList; // x0
+  _BOOL8 v10; // x0
+  __int64 v11; // x1
   _DWORD *monitor; // x9
-  System_Collections_Generic_List_WarBoardManager_TaskList__o *v9; // x0
-  System_Collections_Generic_List_Enumerator_T__o v10; // [xsp+8h] [xbp-38h] BYREF
+  System_Collections_Generic_List_object__o *v13; // x0
+  System_Collections_Generic_List_Enumerator_object__o v14; // [xsp+8h] [xbp-68h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v15; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_438A702 & 1) == 0 )
+  if ( (byte_48E240E & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__Dispose__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__MoveNext__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__get_Current__);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventDropUpValInfo__GetEnumerator__);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventDropUpValInfo__Remove__);
-    byte_438A702 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__Dispose__, *(_QWORD *)&funcId);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__MoveNext__, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__get_Current__, v6);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventDropUpValInfo__GetEnumerator__, v7);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventDropUpValInfo__Remove__, v8);
+    byte_48E240E = 1;
   }
-  memset(&v10, 0, sizeof(v10));
-  dropList = this->fields.dropList;
+  memset(&v15, 0, sizeof(v15));
+  dropList = (System_Collections_Generic_List_object__o *)this->fields.dropList;
   if ( !dropList )
-    sub_B7769C(0LL, *(_QWORD *)&funcId);
-  System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-    &v10,
-    (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)dropList,
-    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_EventDropUpValInfo__GetEnumerator__);
+    sub_1B00F28(0LL, *(_QWORD *)&funcId);
+  System_Collections_Generic_List_object___GetEnumerator(
+    (System_Collections_Generic_List_Enumerator_T__o *)&v14,
+    dropList,
+    (const MethodInfo_33C24C8 *)Method_System_Collections_Generic_List_EventDropUpValInfo__GetEnumerator__);
+  v15 = v14;
   while ( 1 )
   {
-    v6 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-           &v10,
-           (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__MoveNext__);
-    if ( !v6 )
+    v10 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v15,
+            (const MethodInfo_313E218 *)Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__MoveNext__);
+    if ( !v10 )
       break;
-    if ( !v10.fields.current )
-      sub_B7769C(v6, v7);
-    monitor = v10.fields.current[1].monitor;
+    if ( !v15.fields._current )
+      sub_1B00F28(v10, v11);
+    monitor = v15.fields._current[1].monitor;
     if ( !monitor )
-      sub_B7769C(v6, v7);
+      sub_1B00F28(v10, v11);
     if ( monitor[4] == funcId )
     {
-      v9 = (System_Collections_Generic_List_WarBoardManager_TaskList__o *)this->fields.dropList;
-      if ( !v9 )
-        sub_B7769C(0LL, v7);
-      System_Collections_Generic_List_WarBoardManager_TaskList___Remove(
-        v9,
-        (WarBoardManager_TaskList_o *)v10.fields.current,
-        (const MethodInfo_3054C44 *)Method_System_Collections_Generic_List_EventDropUpValInfo__Remove__);
+      v13 = (System_Collections_Generic_List_object__o *)this->fields.dropList;
+      if ( !v13 )
+        sub_1B00F28(0LL, v11);
+      System_Collections_Generic_List_object___Remove(
+        v13,
+        v15.fields._current,
+        (const MethodInfo_33C2EF8 *)Method_System_Collections_Generic_List_EventDropUpValInfo__Remove__);
       break;
     }
   }
-  System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-    &v10,
-    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__Dispose__);
+  System_Collections_Generic_List_Enumerator_object___Dispose(
+    &v15,
+    (const MethodInfo_313E214 *)Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__Dispose__);
 }
 
 

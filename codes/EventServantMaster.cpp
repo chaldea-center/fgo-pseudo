@@ -1,80 +1,96 @@
 void __fastcall EventServantMaster___ctor(EventServantMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_438ECDF & 1) == 0 )
+  if ( (byte_48E2963 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_EventServantMaster__EventServantEntity__string___ctor__);
-    byte_438ECDF = 1;
+    sub_1B00CCC(&Method_DataMasterBase_EventServantMaster__EventServantEntity__string___ctor__, method);
+    byte_48E2963 = 1;
   }
-  DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
-    (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
+  DataMasterBase_object__object__object____ctor(
+    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     122,
-    (const MethodInfo_21FBC48 *)Method_DataMasterBase_EventServantMaster__EventServantEntity__string___ctor__);
+    (const MethodInfo_2FE6D64 *)Method_DataMasterBase_EventServantMaster__EventServantEntity__string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 EventServantEntity_array *__fastcall EventServantMaster__GetEntities(
         EventServantMaster_o *this,
         int32_t svtId,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v5; // x19
+  __int64 v5; // x1
   __int64 v6; // x1
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
+  __int64 v7; // x1
   __int64 v8; // x1
-  System_Collections_Generic_IEnumerator_T__o *Enumerator; // x20
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  System_Collections_Generic_List_object__o *v13; // x20
+  __int64 v14; // x1
+  System_Collections_ObjectModel_Collection_T__o *list; // x0
+  __int64 v16; // x1
+  System_Collections_Generic_IEnumerator_T__o *Enumerator; // x19
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  unsigned __int64 v11; // x10
-  int32_t *p_offset; // x11
+  __int64 v19; // x9
+  int32_t *p_offset; // x10
   __int64 p_method; // x0
-  System_Collections_Generic_IEnumerator_T__c *v14; // x8
-  unsigned __int64 v15; // x10
-  int32_t *v16; // x11
-  __int64 v17; // x0
-  EventMissionProgressRequest_Argument_ProgressData_o *v18; // x0
-  __int64 v19; // x1
-  __int64 v20; // x11
-  System_Collections_Generic_IEnumerator_T__c *v21; // x8
-  unsigned __int64 v22; // x10
-  int32_t *v23; // x11
-  __int64 v24; // x0
+  System_Collections_Generic_IEnumerator_T__c *v22; // x8
+  __int64 v23; // x9
+  int32_t *v24; // x10
+  __int64 v25; // x0
+  __int64 v26; // x0
+  __int64 v27; // x1
+  int32_t v28; // w2
+  int32_t v29; // w3
+  __int64 v30; // x8
+  __int64 methodPtr_low; // x11
+  struct System_Object_array *items; // x9
+  _QWORD *v33; // x10
+  __int64 size; // x11
+  Il2CppClass **v35; // x0
+  System_Collections_Generic_IEnumerator_T__c *v36; // x8
+  __int64 v37; // x9
+  int32_t *v38; // x10
+  __int64 v39; // x0
 
-  if ( (byte_438ECE3 & 1) == 0 )
+  if ( (byte_48E2967 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
-    sub_B775C4(&EventServantEntity_TypeInfo);
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    sub_B775C4(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
-    sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventServantEntity__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventServantEntity__ToArray__);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventServantEntity___ctor__);
-    sub_B775C4(&System_Collections_Generic_List_EventServantEntity__TypeInfo);
-    byte_438ECE3 = 1;
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, *(_QWORD *)&svtId);
+    sub_1B00CCC(&EventServantEntity_TypeInfo, v5);
+    sub_1B00CCC(&System_IDisposable_TypeInfo, v6);
+    sub_1B00CCC(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v7);
+    sub_1B00CCC(&System_Collections_IEnumerator_TypeInfo, v8);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventServantEntity__Add__, v9);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventServantEntity__ToArray__, v10);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventServantEntity___ctor__, v11);
+    sub_1B00CCC(&System_Collections_Generic_List_EventServantEntity__TypeInfo, v12);
+    byte_48E2967 = 1;
   }
-  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_EventServantEntity__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v5,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_EventServantEntity___ctor__);
-  list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
+  v13 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_EventServantEntity__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v13,
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_EventServantEntity___ctor__);
+  list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    goto LABEL_34;
-  Enumerator = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___GetEnumerator(
+    goto LABEL_38;
+  Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_2CC56C8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_2F83C88 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_B7769C(0LL, v8);
+    sub_1B00F28(0LL, v16);
   while ( 1 )
   {
     klass = Enumerator->klass;
-    if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
+    v19 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
-      v11 = 0LL;
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        ++v11;
+        --v19;
         p_offset += 4;
-        if ( v11 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+        if ( !v19 )
           goto LABEL_9;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -82,81 +98,98 @@ EventServantEntity_array *__fastcall EventServantMaster__GetEntities(
     else
     {
 LABEL_9:
-      p_method = sub_B0F4C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1B52CAC(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
       break;
-    v14 = Enumerator->klass;
-    if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
+    v22 = Enumerator->klass;
+    v23 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
-      v15 = 0LL;
-      v16 = &v14->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v16 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
+      v24 = &v22->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v24 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
       {
-        ++v15;
-        v16 += 4;
-        if ( v15 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+        --v23;
+        v24 += 4;
+        if ( !v23 )
           goto LABEL_16;
       }
-      v17 = (__int64)&v14->vtable[*v16].method;
+      v25 = (__int64)&v22->vtable[*v24].method;
     }
     else
     {
 LABEL_16:
-      v17 = sub_B0F4C0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v25 = sub_1B52CAC(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
-    v18 = (EventMissionProgressRequest_Argument_ProgressData_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v17)(
-                                                                   Enumerator,
-                                                                   *(_QWORD *)(v17 + 8));
-    if ( v18 )
+    v26 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v25)(
+            Enumerator,
+            *(_QWORD *)(v25 + 8));
+    v30 = v26;
+    if ( v26 )
     {
-      v20 = *(&EventServantEntity_TypeInfo->_2.bitflags2 + 1);
-      if ( *(&v18->klass->_2.bitflags2 + 1) < (unsigned int)v20
-        || (EventServantEntity_c *)v18->klass->_2.typeHierarchy[v20 - 1] != EventServantEntity_TypeInfo )
+      methodPtr_low = LOBYTE(EventServantEntity_TypeInfo->vtable._0_Equals.methodPtr);
+      if ( *(unsigned __int8 *)(*(_QWORD *)v26 + 304LL) < (unsigned int)methodPtr_low
+        || *(EventServantEntity_c **)(*(_QWORD *)(*(_QWORD *)v26 + 200LL) + 8 * methodPtr_low - 8) != EventServantEntity_TypeInfo )
       {
-        sub_B7769C(v18, v19);
+        sub_1B00F28(v26, v27);
       }
-      if ( v18->fields.missionConditionDetailId == svtId )
+      if ( *(_DWORD *)(v26 + 20) == svtId )
       {
-        if ( !v5 )
-          sub_B7769C(v18, v19);
-        System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-          v5,
-          v18,
-          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_EventServantEntity__Add__);
+        if ( !v13 )
+          sub_1B00F28(v26, v27);
+        items = v13->fields._items;
+        v33 = Method_System_Collections_Generic_List_EventServantEntity__Add__;
+        ++v13->fields._version;
+        if ( !items )
+          sub_1B00F28(v26, v27);
+        size = v13->fields._size;
+        if ( (unsigned int)size >= items->max_length )
+        {
+          System_Collections_Generic_List_object___AddWithResize(
+            v13,
+            (Il2CppObject *)v26,
+            *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
+        }
+        else
+        {
+          v35 = &items->obj.klass + size;
+          v13->fields._size = size + 1;
+          v35[4] = (Il2CppClass *)v30;
+          sub_1B00C70((ServantStatusBattleListViewItem_o *)(v35 + 4), v30, v28, v29);
+        }
       }
     }
   }
-  v21 = Enumerator->klass;
-  if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
+  v36 = Enumerator->klass;
+  v37 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
   {
-    v22 = 0LL;
-    v23 = &v21->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v23 - 1) != System_IDisposable_TypeInfo )
+    v38 = &v36->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v38 - 1) != System_IDisposable_TypeInfo )
     {
-      ++v22;
-      v23 += 4;
-      if ( v22 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
-        goto LABEL_28;
+      --v37;
+      v38 += 4;
+      if ( !v37 )
+        goto LABEL_31;
     }
-    v24 = (__int64)&v21->vtable[*v23].method;
+    v39 = (__int64)&v36->vtable[*v38].method;
   }
   else
   {
-LABEL_28:
-    v24 = sub_B0F4C0(Enumerator, System_IDisposable_TypeInfo, 0LL);
+LABEL_31:
+    v39 = sub_1B52CAC(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
-  list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v24)(
-                                                                                       Enumerator,
-                                                                                       *(_QWORD *)(v24 + 8));
-  if ( !v5 )
-LABEL_34:
-    sub_B7769C(list, v6);
-  return (EventServantEntity_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
-                                       (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v5,
-                                       (const MethodInfo_30553E4 *)Method_System_Collections_Generic_List_EventServantEntity__ToArray__);
+  list = (System_Collections_ObjectModel_Collection_T__o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v39)(
+                                                             Enumerator,
+                                                             *(_QWORD *)(v39 + 8));
+  if ( !v13 )
+LABEL_38:
+    sub_1B00F28(list, v14);
+  return (EventServantEntity_array *)System_Collections_Generic_List_object___ToArray(
+                                       v13,
+                                       (const MethodInfo_33C3528 *)Method_System_Collections_Generic_List_EventServantEntity__ToArray__);
 }
 
 
@@ -167,24 +200,22 @@ EventServantEntity_o *__fastcall EventServantMaster__GetEntity(
         int32_t svtId,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x1
+  __int64 v7; // x1
+  Il2CppObject *PK; // x1
 
-  if ( (byte_438ECDD & 1) == 0 )
+  if ( (byte_48E2961 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_EventServantMaster__EventServantEntity__string__GetEntity__);
-    sub_B775C4(&EventServantEntity_TypeInfo);
-    byte_438ECDD = 1;
+    sub_1B00CCC(&Method_DataMasterBase_EventServantMaster__EventServantEntity__string__GetEntity__, *(_QWORD *)&eventId);
+    sub_1B00CCC(&EventServantEntity_TypeInfo, v7);
+    byte_48E2961 = 1;
   }
-  if ( (BYTE3(EventServantEntity_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !EventServantEntity_TypeInfo->_2.cctor_finished )
-  {
+  if ( !EventServantEntity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventServantEntity_TypeInfo);
-  }
-  PK = EventServantEntity__CreatePK(eventId, svtId, *(const MethodInfo **)&svtId);
-  return (EventServantEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
-                                   (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
+  PK = (Il2CppObject *)EventServantEntity__CreatePK(eventId, svtId, *(const MethodInfo **)&svtId);
+  return (EventServantEntity_o *)DataMasterBase_object__object__object___GetEntity(
+                                   (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                    PK,
-                                   (const MethodInfo_21FBCE4 *)Method_DataMasterBase_EventServantMaster__EventServantEntity__string__GetEntity__);
+                                   (const MethodInfo_2FE6DA4 *)Method_DataMasterBase_EventServantMaster__EventServantEntity__string__GetEntity__);
 }
 
 
@@ -196,25 +227,23 @@ bool __fastcall EventServantMaster__TryGetEntity(
         int32_t svtId,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x2
+  __int64 v9; // x1
+  Il2CppObject *PK; // x2
 
-  if ( (byte_438ECDE & 1) == 0 )
+  if ( (byte_48E2962 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_EventServantMaster__EventServantEntity__string__TryGetEntity__);
-    sub_B775C4(&EventServantEntity_TypeInfo);
-    byte_438ECDE = 1;
+    sub_1B00CCC(&Method_DataMasterBase_EventServantMaster__EventServantEntity__string__TryGetEntity__, entity);
+    sub_1B00CCC(&EventServantEntity_TypeInfo, v9);
+    byte_48E2962 = 1;
   }
-  if ( (BYTE3(EventServantEntity_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !EventServantEntity_TypeInfo->_2.cctor_finished )
-  {
+  if ( !EventServantEntity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventServantEntity_TypeInfo);
-  }
-  PK = EventServantEntity__CreatePK(eventId, svtId, *(const MethodInfo **)&eventId);
-  return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
-           (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
-           (WarQuestSelectionEntity_o **)entity,
+  PK = (Il2CppObject *)EventServantEntity__CreatePK(eventId, svtId, *(const MethodInfo **)&eventId);
+  return DataMasterBase_object__object__object___TryGetEntity(
+           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
+           (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_21FBD3C *)Method_DataMasterBase_EventServantMaster__EventServantEntity__string__TryGetEntity__);
+           (const MethodInfo_2FE6DF4 *)Method_DataMasterBase_EventServantMaster__EventServantEntity__string__TryGetEntity__);
 }
 
 
@@ -224,224 +253,256 @@ EventServantEntity_o *__fastcall EventServantMaster__getEntity(
         int32_t svtId,
         const MethodInfo *method)
 {
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
+  System_Collections_ObjectModel_Collection_T__o *list; // x0
   int32_t Count; // w0
-  int32_t v7; // w21
-  int32_t v8; // w22
+  int32_t v9; // w21
+  int32_t v10; // w22
   EventServantEntity_o *result; // x0
-  __int64 v10; // x10
+  __int64 methodPtr_low; // x10
 
-  if ( (byte_438ECE0 & 1) == 0 )
+  if ( (byte_48E2964 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B775C4(&EventServantEntity_TypeInfo);
-    byte_438ECE0 = 1;
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&svtId);
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
+    sub_1B00CCC(&EventServantEntity_TypeInfo, v6);
+    byte_48E2964 = 1;
   }
-  list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
+  list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_14;
-  Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
+  Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-  if ( Count >= 1 )
-  {
-    v7 = Count;
-    v8 = 0;
-    while ( 1 )
-    {
-      list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
-      if ( !list )
-        break;
-      result = (EventServantEntity_o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
-                                         list,
-                                         v8,
-                                         (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-      if ( result )
-      {
-        v10 = *(&EventServantEntity_TypeInfo->_2.bitflags2 + 1);
-        if ( *(&result->klass->_2.bitflags2 + 1) >= (unsigned int)v10
-          && (EventServantEntity_c *)result->klass->_2.typeHierarchy[v10 - 1] == EventServantEntity_TypeInfo
-          && result->fields.svtId == svtId )
-        {
-          return result;
-        }
-      }
-      if ( ++v8 >= v7 )
-        return 0LL;
-    }
-LABEL_14:
-    sub_B7769C(list, *(_QWORD *)&svtId);
-  }
-  return 0LL;
-}
-
-
-EventServantEntity_o *__fastcall EventServantMaster__getEntityServantIgnoreEnd(
-        EventServantMaster_o *this,
-        int32_t svtId,
-        const MethodInfo *method)
-{
-  __int64 v5; // x21
-  EventMissionProgressRequest_Argument_ProgressData_o *v6; // x1
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
-  int32_t Count; // w22
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v9; // x24
-  System_String_array **v10; // x2
-  System_String_array **v11; // x3
-  System_Boolean_array **v12; // x4
-  System_Int32_array **v13; // x5
-  System_Int32_array *v14; // x6
-  System_Int32_array *v15; // x7
-  void **v16; // x23
-  int32_t v17; // w24
-  __int64 v18; // x10
-  System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__o *v19; // x19
-  System_Predicate_peRenderTexture_ChangeLayerObject__o *v20; // x20
-
-  if ( (byte_438ECE1 & 1) == 0 )
-  {
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B775C4(&EventServantEntity_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventServantEntity__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventServantEntity__Find__);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventServantEntity___ctor__);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventServantEntity__get_Count__);
-    sub_B775C4(&System_Collections_Generic_List_EventServantEntity__TypeInfo);
-    sub_B775C4(&Method_System_Predicate_EventServantEntity___ctor__);
-    sub_B775C4(&System_Predicate_EventServantEntity__TypeInfo);
-    sub_B775C4(&Method_EventServantMaster___c__DisplayClass4_0__getEntityServantIgnoreEnd_b__0__);
-    sub_B775C4(&EventServantMaster___c__DisplayClass4_0_TypeInfo);
-    byte_438ECE1 = 1;
-  }
-  v5 = sub_B77694(EventServantMaster___c__DisplayClass4_0_TypeInfo);
-  EventServantMaster___c__DisplayClass4_0___ctor((EventServantMaster___c__DisplayClass4_0_o *)v5, 0LL);
-  list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
-  if ( !list )
-    goto LABEL_19;
-  Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
-            list,
-            (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-  v9 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_EventServantEntity__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v9,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_EventServantEntity___ctor__);
-  if ( !v5 )
-    goto LABEL_19;
-  *(_QWORD *)(v5 + 16) = v9;
-  v16 = (void **)(v5 + 16);
-  sub_B77560((BattleServantConfConponent_o *)(v5 + 16), (System_Int32_array **)v9, v10, v11, v12, v13, v14, v15);
-  if ( Count >= 1 )
-  {
-    v17 = 0;
-    while ( 1 )
-    {
-      list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
-      if ( !list )
-        break;
-      list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
-                                                                                           list,
-                                                                                           v17,
-                                                                                           (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-      if ( list )
-      {
-        v6 = (EventMissionProgressRequest_Argument_ProgressData_o *)list;
-        v18 = *(&EventServantEntity_TypeInfo->_2.bitflags2 + 1);
-        if ( *(&list->klass->_2.bitflags2 + 1) >= (unsigned int)v18
-          && (EventServantEntity_c *)list->klass->_2.typeHierarchy[v18 - 1] == EventServantEntity_TypeInfo
-          && HIDWORD(list->fields.items) == svtId )
-        {
-          list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)*v16;
-          if ( !*v16 )
-            break;
-          System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-            (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)list,
-            v6,
-            (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_EventServantEntity__Add__);
-        }
-      }
-      if ( ++v17 >= Count )
-        goto LABEL_15;
-    }
-LABEL_19:
-    sub_B7769C(list, v6);
-  }
-LABEL_15:
-  v19 = (System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__o *)*v16;
-  if ( !*v16 )
-    goto LABEL_19;
-  if ( v19->fields._size < 1 )
-    return 0LL;
-  v20 = (System_Predicate_peRenderTexture_ChangeLayerObject__o *)sub_B77694(System_Predicate_EventServantEntity__TypeInfo);
-  System_Predicate_peRenderTexture_ChangeLayerObject____ctor(
-    v20,
-    (Il2CppObject *)v5,
-    Method_EventServantMaster___c__DisplayClass4_0__getEntityServantIgnoreEnd_b__0__,
-    (const MethodInfo_2C3248C *)Method_System_Predicate_EventServantEntity___ctor__);
-  return (EventServantEntity_o *)System_Collections_Generic_List_peRenderTexture_ChangeLayerObject___Find(
-                                   v19,
-                                   (System_Predicate_T__o *)v20,
-                                   (const MethodInfo_3053B58 *)Method_System_Collections_Generic_List_EventServantEntity__Find__);
-}
-
-
-// local variable allocation has failed, the output may be wrong!
-EventServantEntity_o *__fastcall EventServantMaster__getEntity_32206128(
-        EventServantMaster_o *this,
-        int32_t eventId,
-        int32_t svtId,
-        const MethodInfo *method)
-{
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
-  int32_t Count; // w0
-  int32_t v9; // w22
-  int32_t v10; // w23
-  EventServantEntity_o *result; // x0
-  __int64 v12; // x10
-
-  if ( (byte_438ECE2 & 1) == 0 )
-  {
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B775C4(&EventServantEntity_TypeInfo);
-    byte_438ECE2 = 1;
-  }
-  list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
-  if ( !list )
-    goto LABEL_15;
-  Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
-            list,
-            (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_2F836B0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
     v9 = Count;
     v10 = 0;
     while ( 1 )
     {
-      list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
+      list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
       if ( !list )
         break;
-      result = (EventServantEntity_o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
+      result = (EventServantEntity_o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                          list,
                                          v10,
-                                         (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                         (const MethodInfo_2F83740 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( result )
       {
-        v12 = *(&EventServantEntity_TypeInfo->_2.bitflags2 + 1);
-        if ( *(&result->klass->_2.bitflags2 + 1) >= (unsigned int)v12
-          && (EventServantEntity_c *)result->klass->_2.typeHierarchy[v12 - 1] == EventServantEntity_TypeInfo
+        methodPtr_low = LOBYTE(EventServantEntity_TypeInfo->vtable._0_Equals.methodPtr);
+        if ( LOBYTE(result->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low
+          && (EventServantEntity_c *)result->klass->_2.typeHierarchy[methodPtr_low - 1] == EventServantEntity_TypeInfo
+          && result->fields.svtId == svtId )
+        {
+          return result;
+        }
+      }
+      if ( v9 == ++v10 )
+        return 0LL;
+    }
+LABEL_14:
+    sub_1B00F28(list, *(_QWORD *)&svtId);
+  }
+  return 0LL;
+}
+
+
+// local variable allocation has failed, the output may be wrong!
+EventServantEntity_o *__fastcall EventServantMaster__getEntityServantIgnoreEnd(
+        EventServantMaster_o *this,
+        int32_t svtId,
+        const MethodInfo *method)
+{
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x21
+  Il2CppObject *v16; // x1
+  System_Collections_ObjectModel_Collection_T__o *list; // x0
+  int32_t Count; // w22
+  System_Collections_Generic_List_object__o *v19; // x24
+  int32_t v20; // w2
+  int32_t v21; // w3
+  void **v22; // x23
+  int32_t v23; // w24
+  int32_t v24; // w2
+  int32_t v25; // w3
+  __int64 methodPtr_low; // x10
+  struct System_Collections_Generic_IList_T__o *items; // x8
+  _QWORD *v28; // x9
+  __int64 klass_low; // x10
+  __int64 v30; // x8
+  System_Collections_Generic_List_object__o *v31; // x19
+  System_Predicate_object__o *v32; // x20
+
+  if ( (byte_48E2965 & 1) == 0 )
+  {
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&svtId);
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
+    sub_1B00CCC(&EventServantEntity_TypeInfo, v6);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventServantEntity__Add__, v7);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventServantEntity__Find__, v8);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventServantEntity___ctor__, v9);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventServantEntity__get_Count__, v10);
+    sub_1B00CCC(&System_Collections_Generic_List_EventServantEntity__TypeInfo, v11);
+    sub_1B00CCC(&System_Predicate_EventServantEntity__TypeInfo, v12);
+    sub_1B00CCC(&Method_EventServantMaster___c__DisplayClass4_0__getEntityServantIgnoreEnd_b__0__, v13);
+    sub_1B00CCC(&EventServantMaster___c__DisplayClass4_0_TypeInfo, v14);
+    byte_48E2965 = 1;
+  }
+  v15 = sub_1B00F18(EventServantMaster___c__DisplayClass4_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v15, 0LL);
+  list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
+  if ( !list )
+    goto LABEL_22;
+  Count = System_Collections_ObjectModel_Collection_object___get_Count(
+            list,
+            (const MethodInfo_2F836B0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+  v19 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_EventServantEntity__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v19,
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_EventServantEntity___ctor__);
+  if ( !v15 )
+    goto LABEL_22;
+  *(_QWORD *)(v15 + 16) = v19;
+  v22 = (void **)(v15 + 16);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v15 + 16), (int32_t)v19, v20, v21);
+  if ( Count >= 1 )
+  {
+    v23 = 0;
+    while ( 1 )
+    {
+      list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
+      if ( !list )
+        break;
+      list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
+                                                                 list,
+                                                                 v23,
+                                                                 (const MethodInfo_2F83740 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+      if ( list )
+      {
+        v16 = (Il2CppObject *)list;
+        methodPtr_low = LOBYTE(EventServantEntity_TypeInfo->vtable._0_Equals.methodPtr);
+        if ( LOBYTE(list->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low
+          && (EventServantEntity_c *)list->klass->_2.typeHierarchy[methodPtr_low - 1] == EventServantEntity_TypeInfo
+          && HIDWORD(list->fields.items) == svtId )
+        {
+          list = (System_Collections_ObjectModel_Collection_T__o *)*v22;
+          if ( !*v22 )
+            break;
+          items = list->fields.items;
+          v28 = Method_System_Collections_Generic_List_EventServantEntity__Add__;
+          ++HIDWORD(list[1].klass);
+          if ( !items )
+            break;
+          klass_low = SLODWORD(list[1].klass);
+          if ( (unsigned int)klass_low >= LODWORD(items[1].monitor) )
+          {
+            System_Collections_Generic_List_object___AddWithResize(
+              (System_Collections_Generic_List_object__o *)list,
+              v16,
+              *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+          }
+          else
+          {
+            v30 = (__int64)items + 8 * klass_low;
+            LODWORD(list[1].klass) = klass_low + 1;
+            *(_QWORD *)(v30 + 32) = v16;
+            sub_1B00C70((ServantStatusBattleListViewItem_o *)(v30 + 32), (int32_t)v16, v24, v25);
+          }
+        }
+      }
+      if ( Count == ++v23 )
+        goto LABEL_18;
+    }
+LABEL_22:
+    sub_1B00F28(list, v16);
+  }
+LABEL_18:
+  v31 = (System_Collections_Generic_List_object__o *)*v22;
+  if ( !*v22 )
+    goto LABEL_22;
+  if ( v31->fields._size < 1 )
+    return 0LL;
+  v32 = (System_Predicate_object__o *)sub_1B00F18(System_Predicate_EventServantEntity__TypeInfo);
+  System_Predicate_object____ctor(
+    v32,
+    (Il2CppObject *)v15,
+    Method_EventServantMaster___c__DisplayClass4_0__getEntityServantIgnoreEnd_b__0__,
+    0LL);
+  return (EventServantEntity_o *)System_Collections_Generic_List_object___Find(
+                                   v31,
+                                   (System_Predicate_T__o *)v32,
+                                   (const MethodInfo_33C2038 *)Method_System_Collections_Generic_List_EventServantEntity__Find__);
+}
+
+
+// local variable allocation has failed, the output may be wrong!
+EventServantEntity_o *__fastcall EventServantMaster__getEntity_38029488(
+        EventServantMaster_o *this,
+        int32_t eventId,
+        int32_t svtId,
+        const MethodInfo *method)
+{
+  __int64 v7; // x1
+  __int64 v8; // x1
+  System_Collections_ObjectModel_Collection_T__o *list; // x0
+  int32_t Count; // w0
+  int32_t v11; // w22
+  int32_t v12; // w23
+  EventServantEntity_o *result; // x0
+  __int64 methodPtr_low; // x10
+
+  if ( (byte_48E2966 & 1) == 0 )
+  {
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
+    sub_1B00CCC(&EventServantEntity_TypeInfo, v8);
+    byte_48E2966 = 1;
+  }
+  list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
+  if ( !list )
+    goto LABEL_15;
+  Count = System_Collections_ObjectModel_Collection_object___get_Count(
+            list,
+            (const MethodInfo_2F836B0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+  if ( Count >= 1 )
+  {
+    v11 = Count;
+    v12 = 0;
+    while ( 1 )
+    {
+      list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
+      if ( !list )
+        break;
+      result = (EventServantEntity_o *)System_Collections_ObjectModel_Collection_object___get_Item(
+                                         list,
+                                         v12,
+                                         (const MethodInfo_2F83740 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+      if ( result )
+      {
+        methodPtr_low = LOBYTE(EventServantEntity_TypeInfo->vtable._0_Equals.methodPtr);
+        if ( LOBYTE(result->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low
+          && (EventServantEntity_c *)result->klass->_2.typeHierarchy[methodPtr_low - 1] == EventServantEntity_TypeInfo
           && result->fields.eventId == eventId
           && result->fields.svtId == svtId )
         {
           return result;
         }
       }
-      if ( ++v10 >= v9 )
+      if ( v11 == ++v12 )
         return 0LL;
     }
 LABEL_15:
-    sub_B7769C(list, *(_QWORD *)&eventId);
+    sub_1B00F28(list, *(_QWORD *)&eventId);
   }
   return 0LL;
 }
@@ -449,19 +510,20 @@ LABEL_15:
 
 void __fastcall EventServantMaster___c___cctor(const MethodInfo *method)
 {
-  Il2CppObject *v1; // x19
-  struct EventServantMaster___c_StaticFields *static_fields; // x0
+  __int64 v1; // x1
+  Il2CppObject *v2; // x19
+  int32_t v3; // w2
+  int32_t v4; // w3
 
-  if ( (byte_4388040 & 1) == 0 )
+  if ( (byte_48E2968 & 1) == 0 )
   {
-    sub_B775C4(&EventServantMaster___c_TypeInfo);
-    byte_4388040 = 1;
+    sub_1B00CCC(&EventServantMaster___c_TypeInfo, v1);
+    byte_48E2968 = 1;
   }
-  v1 = (Il2CppObject *)sub_B77694(EventServantMaster___c_TypeInfo);
-  System_Object___ctor(v1, 0LL);
-  static_fields = EventServantMaster___c_TypeInfo->static_fields;
-  static_fields->__9 = (struct EventServantMaster___c_o *)v1;
-  sub_B77560(static_fields);
+  v2 = (Il2CppObject *)sub_1B00F18(EventServantMaster___c_TypeInfo);
+  System_Object___ctor(v2, 0LL);
+  EventServantMaster___c_TypeInfo->static_fields->__9 = (struct EventServantMaster___c_o *)v2;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)EventServantMaster___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -477,7 +539,7 @@ int64_t __fastcall EventServantMaster___c___getEntityServantIgnoreEnd_b__4_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_B7769C(this, 0LL);
+    sub_1B00F28(this, 0LL);
   return x->fields.endedAt;
 }
 
@@ -496,59 +558,60 @@ bool __fastcall EventServantMaster___c__DisplayClass4_0___getEntityServantIgnore
         const MethodInfo *method)
 {
   EventServantMaster___c__DisplayClass4_0_o *v4; // x20
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
   int64_t endedAt; // x22
   System_Collections_Generic_IEnumerable_TSource__o *servantEntitys; // x19
-  EventServantMaster___c_c *v7; // x0
-  struct EventServantMaster___c_StaticFields *static_fields; // x8
-  System_Func_ItemDroppedSkillShiftInfo_ServantInfo__long__o *_9__4_1; // x20
-  Il2CppObject *v10; // x21
-  struct EventServantMaster___c_StaticFields *v11; // x0
-  System_Collections_Generic_IEnumerable_TResult__o *v12; // x0
+  EventServantMaster___c_c *v10; // x0
+  System_Func_T__TResult__o *_9__4_1; // x20
+  Il2CppObject *v12; // x21
+  struct EventServantMaster___c_StaticFields *static_fields; // x0
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_Collections_Generic_IEnumerable_TResult__o *v16; // x0
 
   v4 = this;
-  if ( (byte_4388041 & 1) == 0 )
+  if ( (byte_48E2969 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Linq_Enumerable_Select_EventServantEntity__long___);
-    sub_B775C4(&Method_System_Func_EventServantEntity__long___ctor__);
-    sub_B775C4(&System_Func_EventServantEntity__long__TypeInfo);
-    sub_B775C4(&Method_EventServantMaster___c__getEntityServantIgnoreEnd_b__4_1__);
-    this = (EventServantMaster___c__DisplayClass4_0_o *)sub_B775C4(&EventServantMaster___c_TypeInfo);
-    byte_4388041 = 1;
+    sub_1B00CCC(&Method_System_Linq_Enumerable_Select_EventServantEntity__long___, a);
+    sub_1B00CCC(&System_Func_EventServantEntity__long__TypeInfo, v5);
+    sub_1B00CCC(&Method_EventServantMaster___c__getEntityServantIgnoreEnd_b__4_1__, v6);
+    this = (EventServantMaster___c__DisplayClass4_0_o *)sub_1B00CCC(&EventServantMaster___c_TypeInfo, v7);
+    byte_48E2969 = 1;
   }
   if ( !a )
-    sub_B7769C(this, a);
+    sub_1B00F28(this, a);
   endedAt = a->fields.endedAt;
   servantEntitys = (System_Collections_Generic_IEnumerable_TSource__o *)v4->fields.servantEntitys;
-  v7 = EventServantMaster___c_TypeInfo;
-  if ( (BYTE3(EventServantMaster___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !EventServantMaster___c_TypeInfo->_2.cctor_finished )
+  v10 = EventServantMaster___c_TypeInfo;
+  if ( !EventServantMaster___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EventServantMaster___c_TypeInfo);
-    v7 = EventServantMaster___c_TypeInfo;
+    v10 = EventServantMaster___c_TypeInfo;
   }
-  static_fields = v7->static_fields;
-  _9__4_1 = (System_Func_ItemDroppedSkillShiftInfo_ServantInfo__long__o *)static_fields->__9__4_1;
+  _9__4_1 = (System_Func_T__TResult__o *)v10->static_fields->__9__4_1;
   if ( !_9__4_1 )
   {
-    if ( (BYTE3(v7->vtable._0_Equals.methodPtr) & 4) != 0 && !v7->_2.cctor_finished )
+    if ( !v10->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v7);
-      static_fields = EventServantMaster___c_TypeInfo->static_fields;
+      j_il2cpp_runtime_class_init_0(v10);
+      v10 = EventServantMaster___c_TypeInfo;
     }
-    v10 = (Il2CppObject *)static_fields->__9;
-    _9__4_1 = (System_Func_ItemDroppedSkillShiftInfo_ServantInfo__long__o *)sub_B77694(System_Func_EventServantEntity__long__TypeInfo);
-    System_Func_ItemDroppedSkillShiftInfo_ServantInfo__long____ctor(
+    v12 = (Il2CppObject *)v10->static_fields->__9;
+    _9__4_1 = (System_Func_T__TResult__o *)sub_1B00F18(System_Func_EventServantEntity__long__TypeInfo);
+    System_Func_object__long____ctor(
       _9__4_1,
-      v10,
+      v12,
       Method_EventServantMaster___c__getEntityServantIgnoreEnd_b__4_1__,
-      (const MethodInfo_29EA630 *)Method_System_Func_EventServantEntity__long___ctor__);
-    v11 = EventServantMaster___c_TypeInfo->static_fields;
-    v11->__9__4_1 = (struct System_Func_EventServantEntity__long__o *)_9__4_1;
-    sub_B77560(&v11->__9__4_1);
+      0LL);
+    static_fields = EventServantMaster___c_TypeInfo->static_fields;
+    static_fields->__9__4_1 = (struct System_Func_EventServantEntity__long__o *)_9__4_1;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->__9__4_1, (int32_t)_9__4_1, v14, v15);
   }
-  v12 = System_Linq_Enumerable__Select_ItemDroppedSkillShiftInfo_ServantInfo__long_(
+  v16 = System_Linq_Enumerable__Select_object__long_(
           servantEntitys,
           (System_Func_TSource__TResult__o *)_9__4_1,
-          (const MethodInfo_1D38DBC *)Method_System_Linq_Enumerable_Select_EventServantEntity__long___);
-  return endedAt == System_Linq_Enumerable__Max_41378948((System_Collections_Generic_IEnumerable_long__o *)v12, 0LL);
+          (const MethodInfo_2D8F71C *)Method_System_Linq_Enumerable_Select_EventServantEntity__long___);
+  return endedAt == System_Linq_Enumerable__Max_62548372((System_Collections_Generic_IEnumerable_long__o *)v16, 0LL);
 }

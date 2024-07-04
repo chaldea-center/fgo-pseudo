@@ -1,13 +1,13 @@
 void __fastcall UserCombineExpEntity___ctor(UserCombineExpEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438CABE & 1) == 0 )
+  if ( (byte_48E326C & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    byte_438CABE = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
+    byte_48E326C = 1;
   }
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -15,10 +15,10 @@ System_String_o *__fastcall UserCombineExpEntity__CreatePrimaryKey(
         UserCombineExpEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_438CABD & 1) == 0 )
+  if ( (byte_48E326B & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438CABD = 1;
+    sub_1B00CCC(&StringLiteral_1/*""*/, method);
+    byte_48E326B = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }

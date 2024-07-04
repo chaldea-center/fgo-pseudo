@@ -1,102 +1,90 @@
-void __fastcall SingletonTemplate_object____cctor(const MethodInfo_2D16D84 *method)
+void __fastcall SingletonTemplate_object____ctor(SingletonTemplate_CLASS__o *this, const MethodInfo_35FC108 *method)
+{
+  System_Object___ctor((Il2CppObject *)this, 0LL);
+}
+
+
+void __fastcall SingletonTemplate_object___Delete(const MethodInfo_35FC114 *method)
+{
+  SingletonTemplate_CLASS__c *klass; // x0
+  __int64 _2_SingletonTemplate_CLASS; // x0
+  SingletonTemplate_CLASS__c *v4; // x0
+  __int64 v5; // x0
+
+  klass = method->klass;
+  if ( (BYTE5(klass->vtable._0_Equals.methodPtr) & 1) == 0 )
+    klass = (SingletonTemplate_CLASS__c *)sub_1B52BA8(klass);
+  _2_SingletonTemplate_CLASS = (__int64)klass->rgctx_data->_2_SingletonTemplate_CLASS_;
+  if ( (*(_BYTE *)(_2_SingletonTemplate_CLASS + 309) & 1) == 0 )
+    _2_SingletonTemplate_CLASS = sub_1B52BA8(_2_SingletonTemplate_CLASS);
+  if ( **(_QWORD **)(_2_SingletonTemplate_CLASS + 184) )
+  {
+    v4 = method->klass;
+    if ( (BYTE5(v4->vtable._0_Equals.methodPtr) & 1) == 0 )
+      v4 = (SingletonTemplate_CLASS__c *)sub_1B52BA8(v4);
+    v5 = (__int64)v4->rgctx_data->_2_SingletonTemplate_CLASS_;
+    if ( (*(_BYTE *)(v5 + 309) & 1) == 0 )
+      v5 = sub_1B52BA8(v5);
+    **(_QWORD **)(v5 + 184) = 0LL;
+  }
+}
+
+
+void __fastcall SingletonTemplate_object___Destroy(SingletonTemplate_CLASS__o *this, const MethodInfo_35FC110 *method)
 {
   ;
 }
 
 
-void __fastcall SingletonTemplate_object___Delete(const MethodInfo_2D16BC4 *method)
+Il2CppObject *__fastcall SingletonTemplate_object___get_Instance(const MethodInfo_35FC010 *method)
 {
-  SingletonTemplate_CLASS__c *klass; // x20
-  Il2CppClass *_0_SingletonTemplate_CLASS; // x20
-  __int16 v4; // w8
-  SingletonTemplate_CLASS__c *v5; // x20
-  Il2CppClass *v6; // x20
-  SingletonTemplate_CLASS__c *v7; // x20
-  Il2CppClass *v8; // x20
-  SingletonTemplate_CLASS__c *v9; // x20
-  Il2CppClass *v10; // x20
-  SingletonTemplate_CLASS__c *v11; // x20
-  Il2CppClass *v12; // x20
-  __int16 v13; // w8
-  SingletonTemplate_CLASS__c *v14; // x20
-  Il2CppClass *v15; // x20
-  SingletonTemplate_CLASS__c *v16; // x20
-  Il2CppClass *v17; // x20
-  SingletonTemplate_CLASS__c *v18; // x19
-  Il2CppClass *v19; // x19
+  SingletonTemplate_CLASS__c *klass; // x0
+  __int64 _2_SingletonTemplate_CLASS; // x0
+  SingletonTemplate_CLASS__c *v4; // x0
+  Il2CppObject *Instance_object; // x0
+  int32_t v6; // w2
+  int32_t v7; // w3
+  SingletonTemplate_CLASS__c *v8; // x8
+  Il2CppObject *v9; // x20
+  __int64 v10; // x0
+  SingletonTemplate_CLASS__c *v11; // x0
+  __int64 v12; // x0
+  SingletonTemplate_CLASS__c *v13; // x0
+  __int64 v14; // x0
 
   klass = method->klass;
-  if ( (BYTE2(klass->vtable._0_Equals.methodPtr) & 1) == 0 )
-    sub_B0F2C4(method->klass);
-  _0_SingletonTemplate_CLASS = klass->rgctx_data->_0_SingletonTemplate_CLASS_;
-  v4 = WORD1(_0_SingletonTemplate_CLASS->vtable[0].methodPtr);
-  if ( (v4 & 1) == 0 )
+  if ( (BYTE5(klass->vtable._0_Equals.methodPtr) & 1) == 0 )
+    klass = (SingletonTemplate_CLASS__c *)sub_1B52BA8(klass);
+  _2_SingletonTemplate_CLASS = (__int64)klass->rgctx_data->_2_SingletonTemplate_CLASS_;
+  if ( (*(_BYTE *)(_2_SingletonTemplate_CLASS + 309) & 1) == 0 )
+    _2_SingletonTemplate_CLASS = sub_1B52BA8(_2_SingletonTemplate_CLASS);
+  if ( !**(_QWORD **)(_2_SingletonTemplate_CLASS + 184) )
   {
-    sub_B0F2C4(_0_SingletonTemplate_CLASS);
-    v4 = WORD1(_0_SingletonTemplate_CLASS->vtable[0].methodPtr);
-  }
-  if ( (v4 & 0x400) != 0 )
-  {
-    v5 = method->klass;
-    if ( (BYTE2(v5->vtable._0_Equals.methodPtr) & 1) == 0 )
-      sub_B0F2C4(method->klass);
-    v6 = v5->rgctx_data->_0_SingletonTemplate_CLASS_;
-    if ( (BYTE2(v6->vtable[0].methodPtr) & 1) == 0 )
-      sub_B0F2C4(v6);
-    if ( !v6->_2.cctor_finished )
-    {
-      v7 = method->klass;
-      if ( (BYTE2(v7->vtable._0_Equals.methodPtr) & 1) == 0 )
-        sub_B0F2C4(method->klass);
-      v8 = v7->rgctx_data->_0_SingletonTemplate_CLASS_;
-      if ( (BYTE2(v8->vtable[0].methodPtr) & 1) == 0 )
-        sub_B0F2C4(v8);
-      j_il2cpp_runtime_class_init_0(v8);
-    }
-  }
-  v9 = method->klass;
-  if ( (BYTE2(v9->vtable._0_Equals.methodPtr) & 1) == 0 )
-    sub_B0F2C4(method->klass);
-  v10 = v9->rgctx_data->_0_SingletonTemplate_CLASS_;
-  if ( (BYTE2(v10->vtable[0].methodPtr) & 1) == 0 )
-    sub_B0F2C4(v10);
-  if ( *(_QWORD *)v10->static_fields )
-  {
+    v4 = method->klass;
+    if ( (BYTE5(v4->vtable._0_Equals.methodPtr) & 1) == 0 )
+      v4 = (SingletonTemplate_CLASS__c *)sub_1B52BA8(v4);
+    Instance_object = System_Activator__CreateInstance_object_((const MethodInfo_2CBC2D0 *)v4->rgctx_data->_3_System_Activator_CreateInstance_CLASS_);
+    v8 = method->klass;
+    v9 = Instance_object;
+    if ( (BYTE5(v8->vtable._0_Equals.methodPtr) & 1) == 0 )
+      v8 = (SingletonTemplate_CLASS__c *)sub_1B52BA8(method->klass);
+    v10 = (__int64)v8->rgctx_data->_2_SingletonTemplate_CLASS_;
+    if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
+      v10 = sub_1B52BA8(v10);
+    **(_QWORD **)(v10 + 184) = v9;
     v11 = method->klass;
-    if ( (BYTE2(v11->vtable._0_Equals.methodPtr) & 1) == 0 )
-      sub_B0F2C4(method->klass);
-    v12 = v11->rgctx_data->_0_SingletonTemplate_CLASS_;
-    v13 = WORD1(v12->vtable[0].methodPtr);
-    if ( (v13 & 1) == 0 )
-    {
-      sub_B0F2C4(v12);
-      v13 = WORD1(v12->vtable[0].methodPtr);
-    }
-    if ( (v13 & 0x400) != 0 )
-    {
-      v14 = method->klass;
-      if ( (BYTE2(v14->vtable._0_Equals.methodPtr) & 1) == 0 )
-        sub_B0F2C4(method->klass);
-      v15 = v14->rgctx_data->_0_SingletonTemplate_CLASS_;
-      if ( (BYTE2(v15->vtable[0].methodPtr) & 1) == 0 )
-        sub_B0F2C4(v15);
-      if ( !v15->_2.cctor_finished )
-      {
-        v16 = method->klass;
-        if ( (BYTE2(v16->vtable._0_Equals.methodPtr) & 1) == 0 )
-          sub_B0F2C4(method->klass);
-        v17 = v16->rgctx_data->_0_SingletonTemplate_CLASS_;
-        if ( (BYTE2(v17->vtable[0].methodPtr) & 1) == 0 )
-          sub_B0F2C4(v17);
-        j_il2cpp_runtime_class_init_0(v17);
-      }
-    }
-    v18 = method->klass;
-    if ( (BYTE2(v18->vtable._0_Equals.methodPtr) & 1) == 0 )
-      sub_B0F2C4(v18);
-    v19 = v18->rgctx_data->_0_SingletonTemplate_CLASS_;
-    if ( (BYTE2(v19->vtable[0].methodPtr) & 1) == 0 )
-      sub_B0F2C4(v19);
-    *(_QWORD *)v19->static_fields = 0LL;
+    if ( (BYTE5(v11->vtable._0_Equals.methodPtr) & 1) == 0 )
+      v11 = (SingletonTemplate_CLASS__c *)sub_1B52BA8(v11);
+    v12 = (__int64)v11->rgctx_data->_2_SingletonTemplate_CLASS_;
+    if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
+      v12 = sub_1B52BA8(v12);
+    sub_1B00C70(*(ServantStatusBattleListViewItem_o **)(v12 + 184), (int32_t)v9, v6, v7);
   }
+  v13 = method->klass;
+  if ( (BYTE5(v13->vtable._0_Equals.methodPtr) & 1) == 0 )
+    v13 = (SingletonTemplate_CLASS__c *)sub_1B52BA8(v13);
+  v14 = (__int64)v13->rgctx_data->_2_SingletonTemplate_CLASS_;
+  if ( (*(_BYTE *)(v14 + 309) & 1) == 0 )
+    v14 = sub_1B52BA8(v14);
+  return **(Il2CppObject ***)(v14 + 184);
 }

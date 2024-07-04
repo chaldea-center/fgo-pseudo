@@ -12,119 +12,47 @@ void __fastcall ServantStatusParameterComponent__Awake(
 {
   const MethodInfo *v2; // x2
   struct ServantStatusParameterGauge_o *ParameterGauge; // x0
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  int32_t v5; // w2
+  int32_t v6; // w3
+  const MethodInfo *v7; // x2
+  struct ServantStatusParameterGauge_o *v8; // x0
+  int32_t v9; // w2
+  int32_t v10; // w3
   const MethodInfo *v11; // x2
   struct ServantStatusParameterGauge_o *v12; // x0
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
+  int32_t v13; // w2
+  int32_t v14; // w3
+  const MethodInfo *v15; // x2
+  struct ServantStatusParameterGauge_o *v16; // x0
+  int32_t v17; // w2
+  int32_t v18; // w3
   const MethodInfo *v19; // x2
   struct ServantStatusParameterGauge_o *v20; // x0
-  System_String_array **v21; // x2
-  System_String_array **v22; // x3
-  System_Boolean_array **v23; // x4
-  System_Int32_array **v24; // x5
-  System_Int32_array *v25; // x6
-  System_Int32_array *v26; // x7
-  const MethodInfo *v27; // x2
-  struct ServantStatusParameterGauge_o *v28; // x0
-  System_String_array **v29; // x2
-  System_String_array **v30; // x3
-  System_Boolean_array **v31; // x4
-  System_Int32_array **v32; // x5
-  System_Int32_array *v33; // x6
-  System_Int32_array *v34; // x7
-  const MethodInfo *v35; // x2
-  struct ServantStatusParameterGauge_o *v36; // x0
-  System_String_array **v37; // x2
-  System_String_array **v38; // x3
-  System_Boolean_array **v39; // x4
-  System_Int32_array **v40; // x5
-  System_Int32_array *v41; // x6
-  System_Int32_array *v42; // x7
-  const MethodInfo *v43; // x2
-  struct ServantStatusParameterGauge_o *v44; // x1
-  System_String_array **v45; // x2
-  System_String_array **v46; // x3
-  System_Boolean_array **v47; // x4
-  System_Int32_array **v48; // x5
-  System_Int32_array *v49; // x6
-  System_Int32_array *v50; // x7
+  int32_t v21; // w2
+  int32_t v22; // w3
+  const MethodInfo *v23; // x2
+  struct ServantStatusParameterGauge_o *v24; // x0
+  int32_t v25; // w2
+  int32_t v26; // w3
 
   ParameterGauge = ServantStatusParameterComponent__CreateParameterGauge(this, this->fields.powerParent, v2);
   this->fields.powerGauge = ParameterGauge;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.powerGauge,
-    (System_Int32_array **)ParameterGauge,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10);
-  v12 = ServantStatusParameterComponent__CreateParameterGauge(this, this->fields.defenseParent, v11);
-  this->fields.defenseGauge = v12;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.defenseGauge,
-    (System_Int32_array **)v12,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18);
-  v20 = ServantStatusParameterComponent__CreateParameterGauge(this, this->fields.agilityParent, v19);
-  this->fields.agilityGauge = v20;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.agilityGauge,
-    (System_Int32_array **)v20,
-    v21,
-    v22,
-    v23,
-    v24,
-    v25,
-    v26);
-  v28 = ServantStatusParameterComponent__CreateParameterGauge(this, this->fields.magicParent, v27);
-  this->fields.magicGauge = v28;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.magicGauge,
-    (System_Int32_array **)v28,
-    v29,
-    v30,
-    v31,
-    v32,
-    v33,
-    v34);
-  v36 = ServantStatusParameterComponent__CreateParameterGauge(this, this->fields.luckParent, v35);
-  this->fields.luckGauge = v36;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.luckGauge,
-    (System_Int32_array **)v36,
-    v37,
-    v38,
-    v39,
-    v40,
-    v41,
-    v42);
-  v44 = ServantStatusParameterComponent__CreateParameterGauge(this, this->fields.npParent, v43);
-  this->fields.npGauge = v44;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.npGauge,
-    (System_Int32_array **)v44,
-    v45,
-    v46,
-    v47,
-    v48,
-    v49,
-    v50);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.powerGauge, (int32_t)ParameterGauge, v5, v6);
+  v8 = ServantStatusParameterComponent__CreateParameterGauge(this, this->fields.defenseParent, v7);
+  this->fields.defenseGauge = v8;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.defenseGauge, (int32_t)v8, v9, v10);
+  v12 = ServantStatusParameterComponent__CreateParameterGauge(this, this->fields.agilityParent, v11);
+  this->fields.agilityGauge = v12;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.agilityGauge, (int32_t)v12, v13, v14);
+  v16 = ServantStatusParameterComponent__CreateParameterGauge(this, this->fields.magicParent, v15);
+  this->fields.magicGauge = v16;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.magicGauge, (int32_t)v16, v17, v18);
+  v20 = ServantStatusParameterComponent__CreateParameterGauge(this, this->fields.luckParent, v19);
+  this->fields.luckGauge = v20;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.luckGauge, (int32_t)v20, v21, v22);
+  v24 = ServantStatusParameterComponent__CreateParameterGauge(this, this->fields.npParent, v23);
+  this->fields.npGauge = v24;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.npGauge, (int32_t)v24, v25, v26);
 }
 
 
@@ -133,41 +61,34 @@ ServantStatusParameterGauge_o *__fastcall ServantStatusParameterComponent__Creat
         UnityEngine_GameObject_o *parent,
         const MethodInfo *method)
 {
-  struct UnityEngine_GameObject_o *baseGaugeObject; // x20
-  UnityEngine_GameObject_o *v6; // x20
-  bool v7; // w8
-  ServantStatusParameterGauge_o *result; // x0
-  __int64 v9; // x0
-  __int64 v10; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  Il2CppObject *baseGaugeObject; // x20
+  Il2CppObject *v8; // x20
+  __int64 v10; // x0
+  __int64 v11; // x1
 
-  if ( (byte_438DC86 & 1) == 0 )
+  if ( (byte_48E044B & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_ServantStatusParameterGauge___);
-    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438DC86 = 1;
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_ServantStatusParameterGauge___, parent);
+    sub_1B00CCC(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v6);
+    byte_48E044B = 1;
   }
-  baseGaugeObject = this->fields.baseGaugeObject;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  baseGaugeObject = (Il2CppObject *)this->fields.baseGaugeObject;
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  v6 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
-                                     (UnityEngine_UI_Dropdown_DropdownItem_o *)baseGaugeObject,
-                                     (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-  v7 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)parent, 0LL, 0LL);
-  result = 0LL;
-  if ( !v7 )
-  {
-    GameObjectExtensions__SafeSetParent_32813688(v6, parent, 0LL);
-    if ( !v6 )
-      sub_B7769C(v9, v10);
-    return (ServantStatusParameterGauge_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                              v6,
-                                              (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusParameterGauge___);
-  }
-  return result;
+  v8 = UnityEngine_Object__Instantiate_object_(
+         baseGaugeObject,
+         (const MethodInfo_2DD5AE8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+  if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)parent, 0LL, 0LL) )
+    return 0LL;
+  GameObjectExtensions__SafeSetParent_32541256((UnityEngine_GameObject_o *)v8, parent, 0LL);
+  if ( !v8 )
+    sub_1B00F28(v10, v11);
+  return (ServantStatusParameterGauge_o *)UnityEngine_GameObject__GetComponent_object_(
+                                            (UnityEngine_GameObject_o *)v8,
+                                            (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusParameterGauge___);
 }
 
 
@@ -190,128 +111,92 @@ void __fastcall ServantStatusParameterComponent__OnDestroy(
   UnityEngine_Object_o *npGauge; // x20
   UnityEngine_Object_o *v16; // x19
 
-  if ( (byte_438DC85 & 1) == 0 )
+  if ( (byte_48E044A & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438DC85 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    byte_48E044A = 1;
   }
   powerGauge = (UnityEngine_Object_o *)this->fields.powerGauge;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(powerGauge, 0LL, 0LL) )
   {
     v5 = (UnityEngine_Component_o *)this->fields.powerGauge;
     if ( !v5 )
-      goto LABEL_58;
+      goto LABEL_46;
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v5, 0LL);
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
-    UnityEngine_Object__Destroy_36309980(gameObject, 0LL);
+    UnityEngine_Object__Destroy_68077656(gameObject, 0LL);
   }
   defenseGauge = (UnityEngine_Object_o *)this->fields.defenseGauge;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(defenseGauge, 0LL, 0LL) )
   {
     v5 = (UnityEngine_Component_o *)this->fields.defenseGauge;
     if ( !v5 )
-      goto LABEL_58;
+      goto LABEL_46;
     v8 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v5, 0LL);
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
-    UnityEngine_Object__Destroy_36309980(v8, 0LL);
+    UnityEngine_Object__Destroy_68077656(v8, 0LL);
   }
   agilityGauge = (UnityEngine_Object_o *)this->fields.agilityGauge;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(agilityGauge, 0LL, 0LL) )
   {
     v5 = (UnityEngine_Component_o *)this->fields.agilityGauge;
     if ( !v5 )
-      goto LABEL_58;
+      goto LABEL_46;
     v10 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v5, 0LL);
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
-    UnityEngine_Object__Destroy_36309980(v10, 0LL);
+    UnityEngine_Object__Destroy_68077656(v10, 0LL);
   }
   magicGauge = (UnityEngine_Object_o *)this->fields.magicGauge;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(magicGauge, 0LL, 0LL) )
   {
     v5 = (UnityEngine_Component_o *)this->fields.magicGauge;
     if ( !v5 )
-      goto LABEL_58;
+      goto LABEL_46;
     v12 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v5, 0LL);
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
-    UnityEngine_Object__Destroy_36309980(v12, 0LL);
+    UnityEngine_Object__Destroy_68077656(v12, 0LL);
   }
   luckGauge = (UnityEngine_Object_o *)this->fields.luckGauge;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(luckGauge, 0LL, 0LL) )
   {
     v5 = (UnityEngine_Component_o *)this->fields.luckGauge;
     if ( !v5 )
-      goto LABEL_58;
+      goto LABEL_46;
     v14 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v5, 0LL);
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
-    UnityEngine_Object__Destroy_36309980(v14, 0LL);
+    UnityEngine_Object__Destroy_68077656(v14, 0LL);
   }
   npGauge = (UnityEngine_Object_o *)this->fields.npGauge;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(npGauge, 0LL, 0LL) )
   {
     v5 = (UnityEngine_Component_o *)this->fields.npGauge;
     if ( v5 )
     {
       v16 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v5, 0LL);
-      if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      {
+      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      }
-      UnityEngine_Object__Destroy_36309980(v16, 0LL);
+      UnityEngine_Object__Destroy_68077656(v16, 0LL);
       return;
     }
-LABEL_58:
-    sub_B7769C(v5, v4);
+LABEL_46:
+    sub_1B00F28(v5, v4);
   }
 }
 
@@ -349,7 +234,7 @@ void __fastcall ServantStatusParameterComponent__Setup(
     || (ServantStatusParameterGauge__Set(powerGauge, 4, luck, v18), (powerGauge = this->fields.npGauge) == 0LL) )
   {
 LABEL_8:
-    sub_B7769C(powerGauge, *(_QWORD *)&power);
+    sub_1B00F28(powerGauge, *(_QWORD *)&power);
   }
   ServantStatusParameterGauge__Set(powerGauge, 5, np, v19);
 }

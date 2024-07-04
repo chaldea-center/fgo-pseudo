@@ -1,6 +1,6 @@
 void __fastcall NpPointToTurnConvert___ctor(NpPointToTurnConvert_o *this, const MethodInfo *method)
 {
-  BaseNpGaugeConvert___ctor((BaseNpGaugeConvert_o *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 
@@ -20,14 +20,13 @@ float __fastcall NpPointToTurnConvert__get_Denominator(NpPointToTurnConvert_o *t
 {
   BattleDataDefine_c *v2; // x0
 
-  if ( (byte_438BAE5 & 1) == 0 )
+  if ( (byte_48E51EE & 1) == 0 )
   {
-    sub_B775C4(&BattleDataDefine_TypeInfo);
-    byte_438BAE5 = 1;
+    sub_1B00CCC(&BattleDataDefine_TypeInfo, method);
+    byte_48E51EE = 1;
   }
   v2 = BattleDataDefine_TypeInfo;
-  if ( (BYTE3(BattleDataDefine_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !BattleDataDefine_TypeInfo->_2.cctor_finished )
+  if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo);
     v2 = BattleDataDefine_TypeInfo;

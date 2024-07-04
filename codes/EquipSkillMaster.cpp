@@ -1,14 +1,14 @@
 void __fastcall EquipSkillMaster___ctor(EquipSkillMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_438E7DD & 1) == 0 )
+  if ( (byte_48E26AE & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_EquipSkillMaster__EquipSkillEntity__string___ctor__);
-    byte_438E7DD = 1;
+    sub_1B00CCC(&Method_DataMasterBase_EquipSkillMaster__EquipSkillEntity__string___ctor__, method);
+    byte_48E26AE = 1;
   }
-  DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
-    (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
+  DataMasterBase_object__object__object____ctor(
+    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     48,
-    (const MethodInfo_21FBC48 *)Method_DataMasterBase_EquipSkillMaster__EquipSkillEntity__string___ctor__);
+    (const MethodInfo_2FE6D64 *)Method_DataMasterBase_EquipSkillMaster__EquipSkillEntity__string___ctor__);
 }
 
 
@@ -19,18 +19,18 @@ EquipSkillEntity_o *__fastcall EquipSkillMaster__GetEntity(
         int32_t num,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x1
+  Il2CppObject *PK; // x1
 
-  if ( (byte_438E7DB & 1) == 0 )
+  if ( (byte_48E26AC & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_EquipSkillMaster__EquipSkillEntity__string__GetEntity__);
-    byte_438E7DB = 1;
+    sub_1B00CCC(&Method_DataMasterBase_EquipSkillMaster__EquipSkillEntity__string__GetEntity__, *(_QWORD *)&equipId);
+    byte_48E26AC = 1;
   }
-  PK = EquipSkillEntity__CreatePK(equipId, num, *(const MethodInfo **)&num);
-  return (EquipSkillEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
-                                 (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
+  PK = (Il2CppObject *)EquipSkillEntity__CreatePK(equipId, num, *(const MethodInfo **)&num);
+  return (EquipSkillEntity_o *)DataMasterBase_object__object__object___GetEntity(
+                                 (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                  PK,
-                                 (const MethodInfo_21FBCE4 *)Method_DataMasterBase_EquipSkillMaster__EquipSkillEntity__string__GetEntity__);
+                                 (const MethodInfo_2FE6DA4 *)Method_DataMasterBase_EquipSkillMaster__EquipSkillEntity__string__GetEntity__);
 }
 
 
@@ -42,17 +42,17 @@ bool __fastcall EquipSkillMaster__TryGetEntity(
         int32_t num,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x2
+  Il2CppObject *PK; // x2
 
-  if ( (byte_438E7DC & 1) == 0 )
+  if ( (byte_48E26AD & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_EquipSkillMaster__EquipSkillEntity__string__TryGetEntity__);
-    byte_438E7DC = 1;
+    sub_1B00CCC(&Method_DataMasterBase_EquipSkillMaster__EquipSkillEntity__string__TryGetEntity__, entity);
+    byte_48E26AD = 1;
   }
-  PK = EquipSkillEntity__CreatePK(equipId, num, *(const MethodInfo **)&equipId);
-  return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
-           (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
-           (WarQuestSelectionEntity_o **)entity,
+  PK = (Il2CppObject *)EquipSkillEntity__CreatePK(equipId, num, *(const MethodInfo **)&equipId);
+  return DataMasterBase_object__object__object___TryGetEntity(
+           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
+           (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_21FBD3C *)Method_DataMasterBase_EquipSkillMaster__EquipSkillEntity__string__TryGetEntity__);
+           (const MethodInfo_2FE6DF4 *)Method_DataMasterBase_EquipSkillMaster__EquipSkillEntity__string__TryGetEntity__);
 }

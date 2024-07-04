@@ -9,8 +9,10 @@ void __fastcall BaseBattleInfoPosData__Init(
         BattlePerformance_o *perf,
         const MethodInfo *method)
 {
+  int32_t v3; // w3
+
   this->fields._Perf_k__BackingField = perf;
-  sub_B77560(&this->fields);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)perf, (int32_t)method, v3);
 }
 
 
@@ -33,20 +35,28 @@ BattlePerformance_o *__fastcall BaseBattleInfoPosData__get_Perf(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 UnityEngine_Vector3_o __fastcall BaseBattleInfoPosData__get_SkillSkipTrLocalPos(
         BaseBattleInfoPosData_o *this,
         const MethodInfo *method)
 {
-  float v2; // s0
-  float v3; // s1
-  float v4; // s2
+  struct UnityEngine_Vector3_StaticFields *static_fields; // x8
+  float x; // s0
+  float y; // s1
+  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  *(UnityEngine_Vector3_o *)&v2 = UnityEngine_Vector3__get_zero(0LL);
-  result.fields.z = v4;
-  result.fields.y = v3;
-  result.fields.x = v2;
+  if ( !byte_48DD9F1 )
+  {
+    sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, method);
+    byte_48DD9F1 = 1;
+  }
+  static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
+  x = static_fields->zeroVector.fields.x;
+  y = static_fields->zeroVector.fields.y;
+  z = static_fields->zeroVector.fields.z;
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -56,6 +66,8 @@ void __fastcall BaseBattleInfoPosData__set_Perf(
         BattlePerformance_o *value,
         const MethodInfo *method)
 {
+  int32_t v3; // w3
+
   this->fields._Perf_k__BackingField = value;
-  sub_B77560(&this->fields);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }

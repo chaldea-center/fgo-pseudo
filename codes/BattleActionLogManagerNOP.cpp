@@ -1,21 +1,17 @@
 void __fastcall BattleActionLogManagerNOP___ctor(BattleActionLogManagerNOP_o *this, const MethodInfo *method)
 {
   struct System_Byte_array *v3; // x0
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
+  int32_t v4; // w2
+  int32_t v5; // w3
 
-  if ( (byte_4389836 & 1) == 0 )
+  if ( (byte_48E479C & 1) == 0 )
   {
-    sub_B775C4(&byte___TypeInfo);
-    byte_4389836 = 1;
+    sub_1B00CCC(&byte___TypeInfo, method);
+    byte_48E479C = 1;
   }
-  v3 = (struct System_Byte_array *)sub_B775DC(byte___TypeInfo, 1LL);
+  v3 = (struct System_Byte_array *)sub_1B00D74(byte___TypeInfo, 1LL);
   this->fields.dummy = v3;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v3, v4, v5, v6, v7, v8, v9);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)v3, v4, v5);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 

@@ -1,6 +1,6 @@
 void __fastcall PartyAllFieldTargetAggregator___ctor(PartyAllFieldTargetAggregator_o *this, const MethodInfo *method)
 {
-  TargetAggregator___ctor((TargetAggregator_o *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 
@@ -8,21 +8,25 @@ System_Int32_array *__fastcall PartyAllFieldTargetAggregator__GetCandidate(
         PartyAllFieldTargetAggregator_o *this,
         const MethodInfo *method)
 {
-  BattleData_o *battleData; // x20
-  BattleData_o *actorId; // x0
-  __int64 v5; // x1
-  bool isEnemyID; // w20
+  struct TargetAggregator_Args_o *args; // x8
+  PartyAllFieldTargetAggregator_o *v3; // x19
+  struct TargetAggregator_Args_o *v4; // x9
+  char v5; // w8
 
-  battleData = TargetAggregator__get_battleData((TargetAggregator_o *)this, 0LL);
-  actorId = (BattleData_o *)TargetAggregator__get_actorId((TargetAggregator_o *)this, 0LL);
-  if ( !battleData
-    || (isEnemyID = BattleData__isEnemyID(battleData, (int32_t)actorId, 0LL),
-        (actorId = TargetAggregator__get_battleData((TargetAggregator_o *)this, 0LL)) == 0LL) )
+  args = this->fields.args;
+  if ( !args
+    || (v3 = this, (this = (PartyAllFieldTargetAggregator_o *)args->fields._battleData_k__BackingField) == 0LL)
+    || (this = (PartyAllFieldTargetAggregator_o *)BattleData__isEnemyID(
+                                                    (BattleData_o *)this,
+                                                    args->fields._actorId_k__BackingField,
+                                                    0LL),
+        (v4 = v3->fields.args) == 0LL)
+    || (v5 = (char)this, (this = (PartyAllFieldTargetAggregator_o *)v4->fields._battleData_k__BackingField) == 0LL) )
   {
-    sub_B7769C(actorId, v5);
+    sub_1B00F28(this, method);
   }
-  if ( isEnemyID )
-    return BattleData__getFieldEnemyServantIDList(actorId, 0, 0LL);
+  if ( (v5 & 1) != 0 )
+    return BattleData__getFieldEnemyServantIDList((BattleData_o *)this, 0, 0LL);
   else
-    return BattleData__getFieldPlayerServantIDList(actorId, 0LL, 0LL);
+    return BattleData__getFieldPlayerServantIDList((BattleData_o *)this, 0LL, 0LL);
 }

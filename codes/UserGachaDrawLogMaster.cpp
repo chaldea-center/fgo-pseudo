@@ -1,14 +1,14 @@
 void __fastcall UserGachaDrawLogMaster___ctor(UserGachaDrawLogMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4389CFE & 1) == 0 )
+  if ( (byte_48E347A & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_UserGachaDrawLogMaster__UserGachaDrawLogEntity__string___ctor__);
-    byte_4389CFE = 1;
+    sub_1B00CCC(&Method_DataMasterBase_UserGachaDrawLogMaster__UserGachaDrawLogEntity__string___ctor__, method);
+    byte_48E347A = 1;
   }
-  DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
-    (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
+  DataMasterBase_object__object__object____ctor(
+    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     366,
-    (const MethodInfo_21FBC48 *)Method_DataMasterBase_UserGachaDrawLogMaster__UserGachaDrawLogEntity__string___ctor__);
+    (const MethodInfo_2FE6D64 *)Method_DataMasterBase_UserGachaDrawLogMaster__UserGachaDrawLogEntity__string___ctor__);
 }
 
 
@@ -21,128 +21,133 @@ int32_t __fastcall UserGachaDrawLogMaster__GetDrawLogNum(
         int64_t endAt,
         const MethodInfo *method)
 {
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
+  __int64 v11; // x1
   __int64 v12; // x1
-  System_Collections_Generic_IEnumerator_T__o *Enumerator; // x20
-  int32_t v14; // w19
-  System_Collections_Generic_IEnumerator_T__c *v15; // x8
-  unsigned __int64 v16; // x10
-  int32_t *v17; // x11
-  __int64 v18; // x0
-  __int64 v19; // x0
-  __int64 v20; // x1
-  __int64 v21; // x9
+  __int64 v13; // x1
+  __int64 v14; // x1
+  System_Collections_ObjectModel_Collection_T__o *list; // x0
+  __int64 v16; // x1
+  System_Collections_Generic_IEnumerator_T__o *Enumerator; // x19
+  int32_t v18; // w20
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  unsigned __int64 v23; // x10
-  int32_t *p_offset; // x11
+  __int64 v20; // x9
+  int32_t *p_offset; // x10
   __int64 p_method; // x0
-  System_Collections_Generic_IEnumerator_T__c *v26; // x8
-  unsigned __int64 v27; // x10
-  int32_t *v28; // x11
-  __int64 v29; // x0
+  System_Collections_Generic_IEnumerator_T__c *v23; // x8
+  __int64 v24; // x9
+  int32_t *v25; // x10
+  __int64 v26; // x0
+  __int64 v27; // x0
+  __int64 v28; // x1
+  __int64 methodPtr_low; // x9
+  System_Collections_Generic_IEnumerator_T__c *v30; // x8
+  __int64 v31; // x9
+  int32_t *v32; // x10
+  __int64 v33; // x0
 
-  if ( (byte_4389D01 & 1) == 0 )
+  if ( (byte_48E347D & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    sub_B775C4(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
-    sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
-    sub_B775C4(&UserGachaDrawLogEntity_TypeInfo);
-    byte_4389D01 = 1;
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, *(_QWORD *)&gachaId);
+    sub_1B00CCC(&System_IDisposable_TypeInfo, v11);
+    sub_1B00CCC(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v12);
+    sub_1B00CCC(&System_Collections_IEnumerator_TypeInfo, v13);
+    sub_1B00CCC(&UserGachaDrawLogEntity_TypeInfo, v14);
+    byte_48E347D = 1;
   }
-  list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
+  list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_B7769C(0LL, *(_QWORD *)&gachaId);
-  Enumerator = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___GetEnumerator(
+    sub_1B00F28(0LL, *(_QWORD *)&gachaId);
+  Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_2CC56C8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_2F83C88 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_B7769C(0LL, v12);
-  v14 = 0;
+    sub_1B00F28(0LL, v16);
+  v18 = 0;
   while ( 1 )
   {
     klass = Enumerator->klass;
-    if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
+    v20 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
-      v23 = 0LL;
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        ++v23;
+        --v20;
         p_offset += 4;
-        if ( v23 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
-          goto LABEL_22;
+        if ( !v20 )
+          goto LABEL_10;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
     }
     else
     {
-LABEL_22:
-      p_method = sub_B0F4C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+LABEL_10:
+      p_method = sub_1B52CAC(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
       break;
-    v15 = Enumerator->klass;
-    if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
+    v23 = Enumerator->klass;
+    v24 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
-      v16 = 0LL;
-      v17 = &v15->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v17 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
+      v25 = &v23->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v25 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
       {
-        ++v16;
-        v17 += 4;
-        if ( v16 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
-          goto LABEL_10;
+        --v24;
+        v25 += 4;
+        if ( !v24 )
+          goto LABEL_17;
       }
-      v18 = (__int64)&v15->vtable[*v17].method;
+      v26 = (__int64)&v23->vtable[*v25].method;
     }
     else
     {
-LABEL_10:
-      v18 = sub_B0F4C0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+LABEL_17:
+      v26 = sub_1B52CAC(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
-    v19 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v18)(
+    v27 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v26)(
             Enumerator,
-            *(_QWORD *)(v18 + 8));
-    if ( !v19 )
+            *(_QWORD *)(v26 + 8));
+    if ( !v27 )
       goto LABEL_33;
-    v21 = *(&UserGachaDrawLogEntity_TypeInfo->_2.bitflags2 + 1);
-    if ( *(unsigned __int8 *)(*(_QWORD *)v19 + 300LL) < (unsigned int)v21
-      || *(UserGachaDrawLogEntity_c **)(*(_QWORD *)(*(_QWORD *)v19 + 200LL) + 8 * v21 - 8) != UserGachaDrawLogEntity_TypeInfo )
+    methodPtr_low = LOBYTE(UserGachaDrawLogEntity_TypeInfo->vtable._0_Equals.methodPtr);
+    if ( *(unsigned __int8 *)(*(_QWORD *)v27 + 304LL) < (unsigned int)methodPtr_low
+      || *(UserGachaDrawLogEntity_c **)(*(_QWORD *)(*(_QWORD *)v27 + 200LL) + 8 * methodPtr_low - 8) != UserGachaDrawLogEntity_TypeInfo )
     {
-      v19 = sub_B77990(v19);
+      sub_1B011E8(v27);
 LABEL_33:
-      sub_B7769C(v19, v20);
+      sub_1B00F28(v27, v28);
     }
-    if ( *(_DWORD *)(v19 + 16) == gachaId && *(_DWORD *)(v19 + 20) == idx )
-      v14 += *(_QWORD *)(v19 + 24) >= startAt && *(_QWORD *)(v19 + 24) < endAt;
+    if ( *(_DWORD *)(v27 + 16) == gachaId && *(_DWORD *)(v27 + 20) == idx )
+      v18 += *(_QWORD *)(v27 + 24) >= startAt && *(_QWORD *)(v27 + 24) < endAt;
   }
-  v26 = Enumerator->klass;
-  if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
+  v30 = Enumerator->klass;
+  v31 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
   {
-    v27 = 0LL;
-    v28 = &v26->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v28 - 1) != System_IDisposable_TypeInfo )
+    v32 = &v30->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v32 - 1) != System_IDisposable_TypeInfo )
     {
-      ++v27;
-      v28 += 4;
-      if ( v27 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+      --v31;
+      v32 += 4;
+      if ( !v31 )
         goto LABEL_29;
     }
-    v29 = (__int64)&v26->vtable[*v28].method;
+    v33 = (__int64)&v30->vtable[*v32].method;
   }
   else
   {
 LABEL_29:
-    v29 = sub_B0F4C0(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v33 = sub_1B52CAC(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v29)(Enumerator, *(_QWORD *)(v29 + 8));
-  return v14;
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v33)(Enumerator, *(_QWORD *)(v33 + 8));
+  return v18;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 UserGachaDrawLogEntity_o *__fastcall UserGachaDrawLogMaster__GetEntity(
         UserGachaDrawLogMaster_o *this,
         int32_t gachaId,
@@ -150,18 +155,20 @@ UserGachaDrawLogEntity_o *__fastcall UserGachaDrawLogMaster__GetEntity(
         int64_t drawAt,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x1
+  Il2CppObject *PK; // x1
 
-  if ( (byte_4389CFF & 1) == 0 )
+  if ( (byte_48E347B & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_UserGachaDrawLogMaster__UserGachaDrawLogEntity__string__GetEntity__);
-    byte_4389CFF = 1;
+    sub_1B00CCC(
+      &Method_DataMasterBase_UserGachaDrawLogMaster__UserGachaDrawLogEntity__string__GetEntity__,
+      *(_QWORD *)&gachaId);
+    byte_48E347B = 1;
   }
-  PK = UserGachaDrawLogEntity__CreatePK(gachaId, idx, drawAt, (const MethodInfo *)drawAt);
-  return (UserGachaDrawLogEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
-                                       (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
+  PK = (Il2CppObject *)UserGachaDrawLogEntity__CreatePK(gachaId, idx, drawAt, (const MethodInfo *)drawAt);
+  return (UserGachaDrawLogEntity_o *)DataMasterBase_object__object__object___GetEntity(
+                                       (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                        PK,
-                                       (const MethodInfo_21FBCE4 *)Method_DataMasterBase_UserGachaDrawLogMaster__UserGachaDrawLogEntity__string__GetEntity__);
+                                       (const MethodInfo_2FE6DA4 *)Method_DataMasterBase_UserGachaDrawLogMaster__UserGachaDrawLogEntity__string__GetEntity__);
 }
 
 
@@ -174,17 +181,17 @@ bool __fastcall UserGachaDrawLogMaster__TryGetEntity(
         int64_t drawAt,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x2
+  Il2CppObject *PK; // x2
 
-  if ( (byte_4389D00 & 1) == 0 )
+  if ( (byte_48E347C & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_UserGachaDrawLogMaster__UserGachaDrawLogEntity__string__TryGetEntity__);
-    byte_4389D00 = 1;
+    sub_1B00CCC(&Method_DataMasterBase_UserGachaDrawLogMaster__UserGachaDrawLogEntity__string__TryGetEntity__, entity);
+    byte_48E347C = 1;
   }
-  PK = UserGachaDrawLogEntity__CreatePK(gachaId, idx, drawAt, *(const MethodInfo **)&idx);
-  return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
-           (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
-           (WarQuestSelectionEntity_o **)entity,
+  PK = (Il2CppObject *)UserGachaDrawLogEntity__CreatePK(gachaId, idx, drawAt, *(const MethodInfo **)&idx);
+  return DataMasterBase_object__object__object___TryGetEntity(
+           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
+           (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_21FBD3C *)Method_DataMasterBase_UserGachaDrawLogMaster__UserGachaDrawLogEntity__string__TryGetEntity__);
+           (const MethodInfo_2FE6DF4 *)Method_DataMasterBase_UserGachaDrawLogMaster__UserGachaDrawLogEntity__string__TryGetEntity__);
 }

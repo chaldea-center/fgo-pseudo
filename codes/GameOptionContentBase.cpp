@@ -38,7 +38,7 @@ void __fastcall GameOptionContentBase__SetPosY(GameOptionContentBase_o *this, fl
         z = localPosition.fields.z,
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B7769C(transform, v6);
+    sub_1B00F28(transform, v6);
   }
   v10.fields.y = posY;
   v10.fields.z = z;
@@ -54,12 +54,12 @@ void __fastcall GameOptionContentBase__Show(GameOptionContentBase_o *this, bool 
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7769C(0LL, v5);
+    sub_1B00F28(0LL, v5);
   UnityEngine_GameObject__SetActive(gameObject, value, 0LL);
 }
 
 
 int32_t __fastcall GameOptionContentBase__get_ContentHeight(GameOptionContentBase_o *this, const MethodInfo *method)
 {
-  return (int32_t)this[1].klass;
+  return this->fields.contentHeight;
 }

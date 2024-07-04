@@ -2,47 +2,30 @@ void __fastcall BattleCallBack_object____ctor(
         BattleCallBack_T__o *this,
         Il2CppObject *argument,
         System_Action_T__o *callBack,
-        const MethodInfo_2CAE170 *method)
+        const MethodInfo_2F5EF68 *method)
 {
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
+  int32_t v7; // w2
+  int32_t v8; // w3
+  int32_t v9; // w2
+  int32_t v10; // w3
 
-  if ( !this )
-    sub_B7769C(0LL, argument);
   BattleCallBackBase___ctor((BattleCallBackBase_o *)this, 0LL);
   this->fields.argument = argument;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)argument, v7, v8, v9, v10, v11, v12);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)argument, v7, v8);
   this->fields.callBack = callBack;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.callBack,
-    (System_Int32_array **)callBack,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.callBack, (int32_t)callBack, v9, v10);
 }
 
 
-void __fastcall BattleCallBack_object___call(BattleCallBack_T__o *this, const MethodInfo_2CAE1C8 *method)
+void __fastcall BattleCallBack_object___call(BattleCallBack_T__o *this, const MethodInfo_2F5EFAC *method)
 {
-  struct System_Action_T__o *callBack; // x0
+  struct System_Action_T__o *callBack; // x8
 
   callBack = this->fields.callBack;
   if ( !callBack )
-    sub_B7769C(0LL, method);
-  ((void (__fastcall *)(struct System_Action_T__o *, Il2CppObject *))method->klass->rgctx_data->_0_System_Action_T__Invoke->methodPointer)(
-    callBack,
-    this->fields.argument);
+    sub_1B00F28(this, method);
+  ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, Il2CppObject *, _QWORD))callBack->fields.m_target)(
+    callBack->fields.original_method_info,
+    this->fields.argument,
+    *(_QWORD *)&callBack->fields.extra_arg);
 }

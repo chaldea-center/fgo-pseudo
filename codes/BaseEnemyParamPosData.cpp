@@ -20,37 +20,53 @@ int32_t __fastcall BaseEnemyParamPosData__get_BuffIconMaxLine(BaseEnemyParamPosD
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 UnityEngine_Vector3_o __fastcall BaseEnemyParamPosData__get_NormalTrLocalPos(
         BaseEnemyParamPosData_o *this,
         const MethodInfo *method)
 {
-  float v2; // s0
-  float v3; // s1
-  float v4; // s2
+  struct UnityEngine_Vector3_StaticFields *static_fields; // x8
+  float x; // s0
+  float y; // s1
+  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  *(UnityEngine_Vector3_o *)&v2 = UnityEngine_Vector3__get_zero(0LL);
-  result.fields.z = v4;
-  result.fields.y = v3;
-  result.fields.x = v2;
+  if ( !byte_48DD9F1 )
+  {
+    sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, method);
+    byte_48DD9F1 = 1;
+  }
+  static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
+  x = static_fields->zeroVector.fields.x;
+  y = static_fields->zeroVector.fields.y;
+  z = static_fields->zeroVector.fields.z;
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 UnityEngine_Vector3_o __fastcall BaseEnemyParamPosData__get_NormalTrLocalScale(
         BaseEnemyParamPosData_o *this,
         const MethodInfo *method)
 {
-  float v2; // s0
-  float v3; // s1
-  float v4; // s2
+  struct UnityEngine_Vector3_StaticFields *static_fields; // x8
+  float x; // s0
+  float y; // s1
+  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  *(UnityEngine_Vector3_o *)&v2 = UnityEngine_Vector3__get_one(0LL);
-  result.fields.z = v4;
-  result.fields.y = v3;
-  result.fields.x = v2;
+  if ( !byte_48DD9F6 )
+  {
+    sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, method);
+    byte_48DD9F6 = 1;
+  }
+  static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
+  x = static_fields->oneVector.fields.x;
+  y = static_fields->oneVector.fields.y;
+  z = static_fields->oneVector.fields.z;
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }

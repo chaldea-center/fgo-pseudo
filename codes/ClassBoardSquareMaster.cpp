@@ -1,61 +1,66 @@
 void __fastcall ClassBoardSquareMaster___ctor(ClassBoardSquareMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_438D456 & 1) == 0 )
+  if ( (byte_48E25B1 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string___ctor__);
-    byte_438D456 = 1;
+    sub_1B00CCC(&Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string___ctor__, method);
+    byte_48E25B1 = 1;
   }
-  DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
-    (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
+  DataMasterBase_object__object__object____ctor(
+    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     428,
-    (const MethodInfo_21FBC48 *)Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string___ctor__);
+    (const MethodInfo_2FE6D64 *)Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 ClassBoardSquareEntity_array *__fastcall ClassBoardSquareMaster__GetAllEntity(
         ClassBoardSquareMaster_o *this,
         int32_t baseId,
         const MethodInfo *method)
 {
-  ClassBoardSquareMaster___c__DisplayClass0_0_o *v5; // x21
-  __int64 v6; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
-  System_Collections_Generic_IEnumerable_TSource__o *Entitys_WarQuestSelectionEntity; // x19
-  System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *v9; // x20
-  System_Collections_Generic_IEnumerable_TSource__o *v10; // x0
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x21
+  __int64 v11; // x0
+  __int64 v12; // x1
+  System_Collections_Generic_IEnumerable_TSource__o *Entitys_object; // x19
+  System_Func_object__bool__o *v14; // x20
+  System_Collections_Generic_IEnumerable_TSource__o *v15; // x0
 
-  if ( (byte_438D454 & 1) == 0 )
+  if ( (byte_48E25AF & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_getEntitys_ClassBoardSquareEntity___);
-    sub_B775C4(&Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___);
-    sub_B775C4(&Method_System_Linq_Enumerable_Where_ClassBoardSquareEntity___);
-    sub_B775C4(&Method_System_Func_ClassBoardSquareEntity__bool___ctor__);
-    sub_B775C4(&System_Func_ClassBoardSquareEntity__bool__TypeInfo);
-    sub_B775C4(&Method_ClassBoardSquareMaster___c__DisplayClass0_0__GetAllEntity_b__0__);
-    sub_B775C4(&ClassBoardSquareMaster___c__DisplayClass0_0_TypeInfo);
-    byte_438D454 = 1;
+    sub_1B00CCC(&Method_DataMasterBase_getEntitys_ClassBoardSquareEntity___, *(_QWORD *)&baseId);
+    sub_1B00CCC(&Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___, v5);
+    sub_1B00CCC(&Method_System_Linq_Enumerable_Where_ClassBoardSquareEntity___, v6);
+    sub_1B00CCC(&System_Func_ClassBoardSquareEntity__bool__TypeInfo, v7);
+    sub_1B00CCC(&Method_ClassBoardSquareMaster___c__DisplayClass0_0__GetAllEntity_b__0__, v8);
+    sub_1B00CCC(&ClassBoardSquareMaster___c__DisplayClass0_0_TypeInfo, v9);
+    byte_48E25AF = 1;
   }
-  v5 = (ClassBoardSquareMaster___c__DisplayClass0_0_o *)sub_B77694(ClassBoardSquareMaster___c__DisplayClass0_0_TypeInfo);
-  ClassBoardSquareMaster___c__DisplayClass0_0___ctor(v5, 0LL);
-  if ( !v5 )
-    sub_B7769C(v6, v7);
-  v5->fields.baseId = baseId;
-  Entitys_WarQuestSelectionEntity = (System_Collections_Generic_IEnumerable_TSource__o *)DataMasterBase__getEntitys_WarQuestSelectionEntity_(
-                                                                                           (DataMasterBase_o *)this,
-                                                                                           (const MethodInfo_1D18CC4 *)Method_DataMasterBase_getEntitys_ClassBoardSquareEntity___);
-  v9 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B77694(System_Func_ClassBoardSquareEntity__bool__TypeInfo);
-  System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool____ctor(
-    v9,
-    (Il2CppObject *)v5,
+  v10 = sub_1B00F18(ClassBoardSquareMaster___c__DisplayClass0_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v10, 0LL);
+  if ( !v10 )
+    sub_1B00F28(v11, v12);
+  *(_DWORD *)(v10 + 16) = baseId;
+  Entitys_object = (System_Collections_Generic_IEnumerable_TSource__o *)DataMasterBase__getEntitys_object_(
+                                                                          (DataMasterBase_o *)this,
+                                                                          (const MethodInfo_2D634A4 *)Method_DataMasterBase_getEntitys_ClassBoardSquareEntity___);
+  v14 = (System_Func_object__bool__o *)sub_1B00F18(System_Func_ClassBoardSquareEntity__bool__TypeInfo);
+  System_Func_object__bool____ctor(
+    v14,
+    (Il2CppObject *)v10,
     Method_ClassBoardSquareMaster___c__DisplayClass0_0__GetAllEntity_b__0__,
-    (const MethodInfo_29E92C4 *)Method_System_Func_ClassBoardSquareEntity__bool___ctor__);
-  v10 = System_Linq_Enumerable__Where_WarBoardManager_WarBoardOnboardSkillTarget_(
-          Entitys_WarQuestSelectionEntity,
-          (System_Func_TSource__bool__o *)v9,
-          (const MethodInfo_1D41C94 *)Method_System_Linq_Enumerable_Where_ClassBoardSquareEntity___);
-  return (ClassBoardSquareEntity_array *)System_Linq_Enumerable__ToArray_DrawLotsDisplayMessage_DisplayedInGroup_SaveData_(
-                                           v10,
-                                           (const MethodInfo_1D3D5E4 *)Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___);
+    0LL);
+  v15 = System_Linq_Enumerable__Where_object_(
+          Entitys_object,
+          (System_Func_TSource__bool__o *)v14,
+          (const MethodInfo_2D9D054 *)Method_System_Linq_Enumerable_Where_ClassBoardSquareEntity___);
+  return (ClassBoardSquareEntity_array *)System_Linq_Enumerable__ToArray_object_(
+                                           v15,
+                                           (const MethodInfo_2D976BC *)Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___);
 }
 
 
@@ -66,65 +71,72 @@ ClassBoardSquareEntity_o *__fastcall ClassBoardSquareMaster__GetEntity(
         int32_t id,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x1
+  Il2CppObject *PK; // x1
 
-  if ( (byte_438D457 & 1) == 0 )
+  if ( (byte_48E25B2 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__GetEntity__);
-    byte_438D457 = 1;
+    sub_1B00CCC(
+      &Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__GetEntity__,
+      *(_QWORD *)&classBoardBaseId);
+    byte_48E25B2 = 1;
   }
-  PK = ClassBoardSquareEntity__CreatePK(classBoardBaseId, id, *(const MethodInfo **)&id);
-  return (ClassBoardSquareEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
-                                       (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
+  PK = (Il2CppObject *)ClassBoardSquareEntity__CreatePK(classBoardBaseId, id, *(const MethodInfo **)&id);
+  return (ClassBoardSquareEntity_o *)DataMasterBase_object__object__object___GetEntity(
+                                       (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                        PK,
-                                       (const MethodInfo_21FBCE4 *)Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__GetEntity__);
+                                       (const MethodInfo_2FE6DA4 *)Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__GetEntity__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 ClassBoardSquareEntity_array *__fastcall ClassBoardSquareMaster__GetOtherThanNoneEntity(
         ClassBoardSquareMaster_o *this,
         int32_t baseId,
         const MethodInfo *method)
 {
-  ClassBoardSquareMaster___c__DisplayClass1_0_o *v5; // x21
-  __int64 v6; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
-  System_Collections_Generic_IEnumerable_TSource__o *Entitys_WarQuestSelectionEntity; // x19
-  System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *v9; // x20
-  System_Collections_Generic_IEnumerable_TSource__o *v10; // x0
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x21
+  __int64 v11; // x0
+  __int64 v12; // x1
+  System_Collections_Generic_IEnumerable_TSource__o *Entitys_object; // x19
+  System_Func_object__bool__o *v14; // x20
+  System_Collections_Generic_IEnumerable_TSource__o *v15; // x0
 
-  if ( (byte_438D455 & 1) == 0 )
+  if ( (byte_48E25B0 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_getEntitys_ClassBoardSquareEntity___);
-    sub_B775C4(&Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___);
-    sub_B775C4(&Method_System_Linq_Enumerable_Where_ClassBoardSquareEntity___);
-    sub_B775C4(&Method_System_Func_ClassBoardSquareEntity__bool___ctor__);
-    sub_B775C4(&System_Func_ClassBoardSquareEntity__bool__TypeInfo);
-    sub_B775C4(&Method_ClassBoardSquareMaster___c__DisplayClass1_0__GetOtherThanNoneEntity_b__0__);
-    sub_B775C4(&ClassBoardSquareMaster___c__DisplayClass1_0_TypeInfo);
-    byte_438D455 = 1;
+    sub_1B00CCC(&Method_DataMasterBase_getEntitys_ClassBoardSquareEntity___, *(_QWORD *)&baseId);
+    sub_1B00CCC(&Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___, v5);
+    sub_1B00CCC(&Method_System_Linq_Enumerable_Where_ClassBoardSquareEntity___, v6);
+    sub_1B00CCC(&System_Func_ClassBoardSquareEntity__bool__TypeInfo, v7);
+    sub_1B00CCC(&Method_ClassBoardSquareMaster___c__DisplayClass1_0__GetOtherThanNoneEntity_b__0__, v8);
+    sub_1B00CCC(&ClassBoardSquareMaster___c__DisplayClass1_0_TypeInfo, v9);
+    byte_48E25B0 = 1;
   }
-  v5 = (ClassBoardSquareMaster___c__DisplayClass1_0_o *)sub_B77694(ClassBoardSquareMaster___c__DisplayClass1_0_TypeInfo);
-  ClassBoardSquareMaster___c__DisplayClass1_0___ctor(v5, 0LL);
-  if ( !v5 )
-    sub_B7769C(v6, v7);
-  v5->fields.baseId = baseId;
-  Entitys_WarQuestSelectionEntity = (System_Collections_Generic_IEnumerable_TSource__o *)DataMasterBase__getEntitys_WarQuestSelectionEntity_(
-                                                                                           (DataMasterBase_o *)this,
-                                                                                           (const MethodInfo_1D18CC4 *)Method_DataMasterBase_getEntitys_ClassBoardSquareEntity___);
-  v9 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B77694(System_Func_ClassBoardSquareEntity__bool__TypeInfo);
-  System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool____ctor(
-    v9,
-    (Il2CppObject *)v5,
+  v10 = sub_1B00F18(ClassBoardSquareMaster___c__DisplayClass1_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v10, 0LL);
+  if ( !v10 )
+    sub_1B00F28(v11, v12);
+  *(_DWORD *)(v10 + 16) = baseId;
+  Entitys_object = (System_Collections_Generic_IEnumerable_TSource__o *)DataMasterBase__getEntitys_object_(
+                                                                          (DataMasterBase_o *)this,
+                                                                          (const MethodInfo_2D634A4 *)Method_DataMasterBase_getEntitys_ClassBoardSquareEntity___);
+  v14 = (System_Func_object__bool__o *)sub_1B00F18(System_Func_ClassBoardSquareEntity__bool__TypeInfo);
+  System_Func_object__bool____ctor(
+    v14,
+    (Il2CppObject *)v10,
     Method_ClassBoardSquareMaster___c__DisplayClass1_0__GetOtherThanNoneEntity_b__0__,
-    (const MethodInfo_29E92C4 *)Method_System_Func_ClassBoardSquareEntity__bool___ctor__);
-  v10 = System_Linq_Enumerable__Where_WarBoardManager_WarBoardOnboardSkillTarget_(
-          Entitys_WarQuestSelectionEntity,
-          (System_Func_TSource__bool__o *)v9,
-          (const MethodInfo_1D41C94 *)Method_System_Linq_Enumerable_Where_ClassBoardSquareEntity___);
-  return (ClassBoardSquareEntity_array *)System_Linq_Enumerable__ToArray_DrawLotsDisplayMessage_DisplayedInGroup_SaveData_(
-                                           v10,
-                                           (const MethodInfo_1D3D5E4 *)Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___);
+    0LL);
+  v15 = System_Linq_Enumerable__Where_object_(
+          Entitys_object,
+          (System_Func_TSource__bool__o *)v14,
+          (const MethodInfo_2D9D054 *)Method_System_Linq_Enumerable_Where_ClassBoardSquareEntity___);
+  return (ClassBoardSquareEntity_array *)System_Linq_Enumerable__ToArray_object_(
+                                           v15,
+                                           (const MethodInfo_2D976BC *)Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___);
 }
 
 
@@ -136,19 +148,19 @@ bool __fastcall ClassBoardSquareMaster__TryGetEntity(
         int32_t id,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x2
+  Il2CppObject *PK; // x2
 
-  if ( (byte_438D458 & 1) == 0 )
+  if ( (byte_48E25B3 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__TryGetEntity__);
-    byte_438D458 = 1;
+    sub_1B00CCC(&Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__TryGetEntity__, entity);
+    byte_48E25B3 = 1;
   }
-  PK = ClassBoardSquareEntity__CreatePK(classBoardBaseId, id, *(const MethodInfo **)&classBoardBaseId);
-  return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
-           (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
-           (WarQuestSelectionEntity_o **)entity,
+  PK = (Il2CppObject *)ClassBoardSquareEntity__CreatePK(classBoardBaseId, id, *(const MethodInfo **)&classBoardBaseId);
+  return DataMasterBase_object__object__object___TryGetEntity(
+           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
+           (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_21FBD3C *)Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__TryGetEntity__);
+           (const MethodInfo_2FE6DF4 *)Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__TryGetEntity__);
 }
 
 
@@ -166,7 +178,7 @@ bool __fastcall ClassBoardSquareMaster___c__DisplayClass0_0___GetAllEntity_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_B7769C(this, 0LL);
+    sub_1B00F28(this, 0LL);
   return x->fields.classBoardBaseId == this->fields.baseId;
 }
 
@@ -185,6 +197,6 @@ bool __fastcall ClassBoardSquareMaster___c__DisplayClass1_0___GetOtherThanNoneEn
         const MethodInfo *method)
 {
   if ( !x )
-    sub_B7769C(this, 0LL);
+    sub_1B00F28(this, 0LL);
   return x->fields.classBoardBaseId == this->fields.baseId && x->fields.skillType != 0;
 }

@@ -1,13 +1,13 @@
 void __fastcall UserEventCooltimeRewardEntity___ctor(UserEventCooltimeRewardEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438CB43 & 1) == 0 )
+  if ( (byte_48E339F & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    byte_438CB43 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
+    byte_48E339F = 1;
   }
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -19,6 +19,7 @@ int64_t __fastcall UserEventCooltimeRewardEntity__CollectedAt(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall UserEventCooltimeRewardEntity__CreatePK(
         int64_t userId,
         int32_t eventId,
@@ -26,17 +27,17 @@ System_String_o *__fastcall UserEventCooltimeRewardEntity__CreatePK(
         int32_t lv,
         const MethodInfo *method)
 {
-  if ( (byte_438CB41 & 1) == 0 )
+  if ( (byte_48E339D & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_long__int__int__int___);
-    byte_438CB41 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_long__int__int__int___, *(_QWORD *)&eventId);
+    byte_48E339D = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int__int_(
            userId,
            eventId,
            spotId,
            lv,
-           (const MethodInfo_1D17BDC *)Method_DataEntityBase_CreateMultiplePK_long__int__int__int___);
+           (const MethodInfo_2D618BC *)Method_DataEntityBase_CreateMultiplePK_long__int__int__int___);
 }
 
 
@@ -59,24 +60,25 @@ EventCooltimeRewardEntity_o *__fastcall UserEventCooltimeRewardEntity__GetEventC
         UserEventCooltimeRewardEntity_o *this,
         const MethodInfo *method)
 {
-  EventCooltimeRewardMaster_o *Master_WarQuestSelectionMaster; // x0
-  __int64 v4; // x1
-  EventCooltimeRewardEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
+  __int64 v3; // x1
+  Il2CppObject *Master_object; // x0
+  __int64 v5; // x1
+  EventCooltimeRewardEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_438CB42 & 1) == 0 )
+  if ( (byte_48E339E & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
-    sub_B775C4(&DataManager_TypeInfo);
-    byte_438CB42 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMaster_EventCooltimeRewardMaster___, method);
+    sub_1B00CCC(&DataManager_TypeInfo, v3);
+    byte_48E339E = 1;
   }
   entity = 0LL;
-  if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (EventCooltimeRewardMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
-  if ( !Master_WarQuestSelectionMaster )
-    sub_B7769C(0LL, v4);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
+  if ( !Master_object )
+    sub_1B00F28(0LL, v5);
   EventCooltimeRewardMaster__TryGetEntity(
-    Master_WarQuestSelectionMaster,
+    (EventCooltimeRewardMaster_o *)Master_object,
     &entity,
     this->fields.eventId,
     this->fields.spotId,

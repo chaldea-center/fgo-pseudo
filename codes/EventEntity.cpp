@@ -1,13 +1,13 @@
 void __fastcall EventEntity___ctor(EventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438DE1C & 1) == 0 )
+  if ( (byte_48E2781 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_int___ctor__);
-    byte_438DE1C = 1;
+    sub_1B00CCC(&Method_DataEntityBase_int___ctor__, method);
+    byte_48E2781 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_2FE684C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -17,191 +17,180 @@ int32_t __fastcall EventEntity__CreatePrimaryKey(EventEntity_o *this, const Meth
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventEntity__FinishTimeString(
         EventEntity_o *this,
         bool isFinishedAt,
         const MethodInfo *method)
 {
-  __int64 v5; // x8
-  int64_t v6; // x19
-  System_String_o *v7; // x19
-  System_Object_array *v8; // x20
-  __int64 v9; // x2
-  __int64 v10; // x0
-  __int64 v11; // x1
-  System_String_array **v12; // x2
-  System_String_array **v13; // x3
-  System_Boolean_array **v14; // x4
-  System_Int32_array **v15; // x5
-  System_Int32_array *v16; // x6
-  System_Int32_array *v17; // x7
-  System_Int32_array **v18; // x21
-  __int64 v19; // x2
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
-  System_Int32_array **v26; // x21
-  __int64 v27; // x2
-  System_String_array **v28; // x2
-  System_String_array **v29; // x3
-  System_Boolean_array **v30; // x4
-  System_Int32_array **v31; // x5
-  System_Int32_array *v32; // x6
-  System_Int32_array *v33; // x7
-  System_Int32_array **v34; // x21
-  __int64 v35; // x2
-  System_String_array **v36; // x2
-  System_String_array **v37; // x3
-  System_Boolean_array **v38; // x4
-  System_Int32_array **v39; // x5
-  System_Int32_array *v40; // x6
-  System_Int32_array *v41; // x7
-  System_Int32_array **v42; // x21
-  __int64 v43; // x2
-  System_String_array **v44; // x2
-  System_String_array **v45; // x3
-  System_Boolean_array **v46; // x4
-  System_Int32_array **v47; // x5
-  System_Int32_array *v48; // x6
-  System_Int32_array *v49; // x7
-  System_Int32_array **v50; // x21
-  __int64 v52; // x0
-  __int64 v53; // x0
-  int32_t Minute; // [xsp+4h] [xbp-3Ch] BYREF
-  int32_t Hour; // [xsp+8h] [xbp-38h] BYREF
-  int32_t Day; // [xsp+Ch] [xbp-34h] BYREF
-  int32_t Month; // [xsp+10h] [xbp-30h] BYREF
-  int32_t Year; // [xsp+14h] [xbp-2Ch] BYREF
-  uint64_t dateData; // [xsp+18h] [xbp-28h] BYREF
-  System_DateTime_o v60; // 0:x0.8
-  System_DateTime_o v61; // 0:x0.8
-  System_DateTime_o v62; // 0:x0.8
-  System_DateTime_o v63; // 0:x0.8
-  System_DateTime_o v64; // 0:x0.8
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x8
+  int64_t v11; // x19
+  System_String_o *v12; // x19
+  System_Object_array *v13; // x20
+  __int64 v14; // x2
+  __int64 v15; // x3
+  __int64 v16; // x4
+  __int64 v17; // x0
+  __int64 v18; // x1
+  int32_t v19; // w2
+  int32_t v20; // w3
+  Il2CppObject *v21; // x21
+  __int64 v22; // x2
+  __int64 v23; // x3
+  __int64 v24; // x4
+  int32_t v25; // w2
+  int32_t v26; // w3
+  Il2CppObject *v27; // x21
+  __int64 v28; // x2
+  __int64 v29; // x3
+  __int64 v30; // x4
+  int32_t v31; // w2
+  int32_t v32; // w3
+  Il2CppObject *v33; // x21
+  __int64 v34; // x2
+  __int64 v35; // x3
+  __int64 v36; // x4
+  int32_t v37; // w2
+  int32_t v38; // w3
+  Il2CppObject *v39; // x21
+  __int64 v40; // x2
+  __int64 v41; // x3
+  __int64 v42; // x4
+  int32_t v43; // w2
+  int32_t v44; // w3
+  Il2CppObject *v45; // x21
+  __int64 v47; // x0
+  int32_t Minute; // [xsp+4h] [xbp-4Ch] BYREF
+  int32_t Hour; // [xsp+8h] [xbp-48h] BYREF
+  int32_t Day; // [xsp+Ch] [xbp-44h] BYREF
+  int32_t Month; // [xsp+10h] [xbp-40h] BYREF
+  int32_t Year; // [xsp+14h] [xbp-3Ch] BYREF
+  uint64_t dateData; // [xsp+18h] [xbp-38h] BYREF
+  System_DateTime_o v54; // 0:x0.8
+  System_DateTime_o v55; // 0:x0.8
+  System_DateTime_o v56; // 0:x0.8
+  System_DateTime_o v57; // 0:x0.8
+  System_DateTime_o v58; // 0:x0.8
 
-  if ( (byte_438DE1B & 1) == 0 )
+  if ( (byte_48E2780 & 1) == 0 )
   {
-    sub_B775C4(&int_TypeInfo);
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&object___TypeInfo);
-    sub_B775C4(&StringLiteral_4739/*"DISP_TIMESTR_FORMAT"*/);
-    byte_438DE1B = 1;
+    sub_1B00CCC(&System_DateTime_TypeInfo, isFinishedAt);
+    sub_1B00CCC(&int_TypeInfo, v5);
+    sub_1B00CCC(&LocalizationManager_TypeInfo, v6);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v7);
+    sub_1B00CCC(&object___TypeInfo, v8);
+    sub_1B00CCC(&StringLiteral_4997/*"DISP_TIMESTR_FORMAT"*/, v9);
+    byte_48E2780 = 1;
   }
-  dateData = 0LL;
-  v5 = 96LL;
+  v10 = 96LL;
   if ( isFinishedAt )
-    v5 = 104LL;
-  v6 = *(int64_t *)((char *)&this->klass + v5);
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+    v10 = 104LL;
+  v11 = *(int64_t *)((char *)&this->klass + v10);
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  dateData = NetworkManager__getServerDateTime_26207672(v6, 0LL).fields.dateData;
-  if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !LocalizationManager_TypeInfo->_2.cctor_finished )
-  {
+  dateData = NetworkManager__getServerDateTime_37177692(v11, 0LL).fields._dateData;
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  }
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_4739/*"DISP_TIMESTR_FORMAT"*/, 0LL);
-  v8 = (System_Object_array *)sub_B775DC(object___TypeInfo, 5LL);
-  v60.fields.dateData = (uint64_t)&dateData;
-  Year = System_DateTime__get_Year(v60, 0LL);
-  v10 = j_il2cpp_value_box_0(int_TypeInfo, &Year, v9);
-  if ( !v8 )
-    sub_B7769C(v10, v11);
-  v18 = (System_Int32_array **)v10;
-  if ( v10 )
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_4997/*"DISP_TIMESTR_FORMAT"*/, 0LL);
+  v13 = (System_Object_array *)sub_1B00D74(object___TypeInfo, 5LL);
+  if ( !System_DateTime_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
+  v54.fields._dateData = (uint64_t)&dateData;
+  Year = System_DateTime__get_Year(v54, 0LL);
+  v17 = j_il2cpp_value_box_0(int_TypeInfo, &Year, v14, v15, v16);
+  if ( !v13 )
+    sub_1B00F28(v17, v18);
+  v21 = (Il2CppObject *)v17;
+  if ( v17 )
   {
-    v10 = sub_B77684(v10, v8->obj.klass->_1.element_class);
-    if ( !v10 )
+    v17 = sub_1B00E08(v17, v13->obj.klass->_1.element_class);
+    if ( !v17 )
       goto LABEL_29;
   }
-  if ( !v8->max_length )
+  if ( !v13->max_length )
     goto LABEL_28;
-  v8->m_Items[0] = (Il2CppObject *)v18;
-  sub_B77560((BattleServantConfConponent_o *)v8->m_Items, v18, v12, v13, v14, v15, v16, v17);
-  v61.fields.dateData = (uint64_t)&dateData;
-  Month = System_DateTime__get_Month(v61, 0LL);
-  v10 = j_il2cpp_value_box_0(int_TypeInfo, &Month, v19);
-  v26 = (System_Int32_array **)v10;
-  if ( v10 )
+  v13->m_Items[0] = v21;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)v13->m_Items, (int32_t)v21, v19, v20);
+  v55.fields._dateData = (uint64_t)&dateData;
+  Month = System_DateTime__get_Month(v55, 0LL);
+  v17 = j_il2cpp_value_box_0(int_TypeInfo, &Month, v22, v23, v24);
+  v27 = (Il2CppObject *)v17;
+  if ( v17 )
   {
-    v10 = sub_B77684(v10, v8->obj.klass->_1.element_class);
-    if ( !v10 )
+    v17 = sub_1B00E08(v17, v13->obj.klass->_1.element_class);
+    if ( !v17 )
       goto LABEL_29;
   }
-  if ( v8->max_length <= 1 )
+  if ( v13->max_length <= 1 )
     goto LABEL_28;
-  v8->m_Items[1] = (Il2CppObject *)v26;
-  sub_B77560((BattleServantConfConponent_o *)&v8->m_Items[1], v26, v20, v21, v22, v23, v24, v25);
-  v62.fields.dateData = (uint64_t)&dateData;
-  Day = System_DateTime__get_Day(v62, 0LL);
-  v10 = j_il2cpp_value_box_0(int_TypeInfo, &Day, v27);
-  v34 = (System_Int32_array **)v10;
-  if ( v10 )
+  v13->m_Items[1] = v27;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v13->m_Items[1], (int32_t)v27, v25, v26);
+  v56.fields._dateData = (uint64_t)&dateData;
+  Day = System_DateTime__get_Day(v56, 0LL);
+  v17 = j_il2cpp_value_box_0(int_TypeInfo, &Day, v28, v29, v30);
+  v33 = (Il2CppObject *)v17;
+  if ( v17 )
   {
-    v10 = sub_B77684(v10, v8->obj.klass->_1.element_class);
-    if ( !v10 )
+    v17 = sub_1B00E08(v17, v13->obj.klass->_1.element_class);
+    if ( !v17 )
       goto LABEL_29;
   }
-  if ( v8->max_length <= 2 )
+  if ( v13->max_length <= 2 )
     goto LABEL_28;
-  v8->m_Items[2] = (Il2CppObject *)v34;
-  sub_B77560((BattleServantConfConponent_o *)&v8->m_Items[2], v34, v28, v29, v30, v31, v32, v33);
-  v63.fields.dateData = (uint64_t)&dateData;
-  Hour = System_DateTime__get_Hour(v63, 0LL);
-  v10 = j_il2cpp_value_box_0(int_TypeInfo, &Hour, v35);
-  v42 = (System_Int32_array **)v10;
-  if ( v10 )
+  v13->m_Items[2] = v33;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v13->m_Items[2], (int32_t)v33, v31, v32);
+  v57.fields._dateData = (uint64_t)&dateData;
+  Hour = System_DateTime__get_Hour(v57, 0LL);
+  v17 = j_il2cpp_value_box_0(int_TypeInfo, &Hour, v34, v35, v36);
+  v39 = (Il2CppObject *)v17;
+  if ( v17 )
   {
-    v10 = sub_B77684(v10, v8->obj.klass->_1.element_class);
-    if ( !v10 )
+    v17 = sub_1B00E08(v17, v13->obj.klass->_1.element_class);
+    if ( !v17 )
       goto LABEL_29;
   }
-  if ( v8->max_length <= 3 )
+  if ( v13->max_length <= 3 )
     goto LABEL_28;
-  v8->m_Items[3] = (Il2CppObject *)v42;
-  sub_B77560((BattleServantConfConponent_o *)&v8->m_Items[3], v42, v36, v37, v38, v39, v40, v41);
-  v64.fields.dateData = (uint64_t)&dateData;
-  Minute = System_DateTime__get_Minute(v64, 0LL);
-  v10 = j_il2cpp_value_box_0(int_TypeInfo, &Minute, v43);
-  v50 = (System_Int32_array **)v10;
-  if ( v10 )
+  v13->m_Items[3] = v39;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v13->m_Items[3], (int32_t)v39, v37, v38);
+  v58.fields._dateData = (uint64_t)&dateData;
+  Minute = System_DateTime__get_Minute(v58, 0LL);
+  v17 = j_il2cpp_value_box_0(int_TypeInfo, &Minute, v40, v41, v42);
+  v45 = (Il2CppObject *)v17;
+  if ( v17 )
   {
-    v10 = sub_B77684(v10, v8->obj.klass->_1.element_class);
-    if ( !v10 )
+    v17 = sub_1B00E08(v17, v13->obj.klass->_1.element_class);
+    if ( !v17 )
     {
 LABEL_29:
-      v53 = sub_B776BC(v10);
-      sub_B77668(v53, 0LL);
+      v47 = sub_1B00F4C(v17);
+      sub_1B00DF4(v47, 0LL);
     }
   }
-  if ( v8->max_length <= 4 )
-  {
+  if ( v13->max_length <= 4 )
 LABEL_28:
-    v52 = sub_B776C8(v10);
-    sub_B77668(v52, 0LL);
-  }
-  v8->m_Items[4] = (Il2CppObject *)v50;
-  sub_B77560((BattleServantConfConponent_o *)&v8->m_Items[4], v50, v44, v45, v46, v47, v48, v49);
-  return System_String__Format_44980660(v7, v8, 0LL);
+    sub_1B00F30(v17, v18);
+  v13->m_Items[4] = v45;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v13->m_Items[4], (int32_t)v45, v43, v44);
+  return System_String__Format_60340256(v12, v13, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int64_t __fastcall EventEntity__GetEndTime(EventEntity_o *this, bool isFinishedAt, const MethodInfo *method)
 {
   int64_t RestTime; // x0
   int64_t v6; // x21
 
-  if ( (byte_438DE11 & 1) == 0 )
+  if ( (byte_48E2776 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438DE11 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, isFinishedAt);
+    byte_48E2776 = 1;
   }
   RestTime = EventEntity__GetRestTime(this, isFinishedAt, method);
   if ( RestTime < 1 )
@@ -214,11 +203,8 @@ int64_t __fastcall EventEntity__GetEndTime(EventEntity_o *this, bool isFinishedA
   else
   {
     v6 = RestTime;
-    if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !NetworkManager_TypeInfo->_2.cctor_finished )
-    {
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    }
     return NetworkManager__getTime(0LL) + v6;
   }
 }
@@ -226,53 +212,55 @@ int64_t __fastcall EventEntity__GetEndTime(EventEntity_o *this, bool isFinishedA
 
 int64_t __fastcall EventEntity__GetEndTime_ShopOrReward(EventEntity_o *this, const MethodInfo *method)
 {
-  DataManager_o *Instance; // x0
-  const MethodInfo *v4; // x1
-  WarQuestSelectionMaster_o *MasterData_WarQuestSelectionMaster; // x0
+  __int64 v3; // x1
+  ShopEntity_array *Instance; // x0
+  const MethodInfo *v5; // x1
+  Il2CppObject *MasterData_object; // x0
   int32_t id; // w20
-  ShopMaster_o *v7; // x21
-  const MethodInfo *v8; // x2
+  ShopMaster_o *v8; // x21
+  const MethodInfo *v9; // x2
   int64_t finishedAt; // x20
   int64_t result; // x0
 
-  if ( (byte_438DE14 & 1) == 0 )
+  if ( (byte_48E2779 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_ShopMaster___);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438DE14 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_ShopMaster___, method);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_48E2779 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (ShopEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
-  MasterData_WarQuestSelectionMaster = DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                         Instance,
-                                         (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ShopMaster___);
+  MasterData_object = DataManager__GetMasterData_object_(
+                        (DataManager_o *)Instance,
+                        (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_ShopMaster___);
   id = this->fields.id;
-  v7 = (ShopMaster_o *)MasterData_WarQuestSelectionMaster;
-  if ( !EventEntity__IsOpen(this, 1, v8) )
+  v8 = (ShopMaster_o *)MasterData_object;
+  if ( !EventEntity__IsOpen(this, 1, v9) )
     goto LABEL_10;
-  Instance = (DataManager_o *)EventEntity__IsReward(this->fields.id, v4);
+  Instance = (ShopEntity_array *)EventEntity__IsReward(this->fields.id, v5);
   if ( ((unsigned __int8)Instance & 1) != 0 )
   {
 LABEL_9:
     finishedAt = this->fields.finishedAt;
     goto LABEL_11;
   }
-  if ( !v7 || (Instance = (DataManager_o *)ShopMaster__GetEventEntitiyList(v7, id, 0LL)) == 0LL )
+  if ( !v8 || (Instance = ShopMaster__GetEventEntitiyList(v8, id, 0LL)) == 0LL )
 LABEL_14:
-    sub_B7769C(Instance, v4);
-  if ( LODWORD(Instance->fields.datalist) )
+    sub_1B00F28(Instance, v5);
+  if ( Instance->max_length )
     goto LABEL_9;
 LABEL_10:
   finishedAt = 0LL;
 LABEL_11:
-  result = EventEntity__GetShopEndTime(this, v4);
+  result = EventEntity__GetShopEndTime(this, v5);
   if ( finishedAt > result )
     return finishedAt;
   return result;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int64_t __fastcall EventEntity__GetRestTime(EventEntity_o *this, bool isFinishedAt, const MethodInfo *method)
 {
   int64_t Time; // x0
@@ -280,27 +268,24 @@ int64_t __fastcall EventEntity__GetRestTime(EventEntity_o *this, bool isFinished
   const MethodInfo *v7; // x3
   __int64 v8; // x8
 
-  if ( (byte_438DE12 & 1) == 0 )
+  if ( (byte_48E2777 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438DE12 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, isFinishedAt);
+    byte_48E2777 = 1;
   }
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
   Time = NetworkManager__getTime(0LL);
   if ( !this )
-    sub_B7769C(Time, v6);
+    sub_1B00F28(Time, v6);
   v8 = 96LL;
   if ( isFinishedAt )
     v8 = 104LL;
-  return EventEntity__GetRestTime_30360564(this, Time, *(int64_t *)((char *)&this->klass + v8), v7);
+  return EventEntity__GetRestTime_37884460(this, Time, *(int64_t *)((char *)&this->klass + v8), v7);
 }
 
 
-int64_t __fastcall EventEntity__GetRestTime_30360364(
+int64_t __fastcall EventEntity__GetRestTime_37884280(
         EventEntity_o *this,
         int64_t checkTime,
         bool isFinishedAt,
@@ -309,15 +294,15 @@ int64_t __fastcall EventEntity__GetRestTime_30360364(
   __int64 v4; // x8
 
   if ( !this )
-    sub_B7769C(0LL, checkTime);
+    sub_1B00F28(0LL, checkTime);
   v4 = 96LL;
   if ( isFinishedAt )
     v4 = 104LL;
-  return EventEntity__GetRestTime_30360564(this, checkTime, *(int64_t *)((char *)&this->klass + v4), method);
+  return EventEntity__GetRestTime_37884460(this, checkTime, *(int64_t *)((char *)&this->klass + v4), method);
 }
 
 
-int64_t __fastcall EventEntity__GetRestTime_30360564(
+int64_t __fastcall EventEntity__GetRestTime_37884460(
         EventEntity_o *this,
         int64_t checkTime,
         int64_t endTime,
@@ -330,8 +315,9 @@ int64_t __fastcall EventEntity__GetRestTime_30360564(
   int64_t startedAt; // x8
   int32_t openHours; // w9
   int32_t intervalHours; // w10
-  int v11; // w9
+  __int64 v11; // x11
   int64_t v12; // x8
+  int64_t v13; // x8
 
   v5 = __OFSUB__(endTime, checkTime);
   v6 = endTime - checkTime;
@@ -351,11 +337,13 @@ int64_t __fastcall EventEntity__GetRestTime_30360564(
   if ( !intervalHours )
     return 0LL;
   v11 = 3600 * openHours;
-  v12 = (checkTime - startedAt) % (3600 * intervalHours + (__int64)v11);
-  if ( v12 <= v11 )
-    return v11 - v12;
-  else
+  v12 = (checkTime - startedAt) % (3600 * intervalHours + v11);
+  v5 = __OFSUB__(v11, v12);
+  v13 = v11 - v12;
+  if ( v13 < 0 != v5 )
     return 0LL;
+  else
+    return v13;
 }
 
 
@@ -372,14 +360,13 @@ EventEntity_ScriptData_o *__fastcall EventEntity__GetScriptDataCondCheck(
 {
   struct EventEntity_ScriptData_array *script; // x8
   __int64 v4; // x9
-  __int64 v5; // x11
-  unsigned int v6; // w10
-  __int64 v7; // x13
-  EventEntity_ScriptData_o *v8; // x14
-  int64_t v9; // x14
-  _BOOL4 v10; // w15
-  _BOOL4 v11; // w16
-  __int64 v13; // x0
+  unsigned int v5; // w10
+  unsigned int v6; // w11
+  __int64 v7; // x12
+  EventEntity_ScriptData_o *v8; // x13
+  int64_t v9; // x13
+  _BOOL4 v10; // w14
+  _BOOL4 v11; // w15
 
   script = this->fields.script;
   if ( !script )
@@ -389,87 +376,82 @@ EventEntity_ScriptData_o *__fastcall EventEntity__GetScriptDataCondCheck(
     return 0LL;
   if ( (int)v4 < 1 )
   {
-    v6 = 0;
+    v5 = 0;
   }
   else
   {
-    v5 = 0LL;
+    v5 = 0;
     v6 = 0;
     v7 = 0x7FFFFFFFFFFFFFFFLL;
     do
     {
-      v8 = script->m_Items[v5];
+      v8 = script->m_Items[v6];
       if ( !v8 )
-        sub_B7769C(this, nowTime);
+        sub_1B00F28(this, nowTime);
       v9 = nowTime - v8->fields.startTime;
       v10 = v9 >= 0;
       v11 = v9 < v7;
       if ( v10 && v11 )
-        v6 = v5;
-      ++v5;
+        v5 = v6;
+      ++v6;
       if ( v10 && v11 )
         v7 = v9;
     }
-    while ( (int)v5 < (int)v4 );
+    while ( (_DWORD)v4 != v6 );
   }
-  if ( v6 >= (unsigned int)v4 )
-  {
-    v13 = sub_B776C8(this);
-    sub_B77668(v13, 0LL);
-  }
-  return script->m_Items[v6];
+  if ( v5 >= (unsigned int)v4 )
+    sub_1B00F30(this, nowTime);
+  return script->m_Items[v5];
 }
 
 
 int64_t __fastcall EventEntity__GetShopEndTime(EventEntity_o *this, const MethodInfo *method)
 {
-  int64_t result; // x0
-  __int64 v4; // x1
-  __int64 v5; // x9
-  int64_t v6; // x8
-  __int64 v7; // x10
-  int64_t v8; // x8
-  __int64 v9; // x11
-  int64_t v10; // x11
+  __int64 v3; // x1
+  ShopEntity_array *Instance; // x0
+  __int64 v5; // x1
+  __int64 v6; // x9
+  int64_t v7; // x8
+  int v8; // w10
+  ShopEntity_o *v9; // x11
+  int64_t closedAt; // x11
 
-  if ( (byte_438DE17 & 1) == 0 )
+  if ( (byte_48E277C & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_ShopMaster___);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438DE17 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_ShopMaster___, method);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_48E277C = 1;
   }
-  result = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-  if ( !result )
-    goto LABEL_15;
-  result = (int64_t)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                      (DataManager_o *)result,
-                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ShopMaster___);
-  if ( !result )
-    goto LABEL_15;
-  result = (int64_t)ShopMaster__GetEnableEventEntitiyList((ShopMaster_o *)result, this->fields.id, 0LL);
-  if ( !result )
-    goto LABEL_15;
-  v5 = *(_QWORD *)(result + 24);
-  v6 = result;
-  if ( v5 && (int)v5 >= 1 )
+  Instance = (ShopEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  if ( !Instance )
+    goto LABEL_16;
+  Instance = (ShopEntity_array *)DataManager__GetMasterData_object_(
+                                   (DataManager_o *)Instance,
+                                   (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_ShopMaster___);
+  if ( !Instance )
+    goto LABEL_16;
+  Instance = ShopMaster__GetEnableEventEntitiyList((ShopMaster_o *)Instance, this->fields.id, 0LL);
+  if ( !Instance )
+    goto LABEL_16;
+  v6 = *(_QWORD *)&Instance->max_length;
+  if ( v6 && (int)v6 >= 1 )
   {
     v7 = 0LL;
-    result = 0LL;
-    v8 = v6 + 32;
+    v8 = 0;
     while ( 1 )
     {
-      v9 = *(_QWORD *)(v8 + 8 * v7);
+      v9 = Instance->m_Items[v8];
       if ( !v9 )
         break;
-      v10 = *(_QWORD *)(v9 + 136);
-      ++v7;
-      if ( result < v10 )
-        result = v10;
-      if ( (int)v7 >= (int)v5 )
-        return result;
+      closedAt = v9->fields.closedAt;
+      ++v8;
+      if ( v7 < closedAt )
+        v7 = closedAt;
+      if ( (_DWORD)v6 == v8 )
+        return v7;
     }
-LABEL_15:
-    sub_B7769C(result, v4);
+LABEL_16:
+    sub_1B00F28(Instance, v5);
   }
   return 0LL;
 }
@@ -477,75 +459,75 @@ LABEL_15:
 
 bool __fastcall EventEntity__IsClosePurchaseShop(EventEntity_o *this, const MethodInfo *method)
 {
-  void *Instance; // x0
+  __int64 v3; // x1
   __int64 v4; // x1
-  DataMasterBase_WarMaster__WarEntity__int__o *v7; // x20
-  __int64 v8; // x8
-  __int64 v9; // x8
-  __int64 v10; // x0
-  WarEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
+  __int64 v5; // x1
+  __int64 v6; // x1
+  ShopEntity_array *Instance; // x0
+  __int64 v8; // x1
+  DataMasterBase_TMaster__TEntity__PKType__o *v11; // x20
+  __int64 v12; // x8
+  ShopEntity_o *v13; // x8
+  Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_438DE1A & 1) == 0 )
+  if ( (byte_48E277F & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_EventDetailMaster___);
-    sub_B775C4(&Method_DataManager_GetMasterData_ShopMaster___);
-    sub_B775C4(&Method_DataMasterBase_ShopMaster__ShopEntity__int__GetEntity__);
-    sub_B775C4(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438DE1A = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_EventDetailMaster___, method);
+    sub_1B00CCC(&Method_DataManager_GetMasterData_ShopMaster___, v3);
+    sub_1B00CCC(&Method_DataMasterBase_ShopMaster__ShopEntity__int__GetEntity__, v4);
+    sub_1B00CCC(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v5);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_48E277F = 1;
   }
   entity = 0LL;
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (ShopEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_19;
-  Instance = DataManager__GetMasterData_WarQuestSelectionMaster_(
-               (DataManager_o *)Instance,
-               (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventDetailMaster___);
+  Instance = (ShopEntity_array *)DataManager__GetMasterData_object_(
+                                   (DataManager_o *)Instance,
+                                   (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_EventDetailMaster___);
   if ( !Instance )
     goto LABEL_19;
-  Instance = (void *)DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
-                       (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
-                       &entity,
-                       this->fields.id,
-                       (const MethodInfo_21FB8F0 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
+  Instance = (ShopEntity_array *)DataMasterBase_object__object__int___TryGetEntity(
+                                   (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
+                                   &entity,
+                                   this->fields.id,
+                                   (const MethodInfo_2FE6AA0 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Instance & 1) != 0 )
   {
     if ( entity )
     {
-      if ( (BYTE3(entity->fields.age) & 1) == 0 )
+      if ( (BYTE3(entity[1].monitor) & 1) == 0 )
         return 0;
-      Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (ShopEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( Instance )
       {
-        Instance = DataManager__GetMasterData_WarQuestSelectionMaster_(
-                     (DataManager_o *)Instance,
-                     (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ShopMaster___);
+        Instance = (ShopEntity_array *)DataManager__GetMasterData_object_(
+                                         (DataManager_o *)Instance,
+                                         (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_ShopMaster___);
         if ( Instance )
         {
-          v7 = (DataMasterBase_WarMaster__WarEntity__int__o *)Instance;
+          v11 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
           Instance = ShopMaster__GetEnableEventEntitiyList((ShopMaster_o *)Instance, this->fields.id, 0LL);
-          if ( !Instance || (v8 = *((_QWORD *)Instance + 3)) == 0 )
+          if ( !Instance || (v12 = *(_QWORD *)&Instance->max_length) == 0 )
             return 1;
-          if ( !(_DWORD)v8 )
+          if ( !(_DWORD)v12 )
+            sub_1B00F30(Instance, v8);
+          v13 = Instance->m_Items[0];
+          if ( v13 )
           {
-            v10 = sub_B776C8(Instance);
-            sub_B77668(v10, 0LL);
-          }
-          v9 = *((_QWORD *)Instance + 4);
-          if ( v9 )
-          {
-            Instance = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-                         v7,
-                         *(_DWORD *)(v9 + 20),
-                         (const MethodInfo_21FB894 *)Method_DataMasterBase_ShopMaster__ShopEntity__int__GetEntity__);
+            Instance = (ShopEntity_array *)DataMasterBase_object__object__int___GetEntity(
+                                             v11,
+                                             v13->fields.baseShopId,
+                                             (const MethodInfo_2FE6A4C *)Method_DataMasterBase_ShopMaster__ShopEntity__int__GetEntity__);
             if ( Instance )
-              return ShopMaster__IsPurchaseCloseEventShopItem((ShopMaster_o *)v7, *((_DWORD *)Instance + 5), 0LL);
+              return ShopMaster__IsPurchaseCloseEventShopItem((ShopMaster_o *)v11, HIDWORD(Instance->bounds), 0LL);
           }
         }
       }
     }
 LABEL_19:
-    sub_B7769C(Instance, v4);
+    sub_1B00F28(Instance, v8);
   }
   return 0;
 }
@@ -553,41 +535,41 @@ LABEL_19:
 
 bool __fastcall EventEntity__IsEventPeriod(EventEntity_o *this, int64_t nowTime, const MethodInfo *method)
 {
-  if ( (byte_438DE15 & 1) == 0 )
+  int64_t Time; // x20
+
+  Time = nowTime;
+  if ( (byte_48E277A & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438DE15 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, nowTime);
+    byte_48E277A = 1;
   }
-  if ( !nowTime )
+  if ( !Time )
   {
-    if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !NetworkManager_TypeInfo->_2.cctor_finished )
-    {
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    }
-    nowTime = NetworkManager__getTime(0LL);
+    Time = NetworkManager__getTime(0LL);
   }
-  return this->fields.startedAt <= nowTime && nowTime < this->fields.endedAt;
+  return this->fields.startedAt <= Time && Time < this->fields.endedAt;
 }
 
 
 bool __fastcall EventEntity__IsExchangePeriod(EventEntity_o *this, int64_t nowTime, const MethodInfo *method)
 {
-  if ( (byte_438DE16 & 1) == 0 )
+  int64_t Time; // x20
+
+  Time = nowTime;
+  if ( (byte_48E277B & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438DE16 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, nowTime);
+    byte_48E277B = 1;
   }
-  if ( !nowTime )
+  if ( !Time )
   {
-    if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !NetworkManager_TypeInfo->_2.cctor_finished )
-    {
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    }
-    nowTime = NetworkManager__getTime(0LL);
+    Time = NetworkManager__getTime(0LL);
   }
-  return this->fields.endedAt <= nowTime && nowTime <= this->fields.finishedAt;
+  return this->fields.endedAt <= Time && Time <= this->fields.finishedAt;
 }
 
 
@@ -601,7 +583,7 @@ bool __fastcall EventEntity__IsOpen(EventEntity_o *this, bool isFinishedAt, cons
 }
 
 
-bool __fastcall EventEntity__IsOpen_30360280(
+bool __fastcall EventEntity__IsOpen_37884208(
         EventEntity_o *this,
         int64_t checkTime,
         bool isFinishedAt,
@@ -610,47 +592,49 @@ bool __fastcall EventEntity__IsOpen_30360280(
   const MethodInfo *v7; // x3
 
   return EventEntity__isPurchaseEventOpen(this, (const MethodInfo *)checkTime)
-      || EventEntity__GetRestTime_30360364(this, checkTime, isFinishedAt, v7) > 0;
+      || EventEntity__GetRestTime_37884280(this, checkTime, isFinishedAt, v7) > 0;
 }
 
 
 bool __fastcall EventEntity__IsReward(int32_t event_id, const MethodInfo *method)
 {
-  DataManager_o *Instance; // x0
-  const MethodInfo *v4; // x1
-  WarEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
+  __int64 v3; // x1
+  __int64 v4; // x1
+  Il2CppObject *Instance; // x0
+  const MethodInfo *v6; // x1
+  Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_438DE13 & 1) == 0 )
+  if ( (byte_48E2778 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_EventDetailMaster___);
-    sub_B775C4(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438DE13 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_EventDetailMaster___, method);
+    sub_1B00CCC(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v3);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_48E2778 = 1;
   }
   entity = 0LL;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
-  Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                Instance,
-                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventDetailMaster___);
+  Instance = DataManager__GetMasterData_object_(
+               (DataManager_o *)Instance,
+               (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_EventDetailMaster___);
   if ( !Instance )
     goto LABEL_10;
-  if ( !DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
-          (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
+  if ( !DataMasterBase_object__object__int___TryGetEntity(
+          (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
           &entity,
           event_id,
-          (const MethodInfo_21FB8F0 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
+          (const MethodInfo_2FE6AA0 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
     return 0;
-  Instance = (DataManager_o *)entity;
+  Instance = entity;
   if ( !entity )
 LABEL_10:
-    sub_B7769C(Instance, v4);
-  return EventDetailEntity__IsReward((EventDetailEntity_o *)entity, v4);
+    sub_1B00F28(Instance, v6);
+  return EventDetailEntity__IsReward((EventDetailEntity_o *)entity, v6);
 }
 
 
-bool __fastcall EventEntity__IsReward_30360972(EventEntity_o *this, const MethodInfo *method)
+bool __fastcall EventEntity__IsReward_37884860(EventEntity_o *this, const MethodInfo *method)
 {
   return EventEntity__IsReward(this->fields.id, method);
 }
@@ -662,7 +646,7 @@ int64_t __fastcall EventEntity__cmpShopClosedAt(EventEntity_o *this, EventEntity
   int64_t v4; // x8
 
   if ( !entity )
-    sub_B7769C(this, 0LL);
+    sub_1B00F28(this, 0LL);
   finishedAt = this->fields.finishedAt;
   v4 = entity->fields.finishedAt;
   if ( finishedAt == v4 )
@@ -679,16 +663,13 @@ int32_t __fastcall EventEntity__getBannerID_OfTime(EventEntity_o *this, const Me
 {
   int64_t Time; // x0
 
-  if ( (byte_438DE10 & 1) == 0 )
+  if ( (byte_48E2775 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438DE10 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    byte_48E2775 = 1;
   }
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
   Time = NetworkManager__getTime(0LL);
   if ( Time < this->fields.noticeAt )
     return 0;
@@ -757,24 +738,25 @@ System_String_o *__fastcall EventEntity__getEventLinkBody(EventEntity_o *this, c
 
 System_String_o *__fastcall EventEntity__getEventName(EventEntity_o *this, const MethodInfo *method)
 {
-  DataManager_o *Instance; // x0
-  __int64 v4; // x1
+  __int64 v3; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v5; // x1
   EventAddEntity_o *OverwriteEventAddEntity; // x0
   System_String_o **p_name; // x8
 
-  if ( (byte_438DE0F & 1) == 0 )
+  if ( (byte_48E2774 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_EventAddMaster___);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438DE0F = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_EventAddMaster___, method);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_48E2774 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
-    || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                      Instance,
-                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventAddMaster___)) == 0LL )
+    || (Instance = DataManager__GetMasterData_object_(
+                     (DataManager_o *)Instance,
+                     (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_EventAddMaster___)) == 0LL )
   {
-    sub_B7769C(Instance, v4);
+    sub_1B00F28(Instance, v5);
   }
   OverwriteEventAddEntity = EventAddMaster__getOverwriteEventAddEntity(
                               (EventAddMaster_o *)Instance,
@@ -817,13 +799,13 @@ System_String_o *__fastcall EventEntity__getPurchaseShopBannerName(
         System_String_o *bannerName,
         const MethodInfo *method)
 {
-  if ( (byte_438DE19 & 1) == 0 )
+  if ( (byte_48E277E & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_22120/*"r"*/);
-    byte_438DE19 = 1;
+    sub_1B00CCC(&StringLiteral_22431/*"r"*/, bannerName);
+    byte_48E277E = 1;
   }
   if ( EventEntity__isPurchaseEventOpen(this, (const MethodInfo *)bannerName) )
-    return System_String__Concat_44901936(bannerName, (System_String_o *)StringLiteral_22120/*"r"*/, 0LL);
+    return System_String__Concat_60325748(bannerName, (System_String_o *)StringLiteral_22431/*"r"*/, 0LL);
   else
     return bannerName;
 }
@@ -837,83 +819,85 @@ bool __fastcall EventEntity__isCheckEventDetail(EventEntity_o *this, const Metho
 
 bool __fastcall EventEntity__isPurchaseEventOpen(EventEntity_o *this, const MethodInfo *method)
 {
-  int64_t Instance; // x0
+  __int64 v3; // x1
   __int64 v4; // x1
-  UserEventMaster_o *MasterData_WarQuestSelectionMaster; // x20
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  int64_t Instance; // x0
+  __int64 v9; // x1
+  Il2CppObject *MasterData_object; // x20
   _BOOL4 EventFlag; // w20
-  _BOOL4 v7; // w8
-  ShopMaster_o *v8; // x20
+  _BOOL4 v12; // w8
+  ShopMaster_o *v13; // x20
   int32_t EventShopBaseShopId; // w0
-  WarEntity_o *v12; // [xsp+8h] [xbp-28h] BYREF
-  UserEventEntity_o *entity; // [xsp+18h] [xbp-18h] BYREF
+  Il2CppObject *v17; // [xsp+0h] [xbp-30h] BYREF
+  UserEventEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_438DE18 & 1) == 0 )
+  if ( (byte_48E277D & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_EventDetailMaster___);
-    sub_B775C4(&Method_DataManager_GetMasterData_ShopMaster___);
-    sub_B775C4(&Method_DataManager_GetMasterData_UserEventMaster___);
-    sub_B775C4(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438DE18 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_EventDetailMaster___, method);
+    sub_1B00CCC(&Method_DataManager_GetMasterData_ShopMaster___, v3);
+    sub_1B00CCC(&Method_DataManager_GetMasterData_UserEventMaster___, v4);
+    sub_1B00CCC(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v5);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v6);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    byte_48E277D = 1;
   }
+  v17 = 0LL;
   entity = 0LL;
-  v12 = 0LL;
-  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_22;
-  MasterData_WarQuestSelectionMaster = (UserEventMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                              (DataManager_o *)Instance,
-                                                              (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserEventMaster___);
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+    goto LABEL_21;
+  MasterData_object = DataManager__GetMasterData_object_(
+                        (DataManager_o *)Instance,
+                        (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_UserEventMaster___);
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
   Instance = NetworkManager__get_UserId(0LL);
-  if ( !MasterData_WarQuestSelectionMaster )
-    goto LABEL_22;
-  if ( !UserEventMaster__TryGetEntity(MasterData_WarQuestSelectionMaster, &entity, Instance, this->fields.id, 0LL) )
+  if ( !MasterData_object )
+    goto LABEL_21;
+  if ( !UserEventMaster__TryGetEntity((UserEventMaster_o *)MasterData_object, &entity, Instance, this->fields.id, 0LL) )
     return 0;
   Instance = (int64_t)entity;
   if ( !entity
     || (EventFlag = UserEventEntity__getEventFlag(entity, 1, 0LL),
-        (Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
-    || (Instance = (int64_t)DataManager__GetMasterData_WarQuestSelectionMaster_(
+        (Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
+    || (Instance = (int64_t)DataManager__GetMasterData_object_(
                               (DataManager_o *)Instance,
-                              (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventDetailMaster___)) == 0 )
+                              (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_EventDetailMaster___)) == 0 )
   {
-LABEL_22:
-    sub_B7769C(Instance, v4);
+LABEL_21:
+    sub_1B00F28(Instance, v9);
   }
-  Instance = DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
-               (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
-               &v12,
+  Instance = DataMasterBase_object__object__int___TryGetEntity(
+               (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
+               &v17,
                this->fields.id,
-               (const MethodInfo_21FB8F0 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
+               (const MethodInfo_2FE6AA0 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
   if ( (Instance & 1) != 0 )
   {
-    if ( !v12 )
-      goto LABEL_22;
-    v7 = ((LODWORD(v12->fields.age) >> 25) & 1) == 0;
+    if ( !v17 )
+      goto LABEL_21;
+    v12 = ((LODWORD(v17[1].monitor) >> 25) & 1) == 0;
   }
   else
   {
-    v7 = 1;
+    v12 = 1;
   }
-  if ( !v7 || !EventFlag )
+  if ( !EventFlag || !v12 )
     return 0;
-  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_22;
-  Instance = (int64_t)DataManager__GetMasterData_WarQuestSelectionMaster_(
+    goto LABEL_21;
+  Instance = (int64_t)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ShopMaster___);
+                        (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_ShopMaster___);
   if ( !Instance )
-    goto LABEL_22;
-  v8 = (ShopMaster_o *)Instance;
+    goto LABEL_21;
+  v13 = (ShopMaster_o *)Instance;
   EventShopBaseShopId = ShopMaster__GetEventShopBaseShopId((ShopMaster_o *)Instance, this->fields.id, 0LL);
-  return !ShopMaster__IsPurchaseCloseEventShopItem(v8, EventShopBaseShopId, 0LL);
+  return !ShopMaster__IsPurchaseCloseEventShopItem(v13, EventShopBaseShopId, 0LL);
 }
 
 

@@ -2,17 +2,18 @@ void __fastcall ServantTreasureDeviceReleaseEntity___ctor(
         ServantTreasureDeviceReleaseEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_438DCE3 & 1) == 0 )
+  if ( (byte_48E2FDA & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    byte_438DCE3 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
+    byte_48E2FDA = 1;
   }
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall ServantTreasureDeviceReleaseEntity__CreatePK(
         int32_t svtId,
         int32_t num,
@@ -20,17 +21,17 @@ System_String_o *__fastcall ServantTreasureDeviceReleaseEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_438DCE1 & 1) == 0 )
+  if ( (byte_48E2FD8 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
-    byte_438DCE1 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&num);
+    byte_48E2FD8 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            svtId,
            num,
            priority,
            idx,
-           (const MethodInfo_1D17A7C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_2D61784 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -49,6 +50,7 @@ System_String_o *__fastcall ServantTreasureDeviceReleaseEntity__CreatePrimaryKey
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall ServantTreasureDeviceReleaseEntity__getCreatePrimarykey(
         int32_t svtId,
         int32_t num,
@@ -56,237 +58,135 @@ System_String_o *__fastcall ServantTreasureDeviceReleaseEntity__getCreatePrimary
         int32_t idx,
         const MethodInfo *method)
 {
-  System_String_array *v5; // x19
-  System_String_o *v6; // x0
-  __int64 v7; // x1
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
-  System_Int32_array **v14; // x20
-  System_String_array **v15; // x2
-  System_String_array **v16; // x3
-  System_Boolean_array **v17; // x4
-  System_Int32_array **v18; // x5
-  System_Int32_array *v19; // x6
-  System_Int32_array *v20; // x7
-  System_Int32_array **v21; // x1
-  System_String_array **v22; // x2
-  System_String_array **v23; // x3
-  System_Boolean_array **v24; // x4
-  System_Int32_array **v25; // x5
-  System_Int32_array *v26; // x6
-  System_Int32_array *v27; // x7
-  System_Int32_array **v28; // x20
-  System_String_array **v29; // x2
-  System_String_array **v30; // x3
-  System_Boolean_array **v31; // x4
-  System_Int32_array **v32; // x5
-  System_Int32_array *v33; // x6
-  System_Int32_array *v34; // x7
-  System_Int32_array **v35; // x1
-  System_String_array **v36; // x2
-  System_String_array **v37; // x3
-  System_Boolean_array **v38; // x4
-  System_Int32_array **v39; // x5
-  System_Int32_array *v40; // x6
-  System_Int32_array *v41; // x7
-  System_Int32_array **v42; // x20
-  System_String_array **v43; // x2
-  System_String_array **v44; // x3
-  System_Boolean_array **v45; // x4
-  System_Int32_array **v46; // x5
-  System_Int32_array *v47; // x6
-  System_Int32_array *v48; // x7
-  System_Int32_array **v49; // x1
-  System_String_array **v50; // x2
-  System_String_array **v51; // x3
-  System_Boolean_array **v52; // x4
-  System_Int32_array **v53; // x5
-  System_Int32_array *v54; // x6
-  System_Int32_array *v55; // x7
-  System_Int32_array **v56; // x20
-  __int64 v58; // x0
-  __int64 v59; // x0
-  int32_t v60; // [xsp+8h] [xbp-28h] BYREF
-  int32_t v61; // [xsp+Ch] [xbp-24h] BYREF
-  int32_t v62; // [xsp+18h] [xbp-18h] BYREF
-  int32_t v63; // [xsp+1Ch] [xbp-14h] BYREF
+  __int64 v5; // x1
+  __int64 v6; // x19
+  System_String_o *v7; // x0
+  __int64 v8; // x1
+  int32_t v9; // w2
+  int32_t v10; // w3
+  int32_t v11; // w2
+  int32_t v12; // w3
+  int32_t v13; // w1
+  int32_t v14; // w2
+  int32_t v15; // w3
+  int32_t v16; // w2
+  int32_t v17; // w3
+  int32_t v18; // w1
+  int32_t v19; // w2
+  int32_t v20; // w3
+  int32_t v21; // w2
+  int32_t v22; // w3
+  int32_t v23; // w1
+  int32_t v24; // w2
+  int32_t v25; // w3
+  int32_t v27; // [xsp+0h] [xbp-30h] BYREF
+  int32_t v28; // [xsp+4h] [xbp-2Ch] BYREF
+  int32_t v29; // [xsp+8h] [xbp-28h] BYREF
+  int32_t v30; // [xsp+Ch] [xbp-24h] BYREF
 
-  v63 = svtId;
-  v62 = num;
-  v60 = idx;
-  v61 = priority;
-  if ( (byte_438DCE0 & 1) == 0 )
+  v29 = num;
+  v30 = svtId;
+  v27 = idx;
+  v28 = priority;
+  if ( (byte_48E2FD7 & 1) == 0 )
   {
-    sub_B775C4(&string___TypeInfo);
-    sub_B775C4(&StringLiteral_1252/*":"*/);
-    byte_438DCE0 = 1;
+    sub_1B00CCC(&string___TypeInfo, *(_QWORD *)&num);
+    sub_1B00CCC(&StringLiteral_1540/*":"*/, v5);
+    byte_48E2FD7 = 1;
   }
-  v5 = (System_String_array *)sub_B775DC(string___TypeInfo, 7LL);
-  v6 = System_Int32__ToString((int32_t)&v63, 0LL);
-  if ( !v5 )
-    sub_B7769C(v6, v7);
-  v14 = (System_Int32_array **)v6;
-  if ( v6 )
+  v6 = sub_1B00D74(string___TypeInfo, 7LL);
+  v7 = System_Int32__ToString((int32_t)&v30, 0LL);
+  if ( !v6 )
+    sub_1B00F28(v7, v8);
+  if ( !*(_DWORD *)(v6 + 24) )
+    goto LABEL_12;
+  *(_QWORD *)(v6 + 32) = v7;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v6 + 32), (int32_t)v7, v9, v10);
+  if ( *(_DWORD *)(v6 + 24) <= 1u )
+    goto LABEL_12;
+  v13 = StringLiteral_1540/*":"*/;
+  *(_QWORD *)(v6 + 40) = StringLiteral_1540/*":"*/;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v6 + 40), v13, v11, v12);
+  v7 = System_Int32__ToString((int32_t)&v29, 0LL);
+  if ( *(_DWORD *)(v6 + 24) <= 2u )
+    goto LABEL_12;
+  *(_QWORD *)(v6 + 48) = v7;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v6 + 48), (int32_t)v7, v14, v15);
+  if ( *(_DWORD *)(v6 + 24) <= 3u )
+    goto LABEL_12;
+  v18 = StringLiteral_1540/*":"*/;
+  *(_QWORD *)(v6 + 56) = StringLiteral_1540/*":"*/;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v6 + 56), v18, v16, v17);
+  v7 = System_Int32__ToString((int32_t)&v28, 0LL);
+  if ( *(_DWORD *)(v6 + 24) <= 4u
+    || (*(_QWORD *)(v6 + 64) = v7,
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)(v6 + 64), (int32_t)v7, v19, v20),
+        *(_DWORD *)(v6 + 24) <= 5u)
+    || (v23 = StringLiteral_1540/*":"*/,
+        *(_QWORD *)(v6 + 72) = StringLiteral_1540/*":"*/,
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)(v6 + 72), v23, v21, v22),
+        v7 = System_Int32__ToString((int32_t)&v27, 0LL),
+        *(_DWORD *)(v6 + 24) <= 6u) )
   {
-    v6 = (System_String_o *)sub_B77684(v6, v5->obj.klass->_1.element_class);
-    if ( !v6 )
-      goto LABEL_33;
+LABEL_12:
+    sub_1B00F30(v7, v8);
   }
-  if ( !v5->max_length )
-    goto LABEL_32;
-  v5->m_Items[0] = (System_String_o *)v14;
-  sub_B77560((BattleServantConfConponent_o *)v5->m_Items, v14, v8, v9, v10, v11, v12, v13);
-  v6 = (System_String_o *)StringLiteral_1252/*":"*/;
-  if ( StringLiteral_1252/*":"*/ )
-  {
-    v6 = (System_String_o *)sub_B77684(StringLiteral_1252/*":"*/, v5->obj.klass->_1.element_class);
-    if ( !v6 )
-      goto LABEL_33;
-    v21 = (System_Int32_array **)StringLiteral_1252/*":"*/;
-  }
-  else
-  {
-    v21 = 0LL;
-  }
-  if ( v5->max_length <= 1 )
-    goto LABEL_32;
-  v5->m_Items[1] = (System_String_o *)v21;
-  sub_B77560((BattleServantConfConponent_o *)&v5->m_Items[1], v21, v15, v16, v17, v18, v19, v20);
-  v6 = System_Int32__ToString((int32_t)&v62, 0LL);
-  v28 = (System_Int32_array **)v6;
-  if ( v6 )
-  {
-    v6 = (System_String_o *)sub_B77684(v6, v5->obj.klass->_1.element_class);
-    if ( !v6 )
-      goto LABEL_33;
-  }
-  if ( v5->max_length <= 2 )
-    goto LABEL_32;
-  v5->m_Items[2] = (System_String_o *)v28;
-  sub_B77560((BattleServantConfConponent_o *)&v5->m_Items[2], v28, v22, v23, v24, v25, v26, v27);
-  v6 = (System_String_o *)StringLiteral_1252/*":"*/;
-  if ( StringLiteral_1252/*":"*/ )
-  {
-    v6 = (System_String_o *)sub_B77684(StringLiteral_1252/*":"*/, v5->obj.klass->_1.element_class);
-    if ( !v6 )
-      goto LABEL_33;
-    v35 = (System_Int32_array **)StringLiteral_1252/*":"*/;
-  }
-  else
-  {
-    v35 = 0LL;
-  }
-  if ( v5->max_length <= 3 )
-    goto LABEL_32;
-  v5->m_Items[3] = (System_String_o *)v35;
-  sub_B77560((BattleServantConfConponent_o *)&v5->m_Items[3], v35, v29, v30, v31, v32, v33, v34);
-  v6 = System_Int32__ToString((int32_t)&v61, 0LL);
-  v42 = (System_Int32_array **)v6;
-  if ( v6 )
-  {
-    v6 = (System_String_o *)sub_B77684(v6, v5->obj.klass->_1.element_class);
-    if ( !v6 )
-      goto LABEL_33;
-  }
-  if ( v5->max_length <= 4 )
-    goto LABEL_32;
-  v5->m_Items[4] = (System_String_o *)v42;
-  sub_B77560((BattleServantConfConponent_o *)&v5->m_Items[4], v42, v36, v37, v38, v39, v40, v41);
-  v6 = (System_String_o *)StringLiteral_1252/*":"*/;
-  if ( StringLiteral_1252/*":"*/ )
-  {
-    v6 = (System_String_o *)sub_B77684(StringLiteral_1252/*":"*/, v5->obj.klass->_1.element_class);
-    if ( !v6 )
-      goto LABEL_33;
-    v49 = (System_Int32_array **)StringLiteral_1252/*":"*/;
-  }
-  else
-  {
-    v49 = 0LL;
-  }
-  if ( v5->max_length <= 5 )
-    goto LABEL_32;
-  v5->m_Items[5] = (System_String_o *)v49;
-  sub_B77560((BattleServantConfConponent_o *)&v5->m_Items[5], v49, v43, v44, v45, v46, v47, v48);
-  v6 = System_Int32__ToString((int32_t)&v60, 0LL);
-  v56 = (System_Int32_array **)v6;
-  if ( v6 )
-  {
-    v6 = (System_String_o *)sub_B77684(v6, v5->obj.klass->_1.element_class);
-    if ( !v6 )
-    {
-LABEL_33:
-      v59 = sub_B776BC(v6);
-      sub_B77668(v59, 0LL);
-    }
-  }
-  if ( v5->max_length <= 6 )
-  {
-LABEL_32:
-    v58 = sub_B776C8(v6);
-    sub_B77668(v58, 0LL);
-  }
-  v5->m_Items[6] = (System_String_o *)v56;
-  sub_B77560((BattleServantConfConponent_o *)&v5->m_Items[6], v56, v50, v51, v52, v53, v54, v55);
-  return System_String__Concat_44982964(v5, 0LL);
+  *(_QWORD *)(v6 + 80) = v7;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v6 + 80), (int32_t)v7, v24, v25);
+  return System_String__Concat_60339276((System_String_array *)v6, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall ServantTreasureDeviceReleaseEntity__isUse(
         ServantTreasureDeviceReleaseEntity_o *this,
         int32_t dispLimitCount,
         int32_t beforeClearQuestId,
         const MethodInfo *method)
 {
-  int32_t condType; // w21
-  int32_t v8; // w9
+  __int64 v7; // x1
+  int32_t condType; // w22
+  int32_t v9; // w9
   int64_t UserId; // x0
   int32_t condNum; // w20
   int32_t condTargetId; // w21
-  int64_t v13; // x22
-  int32_t v14; // w22
-  int64_t v15; // x19
+  int64_t v14; // x22
+  int32_t v15; // w21
+  int64_t v16; // x19
 
-  if ( (byte_438DCE2 & 1) == 0 )
+  if ( (byte_48E2FD9 & 1) == 0 )
   {
-    sub_B775C4(&CondType_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438DCE2 = 1;
+    sub_1B00CCC(&CondType_TypeInfo, *(_QWORD *)&dispLimitCount);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v7);
+    byte_48E2FD9 = 1;
   }
   condType = this->fields.condType;
   if ( condType == 1 )
   {
-    if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !NetworkManager_TypeInfo->_2.cctor_finished )
-    {
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    }
     UserId = NetworkManager__get_UserId(0LL);
     condTargetId = this->fields.condTargetId;
     condNum = this->fields.condNum;
-    v13 = UserId;
-    if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
+    v14 = UserId;
+    if ( !CondType_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-    return CondType__IsQuestPhaseClear(v13, condTargetId, condNum, beforeClearQuestId, 0, 0LL);
+    return CondType__IsQuestPhaseClear(v14, condTargetId, condNum, beforeClearQuestId, 0, 0LL);
   }
   else if ( condType == 70 )
   {
     if ( dispLimitCount >= 11 )
-      v8 = dispLimitCount;
+      v9 = dispLimitCount;
     else
-      v8 = dispLimitCount + 1;
-    return this->fields.condNum == v8;
+      v9 = dispLimitCount + 1;
+    return this->fields.condNum == v9;
   }
   else
   {
-    v14 = this->fields.condTargetId;
-    v15 = this->fields.condNum;
-    if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
+    v15 = this->fields.condTargetId;
+    v16 = this->fields.condNum;
+    if ( !CondType_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-    return CondType__IsOpen(condType, v14, v15, 0, 0LL);
+    return CondType__IsOpen(condType, v15, v16, 0, 0LL);
   }
 }

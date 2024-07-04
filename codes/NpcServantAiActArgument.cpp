@@ -6,24 +6,20 @@ void __fastcall NpcServantAiActArgument___ctor(
         BattleLogicNpcAi_o *npcAi,
         const MethodInfo *method)
 {
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
+  NpcServantAiActArgument_o *v8; // x21
+  int32_t v9; // w2
+  int32_t v10; // w3
+  int32_t v11; // w2
+  int32_t v12; // w3
 
-  ServantAiActArgument___ctor((ServantAiActArgument_o *)this, aiActEnt, aiEnt, svtData, 0, 0LL);
-  this->fields._NpcAi_k__BackingField = npcAi;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._NpcAi_k__BackingField,
-    (System_Int32_array **)npcAi,
-    v8,
-    v9,
-    v10,
-    v11,
-    v12,
-    v13);
+  v8 = this;
+  BaseAiActArgument___ctor((BaseAiActArgument_o *)this, aiActEnt, aiEnt, (const MethodInfo *)svtData);
+  v8->fields._SvtData_k__BackingField = svtData;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v8->fields._SvtData_k__BackingField, (int32_t)svtData, v9, v10);
+  v8->fields._NpcAi_k__BackingField = npcAi;
+  v8 = (NpcServantAiActArgument_o *)((char *)v8 + 48);
+  LOBYTE(v8[-1].fields._NpcAi_k__BackingField) = 0;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)v8, (int32_t)npcAi, v11, v12);
 }
 
 
@@ -35,116 +31,86 @@ void __fastcall NpcServantAiActArgument__InitCommonTask(
   __int64 v5; // x0
   BattleLogicNpcAi_o *NpcAi_k__BackingField; // x22
   struct BattleActionData_array *v7; // x20
-  BattleActionData_o *LoadNpcPreStepInAction; // x0
+  __int64 LoadNpcPreStepInAction; // x0
   __int64 v9; // x1
-  System_String_array **v10; // x2
-  System_String_array **v11; // x3
-  System_Boolean_array **v12; // x4
-  System_Int32_array **v13; // x5
-  System_Int32_array *v14; // x6
-  System_Int32_array *v15; // x7
-  System_Int32_array **v16; // x22
-  BattleLogicNpcAi_o *v17; // x22
+  int32_t v10; // w2
+  int32_t v11; // w3
+  BattleActionData_o *v12; // x22
+  BattleLogicNpcAi_o *v13; // x22
   AiBaseEntity_o *AiEnt_k__BackingField; // x8
-  int32_t v19; // w21
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
-  System_Int32_array **v26; // x21
-  System_String_array **v27; // x2
-  System_String_array **v28; // x3
-  System_Boolean_array **v29; // x4
-  System_Int32_array **v30; // x5
-  System_Int32_array *v31; // x6
-  System_Int32_array *v32; // x7
-  __int64 v33; // x0
-  __int64 v34; // x0
+  int32_t v15; // w21
+  int32_t v16; // w2
+  int32_t v17; // w3
+  BattleActionData_o *v18; // x21
+  int32_t v19; // w2
+  int32_t v20; // w3
+  __int64 v21; // x0
 
-  if ( (byte_438A23A & 1) == 0 )
+  if ( (byte_48E5116 & 1) == 0 )
   {
-    sub_B775C4(&BattleActionData___TypeInfo);
-    byte_438A23A = 1;
+    sub_1B00CCC(&BattleActionData___TypeInfo, task);
+    byte_48E5116 = 1;
   }
-  ServantAiActArgument__InitCommonTask((ServantAiActArgument_o *)this, task, 0LL);
-  v5 = sub_B775DC(BattleActionData___TypeInfo, 2LL);
+  ServantAiActArgument__InitCommonTask((ServantAiActArgument_o *)this, task, method);
+  v5 = sub_1B00D74(BattleActionData___TypeInfo, 2LL);
   NpcAi_k__BackingField = this->fields._NpcAi_k__BackingField;
   v7 = (struct BattleActionData_array *)v5;
-  LoadNpcPreStepInAction = (BattleActionData_o *)((__int64 (__fastcall *)(NpcServantAiActArgument_o *, Il2CppMethodPointer))this->klass->vtable._4_get_UniqueId.method)(
-                                                   this,
-                                                   this->klass->vtable._5_InitCommonTask.methodPtr);
+  LoadNpcPreStepInAction = ((__int64 (__fastcall *)(NpcServantAiActArgument_o *, Il2CppMethodPointer))this->klass->vtable._4_get_UniqueId.method)(
+                             this,
+                             this->klass->vtable._5_InitCommonTask.methodPtr);
   if ( !NpcAi_k__BackingField )
     goto LABEL_15;
-  LoadNpcPreStepInAction = BattleLogicNpcAi__MakeLoadNpcPreStepInAction(
-                             NpcAi_k__BackingField,
-                             (int32_t)LoadNpcPreStepInAction,
-                             0LL);
+  LoadNpcPreStepInAction = (__int64)BattleLogicNpcAi__MakeLoadNpcPreStepInAction(
+                                      NpcAi_k__BackingField,
+                                      LoadNpcPreStepInAction,
+                                      0LL);
   if ( !v7 )
     goto LABEL_15;
-  v16 = (System_Int32_array **)LoadNpcPreStepInAction;
+  v12 = (BattleActionData_o *)LoadNpcPreStepInAction;
   if ( LoadNpcPreStepInAction )
   {
-    LoadNpcPreStepInAction = (BattleActionData_o *)sub_B77684(LoadNpcPreStepInAction, v7->obj.klass->_1.element_class);
+    LoadNpcPreStepInAction = sub_1B00E08(LoadNpcPreStepInAction, v7->obj.klass->_1.element_class);
     if ( !LoadNpcPreStepInAction )
     {
 LABEL_17:
-      v34 = sub_B776BC(LoadNpcPreStepInAction);
-      sub_B77668(v34, 0LL);
+      v21 = sub_1B00F4C(LoadNpcPreStepInAction);
+      sub_1B00DF4(v21, 0LL);
     }
   }
   if ( !v7->max_length )
     goto LABEL_16;
-  v7->m_Items[0] = (BattleActionData_o *)v16;
-  sub_B77560((BattleServantConfConponent_o *)v7->m_Items, v16, v10, v11, v12, v13, v14, v15);
-  v17 = this->fields._NpcAi_k__BackingField;
-  LoadNpcPreStepInAction = (BattleActionData_o *)((__int64 (__fastcall *)(NpcServantAiActArgument_o *, Il2CppMethodPointer))this->klass->vtable._4_get_UniqueId.method)(
-                                                   this,
-                                                   this->klass->vtable._5_InitCommonTask.methodPtr);
+  v7->m_Items[0] = v12;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)v7->m_Items, (int32_t)v12, v10, v11);
+  v13 = this->fields._NpcAi_k__BackingField;
+  LoadNpcPreStepInAction = ((__int64 (__fastcall *)(NpcServantAiActArgument_o *, Il2CppMethodPointer))this->klass->vtable._4_get_UniqueId.method)(
+                             this,
+                             this->klass->vtable._5_InitCommonTask.methodPtr);
   AiEnt_k__BackingField = this->fields._AiEnt_k__BackingField;
   if ( !AiEnt_k__BackingField
-    || (v19 = (int)LoadNpcPreStepInAction,
-        LoadNpcPreStepInAction = (BattleActionData_o *)AiBaseEntity__IsForcedStepInSpeedAnyTime(
-                                                         AiEnt_k__BackingField,
-                                                         0LL),
-        !v17) )
+    || (v15 = LoadNpcPreStepInAction,
+        LoadNpcPreStepInAction = AiBaseEntity__IsForcedStepInSpeedAnyTime(AiEnt_k__BackingField, 0LL),
+        !v13) )
   {
 LABEL_15:
-    sub_B7769C(LoadNpcPreStepInAction, v9);
+    sub_1B00F28(LoadNpcPreStepInAction, v9);
   }
-  LoadNpcPreStepInAction = BattleLogicNpcAi__MakeStepInAction(
-                             v17,
-                             v19,
-                             (unsigned __int8)LoadNpcPreStepInAction & 1,
-                             0LL);
-  v26 = (System_Int32_array **)LoadNpcPreStepInAction;
+  LoadNpcPreStepInAction = (__int64)BattleLogicNpcAi__MakeStepInAction(v13, v15, LoadNpcPreStepInAction & 1, 0LL);
+  v18 = (BattleActionData_o *)LoadNpcPreStepInAction;
   if ( LoadNpcPreStepInAction )
   {
-    LoadNpcPreStepInAction = (BattleActionData_o *)sub_B77684(LoadNpcPreStepInAction, v7->obj.klass->_1.element_class);
+    LoadNpcPreStepInAction = sub_1B00E08(LoadNpcPreStepInAction, v7->obj.klass->_1.element_class);
     if ( !LoadNpcPreStepInAction )
       goto LABEL_17;
   }
   if ( v7->max_length <= 1 )
-  {
 LABEL_16:
-    v33 = sub_B776C8(LoadNpcPreStepInAction);
-    sub_B77668(v33, 0LL);
-  }
-  v7->m_Items[1] = (BattleActionData_o *)v26;
-  sub_B77560((BattleServantConfConponent_o *)&v7->m_Items[1], v26, v20, v21, v22, v23, v24, v25);
+    sub_1B00F30(LoadNpcPreStepInAction, v9);
+  v7->m_Items[1] = v18;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v7->m_Items[1], (int32_t)v18, v16, v17);
   if ( !task )
     goto LABEL_15;
   task->fields.interruptActions = v7;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&task->fields.interruptActions,
-    (System_Int32_array **)v7,
-    v27,
-    v28,
-    v29,
-    v30,
-    v31,
-    v32);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&task->fields.interruptActions, (int32_t)v7, v19, v20);
 }
 
 
@@ -161,20 +127,12 @@ void __fastcall NpcServantAiActArgument__set_NpcAi(
         BattleLogicNpcAi_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._NpcAi_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._NpcAi_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._NpcAi_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }

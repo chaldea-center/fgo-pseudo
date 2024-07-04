@@ -1,4 +1,3 @@
-// local variable allocation has failed, the output may be wrong!
 void __fastcall DisplayEffectArgument___ctor(
         DisplayEffectArgument_o *this,
         UnityEngine_GameObject_o *actObj,
@@ -10,77 +9,64 @@ void __fastcall DisplayEffectArgument___ctor(
         bool ispopAdjustment,
         const MethodInfo *method)
 {
-  System_Int32_array **v17; // x1
-  BattleServantConfConponent_o *p_attachNodeName; // x27
-  struct System_Int32_array *v19; // x0
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
-  System_String_array **v26; // x2
-  System_String_array **v27; // x3
-  System_Boolean_array **v28; // x4
-  System_Int32_array **v29; // x5
-  System_Int32_array *v30; // x6
-  System_Int32_array *v31; // x7
-  struct BattleActionData_o **p_actData; // x21
-  System_String_array **v33; // x2
-  System_String_array **v34; // x3
-  System_Boolean_array **v35; // x4
-  System_Int32_array **v36; // x5
-  System_Int32_array *v37; // x6
-  System_Int32_array *v38; // x7
-  System_String_array **v39; // x2
-  System_String_array **v40; // x3
-  System_Boolean_array **v41; // x4
-  System_Int32_array **v42; // x5
-  System_Int32_array *v43; // x6
-  System_Int32_array *v44; // x7
+  __int64 v17; // x1
+  int32_t v18; // w1
+  struct System_String_o **p_attachNodeName; // x24
+  __int64 v20; // x1
+  UnityEngine_Vector3_c *v21; // x8
+  struct UnityEngine_Vector3_StaticFields *static_fields; // x9
+  float z; // s1
+  struct UnityEngine_Vector3_StaticFields *v24; // x8
+  float v25; // s1
+  struct System_Int32_array *v26; // x0
+  int32_t v27; // w2
+  int32_t v28; // w3
+  int32_t v29; // w2
+  int32_t v30; // w3
+  struct BattleActionData_o **p_actData; // x20
+  int32_t v32; // w2
+  int32_t v33; // w3
+  int32_t v34; // w2
+  int32_t v35; // w3
 
-  if ( (byte_438D09A & 1) == 0 )
+  if ( (byte_48E4BAC & 1) == 0 )
   {
-    sub_B775C4(&int___TypeInfo);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438D09A = 1;
+    sub_1B00CCC(&int___TypeInfo, actObj);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v17);
+    byte_48E4BAC = 1;
   }
-  v17 = (System_Int32_array **)StringLiteral_1/*""*/;
+  v18 = (int)StringLiteral_1/*""*/;
   this->fields.attachNodeName = (struct System_String_o *)StringLiteral_1/*""*/;
-  p_attachNodeName = (BattleServantConfConponent_o *)&this->fields.attachNodeName;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.attachNodeName,
-    v17,
-    *(System_String_array ***)&funcIndex,
-    (System_String_array **)actData,
-    (System_Boolean_array **)isCommandAfter,
-    (System_Int32_array **)isTreasureDevice,
-    (System_Int32_array *)attachNodeName,
-    (System_Int32_array *)ispopAdjustment);
-  this->fields.buffOffset = UnityEngine_Vector3__get_zero(0LL);
-  this->fields.popupOffset = UnityEngine_Vector3__get_zero(0LL);
-  v19 = (struct System_Int32_array *)sub_B775DC(int___TypeInfo, 0LL);
-  this->fields.fieldIndiv = v19;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.fieldIndiv,
-    (System_Int32_array **)v19,
-    v20,
-    v21,
-    v22,
-    v23,
-    v24,
-    v25);
+  p_attachNodeName = &this->fields.attachNodeName;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.attachNodeName, v18, funcIndex, (int32_t)actData);
+  if ( !byte_48DD9F1 )
+  {
+    sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, v20);
+    byte_48DD9F1 = 1;
+  }
+  v21 = UnityEngine_Vector3_TypeInfo;
+  static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
+  z = static_fields->zeroVector.fields.z;
+  *(_QWORD *)&this->fields.buffOffset.fields.x = *(_QWORD *)&static_fields->zeroVector.fields.x;
+  this->fields.buffOffset.fields.z = z;
+  v24 = v21->static_fields;
+  v25 = v24->zeroVector.fields.z;
+  *(_QWORD *)&this->fields.popupOffset.fields.x = *(_QWORD *)&v24->zeroVector.fields.x;
+  this->fields.popupOffset.fields.z = v25;
+  v26 = (struct System_Int32_array *)sub_1B00D74(int___TypeInfo, 0LL);
+  this->fields.fieldIndiv = v26;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.fieldIndiv, (int32_t)v26, v27, v28);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.actObj = actObj;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)actObj, v26, v27, v28, v29, v30, v31);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)actObj, v29, v30);
   this->fields.actData = actData;
   p_actData = &this->fields.actData;
   *((_DWORD *)p_actData - 2) = funcIndex;
-  sub_B77560((BattleServantConfConponent_o *)p_actData, (System_Int32_array **)actData, v33, v34, v35, v36, v37, v38);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)p_actData, (int32_t)actData, v32, v33);
   *((_BYTE *)p_actData + 8) = isCommandAfter;
   *((_BYTE *)p_actData + 9) = isTreasureDevice;
-  p_attachNodeName->klass = (BattleServantConfConponent_c *)attachNodeName;
-  sub_B77560(p_attachNodeName, (System_Int32_array **)attachNodeName, v39, v40, v41, v42, v43, v44);
+  p_actData[2] = (struct BattleActionData_o *)attachNodeName;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)p_attachNodeName, (int32_t)attachNodeName, v34, v35);
   *((_BYTE *)p_actData + 24) = ispopAdjustment;
 }
 
@@ -94,28 +80,25 @@ bool __fastcall DisplayEffectArgument__IsDisplayablePopupEachActType(
   __int64 v6; // x1
   struct BattleActionData_o *actData; // x8
 
-  if ( (byte_438D09C & 1) == 0 )
+  if ( (byte_48E4BAE & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438D09C = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, targetObj);
+    byte_48E4BAE = 1;
   }
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   v5 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)targetObj, 0LL, 0LL);
   if ( v5 )
     return 0;
   actData = this->fields.actData;
   if ( !actData )
-    goto LABEL_14;
+    goto LABEL_13;
   if ( actData->fields.actType == 4 && this->fields.isTreasureDevice )
   {
     if ( targetObj )
       return UnityEngine_GameObject__get_activeSelf(targetObj, 0LL);
-LABEL_14:
-    sub_B7769C(v5, v6);
+LABEL_13:
+    sub_1B00F28(v5, v6);
   }
   return 1;
 }
@@ -130,63 +113,43 @@ DisplayEffectArgument_o *__fastcall DisplayEffectArgument__SetBuffParam(
         System_Int32_array *fieldIndiv,
         const MethodInfo *method)
 {
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
-  struct System_Int32_array *v10; // x19
+  struct System_Int32_array *v6; // x19
   float z; // s8
   float y; // s9
   float x; // s10
-  float v15; // s11
-  float v16; // s12
-  float v17; // s13
-  System_String_array **v19; // x2
-  System_String_array **v20; // x3
-  System_Boolean_array **v21; // x4
-  System_Int32_array **v22; // x5
-  System_Int32_array *v23; // x6
-  System_Int32_array *v24; // x7
+  float v11; // s11
+  float v12; // s12
+  float v13; // s13
+  int32_t v15; // w2
+  int32_t v16; // w3
 
-  v10 = fieldIndiv;
+  v6 = fieldIndiv;
   z = popupOffset.fields.z;
   y = popupOffset.fields.y;
   x = popupOffset.fields.x;
-  v15 = buffOffset.fields.z;
-  v16 = buffOffset.fields.y;
-  v17 = buffOffset.fields.x;
-  if ( (byte_438D09B & 1) == 0 )
+  v11 = buffOffset.fields.z;
+  v12 = buffOffset.fields.y;
+  v13 = buffOffset.fields.x;
+  if ( (byte_48E4BAD & 1) == 0 )
   {
-    sub_B775C4(&int___TypeInfo);
-    byte_438D09B = 1;
+    sub_1B00CCC(&int___TypeInfo, overwriteEffectIds);
+    byte_48E4BAD = 1;
   }
   this->fields.overwriteEffectIds = overwriteEffectIds;
-  this->fields.buffOffset.fields.x = v17;
-  this->fields.buffOffset.fields.y = v16;
-  this->fields.buffOffset.fields.z = v15;
+  this->fields.buffOffset.fields.x = v13;
+  this->fields.buffOffset.fields.y = v12;
+  this->fields.buffOffset.fields.z = v11;
   this->fields.popupOffset.fields.x = x;
   this->fields.popupOffset.fields.y = y;
   this->fields.popupOffset.fields.z = z;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.overwriteEffectIds,
-    (System_Int32_array **)overwriteEffectIds,
-    (System_String_array **)fieldIndiv,
-    (System_String_array **)method,
-    v6,
-    v7,
-    v8,
-    v9);
-  if ( !v10 )
-    v10 = (struct System_Int32_array *)sub_B775DC(int___TypeInfo, 0LL);
-  this->fields.fieldIndiv = v10;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.fieldIndiv,
-    (System_Int32_array **)v10,
-    v19,
-    v20,
-    v21,
-    v22,
-    v23,
-    v24);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields.overwriteEffectIds,
+    (int32_t)overwriteEffectIds,
+    (int32_t)fieldIndiv,
+    (int32_t)method);
+  if ( !v6 )
+    v6 = (struct System_Int32_array *)sub_1B00D74(int___TypeInfo, 0LL);
+  this->fields.fieldIndiv = v6;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.fieldIndiv, (int32_t)v6, v15, v16);
   return this;
 }

@@ -1,17 +1,18 @@
 void __fastcall EventBuddyPointMaster___ctor(EventBuddyPointMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_438DD57 & 1) == 0 )
+  if ( (byte_48E26FB & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string___ctor__);
-    byte_438DD57 = 1;
+    sub_1B00CCC(&Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string___ctor__, method);
+    byte_48E26FB = 1;
   }
-  DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
-    (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
+  DataMasterBase_object__object__object____ctor(
+    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     398,
-    (const MethodInfo_21FBC48 *)Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string___ctor__);
+    (const MethodInfo_2FE6D64 *)Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 EventBuddyPointEntity_o *__fastcall EventBuddyPointMaster__GetEntity(
         EventBuddyPointMaster_o *this,
         int32_t eventId,
@@ -19,18 +20,20 @@ EventBuddyPointEntity_o *__fastcall EventBuddyPointMaster__GetEntity(
         int32_t questPhase,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x1
+  Il2CppObject *PK; // x1
 
-  if ( (byte_438DD55 & 1) == 0 )
+  if ( (byte_48E26F9 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string__GetEntity__);
-    byte_438DD55 = 1;
+    sub_1B00CCC(
+      &Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string__GetEntity__,
+      *(_QWORD *)&eventId);
+    byte_48E26F9 = 1;
   }
-  PK = EventBuddyPointEntity__CreatePK(eventId, questId, questPhase, 0LL);
-  return (EventBuddyPointEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
-                                      (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
+  PK = (Il2CppObject *)EventBuddyPointEntity__CreatePK(eventId, questId, questPhase, *(const MethodInfo **)&questPhase);
+  return (EventBuddyPointEntity_o *)DataMasterBase_object__object__object___GetEntity(
+                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                       PK,
-                                      (const MethodInfo_21FBCE4 *)Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string__GetEntity__);
+                                      (const MethodInfo_2FE6DA4 *)Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string__GetEntity__);
 }
 
 
@@ -42,78 +45,81 @@ EventBuddyPointEntity_o *__fastcall EventBuddyPointMaster__GetEntityIncludeQuest
         int32_t questPhase,
         const MethodInfo *method)
 {
+  __int64 v9; // x1
+  __int64 v10; // x1
   void *list; // x0
-  EventBuddyPointEntity_o *v10; // x25
-  EventBuddyPointEntity_o *v11; // x24
-  int32_t v12; // w23
-  __int64 v13; // x10
-  int v14; // w8
-  int v15; // w8
+  EventBuddyPointEntity_o *v12; // x25
+  EventBuddyPointEntity_o *v13; // x24
+  int32_t v14; // w23
+  __int64 methodPtr_low; // x10
+  int v16; // w8
+  int v17; // w8
 
-  if ( (byte_438DD58 & 1) == 0 )
+  if ( (byte_48E26FC & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B775C4(&EventBuddyPointEntity_TypeInfo);
-    byte_438DD58 = 1;
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v9);
+    sub_1B00CCC(&EventBuddyPointEntity_TypeInfo, v10);
+    byte_48E26FC = 1;
   }
   list = this->fields.list;
   if ( !list )
 LABEL_21:
-    sub_B7769C(list, *(_QWORD *)&eventId);
-  v10 = 0LL;
-  v11 = 0LL;
-  v12 = 0;
-  while ( v12 < System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
-                  (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
-                  (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
+    sub_1B00F28(list, *(_QWORD *)&eventId);
+  v12 = 0LL;
+  v13 = 0LL;
+  v14 = 0;
+  while ( v14 < System_Collections_ObjectModel_Collection_object___get_Count(
+                  (System_Collections_ObjectModel_Collection_T__o *)list,
+                  (const MethodInfo_2F836B0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
   {
     list = this->fields.list;
     if ( !list )
       goto LABEL_21;
-    list = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
-             (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
-             v12,
-             (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    list = System_Collections_ObjectModel_Collection_object___get_Item(
+             (System_Collections_ObjectModel_Collection_T__o *)list,
+             v14,
+             (const MethodInfo_2F83740 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
     if ( !list )
       goto LABEL_21;
-    v13 = *(&EventBuddyPointEntity_TypeInfo->_2.bitflags2 + 1);
-    if ( *(unsigned __int8 *)(*(_QWORD *)list + 300LL) < (unsigned int)v13
-      || *(EventBuddyPointEntity_c **)(*(_QWORD *)(*(_QWORD *)list + 200LL) + 8 * v13 - 8) != EventBuddyPointEntity_TypeInfo )
+    methodPtr_low = LOBYTE(EventBuddyPointEntity_TypeInfo->vtable._0_Equals.methodPtr);
+    if ( *(unsigned __int8 *)(*(_QWORD *)list + 304LL) < (unsigned int)methodPtr_low
+      || *(EventBuddyPointEntity_c **)(*(_QWORD *)(*(_QWORD *)list + 200LL) + 8 * methodPtr_low - 8) != EventBuddyPointEntity_TypeInfo )
     {
       goto LABEL_21;
     }
     if ( *((_DWORD *)list + 4) == eventId )
     {
-      v14 = *((_DWORD *)list + 5);
-      if ( v14 >= 1 && v14 == questId )
+      v16 = *((_DWORD *)list + 5);
+      if ( v16 >= 1 && v16 == questId )
       {
-        v15 = *((_DWORD *)list + 6);
-        if ( v15 >= 1 && v15 == questPhase )
+        v17 = *((_DWORD *)list + 6);
+        if ( v17 >= 1 && v17 == questPhase )
         {
-          v10 = (EventBuddyPointEntity_o *)list;
+          v12 = (EventBuddyPointEntity_o *)list;
           break;
         }
-        if ( !v15 )
-          v10 = (EventBuddyPointEntity_o *)list;
+        if ( !v17 )
+          v12 = (EventBuddyPointEntity_o *)list;
       }
-      else if ( !v14 )
+      else if ( !v16 )
       {
-        v11 = (EventBuddyPointEntity_o *)list;
+        v13 = (EventBuddyPointEntity_o *)list;
       }
     }
     list = this->fields.list;
-    ++v12;
+    ++v14;
     if ( !list )
       goto LABEL_21;
   }
-  if ( v10 )
-    return v10;
+  if ( v12 )
+    return v12;
   else
-    return v11;
+    return v13;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall EventBuddyPointMaster__TryGetEntity(
         EventBuddyPointMaster_o *this,
         EventBuddyPointEntity_o **entity,
@@ -122,17 +128,17 @@ bool __fastcall EventBuddyPointMaster__TryGetEntity(
         int32_t questPhase,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x2
+  Il2CppObject *PK; // x2
 
-  if ( (byte_438DD56 & 1) == 0 )
+  if ( (byte_48E26FA & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string__TryGetEntity__);
-    byte_438DD56 = 1;
+    sub_1B00CCC(&Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string__TryGetEntity__, entity);
+    byte_48E26FA = 1;
   }
-  PK = EventBuddyPointEntity__CreatePK(eventId, questId, questPhase, 0LL);
-  return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
-           (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
-           (WarQuestSelectionEntity_o **)entity,
+  PK = (Il2CppObject *)EventBuddyPointEntity__CreatePK(eventId, questId, questPhase, *(const MethodInfo **)&questId);
+  return DataMasterBase_object__object__object___TryGetEntity(
+           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
+           (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_21FBD3C *)Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string__TryGetEntity__);
+           (const MethodInfo_2FE6DF4 *)Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string__TryGetEntity__);
 }

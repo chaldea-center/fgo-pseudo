@@ -8,23 +8,23 @@ void __fastcall EventInfoUISpriteControl__Initialization(
   System_String_o *v6; // x21
 
   v4 = this;
-  if ( (byte_438C61D & 1) == 0 )
+  if ( (byte_48E4994 & 1) == 0 )
   {
-    this = (EventInfoUISpriteControl_o *)sub_B775C4(&AtlasManager_TypeInfo);
-    byte_438C61D = 1;
+    this = (EventInfoUISpriteControl_o *)sub_1B00CCC(&AtlasManager_TypeInfo, entity);
+    byte_48E4994 = 1;
   }
   if ( !entity )
-    goto LABEL_9;
+    goto LABEL_8;
   mainSprite = v4->fields.mainSprite;
   v6 = System_Int32__ToString((int)entity + 52, 0LL);
-  if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
+  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   AtlasManager__SetEventUI(mainSprite, v6, 0LL);
   this = (EventInfoUISpriteControl_o *)v4->fields.mainSprite;
   if ( !this )
-LABEL_9:
-    sub_B7769C(this, entity);
-  (*(void (__fastcall **)(EventInfoUISpriteControl_o *, Il2CppMethodPointer))&this->klass[1]._2.naturalAligment)(
+LABEL_8:
+    sub_1B00F28(this, entity);
+  (*(void (__fastcall **)(EventInfoUISpriteControl_o *, _QWORD))&this->klass[1]._2.field_count)(
     this,
-    this->klass[1].vtable._0_Equals.methodPtr);
+    *(_QWORD *)&this->klass[1]._2.interfaces_count);
 }

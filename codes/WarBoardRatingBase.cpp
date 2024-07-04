@@ -20,7 +20,7 @@ int32_t __fastcall WarBoardRatingBase__GetId(WarBoardRatingBase_o *this, const M
 
   ratingBase = this->fields.ratingBase;
   if ( !ratingBase )
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   return ratingBase->fields.id;
 }
 
@@ -44,7 +44,7 @@ int32_t __fastcall WarBoardRatingBase__GetViewpoint(WarBoardRatingBase_o *this, 
 
   ratingBase = this->fields.ratingBase;
   if ( !ratingBase )
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   return ratingBase->fields.viewPoint;
 }
 
@@ -54,22 +54,10 @@ void __fastcall WarBoardRatingBase__Init(
         WarBoardRatingBaseEntity_o *ratingBase,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields.ratingBase = ratingBase;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields,
-    (System_Int32_array **)ratingBase,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)ratingBase, (int32_t)method, v3);
 }
 
 
@@ -79,7 +67,7 @@ int32_t __fastcall WarBoardRatingBase__get_adjustmentValueA1(WarBoardRatingBase_
 
   ratingBase = this->fields.ratingBase;
   if ( !ratingBase )
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   return ratingBase->fields.adjustmentValueA1;
 }
 
@@ -90,6 +78,6 @@ int32_t __fastcall WarBoardRatingBase__get_adjustmentValueB(WarBoardRatingBase_o
 
   ratingBase = this->fields.ratingBase;
   if ( !ratingBase )
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   return ratingBase->fields.adjustmentValueB;
 }

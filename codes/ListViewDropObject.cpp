@@ -1,38 +1,35 @@
 void __fastcall ListViewDropObject___ctor(ListViewDropObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_438A7B9 & 1) == 0 )
+  if ( (byte_48E3B25 & 1) == 0 )
   {
-    sub_B775C4(&ListViewObject_TypeInfo);
-    byte_438A7B9 = 1;
+    sub_1B00CCC(&ListViewObject_TypeInfo, method);
+    byte_48E3B25 = 1;
   }
-  if ( (BYTE3(ListViewObject_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ListViewObject_TypeInfo->_2.cctor_finished )
-  {
+  if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
-  }
-  ListViewObject___ctor((ListViewObject_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
 
 bool __fastcall ListViewDropObject__ClearItem(ListViewDropObject_o *this, const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v2; // w2
+  int32_t v3; // w3
+  _BOOL4 isBusy; // w20
+  const MethodInfo *v6; // x2
 
-  if ( this->fields.isBusy )
-    return 0;
-  this->fields.linkItem = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.linkItem, 0LL, v2, v3, v4, v5, v6, v7);
-  ListViewObject__SetVisible((ListViewObject_o *)this, 0, 0LL);
-  ((void (__fastcall *)(ListViewDropObject_o *, _QWORD, Il2CppMethodPointer))this->klass->vtable._9_SetInput.method)(
-    this,
-    0LL,
-    this->klass->vtable._10_Invalidation.methodPtr);
-  return 1;
+  isBusy = this->fields.isBusy;
+  if ( !this->fields.isBusy )
+  {
+    this->fields.linkItem = 0LL;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.linkItem, 0, v2, v3);
+    ListViewObject__SetVisible((ListViewObject_o *)this, 0, v6);
+    ((void (__fastcall *)(ListViewDropObject_o *, _QWORD, Il2CppMethodPointer))this->klass->vtable._9_SetInput.method)(
+      this,
+      0LL,
+      this->klass->vtable._10_Invalidation.methodPtr);
+  }
+  return !isBusy;
 }
 
 
@@ -41,181 +38,180 @@ UnityEngine_GameObject_o *__fastcall ListViewDropObject__CreateDragObject(
         ListViewDropObject_o *this,
         const MethodInfo *method)
 {
-  UnityEngine_Object_o *root; // x19
+  __int64 v3; // x1
   __int64 v4; // x1
-  void *transform; // x0
+  __int64 v5; // x1
+  UnityEngine_Object_o *root; // x19
+  __int64 v7; // x1
+  __int64 transform; // x0
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_GameObject_o *dragObjectPrefab; // x19
-  UnityEngine_GameObject_o *v8; // x22
-  UnityEngine_GameObject_o *v9; // x19
-  System_String_array **v10; // x2
-  System_String_array **v11; // x3
-  System_Boolean_array **v12; // x4
-  System_Int32_array **v13; // x5
-  System_Int32_array *v14; // x6
-  System_Int32_array *v15; // x7
-  System_Int32_array **linkItem; // x1
-  UnityEngine_Component_o *v17; // x20
-  UnityEngine_Transform_o *v18; // x23
-  int v19; // s0
-  UnityEngine_Transform_o *v22; // x23
-  int v23; // s0
-  UnityEngine_Transform_o *v26; // x23
-  int v27; // s0
+  UnityEngine_GameObject_o *v11; // x22
+  UnityEngine_GameObject_o *v12; // x19
+  int32_t v13; // w2
+  int32_t v14; // w3
+  struct ListViewItem_o *linkItem; // x1
+  UnityEngine_Component_o *v16; // x20
+  UnityEngine_Transform_o *v17; // x23
+  int v18; // s0
+  UnityEngine_Transform_o *v21; // x23
+  int v22; // s0
+  UnityEngine_Transform_o *v25; // x23
   float x; // s8
   float y; // s9
   float z; // s10
-  float v33; // s8
-  float v34; // s9
-  UnityEngine_GameObject_o *v35; // x21
-  float v36; // s8
-  float v37; // s9
+  float v29; // s8
+  float v30; // s9
+  UnityEngine_GameObject_o *v31; // x21
+  float v32; // s8
+  float v33; // s9
+  const MethodInfo *v34; // x1
+  const MethodInfo *v35; // x2
+  UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v38; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v39; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v40; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v42; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v44; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v42; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_438A7B8 & 1) == 0 )
+  if ( (byte_48E3B24 & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_ListViewDropObject___);
-    sub_B775C4(&NGUITools_TypeInfo);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&UIDragDropRoot_TypeInfo);
-    byte_438A7B8 = 1;
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_ListViewDropObject___, method);
+    sub_1B00CCC(&NGUITools_TypeInfo, v3);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v4);
+    sub_1B00CCC(&UIDragDropRoot_TypeInfo, v5);
+    byte_48E3B24 = 1;
   }
   root = (UnityEngine_Object_o *)UIDragDropRoot_TypeInfo->static_fields->root;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(root, 0LL, 0LL) )
   {
-    transform = UIDragDropRoot_TypeInfo->static_fields->root;
+    transform = (__int64)UIDragDropRoot_TypeInfo->static_fields->root;
     if ( !transform )
       goto LABEL_29;
   }
   else
   {
-    transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+    transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
     if ( !transform )
       goto LABEL_29;
-    transform = UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)transform, 0LL);
+    transform = (__int64)UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)transform, 0LL);
     if ( !transform )
       goto LABEL_29;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)transform, 0LL);
   dragObjectPrefab = this->fields.dragObjectPrefab;
-  v8 = gameObject;
-  if ( (BYTE3(NGUITools_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !NGUITools_TypeInfo->_2.cctor_finished )
+  v11 = gameObject;
+  if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  transform = NGUITools__AddChild_39774560(v8, dragObjectPrefab, 0LL);
+  transform = (__int64)NGUITools__AddChild_45725768(v11, dragObjectPrefab, 0LL);
   if ( !transform )
     goto LABEL_29;
-  v9 = (UnityEngine_GameObject_o *)transform;
-  transform = UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                (UnityEngine_GameObject_o *)transform,
-                (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_ListViewDropObject___);
+  v12 = (UnityEngine_GameObject_o *)transform;
+  transform = (__int64)UnityEngine_GameObject__GetComponent_object_(
+                         (UnityEngine_GameObject_o *)transform,
+                         (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_ListViewDropObject___);
   if ( !transform )
     goto LABEL_29;
-  linkItem = (System_Int32_array **)this->fields.linkItem;
-  v17 = (UnityEngine_Component_o *)transform;
-  *((_QWORD *)transform + 6) = linkItem;
-  sub_B77560((BattleServantConfConponent_o *)((char *)transform + 48), linkItem, v10, v11, v12, v13, v14, v15);
-  v18 = UnityEngine_Component__get_transform(v17, 0LL);
-  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+  linkItem = this->fields.linkItem;
+  v16 = (UnityEngine_Component_o *)transform;
+  *(_QWORD *)(transform + 56) = linkItem;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(transform + 56), (int32_t)linkItem, v13, v14);
+  v17 = UnityEngine_Component__get_transform(v16, 0LL);
+  transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
     goto LABEL_29;
-  *(UnityEngine_Vector3_o *)&v19 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0LL);
-  if ( !v18 )
+  *(UnityEngine_Vector3_o *)&v18 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0LL);
+  if ( !v17 )
     goto LABEL_29;
-  UnityEngine_Transform__set_position(v18, *(UnityEngine_Vector3_o *)&v19, 0LL);
-  v22 = UnityEngine_Component__get_transform(v17, 0LL);
-  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+  UnityEngine_Transform__set_position(v17, *(UnityEngine_Vector3_o *)&v18, 0LL);
+  v21 = UnityEngine_Component__get_transform(v16, 0LL);
+  transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
     goto LABEL_29;
-  *(UnityEngine_Vector3_o *)&v23 = UnityEngine_Transform__get_eulerAngles((UnityEngine_Transform_o *)transform, 0LL);
-  if ( !v22 )
+  *(UnityEngine_Vector3_o *)&v22 = UnityEngine_Transform__get_eulerAngles((UnityEngine_Transform_o *)transform, 0LL);
+  if ( !v21 )
     goto LABEL_29;
-  UnityEngine_Transform__set_eulerAngles(v22, *(UnityEngine_Vector3_o *)&v23, 0LL);
-  v26 = UnityEngine_Component__get_transform(v17, 0LL);
-  *(UnityEngine_Vector3_o *)&v27 = UnityEngine_Vector3__get_one(0LL);
-  if ( !v26 )
+  UnityEngine_Transform__set_eulerAngles(v21, *(UnityEngine_Vector3_o *)&v22, 0LL);
+  transform = (__int64)UnityEngine_Component__get_transform(v16, 0LL);
+  v25 = (UnityEngine_Transform_o *)transform;
+  if ( !byte_48DD9F6 )
+  {
+    transform = sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, v7);
+    byte_48DD9F6 = 1;
+  }
+  if ( !v25 )
     goto LABEL_29;
-  UnityEngine_Transform__set_localScale(v26, *(UnityEngine_Vector3_o *)&v27, 0LL);
-  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+  UnityEngine_Transform__set_localScale(v25, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
+  transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
     goto LABEL_29;
-  v39 = UnityEngine_Transform__TransformPoint_36433912((UnityEngine_Transform_o *)transform, 1.0, 1.0, 0.0, 0LL);
-  x = v39.fields.x;
-  y = v39.fields.y;
-  z = v39.fields.z;
-  transform = UnityEngine_Component__get_transform(v17, 0LL);
+  v37 = UnityEngine_Transform__TransformPoint_68102056((UnityEngine_Transform_o *)transform, 1.0, 1.0, 0.0, 0LL);
+  x = v37.fields.x;
+  y = v37.fields.y;
+  z = v37.fields.z;
+  transform = (__int64)UnityEngine_Component__get_transform(v16, 0LL);
   if ( !transform )
     goto LABEL_29;
-  v40.fields.x = x;
-  v40.fields.y = y;
-  v40.fields.z = z;
-  v41 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)transform, v40, 0LL);
-  v33 = v41.fields.x;
-  v34 = v41.fields.y;
-  transform = UnityEngine_Component__get_transform(v17, 0LL);
+  v38.fields.x = x;
+  v38.fields.y = y;
+  v38.fields.z = z;
+  v39 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)transform, v38, 0LL);
+  v29 = v39.fields.x;
+  v30 = v39.fields.y;
+  transform = (__int64)UnityEngine_Component__get_transform(v16, 0LL);
   if ( !transform )
     goto LABEL_29;
-  v42.fields.z = 1.0;
-  v42.fields.x = v33;
-  v42.fields.y = v34;
-  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)transform, v42, 0LL);
-  transform = UnityEngine_Component__get_gameObject(v17, 0LL);
-  if ( !v8 )
+  v40.fields.z = 1.0;
+  v40.fields.x = v29;
+  v40.fields.y = v30;
+  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)transform, v40, 0LL);
+  transform = (__int64)UnityEngine_Component__get_gameObject(v16, 0LL);
+  if ( !v11 )
     goto LABEL_29;
-  v35 = (UnityEngine_GameObject_o *)transform;
-  transform = (void *)UnityEngine_GameObject__get_layer(v8, 0LL);
-  if ( !v35
-    || (UnityEngine_GameObject__set_layer(v35, (int32_t)transform, 0LL),
-        (transform = UnityEngine_Component__get_transform(v17, 0LL)) == 0LL)
+  v31 = (UnityEngine_GameObject_o *)transform;
+  transform = UnityEngine_GameObject__get_layer(v11, 0LL);
+  if ( !v31
+    || (UnityEngine_GameObject__set_layer(v31, transform, 0LL),
+        (transform = (__int64)UnityEngine_Component__get_transform(v16, 0LL)) == 0)
     || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0LL),
-        v36 = localPosition.fields.x,
-        v37 = localPosition.fields.y,
-        (transform = UnityEngine_Component__get_transform(v17, 0LL)) == 0LL) )
+        v32 = localPosition.fields.x,
+        v33 = localPosition.fields.y,
+        (transform = (__int64)UnityEngine_Component__get_transform(v16, 0LL)) == 0) )
   {
 LABEL_29:
-    sub_B7769C(transform, v4);
+    sub_1B00F28(transform, v7);
   }
-  v44.fields.z = 0.0;
-  v44.fields.x = v36;
-  v44.fields.y = v37;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v44, 0LL);
-  ListViewObject__SetBaseTransform((ListViewObject_o *)v17, 0LL);
-  ListViewObject__SetVisible((ListViewObject_o *)v17, 1, 0LL);
-  ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, void *))v17->klass[1]._1.parent)(
-    v17,
+  v42.fields.z = 0.0;
+  v42.fields.x = v32;
+  v42.fields.y = v33;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v42, 0LL);
+  ListViewObject__SetBaseTransform((ListViewObject_o *)v16, v34);
+  ListViewObject__SetVisible((ListViewObject_o *)v16, 1, v35);
+  ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, void *))v16->klass[1]._1.parent)(
+    v16,
     0LL,
-    v17->klass[1]._1.generic_class);
-  return v9;
+    v16->klass[1]._1.generic_class);
+  return v12;
 }
 
 
 void __fastcall ListViewDropObject__ReleaseItem(ListViewDropObject_o *this, const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v2; // w2
+  int32_t v3; // w3
   struct ListViewItem_o **p_linkItem; // x0
   struct ListViewItem_o *linkItem; // t1
+  const MethodInfo *v7; // x2
 
   linkItem = this->fields.linkItem;
   p_linkItem = &this->fields.linkItem;
   if ( linkItem )
   {
     this->fields.linkItem = 0LL;
-    sub_B77560((BattleServantConfConponent_o *)p_linkItem, 0LL, v2, v3, v4, v5, v6, v7);
-    ListViewObject__SetVisible((ListViewObject_o *)this, 0, 0LL);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)p_linkItem, 0, v2, v3);
+    ListViewObject__SetVisible((ListViewObject_o *)this, 0, v7);
     ((void (__fastcall *)(ListViewDropObject_o *, _QWORD, Il2CppMethodPointer))this->klass->vtable._9_SetInput.method)(
       this,
       0LL,
@@ -234,41 +230,34 @@ void __fastcall ListViewDropObject__SetItem(ListViewDropObject_o *this, ListView
 }
 
 
-void __fastcall ListViewDropObject__SetItem_24165804(
+void __fastcall ListViewDropObject__SetItem_39414188(
         ListViewDropObject_o *this,
         ListViewItem_o *item,
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  const MethodInfo *v6; // x2
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v11; // x1
+  __int64 v8; // x1
 
-  if ( (byte_438A7B7 & 1) == 0 )
+  if ( (byte_48E3B23 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_13035/*"SetBaseTransform"*/);
-    byte_438A7B7 = 1;
+    sub_1B00CCC(&StringLiteral_12477/*"SetBaseTransform"*/, item);
+    byte_48E3B23 = 1;
   }
   this->fields.linkItem = item;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.linkItem,
-    (System_Int32_array **)item,
-    (System_String_array **)seed,
-    (System_String_array **)method,
-    v4,
-    v5,
-    v6,
-    v7);
-  ListViewObject__SetVisible((ListViewObject_o *)this, 0, 0LL);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields.linkItem,
+    (int32_t)item,
+    (int32_t)seed,
+    (int32_t)method);
+  ListViewObject__SetVisible((ListViewObject_o *)this, 0, v6);
   ((void (__fastcall *)(ListViewDropObject_o *, _QWORD, Il2CppMethodPointer))this->klass->vtable._9_SetInput.method)(
     this,
     0LL,
     this->klass->vtable._10_Invalidation.methodPtr);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7769C(0LL, v11);
-  UnityEngine_GameObject__SendMessage_41438608(gameObject, (System_String_o *)StringLiteral_13035/*"SetBaseTransform"*/, 0LL);
+    sub_1B00F28(0LL, v8);
+  UnityEngine_GameObject__SendMessage_68059116(gameObject, (System_String_o *)StringLiteral_12477/*"SetBaseTransform"*/, 0LL);
 }

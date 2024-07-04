@@ -3,24 +3,12 @@ void __fastcall SimpleChainableAction___ctor(
         System_Action_Action__o *action,
         const MethodInfo *method)
 {
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  int32_t v5; // w2
+  int32_t v6; // w3
 
-  ChainableActionBase___ctor((ChainableActionBase_o *)this, 0LL);
+  ChainableActionBase___ctor((ChainableActionBase_o *)this, (const MethodInfo *)action);
   this->fields.sysChainAction = action;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.sysChainAction,
-    (System_Int32_array **)action,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.sysChainAction, (int32_t)action, v5, v6);
 }
 
 
@@ -29,107 +17,92 @@ SimpleChainableAction_array *__fastcall SimpleChainableAction__ConvertToChainabl
         const MethodInfo *method)
 {
   System_Action_Action__array *v2; // x19
-  __int64 v3; // x21
-  System_Action_Action__array *v4; // x20
-  unsigned __int64 v5; // x24
-  signed __int64 v6; // x25
-  System_Int32_array ***m_Items; // x26
-  BattleServantConfConponent_o *v8; // x21
-  System_Int32_array **v9; // x23
-  __int64 v10; // x22
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
-  System_String_array **v17; // x2
-  System_String_array **v18; // x3
-  System_Boolean_array **v19; // x4
-  System_Int32_array **v20; // x5
-  System_Int32_array *v21; // x6
-  System_Int32_array *v22; // x7
-  __int64 v24; // x0
-  __int64 v25; // x0
+  __int64 v3; // x1
+  __int64 v4; // x21
+  __int64 v5; // x0
+  __int64 v6; // x1
+  SimpleChainableAction_array *v7; // x20
+  unsigned __int64 v8; // x24
+  __int64 v9; // x26
+  System_Action_Action__o **m_Items; // x27
+  ServantStatusBattleListViewItem_o *v11; // x21
+  System_Action_Action__o *v12; // x23
+  __int64 v13; // x22
+  const MethodInfo *v14; // x1
+  int32_t v15; // w2
+  int32_t v16; // w3
+  int32_t v17; // w2
+  int32_t v18; // w3
+  __int64 v20; // x0
 
   v2 = sysActions;
-  if ( (byte_438C036 & 1) == 0 )
+  if ( (byte_48E7073 & 1) == 0 )
   {
-    sub_B775C4(&SimpleChainableAction___TypeInfo);
-    sysActions = (System_Action_Action__array *)sub_B775C4(&SimpleChainableAction_TypeInfo);
-    byte_438C036 = 1;
+    sub_1B00CCC(&SimpleChainableAction___TypeInfo, method);
+    sysActions = (System_Action_Action__array *)sub_1B00CCC(&SimpleChainableAction_TypeInfo, v3);
+    byte_48E7073 = 1;
   }
   if ( !v2 )
-LABEL_14:
-    sub_B7769C(sysActions, method);
-  v3 = *(_QWORD *)&v2->max_length;
-  sysActions = (System_Action_Action__array *)sub_B775DC(SimpleChainableAction___TypeInfo, (unsigned int)v3);
-  v4 = sysActions;
-  if ( (int)v3 >= 1 )
+LABEL_13:
+    sub_1B00F28(sysActions, method);
+  v4 = *(_QWORD *)&v2->max_length;
+  v5 = sub_1B00D74(SimpleChainableAction___TypeInfo, (unsigned int)v4);
+  v7 = (SimpleChainableAction_array *)v5;
+  if ( (int)v4 >= 1 )
   {
-    v5 = 0LL;
-    v6 = (int)v3;
-    m_Items = (System_Int32_array ***)v2->m_Items;
-    v8 = (BattleServantConfConponent_o *)sysActions->m_Items;
+    v8 = 0LL;
+    v9 = (unsigned int)v4;
+    m_Items = v2->m_Items;
+    v11 = (ServantStatusBattleListViewItem_o *)(v5 + 32);
     do
     {
-      if ( v5 >= v2->max_length )
+      if ( v8 >= v2->max_length )
+        goto LABEL_12;
+      v12 = *m_Items;
+      v13 = sub_1B00F18(SimpleChainableAction_TypeInfo);
+      ChainableActionBase___ctor((ChainableActionBase_o *)v13, v14);
+      *(_QWORD *)(v13 + 40) = v12;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v13 + 40), (int32_t)v12, v15, v16);
+      if ( !v7 )
         goto LABEL_13;
-      v9 = *m_Items;
-      v10 = sub_B77694(SimpleChainableAction_TypeInfo);
-      ChainableActionBase___ctor((ChainableActionBase_o *)v10, 0LL);
-      *(_QWORD *)(v10 + 40) = v9;
-      sub_B77560((BattleServantConfConponent_o *)(v10 + 40), v9, v11, v12, v13, v14, v15, v16);
-      if ( !v4 )
-        goto LABEL_14;
-      if ( v10 )
+      v5 = sub_1B00E08(v13, v7->obj.klass->_1.element_class);
+      if ( !v5 )
       {
-        sysActions = (System_Action_Action__array *)sub_B77684(v10, v4->obj.klass->_1.element_class);
-        if ( !sysActions )
-        {
-          v25 = sub_B776BC(0LL);
-          sub_B77668(v25, 0LL);
-        }
+        v20 = sub_1B00F4C(0LL);
+        sub_1B00DF4(v20, 0LL);
       }
-      if ( v5 >= v4->max_length )
-      {
-LABEL_13:
-        v24 = sub_B776C8(sysActions);
-        sub_B77668(v24, 0LL);
-      }
-      v8->klass = (BattleServantConfConponent_c *)v10;
-      sub_B77560(v8, (System_Int32_array **)v10, v17, v18, v19, v20, v21, v22);
-      ++v5;
+      if ( v8 >= v7->max_length )
+LABEL_12:
+        sub_1B00F30(v5, v6);
+      v11->klass = (ServantStatusBattleListViewItem_c *)v13;
+      sub_1B00C70(v11, v13, v17, v18);
+      ++v8;
       ++m_Items;
-      v8 = (BattleServantConfConponent_o *)((char *)v8 + 8);
+      v11 = (ServantStatusBattleListViewItem_o *)((char *)v11 + 8);
     }
-    while ( (__int64)v5 < v6 );
+    while ( v9 != v8 );
   }
-  return (SimpleChainableAction_array *)v4;
+  return v7;
 }
 
 
 void __fastcall SimpleChainableAction__ExecuteOnDetail(SimpleChainableAction_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   System_Action_T__o *sysChainAction; // x20
-  System_Action_o *v4; // x0
-  __int64 v5; // x1
-  BlankEarth_QAARotateEarthResponse_o *v6; // x21
+  System_Action_o *v5; // x21
 
-  if ( (byte_438C035 & 1) == 0 )
+  if ( (byte_48E7072 & 1) == 0 )
   {
-    sub_B775C4(&Method_ActionExtensions_Call_Action___);
-    sub_B775C4(&System_Action_TypeInfo);
-    byte_438C035 = 1;
+    sub_1B00CCC(&Method_ActionExtensions_Call_Action___, method);
+    sub_1B00CCC(&System_Action_TypeInfo, v3);
+    byte_48E7072 = 1;
   }
   sysChainAction = (System_Action_T__o *)this->fields.sysChainAction;
-  v4 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-  if ( !this )
-    sub_B7769C(v4, v5);
-  v6 = (BlankEarth_QAARotateEarthResponse_o *)v4;
-  System_Action___ctor(v4, (Il2CppObject *)this, (intptr_t)this->klass[1]._1.image, 0LL);
-  ActionExtensions__Call_BlankEarth_QAARotateEarthResponse_(
+  v5 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+  System_Action___ctor(v5, (Il2CppObject *)this, (intptr_t)this->klass[1]._1.image, 0LL);
+  ActionExtensions__Call_object_(
     sysChainAction,
-    v6,
-    (const MethodInfo_2C3C35C *)Method_ActionExtensions_Call_Action___);
+    (Il2CppObject *)v5,
+    (const MethodInfo_2CBB45C *)Method_ActionExtensions_Call_Action___);
 }

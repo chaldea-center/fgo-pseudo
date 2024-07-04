@@ -7,106 +7,59 @@ void __fastcall CharaGraphListViewItemBase___ctor(
   char *v6; // x0
   const MethodInfo *v7; // x1
   struct CharaGraphFilterLogicBase_o *FilterLogic; // x0
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
-  const MethodInfo *v15; // x1
+  int32_t v9; // w2
+  int32_t v10; // w3
+  const MethodInfo *v11; // x1
   struct CharaGraphSortLogicBase_o *SortLogic; // x0
-  System_String_array **v17; // x2
-  System_String_array **v18; // x3
-  System_Boolean_array **v19; // x4
-  System_Int32_array **v20; // x5
-  System_Int32_array *v21; // x6
-  System_Int32_array *v22; // x7
-  const MethodInfo *v23; // x1
+  int32_t v13; // w2
+  int32_t v14; // w3
+  const MethodInfo *v15; // x1
   struct CharaGraphListViewItemDrawPatternBase_o *ItemDrawPattern; // x0
-  System_String_array **v25; // x2
-  System_String_array **v26; // x3
-  System_Boolean_array **v27; // x4
-  System_Int32_array **v28; // x5
-  System_Int32_array *v29; // x6
-  System_Int32_array *v30; // x7
+  int32_t v17; // w2
+  int32_t v18; // w3
   struct CharaGraphDefine_CharaGraphRootInfo_o *RootInfo_k__BackingField; // x1
-  System_String_array **v32; // x2
-  System_String_array **v33; // x3
-  System_Boolean_array **v34; // x4
-  System_Int32_array **v35; // x5
-  System_Int32_array *v36; // x6
-  System_Int32_array *v37; // x7
-  System_String_array **v38; // x2
-  System_String_array **v39; // x3
-  System_Boolean_array **v40; // x4
-  System_Int32_array **v41; // x5
-  System_Int32_array *v42; // x6
-  System_Int32_array *v43; // x7
-  System_String_array **v44; // x2
-  System_String_array **v45; // x3
-  System_Boolean_array **v46; // x4
-  System_Int32_array **v47; // x5
-  System_Int32_array *v48; // x6
-  System_Int32_array *v49; // x7
+  int32_t v20; // w2
+  int32_t v21; // w3
+  int32_t v22; // w2
+  int32_t v23; // w3
+  int32_t v24; // w2
+  int32_t v25; // w3
 
-  ListViewItem___ctor_24167012((ListViewItem_o *)this, index, 0LL);
+  this->fields._BonusKind_k__BackingField = 1;
+  ListViewItem___ctor_39415512((ListViewItem_o *)this, index, 0LL);
   if ( !listViewPattern )
     goto LABEL_5;
   FilterLogic = CharaGraphListViewPatternBase__CreateFilterLogic(listViewPattern, v7);
   this->fields.filterLogic = FilterLogic;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.filterLogic,
-    (System_Int32_array **)FilterLogic,
-    v9,
-    v10,
-    v11,
-    v12,
-    v13,
-    v14);
-  SortLogic = CharaGraphListViewPatternBase__CreateSortLogic(listViewPattern, v15);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.filterLogic, (int32_t)FilterLogic, v9, v10);
+  SortLogic = CharaGraphListViewPatternBase__CreateSortLogic(listViewPattern, v11);
   this->fields.sortLogic = SortLogic;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.sortLogic,
-    (System_Int32_array **)SortLogic,
-    v17,
-    v18,
-    v19,
-    v20,
-    v21,
-    v22);
-  ItemDrawPattern = CharaGraphListViewPatternBase__get_ItemDrawPattern(listViewPattern, v23);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.sortLogic, (int32_t)SortLogic, v13, v14);
+  ItemDrawPattern = CharaGraphListViewPatternBase__get_ItemDrawPattern(listViewPattern, v15);
   this->fields._DrawPattern_k__BackingField = ItemDrawPattern;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._DrawPattern_k__BackingField,
-    (System_Int32_array **)ItemDrawPattern,
-    v25,
-    v26,
-    v27,
-    v28,
-    v29,
-    v30);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._DrawPattern_k__BackingField,
+    (int32_t)ItemDrawPattern,
+    v17,
+    v18);
   RootInfo_k__BackingField = listViewPattern->fields._RootInfo_k__BackingField;
   this->fields._RootInfo_k__BackingField = RootInfo_k__BackingField;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._RootInfo_k__BackingField,
-    (System_Int32_array **)RootInfo_k__BackingField,
-    v32,
-    v33,
-    v34,
-    v35,
-    v36,
-    v37);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._RootInfo_k__BackingField,
+    (int32_t)RootInfo_k__BackingField,
+    v20,
+    v21);
   v6 = (char *)this->fields.filterLogic;
   if ( !v6
     || (*((_QWORD *)v6 + 3) = this,
-        sub_B77560((BattleServantConfConponent_o *)(v6 + 24), (System_Int32_array **)this, v38, v39, v40, v41, v42, v43),
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)(v6 + 24), (int32_t)this, v22, v23),
         (v6 = (char *)this->fields.sortLogic) == 0LL) )
   {
 LABEL_5:
-    sub_B7769C(v6, v7);
+    sub_1B00F28(v6, v7);
   }
   *((_QWORD *)v6 + 3) = this;
-  sub_B77560((BattleServantConfConponent_o *)(v6 + 24), (System_Int32_array **)this, v44, v45, v46, v47, v48, v49);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v6 + 24), (int32_t)this, v24, v25);
 }
 
 
@@ -114,58 +67,38 @@ void __fastcall CharaGraphListViewItemBase__ApplySortValue(
         CharaGraphListViewItemBase_o *this,
         const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v2; // w2
+  int32_t v3; // w3
   struct CharaGraphSortLogicBase_o *sortLogic; // x8
   struct IconLabelInfo_o *IconInfo1_k__BackingField; // x1
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
-  struct CharaGraphSortLogicBase_o *v17; // x8
-  struct IconLabelInfo_o *IconInfo2_k__BackingField; // x1
+  struct IconLabelInfo_o **p_IconInfo1_k__BackingField; // x20
+  int32_t v8; // w2
+  int32_t v9; // w3
+  __int64 v10; // x8
+  struct IconLabelInfo_o *v11; // x1
 
   sortLogic = this->fields.sortLogic;
   if ( !sortLogic )
     goto LABEL_4;
-  this->fields.sortValue0 = sortLogic->fields._SortValue0_k__BackingField;
   this->fields.sortValue1 = sortLogic->fields._SortValue1_k__BackingField;
-  this->fields.sortValue0B = sortLogic->fields._SortValue0B_k__BackingField;
-  this->fields.sortValue1B = sortLogic->fields._SortValue1B_k__BackingField;
-  this->fields.sortValue2 = sortLogic->fields._SortValue2_k__BackingField;
+  *(_OWORD *)&this->fields.sortValue0 = *(_OWORD *)&sortLogic->fields._SortValue0_k__BackingField;
+  *(_OWORD *)&this->fields.sortValue1B = *(_OWORD *)&sortLogic->fields._SortValue1B_k__BackingField;
   this->fields.sortValue2B = sortLogic->fields._SortValue2B_k__BackingField;
   IconInfo1_k__BackingField = sortLogic->fields._IconInfo1_k__BackingField;
   this->fields._IconInfo1_k__BackingField = IconInfo1_k__BackingField;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._IconInfo1_k__BackingField,
-    (System_Int32_array **)IconInfo1_k__BackingField,
+  p_IconInfo1_k__BackingField = &this->fields._IconInfo1_k__BackingField;
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._IconInfo1_k__BackingField,
+    (int32_t)IconInfo1_k__BackingField,
     v2,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
-  v17 = this->fields.sortLogic;
-  if ( !v17 )
+    v3);
+  v10 = (__int64)*(p_IconInfo1_k__BackingField - 9);
+  if ( !v10 )
 LABEL_4:
-    sub_B7769C(this, method);
-  IconInfo2_k__BackingField = v17->fields._IconInfo2_k__BackingField;
-  this->fields._IconInfo2_k__BackingField = IconInfo2_k__BackingField;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._IconInfo2_k__BackingField,
-    (System_Int32_array **)IconInfo2_k__BackingField,
-    v11,
-    v12,
-    v13,
-    v14,
-    v15,
-    v16);
+    sub_1B00F28(this, method);
+  v11 = *(struct IconLabelInfo_o **)(v10 + 96);
+  this->fields._IconInfo2_k__BackingField = v11;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)v11, v8, v9);
 }
 
 
@@ -175,22 +108,18 @@ bool __fastcall CharaGraphListViewItemBase__GetNpInfo(
         const MethodInfo *method)
 {
   TreasureDvcInfo_o *v4; // x20
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  int32_t v5; // w2
+  int32_t v6; // w3
 
-  if ( (byte_438E2CD & 1) == 0 )
+  if ( (byte_48E1C03 & 1) == 0 )
   {
-    sub_B775C4(&TreasureDvcInfo_TypeInfo);
-    byte_438E2CD = 1;
+    sub_1B00CCC(&TreasureDvcInfo_TypeInfo, tdInfo);
+    byte_48E1C03 = 1;
   }
-  v4 = (TreasureDvcInfo_o *)sub_B77694(TreasureDvcInfo_TypeInfo);
+  v4 = (TreasureDvcInfo_o *)sub_1B00F18(TreasureDvcInfo_TypeInfo);
   TreasureDvcInfo___ctor(v4, 0LL);
   *tdInfo = v4;
-  sub_B77560((BattleServantConfConponent_o *)tdInfo, (System_Int32_array **)v4, v5, v6, v7, v8, v9, v10);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)tdInfo, (int32_t)v4, v5, v6);
   return 0;
 }
 
@@ -200,28 +129,16 @@ bool __fastcall CharaGraphListViewItemBase__IsMatchFilter(
         ListViewSort_o *sort,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
   struct CharaGraphFilterLogicBase_o *filterLogic; // x0
 
   filterLogic = this->fields.filterLogic;
   if ( !filterLogic
     || (filterLogic->fields.sort = sort,
-        sub_B77560(
-          (BattleServantConfConponent_o *)&filterLogic->fields,
-          (System_Int32_array **)sort,
-          (System_String_array **)method,
-          v3,
-          v4,
-          v5,
-          v6,
-          v7),
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&filterLogic->fields, (int32_t)sort, (int32_t)method, v3),
         (filterLogic = this->fields.filterLogic) == 0LL) )
   {
-    sub_B7769C(filterLogic, sort);
+    sub_1B00F28(filterLogic, sort);
   }
   return ((__int64 (__fastcall *)(struct CharaGraphFilterLogicBase_o *, Il2CppMethodPointer))filterLogic->klass->vtable._4_unknown.method)(
            filterLogic,
@@ -242,7 +159,7 @@ void __fastcall CharaGraphListViewItemBase__Modify(
          args,
          this->klass->vtable._11_OnBeforeMatchingFilter.methodPtr);
   if ( !args )
-    sub_B7769C(v5, v6);
+    sub_1B00F28(v5, v6);
   if ( args->fields._IsResetSwap_k__BackingField )
     *(_WORD *)&this->fields._IsSwapLock_k__BackingField = 0;
 }
@@ -282,17 +199,12 @@ bool __fastcall CharaGraphListViewItemBase__SetSortValue(
 {
   CharaGraphListViewItemBase_c *klass; // x8
   const MethodInfo *v6; // x1
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
-  char v13; // w8
-  bool result; // w0
+  int32_t v7; // w2
+  int32_t v8; // w3
+  char v9; // w20
   struct CharaGraphSortLogicBase_o *sortLogic; // x0
-  struct CharaGraphSortLogicBase_o *v16; // x20
-  const MethodInfo *v17; // x1
+  struct CharaGraphSortLogicBase_o *v11; // x21
+  const MethodInfo *v12; // x1
 
   klass = this->klass;
   *(_WORD *)&this->fields.isTermination = 0;
@@ -301,37 +213,27 @@ bool __fastcall CharaGraphListViewItemBase__SetSortValue(
     this,
     sort,
     klass->vtable._12_GetNpInfo.methodPtr);
-  v13 = ((__int64 (__fastcall *)(CharaGraphListViewItemBase_o *, ListViewSort_o *, Il2CppMethodPointer))this->klass->vtable._5_IsMatchFilter.method)(
-          this,
-          sort,
-          this->klass->vtable._6_unknown.methodPtr);
-  result = 0;
-  if ( (v13 & 1) != 0 )
+  v9 = ((__int64 (__fastcall *)(CharaGraphListViewItemBase_o *, ListViewSort_o *, Il2CppMethodPointer))this->klass->vtable._5_IsMatchFilter.method)(
+         this,
+         sort,
+         this->klass->vtable._6_unknown.methodPtr);
+  if ( (v9 & 1) != 0 )
   {
     sortLogic = this->fields.sortLogic;
     if ( !sortLogic
       || (sortLogic->fields.sort = sort,
-          sub_B77560(
-            (BattleServantConfConponent_o *)&sortLogic->fields,
-            (System_Int32_array **)sort,
-            v7,
-            v8,
-            v9,
-            v10,
-            v11,
-            v12),
-          (v16 = this->fields.sortLogic) == 0LL) )
+          sub_1B00C70((ServantStatusBattleListViewItem_o *)&sortLogic->fields, (int32_t)sort, v7, v8),
+          (v11 = this->fields.sortLogic) == 0LL) )
     {
-      sub_B7769C(sortLogic, v6);
+      sub_1B00F28(sortLogic, v6);
     }
     CharaGraphSortLogicBase__InitSortValue(this->fields.sortLogic, v6);
-    ((void (__fastcall *)(struct CharaGraphSortLogicBase_o *, void *))v16->klass->vtable._4_SetSortValueLocal.method)(
-      v16,
-      v16->klass[1]._1.image);
-    CharaGraphListViewItemBase__ApplySortValue(this, v17);
-    return 1;
+    ((void (__fastcall *)(struct CharaGraphSortLogicBase_o *, void *))v11->klass->vtable._4_SetSortValueLocal.method)(
+      v11,
+      v11->klass[1]._1.image);
+    CharaGraphListViewItemBase__ApplySortValue(this, v12);
   }
-  return result;
+  return v9 & 1;
 }
 
 
@@ -638,22 +540,14 @@ void __fastcall CharaGraphListViewItemBase__set_DrawPattern(
         CharaGraphListViewItemDrawPatternBase_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._DrawPattern_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._DrawPattern_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._DrawPattern_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -689,22 +583,14 @@ void __fastcall CharaGraphListViewItemBase__set_IconInfo1(
         IconLabelInfo_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._IconInfo1_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._IconInfo1_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._IconInfo1_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -713,22 +599,14 @@ void __fastcall CharaGraphListViewItemBase__set_IconInfo2(
         IconLabelInfo_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._IconInfo2_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._IconInfo2_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._IconInfo2_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -881,20 +759,12 @@ void __fastcall CharaGraphListViewItemBase__set_RootInfo(
         CharaGraphDefine_CharaGraphRootInfo_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._RootInfo_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._RootInfo_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._RootInfo_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }

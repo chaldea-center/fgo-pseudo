@@ -6,29 +6,34 @@ void __fastcall MemoryWarningReciever___ctor(MemoryWarningReciever_o *this, cons
 
 void __fastcall MemoryWarningReciever__Awake(MemoryWarningReciever_o *this, const MethodInfo *method)
 {
-  UnityEngine_Application_LowMemoryCallback_o *v3; // x20
-  UnityEngine_Application_LowMemoryCallback_o *v4; // x20
+  __int64 v3; // x1
+  __int64 v4; // x1
+  UnityEngine_Application_LowMemoryCallback_o *v5; // x20
+  UnityEngine_Application_LowMemoryCallback_o *v6; // x20
 
-  if ( (byte_4389ABB & 1) == 0 )
+  if ( (byte_48E1FE1 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Application_LowMemoryCallback_TypeInfo);
-    sub_B775C4(&Method_MemoryWarningReciever_DidReceiveMemoryWarning__);
-    byte_4389ABB = 1;
+    sub_1B00CCC(&UnityEngine_Application_TypeInfo, method);
+    sub_1B00CCC(&UnityEngine_Application_LowMemoryCallback_TypeInfo, v3);
+    sub_1B00CCC(&Method_MemoryWarningReciever_DidReceiveMemoryWarning__, v4);
+    byte_48E1FE1 = 1;
   }
-  v3 = (UnityEngine_Application_LowMemoryCallback_o *)sub_B77694(UnityEngine_Application_LowMemoryCallback_TypeInfo);
+  v5 = (UnityEngine_Application_LowMemoryCallback_o *)sub_1B00F18(UnityEngine_Application_LowMemoryCallback_TypeInfo);
   UnityEngine_Application_LowMemoryCallback___ctor(
-    v3,
+    v5,
     (Il2CppObject *)this,
     Method_MemoryWarningReciever_DidReceiveMemoryWarning__,
     0LL);
-  UnityEngine_Application__remove_lowMemory(v3, 0LL);
-  v4 = (UnityEngine_Application_LowMemoryCallback_o *)sub_B77694(UnityEngine_Application_LowMemoryCallback_TypeInfo);
+  if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
+  UnityEngine_Application__remove_lowMemory(v5, 0LL);
+  v6 = (UnityEngine_Application_LowMemoryCallback_o *)sub_1B00F18(UnityEngine_Application_LowMemoryCallback_TypeInfo);
   UnityEngine_Application_LowMemoryCallback___ctor(
-    v4,
+    v6,
     (Il2CppObject *)this,
     Method_MemoryWarningReciever_DidReceiveMemoryWarning__,
     0LL);
-  UnityEngine_Application__add_lowMemory(v4, 0LL);
+  UnityEngine_Application__add_lowMemory(v6, 0LL);
 }
 
 
@@ -37,58 +42,64 @@ void __fastcall MemoryWarningReciever__DidReceiveMemoryWarning(MemoryWarningReci
   MemoryWarningReciever_o *v3; // x0
   const MethodInfo *v4; // x1
 
-  if ( UnityEngine_Time__get_realtimeSinceStartup(0LL) >= *(float *)&this->fields.requestGC )
+  if ( UnityEngine_Time__get_realtimeSinceStartup(0LL) >= this->fields.nextExecuteTime )
   {
-    *(float *)&this->fields.requestGC = UnityEngine_Time__get_realtimeSinceStartup(0LL) + 10.0;
+    this->fields.nextExecuteTime = UnityEngine_Time__get_realtimeSinceStartup(0LL) + 10.0;
     MemoryWarningReciever__GabageCollection(v3, v4);
   }
   else
   {
-    *((_BYTE *)&this->fields + 12) = 1;
+    this->fields.requestGC = 1;
   }
 }
 
 
 void __fastcall MemoryWarningReciever__GabageCollection(MemoryWarningReciever_o *this, const MethodInfo *method)
 {
-  AssetManager_o *Instance; // x0
-  __int64 v3; // x1
+  __int64 v2; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v4; // x1
 
-  if ( (byte_4389ABD & 1) == 0 )
+  if ( (byte_48E1FE3 & 1) == 0 )
   {
-    sub_B775C4(&System_GC_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4389ABD = 1;
+    sub_1B00CCC(&System_GC_TypeInfo, method);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__, v2);
+    byte_48E1FE3 = 1;
   }
-  Instance = (AssetManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !Instance )
-    sub_B7769C(0LL, v3);
-  AssetManager__RequestUnloadUnusedAssets(Instance, 0LL, 0LL);
-  if ( (BYTE3(System_GC_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !System_GC_TypeInfo->_2.cctor_finished )
+    sub_1B00F28(0LL, v4);
+  AssetManager__RequestUnloadUnusedAssets((AssetManager_o *)Instance, 0LL, 0LL);
+  if ( !System_GC_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_GC_TypeInfo);
-  System_GC__Collect_44383624(0LL);
+  System_GC__Collect_61371376(0LL);
   System_GC__WaitForPendingFinalizers(0LL);
-  System_GC__Collect_44383624(0LL);
+  System_GC__Collect_61371376(0LL);
 }
 
 
 void __fastcall MemoryWarningReciever__OnDestroy(MemoryWarningReciever_o *this, const MethodInfo *method)
 {
-  UnityEngine_Application_LowMemoryCallback_o *v3; // x20
+  __int64 v3; // x1
+  __int64 v4; // x1
+  UnityEngine_Application_LowMemoryCallback_o *v5; // x20
 
-  if ( (byte_4389ABC & 1) == 0 )
+  if ( (byte_48E1FE2 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Application_LowMemoryCallback_TypeInfo);
-    sub_B775C4(&Method_MemoryWarningReciever_DidReceiveMemoryWarning__);
-    byte_4389ABC = 1;
+    sub_1B00CCC(&UnityEngine_Application_TypeInfo, method);
+    sub_1B00CCC(&UnityEngine_Application_LowMemoryCallback_TypeInfo, v3);
+    sub_1B00CCC(&Method_MemoryWarningReciever_DidReceiveMemoryWarning__, v4);
+    byte_48E1FE2 = 1;
   }
-  v3 = (UnityEngine_Application_LowMemoryCallback_o *)sub_B77694(UnityEngine_Application_LowMemoryCallback_TypeInfo);
+  v5 = (UnityEngine_Application_LowMemoryCallback_o *)sub_1B00F18(UnityEngine_Application_LowMemoryCallback_TypeInfo);
   UnityEngine_Application_LowMemoryCallback___ctor(
-    v3,
+    v5,
     (Il2CppObject *)this,
     Method_MemoryWarningReciever_DidReceiveMemoryWarning__,
     0LL);
-  UnityEngine_Application__remove_lowMemory(v3, 0LL);
+  if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
+  UnityEngine_Application__remove_lowMemory(v5, 0LL);
 }
 
 
@@ -97,13 +108,10 @@ void __fastcall MemoryWarningReciever__Update(MemoryWarningReciever_o *this, con
   MemoryWarningReciever_o *v3; // x0
   const MethodInfo *v4; // x1
 
-  if ( *((_BYTE *)&this->fields + 12) )
+  if ( this->fields.requestGC && UnityEngine_Time__get_realtimeSinceStartup(0LL) >= this->fields.nextExecuteTime )
   {
-    if ( UnityEngine_Time__get_realtimeSinceStartup(0LL) >= *(float *)&this->fields.requestGC )
-    {
-      MemoryWarningReciever__GabageCollection(v3, v4);
-      *((_BYTE *)&this->fields + 12) = 0;
-      *(float *)&this->fields.requestGC = UnityEngine_Time__get_realtimeSinceStartup(0LL) + 10.0;
-    }
+    MemoryWarningReciever__GabageCollection(v3, v4);
+    this->fields.requestGC = 0;
+    this->fields.nextExecuteTime = UnityEngine_Time__get_realtimeSinceStartup(0LL) + 10.0;
   }
 }

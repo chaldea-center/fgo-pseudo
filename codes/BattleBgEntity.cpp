@@ -1,27 +1,28 @@
 void __fastcall BattleBgEntity___ctor(BattleBgEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438EB38 & 1) == 0 )
+  if ( (byte_48E24A5 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    byte_438EB38 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
+    byte_48E24A5 = 1;
   }
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall BattleBgEntity__CreatePK(int32_t id, int32_t type, const MethodInfo *method)
 {
-  if ( (byte_438EB32 & 1) == 0 )
+  if ( (byte_48E249F & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_438EB32 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&type);
+    byte_48E249F = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            type,
-           (const MethodInfo_1D171BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2D60E34 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -37,58 +38,57 @@ System_Single_array *__fastcall BattleBgEntity__GetCameraClippingRange(
         BattleBgEntity_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
   float Millesimal; // s8
-  float v4; // s9
+  float v6; // s9
   System_Single_array *result; // x0
-  __int64 v6; // x1
+  __int64 v8; // x1
   il2cpp_array_size_t max_length; // w8
-  __int64 v8; // x0
 
-  if ( (byte_438EB35 & 1) == 0 )
+  if ( (byte_48E24A2 & 1) == 0 )
   {
-    sub_B775C4(&float___TypeInfo);
-    sub_B775C4(&StringLiteral_3601/*"CameraClippingFar"*/);
-    sub_B775C4(&StringLiteral_3602/*"CameraClippingNear"*/);
-    byte_438EB35 = 1;
+    sub_1B00CCC(&float___TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_3938/*"CameraClippingFar"*/, v3);
+    sub_1B00CCC(&StringLiteral_3939/*"CameraClippingNear"*/, v4);
+    byte_48E24A2 = 1;
   }
-  Millesimal = EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_3602/*"CameraClippingNear"*/, -1.0, 0LL);
-  v4 = EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_3601/*"CameraClippingFar"*/, -1.0, 0LL);
-  result = (System_Single_array *)sub_B775DC(float___TypeInfo, 2LL);
+  Millesimal = EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_3939/*"CameraClippingNear"*/, -1.0, 0LL);
+  v6 = EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_3938/*"CameraClippingFar"*/, -1.0, 0LL);
+  result = (System_Single_array *)sub_1B00D74(float___TypeInfo, 2LL);
   if ( !result )
-    sub_B7769C(0LL, v6);
+    sub_1B00F28(0LL, v8);
   max_length = result->max_length;
   if ( !max_length || (result->m_Items[1] = Millesimal, max_length == 1) )
-  {
-    v8 = sub_B776C8(result);
-    sub_B77668(v8, 0LL);
-  }
-  result->m_Items[2] = v4;
+    sub_1B00F30(result, v8);
+  result->m_Items[2] = v6;
   return result;
 }
 
 
 int32_t __fastcall BattleBgEntity__GetInvalidOverwrite(BattleBgEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438EB36 & 1) == 0 )
+  if ( (byte_48E24A3 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_8225/*"InvalidOverwrite"*/);
-    byte_438EB36 = 1;
+    sub_1B00CCC(&StringLiteral_7837/*"InvalidOverwrite"*/, method);
+    byte_48E24A3 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_8225/*"InvalidOverwrite"*/, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_7837/*"InvalidOverwrite"*/, 0, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall BattleBgEntity__GetSpecialShadowEffectId(
         BattleBgEntity_o *this,
         int32_t defId,
         const MethodInfo *method)
 {
-  if ( (byte_438EB37 & 1) == 0 )
+  if ( (byte_48E24A4 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_13203/*"SpecialShadowEffectId"*/);
-    byte_438EB37 = 1;
+    sub_1B00CCC(&StringLiteral_12650/*"SpecialShadowEffectId"*/, *(_QWORD *)&defId);
+    byte_48E24A4 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_13203/*"SpecialShadowEffectId"*/, defId, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_12650/*"SpecialShadowEffectId"*/, defId, 0LL);
 }
 
 
@@ -96,104 +96,83 @@ SubBgmPlayArgs_array *__fastcall BattleBgEntity__GetSubBgmPlayArgsArray(
         BattleBgEntity_o *this,
         const MethodInfo *method)
 {
-  BattleBgEntity___c_c *v3; // x0
-  struct BattleBgEntity___c_StaticFields *static_fields; // x8
-  System_Func_WarBoardManager_WarBoardOnboardSkillTarget__WarBoardPieceData__o *_9__8_0; // x20
-  Il2CppObject *v6; // x21
-  struct BattleBgEntity___c_StaticFields *v7; // x0
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  BattleBgEntity___c_c *v7; // x0
+  System_Func_object__object__o *_9__8_0; // x20
+  Il2CppObject *v9; // x21
+  struct BattleBgEntity___c_StaticFields *static_fields; // x0
+  int32_t v11; // w2
+  int32_t v12; // w3
 
-  if ( (byte_438EB33 & 1) == 0 )
+  if ( (byte_48E24A0 & 1) == 0 )
   {
-    sub_B775C4(&Method_EntityScriptUtil_GetScriptValue_List_object___SubBgmPlayArgs_____);
-    sub_B775C4(&Method_System_Func_List_object___SubBgmPlayArgs_____ctor__);
-    sub_B775C4(&System_Func_List_object___SubBgmPlayArgs____TypeInfo);
-    sub_B775C4(&Method_BattleBgEntity___c__GetSubBgmPlayArgsArray_b__8_0__);
-    sub_B775C4(&BattleBgEntity___c_TypeInfo);
-    sub_B775C4(&StringLiteral_22848/*"subBgms"*/);
-    byte_438EB33 = 1;
+    sub_1B00CCC(&Method_EntityScriptUtil_GetScriptValue_List_object___SubBgmPlayArgs_____, method);
+    sub_1B00CCC(&System_Func_List_object___SubBgmPlayArgs____TypeInfo, v3);
+    sub_1B00CCC(&Method_BattleBgEntity___c__GetSubBgmPlayArgsArray_b__8_0__, v4);
+    sub_1B00CCC(&BattleBgEntity___c_TypeInfo, v5);
+    sub_1B00CCC(&StringLiteral_23256/*"subBgms"*/, v6);
+    byte_48E24A0 = 1;
   }
-  v3 = BattleBgEntity___c_TypeInfo;
-  if ( (BYTE3(BattleBgEntity___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !BattleBgEntity___c_TypeInfo->_2.cctor_finished )
+  v7 = BattleBgEntity___c_TypeInfo;
+  if ( !BattleBgEntity___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleBgEntity___c_TypeInfo);
-    v3 = BattleBgEntity___c_TypeInfo;
+    v7 = BattleBgEntity___c_TypeInfo;
   }
-  static_fields = v3->static_fields;
-  _9__8_0 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__WarBoardPieceData__o *)static_fields->__9__8_0;
+  _9__8_0 = (System_Func_object__object__o *)v7->static_fields->__9__8_0;
   if ( !_9__8_0 )
   {
-    if ( (BYTE3(v3->vtable._0_Equals.methodPtr) & 4) != 0 && !v3->_2.cctor_finished )
+    if ( !v7->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v3);
-      static_fields = BattleBgEntity___c_TypeInfo->static_fields;
+      j_il2cpp_runtime_class_init_0(v7);
+      v7 = BattleBgEntity___c_TypeInfo;
     }
-    v6 = (Il2CppObject *)static_fields->__9;
-    _9__8_0 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__WarBoardPieceData__o *)sub_B77694(System_Func_List_object___SubBgmPlayArgs____TypeInfo);
-    System_Func_WarBoardManager_WarBoardOnboardSkillTarget__WarBoardPieceData____ctor(
-      _9__8_0,
-      v6,
-      Method_BattleBgEntity___c__GetSubBgmPlayArgsArray_b__8_0__,
-      (const MethodInfo_29EAA10 *)Method_System_Func_List_object___SubBgmPlayArgs_____ctor__);
-    v7 = BattleBgEntity___c_TypeInfo->static_fields;
-    v7->__9__8_0 = (struct System_Func_List_object___SubBgmPlayArgs____o *)_9__8_0;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&v7->__9__8_0,
-      (System_Int32_array **)_9__8_0,
-      v8,
-      v9,
-      v10,
-      v11,
-      v12,
-      v13);
+    v9 = (Il2CppObject *)v7->static_fields->__9;
+    _9__8_0 = (System_Func_object__object__o *)sub_1B00F18(System_Func_List_object___SubBgmPlayArgs____TypeInfo);
+    System_Func_object__object____ctor(_9__8_0, v9, Method_BattleBgEntity___c__GetSubBgmPlayArgsArray_b__8_0__, 0LL);
+    static_fields = BattleBgEntity___c_TypeInfo->static_fields;
+    static_fields->__9__8_0 = (struct System_Func_List_object___SubBgmPlayArgs____o *)_9__8_0;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->__9__8_0, (int32_t)_9__8_0, v11, v12);
   }
   return (SubBgmPlayArgs_array *)EntityScriptUtil__GetScriptValue_object__object_(
                                    this->fields.script,
-                                   (System_String_o *)StringLiteral_22848/*"subBgms"*/,
+                                   (System_String_o *)StringLiteral_23256/*"subBgms"*/,
                                    (System_Func_TSource__TDestination__o *)_9__8_0,
                                    0LL,
-                                   (const MethodInfo_1D1A9A4 *)Method_EntityScriptUtil_GetScriptValue_List_object___SubBgmPlayArgs_____);
+                                   (const MethodInfo_2D69ABC *)Method_EntityScriptUtil_GetScriptValue_List_object___SubBgmPlayArgs_____);
 }
 
 
 int32_t __fastcall BattleBgEntity__GetSubBgmsPriority(BattleBgEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438EB34 & 1) == 0 )
+  if ( (byte_48E24A1 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_22849/*"subBgmsPriority"*/);
-    byte_438EB34 = 1;
+    sub_1B00CCC(&StringLiteral_23257/*"subBgmsPriority"*/, method);
+    byte_48E24A1 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22849/*"subBgmsPriority"*/, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_23257/*"subBgmsPriority"*/, 0, 0LL);
 }
 
 
 void __fastcall BattleBgEntity___c___cctor(const MethodInfo *method)
 {
-  Il2CppObject *v1; // x19
-  BattleServantConfConponent_o *static_fields; // x0
-  System_String_array **v3; // x2
-  System_String_array **v4; // x3
-  System_Boolean_array **v5; // x4
-  System_Int32_array **v6; // x5
-  System_Int32_array *v7; // x6
-  System_Int32_array *v8; // x7
+  __int64 v1; // x1
+  Il2CppObject *v2; // x19
+  int32_t v3; // w2
+  int32_t v4; // w3
 
-  if ( (byte_438AB67 & 1) == 0 )
+  if ( (byte_48E24A6 & 1) == 0 )
   {
-    sub_B775C4(&BattleBgEntity___c_TypeInfo);
-    byte_438AB67 = 1;
+    sub_1B00CCC(&BattleBgEntity___c_TypeInfo, v1);
+    byte_48E24A6 = 1;
   }
-  v1 = (Il2CppObject *)sub_B77694(BattleBgEntity___c_TypeInfo);
-  System_Object___ctor(v1, 0LL);
-  static_fields = (BattleServantConfConponent_o *)BattleBgEntity___c_TypeInfo->static_fields;
-  static_fields->klass = (BattleServantConfConponent_c *)v1;
-  sub_B77560(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
+  v2 = (Il2CppObject *)sub_1B00F18(BattleBgEntity___c_TypeInfo);
+  System_Object___ctor(v2, 0LL);
+  BattleBgEntity___c_TypeInfo->static_fields->__9 = (struct BattleBgEntity___c_o *)v2;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)BattleBgEntity___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 

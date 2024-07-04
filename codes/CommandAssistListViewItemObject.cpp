@@ -2,16 +2,13 @@ void __fastcall CommandAssistListViewItemObject___ctor(
         CommandAssistListViewItemObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_438DEC4 & 1) == 0 )
+  if ( (byte_48DDE18 & 1) == 0 )
   {
-    sub_B775C4(&ListViewObject_TypeInfo);
-    byte_438DEC4 = 1;
+    sub_1B00CCC(&ListViewObject_TypeInfo, method);
+    byte_48DDE18 = 1;
   }
-  if ( (BYTE3(ListViewObject_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ListViewObject_TypeInfo->_2.cctor_finished )
-  {
+  if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
-  }
   ListViewObject___ctor((ListViewObject_o *)this, 0LL);
 }
 
@@ -22,36 +19,20 @@ void __fastcall CommandAssistListViewItemObject__Awake(
 {
   __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
-  struct CommandAssistListViewItemDraw_o *Component_srcLineSprite; // x0
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
 
-  if ( (byte_438DEC2 & 1) == 0 )
+  if ( (byte_48DDE16 & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_CommandAssistListViewItemDraw___);
-    byte_438DEC2 = 1;
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_CommandAssistListViewItemDraw___, method);
+    byte_48DDE16 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_B7769C(0LL, v3);
-  Component_srcLineSprite = (struct CommandAssistListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                                                        dispObject,
-                                                                        (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_CommandAssistListViewItemDraw___);
-  this->fields.itemDraw = Component_srcLineSprite;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.itemDraw,
-    (System_Int32_array **)Component_srcLineSprite,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10,
-    v11);
+    sub_1B00F28(0LL, v3);
+  this->fields.itemDraw = (struct CommandAssistListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_object_(
+                                                                      dispObject,
+                                                                      (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_CommandAssistListViewItemDraw___);
+  sub_1B00C70(&this->fields.itemDraw);
 }
 
 
@@ -64,25 +45,25 @@ void __fastcall CommandAssistListViewItemObject__SetItem(
   __int64 v7; // x1
   const MethodInfo *v8; // x2
   CommandAssistListViewItemDraw_o *itemDraw; // x0
-  __int64 v10; // x9
+  __int64 methodPtr_low; // x9
 
-  if ( (byte_438DEC3 & 1) == 0 )
+  if ( (byte_48DDE17 & 1) == 0 )
   {
-    sub_B775C4(&CommandAssistListViewItem_TypeInfo);
-    byte_438DEC3 = 1;
+    sub_1B00CCC(&CommandAssistListViewItem_TypeInfo, item);
+    byte_48DDE17 = 1;
   }
-  ListViewObject__SetItem_34301308((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_39462468((ListViewObject_o *)this, item, seed, 0LL);
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
 LABEL_9:
-    sub_B7769C(itemDraw, v7);
+    sub_1B00F28(itemDraw, v7);
   if ( item )
   {
-    v10 = *(&CommandAssistListViewItem_TypeInfo->_2.bitflags2 + 1);
-    if ( *(&item->klass->_2.bitflags2 + 1) < (unsigned int)v10
-      || (CommandAssistListViewItem_c *)item->klass->_2.typeHierarchy[v10 - 1] != CommandAssistListViewItem_TypeInfo )
+    methodPtr_low = LOBYTE(CommandAssistListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
+    if ( LOBYTE(item->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
+      || (CommandAssistListViewItem_c *)item->klass->_2.typeHierarchy[methodPtr_low - 1] != CommandAssistListViewItem_TypeInfo )
     {
-      sub_B77990(item);
+      itemDraw = (CommandAssistListViewItemDraw_o *)sub_1B011E8(item);
       goto LABEL_9;
     }
   }

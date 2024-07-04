@@ -1,102 +1,135 @@
 void __fastcall MaterialFolderMaster___ctor(MaterialFolderMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_438EEB9 & 1) == 0 )
+  if ( (byte_48E2B71 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_MaterialFolderMaster__MaterialFolderEntity__int___ctor__);
-    byte_438EEB9 = 1;
+    sub_1B00CCC(&Method_DataMasterBase_MaterialFolderMaster__MaterialFolderEntity__int___ctor__, method);
+    byte_48E2B71 = 1;
   }
-  DataMasterBase_WarMaster__WarEntity__int____ctor(
-    (DataMasterBase_WarMaster__WarEntity__int__o *)this,
+  DataMasterBase_object__object__int____ctor(
+    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     173,
-    (const MethodInfo_21FB7F8 *)Method_DataMasterBase_MaterialFolderMaster__MaterialFolderEntity__int___ctor__);
+    (const MethodInfo_2FE6A0C *)Method_DataMasterBase_MaterialFolderMaster__MaterialFolderEntity__int___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 MaterialFolderEntity_array *__fastcall MaterialFolderMaster__getFoldersWithEventID(
         MaterialFolderMaster_o *this,
         int32_t eventId,
+        bool isMaterialOpened,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v5; // x21
-  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  System_Collections_Generic_List_object__o *v14; // x22
+  __int64 v15; // x1
   void *list; // x0
-  int32_t v8; // w22
-  int32_t v9; // w23
-  EventMissionProgressRequest_Argument_ProgressData_o *v10; // x24
-  __int64 v11; // x10
-  int32_t v12; // w25
+  int v17; // w23
+  int32_t v18; // w24
+  int32_t v19; // w2
+  int32_t v20; // w3
+  Il2CppObject *v21; // x25
+  __int64 methodPtr_low; // x10
+  int32_t v23; // w26
+  struct System_Object_array *items; // x8
+  _QWORD *v25; // x9
+  __int64 size; // x10
+  Il2CppClass **v27; // x0
 
-  if ( (byte_438EEBA & 1) == 0 )
+  if ( (byte_48E2B72 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B775C4(&CondType_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_MaterialFolderEntity__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_MaterialFolderEntity__ToArray__);
-    sub_B775C4(&Method_System_Collections_Generic_List_MaterialFolderEntity___ctor__);
-    sub_B775C4(&System_Collections_Generic_List_MaterialFolderEntity__TypeInfo);
-    sub_B775C4(&MaterialFolderEntity_TypeInfo);
-    byte_438EEBA = 1;
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
+    sub_1B00CCC(&CondType_TypeInfo, v8);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_MaterialFolderEntity__Add__, v9);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_MaterialFolderEntity__ToArray__, v10);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_MaterialFolderEntity___ctor__, v11);
+    sub_1B00CCC(&System_Collections_Generic_List_MaterialFolderEntity__TypeInfo, v12);
+    sub_1B00CCC(&MaterialFolderEntity_TypeInfo, v13);
+    byte_48E2B72 = 1;
   }
-  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_MaterialFolderEntity__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v5,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_MaterialFolderEntity___ctor__);
+  v14 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_MaterialFolderEntity__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v14,
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_MaterialFolderEntity___ctor__);
   list = this->fields.list;
   if ( !list )
-    goto LABEL_21;
-  list = (void *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
-                   (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
-                   (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    goto LABEL_24;
+  list = (void *)System_Collections_ObjectModel_Collection_object___get_Count(
+                   (System_Collections_ObjectModel_Collection_T__o *)list,
+                   (const MethodInfo_2F836B0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( (int)list >= 1 )
   {
-    v8 = (int)list;
-    v9 = 0;
+    v17 = (int)list;
+    v18 = 0;
     while ( 1 )
     {
       list = this->fields.list;
       if ( !list )
         break;
-      list = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
-               (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
-               v9,
-               (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+      list = System_Collections_ObjectModel_Collection_object___get_Item(
+               (System_Collections_ObjectModel_Collection_T__o *)list,
+               v18,
+               (const MethodInfo_2F83740 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( list )
       {
-        v10 = (EventMissionProgressRequest_Argument_ProgressData_o *)list;
-        v11 = *(&MaterialFolderEntity_TypeInfo->_2.bitflags2 + 1);
-        if ( *(unsigned __int8 *)(*(_QWORD *)list + 300LL) >= (unsigned int)v11
-          && *(MaterialFolderEntity_c **)(*(_QWORD *)(*(_QWORD *)list + 200LL) + 8 * v11 - 8) == MaterialFolderEntity_TypeInfo
+        v21 = (Il2CppObject *)list;
+        methodPtr_low = LOBYTE(MaterialFolderEntity_TypeInfo->vtable._0_Equals.methodPtr);
+        if ( *(unsigned __int8 *)(*(_QWORD *)list + 304LL) >= (unsigned int)methodPtr_low
+          && *(MaterialFolderEntity_c **)(*(_QWORD *)(*(_QWORD *)list + 200LL) + 8 * methodPtr_low - 8) == MaterialFolderEntity_TypeInfo
           && *((_DWORD *)list + 8) == eventId )
         {
-          v12 = *((_DWORD *)list + 9);
-          if ( v12 < 1 )
-            goto LABEL_16;
-          if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
+          if ( isMaterialOpened )
+            goto LABEL_27;
+          v23 = *((_DWORD *)list + 9);
+          if ( v23 < 1 )
+            goto LABEL_27;
+          if ( !CondType_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-          list = (void *)CondType__IsQuestClear_24699280(v12, -1, 0, 0LL);
+          list = (void *)CondType__IsQuestClear_36399468(v23, -1, 0, 0LL);
           if ( ((unsigned __int8)list & 1) != 0 )
           {
-LABEL_16:
-            if ( !v5 )
+LABEL_27:
+            if ( !v14 )
               break;
-            System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-              v5,
-              v10,
-              (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_MaterialFolderEntity__Add__);
+            items = v14->fields._items;
+            v25 = Method_System_Collections_Generic_List_MaterialFolderEntity__Add__;
+            ++v14->fields._version;
+            if ( !items )
+              break;
+            size = v14->fields._size;
+            if ( (unsigned int)size >= items->max_length )
+            {
+              System_Collections_Generic_List_object___AddWithResize(
+                v14,
+                v21,
+                *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+            }
+            else
+            {
+              v27 = &items->obj.klass + size;
+              v14->fields._size = size + 1;
+              v27[4] = (Il2CppClass *)v21;
+              sub_1B00C70((ServantStatusBattleListViewItem_o *)(v27 + 4), (int32_t)v21, v19, v20);
+            }
           }
         }
       }
-      if ( ++v9 >= v8 )
-        goto LABEL_19;
+      if ( v17 == ++v18 )
+        goto LABEL_22;
     }
-LABEL_21:
-    sub_B7769C(list, v6);
+LABEL_24:
+    sub_1B00F28(list, v15);
   }
-LABEL_19:
-  if ( !v5 )
-    goto LABEL_21;
-  return (MaterialFolderEntity_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
-                                         (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v5,
-                                         (const MethodInfo_30553E4 *)Method_System_Collections_Generic_List_MaterialFolderEntity__ToArray__);
+LABEL_22:
+  if ( !v14 )
+    goto LABEL_24;
+  return (MaterialFolderEntity_array *)System_Collections_Generic_List_object___ToArray(
+                                         v14,
+                                         (const MethodInfo_33C3528 *)Method_System_Collections_Generic_List_MaterialFolderEntity__ToArray__);
 }

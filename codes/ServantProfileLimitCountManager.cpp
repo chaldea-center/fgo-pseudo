@@ -1,53 +1,40 @@
 void __fastcall ServantProfileLimitCountManager___cctor(const MethodInfo *method)
 {
-  System_String_array **v1; // x2
-  System_String_array **v2; // x3
-  System_Boolean_array **v3; // x4
-  System_Int32_array **v4; // x5
-  System_Int32_array *v5; // x6
-  System_Int32_array *v6; // x7
-  BattleServantConfConponent_o *static_fields; // x0
-  System_Int32_array **v8; // x1
-  ServantProfileLimitCountManager_c *v9; // x8
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v10; // x19
-  struct ServantProfileLimitCountManager_StaticFields *v11; // x0
-  System_String_array **v12; // x2
-  System_String_array **v13; // x3
-  System_Boolean_array **v14; // x4
-  System_Int32_array **v15; // x5
-  System_Int32_array *v16; // x6
-  System_Int32_array *v17; // x7
+  __int64 v1; // x1
+  int32_t v2; // w2
+  int32_t v3; // w3
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  System_Collections_Generic_List_object__o *v7; // x19
+  struct ServantProfileLimitCountManager_StaticFields *static_fields; // x0
+  int32_t v9; // w2
+  int32_t v10; // w3
 
-  if ( (byte_438D11B & 1) == 0 )
+  if ( (byte_48E394A & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo___ctor__);
-    sub_B775C4(&System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__TypeInfo);
-    sub_B775C4(&ServantProfileLimitCountManager_TypeInfo);
-    sub_B775C4(&StringLiteral_6768/*"Fgo_20191029"*/);
-    byte_438D11B = 1;
+    sub_1B00CCC(
+      &Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo___ctor__,
+      v1);
+    sub_1B00CCC(&System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__TypeInfo, v4);
+    sub_1B00CCC(&ServantProfileLimitCountManager_TypeInfo, v5);
+    sub_1B00CCC(&StringLiteral_6578/*"Fgo_20191029"*/, v6);
+    byte_48E394A = 1;
   }
-  static_fields = (BattleServantConfConponent_o *)ServantProfileLimitCountManager_TypeInfo->static_fields;
-  v8 = (System_Int32_array **)StringLiteral_6768/*"Fgo_20191029"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6768/*"Fgo_20191029"*/;
-  sub_B77560(static_fields, v8, v1, v2, v3, v4, v5, v6);
-  v9 = ServantProfileLimitCountManager_TypeInfo;
-  ServantProfileLimitCountManager_TypeInfo->static_fields->isModfiy = 0;
-  v9->static_fields->isContinueDevice = 0;
-  v10 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v10,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo___ctor__);
-  v11 = ServantProfileLimitCountManager_TypeInfo->static_fields;
-  v11->limitCountList = (struct System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__o *)v10;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&v11->limitCountList,
-    (System_Int32_array **)v10,
-    v12,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17);
+  ServantProfileLimitCountManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6578/*"Fgo_20191029"*/;
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)ServantProfileLimitCountManager_TypeInfo->static_fields,
+    StringLiteral_6578/*"Fgo_20191029"*/,
+    v2,
+    v3);
+  *(_WORD *)&ServantProfileLimitCountManager_TypeInfo->static_fields->isModfiy = 0;
+  v7 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v7,
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo___ctor__);
+  static_fields = ServantProfileLimitCountManager_TypeInfo->static_fields;
+  static_fields->limitCountList = (struct System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__o *)v7;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->limitCountList, (int32_t)v7, v9, v10);
 }
 
 
@@ -62,929 +49,980 @@ void __fastcall ServantProfileLimitCountManager___ctor(
 void __fastcall ServantProfileLimitCountManager__ClearSaveDataList(const MethodInfo *method)
 {
   __int64 v1; // x1
-  ServantProfileLimitCountManager_c *v2; // x0
-  System_Collections_Generic_List_XWeaponTrail_Element__o *limitCountList; // x8
+  __int64 v2; // x1
+  __int64 v3; // x1
+  ServantProfileLimitCountManager_c *v4; // x0
+  struct System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__o *limitCountList; // x8
+  int32_t size; // w2
+  int v7; // w9
 
-  if ( (byte_438D114 & 1) == 0 )
+  if ( (byte_48E3943 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__Clear__);
-    sub_B775C4(&Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__get_Count__);
-    sub_B775C4(&ServantProfileLimitCountManager_TypeInfo);
-    byte_438D114 = 1;
+    sub_1B00CCC(
+      &Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__Clear__,
+      v1);
+    sub_1B00CCC(
+      &Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__get_Count__,
+      v2);
+    sub_1B00CCC(&ServantProfileLimitCountManager_TypeInfo, v3);
+    byte_48E3943 = 1;
   }
-  v2 = ServantProfileLimitCountManager_TypeInfo;
-  if ( (BYTE3(ServantProfileLimitCountManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
+  v4 = ServantProfileLimitCountManager_TypeInfo;
+  if ( !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ServantProfileLimitCountManager_TypeInfo);
-    v2 = ServantProfileLimitCountManager_TypeInfo;
+    v4 = ServantProfileLimitCountManager_TypeInfo;
   }
-  limitCountList = (System_Collections_Generic_List_XWeaponTrail_Element__o *)v2->static_fields->limitCountList;
+  limitCountList = v4->static_fields->limitCountList;
   if ( !limitCountList )
-    goto LABEL_16;
-  if ( limitCountList->fields._size >= 1 )
+    goto LABEL_14;
+  if ( limitCountList->fields._size < 1 )
+    goto LABEL_11;
+  if ( !v4->_2.cctor_finished )
   {
-    if ( (BYTE3(v2->vtable._0_Equals.methodPtr) & 4) == 0
-      || v2->_2.cctor_finished
-      || (j_il2cpp_runtime_class_init_0(v2),
-          (limitCountList = (System_Collections_Generic_List_XWeaponTrail_Element__o *)ServantProfileLimitCountManager_TypeInfo->static_fields->limitCountList) != 0LL) )
-    {
-      System_Collections_Generic_List_XWeaponTrail_Element___Clear(
-        limitCountList,
-        (const MethodInfo_30536A0 *)Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__Clear__);
-      v2 = ServantProfileLimitCountManager_TypeInfo;
-      goto LABEL_12;
-    }
-LABEL_16:
-    sub_B7769C(v2, v1);
+    j_il2cpp_runtime_class_init_0(v4);
+    v4 = ServantProfileLimitCountManager_TypeInfo;
+    limitCountList = ServantProfileLimitCountManager_TypeInfo->static_fields->limitCountList;
+    if ( !limitCountList )
+LABEL_14:
+      sub_1B00F28(v4, v1);
   }
-LABEL_12:
-  if ( (BYTE3(v2->vtable._0_Equals.methodPtr) & 4) != 0 && !v2->_2.cctor_finished )
+  size = limitCountList->fields._size;
+  v7 = limitCountList->fields._version + 1;
+  limitCountList->fields._size = 0;
+  limitCountList->fields._version = v7;
+  if ( size >= 1 )
   {
-    j_il2cpp_runtime_class_init_0(v2);
-    v2 = ServantProfileLimitCountManager_TypeInfo;
+    System_Array__Clear((System_Array_o *)limitCountList->fields._items, 0, size, 0LL);
+    v4 = ServantProfileLimitCountManager_TypeInfo;
   }
-  v2->static_fields->isContinueDevice = 0;
-  v2->static_fields->isModfiy = 1;
+LABEL_11:
+  if ( !v4->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(v4);
+    v4 = ServantProfileLimitCountManager_TypeInfo;
+  }
+  *(_WORD *)&v4->static_fields->isModfiy = 1;
 }
 
 
 void __fastcall ServantProfileLimitCountManager__DeleteSaveData(const MethodInfo *method)
 {
-  ServantProfileLimitCountManager_c *v1; // x0
+  __int64 v1; // x1
+  ServantProfileLimitCountManager_c *v2; // x0
   System_String_o *SaveFileName; // x19
-  ServantProfileLimitCountManager_c *v3; // x0
+  ServantProfileLimitCountManager_c *v4; // x0
 
-  if ( (byte_438D112 & 1) == 0 )
+  if ( (byte_48E3941 & 1) == 0 )
   {
-    sub_B775C4(&ServantProfileLimitCountManager_TypeInfo);
-    byte_438D112 = 1;
+    sub_1B00CCC(&ServantProfileLimitCountManager_TypeInfo, v1);
+    byte_48E3941 = 1;
   }
-  v1 = ServantProfileLimitCountManager_TypeInfo;
-  if ( (BYTE3(ServantProfileLimitCountManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
-  {
+  v2 = ServantProfileLimitCountManager_TypeInfo;
+  if ( !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantProfileLimitCountManager_TypeInfo);
-  }
-  SaveFileName = ServantProfileLimitCountManager__GetSaveFileName((const MethodInfo *)v1);
+  SaveFileName = ServantProfileLimitCountManager__GetSaveFileName((const MethodInfo *)v2);
   if ( System_IO_File__Exists(SaveFileName, 0LL) )
     System_IO_File__Delete(SaveFileName, 0LL);
-  v3 = ServantProfileLimitCountManager_TypeInfo;
-  if ( (BYTE3(ServantProfileLimitCountManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
-  {
+  v4 = ServantProfileLimitCountManager_TypeInfo;
+  if ( !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantProfileLimitCountManager_TypeInfo);
-  }
-  ServantProfileLimitCountManager__ClearSaveDataList((const MethodInfo *)v3);
+  ServantProfileLimitCountManager__ClearSaveDataList((const MethodInfo *)v4);
 }
 
 
 int32_t __fastcall ServantProfileLimitCountManager__GetLimitCount(int32_t servantId, const MethodInfo *method)
 {
-  ServantProfileLimitCountManager___c__DisplayClass10_0_o *v3; // x20
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
   __int64 v5; // x1
-  ServantProfileLimitCountManager_c *v6; // x0
-  System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__o *limitCountList; // x19
-  System_Predicate_peRenderTexture_ChangeLayerObject__o *v8; // x21
-  peRenderTexture_ChangeLayerObject_o *v9; // x0
+  __int64 v6; // x1
+  __int64 v7; // x20
+  __int64 v8; // x0
+  __int64 v9; // x1
+  ServantProfileLimitCountManager_c *v10; // x0
+  System_Collections_Generic_List_object__o *limitCountList; // x19
+  System_Predicate_object__o *v12; // x21
+  Il2CppObject *v13; // x0
 
-  if ( (byte_438D116 & 1) == 0 )
+  if ( (byte_48E3945 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__Find__);
-    sub_B775C4(&Method_System_Predicate_ServantProfileLimitCountManager_ServantLimitCountInfo___ctor__);
-    sub_B775C4(&System_Predicate_ServantProfileLimitCountManager_ServantLimitCountInfo__TypeInfo);
-    sub_B775C4(&ServantProfileLimitCountManager_TypeInfo);
-    sub_B775C4(&Method_ServantProfileLimitCountManager___c__DisplayClass10_0__GetLimitCount_b__0__);
-    sub_B775C4(&ServantProfileLimitCountManager___c__DisplayClass10_0_TypeInfo);
-    byte_438D116 = 1;
+    sub_1B00CCC(
+      &Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__Find__,
+      method);
+    sub_1B00CCC(&System_Predicate_ServantProfileLimitCountManager_ServantLimitCountInfo__TypeInfo, v3);
+    sub_1B00CCC(&ServantProfileLimitCountManager_TypeInfo, v4);
+    sub_1B00CCC(&Method_ServantProfileLimitCountManager___c__DisplayClass10_0__GetLimitCount_b__0__, v5);
+    sub_1B00CCC(&ServantProfileLimitCountManager___c__DisplayClass10_0_TypeInfo, v6);
+    byte_48E3945 = 1;
   }
-  v3 = (ServantProfileLimitCountManager___c__DisplayClass10_0_o *)sub_B77694(ServantProfileLimitCountManager___c__DisplayClass10_0_TypeInfo);
-  ServantProfileLimitCountManager___c__DisplayClass10_0___ctor(v3, 0LL);
-  if ( !v3 )
-    goto LABEL_11;
-  v3->fields.servantId = servantId;
-  v6 = ServantProfileLimitCountManager_TypeInfo;
-  if ( (BYTE3(ServantProfileLimitCountManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
+  v7 = sub_1B00F18(ServantProfileLimitCountManager___c__DisplayClass10_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v7, 0LL);
+  if ( !v7 )
+    goto LABEL_10;
+  *(_DWORD *)(v7 + 16) = servantId;
+  v10 = ServantProfileLimitCountManager_TypeInfo;
+  if ( !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ServantProfileLimitCountManager_TypeInfo);
-    v6 = ServantProfileLimitCountManager_TypeInfo;
+    v10 = ServantProfileLimitCountManager_TypeInfo;
   }
-  limitCountList = (System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__o *)v6->static_fields->limitCountList;
-  v8 = (System_Predicate_peRenderTexture_ChangeLayerObject__o *)sub_B77694(System_Predicate_ServantProfileLimitCountManager_ServantLimitCountInfo__TypeInfo);
-  System_Predicate_peRenderTexture_ChangeLayerObject____ctor(
-    v8,
-    (Il2CppObject *)v3,
+  limitCountList = (System_Collections_Generic_List_object__o *)v10->static_fields->limitCountList;
+  v12 = (System_Predicate_object__o *)sub_1B00F18(System_Predicate_ServantProfileLimitCountManager_ServantLimitCountInfo__TypeInfo);
+  System_Predicate_object____ctor(
+    v12,
+    (Il2CppObject *)v7,
     Method_ServantProfileLimitCountManager___c__DisplayClass10_0__GetLimitCount_b__0__,
-    (const MethodInfo_2C3248C *)Method_System_Predicate_ServantProfileLimitCountManager_ServantLimitCountInfo___ctor__);
+    0LL);
   if ( !limitCountList )
-LABEL_11:
-    sub_B7769C(v4, v5);
-  v9 = System_Collections_Generic_List_peRenderTexture_ChangeLayerObject___Find(
-         limitCountList,
-         (System_Predicate_T__o *)v8,
-         (const MethodInfo_3053B58 *)Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__Find__);
-  if ( v9 )
-    LODWORD(v9) = HIDWORD(v9->fields.gameObject);
-  return (int)v9;
+LABEL_10:
+    sub_1B00F28(v8, v9);
+  v13 = System_Collections_Generic_List_object___Find(
+          limitCountList,
+          (System_Predicate_T__o *)v12,
+          (const MethodInfo_33C2038 *)Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__Find__);
+  if ( v13 )
+    LODWORD(v13) = HIDWORD(v13[1].klass);
+  return (int)v13;
 }
 
 
 System_String_o *__fastcall ServantProfileLimitCountManager__GetSaveFileName(const MethodInfo *method)
 {
+  __int64 v1; // x1
+  __int64 v2; // x1
+  __int64 v3; // x1
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_438D111 & 1) == 0 )
+  if ( (byte_48E3940 & 1) == 0 )
   {
-    sub_B775C4(&AndroidUtil_TypeInfo);
-    sub_B775C4(&DatFileName_TypeInfo);
-    sub_B775C4(&StringLiteral_892/*"/"*/);
-    byte_438D111 = 1;
+    sub_1B00CCC(&AndroidUtil_TypeInfo, v1);
+    sub_1B00CCC(&DatFileName_TypeInfo, v2);
+    sub_1B00CCC(&StringLiteral_1120/*"/"*/, v3);
+    byte_48E3940 = 1;
   }
-  if ( (BYTE3(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AndroidUtil_TypeInfo->_2.cctor_finished )
+  if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
   DatFileSavePath = AndroidUtil__GetDatFileSavePath(0LL);
-  if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
+  if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(27, 0LL);
-  return System_String__Concat_44904220(DatFileSavePath, (System_String_o *)StringLiteral_892/*"/"*/, FileName, 0LL);
+  return System_String__Concat_60337008(DatFileSavePath, (System_String_o *)StringLiteral_1120/*"/"*/, FileName, 0LL);
 }
 
 
 void __fastcall ServantProfileLimitCountManager__Initialize(const MethodInfo *method)
 {
-  ServantProfileLimitCountManager_c *v1; // x0
+  __int64 v1; // x1
+  ServantProfileLimitCountManager_c *v2; // x0
 
-  if ( (byte_438D113 & 1) == 0 )
+  if ( (byte_48E3942 & 1) == 0 )
   {
-    sub_B775C4(&ServantProfileLimitCountManager_TypeInfo);
-    byte_438D113 = 1;
+    sub_1B00CCC(&ServantProfileLimitCountManager_TypeInfo, v1);
+    byte_48E3942 = 1;
   }
-  v1 = ServantProfileLimitCountManager_TypeInfo;
-  if ( (BYTE3(ServantProfileLimitCountManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
-  {
+  v2 = ServantProfileLimitCountManager_TypeInfo;
+  if ( !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantProfileLimitCountManager_TypeInfo);
-  }
-  ServantProfileLimitCountManager__ReadData((const MethodInfo *)v1);
+  ServantProfileLimitCountManager__ReadData((const MethodInfo *)v2);
 }
 
 
 bool __fastcall ServantProfileLimitCountManager__ReadData(const MethodInfo *method)
 {
-  ServantProfileLimitCountManager_c *v1; // x0
-  ManagerConfig_c *v2; // x0
-  ServantProfileLimitCountManager_c *v4; // x0
+  __int64 v1; // x1
+  __int64 v2; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  ServantProfileLimitCountManager_c *v7; // x0
+  ManagerConfig_c *v8; // x0
+  ServantProfileLimitCountManager_c *v10; // x0
   System_String_o *SaveFileName; // x19
-  ServantProfileLimitCountManager_c *v6; // x0
-  System_IO_Stream_o *v7; // x19
-  System_IO_BinaryReader_o *v8; // x20
-  __int64 v9; // x0
-  __int64 v10; // x1
-  System_String_o *v11; // x21
   ServantProfileLimitCountManager_c *v12; // x0
-  char v13; // w21
-  ServantProfileLimitCountManager_c *v14; // x0
-  int v15; // w0
+  System_IO_Stream_o *v13; // x19
+  System_IO_BinaryReader_o *v14; // x20
+  __int64 v15; // x0
+  __int64 v16; // x1
+  System_String_o *v17; // x21
+  ServantProfileLimitCountManager_c *v18; // x0
+  int v19; // w22
+  char v20; // w21
+  ServantProfileLimitCountManager_c *v21; // x0
+  int v22; // w21
+  int v23; // w23
+  int v24; // w24
+  __int64 v25; // x22
+  __int64 v26; // x0
+  __int64 v27; // x1
+  int32_t v28; // w2
+  int32_t v29; // w3
+  ServantProfileLimitCountManager_c *v30; // x0
+  System_Collections_Generic_List_object__o *limitCountList; // x0
+  struct System_Object_array *items; // x8
+  _QWORD *v33; // x9
+  __int64 size; // x10
+  Il2CppClass **v35; // x8
   System_IO_BinaryReader_c *klass; // x8
-  int v17; // w21
-  int v18; // w26
-  int32_t v19; // w23
-  int32_t v20; // w24
-  ServantProfileLimitCountManager_ServantLimitCountInfo_o *v21; // x22
-  __int64 v22; // x0
-  __int64 v23; // x1
-  ServantProfileLimitCountManager_c *v24; // x0
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *limitCountList; // x0
-  System_IO_BinaryReader_c *v26; // x8
-  unsigned __int64 v27; // x10
-  int32_t *p_offset; // x11
-  __int64 v29; // x0
-  System_IO_Stream_c *v30; // x8
-  unsigned __int64 v31; // x10
-  int32_t *v32; // x11
-  __int64 v33; // x0
-  ServantProfileLimitCountManager_c *v34; // x0
-  int v35; // [xsp+8h] [xbp-68h]
+  __int64 v37; // x9
+  int32_t *p_offset; // x10
+  __int64 v39; // x0
+  System_IO_Stream_c *v40; // x8
+  __int64 v41; // x9
+  int32_t *v42; // x10
+  __int64 v43; // x0
+  ServantProfileLimitCountManager_c *v44; // x0
 
-  if ( (byte_438D117 & 1) == 0 )
+  if ( (byte_48E3946 & 1) == 0 )
   {
-    sub_B775C4(&System_IO_BinaryReader_TypeInfo);
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__Add__);
-    sub_B775C4(&ManagerConfig_TypeInfo);
-    sub_B775C4(&ServantProfileLimitCountManager_ServantLimitCountInfo_TypeInfo);
-    sub_B775C4(&ServantProfileLimitCountManager_TypeInfo);
-    byte_438D117 = 1;
+    sub_1B00CCC(&System_IO_BinaryReader_TypeInfo, v1);
+    sub_1B00CCC(&System_IDisposable_TypeInfo, v2);
+    sub_1B00CCC(
+      &Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__Add__,
+      v3);
+    sub_1B00CCC(&ManagerConfig_TypeInfo, v4);
+    sub_1B00CCC(&ServantProfileLimitCountManager_ServantLimitCountInfo_TypeInfo, v5);
+    sub_1B00CCC(&ServantProfileLimitCountManager_TypeInfo, v6);
+    byte_48E3946 = 1;
   }
-  v1 = ServantProfileLimitCountManager_TypeInfo;
-  if ( (BYTE3(ServantProfileLimitCountManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
+  v7 = ServantProfileLimitCountManager_TypeInfo;
+  if ( !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ServantProfileLimitCountManager_TypeInfo);
-    v1 = ServantProfileLimitCountManager_TypeInfo;
+    v7 = ServantProfileLimitCountManager_TypeInfo;
   }
-  v1->static_fields->isModfiy = 0;
-  v2 = ManagerConfig_TypeInfo;
-  if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ManagerConfig_TypeInfo->_2.cctor_finished )
+  v7->static_fields->isModfiy = 0;
+  v8 = ManagerConfig_TypeInfo;
+  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v2 = ManagerConfig_TypeInfo;
+    v8 = ManagerConfig_TypeInfo;
   }
-  if ( v2->static_fields->UseMock )
+  if ( v8->static_fields->UseMock )
     return 1;
-  v4 = ServantProfileLimitCountManager_TypeInfo;
-  if ( (BYTE3(ServantProfileLimitCountManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
-  {
+  v10 = ServantProfileLimitCountManager_TypeInfo;
+  if ( !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantProfileLimitCountManager_TypeInfo);
-  }
-  SaveFileName = ServantProfileLimitCountManager__GetSaveFileName((const MethodInfo *)v4);
+  SaveFileName = ServantProfileLimitCountManager__GetSaveFileName((const MethodInfo *)v10);
   if ( !System_IO_File__Exists(SaveFileName, 0LL) )
   {
-    v34 = ServantProfileLimitCountManager_TypeInfo;
-    if ( (BYTE3(ServantProfileLimitCountManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
-    {
+    v44 = ServantProfileLimitCountManager_TypeInfo;
+    if ( !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ServantProfileLimitCountManager_TypeInfo);
-    }
-    ServantProfileLimitCountManager__ClearSaveDataList((const MethodInfo *)v34);
+    ServantProfileLimitCountManager__ClearSaveDataList((const MethodInfo *)v44);
     return 0;
   }
-  v6 = ServantProfileLimitCountManager_TypeInfo;
-  if ( (BYTE3(ServantProfileLimitCountManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(ServantProfileLimitCountManager_TypeInfo);
-  }
-  ServantProfileLimitCountManager__ClearSaveDataList((const MethodInfo *)v6);
-  v7 = (System_IO_Stream_o *)System_IO_File__OpenRead(SaveFileName, 0LL);
-  v8 = (System_IO_BinaryReader_o *)sub_B77694(System_IO_BinaryReader_TypeInfo);
-  System_IO_BinaryReader___ctor(v8, v7, 0LL);
-  if ( !v8 )
-    sub_B7769C(v9, v10);
-  v11 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v8->klass->vtable._22_ReadString.method)(
-                             v8,
-                             v8->klass->vtable._23_ReadChars.methodPtr);
   v12 = ServantProfileLimitCountManager_TypeInfo;
-  if ( (BYTE3(ServantProfileLimitCountManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
+  if ( !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(ServantProfileLimitCountManager_TypeInfo);
+  ServantProfileLimitCountManager__ClearSaveDataList((const MethodInfo *)v12);
+  v13 = (System_IO_Stream_o *)System_IO_File__OpenRead(SaveFileName, 0LL);
+  v14 = (System_IO_BinaryReader_o *)sub_1B00F18(System_IO_BinaryReader_TypeInfo);
+  System_IO_BinaryReader___ctor(v14, v13, 0LL);
+  if ( !v14 )
+    sub_1B00F28(v15, v16);
+  v17 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v14->klass->vtable._22_ReadString.method)(
+                             v14,
+                             v14->klass->vtable._23_ReadChars.methodPtr);
+  v18 = ServantProfileLimitCountManager_TypeInfo;
+  if ( !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ServantProfileLimitCountManager_TypeInfo);
-    v12 = ServantProfileLimitCountManager_TypeInfo;
+    v18 = ServantProfileLimitCountManager_TypeInfo;
   }
-  if ( System_String__op_Inequality(v12->static_fields->SAVE_DATA_VERSION, v11, 0LL) )
+  if ( System_String__op_Inequality(v18->static_fields->SAVE_DATA_VERSION, v17, 0LL) )
   {
-    v35 = 213;
+    v19 = 5;
   }
   else
   {
-    v13 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v8->klass->vtable._9_ReadBoolean.method)(
-            v8,
-            v8->klass->vtable._10_ReadByte.methodPtr);
-    v14 = ServantProfileLimitCountManager_TypeInfo;
-    if ( (BYTE3(ServantProfileLimitCountManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
+    v20 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v14->klass->vtable._9_ReadBoolean.method)(
+            v14,
+            v14->klass->vtable._10_ReadByte.methodPtr);
+    v21 = ServantProfileLimitCountManager_TypeInfo;
+    if ( !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(ServantProfileLimitCountManager_TypeInfo);
-      v14 = ServantProfileLimitCountManager_TypeInfo;
+      v21 = ServantProfileLimitCountManager_TypeInfo;
     }
-    v14->static_fields->isContinueDevice = v13 & 1;
-    v15 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v8->klass->vtable._15_ReadInt32.method)(
-            v8,
-            v8->klass->vtable._16_ReadUInt32.methodPtr);
-    klass = v8->klass;
-    v17 = v15;
-    if ( v15 >= 1 )
+    v21->static_fields->isContinueDevice = v20 & 1;
+    v22 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v14->klass->vtable._15_ReadInt32.method)(
+            v14,
+            v14->klass->vtable._16_ReadUInt32.methodPtr);
+    if ( v22 >= 1 )
     {
-      v18 = 0;
       do
       {
-        v19 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))klass->vtable._15_ReadInt32.method)(
-                v8,
-                klass->vtable._16_ReadUInt32.methodPtr);
-        v20 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v8->klass->vtable._15_ReadInt32.method)(
-                v8,
-                v8->klass->vtable._16_ReadUInt32.methodPtr);
-        v21 = (ServantProfileLimitCountManager_ServantLimitCountInfo_o *)sub_B77694(ServantProfileLimitCountManager_ServantLimitCountInfo_TypeInfo);
-        ServantProfileLimitCountManager_ServantLimitCountInfo___ctor(v21, 0LL);
-        if ( !v21 )
-          sub_B7769C(v22, v23);
-        v21->fields.servantId = v19;
-        v21->fields.limitCount = v20;
-        v24 = ServantProfileLimitCountManager_TypeInfo;
-        if ( (BYTE3(ServantProfileLimitCountManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
+        v23 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v14->klass->vtable._15_ReadInt32.method)(
+                v14,
+                v14->klass->vtable._16_ReadUInt32.methodPtr);
+        v24 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v14->klass->vtable._15_ReadInt32.method)(
+                v14,
+                v14->klass->vtable._16_ReadUInt32.methodPtr);
+        v25 = sub_1B00F18(ServantProfileLimitCountManager_ServantLimitCountInfo_TypeInfo);
+        System_Object___ctor((Il2CppObject *)v25, 0LL);
+        if ( !v25 )
+          sub_1B00F28(v26, v27);
+        *(_DWORD *)(v25 + 16) = v23;
+        *(_DWORD *)(v25 + 20) = v24;
+        v30 = ServantProfileLimitCountManager_TypeInfo;
+        if ( !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(ServantProfileLimitCountManager_TypeInfo);
-          v24 = ServantProfileLimitCountManager_TypeInfo;
+          v30 = ServantProfileLimitCountManager_TypeInfo;
         }
-        limitCountList = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)v24->static_fields->limitCountList;
+        limitCountList = (System_Collections_Generic_List_object__o *)v30->static_fields->limitCountList;
         if ( !limitCountList )
-          sub_B7769C(0LL, v23);
-        System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-          limitCountList,
-          (EventMissionProgressRequest_Argument_ProgressData_o *)v21,
-          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__Add__);
-        klass = v8->klass;
-        ++v18;
+          sub_1B00F28(0LL, v27);
+        items = limitCountList->fields._items;
+        v33 = Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__Add__;
+        ++limitCountList->fields._version;
+        if ( !items )
+          sub_1B00F28(limitCountList, v27);
+        size = limitCountList->fields._size;
+        if ( (unsigned int)size >= items->max_length )
+        {
+          System_Collections_Generic_List_object___AddWithResize(
+            limitCountList,
+            (Il2CppObject *)v25,
+            *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
+        }
+        else
+        {
+          v35 = &items->obj.klass + size;
+          limitCountList->fields._size = size + 1;
+          v35[4] = (Il2CppClass *)v25;
+          sub_1B00C70((ServantStatusBattleListViewItem_o *)(v35 + 4), v25, v28, v29);
+        }
+        --v22;
       }
-      while ( v18 < v17 );
+      while ( v22 );
     }
-    ((void (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))klass->vtable._6_Close.method)(
-      v8,
-      klass->vtable._7_Dispose.methodPtr);
-    v35 = 186;
+    ((void (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v14->klass->vtable._6_Close.method)(
+      v14,
+      v14->klass->vtable._7_Dispose.methodPtr);
+    v19 = 8;
   }
-  v26 = v8->klass;
-  if ( *(_WORD *)&v8->klass->_2.bitflags1 )
+  klass = v14->klass;
+  v37 = *(unsigned __int16 *)(&v14->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v14->klass->_2.bitflags2 + 3) )
   {
-    v27 = 0LL;
-    p_offset = &v26->_1.interfaceOffsets->offset;
+    p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
     {
-      ++v27;
+      --v37;
       p_offset += 4;
-      if ( v27 >= *(unsigned __int16 *)&v8->klass->_2.bitflags1 )
-        goto LABEL_40;
+      if ( !v37 )
+        goto LABEL_36;
     }
-    v29 = (__int64)(&v26->vtable._0_Equals.method + 2 * *p_offset);
+    v39 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
   }
   else
   {
-LABEL_40:
-    v29 = sub_B0F4C0(v8, System_IDisposable_TypeInfo, 0LL);
+LABEL_36:
+    v39 = sub_1B52CAC(v14, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v29)(v8, *(_QWORD *)(v29 + 8));
-  if ( v35 != 186 )
+  (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v39)(v14, *(_QWORD *)(v39 + 8));
+  if ( (v19 | 8) == 8 )
   {
-    if ( !v7 )
-      return v35 == 198;
-LABEL_46:
-    v30 = v7->klass;
-    if ( *(_WORD *)&v7->klass->_2.bitflags1 )
-    {
-      v31 = 0LL;
-      v32 = &v30->_1.interfaceOffsets->offset;
-      while ( *((System_IDisposable_c **)v32 - 1) != System_IDisposable_TypeInfo )
-      {
-        ++v31;
-        v32 += 4;
-        if ( v31 >= *(unsigned __int16 *)&v7->klass->_2.bitflags1 )
-          goto LABEL_50;
-      }
-      v33 = (__int64)(&v30->vtable._0_Equals.method + 2 * *v32);
-    }
-    else
-    {
-LABEL_50:
-      v33 = sub_B0F4C0(v7, System_IDisposable_TypeInfo, 0LL);
-    }
-    (*(void (__fastcall **)(System_IO_Stream_o *, _QWORD))v33)(v7, *(_QWORD *)(v33 + 8));
-    return v35 == 198;
+    v19 = 9;
+    if ( !v13 )
+      return v19 == 9;
   }
-  v35 = 198;
-  if ( v7 )
-    goto LABEL_46;
-  return v35 == 198;
+  else if ( !v13 )
+  {
+    return v19 == 9;
+  }
+  v40 = v13->klass;
+  v41 = *(unsigned __int16 *)(&v13->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v13->klass->_2.bitflags2 + 3) )
+  {
+    v42 = &v40->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v42 - 1) != System_IDisposable_TypeInfo )
+    {
+      --v41;
+      v42 += 4;
+      if ( !v41 )
+        goto LABEL_46;
+    }
+    v43 = (__int64)(&v40->vtable._0_Equals.method + 2 * *v42);
+  }
+  else
+  {
+LABEL_46:
+    v43 = sub_1B52CAC(v13, System_IDisposable_TypeInfo, 0LL);
+  }
+  (*(void (__fastcall **)(System_IO_Stream_o *, _QWORD))v43)(v13, *(_QWORD *)(v43 + 8));
+  return v19 == 9;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ServantProfileLimitCountManager__SetLimitCount(
         int32_t servantId,
         int32_t limitCount,
         const MethodInfo *method)
 {
-  ServantProfileLimitCountManager___c__DisplayClass9_0_o *v5; // x20
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v6; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
-  ServantProfileLimitCountManager_c *v8; // x0
-  System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__o *limitCountList; // x21
-  System_Predicate_peRenderTexture_ChangeLayerObject__o *v10; // x22
-  peRenderTexture_ChangeLayerObject_o *v11; // x0
-  ServantProfileLimitCountManager_c *v12; // x0
-  ServantProfileLimitCountManager_ServantLimitCountInfo_o *v13; // x21
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x20
+  System_Collections_Generic_List_object__o *v12; // x0
+  __int64 v13; // x1
   ServantProfileLimitCountManager_c *v14; // x0
+  System_Collections_Generic_List_object__o *limitCountList; // x21
+  System_Predicate_object__o *v16; // x22
+  Il2CppObject *v17; // x0
+  ServantProfileLimitCountManager_c *v18; // x0
+  __int64 v19; // x21
+  int32_t v20; // w2
+  int32_t v21; // w3
+  ServantProfileLimitCountManager_c *v22; // x0
+  struct System_Object_array *items; // x8
+  _QWORD *v24; // x9
+  __int64 size; // x10
+  Il2CppClass **v26; // x8
 
-  if ( (byte_438D115 & 1) == 0 )
+  if ( (byte_48E3944 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__Find__);
-    sub_B775C4(&Method_System_Predicate_ServantProfileLimitCountManager_ServantLimitCountInfo___ctor__);
-    sub_B775C4(&System_Predicate_ServantProfileLimitCountManager_ServantLimitCountInfo__TypeInfo);
-    sub_B775C4(&ServantProfileLimitCountManager_ServantLimitCountInfo_TypeInfo);
-    sub_B775C4(&ServantProfileLimitCountManager_TypeInfo);
-    sub_B775C4(&Method_ServantProfileLimitCountManager___c__DisplayClass9_0__SetLimitCount_b__0__);
-    sub_B775C4(&ServantProfileLimitCountManager___c__DisplayClass9_0_TypeInfo);
-    byte_438D115 = 1;
+    sub_1B00CCC(
+      &Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__Add__,
+      *(_QWORD *)&limitCount);
+    sub_1B00CCC(
+      &Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__Find__,
+      v5);
+    sub_1B00CCC(&System_Predicate_ServantProfileLimitCountManager_ServantLimitCountInfo__TypeInfo, v6);
+    sub_1B00CCC(&ServantProfileLimitCountManager_ServantLimitCountInfo_TypeInfo, v7);
+    sub_1B00CCC(&ServantProfileLimitCountManager_TypeInfo, v8);
+    sub_1B00CCC(&Method_ServantProfileLimitCountManager___c__DisplayClass9_0__SetLimitCount_b__0__, v9);
+    sub_1B00CCC(&ServantProfileLimitCountManager___c__DisplayClass9_0_TypeInfo, v10);
+    byte_48E3944 = 1;
   }
-  v5 = (ServantProfileLimitCountManager___c__DisplayClass9_0_o *)sub_B77694(ServantProfileLimitCountManager___c__DisplayClass9_0_TypeInfo);
-  ServantProfileLimitCountManager___c__DisplayClass9_0___ctor(v5, 0LL);
-  if ( !v5 )
+  v11 = sub_1B00F18(ServantProfileLimitCountManager___c__DisplayClass9_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v11, 0LL);
+  if ( !v11 )
     goto LABEL_22;
-  v5->fields.servantId = servantId;
-  v8 = ServantProfileLimitCountManager_TypeInfo;
-  if ( (BYTE3(ServantProfileLimitCountManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
+  *(_DWORD *)(v11 + 16) = servantId;
+  v14 = ServantProfileLimitCountManager_TypeInfo;
+  if ( !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ServantProfileLimitCountManager_TypeInfo);
-    v8 = ServantProfileLimitCountManager_TypeInfo;
+    v14 = ServantProfileLimitCountManager_TypeInfo;
   }
-  limitCountList = (System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__o *)v8->static_fields->limitCountList;
-  v10 = (System_Predicate_peRenderTexture_ChangeLayerObject__o *)sub_B77694(System_Predicate_ServantProfileLimitCountManager_ServantLimitCountInfo__TypeInfo);
-  System_Predicate_peRenderTexture_ChangeLayerObject____ctor(
-    v10,
-    (Il2CppObject *)v5,
+  limitCountList = (System_Collections_Generic_List_object__o *)v14->static_fields->limitCountList;
+  v16 = (System_Predicate_object__o *)sub_1B00F18(System_Predicate_ServantProfileLimitCountManager_ServantLimitCountInfo__TypeInfo);
+  System_Predicate_object____ctor(
+    v16,
+    (Il2CppObject *)v11,
     Method_ServantProfileLimitCountManager___c__DisplayClass9_0__SetLimitCount_b__0__,
-    (const MethodInfo_2C3248C *)Method_System_Predicate_ServantProfileLimitCountManager_ServantLimitCountInfo___ctor__);
+    0LL);
   if ( !limitCountList )
     goto LABEL_22;
-  v11 = System_Collections_Generic_List_peRenderTexture_ChangeLayerObject___Find(
+  v17 = System_Collections_Generic_List_object___Find(
           limitCountList,
-          (System_Predicate_T__o *)v10,
-          (const MethodInfo_3053B58 *)Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__Find__);
-  if ( !v11 )
+          (System_Predicate_T__o *)v16,
+          (const MethodInfo_33C2038 *)Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__Find__);
+  if ( !v17 )
   {
-    v13 = (ServantProfileLimitCountManager_ServantLimitCountInfo_o *)sub_B77694(ServantProfileLimitCountManager_ServantLimitCountInfo_TypeInfo);
-    ServantProfileLimitCountManager_ServantLimitCountInfo___ctor(v13, 0LL);
-    if ( v13 )
+    v19 = sub_1B00F18(ServantProfileLimitCountManager_ServantLimitCountInfo_TypeInfo);
+    System_Object___ctor((Il2CppObject *)v19, 0LL);
+    if ( v19 )
     {
-      v13->fields.servantId = v5->fields.servantId;
-      v13->fields.limitCount = limitCount;
-      v14 = ServantProfileLimitCountManager_TypeInfo;
-      if ( (BYTE3(ServantProfileLimitCountManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
+      *(_DWORD *)(v19 + 16) = *(_DWORD *)(v11 + 16);
+      *(_DWORD *)(v19 + 20) = limitCount;
+      v22 = ServantProfileLimitCountManager_TypeInfo;
+      if ( !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(ServantProfileLimitCountManager_TypeInfo);
-        v14 = ServantProfileLimitCountManager_TypeInfo;
+        v22 = ServantProfileLimitCountManager_TypeInfo;
       }
-      v6 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)v14->static_fields->limitCountList;
-      if ( v6 )
+      v12 = (System_Collections_Generic_List_object__o *)v22->static_fields->limitCountList;
+      if ( v12 )
       {
-        System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-          v6,
-          (EventMissionProgressRequest_Argument_ProgressData_o *)v13,
-          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__Add__);
-        goto LABEL_19;
+        items = v12->fields._items;
+        v24 = Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__Add__;
+        ++v12->fields._version;
+        if ( items )
+        {
+          size = v12->fields._size;
+          if ( (unsigned int)size >= items->max_length )
+          {
+            System_Collections_Generic_List_object___AddWithResize(
+              v12,
+              (Il2CppObject *)v19,
+              *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
+          }
+          else
+          {
+            v26 = &items->obj.klass + size;
+            v12->fields._size = size + 1;
+            v26[4] = (Il2CppClass *)v19;
+            sub_1B00C70((ServantStatusBattleListViewItem_o *)(v26 + 4), v19, v20, v21);
+          }
+          goto LABEL_19;
+        }
       }
     }
 LABEL_22:
-    sub_B7769C(v6, v7);
+    sub_1B00F28(v12, v13);
   }
-  if ( SHIDWORD(v11->fields.gameObject) >= limitCount )
+  if ( SHIDWORD(v17[1].klass) >= limitCount )
     return;
-  HIDWORD(v11->fields.gameObject) = limitCount;
-  v12 = ServantProfileLimitCountManager_TypeInfo;
-  if ( (BYTE3(ServantProfileLimitCountManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
+  HIDWORD(v17[1].klass) = limitCount;
+  v18 = ServantProfileLimitCountManager_TypeInfo;
+  if ( !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ServantProfileLimitCountManager_TypeInfo);
 LABEL_19:
-    v12 = ServantProfileLimitCountManager_TypeInfo;
+    v18 = ServantProfileLimitCountManager_TypeInfo;
   }
-  v12->static_fields->isModfiy = 1;
+  v18->static_fields->isModfiy = 1;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ServantProfileLimitCountManager__SetLimitCountExistProfile(
         int32_t servantId,
         int32_t limitCount,
         const MethodInfo *method)
 {
-  ServantProfileLimitCountManager___c__DisplayClass14_0_o *v5; // x20
-  DataManager_o *Instance; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
-  System_Collections_Generic_IEnumerable_T__o *Entitys_WarQuestSelectionEntity; // x22
-  System_Collections_Generic_List_WarBoardAIRoute_RouteData__o *v9; // x21
-  System_Predicate_peRenderTexture_ChangeLayerObject__o *v10; // x22
-  const MethodInfo *v11; // x2
-  int32_t v12; // w20
-  const MethodInfo *v13; // x0
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x20
+  Il2CppObject *Instance; // x0
+  __int64 v16; // x1
+  System_Collections_Generic_IEnumerable_T__o *Entitys_object; // x22
+  System_Collections_Generic_List_object__o *v18; // x21
+  System_Predicate_object__o *v19; // x22
+  const MethodInfo *v20; // x2
+  int32_t v21; // w20
+  const MethodInfo *v22; // x0
 
-  if ( (byte_438D11A & 1) == 0 )
+  if ( (byte_48E3949 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_ServantProfileMaster___);
-    sub_B775C4(&Method_DataMasterBase_getEntitys_ServantProfileEntity___);
-    sub_B775C4(&Method_System_Collections_Generic_List_ServantProfileEntity__Find__);
-    sub_B775C4(&Method_System_Collections_Generic_List_ServantProfileEntity___ctor___69404960);
-    sub_B775C4(&System_Collections_Generic_List_ServantProfileEntity__TypeInfo);
-    sub_B775C4(&Method_System_Predicate_ServantProfileEntity___ctor__);
-    sub_B775C4(&System_Predicate_ServantProfileEntity__TypeInfo);
-    sub_B775C4(&ServantProfileLimitCountManager_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B775C4(&Method_ServantProfileLimitCountManager___c__DisplayClass14_0__SetLimitCountExistProfile_b__0__);
-    sub_B775C4(&ServantProfileLimitCountManager___c__DisplayClass14_0_TypeInfo);
-    byte_438D11A = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_ServantProfileMaster___, *(_QWORD *)&limitCount);
+    sub_1B00CCC(&Method_DataMasterBase_getEntitys_ServantProfileEntity___, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_ServantProfileEntity__Find__, v6);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_ServantProfileEntity___ctor___74538440, v7);
+    sub_1B00CCC(&System_Collections_Generic_List_ServantProfileEntity__TypeInfo, v8);
+    sub_1B00CCC(&System_Predicate_ServantProfileEntity__TypeInfo, v9);
+    sub_1B00CCC(&ServantProfileLimitCountManager_TypeInfo, v10);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
+    sub_1B00CCC(&Method_ServantProfileLimitCountManager___c__DisplayClass14_0__SetLimitCountExistProfile_b__0__, v12);
+    sub_1B00CCC(&ServantProfileLimitCountManager___c__DisplayClass14_0_TypeInfo, v13);
+    byte_48E3949 = 1;
   }
-  v5 = (ServantProfileLimitCountManager___c__DisplayClass14_0_o *)sub_B77694(ServantProfileLimitCountManager___c__DisplayClass14_0_TypeInfo);
-  ServantProfileLimitCountManager___c__DisplayClass14_0___ctor(v5, 0LL);
-  if ( !v5 )
-    goto LABEL_13;
-  v5->fields.servantId = servantId;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v14 = sub_1B00F18(ServantProfileLimitCountManager___c__DisplayClass14_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v14, 0LL);
+  if ( !v14 )
+    goto LABEL_12;
+  *(_DWORD *)(v14 + 16) = servantId;
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
-    || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                      Instance,
-                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ServantProfileMaster___)) == 0LL
-    || (Entitys_WarQuestSelectionEntity = (System_Collections_Generic_IEnumerable_T__o *)DataMasterBase__getEntitys_WarQuestSelectionEntity_(
-                                                                                           (DataMasterBase_o *)Instance,
-                                                                                           (const MethodInfo_1D18CC4 *)Method_DataMasterBase_getEntitys_ServantProfileEntity___),
-        v9 = (System_Collections_Generic_List_WarBoardAIRoute_RouteData__o *)sub_B77694(System_Collections_Generic_List_ServantProfileEntity__TypeInfo),
-        System_Collections_Generic_List_WarBoardAIRoute_RouteData____ctor(
-          v9,
-          Entitys_WarQuestSelectionEntity,
-          (const MethodInfo_30527CC *)Method_System_Collections_Generic_List_ServantProfileEntity___ctor___69404960),
-        v10 = (System_Predicate_peRenderTexture_ChangeLayerObject__o *)sub_B77694(System_Predicate_ServantProfileEntity__TypeInfo),
-        System_Predicate_peRenderTexture_ChangeLayerObject____ctor(
-          v10,
-          (Il2CppObject *)v5,
+    || (Instance = DataManager__GetMasterData_object_(
+                     (DataManager_o *)Instance,
+                     (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_ServantProfileMaster___)) == 0LL
+    || (Entitys_object = (System_Collections_Generic_IEnumerable_T__o *)DataMasterBase__getEntitys_object_(
+                                                                          (DataMasterBase_o *)Instance,
+                                                                          (const MethodInfo_2D634A4 *)Method_DataMasterBase_getEntitys_ServantProfileEntity___),
+        v18 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_ServantProfileEntity__TypeInfo),
+        System_Collections_Generic_List_object____ctor_54268612(
+          v18,
+          Entitys_object,
+          (const MethodInfo_33C12C4 *)Method_System_Collections_Generic_List_ServantProfileEntity___ctor___74538440),
+        v19 = (System_Predicate_object__o *)sub_1B00F18(System_Predicate_ServantProfileEntity__TypeInfo),
+        System_Predicate_object____ctor(
+          v19,
+          (Il2CppObject *)v14,
           Method_ServantProfileLimitCountManager___c__DisplayClass14_0__SetLimitCountExistProfile_b__0__,
-          (const MethodInfo_2C3248C *)Method_System_Predicate_ServantProfileEntity___ctor__),
-        !v9) )
+          0LL),
+        !v18) )
   {
-LABEL_13:
-    sub_B7769C(Instance, v7);
+LABEL_12:
+    sub_1B00F28(Instance, v16);
   }
-  if ( System_Collections_Generic_List_peRenderTexture_ChangeLayerObject___Find(
-         (System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__o *)v9,
-         (System_Predicate_T__o *)v10,
-         (const MethodInfo_3053B58 *)Method_System_Collections_Generic_List_ServantProfileEntity__Find__) )
+  if ( System_Collections_Generic_List_object___Find(
+         v18,
+         (System_Predicate_T__o *)v19,
+         (const MethodInfo_33C2038 *)Method_System_Collections_Generic_List_ServantProfileEntity__Find__) )
   {
-    v12 = v5->fields.servantId;
-    if ( (BYTE3(ServantProfileLimitCountManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
-    {
+    v21 = *(_DWORD *)(v14 + 16);
+    if ( !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ServantProfileLimitCountManager_TypeInfo);
-    }
-    ServantProfileLimitCountManager__SetLimitCount(v12, limitCount, v11);
-    ServantProfileLimitCountManager__WriteData(v13);
+    ServantProfileLimitCountManager__SetLimitCount(v21, limitCount, v20);
+    ServantProfileLimitCountManager__WriteData(v22);
   }
 }
 
 
 void __fastcall ServantProfileLimitCountManager__UpdateProfileServantLimitCount(const MethodInfo *method)
 {
-  void *Instance; // x0
+  __int64 v1; // x1
   __int64 v2; // x1
-  System_Collections_Generic_IEnumerable_T__o *Entitys_WarQuestSelectionEntity; // x20
-  System_Collections_Generic_List_WarBoardAIRoute_RouteData__o *v4; // x19
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *v5; // x20
-  int32_t v6; // w21
-  __int64 v7; // x23
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
-  __int64 v14; // x10
-  System_Int32_array **v15; // x1
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o **v16; // x22
-  System_Predicate_peRenderTexture_ChangeLayerObject__o *v17; // x24
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v18; // x8
-  __int64 v19; // x23
-  __int64 v20; // x24
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v21; // x8
-  int32_t v22; // w22
-  const MethodInfo *v23; // x2
-  int32_t v24; // w23
-  ServantProfileLimitCountManager_c *v25; // x0
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v26; // 0:x0.16
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v17; // x1
+  System_Collections_Generic_IEnumerable_T__o *Entitys_object; // x20
+  System_Collections_Generic_List_object__o *v19; // x19
+  System_Collections_ObjectModel_Collection_T__o *klass; // x20
+  int32_t v21; // w21
+  Il2CppObject *v22; // x22
+  int32_t v23; // w2
+  int32_t v24; // w3
+  UserServantEntity_c *v25; // x8
+  __int64 methodPtr_low; // x9
+  Il2CppClass *v27; // x10
+  int32_t v28; // w1
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o **v29; // x23
+  System_Predicate_object__o *v30; // x24
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v31; // x8
+  __int64 v32; // x22
+  __int64 v33; // x24
+  int32_t v34; // w22
+  const MethodInfo *v35; // x2
+  int32_t v36; // w23
+  ServantProfileLimitCountManager_c *v37; // x0
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v38; // 0:x0.16
 
-  if ( (byte_438D119 & 1) == 0 )
+  if ( (byte_48E3948 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_B775C4(&Method_DataManager_GetMasterData_ServantProfileMaster___);
-    sub_B775C4(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_B775C4(&Method_DataMasterBase_getEntitys_ServantProfileEntity___);
-    sub_B775C4(&Method_System_Collections_Generic_List_ServantProfileEntity__Find__);
-    sub_B775C4(&Method_System_Collections_Generic_List_ServantProfileEntity___ctor___69404960);
-    sub_B775C4(&System_Collections_Generic_List_ServantProfileEntity__TypeInfo);
-    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B775C4(&Method_System_Predicate_ServantProfileEntity___ctor__);
-    sub_B775C4(&System_Predicate_ServantProfileEntity__TypeInfo);
-    sub_B775C4(&ServantProfileLimitCountManager_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B775C4(&Method_ServantProfileLimitCountManager___c__DisplayClass13_0__UpdateProfileServantLimitCount_b__0__);
-    sub_B775C4(&ServantProfileLimitCountManager___c__DisplayClass13_0_TypeInfo);
-    sub_B775C4(&UserServantEntity_TypeInfo);
-    byte_438D119 = 1;
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, v1);
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v2);
+    sub_1B00CCC(&Method_DataManager_GetMasterData_ServantProfileMaster___, v3);
+    sub_1B00CCC(&Method_DataManager_GetMasterData_UserServantMaster___, v4);
+    sub_1B00CCC(&Method_DataMasterBase_getEntitys_ServantProfileEntity___, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_ServantProfileEntity__Find__, v6);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_ServantProfileEntity___ctor___74538440, v7);
+    sub_1B00CCC(&System_Collections_Generic_List_ServantProfileEntity__TypeInfo, v8);
+    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v9);
+    sub_1B00CCC(&System_Predicate_ServantProfileEntity__TypeInfo, v10);
+    sub_1B00CCC(&ServantProfileLimitCountManager_TypeInfo, v11);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
+    sub_1B00CCC(
+      &Method_ServantProfileLimitCountManager___c__DisplayClass13_0__UpdateProfileServantLimitCount_b__0__,
+      v13);
+    sub_1B00CCC(&ServantProfileLimitCountManager___c__DisplayClass13_0_TypeInfo, v14);
+    sub_1B00CCC(&UserServantEntity_TypeInfo, v15);
+    byte_48E3948 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_33;
-  Instance = DataManager__GetMasterData_WarQuestSelectionMaster_(
+    goto LABEL_36;
+  Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ServantProfileMaster___);
+               (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_ServantProfileMaster___);
   if ( !Instance )
-    goto LABEL_33;
-  Entitys_WarQuestSelectionEntity = (System_Collections_Generic_IEnumerable_T__o *)DataMasterBase__getEntitys_WarQuestSelectionEntity_(
-                                                                                     (DataMasterBase_o *)Instance,
-                                                                                     (const MethodInfo_1D18CC4 *)Method_DataMasterBase_getEntitys_ServantProfileEntity___);
-  v4 = (System_Collections_Generic_List_WarBoardAIRoute_RouteData__o *)sub_B77694(System_Collections_Generic_List_ServantProfileEntity__TypeInfo);
-  System_Collections_Generic_List_WarBoardAIRoute_RouteData____ctor(
-    v4,
-    Entitys_WarQuestSelectionEntity,
-    (const MethodInfo_30527CC *)Method_System_Collections_Generic_List_ServantProfileEntity___ctor___69404960);
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    goto LABEL_36;
+  Entitys_object = (System_Collections_Generic_IEnumerable_T__o *)DataMasterBase__getEntitys_object_(
+                                                                    (DataMasterBase_o *)Instance,
+                                                                    (const MethodInfo_2D634A4 *)Method_DataMasterBase_getEntitys_ServantProfileEntity___);
+  v19 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_ServantProfileEntity__TypeInfo);
+  System_Collections_Generic_List_object____ctor_54268612(
+    v19,
+    Entitys_object,
+    (const MethodInfo_33C12C4 *)Method_System_Collections_Generic_List_ServantProfileEntity___ctor___74538440);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_33;
-  Instance = DataManager__GetMasterData_WarQuestSelectionMaster_(
+    goto LABEL_36;
+  Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserServantMaster___);
+               (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_UserServantMaster___);
   if ( !Instance )
-    goto LABEL_33;
-  v5 = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)*((_QWORD *)Instance + 4);
-  if ( !v5 )
-    goto LABEL_33;
-  if ( System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
-         *((System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o **)Instance + 4),
-         (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) >= 1 )
+    goto LABEL_36;
+  klass = (System_Collections_ObjectModel_Collection_T__o *)Instance[2].klass;
+  if ( !klass )
+    goto LABEL_36;
+  if ( System_Collections_ObjectModel_Collection_object___get_Count(
+         (System_Collections_ObjectModel_Collection_T__o *)Instance[2].klass,
+         (const MethodInfo_2F836B0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) >= 1 )
   {
-    v6 = 0;
+    v21 = 0;
     while ( 1 )
     {
-      v7 = sub_B77694(ServantProfileLimitCountManager___c__DisplayClass13_0_TypeInfo);
-      ServantProfileLimitCountManager___c__DisplayClass13_0___ctor(
-        (ServantProfileLimitCountManager___c__DisplayClass13_0_o *)v7,
-        0LL);
-      Instance = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
-                   v5,
-                   v6,
-                   (const MethodInfo_2CC50E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-      if ( !v7 )
+      v22 = (Il2CppObject *)sub_1B00F18(ServantProfileLimitCountManager___c__DisplayClass13_0_TypeInfo);
+      System_Object___ctor(v22, 0LL);
+      Instance = System_Collections_ObjectModel_Collection_object___get_Item(
+                   klass,
+                   v21,
+                   (const MethodInfo_2F83740 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+      if ( !v22 )
         break;
-      if ( Instance
-        && (v14 = *(&UserServantEntity_TypeInfo->_2.bitflags2 + 1),
-            *(unsigned __int8 *)(*(_QWORD *)Instance + 300LL) >= (unsigned int)v14) )
+      if ( Instance )
       {
-        v15 = *(UserServantEntity_c **)(*(_QWORD *)(*(_QWORD *)Instance + 200LL) + 8 * v14 - 8) == UserServantEntity_TypeInfo
-            ? (System_Int32_array **)Instance
-            : 0LL;
+        v25 = UserServantEntity_TypeInfo;
+        methodPtr_low = LOBYTE(UserServantEntity_TypeInfo->vtable._0_Equals.methodPtr);
+        if ( LOBYTE(Instance->klass->vtable[0].methodPtr) >= (unsigned int)methodPtr_low )
+          v27 = (UserServantEntity_c *)Instance->klass->_2.typeHierarchy[methodPtr_low - 1] == UserServantEntity_TypeInfo
+              ? (Il2CppClass *)Instance
+              : 0LL;
+        else
+          v27 = 0LL;
+        v22[1].klass = v27;
+        v29 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o **)&v22[1];
+        if ( LOBYTE(Instance->klass->vtable[0].methodPtr) >= (unsigned int)methodPtr_low )
+          v28 = (UserServantEntity_c *)Instance->klass->_2.typeHierarchy[methodPtr_low - 1] == v25 ? (int)Instance : 0;
+        else
+          v28 = 0;
       }
       else
       {
-        v15 = 0LL;
+        v28 = 0;
+        v22[1].klass = 0LL;
+        v29 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o **)&v22[1];
       }
-      *(_QWORD *)(v7 + 16) = v15;
-      v16 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o **)(v7 + 16);
-      sub_B77560((BattleServantConfConponent_o *)(v7 + 16), v15, v8, v9, v10, v11, v12, v13);
-      v17 = (System_Predicate_peRenderTexture_ChangeLayerObject__o *)sub_B77694(System_Predicate_ServantProfileEntity__TypeInfo);
-      System_Predicate_peRenderTexture_ChangeLayerObject____ctor(
-        v17,
-        (Il2CppObject *)v7,
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)v29, v28, v23, v24);
+      v30 = (System_Predicate_object__o *)sub_1B00F18(System_Predicate_ServantProfileEntity__TypeInfo);
+      System_Predicate_object____ctor(
+        v30,
+        v22,
         Method_ServantProfileLimitCountManager___c__DisplayClass13_0__UpdateProfileServantLimitCount_b__0__,
-        (const MethodInfo_2C3248C *)Method_System_Predicate_ServantProfileEntity___ctor__);
-      if ( !v4 )
+        0LL);
+      if ( !v19 )
         break;
-      Instance = System_Collections_Generic_List_peRenderTexture_ChangeLayerObject___Find(
-                   (System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__o *)v4,
-                   (System_Predicate_T__o *)v17,
-                   (const MethodInfo_3053B58 *)Method_System_Collections_Generic_List_ServantProfileEntity__Find__);
+      Instance = System_Collections_Generic_List_object___Find(
+                   v19,
+                   (System_Predicate_T__o *)v30,
+                   (const MethodInfo_33C2038 *)Method_System_Collections_Generic_List_ServantProfileEntity__Find__);
       if ( Instance )
       {
-        v18 = *v16;
-        if ( !*v16 )
+        v31 = *v29;
+        if ( !*v29 )
           break;
-        v20 = *(_QWORD *)&v18[5].fields.currentCryptoKey;
-        v19 = *(_QWORD *)&v18[5].fields.fakeValue;
-        if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-        {
+        v33 = *(_QWORD *)&v31[5].fields.currentCryptoKey;
+        v32 = *(_QWORD *)&v31[5].fields.fakeValue;
+        if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-        }
-        *(_QWORD *)&v26.fields.currentCryptoKey = v20;
-        *(_QWORD *)&v26.fields.fakeValue = v19;
-        Instance = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v26, 0LL);
-        v21 = *v16;
-        if ( !*v16 )
+        *(_QWORD *)&v38.fields.currentCryptoKey = v33;
+        *(_QWORD *)&v38.fields.fakeValue = v32;
+        Instance = (Il2CppObject *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(v38, 0LL);
+        if ( !*v29 )
           break;
-        v22 = (int)Instance;
-        v24 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v21[6], 0LL);
-        if ( (BYTE3(ServantProfileLimitCountManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
-        {
+        v34 = (int)Instance;
+        v36 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044((*v29)[6], 0LL);
+        if ( !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(ServantProfileLimitCountManager_TypeInfo);
-        }
-        ServantProfileLimitCountManager__SetLimitCount(v22, v24, v23);
+        ServantProfileLimitCountManager__SetLimitCount(v34, v36, v35);
       }
-      if ( ++v6 >= System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
-                     v5,
-                     (const MethodInfo_2CC5044 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
-        goto LABEL_29;
+      if ( ++v21 >= System_Collections_ObjectModel_Collection_object___get_Count(
+                      klass,
+                      (const MethodInfo_2F836B0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
+        goto LABEL_33;
     }
+LABEL_36:
+    sub_1B00F28(Instance, v17);
+  }
 LABEL_33:
-    sub_B7769C(Instance, v2);
-  }
-LABEL_29:
-  v25 = ServantProfileLimitCountManager_TypeInfo;
-  if ( (BYTE3(ServantProfileLimitCountManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
-  {
+  v37 = ServantProfileLimitCountManager_TypeInfo;
+  if ( !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantProfileLimitCountManager_TypeInfo);
-  }
-  ServantProfileLimitCountManager__WriteData((const MethodInfo *)v25);
+  ServantProfileLimitCountManager__WriteData((const MethodInfo *)v37);
 }
 
 
 bool __fastcall ServantProfileLimitCountManager__WriteData(const MethodInfo *method)
 {
-  ServantProfileLimitCountManager_c *v1; // x0
-  struct ServantProfileLimitCountManager_StaticFields *static_fields; // x8
-  bool *p_isModfiy; // x8
-  _BOOL4 isModfiy; // t1
-  ManagerConfig_c *v5; // x0
+  __int64 v1; // x1
+  __int64 v2; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
   ServantProfileLimitCountManager_c *v7; // x0
+  struct ServantProfileLimitCountManager_StaticFields *static_fields; // x8
+  ManagerConfig_c *v9; // x0
+  ServantProfileLimitCountManager_c *v11; // x0
   System_String_o *SaveFileName; // x0
-  System_IO_Stream_o *v9; // x19
-  System_IO_BinaryWriter_o *v10; // x20
-  __int64 v11; // x1
-  ServantProfileLimitCountManager_c *v12; // x0
-  struct ServantProfileLimitCountManager_StaticFields *v13; // x8
+  System_IO_Stream_o *v13; // x19
+  System_IO_BinaryWriter_o *v14; // x20
+  __int64 v15; // x1
+  ServantProfileLimitCountManager_c *v16; // x0
+  struct ServantProfileLimitCountManager_StaticFields *v17; // x8
   struct System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__o *limitCountList; // x9
   int size; // w21
-  __int64 v16; // x1
-  __int64 v17; // x23
-  ServantProfileLimitCountManager_c *v18; // x0
-  struct System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__o *v19; // x24
-  ServantProfileLimitCountManager_ServantLimitCountInfo_o *v20; // x24
+  __int64 v20; // x1
+  int32_t i; // w22
+  ServantProfileLimitCountManager_c *v22; // x0
+  System_Collections_Generic_List_object__o *v23; // x0
+  Il2CppObject *Item; // x0
+  __int64 v25; // x1
+  Il2CppObject *v26; // x23
   System_IO_BinaryWriter_c *klass; // x8
-  unsigned __int64 v22; // x10
-  int32_t *p_offset; // x11
-  __int64 v24; // x0
-  int v25; // w22
-  System_IO_Stream_c *v26; // x8
-  unsigned __int64 v27; // x10
-  int32_t *v28; // x11
-  __int64 v29; // x0
-  int v30[4]; // [xsp+8h] [xbp-48h]
-  int v31; // [xsp+18h] [xbp-38h]
+  __int64 v28; // x9
+  int32_t *p_offset; // x10
+  __int64 v30; // x0
+  System_IO_Stream_c *v31; // x8
+  __int64 v32; // x9
+  int32_t *v33; // x10
+  __int64 v34; // x0
 
-  if ( (byte_438D118 & 1) == 0 )
+  if ( (byte_48E3947 & 1) == 0 )
   {
-    sub_B775C4(&System_IO_BinaryWriter_TypeInfo);
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__get_Count__);
-    sub_B775C4(&Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__get_Item__);
-    sub_B775C4(&ManagerConfig_TypeInfo);
-    sub_B775C4(&ServantProfileLimitCountManager_TypeInfo);
-    byte_438D118 = 1;
+    sub_1B00CCC(&System_IO_BinaryWriter_TypeInfo, v1);
+    sub_1B00CCC(&System_IDisposable_TypeInfo, v2);
+    sub_1B00CCC(
+      &Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__get_Count__,
+      v3);
+    sub_1B00CCC(
+      &Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__get_Item__,
+      v4);
+    sub_1B00CCC(&ManagerConfig_TypeInfo, v5);
+    sub_1B00CCC(&ServantProfileLimitCountManager_TypeInfo, v6);
+    byte_48E3947 = 1;
   }
-  v31 = 0;
-  v1 = ServantProfileLimitCountManager_TypeInfo;
-  if ( (BYTE3(ServantProfileLimitCountManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
+  v7 = ServantProfileLimitCountManager_TypeInfo;
+  if ( !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ServantProfileLimitCountManager_TypeInfo);
-    v1 = ServantProfileLimitCountManager_TypeInfo;
+    v7 = ServantProfileLimitCountManager_TypeInfo;
   }
-  static_fields = v1->static_fields;
-  isModfiy = static_fields->isModfiy;
-  p_isModfiy = &static_fields->isModfiy;
-  if ( !isModfiy )
+  static_fields = v7->static_fields;
+  if ( !static_fields->isModfiy )
     return 0;
-  if ( (BYTE3(v1->vtable._0_Equals.methodPtr) & 4) != 0 && !v1->_2.cctor_finished )
+  if ( !v7->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v1);
-    p_isModfiy = &ServantProfileLimitCountManager_TypeInfo->static_fields->isModfiy;
+    j_il2cpp_runtime_class_init_0(v7);
+    static_fields = ServantProfileLimitCountManager_TypeInfo->static_fields;
   }
-  *p_isModfiy = 0;
-  v5 = ManagerConfig_TypeInfo;
-  if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ManagerConfig_TypeInfo->_2.cctor_finished )
+  static_fields->isModfiy = 0;
+  v9 = ManagerConfig_TypeInfo;
+  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v5 = ManagerConfig_TypeInfo;
+    v9 = ManagerConfig_TypeInfo;
   }
-  if ( v5->static_fields->UseMock )
+  if ( v9->static_fields->UseMock )
     return 0;
-  v7 = ServantProfileLimitCountManager_TypeInfo;
-  if ( (BYTE3(ServantProfileLimitCountManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
+  v11 = ServantProfileLimitCountManager_TypeInfo;
+  if ( !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(ServantProfileLimitCountManager_TypeInfo);
+  SaveFileName = ServantProfileLimitCountManager__GetSaveFileName((const MethodInfo *)v11);
+  v13 = (System_IO_Stream_o *)System_IO_File__OpenWrite(SaveFileName, 0LL);
+  v14 = (System_IO_BinaryWriter_o *)sub_1B00F18(System_IO_BinaryWriter_TypeInfo);
+  System_IO_BinaryWriter___ctor_60563772(v14, v13, 0LL);
+  v16 = ServantProfileLimitCountManager_TypeInfo;
+  if ( !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ServantProfileLimitCountManager_TypeInfo);
+    v16 = ServantProfileLimitCountManager_TypeInfo;
   }
-  SaveFileName = ServantProfileLimitCountManager__GetSaveFileName((const MethodInfo *)v7);
-  v9 = (System_IO_Stream_o *)System_IO_File__OpenWrite(SaveFileName, 0LL);
-  v10 = (System_IO_BinaryWriter_o *)sub_B77694(System_IO_BinaryWriter_TypeInfo);
-  System_IO_BinaryWriter___ctor_40221404(v10, v9, 0LL);
-  v12 = ServantProfileLimitCountManager_TypeInfo;
-  if ( (BYTE3(ServantProfileLimitCountManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(ServantProfileLimitCountManager_TypeInfo);
-    v12 = ServantProfileLimitCountManager_TypeInfo;
-  }
-  v13 = v12->static_fields;
-  limitCountList = v13->limitCountList;
+  v17 = v16->static_fields;
+  limitCountList = v17->limitCountList;
   if ( !limitCountList )
-    sub_B7769C(v12, v11);
-  if ( !v10 )
-    sub_B7769C(v12, v11);
+    sub_1B00F28(v16, v15);
+  if ( !v14 )
+    sub_1B00F28(v16, v15);
   size = limitCountList->fields._size;
-  ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, void *))v10->klass->vtable._22_Write.method)(
-    v10,
-    v13->SAVE_DATA_VERSION,
-    v10->klass[1]._1.image);
-  ((void (__fastcall *)(System_IO_BinaryWriter_o *, bool, Il2CppMethodPointer))v10->klass->vtable._8_Write.method)(
-    v10,
+  ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, void *))v14->klass->vtable._22_Write.method)(
+    v14,
+    v17->SAVE_DATA_VERSION,
+    v14->klass[1]._1.image);
+  ((void (__fastcall *)(System_IO_BinaryWriter_o *, bool, Il2CppMethodPointer))v14->klass->vtable._8_Write.method)(
+    v14,
     ServantProfileLimitCountManager_TypeInfo->static_fields->isContinueDevice,
-    v10->klass->vtable._9_Write.methodPtr);
-  ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v10->klass->vtable._17_Write.method)(
-    v10,
+    v14->klass->vtable._9_Write.methodPtr);
+  ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v14->klass->vtable._17_Write.method)(
+    v14,
     (unsigned int)size,
-    v10->klass->vtable._18_Write.methodPtr);
+    v14->klass->vtable._18_Write.methodPtr);
   if ( size >= 1 )
   {
-    v17 = 0LL;
-    do
+    for ( i = 0; i != size; ++i )
     {
-      v18 = ServantProfileLimitCountManager_TypeInfo;
-      if ( (BYTE3(ServantProfileLimitCountManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
+      v22 = ServantProfileLimitCountManager_TypeInfo;
+      if ( !ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(ServantProfileLimitCountManager_TypeInfo);
-        v18 = ServantProfileLimitCountManager_TypeInfo;
+        v22 = ServantProfileLimitCountManager_TypeInfo;
       }
-      v19 = v18->static_fields->limitCountList;
-      if ( !v19 )
-        sub_B7769C(v18, v16);
-      if ( v19->fields._size <= (unsigned int)v17 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-      v20 = v19->fields._items->m_Items[v17];
-      if ( !v20 )
-        sub_B7769C(v18, v16);
-      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v10->klass->vtable._17_Write.method)(
-        v10,
-        (unsigned int)v20->fields.servantId,
-        v10->klass->vtable._18_Write.methodPtr);
-      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v10->klass->vtable._17_Write.method)(
-        v10,
-        (unsigned int)v20->fields.limitCount,
-        v10->klass->vtable._18_Write.methodPtr);
-      ++v17;
+      v23 = (System_Collections_Generic_List_object__o *)v22->static_fields->limitCountList;
+      if ( !v23 )
+        sub_1B00F28(0LL, v20);
+      Item = System_Collections_Generic_List_object___get_Item(
+               v23,
+               i,
+               (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_ServantProfileLimitCountManager_ServantLimitCountInfo__get_Item__);
+      v26 = Item;
+      if ( !Item )
+        sub_1B00F28(0LL, v25);
+      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v14->klass->vtable._17_Write.method)(
+        v14,
+        LODWORD(Item[1].klass),
+        v14->klass->vtable._18_Write.methodPtr);
+      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v14->klass->vtable._17_Write.method)(
+        v14,
+        HIDWORD(v26[1].klass),
+        v14->klass->vtable._18_Write.methodPtr);
     }
-    while ( (int)v17 < size );
   }
-  ((void (__fastcall *)(System_IO_BinaryWriter_o *, Il2CppMethodPointer))v10->klass->vtable._5_Close.method)(
-    v10,
-    v10->klass->vtable._6_Dispose.methodPtr);
-  v30[0] = 158;
-  v31 = 1;
-  klass = v10->klass;
-  if ( *(_WORD *)&v10->klass->_2.bitflags1 )
+  ((void (__fastcall *)(System_IO_BinaryWriter_o *, Il2CppMethodPointer))v14->klass->vtable._5_Close.method)(
+    v14,
+    v14->klass->vtable._6_Dispose.methodPtr);
+  klass = v14->klass;
+  v28 = *(unsigned __int16 *)(&v14->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v14->klass->_2.bitflags2 + 3) )
   {
-    v22 = 0LL;
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
     {
-      ++v22;
+      --v28;
       p_offset += 4;
-      if ( v22 >= *(unsigned __int16 *)&v10->klass->_2.bitflags1 )
-        goto LABEL_37;
+      if ( !v28 )
+        goto LABEL_29;
     }
-    v24 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+    v30 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
   }
   else
   {
-LABEL_37:
-    v24 = sub_B0F4C0(v10, System_IDisposable_TypeInfo, 0LL);
+LABEL_29:
+    v30 = sub_1B52CAC(v14, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v24)(v10, *(_QWORD *)(v24 + 8));
-  v31 = 0;
-  v30[0] = 170;
-  v25 = ++v31;
-  if ( v9 )
+  (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v30)(v14, *(_QWORD *)(v30 + 8));
+  if ( v13 )
   {
-    v26 = v9->klass;
-    if ( *(_WORD *)&v9->klass->_2.bitflags1 )
+    v31 = v13->klass;
+    v32 = *(unsigned __int16 *)(&v13->klass->_2.bitflags2 + 3);
+    if ( *(_WORD *)(&v13->klass->_2.bitflags2 + 3) )
     {
-      v27 = 0LL;
-      v28 = &v26->_1.interfaceOffsets->offset;
-      while ( *((System_IDisposable_c **)v28 - 1) != System_IDisposable_TypeInfo )
+      v33 = &v31->_1.interfaceOffsets->offset;
+      while ( *((System_IDisposable_c **)v33 - 1) != System_IDisposable_TypeInfo )
       {
-        ++v27;
-        v28 += 4;
-        if ( v27 >= *(unsigned __int16 *)&v9->klass->_2.bitflags1 )
-          goto LABEL_46;
+        --v32;
+        v33 += 4;
+        if ( !v32 )
+          goto LABEL_36;
       }
-      v29 = (__int64)(&v26->vtable._0_Equals.method + 2 * *v28);
+      v34 = (__int64)(&v31->vtable._0_Equals.method + 2 * *v33);
     }
     else
     {
-LABEL_46:
-      v29 = sub_B0F4C0(v9, System_IDisposable_TypeInfo, 0LL);
+LABEL_36:
+      v34 = sub_1B52CAC(v13, System_IDisposable_TypeInfo, 0LL);
     }
-    (*(void (__fastcall **)(System_IO_Stream_o *, _QWORD))v29)(v9, *(_QWORD *)(v29 + 8));
-  }
-  if ( v25 )
-  {
-    if ( v30[v25 - 1] == 170 )
-      v31 = v25 - 1;
+    (*(void (__fastcall **)(System_IO_Stream_o *, _QWORD))v34)(v13, *(_QWORD *)(v34 + 8));
   }
   return 1;
 }
@@ -1012,7 +1050,7 @@ bool __fastcall ServantProfileLimitCountManager___c__DisplayClass10_0___GetLimit
         const MethodInfo *method)
 {
   if ( !x )
-    sub_B7769C(this, 0LL);
+    sub_1B00F28(this, 0LL);
   return x->fields.servantId == this->fields.servantId;
 }
 
@@ -1038,24 +1076,23 @@ bool __fastcall ServantProfileLimitCountManager___c__DisplayClass13_0___UpdatePr
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v10; // 0:x0.16
 
   v4 = this;
-  if ( (byte_4388837 & 1) == 0 )
+  if ( (byte_48E394B & 1) == 0 )
   {
-    this = (ServantProfileLimitCountManager___c__DisplayClass13_0_o *)sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4388837 = 1;
+    this = (ServantProfileLimitCountManager___c__DisplayClass13_0_o *)sub_1B00CCC(
+                                                                        &CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo,
+                                                                        x);
+    byte_48E394B = 1;
   }
   if ( !x || (ent = v4->fields.ent) == 0LL )
-    sub_B7769C(this, x);
+    sub_1B00F28(this, x);
   svtId = x->fields.svtId;
   v8 = *(_QWORD *)&ent->fields.svtId.fields.currentCryptoKey;
   v7 = *(_QWORD *)&ent->fields.svtId.fields.fakeValue;
-  if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-  {
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  }
   *(_QWORD *)&v10.fields.currentCryptoKey = v8;
   *(_QWORD *)&v10.fields.fakeValue = v7;
-  return svtId == CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v10, 0LL);
+  return svtId == CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(v10, 0LL);
 }
 
 
@@ -1073,7 +1110,7 @@ bool __fastcall ServantProfileLimitCountManager___c__DisplayClass14_0___SetLimit
         const MethodInfo *method)
 {
   if ( !x )
-    sub_B7769C(this, 0LL);
+    sub_1B00F28(this, 0LL);
   return x->fields.svtId == this->fields.servantId;
 }
 
@@ -1092,6 +1129,6 @@ bool __fastcall ServantProfileLimitCountManager___c__DisplayClass9_0___SetLimitC
         const MethodInfo *method)
 {
   if ( !x )
-    sub_B7769C(this, 0LL);
+    sub_1B00F28(this, 0LL);
   return x->fields.servantId == this->fields.servantId;
 }

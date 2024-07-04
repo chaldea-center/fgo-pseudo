@@ -1,50 +1,50 @@
 void __fastcall ActionChainBase_object____ctor(
         ActionChainBase_T__o *this,
         System_Object_array *chains,
-        const MethodInfo_2698EDC *method)
+        const MethodInfo_30513EC *method)
 {
-  if ( !this )
-    sub_B7769C(0LL, chains);
   ChainableActionBase___ctor((ChainableActionBase_o *)this, 0LL);
   ((void (__fastcall *)(ActionChainBase_T__o *, void *))this->klass->vtable._6_Init.method)(
     this,
     this->klass[1]._1.image);
-  ((void (__fastcall *)(ActionChainBase_T__o *, System_Object_array *))method->klass->rgctx_data->_1_ActionChainBase_T__AddRange->methodPointer)(
+  ActionChainBase_object___AddRange(
     this,
-    chains);
+    chains,
+    (const MethodInfo_30514A0 *)method->klass->rgctx_data->_3_ActionChainBase_T__AddRange);
 }
 
 
 ActionChainBase_T__o *__fastcall ActionChainBase_object___AddRange(
         ActionChainBase_T__o *this,
         System_Object_array *chainElems,
-        const MethodInfo_2698FC0 *method)
+        const MethodInfo_30514A0 *method)
 {
   ActionChainBase_T__o *v5; // x21
   signed int max_length; // w8
   unsigned int v7; // w24
   Il2CppObject *v8; // x22
   System_Action_o *v9; // x23
-  System_String_array **v10; // x2
-  System_String_array **v11; // x3
-  System_Boolean_array **v12; // x4
-  System_Int32_array **v13; // x5
-  System_Int32_array *v14; // x6
-  System_Int32_array *v15; // x7
-  __int64 v17; // x0
+  int32_t v10; // w2
+  int32_t v11; // w3
+  int32_t v12; // w2
+  int32_t v13; // w3
+  struct System_Action_o *endCallback; // x8
+  MethodInfo *_8_System_Collections_Generic_List_T__Add; // x9
+  __int64 nextAction_low; // x10
+  System_Action_c **v17; // x8
 
   v5 = this;
-  if ( (byte_4394EE6 & 1) == 0 )
+  if ( (byte_48E876D & 1) == 0 )
   {
-    this = (ActionChainBase_T__o *)sub_B775C4(&System_Action_TypeInfo);
-    byte_4394EE6 = 1;
+    this = (ActionChainBase_T__o *)sub_1B00CCC(&System_Action_TypeInfo, chainElems);
+    byte_48E876D = 1;
   }
   if ( !v5 )
-    goto LABEL_13;
+    goto LABEL_17;
   if ( !v5->fields._IsExecuted_k__BackingField )
   {
     if ( !chainElems )
-      goto LABEL_13;
+      goto LABEL_17;
     max_length = chainElems->max_length;
     if ( max_length >= 1 )
     {
@@ -52,141 +52,144 @@ ActionChainBase_T__o *__fastcall ActionChainBase_object___AddRange(
       while ( 1 )
       {
         if ( v7 >= max_length )
-        {
-          v17 = sub_B776C8(this);
-          sub_B77668(v17, 0LL);
-        }
+          sub_1B00F30(this, chainElems);
         v8 = chainElems->m_Items[v7];
-        v9 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
+        v9 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
         System_Action___ctor(
           v9,
           (Il2CppObject *)v5,
-          (intptr_t)method->klass->rgctx_data->_5_ActionChainBase_T__DoNext,
+          (intptr_t)method->klass->rgctx_data->_7_ActionChainBase_T__DoNext,
           0LL);
         if ( !v8 )
           break;
         v8[1].monitor = v9;
-        sub_B77560(
-          (BattleServantConfConponent_o *)&v8[1].monitor,
-          (System_Int32_array **)v9,
-          v10,
-          v11,
-          v12,
-          v13,
-          v14,
-          v15);
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v8[1].monitor, (int32_t)v9, v10, v11);
         this = *(ActionChainBase_T__o **)&v5->fields.currentIndex;
         if ( !this )
           break;
-        this = (ActionChainBase_T__o *)((__int64 (__fastcall *)(ActionChainBase_T__o *, Il2CppObject *))method->klass->rgctx_data->_6_System_Collections_Generic_List_T__Add->methodPointer)(
-                                         this,
-                                         v8);
+        endCallback = this->fields.endCallback;
+        _8_System_Collections_Generic_List_T__Add = method->klass->rgctx_data->_8_System_Collections_Generic_List_T__Add;
+        ++HIDWORD(this->fields.nextAction);
+        if ( !endCallback )
+          break;
+        nextAction_low = SLODWORD(this->fields.nextAction);
+        if ( (unsigned int)nextAction_low >= LODWORD(endCallback->fields.m_target) )
+        {
+          System_Collections_Generic_List_object___AddWithResize(
+            (System_Collections_Generic_List_object__o *)this,
+            v8,
+            (const MethodInfo_33C19D0 *)_8_System_Collections_Generic_List_T__Add->klass->rgctx_data[14].rgctxDataDummy);
+        }
+        else
+        {
+          v17 = &endCallback->klass + nextAction_low;
+          LODWORD(this->fields.nextAction) = nextAction_low + 1;
+          v17[4] = (System_Action_c *)v8;
+          sub_1B00C70((ServantStatusBattleListViewItem_o *)(v17 + 4), (int32_t)v8, v12, v13);
+        }
         max_length = chainElems->max_length;
         if ( (int)++v7 >= max_length )
           return v5;
       }
-LABEL_13:
-      sub_B7769C(this, chainElems);
+LABEL_17:
+      sub_1B00F28(this, chainElems);
     }
   }
   return v5;
 }
 
 
-void __fastcall ActionChainBase_object___DoNext(ActionChainBase_T__o *this, const MethodInfo_26995B4 *method)
+void __fastcall ActionChainBase_object___DoNext(ActionChainBase_T__o *this, const MethodInfo_3051968 *method)
 {
-  int v3; // w8
-  __int64 v4; // x0
-  __int64 v6; // x1
+  System_Collections_Generic_List_object__o *v3; // x0
+  int32_t v4; // w8
+  Il2CppObject *Item; // x1
 
   if ( LOBYTE(this->fields.children) )
   {
     BYTE1(this->fields.children) = 1;
-    return;
   }
-  v3 = *((_DWORD *)&this->fields._IsExecuted_k__BackingField + 1);
-  v4 = *(_QWORD *)&this->fields.currentIndex;
-  *((_DWORD *)&this->fields._IsExecuted_k__BackingField + 1) = v3 + 1;
-  if ( !v4 )
-    goto LABEL_8;
-  if ( v3 + 1 < ((__int64 (*)(void))method->klass->rgctx_data->_13_System_Collections_Generic_List_T__get_Count->methodPointer)() )
+  else
   {
-    v4 = *(_QWORD *)&this->fields.currentIndex;
-    if ( v4 )
+    v3 = *(System_Collections_Generic_List_object__o **)&this->fields.currentIndex;
+    v4 = *((_DWORD *)&this->fields._IsExecuted_k__BackingField + 1) + 1;
+    *((_DWORD *)&this->fields._IsExecuted_k__BackingField + 1) = v4;
+    if ( !v3 )
+      sub_1B00F28(0LL, method);
+    if ( v4 >= v3->fields._size )
     {
-      v6 = ((__int64 (__fastcall *)(__int64, _QWORD))method->klass->rgctx_data->_14_System_Collections_Generic_List_T__get_Item->methodPointer)(
-             v4,
-             *((unsigned int *)&this->fields._IsExecuted_k__BackingField + 1));
-      ((void (__fastcall *)(ActionChainBase_T__o *, __int64, const char *))this->klass[1]._1.gc_desc)(
+      ((void (__fastcall *)(ActionChainBase_T__o *, Il2CppMethodPointer))this->klass->vtable._5_End.method)(
         this,
-        v6,
-        this->klass[1]._1.name);
-      return;
+        this->klass->vtable._6_Init.methodPtr);
     }
-LABEL_8:
-    sub_B7769C(v4, method);
+    else
+    {
+      Item = System_Collections_Generic_List_object___get_Item(
+               v3,
+               v4,
+               (const MethodInfo_33C1700 *)method->klass->rgctx_data->_19_ActionChainBase_T__ExecuteCurrentAction);
+      ((void (__fastcall *)(ActionChainBase_T__o *, Il2CppObject *, const char *))this->klass[1]._1.gc_desc)(
+        this,
+        Item,
+        this->klass[1]._1.name);
+    }
   }
-  ((void (__fastcall *)(ActionChainBase_T__o *, Il2CppMethodPointer))this->klass->vtable._5_End.method)(
+}
+
+
+void __fastcall ActionChainBase_object___ExecuteOnDetail(ActionChainBase_T__o *this, const MethodInfo_3051958 *method)
+{
+  ActionChainBase_object___DoNext(
     this,
-    this->klass->vtable._6_Init.methodPtr);
+    (const MethodInfo_3051968 *)method->klass->rgctx_data->_7_ActionChainBase_T__DoNext);
 }
 
 
-void __fastcall ActionChainBase_object___ExecuteOnDetail(ActionChainBase_T__o *this, const MethodInfo_2699590 *method)
+void __fastcall ActionChainBase_object___Init(ActionChainBase_T__o *this, const MethodInfo_3051438 *method)
 {
-  if ( !this )
-    sub_B7769C(0LL, method);
-  method->klass->rgctx_data->_5_ActionChainBase_T__DoNext->methodPointer();
-}
-
-
-void __fastcall ActionChainBase_object___Init(ActionChainBase_T__o *this, const MethodInfo_2698F40 *method)
-{
-  Il2CppClass *_2_System_Collections_Generic_List_T; // x21
-  __int64 v5; // x0
+  Il2CppClass *_4_System_Collections_Generic_List_T; // x0
+  System_Collections_Generic_List_object__o *v5; // x0
   ActionChainBase_T__c *klass; // x8
-  System_Int32_array **v7; // x20
+  System_Collections_Generic_List_object__o *v7; // x20
   int32_t *p_currentIndex; // x19
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
+  int32_t v9; // w2
+  int32_t v10; // w3
 
   *((_DWORD *)&this->fields._IsExecuted_k__BackingField + 1) = -1;
-  _2_System_Collections_Generic_List_T = method->klass->rgctx_data->_2_System_Collections_Generic_List_T_;
-  if ( (BYTE2(_2_System_Collections_Generic_List_T->vtable[0].methodPtr) & 1) == 0 )
-    sub_B0F2C4(method->klass->rgctx_data->_2_System_Collections_Generic_List_T_);
-  v5 = sub_B77694(_2_System_Collections_Generic_List_T);
+  _4_System_Collections_Generic_List_T = method->klass->rgctx_data->_4_System_Collections_Generic_List_T_;
+  if ( (BYTE5(_4_System_Collections_Generic_List_T->vtable[0].methodPtr) & 1) == 0 )
+    _4_System_Collections_Generic_List_T = (Il2CppClass *)sub_1B52BA8(_4_System_Collections_Generic_List_T);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1B00F18(_4_System_Collections_Generic_List_T);
   klass = method->klass;
-  v7 = (System_Int32_array **)v5;
-  klass->rgctx_data->_3_System_Collections_Generic_List_T___ctor->methodPointer();
+  v7 = v5;
+  System_Collections_Generic_List_object____ctor(
+    v5,
+    (const MethodInfo_33C119C *)klass->rgctx_data->_5_System_Collections_Generic_List_T___ctor);
   *(_QWORD *)&this->fields.currentIndex = v7;
   p_currentIndex = &this->fields.currentIndex;
-  sub_B77560((BattleServantConfConponent_o *)p_currentIndex, v7, v9, v10, v11, v12, v13, v14);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)p_currentIndex, (int32_t)v7, v9, v10);
   *((_WORD *)p_currentIndex + 4) = 0;
 }
 
 
-void __fastcall ActionChainBase_object___PauseNext(ActionChainBase_T__o *this, const MethodInfo_26990D0 *method)
+void __fastcall ActionChainBase_object___PauseNext(ActionChainBase_T__o *this, const MethodInfo_30515E8 *method)
 {
-  if ( !this )
-    sub_B7769C(0LL, method);
-  ((void (__fastcall *)(ActionChainBase_T__o *, __int64))method->klass->rgctx_data->_7_ActionChainBase_T__SetIsPausing->methodPointer)(
+  ActionChainBase_object___SetIsPausing(
     this,
-    1LL);
+    1,
+    (const MethodInfo_305163C *)method->klass->rgctx_data->_9_ActionChainBase_T__SetIsPausing);
 }
 
 
-void __fastcall ActionChainBase_object___ResumeNext(ActionChainBase_T__o *this, const MethodInfo_26990F8 *method)
+void __fastcall ActionChainBase_object___ResumeNext(ActionChainBase_T__o *this, const MethodInfo_30515FC *method)
 {
-  if ( !this )
-    sub_B7769C(0LL, method);
-  ((void (__fastcall *)(ActionChainBase_T__o *, _QWORD))method->klass->rgctx_data->_7_ActionChainBase_T__SetIsPausing->methodPointer)(
+  ActionChainBase_object___SetIsPausing(
     this,
-    0LL);
-  ((void (__fastcall *)(ActionChainBase_T__o *))method->klass->rgctx_data->_8_ActionChainBase_T__StartPendingNextAction->methodPointer)(this);
+    0,
+    (const MethodInfo_305163C *)method->klass->rgctx_data->_9_ActionChainBase_T__SetIsPausing);
+  ActionChainBase_object___StartPendingNextAction(
+    this,
+    (const MethodInfo_30517C8 *)method->klass->rgctx_data->_10_ActionChainBase_T__StartPendingNextAction);
 }
 
 
@@ -194,152 +197,106 @@ void __fastcall ActionChainBase_object___ResumeNext(ActionChainBase_T__o *this, 
 void __fastcall ActionChainBase_object___SetIsPausing(
         ActionChainBase_T__o *this,
         bool value,
-        const MethodInfo_269914C *method)
+        const MethodInfo_305163C *method)
 {
-  __int64 v6; // x0
-  Il2CppObject *current; // x21
-  __int64 v8; // x1
-  ActionChainBase_T__o *v9; // x0
-  Il2CppClass *_12_System_Collections_Generic_List_Enumerator_T; // x19
-  unsigned __int64 v11; // x9
-  int32_t *p_offset; // x10
-  __int64 p_method; // x0
-  System_Collections_Generic_List_Enumerator_T__o v14; // [xsp+8h] [xbp-68h] BYREF
-  System_Collections_Generic_List_Enumerator_T__o v15; // [xsp+20h] [xbp-50h] BYREF
-  __int64 v16; // [xsp+48h] [xbp-28h]
+  bool v6; // w22
+  __int64 v7; // x1
+  System_Collections_Generic_List_object__o *v8; // x0
+  bool v9; // w20
+  __int64 methodPtr_low; // x10
+  System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+8h] [xbp-68h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v12; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_4394EE7 & 1) == 0 )
+  v6 = value;
+  if ( (byte_48E876E & 1) == 0 )
   {
-    sub_B775C4(&Method_ActionChainBase_ChainableActionBase__SetIsPausing__);
-    sub_B775C4(&ActionChainBase_ChainableActionBase__TypeInfo);
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    byte_4394EE7 = 1;
+    sub_1B00CCC(&Method_ActionChainBase_ChainableActionBase__SetIsPausing__, value);
+    sub_1B00CCC(&ActionChainBase_ChainableActionBase__TypeInfo, v7);
+    byte_48E876E = 1;
   }
-  memset(&v15, 0, sizeof(v15));
-  HIDWORD(v16) = 0;
-  v6 = *(_QWORD *)&this->fields.currentIndex;
-  LOBYTE(this->fields.children) = value;
-  if ( !v6 )
-    sub_B7769C(0LL, value);
-  method->klass->rgctx_data->_9_System_Collections_Generic_List_T__GetEnumerator->methodPointer();
-  v15 = v14;
-  while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-            &v15,
-            (const MethodInfo_225C720 *)method->klass->rgctx_data->_11_System_Collections_Generic_List_Enumerator_T__MoveNext) )
+  memset(&v12, 0, sizeof(v12));
+  v8 = *(System_Collections_Generic_List_object__o **)&this->fields.currentIndex;
+  LOBYTE(this->fields.children) = v6;
+  if ( !v8 )
+    sub_1B00F28(0LL, value);
+  System_Collections_Generic_List_object___GetEnumerator(
+    (System_Collections_Generic_List_Enumerator_T__o *)&v11,
+    v8,
+    (const MethodInfo_33C24C8 *)method->klass->rgctx_data->_11_System_Collections_Generic_List_T__GetEnumerator);
+  v9 = value;
+  v12 = v11;
+  while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v12,
+            (const MethodInfo_313E218 *)method->klass->rgctx_data->_15_System_Collections_Generic_List_Enumerator_T__MoveNext) )
   {
-    current = v15.fields.current;
-    if ( sub_B77684(v15.fields.current, ActionChainBase_ChainableActionBase__TypeInfo) )
+    if ( v12.fields._current )
     {
-      if ( !sub_B77684(current, ActionChainBase_ChainableActionBase__TypeInfo) )
-        sub_B7769C(0LL, v8);
-      v9 = (ActionChainBase_T__o *)sub_B77684(current, ActionChainBase_ChainableActionBase__TypeInfo);
-      ActionChainBase_object___SetIsPausing(
-        v9,
-        value,
-        (const MethodInfo_269914C *)Method_ActionChainBase_ChainableActionBase__SetIsPausing__);
+      methodPtr_low = LOBYTE(ActionChainBase_ChainableActionBase__TypeInfo->vtable._0_Equals.methodPtr);
+      if ( LOBYTE(v12.fields._current->klass->vtable[0].methodPtr) >= (unsigned int)methodPtr_low
+        && (ActionChainBase_ChainableActionBase__c *)v12.fields._current->klass->_2.typeHierarchy[methodPtr_low - 1] == ActionChainBase_ChainableActionBase__TypeInfo )
+      {
+        ActionChainBase_object___SetIsPausing(
+          (ActionChainBase_T__o *)v12.fields._current,
+          v9,
+          (const MethodInfo_305163C *)Method_ActionChainBase_ChainableActionBase__SetIsPausing__);
+      }
     }
   }
-  v16 = 0x100000054LL;
-  _12_System_Collections_Generic_List_Enumerator_T = method->klass->rgctx_data->_12_System_Collections_Generic_List_Enumerator_T_;
-  if ( (BYTE2(_12_System_Collections_Generic_List_Enumerator_T->vtable[0].methodPtr) & 1) == 0 )
-    sub_B0F2C4(_12_System_Collections_Generic_List_Enumerator_T);
-  v14.fields.list = (struct System_Collections_Generic_List_T__o *)_12_System_Collections_Generic_List_Enumerator_T;
-  if ( *(_WORD *)&_12_System_Collections_Generic_List_Enumerator_T->_2.bitflags1 )
-  {
-    v11 = 0LL;
-    p_offset = &_12_System_Collections_Generic_List_Enumerator_T->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
-    {
-      ++v11;
-      p_offset += 4;
-      if ( v11 >= *(unsigned __int16 *)&_12_System_Collections_Generic_List_Enumerator_T->_2.bitflags1 )
-        goto LABEL_15;
-    }
-    p_method = (__int64)&_12_System_Collections_Generic_List_Enumerator_T->vtable[*p_offset].method;
-  }
-  else
-  {
-LABEL_15:
-    p_method = sub_B0F4C0(&v14, System_IDisposable_TypeInfo, 0LL);
-  }
-  (*(void (__fastcall **)(int32_t *, _QWORD))p_method)(&v14.fields.index, *(_QWORD *)(p_method + 8));
-  if ( (_DWORD)v16 == 84 )
-    v16 = 84LL;
+  System_Collections_Generic_List_Enumerator_object___Dispose(
+    &v12,
+    (const MethodInfo_313E214 *)method->klass->rgctx_data->_17_System_Collections_Generic_List_T__get_Count);
 }
 
 
 void __fastcall ActionChainBase_object___StartPendingNextAction(
         ActionChainBase_T__o *this,
-        const MethodInfo_2699368 *method)
+        const MethodInfo_30517C8 *method)
 {
-  Il2CppObject *current; // x20
-  __int64 v5; // x1
-  ActionChainBase_T__o *v6; // x0
-  Il2CppClass *_12_System_Collections_Generic_List_Enumerator_T; // x19
-  unsigned __int64 v8; // x9
-  int32_t *p_offset; // x10
-  __int64 p_method; // x0
-  System_Collections_Generic_List_Enumerator_T__o v11; // [xsp+0h] [xbp-60h] BYREF
-  __int64 v12; // [xsp+18h] [xbp-48h]
-  System_Collections_Generic_List_Enumerator_T__o v13; // [xsp+20h] [xbp-40h] BYREF
+  __int64 v4; // x1
+  System_Collections_Generic_List_object__o *v5; // x0
+  __int64 methodPtr_low; // x10
+  System_Collections_Generic_List_Enumerator_object__o v7; // [xsp+8h] [xbp-58h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v8; // [xsp+20h] [xbp-40h] BYREF
 
-  if ( (byte_4394EE8 & 1) == 0 )
+  if ( (byte_48E876F & 1) == 0 )
   {
-    sub_B775C4(&Method_ActionChainBase_ChainableActionBase__StartPendingNextAction__);
-    sub_B775C4(&ActionChainBase_ChainableActionBase__TypeInfo);
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    byte_4394EE8 = 1;
+    sub_1B00CCC(&Method_ActionChainBase_ChainableActionBase__StartPendingNextAction__, method);
+    sub_1B00CCC(&ActionChainBase_ChainableActionBase__TypeInfo, v4);
+    byte_48E876F = 1;
   }
-  memset(&v13, 0, sizeof(v13));
-  HIDWORD(v12) = 0;
+  memset(&v8, 0, sizeof(v8));
   if ( BYTE1(this->fields.children) )
   {
     BYTE1(this->fields.children) = 0;
-    ((void (__fastcall *)(ActionChainBase_T__o *))method->klass->rgctx_data->_5_ActionChainBase_T__DoNext->methodPointer)(this);
+    ActionChainBase_object___DoNext(
+      this,
+      (const MethodInfo_3051968 *)method->klass->rgctx_data->_7_ActionChainBase_T__DoNext);
   }
-  if ( !*(_QWORD *)&this->fields.currentIndex )
-    sub_B7769C(0LL, method);
-  method->klass->rgctx_data->_9_System_Collections_Generic_List_T__GetEnumerator->methodPointer();
-  v13 = v11;
-  while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-            &v13,
-            (const MethodInfo_225C720 *)method->klass->rgctx_data->_11_System_Collections_Generic_List_Enumerator_T__MoveNext) )
+  v5 = *(System_Collections_Generic_List_object__o **)&this->fields.currentIndex;
+  if ( !v5 )
+    sub_1B00F28(0LL, method);
+  System_Collections_Generic_List_object___GetEnumerator(
+    (System_Collections_Generic_List_Enumerator_T__o *)&v7,
+    v5,
+    (const MethodInfo_33C24C8 *)method->klass->rgctx_data->_11_System_Collections_Generic_List_T__GetEnumerator);
+  v8 = v7;
+  while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v8,
+            (const MethodInfo_313E218 *)method->klass->rgctx_data->_15_System_Collections_Generic_List_Enumerator_T__MoveNext) )
   {
-    current = v13.fields.current;
-    if ( sub_B77684(v13.fields.current, ActionChainBase_ChainableActionBase__TypeInfo) )
+    if ( v8.fields._current )
     {
-      if ( !sub_B77684(current, ActionChainBase_ChainableActionBase__TypeInfo) )
-        sub_B7769C(0LL, v5);
-      v6 = (ActionChainBase_T__o *)sub_B77684(current, ActionChainBase_ChainableActionBase__TypeInfo);
-      ActionChainBase_object___StartPendingNextAction(
-        v6,
-        (const MethodInfo_2699368 *)Method_ActionChainBase_ChainableActionBase__StartPendingNextAction__);
+      methodPtr_low = LOBYTE(ActionChainBase_ChainableActionBase__TypeInfo->vtable._0_Equals.methodPtr);
+      if ( LOBYTE(v8.fields._current->klass->vtable[0].methodPtr) >= (unsigned int)methodPtr_low
+        && (ActionChainBase_ChainableActionBase__c *)v8.fields._current->klass->_2.typeHierarchy[methodPtr_low - 1] == ActionChainBase_ChainableActionBase__TypeInfo )
+      {
+        ActionChainBase_object___StartPendingNextAction(
+          (ActionChainBase_T__o *)v8.fields._current,
+          (const MethodInfo_30517C8 *)Method_ActionChainBase_ChainableActionBase__StartPendingNextAction__);
+      }
     }
   }
-  v12 = 0x100000061LL;
-  _12_System_Collections_Generic_List_Enumerator_T = method->klass->rgctx_data->_12_System_Collections_Generic_List_Enumerator_T_;
-  if ( (BYTE2(_12_System_Collections_Generic_List_Enumerator_T->vtable[0].methodPtr) & 1) == 0 )
-    sub_B0F2C4(_12_System_Collections_Generic_List_Enumerator_T);
-  v11.fields.list = (struct System_Collections_Generic_List_T__o *)_12_System_Collections_Generic_List_Enumerator_T;
-  if ( *(_WORD *)&_12_System_Collections_Generic_List_Enumerator_T->_2.bitflags1 )
-  {
-    v8 = 0LL;
-    p_offset = &_12_System_Collections_Generic_List_Enumerator_T->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
-    {
-      ++v8;
-      p_offset += 4;
-      if ( v8 >= *(unsigned __int16 *)&_12_System_Collections_Generic_List_Enumerator_T->_2.bitflags1 )
-        goto LABEL_17;
-    }
-    p_method = (__int64)&_12_System_Collections_Generic_List_Enumerator_T->vtable[*p_offset].method;
-  }
-  else
-  {
-LABEL_17:
-    p_method = sub_B0F4C0(&v11, System_IDisposable_TypeInfo, 0LL);
-  }
-  (*(void (__fastcall **)(Il2CppObject **, _QWORD))p_method)(&v11.fields.current, *(_QWORD *)(p_method + 8));
-  if ( (_DWORD)v12 == 97 )
-    v12 = 97LL;
+  System_Collections_Generic_List_Enumerator_object___Dispose(
+    &v8,
+    (const MethodInfo_313E214 *)method->klass->rgctx_data->_17_System_Collections_Generic_List_T__get_Count);
 }

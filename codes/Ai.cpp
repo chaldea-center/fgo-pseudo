@@ -6,15 +6,15 @@ bool __fastcall Ai__Check(int32_t actNum, int32_t num, const MethodInfo *method)
 
 bool __fastcall Ai__CheckPriority(int32_t actNum, int32_t num, int32_t priority, const MethodInfo *method)
 {
-  int v4; // w8
+  int32_t v4; // w8
 
   if ( priority >= 1 )
   {
-    if ( actNum < 0 )
-      v4 = -1;
+    if ( actNum >= 0 )
+      v4 = priority;
     else
-      v4 = 1;
-    actNum = 100 * actNum + v4 * priority;
+      v4 = -priority;
+    actNum = v4 + 100 * actNum;
   }
   return actNum == num;
 }
@@ -35,12 +35,12 @@ int32_t __fastcall Ai__getChangeThinking(System_Int32_array *avals, const Method
 
 int32_t __fastcall Ai__getCond(int32_t intype, const MethodInfo *method)
 {
-  if ( (byte_438CE8D & 1) == 0 )
+  if ( (byte_48E1761 & 1) == 0 )
   {
-    sub_B775C4(&System_Math_TypeInfo);
-    byte_438CE8D = 1;
+    sub_1B00CCC(&System_Math_TypeInfo, method);
+    byte_48E1761 = 1;
   }
-  if ( (BYTE3(System_Math_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !System_Math_TypeInfo->_2.cctor_finished )
+  if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
   if ( intype >= 0 )
     return intype;

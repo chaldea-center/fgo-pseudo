@@ -1,3 +1,4 @@
+// local variable allocation has failed, the output may be wrong!
 void __fastcall EventPartyMargeUpValInfo___ctor(
         EventPartyMargeUpValInfo_o *this,
         int32_t eventId,
@@ -6,84 +7,37 @@ void __fastcall EventPartyMargeUpValInfo___ctor(
         System_Boolean_array *isFollowerList,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v11; // x24
-  System_String_array **v12; // x2
-  System_String_array **v13; // x3
-  System_Boolean_array **v14; // x4
-  System_Int32_array **v15; // x5
-  System_Int32_array *v16; // x6
-  System_Int32_array *v17; // x7
-  System_String_array **v18; // x2
-  System_String_array **v19; // x3
-  System_Boolean_array **v20; // x4
-  System_Int32_array **v21; // x5
-  System_Int32_array *v22; // x6
-  System_Int32_array *v23; // x7
-  System_String_array **v24; // x2
-  System_String_array **v25; // x3
-  System_Boolean_array **v26; // x4
-  System_Int32_array **v27; // x5
-  System_Int32_array *v28; // x6
-  System_Int32_array *v29; // x7
-  System_String_array **v30; // x2
-  System_String_array **v31; // x3
-  System_Boolean_array **v32; // x4
-  System_Int32_array **v33; // x5
-  System_Int32_array *v34; // x6
-  System_Int32_array *v35; // x7
+  __int64 v11; // x1
+  System_Collections_Generic_List_object__o *v12; // x24
+  int32_t v13; // w2
+  int32_t v14; // w3
+  int32_t v15; // w2
+  int32_t v16; // w3
+  int32_t v17; // w2
+  int32_t v18; // w3
+  int32_t v19; // w2
+  int32_t v20; // w3
 
-  if ( (byte_438B535 & 1) == 0 )
+  if ( (byte_48E23F3 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo___ctor__);
-    sub_B775C4(&System_Collections_Generic_List_EventMargeItemUpValInfo__TypeInfo);
-    byte_438B535 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo___ctor__, *(_QWORD *)&eventId);
+    sub_1B00CCC(&System_Collections_Generic_List_EventMargeItemUpValInfo__TypeInfo, v11);
+    byte_48E23F3 = 1;
   }
-  v11 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_EventMargeItemUpValInfo__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v11,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo___ctor__);
-  this->fields.margeList = (struct System_Collections_Generic_List_EventMargeItemUpValInfo__o *)v11;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.margeList,
-    (System_Int32_array **)v11,
+  v12 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_EventMargeItemUpValInfo__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
     v12,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17);
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo___ctor__);
+  this->fields.margeList = (struct System_Collections_Generic_List_EventMargeItemUpValInfo__o *)v12;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.margeList, (int32_t)v12, v13, v14);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.eventId = eventId;
   this->fields.svtEntityList = svtEntityList;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.svtEntityList,
-    (System_Int32_array **)svtEntityList,
-    v18,
-    v19,
-    v20,
-    v21,
-    v22,
-    v23);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.svtEntityList, (int32_t)svtEntityList, v15, v16);
   this->fields.servantNameList = servantNameList;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.servantNameList,
-    (System_Int32_array **)servantNameList,
-    v24,
-    v25,
-    v26,
-    v27,
-    v28,
-    v29);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.servantNameList, (int32_t)servantNameList, v17, v18);
   this->fields.isFollowerList = isFollowerList;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.isFollowerList,
-    (System_Int32_array **)isFollowerList,
-    v30,
-    v31,
-    v32,
-    v33,
-    v34,
-    v35);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.isFollowerList, (int32_t)isFollowerList, v19, v20);
 }
 
 
@@ -94,7 +48,6 @@ void __fastcall EventPartyMargeUpValInfo__Add(
 {
   __int64 v3; // x8
   unsigned __int64 v6; // x21
-  __int64 v7; // x0
 
   if ( dropItemInfoList )
   {
@@ -105,11 +58,8 @@ void __fastcall EventPartyMargeUpValInfo__Add(
       do
       {
         if ( v6 >= (unsigned int)v3 )
-        {
-          v7 = sub_B776C8(this);
-          sub_B77668(v7, 0LL);
-        }
-        EventPartyMargeUpValInfo__Add_25663008(this, dropItemInfoList->m_Items[v6], method);
+          sub_1B00F30(this, dropItemInfoList);
+        EventPartyMargeUpValInfo__Add_37671216(this, dropItemInfoList->m_Items[v6], method);
         LODWORD(v3) = dropItemInfoList->max_length;
         ++v6;
       }
@@ -119,342 +69,396 @@ void __fastcall EventPartyMargeUpValInfo__Add(
 }
 
 
-void __fastcall EventPartyMargeUpValInfo__Add_25663008(
+void __fastcall EventPartyMargeUpValInfo__Add_37671216(
         EventPartyMargeUpValInfo_o *this,
         EventDropItemUpValInfo_o *dropItemInfo,
         const MethodInfo *method)
 {
   EventPartyMargeUpValInfo_o *v4; // x20
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
   int32_t baseFuncType; // w8
   struct ServantEntity_array *svtEntityList; // x8
-  unsigned __int64 v7; // x21
+  unsigned __int64 v12; // x21
   unsigned __int64 max_length; // x9
   int32_t targetType; // w8
-  _BOOL4 v10; // w22
-  struct System_Boolean_array *isFollowerList; // x8
-  _BOOL8 v12; // x0
-  __int64 v13; // x1
-  EventMargeItemUpValInfo_o *v14; // x22
-  const MethodInfo_225C71C *v15; // x1
+  _BOOL4 v15; // w22
+  struct System_Boolean_array *v16; // x8
+  _BOOL8 v17; // x0
+  __int64 v18; // x1
+  Il2CppObject *v19; // x22
   struct System_String_array *servantNameList; // x8
-  struct System_Boolean_array *v17; // x9
-  System_String_o *v18; // x23
-  bool v19; // w24
-  int32_t rateCount; // w10
-  _BOOL8 v21; // x0
-  __int64 v22; // x1
-  EventMargeItemUpValInfo_o *current; // x21
-  _BOOL8 v24; // x0
-  __int64 v25; // x1
-  Il2CppObject *v26; // x21
-  _BOOL8 v27; // x0
-  __int64 v28; // x1
-  int32_t v29; // w8
-  int32_t v30; // w10
-  EventMargeItemUpValInfo_o *v31; // x21
-  __int64 v32; // x0
-  System_Collections_Generic_List_Enumerator_T__o v33[2]; // [xsp+0h] [xbp-B0h] BYREF
-  int v34; // [xsp+38h] [xbp-78h]
-  System_Collections_Generic_List_Enumerator_T__o v35; // [xsp+40h] [xbp-70h] BYREF
+  struct System_Boolean_array *isFollowerList; // x9
+  System_String_o *v22; // x23
+  bool v23; // w24
+  const MethodInfo *v24; // x6
+  int32_t v25; // w2
+  int32_t v26; // w3
+  __int64 v27; // x8
+  _QWORD *v28; // x9
+  __int64 svtEntityList_low; // x10
+  __int64 v30; // x8
+  int32x2_t v31; // d0
+  _BOOL8 v32; // x0
+  __int64 v33; // x1
+  Il2CppObject *current; // x21
+  _BOOL8 v35; // x0
+  __int64 v36; // x1
+  Il2CppObject *v37; // x22
+  int32_t rateCount; // w8
+  _BOOL8 v39; // x0
+  __int64 v40; // x1
+  const MethodInfo *v41; // x2
+  int32_t v42; // w2
+  int32_t v43; // w3
+  __int64 v44; // x8
+  _QWORD *v45; // x9
+  __int64 v46; // x10
+  __int64 v47; // x8
+  int32x2_t v48; // d0
+  EventMargeItemUpValInfo_o *v49; // x21
+  const MethodInfo *v50; // x2
+  int32_t v51; // w2
+  int32_t v52; // w3
+  __int64 v53; // x8
+  _QWORD *v54; // x9
+  __int64 v55; // x10
+  __int64 v56; // x8
+  System_Collections_Generic_List_Enumerator_object__o v57; // [xsp+8h] [xbp-98h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v58; // [xsp+20h] [xbp-80h] BYREF
 
   v4 = this;
-  if ( (byte_438B539 & 1) == 0 )
+  if ( (byte_48E23F7 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__Dispose__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__MoveNext__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__get_Current__);
-    sub_B775C4(&EventMargeItemUpValInfo_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Add__);
-    this = (EventPartyMargeUpValInfo_o *)sub_B775C4(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__GetEnumerator__);
-    byte_438B539 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__Dispose__, dropItemInfo);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__MoveNext__, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__get_Current__, v6);
+    sub_1B00CCC(&EventMargeItemUpValInfo_TypeInfo, v7);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Add__, v8);
+    this = (EventPartyMargeUpValInfo_o *)sub_1B00CCC(
+                                           &Method_System_Collections_Generic_List_EventMargeItemUpValInfo__GetEnumerator__,
+                                           v9);
+    byte_48E23F7 = 1;
   }
-  memset(&v35, 0, sizeof(v35));
-  v34 = 0;
-  if ( !dropItemInfo || dropItemInfo->fields.eventId != v4->fields.eventId )
-    return;
-  baseFuncType = dropItemInfo->fields.baseFuncType;
-  if ( baseFuncType > 113 )
+  memset(&v58, 0, sizeof(v58));
+  if ( dropItemInfo && dropItemInfo->fields.eventId == v4->fields.eventId )
   {
-    if ( (unsigned int)(baseFuncType - 114) < 2 )
+    baseFuncType = dropItemInfo->fields.baseFuncType;
+    if ( baseFuncType > 113 )
     {
-      this = (EventPartyMargeUpValInfo_o *)v4->fields.margeList;
-      if ( !this )
-        goto LABEL_76;
-      System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-        v33,
-        (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)this,
-        (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__GetEnumerator__);
-      v35 = v33[0];
-      while ( 1 )
+      if ( (unsigned int)(baseFuncType - 114) < 2 )
       {
-        v21 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-                &v35,
-                (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__MoveNext__);
-        if ( !v21 )
-          break;
-        current = (EventMargeItemUpValInfo_o *)v35.fields.current;
-        if ( !v35.fields.current )
-          sub_B7769C(v21, v22);
-        if ( LODWORD(v35.fields.current[3].monitor) == dropItemInfo->fields.baseFuncId )
-          goto LABEL_70;
-      }
-      current = 0LL;
-LABEL_70:
-      *((_DWORD *)&v33[1].fields.list + v34++) = 491;
-      System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-        &v35,
-        (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__Dispose__);
-      if ( v34 && *((_DWORD *)&v33[0].fields.current + v34 + 1) == 491 )
-        --v34;
-      if ( current )
-        goto LABEL_95;
-      goto LABEL_74;
-    }
-    if ( baseFuncType == 129 )
-      goto LABEL_9;
-  }
-  else if ( (unsigned int)baseFuncType <= 0x10 && ((1 << baseFuncType) & 0x10082) != 0 || baseFuncType == 111 )
-  {
-LABEL_9:
-    svtEntityList = v4->fields.svtEntityList;
-    if ( svtEntityList )
-    {
-      v7 = 0LL;
-      while ( 1 )
-      {
-        max_length = svtEntityList->max_length;
-        if ( (__int64)v7 >= (int)max_length )
-          return;
-        if ( v7 >= max_length )
-          goto LABEL_100;
-        this = (EventPartyMargeUpValInfo_o *)svtEntityList->m_Items[v7];
-        if ( !this )
-          goto LABEL_50;
-        targetType = dropItemInfo->fields.targetType;
-        if ( targetType <= 3 )
-          break;
-        if ( targetType == 7 )
-          goto LABEL_20;
-        if ( targetType != 14 )
-          goto LABEL_21;
-        v10 = v7 != dropItemInfo->fields.member;
-LABEL_23:
-        if ( dropItemInfo->fields.baseFuncType == 111 )
-        {
-          this = (EventPartyMargeUpValInfo_o *)ServantEntity__checkIsHeroineSvt((ServantEntity_o *)this, 0LL);
-          if ( ((unsigned __int8)this & 1) != 0 )
-            goto LABEL_50;
-          isFollowerList = v4->fields.isFollowerList;
-          if ( !isFollowerList )
-            goto LABEL_76;
-          if ( v7 >= isFollowerList->max_length )
-            goto LABEL_100;
-          if ( isFollowerList->m_Items[v7 + 4] || !v10 )
-            goto LABEL_50;
-        }
-        else if ( !v10 )
-        {
-          goto LABEL_50;
-        }
         this = (EventPartyMargeUpValInfo_o *)v4->fields.margeList;
         if ( !this )
-          goto LABEL_76;
-        System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-          v33,
-          (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)this,
-          (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__GetEnumerator__);
-        v35 = v33[0];
+          goto LABEL_90;
+        System_Collections_Generic_List_object___GetEnumerator(
+          (System_Collections_Generic_List_Enumerator_T__o *)&v57,
+          (System_Collections_Generic_List_object__o *)this,
+          (const MethodInfo_33C24C8 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__GetEnumerator__);
+        v58 = v57;
+        do
+        {
+          v32 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+                  &v58,
+                  (const MethodInfo_313E218 *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__MoveNext__);
+          if ( !v32 )
+            goto LABEL_76;
+          current = v58.fields._current;
+          if ( !v58.fields._current )
+            sub_1B00F28(v32, v33);
+        }
+        while ( LODWORD(v58.fields._current[3].monitor) != dropItemInfo->fields.baseFuncId );
+LABEL_59:
+        System_Collections_Generic_List_Enumerator_object___Dispose(
+          &v58,
+          (const MethodInfo_313E214 *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__Dispose__);
+        goto LABEL_82;
+      }
+      if ( baseFuncType == 129 )
+        goto LABEL_9;
+    }
+    else if ( (unsigned int)baseFuncType <= 0x10 && ((1 << baseFuncType) & 0x10082) != 0 || baseFuncType == 111 )
+    {
+LABEL_9:
+      svtEntityList = v4->fields.svtEntityList;
+      if ( svtEntityList )
+      {
+        v12 = 0LL;
         while ( 1 )
         {
-          v12 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-                  &v35,
-                  (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__MoveNext__);
-          if ( !v12 )
+          max_length = svtEntityList->max_length;
+          if ( (__int64)v12 >= (int)max_length )
+            return;
+          if ( v12 >= max_length )
+            goto LABEL_91;
+          this = (EventPartyMargeUpValInfo_o *)svtEntityList->m_Items[v12];
+          if ( this )
             break;
-          v14 = (EventMargeItemUpValInfo_o *)v35.fields.current;
-          if ( !v35.fields.current )
-            sub_B7769C(v12, v13);
-          if ( v7 == HIDWORD(v35.fields.current[1].klass)
-            && LODWORD(v35.fields.current[3].monitor) == dropItemInfo->fields.baseFuncId )
+LABEL_50:
+          svtEntityList = v4->fields.svtEntityList;
+          ++v12;
+          if ( !svtEntityList )
+            goto LABEL_90;
+        }
+        targetType = dropItemInfo->fields.targetType;
+        if ( targetType <= 3 )
+        {
+          if ( !targetType )
           {
-            goto LABEL_39;
+            v15 = v12 == dropItemInfo->fields.member;
+LABEL_24:
+            if ( dropItemInfo->fields.baseFuncType != 111 )
+            {
+              if ( !v15 )
+                goto LABEL_50;
+              goto LABEL_32;
+            }
+            goto LABEL_25;
+          }
+          if ( targetType != 3 )
+          {
+LABEL_22:
+            v15 = 0;
+            goto LABEL_24;
           }
         }
-        v14 = 0LL;
-LABEL_39:
-        v15 = (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__Dispose__;
-        *((_DWORD *)&v33[1].fields.list + v34++) = 279;
-        System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(&v35, v15);
-        if ( v34 && *((_DWORD *)&v33[0].fields.current + v34 + 1) == 279 )
-          --v34;
-        if ( !v14 )
+        else if ( targetType != 7 )
         {
-          servantNameList = v4->fields.servantNameList;
-          if ( !servantNameList )
-            goto LABEL_76;
-          if ( v7 >= servantNameList->max_length )
-            goto LABEL_100;
-          v17 = v4->fields.isFollowerList;
-          if ( !v17 )
-            goto LABEL_76;
-          if ( v7 >= v17->max_length )
+          if ( targetType == 14 )
           {
-LABEL_100:
-            v32 = sub_B776C8(this);
-            sub_B77668(v32, 0LL);
+            v15 = v12 != dropItemInfo->fields.member;
+            goto LABEL_24;
           }
-          v18 = servantNameList->m_Items[v7];
-          v19 = v17->m_Items[v7 + 4];
-          v14 = (EventMargeItemUpValInfo_o *)sub_B77694(EventMargeItemUpValInfo_TypeInfo);
-          EventMargeItemUpValInfo___ctor_27730332(v14, v7, v18, v19, 0, dropItemInfo, 0LL);
+          goto LABEL_22;
+        }
+        if ( dropItemInfo->fields.baseFuncType != 111 )
+        {
+LABEL_32:
           this = (EventPartyMargeUpValInfo_o *)v4->fields.margeList;
           if ( !this )
-            goto LABEL_76;
-          System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-            (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this,
-            (EventMissionProgressRequest_Argument_ProgressData_o *)v14,
-            (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Add__);
-          if ( !v14 )
-            goto LABEL_76;
+            goto LABEL_90;
+          System_Collections_Generic_List_object___GetEnumerator(
+            (System_Collections_Generic_List_Enumerator_T__o *)&v57,
+            (System_Collections_Generic_List_object__o *)this,
+            (const MethodInfo_33C24C8 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__GetEnumerator__);
+          v58 = v57;
+          while ( 1 )
+          {
+            v17 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+                    &v58,
+                    (const MethodInfo_313E218 *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__MoveNext__);
+            if ( !v17 )
+              break;
+            v19 = v58.fields._current;
+            if ( !v58.fields._current )
+              sub_1B00F28(v17, v18);
+            if ( v12 == HIDWORD(v58.fields._current[1].klass)
+              && LODWORD(v58.fields._current[3].monitor) == dropItemInfo->fields.baseFuncId )
+            {
+              System_Collections_Generic_List_Enumerator_object___Dispose(
+                &v58,
+                (const MethodInfo_313E214 *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__Dispose__);
+              goto LABEL_49;
+            }
+          }
+          System_Collections_Generic_List_Enumerator_object___Dispose(
+            &v58,
+            (const MethodInfo_313E214 *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__Dispose__);
+          servantNameList = v4->fields.servantNameList;
+          if ( !servantNameList )
+            goto LABEL_90;
+          if ( v12 >= servantNameList->max_length )
+            goto LABEL_91;
+          isFollowerList = v4->fields.isFollowerList;
+          if ( !isFollowerList )
+            goto LABEL_90;
+          if ( v12 >= isFollowerList->max_length )
+            goto LABEL_91;
+          v22 = servantNameList->m_Items[v12];
+          v23 = isFollowerList->m_Items[v12 + 4];
+          v19 = (Il2CppObject *)sub_1B00F18(EventMargeItemUpValInfo_TypeInfo);
+          EventMargeItemUpValInfo___ctor_37664284((EventMargeItemUpValInfo_o *)v19, v12, v22, v23, 0, dropItemInfo, v24);
+          this = (EventPartyMargeUpValInfo_o *)v4->fields.margeList;
+          if ( !this )
+            goto LABEL_90;
+          v27 = *(_QWORD *)&this->fields.eventId;
+          v28 = Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Add__;
+          ++HIDWORD(this->fields.svtEntityList);
+          if ( !v27 )
+            goto LABEL_90;
+          svtEntityList_low = SLODWORD(this->fields.svtEntityList);
+          if ( (unsigned int)svtEntityList_low >= *(_DWORD *)(v27 + 24) )
+          {
+            System_Collections_Generic_List_object___AddWithResize(
+              (System_Collections_Generic_List_object__o *)this,
+              v19,
+              *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+          }
+          else
+          {
+            v30 = v27 + 8 * svtEntityList_low;
+            LODWORD(this->fields.svtEntityList) = svtEntityList_low + 1;
+            *(_QWORD *)(v30 + 32) = v19;
+            sub_1B00C70((ServantStatusBattleListViewItem_o *)(v30 + 32), (int32_t)v19, v25, v26);
+          }
+          if ( !v19 )
+            goto LABEL_90;
+LABEL_49:
+          v31.n64_u64[0] = *(unsigned __int64 *)((char *)&v19[5].monitor + 4);
+          LOBYTE(v19[5].monitor) |= dropItemInfo->fields.isEquipUp;
+          *(int32x2_t *)((char *)&v19[5].monitor + 4) = vadd_s32(*(int32x2_t *)&dropItemInfo->fields.addCount, v31);
+          goto LABEL_50;
         }
-        v14->fields.isEquipUp |= dropItemInfo->fields.isEquipUp;
-        rateCount = v14->fields.rateCount;
-        v14->fields.addCount += dropItemInfo->fields.addCount;
-        v14->fields.rateCount = dropItemInfo->fields.rateCount + rateCount;
-LABEL_50:
-        svtEntityList = v4->fields.svtEntityList;
-        ++v7;
-        if ( !svtEntityList )
-          goto LABEL_76;
+        v15 = 1;
+LABEL_25:
+        this = (EventPartyMargeUpValInfo_o *)ServantEntity__checkIsHeroineSvt((ServantEntity_o *)this, 0LL);
+        if ( ((unsigned __int8)this & 1) != 0 )
+          goto LABEL_50;
+        v16 = v4->fields.isFollowerList;
+        if ( !v16 )
+          goto LABEL_90;
+        if ( v12 >= v16->max_length )
+LABEL_91:
+          sub_1B00F30(this, dropItemInfo);
+        if ( v16->m_Items[v12 + 4] || !v15 )
+          goto LABEL_50;
+        goto LABEL_32;
       }
-      if ( !targetType )
-      {
-        v10 = v7 == dropItemInfo->fields.member;
-        goto LABEL_23;
-      }
-      if ( targetType != 3 )
-      {
-LABEL_21:
-        v10 = 0;
-        goto LABEL_23;
-      }
-LABEL_20:
-      v10 = 1;
-      goto LABEL_23;
+      goto LABEL_90;
     }
-LABEL_76:
-    sub_B7769C(this, dropItemInfo);
-  }
-  this = (EventPartyMargeUpValInfo_o *)v4->fields.margeList;
-  if ( !this )
-    goto LABEL_76;
-  if ( baseFuncType != 116 )
-  {
-    System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-      v33,
-      (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)this,
-      (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__GetEnumerator__);
-    v35 = v33[0];
+    this = (EventPartyMargeUpValInfo_o *)v4->fields.margeList;
+    if ( !this )
+      goto LABEL_90;
+    if ( baseFuncType == 116 )
+    {
+      System_Collections_Generic_List_object___GetEnumerator(
+        (System_Collections_Generic_List_Enumerator_T__o *)&v57,
+        (System_Collections_Generic_List_object__o *)this,
+        (const MethodInfo_33C24C8 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__GetEnumerator__);
+      v58 = v57;
+      while ( 1 )
+      {
+        v35 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+                &v58,
+                (const MethodInfo_313E218 *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__MoveNext__);
+        if ( !v35 )
+          break;
+        v37 = v58.fields._current;
+        if ( !v58.fields._current )
+          sub_1B00F28(v35, v36);
+        if ( LODWORD(v58.fields._current[3].monitor) == dropItemInfo->fields.baseFuncId
+          && v58.fields._current[5].klass == (Il2CppClass *)dropItemInfo->fields.itemEntity )
+        {
+          System_Collections_Generic_List_Enumerator_object___Dispose(
+            &v58,
+            (const MethodInfo_313E214 *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__Dispose__);
+          rateCount = dropItemInfo->fields.rateCount;
+          if ( SLODWORD(v37[6].klass) > rateCount )
+          {
+            LODWORD(v37[6].klass) = rateCount;
+            LOBYTE(v37[5].monitor) = dropItemInfo->fields.isEquipUp;
+          }
+          return;
+        }
+      }
+      System_Collections_Generic_List_Enumerator_object___Dispose(
+        &v58,
+        (const MethodInfo_313E214 *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__Dispose__);
+      v49 = (EventMargeItemUpValInfo_o *)sub_1B00F18(EventMargeItemUpValInfo_TypeInfo);
+      EventMargeItemUpValInfo___ctor(v49, dropItemInfo, v50);
+      if ( v49 )
+      {
+        v49->fields.rateCount = dropItemInfo->fields.rateCount;
+        v49->fields.isEquipUp = dropItemInfo->fields.isEquipUp;
+        this = (EventPartyMargeUpValInfo_o *)v4->fields.margeList;
+        if ( this )
+        {
+          v53 = *(_QWORD *)&this->fields.eventId;
+          v54 = Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Add__;
+          ++HIDWORD(this->fields.svtEntityList);
+          if ( v53 )
+          {
+            v55 = SLODWORD(this->fields.svtEntityList);
+            if ( (unsigned int)v55 >= *(_DWORD *)(v53 + 24) )
+            {
+              System_Collections_Generic_List_object___AddWithResize(
+                (System_Collections_Generic_List_object__o *)this,
+                (Il2CppObject *)v49,
+                *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v54[4] + 192LL) + 112LL));
+            }
+            else
+            {
+              v56 = v53 + 8 * v55;
+              LODWORD(this->fields.svtEntityList) = v55 + 1;
+              *(_QWORD *)(v56 + 32) = v49;
+              sub_1B00C70((ServantStatusBattleListViewItem_o *)(v56 + 32), (int32_t)v49, v51, v52);
+            }
+            return;
+          }
+        }
+      }
+      goto LABEL_90;
+    }
+    System_Collections_Generic_List_object___GetEnumerator(
+      (System_Collections_Generic_List_Enumerator_T__o *)&v57,
+      (System_Collections_Generic_List_object__o *)this,
+      (const MethodInfo_33C24C8 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__GetEnumerator__);
+    v58 = v57;
     while ( 1 )
     {
-      v27 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-              &v35,
-              (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__MoveNext__);
-      if ( !v27 )
+      v39 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+              &v58,
+              (const MethodInfo_313E218 *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__MoveNext__);
+      if ( !v39 )
         break;
-      current = (EventMargeItemUpValInfo_o *)v35.fields.current;
-      if ( !v35.fields.current )
-        sub_B7769C(v27, v28);
-      if ( LODWORD(v35.fields.current[3].monitor) == dropItemInfo->fields.baseFuncId
-        && v35.fields.current[5].klass == (Il2CppClass *)dropItemInfo->fields.itemEntity )
+      current = v58.fields._current;
+      if ( !v58.fields._current )
+        sub_1B00F28(v39, v40);
+      if ( LODWORD(v58.fields._current[3].monitor) == dropItemInfo->fields.baseFuncId
+        && v58.fields._current[5].klass == (Il2CppClass *)dropItemInfo->fields.itemEntity )
       {
-        goto LABEL_91;
+        goto LABEL_59;
       }
     }
-    current = 0LL;
-LABEL_91:
-    *((_DWORD *)&v33[1].fields.list + v34++) = 863;
-    System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-      &v35,
-      (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__Dispose__);
-    if ( v34 && *((_DWORD *)&v33[0].fields.current + v34 + 1) == 863 )
-      --v34;
-    if ( current )
-    {
-LABEL_95:
-      current->fields.isEquipUp |= dropItemInfo->fields.isEquipUp;
-      v30 = current->fields.rateCount;
-      current->fields.addCount += dropItemInfo->fields.addCount;
-      current->fields.rateCount = dropItemInfo->fields.rateCount + v30;
-      return;
-    }
-LABEL_74:
-    current = (EventMargeItemUpValInfo_o *)sub_B77694(EventMargeItemUpValInfo_TypeInfo);
-    EventMargeItemUpValInfo___ctor(current, dropItemInfo, 0LL);
+LABEL_76:
+    System_Collections_Generic_List_Enumerator_object___Dispose(
+      &v58,
+      (const MethodInfo_313E214 *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__Dispose__);
+    current = (Il2CppObject *)sub_1B00F18(EventMargeItemUpValInfo_TypeInfo);
+    EventMargeItemUpValInfo___ctor((EventMargeItemUpValInfo_o *)current, dropItemInfo, v41);
     this = (EventPartyMargeUpValInfo_o *)v4->fields.margeList;
     if ( !this )
-      goto LABEL_76;
-    System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-      (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this,
-      (EventMissionProgressRequest_Argument_ProgressData_o *)current,
-      (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Add__);
+      goto LABEL_90;
+    v44 = *(_QWORD *)&this->fields.eventId;
+    v45 = Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Add__;
+    ++HIDWORD(this->fields.svtEntityList);
+    if ( !v44 )
+      goto LABEL_90;
+    v46 = SLODWORD(this->fields.svtEntityList);
+    if ( (unsigned int)v46 >= *(_DWORD *)(v44 + 24) )
+    {
+      System_Collections_Generic_List_object___AddWithResize(
+        (System_Collections_Generic_List_object__o *)this,
+        current,
+        *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
+    }
+    else
+    {
+      v47 = v44 + 8 * v46;
+      LODWORD(this->fields.svtEntityList) = v46 + 1;
+      *(_QWORD *)(v47 + 32) = current;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v47 + 32), (int32_t)current, v42, v43);
+    }
     if ( !current )
-      goto LABEL_76;
-    goto LABEL_95;
-  }
-  System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-    v33,
-    (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)this,
-    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__GetEnumerator__);
-  v35 = v33[0];
-  while ( 1 )
-  {
-    v24 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-            &v35,
-            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__MoveNext__);
-    if ( !v24 )
-      break;
-    v26 = v35.fields.current;
-    if ( !v35.fields.current )
-      sub_B7769C(v24, v25);
-    if ( LODWORD(v35.fields.current[3].monitor) == dropItemInfo->fields.baseFuncId
-      && v35.fields.current[5].klass == (Il2CppClass *)dropItemInfo->fields.itemEntity )
-    {
-      goto LABEL_84;
-    }
-  }
-  v26 = 0LL;
-LABEL_84:
-  *((_DWORD *)&v33[1].fields.list + v34++) = 678;
-  System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-    &v35,
-    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_EventMargeItemUpValInfo__Dispose__);
-  if ( v34 && *((_DWORD *)&v33[0].fields.current + v34 + 1) == 678 )
-    --v34;
-  if ( v26 )
-  {
-    v29 = dropItemInfo->fields.rateCount;
-    if ( SLODWORD(v26[6].klass) > v29 )
-    {
-      LODWORD(v26[6].klass) = v29;
-      LOBYTE(v26[5].monitor) = dropItemInfo->fields.isEquipUp;
-    }
-  }
-  else
-  {
-    v31 = (EventMargeItemUpValInfo_o *)sub_B77694(EventMargeItemUpValInfo_TypeInfo);
-    EventMargeItemUpValInfo___ctor(v31, dropItemInfo, 0LL);
-    if ( !v31 )
-      goto LABEL_76;
-    v31->fields.rateCount = dropItemInfo->fields.rateCount;
-    v31->fields.isEquipUp = dropItemInfo->fields.isEquipUp;
-    this = (EventPartyMargeUpValInfo_o *)v4->fields.margeList;
-    if ( !this )
-      goto LABEL_76;
-    System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-      (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this,
-      (EventMissionProgressRequest_Argument_ProgressData_o *)v31,
-      (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Add__);
+LABEL_90:
+      sub_1B00F28(this, dropItemInfo);
+LABEL_82:
+    v48.n64_u64[0] = *(unsigned __int64 *)((char *)&current[5].monitor + 4);
+    LOBYTE(current[5].monitor) |= dropItemInfo->fields.isEquipUp;
+    *(int32x2_t *)((char *)&current[5].monitor + 4) = vadd_s32(*(int32x2_t *)&dropItemInfo->fields.addCount, v48);
   }
 }
 
@@ -465,14 +469,16 @@ int32_t __fastcall EventPartyMargeUpValInfo__GetCount(EventPartyMargeUpValInfo_o
   struct System_Collections_Generic_List_EventMargeItemUpValInfo__o *margeList; // x8
 
   v2 = this;
-  if ( (byte_438B537 & 1) == 0 )
+  if ( (byte_48E23F5 & 1) == 0 )
   {
-    this = (EventPartyMargeUpValInfo_o *)sub_B775C4(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__get_Count__);
-    byte_438B537 = 1;
+    this = (EventPartyMargeUpValInfo_o *)sub_1B00CCC(
+                                           &Method_System_Collections_Generic_List_EventMargeItemUpValInfo__get_Count__,
+                                           method);
+    byte_48E23F5 = 1;
   }
   margeList = v2->fields.margeList;
   if ( !margeList )
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   return margeList->fields._size;
 }
 
@@ -481,77 +487,61 @@ EventMargeItemUpValInfo_array *__fastcall EventPartyMargeUpValInfo__GetList(
         EventPartyMargeUpValInfo_o *this,
         const MethodInfo *method)
 {
-  struct System_Collections_Generic_List_EventMargeItemUpValInfo__o *margeList; // x20
-  void *v4; // x0
-  struct EventPartyMargeUpValInfo___c_StaticFields *static_fields; // x8
-  System_Comparison_TitleInfoControl_EventEndTimeInfo__o *_9__11_0; // x21
-  Il2CppObject *v7; // x22
-  struct EventPartyMargeUpValInfo___c_StaticFields *v8; // x0
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  void *v7; // x0
+  System_Collections_Generic_List_object__o *margeList; // x20
+  System_Comparison_T__o *v9; // x21
+  Il2CppObject *v10; // x22
+  struct EventPartyMargeUpValInfo___c_StaticFields *static_fields; // x0
+  int32_t v12; // w2
+  int32_t v13; // w3
 
-  if ( (byte_438B53A & 1) == 0 )
+  if ( (byte_48E23F8 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Comparison_EventMargeItemUpValInfo___ctor__);
-    sub_B775C4(&System_Comparison_EventMargeItemUpValInfo__TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Sort__);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__ToArray__);
-    sub_B775C4(&Method_EventPartyMargeUpValInfo___c__GetList_b__11_0__);
-    sub_B775C4(&EventPartyMargeUpValInfo___c_TypeInfo);
-    byte_438B53A = 1;
+    sub_1B00CCC(&System_Comparison_EventMargeItemUpValInfo__TypeInfo, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Sort__, v3);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__ToArray__, v4);
+    sub_1B00CCC(&Method_EventPartyMargeUpValInfo___c__GetList_b__11_0__, v5);
+    sub_1B00CCC(&EventPartyMargeUpValInfo___c_TypeInfo, v6);
+    byte_48E23F8 = 1;
   }
-  margeList = this->fields.margeList;
-  v4 = EventPartyMargeUpValInfo___c_TypeInfo;
-  if ( (BYTE3(EventPartyMargeUpValInfo___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !EventPartyMargeUpValInfo___c_TypeInfo->_2.cctor_finished )
+  v7 = EventPartyMargeUpValInfo___c_TypeInfo;
+  margeList = (System_Collections_Generic_List_object__o *)this->fields.margeList;
+  if ( !EventPartyMargeUpValInfo___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EventPartyMargeUpValInfo___c_TypeInfo);
-    v4 = EventPartyMargeUpValInfo___c_TypeInfo;
+    v7 = EventPartyMargeUpValInfo___c_TypeInfo;
   }
-  static_fields = (struct EventPartyMargeUpValInfo___c_StaticFields *)*((_QWORD *)v4 + 23);
-  _9__11_0 = (System_Comparison_TitleInfoControl_EventEndTimeInfo__o *)static_fields->__9__11_0;
-  if ( !_9__11_0 )
+  v9 = *(System_Comparison_T__o **)(*((_QWORD *)v7 + 23) + 8LL);
+  if ( !v9 )
   {
-    if ( (*((_BYTE *)v4 + 307) & 4) != 0 && !*((_DWORD *)v4 + 56) )
+    if ( !*((_DWORD *)v7 + 56) )
     {
-      j_il2cpp_runtime_class_init_0(v4);
-      static_fields = EventPartyMargeUpValInfo___c_TypeInfo->static_fields;
+      j_il2cpp_runtime_class_init_0(v7);
+      v7 = EventPartyMargeUpValInfo___c_TypeInfo;
     }
-    v7 = (Il2CppObject *)static_fields->__9;
-    _9__11_0 = (System_Comparison_TitleInfoControl_EventEndTimeInfo__o *)sub_B77694(System_Comparison_EventMargeItemUpValInfo__TypeInfo);
-    System_Comparison_TitleInfoControl_EventEndTimeInfo____ctor(
-      _9__11_0,
-      v7,
-      Method_EventPartyMargeUpValInfo___c__GetList_b__11_0__,
-      (const MethodInfo_2B42C0C *)Method_System_Comparison_EventMargeItemUpValInfo___ctor__);
-    v8 = EventPartyMargeUpValInfo___c_TypeInfo->static_fields;
-    v8->__9__11_0 = (struct System_Comparison_EventMargeItemUpValInfo__o *)_9__11_0;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&v8->__9__11_0,
-      (System_Int32_array **)_9__11_0,
-      v9,
-      v10,
-      v11,
-      v12,
-      v13,
-      v14);
+    v10 = (Il2CppObject *)**((_QWORD **)v7 + 23);
+    v9 = (System_Comparison_T__o *)sub_1B00F18(System_Comparison_EventMargeItemUpValInfo__TypeInfo);
+    System_Comparison_object____ctor(v9, v10, Method_EventPartyMargeUpValInfo___c__GetList_b__11_0__, 0LL);
+    static_fields = EventPartyMargeUpValInfo___c_TypeInfo->static_fields;
+    static_fields->__9__11_0 = (struct System_Comparison_EventMargeItemUpValInfo__o *)v9;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->__9__11_0, (int32_t)v9, v12, v13);
   }
   if ( !margeList
-    || (System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo___Sort(
-          (System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__o *)margeList,
-          (System_Comparison_T__o *)_9__11_0,
-          (const MethodInfo_3055374 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Sort__),
-        (v4 = this->fields.margeList) == 0LL) )
+    || (System_Collections_Generic_List_object___Sort_54277268(
+          margeList,
+          v9,
+          (const MethodInfo_33C3494 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Sort__),
+        (v7 = this->fields.margeList) == 0LL) )
   {
-    sub_B7769C(v4, method);
+    sub_1B00F28(v7, method);
   }
-  return (EventMargeItemUpValInfo_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
-                                            (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v4,
-                                            (const MethodInfo_30553E4 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__ToArray__);
+  return (EventMargeItemUpValInfo_array *)System_Collections_Generic_List_object___ToArray(
+                                            (System_Collections_Generic_List_object__o *)v7,
+                                            (const MethodInfo_33C3528 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__ToArray__);
 }
 
 
@@ -561,26 +551,25 @@ EventMargeItemUpValInfo_o *__fastcall EventPartyMargeUpValInfo__GetMargeItem(
         int32_t index,
         const MethodInfo *method)
 {
-  EventPartyMargeUpValInfo_o *v4; // x20
-  struct System_Collections_Generic_List_EventMargeItemUpValInfo__o *margeList; // x20
-  int32_t size; // w8
+  __int64 v5; // x1
+  System_Collections_Generic_List_object__o *margeList; // x0
 
-  v4 = this;
-  if ( (byte_438B538 & 1) == 0 )
+  if ( (byte_48E23F6 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__get_Count__);
-    this = (EventPartyMargeUpValInfo_o *)sub_B775C4(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__get_Item__);
-    byte_438B538 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__get_Count__, *(_QWORD *)&index);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__get_Item__, v5);
+    byte_48E23F6 = 1;
   }
-  margeList = v4->fields.margeList;
+  margeList = (System_Collections_Generic_List_object__o *)this->fields.margeList;
   if ( !margeList )
-    sub_B7769C(this, *(_QWORD *)&index);
-  size = margeList->fields._size;
-  if ( size <= index )
+    sub_1B00F28(0LL, *(_QWORD *)&index);
+  if ( margeList->fields._size <= index )
     return 0LL;
-  if ( size <= (unsigned int)index )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-  return margeList->fields._items->m_Items[index];
+  else
+    return (EventMargeItemUpValInfo_o *)System_Collections_Generic_List_object___get_Item(
+                                          margeList,
+                                          index,
+                                          (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__get_Item__);
 }
 
 
@@ -590,33 +579,40 @@ bool __fastcall EventPartyMargeUpValInfo__IsEmpry(EventPartyMargeUpValInfo_o *th
   struct System_Collections_Generic_List_EventMargeItemUpValInfo__o *margeList; // x8
 
   v2 = this;
-  if ( (byte_438B536 & 1) == 0 )
+  if ( (byte_48E23F4 & 1) == 0 )
   {
-    this = (EventPartyMargeUpValInfo_o *)sub_B775C4(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__get_Count__);
-    byte_438B536 = 1;
+    this = (EventPartyMargeUpValInfo_o *)sub_1B00CCC(
+                                           &Method_System_Collections_Generic_List_EventMargeItemUpValInfo__get_Count__,
+                                           method);
+    byte_48E23F4 = 1;
   }
   margeList = v2->fields.margeList;
   if ( !margeList )
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   return margeList->fields._size < 1;
 }
 
 
 void __fastcall EventPartyMargeUpValInfo___c___cctor(const MethodInfo *method)
 {
-  Il2CppObject *v1; // x19
-  struct EventPartyMargeUpValInfo___c_StaticFields *static_fields; // x0
+  __int64 v1; // x1
+  Il2CppObject *v2; // x19
+  int32_t v3; // w2
+  int32_t v4; // w3
 
-  if ( (byte_4387FE4 & 1) == 0 )
+  if ( (byte_48E23F9 & 1) == 0 )
   {
-    sub_B775C4(&EventPartyMargeUpValInfo___c_TypeInfo);
-    byte_4387FE4 = 1;
+    sub_1B00CCC(&EventPartyMargeUpValInfo___c_TypeInfo, v1);
+    byte_48E23F9 = 1;
   }
-  v1 = (Il2CppObject *)sub_B77694(EventPartyMargeUpValInfo___c_TypeInfo);
-  System_Object___ctor(v1, 0LL);
-  static_fields = EventPartyMargeUpValInfo___c_TypeInfo->static_fields;
-  static_fields->__9 = (struct EventPartyMargeUpValInfo___c_o *)v1;
-  sub_B77560(static_fields);
+  v2 = (Il2CppObject *)sub_1B00F18(EventPartyMargeUpValInfo___c_TypeInfo);
+  System_Object___ctor(v2, 0LL);
+  EventPartyMargeUpValInfo___c_TypeInfo->static_fields->__9 = (struct EventPartyMargeUpValInfo___c_o *)v2;
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)EventPartyMargeUpValInfo___c_TypeInfo->static_fields,
+    (int32_t)v2,
+    v3,
+    v4);
 }
 
 
@@ -633,6 +629,6 @@ int32_t __fastcall EventPartyMargeUpValInfo___c___GetList_b__11_0(
         const MethodInfo *method)
 {
   if ( !a )
-    sub_B7769C(this, 0LL);
-  return EventMargeItemUpValInfo__CompPartyPriority(a, b, 0LL);
+    sub_1B00F28(this, 0LL);
+  return EventMargeItemUpValInfo__CompPartyPriority(a, b, (const MethodInfo *)b);
 }

@@ -4,16 +4,12 @@ void __fastcall OrganizationTopListViewItem___ctor(
         OrganizationTopItemInfo_o *info,
         const MethodInfo *method)
 {
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  int32_t v6; // w2
+  int32_t v7; // w3
 
-  ListViewItem___ctor_24167012((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_39415512((ListViewItem_o *)this, index, 0LL);
   this->fields.info = info;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.info, (System_Int32_array **)info, v6, v7, v8, v9, v10, v11);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.info, (int32_t)info, v6, v7);
 }
 
 
@@ -31,15 +27,15 @@ System_String_o *__fastcall OrganizationTopListViewItem__ToString(
   struct OrganizationTopItemInfo_o *info; // x8
 
   v2 = this;
-  if ( (byte_438A2C6 & 1) == 0 )
+  if ( (byte_48DE74D & 1) == 0 )
   {
-    this = (OrganizationTopListViewItem_o *)sub_B775C4(&StringLiteral_10331/*"OrganizationTopItem "*/);
-    byte_438A2C6 = 1;
+    this = (OrganizationTopListViewItem_o *)sub_1B00CCC(&StringLiteral_9945/*"OrganizationTopItem "*/, method);
+    byte_48DE74D = 1;
   }
   info = v2->fields.info;
   if ( !info )
-    sub_B7769C(this, method);
-  return System_String__Concat_44901936((System_String_o *)StringLiteral_10331/*"OrganizationTopItem "*/, info->fields.textCode, 0LL);
+    sub_1B00F28(this, method);
+  return System_String__Concat_60325748((System_String_o *)StringLiteral_9945/*"OrganizationTopItem "*/, info->fields.textCode, 0LL);
 }
 
 
@@ -51,7 +47,7 @@ System_String_o *__fastcall OrganizationTopListViewItem__get_EventData(
 
   info = this->fields.info;
   if ( !info )
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   return info->fields.eventData;
 }
 
@@ -64,7 +60,7 @@ System_String_o *__fastcall OrganizationTopListViewItem__get_ImageName(
 
   info = this->fields.info;
   if ( !info )
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   return info->fields.imageName;
 }
 
@@ -86,19 +82,16 @@ System_String_o *__fastcall OrganizationTopListViewItem__get_InfoText(
   System_String_o *textCode; // x19
 
   v2 = this;
-  if ( (byte_438A2C5 & 1) == 0 )
+  if ( (byte_48DE74C & 1) == 0 )
   {
-    this = (OrganizationTopListViewItem_o *)sub_B775C4(&LocalizationManager_TypeInfo);
-    byte_438A2C5 = 1;
+    this = (OrganizationTopListViewItem_o *)sub_1B00CCC(&LocalizationManager_TypeInfo, method);
+    byte_48DE74C = 1;
   }
   info = v2->fields.info;
   if ( !info )
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   textCode = info->fields.textCode;
-  if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !LocalizationManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  }
   return LocalizationManager__Get(textCode, 0LL);
 }

@@ -1,27 +1,28 @@
 void __fastcall ServantProfilePushEntity___ctor(ServantProfilePushEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438D128 & 1) == 0 )
+  if ( (byte_48E2F73 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    byte_438D128 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
+    byte_48E2F73 = 1;
   }
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall ServantProfilePushEntity__CreatePK(int32_t svtId, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_438D127 & 1) == 0 )
+  if ( (byte_48E2F72 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_438D127 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&idx);
+    byte_48E2F72 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            idx,
-           (const MethodInfo_1D171BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2D60E34 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -39,16 +40,13 @@ bool __fastcall ServantProfilePushEntity__TimeCheck(ServantProfilePushEntity_o *
 {
   int64_t Time; // x0
 
-  if ( (byte_438D125 & 1) == 0 )
+  if ( (byte_48E2F70 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438D125 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    byte_48E2F70 = 1;
   }
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
   Time = NetworkManager__getTime(0LL);
   return Time >= this->fields.startedAt && Time <= this->fields.endedAt;
 }
@@ -56,15 +54,12 @@ bool __fastcall ServantProfilePushEntity__TimeCheck(ServantProfilePushEntity_o *
 
 bool __fastcall ServantProfilePushEntity__TimeEnd(ServantProfilePushEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438D126 & 1) == 0 )
+  if ( (byte_48E2F71 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438D126 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    byte_48E2F71 = 1;
   }
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
   return NetworkManager__getTime(0LL) > this->fields.endedAt;
 }

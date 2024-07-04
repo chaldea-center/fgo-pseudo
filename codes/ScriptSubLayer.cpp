@@ -1,33 +1,24 @@
 void __fastcall ScriptSubLayer___ctor(ScriptSubLayer_o *this, const MethodInfo *method)
 {
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v3; // x20
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
+  __int64 v3; // x1
+  System_Collections_Generic_List_object__o *v4; // x20
+  int32_t v5; // w2
+  int32_t v6; // w3
 
-  if ( (byte_4390CA7 & 1) == 0 )
+  if ( (byte_48E43CA & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_ScriptCharaData___ctor__);
-    sub_B775C4(&System_Collections_Generic_List_ScriptCharaData__TypeInfo);
-    byte_4390CA7 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_ScriptCharaData___ctor__, method);
+    sub_1B00CCC(&System_Collections_Generic_List_ScriptCharaData__TypeInfo, v3);
+    byte_48E43CA = 1;
   }
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_ScriptCharaData__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v3,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_ScriptCharaData___ctor__);
-  this->fields.listCharaData = (struct System_Collections_Generic_List_ScriptCharaData__o *)v3;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.listCharaData,
-    (System_Int32_array **)v3,
+  v4 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_ScriptCharaData__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
     v4,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9);
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_ScriptCharaData___ctor__);
+  this->fields.listCharaData = (struct System_Collections_Generic_List_ScriptCharaData__o *)v4;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.listCharaData, (int32_t)v4, v5, v6);
+  *(_QWORD *)&this->fields.shakeParam.fields.time = 0LL;
+  *(_QWORD *)&this->fields.shakeParam.fields.x = 0LL;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -44,71 +35,51 @@ void __fastcall ScriptSubLayer__CreateEffectController(ScriptSubLayer_o *this, c
   ExUIMeshRenderer_o *meshRender; // x0
   UnityEngine_Material_o *material; // x20
   ScriptActionRenderEffectController_o *v5; // x21
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  int32_t v6; // w2
+  int32_t v7; // w3
 
-  if ( (byte_4390CA5 & 1) == 0 )
+  if ( (byte_48E43C6 & 1) == 0 )
   {
-    sub_B775C4(&ScriptActionRenderEffectController_TypeInfo);
-    byte_4390CA5 = 1;
+    sub_1B00CCC(&ScriptActionRenderEffectController_TypeInfo, method);
+    byte_48E43C6 = 1;
   }
   meshRender = this->fields.meshRender;
   if ( !meshRender )
-    sub_B7769C(0LL, method);
+    sub_1B00F28(0LL, method);
   material = ExUIMeshRenderer__get_material(meshRender, 0LL);
-  v5 = (ScriptActionRenderEffectController_o *)sub_B77694(ScriptActionRenderEffectController_TypeInfo);
+  v5 = (ScriptActionRenderEffectController_o *)sub_1B00F18(ScriptActionRenderEffectController_TypeInfo);
   ScriptActionRenderEffectController___ctor(v5, material, 0LL);
   this->fields._effectController_k__BackingField = v5;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._effectController_k__BackingField,
-    (System_Int32_array **)v5,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10,
-    v11);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields._effectController_k__BackingField, (int32_t)v5, v6, v7);
 }
 
 
 void __fastcall ScriptSubLayer__CreateRenderTexture(ScriptSubLayer_o *this, const MethodInfo *method)
 {
-  struct UnityEngine_RenderTexture_o *Temporary_36369512; // x0
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
-  __int64 v10; // x1
+  struct UnityEngine_RenderTexture_o *Temporary_67985940; // x0
+  int32_t v4; // w2
+  int32_t v5; // w3
+  __int64 v6; // x1
   UnityEngine_Object_o *renderTexture_k__BackingField; // x0
 
-  if ( (byte_4390CA4 & 1) == 0 )
+  if ( (byte_48E43C5 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_13844/*"TempRenderTexture"*/);
-    byte_4390CA4 = 1;
+    sub_1B00CCC(&StringLiteral_13358/*"TempRenderTexture"*/, method);
+    byte_48E43C5 = 1;
   }
-  Temporary_36369512 = UnityEngine_RenderTexture__GetTemporary_36369512(1024, 1024, 0, 0, 0LL);
-  this->fields._renderTexture_k__BackingField = Temporary_36369512;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._renderTexture_k__BackingField,
-    (System_Int32_array **)Temporary_36369512,
+  Temporary_67985940 = UnityEngine_RenderTexture__GetTemporary_67985940(1024, 1024, 0, 0, 0LL);
+  this->fields._renderTexture_k__BackingField = Temporary_67985940;
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._renderTexture_k__BackingField,
+    (int32_t)Temporary_67985940,
     v4,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9);
+    v5);
   renderTexture_k__BackingField = (UnityEngine_Object_o *)this->fields._renderTexture_k__BackingField;
   if ( !renderTexture_k__BackingField
-    || (UnityEngine_Object__set_name(renderTexture_k__BackingField, (System_String_o *)StringLiteral_13844/*"TempRenderTexture"*/, 0LL),
+    || (UnityEngine_Object__set_name(renderTexture_k__BackingField, (System_String_o *)StringLiteral_13358/*"TempRenderTexture"*/, 0LL),
         (renderTexture_k__BackingField = (UnityEngine_Object_o *)this->fields.meshRender) == 0LL) )
   {
-    sub_B7769C(renderTexture_k__BackingField, v10);
+    sub_1B00F28(renderTexture_k__BackingField, v6);
   }
   ExUIMeshRenderer__SetImage(
     (ExUIMeshRenderer_o *)renderTexture_k__BackingField,
@@ -119,112 +90,73 @@ void __fastcall ScriptSubLayer__CreateRenderTexture(ScriptSubLayer_o *this, cons
 
 void __fastcall ScriptSubLayer__Init(ScriptSubLayer_o *this, const MethodInfo *method)
 {
-  UnityEngine_Object_o *renderTexture_k__BackingField; // x21
+  __int64 v3; // x1
   __int64 v4; // x1
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  UnityEngine_Object_o *renderTexture_k__BackingField; // x21
+  __int64 v6; // x1
+  int32_t v7; // w2
+  int32_t v8; // w3
   ExUIMeshRenderer_o *meshRender; // x0
-  System_Int32_array **v12; // x1
-  float v13; // s4
-  float v14; // s5
-  float v15; // s6
-  float v16; // s7
-  struct UnityEngine_Color_o v17; // q0
-  System_String_array **v18; // x2
-  System_String_array **v19; // x3
-  System_Boolean_array **v20; // x4
-  System_Int32_array **v21; // x5
-  System_Int32_array *v22; // x6
-  System_Int32_array *v23; // x7
-  System_String_array **v24; // x2
-  System_String_array **v25; // x3
-  System_Boolean_array **v26; // x4
-  System_Int32_array **v27; // x5
-  System_Int32_array *v28; // x6
-  System_Int32_array *v29; // x7
-  System_String_array **v30; // x2
-  System_String_array **v31; // x3
-  System_Boolean_array **v32; // x4
-  System_Int32_array **v33; // x5
-  System_Int32_array *v34; // x6
-  System_Int32_array *v35; // x7
-  const MethodInfo *v36; // x1
-  const MethodInfo *v37; // x2
-  struct UnityEngine_Color_o v38; // [xsp+0h] [xbp-30h] BYREF
-  UnityEngine_Color_o v39; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  int32_t v10; // w1
+  int32_t v11; // w2
+  int32_t v12; // w3
+  int32_t v13; // w2
+  int32_t v14; // w3
+  int32_t v15; // w3
+  struct System_Collections_Generic_List_ScriptCharaData__o *listCharaData; // x8
+  int32_t size; // w2
+  int v18; // w9
+  const MethodInfo *v19; // x1
+  const MethodInfo *v20; // x2
+  const MethodInfo *v21; // x1
 
-  if ( (byte_4390CA3 & 1) == 0 )
+  if ( (byte_48E43C4 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_ScriptCharaData__Clear__);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_4390CA3 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_ScriptCharaData__Clear__, method);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v3);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v4);
+    byte_48E43C4 = 1;
   }
   renderTexture_k__BackingField = (UnityEngine_Object_o *)this->fields._renderTexture_k__BackingField;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(renderTexture_k__BackingField, 0LL, 0LL) )
   {
     meshRender = this->fields.meshRender;
     if ( !meshRender )
-      goto LABEL_12;
+      goto LABEL_13;
     ExUIMeshRenderer__ClearImage(meshRender, 0LL);
     UnityEngine_RenderTexture__ReleaseTemporary(this->fields._renderTexture_k__BackingField, 0LL);
   }
-  v12 = (System_Int32_array **)StringLiteral_1/*""*/;
+  v10 = (int)StringLiteral_1/*""*/;
   this->fields._layerKey_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields._layerKey_k__BackingField, v12, v5, v6, v7, v8, v9, v10);
-  v39.fields.r = 0.0;
-  v39.fields.g = 0.0;
-  v39.fields.b = 0.0;
-  v39.fields.a = 0.0;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields._layerKey_k__BackingField, v10, v7, v8);
   this->fields._isRendering_k__BackingField = 0;
-  v38 = (struct UnityEngine_Color_o)0LL;
-  UnityEngine_Color___ctor(v39, v13, v14, v15, v16, (const MethodInfo *)&v38);
-  v17 = v38;
   this->fields._renderTexture_k__BackingField = 0LL;
-  this->fields._backgroundColor_k__BackingField = v17;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._renderTexture_k__BackingField,
-    0LL,
-    v18,
-    v19,
-    v20,
-    v21,
-    v22,
-    v23);
+  *(_QWORD *)&this->fields._backgroundColor_k__BackingField.fields.b = 0LL;
+  *(_QWORD *)&this->fields._backgroundColor_k__BackingField.fields.r = 0LL;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields._renderTexture_k__BackingField, 0, v11, v12);
   this->fields._effectController_k__BackingField = 0LL;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._effectController_k__BackingField,
-    0LL,
-    v24,
-    v25,
-    v26,
-    v27,
-    v28,
-    v29);
-  meshRender = (ExUIMeshRenderer_o *)this->fields.listCharaData;
-  if ( !meshRender
-    || (System_Collections_Generic_List_XWeaponTrail_Element___Clear(
-          (System_Collections_Generic_List_XWeaponTrail_Element__o *)meshRender,
-          (const MethodInfo_30536A0 *)Method_System_Collections_Generic_List_ScriptCharaData__Clear__),
-        this->fields.subLayerMask = 0LL,
-        sub_B77560((BattleServantConfConponent_o *)&this->fields.subLayerMask, 0LL, v30, v31, v32, v33, v34, v35),
-        (meshRender = (ExUIMeshRenderer_o *)this->fields.renderRoot) == 0LL) )
-  {
-LABEL_12:
-    sub_B7769C(meshRender, v4);
-  }
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields._effectController_k__BackingField, 0, v13, v14);
+  listCharaData = this->fields.listCharaData;
+  if ( !listCharaData )
+    goto LABEL_13;
+  size = listCharaData->fields._size;
+  v18 = listCharaData->fields._version + 1;
+  listCharaData->fields._size = 0;
+  listCharaData->fields._version = v18;
+  if ( size >= 1 )
+    System_Array__Clear((System_Array_o *)listCharaData->fields._items, 0, size, 0LL);
+  this->fields.subLayerMask = 0LL;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.subLayerMask, 0, size, v15);
+  meshRender = (ExUIMeshRenderer_o *)this->fields.renderRoot;
+  if ( !meshRender )
+LABEL_13:
+    sub_1B00F28(meshRender, v6);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)meshRender, 0, 0LL);
-  ScriptSubLayer__SetDepth(this, 1.0, v36);
-  ScriptSubLayer__SetEdgeMaskSubMaterial(this, 0LL, v37);
+  ScriptSubLayer__SetDepth(this, 1.0, v19);
+  ScriptSubLayer__SetEdgeMaskSubMaterial(this, 0LL, v20);
+  ScriptSubLayer__ResetShake(this, v21);
 }
 
 
@@ -234,48 +166,100 @@ void __fastcall ScriptSubLayer__MoveAlphaCharaData(
         float alpha,
         const MethodInfo *method)
 {
-  struct System_Collections_Generic_List_ScriptCharaData__o *listCharaData; // x0
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  System_Collections_Generic_List_object__o *listCharaData; // x0
   Il2CppObject *current; // x19
   Il2CppClass *klass; // x20
-  System_Collections_Generic_List_Enumerator_T__o v10; // [xsp+8h] [xbp-48h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v14; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4390CA0 & 1) == 0 )
+  if ( (byte_48E43C1 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__get_Current__);
-    sub_B775C4(&Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_4390CA0 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__, v7);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__get_Current__, v8);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__, v9);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v10);
+    byte_48E43C1 = 1;
   }
-  memset(&v10, 0, sizeof(v10));
-  listCharaData = this->fields.listCharaData;
+  memset(&v14, 0, sizeof(v14));
+  listCharaData = (System_Collections_Generic_List_object__o *)this->fields.listCharaData;
   if ( !listCharaData )
-    sub_B7769C(0LL, method);
-  System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-    &v10,
-    (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)listCharaData,
-    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
-  while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-            &v10,
-            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__) )
+    sub_1B00F28(0LL, method);
+  System_Collections_Generic_List_object___GetEnumerator(
+    (System_Collections_Generic_List_Enumerator_T__o *)&v14,
+    listCharaData,
+    (const MethodInfo_33C24C8 *)Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
+  while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v14,
+            (const MethodInfo_313E218 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__) )
   {
-    current = v10.fields.current;
-    if ( v10.fields.current )
+    current = v14.fields._current;
+    if ( v14.fields._current )
     {
-      klass = v10.fields.current[3].klass;
-      if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      {
+      klass = v14.fields._current[3].klass;
+      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      }
       if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)klass, 0LL, 0LL) )
         ScriptCharaData__MoveAlpha((ScriptCharaData_o *)current, duration, alpha, 1, 0LL);
     }
   }
-  System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-    &v10,
-    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
+  System_Collections_Generic_List_Enumerator_object___Dispose(
+    &v14,
+    (const MethodInfo_313E214 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
+}
+
+
+void __fastcall ScriptSubLayer__OnShake(ScriptSubLayer_o *this, const MethodInfo *method)
+{
+  __int64 v3; // x1
+  const MethodInfo *v4; // x1
+  UnityEngine_GameObject_o *shakeRoot; // x0
+  UnityEngine_Transform_o *transform; // x20
+  float v7; // s8
+  float v8; // s0
+  UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
+
+  if ( (byte_48E43C9 & 1) == 0 )
+  {
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_9844/*"OnShake"*/, v3);
+    byte_48E43C9 = 1;
+  }
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)this, 0LL, 0LL) )
+  {
+    if ( this->fields.shakeParam.fields.cycle <= 0.0
+      || this->fields.shakeParam.fields.time > 0.0
+      && UnityEngine_Time__get_time(0LL) >= this->fields.shakeParam.fields.time )
+    {
+      ScriptSubLayer__ResetShake(this, v4);
+    }
+    else
+    {
+      shakeRoot = this->fields.shakeRoot;
+      if ( !shakeRoot
+        || (transform = UnityEngine_GameObject__get_transform(shakeRoot, 0LL),
+            v7 = UnityEngine_Random__Range(-this->fields.shakeParam.fields.x, this->fields.shakeParam.fields.x, 0LL),
+            v8 = UnityEngine_Random__Range(-this->fields.shakeParam.fields.y, this->fields.shakeParam.fields.y, 0LL),
+            !transform) )
+      {
+        sub_1B00F28(shakeRoot, v4);
+      }
+      v9.fields.y = v8;
+      v9.fields.z = 0.0;
+      v9.fields.x = v7;
+      UnityEngine_Transform__set_localPosition(transform, v9, 0LL);
+      UnityEngine_MonoBehaviour__Invoke(
+        (UnityEngine_MonoBehaviour_o *)this,
+        (System_String_o *)StringLiteral_9844/*"OnShake"*/,
+        this->fields.shakeParam.fields.cycle,
+        0LL);
+    }
+  }
 }
 
 
@@ -284,27 +268,49 @@ void __fastcall ScriptSubLayer__RegistCharaData(
         ScriptCharaData_o *charaData,
         const MethodInfo *method)
 {
-  struct System_Collections_Generic_List_ScriptCharaData__o *listCharaData; // x0
+  int32_t v3; // w3
+  __int64 v6; // x1
+  System_Collections_Generic_List_object__o *listCharaData; // x0
+  struct System_Object_array *items; // x8
+  _QWORD *v9; // x9
+  __int64 size; // x10
+  Il2CppClass **v11; // x8
 
-  if ( (byte_4390C9D & 1) == 0 )
+  if ( (byte_48E43BE & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_ScriptCharaData__Add__);
-    sub_B775C4(&StringLiteral_12862/*"ScriptRenderSub"*/);
-    byte_4390C9D = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_ScriptCharaData__Add__, charaData);
+    sub_1B00CCC(&StringLiteral_12336/*"ScriptRenderSub"*/, v6);
+    byte_48E43BE = 1;
   }
-  listCharaData = this->fields.listCharaData;
-  if ( !listCharaData
-    || (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-          (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)listCharaData,
-          (EventMissionProgressRequest_Argument_ProgressData_o *)charaData,
-          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_ScriptCharaData__Add__),
-        listCharaData = (struct System_Collections_Generic_List_ScriptCharaData__o *)UnityEngine_LayerMask__NameToLayer(
-                                                                                       (System_String_o *)StringLiteral_12862/*"ScriptRenderSub"*/,
-                                                                                       0LL),
-        !charaData) )
+  listCharaData = (System_Collections_Generic_List_object__o *)this->fields.listCharaData;
+  if ( !listCharaData )
+    goto LABEL_10;
+  items = listCharaData->fields._items;
+  v9 = Method_System_Collections_Generic_List_ScriptCharaData__Add__;
+  ++listCharaData->fields._version;
+  if ( !items )
+    goto LABEL_10;
+  size = listCharaData->fields._size;
+  if ( (unsigned int)size >= items->max_length )
   {
-    sub_B7769C(listCharaData, charaData);
+    System_Collections_Generic_List_object___AddWithResize(
+      listCharaData,
+      (Il2CppObject *)charaData,
+      *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v9[4] + 192LL) + 112LL));
   }
+  else
+  {
+    v11 = &items->obj.klass + size;
+    listCharaData->fields._size = size + 1;
+    v11[4] = (Il2CppClass *)charaData;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)(v11 + 4), (int32_t)charaData, (int32_t)method, v3);
+  }
+  listCharaData = (System_Collections_Generic_List_object__o *)UnityEngine_LayerMask__NameToLayer(
+                                                                 (System_String_o *)StringLiteral_12336/*"ScriptRenderSub"*/,
+                                                                 0LL);
+  if ( !charaData )
+LABEL_10:
+    sub_1B00F28(listCharaData, charaData);
   ScriptCharaData__SetLayer(charaData, (int32_t)listCharaData, 0LL);
 }
 
@@ -314,118 +320,167 @@ void __fastcall ScriptSubLayer__RemoveCharaData(
         ScriptCharaData_o *charaData,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_WarBoardManager_TaskList__o *listCharaData; // x0
+  System_Collections_Generic_List_object__o *listCharaData; // x0
 
-  if ( (byte_4390C9C & 1) == 0 )
+  if ( (byte_48E43BD & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_ScriptCharaData__Remove__);
-    byte_4390C9C = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_ScriptCharaData__Remove__, charaData);
+    byte_48E43BD = 1;
   }
-  listCharaData = (System_Collections_Generic_List_WarBoardManager_TaskList__o *)this->fields.listCharaData;
+  listCharaData = (System_Collections_Generic_List_object__o *)this->fields.listCharaData;
   if ( !listCharaData )
-    sub_B7769C(0LL, charaData);
-  System_Collections_Generic_List_WarBoardManager_TaskList___Remove(
+    sub_1B00F28(0LL, charaData);
+  System_Collections_Generic_List_object___Remove(
     listCharaData,
-    (WarBoardManager_TaskList_o *)charaData,
-    (const MethodInfo_3054C44 *)Method_System_Collections_Generic_List_ScriptCharaData__Remove__);
+    (Il2CppObject *)charaData,
+    (const MethodInfo_33C2EF8 *)Method_System_Collections_Generic_List_ScriptCharaData__Remove__);
 }
 
 
 void __fastcall ScriptSubLayer__RemoveInvalidCharaData(ScriptSubLayer_o *this, const MethodInfo *method)
 {
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v3; // x20
+  __int64 v3; // x1
   __int64 v4; // x1
-  struct System_Collections_Generic_List_ScriptCharaData__o *listCharaData; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  System_Collections_Generic_List_object__o *v10; // x20
+  __int64 v11; // x1
+  System_Collections_Generic_List_object__o *listCharaData; // x0
   Il2CppObject *current; // x21
   Il2CppClass *klass; // x22
-  _BOOL8 v8; // x0
-  __int64 v9; // x1
-  const MethodInfo *v10; // x2
-  int v11; // w19
-  System_Collections_Generic_List_Enumerator_T__o v12; // [xsp+8h] [xbp-88h] BYREF
-  int v13[2]; // [xsp+20h] [xbp-70h]
-  int v14; // [xsp+28h] [xbp-68h]
-  System_Collections_Generic_List_Enumerator_T__o i; // [xsp+30h] [xbp-60h] BYREF
+  _BOOL8 v15; // x0
+  __int64 v16; // x1
+  int32_t v17; // w2
+  int32_t v18; // w3
+  struct System_Object_array *items; // x8
+  _QWORD *v20; // x9
+  __int64 size; // x10
+  Il2CppClass **v22; // x0
+  const MethodInfo *v23; // x2
+  System_Collections_Generic_List_Enumerator_object__o v24; // [xsp+8h] [xbp-88h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o i; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_4390C9E & 1) == 0 )
+  if ( (byte_48E43BF & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__get_Current__);
-    sub_B775C4(&Method_System_Collections_Generic_List_ScriptCharaData__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
-    sub_B775C4(&Method_System_Collections_Generic_List_ScriptCharaData___ctor__);
-    sub_B775C4(&System_Collections_Generic_List_ScriptCharaData__TypeInfo);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_4390C9E = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__, v3);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__get_Current__, v4);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_ScriptCharaData__Add__, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__, v6);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_ScriptCharaData___ctor__, v7);
+    sub_1B00CCC(&System_Collections_Generic_List_ScriptCharaData__TypeInfo, v8);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v9);
+    byte_48E43BF = 1;
   }
   memset(&i, 0, sizeof(i));
-  v14 = 0;
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_ScriptCharaData__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v3,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_ScriptCharaData___ctor__);
-  listCharaData = this->fields.listCharaData;
+  v10 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_ScriptCharaData__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v10,
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_ScriptCharaData___ctor__);
+  listCharaData = (System_Collections_Generic_List_object__o *)this->fields.listCharaData;
   if ( !listCharaData )
     goto LABEL_22;
-  System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-    &v12,
-    (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)listCharaData,
-    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
-  i = v12;
-  while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
+  System_Collections_Generic_List_object___GetEnumerator(
+    (System_Collections_Generic_List_Enumerator_T__o *)&v24,
+    listCharaData,
+    (const MethodInfo_33C24C8 *)Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
+  i = v24;
+  while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &i,
-            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__) )
+            (const MethodInfo_313E218 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__) )
   {
-    current = i.fields.current;
-    if ( i.fields.current )
+    current = i.fields._current;
+    if ( i.fields._current )
     {
-      klass = i.fields.current[3].klass;
-      if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      {
+      klass = i.fields._current[3].klass;
+      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      }
-      v8 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)klass, 0LL, 0LL);
-      if ( v8 )
+      v15 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)klass, 0LL, 0LL);
+      if ( v15 )
       {
-        if ( !v3 )
-          sub_B7769C(v8, v9);
-        System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-          v3,
-          (EventMissionProgressRequest_Argument_ProgressData_o *)current,
-          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_ScriptCharaData__Add__);
+        if ( !v10 )
+          sub_1B00F28(v15, v16);
+        items = v10->fields._items;
+        v20 = Method_System_Collections_Generic_List_ScriptCharaData__Add__;
+        ++v10->fields._version;
+        if ( !items )
+          sub_1B00F28(v15, v16);
+        size = v10->fields._size;
+        if ( (unsigned int)size >= items->max_length )
+        {
+          System_Collections_Generic_List_object___AddWithResize(
+            v10,
+            current,
+            *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+        }
+        else
+        {
+          v22 = &items->obj.klass + size;
+          v10->fields._size = size + 1;
+          v22[4] = (Il2CppClass *)current;
+          sub_1B00C70((ServantStatusBattleListViewItem_o *)(v22 + 4), (int32_t)current, v17, v18);
+        }
       }
     }
   }
-  v13[0] = 77;
-  v14 = 1;
-  System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
+  System_Collections_Generic_List_Enumerator_object___Dispose(
     &i,
-    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
-  v14 = 0;
-  if ( !v3 )
+    (const MethodInfo_313E214 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
+  if ( !v10 )
 LABEL_22:
-    sub_B7769C(listCharaData, v4);
-  System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-    &v12,
-    (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)v3,
-    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
-  for ( i = v12;
-        System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
+    sub_1B00F28(listCharaData, v11);
+  System_Collections_Generic_List_object___GetEnumerator(
+    (System_Collections_Generic_List_Enumerator_T__o *)&v24,
+    v10,
+    (const MethodInfo_33C24C8 *)Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
+  for ( i = v24;
+        System_Collections_Generic_List_Enumerator_object___MoveNext(
           &i,
-          (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__);
-        ScriptSubLayer__RemoveCharaData(this, (ScriptCharaData_o *)i.fields.current, v10) )
+          (const MethodInfo_313E218 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__);
+        ScriptSubLayer__RemoveCharaData(this, (ScriptCharaData_o *)i.fields._current, v23) )
   {
     ;
   }
-  v13[0] = 126;
-  v11 = ++v14;
-  System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
+  System_Collections_Generic_List_Enumerator_object___Dispose(
     &i,
-    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
-  if ( v11 && v13[v11 - 1] == 126 )
-    v14 = v11 - 1;
+    (const MethodInfo_313E214 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
+}
+
+
+void __fastcall ScriptSubLayer__ResetShake(ScriptSubLayer_o *this, const MethodInfo *method)
+{
+  __int64 v3; // x1
+  UnityEngine_GameObject_o *shakeRoot; // x0
+  UnityEngine_Transform_o *v5; // x20
+
+  if ( (byte_48E43C8 & 1) == 0 )
+  {
+    sub_1B00CCC(&StringLiteral_9844/*"OnShake"*/, method);
+    byte_48E43C8 = 1;
+  }
+  UnityEngine_MonoBehaviour__CancelInvoke_68062236(
+    (UnityEngine_MonoBehaviour_o *)this,
+    (System_String_o *)StringLiteral_9844/*"OnShake"*/,
+    0LL);
+  shakeRoot = this->fields.shakeRoot;
+  if ( !shakeRoot )
+    goto LABEL_8;
+  shakeRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(shakeRoot, 0LL);
+  v5 = (UnityEngine_Transform_o *)shakeRoot;
+  if ( !byte_48DD9F1 )
+  {
+    shakeRoot = (UnityEngine_GameObject_o *)sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, v3);
+    byte_48DD9F1 = 1;
+  }
+  if ( !v5 )
+LABEL_8:
+    sub_1B00F28(shakeRoot, v3);
+  UnityEngine_Transform__set_localPosition(v5, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
+  *(_QWORD *)&this->fields.shakeParam.fields.time = 0LL;
+  *(_QWORD *)&this->fields.shakeParam.fields.x = 0LL;
 }
 
 
@@ -460,7 +515,7 @@ void __fastcall ScriptSubLayer__SetDepth(ScriptSubLayer_o *this, float depth, co
         v9 = v7,
         (meshRender = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(meshRender, 0LL)) == 0LL) )
   {
-    sub_B7769C(meshRender, method);
+    sub_1B00F28(meshRender, method);
   }
   v10.fields.z = -depth;
   v10.fields.x = v8;
@@ -474,51 +529,38 @@ void __fastcall ScriptSubLayer__SetEdgeMaskSubMaterial(
         UnityEngine_Material_o *mat,
         const MethodInfo *method)
 {
-  BattleServantConfConponent_o *p_edgeMaskSubMaterial_k__BackingField; // x20
+  ServantStatusBattleListViewItem_o *p_edgeMaskSubMaterial_k__BackingField; // x20
   UnityEngine_Object_o *v6; // x21
   struct UnityEngine_Material_o *edgeMaskSubMaterial_k__BackingField; // t1
   UnityEngine_Object_o *klass; // x21
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
-  UnityEngine_Object_o *v15; // x21
+  int32_t v9; // w2
+  int32_t v10; // w3
+  UnityEngine_Object_o *v11; // x21
 
-  if ( (byte_4390CA2 & 1) == 0 )
+  if ( (byte_48E43C3 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_4390CA2 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, mat);
+    byte_48E43C3 = 1;
   }
   edgeMaskSubMaterial_k__BackingField = this->fields._edgeMaskSubMaterial_k__BackingField;
-  p_edgeMaskSubMaterial_k__BackingField = (BattleServantConfConponent_o *)&this->fields._edgeMaskSubMaterial_k__BackingField;
+  p_edgeMaskSubMaterial_k__BackingField = (ServantStatusBattleListViewItem_o *)&this->fields._edgeMaskSubMaterial_k__BackingField;
   v6 = (UnityEngine_Object_o *)edgeMaskSubMaterial_k__BackingField;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( !UnityEngine_Object__op_Equality(v6, (UnityEngine_Object_o *)mat, 0LL) )
   {
     klass = (UnityEngine_Object_o *)p_edgeMaskSubMaterial_k__BackingField->klass;
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
     if ( UnityEngine_Object__op_Inequality(klass, 0LL, 0LL) )
     {
-      v15 = (UnityEngine_Object_o *)p_edgeMaskSubMaterial_k__BackingField->klass;
-      if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      {
+      v11 = (UnityEngine_Object_o *)p_edgeMaskSubMaterial_k__BackingField->klass;
+      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      }
-      UnityEngine_Object__Destroy_36309980(v15, 0LL);
+      UnityEngine_Object__Destroy_68077656(v11, 0LL);
     }
-    p_edgeMaskSubMaterial_k__BackingField->klass = (BattleServantConfConponent_c *)mat;
-    sub_B77560(p_edgeMaskSubMaterial_k__BackingField, (System_Int32_array **)mat, v9, v10, v11, v12, v13, v14);
+    p_edgeMaskSubMaterial_k__BackingField->klass = (ServantStatusBattleListViewItem_c *)mat;
+    sub_1B00C70(p_edgeMaskSubMaterial_k__BackingField, (int32_t)mat, v9, v10);
   }
 }
 
@@ -528,100 +570,105 @@ void __fastcall ScriptSubLayer__SetFilterCharaData(
         System_String_o *filterName,
         const MethodInfo *method)
 {
-  struct System_Collections_Generic_List_ScriptCharaData__o *listCharaData; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  System_Collections_Generic_List_object__o *listCharaData; // x0
   Il2CppObject *current; // x20
   Il2CppClass *klass; // x21
-  System_Collections_Generic_List_Enumerator_T__o v8; // [xsp+8h] [xbp-48h] BYREF
-  UnityEngine_Color_o white; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  System_Collections_Generic_List_Enumerator_object__o v12; // [xsp+8h] [xbp-58h] BYREF
+  UnityEngine_Color_o v13; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4390CA1 & 1) == 0 )
+  if ( (byte_48E43C2 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__get_Current__);
-    sub_B775C4(&Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_4390CA1 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__, filterName);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__get_Current__, v6);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__, v7);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v8);
+    byte_48E43C2 = 1;
   }
-  memset(&v8, 0, sizeof(v8));
-  listCharaData = this->fields.listCharaData;
+  memset(&v12, 0, sizeof(v12));
+  listCharaData = (System_Collections_Generic_List_object__o *)this->fields.listCharaData;
   if ( !listCharaData )
-    sub_B7769C(0LL, filterName);
-  System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-    &v8,
-    (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)listCharaData,
-    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
-  while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-            &v8,
-            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__) )
+    sub_1B00F28(0LL, filterName);
+  System_Collections_Generic_List_object___GetEnumerator(
+    (System_Collections_Generic_List_Enumerator_T__o *)&v12,
+    listCharaData,
+    (const MethodInfo_33C24C8 *)Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
+  while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v12,
+            (const MethodInfo_313E218 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__) )
   {
-    current = v8.fields.current;
-    if ( v8.fields.current )
+    current = v12.fields._current;
+    if ( v12.fields._current )
     {
-      klass = v8.fields.current[3].klass;
-      if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      {
+      klass = v12.fields._current[3].klass;
+      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      }
       if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)klass, 0LL, 0LL) )
       {
-        white = UnityEngine_Color__get_white(0LL);
-        ScriptCharaData__SetFilter((ScriptCharaData_o *)current, filterName, white, 0LL);
+        v13.fields.r = 1.0;
+        v13.fields.g = 1.0;
+        v13.fields.b = 1.0;
+        v13.fields.a = 1.0;
+        ScriptCharaData__SetFilter((ScriptCharaData_o *)current, filterName, v13, 0LL);
       }
     }
   }
-  System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-    &v8,
-    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
+  System_Collections_Generic_List_Enumerator_object___Dispose(
+    &v12,
+    (const MethodInfo_313E214 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 void __fastcall ScriptSubLayer__SetLayer(ScriptSubLayer_o *this, int32_t layer, const MethodInfo *method)
 {
-  struct System_Collections_Generic_List_ScriptCharaData__o *listCharaData; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  System_Collections_Generic_List_object__o *listCharaData; // x0
   Il2CppObject *current; // x20
   Il2CppClass *klass; // x21
-  System_Collections_Generic_List_Enumerator_T__o v8; // [xsp+8h] [xbp-48h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v12; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4390CA6 & 1) == 0 )
+  if ( (byte_48E43C7 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__get_Current__);
-    sub_B775C4(&Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_4390CA6 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__, *(_QWORD *)&layer);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__get_Current__, v6);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__, v7);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v8);
+    byte_48E43C7 = 1;
   }
-  memset(&v8, 0, sizeof(v8));
-  listCharaData = this->fields.listCharaData;
+  memset(&v12, 0, sizeof(v12));
+  listCharaData = (System_Collections_Generic_List_object__o *)this->fields.listCharaData;
   if ( !listCharaData )
-    sub_B7769C(0LL, *(_QWORD *)&layer);
-  System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-    &v8,
-    (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)listCharaData,
-    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
-  while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-            &v8,
-            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__) )
+    sub_1B00F28(0LL, *(_QWORD *)&layer);
+  System_Collections_Generic_List_object___GetEnumerator(
+    (System_Collections_Generic_List_Enumerator_T__o *)&v12,
+    listCharaData,
+    (const MethodInfo_33C24C8 *)Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
+  while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v12,
+            (const MethodInfo_313E218 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__) )
   {
-    current = v8.fields.current;
-    if ( v8.fields.current )
+    current = v12.fields._current;
+    if ( v12.fields._current )
     {
-      klass = v8.fields.current[3].klass;
-      if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      {
+      klass = v12.fields._current[3].klass;
+      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      }
       if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)klass, 0LL, 0LL) )
         ScriptCharaData__SetLayer((ScriptCharaData_o *)current, layer, 0LL);
     }
   }
-  System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-    &v8,
-    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
+  System_Collections_Generic_List_Enumerator_object___Dispose(
+    &v12,
+    (const MethodInfo_313E214 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
 }
 
 
@@ -630,34 +677,26 @@ void __fastcall ScriptSubLayer__SetLayerActive(ScriptSubLayer_o *this, const Met
   int32_t v3; // w1
   const MethodInfo *v4; // x2
 
-  if ( (byte_4390C9F & 1) == 0 )
+  if ( (byte_48E43C0 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_12862/*"ScriptRenderSub"*/);
-    byte_4390C9F = 1;
+    sub_1B00CCC(&StringLiteral_12336/*"ScriptRenderSub"*/, method);
+    byte_48E43C0 = 1;
   }
-  v3 = UnityEngine_LayerMask__NameToLayer((System_String_o *)StringLiteral_12862/*"ScriptRenderSub"*/, 0LL);
+  v3 = UnityEngine_LayerMask__NameToLayer((System_String_o *)StringLiteral_12336/*"ScriptRenderSub"*/, 0LL);
   ScriptSubLayer__SetLayer(this, v3, v4);
 }
 
 
 void __fastcall ScriptSubLayer__SetLayerKey(ScriptSubLayer_o *this, System_String_o *key, const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._layerKey_k__BackingField = key;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._layerKey_k__BackingField,
-    (System_Int32_array **)key,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._layerKey_k__BackingField,
+    (int32_t)key,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -666,54 +705,69 @@ void __fastcall ScriptSubLayer__SetMaskLayer(
         ScriptSubLayer_o *maskLayer,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields.subLayerMask = maskLayer;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.subLayerMask,
-    (System_Int32_array **)maskLayer,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.subLayerMask, (int32_t)maskLayer, (int32_t)method, v3);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ScriptSubLayer__SetRendering(ScriptSubLayer_o *this, bool rendering, const MethodInfo *method)
 {
   bool v4; // w22
   UnityEngine_Object_o *subLayerMask; // x21
   _BOOL8 v6; // x0
-  __int64 v7; // x1
 
   v4 = rendering;
   while ( 1 )
   {
-    if ( (byte_4390C9B & 1) == 0 )
+    if ( (byte_48E43BC & 1) == 0 )
     {
-      sub_B775C4(&UnityEngine_Object_TypeInfo);
-      byte_4390C9B = 1;
+      sub_1B00CCC(&UnityEngine_Object_TypeInfo, rendering);
+      byte_48E43BC = 1;
     }
     this->fields._isRendering_k__BackingField = v4;
     subLayerMask = (UnityEngine_Object_o *)this->fields.subLayerMask;
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
     v6 = UnityEngine_Object__op_Inequality(subLayerMask, 0LL, 0LL);
     if ( !v6 )
       break;
     this = this->fields.subLayerMask;
     if ( !this )
-      sub_B7769C(v6, v7);
+      sub_1B00F28(v6, rendering);
   }
+}
+
+
+void __fastcall ScriptSubLayer__Shake(
+        ScriptSubLayer_o *this,
+        float duration,
+        float cycle,
+        float x,
+        float y,
+        const MethodInfo *method)
+{
+  bool v11; // cc
+  float v12; // s0
+
+  v11 = duration <= 0.0;
+  v12 = 0.0;
+  if ( !v11 )
+    v12 = UnityEngine_Time__get_time(0LL) + duration;
+  this->fields.shakeParam.fields.time = v12;
+  this->fields.shakeParam.fields.cycle = cycle;
+  this->fields.shakeParam.fields.x = x;
+  this->fields.shakeParam.fields.y = y;
+  ScriptSubLayer__OnShake(this, method);
+}
+
+
+// attributes: thunk
+void __fastcall ScriptSubLayer__ShakeStop(ScriptSubLayer_o *this, const MethodInfo *method)
+{
+  ScriptSubLayer__ResetShake(this, method);
 }
 
 
@@ -871,22 +925,14 @@ void __fastcall ScriptSubLayer__set_edgeMaskSubMaterial(
         UnityEngine_Material_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._edgeMaskSubMaterial_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._edgeMaskSubMaterial_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._edgeMaskSubMaterial_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -895,22 +941,14 @@ void __fastcall ScriptSubLayer__set_effectController(
         ScriptActionRenderEffectController_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._effectController_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._effectController_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._effectController_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -922,22 +960,14 @@ void __fastcall ScriptSubLayer__set_isRendering(ScriptSubLayer_o *this, bool val
 
 void __fastcall ScriptSubLayer__set_layerKey(ScriptSubLayer_o *this, System_String_o *value, const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._layerKey_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._layerKey_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._layerKey_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -946,20 +976,35 @@ void __fastcall ScriptSubLayer__set_renderTexture(
         UnityEngine_RenderTexture_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._renderTexture_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._renderTexture_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._renderTexture_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
+}
+
+
+// local variable allocation has failed, the output may be wrong!
+void __fastcall ScriptSubLayer_ShakeParam___ctor(
+        ScriptSubLayer_ShakeParam_o this,
+        float shakeTime,
+        float shakeCycle,
+        float shakeX,
+        float shakeY,
+        const MethodInfo *method)
+{
+  *(float *)&method->methodPointer = this.fields.time;
+  HIDWORD(method->methodPointer) = LODWORD(this.fields.cycle);
+  *(float *)&method->virtualMethodPointer = this.fields.x;
+  HIDWORD(method->virtualMethodPointer) = LODWORD(this.fields.y);
+}
+
+
+void __fastcall ScriptSubLayer_ShakeParam__Reset(ScriptSubLayer_ShakeParam_o this, const MethodInfo *method)
+{
+  method->methodPointer = 0LL;
+  method->virtualMethodPointer = 0LL;
 }

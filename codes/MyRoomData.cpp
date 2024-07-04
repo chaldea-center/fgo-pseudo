@@ -12,79 +12,86 @@ MstProfileData_o *__fastcall MyRoomData__getMstInfoData(MyRoomData_o *this, cons
 
 UserPresentBoxEntity_array *__fastcall MyRoomData__getPresentList(MyRoomData_o *this, const MethodInfo *method)
 {
-  DataManager_o *Instance; // x0
-  __int64 v4; // x1
+  __int64 v3; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v5; // x1
   struct UserGameEntity_o *usrData; // x8
 
-  if ( (byte_438B91A & 1) == 0 )
+  if ( (byte_48DE4C2 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_UserPresentBoxMaster___);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438B91A = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_UserPresentBoxMaster___, method);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_48DE4C2 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
-    || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                      Instance,
-                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserPresentBoxMaster___),
+    || (Instance = DataManager__GetMasterData_object_(
+                     (DataManager_o *)Instance,
+                     (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_UserPresentBoxMaster___),
         (usrData = this->fields.usrData) == 0LL)
     || !Instance )
   {
-    sub_B7769C(Instance, v4);
+    sub_1B00F28(Instance, v5);
   }
   return UserPresentBoxMaster__getVaildList((UserPresentBoxMaster_o *)Instance, usrData->fields.userId, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 ServantEntity_o *__fastcall MyRoomData__getSvtData(MyRoomData_o *this, int32_t svtId, const MethodInfo *method)
 {
-  WebViewManager_o *Instance; // x0
+  __int64 v4; // x1
   __int64 v5; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v7; // x1
   ServantEntity_o *result; // x0
 
-  if ( (byte_438B917 & 1) == 0 )
+  if ( (byte_48DE4BF & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_B775C4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438B917 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_ServantMaster___, *(_QWORD *)&svtId);
+    sub_1B00CCC(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v4);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_48DE4BF = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_B7769C(0LL, v5);
-  result = (ServantEntity_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+    sub_1B00F28(0LL, v7);
+  result = (ServantEntity_o *)DataManager__GetMasterData_object_(
                                 (DataManager_o *)Instance,
-                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( result )
-    return (ServantEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-                                (DataMasterBase_WarMaster__WarEntity__int__o *)result,
+    return (ServantEntity_o *)DataMasterBase_object__object__int___GetEntity(
+                                (DataMasterBase_TMaster__TEntity__PKType__o *)result,
                                 svtId,
-                                (const MethodInfo_21FB894 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                                (const MethodInfo_2FE6A4C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
   return result;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall MyRoomData__getSvtFriendshipLv(MyRoomData_o *this, int32_t hSvtId, const MethodInfo *method)
 {
-  char *Instance; // x0
+  __int64 v5; // x1
   __int64 v6; // x1
+  char *Instance; // x0
+  __int64 v8; // x1
   struct UserGameEntity_o *usrData; // x8
-  __int64 v8; // x19
-  __int64 v9; // x20
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v11; // 0:x0.16
+  __int64 v10; // x19
+  __int64 v11; // x20
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v13; // 0:x0.16
 
-  if ( (byte_438B918 & 1) == 0 )
+  if ( (byte_48DE4C0 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
-    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438B918 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_UserServantCollectionMaster___, *(_QWORD *)&hSvtId);
+    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v5);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_48DE4C0 = 1;
   }
-  Instance = (char *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
-    || (Instance = (char *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+    || (Instance = (char *)DataManager__GetMasterData_object_(
                              (DataManager_o *)Instance,
-                             (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___),
+                             (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___),
         (usrData = this->fields.usrData) == 0LL)
     || !Instance
     || (Instance = (char *)UserServantCollectionMaster__GetEntityDefinitely(
@@ -93,43 +100,42 @@ int32_t __fastcall MyRoomData__getSvtFriendshipLv(MyRoomData_o *this, int32_t hS
                              hSvtId,
                              0LL)) == 0LL )
   {
-    sub_B7769C(Instance, v6);
+    sub_1B00F28(Instance, v8);
   }
-  v8 = *(_QWORD *)(Instance + 100);
-  v9 = *(_QWORD *)(Instance + 108);
-  if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-  {
+  v10 = *(_QWORD *)(Instance + 100);
+  v11 = *(_QWORD *)(Instance + 108);
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  }
-  *(_QWORD *)&v11.fields.currentCryptoKey = v8;
-  *(_QWORD *)&v11.fields.fakeValue = v9;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v11, 0LL);
+  *(_QWORD *)&v13.fields.currentCryptoKey = v10;
+  *(_QWORD *)&v13.fields.fakeValue = v11;
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(v13, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 ServantLimitEntity_o *__fastcall MyRoomData__getSvtLimitData(
         MyRoomData_o *this,
         int32_t svtId,
         int32_t limitCnt,
         const MethodInfo *method)
 {
-  WebViewManager_o *Instance; // x0
-  __int64 v7; // x1
+  __int64 v6; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v8; // x1
   ServantLimitEntity_o *result; // x0
 
-  if ( (byte_438B919 & 1) == 0 )
+  if ( (byte_48DE4C1 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_ServantLimitMaster___);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438B919 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_ServantLimitMaster___, *(_QWORD *)&svtId);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_48DE4C1 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_B7769C(0LL, v7);
-  result = (ServantLimitEntity_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+    sub_1B00F28(0LL, v8);
+  result = (ServantLimitEntity_o *)DataManager__GetMasterData_object_(
                                      (DataManager_o *)Instance,
-                                     (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
+                                     (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
   if ( result )
     return ServantLimitMaster__GetEntity((ServantLimitMaster_o *)result, svtId, limitCnt, 0LL);
   return result;
@@ -138,22 +144,23 @@ ServantLimitEntity_o *__fastcall MyRoomData__getSvtLimitData(
 
 int32_t __fastcall MyRoomData__getUserFriendSum(MyRoomData_o *this, const MethodInfo *method)
 {
-  DataManager_o *Instance; // x0
-  __int64 v3; // x1
+  __int64 v2; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v4; // x1
 
-  if ( (byte_438B914 & 1) == 0 )
+  if ( (byte_48DE4BC & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_TblFriendMaster___);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438B914 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_TblFriendMaster___, method);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
+    byte_48DE4BC = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
-    || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                      Instance,
-                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_TblFriendMaster___)) == 0LL )
+    || (Instance = DataManager__GetMasterData_object_(
+                     (DataManager_o *)Instance,
+                     (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_TblFriendMaster___)) == 0LL )
   {
-    sub_B7769C(Instance, v3);
+    sub_1B00F28(Instance, v4);
   }
   return TblFriendMaster__GetFriendSum((TblFriendMaster_o *)Instance, 0LL);
 }
@@ -165,27 +172,29 @@ UserGameEntity_o *__fastcall MyRoomData__getUsrData(MyRoomData_o *this, const Me
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 UserExpEntity_o *__fastcall MyRoomData__getUsrNextExpData(
         MyRoomData_o *this,
         int32_t currentLv,
         const MethodInfo *method)
 {
-  DataManager_o *Instance; // x0
-  __int64 v5; // x1
+  __int64 v4; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v6; // x1
 
-  if ( (byte_438B913 & 1) == 0 )
+  if ( (byte_48DE4BB & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_UserExpMaster___);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438B913 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_UserExpMaster___, *(_QWORD *)&currentLv);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_48DE4BB = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
-    || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                      Instance,
-                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserExpMaster___)) == 0LL )
+    || (Instance = DataManager__GetMasterData_object_(
+                     (DataManager_o *)Instance,
+                     (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_UserExpMaster___)) == 0LL )
   {
-    sub_B7769C(Instance, v5);
+    sub_1B00F28(Instance, v6);
   }
   return UserExpMaster__getEntityFromLevel((UserExpMaster_o *)Instance, currentLv + 1, 0LL);
 }
@@ -196,76 +205,74 @@ UserServantEntity_o *__fastcall MyRoomData__getUsrSvtData(
         int64_t usrSvtId,
         const MethodInfo *method)
 {
-  WebViewManager_o *Instance; // x0
+  __int64 v4; // x1
   __int64 v5; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v7; // x1
   UserServantEntity_o *result; // x0
 
-  if ( (byte_438B916 & 1) == 0 )
+  if ( (byte_48DE4BE & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_B775C4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438B916 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_UserServantMaster___, usrSvtId);
+    sub_1B00CCC(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v4);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_48DE4BE = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_B7769C(0LL, v5);
-  result = (UserServantEntity_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+    sub_1B00F28(0LL, v7);
+  result = (UserServantEntity_o *)DataManager__GetMasterData_object_(
                                     (DataManager_o *)Instance,
-                                    (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                                    (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_UserServantMaster___);
   if ( result )
-    return DataMasterBase_UserServantStorageMaster__UserServantEntity__long___GetEntity(
-             (DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *)result,
-             usrSvtId,
-             (const MethodInfo_21FBABC *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    return (UserServantEntity_o *)DataMasterBase_object__object__long___GetEntity(
+                                    (DataMasterBase_TMaster__TEntity__PKType__o *)result,
+                                    usrSvtId,
+                                    (const MethodInfo_2FE6BF8 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
   return result;
 }
 
 
 System_Int32_array *__fastcall MyRoomData__getUsrSvtNum(MyRoomData_o *this, const MethodInfo *method)
 {
-  System_Int32_array *v2; // x19
-  DataManager_o *Instance; // x0
-  __int64 v4; // x1
+  __int64 v2; // x1
+  __int64 v3; // x1
+  System_Int32_array *v4; // x19
+  Il2CppObject *Instance; // x0
+  __int64 v6; // x1
   il2cpp_array_size_t max_length; // w8
   System_Int32_array *result; // x0
-  __int64 v7; // x0
-  int32_t servantEquipSum; // [xsp+8h] [xbp-8h] BYREF
-  int32_t servantSum; // [xsp+Ch] [xbp-4h] BYREF
+  int32_t servantEquipSum[2]; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_438B915 & 1) == 0 )
+  if ( (byte_48DE4BD & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_B775C4(&int___TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438B915 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_UserServantMaster___, method);
+    sub_1B00CCC(&int___TypeInfo, v2);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_48DE4BD = 1;
   }
-  servantSum = 0;
-  servantEquipSum = 0;
-  v2 = (System_Int32_array *)sub_B775DC(int___TypeInfo, 2LL);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  *(_QWORD *)servantEquipSum = 0LL;
+  v4 = (System_Int32_array *)sub_1B00D74(int___TypeInfo, 2LL);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
-    || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                      Instance,
-                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0LL
-    || (Instance = (DataManager_o *)UserServantMaster__getCount(
-                                      (UserServantMaster_o *)Instance,
-                                      &servantSum,
-                                      &servantEquipSum,
-                                      0,
-                                      0LL),
-        !v2) )
+    || (Instance = DataManager__GetMasterData_object_(
+                     (DataManager_o *)Instance,
+                     (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0LL
+    || (Instance = (Il2CppObject *)UserServantMaster__getCount(
+                                     (UserServantMaster_o *)Instance,
+                                     &servantEquipSum[1],
+                                     servantEquipSum,
+                                     0,
+                                     0LL),
+        !v4) )
   {
-    sub_B7769C(Instance, v4);
+    sub_1B00F28(Instance, v6);
   }
-  max_length = v2->max_length;
-  if ( !max_length || (v2->m_Items[1] = servantSum, max_length == 1) )
-  {
-    v7 = sub_B776C8(Instance);
-    sub_B77668(v7, 0LL);
-  }
-  result = v2;
-  v2->m_Items[2] = servantEquipSum;
+  max_length = v4->max_length;
+  if ( !max_length || (v4->m_Items[1] = servantEquipSum[1], max_length == 1) )
+    sub_1B00F30(Instance, v6);
+  result = v4;
+  v4->m_Items[2] = servantEquipSum[0];
   return result;
 }
 
@@ -280,198 +287,143 @@ void __fastcall MyRoomData__initMyRoomData(MyRoomData_o *this, const MethodInfo 
 void __fastcall MyRoomData__setUserInfoData(MyRoomData_o *this, const MethodInfo *method)
 {
   struct UserGameEntity_o *SelfUserGame; // x0
-  struct UserGameEntity_o **p_usrData; // x19
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
-  MstProfileData_o *v11; // x21
-  int64_t *v12; // x20
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
-  int64_t ActiveUserEquipId; // x0
-  const MethodInfo *v20; // x1
-  System_String_array **v21; // x2
-  System_String_array **v22; // x3
-  System_Boolean_array **v23; // x4
-  System_Int32_array **v24; // x5
-  System_Int32_array *v25; // x6
-  System_Int32_array *v26; // x7
-  System_Int32_array **name; // x1
-  int64_t v28; // x21
-  int64_t v29; // x21
-  int64_t v30; // x21
-  System_String_array **v31; // x2
-  System_String_array **v32; // x3
-  System_Boolean_array **v33; // x4
-  System_Int32_array **v34; // x5
-  System_Int32_array *v35; // x6
-  System_Int32_array *v36; // x7
-  System_Int32_array **friendCode; // x1
-  __int64 v38; // x0
-  float barExp; // [xsp+4h] [xbp-2Ch] BYREF
-  int64_t lateExp; // [xsp+8h] [xbp-28h] BYREF
-  int64_t exp; // [xsp+18h] [xbp-18h] BYREF
+  struct UserGameEntity_o **p_usrData; // x20
+  int32_t v5; // w2
+  int32_t v6; // w3
+  MstProfileData_o *v7; // x21
+  struct MstProfileData_o **p_mstInfoData; // x19
+  int32_t v9; // w2
+  int32_t v10; // w3
+  void *ExpInfo; // x0
+  const MethodInfo *v12; // x1
+  int32_t v13; // w2
+  int32_t v14; // w3
+  struct System_String_o *name; // x1
+  struct MstProfileData_o *v16; // x21
+  struct MstProfileData_o *v17; // x8
+  struct MstProfileData_o *v18; // x21
+  int64_t v19; // x8
+  struct MstProfileData_o *v20; // x21
+  int32_t v21; // w2
+  int32_t v22; // w3
+  unsigned int v23; // w9
+  struct MstProfileData_o *v24; // x8
+  struct UserGameEntity_o *v25; // x10
+  struct System_String_o *friendCode; // x1
+  struct UserGameEntity_o *v27; // x8
+  struct MstProfileData_o *v28; // x9
+  float barExp; // [xsp+Ch] [xbp-34h] BYREF
+  int64_t lateExp; // [xsp+10h] [xbp-30h] BYREF
+  int64_t exp; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_438B912 & 1) == 0 )
+  if ( (byte_48DE4BA & 1) == 0 )
   {
-    sub_B775C4(&MstProfileData_TypeInfo);
-    byte_438B912 = 1;
+    sub_1B00CCC(&MstProfileData_TypeInfo, method);
+    byte_48DE4BA = 1;
   }
-  exp = 0LL;
   lateExp = 0LL;
+  exp = 0LL;
   barExp = 0.0;
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   this->fields.usrData = SelfUserGame;
   p_usrData = &this->fields.usrData;
-  sub_B77560((BattleServantConfConponent_o *)p_usrData, (System_Int32_array **)SelfUserGame, v5, v6, v7, v8, v9, v10);
-  v11 = (MstProfileData_o *)sub_B77694(MstProfileData_TypeInfo);
-  MstProfileData___ctor(v11, 0LL);
-  v12 = (int64_t *)(p_usrData + 3);
-  p_usrData[3] = (struct UserGameEntity_o *)v11;
-  sub_B77560((BattleServantConfConponent_o *)(p_usrData + 3), (System_Int32_array **)v11, v13, v14, v15, v16, v17, v18);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.usrData, (int32_t)SelfUserGame, v5, v6);
+  v7 = (MstProfileData_o *)sub_1B00F18(MstProfileData_TypeInfo);
+  MstProfileData___ctor(v7, 0LL);
+  this->fields.mstInfoData = v7;
+  p_mstInfoData = &this->fields.mstInfoData;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)p_mstInfoData, (int32_t)v7, v9, v10);
   if ( !*p_usrData )
-    goto LABEL_44;
-  ActiveUserEquipId = (int64_t)p_usrData[3];
-  if ( !ActiveUserEquipId )
-    goto LABEL_44;
-  name = (System_Int32_array **)(*p_usrData)->fields.name;
-  *(_QWORD *)(ActiveUserEquipId + 16) = name;
-  sub_B77560((BattleServantConfConponent_o *)(ActiveUserEquipId + 16), name, v21, v22, v23, v24, v25, v26);
+    goto LABEL_25;
+  ExpInfo = *p_mstInfoData;
+  if ( !*p_mstInfoData )
+    goto LABEL_25;
+  name = (*p_usrData)->fields.name;
+  *((_QWORD *)ExpInfo + 2) = name;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)((char *)ExpInfo + 16), (int32_t)name, v13, v14);
+  ExpInfo = *p_usrData;
   if ( !*p_usrData )
-    goto LABEL_44;
-  if ( !*v12 )
-    goto LABEL_44;
-  *(_DWORD *)(*v12 + 32) = (*p_usrData)->fields.genderType;
-  ActiveUserEquipId = (int64_t)*p_usrData;
+    goto LABEL_25;
+  v16 = *p_mstInfoData;
+  if ( !*p_mstInfoData )
+    goto LABEL_25;
+  v16->fields.genderType = *((_DWORD *)ExpInfo + 19);
+  v16->fields.userEquipId = UserGameEntity__getActiveUserEquipId((UserGameEntity_o *)ExpInfo, 0LL);
+  ExpInfo = *p_usrData;
   if ( !*p_usrData )
-    goto LABEL_44;
-  v28 = *v12;
-  ActiveUserEquipId = UserGameEntity__getActiveUserEquipId((UserGameEntity_o *)ActiveUserEquipId, 0LL);
-  if ( !v28 )
-    goto LABEL_44;
-  *(_QWORD *)(v28 + 40) = ActiveUserEquipId;
-  if ( !*p_usrData )
-    goto LABEL_44;
-  if ( !*v12 )
-    goto LABEL_44;
-  *(_DWORD *)(*v12 + 48) = (*p_usrData)->fields.lv;
-  if ( !*p_usrData )
-    goto LABEL_44;
-  if ( !*v12 )
-    goto LABEL_44;
-  *(_QWORD *)(*v12 + 24) = (*p_usrData)->fields.birthDay;
-  ActiveUserEquipId = (int64_t)*p_usrData;
-  if ( !*p_usrData )
-    goto LABEL_44;
-  ActiveUserEquipId = UserGameEntity__getExpInfo((UserGameEntity_o *)ActiveUserEquipId, &exp, &lateExp, &barExp, 0LL);
-  if ( (ActiveUserEquipId & 1) != 0 )
+    goto LABEL_25;
+  v17 = *p_mstInfoData;
+  if ( !*p_mstInfoData )
+    goto LABEL_25;
+  v17->fields.userLv = *((_DWORD *)ExpInfo + 20);
+  v17->fields.birthDayVal = *((_QWORD *)ExpInfo + 4);
+  ExpInfo = (void *)UserGameEntity__getExpInfo((UserGameEntity_o *)ExpInfo, &exp, &lateExp, &barExp, 0LL);
+  v18 = *p_mstInfoData;
+  if ( ((unsigned __int8)ExpInfo & 1) != 0 )
   {
-    if ( !*v12 )
-      goto LABEL_44;
-    *(_QWORD *)(*v12 + 56) = exp;
-    if ( !*v12 )
-      goto LABEL_44;
-    *(_QWORD *)(*v12 + 64) = lateExp;
-    if ( !*v12 )
-      goto LABEL_44;
-    *(float *)(*v12 + 72) = barExp;
+    if ( !v18 )
+      goto LABEL_25;
+    v19 = lateExp;
+    v18->fields.exp = exp;
+    v18->fields.lateExp = v19;
+    v18->fields.barExp = barExp;
   }
-  ActiveUserEquipId = (int64_t)*p_usrData;
+  ExpInfo = *p_usrData;
   if ( !*p_usrData )
-    goto LABEL_44;
-  v29 = *v12;
-  ActiveUserEquipId = UserGameEntity__GetFriendPoint((UserGameEntity_o *)ActiveUserEquipId, 0LL);
-  if ( !v29 )
-    goto LABEL_44;
-  *(_DWORD *)(v29 + 96) = ActiveUserEquipId;
-  v30 = *v12;
-  ActiveUserEquipId = MyRoomData__getUserFriendSum((MyRoomData_o *)ActiveUserEquipId, v20);
-  if ( !v30 )
-    goto LABEL_44;
-  *(_DWORD *)(v30 + 100) = ActiveUserEquipId;
+    goto LABEL_25;
+  ExpInfo = (void *)UserGameEntity__GetFriendPoint((UserGameEntity_o *)ExpInfo, 0LL);
+  if ( !v18 )
+    goto LABEL_25;
+  v18->fields.friendPoint = (int)ExpInfo;
+  v20 = *p_mstInfoData;
+  ExpInfo = (void *)MyRoomData__getUserFriendSum((MyRoomData_o *)ExpInfo, v12);
+  if ( !v20 )
+    goto LABEL_25;
+  v20->fields.currentFriendNum = (int)ExpInfo;
   if ( !*p_usrData )
-    goto LABEL_44;
-  if ( !*v12 )
-    goto LABEL_44;
-  *(_DWORD *)(*v12 + 104) = (*p_usrData)->fields.friendKeep;
-  ActiveUserEquipId = (int64_t)MyRoomData__getUsrSvtNum((MyRoomData_o *)ActiveUserEquipId, v20);
-  if ( !ActiveUserEquipId )
-    goto LABEL_44;
-  if ( !*(_DWORD *)(ActiveUserEquipId + 24) )
-    goto LABEL_45;
-  if ( !*v12 || (*(_DWORD *)(*v12 + 108) = *(_DWORD *)(ActiveUserEquipId + 32), !*p_usrData) || !*v12 )
-LABEL_44:
-    sub_B7769C(ActiveUserEquipId, v20);
-  *(_DWORD *)(*v12 + 112) = (*p_usrData)->fields.svtKeep;
-  if ( *(_DWORD *)(ActiveUserEquipId + 24) <= 1u )
-  {
-LABEL_45:
-    v38 = sub_B776C8(ActiveUserEquipId);
-    sub_B77668(v38, 0LL);
-  }
-  if ( !*v12 )
-    goto LABEL_44;
-  *(_DWORD *)(*v12 + 116) = *(_DWORD *)(ActiveUserEquipId + 36);
+    goto LABEL_25;
+  if ( !*p_mstInfoData )
+    goto LABEL_25;
+  (*p_mstInfoData)->fields.maxFriendNum = (*p_usrData)->fields.friendKeep;
+  ExpInfo = MyRoomData__getUsrSvtNum((MyRoomData_o *)ExpInfo, v12);
+  if ( !ExpInfo )
+    goto LABEL_25;
+  v23 = *((_DWORD *)ExpInfo + 6);
+  if ( !v23 )
+    goto LABEL_26;
+  v24 = *p_mstInfoData;
+  if ( !*p_mstInfoData || (v24->fields.currentSvtNum = *((_DWORD *)ExpInfo + 8), (v25 = *p_usrData) == 0LL) )
+LABEL_25:
+    sub_1B00F28(ExpInfo, v12);
+  v24->fields.maxSvtNum = v25->fields.svtKeep;
+  if ( v23 <= 1 )
+LABEL_26:
+    sub_1B00F30(ExpInfo, v12);
+  v24->fields.currentSvtEpNum = *((_DWORD *)ExpInfo + 9);
+  v24->fields.maxSvtEqNum = v25->fields.svtEquipKeep;
+  friendCode = v25->fields.friendCode;
+  v24->fields.friendCode = friendCode;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v24->fields.friendCode, (int32_t)friendCode, v21, v22);
+  v27 = *p_usrData;
   if ( !*p_usrData )
-    goto LABEL_44;
-  if ( !*v12 )
-    goto LABEL_44;
-  *(_DWORD *)(*v12 + 120) = (*p_usrData)->fields.svtEquipKeep;
-  if ( !*p_usrData )
-    goto LABEL_44;
-  ActiveUserEquipId = *v12;
-  if ( !*v12 )
-    goto LABEL_44;
-  friendCode = (System_Int32_array **)(*p_usrData)->fields.friendCode;
-  *(_QWORD *)(ActiveUserEquipId + 128) = friendCode;
-  sub_B77560((BattleServantConfConponent_o *)(ActiveUserEquipId + 128), friendCode, v31, v32, v33, v34, v35, v36);
-  if ( !*p_usrData )
-    goto LABEL_44;
-  if ( !*v12 )
-    goto LABEL_44;
-  *(_DWORD *)(*v12 + 136) = (*p_usrData)->fields.qp;
-  if ( !*p_usrData )
-    goto LABEL_44;
-  if ( !*v12 )
-    goto LABEL_44;
-  *(_DWORD *)(*v12 + 140) = (*p_usrData)->fields.mana;
-  if ( !*p_usrData )
-    goto LABEL_44;
-  if ( !*v12 )
-    goto LABEL_44;
-  *(_DWORD *)(*v12 + 144) = (*p_usrData)->fields.stone;
-  if ( !*p_usrData || !*v12 )
-    goto LABEL_44;
-  *(_DWORD *)(*v12 + 148) = (*p_usrData)->fields.rarePri;
+    goto LABEL_25;
+  v28 = *p_mstInfoData;
+  if ( !*p_mstInfoData )
+    goto LABEL_25;
+  v28->fields.currentQp = v27->fields.qp;
+  v28->fields.currentMana = v27->fields.mana;
+  v28->fields.currentStone = v27->fields.stone;
+  v28->fields.currentRareMana = v27->fields.rarePri;
 }
 
 
 void __fastcall MyRoomData__setUsrData(MyRoomData_o *this, const MethodInfo *method)
 {
   struct UserGameEntity_o *SelfUserGame; // x0
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
+  int32_t v4; // w2
+  int32_t v5; // w3
 
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   this->fields.usrData = SelfUserGame;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.usrData,
-    (System_Int32_array **)SelfUserGame,
-    v4,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.usrData, (int32_t)SelfUserGame, v4, v5);
 }

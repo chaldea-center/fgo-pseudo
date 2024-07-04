@@ -4,40 +4,16 @@ void __fastcall ListViewDropInfo___ctor(
         UnityEngine_GameObject_o *dropSurfaceObject,
         const MethodInfo *method)
 {
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
+  int32_t v7; // w2
+  int32_t v8; // w3
+  int32_t v9; // w2
+  int32_t v10; // w3
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.listViewItemObject = listViewItemObject;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields,
-    (System_Int32_array **)listViewItemObject,
-    v7,
-    v8,
-    v9,
-    v10,
-    v11,
-    v12);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)listViewItemObject, v7, v8);
   this->fields.dropSurfaceObject = dropSurfaceObject;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.dropSurfaceObject,
-    (System_Int32_array **)dropSurfaceObject,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.dropSurfaceObject, (int32_t)dropSurfaceObject, v9, v10);
 }
 
 
@@ -48,18 +24,18 @@ void __fastcall ListViewDropInfo__SendMessage(
 {
   UnityEngine_GameObject_o *listViewItemObject; // x0
 
-  if ( (byte_438A7B5 & 1) == 0 )
+  if ( (byte_48E3B21 & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_ListViewObject___);
-    byte_438A7B5 = 1;
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_ListViewObject___, methodName);
+    byte_48E3B21 = 1;
   }
   listViewItemObject = this->fields.listViewItemObject;
   if ( !listViewItemObject
-    || (listViewItemObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
+    || (listViewItemObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                            listViewItemObject,
-                                                           (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_ListViewObject___)) == 0LL )
+                                                           (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_ListViewObject___)) == 0LL )
   {
-    sub_B7769C(listViewItemObject, methodName);
+    sub_1B00F28(listViewItemObject, methodName);
   }
   UnityEngine_Component__SendMessage(
     (UnityEngine_Component_o *)listViewItemObject,
@@ -71,25 +47,26 @@ void __fastcall ListViewDropInfo__SendMessage(
 
 void __fastcall ListViewDropInfo__SendMessageOnDropItem(ListViewDropInfo_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_GameObject_o *listViewItemObject; // x0
 
-  if ( (byte_438A7B6 & 1) == 0 )
+  if ( (byte_48E3B22 & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_ListViewObject___);
-    sub_B775C4(&StringLiteral_10177/*"OnDropItem"*/);
-    byte_438A7B6 = 1;
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_ListViewObject___, method);
+    sub_1B00CCC(&StringLiteral_9781/*"OnDropItem"*/, v3);
+    byte_48E3B22 = 1;
   }
   listViewItemObject = this->fields.listViewItemObject;
   if ( !listViewItemObject
-    || (listViewItemObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
+    || (listViewItemObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                            listViewItemObject,
-                                                           (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_ListViewObject___)) == 0LL )
+                                                           (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_ListViewObject___)) == 0LL )
   {
-    sub_B7769C(listViewItemObject, method);
+    sub_1B00F28(listViewItemObject, method);
   }
   UnityEngine_Component__SendMessage(
     (UnityEngine_Component_o *)listViewItemObject,
-    (System_String_o *)StringLiteral_10177/*"OnDropItem"*/,
+    (System_String_o *)StringLiteral_9781/*"OnDropItem"*/,
     (Il2CppObject *)this,
     0LL);
 }
@@ -105,48 +82,43 @@ UnityEngine_GameObject_o *__fastcall ListViewDropInfo__get_DropSurfaceObject(
 
 ListViewItem_o *__fastcall ListViewDropInfo__get_ListViewItem(ListViewDropInfo_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_Object_o *listViewItemObject; // x20
-  __int64 v4; // x1
-  bool v5; // w8
+  __int64 v5; // x1
+  bool v6; // w8
   ListViewItem_o *result; // x0
-  srcLineSprite_o *Component_srcLineSprite; // x19
-  bool v8; // w8
+  Il2CppObject *Component_object; // x19
+  bool v9; // w8
 
-  if ( (byte_438A7B3 & 1) == 0 )
+  if ( (byte_48E3B1F & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_ListViewObject___);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438A7B3 = 1;
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_ListViewObject___, method);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v3);
+    byte_48E3B1F = 1;
   }
   listViewItemObject = (UnityEngine_Object_o *)this->fields.listViewItemObject;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  v5 = UnityEngine_Object__op_Inequality(listViewItemObject, 0LL, 0LL);
+  v6 = UnityEngine_Object__op_Inequality(listViewItemObject, 0LL, 0LL);
   result = 0LL;
-  if ( v5 )
+  if ( v6 )
   {
     result = (ListViewItem_o *)this->fields.listViewItemObject;
     if ( !result )
-      goto LABEL_15;
-    Component_srcLineSprite = UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                (UnityEngine_GameObject_o *)result,
-                                (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_ListViewObject___);
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+      goto LABEL_13;
+    Component_object = UnityEngine_GameObject__GetComponent_object_(
+                         (UnityEngine_GameObject_o *)result,
+                         (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_ListViewObject___);
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
-    v8 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_srcLineSprite, 0LL, 0LL);
+    v9 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
     result = 0LL;
-    if ( v8 )
+    if ( v9 )
     {
-      if ( Component_srcLineSprite )
-        return (ListViewItem_o *)Component_srcLineSprite->fields.mcLineSprite;
-LABEL_15:
-      sub_B7769C(result, v4);
+      if ( Component_object )
+        return (ListViewItem_o *)Component_object[3].monitor;
+LABEL_13:
+      sub_1B00F28(result, v5);
     }
   }
   return result;
@@ -163,48 +135,43 @@ UnityEngine_GameObject_o *__fastcall ListViewDropInfo__get_ListViewItemObject(
 
 ListViewManager_o *__fastcall ListViewDropInfo__get_ListViewManager(ListViewDropInfo_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_Object_o *listViewItemObject; // x20
-  __int64 v4; // x1
-  bool v5; // w8
+  __int64 v5; // x1
+  bool v6; // w8
   ListViewManager_o *result; // x0
-  srcLineSprite_o *Component_srcLineSprite; // x19
-  bool v8; // w8
+  Il2CppObject *Component_object; // x19
+  bool v9; // w8
 
-  if ( (byte_438A7B4 & 1) == 0 )
+  if ( (byte_48E3B20 & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_ListViewObject___);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438A7B4 = 1;
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_ListViewObject___, method);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v3);
+    byte_48E3B20 = 1;
   }
   listViewItemObject = (UnityEngine_Object_o *)this->fields.listViewItemObject;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  v5 = UnityEngine_Object__op_Inequality(listViewItemObject, 0LL, 0LL);
+  v6 = UnityEngine_Object__op_Inequality(listViewItemObject, 0LL, 0LL);
   result = 0LL;
-  if ( v5 )
+  if ( v6 )
   {
     result = (ListViewManager_o *)this->fields.listViewItemObject;
     if ( !result )
-      goto LABEL_15;
-    Component_srcLineSprite = UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                (UnityEngine_GameObject_o *)result,
-                                (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_ListViewObject___);
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+      goto LABEL_13;
+    Component_object = UnityEngine_GameObject__GetComponent_object_(
+                         (UnityEngine_GameObject_o *)result,
+                         (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_ListViewObject___);
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
-    v8 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_srcLineSprite, 0LL, 0LL);
+    v9 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
     result = 0LL;
-    if ( v8 )
+    if ( v9 )
     {
-      if ( Component_srcLineSprite )
-        return *(ListViewManager_o **)&Component_srcLineSprite->fields.mtIsUpdate;
-LABEL_15:
-      sub_B7769C(result, v4);
+      if ( Component_object )
+        return (ListViewManager_o *)Component_object[2].monitor;
+LABEL_13:
+      sub_1B00F28(result, v5);
     }
   }
   return result;
@@ -213,34 +180,26 @@ LABEL_15:
 
 ListViewObject_o *__fastcall ListViewDropInfo__get_ListViewObject(ListViewDropInfo_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_Object_o *listViewItemObject; // x20
-  __int64 v4; // x1
-  bool v5; // w8
-  ListViewObject_o *result; // x0
-  UnityEngine_GameObject_o *v7; // x0
+  __int64 v5; // x1
+  UnityEngine_GameObject_o *v6; // x0
 
-  if ( (byte_438A7B2 & 1) == 0 )
+  if ( (byte_48E3B1E & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_ListViewObject___);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438A7B2 = 1;
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_ListViewObject___, method);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v3);
+    byte_48E3B1E = 1;
   }
   listViewItemObject = (UnityEngine_Object_o *)this->fields.listViewItemObject;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  v5 = UnityEngine_Object__op_Inequality(listViewItemObject, 0LL, 0LL);
-  result = 0LL;
-  if ( v5 )
-  {
-    v7 = this->fields.listViewItemObject;
-    if ( !v7 )
-      sub_B7769C(0LL, v4);
-    return (ListViewObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                 v7,
-                                 (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_ListViewObject___);
-  }
-  return result;
+  if ( !UnityEngine_Object__op_Inequality(listViewItemObject, 0LL, 0LL) )
+    return 0LL;
+  v6 = this->fields.listViewItemObject;
+  if ( !v6 )
+    sub_1B00F28(0LL, v5);
+  return (ListViewObject_o *)UnityEngine_GameObject__GetComponent_object_(
+                               v6,
+                               (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_ListViewObject___);
 }

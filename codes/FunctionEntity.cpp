@@ -1,13 +1,13 @@
 void __fastcall FunctionEntity___ctor(FunctionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438D918 & 1) == 0 )
+  if ( (byte_48E2A51 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_int___ctor__);
-    byte_438D918 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_int___ctor__, method);
+    byte_48E2A51 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_2FE684C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -17,50 +17,82 @@ int32_t __fastcall FunctionEntity__CreatePrimaryKey(FunctionEntity_o *this, cons
 }
 
 
+EffectFlipData_array *__fastcall FunctionEntity__GetActEnemyEffectFlipDataArray(
+        FunctionEntity_o *this,
+        const MethodInfo *method)
+{
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  EffectFlipData_array *result; // x0
+  EffectFlipData_array *v7; // x19
+
+  if ( (byte_48E2A50 & 1) == 0 )
+  {
+    sub_1B00CCC(&Method_BasicHelper_GetValue_string__object___, method);
+    sub_1B00CCC(&Method_JsonManager_DeserializeArray_EffectFlipData___, v3);
+    sub_1B00CCC(&JsonManager_TypeInfo, v4);
+    sub_1B00CCC(&StringLiteral_16409/*"actEnemyEffectFlip"*/, v5);
+    byte_48E2A50 = 1;
+  }
+  result = (EffectFlipData_array *)BasicHelper__GetValue_object__object_(
+                                     (System_Collections_Generic_Dictionary_K__V__o *)this->fields.script,
+                                     (Il2CppObject *)StringLiteral_16409/*"actEnemyEffectFlip"*/,
+                                     0LL,
+                                     (const MethodInfo_2D51658 *)Method_BasicHelper_GetValue_string__object___);
+  if ( result )
+  {
+    v7 = result;
+    if ( !JsonManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
+    return (EffectFlipData_array *)JsonManager__DeserializeArray_object_(
+                                     &v7->obj,
+                                     (const MethodInfo_2DB84AC *)Method_JsonManager_DeserializeArray_EffectFlipData___);
+  }
+  return result;
+}
+
+
 int32_t __fastcall FunctionEntity__GetAddStateBuffTypeFromFunction(FunctionEntity_o *this, const MethodInfo *method)
 {
-  int32_t funcType; // w8
-  WarQuestSelectionMaster_o *Master_WarQuestSelectionMaster; // x0
-  __int64 v5; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  Il2CppObject *Master_object; // x0
+  __int64 v6; // x1
   struct System_Int32_array *vals; // x8
-  __int64 v8; // x0
-  WarEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
+  Il2CppObject *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_438D913 & 1) == 0 )
+  if ( (byte_48E2A4B & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMaster_BuffMaster___);
-    sub_B775C4(&DataManager_TypeInfo);
-    sub_B775C4(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
-    byte_438D913 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMaster_BuffMaster___, method);
+    sub_1B00CCC(&DataManager_TypeInfo, v3);
+    sub_1B00CCC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, v4);
+    byte_48E2A4B = 1;
   }
   entity = 0LL;
-  funcType = this->fields.funcType;
-  if ( funcType == 16 || funcType == 1 )
+  if ( FuncList__isAddState(this->fields.funcType, 0LL) )
   {
-    if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+    if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_BuffMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_BuffMaster___);
     vals = this->fields.vals;
     if ( !vals )
-      goto LABEL_15;
+      goto LABEL_13;
     if ( !vals->max_length )
-    {
-      v8 = sub_B776C8(Master_WarQuestSelectionMaster);
-      sub_B77668(v8, 0LL);
-    }
-    if ( !Master_WarQuestSelectionMaster )
-      goto LABEL_15;
-    Master_WarQuestSelectionMaster = (WarQuestSelectionMaster_o *)DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
-                                                                    (DataMasterBase_WarMaster__WarEntity__int__o *)Master_WarQuestSelectionMaster,
-                                                                    &entity,
-                                                                    vals->m_Items[1],
-                                                                    (const MethodInfo_21FB8F0 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
-    if ( ((unsigned __int8)Master_WarQuestSelectionMaster & 1) != 0 )
+      sub_1B00F30(Master_object, v6);
+    if ( !Master_object )
+      goto LABEL_13;
+    Master_object = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
+                                      (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
+                                      &entity,
+                                      vals->m_Items[1],
+                                      (const MethodInfo_2FE6AA0 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
+    if ( ((unsigned __int8)Master_object & 1) != 0 )
     {
       if ( entity )
-        return *(&entity->fields.id + 1);
-LABEL_15:
-      sub_B7769C(Master_WarQuestSelectionMaster, v5);
+        return HIDWORD(entity[1].klass);
+LABEL_13:
+      sub_1B00F28(Master_object, v6);
     }
   }
   return 0;
@@ -69,54 +101,60 @@ LABEL_15:
 
 System_Int32_array *__fastcall FunctionEntity__GetFuncIndividuality(FunctionEntity_o *this, const MethodInfo *method)
 {
-  System_Collections_Generic_List_int__o *v3; // x20
-  FuncTypeDetailMaster_o *Master_WarQuestSelectionMaster; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
   __int64 v5; // x1
-  const MethodInfo *v6; // x2
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  System_Collections_Generic_List_int__o *v9; // x20
+  System_Int32_array *Master_object; // x0
+  __int64 v11; // x1
+  const MethodInfo *v12; // x2
   System_Collections_Generic_IEnumerable_T__o *IntArrayDefaultEmpty; // x0
 
-  if ( (byte_438D915 & 1) == 0 )
+  if ( (byte_48E2A4D & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMaster_FuncTypeDetailMaster___);
-    sub_B775C4(&DataManager_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_int__AddRange__);
-    sub_B775C4(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_B775C4(&Method_System_Collections_Generic_List_int___ctor___69397304);
-    sub_B775C4(&System_Collections_Generic_List_int__TypeInfo);
-    sub_B775C4(&StringLiteral_19304/*"funcIndividuality"*/);
-    byte_438D915 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMaster_FuncTypeDetailMaster___, method);
+    sub_1B00CCC(&DataManager_TypeInfo, v3);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_int__AddRange__, v4);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_int__ToArray__, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_int___ctor__, v6);
+    sub_1B00CCC(&System_Collections_Generic_List_int__TypeInfo, v7);
+    sub_1B00CCC(&StringLiteral_19395/*"funcIndividuality"*/, v8);
+    byte_48E2A4D = 1;
   }
-  v3 = (System_Collections_Generic_List_int__o *)sub_B77694(System_Collections_Generic_List_int__TypeInfo);
+  v9 = (System_Collections_Generic_List_int__o *)sub_1B00F18(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v3,
-    (const MethodInfo_30E508C *)Method_System_Collections_Generic_List_int___ctor___69397304);
-  if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+    v9,
+    (const MethodInfo_33A4158 *)Method_System_Collections_Generic_List_int___ctor__);
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (FuncTypeDetailMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_FuncTypeDetailMaster___);
-  if ( !Master_WarQuestSelectionMaster
-    || (Master_WarQuestSelectionMaster = (FuncTypeDetailMaster_o *)FuncTypeDetailMaster__GetIndividuality(
-                                                                     Master_WarQuestSelectionMaster,
-                                                                     this->fields.funcType,
-                                                                     v6),
-        !v3) )
+  Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_FuncTypeDetailMaster___);
+  if ( !Master_object
+    || (Master_object = FuncTypeDetailMaster__GetIndividuality(
+                          (FuncTypeDetailMaster_o *)Master_object,
+                          this->fields.funcType,
+                          v12),
+        !v9) )
   {
-    sub_B7769C(Master_WarQuestSelectionMaster, v5);
+    sub_1B00F28(Master_object, v11);
   }
   System_Collections_Generic_List_int___AddRange(
-    v3,
-    (System_Collections_Generic_IEnumerable_T__o *)Master_WarQuestSelectionMaster,
-    (const MethodInfo_30E603C *)Method_System_Collections_Generic_List_int__AddRange__);
+    v9,
+    (System_Collections_Generic_IEnumerable_T__o *)Master_object,
+    (const MethodInfo_33A4BB8 *)Method_System_Collections_Generic_List_int__AddRange__);
   IntArrayDefaultEmpty = (System_Collections_Generic_IEnumerable_T__o *)EntityScriptUtil__GetIntArrayDefaultEmpty(
                                                                           this->fields.script,
-                                                                          (System_String_o *)StringLiteral_19304/*"funcIndividuality"*/,
+                                                                          (System_String_o *)StringLiteral_19395/*"funcIndividuality"*/,
                                                                           0LL);
   System_Collections_Generic_List_int___AddRange(
-    v3,
+    v9,
     IntArrayDefaultEmpty,
-    (const MethodInfo_30E603C *)Method_System_Collections_Generic_List_int__AddRange__);
+    (const MethodInfo_33A4BB8 *)Method_System_Collections_Generic_List_int__AddRange__);
   return System_Collections_Generic_List_int___ToArray(
-           v3,
-           (const MethodInfo_30E7EF4 *)Method_System_Collections_Generic_List_int__ToArray__);
+           v9,
+           (const MethodInfo_33A6464 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -124,12 +162,12 @@ int32_t __fastcall FunctionEntity__GetPopupTextCondensedScaleSize(FunctionEntity
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_438D916 & 1) == 0 )
+  if ( (byte_48E2A4E & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_10927/*"PopupTextCondensedScaleSize"*/);
-    byte_438D916 = 1;
+    sub_1B00CCC(&StringLiteral_10560/*"PopupTextCondensedScaleSize"*/, method);
+    byte_48E2A4E = 1;
   }
-  return FunctionEntity__getScript(this, (System_String_o *)StringLiteral_10927/*"PopupTextCondensedScaleSize"*/, 0, v2);
+  return FunctionEntity__getScript(this, (System_String_o *)StringLiteral_10560/*"PopupTextCondensedScaleSize"*/, 0, v2);
 }
 
 
@@ -137,12 +175,12 @@ int32_t __fastcall FunctionEntity__GetPopupTextCondensedScaleValue(FunctionEntit
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_438D917 & 1) == 0 )
+  if ( (byte_48E2A4F & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_10928/*"PopupTextCondensedScaleValue"*/);
-    byte_438D917 = 1;
+    sub_1B00CCC(&StringLiteral_10561/*"PopupTextCondensedScaleValue"*/, method);
+    byte_48E2A4F = 1;
   }
-  return FunctionEntity__getScript(this, (System_String_o *)StringLiteral_10928/*"PopupTextCondensedScaleValue"*/, 0, v2);
+  return FunctionEntity__getScript(this, (System_String_o *)StringLiteral_10561/*"PopupTextCondensedScaleValue"*/, 0, v2);
 }
 
 
@@ -152,42 +190,18 @@ void __fastcall FunctionEntity__GetTargetVals(
         System_Int32_array_array **overwriteTvals,
         const MethodInfo *method)
 {
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  const MethodInfo *v11; // x2
-  System_String_array **v12; // x2
-  System_String_array **v13; // x3
-  System_Boolean_array **v14; // x4
-  System_Int32_array **v15; // x5
-  System_Int32_array *v16; // x6
-  System_Int32_array *v17; // x7
+  const MethodInfo *v7; // x2
+  int32_t v8; // w2
+  int32_t v9; // w3
   System_Int32_array *tvals; // x1
 
   *originalTvals = 0LL;
-  sub_B77560(
-    (BattleServantConfConponent_o *)originalTvals,
-    0LL,
-    (System_String_array **)overwriteTvals,
-    (System_String_array **)method,
-    v4,
-    v5,
-    v6,
-    v7);
-  if ( !FunctionEntity__TryGetOverwriteTvals(this, overwriteTvals, v11) )
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)originalTvals, 0, (int32_t)overwriteTvals, (int32_t)method);
+  if ( !FunctionEntity__TryGetOverwriteTvals(this, overwriteTvals, v7) )
   {
     tvals = this->fields.tvals;
     *originalTvals = tvals;
-    sub_B77560(
-      (BattleServantConfConponent_o *)originalTvals,
-      (System_Int32_array **)tvals,
-      v12,
-      v13,
-      v14,
-      v15,
-      v16,
-      v17);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)originalTvals, (int32_t)tvals, v8, v9);
   }
 }
 
@@ -197,14 +211,14 @@ bool __fastcall FunctionEntity__TryGetOverwriteTvals(
         System_Int32_array_array **tvalsArray,
         const MethodInfo *method)
 {
-  if ( (byte_438D914 & 1) == 0 )
+  if ( (byte_48E2A4C & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_21831/*"overwriteTvals"*/);
-    byte_438D914 = 1;
+    sub_1B00CCC(&StringLiteral_22111/*"overwriteTvals"*/, tvalsArray);
+    byte_48E2A4C = 1;
   }
   return EntityScriptUtil__TryGet2DimensionalIntArray(
            this->fields.script,
-           (System_String_o *)StringLiteral_21831/*"overwriteTvals"*/,
+           (System_String_o *)StringLiteral_22111/*"overwriteTvals"*/,
            tvalsArray,
            0LL);
 }
@@ -214,17 +228,17 @@ bool __fastcall FunctionEntity__checkScript(FunctionEntity_o *this, System_Strin
 {
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
 
-  if ( (byte_438D90E & 1) == 0 )
+  if ( (byte_48E2A46 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    byte_438D90E = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
+    byte_48E2A46 = 1;
   }
   script = this->fields.script;
   if ( script )
-    LOBYTE(script) = System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
-                       (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-                       (System_Xml_XmlQualifiedName_o *)key,
-                       (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    LOBYTE(script) = System_Collections_Generic_Dictionary_object__object___ContainsKey(
+                       (System_Collections_Generic_Dictionary_object__object__o *)script,
+                       (Il2CppObject *)key,
+                       (const MethodInfo_308DC3C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
   return (char)script;
 }
 
@@ -233,14 +247,14 @@ System_Int32_array *__fastcall FunctionEntity__getEffectList(FunctionEntity_o *t
 {
   System_Int32_array *result; // x0
 
-  if ( (byte_438D911 & 1) == 0 )
+  if ( (byte_48E2A49 & 1) == 0 )
   {
-    sub_B775C4(&int___TypeInfo);
-    byte_438D911 = 1;
+    sub_1B00CCC(&int___TypeInfo, method);
+    byte_48E2A49 = 1;
   }
   result = this->fields.effectList;
   if ( !result )
-    return (System_Int32_array *)sub_B775DC(int___TypeInfo, 0LL);
+    return (System_Int32_array *)sub_1B00D74(int___TypeInfo, 0LL);
   return result;
 }
 
@@ -249,14 +263,14 @@ System_Int32_array *__fastcall FunctionEntity__getQuestTargetValues(FunctionEnti
 {
   System_Int32_array *result; // x0
 
-  if ( (byte_438D912 & 1) == 0 )
+  if ( (byte_48E2A4A & 1) == 0 )
   {
-    sub_B775C4(&int___TypeInfo);
-    byte_438D912 = 1;
+    sub_1B00CCC(&int___TypeInfo, method);
+    byte_48E2A4A = 1;
   }
   result = this->fields.questTvals;
   if ( !result )
-    return (System_Int32_array *)sub_B775DC(int___TypeInfo, 0LL);
+    return (System_Int32_array *)sub_1B00D74(int___TypeInfo, 0LL);
   return result;
 }
 
@@ -270,63 +284,66 @@ int32_t __fastcall FunctionEntity__getScript(
 {
   int32_t v4; // w20
   __int64 v7; // x1
-  System_Collections_Generic_Dictionary_Type__IStoreExtension__o *script; // x0
-  FunctionEntity_o *v10; // x0
-  System_String_o *v11; // x1
-  System_String_o *v12; // x2
-  const MethodInfo *v13; // x3
+  __int64 v8; // x1
+  System_Collections_Generic_Dictionary_object__object__o *script; // x0
+  __int64 v10; // x2
+  __int64 v11; // x3
+  FunctionEntity_o *v13; // x0
+  System_String_o *v14; // x1
+  System_String_o *v15; // x2
+  const MethodInfo *v16; // x3
 
   v4 = defVal;
-  if ( (byte_438D90F & 1) == 0 )
+  if ( (byte_48E2A47 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_B775C4(&long_TypeInfo);
-    byte_438D90F = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, key);
+    sub_1B00CCC(&long_TypeInfo, v7);
+    byte_48E2A47 = 1;
   }
   if ( !FunctionEntity__checkScript(this, key, *(const MethodInfo **)&defVal) )
     return v4;
-  script = (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)this->fields.script;
+  script = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.script;
   if ( !script
-    || (script = (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-                                                                                     script,
-                                                                                     (System_Type_o *)key,
-                                                                                     (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+    || (script = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
+                                                                              script,
+                                                                              (Il2CppObject *)key,
+                                                                              (const MethodInfo_308D9C8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
   {
-    sub_B7769C(script, v7);
+    sub_1B00F28(script, v8);
   }
   if ( script->klass->_1.element_class == long_TypeInfo->_1.element_class )
-    return *(_DWORD *)j_il2cpp_object_unbox_0(script);
-  sub_B77990(script);
-  return (unsigned int)FunctionEntity__getScript_29697596(v10, v11, v12, v13);
+    return *(_DWORD *)j_il2cpp_object_unbox_0(script, long_TypeInfo, v10, v11);
+  sub_1B011E8(script);
+  return (unsigned int)FunctionEntity__getScript_38097012(v13, v14, v15, v16);
 }
 
 
-System_String_o *__fastcall FunctionEntity__getScript_29697596(
+System_String_o *__fastcall FunctionEntity__getScript_38097012(
         FunctionEntity_o *this,
         System_String_o *key,
         System_String_o *defVal,
         const MethodInfo *method)
 {
   __int64 v7; // x1
-  System_Collections_Generic_Dictionary_Type__IStoreExtension__o *script; // x0
+  System_Collections_Generic_Dictionary_object__object__o *script; // x0
 
-  if ( (byte_438D910 & 1) == 0 )
+  if ( (byte_48E2A48 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    byte_438D910 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, key);
+    byte_48E2A48 = 1;
   }
   if ( !FunctionEntity__checkScript(this, key, (const MethodInfo *)defVal) )
     return defVal;
-  script = (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)this->fields.script;
+  script = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.script;
   if ( !script
-    || (script = (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-                                                                                     script,
-                                                                                     (System_Type_o *)key,
-                                                                                     (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+    || (script = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
+                                                                              script,
+                                                                              (Il2CppObject *)key,
+                                                                              (const MethodInfo_308D9C8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
   {
-    sub_B7769C(script, v7);
+    sub_1B00F28(script, v7);
   }
-  return (System_String_o *)((__int64 (__fastcall *)(System_Collections_Generic_Dictionary_Type__IStoreExtension__o *, Il2CppMethodPointer))script->klass->vtable._3_ToString.method)(
+  return (System_String_o *)((__int64 (__fastcall *)(System_Collections_Generic_Dictionary_object__object__o *, Il2CppMethodPointer))script->klass->vtable._3_ToString.method)(
                               script,
                               script->klass->vtable._4_unknown.methodPtr);
 }
@@ -346,11 +363,11 @@ System_Int32_array *__fastcall FunctionEntity__getValues(FunctionEntity_o *this,
 
 bool __fastcall FunctionEntity__isTargetEnemy(FunctionEntity_o *this, const MethodInfo *method)
 {
-  return (this->fields.applyTarget | 1) == 3;
+  return (this->fields.applyTarget & 0xFFFFFFFE) == 2;
 }
 
 
 bool __fastcall FunctionEntity__isTargetPlayer(FunctionEntity_o *this, const MethodInfo *method)
 {
-  return (this->fields.applyTarget | 2) == 3;
+  return (this->fields.applyTarget & 0xFFFFFFFD) == 1;
 }

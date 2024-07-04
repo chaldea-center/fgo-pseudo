@@ -4,87 +4,97 @@ void __fastcall BgmPlayArgsGroup___ctor(
         BgmPlayArgs_array *otherBgmParams,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v7; // x22
-  __int64 v8; // x0
+  __int64 v7; // x1
+  __int64 v8; // x1
   __int64 v9; // x1
-  System_String_array **v10; // x2
-  System_String_array **v11; // x3
-  System_Boolean_array **v12; // x4
-  System_Int32_array **v13; // x5
-  System_Int32_array *v14; // x6
-  System_Int32_array *v15; // x7
-  System_Collections_Generic_List_TimeZoneInfo_AdjustmentRule__o *AllArgsList_k__BackingField; // x21
-  _QWORD **v17; // x22
-  __int64 v18; // x20
-  __int16 v19; // w8
-  __int64 v20; // x20
-  __int64 v21; // x20
-  __int64 v22; // x20
-  const MethodInfo *v23; // x1
+  __int64 v10; // x1
+  System_Collections_Generic_List_object__o *v11; // x22
+  __int64 v12; // x0
+  __int64 v13; // x1
+  int32_t v14; // w2
+  int32_t v15; // w3
+  struct System_Object_array *items; // x8
+  _QWORD *v17; // x9
+  __int64 size; // x10
+  Il2CppClass **v19; // x0
+  int32_t v20; // w2
+  int32_t v21; // w3
+  System_Collections_Generic_List_object__o *AllArgsList_k__BackingField; // x21
+  _QWORD *v23; // x20
+  __int64 v24; // x8
+  __int64 v25; // x0
+  const MethodInfo *v26; // x1
 
-  if ( (byte_438A931 & 1) == 0 )
+  if ( (byte_48E1EA0 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Linq_Enumerable_Empty_BgmPlayArgs___);
-    sub_B775C4(&Method_System_Collections_Generic_List_BgmPlayArgs__AddRange__);
-    sub_B775C4(&Method_System_Collections_Generic_List_BgmPlayArgs__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_BgmPlayArgs___ctor__);
-    sub_B775C4(&System_Collections_Generic_List_BgmPlayArgs__TypeInfo);
-    byte_438A931 = 1;
+    sub_1B00CCC(&Method_System_Linq_Enumerable_Empty_BgmPlayArgs___, mainBgmParam);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_BgmPlayArgs__AddRange__, v7);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_BgmPlayArgs__Add__, v8);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_BgmPlayArgs___ctor__, v9);
+    sub_1B00CCC(&System_Collections_Generic_List_BgmPlayArgs__TypeInfo, v10);
+    byte_48E1EA0 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v7 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_BgmPlayArgs__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v7,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_BgmPlayArgs___ctor__);
-  if ( !v7 )
-    goto LABEL_19;
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-    v7,
-    (EventMissionProgressRequest_Argument_ProgressData_o *)mainBgmParam,
-    (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_BgmPlayArgs__Add__);
-  this->fields._AllArgsList_k__BackingField = (struct System_Collections_Generic_List_BgmPlayArgs__o *)v7;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v7, v10, v11, v12, v13, v14, v15);
-  AllArgsList_k__BackingField = (System_Collections_Generic_List_TimeZoneInfo_AdjustmentRule__o *)this->fields._AllArgsList_k__BackingField;
+  v11 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_BgmPlayArgs__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v11,
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_BgmPlayArgs___ctor__);
+  if ( !v11 )
+    goto LABEL_20;
+  items = v11->fields._items;
+  v17 = Method_System_Collections_Generic_List_BgmPlayArgs__Add__;
+  ++v11->fields._version;
+  if ( !items )
+    goto LABEL_20;
+  size = v11->fields._size;
+  if ( (unsigned int)size >= items->max_length )
+  {
+    System_Collections_Generic_List_object___AddWithResize(
+      v11,
+      (Il2CppObject *)mainBgmParam,
+      *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+  }
+  else
+  {
+    v19 = &items->obj.klass + size;
+    v11->fields._size = size + 1;
+    v19[4] = (Il2CppClass *)mainBgmParam;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)(v19 + 4), (int32_t)mainBgmParam, v14, v15);
+  }
+  this->fields._AllArgsList_k__BackingField = (struct System_Collections_Generic_List_BgmPlayArgs__o *)v11;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)v11, v20, v21);
+  AllArgsList_k__BackingField = (System_Collections_Generic_List_object__o *)this->fields._AllArgsList_k__BackingField;
   if ( !otherBgmParams )
   {
-    v17 = (_QWORD **)Method_System_Linq_Enumerable_Empty_BgmPlayArgs___;
-    v18 = **((_QWORD **)Method_System_Linq_Enumerable_Empty_BgmPlayArgs___ + 6);
-    v19 = *(_WORD *)(v18 + 306);
-    if ( (v19 & 1) == 0 )
+    v23 = Method_System_Linq_Enumerable_Empty_BgmPlayArgs___;
+    v24 = *((_QWORD *)Method_System_Linq_Enumerable_Empty_BgmPlayArgs___ + 7);
+    if ( !v24 )
     {
-      v8 = sub_B0F2C4(**((_QWORD **)Method_System_Linq_Enumerable_Empty_BgmPlayArgs___ + 6));
-      v19 = *(_WORD *)(v18 + 306);
+      sub_1B52C04(Method_System_Linq_Enumerable_Empty_BgmPlayArgs___);
+      v24 = v23[7];
     }
-    if ( (v19 & 0x400) != 0 )
-    {
-      v20 = *v17[6];
-      if ( (*(_BYTE *)(v20 + 306) & 1) == 0 )
-        v8 = sub_B0F2C4(*v17[6]);
-      if ( !*(_DWORD *)(v20 + 224) )
-      {
-        v21 = *v17[6];
-        if ( (*(_BYTE *)(v21 + 306) & 1) == 0 )
-          sub_B0F2C4(*v17[6]);
-        j_il2cpp_runtime_class_init_0(v21);
-      }
-    }
-    v22 = *v17[6];
-    if ( (*(_BYTE *)(v22 + 306) & 1) == 0 )
-      v8 = sub_B0F2C4(*v17[6]);
-    otherBgmParams = **(BgmPlayArgs_array ***)(v22 + 184);
+    v25 = *(_QWORD *)(v24 + 16);
+    if ( (*(_BYTE *)(v25 + 309) & 1) == 0 )
+      v25 = sub_1B52BA8(v25);
+    if ( !*(_DWORD *)(v25 + 224) )
+      j_il2cpp_runtime_class_init_0(v25);
+    v12 = *(_QWORD *)(v23[7] + 16LL);
+    if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
+      v12 = sub_1B52BA8(v12);
+    otherBgmParams = **(BgmPlayArgs_array ***)(v12 + 184);
   }
   if ( !AllArgsList_k__BackingField )
-LABEL_19:
-    sub_B7769C(v8, v9);
-  System_Collections_Generic_List_TimeZoneInfo_AdjustmentRule___AddRange(
+LABEL_20:
+    sub_1B00F28(v12, v13);
+  System_Collections_Generic_List_object___AddRange(
     AllArgsList_k__BackingField,
     (System_Collections_Generic_IEnumerable_T__o *)otherBgmParams,
-    (const MethodInfo_30534E8 *)Method_System_Collections_Generic_List_BgmPlayArgs__AddRange__);
-  BgmPlayArgsGroup__Initialize(this, v23);
+    (const MethodInfo_33C1BDC *)Method_System_Collections_Generic_List_BgmPlayArgs__AddRange__);
+  BgmPlayArgsGroup__Initialize(this, v26);
 }
 
 
-void __fastcall BgmPlayArgsGroup___ctor_24315012(
+void __fastcall BgmPlayArgsGroup___ctor_37099508(
         BgmPlayArgsGroup_o *this,
         System_String_o *toAnalyze,
         System_Nullable_float__o volumeNullable,
@@ -92,93 +102,79 @@ void __fastcall BgmPlayArgsGroup___ctor_24315012(
         int64_t startTime,
         const MethodInfo *method)
 {
-  struct System_Collections_Generic_List_BgmPlayArgs__o *v11; // x0
-  System_String_array **v12; // x2
-  System_String_array **v13; // x3
-  System_Boolean_array **v14; // x4
-  System_Int32_array **v15; // x5
-  System_Int32_array *v16; // x6
-  System_Int32_array *v17; // x7
-  const MethodInfo *v18; // x1
-  System_Nullable_float__o v19; // 0:x1.8
+  const MethodInfo *v11; // x3
+  struct System_Collections_Generic_List_BgmPlayArgs__o *v12; // x0
+  int32_t v13; // w2
+  int32_t v14; // w3
+  const MethodInfo *v15; // x1
+  System_Nullable_float__o v16; // 0:x1.8
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v19 = volumeNullable;
-  v11 = Analyzer_FileNameToBgmPlayArgsGroup__Analyze(toAnalyze, v19, fadeTime, startTime, 0LL);
-  this->fields._AllArgsList_k__BackingField = v11;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v11, v12, v13, v14, v15, v16, v17);
-  BgmPlayArgsGroup__Initialize(this, v18);
+  v16 = volumeNullable;
+  v12 = Analyzer_FileNameToBgmPlayArgsGroup__Analyze(toAnalyze, v16, fadeTime, startTime, v11);
+  this->fields._AllArgsList_k__BackingField = v12;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)v12, v13, v14);
+  BgmPlayArgsGroup__Initialize(this, v15);
 }
 
 
-void __fastcall BgmPlayArgsGroup___ctor_24330316(
+void __fastcall BgmPlayArgsGroup___ctor_37116828(
         BgmPlayArgsGroup_o *this,
         BgmPlayArgs_array *bgmParams,
         const MethodInfo *method)
 {
-  _QWORD **v5; // x21
-  __int64 v6; // x20
-  __int16 v7; // w8
-  __int64 v8; // x20
-  __int64 v9; // x20
-  __int64 v10; // x20
-  System_Collections_Generic_List_WarBoardAIRoute_RouteData__o *v11; // x21
+  System_Collections_Generic_IEnumerable_T__o *v3; // x20
+  __int64 v5; // x1
+  __int64 v6; // x1
+  _QWORD *v7; // x20
+  __int64 v8; // x8
+  __int64 v9; // x0
+  __int64 v10; // x0
+  System_Collections_Generic_List_object__o *v11; // x21
   __int64 v12; // x0
   __int64 v13; // x1
-  System_String_array **v14; // x2
-  System_String_array **v15; // x3
-  System_Boolean_array **v16; // x4
-  System_Int32_array **v17; // x5
-  System_Int32_array *v18; // x6
-  System_Int32_array *v19; // x7
-  const MethodInfo *v20; // x1
+  int32_t v14; // w2
+  int32_t v15; // w3
+  const MethodInfo *v16; // x1
 
-  if ( (byte_438A932 & 1) == 0 )
+  v3 = (System_Collections_Generic_IEnumerable_T__o *)bgmParams;
+  if ( (byte_48E1EA1 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Linq_Enumerable_Empty_BgmPlayArgs___);
-    sub_B775C4(&Method_System_Collections_Generic_List_BgmPlayArgs___ctor___69387144);
-    sub_B775C4(&System_Collections_Generic_List_BgmPlayArgs__TypeInfo);
-    byte_438A932 = 1;
+    sub_1B00CCC(&Method_System_Linq_Enumerable_Empty_BgmPlayArgs___, bgmParams);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_BgmPlayArgs___ctor___74518608, v5);
+    sub_1B00CCC(&System_Collections_Generic_List_BgmPlayArgs__TypeInfo, v6);
+    byte_48E1EA1 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  if ( !bgmParams )
+  if ( !v3 )
   {
-    v5 = (_QWORD **)Method_System_Linq_Enumerable_Empty_BgmPlayArgs___;
-    v6 = **((_QWORD **)Method_System_Linq_Enumerable_Empty_BgmPlayArgs___ + 6);
-    v7 = *(_WORD *)(v6 + 306);
-    if ( (v7 & 1) == 0 )
+    v7 = Method_System_Linq_Enumerable_Empty_BgmPlayArgs___;
+    v8 = *((_QWORD *)Method_System_Linq_Enumerable_Empty_BgmPlayArgs___ + 7);
+    if ( !v8 )
     {
-      sub_B0F2C4(**((_QWORD **)Method_System_Linq_Enumerable_Empty_BgmPlayArgs___ + 6));
-      v7 = *(_WORD *)(v6 + 306);
+      sub_1B52C04(Method_System_Linq_Enumerable_Empty_BgmPlayArgs___);
+      v8 = v7[7];
     }
-    if ( (v7 & 0x400) != 0 )
-    {
-      v8 = *v5[6];
-      if ( (*(_BYTE *)(v8 + 306) & 1) == 0 )
-        sub_B0F2C4(*v5[6]);
-      if ( !*(_DWORD *)(v8 + 224) )
-      {
-        v9 = *v5[6];
-        if ( (*(_BYTE *)(v9 + 306) & 1) == 0 )
-          sub_B0F2C4(*v5[6]);
-        j_il2cpp_runtime_class_init_0(v9);
-      }
-    }
-    v10 = *v5[6];
-    if ( (*(_BYTE *)(v10 + 306) & 1) == 0 )
-      sub_B0F2C4(*v5[6]);
-    bgmParams = **(BgmPlayArgs_array ***)(v10 + 184);
+    v9 = *(_QWORD *)(v8 + 16);
+    if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
+      v9 = sub_1B52BA8(v9);
+    if ( !*(_DWORD *)(v9 + 224) )
+      j_il2cpp_runtime_class_init_0(v9);
+    v10 = *(_QWORD *)(v7[7] + 16LL);
+    if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
+      v10 = sub_1B52BA8(v10);
+    v3 = **(System_Collections_Generic_IEnumerable_T__o ***)(v10 + 184);
   }
-  v11 = (System_Collections_Generic_List_WarBoardAIRoute_RouteData__o *)sub_B77694(System_Collections_Generic_List_BgmPlayArgs__TypeInfo);
-  System_Collections_Generic_List_WarBoardAIRoute_RouteData____ctor(
+  v11 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_BgmPlayArgs__TypeInfo);
+  System_Collections_Generic_List_object____ctor_54268612(
     v11,
-    (System_Collections_Generic_IEnumerable_T__o *)bgmParams,
-    (const MethodInfo_30527CC *)Method_System_Collections_Generic_List_BgmPlayArgs___ctor___69387144);
+    v3,
+    (const MethodInfo_33C12C4 *)Method_System_Collections_Generic_List_BgmPlayArgs___ctor___74518608);
   if ( !this )
-    sub_B7769C(v12, v13);
+    sub_1B00F28(v12, v13);
   this->fields._AllArgsList_k__BackingField = (struct System_Collections_Generic_List_BgmPlayArgs__o *)v11;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v11, v14, v15, v16, v17, v18, v19);
-  BgmPlayArgsGroup__Initialize(this, v20);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)v11, v14, v15);
+  BgmPlayArgsGroup__Initialize(this, v16);
 }
 
 
@@ -186,268 +182,207 @@ System_Collections_Generic_IEnumerable_BgmPlayArgs__o *__fastcall BgmPlayArgsGro
         BgmPlayArgsGroup_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  BgmPlayArgsGroup___c_c *v6; // x0
   struct System_Collections_Generic_List_BgmPlayArgs__o *AllArgsList_k__BackingField; // x19
-  BgmPlayArgsGroup___c_c *v4; // x0
-  struct BgmPlayArgsGroup___c_StaticFields *static_fields; // x8
-  System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *_9__12_0; // x20
-  Il2CppObject *v7; // x21
-  struct BgmPlayArgsGroup___c_StaticFields *v8; // x0
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
+  System_Func_object__bool__o *_9__12_0; // x20
+  Il2CppObject *v9; // x21
+  struct BgmPlayArgsGroup___c_StaticFields *static_fields; // x0
+  int32_t v11; // w2
+  int32_t v12; // w3
 
-  if ( (byte_438A92F & 1) == 0 )
+  if ( (byte_48E1E9E & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Linq_Enumerable_Where_BgmPlayArgs___);
-    sub_B775C4(&Method_System_Func_BgmPlayArgs__bool___ctor__);
-    sub_B775C4(&System_Func_BgmPlayArgs__bool__TypeInfo);
-    sub_B775C4(&Method_BgmPlayArgsGroup___c__AllArgsListNullExcluded_b__12_0__);
-    sub_B775C4(&BgmPlayArgsGroup___c_TypeInfo);
-    byte_438A92F = 1;
+    sub_1B00CCC(&Method_System_Linq_Enumerable_Where_BgmPlayArgs___, method);
+    sub_1B00CCC(&System_Func_BgmPlayArgs__bool__TypeInfo, v3);
+    sub_1B00CCC(&Method_BgmPlayArgsGroup___c__AllArgsListNullExcluded_b__12_0__, v4);
+    sub_1B00CCC(&BgmPlayArgsGroup___c_TypeInfo, v5);
+    byte_48E1E9E = 1;
   }
+  v6 = BgmPlayArgsGroup___c_TypeInfo;
   AllArgsList_k__BackingField = this->fields._AllArgsList_k__BackingField;
-  v4 = BgmPlayArgsGroup___c_TypeInfo;
-  if ( (BYTE3(BgmPlayArgsGroup___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !BgmPlayArgsGroup___c_TypeInfo->_2.cctor_finished )
+  if ( !BgmPlayArgsGroup___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BgmPlayArgsGroup___c_TypeInfo);
-    v4 = BgmPlayArgsGroup___c_TypeInfo;
+    v6 = BgmPlayArgsGroup___c_TypeInfo;
   }
-  static_fields = v4->static_fields;
-  _9__12_0 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)static_fields->__9__12_0;
+  _9__12_0 = (System_Func_object__bool__o *)v6->static_fields->__9__12_0;
   if ( !_9__12_0 )
   {
-    if ( (BYTE3(v4->vtable._0_Equals.methodPtr) & 4) != 0 && !v4->_2.cctor_finished )
+    if ( !v6->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v4);
-      static_fields = BgmPlayArgsGroup___c_TypeInfo->static_fields;
+      j_il2cpp_runtime_class_init_0(v6);
+      v6 = BgmPlayArgsGroup___c_TypeInfo;
     }
-    v7 = (Il2CppObject *)static_fields->__9;
-    _9__12_0 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B77694(System_Func_BgmPlayArgs__bool__TypeInfo);
-    System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool____ctor(
-      _9__12_0,
-      v7,
-      Method_BgmPlayArgsGroup___c__AllArgsListNullExcluded_b__12_0__,
-      (const MethodInfo_29E92C4 *)Method_System_Func_BgmPlayArgs__bool___ctor__);
-    v8 = BgmPlayArgsGroup___c_TypeInfo->static_fields;
-    v8->__9__12_0 = (struct System_Func_BgmPlayArgs__bool__o *)_9__12_0;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&v8->__9__12_0,
-      (System_Int32_array **)_9__12_0,
-      v9,
-      v10,
-      v11,
-      v12,
-      v13,
-      v14);
+    v9 = (Il2CppObject *)v6->static_fields->__9;
+    _9__12_0 = (System_Func_object__bool__o *)sub_1B00F18(System_Func_BgmPlayArgs__bool__TypeInfo);
+    System_Func_object__bool____ctor(_9__12_0, v9, Method_BgmPlayArgsGroup___c__AllArgsListNullExcluded_b__12_0__, 0LL);
+    static_fields = BgmPlayArgsGroup___c_TypeInfo->static_fields;
+    static_fields->__9__12_0 = (struct System_Func_BgmPlayArgs__bool__o *)_9__12_0;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->__9__12_0, (int32_t)_9__12_0, v11, v12);
   }
-  return (System_Collections_Generic_IEnumerable_BgmPlayArgs__o *)System_Linq_Enumerable__Where_WarBoardManager_WarBoardOnboardSkillTarget_(
+  return (System_Collections_Generic_IEnumerable_BgmPlayArgs__o *)System_Linq_Enumerable__Where_object_(
                                                                     (System_Collections_Generic_IEnumerable_TSource__o *)AllArgsList_k__BackingField,
                                                                     (System_Func_TSource__bool__o *)_9__12_0,
-                                                                    (const MethodInfo_1D41C94 *)Method_System_Linq_Enumerable_Where_BgmPlayArgs___);
+                                                                    (const MethodInfo_2D9D054 *)Method_System_Linq_Enumerable_Where_BgmPlayArgs___);
 }
 
 
 void __fastcall BgmPlayArgsGroup__Initialize(BgmPlayArgsGroup_o *this, const MethodInfo *method)
 {
-  struct System_Collections_Generic_List_BgmPlayArgs__o *AllArgsList_k__BackingField; // x20
-  BgmPlayArgsGroup___c_c *v4; // x0
-  struct BgmPlayArgsGroup___c_StaticFields *static_fields; // x8
-  System_Predicate_peRenderTexture_ChangeLayerObject__o *_9__17_0; // x21
-  Il2CppObject *v7; // x22
-  struct BgmPlayArgsGroup___c_StaticFields *v8; // x0
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
-  peRenderTexture_ChangeLayerObject_o *v15; // x0
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
-  __int64 v22; // x10
-  struct MainBgmPlayArgs_o *v23; // x1
-  struct MainBgmPlayArgs_o **p_MainArgs_k__BackingField; // x19
-  System_Collections_Generic_IEnumerable_TSource__o *v25; // x0
-  System_Int32_array **v26; // x1
-  System_String_array **v27; // x2
-  System_String_array **v28; // x3
-  System_Boolean_array **v29; // x4
-  System_Int32_array **v30; // x5
-  System_Int32_array *v31; // x6
-  System_Int32_array *v32; // x7
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  BgmPlayArgsGroup___c_c *v9; // x0
+  System_Collections_Generic_List_object__o *AllArgsList_k__BackingField; // x20
+  System_Predicate_object__o *_9__17_0; // x21
+  Il2CppObject *v12; // x22
+  struct BgmPlayArgsGroup___c_StaticFields *static_fields; // x0
+  int32_t v14; // w2
+  int32_t v15; // w3
+  Il2CppObject *v16; // x0
+  int32_t v17; // w2
+  int32_t v18; // w3
+  __int64 methodPtr_low; // x10
+  struct MainBgmPlayArgs_o *v20; // x1
+  System_Collections_Generic_IEnumerable_TSource__o *v21; // x0
+  struct System_Collections_Generic_List_SubBgmPlayArgs__o *v22; // x0
+  int32_t v23; // w2
+  int32_t v24; // w3
 
-  if ( (byte_438A933 & 1) == 0 )
+  if ( (byte_48E1EA2 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Linq_Enumerable_OfType_SubBgmPlayArgs___);
-    sub_B775C4(&Method_System_Linq_Enumerable_ToList_SubBgmPlayArgs___);
-    sub_B775C4(&Method_System_Collections_Generic_List_BgmPlayArgs__Find__);
-    sub_B775C4(&MainBgmPlayArgs_TypeInfo);
-    sub_B775C4(&Method_System_Predicate_BgmPlayArgs___ctor__);
-    sub_B775C4(&System_Predicate_BgmPlayArgs__TypeInfo);
-    sub_B775C4(&Method_BgmPlayArgsGroup___c__Initialize_b__17_0__);
-    sub_B775C4(&BgmPlayArgsGroup___c_TypeInfo);
-    byte_438A933 = 1;
+    sub_1B00CCC(&Method_System_Linq_Enumerable_OfType_SubBgmPlayArgs___, method);
+    sub_1B00CCC(&Method_System_Linq_Enumerable_ToList_SubBgmPlayArgs___, v3);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_BgmPlayArgs__Find__, v4);
+    sub_1B00CCC(&MainBgmPlayArgs_TypeInfo, v5);
+    sub_1B00CCC(&System_Predicate_BgmPlayArgs__TypeInfo, v6);
+    sub_1B00CCC(&Method_BgmPlayArgsGroup___c__Initialize_b__17_0__, v7);
+    sub_1B00CCC(&BgmPlayArgsGroup___c_TypeInfo, v8);
+    byte_48E1EA2 = 1;
   }
-  AllArgsList_k__BackingField = this->fields._AllArgsList_k__BackingField;
-  v4 = BgmPlayArgsGroup___c_TypeInfo;
-  if ( (BYTE3(BgmPlayArgsGroup___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !BgmPlayArgsGroup___c_TypeInfo->_2.cctor_finished )
+  v9 = BgmPlayArgsGroup___c_TypeInfo;
+  AllArgsList_k__BackingField = (System_Collections_Generic_List_object__o *)this->fields._AllArgsList_k__BackingField;
+  if ( !BgmPlayArgsGroup___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BgmPlayArgsGroup___c_TypeInfo);
-    v4 = BgmPlayArgsGroup___c_TypeInfo;
+    v9 = BgmPlayArgsGroup___c_TypeInfo;
   }
-  static_fields = v4->static_fields;
-  _9__17_0 = (System_Predicate_peRenderTexture_ChangeLayerObject__o *)static_fields->__9__17_0;
+  _9__17_0 = (System_Predicate_object__o *)v9->static_fields->__9__17_0;
   if ( !_9__17_0 )
   {
-    if ( (BYTE3(v4->vtable._0_Equals.methodPtr) & 4) != 0 && !v4->_2.cctor_finished )
+    if ( !v9->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v4);
-      static_fields = BgmPlayArgsGroup___c_TypeInfo->static_fields;
+      j_il2cpp_runtime_class_init_0(v9);
+      v9 = BgmPlayArgsGroup___c_TypeInfo;
     }
-    v7 = (Il2CppObject *)static_fields->__9;
-    _9__17_0 = (System_Predicate_peRenderTexture_ChangeLayerObject__o *)sub_B77694(System_Predicate_BgmPlayArgs__TypeInfo);
-    System_Predicate_peRenderTexture_ChangeLayerObject____ctor(
-      _9__17_0,
-      v7,
-      Method_BgmPlayArgsGroup___c__Initialize_b__17_0__,
-      (const MethodInfo_2C3248C *)Method_System_Predicate_BgmPlayArgs___ctor__);
-    v8 = BgmPlayArgsGroup___c_TypeInfo->static_fields;
-    v8->__9__17_0 = (struct System_Predicate_BgmPlayArgs__o *)_9__17_0;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&v8->__9__17_0,
-      (System_Int32_array **)_9__17_0,
-      v9,
-      v10,
-      v11,
-      v12,
-      v13,
-      v14);
+    v12 = (Il2CppObject *)v9->static_fields->__9;
+    _9__17_0 = (System_Predicate_object__o *)sub_1B00F18(System_Predicate_BgmPlayArgs__TypeInfo);
+    System_Predicate_object____ctor(_9__17_0, v12, Method_BgmPlayArgsGroup___c__Initialize_b__17_0__, 0LL);
+    static_fields = BgmPlayArgsGroup___c_TypeInfo->static_fields;
+    static_fields->__9__17_0 = (struct System_Predicate_BgmPlayArgs__o *)_9__17_0;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->__9__17_0, (int32_t)_9__17_0, v14, v15);
   }
   if ( !AllArgsList_k__BackingField )
-    sub_B7769C(v4, method);
-  v15 = System_Collections_Generic_List_peRenderTexture_ChangeLayerObject___Find(
-          (System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__o *)AllArgsList_k__BackingField,
+    sub_1B00F28(v9, method);
+  v16 = System_Collections_Generic_List_object___Find(
+          AllArgsList_k__BackingField,
           (System_Predicate_T__o *)_9__17_0,
-          (const MethodInfo_3053B58 *)Method_System_Collections_Generic_List_BgmPlayArgs__Find__);
-  if ( v15
-    && (v22 = *(&MainBgmPlayArgs_TypeInfo->_2.bitflags2 + 1), *(&v15->klass->_2.bitflags2 + 1) >= (unsigned int)v22) )
+          (const MethodInfo_33C2038 *)Method_System_Collections_Generic_List_BgmPlayArgs__Find__);
+  if ( v16
+    && (methodPtr_low = LOBYTE(MainBgmPlayArgs_TypeInfo->vtable._0_Equals.methodPtr),
+        LOBYTE(v16->klass->vtable[0].methodPtr) >= (unsigned int)methodPtr_low) )
   {
-    if ( (MainBgmPlayArgs_c *)v15->klass->_2.typeHierarchy[v22 - 1] == MainBgmPlayArgs_TypeInfo )
-      v23 = (struct MainBgmPlayArgs_o *)v15;
+    if ( (MainBgmPlayArgs_c *)v16->klass->_2.typeHierarchy[methodPtr_low - 1] == MainBgmPlayArgs_TypeInfo )
+      v20 = (struct MainBgmPlayArgs_o *)v16;
     else
-      v23 = 0LL;
+      v20 = 0LL;
   }
   else
   {
-    v23 = 0LL;
+    v20 = 0LL;
   }
-  this->fields._MainArgs_k__BackingField = v23;
-  p_MainArgs_k__BackingField = &this->fields._MainArgs_k__BackingField;
-  sub_B77560(
-    (BattleServantConfConponent_o *)p_MainArgs_k__BackingField,
-    (System_Int32_array **)v23,
-    v16,
-    v17,
-    v18,
-    v19,
-    v20,
-    v21);
-  v25 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_BattleActionData_MasterBuffData_(
-                                                               (System_Collections_IEnumerable_o *)*(p_MainArgs_k__BackingField - 1),
-                                                               (const MethodInfo_1D34774 *)Method_System_Linq_Enumerable_OfType_SubBgmPlayArgs___);
-  v26 = (System_Int32_array **)System_Linq_Enumerable__ToList_WarBoardManager_WarBoardOnboardSkillTarget_(
-                                 v25,
-                                 (const MethodInfo_1D404B8 *)Method_System_Linq_Enumerable_ToList_SubBgmPlayArgs___);
-  p_MainArgs_k__BackingField[1] = (struct MainBgmPlayArgs_o *)v26;
-  sub_B77560((BattleServantConfConponent_o *)(p_MainArgs_k__BackingField + 1), v26, v27, v28, v29, v30, v31, v32);
+  this->fields._MainArgs_k__BackingField = v20;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields._MainArgs_k__BackingField, (int32_t)v20, v17, v18);
+  v21 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
+                                                               (System_Collections_IEnumerable_o *)this->fields._AllArgsList_k__BackingField,
+                                                               (const MethodInfo_2D898D8 *)Method_System_Linq_Enumerable_OfType_SubBgmPlayArgs___);
+  v22 = (struct System_Collections_Generic_List_SubBgmPlayArgs__o *)System_Linq_Enumerable__ToList_object_(
+                                                                      v21,
+                                                                      (const MethodInfo_2D9AFD4 *)Method_System_Linq_Enumerable_ToList_SubBgmPlayArgs___);
+  this->fields._SubArgsList_k__BackingField = v22;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields._SubArgsList_k__BackingField, (int32_t)v22, v23, v24);
 }
 
 
 BgmPlayArgsGroup_o *__fastcall BgmPlayArgsGroup__NullExcludedClone(BgmPlayArgsGroup_o *this, const MethodInfo *method)
 {
-  System_Collections_Generic_IEnumerable_TSource__o *v3; // x19
-  BgmPlayArgsGroup___c_c *v4; // x8
-  struct BgmPlayArgsGroup___c_StaticFields *static_fields; // x9
-  System_Func_WarBoardManager_WarBoardOnboardSkillTarget__WarBoardPieceData__o *_9__13_0; // x20
-  Il2CppObject *v7; // x21
-  struct BgmPlayArgsGroup___c_StaticFields *v8; // x0
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
-  System_Collections_Generic_IEnumerable_TSource__o *v15; // x0
-  BgmPlayArgs_array *v16; // x19
-  BgmPlayArgsGroup_o *v17; // x20
-  const MethodInfo *v18; // x2
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  System_Collections_Generic_IEnumerable_BgmPlayArgs__o *v8; // x0
+  BgmPlayArgsGroup___c_c *v9; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v10; // x19
+  System_Func_object__object__o *_9__13_0; // x20
+  Il2CppObject *v12; // x21
+  struct BgmPlayArgsGroup___c_StaticFields *static_fields; // x0
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_Collections_Generic_IEnumerable_TSource__o *v16; // x0
+  System_Object_array *v17; // x19
+  BgmPlayArgsGroup_o *v18; // x20
+  const MethodInfo *v19; // x2
 
-  if ( (byte_438A930 & 1) == 0 )
+  if ( (byte_48E1E9F & 1) == 0 )
   {
-    sub_B775C4(&BgmPlayArgsGroup_TypeInfo);
-    sub_B775C4(&Method_System_Linq_Enumerable_Select_BgmPlayArgs__BgmPlayArgs___);
-    sub_B775C4(&Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
-    sub_B775C4(&Method_System_Func_BgmPlayArgs__BgmPlayArgs___ctor__);
-    sub_B775C4(&System_Func_BgmPlayArgs__BgmPlayArgs__TypeInfo);
-    sub_B775C4(&Method_BgmPlayArgsGroup___c__NullExcludedClone_b__13_0__);
-    sub_B775C4(&BgmPlayArgsGroup___c_TypeInfo);
-    byte_438A930 = 1;
+    sub_1B00CCC(&BgmPlayArgsGroup_TypeInfo, method);
+    sub_1B00CCC(&Method_System_Linq_Enumerable_Select_BgmPlayArgs__BgmPlayArgs___, v3);
+    sub_1B00CCC(&Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___, v4);
+    sub_1B00CCC(&System_Func_BgmPlayArgs__BgmPlayArgs__TypeInfo, v5);
+    sub_1B00CCC(&Method_BgmPlayArgsGroup___c__NullExcludedClone_b__13_0__, v6);
+    sub_1B00CCC(&BgmPlayArgsGroup___c_TypeInfo, v7);
+    byte_48E1E9F = 1;
   }
-  v3 = (System_Collections_Generic_IEnumerable_TSource__o *)BgmPlayArgsGroup__AllArgsListNullExcluded(this, method);
-  v4 = BgmPlayArgsGroup___c_TypeInfo;
-  if ( (BYTE3(BgmPlayArgsGroup___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !BgmPlayArgsGroup___c_TypeInfo->_2.cctor_finished )
+  v8 = BgmPlayArgsGroup__AllArgsListNullExcluded(this, method);
+  v9 = BgmPlayArgsGroup___c_TypeInfo;
+  v10 = (System_Collections_Generic_IEnumerable_TSource__o *)v8;
+  if ( !BgmPlayArgsGroup___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BgmPlayArgsGroup___c_TypeInfo);
-    v4 = BgmPlayArgsGroup___c_TypeInfo;
+    v9 = BgmPlayArgsGroup___c_TypeInfo;
   }
-  static_fields = v4->static_fields;
-  _9__13_0 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__WarBoardPieceData__o *)static_fields->__9__13_0;
+  _9__13_0 = (System_Func_object__object__o *)v9->static_fields->__9__13_0;
   if ( !_9__13_0 )
   {
-    if ( (BYTE3(v4->vtable._0_Equals.methodPtr) & 4) != 0 && !v4->_2.cctor_finished )
+    if ( !v9->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v4);
-      static_fields = BgmPlayArgsGroup___c_TypeInfo->static_fields;
+      j_il2cpp_runtime_class_init_0(v9);
+      v9 = BgmPlayArgsGroup___c_TypeInfo;
     }
-    v7 = (Il2CppObject *)static_fields->__9;
-    _9__13_0 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__WarBoardPieceData__o *)sub_B77694(System_Func_BgmPlayArgs__BgmPlayArgs__TypeInfo);
-    System_Func_WarBoardManager_WarBoardOnboardSkillTarget__WarBoardPieceData____ctor(
-      _9__13_0,
-      v7,
-      Method_BgmPlayArgsGroup___c__NullExcludedClone_b__13_0__,
-      (const MethodInfo_29EAA10 *)Method_System_Func_BgmPlayArgs__BgmPlayArgs___ctor__);
-    v8 = BgmPlayArgsGroup___c_TypeInfo->static_fields;
-    v8->__9__13_0 = (struct System_Func_BgmPlayArgs__BgmPlayArgs__o *)_9__13_0;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&v8->__9__13_0,
-      (System_Int32_array **)_9__13_0,
-      v9,
-      v10,
-      v11,
-      v12,
-      v13,
-      v14);
+    v12 = (Il2CppObject *)v9->static_fields->__9;
+    _9__13_0 = (System_Func_object__object__o *)sub_1B00F18(System_Func_BgmPlayArgs__BgmPlayArgs__TypeInfo);
+    System_Func_object__object____ctor(_9__13_0, v12, Method_BgmPlayArgsGroup___c__NullExcludedClone_b__13_0__, 0LL);
+    static_fields = BgmPlayArgsGroup___c_TypeInfo->static_fields;
+    static_fields->__9__13_0 = (struct System_Func_BgmPlayArgs__BgmPlayArgs__o *)_9__13_0;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->__9__13_0, (int32_t)_9__13_0, v14, v15);
   }
-  v15 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_WarBoardManager_WarBoardOnboardSkillTarget__WarBoardPieceData_(
-                                                               v3,
+  v16 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
+                                                               v10,
                                                                (System_Func_TSource__TResult__o *)_9__13_0,
-                                                               (const MethodInfo_1D39068 *)Method_System_Linq_Enumerable_Select_BgmPlayArgs__BgmPlayArgs___);
-  v16 = (BgmPlayArgs_array *)System_Linq_Enumerable__ToArray_DrawLotsDisplayMessage_DisplayedInGroup_SaveData_(
-                               v15,
-                               (const MethodInfo_1D3D5E4 *)Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
-  v17 = (BgmPlayArgsGroup_o *)sub_B77694(BgmPlayArgsGroup_TypeInfo);
-  BgmPlayArgsGroup___ctor_24330316(v17, v16, v18);
-  return v17;
+                                                               (const MethodInfo_2D8FA10 *)Method_System_Linq_Enumerable_Select_BgmPlayArgs__BgmPlayArgs___);
+  v17 = System_Linq_Enumerable__ToArray_object_(
+          v16,
+          (const MethodInfo_2D976BC *)Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
+  v18 = (BgmPlayArgsGroup_o *)sub_1B00F18(BgmPlayArgsGroup_TypeInfo);
+  BgmPlayArgsGroup___ctor_37116828(v18, (BgmPlayArgs_array *)v17, v19);
+  return v18;
 }
 
 
@@ -478,22 +413,10 @@ void __fastcall BgmPlayArgsGroup__set_AllArgsList(
         System_Collections_Generic_List_BgmPlayArgs__o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._AllArgsList_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -502,22 +425,14 @@ void __fastcall BgmPlayArgsGroup__set_MainArgs(
         MainBgmPlayArgs_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._MainArgs_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._MainArgs_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._MainArgs_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -526,40 +441,33 @@ void __fastcall BgmPlayArgsGroup__set_SubArgsList(
         System_Collections_Generic_List_SubBgmPlayArgs__o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._SubArgsList_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._SubArgsList_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._SubArgsList_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
 void __fastcall BgmPlayArgsGroup___c___cctor(const MethodInfo *method)
 {
-  Il2CppObject *v1; // x19
-  struct BgmPlayArgsGroup___c_StaticFields *static_fields; // x0
+  __int64 v1; // x1
+  Il2CppObject *v2; // x19
+  int32_t v3; // w2
+  int32_t v4; // w3
 
-  if ( (byte_4388507 & 1) == 0 )
+  if ( (byte_48E1EA3 & 1) == 0 )
   {
-    sub_B775C4(&BgmPlayArgsGroup___c_TypeInfo);
-    byte_4388507 = 1;
+    sub_1B00CCC(&BgmPlayArgsGroup___c_TypeInfo, v1);
+    byte_48E1EA3 = 1;
   }
-  v1 = (Il2CppObject *)sub_B77694(BgmPlayArgsGroup___c_TypeInfo);
-  System_Object___ctor(v1, 0LL);
-  static_fields = BgmPlayArgsGroup___c_TypeInfo->static_fields;
-  static_fields->__9 = (struct BgmPlayArgsGroup___c_o *)v1;
-  sub_B77560(static_fields);
+  v2 = (Il2CppObject *)sub_1B00F18(BgmPlayArgsGroup___c_TypeInfo);
+  System_Object___ctor(v2, 0LL);
+  BgmPlayArgsGroup___c_TypeInfo->static_fields->__9 = (struct BgmPlayArgsGroup___c_o *)v2;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)BgmPlayArgsGroup___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -583,17 +491,18 @@ bool __fastcall BgmPlayArgsGroup___c___Initialize_b__17_0(
         BgmPlayArgs_o *x,
         const MethodInfo *method)
 {
-  __int64 v4; // x10
+  __int64 methodPtr_low; // x10
   bool result; // w0
 
-  if ( (byte_4388508 & 1) == 0 )
+  if ( (byte_48E1EA4 & 1) == 0 )
   {
-    sub_B775C4(&MainBgmPlayArgs_TypeInfo);
-    byte_4388508 = 1;
+    sub_1B00CCC(&MainBgmPlayArgs_TypeInfo, x);
+    byte_48E1EA4 = 1;
   }
   result = x
-        && (v4 = *(&MainBgmPlayArgs_TypeInfo->_2.bitflags2 + 1), *(&x->klass->_2.bitflags2 + 1) >= (unsigned int)v4)
-        && x->klass->_2.typeHierarchy[v4 - 1] == (Il2CppClass *)MainBgmPlayArgs_TypeInfo;
+        && (methodPtr_low = LOBYTE(MainBgmPlayArgs_TypeInfo->vtable._0_Equals.methodPtr),
+            LOBYTE(x->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low)
+        && x->klass->_2.typeHierarchy[methodPtr_low - 1] == (Il2CppClass *)MainBgmPlayArgs_TypeInfo;
   return result;
 }
 
@@ -604,7 +513,7 @@ BgmPlayArgs_o *__fastcall BgmPlayArgsGroup___c___NullExcludedClone_b__13_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_B7769C(this, 0LL);
+    sub_1B00F28(this, 0LL);
   return (BgmPlayArgs_o *)((__int64 (__fastcall *)(BgmPlayArgs_o *, const char *))x->klass[1]._1.gc_desc)(
                             x,
                             x->klass[1]._1.name);

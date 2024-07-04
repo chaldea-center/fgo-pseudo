@@ -6,11 +6,10 @@ void __fastcall EnemySimpleHpData___ctor(
   __int64 v5; // x0
   __int64 v6; // x1
 
-  SimpleHpData___ctor((SimpleHpData_o *)this, svtData, 0LL);
+  SimpleHpData___ctor((SimpleHpData_o *)this, svtData, method);
   if ( !svtData )
-    sub_B7769C(v5, v6);
-  this->fields._NextTpTurn_k__BackingField = svtData->fields.nexttpturn;
-  this->fields._MaxTpTurn_k__BackingField = svtData->fields.maxtpturn;
+    sub_1B00F28(v5, v6);
+  *(int32x2_t *)&this->fields._NextTpTurn_k__BackingField = vrev64_s32(*(int32x2_t *)&svtData->fields.maxtpturn);
 }
 
 

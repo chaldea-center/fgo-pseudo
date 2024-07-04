@@ -1,3 +1,4 @@
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ServantStatusBattleListViewItem___ctor(
         ServantStatusBattleListViewItem_o *this,
         int32_t index,
@@ -9,47 +10,54 @@ void __fastcall ServantStatusBattleListViewItem___ctor(
         bool isMine,
         const MethodInfo *method)
 {
-  DataManager_o *Instance; // x0
+  bool v14; // w26
+  bool v15; // w25
+  bool v16; // w24
+  __int64 v17; // x1
   __int64 v18; // x1
+  __int64 v19; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v21; // x1
   ServantCostumeEntity_o *Entity; // x0
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
+  __int64 v23; // x1
+  int32_t v24; // w2
+  int32_t v25; // w3
+  bool v26; // w4
+  bool v27; // w5
+  bool v28; // w6
+  bool v29; // w7
   struct System_String_o *ShortName; // x1
-  LocalizationManager_c *v27; // x0
+  LocalizationManager_c *v31; // x0
 
-  if ( (byte_43895C9 & 1) == 0 )
+  v14 = isEnabled;
+  v15 = isCanSelect;
+  v16 = isMine;
+  if ( (byte_48DDFF7 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_ServantCostumeMaster___);
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_43895C9 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_ServantCostumeMaster___, *(_QWORD *)&index);
+    sub_1B00CCC(&LocalizationManager_TypeInfo, v17);
+    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v18);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v19);
+    byte_48DDFF7 = 1;
   }
-  ListViewItem___ctor_24167012((ListViewItem_o *)this, index, 0LL);
-  if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-  {
+  ListViewItem___ctor_39415512((ListViewItem_o *)this, index, 0LL);
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  }
   this->fields.svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit(svtId, 0LL);
   this->fields.dispLimitCount = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit(dispLimitCount, 0LL);
-  this->fields.isEnabled = isEnabled;
-  this->fields.isCanSelect = isCanSelect;
+  this->fields.isEnabled = v14;
+  this->fields.isCanSelect = v15;
   ListViewItem__set_IsSelect((ListViewItem_o *)this, isSelect, 0LL);
-  this->fields.isMine = isMine;
+  this->fields.isMine = v16;
   if ( dispLimitCount >= 11 )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance
-      || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                        Instance,
-                                        (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_ServantCostumeMaster___)) == 0LL )
+      || (Instance = DataManager__GetMasterData_object_(
+                       (DataManager_o *)Instance,
+                       (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_ServantCostumeMaster___)) == 0LL )
     {
-      sub_B7769C(Instance, v18);
+      sub_1B00F28(Instance, v21);
     }
     Entity = ServantCostumeMaster__GetEntity((ServantCostumeMaster_o *)Instance, svtId, dispLimitCount, 0LL);
     if ( Entity )
@@ -58,35 +66,32 @@ void __fastcall ServantStatusBattleListViewItem___ctor(
     }
     else
     {
-      if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !LocalizationManager_TypeInfo->_2.cctor_finished )
+      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+      if ( !byte_48DE045 )
+      {
+        sub_1B00CCC(&LocalizationManager_TypeInfo, v23);
+        byte_48DE045 = 1;
+      }
+      v31 = LocalizationManager_TypeInfo;
+      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+        v31 = LocalizationManager_TypeInfo;
       }
-      if ( !byte_4388DC6 )
-      {
-        sub_B775C4(&LocalizationManager_TypeInfo);
-        byte_4388DC6 = 1;
-      }
-      v27 = LocalizationManager_TypeInfo;
-      if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !LocalizationManager_TypeInfo->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v27 = LocalizationManager_TypeInfo;
-      }
-      ShortName = v27->static_fields->unknownNameText;
+      ShortName = v31->static_fields->unknownNameText;
     }
     this->fields.name = ShortName;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&this->fields.name,
-      (System_Int32_array **)ShortName,
-      v20,
-      v21,
-      v22,
-      v23,
+    sub_1B00C70(
+      (ServantStatusBattleListViewItem_o *)&this->fields.name,
+      (int32_t)ShortName,
       v24,
-      v25);
+      v25,
+      v26,
+      v27,
+      v28,
+      v29,
+      method);
   }
 }
 
@@ -107,21 +112,18 @@ int32_t __fastcall ServantStatusBattleListViewItem__get_DispLimitCount(
   __int64 v4; // x20
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v6; // 0:x0.16
 
-  if ( (byte_43895CB & 1) == 0 )
+  if ( (byte_48DDFF9 & 1) == 0 )
   {
-    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_43895CB = 1;
+    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
+    byte_48DDFF9 = 1;
   }
   v4 = *(_QWORD *)&this->fields.dispLimitCount.fields.currentCryptoKey;
   v3 = *(_QWORD *)&this->fields.dispLimitCount.fields.fakeValue;
-  if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-  {
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  }
   *(_QWORD *)&v6.fields.currentCryptoKey = v4;
   *(_QWORD *)&v6.fields.fakeValue = v3;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v6, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(v6, 0LL);
 }
 
 
@@ -165,19 +167,16 @@ int32_t __fastcall ServantStatusBattleListViewItem__get_SvtId(
   __int64 v4; // x20
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v6; // 0:x0.16
 
-  if ( (byte_43895CA & 1) == 0 )
+  if ( (byte_48DDFF8 & 1) == 0 )
   {
-    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_43895CA = 1;
+    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
+    byte_48DDFF8 = 1;
   }
   v4 = *(_QWORD *)&this->fields.svtId.fields.currentCryptoKey;
   v3 = *(_QWORD *)&this->fields.svtId.fields.fakeValue;
-  if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-  {
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  }
   *(_QWORD *)&v6.fields.currentCryptoKey = v4;
   *(_QWORD *)&v6.fields.fakeValue = v3;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v6, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(v6, 0LL);
 }

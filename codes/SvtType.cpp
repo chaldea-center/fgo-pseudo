@@ -34,7 +34,7 @@ bool __fastcall SvtType__IsEnemyCollectionDetail(int32_t type, const MethodInfo 
 }
 
 
-bool __fastcall SvtType__IsEnemy_19798592(int32_t type, const MethodInfo *method)
+bool __fastcall SvtType__IsEnemy_36513788(int32_t type, const MethodInfo *method)
 {
   return type == 4;
 }
@@ -48,7 +48,13 @@ bool __fastcall SvtType__IsExpUp(int32_t type, const MethodInfo *method)
 
 bool __fastcall SvtType__IsKeepServant(int32_t type, const MethodInfo *method)
 {
-  return (unsigned int)(type - 1) < 3 || type == 7 || type == 12;
+  _BOOL4 v2; // w0
+
+  if ( (unsigned int)(type - 1) > 0xB )
+    LOBYTE(v2) = 0;
+  else
+    return (0x847u >> (type - 1)) & 1;
+  return v2;
 }
 
 
@@ -60,7 +66,13 @@ bool __fastcall SvtType__IsKeepServantEquip(int32_t type, const MethodInfo *meth
 
 bool __fastcall SvtType__IsLock(int32_t type, const MethodInfo *method)
 {
-  return (unsigned int)type <= 6 && ((1 << type) & 0x4E) != 0 || (unsigned int)(type - 7) < 2;
+  _BOOL4 v2; // w0
+
+  if ( (unsigned int)(type - 1) > 7 )
+    LOBYTE(v2) = 0;
+  else
+    return (0xE7u >> (type - 1)) & 1;
+  return v2;
 }
 
 
@@ -72,13 +84,25 @@ bool __fastcall SvtType__IsOrganization(int32_t type, const MethodInfo *method)
 
 bool __fastcall SvtType__IsServant(int32_t type, const MethodInfo *method)
 {
-  return (unsigned int)(type - 1) < 2 || (type | 1) == 5;
+  _BOOL4 v2; // w0
+
+  if ( (unsigned int)(type - 1) > 4 )
+    LOBYTE(v2) = 0;
+  else
+    return (0x1Bu >> (type - 1)) & 1;
+  return v2;
 }
 
 
 bool __fastcall SvtType__IsServantCollection(int32_t type, const MethodInfo *method)
 {
-  return (unsigned int)(type - 1) < 2 || type == 5 || type == 9;
+  _BOOL4 v2; // w0
+
+  if ( (unsigned int)(type - 1) > 8 )
+    LOBYTE(v2) = 0;
+  else
+    return (0x113u >> (type - 1)) & 1;
+  return v2;
 }
 
 

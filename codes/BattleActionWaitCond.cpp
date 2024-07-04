@@ -65,20 +65,16 @@ void __fastcall BattleActionWaitCond_UntilSideEffectInvisible___ctor(
         BattlePerformance_o *perf,
         const MethodInfo *method)
 {
-  BattleServantConfConponent_o *v4; // x20
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  BattleActionWaitCond_UntilSideEffectInvisible_o *v4; // x20
+  int32_t v5; // w2
+  int32_t v6; // w3
 
-  v4 = (BattleServantConfConponent_o *)this;
+  v4 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v4->fields._closeBtnObject = (struct UnityEngine_GameObject_o *)perf;
-  v4 = (BattleServantConfConponent_o *)((char *)v4 + 24);
-  *(_DWORD *)&v4[-1].fields.isOpenAfter = 1067450368;
-  sub_B77560(v4, (System_Int32_array **)perf, v5, v6, v7, v8, v9, v10);
+  v4->fields.perf = perf;
+  v4 = (BattleActionWaitCond_UntilSideEffectInvisible_o *)((char *)v4 + 24);
+  LODWORD(v4[-1].fields.perf) = 1067450368;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)v4, (int32_t)perf, v5, v6);
 }
 
 
@@ -90,6 +86,6 @@ bool __fastcall BattleActionWaitCond_UntilSideEffectInvisible__IsWaitCond(
 
   perf = this->fields.perf;
   if ( !perf )
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   return perf->fields._WaitDispEffectCount_k__BackingField > 0;
 }

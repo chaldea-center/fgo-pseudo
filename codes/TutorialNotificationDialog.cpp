@@ -1,11 +1,11 @@
 void __fastcall TutorialNotificationDialog___ctor(TutorialNotificationDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_43987DC & 1) == 0 )
+  if ( (byte_48E1568 & 1) == 0 )
   {
-    sub_B775C4(&BaseDialog_TypeInfo);
-    byte_43987DC = 1;
+    sub_1B00CCC(&BaseDialog_TypeInfo, method);
+    byte_48E1568 = 1;
   }
-  if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
+  if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0LL);
 }
@@ -15,42 +15,35 @@ void __fastcall TutorialNotificationDialog__Close(TutorialNotificationDialog_o *
 {
   const MethodInfo *v2; // x2
 
-  TutorialNotificationDialog__Close_48065916(this, 0LL, v2);
+  TutorialNotificationDialog__Close_36159876(this, 0LL, v2);
 }
 
 
-void __fastcall TutorialNotificationDialog__Close_48065916(
+void __fastcall TutorialNotificationDialog__Close_36159876(
         TutorialNotificationDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  System_Action_o *v10; // x20
+  int32_t v3; // w3
+  __int64 v6; // x1
+  System_Action_o *v7; // x20
 
-  if ( (byte_43987DA & 1) == 0 )
+  if ( (byte_48E1566 & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&Method_TutorialNotificationDialog_EndClose__);
-    byte_43987DA = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, callback);
+    sub_1B00CCC(&Method_TutorialNotificationDialog_EndClose__, v6);
+    byte_48E1566 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.closeCallbackFunc,
-    (System_Int32_array **)callback,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc,
+    (int32_t)callback,
+    (int32_t)method,
+    v3);
   this->fields.isButtonEnable = 0;
-  v10 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-  System_Action___ctor(v10, (Il2CppObject *)this, Method_TutorialNotificationDialog_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v10, 0LL);
+  v7 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+  System_Action___ctor(v7, (Il2CppObject *)this, Method_TutorialNotificationDialog_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
 }
 
 
@@ -58,29 +51,27 @@ void __fastcall TutorialNotificationDialog__EndClose(TutorialNotificationDialog_
 {
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v4; // x1
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
-  BattleServantConfConponent_o *p_closeCallbackFunc; // x19
-  System_Action_o *v12; // x20
+  int32_t v5; // w2
+  int32_t v6; // w3
+  ServantStatusBattleListViewItem_o *p_closeCallbackFunc; // x19
+  struct System_Action_o *v8; // x20
   struct System_Action_o *closeCallbackFunc; // t1
 
   TutorialNotificationDialog__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7769C(0LL, v4);
+    sub_1B00F28(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   closeCallbackFunc = this->fields.closeCallbackFunc;
-  p_closeCallbackFunc = (BattleServantConfConponent_o *)&this->fields.closeCallbackFunc;
-  v12 = closeCallbackFunc;
+  p_closeCallbackFunc = (ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc;
+  v8 = closeCallbackFunc;
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_B77560(p_closeCallbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
-    System_Action__Invoke(v12, 0LL);
+    sub_1B00C70(p_closeCallbackFunc, 0, v5, v6);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v8->fields.m_target)(
+      v8->fields.original_method_info,
+      *(_QWORD *)&v8->fields.extra_arg);
   }
 }
 
@@ -96,40 +87,38 @@ void __fastcall TutorialNotificationDialog__EndTurorialRequest(
         System_String_o *result,
         const MethodInfo *method)
 {
-  TutorialNotificationDialog__Close_48065916(this, this->fields.closeCallbackFunc, method);
+  TutorialNotificationDialog__Close_36159876(this, this->fields.closeCallbackFunc, method);
 }
 
 
 void __fastcall TutorialNotificationDialog__Init(TutorialNotificationDialog_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_Object_o *messageLabel; // x20
-  __int64 v4; // x1
+  __int64 v5; // x1
   UILabel_o *gameObject; // x0
 
-  if ( (byte_43987D8 & 1) == 0 )
+  if ( (byte_48E1564 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_43987D8 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v3);
+    byte_48E1564 = 1;
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(messageLabel, 0LL, 0LL) )
   {
     gameObject = this->fields.messageLabel;
     if ( !gameObject )
-      goto LABEL_11;
+      goto LABEL_10;
     UILabel__set_text(gameObject, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   this->fields.isButtonEnable = 0;
   gameObject = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-LABEL_11:
-    sub_B7769C(gameObject, v4);
+LABEL_10:
+    sub_1B00F28(gameObject, v5);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -137,59 +126,59 @@ LABEL_11:
 
 void __fastcall TutorialNotificationDialog__OnClickClose(TutorialNotificationDialog_o *this, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x2
-  NetworkManager_ResultCallbackFunc_o *v4; // x20
-  TutorialSetRequest_o *Request_WarBoardWallAttackRequest; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
   __int64 v6; // x1
-  const MethodInfo *v7; // x2
+  _QWORD *v7; // x0
+  System_Reflection_MethodBase_o *v8; // x0
+  const MethodInfo *v9; // x2
+  NetworkManager_ResultCallbackFunc_o *v10; // x20
+  Il2CppObject *Request_object; // x0
+  __int64 v12; // x1
 
-  if ( (byte_43987DB & 1) == 0 )
+  if ( (byte_48E1567 & 1) == 0 )
   {
-    sub_B775C4(&Method_NetworkManager_getRequest_TutorialSetRequest___);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_B775C4(&SoundManager_TypeInfo);
-    sub_B775C4(&Method_TutorialNotificationDialog_EndTurorialRequest__);
-    byte_43987DB = 1;
+    sub_1B00CCC(&Method_NetworkManager_getRequest_TutorialSetRequest___, method);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v3);
+    sub_1B00CCC(&NetworkManager_ResultCallbackFunc_TypeInfo, v4);
+    sub_1B00CCC(&Method_TutorialNotificationDialog_EndTurorialRequest__, v5);
+    sub_1B00CCC(&Method_TutorialNotificationDialog_OnClickClose__, v6);
+    byte_48E1567 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     this->fields.isButtonEnable = 0;
-    if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !SoundManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    }
-    SoundManager__playSystemSe(1, 0LL);
+    v7 = Method_TutorialNotificationDialog_OnClickClose__;
+    if ( (*((_BYTE *)Method_TutorialNotificationDialog_OnClickClose__ + 83) & 2) != 0 )
+      v7 = (_QWORD *)sub_1B00CE4(Method_TutorialNotificationDialog_OnClickClose__);
+    v8 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v7, v7[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v8, 1, 0LL);
     if ( this->fields.flagId == -1 )
     {
-      TutorialNotificationDialog__Close_48065916(this, this->fields.closeCallbackFunc, v3);
+      TutorialNotificationDialog__Close_36159876(this, this->fields.closeCallbackFunc, v9);
     }
     else
     {
-      v4 = (NetworkManager_ResultCallbackFunc_o *)sub_B77694(NetworkManager_ResultCallbackFunc_TypeInfo);
+      v10 = (NetworkManager_ResultCallbackFunc_o *)sub_1B00F18(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
-        v4,
+        v10,
         (Il2CppObject *)this,
         Method_TutorialNotificationDialog_EndTurorialRequest__,
         0LL);
-      if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !NetworkManager_TypeInfo->_2.cctor_finished )
-      {
+      if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      }
-      Request_WarBoardWallAttackRequest = (TutorialSetRequest_o *)NetworkManager__getRequest_WarBoardWallAttackRequest_(
-                                                                    v4,
-                                                                    (const MethodInfo_1DF8BE8 *)Method_NetworkManager_getRequest_TutorialSetRequest___);
-      if ( !Request_WarBoardWallAttackRequest )
-        sub_B7769C(0LL, v6);
-      TutorialSetRequest__beginRequest(Request_WarBoardWallAttackRequest, this->fields.flagId, v7);
+      Request_object = NetworkManager__getRequest_object_(
+                         v10,
+                         (const MethodInfo_2DD4818 *)Method_NetworkManager_getRequest_TutorialSetRequest___);
+      if ( !Request_object )
+        sub_1B00F28(0LL, v12);
+      TutorialSetRequest__beginRequest((TutorialSetRequest_o *)Request_object, this->fields.flagId, 0LL);
     }
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall TutorialNotificationDialog__Open(
         TutorialNotificationDialog_o *this,
         System_String_o *message,
@@ -197,45 +186,38 @@ void __fastcall TutorialNotificationDialog__Open(
         System_Action_o *func,
         const MethodInfo *method)
 {
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
   UnityEngine_Object_o *messageLabel; // x21
   __int64 v13; // x1
   UILabel_o *v14; // x0
   System_String_o *v15; // x1
   System_Action_o *v16; // x20
 
-  if ( (byte_43987D9 & 1) == 0 )
+  if ( (byte_48E1565 & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&Method_TutorialNotificationDialog_EndOpen__);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_43987D9 = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, message);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v9);
+    sub_1B00CCC(&Method_TutorialNotificationDialog_EndOpen__, v10);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v11);
+    byte_48E1565 = 1;
   }
   this->fields.closeCallbackFunc = func;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.closeCallbackFunc,
-    (System_Int32_array **)func,
-    *(System_String_array ***)&flagId,
-    (System_String_array **)func,
-    (System_Boolean_array **)method,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc,
+    (int32_t)func,
+    flagId,
+    (int32_t)func);
   this->fields.flagId = flagId;
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(messageLabel, 0LL, 0LL) )
   {
     v14 = this->fields.messageLabel;
     if ( !v14 )
-      sub_B7769C(0LL, v13);
+      sub_1B00F28(0LL, v13);
     if ( message )
       v15 = message;
     else
@@ -243,7 +225,7 @@ void __fastcall TutorialNotificationDialog__Open(
     UILabel__set_text(v14, v15, 0LL);
   }
   this->fields.isButtonEnable = 0;
-  v16 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
+  v16 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
   System_Action___ctor(v16, (Il2CppObject *)this, Method_TutorialNotificationDialog_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v16, 0, 0LL);
 }

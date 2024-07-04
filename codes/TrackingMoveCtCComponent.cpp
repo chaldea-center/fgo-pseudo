@@ -1,6 +1,17 @@
 void __fastcall TrackingMoveCtCComponent___ctor(TrackingMoveCtCComponent_o *this, const MethodInfo *method)
 {
-  this->fields.addpos = UnityEngine_Vector3__get_zero(0LL);
+  struct UnityEngine_Vector3_StaticFields *static_fields; // x8
+  float z; // s1
+
+  if ( !byte_48DD9F1 )
+  {
+    sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, method);
+    byte_48DD9F1 = 1;
+  }
+  static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
+  z = static_fields->zeroVector.fields.z;
+  *(_QWORD *)&this->fields.addpos.fields.x = *(_QWORD *)&static_fields->zeroVector.fields.x;
+  this->fields.addpos.fields.z = z;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -22,48 +33,32 @@ void __fastcall TrackingMoveCtCComponent__Set(
         bool isLate,
         const MethodInfo *method)
 {
-  System_Int32_array *v7; // x6
-  System_Int32_array *v8; // x7
-  TrackingMoveCtCComponent_o *v9; // x22
+  TrackingMoveCtCComponent_o *v7; // x21
   float z; // s8
   float y; // s9
   float x; // s10
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
-  System_String_array **v22; // x2
-  System_String_array **v23; // x3
-  System_Boolean_array **v24; // x4
-  System_Int32_array **v25; // x5
-  System_Int32_array *v26; // x6
-  System_Int32_array *v27; // x7
+  bool v13; // w22
+  int32_t v14; // w2
+  int32_t v15; // w3
+  int32_t v16; // w2
+  int32_t v17; // w3
 
-  v9 = this;
+  v7 = this;
   this->fields.before = a;
   z = d.fields.z;
   y = d.fields.y;
   x = d.fields.x;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.before,
-    (System_Int32_array **)a,
-    (System_String_array **)b,
-    (System_String_array **)c,
-    (System_Boolean_array **)isLate,
-    (System_Int32_array **)method,
-    v7,
-    v8);
-  v9->fields.after = b;
-  sub_B77560((BattleServantConfConponent_o *)&v9->fields.after, (System_Int32_array **)b, v16, v17, v18, v19, v20, v21);
-  v9->fields.targetObject = c;
-  v9 = (TrackingMoveCtCComponent_o *)((char *)v9 + 40);
-  sub_B77560((BattleServantConfConponent_o *)v9, (System_Int32_array **)c, v22, v23, v24, v25, v26, v27);
-  *(float *)&v9->monitor = x;
-  *((float *)&v9->monitor + 1) = y;
-  *(float *)&v9->fields.m_CachedPtr = z;
-  *((_BYTE *)&v9->fields.UnityEngine_MonoBehaviour_Fields + 5) = isLate;
+  v13 = isLate;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.before, (int32_t)a, (int32_t)b, (int32_t)c);
+  v7->fields.after = b;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v7->fields.after, (int32_t)b, v14, v15);
+  v7->fields.targetObject = c;
+  v7 = (TrackingMoveCtCComponent_o *)((char *)v7 + 48);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)v7, (int32_t)c, v16, v17);
+  *(float *)&v7->monitor = x;
+  *((float *)&v7->monitor + 1) = y;
+  *(float *)&v7->fields.m_CachedPtr = z;
+  *((_BYTE *)&v7->fields.UnityEngine_Behaviour_Fields + 5) = v13;
 }
 
 
@@ -114,59 +109,56 @@ void __fastcall TrackingMoveCtCComponent__upDatePos(TrackingMoveCtCComponent_o *
   UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_438D608 & 1) == 0 )
+  if ( (byte_48E57A8 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438D608 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    byte_48E57A8 = 1;
   }
   targetObject = (UnityEngine_Object_o *)this->fields.targetObject;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(targetObject, 0LL, 0LL) )
   {
     transform = this->fields.targetObject;
     if ( !transform )
-      goto LABEL_16;
+      goto LABEL_15;
     before = this->fields.before;
     transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0LL);
     if ( !transform )
-      goto LABEL_16;
+      goto LABEL_15;
     *(UnityEngine_Vector3_o *)&v7 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0LL);
     if ( !before )
-      goto LABEL_16;
-    v22.fields.x = v7 + this->fields.addpos.fields.x;
-    v22.fields.y = v8 + this->fields.addpos.fields.y;
+      goto LABEL_15;
     v22.fields.z = v9 + this->fields.addpos.fields.z;
-    *(UnityEngine_Vector3_o *)&v10 = UnityEngine_Camera__WorldToViewportPoint_41408372(before, v22, 0LL);
+    v22.fields.y = v8 + this->fields.addpos.fields.y;
+    v22.fields.x = v7 + this->fields.addpos.fields.x;
+    *(UnityEngine_Vector3_o *)&v10 = UnityEngine_Camera__WorldToViewportPoint_67883956(before, v22, 0LL);
     transform = (UnityEngine_GameObject_o *)this->fields.before;
     if ( !transform )
-      goto LABEL_16;
+      goto LABEL_15;
     v13 = v10;
     v14 = v11;
     v15 = v12;
     aspect = UnityEngine_Camera__get_aspect((UnityEngine_Camera_o *)transform, 0LL);
     transform = (UnityEngine_GameObject_o *)this->fields.after;
     if ( !transform )
-      goto LABEL_16;
+      goto LABEL_15;
     v17 = aspect;
     v18 = UnityEngine_Camera__get_aspect((UnityEngine_Camera_o *)transform, 0LL);
     transform = (UnityEngine_GameObject_o *)this->fields.after;
     if ( !transform )
-      goto LABEL_16;
+      goto LABEL_15;
     v23.fields.y = (float)((float)((float)(v14 + -0.5) / v17) * v18) + 0.5;
     v23.fields.x = v13;
     v23.fields.z = v15;
-    v24 = UnityEngine_Camera__ViewportToWorldPoint_41408380((UnityEngine_Camera_o *)transform, v23, 0LL);
+    v24 = UnityEngine_Camera__ViewportToWorldPoint_67883964((UnityEngine_Camera_o *)transform, v23, 0LL);
     x = v24.fields.x;
     y = v24.fields.y;
     z = v24.fields.z;
     transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
     if ( !transform )
-LABEL_16:
-      sub_B7769C(transform, v4);
+LABEL_15:
+      sub_1B00F28(transform, v4);
     v25.fields.x = x;
     v25.fields.y = y;
     v25.fields.z = z;

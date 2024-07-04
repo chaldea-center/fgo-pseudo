@@ -2,12 +2,12 @@ void __fastcall WaveBattlePartyOrganizationAutoOrganizationConfirmDialog___ctor(
         WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_438949F & 1) == 0 )
+  if ( (byte_48DEC8A & 1) == 0 )
   {
-    sub_B775C4(&BaseDialog_TypeInfo);
-    byte_438949F = 1;
+    sub_1B00CCC(&BaseDialog_TypeInfo, method);
+    byte_48DEC8A = 1;
   }
-  if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
+  if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0LL);
 }
@@ -25,22 +25,23 @@ void __fastcall WaveBattlePartyOrganizationAutoOrganizationConfirmDialog__Close(
         WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  System_Action_o *v3; // x20
+  __int64 v3; // x1
+  System_Action_o *v4; // x20
 
-  if ( (byte_4389499 & 1) == 0 )
+  if ( (byte_48DEC84 & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_EndClose__);
-    byte_4389499 = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, method);
+    sub_1B00CCC(&Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_EndClose__, v3);
+    byte_48DEC84 = 1;
   }
   this->fields.state = 4;
-  v3 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
   System_Action___ctor(
-    v3,
+    v4,
     (Il2CppObject *)this,
     Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_EndClose__,
     0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v3, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v4, 0LL);
 }
 
 
@@ -58,10 +59,10 @@ void __fastcall WaveBattlePartyOrganizationAutoOrganizationConfirmDialog__Init(
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4389497 & 1) == 0 )
+  if ( (byte_48DEC82 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_4389497 = 1;
+    sub_1B00CCC(&StringLiteral_1/*""*/, method);
+    byte_48DEC82 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -101,7 +102,7 @@ void __fastcall WaveBattlePartyOrganizationAutoOrganizationConfirmDialog__Init(
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
 LABEL_15:
-    sub_B7769C(titleLabel, method);
+    sub_1B00F28(titleLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0LL);
   this->fields.state = 0;
@@ -115,24 +116,27 @@ void __fastcall WaveBattlePartyOrganizationAutoOrganizationConfirmDialog__OnClic
 {
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
-  WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_o *closeFunc; // x0
+  struct WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_o *closeFunc; // x8
 
-  if ( (byte_438949A & 1) == 0 )
+  if ( (byte_48DEC85 & 1) == 0 )
   {
-    sub_B775C4(&Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_OnClickCancel__);
-    byte_438949A = 1;
+    sub_1B00CCC(&Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_OnClickCancel__, method);
+    byte_48DEC85 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_OnClickCancel__;
-    if ( (*((_BYTE *)Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_OnClickCancel__ + 75) & 2) != 0 )
-      v3 = (_QWORD *)sub_B775CC(Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_B775A8(v3, v3[3]);
+    if ( (*((_BYTE *)Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_OnClickCancel__ + 83) & 2) != 0 )
+      v3 = (_QWORD *)sub_1B00CE4(Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     closeFunc = this->fields.closeFunc;
     if ( closeFunc )
-      WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate__Invoke(closeFunc, 0, 0LL);
+      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))closeFunc->fields.m_target)(
+        closeFunc->fields.original_method_info,
+        0LL,
+        *(_QWORD *)&closeFunc->fields.extra_arg);
   }
 }
 
@@ -143,24 +147,27 @@ void __fastcall WaveBattlePartyOrganizationAutoOrganizationConfirmDialog__OnClic
 {
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
-  WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_o *closeFunc; // x0
+  struct WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_o *closeFunc; // x8
 
-  if ( (byte_438949C & 1) == 0 )
+  if ( (byte_48DEC87 & 1) == 0 )
   {
-    sub_B775C4(&Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_OnClickExec__);
-    byte_438949C = 1;
+    sub_1B00CCC(&Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_OnClickExec__, method);
+    byte_48DEC87 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_OnClickExec__;
-    if ( (*((_BYTE *)Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_OnClickExec__ + 75) & 2) != 0 )
-      v3 = (_QWORD *)sub_B775CC(Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_OnClickExec__);
-    v4 = (System_Reflection_MethodBase_o *)sub_B775A8(v3, v3[3]);
+    if ( (*((_BYTE *)Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_OnClickExec__ + 83) & 2) != 0 )
+      v3 = (_QWORD *)sub_1B00CE4(Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_OnClickExec__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     closeFunc = this->fields.closeFunc;
     if ( closeFunc )
-      WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate__Invoke(closeFunc, 1, 0LL);
+      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))closeFunc->fields.m_target)(
+        closeFunc->fields.original_method_info,
+        1LL,
+        *(_QWORD *)&closeFunc->fields.extra_arg);
   }
 }
 
@@ -169,138 +176,130 @@ void __fastcall WaveBattlePartyOrganizationAutoOrganizationConfirmDialog__OnClic
         WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x19
-  UnityEngine_Transform_o *transform; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
   __int64 v5; // x1
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
-  _QWORD *v12; // x0
-  System_Reflection_MethodBase_o *v13; // x0
-  struct UnityEngine_GameObject_o *settingDialogPrefab; // x21
-  System_Int32_array **v15; // x0
-  UnityEngine_Transform_o **v16; // x21
-  System_String_array **v17; // x2
-  System_String_array **v18; // x3
-  System_Boolean_array **v19; // x4
-  System_Int32_array **v20; // x5
-  System_Int32_array *v21; // x6
-  System_Int32_array *v22; // x7
-  UnityEngine_GameObject_o *v23; // x22
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x19
+  UnityEngine_Transform_o *transform; // x0
+  __int64 v12; // x1
+  int32_t v13; // w2
+  int32_t v14; // w3
+  _QWORD *v15; // x0
+  System_Reflection_MethodBase_o *v16; // x0
+  Il2CppObject *settingDialogPrefab; // x21
+  Il2CppObject *v18; // x0
+  UnityEngine_Transform_o **v19; // x21
+  int32_t v20; // w2
+  int32_t v21; // w3
+  UnityEngine_GameObject_o *v22; // x22
   UnityEngine_Component_o *parent; // x0
-  System_Int32_array **Component_srcLineSprite; // x0
-  System_String_array **v26; // x2
-  System_String_array **v27; // x3
-  System_Boolean_array **v28; // x4
-  System_Int32_array **v29; // x5
-  System_Int32_array *v30; // x6
-  System_Int32_array *v31; // x7
-  WaveBattlePartyOrganizationAutoOrganizationSettingDialog_o *v32; // x20
-  AutoOrganizationManager_c *v33; // x0
+  Il2CppObject *Component_object; // x0
+  int32_t v25; // w2
+  int32_t v26; // w3
+  __int64 v27; // x1
+  WaveBattlePartyOrganizationAutoOrganizationSettingDialog_o *v28; // x20
+  AutoOrganizationManager_c *v29; // x0
   ListViewSort_o *waveBattleAutoOrganizationInfo; // x21
-  WaveBattlePartyOrganizationAutoOrganizationSettingDialog_CallbackFunc_o *v35; // x22
-  const MethodInfo *v36; // x3
+  WaveBattlePartyOrganizationAutoOrganizationSettingDialog_CallbackFunc_o *v31; // x22
+  const MethodInfo *v32; // x3
+  const MethodInfo *v33; // x3
 
-  if ( (byte_438949B & 1) == 0 )
+  if ( (byte_48DEC86 & 1) == 0 )
   {
-    sub_B775C4(&AutoOrganizationManager_TypeInfo);
-    sub_B775C4(&WaveBattlePartyOrganizationAutoOrganizationSettingDialog_CallbackFunc_TypeInfo);
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_WaveBattlePartyOrganizationAutoOrganizationSettingDialog___);
-    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass28_0__OnClickSetting_b__0__);
-    sub_B775C4(&WaveBattlePartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass28_0_TypeInfo);
-    sub_B775C4(&Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_OnClickSetting__);
-    byte_438949B = 1;
+    sub_1B00CCC(&AutoOrganizationManager_TypeInfo, method);
+    sub_1B00CCC(&WaveBattlePartyOrganizationAutoOrganizationSettingDialog_CallbackFunc_TypeInfo, v3);
+    sub_1B00CCC(
+      &Method_UnityEngine_GameObject_GetComponent_WaveBattlePartyOrganizationAutoOrganizationSettingDialog___,
+      v4);
+    sub_1B00CCC(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v6);
+    sub_1B00CCC(
+      &Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass28_0__OnClickSetting_b__0__,
+      v7);
+    sub_1B00CCC(&WaveBattlePartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass28_0_TypeInfo, v8);
+    sub_1B00CCC(&Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_OnClickSetting__, v9);
+    byte_48DEC86 = 1;
   }
-  v3 = sub_B77694(WaveBattlePartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass28_0_TypeInfo);
-  WaveBattlePartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass28_0___ctor(
-    (WaveBattlePartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass28_0_o *)v3,
-    0LL);
-  if ( !v3 )
-    goto LABEL_24;
-  *(_QWORD *)(v3 + 32) = this;
-  sub_B77560((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
+  v10 = sub_1B00F18(WaveBattlePartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass28_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v10, 0LL);
+  if ( !v10 )
+    goto LABEL_21;
+  *(_QWORD *)(v10 + 32) = this;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v10 + 32), (int32_t)this, v13, v14);
   if ( this->fields.state == 2 )
   {
-    v12 = Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_OnClickSetting__;
-    if ( (*((_BYTE *)Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_OnClickSetting__ + 75) & 2) != 0 )
-      v12 = (_QWORD *)sub_B775CC(Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_OnClickSetting__);
-    v13 = (System_Reflection_MethodBase_o *)sub_B775A8(v12, v12[3]);
-    OverwriteAssetSoundName__PlaySystemSe(v13, 0, 0LL);
-    settingDialogPrefab = this->fields.settingDialogPrefab;
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+    v15 = Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_OnClickSetting__;
+    if ( (*((_BYTE *)Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_OnClickSetting__ + 83) & 2) != 0 )
+      v15 = (_QWORD *)sub_1B00CE4(Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_OnClickSetting__);
+    v16 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v15, v15[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v16, 0, 0LL);
+    settingDialogPrefab = (Il2CppObject *)this->fields.settingDialogPrefab;
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
-    v15 = (System_Int32_array **)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
-                                   (UnityEngine_UI_Dropdown_DropdownItem_o *)settingDialogPrefab,
-                                   (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-    *(_QWORD *)(v3 + 24) = v15;
-    v16 = (UnityEngine_Transform_o **)(v3 + 24);
-    sub_B77560((BattleServantConfConponent_o *)(v3 + 24), v15, v17, v18, v19, v20, v21, v22);
-    v23 = *(UnityEngine_GameObject_o **)(v3 + 24);
+    v18 = UnityEngine_Object__Instantiate_object_(
+            settingDialogPrefab,
+            (const MethodInfo_2DD5AE8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+    *(_QWORD *)(v10 + 24) = v18;
+    v19 = (UnityEngine_Transform_o **)(v10 + 24);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)(v10 + 24), (int32_t)v18, v20, v21);
+    v22 = *(UnityEngine_GameObject_o **)(v10 + 24);
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
     if ( transform )
     {
       parent = (UnityEngine_Component_o *)UnityEngine_Transform__get_parent(transform, 0LL);
-      GameObjectExtensions__SafeSetParent(v23, parent, 0LL);
-      transform = *v16;
-      if ( *v16 )
+      GameObjectExtensions__SafeSetParent(v22, parent, 0LL);
+      transform = *v19;
+      if ( *v19 )
       {
-        Component_srcLineSprite = (System_Int32_array **)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                                           (UnityEngine_GameObject_o *)transform,
-                                                           (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_WaveBattlePartyOrganizationAutoOrganizationSettingDialog___);
-        *(_QWORD *)(v3 + 16) = Component_srcLineSprite;
-        sub_B77560((BattleServantConfConponent_o *)(v3 + 16), Component_srcLineSprite, v26, v27, v28, v29, v30, v31);
-        transform = *(UnityEngine_Transform_o **)(v3 + 16);
+        Component_object = UnityEngine_GameObject__GetComponent_object_(
+                             (UnityEngine_GameObject_o *)transform,
+                             (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_WaveBattlePartyOrganizationAutoOrganizationSettingDialog___);
+        *(_QWORD *)(v10 + 16) = Component_object;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)(v10 + 16), (int32_t)Component_object, v25, v26);
+        transform = *(UnityEngine_Transform_o **)(v10 + 16);
         if ( transform )
         {
-          transform[12].fields.m_CachedPtr = 0;
+          LODWORD(transform[13].klass) = 0;
           BaseDialog__Init((BaseDialog_o *)transform, 0LL);
-          v32 = *(WaveBattlePartyOrganizationAutoOrganizationSettingDialog_o **)(v3 + 16);
-          if ( (BYTE3(AutoOrganizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-            && !AutoOrganizationManager_TypeInfo->_2.cctor_finished )
+          v28 = *(WaveBattlePartyOrganizationAutoOrganizationSettingDialog_o **)(v10 + 16);
+          if ( !AutoOrganizationManager_TypeInfo->_2.cctor_finished )
+            j_il2cpp_runtime_class_init_0(AutoOrganizationManager_TypeInfo);
+          if ( !byte_48DEB5D )
+          {
+            sub_1B00CCC(&AutoOrganizationManager_TypeInfo, v27);
+            byte_48DEB5D = 1;
+          }
+          v29 = AutoOrganizationManager_TypeInfo;
+          if ( !AutoOrganizationManager_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(AutoOrganizationManager_TypeInfo);
+            v29 = AutoOrganizationManager_TypeInfo;
           }
-          if ( !byte_4388BC1 )
-          {
-            sub_B775C4(&AutoOrganizationManager_TypeInfo);
-            byte_4388BC1 = 1;
-          }
-          v33 = AutoOrganizationManager_TypeInfo;
-          if ( (BYTE3(AutoOrganizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-            && !AutoOrganizationManager_TypeInfo->_2.cctor_finished )
-          {
-            j_il2cpp_runtime_class_init_0(AutoOrganizationManager_TypeInfo);
-            v33 = AutoOrganizationManager_TypeInfo;
-          }
-          waveBattleAutoOrganizationInfo = v33->static_fields->waveBattleAutoOrganizationInfo;
-          v35 = (WaveBattlePartyOrganizationAutoOrganizationSettingDialog_CallbackFunc_o *)sub_B77694(WaveBattlePartyOrganizationAutoOrganizationSettingDialog_CallbackFunc_TypeInfo);
+          waveBattleAutoOrganizationInfo = v29->static_fields->waveBattleAutoOrganizationInfo;
+          v31 = (WaveBattlePartyOrganizationAutoOrganizationSettingDialog_CallbackFunc_o *)sub_1B00F18(WaveBattlePartyOrganizationAutoOrganizationSettingDialog_CallbackFunc_TypeInfo);
           WaveBattlePartyOrganizationAutoOrganizationSettingDialog_CallbackFunc___ctor(
-            v35,
-            (Il2CppObject *)v3,
+            v31,
+            (Il2CppObject *)v10,
             Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass28_0__OnClickSetting_b__0__,
-            0LL);
-          if ( v32 )
+            v32);
+          if ( v28 )
           {
             WaveBattlePartyOrganizationAutoOrganizationSettingDialog__Open(
-              v32,
+              v28,
               waveBattleAutoOrganizationInfo,
-              v35,
-              v36);
+              v31,
+              v33);
             return;
           }
         }
       }
     }
-LABEL_24:
-    sub_B7769C(transform, v5);
+LABEL_21:
+    sub_1B00F28(transform, v12);
   }
 }
 
@@ -310,14 +309,21 @@ void __fastcall WaveBattlePartyOrganizationAutoOrganizationConfirmDialog__Open(
         WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_o *func,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
   UILabel_o *titleLabel; // x20
   System_String_o *waveBattleAutoOrganizationInfo; // x0
-  __int64 v12; // x1
+  __int64 v19; // x1
   UILabel_o *messageLabel; // x20
   UILabel_o *cautionMessageLabel; // x20
   UILabel_o *buffExistsMessageLabel; // x20
@@ -325,112 +331,97 @@ void __fastcall WaveBattlePartyOrganizationAutoOrganizationConfirmDialog__Open(
   UILabel_o *cancelLabel; // x20
   UILabel_o *settingLabel; // x20
   UILabel_o *execLabel; // x20
-  AutoOrganizationManager_c *v20; // x0
-  const MethodInfo *v21; // x1
-  System_Action_o *v22; // x20
+  AutoOrganizationManager_c *v27; // x0
+  const MethodInfo *v28; // x1
+  System_Action_o *v29; // x20
 
-  if ( (byte_4389498 & 1) == 0 )
+  if ( (byte_48DEC83 & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&AutoOrganizationManager_TypeInfo);
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_EndOpen__);
-    sub_B775C4(&StringLiteral_1844/*"AUTO_ORGANIZATION_CONFIRM_SETTING"*/);
-    sub_B775C4(&StringLiteral_1831/*"AUTO_ORGANIZATION_CONFIRM_CANCEL"*/);
-    sub_B775C4(&StringLiteral_15605/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MESSAGE_CAUTION"*/);
-    sub_B775C4(&StringLiteral_1845/*"AUTO_ORGANIZATION_CONFIRM_TITLE"*/);
-    sub_B775C4(&StringLiteral_15604/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MESSAGE"*/);
-    sub_B775C4(&StringLiteral_15606/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MESSAGE_EXIST_QUEST_BUFF"*/);
-    sub_B775C4(&StringLiteral_1832/*"AUTO_ORGANIZATION_CONFIRM_DECIDE"*/);
-    sub_B775C4(&StringLiteral_1841/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_TITLE"*/);
-    byte_4389498 = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, func);
+    sub_1B00CCC(&AutoOrganizationManager_TypeInfo, v6);
+    sub_1B00CCC(&LocalizationManager_TypeInfo, v7);
+    sub_1B00CCC(&Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_EndOpen__, v8);
+    sub_1B00CCC(&StringLiteral_2161/*"AUTO_ORGANIZATION_CONFIRM_SETTING"*/, v9);
+    sub_1B00CCC(&StringLiteral_2148/*"AUTO_ORGANIZATION_CONFIRM_CANCEL"*/, v10);
+    sub_1B00CCC(&StringLiteral_15267/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MESSAGE_CAUTION"*/, v11);
+    sub_1B00CCC(&StringLiteral_2162/*"AUTO_ORGANIZATION_CONFIRM_TITLE"*/, v12);
+    sub_1B00CCC(&StringLiteral_15266/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MESSAGE"*/, v13);
+    sub_1B00CCC(&StringLiteral_15268/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MESSAGE_EXIST_QUEST_BUFF"*/, v14);
+    sub_1B00CCC(&StringLiteral_2149/*"AUTO_ORGANIZATION_CONFIRM_DECIDE"*/, v15);
+    sub_1B00CCC(&StringLiteral_2158/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_TITLE"*/, v16);
+    byte_48DEC83 = 1;
   }
   this->fields.closeFunc = func;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.closeFunc,
-    (System_Int32_array **)func,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.closeFunc, (int32_t)func, (int32_t)method, v3);
   titleLabel = this->fields.titleLabel;
-  if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !LocalizationManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  }
-  waveBattleAutoOrganizationInfo = LocalizationManager__Get((System_String_o *)StringLiteral_1845/*"AUTO_ORGANIZATION_CONFIRM_TITLE"*/, 0LL);
+  waveBattleAutoOrganizationInfo = LocalizationManager__Get((System_String_o *)StringLiteral_2162/*"AUTO_ORGANIZATION_CONFIRM_TITLE"*/, 0LL);
   if ( !titleLabel )
-    goto LABEL_24;
+    goto LABEL_21;
   UILabel__set_text(titleLabel, waveBattleAutoOrganizationInfo, 0LL);
   messageLabel = this->fields.messageLabel;
-  waveBattleAutoOrganizationInfo = LocalizationManager__Get((System_String_o *)StringLiteral_15604/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MESSAGE"*/, 0LL);
+  waveBattleAutoOrganizationInfo = LocalizationManager__Get((System_String_o *)StringLiteral_15266/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MESSAGE"*/, 0LL);
   if ( !messageLabel )
-    goto LABEL_24;
+    goto LABEL_21;
   UILabel__set_text(messageLabel, waveBattleAutoOrganizationInfo, 0LL);
   cautionMessageLabel = this->fields.cautionMessageLabel;
-  waveBattleAutoOrganizationInfo = LocalizationManager__Get((System_String_o *)StringLiteral_15605/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MESSAGE_CAUTION"*/, 0LL);
+  waveBattleAutoOrganizationInfo = LocalizationManager__Get((System_String_o *)StringLiteral_15267/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MESSAGE_CAUTION"*/, 0LL);
   if ( !cautionMessageLabel )
-    goto LABEL_24;
+    goto LABEL_21;
   UILabel__set_text(cautionMessageLabel, waveBattleAutoOrganizationInfo, 0LL);
   buffExistsMessageLabel = this->fields.buffExistsMessageLabel;
-  waveBattleAutoOrganizationInfo = LocalizationManager__Get((System_String_o *)StringLiteral_15606/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MESSAGE_EXIST_QUEST_BUFF"*/, 0LL);
+  waveBattleAutoOrganizationInfo = LocalizationManager__Get((System_String_o *)StringLiteral_15268/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MESSAGE_EXIST_QUEST_BUFF"*/, 0LL);
   if ( !buffExistsMessageLabel )
-    goto LABEL_24;
+    goto LABEL_21;
   UILabel__set_text(buffExistsMessageLabel, waveBattleAutoOrganizationInfo, 0LL);
   detailTitleLabel = this->fields.detailTitleLabel;
-  waveBattleAutoOrganizationInfo = LocalizationManager__Get((System_String_o *)StringLiteral_1841/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_TITLE"*/, 0LL);
+  waveBattleAutoOrganizationInfo = LocalizationManager__Get((System_String_o *)StringLiteral_2158/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_TITLE"*/, 0LL);
   if ( !detailTitleLabel )
-    goto LABEL_24;
+    goto LABEL_21;
   UILabel__set_text(detailTitleLabel, waveBattleAutoOrganizationInfo, 0LL);
   cancelLabel = this->fields.cancelLabel;
-  waveBattleAutoOrganizationInfo = LocalizationManager__Get((System_String_o *)StringLiteral_1831/*"AUTO_ORGANIZATION_CONFIRM_CANCEL"*/, 0LL);
+  waveBattleAutoOrganizationInfo = LocalizationManager__Get((System_String_o *)StringLiteral_2148/*"AUTO_ORGANIZATION_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelLabel )
-    goto LABEL_24;
+    goto LABEL_21;
   UILabel__set_text(cancelLabel, waveBattleAutoOrganizationInfo, 0LL);
   settingLabel = this->fields.settingLabel;
-  waveBattleAutoOrganizationInfo = LocalizationManager__Get((System_String_o *)StringLiteral_1844/*"AUTO_ORGANIZATION_CONFIRM_SETTING"*/, 0LL);
+  waveBattleAutoOrganizationInfo = LocalizationManager__Get((System_String_o *)StringLiteral_2161/*"AUTO_ORGANIZATION_CONFIRM_SETTING"*/, 0LL);
   if ( !settingLabel )
-    goto LABEL_24;
+    goto LABEL_21;
   UILabel__set_text(settingLabel, waveBattleAutoOrganizationInfo, 0LL);
   execLabel = this->fields.execLabel;
-  waveBattleAutoOrganizationInfo = LocalizationManager__Get((System_String_o *)StringLiteral_1832/*"AUTO_ORGANIZATION_CONFIRM_DECIDE"*/, 0LL);
+  waveBattleAutoOrganizationInfo = LocalizationManager__Get((System_String_o *)StringLiteral_2149/*"AUTO_ORGANIZATION_CONFIRM_DECIDE"*/, 0LL);
   if ( !execLabel )
-    goto LABEL_24;
+    goto LABEL_21;
   UILabel__set_text(execLabel, waveBattleAutoOrganizationInfo, 0LL);
-  if ( (BYTE3(AutoOrganizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !AutoOrganizationManager_TypeInfo->_2.cctor_finished )
+  if ( !AutoOrganizationManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(AutoOrganizationManager_TypeInfo);
+  if ( !byte_48DEB5D )
+  {
+    sub_1B00CCC(&AutoOrganizationManager_TypeInfo, v19);
+    byte_48DEB5D = 1;
+  }
+  v27 = AutoOrganizationManager_TypeInfo;
+  if ( !AutoOrganizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(AutoOrganizationManager_TypeInfo);
+    v27 = AutoOrganizationManager_TypeInfo;
   }
-  if ( !byte_4388BC1 )
-  {
-    sub_B775C4(&AutoOrganizationManager_TypeInfo);
-    byte_4388BC1 = 1;
-  }
-  v20 = AutoOrganizationManager_TypeInfo;
-  if ( (BYTE3(AutoOrganizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !AutoOrganizationManager_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(AutoOrganizationManager_TypeInfo);
-    v20 = AutoOrganizationManager_TypeInfo;
-  }
-  waveBattleAutoOrganizationInfo = (System_String_o *)v20->static_fields->waveBattleAutoOrganizationInfo;
+  waveBattleAutoOrganizationInfo = (System_String_o *)v27->static_fields->waveBattleAutoOrganizationInfo;
   if ( !waveBattleAutoOrganizationInfo )
-LABEL_24:
-    sub_B7769C(waveBattleAutoOrganizationInfo, v12);
+LABEL_21:
+    sub_1B00F28(waveBattleAutoOrganizationInfo, v19);
   ListViewSort__Load((ListViewSort_o *)waveBattleAutoOrganizationInfo, 0LL);
-  WaveBattlePartyOrganizationAutoOrganizationConfirmDialog__SetDetailLabel(this, v21);
+  WaveBattlePartyOrganizationAutoOrganizationConfirmDialog__SetDetailLabel(this, v28);
   this->fields.state = 1;
-  v22 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
+  v29 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
   System_Action___ctor(
-    v22,
+    v29,
     (Il2CppObject *)this,
     Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_EndOpen__,
     0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v22, 0, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v29, 0, 0LL);
 }
 
 
@@ -438,305 +429,445 @@ void __fastcall WaveBattlePartyOrganizationAutoOrganizationConfirmDialog__SetDet
         WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v3; // x20
-  AutoOrganizationManager_c *v4; // x0
-  ListViewSort_o *waveBattleAutoOrganizationInfo; // x21
-  __int64 Filter_34330744; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
-  __int64 v8; // x23
-  unsigned __int64 v9; // x22
-  __int64 v10; // x24
-  unsigned __int64 v11; // x8
-  bool v12; // cf
-  _BOOL4 v13; // w22
-  _BOOL4 v14; // w24
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  __int64 v18; // x1
+  __int64 v19; // x1
+  __int64 v20; // x20
+  __int64 v21; // x1
+  AutoOrganizationManager_c *v22; // x0
+  ListViewSort_o *waveBattleAutoOrganizationInfo; // x21
+  __int64 Filter_39491360; // x0
+  __int64 v25; // x1
+  __int64 v26; // x23
+  unsigned __int64 v27; // x22
+  __int64 v28; // x27
+  unsigned __int64 v29; // x8
+  _BOOL4 v30; // w22
+  _BOOL4 v31; // w27
+  int32_t v32; // w2
+  int32_t v33; // w3
+  __int64 v34; // x8
+  _QWORD *v35; // x9
+  __int64 v36; // x10
+  __int64 v37; // x1
+  __int64 v38; // x0
+  int32_t v39; // w2
+  int32_t v40; // w3
+  __int64 v41; // x8
+  _QWORD *v42; // x9
+  __int64 v43; // x10
+  __int64 v44; // x1
+  __int64 v45; // x0
   UILabel_o *detailKindLabel; // x22
-  __int64 v16; // x22
-  unsigned __int64 v17; // x10
-  int v18; // w11
-  int v19; // w13
-  unsigned __int64 v20; // x8
-  int v21; // w14
-  bool v22; // zf
-  _BOOL4 v23; // w14
-  int v24; // w15
-  __int64 *v25; // x8
-  System_String_o *v26; // x0
-  System_String_o *v27; // x0
-  System_String_o *v28; // x0
-  System_String_o *v29; // x0
-  System_String_o *v30; // x0
+  int32_t v47; // w2
+  int v48; // w8
+  unsigned int v49; // w12
+  __int64 v50; // x22
+  unsigned __int64 v51; // x8
+  bool v52; // cf
+  __int64 v53; // x12
+  int v54; // w10
+  int v55; // w13
+  unsigned __int64 v56; // x14
+  int v57; // w15
+  bool v58; // zf
+  _BOOL4 v59; // w15
+  int v60; // w16
+  __int64 *v61; // x8
+  int32_t v62; // w2
+  int32_t v63; // w3
+  __int64 v64; // x8
+  _QWORD *v65; // x9
+  __int64 v66; // x10
+  __int64 v67; // x1
+  __int64 v68; // x0
+  int32_t v69; // w2
+  int32_t v70; // w3
+  __int64 v71; // x8
+  _QWORD *v72; // x9
+  __int64 v73; // x10
+  __int64 v74; // x1
+  __int64 v75; // x0
+  int32_t v76; // w2
+  int32_t v77; // w3
+  __int64 v78; // x8
+  _QWORD *v79; // x9
+  __int64 v80; // x10
+  __int64 v81; // x1
+  __int64 v82; // x0
+  int32_t v83; // w2
+  int32_t v84; // w3
+  __int64 v85; // x8
+  _QWORD *v86; // x9
+  __int64 v87; // x10
+  __int64 v88; // x1
+  __int64 v89; // x0
+  int32_t v90; // w2
+  int32_t v91; // w3
+  __int64 v92; // x8
+  _QWORD *v93; // x9
+  __int64 v94; // x10
+  __int64 v95; // x1
+  __int64 v96; // x0
   UILabel_o *detailRarityLabel; // x22
+  int32_t autoOrganizationMode; // w20
   UILabel_o *detailModeLabel; // x19
-  __int64 *v33; // x8
-  __int64 v34; // x0
+  System_String_o **v100; // x8
 
-  if ( (byte_438949D & 1) == 0 )
+  if ( (byte_48DEC88 & 1) == 0 )
   {
-    sub_B775C4(&AutoOrganizationManager_TypeInfo);
-    sub_B775C4(&bool___TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__Clear__);
-    sub_B775C4(&Method_System_Collections_Generic_List_string___ctor___69407008);
-    sub_B775C4(&System_Collections_Generic_List_string__TypeInfo);
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&StringLiteral_82/*" "*/);
-    sub_B775C4(&StringLiteral_12109/*"SERVANT_SORT_FILTER_RARITY_UNCOMMON"*/);
-    sub_B775C4(&StringLiteral_15602/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_KIND_EQUIP"*/);
-    sub_B775C4(&StringLiteral_12108/*"SERVANT_SORT_FILTER_RARITY_SSRARE"*/);
-    sub_B775C4(&StringLiteral_12107/*"SERVANT_SORT_FILTER_RARITY_SRARE"*/);
-    sub_B775C4(&StringLiteral_12105/*"SERVANT_SORT_FILTER_RARITY_COMMON"*/);
-    sub_B775C4(&StringLiteral_15608/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MODE_USE_ENEMY_CLASS_MAIN"*/);
-    sub_B775C4(&StringLiteral_15607/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MODE_USE_ENEMY_CLASS_ALL"*/);
-    sub_B775C4(&StringLiteral_15603/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_KIND_SERVANT"*/);
-    sub_B775C4(&StringLiteral_15609/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_RARITY_ALL"*/);
-    sub_B775C4(&StringLiteral_12106/*"SERVANT_SORT_FILTER_RARITY_RARE"*/);
-    byte_438949D = 1;
+    sub_1B00CCC(&AutoOrganizationManager_TypeInfo, method);
+    sub_1B00CCC(&bool___TypeInfo, v3);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__Add__, v4);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__Clear__, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string___ctor__, v6);
+    sub_1B00CCC(&System_Collections_Generic_List_string__TypeInfo, v7);
+    sub_1B00CCC(&LocalizationManager_TypeInfo, v8);
+    sub_1B00CCC(&StringLiteral_115/*" "*/, v9);
+    sub_1B00CCC(&StringLiteral_11581/*"SERVANT_SORT_FILTER_RARITY_UNCOMMON"*/, v10);
+    sub_1B00CCC(&StringLiteral_15264/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_KIND_EQUIP"*/, v11);
+    sub_1B00CCC(&StringLiteral_11580/*"SERVANT_SORT_FILTER_RARITY_SSRARE"*/, v12);
+    sub_1B00CCC(&StringLiteral_11579/*"SERVANT_SORT_FILTER_RARITY_SRARE"*/, v13);
+    sub_1B00CCC(&StringLiteral_11577/*"SERVANT_SORT_FILTER_RARITY_COMMON"*/, v14);
+    sub_1B00CCC(&StringLiteral_15270/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MODE_USE_ENEMY_CLASS_MAIN"*/, v15);
+    sub_1B00CCC(&StringLiteral_15269/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MODE_USE_ENEMY_CLASS_ALL"*/, v16);
+    sub_1B00CCC(&StringLiteral_15265/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_KIND_SERVANT"*/, v17);
+    sub_1B00CCC(&StringLiteral_15271/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_RARITY_ALL"*/, v18);
+    sub_1B00CCC(&StringLiteral_11578/*"SERVANT_SORT_FILTER_RARITY_RARE"*/, v19);
+    byte_48DEC88 = 1;
   }
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_string__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v3,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_string___ctor___69407008);
-  if ( (BYTE3(AutoOrganizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !AutoOrganizationManager_TypeInfo->_2.cctor_finished )
+  v20 = sub_1B00F18(System_Collections_Generic_List_string__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    (System_Collections_Generic_List_object__o *)v20,
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_string___ctor__);
+  if ( !AutoOrganizationManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(AutoOrganizationManager_TypeInfo);
+  if ( !byte_48DEB5D )
+  {
+    sub_1B00CCC(&AutoOrganizationManager_TypeInfo, v21);
+    byte_48DEB5D = 1;
+  }
+  v22 = AutoOrganizationManager_TypeInfo;
+  if ( !AutoOrganizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(AutoOrganizationManager_TypeInfo);
+    v22 = AutoOrganizationManager_TypeInfo;
   }
-  if ( !byte_4388BC1 )
-  {
-    sub_B775C4(&AutoOrganizationManager_TypeInfo);
-    byte_4388BC1 = 1;
-  }
-  v4 = AutoOrganizationManager_TypeInfo;
-  if ( (BYTE3(AutoOrganizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !AutoOrganizationManager_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(AutoOrganizationManager_TypeInfo);
-    v4 = AutoOrganizationManager_TypeInfo;
-  }
-  waveBattleAutoOrganizationInfo = v4->static_fields->waveBattleAutoOrganizationInfo;
-  Filter_34330744 = sub_B775DC(bool___TypeInfo, 7LL);
+  waveBattleAutoOrganizationInfo = v22->static_fields->waveBattleAutoOrganizationInfo;
+  Filter_39491360 = sub_1B00D74(bool___TypeInfo, 7LL);
   if ( !waveBattleAutoOrganizationInfo )
-    goto LABEL_87;
-  v8 = Filter_34330744;
-  v9 = 0LL;
-  v10 = Filter_34330744 + 32;
+    goto LABEL_100;
+  v26 = Filter_39491360;
+  v27 = 0LL;
+  v28 = Filter_39491360 + 32;
   do
   {
-    Filter_34330744 = ListViewSort__GetFilter_34330744(waveBattleAutoOrganizationInfo, v9, 0LL);
-    if ( !v8 )
-      goto LABEL_87;
-    v11 = *(unsigned int *)(v8 + 24);
-    if ( v9 >= v11 )
-      goto LABEL_86;
-    v12 = v9 >= 6;
-    *(_BYTE *)(v10 + v9++) = Filter_34330744 & 1;
+    Filter_39491360 = ListViewSort__GetFilter_39491360(waveBattleAutoOrganizationInfo, v27, 0LL);
+    if ( !v26 )
+      goto LABEL_100;
+    v29 = *(unsigned int *)(v26 + 24);
+    if ( v27 >= v29 )
+      goto LABEL_99;
+    *(_BYTE *)(v28 + v27++) = Filter_39491360 & 1;
   }
-  while ( !v12 );
-  if ( (unsigned int)v11 < 2 )
-    goto LABEL_86;
-  v13 = *(_BYTE *)(v8 + 32) == 0;
-  v14 = *(unsigned __int8 *)(v8 + 33) != 0;
-  if ( *(_BYTE *)(v8 + 32) || !*(_BYTE *)(v8 + 33) )
+  while ( v27 != 7 );
+  if ( (unsigned int)v29 < 2 )
+    goto LABEL_99;
+  v30 = *(_BYTE *)(v26 + 32) == 0;
+  v31 = *(unsigned __int8 *)(v26 + 33) != 0;
+  if ( *(_BYTE *)(v26 + 32) || !*(_BYTE *)(v26 + 33) )
   {
-    if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
+    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    Filter_39491360 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_15265/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_KIND_SERVANT"*/, 0LL);
+    if ( !v20 )
+      goto LABEL_100;
+    v34 = *(_QWORD *)(v20 + 16);
+    v35 = Method_System_Collections_Generic_List_string__Add__;
+    ++*(_DWORD *)(v20 + 28);
+    if ( !v34 )
+      goto LABEL_100;
+    v36 = *(int *)(v20 + 24);
+    v37 = Filter_39491360;
+    if ( (unsigned int)v36 >= *(_DWORD *)(v34 + 24) )
+    {
+      System_Collections_Generic_List_object___AddWithResize(
+        (System_Collections_Generic_List_object__o *)v20,
+        (Il2CppObject *)Filter_39491360,
+        *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
     }
-    Filter_34330744 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_15603/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_KIND_SERVANT"*/, 0LL);
-    if ( !v3 )
-      goto LABEL_87;
-    System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-      v3,
-      (EventMissionProgressRequest_Argument_ProgressData_o *)Filter_34330744,
-      (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_string__Add__);
+    else
+    {
+      v38 = v34 + 8 * v36;
+      *(_DWORD *)(v20 + 24) = v36 + 1;
+      *(_QWORD *)(v38 + 32) = v37;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v38 + 32), v37, v32, v33);
+    }
   }
-  if ( v14 || v13 )
+  if ( v31 || v30 )
   {
-    if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
+    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    }
-    Filter_34330744 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_15602/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_KIND_EQUIP"*/, 0LL);
-    if ( v3 )
+    Filter_39491360 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_15264/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_KIND_EQUIP"*/, 0LL);
+    if ( !v20 )
+      goto LABEL_100;
+    v41 = *(_QWORD *)(v20 + 16);
+    v42 = Method_System_Collections_Generic_List_string__Add__;
+    ++*(_DWORD *)(v20 + 28);
+    if ( !v41 )
+      goto LABEL_100;
+    v43 = *(int *)(v20 + 24);
+    v44 = Filter_39491360;
+    if ( (unsigned int)v43 >= *(_DWORD *)(v41 + 24) )
     {
-      System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-        v3,
-        (EventMissionProgressRequest_Argument_ProgressData_o *)Filter_34330744,
-        (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_string__Add__);
-      goto LABEL_31;
+      System_Collections_Generic_List_object___AddWithResize(
+        (System_Collections_Generic_List_object__o *)v20,
+        (Il2CppObject *)Filter_39491360,
+        *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v42[4] + 192LL) + 112LL));
     }
-LABEL_87:
-    sub_B7769C(Filter_34330744, v7);
+    else
+    {
+      v45 = v41 + 8 * v43;
+      *(_DWORD *)(v20 + 24) = v43 + 1;
+      *(_QWORD *)(v45 + 32) = v44;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v45 + 32), v44, v39, v40);
+    }
   }
-LABEL_31:
   detailKindLabel = this->fields.detailKindLabel;
-  Filter_34330744 = (__int64)System_String__Join_44957380(
-                               (System_String_o *)StringLiteral_82/*" "*/,
-                               (System_Collections_Generic_IEnumerable_string__o *)v3,
+  Filter_39491360 = (__int64)System_String__Join_60341404(
+                               (System_String_o *)StringLiteral_115/*" "*/,
+                               (System_Collections_Generic_IEnumerable_string__o *)v20,
                                0LL);
   if ( !detailKindLabel )
-    goto LABEL_87;
-  UILabel__set_text(detailKindLabel, (System_String_o *)Filter_34330744, 0LL);
-  if ( !v3 )
-    goto LABEL_87;
-  System_Collections_Generic_List_XWeaponTrail_Element___Clear(
-    (System_Collections_Generic_List_XWeaponTrail_Element__o *)v3,
-    (const MethodInfo_30536A0 *)Method_System_Collections_Generic_List_string__Clear__);
-  Filter_34330744 = sub_B775DC(bool___TypeInfo, 5LL);
-  v16 = Filter_34330744;
-  v17 = 0LL;
-  v18 = 1;
-  v19 = 1;
+    goto LABEL_100;
+  UILabel__set_text(detailKindLabel, (System_String_o *)Filter_39491360, 0LL);
+  if ( !v20 )
+    goto LABEL_100;
+  v47 = *(_DWORD *)(v20 + 24);
+  v48 = *(_DWORD *)(v20 + 28) + 1;
+  *(_DWORD *)(v20 + 24) = 0;
+  *(_DWORD *)(v20 + 28) = v48;
+  if ( v47 >= 1 )
+    System_Array__Clear(*(System_Array_o **)(v20 + 16), 0, v47, 0LL);
+  Filter_39491360 = sub_1B00D74(bool___TypeInfo, 5LL);
+  v49 = *(_DWORD *)(v26 + 24);
+  v50 = Filter_39491360;
+  v51 = 0LL;
+  v52 = v49 >= 2;
+  v53 = v49 - 2;
+  v54 = 1;
+  if ( (_DWORD)v53 == 0 || !v52 )
+    v53 = 0LL;
+  v55 = 1;
   do
   {
-    if ( v17 + 2 >= *(unsigned int *)(v8 + 24) )
-      goto LABEL_86;
-    if ( !Filter_34330744 )
-      goto LABEL_87;
-    v20 = *(unsigned int *)(Filter_34330744 + 24);
-    if ( v17 >= v20 )
-      goto LABEL_86;
-    v21 = *(unsigned __int8 *)(v8 + 34 + v17);
-    v22 = v21 == 0;
-    *(_BYTE *)(Filter_34330744 + 32 + v17) = v21;
-    v23 = v21 == 0;
-    v24 = !v22;
-    v12 = v17++ >= 4;
-    v19 &= v24;
-    v18 &= v23;
+    if ( v53 == v51 )
+      goto LABEL_99;
+    if ( !Filter_39491360 )
+      goto LABEL_100;
+    v56 = *(unsigned int *)(Filter_39491360 + 24);
+    if ( v51 >= v56 )
+      goto LABEL_99;
+    v57 = *(unsigned __int8 *)(v26 + 34 + v51);
+    v58 = v57 == 0;
+    *(_BYTE *)(Filter_39491360 + 32 + v51++) = v57;
+    v59 = v57 == 0;
+    v60 = !v58;
+    v55 &= v60;
+    v54 &= v59;
   }
-  while ( !v12 );
-  if ( (v19 | v18) == 1 )
+  while ( v51 != 5 );
+  if ( (v55 | v54) == 1 )
   {
-    if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
+    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    }
-    v25 = &StringLiteral_15609/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_RARITY_ALL"*/;
-LABEL_88:
-    v30 = LocalizationManager__Get((System_String_o *)*v25, 0LL);
-    System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-      v3,
-      (EventMissionProgressRequest_Argument_ProgressData_o *)v30,
-      (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_string__Add__);
-    goto LABEL_74;
-  }
-  if ( (unsigned int)v20 <= 4 )
-    goto LABEL_86;
-  if ( *(_BYTE *)(Filter_34330744 + 36) )
-  {
-    if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    }
-    v26 = LocalizationManager__Get((System_String_o *)StringLiteral_12108/*"SERVANT_SORT_FILTER_RARITY_SSRARE"*/, 0LL);
-    System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-      v3,
-      (EventMissionProgressRequest_Argument_ProgressData_o *)v26,
-      (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_string__Add__);
-    v20 = *(_QWORD *)(v16 + 24);
-    if ( (unsigned int)v20 <= 3 )
-      goto LABEL_86;
-  }
-  if ( *(_BYTE *)(v16 + 35) )
-  {
-    if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    }
-    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_12107/*"SERVANT_SORT_FILTER_RARITY_SRARE"*/, 0LL);
-    System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-      v3,
-      (EventMissionProgressRequest_Argument_ProgressData_o *)v27,
-      (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_string__Add__);
-    v20 = *(_QWORD *)(v16 + 24);
-    if ( (unsigned int)v20 <= 2 )
-      goto LABEL_86;
-  }
-  if ( *(_BYTE *)(v16 + 34) )
-  {
-    if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    }
-    v28 = LocalizationManager__Get((System_String_o *)StringLiteral_12106/*"SERVANT_SORT_FILTER_RARITY_RARE"*/, 0LL);
-    System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-      v3,
-      (EventMissionProgressRequest_Argument_ProgressData_o *)v28,
-      (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_string__Add__);
-    v20 = *(_QWORD *)(v16 + 24);
-    if ( (unsigned int)v20 <= 1 )
-      goto LABEL_86;
-  }
-  if ( *(_BYTE *)(v16 + 33) )
-  {
-    if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    }
-    v29 = LocalizationManager__Get((System_String_o *)StringLiteral_12109/*"SERVANT_SORT_FILTER_RARITY_UNCOMMON"*/, 0LL);
-    System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-      v3,
-      (EventMissionProgressRequest_Argument_ProgressData_o *)v29,
-      (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_string__Add__);
-    v20 = *(_QWORD *)(v16 + 24);
-  }
-  if ( !(_DWORD)v20 )
-  {
-LABEL_86:
-    v34 = sub_B776C8(Filter_34330744);
-    sub_B77668(v34, 0LL);
-  }
-  if ( *(_BYTE *)(v16 + 32) )
-  {
-    if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    }
-    v25 = &StringLiteral_12105/*"SERVANT_SORT_FILTER_RARITY_COMMON"*/;
-    goto LABEL_88;
-  }
-LABEL_74:
-  detailRarityLabel = this->fields.detailRarityLabel;
-  Filter_34330744 = (__int64)System_String__Join_44957380(
-                               (System_String_o *)StringLiteral_82/*" "*/,
-                               (System_Collections_Generic_IEnumerable_string__o *)v3,
-                               0LL);
-  if ( !detailRarityLabel )
+    v61 = &StringLiteral_15271/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_RARITY_ALL"*/;
     goto LABEL_87;
-  UILabel__set_text(detailRarityLabel, (System_String_o *)Filter_34330744, 0LL);
-  detailModeLabel = this->fields.detailModeLabel;
-  if ( waveBattleAutoOrganizationInfo->fields.autoOrganizationMode == 1 )
+  }
+  if ( (unsigned int)v56 <= 4 )
+LABEL_99:
+    sub_1B00F30(Filter_39491360, v25);
+  if ( *(_BYTE *)(Filter_39491360 + 36) )
   {
-    if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
+    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    Filter_39491360 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11580/*"SERVANT_SORT_FILTER_RARITY_SSRARE"*/, 0LL);
+    v64 = *(_QWORD *)(v20 + 16);
+    v65 = Method_System_Collections_Generic_List_string__Add__;
+    ++*(_DWORD *)(v20 + 28);
+    if ( !v64 )
+      goto LABEL_100;
+    v66 = *(int *)(v20 + 24);
+    v67 = Filter_39491360;
+    if ( (unsigned int)v66 >= *(_DWORD *)(v64 + 24) )
+    {
+      System_Collections_Generic_List_object___AddWithResize(
+        (System_Collections_Generic_List_object__o *)v20,
+        (Il2CppObject *)Filter_39491360,
+        *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v65[4] + 192LL) + 112LL));
     }
-    v33 = &StringLiteral_15607/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MODE_USE_ENEMY_CLASS_ALL"*/;
+    else
+    {
+      v68 = v64 + 8 * v66;
+      *(_DWORD *)(v20 + 24) = v66 + 1;
+      *(_QWORD *)(v68 + 32) = v67;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v68 + 32), v67, v62, v63);
+    }
+  }
+  if ( *(_DWORD *)(v50 + 24) <= 3u )
+    goto LABEL_99;
+  if ( *(_BYTE *)(v50 + 35) )
+  {
+    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    Filter_39491360 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11579/*"SERVANT_SORT_FILTER_RARITY_SRARE"*/, 0LL);
+    v71 = *(_QWORD *)(v20 + 16);
+    v72 = Method_System_Collections_Generic_List_string__Add__;
+    ++*(_DWORD *)(v20 + 28);
+    if ( !v71 )
+      goto LABEL_100;
+    v73 = *(int *)(v20 + 24);
+    v74 = Filter_39491360;
+    if ( (unsigned int)v73 >= *(_DWORD *)(v71 + 24) )
+    {
+      System_Collections_Generic_List_object___AddWithResize(
+        (System_Collections_Generic_List_object__o *)v20,
+        (Il2CppObject *)Filter_39491360,
+        *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v72[4] + 192LL) + 112LL));
+    }
+    else
+    {
+      v75 = v71 + 8 * v73;
+      *(_DWORD *)(v20 + 24) = v73 + 1;
+      *(_QWORD *)(v75 + 32) = v74;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v75 + 32), v74, v69, v70);
+    }
+  }
+  if ( *(_DWORD *)(v50 + 24) <= 2u )
+    goto LABEL_99;
+  if ( *(_BYTE *)(v50 + 34) )
+  {
+    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    Filter_39491360 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11578/*"SERVANT_SORT_FILTER_RARITY_RARE"*/, 0LL);
+    v78 = *(_QWORD *)(v20 + 16);
+    v79 = Method_System_Collections_Generic_List_string__Add__;
+    ++*(_DWORD *)(v20 + 28);
+    if ( !v78 )
+      goto LABEL_100;
+    v80 = *(int *)(v20 + 24);
+    v81 = Filter_39491360;
+    if ( (unsigned int)v80 >= *(_DWORD *)(v78 + 24) )
+    {
+      System_Collections_Generic_List_object___AddWithResize(
+        (System_Collections_Generic_List_object__o *)v20,
+        (Il2CppObject *)Filter_39491360,
+        *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v79[4] + 192LL) + 112LL));
+    }
+    else
+    {
+      v82 = v78 + 8 * v80;
+      *(_DWORD *)(v20 + 24) = v80 + 1;
+      *(_QWORD *)(v82 + 32) = v81;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v82 + 32), v81, v76, v77);
+    }
+  }
+  if ( *(_DWORD *)(v50 + 24) <= 1u )
+    goto LABEL_99;
+  if ( *(_BYTE *)(v50 + 33) )
+  {
+    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    Filter_39491360 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11581/*"SERVANT_SORT_FILTER_RARITY_UNCOMMON"*/, 0LL);
+    v85 = *(_QWORD *)(v20 + 16);
+    v86 = Method_System_Collections_Generic_List_string__Add__;
+    ++*(_DWORD *)(v20 + 28);
+    if ( v85 )
+    {
+      v87 = *(int *)(v20 + 24);
+      v88 = Filter_39491360;
+      if ( (unsigned int)v87 >= *(_DWORD *)(v85 + 24) )
+      {
+        System_Collections_Generic_List_object___AddWithResize(
+          (System_Collections_Generic_List_object__o *)v20,
+          (Il2CppObject *)Filter_39491360,
+          *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v86[4] + 192LL) + 112LL));
+      }
+      else
+      {
+        v89 = v85 + 8 * v87;
+        *(_DWORD *)(v20 + 24) = v87 + 1;
+        *(_QWORD *)(v89 + 32) = v88;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)(v89 + 32), v88, v83, v84);
+      }
+      goto LABEL_82;
+    }
+LABEL_100:
+    sub_1B00F28(Filter_39491360, v25);
+  }
+LABEL_82:
+  if ( !*(_DWORD *)(v50 + 24) )
+    goto LABEL_99;
+  if ( !*(_BYTE *)(v50 + 32) )
+    goto LABEL_91;
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+  v61 = &StringLiteral_11577/*"SERVANT_SORT_FILTER_RARITY_COMMON"*/;
+LABEL_87:
+  Filter_39491360 = (__int64)LocalizationManager__Get((System_String_o *)*v61, 0LL);
+  v92 = *(_QWORD *)(v20 + 16);
+  v93 = Method_System_Collections_Generic_List_string__Add__;
+  ++*(_DWORD *)(v20 + 28);
+  if ( !v92 )
+    goto LABEL_100;
+  v94 = *(int *)(v20 + 24);
+  v95 = Filter_39491360;
+  if ( (unsigned int)v94 >= *(_DWORD *)(v92 + 24) )
+  {
+    System_Collections_Generic_List_object___AddWithResize(
+      (System_Collections_Generic_List_object__o *)v20,
+      (Il2CppObject *)Filter_39491360,
+      *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v93[4] + 192LL) + 112LL));
   }
   else
   {
-    if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    }
-    v33 = &StringLiteral_15608/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MODE_USE_ENEMY_CLASS_MAIN"*/;
+    v96 = v92 + 8 * v94;
+    *(_DWORD *)(v20 + 24) = v94 + 1;
+    *(_QWORD *)(v96 + 32) = v95;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)(v96 + 32), v95, v90, v91);
   }
-  Filter_34330744 = (__int64)LocalizationManager__Get((System_String_o *)*v33, 0LL);
+LABEL_91:
+  detailRarityLabel = this->fields.detailRarityLabel;
+  Filter_39491360 = (__int64)System_String__Join_60341404(
+                               (System_String_o *)StringLiteral_115/*" "*/,
+                               (System_Collections_Generic_IEnumerable_string__o *)v20,
+                               0LL);
+  if ( !detailRarityLabel )
+    goto LABEL_100;
+  UILabel__set_text(detailRarityLabel, (System_String_o *)Filter_39491360, 0LL);
+  autoOrganizationMode = waveBattleAutoOrganizationInfo->fields.autoOrganizationMode;
+  detailModeLabel = this->fields.detailModeLabel;
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+  v100 = (System_String_o **)(autoOrganizationMode == 1 ? &StringLiteral_15269/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MODE_USE_ENEMY_CLASS_ALL"*/ : &StringLiteral_15270/*"WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MODE_USE_ENEMY_CLASS_MAIN"*/);
+  Filter_39491360 = (__int64)LocalizationManager__Get(*v100, 0LL);
   if ( !detailModeLabel )
-    goto LABEL_87;
-  UILabel__set_text(detailModeLabel, (System_String_o *)Filter_34330744, 0LL);
+    goto LABEL_100;
+  UILabel__set_text(detailModeLabel, (System_String_o *)Filter_39491360, 0LL);
 }
 
 
@@ -755,10 +886,10 @@ void __fastcall WaveBattlePartyOrganizationAutoOrganizationConfirmDialog__add_cl
   WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4389495 & 1) == 0 )
+  if ( (byte_48DEC80 & 1) == 0 )
   {
-    sub_B775C4(&WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_TypeInfo);
-    byte_4389495 = 1;
+    sub_1B00CCC(&WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_TypeInfo, value);
+    byte_48DEC80 = 1;
   }
   closeFunc = this->fields.closeFunc;
   p_closeFunc = &this->fields.closeFunc;
@@ -771,13 +902,13 @@ void __fastcall WaveBattlePartyOrganizationAutoOrganizationConfirmDialog__add_cl
       if ( (WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_c *)v8->klass != WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_TypeInfo )
         break;
     }
-    v9 = sub_B6BFDC(p_closeFunc, v8, v6);
+    v9 = sub_1B3C1BC(p_closeFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_o *)sub_B77990(v8);
+  v11 = (WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_o *)sub_1B011E8(v8);
   WaveBattlePartyOrganizationAutoOrganizationConfirmDialog__remove_closeFunc(v11, v12, v13);
 }
 
@@ -786,12 +917,12 @@ System_String_o *__fastcall WaveBattlePartyOrganizationAutoOrganizationConfirmDi
         WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_438949E & 1) == 0 )
+  if ( (byte_48DEC89 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_2849/*"BaseWindow/CancelButton"*/);
-    byte_438949E = 1;
+    sub_1B00CCC(&StringLiteral_3158/*"BaseWindow/CancelButton"*/, method);
+    byte_48DEC89 = 1;
   }
-  return (System_String_o *)StringLiteral_2849/*"BaseWindow/CancelButton"*/;
+  return (System_String_o *)StringLiteral_3158/*"BaseWindow/CancelButton"*/;
 }
 
 
@@ -809,10 +940,10 @@ void __fastcall WaveBattlePartyOrganizationAutoOrganizationConfirmDialog__remove
   WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4389496 & 1) == 0 )
+  if ( (byte_48DEC81 & 1) == 0 )
   {
-    sub_B775C4(&WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_TypeInfo);
-    byte_4389496 = 1;
+    sub_1B00CCC(&WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_TypeInfo, value);
+    byte_48DEC81 = 1;
   }
   closeFunc = this->fields.closeFunc;
   p_closeFunc = &this->fields.closeFunc;
@@ -825,13 +956,13 @@ void __fastcall WaveBattlePartyOrganizationAutoOrganizationConfirmDialog__remove
       if ( (WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_c *)v8->klass != WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_TypeInfo )
         break;
     }
-    v9 = sub_B6BFDC(p_closeFunc, v8, v6);
+    v9 = sub_1B3C1BC(p_closeFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_o *)sub_B77990(v8);
+  v11 = (WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_o *)sub_1B011E8(v8);
   WaveBattlePartyOrganizationAutoOrganizationConfirmDialog__Awake(v11, v12);
 }
 
@@ -843,30 +974,44 @@ void __fastcall WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_CloseDe
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  struct BattleServantClassBoardSkillEffectListComponent_o *v8; // x8
-  BattleServantConfConponent_o *p_method; // x0
+  __int64 v4; // x8
+  __int64 v6; // x21
+  int v8; // w22
+  struct System_Reflection_MethodInfo_o *v9; // x9
+  __int64 v10; // x0
 
-  v8 = **(struct BattleServantClassBoardSkillEffectListComponent_o ***)&method;
+  v4 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
+  *(_QWORD *)&this->fields.extra_arg = *(_QWORD *)&method;
+  v6 = *(_QWORD *)&method;
+  *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  p_method = (BattleServantConfConponent_o *)&this->fields.method;
-  p_method->monitor = *(void **)&method;
-  p_method[-1].fields.classBoardSkillObj = v8;
-  sub_B77560(
-    p_method,
-    (System_Int32_array **)object,
-    *(System_String_array ***)&method,
-    (System_String_array **)a4,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  v8 = *(unsigned __int8 *)(v6 + 82);
+  this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
+  if ( (sub_1B00D8C(v6) & 1) == 0 )
+  {
+    if ( !object )
+    {
+      v10 = sub_1B00F44(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B00DF4(v10, 0LL);
+    }
+    goto LABEL_5;
+  }
+  if ( v8 != 1 )
+  {
+LABEL_5:
+    v9 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
+    this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
+    this->fields.original_method_info = v9;
+    goto LABEL_6;
+  }
+  this->fields.m_target = (Il2CppObject *)sub_1946000;
+LABEL_6:
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1945FB8;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_IAsyncResult_o *__fastcall WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate__BeginInvoke(
         WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_o *this,
         bool isDecide,
@@ -874,18 +1019,18 @@ System_IAsyncResult_o *__fastcall WaveBattlePartyOrganizationAutoOrganizationCon
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v9[2]; // [xsp+8h] [xbp-38h] BYREF
-  char v10[4]; // [xsp+1Ch] [xbp-24h] BYREF
+  __int64 v9[2]; // [xsp+8h] [xbp-48h] BYREF
+  char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isDecide;
-  if ( (byte_43892A9 & 1) == 0 )
+  if ( (byte_48DEC8B & 1) == 0 )
   {
-    sub_B775C4(&bool_TypeInfo);
-    byte_43892A9 = 1;
+    sub_1B00CCC(&bool_TypeInfo, isDecide);
+    byte_48DEC8B = 1;
   }
   v9[1] = 0LL;
-  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback);
-  return (System_IAsyncResult_o *)sub_B77568(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
+  return (System_IAsyncResult_o *)sub_1B00C80(this, v9, callback, object);
 }
 
 
@@ -894,152 +1039,19 @@ void __fastcall WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_CloseDe
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B7756C(result, 0LL, method);
+  sub_1B00C84(result, 0LL, method);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate__Invoke(
         WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_o *this,
         bool isDecide,
         const MethodInfo *method)
 {
-  __int64 v3; // x8
-  __int64 v6; // x24
-  WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_o **v7; // x25
-  __int64 v8; // x26
-  unsigned int v9; // w23
-  __int64 class_0; // x0
-  __int64 v11; // x8
-  unsigned __int64 v12; // x10
-  _DWORD *v13; // x11
-  __int64 v14; // x0
-  __int64 v15; // x0
-  __int64 v16; // x0
-  void (__fastcall **v17)(__int64 *, bool, _QWORD); // x0
-  WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_o *v18; // x8
-  __int64 *v19; // x21
-  __int64 v20; // x22
-  void (__fastcall *v21)(bool, __int64); // x23
-  char v22; // w23
-  char v23; // w0
-  __int64 v24; // x8
-  __int64 v25; // x1
-  __int64 v26; // x2
-  unsigned __int64 v27; // x10
-  _DWORD *v28; // x11
-  WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_o *v29; // [xsp+8h] [xbp-48h] BYREF
-
-  v29 = this;
-  v3 = *(_QWORD *)&this[1].fields.method_ptr;
-  if ( !v3 )
-  {
-    v7 = &v29;
-    v6 = 1LL;
-    goto LABEL_5;
-  }
-  v6 = *(_QWORD *)(v3 + 24);
-  if ( v6 )
-  {
-    v7 = (WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_o **)(v3 + 32);
-LABEL_5:
-    v8 = 0LL;
-    while ( 1 )
-    {
-      v18 = v7[v8];
-      v19 = *(__int64 **)&v18->fields.method;
-      v20 = *(_QWORD *)&v18->fields.extra_arg;
-      v21 = *(void (__fastcall **)(bool, __int64))&v18->fields.method_ptr;
-      if ( *(__int16 *)(v20 + 72) == -1 )
-        sub_B77680(*(_QWORD *)&v18->fields.extra_arg, isDecide);
-      if ( (sub_B775F4(v20) & 1) == 0 )
-        break;
-      if ( *(_BYTE *)(v20 + 74) != 1 )
-        goto LABEL_36;
-      v21(isDecide, v20);
-LABEL_37:
-      if ( ++v8 == v6 )
-        return;
-    }
-    if ( v19 && *(__int16 *)(v20 + 72) != -1 && (*(_BYTE *)(*v19 + 277) & 1) == 0 && this->fields.m_target )
-    {
-      v22 = sub_B775EC(v20);
-      v23 = sub_B779F0(v20);
-      if ( (v22 & 1) != 0 )
-      {
-        if ( (v23 & 1) != 0 )
-        {
-          v24 = *v19;
-          v25 = *(_QWORD *)(v20 + 24);
-          v26 = *(unsigned __int16 *)(v20 + 72);
-          if ( *(_WORD *)(*v19 + 298) )
-          {
-            v27 = 0LL;
-            v28 = (_DWORD *)(*(_QWORD *)(v24 + 176) + 8LL);
-            while ( *((_QWORD *)v28 - 1) != v25 )
-            {
-              ++v27;
-              v28 += 4;
-              if ( v27 >= *(unsigned __int16 *)(*v19 + 298) )
-                goto LABEL_35;
-            }
-            v16 = v24 + 16LL * (*v28 + (int)v26) + 312;
-          }
-          else
-          {
-LABEL_35:
-            v16 = sub_B0F4C0(v19, v25, v26);
-          }
-          v15 = *(_QWORD *)(v16 + 8);
-        }
-        else
-        {
-          v15 = *(_QWORD *)(*v19 + 16LL * *(unsigned __int16 *)(v20 + 72) + 320);
-        }
-        v17 = (void (__fastcall **)(__int64 *, bool, _QWORD))sub_B77674(v15, v20);
-        (*v17)(v19, isDecide, v17);
-      }
-      else
-      {
-        v9 = *(unsigned __int16 *)(v20 + 72);
-        if ( (v23 & 1) != 0 )
-        {
-          class_0 = j_il2cpp_method_get_class_0(v20);
-          v11 = *v19;
-          if ( *(_WORD *)(*v19 + 298) )
-          {
-            v12 = 0LL;
-            v13 = (_DWORD *)(*(_QWORD *)(v11 + 176) + 8LL);
-            while ( *((_QWORD *)v13 - 1) != class_0 )
-            {
-              ++v12;
-              v13 += 4;
-              if ( v12 >= *(unsigned __int16 *)(*v19 + 298) )
-                goto LABEL_11;
-            }
-            v14 = v11 + 16LL * (int)(*v13 + v9) + 312;
-          }
-          else
-          {
-LABEL_11:
-            v14 = sub_B0F4C0(v19, class_0, v9);
-          }
-          (*(void (__fastcall **)(__int64 *, bool, _QWORD))v14)(v19, isDecide, *(_QWORD *)(v14 + 8));
-        }
-        else
-        {
-          (*(void (__fastcall **)(__int64 *, bool, _QWORD))(*v19 + 16LL * *(unsigned __int16 *)(v20 + 72) + 312))(
-            v19,
-            isDecide,
-            *(_QWORD *)(*v19 + 16LL * *(unsigned __int16 *)(v20 + 72) + 320));
-        }
-      }
-      goto LABEL_37;
-    }
-LABEL_36:
-    ((void (__fastcall *)(__int64 *, bool, __int64))v21)(v19, isDecide, v20);
-    goto LABEL_37;
-  }
+  ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, bool, _QWORD))this->fields.m_target)(
+    this->fields.original_method_info,
+    isDecide,
+    *(_QWORD *)&this->fields.extra_arg);
 }
 
 
@@ -1058,68 +1070,56 @@ void __fastcall WaveBattlePartyOrganizationAutoOrganizationConfirmDialog___c__Di
         const MethodInfo *method)
 {
   WaveBattlePartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass28_0_o *v4; // x19
+  __int64 v5; // x1
+  __int64 v6; // x1
   System_Action_o *_9__1; // x22
   WaveBattlePartyOrganizationAutoOrganizationSettingDialog_o *settingDialog; // x21
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
-  AutoOrganizationManager_c *v13; // x0
+  int32_t v9; // w2
+  int32_t v10; // w3
+  AutoOrganizationManager_c *v11; // x0
 
   v4 = this;
-  if ( (byte_43892A7 & 1) == 0 )
+  if ( (byte_48DEC8C & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&AutoOrganizationManager_TypeInfo);
-    this = (WaveBattlePartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass28_0_o *)sub_B775C4(&Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass28_0__OnClickSetting_b__1__);
-    byte_43892A7 = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, isDecide);
+    sub_1B00CCC(&AutoOrganizationManager_TypeInfo, v5);
+    this = (WaveBattlePartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass28_0_o *)sub_1B00CCC(
+                                                                                                 &Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass28_0__OnClickSetting_b__1__,
+                                                                                                 v6);
+    byte_48DEC8C = 1;
   }
   _9__1 = v4->fields.__9__1;
   settingDialog = v4->fields.settingDialog;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)v4,
       Method_WaveBattlePartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass28_0__OnClickSetting_b__1__,
       0LL);
     v4->fields.__9__1 = _9__1;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&v4->fields.__9__1,
-      (System_Int32_array **)_9__1,
-      v7,
-      v8,
-      v9,
-      v10,
-      v11,
-      v12);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&v4->fields.__9__1, (int32_t)_9__1, v9, v10);
   }
   if ( !settingDialog )
-    goto LABEL_19;
-  WaveBattlePartyOrganizationAutoOrganizationSettingDialog__Close_21885948(settingDialog, _9__1, 0LL);
+    goto LABEL_17;
+  WaveBattlePartyOrganizationAutoOrganizationSettingDialog__Close_31448264(settingDialog, _9__1, method);
   if ( isDecide )
   {
-    if ( (BYTE3(AutoOrganizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !AutoOrganizationManager_TypeInfo->_2.cctor_finished )
+    if ( !AutoOrganizationManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(AutoOrganizationManager_TypeInfo);
+    if ( !byte_48DEB5D )
+    {
+      sub_1B00CCC(&AutoOrganizationManager_TypeInfo, isDecide);
+      byte_48DEB5D = 1;
+    }
+    v11 = AutoOrganizationManager_TypeInfo;
+    if ( !AutoOrganizationManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(AutoOrganizationManager_TypeInfo);
+      v11 = AutoOrganizationManager_TypeInfo;
     }
-    if ( !byte_4388BC1 )
-    {
-      sub_B775C4(&AutoOrganizationManager_TypeInfo);
-      byte_4388BC1 = 1;
-    }
-    v13 = AutoOrganizationManager_TypeInfo;
-    if ( (BYTE3(AutoOrganizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !AutoOrganizationManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(AutoOrganizationManager_TypeInfo);
-      v13 = AutoOrganizationManager_TypeInfo;
-    }
-    this = (WaveBattlePartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass28_0_o *)v13->static_fields->waveBattleAutoOrganizationInfo;
+    this = (WaveBattlePartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass28_0_o *)v11->static_fields->waveBattleAutoOrganizationInfo;
     if ( this )
     {
       ListViewSort__Save((ListViewSort_o *)this, 0LL);
@@ -1128,12 +1128,12 @@ void __fastcall WaveBattlePartyOrganizationAutoOrganizationConfirmDialog___c__Di
       {
         WaveBattlePartyOrganizationAutoOrganizationConfirmDialog__SetDetailLabel(
           (WaveBattlePartyOrganizationAutoOrganizationConfirmDialog_o *)this,
-          0LL);
+          (const MethodInfo *)isDecide);
         return;
       }
     }
-LABEL_19:
-    sub_B7769C(this, isDecide);
+LABEL_17:
+    sub_1B00F28(this, isDecide);
   }
 }
 
@@ -1144,16 +1144,13 @@ void __fastcall WaveBattlePartyOrganizationAutoOrganizationConfirmDialog___c__Di
 {
   UnityEngine_Object_o *go; // x19
 
-  if ( (byte_43892A8 & 1) == 0 )
+  if ( (byte_48DEC8D & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_43892A8 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    byte_48DEC8D = 1;
   }
   go = (UnityEngine_Object_o *)this->fields.go;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  UnityEngine_Object__Destroy_36309980(go, 0LL);
+  UnityEngine_Object__Destroy_68077656(go, 0LL);
 }

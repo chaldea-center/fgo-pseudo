@@ -1,3 +1,4 @@
+// local variable allocation has failed, the output may be wrong!
 void __fastcall EventDropItemUpValInfo___ctor(
         EventDropItemUpValInfo_o *this,
         int32_t member,
@@ -5,33 +6,26 @@ void __fastcall EventDropItemUpValInfo___ctor(
         bool isEquip,
         const MethodInfo *method)
 {
-  DataManager_o *Instance; // x0
+  __int64 v9; // x1
+  Il2CppObject *Instance; // x0
   struct FunctionGroupEntity_o *funcGroupEntity; // x1
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
+  int32_t v12; // w2
+  int32_t v13; // w3
   struct FunctionEntity_o *funcEntity; // x1
+  struct FunctionEntity_o *v15; // x9
+  int32_t funcType; // w10
+  int32_t targetType; // w10
   struct FunctionEntity_o *v18; // x8
-  int32_t funcType; // w9
-  int32_t targetType; // w9
-  struct FunctionEntity_o *v21; // x8
-  FunctionGroupMaster_o *v22; // x22
-  struct FunctionGroupEntity_o **p_funcGroupEntity; // x21
-  System_String_array **v24; // x3
-  System_Boolean_array **v25; // x4
-  System_Int32_array **v26; // x5
-  System_Int32_array *v27; // x6
-  System_Int32_array *v28; // x7
-  System_String_array **baseFuncId; // x2
+  FunctionGroupMaster_o *v19; // x21
+  struct FunctionGroupEntity_o **p_funcGroupEntity; // x22
+  int32_t v21; // w3
+  int32_t baseFuncId; // w2
 
-  if ( (byte_438DE0D & 1) == 0 )
+  if ( (byte_48E23E0 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_FunctionGroupMaster___);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438DE0D = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_FunctionGroupMaster___, *(_QWORD *)&member);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    byte_48E23E0 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !dropInfo )
@@ -40,60 +34,52 @@ void __fastcall EventDropItemUpValInfo___ctor(
   this->fields.member = member;
   funcEntity = dropInfo->fields.funcEntity;
   this->fields.funcEntity = funcEntity;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.funcEntity,
-    (System_Int32_array **)funcEntity,
-    v11,
-    v12,
-    v13,
-    v14,
-    v15,
-    v16);
-  v18 = this->fields.funcEntity;
-  if ( !v18 )
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.funcEntity, (int32_t)funcEntity, v12, v13);
+  v15 = this->fields.funcEntity;
+  if ( !v15 )
     goto LABEL_24;
-  this->fields.baseFuncId = v18->fields.id;
-  funcType = v18->fields.funcType;
+  this->fields.baseFuncId = v15->fields.id;
+  funcType = v15->fields.funcType;
   this->fields.baseFuncType = funcType;
   if ( funcType != 111
     || (dropInfo->fields.individuality != 1 ? (targetType = 7) : (targetType = 0),
         dropInfo->fields.individuality != 1 && isEquip) )
   {
-    targetType = v18->fields.targetType;
+    targetType = v15->fields.targetType;
   }
   this->fields.targetType = targetType;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_24;
-  Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                Instance,
-                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_FunctionGroupMaster___);
-  v21 = this->fields.funcEntity;
-  if ( !v21 )
+  Instance = DataManager__GetMasterData_object_(
+               (DataManager_o *)Instance,
+               (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_FunctionGroupMaster___);
+  v18 = this->fields.funcEntity;
+  if ( !v18 )
     goto LABEL_24;
-  v22 = (FunctionGroupMaster_o *)Instance;
+  v19 = (FunctionGroupMaster_o *)Instance;
   if ( !Instance )
     goto LABEL_24;
   p_funcGroupEntity = &this->fields.funcGroupEntity;
-  Instance = (DataManager_o *)FunctionGroupMaster__TryGetEntity(
-                                (FunctionGroupMaster_o *)Instance,
-                                &this->fields.funcGroupEntity,
-                                v21->fields.id,
-                                this->fields.eventId,
-                                0LL);
+  Instance = (Il2CppObject *)FunctionGroupMaster__TryGetEntity(
+                               (FunctionGroupMaster_o *)Instance,
+                               &this->fields.funcGroupEntity,
+                               v18->fields.id,
+                               this->fields.eventId,
+                               0LL);
   if ( ((unsigned __int8)Instance & 1) != 0 )
   {
     funcGroupEntity = *p_funcGroupEntity;
     if ( *p_funcGroupEntity )
     {
-      baseFuncId = (System_String_array **)(unsigned int)funcGroupEntity->fields.baseFuncId;
-      if ( (int)baseFuncId >= 1
-        && (Instance = (DataManager_o *)FunctionGroupMaster__TryGetEntity(
-                                          v22,
-                                          &this->fields.baseFuncGroupEntity,
-                                          (int32_t)baseFuncId,
-                                          this->fields.eventId,
-                                          0LL),
+      baseFuncId = funcGroupEntity->fields.baseFuncId;
+      if ( baseFuncId >= 1
+        && (Instance = (Il2CppObject *)FunctionGroupMaster__TryGetEntity(
+                                         v19,
+                                         &this->fields.baseFuncGroupEntity,
+                                         baseFuncId,
+                                         this->fields.eventId,
+                                         0LL),
             funcGroupEntity = this->fields.funcGroupEntity,
             ((unsigned __int8)Instance & 1) != 0) )
       {
@@ -108,79 +94,59 @@ LABEL_22:
       else
       {
         this->fields.baseFuncGroupEntity = funcGroupEntity;
-        sub_B77560(
-          (BattleServantConfConponent_o *)&this->fields.baseFuncGroupEntity,
-          (System_Int32_array **)funcGroupEntity,
+        sub_1B00C70(
+          (ServantStatusBattleListViewItem_o *)&this->fields.baseFuncGroupEntity,
+          (int32_t)funcGroupEntity,
           baseFuncId,
-          v24,
-          v25,
-          v26,
-          v27,
-          v28);
-        funcGroupEntity = *p_funcGroupEntity;
-        if ( *p_funcGroupEntity )
+          v21);
+        funcGroupEntity = this->fields.funcGroupEntity;
+        if ( funcGroupEntity )
           goto LABEL_22;
       }
     }
 LABEL_24:
-    sub_B7769C(Instance, funcGroupEntity);
+    sub_1B00F28(Instance, funcGroupEntity);
   }
 LABEL_23:
   this->fields.isEquipUp = dropInfo->fields.isEquipUp;
-  this->fields.addCount = dropInfo->fields.addCount;
-  this->fields.rateCount = dropInfo->fields.rateCount;
+  *(_QWORD *)&this->fields.addCount = *(_QWORD *)&dropInfo->fields.addCount;
   this->fields.isInvalid = dropInfo->fields.isInvalid;
 }
 
 
-void __fastcall EventDropItemUpValInfo___ctor_30358492(
+// local variable allocation has failed, the output may be wrong!
+void __fastcall EventDropItemUpValInfo___ctor_37663404(
         EventDropItemUpValInfo_o *this,
         int32_t member,
         EventDropUpValInfo_o *dropInfo,
         ItemEntity_o *itemEntity,
         const MethodInfo *method)
 {
-  DataManager_o *Instance; // x0
+  __int64 v9; // x1
+  Il2CppObject *Instance; // x0
   struct FunctionGroupEntity_o *funcGroupEntity; // x1
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
+  int32_t v12; // w2
+  int32_t v13; // w3
   struct FunctionEntity_o *funcEntity; // x1
   struct FunctionEntity_o **p_funcEntity; // x22
-  System_String_array **v19; // x2
-  System_String_array **v20; // x3
-  System_Boolean_array **v21; // x4
-  System_Int32_array **v22; // x5
-  System_Int32_array *v23; // x6
-  System_Int32_array *v24; // x7
-  struct FunctionEntity_o *v25; // x8
+  int32_t v16; // w2
+  int32_t v17; // w3
+  struct FunctionEntity_o *v18; // x8
   unsigned int funcType; // w8
-  struct FunctionEntity_o *v27; // x8
-  FunctionGroupMaster_o *v28; // x22
+  FunctionGroupMaster_o *v20; // x21
   struct FunctionGroupEntity_o *Entity; // x0
-  struct FunctionGroupEntity_o **p_funcGroupEntity; // x21
-  System_String_array **v31; // x2
-  System_String_array **v32; // x3
-  System_Boolean_array **v33; // x4
-  System_Int32_array **v34; // x5
-  System_Int32_array *v35; // x6
-  System_Int32_array *v36; // x7
-  struct FunctionEntity_o *v37; // x8
-  System_String_array **v38; // x3
-  System_Boolean_array **v39; // x4
-  System_Int32_array **v40; // x5
-  System_Int32_array *v41; // x6
-  System_Int32_array *v42; // x7
-  System_String_array **baseFuncId; // x2
+  struct FunctionGroupEntity_o **p_funcGroupEntity; // x22
+  int32_t v23; // w2
+  int32_t v24; // w3
+  struct FunctionEntity_o *v25; // x8
+  int32_t v26; // w3
+  int32_t baseFuncId; // w2
 
-  if ( (byte_438DE0E & 1) == 0 )
+  if ( (byte_48E23E1 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_FunctionGroupMaster___);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438DE0E = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_FunctionGroupMaster___, *(_QWORD *)&member);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    byte_48E23E1 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !dropInfo )
@@ -188,79 +154,58 @@ void __fastcall EventDropItemUpValInfo___ctor_30358492(
   this->fields.eventId = dropInfo->fields.eventId;
   this->fields.member = member;
   funcEntity = dropInfo->fields.funcEntity;
-  p_funcEntity = &this->fields.funcEntity;
   this->fields.funcEntity = funcEntity;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.funcEntity,
-    (System_Int32_array **)funcEntity,
-    v11,
-    v12,
-    v13,
-    v14,
-    v15,
-    v16);
+  p_funcEntity = &this->fields.funcEntity;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.funcEntity, (int32_t)funcEntity, v12, v13);
+  v18 = this->fields.funcEntity;
+  if ( !v18 )
+    goto LABEL_18;
+  this->fields.baseFuncId = v18->fields.id;
+  funcType = v18->fields.funcType;
+  this->fields.itemEntity = itemEntity;
+  *(_QWORD *)&this->fields.baseFuncType = funcType;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.itemEntity, (int32_t)itemEntity, v16, v17);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  if ( !Instance )
+    goto LABEL_18;
+  Instance = DataManager__GetMasterData_object_(
+               (DataManager_o *)Instance,
+               (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_FunctionGroupMaster___);
+  if ( !*p_funcEntity )
+    goto LABEL_18;
+  v20 = (FunctionGroupMaster_o *)Instance;
+  if ( !Instance )
+    goto LABEL_18;
+  Entity = FunctionGroupMaster__GetEntity(
+             (FunctionGroupMaster_o *)Instance,
+             (*p_funcEntity)->fields.id,
+             this->fields.eventId,
+             0LL);
+  this->fields.funcGroupEntity = Entity;
+  p_funcGroupEntity = &this->fields.funcGroupEntity;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.funcGroupEntity, (int32_t)Entity, v23, v24);
   v25 = this->fields.funcEntity;
   if ( !v25 )
     goto LABEL_18;
-  this->fields.baseFuncId = v25->fields.id;
-  funcType = v25->fields.funcType;
-  this->fields.itemEntity = itemEntity;
-  *(_QWORD *)&this->fields.baseFuncType = funcType;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.itemEntity,
-    (System_Int32_array **)itemEntity,
-    v19,
-    v20,
-    v21,
-    v22,
-    v23,
-    v24);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-  if ( !Instance )
-    goto LABEL_18;
-  Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                Instance,
-                                (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_FunctionGroupMaster___);
-  v27 = *p_funcEntity;
-  if ( !*p_funcEntity )
-    goto LABEL_18;
-  v28 = (FunctionGroupMaster_o *)Instance;
-  if ( !Instance )
-    goto LABEL_18;
-  Entity = FunctionGroupMaster__GetEntity((FunctionGroupMaster_o *)Instance, v27->fields.id, this->fields.eventId, 0LL);
-  p_funcGroupEntity = &this->fields.funcGroupEntity;
-  this->fields.funcGroupEntity = Entity;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.funcGroupEntity,
-    (System_Int32_array **)Entity,
-    v31,
-    v32,
-    v33,
-    v34,
-    v35,
-    v36);
-  v37 = this->fields.funcEntity;
-  if ( !v37 )
-    goto LABEL_18;
-  Instance = (DataManager_o *)FunctionGroupMaster__TryGetEntity(
-                                v28,
-                                &this->fields.funcGroupEntity,
-                                v37->fields.id,
-                                this->fields.eventId,
-                                0LL);
+  Instance = (Il2CppObject *)FunctionGroupMaster__TryGetEntity(
+                               v20,
+                               &this->fields.funcGroupEntity,
+                               v25->fields.id,
+                               this->fields.eventId,
+                               0LL);
   if ( ((unsigned __int8)Instance & 1) != 0 )
   {
     funcGroupEntity = *p_funcGroupEntity;
     if ( *p_funcGroupEntity )
     {
-      baseFuncId = (System_String_array **)(unsigned int)funcGroupEntity->fields.baseFuncId;
-      if ( (int)baseFuncId >= 1
-        && (Instance = (DataManager_o *)FunctionGroupMaster__TryGetEntity(
-                                          v28,
-                                          &this->fields.baseFuncGroupEntity,
-                                          (int32_t)baseFuncId,
-                                          this->fields.eventId,
-                                          0LL),
+      baseFuncId = funcGroupEntity->fields.baseFuncId;
+      if ( baseFuncId >= 1
+        && (Instance = (Il2CppObject *)FunctionGroupMaster__TryGetEntity(
+                                         v20,
+                                         &this->fields.baseFuncGroupEntity,
+                                         baseFuncId,
+                                         this->fields.eventId,
+                                         0LL),
             funcGroupEntity = this->fields.funcGroupEntity,
             ((unsigned __int8)Instance & 1) != 0) )
       {
@@ -275,26 +220,21 @@ LABEL_16:
       else
       {
         this->fields.baseFuncGroupEntity = funcGroupEntity;
-        sub_B77560(
-          (BattleServantConfConponent_o *)&this->fields.baseFuncGroupEntity,
-          (System_Int32_array **)funcGroupEntity,
+        sub_1B00C70(
+          (ServantStatusBattleListViewItem_o *)&this->fields.baseFuncGroupEntity,
+          (int32_t)funcGroupEntity,
           baseFuncId,
-          v38,
-          v39,
-          v40,
-          v41,
-          v42);
-        funcGroupEntity = *p_funcGroupEntity;
-        if ( *p_funcGroupEntity )
+          v26);
+        funcGroupEntity = this->fields.funcGroupEntity;
+        if ( funcGroupEntity )
           goto LABEL_16;
       }
     }
 LABEL_18:
-    sub_B7769C(Instance, funcGroupEntity);
+    sub_1B00F28(Instance, funcGroupEntity);
   }
 LABEL_17:
   this->fields.isEquipUp = dropInfo->fields.isEquipUp;
-  this->fields.addCount = dropInfo->fields.addCount;
-  this->fields.rateCount = dropInfo->fields.rateCount;
+  *(_QWORD *)&this->fields.addCount = *(_QWORD *)&dropInfo->fields.addCount;
   this->fields.isInvalid = dropInfo->fields.isInvalid;
 }

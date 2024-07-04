@@ -1,41 +1,37 @@
 void __fastcall CombineResultFormManager___cctor(const MethodInfo *method)
 {
-  System_String_array **v1; // x2
-  System_String_array **v2; // x3
-  System_Boolean_array **v3; // x4
-  System_Int32_array **v4; // x5
-  System_Int32_array *v5; // x6
-  System_Int32_array *v6; // x7
-  BattleServantConfConponent_o *static_fields; // x0
-  System_Int32_array **v8; // x1
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v9; // x19
-  struct CombineResultFormManager_StaticFields *v10; // x0
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
+  __int64 v1; // x1
+  int32_t v2; // w2
+  int32_t v3; // w3
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  System_Collections_Generic_List_object__o *v7; // x19
+  struct CombineResultFormManager_StaticFields *static_fields; // x0
+  int32_t v9; // w2
+  int32_t v10; // w3
 
-  if ( (byte_438AF44 & 1) == 0 )
+  if ( (byte_48E5F65 & 1) == 0 )
   {
-    sub_B775C4(&CombineResultFormManager_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList___ctor__);
-    sub_B775C4(&System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__TypeInfo);
-    sub_B775C4(&StringLiteral_6770/*"Fgo_20201104"*/);
-    byte_438AF44 = 1;
+    sub_1B00CCC(&CombineResultFormManager_TypeInfo, v1);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList___ctor__, v4);
+    sub_1B00CCC(&System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__TypeInfo, v5);
+    sub_1B00CCC(&StringLiteral_6580/*"Fgo_20201104"*/, v6);
+    byte_48E5F65 = 1;
   }
-  static_fields = (BattleServantConfConponent_o *)CombineResultFormManager_TypeInfo->static_fields;
-  v8 = (System_Int32_array **)StringLiteral_6770/*"Fgo_20201104"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6770/*"Fgo_20201104"*/;
-  sub_B77560(static_fields, v8, v1, v2, v3, v4, v5, v6);
-  v9 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v9,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList___ctor__);
-  v10 = CombineResultFormManager_TypeInfo->static_fields;
-  v10->lotteryList = (struct System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__o *)v9;
-  sub_B77560((BattleServantConfConponent_o *)&v10->lotteryList, (System_Int32_array **)v9, v11, v12, v13, v14, v15, v16);
+  CombineResultFormManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6580/*"Fgo_20201104"*/;
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)CombineResultFormManager_TypeInfo->static_fields,
+    StringLiteral_6580/*"Fgo_20201104"*/,
+    v2,
+    v3);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v7,
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList___ctor__);
+  static_fields = CombineResultFormManager_TypeInfo->static_fields;
+  static_fields->lotteryList = (struct System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__o *)v7;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->lotteryList, (int32_t)v7, v9, v10);
 }
 
 
@@ -48,61 +44,63 @@ void __fastcall CombineResultFormManager___ctor(CombineResultFormManager_o *this
 void __fastcall CombineResultFormManager__ClearSaveDataList(const MethodInfo *method)
 {
   __int64 v1; // x1
-  CombineResultFormManager_c *v2; // x0
-  System_Collections_Generic_List_XWeaponTrail_Element__o *lotteryList; // x8
+  __int64 v2; // x1
+  __int64 v3; // x1
+  CombineResultFormManager_c *v4; // x0
+  struct System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__o *lotteryList; // x8
+  int32_t size; // w2
+  int v7; // w9
 
-  if ( (byte_438AF3E & 1) == 0 )
+  if ( (byte_48E5F5F & 1) == 0 )
   {
-    sub_B775C4(&CombineResultFormManager_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__Clear__);
-    sub_B775C4(&Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__get_Count__);
-    byte_438AF3E = 1;
+    sub_1B00CCC(&CombineResultFormManager_TypeInfo, v1);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__Clear__, v2);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__get_Count__, v3);
+    byte_48E5F5F = 1;
   }
-  v2 = CombineResultFormManager_TypeInfo;
-  if ( (BYTE3(CombineResultFormManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CombineResultFormManager_TypeInfo->_2.cctor_finished )
+  v4 = CombineResultFormManager_TypeInfo;
+  if ( !CombineResultFormManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CombineResultFormManager_TypeInfo);
-    v2 = CombineResultFormManager_TypeInfo;
+    v4 = CombineResultFormManager_TypeInfo;
   }
-  lotteryList = (System_Collections_Generic_List_XWeaponTrail_Element__o *)v2->static_fields->lotteryList;
+  lotteryList = v4->static_fields->lotteryList;
   if ( !lotteryList )
-    goto LABEL_13;
-  if ( lotteryList->fields._size >= 1 )
+    goto LABEL_12;
+  if ( lotteryList->fields._size < 1 )
+    return;
+  if ( !v4->_2.cctor_finished )
   {
-    if ( (BYTE3(v2->vtable._0_Equals.methodPtr) & 4) == 0
-      || v2->_2.cctor_finished
-      || (j_il2cpp_runtime_class_init_0(v2),
-          (lotteryList = (System_Collections_Generic_List_XWeaponTrail_Element__o *)CombineResultFormManager_TypeInfo->static_fields->lotteryList) != 0LL) )
-    {
-      System_Collections_Generic_List_XWeaponTrail_Element___Clear(
-        lotteryList,
-        (const MethodInfo_30536A0 *)Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__Clear__);
-      return;
-    }
-LABEL_13:
-    sub_B7769C(v2, v1);
+    j_il2cpp_runtime_class_init_0(v4);
+    lotteryList = CombineResultFormManager_TypeInfo->static_fields->lotteryList;
+    if ( !lotteryList )
+LABEL_12:
+      sub_1B00F28(v4, v1);
   }
+  size = lotteryList->fields._size;
+  v7 = lotteryList->fields._version + 1;
+  lotteryList->fields._size = 0;
+  lotteryList->fields._version = v7;
+  if ( size >= 1 )
+    System_Array__Clear((System_Array_o *)lotteryList->fields._items, 0, size, 0LL);
 }
 
 
 void __fastcall CombineResultFormManager__DeleteSaveData(const MethodInfo *method)
 {
-  CombineResultFormManager_c *v1; // x0
+  __int64 v1; // x1
+  CombineResultFormManager_c *v2; // x0
   System_String_o *SaveFileName; // x19
 
-  if ( (byte_438AF3D & 1) == 0 )
+  if ( (byte_48E5F5E & 1) == 0 )
   {
-    sub_B775C4(&CombineResultFormManager_TypeInfo);
-    byte_438AF3D = 1;
+    sub_1B00CCC(&CombineResultFormManager_TypeInfo, v1);
+    byte_48E5F5E = 1;
   }
-  v1 = CombineResultFormManager_TypeInfo;
-  if ( (BYTE3(CombineResultFormManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CombineResultFormManager_TypeInfo->_2.cctor_finished )
-  {
+  v2 = CombineResultFormManager_TypeInfo;
+  if ( !CombineResultFormManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CombineResultFormManager_TypeInfo);
-  }
-  SaveFileName = CombineResultFormManager__GetSaveFileName((const MethodInfo *)v1);
+  SaveFileName = CombineResultFormManager__GetSaveFileName((const MethodInfo *)v2);
   if ( System_IO_File__Exists(SaveFileName, 0LL) )
     System_IO_File__Delete(SaveFileName, 0LL);
 }
@@ -110,475 +108,521 @@ void __fastcall CombineResultFormManager__DeleteSaveData(const MethodInfo *metho
 
 System_String_o *__fastcall CombineResultFormManager__GetSaveFileName(const MethodInfo *method)
 {
+  __int64 v1; // x1
+  __int64 v2; // x1
+  __int64 v3; // x1
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_438AF3C & 1) == 0 )
+  if ( (byte_48E5F5D & 1) == 0 )
   {
-    sub_B775C4(&AndroidUtil_TypeInfo);
-    sub_B775C4(&DatFileName_TypeInfo);
-    sub_B775C4(&StringLiteral_892/*"/"*/);
-    byte_438AF3C = 1;
+    sub_1B00CCC(&AndroidUtil_TypeInfo, v1);
+    sub_1B00CCC(&DatFileName_TypeInfo, v2);
+    sub_1B00CCC(&StringLiteral_1120/*"/"*/, v3);
+    byte_48E5F5D = 1;
   }
-  if ( (BYTE3(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AndroidUtil_TypeInfo->_2.cctor_finished )
+  if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
   DatFileSavePath = AndroidUtil__GetDatFileSavePath(0LL);
-  if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
+  if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(4, 0LL);
-  return System_String__Concat_44904220(DatFileSavePath, (System_String_o *)StringLiteral_892/*"/"*/, FileName, 0LL);
+  return System_String__Concat_60337008(DatFileSavePath, (System_String_o *)StringLiteral_1120/*"/"*/, FileName, 0LL);
 }
 
 
 bool __fastcall CombineResultFormManager__ReadData(const MethodInfo *method)
 {
-  ManagerConfig_c *v1; // x0
-  bool v2; // w20
-  CombineResultFormManager_c *v3; // x0
-  System_String_o *SaveFileName; // x19
-  CombineResultFormManager_c *v5; // x0
-  System_IO_Stream_o *v6; // x20
-  System_IO_BinaryReader_o *v7; // x19
-  __int64 v8; // x0
+  __int64 v1; // x1
+  __int64 v2; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
   __int64 v9; // x1
-  System_String_o *v10; // x20
-  CombineResultFormManager_c *v11; // x0
-  int v12; // w20
+  ManagerConfig_c *v10; // x0
+  bool v11; // w21
+  CombineResultFormManager_c *v12; // x0
+  System_String_o *SaveFileName; // x19
+  CombineResultFormManager_c *v14; // x0
+  System_IO_Stream_o *v15; // x20
+  System_IO_BinaryReader_o *v16; // x19
+  __int64 v17; // x0
+  __int64 v18; // x1
+  System_String_o *v19; // x20
+  CombineResultFormManager_c *v20; // x0
+  int v21; // w20
   int i; // w25
-  __int64 v14; // x21
-  __int64 v15; // x0
-  __int64 v16; // x1
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v17; // x23
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o **v18; // x22
-  System_String_array **v19; // x2
-  System_String_array **v20; // x3
-  System_Boolean_array **v21; // x4
-  System_Int32_array **v22; // x5
-  System_Int32_array *v23; // x6
-  System_Int32_array *v24; // x7
+  __int64 v23; // x21
+  __int64 v24; // x0
   __int64 v25; // x1
-  int v26; // w23
-  int j; // w27
-  EventMissionProgressRequest_Argument_ProgressData_o *v28; // x1
-  CombineResultFormManager_c *v29; // x0
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *lotteryList; // x0
+  System_Collections_Generic_List_object__o *v26; // x23
+  System_Collections_Generic_List_object__o **v27; // x22
+  int32_t v28; // w2
+  int32_t v29; // w3
+  __int64 v30; // x1
+  int32_t v31; // w2
+  int32_t v32; // w3
+  int v33; // w23
+  Il2CppObject *v34; // x1
+  int32_t v35; // w2
+  int32_t v36; // w3
+  System_Collections_Generic_List_object__o *v37; // x0
+  struct System_Object_array *items; // x8
+  _QWORD *v39; // x9
+  __int64 size; // x10
+  Il2CppClass **v41; // x8
+  CombineResultFormManager_c *v42; // x0
+  System_Collections_Generic_List_object__o *lotteryList; // x0
+  struct System_Object_array *v44; // x8
+  _QWORD *v45; // x9
+  __int64 v46; // x10
+  Il2CppClass **v47; // x8
   System_IO_BinaryReader_c *klass; // x8
-  unsigned __int64 v32; // x10
-  int32_t *p_offset; // x11
-  __int64 v34; // x0
-  CombineResultFormManager_c *v35; // x0
+  __int64 v49; // x9
+  int32_t *p_offset; // x10
+  __int64 v51; // x0
+  CombineResultFormManager_c *v52; // x0
 
-  if ( (byte_438AF40 & 1) == 0 )
+  if ( (byte_48E5F61 & 1) == 0 )
   {
-    sub_B775C4(&System_IO_BinaryReader_TypeInfo);
-    sub_B775C4(&CombineResultFormManager_TypeInfo);
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_string___ctor___69407008);
-    sub_B775C4(&System_Collections_Generic_List_string__TypeInfo);
-    sub_B775C4(&ManagerConfig_TypeInfo);
-    sub_B775C4(&CombineResultFormManager_svtUnplayedVoiceList_TypeInfo);
-    byte_438AF40 = 1;
+    sub_1B00CCC(&System_IO_BinaryReader_TypeInfo, v1);
+    sub_1B00CCC(&CombineResultFormManager_TypeInfo, v2);
+    sub_1B00CCC(&System_IDisposable_TypeInfo, v3);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__Add__, v4);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__Add__, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string___ctor__, v6);
+    sub_1B00CCC(&System_Collections_Generic_List_string__TypeInfo, v7);
+    sub_1B00CCC(&ManagerConfig_TypeInfo, v8);
+    sub_1B00CCC(&CombineResultFormManager_svtUnplayedVoiceList_TypeInfo, v9);
+    byte_48E5F61 = 1;
   }
-  v1 = ManagerConfig_TypeInfo;
-  if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ManagerConfig_TypeInfo->_2.cctor_finished )
+  v10 = ManagerConfig_TypeInfo;
+  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v1 = ManagerConfig_TypeInfo;
+    v10 = ManagerConfig_TypeInfo;
   }
-  if ( v1->static_fields->UseMock )
+  if ( v10->static_fields->UseMock )
     return 1;
-  v3 = CombineResultFormManager_TypeInfo;
-  if ( (BYTE3(CombineResultFormManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CombineResultFormManager_TypeInfo->_2.cctor_finished )
-  {
+  v12 = CombineResultFormManager_TypeInfo;
+  if ( !CombineResultFormManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CombineResultFormManager_TypeInfo);
-  }
-  SaveFileName = CombineResultFormManager__GetSaveFileName((const MethodInfo *)v3);
+  SaveFileName = CombineResultFormManager__GetSaveFileName((const MethodInfo *)v12);
   if ( System_IO_File__Exists(SaveFileName, 0LL) )
   {
-    v5 = CombineResultFormManager_TypeInfo;
-    if ( (BYTE3(CombineResultFormManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !CombineResultFormManager_TypeInfo->_2.cctor_finished )
+    v14 = CombineResultFormManager_TypeInfo;
+    if ( !CombineResultFormManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(CombineResultFormManager_TypeInfo);
+    CombineResultFormManager__ClearSaveDataList((const MethodInfo *)v14);
+    v15 = (System_IO_Stream_o *)System_IO_File__OpenRead(SaveFileName, 0LL);
+    v16 = (System_IO_BinaryReader_o *)sub_1B00F18(System_IO_BinaryReader_TypeInfo);
+    System_IO_BinaryReader___ctor(v16, v15, 0LL);
+    if ( !v16 )
+      sub_1B00F28(v17, v18);
+    v19 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v16->klass->vtable._22_ReadString.method)(
+                               v16,
+                               v16->klass->vtable._23_ReadChars.methodPtr);
+    v20 = CombineResultFormManager_TypeInfo;
+    if ( !CombineResultFormManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(CombineResultFormManager_TypeInfo);
+      v20 = CombineResultFormManager_TypeInfo;
     }
-    CombineResultFormManager__ClearSaveDataList((const MethodInfo *)v5);
-    v6 = (System_IO_Stream_o *)System_IO_File__OpenRead(SaveFileName, 0LL);
-    v7 = (System_IO_BinaryReader_o *)sub_B77694(System_IO_BinaryReader_TypeInfo);
-    System_IO_BinaryReader___ctor(v7, v6, 0LL);
-    if ( !v7 )
-      sub_B7769C(v8, v9);
-    v10 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v7->klass->vtable._22_ReadString.method)(
-                               v7,
-                               v7->klass->vtable._23_ReadChars.methodPtr);
-    v11 = CombineResultFormManager_TypeInfo;
-    if ( (BYTE3(CombineResultFormManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !CombineResultFormManager_TypeInfo->_2.cctor_finished )
+    if ( System_String__op_Inequality(v20->static_fields->SAVE_DATA_VERSION, v19, 0LL) )
     {
-      j_il2cpp_runtime_class_init_0(CombineResultFormManager_TypeInfo);
-      v11 = CombineResultFormManager_TypeInfo;
-    }
-    if ( System_String__op_Inequality(v11->static_fields->SAVE_DATA_VERSION, v10, 0LL) )
-    {
-      v2 = 0;
+      v11 = 0;
     }
     else
     {
-      v12 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v7->klass->vtable._15_ReadInt32.method)(
-              v7,
-              v7->klass->vtable._16_ReadUInt32.methodPtr);
-      if ( v12 >= 1 )
+      v21 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v16->klass->vtable._15_ReadInt32.method)(
+              v16,
+              v16->klass->vtable._16_ReadUInt32.methodPtr);
+      if ( v21 >= 1 )
       {
-        for ( i = 0; i < v12; ++i )
+        for ( i = 0; i != v21; ++i )
         {
-          v14 = sub_B77694(CombineResultFormManager_svtUnplayedVoiceList_TypeInfo);
-          CombineResultFormManager_svtUnplayedVoiceList___ctor(
-            (CombineResultFormManager_svtUnplayedVoiceList_o *)v14,
-            0LL);
-          v15 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v7->klass->vtable._15_ReadInt32.method)(
-                  v7,
-                  v7->klass->vtable._16_ReadUInt32.methodPtr);
-          if ( !v14 )
-            sub_B7769C(v15, v16);
-          *(_DWORD *)(v14 + 16) = v15;
-          v17 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_string__TypeInfo);
-          System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-            v17,
-            (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_string___ctor___69407008);
-          *(_QWORD *)(v14 + 24) = v17;
-          v18 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o **)(v14 + 24);
-          sub_B77560(
-            (BattleServantConfConponent_o *)(v14 + 24),
-            (System_Int32_array **)v17,
-            v19,
-            v20,
-            v21,
-            v22,
-            v23,
-            v24);
-          v26 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v7->klass->vtable._15_ReadInt32.method)(
-                  v7,
-                  v7->klass->vtable._16_ReadUInt32.methodPtr);
-          if ( v26 >= 1 )
+          v23 = sub_1B00F18(CombineResultFormManager_svtUnplayedVoiceList_TypeInfo);
+          System_Object___ctor((Il2CppObject *)v23, 0LL);
+          v24 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v16->klass->vtable._15_ReadInt32.method)(
+                  v16,
+                  v16->klass->vtable._16_ReadUInt32.methodPtr);
+          if ( !v23 )
+            sub_1B00F28(v24, v25);
+          *(_DWORD *)(v23 + 16) = v24;
+          v26 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_string__TypeInfo);
+          System_Collections_Generic_List_object____ctor(
+            v26,
+            (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_string___ctor__);
+          *(_QWORD *)(v23 + 24) = v26;
+          v27 = (System_Collections_Generic_List_object__o **)(v23 + 24);
+          sub_1B00C70((ServantStatusBattleListViewItem_o *)(v23 + 24), (int32_t)v26, v28, v29);
+          v33 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v16->klass->vtable._15_ReadInt32.method)(
+                  v16,
+                  v16->klass->vtable._16_ReadUInt32.methodPtr);
+          if ( v33 >= 1 )
           {
-            for ( j = 0; j < v26; ++j )
+            do
             {
-              v28 = (EventMissionProgressRequest_Argument_ProgressData_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v7->klass->vtable._22_ReadString.method)(
-                                                                             v7,
-                                                                             v7->klass->vtable._23_ReadChars.methodPtr);
-              if ( !*v18 )
-                sub_B7769C(0LL, v28);
-              System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-                *v18,
-                v28,
-                (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_string__Add__);
+              v34 = (Il2CppObject *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v16->klass->vtable._22_ReadString.method)(
+                                      v16,
+                                      v16->klass->vtable._23_ReadChars.methodPtr);
+              v37 = *v27;
+              if ( !*v27 )
+                sub_1B00F28(0LL, v34);
+              items = v37->fields._items;
+              v39 = Method_System_Collections_Generic_List_string__Add__;
+              ++v37->fields._version;
+              if ( !items )
+                sub_1B00F28(v37, v34);
+              size = v37->fields._size;
+              if ( (unsigned int)size >= items->max_length )
+              {
+                System_Collections_Generic_List_object___AddWithResize(
+                  v37,
+                  v34,
+                  *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v39[4] + 192LL) + 112LL));
+              }
+              else
+              {
+                v41 = &items->obj.klass + size;
+                v37->fields._size = size + 1;
+                v41[4] = (Il2CppClass *)v34;
+                sub_1B00C70((ServantStatusBattleListViewItem_o *)(v41 + 4), (int32_t)v34, v35, v36);
+              }
+              --v33;
             }
+            while ( v33 );
           }
-          v29 = CombineResultFormManager_TypeInfo;
-          if ( (BYTE3(CombineResultFormManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-            && !CombineResultFormManager_TypeInfo->_2.cctor_finished )
+          v42 = CombineResultFormManager_TypeInfo;
+          if ( !CombineResultFormManager_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(CombineResultFormManager_TypeInfo);
-            v29 = CombineResultFormManager_TypeInfo;
+            v42 = CombineResultFormManager_TypeInfo;
           }
-          lotteryList = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)v29->static_fields->lotteryList;
+          lotteryList = (System_Collections_Generic_List_object__o *)v42->static_fields->lotteryList;
           if ( !lotteryList )
-            sub_B7769C(0LL, v25);
-          System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-            lotteryList,
-            (EventMissionProgressRequest_Argument_ProgressData_o *)v14,
-            (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__Add__);
+            sub_1B00F28(0LL, v30);
+          v44 = lotteryList->fields._items;
+          v45 = Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__Add__;
+          ++lotteryList->fields._version;
+          if ( !v44 )
+            sub_1B00F28(lotteryList, v30);
+          v46 = lotteryList->fields._size;
+          if ( (unsigned int)v46 >= v44->max_length )
+          {
+            System_Collections_Generic_List_object___AddWithResize(
+              lotteryList,
+              (Il2CppObject *)v23,
+              *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
+          }
+          else
+          {
+            v47 = &v44->obj.klass + v46;
+            lotteryList->fields._size = v46 + 1;
+            v47[4] = (Il2CppClass *)v23;
+            sub_1B00C70((ServantStatusBattleListViewItem_o *)(v47 + 4), v23, v31, v32);
+          }
         }
       }
-      v2 = 1;
+      v11 = 1;
     }
-    klass = v7->klass;
-    if ( *(_WORD *)&v7->klass->_2.bitflags1 )
+    klass = v16->klass;
+    v49 = *(unsigned __int16 *)(&v16->klass->_2.bitflags2 + 3);
+    if ( *(_WORD *)(&v16->klass->_2.bitflags2 + 3) )
     {
-      v32 = 0LL;
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
       {
-        ++v32;
+        --v49;
         p_offset += 4;
-        if ( v32 >= *(unsigned __int16 *)&v7->klass->_2.bitflags1 )
-          goto LABEL_38;
+        if ( !v49 )
+          goto LABEL_40;
       }
-      v34 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+      v51 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
     }
     else
     {
-LABEL_38:
-      v34 = sub_B0F4C0(v7, System_IDisposable_TypeInfo, 0LL);
+LABEL_40:
+      v51 = sub_1B52CAC(v16, System_IDisposable_TypeInfo, 0LL);
     }
-    (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v34)(v7, *(_QWORD *)(v34 + 8));
+    (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v51)(v16, *(_QWORD *)(v51 + 8));
   }
   else
   {
-    v35 = CombineResultFormManager_TypeInfo;
-    if ( (BYTE3(CombineResultFormManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !CombineResultFormManager_TypeInfo->_2.cctor_finished )
-    {
+    v52 = CombineResultFormManager_TypeInfo;
+    if ( !CombineResultFormManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CombineResultFormManager_TypeInfo);
-    }
-    CombineResultFormManager__ClearSaveDataList((const MethodInfo *)v35);
+    CombineResultFormManager__ClearSaveDataList((const MethodInfo *)v52);
     return 0;
   }
-  return v2;
+  return v11;
 }
 
 
 void __fastcall CombineResultFormManager__ResetVoiceList(UserServantEntity_o *baseUsrSvtData, const MethodInfo *method)
 {
-  CombineResultFormManager_c *voiceIdList; // x0
-  struct System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__o *lotteryList; // x8
-  int32_t i; // w23
-  struct System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__o *v6; // x20
-  CombineResultFormManager_svtUnplayedVoiceList_o *v7; // x8
-  int32_t svtId; // w25
-  __int64 v9; // x20
-  __int64 v10; // x21
-  struct System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__o *v11; // x19
-  CombineResultFormManager_svtUnplayedVoiceList_o *v12; // x8
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v13; // 0:x0.16
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  MethodInfo *Item; // x0
+  __int64 v8; // x8
+  int32_t i; // w20
+  System_Collections_Generic_List_object__o *lotteryList; // x8
+  int invoker_method; // w26
+  __int64 v12; // x21
+  __int64 v13; // x22
+  CombineResultFormManager_c *v14; // x0
+  const char *name; // x8
+  int32_t v16; // w2
+  int v17; // w9
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v18; // 0:x0.16
 
-  if ( (byte_438AF3F & 1) == 0 )
+  if ( (byte_48E5F60 & 1) == 0 )
   {
-    sub_B775C4(&CombineResultFormManager_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__Clear__);
-    sub_B775C4(&Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__get_Count__);
-    sub_B775C4(&Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__get_Item__);
-    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_438AF3F = 1;
+    sub_1B00CCC(&CombineResultFormManager_TypeInfo, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__Clear__, v3);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__get_Count__, v4);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__get_Item__, v5);
+    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v6);
+    byte_48E5F60 = 1;
   }
-  voiceIdList = CombineResultFormManager_TypeInfo;
-  if ( (BYTE3(CombineResultFormManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CombineResultFormManager_TypeInfo->_2.cctor_finished )
+  Item = (MethodInfo *)CombineResultFormManager_TypeInfo;
+  if ( !CombineResultFormManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CombineResultFormManager_TypeInfo);
-    voiceIdList = CombineResultFormManager_TypeInfo;
+    Item = (MethodInfo *)CombineResultFormManager_TypeInfo;
   }
-  lotteryList = voiceIdList->static_fields->lotteryList;
-  if ( !lotteryList )
-    goto LABEL_40;
-  if ( !lotteryList->fields._size )
+  v8 = *((_QWORD *)Item[2].virtualMethodPointer + 1);
+  if ( !v8 )
+    goto LABEL_31;
+  if ( !*(_DWORD *)(v8 + 24) )
   {
-    if ( (BYTE3(voiceIdList->vtable._0_Equals.methodPtr) & 4) != 0 && !voiceIdList->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(voiceIdList);
-    CombineResultFormManager__ReadData((const MethodInfo *)voiceIdList);
+    if ( !LODWORD(Item[2].parameters) )
+      j_il2cpp_runtime_class_init_0(Item);
+    CombineResultFormManager__ReadData(Item);
   }
   for ( i = 0; ; ++i )
   {
-    voiceIdList = CombineResultFormManager_TypeInfo;
-    if ( (BYTE3(CombineResultFormManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !CombineResultFormManager_TypeInfo->_2.cctor_finished )
+    Item = (MethodInfo *)CombineResultFormManager_TypeInfo;
+    if ( !CombineResultFormManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(CombineResultFormManager_TypeInfo);
-      voiceIdList = CombineResultFormManager_TypeInfo;
+      Item = (MethodInfo *)CombineResultFormManager_TypeInfo;
     }
-    v6 = voiceIdList->static_fields->lotteryList;
-    if ( !v6 )
-      goto LABEL_40;
-    if ( i >= v6->fields._size )
+    lotteryList = (System_Collections_Generic_List_object__o *)*((_QWORD *)Item[2].virtualMethodPointer + 1);
+    if ( !lotteryList )
+      goto LABEL_31;
+    if ( i >= lotteryList->fields._size )
       return;
-    if ( (BYTE3(voiceIdList->vtable._0_Equals.methodPtr) & 4) != 0 && !voiceIdList->_2.cctor_finished )
+    if ( !LODWORD(Item[2].parameters) )
     {
-      j_il2cpp_runtime_class_init_0(voiceIdList);
-      v6 = CombineResultFormManager_TypeInfo->static_fields->lotteryList;
-      if ( !v6 )
-        goto LABEL_40;
+      j_il2cpp_runtime_class_init_0(Item);
+      lotteryList = (System_Collections_Generic_List_object__o *)CombineResultFormManager_TypeInfo->static_fields->lotteryList;
+      if ( !lotteryList )
+        goto LABEL_31;
     }
-    if ( v6->fields._size <= (unsigned int)i )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-    v7 = v6->fields._items->m_Items[i];
-    if ( !v7 || !baseUsrSvtData )
-      goto LABEL_40;
-    svtId = v7->fields.svtId;
-    v10 = *(_QWORD *)&baseUsrSvtData->fields.svtId.fields.currentCryptoKey;
-    v9 = *(_QWORD *)&baseUsrSvtData->fields.svtId.fields.fakeValue;
-    if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-    {
+    Item = (MethodInfo *)System_Collections_Generic_List_object___get_Item(
+                           lotteryList,
+                           i,
+                           (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__get_Item__);
+    if ( !Item || !baseUsrSvtData )
+      goto LABEL_31;
+    invoker_method = (int)Item->invoker_method;
+    v13 = *(_QWORD *)&baseUsrSvtData->fields.svtId.fields.currentCryptoKey;
+    v12 = *(_QWORD *)&baseUsrSvtData->fields.svtId.fields.fakeValue;
+    if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    }
-    *(_QWORD *)&v13.fields.currentCryptoKey = v10;
-    *(_QWORD *)&v13.fields.fakeValue = v9;
-    if ( svtId == CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v13, 0LL) )
+    *(_QWORD *)&v18.fields.currentCryptoKey = v13;
+    *(_QWORD *)&v18.fields.fakeValue = v12;
+    if ( invoker_method == CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(v18, 0LL) )
       break;
   }
-  voiceIdList = CombineResultFormManager_TypeInfo;
-  if ( (BYTE3(CombineResultFormManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CombineResultFormManager_TypeInfo->_2.cctor_finished )
+  v14 = CombineResultFormManager_TypeInfo;
+  if ( !CombineResultFormManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CombineResultFormManager_TypeInfo);
-    voiceIdList = CombineResultFormManager_TypeInfo;
+    v14 = CombineResultFormManager_TypeInfo;
   }
-  v11 = voiceIdList->static_fields->lotteryList;
-  if ( !v11 )
-    goto LABEL_40;
-  if ( v11->fields._size <= (unsigned int)i )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-  v12 = v11->fields._items->m_Items[i];
-  if ( !v12 || (voiceIdList = (CombineResultFormManager_c *)v12->fields.voiceIdList) == 0LL )
-LABEL_40:
-    sub_B7769C(voiceIdList, method);
-  System_Collections_Generic_List_XWeaponTrail_Element___Clear(
-    (System_Collections_Generic_List_XWeaponTrail_Element__o *)voiceIdList,
-    (const MethodInfo_30536A0 *)Method_System_Collections_Generic_List_string__Clear__);
+  Item = (MethodInfo *)v14->static_fields->lotteryList;
+  if ( !Item
+    || (Item = (MethodInfo *)System_Collections_Generic_List_object___get_Item(
+                               (System_Collections_Generic_List_object__o *)Item,
+                               i,
+                               (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__get_Item__)) == 0LL
+    || (name = Item->name) == 0LL )
+  {
+LABEL_31:
+    sub_1B00F28(Item, method);
+  }
+  v16 = *((_DWORD *)name + 6);
+  v17 = *((_DWORD *)name + 7) + 1;
+  *((_DWORD *)name + 6) = 0;
+  *((_DWORD *)name + 7) = v17;
+  if ( v16 >= 1 )
+    System_Array__Clear(*((System_Array_o **)name + 2), 0, v16, 0LL);
 }
 
 
 bool __fastcall CombineResultFormManager__WriteData(const MethodInfo *method)
 {
-  ManagerConfig_c *v1; // x0
-  CombineResultFormManager_c *v3; // x0
-  System_String_o *SaveFileName; // x0
-  System_IO_Stream_o *v5; // x20
-  System_IO_BinaryWriter_o *v6; // x19
+  __int64 v1; // x1
+  __int64 v2; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
-  CombineResultFormManager_c *v8; // x0
+  __int64 v8; // x1
+  ManagerConfig_c *v9; // x0
+  CombineResultFormManager_c *v11; // x0
+  System_String_o *SaveFileName; // x0
+  System_IO_Stream_o *v13; // x20
+  System_IO_BinaryWriter_o *v14; // x19
+  __int64 v15; // x1
+  CombineResultFormManager_c *v16; // x0
   struct CombineResultFormManager_StaticFields *static_fields; // x8
   struct System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__o *lotteryList; // x9
   int size; // w20
-  __int64 v12; // x1
-  int i; // w23
-  CombineResultFormManager_c *v14; // x0
-  struct System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__o *v15; // x21
-  CombineResultFormManager_svtUnplayedVoiceList_o *v16; // x24
-  struct System_Collections_Generic_List_string__o *voiceIdList; // x8
-  signed __int64 v18; // x21
-  __int64 v19; // x0
-  unsigned __int64 j; // x25
-  struct System_Collections_Generic_List_string__o *v21; // x26
+  __int64 v20; // x1
+  int32_t i; // w21
+  CombineResultFormManager_c *v22; // x0
+  System_Collections_Generic_List_object__o *v23; // x0
+  Il2CppObject *Item; // x0
+  __int64 v25; // x1
+  Il2CppObject *v26; // x22
+  _DWORD *monitor; // x8
+  int v28; // w23
+  int32_t j; // w24
+  System_Collections_Generic_List_object__o *v30; // x0
+  Il2CppObject *v31; // x0
   System_IO_BinaryWriter_c *klass; // x8
-  unsigned __int64 v23; // x10
-  int32_t *p_offset; // x11
-  __int64 v25; // x0
+  __int64 v33; // x9
+  int32_t *p_offset; // x10
+  __int64 v35; // x0
 
-  if ( (byte_438AF41 & 1) == 0 )
+  if ( (byte_48E5F62 & 1) == 0 )
   {
-    sub_B775C4(&System_IO_BinaryWriter_TypeInfo);
-    sub_B775C4(&CombineResultFormManager_TypeInfo);
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_B775C4(&Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__get_Count__);
-    sub_B775C4(&Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__get_Item__);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_B775C4(&ManagerConfig_TypeInfo);
-    byte_438AF41 = 1;
+    sub_1B00CCC(&System_IO_BinaryWriter_TypeInfo, v1);
+    sub_1B00CCC(&CombineResultFormManager_TypeInfo, v2);
+    sub_1B00CCC(&System_IDisposable_TypeInfo, v3);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__get_Count__, v4);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__get_Count__, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__get_Item__, v6);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__get_Item__, v7);
+    sub_1B00CCC(&ManagerConfig_TypeInfo, v8);
+    byte_48E5F62 = 1;
   }
-  v1 = ManagerConfig_TypeInfo;
-  if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ManagerConfig_TypeInfo->_2.cctor_finished )
+  v9 = ManagerConfig_TypeInfo;
+  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v1 = ManagerConfig_TypeInfo;
+    v9 = ManagerConfig_TypeInfo;
   }
-  if ( v1->static_fields->UseMock )
+  if ( v9->static_fields->UseMock )
     return 0;
-  v3 = CombineResultFormManager_TypeInfo;
-  if ( (BYTE3(CombineResultFormManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CombineResultFormManager_TypeInfo->_2.cctor_finished )
+  v11 = CombineResultFormManager_TypeInfo;
+  if ( !CombineResultFormManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(CombineResultFormManager_TypeInfo);
+  SaveFileName = CombineResultFormManager__GetSaveFileName((const MethodInfo *)v11);
+  v13 = (System_IO_Stream_o *)System_IO_File__OpenWrite(SaveFileName, 0LL);
+  v14 = (System_IO_BinaryWriter_o *)sub_1B00F18(System_IO_BinaryWriter_TypeInfo);
+  System_IO_BinaryWriter___ctor_60563772(v14, v13, 0LL);
+  v16 = CombineResultFormManager_TypeInfo;
+  if ( !CombineResultFormManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CombineResultFormManager_TypeInfo);
+    v16 = CombineResultFormManager_TypeInfo;
   }
-  SaveFileName = CombineResultFormManager__GetSaveFileName((const MethodInfo *)v3);
-  v5 = (System_IO_Stream_o *)System_IO_File__OpenWrite(SaveFileName, 0LL);
-  v6 = (System_IO_BinaryWriter_o *)sub_B77694(System_IO_BinaryWriter_TypeInfo);
-  System_IO_BinaryWriter___ctor_40221404(v6, v5, 0LL);
-  v8 = CombineResultFormManager_TypeInfo;
-  if ( (BYTE3(CombineResultFormManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CombineResultFormManager_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(CombineResultFormManager_TypeInfo);
-    v8 = CombineResultFormManager_TypeInfo;
-  }
-  static_fields = v8->static_fields;
+  static_fields = v16->static_fields;
   lotteryList = static_fields->lotteryList;
   if ( !lotteryList )
-    sub_B7769C(v8, v7);
-  if ( !v6 )
-    sub_B7769C(v8, v7);
+    sub_1B00F28(v16, v15);
+  if ( !v14 )
+    sub_1B00F28(v16, v15);
   size = lotteryList->fields._size;
-  ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, void *))v6->klass->vtable._22_Write.method)(
-    v6,
+  ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, void *))v14->klass->vtable._22_Write.method)(
+    v14,
     static_fields->SAVE_DATA_VERSION,
-    v6->klass[1]._1.image);
-  ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v6->klass->vtable._17_Write.method)(
-    v6,
+    v14->klass[1]._1.image);
+  ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v14->klass->vtable._17_Write.method)(
+    v14,
     (unsigned int)size,
-    v6->klass->vtable._18_Write.methodPtr);
+    v14->klass->vtable._18_Write.methodPtr);
   if ( size >= 1 )
   {
-    for ( i = 0; i < size; ++i )
+    for ( i = 0; i != size; ++i )
     {
-      v14 = CombineResultFormManager_TypeInfo;
-      if ( (BYTE3(CombineResultFormManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !CombineResultFormManager_TypeInfo->_2.cctor_finished )
+      v22 = CombineResultFormManager_TypeInfo;
+      if ( !CombineResultFormManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(CombineResultFormManager_TypeInfo);
-        v14 = CombineResultFormManager_TypeInfo;
+        v22 = CombineResultFormManager_TypeInfo;
       }
-      v15 = v14->static_fields->lotteryList;
-      if ( !v15 )
-        sub_B7769C(v14, v12);
-      if ( v15->fields._size <= (unsigned int)i )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-      v16 = v15->fields._items->m_Items[i];
-      if ( !v16 )
-        sub_B7769C(v14, v12);
-      voiceIdList = v16->fields.voiceIdList;
-      if ( !voiceIdList )
-        sub_B7769C(v14, v12);
-      v18 = voiceIdList->fields._size;
-      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v6->klass->vtable._17_Write.method)(
-        v6,
-        (unsigned int)v16->fields.svtId,
-        v6->klass->vtable._18_Write.methodPtr);
-      v19 = ((__int64 (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v6->klass->vtable._17_Write.method)(
-              v6,
-              (unsigned int)v18,
-              v6->klass->vtable._18_Write.methodPtr);
-      if ( (int)v18 >= 1 )
+      v23 = (System_Collections_Generic_List_object__o *)v22->static_fields->lotteryList;
+      if ( !v23 )
+        sub_1B00F28(0LL, v20);
+      Item = System_Collections_Generic_List_object___get_Item(
+               v23,
+               i,
+               (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__get_Item__);
+      v26 = Item;
+      if ( !Item )
+        sub_1B00F28(0LL, v25);
+      monitor = Item[1].monitor;
+      if ( !monitor )
+        sub_1B00F28(Item, v25);
+      v28 = monitor[6];
+      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v14->klass->vtable._17_Write.method)(
+        v14,
+        LODWORD(Item[1].klass),
+        v14->klass->vtable._18_Write.methodPtr);
+      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v14->klass->vtable._17_Write.method)(
+        v14,
+        (unsigned int)v28,
+        v14->klass->vtable._18_Write.methodPtr);
+      if ( v28 >= 1 )
       {
-        for ( j = 0LL; (__int64)j < v18; ++j )
+        for ( j = 0; j != v28; ++j )
         {
-          v21 = v16->fields.voiceIdList;
-          if ( !v21 )
-            sub_B7769C(v19, v12);
-          if ( j >= (unsigned int)v21->fields._size )
-            System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-          v19 = ((__int64 (__fastcall *)(System_IO_BinaryWriter_o *, System_String_o *, void *))v6->klass->vtable._22_Write.method)(
-                  v6,
-                  v21->fields._items->m_Items[j],
-                  v6->klass[1]._1.image);
+          v30 = (System_Collections_Generic_List_object__o *)v26[1].monitor;
+          if ( !v30 )
+            sub_1B00F28(0LL, v20);
+          v31 = System_Collections_Generic_List_object___get_Item(
+                  v30,
+                  j,
+                  (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_string__get_Item__);
+          ((void (__fastcall *)(System_IO_BinaryWriter_o *, Il2CppObject *, void *))v14->klass->vtable._22_Write.method)(
+            v14,
+            v31,
+            v14->klass[1]._1.image);
         }
       }
     }
   }
-  klass = v6->klass;
-  if ( *(_WORD *)&v6->klass->_2.bitflags1 )
+  klass = v14->klass;
+  v33 = *(unsigned __int16 *)(&v14->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v14->klass->_2.bitflags2 + 3) )
   {
-    v23 = 0LL;
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
     {
-      ++v23;
+      --v33;
       p_offset += 4;
-      if ( v23 >= *(unsigned __int16 *)&v6->klass->_2.bitflags1 )
-        goto LABEL_37;
+      if ( !v33 )
+        goto LABEL_29;
     }
-    v25 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+    v35 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
   }
   else
   {
-LABEL_37:
-    v25 = sub_B0F4C0(v6, System_IDisposable_TypeInfo, 0LL);
+LABEL_29:
+    v35 = sub_1B52CAC(v14, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v25)(v6, *(_QWORD *)(v25 + 8));
+  (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v35)(v14, *(_QWORD *)(v35 + 8));
   return 1;
 }
 
@@ -589,248 +633,295 @@ ServantVoiceData_array *__fastcall CombineResultFormManager__lotteryCombineResul
         const MethodInfo *method)
 {
   ServantVoiceEntity_o *v4; // x20
-  System_Collections_Generic_List_SvtVoiceInfo__o *v5; // x22
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v6; // x21
-  _BOOL8 v7; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
   __int64 v8; // x1
-  Il2CppClass *klass; // x8
-  EventMissionProgressRequest_Argument_ProgressData_o **data; // x8
-  __int64 v11; // x8
-  int32_t i; // w26
-  struct System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__o *lotteryList; // x22
-  CombineResultFormManager_svtUnplayedVoiceList_o *v14; // x8
-  int32_t svtId; // w28
-  __int64 v16; // x22
-  __int64 v17; // x23
-  __int64 v18; // x22
-  __int64 v19; // x8
-  _BOOL8 v20; // x0
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  __int64 v18; // x1
+  __int64 v19; // x1
+  __int64 v20; // x1
   __int64 v21; // x1
-  int v22; // w22
-  int32_t size; // w1
-  int32_t v24; // w22
-  System_String_o *v25; // x21
-  __int64 v26; // x22
-  __int64 v27; // x8
-  const MethodInfo *v28; // x0
-  __int64 v30; // x0
-  System_Collections_Generic_List_Enumerator_T__o v31; // [xsp+8h] [xbp-B8h] BYREF
-  int v32[2]; // [xsp+20h] [xbp-A0h]
-  int v33; // [xsp+28h] [xbp-98h]
-  System_Collections_Generic_List_Enumerator_T__o j; // [xsp+30h] [xbp-90h] BYREF
-  System_Collections_Generic_List_Enumerator_T__o v35; // [xsp+50h] [xbp-70h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v36; // 0:x0.16
+  System_Collections_Generic_List_object__o *v22; // x22
+  System_Collections_Generic_List_object__o *v23; // x21
+  _BOOL8 v24; // x0
+  __int64 v25; // x1
+  int32_t v26; // w2
+  int32_t v27; // w3
+  Il2CppClass *klass; // x8
+  void *data; // x8
+  Il2CppObject *v30; // x1
+  struct System_Object_array *items; // x8
+  _QWORD *v32; // x9
+  __int64 size; // x10
+  Il2CppClass **v34; // x0
+  __int64 v35; // x8
+  int32_t i; // w22
+  System_Collections_Generic_List_object__o *lotteryList; // x8
+  int32_t id; // w29
+  __int64 v39; // x23
+  __int64 v40; // x24
+  CombineResultFormManager_c *v41; // x0
+  _BOOL8 v42; // x0
+  __int64 v43; // x1
+  int32_t v44; // w1
+  int32_t v45; // w0
+  Il2CppObject *Item; // x0
+  CombineResultFormManager_c *v47; // x8
+  System_String_o *v48; // x21
+  int32_t v49; // w2
+  int32_t v50; // w3
+  __int64 v51; // x8
+  _QWORD *v52; // x9
+  __int64 type; // x10
+  __int64 v54; // x8
+  const MethodInfo *v55; // x0
+  System_Collections_Generic_List_Enumerator_object__o v57; // [xsp+8h] [xbp-B8h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o j; // [xsp+20h] [xbp-A0h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v59; // [xsp+40h] [xbp-80h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v60; // 0:x0.16
 
   v4 = svtVoiceEntity;
-  if ( (byte_438AF43 & 1) == 0 )
+  if ( (byte_48E5F64 & 1) == 0 )
   {
-    sub_B775C4(&CombineResultFormManager_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__Dispose__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__MoveNext__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__get_Current__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__GetEnumerator__);
-    sub_B775C4(&Method_System_Collections_Generic_List_SvtVoiceInfo__GetEnumerator__);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__Remove__);
-    sub_B775C4(&Method_System_Collections_Generic_List_string___ctor___69407008);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_B775C4(&Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__get_Count__);
-    sub_B775C4(&Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__get_Item__);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_B775C4(&System_Collections_Generic_List_string__TypeInfo);
-    svtVoiceEntity = (ServantVoiceEntity_o *)sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_438AF43 = 1;
+    sub_1B00CCC(&CombineResultFormManager_TypeInfo, baseUsrSvtData);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__Dispose__, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__, v6);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__MoveNext__, v7);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__, v8);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__, v9);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__get_Current__, v10);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__Add__, v11);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__GetEnumerator__, v12);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_SvtVoiceInfo__GetEnumerator__, v13);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__Remove__, v14);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string___ctor__, v15);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__get_Count__, v16);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__get_Count__, v17);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__get_Item__, v18);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__get_Item__, v19);
+    sub_1B00CCC(&System_Collections_Generic_List_string__TypeInfo, v20);
+    svtVoiceEntity = (ServantVoiceEntity_o *)sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v21);
+    byte_48E5F64 = 1;
   }
-  memset(&v35, 0, sizeof(v35));
+  memset(&v59, 0, sizeof(v59));
   memset(&j, 0, sizeof(j));
-  v33 = 0;
   if ( !v4 )
-    goto LABEL_72;
-  v5 = ServantVoiceEntity__randomChangeSvtVoiceCount(v4, baseUsrSvtData, 0LL);
-  v6 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_string__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v6,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_string___ctor___69407008);
-  if ( !v5 )
-    goto LABEL_72;
-  System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-    &v31,
-    (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)v5,
-    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_SvtVoiceInfo__GetEnumerator__);
-  v35 = v31;
+    goto LABEL_60;
+  v22 = (System_Collections_Generic_List_object__o *)ServantVoiceEntity__randomChangeSvtVoiceCount(
+                                                       v4,
+                                                       baseUsrSvtData,
+                                                       0LL);
+  v23 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_string__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v23,
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_string___ctor__);
+  if ( !v22 )
+    goto LABEL_60;
+  System_Collections_Generic_List_object___GetEnumerator(
+    (System_Collections_Generic_List_Enumerator_T__o *)&v57,
+    v22,
+    (const MethodInfo_33C24C8 *)Method_System_Collections_Generic_List_SvtVoiceInfo__GetEnumerator__);
+  v59 = v57;
   while ( 1 )
   {
-    v7 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-           &v35,
-           (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__MoveNext__);
-    if ( !v7 )
+    v24 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v59,
+            (const MethodInfo_313E218 *)Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__MoveNext__);
+    if ( !v24 )
       break;
-    if ( !v35.fields.current )
-      sub_B7769C(v7, v8);
-    klass = v35.fields.current[4].klass;
+    if ( !v59.fields._current )
+      sub_1B00F28(v24, v25);
+    klass = v59.fields._current[4].klass;
     if ( !klass )
-      sub_B7769C(v7, v8);
+      sub_1B00F28(v24, v25);
     if ( !LODWORD(klass->_1.namespaze) )
-    {
-      v30 = sub_B776C8(v7);
-      sub_B77668(v30, 0LL);
-    }
-    data = (EventMissionProgressRequest_Argument_ProgressData_o **)klass->_1.byval_arg.data;
+      sub_1B00F30(v24, v25);
+    data = klass->_1.byval_arg.data;
     if ( !data )
-      sub_B7769C(v7, v8);
+      sub_1B00F28(v24, v25);
     if ( *((_DWORD *)data + 14) )
     {
-      if ( !v6 )
-        sub_B7769C(v7, v8);
-      System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-        v6,
-        data[2],
-        (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_string__Add__);
+      if ( !v23 )
+        sub_1B00F28(v24, v25);
+      v30 = (Il2CppObject *)*((_QWORD *)data + 2);
+      items = v23->fields._items;
+      v32 = Method_System_Collections_Generic_List_string__Add__;
+      ++v23->fields._version;
+      if ( !items )
+        sub_1B00F28(v24, v30);
+      size = v23->fields._size;
+      if ( (unsigned int)size >= items->max_length )
+      {
+        System_Collections_Generic_List_object___AddWithResize(
+          v23,
+          v30,
+          *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
+      }
+      else
+      {
+        v34 = &items->obj.klass + size;
+        v23->fields._size = size + 1;
+        v34[4] = (Il2CppClass *)v30;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)(v34 + 4), (int32_t)v30, v26, v27);
+      }
     }
   }
-  v32[0] = 90;
-  v33 = 1;
-  System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-    &v35,
-    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__Dispose__);
-  v33 = 0;
+  System_Collections_Generic_List_Enumerator_object___Dispose(
+    &v59,
+    (const MethodInfo_313E214 *)Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__Dispose__);
   svtVoiceEntity = (ServantVoiceEntity_o *)CombineResultFormManager_TypeInfo;
-  if ( (BYTE3(CombineResultFormManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CombineResultFormManager_TypeInfo->_2.cctor_finished )
+  if ( !CombineResultFormManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CombineResultFormManager_TypeInfo);
     svtVoiceEntity = (ServantVoiceEntity_o *)CombineResultFormManager_TypeInfo;
   }
-  v11 = *(_QWORD *)(*(_QWORD *)&svtVoiceEntity[4].fields.type + 8LL);
-  if ( !v11 )
-    goto LABEL_72;
-  if ( !*(_DWORD *)(v11 + 24) )
+  v35 = *(_QWORD *)(*(_QWORD *)&svtVoiceEntity[4].fields.type + 8LL);
+  if ( !v35 )
+    goto LABEL_60;
+  if ( !*(_DWORD *)(v35 + 24) )
   {
-    if ( (svtVoiceEntity[7].fields.type & 0x4000000) != 0 && !svtVoiceEntity[5].fields.type )
+    if ( !svtVoiceEntity[5].fields.type )
       j_il2cpp_runtime_class_init_0(svtVoiceEntity);
     CombineResultFormManager__ReadData((const MethodInfo *)svtVoiceEntity);
   }
   for ( i = 0; ; ++i )
   {
     svtVoiceEntity = (ServantVoiceEntity_o *)CombineResultFormManager_TypeInfo;
-    if ( (BYTE3(CombineResultFormManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !CombineResultFormManager_TypeInfo->_2.cctor_finished )
+    if ( !CombineResultFormManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(CombineResultFormManager_TypeInfo);
       svtVoiceEntity = (ServantVoiceEntity_o *)CombineResultFormManager_TypeInfo;
     }
-    lotteryList = *(struct System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__o **)(*(_QWORD *)&svtVoiceEntity[4].fields.type + 8LL);
+    lotteryList = *(System_Collections_Generic_List_object__o **)(*(_QWORD *)&svtVoiceEntity[4].fields.type + 8LL);
     if ( !lotteryList )
-      goto LABEL_72;
+      goto LABEL_60;
     if ( i >= lotteryList->fields._size )
-      goto LABEL_70;
-    if ( (svtVoiceEntity[7].fields.type & 0x4000000) != 0 && !svtVoiceEntity[5].fields.type )
+      goto LABEL_56;
+    if ( !svtVoiceEntity[5].fields.type )
     {
       j_il2cpp_runtime_class_init_0(svtVoiceEntity);
-      lotteryList = CombineResultFormManager_TypeInfo->static_fields->lotteryList;
+      lotteryList = (System_Collections_Generic_List_object__o *)CombineResultFormManager_TypeInfo->static_fields->lotteryList;
       if ( !lotteryList )
-        goto LABEL_72;
+        goto LABEL_60;
     }
-    if ( lotteryList->fields._size <= (unsigned int)i )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-    v14 = lotteryList->fields._items->m_Items[i];
-    if ( !v14 || !baseUsrSvtData )
-      goto LABEL_72;
-    svtId = v14->fields.svtId;
-    v17 = *(_QWORD *)&baseUsrSvtData->fields.svtId.fields.currentCryptoKey;
-    v16 = *(_QWORD *)&baseUsrSvtData->fields.svtId.fields.fakeValue;
-    if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-    {
+    svtVoiceEntity = (ServantVoiceEntity_o *)System_Collections_Generic_List_object___get_Item(
+                                               lotteryList,
+                                               i,
+                                               (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__get_Item__);
+    if ( !svtVoiceEntity || !baseUsrSvtData )
+      goto LABEL_60;
+    id = svtVoiceEntity->fields.id;
+    v40 = *(_QWORD *)&baseUsrSvtData->fields.svtId.fields.currentCryptoKey;
+    v39 = *(_QWORD *)&baseUsrSvtData->fields.svtId.fields.fakeValue;
+    if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    }
-    *(_QWORD *)&v36.fields.currentCryptoKey = v17;
-    *(_QWORD *)&v36.fields.fakeValue = v16;
-    if ( svtId == CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v36, 0LL) )
+    *(_QWORD *)&v60.fields.currentCryptoKey = v40;
+    *(_QWORD *)&v60.fields.fakeValue = v39;
+    if ( id == CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(v60, 0LL) )
       break;
   }
-  svtVoiceEntity = (ServantVoiceEntity_o *)CombineResultFormManager_TypeInfo;
-  if ( (BYTE3(CombineResultFormManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CombineResultFormManager_TypeInfo->_2.cctor_finished )
+  v41 = CombineResultFormManager_TypeInfo;
+  if ( !CombineResultFormManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CombineResultFormManager_TypeInfo);
-    svtVoiceEntity = (ServantVoiceEntity_o *)CombineResultFormManager_TypeInfo;
+    v41 = CombineResultFormManager_TypeInfo;
   }
-  v18 = *(_QWORD *)(*(_QWORD *)&svtVoiceEntity[4].fields.type + 8LL);
-  if ( !v18 )
-    goto LABEL_72;
-  if ( *(_DWORD *)(v18 + 24) <= (unsigned int)i )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-  v19 = *(_QWORD *)(*(_QWORD *)(v18 + 16) + 8LL * i + 32);
-  if ( !v19 )
-    goto LABEL_72;
-  svtVoiceEntity = *(ServantVoiceEntity_o **)(v19 + 24);
+  svtVoiceEntity = (ServantVoiceEntity_o *)v41->static_fields->lotteryList;
   if ( !svtVoiceEntity )
-    goto LABEL_72;
-  System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-    &v31,
-    (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)svtVoiceEntity,
-    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_string__GetEnumerator__);
-  for ( j = v31;
+    goto LABEL_60;
+  svtVoiceEntity = (ServantVoiceEntity_o *)System_Collections_Generic_List_object___get_Item(
+                                             (System_Collections_Generic_List_object__o *)svtVoiceEntity,
+                                             i,
+                                             (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__get_Item__);
+  if ( !svtVoiceEntity )
+    goto LABEL_60;
+  svtVoiceEntity = *(ServantVoiceEntity_o **)&svtVoiceEntity->fields.type;
+  if ( !svtVoiceEntity )
+    goto LABEL_60;
+  System_Collections_Generic_List_object___GetEnumerator(
+    (System_Collections_Generic_List_Enumerator_T__o *)&v57,
+    (System_Collections_Generic_List_object__o *)svtVoiceEntity,
+    (const MethodInfo_33C24C8 *)Method_System_Collections_Generic_List_string__GetEnumerator__);
+  for ( j = v57;
         ;
-        System_Collections_Generic_List_WarBoardManager_TaskList___Remove(
-          (System_Collections_Generic_List_WarBoardManager_TaskList__o *)v6,
-          (WarBoardManager_TaskList_o *)j.fields.current,
-          (const MethodInfo_3054C44 *)Method_System_Collections_Generic_List_string__Remove__) )
+        System_Collections_Generic_List_object___Remove(
+          v23,
+          j.fields._current,
+          (const MethodInfo_33C2EF8 *)Method_System_Collections_Generic_List_string__Remove__) )
   {
-    v20 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
+    v42 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &j,
-            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
-    if ( !v20 )
+            (const MethodInfo_313E218 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
+    if ( !v42 )
       break;
-    if ( !v6 )
-      sub_B7769C(v20, v21);
+    if ( !v23 )
+      sub_1B00F28(v42, v43);
   }
-  v32[0] = 218;
-  v22 = ++v33;
-  System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
+  System_Collections_Generic_List_Enumerator_object___Dispose(
     &j,
-    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
-  if ( v22 && v32[v22 - 1] == 218 )
-    v33 = v22 - 1;
-  if ( !v6 )
-    goto LABEL_72;
-  size = v6->fields._size;
-  if ( size < 1 )
+    (const MethodInfo_313E214 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+  if ( !v23 )
+    goto LABEL_60;
+  v44 = v23->fields._size;
+  if ( v44 < 1 )
   {
-LABEL_70:
-    v25 = 0LL;
-    return ServantVoiceEntity__lotteryLevelUpVoice_30273524(v4, baseUsrSvtData, v25, 0LL);
+LABEL_56:
+    v48 = 0LL;
+    return ServantVoiceEntity__lotteryLevelUpVoice_38506584(v4, baseUsrSvtData, v48, 0LL);
   }
-  v24 = UnityEngine_Random__Range_36343764(0, size, 0LL);
-  if ( v6->fields._size <= (unsigned int)v24 )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-  svtVoiceEntity = (ServantVoiceEntity_o *)CombineResultFormManager_TypeInfo;
-  v25 = (System_String_o *)v6->fields._items->m_Items[v24];
-  if ( (BYTE3(CombineResultFormManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CombineResultFormManager_TypeInfo->_2.cctor_finished )
+  v45 = UnityEngine_Random__Range_68037396(0, v44, 0LL);
+  Item = System_Collections_Generic_List_object___get_Item(
+           v23,
+           v45,
+           (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_string__get_Item__);
+  v47 = CombineResultFormManager_TypeInfo;
+  v48 = (System_String_o *)Item;
+  if ( !CombineResultFormManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CombineResultFormManager_TypeInfo);
-    svtVoiceEntity = (ServantVoiceEntity_o *)CombineResultFormManager_TypeInfo;
+    v47 = CombineResultFormManager_TypeInfo;
   }
-  v26 = *(_QWORD *)(*(_QWORD *)&svtVoiceEntity[4].fields.type + 8LL);
-  if ( !v26 )
-    goto LABEL_72;
-  if ( *(_DWORD *)(v26 + 24) <= (unsigned int)i )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-  v27 = *(_QWORD *)(*(_QWORD *)(v26 + 16) + 8LL * i + 32);
-  if ( !v27 || (svtVoiceEntity = *(ServantVoiceEntity_o **)(v27 + 24)) == 0LL )
-LABEL_72:
-    sub_B7769C(svtVoiceEntity, baseUsrSvtData);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-    (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)svtVoiceEntity,
-    (EventMissionProgressRequest_Argument_ProgressData_o *)v25,
-    (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_string__Add__);
-  CombineResultFormManager__WriteData(v28);
-  return ServantVoiceEntity__lotteryLevelUpVoice_30273524(v4, baseUsrSvtData, v25, 0LL);
+  svtVoiceEntity = (ServantVoiceEntity_o *)v47->static_fields->lotteryList;
+  if ( !svtVoiceEntity
+    || (svtVoiceEntity = (ServantVoiceEntity_o *)System_Collections_Generic_List_object___get_Item(
+                                                   (System_Collections_Generic_List_object__o *)svtVoiceEntity,
+                                                   i,
+                                                   (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__get_Item__)) == 0LL
+    || (svtVoiceEntity = *(ServantVoiceEntity_o **)&svtVoiceEntity->fields.type) == 0LL
+    || (v51 = *(_QWORD *)&svtVoiceEntity->fields.id,
+        v52 = Method_System_Collections_Generic_List_string__Add__,
+        ++*(&svtVoiceEntity->fields.type + 1),
+        !v51) )
+  {
+LABEL_60:
+    sub_1B00F28(svtVoiceEntity, baseUsrSvtData);
+  }
+  type = svtVoiceEntity->fields.type;
+  if ( (unsigned int)type >= *(_DWORD *)(v51 + 24) )
+  {
+    System_Collections_Generic_List_object___AddWithResize(
+      (System_Collections_Generic_List_object__o *)svtVoiceEntity,
+      (Il2CppObject *)v48,
+      *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v52[4] + 192LL) + 112LL));
+  }
+  else
+  {
+    v54 = v51 + 8 * type;
+    svtVoiceEntity->fields.type = type + 1;
+    *(_QWORD *)(v54 + 32) = v48;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)(v54 + 32), (int32_t)v48, v49, v50);
+  }
+  CombineResultFormManager__WriteData(v55);
+  return ServantVoiceEntity__lotteryLevelUpVoice_38506584(v4, baseUsrSvtData, v48, 0LL);
 }
 
 
@@ -840,166 +931,214 @@ ServantVoiceData_array *__fastcall CombineResultFormManager__lotteryCombineResul
         const MethodInfo *method)
 {
   ServantVoiceEntity_o *v4; // x20
-  System_Collections_Generic_List_SvtVoiceInfo__o *v5; // x23
-  __int64 v6; // x21
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v7; // x22
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v14; // x22
-  __int64 v15; // x24
-  __int64 v16; // x25
-  _BOOL8 v17; // x0
-  __int64 v18; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  System_Collections_Generic_List_object__o *v18; // x23
+  __int64 v19; // x21
+  System_Collections_Generic_List_object__o *v20; // x22
+  int32_t v21; // w2
+  int32_t v22; // w3
+  System_Collections_Generic_List_object__o *v23; // x22
+  __int64 v24; // x24
+  __int64 v25; // x25
+  _BOOL8 v26; // x0
+  __int64 v27; // x1
+  int32_t v28; // w2
+  int32_t v29; // w3
   Il2CppClass *klass; // x8
-  EventMissionProgressRequest_Argument_ProgressData_o **data; // x8
-  __int64 v21; // x8
-  const MethodInfo *v22; // x0
-  int32_t size; // w1
-  int32_t v24; // w21
-  __int64 v26; // x0
-  System_Collections_Generic_List_Enumerator_T__o v27; // [xsp+8h] [xbp-78h] BYREF
-  System_Collections_Generic_List_Enumerator_T__o v28; // [xsp+20h] [xbp-60h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v29; // 0:x0.16
+  void *data; // x8
+  Il2CppObject *v32; // x1
+  struct System_Object_array *items; // x8
+  _QWORD *v34; // x9
+  __int64 size; // x10
+  Il2CppClass **v36; // x0
+  int32_t v37; // w2
+  int32_t v38; // w3
+  __int64 v39; // x8
+  __int64 v40; // x8
+  _QWORD *v41; // x9
+  __int64 type; // x10
+  __int64 v43; // x8
+  const MethodInfo *v44; // x0
+  int32_t v45; // w1
+  int32_t v46; // w0
+  Il2CppObject *Item; // x0
+  System_Collections_Generic_List_Enumerator_object__o v49; // [xsp+8h] [xbp-98h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v50; // [xsp+20h] [xbp-80h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v51; // 0:x0.16
 
   v4 = svtVoiceEntity;
-  if ( (byte_438AF42 & 1) == 0 )
+  if ( (byte_48E5F63 & 1) == 0 )
   {
-    sub_B775C4(&CombineResultFormManager_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__Dispose__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__MoveNext__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__get_Current__);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_SvtVoiceInfo__GetEnumerator__);
-    sub_B775C4(&Method_System_Collections_Generic_List_string___ctor___69407008);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_B775C4(&Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__get_Count__);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_B775C4(&System_Collections_Generic_List_string__TypeInfo);
-    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    svtVoiceEntity = (ServantVoiceEntity_o *)sub_B775C4(&CombineResultFormManager_svtUnplayedVoiceList_TypeInfo);
-    byte_438AF42 = 1;
+    sub_1B00CCC(&CombineResultFormManager_TypeInfo, baseUsrSvtData);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__Dispose__, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__MoveNext__, v6);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__get_Current__, v7);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__Add__, v8);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__Add__, v9);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_SvtVoiceInfo__GetEnumerator__, v10);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string___ctor__, v11);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__get_Count__, v12);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__get_Count__, v13);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__get_Item__, v14);
+    sub_1B00CCC(&System_Collections_Generic_List_string__TypeInfo, v15);
+    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v16);
+    svtVoiceEntity = (ServantVoiceEntity_o *)sub_1B00CCC(&CombineResultFormManager_svtUnplayedVoiceList_TypeInfo, v17);
+    byte_48E5F63 = 1;
   }
-  memset(&v28, 0, sizeof(v28));
+  memset(&v50, 0, sizeof(v50));
   if ( !v4 )
-    goto LABEL_44;
-  v5 = ServantVoiceEntity__randomChangeSvtVoiceCount(v4, baseUsrSvtData, 0LL);
-  v6 = sub_B77694(CombineResultFormManager_svtUnplayedVoiceList_TypeInfo);
-  CombineResultFormManager_svtUnplayedVoiceList___ctor((CombineResultFormManager_svtUnplayedVoiceList_o *)v6, 0LL);
-  v7 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_string__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v7,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_string___ctor___69407008);
-  if ( !v6 )
-    goto LABEL_44;
-  *(_QWORD *)(v6 + 24) = v7;
-  sub_B77560((BattleServantConfConponent_o *)(v6 + 24), (System_Int32_array **)v7, v8, v9, v10, v11, v12, v13);
-  v14 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_string__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v14,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_string___ctor___69407008);
+    goto LABEL_46;
+  v18 = (System_Collections_Generic_List_object__o *)ServantVoiceEntity__randomChangeSvtVoiceCount(
+                                                       v4,
+                                                       baseUsrSvtData,
+                                                       0LL);
+  v19 = sub_1B00F18(CombineResultFormManager_svtUnplayedVoiceList_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v19, 0LL);
+  v20 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_string__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v20,
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_string___ctor__);
+  if ( !v19 )
+    goto LABEL_46;
+  *(_QWORD *)(v19 + 24) = v20;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v19 + 24), (int32_t)v20, v21, v22);
+  v23 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_string__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v23,
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_string___ctor__);
   if ( !baseUsrSvtData )
-    goto LABEL_44;
-  v16 = *(_QWORD *)&baseUsrSvtData->fields.svtId.fields.currentCryptoKey;
-  v15 = *(_QWORD *)&baseUsrSvtData->fields.svtId.fields.fakeValue;
-  if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-  {
+    goto LABEL_46;
+  v25 = *(_QWORD *)&baseUsrSvtData->fields.svtId.fields.currentCryptoKey;
+  v24 = *(_QWORD *)&baseUsrSvtData->fields.svtId.fields.fakeValue;
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  }
-  *(_QWORD *)&v29.fields.currentCryptoKey = v16;
-  *(_QWORD *)&v29.fields.fakeValue = v15;
-  svtVoiceEntity = (ServantVoiceEntity_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v29, 0LL);
-  *(_DWORD *)(v6 + 16) = (_DWORD)svtVoiceEntity;
-  if ( !v5 )
-    goto LABEL_44;
-  System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-    &v27,
-    (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)v5,
-    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_SvtVoiceInfo__GetEnumerator__);
-  v28 = v27;
+  *(_QWORD *)&v51.fields.currentCryptoKey = v25;
+  *(_QWORD *)&v51.fields.fakeValue = v24;
+  svtVoiceEntity = (ServantVoiceEntity_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(v51, 0LL);
+  *(_DWORD *)(v19 + 16) = (_DWORD)svtVoiceEntity;
+  if ( !v18 )
+    goto LABEL_46;
+  System_Collections_Generic_List_object___GetEnumerator(
+    (System_Collections_Generic_List_Enumerator_T__o *)&v49,
+    v18,
+    (const MethodInfo_33C24C8 *)Method_System_Collections_Generic_List_SvtVoiceInfo__GetEnumerator__);
+  v50 = v49;
   while ( 1 )
   {
-    v17 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-            &v28,
-            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__MoveNext__);
-    if ( !v17 )
+    v26 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v50,
+            (const MethodInfo_313E218 *)Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__MoveNext__);
+    if ( !v26 )
       break;
-    if ( !v28.fields.current )
-      sub_B7769C(v17, v18);
-    klass = v28.fields.current[4].klass;
+    if ( !v50.fields._current )
+      sub_1B00F28(v26, v27);
+    klass = v50.fields._current[4].klass;
     if ( !klass )
-      sub_B7769C(v17, v18);
+      sub_1B00F28(v26, v27);
     if ( !LODWORD(klass->_1.namespaze) )
-    {
-      v26 = sub_B776C8(v17);
-      sub_B77668(v26, 0LL);
-    }
-    data = (EventMissionProgressRequest_Argument_ProgressData_o **)klass->_1.byval_arg.data;
+      sub_1B00F30(v26, v27);
+    data = klass->_1.byval_arg.data;
     if ( !data )
-      sub_B7769C(v17, v18);
+      sub_1B00F28(v26, v27);
     if ( !*((_DWORD *)data + 14) )
     {
-      if ( !v14 )
-        sub_B7769C(v17, v18);
-      System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-        v14,
-        data[2],
-        (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_string__Add__);
+      if ( !v23 )
+        sub_1B00F28(v26, v27);
+      v32 = (Il2CppObject *)*((_QWORD *)data + 2);
+      items = v23->fields._items;
+      v34 = Method_System_Collections_Generic_List_string__Add__;
+      ++v23->fields._version;
+      if ( !items )
+        sub_1B00F28(v26, v32);
+      size = v23->fields._size;
+      if ( (unsigned int)size >= items->max_length )
+      {
+        System_Collections_Generic_List_object___AddWithResize(
+          v23,
+          v32,
+          *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
+      }
+      else
+      {
+        v36 = &items->obj.klass + size;
+        v23->fields._size = size + 1;
+        v36[4] = (Il2CppClass *)v32;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)(v36 + 4), (int32_t)v32, v28, v29);
+      }
     }
   }
-  System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-    &v28,
-    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__Dispose__);
+  System_Collections_Generic_List_Enumerator_object___Dispose(
+    &v50,
+    (const MethodInfo_313E214 *)Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__Dispose__);
   svtVoiceEntity = (ServantVoiceEntity_o *)CombineResultFormManager_TypeInfo;
-  if ( (BYTE3(CombineResultFormManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CombineResultFormManager_TypeInfo->_2.cctor_finished )
+  if ( !CombineResultFormManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CombineResultFormManager_TypeInfo);
     svtVoiceEntity = (ServantVoiceEntity_o *)CombineResultFormManager_TypeInfo;
   }
-  v21 = *(_QWORD *)(*(_QWORD *)&svtVoiceEntity[4].fields.type + 8LL);
-  if ( !v21 )
-    goto LABEL_44;
-  if ( !*(_DWORD *)(v21 + 24) )
+  v39 = *(_QWORD *)(*(_QWORD *)&svtVoiceEntity[4].fields.type + 8LL);
+  if ( !v39 )
+    goto LABEL_46;
+  if ( !*(_DWORD *)(v39 + 24) )
   {
-    if ( (svtVoiceEntity[7].fields.type & 0x4000000) != 0 && !svtVoiceEntity[5].fields.type )
+    if ( !svtVoiceEntity[5].fields.type )
       j_il2cpp_runtime_class_init_0(svtVoiceEntity);
     CombineResultFormManager__ReadData((const MethodInfo *)svtVoiceEntity);
     svtVoiceEntity = (ServantVoiceEntity_o *)CombineResultFormManager_TypeInfo;
   }
-  if ( (svtVoiceEntity[7].fields.type & 0x4000000) != 0 && !svtVoiceEntity[5].fields.type )
+  if ( !svtVoiceEntity[5].fields.type )
   {
     j_il2cpp_runtime_class_init_0(svtVoiceEntity);
     svtVoiceEntity = (ServantVoiceEntity_o *)CombineResultFormManager_TypeInfo;
   }
   svtVoiceEntity = *(ServantVoiceEntity_o **)(*(_QWORD *)&svtVoiceEntity[4].fields.type + 8LL);
-  if ( !svtVoiceEntity
-    || (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-          (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)svtVoiceEntity,
-          (EventMissionProgressRequest_Argument_ProgressData_o *)v6,
-          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__Add__),
-        svtVoiceEntity = (ServantVoiceEntity_o *)CombineResultFormManager__WriteData(v22),
-        !v14) )
+  if ( !svtVoiceEntity )
+    goto LABEL_46;
+  v40 = *(_QWORD *)&svtVoiceEntity->fields.id;
+  v41 = Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__Add__;
+  ++*(&svtVoiceEntity->fields.type + 1);
+  if ( !v40 )
+    goto LABEL_46;
+  type = svtVoiceEntity->fields.type;
+  if ( (unsigned int)type >= *(_DWORD *)(v40 + 24) )
   {
-LABEL_44:
-    sub_B7769C(svtVoiceEntity, baseUsrSvtData);
+    System_Collections_Generic_List_object___AddWithResize(
+      (System_Collections_Generic_List_object__o *)svtVoiceEntity,
+      (Il2CppObject *)v19,
+      *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
   }
-  size = v14->fields._size;
-  if ( !size )
+  else
+  {
+    v43 = v40 + 8 * type;
+    svtVoiceEntity->fields.type = type + 1;
+    *(_QWORD *)(v43 + 32) = v19;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)(v43 + 32), v19, v37, v38);
+  }
+  svtVoiceEntity = (ServantVoiceEntity_o *)CombineResultFormManager__WriteData(v44);
+  if ( !v23 )
+LABEL_46:
+    sub_1B00F28(svtVoiceEntity, baseUsrSvtData);
+  v45 = v23->fields._size;
+  if ( !v45 )
     return 0LL;
-  v24 = UnityEngine_Random__Range_36343764(0, size, 0LL);
-  if ( v14->fields._size <= (unsigned int)v24 )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-  return ServantVoiceEntity__lotteryLevelUpVoice_30273524(
-           v4,
-           baseUsrSvtData,
-           (System_String_o *)v14->fields._items->m_Items[v24],
-           0LL);
+  v46 = UnityEngine_Random__Range_68037396(0, v45, 0LL);
+  Item = System_Collections_Generic_List_object___get_Item(
+           v23,
+           v46,
+           (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_string__get_Item__);
+  return ServantVoiceEntity__lotteryLevelUpVoice_38506584(v4, baseUsrSvtData, (System_String_o *)Item, 0LL);
 }
 
 

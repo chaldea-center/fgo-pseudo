@@ -1,85 +1,54 @@
 void __fastcall SoundLogger___cctor(const MethodInfo *method)
 {
-  System_String_array **v1; // x2
-  System_String_array **v2; // x3
-  System_Boolean_array **v3; // x4
-  System_Int32_array **v4; // x5
-  System_Int32_array *v5; // x6
-  System_Int32_array *v6; // x7
-  BattleServantConfConponent_o *static_fields; // x0
-  System_Int32_array **v8; // x1
+  __int64 v1; // x1
+  int32_t v2; // w2
+  int32_t v3; // w3
+  __int64 v4; // x1
 
-  if ( (byte_438A13A & 1) == 0 )
+  if ( (byte_48E1DE8 & 1) == 0 )
   {
-    sub_B775C4(&SoundLogger_TypeInfo);
-    sub_B775C4(&StringLiteral_1283/*":NG"*/);
-    byte_438A13A = 1;
+    sub_1B00CCC(&SoundLogger_TypeInfo, v1);
+    sub_1B00CCC(&StringLiteral_1571/*":NG"*/, v4);
+    byte_48E1DE8 = 1;
   }
-  static_fields = (BattleServantConfConponent_o *)SoundLogger_TypeInfo->static_fields;
-  v8 = (System_Int32_array **)StringLiteral_1283/*":NG"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_1283/*":NG"*/;
-  sub_B77560(static_fields, v8, v1, v2, v3, v4, v5, v6);
+  SoundLogger_TypeInfo->static_fields->WORD_NG = (struct System_String_o *)StringLiteral_1571/*":NG"*/;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)SoundLogger_TypeInfo->static_fields, StringLiteral_1571/*":NG"*/, v2, v3);
 }
 
 
 void __fastcall SoundLogger___ctor(SoundLogger_o *this, const MethodInfo *method)
 {
   SoundLogger_Info_o *v3; // x20
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
-  SoundLogger_Info_o *v10; // x20
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
-  SoundLogger_Info_o *v17; // x20
-  System_String_array **v18; // x2
-  System_String_array **v19; // x3
-  System_Boolean_array **v20; // x4
-  System_Int32_array **v21; // x5
-  System_Int32_array *v22; // x6
-  System_Int32_array *v23; // x7
+  const MethodInfo *v4; // x2
+  int32_t v5; // w2
+  int32_t v6; // w3
+  SoundLogger_Info_o *v7; // x20
+  const MethodInfo *v8; // x2
+  int32_t v9; // w2
+  int32_t v10; // w3
+  SoundLogger_Info_o *v11; // x20
+  const MethodInfo *v12; // x2
+  int32_t v13; // w2
+  int32_t v14; // w3
 
-  if ( (byte_438A132 & 1) == 0 )
+  if ( (byte_48E1DE0 & 1) == 0 )
   {
-    sub_B775C4(&SoundLogger_Info_TypeInfo);
-    byte_438A132 = 1;
+    sub_1B00CCC(&SoundLogger_Info_TypeInfo, method);
+    byte_48E1DE0 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v3 = (SoundLogger_Info_o *)sub_B77694(SoundLogger_Info_TypeInfo);
-  SoundLogger_Info___ctor(v3, 2, 0LL);
+  v3 = (SoundLogger_Info_o *)sub_1B00F18(SoundLogger_Info_TypeInfo);
+  SoundLogger_Info___ctor(v3, 2, v4);
   this->fields.bgmLog = v3;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (SoundLogger_Info_o *)sub_B77694(SoundLogger_Info_TypeInfo);
-  SoundLogger_Info___ctor(v10, 5, 0LL);
-  this->fields.voiceLog = v10;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.voiceLog,
-    (System_Int32_array **)v10,
-    v11,
-    v12,
-    v13,
-    v14,
-    v15,
-    v16);
-  v17 = (SoundLogger_Info_o *)sub_B77694(SoundLogger_Info_TypeInfo);
-  SoundLogger_Info___ctor(v17, 16, 0LL);
-  this->fields.seLog = v17;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.seLog,
-    (System_Int32_array **)v17,
-    v18,
-    v19,
-    v20,
-    v21,
-    v22,
-    v23);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)v3, v5, v6);
+  v7 = (SoundLogger_Info_o *)sub_1B00F18(SoundLogger_Info_TypeInfo);
+  SoundLogger_Info___ctor(v7, 5, v8);
+  this->fields.voiceLog = v7;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.voiceLog, (int32_t)v7, v9, v10);
+  v11 = (SoundLogger_Info_o *)sub_1B00F18(SoundLogger_Info_TypeInfo);
+  SoundLogger_Info___ctor(v11, 16, v12);
+  this->fields.seLog = v11;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.seLog, (int32_t)v11, v13, v14);
 }
 
 
@@ -91,38 +60,41 @@ void __fastcall SoundLogger__addLog(
         bool isValid,
         const MethodInfo *method)
 {
-  System_String_o *v10; // x22
+  __int64 v10; // x1
+  __int64 v11; // x1
+  System_String_o *v12; // x22
   Il2CppObject **static_fields; // x8
-  SoundLogger_c *v12; // x0
-  System_String_o *v13; // x0
-  __int64 v14; // x1
+  SoundLogger_c *v14; // x0
+  System_String_o *v15; // x0
+  __int64 v16; // x1
+  const MethodInfo *v17; // x2
 
-  if ( (byte_438A133 & 1) == 0 )
+  if ( (byte_48E1DE1 & 1) == 0 )
   {
-    sub_B775C4(&SoundLogger_TypeInfo);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    sub_B775C4(&StringLiteral_24098/*"{0}/{1} {2}"*/);
-    byte_438A133 = 1;
+    sub_1B00CCC(&SoundLogger_TypeInfo, info);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v10);
+    sub_1B00CCC(&StringLiteral_24690/*"{0}/{1} {2}"*/, v11);
+    byte_48E1DE1 = 1;
   }
-  v10 = (System_String_o *)StringLiteral_24098/*"{0}/{1} {2}"*/;
+  v12 = (System_String_o *)StringLiteral_24690/*"{0}/{1} {2}"*/;
   if ( isValid )
   {
     static_fields = (Il2CppObject **)&StringLiteral_1/*""*/;
   }
   else
   {
-    v12 = SoundLogger_TypeInfo;
-    if ( (BYTE3(SoundLogger_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundLogger_TypeInfo->_2.cctor_finished )
+    v14 = SoundLogger_TypeInfo;
+    if ( !SoundLogger_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(SoundLogger_TypeInfo);
-      v12 = SoundLogger_TypeInfo;
+      v14 = SoundLogger_TypeInfo;
     }
-    static_fields = (Il2CppObject **)v12->static_fields;
+    static_fields = (Il2CppObject **)v14->static_fields;
   }
-  v13 = System_String__Format_44903000(v10, (Il2CppObject *)cueSheet, (Il2CppObject *)cueName, *static_fields, 0LL);
+  v15 = System_String__Format_60340188(v12, (Il2CppObject *)cueSheet, (Il2CppObject *)cueName, *static_fields, 0LL);
   if ( !info )
-    sub_B7769C(v13, v14);
-  SoundLogger_Info__add(info, v13, 0LL);
+    sub_1B00F28(v15, v16);
+  SoundLogger_Info__add(info, v15, v17);
 }
 
 
@@ -138,18 +110,18 @@ void __fastcall SoundLogger__addLogBgm(
   __int64 v10; // x1
   const MethodInfo *v11; // x5
 
-  if ( (byte_438A134 & 1) == 0 )
+  if ( (byte_48E1DE2 & 1) == 0 )
   {
-    sub_B775C4(&SoundLogger_TypeInfo);
-    byte_438A134 = 1;
+    sub_1B00CCC(&SoundLogger_TypeInfo, cueName);
+    byte_48E1DE2 = 1;
   }
   v7 = SoundLogger_TypeInfo;
-  if ( (BYTE3(SoundLogger_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundLogger_TypeInfo->_2.cctor_finished )
+  if ( !SoundLogger_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundLogger_TypeInfo);
   Instance = SoundLogger__get_Instance((const MethodInfo *)v7);
   v9 = SoundLogger__get_Instance((const MethodInfo *)Instance);
   if ( !v9 || !Instance )
-    sub_B7769C(v9, v10);
+    sub_1B00F28(v9, v10);
   SoundLogger__addLog(v9, v9->fields.bgmLog, cueSheet, cueName, isValid, v11);
 }
 
@@ -166,18 +138,18 @@ void __fastcall SoundLogger__addLogSe(
   __int64 v10; // x1
   const MethodInfo *v11; // x5
 
-  if ( (byte_438A136 & 1) == 0 )
+  if ( (byte_48E1DE4 & 1) == 0 )
   {
-    sub_B775C4(&SoundLogger_TypeInfo);
-    byte_438A136 = 1;
+    sub_1B00CCC(&SoundLogger_TypeInfo, cueName);
+    byte_48E1DE4 = 1;
   }
   v7 = SoundLogger_TypeInfo;
-  if ( (BYTE3(SoundLogger_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundLogger_TypeInfo->_2.cctor_finished )
+  if ( !SoundLogger_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundLogger_TypeInfo);
   Instance = SoundLogger__get_Instance((const MethodInfo *)v7);
   v9 = SoundLogger__get_Instance((const MethodInfo *)Instance);
   if ( !v9 || !Instance )
-    sub_B7769C(v9, v10);
+    sub_1B00F28(v9, v10);
   SoundLogger__addLog(v9, v9->fields.seLog, cueSheet, cueName, isValid, v11);
 }
 
@@ -194,39 +166,40 @@ void __fastcall SoundLogger__addLogVoice(
   __int64 v10; // x1
   const MethodInfo *v11; // x5
 
-  if ( (byte_438A135 & 1) == 0 )
+  if ( (byte_48E1DE3 & 1) == 0 )
   {
-    sub_B775C4(&SoundLogger_TypeInfo);
-    byte_438A135 = 1;
+    sub_1B00CCC(&SoundLogger_TypeInfo, cueName);
+    byte_48E1DE3 = 1;
   }
   v7 = SoundLogger_TypeInfo;
-  if ( (BYTE3(SoundLogger_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundLogger_TypeInfo->_2.cctor_finished )
+  if ( !SoundLogger_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundLogger_TypeInfo);
   Instance = SoundLogger__get_Instance((const MethodInfo *)v7);
   v9 = SoundLogger__get_Instance((const MethodInfo *)Instance);
   if ( !v9 || !Instance )
-    sub_B7769C(v9, v10);
+    sub_1B00F28(v9, v10);
   SoundLogger__addLog(v9, v9->fields.voiceLog, cueSheet, cueName, isValid, v11);
 }
 
 
 System_String_o *__fastcall SoundLogger__getLogBgm(const MethodInfo *method)
 {
-  SoundLogger_c *v1; // x0
+  __int64 v1; // x1
+  SoundLogger_c *v2; // x0
   SoundLogger_o *Instance; // x0
-  __int64 v3; // x1
+  __int64 v4; // x1
 
-  if ( (byte_438A137 & 1) == 0 )
+  if ( (byte_48E1DE5 & 1) == 0 )
   {
-    sub_B775C4(&SoundLogger_TypeInfo);
-    byte_438A137 = 1;
+    sub_1B00CCC(&SoundLogger_TypeInfo, v1);
+    byte_48E1DE5 = 1;
   }
-  v1 = SoundLogger_TypeInfo;
-  if ( (BYTE3(SoundLogger_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundLogger_TypeInfo->_2.cctor_finished )
+  v2 = SoundLogger_TypeInfo;
+  if ( !SoundLogger_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundLogger_TypeInfo);
-  Instance = SoundLogger__get_Instance((const MethodInfo *)v1);
+  Instance = SoundLogger__get_Instance((const MethodInfo *)v2);
   if ( !Instance || (Instance = (SoundLogger_o *)Instance->fields.bgmLog) == 0LL )
-    sub_B7769C(Instance, v3);
+    sub_1B00F28(Instance, v4);
   return (System_String_o *)((__int64 (__fastcall *)(SoundLogger_o *, void *))Instance->klass->vtable._3_ToString.method)(
                               Instance,
                               Instance->klass[1]._1.image);
@@ -235,21 +208,22 @@ System_String_o *__fastcall SoundLogger__getLogBgm(const MethodInfo *method)
 
 System_String_o *__fastcall SoundLogger__getLogSe(const MethodInfo *method)
 {
-  SoundLogger_c *v1; // x0
+  __int64 v1; // x1
+  SoundLogger_c *v2; // x0
   SoundLogger_o *Instance; // x0
-  __int64 v3; // x1
+  __int64 v4; // x1
 
-  if ( (byte_438A139 & 1) == 0 )
+  if ( (byte_48E1DE7 & 1) == 0 )
   {
-    sub_B775C4(&SoundLogger_TypeInfo);
-    byte_438A139 = 1;
+    sub_1B00CCC(&SoundLogger_TypeInfo, v1);
+    byte_48E1DE7 = 1;
   }
-  v1 = SoundLogger_TypeInfo;
-  if ( (BYTE3(SoundLogger_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundLogger_TypeInfo->_2.cctor_finished )
+  v2 = SoundLogger_TypeInfo;
+  if ( !SoundLogger_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundLogger_TypeInfo);
-  Instance = SoundLogger__get_Instance((const MethodInfo *)v1);
+  Instance = SoundLogger__get_Instance((const MethodInfo *)v2);
   if ( !Instance || (Instance = (SoundLogger_o *)Instance->fields.seLog) == 0LL )
-    sub_B7769C(Instance, v3);
+    sub_1B00F28(Instance, v4);
   return (System_String_o *)((__int64 (__fastcall *)(SoundLogger_o *, void *))Instance->klass->vtable._3_ToString.method)(
                               Instance,
                               Instance->klass[1]._1.image);
@@ -258,21 +232,22 @@ System_String_o *__fastcall SoundLogger__getLogSe(const MethodInfo *method)
 
 System_String_o *__fastcall SoundLogger__getLogVoice(const MethodInfo *method)
 {
-  SoundLogger_c *v1; // x0
+  __int64 v1; // x1
+  SoundLogger_c *v2; // x0
   SoundLogger_o *Instance; // x0
-  __int64 v3; // x1
+  __int64 v4; // x1
 
-  if ( (byte_438A138 & 1) == 0 )
+  if ( (byte_48E1DE6 & 1) == 0 )
   {
-    sub_B775C4(&SoundLogger_TypeInfo);
-    byte_438A138 = 1;
+    sub_1B00CCC(&SoundLogger_TypeInfo, v1);
+    byte_48E1DE6 = 1;
   }
-  v1 = SoundLogger_TypeInfo;
-  if ( (BYTE3(SoundLogger_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundLogger_TypeInfo->_2.cctor_finished )
+  v2 = SoundLogger_TypeInfo;
+  if ( !SoundLogger_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundLogger_TypeInfo);
-  Instance = SoundLogger__get_Instance((const MethodInfo *)v1);
+  Instance = SoundLogger__get_Instance((const MethodInfo *)v2);
   if ( !Instance || (Instance = (SoundLogger_o *)Instance->fields.voiceLog) == 0LL )
-    sub_B7769C(Instance, v3);
+    sub_1B00F28(Instance, v4);
   return (System_String_o *)((__int64 (__fastcall *)(SoundLogger_o *, void *))Instance->klass->vtable._3_ToString.method)(
                               Instance,
                               Instance->klass[1]._1.image);
@@ -281,225 +256,184 @@ System_String_o *__fastcall SoundLogger__getLogVoice(const MethodInfo *method)
 
 SoundLogger_o *__fastcall SoundLogger__get_Instance(const MethodInfo *method)
 {
-  SoundLogger_c *v1; // x0
-  SoundLogger_o *v2; // x19
-  const MethodInfo *v3; // x1
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
-  SoundLogger_c *v10; // x0
+  __int64 v1; // x1
+  SoundLogger_c *v2; // x0
+  SoundLogger_o *v3; // x19
+  const MethodInfo *v4; // x1
+  int32_t v5; // w2
+  int32_t v6; // w3
+  SoundLogger_c *v7; // x0
   struct SoundLogger_StaticFields *static_fields; // x0
 
-  if ( (byte_438A131 & 1) == 0 )
+  if ( (byte_48E1DDF & 1) == 0 )
   {
-    sub_B775C4(&SoundLogger_TypeInfo);
-    byte_438A131 = 1;
+    sub_1B00CCC(&SoundLogger_TypeInfo, v1);
+    byte_48E1DDF = 1;
   }
-  v1 = SoundLogger_TypeInfo;
-  if ( (BYTE3(SoundLogger_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundLogger_TypeInfo->_2.cctor_finished )
+  v2 = SoundLogger_TypeInfo;
+  if ( !SoundLogger_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(SoundLogger_TypeInfo);
-    v1 = SoundLogger_TypeInfo;
+    v2 = SoundLogger_TypeInfo;
   }
-  if ( !v1->static_fields->instance )
+  if ( !v2->static_fields->instance )
   {
-    v2 = (SoundLogger_o *)sub_B77694(v1);
-    SoundLogger___ctor(v2, v3);
-    v10 = SoundLogger_TypeInfo;
-    if ( (BYTE3(SoundLogger_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundLogger_TypeInfo->_2.cctor_finished )
+    v3 = (SoundLogger_o *)sub_1B00F18(v2);
+    SoundLogger___ctor(v3, v4);
+    v7 = SoundLogger_TypeInfo;
+    if ( !SoundLogger_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(SoundLogger_TypeInfo);
-      v10 = SoundLogger_TypeInfo;
+      v7 = SoundLogger_TypeInfo;
     }
-    static_fields = v10->static_fields;
-    static_fields->instance = v2;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&static_fields->instance,
-      (System_Int32_array **)v2,
-      v4,
-      v5,
-      v6,
-      v7,
-      v8,
-      v9);
-    v1 = SoundLogger_TypeInfo;
+    static_fields = v7->static_fields;
+    static_fields->instance = v3;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->instance, (int32_t)v3, v5, v6);
+    v2 = SoundLogger_TypeInfo;
   }
-  if ( (BYTE3(v1->vtable._0_Equals.methodPtr) & 4) != 0 && !v1->_2.cctor_finished )
+  if ( !v2->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v1);
-    v1 = SoundLogger_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v2);
+    v2 = SoundLogger_TypeInfo;
   }
-  return v1->static_fields->instance;
+  return v2->static_fields->instance;
 }
 
 
 bool __fastcall SoundLogger__isValidLatest(SoundLogger_o *this, SoundLogger_Info_o *info, const MethodInfo *method)
 {
   if ( !info )
-    sub_B7769C(this, 0LL);
-  return SoundLogger_Info__checkPlayLogLatest(info, 0LL);
+    sub_1B00F28(this, 0LL);
+  return SoundLogger_Info__checkPlayLogLatest(info, (const MethodInfo *)info);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall SoundLogger_Info___ctor(SoundLogger_Info_o *this, int32_t maxBuff, const MethodInfo *method)
 {
-  struct System_String_array *v5; // x0
-  SoundLogger_Info_Fields *p_fields; // x20
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
-  __int64 v13; // x0
-  __int64 v14; // x1
-  System_String_array **v15; // x2
-  System_String_array **v16; // x3
-  System_Boolean_array **v17; // x4
-  System_Int32_array **v18; // x5
-  System_Int32_array *v19; // x6
-  System_Int32_array *v20; // x7
-  unsigned __int64 v21; // x22
-  __int64 v22; // x23
-  unsigned int *buff; // x25
-  __int64 v24; // x0
-  System_Int32_array **v25; // x1
-  System_Text_StringBuilder_o *v26; // x20
-  System_String_array **v27; // x2
-  System_String_array **v28; // x3
-  System_Boolean_array **v29; // x4
-  System_Int32_array **v30; // x5
-  System_Int32_array *v31; // x6
-  System_Int32_array *v32; // x7
-  __int64 v33; // x0
-  __int64 v34; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
+  struct System_String_array *v7; // x0
+  SoundLogger_Info_Fields *p_fields; // x21
+  int32_t v9; // w2
+  int32_t v10; // w3
+  __int64 v11; // x0
+  __int64 v12; // x1
+  int32_t v13; // w2
+  int32_t v14; // w3
+  unsigned __int64 v15; // x22
+  __int64 v16; // x24
+  struct System_String_array *buff; // x8
+  int32_t v18; // w1
+  System_Text_StringBuilder_o *v19; // x20
+  int32_t v20; // w2
+  int32_t v21; // w3
 
-  if ( (byte_4388EB0 & 1) == 0 )
+  if ( (byte_48E1DE9 & 1) == 0 )
   {
-    sub_B775C4(&System_Text_StringBuilder_TypeInfo);
-    sub_B775C4(&string___TypeInfo);
-    sub_B775C4(&StringLiteral_779/*"--------"*/);
-    byte_4388EB0 = 1;
+    sub_1B00CCC(&System_Text_StringBuilder_TypeInfo, *(_QWORD *)&maxBuff);
+    sub_1B00CCC(&string___TypeInfo, v5);
+    sub_1B00CCC(&StringLiteral_933/*"--------"*/, v6);
+    byte_48E1DE9 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.maxNum = maxBuff;
-  v5 = (struct System_String_array *)sub_B775DC(string___TypeInfo, (unsigned int)maxBuff);
+  v7 = (struct System_String_array *)sub_1B00D74(string___TypeInfo, (unsigned int)maxBuff);
+  this->fields.buff = v7;
   p_fields = &this->fields;
-  this->fields.buff = v5;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v5, v7, v8, v9, v10, v11, v12);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)v7, v9, v10);
   if ( maxBuff >= 1 )
   {
-    v21 = 0LL;
-    v22 = 8LL;
+    v15 = 0LL;
+    v16 = 32LL;
     do
     {
-      buff = (unsigned int *)p_fields->buff;
+      buff = p_fields->buff;
       if ( !p_fields->buff )
-        sub_B7769C(v13, v14);
-      v24 = StringLiteral_779/*"--------"*/;
-      if ( StringLiteral_779/*"--------"*/ )
-      {
-        v24 = sub_B77684(StringLiteral_779/*"--------"*/, *(_QWORD *)(*(_QWORD *)buff + 64LL));
-        if ( !v24 )
-        {
-          v34 = sub_B776BC();
-          sub_B77668(v34, 0LL);
-        }
-        v25 = (System_Int32_array **)StringLiteral_779/*"--------"*/;
-      }
-      else
-      {
-        v25 = 0LL;
-      }
-      if ( v21 >= buff[6] )
-      {
-        v33 = sub_B776C8(v24);
-        sub_B77668(v33, 0LL);
-      }
-      *(_QWORD *)&buff[v22] = v25;
-      sub_B77560((BattleServantConfConponent_o *)&buff[v22], v25, v15, v16, v17, v18, v19, v20);
-      ++v21;
-      v22 += 2LL;
+        sub_1B00F28(v11, v12);
+      if ( v15 >= buff->max_length )
+        sub_1B00F30(v11, v12);
+      v18 = StringLiteral_933/*"--------"*/;
+      *(Il2CppClass **)((char *)&buff->obj.klass + v16) = (Il2CppClass *)StringLiteral_933/*"--------"*/;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)((char *)buff + v16), v18, v13, v14);
+      ++v15;
+      v16 += 8LL;
     }
-    while ( (__int64)v21 < maxBuff );
+    while ( maxBuff != v15 );
   }
   this->fields.currentIndex = -1;
-  v26 = (System_Text_StringBuilder_o *)sub_B77694(System_Text_StringBuilder_TypeInfo);
-  System_Text_StringBuilder___ctor(v26, 0LL);
-  this->fields.sb = v26;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.sb, (System_Int32_array **)v26, v27, v28, v29, v30, v31, v32);
+  v19 = (System_Text_StringBuilder_o *)sub_1B00F18(System_Text_StringBuilder_TypeInfo);
+  System_Text_StringBuilder___ctor(v19, 0LL);
+  this->fields.sb = v19;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.sb, (int32_t)v19, v20, v21);
 }
 
 
 System_String_o *__fastcall SoundLogger_Info__ToString(SoundLogger_Info_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
   System_Text_StringBuilder_o *sb; // x0
   int32_t currentIndex; // w8
-  int32_t maxNum; // w9
-  int32_t v6; // w23
-  int32_t v7; // w24
-  System_String_o **v8; // x8
+  int32_t maxNum; // w24
+  int32_t v9; // w23
+  System_String_o **v10; // x8
   struct System_String_array *buff; // x8
-  __int64 v11; // x0
+  il2cpp_array_size_t v12; // w9
 
-  if ( (byte_4388EB1 & 1) == 0 )
+  if ( (byte_48E1DEA & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_26/*"\n"*/);
-    sub_B775C4(&StringLiteral_82/*" "*/);
-    sub_B775C4(&StringLiteral_779/*"--------"*/);
-    sub_B775C4(&StringLiteral_1542/*">"*/);
-    byte_4388EB1 = 1;
+    sub_1B00CCC(&StringLiteral_43/*"\n"*/, method);
+    sub_1B00CCC(&StringLiteral_115/*" "*/, v3);
+    sub_1B00CCC(&StringLiteral_933/*"--------"*/, v4);
+    sub_1B00CCC(&StringLiteral_1857/*">"*/, v5);
+    byte_48E1DEA = 1;
   }
   if ( this->fields.currentIndex == -1 )
-    return (System_String_o *)StringLiteral_779/*"--------"*/;
+    return (System_String_o *)StringLiteral_933/*"--------"*/;
   sb = this->fields.sb;
   if ( !sb )
-    goto LABEL_22;
+    goto LABEL_19;
   System_Text_StringBuilder__set_Length(sb, 0, 0LL);
   currentIndex = this->fields.currentIndex;
   maxNum = this->fields.maxNum;
   if ( currentIndex > currentIndex - maxNum )
   {
-    v6 = this->fields.currentIndex;
+    v9 = this->fields.currentIndex;
     while ( 1 )
     {
       sb = this->fields.sb;
-      v7 = v6 < 0 ? maxNum : 0;
       if ( !sb )
         break;
-      v8 = (System_String_o **)(v6 == currentIndex ? &StringLiteral_1542/*">"*/ : &StringLiteral_82/*" "*/);
-      sb = System_Text_StringBuilder__Append_42951964(sb, *v8, 0LL);
+      v10 = v9 == currentIndex ? (System_String_o **)&StringLiteral_1857/*">"*/ : (System_String_o **)&StringLiteral_115/*" "*/;
+      sb = System_Text_StringBuilder__Append_59487644(sb, *v10, 0LL);
       buff = this->fields.buff;
       if ( !buff )
         break;
-      if ( v7 + v6 >= buff->max_length )
-      {
-        v11 = sub_B776C8(sb);
-        sub_B77668(v11, 0LL);
-      }
+      v12 = (maxNum & (v9 >> 31)) + v9;
+      if ( v12 >= buff->max_length )
+        sub_1B00F30(sb, method);
       sb = this->fields.sb;
       if ( !sb )
         break;
-      System_Text_StringBuilder__Append_42951964(sb, *(&buff->m_Items[v7] + v6), 0LL);
+      System_Text_StringBuilder__Append_59487644(sb, buff->m_Items[v12], 0LL);
       sb = this->fields.sb;
       if ( !sb )
         break;
-      System_Text_StringBuilder__Append_42951964(sb, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL);
+      System_Text_StringBuilder__Append_59487644(sb, (System_String_o *)StringLiteral_43/*"\n"*/, 0LL);
       currentIndex = this->fields.currentIndex;
       maxNum = this->fields.maxNum;
-      if ( --v6 <= currentIndex - maxNum )
-        goto LABEL_19;
+      if ( --v9 <= currentIndex - maxNum )
+        goto LABEL_16;
     }
-LABEL_22:
-    sub_B7769C(sb, method);
-  }
 LABEL_19:
+    sub_1B00F28(sb, method);
+  }
+LABEL_16:
   sb = this->fields.sb;
   if ( !sb )
-    goto LABEL_22;
+    goto LABEL_19;
   return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))sb->klass->vtable._3_ToString.method)(
                               sb,
                               sb->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
@@ -508,47 +442,21 @@ LABEL_19:
 
 void __fastcall SoundLogger_Info__add(SoundLogger_Info_o *this, System_String_o *name, const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  struct System_String_array *buff; // x20
-  int v9; // w21
-  Il2CppClass **v11; // x0
-  __int64 v12; // x0
-  __int64 v13; // x0
+  int32_t v3; // w3
+  struct System_String_array *buff; // x8
+  int v5; // w9
+  Il2CppClass **v6; // x0
 
   buff = this->fields.buff;
-  v9 = (this->fields.currentIndex + 1) % this->fields.maxNum;
-  this->fields.currentIndex = v9;
+  v5 = (this->fields.currentIndex + 1) % this->fields.maxNum;
+  this->fields.currentIndex = v5;
   if ( !buff )
-    sub_B7769C(this, name);
-  if ( name )
-  {
-    this = (SoundLogger_Info_o *)sub_B77684(name, buff->obj.klass->_1.element_class);
-    if ( !this )
-    {
-      v13 = sub_B776BC();
-      sub_B77668(v13, 0LL);
-    }
-  }
-  if ( v9 >= buff->max_length )
-  {
-    v12 = sub_B776C8(this);
-    sub_B77668(v12, 0LL);
-  }
-  v11 = &buff->obj.klass + v9;
-  v11[4] = (Il2CppClass *)name;
-  sub_B77560(
-    (BattleServantConfConponent_o *)(v11 + 4),
-    (System_Int32_array **)name,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+    sub_1B00F28(this, name);
+  if ( v5 >= buff->max_length )
+    sub_1B00F30(this, name);
+  v6 = &buff->obj.klass + v5;
+  v6[4] = (Il2CppClass *)name;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v6 + 4), (int32_t)name, (int32_t)method, v3);
 }
 
 
@@ -558,31 +466,27 @@ bool __fastcall SoundLogger_Info__checkPlayLogLatest(SoundLogger_Info_o *this, c
   __int64 currentIndex; // x8
   struct System_String_array *buff; // x9
   System_String_o *v5; // x19
-  __int64 v7; // x0
 
   v2 = this;
-  if ( (byte_4388EB2 & 1) == 0 )
+  if ( (byte_48E1DEB & 1) == 0 )
   {
-    this = (SoundLogger_Info_o *)sub_B775C4(&SoundLogger_TypeInfo);
-    byte_4388EB2 = 1;
+    this = (SoundLogger_Info_o *)sub_1B00CCC(&SoundLogger_TypeInfo, method);
+    byte_48E1DEB = 1;
   }
   currentIndex = v2->fields.currentIndex;
   if ( (_DWORD)currentIndex == -1 )
     return 0;
   buff = v2->fields.buff;
   if ( !buff )
-    goto LABEL_12;
+    goto LABEL_11;
   if ( (unsigned int)currentIndex >= buff->max_length )
-  {
-    v7 = sub_B776C8(this);
-    sub_B77668(v7, 0LL);
-  }
+    sub_1B00F30(this, method);
   v5 = buff->m_Items[currentIndex];
   this = (SoundLogger_Info_o *)SoundLogger_TypeInfo;
-  if ( (BYTE3(SoundLogger_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundLogger_TypeInfo->_2.cctor_finished )
+  if ( !SoundLogger_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundLogger_TypeInfo);
   if ( !v5 )
-LABEL_12:
-    sub_B7769C(this, method);
-  return System_String__LastIndexOf_44975896(v5, SoundLogger_TypeInfo->static_fields->WORD_NG, 0LL) == -1;
+LABEL_11:
+    sub_1B00F28(this, method);
+  return System_String__LastIndexOf_60358948(v5, SoundLogger_TypeInfo->static_fields->WORD_NG, 0LL) == -1;
 }

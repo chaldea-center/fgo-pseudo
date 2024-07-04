@@ -4,7 +4,7 @@ void __fastcall PosCountNormalBattleInfoPosData___ctor(
 {
   this->fields.skipPos.fields.z = 0.0;
   *(_QWORD *)&this->fields.skipPos.fields.x = 0x43070000C3FA0000LL;
-  BaseBattleInfoPosData___ctor((BaseBattleInfoPosData_o *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 

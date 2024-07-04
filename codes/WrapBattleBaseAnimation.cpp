@@ -16,69 +16,67 @@ WrapBattleBaseAnimation_o *__fastcall WrapBattleBaseAnimation__MakeWrapAnimation
         UnityEngine_GameObject_o *obj,
         const MethodInfo *method)
 {
-  _BOOL8 v3; // x0
+  __int64 v3; // x1
   __int64 v4; // x1
-  UITexture_o *v5; // x20
-  _QWORD *v6; // x8
-  __int64 v7; // x19
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
-  UITexture_o *v15; // [xsp+0h] [xbp-20h] BYREF
-  UITexture_o *component; // [xsp+8h] [xbp-18h] BYREF
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  _BOOL8 v8; // x0
+  __int64 v9; // x1
+  Il2CppObject *v10; // x20
+  _QWORD *v11; // x8
+  __int64 v12; // x19
+  int32_t v13; // w2
+  int32_t v14; // w3
+  Il2CppObject *v16; // [xsp+0h] [xbp-30h] BYREF
+  Il2CppObject *component; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4389528 & 1) == 0 )
+  if ( (byte_48E57A9 & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_GameObject_TryGetComponent_Animation___);
-    sub_B775C4(&Method_UnityEngine_GameObject_TryGetComponent_SimpleAnimation___);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&WrapBattleAnimation_TypeInfo);
-    sub_B775C4(&WrapBattleBaseAnimation_TypeInfo);
-    sub_B775C4(&WrapBattleSimpleAnimation_TypeInfo);
-    byte_4389528 = 1;
+    sub_1B00CCC(&Method_UnityEngine_GameObject_TryGetComponent_Animation___, method);
+    sub_1B00CCC(&Method_UnityEngine_GameObject_TryGetComponent_SimpleAnimation___, v3);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v4);
+    sub_1B00CCC(&WrapBattleAnimation_TypeInfo, v5);
+    sub_1B00CCC(&WrapBattleBaseAnimation_TypeInfo, v6);
+    sub_1B00CCC(&WrapBattleSimpleAnimation_TypeInfo, v7);
+    byte_48E57A9 = 1;
   }
-  v15 = 0LL;
+  v16 = 0LL;
   component = 0LL;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  v3 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)obj, 0LL, 0LL);
-  if ( !v3 )
-    goto LABEL_13;
+  v8 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)obj, 0LL, 0LL);
+  if ( !v8 )
+    goto LABEL_12;
   if ( !obj )
-    sub_B7769C(v3, v4);
-  if ( !UnityEngine_GameObject__TryGetComponent_UITexture_(
+    sub_1B00F28(v8, v9);
+  if ( !UnityEngine_GameObject__TryGetComponent_object_(
           obj,
           &component,
-          (const MethodInfo_1DEC764 *)Method_UnityEngine_GameObject_TryGetComponent_SimpleAnimation___) )
+          (const MethodInfo_2DAF098 *)Method_UnityEngine_GameObject_TryGetComponent_SimpleAnimation___) )
   {
-    if ( UnityEngine_GameObject__TryGetComponent_UITexture_(
+    if ( UnityEngine_GameObject__TryGetComponent_object_(
            obj,
-           &v15,
-           (const MethodInfo_1DEC764 *)Method_UnityEngine_GameObject_TryGetComponent_Animation___) )
+           &v16,
+           (const MethodInfo_2DAF098 *)Method_UnityEngine_GameObject_TryGetComponent_Animation___) )
     {
-      v5 = v15;
-      v6 = &WrapBattleAnimation_TypeInfo;
-      goto LABEL_12;
+      v10 = v16;
+      v11 = &WrapBattleAnimation_TypeInfo;
+      goto LABEL_11;
     }
-LABEL_13:
-    v7 = sub_B77694(WrapBattleBaseAnimation_TypeInfo);
-    System_Object___ctor((Il2CppObject *)v7, 0LL);
-    return (WrapBattleBaseAnimation_o *)v7;
-  }
-  v5 = component;
-  v6 = &WrapBattleSimpleAnimation_TypeInfo;
 LABEL_12:
-  v7 = sub_B77694(*v6);
-  System_Object___ctor((Il2CppObject *)v7, 0LL);
-  *(_QWORD *)(v7 + 16) = v5;
-  sub_B77560((BattleServantConfConponent_o *)(v7 + 16), (System_Int32_array **)v5, v8, v9, v10, v11, v12, v13);
-  return (WrapBattleBaseAnimation_o *)v7;
+    v12 = sub_1B00F18(WrapBattleBaseAnimation_TypeInfo);
+    System_Object___ctor((Il2CppObject *)v12, 0LL);
+    return (WrapBattleBaseAnimation_o *)v12;
+  }
+  v10 = component;
+  v11 = &WrapBattleSimpleAnimation_TypeInfo;
+LABEL_11:
+  v12 = sub_1B00F18(*v11);
+  System_Object___ctor((Il2CppObject *)v12, 0LL);
+  *(_QWORD *)(v12 + 16) = v10;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v12 + 16), (int32_t)v10, v13, v14);
+  return (WrapBattleBaseAnimation_o *)v12;
 }
 
 
@@ -99,17 +97,13 @@ void __fastcall WrapBattleBaseAnimation_SimpleData___ctor(
         const MethodInfo *method)
 {
   WrapBattleBaseAnimation_SimpleData_o *v6; // x20
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
+  int32_t v7; // w2
+  int32_t v8; // w3
 
   v6 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v6->fields.animName = name;
   v6 = (WrapBattleBaseAnimation_SimpleData_o *)((char *)v6 + 16);
-  sub_B77560((BattleServantConfConponent_o *)v6, (System_Int32_array **)name, v7, v8, v9, v10, v11, v12);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)v6, (int32_t)name, v7, v8);
   *(float *)&v6->monitor = time;
 }

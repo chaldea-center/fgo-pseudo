@@ -14,12 +14,12 @@ void __fastcall BlankEarthTransform___ctor(
   float v10; // s12
   float v11; // s13
   float v12; // s14
-  float z; // [xsp+58h] [xbp-18h]
-  float w; // [xsp+5Ch] [xbp-14h]
-  float v16; // [xsp+88h] [xbp+18h]
-  __int64 v17; // [xsp+90h] [xbp+20h]
-  float v18; // [xsp+98h] [xbp+28h]
-  float v19; // [xsp+A0h] [xbp+30h]
+  float z; // [xsp+8h] [xbp-68h]
+  float w; // [xsp+Ch] [xbp-64h]
+  float v16; // [xsp+78h] [xbp+8h]
+  __int64 v17; // [xsp+80h] [xbp+10h]
+  float v18; // [xsp+88h] [xbp+18h]
+  float v19; // [xsp+90h] [xbp+20h]
 
   x = blankEarthRot.fields.x;
   z = earthRootRot.fields.z;
@@ -36,10 +36,10 @@ void __fastcall BlankEarthTransform___ctor(
   this->fields.blankEarthRotation.fields.w = v10;
   this->fields.earthRootRotation.fields.x = v9;
   this->fields.earthRootRotation.fields.y = y;
+  this->fields.earthRootRotation.fields.z = z;
   *(_QWORD *)&this->fields.earthRootLocalPosition.fields.x = *(_QWORD *)&totalAng;
   this->fields.earthRootLocalPosition.fields.z = v16;
   *(_QWORD *)&this->fields.earthRootLocalScale.fields.x = v17;
-  this->fields.earthRootRotation.fields.z = z;
   this->fields.earthRootRotation.fields.w = w;
   this->fields.earthRootLocalScale.fields.z = v18;
   this->fields.totalAngle = v19;

@@ -8,36 +8,33 @@ System_String_o *__fastcall UserPresentListRequest__getMockData(
         UserPresentListRequest_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_43892E0 & 1) == 0 )
+  __int64 v2; // x1
+
+  if ( (byte_48E40DB & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&StringLiteral_9336/*"MockUserPresentListResponse"*/);
-    byte_43892E0 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_9009/*"MockUserPresentListResponse"*/, v2);
+    byte_48E40DB = 1;
   }
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9336/*"MockUserPresentListResponse"*/, 0LL);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9009/*"MockUserPresentListResponse"*/, 0LL);
 }
 
 
 System_String_o *__fastcall UserPresentListRequest__getURL(UserPresentListRequest_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_43892DF & 1) == 0 )
+  if ( (byte_48E40DA & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&StringLiteral_21976/*"present/list"*/);
-    byte_43892DF = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_22280/*"present/list"*/, v2);
+    byte_48E40DA = 1;
   }
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_44901936(BaseUrl, (System_String_o *)StringLiteral_21976/*"present/list"*/, 0LL);
+  return System_String__Concat_60325748(BaseUrl, (System_String_o *)StringLiteral_22280/*"present/list"*/, 0LL);
 }

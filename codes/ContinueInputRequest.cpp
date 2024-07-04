@@ -1,33 +1,31 @@
-void __fastcall ContinueInputRequest___ctor(ContinueInputRequest_o *this, const MethodInfo *method)
-{
-  RequestBase___ctor((RequestBase_o *)this, 0LL);
-}
-
-
 void __fastcall ContinueInputRequest__beginRequest(
         ContinueInputRequest_o *this,
         System_String_o *continueKey,
         System_String_o *continuePass,
         const MethodInfo *method)
 {
-  if ( (byte_438CCF7 & 1) == 0 )
+  __int64 v7; // x1
+  const MethodInfo *v8; // x3
+  const MethodInfo *v9; // x1
+
+  if ( (byte_48E3EBF & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_18035/*"continueKey"*/);
-    sub_B775C4(&StringLiteral_18037/*"continuePass"*/);
-    byte_438CCF7 = 1;
+    sub_1B00CCC(&StringLiteral_17996/*"continueKey"*/, continueKey);
+    sub_1B00CCC(&StringLiteral_17998/*"continuePass"*/, v7);
+    byte_48E3EBF = 1;
   }
-  RequestBase__addField_32565392((RequestBase_o *)this, (System_String_o *)StringLiteral_18035/*"continueKey"*/, continueKey, 0LL);
-  RequestBase__addField_32565392((RequestBase_o *)this, (System_String_o *)StringLiteral_18037/*"continuePass"*/, continuePass, 0LL);
-  RequestBase__beginRequest((RequestBase_o *)this, 0LL);
+  RequestBase__addField_39752868((RequestBase_o *)this, (System_String_o *)StringLiteral_17996/*"continueKey"*/, continueKey, method);
+  RequestBase__addField_39752868((RequestBase_o *)this, (System_String_o *)StringLiteral_17998/*"continuePass"*/, continuePass, v8);
+  RequestBase__beginRequest((RequestBase_o *)this, v9);
 }
 
 
 System_String_o *__fastcall ContinueInputRequest__getMockData(ContinueInputRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_438CCF6 & 1) == 0 )
+  if ( (byte_48E3EBE & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438CCF6 = 1;
+    sub_1B00CCC(&StringLiteral_1/*""*/, method);
+    byte_48E3EBE = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -35,21 +33,19 @@ System_String_o *__fastcall ContinueInputRequest__getMockData(ContinueInputReque
 
 System_String_o *__fastcall ContinueInputRequest__getURL(ContinueInputRequest_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_438CCF5 & 1) == 0 )
+  if ( (byte_48E3EBD & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&StringLiteral_18033/*"continue/input"*/);
-    byte_438CCF5 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_17994/*"continue/input"*/, v2);
+    byte_48E3EBD = 1;
   }
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_44901936(BaseUrl, (System_String_o *)StringLiteral_18033/*"continue/input"*/, 0LL);
+  return System_String__Concat_60325748(BaseUrl, (System_String_o *)StringLiteral_17994/*"continue/input"*/, 0LL);
 }
 
 
@@ -58,44 +54,68 @@ void __fastcall ContinueInputRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  ResponseData_o *v5; // x0
-  ResponseData_o *v6; // x20
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
-  System_Collections_Generic_Dictionary_Type__IStoreExtension__o *success; // x0
+  __int64 v8; // x1
+  ResponseData_o *v9; // x0
+  const MethodInfo *v10; // x2
+  ResponseData_o *v11; // x20
+  __int64 v12; // x1
+  System_Collections_Generic_Dictionary_object__object__o *success; // x0
   Il2CppObject *Item; // x20
-  System_String_o *v10; // x1
+  System_String_o *v15; // x0
+  struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
+  __int64 v17; // x1
+  Il2CppObject *m_target; // x3
+  struct System_Reflection_MethodInfo_o *original_method_info; // x0
 
-  if ( (byte_438CCF8 & 1) == 0 )
+  if ( (byte_48E3EC0 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_B775C4(&JsonManager_TypeInfo);
-    sub_B775C4(&ResponseCommandKind_TypeInfo);
-    sub_B775C4(&StringLiteral_21504/*"ng"*/);
-    sub_B775C4(&StringLiteral_23518/*"userGame"*/);
-    byte_438CCF8 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, responseList);
+    sub_1B00CCC(&JsonManager_TypeInfo, v5);
+    sub_1B00CCC(&ResponseCommandKind_TypeInfo, v6);
+    sub_1B00CCC(&StringLiteral_21754/*"ng"*/, v7);
+    sub_1B00CCC(&StringLiteral_24063/*"userGame"*/, v8);
+    byte_48E3EC0 = 1;
   }
-  if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ResponseCommandKind_TypeInfo->_2.cctor_finished )
-  {
+  if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  }
-  v5 = ResponseCommandKind__SearchData(32, responseList, 0LL);
-  if ( v5 && (v6 = v5, ResponseData__checkError_30128096(v5, 0LL)) )
+  v9 = ResponseCommandKind__SearchData(32, responseList, 0LL);
+  if ( v9 && (v11 = v9, ResponseData__checkError(v9, v9->fields.resCode, v10)) )
   {
-    success = (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v6->fields.success;
+    success = (System_Collections_Generic_Dictionary_object__object__o *)v11->fields.success;
     if ( !success )
-      sub_B7769C(0LL, v7);
-    Item = (Il2CppObject *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-                             success,
-                             (System_Type_o *)StringLiteral_23518/*"userGame"*/,
-                             (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
+      sub_1B00F28(0LL, v12);
+    Item = System_Collections_Generic_Dictionary_object__object___get_Item(
+             success,
+             (Il2CppObject *)StringLiteral_24063/*"userGame"*/,
+             (const MethodInfo_308D9C8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v10 = JsonManager__toJson(Item, 0, 0, 0LL);
+    v15 = JsonManager__toJson(Item, 0, 0, 0LL);
+    CallBack = this->fields.CallBack;
+    if ( CallBack )
+    {
+      v17 = (__int64)v15;
+      m_target = CallBack->fields.m_target;
+      original_method_info = CallBack->fields.original_method_info;
+LABEL_14:
+      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))m_target)(
+        original_method_info,
+        v17,
+        *(_QWORD *)&CallBack->fields.extra_arg);
+    }
   }
   else
   {
-    v10 = (System_String_o *)StringLiteral_21504/*"ng"*/;
+    CallBack = this->fields.CallBack;
+    if ( CallBack )
+    {
+      m_target = CallBack->fields.m_target;
+      original_method_info = CallBack->fields.original_method_info;
+      v17 = StringLiteral_21754/*"ng"*/;
+      goto LABEL_14;
+    }
   }
-  RequestBase__completed((RequestBase_o *)this, v10, 0LL);
 }

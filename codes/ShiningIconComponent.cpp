@@ -10,7 +10,7 @@ void __fastcall ShiningIconComponent__Awake(ShiningIconComponent_o *this, const 
 
   widget = (UnityEngine_Behaviour_o *)this->fields.widget;
   if ( !widget )
-    sub_B7769C(0LL, method);
+    sub_1B00F28(0LL, method);
   UnityEngine_Behaviour__set_enabled(widget, 0, 0LL);
 }
 
@@ -31,15 +31,8 @@ void __fastcall ShiningIconComponent__Clear(ShiningIconComponent_o *this, const 
       return;
     }
 LABEL_6:
-    sub_B7769C(widget, method);
+    sub_1B00F28(widget, method);
   }
-}
-
-
-// attributes: thunk
-void __fastcall ShiningIconComponent__OnDestroy(ShiningIconComponent_o *this, const MethodInfo *method)
-{
-  ShiningIconComponent__Clear(this, method);
 }
 
 
@@ -55,34 +48,24 @@ void __fastcall ShiningIconComponent__Set(ShiningIconComponent_o *this, const Me
   widget = (UnityEngine_Behaviour_o *)this->fields.widget;
   if ( !widget )
 LABEL_5:
-    sub_B7769C(widget, method);
+    sub_1B00F28(widget, method);
   UnityEngine_Behaviour__set_enabled(widget, 1, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall ShiningIconComponent__Set_34095244(ShiningIconComponent_o *this, bool isDisp, const MethodInfo *method)
-{
-  if ( isDisp )
-    ShiningIconComponent__Set(this, (const MethodInfo *)isDisp);
-  else
-    ShiningIconComponent__Clear(this, (const MethodInfo *)isDisp);
-}
-
-
-void __fastcall ShiningIconComponent__Set_34095256(
+void __fastcall ShiningIconComponent__Set_37018564(
         ShiningIconComponent_o *this,
         System_String_o *spriteName,
         const MethodInfo *method)
 {
   UnityEngine_Behaviour_o *widget; // x0
   struct UIWidget_o *v6; // x20
-  __int64 v7; // x10
+  __int64 methodPtr_low; // x10
 
-  if ( (byte_438F9D7 & 1) == 0 )
+  if ( (byte_48E1DD3 & 1) == 0 )
   {
-    sub_B775C4(&UISprite_TypeInfo);
-    byte_438F9D7 = 1;
+    sub_1B00CCC(&UISprite_TypeInfo, spriteName);
+    byte_48E1DD3 = 1;
   }
   widget = (UnityEngine_Behaviour_o *)this->fields.widget;
   if ( !widget )
@@ -96,15 +79,15 @@ void __fastcall ShiningIconComponent__Set_34095256(
       goto LABEL_7;
     }
 LABEL_13:
-    sub_B7769C(widget, spriteName);
+    sub_1B00F28(widget, spriteName);
   }
 LABEL_7:
   v6 = this->fields.widget;
   if ( v6 )
   {
-    v7 = *(&UISprite_TypeInfo->_2.bitflags2 + 1);
-    if ( *(&v6->klass->_2.bitflags2 + 1) >= (unsigned int)v7
-      && (UISprite_c *)v6->klass->_2.typeHierarchy[v7 - 1] == UISprite_TypeInfo )
+    methodPtr_low = LOBYTE(UISprite_TypeInfo->vtable._0_Equals.methodPtr);
+    if ( LOBYTE(v6->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low
+      && (UISprite_c *)v6->klass->_2.typeHierarchy[methodPtr_low - 1] == UISprite_TypeInfo )
     {
       UISprite__set_spriteName((UISprite_o *)v6, spriteName, 0LL);
       if ( spriteName )
@@ -113,4 +96,14 @@ LABEL_7:
           v6->klass->vtable._34_get_minWidth.methodPtr);
     }
   }
+}
+
+
+// local variable allocation has failed, the output may be wrong!
+void __fastcall ShiningIconComponent__Set_37022720(ShiningIconComponent_o *this, bool isDisp, const MethodInfo *method)
+{
+  if ( isDisp )
+    ShiningIconComponent__Set(this, (const MethodInfo *)isDisp);
+  else
+    ShiningIconComponent__Clear(this, (const MethodInfo *)isDisp);
 }

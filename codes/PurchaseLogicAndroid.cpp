@@ -1,24 +1,22 @@
 void __fastcall PurchaseLogicAndroid___cctor(const MethodInfo *method)
 {
-  System_String_array **v1; // x2
-  System_String_array **v2; // x3
-  System_Boolean_array **v3; // x4
-  System_Int32_array **v4; // x5
-  System_Int32_array *v5; // x6
-  System_Int32_array *v6; // x7
-  BattleServantConfConponent_o *static_fields; // x0
-  System_Int32_array **v8; // x1
+  __int64 v1; // x1
+  int32_t v2; // w2
+  int32_t v3; // w3
+  __int64 v4; // x1
 
-  if ( (byte_438B650 & 1) == 0 )
+  if ( (byte_48E213E & 1) == 0 )
   {
-    sub_B775C4(&PurchaseLogicAndroid_TypeInfo);
-    sub_B775C4(&StringLiteral_15213/*"UnityPurchasingInitializeFailedCount"*/);
-    byte_438B650 = 1;
+    sub_1B00CCC(&PurchaseLogicAndroid_TypeInfo, v1);
+    sub_1B00CCC(&StringLiteral_14851/*"UnityPurchasingInitializeFailedCount"*/, v4);
+    byte_48E213E = 1;
   }
-  static_fields = (BattleServantConfConponent_o *)PurchaseLogicAndroid_TypeInfo->static_fields;
-  v8 = (System_Int32_array **)StringLiteral_15213/*"UnityPurchasingInitializeFailedCount"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_15213/*"UnityPurchasingInitializeFailedCount"*/;
-  sub_B77560(static_fields, v8, v1, v2, v3, v4, v5, v6);
+  PurchaseLogicAndroid_TypeInfo->static_fields->INITIALIZE_FAILED_COUNT_PREF_KEY = (struct System_String_o *)StringLiteral_14851/*"UnityPurchasingInitializeFailedCount"*/;
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)PurchaseLogicAndroid_TypeInfo->static_fields,
+    StringLiteral_14851/*"UnityPurchasingInitializeFailedCount"*/,
+    v2,
+    v3);
   PurchaseLogicAndroid_TypeInfo->static_fields->MAX_COUNT_FOR_INITIALIZE_FAILED = 1000;
 }
 
@@ -27,61 +25,62 @@ void __fastcall PurchaseLogicAndroid__DisableCrashReporterOnInitialize(
         PurchaseLogicAndroid_o *this,
         const MethodInfo *method)
 {
-  PurchaseLogicAndroid_c *v3; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  PurchaseLogicAndroid_c *v6; // x0
   int32_t Int; // w0
-  struct System_Action_string__o *logOutputAction; // x20
-  System_String_o *v6; // x21
-  float v7; // s0
-  System_String_o *v8; // x0
-  System_Uri_o *Instance; // x0
-  __int64 v10; // x1
-  _QWORD _8[5]; // [xsp+8h] [xbp-18h] BYREF
+  struct System_Action_string__o *logOutputAction; // x21
+  System_String_o *v9; // x20
+  float v10; // s0
+  System_String_o *v11; // x0
+  CrashReporter_o *Instance; // x0
+  __int64 v13; // x1
+  float v14; // [xsp+8h] [xbp-38h] BYREF
+  int32_t v15; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_438B64D & 1) == 0 )
+  if ( (byte_48E213B & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Action_string__Invoke__);
-    sub_B775C4(&PurchaseLogicAndroid_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
-    sub_B775C4(&StringLiteral_260/*" rateToSend:"*/);
-    sub_B775C4(&StringLiteral_16052/*"[UnityIAP]unityPurchasingInitializeFailedCount:"*/);
-    byte_438B64D = 1;
+    sub_1B00CCC(&PurchaseLogicAndroid_TypeInfo, method);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__, v3);
+    sub_1B00CCC(&StringLiteral_321/*" rateToSend:"*/, v4);
+    sub_1B00CCC(&StringLiteral_15726/*"[UnityIAP]unityPurchasingInitializeFailedCount:"*/, v5);
+    byte_48E213B = 1;
   }
-  _8[0] = 0LL;
-  v3 = PurchaseLogicAndroid_TypeInfo;
-  if ( (BYTE3(PurchaseLogicAndroid_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
+  v6 = PurchaseLogicAndroid_TypeInfo;
+  if ( !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(PurchaseLogicAndroid_TypeInfo);
-    v3 = PurchaseLogicAndroid_TypeInfo;
+    v6 = PurchaseLogicAndroid_TypeInfo;
   }
-  Int = UnityEngine_PlayerPrefs__GetInt(v3->static_fields->INITIALIZE_FAILED_COUNT_PREF_KEY, 0, 0LL);
-  HIDWORD(_8[0]) = Int;
+  Int = UnityEngine_PlayerPrefs__GetInt(v6->static_fields->INITIALIZE_FAILED_COUNT_PREF_KEY, 0, 0LL);
+  v15 = Int;
   if ( Int >= 1 )
   {
-    LODWORD(_8[0]) = fmaxf(1.0 / (float)(Int + 1), 0.1);
+    v14 = fmaxf(1.0 / (float)(Int + 1), 0.1);
     logOutputAction = this->fields._logOutputAction;
-    v6 = System_Int32__ToString((int32_t)_8 + 4, 0LL);
-    v8 = System_Single__ToString(v7, (const MethodInfo *)_8);
-    Instance = (System_Uri_o *)System_String__Concat_44905348(
-                                 (System_String_o *)StringLiteral_16052/*"[UnityIAP]unityPurchasingInitializeFailedCount:"*/,
-                                 v6,
-                                 (System_String_o *)StringLiteral_260/*" rateToSend:"*/,
-                                 v8,
-                                 0LL);
+    v9 = System_Int32__ToString((int32_t)&v15, 0LL);
+    v11 = System_Single__ToString(v10, (const MethodInfo *)&v14);
+    Instance = (CrashReporter_o *)System_String__Concat_60339012(
+                                    (System_String_o *)StringLiteral_15726/*"[UnityIAP]unityPurchasingInitializeFailedCount:"*/,
+                                    v9,
+                                    (System_String_o *)StringLiteral_321/*" rateToSend:"*/,
+                                    v11,
+                                    0LL);
     if ( !logOutputAction )
-      goto LABEL_12;
-    System_Action_Uri___Invoke(
-      (System_Action_Uri__o *)logOutputAction,
+      goto LABEL_11;
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, CrashReporter_o *, _QWORD))logOutputAction->fields.m_target)(
+      logOutputAction->fields.original_method_info,
       Instance,
-      (const MethodInfo_26A087C *)Method_System_Action_string__Invoke__);
-    if ( UnityEngine_Random__Range(0.0, 1.0, 0LL) < *(float *)_8 )
+      *(_QWORD *)&logOutputAction->fields.extra_arg);
+    if ( UnityEngine_Random__Range(0.0, 1.0, 0LL) < v14 )
       return;
     this->fields._isCrashReporterTemporarilyDisabled = 1;
-    Instance = (System_Uri_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    Instance = (CrashReporter_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
     if ( !Instance )
-LABEL_12:
-      sub_B7769C(Instance, v10);
-    CrashReporter__DisableSampling((CrashReporter_o *)Instance, 0LL);
+LABEL_11:
+      sub_1B00F28(Instance, v13);
+    CrashReporter__DisableSampling(Instance, 0LL);
   }
 }
 
@@ -90,63 +89,62 @@ void __fastcall PurchaseLogicAndroid__EnableCrashReporterOnInitializeFailed(
         PurchaseLogicAndroid_o *this,
         const MethodInfo *method)
 {
-  CrashReporter_o *Instance; // x0
-  __int64 v4; // x1
-  PurchaseLogicAndroid_c *v5; // x0
+  __int64 v3; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v5; // x1
+  PurchaseLogicAndroid_c *v6; // x0
   int32_t Int; // w0
-  PurchaseLogicAndroid_c *v7; // x8
+  PurchaseLogicAndroid_c *v8; // x8
   int MAX_COUNT_FOR_INITIALIZE_FAILED; // w19
 
-  if ( (byte_438B64F & 1) == 0 )
+  if ( (byte_48E213D & 1) == 0 )
   {
-    sub_B775C4(&PurchaseLogicAndroid_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
-    byte_438B64F = 1;
+    sub_1B00CCC(&PurchaseLogicAndroid_TypeInfo, method);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__, v3);
+    byte_48E213D = 1;
   }
   if ( this->fields._isCrashReporterTemporarilyDisabled )
   {
     this->fields._isCrashReporterTemporarilyDisabled = 0;
-    Instance = (CrashReporter_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
     if ( !Instance )
-      sub_B7769C(0LL, v4);
-    CrashReporter__EnableSampling(Instance, 0LL);
+      sub_1B00F28(0LL, v5);
+    CrashReporter__EnableSampling((CrashReporter_o *)Instance, 0LL);
   }
-  v5 = PurchaseLogicAndroid_TypeInfo;
-  if ( (BYTE3(PurchaseLogicAndroid_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
+  v6 = PurchaseLogicAndroid_TypeInfo;
+  if ( !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(PurchaseLogicAndroid_TypeInfo);
-    v5 = PurchaseLogicAndroid_TypeInfo;
+    v6 = PurchaseLogicAndroid_TypeInfo;
   }
-  Int = UnityEngine_PlayerPrefs__GetInt(v5->static_fields->INITIALIZE_FAILED_COUNT_PREF_KEY, 0, 0LL);
-  v7 = PurchaseLogicAndroid_TypeInfo;
+  Int = UnityEngine_PlayerPrefs__GetInt(v6->static_fields->INITIALIZE_FAILED_COUNT_PREF_KEY, 0, 0LL);
+  v8 = PurchaseLogicAndroid_TypeInfo;
   MAX_COUNT_FOR_INITIALIZE_FAILED = (Int & ~(Int >> 31)) + 1;
-  if ( (BYTE3(PurchaseLogicAndroid_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
+  if ( !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(PurchaseLogicAndroid_TypeInfo);
-    v7 = PurchaseLogicAndroid_TypeInfo;
+    v8 = PurchaseLogicAndroid_TypeInfo;
   }
-  if ( MAX_COUNT_FOR_INITIALIZE_FAILED > v7->static_fields->MAX_COUNT_FOR_INITIALIZE_FAILED )
+  if ( MAX_COUNT_FOR_INITIALIZE_FAILED > v8->static_fields->MAX_COUNT_FOR_INITIALIZE_FAILED )
   {
-    if ( (BYTE3(v7->vtable._0_Equals.methodPtr) & 4) != 0 && !v7->_2.cctor_finished )
+    if ( v8->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v7);
-      v7 = PurchaseLogicAndroid_TypeInfo;
-      MAX_COUNT_FOR_INITIALIZE_FAILED = PurchaseLogicAndroid_TypeInfo->static_fields->MAX_COUNT_FOR_INITIALIZE_FAILED;
+      MAX_COUNT_FOR_INITIALIZE_FAILED = v8->static_fields->MAX_COUNT_FOR_INITIALIZE_FAILED;
     }
     else
     {
-      MAX_COUNT_FOR_INITIALIZE_FAILED = v7->static_fields->MAX_COUNT_FOR_INITIALIZE_FAILED;
+      j_il2cpp_runtime_class_init_0(v8);
+      v8 = PurchaseLogicAndroid_TypeInfo;
+      MAX_COUNT_FOR_INITIALIZE_FAILED = PurchaseLogicAndroid_TypeInfo->static_fields->MAX_COUNT_FOR_INITIALIZE_FAILED;
     }
   }
-  if ( (BYTE3(v7->vtable._0_Equals.methodPtr) & 4) != 0 && !v7->_2.cctor_finished )
+  if ( !v8->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v7);
-    v7 = PurchaseLogicAndroid_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v8);
+    v8 = PurchaseLogicAndroid_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    v7->static_fields->INITIALIZE_FAILED_COUNT_PREF_KEY,
+    v8->static_fields->INITIALIZE_FAILED_COUNT_PREF_KEY,
     MAX_COUNT_FOR_INITIALIZE_FAILED,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -157,32 +155,32 @@ void __fastcall PurchaseLogicAndroid__EnableCrashReporterOnInitializeSucceeded(
         PurchaseLogicAndroid_o *this,
         const MethodInfo *method)
 {
-  CrashReporter_o *Instance; // x0
-  __int64 v4; // x1
-  PurchaseLogicAndroid_c *v5; // x0
+  __int64 v3; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v5; // x1
+  PurchaseLogicAndroid_c *v6; // x0
 
-  if ( (byte_438B64E & 1) == 0 )
+  if ( (byte_48E213C & 1) == 0 )
   {
-    sub_B775C4(&PurchaseLogicAndroid_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
-    byte_438B64E = 1;
+    sub_1B00CCC(&PurchaseLogicAndroid_TypeInfo, method);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__, v3);
+    byte_48E213C = 1;
   }
   if ( this->fields._isCrashReporterTemporarilyDisabled )
   {
     this->fields._isCrashReporterTemporarilyDisabled = 0;
-    Instance = (CrashReporter_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
     if ( !Instance )
-      sub_B7769C(0LL, v4);
-    CrashReporter__EnableSampling(Instance, 0LL);
+      sub_1B00F28(0LL, v5);
+    CrashReporter__EnableSampling((CrashReporter_o *)Instance, 0LL);
   }
-  v5 = PurchaseLogicAndroid_TypeInfo;
-  if ( (BYTE3(PurchaseLogicAndroid_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
+  v6 = PurchaseLogicAndroid_TypeInfo;
+  if ( !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(PurchaseLogicAndroid_TypeInfo);
-    v5 = PurchaseLogicAndroid_TypeInfo;
+    v6 = PurchaseLogicAndroid_TypeInfo;
   }
-  UnityEngine_PlayerPrefs__SetInt(v5->static_fields->INITIALIZE_FAILED_COUNT_PREF_KEY, 0, 0LL);
+  UnityEngine_PlayerPrefs__SetInt(v6->static_fields->INITIALIZE_FAILED_COUNT_PREF_KEY, 0, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
 }
 
@@ -192,138 +190,158 @@ PurchaseLogic_ReceiptContents_o *__fastcall PurchaseLogicAndroid__ExtractReceipt
         UnityEngine_Purchasing_Product_o *product,
         const MethodInfo *method)
 {
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
   System_String_o *receipt_k__BackingField; // x20
-  __int64 v5; // x19
-  __int64 v6; // x10
-  System_String_o *v7; // x0
-  PurchaseLogicAndroid_o *v8; // x20
-  __int64 v9; // x10
-  System_String_array **v10; // x2
-  System_String_array **v11; // x3
-  System_Boolean_array **v12; // x4
-  System_Int32_array **v13; // x5
-  System_Int32_array *v14; // x6
-  System_Int32_array *v15; // x7
-  System_Int32_array **v16; // x1
-  System_String_array **v17; // x2
-  System_String_array **v18; // x3
-  System_Boolean_array **v19; // x4
-  System_Int32_array **v20; // x5
-  System_Int32_array *v21; // x6
-  System_Int32_array *v22; // x7
-  System_Int32_array **v23; // x1
-  _QWORD *v24; // x21
-  System_String_array **v25; // x2
-  System_String_array **v26; // x3
-  System_Boolean_array **v27; // x4
-  System_Int32_array **v28; // x5
-  System_Int32_array *v29; // x6
-  System_Int32_array *v30; // x7
-  System_Int32_array **v31; // x1
-  System_Int32_array **v32; // x1
-  System_Xml_Schema_XmlSchemaObject_o *v34; // [xsp+8h] [xbp-38h] BYREF
-  System_Xml_Schema_XmlSchemaObject_o *v35; // [xsp+10h] [xbp-30h] BYREF
-  System_Xml_Schema_XmlSchemaObject_o *value; // [xsp+18h] [xbp-28h] BYREF
+  PurchaseLogic_ReceiptContents_o *v12; // x19
+  const MethodInfo *v13; // x1
+  __int64 methodPtr_low; // x10
+  System_String_o *v15; // x0
+  PurchaseLogicAndroid_o *v16; // x20
+  __int64 v17; // x10
+  int32_t v18; // w2
+  int32_t v19; // w3
+  Il2CppObject *v20; // x8
+  System_String_c *v21; // x9
+  Il2CppObject *v22; // x10
+  ServantStatusBattleListViewItem_o *p_fields; // x20
+  int32_t v24; // w1
+  int32_t v25; // w2
+  int32_t v26; // w3
+  Il2CppObject *v27; // x8
+  System_String_c *v28; // x9
+  Il2CppObject *v29; // x10
+  ServantStatusBattleListViewItem_o *p_googleSignatureStr; // x21
+  int32_t v31; // w1
+  int32_t v32; // w2
+  int32_t v33; // w3
+  int32_t v34; // w1
+  int32_t v35; // w1
+  Il2CppObject *v37; // [xsp+8h] [xbp-48h] BYREF
+  Il2CppObject *v38; // [xsp+10h] [xbp-40h] BYREF
+  Il2CppObject *value; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_438B644 & 1) == 0 )
+  if ( (byte_48E2132 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_B775C4(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_B775C4(&PurchaseLogic_ReceiptContents_TypeInfo);
-    sub_B775C4(&string_TypeInfo);
-    sub_B775C4(&StringLiteral_20487/*"json"*/);
-    sub_B775C4(&StringLiteral_10826/*"Payload"*/);
-    sub_B775C4(&StringLiteral_22597/*"signature"*/);
-    this = (PurchaseLogicAndroid_o *)sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438B644 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, product);
+    sub_1B00CCC(&System_Collections_Generic_Dictionary_string__object__TypeInfo, v4);
+    sub_1B00CCC(&PurchaseLogic_ReceiptContents_TypeInfo, v5);
+    sub_1B00CCC(&string_TypeInfo, v6);
+    sub_1B00CCC(&StringLiteral_20675/*"json"*/, v7);
+    sub_1B00CCC(&StringLiteral_10456/*"Payload"*/, v8);
+    sub_1B00CCC(&StringLiteral_22974/*"signature"*/, v9);
+    this = (PurchaseLogicAndroid_o *)sub_1B00CCC(&StringLiteral_1/*""*/, v10);
+    byte_48E2132 = 1;
   }
-  v35 = 0LL;
+  v38 = 0LL;
   value = 0LL;
-  v34 = 0LL;
+  v37 = 0LL;
   if ( !product )
-    goto LABEL_31;
+    goto LABEL_37;
   receipt_k__BackingField = product->fields._receipt_k__BackingField;
-  v5 = sub_B77694(PurchaseLogic_ReceiptContents_TypeInfo);
-  PurchaseLogic_ReceiptContents___ctor((PurchaseLogic_ReceiptContents_o *)v5, 0LL);
+  v12 = (PurchaseLogic_ReceiptContents_o *)sub_1B00F18(PurchaseLogic_ReceiptContents_TypeInfo);
+  PurchaseLogic_ReceiptContents___ctor(v12, v13);
   this = (PurchaseLogicAndroid_o *)UnityEngine_Purchasing_MiniJson__JsonDecode(receipt_k__BackingField, 0LL);
   if ( !this )
-    goto LABEL_31;
-  v6 = *(&System_Collections_Generic_Dictionary_string__object__TypeInfo->_2.bitflags2 + 1);
-  if ( *(&this->klass->_2.bitflags2 + 1) < (unsigned int)v6
-    || (System_Collections_Generic_Dictionary_string__object__c *)this->klass->_2.typeHierarchy[v6 - 1] != System_Collections_Generic_Dictionary_string__object__TypeInfo )
+    goto LABEL_37;
+  methodPtr_low = LOBYTE(System_Collections_Generic_Dictionary_string__object__TypeInfo->vtable._0_Equals.methodPtr);
+  if ( LOBYTE(this->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
+    || (System_Collections_Generic_Dictionary_string__object__c *)this->klass->_2.typeHierarchy[methodPtr_low - 1] != System_Collections_Generic_Dictionary_string__object__TypeInfo )
   {
-    goto LABEL_31;
+    goto LABEL_37;
   }
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
-    (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)this,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_10826/*"Payload"*/,
+  System_Collections_Generic_Dictionary_object__object___TryGetValue(
+    (System_Collections_Generic_Dictionary_object__object__o *)this,
+    (Il2CppObject *)StringLiteral_10456/*"Payload"*/,
     &value,
-    (const MethodInfo_2F7F3F8 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    (const MethodInfo_308F254 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
   if ( value )
-    v7 = (System_String_c *)value->klass == string_TypeInfo ? (System_String_o *)value : 0LL;
+    v15 = (System_String_c *)value->klass == string_TypeInfo ? (System_String_o *)value : 0LL;
   else
-    v7 = 0LL;
-  this = (PurchaseLogicAndroid_o *)UnityEngine_Purchasing_MiniJson__JsonDecode(v7, 0LL);
+    v15 = 0LL;
+  this = (PurchaseLogicAndroid_o *)UnityEngine_Purchasing_MiniJson__JsonDecode(v15, 0LL);
   if ( !this
-    || (v8 = this,
-        v9 = *(&System_Collections_Generic_Dictionary_string__object__TypeInfo->_2.bitflags2 + 1),
-        *(&this->klass->_2.bitflags2 + 1) < (unsigned int)v9)
-    || (System_Collections_Generic_Dictionary_string__object__c *)this->klass->_2.typeHierarchy[v9 - 1] != System_Collections_Generic_Dictionary_string__object__TypeInfo
-    || (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
-          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)this,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_20487/*"json"*/,
-          &v35,
-          (const MethodInfo_2F7F3F8 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__),
-        this = (PurchaseLogicAndroid_o *)System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
-                                           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v8,
-                                           (System_Xml_XmlQualifiedName_o *)StringLiteral_22597/*"signature"*/,
-                                           &v34,
-                                           (const MethodInfo_2F7F3F8 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__),
-        !v5) )
+    || (v16 = this,
+        v17 = LOBYTE(System_Collections_Generic_Dictionary_string__object__TypeInfo->vtable._0_Equals.methodPtr),
+        LOBYTE(this->klass->vtable._0_Equals.methodPtr) < (unsigned int)v17)
+    || (System_Collections_Generic_Dictionary_string__object__c *)this->klass->_2.typeHierarchy[v17 - 1] != System_Collections_Generic_Dictionary_string__object__TypeInfo
+    || (System_Collections_Generic_Dictionary_object__object___TryGetValue(
+          (System_Collections_Generic_Dictionary_object__object__o *)this,
+          (Il2CppObject *)StringLiteral_20675/*"json"*/,
+          &v38,
+          (const MethodInfo_308F254 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__),
+        this = (PurchaseLogicAndroid_o *)System_Collections_Generic_Dictionary_object__object___TryGetValue(
+                                           (System_Collections_Generic_Dictionary_object__object__o *)v16,
+                                           (Il2CppObject *)StringLiteral_22974/*"signature"*/,
+                                           &v37,
+                                           (const MethodInfo_308F254 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__),
+        !v12) )
   {
-LABEL_31:
-    sub_B7769C(this, product);
+LABEL_37:
+    sub_1B00F28(this, product);
   }
-  if ( v35 )
+  v20 = v38;
+  if ( v38 )
   {
-    if ( (System_String_c *)v35->klass == string_TypeInfo )
-      v16 = (System_Int32_array **)v35;
+    v21 = string_TypeInfo;
+    if ( (System_String_c *)v38->klass == string_TypeInfo )
+      v22 = v38;
     else
-      v16 = 0LL;
+      v22 = 0LL;
+    v12->fields.payloadJsonStr = (struct System_String_o *)v22;
+    p_fields = (ServantStatusBattleListViewItem_o *)&v12->fields;
+    if ( (System_String_c *)v20->klass == v21 )
+      v24 = (int)v20;
+    else
+      v24 = 0;
   }
   else
   {
-    v16 = 0LL;
+    v24 = 0;
+    v12->fields.payloadJsonStr = 0LL;
+    p_fields = (ServantStatusBattleListViewItem_o *)&v12->fields;
   }
-  *(_QWORD *)(v5 + 16) = v16;
-  sub_B77560((BattleServantConfConponent_o *)(v5 + 16), v16, v10, v11, v12, v13, v14, v15);
-  if ( v34 )
+  sub_1B00C70(p_fields, v24, v18, v19);
+  v27 = v37;
+  if ( v37 )
   {
-    if ( (System_String_c *)v34->klass == string_TypeInfo )
-      v23 = (System_Int32_array **)v34;
+    v28 = string_TypeInfo;
+    if ( (System_String_c *)v37->klass == string_TypeInfo )
+      v29 = v37;
     else
-      v23 = 0LL;
+      v29 = 0LL;
+    v12->fields.googleSignatureStr = (struct System_String_o *)v29;
+    p_googleSignatureStr = (ServantStatusBattleListViewItem_o *)&v12->fields.googleSignatureStr;
+    if ( (System_String_c *)v27->klass == v28 )
+      v31 = (int)v27;
+    else
+      v31 = 0;
   }
   else
   {
-    v23 = 0LL;
+    v31 = 0;
+    v12->fields.googleSignatureStr = 0LL;
+    p_googleSignatureStr = (ServantStatusBattleListViewItem_o *)&v12->fields.googleSignatureStr;
   }
-  *(_QWORD *)(v5 + 24) = v23;
-  v24 = (_QWORD *)(v5 + 24);
-  sub_B77560((BattleServantConfConponent_o *)(v5 + 24), v23, v17, v18, v19, v20, v21, v22);
-  if ( !*(_QWORD *)(v5 + 16) )
+  sub_1B00C70(p_googleSignatureStr, v31, v25, v26);
+  if ( !p_fields->klass )
   {
-    v31 = (System_Int32_array **)StringLiteral_1/*""*/;
-    *(_QWORD *)(v5 + 16) = StringLiteral_1/*""*/;
-    sub_B77560((BattleServantConfConponent_o *)(v5 + 16), v31, v25, v26, v27, v28, v29, v30);
+    v34 = (int)StringLiteral_1/*""*/;
+    p_fields->klass = (ServantStatusBattleListViewItem_c *)StringLiteral_1/*""*/;
+    sub_1B00C70(p_fields, v34, v32, v33);
   }
-  if ( !*v24 )
+  if ( !p_googleSignatureStr->klass )
   {
-    v32 = (System_Int32_array **)StringLiteral_1/*""*/;
-    *v24 = StringLiteral_1/*""*/;
-    sub_B77560((BattleServantConfConponent_o *)(v5 + 24), v32, v25, v26, v27, v28, v29, v30);
+    v35 = (int)StringLiteral_1/*""*/;
+    p_googleSignatureStr->klass = (ServantStatusBattleListViewItem_c *)StringLiteral_1/*""*/;
+    sub_1B00C70(p_googleSignatureStr, v35, v32, v33);
   }
-  return (PurchaseLogic_ReceiptContents_o *)v5;
+  return v12;
 }
 
 
@@ -333,14 +351,13 @@ System_String_o *__fastcall PurchaseLogicAndroid__GetCachedObfuscatedAccountId(
 {
   PurchaseLogicAndroid_c *v2; // x0
 
-  if ( (byte_438B645 & 1) == 0 )
+  if ( (byte_48E2133 & 1) == 0 )
   {
-    sub_B775C4(&PurchaseLogicAndroid_TypeInfo);
-    byte_438B645 = 1;
+    sub_1B00CCC(&PurchaseLogicAndroid_TypeInfo, method);
+    byte_48E2133 = 1;
   }
   v2 = PurchaseLogicAndroid_TypeInfo;
-  if ( (BYTE3(PurchaseLogicAndroid_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
+  if ( !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(PurchaseLogicAndroid_TypeInfo);
     v2 = PurchaseLogicAndroid_TypeInfo;
@@ -354,53 +371,54 @@ UnityEngine_Purchasing_ConfigurationBuilder_o *__fastcall PurchaseLogicAndroid__
         const MethodInfo *method)
 {
   Il2CppObject *v2; // x22
-  UnityEngine_Purchasing_ConfigurationBuilder_o *ConfigurationBuilder; // x0
+  __int64 v3; // x1
   __int64 v4; // x1
-  UnityEngine_Purchasing_ConfigurationBuilder_o *v5; // x19
-  Il2CppObject *v6; // x20
-  UnityEngine_Purchasing_ConfigurationBuilder_o *v7; // x21
+  UnityEngine_Purchasing_ConfigurationBuilder_o *ConfigurationBuilder; // x0
+  __int64 v6; // x1
+  UnityEngine_Purchasing_ConfigurationBuilder_o *v7; // x19
+  Il2CppObject *v8; // x20
+  UnityEngine_Purchasing_ConfigurationBuilder_o *v9; // x21
   Il2CppClass *klass; // x8
-  unsigned __int64 v9; // x10
-  int32_t *p_offset; // x11
+  __int64 v11; // x9
+  int32_t *p_offset; // x10
   __int64 p_method; // x0
 
   v2 = (Il2CppObject *)this;
-  if ( (byte_438B643 & 1) == 0 )
+  if ( (byte_48E2131 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Action_Product___ctor__);
-    sub_B775C4(&System_Action_Product__TypeInfo);
-    sub_B775C4(&Method_UnityEngine_Purchasing_ConfigurationBuilder_Configure_IGooglePlayConfiguration___);
-    this = (PurchaseLogicAndroid_o *)sub_B775C4(&UnityEngine_Purchasing_IGooglePlayConfiguration_TypeInfo);
-    byte_438B643 = 1;
+    sub_1B00CCC(&System_Action_Product__TypeInfo, method);
+    sub_1B00CCC(&Method_UnityEngine_Purchasing_ConfigurationBuilder_Configure_IGooglePlayConfiguration___, v3);
+    this = (PurchaseLogicAndroid_o *)sub_1B00CCC(&UnityEngine_Purchasing_IGooglePlayConfiguration_TypeInfo, v4);
+    byte_48E2131 = 1;
   }
   ConfigurationBuilder = PurchaseLogic__GetConfigurationBuilder((PurchaseLogic_o *)this, method);
   if ( !ConfigurationBuilder
-    || (v5 = ConfigurationBuilder,
-        v6 = UnityEngine_Purchasing_ConfigurationBuilder__Configure_object_(
-               ConfigurationBuilder,
-               (const MethodInfo_1C6E034 *)Method_UnityEngine_Purchasing_ConfigurationBuilder_Configure_IGooglePlayConfiguration___),
-        ConfigurationBuilder = (UnityEngine_Purchasing_ConfigurationBuilder_o *)sub_B77694(System_Action_Product__TypeInfo),
-        !v2)
     || (v7 = ConfigurationBuilder,
-        System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData____ctor(
-          (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)ConfigurationBuilder,
+        v8 = UnityEngine_Purchasing_ConfigurationBuilder__Configure_object_(
+               ConfigurationBuilder,
+               (const MethodInfo_2D5B0F8 *)Method_UnityEngine_Purchasing_ConfigurationBuilder_Configure_IGooglePlayConfiguration___),
+        ConfigurationBuilder = (UnityEngine_Purchasing_ConfigurationBuilder_o *)sub_1B00F18(System_Action_Product__TypeInfo),
+        !v2)
+    || (v9 = ConfigurationBuilder,
+        System_Action_object____ctor(
+          (System_Action_object__o *)ConfigurationBuilder,
           v2,
           (intptr_t)v2->klass->vtable[26].methodPtr,
-          (const MethodInfo_26A0868 *)Method_System_Action_Product___ctor__),
-        !v6) )
+          0LL),
+        !v8) )
   {
-    sub_B7769C(ConfigurationBuilder, v4);
+    sub_1B00F28(ConfigurationBuilder, v6);
   }
-  klass = v6->klass;
-  if ( *(_WORD *)&v6->klass->_2.bitflags1 )
+  klass = v8->klass;
+  v11 = *(unsigned __int16 *)(&v8->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v8->klass->_2.bitflags2 + 3) )
   {
-    v9 = 0LL;
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((UnityEngine_Purchasing_IGooglePlayConfiguration_c **)p_offset - 1) != UnityEngine_Purchasing_IGooglePlayConfiguration_TypeInfo )
     {
-      ++v9;
+      --v11;
       p_offset += 4;
-      if ( v9 >= *(unsigned __int16 *)&v6->klass->_2.bitflags1 )
+      if ( !v11 )
         goto LABEL_10;
     }
     p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -408,13 +426,13 @@ UnityEngine_Purchasing_ConfigurationBuilder_o *__fastcall PurchaseLogicAndroid__
   else
   {
 LABEL_10:
-    p_method = sub_B0F4C0(v6, UnityEngine_Purchasing_IGooglePlayConfiguration_TypeInfo, 0LL);
+    p_method = sub_1B52CAC(v8, UnityEngine_Purchasing_IGooglePlayConfiguration_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(Il2CppObject *, UnityEngine_Purchasing_ConfigurationBuilder_o *, _QWORD))p_method)(
-    v6,
-    v7,
+    v8,
+    v9,
     *(_QWORD *)(p_method + 8));
-  return v5;
+  return v7;
 }
 
 
@@ -424,14 +442,13 @@ bool __fastcall PurchaseLogicAndroid__IsAlreadyInitializedWithObfuscatedAccountI
 {
   PurchaseLogicAndroid_c *v2; // x0
 
-  if ( (byte_438B649 & 1) == 0 )
+  if ( (byte_48E2137 & 1) == 0 )
   {
-    sub_B775C4(&PurchaseLogicAndroid_TypeInfo);
-    byte_438B649 = 1;
+    sub_1B00CCC(&PurchaseLogicAndroid_TypeInfo, method);
+    byte_48E2137 = 1;
   }
   v2 = PurchaseLogicAndroid_TypeInfo;
-  if ( (BYTE3(PurchaseLogicAndroid_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
+  if ( !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(PurchaseLogicAndroid_TypeInfo);
     v2 = PurchaseLogicAndroid_TypeInfo;
@@ -452,14 +469,13 @@ bool __fastcall PurchaseLogicAndroid__IsInitializedWithMismatchedObfuscatedAccou
 {
   PurchaseLogicAndroid_c *v2; // x0
 
-  if ( (byte_438B64B & 1) == 0 )
+  if ( (byte_48E2139 & 1) == 0 )
   {
-    sub_B775C4(&PurchaseLogicAndroid_TypeInfo);
-    byte_438B64B = 1;
+    sub_1B00CCC(&PurchaseLogicAndroid_TypeInfo, method);
+    byte_48E2139 = 1;
   }
   v2 = PurchaseLogicAndroid_TypeInfo;
-  if ( (BYTE3(PurchaseLogicAndroid_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
+  if ( !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(PurchaseLogicAndroid_TypeInfo);
     v2 = PurchaseLogicAndroid_TypeInfo;
@@ -474,14 +490,13 @@ bool __fastcall PurchaseLogicAndroid__IsObfuscatedAccountIdCached(
 {
   PurchaseLogicAndroid_c *v2; // x0
 
-  if ( (byte_438B648 & 1) == 0 )
+  if ( (byte_48E2136 & 1) == 0 )
   {
-    sub_B775C4(&PurchaseLogicAndroid_TypeInfo);
-    byte_438B648 = 1;
+    sub_1B00CCC(&PurchaseLogicAndroid_TypeInfo, method);
+    byte_48E2136 = 1;
   }
   v2 = PurchaseLogicAndroid_TypeInfo;
-  if ( (BYTE3(PurchaseLogicAndroid_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
+  if ( !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(PurchaseLogicAndroid_TypeInfo);
     v2 = PurchaseLogicAndroid_TypeInfo;
@@ -510,6 +525,7 @@ void __fastcall PurchaseLogicAndroid__OnDeferred(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall PurchaseLogicAndroid__SetAlreadyInitializedWithObfuscatedAccountId(
         PurchaseLogicAndroid_o *this,
         bool isInitialized,
@@ -517,14 +533,13 @@ void __fastcall PurchaseLogicAndroid__SetAlreadyInitializedWithObfuscatedAccount
 {
   PurchaseLogicAndroid_c *v4; // x0
 
-  if ( (byte_438B64A & 1) == 0 )
+  if ( (byte_48E2138 & 1) == 0 )
   {
-    sub_B775C4(&PurchaseLogicAndroid_TypeInfo);
-    byte_438B64A = 1;
+    sub_1B00CCC(&PurchaseLogicAndroid_TypeInfo, isInitialized);
+    byte_48E2138 = 1;
   }
   v4 = PurchaseLogicAndroid_TypeInfo;
-  if ( (BYTE3(PurchaseLogicAndroid_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
+  if ( !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(PurchaseLogicAndroid_TypeInfo);
     v4 = PurchaseLogicAndroid_TypeInfo;
@@ -538,37 +553,28 @@ void __fastcall PurchaseLogicAndroid__SetCachedObfuscatedAccountId(
         System_String_o *obfuscatedAccountId,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  PurchaseLogicAndroid_c *v9; // x0
+  int32_t v3; // w3
+  PurchaseLogicAndroid_c *v5; // x0
   struct PurchaseLogicAndroid_StaticFields *static_fields; // x0
 
-  if ( (byte_438B647 & 1) == 0 )
+  if ( (byte_48E2135 & 1) == 0 )
   {
-    sub_B775C4(&PurchaseLogicAndroid_TypeInfo);
-    byte_438B647 = 1;
+    sub_1B00CCC(&PurchaseLogicAndroid_TypeInfo, obfuscatedAccountId);
+    byte_48E2135 = 1;
   }
-  v9 = PurchaseLogicAndroid_TypeInfo;
-  if ( (BYTE3(PurchaseLogicAndroid_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
+  v5 = PurchaseLogicAndroid_TypeInfo;
+  if ( !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(PurchaseLogicAndroid_TypeInfo);
-    v9 = PurchaseLogicAndroid_TypeInfo;
+    v5 = PurchaseLogicAndroid_TypeInfo;
   }
-  static_fields = v9->static_fields;
+  static_fields = v5->static_fields;
   static_fields->_cachedObfuscatedAccountId = obfuscatedAccountId;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&static_fields->_cachedObfuscatedAccountId,
-    (System_Int32_array **)obfuscatedAccountId,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&static_fields->_cachedObfuscatedAccountId,
+    (int32_t)obfuscatedAccountId,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -581,6 +587,7 @@ void __fastcall PurchaseLogicAndroid__SetExistsDeferredPurchase(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall PurchaseLogicAndroid__SetInitializedWithMismatchedObfuscatedAccountId(
         PurchaseLogicAndroid_o *this,
         bool isMismatched,
@@ -588,14 +595,13 @@ void __fastcall PurchaseLogicAndroid__SetInitializedWithMismatchedObfuscatedAcco
 {
   PurchaseLogicAndroid_c *v4; // x0
 
-  if ( (byte_438B64C & 1) == 0 )
+  if ( (byte_48E213A & 1) == 0 )
   {
-    sub_B775C4(&PurchaseLogicAndroid_TypeInfo);
-    byte_438B64C = 1;
+    sub_1B00CCC(&PurchaseLogicAndroid_TypeInfo, isMismatched);
+    byte_48E213A = 1;
   }
   v4 = PurchaseLogicAndroid_TypeInfo;
-  if ( (BYTE3(PurchaseLogicAndroid_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
+  if ( !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(PurchaseLogicAndroid_TypeInfo);
     v4 = PurchaseLogicAndroid_TypeInfo;
@@ -609,93 +615,110 @@ void __fastcall PurchaseLogicAndroid__SetObfuscatedAccountId(
         UnityEngine_Purchasing_ConfigurationBuilder_o *builder,
         const MethodInfo *method)
 {
-  PurchaseLogicAndroid_c *v5; // x0
-  System_String_o *cachedObfuscatedAccountId; // x20
-  System_Uri_o *IsNullOrEmpty; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
   __int64 v8; // x1
+  __int64 v9; // x1
+  PurchaseLogicAndroid_c *v10; // x0
+  System_String_o *cachedObfuscatedAccountId; // x21
+  System_String_o *IsNullOrEmpty; // x0
+  __int64 v13; // x1
   struct System_Action_string__o *logErrorOutputAction; // x19
-  System_String_o *v10; // x1
-  System_Uri_c *klass; // x8
-  System_Uri_o *v12; // x19
-  unsigned __int64 v13; // x10
-  UnityEngine_Purchasing_IGooglePlayConfiguration_c **p_offset; // x11
-  __int64 v15; // x0
+  System_String_o *v15; // x1
+  System_String_o *v16; // x1
+  Il2CppObject *m_target; // x3
+  struct System_Reflection_MethodInfo_o *original_method_info; // x0
+  __int64 v19; // x2
+  System_String_c *klass; // x8
+  struct System_Reflection_MethodInfo_o *v21; // x19
+  __int64 v22; // x9
+  UnityEngine_Purchasing_IGooglePlayConfiguration_c **p_offset; // x10
+  __int64 v24; // x0
 
-  if ( (byte_438B646 & 1) == 0 )
+  if ( (byte_48E2134 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Action_string__Invoke__);
-    sub_B775C4(&Method_UnityEngine_Purchasing_ConfigurationBuilder_Configure_IGooglePlayConfiguration___);
-    sub_B775C4(&UnityEngine_Purchasing_IGooglePlayConfiguration_TypeInfo);
-    sub_B775C4(&StringLiteral_23371/*"unexpected obfuscatedAccountId:"*/);
-    sub_B775C4(&StringLiteral_652/*"(null)"*/);
-    byte_438B646 = 1;
+    sub_1B00CCC(&UnityEngine_Application_TypeInfo, builder);
+    sub_1B00CCC(&Method_UnityEngine_Purchasing_ConfigurationBuilder_Configure_IGooglePlayConfiguration___, v5);
+    sub_1B00CCC(&UnityEngine_Purchasing_IGooglePlayConfiguration_TypeInfo, v6);
+    sub_1B00CCC(&StringLiteral_23814/*"unexpected obfuscatedAccountId:"*/, v7);
+    sub_1B00CCC(&StringLiteral_791/*"(null)"*/, v8);
+    byte_48E2134 = 1;
   }
+  if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
   if ( UnityEngine_Application__get_platform(0LL) == 11 )
   {
-    if ( !byte_438B695 )
+    if ( !byte_48E21BC )
     {
-      sub_B775C4(&PurchaseLogicAndroid_TypeInfo);
-      byte_438B695 = 1;
+      sub_1B00CCC(&PurchaseLogicAndroid_TypeInfo, v9);
+      byte_48E21BC = 1;
     }
-    v5 = PurchaseLogicAndroid_TypeInfo;
-    if ( (BYTE3(PurchaseLogicAndroid_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
+    v10 = PurchaseLogicAndroid_TypeInfo;
+    if ( !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(PurchaseLogicAndroid_TypeInfo);
-      v5 = PurchaseLogicAndroid_TypeInfo;
+      v10 = PurchaseLogicAndroid_TypeInfo;
     }
-    cachedObfuscatedAccountId = v5->static_fields->_cachedObfuscatedAccountId;
-    IsNullOrEmpty = (System_Uri_o *)System_String__IsNullOrEmpty(cachedObfuscatedAccountId, 0LL);
+    cachedObfuscatedAccountId = v10->static_fields->_cachedObfuscatedAccountId;
+    IsNullOrEmpty = (System_String_o *)System_String__IsNullOrEmpty(cachedObfuscatedAccountId, 0LL);
     if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
     {
       logErrorOutputAction = this->fields._logErrorOutputAction;
       if ( cachedObfuscatedAccountId )
-        v10 = cachedObfuscatedAccountId;
+        v15 = cachedObfuscatedAccountId;
       else
-        v10 = (System_String_o *)StringLiteral_652/*"(null)"*/;
-      IsNullOrEmpty = (System_Uri_o *)System_String__Concat_44901936((System_String_o *)StringLiteral_23371/*"unexpected obfuscatedAccountId:"*/, v10, 0LL);
+        v15 = (System_String_o *)StringLiteral_791/*"(null)"*/;
+      IsNullOrEmpty = System_String__Concat_60325748((System_String_o *)StringLiteral_23814/*"unexpected obfuscatedAccountId:"*/, v15, 0LL);
       if ( logErrorOutputAction )
       {
-        System_Action_Uri___Invoke(
-          (System_Action_Uri__o *)logErrorOutputAction,
-          IsNullOrEmpty,
-          (const MethodInfo_26A087C *)Method_System_Action_string__Invoke__);
+        v16 = IsNullOrEmpty;
+        m_target = logErrorOutputAction->fields.m_target;
+        original_method_info = logErrorOutputAction->fields.original_method_info;
+        v19 = *(_QWORD *)&logErrorOutputAction->fields.extra_arg;
+LABEL_26:
+        ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, __int64))m_target)(
+          original_method_info,
+          v16,
+          v19);
         return;
       }
-LABEL_25:
-      sub_B7769C(IsNullOrEmpty, v8);
     }
-    if ( !builder )
-      goto LABEL_25;
-    IsNullOrEmpty = (System_Uri_o *)UnityEngine_Purchasing_ConfigurationBuilder__Configure_object_(
-                                      builder,
-                                      (const MethodInfo_1C6E034 *)Method_UnityEngine_Purchasing_ConfigurationBuilder_Configure_IGooglePlayConfiguration___);
-    if ( !IsNullOrEmpty )
-      goto LABEL_25;
-    klass = IsNullOrEmpty->klass;
-    v12 = IsNullOrEmpty;
-    if ( *(_WORD *)&IsNullOrEmpty->klass->_2.bitflags1 )
+    else if ( builder )
     {
-      v13 = 0LL;
-      p_offset = (UnityEngine_Purchasing_IGooglePlayConfiguration_c **)&klass->_1.interfaceOffsets->offset;
-      while ( *(p_offset - 1) != UnityEngine_Purchasing_IGooglePlayConfiguration_TypeInfo )
+      IsNullOrEmpty = (System_String_o *)UnityEngine_Purchasing_ConfigurationBuilder__Configure_object_(
+                                           builder,
+                                           (const MethodInfo_2D5B0F8 *)Method_UnityEngine_Purchasing_ConfigurationBuilder_Configure_IGooglePlayConfiguration___);
+      if ( IsNullOrEmpty )
       {
-        ++v13;
-        p_offset += 2;
-        if ( v13 >= *(unsigned __int16 *)&IsNullOrEmpty->klass->_2.bitflags1 )
-          goto LABEL_22;
+        klass = IsNullOrEmpty->klass;
+        v21 = (struct System_Reflection_MethodInfo_o *)IsNullOrEmpty;
+        v22 = *(unsigned __int16 *)(&IsNullOrEmpty->klass->_2.bitflags2 + 3);
+        if ( *(_WORD *)(&IsNullOrEmpty->klass->_2.bitflags2 + 3) )
+        {
+          p_offset = (UnityEngine_Purchasing_IGooglePlayConfiguration_c **)&klass->_1.interfaceOffsets->offset;
+          while ( *(p_offset - 1) != UnityEngine_Purchasing_IGooglePlayConfiguration_TypeInfo )
+          {
+            --v22;
+            p_offset += 2;
+            if ( !v22 )
+              goto LABEL_23;
+          }
+          v24 = (__int64)(&klass->vtable._1_Finalize.method + 2 * *(_DWORD *)p_offset);
+        }
+        else
+        {
+LABEL_23:
+          v24 = sub_1B52CAC(IsNullOrEmpty, UnityEngine_Purchasing_IGooglePlayConfiguration_TypeInfo, 1LL);
+        }
+        m_target = *(Il2CppObject **)v24;
+        v19 = *(_QWORD *)(v24 + 8);
+        original_method_info = v21;
+        v16 = cachedObfuscatedAccountId;
+        goto LABEL_26;
       }
-      v15 = (__int64)(&klass->vtable._1_Finalize.method + 2 * *(_DWORD *)p_offset);
     }
-    else
-    {
-LABEL_22:
-      v15 = sub_B0F4C0(IsNullOrEmpty, UnityEngine_Purchasing_IGooglePlayConfiguration_TypeInfo, 1LL);
-    }
-    (*(void (__fastcall **)(System_Uri_o *, System_String_o *, _QWORD))v15)(
-      v12,
-      cachedObfuscatedAccountId,
-      *(_QWORD *)(v15 + 8));
+    sub_1B00F28(IsNullOrEmpty, v13);
   }
 }
 

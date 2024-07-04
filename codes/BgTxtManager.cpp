@@ -6,15 +6,14 @@ void __fastcall BgTxtManager___ctor(BgTxtManager_o *this, const MethodInfo *meth
 
 bool __fastcall BgTxtManager__IsActiveBgTxt(const MethodInfo *method)
 {
-  if ( (byte_438A8F0 & 1) == 0 )
+  __int64 v1; // x1
+
+  if ( (byte_48E1CA9 & 1) == 0 )
   {
-    sub_B775C4(&ServantCommentManager_TypeInfo);
-    byte_438A8F0 = 1;
+    sub_1B00CCC(&ServantCommentManager_TypeInfo, v1);
+    byte_48E1CA9 = 1;
   }
-  if ( (BYTE3(ServantCommentManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ServantCommentManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !ServantCommentManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantCommentManager_TypeInfo);
-  }
   return ServantCommentManager__GetUiFlag(0LL) != 1;
 }

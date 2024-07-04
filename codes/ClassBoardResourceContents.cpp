@@ -9,22 +9,14 @@ void __fastcall ClassBoardResourceContents__SetBoardUIAtlas(
         AtlasManagerUnit_o *boardUiAtlasManagerUnit,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = boardUiAtlasManagerUnit;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
-    (System_Int32_array **)boardUiAtlasManagerUnit,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
+    (int32_t)boardUiAtlasManagerUnit,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -36,67 +28,21 @@ void __fastcall ClassBoardResourceContents__SetContents(
         ClassBoardBlank_o *blank,
         const MethodInfo *method)
 {
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  System_String_array **v12; // x2
-  System_String_array **v13; // x3
-  System_Boolean_array **v14; // x4
-  System_Int32_array **v15; // x5
-  System_Int32_array *v16; // x6
-  System_Int32_array *v17; // x7
-  System_String_array **v18; // x2
-  System_String_array **v19; // x3
-  System_Boolean_array **v20; // x4
-  System_Int32_array **v21; // x5
-  System_Int32_array *v22; // x6
-  System_Int32_array *v23; // x7
-  System_String_array **v24; // x2
-  System_String_array **v25; // x3
-  System_Boolean_array **v26; // x4
-  System_Int32_array **v27; // x5
-  System_Int32_array *v28; // x6
-  System_Int32_array *v29; // x7
+  int32_t v10; // w2
+  int32_t v11; // w3
+  int32_t v12; // w2
+  int32_t v13; // w3
+  int32_t v14; // w2
+  int32_t v15; // w3
 
   this->fields._Square_k__BackingField = square;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields,
-    (System_Int32_array **)square,
-    (System_String_array **)line,
-    (System_String_array **)lockAsset,
-    (System_Boolean_array **)blank,
-    (System_Int32_array **)method,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)square, (int32_t)line, (int32_t)lockAsset);
   this->fields._Line_k__BackingField = line;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._Line_k__BackingField,
-    (System_Int32_array **)line,
-    v12,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields._Line_k__BackingField, (int32_t)line, v10, v11);
   this->fields._Lock_k__BackingField = lockAsset;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._Lock_k__BackingField,
-    (System_Int32_array **)lockAsset,
-    v18,
-    v19,
-    v20,
-    v21,
-    v22,
-    v23);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields._Lock_k__BackingField, (int32_t)lockAsset, v12, v13);
   this->fields._Blank_k__BackingField = blank;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._Blank_k__BackingField,
-    (System_Int32_array **)blank,
-    v24,
-    v25,
-    v26,
-    v27,
-    v28,
-    v29);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields._Blank_k__BackingField, (int32_t)blank, v14, v15);
 }
 
 
@@ -105,22 +51,14 @@ void __fastcall ClassBoardResourceContents__SetContentsBgModel(
         ClassBoardBackground_o *bgModel,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._BgModel_k__BackingField = bgModel;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._BgModel_k__BackingField,
-    (System_Int32_array **)bgModel,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._BgModel_k__BackingField,
+    (int32_t)bgModel,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -129,22 +67,14 @@ void __fastcall ClassBoardResourceContents__SetContentsBoardSelectView(
         UnityEngine_GameObject_o *boardSelectViewPrefab,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._BoardSelectViewPrefab_k__BackingField = boardSelectViewPrefab;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._BoardSelectViewPrefab_k__BackingField,
-    (System_Int32_array **)boardSelectViewPrefab,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._BoardSelectViewPrefab_k__BackingField,
+    (int32_t)boardSelectViewPrefab,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -157,82 +87,45 @@ void __fastcall ClassBoardResourceContents__SetContentsDialog(
         ClassBoardSquareDetailDialog_o *classBoardSquareDetailDialog,
         const MethodInfo *method)
 {
-  System_Int32_array *v7; // x7
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
-  System_String_array **v19; // x2
-  System_String_array **v20; // x3
-  System_Boolean_array **v21; // x4
-  System_Int32_array **v22; // x5
-  System_Int32_array *v23; // x6
-  System_Int32_array *v24; // x7
-  System_String_array **v25; // x2
-  System_String_array **v26; // x3
-  System_Boolean_array **v27; // x4
-  System_Int32_array **v28; // x5
-  System_Int32_array *v29; // x6
-  System_Int32_array *v30; // x7
-  System_String_array **v31; // x2
-  System_String_array **v32; // x3
-  System_Boolean_array **v33; // x4
-  System_Int32_array **v34; // x5
-  System_Int32_array *v35; // x6
-  System_Int32_array *v36; // x7
+  int32_t v12; // w2
+  int32_t v13; // w3
+  int32_t v14; // w2
+  int32_t v15; // w3
+  int32_t v16; // w2
+  int32_t v17; // w3
+  int32_t v18; // w2
+  int32_t v19; // w3
 
   this->fields._DisableOpenDialog_k__BackingField = classBoardDisableOpenDialog;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._DisableOpenDialog_k__BackingField,
-    (System_Int32_array **)classBoardDisableOpenDialog,
-    (System_String_array **)classBoardSquareOpenConfirmDialog,
-    (System_String_array **)classBoardLockOpenConfirmDialog,
-    (System_Boolean_array **)classBoardLockReleaseConditionDialog,
-    (System_Int32_array **)classBoardSquareDetailDialog,
-    (System_Int32_array *)method,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._DisableOpenDialog_k__BackingField,
+    (int32_t)classBoardDisableOpenDialog,
+    (int32_t)classBoardSquareOpenConfirmDialog,
+    (int32_t)classBoardLockOpenConfirmDialog);
   this->fields._SquareOpenConfirmDialog_k__BackingField = classBoardSquareOpenConfirmDialog;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._SquareOpenConfirmDialog_k__BackingField,
-    (System_Int32_array **)classBoardSquareOpenConfirmDialog,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._SquareOpenConfirmDialog_k__BackingField,
+    (int32_t)classBoardSquareOpenConfirmDialog,
+    v12,
+    v13);
   this->fields._LockOpenConfirmDialog_k__BackingField = classBoardLockOpenConfirmDialog;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._LockOpenConfirmDialog_k__BackingField,
-    (System_Int32_array **)classBoardLockOpenConfirmDialog,
-    v19,
-    v20,
-    v21,
-    v22,
-    v23,
-    v24);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._LockOpenConfirmDialog_k__BackingField,
+    (int32_t)classBoardLockOpenConfirmDialog,
+    v14,
+    v15);
   this->fields._LockReleaseConditionDialog_k__BackingField = classBoardLockReleaseConditionDialog;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._LockReleaseConditionDialog_k__BackingField,
-    (System_Int32_array **)classBoardLockReleaseConditionDialog,
-    v25,
-    v26,
-    v27,
-    v28,
-    v29,
-    v30);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._LockReleaseConditionDialog_k__BackingField,
+    (int32_t)classBoardLockReleaseConditionDialog,
+    v16,
+    v17);
   this->fields._SquareDetailDialog_k__BackingField = classBoardSquareDetailDialog;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._SquareDetailDialog_k__BackingField,
-    (System_Int32_array **)classBoardSquareDetailDialog,
-    v31,
-    v32,
-    v33,
-    v34,
-    v35,
-    v36);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._SquareDetailDialog_k__BackingField,
+    (int32_t)classBoardSquareDetailDialog,
+    v18,
+    v19);
 }
 
 
@@ -241,22 +134,14 @@ void __fastcall ClassBoardResourceContents__SetContentsForwardIconAnimObject(
         UnityEngine_GameObject_o *prefab,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._ForwardIconAnimObjectPrefab_k__BackingField = prefab;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._ForwardIconAnimObjectPrefab_k__BackingField,
-    (System_Int32_array **)prefab,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._ForwardIconAnimObjectPrefab_k__BackingField,
+    (int32_t)prefab,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -268,67 +153,37 @@ void __fastcall ClassBoardResourceContents__SetContentsUI(
         AtlasManagerUnit_o *classUiAtlasManagerUnit,
         const MethodInfo *method)
 {
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  System_String_array **v12; // x2
-  System_String_array **v13; // x3
-  System_Boolean_array **v14; // x4
-  System_Int32_array **v15; // x5
-  System_Int32_array *v16; // x6
-  System_Int32_array *v17; // x7
-  System_String_array **v18; // x2
-  System_String_array **v19; // x3
-  System_Boolean_array **v20; // x4
-  System_Int32_array **v21; // x5
-  System_Int32_array *v22; // x6
-  System_Int32_array *v23; // x7
-  System_String_array **v24; // x2
-  System_String_array **v25; // x3
-  System_Boolean_array **v26; // x4
-  System_Int32_array **v27; // x5
-  System_Int32_array *v28; // x6
-  System_Int32_array *v29; // x7
+  int32_t v10; // w2
+  int32_t v11; // w3
+  int32_t v12; // w2
+  int32_t v13; // w3
+  int32_t v14; // w2
+  int32_t v15; // w3
 
   this->fields._BoardUiController_k__BackingField = uiController;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._BoardUiController_k__BackingField,
-    (System_Int32_array **)uiController,
-    (System_String_array **)boardUiAtlasManagerUnit,
-    (System_String_array **)iconAtlasManagerUnit,
-    (System_Boolean_array **)classUiAtlasManagerUnit,
-    (System_Int32_array **)method,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._BoardUiController_k__BackingField,
+    (int32_t)uiController,
+    (int32_t)boardUiAtlasManagerUnit,
+    (int32_t)iconAtlasManagerUnit);
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = boardUiAtlasManagerUnit;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
-    (System_Int32_array **)boardUiAtlasManagerUnit,
-    v12,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
+    (int32_t)boardUiAtlasManagerUnit,
+    v10,
+    v11);
   this->fields._IconAtlasManagerUnit_k__BackingField = iconAtlasManagerUnit;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._IconAtlasManagerUnit_k__BackingField,
-    (System_Int32_array **)iconAtlasManagerUnit,
-    v18,
-    v19,
-    v20,
-    v21,
-    v22,
-    v23);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._IconAtlasManagerUnit_k__BackingField,
+    (int32_t)iconAtlasManagerUnit,
+    v12,
+    v13);
   this->fields._ClassUiAtlasManagerUnit_k__BackingField = classUiAtlasManagerUnit;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._ClassUiAtlasManagerUnit_k__BackingField,
-    (System_Int32_array **)classUiAtlasManagerUnit,
-    v24,
-    v25,
-    v26,
-    v27,
-    v28,
-    v29);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._ClassUiAtlasManagerUnit_k__BackingField,
+    (int32_t)classUiAtlasManagerUnit,
+    v14,
+    v15);
 }
 
 
@@ -465,22 +320,14 @@ void __fastcall ClassBoardResourceContents__set_BgModel(
         ClassBoardBackground_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._BgModel_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._BgModel_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._BgModel_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -489,22 +336,14 @@ void __fastcall ClassBoardResourceContents__set_Blank(
         ClassBoardBlank_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._Blank_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._Blank_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._Blank_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -513,22 +352,14 @@ void __fastcall ClassBoardResourceContents__set_BoardSelectViewPrefab(
         UnityEngine_GameObject_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._BoardSelectViewPrefab_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._BoardSelectViewPrefab_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._BoardSelectViewPrefab_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -537,22 +368,14 @@ void __fastcall ClassBoardResourceContents__set_BoardUiAtlasManagerUnit(
         AtlasManagerUnit_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -561,22 +384,14 @@ void __fastcall ClassBoardResourceContents__set_BoardUiController(
         ClassBoardUIController_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._BoardUiController_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._BoardUiController_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._BoardUiController_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -585,22 +400,14 @@ void __fastcall ClassBoardResourceContents__set_ClassUiAtlasManagerUnit(
         AtlasManagerUnit_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._ClassUiAtlasManagerUnit_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._ClassUiAtlasManagerUnit_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._ClassUiAtlasManagerUnit_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -609,22 +416,14 @@ void __fastcall ClassBoardResourceContents__set_DisableOpenDialog(
         ClassBoardDisableOpenDialog_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._DisableOpenDialog_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._DisableOpenDialog_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._DisableOpenDialog_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -633,22 +432,14 @@ void __fastcall ClassBoardResourceContents__set_ForwardIconAnimObjectPrefab(
         UnityEngine_GameObject_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._ForwardIconAnimObjectPrefab_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._ForwardIconAnimObjectPrefab_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._ForwardIconAnimObjectPrefab_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -657,22 +448,14 @@ void __fastcall ClassBoardResourceContents__set_IconAtlasManagerUnit(
         AtlasManagerUnit_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._IconAtlasManagerUnit_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._IconAtlasManagerUnit_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._IconAtlasManagerUnit_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -681,22 +464,14 @@ void __fastcall ClassBoardResourceContents__set_Line(
         ClassBoardLine_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._Line_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._Line_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._Line_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -705,22 +480,14 @@ void __fastcall ClassBoardResourceContents__set_Lock(
         ClassBoardLock_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._Lock_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._Lock_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._Lock_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -729,22 +496,14 @@ void __fastcall ClassBoardResourceContents__set_LockOpenConfirmDialog(
         ClassBoardLockOpenConfirmDialog_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._LockOpenConfirmDialog_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._LockOpenConfirmDialog_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._LockOpenConfirmDialog_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -753,22 +512,14 @@ void __fastcall ClassBoardResourceContents__set_LockReleaseConditionDialog(
         ClassBoardLockReleaseConditionDialog_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._LockReleaseConditionDialog_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._LockReleaseConditionDialog_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._LockReleaseConditionDialog_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -777,22 +528,10 @@ void __fastcall ClassBoardResourceContents__set_Square(
         ClassBoardSquare_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._Square_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -801,22 +540,14 @@ void __fastcall ClassBoardResourceContents__set_SquareDetailDialog(
         ClassBoardSquareDetailDialog_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._SquareDetailDialog_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._SquareDetailDialog_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._SquareDetailDialog_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -825,20 +556,12 @@ void __fastcall ClassBoardResourceContents__set_SquareOpenConfirmDialog(
         ClassBoardSquareOpenConfirmDialog_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._SquareOpenConfirmDialog_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._SquareOpenConfirmDialog_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._SquareOpenConfirmDialog_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }

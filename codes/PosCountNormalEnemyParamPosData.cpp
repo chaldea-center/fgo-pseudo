@@ -2,7 +2,7 @@ void __fastcall PosCountNormalEnemyParamPosData___ctor(
         PosCountNormalEnemyParamPosData_o *this,
         const MethodInfo *method)
 {
-  BaseEnemyParamPosData___ctor((BaseEnemyParamPosData_o *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 

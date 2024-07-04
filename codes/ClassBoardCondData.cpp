@@ -11,49 +11,57 @@ void __fastcall ClassBoardCondData___ctor(
 }
 
 
-void __fastcall ClassBoardCondData___ctor_27357128(ClassBoardCondData_o this, int32_t lockId, const MethodInfo *method)
+// local variable allocation has failed, the output may be wrong!
+void __fastcall ClassBoardCondData___ctor_43046792(ClassBoardCondData_o this, int32_t lockId, const MethodInfo *method)
 {
   int32_t Num; // w20
   _DWORD *v4; // x19
-  DataMasterBase_WarMaster__WarEntity__int__o *Master_WarQuestSelectionMaster; // x0
+  __int64 v5; // x1
   __int64 v6; // x1
-  int seriazlier_high; // w8
+  Il2CppObject *Master_object; // x0
+  __int64 v8; // x1
+  int klass_high; // w8
+  int klass; // w9
+  int monitor; // w10
 
   Num = this.fields.Num;
   v4 = *(_DWORD **)&this.fields.Type;
-  if ( (byte_438C41A & 1) == 0 )
+  if ( (byte_48E5A88 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMaster_ClassBoardLockMaster___);
-    sub_B775C4(&DataManager_TypeInfo);
-    sub_B775C4(&Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__);
-    byte_438C41A = 1;
+    sub_1B00CCC(&Method_DataManager_GetMaster_ClassBoardLockMaster___, *(_QWORD *)&this.fields.Num);
+    sub_1B00CCC(&DataManager_TypeInfo, v5);
+    sub_1B00CCC(&Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__, v6);
+    byte_48E5A88 = 1;
   }
-  if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ClassBoardLockMaster___);
-  if ( !Master_WarQuestSelectionMaster
-    || (Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-                                                                                          Master_WarQuestSelectionMaster,
-                                                                                          Num,
-                                                                                          (const MethodInfo_21FB894 *)Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__)) == 0LL )
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_ClassBoardLockMaster___);
+  if ( !Master_object
+    || (Master_object = DataMasterBase_object__object__int___GetEntity(
+                          (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
+                          Num,
+                          (const MethodInfo_2FE6A4C *)Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__)) == 0LL )
   {
-    sub_B7769C(Master_WarQuestSelectionMaster, v6);
+    sub_1B00F28(Master_object, v8);
   }
-  seriazlier_high = HIDWORD(Master_WarQuestSelectionMaster->fields.seriazlier);
-  if ( seriazlier_high )
+  klass_high = HIDWORD(Master_object[3].klass);
+  if ( klass_high )
   {
-    *v4 = Master_WarQuestSelectionMaster->fields.seriazlier;
-    v4[1] = HIDWORD(Master_WarQuestSelectionMaster->fields.seriazlier);
-    seriazlier_high = (int)Master_WarQuestSelectionMaster->fields.sb;
+    klass = (int)Master_object[3].klass;
+    monitor = (int)Master_object[3].monitor;
   }
   else
   {
-    *(_QWORD *)v4 = 0LL;
+    klass = 0;
+    monitor = 0;
   }
-  v4[2] = seriazlier_high;
+  *v4 = klass;
+  v4[1] = klass_high;
+  v4[2] = monitor;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall ClassBoardCondData__IsOpen(ClassBoardCondData_o this, const MethodInfo *method)
 {
   int32_t *v2; // x19
@@ -62,15 +70,15 @@ bool __fastcall ClassBoardCondData__IsOpen(ClassBoardCondData_o this, const Meth
   int64_t v5; // x19
 
   v2 = *(int32_t **)&this.fields.Type;
-  if ( (byte_438C41B & 1) == 0 )
+  if ( (byte_48E5A89 & 1) == 0 )
   {
-    sub_B775C4(&CondType_TypeInfo);
-    byte_438C41B = 1;
+    sub_1B00CCC(&CondType_TypeInfo, *(_QWORD *)&this.fields.Num);
+    byte_48E5A89 = 1;
   }
   v4 = *v2;
   v3 = v2[1];
   v5 = v2[2];
-  if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
+  if ( !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
   return CondType__IsOpen(v4, v3, v5, 0, 0LL);
 }

@@ -1,9 +1,11 @@
 void __fastcall EventInfoTipsArchiveListViewItemDraw___cctor(const MethodInfo *method)
 {
-  if ( (byte_438C5E3 & 1) == 0 )
+  __int64 v1; // x1
+
+  if ( (byte_48E4088 & 1) == 0 )
   {
-    sub_B775C4(&EventInfoTipsArchiveListViewItemDraw_TypeInfo);
-    byte_438C5E3 = 1;
+    sub_1B00CCC(&EventInfoTipsArchiveListViewItemDraw_TypeInfo, v1);
+    byte_48E4088 = 1;
   }
   EventInfoTipsArchiveListViewItemDraw_TypeInfo->static_fields->DEFAULT_FRAME_SIZE_HEIGHT = 200;
 }
@@ -36,24 +38,21 @@ UnityEngine_BoxCollider_o *__fastcall EventInfoTipsArchiveListViewItemDraw__GetF
   UnityEngine_BoxCollider_o *result; // x0
   struct EventInfoTipsArchiveListViewItemDrawSub_o *v7; // x8
 
-  if ( (byte_438C5E2 & 1) == 0 )
+  if ( (byte_48E4087 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438C5E2 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    byte_48E4087 = 1;
   }
   currentSubDrawObject = (UnityEngine_Object_o *)this->fields.currentSubDrawObject;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   v5 = UnityEngine_Object__op_Inequality(currentSubDrawObject, 0LL, 0LL);
   result = 0LL;
   if ( v5 )
   {
     v7 = this->fields.currentSubDrawObject;
     if ( !v7 )
-      sub_B7769C(0LL, v4);
+      sub_1B00F28(0LL, v4);
     return v7->fields.frameCollider;
   }
   return result;
@@ -64,40 +63,37 @@ int32_t __fastcall EventInfoTipsArchiveListViewItemDraw__GetHeight(
         EventInfoTipsArchiveListViewItemDraw_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_Object_o *currentSubDrawObject; // x20
-  const MethodInfo *v4; // x1
-  EventInfoTipsArchiveListViewItemDrawSub_o *v5; // x0
-  EventInfoTipsArchiveListViewItemDraw_c *v7; // x0
+  const MethodInfo *v5; // x1
+  EventInfoTipsArchiveListViewItemDrawSub_o *v6; // x0
+  EventInfoTipsArchiveListViewItemDraw_c *v8; // x0
 
-  if ( (byte_438C5E1 & 1) == 0 )
+  if ( (byte_48E4086 & 1) == 0 )
   {
-    sub_B775C4(&EventInfoTipsArchiveListViewItemDraw_TypeInfo);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438C5E1 = 1;
+    sub_1B00CCC(&EventInfoTipsArchiveListViewItemDraw_TypeInfo, method);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v3);
+    byte_48E4086 = 1;
   }
   currentSubDrawObject = (UnityEngine_Object_o *)this->fields.currentSubDrawObject;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(currentSubDrawObject, 0LL, 0LL) )
   {
-    v5 = this->fields.currentSubDrawObject;
-    if ( !v5 )
-      sub_B7769C(0LL, v4);
-    return EventInfoTipsArchiveListViewItemDrawSub__GetHeight(v5, v4);
+    v6 = this->fields.currentSubDrawObject;
+    if ( !v6 )
+      sub_1B00F28(0LL, v5);
+    return EventInfoTipsArchiveListViewItemDrawSub__GetHeight(v6, v5);
   }
   else
   {
-    v7 = EventInfoTipsArchiveListViewItemDraw_TypeInfo;
-    if ( (BYTE3(EventInfoTipsArchiveListViewItemDraw_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !EventInfoTipsArchiveListViewItemDraw_TypeInfo->_2.cctor_finished )
+    v8 = EventInfoTipsArchiveListViewItemDraw_TypeInfo;
+    if ( !EventInfoTipsArchiveListViewItemDraw_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(EventInfoTipsArchiveListViewItemDraw_TypeInfo);
-      v7 = EventInfoTipsArchiveListViewItemDraw_TypeInfo;
+      v8 = EventInfoTipsArchiveListViewItemDraw_TypeInfo;
     }
-    return v7->static_fields->DEFAULT_FRAME_SIZE_HEIGHT;
+    return v8->static_fields->DEFAULT_FRAME_SIZE_HEIGHT;
   }
 }
 
@@ -119,137 +115,121 @@ void __fastcall EventInfoTipsArchiveListViewItemDraw__SetItem(
         int32_t mode,
         const MethodInfo *method)
 {
+  int32_t v9; // w22
   EventInfoTipsArchiveListViewItemDraw_o *v10; // x19
-  System_Int32_array **StateData; // x0
+  EventInfoTipsArchiveListViewItem_TipsArchiveStateData_o *StateData; // x0
   struct EventInfoTipsArchiveListViewItem_TipsArchiveStateData_o **p_stateData; // x22
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
+  int32_t v13; // w2
+  int32_t v14; // w3
   struct EventInfoTipsArchiveListViewItemDrawSub_array *subDrawList; // x8
   int32_t index; // w9
-  __int64 v21; // x23
-  il2cpp_array_size_t v22; // w22
-  int v23; // w24
+  __int64 v17; // x24
+  il2cpp_array_size_t v18; // w23
+  int v19; // w25
   int max_length; // w9
-  struct EventInfoTipsArchiveListViewItemDrawSub_array *v25; // x8
-  const MethodInfo *v26; // x2
-  struct EventInfoTipsArchiveListViewItemDrawSub_array *v27; // x8
-  System_String_array **v28; // x2
-  System_String_array **v29; // x3
-  System_Boolean_array **v30; // x4
-  System_Int32_array **v31; // x5
-  System_Int32_array *v32; // x6
-  System_Int32_array *v33; // x7
-  struct EventInfoTipsArchiveListViewItemDrawSub_array *v34; // x8
-  System_Int32_array **v35; // x1
+  struct EventInfoTipsArchiveListViewItemDrawSub_array *v21; // x8
+  const MethodInfo *v22; // x2
+  struct EventInfoTipsArchiveListViewItemDrawSub_array *v23; // x8
+  int32_t v24; // w2
+  int32_t v25; // w3
+  struct EventInfoTipsArchiveListViewItemDrawSub_array *v26; // x8
+  struct EventInfoTipsArchiveListViewItemDrawSub_o *v27; // x1
   UnityEngine_BoxCollider_o *FrameCollider; // x21
-  UnityEngine_GameObject_o *v37; // x22
+  EventInfoTipsArchiveListViewItemDraw_o *v29; // x22
   UnityEngine_GameObject_o *gameObject; // x20
-  const MethodInfo *v39; // x1
+  const MethodInfo *v31; // x1
   int32_t Height; // w0
-  int v41; // w8
-  __int64 v42; // x0
+  int v33; // w8
   UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
 
+  v9 = id;
   v10 = this;
-  if ( (byte_438C5E0 & 1) == 0 )
+  if ( (byte_48E4085 & 1) == 0 )
   {
-    this = (EventInfoTipsArchiveListViewItemDraw_o *)sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438C5E0 = 1;
+    this = (EventInfoTipsArchiveListViewItemDraw_o *)sub_1B00CCC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&id);
+    byte_48E4085 = 1;
   }
-  v10->fields.id = id;
+  v10->fields.id = v9;
   v10->fields.dispMode = mode;
   if ( !item )
-    goto LABEL_16;
-  StateData = (System_Int32_array **)EventInfoTipsArchiveListViewItem__GetStateData(item, id, (const MethodInfo *)item);
-  v10->fields.stateData = (struct EventInfoTipsArchiveListViewItem_TipsArchiveStateData_o *)StateData;
+    goto LABEL_17;
+  StateData = EventInfoTipsArchiveListViewItem__GetStateData(item, v9, (const MethodInfo *)item);
+  v10->fields.stateData = StateData;
   p_stateData = &v10->fields.stateData;
-  sub_B77560((BattleServantConfConponent_o *)&v10->fields.stateData, StateData, v13, v14, v15, v16, v17, v18);
-  this = (EventInfoTipsArchiveListViewItemDraw_o *)v10->fields.stateData;
-  if ( this )
-    this = (EventInfoTipsArchiveListViewItemDraw_o *)EventInfoTipsArchiveListViewItem_TipsArchiveStateData__IsNew(
-                                                       (EventInfoTipsArchiveListViewItem_TipsArchiveStateData_o *)this,
-                                                       0LL);
-  if ( !v10->fields.newIcon )
-    goto LABEL_16;
-  ShiningIconComponent__Set_34095244(v10->fields.newIcon, (unsigned __int8)this & 1, 0LL);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v10->fields.stateData, (int32_t)StateData, v13, v14);
+  *(_QWORD *)&id = v10->fields.stateData && v10->fields.stateData->fields.state & 1;
+  this = (EventInfoTipsArchiveListViewItemDraw_o *)v10->fields.newIcon;
+  if ( !this )
+    goto LABEL_17;
+  ShiningIconComponent__Set_37022720((ShiningIconComponent_o *)this, id, 0LL);
   if ( !*p_stateData )
-    goto LABEL_16;
+    goto LABEL_17;
   subDrawList = v10->fields.subDrawList;
   if ( !subDrawList )
-    goto LABEL_16;
+    goto LABEL_17;
   index = (*p_stateData)->fields.index;
-  v21 = 4LL;
-  v22 = index - 1;
-  v23 = -index;
+  v17 = 4LL;
+  v18 = index - 1;
+  v19 = -index;
   while ( 1 )
   {
     max_length = subDrawList->max_length;
-    if ( (int)v21 - 4 >= max_length )
-      goto LABEL_27;
-    if ( (int)v21 - 4 >= (unsigned int)max_length )
+    if ( (int)v17 - 4 >= max_length )
+      goto LABEL_28;
+    if ( (int)v17 - 4 >= (unsigned int)max_length )
       goto LABEL_41;
-    this = (EventInfoTipsArchiveListViewItemDraw_o *)*((_QWORD *)&subDrawList->obj.klass + v21);
+    this = (EventInfoTipsArchiveListViewItemDraw_o *)*((_QWORD *)&subDrawList->obj.klass + v17);
     if ( !this )
-      goto LABEL_16;
+      goto LABEL_17;
     this = (EventInfoTipsArchiveListViewItemDraw_o *)UnityEngine_Component__get_gameObject(
                                                        (UnityEngine_Component_o *)this,
                                                        0LL);
     if ( !this )
-      goto LABEL_16;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v23 + (_DWORD)v21 == 3, 0LL);
-    if ( v23 + (_DWORD)v21 == 3 )
+      goto LABEL_17;
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v19 + (_DWORD)v17 == 3, 0LL);
+    if ( v19 + (_DWORD)v17 == 3 )
       break;
     subDrawList = v10->fields.subDrawList;
-    ++v21;
+    ++v17;
     if ( !subDrawList )
-      goto LABEL_16;
+      goto LABEL_17;
   }
-  v25 = v10->fields.subDrawList;
-  if ( !v25 )
-    goto LABEL_16;
-  if ( v22 >= v25->max_length )
+  v21 = v10->fields.subDrawList;
+  if ( !v21 )
+    goto LABEL_17;
+  if ( v18 >= v21->max_length )
     goto LABEL_41;
-  this = (EventInfoTipsArchiveListViewItemDraw_o *)*((_QWORD *)&v25->obj.klass + v21);
+  this = (EventInfoTipsArchiveListViewItemDraw_o *)*((_QWORD *)&v21->obj.klass + v17);
   if ( !this )
-    goto LABEL_16;
+    goto LABEL_17;
   this = (EventInfoTipsArchiveListViewItemDraw_o *)UnityEngine_Component__get_gameObject(
                                                      (UnityEngine_Component_o *)this,
                                                      0LL);
   if ( !this )
-    goto LABEL_16;
+    goto LABEL_17;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-  v27 = v10->fields.subDrawList;
-  if ( !v27 )
-    goto LABEL_16;
-  if ( v22 >= v27->max_length )
+  v23 = v10->fields.subDrawList;
+  if ( !v23 )
+    goto LABEL_17;
+  if ( v18 >= v23->max_length )
     goto LABEL_41;
-  this = (EventInfoTipsArchiveListViewItemDraw_o *)*((_QWORD *)&v27->obj.klass + v21);
+  this = (EventInfoTipsArchiveListViewItemDraw_o *)*((_QWORD *)&v23->obj.klass + v17);
   if ( !this )
-    goto LABEL_16;
-  EventInfoTipsArchiveListViewItemDrawSub__Setup((EventInfoTipsArchiveListViewItemDrawSub_o *)this, item, v26);
-  v34 = v10->fields.subDrawList;
-  if ( !v34 )
-    goto LABEL_16;
-  if ( v22 >= v34->max_length )
-  {
+    goto LABEL_17;
+  EventInfoTipsArchiveListViewItemDrawSub__Setup((EventInfoTipsArchiveListViewItemDrawSub_o *)this, item, v22);
+  v26 = v10->fields.subDrawList;
+  if ( !v26 )
+    goto LABEL_17;
+  if ( v18 >= v26->max_length )
 LABEL_41:
-    v42 = sub_B776C8(this);
-    sub_B77668(v42, 0LL);
-  }
-  v35 = (System_Int32_array **)*((_QWORD *)&v34->obj.klass + v21);
-  v10->fields.currentSubDrawObject = (struct EventInfoTipsArchiveListViewItemDrawSub_o *)v35;
-  sub_B77560((BattleServantConfConponent_o *)&v10->fields.currentSubDrawObject, v35, v28, v29, v30, v31, v32, v33);
-LABEL_27:
+    sub_1B00F30(this, *(_QWORD *)&id);
+  v27 = (struct EventInfoTipsArchiveListViewItemDrawSub_o *)*((_QWORD *)&v26->obj.klass + v17);
+  v10->fields.currentSubDrawObject = v27;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v10->fields.currentSubDrawObject, (int32_t)v27, v24, v25);
+LABEL_28:
   FrameCollider = EventInfoTipsArchiveListViewItemDraw__GetFrameCollider(v10, *(const MethodInfo **)&id);
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)FrameCollider, 0LL, 0LL) )
   {
     this = (EventInfoTipsArchiveListViewItemDraw_o *)v10->fields.partitionSprite;
@@ -260,9 +240,9 @@ LABEL_27:
                                                          0LL);
       if ( FrameCollider )
       {
-        v37 = (UnityEngine_GameObject_o *)this;
+        v29 = this;
         size = UnityEngine_BoxCollider__get_size(FrameCollider, 0LL);
-        GameObjectExtensions__SetLocalPositionY(v37, size.fields.y * -0.5, 0LL);
+        GameObjectExtensions__SetLocalPositionY((UnityEngine_GameObject_o *)v29, size.fields.y * -0.5, 0LL);
         this = (EventInfoTipsArchiveListViewItemDraw_o *)v10->fields.partitionSprite;
         if ( this )
         {
@@ -277,20 +257,20 @@ LABEL_27:
         }
       }
     }
-LABEL_16:
-    sub_B7769C(this, *(_QWORD *)&id);
+LABEL_17:
+    sub_1B00F28(this, *(_QWORD *)&id);
   }
 LABEL_36:
   this = (EventInfoTipsArchiveListViewItemDraw_o *)v10->fields.newIcon;
   if ( !this )
-    goto LABEL_16;
+    goto LABEL_17;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  Height = EventInfoTipsArchiveListViewItemDraw__GetHeight(v10, v39);
+  Height = EventInfoTipsArchiveListViewItemDraw__GetHeight(v10, v31);
   if ( Height >= 0 )
-    v41 = Height;
+    v33 = Height;
   else
-    v41 = Height + 1;
-  GameObjectExtensions__SetLocalPositionY(gameObject, v10->fields.newIconPosOffsetY + (float)(v41 >> 1), 0LL);
+    v33 = Height + 1;
+  GameObjectExtensions__SetLocalPositionY(gameObject, v10->fields.newIconPosOffsetY + (float)(v33 >> 1), 0LL);
 }
 
 
@@ -299,11 +279,11 @@ void __fastcall EventInfoTipsArchiveListViewItemDraw__SetNewState(
         bool isActive,
         const MethodInfo *method)
 {
-  EventInfoTipsArchiveListViewItem_TipsArchiveStateData_o *stateData; // x0
+  struct EventInfoTipsArchiveListViewItem_TipsArchiveStateData_o *stateData; // x8
 
   stateData = this->fields.stateData;
   if ( stateData )
-    EventInfoTipsArchiveListViewItem_TipsArchiveStateData__SetNewState(stateData, isActive, 0LL);
+    stateData->fields.state = stateData->fields.state & 0xFFFFFFFE | isActive;
 }
 
 

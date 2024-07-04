@@ -14,17 +14,14 @@ void __fastcall StonePurchaseListViewItemDraw__SetInput(
   __int64 v7; // x1
   struct UICommonButton_o *v8; // x0
 
-  if ( (byte_438A53D & 1) == 0 )
+  if ( (byte_48E04BA & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438A53D = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, item);
+    byte_48E04BA = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(baseButton, 0LL, 0LL) )
   {
     v8 = this->fields.baseButton;
@@ -35,7 +32,7 @@ void __fastcall StonePurchaseListViewItemDraw__SetInput(
             v8->klass->vtable._6_OnInit.methodPtr),
           (v8 = this->fields.baseButton) == 0LL) )
     {
-      sub_B7769C(v8, v7);
+      sub_1B00F28(v8, v7);
     }
     ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, _QWORD, Il2CppMethodPointer))v8->klass->vtable._14_SetState.method)(
       v8,
@@ -53,79 +50,86 @@ void __fastcall StonePurchaseListViewItemDraw__SetItem(
         const MethodInfo *method)
 {
   StonePurchaseListViewItem_o *v5; // x20
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
   UILabel_o *priceTitleTextLabel; // x0
+  __int64 v12; // x1
   struct BankShopEntity_o *bankShop; // x8
   System_String_o **p_numDetail; // x8
-  System_String_o *v10; // x22
+  System_String_o *v15; // x22
   bool IsNullOrEmpty; // w0
-  const MethodInfo *v12; // x1
+  const MethodInfo *v17; // x1
   UILabel_o *nameTextLabel; // x21
-  bool v14; // w23
-  struct BankShopEntity_o *v15; // x8
+  bool v19; // w23
+  struct BankShopEntity_o *v20; // x8
   System_String_o **p_name; // x8
   struct ItemEntity_o *entity; // x8
-  System_String_o *v18; // x24
+  System_String_o *v23; // x24
   System_String_o *CountText; // x2
-  struct BankShopEntity_o *v20; // x8
+  __int64 v25; // x1
+  struct BankShopEntity_o *v26; // x8
   System_String_o **p_priceDetail; // x8
-  System_String_o *v22; // x22
-  bool v23; // w0
-  __int64 v24; // x2
-  struct BankShopEntity_o *v25; // x8
-  UILabel_o *priceTextLabel; // x21
+  System_String_o *v28; // x22
+  bool v29; // w0
+  __int64 v30; // x2
+  __int64 v31; // x3
+  __int64 v32; // x4
+  struct BankShopEntity_o *v33; // x8
   int32_t *p_googlePrice; // x8
-  struct ItemEntity_o *v28; // x8
-  int32_t v29; // w23
-  System_String_o *v30; // x1
-  Il2CppObject *v31; // x0
-  struct ItemEntity_o *v32; // x8
+  struct ItemEntity_o *v35; // x8
+  int32_t v36; // w23
+  UILabel_o *priceTextLabel; // x21
+  System_String_o *v38; // x1
+  Il2CppObject *v39; // x0
+  struct ItemEntity_o *v40; // x8
   UnityEngine_Object_o *baseButton; // x20
-  int32_t v34; // [xsp+Ch] [xbp-34h] BYREF
+  int32_t v42; // [xsp+Ch] [xbp-44h] BYREF
 
   v5 = item;
-  if ( (byte_438A53C & 1) == 0 )
+  if ( (byte_48E04B9 & 1) == 0 )
   {
-    sub_B775C4(&int_TypeInfo);
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&StringLiteral_82/*" "*/);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438A53C = 1;
+    sub_1B00CCC(&int_TypeInfo, item);
+    sub_1B00CCC(&LocalizationManager_TypeInfo, v7);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v8);
+    sub_1B00CCC(&StringLiteral_115/*" "*/, v9);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v10);
+    byte_48E04B9 = 1;
   }
   if ( !v5 || !mode )
     return;
   priceTitleTextLabel = this->fields.priceTitleTextLabel;
-  if ( !priceTitleTextLabel
-    || (UILabel__set_text(priceTitleTextLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
-        (priceTitleTextLabel = this->fields.countTextLabel) == 0LL) )
-  {
-LABEL_54:
-    sub_B7769C(priceTitleTextLabel, item);
-  }
+  if ( !priceTitleTextLabel )
+    goto LABEL_53;
   UILabel__set_text(priceTitleTextLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-  if ( (byte_438A538 & 1) == 0 )
+  priceTitleTextLabel = this->fields.countTextLabel;
+  if ( !priceTitleTextLabel )
+    goto LABEL_53;
+  UILabel__set_text(priceTitleTextLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+  if ( (byte_48E04B5 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438A538 = 1;
+    sub_1B00CCC(&StringLiteral_1/*""*/, v12);
+    byte_48E04B5 = 1;
   }
   bankShop = v5->fields.bankShop;
   if ( bankShop )
     p_numDetail = &bankShop->fields.numDetail;
   else
     p_numDetail = (System_String_o **)&StringLiteral_1/*""*/;
-  v10 = *p_numDetail;
+  v15 = *p_numDetail;
   IsNullOrEmpty = System_String__IsNullOrEmpty(*p_numDetail, 0LL);
   nameTextLabel = this->fields.nameTextLabel;
-  v14 = IsNullOrEmpty;
-  if ( (byte_438A536 & 1) == 0 )
+  v19 = IsNullOrEmpty;
+  if ( (byte_48E04B3 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_18762/*"error"*/);
-    byte_438A536 = 1;
+    sub_1B00CCC(&StringLiteral_18800/*"error"*/, v17);
+    byte_48E04B3 = 1;
   }
-  v15 = v5->fields.bankShop;
-  if ( v15 )
+  v20 = v5->fields.bankShop;
+  if ( v20 )
   {
-    p_name = &v15->fields.name;
+    p_name = &v20->fields.name;
   }
   else
   {
@@ -133,112 +137,105 @@ LABEL_54:
     if ( entity )
       p_name = &entity->fields.name;
     else
-      p_name = (System_String_o **)&StringLiteral_18762/*"error"*/;
+      p_name = (System_String_o **)&StringLiteral_18800/*"error"*/;
   }
-  v18 = *p_name;
-  CountText = StonePurchaseListViewItem__get_CountText(v5, v12);
-  if ( v14 )
+  v23 = *p_name;
+  CountText = StonePurchaseListViewItem__get_CountText(v5, v17);
+  if ( v19 )
   {
-    priceTitleTextLabel = (UILabel_o *)System_String__Concat_44904220(
-                                         v18,
-                                         (System_String_o *)StringLiteral_82/*" "*/,
+    priceTitleTextLabel = (UILabel_o *)System_String__Concat_60337008(
+                                         v23,
+                                         (System_String_o *)StringLiteral_115/*" "*/,
                                          CountText,
                                          0LL);
     if ( !nameTextLabel )
-      goto LABEL_54;
+      goto LABEL_53;
   }
   else
   {
-    priceTitleTextLabel = (UILabel_o *)System_String__Format_44897472(
-                                         v10,
-                                         (Il2CppObject *)v18,
+    priceTitleTextLabel = (UILabel_o *)System_String__Format_60340120(
+                                         v15,
+                                         (Il2CppObject *)v23,
                                          (Il2CppObject *)CountText,
                                          0LL);
     if ( !nameTextLabel )
-      goto LABEL_54;
+      goto LABEL_53;
   }
   UILabel__set_text(nameTextLabel, (System_String_o *)priceTitleTextLabel, 0LL);
-  if ( (byte_438A539 & 1) == 0 )
+  if ( (byte_48E04B6 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438A539 = 1;
+    sub_1B00CCC(&StringLiteral_1/*""*/, v25);
+    byte_48E04B6 = 1;
   }
-  v20 = v5->fields.bankShop;
-  if ( v20 )
-    p_priceDetail = &v20->fields.priceDetail;
+  v26 = v5->fields.bankShop;
+  if ( v26 )
+    p_priceDetail = &v26->fields.priceDetail;
   else
     p_priceDetail = (System_String_o **)&StringLiteral_1/*""*/;
-  v22 = *p_priceDetail;
-  v23 = System_String__IsNullOrEmpty(*p_priceDetail, 0LL);
-  v25 = v5->fields.bankShop;
-  priceTextLabel = this->fields.priceTextLabel;
-  if ( v25 )
+  v28 = *p_priceDetail;
+  v29 = System_String__IsNullOrEmpty(*p_priceDetail, 0LL);
+  v33 = v5->fields.bankShop;
+  if ( v33 )
   {
-    p_googlePrice = &v25->fields.googlePrice;
+    p_googlePrice = &v33->fields.googlePrice;
+LABEL_32:
+    v36 = *p_googlePrice;
+    goto LABEL_33;
   }
-  else
+  v35 = v5->fields.entity;
+  if ( v35 )
   {
-    v28 = v5->fields.entity;
-    if ( !v28 )
-    {
-      v29 = 0;
-      if ( v23 )
-        goto LABEL_33;
-LABEL_41:
-      v34 = v29;
-      v31 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v34, v24);
-      priceTitleTextLabel = (UILabel_o *)System_String__Format(v22, v31, 0LL);
-      if ( !priceTextLabel )
-        goto LABEL_54;
-      v30 = (System_String_o *)priceTitleTextLabel;
-      goto LABEL_43;
-    }
-    p_googlePrice = &v28->fields.sellQp;
+    p_googlePrice = &v35->fields.sellQp;
+    goto LABEL_32;
   }
-  v29 = *p_googlePrice;
-  if ( !v23 )
-    goto LABEL_41;
+  v36 = 0;
 LABEL_33:
-  if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !LocalizationManager_TypeInfo->_2.cctor_finished )
+  priceTextLabel = this->fields.priceTextLabel;
+  if ( !v29 )
   {
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    v42 = v36;
+    v39 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v42, v30, v31, v32);
+    priceTitleTextLabel = (UILabel_o *)System_String__Format(v28, v39, 0LL);
+    if ( !priceTextLabel )
+      goto LABEL_53;
+    v38 = (System_String_o *)priceTitleTextLabel;
+    goto LABEL_42;
   }
-  priceTitleTextLabel = (UILabel_o *)LocalizationManager__GetPrice2Info(v29, 0LL);
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+  priceTitleTextLabel = (UILabel_o *)LocalizationManager__GetPrice2Info(v36, 0LL);
   if ( !priceTextLabel )
-    goto LABEL_54;
+LABEL_53:
+    sub_1B00F28(priceTitleTextLabel, item);
   if ( priceTitleTextLabel )
-    v30 = (System_String_o *)priceTitleTextLabel;
+    v38 = (System_String_o *)priceTitleTextLabel;
   else
-    v30 = (System_String_o *)StringLiteral_1/*""*/;
-LABEL_43:
-  UILabel__set_text(priceTextLabel, v30, 0LL);
-  v32 = v5->fields.entity;
+    v38 = (System_String_o *)StringLiteral_1/*""*/;
+LABEL_42:
+  UILabel__set_text(priceTextLabel, v38, 0LL);
+  v40 = v5->fields.entity;
   priceTitleTextLabel = (UILabel_o *)this->fields.itemIcon;
-  if ( v32 )
+  if ( v40 )
   {
-    item = (StonePurchaseListViewItem_o *)(unsigned int)v32->fields.imageId;
+    item = (StonePurchaseListViewItem_o *)(unsigned int)v40->fields.imageId;
     if ( !priceTitleTextLabel )
-      goto LABEL_54;
+      goto LABEL_53;
   }
   else
   {
     item = 0LL;
     if ( !priceTitleTextLabel )
-      goto LABEL_54;
+      goto LABEL_53;
   }
   ItemIconComponent__SetItemImage((ItemIconComponent_o *)priceTitleTextLabel, (int32_t)item, 0LL);
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(baseButton, 0LL, 0LL) )
   {
     priceTitleTextLabel = (UILabel_o *)this->fields.baseButton;
     if ( !priceTitleTextLabel )
-      goto LABEL_54;
+      goto LABEL_53;
     ((void (__fastcall *)(UILabel_o *, _QWORD, __int64, Il2CppMethodPointer))priceTitleTextLabel->klass->vtable._14_OnEnable.method)(
       priceTitleTextLabel,
       0LL,

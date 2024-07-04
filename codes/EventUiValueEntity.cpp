@@ -1,46 +1,46 @@
 void __fastcall EventUiValueEntity___ctor(EventUiValueEntity_o *this, const MethodInfo *method)
 {
-  System_Int32_array **v3; // x1
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
+  __int64 v3; // x1
+  int32_t v4; // w1
+  struct System_String_o **p_value; // x19
+  int32_t v6; // w2
+  int32_t v7; // w3
 
-  if ( (byte_438A6F6 & 1) == 0 )
+  if ( (byte_48E2A14 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438A6F6 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v3);
+    byte_48E2A14 = 1;
   }
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
   *(_QWORD *)&this->fields.id = 0LL;
-  v3 = (System_Int32_array **)StringLiteral_1/*""*/;
+  v4 = (int)StringLiteral_1/*""*/;
   this->fields.value = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.value, v3, v4, v5, v6, v7, v8, v9);
-  this->fields.priority = 0;
+  p_value = &this->fields.value;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)p_value, v4, v6, v7);
+  *((_DWORD *)p_value + 2) = 0;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventUiValueEntity__CreatePK(
         int32_t id,
         int32_t type,
         System_String_o *value,
         const MethodInfo *method)
 {
-  if ( (byte_438A6F7 & 1) == 0 )
+  if ( (byte_48E2A15 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_long__long__string___);
-    byte_438A6F7 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_long__long__string___, *(_QWORD *)&type);
+    byte_48E2A15 = 1;
   }
-  return DataEntityBase__CreateMultiplePK_long__long__string_(
+  return DataEntityBase__CreateMultiplePK_long__long__object_(
            id,
            type,
-           value,
-           (const MethodInfo_1D1792C *)Method_DataEntityBase_CreateMultiplePK_long__long__string___);
+           (Il2CppObject *)value,
+           (const MethodInfo_2D61514 *)Method_DataEntityBase_CreateMultiplePK_long__long__string___);
 }
 
 

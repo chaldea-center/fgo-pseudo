@@ -2,16 +2,13 @@ void __fastcall ServantStatusVoiceListViewObject___ctor(
         ServantStatusVoiceListViewObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_438DCC8 & 1) == 0 )
+  if ( (byte_48E0490 & 1) == 0 )
   {
-    sub_B775C4(&ListViewObject_TypeInfo);
-    byte_438DCC8 = 1;
+    sub_1B00CCC(&ListViewObject_TypeInfo, method);
+    byte_48E0490 = 1;
   }
-  if ( (BYTE3(ListViewObject_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ListViewObject_TypeInfo->_2.cctor_finished )
-  {
+  if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
-  }
   ListViewObject___ctor((ListViewObject_o *)this, 0LL);
 }
 
@@ -22,40 +19,27 @@ void __fastcall ServantStatusVoiceListViewObject__Awake(
 {
   __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
-  struct ServantStatusVoiceListViewItemDraw_o *Component_srcLineSprite; // x0
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  Il2CppObject *Component_object; // x0
+  int32_t v6; // w2
+  int32_t v7; // w3
 
-  if ( (byte_438DCC1 & 1) == 0 )
+  if ( (byte_48E0489 & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_ServantStatusVoiceListViewItemDraw___);
-    byte_438DCC1 = 1;
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_ServantStatusVoiceListViewItemDraw___, method);
+    byte_48E0489 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_B7769C(0LL, v3);
-  Component_srcLineSprite = (struct ServantStatusVoiceListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                                                             dispObject,
-                                                                             (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusVoiceListViewItemDraw___);
-  this->fields.itemDraw = Component_srcLineSprite;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.itemDraw,
-    (System_Int32_array **)Component_srcLineSprite,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10,
-    v11);
+    sub_1B00F28(0LL, v3);
+  Component_object = UnityEngine_GameObject__GetComponent_object_(
+                       dispObject,
+                       (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusVoiceListViewItemDraw___);
+  this->fields.itemDraw = (struct ServantStatusVoiceListViewItemDraw_o *)Component_object;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 UnityEngine_GameObject_o *__fastcall ServantStatusVoiceListViewObject__CreateDragObject(
         ServantStatusVoiceListViewObject_o *this,
         const MethodInfo *method)
@@ -63,27 +47,23 @@ UnityEngine_GameObject_o *__fastcall ServantStatusVoiceListViewObject__CreateDra
   UnityEngine_GameObject_o *DragObject; // x0
   __int64 v4; // x1
   UnityEngine_GameObject_o *v5; // x19
-  ServantStatusVoiceListViewObject_o *v6; // x20
-  const MethodInfo *v7; // x3
-  UnityEngine_Vector3_o zero; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
+  const MethodInfo *v6; // x2
 
-  if ( (byte_438DCC5 & 1) == 0 )
+  if ( (byte_48E048D & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_ServantStatusVoiceListViewObject___);
-    byte_438DCC5 = 1;
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_ServantStatusVoiceListViewObject___, method);
+    byte_48E048D = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0LL);
   if ( !DragObject
     || (v5 = DragObject,
-        (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
+        (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusVoiceListViewObject___)) == 0LL) )
+                                                    (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusVoiceListViewObject___)) == 0LL) )
   {
-    sub_B7769C(DragObject, v4);
+    sub_1B00F28(DragObject, v4);
   }
-  v6 = (ServantStatusVoiceListViewObject_o *)DragObject;
-  zero = UnityEngine_Vector3__get_zero(0LL);
-  ServantStatusVoiceListViewObject__Init(v6, 2, 0LL, zero.fields.x, *(UnityEngine_Vector3_o *)&zero.fields.y, v7);
+  ServantStatusVoiceListViewObject__Init_34105544((ServantStatusVoiceListViewObject_o *)DragObject, 2, v6);
   return v5;
 }
 
@@ -92,26 +72,24 @@ void __fastcall ServantStatusVoiceListViewObject__EventMoveEnd(
         ServantStatusVoiceListViewObject_o *this,
         const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  BattleServantConfConponent_o *p_callbackFunc; // x0
-  System_Action_o *v9; // x19
+  int32_t v2; // w2
+  int32_t v3; // w3
+  ServantStatusBattleListViewItem_o *p_callbackFunc; // x0
+  struct System_Action_o *v5; // x19
   struct System_Action_o *callbackFunc; // t1
 
   callbackFunc = this->fields.callbackFunc;
-  p_callbackFunc = (BattleServantConfConponent_o *)&this->fields.callbackFunc;
-  v9 = callbackFunc;
-  p_callbackFunc[-1].fields.isOpenAfter = 0;
-  p_callbackFunc[-1].fields.adjustHeight = 1;
+  p_callbackFunc = (ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc;
+  v5 = callbackFunc;
+  p_callbackFunc[-1].fields.isMine = 0;
+  *((_DWORD *)&p_callbackFunc[-1].fields.isMine + 1) = 1;
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_B77560(p_callbackFunc, 0LL, v2, v3, v4, v5, v6, v7);
-    System_Action__Invoke(v9, 0LL);
+    sub_1B00C70(p_callbackFunc, 0, v2, v3);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v5->fields.m_target)(
+      v5->fields.original_method_info,
+      *(_QWORD *)&v5->fields.extra_arg);
   }
 }
 
@@ -121,25 +99,26 @@ ServantStatusVoiceListViewItem_o *__fastcall ServantStatusVoiceListViewObject__G
         const MethodInfo *method)
 {
   struct ListViewItem_o *linkItem; // x8
-  __int64 v4; // x11
+  __int64 methodPtr_low; // x11
 
-  if ( (byte_438DCC3 & 1) == 0 )
+  if ( (byte_48E048B & 1) == 0 )
   {
-    sub_B775C4(&ServantStatusVoiceListViewItem_TypeInfo);
-    byte_438DCC3 = 1;
+    sub_1B00CCC(&ServantStatusVoiceListViewItem_TypeInfo, method);
+    byte_48E048B = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
     return 0LL;
-  v4 = *(&ServantStatusVoiceListViewItem_TypeInfo->_2.bitflags2 + 1);
-  if ( *(&linkItem->klass->_2.bitflags2 + 1) < (unsigned int)v4 )
+  methodPtr_low = LOBYTE(ServantStatusVoiceListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
+  if ( LOBYTE(linkItem->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low )
     return 0LL;
-  if ( (ServantStatusVoiceListViewItem_c *)linkItem->klass->_2.typeHierarchy[v4 - 1] == ServantStatusVoiceListViewItem_TypeInfo )
+  if ( (ServantStatusVoiceListViewItem_c *)linkItem->klass->_2.typeHierarchy[methodPtr_low - 1] == ServantStatusVoiceListViewItem_TypeInfo )
     return (ServantStatusVoiceListViewItem_o *)this->fields.linkItem;
   return 0LL;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ServantStatusVoiceListViewObject__Init(
         ServantStatusVoiceListViewObject_o *this,
         int32_t initMode,
@@ -148,52 +127,47 @@ void __fastcall ServantStatusVoiceListViewObject__Init(
         UnityEngine_Vector3_o position,
         const MethodInfo *method)
 {
+  int32_t v7; // w20
+  __int64 v9; // x1
   struct ListViewItem_o *linkItem; // x22
-  __int64 v10; // x10
-  int32_t state; // w24
+  __int64 methodPtr_low; // x10
   int32_t dispMode; // w23
+  int32_t state; // w24
   UnityEngine_Transform_o *transform; // x0
-  __int64 v14; // x1
-  BattleServantConfConponent_o *p_callbackFunc; // x22
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
-  const MethodInfo *v22; // x1
-  System_String_array **v23; // x2
-  System_String_array **v24; // x3
-  System_Boolean_array **v25; // x4
-  System_Int32_array **v26; // x5
-  System_Int32_array *v27; // x6
-  System_Int32_array *v28; // x7
-  int32_t v29; // w9
-  int32_t v30; // w8
-  System_Action_o *klass; // x19
+  __int64 v15; // x1
+  ServantStatusBattleListViewItem_o *p_callbackFunc; // x22
+  int32_t v17; // w2
+  int32_t v18; // w3
+  const MethodInfo *v19; // x1
+  int32_t v20; // w2
+  int32_t v21; // w3
+  int32_t v22; // w9
+  int32_t v23; // w8
+  ServantStatusBattleListViewItem_c *klass; // x19
   UnityEngine_Object_o *itemDraw; // x20
-  const MethodInfo *v33; // x2
+  const MethodInfo *v26; // x2
 
-  if ( (byte_438DCC6 & 1) == 0 )
+  v7 = initMode;
+  if ( (byte_48E048E & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&ServantStatusVoiceListViewItem_TypeInfo);
-    byte_438DCC6 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&initMode);
+    sub_1B00CCC(&ServantStatusVoiceListViewItem_TypeInfo, v9);
+    byte_48E048E = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem
-    || (v10 = *(&ServantStatusVoiceListViewItem_TypeInfo->_2.bitflags2 + 1),
-        *(&linkItem->klass->_2.bitflags2 + 1) < (unsigned int)v10)
-    || (ServantStatusVoiceListViewItem_c *)linkItem->klass->_2.typeHierarchy[v10 - 1] != ServantStatusVoiceListViewItem_TypeInfo )
+    || (methodPtr_low = LOBYTE(ServantStatusVoiceListViewItem_TypeInfo->vtable._0_Equals.methodPtr),
+        LOBYTE(linkItem->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low)
+    || (ServantStatusVoiceListViewItem_c *)linkItem->klass->_2.typeHierarchy[methodPtr_low - 1] != ServantStatusVoiceListViewItem_TypeInfo )
   {
-    initMode = 0;
+    v7 = 0;
 LABEL_7:
-    state = this->fields.state;
     dispMode = this->fields.dispMode;
-    ListViewObject__SetVisible((ListViewObject_o *)this, initMode != 0, 0LL);
+    state = this->fields.state;
+    ListViewObject__SetVisible((ListViewObject_o *)this, v7 != 0, 0LL);
     ((void (__fastcall *)(ServantStatusVoiceListViewObject_o *, bool, Il2CppMethodPointer))this->klass->vtable._9_SetInput.method)(
       this,
-      initMode == 3,
+      v7 == 3,
       this->klass->vtable._10_Invalidation.methodPtr);
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
     if ( transform )
@@ -204,33 +178,25 @@ LABEL_7:
       {
         UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
         this->fields.callbackFunc = callbackFunc;
-        p_callbackFunc = (BattleServantConfConponent_o *)&this->fields.callbackFunc;
-        sub_B77560(
-          (BattleServantConfConponent_o *)&this->fields.callbackFunc,
-          (System_Int32_array **)callbackFunc,
-          v16,
-          v17,
-          v18,
-          v19,
-          v20,
-          v21);
-        v29 = 1;
-        v30 = initMode;
-        switch ( initMode )
+        p_callbackFunc = (ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v17, v18);
+        v22 = 1;
+        v23 = v7;
+        switch ( v7 )
         {
           case 0:
           case 2:
             goto LABEL_13;
           case 1:
-            v30 = initMode;
+            v23 = v7;
             goto LABEL_12;
           case 3:
-            v30 = 2;
+            v23 = 2;
 LABEL_12:
-            v29 = initMode;
+            v22 = v7;
 LABEL_13:
-            this->fields.dispMode = v30;
-            this->fields.state = v29;
+            this->fields.dispMode = v23;
+            this->fields.state = v22;
             goto LABEL_14;
           case 5:
             this->fields.state = 1;
@@ -239,30 +205,29 @@ LABEL_13:
 LABEL_14:
             if ( !state || dispMode != this->fields.dispMode )
 LABEL_18:
-              ServantStatusVoiceListViewObject__SetupDisp(this, v22);
-            klass = (System_Action_o *)p_callbackFunc->klass;
+              ServantStatusVoiceListViewObject__SetupDisp(this, v19);
+            klass = p_callbackFunc->klass;
             if ( p_callbackFunc->klass )
             {
               p_callbackFunc->klass = 0LL;
-              sub_B77560(p_callbackFunc, 0LL, v23, v24, v25, v26, v27, v28);
-              System_Action__Invoke(klass, 0LL);
+              sub_1B00C70(p_callbackFunc, 0, v20, v21);
+              ((void (__fastcall *)(Il2CppClass *, _QWORD))klass->_1.namespaze)(
+                klass->_1.element_class,
+                *(_QWORD *)&klass->_1.byval_arg.bits);
             }
             break;
         }
         return;
       }
     }
-LABEL_29:
-    sub_B7769C(transform, v14);
+LABEL_28:
+    sub_1B00F28(transform, v15);
   }
-  if ( initMode != 4 )
+  if ( v7 != 4 )
     goto LABEL_7;
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
   {
     transform = (UnityEngine_Transform_o *)this->fields.itemDraw;
@@ -271,10 +236,10 @@ LABEL_29:
       ServantStatusVoiceListViewItemDraw__SetPlay(
         (ServantStatusVoiceListViewItemDraw_o *)transform,
         (ServantStatusVoiceListViewItem_o *)linkItem,
-        v33);
+        v26);
       return;
     }
-    goto LABEL_29;
+    goto LABEL_28;
   }
 }
 
@@ -288,65 +253,59 @@ void __fastcall ServantStatusVoiceListViewObject__InitItem(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ServantStatusVoiceListViewObject__Init_30246592(
+void __fastcall ServantStatusVoiceListViewObject__Init_34105544(
         ServantStatusVoiceListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
 {
-  const MethodInfo *v5; // x3
-  UnityEngine_Vector3_o zero; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
+  const MethodInfo *v3; // x3
+  float v4; // s0
+  int v5; // s1
 
-  zero = UnityEngine_Vector3__get_zero(0LL);
-  ServantStatusVoiceListViewObject__Init(
-    this,
-    initMode,
-    0LL,
-    zero.fields.x,
-    *(UnityEngine_Vector3_o *)&zero.fields.y,
-    v5);
+  if ( !byte_48DD9F1 )
+  {
+    sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_48DD9F1 = 1;
+  }
+  ServantStatusVoiceListViewObject__Init(this, initMode, 0LL, v4, *(UnityEngine_Vector3_o *)&v5, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ServantStatusVoiceListViewObject__Init_30248120(
+void __fastcall ServantStatusVoiceListViewObject__Init_34107148(
         ServantStatusVoiceListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
         float delay,
         const MethodInfo *method)
 {
-  const MethodInfo *v8; // x3
-  UnityEngine_Vector3_o zero; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
+  int v5; // s1
 
-  zero = UnityEngine_Vector3__get_zero(0LL);
-  ServantStatusVoiceListViewObject__Init(
-    this,
-    initMode,
-    callbackFunc,
-    zero.fields.x,
-    *(UnityEngine_Vector3_o *)&zero.fields.y,
-    v8);
+  if ( !byte_48DD9F1 )
+  {
+    sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_48DD9F1 = 1;
+  }
+  ServantStatusVoiceListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ServantStatusVoiceListViewObject__Init_30248676(
+void __fastcall ServantStatusVoiceListViewObject__Init_34107756(
         ServantStatusVoiceListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
         const MethodInfo *method)
 {
-  const MethodInfo *v7; // x3
-  UnityEngine_Vector3_o zero; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
+  float v4; // s0
+  int v5; // s1
 
-  zero = UnityEngine_Vector3__get_zero(0LL);
-  ServantStatusVoiceListViewObject__Init(
-    this,
-    initMode,
-    callbackFunc,
-    zero.fields.x,
-    *(UnityEngine_Vector3_o *)&zero.fields.y,
-    v7);
+  if ( !byte_48DD9F1 )
+  {
+    sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_48DD9F1 = 1;
+  }
+  ServantStatusVoiceListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
@@ -354,88 +313,81 @@ void __fastcall ServantStatusVoiceListViewObject__OnDestroy(
         ServantStatusVoiceListViewObject_o *this,
         const MethodInfo *method)
 {
-  BattleServantConfConponent_o *p_dragObject; // x19
-  UnityEngine_Object_o *v4; // x20
+  __int64 v3; // x1
+  ServantStatusBattleListViewItem_o *p_dragObject; // x19
+  UnityEngine_Object_o *v5; // x20
   struct UnityEngine_GameObject_o *dragObject; // t1
   UnityEngine_Object_o *klass; // x20
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
+  int32_t v8; // w2
+  int32_t v9; // w3
 
-  if ( (byte_438DCC2 & 1) == 0 )
+  if ( (byte_48E048A & 1) == 0 )
   {
-    sub_B775C4(&NGUITools_TypeInfo);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438DCC2 = 1;
+    sub_1B00CCC(&NGUITools_TypeInfo, method);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v3);
+    byte_48E048A = 1;
   }
   dragObject = this->fields.dragObject;
-  p_dragObject = (BattleServantConfConponent_o *)&this->fields.dragObject;
-  v4 = (UnityEngine_Object_o *)dragObject;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  p_dragObject = (ServantStatusBattleListViewItem_o *)&this->fields.dragObject;
+  v5 = (UnityEngine_Object_o *)dragObject;
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  if ( UnityEngine_Object__op_Inequality(v4, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v5, 0LL, 0LL) )
   {
     klass = (UnityEngine_Object_o *)p_dragObject->klass;
-    if ( (BYTE3(NGUITools_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !NGUITools_TypeInfo->_2.cctor_finished )
+    if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0LL);
     p_dragObject->klass = 0LL;
-    sub_B77560(p_dragObject, 0LL, v7, v8, v9, v10, v11, v12);
+    sub_1B00C70(p_dragObject, 0, v8, v9);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ServantStatusVoiceListViewObject__SetInput(
         ServantStatusVoiceListViewObject_o *this,
         bool isInput,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
   UnityEngine_Object_o *itemDraw; // x21
-  const MethodInfo *v6; // x3
+  const MethodInfo *v7; // x3
   struct ListViewItem_o *linkItem; // x8
-  __int64 v8; // x11
-  struct ListViewItem_o *v9; // x1
-  ServantStatusVoiceListViewItemDraw_o *v10; // x0
+  __int64 methodPtr_low; // x11
+  struct ListViewItem_o *v10; // x1
+  ServantStatusVoiceListViewItemDraw_o *v11; // x0
 
-  if ( (byte_438DCC4 & 1) == 0 )
+  if ( (byte_48E048C & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&ServantStatusVoiceListViewItem_TypeInfo);
-    byte_438DCC4 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, isInput);
+    sub_1B00CCC(&ServantStatusVoiceListViewItem_TypeInfo, v5);
+    byte_48E048C = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0LL);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
   {
     linkItem = this->fields.linkItem;
     if ( linkItem
-      && (v8 = *(&ServantStatusVoiceListViewItem_TypeInfo->_2.bitflags2 + 1),
-          *(&linkItem->klass->_2.bitflags2 + 1) >= (unsigned int)v8) )
+      && (methodPtr_low = LOBYTE(ServantStatusVoiceListViewItem_TypeInfo->vtable._0_Equals.methodPtr),
+          LOBYTE(linkItem->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low) )
     {
-      if ( (ServantStatusVoiceListViewItem_c *)linkItem->klass->_2.typeHierarchy[v8 - 1] == ServantStatusVoiceListViewItem_TypeInfo )
-        v9 = this->fields.linkItem;
+      if ( (ServantStatusVoiceListViewItem_c *)linkItem->klass->_2.typeHierarchy[methodPtr_low - 1] == ServantStatusVoiceListViewItem_TypeInfo )
+        v10 = this->fields.linkItem;
       else
-        v9 = 0LL;
+        v10 = 0LL;
     }
     else
     {
-      v9 = 0LL;
+      v10 = 0LL;
     }
-    v10 = this->fields.itemDraw;
-    if ( !v10 )
-      sub_B7769C(0LL, v9);
-    ServantStatusVoiceListViewItemDraw__SetInput(v10, (ServantStatusVoiceListViewItem_o *)v9, isInput, v6);
+    v11 = this->fields.itemDraw;
+    if ( !v11 )
+      sub_1B00F28(0LL, v10);
+    ServantStatusVoiceListViewItemDraw__SetInput(v11, (ServantStatusVoiceListViewItem_o *)v10, isInput, v7);
   }
 }
 
@@ -446,12 +398,12 @@ void __fastcall ServantStatusVoiceListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_34301308((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_39462468((ListViewObject_o *)this, item, seed, 0LL);
   this->fields.state = 0;
 }
 
 
-void __fastcall ServantStatusVoiceListViewObject__SetItem_30249884(
+void __fastcall ServantStatusVoiceListViewObject__SetItem_34109312(
         ServantStatusVoiceListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -465,51 +417,49 @@ void __fastcall ServantStatusVoiceListViewObject__SetupDisp(
         ServantStatusVoiceListViewObject_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
   struct ListViewItem_o *linkItem; // x20
-  __int64 v4; // x10
-  bool v5; // w1
+  __int64 methodPtr_low; // x10
+  bool v6; // w1
   UnityEngine_Object_o *itemDraw; // x21
-  __int64 v7; // x1
-  const MethodInfo *v8; // x3
-  ServantStatusVoiceListViewItemDraw_o *v9; // x0
+  __int64 v8; // x1
+  const MethodInfo *v9; // x3
+  ServantStatusVoiceListViewItemDraw_o *v10; // x0
 
-  if ( (byte_438DCC7 & 1) == 0 )
+  if ( (byte_48E048F & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&ServantStatusVoiceListViewItem_TypeInfo);
-    byte_438DCC7 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    sub_1B00CCC(&ServantStatusVoiceListViewItem_TypeInfo, v3);
+    byte_48E048F = 1;
   }
   linkItem = this->fields.linkItem;
-  if ( linkItem )
+  if ( !linkItem )
+    goto LABEL_7;
+  methodPtr_low = LOBYTE(ServantStatusVoiceListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
+  if ( LOBYTE(linkItem->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
+    || (ServantStatusVoiceListViewItem_c *)linkItem->klass->_2.typeHierarchy[methodPtr_low - 1] != ServantStatusVoiceListViewItem_TypeInfo )
   {
-    v4 = *(&ServantStatusVoiceListViewItem_TypeInfo->_2.bitflags2 + 1);
-    if ( *(&linkItem->klass->_2.bitflags2 + 1) >= (unsigned int)v4
-      && (ServantStatusVoiceListViewItem_c *)linkItem->klass->_2.typeHierarchy[v4 - 1] == ServantStatusVoiceListViewItem_TypeInfo )
-    {
-      v5 = this->fields.dispMode != 0;
-      goto LABEL_8;
-    }
     linkItem = 0LL;
+LABEL_7:
+    v6 = 0;
+    goto LABEL_8;
   }
-  v5 = 0;
+  v6 = this->fields.dispMode != 0;
 LABEL_8:
-  ListViewObject__SetVisible((ListViewObject_o *)this, v5, 0LL);
+  ListViewObject__SetVisible((ListViewObject_o *)this, v6, 0LL);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
   {
-    v9 = this->fields.itemDraw;
-    if ( !v9 )
-      sub_B7769C(0LL, v7);
+    v10 = this->fields.itemDraw;
+    if ( !v10 )
+      sub_1B00F28(0LL, v8);
     ServantStatusVoiceListViewItemDraw__SetItem(
-      v9,
+      v10,
       (ServantStatusVoiceListViewItem_o *)linkItem,
       this->fields.dispMode,
-      v8);
+      v9);
   }
 }
 
@@ -529,10 +479,10 @@ void __fastcall ServantStatusVoiceListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_438DCBF & 1) == 0 )
+  if ( (byte_48E0487 & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    byte_438DCBF = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, value);
+    byte_48E0487 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -545,13 +495,13 @@ void __fastcall ServantStatusVoiceListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_B6BFDC(p_callbackFunc, v8, v6);
+    v9 = sub_1B3C1BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_B77990(v8);
+  sub_1B011E8(v8);
   ServantStatusVoiceListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -570,10 +520,10 @@ void __fastcall ServantStatusVoiceListViewObject__remove_callbackFunc(
   ServantStatusVoiceListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_438DCC0 & 1) == 0 )
+  if ( (byte_48E0488 & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    byte_438DCC0 = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, value);
+    byte_48E0488 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -586,12 +536,12 @@ void __fastcall ServantStatusVoiceListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_B6BFDC(p_callbackFunc, v8, v6);
+    v9 = sub_1B3C1BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_B77990(v8);
+  sub_1B011E8(v8);
   ServantStatusVoiceListViewObject__Awake(v11, v12);
 }

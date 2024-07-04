@@ -3,35 +3,20 @@ void __fastcall UpdateViewIntervalBuffActionData___ctor(
         BattleActionData_o *actData,
         const MethodInfo *method)
 {
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  int32_t v5; // w2
+  int32_t v6; // w3
 
-  if ( (byte_438CA96 & 1) == 0 )
+  if ( (byte_48E4898 & 1) == 0 )
   {
-    sub_B775C4(&BattleActionData_TypeInfo);
-    byte_438CA96 = 1;
+    sub_1B00CCC(&BattleActionData_TypeInfo, actData);
+    byte_48E4898 = 1;
   }
-  if ( (BYTE3(BattleActionData_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !BattleActionData_TypeInfo->_2.cctor_finished )
-  {
+  if ( !BattleActionData_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleActionData_TypeInfo);
-  }
-  BattleActionData___ctor((BattleActionData_o *)this, 0LL);
+  BattleActionData___ctor((BattleActionData_o *)this, (const MethodInfo *)actData);
   this->fields.state = 7;
   this->fields.targetActionData = actData;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.targetActionData,
-    (System_Int32_array **)actData,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.targetActionData, (int32_t)actData, v5, v6);
 }
 
 

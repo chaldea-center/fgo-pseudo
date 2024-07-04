@@ -1,40 +1,39 @@
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ClassBoardItemModel___ctor(
         ClassBoardItemModel_o *this,
         int32_t itemId,
         int32_t num,
         const MethodInfo *method)
 {
-  DataMasterBase_WarMaster__WarEntity__int__o *Master_WarQuestSelectionMaster; // x0
+  __int64 v7; // x1
   __int64 v8; // x1
-  struct ItemEntity_o *Entity; // x0
+  Il2CppObject *Master_object; // x0
+  __int64 v10; // x1
+  Il2CppObject *Entity; // x0
   ClassBoardItemModel_Fields *p_fields; // x20
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
+  int32_t v13; // w2
+  int32_t v14; // w3
 
-  if ( (byte_438D3AF & 1) == 0 )
+  if ( (byte_48E5A70 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_B775C4(&DataManager_TypeInfo);
-    sub_B775C4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    byte_438D3AF = 1;
+    sub_1B00CCC(&Method_DataManager_GetMaster_ItemMaster___, *(_QWORD *)&itemId);
+    sub_1B00CCC(&DataManager_TypeInfo, v7);
+    sub_1B00CCC(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v8);
+    byte_48E5A70 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ItemMaster___);
-  if ( !Master_WarQuestSelectionMaster )
-    sub_B7769C(0LL, v8);
-  Entity = (struct ItemEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-                                    Master_WarQuestSelectionMaster,
-                                    itemId,
-                                    (const MethodInfo_21FB894 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-  this->fields.entity = Entity;
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_ItemMaster___);
+  if ( !Master_object )
+    sub_1B00F28(0LL, v10);
+  Entity = DataMasterBase_object__object__int___GetEntity(
+             (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
+             itemId,
+             (const MethodInfo_2FE6A4C *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+  this->fields.entity = (struct ItemEntity_o *)Entity;
   p_fields = &this->fields;
-  sub_B77560((BattleServantConfConponent_o *)p_fields, (System_Int32_array **)Entity, v11, v12, v13, v14, v15, v16);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)p_fields, (int32_t)Entity, v13, v14);
   p_fields->_Num_k__BackingField = num;
 }
 
@@ -51,7 +50,7 @@ int32_t __fastcall ClassBoardItemModel__get_Id(ClassBoardItemModel_o *this, cons
 
   entity = this->fields.entity;
   if ( !entity )
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   return entity->fields.id;
 }
 
@@ -69,7 +68,7 @@ int32_t __fastcall ClassBoardItemModel__get_UserNum(ClassBoardItemModel_o *this,
 
   entity = this->fields.entity;
   if ( !entity )
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   UserOwnInfoByItemId = UserOwnItemDetail__GetUserOwnInfoByItemId(entity->fields.id, 0LL);
   if ( UserOwnInfoByItemId )
     LODWORD(UserOwnInfoByItemId) = UserOwnInfoByItemId->fields._Num_k__BackingField;

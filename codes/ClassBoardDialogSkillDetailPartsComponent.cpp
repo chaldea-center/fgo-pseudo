@@ -31,17 +31,17 @@ float __fastcall ClassBoardDialogSkillDetailPartsComponent__SetDetail(
   int32_t detailMinHeight; // s3
   float v16; // s0
   float v17; // s8
-  double v18; // d0
+  int32_t v18; // w1
   System_String_o *ClassBoardSkillIconName; // x20
 
-  if ( (byte_438C42D & 1) == 0 )
+  if ( (byte_48E59A4 & 1) == 0 )
   {
-    sub_B775C4(&ClassBoardUtility_TypeInfo);
-    byte_438C42D = 1;
+    sub_1B00CCC(&ClassBoardUtility_TypeInfo, name);
+    byte_48E59A4 = 1;
   }
   effectNameLabel = this->fields.effectNameLabel;
   if ( !effectNameLabel )
-    goto LABEL_18;
+    goto LABEL_17;
   UILabel__set_text(effectNameLabel, name, 0LL);
   WrapControlText__textBBCodeAdjust(
     this->fields.effectDetailLabel,
@@ -52,30 +52,27 @@ float __fastcall ClassBoardDialogSkillDetailPartsComponent__SetDetail(
     0LL);
   effectNameLabel = this->fields.effectDetailLabel;
   if ( !effectNameLabel )
-    goto LABEL_18;
+    goto LABEL_17;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)effectNameLabel, 0LL);
   LocalPositionY = GameObjectExtensions__GetLocalPositionY(gameObject, 0LL);
   effectDetailLabel = this->fields.effectDetailLabel;
   if ( !effectDetailLabel )
-    goto LABEL_18;
+    goto LABEL_17;
   detailMinHeight = this->fields.detailMinHeight;
   effectNameLabel = (UILabel_o *)this->fields.background;
   v16 = this->fields.detailUnderMargin + (float)(fabsf(LocalPositionY) + (float)effectDetailLabel->fields.mHeight);
   v17 = v16 >= (float)detailMinHeight ? v16 : (float)detailMinHeight;
   if ( !effectNameLabel )
-    goto LABEL_18;
-  v18 = v17 == INFINITY ? -v17 : v17;
-  UIWidget__set_height((UIWidget_o *)effectNameLabel, (int)v18, 0LL);
-  if ( (BYTE3(ClassBoardUtility_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ClassBoardUtility_TypeInfo->_2.cctor_finished )
-  {
+    goto LABEL_17;
+  v18 = v17 == INFINITY ? 0x80000000 : (int)v17;
+  UIWidget__set_height((UIWidget_o *)effectNameLabel, v18, 0LL);
+  if ( !ClassBoardUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ClassBoardUtility_TypeInfo);
-  }
   ClassBoardSkillIconName = ClassBoardUtility__GetClassBoardSkillIconName(iconId, skillType, 0LL);
   effectNameLabel = (UILabel_o *)ClassBoardGlobalObject__get_IconAtlasManagerUnit(0LL);
   if ( !effectNameLabel )
-LABEL_18:
-    sub_B7769C(effectNameLabel, name);
+LABEL_17:
+    sub_1B00F28(effectNameLabel, name);
   AtlasManagerUnit__SetUI((AtlasManagerUnit_o *)effectNameLabel, this->fields.effectIcon, ClassBoardSkillIconName, 0LL);
   return v17;
 }

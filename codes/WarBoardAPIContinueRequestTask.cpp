@@ -1,4 +1,3 @@
-// local variable allocation has failed, the output may be wrong!
 void __fastcall WarBoardAPIContinueRequestTask___ctor(
         WarBoardAPIContinueRequestTask_o *this,
         int32_t consume,
@@ -6,11 +5,7 @@ void __fastcall WarBoardAPIContinueRequestTask___ctor(
         bool onStartBeginRequest,
         const MethodInfo *method)
 {
-  WarBoardAPIRequestTask___ctor_21364956(
-    (WarBoardAPIRequestTask_o *)this,
-    resultCallback,
-    onStartBeginRequest,
-    (const MethodInfo *)onStartBeginRequest);
+  WarBoardAPIRequestTask___ctor_34519832((WarBoardAPIRequestTask_o *)this, resultCallback, onStartBeginRequest, 0LL);
   this->fields.consumeType = consume;
 }
 
@@ -19,61 +14,49 @@ void __fastcall WarBoardAPIContinueRequestTask__SetRequest(
         WarBoardAPIContinueRequestTask_o *this,
         const MethodInfo *method)
 {
-  WarBoardContinueRequest_o *Instance; // x0
+  __int64 v3; // x1
   __int64 v4; // x1
-  WarBoardData_o *paramString; // x20
-  WarBoardContinueRequest_o *v6; // x21
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
+  Il2CppObject *Instance; // x0
+  __int64 v6; // x1
+  WarBoardData_o *monitor; // x20
+  WarBoardContinueRequest_o *v8; // x21
+  int32_t v9; // w2
+  int32_t v10; // w3
   int32_t id; // w0
 
-  if ( (byte_4389009 & 1) == 0 )
+  if ( (byte_48E07AC & 1) == 0 )
   {
-    sub_B775C4(&Method_NetworkManager_getRequest_WarBoardContinueRequest___);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_4389009 = 1;
+    sub_1B00CCC(&Method_NetworkManager_getRequest_WarBoardContinueRequest___, method);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v3);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
+    byte_48E07AC = 1;
   }
-  Instance = (WarBoardContinueRequest_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  WarBoardAPIRequestTask__SetRequest((WarBoardAPIRequestTask_o *)this, 0LL);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_12;
-  paramString = (WarBoardData_o *)Instance[10].fields.paramString;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+    goto LABEL_11;
+  monitor = (WarBoardData_o *)Instance[27].monitor;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  Instance = (WarBoardContinueRequest_o *)NetworkManager__getRequest_WarBoardWallAttackRequest_(
-                                            0LL,
-                                            (const MethodInfo_1DF8BE8 *)Method_NetworkManager_getRequest_WarBoardContinueRequest___);
+  Instance = NetworkManager__getRequest_object_(
+               0LL,
+               (const MethodInfo_2DD4818 *)Method_NetworkManager_getRequest_WarBoardContinueRequest___);
   if ( !Instance )
-    goto LABEL_12;
-  v6 = Instance;
-  Instance = (WarBoardContinueRequest_o *)RequestBase__beginRetryRequest((RequestBase_o *)Instance, 0, 0LL);
+    goto LABEL_11;
+  v8 = (WarBoardContinueRequest_o *)Instance;
+  Instance = (Il2CppObject *)RequestBase__beginRetryRequest((RequestBase_o *)Instance, 0, 0LL);
   if ( ((unsigned __int8)Instance & 1) == 0 )
   {
-    if ( paramString )
+    if ( monitor )
     {
-      id = WarBoardData__get_id(paramString, 0LL);
-      WarBoardContinueRequest__beginRequest(v6, id, this->fields.consumeType, paramString, 0LL);
-      goto LABEL_11;
+      id = WarBoardData__get_id(monitor, 0LL);
+      WarBoardContinueRequest__beginRequest(v8, id, this->fields.consumeType, monitor, 0LL);
+      goto LABEL_10;
     }
-LABEL_12:
-    sub_B7769C(Instance, v4);
-  }
 LABEL_11:
-  this->fields.request = (struct RequestBase_o *)v6;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.request,
-    (System_Int32_array **)v6,
-    v7,
-    v8,
-    v9,
-    v10,
-    v11,
-    v12);
+    sub_1B00F28(Instance, v6);
+  }
+LABEL_10:
+  this->fields.request = (struct RequestBase_o *)v8;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.request, (int32_t)v8, v9, v10);
 }

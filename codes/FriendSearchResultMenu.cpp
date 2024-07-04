@@ -1,23 +1,20 @@
 void __fastcall FriendSearchResultMenu___ctor(FriendSearchResultMenu_o *this, const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  System_Int32_array **v9; // x1
+  int32_t v2; // w2
+  int32_t v3; // w3
+  __int64 v5; // x1
+  int32_t v6; // w1
 
-  if ( (byte_438D8AA & 1) == 0 )
+  if ( (byte_48E6BE3 & 1) == 0 )
   {
-    sub_B775C4(&BaseMenu_TypeInfo);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438D8AA = 1;
+    sub_1B00CCC(&BaseMenu_TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v5);
+    byte_48E6BE3 = 1;
   }
-  v9 = (System_Int32_array **)StringLiteral_1/*""*/;
+  v6 = (int)StringLiteral_1/*""*/;
   this->fields.searchId = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.searchId, v9, v2, v3, v4, v5, v6, v7);
-  if ( (BYTE3(BaseMenu_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseMenu_TypeInfo->_2.cctor_finished )
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.searchId, v6, v2, v3);
+  if ( !BaseMenu_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseMenu_TypeInfo);
   BaseMenu___ctor((BaseMenu_o *)this, 0LL);
 }
@@ -28,29 +25,29 @@ void __fastcall FriendSearchResultMenu__Callback(
         int32_t result,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
   struct FriendSearchResultMenu_CallbackFunc_o **p_callbackFunc; // x0
-  FriendSearchResultMenu_CallbackFunc_o *v10; // x20
+  struct FriendSearchResultMenu_CallbackFunc_o *v6; // x21
   struct FriendSearchResultMenu_CallbackFunc_o *callbackFunc; // t1
-  __int64 v13; // x0
-  __int64 v14; // x1
+  __int64 v9; // x0
+  __int64 v10; // x1
   struct ClassButtonControlComponent_o *classButtonControl; // x8
 
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
-  v10 = callbackFunc;
+  v6 = callbackFunc;
   if ( callbackFunc )
   {
     this->fields.callbackFunc = 0LL;
-    sub_B77560((BattleServantConfConponent_o *)p_callbackFunc, 0LL, (System_String_array **)method, v3, v4, v5, v6, v7);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)p_callbackFunc, 0, (int32_t)method, v3);
     classButtonControl = this->fields.classButtonControl;
     if ( !classButtonControl )
-      sub_B7769C(v13, v14);
-    FriendSearchResultMenu_CallbackFunc__Invoke(v10, result, classButtonControl->fields.currentCursor, 0LL);
+      sub_1B00F28(v9, v10);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD, _QWORD))v6->fields.m_target)(
+      v6->fields.original_method_info,
+      (unsigned int)result,
+      (unsigned int)classButtonControl->fields.currentCursor,
+      *(_QWORD *)&v6->fields.extra_arg);
   }
 }
 
@@ -59,42 +56,35 @@ void __fastcall FriendSearchResultMenu__Close(FriendSearchResultMenu_o *this, co
 {
   const MethodInfo *v2; // x2
 
-  FriendSearchResultMenu__Close_29635164(this, 0LL, v2);
+  FriendSearchResultMenu__Close_45078120(this, 0LL, v2);
 }
 
 
-void __fastcall FriendSearchResultMenu__Close_29635164(
+void __fastcall FriendSearchResultMenu__Close_45078120(
         FriendSearchResultMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  System_Action_o *v10; // x20
+  int32_t v3; // w3
+  __int64 v6; // x1
+  System_Action_o *v7; // x20
 
-  if ( (byte_438D8A5 & 1) == 0 )
+  if ( (byte_48E6BDE & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&Method_FriendSearchResultMenu_EndClose__);
-    byte_438D8A5 = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, callback);
+    sub_1B00CCC(&Method_FriendSearchResultMenu_EndClose__, v6);
+    byte_48E6BDE = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.closeCallbackFunc,
-    (System_Int32_array **)callback,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc,
+    (int32_t)callback,
+    (int32_t)method,
+    v3);
   this->fields.state = 4;
-  v10 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-  System_Action___ctor(v10, (Il2CppObject *)this, Method_FriendSearchResultMenu_EndClose__, 0LL);
-  BaseMenu__Close((BaseMenu_o *)this, v10, 0LL);
+  v7 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+  System_Action___ctor(v7, (Il2CppObject *)this, Method_FriendSearchResultMenu_EndClose__, 0LL);
+  BaseMenu__Close((BaseMenu_o *)this, v7, 0LL);
 }
 
 
@@ -102,29 +92,27 @@ void __fastcall FriendSearchResultMenu__EndClose(FriendSearchResultMenu_o *this,
 {
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v4; // x1
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
-  BattleServantConfConponent_o *p_closeCallbackFunc; // x19
-  System_Action_o *v12; // x20
+  int32_t v5; // w2
+  int32_t v6; // w3
+  ServantStatusBattleListViewItem_o *p_closeCallbackFunc; // x19
+  struct System_Action_o *v8; // x20
   struct System_Action_o *closeCallbackFunc; // t1
 
   FriendSearchResultMenu__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7769C(0LL, v4);
+    sub_1B00F28(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   closeCallbackFunc = this->fields.closeCallbackFunc;
-  p_closeCallbackFunc = (BattleServantConfConponent_o *)&this->fields.closeCallbackFunc;
-  v12 = closeCallbackFunc;
+  p_closeCallbackFunc = (ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc;
+  v8 = closeCallbackFunc;
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_B77560(p_closeCallbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
-    System_Action__Invoke(v12, 0LL);
+    sub_1B00C70(p_closeCallbackFunc, 0, v5, v6);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v8->fields.m_target)(
+      v8->fields.original_method_info,
+      *(_QWORD *)&v8->fields.extra_arg);
   }
 }
 
@@ -137,258 +125,260 @@ void __fastcall FriendSearchResultMenu__EndOpen(FriendSearchResultMenu_o *this, 
 
 void __fastcall FriendSearchResultMenu__Init(FriendSearchResultMenu_o *this, const MethodInfo *method)
 {
-  UILabel_o *titleLabel; // x0
-  System_Collections_Generic_Dictionary_int__int__o *v4; // x20
-  System_Collections_Generic_Dictionary_int__int__o **p_classBoardMaxNumDictionary; // x21
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
   __int64 v12; // x1
+  __int64 v13; // x1
+  UILabel_o *titleLabel; // x0
+  System_Collections_Generic_Dictionary_int__int__o *v15; // x20
+  System_Collections_Generic_Dictionary_int__int__o **p_classBoardMaxNumDictionary; // x21
+  int32_t v17; // w2
+  int32_t v18; // w3
+  __int64 v19; // x1
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x20
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  unsigned __int64 v15; // x10
-  int32_t *p_offset; // x11
+  __int64 v22; // x9
+  int32_t *p_offset; // x10
   __int64 p_method; // x0
-  System_Collections_Generic_IEnumerator_T__c *v18; // x8
-  unsigned __int64 v19; // x10
-  int32_t *v20; // x11
-  __int64 v21; // x0
-  __int64 v22; // x0
-  __int64 v23; // x22
-  __int64 v24; // x9
-  ClassBoardSquareMaster_o *Master_WarQuestSelectionMaster; // x0
-  __int64 v26; // x1
+  System_Collections_Generic_IEnumerator_T__c *v25; // x8
+  __int64 v26; // x9
+  int32_t *v27; // x10
+  __int64 v28; // x0
+  __int64 v29; // x0
+  __int64 v30; // x22
+  __int64 methodPtr_low; // x9
+  Il2CppObject *Master_object; // x0
+  __int64 v33; // x1
   ClassBoardSquareEntity_array *OtherThanNoneEntity; // x0
-  __int64 v28; // x1
-  System_Collections_Generic_IEnumerator_T__c *v29; // x8
-  unsigned __int64 v30; // x10
-  int32_t *v31; // x11
-  __int64 v32; // x0
+  __int64 v35; // x1
+  System_Collections_Generic_IEnumerator_T__c *v36; // x8
+  __int64 v37; // x9
+  int32_t *v38; // x10
+  __int64 v39; // x0
 
-  if ( (byte_438D8A3 & 1) == 0 )
+  if ( (byte_48E6BDC & 1) == 0 )
   {
-    sub_B775C4(&ClassBoardBaseEntity_TypeInfo);
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
-    sub_B775C4(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
-    sub_B775C4(&Method_DataManager_GetMaster_ClassBoardSquareMaster___);
-    sub_B775C4(&DataManager_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__int__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__int___ctor__);
-    sub_B775C4(&System_Collections_Generic_Dictionary_int__int__TypeInfo);
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    sub_B775C4(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
-    sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438D8A3 = 1;
+    sub_1B00CCC(&ClassBoardBaseEntity_TypeInfo, method);
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, v3);
+    sub_1B00CCC(&Method_DataManager_GetMaster_ClassBoardBaseMaster___, v4);
+    sub_1B00CCC(&Method_DataManager_GetMaster_ClassBoardSquareMaster___, v5);
+    sub_1B00CCC(&DataManager_TypeInfo, v6);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_int__int__Add__, v7);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_int__int___ctor__, v8);
+    sub_1B00CCC(&System_Collections_Generic_Dictionary_int__int__TypeInfo, v9);
+    sub_1B00CCC(&System_IDisposable_TypeInfo, v10);
+    sub_1B00CCC(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v11);
+    sub_1B00CCC(&System_Collections_IEnumerator_TypeInfo, v12);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v13);
+    byte_48E6BDC = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
-    goto LABEL_46;
+    goto LABEL_44;
   UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !titleLabel )
-    goto LABEL_46;
+    goto LABEL_44;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0LL);
   this->fields.state = 0;
-  v4 = (System_Collections_Generic_Dictionary_int__int__o *)sub_B77694(System_Collections_Generic_Dictionary_int__int__TypeInfo);
+  v15 = (System_Collections_Generic_Dictionary_int__int__o *)sub_1B00F18(System_Collections_Generic_Dictionary_int__int__TypeInfo);
   System_Collections_Generic_Dictionary_int__int____ctor(
-    v4,
-    (const MethodInfo_2FE81CC *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
+    v15,
+    (const MethodInfo_302D098 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
+  this->fields.classBoardMaxNumDictionary = v15;
   p_classBoardMaxNumDictionary = &this->fields.classBoardMaxNumDictionary;
-  this->fields.classBoardMaxNumDictionary = v4;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.classBoardMaxNumDictionary,
-    (System_Int32_array **)v4,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10,
-    v11);
-  if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.classBoardMaxNumDictionary, (int32_t)v15, v17, v18);
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  titleLabel = (UILabel_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
-  if ( !titleLabel || (titleLabel = (UILabel_o *)titleLabel->fields.rightAnchor) == 0LL )
-LABEL_46:
-    sub_B7769C(titleLabel, method);
-  Enumerator = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___GetEnumerator(
-                 (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)titleLabel,
-                 (const MethodInfo_2CC56C8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+  titleLabel = (UILabel_o *)DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+  if ( !titleLabel || (titleLabel = (UILabel_o *)titleLabel->fields.leftAnchor) == 0LL )
+LABEL_44:
+    sub_1B00F28(titleLabel, method);
+  Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
+                 (System_Collections_ObjectModel_Collection_T__o *)titleLabel,
+                 (const MethodInfo_2F83C88 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_B7769C(0LL, v12);
+    sub_1B00F28(0LL, v19);
   while ( 1 )
   {
     klass = Enumerator->klass;
-    if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
+    v22 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
-      v15 = 0LL;
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        ++v15;
+        --v22;
         p_offset += 4;
-        if ( v15 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
-          goto LABEL_15;
+        if ( !v22 )
+          goto LABEL_14;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
     }
     else
     {
-LABEL_15:
-      p_method = sub_B0F4C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+LABEL_14:
+      p_method = sub_1B52CAC(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
       break;
-    v18 = Enumerator->klass;
-    if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
+    v25 = Enumerator->klass;
+    v26 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
-      v19 = 0LL;
-      v20 = &v18->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v20 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
+      v27 = &v25->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v27 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
       {
-        ++v19;
-        v20 += 4;
-        if ( v19 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
-          goto LABEL_22;
+        --v26;
+        v27 += 4;
+        if ( !v26 )
+          goto LABEL_21;
       }
-      v21 = (__int64)&v18->vtable[*v20].method;
+      v28 = (__int64)&v25->vtable[*v27].method;
     }
     else
     {
-LABEL_22:
-      v21 = sub_B0F4C0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+LABEL_21:
+      v28 = sub_1B52CAC(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
-    v22 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v21)(
+    v29 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v28)(
             Enumerator,
-            *(_QWORD *)(v21 + 8));
-    v23 = v22;
-    if ( v22 )
+            *(_QWORD *)(v28 + 8));
+    v30 = v29;
+    if ( v29 )
     {
-      v24 = *(&ClassBoardBaseEntity_TypeInfo->_2.bitflags2 + 1);
-      if ( *(unsigned __int8 *)(*(_QWORD *)v22 + 300LL) < (unsigned int)v24
-        || *(ClassBoardBaseEntity_c **)(*(_QWORD *)(*(_QWORD *)v22 + 200LL) + 8 * v24 - 8) != ClassBoardBaseEntity_TypeInfo )
+      methodPtr_low = LOBYTE(ClassBoardBaseEntity_TypeInfo->vtable._0_Equals.methodPtr);
+      if ( *(unsigned __int8 *)(*(_QWORD *)v29 + 304LL) < (unsigned int)methodPtr_low
+        || *(ClassBoardBaseEntity_c **)(*(_QWORD *)(*(_QWORD *)v29 + 200LL) + 8 * methodPtr_low - 8) != ClassBoardBaseEntity_TypeInfo )
       {
-        sub_B77990(v22);
-LABEL_43:
-        sub_B7769C(Master_WarQuestSelectionMaster, v26);
+        sub_1B011E8(v29);
+LABEL_41:
+        sub_1B00F28(Master_object, v33);
       }
     }
-    if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+    if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_WarQuestSelectionMaster = (ClassBoardSquareMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_ClassBoardSquareMaster___);
-    if ( !v23 )
-      goto LABEL_43;
-    if ( !Master_WarQuestSelectionMaster )
-      sub_B7769C(0LL, v26);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_ClassBoardSquareMaster___);
+    if ( !v30 )
+      goto LABEL_41;
+    if ( !Master_object )
+      sub_1B00F28(0LL, v33);
     OtherThanNoneEntity = ClassBoardSquareMaster__GetOtherThanNoneEntity(
-                            Master_WarQuestSelectionMaster,
-                            *(_DWORD *)(v23 + 16),
+                            (ClassBoardSquareMaster_o *)Master_object,
+                            *(_DWORD *)(v30 + 16),
                             0LL);
     if ( OtherThanNoneEntity )
     {
       if ( !*p_classBoardMaxNumDictionary )
-        sub_B7769C(OtherThanNoneEntity, v28);
+        sub_1B00F28(OtherThanNoneEntity, v35);
       System_Collections_Generic_Dictionary_int__int___Add(
         *p_classBoardMaxNumDictionary,
-        *(_DWORD *)(v23 + 16),
+        *(_DWORD *)(v30 + 16),
         OtherThanNoneEntity->max_length,
-        (const MethodInfo_2FE8D70 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
+        (const MethodInfo_302DA5C *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
     }
   }
-  v29 = Enumerator->klass;
-  if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
+  v36 = Enumerator->klass;
+  v37 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
   {
-    v30 = 0LL;
-    v31 = &v29->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v31 - 1) != System_IDisposable_TypeInfo )
+    v38 = &v36->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v38 - 1) != System_IDisposable_TypeInfo )
     {
-      ++v30;
-      v31 += 4;
-      if ( v30 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
-        goto LABEL_39;
+      --v37;
+      v38 += 4;
+      if ( !v37 )
+        goto LABEL_37;
     }
-    v32 = (__int64)&v29->vtable[*v31].method;
+    v39 = (__int64)&v36->vtable[*v38].method;
   }
   else
   {
-LABEL_39:
-    v32 = sub_B0F4C0(Enumerator, System_IDisposable_TypeInfo, 0LL);
+LABEL_37:
+    v39 = sub_1B52CAC(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v32)(Enumerator, *(_QWORD *)(v32 + 8));
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v39)(Enumerator, *(_QWORD *)(v39 + 8));
   BaseMenu__Init((BaseMenu_o *)this, 0LL);
 }
 
 
 void __fastcall FriendSearchResultMenu__OnClickCancel(FriendSearchResultMenu_o *this, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x2
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  const MethodInfo *v5; // x2
 
-  if ( (byte_438D8A7 & 1) == 0 )
+  if ( (byte_48E6BE0 & 1) == 0 )
   {
-    sub_B775C4(&SoundManager_TypeInfo);
-    byte_438D8A7 = 1;
+    sub_1B00CCC(&Method_FriendSearchResultMenu_OnClickCancel__, method);
+    byte_48E6BE0 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
-    if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !SoundManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    }
-    SoundManager__playSystemSe(1, 0LL);
-    FriendSearchResultMenu__Callback(this, 1, v3);
+    v3 = Method_FriendSearchResultMenu_OnClickCancel__;
+    if ( (*((_BYTE *)Method_FriendSearchResultMenu_OnClickCancel__ + 83) & 2) != 0 )
+      v3 = (_QWORD *)sub_1B00CE4(Method_FriendSearchResultMenu_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
+    FriendSearchResultMenu__Callback(this, 1, v5);
   }
 }
 
 
 void __fastcall FriendSearchResultMenu__OnClickDecide(FriendSearchResultMenu_o *this, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x2
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  const MethodInfo *v5; // x2
 
-  if ( (byte_438D8A6 & 1) == 0 )
+  if ( (byte_48E6BDF & 1) == 0 )
   {
-    sub_B775C4(&SoundManager_TypeInfo);
-    byte_438D8A6 = 1;
+    sub_1B00CCC(&Method_FriendSearchResultMenu_OnClickDecide__, method);
+    byte_48E6BDF = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
-    if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !SoundManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    }
-    SoundManager__playSystemSe(0, 0LL);
-    FriendSearchResultMenu__Callback(this, 2, v3);
+    v3 = Method_FriendSearchResultMenu_OnClickDecide__;
+    if ( (*((_BYTE *)Method_FriendSearchResultMenu_OnClickDecide__ + 83) & 2) != 0 )
+      v3 = (_QWORD *)sub_1B00CE4(Method_FriendSearchResultMenu_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
+    FriendSearchResultMenu__Callback(this, 2, v5);
   }
 }
 
 
 void __fastcall FriendSearchResultMenu__OnClickFollow(FriendSearchResultMenu_o *this, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x2
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  const MethodInfo *v5; // x2
 
-  if ( (byte_438D8A9 & 1) == 0 )
+  if ( (byte_48E6BE2 & 1) == 0 )
   {
-    sub_B775C4(&SoundManager_TypeInfo);
-    byte_438D8A9 = 1;
+    sub_1B00CCC(&Method_FriendSearchResultMenu_OnClickFollow__, method);
+    byte_48E6BE2 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
-    if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !SoundManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    }
-    SoundManager__playSystemSe(0, 0LL);
-    FriendSearchResultMenu__Callback(this, 3, v3);
+    v3 = Method_FriendSearchResultMenu_OnClickFollow__;
+    if ( (*((_BYTE *)Method_FriendSearchResultMenu_OnClickFollow__ + 83) & 2) != 0 )
+      v3 = (_QWORD *)sub_1B00CE4(Method_FriendSearchResultMenu_OnClickFollow__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
+    FriendSearchResultMenu__Callback(this, 3, v5);
   }
 }
 
@@ -400,119 +390,89 @@ void __fastcall FriendSearchResultMenu__Open(
         FriendSearchResultMenu_CallbackFunc_o *callback,
         const MethodInfo *method)
 {
-  ClassButtonControlComponent_o *classButtonControl; // x23
-  ClassButtonControlComponent_CallbackFunc_o *v10; // x24
-  ClassButtonControlComponent_o *friendIcon; // x0
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
   __int64 v12; // x1
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
-  const MethodInfo *v19; // x1
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
+  __int64 v13; // x1
+  ClassButtonControlComponent_o *classButtonControl; // x23
+  ClassButtonControlComponent_CallbackFunc_o *v15; // x24
+  ClassButtonControlComponent_o *friendIcon; // x0
+  __int64 v17; // x1
+  int32_t v18; // w2
+  int32_t v19; // w3
+  const MethodInfo *v20; // x1
+  int32_t v21; // w2
+  int32_t v22; // w3
   int32_t state; // w8
   UILabel_o *titleLabel; // x21
-  struct ClassButtonControlComponent_o *v28; // x8
-  System_Action_o *v29; // x20
+  struct ClassButtonControlComponent_o *v25; // x8
+  System_Action_o *v26; // x20
   struct FriendSearchResultMenu_CallbackFunc_o **p_callbackFunc; // x19
 
-  if ( (byte_438D8A4 & 1) == 0 )
+  if ( (byte_48E6BDD & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&ClassButtonControlComponent_CallbackFunc_TypeInfo);
-    sub_B775C4(&Method_FriendSearchResultMenu_EndOpen__);
-    sub_B775C4(&Method_FriendSearchResultMenu_changeClass__);
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&StringLiteral_6646/*"FRIEND_SEARCH_RESULT_TITLE"*/);
-    byte_438D8A4 = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, entity);
+    sub_1B00CCC(&ClassButtonControlComponent_CallbackFunc_TypeInfo, v9);
+    sub_1B00CCC(&Method_FriendSearchResultMenu_EndOpen__, v10);
+    sub_1B00CCC(&Method_FriendSearchResultMenu_changeClass__, v11);
+    sub_1B00CCC(&LocalizationManager_TypeInfo, v12);
+    sub_1B00CCC(&StringLiteral_6467/*"FRIEND_SEARCH_RESULT_TITLE"*/, v13);
+    byte_48E6BDD = 1;
   }
   classButtonControl = this->fields.classButtonControl;
-  v10 = (ClassButtonControlComponent_CallbackFunc_o *)sub_B77694(ClassButtonControlComponent_CallbackFunc_TypeInfo);
+  v15 = (ClassButtonControlComponent_CallbackFunc_o *)sub_1B00F18(ClassButtonControlComponent_CallbackFunc_TypeInfo);
   ClassButtonControlComponent_CallbackFunc___ctor(
-    v10,
+    v15,
     (Il2CppObject *)this,
-    Method_FriendSearchResultMenu_changeClass__,
+    (intptr_t)Method_FriendSearchResultMenu_changeClass__,
     0LL);
   if ( !classButtonControl )
-    goto LABEL_21;
-  ClassButtonControlComponent__init(classButtonControl, v10, 0, 0, 0, 0LL);
+    goto LABEL_20;
+  ClassButtonControlComponent__init(classButtonControl, v15, 0, 0, 0, 0LL);
   friendIcon = this->fields.classButtonControl;
   if ( !friendIcon )
-    goto LABEL_21;
+    goto LABEL_20;
   ClassButtonControlComponent__setCursor(friendIcon, classPos, 0LL);
   this->fields.otherUserGameEntity = entity;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.otherUserGameEntity,
-    (System_Int32_array **)entity,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.otherUserGameEntity, (int32_t)entity, v18, v19);
   state = this->fields.state;
   if ( state == 4 )
   {
-    FriendSearchResultMenu__EndClose(this, v19);
+    FriendSearchResultMenu__EndClose(this, v20);
     state = this->fields.state;
   }
   if ( state == 3 )
   {
     this->fields.callbackFunc = callback;
     p_callbackFunc = &this->fields.callbackFunc;
-    sub_B77560(
-      (BattleServantConfConponent_o *)p_callbackFunc,
-      (System_Int32_array **)callback,
-      v20,
-      v21,
-      v22,
-      v23,
-      v24,
-      v25);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)p_callbackFunc, (int32_t)callback, v21, v22);
     *((_DWORD *)p_callbackFunc - 2) = 2;
   }
   else if ( !state )
   {
     this->fields.callbackFunc = callback;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&this->fields.callbackFunc,
-      (System_Int32_array **)callback,
-      v20,
-      v21,
-      v22,
-      v23,
-      v24,
-      v25);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v21, v22);
     titleLabel = this->fields.titleLabel;
-    if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
+    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    }
-    friendIcon = (ClassButtonControlComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6646/*"FRIEND_SEARCH_RESULT_TITLE"*/, 0LL);
+    friendIcon = (ClassButtonControlComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6467/*"FRIEND_SEARCH_RESULT_TITLE"*/, 0LL);
     if ( titleLabel )
     {
       UILabel__set_text(titleLabel, (System_String_o *)friendIcon, 0LL);
       if ( entity )
       {
-        v28 = this->fields.classButtonControl;
-        if ( !v28 )
-          goto LABEL_21;
+        v25 = this->fields.classButtonControl;
+        if ( !v25 )
+          goto LABEL_20;
         friendIcon = (ClassButtonControlComponent_o *)this->fields.friendIcon;
         if ( !friendIcon )
-          goto LABEL_21;
+          goto LABEL_20;
         FriendIconComponent__Set(
           (FriendIconComponent_o *)friendIcon,
           entity,
           1,
-          v28->fields.currentCursor,
+          v25->fields.currentCursor,
           0,
           0,
           0,
@@ -524,14 +484,14 @@ void __fastcall FriendSearchResultMenu__Open(
       {
         UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)friendIcon, 1, 0LL);
         this->fields.state = 1;
-        v29 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-        System_Action___ctor(v29, (Il2CppObject *)this, Method_FriendSearchResultMenu_EndOpen__, 0LL);
-        BaseMenu__Open((BaseMenu_o *)this, v29, 0LL);
+        v26 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+        System_Action___ctor(v26, (Il2CppObject *)this, Method_FriendSearchResultMenu_EndOpen__, 0LL);
+        BaseMenu__Open((BaseMenu_o *)this, v26, 0LL);
         return;
       }
     }
-LABEL_21:
-    sub_B7769C(friendIcon, v12);
+LABEL_20:
+    sub_1B00F28(friendIcon, v17);
   }
 }
 
@@ -551,10 +511,10 @@ void __fastcall FriendSearchResultMenu__add_callbackFunc(
   FriendSearchResultMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_438D8A1 & 1) == 0 )
+  if ( (byte_48E6BDA & 1) == 0 )
   {
-    sub_B775C4(&FriendSearchResultMenu_CallbackFunc_TypeInfo);
-    byte_438D8A1 = 1;
+    sub_1B00CCC(&FriendSearchResultMenu_CallbackFunc_TypeInfo, value);
+    byte_48E6BDA = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -567,40 +527,45 @@ void __fastcall FriendSearchResultMenu__add_callbackFunc(
       if ( (FriendSearchResultMenu_CallbackFunc_c *)v8->klass != FriendSearchResultMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_B6BFDC(p_callbackFunc, v8, v6);
+    v9 = sub_1B3C1BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_B77990(v8);
+  sub_1B011E8(v8);
   FriendSearchResultMenu__remove_callbackFunc(v11, v12, v13);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall FriendSearchResultMenu__changeClass(
         FriendSearchResultMenu_o *this,
         int32_t classPos,
         const MethodInfo *method)
 {
+  _QWORD *v4; // x0
+  System_Reflection_MethodBase_o *v5; // x0
   FriendIconComponent_o *friendIcon; // x0
   OtherUserGameEntity_o *otherUserGameEntity; // x1
   struct ClassButtonControlComponent_o *classButtonControl; // x8
 
-  if ( (byte_438D8A8 & 1) == 0 )
+  if ( (byte_48E6BE1 & 1) == 0 )
   {
-    sub_B775C4(&SoundManager_TypeInfo);
-    byte_438D8A8 = 1;
+    sub_1B00CCC(&Method_FriendSearchResultMenu_changeClass__, *(_QWORD *)&classPos);
+    byte_48E6BE1 = 1;
   }
-  if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  SoundManager__playSystemSe(0, 0LL);
+  v4 = Method_FriendSearchResultMenu_changeClass__;
+  if ( (*((_BYTE *)Method_FriendSearchResultMenu_changeClass__ + 83) & 2) != 0 )
+    v4 = (_QWORD *)sub_1B00CE4(Method_FriendSearchResultMenu_changeClass__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v4, v4[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0LL);
   otherUserGameEntity = this->fields.otherUserGameEntity;
   if ( otherUserGameEntity )
   {
     classButtonControl = this->fields.classButtonControl;
     if ( !classButtonControl || (friendIcon = this->fields.friendIcon) == 0LL )
-      sub_B7769C(friendIcon, otherUserGameEntity);
+      sub_1B00F28(friendIcon, otherUserGameEntity);
     FriendIconComponent__Set(
       friendIcon,
       otherUserGameEntity,
@@ -621,7 +586,7 @@ int32_t __fastcall FriendSearchResultMenu__getChangeCursorPos(FriendSearchResult
 
   classButtonControl = this->fields.classButtonControl;
   if ( !classButtonControl )
-    sub_B7769C(0LL, method);
+    sub_1B00F28(0LL, method);
   return ClassButtonControlComponent__getChangeCursorPos(classButtonControl, 0LL);
 }
 
@@ -632,7 +597,7 @@ int32_t __fastcall FriendSearchResultMenu__get_GetCursorPos(FriendSearchResultMe
 
   classButtonControl = this->fields.classButtonControl;
   if ( !classButtonControl )
-    sub_B7769C(this, method);
+    sub_1B00F28(this, method);
   return classButtonControl->fields.currentCursor;
 }
 
@@ -651,10 +616,10 @@ void __fastcall FriendSearchResultMenu__remove_callbackFunc(
   FriendSearchResultMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_438D8A2 & 1) == 0 )
+  if ( (byte_48E6BDB & 1) == 0 )
   {
-    sub_B775C4(&FriendSearchResultMenu_CallbackFunc_TypeInfo);
-    byte_438D8A2 = 1;
+    sub_1B00CCC(&FriendSearchResultMenu_CallbackFunc_TypeInfo, value);
+    byte_48E6BDB = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -667,13 +632,13 @@ void __fastcall FriendSearchResultMenu__remove_callbackFunc(
       if ( (FriendSearchResultMenu_CallbackFunc_c *)v8->klass != FriendSearchResultMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_B6BFDC(p_callbackFunc, v8, v6);
+    v9 = sub_1B3C1BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_B77990(v8);
+  sub_1B011E8(v8);
   FriendSearchResultMenu__EndClose(v11, v12);
 }
 
@@ -686,14 +651,39 @@ void __fastcall FriendSearchResultMenu_CallbackFunc___ctor(
         const MethodInfo *a4)
 {
   __int64 v4; // x8
-  intptr_t *p_method; // x0
+  __int64 v6; // x21
+  int v8; // w22
+  struct System_Reflection_MethodInfo_o *v9; // x9
+  __int64 v10; // x0
 
-  v4 = **(_QWORD **)&method;
+  v4 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
+  *(_QWORD *)&this->fields.extra_arg = *(_QWORD *)&method;
+  v6 = *(_QWORD *)&method;
+  *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  p_method = &this->fields.method;
-  *((_QWORD *)p_method + 1) = *(_QWORD *)&method;
-  *((_QWORD *)p_method - 2) = v4;
-  sub_B77560(p_method);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  v8 = *(unsigned __int8 *)(v6 + 82);
+  this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
+  if ( (sub_1B00D8C(v6) & 1) == 0 )
+  {
+    if ( !object )
+    {
+      v10 = sub_1B00F44(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B00DF4(v10, 0LL);
+    }
+    goto LABEL_5;
+  }
+  if ( v8 != 2 )
+  {
+LABEL_5:
+    v9 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
+    this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
+    this->fields.original_method_info = v9;
+    goto LABEL_6;
+  }
+  this->fields.m_target = (Il2CppObject *)sub_19509FC;
+LABEL_6:
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19509A4;
 }
 
 
@@ -706,23 +696,26 @@ System_IAsyncResult_o *__fastcall FriendSearchResultMenu_CallbackFunc__BeginInvo
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v9; // x2
-  __int64 v11[3]; // [xsp+0h] [xbp-40h] BYREF
-  int32_t v12; // [xsp+18h] [xbp-28h] BYREF
-  int32_t v13; // [xsp+1Ch] [xbp-24h] BYREF
+  __int64 v9; // x1
+  __int64 v10; // x2
+  __int64 v11; // x3
+  __int64 v12; // x4
+  __int64 v14[3]; // [xsp+8h] [xbp-58h] BYREF
+  int32_t v15; // [xsp+28h] [xbp-38h] BYREF
+  int32_t v16; // [xsp+2Ch] [xbp-34h] BYREF
 
-  v12 = classPos;
-  v13 = result;
-  if ( (byte_43880A1 & 1) == 0 )
+  v15 = classPos;
+  v16 = result;
+  if ( (byte_48E6BE4 & 1) == 0 )
   {
-    sub_B775C4(&int_TypeInfo);
-    sub_B775C4(&FriendRootComponent_OfferState_TypeInfo);
-    byte_43880A1 = 1;
+    sub_1B00CCC(&int_TypeInfo, *(_QWORD *)&result);
+    sub_1B00CCC(&FriendRootComponent_OfferState_TypeInfo, v9);
+    byte_48E6BE4 = 1;
   }
-  v11[2] = 0LL;
-  v11[0] = j_il2cpp_value_box_0(FriendRootComponent_OfferState_TypeInfo, &v13, *(_QWORD *)&classPos);
-  v11[1] = j_il2cpp_value_box_0(int_TypeInfo, &v12, v9);
-  return (System_IAsyncResult_o *)sub_B77568(this, v11, callback, object);
+  v14[2] = 0LL;
+  v14[0] = j_il2cpp_value_box_0(FriendRootComponent_OfferState_TypeInfo, &v16, *(_QWORD *)&classPos, callback, object);
+  v14[1] = j_il2cpp_value_box_0(int_TypeInfo, &v15, v10, v11, v12);
+  return (System_IAsyncResult_o *)sub_1B00C80(this, v14, callback, object);
 }
 
 
@@ -731,167 +724,19 @@ void __fastcall FriendSearchResultMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B7756C(result, 0LL, method);
+  sub_1B00C84(result, 0LL, method);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall FriendSearchResultMenu_CallbackFunc__Invoke(
         FriendSearchResultMenu_CallbackFunc_o *this,
         int32_t result,
         int32_t classPos,
         const MethodInfo *method)
 {
-  __int64 v4; // x8
-  __int64 v7; // x25
-  FriendSearchResultMenu_CallbackFunc_o **v8; // x26
-  __int64 v9; // x27
-  unsigned int v10; // w24
-  __int64 class_0; // x0
-  __int64 v12; // x8
-  unsigned int v13; // w23
-  unsigned __int64 v14; // x10
-  _DWORD *v15; // x11
-  __int64 v16; // x0
-  __int64 v17; // x0
-  __int64 v18; // x0
-  void (__fastcall **v19)(__int64 *, _QWORD, _QWORD, _QWORD); // x0
-  FriendSearchResultMenu_CallbackFunc_o *v20; // x8
-  __int64 *v21; // x22
-  __int64 v22; // x23
-  void (__fastcall *v23)(unsigned int *, _QWORD, __int64); // x24
-  char v24; // w24
-  char v25; // w0
-  unsigned int v26; // w24
-  __int64 v27; // x8
-  __int64 v28; // x1
-  __int64 v29; // x2
-  unsigned __int64 v30; // x10
-  _DWORD *v31; // x11
-  unsigned int v32; // [xsp+Ch] [xbp-54h] BYREF
-  FriendSearchResultMenu_CallbackFunc_o *v33; // [xsp+18h] [xbp-48h] BYREF
-
-  v33 = this;
-  v32 = result;
-  v4 = *(_QWORD *)&this[1].fields.method_ptr;
-  if ( !v4 )
-  {
-    v8 = &v33;
-    v7 = 1LL;
-    goto LABEL_5;
-  }
-  v7 = *(_QWORD *)(v4 + 24);
-  if ( v7 )
-  {
-    v8 = (FriendSearchResultMenu_CallbackFunc_o **)(v4 + 32);
-LABEL_5:
-    v9 = 0LL;
-    while ( 1 )
-    {
-      v20 = v8[v9];
-      v21 = *(__int64 **)&v20->fields.method;
-      v22 = *(_QWORD *)&v20->fields.extra_arg;
-      v23 = *(void (__fastcall **)(unsigned int *, _QWORD, __int64))&v20->fields.method_ptr;
-      if ( *(__int16 *)(v22 + 72) == -1 )
-        sub_B77680(*(_QWORD *)&v20->fields.extra_arg, *(_QWORD *)&result);
-      if ( (sub_B775F4(v22) & 1) == 0 )
-        break;
-      if ( *(_BYTE *)(v22 + 74) != 2 )
-        goto LABEL_36;
-      v23((unsigned int *)v32, (unsigned int)classPos, v22);
-LABEL_38:
-      if ( ++v9 == v7 )
-        return;
-    }
-    if ( !v21 )
-    {
-      v23(&v32 - 4, (unsigned int)classPos, v22);
-      goto LABEL_38;
-    }
-    if ( *(__int16 *)(v22 + 72) != -1 && (*(_BYTE *)(*v21 + 277) & 1) == 0 && this->fields.m_target )
-    {
-      v24 = sub_B775EC(v22);
-      v25 = sub_B779F0(v22);
-      if ( (v24 & 1) != 0 )
-      {
-        v26 = v32;
-        if ( (v25 & 1) != 0 )
-        {
-          v27 = *v21;
-          v28 = *(_QWORD *)(v22 + 24);
-          v29 = *(unsigned __int16 *)(v22 + 72);
-          if ( *(_WORD *)(*v21 + 298) )
-          {
-            v30 = 0LL;
-            v31 = (_DWORD *)(*(_QWORD *)(v27 + 176) + 8LL);
-            while ( *((_QWORD *)v31 - 1) != v28 )
-            {
-              ++v30;
-              v31 += 4;
-              if ( v30 >= *(unsigned __int16 *)(*v21 + 298) )
-                goto LABEL_35;
-            }
-            v18 = v27 + 16LL * (*v31 + (int)v29) + 312;
-          }
-          else
-          {
-LABEL_35:
-            v18 = sub_B0F4C0(v21, v28, v29);
-          }
-          v17 = *(_QWORD *)(v18 + 8);
-        }
-        else
-        {
-          v17 = *(_QWORD *)(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 320);
-        }
-        v19 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD, _QWORD))sub_B77674(v17, v22);
-        (*v19)(v21, v26, (unsigned int)classPos, v19);
-      }
-      else
-      {
-        v10 = *(unsigned __int16 *)(v22 + 72);
-        if ( (v25 & 1) != 0 )
-        {
-          class_0 = j_il2cpp_method_get_class_0(v22);
-          v12 = *v21;
-          v13 = v32;
-          if ( *(_WORD *)(*v21 + 298) )
-          {
-            v14 = 0LL;
-            v15 = (_DWORD *)(*(_QWORD *)(v12 + 176) + 8LL);
-            while ( *((_QWORD *)v15 - 1) != class_0 )
-            {
-              ++v14;
-              v15 += 4;
-              if ( v14 >= *(unsigned __int16 *)(*v21 + 298) )
-                goto LABEL_11;
-            }
-            v16 = v12 + 16LL * (int)(*v15 + v10) + 312;
-          }
-          else
-          {
-LABEL_11:
-            v16 = sub_B0F4C0(v21, class_0, v10);
-          }
-          (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD, _QWORD))v16)(
-            v21,
-            v13,
-            (unsigned int)classPos,
-            *(_QWORD *)(v16 + 8));
-        }
-        else
-        {
-          (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD, _QWORD))(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 312))(
-            v21,
-            v32,
-            (unsigned int)classPos,
-            *(_QWORD *)(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 320));
-        }
-      }
-      goto LABEL_38;
-    }
-LABEL_36:
-    ((void (__fastcall *)(__int64 *, _QWORD, _QWORD, __int64))v23)(v21, v32, (unsigned int)classPos, v22);
-    goto LABEL_38;
-  }
+  ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, int32_t, int32_t, _QWORD))this->fields.m_target)(
+    this->fields.original_method_info,
+    result,
+    classPos,
+    *(_QWORD *)&this->fields.extra_arg);
 }

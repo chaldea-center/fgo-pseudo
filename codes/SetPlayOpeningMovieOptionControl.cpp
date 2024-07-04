@@ -2,7 +2,7 @@ void __fastcall SetPlayOpeningMovieOptionControl___ctor(
         SetPlayOpeningMovieOptionControl_o *this,
         const MethodInfo *method)
 {
-  GameOptionContentBase___ctor((GameOptionContentBase_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
 
@@ -10,65 +10,66 @@ void __fastcall SetPlayOpeningMovieOptionControl__Init(
         SetPlayOpeningMovieOptionControl_o *this,
         const MethodInfo *method)
 {
-  struct UILabel_o *notPlayTitleLabel; // x20
-  UILabel_o *notPlayInfoLabel; // x20
-  System_String_o *v5; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
   __int64 v6; // x1
-  UILabel_o *notPlaySwitchButton; // x20
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  UISprite_o *titleImage; // x20
+  UILabel_o *notPlayTitleLabel; // x20
+  System_String_o *v12; // x0
+  __int64 v13; // x1
+  UILabel_o *notPlayInfoLabel; // x20
+  UILabel_o *touchSkipTitleLabel; // x20
   UILabel_o *touchSkipInfoLabel; // x20
-  UILabel_o *touchSkipSwitchButton; // x20
-  const MethodInfo *v10; // x1
+  const MethodInfo *v17; // x1
 
-  if ( (byte_438DA90 & 1) == 0 )
+  if ( (byte_48DE17F & 1) == 0 )
   {
-    sub_B775C4(&AtlasManager_TypeInfo);
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&OptionManager_TypeInfo);
-    sub_B775C4(&StringLiteral_9966/*"OPTION_NOT_PLAY_OPENING_MOVIE"*/);
-    sub_B775C4(&StringLiteral_10000/*"OPTION_TOUCH_SKIP_OPENING_MOVIE"*/);
-    sub_B775C4(&StringLiteral_10001/*"OPTION_TOUCH_SKIP_OPENING_MOVIE_INFO"*/);
-    sub_B775C4(&StringLiteral_20129/*"img_txt_playopening"*/);
-    sub_B775C4(&StringLiteral_9967/*"OPTION_NOT_PLAY_OPENING_MOVIE_INFO"*/);
-    byte_438DA90 = 1;
+    sub_1B00CCC(&AtlasManager_TypeInfo, method);
+    sub_1B00CCC(&LocalizationManager_TypeInfo, v3);
+    sub_1B00CCC(&OptionManager_TypeInfo, v4);
+    sub_1B00CCC(&StringLiteral_9560/*"OPTION_NOT_PLAY_OPENING_MOVIE"*/, v5);
+    sub_1B00CCC(&StringLiteral_9602/*"OPTION_TOUCH_SKIP_OPENING_MOVIE"*/, v6);
+    sub_1B00CCC(&StringLiteral_9603/*"OPTION_TOUCH_SKIP_OPENING_MOVIE_INFO"*/, v7);
+    sub_1B00CCC(&StringLiteral_20289/*"img_txt_playopening"*/, v8);
+    sub_1B00CCC(&StringLiteral_9561/*"OPTION_NOT_PLAY_OPENING_MOVIE_INFO"*/, v9);
+    byte_48DE17F = 1;
   }
-  notPlayTitleLabel = this->fields.notPlayTitleLabel;
-  if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
+  titleImage = this->fields.titleImage;
+  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetMyRoomImage((UISprite_o *)notPlayTitleLabel, (System_String_o *)StringLiteral_20129/*"img_txt_playopening"*/, 0LL);
-  notPlayInfoLabel = this->fields.notPlayInfoLabel;
-  if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !LocalizationManager_TypeInfo->_2.cctor_finished )
-  {
+  AtlasManager__SetMyRoomImage(titleImage, (System_String_o *)StringLiteral_20289/*"img_txt_playopening"*/, 0LL);
+  notPlayTitleLabel = this->fields.notPlayTitleLabel;
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  }
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_9966/*"OPTION_NOT_PLAY_OPENING_MOVIE"*/, 0LL);
-  if ( !notPlayInfoLabel )
-    goto LABEL_17;
-  UILabel__set_text(notPlayInfoLabel, v5, 0LL);
-  notPlaySwitchButton = (UILabel_o *)this->fields.notPlaySwitchButton;
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_9967/*"OPTION_NOT_PLAY_OPENING_MOVIE_INFO"*/, 0LL);
-  if ( !notPlaySwitchButton
-    || (UILabel__set_text(notPlaySwitchButton, v5, 0LL),
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_9560/*"OPTION_NOT_PLAY_OPENING_MOVIE"*/, 0LL);
+  if ( !notPlayTitleLabel )
+    goto LABEL_14;
+  UILabel__set_text(notPlayTitleLabel, v12, 0LL);
+  notPlayInfoLabel = this->fields.notPlayInfoLabel;
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_9561/*"OPTION_NOT_PLAY_OPENING_MOVIE_INFO"*/, 0LL);
+  if ( !notPlayInfoLabel
+    || (UILabel__set_text(notPlayInfoLabel, v12, 0LL),
+        touchSkipTitleLabel = this->fields.touchSkipTitleLabel,
+        v12 = LocalizationManager__Get((System_String_o *)StringLiteral_9602/*"OPTION_TOUCH_SKIP_OPENING_MOVIE"*/, 0LL),
+        !touchSkipTitleLabel)
+    || (UILabel__set_text(touchSkipTitleLabel, v12, 0LL),
         touchSkipInfoLabel = this->fields.touchSkipInfoLabel,
-        v5 = LocalizationManager__Get((System_String_o *)StringLiteral_10000/*"OPTION_TOUCH_SKIP_OPENING_MOVIE"*/, 0LL),
-        !touchSkipInfoLabel)
-    || (UILabel__set_text(touchSkipInfoLabel, v5, 0LL),
-        touchSkipSwitchButton = (UILabel_o *)this->fields.touchSkipSwitchButton,
-        v5 = LocalizationManager__Get((System_String_o *)StringLiteral_10001/*"OPTION_TOUCH_SKIP_OPENING_MOVIE_INFO"*/, 0LL),
-        !touchSkipSwitchButton) )
+        v12 = LocalizationManager__Get((System_String_o *)StringLiteral_9603/*"OPTION_TOUCH_SKIP_OPENING_MOVIE_INFO"*/, 0LL),
+        !touchSkipInfoLabel) )
   {
-LABEL_17:
-    sub_B7769C(v5, v6);
+LABEL_14:
+    sub_1B00F28(v12, v13);
   }
-  UILabel__set_text(touchSkipSwitchButton, v5, 0LL);
-  if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !OptionManager_TypeInfo->_2.cctor_finished )
-  {
+  UILabel__set_text(touchSkipInfoLabel, v12, 0LL);
+  if ( !OptionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-  }
-  LOBYTE(this[1].klass) = OptionManager__GetNotPlayOpeningMovie(0LL);
-  BYTE1(this[1].klass) = OptionManager__GetTouchSkipOpeningMovie(0LL);
-  SetPlayOpeningMovieOptionControl__RefreshDisplay(this, v10);
+  this->fields.notPlayFlag = OptionManager__GetNotPlayOpeningMovie(0LL);
+  this->fields.touchSkipFlag = OptionManager__GetTouchSkipOpeningMovie(0LL);
+  SetPlayOpeningMovieOptionControl__RefreshDisplay(this, v17);
 }
 
 
@@ -78,26 +79,26 @@ void __fastcall SetPlayOpeningMovieOptionControl__OnClickNotPlaySwitchButton(
 {
   SetPlayOpeningMovieOptionControl_c *klass; // x9
   _QWORD *v4; // x0
-  int v5; // w20
+  _BOOL4 notPlayFlag; // w20
   System_Reflection_MethodBase_o *v6; // x0
   const MethodInfo *v7; // x1
 
-  if ( (byte_438DA92 & 1) == 0 )
+  if ( (byte_48DE181 & 1) == 0 )
   {
-    sub_B775C4(&Method_SetPlayOpeningMovieOptionControl_OnClickNotPlaySwitchButton__);
-    byte_438DA92 = 1;
+    sub_1B00CCC(&Method_SetPlayOpeningMovieOptionControl_OnClickNotPlaySwitchButton__, method);
+    byte_48DE181 = 1;
   }
   klass = this->klass;
-  LOBYTE(this[1].klass) ^= 1u;
+  this->fields.notPlayFlag ^= 1u;
   ((void (__fastcall *)(SetPlayOpeningMovieOptionControl_o *, Il2CppMethodPointer))klass->vtable._5_Reflection.method)(
     this,
     klass->vtable._6_IsAvailable.methodPtr);
   v4 = Method_SetPlayOpeningMovieOptionControl_OnClickNotPlaySwitchButton__;
-  v5 = LOBYTE(this[1].klass) ^ 1;
-  if ( (*((_BYTE *)Method_SetPlayOpeningMovieOptionControl_OnClickNotPlaySwitchButton__ + 75) & 2) != 0 )
-    v4 = (_QWORD *)sub_B775CC(Method_SetPlayOpeningMovieOptionControl_OnClickNotPlaySwitchButton__);
-  v6 = (System_Reflection_MethodBase_o *)sub_B775A8(v4, v4[3]);
-  OverwriteAssetSoundName__PlaySystemSe(v6, v5, 0LL);
+  notPlayFlag = this->fields.notPlayFlag;
+  if ( (*((_BYTE *)Method_SetPlayOpeningMovieOptionControl_OnClickNotPlaySwitchButton__ + 83) & 2) != 0 )
+    v4 = (_QWORD *)sub_1B00CE4(Method_SetPlayOpeningMovieOptionControl_OnClickNotPlaySwitchButton__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v4, v4[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v6, !notPlayFlag, 0LL);
   SetPlayOpeningMovieOptionControl__RefreshDisplay(this, v7);
 }
 
@@ -108,26 +109,26 @@ void __fastcall SetPlayOpeningMovieOptionControl__OnClickTouchSkipSwitchButton(
 {
   SetPlayOpeningMovieOptionControl_c *klass; // x9
   _QWORD *v4; // x0
-  int v5; // w20
+  _BOOL4 touchSkipFlag; // w20
   System_Reflection_MethodBase_o *v6; // x0
   const MethodInfo *v7; // x1
 
-  if ( (byte_438DA93 & 1) == 0 )
+  if ( (byte_48DE182 & 1) == 0 )
   {
-    sub_B775C4(&Method_SetPlayOpeningMovieOptionControl_OnClickTouchSkipSwitchButton__);
-    byte_438DA93 = 1;
+    sub_1B00CCC(&Method_SetPlayOpeningMovieOptionControl_OnClickTouchSkipSwitchButton__, method);
+    byte_48DE182 = 1;
   }
   klass = this->klass;
-  BYTE1(this[1].klass) ^= 1u;
+  this->fields.touchSkipFlag ^= 1u;
   ((void (__fastcall *)(SetPlayOpeningMovieOptionControl_o *, Il2CppMethodPointer))klass->vtable._5_Reflection.method)(
     this,
     klass->vtable._6_IsAvailable.methodPtr);
   v4 = Method_SetPlayOpeningMovieOptionControl_OnClickTouchSkipSwitchButton__;
-  v5 = BYTE1(this[1].klass) ^ 1;
-  if ( (*((_BYTE *)Method_SetPlayOpeningMovieOptionControl_OnClickTouchSkipSwitchButton__ + 75) & 2) != 0 )
-    v4 = (_QWORD *)sub_B775CC(Method_SetPlayOpeningMovieOptionControl_OnClickTouchSkipSwitchButton__);
-  v6 = (System_Reflection_MethodBase_o *)sub_B775A8(v4, v4[3]);
-  OverwriteAssetSoundName__PlaySystemSe(v6, v5, 0LL);
+  touchSkipFlag = this->fields.touchSkipFlag;
+  if ( (*((_BYTE *)Method_SetPlayOpeningMovieOptionControl_OnClickTouchSkipSwitchButton__ + 83) & 2) != 0 )
+    v4 = (_QWORD *)sub_1B00CE4(Method_SetPlayOpeningMovieOptionControl_OnClickTouchSkipSwitchButton__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v4, v4[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v6, !touchSkipFlag, 0LL);
   SetPlayOpeningMovieOptionControl__RefreshDisplay(this, v7);
 }
 
@@ -136,21 +137,18 @@ void __fastcall SetPlayOpeningMovieOptionControl__Reflection(
         SetPlayOpeningMovieOptionControl_o *this,
         const MethodInfo *method)
 {
-  int klass_low; // w20
+  _BOOL4 notPlayFlag; // w20
 
-  if ( (byte_438DA94 & 1) == 0 )
+  if ( (byte_48DE183 & 1) == 0 )
   {
-    sub_B775C4(&OptionManager_TypeInfo);
-    byte_438DA94 = 1;
+    sub_1B00CCC(&OptionManager_TypeInfo, method);
+    byte_48DE183 = 1;
   }
-  klass_low = LOBYTE(this[1].klass);
-  if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !OptionManager_TypeInfo->_2.cctor_finished )
-  {
+  notPlayFlag = this->fields.notPlayFlag;
+  if ( !OptionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-  }
-  OptionManager__SetNotPlayOpeningMovie(klass_low != 0, 0LL);
-  OptionManager__SetTouchSkipOpeningMovie(BYTE1(this[1].klass), 0LL);
+  OptionManager__SetNotPlayOpeningMovie(notPlayFlag, 0LL);
+  OptionManager__SetTouchSkipOpeningMovie(this->fields.touchSkipFlag, 0LL);
 }
 
 
@@ -158,29 +156,36 @@ void __fastcall SetPlayOpeningMovieOptionControl__RefreshDisplay(
         SetPlayOpeningMovieOptionControl_o *this,
         const MethodInfo *method)
 {
-  struct UILabel_o *touchSkipTitleLabel; // x0
-  System_String_o *v4; // x20
-  System_String_o *v5; // x1
+  __int64 v3; // x1
+  UIButton_o *notPlaySwitchButton; // x0
+  _BOOL4 touchSkipFlag; // w22
+  __int64 v6; // x20
+  __int64 v7; // x21
+  System_String_o *v8; // x1
+  System_String_o *v9; // x1
 
-  if ( (byte_438DA91 & 1) == 0 )
+  if ( (byte_48DE180 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_17345/*"btn_on"*/);
-    sub_B775C4(&StringLiteral_17344/*"btn_off"*/);
-    byte_438DA91 = 1;
+    sub_1B00CCC(&StringLiteral_17284/*"btn_on"*/, method);
+    sub_1B00CCC(&StringLiteral_17283/*"btn_off"*/, v3);
+    byte_48DE180 = 1;
   }
-  touchSkipTitleLabel = this->fields.touchSkipTitleLabel;
-  if ( BYTE1(this[1].klass) )
-    v4 = (System_String_o *)StringLiteral_17345/*"btn_on"*/;
+  notPlaySwitchButton = this->fields.notPlaySwitchButton;
+  if ( !notPlaySwitchButton
+    || ((touchSkipFlag = this->fields.touchSkipFlag,
+         v6 = StringLiteral_17283/*"btn_off"*/,
+         v7 = StringLiteral_17284/*"btn_on"*/,
+         this->fields.notPlayFlag)
+      ? (v8 = (System_String_o *)StringLiteral_17284/*"btn_on"*/)
+      : (v8 = (System_String_o *)StringLiteral_17283/*"btn_off"*/),
+        UIButton__set_normalSprite(notPlaySwitchButton, v8, 0LL),
+        (notPlaySwitchButton = this->fields.touchSkipSwitchButton) == 0LL) )
+  {
+    sub_1B00F28(notPlaySwitchButton, method);
+  }
+  if ( touchSkipFlag )
+    v9 = (System_String_o *)v7;
   else
-    v4 = (System_String_o *)StringLiteral_17344/*"btn_off"*/;
-  if ( !touchSkipTitleLabel
-    || (LOBYTE(this[1].klass)
-      ? (v5 = (System_String_o *)StringLiteral_17345/*"btn_on"*/)
-      : (v5 = (System_String_o *)StringLiteral_17344/*"btn_off"*/),
-        UIButton__set_normalSprite((UIButton_o *)touchSkipTitleLabel, v5, 0LL),
-        (touchSkipTitleLabel = *(struct UILabel_o **)&this->fields.notPlayFlag) == 0LL) )
-  {
-    sub_B7769C(touchSkipTitleLabel, method);
-  }
-  UIButton__set_normalSprite((UIButton_o *)touchSkipTitleLabel, v4, 0LL);
+    v9 = (System_String_o *)v6;
+  UIButton__set_normalSprite(notPlaySwitchButton, v9, 0LL);
 }

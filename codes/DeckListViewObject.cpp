@@ -1,15 +1,12 @@
 void __fastcall DeckListViewObject___ctor(DeckListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4386DFD & 1) == 0 )
+  if ( (byte_48DE804 & 1) == 0 )
   {
-    sub_B775C4(&ListViewObject_TypeInfo);
-    byte_4386DFD = 1;
+    sub_1B00CCC(&ListViewObject_TypeInfo, method);
+    byte_48DE804 = 1;
   }
-  if ( (BYTE3(ListViewObject_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ListViewObject_TypeInfo->_2.cctor_finished )
-  {
+  if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
-  }
   ListViewObject___ctor((ListViewObject_o *)this, 0LL);
 }
 
@@ -18,24 +15,27 @@ void __fastcall DeckListViewObject__Awake(DeckListViewObject_o *this, const Meth
 {
   __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
+  Il2CppObject *Component_object; // x0
+  int32_t v6; // w2
+  int32_t v7; // w3
 
-  if ( (byte_4386DF7 & 1) == 0 )
+  if ( (byte_48DE7FE & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_DeckListViewItemDraw___);
-    byte_4386DF7 = 1;
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_DeckListViewItemDraw___, method);
+    byte_48DE7FE = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_B7769C(0LL, v3);
-  this->fields.itemDraw = (struct DeckListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                                             dispObject,
-                                                             (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_DeckListViewItemDraw___);
-  sub_B77560(&this->fields.itemDraw);
+    sub_1B00F28(0LL, v3);
+  Component_object = UnityEngine_GameObject__GetComponent_object_(
+                       dispObject,
+                       (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_DeckListViewItemDraw___);
+  this->fields.itemDraw = (struct DeckListViewItemDraw_o *)Component_object;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 UnityEngine_GameObject_o *__fastcall DeckListViewObject__CreateDragObject(
         DeckListViewObject_o *this,
         const MethodInfo *method)
@@ -43,47 +43,47 @@ UnityEngine_GameObject_o *__fastcall DeckListViewObject__CreateDragObject(
   UnityEngine_GameObject_o *DragObject; // x0
   __int64 v4; // x1
   UnityEngine_GameObject_o *v5; // x19
-  DeckListViewObject_o *v6; // x20
-  const MethodInfo *v7; // x3
-  UnityEngine_Vector3_o zero; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
+  const MethodInfo *v6; // x2
 
-  if ( (byte_4386DFA & 1) == 0 )
+  if ( (byte_48DE801 & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_DeckListViewObject___);
-    byte_4386DFA = 1;
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_DeckListViewObject___, method);
+    byte_48DE801 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0LL);
   if ( !DragObject
     || (v5 = DragObject,
-        (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
+        (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_DeckListViewObject___)) == 0LL) )
+                                                    (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_DeckListViewObject___)) == 0LL) )
   {
-    sub_B7769C(DragObject, v4);
+    sub_1B00F28(DragObject, v4);
   }
-  v6 = (DeckListViewObject_o *)DragObject;
-  zero = UnityEngine_Vector3__get_zero(0LL);
-  DeckListViewObject__Init(v6, 2, 0LL, zero.fields.x, *(UnityEngine_Vector3_o *)&zero.fields.y, v7);
+  DeckListViewObject__Init_30857864((DeckListViewObject_o *)DragObject, 2, v6);
   return v5;
 }
 
 
 void __fastcall DeckListViewObject__EventMoveEnd(DeckListViewObject_o *this, const MethodInfo *method)
 {
-  struct System_Action_o **p_callbackFunc; // x0
-  System_Action_o *v3; // x19
+  int32_t v2; // w2
+  int32_t v3; // w3
+  ServantStatusBattleListViewItem_o *p_callbackFunc; // x0
+  struct System_Action_o *v5; // x19
   struct System_Action_o *callbackFunc; // t1
 
   callbackFunc = this->fields.callbackFunc;
-  p_callbackFunc = &this->fields.callbackFunc;
-  v3 = callbackFunc;
-  *((_BYTE *)p_callbackFunc - 8) = 0;
-  *((_DWORD *)p_callbackFunc - 1) = 1;
+  p_callbackFunc = (ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc;
+  v5 = callbackFunc;
+  p_callbackFunc[-1].fields.isMine = 0;
+  *((_DWORD *)&p_callbackFunc[-1].fields.isMine + 1) = 1;
   if ( callbackFunc )
   {
-    *p_callbackFunc = 0LL;
-    sub_B77560(p_callbackFunc);
-    System_Action__Invoke(v3, 0LL);
+    p_callbackFunc->klass = 0LL;
+    sub_1B00C70(p_callbackFunc, 0, v2, v3);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v5->fields.m_target)(
+      v5->fields.original_method_info,
+      *(_QWORD *)&v5->fields.extra_arg);
   }
 }
 
@@ -91,25 +91,26 @@ void __fastcall DeckListViewObject__EventMoveEnd(DeckListViewObject_o *this, con
 DeckListViewItem_o *__fastcall DeckListViewObject__GetItem(DeckListViewObject_o *this, const MethodInfo *method)
 {
   struct ListViewItem_o *linkItem; // x8
-  __int64 v4; // x11
+  __int64 methodPtr_low; // x11
 
-  if ( (byte_4386DF9 & 1) == 0 )
+  if ( (byte_48DE800 & 1) == 0 )
   {
-    sub_B775C4(&DeckListViewItem_TypeInfo);
-    byte_4386DF9 = 1;
+    sub_1B00CCC(&DeckListViewItem_TypeInfo, method);
+    byte_48DE800 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
     return 0LL;
-  v4 = *(&DeckListViewItem_TypeInfo->_2.bitflags2 + 1);
-  if ( *(&linkItem->klass->_2.bitflags2 + 1) < (unsigned int)v4 )
+  methodPtr_low = LOBYTE(DeckListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
+  if ( LOBYTE(linkItem->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low )
     return 0LL;
-  if ( (DeckListViewItem_c *)linkItem->klass->_2.typeHierarchy[v4 - 1] == DeckListViewItem_TypeInfo )
+  if ( (DeckListViewItem_c *)linkItem->klass->_2.typeHierarchy[methodPtr_low - 1] == DeckListViewItem_TypeInfo )
     return (DeckListViewItem_o *)this->fields.linkItem;
   return 0LL;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall DeckListViewObject__Init(
         DeckListViewObject_o *this,
         int32_t initMode,
@@ -119,145 +120,164 @@ void __fastcall DeckListViewObject__Init(
         const MethodInfo *method)
 {
   struct ListViewItem_o *linkItem; // x8
-  int32_t dispMode; // w22
-  int32_t state; // w23
-  __int64 v12; // x10
-  int32_t v13; // w24
+  __int64 methodPtr_low; // x10
+  unsigned int v11; // w22
+  int32_t dispMode; // w23
+  int32_t state; // w24
   UnityEngine_Transform_o *transform; // x0
   __int64 v15; // x1
-  struct System_Action_o **p_callbackFunc; // x21
-  const MethodInfo *v17; // x1
-  int32_t v18; // w8
-  System_Action_o *v19; // x19
+  ServantStatusBattleListViewItem_o *p_callbackFunc; // x21
+  int32_t v17; // w2
+  int32_t v18; // w3
+  const MethodInfo *v19; // x1
+  int32_t v20; // w2
+  int32_t v21; // w3
+  int32_t v22; // w8
+  ServantStatusBattleListViewItem_c *klass; // x19
 
-  if ( (byte_4386DFB & 1) == 0 )
+  if ( (byte_48DE802 & 1) == 0 )
   {
-    sub_B775C4(&DeckListViewItem_TypeInfo);
-    byte_4386DFB = 1;
+    sub_1B00CCC(&DeckListViewItem_TypeInfo, *(_QWORD *)&initMode);
+    byte_48DE802 = 1;
   }
   linkItem = this->fields.linkItem;
-  dispMode = this->fields.dispMode;
-  state = this->fields.state;
   if ( linkItem
-    && (v12 = *(&DeckListViewItem_TypeInfo->_2.bitflags2 + 1), *(&linkItem->klass->_2.bitflags2 + 1) >= (unsigned int)v12) )
+    && (methodPtr_low = LOBYTE(DeckListViewItem_TypeInfo->vtable._0_Equals.methodPtr),
+        LOBYTE(linkItem->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low) )
   {
-    if ( (DeckListViewItem_c *)linkItem->klass->_2.typeHierarchy[v12 - 1] == DeckListViewItem_TypeInfo )
-      v13 = initMode;
+    if ( (DeckListViewItem_c *)linkItem->klass->_2.typeHierarchy[methodPtr_low - 1] == DeckListViewItem_TypeInfo )
+      v11 = initMode;
     else
-      v13 = 0;
+      v11 = 0;
   }
   else
   {
-    v13 = 0;
+    v11 = 0;
   }
-  ListViewObject__SetVisible((ListViewObject_o *)this, v13 != 0, 0LL);
+  dispMode = this->fields.dispMode;
+  state = this->fields.state;
+  ListViewObject__SetVisible((ListViewObject_o *)this, v11 != 0, 0LL);
   ((void (__fastcall *)(DeckListViewObject_o *, bool, Il2CppMethodPointer))this->klass->vtable._9_SetInput.method)(
     this,
-    v13 == 3,
+    v11 == 3,
     this->klass->vtable._10_Invalidation.methodPtr);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B7769C(transform, v15);
+    sub_1B00F28(transform, v15);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   this->fields.callbackFunc = callbackFunc;
-  p_callbackFunc = &this->fields.callbackFunc;
-  sub_B77560(&this->fields.callbackFunc);
-  if ( (unsigned int)v13 <= 3 )
+  p_callbackFunc = (ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v17, v18);
+  if ( v11 <= 3 )
   {
-    v18 = dword_32AA3F8[v13];
-    this->fields.dispMode = v13;
-    this->fields.state = v18;
+    v22 = dword_B701B0[v11];
+    this->fields.dispMode = v11;
+    this->fields.state = v22;
   }
   if ( !state || dispMode != this->fields.dispMode )
-    DeckListViewObject__SetupDisp(this, v17);
-  v19 = *p_callbackFunc;
-  if ( *p_callbackFunc )
+    DeckListViewObject__SetupDisp(this, v19);
+  klass = p_callbackFunc->klass;
+  if ( p_callbackFunc->klass )
   {
-    *p_callbackFunc = 0LL;
-    sub_B77560(p_callbackFunc);
-    System_Action__Invoke(v19, 0LL);
+    p_callbackFunc->klass = 0LL;
+    sub_1B00C70(p_callbackFunc, 0, v20, v21);
+    ((void (__fastcall *)(Il2CppClass *, _QWORD))klass->_1.namespaze)(
+      klass->_1.element_class,
+      *(_QWORD *)&klass->_1.byval_arg.bits);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall DeckListViewObject__Init_17099612(
+void __fastcall DeckListViewObject__Init_30857864(
         DeckListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
 {
-  const MethodInfo *v5; // x3
-  UnityEngine_Vector3_o zero; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
+  const MethodInfo *v3; // x3
+  float v4; // s0
+  int v5; // s1
 
-  zero = UnityEngine_Vector3__get_zero(0LL);
-  DeckListViewObject__Init(this, initMode, 0LL, zero.fields.x, *(UnityEngine_Vector3_o *)&zero.fields.y, v5);
+  if ( !byte_48DD9F1 )
+  {
+    sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_48DD9F1 = 1;
+  }
+  DeckListViewObject__Init(this, initMode, 0LL, v4, *(UnityEngine_Vector3_o *)&v5, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall DeckListViewObject__Init_17100856(
+void __fastcall DeckListViewObject__Init_30859172(
         DeckListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
         float delay,
         const MethodInfo *method)
 {
-  const MethodInfo *v8; // x3
-  UnityEngine_Vector3_o zero; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
+  int v5; // s1
 
-  zero = UnityEngine_Vector3__get_zero(0LL);
-  DeckListViewObject__Init(this, initMode, callbackFunc, zero.fields.x, *(UnityEngine_Vector3_o *)&zero.fields.y, v8);
+  if ( !byte_48DD9F1 )
+  {
+    sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_48DD9F1 = 1;
+  }
+  DeckListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall DeckListViewObject__Init_17100920(
+void __fastcall DeckListViewObject__Init_30859256(
         DeckListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
         const MethodInfo *method)
 {
-  const MethodInfo *v7; // x3
-  UnityEngine_Vector3_o zero; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
+  float v4; // s0
+  int v5; // s1
 
-  zero = UnityEngine_Vector3__get_zero(0LL);
-  DeckListViewObject__Init(this, initMode, callbackFunc, zero.fields.x, *(UnityEngine_Vector3_o *)&zero.fields.y, v7);
+  if ( !byte_48DD9F1 )
+  {
+    sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_48DD9F1 = 1;
+  }
+  DeckListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
 void __fastcall DeckListViewObject__OnDestroy(DeckListViewObject_o *this, const MethodInfo *method)
 {
-  struct UnityEngine_GameObject_o **p_dragObject; // x19
-  UnityEngine_Object_o *v4; // x20
+  __int64 v3; // x1
+  ServantStatusBattleListViewItem_o *p_dragObject; // x19
+  UnityEngine_Object_o *v5; // x20
   struct UnityEngine_GameObject_o *dragObject; // t1
-  UnityEngine_Object_o *v6; // x20
+  UnityEngine_Object_o *klass; // x20
+  int32_t v8; // w2
+  int32_t v9; // w3
 
-  if ( (byte_4386DF8 & 1) == 0 )
+  if ( (byte_48DE7FF & 1) == 0 )
   {
-    sub_B775C4(&NGUITools_TypeInfo);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_4386DF8 = 1;
+    sub_1B00CCC(&NGUITools_TypeInfo, method);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v3);
+    byte_48DE7FF = 1;
   }
   dragObject = this->fields.dragObject;
-  p_dragObject = &this->fields.dragObject;
-  v4 = (UnityEngine_Object_o *)dragObject;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  p_dragObject = (ServantStatusBattleListViewItem_o *)&this->fields.dragObject;
+  v5 = (UnityEngine_Object_o *)dragObject;
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  if ( UnityEngine_Object__op_Inequality(v4, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v5, 0LL, 0LL) )
   {
-    v6 = (UnityEngine_Object_o *)*p_dragObject;
-    if ( (BYTE3(NGUITools_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !NGUITools_TypeInfo->_2.cctor_finished )
+    klass = (UnityEngine_Object_o *)p_dragObject->klass;
+    if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    NGUITools__Destroy(v6, 0LL);
-    *p_dragObject = 0LL;
-    sub_B77560(p_dragObject);
+    NGUITools__Destroy(klass, 0LL);
+    p_dragObject->klass = 0LL;
+    sub_1B00C70(p_dragObject, 0, v8, v9);
   }
 }
 
@@ -269,53 +289,51 @@ void __fastcall DeckListViewObject__SetItem(
         const MethodInfo *method)
 {
   this->fields.state = 0;
-  ListViewObject__SetItem_34301308((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_39462468((ListViewObject_o *)this, item, seed, 0LL);
 }
 
 
 void __fastcall DeckListViewObject__SetupDisp(DeckListViewObject_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   PartyListViewItem_o **linkItem; // x21
-  __int64 v4; // x10
-  bool v5; // w1
+  __int64 methodPtr_low; // x10
+  bool v6; // w1
   UnityEngine_Object_o *itemDraw; // x20
-  __int64 v7; // x1
-  const MethodInfo *v8; // x3
-  DeckListViewItemDraw_o *v9; // x0
+  __int64 v8; // x1
+  const MethodInfo *v9; // x3
+  DeckListViewItemDraw_o *v10; // x0
 
-  if ( (byte_4386DFC & 1) == 0 )
+  if ( (byte_48DE803 & 1) == 0 )
   {
-    sub_B775C4(&DeckListViewItem_TypeInfo);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_4386DFC = 1;
+    sub_1B00CCC(&DeckListViewItem_TypeInfo, method);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v3);
+    byte_48DE803 = 1;
   }
   linkItem = (PartyListViewItem_o **)this->fields.linkItem;
-  if ( linkItem )
+  if ( !linkItem )
+    goto LABEL_7;
+  methodPtr_low = LOBYTE(DeckListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
+  if ( LOBYTE((*linkItem)[1].fields.menuKind) < (unsigned int)methodPtr_low
+    || *((DeckListViewItem_c **)(*linkItem)[1].monitor + methodPtr_low - 1) != DeckListViewItem_TypeInfo )
   {
-    v4 = *(&DeckListViewItem_TypeInfo->_2.bitflags2 + 1);
-    if ( BYTE4((*linkItem)[1].fields.viewObject) >= (unsigned int)v4
-      && *((DeckListViewItem_c **)(*linkItem)[1].monitor + v4 - 1) == DeckListViewItem_TypeInfo )
-    {
-      v5 = this->fields.dispMode != 0;
-      goto LABEL_8;
-    }
     linkItem = 0LL;
+LABEL_7:
+    v6 = 0;
+    goto LABEL_8;
   }
-  v5 = 0;
+  v6 = this->fields.dispMode != 0;
 LABEL_8:
-  ListViewObject__SetVisible((ListViewObject_o *)this, v5, 0LL);
+  ListViewObject__SetVisible((ListViewObject_o *)this, v6, 0LL);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
   {
-    v9 = this->fields.itemDraw;
-    if ( !v9 || !linkItem )
-      sub_B7769C(v9, v7);
-    DeckListViewItemDraw__SetItem_17095984(v9, linkItem[14], this->fields.dispMode, v8);
+    v10 = this->fields.itemDraw;
+    if ( !v10 || !linkItem )
+      sub_1B00F28(v10, v8);
+    DeckListViewItemDraw__SetItem_30853996(v10, linkItem[14], this->fields.dispMode, v9);
   }
 }
 
@@ -335,10 +353,10 @@ void __fastcall DeckListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4386DF5 & 1) == 0 )
+  if ( (byte_48DE7FC & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    byte_4386DF5 = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, value);
+    byte_48DE7FC = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -351,13 +369,13 @@ void __fastcall DeckListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_B6BFDC(p_callbackFunc, v8, v6);
+    v9 = sub_1B3C1BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (DeckListViewObject_o *)sub_B77990(v8);
+  v11 = (DeckListViewObject_o *)sub_1B011E8(v8);
   DeckListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -376,10 +394,10 @@ void __fastcall DeckListViewObject__remove_callbackFunc(
   DeckListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4386DF6 & 1) == 0 )
+  if ( (byte_48DE7FD & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    byte_4386DF6 = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, value);
+    byte_48DE7FD = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -392,12 +410,12 @@ void __fastcall DeckListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_B6BFDC(p_callbackFunc, v8, v6);
+    v9 = sub_1B3C1BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (DeckListViewObject_o *)sub_B77990(v8);
+  v11 = (DeckListViewObject_o *)sub_1B011E8(v8);
   DeckListViewObject__Awake(v11, v12);
 }

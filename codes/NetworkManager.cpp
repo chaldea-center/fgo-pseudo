@@ -1,573 +1,431 @@
 void __fastcall NetworkManager___cctor(const MethodInfo *method)
 {
-  System_String_array **v1; // x2
-  System_String_array **v2; // x3
-  System_Boolean_array **v3; // x4
-  System_Int32_array **v4; // x5
-  System_Int32_array *v5; // x6
-  System_Int32_array *v6; // x7
-  BattleServantConfConponent_o *static_fields; // x0
-  System_Int32_array **v8; // x1
-  NetworkManager_c *v9; // x8
-  struct NetworkManager_StaticFields *v10; // x0
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
-  struct NetworkManager_StaticFields *v17; // x0
-  System_String_array **v18; // x2
-  System_String_array **v19; // x3
-  System_Boolean_array **v20; // x4
-  System_Int32_array **v21; // x5
-  System_Int32_array *v22; // x6
-  System_Int32_array *v23; // x7
-  struct NetworkManager_StaticFields *v24; // x0
-  System_String_array **v25; // x2
-  System_String_array **v26; // x3
-  System_Boolean_array **v27; // x4
-  System_Int32_array **v28; // x5
-  System_Int32_array *v29; // x6
-  System_Int32_array *v30; // x7
+  __int64 v1; // x1
+  int32_t v2; // w2
+  int32_t v3; // w3
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  ServantStatusBattleListViewItem_o *static_fields; // x0
+  __int64 v10; // x8
+  int32_t v11; // w2
+  int32_t v12; // w3
+  struct NetworkManager_StaticFields *v13; // x0
+  int32_t v14; // w2
+  int32_t v15; // w3
+  struct NetworkManager_StaticFields *v16; // x0
+  int32_t v17; // w2
+  int32_t v18; // w3
+  struct NetworkManager_StaticFields *v19; // x0
+  int32_t v20; // w2
+  int32_t v21; // w3
+  struct NetworkManager_StaticFields *v22; // x0
+  int32_t v23; // w2
+  int32_t v24; // w3
+  struct NetworkManager_StaticFields *v25; // x0
+  int32_t v26; // w2
+  int32_t v27; // w3
+  struct NetworkManager_StaticFields *v28; // x0
+  int32_t v29; // w2
+  int32_t v30; // w3
   struct NetworkManager_StaticFields *v31; // x0
-  System_String_array **v32; // x2
-  System_String_array **v33; // x3
-  System_Boolean_array **v34; // x4
-  System_Int32_array **v35; // x5
-  System_Int32_array *v36; // x6
-  System_Int32_array *v37; // x7
-  struct NetworkManager_StaticFields *v38; // x0
-  System_String_array **v39; // x2
-  System_String_array **v40; // x3
-  System_Boolean_array **v41; // x4
-  System_Int32_array **v42; // x5
-  System_Int32_array *v43; // x6
-  System_Int32_array *v44; // x7
-  struct NetworkManager_StaticFields *v45; // x0
-  System_String_array **v46; // x2
-  System_String_array **v47; // x3
-  System_Boolean_array **v48; // x4
-  System_Int32_array **v49; // x5
-  System_Int32_array *v50; // x6
-  System_Int32_array *v51; // x7
-  NetworkManager_c *v52; // x8
+  int32_t v32; // w2
+  int32_t v33; // w3
+  struct NetworkManager_StaticFields *v34; // x0
+  int32_t v35; // w2
+  int32_t v36; // w3
+  struct NetworkManager_StaticFields *v37; // x0
+  int32_t v38; // w2
+  int32_t v39; // w3
+  int32_t v40; // w1
+  ServantStatusBattleListViewItem_o *v41; // x0
+  int32_t v42; // w2
+  int32_t v43; // w3
+  struct NetworkManager_StaticFields *v44; // x0
+  int32_t v45; // w1
+  int32_t v46; // w2
+  int32_t v47; // w3
+  int32_t v48; // w1
+  struct NetworkManager_StaticFields *v49; // x0
+  int32_t v50; // w2
+  int32_t v51; // w3
+  int32_t v52; // w1
   struct NetworkManager_StaticFields *v53; // x0
-  System_String_array **v54; // x2
-  System_String_array **v55; // x3
-  System_Boolean_array **v56; // x4
-  System_Int32_array **v57; // x5
-  System_Int32_array *v58; // x6
-  System_Int32_array *v59; // x7
-  NetworkManager_c *v60; // x8
-  struct NetworkManager_StaticFields *v61; // x0
-  System_String_array **v62; // x2
-  System_String_array **v63; // x3
-  System_Boolean_array **v64; // x4
-  System_Int32_array **v65; // x5
-  System_Int32_array *v66; // x6
-  System_Int32_array *v67; // x7
-  struct NetworkManager_StaticFields *v68; // x0
-  System_String_array **v69; // x2
-  System_String_array **v70; // x3
-  System_Boolean_array **v71; // x4
-  System_Int32_array **v72; // x5
-  System_Int32_array *v73; // x6
-  System_Int32_array *v74; // x7
-  struct NetworkManager_StaticFields *v75; // x0
-  System_String_array **v76; // x2
-  System_String_array **v77; // x3
-  System_Boolean_array **v78; // x4
-  System_Int32_array **v79; // x5
-  System_Int32_array *v80; // x6
-  System_Int32_array *v81; // x7
-  struct NetworkManager_StaticFields *v82; // x0
-  System_Int32_array **v83; // x1
-  System_String_array **v84; // x2
-  System_String_array **v85; // x3
-  System_Boolean_array **v86; // x4
-  System_Int32_array **v87; // x5
-  System_Int32_array *v88; // x6
-  System_Int32_array *v89; // x7
-  NetworkManager_c *v90; // x8
-  struct NetworkManager_StaticFields *v91; // x0
-  System_Int32_array **v92; // x1
-  System_String_array **v93; // x2
-  System_String_array **v94; // x3
-  System_Boolean_array **v95; // x4
-  System_Int32_array **v96; // x5
-  System_Int32_array *v97; // x6
-  System_Int32_array *v98; // x7
-  System_Int32_array **v99; // x1
-  struct NetworkManager_StaticFields *v100; // x0
-  System_String_array **v101; // x2
-  System_String_array **v102; // x3
-  System_Boolean_array **v103; // x4
-  System_Int32_array **v104; // x5
-  System_Int32_array *v105; // x6
-  System_Int32_array *v106; // x7
-  System_Int32_array **v107; // x1
-  struct NetworkManager_StaticFields *v108; // x0
-  System_String_array **v109; // x2
-  System_String_array **v110; // x3
-  System_Boolean_array **v111; // x4
-  System_Int32_array **v112; // x5
-  System_Int32_array *v113; // x6
-  System_Int32_array *v114; // x7
-  System_Int32_array **v115; // x1
-  struct NetworkManager_StaticFields *v116; // x0
-  System_String_array **v117; // x2
-  System_String_array **v118; // x3
-  System_Boolean_array **v119; // x4
-  System_Int32_array **v120; // x5
-  System_Int32_array *v121; // x6
-  System_Int32_array *v122; // x7
-  NetworkManager_c *v123; // x8
-  struct NetworkManager_StaticFields *v124; // x0
-  System_String_array **v125; // x2
-  System_String_array **v126; // x3
-  System_Boolean_array **v127; // x4
-  System_Int32_array **v128; // x5
-  System_Int32_array *v129; // x6
-  System_Int32_array *v130; // x7
-  struct NetworkManager_StaticFields *v131; // x0
-  System_String_array **v132; // x2
-  System_String_array **v133; // x3
-  System_Boolean_array **v134; // x4
-  System_Int32_array **v135; // x5
-  System_Int32_array *v136; // x6
-  System_Int32_array *v137; // x7
-  struct NetworkManager_StaticFields *v138; // x0
-  System_String_array **v139; // x2
-  System_String_array **v140; // x3
-  System_Boolean_array **v141; // x4
-  System_Int32_array **v142; // x5
-  System_Int32_array *v143; // x6
-  System_Int32_array *v144; // x7
-  NetworkManager_c *v145; // x8
-  System_Int32_array **v146; // x1
-  BattleServantConfConponent_o *p_gameServerAddress; // x0
-  System_String_array **v148; // x2
-  System_String_array **v149; // x3
-  System_Boolean_array **v150; // x4
-  System_Int32_array **v151; // x5
-  System_Int32_array *v152; // x6
-  System_Int32_array *v153; // x7
-  System_Int32_array **v154; // x1
-  BattleServantConfConponent_o *p_dataServerAddress; // x0
-  System_String_array **v156; // x2
-  System_String_array **v157; // x3
-  System_Boolean_array **v158; // x4
-  System_Int32_array **v159; // x5
-  System_Int32_array *v160; // x6
-  System_Int32_array *v161; // x7
-  System_Int32_array **v162; // x1
-  BattleServantConfConponent_o *p_webServerAddress; // x0
-  System_String_array **v164; // x2
-  System_String_array **v165; // x3
-  System_Boolean_array **v166; // x4
-  System_Int32_array **v167; // x5
-  System_Int32_array *v168; // x6
-  System_Int32_array *v169; // x7
-  System_Int32_array **v170; // x1
-  BattleServantConfConponent_o *p_webViewBaseURL; // x0
-  System_String_array **v172; // x2
-  System_String_array **v173; // x3
-  System_Boolean_array **v174; // x4
-  System_Int32_array **v175; // x5
-  System_Int32_array *v176; // x6
-  System_Int32_array *v177; // x7
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *v178; // x19
-  BattleServantConfConponent_o *p_webViewAddress; // x0
-  System_String_array **v180; // x2
-  System_String_array **v181; // x3
-  System_Boolean_array **v182; // x4
-  System_Int32_array **v183; // x5
-  System_Int32_array *v184; // x6
-  System_Int32_array *v185; // x7
-  System_Int32_array **v186; // x1
-  BattleServantConfConponent_o *p_AUTHMD5_KEY_TYPE; // x0
-  System_String_array **v188; // x2
-  System_String_array **v189; // x3
-  System_Boolean_array **v190; // x4
-  System_Int32_array **v191; // x5
-  System_Int32_array *v192; // x6
-  System_Int32_array *v193; // x7
-  System_Int32_array **v194; // x1
-  BattleServantConfConponent_o *p_errorDialogResponseData; // x0
-  System_String_array **v196; // x2
-  System_String_array **v197; // x3
-  System_Boolean_array **v198; // x4
-  System_Int32_array **v199; // x5
-  System_Int32_array *v200; // x6
-  System_Int32_array *v201; // x7
-  uint64_t v202; // [xsp+18h] [xbp-18h] BYREF
-  System_DateTime_o v203; // 0:x0.8
+  int32_t v54; // w2
+  int32_t v55; // w3
+  int32_t v56; // w1
+  struct NetworkManager_StaticFields *v57; // x0
+  int32_t v58; // w2
+  int32_t v59; // w3
+  ServantStatusBattleListViewItem_o *v60; // x0
+  int32_t v61; // w2
+  int32_t v62; // w3
+  struct NetworkManager_StaticFields *v63; // x0
+  int32_t v64; // w2
+  int32_t v65; // w3
+  struct NetworkManager_StaticFields *v66; // x0
+  int32_t v67; // w2
+  int32_t v68; // w3
+  struct NetworkManager_StaticFields *v69; // x8
+  int32_t v70; // w1
+  int32_t v71; // w2
+  int32_t v72; // w3
+  int32_t v73; // w1
+  ServantStatusBattleListViewItem_o *p_dataServerAddress; // x0
+  int32_t v75; // w2
+  int32_t v76; // w3
+  int32_t v77; // w1
+  ServantStatusBattleListViewItem_o *p_webServerAddress; // x0
+  int32_t v79; // w2
+  int32_t v80; // w3
+  int32_t v81; // w1
+  ServantStatusBattleListViewItem_o *p_webViewBaseURL; // x0
+  int32_t v83; // w2
+  int32_t v84; // w3
+  System_Collections_Generic_Dictionary_object__object__o *v85; // x19
+  ServantStatusBattleListViewItem_o *p_webViewAddress; // x0
+  int32_t v87; // w2
+  int32_t v88; // w3
+  int32_t v89; // w1
+  ServantStatusBattleListViewItem_o *p_AUTHMD5_KEY_TYPE; // x0
+  int32_t v91; // w2
+  int32_t v92; // w3
+  int32_t v93; // w1
+  ServantStatusBattleListViewItem_o *p_errorDialogResponseData; // x0
+  int32_t v95; // w2
+  int32_t v96; // w3
+  __int64 v97; // [xsp+8h] [xbp-48h] BYREF
+  System_DateTime_o v98; // 0:x0.8
 
-  if ( (byte_438B9E3 & 1) == 0 )
+  if ( (byte_48E1FEB & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__string___ctor__);
-    sub_B775C4(&System_Collections_Generic_Dictionary_string__string__TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&StringLiteral_14543/*"TheCheckKey"*/);
-    sub_B775C4(&StringLiteral_19102/*"file://"*/);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438B9E3 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__string___ctor__, v1);
+    sub_1B00CCC(&System_Collections_Generic_Dictionary_string__string__TypeInfo, v4);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v5);
+    sub_1B00CCC(&StringLiteral_14091/*"TheCheckKey"*/, v6);
+    sub_1B00CCC(&StringLiteral_19160/*"file://"*/, v7);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v8);
+    byte_48E1FEB = 1;
   }
-  static_fields = (BattleServantConfConponent_o *)NetworkManager_TypeInfo->static_fields;
-  v8 = (System_Int32_array **)StringLiteral_19102/*"file://"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_19102/*"file://"*/;
-  sub_B77560(static_fields, v8, v1, v2, v3, v4, v5, v6);
-  v203.fields.dateData = (uint64_t)&v202;
+  NetworkManager_TypeInfo->static_fields->FILE_URL_SCHEME = (struct System_String_o *)StringLiteral_19160/*"file://"*/;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)NetworkManager_TypeInfo->static_fields, StringLiteral_19160/*"file://"*/, v2, v3);
+  v98.fields._dateData = (uint64_t)&v97;
   NetworkManager_TypeInfo->static_fields->WebCacheTime = 300LL;
-  v202 = 0LL;
-  System_DateTime___ctor_15684052(v203, 1970, 1, 1, 0, 0, 0, 1, 0LL);
-  v9 = NetworkManager_TypeInfo;
-  NetworkManager_TypeInfo->static_fields->dtUnixEpoch.fields.dateData = v202;
-  v9->static_fields->serverTime = 0LL;
-  v9->static_fields->serverOffsetTime = 0LL;
-  v9->static_fields->isErrorServerTimeLimitOver = 0;
-  v9->static_fields->serverTimeChkMovie = 0LL;
-  v9->static_fields->nowTime = -1LL;
-  v10 = v9->static_fields;
-  v10->userAgent = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&v10->userAgent, 0LL, v11, v12, v13, v14, v15, v16);
-  v17 = NetworkManager_TypeInfo->static_fields;
-  v17->userCreateServer = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&v17->userCreateServer, 0LL, v18, v19, v20, v21, v22, v23);
-  v24 = NetworkManager_TypeInfo->static_fields;
-  v24->userId = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&v24->userId, 0LL, v25, v26, v27, v28, v29, v30);
+  v97 = 0LL;
+  System_DateTime___ctor_61004432(v98, 1970, 1, 1, 0, 0, 0, 1, 0LL);
+  static_fields = (ServantStatusBattleListViewItem_o *)NetworkManager_TypeInfo->static_fields;
+  v10 = v97;
+  static_fields->fields.sortValue1B = 0LL;
+  static_fields = (ServantStatusBattleListViewItem_o *)((char *)static_fields + 64);
+  *(_QWORD *)&static_fields[-1].fields.dispLimitCount.fields.currentCryptoKey = 0LL;
+  *(_QWORD *)&static_fields[-1].fields.dispLimitCount.fields.fakeValue = 0LL;
+  *(_QWORD *)&static_fields[-1].fields.svtId.fields.fakeValue = v10;
+  static_fields[-1].fields.isEnabled = 0;
+  static_fields[-1].fields.name = 0LL;
+  *(_QWORD *)&static_fields[-1].fields.isMine = -1LL;
+  sub_1B00C70(static_fields, 0, v11, v12);
+  v13 = NetworkManager_TypeInfo->static_fields;
+  v13->userCreateServer = 0LL;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v13->userCreateServer, 0, v14, v15);
+  v16 = NetworkManager_TypeInfo->static_fields;
+  v16->userId = 0LL;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v16->userId, 0, v17, v18);
+  v19 = NetworkManager_TypeInfo->static_fields;
+  v19->authKey = 0LL;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v19->authKey, 0, v20, v21);
+  v22 = NetworkManager_TypeInfo->static_fields;
+  v22->secretKey = 0LL;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v22->secretKey, 0, v23, v24);
+  v25 = NetworkManager_TypeInfo->static_fields;
+  v25->userName = 0LL;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v25->userName, 0, v26, v27);
+  v28 = NetworkManager_TypeInfo->static_fields;
+  v28->sessionId = 0LL;
+  v28 = (struct NetworkManager_StaticFields *)((char *)v28 + 128);
+  v28[-1].AUTHMD5_KEY_TYPE = 0LL;
+  LODWORD(v28[-1].errorDialogResponseData) = 0;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)v28, 0, v29, v30);
   v31 = NetworkManager_TypeInfo->static_fields;
-  v31->authKey = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&v31->authKey, 0LL, v32, v33, v34, v35, v36, v37);
-  v38 = NetworkManager_TypeInfo->static_fields;
-  v38->secretKey = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&v38->secretKey, 0LL, v39, v40, v41, v42, v43, v44);
-  v45 = NetworkManager_TypeInfo->static_fields;
-  v45->userName = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&v45->userName, 0LL, v46, v47, v48, v49, v50, v51);
-  v52 = NetworkManager_TypeInfo;
-  NetworkManager_TypeInfo->static_fields->genderType = 0;
-  v52->static_fields->month = 0;
-  v52->static_fields->day = 0;
-  v53 = v52->static_fields;
-  v53->sessionId = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&v53->sessionId, 0LL, v54, v55, v56, v57, v58, v59);
-  v60 = NetworkManager_TypeInfo;
-  NetworkManager_TypeInfo->static_fields->isRebootBlock = 1;
-  v60->static_fields->isLogin = 0;
-  v61 = v60->static_fields;
-  v61->friendCode = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&v61->friendCode, 0LL, v62, v63, v64, v65, v66, v67);
-  v68 = NetworkManager_TypeInfo->static_fields;
-  v68->registrationVersion = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&v68->registrationVersion, 0LL, v69, v70, v71, v72, v73, v74);
-  v75 = NetworkManager_TypeInfo->static_fields;
-  v75->registrationId = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&v75->registrationId, 0LL, v76, v77, v78, v79, v80, v81);
-  v82 = NetworkManager_TypeInfo->static_fields;
-  v83 = (System_Int32_array **)StringLiteral_1/*""*/;
-  v82->serverSettingType = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B77560((BattleServantConfConponent_o *)&v82->serverSettingType, v83, v84, v85, v86, v87, v88, v89);
-  v90 = NetworkManager_TypeInfo;
-  NetworkManager_TypeInfo->static_fields->serverSettingSecurity = 0;
-  v91 = v90->static_fields;
-  v92 = (System_Int32_array **)StringLiteral_1/*""*/;
-  v91->gameServerSettingAddress = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B77560((BattleServantConfConponent_o *)&v91->gameServerSettingAddress, v92, v93, v94, v95, v96, v97, v98);
-  v99 = (System_Int32_array **)StringLiteral_1/*""*/;
-  v100 = NetworkManager_TypeInfo->static_fields;
-  v100->dataServerSettingAddress = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B77560((BattleServantConfConponent_o *)&v100->dataServerSettingAddress, v99, v101, v102, v103, v104, v105, v106);
-  v107 = (System_Int32_array **)StringLiteral_1/*""*/;
-  v108 = NetworkManager_TypeInfo->static_fields;
-  v108->webServerSettingAddress = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B77560((BattleServantConfConponent_o *)&v108->webServerSettingAddress, v107, v109, v110, v111, v112, v113, v114);
-  v115 = (System_Int32_array **)StringLiteral_1/*""*/;
-  v116 = NetworkManager_TypeInfo->static_fields;
-  v116->dataServerFolder = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B77560((BattleServantConfConponent_o *)&v116->dataServerFolder, v115, v117, v118, v119, v120, v121, v122);
-  v123 = NetworkManager_TypeInfo;
-  NetworkManager_TypeInfo->static_fields->serverRedirectSecurity = 0;
-  v124 = v123->static_fields;
-  v124->gameServerRedirectAddress = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&v124->gameServerRedirectAddress, 0LL, v125, v126, v127, v128, v129, v130);
-  v131 = NetworkManager_TypeInfo->static_fields;
-  v131->dataServerRedirectAddress = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&v131->dataServerRedirectAddress, 0LL, v132, v133, v134, v135, v136, v137);
-  v138 = NetworkManager_TypeInfo->static_fields;
-  v138->webServerRedirectAddress = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&v138->webServerRedirectAddress, 0LL, v139, v140, v141, v142, v143, v144);
-  v145 = NetworkManager_TypeInfo;
-  NetworkManager_TypeInfo->static_fields->serverSecurity = 0;
-  v146 = (System_Int32_array **)StringLiteral_1/*""*/;
-  p_gameServerAddress = (BattleServantConfConponent_o *)&v145->static_fields->gameServerAddress;
-  p_gameServerAddress->klass = (BattleServantConfConponent_c *)StringLiteral_1/*""*/;
-  sub_B77560(p_gameServerAddress, v146, v148, v149, v150, v151, v152, v153);
-  v154 = (System_Int32_array **)StringLiteral_1/*""*/;
-  p_dataServerAddress = (BattleServantConfConponent_o *)&NetworkManager_TypeInfo->static_fields->dataServerAddress;
-  p_dataServerAddress->klass = (BattleServantConfConponent_c *)StringLiteral_1/*""*/;
-  sub_B77560(p_dataServerAddress, v154, v156, v157, v158, v159, v160, v161);
-  v162 = (System_Int32_array **)StringLiteral_1/*""*/;
-  p_webServerAddress = (BattleServantConfConponent_o *)&NetworkManager_TypeInfo->static_fields->webServerAddress;
-  p_webServerAddress->klass = (BattleServantConfConponent_c *)StringLiteral_1/*""*/;
-  sub_B77560(p_webServerAddress, v162, v164, v165, v166, v167, v168, v169);
-  v170 = (System_Int32_array **)StringLiteral_1/*""*/;
-  p_webViewBaseURL = (BattleServantConfConponent_o *)&NetworkManager_TypeInfo->static_fields->webViewBaseURL;
-  p_webViewBaseURL->klass = (BattleServantConfConponent_c *)StringLiteral_1/*""*/;
-  sub_B77560(p_webViewBaseURL, v170, v172, v173, v174, v175, v176, v177);
-  v178 = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)sub_B77694(System_Collections_Generic_Dictionary_string__string__TypeInfo);
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject____ctor(
-    v178,
-    (const MethodInfo_2F7CA48 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
-  p_webViewAddress = (BattleServantConfConponent_o *)&NetworkManager_TypeInfo->static_fields->webViewAddress;
-  p_webViewAddress->klass = (BattleServantConfConponent_c *)v178;
-  sub_B77560(p_webViewAddress, (System_Int32_array **)v178, v180, v181, v182, v183, v184, v185);
-  v186 = (System_Int32_array **)StringLiteral_14543/*"TheCheckKey"*/;
-  p_AUTHMD5_KEY_TYPE = (BattleServantConfConponent_o *)&NetworkManager_TypeInfo->static_fields->AUTHMD5_KEY_TYPE;
-  p_AUTHMD5_KEY_TYPE->klass = (BattleServantConfConponent_c *)StringLiteral_14543/*"TheCheckKey"*/;
-  sub_B77560(p_AUTHMD5_KEY_TYPE, v186, v188, v189, v190, v191, v192, v193);
-  v194 = (System_Int32_array **)StringLiteral_1/*""*/;
-  p_errorDialogResponseData = (BattleServantConfConponent_o *)&NetworkManager_TypeInfo->static_fields->errorDialogResponseData;
-  p_errorDialogResponseData->klass = (BattleServantConfConponent_c *)StringLiteral_1/*""*/;
-  sub_B77560(p_errorDialogResponseData, v194, v196, v197, v198, v199, v200, v201);
+  v31->friendCode = 0LL;
+  v31 = (struct NetworkManager_StaticFields *)((char *)v31 + 144);
+  LOWORD(v31[-1].errorDialogResponseData) = 1;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)v31, 0, v32, v33);
+  v34 = NetworkManager_TypeInfo->static_fields;
+  v34->registrationVersion = 0LL;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v34->registrationVersion, 0, v35, v36);
+  v37 = NetworkManager_TypeInfo->static_fields;
+  v37->registrationId = 0LL;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v37->registrationId, 0, v38, v39);
+  v40 = (int)StringLiteral_1/*""*/;
+  v41 = (ServantStatusBattleListViewItem_o *)NetworkManager_TypeInfo->static_fields;
+  v41[1].klass = (ServantStatusBattleListViewItem_c *)StringLiteral_1/*""*/;
+  sub_1B00C70(v41 + 1, v40, v42, v43);
+  v44 = NetworkManager_TypeInfo->static_fields;
+  v44->serverSettingSecurity = 0;
+  v45 = (int)StringLiteral_1/*""*/;
+  v44->gameServerSettingAddress = (struct System_String_o *)StringLiteral_1/*""*/;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v44->gameServerSettingAddress, v45, v46, v47);
+  v48 = (int)StringLiteral_1/*""*/;
+  v49 = NetworkManager_TypeInfo->static_fields;
+  v49->dataServerSettingAddress = (struct System_String_o *)StringLiteral_1/*""*/;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v49->dataServerSettingAddress, v48, v50, v51);
+  v52 = (int)StringLiteral_1/*""*/;
+  v53 = NetworkManager_TypeInfo->static_fields;
+  v53->webServerSettingAddress = (struct System_String_o *)StringLiteral_1/*""*/;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v53->webServerSettingAddress, v52, v54, v55);
+  v56 = (int)StringLiteral_1/*""*/;
+  v57 = NetworkManager_TypeInfo->static_fields;
+  v57->dataServerFolder = (struct System_String_o *)StringLiteral_1/*""*/;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v57->dataServerFolder, v56, v58, v59);
+  v60 = (ServantStatusBattleListViewItem_o *)NetworkManager_TypeInfo->static_fields;
+  v60[1].fields.sortStr1 = 0LL;
+  v60 = (ServantStatusBattleListViewItem_o *)((char *)v60 + 224);
+  v60[-1].fields.isMine = 0;
+  sub_1B00C70(v60, 0, v61, v62);
+  v63 = NetworkManager_TypeInfo->static_fields;
+  v63->dataServerRedirectAddress = 0LL;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v63->dataServerRedirectAddress, 0, v64, v65);
+  v66 = NetworkManager_TypeInfo->static_fields;
+  v66->webServerRedirectAddress = 0LL;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v66->webServerRedirectAddress, 0, v67, v68);
+  v69 = NetworkManager_TypeInfo->static_fields;
+  v69->serverSecurity = 0;
+  v70 = (int)StringLiteral_1/*""*/;
+  v69->gameServerAddress = (struct System_String_o *)StringLiteral_1/*""*/;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v69->gameServerAddress, v70, v71, v72);
+  v73 = (int)StringLiteral_1/*""*/;
+  p_dataServerAddress = (ServantStatusBattleListViewItem_o *)&NetworkManager_TypeInfo->static_fields->dataServerAddress;
+  p_dataServerAddress->klass = (ServantStatusBattleListViewItem_c *)StringLiteral_1/*""*/;
+  sub_1B00C70(p_dataServerAddress, v73, v75, v76);
+  v77 = (int)StringLiteral_1/*""*/;
+  p_webServerAddress = (ServantStatusBattleListViewItem_o *)&NetworkManager_TypeInfo->static_fields->webServerAddress;
+  p_webServerAddress->klass = (ServantStatusBattleListViewItem_c *)StringLiteral_1/*""*/;
+  sub_1B00C70(p_webServerAddress, v77, v79, v80);
+  v81 = (int)StringLiteral_1/*""*/;
+  p_webViewBaseURL = (ServantStatusBattleListViewItem_o *)&NetworkManager_TypeInfo->static_fields->webViewBaseURL;
+  p_webViewBaseURL->klass = (ServantStatusBattleListViewItem_c *)StringLiteral_1/*""*/;
+  sub_1B00C70(p_webViewBaseURL, v81, v83, v84);
+  v85 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1B00F18(System_Collections_Generic_Dictionary_string__string__TypeInfo);
+  System_Collections_Generic_Dictionary_object__object____ctor(
+    v85,
+    (const MethodInfo_308D098 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+  p_webViewAddress = (ServantStatusBattleListViewItem_o *)&NetworkManager_TypeInfo->static_fields->webViewAddress;
+  p_webViewAddress->klass = (ServantStatusBattleListViewItem_c *)v85;
+  sub_1B00C70(p_webViewAddress, (int32_t)v85, v87, v88);
+  v89 = StringLiteral_14091/*"TheCheckKey"*/;
+  p_AUTHMD5_KEY_TYPE = (ServantStatusBattleListViewItem_o *)&NetworkManager_TypeInfo->static_fields->AUTHMD5_KEY_TYPE;
+  p_AUTHMD5_KEY_TYPE->klass = (ServantStatusBattleListViewItem_c *)StringLiteral_14091/*"TheCheckKey"*/;
+  sub_1B00C70(p_AUTHMD5_KEY_TYPE, v89, v91, v92);
+  v93 = (int)StringLiteral_1/*""*/;
+  p_errorDialogResponseData = (ServantStatusBattleListViewItem_o *)&NetworkManager_TypeInfo->static_fields->errorDialogResponseData;
+  p_errorDialogResponseData->klass = (ServantStatusBattleListViewItem_c *)StringLiteral_1/*""*/;
+  sub_1B00C70(p_errorDialogResponseData, v93, v95, v96);
 }
 
 
 void __fastcall NetworkManager___ctor(NetworkManager_o *this, const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  System_Int32_array **v9; // x1
-  System_Int32_array **v10; // x1
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
-  System_Int32_array **v17; // x1
-  System_String_array **v18; // x2
-  System_String_array **v19; // x3
-  System_Boolean_array **v20; // x4
-  System_Int32_array **v21; // x5
-  System_Int32_array *v22; // x6
-  System_Int32_array *v23; // x7
-  System_Int32_array **v24; // x1
-  System_String_array **v25; // x2
-  System_String_array **v26; // x3
-  System_Boolean_array **v27; // x4
-  System_Int32_array **v28; // x5
-  System_Int32_array *v29; // x6
-  System_Int32_array *v30; // x7
-  System_Int32_array **v31; // x1
-  System_String_array **v32; // x2
-  System_String_array **v33; // x3
-  System_Boolean_array **v34; // x4
-  System_Int32_array **v35; // x5
-  System_Int32_array *v36; // x6
-  System_Int32_array *v37; // x7
-  System_Int32_array **v38; // x1
-  System_String_array **v39; // x2
-  System_String_array **v40; // x3
-  System_Boolean_array **v41; // x4
-  System_Int32_array **v42; // x5
-  System_Int32_array *v43; // x6
-  System_Int32_array *v44; // x7
-  System_Collections_Generic_Queue_CFNetwork_GetProxyData__o *v45; // x20
-  System_String_array **v46; // x2
-  System_String_array **v47; // x3
-  System_Boolean_array **v48; // x4
-  System_Int32_array **v49; // x5
-  System_Int32_array *v50; // x6
-  System_Int32_array *v51; // x7
+  int32_t v2; // w2
+  int32_t v3; // w3
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  int32_t v8; // w1
+  int32_t v9; // w1
+  int32_t v10; // w2
+  int32_t v11; // w3
+  int32_t v12; // w1
+  int32_t v13; // w2
+  int32_t v14; // w3
+  int32_t v15; // w1
+  int32_t v16; // w2
+  int32_t v17; // w3
+  int32_t v18; // w1
+  int32_t v19; // w2
+  int32_t v20; // w3
+  int32_t v21; // w1
+  int32_t v22; // w2
+  int32_t v23; // w3
+  System_Collections_Generic_Queue_T__o *v24; // x20
+  int32_t v25; // w2
+  int32_t v26; // w3
 
-  if ( (byte_438BA62 & 1) == 0 )
+  if ( (byte_48E206C & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_Queue_RequestBase___ctor__);
-    sub_B775C4(&System_Collections_Generic_Queue_RequestBase__TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_NetworkManager___ctor__);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438BA62 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_Queue_RequestBase___ctor__, method);
+    sub_1B00CCC(&System_Collections_Generic_Queue_RequestBase__TypeInfo, v5);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_NetworkManager___ctor__, v6);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v7);
+    byte_48E206C = 1;
   }
-  v9 = (System_Int32_array **)StringLiteral_1/*""*/;
+  v8 = (int)StringLiteral_1/*""*/;
   this->fields.mAndroidApiKey = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.mAndroidApiKey, v9, v2, v3, v4, v5, v6, v7);
-  v10 = (System_Int32_array **)StringLiteral_1/*""*/;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.mAndroidApiKey, v8, v2, v3);
+  v9 = (int)StringLiteral_1/*""*/;
   this->fields.mAndroidProjectId = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.mAndroidProjectId, v10, v11, v12, v13, v14, v15, v16);
-  v17 = (System_Int32_array **)StringLiteral_1/*""*/;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.mAndroidProjectId, v9, v10, v11);
+  v12 = (int)StringLiteral_1/*""*/;
   this->fields.mIosApplicationId = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.mIosApplicationId, v17, v18, v19, v20, v21, v22, v23);
-  v24 = (System_Int32_array **)StringLiteral_1/*""*/;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.mIosApplicationId, v12, v13, v14);
+  v15 = (int)StringLiteral_1/*""*/;
   this->fields.mMk = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.mMk, v24, v25, v26, v27, v28, v29, v30);
-  v31 = (System_Int32_array **)StringLiteral_1/*""*/;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.mMk, v15, v16, v17);
+  v18 = (int)StringLiteral_1/*""*/;
   this->fields.mCv = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.mCv, v31, v32, v33, v34, v35, v36, v37);
-  v38 = (System_Int32_array **)StringLiteral_1/*""*/;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.mCv, v18, v19, v20);
+  v21 = (int)StringLiteral_1/*""*/;
   this->fields.mAuGameServerPublicKey = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.mAuGameServerPublicKey, v38, v39, v40, v41, v42, v43, v44);
-  v45 = (System_Collections_Generic_Queue_CFNetwork_GetProxyData__o *)sub_B77694(System_Collections_Generic_Queue_RequestBase__TypeInfo);
-  System_Collections_Generic_Queue_CFNetwork_GetProxyData____ctor(
-    v45,
-    (const MethodInfo_2F22A90 *)Method_System_Collections_Generic_Queue_RequestBase___ctor__);
-  this->fields.communicationWaitList = (struct System_Collections_Generic_Queue_RequestBase__o *)v45;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.communicationWaitList,
-    (System_Int32_array **)v45,
-    v46,
-    v47,
-    v48,
-    v49,
-    v50,
-    v51);
-  SingletonMonoBehaviour_WebViewManager____ctor(
-    (SingletonMonoBehaviour_WebViewManager__o *)this,
-    (const MethodInfo_2D168A8 *)Method_SingletonMonoBehaviour_NetworkManager___ctor__);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.mAuGameServerPublicKey, v21, v22, v23);
+  v24 = (System_Collections_Generic_Queue_T__o *)sub_1B00F18(System_Collections_Generic_Queue_RequestBase__TypeInfo);
+  System_Collections_Generic_Queue_object____ctor(
+    v24,
+    (const MethodInfo_3532CE0 *)Method_System_Collections_Generic_Queue_RequestBase___ctor__);
+  this->fields.communicationWaitList = (struct System_Collections_Generic_Queue_RequestBase__o *)v24;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.communicationWaitList, (int32_t)v24, v25, v26);
+  SingletonMonoBehaviour_object____ctor(
+    (SingletonMonoBehaviour_T__o *)this,
+    (const MethodInfo_35FC008 *)Method_SingletonMonoBehaviour_NetworkManager___ctor__);
 }
 
 
 void __fastcall NetworkManager__AddWaitStatus(NetworkManager_o *this, RequestBase_o *request, const MethodInfo *method)
 {
-  struct System_Collections_Generic_Queue_RequestBase__o *communicationWaitList; // x0
-  int v6; // w21
-  System_Collections_Generic_Queue_Enumerator_T__o v7; // [xsp+8h] [xbp-38h] BYREF
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  System_Collections_Generic_Queue_T__o *communicationWaitList; // x0
+  System_Collections_Generic_Queue_Enumerator_T__o v10; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_438BA54 & 1) == 0 )
+  if ( (byte_48E205E & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_Queue_Enumerator_RequestBase__Dispose__);
-    sub_B775C4(&Method_System_Collections_Generic_Queue_Enumerator_RequestBase__MoveNext__);
-    sub_B775C4(&Method_System_Collections_Generic_Queue_Enumerator_RequestBase__get_Current__);
-    sub_B775C4(&Method_System_Collections_Generic_Queue_RequestBase__Enqueue__);
-    sub_B775C4(&Method_System_Collections_Generic_Queue_RequestBase__GetEnumerator__);
-    byte_438BA54 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_Queue_Enumerator_RequestBase__Dispose__, request);
+    sub_1B00CCC(&Method_System_Collections_Generic_Queue_Enumerator_RequestBase__MoveNext__, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_Queue_Enumerator_RequestBase__get_Current__, v6);
+    sub_1B00CCC(&Method_System_Collections_Generic_Queue_RequestBase__Enqueue__, v7);
+    sub_1B00CCC(&Method_System_Collections_Generic_Queue_RequestBase__GetEnumerator__, v8);
+    byte_48E205E = 1;
   }
-  memset(&v7, 0, sizeof(v7));
+  memset(&v10, 0, sizeof(v10));
   if ( this->fields.communicationWork != request )
   {
-    communicationWaitList = this->fields.communicationWaitList;
+    communicationWaitList = (System_Collections_Generic_Queue_T__o *)this->fields.communicationWaitList;
     if ( !communicationWaitList )
-      goto LABEL_14;
-    System_Collections_Generic_Queue_AssetManager_LoadWaitStatus___GetEnumerator(
-      &v7,
-      (System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__o *)communicationWaitList,
-      (const MethodInfo_2F23158 *)Method_System_Collections_Generic_Queue_RequestBase__GetEnumerator__);
-    while ( System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus___MoveNext(
-              &v7,
-              (const MethodInfo_225C934 *)Method_System_Collections_Generic_Queue_Enumerator_RequestBase__MoveNext__) )
+      goto LABEL_12;
+    System_Collections_Generic_Queue_object___GetEnumerator(
+      &v10,
+      communicationWaitList,
+      (const MethodInfo_3533360 *)Method_System_Collections_Generic_Queue_RequestBase__GetEnumerator__);
+    while ( System_Collections_Generic_Queue_Enumerator_object___MoveNext(
+              &v10,
+              (const MethodInfo_313E624 *)Method_System_Collections_Generic_Queue_Enumerator_RequestBase__MoveNext__) )
     {
-      if ( System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus___get_Current(
-             &v7,
-             (const MethodInfo_225CA38 *)Method_System_Collections_Generic_Queue_Enumerator_RequestBase__get_Current__) == (AssetManager_LoadWaitStatus_o *)request )
+      if ( System_Collections_Generic_Queue_Enumerator_object___get_Current(
+             &v10,
+             (const MethodInfo_313E714 *)Method_System_Collections_Generic_Queue_Enumerator_RequestBase__get_Current__) == (Il2CppObject *)request )
       {
-        v6 = 73;
-        goto LABEL_10;
-      }
-    }
-    v6 = 61;
-LABEL_10:
-    System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus___Dispose(
-      &v7,
-      (const MethodInfo_225C924 *)Method_System_Collections_Generic_Queue_Enumerator_RequestBase__Dispose__);
-    if ( v6 != 73 )
-    {
-      communicationWaitList = this->fields.communicationWaitList;
-      if ( communicationWaitList )
-      {
-        System_Collections_Generic_Queue_CFNetwork_GetProxyData___Enqueue(
-          (System_Collections_Generic_Queue_CFNetwork_GetProxyData__o *)communicationWaitList,
-          (Mono_Net_CFNetwork_GetProxyData_o *)request,
-          (const MethodInfo_2F23084 *)Method_System_Collections_Generic_Queue_RequestBase__Enqueue__);
+        System_Collections_Generic_Queue_Enumerator_object___Dispose(
+          &v10,
+          (const MethodInfo_313E614 *)Method_System_Collections_Generic_Queue_Enumerator_RequestBase__Dispose__);
         return;
       }
-LABEL_14:
-      sub_B7769C(communicationWaitList, request);
     }
+    System_Collections_Generic_Queue_Enumerator_object___Dispose(
+      &v10,
+      (const MethodInfo_313E614 *)Method_System_Collections_Generic_Queue_Enumerator_RequestBase__Dispose__);
+    communicationWaitList = (System_Collections_Generic_Queue_T__o *)this->fields.communicationWaitList;
+    if ( !communicationWaitList )
+LABEL_12:
+      sub_1B00F28(communicationWaitList, request);
+    System_Collections_Generic_Queue_object___Enqueue(
+      communicationWaitList,
+      (Il2CppObject *)request,
+      (const MethodInfo_35332A8 *)Method_System_Collections_Generic_Queue_RequestBase__Enqueue__);
   }
 }
 
 
 bool __fastcall NetworkManager__CheckServerLimitTime(NetworkManager_o *this, const MethodInfo *method)
 {
-  NetworkManager_c *v3; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  NetworkManager_c *v9; // x0
   struct NetworkManager_StaticFields *static_fields; // x8
   int64_t Time; // x0
-  NetworkManager_c *v6; // x8
-  __int64 v7; // x21
-  BalanceConfig_c *v8; // x0
-  System_String_o *v9; // x20
-  System_Action_o *v10; // x21
-  const MethodInfo *v11; // x5
+  const MethodInfo *v12; // x1
+  NetworkManager_c *v13; // x8
+  __int64 v14; // x21
+  BalanceConfig_c *v15; // x0
+  struct NetworkManager_StaticFields *v16; // x8
+  System_String_o *v17; // x20
+  System_Action_o *v18; // x21
+  const MethodInfo *v19; // x5
 
-  if ( (byte_438B9F5 & 1) == 0 )
+  if ( (byte_48E1FFD & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&BalanceConfig_TypeInfo);
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&Method_NetworkManager_OnClickErrorReboot__);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&StringLiteral_12803/*"SYSTEM_ERROR_SERVER_TIME_LIMIT_OVER"*/);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438B9F5 = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, method);
+    sub_1B00CCC(&BalanceConfig_TypeInfo, v3);
+    sub_1B00CCC(&LocalizationManager_TypeInfo, v4);
+    sub_1B00CCC(&Method_NetworkManager_OnClickErrorReboot__, v5);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v6);
+    sub_1B00CCC(&StringLiteral_12272/*"SYSTEM_ERROR_SERVER_TIME_LIMIT_OVER"*/, v7);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v8);
+    byte_48E1FFD = 1;
   }
-  v3 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v9 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v3 = NetworkManager_TypeInfo;
+    v9 = NetworkManager_TypeInfo;
   }
-  static_fields = v3->static_fields;
+  static_fields = v9->static_fields;
   if ( static_fields->isErrorServerTimeLimitOver )
     return 0;
-  if ( (BYTE3(v3->vtable._0_Equals.methodPtr) & 4) != 0 && !v3->_2.cctor_finished )
+  if ( !v9->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v3);
-    v3 = NetworkManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v9);
+    v9 = NetworkManager_TypeInfo;
     static_fields = NetworkManager_TypeInfo->static_fields;
   }
   if ( static_fields->isLogin )
   {
-    if ( (BYTE3(v3->vtable._0_Equals.methodPtr) & 4) != 0 && !v3->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(v3);
-    Time = NetworkManager__getTime((const MethodInfo *)v3);
-    v6 = NetworkManager_TypeInfo;
-    v7 = Time - NetworkManager_TypeInfo->static_fields->serverTime;
-    if ( v7 < 0 )
-      goto LABEL_20;
-    v8 = BalanceConfig_TypeInfo;
-    if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !BalanceConfig_TypeInfo->_2.cctor_finished )
+    if ( !v9->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(v9);
+    Time = NetworkManager__getTime((const MethodInfo *)v9);
+    v13 = NetworkManager_TypeInfo;
+    v14 = Time - NetworkManager_TypeInfo->static_fields->serverTime;
+    if ( v14 < 0 )
+      goto LABEL_16;
+    v15 = BalanceConfig_TypeInfo;
+    if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v8 = BalanceConfig_TypeInfo;
+      v15 = BalanceConfig_TypeInfo;
     }
-    if ( v7 > v8->static_fields->ServerTimeOverLimit )
+    if ( v14 > v15->static_fields->ServerTimeOverLimit )
     {
-      v6 = NetworkManager_TypeInfo;
-LABEL_20:
-      if ( (BYTE3(v6->vtable._0_Equals.methodPtr) & 4) != 0 && !v6->_2.cctor_finished )
+      v13 = NetworkManager_TypeInfo;
+LABEL_16:
+      if ( !v13->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v6);
-        v6 = NetworkManager_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v13);
+        v13 = NetworkManager_TypeInfo;
       }
-      v6->static_fields->isErrorServerTimeLimitOver = 1;
-      v6->static_fields->isRebootBlock = 1;
-      if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !LocalizationManager_TypeInfo->_2.cctor_finished )
-      {
+      v16 = v13->static_fields;
+      v16->isErrorServerTimeLimitOver = 1;
+      v16->isRebootBlock = 1;
+      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      }
-      v9 = LocalizationManager__Get((System_String_o *)StringLiteral_12803/*"SYSTEM_ERROR_SERVER_TIME_LIMIT_OVER"*/, 0LL);
-      v10 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-      System_Action___ctor(v10, (Il2CppObject *)this, Method_NetworkManager_OnClickErrorReboot__, 0LL);
-      NetworkManager__ErrorDialog(this, (System_String_o *)StringLiteral_1/*""*/, v9, 0LL, v10, v11);
+      v17 = LocalizationManager__Get((System_String_o *)StringLiteral_12272/*"SYSTEM_ERROR_SERVER_TIME_LIMIT_OVER"*/, v12);
+      v18 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+      System_Action___ctor(v18, (Il2CppObject *)this, Method_NetworkManager_OnClickErrorReboot__, 0LL);
+      NetworkManager__ErrorDialog(this, (System_String_o *)StringLiteral_1/*""*/, v17, 0LL, v18, v19);
       return 0;
     }
   }
@@ -577,132 +435,107 @@ LABEL_20:
 
 bool __fastcall NetworkManager__CheckUserCreateServer(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
-  __int64 v2; // x1
-  NetworkManager_c *v4; // x0
+  __int64 v1; // x1
+  NetworkManager_c *v2; // x0
+  __int64 v3; // x1
+  NetworkManager_c *v5; // x0
   struct NetworkManager_StaticFields *static_fields; // x8
   System_String_o *gameServerAddress; // x0
 
-  if ( (byte_438B9DD & 1) == 0 )
+  if ( (byte_48E1FE5 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438B9DD = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, v1);
+    byte_48E1FE5 = 1;
   }
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v2 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v1 = NetworkManager_TypeInfo;
+    v2 = NetworkManager_TypeInfo;
   }
-  if ( System_String__IsNullOrEmpty(v1->static_fields->userCreateServer, 0LL) )
+  if ( System_String__IsNullOrEmpty(v2->static_fields->userCreateServer, 0LL) )
     return 1;
-  v4 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v5 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v4 = NetworkManager_TypeInfo;
+    v5 = NetworkManager_TypeInfo;
   }
-  static_fields = v4->static_fields;
+  static_fields = v5->static_fields;
   gameServerAddress = static_fields->gameServerAddress;
   if ( !gameServerAddress )
-    sub_B7769C(0LL, v2);
-  return System_String__Equals_44889276(gameServerAddress, static_fields->userCreateServer, 0LL);
+    sub_1B00F28(0LL, v3);
+  return System_String__Equals_60334064(gameServerAddress, static_fields->userCreateServer, 0LL);
 }
 
 
 bool __fastcall NetworkManager__CheckUserCreateServerByPrefix(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
+  __int64 v1; // x1
   NetworkManager_c *v2; // x0
   NetworkManager_c *v3; // x0
-  System_String_o *gameServerAddress; // x19
-  System_String_array *v5; // x0
-  System_String_array *v6; // x1
-  System_String_array *v7; // x19
-  System_String_o *userCreateServer; // x20
+  __int64 v4; // x1
+  NetworkManager_c *v5; // x0
+  System_String_array *gameServerAddress; // x0
+  System_String_o *userCreateServer; // x8
+  System_String_array *v8; // x19
   __int64 v9; // x8
   __int64 v10; // x9
   System_String_o *v11; // x8
-  __int64 v13; // x0
 
-  if ( (byte_438B9DE & 1) == 0 )
+  if ( (byte_48E1FE6 & 1) == 0 )
   {
-    sub_B775C4(&char___TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438B9DE = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, v1);
+    byte_48E1FE6 = 1;
   }
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v2 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v1 = NetworkManager_TypeInfo;
-  }
-  if ( !System_String__IsNullOrEmpty(v1->static_fields->gameServerAddress, 0LL) )
-  {
     v2 = NetworkManager_TypeInfo;
-    if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !NetworkManager_TypeInfo->_2.cctor_finished )
+  }
+  if ( !System_String__IsNullOrEmpty(v2->static_fields->gameServerAddress, 0LL) )
+  {
+    v3 = NetworkManager_TypeInfo;
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      v2 = NetworkManager_TypeInfo;
-    }
-    if ( !System_String__IsNullOrEmpty(v2->static_fields->userCreateServer, 0LL) )
-    {
       v3 = NetworkManager_TypeInfo;
-      if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !NetworkManager_TypeInfo->_2.cctor_finished )
+    }
+    if ( !System_String__IsNullOrEmpty(v3->static_fields->userCreateServer, 0LL) )
+    {
+      v5 = NetworkManager_TypeInfo;
+      if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        v3 = NetworkManager_TypeInfo;
+        v5 = NetworkManager_TypeInfo;
       }
-      gameServerAddress = v3->static_fields->gameServerAddress;
-      v5 = (System_String_array *)sub_B775DC(char___TypeInfo, 1LL);
-      if ( !v5 )
-        goto LABEL_29;
-      v6 = v5;
-      if ( !v5->max_length )
-        goto LABEL_30;
-      LOWORD(v5->m_Items[0]) = 45;
+      gameServerAddress = (System_String_array *)v5->static_fields->gameServerAddress;
       if ( !gameServerAddress )
-        goto LABEL_29;
-      v7 = System_String__Split(gameServerAddress, (System_Char_array *)v5, 0LL);
+        goto LABEL_22;
+      gameServerAddress = System_String__Split((System_String_o *)gameServerAddress, 0x2Du, 0, 0LL);
       userCreateServer = NetworkManager_TypeInfo->static_fields->userCreateServer;
-      v5 = (System_String_array *)sub_B775DC(char___TypeInfo, 1LL);
-      if ( !v5 )
-        goto LABEL_29;
-      v6 = v5;
-      if ( !v5->max_length )
-      {
-LABEL_30:
-        v13 = sub_B776C8(v5);
-        sub_B77668(v13, 0LL);
-      }
-      LOWORD(v5->m_Items[0]) = 45;
       if ( !userCreateServer )
-        goto LABEL_29;
-      v5 = System_String__Split(userCreateServer, (System_Char_array *)v5, 0LL);
-      if ( !v7 )
-        goto LABEL_29;
-      v9 = *(_QWORD *)&v7->max_length;
+        goto LABEL_22;
+      v8 = gameServerAddress;
+      gameServerAddress = System_String__Split(userCreateServer, 0x2Du, 0, 0LL);
+      if ( !v8 )
+        goto LABEL_22;
+      v9 = *(_QWORD *)&v8->max_length;
       if ( v9 )
       {
-        if ( !v5 )
-          goto LABEL_29;
-        v10 = *(_QWORD *)&v5->max_length;
+        if ( !gameServerAddress )
+          goto LABEL_22;
+        v10 = *(_QWORD *)&gameServerAddress->max_length;
         if ( v10 )
         {
-          if ( (_DWORD)v9 && (_DWORD)v10 )
-          {
-            v11 = v7->m_Items[0];
-            if ( v11 )
-              return System_String__Equals_44889276(v11, v5->m_Items[0], 0LL);
-LABEL_29:
-            sub_B7769C(v5, v6);
-          }
-          goto LABEL_30;
+          if ( !(_DWORD)v9 || !(_DWORD)v10 )
+            sub_1B00F30(gameServerAddress, v4);
+          v11 = v8->m_Items[0];
+          if ( v11 )
+            return System_String__Equals_60334064(v11, gameServerAddress->m_Items[0], 0LL);
+LABEL_22:
+          sub_1B00F28(gameServerAddress, v4);
         }
       }
     }
@@ -713,47 +546,39 @@ LABEL_29:
 
 void __fastcall NetworkManager__ClearAuth(NetworkManager_o *this, const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  NetworkManager_c *v8; // x0
-  BattleServantConfConponent_o *static_fields; // x0
-  struct UILabel_o *shortNameLabel; // t1
-  struct NetworkManager_StaticFields *v11; // x0
-  System_String_array **v12; // x2
-  System_String_array **v13; // x3
-  System_Boolean_array **v14; // x4
-  System_Int32_array **v15; // x5
-  System_Int32_array *v16; // x6
-  System_Int32_array *v17; // x7
+  int32_t v2; // w2
+  int32_t v3; // w3
+  __int64 v4; // x1
+  NetworkManager_c *v5; // x0
+  ServantStatusBattleListViewItem_o *static_fields; // x0
+  int64_t sortValue2B; // t1
+  struct NetworkManager_StaticFields *v8; // x0
+  int32_t v9; // w2
+  int32_t v10; // w3
 
-  if ( (byte_438B9FB & 1) == 0 )
+  if ( (byte_48E2003 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&SignedData_TypeInfo);
-    byte_438B9FB = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    sub_1B00CCC(&SignedData_TypeInfo, v4);
+    byte_48E2003 = 1;
   }
-  v8 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v5 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v8 = NetworkManager_TypeInfo;
+    v5 = NetworkManager_TypeInfo;
   }
-  static_fields = (BattleServantConfConponent_o *)v8->static_fields;
-  shortNameLabel = static_fields->fields.shortNameLabel;
-  static_fields = (BattleServantConfConponent_o *)((char *)static_fields + 80);
+  static_fields = (ServantStatusBattleListViewItem_o *)v5->static_fields;
+  sortValue2B = static_fields->fields.sortValue2B;
+  static_fields = (ServantStatusBattleListViewItem_o *)((char *)static_fields + 80);
   static_fields->klass = 0LL;
-  sub_B77560(static_fields, 0LL, v2, v3, v4, v5, v6, v7);
-  v11 = NetworkManager_TypeInfo->static_fields;
-  v11->userCreateServer = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&v11->userCreateServer, 0LL, v12, v13, v14, v15, v16, v17);
-  if ( shortNameLabel )
+  sub_1B00C70(static_fields, 0, v2, v3);
+  v8 = NetworkManager_TypeInfo->static_fields;
+  v8->userCreateServer = 0LL;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v8->userCreateServer, 0, v9, v10);
+  if ( sortValue2B )
   {
-    if ( (BYTE3(SignedData_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SignedData_TypeInfo->_2.cctor_finished )
+    if ( !SignedData_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SignedData_TypeInfo);
     SignedData__RefreshSigningData(3, 0LL);
   }
@@ -762,167 +587,135 @@ void __fastcall NetworkManager__ClearAuth(NetworkManager_o *this, const MethodIn
 
 void __fastcall NetworkManager__ClearTopLoginResult(NetworkManager_o *this, const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v2; // w2
+  int32_t v3; // w3
 
   this->fields.loginResponseResult = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.loginResponseResult, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.loginResponseResult, 0, v2, v3);
 }
 
 
 bool __fastcall NetworkManager__CommunicationIsBusy(const MethodInfo *method)
 {
-  WebViewManager_o *Instance; // x0
-  __int64 v2; // x1
+  __int64 v1; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v3; // x1
 
-  if ( (byte_438B9E4 & 1) == 0 )
+  if ( (byte_48E1FEC & 1) == 0 )
   {
-    sub_B775C4(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
-    byte_438B9E4 = 1;
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, v1);
+    byte_48E1FEC = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
   if ( !Instance )
-    sub_B7769C(0LL, v2);
-  return Instance->fields.errorMessage != 0LL;
+    sub_1B00F28(0LL, v3);
+  return Instance[6].monitor != 0LL;
 }
 
 
 bool __fastcall NetworkManager__CommunicationStart(NetworkManager_o *this, const MethodInfo *method)
 {
-  System_Collections_Generic_Queue_CFNetwork_GetProxyData__o *communicationWaitList; // x0
-  Mono_Net_CFNetwork_GetProxyData_o *ProxyData___Dequeue; // x0
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
-  const MethodInfo *v12; // x2
-  System_Collections_IEnumerator_o *v13; // x0
+  __int64 v3; // x1
+  System_Collections_Generic_Queue_T__o *communicationWaitList; // x0
+  Il2CppObject *v6; // x0
+  int32_t v7; // w2
+  int32_t v8; // w3
+  const MethodInfo *v9; // x2
+  System_Collections_IEnumerator_o *v10; // x0
   struct UnityEngine_Coroutine_o *started; // x0
-  System_String_array **v15; // x2
-  System_String_array **v16; // x3
-  System_Boolean_array **v17; // x4
-  System_Int32_array **v18; // x5
-  System_Int32_array *v19; // x6
-  System_Int32_array *v20; // x7
+  int32_t v12; // w2
+  int32_t v13; // w3
 
-  if ( (byte_438BA55 & 1) == 0 )
+  if ( (byte_48E205F & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_Queue_RequestBase__Dequeue__);
-    sub_B775C4(&Method_System_Collections_Generic_Queue_RequestBase__get_Count__);
-    byte_438BA55 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_Queue_RequestBase__Dequeue__, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_Queue_RequestBase__get_Count__, v3);
+    byte_48E205F = 1;
   }
-  communicationWaitList = (System_Collections_Generic_Queue_CFNetwork_GetProxyData__o *)this->fields.communicationWaitList;
+  communicationWaitList = (System_Collections_Generic_Queue_T__o *)this->fields.communicationWaitList;
   if ( !communicationWaitList )
-    sub_B7769C(0LL, method);
+    sub_1B00F28(0LL, method);
   if ( communicationWaitList->fields._size < 1 || this->fields.communicationWork )
     return 0;
-  ProxyData___Dequeue = System_Collections_Generic_Queue_CFNetwork_GetProxyData___Dequeue(
-                          communicationWaitList,
-                          (const MethodInfo_2F2329C *)Method_System_Collections_Generic_Queue_RequestBase__Dequeue__);
-  this->fields.communicationWork = (struct RequestBase_o *)ProxyData___Dequeue;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.communicationWork,
-    (System_Int32_array **)ProxyData___Dequeue,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10,
-    v11);
-  v13 = NetworkManager__RequestCR(this, this->fields.communicationWork, 0.0, v12);
-  started = UnityEngine_MonoBehaviour__StartCoroutine_36304832((UnityEngine_MonoBehaviour_o *)this, v13, 0LL);
+  v6 = System_Collections_Generic_Queue_object___Dequeue(
+         communicationWaitList,
+         (const MethodInfo_3533438 *)Method_System_Collections_Generic_Queue_RequestBase__Dequeue__);
+  this->fields.communicationWork = (struct RequestBase_o *)v6;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.communicationWork, (int32_t)v6, v7, v8);
+  v10 = NetworkManager__RequestCR(this, this->fields.communicationWork, 0.0, v9);
+  started = UnityEngine_MonoBehaviour__StartCoroutine_68062928((UnityEngine_MonoBehaviour_o *)this, v10, 0LL);
   this->fields.communicationCoroutine = started;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.communicationCoroutine,
-    (System_Int32_array **)started,
-    v15,
-    v16,
-    v17,
-    v18,
-    v19,
-    v20);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.communicationCoroutine, (int32_t)started, v12, v13);
   return 1;
 }
 
 
 void __fastcall NetworkManager__DeleteAuth(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
+  __int64 v1; // x1
+  NetworkManager_c *v2; // x0
   System_String_o *OldAuthFileName; // x21
-  const MethodInfo *v3; // x1
+  const MethodInfo *v4; // x1
   System_String_o *AuthFileName; // x20
-  const MethodInfo *v5; // x1
-  System_String_o *v6; // x19
+  const MethodInfo *v6; // x1
+  System_String_o *v7; // x19
 
-  if ( (byte_438BA26 & 1) == 0 )
+  if ( (byte_48E2030 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA26 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, v1);
+    byte_48E2030 = 1;
   }
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  v2 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  OldAuthFileName = NetworkManager__getOldAuthFileName((const MethodInfo *)v1);
-  AuthFileName = NetworkManager__getAuthFileName(0, v3);
-  v6 = NetworkManager__getAuthFileName(1, v5);
+  OldAuthFileName = NetworkManager__getOldAuthFileName((const MethodInfo *)v2);
+  AuthFileName = NetworkManager__getAuthFileName(0, v4);
+  v7 = NetworkManager__getAuthFileName(1, v6);
   if ( System_IO_File__Exists(OldAuthFileName, 0LL) )
     System_IO_File__Delete(OldAuthFileName, 0LL);
   if ( System_IO_File__Exists(AuthFileName, 0LL) )
     System_IO_File__Delete(AuthFileName, 0LL);
-  if ( System_IO_File__Exists(v6, 0LL) )
-    System_IO_File__Delete(v6, 0LL);
+  if ( System_IO_File__Exists(v7, 0LL) )
+    System_IO_File__Delete(v7, 0LL);
 }
 
 
 void __fastcall NetworkManager__DeleteSaveData(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
-  const MethodInfo *v2; // x0
+  __int64 v1; // x1
+  NetworkManager_c *v2; // x0
+  const MethodInfo *v3; // x0
 
-  if ( (byte_438BA25 & 1) == 0 )
+  if ( (byte_48E202F & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA25 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, v1);
+    byte_48E202F = 1;
   }
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  v2 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  NetworkManager__DeleteAuth((const MethodInfo *)v1);
-  NetworkManager__DeleteSignupData(v2);
+  NetworkManager__DeleteAuth((const MethodInfo *)v2);
+  NetworkManager__DeleteSignupData(v3);
 }
 
 
 void __fastcall NetworkManager__DeleteSignupData(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
+  __int64 v1; // x1
+  NetworkManager_c *v2; // x0
   System_String_o *OldSignupFileName; // x21
   System_String_o *SignupFileName; // x20
   System_String_o *FriendCodeFileName; // x19
 
-  if ( (byte_438BA27 & 1) == 0 )
+  if ( (byte_48E2031 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA27 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, v1);
+    byte_48E2031 = 1;
   }
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  v2 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  OldSignupFileName = NetworkManager__getOldSignupFileName((const MethodInfo *)v1);
+  OldSignupFileName = NetworkManager__getOldSignupFileName((const MethodInfo *)v2);
   SignupFileName = NetworkManager__getSignupFileName((const MethodInfo *)OldSignupFileName);
   FriendCodeFileName = NetworkManager__getFriendCodeFileName((const MethodInfo *)SignupFileName);
   if ( System_IO_File__Exists(OldSignupFileName, 0LL) )
@@ -936,123 +729,129 @@ void __fastcall NetworkManager__DeleteSignupData(const MethodInfo *method)
 
 void __fastcall NetworkManager__EndCloseUserDelete(NetworkManager_o *this, const MethodInfo *method)
 {
-  NetworkManager_c *v2; // x0
-  ManagementManager_o *Instance; // x0
-  __int64 v4; // x1
+  __int64 v2; // x1
+  NetworkManager_c *v3; // x0
+  Il2CppObject *Instance; // x0
+  __int64 v5; // x1
+  const MethodInfo *v6; // x3
 
-  if ( (byte_438BA1D & 1) == 0 )
+  if ( (byte_48E2025 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
-    byte_438BA1D = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__, v2);
+    byte_48E2025 = 1;
   }
-  v2 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v3 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v2 = NetworkManager_TypeInfo;
+    v3 = NetworkManager_TypeInfo;
   }
-  v2->static_fields->isRebootBlock = 1;
-  Instance = (ManagementManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+  v3->static_fields->isRebootBlock = 1;
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
   if ( !Instance )
-    sub_B7769C(0LL, v4);
-  ManagementManager__reboot(Instance, 0, 0LL);
+    sub_1B00F28(0LL, v5);
+  ManagementManager__reboot((ManagementManager_o *)Instance, 0, 1, v6);
 }
 
 
 void __fastcall NetworkManager__EndErrorWebView(NetworkManager_o *this, const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  BattleServantConfConponent_o *p_errorCallbackFunc; // x0
-  System_Action_o *v9; // x19
+  int32_t v2; // w2
+  int32_t v3; // w3
+  ServantStatusBattleListViewItem_o *p_errorCallbackFunc; // x0
+  struct System_Action_o *v5; // x19
   struct System_Action_o *errorCallbackFunc; // t1
 
   errorCallbackFunc = this->fields.errorCallbackFunc;
-  p_errorCallbackFunc = (BattleServantConfConponent_o *)&this->fields.errorCallbackFunc;
-  v9 = errorCallbackFunc;
+  p_errorCallbackFunc = (ServantStatusBattleListViewItem_o *)&this->fields.errorCallbackFunc;
+  v5 = errorCallbackFunc;
   if ( errorCallbackFunc )
   {
     p_errorCallbackFunc->klass = 0LL;
-    sub_B77560(p_errorCallbackFunc, 0LL, v2, v3, v4, v5, v6, v7);
-    System_Action__Invoke(v9, 0LL);
+    sub_1B00C70(p_errorCallbackFunc, 0, v2, v3);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v5->fields.m_target)(
+      v5->fields.original_method_info,
+      *(_QWORD *)&v5->fields.extra_arg);
   }
 }
 
 
 void __fastcall NetworkManager__EndGetStoreUrl(NetworkManager_o *this, System_String_o *url, const MethodInfo *method)
 {
+  if ( (byte_48E2027 & 1) == 0 )
+  {
+    sub_1B00CCC(&UnityEngine_Application_TypeInfo, url);
+    byte_48E2027 = 1;
+  }
   if ( url )
+  {
+    if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
     UnityEngine_Application__OpenURL(url, 0LL);
-  UnityEngine_Application__Quit_41389268(0LL);
+  }
+  if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
+  UnityEngine_Application__Quit_67871612(0LL);
 }
 
 
 void __fastcall NetworkManager__EndLockSync(NetworkManager_o *this, System_String_o *result, const MethodInfo *method)
 {
-  const MethodInfo *v5; // x1
+  __int64 v5; // x1
+  const MethodInfo *v6; // x1
 
-  if ( (byte_438BA5E & 1) == 0 )
+  if ( (byte_48E2068 & 1) == 0 )
   {
-    sub_B775C4(&UserServantLockManager_TypeInfo);
-    sub_B775C4(&StringLiteral_21657/*"ok"*/);
-    byte_438BA5E = 1;
+    sub_1B00CCC(&UserServantLockManager_TypeInfo, result);
+    sub_1B00CCC(&StringLiteral_21923/*"ok"*/, v5);
+    byte_48E2068 = 1;
   }
-  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_21657/*"ok"*/, 0LL) )
+  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_21923/*"ok"*/, 0LL) )
   {
-    if ( (BYTE3(UserServantLockManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UserServantLockManager_TypeInfo->_2.cctor_finished )
-    {
+    if ( !UserServantLockManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UserServantLockManager_TypeInfo);
-    }
     UserServantLockManager__DeleteSaveData(0LL);
     UserServantLockManager__ClearSaveDataList(0LL);
   }
-  NetworkManager__OptionSync(this, v5);
+  NetworkManager__OptionSync(this, v6);
 }
 
 
 void __fastcall NetworkManager__EndLogin(NetworkManager_o *this, const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  BattleServantConfConponent_o *p_loginCallbackFunc; // x19
-  NetworkManager_LoginCallbackFunc_o *v10; // x20
+  int32_t v2; // w2
+  int32_t v3; // w3
+  ServantStatusBattleListViewItem_o *p_loginCallbackFunc; // x19
+  struct NetworkManager_LoginCallbackFunc_o *v6; // x21
   struct NetworkManager_LoginCallbackFunc_o *loginCallbackFunc; // t1
-  System_String_o *monitor; // x21
-  NetworkManager_c *v13; // x0
+  NetworkManager_c *v8; // x0
+  void *monitor; // x20
 
-  if ( (byte_438BA61 & 1) == 0 )
+  if ( (byte_48E206B & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA61 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    byte_48E206B = 1;
   }
   loginCallbackFunc = this->fields.loginCallbackFunc;
-  p_loginCallbackFunc = (BattleServantConfConponent_o *)&this->fields.loginCallbackFunc;
-  v10 = loginCallbackFunc;
-  monitor = (System_String_o *)p_loginCallbackFunc->monitor;
-  v13 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  p_loginCallbackFunc = (ServantStatusBattleListViewItem_o *)&this->fields.loginCallbackFunc;
+  v6 = loginCallbackFunc;
+  v8 = NetworkManager_TypeInfo;
+  monitor = p_loginCallbackFunc->monitor;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v13 = NetworkManager_TypeInfo;
+    v8 = NetworkManager_TypeInfo;
   }
-  v13->static_fields->isLogin = 1;
-  if ( v10 )
+  v8->static_fields->isLogin = 1;
+  if ( v6 )
   {
     p_loginCallbackFunc->klass = 0LL;
-    sub_B77560(p_loginCallbackFunc, 0LL, v2, v3, v4, v5, v6, v7);
-    NetworkManager_LoginCallbackFunc__Invoke(v10, monitor, 0LL);
+    sub_1B00C70(p_loginCallbackFunc, 0, v2, v3);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, void *, _QWORD))v6->fields.m_target)(
+      v6->fields.original_method_info,
+      monitor,
+      *(_QWORD *)&v6->fields.extra_arg);
   }
 }
 
@@ -1061,16 +860,13 @@ void __fastcall NetworkManager__EndOptionSync(NetworkManager_o *this, const Meth
 {
   const MethodInfo *v3; // x1
 
-  if ( (byte_438BA60 & 1) == 0 )
+  if ( (byte_48E206A & 1) == 0 )
   {
-    sub_B775C4(&OptionManager_TypeInfo);
-    byte_438BA60 = 1;
+    sub_1B00CCC(&OptionManager_TypeInfo, method);
+    byte_48E206A = 1;
   }
-  if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !OptionManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !OptionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-  }
   OptionManager__DeleteOldLocal(0LL);
   NetworkManager__EndLogin(this, v3);
 }
@@ -1078,87 +874,77 @@ void __fastcall NetworkManager__EndOptionSync(NetworkManager_o *this, const Meth
 
 void __fastcall NetworkManager__EndTopLogin(NetworkManager_o *this, System_String_o *result, const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  NetworkManager_o *v10; // x0
-  const MethodInfo *v11; // x2
-  ManagementManager_o *Instance; // x0
-  __int64 v13; // x1
-  const MethodInfo *v14; // x1
-  const MethodInfo *v15; // x2
-  System_Int64_array *v16; // x20
-  NetworkManager_ResultCallbackFunc_o *v17; // x21
+  int32_t v3; // w3
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  NetworkManager_o *v12; // x0
+  const MethodInfo *v13; // x2
+  System_Int64_array *Instance; // x0
+  __int64 v15; // x1
+  const MethodInfo *v16; // x2
+  const MethodInfo *v17; // x1
+  const MethodInfo *v18; // x2
+  System_Int64_array *v19; // x20
+  NetworkManager_ResultCallbackFunc_o *v20; // x21
 
-  if ( (byte_438BA5D & 1) == 0 )
+  if ( (byte_48E2067 & 1) == 0 )
   {
-    sub_B775C4(&Method_NetworkManager_EndLockSync__);
-    sub_B775C4(&Method_NetworkManager_getRequest_CardLockSyncRequest___);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
-    sub_B775C4(&UserServantLockManager_TypeInfo);
-    sub_B775C4(&StringLiteral_21657/*"ok"*/);
-    byte_438BA5D = 1;
+    sub_1B00CCC(&Method_NetworkManager_EndLockSync__, result);
+    sub_1B00CCC(&Method_NetworkManager_getRequest_CardLockSyncRequest___, v6);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v7);
+    sub_1B00CCC(&NetworkManager_ResultCallbackFunc_TypeInfo, v8);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__, v9);
+    sub_1B00CCC(&UserServantLockManager_TypeInfo, v10);
+    sub_1B00CCC(&StringLiteral_21923/*"ok"*/, v11);
+    byte_48E2067 = 1;
   }
   this->fields.loginResponseResult = result;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.loginResponseResult,
-    (System_Int32_array **)result,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
-  NetworkManager__SetupObfuscatedAccountId(v10, this->fields.loginResponseResult, v11);
-  Instance = (ManagementManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields.loginResponseResult,
+    (int32_t)result,
+    (int32_t)method,
+    v3);
+  NetworkManager__SetupObfuscatedAccountId(v12, this->fields.loginResponseResult, v13);
+  Instance = (System_Int64_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_20;
-  ManagementManager__BuildInfoDisp(Instance, 1, 0LL);
-  if ( (BYTE3(UserServantLockManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UserServantLockManager_TypeInfo->_2.cctor_finished )
-  {
+    goto LABEL_17;
+  ManagementManager__BuildInfoDisp((ManagementManager_o *)Instance, 1, v16);
+  if ( !UserServantLockManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UserServantLockManager_TypeInfo);
-  }
   if ( UserServantLockManager__ReadData(0LL) )
   {
-    if ( (BYTE3(UserServantLockManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UserServantLockManager_TypeInfo->_2.cctor_finished )
-    {
+    if ( !UserServantLockManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UserServantLockManager_TypeInfo);
-    }
-    Instance = (ManagementManager_o *)UserServantLockManager__GetLockList(0LL);
+    Instance = UserServantLockManager__GetLockList(0LL);
     if ( !Instance )
-      goto LABEL_20;
-    v16 = (System_Int64_array *)Instance;
-    if ( *(_QWORD *)&Instance->fields.scenetype )
+      goto LABEL_17;
+    v19 = Instance;
+    if ( *(_QWORD *)&Instance->max_length )
     {
-      v17 = (NetworkManager_ResultCallbackFunc_o *)sub_B77694(NetworkManager_ResultCallbackFunc_TypeInfo);
-      NetworkManager_ResultCallbackFunc___ctor(v17, (Il2CppObject *)this, Method_NetworkManager_EndLockSync__, 0LL);
-      if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !NetworkManager_TypeInfo->_2.cctor_finished )
-      {
+      v20 = (NetworkManager_ResultCallbackFunc_o *)sub_1B00F18(NetworkManager_ResultCallbackFunc_TypeInfo);
+      NetworkManager_ResultCallbackFunc___ctor(v20, (Il2CppObject *)this, Method_NetworkManager_EndLockSync__, 0LL);
+      if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      }
-      Instance = (ManagementManager_o *)NetworkManager__getRequest_WarBoardWallAttackRequest_(
-                                          v17,
-                                          (const MethodInfo_1DF8BE8 *)Method_NetworkManager_getRequest_CardLockSyncRequest___);
+      Instance = (System_Int64_array *)NetworkManager__getRequest_object_(
+                                         v20,
+                                         (const MethodInfo_2DD4818 *)Method_NetworkManager_getRequest_CardLockSyncRequest___);
       if ( Instance )
       {
-        CardLockSyncRequest__beginRequest((CardLockSyncRequest_o *)Instance, v16, 0LL, 0, 0LL);
+        CardLockSyncRequest__beginRequest((CardLockSyncRequest_o *)Instance, v19, 0LL, 0, 0LL);
         return;
       }
-LABEL_20:
-      sub_B7769C(Instance, v13);
+LABEL_17:
+      sub_1B00F28(Instance, v15);
     }
-    NetworkManager__EndLockSync(this, (System_String_o *)StringLiteral_21657/*"ok"*/, v15);
+    NetworkManager__EndLockSync(this, (System_String_o *)StringLiteral_21923/*"ok"*/, v18);
   }
   else
   {
-    NetworkManager__OptionSync(this, v14);
+    NetworkManager__OptionSync(this, v17);
   }
 }
 
@@ -1171,86 +957,83 @@ void __fastcall NetworkManager__ErrorDialog(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  System_Action_o *v13; // x21
-  CommonUI_o *Instance; // x20
-  ErrorDialog_ClickDelegate_o *v15; // x23
-  __int64 v16; // x0
-  __int64 v17; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  System_Action_o *v16; // x20
+  Il2CppObject *Instance; // x21
+  ErrorDialog_ClickDelegate_o *v18; // x23
+  __int64 v19; // x0
+  __int64 v20; // x1
 
-  if ( (byte_438BA14 & 1) == 0 )
+  if ( (byte_48E201C & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&ErrorDialog_ClickDelegate_TypeInfo);
-    sub_B775C4(&Method_NetworkManager_EndErrorDialog__);
-    sub_B775C4(&Method_NetworkManager_EndErrorWebView__);
-    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B775C4(&WebViewManager_TypeInfo);
-    byte_438BA14 = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, errorTitle);
+    sub_1B00CCC(&ErrorDialog_ClickDelegate_TypeInfo, v11);
+    sub_1B00CCC(&Method_NetworkManager_EndErrorDialog__, v12);
+    sub_1B00CCC(&Method_NetworkManager_EndErrorWebView__, v13);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v14);
+    sub_1B00CCC(&WebViewManager_TypeInfo, v15);
+    byte_48E201C = 1;
   }
   this->fields.errorCallbackFunc = callback;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.errorCallbackFunc,
-    (System_Int32_array **)callback,
-    (System_String_array **)errorDetail,
-    (System_String_array **)errorUrl,
-    (System_Boolean_array **)callback,
-    (System_Int32_array **)method,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields.errorCallbackFunc,
+    (int32_t)callback,
+    (int32_t)errorDetail,
+    (int32_t)errorUrl);
   if ( errorUrl )
   {
-    v13 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-    System_Action___ctor(v13, (Il2CppObject *)this, Method_NetworkManager_EndErrorWebView__, 0LL);
-    if ( (BYTE3(WebViewManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !WebViewManager_TypeInfo->_2.cctor_finished )
-    {
+    v16 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+    System_Action___ctor(v16, (Il2CppObject *)this, Method_NetworkManager_EndErrorWebView__, 0LL);
+    if ( !WebViewManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(WebViewManager_TypeInfo);
-    }
-    WebViewManager__OpenView(errorTitle, errorUrl, v13, 0LL);
+    WebViewManager__OpenView(errorTitle, errorUrl, v16, 0LL);
   }
   else
   {
-    Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v15 = (ErrorDialog_ClickDelegate_o *)sub_B77694(ErrorDialog_ClickDelegate_TypeInfo);
-    ErrorDialog_ClickDelegate___ctor(v15, (Il2CppObject *)this, Method_NetworkManager_EndErrorDialog__, 0LL);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v18 = (ErrorDialog_ClickDelegate_o *)sub_1B00F18(ErrorDialog_ClickDelegate_TypeInfo);
+    ErrorDialog_ClickDelegate___ctor(v18, (Il2CppObject *)this, Method_NetworkManager_EndErrorDialog__, 0LL);
     if ( !Instance )
-      sub_B7769C(v16, v17);
-    CommonUI__OpenErrorDialog(Instance, errorTitle, errorDetail, v15, 0, 0LL);
+      sub_1B00F28(v19, v20);
+    CommonUI__OpenErrorDialog((CommonUI_o *)Instance, errorTitle, errorDetail, v18, 0, 0LL);
   }
 }
 
 
 int32_t __fastcall NetworkManager__ExecuteCommand(ResponseData_o *data, const MethodInfo *method)
 {
-  WebViewManager_o *Instance; // x0
-  __int64 v4; // x1
-  System_Collections_Generic_Dictionary_Type__IStoreExtension__o *v5; // x0
-  UnityEngine_Purchasing_IStoreExtension_o *Item; // x0
-  __int64 v7; // x1
+  __int64 v3; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v5; // x1
+  System_Collections_Generic_Dictionary_object__object__o *monitor; // x0
+  Il2CppObject *Item; // x0
+  __int64 v8; // x1
 
-  if ( (byte_438BA53 & 1) == 0 )
+  if ( (byte_48E205D & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__ResponseCommandBase__get_Item__);
-    sub_B775C4(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
-    byte_438BA53 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__ResponseCommandBase__get_Item__, method);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, v3);
+    byte_48E205D = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
   if ( !Instance )
-    sub_B7769C(0LL, v4);
+    sub_1B00F28(0LL, v5);
   if ( !data )
-    sub_B7769C(Instance, v4);
-  v5 = *(System_Collections_Generic_Dictionary_Type__IStoreExtension__o **)&Instance->fields.isButtonEnable;
-  if ( !v5 )
-    sub_B7769C(0LL, v4);
-  Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-           v5,
-           (System_Type_o *)data->fields.nid,
-           (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__ResponseCommandBase__get_Item__);
+    sub_1B00F28(Instance, v5);
+  monitor = (System_Collections_Generic_Dictionary_object__object__o *)Instance[5].monitor;
+  if ( !monitor )
+    sub_1B00F28(0LL, v5);
+  Item = System_Collections_Generic_Dictionary_object__object___get_Item(
+           monitor,
+           (Il2CppObject *)data->fields.nid,
+           (const MethodInfo_308D9C8 *)Method_System_Collections_Generic_Dictionary_string__ResponseCommandBase__get_Item__);
   if ( !Item )
-    sub_B7769C(0LL, v7);
-  return ((__int64 (__fastcall *)(UnityEngine_Purchasing_IStoreExtension_o *, ResponseData_o *, Il2CppMethodPointer))Item->klass->vtable[5].method)(
+    sub_1B00F28(0LL, v8);
+  return ((__int64 (__fastcall *)(Il2CppObject *, ResponseData_o *, Il2CppMethodPointer))Item->klass->vtable[5].method)(
            Item,
            data,
            Item->klass->vtable[6].methodPtr);
@@ -1259,29 +1042,29 @@ int32_t __fastcall NetworkManager__ExecuteCommand(ResponseData_o *data, const Me
 
 System_String_o *__fastcall NetworkManager__GetApiCode(const MethodInfo *method)
 {
-  WebViewManager_o *Instance; // x0
+  __int64 v1; // x1
   __int64 v2; // x1
-  System_String_o *basePanel; // x19
+  __int64 v3; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v5; // x1
+  System_String_o *klass; // x19
 
-  if ( (byte_438BA3D & 1) == 0 )
+  if ( (byte_48E2047 & 1) == 0 )
   {
-    sub_B775C4(&CatAndMouseGame_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438BA3D = 1;
+    sub_1B00CCC(&CatAndMouseGame_TypeInfo, v1);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, v2);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v3);
+    byte_48E2047 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
   if ( !Instance )
-    sub_B7769C(0LL, v2);
-  basePanel = (System_String_o *)Instance->fields.basePanel;
-  if ( System_String__IsNullOrEmpty(basePanel, 0LL) )
+    sub_1B00F28(0LL, v5);
+  klass = (System_String_o *)Instance[2].klass;
+  if ( System_String__IsNullOrEmpty(klass, 0LL) )
     return (System_String_o *)StringLiteral_1/*""*/;
-  if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
-  {
+  if ( !CatAndMouseGame_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-  }
-  return CatAndMouseGame__MouseGame1(basePanel, 0, 0LL);
+  return CatAndMouseGame__MouseGame1(klass, 0, 0LL);
 }
 
 
@@ -1289,366 +1072,262 @@ System_String_o *__fastcall NetworkManager__GetAuthCode(
         System_Collections_Generic_SortedDictionary_string__string__o *headers,
         const MethodInfo *method)
 {
-  System_Collections_Generic_SortedDictionary_string__string__o *v2; // x19
-  System_Int32_array **v3; // x20
-  System_String_o *v4; // x19
-  System_Collections_Generic_KeyValuePair_TKey__TValue__o Current; // kr00_16
-  __int64 v6; // x0
+  System_Collections_Generic_SortedDictionary_TKey__TValue__o *v2; // x19
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
-  System_String_array *v14; // x21
-  System_String_array **v15; // x2
-  System_String_array **v16; // x3
-  System_Boolean_array **v17; // x4
-  System_Int32_array **v18; // x5
-  System_Int32_array *v19; // x6
-  System_Int32_array *v20; // x7
-  __int64 v21; // x0
-  System_Int32_array **v22; // x1
-  __int64 v23; // x0
-  System_String_array **v24; // x2
-  System_String_array **v25; // x3
-  System_Boolean_array **v26; // x4
-  System_Int32_array **v27; // x5
-  System_Int32_array *v28; // x6
-  System_Int32_array *v29; // x7
-  System_String_array **v30; // x2
-  System_String_array **v31; // x3
-  System_Boolean_array **v32; // x4
-  System_Int32_array **v33; // x5
-  System_Int32_array *v34; // x6
-  System_Int32_array *v35; // x7
-  __int64 v36; // x0
-  System_Int32_array **v37; // x1
-  __int64 v38; // x0
-  System_String_array **v39; // x2
-  System_String_array **v40; // x3
-  System_Boolean_array **v41; // x4
-  System_Int32_array **v42; // x5
-  System_Int32_array *v43; // x6
-  System_Int32_array *v44; // x7
-  NetworkManager_c *v45; // x0
-  System_Security_Cryptography_SHA1CryptoServiceProvider_o *v46; // x20
-  System_Text_UTF8Encoding_o *v47; // x21
-  NetworkManager_c *v48; // x0
-  System_Byte_array *v49; // x19
-  __int64 v51; // x0
-  __int64 v52; // x0
-  __int64 v53; // x0
-  __int64 v54; // x0
-  __int64 v55; // x0
-  __int64 v56; // x0
-  __int64 v57; // x0
-  __int64 v58; // x0
-  __int64 v59; // x0
-  __int64 v60; // x0
-  System_Collections_Generic_SortedDictionary_Enumerator_TKey__TValue__o v61; // [xsp+0h] [xbp-B0h] BYREF
-  System_Collections_Generic_SortedDictionary_Enumerator_TKey__TValue__o v62; // [xsp+30h] [xbp-80h] BYREF
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  System_String_o *v17; // x20
+  System_String_o *v18; // x19
+  System_Collections_Generic_KeyValuePair_TKey__TValue__o Current; // kr00_16
+  __int64 v20; // x0
+  __int64 v21; // x1
+  int32_t v22; // w2
+  int32_t v23; // w3
+  __int64 v24; // x21
+  __int64 v25; // x0
+  __int64 v26; // x1
+  int32_t v27; // w2
+  int32_t v28; // w3
+  int32_t v29; // w1
+  __int64 v30; // x0
+  __int64 v31; // x1
+  int32_t v32; // w2
+  int32_t v33; // w3
+  __int64 v34; // x0
+  __int64 v35; // x1
+  int32_t v36; // w2
+  int32_t v37; // w3
+  int32_t v38; // w1
+  __int64 v39; // x0
+  __int64 v40; // x1
+  int32_t v41; // w2
+  int32_t v42; // w3
+  NetworkManager_c *v43; // x0
+  System_Security_Cryptography_SHA1CryptoServiceProvider_o *v44; // x20
+  System_Text_UTF8Encoding_o *v45; // x21
+  NetworkManager_c *v46; // x0
+  System_Byte_array *v47; // x19
+  System_Collections_Generic_SortedDictionary_Enumerator_TKey__TValue__o v49; // [xsp+0h] [xbp-C0h] BYREF
+  System_Collections_Generic_SortedDictionary_Enumerator_TKey__TValue__o v50; // [xsp+30h] [xbp-90h] BYREF
 
-  v2 = headers;
-  if ( (byte_438B9FA & 1) == 0 )
+  v2 = (System_Collections_Generic_SortedDictionary_TKey__TValue__o *)headers;
+  if ( (byte_48E2002 & 1) == 0 )
   {
-    sub_B775C4(&System_Convert_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_SortedDictionary_Enumerator_string__string__Dispose__);
-    sub_B775C4(&Method_System_Collections_Generic_SortedDictionary_Enumerator_string__string__MoveNext__);
-    sub_B775C4(&Method_System_Collections_Generic_SortedDictionary_Enumerator_string__string__get_Current__);
-    sub_B775C4(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Key__);
-    sub_B775C4(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Value__);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&System_Security_Cryptography_SHA1CryptoServiceProvider_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_SortedDictionary_string__string__GetEnumerator__);
-    sub_B775C4(&string___TypeInfo);
-    sub_B775C4(&System_Text_UTF8Encoding_TypeInfo);
-    sub_B775C4(&StringLiteral_1533/*"="*/);
-    sub_B775C4(&StringLiteral_1252/*":"*/);
-    sub_B775C4(&StringLiteral_452/*"&"*/);
-    headers = (System_Collections_Generic_SortedDictionary_string__string__o *)sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438B9FA = 1;
+    sub_1B00CCC(&System_Convert_TypeInfo, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_SortedDictionary_Enumerator_string__string__Dispose__, v3);
+    sub_1B00CCC(&Method_System_Collections_Generic_SortedDictionary_Enumerator_string__string__MoveNext__, v4);
+    sub_1B00CCC(&Method_System_Collections_Generic_SortedDictionary_Enumerator_string__string__get_Current__, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Key__, v6);
+    sub_1B00CCC(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Value__, v7);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v8);
+    sub_1B00CCC(&System_Security_Cryptography_SHA1CryptoServiceProvider_TypeInfo, v9);
+    sub_1B00CCC(&Method_System_Collections_Generic_SortedDictionary_string__string__GetEnumerator__, v10);
+    sub_1B00CCC(&string___TypeInfo, v11);
+    sub_1B00CCC(&System_Text_UTF8Encoding_TypeInfo, v12);
+    sub_1B00CCC(&StringLiteral_1848/*"="*/, v13);
+    sub_1B00CCC(&StringLiteral_1540/*":"*/, v14);
+    sub_1B00CCC(&StringLiteral_532/*"&"*/, v15);
+    headers = (System_Collections_Generic_SortedDictionary_string__string__o *)sub_1B00CCC(&StringLiteral_1/*""*/, v16);
+    byte_48E2002 = 1;
   }
-  memset(&v62, 0, sizeof(v62));
+  memset(&v50, 0, sizeof(v50));
   if ( !v2 )
-    goto LABEL_55;
-  v3 = (System_Int32_array **)StringLiteral_1/*""*/;
-  System_Collections_Generic_SortedDictionary_string__string___GetEnumerator(
-    &v61,
+    goto LABEL_33;
+  v17 = (System_String_o *)StringLiteral_1/*""*/;
+  System_Collections_Generic_SortedDictionary_object__object___GetEnumerator(
+    &v49,
     v2,
-    (const MethodInfo_2D177E4 *)Method_System_Collections_Generic_SortedDictionary_string__string__GetEnumerator__);
-  v62 = v61;
+    (const MethodInfo_35FCA84 *)Method_System_Collections_Generic_SortedDictionary_string__string__GetEnumerator__);
+  v50 = v49;
   while ( 1 )
   {
-    v4 = (System_String_o *)v3;
-    if ( !System_Collections_Generic_SortedDictionary_Enumerator_string__string___MoveNext(
-            &v62,
-            (const MethodInfo_27E3E08 *)Method_System_Collections_Generic_SortedDictionary_Enumerator_string__string__MoveNext__) )
+    v18 = v17;
+    if ( !System_Collections_Generic_SortedDictionary_Enumerator_object__object___MoveNext(
+            &v50,
+            (const MethodInfo_318E52C *)Method_System_Collections_Generic_SortedDictionary_Enumerator_string__string__MoveNext__) )
       break;
-    Current = System_Collections_Generic_SortedDictionary_Enumerator_string__string___get_Current(
-                &v62,
-                (const MethodInfo_27E3E80 *)Method_System_Collections_Generic_SortedDictionary_Enumerator_string__string__get_Current__);
-    if ( System_String__op_Inequality((System_String_o *)v3, (System_String_o *)StringLiteral_1/*""*/, 0LL) )
+    Current = System_Collections_Generic_SortedDictionary_Enumerator_object__object___get_Current(
+                &v50,
+                (const MethodInfo_318E60C *)Method_System_Collections_Generic_SortedDictionary_Enumerator_string__string__get_Current__);
+    if ( System_String__op_Inequality(v17, (System_String_o *)StringLiteral_1/*""*/, 0LL) )
     {
-      v6 = sub_B775DC(string___TypeInfo, 5LL);
-      v14 = (System_String_array *)v6;
-      if ( !v6 )
-        sub_B7769C(0LL, v7);
-      if ( v3 )
-      {
-        v6 = sub_B77684(v3, *(_QWORD *)(*(_QWORD *)v6 + 64LL));
-        if ( !v6 )
-        {
-          v56 = sub_B776BC(0LL);
-          sub_B77668(v56, 0LL);
-        }
-      }
-      if ( !v14->max_length )
-      {
-        v54 = sub_B776C8(v6);
-        sub_B77668(v54, 0LL);
-      }
-      v14->m_Items[0] = (System_String_o *)v3;
-      sub_B77560((BattleServantConfConponent_o *)v14->m_Items, v3, v8, v9, v10, v11, v12, v13);
-      v21 = StringLiteral_452/*"&"*/;
-      if ( StringLiteral_452/*"&"*/ )
-      {
-        v21 = sub_B77684(StringLiteral_452/*"&"*/, v14->obj.klass->_1.element_class);
-        if ( !v21 )
-        {
-          v57 = sub_B776BC(0LL);
-          sub_B77668(v57, 0LL);
-        }
-        v22 = (System_Int32_array **)StringLiteral_452/*"&"*/;
-      }
-      else
-      {
-        v22 = 0LL;
-      }
-      if ( v14->max_length <= 1 )
-      {
-        v51 = sub_B776C8(v21);
-        sub_B77668(v51, 0LL);
-      }
-      v14->m_Items[1] = (System_String_o *)v22;
-      sub_B77560((BattleServantConfConponent_o *)&v14->m_Items[1], v22, v15, v16, v17, v18, v19, v20);
-      if ( Current.fields.key )
-      {
-        v23 = sub_B77684(Current.fields.key, v14->obj.klass->_1.element_class);
-        if ( !v23 )
-        {
-          v59 = sub_B776BC(0LL);
-          sub_B77668(v59, 0LL);
-        }
-      }
-      if ( v14->max_length <= 2 )
-      {
-        v52 = sub_B776C8(v23);
-        sub_B77668(v52, 0LL);
-      }
-      v14->m_Items[2] = (System_String_o *)Current.fields.key;
-      sub_B77560(
-        (BattleServantConfConponent_o *)&v14->m_Items[2],
-        (System_Int32_array **)Current.fields.key,
-        v24,
-        v25,
-        v26,
-        v27,
-        v28,
-        v29);
-      v36 = StringLiteral_1533/*"="*/;
-      if ( StringLiteral_1533/*"="*/ )
-      {
-        v36 = sub_B77684(StringLiteral_1533/*"="*/, v14->obj.klass->_1.element_class);
-        if ( !v36 )
-        {
-          v58 = sub_B776BC(0LL);
-          sub_B77668(v58, 0LL);
-        }
-        v37 = (System_Int32_array **)StringLiteral_1533/*"="*/;
-      }
-      else
-      {
-        v37 = 0LL;
-      }
-      if ( v14->max_length <= 3 )
-      {
-        v55 = sub_B776C8(v36);
-        sub_B77668(v55, 0LL);
-      }
-      v14->m_Items[3] = (System_String_o *)v37;
-      sub_B77560((BattleServantConfConponent_o *)&v14->m_Items[3], v37, v30, v31, v32, v33, v34, v35);
-      if ( Current.fields.value )
-      {
-        v38 = sub_B77684(Current.fields.value, v14->obj.klass->_1.element_class);
-        if ( !v38 )
-        {
-          v60 = sub_B776BC(0LL);
-          sub_B77668(v60, 0LL);
-        }
-      }
-      if ( v14->max_length <= 4 )
-      {
-        v53 = sub_B776C8(v38);
-        sub_B77668(v53, 0LL);
-      }
-      v14->m_Items[4] = (System_String_o *)Current.fields.value;
-      sub_B77560(
-        (BattleServantConfConponent_o *)&v14->m_Items[4],
-        (System_Int32_array **)Current.fields.value,
-        v39,
-        v40,
-        v41,
-        v42,
-        v43,
-        v44);
-      v3 = (System_Int32_array **)System_String__Concat_44982964(v14, 0LL);
+      v20 = sub_1B00D74(string___TypeInfo, 5LL);
+      v24 = v20;
+      if ( !v20 )
+        sub_1B00F28(0LL, v21);
+      if ( !*(_DWORD *)(v20 + 24) )
+        sub_1B00F30(v20, v21);
+      *(_QWORD *)(v20 + 32) = v17;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v20 + 32), (int32_t)v17, v22, v23);
+      if ( *(_DWORD *)(v24 + 24) <= 1u )
+        sub_1B00F30(v25, v26);
+      v29 = StringLiteral_532/*"&"*/;
+      *(_QWORD *)(v24 + 40) = StringLiteral_532/*"&"*/;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v24 + 40), v29, v27, v28);
+      if ( *(_DWORD *)(v24 + 24) <= 2u )
+        sub_1B00F30(v30, v31);
+      *(_QWORD *)(v24 + 48) = Current.fields.key;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v24 + 48), (int32_t)Current.fields.key, v32, v33);
+      if ( *(_DWORD *)(v24 + 24) <= 3u )
+        sub_1B00F30(v34, v35);
+      v38 = StringLiteral_1848/*"="*/;
+      *(_QWORD *)(v24 + 56) = StringLiteral_1848/*"="*/;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v24 + 56), v38, v36, v37);
+      if ( *(_DWORD *)(v24 + 24) <= 4u )
+        sub_1B00F30(v39, v40);
+      *(_QWORD *)(v24 + 64) = Current.fields.value;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v24 + 64), (int32_t)Current.fields.value, v41, v42);
+      v17 = System_String__Concat_60339276((System_String_array *)v24, 0LL);
     }
     else
     {
-      v3 = (System_Int32_array **)System_String__Concat_44905348(
-                                    (System_String_o *)v3,
-                                    (System_String_o *)Current.fields.key,
-                                    (System_String_o *)StringLiteral_1533/*"="*/,
-                                    (System_String_o *)Current.fields.value,
-                                    0LL);
+      v17 = System_String__Concat_60339012(
+              v17,
+              (System_String_o *)Current.fields.key,
+              (System_String_o *)StringLiteral_1848/*"="*/,
+              (System_String_o *)Current.fields.value,
+              0LL);
     }
   }
-  System_Collections_Generic_SortedDictionary_Enumerator_string__string___Dispose(
-    &v62,
-    (const MethodInfo_27E3E44 *)Method_System_Collections_Generic_SortedDictionary_Enumerator_string__string__Dispose__);
-  v45 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  System_Collections_Generic_SortedDictionary_Enumerator_object__object___Dispose(
+    &v50,
+    (const MethodInfo_318E59C *)Method_System_Collections_Generic_SortedDictionary_Enumerator_string__string__Dispose__);
+  v43 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v45 = NetworkManager_TypeInfo;
+    v43 = NetworkManager_TypeInfo;
   }
-  if ( !v45->static_fields->secretKey )
+  if ( !v43->static_fields->secretKey )
     return 0LL;
-  v46 = (System_Security_Cryptography_SHA1CryptoServiceProvider_o *)sub_B77694(System_Security_Cryptography_SHA1CryptoServiceProvider_TypeInfo);
-  System_Security_Cryptography_SHA1CryptoServiceProvider___ctor(v46, 0LL);
-  v47 = (System_Text_UTF8Encoding_o *)sub_B77694(System_Text_UTF8Encoding_TypeInfo);
-  System_Text_UTF8Encoding___ctor(v47, 0LL);
-  v48 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v44 = (System_Security_Cryptography_SHA1CryptoServiceProvider_o *)sub_1B00F18(System_Security_Cryptography_SHA1CryptoServiceProvider_TypeInfo);
+  System_Security_Cryptography_SHA1CryptoServiceProvider___ctor(v44, 0LL);
+  v45 = (System_Text_UTF8Encoding_o *)sub_1B00F18(System_Text_UTF8Encoding_TypeInfo);
+  System_Text_UTF8Encoding___ctor(v45, 0LL);
+  v46 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v48 = NetworkManager_TypeInfo;
+    v46 = NetworkManager_TypeInfo;
   }
-  headers = (System_Collections_Generic_SortedDictionary_string__string__o *)System_String__Concat_44904220(
-                                                                               v4,
-                                                                               (System_String_o *)StringLiteral_1252/*":"*/,
-                                                                               v48->static_fields->secretKey,
+  headers = (System_Collections_Generic_SortedDictionary_string__string__o *)System_String__Concat_60337008(
+                                                                               v18,
+                                                                               (System_String_o *)StringLiteral_1540/*":"*/,
+                                                                               v46->static_fields->secretKey,
                                                                                0LL);
-  if ( !v47
-    || (headers = (System_Collections_Generic_SortedDictionary_string__string__o *)((__int64 (__fastcall *)(System_Text_UTF8Encoding_o *, System_Collections_Generic_SortedDictionary_string__string__o *, Il2CppMethodPointer))v47->klass->vtable._18_GetBytes.method)(
-                                                                                     v47,
+  if ( !v45
+    || (headers = (System_Collections_Generic_SortedDictionary_string__string__o *)((__int64 (__fastcall *)(System_Text_UTF8Encoding_o *, System_Collections_Generic_SortedDictionary_string__string__o *, Il2CppMethodPointer))v45->klass->vtable._19_GetBytes.method)(
+                                                                                     v45,
                                                                                      headers,
-                                                                                     v47->klass->vtable._19_GetBytes.methodPtr),
-        !v46) )
+                                                                                     v45->klass->vtable._20_GetBytes.methodPtr),
+        !v44) )
   {
-LABEL_55:
-    sub_B7769C(headers, method);
+LABEL_33:
+    sub_1B00F28(headers, method);
   }
-  v49 = System_Security_Cryptography_HashAlgorithm__ComputeHash_44413968(
-          (System_Security_Cryptography_HashAlgorithm_o *)v46,
+  v47 = System_Security_Cryptography_HashAlgorithm__ComputeHash(
+          (System_Security_Cryptography_HashAlgorithm_o *)v44,
           (System_Byte_array *)headers,
           0LL);
-  System_Security_Cryptography_HashAlgorithm__Clear((System_Security_Cryptography_HashAlgorithm_o *)v46, 0LL);
-  if ( (BYTE3(System_Convert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !System_Convert_TypeInfo->_2.cctor_finished )
-  {
+  System_Security_Cryptography_HashAlgorithm__Clear((System_Security_Cryptography_HashAlgorithm_o *)v44, 0LL);
+  if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  }
-  return System_Convert__ToBase64String(v49, 0LL);
+  return System_Convert__ToBase64String(v47, 0LL);
 }
 
 
 System_String_o *__fastcall NetworkManager__GetCv(const MethodInfo *method)
 {
-  WebViewManager_o *Instance; // x0
+  __int64 v1; // x1
   __int64 v2; // x1
-  System_String_o *commonCamera; // x19
+  __int64 v3; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v5; // x1
+  System_String_o *klass; // x19
 
-  if ( (byte_438BA3F & 1) == 0 )
+  if ( (byte_48E2049 & 1) == 0 )
   {
-    sub_B775C4(&CatAndMouseGame_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438BA3F = 1;
+    sub_1B00CCC(&CatAndMouseGame_TypeInfo, v1);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, v2);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v3);
+    byte_48E2049 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
   if ( !Instance )
-    sub_B7769C(0LL, v2);
-  commonCamera = (System_String_o *)Instance->fields.commonCamera;
-  if ( System_String__IsNullOrEmpty(commonCamera, 0LL) )
+    sub_1B00F28(0LL, v5);
+  klass = (System_String_o *)Instance[4].klass;
+  if ( System_String__IsNullOrEmpty(klass, 0LL) )
     return (System_String_o *)StringLiteral_1/*""*/;
-  if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
-  {
+  if ( !CatAndMouseGame_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-  }
-  return CatAndMouseGame__MouseGame1(commonCamera, 0, 0LL);
+  return CatAndMouseGame__MouseGame1(klass, 0, 0LL);
 }
 
 
 System_String_o *__fastcall NetworkManager__GetDataServerFolderName(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
+  __int64 v1; // x1
+  NetworkManager_c *v2; // x0
 
-  if ( (byte_438BA28 & 1) == 0 )
+  if ( (byte_48E2032 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA28 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, v1);
+    byte_48E2032 = 1;
   }
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v2 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v1 = NetworkManager_TypeInfo;
+    v2 = NetworkManager_TypeInfo;
   }
-  return v1->static_fields->dataServerFolder;
+  return v2->static_fields->dataServerFolder;
 }
 
 
 System_String_o *__fastcall NetworkManager__GetDataServerSetting(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
+  __int64 v1; // x1
+  NetworkManager_c *v2; // x0
 
-  if ( (byte_438BA33 & 1) == 0 )
+  if ( (byte_48E203D & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA33 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, v1);
+    byte_48E203D = 1;
   }
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v2 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v1 = NetworkManager_TypeInfo;
+    v2 = NetworkManager_TypeInfo;
   }
-  return v1->static_fields->dataServerSettingAddress;
+  return v2->static_fields->dataServerSettingAddress;
 }
 
 
-System_String_o *__fastcall NetworkManager__GetDataServerSetting_26215044(
+System_String_o *__fastcall NetworkManager__GetDataServerSetting_37269232(
         System_String_o *type,
         const MethodInfo *method)
 {
   ManagerConfig_c *v2; // x0
 
-  if ( (byte_438BA34 & 1) == 0 )
+  if ( (byte_48E203E & 1) == 0 )
   {
-    sub_B775C4(&ManagerConfig_TypeInfo);
-    byte_438BA34 = 1;
+    sub_1B00CCC(&ManagerConfig_TypeInfo, method);
+    byte_48E203E = 1;
   }
   v2 = ManagerConfig_TypeInfo;
-  if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ManagerConfig_TypeInfo->_2.cctor_finished )
+  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
     v2 = ManagerConfig_TypeInfo;
@@ -1665,36 +1344,33 @@ bool __fastcall NetworkManager__GetDebugSlowConnect(const MethodInfo *method)
 
 System_String_o *__fastcall NetworkManager__GetDispFriendCode(NetworkManager_o *this, const MethodInfo *method)
 {
-  NetworkManager_c *v2; // x0
+  __int64 v2; // x1
+  NetworkManager_c *v3; // x0
   System_String_o *friendCode; // x19
 
-  if ( (byte_438B9F4 & 1) == 0 )
+  if ( (byte_48E1FFC & 1) == 0 )
   {
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438B9F4 = 1;
+    sub_1B00CCC(&LocalizationManager_TypeInfo, method);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v2);
+    byte_48E1FFC = 1;
   }
-  v2 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v3 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v2 = NetworkManager_TypeInfo;
+    v3 = NetworkManager_TypeInfo;
   }
-  friendCode = v2->static_fields->friendCode;
+  friendCode = v3->static_fields->friendCode;
   if ( !friendCode )
     return 0LL;
-  if ( (BYTE3(v2->vtable._0_Equals.methodPtr) & 4) != 0 && !v2->_2.cctor_finished )
+  if ( !v3->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v2);
+    j_il2cpp_runtime_class_init_0(v3);
     friendCode = NetworkManager_TypeInfo->static_fields->friendCode;
   }
-  if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !LocalizationManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  }
-  return LocalizationManager__GetNumberFormat_34382772(friendCode, 0LL);
+  return LocalizationManager__GetNumberFormat_37180012(friendCode, method);
 }
 
 
@@ -1702,14 +1378,13 @@ System_String_o *__fastcall NetworkManager__GetFriendCode(NetworkManager_o *this
 {
   NetworkManager_c *v2; // x0
 
-  if ( (byte_438B9F3 & 1) == 0 )
+  if ( (byte_48E1FFB & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438B9F3 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    byte_48E1FFB = 1;
   }
   v2 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     v2 = NetworkManager_TypeInfo;
@@ -1720,38 +1395,37 @@ System_String_o *__fastcall NetworkManager__GetFriendCode(NetworkManager_o *this
 
 System_String_o *__fastcall NetworkManager__GetGameServerSetting(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
+  __int64 v1; // x1
+  NetworkManager_c *v2; // x0
 
-  if ( (byte_438BA31 & 1) == 0 )
+  if ( (byte_48E203B & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA31 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, v1);
+    byte_48E203B = 1;
   }
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v2 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v1 = NetworkManager_TypeInfo;
+    v2 = NetworkManager_TypeInfo;
   }
-  return v1->static_fields->gameServerSettingAddress;
+  return v2->static_fields->gameServerSettingAddress;
 }
 
 
-System_String_o *__fastcall NetworkManager__GetGameServerSetting_26214844(
+System_String_o *__fastcall NetworkManager__GetGameServerSetting_37269056(
         System_String_o *type,
         const MethodInfo *method)
 {
   ManagerConfig_c *v2; // x0
 
-  if ( (byte_438BA32 & 1) == 0 )
+  if ( (byte_48E203C & 1) == 0 )
   {
-    sub_B775C4(&ManagerConfig_TypeInfo);
-    byte_438BA32 = 1;
+    sub_1B00CCC(&ManagerConfig_TypeInfo, method);
+    byte_48E203C = 1;
   }
   v2 = ManagerConfig_TypeInfo;
-  if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ManagerConfig_TypeInfo->_2.cctor_finished )
+  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
     v2 = ManagerConfig_TypeInfo;
@@ -1762,84 +1436,83 @@ System_String_o *__fastcall NetworkManager__GetGameServerSetting_26214844(
 
 int64_t __fastcall NetworkManager__GetLastServerTime(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
+  __int64 v1; // x1
+  NetworkManager_c *v2; // x0
 
-  if ( (byte_438B9F6 & 1) == 0 )
+  if ( (byte_48E1FFE & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438B9F6 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, v1);
+    byte_48E1FFE = 1;
   }
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v2 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v1 = NetworkManager_TypeInfo;
+    v2 = NetworkManager_TypeInfo;
   }
-  return v1->static_fields->serverTime;
+  return v2->static_fields->serverTime;
 }
 
 
 System_String_o *__fastcall NetworkManager__GetMk(const MethodInfo *method)
 {
-  WebViewManager_o *Instance; // x0
+  __int64 v1; // x1
   __int64 v2; // x1
-  System_String_o *webViewScreen; // x19
+  __int64 v3; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v5; // x1
+  System_String_o *monitor; // x19
 
-  if ( (byte_438BA3E & 1) == 0 )
+  if ( (byte_48E2048 & 1) == 0 )
   {
-    sub_B775C4(&CatAndMouseGame_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438BA3E = 1;
+    sub_1B00CCC(&CatAndMouseGame_TypeInfo, v1);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, v2);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v3);
+    byte_48E2048 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
   if ( !Instance )
-    sub_B7769C(0LL, v2);
-  webViewScreen = (System_String_o *)Instance->fields.webViewScreen;
-  if ( System_String__IsNullOrEmpty(webViewScreen, 0LL) )
+    sub_1B00F28(0LL, v5);
+  monitor = (System_String_o *)Instance[3].monitor;
+  if ( System_String__IsNullOrEmpty(monitor, 0LL) )
     return (System_String_o *)StringLiteral_1/*""*/;
-  if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
-  {
+  if ( !CatAndMouseGame_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-  }
-  return CatAndMouseGame__MouseGame1(webViewScreen, 0, 0LL);
+  return CatAndMouseGame__MouseGame1(monitor, 0, 0LL);
 }
 
 
 bool __fastcall NetworkManager__GetSecurityServerSetting(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
+  __int64 v1; // x1
+  NetworkManager_c *v2; // x0
 
-  if ( (byte_438BA2E & 1) == 0 )
+  if ( (byte_48E2038 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA2E = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, v1);
+    byte_48E2038 = 1;
   }
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v2 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v1 = NetworkManager_TypeInfo;
+    v2 = NetworkManager_TypeInfo;
   }
-  return v1->static_fields->serverSettingSecurity;
+  return v2->static_fields->serverSettingSecurity;
 }
 
 
-bool __fastcall NetworkManager__GetSecurityServerSetting_26214644(System_String_o *type, const MethodInfo *method)
+bool __fastcall NetworkManager__GetSecurityServerSetting_37268880(System_String_o *type, const MethodInfo *method)
 {
   ManagerConfig_c *v2; // x0
 
-  if ( (byte_438BA30 & 1) == 0 )
+  if ( (byte_48E203A & 1) == 0 )
   {
-    sub_B775C4(&ManagerConfig_TypeInfo);
-    byte_438BA30 = 1;
+    sub_1B00CCC(&ManagerConfig_TypeInfo, method);
+    byte_48E203A = 1;
   }
   v2 = ManagerConfig_TypeInfo;
-  if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ManagerConfig_TypeInfo->_2.cctor_finished )
+  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
     v2 = ManagerConfig_TypeInfo;
@@ -1851,56 +1524,66 @@ bool __fastcall NetworkManager__GetSecurityServerSetting_26214644(System_String_
 System_String_o *__fastcall NetworkManager__GetServerNumber(System_String_o *serverName, const MethodInfo *method)
 {
   System_String_o *v2; // x19
-  __int64 *v3; // x20
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 *v13; // x20
 
   v2 = serverName;
-  if ( (byte_438BA4B & 1) == 0 )
+  if ( (byte_48E2055 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_4714/*"DEV"*/);
-    sub_B775C4(&StringLiteral_12561/*"STAGING"*/);
-    sub_B775C4(&StringLiteral_12609/*"STG"*/);
-    sub_B775C4(&StringLiteral_15373/*"VERUP"*/);
-    sub_B775C4(&StringLiteral_4713/*"DESIGN"*/);
-    sub_B775C4(&StringLiteral_7471/*"IPADDRESS"*/);
-    sub_B775C4(&StringLiteral_11059/*"QA"*/);
-    sub_B775C4(&StringLiteral_10642/*"PLAN"*/);
-    sub_B775C4(&StringLiteral_8533/*"LIMIT"*/);
-    sub_B775C4(&StringLiteral_10643/*"PLAY"*/);
-    serverName = (System_String_o *)sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438BA4B = 1;
+    sub_1B00CCC(&StringLiteral_4964/*"DEV"*/, method);
+    sub_1B00CCC(&StringLiteral_12030/*"STAGING"*/, v3);
+    sub_1B00CCC(&StringLiteral_12078/*"STG"*/, v4);
+    sub_1B00CCC(&StringLiteral_15007/*"VERUP"*/, v5);
+    sub_1B00CCC(&StringLiteral_4963/*"DESIGN"*/, v6);
+    sub_1B00CCC(&StringLiteral_7313/*"IPADDRESS"*/, v7);
+    sub_1B00CCC(&StringLiteral_10677/*"QA"*/, v8);
+    sub_1B00CCC(&StringLiteral_10259/*"PLAN"*/, v9);
+    sub_1B00CCC(&StringLiteral_8146/*"LIMIT"*/, v10);
+    sub_1B00CCC(&StringLiteral_10260/*"PLAY"*/, v11);
+    serverName = (System_String_o *)sub_1B00CCC(&StringLiteral_1/*""*/, v12);
+    byte_48E2055 = 1;
   }
   if ( !v2 )
-    sub_B7769C(serverName, method);
-  v3 = &StringLiteral_11059/*"QA"*/;
-  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_11059/*"QA"*/, 0LL) )
-    return System_String__Replace_44909172(v2, (System_String_o *)*v3, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-  v3 = &StringLiteral_10642/*"PLAN"*/;
-  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_10642/*"PLAN"*/, 0LL) )
-    return System_String__Replace_44909172(v2, (System_String_o *)*v3, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-  v3 = &StringLiteral_4714/*"DEV"*/;
-  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_4714/*"DEV"*/, 0LL) )
-    return System_String__Replace_44909172(v2, (System_String_o *)*v3, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-  v3 = &StringLiteral_8533/*"LIMIT"*/;
-  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_8533/*"LIMIT"*/, 0LL) )
-    return System_String__Replace_44909172(v2, (System_String_o *)*v3, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-  v3 = &StringLiteral_10643/*"PLAY"*/;
-  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_10643/*"PLAY"*/, 0LL) )
-    return System_String__Replace_44909172(v2, (System_String_o *)*v3, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-  v3 = &StringLiteral_4713/*"DESIGN"*/;
-  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_4713/*"DESIGN"*/, 0LL) )
-    return System_String__Replace_44909172(v2, (System_String_o *)*v3, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-  v3 = &StringLiteral_15373/*"VERUP"*/;
-  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_15373/*"VERUP"*/, 0LL) )
-    return System_String__Replace_44909172(v2, (System_String_o *)*v3, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-  v3 = &StringLiteral_12609/*"STG"*/;
-  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_12609/*"STG"*/, 0LL)
-    && !System_String__Contains(v2, (System_String_o *)StringLiteral_12561/*"STAGING"*/, 0LL) )
+    sub_1B00F28(serverName, method);
+  v13 = &StringLiteral_10677/*"QA"*/;
+  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_10677/*"QA"*/, 0LL) )
+    return System_String__Replace_60345368(v2, (System_String_o *)*v13, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+  v13 = &StringLiteral_10259/*"PLAN"*/;
+  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_10259/*"PLAN"*/, 0LL) )
+    return System_String__Replace_60345368(v2, (System_String_o *)*v13, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+  v13 = &StringLiteral_4964/*"DEV"*/;
+  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_4964/*"DEV"*/, 0LL) )
+    return System_String__Replace_60345368(v2, (System_String_o *)*v13, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+  v13 = &StringLiteral_8146/*"LIMIT"*/;
+  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_8146/*"LIMIT"*/, 0LL) )
+    return System_String__Replace_60345368(v2, (System_String_o *)*v13, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+  v13 = &StringLiteral_10260/*"PLAY"*/;
+  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_10260/*"PLAY"*/, 0LL) )
+    return System_String__Replace_60345368(v2, (System_String_o *)*v13, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+  v13 = &StringLiteral_4963/*"DESIGN"*/;
+  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_4963/*"DESIGN"*/, 0LL) )
+    return System_String__Replace_60345368(v2, (System_String_o *)*v13, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+  v13 = &StringLiteral_15007/*"VERUP"*/;
+  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_15007/*"VERUP"*/, 0LL) )
+    return System_String__Replace_60345368(v2, (System_String_o *)*v13, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+  v13 = &StringLiteral_12078/*"STG"*/;
+  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_12078/*"STG"*/, 0LL)
+    && !System_String__Contains(v2, (System_String_o *)StringLiteral_12030/*"STAGING"*/, 0LL) )
   {
-    return System_String__Replace_44909172(v2, (System_String_o *)*v3, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+    return System_String__Replace_60345368(v2, (System_String_o *)*v13, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
-  v3 = &StringLiteral_7471/*"IPADDRESS"*/;
-  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_7471/*"IPADDRESS"*/, 0LL) )
-    return System_String__Replace_44909172(v2, (System_String_o *)*v3, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+  v13 = &StringLiteral_7313/*"IPADDRESS"*/;
+  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_7313/*"IPADDRESS"*/, 0LL) )
+    return System_String__Replace_60345368(v2, (System_String_o *)*v13, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   else
     return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -1908,95 +1591,104 @@ System_String_o *__fastcall NetworkManager__GetServerNumber(System_String_o *ser
 
 System_String_o *__fastcall NetworkManager__GetServerSettingType(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
+  __int64 v1; // x1
+  NetworkManager_c *v2; // x0
 
-  if ( (byte_438BA2D & 1) == 0 )
+  if ( (byte_48E2037 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA2D = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, v1);
+    byte_48E2037 = 1;
   }
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v2 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v1 = NetworkManager_TypeInfo;
+    v2 = NetworkManager_TypeInfo;
   }
-  return v1->static_fields->serverSettingType;
+  return v2->static_fields->serverSettingType;
 }
 
 
 int64_t __fastcall NetworkManager__GetServerTimeChkMovie(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
+  __int64 v1; // x1
+  NetworkManager_c *v2; // x0
 
-  if ( (byte_438B9F8 & 1) == 0 )
+  if ( (byte_48E2000 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438B9F8 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, v1);
+    byte_48E2000 = 1;
   }
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v2 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v1 = NetworkManager_TypeInfo;
+    v2 = NetworkManager_TypeInfo;
   }
-  return v1->static_fields->serverTimeChkMovie;
+  return v2->static_fields->serverTimeChkMovie;
 }
 
 
 System_String_o *__fastcall NetworkManager__GetServerType(System_String_o *serverName, const MethodInfo *method)
 {
   System_String_o *v2; // x19
-  __int64 *v3; // x20
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 *v12; // x20
 
   v2 = serverName;
-  if ( (byte_438BA4A & 1) == 0 )
+  if ( (byte_48E2054 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_4714/*"DEV"*/);
-    sub_B775C4(&StringLiteral_12561/*"STAGING"*/);
-    sub_B775C4(&StringLiteral_12609/*"STG"*/);
-    sub_B775C4(&StringLiteral_15373/*"VERUP"*/);
-    sub_B775C4(&StringLiteral_4713/*"DESIGN"*/);
-    sub_B775C4(&StringLiteral_7471/*"IPADDRESS"*/);
-    sub_B775C4(&StringLiteral_11059/*"QA"*/);
-    sub_B775C4(&StringLiteral_10642/*"PLAN"*/);
-    sub_B775C4(&StringLiteral_8533/*"LIMIT"*/);
-    serverName = (System_String_o *)sub_B775C4(&StringLiteral_10643/*"PLAY"*/);
-    byte_438BA4A = 1;
+    sub_1B00CCC(&StringLiteral_4964/*"DEV"*/, method);
+    sub_1B00CCC(&StringLiteral_12030/*"STAGING"*/, v3);
+    sub_1B00CCC(&StringLiteral_12078/*"STG"*/, v4);
+    sub_1B00CCC(&StringLiteral_15007/*"VERUP"*/, v5);
+    sub_1B00CCC(&StringLiteral_4963/*"DESIGN"*/, v6);
+    sub_1B00CCC(&StringLiteral_7313/*"IPADDRESS"*/, v7);
+    sub_1B00CCC(&StringLiteral_10677/*"QA"*/, v8);
+    sub_1B00CCC(&StringLiteral_10259/*"PLAN"*/, v9);
+    sub_1B00CCC(&StringLiteral_8146/*"LIMIT"*/, v10);
+    serverName = (System_String_o *)sub_1B00CCC(&StringLiteral_10260/*"PLAY"*/, v11);
+    byte_48E2054 = 1;
   }
   if ( !v2 )
-    sub_B7769C(serverName, method);
-  v3 = &StringLiteral_11059/*"QA"*/;
-  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_11059/*"QA"*/, 0LL) )
-    return (System_String_o *)*v3;
-  v3 = &StringLiteral_10642/*"PLAN"*/;
-  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_10642/*"PLAN"*/, 0LL) )
-    return (System_String_o *)*v3;
-  v3 = &StringLiteral_4714/*"DEV"*/;
-  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_4714/*"DEV"*/, 0LL) )
-    return (System_String_o *)*v3;
-  v3 = &StringLiteral_8533/*"LIMIT"*/;
-  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_8533/*"LIMIT"*/, 0LL) )
-    return (System_String_o *)*v3;
-  v3 = &StringLiteral_10643/*"PLAY"*/;
-  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_10643/*"PLAY"*/, 0LL) )
-    return (System_String_o *)*v3;
-  v3 = &StringLiteral_4713/*"DESIGN"*/;
-  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_4713/*"DESIGN"*/, 0LL) )
-    return (System_String_o *)*v3;
-  v3 = &StringLiteral_15373/*"VERUP"*/;
-  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_15373/*"VERUP"*/, 0LL) )
-    return (System_String_o *)*v3;
-  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_12609/*"STG"*/, 0LL)
-    && !System_String__Contains(v2, (System_String_o *)StringLiteral_12561/*"STAGING"*/, 0LL) )
+    sub_1B00F28(serverName, method);
+  v12 = &StringLiteral_10677/*"QA"*/;
+  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_10677/*"QA"*/, 0LL) )
+    return (System_String_o *)*v12;
+  v12 = &StringLiteral_10259/*"PLAN"*/;
+  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_10259/*"PLAN"*/, 0LL) )
+    return (System_String_o *)*v12;
+  v12 = &StringLiteral_4964/*"DEV"*/;
+  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_4964/*"DEV"*/, 0LL) )
+    return (System_String_o *)*v12;
+  v12 = &StringLiteral_8146/*"LIMIT"*/;
+  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_8146/*"LIMIT"*/, 0LL) )
+    return (System_String_o *)*v12;
+  v12 = &StringLiteral_10260/*"PLAY"*/;
+  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_10260/*"PLAY"*/, 0LL) )
+    return (System_String_o *)*v12;
+  v12 = &StringLiteral_4963/*"DESIGN"*/;
+  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_4963/*"DESIGN"*/, 0LL) )
+    return (System_String_o *)*v12;
+  v12 = &StringLiteral_15007/*"VERUP"*/;
+  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_15007/*"VERUP"*/, 0LL) )
+    return (System_String_o *)*v12;
+  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_12078/*"STG"*/, 0LL)
+    && !System_String__Contains(v2, (System_String_o *)StringLiteral_12030/*"STAGING"*/, 0LL) )
   {
-    v3 = &StringLiteral_12609/*"STG"*/;
-    return (System_String_o *)*v3;
+    v12 = &StringLiteral_12078/*"STG"*/;
+    return (System_String_o *)*v12;
   }
-  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_7471/*"IPADDRESS"*/, 0LL) )
-    return (System_String_o *)StringLiteral_7471/*"IPADDRESS"*/;
+  if ( System_String__Contains(v2, (System_String_o *)StringLiteral_7313/*"IPADDRESS"*/, 0LL) )
+    return (System_String_o *)StringLiteral_7313/*"IPADDRESS"*/;
   else
     return v2;
 }
@@ -2010,37 +1702,28 @@ void __fastcall NetworkManager__GetSignup(
         int32_t *day,
         const MethodInfo *method)
 {
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  NetworkManager_c *v12; // x0
-  System_String_o *v13; // x1
+  NetworkManager_c *v10; // x0
+  System_String_o *v11; // x1
+  struct NetworkManager_StaticFields *static_fields; // x8
 
-  if ( (byte_438B9EC & 1) == 0 )
+  if ( (byte_48E1FF4 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438B9EC = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, userName);
+    byte_48E1FF4 = 1;
   }
-  v12 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v10 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v12 = NetworkManager_TypeInfo;
+    v10 = NetworkManager_TypeInfo;
   }
-  v13 = v12->static_fields->userName;
-  *userName = v13;
-  sub_B77560(
-    (BattleServantConfConponent_o *)userName,
-    (System_Int32_array **)v13,
-    (System_String_array **)genderType,
-    (System_String_array **)month,
-    (System_Boolean_array **)day,
-    (System_Int32_array **)method,
-    v6,
-    v7);
-  *genderType = NetworkManager_TypeInfo->static_fields->genderType;
-  *month = NetworkManager_TypeInfo->static_fields->month;
-  *day = NetworkManager_TypeInfo->static_fields->day;
+  v11 = v10->static_fields->userName;
+  *userName = v11;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)userName, (int32_t)v11, (int32_t)genderType, (int32_t)month);
+  static_fields = NetworkManager_TypeInfo->static_fields;
+  *genderType = static_fields->genderType;
+  *month = static_fields->month;
+  *day = static_fields->day;
 }
 
 
@@ -2054,45 +1737,44 @@ void __fastcall NetworkManager__GetStoreUrl(
   System_Collections_IEnumerator_o *updated; // x1
 
   updated = NetworkManager__RequestApplicationUpdateCR(this, storeName, id, callback, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_36304832((UnityEngine_MonoBehaviour_o *)this, updated, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_68062928((UnityEngine_MonoBehaviour_o *)this, updated, 0LL);
 }
 
 
 int32_t __fastcall NetworkManager__GetTerminalDispState(const MethodInfo *method)
 {
-  AvalonSceneManager_o *Instance; // x0
+  __int64 v1; // x1
   __int64 v2; // x1
-  TerminalPramsManager_c *v4; // x0
+  Il2CppObject *Instance; // x0
+  __int64 v4; // x1
+  __int64 v5; // x1
+  TerminalPramsManager_c *v7; // x0
 
-  if ( (byte_438B9E5 & 1) == 0 )
+  if ( (byte_48E1FED & 1) == 0 )
   {
-    sub_B775C4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_B775C4(&TerminalPramsManager_TypeInfo);
-    byte_438B9E5 = 1;
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v1);
+    sub_1B00CCC(&TerminalPramsManager_TypeInfo, v2);
+    byte_48E1FED = 1;
   }
-  Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_B7769C(0LL, v2);
-  if ( AvalonSceneManager__checkNowScene(Instance, 9, 0LL) )
+    sub_1B00F28(0LL, v4);
+  if ( AvalonSceneManager__checkNowScene((AvalonSceneManager_o *)Instance, 9, 0LL) )
     return 1;
-  if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !TerminalPramsManager_TypeInfo->_2.cctor_finished )
+  if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
+  if ( !byte_48DF715 )
+  {
+    sub_1B00CCC(&TerminalPramsManager_TypeInfo, v5);
+    byte_48DF715 = 1;
+  }
+  v7 = TerminalPramsManager_TypeInfo;
+  if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
+    v7 = TerminalPramsManager_TypeInfo;
   }
-  if ( !byte_4387464 )
-  {
-    sub_B775C4(&TerminalPramsManager_TypeInfo);
-    byte_4387464 = 1;
-  }
-  v4 = TerminalPramsManager_TypeInfo;
-  if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !TerminalPramsManager_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    v4 = TerminalPramsManager_TypeInfo;
-  }
-  return v4->static_fields->_DispState_k__BackingField != 2;
+  return v7->static_fields->_DispState_k__BackingField != 2;
 }
 
 
@@ -2104,64 +1786,64 @@ System_String_o *__fastcall NetworkManager__GetTopLoginResult(NetworkManager_o *
 
 System_String_o *__fastcall NetworkManager__GetWarBoardRuleUrl(int32_t stageId, const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
   Il2CppObject *BaseUrl; // x20
-  __int64 v4; // x2
-  Il2CppObject *v5; // x0
-  int32_t v7; // [xsp+Ch] [xbp-14h] BYREF
+  __int64 v6; // x2
+  __int64 v7; // x3
+  __int64 v8; // x4
+  Il2CppObject *v9; // x0
+  int32_t v11; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_438BA49 & 1) == 0 )
+  if ( (byte_48E2053 & 1) == 0 )
   {
-    sub_B775C4(&int_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&StringLiteral_23751/*"webview/warBoard?stageId="*/);
-    byte_438BA49 = 1;
+    sub_1B00CCC(&int_TypeInfo, method);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v3);
+    sub_1B00CCC(&StringLiteral_24314/*"webview/warBoard?stageId="*/, v4);
+    byte_48E2053 = 1;
   }
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
   BaseUrl = (Il2CppObject *)NetworkManager__getBaseUrl(0, method);
-  v7 = stageId;
-  v5 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v7, v4);
-  return System_String__Concat_44981640(BaseUrl, (Il2CppObject *)StringLiteral_23751/*"webview/warBoard?stageId="*/, v5, 0LL);
+  v11 = stageId;
+  v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v11, v6, v7, v8);
+  return System_String__Concat_60336760(BaseUrl, (Il2CppObject *)StringLiteral_24314/*"webview/warBoard?stageId="*/, v9, 0LL);
 }
 
 
 System_String_o *__fastcall NetworkManager__GetWebServerSetting(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
+  __int64 v1; // x1
+  NetworkManager_c *v2; // x0
 
-  if ( (byte_438BA35 & 1) == 0 )
+  if ( (byte_48E203F & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA35 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, v1);
+    byte_48E203F = 1;
   }
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v2 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v1 = NetworkManager_TypeInfo;
+    v2 = NetworkManager_TypeInfo;
   }
-  return v1->static_fields->webServerSettingAddress;
+  return v2->static_fields->webServerSettingAddress;
 }
 
 
-System_String_o *__fastcall NetworkManager__GetWebServerSetting_26215244(
+System_String_o *__fastcall NetworkManager__GetWebServerSetting_37269408(
         System_String_o *type,
         const MethodInfo *method)
 {
   ManagerConfig_c *v2; // x0
 
-  if ( (byte_438BA36 & 1) == 0 )
+  if ( (byte_48E2040 & 1) == 0 )
   {
-    sub_B775C4(&ManagerConfig_TypeInfo);
-    byte_438BA36 = 1;
+    sub_1B00CCC(&ManagerConfig_TypeInfo, method);
+    byte_48E2040 = 1;
   }
   v2 = ManagerConfig_TypeInfo;
-  if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ManagerConfig_TypeInfo->_2.cctor_finished )
+  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
     v2 = ManagerConfig_TypeInfo;
@@ -2172,51 +1854,48 @@ System_String_o *__fastcall NetworkManager__GetWebServerSetting_26215244(
 
 void __fastcall NetworkManager__GoToTitleDialog(NetworkManager_o *this, const MethodInfo *method)
 {
-  NetworkManager_c *v3; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  NetworkManager_c *v8; // x0
   struct NetworkManager_StaticFields *static_fields; // x8
-  bool *p_isRebootBlock; // x8
-  _BOOL4 isRebootBlock; // t1
-  System_String_o *v7; // x20
-  System_Action_o *v8; // x21
-  const MethodInfo *v9; // x5
+  System_String_o *v10; // x20
+  System_Action_o *v11; // x21
+  const MethodInfo *v12; // x5
 
-  if ( (byte_438BA13 & 1) == 0 )
+  if ( (byte_48E201B & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&Method_NetworkManager_OnClickErrorReboot__);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&StringLiteral_12803/*"SYSTEM_ERROR_SERVER_TIME_LIMIT_OVER"*/);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438BA13 = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, method);
+    sub_1B00CCC(&LocalizationManager_TypeInfo, v3);
+    sub_1B00CCC(&Method_NetworkManager_OnClickErrorReboot__, v4);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v5);
+    sub_1B00CCC(&StringLiteral_12272/*"SYSTEM_ERROR_SERVER_TIME_LIMIT_OVER"*/, v6);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v7);
+    byte_48E201B = 1;
   }
-  v3 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v8 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v3 = NetworkManager_TypeInfo;
+    v8 = NetworkManager_TypeInfo;
   }
-  static_fields = v3->static_fields;
-  isRebootBlock = static_fields->isRebootBlock;
-  p_isRebootBlock = &static_fields->isRebootBlock;
-  if ( !isRebootBlock )
+  static_fields = v8->static_fields;
+  if ( !static_fields->isRebootBlock )
   {
-    if ( (BYTE3(v3->vtable._0_Equals.methodPtr) & 4) != 0 && !v3->_2.cctor_finished )
+    if ( !v8->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v3);
-      p_isRebootBlock = &NetworkManager_TypeInfo->static_fields->isRebootBlock;
+      j_il2cpp_runtime_class_init_0(v8);
+      static_fields = NetworkManager_TypeInfo->static_fields;
     }
-    *p_isRebootBlock = 1;
-    if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
+    static_fields->isRebootBlock = 1;
+    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    }
-    v7 = LocalizationManager__Get((System_String_o *)StringLiteral_12803/*"SYSTEM_ERROR_SERVER_TIME_LIMIT_OVER"*/, 0LL);
-    v8 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-    System_Action___ctor(v8, (Il2CppObject *)this, Method_NetworkManager_OnClickErrorReboot__, 0LL);
-    NetworkManager__ErrorDialog(this, (System_String_o *)StringLiteral_1/*""*/, v7, 0LL, v8, v9);
+    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_12272/*"SYSTEM_ERROR_SERVER_TIME_LIMIT_OVER"*/, method);
+    v11 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+    System_Action___ctor(v11, (Il2CppObject *)this, Method_NetworkManager_OnClickErrorReboot__, 0LL);
+    NetworkManager__ErrorDialog(this, (System_String_o *)StringLiteral_1/*""*/, v10, 0LL, v11, v12);
   }
 }
 
@@ -2228,57 +1907,50 @@ System_Collections_IEnumerator_o *__fastcall NetworkManager__Initialize(
   __int64 v3; // x20
   __int64 v4; // x0
   __int64 v5; // x1
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  int32_t v6; // w2
+  int32_t v7; // w3
 
-  if ( (byte_438B9E7 & 1) == 0 )
+  if ( (byte_48E1FEF & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager__Initialize_d__82_TypeInfo);
-    byte_438B9E7 = 1;
+    sub_1B00CCC(&NetworkManager__Initialize_d__82_TypeInfo, method);
+    byte_48E1FEF = 1;
   }
-  v3 = sub_B77694(NetworkManager__Initialize_d__82_TypeInfo);
+  v3 = sub_1B00F18(NetworkManager__Initialize_d__82_TypeInfo);
   NetworkManager__Initialize_d__82___ctor((NetworkManager__Initialize_d__82_o *)v3, 0, 0LL);
   if ( !v3 )
-    sub_B7769C(v4, v5);
+    sub_1B00F28(v4, v5);
   *(_QWORD *)(v3 + 32) = this;
-  sub_B77560((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v6, v7);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
 
 void __fastcall NetworkManager__InitializeUserAgent(NetworkManager_o *this, const MethodInfo *method)
 {
-  System_String_array **v3; // x2
-  System_String_array **v4; // x3
-  System_Boolean_array **v5; // x4
-  System_Int32_array **v6; // x5
-  System_Int32_array *v7; // x6
-  System_Int32_array *v8; // x7
-  System_Int32_array **UserAgentString; // x19
-  NetworkManager_c *v10; // x8
+  System_String_o *UserAgentString; // x0
+  int32_t v4; // w2
+  int32_t v5; // w3
+  NetworkManager_c *v6; // x8
+  System_String_o *v7; // x19
   struct NetworkManager_StaticFields *static_fields; // x0
 
-  if ( (byte_438B9E8 & 1) == 0 )
+  if ( (byte_48E1FF0 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438B9E8 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    byte_48E1FF0 = 1;
   }
   this->fields._isWaitUserAgent_k__BackingField = 0;
-  UserAgentString = (System_Int32_array **)NetworkServicePluginScript__GetUserAgentString(0LL);
-  v10 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  UserAgentString = NetworkServicePluginScript__GetUserAgentString(0LL);
+  v6 = NetworkManager_TypeInfo;
+  v7 = UserAgentString;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v10 = NetworkManager_TypeInfo;
+    v6 = NetworkManager_TypeInfo;
   }
-  static_fields = v10->static_fields;
-  static_fields->userAgent = (struct System_String_o *)UserAgentString;
-  sub_B77560((BattleServantConfConponent_o *)&static_fields->userAgent, UserAgentString, v3, v4, v5, v6, v7, v8);
+  static_fields = v6->static_fields;
+  static_fields->userAgent = v7;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->userAgent, (int32_t)v7, v4, v5);
 }
 
 
@@ -2287,63 +1959,62 @@ System_String_o *__fastcall NetworkManager__LoadAuthMd5(
         System_String_o *fname,
         const MethodInfo *method)
 {
-  System_String_o *v4; // x21
-  System_IO_Stream_o *v5; // x20
-  System_IO_BinaryReader_o *v6; // x19
-  __int64 v7; // x0
-  __int64 v8; // x1
-  System_String_o *v9; // x20
+  __int64 v4; // x1
+  __int64 v5; // x1
+  System_String_o *v6; // x21
+  System_IO_Stream_o *v7; // x20
+  System_IO_BinaryReader_o *v8; // x19
+  __int64 v9; // x0
+  __int64 v10; // x1
+  System_String_o *v11; // x20
   System_IO_BinaryReader_c *klass; // x8
-  unsigned __int64 v11; // x10
-  int32_t *p_offset; // x11
-  __int64 v13; // x0
+  __int64 v13; // x9
+  int32_t *p_offset; // x10
+  __int64 v15; // x0
 
-  if ( (byte_438B9FF & 1) == 0 )
+  if ( (byte_48E2007 & 1) == 0 )
   {
-    sub_B775C4(&System_IO_BinaryReader_TypeInfo);
-    sub_B775C4(&EncryptedPlayerPrefs_TypeInfo);
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    byte_438B9FF = 1;
+    sub_1B00CCC(&System_IO_BinaryReader_TypeInfo, fname);
+    sub_1B00CCC(&EncryptedPlayerPrefs_TypeInfo, v4);
+    sub_1B00CCC(&System_IDisposable_TypeInfo, v5);
+    byte_48E2007 = 1;
   }
-  v4 = 0LL;
+  v6 = 0LL;
   if ( System_IO_File__Exists(fname, 0LL) )
   {
-    v5 = (System_IO_Stream_o *)System_IO_File__OpenRead(fname, 0LL);
-    v6 = (System_IO_BinaryReader_o *)sub_B77694(System_IO_BinaryReader_TypeInfo);
-    System_IO_BinaryReader___ctor(v6, v5, 0LL);
-    if ( !v6 )
-      sub_B7769C(v7, v8);
-    v9 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v6->klass->vtable._22_ReadString.method)(
-                              v6,
-                              v6->klass->vtable._23_ReadChars.methodPtr);
-    if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished )
-    {
+    v7 = (System_IO_Stream_o *)System_IO_File__OpenRead(fname, 0LL);
+    v8 = (System_IO_BinaryReader_o *)sub_1B00F18(System_IO_BinaryReader_TypeInfo);
+    System_IO_BinaryReader___ctor(v8, v7, 0LL);
+    if ( !v8 )
+      sub_1B00F28(v9, v10);
+    v11 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v8->klass->vtable._22_ReadString.method)(
+                               v8,
+                               v8->klass->vtable._23_ReadChars.methodPtr);
+    if ( !EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
-    }
-    v4 = EncryptedPlayerPrefs__Md5(v9, 0LL);
-    klass = v6->klass;
-    if ( *(_WORD *)&v6->klass->_2.bitflags1 )
+    v6 = EncryptedPlayerPrefs__Md5(v11, 0LL);
+    klass = v8->klass;
+    v13 = *(unsigned __int16 *)(&v8->klass->_2.bitflags2 + 3);
+    if ( *(_WORD *)(&v8->klass->_2.bitflags2 + 3) )
     {
-      v11 = 0LL;
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
       {
-        ++v11;
+        --v13;
         p_offset += 4;
-        if ( v11 >= *(unsigned __int16 *)&v6->klass->_2.bitflags1 )
-          goto LABEL_12;
+        if ( !v13 )
+          goto LABEL_11;
       }
-      v13 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+      v15 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
     }
     else
     {
-LABEL_12:
-      v13 = sub_B0F4C0(v6, System_IDisposable_TypeInfo, 0LL);
+LABEL_11:
+      v15 = sub_1B52CAC(v8, System_IDisposable_TypeInfo, 0LL);
     }
-    (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v13)(v6, *(_QWORD *)(v13 + 8));
+    (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v15)(v8, *(_QWORD *)(v15 + 8));
   }
-  return v4;
+  return v6;
 }
 
 
@@ -2364,314 +2035,263 @@ bool __fastcall NetworkManager__OnBackgroundErrorCommunication(
         const MethodInfo *method)
 {
   NetworkManager_o *v8; // x19
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
-  System_String_array **v22; // x2
-  System_String_array **v23; // x3
-  System_Boolean_array **v24; // x4
-  System_Int32_array **v25; // x5
-  System_Int32_array *v26; // x6
-  System_Int32_array *v27; // x7
-  System_String_array **v28; // x2
-  System_String_array **v29; // x3
-  System_Boolean_array **v30; // x4
-  System_Int32_array **v31; // x5
-  System_Int32_array *v32; // x6
-  System_Int32_array *v33; // x7
-  System_String_array **v34; // x2
-  System_String_array **v35; // x3
-  System_Boolean_array **v36; // x4
-  System_Int32_array **v37; // x5
-  System_Int32_array *v38; // x6
-  System_Int32_array *v39; // x7
+  int32_t v9; // w2
+  int32_t v10; // w3
+  char v11; // w22
+  int32_t v12; // w2
+  int32_t v13; // w3
+  int32_t v14; // w2
+  int32_t v15; // w3
+  int32_t v16; // w2
+  int32_t v17; // w3
+  int32_t v18; // w2
+  int32_t v19; // w3
 
   v8 = this;
-  if ( (byte_438BA58 & 1) == 0 )
+  if ( (byte_48E2062 & 1) == 0 )
   {
-    this = (NetworkManager_o *)sub_B775C4(&StringLiteral_4324/*"CommunicationStart"*/);
-    byte_438BA58 = 1;
+    this = (NetworkManager_o *)sub_1B00CCC(&StringLiteral_4595/*"CommunicationStart"*/, requestWork);
+    byte_48E2062 = 1;
   }
   if ( !requestWork )
-    sub_B7769C(this, requestWork);
-  if ( (((__int64 (__fastcall *)(RequestBase_o *, System_String_o *, Il2CppMethodPointer, bool, const MethodInfo *))requestWork->klass->vtable._11_backgroundErrorRequest.method)(
+    sub_1B00F28(this, requestWork);
+  v11 = ((__int64 (__fastcall *)(RequestBase_o *, System_String_o *, Il2CppMethodPointer, bool, const MethodInfo *))requestWork->klass->vtable._11_backgroundErrorRequest.method)(
           requestWork,
           errorCode,
           requestWork->klass->vtable._12_backgroundErrorRetry.methodPtr,
           forceCommunication,
-          method) & 1) == 0
-    && !forceCommunication )
+          method) | forceCommunication;
+  if ( (v11 & 1) != 0 )
   {
-    return 0;
-  }
-  if ( v8->fields.communicationWork == requestWork )
-  {
-    v8->fields.communicationWorkResponseList = 0LL;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&v8->fields.communicationWorkResponseList,
-      0LL,
-      v9,
-      v10,
-      v11,
-      v12,
-      v13,
-      v14);
-    v8->fields.communicationWork = 0LL;
-    sub_B77560((BattleServantConfConponent_o *)&v8->fields.communicationWork, 0LL, v16, v17, v18, v19, v20, v21);
-    v8->fields.communicationCoroutine = 0LL;
-    sub_B77560((BattleServantConfConponent_o *)&v8->fields.communicationCoroutine, 0LL, v22, v23, v24, v25, v26, v27);
-    if ( v8->fields.cacheRefreshWork )
+    if ( v8->fields.communicationWork == requestWork )
     {
-      v8->fields.cacheRefreshWork = 0LL;
-      sub_B77560((BattleServantConfConponent_o *)&v8->fields.cacheRefreshWork, 0LL, v28, v29, v30, v31, v32, v33);
-      v8->fields.cacheRefreshWorkResponseList = 0LL;
-      sub_B77560(
-        (BattleServantConfConponent_o *)&v8->fields.cacheRefreshWorkResponseList,
-        0LL,
-        v34,
-        v35,
-        v36,
-        v37,
-        v38,
-        v39);
+      v8->fields.communicationWorkResponseList = 0LL;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&v8->fields.communicationWorkResponseList, 0, v9, v10);
+      v8->fields.communicationWork = 0LL;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&v8->fields.communicationWork, 0, v12, v13);
+      v8->fields.communicationCoroutine = 0LL;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&v8->fields.communicationCoroutine, 0, v14, v15);
+      if ( v8->fields.cacheRefreshWork )
+      {
+        v8->fields.cacheRefreshWork = 0LL;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v8->fields.cacheRefreshWork, 0, v16, v17);
+        v8->fields.cacheRefreshWorkResponseList = 0LL;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v8->fields.cacheRefreshWorkResponseList, 0, v18, v19);
+      }
     }
+    ((void (__fastcall *)(RequestBase_o *, Il2CppMethodPointer))requestWork->klass->vtable._12_backgroundErrorRetry.method)(
+      requestWork,
+      requestWork->klass->vtable._13_isAutoRetryRequest.methodPtr);
+    UnityEngine_MonoBehaviour__Invoke(
+      (UnityEngine_MonoBehaviour_o *)v8,
+      (System_String_o *)StringLiteral_4595/*"CommunicationStart"*/,
+      0.0,
+      0LL);
   }
-  ((void (__fastcall *)(RequestBase_o *, Il2CppMethodPointer))requestWork->klass->vtable._12_backgroundErrorRetry.method)(
-    requestWork,
-    requestWork->klass->vtable._13_isAutoRetryRequest.methodPtr);
-  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)v8, (System_String_o *)StringLiteral_4324/*"CommunicationStart"*/, 0.0, 0LL);
-  return 1;
+  return v11 & 1;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall NetworkManager__OnClickErrorDialog(NetworkManager_o *this, bool isDecide, const MethodInfo *method)
 {
-  UnityEngine_Application__Quit_41389268(0LL);
+  if ( (byte_48E2028 & 1) == 0 )
+  {
+    sub_1B00CCC(&UnityEngine_Application_TypeInfo, isDecide);
+    byte_48E2028 = 1;
+  }
+  if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
+  UnityEngine_Application__Quit_67871612(0LL);
 }
 
 
 void __fastcall NetworkManager__OnClickErrorReboot(NetworkManager_o *this, const MethodInfo *method)
 {
-  ManagementManager_c *v2; // x0
-  NetworkManager_c *v3; // x0
-  ManagementManager_o *Instance; // x0
-  __int64 v5; // x1
+  __int64 v2; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  ManagementManager_c *v5; // x0
+  NetworkManager_c *v6; // x0
+  Il2CppObject *Instance; // x0
+  __int64 v8; // x1
+  const MethodInfo *v9; // x3
 
-  if ( (byte_438BA18 & 1) == 0 )
+  if ( (byte_48E2020 & 1) == 0 )
   {
-    sub_B775C4(&ManagementManager_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
-    byte_438BA18 = 1;
+    sub_1B00CCC(&UnityEngine_Application_TypeInfo, method);
+    sub_1B00CCC(&ManagementManager_TypeInfo, v2);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v3);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__, v4);
+    byte_48E2020 = 1;
   }
-  if ( (BYTE3(ManagementManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ManagementManager_TypeInfo->_2.cctor_finished )
+  if ( !ManagementManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
+  if ( !byte_48E18EA )
+  {
+    sub_1B00CCC(&ManagementManager_TypeInfo, method);
+    byte_48E18EA = 1;
+  }
+  v5 = ManagementManager_TypeInfo;
+  if ( !ManagementManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
+    v5 = ManagementManager_TypeInfo;
   }
-  if ( !byte_4388A00 )
+  if ( v5->static_fields->isDuringStartup )
   {
-    sub_B775C4(&ManagementManager_TypeInfo);
-    byte_4388A00 = 1;
-  }
-  v2 = ManagementManager_TypeInfo;
-  if ( (BYTE3(ManagementManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ManagementManager_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-    v2 = ManagementManager_TypeInfo;
-  }
-  if ( v2->static_fields->isDuringStartup )
-  {
-    UnityEngine_Application__Quit_41389268(0LL);
+    if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
+    UnityEngine_Application__Quit_67871612(0LL);
   }
   else
   {
-    v3 = NetworkManager_TypeInfo;
-    if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !NetworkManager_TypeInfo->_2.cctor_finished )
+    v6 = NetworkManager_TypeInfo;
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      v3 = NetworkManager_TypeInfo;
+      v6 = NetworkManager_TypeInfo;
     }
-    v3->static_fields->isRebootBlock = 1;
-    Instance = (ManagementManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+    v6->static_fields->isRebootBlock = 1;
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
     if ( !Instance )
-      sub_B7769C(0LL, v5);
-    ManagementManager__reboot(Instance, 0, 0LL);
+      sub_1B00F28(0LL, v8);
+    ManagementManager__reboot((ManagementManager_o *)Instance, 0, 1, v9);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall NetworkManager__OnClickErrorRetryDialog(
         NetworkManager_o *this,
         bool isDecide,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
   const MethodInfo *v10; // x2
   System_Collections_IEnumerator_o *v11; // x0
-  struct UnityEngine_Coroutine_o *started; // x1
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
-  ManagementManager_c *v19; // x0
-  NetworkManager_c *v20; // x0
-  ManagementManager_o *Instance; // x0
-  __int64 v22; // x1
+  struct UnityEngine_Coroutine_o *started; // x0
+  int32_t v13; // w2
+  int32_t v14; // w3
+  ManagementManager_c *v15; // x0
+  NetworkManager_c *v16; // x0
+  Il2CppObject *Instance; // x0
+  __int64 v18; // x1
+  const MethodInfo *v19; // x3
 
-  if ( (byte_438BA15 & 1) == 0 )
+  if ( (byte_48E201D & 1) == 0 )
   {
-    sub_B775C4(&ManagementManager_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
-    byte_438BA15 = 1;
+    sub_1B00CCC(&UnityEngine_Application_TypeInfo, isDecide);
+    sub_1B00CCC(&ManagementManager_TypeInfo, v6);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v7);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__, v8);
+    byte_48E201D = 1;
   }
   this->fields.communicationWorkResponseList = 0LL;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.communicationWorkResponseList,
-    0LL,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.communicationWorkResponseList, 0, (int32_t)method, v3);
   if ( isDecide )
   {
     v11 = NetworkManager__RequestCR(this, this->fields.communicationWork, 1.0, v10);
-    started = UnityEngine_MonoBehaviour__StartCoroutine_36304832((UnityEngine_MonoBehaviour_o *)this, v11, 0LL);
+    started = UnityEngine_MonoBehaviour__StartCoroutine_68062928((UnityEngine_MonoBehaviour_o *)this, v11, 0LL);
     this->fields.communicationCoroutine = started;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&this->fields.communicationCoroutine,
-      (System_Int32_array **)started,
-      v13,
-      v14,
-      v15,
-      v16,
-      v17,
-      v18);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.communicationCoroutine, (int32_t)started, v13, v14);
   }
   else
   {
-    if ( (BYTE3(ManagementManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !ManagementManager_TypeInfo->_2.cctor_finished )
+    if ( !ManagementManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
+    if ( !byte_48E18EA )
+    {
+      sub_1B00CCC(&ManagementManager_TypeInfo, v9);
+      byte_48E18EA = 1;
+    }
+    v15 = ManagementManager_TypeInfo;
+    if ( !ManagementManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
+      v15 = ManagementManager_TypeInfo;
     }
-    if ( !byte_4388A00 )
+    if ( v15->static_fields->isDuringStartup )
     {
-      sub_B775C4(&ManagementManager_TypeInfo);
-      byte_4388A00 = 1;
-    }
-    v19 = ManagementManager_TypeInfo;
-    if ( (BYTE3(ManagementManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !ManagementManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-      v19 = ManagementManager_TypeInfo;
-    }
-    if ( v19->static_fields->isDuringStartup )
-    {
-      UnityEngine_Application__Quit_41389268(0LL);
+      if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
+      UnityEngine_Application__Quit_67871612(0LL);
     }
     else
     {
-      v20 = NetworkManager_TypeInfo;
-      if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !NetworkManager_TypeInfo->_2.cctor_finished )
+      v16 = NetworkManager_TypeInfo;
+      if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        v20 = NetworkManager_TypeInfo;
+        v16 = NetworkManager_TypeInfo;
       }
-      v20->static_fields->isRebootBlock = 1;
-      Instance = (ManagementManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+      v16->static_fields->isRebootBlock = 1;
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
       if ( !Instance )
-        sub_B7769C(0LL, v22);
-      ManagementManager__reboot(Instance, 0, 0LL);
+        sub_1B00F28(0LL, v18);
+      ManagementManager__reboot((ManagementManager_o *)Instance, 0, 1, v19);
     }
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall NetworkManager__OnClickErrorRetryDialog_UnityIap(
         NetworkManager_o *this,
         bool isDecide,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  const MethodInfo *v10; // x2
-  System_Collections_IEnumerator_o *v11; // x0
-  struct UnityEngine_Coroutine_o *started; // x1
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
-  BattleServantConfConponent_o *p_communicationCoroutine; // x0
-  CommonUI_o *Instance; // x0
-  __int64 v21; // x1
-  const MethodInfo *v22; // x3
+  int32_t v3; // w3
+  const MethodInfo *v6; // x2
+  System_Collections_IEnumerator_o *v7; // x0
+  struct UnityEngine_Coroutine_o *started; // x0
+  int32_t v9; // w2
+  int32_t v10; // w3
+  int32_t v11; // w1
+  ServantStatusBattleListViewItem_o *p_communicationCoroutine; // x0
+  Il2CppObject *Instance; // x0
+  __int64 v14; // x1
+  const MethodInfo *v15; // x3
 
-  if ( (byte_438BA16 & 1) == 0 )
+  if ( (byte_48E201E & 1) == 0 )
   {
-    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_438BA16 = 1;
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isDecide);
+    byte_48E201E = 1;
   }
   if ( isDecide )
   {
     this->fields.communicationWorkResponseList = 0LL;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&this->fields.communicationWorkResponseList,
-      0LL,
-      (System_String_array **)method,
-      v3,
-      v4,
-      v5,
-      v6,
-      v7);
-    v11 = NetworkManager__RequestCR(this, this->fields.communicationWork, 1.0, v10);
-    started = UnityEngine_MonoBehaviour__StartCoroutine_36304832((UnityEngine_MonoBehaviour_o *)this, v11, 0LL);
-    p_communicationCoroutine = (BattleServantConfConponent_o *)&this->fields.communicationCoroutine;
+    sub_1B00C70(
+      (ServantStatusBattleListViewItem_o *)&this->fields.communicationWorkResponseList,
+      0,
+      (int32_t)method,
+      v3);
+    v7 = NetworkManager__RequestCR(this, this->fields.communicationWork, 1.0, v6);
+    started = UnityEngine_MonoBehaviour__StartCoroutine_68062928((UnityEngine_MonoBehaviour_o *)this, v7, 0LL);
     this->fields.communicationCoroutine = started;
+    v11 = (int)started;
+    p_communicationCoroutine = (ServantStatusBattleListViewItem_o *)&this->fields.communicationCoroutine;
   }
   else
   {
-    Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
-      sub_B7769C(0LL, v21);
-    CommonUI__CloseRetryDialog(Instance, 0LL);
+      sub_1B00F28(0LL, v14);
+    CommonUI__CloseRetryDialog((CommonUI_o *)Instance, 0LL);
     NetworkManager__OnEndCommunication(
       this,
       this->fields.communicationWork,
       this->fields.communicationWorkResponseList,
-      v22);
-    p_communicationCoroutine = (BattleServantConfConponent_o *)&this->fields.communicationWorkResponseList;
-    started = 0LL;
+      v15);
+    p_communicationCoroutine = (ServantStatusBattleListViewItem_o *)&this->fields.communicationWorkResponseList;
+    v11 = 0;
     this->fields.communicationWorkResponseList = 0LL;
   }
-  sub_B77560(p_communicationCoroutine, (System_Int32_array **)started, v13, v14, v15, v16, v17, v18);
+  sub_1B00C70(p_communicationCoroutine, v11, v9, v10);
 }
 
 
@@ -2689,123 +2309,97 @@ void __fastcall NetworkManager__OnClickErrorStay(NetworkManager_o *this, const M
 
 void __fastcall NetworkManager__OnClickErrorTerminal(NetworkManager_o *this, const MethodInfo *method)
 {
-  ManagementManager_c *v2; // x0
-  NetworkManager_c *v3; // x0
-  ManagementManager_o *Instance; // x0
-  __int64 v5; // x1
+  __int64 v2; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  ManagementManager_c *v5; // x0
+  NetworkManager_c *v6; // x0
+  Il2CppObject *Instance; // x0
+  __int64 v8; // x1
+  const MethodInfo *v9; // x3
 
-  if ( (byte_438BA19 & 1) == 0 )
+  if ( (byte_48E2021 & 1) == 0 )
   {
-    sub_B775C4(&ManagementManager_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
-    byte_438BA19 = 1;
+    sub_1B00CCC(&UnityEngine_Application_TypeInfo, method);
+    sub_1B00CCC(&ManagementManager_TypeInfo, v2);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v3);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__, v4);
+    byte_48E2021 = 1;
   }
-  if ( (BYTE3(ManagementManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ManagementManager_TypeInfo->_2.cctor_finished )
+  if ( !ManagementManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
+  if ( !byte_48E18EA )
+  {
+    sub_1B00CCC(&ManagementManager_TypeInfo, method);
+    byte_48E18EA = 1;
+  }
+  v5 = ManagementManager_TypeInfo;
+  if ( !ManagementManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
+    v5 = ManagementManager_TypeInfo;
   }
-  if ( !byte_4388A00 )
+  if ( v5->static_fields->isDuringStartup )
   {
-    sub_B775C4(&ManagementManager_TypeInfo);
-    byte_4388A00 = 1;
-  }
-  v2 = ManagementManager_TypeInfo;
-  if ( (BYTE3(ManagementManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ManagementManager_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-    v2 = ManagementManager_TypeInfo;
-  }
-  if ( v2->static_fields->isDuringStartup )
-  {
-    UnityEngine_Application__Quit_41389268(0LL);
+    if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
+    UnityEngine_Application__Quit_67871612(0LL);
   }
   else
   {
-    v3 = NetworkManager_TypeInfo;
-    if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !NetworkManager_TypeInfo->_2.cctor_finished )
+    v6 = NetworkManager_TypeInfo;
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      v3 = NetworkManager_TypeInfo;
+      v6 = NetworkManager_TypeInfo;
     }
-    v3->static_fields->isRebootBlock = 1;
-    Instance = (ManagementManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+    v6->static_fields->isRebootBlock = 1;
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
     if ( !Instance )
-      sub_B7769C(0LL, v5);
-    ManagementManager__reboot(Instance, 1, 0LL);
+      sub_1B00F28(0LL, v8);
+    ManagementManager__reboot((ManagementManager_o *)Instance, 1, 1, v9);
   }
 }
 
 
 void __fastcall NetworkManager__OnClickRefreshTerminal(NetworkManager_o *this, const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
+  int32_t v2; // w2
+  int32_t v3; // w3
+  int32_t v5; // w2
+  int32_t v6; // w3
   UnityEngine_Coroutine_o *communicationCoroutine; // x1
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
-  System_String_array **v22; // x2
-  System_String_array **v23; // x3
-  System_Boolean_array **v24; // x4
-  System_Int32_array **v25; // x5
-  System_Int32_array *v26; // x6
-  System_Int32_array *v27; // x7
-  System_String_array **v28; // x2
-  System_String_array **v29; // x3
-  System_Boolean_array **v30; // x4
-  System_Int32_array **v31; // x5
-  System_Int32_array *v32; // x6
-  System_Int32_array *v33; // x7
+  int32_t v8; // w2
+  int32_t v9; // w3
+  int32_t v10; // w2
+  int32_t v11; // w3
+  int32_t v12; // w2
+  int32_t v13; // w3
 
-  if ( (byte_438BA1A & 1) == 0 )
+  if ( (byte_48E2022 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_13879/*"TerminalStart"*/);
-    byte_438BA1A = 1;
+    sub_1B00CCC(&StringLiteral_13394/*"TerminalStart"*/, method);
+    byte_48E2022 = 1;
   }
   this->fields.communicationWorkResponseList = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.communicationWorkResponseList, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.communicationWorkResponseList, 0, v2, v3);
   communicationCoroutine = this->fields.communicationCoroutine;
   if ( communicationCoroutine )
-    UnityEngine_MonoBehaviour__StopCoroutine_36305500((UnityEngine_MonoBehaviour_o *)this, communicationCoroutine, 0LL);
+    UnityEngine_MonoBehaviour__StopCoroutine_68063548((UnityEngine_MonoBehaviour_o *)this, communicationCoroutine, 0LL);
   this->fields.communicationWork = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.communicationWork, 0LL, v9, v10, v11, v12, v13, v14);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.communicationWork, 0, v5, v6);
   this->fields.communicationCoroutine = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.communicationCoroutine, 0LL, v16, v17, v18, v19, v20, v21);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.communicationCoroutine, 0, v8, v9);
   if ( this->fields.cacheRefreshWork )
   {
     this->fields.cacheRefreshWork = 0LL;
-    sub_B77560((BattleServantConfConponent_o *)&this->fields.cacheRefreshWork, 0LL, v22, v23, v24, v25, v26, v27);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.cacheRefreshWork, 0, v10, v11);
     this->fields.cacheRefreshWorkResponseList = 0LL;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&this->fields.cacheRefreshWorkResponseList,
-      0LL,
-      v28,
-      v29,
-      v30,
-      v31,
-      v32,
-      v33);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.cacheRefreshWorkResponseList, 0, v12, v13);
   }
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_13879/*"TerminalStart"*/,
+    (System_String_o *)StringLiteral_13394/*"TerminalStart"*/,
     0.0,
     0LL);
 }
@@ -2813,172 +2407,118 @@ void __fastcall NetworkManager__OnClickRefreshTerminal(NetworkManager_o *this, c
 
 void __fastcall NetworkManager__OnClickReloadCache(NetworkManager_o *this, const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v2; // w2
+  int32_t v3; // w3
+  __int64 v5; // x1
   struct RequestBase_o *communicationWork; // x1
   RequestBase_o **p_communicationWork; // x20
   struct ResponseData_array *communicationWorkResponseList; // x1
-  System_String_array **v12; // x2
-  System_String_array **v13; // x3
-  System_Boolean_array **v14; // x4
-  System_Int32_array **v15; // x5
-  System_Int32_array *v16; // x6
-  System_Int32_array *v17; // x7
-  System_Int32_array **Request_WarBoardWallAttackRequest; // x0
-  System_String_array **v19; // x2
-  System_String_array **v20; // x3
-  System_Boolean_array **v21; // x4
-  System_Int32_array **v22; // x5
-  System_Int32_array *v23; // x6
-  System_Int32_array *v24; // x7
-  System_String_array **v25; // x2
-  System_String_array **v26; // x3
-  System_Boolean_array **v27; // x4
-  System_Int32_array **v28; // x5
-  System_Int32_array *v29; // x6
-  System_Int32_array *v30; // x7
-  __int64 v31; // x1
-  const MethodInfo *v32; // x2
-  System_Collections_IEnumerator_o *v33; // x0
-  struct UnityEngine_Coroutine_o *started; // x1
-  System_String_array **v35; // x2
-  System_String_array **v36; // x3
-  System_Boolean_array **v37; // x4
-  System_Int32_array **v38; // x5
-  System_Int32_array *v39; // x6
-  System_Int32_array *v40; // x7
+  int32_t v9; // w2
+  int32_t v10; // w3
+  Il2CppObject *Request_object; // x0
+  int32_t v12; // w2
+  int32_t v13; // w3
+  int32_t v14; // w2
+  int32_t v15; // w3
+  __int64 v16; // x1
+  const MethodInfo *v17; // x2
+  System_Collections_IEnumerator_o *v18; // x0
+  struct UnityEngine_Coroutine_o *started; // x0
+  int32_t v20; // w2
+  int32_t v21; // w3
 
-  if ( (byte_438BA17 & 1) == 0 )
+  if ( (byte_48E201F & 1) == 0 )
   {
-    sub_B775C4(&Method_NetworkManager_getRequest_TopRefreshRequest___);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA17 = 1;
+    sub_1B00CCC(&Method_NetworkManager_getRequest_TopRefreshRequest___, method);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v5);
+    byte_48E201F = 1;
   }
   p_communicationWork = &this->fields.communicationWork;
   communicationWork = this->fields.communicationWork;
   this->fields.cacheRefreshWork = communicationWork;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.cacheRefreshWork,
-    (System_Int32_array **)communicationWork,
-    v2,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.cacheRefreshWork, (int32_t)communicationWork, v2, v3);
   communicationWorkResponseList = this->fields.communicationWorkResponseList;
   this->fields.cacheRefreshWorkResponseList = communicationWorkResponseList;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.cacheRefreshWorkResponseList,
-    (System_Int32_array **)communicationWorkResponseList,
-    v12,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17);
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields.cacheRefreshWorkResponseList,
+    (int32_t)communicationWorkResponseList,
+    v9,
+    v10);
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  Request_WarBoardWallAttackRequest = (System_Int32_array **)NetworkManager__getRequest_WarBoardWallAttackRequest_(
-                                                               0LL,
-                                                               (const MethodInfo_1DF8BE8 *)Method_NetworkManager_getRequest_TopRefreshRequest___);
-  *p_communicationWork = (RequestBase_o *)Request_WarBoardWallAttackRequest;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.communicationWork,
-    Request_WarBoardWallAttackRequest,
-    v19,
-    v20,
-    v21,
-    v22,
-    v23,
-    v24);
+  Request_object = NetworkManager__getRequest_object_(
+                     0LL,
+                     (const MethodInfo_2DD4818 *)Method_NetworkManager_getRequest_TopRefreshRequest___);
+  *p_communicationWork = (RequestBase_o *)Request_object;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.communicationWork, (int32_t)Request_object, v12, v13);
   this->fields.communicationWorkResponseList = 0LL;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.communicationWorkResponseList,
-    0LL,
-    v25,
-    v26,
-    v27,
-    v28,
-    v29,
-    v30);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.communicationWorkResponseList, 0, v14, v15);
   if ( !*p_communicationWork )
-    sub_B7769C(0LL, v31);
+    sub_1B00F28(0LL, v16);
   RequestBase__addBaseField(*p_communicationWork, 0LL);
-  v33 = NetworkManager__RequestCR(this, this->fields.communicationWork, 1.0, v32);
-  started = UnityEngine_MonoBehaviour__StartCoroutine_36304832((UnityEngine_MonoBehaviour_o *)this, v33, 0LL);
+  v18 = NetworkManager__RequestCR(this, this->fields.communicationWork, 1.0, v17);
+  started = UnityEngine_MonoBehaviour__StartCoroutine_68062928((UnityEngine_MonoBehaviour_o *)this, v18, 0LL);
   this->fields.communicationCoroutine = started;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.communicationCoroutine,
-    (System_Int32_array **)started,
-    v35,
-    v36,
-    v37,
-    v38,
-    v39,
-    v40);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.communicationCoroutine, (int32_t)started, v20, v21);
 }
 
 
 void __fastcall NetworkManager__OnClickStore(NetworkManager_o *this, const MethodInfo *method)
 {
-  ManagerConfig_c *v2; // x0
+  __int64 v2; // x1
+  ManagerConfig_c *v3; // x0
 
-  if ( (byte_438BA1E & 1) == 0 )
+  if ( (byte_48E2026 & 1) == 0 )
   {
-    sub_B775C4(&ManagerConfig_TypeInfo);
-    byte_438BA1E = 1;
+    sub_1B00CCC(&UnityEngine_Application_TypeInfo, method);
+    sub_1B00CCC(&ManagerConfig_TypeInfo, v2);
+    byte_48E2026 = 1;
   }
-  v2 = ManagerConfig_TypeInfo;
-  if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ManagerConfig_TypeInfo->_2.cctor_finished )
+  v3 = ManagerConfig_TypeInfo;
+  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v2 = ManagerConfig_TypeInfo;
+    v3 = ManagerConfig_TypeInfo;
   }
-  WebViewPluginScript__LaunchStore(v2->static_fields->AndroidPackageName, 0LL);
-  UnityEngine_Application__Quit_41389268(0LL);
+  WebViewPluginScript__LaunchStore(v3->static_fields->AndroidPackageName, 0LL);
+  if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
+  UnityEngine_Application__Quit_67871612(0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall NetworkManager__OnClickUserDelete(NetworkManager_o *this, bool isDecide, const MethodInfo *method)
 {
-  CommonUI_o *Instance; // x20
-  System_Action_o *v6; // x21
-  __int64 v7; // x0
-  __int64 v8; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  Il2CppObject *Instance; // x20
+  System_Action_o *v9; // x21
+  __int64 v10; // x0
+  __int64 v11; // x1
 
-  if ( (byte_438BA1C & 1) == 0 )
+  if ( (byte_48E2024 & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&Method_NetworkManager_EndCloseUserDelete__);
-    sub_B775C4(&OptionManager_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_438BA1C = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, isDecide);
+    sub_1B00CCC(&Method_NetworkManager_EndCloseUserDelete__, v5);
+    sub_1B00CCC(&OptionManager_TypeInfo, v6);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
+    byte_48E2024 = 1;
   }
   if ( isDecide )
   {
     UserSaveData__DeleteSaveData(1, 0LL);
-    if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !OptionManager_TypeInfo->_2.cctor_finished )
-    {
+    if ( !OptionManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    }
     OptionManager__Initialize(0LL);
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v6 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-  System_Action___ctor(v6, (Il2CppObject *)this, Method_NetworkManager_EndCloseUserDelete__, 0LL);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v9 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+  System_Action___ctor(v9, (Il2CppObject *)this, Method_NetworkManager_EndCloseUserDelete__, 0LL);
   if ( !Instance )
-    sub_B7769C(v7, v8);
-  CommonUI__CloseConfirmDialog_18056328(Instance, v6, 0LL);
+    sub_1B00F28(v10, v11);
+  CommonUI__CloseConfirmDialog_29937364((CommonUI_o *)Instance, v9, 0LL);
 }
 
 
@@ -2994,93 +2534,61 @@ void __fastcall NetworkManager__OnEndCommunication(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
   ResponseData_array *cacheRefreshWorkResponseList; // x20
-  RequestBase_o *v9; // x21
-  NetworkManager_o *v10; // x19
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
-  System_String_array **v17; // x2
-  System_String_array **v18; // x3
-  System_Boolean_array **v19; // x4
-  System_Int32_array **v20; // x5
-  System_Int32_array *v21; // x6
-  System_Int32_array *v22; // x7
-  System_String_array **v23; // x2
-  System_String_array **v24; // x3
-  System_Boolean_array **v25; // x4
-  System_Int32_array **v26; // x5
-  System_Int32_array *v27; // x6
-  System_Int32_array *v28; // x7
+  RequestBase_o *v5; // x21
+  NetworkManager_o *v6; // x19
+  int32_t v7; // w2
+  int32_t v8; // w3
+  int32_t v9; // w2
+  int32_t v10; // w3
+  int32_t v11; // w2
+  int32_t v12; // w3
   RequestBase_o *cacheRefreshWork; // x22
-  System_String_array **v30; // x2
-  System_String_array **v31; // x3
-  System_Boolean_array **v32; // x4
-  System_Int32_array **v33; // x5
-  System_Int32_array *v34; // x6
-  System_Int32_array *v35; // x7
+  int32_t v14; // w2
+  int32_t v15; // w3
 
   cacheRefreshWorkResponseList = responseList;
-  v9 = requestWork;
-  v10 = this;
-  if ( (byte_438BA57 & 1) == 0 )
+  v5 = requestWork;
+  v6 = this;
+  if ( (byte_48E2061 & 1) == 0 )
   {
-    this = (NetworkManager_o *)sub_B775C4(&StringLiteral_4324/*"CommunicationStart"*/);
-    byte_438BA57 = 1;
+    this = (NetworkManager_o *)sub_1B00CCC(&StringLiteral_4595/*"CommunicationStart"*/, requestWork);
+    byte_48E2061 = 1;
   }
-  if ( v10->fields.communicationWork != v9 )
+  if ( v6->fields.communicationWork != v5 )
     goto LABEL_4;
-  v10->fields.communicationWorkResponseList = 0LL;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&v10->fields.communicationWorkResponseList,
-    0LL,
-    (System_String_array **)responseList,
-    (System_String_array **)method,
-    v4,
-    v5,
-    v6,
-    v7);
-  v10->fields.communicationWork = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&v10->fields.communicationWork, 0LL, v11, v12, v13, v14, v15, v16);
-  v10->fields.communicationCoroutine = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&v10->fields.communicationCoroutine, 0LL, v17, v18, v19, v20, v21, v22);
-  this = (NetworkManager_o *)&v10->fields.cacheRefreshWork;
-  cacheRefreshWork = v10->fields.cacheRefreshWork;
+  v6->fields.communicationWorkResponseList = 0LL;
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&v6->fields.communicationWorkResponseList,
+    0,
+    (int32_t)responseList,
+    (int32_t)method);
+  v6->fields.communicationWork = 0LL;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v6->fields.communicationWork, 0, v7, v8);
+  v6->fields.communicationCoroutine = 0LL;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v6->fields.communicationCoroutine, 0, v9, v10);
+  this = (NetworkManager_o *)&v6->fields.cacheRefreshWork;
+  cacheRefreshWork = v6->fields.cacheRefreshWork;
   if ( cacheRefreshWork )
   {
-    cacheRefreshWorkResponseList = v10->fields.cacheRefreshWorkResponseList;
-    v10->fields.cacheRefreshWork = 0LL;
-    sub_B77560((BattleServantConfConponent_o *)this, 0LL, v23, v24, v25, v26, v27, v28);
-    v10->fields.cacheRefreshWorkResponseList = 0LL;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&v10->fields.cacheRefreshWorkResponseList,
-      0LL,
-      v30,
-      v31,
-      v32,
-      v33,
-      v34,
-      v35);
-    v9 = cacheRefreshWork;
+    cacheRefreshWorkResponseList = v6->fields.cacheRefreshWorkResponseList;
+    v6->fields.cacheRefreshWork = 0LL;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)this, 0, v11, v12);
+    v6->fields.cacheRefreshWorkResponseList = 0LL;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&v6->fields.cacheRefreshWorkResponseList, 0, v14, v15);
+    v5 = cacheRefreshWork;
   }
   else
   {
 LABEL_4:
-    if ( !v9 )
-      sub_B7769C(this, requestWork);
+    if ( !v5 )
+      sub_1B00F28(this, requestWork);
   }
-  ((void (__fastcall *)(RequestBase_o *, ResponseData_array *, Il2CppMethodPointer))v9->klass->vtable._10_requestCompleted.method)(
-    v9,
+  ((void (__fastcall *)(RequestBase_o *, ResponseData_array *, Il2CppMethodPointer))v5->klass->vtable._10_requestCompleted.method)(
+    v5,
     cacheRefreshWorkResponseList,
-    v9->klass->vtable._11_backgroundErrorRequest.methodPtr);
-  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)v10, (System_String_o *)StringLiteral_4324/*"CommunicationStart"*/, 0.0, 0LL);
+    v5->klass->vtable._11_backgroundErrorRequest.methodPtr);
+  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)v6, (System_String_o *)StringLiteral_4595/*"CommunicationStart"*/, 0.0, 0LL);
 }
 
 
@@ -3091,122 +2599,89 @@ bool __fastcall NetworkManager__OnErrorCommunication(
         const MethodInfo *method)
 {
   NetworkManager_o *v6; // x19
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
-  System_String_array **v19; // x2
-  System_String_array **v20; // x3
-  System_Boolean_array **v21; // x4
-  System_Int32_array **v22; // x5
-  System_Int32_array *v23; // x6
-  System_Int32_array *v24; // x7
-  System_String_array **v25; // x2
-  System_String_array **v26; // x3
-  System_Boolean_array **v27; // x4
-  System_Int32_array **v28; // x5
-  System_Int32_array *v29; // x6
-  System_Int32_array *v30; // x7
-  System_String_array **v31; // x2
-  System_String_array **v32; // x3
-  System_Boolean_array **v33; // x4
-  System_Int32_array **v34; // x5
-  System_Int32_array *v35; // x6
-  System_Int32_array *v36; // x7
+  int32_t v7; // w2
+  int32_t v8; // w3
+  char v9; // w21
+  int32_t v10; // w2
+  int32_t v11; // w3
+  int32_t v12; // w2
+  int32_t v13; // w3
+  int32_t v14; // w2
+  int32_t v15; // w3
+  int32_t v16; // w2
+  int32_t v17; // w3
 
   v6 = this;
-  if ( (byte_438BA59 & 1) == 0 )
+  if ( (byte_48E2063 & 1) == 0 )
   {
-    this = (NetworkManager_o *)sub_B775C4(&StringLiteral_4324/*"CommunicationStart"*/);
-    byte_438BA59 = 1;
+    this = (NetworkManager_o *)sub_1B00CCC(&StringLiteral_4595/*"CommunicationStart"*/, requestWork);
+    byte_48E2063 = 1;
   }
   if ( !requestWork )
-    sub_B7769C(this, requestWork);
-  if ( (((__int64 (__fastcall *)(RequestBase_o *, System_String_o *, Il2CppMethodPointer, const MethodInfo *))requestWork->klass->vtable._14_errorRequest.method)(
-          requestWork,
-          errorCode,
-          requestWork->klass->vtable._15_errorRetry.methodPtr,
-          method) & 1) == 0 )
-    return 0;
-  if ( v6->fields.communicationWork == requestWork )
+    sub_1B00F28(this, requestWork);
+  v9 = ((__int64 (__fastcall *)(RequestBase_o *, System_String_o *, Il2CppMethodPointer, const MethodInfo *))requestWork->klass->vtable._14_errorRequest.method)(
+         requestWork,
+         errorCode,
+         requestWork->klass->vtable._15_errorRetry.methodPtr,
+         method);
+  if ( (v9 & 1) != 0 )
   {
-    v6->fields.communicationWorkResponseList = 0LL;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&v6->fields.communicationWorkResponseList,
-      0LL,
-      v7,
-      v8,
-      v9,
-      v10,
-      v11,
-      v12);
-    v6->fields.communicationWork = 0LL;
-    sub_B77560((BattleServantConfConponent_o *)&v6->fields.communicationWork, 0LL, v13, v14, v15, v16, v17, v18);
-    v6->fields.communicationCoroutine = 0LL;
-    sub_B77560((BattleServantConfConponent_o *)&v6->fields.communicationCoroutine, 0LL, v19, v20, v21, v22, v23, v24);
-    if ( v6->fields.cacheRefreshWork )
+    if ( v6->fields.communicationWork == requestWork )
     {
-      v6->fields.cacheRefreshWork = 0LL;
-      sub_B77560((BattleServantConfConponent_o *)&v6->fields.cacheRefreshWork, 0LL, v25, v26, v27, v28, v29, v30);
-      v6->fields.cacheRefreshWorkResponseList = 0LL;
-      sub_B77560(
-        (BattleServantConfConponent_o *)&v6->fields.cacheRefreshWorkResponseList,
-        0LL,
-        v31,
-        v32,
-        v33,
-        v34,
-        v35,
-        v36);
+      v6->fields.communicationWorkResponseList = 0LL;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&v6->fields.communicationWorkResponseList, 0, v7, v8);
+      v6->fields.communicationWork = 0LL;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&v6->fields.communicationWork, 0, v10, v11);
+      v6->fields.communicationCoroutine = 0LL;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&v6->fields.communicationCoroutine, 0, v12, v13);
+      if ( v6->fields.cacheRefreshWork )
+      {
+        v6->fields.cacheRefreshWork = 0LL;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v6->fields.cacheRefreshWork, 0, v14, v15);
+        v6->fields.cacheRefreshWorkResponseList = 0LL;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v6->fields.cacheRefreshWorkResponseList, 0, v16, v17);
+      }
     }
+    ((void (__fastcall *)(RequestBase_o *, Il2CppMethodPointer))requestWork->klass->vtable._15_errorRetry.method)(
+      requestWork,
+      requestWork->klass->vtable._16_getParameterFileName.methodPtr);
+    UnityEngine_MonoBehaviour__Invoke(
+      (UnityEngine_MonoBehaviour_o *)v6,
+      (System_String_o *)StringLiteral_4595/*"CommunicationStart"*/,
+      0.0,
+      0LL);
   }
-  ((void (__fastcall *)(RequestBase_o *, Il2CppMethodPointer))requestWork->klass->vtable._15_errorRetry.method)(
-    requestWork,
-    requestWork->klass->vtable._16_getParameterFileName.methodPtr);
-  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)v6, (System_String_o *)StringLiteral_4324/*"CommunicationStart"*/, 0.0, 0LL);
-  return 1;
+  return v9 & 1;
 }
 
 
 void __fastcall NetworkManager__OptionSync(NetworkManager_o *this, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x1
-  System_Action_o *v4; // x20
+  __int64 v3; // x1
+  __int64 v4; // x1
+  const MethodInfo *v5; // x1
+  System_Action_o *v6; // x20
 
-  if ( (byte_438BA5F & 1) == 0 )
+  if ( (byte_48E2069 & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&Method_NetworkManager_EndOptionSync__);
-    sub_B775C4(&OptionManager_TypeInfo);
-    byte_438BA5F = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, method);
+    sub_1B00CCC(&Method_NetworkManager_EndOptionSync__, v3);
+    sub_1B00CCC(&OptionManager_TypeInfo, v4);
+    byte_48E2069 = 1;
   }
-  if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !OptionManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !OptionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-  }
   if ( OptionManager__CheckOldLocal(0LL) )
   {
-    v4 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-    System_Action___ctor(v4, (Il2CppObject *)this, Method_NetworkManager_EndOptionSync__, 0LL);
-    if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !OptionManager_TypeInfo->_2.cctor_finished )
-    {
+    v6 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+    System_Action___ctor(v6, (Il2CppObject *)this, Method_NetworkManager_EndOptionSync__, 0LL);
+    if ( !OptionManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    }
-    OptionManager__SaveData(v4, 0LL);
+    OptionManager__SaveData(v6, 0LL);
   }
   else
   {
-    NetworkManager__EndLogin(this, v3);
+    NetworkManager__EndLogin(this, v5);
   }
 }
 
@@ -3215,627 +2690,520 @@ System_Collections_Generic_Dictionary_string__string__o *__fastcall NetworkManag
         System_String_o *url,
         const MethodInfo *method)
 {
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *v3; // x19
-  System_String_array *v4; // x0
-  System_String_array *v5; // x1
-  int32_t v6; // w0
-  System_String_o *v7; // x20
-  int max_length; // w8
-  System_String_array *v9; // x20
-  unsigned int v10; // w23
-  System_String_o *v11; // x21
-  __int64 v13; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
+  System_Collections_Generic_Dictionary_object__object__o *v5; // x19
+  void *v6; // x0
+  __int64 v7; // x1
+  int32_t v8; // w0
+  int v9; // w8
+  void *v10; // x20
+  unsigned int v11; // w21
 
-  if ( (byte_438B9F9 & 1) == 0 )
+  if ( (byte_48E2001 & 1) == 0 )
   {
-    sub_B775C4(&char___TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__string___ctor__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
-    sub_B775C4(&System_Collections_Generic_Dictionary_string__string__TypeInfo);
-    byte_438B9F9 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__string___ctor__, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__, v3);
+    sub_1B00CCC(&System_Collections_Generic_Dictionary_string__string__TypeInfo, v4);
+    byte_48E2001 = 1;
   }
-  v3 = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)sub_B77694(System_Collections_Generic_Dictionary_string__string__TypeInfo);
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject____ctor(
-    v3,
-    (const MethodInfo_2F7CA48 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+  v5 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1B00F18(System_Collections_Generic_Dictionary_string__string__TypeInfo);
+  System_Collections_Generic_Dictionary_object__object____ctor(
+    v5,
+    (const MethodInfo_308D098 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
   if ( !url )
-    goto LABEL_21;
-  v6 = System_String__IndexOf(url, 0x3Fu, 0LL);
-  if ( v6 == -1 )
-    return (System_Collections_Generic_Dictionary_string__string__o *)v3;
-  v7 = System_String__Substring(url, v6 + 1, 0LL);
-  v4 = (System_String_array *)sub_B775DC(char___TypeInfo, 1LL);
-  if ( !v4 )
-    goto LABEL_21;
-  v5 = v4;
-  if ( !v4->max_length )
-    goto LABEL_22;
-  LOWORD(v4->m_Items[0]) = 38;
-  if ( !v7 || (v4 = System_String__Split(v7, (System_Char_array *)v4, 0LL)) == 0LL )
-LABEL_21:
-    sub_B7769C(v4, v5);
-  max_length = v4->max_length;
-  v9 = v4;
-  if ( max_length >= 1 )
+    goto LABEL_17;
+  v8 = System_String__IndexOf(url, 0x3Fu, 0LL);
+  if ( v8 != -1 )
   {
-    v10 = 0;
-    while ( v10 < max_length )
+    v6 = System_String__Substring(url, v8 + 1, 0LL);
+    if ( !v6 )
+      goto LABEL_17;
+    v6 = System_String__Split((System_String_o *)v6, 0x26u, 0, 0LL);
+    if ( !v6 )
+      goto LABEL_17;
+    v9 = *((_DWORD *)v6 + 6);
+    v10 = v6;
+    if ( v9 >= 1 )
     {
-      v11 = v9->m_Items[v10];
-      v4 = (System_String_array *)sub_B775DC(char___TypeInfo, 1LL);
-      if ( !v4 )
-        goto LABEL_21;
-      v5 = v4;
-      if ( !v4->max_length )
-        break;
-      LOWORD(v4->m_Items[0]) = 61;
-      if ( !v11 )
-        goto LABEL_21;
-      v4 = System_String__Split(v11, (System_Char_array *)v4, 0LL);
-      if ( !v4 )
-        goto LABEL_21;
-      if ( v4->max_length == 2 )
+      v11 = 0;
+      while ( 1 )
       {
-        if ( !v3 )
-          goto LABEL_21;
-        System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___set_Item(
-          v3,
-          (System_Xml_XmlQualifiedName_o *)v4->m_Items[0],
-          (System_Xml_Schema_XmlSchemaObject_o *)v4->m_Items[1],
-          (const MethodInfo_2F7D5D0 *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+        if ( v11 >= v9 )
+          sub_1B00F30(v6, v7);
+        v6 = (void *)*((_QWORD *)v10 + (int)v11 + 4);
+        if ( !v6 )
+          break;
+        v6 = System_String__Split((System_String_o *)v6, 0x3Du, 0, 0LL);
+        if ( !v6 )
+          break;
+        if ( *((_DWORD *)v6 + 6) == 2 )
+        {
+          if ( !v5 )
+            break;
+          System_Collections_Generic_Dictionary_object__object___set_Item(
+            v5,
+            *((Il2CppObject **)v6 + 4),
+            *((Il2CppObject **)v6 + 5),
+            (const MethodInfo_308DA34 *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+        }
+        v9 = *((_DWORD *)v10 + 6);
+        if ( (int)++v11 >= v9 )
+          return (System_Collections_Generic_Dictionary_string__string__o *)v5;
       }
-      max_length = v9->max_length;
-      if ( (int)++v10 >= max_length )
-        return (System_Collections_Generic_Dictionary_string__string__o *)v3;
+LABEL_17:
+      sub_1B00F28(v6, v7);
     }
-LABEL_22:
-    v13 = sub_B776C8(v4);
-    sub_B77668(v13, 0LL);
   }
-  return (System_Collections_Generic_Dictionary_string__string__o *)v3;
+  return (System_Collections_Generic_Dictionary_string__string__o *)v5;
 }
 
 
 int32_t __fastcall NetworkManager__ReadAuth(NetworkManager_o *this, const MethodInfo *method)
 {
-  ManagerConfig_c *v3; // x0
-  NetworkManager_o *v4; // x0
-  const MethodInfo *v5; // x1
-  System_IO_BinaryReader_c **v6; // x22
-  int v7; // w20
-  int v8; // w24
-  int v9; // w25
-  int v10; // w27
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  ManagerConfig_c *v15; // x0
+  int32_t v16; // w8
+  NetworkManager_o *v17; // x0
+  const MethodInfo *v18; // x1
+  int v19; // w25
+  int v20; // w26
+  int32_t v21; // w19
   System_String_o *AuthFileName; // x21
-  System_IO_FileStream_o *v12; // x0
-  System_IO_BinaryReader_c *v13; // x8
-  System_IO_BinaryReader_c **v14; // x19
-  System_IO_Stream_o *v15; // x22
-  System_IO_BinaryReader_o *v16; // x21
-  __int64 v17; // x0
-  __int64 v18; // x1
-  System_String_o *v19; // x22
-  System_String_o *v20; // x23
-  NetworkManager_c *v21; // x0
+  System_IO_Stream_o *v23; // x22
+  System_IO_BinaryReader_o *v24; // x21
+  __int64 v25; // x0
+  __int64 v26; // x1
+  System_String_o *v27; // x22
+  System_String_o *v28; // x23
+  NetworkManager_c *v29; // x0
   System_String_o *String; // x1
-  int v23; // w8
-  char v24; // w23
-  System_String_o *v25; // x22
+  int v31; // w23
+  char v32; // w20
+  System_String_o *v33; // x22
   System_Collections_Generic_Dictionary_string__object__o *Dictionary; // x0
-  __int64 v27; // x1
-  System_Collections_Generic_Dictionary_Type__IStoreExtension__o *v28; // x22
-  UnityEngine_Purchasing_IStoreExtension_o *Item; // x0
-  __int64 v30; // x1
-  System_String_array **v31; // x2
-  System_String_array **v32; // x3
-  System_Boolean_array **v33; // x4
-  System_Int32_array **v34; // x5
-  System_Int32_array *v35; // x6
-  System_Int32_array *v36; // x7
-  System_Int32_array **v37; // x23
-  NetworkManager_c *v38; // x0
+  __int64 v35; // x1
+  System_Collections_Generic_Dictionary_object__object__o *v36; // x22
+  Il2CppObject *Item; // x0
+  __int64 v38; // x1
+  int32_t v39; // w2
+  int32_t v40; // w3
+  __int64 v41; // x23
+  NetworkManager_c *v42; // x0
   struct NetworkManager_StaticFields *static_fields; // x0
-  UnityEngine_Purchasing_IStoreExtension_o *v40; // x0
-  __int64 v41; // x1
-  System_Int32_array **v42; // x1
-  struct NetworkManager_StaticFields *v43; // x0
-  System_String_array **v44; // x2
-  System_String_array **v45; // x3
-  System_Boolean_array **v46; // x4
-  System_Int32_array **v47; // x5
-  System_Int32_array *v48; // x6
-  System_Int32_array *v49; // x7
-  UnityEngine_Purchasing_IStoreExtension_o *v50; // x0
+  Il2CppObject *v44; // x0
+  __int64 v45; // x1
+  __int64 v46; // x1
+  struct NetworkManager_StaticFields *v47; // x0
+  int32_t v48; // w2
+  int32_t v49; // w3
+  Il2CppObject *v50; // x0
   __int64 v51; // x1
-  System_Int32_array **v52; // x1
+  __int64 v52; // x1
   struct NetworkManager_StaticFields *v53; // x0
-  System_String_array **v54; // x2
-  System_String_array **v55; // x3
-  System_Boolean_array **v56; // x4
-  System_Int32_array **v57; // x5
-  System_Int32_array *v58; // x6
-  System_Int32_array *v59; // x7
-  UnityEngine_Purchasing_IStoreExtension_o *v60; // x0
-  __int64 v61; // x1
-  System_Int32_array **v62; // x1
-  struct NetworkManager_StaticFields *v63; // x0
-  System_String_array **v64; // x2
-  System_String_array **v65; // x3
-  System_Boolean_array **v66; // x4
-  System_Int32_array **v67; // x5
-  System_Int32_array *v68; // x6
-  System_Int32_array *v69; // x7
+  int32_t v54; // w2
+  int32_t v55; // w3
+  Il2CppObject *v56; // x0
+  __int64 v57; // x1
+  __int64 v58; // x1
+  struct NetworkManager_StaticFields *v59; // x0
+  int32_t v60; // w2
+  int32_t v61; // w3
   System_IO_BinaryReader_c *klass; // x8
-  unsigned __int64 v71; // x10
-  int32_t *p_offset; // x11
-  __int64 v73; // x0
-  int v74; // w8
-  int v75; // w9
-  _DWORD v77[11]; // [xsp+10h] [xbp-90h]
-  int v78; // [xsp+3Ch] [xbp-64h]
-  int v79; // [xsp+48h] [xbp-58h]
+  __int64 v63; // x9
+  int32_t *p_offset; // x10
+  __int64 v65; // x0
 
-  if ( (byte_438B9FC & 1) == 0 )
+  if ( (byte_48E2004 & 1) == 0 )
   {
-    sub_B775C4(&System_IO_BinaryReader_TypeInfo);
-    sub_B775C4(&CatAndMouseGame_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_B775C4(&EncryptedPlayerPrefs_TypeInfo);
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    sub_B775C4(&JsonManager_TypeInfo);
-    sub_B775C4(&ManagerConfig_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&SignedData_TypeInfo);
-    sub_B775C4(&StringLiteral_23481/*"userCreateServer"*/);
-    sub_B775C4(&StringLiteral_16850/*"authKey"*/);
-    sub_B775C4(&StringLiteral_22414/*"secretKey"*/);
-    sub_B775C4(&StringLiteral_23521/*"userId"*/);
-    byte_438B9FC = 1;
+    sub_1B00CCC(&System_IO_BinaryReader_TypeInfo, method);
+    sub_1B00CCC(&CatAndMouseGame_TypeInfo, v3);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v4);
+    sub_1B00CCC(&EncryptedPlayerPrefs_TypeInfo, v5);
+    sub_1B00CCC(&System_IDisposable_TypeInfo, v6);
+    sub_1B00CCC(&JsonManager_TypeInfo, v7);
+    sub_1B00CCC(&ManagerConfig_TypeInfo, v8);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v9);
+    sub_1B00CCC(&SignedData_TypeInfo, v10);
+    sub_1B00CCC(&StringLiteral_24025/*"userCreateServer"*/, v11);
+    sub_1B00CCC(&StringLiteral_16737/*"authKey"*/, v12);
+    sub_1B00CCC(&StringLiteral_22761/*"secretKey"*/, v13);
+    sub_1B00CCC(&StringLiteral_24066/*"userId"*/, v14);
+    byte_48E2004 = 1;
   }
-  v79 = 0;
-  v78 = 0;
-  v3 = ManagerConfig_TypeInfo;
-  if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ManagerConfig_TypeInfo->_2.cctor_finished )
+  v15 = ManagerConfig_TypeInfo;
+  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v3 = ManagerConfig_TypeInfo;
+    v15 = ManagerConfig_TypeInfo;
   }
-  if ( !v3->static_fields->UseMock )
+  if ( v15->static_fields->UseMock )
+    return 1;
+  v17 = (NetworkManager_o *)NetworkManager__SyncAuth(this, method);
+  if ( (_DWORD)v17 == 2 )
+    return 6;
+  v19 = 0;
+  v20 = 5;
+  v21 = 1;
+  while ( v20 > 0 )
   {
-    v4 = (NetworkManager_o *)NetworkManager__SyncAuth(this, method);
-    if ( (_DWORD)v4 == 2 )
+    --v20;
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+    AuthFileName = NetworkManager__getAuthFileName(v19 & 1, v18);
+    v19 ^= 1u;
+    v17 = (NetworkManager_o *)System_IO_File__Exists(AuthFileName, 0LL);
+    if ( ((unsigned __int8)v17 & 1) != 0 )
     {
-      LODWORD(v4) = 6;
-      return (int)v4;
-    }
-    v6 = &System_IO_BinaryReader_TypeInfo;
-    v7 = 0;
-    v8 = 0;
-    v9 = 5;
-    v10 = 1;
-    while ( 1 )
-    {
-      do
-      {
-        if ( v9 <= 0 )
-        {
-          NetworkManager__ClearAuth(v4, v5);
-          LODWORD(v4) = v10;
-          return (int)v4;
-        }
-        --v9;
-        if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !NetworkManager_TypeInfo->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        }
-        AuthFileName = NetworkManager__getAuthFileName(v8 & 1, v5);
-        v8 ^= 1u;
-        v4 = (NetworkManager_o *)System_IO_File__Exists(AuthFileName, 0LL);
-      }
-      while ( ((unsigned __int8)v4 & 1) == 0 );
-      v12 = System_IO_File__OpenRead(AuthFileName, 0LL);
-      v13 = *v6;
-      v14 = v6;
-      v15 = (System_IO_Stream_o *)v12;
-      v16 = (System_IO_BinaryReader_o *)sub_B77694(v13);
-      System_IO_BinaryReader___ctor(v16, v15, 0LL);
-      if ( !v16 )
-        sub_B7769C(v17, v18);
-      v19 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v16->klass->vtable._22_ReadString.method)(
-                                 v16,
-                                 v16->klass->vtable._23_ReadChars.methodPtr);
-      if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished )
-      {
+      v23 = (System_IO_Stream_o *)System_IO_File__OpenRead(AuthFileName, 0LL);
+      v24 = (System_IO_BinaryReader_o *)sub_1B00F18(System_IO_BinaryReader_TypeInfo);
+      System_IO_BinaryReader___ctor(v24, v23, 0LL);
+      if ( !v24 )
+        sub_1B00F28(v25, v26);
+      v27 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v24->klass->vtable._22_ReadString.method)(
+                                 v24,
+                                 v24->klass->vtable._23_ReadChars.methodPtr);
+      if ( !EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
-      }
-      v20 = EncryptedPlayerPrefs__Md5(v19, 0LL);
-      v21 = NetworkManager_TypeInfo;
-      if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !NetworkManager_TypeInfo->_2.cctor_finished )
+      v28 = EncryptedPlayerPrefs__Md5(v27, 0LL);
+      v29 = NetworkManager_TypeInfo;
+      if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        v21 = NetworkManager_TypeInfo;
+        v29 = NetworkManager_TypeInfo;
       }
-      String = UnityEngine_PlayerPrefs__GetString(v21->static_fields->AUTHMD5_KEY_TYPE, v20, 0LL);
-      if ( System_String__op_Inequality(v20, String, 0LL) )
-        break;
-      if ( v19 )
+      String = UnityEngine_PlayerPrefs__GetString(v29->static_fields->AUTHMD5_KEY_TYPE, v28, 0LL);
+      if ( System_String__op_Inequality(v28, String, 0LL) )
       {
-        if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
-        {
+        v31 = 4;
+        v32 = 1;
+        v21 = 2;
+      }
+      else
+      {
+        if ( !v27 )
+          goto LABEL_37;
+        if ( !CatAndMouseGame_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-        }
-        v25 = CatAndMouseGame__MouseGame1(v19, 0, 0LL);
-        if ( v25 )
+        v33 = CatAndMouseGame__MouseGame1(v27, 0, 0LL);
+        if ( v33 )
         {
-          if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-            && !JsonManager_TypeInfo->_2.cctor_finished )
-          {
+          if ( !JsonManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-          }
-          Dictionary = JsonManager__getDictionary(v25, 0LL);
-          v28 = (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)Dictionary;
+          Dictionary = JsonManager__getDictionary(v33, 0LL);
+          v36 = (System_Collections_Generic_Dictionary_object__object__o *)Dictionary;
           if ( !Dictionary )
-            sub_B7769C(0LL, v27);
-          Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-                   (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)Dictionary,
-                   (System_Type_o *)StringLiteral_23481/*"userCreateServer"*/,
-                   (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+            sub_1B00F28(0LL, v35);
+          Item = System_Collections_Generic_Dictionary_object__object___get_Item(
+                   (System_Collections_Generic_Dictionary_object__object__o *)Dictionary,
+                   (Il2CppObject *)StringLiteral_24025/*"userCreateServer"*/,
+                   (const MethodInfo_308D9C8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
           if ( !Item )
-            sub_B7769C(0LL, v30);
-          v37 = (System_Int32_array **)((__int64 (__fastcall *)(UnityEngine_Purchasing_IStoreExtension_o *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
-                                         Item,
-                                         Item->klass->vtable[4].methodPtr);
-          v38 = NetworkManager_TypeInfo;
-          if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-            && !NetworkManager_TypeInfo->_2.cctor_finished )
+            sub_1B00F28(0LL, v38);
+          v41 = ((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
+                  Item,
+                  Item->klass->vtable[4].methodPtr);
+          v42 = NetworkManager_TypeInfo;
+          if ( !NetworkManager_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-            v38 = NetworkManager_TypeInfo;
+            v42 = NetworkManager_TypeInfo;
           }
-          static_fields = v38->static_fields;
-          static_fields->userCreateServer = (struct System_String_o *)v37;
-          sub_B77560(
-            (BattleServantConfConponent_o *)&static_fields->userCreateServer,
-            v37,
-            v31,
-            v32,
-            v33,
-            v34,
-            v35,
-            v36);
-          v40 = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-                  v28,
-                  (System_Type_o *)StringLiteral_23521/*"userId"*/,
-                  (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-          if ( !v40 )
-            sub_B7769C(0LL, v41);
-          v42 = (System_Int32_array **)((__int64 (__fastcall *)(UnityEngine_Purchasing_IStoreExtension_o *, Il2CppMethodPointer))v40->klass->vtable[3].method)(
-                                         v40,
-                                         v40->klass->vtable[4].methodPtr);
-          v43 = NetworkManager_TypeInfo->static_fields;
-          v43->userId = (struct System_String_o *)v42;
-          sub_B77560((BattleServantConfConponent_o *)&v43->userId, v42, v44, v45, v46, v47, v48, v49);
-          v50 = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-                  v28,
-                  (System_Type_o *)StringLiteral_16850/*"authKey"*/,
-                  (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+          static_fields = v42->static_fields;
+          static_fields->userCreateServer = (struct System_String_o *)v41;
+          sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->userCreateServer, v41, v39, v40);
+          v44 = System_Collections_Generic_Dictionary_object__object___get_Item(
+                  v36,
+                  (Il2CppObject *)StringLiteral_24066/*"userId"*/,
+                  (const MethodInfo_308D9C8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+          if ( !v44 )
+            sub_1B00F28(0LL, v45);
+          v46 = ((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))v44->klass->vtable[3].method)(
+                  v44,
+                  v44->klass->vtable[4].methodPtr);
+          v47 = NetworkManager_TypeInfo->static_fields;
+          v47->userId = (struct System_String_o *)v46;
+          sub_1B00C70((ServantStatusBattleListViewItem_o *)&v47->userId, v46, v48, v49);
+          v50 = System_Collections_Generic_Dictionary_object__object___get_Item(
+                  v36,
+                  (Il2CppObject *)StringLiteral_16737/*"authKey"*/,
+                  (const MethodInfo_308D9C8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
           if ( !v50 )
-            sub_B7769C(0LL, v51);
-          v52 = (System_Int32_array **)((__int64 (__fastcall *)(UnityEngine_Purchasing_IStoreExtension_o *, Il2CppMethodPointer))v50->klass->vtable[3].method)(
-                                         v50,
-                                         v50->klass->vtable[4].methodPtr);
+            sub_1B00F28(0LL, v51);
+          v52 = ((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))v50->klass->vtable[3].method)(
+                  v50,
+                  v50->klass->vtable[4].methodPtr);
           v53 = NetworkManager_TypeInfo->static_fields;
           v53->authKey = (struct System_String_o *)v52;
-          sub_B77560((BattleServantConfConponent_o *)&v53->authKey, v52, v54, v55, v56, v57, v58, v59);
-          v60 = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-                  v28,
-                  (System_Type_o *)StringLiteral_22414/*"secretKey"*/,
-                  (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-          if ( !v60 )
-            sub_B7769C(0LL, v61);
-          v62 = (System_Int32_array **)((__int64 (__fastcall *)(UnityEngine_Purchasing_IStoreExtension_o *, Il2CppMethodPointer))v60->klass->vtable[3].method)(
-                                         v60,
-                                         v60->klass->vtable[4].methodPtr);
-          v63 = NetworkManager_TypeInfo->static_fields;
-          v63->secretKey = (struct System_String_o *)v62;
-          sub_B77560((BattleServantConfConponent_o *)&v63->secretKey, v62, v64, v65, v66, v67, v68, v69);
-          if ( (BYTE3(SignedData_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-            && !SignedData_TypeInfo->_2.cctor_finished )
-          {
+          sub_1B00C70((ServantStatusBattleListViewItem_o *)&v53->authKey, v52, v54, v55);
+          v56 = System_Collections_Generic_Dictionary_object__object___get_Item(
+                  v36,
+                  (Il2CppObject *)StringLiteral_22761/*"secretKey"*/,
+                  (const MethodInfo_308D9C8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+          if ( !v56 )
+            sub_1B00F28(0LL, v57);
+          v58 = ((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))v56->klass->vtable[3].method)(
+                  v56,
+                  v56->klass->vtable[4].methodPtr);
+          v59 = NetworkManager_TypeInfo->static_fields;
+          v59->secretKey = (struct System_String_o *)v58;
+          sub_1B00C70((ServantStatusBattleListViewItem_o *)&v59->secretKey, v58, v60, v61);
+          if ( !SignedData_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(SignedData_TypeInfo);
-          }
           SignedData__RefreshSigningData(3, 0LL);
-          v77[v7] = 324;
-          v23 = v78;
-          v24 = 1;
+          v32 = 0;
+          v31 = 16;
         }
         else
         {
-          v77[v7] = 330;
-          v23 = v78;
-          v24 = 0;
+LABEL_37:
+          v31 = 4;
+          v32 = 1;
         }
-        goto LABEL_52;
       }
-      v77[v7] = 330;
-      v7 = ++v78;
-      v24 = 0;
-LABEL_53:
-      klass = v16->klass;
-      if ( *(_WORD *)&v16->klass->_2.bitflags1 )
+      klass = v24->klass;
+      v63 = *(unsigned __int16 *)(&v24->klass->_2.bitflags2 + 3);
+      if ( *(_WORD *)(&v24->klass->_2.bitflags2 + 3) )
       {
-        v71 = 0LL;
         p_offset = &klass->_1.interfaceOffsets->offset;
         while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
         {
-          ++v71;
+          --v63;
           p_offset += 4;
-          if ( v71 >= *(unsigned __int16 *)&v16->klass->_2.bitflags1 )
-            goto LABEL_57;
+          if ( !v63 )
+            goto LABEL_42;
         }
-        v73 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+        v65 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
       }
       else
       {
-LABEL_57:
-        v73 = sub_B0F4C0(v16, System_IDisposable_TypeInfo, 0LL);
+LABEL_42:
+        v65 = sub_1B52CAC(v24, System_IDisposable_TypeInfo, 0LL);
       }
-      v4 = (NetworkManager_o *)(*(__int64 (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v73)(
-                                 v16,
-                                 *(_QWORD *)(v73 + 8));
-      if ( !v7 )
+      v17 = (NetworkManager_o *)(*(__int64 (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v65)(
+                                  v24,
+                                  *(_QWORD *)(v65 + 8));
+      if ( v31 == 16 )
       {
-        v6 = v14;
-        goto LABEL_65;
-      }
-      v74 = v7 - 1;
-      v75 = v77[v7 - 1];
-      v6 = v14;
-      if ( v75 == 324 )
-      {
-        --v7;
-        v78 = v74;
-        goto LABEL_65;
-      }
-      if ( v75 == 330 )
-      {
-        v78 = --v7;
-      }
-      else
-      {
-LABEL_65:
-        v4 = 0LL;
-        if ( (v24 & 1) != 0 )
-          return (int)v4;
+        v16 = 0;
+        if ( (v32 & 1) == 0 )
+          return v16;
       }
     }
-    v77[v7] = 330;
-    v23 = v78;
-    v24 = 0;
-    v10 = 2;
-LABEL_52:
-    v7 = v23 + 1;
-    v78 = v23 + 1;
-    goto LABEL_53;
   }
-  LODWORD(v4) = 1;
-  return (int)v4;
+  NetworkManager__ClearAuth(v17, v18);
+  return v21;
 }
 
 
 bool __fastcall NetworkManager__ReadFriendCode(NetworkManager_o *this, const MethodInfo *method)
 {
-  ManagerConfig_c *v2; // x0
-  NetworkManager_c *v3; // x0
+  __int64 v2; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  ManagerConfig_c *v5; // x0
+  NetworkManager_c *v6; // x0
   System_String_o *FriendCodeFileName; // x19
-  System_IO_Stream_o *v5; // x20
-  System_IO_BinaryReader_o *v6; // x19
-  __int64 v7; // x0
-  __int64 v8; // x1
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
-  System_Int32_array **v15; // x20
-  NetworkManager_c *v16; // x0
+  System_IO_Stream_o *v8; // x20
+  System_IO_BinaryReader_o *v9; // x19
+  __int64 v10; // x0
+  __int64 v11; // x1
+  int32_t v12; // w2
+  int32_t v13; // w3
+  __int64 v14; // x20
+  NetworkManager_c *v15; // x0
   struct NetworkManager_StaticFields *static_fields; // x0
-  bool v18; // w21
+  bool v17; // w21
   System_IO_BinaryReader_c *klass; // x8
-  unsigned __int64 v20; // x10
-  int32_t *p_offset; // x11
-  __int64 v22; // x0
+  __int64 v19; // x9
+  int32_t *p_offset; // x10
+  __int64 v21; // x0
 
-  if ( (byte_438B9F0 & 1) == 0 )
+  if ( (byte_48E1FF8 & 1) == 0 )
   {
-    sub_B775C4(&System_IO_BinaryReader_TypeInfo);
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    sub_B775C4(&ManagerConfig_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438B9F0 = 1;
+    sub_1B00CCC(&System_IO_BinaryReader_TypeInfo, method);
+    sub_1B00CCC(&System_IDisposable_TypeInfo, v2);
+    sub_1B00CCC(&ManagerConfig_TypeInfo, v3);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v4);
+    byte_48E1FF8 = 1;
   }
-  v2 = ManagerConfig_TypeInfo;
-  if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ManagerConfig_TypeInfo->_2.cctor_finished )
+  v5 = ManagerConfig_TypeInfo;
+  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v2 = ManagerConfig_TypeInfo;
+    v5 = ManagerConfig_TypeInfo;
   }
-  if ( v2->static_fields->UseMock )
+  if ( v5->static_fields->UseMock )
     return 0;
-  v3 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  v6 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  FriendCodeFileName = NetworkManager__getFriendCodeFileName((const MethodInfo *)v3);
+  FriendCodeFileName = NetworkManager__getFriendCodeFileName((const MethodInfo *)v6);
   if ( !System_IO_File__Exists(FriendCodeFileName, 0LL) )
     return 0;
-  v5 = (System_IO_Stream_o *)System_IO_File__OpenRead(FriendCodeFileName, 0LL);
-  v6 = (System_IO_BinaryReader_o *)sub_B77694(System_IO_BinaryReader_TypeInfo);
-  System_IO_BinaryReader___ctor(v6, v5, 0LL);
-  if ( !v6 )
-    sub_B7769C(v7, v8);
-  v15 = (System_Int32_array **)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v6->klass->vtable._22_ReadString.method)(
-                                 v6,
-                                 v6->klass->vtable._23_ReadChars.methodPtr);
-  v16 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v8 = (System_IO_Stream_o *)System_IO_File__OpenRead(FriendCodeFileName, 0LL);
+  v9 = (System_IO_BinaryReader_o *)sub_1B00F18(System_IO_BinaryReader_TypeInfo);
+  System_IO_BinaryReader___ctor(v9, v8, 0LL);
+  if ( !v9 )
+    sub_1B00F28(v10, v11);
+  v14 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v9->klass->vtable._22_ReadString.method)(
+          v9,
+          v9->klass->vtable._23_ReadChars.methodPtr);
+  v15 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v16 = NetworkManager_TypeInfo;
+    v15 = NetworkManager_TypeInfo;
   }
-  static_fields = v16->static_fields;
-  static_fields->friendCode = (struct System_String_o *)v15;
-  sub_B77560((BattleServantConfConponent_o *)&static_fields->friendCode, v15, v9, v10, v11, v12, v13, v14);
-  v18 = 1;
-  klass = v6->klass;
-  if ( *(_WORD *)&v6->klass->_2.bitflags1 )
+  static_fields = v15->static_fields;
+  static_fields->friendCode = (struct System_String_o *)v14;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->friendCode, v14, v12, v13);
+  v17 = 1;
+  klass = v9->klass;
+  v19 = *(unsigned __int16 *)(&v9->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v9->klass->_2.bitflags2 + 3) )
   {
-    v20 = 0LL;
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
     {
-      ++v20;
+      --v19;
       p_offset += 4;
-      if ( v20 >= *(unsigned __int16 *)&v6->klass->_2.bitflags1 )
-        goto LABEL_19;
+      if ( !v19 )
+        goto LABEL_16;
     }
-    v22 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+    v21 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
   }
   else
   {
-LABEL_19:
-    v22 = sub_B0F4C0(v6, System_IDisposable_TypeInfo, 0LL);
+LABEL_16:
+    v21 = sub_1B52CAC(v9, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v22)(v6, *(_QWORD *)(v22 + 8));
-  return v18;
+  (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v21)(v9, *(_QWORD *)(v21 + 8));
+  return v17;
 }
 
 
 bool __fastcall NetworkManager__ReadOldSignup(NetworkManager_o *this, const MethodInfo *method)
 {
-  ManagerConfig_c *v2; // x0
-  NetworkManager_c *v3; // x0
+  __int64 v2; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  ManagerConfig_c *v5; // x0
+  NetworkManager_c *v6; // x0
   System_String_o *OldSignupFileName; // x19
-  System_IO_Stream_o *v5; // x20
-  System_IO_BinaryReader_o *v6; // x19
-  __int64 v7; // x0
-  __int64 v8; // x1
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
-  System_Int32_array **v15; // x20
-  NetworkManager_c *v16; // x0
+  System_IO_Stream_o *v8; // x20
+  System_IO_BinaryReader_o *v9; // x19
+  __int64 v10; // x0
+  __int64 v11; // x1
+  int32_t v12; // w2
+  int32_t v13; // w3
+  __int64 v14; // x20
+  NetworkManager_c *v15; // x0
   struct NetworkManager_StaticFields *static_fields; // x0
-  bool v18; // w21
+  bool v17; // w21
   System_IO_BinaryReader_c *klass; // x8
-  unsigned __int64 v20; // x10
-  int32_t *p_offset; // x11
-  __int64 v22; // x0
+  __int64 v19; // x9
+  int32_t *p_offset; // x10
+  __int64 v21; // x0
 
-  if ( (byte_438B9EA & 1) == 0 )
+  if ( (byte_48E1FF2 & 1) == 0 )
   {
-    sub_B775C4(&System_IO_BinaryReader_TypeInfo);
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    sub_B775C4(&ManagerConfig_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438B9EA = 1;
+    sub_1B00CCC(&System_IO_BinaryReader_TypeInfo, method);
+    sub_1B00CCC(&System_IDisposable_TypeInfo, v2);
+    sub_1B00CCC(&ManagerConfig_TypeInfo, v3);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v4);
+    byte_48E1FF2 = 1;
   }
-  v2 = ManagerConfig_TypeInfo;
-  if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ManagerConfig_TypeInfo->_2.cctor_finished )
+  v5 = ManagerConfig_TypeInfo;
+  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v2 = ManagerConfig_TypeInfo;
+    v5 = ManagerConfig_TypeInfo;
   }
-  if ( v2->static_fields->UseMock )
+  if ( v5->static_fields->UseMock )
     return 0;
-  v3 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  v6 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  OldSignupFileName = NetworkManager__getOldSignupFileName((const MethodInfo *)v3);
+  OldSignupFileName = NetworkManager__getOldSignupFileName((const MethodInfo *)v6);
   if ( !System_IO_File__Exists(OldSignupFileName, 0LL) )
     return 0;
-  v5 = (System_IO_Stream_o *)System_IO_File__OpenRead(OldSignupFileName, 0LL);
-  v6 = (System_IO_BinaryReader_o *)sub_B77694(System_IO_BinaryReader_TypeInfo);
-  System_IO_BinaryReader___ctor(v6, v5, 0LL);
-  if ( !v6 )
-    sub_B7769C(v7, v8);
-  v15 = (System_Int32_array **)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v6->klass->vtable._22_ReadString.method)(
-                                 v6,
-                                 v6->klass->vtable._23_ReadChars.methodPtr);
-  v16 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v8 = (System_IO_Stream_o *)System_IO_File__OpenRead(OldSignupFileName, 0LL);
+  v9 = (System_IO_BinaryReader_o *)sub_1B00F18(System_IO_BinaryReader_TypeInfo);
+  System_IO_BinaryReader___ctor(v9, v8, 0LL);
+  if ( !v9 )
+    sub_1B00F28(v10, v11);
+  v14 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v9->klass->vtable._22_ReadString.method)(
+          v9,
+          v9->klass->vtable._23_ReadChars.methodPtr);
+  v15 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v16 = NetworkManager_TypeInfo;
+    v15 = NetworkManager_TypeInfo;
   }
-  static_fields = v16->static_fields;
-  static_fields->userName = (struct System_String_o *)v15;
-  sub_B77560((BattleServantConfConponent_o *)&static_fields->userName, v15, v9, v10, v11, v12, v13, v14);
-  NetworkManager_TypeInfo->static_fields->genderType = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v6->klass->vtable._15_ReadInt32.method)(
-                                                         v6,
-                                                         v6->klass->vtable._16_ReadUInt32.methodPtr);
-  NetworkManager_TypeInfo->static_fields->month = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v6->klass->vtable._15_ReadInt32.method)(
-                                                    v6,
-                                                    v6->klass->vtable._16_ReadUInt32.methodPtr);
-  v18 = 1;
-  NetworkManager_TypeInfo->static_fields->day = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v6->klass->vtable._15_ReadInt32.method)(
-                                                  v6,
-                                                  v6->klass->vtable._16_ReadUInt32.methodPtr);
-  klass = v6->klass;
-  if ( *(_WORD *)&v6->klass->_2.bitflags1 )
+  static_fields = v15->static_fields;
+  static_fields->userName = (struct System_String_o *)v14;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->userName, v14, v12, v13);
+  NetworkManager_TypeInfo->static_fields->genderType = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v9->klass->vtable._15_ReadInt32.method)(
+                                                         v9,
+                                                         v9->klass->vtable._16_ReadUInt32.methodPtr);
+  NetworkManager_TypeInfo->static_fields->month = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v9->klass->vtable._15_ReadInt32.method)(
+                                                    v9,
+                                                    v9->klass->vtable._16_ReadUInt32.methodPtr);
+  v17 = 1;
+  NetworkManager_TypeInfo->static_fields->day = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v9->klass->vtable._15_ReadInt32.method)(
+                                                  v9,
+                                                  v9->klass->vtable._16_ReadUInt32.methodPtr);
+  klass = v9->klass;
+  v19 = *(unsigned __int16 *)(&v9->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v9->klass->_2.bitflags2 + 3) )
   {
-    v20 = 0LL;
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
     {
-      ++v20;
+      --v19;
       p_offset += 4;
-      if ( v20 >= *(unsigned __int16 *)&v6->klass->_2.bitflags1 )
-        goto LABEL_19;
+      if ( !v19 )
+        goto LABEL_16;
     }
-    v22 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+    v21 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
   }
   else
   {
-LABEL_19:
-    v22 = sub_B0F4C0(v6, System_IDisposable_TypeInfo, 0LL);
+LABEL_16:
+    v21 = sub_1B52CAC(v9, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v22)(v6, *(_QWORD *)(v22 + 8));
-  return v18;
+  (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v21)(v9, *(_QWORD *)(v21 + 8));
+  return v17;
 }
 
 
 bool __fastcall NetworkManager__ReadServerSetting(NetworkManager_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x6
+  __int64 v4; // x1
 
-  if ( (byte_438BA40 & 1) == 0 )
+  if ( (byte_48E204A & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_4705/*"DEFAULT"*/);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438BA40 = 1;
+    sub_1B00CCC(&StringLiteral_4955/*"DEFAULT"*/, method);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v4);
+    byte_48E204A = 1;
   }
   NetworkManager__SetServerSetting(
     this,
-    (System_String_o *)StringLiteral_4705/*"DEFAULT"*/,
+    (System_String_o *)StringLiteral_4955/*"DEFAULT"*/,
     0,
     (System_String_o *)StringLiteral_1/*""*/,
     (System_String_o *)StringLiteral_1/*""*/,
@@ -3847,103 +3215,97 @@ bool __fastcall NetworkManager__ReadServerSetting(NetworkManager_o *this, const 
 
 bool __fastcall NetworkManager__ReadSignup(NetworkManager_o *this, const MethodInfo *method)
 {
-  ManagerConfig_c *v2; // x0
-  NetworkManager_c *v3; // x0
+  __int64 v2; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  ManagerConfig_c *v5; // x0
+  NetworkManager_c *v6; // x0
   System_String_o *SignupFileName; // x19
-  System_IO_Stream_o *v5; // x20
-  System_IO_BinaryReader_o *v6; // x19
-  __int64 v7; // x0
-  __int64 v8; // x1
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
-  System_Int32_array **v15; // x20
-  NetworkManager_c *v16; // x0
+  System_IO_Stream_o *v8; // x20
+  System_IO_BinaryReader_o *v9; // x19
+  __int64 v10; // x0
+  __int64 v11; // x1
+  int32_t v12; // w2
+  int32_t v13; // w3
+  __int64 v14; // x20
+  NetworkManager_c *v15; // x0
   struct NetworkManager_StaticFields *static_fields; // x0
-  bool v18; // w21
+  bool v17; // w21
   System_IO_BinaryReader_c *klass; // x8
-  unsigned __int64 v20; // x10
-  int32_t *p_offset; // x11
-  __int64 v22; // x0
+  __int64 v19; // x9
+  int32_t *p_offset; // x10
+  __int64 v21; // x0
 
-  if ( (byte_438B9EB & 1) == 0 )
+  if ( (byte_48E1FF3 & 1) == 0 )
   {
-    sub_B775C4(&System_IO_BinaryReader_TypeInfo);
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    sub_B775C4(&ManagerConfig_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438B9EB = 1;
+    sub_1B00CCC(&System_IO_BinaryReader_TypeInfo, method);
+    sub_1B00CCC(&System_IDisposable_TypeInfo, v2);
+    sub_1B00CCC(&ManagerConfig_TypeInfo, v3);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v4);
+    byte_48E1FF3 = 1;
   }
-  v2 = ManagerConfig_TypeInfo;
-  if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ManagerConfig_TypeInfo->_2.cctor_finished )
+  v5 = ManagerConfig_TypeInfo;
+  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v2 = ManagerConfig_TypeInfo;
+    v5 = ManagerConfig_TypeInfo;
   }
-  if ( v2->static_fields->UseMock )
+  if ( v5->static_fields->UseMock )
     return 0;
-  v3 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  v6 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  SignupFileName = NetworkManager__getSignupFileName((const MethodInfo *)v3);
+  SignupFileName = NetworkManager__getSignupFileName((const MethodInfo *)v6);
   if ( !System_IO_File__Exists(SignupFileName, 0LL) )
     return 0;
-  v5 = (System_IO_Stream_o *)System_IO_File__OpenRead(SignupFileName, 0LL);
-  v6 = (System_IO_BinaryReader_o *)sub_B77694(System_IO_BinaryReader_TypeInfo);
-  System_IO_BinaryReader___ctor(v6, v5, 0LL);
-  if ( !v6 )
-    sub_B7769C(v7, v8);
-  v15 = (System_Int32_array **)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v6->klass->vtable._22_ReadString.method)(
-                                 v6,
-                                 v6->klass->vtable._23_ReadChars.methodPtr);
-  v16 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v8 = (System_IO_Stream_o *)System_IO_File__OpenRead(SignupFileName, 0LL);
+  v9 = (System_IO_BinaryReader_o *)sub_1B00F18(System_IO_BinaryReader_TypeInfo);
+  System_IO_BinaryReader___ctor(v9, v8, 0LL);
+  if ( !v9 )
+    sub_1B00F28(v10, v11);
+  v14 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v9->klass->vtable._22_ReadString.method)(
+          v9,
+          v9->klass->vtable._23_ReadChars.methodPtr);
+  v15 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v16 = NetworkManager_TypeInfo;
+    v15 = NetworkManager_TypeInfo;
   }
-  static_fields = v16->static_fields;
-  static_fields->userName = (struct System_String_o *)v15;
-  sub_B77560((BattleServantConfConponent_o *)&static_fields->userName, v15, v9, v10, v11, v12, v13, v14);
-  NetworkManager_TypeInfo->static_fields->genderType = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v6->klass->vtable._15_ReadInt32.method)(
-                                                         v6,
-                                                         v6->klass->vtable._16_ReadUInt32.methodPtr);
-  NetworkManager_TypeInfo->static_fields->month = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v6->klass->vtable._15_ReadInt32.method)(
-                                                    v6,
-                                                    v6->klass->vtable._16_ReadUInt32.methodPtr);
-  v18 = 1;
-  NetworkManager_TypeInfo->static_fields->day = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v6->klass->vtable._15_ReadInt32.method)(
-                                                  v6,
-                                                  v6->klass->vtable._16_ReadUInt32.methodPtr);
-  klass = v6->klass;
-  if ( *(_WORD *)&v6->klass->_2.bitflags1 )
+  static_fields = v15->static_fields;
+  static_fields->userName = (struct System_String_o *)v14;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->userName, v14, v12, v13);
+  NetworkManager_TypeInfo->static_fields->genderType = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v9->klass->vtable._15_ReadInt32.method)(
+                                                         v9,
+                                                         v9->klass->vtable._16_ReadUInt32.methodPtr);
+  NetworkManager_TypeInfo->static_fields->month = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v9->klass->vtable._15_ReadInt32.method)(
+                                                    v9,
+                                                    v9->klass->vtable._16_ReadUInt32.methodPtr);
+  v17 = 1;
+  NetworkManager_TypeInfo->static_fields->day = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v9->klass->vtable._15_ReadInt32.method)(
+                                                  v9,
+                                                  v9->klass->vtable._16_ReadUInt32.methodPtr);
+  klass = v9->klass;
+  v19 = *(unsigned __int16 *)(&v9->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v9->klass->_2.bitflags2 + 3) )
   {
-    v20 = 0LL;
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
     {
-      ++v20;
+      --v19;
       p_offset += 4;
-      if ( v20 >= *(unsigned __int16 *)&v6->klass->_2.bitflags1 )
-        goto LABEL_19;
+      if ( !v19 )
+        goto LABEL_16;
     }
-    v22 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+    v21 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
   }
   else
   {
-LABEL_19:
-    v22 = sub_B0F4C0(v6, System_IDisposable_TypeInfo, 0LL);
+LABEL_16:
+    v21 = sub_1B52CAC(v9, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v22)(v6, *(_QWORD *)(v22 + 8));
-  return v18;
+  (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v21)(v9, *(_QWORD *)(v21 + 8));
+  return v17;
 }
 
 
@@ -3956,95 +3318,93 @@ void __fastcall NetworkManager__ReleseService(NetworkManager_o *this, const Meth
 // local variable allocation has failed, the output may be wrong!
 void __fastcall NetworkManager__ReplaceBaseField(RequestBase_o *request, bool isRefreshTime, const MethodInfo *method)
 {
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
   void *Instance; // x0
-  DataManager_c *v6; // x0
-  DataManager_c *v7; // x0
-  NetworkManager_c *v8; // x0
+  DataManager_c *v13; // x0
+  DataManager_c *v14; // x0
+  NetworkManager_c *v15; // x0
   int64_t Time; // x0
-  const MethodInfo *v10; // x2
-  System_String_o *v11; // x0
-  System_Guid_o v12; // [xsp+0h] [xbp-30h] BYREF
-  System_Guid_o v13; // 0:x0.16
+  const MethodInfo *v17; // x2
+  System_String_o *v18; // x0
+  System_Guid_o v19; // [xsp+0h] [xbp-40h] BYREF
+  System_Guid_o v20; // 0:x0.16
 
-  if ( (byte_438BA50 & 1) == 0 )
+  if ( (byte_48E205A & 1) == 0 )
   {
-    sub_B775C4(&System_Guid_TypeInfo);
-    sub_B775C4(&ManagerConfig_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B775C4(&StringLiteral_18247/*"dateVer"*/);
-    sub_B775C4(&StringLiteral_18231/*"dataVer"*/);
-    sub_B775C4(&StringLiteral_16694/*"appVer"*/);
-    sub_B775C4(&StringLiteral_19780/*"idempotencyKey"*/);
-    sub_B775C4(&StringLiteral_20592/*"lastAccessTime"*/);
-    byte_438BA50 = 1;
+    sub_1B00CCC(&ManagerConfig_TypeInfo, isRefreshTime);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v5);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    sub_1B00CCC(&StringLiteral_18236/*"dateVer"*/, v7);
+    sub_1B00CCC(&StringLiteral_18221/*"dataVer"*/, v8);
+    sub_1B00CCC(&StringLiteral_16577/*"appVer"*/, v9);
+    sub_1B00CCC(&StringLiteral_19932/*"idempotencyKey"*/, v10);
+    sub_1B00CCC(&StringLiteral_20759/*"lastAccessTime"*/, v11);
+    byte_48E205A = 1;
   }
-  v12 = (System_Guid_o)0LL;
   Instance = ManagerConfig_TypeInfo;
-  if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ManagerConfig_TypeInfo->_2.cctor_finished )
-  {
+  v19 = (System_Guid_o)0LL;
+  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-  }
   if ( !request )
-    goto LABEL_28;
-  RequestBase__replaceField_32566352(
+    goto LABEL_21;
+  RequestBase__replaceField_39834080(
     request,
-    (System_String_o *)StringLiteral_16694/*"appVer"*/,
+    (System_String_o *)StringLiteral_16577/*"appVer"*/,
     ManagerConfig_TypeInfo->static_fields->AppVer,
     0LL);
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_28;
-  if ( !byte_438BAED )
+    goto LABEL_21;
+  if ( !byte_48E00AC )
   {
-    sub_B775C4(&DataManager_TypeInfo);
-    byte_438BAED = 1;
+    sub_1B00CCC(&DataManager_TypeInfo, isRefreshTime);
+    byte_48E00AC = 1;
   }
-  v6 = DataManager_TypeInfo;
-  if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+  v13 = DataManager_TypeInfo;
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    v6 = DataManager_TypeInfo;
+    v13 = DataManager_TypeInfo;
   }
-  RequestBase__replaceField(request, (System_String_o *)StringLiteral_18231/*"dataVer"*/, v6->static_fields->dataVersion, 0LL);
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  RequestBase__replaceField(request, (System_String_o *)StringLiteral_18221/*"dataVer"*/, v13->static_fields->dataVersion, 0LL);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-LABEL_28:
-    sub_B7769C(Instance, isRefreshTime);
-  if ( !byte_438BAEE )
+LABEL_21:
+    sub_1B00F28(Instance, isRefreshTime);
+  if ( !byte_48E00AD )
   {
-    sub_B775C4(&DataManager_TypeInfo);
-    byte_438BAEE = 1;
+    sub_1B00CCC(&DataManager_TypeInfo, isRefreshTime);
+    byte_48E00AD = 1;
   }
-  v7 = DataManager_TypeInfo;
-  if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+  v14 = DataManager_TypeInfo;
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    v7 = DataManager_TypeInfo;
+    v14 = DataManager_TypeInfo;
   }
-  RequestBase__replaceField_32565884(
+  RequestBase__replaceField_39833624(
     request,
-    (System_String_o *)StringLiteral_18247/*"dateVer"*/,
-    v7->static_fields->dateVersion,
+    (System_String_o *)StringLiteral_18236/*"dateVer"*/,
+    v14->static_fields->dateVersion,
     0LL);
   if ( isRefreshTime )
   {
-    v8 = NetworkManager_TypeInfo;
-    if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !NetworkManager_TypeInfo->_2.cctor_finished )
-    {
+    v15 = NetworkManager_TypeInfo;
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    }
-    Time = NetworkManager__getTime((const MethodInfo *)v8);
-    RequestBase__replaceField_32565884(request, (System_String_o *)StringLiteral_20592/*"lastAccessTime"*/, Time, 0LL);
-    if ( (BYTE3(System_Guid_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !System_Guid_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(System_Guid_TypeInfo);
-    v12 = System_Guid__NewGuid(0LL);
-    *(_QWORD *)&v13.fields._a = &v12;
-    *(_QWORD *)&v13.fields._d = 0LL;
-    v11 = System_Guid__ToString(v13, v10);
-    RequestBase__replaceField_32566352(request, (System_String_o *)StringLiteral_19780/*"idempotencyKey"*/, v11, 0LL);
+    Time = NetworkManager__getTime((const MethodInfo *)v15);
+    RequestBase__replaceField_39833624(request, (System_String_o *)StringLiteral_20759/*"lastAccessTime"*/, Time, 0LL);
+    v19 = System_Guid__NewGuid(0LL);
+    *(_QWORD *)&v20.fields._a = &v19;
+    *(_QWORD *)&v20.fields._d = 0LL;
+    v18 = System_Guid__ToString(v20, v17);
+    RequestBase__replaceField_39834080(request, (System_String_o *)StringLiteral_19932/*"idempotencyKey"*/, v18, 0LL);
   }
 }
 
@@ -4059,43 +3419,31 @@ System_Collections_IEnumerator_o *__fastcall NetworkManager__RequestApplicationU
   __int64 v8; // x22
   __int64 v9; // x0
   __int64 v10; // x1
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
-  System_String_array **v17; // x2
-  System_String_array **v18; // x3
-  System_Boolean_array **v19; // x4
-  System_Int32_array **v20; // x5
-  System_Int32_array *v21; // x6
-  System_Int32_array *v22; // x7
-  System_String_array **v23; // x2
-  System_String_array **v24; // x3
-  System_Boolean_array **v25; // x4
-  System_Int32_array **v26; // x5
-  System_Int32_array *v27; // x6
-  System_Int32_array *v28; // x7
+  int32_t v11; // w2
+  int32_t v12; // w3
+  int32_t v13; // w2
+  int32_t v14; // w3
+  int32_t v15; // w2
+  int32_t v16; // w3
 
-  if ( (byte_438BA5A & 1) == 0 )
+  if ( (byte_48E2064 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager__RequestApplicationUpdateCR_d__218_TypeInfo);
-    byte_438BA5A = 1;
+    sub_1B00CCC(&NetworkManager__RequestApplicationUpdateCR_d__218_TypeInfo, storeName);
+    byte_48E2064 = 1;
   }
-  v8 = sub_B77694(NetworkManager__RequestApplicationUpdateCR_d__218_TypeInfo);
+  v8 = sub_1B00F18(NetworkManager__RequestApplicationUpdateCR_d__218_TypeInfo);
   NetworkManager__RequestApplicationUpdateCR_d__218___ctor(
     (NetworkManager__RequestApplicationUpdateCR_d__218_o *)v8,
     0,
     0LL);
   if ( !v8 )
-    sub_B7769C(v9, v10);
+    sub_1B00F28(v9, v10);
   *(_QWORD *)(v8 + 32) = storeName;
-  sub_B77560((BattleServantConfConponent_o *)(v8 + 32), (System_Int32_array **)storeName, v11, v12, v13, v14, v15, v16);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v8 + 32), (int32_t)storeName, v11, v12);
   *(_QWORD *)(v8 + 40) = id;
-  sub_B77560((BattleServantConfConponent_o *)(v8 + 40), (System_Int32_array **)id, v17, v18, v19, v20, v21, v22);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v8 + 40), (int32_t)id, v13, v14);
   *(_QWORD *)(v8 + 48) = callback;
-  sub_B77560((BattleServantConfConponent_o *)(v8 + 48), (System_Int32_array **)callback, v23, v24, v25, v26, v27, v28);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v8 + 48), (int32_t)callback, v15, v16);
   return (System_Collections_IEnumerator_o *)v8;
 }
 
@@ -4109,134 +3457,117 @@ System_Collections_IEnumerator_o *__fastcall NetworkManager__RequestCR(
   __int64 v7; // x21
   __int64 v8; // x0
   __int64 v9; // x1
-  System_String_array **v10; // x2
-  System_String_array **v11; // x3
-  System_Boolean_array **v12; // x4
-  System_Int32_array **v13; // x5
-  System_Int32_array *v14; // x6
-  System_Int32_array *v15; // x7
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
+  int32_t v10; // w2
+  int32_t v11; // w3
+  int32_t v12; // w2
+  int32_t v13; // w3
 
-  if ( (byte_438BA56 & 1) == 0 )
+  if ( (byte_48E2060 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager__RequestCR_d__213_TypeInfo);
-    byte_438BA56 = 1;
+    sub_1B00CCC(&NetworkManager__RequestCR_d__213_TypeInfo, work);
+    byte_48E2060 = 1;
   }
-  v7 = sub_B77694(NetworkManager__RequestCR_d__213_TypeInfo);
+  v7 = sub_1B00F18(NetworkManager__RequestCR_d__213_TypeInfo);
   NetworkManager__RequestCR_d__213___ctor((NetworkManager__RequestCR_d__213_o *)v7, 0, 0LL);
   if ( !v7 )
-    sub_B7769C(v8, v9);
+    sub_1B00F28(v8, v9);
   *(_QWORD *)(v7 + 40) = this;
-  sub_B77560((BattleServantConfConponent_o *)(v7 + 40), (System_Int32_array **)this, v10, v11, v12, v13, v14, v15);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v7 + 40), (int32_t)this, v10, v11);
   *(_QWORD *)(v7 + 32) = work;
-  sub_B77560((BattleServantConfConponent_o *)(v7 + 32), (System_Int32_array **)work, v16, v17, v18, v19, v20, v21);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v7 + 32), (int32_t)work, v12, v13);
   *(float *)(v7 + 48) = delay;
   return (System_Collections_IEnumerator_o *)v7;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall NetworkManager__RequestLogin(
         NetworkManager_o *this,
         NetworkManager_LoginCallbackFunc_o *callback,
         bool isEnforce,
         const MethodInfo *method)
 {
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  NetworkManager_ResultCallbackFunc_o *v11; // x21
-  WarBoardWallAttackRequest_o *Request_WarBoardWallAttackRequest; // x0
-  __int64 v13; // x1
-  TopLoginRequest_o *v14; // x21
-  const MethodInfo *v15; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  NetworkManager_ResultCallbackFunc_o *v10; // x21
+  Il2CppObject *Request_object; // x0
+  __int64 v12; // x1
+  TopLoginRequest_o *v13; // x21
+  const MethodInfo *v14; // x1
 
-  if ( (byte_438BA5B & 1) == 0 )
+  if ( (byte_48E2065 & 1) == 0 )
   {
-    sub_B775C4(&Method_NetworkManager_EndTopLogin__);
-    sub_B775C4(&Method_NetworkManager_getRequest_TopLoginRequest___);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_438BA5B = 1;
+    sub_1B00CCC(&Method_NetworkManager_EndTopLogin__, callback);
+    sub_1B00CCC(&Method_NetworkManager_getRequest_TopLoginRequest___, v7);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v8);
+    sub_1B00CCC(&NetworkManager_ResultCallbackFunc_TypeInfo, v9);
+    byte_48E2065 = 1;
   }
   this->fields.loginCallbackFunc = callback;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.loginCallbackFunc,
-    (System_Int32_array **)callback,
-    (System_String_array **)isEnforce,
-    (System_String_array **)method,
-    v4,
-    v5,
-    v6,
-    v7);
-  v11 = (NetworkManager_ResultCallbackFunc_o *)sub_B77694(NetworkManager_ResultCallbackFunc_TypeInfo);
-  NetworkManager_ResultCallbackFunc___ctor(v11, (Il2CppObject *)this, Method_NetworkManager_EndTopLogin__, 0LL);
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields.loginCallbackFunc,
+    (int32_t)callback,
+    isEnforce,
+    (int32_t)method);
+  v10 = (NetworkManager_ResultCallbackFunc_o *)sub_1B00F18(NetworkManager_ResultCallbackFunc_TypeInfo);
+  NetworkManager_ResultCallbackFunc___ctor(v10, (Il2CppObject *)this, Method_NetworkManager_EndTopLogin__, 0LL);
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  Request_WarBoardWallAttackRequest = NetworkManager__getRequest_WarBoardWallAttackRequest_(
-                                        v11,
-                                        (const MethodInfo_1DF8BE8 *)Method_NetworkManager_getRequest_TopLoginRequest___);
-  v14 = (TopLoginRequest_o *)Request_WarBoardWallAttackRequest;
+  Request_object = NetworkManager__getRequest_object_(
+                     v10,
+                     (const MethodInfo_2DD4818 *)Method_NetworkManager_getRequest_TopLoginRequest___);
+  v13 = (TopLoginRequest_o *)Request_object;
   if ( isEnforce )
   {
-    if ( !Request_WarBoardWallAttackRequest )
-LABEL_13:
-      sub_B7769C(Request_WarBoardWallAttackRequest, v13);
+    if ( !Request_object )
+LABEL_12:
+      sub_1B00F28(Request_object, v12);
   }
   else
   {
-    if ( !Request_WarBoardWallAttackRequest )
-      goto LABEL_13;
-    if ( (((__int64 (__fastcall *)(WarBoardWallAttackRequest_o *, Il2CppMethodPointer))Request_WarBoardWallAttackRequest->klass->vtable._7_checkExpirationDate.method)(
-            Request_WarBoardWallAttackRequest,
-            Request_WarBoardWallAttackRequest->klass->vtable._8_isBackgroundRequest.methodPtr) & 1) != 0 )
+    if ( !Request_object )
+      goto LABEL_12;
+    if ( (((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Request_object->klass->vtable[7].method)(
+            Request_object,
+            Request_object->klass->vtable[8].methodPtr) & 1) != 0 )
     {
-      NetworkManager__EndLogin(this, v15);
+      NetworkManager__EndLogin(this, v14);
       return;
     }
   }
-  TopLoginRequest__beginRequest(v14, 0LL);
+  TopLoginRequest__beginRequest(v13, 0LL);
 }
 
 
 void __fastcall NetworkManager__RequestStart(RequestBase_o *request, const MethodInfo *method)
 {
-  NetworkManager_o *Instance; // x0
+  Il2CppObject *Instance; // x0
   const MethodInfo *v4; // x1
   const MethodInfo *v5; // x2
 
-  if ( (byte_438BA52 & 1) == 0 )
+  if ( (byte_48E205C & 1) == 0 )
   {
-    sub_B775C4(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
-    byte_438BA52 = 1;
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, method);
+    byte_48E205C = 1;
   }
-  Instance = (NetworkManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
   if ( !Instance )
     goto LABEL_9;
-  if ( NetworkManager__CheckServerLimitTime(Instance, v4) )
+  if ( NetworkManager__CheckServerLimitTime((NetworkManager_o *)Instance, v4) )
   {
-    Instance = (NetworkManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
     if ( Instance )
     {
-      NetworkManager__AddWaitStatus(Instance, request, v5);
-      Instance = (NetworkManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+      NetworkManager__AddWaitStatus((NetworkManager_o *)Instance, request, v5);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
       if ( Instance )
       {
-        NetworkManager__CommunicationStart(Instance, v4);
+        NetworkManager__CommunicationStart((NetworkManager_o *)Instance, v4);
         return;
       }
     }
 LABEL_9:
-    sub_B7769C(Instance, v4);
+    sub_1B00F28(Instance, v4);
   }
 }
 
@@ -4248,75 +3579,44 @@ void __fastcall NetworkManager__SetAuth(
         System_String_o *secretKey,
         const MethodInfo *method)
 {
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  NetworkManager_c *v11; // x0
+  __int64 v8; // x1
+  NetworkManager_c *v9; // x0
   struct NetworkManager_StaticFields *static_fields; // x0
-  struct NetworkManager_StaticFields *v13; // x0
-  System_String_array **v14; // x2
-  System_String_array **v15; // x3
-  System_Boolean_array **v16; // x4
-  System_Int32_array **v17; // x5
-  System_Int32_array *v18; // x6
-  System_Int32_array *v19; // x7
-  struct NetworkManager_StaticFields *v20; // x0
-  System_String_array **v21; // x2
-  System_String_array **v22; // x3
-  System_Boolean_array **v23; // x4
-  System_Int32_array **v24; // x5
-  System_Int32_array *v25; // x6
-  System_Int32_array *v26; // x7
+  struct NetworkManager_StaticFields *v11; // x0
+  int32_t v12; // w2
+  int32_t v13; // w3
+  struct NetworkManager_StaticFields *v14; // x0
+  int32_t v15; // w2
+  int32_t v16; // w3
 
-  if ( (byte_438B9FD & 1) == 0 )
+  if ( (byte_48E2005 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&SignedData_TypeInfo);
-    byte_438B9FD = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, userId);
+    sub_1B00CCC(&SignedData_TypeInfo, v8);
+    byte_48E2005 = 1;
   }
   if ( userId )
   {
-    v11 = NetworkManager_TypeInfo;
-    if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !NetworkManager_TypeInfo->_2.cctor_finished )
+    v9 = NetworkManager_TypeInfo;
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      v11 = NetworkManager_TypeInfo;
+      v9 = NetworkManager_TypeInfo;
     }
-    static_fields = v11->static_fields;
+    static_fields = v9->static_fields;
     static_fields->userId = userId;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&static_fields->userId,
-      (System_Int32_array **)userId,
-      (System_String_array **)authKey,
-      (System_String_array **)secretKey,
-      (System_Boolean_array **)method,
-      v5,
-      v6,
-      v7);
-    v13 = NetworkManager_TypeInfo->static_fields;
-    v13->authKey = authKey;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&v13->authKey,
-      (System_Int32_array **)authKey,
-      v14,
-      v15,
-      v16,
-      v17,
-      v18,
-      v19);
-    v20 = NetworkManager_TypeInfo->static_fields;
-    v20->secretKey = secretKey;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&v20->secretKey,
-      (System_Int32_array **)secretKey,
-      v21,
-      v22,
-      v23,
-      v24,
-      v25,
-      v26);
-    if ( (BYTE3(SignedData_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SignedData_TypeInfo->_2.cctor_finished )
+    sub_1B00C70(
+      (ServantStatusBattleListViewItem_o *)&static_fields->userId,
+      (int32_t)userId,
+      (int32_t)authKey,
+      (int32_t)secretKey);
+    v11 = NetworkManager_TypeInfo->static_fields;
+    v11->authKey = authKey;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&v11->authKey, (int32_t)authKey, v12, v13);
+    v14 = NetworkManager_TypeInfo->static_fields;
+    v14->secretKey = secretKey;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&v14->secretKey, (int32_t)secretKey, v15, v16);
+    if ( !SignedData_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SignedData_TypeInfo);
     SignedData__RefreshSigningData(3, 0LL);
   }
@@ -4325,198 +3625,173 @@ void __fastcall NetworkManager__SetAuth(
 
 void __fastcall NetworkManager__SetBaseField(RequestBase_o *request, const MethodInfo *method)
 {
-  _BYTE *Instance; // x0
-  DataManager_c *v4; // x0
-  DataManager_c *v5; // x0
-  NetworkManager_c *v6; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  _DWORD *Instance; // x0
+  DataManager_c *v14; // x0
+  DataManager_c *v15; // x0
+  NetworkManager_c *v16; // x0
   int64_t Time; // x0
-  const MethodInfo *v8; // x2
-  System_String_o *v9; // x0
-  System_Guid_o v10; // [xsp+0h] [xbp-40h] BYREF
-  System_Guid_o v11; // 0:x0.16
+  const MethodInfo *v18; // x2
+  System_String_o *v19; // x0
+  System_Guid_o v20; // [xsp+0h] [xbp-50h] BYREF
+  System_Guid_o v21; // 0:x0.16
 
-  if ( (byte_438BA4E & 1) == 0 )
+  if ( (byte_48E2058 & 1) == 0 )
   {
-    sub_B775C4(&System_Guid_TypeInfo);
-    sub_B775C4(&ManagerConfig_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B775C4(&StringLiteral_18247/*"dateVer"*/);
-    sub_B775C4(&StringLiteral_18231/*"dataVer"*/);
-    sub_B775C4(&StringLiteral_23612/*"verCode"*/);
-    sub_B775C4(&StringLiteral_16694/*"appVer"*/);
-    sub_B775C4(&StringLiteral_19780/*"idempotencyKey"*/);
-    sub_B775C4(&StringLiteral_16850/*"authKey"*/);
-    sub_B775C4(&StringLiteral_23521/*"userId"*/);
-    sub_B775C4(&StringLiteral_20592/*"lastAccessTime"*/);
-    byte_438BA4E = 1;
+    sub_1B00CCC(&ManagerConfig_TypeInfo, method);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v3);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    sub_1B00CCC(&StringLiteral_18236/*"dateVer"*/, v5);
+    sub_1B00CCC(&StringLiteral_18221/*"dataVer"*/, v6);
+    sub_1B00CCC(&StringLiteral_24158/*"verCode"*/, v7);
+    sub_1B00CCC(&StringLiteral_16577/*"appVer"*/, v8);
+    sub_1B00CCC(&StringLiteral_19932/*"idempotencyKey"*/, v9);
+    sub_1B00CCC(&StringLiteral_16737/*"authKey"*/, v10);
+    sub_1B00CCC(&StringLiteral_24066/*"userId"*/, v11);
+    sub_1B00CCC(&StringLiteral_20759/*"lastAccessTime"*/, v12);
+    byte_48E2058 = 1;
   }
-  v10 = (System_Guid_o)0LL;
   Instance = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v20 = (System_Guid_o)0LL;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     Instance = NetworkManager_TypeInfo;
   }
   if ( *(_QWORD *)(*((_QWORD *)Instance + 23) + 80LL) )
   {
-    if ( (Instance[307] & 4) != 0 && !*((_DWORD *)Instance + 56) )
+    if ( !Instance[56] )
       j_il2cpp_runtime_class_init_0(Instance);
     if ( !request )
-LABEL_35:
-      sub_B7769C(Instance, method);
-    RequestBase__addField_32565392(
+LABEL_26:
+      sub_1B00F28(Instance, method);
+    RequestBase__addField_39752868(
       request,
-      (System_String_o *)StringLiteral_23521/*"userId"*/,
+      (System_String_o *)StringLiteral_24066/*"userId"*/,
       NetworkManager_TypeInfo->static_fields->userId,
       0LL);
-    RequestBase__addField_32565392(
+    RequestBase__addField_39752868(
       request,
-      (System_String_o *)StringLiteral_16850/*"authKey"*/,
+      (System_String_o *)StringLiteral_16737/*"authKey"*/,
       NetworkManager_TypeInfo->static_fields->authKey,
       0LL);
   }
   Instance = ManagerConfig_TypeInfo;
-  if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ManagerConfig_TypeInfo->_2.cctor_finished )
-  {
+  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-  }
   if ( !request )
-    goto LABEL_35;
-  RequestBase__addField_32565392(
+    goto LABEL_26;
+  RequestBase__addField_39752868(
     request,
-    (System_String_o *)StringLiteral_16694/*"appVer"*/,
+    (System_String_o *)StringLiteral_16577/*"appVer"*/,
     ManagerConfig_TypeInfo->static_fields->AppVer,
     0LL);
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_35;
-  if ( !byte_438BAED )
+    goto LABEL_26;
+  if ( !byte_48E00AC )
   {
-    sub_B775C4(&DataManager_TypeInfo);
-    byte_438BAED = 1;
+    sub_1B00CCC(&DataManager_TypeInfo, method);
+    byte_48E00AC = 1;
   }
-  v4 = DataManager_TypeInfo;
-  if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+  v14 = DataManager_TypeInfo;
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    v4 = DataManager_TypeInfo;
+    v14 = DataManager_TypeInfo;
   }
-  RequestBase__addField(request, (System_String_o *)StringLiteral_18231/*"dataVer"*/, v4->static_fields->dataVersion, 0LL);
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  RequestBase__addField(request, (System_String_o *)StringLiteral_18221/*"dataVer"*/, v14->static_fields->dataVersion, 0LL);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_35;
-  if ( !byte_438BAEE )
+    goto LABEL_26;
+  if ( !byte_48E00AD )
   {
-    sub_B775C4(&DataManager_TypeInfo);
-    byte_438BAEE = 1;
+    sub_1B00CCC(&DataManager_TypeInfo, method);
+    byte_48E00AD = 1;
   }
-  v5 = DataManager_TypeInfo;
-  if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+  v15 = DataManager_TypeInfo;
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    v5 = DataManager_TypeInfo;
+    v15 = DataManager_TypeInfo;
   }
-  RequestBase__addField_32564924(request, (System_String_o *)StringLiteral_18247/*"dateVer"*/, v5->static_fields->dateVersion, 0LL);
-  v6 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  RequestBase__addField_39759196(request, (System_String_o *)StringLiteral_18236/*"dateVer"*/, v15->static_fields->dateVersion, 0LL);
+  v16 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  Time = NetworkManager__getTime((const MethodInfo *)v6);
-  RequestBase__addField_32564924(request, (System_String_o *)StringLiteral_20592/*"lastAccessTime"*/, Time, 0LL);
-  RequestBase__addField_32565392(
+  Time = NetworkManager__getTime((const MethodInfo *)v16);
+  RequestBase__addField_39759196(request, (System_String_o *)StringLiteral_20759/*"lastAccessTime"*/, Time, 0LL);
+  RequestBase__addField_39752868(
     request,
-    (System_String_o *)StringLiteral_23612/*"verCode"*/,
+    (System_String_o *)StringLiteral_24158/*"verCode"*/,
     ManagerConfig_TypeInfo->static_fields->verCode,
     0LL);
-  if ( (BYTE3(System_Guid_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !System_Guid_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(System_Guid_TypeInfo);
-  v10 = System_Guid__NewGuid(0LL);
-  *(_QWORD *)&v11.fields._a = &v10;
-  *(_QWORD *)&v11.fields._d = 0LL;
-  v9 = System_Guid__ToString(v11, v8);
-  RequestBase__addField_32565392(request, (System_String_o *)StringLiteral_19780/*"idempotencyKey"*/, v9, 0LL);
+  v20 = System_Guid__NewGuid(0LL);
+  *(_QWORD *)&v21.fields._a = &v20;
+  *(_QWORD *)&v21.fields._d = 0LL;
+  v19 = System_Guid__ToString(v21, v18);
+  RequestBase__addField_39752868(request, (System_String_o *)StringLiteral_19932/*"idempotencyKey"*/, v19, 0LL);
 }
 
 
 void __fastcall NetworkManager__SetDataServerFolderName(System_String_o *folderName, const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  NetworkManager_c *v9; // x0
+  int32_t v2; // w2
+  int32_t v3; // w3
+  __int64 v5; // x1
+  NetworkManager_c *v6; // x0
   struct NetworkManager_StaticFields *static_fields; // x0
 
-  if ( (byte_438BA29 & 1) == 0 )
+  if ( (byte_48E2033 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438BA29 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v5);
+    byte_48E2033 = 1;
   }
-  v9 = NetworkManager_TypeInfo;
+  v6 = NetworkManager_TypeInfo;
   if ( !folderName )
     folderName = (System_String_o *)StringLiteral_1/*""*/;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v9 = NetworkManager_TypeInfo;
+    v6 = NetworkManager_TypeInfo;
   }
-  static_fields = v9->static_fields;
+  static_fields = v6->static_fields;
   static_fields->dataServerFolder = folderName;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&static_fields->dataServerFolder,
-    (System_Int32_array **)folderName,
-    v2,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->dataServerFolder, (int32_t)folderName, v2, v3);
 }
 
 
 void __fastcall NetworkManager__SetDataServerRedirect(System_String_o *address, const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  NetworkManager_c *v9; // x0
+  int32_t v2; // w2
+  int32_t v3; // w3
+  NetworkManager_c *v5; // x0
   struct NetworkManager_StaticFields *static_fields; // x0
 
-  if ( (byte_438BA2B & 1) == 0 )
+  if ( (byte_48E2035 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA2B = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    byte_48E2035 = 1;
   }
-  v9 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v5 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v9 = NetworkManager_TypeInfo;
+    v5 = NetworkManager_TypeInfo;
   }
-  static_fields = v9->static_fields;
+  static_fields = v5->static_fields;
   static_fields->dataServerRedirectAddress = address;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&static_fields->dataServerRedirectAddress,
-    (System_Int32_array **)address,
-    v2,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->dataServerRedirectAddress, (int32_t)address, v2, v3);
 }
 
 
@@ -4528,23 +3803,24 @@ void __fastcall NetworkManager__SetDebugSlowConnect(bool flag, const MethodInfo 
 
 void __fastcall NetworkManager__SetDeviceInfoField(RequestBase_o *request, const MethodInfo *method)
 {
+  __int64 v3; // x1
   Il2CppObject *deviceModel; // x20
   Il2CppObject *operatingSystem; // x0
-  System_String_o *v5; // x0
-  __int64 v6; // x1
+  System_String_o *v6; // x0
+  __int64 v7; // x1
 
-  if ( (byte_438BA51 & 1) == 0 )
+  if ( (byte_48E205B & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_18363/*"deviceInfo"*/);
-    sub_B775C4(&StringLiteral_24039/*"{0} / {1}"*/);
-    byte_438BA51 = 1;
+    sub_1B00CCC(&StringLiteral_18358/*"deviceInfo"*/, method);
+    sub_1B00CCC(&StringLiteral_24630/*"{0} / {1}"*/, v3);
+    byte_48E205B = 1;
   }
   deviceModel = (Il2CppObject *)UnityEngine_SystemInfo__get_deviceModel(0LL);
   operatingSystem = (Il2CppObject *)UnityEngine_SystemInfo__get_operatingSystem(0LL);
-  v5 = System_String__Format_44897472((System_String_o *)StringLiteral_24039/*"{0} / {1}"*/, deviceModel, operatingSystem, 0LL);
+  v6 = System_String__Format_60340120((System_String_o *)StringLiteral_24630/*"{0} / {1}"*/, deviceModel, operatingSystem, 0LL);
   if ( !request )
-    sub_B7769C(v5, v6);
-  RequestBase__addField_32565392(request, (System_String_o *)StringLiteral_18363/*"deviceInfo"*/, v5, 0LL);
+    sub_1B00F28(v6, v7);
+  RequestBase__addField_39752868(request, (System_String_o *)StringLiteral_18358/*"deviceInfo"*/, v6, 0LL);
 }
 
 
@@ -4553,80 +3829,60 @@ void __fastcall NetworkManager__SetFriendCode(
         System_String_o *friendCode,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  NetworkManager_c *v9; // x0
+  int32_t v3; // w3
+  NetworkManager_c *v5; // x0
   struct NetworkManager_StaticFields *static_fields; // x0
 
-  if ( (byte_438B9F1 & 1) == 0 )
+  if ( (byte_48E1FF9 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438B9F1 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, friendCode);
+    byte_48E1FF9 = 1;
   }
   if ( friendCode )
   {
-    v9 = NetworkManager_TypeInfo;
-    if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !NetworkManager_TypeInfo->_2.cctor_finished )
+    v5 = NetworkManager_TypeInfo;
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      v9 = NetworkManager_TypeInfo;
+      v5 = NetworkManager_TypeInfo;
     }
-    static_fields = v9->static_fields;
+    static_fields = v5->static_fields;
     static_fields->friendCode = friendCode;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&static_fields->friendCode,
-      (System_Int32_array **)friendCode,
-      (System_String_array **)method,
-      v3,
-      v4,
-      v5,
-      v6,
-      v7);
+    sub_1B00C70(
+      (ServantStatusBattleListViewItem_o *)&static_fields->friendCode,
+      (int32_t)friendCode,
+      (int32_t)method,
+      v3);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall NetworkManager__SetGameServerRedirect(
         System_String_o *address,
         bool isSecurity,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  NetworkManager_c *v10; // x0
-  struct NetworkManager_StaticFields *static_fields; // x0
+  int32_t v3; // w3
+  NetworkManager_c *v6; // x0
+  ServantStatusBattleListViewItem_o *static_fields; // x0
 
-  if ( (byte_438BA2A & 1) == 0 )
+  if ( (byte_48E2034 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA2A = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, isSecurity);
+    byte_48E2034 = 1;
   }
-  v10 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v6 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v10 = NetworkManager_TypeInfo;
+    v6 = NetworkManager_TypeInfo;
   }
-  v10->static_fields->serverRedirectSecurity = isSecurity;
-  static_fields = v10->static_fields;
-  static_fields->gameServerRedirectAddress = address;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&static_fields->gameServerRedirectAddress,
-    (System_Int32_array **)address,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  static_fields = (ServantStatusBattleListViewItem_o *)v6->static_fields;
+  static_fields[1].fields.sortStr1 = address;
+  static_fields = (ServantStatusBattleListViewItem_o *)((char *)static_fields + 224);
+  static_fields[-1].fields.isMine = isSecurity;
+  sub_1B00C70(static_fields, (int32_t)address, (int32_t)method, v3);
 }
 
 
@@ -4634,14 +3890,13 @@ void __fastcall NetworkManager__SetSecurityServerSetting(bool security, const Me
 {
   NetworkManager_c *v3; // x0
 
-  if ( (byte_438BA2F & 1) == 0 )
+  if ( (byte_48E2039 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA2F = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    byte_48E2039 = 1;
   }
   v3 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     v3 = NetworkManager_TypeInfo;
@@ -4650,7 +3905,6 @@ void __fastcall NetworkManager__SetSecurityServerSetting(bool security, const Me
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall NetworkManager__SetServerSetting(
         NetworkManager_o *this,
         System_String_o *type,
@@ -4660,279 +3914,197 @@ void __fastcall NetworkManager__SetServerSetting(
         System_String_o *webAddress,
         const MethodInfo *method)
 {
-  System_Int32_array *v7; // x7
-  NetworkManager_c *v14; // x0
-  struct NetworkManager_StaticFields *static_fields; // x0
-  NetworkManager_c *v16; // x8
-  struct NetworkManager_StaticFields *v17; // x0
-  System_String_array **v18; // x2
-  System_String_array **v19; // x3
-  System_Boolean_array **v20; // x4
-  System_Int32_array **v21; // x5
-  System_Int32_array *v22; // x6
-  System_Int32_array *v23; // x7
-  struct NetworkManager_StaticFields *v24; // x0
-  System_String_array **v25; // x2
-  System_String_array **v26; // x3
-  System_Boolean_array **v27; // x4
-  System_Int32_array **v28; // x5
-  System_Int32_array *v29; // x6
-  System_Int32_array *v30; // x7
-  struct NetworkManager_StaticFields *v31; // x0
-  System_String_array **v32; // x2
-  System_String_array **v33; // x3
-  System_Boolean_array **v34; // x4
-  System_Int32_array **v35; // x5
-  System_Int32_array *v36; // x6
-  System_Int32_array *v37; // x7
-  const MethodInfo *v38; // x1
+  NetworkManager_c *v13; // x0
+  ServantStatusBattleListViewItem_o *static_fields; // x0
+  struct NetworkManager_StaticFields *v15; // x0
+  char v16; // w2
+  int32_t v17; // w3
+  struct NetworkManager_StaticFields *v18; // x0
+  char v19; // w2
+  int32_t v20; // w3
+  struct NetworkManager_StaticFields *v21; // x0
+  char v22; // w2
+  int32_t v23; // w3
+  const MethodInfo *v24; // x1
 
-  if ( (byte_438BA41 & 1) == 0 )
+  if ( (byte_48E204B & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA41 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, type);
+    byte_48E204B = 1;
   }
-  v14 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v13 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v14 = NetworkManager_TypeInfo;
+    v13 = NetworkManager_TypeInfo;
   }
-  static_fields = v14->static_fields;
-  static_fields->serverSettingType = type;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&static_fields->serverSettingType,
-    (System_Int32_array **)type,
-    (System_String_array **)isSecuritey,
-    (System_String_array **)gameAddress,
-    (System_Boolean_array **)dataAddress,
-    (System_Int32_array **)webAddress,
-    (System_Int32_array *)method,
-    v7);
-  v16 = NetworkManager_TypeInfo;
-  NetworkManager_TypeInfo->static_fields->serverSettingSecurity = isSecuritey;
-  v17 = v16->static_fields;
-  v17->gameServerSettingAddress = gameAddress;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&v17->gameServerSettingAddress,
-    (System_Int32_array **)gameAddress,
-    v18,
-    v19,
-    v20,
-    v21,
-    v22,
-    v23);
-  v24 = NetworkManager_TypeInfo->static_fields;
-  v24->dataServerSettingAddress = dataAddress;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&v24->dataServerSettingAddress,
-    (System_Int32_array **)dataAddress,
-    v25,
-    v26,
-    v27,
-    v28,
-    v29,
-    v30);
-  v31 = NetworkManager_TypeInfo->static_fields;
-  v31->webServerSettingAddress = webAddress;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&v31->webServerSettingAddress,
-    (System_Int32_array **)webAddress,
-    v32,
-    v33,
-    v34,
-    v35,
-    v36,
-    v37);
-  NetworkManager__SetServerSetting_26218140(this, v38);
+  static_fields = (ServantStatusBattleListViewItem_o *)v13->static_fields;
+  static_fields[1].klass = (ServantStatusBattleListViewItem_c *)type;
+  sub_1B00C70(static_fields + 1, (int32_t)type, isSecuritey, (int32_t)gameAddress);
+  v15 = NetworkManager_TypeInfo->static_fields;
+  v15->gameServerSettingAddress = gameAddress;
+  v15 = (struct NetworkManager_StaticFields *)((char *)v15 + 184);
+  LOBYTE(v15[-1].errorDialogResponseData) = isSecuritey;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)v15, (int32_t)gameAddress, v16, v17);
+  v18 = NetworkManager_TypeInfo->static_fields;
+  v18->dataServerSettingAddress = dataAddress;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v18->dataServerSettingAddress, (int32_t)dataAddress, v19, v20);
+  v21 = NetworkManager_TypeInfo->static_fields;
+  v21->webServerSettingAddress = webAddress;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v21->webServerSettingAddress, (int32_t)webAddress, v22, v23);
+  NetworkManager__SetServerSetting_37239144(this, v24);
 }
 
 
-void __fastcall NetworkManager__SetServerSetting_26218140(NetworkManager_o *this, const MethodInfo *method)
+void __fastcall NetworkManager__SetServerSetting_37239144(NetworkManager_o *this, const MethodInfo *method)
 {
-  NetworkManager_c *v2; // x0
-  __int16 v3; // w8
-  int v4; // w10
-  struct NetworkManager_StaticFields **p_static_fields; // x8
-  struct NetworkManager_StaticFields *static_fields; // x9
-  System_String_o *gameServerRedirectAddress; // x0
-  ManagerConfig_c *v8; // x0
-  System_Int32_array **v9; // x1
-  BattleServantConfConponent_o *p_gameServerAddress; // x0
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
+  __int64 v2; // x1
+  __int64 v3; // x1
+  struct NetworkManager_StaticFields *static_fields; // x8
+  struct System_String_o *gameServerRedirectAddress; // x19
+  System_String_o **p_gameServerRedirectAddress; // x8
+  ManagerConfig_c *v7; // x0
+  System_String_o *v8; // x1
+  ServantStatusBattleListViewItem_o *p_gameServerAddress; // x0
+  int32_t v10; // w2
+  int32_t v11; // w3
   NetworkManager_c *IsOnline; // x0
-  const MethodInfo *v18; // x2
-  int32_t v19; // w1
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
-  NetworkManager_c *v26; // x0
-  __int16 v27; // w8
-  int v28; // w9
-  struct NetworkManager_StaticFields *v29; // x8
-  System_Int32_array **webServerRedirectAddress; // x1
-  ManagerConfig_c *v31; // x0
+  const MethodInfo *v13; // x2
+  int32_t v14; // w1
+  __int64 v15; // x1
+  int32_t v16; // w2
+  int32_t v17; // w3
+  struct NetworkManager_StaticFields *v18; // x8
+  struct System_String_o *webServerRedirectAddress; // x19
+  struct System_String_o **p_webServerRedirectAddress; // x9
+  ManagerConfig_c *v21; // x0
+  struct System_String_o *v22; // x1
 
-  if ( (byte_438BA42 & 1) == 0 )
+  if ( (byte_48E204C & 1) == 0 )
   {
-    sub_B775C4(&AssetManager_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&StringLiteral_892/*"/"*/);
-    byte_438BA42 = 1;
+    sub_1B00CCC(&AssetManager_TypeInfo, method);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v2);
+    sub_1B00CCC(&StringLiteral_1120/*"/"*/, v3);
+    byte_48E204C = 1;
   }
-  v2 = NetworkManager_TypeInfo;
-  v3 = WORD1(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr);
-  if ( (v3 & 0x400) != 0 )
+  if ( NetworkManager_TypeInfo->_2.cctor_finished )
   {
-    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      v2 = NetworkManager_TypeInfo;
-      v3 = WORD1(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr);
-    }
-    v4 = v3 & 0x400;
-  }
-  else
-  {
-    v4 = 0;
-  }
-  p_static_fields = &v2->static_fields;
-  static_fields = v2->static_fields;
-  if ( static_fields->gameServerRedirectAddress )
-  {
-    if ( v4 && !v2->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(v2);
-      p_static_fields = &NetworkManager_TypeInfo->static_fields;
-      static_fields = NetworkManager_TypeInfo->static_fields;
-    }
+    static_fields = NetworkManager_TypeInfo->static_fields;
+    if ( !static_fields->gameServerRedirectAddress )
+      goto LABEL_12;
+LABEL_11:
     static_fields->serverSecurity = static_fields->serverRedirectSecurity;
-    gameServerRedirectAddress = (*p_static_fields)->gameServerRedirectAddress;
+    p_gameServerRedirectAddress = &static_fields->gameServerRedirectAddress;
+    goto LABEL_21;
   }
-  else
+  j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  static_fields = NetworkManager_TypeInfo->static_fields;
+  gameServerRedirectAddress = static_fields->gameServerRedirectAddress;
+  if ( NetworkManager_TypeInfo->_2.cctor_finished )
   {
-    if ( v4 && !v2->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(v2);
-    if ( !byte_438BAE9 )
-    {
-      sub_B775C4(&ManagerConfig_TypeInfo);
-      byte_438BAE9 = 1;
-    }
-    v8 = ManagerConfig_TypeInfo;
-    if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !ManagerConfig_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-      v8 = ManagerConfig_TypeInfo;
-    }
-    NetworkManager_TypeInfo->static_fields->serverSecurity = v8->static_fields->ReleaseNetworkSecurity;
-    if ( !byte_438BAEA )
-    {
-      sub_B775C4(&ManagerConfig_TypeInfo);
-      v8 = ManagerConfig_TypeInfo;
-      byte_438BAEA = 1;
-    }
-    if ( (BYTE3(v8->vtable._0_Equals.methodPtr) & 4) != 0 && !v8->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(v8);
-      v8 = ManagerConfig_TypeInfo;
-    }
-    gameServerRedirectAddress = v8->static_fields->ReleaseGameServerAddress;
+    if ( !gameServerRedirectAddress )
+      goto LABEL_12;
+    goto LABEL_11;
   }
-  v9 = (System_Int32_array **)System_String__Concat_44901936(
-                                gameServerRedirectAddress,
-                                (System_String_o *)StringLiteral_892/*"/"*/,
-                                0LL);
-  p_gameServerAddress = (BattleServantConfConponent_o *)&NetworkManager_TypeInfo->static_fields->gameServerAddress;
-  p_gameServerAddress->klass = (BattleServantConfConponent_c *)v9;
-  sub_B77560(p_gameServerAddress, v9, v11, v12, v13, v14, v15, v16);
-  if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
+  j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( gameServerRedirectAddress )
+  {
+    static_fields = NetworkManager_TypeInfo->static_fields;
+    goto LABEL_11;
+  }
+LABEL_12:
+  if ( !byte_48E019F )
+  {
+    sub_1B00CCC(&ManagerConfig_TypeInfo, method);
+    byte_48E019F = 1;
+  }
+  v7 = ManagerConfig_TypeInfo;
+  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
+    v7 = ManagerConfig_TypeInfo;
+  }
+  NetworkManager_TypeInfo->static_fields->serverSecurity = v7->static_fields->ReleaseNetworkSecurity;
+  if ( !byte_48E01A0 )
+  {
+    sub_1B00CCC(&ManagerConfig_TypeInfo, method);
+    v7 = ManagerConfig_TypeInfo;
+    byte_48E01A0 = 1;
+  }
+  if ( !v7->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(v7);
+    v7 = ManagerConfig_TypeInfo;
+  }
+  p_gameServerRedirectAddress = &v7->static_fields->ReleaseGameServerAddress;
+LABEL_21:
+  v8 = System_String__Concat_60325748(*p_gameServerRedirectAddress, (System_String_o *)StringLiteral_1120/*"/"*/, 0LL);
+  p_gameServerAddress = (ServantStatusBattleListViewItem_o *)&NetworkManager_TypeInfo->static_fields->gameServerAddress;
+  p_gameServerAddress->klass = (ServantStatusBattleListViewItem_c *)v8;
+  sub_1B00C70(p_gameServerAddress, (int32_t)v8, v10, v11);
+  if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   IsOnline = (NetworkManager_c *)AssetManager__get_IsOnline(0LL);
   if ( ((unsigned __int8)IsOnline & 1) != 0 )
   {
     IsOnline = NetworkManager_TypeInfo;
-    if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !NetworkManager_TypeInfo->_2.cctor_finished )
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       IsOnline = NetworkManager_TypeInfo;
     }
     if ( IsOnline->static_fields->dataServerRedirectAddress )
-      v19 = 3;
+      v14 = 3;
     else
-      v19 = 1;
+      v14 = 1;
   }
   else
   {
-    v19 = 0;
+    v14 = 0;
   }
-  NetworkManager__setupDataServerAddress((NetworkManager_o *)IsOnline, v19, v18);
-  v26 = NetworkManager_TypeInfo;
-  v27 = WORD1(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr);
-  if ( (v27 & 0x400) != 0 )
+  NetworkManager__setupDataServerAddress((NetworkManager_o *)IsOnline, v14, v13);
+  if ( NetworkManager_TypeInfo->_2.cctor_finished )
   {
-    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      v26 = NetworkManager_TypeInfo;
-      v27 = WORD1(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr);
-    }
-    v28 = v27 & 0x400;
+    v18 = NetworkManager_TypeInfo->static_fields;
+    if ( !v18->webServerRedirectAddress )
+      goto LABEL_39;
+LABEL_38:
+    p_webServerRedirectAddress = &v18->webServerRedirectAddress;
+    goto LABEL_44;
   }
-  else
+  j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  v18 = NetworkManager_TypeInfo->static_fields;
+  webServerRedirectAddress = v18->webServerRedirectAddress;
+  if ( NetworkManager_TypeInfo->_2.cctor_finished )
   {
-    v28 = 0;
+    if ( !webServerRedirectAddress )
+      goto LABEL_39;
+    goto LABEL_38;
   }
-  v29 = v26->static_fields;
-  webServerRedirectAddress = (System_Int32_array **)v29->webServerRedirectAddress;
+  j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   if ( webServerRedirectAddress )
   {
-    if ( v28 && !v26->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(v26);
-      v29 = NetworkManager_TypeInfo->static_fields;
-      webServerRedirectAddress = (System_Int32_array **)v29->webServerRedirectAddress;
-    }
+    v18 = NetworkManager_TypeInfo->static_fields;
+    goto LABEL_38;
   }
-  else
+LABEL_39:
+  if ( !byte_48E01A2 )
   {
-    if ( v28 && !v26->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(v26);
-    if ( !byte_438BAEB )
-    {
-      sub_B775C4(&ManagerConfig_TypeInfo);
-      byte_438BAEB = 1;
-    }
-    v31 = ManagerConfig_TypeInfo;
-    if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !ManagerConfig_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-      v31 = ManagerConfig_TypeInfo;
-    }
-    v29 = NetworkManager_TypeInfo->static_fields;
-    webServerRedirectAddress = (System_Int32_array **)v31->static_fields->ReleaseWebServerAddress;
+    sub_1B00CCC(&ManagerConfig_TypeInfo, v15);
+    byte_48E01A2 = 1;
   }
-  v29->webServerAddress = (struct System_String_o *)webServerRedirectAddress;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&v29->webServerAddress,
-    webServerRedirectAddress,
-    v20,
-    v21,
-    v22,
-    v23,
-    v24,
-    v25);
+  v21 = ManagerConfig_TypeInfo;
+  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
+    v21 = ManagerConfig_TypeInfo;
+  }
+  v18 = NetworkManager_TypeInfo->static_fields;
+  p_webServerRedirectAddress = &v21->static_fields->ReleaseWebServerAddress;
+LABEL_44:
+  v22 = *p_webServerRedirectAddress;
+  v18->webServerAddress = *p_webServerRedirectAddress;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v18->webServerAddress, (int32_t)v22, v16, v17);
 }
 
 
@@ -4940,14 +4112,13 @@ void __fastcall NetworkManager__SetServerTimeChkMovie(int64_t serverTimeChkMovie
 {
   NetworkManager_c *v3; // x0
 
-  if ( (byte_438B9F7 & 1) == 0 )
+  if ( (byte_48E1FFF & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438B9F7 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    byte_48E1FFF = 1;
   }
   v3 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     v3 = NetworkManager_TypeInfo;
@@ -4958,101 +4129,90 @@ void __fastcall NetworkManager__SetServerTimeChkMovie(int64_t serverTimeChkMovie
 
 void __fastcall NetworkManager__SetSignatureField(RequestBase_o *request, const MethodInfo *method)
 {
-  System_String_o *SignedPackData; // x0
+  __int64 v3; // x1
   __int64 v4; // x1
+  __int64 v5; // x1
+  System_String_o *SignedPackData; // x0
+  __int64 v7; // x1
   CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *key; // x20
-  System_String_o *v6; // x0
-  SignedData_SignedPackData_o *outData; // [xsp+8h] [xbp-18h] BYREF
+  System_String_o *v9; // x0
+  SignedData_SignedPackData_o *outData; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_438BA4F & 1) == 0 )
+  if ( (byte_48E2059 & 1) == 0 )
   {
-    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-    sub_B775C4(&SignedData_TypeInfo);
-    sub_B775C4(&StringLiteral_19780/*"idempotencyKey"*/);
-    sub_B775C4(&StringLiteral_19781/*"idempotencyKeySignature"*/);
-    byte_438BA4F = 1;
+    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, method);
+    sub_1B00CCC(&SignedData_TypeInfo, v3);
+    sub_1B00CCC(&StringLiteral_19932/*"idempotencyKey"*/, v4);
+    sub_1B00CCC(&StringLiteral_19933/*"idempotencyKeySignature"*/, v5);
+    byte_48E2059 = 1;
   }
   outData = 0LL;
-  if ( (BYTE3(SignedData_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SignedData_TypeInfo->_2.cctor_finished )
+  if ( !SignedData_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SignedData_TypeInfo);
   SignedPackData = (System_String_o *)SignedData__GetSignedPackData(&outData, 0LL);
   if ( ((unsigned __int8)SignedPackData & 1) != 0 )
-    goto LABEL_22;
-  if ( (BYTE3(SignedData_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SignedData_TypeInfo->_2.cctor_finished )
+    goto LABEL_19;
+  if ( !SignedData_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SignedData_TypeInfo);
   SignedData__CreateSignedPackData(1, 0LL);
   SignedPackData = (System_String_o *)SignedData__GetSignedPackData(&outData, 0LL);
   if ( ((unsigned __int8)SignedPackData & 1) != 0 )
   {
-LABEL_22:
+LABEL_19:
     if ( !outData )
-      goto LABEL_19;
+      goto LABEL_16;
     key = outData->fields.key;
-    if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
-    {
+    if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-    }
-    SignedPackData = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_45464420(key, 0LL);
+    SignedPackData = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_45348888(key, 0LL);
     if ( !request
-      || (RequestBase__replaceField_32566352(request, (System_String_o *)StringLiteral_19780/*"idempotencyKey"*/, SignedPackData, 0LL),
+      || (RequestBase__replaceField_39834080(request, (System_String_o *)StringLiteral_19932/*"idempotencyKey"*/, SignedPackData, 0LL),
           !outData) )
     {
-LABEL_19:
-      sub_B7769C(SignedPackData, v4);
+LABEL_16:
+      sub_1B00F28(SignedPackData, v7);
     }
-    v6 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_45464420(outData->fields.value, 0LL);
-    RequestBase__addField_32565392(request, (System_String_o *)StringLiteral_19781/*"idempotencyKeySignature"*/, v6, 0LL);
+    v9 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_45348888(outData->fields.value, 0LL);
+    RequestBase__addField_39752868(request, (System_String_o *)StringLiteral_19933/*"idempotencyKeySignature"*/, v9, 0LL);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall NetworkManager__SetSignup(
         NetworkManager_o *this,
         System_String_o *userName,
         int32_t genderType,
         const MethodInfo *method)
 {
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  NetworkManager_c *v10; // x0
+  NetworkManager_c *v6; // x0
   struct NetworkManager_StaticFields *static_fields; // x0
 
-  if ( (byte_438B9ED & 1) == 0 )
+  if ( (byte_48E1FF5 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438B9ED = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, userName);
+    byte_48E1FF5 = 1;
   }
   if ( userName )
   {
-    v10 = NetworkManager_TypeInfo;
-    if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !NetworkManager_TypeInfo->_2.cctor_finished )
+    v6 = NetworkManager_TypeInfo;
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      v10 = NetworkManager_TypeInfo;
+      v6 = NetworkManager_TypeInfo;
     }
-    static_fields = v10->static_fields;
+    static_fields = v6->static_fields;
     static_fields->userName = userName;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&static_fields->userName,
-      (System_Int32_array **)userName,
-      *(System_String_array ***)&genderType,
-      (System_String_array **)method,
-      v4,
-      v5,
-      v6,
-      v7);
+    sub_1B00C70(
+      (ServantStatusBattleListViewItem_o *)&static_fields->userName,
+      (int32_t)userName,
+      genderType,
+      (int32_t)method);
     NetworkManager_TypeInfo->static_fields->genderType = genderType;
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall NetworkManager__SetSignup_26193488(
+void __fastcall NetworkManager__SetSignup_37252204(
         NetworkManager_o *this,
         System_String_o *userName,
         int32_t genderType,
@@ -5060,41 +4220,30 @@ void __fastcall NetworkManager__SetSignup_26193488(
         int32_t day,
         const MethodInfo *method)
 {
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  NetworkManager_c *v12; // x0
+  NetworkManager_c *v10; // x0
   struct NetworkManager_StaticFields *static_fields; // x0
-  NetworkManager_c *v14; // x8
+  struct NetworkManager_StaticFields *v12; // x8
 
-  if ( (byte_438B9EE & 1) == 0 )
+  if ( (byte_48E1FF6 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438B9EE = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, userName);
+    byte_48E1FF6 = 1;
   }
   if ( userName )
   {
-    v12 = NetworkManager_TypeInfo;
-    if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !NetworkManager_TypeInfo->_2.cctor_finished )
+    v10 = NetworkManager_TypeInfo;
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      v12 = NetworkManager_TypeInfo;
+      v10 = NetworkManager_TypeInfo;
     }
-    static_fields = v12->static_fields;
+    static_fields = v10->static_fields;
     static_fields->userName = userName;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&static_fields->userName,
-      (System_Int32_array **)userName,
-      *(System_String_array ***)&genderType,
-      *(System_String_array ***)&month,
-      *(System_Boolean_array ***)&day,
-      (System_Int32_array **)method,
-      v6,
-      v7);
-    v14 = NetworkManager_TypeInfo;
-    NetworkManager_TypeInfo->static_fields->genderType = genderType;
-    v14->static_fields->month = month;
-    v14->static_fields->day = day;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->userName, (int32_t)userName, genderType, month);
+    v12 = NetworkManager_TypeInfo->static_fields;
+    v12->genderType = genderType;
+    v12->month = month;
+    v12->day = day;
   }
 }
 
@@ -5104,75 +4253,49 @@ void __fastcall NetworkManager__SetUserAgent(
         System_String_o *userAgent,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  NetworkManager_c *v10; // x0
+  int32_t v3; // w3
+  NetworkManager_c *v6; // x0
   struct NetworkManager_StaticFields *static_fields; // x0
 
-  if ( (byte_438B9E9 & 1) == 0 )
+  if ( (byte_48E1FF1 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438B9E9 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, userAgent);
+    byte_48E1FF1 = 1;
   }
-  v10 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v6 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v10 = NetworkManager_TypeInfo;
+    v6 = NetworkManager_TypeInfo;
   }
-  static_fields = v10->static_fields;
+  static_fields = v6->static_fields;
   static_fields->userAgent = userAgent;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&static_fields->userAgent,
-    (System_Int32_array **)userAgent,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->userAgent, (int32_t)userAgent, (int32_t)method, v3);
   this->fields._isWaitUserAgent_k__BackingField = 0;
 }
 
 
 void __fastcall NetworkManager__SetWebServerRedirect(System_String_o *address, const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  NetworkManager_c *v9; // x0
+  int32_t v2; // w2
+  int32_t v3; // w3
+  NetworkManager_c *v5; // x0
   struct NetworkManager_StaticFields *static_fields; // x0
 
-  if ( (byte_438BA2C & 1) == 0 )
+  if ( (byte_48E2036 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA2C = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    byte_48E2036 = 1;
   }
-  v9 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v5 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v9 = NetworkManager_TypeInfo;
+    v5 = NetworkManager_TypeInfo;
   }
-  static_fields = v9->static_fields;
+  static_fields = v5->static_fields;
   static_fields->webServerRedirectAddress = address;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&static_fields->webServerRedirectAddress,
-    (System_Int32_array **)address,
-    v2,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->webServerRedirectAddress, (int32_t)address, v2, v3);
 }
 
 
@@ -5181,39 +4304,35 @@ void __fastcall NetworkManager__SetupObfuscatedAccountId(
         System_String_o *loginResultStr,
         const MethodInfo *method)
 {
+  __int64 v4; // x1
+  __int64 v5; // x1
   bool IsObfuscatedAccountIdCached; // w0
-  TerminalPramsManager_ClearData_o *v5; // x0
-  System_String_o *questClearCostumeGetInfo; // x19
+  Il2CppObject *v7; // x0
+  System_String_o *monitor; // x19
 
-  if ( (byte_438BA5C & 1) == 0 )
+  if ( (byte_48E2066 & 1) == 0 )
   {
-    sub_B775C4(&Method_JsonManager_Deserialize_CommonUI_LoginResultData___);
-    sub_B775C4(&JsonManager_TypeInfo);
-    sub_B775C4(&PurchaseBehaviour_TypeInfo);
-    byte_438BA5C = 1;
+    sub_1B00CCC(&Method_JsonManager_Deserialize_CommonUI_LoginResultData___, loginResultStr);
+    sub_1B00CCC(&JsonManager_TypeInfo, v4);
+    sub_1B00CCC(&PurchaseBehaviour_TypeInfo, v5);
+    byte_48E2066 = 1;
   }
-  if ( (BYTE3(PurchaseBehaviour_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !PurchaseBehaviour_TypeInfo->_2.cctor_finished )
-  {
+  if ( !PurchaseBehaviour_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(PurchaseBehaviour_TypeInfo);
-  }
   IsObfuscatedAccountIdCached = PurchaseBehaviour__IsObfuscatedAccountIdCached(0LL);
   if ( loginResultStr && !IsObfuscatedAccountIdCached )
   {
-    if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
+    if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v5 = JsonManager__Deserialize_TerminalPramsManager_ClearData_(
+    v7 = JsonManager__Deserialize_object_(
            (Il2CppObject *)loginResultStr,
-           (const MethodInfo_1DF1654 *)Method_JsonManager_Deserialize_CommonUI_LoginResultData___);
-    if ( v5 )
+           (const MethodInfo_2DB835C *)Method_JsonManager_Deserialize_CommonUI_LoginResultData___);
+    if ( v7 )
     {
-      questClearCostumeGetInfo = (System_String_o *)v5->fields.questClearCostumeGetInfo;
-      if ( (BYTE3(PurchaseBehaviour_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !PurchaseBehaviour_TypeInfo->_2.cctor_finished )
-      {
+      monitor = (System_String_o *)v7[6].monitor;
+      if ( !PurchaseBehaviour_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(PurchaseBehaviour_TypeInfo);
-      }
-      PurchaseBehaviour__SetCachedObfuscatedAccountId(questClearCostumeGetInfo, 0LL);
+      PurchaseBehaviour__SetCachedObfuscatedAccountId(monitor, 0LL);
     }
   }
 }
@@ -5224,7 +4343,7 @@ void __fastcall NetworkManager__Start(NetworkManager_o *this, const MethodInfo *
   System_Collections_IEnumerator_o *v3; // x1
 
   v3 = NetworkManager__TimeUpdate(this, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_36304832((UnityEngine_MonoBehaviour_o *)this, v3, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_68062928((UnityEngine_MonoBehaviour_o *)this, v3, 0LL);
 }
 
 
@@ -5236,238 +4355,215 @@ void __fastcall NetworkManager__SwitchingDebugSlowConnect(const MethodInfo *meth
 
 int32_t __fastcall NetworkManager__SyncAuth(NetworkManager_o *this, const MethodInfo *method)
 {
-  int v2; // w28
-  const MethodInfo *v3; // x1
-  System_String_o *v4; // x26
-  const MethodInfo *v5; // x1
-  System_String_o *v6; // x0
-  const MethodInfo *v7; // x1
-  System_String_o *v8; // x0
-  const MethodInfo *v9; // x2
-  System_String_o *AuthMd5; // x26
-  NetworkManager_c *v11; // x0
+  __int64 v2; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  int v8; // w23
+  NetworkManager_c *v9; // x0
   System_String_o *String; // x24
-  const MethodInfo *v13; // x1
-  System_String_o *AuthFileName; // x0
-  const MethodInfo *v15; // x2
-  const MethodInfo *v16; // x1
-  System_String_o *v17; // x0
-  const MethodInfo *v18; // x2
-  System_String_o *v19; // x0
-  const MethodInfo *v20; // x1
+  const MethodInfo *v11; // x1
+  NetworkManager_o *AuthFileName; // x0
+  const MethodInfo *v13; // x2
+  System_String_o *AuthMd5; // x26
+  const MethodInfo *v15; // x1
+  NetworkManager_o *v16; // x0
+  const MethodInfo *v17; // x2
+  System_String_o *v18; // x0
+  const MethodInfo *v19; // x1
+  System_String_o *v20; // x25
   System_String_o *v21; // x25
-  System_String_o *v22; // x25
-  const MethodInfo *v23; // x1
-  System_String_o *v24; // x0
-  const MethodInfo *v25; // x1
-  System_String_o *v26; // x0
-  const MethodInfo *v27; // x2
-  NetworkManager_c *v28; // x0
-  const MethodInfo *v29; // x1
-  System_String_o *v30; // x24
-  const MethodInfo *v31; // x1
-  System_String_o *v32; // x0
-  NetworkManager_c *v33; // x0
-  System_String_o *OldAuthFileName; // x0
-  const MethodInfo *v35; // x2
-  NetworkManager_c *v36; // x0
-  System_String_o *v37; // x24
-  const MethodInfo *v38; // x1
-  System_String_o *v39; // x0
-  NetworkManager_o *v40; // x0
-  const MethodInfo *v41; // x1
+  const MethodInfo *v22; // x1
+  System_String_o *v23; // x0
+  const MethodInfo *v24; // x1
+  NetworkManager_o *v25; // x0
+  const MethodInfo *v26; // x2
+  NetworkManager_c *v27; // x0
+  const MethodInfo *v28; // x1
+  System_String_o *v29; // x24
+  const MethodInfo *v30; // x1
+  System_String_o *v31; // x0
+  NetworkManager_c *v32; // x0
+  NetworkManager_o *OldAuthFileName; // x0
+  const MethodInfo *v34; // x2
+  NetworkManager_c *v35; // x0
+  System_String_o *v36; // x24
+  const MethodInfo *v37; // x1
+  System_String_o *v38; // x0
+  NetworkManager_o *v39; // x0
+  const MethodInfo *v40; // x1
   _BOOL8 OldSignup; // x0
-  const MethodInfo *v43; // x1
-  NetworkManager_c *v44; // x0
+  const MethodInfo *v42; // x1
+  NetworkManager_c *v43; // x0
   System_String_o *OldSignupFileName; // x0
-  AccountingManager_o *Instance; // x0
-  __int64 v47; // x1
-  AccountingManager_o *v48; // x0
-  __int64 v49; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v46; // x1
+  Il2CppObject *v47; // x0
+  __int64 v48; // x1
   System_String_o *OldPaymentFileName; // x0
   System_String_o *OldUnityPersistentDataPath; // x0
-  System_String_o *v52; // x26
+  System_String_o *v51; // x26
   System_String_o *FileNameNotConverted; // x1
-  System_String_o *v54; // x0
-  const MethodInfo *v55; // x2
+  NetworkManager_o *v53; // x0
+  const MethodInfo *v54; // x2
+  const MethodInfo *v55; // x1
   const MethodInfo *v56; // x1
   System_String_o *v57; // x24
   const MethodInfo *v58; // x1
   System_String_o *v59; // x0
+  System_String_o *v61; // x26
+  const MethodInfo *v62; // x1
+  System_String_o *v63; // x0
+  const MethodInfo *v64; // x1
+  NetworkManager_o *v65; // x0
+  const MethodInfo *v66; // x2
 
-  if ( (byte_438B9FE & 1) == 0 )
+  if ( (byte_48E2006 & 1) == 0 )
   {
-    sub_B775C4(&AccountingManager_TypeInfo);
-    sub_B775C4(&AndroidUtil_TypeInfo);
-    sub_B775C4(&DatFileName_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_AccountingManager__get_Instance__);
-    sub_B775C4(&StringLiteral_892/*"/"*/);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438B9FE = 1;
+    sub_1B00CCC(&AccountingManager_TypeInfo, method);
+    sub_1B00CCC(&AndroidUtil_TypeInfo, v2);
+    sub_1B00CCC(&DatFileName_TypeInfo, v3);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v4);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_AccountingManager__get_Instance__, v5);
+    sub_1B00CCC(&StringLiteral_1120/*"/"*/, v6);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v7);
+    byte_48E2006 = 1;
   }
-  v2 = -10;
+  v8 = -10;
   while ( 1 )
   {
-    v11 = NetworkManager_TypeInfo;
-    if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !NetworkManager_TypeInfo->_2.cctor_finished )
+    v9 = NetworkManager_TypeInfo;
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      v11 = NetworkManager_TypeInfo;
+      v9 = NetworkManager_TypeInfo;
     }
     String = UnityEngine_PlayerPrefs__GetString(
-               v11->static_fields->AUTHMD5_KEY_TYPE,
+               v9->static_fields->AUTHMD5_KEY_TYPE,
                (System_String_o *)StringLiteral_1/*""*/,
                0LL);
-    AuthFileName = NetworkManager__getAuthFileName(0, v13);
-    AuthMd5 = NetworkManager__LoadAuthMd5((NetworkManager_o *)AuthFileName, AuthFileName, v15);
-    v17 = NetworkManager__getAuthFileName(1, v16);
-    v19 = NetworkManager__LoadAuthMd5((NetworkManager_o *)v17, v17, v18);
-    v21 = v19;
+    AuthFileName = (NetworkManager_o *)NetworkManager__getAuthFileName(0, v11);
+    AuthMd5 = NetworkManager__LoadAuthMd5(AuthFileName, (System_String_o *)AuthFileName, v13);
+    v16 = (NetworkManager_o *)NetworkManager__getAuthFileName(1, v15);
+    v18 = NetworkManager__LoadAuthMd5(v16, (System_String_o *)v16, v17);
+    v20 = v18;
     if ( AuthMd5 )
     {
-      if ( !v19 )
+      if ( !v18 )
       {
-        if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !NetworkManager_TypeInfo->_2.cctor_finished )
-        {
+        if ( !NetworkManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        }
-        v22 = NetworkManager__getAuthFileName(0, v20);
-        v24 = NetworkManager__getAuthFileName(1, v23);
-        System_IO_File__Copy_44336024(v22, v24, 1, 0LL);
-        v26 = NetworkManager__getAuthFileName(1, v25);
-        v21 = NetworkManager__LoadAuthMd5((NetworkManager_o *)v26, v26, v27);
+        v21 = NetworkManager__getAuthFileName(0, v19);
+        v23 = NetworkManager__getAuthFileName(1, v22);
+        System_IO_File__Copy_60515196(v21, v23, 1, 0LL);
+        v25 = (NetworkManager_o *)NetworkManager__getAuthFileName(1, v24);
+        v20 = NetworkManager__LoadAuthMd5(v25, (System_String_o *)v25, v26);
       }
-      goto LABEL_20;
+      goto LABEL_11;
     }
-    v33 = NetworkManager_TypeInfo;
-    if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !NetworkManager_TypeInfo->_2.cctor_finished )
-    {
+    v32 = NetworkManager_TypeInfo;
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    }
-    OldAuthFileName = NetworkManager__getOldAuthFileName((const MethodInfo *)v33);
-    if ( NetworkManager__LoadAuthMd5((NetworkManager_o *)OldAuthFileName, OldAuthFileName, v35) )
+    OldAuthFileName = (NetworkManager_o *)NetworkManager__getOldAuthFileName((const MethodInfo *)v32);
+    if ( NetworkManager__LoadAuthMd5(OldAuthFileName, (System_String_o *)OldAuthFileName, v34) )
     {
-      v36 = NetworkManager_TypeInfo;
-      if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !NetworkManager_TypeInfo->_2.cctor_finished )
-      {
+      v35 = NetworkManager_TypeInfo;
+      if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      }
-      v37 = NetworkManager__getOldAuthFileName((const MethodInfo *)v36);
-      v39 = NetworkManager__getAuthFileName(0, v38);
-      System_IO_File__Copy_44336024(v37, v39, 1, 0LL);
-      OldSignup = NetworkManager__ReadOldSignup(v40, v41);
+      v36 = NetworkManager__getOldAuthFileName((const MethodInfo *)v35);
+      v38 = NetworkManager__getAuthFileName(0, v37);
+      System_IO_File__Copy_60515196(v36, v38, 1, 0LL);
+      OldSignup = NetworkManager__ReadOldSignup(v39, v40);
       if ( OldSignup )
       {
-        NetworkManager__WriteSignup((NetworkManager_o *)OldSignup, v43);
-        v44 = NetworkManager_TypeInfo;
-        if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !NetworkManager_TypeInfo->_2.cctor_finished )
-        {
+        NetworkManager__WriteSignup((NetworkManager_o *)OldSignup, v42);
+        v43 = NetworkManager_TypeInfo;
+        if ( !NetworkManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        }
-        OldSignupFileName = NetworkManager__getOldSignupFileName((const MethodInfo *)v44);
+        OldSignupFileName = NetworkManager__getOldSignupFileName((const MethodInfo *)v43);
         System_IO_File__Delete(OldSignupFileName, 0LL);
       }
-      Instance = (AccountingManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_AccountingManager__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_AccountingManager__get_Instance__);
       if ( !Instance )
-        sub_B7769C(0LL, v47);
-      if ( AccountingManager__ReadOldPayment(Instance, 0LL) )
+        sub_1B00F28(0LL, v46);
+      if ( AccountingManager__ReadOldPayment((AccountingManager_o *)Instance, 0LL) )
       {
-        v48 = (AccountingManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_AccountingManager__get_Instance__);
-        if ( !v48 )
-          sub_B7769C(0LL, v49);
-        AccountingManager__WritePayment(v48, 0LL);
-        if ( (BYTE3(AccountingManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !AccountingManager_TypeInfo->_2.cctor_finished )
-        {
+        v47 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_AccountingManager__get_Instance__);
+        if ( !v47 )
+          sub_1B00F28(0LL, v48);
+        AccountingManager__WritePayment((AccountingManager_o *)v47, 0LL);
+        if ( !AccountingManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(AccountingManager_TypeInfo);
-        }
         OldPaymentFileName = AccountingManager__GetOldPaymentFileName(0LL);
         System_IO_File__Delete(OldPaymentFileName, 0LL);
       }
-      goto LABEL_69;
+      goto LABEL_50;
     }
-    if ( (BYTE3(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AndroidUtil_TypeInfo->_2.cctor_finished )
+    if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
     OldUnityPersistentDataPath = AndroidUtil__GetOldUnityPersistentDataPath(0LL);
-    v52 = System_String__Concat_44901936(OldUnityPersistentDataPath, (System_String_o *)StringLiteral_892/*"/"*/, 0LL);
-    if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
+    v51 = System_String__Concat_60325748(OldUnityPersistentDataPath, (System_String_o *)StringLiteral_1120/*"/"*/, 0LL);
+    if ( !DatFileName_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
     FileNameNotConverted = DatFileName__getFileNameNotConverted(16, 0LL);
-    v54 = System_String__Concat_44901936(v52, FileNameNotConverted, 0LL);
-    if ( NetworkManager__LoadAuthMd5((NetworkManager_o *)v54, v54, v55) )
+    v53 = (NetworkManager_o *)System_String__Concat_60325748(v51, FileNameNotConverted, 0LL);
+    if ( NetworkManager__LoadAuthMd5(v53, (System_String_o *)v53, v54) )
     {
-      if ( (BYTE3(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !AndroidUtil_TypeInfo->_2.cctor_finished )
-      {
+      if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
-      }
       AndroidUtil__TransitionDatFile(16, 0LL);
       AndroidUtil__TransitionDatFile(18, 0LL);
       AndroidUtil__TransitionDatFile(21, 0LL);
-      goto LABEL_69;
+      goto LABEL_50;
     }
-    if ( !v21 )
+    if ( !v20 )
       return 1;
-    if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !NetworkManager_TypeInfo->_2.cctor_finished )
-    {
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    }
-    v4 = NetworkManager__getAuthFileName(1, v3);
-    v6 = NetworkManager__getAuthFileName(0, v5);
-    System_IO_File__Copy_44336024(v4, v6, 1, 0LL);
-    v8 = NetworkManager__getAuthFileName(0, v7);
-    AuthMd5 = NetworkManager__LoadAuthMd5((NetworkManager_o *)v8, v8, v9);
-LABEL_20:
-    if ( System_String__op_Equality(AuthMd5, v21, 0LL) && System_String__op_Equality(AuthMd5, String, 0LL) )
+    v61 = NetworkManager__getAuthFileName(1, v55);
+    v63 = NetworkManager__getAuthFileName(0, v62);
+    System_IO_File__Copy_60515196(v61, v63, 1, 0LL);
+    v65 = (NetworkManager_o *)NetworkManager__getAuthFileName(0, v64);
+    AuthMd5 = NetworkManager__LoadAuthMd5(v65, (System_String_o *)v65, v66);
+LABEL_11:
+    if ( System_String__op_Equality(AuthMd5, v20, 0LL) && System_String__op_Equality(AuthMd5, String, 0LL) )
       return 0;
-    if ( System_String__op_Equality(AuthMd5, v21, 0LL) && System_String__op_Inequality(AuthMd5, String, 0LL) )
+    if ( System_String__op_Equality(AuthMd5, v20, 0LL) && System_String__op_Inequality(AuthMd5, String, 0LL) )
     {
-      v28 = NetworkManager_TypeInfo;
-      if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !NetworkManager_TypeInfo->_2.cctor_finished )
+      v27 = NetworkManager_TypeInfo;
+      if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        v28 = NetworkManager_TypeInfo;
+        v27 = NetworkManager_TypeInfo;
       }
-      UnityEngine_PlayerPrefs__SetString(v28->static_fields->AUTHMD5_KEY_TYPE, AuthMd5, 0LL);
+      UnityEngine_PlayerPrefs__SetString(v27->static_fields->AUTHMD5_KEY_TYPE, AuthMd5, 0LL);
       UnityEngine_PlayerPrefs__Save(0LL);
     }
-    else if ( System_String__op_Inequality(AuthMd5, v21, 0LL) )
+    else if ( System_String__op_Inequality(AuthMd5, v20, 0LL) )
     {
       if ( System_String__op_Equality(AuthMd5, String, 0LL) )
       {
-        if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !NetworkManager_TypeInfo->_2.cctor_finished )
-        {
+        if ( !NetworkManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        }
-        v30 = NetworkManager__getAuthFileName(0, v29);
-        v32 = NetworkManager__getAuthFileName(1, v31);
-        System_IO_File__Copy_44336024(v30, v32, 1, 0LL);
+        v29 = NetworkManager__getAuthFileName(0, v28);
+        v31 = NetworkManager__getAuthFileName(1, v30);
+        System_IO_File__Copy_60515196(v29, v31, 1, 0LL);
       }
       else
       {
-        if ( !System_String__op_Equality(v21, String, 0LL) )
+        if ( !System_String__op_Equality(v20, String, 0LL) )
           return 2;
-        if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !NetworkManager_TypeInfo->_2.cctor_finished )
-        {
+        if ( !NetworkManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        }
         v57 = NetworkManager__getAuthFileName(1, v56);
         v59 = NetworkManager__getAuthFileName(0, v58);
-        System_IO_File__Copy_44336024(v57, v59, 1, 0LL);
+        System_IO_File__Copy_60515196(v57, v59, 1, 0LL);
       }
     }
-LABEL_69:
-    if ( !++v2 )
+LABEL_50:
+    if ( __CFADD__(v8++, 1) )
       return 0;
   }
 }
@@ -5475,30 +4571,24 @@ LABEL_69:
 
 void __fastcall NetworkManager__TerminalStart(NetworkManager_o *this, const MethodInfo *method)
 {
-  CommonUI_o *Instance; // x0
-  __int64 v3; // x1
+  __int64 v2; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v4; // x1
 
-  if ( (byte_438BA1B & 1) == 0 )
+  if ( (byte_48E2023 & 1) == 0 )
   {
-    sub_B775C4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B775C4(&TopHomeRequest_TypeInfo);
-    byte_438BA1B = 1;
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v2);
+    byte_48E2023 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  if ( !Instance )
-    goto LABEL_9;
-  CommonUI__InitConnect(Instance, 0LL);
-  if ( (BYTE3(TopHomeRequest_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !TopHomeRequest_TypeInfo->_2.cctor_finished )
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  if ( !Instance
+    || (CommonUI__InitConnect((CommonUI_o *)Instance, 0LL),
+        TopHomeRequest__clearExpirationDate(0LL),
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0LL) )
   {
-    j_il2cpp_runtime_class_init_0(TopHomeRequest_TypeInfo);
+    sub_1B00F28(Instance, v4);
   }
-  TopHomeRequest__clearExpirationDate(0LL);
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-  if ( !Instance )
-LABEL_9:
-    sub_B7769C(Instance, v3);
   AvalonSceneManager__transitionSceneRefresh((AvalonSceneManager_o *)Instance, 34, 1, 0LL, 0, 0LL);
 }
 
@@ -5509,18 +4599,17 @@ System_Collections_IEnumerator_o *__fastcall NetworkManager__TimeUpdate(
 {
   NetworkManager__TimeUpdate_d__81_o *v2; // x19
 
-  if ( (byte_438B9E6 & 1) == 0 )
+  if ( (byte_48E1FEE & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager__TimeUpdate_d__81_TypeInfo);
-    byte_438B9E6 = 1;
+    sub_1B00CCC(&NetworkManager__TimeUpdate_d__81_TypeInfo, method);
+    byte_48E1FEE = 1;
   }
-  v2 = (NetworkManager__TimeUpdate_d__81_o *)sub_B77694(NetworkManager__TimeUpdate_d__81_TypeInfo);
+  v2 = (NetworkManager__TimeUpdate_d__81_o *)sub_1B00F18(NetworkManager__TimeUpdate_d__81_TypeInfo);
   NetworkManager__TimeUpdate_d__81___ctor(v2, 0, 0LL);
   return (System_Collections_IEnumerator_o *)v2;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall NetworkManager__WarningDialog(
         NetworkManager_o *this,
         System_String_o *errorTitle,
@@ -5530,99 +4619,105 @@ void __fastcall NetworkManager__WarningDialog(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  System_Int32_array *v7; // x7
-  System_Action_o *v14; // x20
-  CommonUI_o *Instance; // x21
-  ErrorDialog_ClickDelegate_o *v16; // x24
-  __int64 v17; // x0
-  __int64 v18; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  System_Action_o *v18; // x20
+  Il2CppObject *Instance; // x21
+  ErrorDialog_ClickDelegate_o *v20; // x24
+  __int64 v21; // x0
+  __int64 v22; // x1
   System_Nullable_Vector2__o effectDistance; // [xsp+0h] [xbp-60h]
 
-  if ( (byte_438BA12 & 1) == 0 )
+  if ( (byte_48E201A & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&ErrorDialog_ClickDelegate_TypeInfo);
-    sub_B775C4(&Method_NetworkManager_EndErrorDialog__);
-    sub_B775C4(&Method_NetworkManager_EndErrorWebView__);
-    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B775C4(&WebViewManager_TypeInfo);
-    byte_438BA12 = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, errorTitle);
+    sub_1B00CCC(&ErrorDialog_ClickDelegate_TypeInfo, v13);
+    sub_1B00CCC(&Method_NetworkManager_EndErrorDialog__, v14);
+    sub_1B00CCC(&Method_NetworkManager_EndErrorWebView__, v15);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v16);
+    sub_1B00CCC(&WebViewManager_TypeInfo, v17);
+    byte_48E201A = 1;
   }
   this->fields.errorCallbackFunc = callback;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.errorCallbackFunc,
-    (System_Int32_array **)callback,
-    (System_String_array **)errorDetail,
-    (System_String_array **)errorUrl,
-    *(System_Boolean_array ***)&errorType,
-    (System_Int32_array **)callback,
-    (System_Int32_array *)method,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields.errorCallbackFunc,
+    (int32_t)callback,
+    (int32_t)errorDetail,
+    (int32_t)errorUrl);
   if ( errorUrl )
   {
-    v14 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-    System_Action___ctor(v14, (Il2CppObject *)this, Method_NetworkManager_EndErrorWebView__, 0LL);
-    if ( (BYTE3(WebViewManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !WebViewManager_TypeInfo->_2.cctor_finished )
-    {
+    v18 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+    System_Action___ctor(v18, (Il2CppObject *)this, Method_NetworkManager_EndErrorWebView__, 0LL);
+    if ( !WebViewManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(WebViewManager_TypeInfo);
-    }
-    WebViewManager__OpenView(errorTitle, errorUrl, v14, 0LL);
+    WebViewManager__OpenView(errorTitle, errorUrl, v18, 0LL);
   }
   else
   {
-    Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v16 = (ErrorDialog_ClickDelegate_o *)sub_B77694(ErrorDialog_ClickDelegate_TypeInfo);
-    ErrorDialog_ClickDelegate___ctor(v16, (Il2CppObject *)this, Method_NetworkManager_EndErrorDialog__, 0LL);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v20 = (ErrorDialog_ClickDelegate_o *)sub_1B00F18(ErrorDialog_ClickDelegate_TypeInfo);
+    ErrorDialog_ClickDelegate___ctor(v20, (Il2CppObject *)this, Method_NetworkManager_EndErrorDialog__, 0LL);
     if ( !Instance )
-      sub_B7769C(v17, v18);
-    effectDistance.fields.value = 0LL;
-    *(_DWORD *)&effectDistance.fields.has_value = 0;
-    CommonUI__OpenWarningDialog(Instance, errorTitle, errorDetail, v16, errorType != 1, 0, -1.0, 1, effectDistance, 0LL);
+      sub_1B00F28(v21, v22);
+    *(_QWORD *)&effectDistance.fields.hasValue = 0LL;
+    effectDistance.fields.value.fields.y = 0.0;
+    CommonUI__OpenWarningDialog(
+      (CommonUI_o *)Instance,
+      errorTitle,
+      errorDetail,
+      v20,
+      errorType != 1,
+      0,
+      -1.0,
+      1,
+      effectDistance,
+      0LL);
   }
 }
 
 
 void __fastcall NetworkManager__WriteAuth(NetworkManager_o *this, const MethodInfo *method)
 {
-  ManagerConfig_c *v2; // x0
-  NetworkManager_c *v3; // x0
-  System_String_o *AuthFileName; // x0
-  const MethodInfo *v5; // x2
-  const MethodInfo *v6; // x1
-  System_String_o *v7; // x1
-  const MethodInfo *v8; // x2
+  __int64 v2; // x1
+  ManagerConfig_c *v3; // x0
+  NetworkManager_c *v4; // x0
+  NetworkManager_o *AuthFileName; // x0
+  const MethodInfo *v6; // x2
+  const MethodInfo *v7; // x1
+  NetworkManager_o *v8; // x1
+  const MethodInfo *v9; // x2
 
-  if ( (byte_438BA00 & 1) == 0 )
+  if ( (byte_48E2008 & 1) == 0 )
   {
-    sub_B775C4(&ManagerConfig_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA00 = 1;
+    sub_1B00CCC(&ManagerConfig_TypeInfo, method);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v2);
+    byte_48E2008 = 1;
   }
-  v2 = ManagerConfig_TypeInfo;
-  if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ManagerConfig_TypeInfo->_2.cctor_finished )
+  v3 = ManagerConfig_TypeInfo;
+  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v2 = ManagerConfig_TypeInfo;
+    v3 = ManagerConfig_TypeInfo;
   }
-  if ( !v2->static_fields->UseMock )
+  if ( !v3->static_fields->UseMock )
   {
-    v3 = NetworkManager_TypeInfo;
-    if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !NetworkManager_TypeInfo->_2.cctor_finished )
+    v4 = NetworkManager_TypeInfo;
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      v3 = NetworkManager_TypeInfo;
+      v4 = NetworkManager_TypeInfo;
     }
-    if ( v3->static_fields->userId )
+    if ( v4->static_fields->userId )
     {
-      if ( (BYTE3(v3->vtable._0_Equals.methodPtr) & 4) != 0 && !v3->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(v3);
-      AuthFileName = NetworkManager__getAuthFileName(0, method);
-      NetworkManager__WriteAuthFile((NetworkManager_o *)AuthFileName, AuthFileName, v5);
-      v7 = NetworkManager__getAuthFileName(1, v6);
-      NetworkManager__WriteAuthFile((NetworkManager_o *)v7, v7, v8);
+      if ( !v4->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(v4);
+      AuthFileName = (NetworkManager_o *)NetworkManager__getAuthFileName(0, method);
+      NetworkManager__WriteAuthFile(AuthFileName, (System_String_o *)AuthFileName, v6);
+      v8 = (NetworkManager_o *)NetworkManager__getAuthFileName(1, v7);
+      NetworkManager__WriteAuthFile(v8, (System_String_o *)v8, v9);
     }
   }
 }
@@ -5630,150 +4725,144 @@ void __fastcall NetworkManager__WriteAuth(NetworkManager_o *this, const MethodIn
 
 bool __fastcall NetworkManager__WriteAuthFile(NetworkManager_o *this, System_String_o *fname, const MethodInfo *method)
 {
-  System_IO_Stream_o *v4; // x24
-  System_IO_BinaryWriter_o *v5; // x22
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *v6; // x24
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
-  ManagerConfig_c *v8; // x0
-  NetworkManager_c *v9; // x0
-  System_String_o *v10; // x24
-  System_String_o *v11; // x0
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
   __int64 v12; // x1
-  System_String_o *v13; // x24
-  int v14; // w28
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  __int64 v18; // x1
+  System_IO_Stream_o *v19; // x23
+  System_IO_BinaryWriter_o *v20; // x21
+  System_Collections_Generic_Dictionary_object__object__o *v21; // x23
+  __int64 v22; // x1
+  ManagerConfig_c *v23; // x0
+  NetworkManager_c *v24; // x0
+  System_String_o *v25; // x23
+  System_String_o *v26; // x0
+  __int64 v27; // x1
+  System_String_o *v28; // x24
   System_IO_BinaryWriter_c *klass; // x8
-  unsigned __int64 v16; // x10
-  int32_t *p_offset; // x11
-  __int64 v18; // x0
-  System_String_o *v19; // x21
-  NetworkManager_c *v20; // x0
-  _DWORD v22[3]; // [xsp+10h] [xbp-70h]
-  int v23; // [xsp+1Ch] [xbp-64h]
-  int v24; // [xsp+28h] [xbp-58h]
+  __int64 v30; // x9
+  int32_t *p_offset; // x10
+  __int64 v32; // x0
+  System_String_o *v33; // x21
+  NetworkManager_c *v34; // x0
 
-  if ( (byte_438BA01 & 1) == 0 )
+  if ( (byte_48E2009 & 1) == 0 )
   {
-    sub_B775C4(&System_IO_BinaryWriter_TypeInfo);
-    sub_B775C4(&CatAndMouseGame_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
-    sub_B775C4(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_B775C4(&EncryptedPlayerPrefs_TypeInfo);
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    sub_B775C4(&JsonManager_TypeInfo);
-    sub_B775C4(&ManagerConfig_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&StringLiteral_23481/*"userCreateServer"*/);
-    sub_B775C4(&StringLiteral_12828/*"SaveDataVer"*/);
-    sub_B775C4(&StringLiteral_16850/*"authKey"*/);
-    sub_B775C4(&StringLiteral_22414/*"secretKey"*/);
-    sub_B775C4(&StringLiteral_23521/*"userId"*/);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438BA01 = 1;
+    sub_1B00CCC(&System_IO_BinaryWriter_TypeInfo, fname);
+    sub_1B00CCC(&CatAndMouseGame_TypeInfo, v4);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__Add__, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object___ctor__, v6);
+    sub_1B00CCC(&System_Collections_Generic_Dictionary_string__object__TypeInfo, v7);
+    sub_1B00CCC(&EncryptedPlayerPrefs_TypeInfo, v8);
+    sub_1B00CCC(&System_IDisposable_TypeInfo, v9);
+    sub_1B00CCC(&JsonManager_TypeInfo, v10);
+    sub_1B00CCC(&ManagerConfig_TypeInfo, v11);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v12);
+    sub_1B00CCC(&StringLiteral_24025/*"userCreateServer"*/, v13);
+    sub_1B00CCC(&StringLiteral_12298/*"SaveDataVer"*/, v14);
+    sub_1B00CCC(&StringLiteral_16737/*"authKey"*/, v15);
+    sub_1B00CCC(&StringLiteral_22761/*"secretKey"*/, v16);
+    sub_1B00CCC(&StringLiteral_24066/*"userId"*/, v17);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v18);
+    byte_48E2009 = 1;
   }
-  v24 = 0;
-  v23 = 0;
-  v4 = (System_IO_Stream_o *)System_IO_File__OpenWrite(fname, 0LL);
-  v5 = (System_IO_BinaryWriter_o *)sub_B77694(System_IO_BinaryWriter_TypeInfo);
-  System_IO_BinaryWriter___ctor_40221404(v5, v4, 0LL);
-  v6 = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)sub_B77694(System_Collections_Generic_Dictionary_string__object__TypeInfo);
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject____ctor(
-    v6,
-    (const MethodInfo_2F7CA48 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
-  v8 = ManagerConfig_TypeInfo;
-  if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ManagerConfig_TypeInfo->_2.cctor_finished )
-  {
+  v19 = (System_IO_Stream_o *)System_IO_File__OpenWrite(fname, 0LL);
+  v20 = (System_IO_BinaryWriter_o *)sub_1B00F18(System_IO_BinaryWriter_TypeInfo);
+  System_IO_BinaryWriter___ctor_60563772(v20, v19, 0LL);
+  v21 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1B00F18(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+  System_Collections_Generic_Dictionary_object__object____ctor(
+    v21,
+    (const MethodInfo_308D098 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+  v23 = ManagerConfig_TypeInfo;
+  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-  }
-  if ( !v6 )
-    sub_B7769C(v8, v7);
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
-    v6,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_12828/*"SaveDataVer"*/,
-    (System_Xml_Schema_XmlSchemaObject_o *)ManagerConfig_TypeInfo->static_fields->SaveDataVer,
-    (const MethodInfo_2F7D5F8 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
-  v9 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  if ( !v21 )
+    sub_1B00F28(v23, v22);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v21,
+    (Il2CppObject *)StringLiteral_12298/*"SaveDataVer"*/,
+    (Il2CppObject *)ManagerConfig_TypeInfo->static_fields->SaveDataVer,
+    (const MethodInfo_308DA48 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
+  v24 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v9 = NetworkManager_TypeInfo;
+    v24 = NetworkManager_TypeInfo;
   }
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
-    v6,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_23481/*"userCreateServer"*/,
-    (System_Xml_Schema_XmlSchemaObject_o *)v9->static_fields->gameServerAddress,
-    (const MethodInfo_2F7D5F8 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
-    v6,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_23521/*"userId"*/,
-    (System_Xml_Schema_XmlSchemaObject_o *)NetworkManager_TypeInfo->static_fields->userId,
-    (const MethodInfo_2F7D5F8 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
-    v6,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_16850/*"authKey"*/,
-    (System_Xml_Schema_XmlSchemaObject_o *)NetworkManager_TypeInfo->static_fields->authKey,
-    (const MethodInfo_2F7D5F8 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
-    v6,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_22414/*"secretKey"*/,
-    (System_Xml_Schema_XmlSchemaObject_o *)NetworkManager_TypeInfo->static_fields->secretKey,
-    (const MethodInfo_2F7D5F8 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
-  if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v21,
+    (Il2CppObject *)StringLiteral_24025/*"userCreateServer"*/,
+    (Il2CppObject *)v24->static_fields->gameServerAddress,
+    (const MethodInfo_308DA48 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v21,
+    (Il2CppObject *)StringLiteral_24066/*"userId"*/,
+    (Il2CppObject *)NetworkManager_TypeInfo->static_fields->userId,
+    (const MethodInfo_308DA48 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v21,
+    (Il2CppObject *)StringLiteral_16737/*"authKey"*/,
+    (Il2CppObject *)NetworkManager_TypeInfo->static_fields->authKey,
+    (const MethodInfo_308DA48 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v21,
+    (Il2CppObject *)StringLiteral_22761/*"secretKey"*/,
+    (Il2CppObject *)NetworkManager_TypeInfo->static_fields->secretKey,
+    (const MethodInfo_308DA48 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
+  if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-  v10 = JsonManager__toJson((Il2CppObject *)v6, 0, 0, 0LL);
-  if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
-  {
+  v25 = JsonManager__toJson((Il2CppObject *)v21, 0, 0, 0LL);
+  if ( !CatAndMouseGame_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-  }
-  v11 = CatAndMouseGame__CatGame1(v10, 0, 0LL);
-  v13 = v11;
-  if ( !v5 )
-    sub_B7769C(v11, v12);
-  ((void (__fastcall *)(System_IO_BinaryWriter_o *, System_String_o *, void *))v5->klass->vtable._22_Write.method)(
-    v5,
-    v11,
-    v5->klass[1]._1.image);
-  v22[0] = 150;
-  v14 = ++v23;
-  klass = v5->klass;
-  if ( *(_WORD *)&v5->klass->_2.bitflags1 )
+  v26 = CatAndMouseGame__CatGame1(v25, 0, 0LL);
+  v28 = v26;
+  if ( !v20 )
+    sub_1B00F28(v26, v27);
+  ((void (__fastcall *)(System_IO_BinaryWriter_o *, System_String_o *, void *))v20->klass->vtable._22_Write.method)(
+    v20,
+    v26,
+    v20->klass[1]._1.image);
+  klass = v20->klass;
+  v30 = *(unsigned __int16 *)(&v20->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v20->klass->_2.bitflags2 + 3) )
   {
-    v16 = 0LL;
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
     {
-      ++v16;
+      --v30;
       p_offset += 4;
-      if ( v16 >= *(unsigned __int16 *)&v5->klass->_2.bitflags1 )
-        goto LABEL_21;
+      if ( !v30 )
+        goto LABEL_17;
     }
-    v18 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+    v32 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
   }
   else
   {
-LABEL_21:
-    v18 = sub_B0F4C0(v5, System_IDisposable_TypeInfo, 0LL);
+LABEL_17:
+    v32 = sub_1B52CAC(v20, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v18)(v5, *(_QWORD *)(v18 + 8));
-  if ( v14 && v22[v14 - 1] == 150 )
-    v23 = v14 - 1;
-  if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished )
-  {
+  (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v32)(v20, *(_QWORD *)(v32 + 8));
+  if ( !EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
-  }
-  v19 = EncryptedPlayerPrefs__Md5(v13, 0LL);
-  v20 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v33 = EncryptedPlayerPrefs__Md5(v28, 0LL);
+  v34 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v20 = NetworkManager_TypeInfo;
+    v34 = NetworkManager_TypeInfo;
   }
-  UnityEngine_PlayerPrefs__SetString(v20->static_fields->AUTHMD5_KEY_TYPE, v19, 0LL);
+  UnityEngine_PlayerPrefs__SetString(v34->static_fields->AUTHMD5_KEY_TYPE, v33, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
   return 1;
 }
@@ -5781,84 +4870,82 @@ LABEL_21:
 
 void __fastcall NetworkManager__WriteFriendCode(NetworkManager_o *this, const MethodInfo *method)
 {
-  ManagerConfig_c *v2; // x0
-  NetworkManager_c *v3; // x0
+  __int64 v2; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  ManagerConfig_c *v5; // x0
+  NetworkManager_c *v6; // x0
   System_String_o *FriendCodeFileName; // x0
-  System_IO_Stream_o *v5; // x20
-  System_IO_BinaryWriter_o *v6; // x19
-  __int64 v7; // x1
-  long double v8; // q0
-  NetworkManager_c *v9; // x0
+  System_IO_Stream_o *v8; // x20
+  System_IO_BinaryWriter_o *v9; // x19
+  __int64 v10; // x1
+  long double inited; // q0
+  NetworkManager_c *v12; // x0
   System_IO_BinaryWriter_c *klass; // x8
-  unsigned __int64 v11; // x10
-  int32_t *p_offset; // x11
-  __int64 v13; // x0
+  __int64 v14; // x9
+  int32_t *p_offset; // x10
+  __int64 v16; // x0
 
-  if ( (byte_438B9F2 & 1) == 0 )
+  if ( (byte_48E1FFA & 1) == 0 )
   {
-    sub_B775C4(&System_IO_BinaryWriter_TypeInfo);
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    sub_B775C4(&ManagerConfig_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438B9F2 = 1;
+    sub_1B00CCC(&System_IO_BinaryWriter_TypeInfo, method);
+    sub_1B00CCC(&System_IDisposable_TypeInfo, v2);
+    sub_1B00CCC(&ManagerConfig_TypeInfo, v3);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v4);
+    byte_48E1FFA = 1;
   }
-  v2 = ManagerConfig_TypeInfo;
-  if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ManagerConfig_TypeInfo->_2.cctor_finished )
+  v5 = ManagerConfig_TypeInfo;
+  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v2 = ManagerConfig_TypeInfo;
+    v5 = ManagerConfig_TypeInfo;
   }
-  if ( !v2->static_fields->UseMock )
+  if ( !v5->static_fields->UseMock )
   {
-    v3 = NetworkManager_TypeInfo;
-    if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !NetworkManager_TypeInfo->_2.cctor_finished )
+    v6 = NetworkManager_TypeInfo;
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      v3 = NetworkManager_TypeInfo;
+      v6 = NetworkManager_TypeInfo;
     }
-    if ( v3->static_fields->userId )
+    if ( v6->static_fields->userId )
     {
-      if ( (BYTE3(v3->vtable._0_Equals.methodPtr) & 4) != 0 && !v3->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(v3);
-      FriendCodeFileName = NetworkManager__getFriendCodeFileName((const MethodInfo *)v3);
-      v5 = (System_IO_Stream_o *)System_IO_File__OpenWrite(FriendCodeFileName, 0LL);
-      v6 = (System_IO_BinaryWriter_o *)sub_B77694(System_IO_BinaryWriter_TypeInfo);
-      System_IO_BinaryWriter___ctor_40221404(v6, v5, 0LL);
-      v9 = NetworkManager_TypeInfo;
-      if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !NetworkManager_TypeInfo->_2.cctor_finished )
-      {
-        *(__n128 *)&v8 = j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      }
-      if ( !v6 )
-        sub_B7769C(v9, v7);
-      ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, void *, long double))v6->klass->vtable._22_Write.method)(
-        v6,
+      if ( !v6->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(v6);
+      FriendCodeFileName = NetworkManager__getFriendCodeFileName((const MethodInfo *)v6);
+      v8 = (System_IO_Stream_o *)System_IO_File__OpenWrite(FriendCodeFileName, 0LL);
+      v9 = (System_IO_BinaryWriter_o *)sub_1B00F18(System_IO_BinaryWriter_TypeInfo);
+      System_IO_BinaryWriter___ctor_60563772(v9, v8, 0LL);
+      v12 = NetworkManager_TypeInfo;
+      if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+        inited = j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+      if ( !v9 )
+        sub_1B00F28(v12, v10);
+      ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, void *, long double))v9->klass->vtable._22_Write.method)(
+        v9,
         NetworkManager_TypeInfo->static_fields->friendCode,
-        v6->klass[1]._1.image,
-        v8);
-      klass = v6->klass;
-      if ( *(_WORD *)&v6->klass->_2.bitflags1 )
+        v9->klass[1]._1.image,
+        inited);
+      klass = v9->klass;
+      v14 = *(unsigned __int16 *)(&v9->klass->_2.bitflags2 + 3);
+      if ( *(_WORD *)(&v9->klass->_2.bitflags2 + 3) )
       {
-        v11 = 0LL;
         p_offset = &klass->_1.interfaceOffsets->offset;
         while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
         {
-          ++v11;
+          --v14;
           p_offset += 4;
-          if ( v11 >= *(unsigned __int16 *)&v6->klass->_2.bitflags1 )
-            goto LABEL_23;
+          if ( !v14 )
+            goto LABEL_18;
         }
-        v13 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+        v16 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
       }
       else
       {
-LABEL_23:
-        v13 = sub_B0F4C0(v6, System_IDisposable_TypeInfo, 0LL);
+LABEL_18:
+        v16 = sub_1B52CAC(v9, System_IDisposable_TypeInfo, 0LL);
       }
-      (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v13)(v6, *(_QWORD *)(v13 + 8));
+      (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v16)(v9, *(_QWORD *)(v16 + 8));
     }
   }
 }
@@ -5872,96 +4959,94 @@ void __fastcall NetworkManager__WriteServerSetting(NetworkManager_o *this, const
 
 void __fastcall NetworkManager__WriteSignup(NetworkManager_o *this, const MethodInfo *method)
 {
-  ManagerConfig_c *v2; // x0
-  NetworkManager_c *v3; // x0
+  __int64 v2; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  ManagerConfig_c *v5; // x0
+  NetworkManager_c *v6; // x0
   System_String_o *SignupFileName; // x0
-  System_IO_Stream_o *v5; // x20
-  System_IO_BinaryWriter_o *v6; // x19
-  __int64 v7; // x1
-  long double v8; // q0
-  NetworkManager_c *v9; // x0
+  System_IO_Stream_o *v8; // x20
+  System_IO_BinaryWriter_o *v9; // x19
+  __int64 v10; // x1
+  long double inited; // q0
+  NetworkManager_c *v12; // x0
   System_IO_BinaryWriter_c *klass; // x8
-  unsigned __int64 v11; // x10
-  int32_t *p_offset; // x11
-  __int64 v13; // x0
+  __int64 v14; // x9
+  int32_t *p_offset; // x10
+  __int64 v16; // x0
 
-  if ( (byte_438B9EF & 1) == 0 )
+  if ( (byte_48E1FF7 & 1) == 0 )
   {
-    sub_B775C4(&System_IO_BinaryWriter_TypeInfo);
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    sub_B775C4(&ManagerConfig_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438B9EF = 1;
+    sub_1B00CCC(&System_IO_BinaryWriter_TypeInfo, method);
+    sub_1B00CCC(&System_IDisposable_TypeInfo, v2);
+    sub_1B00CCC(&ManagerConfig_TypeInfo, v3);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v4);
+    byte_48E1FF7 = 1;
   }
-  v2 = ManagerConfig_TypeInfo;
-  if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ManagerConfig_TypeInfo->_2.cctor_finished )
+  v5 = ManagerConfig_TypeInfo;
+  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v2 = ManagerConfig_TypeInfo;
+    v5 = ManagerConfig_TypeInfo;
   }
-  if ( !v2->static_fields->UseMock )
+  if ( !v5->static_fields->UseMock )
   {
-    v3 = NetworkManager_TypeInfo;
-    if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !NetworkManager_TypeInfo->_2.cctor_finished )
+    v6 = NetworkManager_TypeInfo;
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      v3 = NetworkManager_TypeInfo;
+      v6 = NetworkManager_TypeInfo;
     }
-    if ( v3->static_fields->userId )
+    if ( v6->static_fields->userId )
     {
-      if ( (BYTE3(v3->vtable._0_Equals.methodPtr) & 4) != 0 && !v3->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(v3);
-      SignupFileName = NetworkManager__getSignupFileName((const MethodInfo *)v3);
-      v5 = (System_IO_Stream_o *)System_IO_File__OpenWrite(SignupFileName, 0LL);
-      v6 = (System_IO_BinaryWriter_o *)sub_B77694(System_IO_BinaryWriter_TypeInfo);
-      System_IO_BinaryWriter___ctor_40221404(v6, v5, 0LL);
-      v9 = NetworkManager_TypeInfo;
-      if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !NetworkManager_TypeInfo->_2.cctor_finished )
-      {
-        *(__n128 *)&v8 = j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      }
-      if ( !v6 )
-        sub_B7769C(v9, v7);
-      ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, void *, long double))v6->klass->vtable._22_Write.method)(
-        v6,
+      if ( !v6->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(v6);
+      SignupFileName = NetworkManager__getSignupFileName((const MethodInfo *)v6);
+      v8 = (System_IO_Stream_o *)System_IO_File__OpenWrite(SignupFileName, 0LL);
+      v9 = (System_IO_BinaryWriter_o *)sub_1B00F18(System_IO_BinaryWriter_TypeInfo);
+      System_IO_BinaryWriter___ctor_60563772(v9, v8, 0LL);
+      v12 = NetworkManager_TypeInfo;
+      if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+        inited = j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+      if ( !v9 )
+        sub_1B00F28(v12, v10);
+      ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, void *, long double))v9->klass->vtable._22_Write.method)(
+        v9,
         NetworkManager_TypeInfo->static_fields->userName,
-        v6->klass[1]._1.image,
-        v8);
-      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v6->klass->vtable._17_Write.method)(
-        v6,
+        v9->klass[1]._1.image,
+        inited);
+      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v9->klass->vtable._17_Write.method)(
+        v9,
         (unsigned int)NetworkManager_TypeInfo->static_fields->genderType,
-        v6->klass->vtable._18_Write.methodPtr);
-      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v6->klass->vtable._17_Write.method)(
-        v6,
+        v9->klass->vtable._18_Write.methodPtr);
+      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v9->klass->vtable._17_Write.method)(
+        v9,
         (unsigned int)NetworkManager_TypeInfo->static_fields->month,
-        v6->klass->vtable._18_Write.methodPtr);
-      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v6->klass->vtable._17_Write.method)(
-        v6,
+        v9->klass->vtable._18_Write.methodPtr);
+      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v9->klass->vtable._17_Write.method)(
+        v9,
         (unsigned int)NetworkManager_TypeInfo->static_fields->day,
-        v6->klass->vtable._18_Write.methodPtr);
-      klass = v6->klass;
-      if ( *(_WORD *)&v6->klass->_2.bitflags1 )
+        v9->klass->vtable._18_Write.methodPtr);
+      klass = v9->klass;
+      v14 = *(unsigned __int16 *)(&v9->klass->_2.bitflags2 + 3);
+      if ( *(_WORD *)(&v9->klass->_2.bitflags2 + 3) )
       {
-        v11 = 0LL;
         p_offset = &klass->_1.interfaceOffsets->offset;
         while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
         {
-          ++v11;
+          --v14;
           p_offset += 4;
-          if ( v11 >= *(unsigned __int16 *)&v6->klass->_2.bitflags1 )
-            goto LABEL_23;
+          if ( !v14 )
+            goto LABEL_18;
         }
-        v13 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+        v16 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
       }
       else
       {
-LABEL_23:
-        v13 = sub_B0F4C0(v6, System_IDisposable_TypeInfo, 0LL);
+LABEL_18:
+        v16 = sub_1B52CAC(v9, System_IDisposable_TypeInfo, 0LL);
       }
-      (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v13)(v6, *(_QWORD *)(v13 + 8));
+      (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v16)(v9, *(_QWORD *)(v16 + 8));
     }
   }
 }
@@ -5977,548 +5062,520 @@ void __fastcall NetworkManager___RequestCR_b__213_0(NetworkManager_o *this, cons
 
 System_String_o *__fastcall NetworkManager__getAuthFileName(bool isSlave, const MethodInfo *method)
 {
-  System_String_o *DatFileSavePath; // x19
-  int32_t v4; // w0
+  __int64 v3; // x1
+  __int64 v4; // x1
+  System_String_o *DatFileSavePath; // x20
+  int32_t v6; // w0
   System_String_o *FileName; // x2
 
-  if ( (byte_438BA20 & 1) == 0 )
+  if ( (byte_48E202A & 1) == 0 )
   {
-    sub_B775C4(&AndroidUtil_TypeInfo);
-    sub_B775C4(&DatFileName_TypeInfo);
-    sub_B775C4(&StringLiteral_892/*"/"*/);
-    byte_438BA20 = 1;
+    sub_1B00CCC(&AndroidUtil_TypeInfo, method);
+    sub_1B00CCC(&DatFileName_TypeInfo, v3);
+    sub_1B00CCC(&StringLiteral_1120/*"/"*/, v4);
+    byte_48E202A = 1;
   }
+  if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
+  DatFileSavePath = AndroidUtil__GetDatFileSavePath(0LL);
+  if ( !DatFileName_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   if ( isSlave )
-  {
-    if ( (WORD1(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
-      && !AndroidUtil_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
-    }
-    DatFileSavePath = AndroidUtil__GetDatFileSavePath(0LL);
-    if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
-    v4 = 17;
-  }
+    v6 = 17;
   else
-  {
-    if ( (WORD1(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
-      && !AndroidUtil_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
-    }
-    DatFileSavePath = AndroidUtil__GetDatFileSavePath(0LL);
-    if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
-    v4 = 16;
-  }
-  FileName = DatFileName__getFileName(v4, 0LL);
-  return System_String__Concat_44904220(DatFileSavePath, (System_String_o *)StringLiteral_892/*"/"*/, FileName, 0LL);
+    v6 = 16;
+  FileName = DatFileName__getFileName(v6, 0LL);
+  return System_String__Concat_60337008(DatFileSavePath, (System_String_o *)StringLiteral_1120/*"/"*/, FileName, 0LL);
 }
 
 
 System_String_o *__fastcall NetworkManager__getBaseMockUrl(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
+  __int64 v1; // x1
+  NetworkManager_c *v2; // x0
 
-  if ( (byte_438BA38 & 1) == 0 )
+  if ( (byte_48E2042 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA38 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, v1);
+    byte_48E2042 = 1;
   }
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v2 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v1 = NetworkManager_TypeInfo;
+    v2 = NetworkManager_TypeInfo;
   }
-  return v1->static_fields->gameServerAddress;
+  return v2->static_fields->gameServerAddress;
 }
 
 
 System_String_o *__fastcall NetworkManager__getBaseUrl(bool isSecurity, const MethodInfo *method)
 {
-  NetworkManager_c *v2; // x0
+  __int64 v2; // x1
+  NetworkManager_c *v3; // x0
 
-  if ( (byte_438BA37 & 1) == 0 )
+  if ( (byte_48E2041 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&StringLiteral_19629/*"https://"*/);
-    byte_438BA37 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_19760/*"https://"*/, v2);
+    byte_48E2041 = 1;
   }
-  v2 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v3 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v2 = NetworkManager_TypeInfo;
+    v3 = NetworkManager_TypeInfo;
   }
-  return System_String__Concat_44901936(
-           (System_String_o *)StringLiteral_19629/*"https://"*/,
-           v2->static_fields->gameServerAddress,
+  return System_String__Concat_60325748(
+           (System_String_o *)StringLiteral_19760/*"https://"*/,
+           v3->static_fields->gameServerAddress,
            0LL);
 }
 
 
 System_String_o *__fastcall NetworkManager__getDataUrl(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
+  __int64 v1; // x1
+  NetworkManager_c *v2; // x0
 
-  if ( (byte_438BA39 & 1) == 0 )
+  if ( (byte_48E2043 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA39 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, v1);
+    byte_48E2043 = 1;
   }
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v2 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v1 = NetworkManager_TypeInfo;
+    v2 = NetworkManager_TypeInfo;
   }
-  return v1->static_fields->dataServerAddress;
+  return v2->static_fields->dataServerAddress;
 }
 
 
 System_DateTime_o __fastcall NetworkManager__getDateTime(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x8
-  uint64_t dateData; // [xsp+8h] [xbp-8h] BYREF
-  System_DateTime_o v4; // 0:x0.8
-  System_DateTime_o v5; // 0:x0.8
+  __int64 v1; // x1
+  __int64 v2; // x1
+  System_DateTime_o v3; // x0
+  NetworkManager_c *v4; // x8
+  uint64_t dateData; // [xsp+8h] [xbp-18h] BYREF
+  System_DateTime_o v7; // 0:x0.8
+  System_DateTime_o v8; // 0:x0.8
 
-  if ( (byte_438BA06 & 1) == 0 )
+  if ( (byte_48E200E & 1) == 0 )
   {
-    sub_B775C4(&System_DateTime_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA06 = 1;
+    sub_1B00CCC(&System_DateTime_TypeInfo, v1);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v2);
+    byte_48E200E = 1;
   }
-  dateData = 0LL;
-  if ( (BYTE3(System_DateTime_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !System_DateTime_TypeInfo->_2.cctor_finished )
-  {
+  if ( !System_DateTime_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
-  }
-  dateData = System_DateTime__get_Now(0LL).fields.dateData;
-  v4.fields.dateData = (uint64_t)&dateData;
-  dateData = System_DateTime__ToUniversalTime(v4, 0LL).fields.dateData;
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  dateData = System_DateTime__get_Now(0LL).fields._dateData;
+  v7.fields._dateData = (uint64_t)&dateData;
+  v3.fields._dateData = System_DateTime__ToUniversalTime(v7, 0LL).fields._dateData;
+  v4 = NetworkManager_TypeInfo;
+  dateData = v3.fields._dateData;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v1 = NetworkManager_TypeInfo;
+    v4 = NetworkManager_TypeInfo;
   }
-  v5.fields.dateData = (uint64_t)&dateData;
-  return System_DateTime__AddSeconds(v5, (double)v1->static_fields->serverOffsetTime, 0LL);
+  v8.fields._dateData = (uint64_t)&dateData;
+  return System_DateTime__AddSeconds(v8, (double)v4->static_fields->serverOffsetTime, 0LL);
 }
 
 
-System_DateTime_o __fastcall NetworkManager__getDateTime_26207384(int64_t t, const MethodInfo *method)
+System_DateTime_o __fastcall NetworkManager__getDateTime_37173004(int64_t t, const MethodInfo *method)
 {
-  NetworkManager_c *v3; // x0
-  uint64_t dateData; // [xsp+8h] [xbp-18h] BYREF
+  __int64 v3; // x1
+  uint64_t dateData; // [xsp+8h] [xbp-28h] BYREF
   System_DateTime_o v6; // 0:x0.8
   System_DateTime_o v7; // 0:x0.8
 
-  if ( (byte_438BA07 & 1) == 0 )
+  if ( (byte_48E200F & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA07 = 1;
+    sub_1B00CCC(&System_DateTime_TypeInfo, method);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v3);
+    byte_48E200F = 1;
   }
-  dateData = 0LL;
-  v3 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v3 = NetworkManager_TypeInfo;
-  }
-  v6.fields.dateData = (uint64_t)&v3->static_fields->dtUnixEpoch;
-  dateData = System_DateTime__AddSeconds(v6, (double)t, 0LL).fields.dateData;
-  v7.fields.dateData = (uint64_t)&dateData;
+  if ( !System_DateTime_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
+  v6.fields._dateData = (uint64_t)&NetworkManager_TypeInfo->static_fields->dtUnixEpoch;
+  dateData = System_DateTime__AddSeconds(v6, (double)t, 0LL).fields._dateData;
+  v7.fields._dateData = (uint64_t)&dateData;
   return System_DateTime__ToUniversalTime(v7, 0LL);
 }
 
 
 System_String_o *__fastcall NetworkManager__getFriendCodeFileName(const MethodInfo *method)
 {
+  __int64 v1; // x1
+  __int64 v2; // x1
+  __int64 v3; // x1
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_438BA24 & 1) == 0 )
+  if ( (byte_48E202E & 1) == 0 )
   {
-    sub_B775C4(&AndroidUtil_TypeInfo);
-    sub_B775C4(&DatFileName_TypeInfo);
-    sub_B775C4(&StringLiteral_892/*"/"*/);
-    byte_438BA24 = 1;
+    sub_1B00CCC(&AndroidUtil_TypeInfo, v1);
+    sub_1B00CCC(&DatFileName_TypeInfo, v2);
+    sub_1B00CCC(&StringLiteral_1120/*"/"*/, v3);
+    byte_48E202E = 1;
   }
-  if ( (BYTE3(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AndroidUtil_TypeInfo->_2.cctor_finished )
+  if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
   DatFileSavePath = AndroidUtil__GetDatFileSavePath(0LL);
-  if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
+  if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(20, 0LL);
-  return System_String__Concat_44904220(DatFileSavePath, (System_String_o *)StringLiteral_892/*"/"*/, FileName, 0LL);
+  return System_String__Concat_60337008(DatFileSavePath, (System_String_o *)StringLiteral_1120/*"/"*/, FileName, 0LL);
 }
 
 
 System_DateTime_o __fastcall NetworkManager__getLocalDateTime(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x8
-  uint64_t dateData; // [xsp+8h] [xbp-8h] BYREF
-  System_DateTime_o v4; // 0:x0.8
+  __int64 v1; // x1
+  __int64 v2; // x1
+  System_DateTime_o v3; // x0
+  NetworkManager_c *v4; // x8
+  uint64_t dateData; // [xsp+8h] [xbp-18h] BYREF
+  System_DateTime_o v7; // 0:x0.8
 
-  if ( (byte_438BA08 & 1) == 0 )
+  if ( (byte_48E2010 & 1) == 0 )
   {
-    sub_B775C4(&System_DateTime_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA08 = 1;
+    sub_1B00CCC(&System_DateTime_TypeInfo, v1);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v2);
+    byte_48E2010 = 1;
   }
-  dateData = 0LL;
-  if ( (BYTE3(System_DateTime_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !System_DateTime_TypeInfo->_2.cctor_finished )
-  {
+  if ( !System_DateTime_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
-  }
-  dateData = System_DateTime__get_Now(0LL).fields.dateData;
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v3.fields._dateData = System_DateTime__get_Now(0LL).fields._dateData;
+  v4 = NetworkManager_TypeInfo;
+  dateData = v3.fields._dateData;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v1 = NetworkManager_TypeInfo;
+    v4 = NetworkManager_TypeInfo;
   }
-  v4.fields.dateData = (uint64_t)&dateData;
-  return System_DateTime__AddSeconds(v4, (double)v1->static_fields->serverOffsetTime, 0LL);
+  v7.fields._dateData = (uint64_t)&dateData;
+  return System_DateTime__AddSeconds(v7, (double)v4->static_fields->serverOffsetTime, 0LL);
 }
 
 
-System_DateTime_o __fastcall NetworkManager__getLocalDateTime_26207528(int64_t t, const MethodInfo *method)
+System_DateTime_o __fastcall NetworkManager__getLocalDateTime_37262068(int64_t t, const MethodInfo *method)
 {
-  NetworkManager_c *v3; // x0
-  uint64_t dateData; // [xsp+8h] [xbp-18h] BYREF
+  __int64 v3; // x1
+  uint64_t dateData; // [xsp+8h] [xbp-28h] BYREF
   System_DateTime_o v6; // 0:x0.8
   System_DateTime_o v7; // 0:x0.8
 
-  if ( (byte_438BA09 & 1) == 0 )
+  if ( (byte_48E2011 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA09 = 1;
+    sub_1B00CCC(&System_DateTime_TypeInfo, method);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v3);
+    byte_48E2011 = 1;
   }
-  dateData = 0LL;
-  v3 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v3 = NetworkManager_TypeInfo;
-  }
-  v6.fields.dateData = (uint64_t)&v3->static_fields->dtUnixEpoch;
-  dateData = System_DateTime__AddSeconds(v6, (double)t, 0LL).fields.dateData;
-  v7.fields.dateData = (uint64_t)&dateData;
+  if ( !System_DateTime_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
+  v6.fields._dateData = (uint64_t)&NetworkManager_TypeInfo->static_fields->dtUnixEpoch;
+  dateData = System_DateTime__AddSeconds(v6, (double)t, 0LL).fields._dateData;
+  v7.fields._dateData = (uint64_t)&dateData;
   return System_DateTime__ToLocalTime(v7, 0LL);
 }
 
 
 int64_t __fastcall NetworkManager__getLocalTime(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
-  const MethodInfo *v2; // x1
-  System_DateTime_o v4; // 0:x0.8
+  __int64 v1; // x1
+  NetworkManager_c *v2; // x0
+  const MethodInfo *v3; // x1
+  System_DateTime_o v5; // 0:x0.8
 
-  if ( (byte_438BA04 & 1) == 0 )
+  if ( (byte_48E200C & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA04 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, v1);
+    byte_48E200C = 1;
   }
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  v2 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  v4.fields.dateData = NetworkManager__getLocalDateTime((const MethodInfo *)v1).fields.dateData;
-  return NetworkManager__getTime_26206600(v4, v2);
+  v5.fields._dateData = NetworkManager__getLocalDateTime((const MethodInfo *)v2).fields._dateData;
+  return NetworkManager__getTime_37261288(v5, v3);
 }
 
 
 System_String_o *__fastcall NetworkManager__getMockFile(System_String_o *path, const MethodInfo *method)
 {
-  System_String_o *v3; // x0
-  UnityEngine_Object_o *v4; // x0
-  __int64 v5; // x10
-  UnityEngine_Object_o *v6; // x19
-  _BOOL8 v7; // x0
-  __int64 v8; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  System_String_o *v5; // x0
+  UnityEngine_Object_o *v6; // x0
+  __int64 methodPtr_low; // x10
+  UnityEngine_Object_o *v8; // x19
+  _BOOL8 v9; // x0
+  __int64 v10; // x1
   System_String_o *text; // x20
 
-  if ( (byte_438BA3C & 1) == 0 )
+  if ( (byte_48E2046 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&UnityEngine_TextAsset_TypeInfo);
-    sub_B775C4(&StringLiteral_9321/*"Mock/"*/);
-    byte_438BA3C = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    sub_1B00CCC(&UnityEngine_TextAsset_TypeInfo, v3);
+    sub_1B00CCC(&StringLiteral_8994/*"Mock/"*/, v4);
+    byte_48E2046 = 1;
   }
   if ( !path )
     return 0LL;
-  v3 = System_String__Concat_44901936((System_String_o *)StringLiteral_9321/*"Mock/"*/, path, 0LL);
-  v4 = UnityEngine_Resources__Load(v3, 0LL);
-  if ( v4
-    && (v5 = *(&UnityEngine_TextAsset_TypeInfo->_2.bitflags2 + 1), *(&v4->klass->_2.bitflags2 + 1) >= (unsigned int)v5) )
+  v5 = System_String__Concat_60325748((System_String_o *)StringLiteral_8994/*"Mock/"*/, path, 0LL);
+  v6 = UnityEngine_Resources__Load(v5, 0LL);
+  if ( v6
+    && (methodPtr_low = LOBYTE(UnityEngine_TextAsset_TypeInfo->vtable._0_Equals.methodPtr),
+        LOBYTE(v6->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low) )
   {
-    v6 = (UnityEngine_TextAsset_c *)v4->klass->_2.typeHierarchy[v5 - 1] == UnityEngine_TextAsset_TypeInfo ? v4 : 0LL;
+    v8 = (UnityEngine_TextAsset_c *)v6->klass->_2.typeHierarchy[methodPtr_low - 1] == UnityEngine_TextAsset_TypeInfo
+       ? v6
+       : 0LL;
   }
   else
   {
-    v6 = 0LL;
+    v8 = 0LL;
   }
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  v7 = UnityEngine_Object__op_Inequality(v6, 0LL, 0LL);
-  if ( !v7 )
+  v9 = UnityEngine_Object__op_Inequality(v8, 0LL, 0LL);
+  if ( !v9 )
     return 0LL;
-  if ( !v6 )
-    sub_B7769C(v7, v8);
-  text = UnityEngine_TextAsset__get_text((UnityEngine_TextAsset_o *)v6, 0LL);
-  UnityEngine_Resources__UnloadAsset(v6, 0LL);
+  if ( !v8 )
+    sub_1B00F28(v9, v10);
+  text = UnityEngine_TextAsset__get_text((UnityEngine_TextAsset_o *)v8, 0LL);
+  UnityEngine_Resources__UnloadAsset(v8, 0LL);
   return text;
 }
 
 
 int64_t __fastcall NetworkManager__getNextDayStartTime(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
+  __int64 v1; // x1
+  __int64 v2; // x1
+  NetworkManager_c *v3; // x0
   int64_t Time; // x19
   int32_t Hour; // w20
   int32_t Minute; // w21
-  const MethodInfo *dateData; // [xsp+8h] [xbp-18h] BYREF
-  System_DateTime_o v7; // 0:x0.8
-  System_DateTime_o v8; // 0:x0.8
+  const MethodInfo *dateData; // [xsp+8h] [xbp-28h] BYREF
   System_DateTime_o v9; // 0:x0.8
+  System_DateTime_o v10; // 0:x0.8
+  System_DateTime_o v11; // 0:x0.8
 
-  if ( (byte_438BA0F & 1) == 0 )
+  if ( (byte_48E2017 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA0F = 1;
+    sub_1B00CCC(&System_DateTime_TypeInfo, v1);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v2);
+    byte_48E2017 = 1;
   }
-  dateData = 0LL;
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  v3 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  dateData = (const MethodInfo *)NetworkManager__getServerDateTime((const MethodInfo *)v1).fields.dateData;
+  dateData = (const MethodInfo *)NetworkManager__getServerDateTime((const MethodInfo *)v3).fields._dateData;
   Time = NetworkManager__getTime(dateData);
-  v7.fields.dateData = (uint64_t)&dateData;
-  Hour = System_DateTime__get_Hour(v7, 0LL);
-  v8.fields.dateData = (uint64_t)&dateData;
-  Minute = System_DateTime__get_Minute(v8, 0LL);
-  v9.fields.dateData = (uint64_t)&dateData;
-  return Time + 86400 - (System_DateTime__get_Second(v9, 0LL) + 60 * (Minute + 60 * Hour));
+  if ( !System_DateTime_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
+  v9.fields._dateData = (uint64_t)&dateData;
+  Hour = System_DateTime__get_Hour(v9, 0LL);
+  v10.fields._dateData = (uint64_t)&dateData;
+  Minute = System_DateTime__get_Minute(v10, 0LL);
+  v11.fields._dateData = (uint64_t)&dateData;
+  return Time - (System_DateTime__get_Second(v11, 0LL) + 60 * (Minute + 60 * Hour)) + 86400;
 }
 
 
 int64_t __fastcall NetworkManager__getNextDayTime(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
+  __int64 v1; // x1
+  __int64 v2; // x1
+  NetworkManager_c *v3; // x0
   int32_t Year; // w19
   int Month; // w20
-  int v4; // w21
-  const MethodInfo *v5; // x1
-  System_DateTime_o dateTime; // [xsp+10h] [xbp-30h] BYREF
+  int v6; // w21
+  const MethodInfo *v7; // x1
+  System_DateTime_o dateTime; // [xsp+8h] [xbp-38h] BYREF
   uint64_t dateData; // [xsp+18h] [xbp-28h] BYREF
-  System_DateTime_o v9; // 0:x0.8
-  System_DateTime_o v10; // 0:x0.8
   System_DateTime_o v11; // 0:x0.8
   System_DateTime_o v12; // 0:x0.8
   System_DateTime_o v13; // 0:x0.8
+  System_DateTime_o v14; // 0:x0.8
+  System_DateTime_o v15; // 0:x0.8
 
-  if ( (byte_438BA0D & 1) == 0 )
+  if ( (byte_48E2015 & 1) == 0 )
   {
-    sub_B775C4(&System_DateTime_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA0D = 1;
+    sub_1B00CCC(&System_DateTime_TypeInfo, v1);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v2);
+    byte_48E2015 = 1;
   }
-  dateData = 0LL;
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  v3 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  dateData = NetworkManager__getServerDateTime((const MethodInfo *)v1).fields.dateData;
-  v9.fields.dateData = (uint64_t)&dateData;
-  Year = System_DateTime__get_Year(v9, 0LL);
-  v10.fields.dateData = (uint64_t)&dateData;
-  Month = System_DateTime__get_Month(v10, 0LL);
-  v11.fields.dateData = (uint64_t)&dateData;
-  v4 = System_DateTime__get_Day(v11, 0LL) + 1;
-  if ( (BYTE3(System_DateTime_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !System_DateTime_TypeInfo->_2.cctor_finished )
-  {
+  dateData = NetworkManager__getServerDateTime((const MethodInfo *)v3).fields._dateData;
+  if ( !System_DateTime_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
-  }
-  if ( v4 > System_DateTime__DaysInMonth(Year, Month, 0LL) )
+  v11.fields._dateData = (uint64_t)&dateData;
+  Year = System_DateTime__get_Year(v11, 0LL);
+  v12.fields._dateData = (uint64_t)&dateData;
+  Month = System_DateTime__get_Month(v12, 0LL);
+  v13.fields._dateData = (uint64_t)&dateData;
+  v6 = System_DateTime__get_Day(v13, 0LL) + 1;
+  if ( v6 > System_DateTime__DaysInMonth(Year, Month, 0LL) )
   {
     if ( Month >= 12 )
     {
       ++Year;
-      v4 = 1;
+      v6 = 1;
       Month = 1;
     }
     else
     {
       ++Month;
-      v4 = 1;
+      v6 = 1;
     }
   }
-  v12.fields.dateData = (uint64_t)&dateTime;
-  dateTime.fields.dateData = 0LL;
-  System_DateTime___ctor_15684052(v12, Year, Month, v4, 0, 0, 0, 1, 0LL);
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  v14.fields._dateData = (uint64_t)&dateTime;
+  dateTime.fields._dateData = 0LL;
+  System_DateTime___ctor_61004432(v14, Year, Month, v6, 0, 0, 0, 1, 0LL);
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  v13.fields.dateData = dateTime.fields.dateData;
-  return NetworkManager__getTime_26206600(v13, v5);
+  v15.fields._dateData = dateTime.fields._dateData;
+  return NetworkManager__getTime_37261288(v15, v7);
 }
 
 
-int64_t __fastcall NetworkManager__getNextDayTime_26208364(int32_t hour, const MethodInfo *method)
+int64_t __fastcall NetworkManager__getNextDayTime_37262740(int32_t hour, const MethodInfo *method)
 {
-  NetworkManager_c *v3; // x0
+  __int64 v3; // x1
+  NetworkManager_c *v4; // x0
   int64_t Time; // x20
-  bool v5; // cc
-  int64_t v6; // x22
-  int32_t v7; // w20
+  int32_t v6; // w21
+  int64_t v7; // x22
+  int32_t v8; // w20
   int32_t Minute; // w21
   const MethodInfo *dateData; // [xsp+8h] [xbp-28h] BYREF
-  System_DateTime_o v11; // 0:x0.8
   System_DateTime_o v12; // 0:x0.8
   System_DateTime_o v13; // 0:x0.8
   System_DateTime_o v14; // 0:x0.8
+  System_DateTime_o v15; // 0:x0.8
 
-  if ( (byte_438BA0E & 1) == 0 )
+  if ( (byte_48E2016 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA0E = 1;
+    sub_1B00CCC(&System_DateTime_TypeInfo, method);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v3);
+    byte_48E2016 = 1;
   }
-  dateData = 0LL;
-  v3 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  v4 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  dateData = (const MethodInfo *)NetworkManager__getServerDateTime((const MethodInfo *)v3).fields.dateData;
+  dateData = (const MethodInfo *)NetworkManager__getServerDateTime((const MethodInfo *)v4).fields._dateData;
   Time = NetworkManager__getTime(dateData);
-  v11.fields.dateData = (uint64_t)&dateData;
-  v5 = System_DateTime__get_Hour(v11, 0LL) < hour;
-  v12.fields.dateData = (uint64_t)&dateData;
-  if ( v5 )
-    v6 = Time;
+  if ( !System_DateTime_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
+  v12.fields._dateData = (uint64_t)&dateData;
+  v6 = System_DateTime__get_Hour(v12, 0LL);
+  if ( !System_DateTime_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
+  v13.fields._dateData = (uint64_t)&dateData;
+  if ( v6 >= hour )
+    v7 = Time + 86400;
   else
-    v6 = Time + 86400;
-  v7 = System_DateTime__get_Hour(v12, 0LL);
-  v13.fields.dateData = (uint64_t)&dateData;
-  Minute = System_DateTime__get_Minute(v13, 0LL);
-  v14.fields.dateData = (uint64_t)&dateData;
-  return v6 - (System_DateTime__get_Second(v14, 0LL) + 60 * (Minute + 60 * (v7 - hour)));
+    v7 = Time;
+  v8 = System_DateTime__get_Hour(v13, 0LL);
+  v14.fields._dateData = (uint64_t)&dateData;
+  Minute = System_DateTime__get_Minute(v14, 0LL);
+  v15.fields._dateData = (uint64_t)&dateData;
+  return v7 - (System_DateTime__get_Second(v15, 0LL) + 60 * (Minute + 60 * (v8 - hour)));
 }
 
 
 int64_t __fastcall NetworkManager__getNextMonthTime(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
+  __int64 v1; // x1
+  __int64 v2; // x1
+  NetworkManager_c *v3; // x0
   int32_t Year; // w19
   int32_t Month; // w0
-  int32_t v4; // w2
-  int32_t v5; // w1
-  const MethodInfo *v6; // x1
-  System_DateTime_o dateTime; // [xsp+10h] [xbp-20h] BYREF
+  int32_t v6; // w2
+  int32_t v7; // w1
+  const MethodInfo *v8; // x1
+  System_DateTime_o dateTime; // [xsp+8h] [xbp-28h] BYREF
   uint64_t dateData; // [xsp+18h] [xbp-18h] BYREF
-  System_DateTime_o v10; // 0:x0.8
-  System_DateTime_o v11; // 0:x0.8
   System_DateTime_o v12; // 0:x0.8
   System_DateTime_o v13; // 0:x0.8
+  System_DateTime_o v14; // 0:x0.8
+  System_DateTime_o v15; // 0:x0.8
 
-  if ( (byte_438BA10 & 1) == 0 )
+  if ( (byte_48E2018 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA10 = 1;
+    sub_1B00CCC(&System_DateTime_TypeInfo, v1);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v2);
+    byte_48E2018 = 1;
   }
-  dateData = 0LL;
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  v3 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  dateData = NetworkManager__getServerDateTime((const MethodInfo *)v1).fields.dateData;
-  v10.fields.dateData = (uint64_t)&dateData;
-  Year = System_DateTime__get_Year(v10, 0LL);
-  v11.fields.dateData = (uint64_t)&dateData;
-  Month = System_DateTime__get_Month(v11, 0LL);
+  dateData = NetworkManager__getServerDateTime((const MethodInfo *)v3).fields._dateData;
+  if ( !System_DateTime_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
+  v12.fields._dateData = (uint64_t)&dateData;
+  Year = System_DateTime__get_Year(v12, 0LL);
+  v13.fields._dateData = (uint64_t)&dateData;
+  Month = System_DateTime__get_Month(v13, 0LL);
   if ( Month < 12 )
-    v4 = Month + 1;
+    v6 = Month + 1;
   else
-    v4 = 1;
+    v6 = 1;
   if ( Month <= 11 )
-    v5 = Year;
+    v7 = Year;
   else
-    v5 = Year + 1;
-  v12.fields.dateData = (uint64_t)&dateTime;
-  dateTime.fields.dateData = 0LL;
-  System_DateTime___ctor_15684052(v12, v5, v4, 1, 0, 0, 0, 1, 0LL);
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+    v7 = Year + 1;
+  v14.fields._dateData = (uint64_t)&dateTime;
+  dateTime.fields._dateData = 0LL;
+  System_DateTime___ctor_61004432(v14, v7, v6, 1, 0, 0, 0, 1, 0LL);
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  v13.fields.dateData = dateTime.fields.dateData;
-  return NetworkManager__getTime_26206600(v13, v6);
+  v15.fields._dateData = dateTime.fields._dateData;
+  return NetworkManager__getTime_37261288(v15, v8);
 }
 
 
-int64_t __fastcall NetworkManager__getNextMonthTime_26209000(int32_t day, const MethodInfo *method)
+int64_t __fastcall NetworkManager__getNextMonthTime_37263452(int32_t day, const MethodInfo *method)
 {
+  __int64 v3; // x1
   int32_t Year; // w20
   int Month; // w21
-  const MethodInfo *v5; // x1
-  System_DateTime_o dateTime; // [xsp+10h] [xbp-30h] BYREF
+  const MethodInfo *v6; // x1
+  System_DateTime_o dateTime; // [xsp+8h] [xbp-38h] BYREF
   uint64_t dateData; // [xsp+18h] [xbp-28h] BYREF
-  System_DateTime_o v9; // 0:x0.8
   System_DateTime_o v10; // 0:x0.8
   System_DateTime_o v11; // 0:x0.8
   System_DateTime_o v12; // 0:x0.8
   System_DateTime_o v13; // 0:x0.8
+  System_DateTime_o v14; // 0:x0.8
 
-  if ( (byte_438BA11 & 1) == 0 )
+  if ( (byte_48E2019 & 1) == 0 )
   {
-    sub_B775C4(&System_DateTime_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA11 = 1;
+    sub_1B00CCC(&System_DateTime_TypeInfo, method);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v3);
+    byte_48E2019 = 1;
   }
-  dateData = 0LL;
-  if ( (BYTE3(System_DateTime_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !System_DateTime_TypeInfo->_2.cctor_finished )
-  {
+  if ( !System_DateTime_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
-  }
-  dateData = System_DateTime__get_Now(0LL).fields.dateData;
-  v9.fields.dateData = (uint64_t)&dateData;
-  Year = System_DateTime__get_Year(v9, 0LL);
-  v10.fields.dateData = (uint64_t)&dateData;
-  Month = System_DateTime__get_Month(v10, 0LL);
-  v11.fields.dateData = (uint64_t)&dateData;
-  if ( System_DateTime__get_Day(v11, 0LL) < day )
+  dateData = System_DateTime__get_Now(0LL).fields._dateData;
+  v10.fields._dateData = (uint64_t)&dateData;
+  Year = System_DateTime__get_Year(v10, 0LL);
+  v11.fields._dateData = (uint64_t)&dateData;
+  Month = System_DateTime__get_Month(v11, 0LL);
+  v12.fields._dateData = (uint64_t)&dateData;
+  if ( System_DateTime__get_Day(v12, 0LL) < day )
   {
     if ( Month >= 12 )
     {
@@ -6530,11 +5587,8 @@ int64_t __fastcall NetworkManager__getNextMonthTime_26209000(int32_t day, const 
       ++Month;
     }
   }
-  if ( (BYTE3(System_DateTime_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !System_DateTime_TypeInfo->_2.cctor_finished )
-  {
+  if ( !System_DateTime_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
-  }
   if ( System_DateTime__DaysInMonth(Year, Month, 0LL) < day )
   {
     if ( Month >= 12 )
@@ -6548,243 +5602,255 @@ int64_t __fastcall NetworkManager__getNextMonthTime_26209000(int32_t day, const 
     }
     day = 1;
   }
-  v12.fields.dateData = (uint64_t)&dateTime;
-  dateTime.fields.dateData = 0LL;
-  System_DateTime___ctor_15684052(v12, Year, Month, day, 0, 0, 0, 1, 0LL);
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  v13.fields._dateData = (uint64_t)&dateTime;
+  dateTime.fields._dateData = 0LL;
+  System_DateTime___ctor_61004432(v13, Year, Month, day, 0, 0, 0, 1, 0LL);
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  v13.fields.dateData = dateTime.fields.dateData;
-  return NetworkManager__getTime_26206600(v13, v5);
+  v14.fields._dateData = dateTime.fields._dateData;
+  return NetworkManager__getTime_37261288(v14, v6);
 }
 
 
 System_String_o *__fastcall NetworkManager__getOldAuthFileName(const MethodInfo *method)
 {
+  __int64 v1; // x1
+  __int64 v2; // x1
+  __int64 v3; // x1
   System_String_o *temporaryCachePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_438BA1F & 1) == 0 )
+  if ( (byte_48E2029 & 1) == 0 )
   {
-    sub_B775C4(&DatFileName_TypeInfo);
-    sub_B775C4(&StringLiteral_892/*"/"*/);
-    byte_438BA1F = 1;
+    sub_1B00CCC(&UnityEngine_Application_TypeInfo, v1);
+    sub_1B00CCC(&DatFileName_TypeInfo, v2);
+    sub_1B00CCC(&StringLiteral_1120/*"/"*/, v3);
+    byte_48E2029 = 1;
   }
+  if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
   temporaryCachePath = UnityEngine_Application__get_temporaryCachePath(0LL);
-  if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
+  if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(16, 0LL);
-  return System_String__Concat_44904220(temporaryCachePath, (System_String_o *)StringLiteral_892/*"/"*/, FileName, 0LL);
+  return System_String__Concat_60337008(temporaryCachePath, (System_String_o *)StringLiteral_1120/*"/"*/, FileName, 0LL);
 }
 
 
 System_String_o *__fastcall NetworkManager__getOldSignupFileName(const MethodInfo *method)
 {
+  __int64 v1; // x1
+  __int64 v2; // x1
+  __int64 v3; // x1
   System_String_o *temporaryCachePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_438BA21 & 1) == 0 )
+  if ( (byte_48E202B & 1) == 0 )
   {
-    sub_B775C4(&DatFileName_TypeInfo);
-    sub_B775C4(&StringLiteral_892/*"/"*/);
-    byte_438BA21 = 1;
+    sub_1B00CCC(&UnityEngine_Application_TypeInfo, v1);
+    sub_1B00CCC(&DatFileName_TypeInfo, v2);
+    sub_1B00CCC(&StringLiteral_1120/*"/"*/, v3);
+    byte_48E202B = 1;
   }
+  if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
   temporaryCachePath = UnityEngine_Application__get_temporaryCachePath(0LL);
-  if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
+  if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(18, 0LL);
-  return System_String__Concat_44904220(temporaryCachePath, (System_String_o *)StringLiteral_892/*"/"*/, FileName, 0LL);
+  return System_String__Concat_60337008(temporaryCachePath, (System_String_o *)StringLiteral_1120/*"/"*/, FileName, 0LL);
 }
 
 
-WarBoardWallAttackRequest_o *__fastcall NetworkManager__getRequest_WarBoardWallAttackRequest_(
+Il2CppObject *__fastcall NetworkManager__getRequest_object_(
         NetworkManager_ResultCallbackFunc_o *func,
-        const MethodInfo_1DF8BE8 *method)
+        const MethodInfo_2DD4818 *method)
 {
-  __int64 v4; // x0
-  __int64 v5; // x1
-  WarBoardWallAttackRequest_o *v6; // x19
-  BattleServantConfConponent_o *v7; // x20
-  System_Delegate_o *v8; // x0
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
-  System_Delegate_o *v15; // x21
-  System_Int32_array **v16; // x1
+  const MethodInfo_2CBC2D0 **rgctx_data; // x8
+  Il2CppObject *Instance_object; // x0
+  __int64 v6; // x1
+  Il2CppObject *v7; // x19
+  ServantStatusBattleListViewItem_o *v8; // x21
+  System_Delegate_o *v9; // x0
+  int32_t v10; // w2
+  int32_t v11; // w3
+  System_Delegate_o *v12; // x8
+  NetworkManager_ResultCallbackFunc_c *v13; // x1
 
-  if ( (byte_438E6A5 & 1) == 0 )
+  rgctx_data = (const MethodInfo_2CBC2D0 **)method->rgctx_data;
+  if ( !rgctx_data )
   {
-    sub_B775C4(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_438E6A5 = 1;
+    sub_1B00CCC(&NetworkManager_ResultCallbackFunc_TypeInfo, method);
+    rgctx_data = (const MethodInfo_2CBC2D0 **)method->rgctx_data;
+    if ( !rgctx_data )
+    {
+      sub_1B52C04();
+      rgctx_data = (const MethodInfo_2CBC2D0 **)method->rgctx_data;
+    }
   }
-  v4 = ((__int64 (*)(void))method->rgctx_data->_0_System_Activator_CreateInstance_T_->methodPointer)();
-  if ( !v4 )
-    sub_B7769C(0LL, v5);
-  v6 = (WarBoardWallAttackRequest_o *)v4;
-  v7 = (BattleServantConfConponent_o *)(v4 + 16);
-  v8 = System_Delegate__Combine(*(System_Delegate_o **)(v4 + 16), (System_Delegate_o *)func, 0LL);
-  if ( !v8 )
-    goto LABEL_7;
-  v15 = v8;
-  v16 = (System_Int32_array **)sub_B77684(v8, NetworkManager_ResultCallbackFunc_TypeInfo);
-  if ( !v16 )
+  Instance_object = System_Activator__CreateInstance_object_(*rgctx_data);
+  if ( !Instance_object )
+    sub_1B00F28(0LL, v6);
+  v7 = Instance_object;
+  v8 = (ServantStatusBattleListViewItem_o *)&Instance_object[1];
+  v9 = System_Delegate__Combine((System_Delegate_o *)Instance_object[1].klass, (System_Delegate_o *)func, 0LL);
+  v12 = v9;
+  if ( !v9 )
+    goto LABEL_9;
+  v13 = NetworkManager_ResultCallbackFunc_TypeInfo;
+  if ( (NetworkManager_ResultCallbackFunc_c *)v9->klass != NetworkManager_ResultCallbackFunc_TypeInfo
+    || (v8->klass = (ServantStatusBattleListViewItem_c *)v9, (NetworkManager_ResultCallbackFunc_c *)v9->klass != v13) )
   {
-    sub_B77990(v15);
-LABEL_7:
-    v16 = 0LL;
+    sub_1B011E8(v9);
+LABEL_9:
+    v8->klass = (ServantStatusBattleListViewItem_c *)v12;
   }
-  v6->fields.CallBack = (struct NetworkManager_ResultCallbackFunc_o *)v16;
-  sub_B77560(v7, v16, v9, v10, v11, v12, v13, v14);
-  return v6;
+  sub_1B00C70(v8, (int32_t)v12, v10, v11);
+  return v7;
 }
 
 
 System_DateTime_o __fastcall NetworkManager__getServerDateTime(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x8
-  System_TimeSpan_o value; // [xsp+8h] [xbp-18h] BYREF
-  uint64_t dateData; // [xsp+18h] [xbp-8h] BYREF
-  System_DateTime_o v5; // 0:x0.8
-  System_DateTime_o v6; // 0:x0.8
-  System_TimeSpan_o v7; // 0:x0.8
+  __int64 v1; // x1
+  __int64 v2; // x1
+  System_DateTime_o v3; // x0
+  NetworkManager_c *v4; // x8
+  System_TimeSpan_o value; // [xsp+8h] [xbp-28h] BYREF
+  uint64_t dateData; // [xsp+18h] [xbp-18h] BYREF
   System_DateTime_o v8; // 0:x0.8
-  System_TimeSpan_o v10; // 0:x1.8
+  System_DateTime_o v9; // 0:x0.8
+  System_TimeSpan_o v10; // 0:x0.8
+  System_DateTime_o v11; // 0:x0.8
+  System_TimeSpan_o v13; // 0:x1.8
 
-  if ( (byte_438BA0A & 1) == 0 )
+  if ( (byte_48E2012 & 1) == 0 )
   {
-    sub_B775C4(&System_DateTime_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA0A = 1;
+    sub_1B00CCC(&System_DateTime_TypeInfo, v1);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v2);
+    byte_48E2012 = 1;
   }
-  dateData = 0LL;
-  if ( (BYTE3(System_DateTime_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !System_DateTime_TypeInfo->_2.cctor_finished )
-  {
+  if ( !System_DateTime_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
-  }
-  dateData = System_DateTime__get_Now(0LL).fields.dateData;
-  v5.fields.dateData = (uint64_t)&dateData;
-  dateData = System_DateTime__ToUniversalTime(v5, 0LL).fields.dateData;
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  dateData = System_DateTime__get_Now(0LL).fields._dateData;
+  v8.fields._dateData = (uint64_t)&dateData;
+  v3.fields._dateData = System_DateTime__ToUniversalTime(v8, 0LL).fields._dateData;
+  v4 = NetworkManager_TypeInfo;
+  dateData = v3.fields._dateData;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v1 = NetworkManager_TypeInfo;
+    v4 = NetworkManager_TypeInfo;
   }
-  v6.fields.dateData = (uint64_t)&dateData;
-  dateData = System_DateTime__AddSeconds(v6, (double)v1->static_fields->serverOffsetTime, 0LL).fields.dateData;
-  v7.fields._ticks = (int64_t)&value;
+  v9.fields._dateData = (uint64_t)&dateData;
+  dateData = System_DateTime__AddSeconds(v9, (double)v4->static_fields->serverOffsetTime, 0LL).fields._dateData;
+  v10.fields._ticks = (int64_t)&value;
   value.fields._ticks = 0LL;
-  System_TimeSpan___ctor_42295408(v7, 9, 0, 0, 0LL);
-  v10.fields._ticks = value.fields._ticks;
-  v8.fields.dateData = (uint64_t)&dateData;
-  return System_DateTime__Add(v8, v10, 0LL);
+  System_TimeSpan___ctor_61230172(v10, 9, 0, 0, 0LL);
+  v13.fields._ticks = value.fields._ticks;
+  v11.fields._dateData = (uint64_t)&dateData;
+  return System_DateTime__Add(v11, v13, 0LL);
 }
 
 
-System_DateTime_o __fastcall NetworkManager__getServerDateTime_26207672(int64_t t, const MethodInfo *method)
+System_DateTime_o __fastcall NetworkManager__getServerDateTime_37177692(int64_t t, const MethodInfo *method)
 {
-  NetworkManager_c *v3; // x0
-  System_TimeSpan_o value; // [xsp+0h] [xbp-20h] BYREF
-  uint64_t dateData; // [xsp+8h] [xbp-18h] BYREF
+  __int64 v3; // x1
+  System_TimeSpan_o value; // [xsp+0h] [xbp-30h] BYREF
+  uint64_t dateData; // [xsp+8h] [xbp-28h] BYREF
   System_DateTime_o v7; // 0:x0.8
   System_TimeSpan_o v8; // 0:x0.8
   System_DateTime_o v9; // 0:x0.8
   System_TimeSpan_o v11; // 0:x1.8
 
-  if ( (byte_438BA0B & 1) == 0 )
+  if ( (byte_48E2013 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA0B = 1;
+    sub_1B00CCC(&System_DateTime_TypeInfo, method);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v3);
+    byte_48E2013 = 1;
   }
-  dateData = 0LL;
-  v3 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v3 = NetworkManager_TypeInfo;
-  }
-  v7.fields.dateData = (uint64_t)&v3->static_fields->dtUnixEpoch;
+  if ( !System_DateTime_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
+  v7.fields._dateData = (uint64_t)&NetworkManager_TypeInfo->static_fields->dtUnixEpoch;
   value.fields._ticks = 0LL;
-  dateData = System_DateTime__AddSeconds(v7, (double)t, 0LL).fields.dateData;
+  dateData = System_DateTime__AddSeconds(v7, (double)t, 0LL).fields._dateData;
   v8.fields._ticks = (int64_t)&value;
-  System_TimeSpan___ctor_42295408(v8, 9, 0, 0, 0LL);
+  System_TimeSpan___ctor_61230172(v8, 9, 0, 0, 0LL);
   v11.fields._ticks = value.fields._ticks;
-  v9.fields.dateData = (uint64_t)&dateData;
+  v9.fields._dateData = (uint64_t)&dateData;
   return System_DateTime__Add(v9, v11, 0LL);
 }
 
 
 System_String_o *__fastcall NetworkManager__getServerSettingFileName(const MethodInfo *method)
 {
+  __int64 v1; // x1
+  __int64 v2; // x1
+  __int64 v3; // x1
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_438BA23 & 1) == 0 )
+  if ( (byte_48E202D & 1) == 0 )
   {
-    sub_B775C4(&AndroidUtil_TypeInfo);
-    sub_B775C4(&DatFileName_TypeInfo);
-    sub_B775C4(&StringLiteral_892/*"/"*/);
-    byte_438BA23 = 1;
+    sub_1B00CCC(&AndroidUtil_TypeInfo, v1);
+    sub_1B00CCC(&DatFileName_TypeInfo, v2);
+    sub_1B00CCC(&StringLiteral_1120/*"/"*/, v3);
+    byte_48E202D = 1;
   }
-  if ( (BYTE3(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AndroidUtil_TypeInfo->_2.cctor_finished )
+  if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
   DatFileSavePath = AndroidUtil__GetDatFileSavePath(0LL);
-  if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
+  if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(19, 0LL);
-  return System_String__Concat_44904220(DatFileSavePath, (System_String_o *)StringLiteral_892/*"/"*/, FileName, 0LL);
+  return System_String__Concat_60337008(DatFileSavePath, (System_String_o *)StringLiteral_1120/*"/"*/, FileName, 0LL);
 }
 
 
 int64_t __fastcall NetworkManager__getServerTime(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
-  const MethodInfo *v2; // x1
-  System_DateTime_o v4; // 0:x0.8
+  __int64 v1; // x1
+  NetworkManager_c *v2; // x0
+  const MethodInfo *v3; // x1
+  System_DateTime_o v5; // 0:x0.8
 
-  if ( (byte_438BA05 & 1) == 0 )
+  if ( (byte_48E200D & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA05 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, v1);
+    byte_48E200D = 1;
   }
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  v2 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  v4.fields.dateData = NetworkManager__getServerDateTime((const MethodInfo *)v1).fields.dateData;
-  return NetworkManager__getTime_26206600(v4, v2);
+  v5.fields._dateData = NetworkManager__getServerDateTime((const MethodInfo *)v2).fields._dateData;
+  return NetworkManager__getTime_37261288(v5, v3);
 }
 
 
 System_String_o *__fastcall NetworkManager__getSignupFileName(const MethodInfo *method)
 {
+  __int64 v1; // x1
+  __int64 v2; // x1
+  __int64 v3; // x1
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_438BA22 & 1) == 0 )
+  if ( (byte_48E202C & 1) == 0 )
   {
-    sub_B775C4(&AndroidUtil_TypeInfo);
-    sub_B775C4(&DatFileName_TypeInfo);
-    sub_B775C4(&StringLiteral_892/*"/"*/);
-    byte_438BA22 = 1;
+    sub_1B00CCC(&AndroidUtil_TypeInfo, v1);
+    sub_1B00CCC(&DatFileName_TypeInfo, v2);
+    sub_1B00CCC(&StringLiteral_1120/*"/"*/, v3);
+    byte_48E202C = 1;
   }
-  if ( (BYTE3(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AndroidUtil_TypeInfo->_2.cctor_finished )
+  if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
   DatFileSavePath = AndroidUtil__GetDatFileSavePath(0LL);
-  if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
+  if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(18, 0LL);
-  return System_String__Concat_44904220(DatFileSavePath, (System_String_o *)StringLiteral_892/*"/"*/, FileName, 0LL);
+  return System_String__Concat_60337008(DatFileSavePath, (System_String_o *)StringLiteral_1120/*"/"*/, FileName, 0LL);
 }
 
 
@@ -6794,280 +5860,269 @@ void __fastcall NetworkManager__getStoreUrl(
         NetworkManager_StoreCallbackFunc_o *callback,
         const MethodInfo *method)
 {
-  NetworkManager_o *Instance; // x0
+  Il2CppObject *Instance; // x0
   __int64 v8; // x1
   const MethodInfo *v9; // x4
   UnityEngine_MonoBehaviour_o *v10; // x22
   System_Collections_IEnumerator_o *updated; // x1
 
-  if ( (byte_438BA3B & 1) == 0 )
+  if ( (byte_48E2045 & 1) == 0 )
   {
-    sub_B775C4(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
-    byte_438BA3B = 1;
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, id);
+    byte_48E2045 = 1;
   }
-  Instance = (NetworkManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
   if ( !Instance )
-    sub_B7769C(0LL, v8);
+    sub_1B00F28(0LL, v8);
   v10 = (UnityEngine_MonoBehaviour_o *)Instance;
-  updated = NetworkManager__RequestApplicationUpdateCR(Instance, storeName, id, callback, v9);
-  UnityEngine_MonoBehaviour__StartCoroutine_36304832(v10, updated, 0LL);
+  updated = NetworkManager__RequestApplicationUpdateCR((NetworkManager_o *)Instance, storeName, id, callback, v9);
+  UnityEngine_MonoBehaviour__StartCoroutine_68062928(v10, updated, 0LL);
 }
 
 
 System_String_o *__fastcall NetworkManager__getSummonDetailUrl(int32_t gachaId, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x1
-  System_Object_array *v4; // x20
-  System_String_o *BaseUrl; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
   __int64 v6; // x1
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
-  System_Int32_array **v13; // x21
-  System_String_array **v14; // x2
-  System_String_array **v15; // x3
-  System_Boolean_array **v16; // x4
-  System_Int32_array **v17; // x5
-  System_Int32_array *v18; // x6
-  System_Int32_array *v19; // x7
-  System_Int32_array **v20; // x1
-  const MethodInfo *v21; // x0
-  __int64 v22; // x2
-  System_String_array **v23; // x2
-  System_String_array **v24; // x3
-  System_Boolean_array **v25; // x4
-  System_Int32_array **v26; // x5
-  System_Int32_array *v27; // x6
-  System_Int32_array *v28; // x7
-  System_Int32_array **v29; // x21
-  System_String_array **v30; // x2
-  System_String_array **v31; // x3
-  System_Boolean_array **v32; // x4
-  System_Int32_array **v33; // x5
-  System_Int32_array *v34; // x6
-  System_Int32_array *v35; // x7
-  System_Int32_array **v36; // x1
-  __int64 v37; // x2
-  System_String_array **v38; // x2
-  System_String_array **v39; // x3
-  System_Boolean_array **v40; // x4
-  System_Int32_array **v41; // x5
-  System_Int32_array *v42; // x6
-  System_Int32_array *v43; // x7
-  System_Int32_array **v44; // x19
-  __int64 v46; // x0
-  __int64 v47; // x0
-  int32_t v48; // [xsp+Ch] [xbp-24h] BYREF
-  int64_t UserId; // [xsp+18h] [xbp-18h] BYREF
+  __int64 v7; // x1
+  const MethodInfo *v8; // x1
+  System_Object_array *v9; // x20
+  System_String_o *BaseUrl; // x0
+  __int64 v11; // x1
+  int32_t v12; // w2
+  int32_t v13; // w3
+  Il2CppObject *v14; // x21
+  int32_t v15; // w2
+  int32_t v16; // w3
+  const MethodInfo *v17; // x0
+  __int64 v18; // x2
+  __int64 v19; // x3
+  __int64 v20; // x4
+  int32_t v21; // w2
+  int32_t v22; // w3
+  Il2CppObject *v23; // x21
+  int32_t v24; // w2
+  int32_t v25; // w3
+  __int64 v26; // x2
+  __int64 v27; // x3
+  __int64 v28; // x4
+  int32_t v29; // w2
+  int32_t v30; // w3
+  Il2CppObject *v31; // x19
+  __int64 v33; // x0
+  int32_t v34; // [xsp+Ch] [xbp-34h] BYREF
+  int64_t UserId; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_438BA48 & 1) == 0 )
+  if ( (byte_48E2052 & 1) == 0 )
   {
-    sub_B775C4(&int_TypeInfo);
-    sub_B775C4(&long_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&object___TypeInfo);
-    sub_B775C4(&StringLiteral_468/*"&gachaId="*/);
-    sub_B775C4(&StringLiteral_23750/*"webview/summonDetail?userId="*/);
-    byte_438BA48 = 1;
+    sub_1B00CCC(&int_TypeInfo, method);
+    sub_1B00CCC(&long_TypeInfo, v3);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v4);
+    sub_1B00CCC(&object___TypeInfo, v5);
+    sub_1B00CCC(&StringLiteral_547/*"&gachaId="*/, v6);
+    sub_1B00CCC(&StringLiteral_24313/*"webview/summonDetail?userId="*/, v7);
+    byte_48E2052 = 1;
   }
-  v4 = (System_Object_array *)sub_B775DC(object___TypeInfo, 5LL);
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  v9 = (System_Object_array *)sub_1B00D74(object___TypeInfo, 5LL);
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  BaseUrl = NetworkManager__getBaseUrl(0, v3);
-  if ( !v4 )
-    sub_B7769C(BaseUrl, v6);
-  v13 = (System_Int32_array **)BaseUrl;
+  BaseUrl = NetworkManager__getBaseUrl(0, v8);
+  if ( !v9 )
+    sub_1B00F28(BaseUrl, v11);
+  v14 = (Il2CppObject *)BaseUrl;
   if ( BaseUrl )
   {
-    BaseUrl = (System_String_o *)sub_B77684(BaseUrl, v4->obj.klass->_1.element_class);
+    BaseUrl = (System_String_o *)sub_1B00E08(BaseUrl, v9->obj.klass->_1.element_class);
     if ( !BaseUrl )
-      goto LABEL_28;
+      goto LABEL_27;
   }
-  if ( !v4->max_length )
-    goto LABEL_27;
-  v4->m_Items[0] = (Il2CppObject *)v13;
-  sub_B77560((BattleServantConfConponent_o *)v4->m_Items, v13, v7, v8, v9, v10, v11, v12);
-  BaseUrl = (System_String_o *)StringLiteral_23750/*"webview/summonDetail?userId="*/;
-  if ( StringLiteral_23750/*"webview/summonDetail?userId="*/ )
+  if ( !v9->max_length )
+    goto LABEL_26;
+  v9->m_Items[0] = v14;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)v9->m_Items, (int32_t)v14, v12, v13);
+  BaseUrl = (System_String_o *)StringLiteral_24313/*"webview/summonDetail?userId="*/;
+  if ( StringLiteral_24313/*"webview/summonDetail?userId="*/ )
   {
-    BaseUrl = (System_String_o *)sub_B77684(StringLiteral_23750/*"webview/summonDetail?userId="*/, v4->obj.klass->_1.element_class);
+    BaseUrl = (System_String_o *)sub_1B00E08(StringLiteral_24313/*"webview/summonDetail?userId="*/, v9->obj.klass->_1.element_class);
     if ( !BaseUrl )
-      goto LABEL_28;
-    v20 = (System_Int32_array **)StringLiteral_23750/*"webview/summonDetail?userId="*/;
+      goto LABEL_27;
+    v11 = StringLiteral_24313/*"webview/summonDetail?userId="*/;
   }
   else
   {
-    v20 = 0LL;
+    v11 = 0LL;
   }
-  if ( v4->max_length <= 1 )
-    goto LABEL_27;
-  v4->m_Items[1] = (Il2CppObject *)v20;
-  sub_B77560((BattleServantConfConponent_o *)&v4->m_Items[1], v20, v14, v15, v16, v17, v18, v19);
-  UserId = NetworkManager__get_UserId(v21);
-  BaseUrl = (System_String_o *)j_il2cpp_value_box_0(long_TypeInfo, &UserId, v22);
-  v29 = (System_Int32_array **)BaseUrl;
+  if ( v9->max_length <= 1 )
+    goto LABEL_26;
+  v9->m_Items[1] = (Il2CppObject *)v11;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v9->m_Items[1], v11, v15, v16);
+  UserId = NetworkManager__get_UserId(v17);
+  BaseUrl = (System_String_o *)j_il2cpp_value_box_0(long_TypeInfo, &UserId, v18, v19, v20);
+  v23 = (Il2CppObject *)BaseUrl;
   if ( BaseUrl )
   {
-    BaseUrl = (System_String_o *)sub_B77684(BaseUrl, v4->obj.klass->_1.element_class);
+    BaseUrl = (System_String_o *)sub_1B00E08(BaseUrl, v9->obj.klass->_1.element_class);
     if ( !BaseUrl )
-      goto LABEL_28;
+      goto LABEL_27;
   }
-  if ( v4->max_length <= 2 )
-    goto LABEL_27;
-  v4->m_Items[2] = (Il2CppObject *)v29;
-  sub_B77560((BattleServantConfConponent_o *)&v4->m_Items[2], v29, v23, v24, v25, v26, v27, v28);
-  BaseUrl = (System_String_o *)StringLiteral_468/*"&gachaId="*/;
-  if ( StringLiteral_468/*"&gachaId="*/ )
+  if ( v9->max_length <= 2 )
+    goto LABEL_26;
+  v9->m_Items[2] = v23;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v9->m_Items[2], (int32_t)v23, v21, v22);
+  BaseUrl = (System_String_o *)StringLiteral_547/*"&gachaId="*/;
+  if ( StringLiteral_547/*"&gachaId="*/ )
   {
-    BaseUrl = (System_String_o *)sub_B77684(StringLiteral_468/*"&gachaId="*/, v4->obj.klass->_1.element_class);
+    BaseUrl = (System_String_o *)sub_1B00E08(StringLiteral_547/*"&gachaId="*/, v9->obj.klass->_1.element_class);
     if ( !BaseUrl )
-      goto LABEL_28;
-    v36 = (System_Int32_array **)StringLiteral_468/*"&gachaId="*/;
+      goto LABEL_27;
+    v11 = StringLiteral_547/*"&gachaId="*/;
   }
   else
   {
-    v36 = 0LL;
+    v11 = 0LL;
   }
-  if ( v4->max_length <= 3 )
-    goto LABEL_27;
-  v4->m_Items[3] = (Il2CppObject *)v36;
-  sub_B77560((BattleServantConfConponent_o *)&v4->m_Items[3], v36, v30, v31, v32, v33, v34, v35);
-  v48 = gachaId;
-  BaseUrl = (System_String_o *)j_il2cpp_value_box_0(int_TypeInfo, &v48, v37);
-  v44 = (System_Int32_array **)BaseUrl;
+  if ( v9->max_length <= 3 )
+    goto LABEL_26;
+  v9->m_Items[3] = (Il2CppObject *)v11;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v9->m_Items[3], v11, v24, v25);
+  v34 = gachaId;
+  BaseUrl = (System_String_o *)j_il2cpp_value_box_0(int_TypeInfo, &v34, v26, v27, v28);
+  v31 = (Il2CppObject *)BaseUrl;
   if ( BaseUrl )
   {
-    BaseUrl = (System_String_o *)sub_B77684(BaseUrl, v4->obj.klass->_1.element_class);
+    BaseUrl = (System_String_o *)sub_1B00E08(BaseUrl, v9->obj.klass->_1.element_class);
     if ( !BaseUrl )
     {
-LABEL_28:
-      v47 = sub_B776BC(BaseUrl);
-      sub_B77668(v47, 0LL);
+LABEL_27:
+      v33 = sub_1B00F4C(BaseUrl);
+      sub_1B00DF4(v33, 0LL);
     }
   }
-  if ( v4->max_length <= 4 )
-  {
-LABEL_27:
-    v46 = sub_B776C8(BaseUrl);
-    sub_B77668(v46, 0LL);
-  }
-  v4->m_Items[4] = (Il2CppObject *)v44;
-  sub_B77560((BattleServantConfConponent_o *)&v4->m_Items[4], v44, v38, v39, v40, v41, v42, v43);
-  return System_String__Concat_44911720(v4, 0LL);
+  if ( v9->max_length <= 4 )
+LABEL_26:
+    sub_1B00F30(BaseUrl, v11);
+  v9->m_Items[4] = v31;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v9->m_Items[4], (int32_t)v31, v29, v30);
+  return System_String__Concat_60337200(v9, 0LL);
 }
 
 
 int64_t __fastcall NetworkManager__getTime(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x8
-  const MethodInfo *v2; // x1
-  int64_t Time_26206600; // x0
-  System_DateTime_o v5; // 0:x0.8
+  __int64 v1; // x1
+  NetworkManager_c *v2; // x8
+  const MethodInfo *v3; // x1
+  int64_t Time_37261288; // x0
+  System_DateTime_o v6; // 0:x0.8
 
-  if ( (byte_438BA02 & 1) == 0 )
+  if ( (byte_48E200A & 1) == 0 )
   {
-    method = (const MethodInfo *)sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA02 = 1;
+    method = (const MethodInfo *)sub_1B00CCC(&NetworkManager_TypeInfo, v1);
+    byte_48E200A = 1;
   }
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v1 = NetworkManager_TypeInfo;
-  }
-  if ( (v1->static_fields->nowTime & 0x8000000000000000LL) != 0 )
-  {
-    if ( (BYTE3(v1->vtable._0_Equals.methodPtr) & 4) != 0 && !v1->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(v1);
-    v5.fields.dateData = NetworkManager__getDateTime(method).fields.dateData;
-    Time_26206600 = NetworkManager__getTime_26206600(v5, v2);
-    v1 = NetworkManager_TypeInfo;
-    NetworkManager_TypeInfo->static_fields->nowTime = Time_26206600;
-  }
-  if ( (BYTE3(v1->vtable._0_Equals.methodPtr) & 4) != 0 && !v1->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(v1);
-    v1 = NetworkManager_TypeInfo;
-  }
-  return v1->static_fields->nowTime;
-}
-
-
-int64_t __fastcall NetworkManager__getTime_26206600(System_DateTime_o dateTime, const MethodInfo *method)
-{
-  NetworkManager_c *v2; // x0
-  struct NetworkManager_StaticFields *static_fields; // x8
-  double TotalSeconds; // d0
-  int64_t ticks; // [xsp+8h] [xbp-18h] BYREF
-  uint64_t dateData; // [xsp+18h] [xbp-8h] BYREF
-  System_DateTime_o v8; // 0:x0.8
-  System_TimeSpan_o v9; // 0:x0.8
-  System_DateTime_o v10; // 0:x1.8
-
-  dateData = dateTime.fields.dateData;
-  if ( (byte_438BA03 & 1) == 0 )
-  {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA03 = 1;
-  }
-  ticks = 0LL;
   v2 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     v2 = NetworkManager_TypeInfo;
   }
-  static_fields = v2->static_fields;
-  v8.fields.dateData = (uint64_t)&dateData;
-  v10.fields.dateData = static_fields->dtUnixEpoch.fields.dateData;
-  ticks = System_DateTime__Subtract(v8, v10, 0LL).fields._ticks;
-  v9.fields._ticks = (int64_t)&ticks;
-  TotalSeconds = System_TimeSpan__get_TotalSeconds(v9, 0LL);
+  if ( (v2->static_fields->nowTime & 0x8000000000000000LL) != 0 )
+  {
+    if ( !v2->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(v2);
+    v6.fields._dateData = NetworkManager__getDateTime(method).fields._dateData;
+    Time_37261288 = NetworkManager__getTime_37261288(v6, v3);
+    v2 = NetworkManager_TypeInfo;
+    NetworkManager_TypeInfo->static_fields->nowTime = Time_37261288;
+  }
+  if ( !v2->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(v2);
+    v2 = NetworkManager_TypeInfo;
+  }
+  return v2->static_fields->nowTime;
+}
+
+
+int64_t __fastcall NetworkManager__getTime_37261288(System_DateTime_o dateTime, const MethodInfo *method)
+{
+  __int64 v2; // x1
+  __int64 v3; // x1
+  NetworkManager_c *v4; // x0
+  uint64_t v5; // x19
+  double TotalSeconds; // d0
+  int64_t ticks; // [xsp+8h] [xbp-28h] BYREF
+  uint64_t dateData; // [xsp+18h] [xbp-18h] BYREF
+  System_DateTime_o v10; // 0:x0.8
+  System_TimeSpan_o v11; // 0:x0.8
+  System_DateTime_o v12; // 0:x1.8
+
+  dateData = dateTime.fields._dateData;
+  if ( (byte_48E200B & 1) == 0 )
+  {
+    sub_1B00CCC(&System_DateTime_TypeInfo, method);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v2);
+    sub_1B00CCC(&System_TimeSpan_TypeInfo, v3);
+    byte_48E200B = 1;
+  }
+  v4 = NetworkManager_TypeInfo;
+  ticks = 0LL;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+    v4 = NetworkManager_TypeInfo;
+  }
+  v5 = v4->static_fields->dtUnixEpoch.fields._dateData;
+  if ( !System_DateTime_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
+  v10.fields._dateData = (uint64_t)&dateData;
+  v12.fields._dateData = v5;
+  ticks = System_DateTime__Subtract(v10, v12, 0LL).fields._ticks;
+  if ( !System_TimeSpan_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo);
+  v11.fields._ticks = (int64_t)&ticks;
+  TotalSeconds = System_TimeSpan__get_TotalSeconds(v11, 0LL);
   if ( TotalSeconds == INFINITY )
-    return (__int64)-TotalSeconds;
-  return (__int64)TotalSeconds;
+    return 0x8000000000000000LL;
+  else
+    return (__int64)TotalSeconds;
 }
 
 
 int64_t __fastcall NetworkManager__getTodayStartTime(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
+  __int64 v1; // x1
+  __int64 v2; // x1
+  NetworkManager_c *v3; // x0
   int64_t Time; // x19
   int32_t Hour; // w20
   int32_t Minute; // w21
-  const MethodInfo *dateData; // [xsp+8h] [xbp-18h] BYREF
-  System_DateTime_o v7; // 0:x0.8
-  System_DateTime_o v8; // 0:x0.8
+  const MethodInfo *dateData; // [xsp+8h] [xbp-28h] BYREF
   System_DateTime_o v9; // 0:x0.8
+  System_DateTime_o v10; // 0:x0.8
+  System_DateTime_o v11; // 0:x0.8
 
-  if ( (byte_438BA0C & 1) == 0 )
+  if ( (byte_48E2014 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA0C = 1;
+    sub_1B00CCC(&System_DateTime_TypeInfo, v1);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v2);
+    byte_48E2014 = 1;
   }
-  dateData = 0LL;
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  v3 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  dateData = (const MethodInfo *)NetworkManager__getServerDateTime((const MethodInfo *)v1).fields.dateData;
+  dateData = (const MethodInfo *)NetworkManager__getServerDateTime((const MethodInfo *)v3).fields._dateData;
   Time = NetworkManager__getTime(dateData);
-  v7.fields.dateData = (uint64_t)&dateData;
-  Hour = System_DateTime__get_Hour(v7, 0LL);
-  v8.fields.dateData = (uint64_t)&dateData;
-  Minute = System_DateTime__get_Minute(v8, 0LL);
-  v9.fields.dateData = (uint64_t)&dateData;
-  return Time - (System_DateTime__get_Second(v9, 0LL) + 60 * (Minute + 60 * Hour));
+  if ( !System_DateTime_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
+  v9.fields._dateData = (uint64_t)&dateData;
+  Hour = System_DateTime__get_Hour(v9, 0LL);
+  v10.fields._dateData = (uint64_t)&dateData;
+  Minute = System_DateTime__get_Minute(v10, 0LL);
+  v11.fields._dateData = (uint64_t)&dateData;
+  return Time - (System_DateTime__get_Second(v11, 0LL) + 60 * (Minute + 60 * Hour));
 }
 
 
@@ -7077,189 +6132,196 @@ System_String_o *__fastcall NetworkManager__getUserAgent(NetworkManager_o *this,
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall NetworkManager__getWebUrl(
         System_String_o *path,
         bool isSecurity,
         bool isWebView,
         const MethodInfo *method)
 {
-  ManagerConfig_c *v7; // x0
-  NetworkManager_c *v8; // x0
-  _BOOL4 serverSettingSecurity; // w8
-  NetworkManager_c *v10; // x0
-  _BOOL4 v11; // w21
-  System_String_o *v12; // x0
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
   __int64 v13; // x1
-  __int64 *v14; // x8
-  NetworkManager_c *v15; // x0
-  System_String_o *v16; // x21
-  System_String_o **v17; // x9
-  __int64 *v18; // x8
-  NetworkManager_c *v19; // x0
-  System_String_o *v20; // x19
-  System_String_o **v21; // x9
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  __int64 v18; // x1
+  __int64 v19; // x1
+  __int64 v20; // x1
+  ManagerConfig_c *v21; // x0
   NetworkManager_c *v22; // x0
+  _BOOL4 serverSettingSecurity; // w8
+  NetworkManager_c *v24; // x0
+  _BOOL4 v25; // w21
+  System_String_o *v26; // x0
+  __int64 v27; // x1
+  __int64 *v28; // x8
+  NetworkManager_c *v29; // x0
+  System_String_o *v30; // x21
+  System_String_o **v31; // x9
+  __int64 *v32; // x8
+  NetworkManager_c *v33; // x0
+  System_String_o *v34; // x19
+  System_String_o **v35; // x9
+  NetworkManager_c *v36; // x0
   int64_t Time; // x0
   struct NetworkManager_StaticFields *static_fields; // x8
-  int32_t v25; // w21
-  int32_t v26; // w20
-  System_String_o *v27; // x2
-  __int64 *v28; // x8
-  System_String_o *v29; // x0
-  __int64 *v30; // x8
-  System_String_o *v31; // x1
-  int64_t v33; // [xsp+0h] [xbp-30h] BYREF
-  int64_t v34; // [xsp+8h] [xbp-28h] BYREF
+  int32_t v39; // w21
+  int32_t v40; // w20
+  System_String_o *v41; // x2
+  __int64 *v42; // x8
+  System_String_o *v43; // x0
+  __int64 *v44; // x8
+  System_String_o *v45; // x1
+  int64_t v47; // [xsp+0h] [xbp-40h] BYREF
+  int64_t v48; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_438BA3A & 1) == 0 )
+  if ( (byte_48E2044 & 1) == 0 )
   {
-    sub_B775C4(&ManagerConfig_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&StringLiteral_20593/*"lastAccessTime="*/);
-    sub_B775C4(&StringLiteral_477/*"&v="*/);
-    sub_B775C4(&StringLiteral_19592/*"http://"*/);
-    sub_B775C4(&StringLiteral_979/*"/webview/"*/);
-    sub_B775C4(&StringLiteral_1554/*"?"*/);
-    sub_B775C4(&StringLiteral_1562/*"?lastAccessTime="*/);
-    sub_B775C4(&StringLiteral_19628/*"https:"*/);
-    sub_B775C4(&StringLiteral_471/*"&lastAccessTime="*/);
-    sub_B775C4(&StringLiteral_19100/*"file:"*/);
-    sub_B775C4(&StringLiteral_19629/*"https://"*/);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    sub_B775C4(&StringLiteral_1565/*"?v="*/);
-    sub_B775C4(&StringLiteral_19591/*"http:"*/);
-    byte_438BA3A = 1;
+    sub_1B00CCC(&ManagerConfig_TypeInfo, isSecurity);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v7);
+    sub_1B00CCC(&StringLiteral_20760/*"lastAccessTime="*/, v8);
+    sub_1B00CCC(&StringLiteral_556/*"&v="*/, v9);
+    sub_1B00CCC(&StringLiteral_19723/*"http://"*/, v10);
+    sub_1B00CCC(&StringLiteral_1206/*"/webview/"*/, v11);
+    sub_1B00CCC(&StringLiteral_1869/*"?"*/, v12);
+    sub_1B00CCC(&StringLiteral_1877/*"?lastAccessTime="*/, v13);
+    sub_1B00CCC(&StringLiteral_19759/*"https:"*/, v14);
+    sub_1B00CCC(&StringLiteral_550/*"&lastAccessTime="*/, v15);
+    sub_1B00CCC(&StringLiteral_19158/*"file:"*/, v16);
+    sub_1B00CCC(&StringLiteral_19760/*"https://"*/, v17);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v18);
+    sub_1B00CCC(&StringLiteral_1880/*"?v="*/, v19);
+    sub_1B00CCC(&StringLiteral_19722/*"http:"*/, v20);
+    byte_48E2044 = 1;
   }
-  v33 = 0LL;
-  v34 = 0LL;
-  v7 = ManagerConfig_TypeInfo;
-  if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ManagerConfig_TypeInfo->_2.cctor_finished )
+  v21 = ManagerConfig_TypeInfo;
+  v47 = 0LL;
+  v48 = 0LL;
+  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v7 = ManagerConfig_TypeInfo;
+    v21 = ManagerConfig_TypeInfo;
   }
-  if ( v7->static_fields->UseDebugCommand )
+  if ( v21->static_fields->UseDebugCommand )
   {
     if ( isSecurity )
     {
-      v8 = NetworkManager_TypeInfo;
-      if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !NetworkManager_TypeInfo->_2.cctor_finished )
+      v22 = NetworkManager_TypeInfo;
+      if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        v8 = NetworkManager_TypeInfo;
+        v22 = NetworkManager_TypeInfo;
       }
-      serverSettingSecurity = v8->static_fields->serverSettingSecurity;
-      goto LABEL_17;
+      serverSettingSecurity = v22->static_fields->serverSettingSecurity;
+      goto LABEL_14;
     }
   }
   else if ( isSecurity )
   {
-    v10 = NetworkManager_TypeInfo;
-    if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !NetworkManager_TypeInfo->_2.cctor_finished )
+    v24 = NetworkManager_TypeInfo;
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      v10 = NetworkManager_TypeInfo;
+      v24 = NetworkManager_TypeInfo;
     }
-    serverSettingSecurity = v10->static_fields->serverSecurity;
-LABEL_17:
-    v11 = serverSettingSecurity;
+    serverSettingSecurity = v24->static_fields->serverSecurity;
+LABEL_14:
+    v25 = serverSettingSecurity;
     if ( path )
-      goto LABEL_18;
-LABEL_30:
-    v18 = &StringLiteral_19629/*"https://"*/;
-    v19 = NetworkManager_TypeInfo;
-    if ( !v11 )
-      v18 = &StringLiteral_19592/*"http://"*/;
-    v20 = (System_String_o *)*v18;
-    if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !NetworkManager_TypeInfo->_2.cctor_finished )
+      goto LABEL_15;
+LABEL_26:
+    v32 = &StringLiteral_19760/*"https://"*/;
+    v33 = NetworkManager_TypeInfo;
+    if ( !v25 )
+      v32 = &StringLiteral_19723/*"http://"*/;
+    v34 = (System_String_o *)*v32;
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      v19 = NetworkManager_TypeInfo;
+      v33 = NetworkManager_TypeInfo;
     }
-    v21 = (System_String_o **)&StringLiteral_979/*"/webview/"*/;
+    v35 = (System_String_o **)&StringLiteral_1206/*"/webview/"*/;
     if ( !isWebView )
-      v21 = (System_String_o **)&StringLiteral_1/*""*/;
-    v12 = System_String__Concat_44904220(v20, v19->static_fields->webServerAddress, *v21, 0LL);
-    goto LABEL_38;
+      v35 = (System_String_o **)&StringLiteral_1/*""*/;
+    v26 = System_String__Concat_60337008(v34, v33->static_fields->webServerAddress, *v35, 0LL);
+    goto LABEL_33;
   }
-  v11 = 0;
+  v25 = 0;
   if ( !path )
-    goto LABEL_30;
-LABEL_18:
-  v12 = (System_String_o *)System_String__StartsWith(path, (System_String_o *)StringLiteral_19100/*"file:"*/, 0LL);
-  if ( ((unsigned __int8)v12 & 1) != 0 )
-    goto LABEL_39;
-  v12 = (System_String_o *)System_String__StartsWith(path, (System_String_o *)StringLiteral_19591/*"http:"*/, 0LL);
-  if ( ((unsigned __int8)v12 & 1) != 0 )
-    goto LABEL_39;
-  v12 = (System_String_o *)System_String__StartsWith(path, (System_String_o *)StringLiteral_19628/*"https:"*/, 0LL);
-  if ( ((unsigned __int8)v12 & 1) != 0 )
-    goto LABEL_39;
-  v14 = &StringLiteral_19629/*"https://"*/;
-  v15 = NetworkManager_TypeInfo;
-  if ( !v11 )
-    v14 = &StringLiteral_19592/*"http://"*/;
-  v16 = (System_String_o *)*v14;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+    goto LABEL_26;
+LABEL_15:
+  v26 = (System_String_o *)System_String__StartsWith(path, (System_String_o *)StringLiteral_19158/*"file:"*/, 0LL);
+  if ( ((unsigned __int8)v26 & 1) != 0 )
+    goto LABEL_34;
+  v26 = (System_String_o *)System_String__StartsWith(path, (System_String_o *)StringLiteral_19722/*"http:"*/, 0LL);
+  if ( ((unsigned __int8)v26 & 1) != 0 )
+    goto LABEL_34;
+  v26 = (System_String_o *)System_String__StartsWith(path, (System_String_o *)StringLiteral_19759/*"https:"*/, 0LL);
+  if ( ((unsigned __int8)v26 & 1) != 0 )
+    goto LABEL_34;
+  v28 = &StringLiteral_19760/*"https://"*/;
+  v29 = NetworkManager_TypeInfo;
+  if ( !v25 )
+    v28 = &StringLiteral_19723/*"http://"*/;
+  v30 = (System_String_o *)*v28;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v15 = NetworkManager_TypeInfo;
+    v29 = NetworkManager_TypeInfo;
   }
-  v17 = (System_String_o **)&StringLiteral_979/*"/webview/"*/;
+  v31 = (System_String_o **)&StringLiteral_1206/*"/webview/"*/;
   if ( !isWebView )
-    v17 = (System_String_o **)&StringLiteral_1/*""*/;
-  v12 = System_String__Concat_44905348(v16, v15->static_fields->webServerAddress, *v17, path, 0LL);
-LABEL_38:
-  path = v12;
-LABEL_39:
+    v31 = (System_String_o **)&StringLiteral_1/*""*/;
+  v26 = System_String__Concat_60339012(v30, v29->static_fields->webServerAddress, *v31, path, 0LL);
+LABEL_33:
+  path = v26;
+LABEL_34:
   if ( isWebView )
   {
     if ( !path )
-      sub_B7769C(v12, v13);
-    if ( System_String__StartsWith(path, (System_String_o *)StringLiteral_19591/*"http:"*/, 0LL)
-      || System_String__StartsWith(path, (System_String_o *)StringLiteral_19628/*"https:"*/, 0LL) )
+      sub_1B00F28(v26, v27);
+    if ( System_String__StartsWith(path, (System_String_o *)StringLiteral_19722/*"http:"*/, 0LL)
+      || System_String__StartsWith(path, (System_String_o *)StringLiteral_19759/*"https:"*/, 0LL) )
     {
-      v22 = NetworkManager_TypeInfo;
-      if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !NetworkManager_TypeInfo->_2.cctor_finished )
-      {
+      v36 = NetworkManager_TypeInfo;
+      if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      }
-      Time = NetworkManager__getTime((const MethodInfo *)v22);
+      Time = NetworkManager__getTime((const MethodInfo *)v36);
       static_fields = NetworkManager_TypeInfo->static_fields;
-      v33 = Time / static_fields->WebCacheTime;
-      v34 = Time;
-      v25 = System_String__IndexOf_44974284(path, static_fields->webServerAddress, 0LL);
-      v26 = System_String__IndexOf_44974284(path, (System_String_o *)StringLiteral_1554/*"?"*/, 0LL);
-      if ( (v25 & 0x80000000) == 0 )
+      v47 = Time / static_fields->WebCacheTime;
+      v48 = Time;
+      v39 = System_String__IndexOf_60357184(path, static_fields->webServerAddress, 0LL);
+      v40 = System_String__IndexOf_60357184(path, (System_String_o *)StringLiteral_1869/*"?"*/, 0LL);
+      if ( (v39 & 0x80000000) == 0 )
       {
-        v27 = System_Int64__ToString((int64_t)&v33, 0LL);
-        if ( (v26 & 0x80000000) != 0 )
-          v28 = &StringLiteral_1565/*"?v="*/;
+        v41 = System_Int64__ToString((int64_t)&v47, 0LL);
+        if ( (v40 & 0x80000000) != 0 )
+          v42 = &StringLiteral_1880/*"?v="*/;
         else
-          v28 = &StringLiteral_477/*"&v="*/;
-        v31 = (System_String_o *)*v28;
-        return System_String__Concat_44904220(path, v31, v27, 0LL);
+          v42 = &StringLiteral_556/*"&v="*/;
+        v45 = (System_String_o *)*v42;
+        return System_String__Concat_60337008(path, v45, v41, 0LL);
       }
-      if ( (v26 & 0x80000000) != 0 )
+      if ( (v40 & 0x80000000) != 0 )
       {
-        v29 = System_Int64__ToString((int64_t)&v34, 0LL);
-        v30 = &StringLiteral_1562/*"?lastAccessTime="*/;
-        goto LABEL_55;
+        v43 = System_Int64__ToString((int64_t)&v48, 0LL);
+        v44 = &StringLiteral_1877/*"?lastAccessTime="*/;
+        goto LABEL_49;
       }
-      if ( (~(System_String__IndexOf_44974284(path, (System_String_o *)StringLiteral_20593/*"lastAccessTime="*/, 0LL) >> 31) & 0x1F) == 0 )
+      if ( (System_String__IndexOf_60357184(path, (System_String_o *)StringLiteral_20760/*"lastAccessTime="*/, 0LL) & 0x80000000) != 0 )
       {
-        v29 = System_Int64__ToString((int64_t)&v34, 0LL);
-        v30 = &StringLiteral_471/*"&lastAccessTime="*/;
-LABEL_55:
-        v31 = (System_String_o *)*v30;
-        v27 = v29;
-        return System_String__Concat_44904220(path, v31, v27, 0LL);
+        v43 = System_Int64__ToString((int64_t)&v48, 0LL);
+        v44 = &StringLiteral_550/*"&lastAccessTime="*/;
+LABEL_49:
+        v45 = (System_String_o *)*v44;
+        v41 = v43;
+        return System_String__Concat_60337008(path, v45, v41, 0LL);
       }
     }
   }
@@ -7271,147 +6333,161 @@ System_String_o *__fastcall NetworkManager__getWebViewAddress(System_String_o *p
 {
   NetworkManager_c *v3; // x0
 
-  if ( (byte_438BA45 & 1) == 0 )
+  if ( (byte_48E204F & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA45 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    byte_48E204F = 1;
   }
   v3 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     v3 = NetworkManager_TypeInfo;
   }
-  return System_String__Concat_44901936(v3->static_fields->webViewBaseURL, path, 0LL);
+  return System_String__Concat_60325748(v3->static_fields->webViewBaseURL, path, 0LL);
 }
 
 
-System_String_o *__fastcall NetworkManager__getWebViewAddress_26221564(int32_t addressType, const MethodInfo *method)
+System_String_o *__fastcall NetworkManager__getWebViewAddress_37274204(int32_t addressType, const MethodInfo *method)
 {
-  __int64 *v3; // x8
-  BalanceConfig_c *v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  __int64 v18; // x1
+  __int64 v19; // x1
+  __int64 v20; // x1
+  __int64 *v21; // x8
+  BalanceConfig_c *v22; // x0
   struct BalanceConfig_StaticFields *static_fields; // x8
-  System_Xml_XmlQualifiedName_o *v7; // x19
-  NetworkManager_c *v8; // x0
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *webViewAddress; // x0
-  NetworkManager_c *v10; // x0
+  Il2CppObject *v25; // x19
+  NetworkManager_c *v26; // x0
+  System_Collections_Generic_Dictionary_object__object__o *webViewAddress; // x0
+  NetworkManager_c *v28; // x0
 
-  if ( (byte_438BA47 & 1) == 0 )
+  if ( (byte_48E2051 & 1) == 0 )
   {
-    sub_B775C4(&BalanceConfig_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&StringLiteral_22299/*"rights"*/);
-    sub_B775C4(&StringLiteral_22910/*"summonDetail"*/);
-    sub_B775C4(&StringLiteral_18215/*"dBanner"*/);
-    sub_B775C4(&StringLiteral_23119/*"terms"*/);
-    sub_B775C4(&StringLiteral_17230/*"boxGacha"*/);
-    sub_B775C4(&StringLiteral_21496/*"news"*/);
-    sub_B775C4(&StringLiteral_18115/*"credit"*/);
-    sub_B775C4(&StringLiteral_19516/*"help"*/);
-    sub_B775C4(&StringLiteral_22677/*"spdeal"*/);
-    sub_B775C4(&StringLiteral_18017/*"contact"*/);
-    sub_B775C4(&StringLiteral_23055/*"tBanner"*/);
-    sub_B775C4(&StringLiteral_18318/*"deleteAccount"*/);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    sub_B775C4(&StringLiteral_23681/*"warBoard"*/);
-    sub_B775C4(&StringLiteral_21988/*"privacyPolicy"*/);
-    byte_438BA47 = 1;
+    sub_1B00CCC(&BalanceConfig_TypeInfo, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__, v3);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__string__get_Item__, v4);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v5);
+    sub_1B00CCC(&StringLiteral_22626/*"rights"*/, v6);
+    sub_1B00CCC(&StringLiteral_23321/*"summonDetail"*/, v7);
+    sub_1B00CCC(&StringLiteral_18186/*"dBanner"*/, v8);
+    sub_1B00CCC(&StringLiteral_23533/*"terms"*/, v9);
+    sub_1B00CCC(&StringLiteral_17153/*"boxGacha"*/, v10);
+    sub_1B00CCC(&StringLiteral_21746/*"news"*/, v11);
+    sub_1B00CCC(&StringLiteral_18080/*"credit"*/, v12);
+    sub_1B00CCC(&StringLiteral_19631/*"help"*/, v13);
+    sub_1B00CCC(&StringLiteral_23067/*"spdeal"*/, v14);
+    sub_1B00CCC(&StringLiteral_17971/*"contact"*/, v15);
+    sub_1B00CCC(&StringLiteral_23471/*"tBanner"*/, v16);
+    sub_1B00CCC(&StringLiteral_18311/*"deleteAccount"*/, v17);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v18);
+    sub_1B00CCC(&StringLiteral_24246/*"warBoard"*/, v19);
+    sub_1B00CCC(&StringLiteral_22293/*"privacyPolicy"*/, v20);
+    byte_48E2051 = 1;
   }
-  v3 = &StringLiteral_19516/*"help"*/;
+  v21 = &StringLiteral_19631/*"help"*/;
   switch ( addressType )
   {
     case 0:
-      v4 = BalanceConfig_TypeInfo;
-      if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !BalanceConfig_TypeInfo->_2.cctor_finished )
+      v22 = BalanceConfig_TypeInfo;
+      if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-        v4 = BalanceConfig_TypeInfo;
+        v22 = BalanceConfig_TypeInfo;
       }
-      static_fields = v4->static_fields;
+      static_fields = v22->static_fields;
       if ( !static_fields->IsIOS_Examination )
       {
-        v3 = &StringLiteral_21496/*"news"*/;
-LABEL_25:
-        v7 = (System_Xml_XmlQualifiedName_o *)*v3;
-        v8 = NetworkManager_TypeInfo;
-        if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !NetworkManager_TypeInfo->_2.cctor_finished )
+        v21 = &StringLiteral_21746/*"news"*/;
+LABEL_23:
+        v25 = (Il2CppObject *)*v21;
+        v26 = NetworkManager_TypeInfo;
+        if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-          v8 = NetworkManager_TypeInfo;
+          v26 = NetworkManager_TypeInfo;
         }
-        webViewAddress = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v8->static_fields->webViewAddress;
+        webViewAddress = (System_Collections_Generic_Dictionary_object__object__o *)v26->static_fields->webViewAddress;
         if ( webViewAddress )
         {
-          if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
+          if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
                   webViewAddress,
-                  v7,
-                  (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
+                  v25,
+                  (const MethodInfo_308DC3C *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
             return (System_String_o *)StringLiteral_1/*""*/;
-          v10 = NetworkManager_TypeInfo;
-          if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-            && !NetworkManager_TypeInfo->_2.cctor_finished )
+          v28 = NetworkManager_TypeInfo;
+          if ( !NetworkManager_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-            v10 = NetworkManager_TypeInfo;
+            v28 = NetworkManager_TypeInfo;
           }
-          webViewAddress = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v10->static_fields->webViewAddress;
+          webViewAddress = (System_Collections_Generic_Dictionary_object__object__o *)v28->static_fields->webViewAddress;
           if ( webViewAddress )
-            return (System_String_o *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-                                        (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)webViewAddress,
-                                        (System_Type_o *)v7,
-                                        (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+            return (System_String_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
+                                        webViewAddress,
+                                        v25,
+                                        (const MethodInfo_308D9C8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
         }
-        sub_B7769C(webViewAddress, method);
+        sub_1B00F28(webViewAddress, method);
       }
-      if ( (BYTE3(v4->vtable._0_Equals.methodPtr) & 4) != 0 && !v4->_2.cctor_finished )
+      if ( !v22->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v4);
+        j_il2cpp_runtime_class_init_0(v22);
         static_fields = BalanceConfig_TypeInfo->static_fields;
       }
       return static_fields->IOS_ExaminationNewsUrl;
     case 1:
-      v3 = &StringLiteral_22910/*"summonDetail"*/;
-      goto LABEL_25;
+      v21 = &StringLiteral_23321/*"summonDetail"*/;
+      goto LABEL_23;
     case 2:
-      goto LABEL_25;
+      goto LABEL_23;
     case 3:
-      v3 = &StringLiteral_18017/*"contact"*/;
-      goto LABEL_25;
+      v21 = &StringLiteral_17971/*"contact"*/;
+      goto LABEL_23;
     case 4:
-      v3 = &StringLiteral_23119/*"terms"*/;
-      goto LABEL_25;
+      v21 = &StringLiteral_23533/*"terms"*/;
+      goto LABEL_23;
     case 5:
-      v3 = &StringLiteral_18115/*"credit"*/;
-      goto LABEL_25;
+      v21 = &StringLiteral_18080/*"credit"*/;
+      goto LABEL_23;
     case 6:
-      v3 = &StringLiteral_22299/*"rights"*/;
-      goto LABEL_25;
+      v21 = &StringLiteral_22626/*"rights"*/;
+      goto LABEL_23;
     case 7:
-      v3 = &StringLiteral_23055/*"tBanner"*/;
-      goto LABEL_25;
+      v21 = &StringLiteral_23471/*"tBanner"*/;
+      goto LABEL_23;
     case 8:
-      v3 = &StringLiteral_22677/*"spdeal"*/;
-      goto LABEL_25;
+      v21 = &StringLiteral_23067/*"spdeal"*/;
+      goto LABEL_23;
     case 9:
-      v3 = &StringLiteral_17230/*"boxGacha"*/;
-      goto LABEL_25;
+      v21 = &StringLiteral_17153/*"boxGacha"*/;
+      goto LABEL_23;
     case 10:
-      v3 = &StringLiteral_18215/*"dBanner"*/;
-      goto LABEL_25;
+      v21 = &StringLiteral_18186/*"dBanner"*/;
+      goto LABEL_23;
     case 11:
-      v3 = &StringLiteral_21988/*"privacyPolicy"*/;
-      goto LABEL_25;
+      v21 = &StringLiteral_22293/*"privacyPolicy"*/;
+      goto LABEL_23;
     case 12:
-      v3 = &StringLiteral_18318/*"deleteAccount"*/;
-      goto LABEL_25;
+      v21 = &StringLiteral_18311/*"deleteAccount"*/;
+      goto LABEL_23;
     case 13:
-      v3 = &StringLiteral_23681/*"warBoard"*/;
-      goto LABEL_25;
+      v21 = &StringLiteral_24246/*"warBoard"*/;
+      goto LABEL_23;
     default:
       return (System_String_o *)StringLiteral_1/*""*/;
   }
@@ -7421,71 +6497,70 @@ LABEL_25:
 System_String_o *__fastcall NetworkManager__getWebViewFullAddress(System_String_o *path, const MethodInfo *method)
 {
   System_String_o *v2; // x19
-  const MethodInfo *v3; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  const MethodInfo *v5; // x1
 
   v2 = path;
-  if ( (byte_438BA46 & 1) == 0 )
+  if ( (byte_48E2050 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&StringLiteral_19628/*"https:"*/);
-    path = (System_String_o *)sub_B775C4(&StringLiteral_19591/*"http:"*/);
-    byte_438BA46 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_19759/*"https:"*/, v3);
+    path = (System_String_o *)sub_1B00CCC(&StringLiteral_19722/*"http:"*/, v4);
+    byte_48E2050 = 1;
   }
   if ( !v2 )
-    sub_B7769C(path, method);
-  if ( System_String__StartsWith(v2, (System_String_o *)StringLiteral_19591/*"http:"*/, 0LL)
-    || System_String__StartsWith(v2, (System_String_o *)StringLiteral_19628/*"https:"*/, 0LL) )
+    sub_1B00F28(path, method);
+  if ( System_String__StartsWith(v2, (System_String_o *)StringLiteral_19722/*"http:"*/, 0LL)
+    || System_String__StartsWith(v2, (System_String_o *)StringLiteral_19759/*"https:"*/, 0LL) )
   {
     return v2;
   }
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  return NetworkManager__getWebViewAddress(v2, v3);
+  return NetworkManager__getWebViewAddress(v2, v5);
 }
 
 
 System_String_o *__fastcall NetworkManager__get_ErrorDialogResponseData(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
+  __int64 v1; // x1
+  NetworkManager_c *v2; // x0
 
-  if ( (byte_438BA4C & 1) == 0 )
+  if ( (byte_48E2056 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA4C = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, v1);
+    byte_48E2056 = 1;
   }
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v2 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v1 = NetworkManager_TypeInfo;
+    v2 = NetworkManager_TypeInfo;
   }
-  return v1->static_fields->errorDialogResponseData;
+  return v2->static_fields->errorDialogResponseData;
 }
 
 
 int64_t __fastcall NetworkManager__get_FriendCode(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
-  int64_t result; // [xsp+8h] [xbp-8h] BYREF
+  __int64 v1; // x1
+  NetworkManager_c *v2; // x0
+  int64_t result; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_438B9E2 & 1) == 0 )
+  if ( (byte_48E1FEA & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438B9E2 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, v1);
+    byte_48E1FEA = 1;
   }
+  v2 = NetworkManager_TypeInfo;
   result = 0LL;
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v1 = NetworkManager_TypeInfo;
+    v2 = NetworkManager_TypeInfo;
   }
-  if ( System_Int64__TryParse(v1->static_fields->friendCode, &result, 0LL) )
+  if ( System_Int64__TryParse(v2->static_fields->friendCode, &result, 0LL) )
     return result;
   else
     return -1LL;
@@ -7494,87 +6569,87 @@ int64_t __fastcall NetworkManager__get_FriendCode(const MethodInfo *method)
 
 bool __fastcall NetworkManager__get_IsLogin(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
+  __int64 v1; // x1
+  NetworkManager_c *v2; // x0
 
-  if ( (byte_438B9E0 & 1) == 0 )
+  if ( (byte_48E1FE8 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438B9E0 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, v1);
+    byte_48E1FE8 = 1;
   }
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v2 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v1 = NetworkManager_TypeInfo;
+    v2 = NetworkManager_TypeInfo;
   }
-  return v1->static_fields->isLogin;
+  return v2->static_fields->isLogin;
 }
 
 
 bool __fastcall NetworkManager__get_IsRebootBlock(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
+  __int64 v1; // x1
+  NetworkManager_c *v2; // x0
 
-  if ( (byte_438B9DC & 1) == 0 )
+  if ( (byte_48E1FE4 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438B9DC = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, v1);
+    byte_48E1FE4 = 1;
   }
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v2 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v1 = NetworkManager_TypeInfo;
+    v2 = NetworkManager_TypeInfo;
   }
-  return v1->static_fields->isRebootBlock;
+  return v2->static_fields->isRebootBlock;
 }
 
 
 System_String_o *__fastcall NetworkManager__get_UserCreateServer(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
+  __int64 v1; // x1
+  NetworkManager_c *v2; // x0
 
-  if ( (byte_438B9DF & 1) == 0 )
+  if ( (byte_48E1FE7 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438B9DF = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, v1);
+    byte_48E1FE7 = 1;
   }
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v2 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v1 = NetworkManager_TypeInfo;
+    v2 = NetworkManager_TypeInfo;
   }
-  return v1->static_fields->userCreateServer;
+  return v2->static_fields->userCreateServer;
 }
 
 
 int64_t __fastcall NetworkManager__get_UserId(const MethodInfo *method)
 {
-  NetworkManager_c *v1; // x0
+  __int64 v1; // x1
+  NetworkManager_c *v2; // x0
   System_String_o *userId; // x8
 
-  if ( (byte_438B9E1 & 1) == 0 )
+  if ( (byte_48E1FE9 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438B9E1 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, v1);
+    byte_48E1FE9 = 1;
   }
-  v1 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v2 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v1 = NetworkManager_TypeInfo;
+    v2 = NetworkManager_TypeInfo;
   }
-  userId = v1->static_fields->userId;
+  userId = v2->static_fields->userId;
   if ( !userId )
     return -1LL;
-  if ( (BYTE3(v1->vtable._0_Equals.methodPtr) & 4) != 0 && !v1->_2.cctor_finished )
+  if ( !v2->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v1);
+    j_il2cpp_runtime_class_init_0(v2);
     userId = NetworkManager_TypeInfo->static_fields->userId;
   }
   return System_Int64__Parse(userId, 0LL);
@@ -7589,38 +6664,25 @@ bool __fastcall NetworkManager__get_isWaitUserAgent(NetworkManager_o *this, cons
 
 void __fastcall NetworkManager__set_ErrorDialogResponseData(System_String_o *value, const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  NetworkManager_c *v9; // x0
+  int32_t v2; // w2
+  int32_t v3; // w3
+  NetworkManager_c *v5; // x0
   struct NetworkManager_StaticFields *static_fields; // x8
 
-  if ( (byte_438BA4D & 1) == 0 )
+  if ( (byte_48E2057 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438BA4D = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    byte_48E2057 = 1;
   }
-  v9 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v5 = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v9 = NetworkManager_TypeInfo;
+    v5 = NetworkManager_TypeInfo;
   }
-  static_fields = v9->static_fields;
+  static_fields = v5->static_fields;
   static_fields->errorDialogResponseData = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&static_fields->errorDialogResponseData,
-    (System_Int32_array **)value,
-    v2,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->errorDialogResponseData, (int32_t)value, v2, v3);
 }
 
 
@@ -7630,388 +6692,275 @@ void __fastcall NetworkManager__set_isWaitUserAgent(NetworkManager_o *this, bool
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall NetworkManager__setupDataServerAddress(
         NetworkManager_o *this,
         int32_t addressType,
         const MethodInfo *method)
 {
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
   System_String_o *streamingAssetsPath; // x19
-  ManagerConfig_c *v5; // x8
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
-  System_Int32_array **v12; // x19
-  NetworkManager_c *v13; // x8
-  BattleServantConfConponent_o *p_dataServerAddress; // x0
-  __int64 v15; // x1
+  ManagerConfig_c *v11; // x8
+  int32_t v12; // w2
+  int32_t v13; // w3
+  System_String_o *v14; // x19
+  NetworkManager_c *v15; // x8
+  ServantStatusBattleListViewItem_o *p_dataServerAddress; // x0
+  __int64 v17; // x1
   struct NetworkManager_StaticFields *static_fields; // x8
   System_String_o *dataServerAddress; // x0
-  NetworkManager_c *v18; // x0
-  struct NetworkManager_StaticFields *v19; // x8
-  System_String_o *v20; // x19
-  ManagerConfig_c *v21; // x0
-  struct ManagerConfig_StaticFields *v22; // x8
+  NetworkManager_c *v20; // x0
+  struct NetworkManager_StaticFields *v21; // x8
+  System_String_o *v22; // x19
+  int32_t v23; // w2
+  int32_t v24; // w3
+  __int64 v25; // x19
+  __int64 v26; // x1
+  int32_t v27; // w2
+  int32_t v28; // w3
+  int32_t v29; // w1
+  int32_t v30; // w2
+  int32_t v31; // w3
+  struct System_String_o *dataServerFolder; // x1
+  int32_t v33; // w2
+  int32_t v34; // w3
+  __int64 v35; // x1
+  int32_t v36; // w2
+  int32_t v37; // w3
+  __int64 v38; // x1
+  struct ManagerConfig_StaticFields *v39; // x8
   System_String_o *ReleaseDataServerAddress; // x19
-  System_String_array **v24; // x2
-  System_String_array **v25; // x3
-  System_Boolean_array **v26; // x4
-  System_Int32_array **v27; // x5
-  System_Int32_array *v28; // x6
-  System_Int32_array *v29; // x7
-  __int64 v30; // x19
-  NetworkManager_c *v31; // x8
-  System_Int32_array **dataServerRedirectAddress; // x20
-  System_String_array **v33; // x2
-  System_String_array **v34; // x3
-  System_Boolean_array **v35; // x4
-  System_Int32_array **v36; // x5
-  System_Int32_array *v37; // x6
-  System_Int32_array *v38; // x7
-  System_Int32_array **v39; // x1
-  System_String_array **v40; // x2
-  System_String_array **v41; // x3
-  System_Boolean_array **v42; // x4
-  System_Int32_array **v43; // x5
-  System_Int32_array *v44; // x6
-  System_Int32_array *v45; // x7
-  System_Int32_array **v46; // x20
-  System_String_array **v47; // x2
-  System_String_array **v48; // x3
-  System_Boolean_array **v49; // x4
-  System_Int32_array **v50; // x5
-  System_Int32_array *v51; // x6
-  System_Int32_array *v52; // x7
-  System_Int32_array **v53; // x1
-  System_String_array **v54; // x2
-  System_String_array **v55; // x3
-  System_Boolean_array **v56; // x4
-  System_Int32_array **v57; // x5
-  System_Int32_array *v58; // x6
-  System_Int32_array *v59; // x7
-  System_Int32_array **v60; // x20
-  System_String_array **v61; // x2
-  System_String_array **v62; // x3
-  System_Boolean_array **v63; // x4
-  System_Int32_array **v64; // x5
-  System_Int32_array *v65; // x6
-  System_Int32_array *v66; // x7
-  System_String_array **v67; // x2
-  System_String_array **v68; // x3
-  System_Boolean_array **v69; // x4
-  System_Int32_array **v70; // x5
-  System_Int32_array *v71; // x6
-  System_Int32_array *v72; // x7
-  System_Int32_array **dataServerFolder; // x20
-  System_Int32_array **v74; // x20
-  System_String_array **v75; // x2
-  System_String_array **v76; // x3
-  System_Boolean_array **v77; // x4
-  System_Int32_array **v78; // x5
-  System_Int32_array *v79; // x6
-  System_Int32_array *v80; // x7
-  System_Int32_array **v81; // x1
-  System_Int32_array **v82; // x0
-  System_String_array **v83; // x2
-  System_String_array **v84; // x3
-  System_Boolean_array **v85; // x4
-  System_Int32_array **v86; // x5
-  System_Int32_array *v87; // x6
-  System_Int32_array *v88; // x7
-  NetworkManager_c *v89; // x8
-  NetworkManager_c *v90; // x0
-  struct NetworkManager_StaticFields *v91; // x8
-  __int64 v92; // x0
-  __int64 v93; // x0
+  int32_t v41; // w2
+  int32_t v42; // w3
+  NetworkManager_c *v43; // x8
+  struct System_String_o *dataServerRedirectAddress; // x1
+  int32_t v45; // w2
+  int32_t v46; // w3
+  int32_t v47; // w1
+  int32_t v48; // w2
+  int32_t v49; // w3
+  struct System_String_o *v50; // x1
+  int32_t v51; // w2
+  int32_t v52; // w3
+  __int64 v53; // x1
+  System_String_o *v54; // x0
+  int32_t v55; // w2
+  int32_t v56; // w3
+  NetworkManager_c *v57; // x8
+  ServantStatusBattleListViewItem_c *v58; // x1
+  ServantStatusBattleListViewItem_o *v59; // x0
+  NetworkManager_c *v60; // x0
 
-  if ( (byte_438BA43 & 1) == 0 )
+  if ( (byte_48E204D & 1) == 0 )
   {
-    sub_B775C4(&ManagerConfig_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&string___TypeInfo);
-    sub_B775C4(&StringLiteral_906/*"/AssetStorages/"*/);
-    sub_B775C4(&StringLiteral_892/*"/"*/);
-    sub_B775C4(&StringLiteral_20445/*"jar:"*/);
-    byte_438BA43 = 1;
+    sub_1B00CCC(&UnityEngine_Application_TypeInfo, *(_QWORD *)&addressType);
+    sub_1B00CCC(&ManagerConfig_TypeInfo, v4);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v5);
+    sub_1B00CCC(&string___TypeInfo, v6);
+    sub_1B00CCC(&StringLiteral_1134/*"/AssetStorages/"*/, v7);
+    sub_1B00CCC(&StringLiteral_1120/*"/"*/, v8);
+    sub_1B00CCC(&StringLiteral_20625/*"jar:"*/, v9);
+    byte_48E204D = 1;
   }
   switch ( addressType )
   {
     case 0:
+      if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
       streamingAssetsPath = UnityEngine_Application__get_streamingAssetsPath(0LL);
-      v5 = ManagerConfig_TypeInfo;
-      if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !ManagerConfig_TypeInfo->_2.cctor_finished )
+      v11 = ManagerConfig_TypeInfo;
+      if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-        v5 = ManagerConfig_TypeInfo;
+        v11 = ManagerConfig_TypeInfo;
       }
-      v12 = (System_Int32_array **)System_String__Concat_44905348(
-                                     streamingAssetsPath,
-                                     (System_String_o *)StringLiteral_906/*"/AssetStorages/"*/,
-                                     v5->static_fields->PlatformName,
-                                     (System_String_o *)StringLiteral_892/*"/"*/,
-                                     0LL);
-      v13 = NetworkManager_TypeInfo;
-      if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !NetworkManager_TypeInfo->_2.cctor_finished )
+      v14 = System_String__Concat_60339012(
+              streamingAssetsPath,
+              (System_String_o *)StringLiteral_1134/*"/AssetStorages/"*/,
+              v11->static_fields->PlatformName,
+              (System_String_o *)StringLiteral_1120/*"/"*/,
+              0LL);
+      v15 = NetworkManager_TypeInfo;
+      if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        v13 = NetworkManager_TypeInfo;
+        v15 = NetworkManager_TypeInfo;
       }
-      p_dataServerAddress = (BattleServantConfConponent_o *)&v13->static_fields->dataServerAddress;
-      p_dataServerAddress->klass = (BattleServantConfConponent_c *)v12;
-      sub_B77560(p_dataServerAddress, v12, v6, v7, v8, v9, v10, v11);
+      p_dataServerAddress = (ServantStatusBattleListViewItem_o *)&v15->static_fields->dataServerAddress;
+      p_dataServerAddress->klass = (ServantStatusBattleListViewItem_c *)v14;
+      sub_1B00C70(p_dataServerAddress, (int32_t)v14, v12, v13);
       static_fields = NetworkManager_TypeInfo->static_fields;
       dataServerAddress = static_fields->dataServerAddress;
       if ( !dataServerAddress )
-        goto LABEL_89;
+        goto LABEL_59;
       if ( System_String__StartsWith(dataServerAddress, static_fields->FILE_URL_SCHEME, 0LL) )
         return;
-      v18 = NetworkManager_TypeInfo;
-      if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !NetworkManager_TypeInfo->_2.cctor_finished )
+      v20 = NetworkManager_TypeInfo;
+      if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        v18 = NetworkManager_TypeInfo;
+        v20 = NetworkManager_TypeInfo;
       }
-      v19 = v18->static_fields;
-      v20 = v19->dataServerAddress;
-      dataServerAddress = System_String__Concat_44901936(
-                            (System_String_o *)StringLiteral_20445/*"jar:"*/,
-                            v19->FILE_URL_SCHEME,
+      v21 = v20->static_fields;
+      v22 = v21->dataServerAddress;
+      dataServerAddress = System_String__Concat_60325748(
+                            (System_String_o *)StringLiteral_20625/*"jar:"*/,
+                            v21->FILE_URL_SCHEME,
                             0LL);
-      if ( !v20 )
-LABEL_89:
-        sub_B7769C(dataServerAddress, v15);
-      if ( System_String__StartsWith(v20, dataServerAddress, 0LL) )
+      if ( !v22 )
+LABEL_59:
+        sub_1B00F28(dataServerAddress, v17);
+      if ( System_String__StartsWith(v22, dataServerAddress, 0LL) )
         return;
-      v90 = NetworkManager_TypeInfo;
-      if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !NetworkManager_TypeInfo->_2.cctor_finished )
+      v60 = NetworkManager_TypeInfo;
+      if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        v90 = NetworkManager_TypeInfo;
+        v60 = NetworkManager_TypeInfo;
       }
-      v82 = (System_Int32_array **)System_String__Concat_44901936(
-                                     v90->static_fields->FILE_URL_SCHEME,
-                                     v90->static_fields->dataServerAddress,
-                                     0LL);
-      goto LABEL_85;
+      v54 = System_String__Concat_60325748(
+              v60->static_fields->FILE_URL_SCHEME,
+              v60->static_fields->dataServerAddress,
+              0LL);
+LABEL_53:
+      v57 = NetworkManager_TypeInfo;
+      goto LABEL_54;
     case 1:
-      v30 = sub_B775DC(string___TypeInfo, 5LL);
-      if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !NetworkManager_TypeInfo->_2.cctor_finished )
-      {
+      v25 = sub_1B00D74(string___TypeInfo, 5LL);
+      if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      }
-      if ( !byte_438BAEC )
+      if ( !byte_48E01A1 )
       {
-        sub_B775C4(&ManagerConfig_TypeInfo);
-        byte_438BAEC = 1;
+        sub_1B00CCC(&ManagerConfig_TypeInfo, v17);
+        byte_48E01A1 = 1;
       }
       dataServerAddress = (System_String_o *)ManagerConfig_TypeInfo;
-      if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !ManagerConfig_TypeInfo->_2.cctor_finished )
+      if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
         dataServerAddress = (System_String_o *)ManagerConfig_TypeInfo;
       }
-      if ( !v30 )
-        goto LABEL_89;
-      v46 = *(System_Int32_array ***)(*(_QWORD *)&dataServerAddress[7].fields + 152LL);
-      if ( v46 )
-      {
-        dataServerAddress = (System_String_o *)sub_B77684(v46, *(_QWORD *)(*(_QWORD *)v30 + 64LL));
-        if ( !dataServerAddress )
-          goto LABEL_88;
-      }
-      if ( !*(_DWORD *)(v30 + 24) )
-        goto LABEL_87;
-      *(_QWORD *)(v30 + 32) = v46;
-      sub_B77560((BattleServantConfConponent_o *)(v30 + 32), v46, v40, v41, v42, v43, v44, v45);
-      dataServerAddress = (System_String_o *)StringLiteral_892/*"/"*/;
-      if ( StringLiteral_892/*"/"*/ )
-      {
-        dataServerAddress = (System_String_o *)sub_B77684(StringLiteral_892/*"/"*/, *(_QWORD *)(*(_QWORD *)v30 + 64LL));
-        if ( !dataServerAddress )
-          goto LABEL_88;
-        v53 = (System_Int32_array **)StringLiteral_892/*"/"*/;
-      }
-      else
-      {
-        v53 = 0LL;
-      }
-      if ( *(_DWORD *)(v30 + 24) <= 1u )
-        goto LABEL_87;
-      *(_QWORD *)(v30 + 40) = v53;
-      sub_B77560((BattleServantConfConponent_o *)(v30 + 40), v53, v47, v48, v49, v50, v51, v52);
-      dataServerFolder = (System_Int32_array **)NetworkManager_TypeInfo->static_fields->dataServerFolder;
-      if ( dataServerFolder )
-      {
-        dataServerAddress = (System_String_o *)sub_B77684(dataServerFolder, *(_QWORD *)(*(_QWORD *)v30 + 64LL));
-        if ( !dataServerAddress )
-          goto LABEL_88;
-      }
-      if ( *(_DWORD *)(v30 + 24) <= 2u )
-        goto LABEL_87;
-      *(_QWORD *)(v30 + 48) = dataServerFolder;
-      sub_B77560((BattleServantConfConponent_o *)(v30 + 48), dataServerFolder, v67, v68, v69, v70, v71, v72);
+      if ( !v25 )
+        goto LABEL_59;
+      if ( !*(_DWORD *)(v25 + 24) )
+        goto LABEL_58;
+      v26 = *(_QWORD *)(*(_QWORD *)&dataServerAddress[7].fields + 152LL);
+      *(_QWORD *)(v25 + 32) = v26;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v25 + 32), v26, v23, v24);
+      if ( *(_DWORD *)(v25 + 24) <= 1u )
+        goto LABEL_58;
+      v29 = StringLiteral_1120/*"/"*/;
+      *(_QWORD *)(v25 + 40) = StringLiteral_1120/*"/"*/;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v25 + 40), v29, v27, v28);
+      if ( *(_DWORD *)(v25 + 24) <= 2u )
+        goto LABEL_58;
+      dataServerFolder = NetworkManager_TypeInfo->static_fields->dataServerFolder;
+      *(_QWORD *)(v25 + 48) = dataServerFolder;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v25 + 48), (int32_t)dataServerFolder, v30, v31);
       dataServerAddress = (System_String_o *)ManagerConfig_TypeInfo;
-      if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !ManagerConfig_TypeInfo->_2.cctor_finished )
+      if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
       {
-LABEL_67:
-        j_il2cpp_runtime_class_init_0(dataServerAddress);
+        j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
         dataServerAddress = (System_String_o *)ManagerConfig_TypeInfo;
       }
-LABEL_68:
-      v74 = *(System_Int32_array ***)(*(_QWORD *)&dataServerAddress[7].fields + 128LL);
-      if ( v74 )
-      {
-        dataServerAddress = (System_String_o *)sub_B77684(v74, *(_QWORD *)(*(_QWORD *)v30 + 64LL));
-        if ( !dataServerAddress )
-          goto LABEL_88;
-      }
-      if ( *(_DWORD *)(v30 + 24) <= 3u )
-        goto LABEL_87;
-      *(_QWORD *)(v30 + 56) = v74;
-      sub_B77560((BattleServantConfConponent_o *)(v30 + 56), v74, v61, v62, v63, v64, v65, v66);
-      dataServerAddress = (System_String_o *)StringLiteral_892/*"/"*/;
-      if ( StringLiteral_892/*"/"*/ )
-      {
-        dataServerAddress = (System_String_o *)sub_B77684(StringLiteral_892/*"/"*/, *(_QWORD *)(*(_QWORD *)v30 + 64LL));
-        if ( dataServerAddress )
-        {
-          v81 = (System_Int32_array **)StringLiteral_892/*"/"*/;
-          goto LABEL_75;
-        }
-LABEL_88:
-        v93 = sub_B776BC(dataServerAddress);
-        sub_B77668(v93, 0LL);
-      }
-      v81 = 0LL;
-LABEL_75:
-      if ( *(_DWORD *)(v30 + 24) <= 4u )
-      {
-LABEL_87:
-        v92 = sub_B776C8(dataServerAddress);
-        sub_B77668(v92, 0LL);
-      }
-      *(_QWORD *)(v30 + 64) = v81;
-      sub_B77560((BattleServantConfConponent_o *)(v30 + 64), v81, v75, v76, v77, v78, v79, v80);
-      v82 = (System_Int32_array **)System_String__Concat_44982964((System_String_array *)v30, 0LL);
-      v89 = NetworkManager_TypeInfo;
-LABEL_86:
-      v91 = v89->static_fields;
-      v91->dataServerAddress = (struct System_String_o *)v82;
-      sub_B77560((BattleServantConfConponent_o *)&v91->dataServerAddress, v82, v83, v84, v85, v86, v87, v88);
-      return;
+      if ( *(_DWORD *)(v25 + 24) <= 3u )
+        goto LABEL_58;
+      v35 = *(_QWORD *)(*(_QWORD *)&dataServerAddress[7].fields + 128LL);
+      *(_QWORD *)(v25 + 56) = v35;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v25 + 56), v35, v33, v34);
+      if ( *(_DWORD *)(v25 + 24) <= 4u )
+        goto LABEL_58;
+      v38 = StringLiteral_1120/*"/"*/;
+      goto LABEL_49;
     case 2:
-      if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !NetworkManager_TypeInfo->_2.cctor_finished )
-      {
+      if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      }
-      if ( !byte_438BAEC )
+      if ( !byte_48E01A1 )
       {
-        sub_B775C4(&ManagerConfig_TypeInfo);
-        byte_438BAEC = 1;
-      }
-      v21 = ManagerConfig_TypeInfo;
-      if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) == 0 )
-      {
-        v22 = ManagerConfig_TypeInfo->static_fields;
-        ReleaseDataServerAddress = v22->ReleaseDataServerAddress;
-        goto LABEL_84;
+        sub_1B00CCC(&ManagerConfig_TypeInfo, *(_QWORD *)&addressType);
+        byte_48E01A1 = 1;
       }
       if ( ManagerConfig_TypeInfo->_2.cctor_finished )
       {
-        v22 = ManagerConfig_TypeInfo->static_fields;
-        ReleaseDataServerAddress = v22->ReleaseDataServerAddress;
+        v39 = ManagerConfig_TypeInfo->static_fields;
+        ReleaseDataServerAddress = v39->ReleaseDataServerAddress;
       }
       else
       {
         j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-        v21 = ManagerConfig_TypeInfo;
-        v22 = ManagerConfig_TypeInfo->static_fields;
-        ReleaseDataServerAddress = v22->ReleaseDataServerAddress;
-        if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) == 0 )
-          goto LABEL_84;
+        v39 = ManagerConfig_TypeInfo->static_fields;
+        ReleaseDataServerAddress = v39->ReleaseDataServerAddress;
+        if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
+        {
+          j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
+          v39 = ManagerConfig_TypeInfo->static_fields;
+        }
       }
-      if ( !v21->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(v21);
-        v22 = ManagerConfig_TypeInfo->static_fields;
-      }
-LABEL_84:
-      v82 = (System_Int32_array **)System_String__Concat_44905348(
-                                     ReleaseDataServerAddress,
-                                     (System_String_o *)StringLiteral_892/*"/"*/,
-                                     v22->PlatformName,
-                                     (System_String_o *)StringLiteral_892/*"/"*/,
-                                     0LL);
-LABEL_85:
-      v89 = NetworkManager_TypeInfo;
-      goto LABEL_86;
+      v54 = System_String__Concat_60339012(
+              ReleaseDataServerAddress,
+              (System_String_o *)StringLiteral_1120/*"/"*/,
+              v39->PlatformName,
+              (System_String_o *)StringLiteral_1120/*"/"*/,
+              0LL);
+      goto LABEL_53;
     case 3:
-      dataServerAddress = (System_String_o *)sub_B775DC(string___TypeInfo, 5LL);
-      v30 = (__int64)dataServerAddress;
-      v31 = NetworkManager_TypeInfo;
-      if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !NetworkManager_TypeInfo->_2.cctor_finished )
+      dataServerAddress = (System_String_o *)sub_1B00D74(string___TypeInfo, 5LL);
+      v25 = (__int64)dataServerAddress;
+      v43 = NetworkManager_TypeInfo;
+      if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        v31 = NetworkManager_TypeInfo;
+        v43 = NetworkManager_TypeInfo;
       }
-      if ( !v30 )
-        goto LABEL_89;
-      dataServerRedirectAddress = (System_Int32_array **)v31->static_fields->dataServerRedirectAddress;
-      if ( dataServerRedirectAddress )
-      {
-        dataServerAddress = (System_String_o *)sub_B77684(dataServerRedirectAddress, *(_QWORD *)(*(_QWORD *)v30 + 64LL));
-        if ( !dataServerAddress )
-          goto LABEL_88;
-      }
-      if ( !*(_DWORD *)(v30 + 24) )
-        goto LABEL_87;
-      *(_QWORD *)(v30 + 32) = dataServerRedirectAddress;
-      sub_B77560((BattleServantConfConponent_o *)(v30 + 32), dataServerRedirectAddress, v24, v25, v26, v27, v28, v29);
-      dataServerAddress = (System_String_o *)StringLiteral_892/*"/"*/;
-      if ( StringLiteral_892/*"/"*/ )
-      {
-        dataServerAddress = (System_String_o *)sub_B77684(StringLiteral_892/*"/"*/, *(_QWORD *)(*(_QWORD *)v30 + 64LL));
-        if ( !dataServerAddress )
-          goto LABEL_88;
-        v39 = (System_Int32_array **)StringLiteral_892/*"/"*/;
-      }
-      else
-      {
-        v39 = 0LL;
-      }
-      if ( *(_DWORD *)(v30 + 24) <= 1u )
-        goto LABEL_87;
-      *(_QWORD *)(v30 + 40) = v39;
-      sub_B77560((BattleServantConfConponent_o *)(v30 + 40), v39, v33, v34, v35, v36, v37, v38);
-      v60 = (System_Int32_array **)NetworkManager_TypeInfo->static_fields->dataServerFolder;
-      if ( v60 )
-      {
-        dataServerAddress = (System_String_o *)sub_B77684(v60, *(_QWORD *)(*(_QWORD *)v30 + 64LL));
-        if ( !dataServerAddress )
-          goto LABEL_88;
-      }
-      if ( *(_DWORD *)(v30 + 24) <= 2u )
-        goto LABEL_87;
-      *(_QWORD *)(v30 + 48) = v60;
-      sub_B77560((BattleServantConfConponent_o *)(v30 + 48), v60, v54, v55, v56, v57, v58, v59);
+      if ( !v25 )
+        goto LABEL_59;
+      if ( !*(_DWORD *)(v25 + 24) )
+        goto LABEL_58;
+      dataServerRedirectAddress = v43->static_fields->dataServerRedirectAddress;
+      *(_QWORD *)(v25 + 32) = dataServerRedirectAddress;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v25 + 32), (int32_t)dataServerRedirectAddress, v41, v42);
+      if ( *(_DWORD *)(v25 + 24) <= 1u )
+        goto LABEL_58;
+      v47 = StringLiteral_1120/*"/"*/;
+      *(_QWORD *)(v25 + 40) = StringLiteral_1120/*"/"*/;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v25 + 40), v47, v45, v46);
+      if ( *(_DWORD *)(v25 + 24) <= 2u )
+        goto LABEL_58;
+      v50 = NetworkManager_TypeInfo->static_fields->dataServerFolder;
+      *(_QWORD *)(v25 + 48) = v50;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v25 + 48), (int32_t)v50, v48, v49);
       dataServerAddress = (System_String_o *)ManagerConfig_TypeInfo;
-      if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !ManagerConfig_TypeInfo->_2.cctor_finished )
+      if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
       {
-        goto LABEL_67;
+        j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
+        dataServerAddress = (System_String_o *)ManagerConfig_TypeInfo;
       }
-      goto LABEL_68;
+      if ( *(_DWORD *)(v25 + 24) <= 3u
+        || (v53 = *(_QWORD *)(*(_QWORD *)&dataServerAddress[7].fields + 128LL),
+            *(_QWORD *)(v25 + 56) = v53,
+            sub_1B00C70((ServantStatusBattleListViewItem_o *)(v25 + 56), v53, v51, v52),
+            *(_DWORD *)(v25 + 24) <= 4u) )
+      {
+LABEL_58:
+        sub_1B00F30(dataServerAddress, v17);
+      }
+      v38 = StringLiteral_1120/*"/"*/;
+LABEL_49:
+      *(_QWORD *)(v25 + 64) = v38;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v25 + 64), v38, v36, v37);
+      v54 = System_String__Concat_60339276((System_String_array *)v25, 0LL);
+      v57 = NetworkManager_TypeInfo;
+LABEL_54:
+      v58 = (ServantStatusBattleListViewItem_c *)v54;
+      v59 = (ServantStatusBattleListViewItem_o *)&v57->static_fields->dataServerAddress;
+      v59->klass = v58;
+      sub_1B00C70(v59, (int32_t)v58, v55, v56);
+      return;
     default:
       return;
   }
@@ -8024,141 +6973,143 @@ void __fastcall NetworkManager__setupWebViewAddress(
         System_Collections_Generic_Dictionary_string__object__o *filePassInfo,
         const MethodInfo *method)
 {
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  NetworkManager_c *v9; // x0
-  BattleServantConfConponent_o *p_webViewBaseURL; // x0
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
   __int64 v11; // x1
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *webViewAddress; // x0
-  _BOOL8 v13; // x0
+  __int64 v12; // x1
+  __int64 v13; // x1
   __int64 v14; // x1
-  Il2CppObject *currentKey; // x21
-  UnityEngine_Purchasing_IStoreExtension_o *Item; // x0
+  __int64 v15; // x1
+  __int64 v16; // x1
   __int64 v17; // x1
-  System_String_o *v18; // x0
-  __int64 v19; // x1
-  System_Xml_Schema_XmlSchemaObject_o *v20; // x22
-  NetworkManager_c *v21; // x0
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *v22; // x0
-  UnityEngine_Purchasing_IStoreExtension_o *v23; // x0
-  __int64 v24; // x1
-  System_String_o *v25; // x1
-  System_Collections_Generic_Dictionary_KeyCollection_Enumerator_TKey__TValue__o v27; // [xsp+8h] [xbp-88h] BYREF
-  System_Collections_Generic_Dictionary_KeyCollection_Enumerator_TKey__TValue__o v28; // [xsp+20h] [xbp-70h] BYREF
+  NetworkManager_c *v18; // x0
+  ServantStatusBattleListViewItem_o *p_webViewBaseURL; // x0
+  __int64 v20; // x1
+  System_Collections_Generic_Dictionary_object__object__o *webViewAddress; // x0
+  _BOOL8 v22; // x0
+  __int64 v23; // x1
+  Il2CppObject *currentKey; // x21
+  Il2CppObject *Item; // x0
+  __int64 v26; // x1
+  System_String_o *v27; // x0
+  __int64 v28; // x1
+  Il2CppObject *v29; // x22
+  NetworkManager_c *v30; // x0
+  System_Collections_Generic_Dictionary_object__object__o *v31; // x0
+  Il2CppObject *v32; // x0
+  __int64 v33; // x1
+  System_String_o *v34; // x1
+  System_Collections_Generic_Dictionary_KeyCollection_Enumerator_TKey__TValue__o v35; // [xsp+8h] [xbp-98h] BYREF
+  System_Collections_Generic_Dictionary_KeyCollection_Enumerator_TKey__TValue__o v36; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_438BA44 & 1) == 0 )
+  if ( (byte_48E204E & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__string__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__string__Clear__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__get_Keys__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__object__Dispose__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__object__MoveNext__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__object__get_Current__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_KeyCollection_string__object__GetEnumerator__);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&StringLiteral_18017/*"contact"*/);
-    sub_B775C4(&StringLiteral_18318/*"deleteAccount"*/);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    sub_B775C4(&StringLiteral_21988/*"privacyPolicy"*/);
-    byte_438BA44 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__string__Add__, contactURL);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__string__Clear__, v6);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__get_Keys__, v8);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__object__Dispose__, v9);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__object__MoveNext__, v10);
+    sub_1B00CCC(
+      &Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__object__get_Current__,
+      v11);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_KeyCollection_string__object__GetEnumerator__, v12);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v13);
+    sub_1B00CCC(&StringLiteral_17971/*"contact"*/, v14);
+    sub_1B00CCC(&StringLiteral_18311/*"deleteAccount"*/, v15);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v16);
+    sub_1B00CCC(&StringLiteral_22293/*"privacyPolicy"*/, v17);
+    byte_48E204E = 1;
   }
-  memset(&v28, 0, sizeof(v28));
-  v9 = NetworkManager_TypeInfo;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
+  v18 = NetworkManager_TypeInfo;
+  memset(&v36, 0, sizeof(v36));
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v9 = NetworkManager_TypeInfo;
+    v18 = NetworkManager_TypeInfo;
   }
-  p_webViewBaseURL = (BattleServantConfConponent_o *)&v9->static_fields->webViewBaseURL;
-  p_webViewBaseURL->klass = (BattleServantConfConponent_c *)baseURL;
-  sub_B77560(
-    p_webViewBaseURL,
-    (System_Int32_array **)baseURL,
-    (System_String_array **)filePassInfo,
-    (System_String_array **)method,
-    v4,
-    v5,
-    v6,
-    v7);
-  webViewAddress = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)NetworkManager_TypeInfo->static_fields->webViewAddress;
+  p_webViewBaseURL = (ServantStatusBattleListViewItem_o *)&v18->static_fields->webViewBaseURL;
+  p_webViewBaseURL->klass = (ServantStatusBattleListViewItem_c *)baseURL;
+  sub_1B00C70(p_webViewBaseURL, (int32_t)baseURL, (int32_t)filePassInfo, (int32_t)method);
+  webViewAddress = (System_Collections_Generic_Dictionary_object__object__o *)NetworkManager_TypeInfo->static_fields->webViewAddress;
   if ( !webViewAddress
-    || (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Clear(
+    || (System_Collections_Generic_Dictionary_object__object___Clear(
           webViewAddress,
-          (const MethodInfo_2F7D7D4 *)Method_System_Collections_Generic_Dictionary_string__string__Clear__),
+          (const MethodInfo_308DBD0 *)Method_System_Collections_Generic_Dictionary_string__string__Clear__),
         !filePassInfo)
-    || (webViewAddress = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element___get_Keys((System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__o *)filePassInfo, (const MethodInfo_2F7D204 *)Method_System_Collections_Generic_Dictionary_string__object__get_Keys__)) == 0LL )
+    || (webViewAddress = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Keys(
+                                                                                      (System_Collections_Generic_Dictionary_object__object__o *)filePassInfo,
+                                                                                      (const MethodInfo_308D728 *)Method_System_Collections_Generic_Dictionary_string__object__get_Keys__)) == 0LL )
   {
-    sub_B7769C(webViewAddress, v11);
+    sub_1B00F28(webViewAddress, v20);
   }
-  System_Collections_Generic_Dictionary_KeyCollection_string__AssetsInfo_dataInfo___GetEnumerator(
-    &v27,
+  System_Collections_Generic_Dictionary_KeyCollection_object__object___GetEnumerator(
+    &v35,
     (System_Collections_Generic_Dictionary_KeyCollection_TKey__TValue__o *)webViewAddress,
-    (const MethodInfo_21B64BC *)Method_System_Collections_Generic_Dictionary_KeyCollection_string__object__GetEnumerator__);
-  v28 = v27;
+    (const MethodInfo_32E94C4 *)Method_System_Collections_Generic_Dictionary_KeyCollection_string__object__GetEnumerator__);
+  v36 = v35;
   while ( 1 )
   {
-    v13 = System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__AssetsInfo_dataInfo___MoveNext(
-            &v28,
-            (const MethodInfo_27E4BFC *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__object__MoveNext__);
-    if ( !v13 )
+    v22 = System_Collections_Generic_Dictionary_KeyCollection_Enumerator_object__object___MoveNext(
+            &v36,
+            (const MethodInfo_318F1F8 *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__object__MoveNext__);
+    if ( !v22 )
       break;
-    currentKey = v28.fields.currentKey;
-    if ( !v28.fields.currentKey )
-      sub_B7769C(v13, v14);
-    if ( System_String__Equals_44889276(
-           (System_String_o *)v28.fields.currentKey,
-           (System_String_o *)StringLiteral_18017/*"contact"*/,
+    currentKey = v36.fields._currentKey;
+    if ( !v36.fields._currentKey )
+      sub_1B00F28(v22, v23);
+    if ( System_String__Equals_60334064(
+           (System_String_o *)v36.fields._currentKey,
+           (System_String_o *)StringLiteral_17971/*"contact"*/,
            0LL)
-      || System_String__Equals_44889276((System_String_o *)currentKey, (System_String_o *)StringLiteral_21988/*"privacyPolicy"*/, 0LL)
-      || System_String__Equals_44889276((System_String_o *)currentKey, (System_String_o *)StringLiteral_18318/*"deleteAccount"*/, 0LL) )
+      || System_String__Equals_60334064((System_String_o *)currentKey, (System_String_o *)StringLiteral_22293/*"privacyPolicy"*/, 0LL)
+      || System_String__Equals_60334064((System_String_o *)currentKey, (System_String_o *)StringLiteral_18311/*"deleteAccount"*/, 0LL) )
     {
-      Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-               (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)filePassInfo,
-               (System_Type_o *)currentKey,
-               (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+      Item = System_Collections_Generic_Dictionary_object__object___get_Item(
+               (System_Collections_Generic_Dictionary_object__object__o *)filePassInfo,
+               currentKey,
+               (const MethodInfo_308D9C8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
       if ( !Item )
-        sub_B7769C(0LL, v17);
-      v18 = (System_String_o *)((__int64 (__fastcall *)(UnityEngine_Purchasing_IStoreExtension_o *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
+        sub_1B00F28(0LL, v26);
+      v27 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
                                  Item,
                                  Item->klass->vtable[4].methodPtr);
     }
     else
     {
-      v23 = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-              (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)filePassInfo,
-              (System_Type_o *)currentKey,
-              (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-      if ( !v23 )
-        sub_B7769C(0LL, v24);
-      v25 = (System_String_o *)((__int64 (__fastcall *)(UnityEngine_Purchasing_IStoreExtension_o *, Il2CppMethodPointer))v23->klass->vtable[3].method)(
-                                 v23,
-                                 v23->klass->vtable[4].methodPtr);
-      v18 = System_String__Concat_44901936(baseURL, v25, 0LL);
+      v32 = System_Collections_Generic_Dictionary_object__object___get_Item(
+              (System_Collections_Generic_Dictionary_object__object__o *)filePassInfo,
+              currentKey,
+              (const MethodInfo_308D9C8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+      if ( !v32 )
+        sub_1B00F28(0LL, v33);
+      v34 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))v32->klass->vtable[3].method)(
+                                 v32,
+                                 v32->klass->vtable[4].methodPtr);
+      v27 = System_String__Concat_60325748(baseURL, v34, 0LL);
     }
-    v20 = (System_Xml_Schema_XmlSchemaObject_o *)v18;
-    v21 = NetworkManager_TypeInfo;
-    if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !NetworkManager_TypeInfo->_2.cctor_finished )
+    v29 = (Il2CppObject *)v27;
+    v30 = NetworkManager_TypeInfo;
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      v21 = NetworkManager_TypeInfo;
+      v30 = NetworkManager_TypeInfo;
     }
-    v22 = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v21->static_fields->webViewAddress;
-    if ( !v22 )
-      sub_B7769C(0LL, v19);
-    System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
-      v22,
-      (System_Xml_XmlQualifiedName_o *)currentKey,
-      v20,
-      (const MethodInfo_2F7D5F8 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    v31 = (System_Collections_Generic_Dictionary_object__object__o *)v30->static_fields->webViewAddress;
+    if ( !v31 )
+      sub_1B00F28(0LL, v28);
+    System_Collections_Generic_Dictionary_object__object___Add(
+      v31,
+      currentKey,
+      v29,
+      (const MethodInfo_308DA48 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
   }
-  System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__AssetsInfo_dataInfo___Dispose(
-    &v28,
-    (const MethodInfo_27E4BF8 *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__object__Dispose__);
+  System_Collections_Generic_Dictionary_KeyCollection_Enumerator_object__object___Dispose(
+    &v36,
+    (const MethodInfo_318F1F4 *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__object__Dispose__);
 }
 
 
@@ -8169,27 +7120,49 @@ void __fastcall NetworkManager_LoginCallbackFunc___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  struct BattleServantClassBoardSkillEffectListComponent_o *v8; // x8
-  BattleServantConfConponent_o *p_method; // x0
+  __int64 v4; // x8
+  __int64 v6; // x21
+  int v8; // w22
+  Il2CppObject *v9; // x8
+  struct System_Reflection_MethodInfo_o *v10; // x9
+  __int64 v11; // x0
 
-  v8 = **(struct BattleServantClassBoardSkillEffectListComponent_o ***)&method;
+  v4 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
+  *(_QWORD *)&this->fields.extra_arg = *(_QWORD *)&method;
+  v6 = *(_QWORD *)&method;
+  *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  p_method = (BattleServantConfConponent_o *)&this->fields.method;
-  p_method->monitor = *(void **)&method;
-  p_method[-1].fields.classBoardSkillObj = v8;
-  sub_B77560(
-    p_method,
-    (System_Int32_array **)object,
-    *(System_String_array ***)&method,
-    (System_String_array **)a4,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  v8 = *(unsigned __int8 *)(v6 + 82);
+  this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
+  if ( (sub_1B00D8C(v6) & 1) != 0 )
+  {
+    if ( v8 == 1 )
+    {
+      v9 = (Il2CppObject *)sub_194B20C;
+LABEL_8:
+      this->fields.m_target = v9;
+      goto LABEL_9;
+    }
+  }
+  else
+  {
+    if ( !v8 )
+    {
+      v9 = (Il2CppObject *)sub_194B1EC;
+      goto LABEL_8;
+    }
+    if ( !object )
+    {
+      v11 = sub_1B00F44(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B00DF4(v11, 0LL);
+    }
+  }
+  v10 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
+  this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
+  this->fields.original_method_info = v10;
+LABEL_9:
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_194B1A4;
 }
 
 
@@ -8200,11 +7173,10 @@ System_IAsyncResult_o *__fastcall NetworkManager_LoginCallbackFunc__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v6[2]; // [xsp+0h] [xbp-10h] BYREF
+  System_String_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
-  v6[0] = (__int64)result;
-  v6[1] = 0LL;
-  return (System_IAsyncResult_o *)sub_B77568(this, v6, callback, object);
+  v6 = result;
+  return (System_IAsyncResult_o *)sub_1B00C80(this, &v6, callback, object);
 }
 
 
@@ -8213,7 +7185,7 @@ void __fastcall NetworkManager_LoginCallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B7756C(result, 0LL, method);
+  sub_1B00C84(result, 0LL, method);
 }
 
 
@@ -8222,244 +7194,10 @@ void __fastcall NetworkManager_LoginCallbackFunc__Invoke(
         System_String_o *result,
         const MethodInfo *method)
 {
-  __int64 v3; // x8
-  __int64 v6; // x24
-  NetworkManager_LoginCallbackFunc_o **v7; // x25
-  __int64 i; // x26
-  unsigned int v9; // w22
-  __int64 class_0; // x0
-  System_String_c *v11; // x8
-  unsigned __int64 v12; // x10
-  int32_t *v13; // x11
-  __int64 v14; // x0
-  __int64 v15; // x0
-  unsigned int v16; // w23
-  __int64 v17; // x0
-  __int64 v18; // x8
-  unsigned __int64 v19; // x10
-  _DWORD *v20; // x11
-  __int64 v21; // x0
-  __int64 v22; // x0
-  __int64 v23; // x0
-  void (__fastcall **v24)(System_String_o *, _QWORD); // x0
-  __int64 v25; // x0
-  void (__fastcall **v26)(__int64 *, System_String_o *, _QWORD); // x0
-  NetworkManager_LoginCallbackFunc_o *v27; // x8
-  __int64 v28; // x21
-  __int64 *v29; // x22
-  void (__fastcall *v30)(System_String_o *, __int64); // x23
-  char v31; // w0
-  int v32; // w8
-  char v33; // w23
-  char v34; // w0
-  __int64 v35; // x8
-  __int64 v36; // x1
-  __int64 v37; // x2
-  unsigned __int64 v38; // x10
-  _DWORD *v39; // x11
-  char v40; // w22
-  char v41; // w0
-  System_String_c *klass; // x8
-  __int64 v43; // x1
-  __int64 v44; // x2
-  unsigned __int64 v45; // x10
-  int32_t *p_offset; // x11
-  NetworkManager_LoginCallbackFunc_o *v47; // [xsp+8h] [xbp-48h] BYREF
-
-  v47 = this;
-  v3 = *(_QWORD *)&this[1].fields.method_ptr;
-  if ( !v3 )
-  {
-    v7 = &v47;
-    v6 = 1LL;
-    goto LABEL_5;
-  }
-  v6 = *(_QWORD *)(v3 + 24);
-  if ( v6 )
-  {
-    v7 = (NetworkManager_LoginCallbackFunc_o **)(v3 + 32);
-LABEL_5:
-    for ( i = 0LL; i != v6; ++i )
-    {
-      v27 = v7[i];
-      v29 = *(__int64 **)&v27->fields.method;
-      v28 = *(_QWORD *)&v27->fields.extra_arg;
-      v30 = *(void (__fastcall **)(System_String_o *, __int64))&v27->fields.method_ptr;
-      if ( *(__int16 *)(v28 + 72) == -1 )
-        sub_B77680(*(_QWORD *)&v27->fields.extra_arg, result);
-      v31 = sub_B775F4(v28);
-      v32 = *(unsigned __int8 *)(v28 + 74);
-      if ( (v31 & 1) != 0 )
-      {
-        if ( v32 == 1 )
-          goto LABEL_58;
-      }
-      else
-      {
-        if ( v32 != 1 )
-        {
-          if ( *(__int16 *)(v28 + 72) != -1 && this->fields.m_target )
-          {
-            v40 = sub_B775EC(v28);
-            v41 = sub_B779F0(v28);
-            if ( (v40 & 1) != 0 )
-            {
-              if ( (v41 & 1) != 0 )
-              {
-                klass = result->klass;
-                v43 = *(_QWORD *)(v28 + 24);
-                v44 = *(unsigned __int16 *)(v28 + 72);
-                if ( *(_WORD *)&result->klass->_2.bitflags1 )
-                {
-                  v45 = 0LL;
-                  p_offset = &klass->_1.interfaceOffsets->offset;
-                  while ( *((_QWORD *)p_offset - 1) != v43 )
-                  {
-                    ++v45;
-                    p_offset += 4;
-                    if ( v45 >= *(unsigned __int16 *)&result->klass->_2.bitflags1 )
-                      goto LABEL_57;
-                  }
-                  v23 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset + 2 * (int)v44);
-                }
-                else
-                {
-LABEL_57:
-                  v23 = sub_B0F4C0(result, v43, v44);
-                }
-                v15 = *(_QWORD *)(v23 + 8);
-              }
-              else
-              {
-                v15 = *((_QWORD *)&result->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v28 + 72));
-              }
-              v24 = (void (__fastcall **)(System_String_o *, _QWORD))sub_B77674(v15, v28);
-              (*v24)(result, v24);
-            }
-            else
-            {
-              v9 = *(unsigned __int16 *)(v28 + 72);
-              if ( (v41 & 1) != 0 )
-              {
-                class_0 = j_il2cpp_method_get_class_0(v28);
-                v11 = result->klass;
-                if ( *(_WORD *)&result->klass->_2.bitflags1 )
-                {
-                  v12 = 0LL;
-                  v13 = &v11->_1.interfaceOffsets->offset;
-                  while ( *((_QWORD *)v13 - 1) != class_0 )
-                  {
-                    ++v12;
-                    v13 += 4;
-                    if ( v12 >= *(unsigned __int16 *)&result->klass->_2.bitflags1 )
-                      goto LABEL_11;
-                  }
-                  v14 = (__int64)(&v11->vtable._0_Equals.method + 2 * (int)(*v13 + v9));
-                }
-                else
-                {
-LABEL_11:
-                  v14 = sub_B0F4C0(result, class_0, v9);
-                }
-                (*(void (__fastcall **)(System_String_o *, _QWORD))v14)(result, *(_QWORD *)(v14 + 8));
-              }
-              else
-              {
-                (*((void (__fastcall **)(System_String_o *, _QWORD))&result->klass->vtable._0_Equals.method
-                 + 2 * *(unsigned __int16 *)(v28 + 72)))(
-                  result,
-                  *((_QWORD *)&result->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v28 + 72)));
-              }
-            }
-            continue;
-          }
-LABEL_58:
-          v30(result, v28);
-          continue;
-        }
-        if ( !v29 )
-          goto LABEL_58;
-        if ( *(__int16 *)(v28 + 72) != -1 && (*(_BYTE *)(*v29 + 277) & 1) == 0 && this->fields.m_target )
-        {
-          v33 = sub_B775EC(v28);
-          v34 = sub_B779F0(v28);
-          if ( (v33 & 1) != 0 )
-          {
-            if ( (v34 & 1) != 0 )
-            {
-              v35 = *v29;
-              v36 = *(_QWORD *)(v28 + 24);
-              v37 = *(unsigned __int16 *)(v28 + 72);
-              if ( *(_WORD *)(*v29 + 298) )
-              {
-                v38 = 0LL;
-                v39 = (_DWORD *)(*(_QWORD *)(v35 + 176) + 8LL);
-                while ( *((_QWORD *)v39 - 1) != v36 )
-                {
-                  ++v38;
-                  v39 += 4;
-                  if ( v38 >= *(unsigned __int16 *)(*v29 + 298) )
-                    goto LABEL_48;
-                }
-                v25 = v35 + 16LL * (*v39 + (int)v37) + 312;
-              }
-              else
-              {
-LABEL_48:
-                v25 = sub_B0F4C0(v29, v36, v37);
-              }
-              v22 = *(_QWORD *)(v25 + 8);
-            }
-            else
-            {
-              v22 = *(_QWORD *)(*v29 + 16LL * *(unsigned __int16 *)(v28 + 72) + 320);
-            }
-            v26 = (void (__fastcall **)(__int64 *, System_String_o *, _QWORD))sub_B77674(v22, v28);
-            (*v26)(v29, result, v26);
-          }
-          else
-          {
-            v16 = *(unsigned __int16 *)(v28 + 72);
-            if ( (v34 & 1) != 0 )
-            {
-              v17 = j_il2cpp_method_get_class_0(v28);
-              v18 = *v29;
-              if ( *(_WORD *)(*v29 + 298) )
-              {
-                v19 = 0LL;
-                v20 = (_DWORD *)(*(_QWORD *)(v18 + 176) + 8LL);
-                while ( *((_QWORD *)v20 - 1) != v17 )
-                {
-                  ++v19;
-                  v20 += 4;
-                  if ( v19 >= *(unsigned __int16 *)(*v29 + 298) )
-                    goto LABEL_19;
-                }
-                v21 = v18 + 16LL * (int)(*v20 + v16) + 312;
-              }
-              else
-              {
-LABEL_19:
-                v21 = sub_B0F4C0(v29, v17, v16);
-              }
-              (*(void (__fastcall **)(__int64 *, System_String_o *, _QWORD))v21)(v29, result, *(_QWORD *)(v21 + 8));
-            }
-            else
-            {
-              (*(void (__fastcall **)(__int64 *, System_String_o *, _QWORD))(*v29
-                                                                           + 16LL * *(unsigned __int16 *)(v28 + 72)
-                                                                           + 312))(
-                v29,
-                result,
-                *(_QWORD *)(*v29 + 16LL * *(unsigned __int16 *)(v28 + 72) + 320));
-            }
-          }
-          continue;
-        }
-      }
-      ((void (__fastcall *)(__int64 *, System_String_o *, __int64))v30)(v29, result, v28);
-    }
-  }
+  ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))this->fields.m_target)(
+    this->fields.original_method_info,
+    result,
+    *(_QWORD *)&this->fields.extra_arg);
 }
 
 
@@ -8470,27 +7208,49 @@ void __fastcall NetworkManager_ResultCallbackFunc___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  struct BattleServantClassBoardSkillEffectListComponent_o *v8; // x8
-  BattleServantConfConponent_o *p_method; // x0
+  __int64 v4; // x8
+  __int64 v6; // x21
+  int v8; // w22
+  Il2CppObject *v9; // x8
+  struct System_Reflection_MethodInfo_o *v10; // x9
+  __int64 v11; // x0
 
-  v8 = **(struct BattleServantClassBoardSkillEffectListComponent_o ***)&method;
+  v4 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
+  *(_QWORD *)&this->fields.extra_arg = *(_QWORD *)&method;
+  v6 = *(_QWORD *)&method;
+  *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  p_method = (BattleServantConfConponent_o *)&this->fields.method;
-  p_method->monitor = *(void **)&method;
-  p_method[-1].fields.classBoardSkillObj = v8;
-  sub_B77560(
-    p_method,
-    (System_Int32_array **)object,
-    *(System_String_array ***)&method,
-    (System_String_array **)a4,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  v8 = *(unsigned __int8 *)(v6 + 82);
+  this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
+  if ( (sub_1B00D8C(v6) & 1) != 0 )
+  {
+    if ( v8 == 1 )
+    {
+      v9 = (Il2CppObject *)sub_194B168;
+LABEL_8:
+      this->fields.m_target = v9;
+      goto LABEL_9;
+    }
+  }
+  else
+  {
+    if ( !v8 )
+    {
+      v9 = (Il2CppObject *)sub_194B148;
+      goto LABEL_8;
+    }
+    if ( !object )
+    {
+      v11 = sub_1B00F44(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B00DF4(v11, 0LL);
+    }
+  }
+  v10 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
+  this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
+  this->fields.original_method_info = v10;
+LABEL_9:
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_194B100;
 }
 
 
@@ -8501,11 +7261,10 @@ System_IAsyncResult_o *__fastcall NetworkManager_ResultCallbackFunc__BeginInvoke
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v6[2]; // [xsp+0h] [xbp-10h] BYREF
+  System_String_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
-  v6[0] = (__int64)result;
-  v6[1] = 0LL;
-  return (System_IAsyncResult_o *)sub_B77568(this, v6, callback, object);
+  v6 = result;
+  return (System_IAsyncResult_o *)sub_1B00C80(this, &v6, callback, object);
 }
 
 
@@ -8514,7 +7273,7 @@ void __fastcall NetworkManager_ResultCallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B7756C(result, 0LL, method);
+  sub_1B00C84(result, 0LL, method);
 }
 
 
@@ -8523,244 +7282,10 @@ void __fastcall NetworkManager_ResultCallbackFunc__Invoke(
         System_String_o *result,
         const MethodInfo *method)
 {
-  __int64 v3; // x8
-  __int64 v6; // x24
-  NetworkManager_ResultCallbackFunc_o **v7; // x25
-  __int64 i; // x26
-  unsigned int v9; // w22
-  __int64 class_0; // x0
-  System_String_c *v11; // x8
-  unsigned __int64 v12; // x10
-  int32_t *v13; // x11
-  __int64 v14; // x0
-  __int64 v15; // x0
-  unsigned int v16; // w23
-  __int64 v17; // x0
-  __int64 v18; // x8
-  unsigned __int64 v19; // x10
-  _DWORD *v20; // x11
-  __int64 v21; // x0
-  __int64 v22; // x0
-  __int64 v23; // x0
-  void (__fastcall **v24)(System_String_o *, _QWORD); // x0
-  __int64 v25; // x0
-  void (__fastcall **v26)(__int64 *, System_String_o *, _QWORD); // x0
-  NetworkManager_ResultCallbackFunc_o *v27; // x8
-  __int64 v28; // x21
-  __int64 *v29; // x22
-  void (__fastcall *v30)(System_String_o *, __int64); // x23
-  char v31; // w0
-  int v32; // w8
-  char v33; // w23
-  char v34; // w0
-  __int64 v35; // x8
-  __int64 v36; // x1
-  __int64 v37; // x2
-  unsigned __int64 v38; // x10
-  _DWORD *v39; // x11
-  char v40; // w22
-  char v41; // w0
-  System_String_c *klass; // x8
-  __int64 v43; // x1
-  __int64 v44; // x2
-  unsigned __int64 v45; // x10
-  int32_t *p_offset; // x11
-  NetworkManager_ResultCallbackFunc_o *v47; // [xsp+8h] [xbp-48h] BYREF
-
-  v47 = this;
-  v3 = *(_QWORD *)&this[1].fields.method_ptr;
-  if ( !v3 )
-  {
-    v7 = &v47;
-    v6 = 1LL;
-    goto LABEL_5;
-  }
-  v6 = *(_QWORD *)(v3 + 24);
-  if ( v6 )
-  {
-    v7 = (NetworkManager_ResultCallbackFunc_o **)(v3 + 32);
-LABEL_5:
-    for ( i = 0LL; i != v6; ++i )
-    {
-      v27 = v7[i];
-      v29 = *(__int64 **)&v27->fields.method;
-      v28 = *(_QWORD *)&v27->fields.extra_arg;
-      v30 = *(void (__fastcall **)(System_String_o *, __int64))&v27->fields.method_ptr;
-      if ( *(__int16 *)(v28 + 72) == -1 )
-        sub_B77680(*(_QWORD *)&v27->fields.extra_arg, result);
-      v31 = sub_B775F4(v28);
-      v32 = *(unsigned __int8 *)(v28 + 74);
-      if ( (v31 & 1) != 0 )
-      {
-        if ( v32 == 1 )
-          goto LABEL_58;
-      }
-      else
-      {
-        if ( v32 != 1 )
-        {
-          if ( *(__int16 *)(v28 + 72) != -1 && this->fields.m_target )
-          {
-            v40 = sub_B775EC(v28);
-            v41 = sub_B779F0(v28);
-            if ( (v40 & 1) != 0 )
-            {
-              if ( (v41 & 1) != 0 )
-              {
-                klass = result->klass;
-                v43 = *(_QWORD *)(v28 + 24);
-                v44 = *(unsigned __int16 *)(v28 + 72);
-                if ( *(_WORD *)&result->klass->_2.bitflags1 )
-                {
-                  v45 = 0LL;
-                  p_offset = &klass->_1.interfaceOffsets->offset;
-                  while ( *((_QWORD *)p_offset - 1) != v43 )
-                  {
-                    ++v45;
-                    p_offset += 4;
-                    if ( v45 >= *(unsigned __int16 *)&result->klass->_2.bitflags1 )
-                      goto LABEL_57;
-                  }
-                  v23 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset + 2 * (int)v44);
-                }
-                else
-                {
-LABEL_57:
-                  v23 = sub_B0F4C0(result, v43, v44);
-                }
-                v15 = *(_QWORD *)(v23 + 8);
-              }
-              else
-              {
-                v15 = *((_QWORD *)&result->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v28 + 72));
-              }
-              v24 = (void (__fastcall **)(System_String_o *, _QWORD))sub_B77674(v15, v28);
-              (*v24)(result, v24);
-            }
-            else
-            {
-              v9 = *(unsigned __int16 *)(v28 + 72);
-              if ( (v41 & 1) != 0 )
-              {
-                class_0 = j_il2cpp_method_get_class_0(v28);
-                v11 = result->klass;
-                if ( *(_WORD *)&result->klass->_2.bitflags1 )
-                {
-                  v12 = 0LL;
-                  v13 = &v11->_1.interfaceOffsets->offset;
-                  while ( *((_QWORD *)v13 - 1) != class_0 )
-                  {
-                    ++v12;
-                    v13 += 4;
-                    if ( v12 >= *(unsigned __int16 *)&result->klass->_2.bitflags1 )
-                      goto LABEL_11;
-                  }
-                  v14 = (__int64)(&v11->vtable._0_Equals.method + 2 * (int)(*v13 + v9));
-                }
-                else
-                {
-LABEL_11:
-                  v14 = sub_B0F4C0(result, class_0, v9);
-                }
-                (*(void (__fastcall **)(System_String_o *, _QWORD))v14)(result, *(_QWORD *)(v14 + 8));
-              }
-              else
-              {
-                (*((void (__fastcall **)(System_String_o *, _QWORD))&result->klass->vtable._0_Equals.method
-                 + 2 * *(unsigned __int16 *)(v28 + 72)))(
-                  result,
-                  *((_QWORD *)&result->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v28 + 72)));
-              }
-            }
-            continue;
-          }
-LABEL_58:
-          v30(result, v28);
-          continue;
-        }
-        if ( !v29 )
-          goto LABEL_58;
-        if ( *(__int16 *)(v28 + 72) != -1 && (*(_BYTE *)(*v29 + 277) & 1) == 0 && this->fields.m_target )
-        {
-          v33 = sub_B775EC(v28);
-          v34 = sub_B779F0(v28);
-          if ( (v33 & 1) != 0 )
-          {
-            if ( (v34 & 1) != 0 )
-            {
-              v35 = *v29;
-              v36 = *(_QWORD *)(v28 + 24);
-              v37 = *(unsigned __int16 *)(v28 + 72);
-              if ( *(_WORD *)(*v29 + 298) )
-              {
-                v38 = 0LL;
-                v39 = (_DWORD *)(*(_QWORD *)(v35 + 176) + 8LL);
-                while ( *((_QWORD *)v39 - 1) != v36 )
-                {
-                  ++v38;
-                  v39 += 4;
-                  if ( v38 >= *(unsigned __int16 *)(*v29 + 298) )
-                    goto LABEL_48;
-                }
-                v25 = v35 + 16LL * (*v39 + (int)v37) + 312;
-              }
-              else
-              {
-LABEL_48:
-                v25 = sub_B0F4C0(v29, v36, v37);
-              }
-              v22 = *(_QWORD *)(v25 + 8);
-            }
-            else
-            {
-              v22 = *(_QWORD *)(*v29 + 16LL * *(unsigned __int16 *)(v28 + 72) + 320);
-            }
-            v26 = (void (__fastcall **)(__int64 *, System_String_o *, _QWORD))sub_B77674(v22, v28);
-            (*v26)(v29, result, v26);
-          }
-          else
-          {
-            v16 = *(unsigned __int16 *)(v28 + 72);
-            if ( (v34 & 1) != 0 )
-            {
-              v17 = j_il2cpp_method_get_class_0(v28);
-              v18 = *v29;
-              if ( *(_WORD *)(*v29 + 298) )
-              {
-                v19 = 0LL;
-                v20 = (_DWORD *)(*(_QWORD *)(v18 + 176) + 8LL);
-                while ( *((_QWORD *)v20 - 1) != v17 )
-                {
-                  ++v19;
-                  v20 += 4;
-                  if ( v19 >= *(unsigned __int16 *)(*v29 + 298) )
-                    goto LABEL_19;
-                }
-                v21 = v18 + 16LL * (int)(*v20 + v16) + 312;
-              }
-              else
-              {
-LABEL_19:
-                v21 = sub_B0F4C0(v29, v17, v16);
-              }
-              (*(void (__fastcall **)(__int64 *, System_String_o *, _QWORD))v21)(v29, result, *(_QWORD *)(v21 + 8));
-            }
-            else
-            {
-              (*(void (__fastcall **)(__int64 *, System_String_o *, _QWORD))(*v29
-                                                                           + 16LL * *(unsigned __int16 *)(v28 + 72)
-                                                                           + 312))(
-                v29,
-                result,
-                *(_QWORD *)(*v29 + 16LL * *(unsigned __int16 *)(v28 + 72) + 320));
-            }
-          }
-          continue;
-        }
-      }
-      ((void (__fastcall *)(__int64 *, System_String_o *, __int64))v30)(v29, result, v28);
-    }
-  }
+  ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))this->fields.m_target)(
+    this->fields.original_method_info,
+    result,
+    *(_QWORD *)&this->fields.extra_arg);
 }
 
 
@@ -8771,27 +7296,49 @@ void __fastcall NetworkManager_StoreCallbackFunc___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  struct BattleServantClassBoardSkillEffectListComponent_o *v8; // x8
-  BattleServantConfConponent_o *p_method; // x0
+  __int64 v4; // x8
+  __int64 v6; // x21
+  int v8; // w22
+  Il2CppObject *v9; // x8
+  struct System_Reflection_MethodInfo_o *v10; // x9
+  __int64 v11; // x0
 
-  v8 = **(struct BattleServantClassBoardSkillEffectListComponent_o ***)&method;
+  v4 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
+  *(_QWORD *)&this->fields.extra_arg = *(_QWORD *)&method;
+  v6 = *(_QWORD *)&method;
+  *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  p_method = (BattleServantConfConponent_o *)&this->fields.method;
-  p_method->monitor = *(void **)&method;
-  p_method[-1].fields.classBoardSkillObj = v8;
-  sub_B77560(
-    p_method,
-    (System_Int32_array **)object,
-    *(System_String_array ***)&method,
-    (System_String_array **)a4,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  v8 = *(unsigned __int8 *)(v6 + 82);
+  this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
+  if ( (sub_1B00D8C(v6) & 1) != 0 )
+  {
+    if ( v8 == 1 )
+    {
+      v9 = (Il2CppObject *)sub_194B2B0;
+LABEL_8:
+      this->fields.m_target = v9;
+      goto LABEL_9;
+    }
+  }
+  else
+  {
+    if ( !v8 )
+    {
+      v9 = (Il2CppObject *)sub_194B290;
+      goto LABEL_8;
+    }
+    if ( !object )
+    {
+      v11 = sub_1B00F44(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B00DF4(v11, 0LL);
+    }
+  }
+  v10 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
+  this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
+  this->fields.original_method_info = v10;
+LABEL_9:
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_194B248;
 }
 
 
@@ -8802,11 +7349,10 @@ System_IAsyncResult_o *__fastcall NetworkManager_StoreCallbackFunc__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v6[2]; // [xsp+0h] [xbp-10h] BYREF
+  System_String_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
-  v6[0] = (__int64)url;
-  v6[1] = 0LL;
-  return (System_IAsyncResult_o *)sub_B77568(this, v6, callback, object);
+  v6 = url;
+  return (System_IAsyncResult_o *)sub_1B00C80(this, &v6, callback, object);
 }
 
 
@@ -8815,7 +7361,7 @@ void __fastcall NetworkManager_StoreCallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B7756C(result, 0LL, method);
+  sub_1B00C84(result, 0LL, method);
 }
 
 
@@ -8824,244 +7370,10 @@ void __fastcall NetworkManager_StoreCallbackFunc__Invoke(
         System_String_o *url,
         const MethodInfo *method)
 {
-  __int64 v3; // x8
-  __int64 v6; // x24
-  NetworkManager_StoreCallbackFunc_o **v7; // x25
-  __int64 i; // x26
-  unsigned int v9; // w22
-  __int64 class_0; // x0
-  System_String_c *v11; // x8
-  unsigned __int64 v12; // x10
-  int32_t *v13; // x11
-  __int64 v14; // x0
-  __int64 v15; // x0
-  unsigned int v16; // w23
-  __int64 v17; // x0
-  __int64 v18; // x8
-  unsigned __int64 v19; // x10
-  _DWORD *v20; // x11
-  __int64 v21; // x0
-  __int64 v22; // x0
-  __int64 v23; // x0
-  void (__fastcall **v24)(System_String_o *, _QWORD); // x0
-  __int64 v25; // x0
-  void (__fastcall **v26)(__int64 *, System_String_o *, _QWORD); // x0
-  NetworkManager_StoreCallbackFunc_o *v27; // x8
-  __int64 v28; // x21
-  __int64 *v29; // x22
-  void (__fastcall *v30)(System_String_o *, __int64); // x23
-  char v31; // w0
-  int v32; // w8
-  char v33; // w23
-  char v34; // w0
-  __int64 v35; // x8
-  __int64 v36; // x1
-  __int64 v37; // x2
-  unsigned __int64 v38; // x10
-  _DWORD *v39; // x11
-  char v40; // w22
-  char v41; // w0
-  System_String_c *klass; // x8
-  __int64 v43; // x1
-  __int64 v44; // x2
-  unsigned __int64 v45; // x10
-  int32_t *p_offset; // x11
-  NetworkManager_StoreCallbackFunc_o *v47; // [xsp+8h] [xbp-48h] BYREF
-
-  v47 = this;
-  v3 = *(_QWORD *)&this[1].fields.method_ptr;
-  if ( !v3 )
-  {
-    v7 = &v47;
-    v6 = 1LL;
-    goto LABEL_5;
-  }
-  v6 = *(_QWORD *)(v3 + 24);
-  if ( v6 )
-  {
-    v7 = (NetworkManager_StoreCallbackFunc_o **)(v3 + 32);
-LABEL_5:
-    for ( i = 0LL; i != v6; ++i )
-    {
-      v27 = v7[i];
-      v29 = *(__int64 **)&v27->fields.method;
-      v28 = *(_QWORD *)&v27->fields.extra_arg;
-      v30 = *(void (__fastcall **)(System_String_o *, __int64))&v27->fields.method_ptr;
-      if ( *(__int16 *)(v28 + 72) == -1 )
-        sub_B77680(*(_QWORD *)&v27->fields.extra_arg, url);
-      v31 = sub_B775F4(v28);
-      v32 = *(unsigned __int8 *)(v28 + 74);
-      if ( (v31 & 1) != 0 )
-      {
-        if ( v32 == 1 )
-          goto LABEL_58;
-      }
-      else
-      {
-        if ( v32 != 1 )
-        {
-          if ( *(__int16 *)(v28 + 72) != -1 && this->fields.m_target )
-          {
-            v40 = sub_B775EC(v28);
-            v41 = sub_B779F0(v28);
-            if ( (v40 & 1) != 0 )
-            {
-              if ( (v41 & 1) != 0 )
-              {
-                klass = url->klass;
-                v43 = *(_QWORD *)(v28 + 24);
-                v44 = *(unsigned __int16 *)(v28 + 72);
-                if ( *(_WORD *)&url->klass->_2.bitflags1 )
-                {
-                  v45 = 0LL;
-                  p_offset = &klass->_1.interfaceOffsets->offset;
-                  while ( *((_QWORD *)p_offset - 1) != v43 )
-                  {
-                    ++v45;
-                    p_offset += 4;
-                    if ( v45 >= *(unsigned __int16 *)&url->klass->_2.bitflags1 )
-                      goto LABEL_57;
-                  }
-                  v23 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset + 2 * (int)v44);
-                }
-                else
-                {
-LABEL_57:
-                  v23 = sub_B0F4C0(url, v43, v44);
-                }
-                v15 = *(_QWORD *)(v23 + 8);
-              }
-              else
-              {
-                v15 = *((_QWORD *)&url->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v28 + 72));
-              }
-              v24 = (void (__fastcall **)(System_String_o *, _QWORD))sub_B77674(v15, v28);
-              (*v24)(url, v24);
-            }
-            else
-            {
-              v9 = *(unsigned __int16 *)(v28 + 72);
-              if ( (v41 & 1) != 0 )
-              {
-                class_0 = j_il2cpp_method_get_class_0(v28);
-                v11 = url->klass;
-                if ( *(_WORD *)&url->klass->_2.bitflags1 )
-                {
-                  v12 = 0LL;
-                  v13 = &v11->_1.interfaceOffsets->offset;
-                  while ( *((_QWORD *)v13 - 1) != class_0 )
-                  {
-                    ++v12;
-                    v13 += 4;
-                    if ( v12 >= *(unsigned __int16 *)&url->klass->_2.bitflags1 )
-                      goto LABEL_11;
-                  }
-                  v14 = (__int64)(&v11->vtable._0_Equals.method + 2 * (int)(*v13 + v9));
-                }
-                else
-                {
-LABEL_11:
-                  v14 = sub_B0F4C0(url, class_0, v9);
-                }
-                (*(void (__fastcall **)(System_String_o *, _QWORD))v14)(url, *(_QWORD *)(v14 + 8));
-              }
-              else
-              {
-                (*((void (__fastcall **)(System_String_o *, _QWORD))&url->klass->vtable._0_Equals.method
-                 + 2 * *(unsigned __int16 *)(v28 + 72)))(
-                  url,
-                  *((_QWORD *)&url->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v28 + 72)));
-              }
-            }
-            continue;
-          }
-LABEL_58:
-          v30(url, v28);
-          continue;
-        }
-        if ( !v29 )
-          goto LABEL_58;
-        if ( *(__int16 *)(v28 + 72) != -1 && (*(_BYTE *)(*v29 + 277) & 1) == 0 && this->fields.m_target )
-        {
-          v33 = sub_B775EC(v28);
-          v34 = sub_B779F0(v28);
-          if ( (v33 & 1) != 0 )
-          {
-            if ( (v34 & 1) != 0 )
-            {
-              v35 = *v29;
-              v36 = *(_QWORD *)(v28 + 24);
-              v37 = *(unsigned __int16 *)(v28 + 72);
-              if ( *(_WORD *)(*v29 + 298) )
-              {
-                v38 = 0LL;
-                v39 = (_DWORD *)(*(_QWORD *)(v35 + 176) + 8LL);
-                while ( *((_QWORD *)v39 - 1) != v36 )
-                {
-                  ++v38;
-                  v39 += 4;
-                  if ( v38 >= *(unsigned __int16 *)(*v29 + 298) )
-                    goto LABEL_48;
-                }
-                v25 = v35 + 16LL * (*v39 + (int)v37) + 312;
-              }
-              else
-              {
-LABEL_48:
-                v25 = sub_B0F4C0(v29, v36, v37);
-              }
-              v22 = *(_QWORD *)(v25 + 8);
-            }
-            else
-            {
-              v22 = *(_QWORD *)(*v29 + 16LL * *(unsigned __int16 *)(v28 + 72) + 320);
-            }
-            v26 = (void (__fastcall **)(__int64 *, System_String_o *, _QWORD))sub_B77674(v22, v28);
-            (*v26)(v29, url, v26);
-          }
-          else
-          {
-            v16 = *(unsigned __int16 *)(v28 + 72);
-            if ( (v34 & 1) != 0 )
-            {
-              v17 = j_il2cpp_method_get_class_0(v28);
-              v18 = *v29;
-              if ( *(_WORD *)(*v29 + 298) )
-              {
-                v19 = 0LL;
-                v20 = (_DWORD *)(*(_QWORD *)(v18 + 176) + 8LL);
-                while ( *((_QWORD *)v20 - 1) != v17 )
-                {
-                  ++v19;
-                  v20 += 4;
-                  if ( v19 >= *(unsigned __int16 *)(*v29 + 298) )
-                    goto LABEL_19;
-                }
-                v21 = v18 + 16LL * (int)(*v20 + v16) + 312;
-              }
-              else
-              {
-LABEL_19:
-                v21 = sub_B0F4C0(v29, v17, v16);
-              }
-              (*(void (__fastcall **)(__int64 *, System_String_o *, _QWORD))v21)(v29, url, *(_QWORD *)(v21 + 8));
-            }
-            else
-            {
-              (*(void (__fastcall **)(__int64 *, System_String_o *, _QWORD))(*v29
-                                                                           + 16LL * *(unsigned __int16 *)(v28 + 72)
-                                                                           + 312))(
-                v29,
-                url,
-                *(_QWORD *)(*v29 + 16LL * *(unsigned __int16 *)(v28 + 72) + 320));
-            }
-          }
-          continue;
-        }
-      }
-      ((void (__fastcall *)(__int64 *, System_String_o *, __int64))v30)(v29, url, v28);
-    }
-  }
+  ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))this->fields.m_target)(
+    this->fields.original_method_info,
+    url,
+    *(_QWORD *)&this->fields.extra_arg);
 }
 
 
@@ -9079,322 +7391,302 @@ bool __fastcall NetworkManager__Initialize_d__82__MoveNext(
         NetworkManager__Initialize_d__82_o *this,
         const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  NetworkManager__Initialize_d__82_o *v8; // x20
+  int32_t v2; // w2
+  int32_t v3; // w3
+  NetworkManager__Initialize_d__82_o *v4; // x20
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  __int64 v18; // x1
+  __int64 v19; // x1
+  __int64 v20; // x1
+  __int64 v21; // x1
   int32_t _1__state; // w8
   struct NetworkManager_o *_4__this; // x19
   struct ResponseCommandBase_array **p_commandList; // x21
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v12; // x22
-  PurchaseByBankResponseCommand_o *v13; // x23
-  MissionNotifyResponseCommand_o *v14; // x23
-  System_Int32_array **v15; // x0
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *v22; // x23
-  System_String_array **v23; // x2
-  System_String_array **v24; // x3
-  System_Boolean_array **v25; // x4
-  System_Int32_array **v26; // x5
-  System_Int32_array *v27; // x6
-  System_Int32_array *v28; // x7
-  struct ResponseCommandBase_array *commandList; // x8
-  __int64 v30; // x25
-  int max_length; // w9
-  __int64 v32; // x8
-  System_Xml_Schema_XmlSchemaObject_o *v33; // x23
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *commandLookup; // x24
-  BattleServantConfConponent_o *p__2__current; // x20
+  ServantStatusBattleListViewItem_o *p__2__current; // x20
   bool result; // w0
-  ManagerConfig_c *v37; // x0
-  System_String_array **v38; // x2
-  System_String_array **v39; // x3
-  System_Boolean_array **v40; // x4
-  System_Int32_array **v41; // x5
-  System_Int32_array *v42; // x6
-  System_Int32_array *v43; // x7
+  ManagerConfig_c *v27; // x0
+  int32_t v28; // w2
+  int32_t v29; // w3
   UnityEngine_Coroutine_o *communicationCoroutine; // x1
-  System_String_array **v45; // x2
-  System_String_array **v46; // x3
-  System_Boolean_array **v47; // x4
-  System_Int32_array **v48; // x5
-  System_Int32_array *v49; // x6
-  System_Int32_array *v50; // x7
-  System_String_array **v51; // x2
-  System_String_array **v52; // x3
-  System_Boolean_array **v53; // x4
-  System_Int32_array **v54; // x5
-  System_Int32_array *v55; // x6
-  System_Int32_array *v56; // x7
-  System_String_array **v57; // x2
-  System_String_array **v58; // x3
-  System_Boolean_array **v59; // x4
-  System_Int32_array **v60; // x5
-  System_Int32_array *v61; // x6
-  System_Int32_array *v62; // x7
-  System_String_array **v63; // x2
-  System_String_array **v64; // x3
-  System_Boolean_array **v65; // x4
-  System_Int32_array **v66; // x5
-  System_Int32_array *v67; // x6
-  System_Int32_array *v68; // x7
-  System_String_array **v69; // x2
-  System_String_array **v70; // x3
-  System_Boolean_array **v71; // x4
-  System_Int32_array **v72; // x5
-  System_Int32_array *v73; // x6
-  System_Int32_array *v74; // x7
-  NetworkManager_c *v75; // x0
+  int32_t v31; // w2
+  int32_t v32; // w3
+  int32_t v33; // w2
+  int32_t v34; // w3
+  int32_t v35; // w2
+  int32_t v36; // w3
+  int32_t v37; // w2
+  int32_t v38; // w3
+  int32_t v39; // w2
+  int32_t v40; // w3
+  NetworkManager_c *v41; // x0
   struct NetworkManager_StaticFields *static_fields; // x0
-  struct NetworkManager_StaticFields *v77; // x0
-  System_Int32_array **v78; // x1
-  System_String_array **v79; // x2
-  System_String_array **v80; // x3
-  System_Boolean_array **v81; // x4
-  System_Int32_array **v82; // x5
-  System_Int32_array *v83; // x6
-  System_Int32_array *v84; // x7
-  __int64 v85; // x20
-  __int64 v86; // x20
-  UnityEngine_Object_o *v87; // x20
-  __int64 v88; // x0
+  struct NetworkManager_StaticFields *v43; // x0
+  int32_t v44; // w1
+  int32_t v45; // w2
+  int32_t v46; // w3
+  __int64 v47; // x0
+  __int64 v48; // x0
+  UnityEngine_Object_o *v49; // x20
+  System_Collections_Generic_List_object__o *v50; // x22
+  PurchaseByBankResponseCommand_o *v51; // x23
+  int32_t v52; // w2
+  int32_t v53; // w3
+  struct System_Object_array *items; // x8
+  _QWORD *v55; // x9
+  __int64 size; // x10
+  Il2CppClass **v57; // x0
+  MissionNotifyResponseCommand_o *v58; // x23
+  int32_t v59; // w2
+  int32_t v60; // w3
+  struct System_Object_array *v61; // x8
+  _QWORD *v62; // x9
+  __int64 v63; // x10
+  Il2CppClass **v64; // x0
+  System_Object_array *v65; // x0
+  int32_t v66; // w2
+  int32_t v67; // w3
+  System_Collections_Generic_Dictionary_object__object__o *v68; // x23
+  int32_t v69; // w2
+  int32_t v70; // w3
+  struct ResponseCommandBase_array *commandList; // x8
+  __int64 v72; // x25
+  int max_length; // w9
+  __int64 v74; // x8
+  Il2CppObject *v75; // x23
+  System_Collections_Generic_Dictionary_object__object__o *commandLookup; // x24
 
-  v8 = this;
-  if ( (byte_438A092 & 1) == 0 )
+  v4 = this;
+  if ( (byte_48E2078 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__ResponseCommandBase__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__ResponseCommandBase___ctor__);
-    sub_B775C4(&System_Collections_Generic_Dictionary_string__ResponseCommandBase__TypeInfo);
-    sub_B775C4(&Method_UnityEngine_GameObject_AddComponent_UnityWebRequestWWWSingleton___);
-    sub_B775C4(&Method_System_Collections_Generic_List_ResponseCommandBase__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_ResponseCommandBase__ToArray__);
-    sub_B775C4(&Method_System_Collections_Generic_List_ResponseCommandBase___ctor__);
-    sub_B775C4(&System_Collections_Generic_List_ResponseCommandBase__TypeInfo);
-    sub_B775C4(&ManagerConfig_TypeInfo);
-    sub_B775C4(&MissionNotifyResponseCommand_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&PurchaseByBankResponseCommand_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_Queue_RequestBase__Clear__);
-    sub_B775C4(&Method_SingletonMonoBehaviour_UnityWebRequestWWWSingleton__getInstance__);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B775C4(&Method_SingletonMonoBehaviour_AvalonNotificationManager__get_Instance__);
-    this = (NetworkManager__Initialize_d__82_o *)sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438A092 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__ResponseCommandBase__Add__, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__ResponseCommandBase___ctor__, v5);
+    sub_1B00CCC(&System_Collections_Generic_Dictionary_string__ResponseCommandBase__TypeInfo, v6);
+    sub_1B00CCC(&Method_UnityEngine_GameObject_AddComponent_UnityWebRequestWWWSingleton___, v7);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_ResponseCommandBase__Add__, v8);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_ResponseCommandBase__ToArray__, v9);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_ResponseCommandBase___ctor__, v10);
+    sub_1B00CCC(&System_Collections_Generic_List_ResponseCommandBase__TypeInfo, v11);
+    sub_1B00CCC(&ManagerConfig_TypeInfo, v12);
+    sub_1B00CCC(&MissionNotifyResponseCommand_TypeInfo, v13);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v14);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v15);
+    sub_1B00CCC(&PurchaseByBankResponseCommand_TypeInfo, v16);
+    sub_1B00CCC(&Method_System_Collections_Generic_Queue_RequestBase__Clear__, v17);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_UnityWebRequestWWWSingleton__getInstance__, v18);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_AvalonNotificationManager__get_Instance__, v19);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v20);
+    this = (NetworkManager__Initialize_d__82_o *)sub_1B00CCC(&StringLiteral_1/*""*/, v21);
+    byte_48E2078 = 1;
   }
-  _1__state = v8->fields.__1__state;
-  _4__this = v8->fields.__4__this;
+  _1__state = v4->fields.__1__state;
+  _4__this = v4->fields.__4__this;
   if ( _1__state == 1 )
   {
-    v8->fields.__1__state = -1;
+    v4->fields.__1__state = -1;
     if ( !_4__this )
-      goto LABEL_15;
-    goto LABEL_19;
+      goto LABEL_49;
+    goto LABEL_9;
   }
   if ( !_1__state )
   {
-    v8->fields.__1__state = -1;
+    v4->fields.__1__state = -1;
     if ( !_4__this )
-      goto LABEL_15;
+      goto LABEL_49;
     NetworkManager__ClearAuth(_4__this, 0LL);
     NetworkManager__ReadServerSetting(_4__this, 0LL);
     p_commandList = &_4__this->fields.commandList;
     if ( !_4__this->fields.commandList )
     {
-      v12 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_ResponseCommandBase__TypeInfo);
-      System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-        v12,
-        (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_ResponseCommandBase___ctor__);
-      v13 = (PurchaseByBankResponseCommand_o *)sub_B77694(PurchaseByBankResponseCommand_TypeInfo);
-      PurchaseByBankResponseCommand___ctor(v13, 0LL);
-      if ( !v12 )
-        goto LABEL_15;
-      System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-        v12,
-        (EventMissionProgressRequest_Argument_ProgressData_o *)v13,
-        (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_ResponseCommandBase__Add__);
-      v14 = (MissionNotifyResponseCommand_o *)sub_B77694(MissionNotifyResponseCommand_TypeInfo);
-      MissionNotifyResponseCommand___ctor(v14, 0LL);
-      System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-        v12,
-        (EventMissionProgressRequest_Argument_ProgressData_o *)v14,
-        (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_ResponseCommandBase__Add__);
-      v15 = (System_Int32_array **)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
-                                     (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v12,
-                                     (const MethodInfo_30553E4 *)Method_System_Collections_Generic_List_ResponseCommandBase__ToArray__);
-      _4__this->fields.commandList = (struct ResponseCommandBase_array *)v15;
-      sub_B77560((BattleServantConfConponent_o *)&_4__this->fields.commandList, v15, v16, v17, v18, v19, v20, v21);
-      v22 = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)sub_B77694(System_Collections_Generic_Dictionary_string__ResponseCommandBase__TypeInfo);
-      System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject____ctor(
-        v22,
-        (const MethodInfo_2F7CA48 *)Method_System_Collections_Generic_Dictionary_string__ResponseCommandBase___ctor__);
-      _4__this->fields.commandLookup = (struct System_Collections_Generic_Dictionary_string__ResponseCommandBase__o *)v22;
-      sub_B77560(
-        (BattleServantConfConponent_o *)&_4__this->fields.commandLookup,
-        (System_Int32_array **)v22,
-        v23,
-        v24,
-        v25,
-        v26,
-        v27,
-        v28);
+      v50 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_ResponseCommandBase__TypeInfo);
+      System_Collections_Generic_List_object____ctor(
+        v50,
+        (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_ResponseCommandBase___ctor__);
+      v51 = (PurchaseByBankResponseCommand_o *)sub_1B00F18(PurchaseByBankResponseCommand_TypeInfo);
+      PurchaseByBankResponseCommand___ctor(v51, 0LL);
+      if ( !v50 )
+        goto LABEL_49;
+      items = v50->fields._items;
+      v55 = Method_System_Collections_Generic_List_ResponseCommandBase__Add__;
+      ++v50->fields._version;
+      if ( !items )
+        goto LABEL_49;
+      size = v50->fields._size;
+      if ( (unsigned int)size >= items->max_length )
+      {
+        System_Collections_Generic_List_object___AddWithResize(
+          v50,
+          (Il2CppObject *)v51,
+          *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v55[4] + 192LL) + 112LL));
+      }
+      else
+      {
+        v57 = &items->obj.klass + size;
+        v50->fields._size = size + 1;
+        v57[4] = (Il2CppClass *)v51;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)(v57 + 4), (int32_t)v51, v52, v53);
+      }
+      v58 = (MissionNotifyResponseCommand_o *)sub_1B00F18(MissionNotifyResponseCommand_TypeInfo);
+      MissionNotifyResponseCommand___ctor(v58, 0LL);
+      v61 = v50->fields._items;
+      v62 = Method_System_Collections_Generic_List_ResponseCommandBase__Add__;
+      ++v50->fields._version;
+      if ( !v61 )
+        goto LABEL_49;
+      v63 = v50->fields._size;
+      if ( (unsigned int)v63 >= v61->max_length )
+      {
+        System_Collections_Generic_List_object___AddWithResize(
+          v50,
+          (Il2CppObject *)v58,
+          *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v62[4] + 192LL) + 112LL));
+      }
+      else
+      {
+        v64 = &v61->obj.klass + v63;
+        v50->fields._size = v63 + 1;
+        v64[4] = (Il2CppClass *)v58;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)(v64 + 4), (int32_t)v58, v59, v60);
+      }
+      v65 = System_Collections_Generic_List_object___ToArray(
+              v50,
+              (const MethodInfo_33C3528 *)Method_System_Collections_Generic_List_ResponseCommandBase__ToArray__);
+      _4__this->fields.commandList = (struct ResponseCommandBase_array *)v65;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&_4__this->fields.commandList, (int32_t)v65, v66, v67);
+      v68 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1B00F18(System_Collections_Generic_Dictionary_string__ResponseCommandBase__TypeInfo);
+      System_Collections_Generic_Dictionary_object__object____ctor(
+        v68,
+        (const MethodInfo_308D098 *)Method_System_Collections_Generic_Dictionary_string__ResponseCommandBase___ctor__);
+      _4__this->fields.commandLookup = (struct System_Collections_Generic_Dictionary_string__ResponseCommandBase__o *)v68;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&_4__this->fields.commandLookup, (int32_t)v68, v69, v70);
       commandList = _4__this->fields.commandList;
       if ( !commandList )
-        goto LABEL_15;
-      v30 = 0LL;
+        goto LABEL_49;
+      v72 = 0LL;
       while ( 1 )
       {
         max_length = commandList->max_length;
-        if ( (int)v30 >= max_length )
+        if ( (int)v72 >= max_length )
           break;
-        if ( (unsigned int)v30 >= max_length )
+        if ( (unsigned int)v72 >= max_length )
+          sub_1B00F30(this, method);
+        v74 = (__int64)commandList + 8 * v72;
+        v75 = *(Il2CppObject **)(v74 + 32);
+        if ( v75 )
         {
-          v88 = sub_B776C8(this);
-          sub_B77668(v88, 0LL);
-        }
-        v32 = (__int64)commandList + 8 * v30;
-        v33 = *(System_Xml_Schema_XmlSchemaObject_o **)(v32 + 32);
-        if ( v33 )
-        {
-          commandLookup = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)_4__this->fields.commandLookup;
+          commandLookup = (System_Collections_Generic_Dictionary_object__object__o *)_4__this->fields.commandLookup;
           this = (NetworkManager__Initialize_d__82_o *)ResponseCommandBase__GetCommandName(
-                                                         *(ResponseCommandBase_o **)(v32 + 32),
+                                                         *(ResponseCommandBase_o **)(v74 + 32),
                                                          0LL);
           if ( commandLookup )
           {
-            System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
+            System_Collections_Generic_Dictionary_object__object___Add(
               commandLookup,
-              (System_Xml_XmlQualifiedName_o *)this,
-              v33,
-              (const MethodInfo_2F7D5F8 *)Method_System_Collections_Generic_Dictionary_string__ResponseCommandBase__Add__);
+              (Il2CppObject *)this,
+              v75,
+              (const MethodInfo_308DA48 *)Method_System_Collections_Generic_Dictionary_string__ResponseCommandBase__Add__);
             commandList = *p_commandList;
-            ++v30;
+            ++v72;
             if ( *p_commandList )
               continue;
           }
         }
-        goto LABEL_15;
+        goto LABEL_49;
       }
     }
     NetworkManager__InitializeUserAgent(_4__this, 0LL);
-LABEL_19:
+LABEL_9:
     if ( _4__this->fields._isWaitUserAgent_k__BackingField )
     {
-      v8->fields.__2__current = 0LL;
-      p__2__current = (BattleServantConfConponent_o *)&v8->fields.__2__current;
-      sub_B77560(p__2__current, 0LL, v2, v3, v4, v5, v6, v7);
+      v4->fields.__2__current = 0LL;
+      p__2__current = (ServantStatusBattleListViewItem_o *)&v4->fields.__2__current;
+      sub_1B00C70(p__2__current, 0, v2, v3);
       result = 1;
-      *(_DWORD *)&p__2__current[-1].fields.isOpenAfter = 1;
+      *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
       return result;
     }
-    v37 = ManagerConfig_TypeInfo;
-    if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !ManagerConfig_TypeInfo->_2.cctor_finished )
+    v27 = ManagerConfig_TypeInfo;
+    if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-      v37 = ManagerConfig_TypeInfo;
+      v27 = ManagerConfig_TypeInfo;
     }
-    if ( v37->static_fields->UseAppServer )
+    if ( v27->static_fields->UseAppServer )
       NetworkServicePluginScript__CheckService(0LL);
     this = (NetworkManager__Initialize_d__82_o *)_4__this->fields.communicationWaitList;
     if ( this )
     {
-      System_Collections_Generic_Queue_AssetManager_LoadWaitStatus___Clear(
-        (System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__o *)this,
-        (const MethodInfo_2F22D24 *)Method_System_Collections_Generic_Queue_RequestBase__Clear__);
+      System_Collections_Generic_Queue_object___Clear(
+        (System_Collections_Generic_Queue_T__o *)this,
+        (const MethodInfo_3532F68 *)Method_System_Collections_Generic_Queue_RequestBase__Clear__);
       communicationCoroutine = _4__this->fields.communicationCoroutine;
       if ( communicationCoroutine )
-        UnityEngine_MonoBehaviour__StopCoroutine_36305500(
+        UnityEngine_MonoBehaviour__StopCoroutine_68063548(
           (UnityEngine_MonoBehaviour_o *)_4__this,
           communicationCoroutine,
           0LL);
       _4__this->fields.communicationWork = 0LL;
-      sub_B77560((BattleServantConfConponent_o *)&_4__this->fields.communicationWork, 0LL, v38, v39, v40, v41, v42, v43);
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&_4__this->fields.communicationWork, 0, v28, v29);
       _4__this->fields.communicationCoroutine = 0LL;
-      sub_B77560(
-        (BattleServantConfConponent_o *)&_4__this->fields.communicationCoroutine,
-        0LL,
-        v45,
-        v46,
-        v47,
-        v48,
-        v49,
-        v50);
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&_4__this->fields.communicationCoroutine, 0, v31, v32);
       _4__this->fields.communicationWorkResponseList = 0LL;
-      sub_B77560(
-        (BattleServantConfConponent_o *)&_4__this->fields.communicationWorkResponseList,
-        0LL,
-        v51,
-        v52,
-        v53,
-        v54,
-        v55,
-        v56);
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&_4__this->fields.communicationWorkResponseList, 0, v33, v34);
       _4__this->fields.cacheRefreshWork = 0LL;
-      sub_B77560((BattleServantConfConponent_o *)&_4__this->fields.cacheRefreshWork, 0LL, v57, v58, v59, v60, v61, v62);
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&_4__this->fields.cacheRefreshWork, 0, v35, v36);
       _4__this->fields.cacheRefreshWorkResponseList = 0LL;
-      sub_B77560(
-        (BattleServantConfConponent_o *)&_4__this->fields.cacheRefreshWorkResponseList,
-        0LL,
-        v63,
-        v64,
-        v65,
-        v66,
-        v67,
-        v68);
-      v75 = NetworkManager_TypeInfo;
-      if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !NetworkManager_TypeInfo->_2.cctor_finished )
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&_4__this->fields.cacheRefreshWorkResponseList, 0, v37, v38);
+      v41 = NetworkManager_TypeInfo;
+      if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        v75 = NetworkManager_TypeInfo;
+        v41 = NetworkManager_TypeInfo;
       }
-      v75->static_fields->isErrorServerTimeLimitOver = 0;
-      v75->static_fields->isRebootBlock = 0;
-      v75->static_fields->isLogin = 0;
-      static_fields = v75->static_fields;
+      static_fields = v41->static_fields;
       static_fields->sessionId = 0LL;
-      sub_B77560((BattleServantConfConponent_o *)&static_fields->sessionId, 0LL, v69, v70, v71, v72, v73, v74);
-      v77 = NetworkManager_TypeInfo->static_fields;
-      v78 = (System_Int32_array **)StringLiteral_1/*""*/;
-      v77->dataServerFolder = (struct System_String_o *)StringLiteral_1/*""*/;
-      sub_B77560((BattleServantConfConponent_o *)&v77->dataServerFolder, v78, v79, v80, v81, v82, v83, v84);
-      v85 = *((_QWORD *)Method_SingletonMonoBehaviour_UnityWebRequestWWWSingleton__getInstance__ + 3);
-      if ( (*(_BYTE *)(v85 + 306) & 1) == 0 )
-        sub_B0F2C4(*((_QWORD *)Method_SingletonMonoBehaviour_UnityWebRequestWWWSingleton__getInstance__ + 3));
-      v86 = **(_QWORD **)(v85 + 192);
-      if ( (*(_BYTE *)(v86 + 306) & 1) == 0 )
-        sub_B0F2C4(v86);
-      v87 = **(UnityEngine_Object_o ***)(v86 + 184);
-      if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      {
+      static_fields = (struct NetworkManager_StaticFields *)((char *)static_fields + 128);
+      LOBYTE(static_fields[-1].gameServerRedirectAddress) = 0;
+      LOWORD(static_fields->WebCacheTime) = 0;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)static_fields, 0, v39, v40);
+      v43 = NetworkManager_TypeInfo->static_fields;
+      v44 = (int)StringLiteral_1/*""*/;
+      v43->dataServerFolder = (struct System_String_o *)StringLiteral_1/*""*/;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&v43->dataServerFolder, v44, v45, v46);
+      v47 = *((_QWORD *)Method_SingletonMonoBehaviour_UnityWebRequestWWWSingleton__getInstance__ + 4);
+      if ( (*(_BYTE *)(v47 + 309) & 1) == 0 )
+        v47 = sub_1B52BA8(v47);
+      v48 = *(_QWORD *)(*(_QWORD *)(v47 + 192) + 16LL);
+      if ( (*(_BYTE *)(v48 + 309) & 1) == 0 )
+        v48 = sub_1B52BA8(v48);
+      v49 = **(UnityEngine_Object_o ***)(v48 + 184);
+      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      }
-      if ( UnityEngine_Object__op_Equality(v87, 0LL, 0LL) )
+      if ( UnityEngine_Object__op_Equality(v49, 0LL, 0LL) )
       {
         this = (NetworkManager__Initialize_d__82_o *)UnityEngine_Component__get_gameObject(
                                                        (UnityEngine_Component_o *)_4__this,
                                                        0LL);
         if ( !this )
-          goto LABEL_15;
-        UnityEngine_GameObject__AddComponent_UnitySynchronizationContext_SynchronizationContextBehavoir_(
+          goto LABEL_49;
+        UnityEngine_GameObject__AddComponent_object_(
           (UnityEngine_GameObject_o *)this,
-          (const MethodInfo_1DEBEC8 *)Method_UnityEngine_GameObject_AddComponent_UnityWebRequestWWWSingleton___);
+          (const MethodInfo_2DADD20 *)Method_UnityEngine_GameObject_AddComponent_UnityWebRequestWWWSingleton___);
       }
-      this = (NetworkManager__Initialize_d__82_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      this = (NetworkManager__Initialize_d__82_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( this )
       {
         DataManager__Initialize((DataManager_o *)this, 0LL);
-        this = (NetworkManager__Initialize_d__82_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_AvalonNotificationManager__get_Instance__);
+        this = (NetworkManager__Initialize_d__82_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_AvalonNotificationManager__get_Instance__);
         if ( this )
         {
           AvalonNotificationManager__Initialize((AvalonNotificationManager_o *)this, 0LL);
@@ -9402,8 +7694,8 @@ LABEL_19:
         }
       }
     }
-LABEL_15:
-    sub_B7769C(this, method);
+LABEL_49:
+    sub_1B00F28(this, method);
   }
   return 0;
 }
@@ -9425,11 +7717,11 @@ void __fastcall __noreturn NetworkManager__Initialize_d__82__System_Collections_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
+  v2 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B00F18(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B775C8(&Method_NetworkManager__Initialize_d__82_System_Collections_IEnumerator_Reset__);
-  sub_B77668(v3, v4);
+  v4 = sub_1B00CE0(&Method_NetworkManager__Initialize_d__82_System_Collections_IEnumerator_Reset__);
+  sub_1B00DF4(v3, v4);
 }
 
 
@@ -9463,319 +7755,294 @@ bool __fastcall NetworkManager__RequestApplicationUpdateCR_d__218__MoveNext(
         NetworkManager__RequestApplicationUpdateCR_d__218_o *this,
         const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  NetworkManager__RequestApplicationUpdateCR_d__218_o *v8; // x19
+  int32_t v2; // w2
+  int32_t v3; // w3
+  NetworkManager__RequestApplicationUpdateCR_d__218_o *v4; // x19
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
   struct System_String_o *storeName; // x8
   System_String_o **p_storeName; // x21
-  System_Int32_array **v11; // x1
-  ManagerConfig_c *v12; // x0
+  int32_t v20; // w1
+  ManagerConfig_c *v21; // x0
   struct ManagerConfig_StaticFields *static_fields; // x8
-  BattleServantConfConponent_o *p_id; // x0
-  System_Int32_array **iOSApplicationID; // x1
-  System_String_o *v16; // x20
-  DelightWorks_Network_UnityWebRequestWWW_o *v17; // x21
-  System_String_array **v18; // x2
-  System_String_array **v19; // x3
-  System_Boolean_array **v20; // x4
-  System_Int32_array **v21; // x5
-  System_Int32_array *v22; // x6
-  System_Int32_array *v23; // x7
-  System_Int32_array **www_5__3; // x1
-  System_String_array **v25; // x2
-  System_String_array **v26; // x3
-  System_Boolean_array **v27; // x4
-  System_Int32_array **v28; // x5
-  System_Int32_array *v29; // x6
-  System_Int32_array *v30; // x7
-  NetworkManager_StoreCallbackFunc_o *callback; // x0
-  struct DelightWorks_Network_UnityWebRequestWWW_o *v32; // x8
-  struct DelightWorks_Network_UnityWebRequestWWW_o *v33; // x8
-  System_String_o *v34; // x20
-  NetworkManager__RequestApplicationUpdateCR_d__218_o *v35; // x20
+  ServantStatusBattleListViewItem_o *p_id; // x0
+  struct System_String_o *iOSApplicationID; // x1
+  struct DelightWorks_Network_UnityWebRequestWWW_o *v25; // x8
+  struct DelightWorks_Network_UnityWebRequestWWW_o *v26; // x8
+  NetworkManager__RequestApplicationUpdateCR_d__218_o *v27; // x20
+  NetworkManager__RequestApplicationUpdateCR_d__218_o *v28; // x20
   Il2CppObject *Item; // x20
-  UserPresentBoxWindow_resData_array *v37; // x0
-  __int64 v38; // x8
-  UserPresentBoxWindow_resData_array *v39; // x20
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *v40; // x0
-  System_Int32_array **v41; // x1
-  System_String_array **v42; // x2
-  System_String_array **v43; // x3
-  System_Boolean_array **v44; // x4
-  System_Int32_array **v45; // x5
-  System_Int32_array *v46; // x6
-  System_Int32_array *v47; // x7
-  BattleServantConfConponent_o *p_url_5__2; // x0
+  System_Object_array *v30; // x0
+  __int64 v31; // x8
+  System_Object_array *v32; // x20
+  System_Collections_Generic_Dictionary_object__object__o *v33; // x0
+  __int64 v34; // x0
+  int32_t v35; // w2
+  int32_t v36; // w3
+  int32_t v37; // w1
+  ServantStatusBattleListViewItem_o *p_url_5__2; // x0
+  System_String_o *v39; // x20
+  DelightWorks_Network_UnityWebRequestWWW_o *v40; // x21
+  int32_t v41; // w2
+  int32_t v42; // w3
+  Il2CppObject *www_5__3; // x1
+  ServantStatusBattleListViewItem_o *p__2__current; // x19
+  int32_t v45; // w2
+  int32_t v46; // w3
+  bool result; // w0
+  struct NetworkManager_StoreCallbackFunc_o *callback; // x8
   UnityEngine_WaitForSeconds_o *v49; // x20
-  BattleServantConfConponent_o *p__2__current; // x19
-  System_String_array **v51; // x2
-  System_String_array **v52; // x3
-  System_Boolean_array **v53; // x4
-  System_Int32_array **v54; // x5
-  System_Int32_array *v55; // x6
-  System_Int32_array *v56; // x7
-  int v57; // w8
-  System_String_array **v58; // x2
-  System_String_array **v59; // x3
-  System_Boolean_array **v60; // x4
-  System_Int32_array **v61; // x5
-  System_Int32_array *v62; // x6
-  System_Int32_array *v63; // x7
+  ServantStatusBattleListViewItem_o *v50; // x19
+  int32_t v51; // w2
+  int32_t v52; // w3
+  int v53; // w8
+  int32_t v54; // w2
+  int32_t v55; // w3
   System_String_o *id; // x1
-  System_String_o **v65; // x21
-  ManagerConfig_c *v66; // x0
-  System_Int32_array **AndroidPackageName; // x1
-  UnityEngine_WaitForSeconds_o *v68; // x20
-  System_String_array **v69; // x2
-  System_String_array **v70; // x3
-  System_Boolean_array **v71; // x4
-  System_Int32_array **v72; // x5
-  System_Int32_array *v73; // x6
-  System_Int32_array *v74; // x7
-  __int64 v75; // x0
+  System_String_o **v57; // x21
+  ManagerConfig_c *v58; // x0
+  struct System_String_o *AndroidPackageName; // x1
+  System_String_o *v60; // x0
+  UnityEngine_WaitForSeconds_o *v61; // x20
+  int32_t v62; // w2
+  int32_t v63; // w3
 
-  v8 = this;
-  if ( (byte_438A093 & 1) == 0 )
+  v4 = this;
+  if ( (byte_48E2079 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_B775C4(&Method_JsonManager_DeserializeArray_Dictionary_string__object____);
-    sub_B775C4(&JsonManager_TypeInfo);
-    sub_B775C4(&ManagerConfig_TypeInfo);
-    sub_B775C4(&DelightWorks_Network_UnityWebRequestWWW_TypeInfo);
-    sub_B775C4(&UnityEngine_WaitForSeconds_TypeInfo);
-    sub_B775C4(&StringLiteral_23244/*"trackViewUrl"*/);
-    sub_B775C4(&StringLiteral_465/*"&country=jp"*/);
-    sub_B775C4(&StringLiteral_19634/*"https://play.google.com/store/apps/details?id="*/);
-    sub_B775C4(&StringLiteral_2042/*"Android"*/);
-    sub_B775C4(&StringLiteral_22269/*"results"*/);
-    sub_B775C4(&StringLiteral_19632/*"https://itunes.apple.com/lookup?id="*/);
-    this = (NetworkManager__RequestApplicationUpdateCR_d__218_o *)sub_B775C4(&StringLiteral_19651/*"iOS"*/);
-    byte_438A093 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v5);
+    sub_1B00CCC(&Method_JsonManager_DeserializeArray_Dictionary_string__object____, v6);
+    sub_1B00CCC(&JsonManager_TypeInfo, v7);
+    sub_1B00CCC(&ManagerConfig_TypeInfo, v8);
+    sub_1B00CCC(&DelightWorks_Network_UnityWebRequestWWW_TypeInfo, v9);
+    sub_1B00CCC(&UnityEngine_WaitForSeconds_TypeInfo, v10);
+    sub_1B00CCC(&StringLiteral_23671/*"trackViewUrl"*/, v11);
+    sub_1B00CCC(&StringLiteral_544/*"&country=jp"*/, v12);
+    sub_1B00CCC(&StringLiteral_19766/*"https://play.google.com/store/apps/details?id="*/, v13);
+    sub_1B00CCC(&StringLiteral_2356/*"Android"*/, v14);
+    sub_1B00CCC(&StringLiteral_22595/*"results"*/, v15);
+    sub_1B00CCC(&StringLiteral_19764/*"https://itunes.apple.com/lookup?id="*/, v16);
+    this = (NetworkManager__RequestApplicationUpdateCR_d__218_o *)sub_1B00CCC(&StringLiteral_19782/*"iOS"*/, v17);
+    byte_48E2079 = 1;
   }
-  switch ( v8->fields.__1__state )
+  switch ( v4->fields.__1__state )
   {
     case 0:
-      p_storeName = &v8->fields.storeName;
-      storeName = v8->fields.storeName;
-      v8->fields.__1__state = -1;
+      p_storeName = &v4->fields.storeName;
+      storeName = v4->fields.storeName;
+      v4->fields.__1__state = -1;
       if ( !storeName )
       {
-        v11 = (System_Int32_array **)StringLiteral_2042/*"Android"*/;
-        *p_storeName = (System_String_o *)StringLiteral_2042/*"Android"*/;
-        sub_B77560((BattleServantConfConponent_o *)&v8->fields.storeName, v11, v2, v3, v4, v5, v6, v7);
+        v20 = StringLiteral_2356/*"Android"*/;
+        *p_storeName = (System_String_o *)StringLiteral_2356/*"Android"*/;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v4->fields.storeName, v20, v2, v3);
       }
-      v8->fields._url_5__2 = 0LL;
-      sub_B77560((BattleServantConfConponent_o *)&v8->fields._url_5__2, 0LL, v2, v3, v4, v5, v6, v7);
-      if ( System_String__op_Equality(v8->fields.storeName, (System_String_o *)StringLiteral_19651/*"iOS"*/, 0LL) )
+      v4->fields._url_5__2 = 0LL;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&v4->fields._url_5__2, 0, v2, v3);
+      if ( System_String__op_Equality(v4->fields.storeName, (System_String_o *)StringLiteral_19782/*"iOS"*/, 0LL) )
       {
-        if ( !v8->fields.id )
+        if ( !v4->fields.id )
         {
-          v12 = ManagerConfig_TypeInfo;
-          if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-            && !ManagerConfig_TypeInfo->_2.cctor_finished )
+          v21 = ManagerConfig_TypeInfo;
+          if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-            v12 = ManagerConfig_TypeInfo;
+            v21 = ManagerConfig_TypeInfo;
           }
-          static_fields = v12->static_fields;
-          p_id = (BattleServantConfConponent_o *)&v8->fields.id;
-          iOSApplicationID = (System_Int32_array **)static_fields->iOSApplicationID;
-          v8->fields.id = (struct System_String_o *)iOSApplicationID;
-LABEL_13:
-          sub_B77560(p_id, iOSApplicationID, v2, v3, v4, v5, v6, v7);
+          static_fields = v21->static_fields;
+          p_id = (ServantStatusBattleListViewItem_o *)&v4->fields.id;
+          iOSApplicationID = static_fields->iOSApplicationID;
+          v4->fields.id = iOSApplicationID;
+LABEL_33:
+          sub_1B00C70(p_id, (int32_t)iOSApplicationID, v2, v3);
         }
-        v16 = System_String__Concat_44904220(
-                (System_String_o *)StringLiteral_19632/*"https://itunes.apple.com/lookup?id="*/,
-                v8->fields.id,
-                (System_String_o *)StringLiteral_465/*"&country=jp"*/,
+        v39 = System_String__Concat_60337008(
+                (System_String_o *)StringLiteral_19764/*"https://itunes.apple.com/lookup?id="*/,
+                v4->fields.id,
+                (System_String_o *)StringLiteral_544/*"&country=jp"*/,
                 0LL);
-        v17 = (DelightWorks_Network_UnityWebRequestWWW_o *)sub_B77694(DelightWorks_Network_UnityWebRequestWWW_TypeInfo);
-        DelightWorks_Network_UnityWebRequestWWW___ctor(v17, v16, 0LL);
-        v8->fields._www_5__3 = v17;
-        sub_B77560(
-          (BattleServantConfConponent_o *)&v8->fields._www_5__3,
-          (System_Int32_array **)v17,
-          v18,
-          v19,
-          v20,
-          v21,
-          v22,
-          v23);
-        www_5__3 = (System_Int32_array **)v8->fields._www_5__3;
-        v8->fields.__2__current = (Il2CppObject *)www_5__3;
-        sub_B77560((BattleServantConfConponent_o *)&v8->fields.__2__current, www_5__3, v25, v26, v27, v28, v29, v30);
-        LOBYTE(callback) = 1;
-        v8->fields.__1__state = 1;
-        return (char)callback;
+        v40 = (DelightWorks_Network_UnityWebRequestWWW_o *)sub_1B00F18(DelightWorks_Network_UnityWebRequestWWW_TypeInfo);
+        DelightWorks_Network_UnityWebRequestWWW___ctor(v40, v39, 0LL);
+        v4->fields._www_5__3 = v40;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v4->fields._www_5__3, (int32_t)v40, v41, v42);
+        www_5__3 = (Il2CppObject *)v4->fields._www_5__3;
+        v4->fields.__2__current = www_5__3;
+        p__2__current = (ServantStatusBattleListViewItem_o *)&v4->fields.__2__current;
+        sub_1B00C70(p__2__current, (int32_t)www_5__3, v45, v46);
+        result = 1;
+        *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
+        return result;
       }
-      if ( !System_String__op_Equality(*p_storeName, (System_String_o *)StringLiteral_2042/*"Android"*/, 0LL) )
-        goto LABEL_51;
-      v65 = &v8->fields.id;
-      id = v8->fields.id;
+      if ( !System_String__op_Equality(*p_storeName, (System_String_o *)StringLiteral_2356/*"Android"*/, 0LL) )
+        goto LABEL_47;
+      v57 = &v4->fields.id;
+      id = v4->fields.id;
       if ( !id )
       {
-        v66 = ManagerConfig_TypeInfo;
-        if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !ManagerConfig_TypeInfo->_2.cctor_finished )
+        v58 = ManagerConfig_TypeInfo;
+        if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-          v66 = ManagerConfig_TypeInfo;
+          v58 = ManagerConfig_TypeInfo;
         }
-        AndroidPackageName = (System_Int32_array **)v66->static_fields->AndroidPackageName;
-        *v65 = (System_String_o *)AndroidPackageName;
-        sub_B77560((BattleServantConfConponent_o *)&v8->fields.id, AndroidPackageName, v58, v59, v60, v61, v62, v63);
-        id = *v65;
+        AndroidPackageName = v58->static_fields->AndroidPackageName;
+        *v57 = AndroidPackageName;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v4->fields.id, (int32_t)AndroidPackageName, v54, v55);
+        id = *v57;
       }
-      v41 = (System_Int32_array **)System_String__Concat_44901936((System_String_o *)StringLiteral_19634/*"https://play.google.com/store/apps/details?id="*/, id, 0LL);
-      v8->fields._url_5__2 = (struct System_String_o *)v41;
-      p_url_5__2 = (BattleServantConfConponent_o *)&v8->fields._url_5__2;
-      goto LABEL_50;
+      v60 = System_String__Concat_60325748((System_String_o *)StringLiteral_19766/*"https://play.google.com/store/apps/details?id="*/, id, 0LL);
+      v37 = (int)v60;
+      v4->fields._url_5__2 = v60;
+      p_url_5__2 = (ServantStatusBattleListViewItem_o *)&v4->fields._url_5__2;
+      goto LABEL_46;
     case 1:
-      v32 = v8->fields._www_5__3;
-      v8->fields.__1__state = -1;
-      if ( !v32 )
-        goto LABEL_54;
+      v25 = v4->fields._www_5__3;
+      v4->fields.__1__state = -1;
+      if ( !v25 )
+        goto LABEL_49;
       this = (NetworkManager__RequestApplicationUpdateCR_d__218_o *)System_String__IsNullOrEmpty(
-                                                                      v32->fields._error_k__BackingField,
+                                                                      v25->fields._error_k__BackingField,
                                                                       0LL);
       if ( ((unsigned __int8)this & 1) == 0 )
-        goto LABEL_41;
-      v33 = v8->fields._www_5__3;
-      if ( !v33 )
-        goto LABEL_54;
-      if ( System_String__IsNullOrEmpty(v33->fields._error_k__BackingField, 0LL) )
+        goto LABEL_38;
+      v26 = v4->fields._www_5__3;
+      if ( !v26 )
+        goto LABEL_49;
+      if ( System_String__IsNullOrEmpty(v26->fields._error_k__BackingField, 0LL) )
       {
-        this = (NetworkManager__RequestApplicationUpdateCR_d__218_o *)v8->fields._www_5__3;
+        this = (NetworkManager__RequestApplicationUpdateCR_d__218_o *)v4->fields._www_5__3;
         if ( !this )
-          goto LABEL_54;
+          goto LABEL_49;
         this = (NetworkManager__RequestApplicationUpdateCR_d__218_o *)DelightWorks_Network_UnityWebRequestWWW__get_text(
                                                                         (DelightWorks_Network_UnityWebRequestWWW_o *)this,
                                                                         0LL);
-        if ( !v8->fields._www_5__3 )
-          goto LABEL_54;
-        v34 = (System_String_o *)this;
-        DelightWorks_Network_UnityWebRequestWWW__Dispose(v8->fields._www_5__3, 0LL);
-        if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !JsonManager_TypeInfo->_2.cctor_finished )
-        {
+        if ( !v4->fields._www_5__3 )
+          goto LABEL_49;
+        v27 = this;
+        DelightWorks_Network_UnityWebRequestWWW__Dispose(v4->fields._www_5__3, 0LL);
+        if ( !JsonManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-        }
-        this = (NetworkManager__RequestApplicationUpdateCR_d__218_o *)JsonManager__getDictionary(v34, 0LL);
+        this = (NetworkManager__RequestApplicationUpdateCR_d__218_o *)JsonManager__getDictionary(
+                                                                        (System_String_o *)v27,
+                                                                        0LL);
         if ( !this )
-          goto LABEL_54;
-        v35 = this;
-        if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
-               (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)this,
-               (System_Xml_XmlQualifiedName_o *)StringLiteral_22269/*"results"*/,
-               (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          goto LABEL_49;
+        v28 = this;
+        if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
+               (System_Collections_Generic_Dictionary_object__object__o *)this,
+               (Il2CppObject *)StringLiteral_22595/*"results"*/,
+               (const MethodInfo_308DC3C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
         {
-          Item = (Il2CppObject *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-                                   (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v35,
-                                   (System_Type_o *)StringLiteral_22269/*"results"*/,
-                                   (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-          if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-            && !JsonManager_TypeInfo->_2.cctor_finished )
-          {
+          Item = System_Collections_Generic_Dictionary_object__object___get_Item(
+                   (System_Collections_Generic_Dictionary_object__object__o *)v28,
+                   (Il2CppObject *)StringLiteral_22595/*"results"*/,
+                   (const MethodInfo_308D9C8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+          if ( !JsonManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-          }
-          v37 = JsonManager__DeserializeArray_UserPresentBoxWindow_resData_(
+          v30 = JsonManager__DeserializeArray_object_(
                   Item,
-                  (const MethodInfo_1DF16CC *)Method_JsonManager_DeserializeArray_Dictionary_string__object____);
-          if ( v37 )
+                  (const MethodInfo_2DB84AC *)Method_JsonManager_DeserializeArray_Dictionary_string__object____);
+          if ( v30 )
           {
-            v38 = *(_QWORD *)&v37->max_length;
-            v39 = v37;
-            if ( v38 )
+            v31 = *(_QWORD *)&v30->max_length;
+            v32 = v30;
+            if ( v31 )
             {
-              if ( !(_DWORD)v38 )
-                goto LABEL_55;
-              v40 = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v37->m_Items[0];
-              if ( v40 )
+              if ( !(_DWORD)v31 )
+                goto LABEL_50;
+              v33 = (System_Collections_Generic_Dictionary_object__object__o *)v30->m_Items[0];
+              if ( v33 )
               {
-                v37 = (UserPresentBoxWindow_resData_array *)System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
-                                                              v40,
-                                                              (System_Xml_XmlQualifiedName_o *)StringLiteral_23244/*"trackViewUrl"*/,
-                                                              (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-                if ( ((unsigned __int8)v37 & 1) != 0 )
+                v30 = (System_Object_array *)System_Collections_Generic_Dictionary_object__object___ContainsKey(
+                                               v33,
+                                               (Il2CppObject *)StringLiteral_23671/*"trackViewUrl"*/,
+                                               (const MethodInfo_308DC3C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+                if ( ((unsigned __int8)v30 & 1) != 0 )
                 {
-                  if ( v39->max_length )
+                  if ( v32->max_length )
                   {
-                    this = (NetworkManager__RequestApplicationUpdateCR_d__218_o *)v39->m_Items[0];
+                    this = (NetworkManager__RequestApplicationUpdateCR_d__218_o *)v32->m_Items[0];
                     if ( this )
                     {
-                      this = (NetworkManager__RequestApplicationUpdateCR_d__218_o *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-                                                                                      (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)this,
-                                                                                      (System_Type_o *)StringLiteral_23244/*"trackViewUrl"*/,
-                                                                                      (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                      this = (NetworkManager__RequestApplicationUpdateCR_d__218_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
+                                                                                      (System_Collections_Generic_Dictionary_object__object__o *)this,
+                                                                                      (Il2CppObject *)StringLiteral_23671/*"trackViewUrl"*/,
+                                                                                      (const MethodInfo_308D9C8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
                       if ( this )
                       {
-                        v41 = (System_Int32_array **)((__int64 (__fastcall *)(NetworkManager__RequestApplicationUpdateCR_d__218_o *, Il2CppMethodPointer))this->klass->vtable._3_ToString.method)(
-                                                       this,
-                                                       this->klass->vtable._4_System_Collections_Generic_IEnumerator_System_Object__get_Current.methodPtr);
-                        v8->fields._url_5__2 = (struct System_String_o *)v41;
-                        p_url_5__2 = (BattleServantConfConponent_o *)&v8->fields._url_5__2;
-LABEL_50:
-                        sub_B77560(p_url_5__2, v41, v42, v43, v44, v45, v46, v47);
-                        goto LABEL_51;
+                        v34 = ((__int64 (__fastcall *)(NetworkManager__RequestApplicationUpdateCR_d__218_o *, Il2CppMethodPointer))this->klass->vtable._3_ToString.method)(
+                                this,
+                                this->klass->vtable._4_System_Collections_Generic_IEnumerator_System_Object__get_Current.methodPtr);
+                        v37 = v34;
+                        v4->fields._url_5__2 = (struct System_String_o *)v34;
+                        p_url_5__2 = (ServantStatusBattleListViewItem_o *)&v4->fields._url_5__2;
+LABEL_46:
+                        sub_1B00C70(p_url_5__2, v37, v35, v36);
+                        goto LABEL_47;
                       }
                     }
-LABEL_54:
-                    sub_B7769C(this, method);
+LABEL_49:
+                    sub_1B00F28(this, method);
                   }
-LABEL_55:
-                  v75 = sub_B776C8(v37);
-                  sub_B77668(v75, 0LL);
+LABEL_50:
+                  sub_1B00F30(v30, method);
                 }
               }
             }
           }
         }
-LABEL_51:
-        v68 = (UnityEngine_WaitForSeconds_o *)sub_B77694(UnityEngine_WaitForSeconds_TypeInfo);
-        UnityEngine_WaitForSeconds___ctor(v68, 0.5, 0LL);
-        v8->fields.__2__current = (Il2CppObject *)v68;
-        p__2__current = (BattleServantConfConponent_o *)&v8->fields.__2__current;
-        sub_B77560(p__2__current, (System_Int32_array **)v68, v69, v70, v71, v72, v73, v74);
-        v57 = 3;
-        goto LABEL_52;
+LABEL_47:
+        v61 = (UnityEngine_WaitForSeconds_o *)sub_1B00F18(UnityEngine_WaitForSeconds_TypeInfo);
+        UnityEngine_WaitForSeconds___ctor(v61, 0.5, 0LL);
+        v4->fields.__2__current = (Il2CppObject *)v61;
+        v50 = (ServantStatusBattleListViewItem_o *)&v4->fields.__2__current;
+        sub_1B00C70(v50, (int32_t)v61, v62, v63);
+        v53 = 3;
+        goto LABEL_48;
       }
-LABEL_41:
-      this = (NetworkManager__RequestApplicationUpdateCR_d__218_o *)v8->fields._www_5__3;
+LABEL_38:
+      this = (NetworkManager__RequestApplicationUpdateCR_d__218_o *)v4->fields._www_5__3;
       if ( !this )
-        goto LABEL_54;
+        goto LABEL_49;
       DelightWorks_Network_UnityWebRequestWWW__Dispose((DelightWorks_Network_UnityWebRequestWWW_o *)this, 0LL);
-      v49 = (UnityEngine_WaitForSeconds_o *)sub_B77694(UnityEngine_WaitForSeconds_TypeInfo);
+      v49 = (UnityEngine_WaitForSeconds_o *)sub_1B00F18(UnityEngine_WaitForSeconds_TypeInfo);
       UnityEngine_WaitForSeconds___ctor(v49, 1.0, 0LL);
-      v8->fields.__2__current = (Il2CppObject *)v49;
-      p__2__current = (BattleServantConfConponent_o *)&v8->fields.__2__current;
-      sub_B77560(p__2__current, (System_Int32_array **)v49, v51, v52, v53, v54, v55, v56);
-      v57 = 2;
-LABEL_52:
-      *(_DWORD *)&p__2__current[-1].fields.isOpenAfter = v57;
-      LOBYTE(callback) = 1;
-      return (char)callback;
+      v4->fields.__2__current = (Il2CppObject *)v49;
+      v50 = (ServantStatusBattleListViewItem_o *)&v4->fields.__2__current;
+      sub_1B00C70(v50, (int32_t)v49, v51, v52);
+      v53 = 2;
+LABEL_48:
+      *(_DWORD *)&v50[-1].fields.isMine = v53;
+      return 1;
     case 2:
-      v8->fields._www_5__3 = 0LL;
-      p_id = (BattleServantConfConponent_o *)&v8->fields._www_5__3;
-      v8->fields.__1__state = -1;
-      iOSApplicationID = 0LL;
-      goto LABEL_13;
+      v4->fields._www_5__3 = 0LL;
+      p_id = (ServantStatusBattleListViewItem_o *)&v4->fields._www_5__3;
+      v4->fields.__1__state = -1;
+      LODWORD(iOSApplicationID) = 0;
+      goto LABEL_33;
     case 3:
-      callback = v8->fields.callback;
-      v8->fields.__1__state = -1;
-      if ( !callback )
-        return (char)callback;
-      NetworkManager_StoreCallbackFunc__Invoke(callback, v8->fields._url_5__2, (const MethodInfo *)v2);
-LABEL_17:
-      LOBYTE(callback) = 0;
-      return (char)callback;
+      callback = v4->fields.callback;
+      v4->fields.__1__state = -1;
+      if ( callback )
+        ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, struct System_String_o *, _QWORD))callback->fields.m_target)(
+          callback->fields.original_method_info,
+          v4->fields._url_5__2,
+          *(_QWORD *)&callback->fields.extra_arg);
+      return 0;
     default:
-      goto LABEL_17;
+      return 0;
   }
 }
 
@@ -9796,11 +8063,11 @@ void __fastcall __noreturn NetworkManager__RequestApplicationUpdateCR_d__218__Sy
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
+  v2 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B00F18(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B775C8(&Method_NetworkManager__RequestApplicationUpdateCR_d__218_System_Collections_IEnumerator_Reset__);
-  sub_B77668(v3, v4);
+  v4 = sub_1B00CE0(&Method_NetworkManager__RequestApplicationUpdateCR_d__218_System_Collections_IEnumerator_Reset__);
+  sub_1B00DF4(v3, v4);
 }
 
 
@@ -9835,2992 +8102,2447 @@ bool __fastcall NetworkManager__RequestCR_d__213__MoveNext(
         const MethodInfo *method)
 {
   NetworkManager__RequestCR_d__213_o *v2; // x19
-  struct NetworkManager_o *_4__this; // x28
-  struct RequestBase_o *work; // x8
-  NetworkManager__RequestCR_d__213_o **p_work; // x27
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
-  BattleServantConfConponent_o *p_errorCode_5__3; // x21
-  BattleServantConfConponent_o *p_errorLocalizeCode_5__4; // x23
-  System_String_o **p_errorAction_5__5; // x25
-  BattleServantConfConponent_o *p_failData_5__6; // x24
-  BattleServantConfConponent_o *p_responseList_5__7; // x22
-  NetworkManager__RequestCR_d__213_o **v17; // x21
-  NetworkManager__RequestCR_d__213_o *v18; // x8
-  System_String_array **v19; // x2
-  System_String_array **v20; // x3
-  System_Boolean_array **v21; // x4
-  System_Int32_array **v22; // x5
-  System_Int32_array *v23; // x6
-  System_Int32_array *v24; // x7
-  NetworkManager__RequestCR_d__213_o *v25; // x8
-  struct DelightWorks_Network_UnityWebRequestWWW_o *v26; // x8
-  NetworkManager__RequestCR_d__213_o **v27; // x21
-  System_Int32_array **v28; // x0
-  System_String_array **v29; // x2
-  System_String_array **v30; // x3
-  System_Boolean_array **v31; // x4
-  System_Int32_array **v32; // x5
-  System_Int32_array *v33; // x6
-  System_Int32_array *v34; // x7
-  System_String_array **v35; // x2
-  System_String_array **v36; // x3
-  System_Boolean_array **v37; // x4
-  System_Int32_array **v38; // x5
-  System_Int32_array *v39; // x6
-  System_Int32_array *v40; // x7
-  float delay; // s8
-  UnityEngine_WaitForSeconds_o *v42; // x20
-  BattleServantConfConponent_o *p__2__current; // x19
-  System_String_array **v44; // x2
-  System_String_array **v45; // x3
-  System_Boolean_array **v46; // x4
-  System_Int32_array **v47; // x5
-  System_Int32_array *v48; // x6
-  System_Int32_array *v49; // x7
-  uint64_t v50; // x21
-  struct RequestBase_o *v51; // x8
-  __int64 v52; // x11
-  ManagerConfig_c *v53; // x0
-  struct ManagerConfig_StaticFields *static_fields; // x8
-  __int64 v55; // x0
-  System_String_o *v56; // x21
-  DelightWorks_Network_UnityWebRequestWWW_o *v57; // x20
-  BattleServantConfConponent_o *p_www_5__10; // x19
-  System_String_array **v59; // x2
-  System_String_array **v60; // x3
-  System_Boolean_array **v61; // x4
-  System_Int32_array **v62; // x5
-  System_Int32_array *v63; // x6
-  System_Int32_array *v64; // x7
-  System_Int32_array **klass; // x1
-  System_String_array **v66; // x2
-  System_String_array **v67; // x3
-  System_Boolean_array **v68; // x4
-  System_Int32_array **v69; // x5
-  System_Int32_array *v70; // x6
-  System_Int32_array *v71; // x7
-  System_String_o **p_data_5__2; // x21
-  System_Int32_array **v73; // x0
-  System_String_array **v74; // x2
-  System_String_array **v75; // x3
-  System_Boolean_array **v76; // x4
-  System_Int32_array **v77; // x5
-  System_Int32_array *v78; // x6
-  System_Int32_array *v79; // x7
-  UnityEngine_WWWForm_o *WWWForm; // x21
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *v81; // x22
-  Il2CppObject *v82; // x23
-  Il2CppObject *key; // x24
-  System_String_o *v84; // x24
-  System_String_o *v85; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  __int64 v18; // x1
+  __int64 v19; // x1
+  __int64 v20; // x1
+  __int64 v21; // x1
+  __int64 v22; // x1
+  __int64 v23; // x1
+  __int64 v24; // x1
+  __int64 v25; // x1
+  __int64 v26; // x1
+  __int64 v27; // x1
+  __int64 v28; // x1
+  __int64 v29; // x1
+  __int64 v30; // x1
+  __int64 v31; // x1
+  __int64 v32; // x1
+  __int64 v33; // x1
+  __int64 v34; // x1
+  __int64 v35; // x1
+  __int64 v36; // x1
+  __int64 v37; // x1
+  __int64 v38; // x1
+  __int64 v39; // x1
+  __int64 v40; // x1
+  __int64 v41; // x1
+  __int64 v42; // x1
+  __int64 v43; // x1
+  __int64 v44; // x1
+  __int64 v45; // x1
+  __int64 v46; // x1
+  __int64 v47; // x1
+  __int64 v48; // x1
+  __int64 v49; // x1
+  __int64 v50; // x1
+  __int64 v51; // x1
+  __int64 v52; // x1
+  __int64 v53; // x1
+  __int64 v54; // x1
+  __int64 v55; // x1
+  __int64 v56; // x1
+  __int64 v57; // x1
+  __int64 v58; // x1
+  __int64 v59; // x1
+  __int64 v60; // x1
+  __int64 v61; // x1
+  __int64 v62; // x1
+  __int64 v63; // x1
+  __int64 v64; // x1
+  __int64 v65; // x1
+  __int64 v66; // x1
+  __int64 v67; // x1
+  __int64 v68; // x1
+  __int64 v69; // x1
+  __int64 v70; // x1
+  __int64 v71; // x1
+  __int64 v72; // x1
+  __int64 v73; // x1
+  __int64 v74; // x1
+  __int64 v75; // x1
+  __int64 v76; // x1
+  __int64 v77; // x1
+  __int64 v78; // x1
+  __int64 v79; // x1
+  __int64 v80; // x1
+  __int64 v81; // x1
+  __int64 v82; // x1
+  __int64 v83; // x1
+  __int64 v84; // x1
+  __int64 v85; // x1
   __int64 v86; // x1
+  __int64 v87; // x1
+  __int64 v88; // x1
+  __int64 v89; // x1
+  __int64 v90; // x1
+  __int64 v91; // x1
+  __int64 v92; // x1
+  __int64 v93; // x1
+  __int64 v94; // x1
+  __int64 v95; // x1
+  __int64 v96; // x1
+  __int64 v97; // x1
+  __int64 v98; // x1
+  __int64 v99; // x1
+  __int64 v100; // x1
+  __int64 v101; // x1
+  __int64 v102; // x1
+  __int64 v103; // x1
+  __int64 v104; // x1
+  __int64 v105; // x1
+  __int64 v106; // x1
+  __int64 v107; // x1
+  __int64 v108; // x1
+  __int64 v109; // x1
+  __int64 v110; // x1
+  __int64 v111; // x1
+  __int64 v112; // x1
+  __int64 v113; // x1
+  __int64 v114; // x1
+  __int64 v115; // x1
+  __int64 v116; // x1
+  __int64 v117; // x1
+  __int64 v118; // x1
+  __int64 v119; // x1
+  __int64 v120; // x1
+  __int64 v121; // x1
+  __int64 v122; // x1
+  __int64 v123; // x1
+  __int64 v124; // x1
+  __int64 v125; // x1
+  __int64 v126; // x1
+  struct NetworkManager_o *_4__this; // x20
+  struct RequestBase_o *work; // x8
+  int32_t v129; // w2
+  int32_t v130; // w3
+  System_String_o *v131; // x21
+  System_String_o *v132; // x22
+  System_String_o *v133; // x23
+  struct RequestBase_o *v134; // x8
+  NetworkManager__RequestCR_d__213_o *v135; // x19
+  System_Action_o *v136; // x19
+  struct DelightWorks_Network_UnityWebRequestWWW_o *www_5__10; // x8
+  DelightWorks_Network_UnityWebRequestWWW_o **p_www_5__10; // x21
+  DelightWorks_Network_UnityWebRequestWWW_o *v139; // x8
+  int32_t v140; // w2
+  int32_t v141; // w3
+  DelightWorks_Network_UnityWebRequestWWW_o *v142; // x8
+  struct DelightWorks_Network_UnityWebRequestWWW_o *v143; // x8
+  NetworkManager__RequestCR_d__213_o **v144; // x21
+  System_String_o *v145; // x0
+  int32_t v146; // w2
+  int32_t v147; // w3
+  int32_t v148; // w2
+  int32_t v149; // w3
+  float delay; // s8
+  UnityEngine_WaitForSeconds_o *v151; // x20
+  ServantStatusBattleListViewItem_o *p__2__current; // x19
+  int32_t v153; // w2
+  int32_t v154; // w3
+  int v155; // w8
+  uint64_t v156; // x21
+  struct RequestBase_o *v157; // x8
+  __int64 methodPtr_low; // x11
+  ManagerConfig_c *v159; // x0
+  struct ManagerConfig_StaticFields *static_fields; // x8
+  __int64 v161; // x0
+  System_String_o *v162; // x21
+  DelightWorks_Network_UnityWebRequestWWW_o *v163; // x20
+  int32_t v164; // w2
+  int32_t v165; // w3
+  Il2CppObject *v166; // x1
+  int32_t v167; // w2
+  int32_t v168; // w3
+  System_String_o **p_data_5__2; // x21
+  __int64 v170; // x0
+  int32_t v171; // w2
+  int32_t v172; // w3
+  UnityEngine_WWWForm_o *WWWForm; // x21
+  System_Collections_Generic_Dictionary_object__object__o *v174; // x22
+  Il2CppObject *v175; // x23
+  Il2CppObject *key; // x24
+  Il2CppObject *v177; // x24
+  Il2CppObject *v178; // x0
+  __int64 v179; // x1
   struct System_Collections_Generic_Queue_RequestBase__o *communicationWaitList; // x8
-  float v88; // s8
+  float progress_k__BackingField; // s8
   float loadProgress_5__13; // s9
-  System_String_array **v90; // x2
-  System_String_array **v91; // x3
-  System_Boolean_array **v92; // x4
-  System_Int32_array **v93; // x5
-  System_Int32_array *v94; // x6
-  System_Int32_array *v95; // x7
-  float v96; // s0
-  System_String_array **v97; // x2
-  System_String_array **v98; // x3
-  System_Boolean_array **v99; // x4
-  System_Int32_array **v100; // x5
-  System_Int32_array *v101; // x6
-  System_Int32_array *v102; // x7
-  struct System_Collections_Generic_Queue_RequestBase__o *v103; // x8
-  System_Int32_array **v104; // x1
-  struct System_String_o **v105; // x22
-  System_String_array **v106; // x2
-  System_String_array **v107; // x3
-  System_Boolean_array **v108; // x4
-  System_Int32_array **v109; // x5
-  System_Int32_array *v110; // x6
-  System_Int32_array *v111; // x7
-  __int64 *v112; // x8
-  System_Int32_array **_2__current; // x1
-  System_String_array **v114; // x2
-  System_String_array **v115; // x3
-  System_Boolean_array **v116; // x4
-  System_Int32_array **v117; // x5
-  System_Int32_array *v118; // x6
-  System_Int32_array *v119; // x7
-  System_Int32_array **v120; // x1
-  struct DelightWorks_Network_UnityWebRequestWWW_o *v121; // x8
-  System_String_o *Item; // x24
-  NetworkManager__RequestCR_d__213_o *v123; // x24
-  System_String_o *v124; // x24
-  uint32_t v125; // w0
-  __int64 *v126; // x8
-  System_Int32_array **v127; // x1
-  System_Int32_array **v128; // x1
-  BattleServantConfConponent_o *v129; // x0
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *v130; // x0
-  System_String_o *v131; // x0
-  int64_t v132; // x22
-  NetworkManager_c *v133; // x8
-  System_String_array **v134; // x2
-  System_String_array **v135; // x3
-  System_Boolean_array **v136; // x4
-  System_Int32_array **v137; // x5
-  System_Int32_array *v138; // x6
-  System_Int32_array *v139; // x7
-  System_String_array **v140; // x2
-  System_String_array **v141; // x3
-  System_Boolean_array **v142; // x4
-  System_Int32_array **v143; // x5
-  System_Int32_array *v144; // x6
-  System_Int32_array *v145; // x7
-  System_String_array **v146; // x2
-  System_String_array **v147; // x3
-  System_Boolean_array **v148; // x4
-  System_Int32_array **v149; // x5
-  System_Int32_array *v150; // x6
-  System_Int32_array *v151; // x7
-  System_Int32_array **v152; // x1
-  System_Int32_array **v153; // x1
-  System_String_array **v154; // x2
-  System_String_array **v155; // x3
-  System_Boolean_array **v156; // x4
-  System_Int32_array **v157; // x5
-  System_Int32_array *v158; // x6
-  System_Int32_array *v159; // x7
-  System_Int32_array **v160; // x1
-  System_String_array **v161; // x2
-  System_String_array **v162; // x3
-  System_Boolean_array **v163; // x4
-  System_Int32_array **v164; // x5
-  System_Int32_array *v165; // x6
-  System_Int32_array *v166; // x7
-  System_String_array **v167; // x2
-  System_String_array **v168; // x3
-  System_Boolean_array **v169; // x4
-  System_Int32_array **v170; // x5
-  System_Int32_array *v171; // x6
-  System_Int32_array *v172; // x7
-  BattleServantConfConponent_o *v173; // x0
-  System_Int32_array **v174; // x1
-  System_String_array **v175; // x2
-  System_String_array **v176; // x3
-  System_Boolean_array **v177; // x4
-  System_Int32_array **v178; // x5
-  System_Int32_array *v179; // x6
-  System_Int32_array *v180; // x7
-  System_Int32_array **v181; // x1
-  System_Int32_array **v182; // x1
-  System_String_array **v183; // x2
-  System_String_array **v184; // x3
-  System_Boolean_array **v185; // x4
-  System_Int32_array **v186; // x5
-  System_Int32_array *v187; // x6
-  System_Int32_array *v188; // x7
-  _BOOL4 v189; // w26
-  System_String_array **v190; // x2
-  System_String_array **v191; // x3
-  System_Boolean_array **v192; // x4
-  System_Int32_array **v193; // x5
-  System_Int32_array *v194; // x6
-  System_Int32_array *v195; // x7
-  System_String_array **v196; // x2
-  System_String_array **v197; // x3
-  System_Boolean_array **v198; // x4
-  System_Int32_array **v199; // x5
-  System_Int32_array *v200; // x6
-  System_Int32_array *v201; // x7
-  System_String_array **v202; // x2
-  System_String_array **v203; // x3
-  System_Boolean_array **v204; // x4
-  System_Int32_array **v205; // x5
-  System_Int32_array *v206; // x6
-  System_Int32_array *v207; // x7
-  System_String_o *errorLocalizeCode_5__4; // x24
-  System_String_o *data; // x25
+  int32_t v183; // w2
+  int32_t v184; // w3
+  float v185; // s0
+  int32_t v186; // w2
+  int32_t v187; // w3
+  struct System_Collections_Generic_Queue_RequestBase__o *v188; // x8
+  int32_t v189; // w1
+  int32_t v190; // w2
+  int32_t v191; // w3
+  __int64 *v192; // x8
+  struct System_String_o *error_k__BackingField; // x1
+  int32_t v194; // w2
+  int32_t v195; // w3
+  int32_t v196; // w1
+  struct DelightWorks_Network_UnityWebRequestWWW_o *v197; // x8
+  Il2CppObject *v198; // x24
+  NetworkManager__RequestCR_d__213_o *v199; // x24
+  System_String_o *v200; // x24
+  uint32_t v201; // w0
+  __int64 *v202; // x8
+  int32_t v203; // w1
+  __int64 v204; // x1
+  ServantStatusBattleListViewItem_o *p_errorAction_5__5; // x0
+  System_Collections_Generic_Dictionary_object__object__o *responseHeaders_k__BackingField; // x0
+  System_String_o *v207; // x0
+  int64_t v208; // x22
+  NetworkManager_c *v209; // x8
+  struct NetworkManager_StaticFields *v210; // x8
+  int64_t startTime_5__8; // x9
+  int32_t v212; // w2
+  int32_t v213; // w3
+  int32_t v214; // w2
+  int32_t v215; // w3
+  System_String_o **p_errorCode_5__3; // x23
+  int32_t v217; // w2
+  int32_t v218; // w3
+  int32_t v219; // w1
+  int32_t v220; // w1
+  int32_t v221; // w2
+  int32_t v222; // w3
+  int32_t v223; // w1
+  int32_t v224; // w2
+  int32_t v225; // w3
+  int32_t v226; // w2
+  int32_t v227; // w3
+  ServantStatusBattleListViewItem_o *v228; // x0
+  int32_t v229; // w1
+  int32_t v230; // w2
+  int32_t v231; // w3
+  int32_t v232; // w1
+  int32_t v233; // w1
+  int32_t v234; // w2
+  int32_t v235; // w3
+  bool v236; // w25
+  int32_t v237; // w2
+  int32_t v238; // w3
+  int32_t v239; // w2
+  int32_t v240; // w3
+  System_String_o **v241; // x22
+  System_String_o *errorLocalizeCode_5__4; // x26
+  System_String_o *title; // x22
+  __int64 v244; // x1
   System_String_o *errorAction_5__5; // x24
-  System_Int32_array ***v211; // x8
-  System_String_o *data_5__2; // x22
-  NetworkManager__RequestCR_d__213_o *v213; // x22
-  System_String_array **v214; // x2
-  System_String_array **v215; // x3
-  System_Boolean_array **v216; // x4
-  System_Int32_array **v217; // x5
-  System_Int32_array *v218; // x6
-  System_Int32_array *v219; // x7
-  Il2CppObject *v220; // x23
-  System_Int32_array **v221; // x0
-  ResponseData_array **v222; // x23
-  System_String_array **v223; // x2
-  System_String_array **v224; // x3
-  System_Boolean_array **v225; // x4
-  System_Int32_array **v226; // x5
-  System_Int32_array *v227; // x6
-  System_Int32_array *v228; // x7
+  int32_t v246; // w2
+  int32_t v247; // w3
+  __int64 *v248; // x8
+  System_String_o *data_5__2; // x21
+  NetworkManager__RequestCR_d__213_o *v250; // x21
+  int32_t v251; // w2
+  int32_t v252; // w3
+  Il2CppObject *v253; // x22
+  System_Object_array *v254; // x0
+  ResponseData_array **p_responseList_5__7; // x22
+  int32_t v256; // w2
+  int32_t v257; // w3
   struct ResponseData_array *responseList_5__7; // x8
-  __int64 v230; // x25
-  int v231; // w9
-  Il2CppClass **v232; // x8
-  ResponseData_o *v233; // x24
-  System_String_o *v234; // x19
-  System_String_o *v235; // x21
-  System_String_o *v236; // x22
-  System_String_o *v237; // x23
-  System_Action_o *v238; // x22
-  System_Collections_Generic_SortedDictionary_string__string__o *v239; // x23
+  __int64 v259; // x25
+  int v260; // w9
+  Il2CppClass **v261; // x8
+  ResponseData_o *v262; // x24
+  System_Collections_Generic_SortedDictionary_string__string__o *v263; // x23
   System_String_o *AuthCode; // x0
-  NetworkManager_c *v241; // x8
-  System_String_o *v242; // x23
-  int32_t v243; // w8
-  NetworkManager_c *v244; // x0
-  __int64 *v245; // x8
-  System_String_o *v246; // x24
+  NetworkManager_c *v265; // x8
+  System_String_o *v266; // x23
+  int32_t v267; // w8
+  NetworkManager_c *v268; // x0
+  __int64 *v269; // x8
+  System_String_o *v270; // x24
   bool isNoRedirect_5__9; // w24
-  DelightWorks_Network_UnityWebRequestWWW_o *v248; // x25
-  System_String_array **v249; // x2
-  System_String_array **v250; // x3
-  System_Boolean_array **v251; // x4
-  System_Int32_array **v252; // x5
-  System_Int32_array *v253; // x6
-  System_Int32_array *v254; // x7
-  struct RequestBase_o *v255; // x8
-  __int64 v256; // x10
-  ManagerConfig_c *v257; // x0
-  float *p_GAME_DATA_TIMEOUT; // x8
+  DelightWorks_Network_UnityWebRequestWWW_o *v272; // x25
+  int32_t v273; // w2
+  int32_t v274; // w3
+  struct RequestBase_o *v275; // x8
+  __int64 v276; // x11
+  struct RequestBase_o *v277; // x21
+  __int64 v278; // x1
+  ManagementManager_c *v279; // x0
+  _BOOL4 isDuringStartup; // w8
+  __int64 *v281; // x9
+  __int64 *v282; // x10
+  __int64 v283; // x1
+  System_String_o *detail; // x24
+  struct ResponseFailData_o *failData_5__6; // x8
+  struct ResponseFailData_o *v286; // x8
+  System_String_o *url; // x26
+  struct ResponseFailData_o *v288; // x8
+  struct ResponseFailData_o *v289; // x8
+  struct ResponseFailData_o *v290; // x8
+  System_String_o *v291; // x0
+  struct ResponseFailData_o *v292; // x8
+  System_String_o *v293; // x27
+  bool v294; // w8
+  bool result; // w0
+  System_String_o *v296; // x27
+  uint32_t v297; // w0
+  int32_t v298; // w2
+  int32_t v299; // w3
+  NetworkManager_c *v300; // x0
+  struct ResponseFailData_o *v301; // x8
+  int32_t errorType; // w23
+  __int64 v303; // x1
+  NetworkManager_c *v304; // x0
+  NetworkManager_c *v305; // x0
+  int32_t v306; // w1
+  int32_t v307; // w1
+  int32_t v308; // w2
+  int32_t v309; // w3
+  int32_t v310; // w1
+  int32_t v311; // w2
+  int32_t v312; // w3
+  Il2CppObject *v313; // x22
+  struct ResponseData_array *v314; // x8
+  unsigned __int64 v315; // x22
+  unsigned __int64 v316; // x9
+  ResponseData_o *v317; // x21
+  Il2CppObject *Instance; // x24
+  ErrorDialog_ClickDelegate_o *v319; // x25
+  struct DelightWorks_Network_UnityWebRequestWWW_o *v320; // x8
+  Il2CppObject *wait_5__14; // x1
+  System_String_o *text; // x0
+  int32_t v323; // w2
+  int32_t v324; // w3
+  struct RequestBase_o *v325; // x8
+  __int64 v326; // x10
+  Il2CppObject *Item; // x22
+  int _2__current; // w8
+  System_String_array *v329; // x0
+  int32_t v330; // w2
+  int32_t v331; // w3
+  NetworkManager_c *v332; // x8
+  System_String_array *v333; // x22
+  struct NetworkManager_StaticFields *v334; // x0
+  int32_t v335; // w1
+  int max_length; // w8
+  unsigned int v337; // w25
+  Il2CppClass **v338; // x8
+  System_String_o *v339; // x23
+  NetworkManager_c *v340; // x0
+  System_String_o *v341; // x0
+  struct NetworkManager_StaticFields *v342; // x8
+  int32_t v343; // w2
+  int32_t v344; // w3
+  NetworkManager_c *v345; // x0
+  System_Action_o *v346; // x23
+  struct ResponseFailData_o *v347; // x8
+  System_Action_o *v348; // x0
+  __int64 *v349; // x8
+  struct ResponseFailData_o *v350; // x8
+  ManagerConfig_c *v351; // x0
+  __int64 v352; // x9
   float unscaledTime; // s0
   float timeout_5__11; // s1
-  UnityEngine_WaitForEndOfFrame_o *v261; // x22
-  System_String_array **v262; // x2
-  System_String_array **v263; // x3
-  System_Boolean_array **v264; // x4
-  System_Int32_array **v265; // x5
-  System_Int32_array *v266; // x6
-  System_Int32_array *v267; // x7
-  System_Int32_array **v268; // x1
-  System_Int32_array **v269; // x1
-  System_String_array **v270; // x2
-  System_String_array **v271; // x3
-  System_Boolean_array **v272; // x4
-  System_Int32_array **v273; // x5
-  System_Int32_array *v274; // x6
-  System_Int32_array *v275; // x7
-  System_Int32_array **v276; // x1
-  System_String_array **v277; // x2
-  System_String_array **v278; // x3
-  System_Boolean_array **v279; // x4
-  System_Int32_array **v280; // x5
-  System_Int32_array *v281; // x6
-  System_Int32_array *v282; // x7
-  CommonUI_o *Instance; // x24
-  ErrorDialog_ClickDelegate_o *v284; // x25
-  struct DelightWorks_Network_UnityWebRequestWWW_o *www_5__10; // x8
-  System_Int32_array **wait_5__14; // x1
-  bool result; // w0
-  System_Int32_array **text; // x0
-  System_String_array **v289; // x2
-  System_String_array **v290; // x3
-  System_Boolean_array **v291; // x4
-  System_Int32_array **v292; // x5
-  System_Int32_array *v293; // x6
-  System_Int32_array *v294; // x7
-  struct RequestBase_o *v295; // x8
-  __int64 v296; // x10
-  int v297; // w22
-  System_String_o *v298; // x22
-  int v299; // w8
-  System_String_array *v300; // x0
-  System_String_array **v301; // x2
-  System_String_array **v302; // x3
-  System_Boolean_array **v303; // x4
-  System_Int32_array **v304; // x5
-  System_Int32_array *v305; // x6
-  System_Int32_array *v306; // x7
-  NetworkManager_c *v307; // x8
-  System_String_array *v308; // x22
-  struct NetworkManager_StaticFields *v309; // x0
-  System_Int32_array **v310; // x1
-  int max_length; // w8
-  unsigned int v312; // w24
-  Il2CppClass **v313; // x8
-  System_String_o *v314; // x23
-  NetworkManager_c *v315; // x0
-  System_Int32_array **v316; // x0
-  struct NetworkManager_StaticFields *v317; // x8
-  System_String_array **v318; // x2
-  System_String_array **v319; // x3
-  System_Boolean_array **v320; // x4
-  System_Int32_array **v321; // x5
-  System_Int32_array *v322; // x6
-  System_Int32_array *v323; // x7
-  ManagementManager_c *v324; // x0
-  _BOOL4 isDuringStartup; // w8
-  __int64 *v326; // x9
-  __int64 *v327; // x10
-  System_String_array **v328; // x2
-  System_String_array **v329; // x3
-  System_Boolean_array **v330; // x4
-  System_Int32_array **v331; // x5
-  System_Int32_array *v332; // x6
-  System_Int32_array *v333; // x7
-  NetworkManager__RequestCR_d__213_o *v334; // x25
-  System_Int32_array **v335; // x1
-  ManagerConfig_c *v336; // x0
-  ManagementManager_c *v337; // x0
-  System_Int32_array **v338; // x1
-  System_String_o *v339; // x20
-  struct ResponseFailData_o *v340; // x8
-  BattleServantConfConponent_c *v341; // x8
-  System_String_o *v342; // x0
-  System_String_o *v343; // x28
-  bool v344; // w8
-  System_String_o *v345; // x28
-  uint32_t v346; // w0
-  System_String_array **v347; // x2
-  System_String_array **v348; // x3
-  System_Boolean_array **v349; // x4
-  System_Int32_array **v350; // x5
-  System_Int32_array *v351; // x6
-  System_Int32_array *v352; // x7
-  NetworkManager_c *v353; // x0
-  Il2CppObject *v354; // x26
-  NetworkManager_c *v355; // x0
-  NetworkManager_o *v356; // x28
-  NetworkManager_c *v357; // x0
-  NetworkManager_c *v358; // x0
-  Il2CppObject *v359; // x28
-  System_Action_o *v360; // x0
-  __int64 *v361; // x8
-  TitleRootComponent_c *v362; // x0
-  CommonUI_o *v363; // x10
-  AvalonSceneManager_c *v364; // x8
-  CommonUI_o *v365; // x28
+  UnityEngine_WaitForEndOfFrame_o *v355; // x21
+  int32_t v356; // w2
+  int32_t v357; // w3
+  int32_t v358; // w2
+  int32_t v359; // w3
+  NetworkManager__RequestCR_d__213_o *v360; // x25
+  int32_t v361; // w1
+  int32_t v362; // w2
+  int32_t v363; // w3
+  struct NetworkManager_o *nid; // x1
+  int32_t v365; // w2
+  int32_t v366; // w3
+  int32_t v367; // w1
+  int32_t v368; // w2
+  int32_t v369; // w3
+  struct System_String_o *resCode; // x1
+  int32_t v371; // w2
+  int32_t v372; // w3
+  int32_t v373; // w1
+  System_String_o *v374; // x0
+  int32_t v375; // w2
+  int32_t v376; // w3
+  ResponseFailData_o *v377; // x26
+  struct ResponseFailData_o **p_failData_5__6; // x25
+  int32_t v379; // w2
+  int32_t v380; // w3
+  int32_t v381; // w2
+  int32_t v382; // w3
+  __int64 *p_action; // x8
+  __int64 v384; // x1
+  struct RequestBase_o *v385; // x8
+  PurchaseByBank_UnityIap_Request_c *v386; // x9
+  __int64 v387; // x11
+  RequestBase_c *klass; // x8
+  __int64 v389; // x10
+  ResponseData_array *v390; // x22
+  ResponseData_o *v391; // x0
+  System_Collections_Generic_Dictionary_object__object__o *fail; // x0
+  System_String_o *v393; // x22
+  int32_t v394; // w2
+  int32_t v395; // w3
+  int32_t v396; // w1
+  TitleRootComponent_c *v397; // x0
+  Il2CppObject *v398; // x23
+  AvalonSceneManager_c *v399; // x8
   float DEFAULT_FADE_TIME; // s8
-  CommonUI_o *v367; // x26
-  void *v368; // x8
-  System_Action_o *v369; // x28
-  Il2CppObject *v370; // x26
-  struct NetworkManager___c_StaticFields *v371; // x0
-  System_String_array **v372; // x2
-  System_String_array **v373; // x3
-  System_Boolean_array **v374; // x4
-  System_Int32_array **v375; // x5
-  System_Int32_array *v376; // x6
-  System_Int32_array *v377; // x7
-  CommonUI_o *v378; // x26
-  CommonConfirmDialog_ClickDelegate_o *v379; // x28
-  BattleServantConfConponent_c *v380; // x8
-  System_String_o *declaringType; // x26
-  int castClass_low; // w28
-  System_String_array **v383; // x2
-  System_String_array **v384; // x3
-  System_Boolean_array **v385; // x4
-  System_Int32_array **v386; // x5
-  System_Int32_array *v387; // x6
-  System_Int32_array *v388; // x7
-  System_Int32_array **parent; // x26
-  NetworkManager_c *v390; // x0
-  struct NetworkManager_StaticFields *v391; // x0
-  System_String_array **v392; // x2
-  System_String_array **v393; // x3
-  System_Boolean_array **v394; // x4
-  System_Int32_array **v395; // x5
-  System_Int32_array *v396; // x6
-  System_Int32_array *v397; // x7
-  System_Int32_array **generic_class; // x26
-  NetworkManager_c *v399; // x0
-  NetworkManager_o *v400; // x28
-  __int64 v401; // x2
-  System_Action_o *v402; // x28
-  System_String_o *v403; // x1
-  System_String_o *v404; // x3
-  int32_t v405; // w4
-  NetworkManager_o *v406; // x0
-  System_String_o *v407; // x2
-  System_Action_o *v408; // x5
-  CommonUI_o *v409; // x28
-  ErrorDialog_ClickDelegate_o *v410; // x26
-  System_String_array **v411; // x2
-  System_String_array **v412; // x3
-  System_Boolean_array **v413; // x4
-  System_Int32_array **v414; // x5
-  System_Int32_array *v415; // x6
-  System_Int32_array *v416; // x7
-  System_String_array **v417; // x2
-  System_String_array **v418; // x3
-  System_Boolean_array **v419; // x4
-  System_Int32_array **v420; // x5
-  System_Int32_array *v421; // x6
-  System_Int32_array *v422; // x7
-  System_String_array **v423; // x2
-  System_String_array **v424; // x3
-  System_Boolean_array **v425; // x4
-  System_Int32_array **v426; // x5
-  System_Int32_array *v427; // x6
-  System_Int32_array *v428; // x7
-  System_String_array **v429; // x2
-  System_String_array **v430; // x3
-  System_Boolean_array **v431; // x4
-  System_Int32_array **v432; // x5
-  System_Int32_array *v433; // x6
-  System_Int32_array *v434; // x7
-  System_String_array **v435; // x2
-  System_String_array **v436; // x3
-  System_Boolean_array **v437; // x4
-  System_Int32_array **v438; // x5
-  System_Int32_array *v439; // x6
-  System_Int32_array *v440; // x7
-  UnityEngine_WaitForEndOfFrame_o *v441; // x20
-  BattleServantConfConponent_o *v442; // x19
-  System_String_array **v443; // x2
-  System_String_array **v444; // x3
-  System_Boolean_array **v445; // x4
-  System_Int32_array **v446; // x5
-  System_Int32_array *v447; // x6
-  System_Int32_array *v448; // x7
-  System_Int32_array **v449; // x19
-  NetworkManager_c *v450; // x0
-  BattleServantConfConponent_o *p_errorDialogResponseData; // x0
-  System_String_array **v452; // x2
-  System_String_array **v453; // x3
-  System_Boolean_array **v454; // x4
-  System_Int32_array **v455; // x5
-  System_Int32_array *v456; // x6
-  System_Int32_array *v457; // x7
-  System_Int32_array **nid; // x26
-  System_String_array **v459; // x2
-  System_String_array **v460; // x3
-  System_Boolean_array **v461; // x4
-  System_Int32_array **v462; // x5
-  System_Int32_array *v463; // x6
-  System_Int32_array *v464; // x7
-  System_Int32_array **v465; // x1
-  System_String_array **v466; // x2
-  System_String_array **v467; // x3
-  System_Boolean_array **v468; // x4
-  System_Int32_array **v469; // x5
-  System_Int32_array *v470; // x6
-  System_Int32_array *v471; // x7
-  System_Int32_array **resCode; // x26
-  System_String_array **v473; // x2
-  System_String_array **v474; // x3
-  System_Boolean_array **v475; // x4
-  System_Int32_array **v476; // x5
-  System_Int32_array *v477; // x6
-  System_Int32_array *v478; // x7
-  System_Int32_array **v479; // x1
-  System_Int32_array **v480; // x0
-  System_String_array **v481; // x2
-  System_String_array **v482; // x3
-  System_Boolean_array **v483; // x4
-  System_Int32_array **v484; // x5
-  System_Int32_array *v485; // x6
-  System_Int32_array *v486; // x7
-  ResponseFailData_o *v487; // x26
-  struct ResponseFailData_o **v488; // x25
-  System_String_array **v489; // x2
-  System_String_array **v490; // x3
-  System_Boolean_array **v491; // x4
-  System_Int32_array **v492; // x5
-  System_Int32_array *v493; // x6
-  System_Int32_array *v494; // x7
-  struct ResponseFailData_o *failData_5__6; // x8
-  System_String_array **v496; // x2
-  System_String_array **v497; // x3
-  System_Boolean_array **v498; // x4
-  System_Int32_array **v499; // x5
-  System_Int32_array *v500; // x6
-  System_Int32_array *v501; // x7
-  System_Int32_array ***p_action; // x8
-  System_Int32_array **v503; // x1
-  struct RequestBase_o *v504; // x9
-  PurchaseByBank_UnityIap_Request_c *v505; // x10
-  __int64 v506; // x11
-  int v507; // w8
-  RequestBase_c *v508; // x9
-  __int64 v509; // x11
-  ResponseData_array *v510; // x23
-  ResponseData_o *v511; // x0
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *fail; // x0
-  System_String_o *v513; // x0
-  System_String_o *v514; // x23
-  System_String_array **v515; // x2
-  System_String_array **v516; // x3
-  System_Boolean_array **v517; // x4
-  System_Int32_array **v518; // x5
-  System_Int32_array *v519; // x6
-  System_Int32_array *v520; // x7
-  System_Int32_array **v521; // x1
-  WebViewManager_o *v522; // x23
-  struct ResponseData_array *v523; // x8
-  unsigned __int64 v524; // x20
-  unsigned __int64 v525; // x9
-  ResponseData_o *v526; // x22
-  System_Int32_array **v527; // x0
-  System_String_array **v528; // x2
-  System_String_array **v529; // x3
-  System_Boolean_array **v530; // x4
-  System_Int32_array **v531; // x5
-  System_Int32_array *v532; // x6
-  System_Int32_array *v533; // x7
-  ResponseFailData_o *v534; // x23
-  struct ResponseFailData_o **v535; // x22
-  System_String_array **v536; // x2
-  System_String_array **v537; // x3
-  System_Boolean_array **v538; // x4
-  System_Int32_array **v539; // x5
-  System_Int32_array *v540; // x6
-  System_Int32_array *v541; // x7
-  struct ResponseFailData_o *v542; // x8
-  System_String_array **v543; // x2
-  System_String_array **v544; // x3
-  System_Boolean_array **v545; // x4
-  System_Int32_array **v546; // x5
-  System_Int32_array *v547; // x6
-  System_Int32_array *v548; // x7
-  System_Int32_array ***v549; // x8
-  System_Int32_array **v550; // x1
-  System_Action_o *v551; // x26
-  __int64 *v552; // x8
-  System_Action_o *v553; // x26
-  __int64 *v554; // x8
-  ManagementManager_c *v555; // x0
-  _BOOL4 v556; // w28
-  WebViewManager_o *v557; // x0
-  CommonUI_o *v558; // x28
-  ErrorDialog_ClickDelegate_o *v559; // x26
-  struct NetworkManager_StaticFields *v560; // x0
-  bool v561; // w0
-  __int64 *v562; // x8
-  CommonUI_o *v563; // x28
-  ErrorDialog_ClickDelegate_o *v564; // x26
-  ErrorDialog_ClickDelegate_o *v565; // x26
-  System_Int32_array **v566; // x1
-  struct System_String_o **v567; // x23
-  __int64 *v568; // x8
-  System_Int32_array **v569; // x1
-  __int64 v570; // x0
-  __int64 v571; // x0
-  int32_t cancleTxt; // [xsp+10h] [xbp-100h]
-  int32_t cancleTxta; // [xsp+10h] [xbp-100h]
-  System_String_o *cancleTxtb; // [xsp+10h] [xbp-100h]
-  System_String_o *cancleTxtc; // [xsp+10h] [xbp-100h]
-  System_String_o *value; // [xsp+18h] [xbp-F8h]
-  System_String_o *valuea; // [xsp+18h] [xbp-F8h]
-  System_String_o *valueb; // [xsp+18h] [xbp-F8h]
-  System_String_o *valuec; // [xsp+18h] [xbp-F8h]
-  System_String_o *title; // [xsp+20h] [xbp-F0h]
-  NetworkManager_o *v581; // [xsp+28h] [xbp-E8h]
-  System_Collections_Generic_Dictionary_Enumerator_XmlQualifiedName__SchemaElementDecl__o v582; // [xsp+30h] [xbp-E0h] BYREF
-  int v583[2]; // [xsp+58h] [xbp-B8h]
-  int v584; // [xsp+60h] [xbp-B0h]
-  System_Xml_Schema_XmlSchemaObject_o *v585; // [xsp+68h] [xbp-A8h] BYREF
-  System_Collections_Generic_Dictionary_Enumerator_XmlQualifiedName__SchemaElementDecl__o v586; // [xsp+70h] [xbp-A0h] BYREF
-  System_Collections_Generic_SortedDictionary_string__string__o *authParams; // [xsp+98h] [xbp-78h] BYREF
-  uint64_t dateData; // [xsp+A0h] [xbp-70h] BYREF
-  System_DateTime_o v589; // 0:x0.8
-  System_DateTime_o v590; // 0:x0.8
+  System_Action_o *monitor; // x25
+  Il2CppObject *v402; // x26
+  struct NetworkManager___c_StaticFields *v403; // x0
+  int32_t v404; // w2
+  int32_t v405; // w3
+  Il2CppObject *v406; // x23
+  System_String_o *v407; // x25
+  System_String_o *v408; // x26
+  CommonConfirmDialog_ClickDelegate_o *v409; // x27
+  struct ResponseFailData_o *v410; // x8
+  System_String_o *sandboxDomain; // x22
+  _BOOL4 sandboxSeurity; // w24
+  int32_t v413; // w2
+  int32_t v414; // w3
+  struct ResponseFailData_o *v415; // x8
+  struct System_String_o *sandboxAssetsDomain; // x22
+  NetworkManager_c *v417; // x0
+  struct NetworkManager_StaticFields *v418; // x0
+  int32_t v419; // w2
+  int32_t v420; // w3
+  struct ResponseFailData_o *v421; // x8
+  struct System_String_o *sandboxWebviewDomain; // x22
+  NetworkManager_c *v423; // x0
+  struct NetworkManager_StaticFields *v424; // x0
+  struct ResponseFailData_o *v425; // x8
+  Il2CppObject *v426; // x23
+  ErrorDialog_ClickDelegate_o *v427; // x25
+  System_String_o *v428; // x0
+  int32_t v429; // w2
+  int32_t v430; // w3
+  ResponseFailData_o *v431; // x22
+  struct ResponseFailData_o **v432; // x21
+  int32_t v433; // w2
+  int32_t v434; // w3
+  int32_t v435; // w2
+  int32_t v436; // w3
+  __int64 *v437; // x8
+  ManagementManager_c *v438; // x0
+  __int64 v439; // x1
+  struct ResponseFailData_o *v440; // x8
+  struct ResponseFailData_o *v441; // x8
+  System_Action_o *v442; // x25
+  int32_t v443; // w2
+  int32_t v444; // w3
+  int32_t v445; // w2
+  int32_t v446; // w3
+  int32_t v447; // w2
+  int32_t v448; // w3
+  int32_t v449; // w2
+  int32_t v450; // w3
+  int32_t v451; // w2
+  int32_t v452; // w3
+  UnityEngine_WaitForEndOfFrame_o *v453; // x20
+  ServantStatusBattleListViewItem_o *v454; // x19
+  int32_t v455; // w2
+  int32_t v456; // w3
+  ServantStatusBattleListViewItem_c *v457; // x19
+  NetworkManager_c *v458; // x0
+  ServantStatusBattleListViewItem_o *p_errorDialogResponseData; // x0
+  ManagementManager_c *v460; // x0
+  _BOOL4 v461; // w26
+  Il2CppObject *v462; // x23
+  ErrorDialog_ClickDelegate_o *v463; // x25
+  __int64 *v464; // x8
+  bool v465; // w0
+  __int64 *v466; // x8
+  System_String_o *v467; // x25
+  System_String_o *v468; // x26
+  ErrorDialog_ClickDelegate_o *v469; // x27
+  ErrorDialog_ClickDelegate_o *v470; // x25
+  __int64 v471; // x1
+  struct System_String_o **p_errorLocalizeCode_5__4; // x23
+  __int64 *v473; // x8
+  __int64 v474; // x1
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v475; // [xsp+10h] [xbp-E0h] BYREF
+  Il2CppObject *value; // [xsp+38h] [xbp-B8h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v477; // [xsp+40h] [xbp-B0h] BYREF
+  System_Collections_Generic_SortedDictionary_string__string__o *authParams; // [xsp+70h] [xbp-80h] BYREF
+  uint64_t dateData; // [xsp+78h] [xbp-78h] BYREF
+  System_DateTime_o v480; // 0:x0.8
+  System_DateTime_o v481; // 0:x0.8
 
   v2 = this;
-  if ( (byte_438A094 & 1) == 0 )
+  if ( (byte_48E207A & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&AvalonSceneManager_TypeInfo);
-    sub_B775C4(&BattleData_TypeInfo);
-    sub_B775C4(&char___TypeInfo);
-    sub_B775C4(&ErrorDialog_ClickDelegate_TypeInfo);
-    sub_B775C4(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_B775C4(&System_Convert_TypeInfo);
-    sub_B775C4(&DataManager_TypeInfo);
-    sub_B775C4(&System_DateTime_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__string__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__string__GetEnumerator__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__string___ctor__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__string__get_Count__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
-    sub_B775C4(&System_Collections_Generic_Dictionary_string__string__TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_Enumerator_string__string__Dispose__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_Enumerator_string__string__MoveNext__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_Enumerator_string__string__get_Current__);
-    sub_B775C4(&Method_JsonManager_DeserializeArray_ResponseData___);
-    sub_B775C4(&JsonManager_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Key__);
-    sub_B775C4(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Value__);
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&ManagementManager_TypeInfo);
-    sub_B775C4(&ManagerConfig_TypeInfo);
-    sub_B775C4(&Method_NetworkManager_OnClickErrorDialog__);
-    sub_B775C4(&Method_NetworkManager_OnClickErrorReboot__);
-    sub_B775C4(&Method_NetworkManager_OnClickErrorRetryDialog_UnityIap__);
-    sub_B775C4(&Method_NetworkManager_OnClickErrorRetryDialog__);
-    sub_B775C4(&Method_NetworkManager_OnClickErrorStay__);
-    sub_B775C4(&Method_NetworkManager_OnClickErrorTerminal__);
-    sub_B775C4(&Method_NetworkManager_OnClickRefreshTerminal__);
-    sub_B775C4(&Method_NetworkManager_OnClickReloadCache__);
-    sub_B775C4(&Method_NetworkManager_OnClickStore__);
-    sub_B775C4(&Method_NetworkManager_OnClickUserDelete__);
-    sub_B775C4(&Method_NetworkManager__RequestCR_b__213_0__);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&PurchaseByBank_UnityIap_Request_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_Queue_RequestBase__get_Count__);
-    sub_B775C4(&ResponseCommandKind_TypeInfo);
-    sub_B775C4(&ResponseFailData_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B775C4(&string___TypeInfo);
-    sub_B775C4(&TitleRootComponent_TypeInfo);
-    sub_B775C4(&TopGameDataRequest_TypeInfo);
-    sub_B775C4(&TopLoginRequest_TypeInfo);
-    sub_B775C4(&Method_NetworkManager___c__RequestCR_b__213_1__);
-    sub_B775C4(&NetworkManager___c_TypeInfo);
-    sub_B775C4(&DelightWorks_Network_UnityWebRequestWWW_TypeInfo);
-    sub_B775C4(&UnityEngine_WaitForEndOfFrame_TypeInfo);
-    sub_B775C4(&UnityEngine_WaitForSeconds_TypeInfo);
-    sub_B775C4(&StringLiteral_26/*"\n"*/);
-    sub_B775C4(&StringLiteral_15827/*"X-SERVER-TIME"*/);
-    sub_B775C4(&StringLiteral_18233/*"data_update"*/);
-    sub_B775C4(&StringLiteral_9457/*"NETWORK_ERROR_SERVER_BUSY_MESSAGE"*/);
-    sub_B775C4(&StringLiteral_20296/*"invalid_battle"*/);
-    sub_B775C4(&StringLiteral_22223/*"reload_cache"*/);
-    sub_B775C4(&StringLiteral_7251/*"HTTP"*/);
-    sub_B775C4(&StringLiteral_1201/*"400"*/);
-    sub_B775C4(&StringLiteral_22263/*"result"*/);
-    sub_B775C4(&StringLiteral_9456/*"NETWORK_ERROR_SERVER_AUTH_MESSAGE"*/);
-    sub_B775C4(&StringLiteral_19454/*"goto_login_access"*/);
-    sub_B775C4(&StringLiteral_20253/*"internal server error"*/);
-    sub_B775C4(&StringLiteral_22255/*"response error "*/);
-    sub_B775C4(&StringLiteral_22254/*"response"*/);
-    sub_B775C4(&StringLiteral_22789/*"stay"*/);
-    sub_B775C4(&StringLiteral_1203/*"401"*/);
-    sub_B775C4(&StringLiteral_9445/*"NETWORK_ERROR_BOOT_MESSAGE"*/);
-    sub_B775C4(&StringLiteral_7860/*"Internal Server Error"*/);
-    sub_B775C4(&StringLiteral_15352/*"User-Agent"*/);
-    sub_B775C4(&StringLiteral_22273/*"retry"*/);
-    sub_B775C4(&StringLiteral_9460/*"NETWORK_ERROR_SERVER_NO_FILE_MESSAGE"*/);
-    sub_B775C4(&StringLiteral_9458/*"NETWORK_ERROR_SERVER_CANCEL_MESSAGE"*/);
-    sub_B775C4(&StringLiteral_16907/*"background cancel"*/);
-    sub_B775C4(&StringLiteral_1214/*"500"*/);
-    sub_B775C4(&StringLiteral_9449/*"NETWORK_ERROR_CSID_CODE"*/);
-    sub_B775C4(&StringLiteral_22256/*"response execute error "*/);
-    sub_B775C4(&StringLiteral_17544/*"canceled_purchase_error"*/);
-    sub_B775C4(&StringLiteral_1216/*"502"*/);
-    sub_B775C4(&StringLiteral_1218/*"503"*/);
-    sub_B775C4(&StringLiteral_4431/*"Cookie"*/);
-    sub_B775C4(&StringLiteral_9464/*"NETWORK_USER_DELETE_DECIDE"*/);
-    sub_B775C4(&StringLiteral_20297/*"invalid_user"*/);
-    sub_B775C4(&StringLiteral_9446/*"NETWORK_ERROR_BOOT_RETRY_CANCEL"*/);
-    sub_B775C4(&StringLiteral_16696/*"app_version_up"*/);
-    sub_B775C4(&StringLiteral_1554/*"?"*/);
-    sub_B775C4(&StringLiteral_9459/*"NETWORK_ERROR_SERVER_CONNECT_MESSAGE"*/);
-    sub_B775C4(&StringLiteral_21557/*"none data"*/);
-    sub_B775C4(&StringLiteral_9448/*"NETWORK_ERROR_BOOT_RETRY_MESSAGE"*/);
-    sub_B775C4(&StringLiteral_21884/*"path="*/);
-    sub_B775C4(&StringLiteral_16849/*"authCode"*/);
-    sub_B775C4(&StringLiteral_452/*"&"*/);
-    sub_B775C4(&StringLiteral_22205/*"refresh_terminal"*/);
-    sub_B775C4(&StringLiteral_19455/*"goto_title"*/);
-    sub_B775C4(&StringLiteral_3387/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_B775C4(&StringLiteral_1289/*";"*/);
-    sub_B775C4(&StringLiteral_18005/*"connect time over"*/);
-    sub_B775C4(&StringLiteral_22181/*"reconnection"*/);
-    sub_B775C4(&StringLiteral_12600/*"STATUS"*/);
-    sub_B775C4(&StringLiteral_16509/*"_userId="*/);
-    sub_B775C4(&StringLiteral_18401/*"do_signup"*/);
-    sub_B775C4(&StringLiteral_9463/*"NETWORK_USER_DELETE_CANCEL"*/);
-    sub_B775C4(&StringLiteral_17514/*"cache"*/);
-    sub_B775C4(&StringLiteral_665/*")"*/);
-    sub_B775C4(&StringLiteral_3391/*"COMMON_CONFIRM_RETRY"*/);
-    sub_B775C4(&StringLiteral_22800/*"stay_no_dialog"*/);
-    sub_B775C4(&StringLiteral_9461/*"NETWORK_ERROR_SERVER_PARAMETER_MESSAGE"*/);
-    sub_B775C4(&StringLiteral_1206/*"404"*/);
-    sub_B775C4(&StringLiteral_21558/*"none response data"*/);
-    sub_B775C4(&StringLiteral_20777/*"maint"*/);
-    sub_B775C4(&StringLiteral_21899/*"pending_purchase_error"*/);
-    sub_B775C4(&StringLiteral_100/*" ("*/);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    sub_B775C4(&StringLiteral_9447/*"NETWORK_ERROR_BOOT_RETRY_DECIDE"*/);
-    sub_B775C4(&StringLiteral_12294/*"SET-COOKIE"*/);
-    sub_B775C4(&StringLiteral_1185/*"302"*/);
-    sub_B775C4(&StringLiteral_9462/*"NETWORK_ERROR_TIME_OVER_MESSAGE"*/);
-    this = (NetworkManager__RequestCR_d__213_o *)sub_B775C4(&StringLiteral_1170/*"200"*/);
-    byte_438A094 = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, method);
+    sub_1B00CCC(&UnityEngine_Application_TypeInfo, v3);
+    sub_1B00CCC(&AvalonSceneManager_TypeInfo, v4);
+    sub_1B00CCC(&BattleData_TypeInfo, v5);
+    sub_1B00CCC(&char___TypeInfo, v6);
+    sub_1B00CCC(&CommonConfirmDialog_ClickDelegate_TypeInfo, v7);
+    sub_1B00CCC(&ErrorDialog_ClickDelegate_TypeInfo, v8);
+    sub_1B00CCC(&System_Convert_TypeInfo, v9);
+    sub_1B00CCC(&DataManager_TypeInfo, v10);
+    sub_1B00CCC(&System_DateTime_TypeInfo, v11);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__string__Add__, v12);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__, v13);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v14);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__string__GetEnumerator__, v15);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, v16);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__string___ctor__, v17);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__string__get_Count__, v18);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v19);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__string__get_Item__, v20);
+    sub_1B00CCC(&System_Collections_Generic_Dictionary_string__string__TypeInfo, v21);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_Enumerator_string__string__Dispose__, v22);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_Enumerator_string__string__MoveNext__, v23);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_Enumerator_string__string__get_Current__, v24);
+    sub_1B00CCC(&Method_JsonManager_DeserializeArray_ResponseData___, v25);
+    sub_1B00CCC(&JsonManager_TypeInfo, v26);
+    sub_1B00CCC(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Key__, v27);
+    sub_1B00CCC(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Value__, v28);
+    sub_1B00CCC(&LocalizationManager_TypeInfo, v29);
+    sub_1B00CCC(&ManagementManager_TypeInfo, v30);
+    sub_1B00CCC(&ManagerConfig_TypeInfo, v31);
+    sub_1B00CCC(&Method_NetworkManager_OnClickErrorDialog__, v32);
+    sub_1B00CCC(&Method_NetworkManager_OnClickErrorReboot__, v33);
+    sub_1B00CCC(&Method_NetworkManager_OnClickErrorRetryDialog_UnityIap__, v34);
+    sub_1B00CCC(&Method_NetworkManager_OnClickErrorRetryDialog__, v35);
+    sub_1B00CCC(&Method_NetworkManager_OnClickErrorStay__, v36);
+    sub_1B00CCC(&Method_NetworkManager_OnClickErrorTerminal__, v37);
+    sub_1B00CCC(&Method_NetworkManager_OnClickRefreshTerminal__, v38);
+    sub_1B00CCC(&Method_NetworkManager_OnClickReloadCache__, v39);
+    sub_1B00CCC(&Method_NetworkManager_OnClickStore__, v40);
+    sub_1B00CCC(&Method_NetworkManager_OnClickUserDelete__, v41);
+    sub_1B00CCC(&Method_NetworkManager__RequestCR_b__213_0__, v42);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v43);
+    sub_1B00CCC(&PurchaseByBank_UnityIap_Request_TypeInfo, v44);
+    sub_1B00CCC(&Method_System_Collections_Generic_Queue_RequestBase__get_Count__, v45);
+    sub_1B00CCC(&ResponseCommandKind_TypeInfo, v46);
+    sub_1B00CCC(&ResponseFailData_TypeInfo, v47);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v48);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v49);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__, v50);
+    sub_1B00CCC(&string___TypeInfo, v51);
+    sub_1B00CCC(&TitleRootComponent_TypeInfo, v52);
+    sub_1B00CCC(&TopGameDataRequest_TypeInfo, v53);
+    sub_1B00CCC(&TopLoginRequest_TypeInfo, v54);
+    sub_1B00CCC(&Method_NetworkManager___c__RequestCR_b__213_1__, v55);
+    sub_1B00CCC(&NetworkManager___c_TypeInfo, v56);
+    sub_1B00CCC(&DelightWorks_Network_UnityWebRequestWWW_TypeInfo, v57);
+    sub_1B00CCC(&UnityEngine_WaitForEndOfFrame_TypeInfo, v58);
+    sub_1B00CCC(&UnityEngine_WaitForSeconds_TypeInfo, v59);
+    sub_1B00CCC(&StringLiteral_43/*"\n"*/, v60);
+    sub_1B00CCC(&StringLiteral_15465/*"X-SERVER-TIME"*/, v61);
+    sub_1B00CCC(&StringLiteral_18223/*"data_update"*/, v62);
+    sub_1B00CCC(&StringLiteral_9127/*"NETWORK_ERROR_SERVER_BUSY_MESSAGE"*/, v63);
+    sub_1B00CCC(&StringLiteral_20459/*"invalid_battle"*/, v64);
+    sub_1B00CCC(&StringLiteral_22539/*"reload_cache"*/, v65);
+    sub_1B00CCC(&StringLiteral_7087/*"HTTP"*/, v66);
+    sub_1B00CCC(&StringLiteral_1491/*"400"*/, v67);
+    sub_1B00CCC(&StringLiteral_22589/*"result"*/, v68);
+    sub_1B00CCC(&StringLiteral_9126/*"NETWORK_ERROR_SERVER_AUTH_MESSAGE"*/, v69);
+    sub_1B00CCC(&StringLiteral_19560/*"goto_login_access"*/, v70);
+    sub_1B00CCC(&StringLiteral_20417/*"internal server error"*/, v71);
+    sub_1B00CCC(&StringLiteral_22581/*"response error "*/, v72);
+    sub_1B00CCC(&StringLiteral_22580/*"response"*/, v73);
+    sub_1B00CCC(&StringLiteral_23188/*"stay"*/, v74);
+    sub_1B00CCC(&StringLiteral_1493/*"401"*/, v75);
+    sub_1B00CCC(&StringLiteral_9115/*"NETWORK_ERROR_BOOT_MESSAGE"*/, v76);
+    sub_1B00CCC(&StringLiteral_7586/*"Internal Server Error"*/, v77);
+    sub_1B00CCC(&StringLiteral_14987/*"User-Agent"*/, v78);
+    sub_1B00CCC(&StringLiteral_22599/*"retry"*/, v79);
+    sub_1B00CCC(&StringLiteral_9130/*"NETWORK_ERROR_SERVER_NO_FILE_MESSAGE"*/, v80);
+    sub_1B00CCC(&StringLiteral_9128/*"NETWORK_ERROR_SERVER_CANCEL_MESSAGE"*/, v81);
+    sub_1B00CCC(&StringLiteral_16798/*"background cancel"*/, v82);
+    sub_1B00CCC(&StringLiteral_1504/*"500"*/, v83);
+    sub_1B00CCC(&StringLiteral_9119/*"NETWORK_ERROR_CSID_CODE"*/, v84);
+    sub_1B00CCC(&StringLiteral_22582/*"response execute error "*/, v85);
+    sub_1B00CCC(&StringLiteral_17487/*"canceled_purchase_error"*/, v86);
+    sub_1B00CCC(&StringLiteral_1506/*"502"*/, v87);
+    sub_1B00CCC(&StringLiteral_1508/*"503"*/, v88);
+    sub_1B00CCC(&StringLiteral_4705/*"Cookie"*/, v89);
+    sub_1B00CCC(&StringLiteral_9134/*"NETWORK_USER_DELETE_DECIDE"*/, v90);
+    sub_1B00CCC(&StringLiteral_20460/*"invalid_user"*/, v91);
+    sub_1B00CCC(&StringLiteral_9116/*"NETWORK_ERROR_BOOT_RETRY_CANCEL"*/, v92);
+    sub_1B00CCC(&StringLiteral_16580/*"app_version_up"*/, v93);
+    sub_1B00CCC(&StringLiteral_1869/*"?"*/, v94);
+    sub_1B00CCC(&StringLiteral_9129/*"NETWORK_ERROR_SERVER_CONNECT_MESSAGE"*/, v95);
+    sub_1B00CCC(&StringLiteral_21813/*"none data"*/, v96);
+    sub_1B00CCC(&StringLiteral_9118/*"NETWORK_ERROR_BOOT_RETRY_MESSAGE"*/, v97);
+    sub_1B00CCC(&StringLiteral_22177/*"path="*/, v98);
+    sub_1B00CCC(&StringLiteral_16736/*"authCode"*/, v99);
+    sub_1B00CCC(&StringLiteral_532/*"&"*/, v100);
+    sub_1B00CCC(&StringLiteral_22520/*"refresh_terminal"*/, v101);
+    sub_1B00CCC(&StringLiteral_19561/*"goto_title"*/, v102);
+    sub_1B00CCC(&StringLiteral_3715/*"COMMON_CONFIRM_CLOSE"*/, v103);
+    sub_1B00CCC(&StringLiteral_1575/*";"*/, v104);
+    sub_1B00CCC(&StringLiteral_17960/*"connect time over"*/, v105);
+    sub_1B00CCC(&StringLiteral_22496/*"reconnection"*/, v106);
+    sub_1B00CCC(&StringLiteral_12069/*"STATUS"*/, v107);
+    sub_1B00CCC(&StringLiteral_16364/*"_userId="*/, v108);
+    sub_1B00CCC(&StringLiteral_18405/*"do_signup"*/, v109);
+    sub_1B00CCC(&StringLiteral_9133/*"NETWORK_USER_DELETE_CANCEL"*/, v110);
+    sub_1B00CCC(&StringLiteral_17454/*"cache"*/, v111);
+    sub_1B00CCC(&StringLiteral_811/*")"*/, v112);
+    sub_1B00CCC(&StringLiteral_3719/*"COMMON_CONFIRM_RETRY"*/, v113);
+    sub_1B00CCC(&StringLiteral_23199/*"stay_no_dialog"*/, v114);
+    sub_1B00CCC(&StringLiteral_9131/*"NETWORK_ERROR_SERVER_PARAMETER_MESSAGE"*/, v115);
+    sub_1B00CCC(&StringLiteral_1496/*"404"*/, v116);
+    sub_1B00CCC(&StringLiteral_21814/*"none response data"*/, v117);
+    sub_1B00CCC(&StringLiteral_20975/*"maint"*/, v118);
+    sub_1B00CCC(&StringLiteral_22194/*"pending_purchase_error"*/, v119);
+    sub_1B00CCC(&StringLiteral_138/*" ("*/, v120);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v121);
+    sub_1B00CCC(&StringLiteral_9117/*"NETWORK_ERROR_BOOT_RETRY_DECIDE"*/, v122);
+    sub_1B00CCC(&StringLiteral_11766/*"SET-COOKIE"*/, v123);
+    sub_1B00CCC(&StringLiteral_1475/*"302"*/, v124);
+    sub_1B00CCC(&StringLiteral_9132/*"NETWORK_ERROR_TIME_OVER_MESSAGE"*/, v125);
+    this = (NetworkManager__RequestCR_d__213_o *)sub_1B00CCC(&StringLiteral_1460/*"200"*/, v126);
+    byte_48E207A = 1;
   }
   authParams = 0LL;
   dateData = 0LL;
-  v585 = 0LL;
-  memset(&v586, 0, sizeof(v586));
-  v584 = 0;
+  memset(&v477, 0, sizeof(v477));
+  value = 0LL;
   _4__this = v2->fields.__4__this;
   switch ( v2->fields.__1__state )
   {
     case 0:
-      p_work = (NetworkManager__RequestCR_d__213_o **)&v2->fields.work;
       work = v2->fields.work;
       v2->fields.__1__state = -1;
       if ( !work )
         return 0;
+      if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
       if ( UnityEngine_Application__get_internetReachability(0LL) )
-      {
-        p_errorCode_5__3 = (BattleServantConfConponent_o *)&v2->fields._errorCode_5__3;
-        p_errorLocalizeCode_5__4 = (BattleServantConfConponent_o *)&v2->fields._errorLocalizeCode_5__4;
-        p_errorAction_5__5 = &v2->fields._errorAction_5__5;
-        p_failData_5__6 = (BattleServantConfConponent_o *)&v2->fields._failData_5__6;
-        p_responseList_5__7 = (BattleServantConfConponent_o *)&v2->fields._responseList_5__7;
         goto LABEL_471;
-      }
-      v234 = (System_String_o *)StringLiteral_1/*""*/;
-      if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !LocalizationManager_TypeInfo->_2.cctor_finished )
-      {
+      v131 = (System_String_o *)StringLiteral_1/*""*/;
+      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      }
-      v235 = LocalizationManager__Get((System_String_o *)StringLiteral_9448/*"NETWORK_ERROR_BOOT_RETRY_MESSAGE"*/, 0LL);
-      v236 = LocalizationManager__Get((System_String_o *)StringLiteral_9447/*"NETWORK_ERROR_BOOT_RETRY_DECIDE"*/, 0LL);
-      this = (NetworkManager__RequestCR_d__213_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9446/*"NETWORK_ERROR_BOOT_RETRY_CANCEL"*/, 0LL);
-      if ( !*p_work )
-        goto LABEL_543;
-      v237 = (System_String_o *)this;
-      if ( (((__int64 (__fastcall *)(NetworkManager__RequestCR_d__213_o *, void *))(*p_work)->klass->vtable._8_System_Collections_IEnumerator_Reset.method)(
-              *p_work,
-              (*p_work)->klass[1]._1.image) & 1) != 0 )
+      v132 = LocalizationManager__Get((System_String_o *)StringLiteral_9118/*"NETWORK_ERROR_BOOT_RETRY_MESSAGE"*/, 0LL);
+      v133 = LocalizationManager__Get((System_String_o *)StringLiteral_9117/*"NETWORK_ERROR_BOOT_RETRY_DECIDE"*/, 0LL);
+      this = (NetworkManager__RequestCR_d__213_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9116/*"NETWORK_ERROR_BOOT_RETRY_CANCEL"*/, 0LL);
+      v134 = v2->fields.work;
+      if ( !v134 )
+        goto LABEL_530;
+      v135 = this;
+      if ( (((__int64 (__fastcall *)(struct RequestBase_o *, Il2CppMethodPointer))v134->klass->vtable._8_isBackgroundRequest.method)(
+              v134,
+              v134->klass->vtable._9_isShowConnect.methodPtr) & 1) != 0 )
       {
-        v238 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-        System_Action___ctor(v238, (Il2CppObject *)_4__this, Method_NetworkManager__RequestCR_b__213_0__, 0LL);
-        if ( !_4__this )
-          goto LABEL_543;
-        NetworkManager__WarningDialog(_4__this, v234, v235, 0LL, 1, v238, 0LL);
+        v136 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+        System_Action___ctor(v136, (Il2CppObject *)_4__this, Method_NetworkManager__RequestCR_b__213_0__, 0LL);
+        if ( _4__this )
+        {
+          NetworkManager__WarningDialog(_4__this, v131, v132, 0LL, 1, v136, 0LL);
+          return 0;
+        }
       }
       else
       {
-        Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-        v284 = (ErrorDialog_ClickDelegate_o *)sub_B77694(ErrorDialog_ClickDelegate_TypeInfo);
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        v319 = (ErrorDialog_ClickDelegate_o *)sub_1B00F18(ErrorDialog_ClickDelegate_TypeInfo);
         ErrorDialog_ClickDelegate___ctor(
-          v284,
+          v319,
           (Il2CppObject *)_4__this,
           Method_NetworkManager_OnClickErrorRetryDialog__,
           0LL);
-        if ( !Instance )
-          goto LABEL_543;
-        CommonUI__OpenRetryDialog_18054808(Instance, v234, v235, v236, v237, v284, 0, 0LL);
+        if ( Instance )
+        {
+          CommonUI__OpenRetryDialog_29936188(
+            (CommonUI_o *)Instance,
+            v131,
+            v132,
+            v133,
+            (System_String_o *)v135,
+            v319,
+            0,
+            0LL);
+          return 0;
+        }
       }
-      return 0;
+      goto LABEL_530;
     case 1:
       delay = v2->fields.delay;
       v2->fields.__1__state = -1;
       if ( delay <= 0.0 )
-        goto LABEL_25;
-      v42 = (UnityEngine_WaitForSeconds_o *)sub_B77694(UnityEngine_WaitForSeconds_TypeInfo);
-      UnityEngine_WaitForSeconds___ctor(v42, delay, 0LL);
-      v2->fields.__2__current = (Il2CppObject *)v42;
-      p__2__current = (BattleServantConfConponent_o *)&v2->fields.__2__current;
-      sub_B77560(p__2__current, (System_Int32_array **)v42, v44, v45, v46, v47, v48, v49);
-      *(_DWORD *)&p__2__current[-1].fields.isOpenAfter = 2;
-      return 1;
+        goto LABEL_32;
+      v151 = (UnityEngine_WaitForSeconds_o *)sub_1B00F18(UnityEngine_WaitForSeconds_TypeInfo);
+      UnityEngine_WaitForSeconds___ctor(v151, delay, 0LL);
+      v2->fields.__2__current = (Il2CppObject *)v151;
+      p__2__current = (ServantStatusBattleListViewItem_o *)&v2->fields.__2__current;
+      sub_1B00C70(p__2__current, (int32_t)v151, v153, v154);
+      v155 = 2;
+      goto LABEL_317;
     case 2:
       v2->fields.__1__state = -1;
-LABEL_25:
-      if ( (BYTE3(System_DateTime_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !System_DateTime_TypeInfo->_2.cctor_finished )
-      {
+LABEL_32:
+      if ( !System_DateTime_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
-      }
-      dateData = System_DateTime__get_Now(0LL).fields.dateData;
-      v589.fields.dateData = (uint64_t)&dateData;
-      v50 = System_DateTime__ToUniversalTime(v589, 0LL).fields.dateData;
-      if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !NetworkManager_TypeInfo->_2.cctor_finished )
-      {
+      dateData = System_DateTime__get_Now(0LL).fields._dateData;
+      v480.fields._dateData = (uint64_t)&dateData;
+      v156 = System_DateTime__ToUniversalTime(v480, 0LL).fields._dateData;
+      if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      }
-      v590.fields.dateData = v50;
-      v2->fields._startTime_5__8 = NetworkManager__getTime_26206600(v590, 0LL);
-      v51 = v2->fields.work;
-      if ( v51 )
+      v481.fields._dateData = v156;
+      v2->fields._startTime_5__8 = NetworkManager__getTime_37261288(v481, 0LL);
+      v157 = v2->fields.work;
+      if ( v157 )
       {
-        v52 = *(&TopGameDataRequest_TypeInfo->_2.bitflags2 + 1);
-        if ( *(&v51->klass->_2.bitflags2 + 1) >= (unsigned int)v52
-          && (TopGameDataRequest_c *)v51->klass->_2.typeHierarchy[v52 - 1] == TopGameDataRequest_TypeInfo )
+        methodPtr_low = LOBYTE(TopGameDataRequest_TypeInfo->vtable._0_Equals.methodPtr);
+        if ( LOBYTE(v157->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low
+          && (TopGameDataRequest_c *)v157->klass->_2.typeHierarchy[methodPtr_low - 1] == TopGameDataRequest_TypeInfo )
         {
-          LOBYTE(v51) = v51[1].klass;
+          LOBYTE(v157) = v157[1].klass;
         }
         else
         {
-          LOBYTE(v51) = 0;
+          LOBYTE(v157) = 0;
         }
       }
-      v2->fields._isNoRedirect_5__9 = (char)v51;
-      v53 = ManagerConfig_TypeInfo;
-      if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !ManagerConfig_TypeInfo->_2.cctor_finished )
+      v2->fields._isNoRedirect_5__9 = (char)v157;
+      v159 = ManagerConfig_TypeInfo;
+      if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-        v53 = ManagerConfig_TypeInfo;
+        v159 = ManagerConfig_TypeInfo;
       }
-      static_fields = v53->static_fields;
-      if ( static_fields->UseMock )
+      static_fields = v159->static_fields;
+      if ( !static_fields->UseMock )
       {
-        if ( (BYTE3(v53->vtable._0_Equals.methodPtr) & 4) != 0 && !v53->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(v53);
-          static_fields = ManagerConfig_TypeInfo->static_fields;
-        }
-        if ( static_fields->IsNetworkMock )
-        {
-          this = (NetworkManager__RequestCR_d__213_o *)v2->fields.work;
-          if ( !this )
-            goto LABEL_543;
-          v55 = ((__int64 (__fastcall *)(NetworkManager__RequestCR_d__213_o *, Il2CppMethodPointer))this->klass->vtable._6_MoveNext.method)(
-                  this,
-                  this->klass->vtable._7_System_Collections_IEnumerator_get_Current.methodPtr);
-          if ( v55 )
-          {
-            v56 = (System_String_o *)v55;
-            v57 = (DelightWorks_Network_UnityWebRequestWWW_o *)sub_B77694(DelightWorks_Network_UnityWebRequestWWW_TypeInfo);
-            DelightWorks_Network_UnityWebRequestWWW___ctor(v57, v56, 0LL);
-            v2->fields._www_5__10 = v57;
-            p_www_5__10 = (BattleServantConfConponent_o *)&v2->fields._www_5__10;
-            sub_B77560(p_www_5__10, (System_Int32_array **)v57, v59, v60, v61, v62, v63, v64);
-            klass = (System_Int32_array **)p_www_5__10->klass;
-            *(_QWORD *)&p_www_5__10[-1].fields.ClassSkillOffset = p_www_5__10->klass;
-            sub_B77560((BattleServantConfConponent_o *)((char *)p_www_5__10 - 96), klass, v66, v67, v68, v69, v70, v71);
-            LODWORD(p_www_5__10[-1].fields.ClassSkillList) = 3;
-            return 1;
-          }
-        }
-LABEL_46:
-        p_data_5__2 = &v2->fields._data_5__2;
-        if ( !v2->fields._data_5__2 )
-        {
-          this = (NetworkManager__RequestCR_d__213_o *)v2->fields.work;
-          if ( !this )
-            goto LABEL_543;
-          v73 = (System_Int32_array **)((__int64 (__fastcall *)(NetworkManager__RequestCR_d__213_o *, Il2CppMethodPointer))this->klass->vtable._5_System_IDisposable_Dispose.method)(
-                                         this,
-                                         this->klass->vtable._6_MoveNext.methodPtr);
-          *p_data_5__2 = (System_String_o *)v73;
-          sub_B77560((BattleServantConfConponent_o *)&v2->fields._data_5__2, v73, v74, v75, v76, v77, v78, v79);
-          if ( System_String__op_Equality(*p_data_5__2, (System_String_o *)StringLiteral_1/*""*/, 0LL) )
-          {
-            this = (NetworkManager__RequestCR_d__213_o *)v2->fields.work;
-            if ( !this )
-              goto LABEL_543;
-            this = (NetworkManager__RequestCR_d__213_o *)((__int64 (__fastcall *)(NetworkManager__RequestCR_d__213_o *, void *))this->klass->vtable._8_System_Collections_IEnumerator_Reset.method)(
-                                                           this,
-                                                           this->klass[1]._1.image);
-            if ( ((unsigned __int8)this & 1) == 0 )
-            {
-              this = (NetworkManager__RequestCR_d__213_o *)v2->fields.work;
-              if ( !this )
-                goto LABEL_543;
-              this = (NetworkManager__RequestCR_d__213_o *)((__int64 (__fastcall *)(NetworkManager__RequestCR_d__213_o *, const char *))this->klass[1]._1.gc_desc)(
-                                                             this,
-                                                             this->klass[1]._1.name);
-              if ( ((unsigned __int8)this & 1) != 0 )
-              {
-                this = (NetworkManager__RequestCR_d__213_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-                if ( !this )
-                  goto LABEL_543;
-                CommonUI__SetConnect((CommonUI_o *)this, 0, 0LL);
-              }
-            }
-            if ( !_4__this )
-              goto LABEL_543;
-            NetworkManager__OnEndCommunication(_4__this, v2->fields.work, 0LL, 0LL);
-            return 0;
-          }
-        }
-        goto LABEL_134;
-      }
-      if ( v2->fields._data_5__2 )
-        goto LABEL_134;
-      this = (NetworkManager__RequestCR_d__213_o *)v2->fields.work;
-      if ( !this )
-        goto LABEL_543;
-      WWWForm = RequestBase__getWWWForm((RequestBase_o *)this, &authParams, 0LL);
-      v81 = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)sub_B77694(System_Collections_Generic_Dictionary_string__string__TypeInfo);
-      System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject____ctor(
-        v81,
-        (const MethodInfo_2F7CA48 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
-      if ( !WWWForm )
-        goto LABEL_543;
-      this = (NetworkManager__RequestCR_d__213_o *)UnityEngine_WWWForm__get_headers(WWWForm, 0LL);
-      if ( !this )
-        goto LABEL_543;
-      System_Collections_Generic_Dictionary_XmlQualifiedName__SchemaElementDecl___GetEnumerator(
-        (System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o *)&v582,
-        (System_Collections_Generic_Dictionary_XmlQualifiedName__SchemaElementDecl__o *)this,
-        (const MethodInfo_2F7DBD4 *)Method_System_Collections_Generic_Dictionary_string__string__GetEnumerator__);
-      v586 = v582;
-      while ( System_Collections_Generic_Dictionary_Enumerator_XmlQualifiedName__SchemaElementDecl___MoveNext(
-                &v586,
-                (const MethodInfo_27E37AC *)Method_System_Collections_Generic_Dictionary_Enumerator_string__string__MoveNext__) )
-      {
-        key = v586.fields.current.fields.key;
-        v82 = v586.fields.current.fields.value;
-        if ( (BYTE3(System_Convert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !System_Convert_TypeInfo->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-        }
-        v84 = System_Convert__ToString_42790440((System_String_o *)key, 0LL);
-        v85 = System_Convert__ToString_42790440((System_String_o *)v82, 0LL);
-        if ( !v81 )
-          sub_B7769C(v85, v86);
-        System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
-          v81,
-          (System_Xml_XmlQualifiedName_o *)v84,
-          (System_Xml_Schema_XmlSchemaObject_o *)v85,
-          (const MethodInfo_2F7D5F8 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-      }
-      v583[0] = 731;
-      v584 = 1;
-      System_Collections_Generic_Dictionary_Enumerator_XmlQualifiedName__SchemaElementDecl___Dispose(
-        &v586,
-        (const MethodInfo_27E3914 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__string__Dispose__);
-      v584 = 0;
-      this = (NetworkManager__RequestCR_d__213_o *)NetworkManager_TypeInfo;
-      if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !NetworkManager_TypeInfo->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        this = (NetworkManager__RequestCR_d__213_o *)NetworkManager_TypeInfo;
-      }
-      if ( this[1].fields.work[1].fields.paramInteger )
-      {
-        if ( (BYTE3(this[2].klass) & 4) != 0 && !LODWORD(this[1].fields._errorLocalizeCode_5__4) )
-          j_il2cpp_runtime_class_init_0(this);
-        if ( !v81 )
-          goto LABEL_543;
-        System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
-          v81,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_15352/*"User-Agent"*/,
-          (System_Xml_Schema_XmlSchemaObject_o *)NetworkManager_TypeInfo->static_fields->userAgent,
-          (const MethodInfo_2F7D5F8 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-        this = (NetworkManager__RequestCR_d__213_o *)NetworkManager_TypeInfo;
-      }
-      if ( (BYTE3(this[2].klass) & 4) != 0 && !LODWORD(this[1].fields._errorLocalizeCode_5__4) )
-      {
-        j_il2cpp_runtime_class_init_0(this);
-        this = (NetworkManager__RequestCR_d__213_o *)NetworkManager_TypeInfo;
-      }
-      if ( this[1].fields.work[3].monitor )
-      {
-        if ( (BYTE3(this[2].klass) & 4) != 0 && !LODWORD(this[1].fields._errorLocalizeCode_5__4) )
-          j_il2cpp_runtime_class_init_0(this);
-        if ( !v81 )
-          goto LABEL_543;
-        System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
-          v81,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_4431/*"Cookie"*/,
-          (System_Xml_Schema_XmlSchemaObject_o *)NetworkManager_TypeInfo->static_fields->sessionId,
-          (const MethodInfo_2F7D5F8 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-        this = (NetworkManager__RequestCR_d__213_o *)NetworkManager_TypeInfo;
-      }
-      v239 = authParams;
-      if ( (BYTE3(this[2].klass) & 4) != 0 && !LODWORD(this[1].fields._errorLocalizeCode_5__4) )
-        j_il2cpp_runtime_class_init_0(this);
-      AuthCode = NetworkManager__GetAuthCode(v239, 0LL);
-      if ( AuthCode )
-        UnityEngine_WWWForm__AddField(WWWForm, (System_String_o *)StringLiteral_16849/*"authCode"*/, AuthCode, 0LL);
-      this = (NetworkManager__RequestCR_d__213_o *)v2->fields.work;
-      if ( !this )
-        goto LABEL_543;
-      this = (NetworkManager__RequestCR_d__213_o *)((__int64 (__fastcall *)(NetworkManager__RequestCR_d__213_o *, Il2CppMethodPointer))this->klass->vtable._4_System_Collections_Generic_IEnumerator_System_Object__get_Current.method)(
-                                                     this,
-                                                     this->klass->vtable._5_System_IDisposable_Dispose.methodPtr);
-      v241 = NetworkManager_TypeInfo;
-      v242 = (System_String_o *)this;
-      if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !NetworkManager_TypeInfo->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        v241 = NetworkManager_TypeInfo;
-      }
-      if ( v241->static_fields->userId )
-      {
-        if ( !v242 )
-          goto LABEL_543;
-        v243 = System_String__IndexOf_44974284(v242, (System_String_o *)StringLiteral_1554/*"?"*/, 0LL);
-        v244 = NetworkManager_TypeInfo;
-        if ( v243 >= 0 )
-          v245 = &StringLiteral_452/*"&"*/;
-        else
-          v245 = &StringLiteral_1554/*"?"*/;
-        v246 = (System_String_o *)*v245;
-        if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !NetworkManager_TypeInfo->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-          v244 = NetworkManager_TypeInfo;
-        }
-        v242 = System_String__Concat_44905348(
-                 v242,
-                 v246,
-                 (System_String_o *)StringLiteral_16509/*"_userId="*/,
-                 v244->static_fields->userId,
-                 0LL);
-      }
-      UnityEngine_WWWForm__get_data(WWWForm, 0LL);
-      isNoRedirect_5__9 = v2->fields._isNoRedirect_5__9;
-      v248 = (DelightWorks_Network_UnityWebRequestWWW_o *)sub_B77694(DelightWorks_Network_UnityWebRequestWWW_TypeInfo);
-      DelightWorks_Network_UnityWebRequestWWW___ctor_28234504(
-        v248,
-        v242,
-        WWWForm,
-        (System_Collections_Generic_Dictionary_string__string__o *)v81,
-        isNoRedirect_5__9,
-        0LL);
-      v17 = (NetworkManager__RequestCR_d__213_o **)&v2->fields._www_5__10;
-      v2->fields._www_5__10 = v248;
-      sub_B77560(
-        (BattleServantConfConponent_o *)&v2->fields._www_5__10,
-        (System_Int32_array **)v248,
-        v249,
-        v250,
-        v251,
-        v252,
-        v253,
-        v254);
-      v255 = v2->fields.work;
-      if ( !v255 )
-        goto LABEL_220;
-      v256 = *(&TopGameDataRequest_TypeInfo->_2.bitflags2 + 1);
-      if ( *(&v255->klass->_2.bitflags2 + 1) >= (unsigned int)v256
-        && (TopGameDataRequest_c *)v255->klass->_2.typeHierarchy[v256 - 1] == TopGameDataRequest_TypeInfo )
-      {
-        v336 = ManagerConfig_TypeInfo;
-        if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !ManagerConfig_TypeInfo->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-          v336 = ManagerConfig_TypeInfo;
-        }
-        p_GAME_DATA_TIMEOUT = &v336->static_fields->GAME_DATA_TIMEOUT;
-      }
-      else
-      {
-LABEL_220:
-        v257 = ManagerConfig_TypeInfo;
-        if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !ManagerConfig_TypeInfo->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-          v257 = ManagerConfig_TypeInfo;
-        }
-        p_GAME_DATA_TIMEOUT = &v257->static_fields->TIMEOUT;
-      }
-      v2->fields._timeout_5__11 = *p_GAME_DATA_TIMEOUT;
-      unscaledTime = UnityEngine_Time__get_unscaledTime(0LL);
-      timeout_5__11 = v2->fields._timeout_5__11;
-      v2->fields._loadProgress_5__13 = 0.0;
-      v2->fields._requestTime_5__12 = unscaledTime + timeout_5__11;
-      v261 = (UnityEngine_WaitForEndOfFrame_o *)sub_B77694(UnityEngine_WaitForEndOfFrame_TypeInfo);
-      UnityEngine_WaitForEndOfFrame___ctor(v261, 0LL);
-      v2->fields._wait_5__14 = v261;
-      sub_B77560(
-        (BattleServantConfConponent_o *)&v2->fields._wait_5__14,
-        (System_Int32_array **)v261,
-        v262,
-        v263,
-        v264,
-        v265,
-        v266,
-        v267);
-LABEL_8:
-      if ( !*v17 )
-        goto LABEL_543;
-      if ( *((_BYTE *)&(*v17)->fields.__1__state + 4) )
-        goto LABEL_10;
-      this = (NetworkManager__RequestCR_d__213_o *)v2->fields.work;
-      if ( !this )
-        goto LABEL_543;
-      this = (NetworkManager__RequestCR_d__213_o *)((__int64 (__fastcall *)(NetworkManager__RequestCR_d__213_o *, void *))this->klass->vtable._8_System_Collections_IEnumerator_Reset.method)(
-                                                     this,
-                                                     this->klass[1]._1.image);
-      if ( ((unsigned __int8)this & 1) != 0 )
-      {
-        if ( !_4__this )
-          goto LABEL_543;
-        communicationWaitList = _4__this->fields.communicationWaitList;
-        if ( !communicationWaitList )
-          goto LABEL_543;
-        if ( communicationWaitList->fields._size > 0 )
-          goto LABEL_10;
-      }
-      if ( !*v17 )
-        goto LABEL_543;
-      v88 = *(float *)&(*v17)->fields.__1__state;
-      loadProgress_5__13 = v2->fields._loadProgress_5__13;
-      v96 = UnityEngine_Time__get_unscaledTime(0LL);
-      if ( v88 != loadProgress_5__13 )
-      {
-        www_5__10 = v2->fields._www_5__10;
-        v2->fields._requestTime_5__12 = v96 + v2->fields._timeout_5__11;
-        if ( !www_5__10 )
-          goto LABEL_543;
-        v2->fields._loadProgress_5__13 = www_5__10->fields._progress_k__BackingField;
-        goto LABEL_232;
-      }
-      if ( v96 < v2->fields._requestTime_5__12 )
-      {
-LABEL_232:
-        wait_5__14 = (System_Int32_array **)v2->fields._wait_5__14;
-        v2->fields.__2__current = (Il2CppObject *)wait_5__14;
-        sub_B77560((BattleServantConfConponent_o *)&v2->fields.__2__current, wait_5__14, v90, v91, v92, v93, v94, v95);
-        v2->fields.__1__state = 4;
-        return 1;
-      }
-LABEL_10:
-      v18 = *v17;
-      if ( !*v17 )
-        goto LABEL_543;
-      if ( !*((_BYTE *)&v18->fields.__1__state + 4) )
-      {
+        if ( v2->fields._data_5__2 )
+          goto LABEL_132;
         this = (NetworkManager__RequestCR_d__213_o *)v2->fields.work;
         if ( !this )
-          goto LABEL_543;
-        this = (NetworkManager__RequestCR_d__213_o *)((__int64 (__fastcall *)(NetworkManager__RequestCR_d__213_o *, void *))this->klass->vtable._8_System_Collections_IEnumerator_Reset.method)(
-                                                       this,
-                                                       this->klass[1]._1.image);
-        if ( ((unsigned __int8)this & 1) == 0 )
-          goto LABEL_116;
-        if ( !_4__this )
-          goto LABEL_543;
-        v103 = _4__this->fields.communicationWaitList;
-        if ( !v103 )
-          goto LABEL_543;
-        if ( v103->fields._size >= 1 )
+          goto LABEL_530;
+        WWWForm = RequestBase__getWWWForm((RequestBase_o *)this, &authParams, 0LL);
+        v174 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1B00F18(System_Collections_Generic_Dictionary_string__string__TypeInfo);
+        System_Collections_Generic_Dictionary_object__object____ctor(
+          v174,
+          (const MethodInfo_308D098 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+        if ( !WWWForm )
+          goto LABEL_530;
+        this = (NetworkManager__RequestCR_d__213_o *)UnityEngine_WWWForm__get_headers(WWWForm, 0LL);
+        if ( !this )
+          goto LABEL_530;
+        System_Collections_Generic_Dictionary_object__object___GetEnumerator(
+          &v475,
+          (System_Collections_Generic_Dictionary_object__object__o *)this,
+          (const MethodInfo_308DE78 *)Method_System_Collections_Generic_Dictionary_string__string__GetEnumerator__);
+        v477 = v475;
+        while ( System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
+                  &v477,
+                  (const MethodInfo_318E0BC *)Method_System_Collections_Generic_Dictionary_Enumerator_string__string__MoveNext__) )
         {
-          v104 = (System_Int32_array **)StringLiteral_16907/*"background cancel"*/;
-          v2->fields._errorCode_5__3 = (struct System_String_o *)StringLiteral_16907/*"background cancel"*/;
-          v105 = &v2->fields._errorCode_5__3;
-          sub_B77560((BattleServantConfConponent_o *)&v2->fields._errorCode_5__3, v104, v97, v98, v99, v100, v101, v102);
-          v112 = &StringLiteral_22789/*"stay"*/;
+          key = v477.fields._current.fields.key;
+          v175 = v477.fields._current.fields.value;
+          if ( !System_Convert_TypeInfo->_2.cctor_finished )
+            j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
+          v177 = (Il2CppObject *)System_Convert__ToString_60991320((System_String_o *)key, 0LL);
+          v178 = (Il2CppObject *)System_Convert__ToString_60991320((System_String_o *)v175, 0LL);
+          if ( !v174 )
+            sub_1B00F28(v178, v179);
+          System_Collections_Generic_Dictionary_object__object___Add(
+            v174,
+            v177,
+            v178,
+            (const MethodInfo_308DA48 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+        }
+        System_Collections_Generic_Dictionary_Enumerator_object__object___Dispose(
+          &v477,
+          (const MethodInfo_318E1DC *)Method_System_Collections_Generic_Dictionary_Enumerator_string__string__Dispose__);
+        this = (NetworkManager__RequestCR_d__213_o *)NetworkManager_TypeInfo;
+        if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+        {
+          j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+          this = (NetworkManager__RequestCR_d__213_o *)NetworkManager_TypeInfo;
+        }
+        if ( this[1].fields.work[1].fields.paramInteger )
+        {
+          if ( !LODWORD(this[1].fields._errorLocalizeCode_5__4) )
+            j_il2cpp_runtime_class_init_0(this);
+          if ( !v174 )
+            goto LABEL_530;
+          System_Collections_Generic_Dictionary_object__object___Add(
+            v174,
+            (Il2CppObject *)StringLiteral_14987/*"User-Agent"*/,
+            (Il2CppObject *)NetworkManager_TypeInfo->static_fields->userAgent,
+            (const MethodInfo_308DA48 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+          this = (NetworkManager__RequestCR_d__213_o *)NetworkManager_TypeInfo;
+        }
+        if ( !LODWORD(this[1].fields._errorLocalizeCode_5__4) )
+        {
+          j_il2cpp_runtime_class_init_0(this);
+          this = (NetworkManager__RequestCR_d__213_o *)NetworkManager_TypeInfo;
+        }
+        if ( this[1].fields.work[3].monitor )
+        {
+          if ( !LODWORD(this[1].fields._errorLocalizeCode_5__4) )
+            j_il2cpp_runtime_class_init_0(this);
+          if ( !v174 )
+            goto LABEL_530;
+          System_Collections_Generic_Dictionary_object__object___Add(
+            v174,
+            (Il2CppObject *)StringLiteral_4705/*"Cookie"*/,
+            (Il2CppObject *)NetworkManager_TypeInfo->static_fields->sessionId,
+            (const MethodInfo_308DA48 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+          this = (NetworkManager__RequestCR_d__213_o *)NetworkManager_TypeInfo;
+        }
+        v263 = authParams;
+        if ( !LODWORD(this[1].fields._errorLocalizeCode_5__4) )
+          j_il2cpp_runtime_class_init_0(this);
+        AuthCode = NetworkManager__GetAuthCode(v263, 0LL);
+        if ( AuthCode )
+          UnityEngine_WWWForm__AddField(WWWForm, (System_String_o *)StringLiteral_16736/*"authCode"*/, AuthCode, 0LL);
+        this = (NetworkManager__RequestCR_d__213_o *)v2->fields.work;
+        if ( !this )
+          goto LABEL_530;
+        this = (NetworkManager__RequestCR_d__213_o *)((__int64 (__fastcall *)(NetworkManager__RequestCR_d__213_o *, Il2CppMethodPointer))this->klass->vtable._4_System_Collections_Generic_IEnumerator_System_Object__get_Current.method)(
+                                                       this,
+                                                       this->klass->vtable._5_System_IDisposable_Dispose.methodPtr);
+        v265 = NetworkManager_TypeInfo;
+        v266 = (System_String_o *)this;
+        if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+        {
+          j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+          v265 = NetworkManager_TypeInfo;
+        }
+        if ( v265->static_fields->userId )
+        {
+          if ( !v266 )
+            goto LABEL_530;
+          v267 = System_String__IndexOf_60357184(v266, (System_String_o *)StringLiteral_1869/*"?"*/, 0LL);
+          v268 = NetworkManager_TypeInfo;
+          if ( v267 >= 0 )
+            v269 = &StringLiteral_532/*"&"*/;
+          else
+            v269 = &StringLiteral_1869/*"?"*/;
+          v270 = (System_String_o *)*v269;
+          if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+          {
+            j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+            v268 = NetworkManager_TypeInfo;
+          }
+          v266 = System_String__Concat_60339012(
+                   v266,
+                   v270,
+                   (System_String_o *)StringLiteral_16364/*"_userId="*/,
+                   v268->static_fields->userId,
+                   0LL);
+        }
+        UnityEngine_WWWForm__get_data(WWWForm, 0LL);
+        isNoRedirect_5__9 = v2->fields._isNoRedirect_5__9;
+        v272 = (DelightWorks_Network_UnityWebRequestWWW_o *)sub_1B00F18(DelightWorks_Network_UnityWebRequestWWW_TypeInfo);
+        DelightWorks_Network_UnityWebRequestWWW___ctor_35848332(
+          v272,
+          v266,
+          WWWForm,
+          (System_Collections_Generic_Dictionary_string__string__o *)v174,
+          isNoRedirect_5__9,
+          0LL);
+        v2->fields._www_5__10 = v272;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._www_5__10, (int32_t)v272, v273, v274);
+        v275 = v2->fields.work;
+        if ( v275
+          && (v276 = LOBYTE(TopGameDataRequest_TypeInfo->vtable._0_Equals.methodPtr),
+              LOBYTE(v275->klass->vtable._0_Equals.methodPtr) >= (unsigned int)v276) )
+        {
+          if ( (TopGameDataRequest_c *)v275->klass->_2.typeHierarchy[v276 - 1] == TopGameDataRequest_TypeInfo )
+            v277 = v2->fields.work;
+          else
+            v277 = 0LL;
         }
         else
         {
-LABEL_116:
-          v127 = (System_Int32_array **)StringLiteral_18005/*"connect time over"*/;
-          v2->fields._errorCode_5__3 = (struct System_String_o *)StringLiteral_18005/*"connect time over"*/;
-          v105 = &v2->fields._errorCode_5__3;
-          sub_B77560((BattleServantConfConponent_o *)&v2->fields._errorCode_5__3, v127, v97, v98, v99, v100, v101, v102);
-          v112 = &StringLiteral_22273/*"retry"*/;
+          v277 = 0LL;
         }
-        v128 = (System_Int32_array **)*v112;
-        v129 = (BattleServantConfConponent_o *)(v105 + 2);
-        v105[2] = (struct System_String_o *)*v112;
-        goto LABEL_118;
-      }
-      this = (NetworkManager__RequestCR_d__213_o *)System_String__IsNullOrEmpty(
-                                                     (System_String_o *)v18->fields.__2__current,
-                                                     0LL);
-      v25 = *v17;
-      if ( ((unsigned __int8)this & 1) == 0 )
-      {
-        if ( !v25 )
-          goto LABEL_543;
-        _2__current = (System_Int32_array **)v25->fields.__2__current;
-        v2->fields._errorCode_5__3 = (struct System_String_o *)_2__current;
-        sub_B77560(
-          (BattleServantConfConponent_o *)&v2->fields._errorCode_5__3,
-          _2__current,
-          v19,
-          v20,
-          v21,
-          v22,
-          v23,
-          v24);
-        if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !NetworkManager_TypeInfo->_2.cctor_finished )
+        v351 = ManagerConfig_TypeInfo;
+        if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
         {
-          j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+          j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
+          v351 = ManagerConfig_TypeInfo;
         }
+        v352 = 44LL;
+        if ( !v277 )
+          v352 = 40LL;
+        v2->fields._timeout_5__11 = *(float *)((char *)&v351->static_fields->AppVer + v352);
+        unscaledTime = UnityEngine_Time__get_unscaledTime(0LL);
+        timeout_5__11 = v2->fields._timeout_5__11;
+        v2->fields._loadProgress_5__13 = 0.0;
+        v2->fields._requestTime_5__12 = unscaledTime + timeout_5__11;
+        v355 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B00F18(UnityEngine_WaitForEndOfFrame_TypeInfo);
+        UnityEngine_WaitForEndOfFrame___ctor(v355, 0LL);
+        v2->fields._wait_5__14 = v355;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._wait_5__14, (int32_t)v355, v356, v357);
+LABEL_15:
+        p_www_5__10 = &v2->fields._www_5__10;
+        www_5__10 = v2->fields._www_5__10;
+        if ( !www_5__10 )
+          goto LABEL_530;
+        if ( !www_5__10->fields._isDone_k__BackingField )
+        {
+          this = (NetworkManager__RequestCR_d__213_o *)v2->fields.work;
+          if ( !this )
+            goto LABEL_530;
+          this = (NetworkManager__RequestCR_d__213_o *)((__int64 (__fastcall *)(NetworkManager__RequestCR_d__213_o *, void *))this->klass->vtable._8_System_Collections_IEnumerator_Reset.method)(
+                                                         this,
+                                                         this->klass[1]._1.image);
+          if ( ((unsigned __int8)this & 1) == 0 )
+            goto LABEL_75;
+          if ( !_4__this )
+            goto LABEL_530;
+          communicationWaitList = _4__this->fields.communicationWaitList;
+          if ( !communicationWaitList )
+            goto LABEL_530;
+          if ( communicationWaitList->fields._size <= 0 )
+          {
+LABEL_75:
+            if ( !*p_www_5__10 )
+              goto LABEL_530;
+            progress_k__BackingField = (*p_www_5__10)->fields._progress_k__BackingField;
+            loadProgress_5__13 = v2->fields._loadProgress_5__13;
+            v185 = UnityEngine_Time__get_unscaledTime(0LL);
+            if ( progress_k__BackingField != loadProgress_5__13 )
+            {
+              v320 = v2->fields._www_5__10;
+              v2->fields._requestTime_5__12 = v185 + v2->fields._timeout_5__11;
+              if ( !v320 )
+                goto LABEL_530;
+              v2->fields._loadProgress_5__13 = v320->fields._progress_k__BackingField;
+LABEL_316:
+              wait_5__14 = (Il2CppObject *)v2->fields._wait_5__14;
+              v2->fields.__2__current = wait_5__14;
+              p__2__current = (ServantStatusBattleListViewItem_o *)&v2->fields.__2__current;
+              sub_1B00C70(p__2__current, (int32_t)wait_5__14, v183, v184);
+              v155 = 4;
+              goto LABEL_317;
+            }
+            if ( v185 < v2->fields._requestTime_5__12 )
+              goto LABEL_316;
+          }
+        }
+        v139 = *p_www_5__10;
+        if ( !*p_www_5__10 )
+          goto LABEL_530;
+        if ( !v139->fields._isDone_k__BackingField )
+        {
+          this = (NetworkManager__RequestCR_d__213_o *)v2->fields.work;
+          if ( !this )
+            goto LABEL_530;
+          this = (NetworkManager__RequestCR_d__213_o *)((__int64 (__fastcall *)(NetworkManager__RequestCR_d__213_o *, void *))this->klass->vtable._8_System_Collections_IEnumerator_Reset.method)(
+                                                         this,
+                                                         this->klass[1]._1.image);
+          if ( ((unsigned __int8)this & 1) == 0 )
+            goto LABEL_115;
+          if ( !_4__this )
+            goto LABEL_530;
+          v188 = _4__this->fields.communicationWaitList;
+          if ( !v188 )
+            goto LABEL_530;
+          if ( v188->fields._size >= 1 )
+          {
+            v189 = StringLiteral_16798/*"background cancel"*/;
+            v2->fields._errorCode_5__3 = (struct System_String_o *)StringLiteral_16798/*"background cancel"*/;
+            sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._errorCode_5__3, v189, v186, v187);
+            v192 = &StringLiteral_23188/*"stay"*/;
+          }
+          else
+          {
+LABEL_115:
+            v203 = StringLiteral_17960/*"connect time over"*/;
+            v2->fields._errorCode_5__3 = (struct System_String_o *)StringLiteral_17960/*"connect time over"*/;
+            sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._errorCode_5__3, v203, v186, v187);
+            v192 = &StringLiteral_22599/*"retry"*/;
+          }
+          v204 = *v192;
+          v2->fields._errorAction_5__5 = (struct System_String_o *)*v192;
+          p_errorAction_5__5 = (ServantStatusBattleListViewItem_o *)&v2->fields._errorAction_5__5;
+          goto LABEL_117;
+        }
+        this = (NetworkManager__RequestCR_d__213_o *)System_String__IsNullOrEmpty(
+                                                       v139->fields._error_k__BackingField,
+                                                       0LL);
+        v142 = *p_www_5__10;
+        if ( ((unsigned __int8)this & 1) != 0 )
+        {
+          if ( !v142 )
+            goto LABEL_530;
+          if ( v2->fields._isNoRedirect_5__9 )
+          {
+            DelightWorks_Network_UnityWebRequestWWW__Dispose(*p_www_5__10, 0LL);
+          }
+          else
+          {
+            text = DelightWorks_Network_UnityWebRequestWWW__get_text(*p_www_5__10, 0LL);
+            v2->fields._data_5__2 = text;
+            sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._data_5__2, (int32_t)text, v323, v324);
+            this = (NetworkManager__RequestCR_d__213_o *)NetworkManager_TypeInfo;
+            if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+            {
+              j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+              this = (NetworkManager__RequestCR_d__213_o *)NetworkManager_TypeInfo;
+            }
+            if ( !this[1].fields.work[3].monitor )
+            {
+              v325 = v2->fields.work;
+              if ( v325 )
+              {
+                v326 = LOBYTE(TopLoginRequest_TypeInfo->vtable._0_Equals.methodPtr);
+                if ( LOBYTE(v325->klass->vtable._0_Equals.methodPtr) >= (unsigned int)v326
+                  && (TopLoginRequest_c *)v325->klass->_2.typeHierarchy[v326 - 1] == TopLoginRequest_TypeInfo )
+                {
+                  if ( !*p_www_5__10 )
+                    goto LABEL_530;
+                  this = (NetworkManager__RequestCR_d__213_o *)(*p_www_5__10)->fields._responseHeaders_k__BackingField;
+                  if ( !this )
+                    goto LABEL_530;
+                  this = (NetworkManager__RequestCR_d__213_o *)System_Collections_Generic_Dictionary_object__object___get_Count(
+                                                                 (System_Collections_Generic_Dictionary_object__object__o *)this,
+                                                                 (const MethodInfo_308D718 *)Method_System_Collections_Generic_Dictionary_string__string__get_Count__);
+                  if ( (int)this >= 1 )
+                  {
+                    if ( !*p_www_5__10 )
+                      goto LABEL_530;
+                    this = (NetworkManager__RequestCR_d__213_o *)(*p_www_5__10)->fields._responseHeaders_k__BackingField;
+                    if ( !this )
+                      goto LABEL_530;
+                    System_Collections_Generic_Dictionary_object__object___GetEnumerator(
+                      &v475,
+                      (System_Collections_Generic_Dictionary_object__object__o *)this,
+                      (const MethodInfo_308DE78 *)Method_System_Collections_Generic_Dictionary_string__string__GetEnumerator__);
+                    v477 = v475;
+                    while ( System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
+                              &v477,
+                              (const MethodInfo_318E0BC *)Method_System_Collections_Generic_Dictionary_Enumerator_string__string__MoveNext__) )
+                      ;
+                    System_Collections_Generic_Dictionary_Enumerator_object__object___Dispose(
+                      &v477,
+                      (const MethodInfo_318E1DC *)Method_System_Collections_Generic_Dictionary_Enumerator_string__string__Dispose__);
+                    if ( !*p_www_5__10 )
+                      goto LABEL_530;
+                    this = (NetworkManager__RequestCR_d__213_o *)(*p_www_5__10)->fields._responseHeaders_k__BackingField;
+                    if ( !this )
+                      goto LABEL_530;
+                    this = (NetworkManager__RequestCR_d__213_o *)System_Collections_Generic_Dictionary_object__object___ContainsKey(
+                                                                   (System_Collections_Generic_Dictionary_object__object__o *)this,
+                                                                   (Il2CppObject *)StringLiteral_11766/*"SET-COOKIE"*/,
+                                                                   (const MethodInfo_308DC3C *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
+                    if ( ((unsigned __int8)this & 1) != 0 )
+                    {
+                      if ( !*p_www_5__10 )
+                        goto LABEL_530;
+                      this = (NetworkManager__RequestCR_d__213_o *)(*p_www_5__10)->fields._responseHeaders_k__BackingField;
+                      if ( !this )
+                        goto LABEL_530;
+                      Item = System_Collections_Generic_Dictionary_object__object___get_Item(
+                               (System_Collections_Generic_Dictionary_object__object__o *)this,
+                               (Il2CppObject *)StringLiteral_11766/*"SET-COOKIE"*/,
+                               (const MethodInfo_308D9C8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+                      this = (NetworkManager__RequestCR_d__213_o *)sub_1B00D74(char___TypeInfo, 2LL);
+                      if ( !this )
+                        goto LABEL_530;
+                      _2__current = (int)this->fields.__2__current;
+                      method = (const MethodInfo *)this;
+                      if ( !_2__current )
+                        goto LABEL_532;
+                      LOWORD(this->fields.work) = 32;
+                      if ( _2__current == 1 )
+                        goto LABEL_532;
+                      WORD1(this->fields.work) = 59;
+                      if ( !Item )
+                        goto LABEL_530;
+                      v329 = System_String__Split_60348132((System_String_o *)Item, (System_Char_array *)this, 1, 0LL);
+                      v332 = NetworkManager_TypeInfo;
+                      v333 = v329;
+                      if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+                      {
+                        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+                        v332 = NetworkManager_TypeInfo;
+                      }
+                      v334 = v332->static_fields;
+                      v335 = (int)StringLiteral_1/*""*/;
+                      v334->sessionId = (struct System_String_o *)StringLiteral_1/*""*/;
+                      sub_1B00C70((ServantStatusBattleListViewItem_o *)&v334->sessionId, v335, v330, v331);
+                      if ( !v333 )
+                        goto LABEL_530;
+                      max_length = v333->max_length;
+                      if ( max_length >= 1 )
+                      {
+                        v337 = 0;
+                        while ( v337 < max_length )
+                        {
+                          v338 = &v333->obj.klass + (int)v337;
+                          v339 = (System_String_o *)v338[4];
+                          if ( !v339 )
+                            goto LABEL_530;
+                          this = (NetworkManager__RequestCR_d__213_o *)System_String__StartsWith(
+                                                                         (System_String_o *)v338[4],
+                                                                         (System_String_o *)StringLiteral_22177/*"path="*/,
+                                                                         0LL);
+                          if ( ((unsigned __int8)this & 1) == 0 )
+                          {
+                            v340 = NetworkManager_TypeInfo;
+                            if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+                            {
+                              j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+                              v340 = NetworkManager_TypeInfo;
+                            }
+                            v341 = System_String__Concat_60337008(
+                                     v340->static_fields->sessionId,
+                                     v339,
+                                     (System_String_o *)StringLiteral_1575/*";"*/,
+                                     0LL);
+                            v342 = NetworkManager_TypeInfo->static_fields;
+                            v342->sessionId = v341;
+                            sub_1B00C70(
+                              (ServantStatusBattleListViewItem_o *)&v342->sessionId,
+                              (int32_t)v341,
+                              v343,
+                              v344);
+                            max_length = v333->max_length;
+                            if ( (int)++v337 < max_length )
+                              continue;
+                          }
+                          goto LABEL_118;
+                        }
+                        goto LABEL_532;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          goto LABEL_118;
+        }
+        if ( !v142 )
+          goto LABEL_530;
+        error_k__BackingField = v142->fields._error_k__BackingField;
+        v2->fields._errorCode_5__3 = error_k__BackingField;
+        sub_1B00C70(
+          (ServantStatusBattleListViewItem_o *)&v2->fields._errorCode_5__3,
+          (int32_t)error_k__BackingField,
+          v140,
+          v141);
+        if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
         if ( NetworkManager__get_UserId(0LL) >= 1 )
         {
-          if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-            && !NetworkManager_TypeInfo->_2.cctor_finished )
-          {
+          if ( !NetworkManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-          }
           if ( NetworkManager__get_UserId(0LL) % 10 == 1 )
           {
-            this = *v17;
-            if ( !*v17 )
-              goto LABEL_543;
+            this = (NetworkManager__RequestCR_d__213_o *)*p_www_5__10;
+            if ( !*p_www_5__10 )
+              goto LABEL_530;
             DelightWorks_Network_UnityWebRequestWWW__ExceptionLog(
               (DelightWorks_Network_UnityWebRequestWWW_o *)this,
               0LL);
           }
         }
-        v120 = (System_Int32_array **)StringLiteral_22273/*"retry"*/;
-        v2->fields._errorAction_5__5 = (struct System_String_o *)StringLiteral_22273/*"retry"*/;
-        sub_B77560(
-          (BattleServantConfConponent_o *)&v2->fields._errorAction_5__5,
-          v120,
-          v114,
-          v115,
-          v116,
-          v117,
-          v118,
-          v119);
-        v121 = v2->fields._www_5__10;
-        if ( !v121 )
-          goto LABEL_543;
-        this = (NetworkManager__RequestCR_d__213_o *)v121->fields._responseHeaders_k__BackingField;
+        v196 = StringLiteral_22599/*"retry"*/;
+        v2->fields._errorAction_5__5 = (struct System_String_o *)StringLiteral_22599/*"retry"*/;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._errorAction_5__5, v196, v194, v195);
+        v197 = v2->fields._www_5__10;
+        if ( !v197 )
+          goto LABEL_530;
+        this = (NetworkManager__RequestCR_d__213_o *)v197->fields._responseHeaders_k__BackingField;
         if ( !this )
-          goto LABEL_543;
-        this = (NetworkManager__RequestCR_d__213_o *)System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___get_Count(
-                                                       (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)this,
-                                                       (const MethodInfo_2F7D1F4 *)Method_System_Collections_Generic_Dictionary_string__string__get_Count__);
+          goto LABEL_530;
+        this = (NetworkManager__RequestCR_d__213_o *)System_Collections_Generic_Dictionary_object__object___get_Count(
+                                                       (System_Collections_Generic_Dictionary_object__object__o *)this,
+                                                       (const MethodInfo_308D718 *)Method_System_Collections_Generic_Dictionary_string__string__get_Count__);
         if ( (int)this < 1 )
-          goto LABEL_119;
-        if ( !*v17 )
-          goto LABEL_543;
-        this = (NetworkManager__RequestCR_d__213_o *)(*v17)->fields.__4__this;
+          goto LABEL_118;
+        if ( !*p_www_5__10 )
+          goto LABEL_530;
+        this = (NetworkManager__RequestCR_d__213_o *)(*p_www_5__10)->fields._responseHeaders_k__BackingField;
         if ( !this )
-          goto LABEL_543;
-        this = (NetworkManager__RequestCR_d__213_o *)System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
-                                                       (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)this,
-                                                       (System_Xml_XmlQualifiedName_o *)StringLiteral_12600/*"STATUS"*/,
-                                                       (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
+          goto LABEL_530;
+        this = (NetworkManager__RequestCR_d__213_o *)System_Collections_Generic_Dictionary_object__object___ContainsKey(
+                                                       (System_Collections_Generic_Dictionary_object__object__o *)this,
+                                                       (Il2CppObject *)StringLiteral_12069/*"STATUS"*/,
+                                                       (const MethodInfo_308DC3C *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
         if ( ((unsigned __int8)this & 1) == 0 )
-          goto LABEL_119;
-        if ( !*v17 )
-          goto LABEL_543;
-        this = (NetworkManager__RequestCR_d__213_o *)(*v17)->fields.__4__this;
+          goto LABEL_118;
+        if ( !*p_www_5__10 )
+          goto LABEL_530;
+        this = (NetworkManager__RequestCR_d__213_o *)(*p_www_5__10)->fields._responseHeaders_k__BackingField;
         if ( !this )
-          goto LABEL_543;
-        Item = (System_String_o *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-                                    (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)this,
-                                    (System_Type_o *)StringLiteral_12600/*"STATUS"*/,
-                                    (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
-        this = (NetworkManager__RequestCR_d__213_o *)sub_B775DC(char___TypeInfo, 1LL);
+          goto LABEL_530;
+        v198 = System_Collections_Generic_Dictionary_object__object___get_Item(
+                 (System_Collections_Generic_Dictionary_object__object__o *)this,
+                 (Il2CppObject *)StringLiteral_12069/*"STATUS"*/,
+                 (const MethodInfo_308D9C8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+        this = (NetworkManager__RequestCR_d__213_o *)sub_1B00D74(char___TypeInfo, 1LL);
         if ( !this )
-          goto LABEL_543;
+          goto LABEL_530;
         method = (const MethodInfo *)this;
         if ( !LODWORD(this->fields.__2__current) )
-          goto LABEL_616;
+          goto LABEL_532;
         LOWORD(this->fields.work) = 32;
-        if ( !Item )
-          goto LABEL_543;
-        this = (NetworkManager__RequestCR_d__213_o *)System_String__Split_44962720(
-                                                       Item,
+        if ( !v198 )
+          goto LABEL_530;
+        this = (NetworkManager__RequestCR_d__213_o *)System_String__Split_60348132(
+                                                       (System_String_o *)v198,
                                                        (System_Char_array *)this,
                                                        1,
                                                        0LL);
         if ( !this )
-          goto LABEL_543;
-        v123 = this;
+          goto LABEL_530;
+        v199 = this;
         if ( SLODWORD(this->fields.__2__current) < 2 )
-          goto LABEL_119;
+          goto LABEL_118;
         this = (NetworkManager__RequestCR_d__213_o *)this->fields.work;
         if ( !this )
-          goto LABEL_543;
+          goto LABEL_530;
         this = (NetworkManager__RequestCR_d__213_o *)System_String__StartsWith(
                                                        (System_String_o *)this,
-                                                       (System_String_o *)StringLiteral_7251/*"HTTP"*/,
+                                                       (System_String_o *)StringLiteral_7087/*"HTTP"*/,
                                                        0LL);
         if ( ((unsigned __int8)this & 1) == 0 )
-          goto LABEL_119;
-        if ( LODWORD(v123->fields.__2__current) <= 1 )
-          goto LABEL_616;
-        v124 = (System_String_o *)v123->fields.__4__this;
-        if ( !v124 )
-          goto LABEL_610;
-        v125 = PrivateImplementationDetails___ComputeStringHash_28503548(v124, 0LL);
-        if ( v125 > 0x434FEE0C )
+          goto LABEL_118;
+        if ( LODWORD(v199->fields.__2__current) <= 1 )
+          goto LABEL_532;
+        v200 = (System_String_o *)v199->fields.__4__this;
+        v201 = PrivateImplementationDetails___ComputeStringHash(v200, 0LL);
+        if ( v201 > 0x434FEE0C )
         {
-          if ( v125 <= 0xAA3008DB )
+          if ( v201 <= 0xAA3008DB )
           {
-            if ( v125 == -1456470200 )
+            if ( v201 == -1456470200 )
             {
-              if ( !System_String__op_Equality(v124, (System_String_o *)StringLiteral_1203/*"401"*/, 0LL) )
-                goto LABEL_610;
-              v554 = &StringLiteral_9456/*"NETWORK_ERROR_SERVER_AUTH_MESSAGE"*/;
+              if ( !System_String__op_Equality(v200, (System_String_o *)StringLiteral_1493/*"401"*/, 0LL) )
+                goto LABEL_525;
+              v464 = &StringLiteral_9126/*"NETWORK_ERROR_SERVER_AUTH_MESSAGE"*/;
             }
             else
             {
-              if ( v125 != -1439692581 || !System_String__op_Equality(v124, (System_String_o *)StringLiteral_1201/*"400"*/, 0LL) )
-                goto LABEL_610;
-              v554 = &StringLiteral_9461/*"NETWORK_ERROR_SERVER_PARAMETER_MESSAGE"*/;
+              if ( v201 != -1439692581 || !System_String__op_Equality(v200, (System_String_o *)StringLiteral_1491/*"400"*/, 0LL) )
+                goto LABEL_525;
+              v464 = &StringLiteral_9131/*"NETWORK_ERROR_SERVER_PARAMETER_MESSAGE"*/;
             }
-            v566 = (System_Int32_array **)*v554;
-            v2->fields._errorLocalizeCode_5__4 = (struct System_String_o *)*v554;
-            v567 = &v2->fields._errorLocalizeCode_5__4;
-            sub_B77560(
-              (BattleServantConfConponent_o *)&v2->fields._errorLocalizeCode_5__4,
-              v566,
-              v106,
-              v107,
-              v108,
-              v109,
-              v110,
-              v111);
-            v128 = (System_Int32_array **)StringLiteral_19455/*"goto_title"*/;
-LABEL_612:
-            v129 = (BattleServantConfConponent_o *)&v2->fields._errorAction_5__5;
-            v567[1] = (struct System_String_o *)v128;
-            goto LABEL_118;
+            v471 = *v464;
+            v2->fields._errorLocalizeCode_5__4 = (struct System_String_o *)*v464;
+            p_errorLocalizeCode_5__4 = &v2->fields._errorLocalizeCode_5__4;
+            sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._errorLocalizeCode_5__4, v471, v190, v191);
+            v204 = StringLiteral_19561/*"goto_title"*/;
+LABEL_527:
+            p_errorLocalizeCode_5__4[1] = (struct System_String_o *)v204;
+            p_errorAction_5__5 = (ServantStatusBattleListViewItem_o *)&v2->fields._errorAction_5__5;
+            goto LABEL_117;
           }
-          if ( v125 == -1372582105 )
+          if ( v201 == -1372582105 )
           {
-            if ( System_String__op_Equality(v124, (System_String_o *)StringLiteral_1206/*"404"*/, 0LL) )
+            if ( System_String__op_Equality(v200, (System_String_o *)StringLiteral_1496/*"404"*/, 0LL) )
             {
-              v568 = &StringLiteral_9460/*"NETWORK_ERROR_SERVER_NO_FILE_MESSAGE"*/;
-              goto LABEL_611;
+              v473 = &StringLiteral_9130/*"NETWORK_ERROR_SERVER_NO_FILE_MESSAGE"*/;
+              goto LABEL_526;
             }
-            goto LABEL_610;
+            goto LABEL_525;
           }
-          if ( v125 != -1008248995 )
-            goto LABEL_610;
-          v562 = &StringLiteral_1170/*"200"*/;
+          if ( v201 != -1008248995 )
+            goto LABEL_525;
+          v466 = &StringLiteral_1460/*"200"*/;
         }
         else
         {
-          if ( v125 <= 0x2D98A5D6 )
+          if ( v201 <= 0x2D98A5D6 )
           {
-            if ( v125 == 731423408 )
+            if ( v201 == 731423408 )
             {
-              v126 = &StringLiteral_1214/*"500"*/;
-              goto LABEL_609;
+              v202 = &StringLiteral_1504/*"500"*/;
+              goto LABEL_524;
             }
-            if ( v125 == 764978646 )
+            if ( v201 == 764978646 )
             {
-              v126 = &StringLiteral_1216/*"502"*/;
-LABEL_609:
-              System_String__op_Equality(v124, (System_String_o *)*v126, 0LL);
+              v202 = &StringLiteral_1506/*"502"*/;
+LABEL_524:
+              System_String__op_Equality(v200, (System_String_o *)*v202, 0LL);
             }
-LABEL_610:
-            v568 = &StringLiteral_9457/*"NETWORK_ERROR_SERVER_BUSY_MESSAGE"*/;
-LABEL_611:
-            v569 = (System_Int32_array **)*v568;
-            v2->fields._errorLocalizeCode_5__4 = (struct System_String_o *)*v568;
-            v567 = &v2->fields._errorLocalizeCode_5__4;
-            sub_B77560(
-              (BattleServantConfConponent_o *)&v2->fields._errorLocalizeCode_5__4,
-              v569,
-              v106,
-              v107,
-              v108,
-              v109,
-              v110,
-              v111);
-            v128 = (System_Int32_array **)StringLiteral_22273/*"retry"*/;
-            goto LABEL_612;
+LABEL_525:
+            v473 = &StringLiteral_9127/*"NETWORK_ERROR_SERVER_BUSY_MESSAGE"*/;
+LABEL_526:
+            v474 = *v473;
+            v2->fields._errorLocalizeCode_5__4 = (struct System_String_o *)*v473;
+            p_errorLocalizeCode_5__4 = &v2->fields._errorLocalizeCode_5__4;
+            sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._errorLocalizeCode_5__4, v474, v190, v191);
+            v204 = StringLiteral_22599/*"retry"*/;
+            goto LABEL_527;
           }
-          if ( v125 == 781756265 )
+          if ( v201 == 781756265 )
           {
-            v126 = &StringLiteral_1218/*"503"*/;
-            goto LABEL_609;
+            v202 = &StringLiteral_1508/*"503"*/;
+            goto LABEL_524;
           }
-          if ( v125 != 1129311756 )
-            goto LABEL_610;
-          v562 = &StringLiteral_1185/*"302"*/;
+          if ( v201 != 1129311756 )
+            goto LABEL_525;
+          v466 = &StringLiteral_1475/*"302"*/;
         }
-        if ( System_String__op_Equality(v124, (System_String_o *)*v562, 0LL) )
+        if ( System_String__op_Equality(v200, (System_String_o *)*v466, 0LL) )
         {
-          v129 = (BattleServantConfConponent_o *)&v2->fields._errorCode_5__3;
-          v128 = 0LL;
+          p_errorAction_5__5 = (ServantStatusBattleListViewItem_o *)&v2->fields._errorCode_5__3;
+          LODWORD(v204) = 0;
           v2->fields._errorCode_5__3 = 0LL;
+LABEL_117:
+          sub_1B00C70(p_errorAction_5__5, v204, v190, v191);
 LABEL_118:
-          sub_B77560(v129, v128, v106, v107, v108, v109, v110, v111);
-          goto LABEL_119;
-        }
-        goto LABEL_610;
-      }
-      if ( !v25 )
-        goto LABEL_543;
-      if ( !v2->fields._isNoRedirect_5__9 )
-      {
-        text = (System_Int32_array **)DelightWorks_Network_UnityWebRequestWWW__get_text(
-                                        (DelightWorks_Network_UnityWebRequestWWW_o *)*v17,
-                                        0LL);
-        v2->fields._data_5__2 = (struct System_String_o *)text;
-        sub_B77560((BattleServantConfConponent_o *)&v2->fields._data_5__2, text, v289, v290, v291, v292, v293, v294);
-        this = (NetworkManager__RequestCR_d__213_o *)NetworkManager_TypeInfo;
-        if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !NetworkManager_TypeInfo->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-          this = (NetworkManager__RequestCR_d__213_o *)NetworkManager_TypeInfo;
-        }
-        if ( this[1].fields.work[3].monitor )
-          goto LABEL_119;
-        v295 = v2->fields.work;
-        if ( !v295 )
-          goto LABEL_119;
-        v296 = *(&TopLoginRequest_TypeInfo->_2.bitflags2 + 1);
-        if ( *(&v295->klass->_2.bitflags2 + 1) < (unsigned int)v296
-          || (TopLoginRequest_c *)v295->klass->_2.typeHierarchy[v296 - 1] != TopLoginRequest_TypeInfo )
-        {
-          goto LABEL_119;
-        }
-        if ( !*v17 )
-          goto LABEL_543;
-        this = (NetworkManager__RequestCR_d__213_o *)(*v17)->fields.__4__this;
-        if ( !this )
-          goto LABEL_543;
-        this = (NetworkManager__RequestCR_d__213_o *)System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___get_Count(
-                                                       (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)this,
-                                                       (const MethodInfo_2F7D1F4 *)Method_System_Collections_Generic_Dictionary_string__string__get_Count__);
-        if ( (int)this < 1 )
-          goto LABEL_119;
-        if ( !*v17 )
-          goto LABEL_543;
-        this = (NetworkManager__RequestCR_d__213_o *)(*v17)->fields.__4__this;
-        if ( !this )
-          goto LABEL_543;
-        System_Collections_Generic_Dictionary_XmlQualifiedName__SchemaElementDecl___GetEnumerator(
-          (System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o *)&v582,
-          (System_Collections_Generic_Dictionary_XmlQualifiedName__SchemaElementDecl__o *)this,
-          (const MethodInfo_2F7DBD4 *)Method_System_Collections_Generic_Dictionary_string__string__GetEnumerator__);
-        v586 = v582;
-        while ( System_Collections_Generic_Dictionary_Enumerator_XmlQualifiedName__SchemaElementDecl___MoveNext(
-                  &v586,
-                  (const MethodInfo_27E37AC *)Method_System_Collections_Generic_Dictionary_Enumerator_string__string__MoveNext__) )
-          ;
-        v583[0] = 1969;
-        v297 = ++v584;
-        System_Collections_Generic_Dictionary_Enumerator_XmlQualifiedName__SchemaElementDecl___Dispose(
-          &v586,
-          (const MethodInfo_27E3914 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__string__Dispose__);
-        if ( v297 && v583[v297 - 1] == 1969 )
-          v584 = v297 - 1;
-        if ( !*v17 )
-          goto LABEL_543;
-        this = (NetworkManager__RequestCR_d__213_o *)(*v17)->fields.__4__this;
-        if ( !this )
-          goto LABEL_543;
-        this = (NetworkManager__RequestCR_d__213_o *)System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
-                                                       (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)this,
-                                                       (System_Xml_XmlQualifiedName_o *)StringLiteral_12294/*"SET-COOKIE"*/,
-                                                       (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
-        if ( ((unsigned __int8)this & 1) == 0 )
-          goto LABEL_119;
-        if ( !*v17 )
-          goto LABEL_543;
-        this = (NetworkManager__RequestCR_d__213_o *)(*v17)->fields.__4__this;
-        if ( !this )
-          goto LABEL_543;
-        v298 = (System_String_o *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-                                    (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)this,
-                                    (System_Type_o *)StringLiteral_12294/*"SET-COOKIE"*/,
-                                    (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
-        this = (NetworkManager__RequestCR_d__213_o *)sub_B775DC(char___TypeInfo, 2LL);
-        if ( !this )
-          goto LABEL_543;
-        v299 = (int)this->fields.__2__current;
-        method = (const MethodInfo *)this;
-        if ( v299 )
-        {
-          LOWORD(this->fields.work) = 32;
-          if ( v299 != 1 )
+          if ( !*p_www_5__10 )
+            goto LABEL_530;
+          responseHeaders_k__BackingField = (System_Collections_Generic_Dictionary_object__object__o *)(*p_www_5__10)->fields._responseHeaders_k__BackingField;
+          if ( responseHeaders_k__BackingField )
           {
-            WORD1(this->fields.work) = 59;
-            if ( !v298 )
-              goto LABEL_543;
-            v300 = System_String__Split_44962720(v298, (System_Char_array *)this, 1, 0LL);
-            v307 = NetworkManager_TypeInfo;
-            v308 = v300;
-            if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-              && !NetworkManager_TypeInfo->_2.cctor_finished )
+            this = (NetworkManager__RequestCR_d__213_o *)System_Collections_Generic_Dictionary_object__object___get_Count(
+                                                           responseHeaders_k__BackingField,
+                                                           (const MethodInfo_308D718 *)Method_System_Collections_Generic_Dictionary_string__string__get_Count__);
+            if ( (int)this >= 1 )
             {
-              j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-              v307 = NetworkManager_TypeInfo;
-            }
-            v309 = v307->static_fields;
-            v310 = (System_Int32_array **)StringLiteral_1/*""*/;
-            v309->sessionId = (struct System_String_o *)StringLiteral_1/*""*/;
-            sub_B77560((BattleServantConfConponent_o *)&v309->sessionId, v310, v301, v302, v303, v304, v305, v306);
-            if ( !v308 )
-              goto LABEL_543;
-            max_length = v308->max_length;
-            if ( max_length < 1 )
-              goto LABEL_119;
-            v312 = 0;
-            while ( v312 < max_length )
-            {
-              v313 = &v308->obj.klass + (int)v312;
-              v314 = (System_String_o *)v313[4];
-              if ( !v314 )
-                goto LABEL_543;
-              this = (NetworkManager__RequestCR_d__213_o *)System_String__StartsWith(
-                                                             (System_String_o *)v313[4],
-                                                             (System_String_o *)StringLiteral_21884/*"path="*/,
-                                                             0LL);
-              if ( ((unsigned __int8)this & 1) == 0 )
-              {
-                v315 = NetworkManager_TypeInfo;
-                if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-                  && !NetworkManager_TypeInfo->_2.cctor_finished )
-                {
-                  j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-                  v315 = NetworkManager_TypeInfo;
-                }
-                v316 = (System_Int32_array **)System_String__Concat_44904220(
-                                                v315->static_fields->sessionId,
-                                                v314,
-                                                (System_String_o *)StringLiteral_1289/*";"*/,
-                                                0LL);
-                v317 = NetworkManager_TypeInfo->static_fields;
-                v317->sessionId = (struct System_String_o *)v316;
-                sub_B77560((BattleServantConfConponent_o *)&v317->sessionId, v316, v318, v319, v320, v321, v322, v323);
-                max_length = v308->max_length;
-                if ( (int)++v312 < max_length )
-                  continue;
-              }
-              goto LABEL_119;
-            }
-          }
-        }
-LABEL_616:
-        v570 = sub_B776C8(this);
-        sub_B77668(v570, 0LL);
-      }
-      DelightWorks_Network_UnityWebRequestWWW__Dispose((DelightWorks_Network_UnityWebRequestWWW_o *)*v17, 0LL);
-LABEL_119:
-      if ( !*v17 )
-        goto LABEL_543;
-      v130 = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)(*v17)->fields.__4__this;
-      if ( v130 )
-      {
-        this = (NetworkManager__RequestCR_d__213_o *)System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___get_Count(
-                                                       v130,
-                                                       (const MethodInfo_2F7D1F4 *)Method_System_Collections_Generic_Dictionary_string__string__get_Count__);
-        if ( (int)this >= 1 )
-        {
-          if ( !*v17 )
-            goto LABEL_543;
-          this = (NetworkManager__RequestCR_d__213_o *)(*v17)->fields.__4__this;
-          if ( !this )
-            goto LABEL_543;
-          this = (NetworkManager__RequestCR_d__213_o *)System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
-                                                         (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)this,
-                                                         (System_Xml_XmlQualifiedName_o *)StringLiteral_15827/*"X-SERVER-TIME"*/,
-                                                         (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
-          if ( ((unsigned __int8)this & 1) != 0 )
-          {
-            if ( !*v17 )
-              goto LABEL_543;
-            this = (NetworkManager__RequestCR_d__213_o *)(*v17)->fields.__4__this;
-            if ( !this )
-              goto LABEL_543;
-            this = (NetworkManager__RequestCR_d__213_o *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-                                                           (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)this,
-                                                           (System_Type_o *)StringLiteral_15827/*"X-SERVER-TIME"*/,
-                                                           (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
-            if ( !this )
-              goto LABEL_543;
-            v131 = (System_String_o *)((__int64 (__fastcall *)(NetworkManager__RequestCR_d__213_o *, Il2CppMethodPointer))this->klass->vtable._3_ToString.method)(
-                                        this,
-                                        this->klass->vtable._4_System_Collections_Generic_IEnumerator_System_Object__get_Current.methodPtr);
-            v132 = System_Int64__Parse(v131, 0LL);
-            v133 = NetworkManager_TypeInfo;
-            if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-              && !NetworkManager_TypeInfo->_2.cctor_finished )
-            {
-              j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-              v133 = NetworkManager_TypeInfo;
-            }
-            v133->static_fields->serverTime = v132;
-            v133->static_fields->serverOffsetTime = v133->static_fields->serverTime - v2->fields._startTime_5__8;
-            v133->static_fields->nowTime = -1LL;
-          }
-        }
-      }
-      this = *v17;
-      if ( !*v17 )
-        goto LABEL_543;
-      DelightWorks_Network_UnityWebRequestWWW__Dispose((DelightWorks_Network_UnityWebRequestWWW_o *)this, 0LL);
-      v2->fields._www_5__10 = 0LL;
-      sub_B77560((BattleServantConfConponent_o *)v17, 0LL, v134, v135, v136, v137, v138, v139);
-      v2->fields._wait_5__14 = 0LL;
-      sub_B77560((BattleServantConfConponent_o *)&v2->fields._wait_5__14, 0LL, v140, v141, v142, v143, v144, v145);
-LABEL_134:
-      p_errorCode_5__3 = (BattleServantConfConponent_o *)&v2->fields._errorCode_5__3;
-      if ( v2->fields._errorCode_5__3 )
-        goto LABEL_141;
-      if ( System_String__IsNullOrEmpty(v2->fields._data_5__2, 0LL) )
-      {
-        v152 = (System_Int32_array **)StringLiteral_21557/*"none data"*/;
-        v2->fields._errorCode_5__3 = (struct System_String_o *)StringLiteral_21557/*"none data"*/;
-        sub_B77560(
-          (BattleServantConfConponent_o *)&v2->fields._errorCode_5__3,
-          v152,
-          v146,
-          v147,
-          v148,
-          v149,
-          v150,
-          v151);
-        v153 = (System_Int32_array **)StringLiteral_9459/*"NETWORK_ERROR_SERVER_CONNECT_MESSAGE"*/;
-        v2->fields._errorLocalizeCode_5__4 = (struct System_String_o *)StringLiteral_9459/*"NETWORK_ERROR_SERVER_CONNECT_MESSAGE"*/;
-        sub_B77560(
-          (BattleServantConfConponent_o *)&v2->fields._errorLocalizeCode_5__4,
-          v153,
-          v154,
-          v155,
-          v156,
-          v157,
-          v158,
-          v159);
-        v160 = (System_Int32_array **)StringLiteral_19455/*"goto_title"*/;
-        v2->fields._errorAction_5__5 = (struct System_String_o *)StringLiteral_19455/*"goto_title"*/;
-        sub_B77560(
-          (BattleServantConfConponent_o *)&v2->fields._errorAction_5__5,
-          v160,
-          v161,
-          v162,
-          v163,
-          v164,
-          v165,
-          v166);
-        if ( v2->fields._isNoRedirect_5__9 )
-        {
-          v173 = (BattleServantConfConponent_o *)&v2->fields._errorCode_5__3;
-          v174 = 0LL;
-          p_errorCode_5__3->klass = 0LL;
-LABEL_140:
-          sub_B77560(v173, v174, v167, v168, v169, v170, v171, v172);
-        }
-LABEL_141:
-        v189 = 0;
-        goto LABEL_142;
-      }
-      if ( System_String__op_Equality(v2->fields._data_5__2, (System_String_o *)StringLiteral_7860/*"Internal Server Error"*/, 0LL) )
-      {
-        v181 = (System_Int32_array **)StringLiteral_20253/*"internal server error"*/;
-        v2->fields._errorCode_5__3 = (struct System_String_o *)StringLiteral_20253/*"internal server error"*/;
-        sub_B77560(
-          (BattleServantConfConponent_o *)&v2->fields._errorCode_5__3,
-          v181,
-          v175,
-          v176,
-          v177,
-          v178,
-          v179,
-          v180);
-        v182 = (System_Int32_array **)StringLiteral_9457/*"NETWORK_ERROR_SERVER_BUSY_MESSAGE"*/;
-        v2->fields._errorLocalizeCode_5__4 = (struct System_String_o *)StringLiteral_9457/*"NETWORK_ERROR_SERVER_BUSY_MESSAGE"*/;
-        sub_B77560(
-          (BattleServantConfConponent_o *)&v2->fields._errorLocalizeCode_5__4,
-          v182,
-          v183,
-          v184,
-          v185,
-          v186,
-          v187,
-          v188);
-        v173 = (BattleServantConfConponent_o *)&v2->fields._errorAction_5__5;
-        v174 = (System_Int32_array **)StringLiteral_22273/*"retry"*/;
-        v2->fields._errorAction_5__5 = (struct System_String_o *)StringLiteral_22273/*"retry"*/;
-        goto LABEL_140;
-      }
-      data_5__2 = v2->fields._data_5__2;
-      if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !JsonManager_TypeInfo->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-      }
-      this = (NetworkManager__RequestCR_d__213_o *)JsonManager__getDictionary(data_5__2, 0LL);
-      if ( !this )
-        goto LABEL_543;
-      v213 = this;
-      if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
-              (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)this,
-              (System_Xml_XmlQualifiedName_o *)StringLiteral_22254/*"response"*/,
-              (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
-      {
-        v268 = (System_Int32_array **)StringLiteral_21558/*"none response data"*/;
-        v2->fields._errorCode_5__3 = (struct System_String_o *)StringLiteral_21558/*"none response data"*/;
-        sub_B77560(
-          (BattleServantConfConponent_o *)&v2->fields._errorCode_5__3,
-          v268,
-          v214,
-          v215,
-          v216,
-          v217,
-          v218,
-          v219);
-        v269 = (System_Int32_array **)StringLiteral_9457/*"NETWORK_ERROR_SERVER_BUSY_MESSAGE"*/;
-        v2->fields._errorLocalizeCode_5__4 = (struct System_String_o *)StringLiteral_9457/*"NETWORK_ERROR_SERVER_BUSY_MESSAGE"*/;
-        sub_B77560(
-          (BattleServantConfConponent_o *)&v2->fields._errorLocalizeCode_5__4,
-          v269,
-          v270,
-          v271,
-          v272,
-          v273,
-          v274,
-          v275);
-        v276 = (System_Int32_array **)StringLiteral_22273/*"retry"*/;
-        v2->fields._errorAction_5__5 = (struct System_String_o *)StringLiteral_22273/*"retry"*/;
-        sub_B77560(
-          (BattleServantConfConponent_o *)&v2->fields._errorAction_5__5,
-          v276,
-          v277,
-          v278,
-          v279,
-          v280,
-          v281,
-          v282);
-LABEL_227:
-        v189 = 0;
-        goto LABEL_530;
-      }
-      v220 = (Il2CppObject *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-                               (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v213,
-                               (System_Type_o *)StringLiteral_22254/*"response"*/,
-                               (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-      if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !JsonManager_TypeInfo->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-      }
-      v221 = (System_Int32_array **)JsonManager__DeserializeArray_UserPresentBoxWindow_resData_(
-                                      v220,
-                                      (const MethodInfo_1DF16CC *)Method_JsonManager_DeserializeArray_ResponseData___);
-      v2->fields._responseList_5__7 = (struct ResponseData_array *)v221;
-      v222 = &v2->fields._responseList_5__7;
-      sub_B77560(
-        (BattleServantConfConponent_o *)&v2->fields._responseList_5__7,
-        v221,
-        v223,
-        v224,
-        v225,
-        v226,
-        v227,
-        v228);
-      responseList_5__7 = v2->fields._responseList_5__7;
-      if ( !responseList_5__7 )
-        goto LABEL_543;
-      v230 = 0LL;
-      while ( 1 )
-      {
-        v231 = responseList_5__7->max_length;
-        if ( (int)v230 >= v231 )
-          goto LABEL_227;
-        if ( (unsigned int)v230 >= v231 )
-          goto LABEL_616;
-        v232 = &responseList_5__7->obj.klass + v230;
-        v233 = (ResponseData_o *)v232[4];
-        if ( !v233 )
-          goto LABEL_543;
-        this = (NetworkManager__RequestCR_d__213_o *)ResponseData__checkError_30128096((ResponseData_o *)v232[4], 0LL);
-        if ( ((unsigned __int8)this & 1) == 0 )
-          break;
-        responseList_5__7 = *v222;
-        ++v230;
-        if ( !*v222 )
-          goto LABEL_543;
-      }
-      this = (NetworkManager__RequestCR_d__213_o *)sub_B775DC(string___TypeInfo, 5LL);
-      if ( !this )
-        goto LABEL_543;
-      v334 = this;
-      this = (NetworkManager__RequestCR_d__213_o *)StringLiteral_22255/*"response error "*/;
-      if ( StringLiteral_22255/*"response error "*/ )
-      {
-        this = (NetworkManager__RequestCR_d__213_o *)sub_B77684(StringLiteral_22255/*"response error "*/, v334->klass->_1.element_class);
-        if ( !this )
-          goto LABEL_617;
-        v335 = (System_Int32_array **)StringLiteral_22255/*"response error "*/;
-      }
-      else
-      {
-        v335 = 0LL;
-      }
-      if ( !LODWORD(v334->fields.__2__current) )
-        goto LABEL_616;
-      v334->fields.work = (struct RequestBase_o *)v335;
-      sub_B77560((BattleServantConfConponent_o *)&v334->fields.work, v335, v328, v329, v330, v331, v332, v333);
-      nid = (System_Int32_array **)v233->fields.nid;
-      if ( nid )
-      {
-        this = (NetworkManager__RequestCR_d__213_o *)sub_B77684(v233->fields.nid, v334->klass->_1.element_class);
-        if ( !this )
-          goto LABEL_617;
-      }
-      if ( LODWORD(v334->fields.__2__current) <= 1 )
-        goto LABEL_616;
-      v334->fields.__4__this = (struct NetworkManager_o *)nid;
-      sub_B77560((BattleServantConfConponent_o *)&v334->fields.__4__this, nid, v452, v453, v454, v455, v456, v457);
-      this = (NetworkManager__RequestCR_d__213_o *)StringLiteral_100/*" ("*/;
-      if ( StringLiteral_100/*" ("*/ )
-      {
-        this = (NetworkManager__RequestCR_d__213_o *)sub_B77684(StringLiteral_100/*" ("*/, v334->klass->_1.element_class);
-        if ( !this )
-          goto LABEL_617;
-        v465 = (System_Int32_array **)StringLiteral_100/*" ("*/;
-      }
-      else
-      {
-        v465 = 0LL;
-      }
-      if ( LODWORD(v334->fields.__2__current) <= 2 )
-        goto LABEL_616;
-      *(_QWORD *)&v334->fields.delay = v465;
-      sub_B77560((BattleServantConfConponent_o *)&v334->fields.delay, v465, v459, v460, v461, v462, v463, v464);
-      resCode = (System_Int32_array **)v233->fields.resCode;
-      if ( resCode )
-      {
-        this = (NetworkManager__RequestCR_d__213_o *)sub_B77684(v233->fields.resCode, v334->klass->_1.element_class);
-        if ( !this )
-        {
-LABEL_617:
-          v571 = sub_B776BC(this);
-          sub_B77668(v571, 0LL);
-        }
-      }
-      if ( LODWORD(v334->fields.__2__current) <= 3 )
-        goto LABEL_616;
-      v334->fields._data_5__2 = (struct System_String_o *)resCode;
-      sub_B77560((BattleServantConfConponent_o *)&v334->fields._data_5__2, resCode, v466, v467, v468, v469, v470, v471);
-      this = (NetworkManager__RequestCR_d__213_o *)StringLiteral_665/*")"*/;
-      if ( StringLiteral_665/*")"*/ )
-      {
-        this = (NetworkManager__RequestCR_d__213_o *)sub_B77684(StringLiteral_665/*")"*/, v334->klass->_1.element_class);
-        if ( this )
-        {
-          v479 = (System_Int32_array **)StringLiteral_665/*")"*/;
-          goto LABEL_506;
-        }
-        goto LABEL_617;
-      }
-      v479 = 0LL;
-LABEL_506:
-      if ( LODWORD(v334->fields.__2__current) <= 4 )
-        goto LABEL_616;
-      v334->fields._errorCode_5__3 = (struct System_String_o *)v479;
-      sub_B77560(
-        (BattleServantConfConponent_o *)&v334->fields._errorCode_5__3,
-        v479,
-        v473,
-        v474,
-        v475,
-        v476,
-        v477,
-        v478);
-      v480 = (System_Int32_array **)System_String__Concat_44982964((System_String_array *)v334, 0LL);
-      v2->fields._errorCode_5__3 = (struct System_String_o *)v480;
-      sub_B77560((BattleServantConfConponent_o *)&v2->fields._errorCode_5__3, v480, v481, v482, v483, v484, v485, v486);
-      v487 = (ResponseFailData_o *)sub_B77694(ResponseFailData_TypeInfo);
-      ResponseFailData___ctor(v487, v233, 0LL);
-      v488 = &v2->fields._failData_5__6;
-      v2->fields._failData_5__6 = v487;
-      sub_B77560(
-        (BattleServantConfConponent_o *)&v2->fields._failData_5__6,
-        (System_Int32_array **)v487,
-        v489,
-        v490,
-        v491,
-        v492,
-        v493,
-        v494);
-      failData_5__6 = v2->fields._failData_5__6;
-      if ( !failData_5__6 )
-        goto LABEL_543;
-      this = (NetworkManager__RequestCR_d__213_o *)System_String__IsNullOrEmpty(failData_5__6->fields.action, 0LL);
-      p_action = (System_Int32_array ***)&StringLiteral_22273/*"retry"*/;
-      if ( ((unsigned __int8)this & 1) == 0 )
-      {
-        if ( !*v488 )
-          goto LABEL_543;
-        p_action = (System_Int32_array ***)&(*v488)->fields.action;
-      }
-      v503 = *p_action;
-      v2->fields._errorAction_5__5 = (struct System_String_o *)*p_action;
-      sub_B77560(
-        (BattleServantConfConponent_o *)&v2->fields._errorAction_5__5,
-        v503,
-        v496,
-        v497,
-        v498,
-        v499,
-        v500,
-        v501);
-      v504 = v2->fields.work;
-      if ( !v504 )
-      {
-        v507 = 0;
-        goto LABEL_529;
-      }
-      v505 = PurchaseByBank_UnityIap_Request_TypeInfo;
-      v506 = *(&PurchaseByBank_UnityIap_Request_TypeInfo->_2.bitflags2 + 1);
-      if ( *(&v504->klass->_2.bitflags2 + 1) >= (unsigned int)v506
-        && (PurchaseByBank_UnityIap_Request_c *)v504->klass->_2.typeHierarchy[v506 - 1] == PurchaseByBank_UnityIap_Request_TypeInfo )
-      {
-        if ( !*v488 )
-          goto LABEL_543;
-        v561 = System_String__op_Equality((*v488)->fields.action, (System_String_o *)StringLiteral_22273/*"retry"*/, 0LL);
-        v504 = v2->fields.work;
-        v507 = v561;
-        if ( !v504 )
-          goto LABEL_529;
-        v505 = PurchaseByBank_UnityIap_Request_TypeInfo;
-      }
-      else
-      {
-        v507 = 0;
-      }
-      v508 = v504->klass;
-      v509 = *(&v505->_2.bitflags2 + 1);
-      if ( *(&v508->_2.bitflags2 + 1) < (unsigned int)v509
-        || (PurchaseByBank_UnityIap_Request_c *)v508->_2.typeHierarchy[v509 - 1] != v505 )
-      {
-LABEL_529:
-        v189 = v507 != 0;
-        goto LABEL_530;
-      }
-      v510 = *v222;
-      v189 = v507 != 0;
-      if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !ResponseCommandKind_TypeInfo->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-      }
-      v511 = ResponseCommandKind__SearchData(11, v510, 0LL);
-      if ( v511 )
-      {
-        fail = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v511->fields.fail;
-        if ( fail )
-        {
-          if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
-                 fail,
-                 (System_Xml_XmlQualifiedName_o *)StringLiteral_22263/*"result"*/,
-                 &v585,
-                 (const MethodInfo_2F7F3F8 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
-          {
-            this = (NetworkManager__RequestCR_d__213_o *)v585;
-            if ( !v585 )
-              goto LABEL_543;
-            v513 = (System_String_o *)((__int64 (__fastcall *)(System_Xml_Schema_XmlSchemaObject_o *, Il2CppMethodPointer))v585->klass->vtable._3_ToString.method)(
-                                        v585,
-                                        v585->klass->vtable._4_OnAdd.methodPtr);
-            if ( v513 )
-            {
-              v514 = v513;
-              if ( System_String__op_Equality(v513, (System_String_o *)StringLiteral_21899/*"pending_purchase_error"*/, 0LL)
-                || System_String__op_Equality(v514, (System_String_o *)StringLiteral_17544/*"canceled_purchase_error"*/, 0LL) )
-              {
-                v521 = (System_Int32_array **)StringLiteral_22800/*"stay_no_dialog"*/;
-                v2->fields._errorAction_5__5 = (struct System_String_o *)StringLiteral_22800/*"stay_no_dialog"*/;
-                sub_B77560(
-                  (BattleServantConfConponent_o *)&v2->fields._errorAction_5__5,
-                  v521,
-                  v515,
-                  v516,
-                  v517,
-                  v518,
-                  v519,
-                  v520);
-              }
-            }
-          }
-        }
-      }
-LABEL_530:
-      if ( !p_errorCode_5__3->klass )
-      {
-        this = (NetworkManager__RequestCR_d__213_o *)System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
-                                                       (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v213,
-                                                       (System_Xml_XmlQualifiedName_o *)StringLiteral_17514/*"cache"*/,
-                                                       (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-        if ( ((unsigned __int8)this & 1) != 0 )
-        {
-          v522 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-          this = (NetworkManager__RequestCR_d__213_o *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-                                                         (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v213,
-                                                         (System_Type_o *)StringLiteral_17514/*"cache"*/,
-                                                         (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-          if ( !v522 )
-            goto LABEL_543;
-          DataManager__updateJsonData((DataManager_o *)v522, (Il2CppObject *)this, 0LL);
-        }
-        v523 = v2->fields._responseList_5__7;
-        if ( v523 )
-        {
-          v524 = 0LL;
-          while ( 1 )
-          {
-            v525 = v523->max_length;
-            if ( (__int64)v524 >= (int)v525 )
-              goto LABEL_142;
-            if ( v524 >= v525 )
-              goto LABEL_616;
-            v526 = v523->m_Items[v524];
-            if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-              && !NetworkManager_TypeInfo->_2.cctor_finished )
-            {
-              j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-            }
-            this = (NetworkManager__RequestCR_d__213_o *)NetworkManager__ExecuteCommand(v526, 0LL);
-            if ( (_DWORD)this )
-              break;
-            v523 = v2->fields._responseList_5__7;
-            ++v524;
-            if ( !v523 )
-              goto LABEL_543;
-          }
-          if ( v526 )
-          {
-            v527 = (System_Int32_array **)System_String__Concat_44901936(
-                                            (System_String_o *)StringLiteral_22256/*"response execute error "*/,
-                                            v526->fields.nid,
-                                            0LL);
-            v2->fields._errorCode_5__3 = (struct System_String_o *)v527;
-            sub_B77560(
-              (BattleServantConfConponent_o *)&v2->fields._errorCode_5__3,
-              v527,
-              v528,
-              v529,
-              v530,
-              v531,
-              v532,
-              v533);
-            v534 = (ResponseFailData_o *)sub_B77694(ResponseFailData_TypeInfo);
-            ResponseFailData___ctor(v534, v526, 0LL);
-            v535 = &v2->fields._failData_5__6;
-            v2->fields._failData_5__6 = v534;
-            sub_B77560(
-              (BattleServantConfConponent_o *)&v2->fields._failData_5__6,
-              (System_Int32_array **)v534,
-              v536,
-              v537,
-              v538,
-              v539,
-              v540,
-              v541);
-            v542 = v2->fields._failData_5__6;
-            if ( v542 )
-            {
-              this = (NetworkManager__RequestCR_d__213_o *)System_String__IsNullOrEmpty(v542->fields.action, 0LL);
+              if ( !*p_www_5__10 )
+                goto LABEL_530;
+              this = (NetworkManager__RequestCR_d__213_o *)(*p_www_5__10)->fields._responseHeaders_k__BackingField;
+              if ( !this )
+                goto LABEL_530;
+              this = (NetworkManager__RequestCR_d__213_o *)System_Collections_Generic_Dictionary_object__object___ContainsKey(
+                                                             (System_Collections_Generic_Dictionary_object__object__o *)this,
+                                                             (Il2CppObject *)StringLiteral_15465/*"X-SERVER-TIME"*/,
+                                                             (const MethodInfo_308DC3C *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
               if ( ((unsigned __int8)this & 1) != 0 )
               {
-                v549 = (System_Int32_array ***)&StringLiteral_22273/*"retry"*/;
+                if ( !*p_www_5__10 )
+                  goto LABEL_530;
+                this = (NetworkManager__RequestCR_d__213_o *)(*p_www_5__10)->fields._responseHeaders_k__BackingField;
+                if ( !this )
+                  goto LABEL_530;
+                this = (NetworkManager__RequestCR_d__213_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
+                                                               (System_Collections_Generic_Dictionary_object__object__o *)this,
+                                                               (Il2CppObject *)StringLiteral_15465/*"X-SERVER-TIME"*/,
+                                                               (const MethodInfo_308D9C8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+                if ( !this )
+                  goto LABEL_530;
+                v207 = (System_String_o *)((__int64 (__fastcall *)(NetworkManager__RequestCR_d__213_o *, Il2CppMethodPointer))this->klass->vtable._3_ToString.method)(
+                                            this,
+                                            this->klass->vtable._4_System_Collections_Generic_IEnumerator_System_Object__get_Current.methodPtr);
+                v208 = System_Int64__Parse(v207, 0LL);
+                v209 = NetworkManager_TypeInfo;
+                if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+                {
+                  j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+                  v209 = NetworkManager_TypeInfo;
+                }
+                v210 = v209->static_fields;
+                v210->serverTime = v208;
+                startTime_5__8 = v2->fields._startTime_5__8;
+                v210->nowTime = -1LL;
+                v210->serverOffsetTime = v208 - startTime_5__8;
               }
-              else
+            }
+          }
+          this = (NetworkManager__RequestCR_d__213_o *)*p_www_5__10;
+          if ( !*p_www_5__10 )
+            goto LABEL_530;
+          DelightWorks_Network_UnityWebRequestWWW__Dispose((DelightWorks_Network_UnityWebRequestWWW_o *)this, 0LL);
+          v2->fields._www_5__10 = 0LL;
+          sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._www_5__10, 0, v212, v213);
+          v2->fields._wait_5__14 = 0LL;
+          sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._wait_5__14, 0, v214, v215);
+          goto LABEL_132;
+        }
+        goto LABEL_525;
+      }
+      if ( !v159->_2.cctor_finished )
+      {
+        j_il2cpp_runtime_class_init_0(v159);
+        static_fields = ManagerConfig_TypeInfo->static_fields;
+      }
+      if ( static_fields->IsNetworkMock )
+      {
+        this = (NetworkManager__RequestCR_d__213_o *)v2->fields.work;
+        if ( !this )
+          goto LABEL_530;
+        v161 = ((__int64 (__fastcall *)(NetworkManager__RequestCR_d__213_o *, Il2CppMethodPointer))this->klass->vtable._6_MoveNext.method)(
+                 this,
+                 this->klass->vtable._7_System_Collections_IEnumerator_get_Current.methodPtr);
+        if ( v161 )
+        {
+          v162 = (System_String_o *)v161;
+          v163 = (DelightWorks_Network_UnityWebRequestWWW_o *)sub_1B00F18(DelightWorks_Network_UnityWebRequestWWW_TypeInfo);
+          DelightWorks_Network_UnityWebRequestWWW___ctor(v163, v162, 0LL);
+          v2->fields._www_5__10 = v163;
+          sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._www_5__10, (int32_t)v163, v164, v165);
+          v166 = (Il2CppObject *)v2->fields._www_5__10;
+          v2->fields.__2__current = v166;
+          p__2__current = (ServantStatusBattleListViewItem_o *)&v2->fields.__2__current;
+          sub_1B00C70(p__2__current, (int32_t)v166, v167, v168);
+          v155 = 3;
+LABEL_317:
+          *(_DWORD *)&p__2__current[-1].fields.isMine = v155;
+          return 1;
+        }
+      }
+LABEL_49:
+      p_data_5__2 = &v2->fields._data_5__2;
+      if ( !v2->fields._data_5__2 )
+      {
+        this = (NetworkManager__RequestCR_d__213_o *)v2->fields.work;
+        if ( !this )
+          goto LABEL_530;
+        v170 = ((__int64 (__fastcall *)(NetworkManager__RequestCR_d__213_o *, Il2CppMethodPointer))this->klass->vtable._5_System_IDisposable_Dispose.method)(
+                 this,
+                 this->klass->vtable._6_MoveNext.methodPtr);
+        *p_data_5__2 = (System_String_o *)v170;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._data_5__2, v170, v171, v172);
+        if ( System_String__op_Equality(*p_data_5__2, (System_String_o *)StringLiteral_1/*""*/, 0LL) )
+        {
+          this = (NetworkManager__RequestCR_d__213_o *)v2->fields.work;
+          if ( !this )
+            goto LABEL_530;
+          this = (NetworkManager__RequestCR_d__213_o *)((__int64 (__fastcall *)(NetworkManager__RequestCR_d__213_o *, void *))this->klass->vtable._8_System_Collections_IEnumerator_Reset.method)(
+                                                         this,
+                                                         this->klass[1]._1.image);
+          if ( ((unsigned __int8)this & 1) == 0 )
+          {
+            this = (NetworkManager__RequestCR_d__213_o *)v2->fields.work;
+            if ( !this )
+              goto LABEL_530;
+            this = (NetworkManager__RequestCR_d__213_o *)((__int64 (__fastcall *)(NetworkManager__RequestCR_d__213_o *, const char *))this->klass[1]._1.gc_desc)(
+                                                           this,
+                                                           this->klass[1]._1.name);
+            if ( ((unsigned __int8)this & 1) != 0 )
+            {
+              this = (NetworkManager__RequestCR_d__213_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+              if ( !this )
+                goto LABEL_530;
+              CommonUI__SetConnect((CommonUI_o *)this, 0, 0LL);
+            }
+          }
+          if ( _4__this )
+          {
+            NetworkManager__OnEndCommunication(_4__this, v2->fields.work, 0LL, 0LL);
+            return 0;
+          }
+          goto LABEL_530;
+        }
+      }
+LABEL_132:
+      p_errorCode_5__3 = &v2->fields._errorCode_5__3;
+      if ( v2->fields._errorCode_5__3 )
+        goto LABEL_139;
+      if ( System_String__IsNullOrEmpty(v2->fields._data_5__2, 0LL) )
+      {
+        v219 = StringLiteral_21813/*"none data"*/;
+        v2->fields._errorCode_5__3 = (struct System_String_o *)StringLiteral_21813/*"none data"*/;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._errorCode_5__3, v219, v217, v218);
+        v220 = StringLiteral_9129/*"NETWORK_ERROR_SERVER_CONNECT_MESSAGE"*/;
+        v2->fields._errorLocalizeCode_5__4 = (struct System_String_o *)StringLiteral_9129/*"NETWORK_ERROR_SERVER_CONNECT_MESSAGE"*/;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._errorLocalizeCode_5__4, v220, v221, v222);
+        v223 = StringLiteral_19561/*"goto_title"*/;
+        v2->fields._errorAction_5__5 = (struct System_String_o *)StringLiteral_19561/*"goto_title"*/;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._errorAction_5__5, v223, v224, v225);
+        if ( v2->fields._isNoRedirect_5__9 )
+        {
+          v228 = (ServantStatusBattleListViewItem_o *)&v2->fields._errorCode_5__3;
+          v229 = 0;
+          *p_errorCode_5__3 = 0LL;
+LABEL_138:
+          sub_1B00C70(v228, v229, v226, v227);
+        }
+LABEL_139:
+        v236 = 0;
+        goto LABEL_140;
+      }
+      if ( System_String__op_Equality(v2->fields._data_5__2, (System_String_o *)StringLiteral_7586/*"Internal Server Error"*/, 0LL) )
+      {
+        v232 = StringLiteral_20417/*"internal server error"*/;
+        v2->fields._errorCode_5__3 = (struct System_String_o *)StringLiteral_20417/*"internal server error"*/;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._errorCode_5__3, v232, v230, v231);
+        v233 = StringLiteral_9127/*"NETWORK_ERROR_SERVER_BUSY_MESSAGE"*/;
+        v2->fields._errorLocalizeCode_5__4 = (struct System_String_o *)StringLiteral_9127/*"NETWORK_ERROR_SERVER_BUSY_MESSAGE"*/;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._errorLocalizeCode_5__4, v233, v234, v235);
+        v229 = StringLiteral_22599/*"retry"*/;
+        v2->fields._errorAction_5__5 = (struct System_String_o *)StringLiteral_22599/*"retry"*/;
+        v228 = (ServantStatusBattleListViewItem_o *)&v2->fields._errorAction_5__5;
+        goto LABEL_138;
+      }
+      data_5__2 = v2->fields._data_5__2;
+      if ( !JsonManager_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
+      this = (NetworkManager__RequestCR_d__213_o *)JsonManager__getDictionary(data_5__2, 0LL);
+      if ( !this )
+        goto LABEL_530;
+      v250 = this;
+      if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
+              (System_Collections_Generic_Dictionary_object__object__o *)this,
+              (Il2CppObject *)StringLiteral_22580/*"response"*/,
+              (const MethodInfo_308DC3C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+      {
+        v306 = StringLiteral_21814/*"none response data"*/;
+        v2->fields._errorCode_5__3 = (struct System_String_o *)StringLiteral_21814/*"none response data"*/;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._errorCode_5__3, v306, v251, v252);
+        v307 = StringLiteral_9127/*"NETWORK_ERROR_SERVER_BUSY_MESSAGE"*/;
+        v2->fields._errorLocalizeCode_5__4 = (struct System_String_o *)StringLiteral_9127/*"NETWORK_ERROR_SERVER_BUSY_MESSAGE"*/;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._errorLocalizeCode_5__4, v307, v308, v309);
+        v310 = StringLiteral_22599/*"retry"*/;
+        v2->fields._errorAction_5__5 = (struct System_String_o *)StringLiteral_22599/*"retry"*/;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._errorAction_5__5, v310, v311, v312);
+LABEL_298:
+        v236 = 0;
+        goto LABEL_299;
+      }
+      v253 = System_Collections_Generic_Dictionary_object__object___get_Item(
+               (System_Collections_Generic_Dictionary_object__object__o *)v250,
+               (Il2CppObject *)StringLiteral_22580/*"response"*/,
+               (const MethodInfo_308D9C8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+      if ( !JsonManager_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
+      v254 = JsonManager__DeserializeArray_object_(
+               v253,
+               (const MethodInfo_2DB84AC *)Method_JsonManager_DeserializeArray_ResponseData___);
+      v2->fields._responseList_5__7 = (struct ResponseData_array *)v254;
+      p_responseList_5__7 = &v2->fields._responseList_5__7;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._responseList_5__7, (int32_t)v254, v256, v257);
+      responseList_5__7 = v2->fields._responseList_5__7;
+      if ( !responseList_5__7 )
+        goto LABEL_530;
+      v259 = 0LL;
+      while ( 1 )
+      {
+        v260 = responseList_5__7->max_length;
+        if ( (int)v259 >= v260 )
+          goto LABEL_298;
+        if ( (unsigned int)v259 >= v260 )
+          goto LABEL_532;
+        v261 = &responseList_5__7->obj.klass + v259;
+        v262 = (ResponseData_o *)v261[4];
+        if ( !v262 )
+          goto LABEL_530;
+        this = (NetworkManager__RequestCR_d__213_o *)ResponseData__checkError_39752340((ResponseData_o *)v261[4], 0LL);
+        if ( ((unsigned __int8)this & 1) == 0 )
+          break;
+        responseList_5__7 = *p_responseList_5__7;
+        ++v259;
+        if ( !*p_responseList_5__7 )
+          goto LABEL_530;
+      }
+      this = (NetworkManager__RequestCR_d__213_o *)sub_1B00D74(string___TypeInfo, 5LL);
+      if ( !this )
+        goto LABEL_530;
+      v360 = this;
+      if ( !LODWORD(this->fields.__2__current) )
+        goto LABEL_532;
+      v361 = StringLiteral_22581/*"response error "*/;
+      this->fields.work = (struct RequestBase_o *)StringLiteral_22581/*"response error "*/;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.work, v361, v358, v359);
+      if ( LODWORD(v360->fields.__2__current) <= 1 )
+        goto LABEL_532;
+      nid = (struct NetworkManager_o *)v262->fields.nid;
+      v360->fields.__4__this = nid;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&v360->fields.__4__this, (int32_t)nid, v362, v363);
+      if ( LODWORD(v360->fields.__2__current) <= 2
+        || (v367 = StringLiteral_138/*" ("*/,
+            *(_QWORD *)&v360->fields.delay = StringLiteral_138/*" ("*/,
+            sub_1B00C70((ServantStatusBattleListViewItem_o *)&v360->fields.delay, v367, v365, v366),
+            LODWORD(v360->fields.__2__current) <= 3)
+        || (resCode = v262->fields.resCode,
+            v360->fields._data_5__2 = resCode,
+            sub_1B00C70((ServantStatusBattleListViewItem_o *)&v360->fields._data_5__2, (int32_t)resCode, v368, v369),
+            LODWORD(v360->fields.__2__current) <= 4) )
+      {
+LABEL_532:
+        sub_1B00F30(this, method);
+      }
+      v373 = StringLiteral_811/*")"*/;
+      v360->fields._errorCode_5__3 = (struct System_String_o *)StringLiteral_811/*")"*/;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&v360->fields._errorCode_5__3, v373, v371, v372);
+      v374 = System_String__Concat_60339276((System_String_array *)v360, 0LL);
+      v2->fields._errorCode_5__3 = v374;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._errorCode_5__3, (int32_t)v374, v375, v376);
+      v377 = (ResponseFailData_o *)sub_1B00F18(ResponseFailData_TypeInfo);
+      ResponseFailData___ctor(v377, v262, 0LL);
+      v2->fields._failData_5__6 = v377;
+      p_failData_5__6 = &v2->fields._failData_5__6;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._failData_5__6, (int32_t)v377, v379, v380);
+      if ( !v2->fields._failData_5__6 )
+        goto LABEL_530;
+      this = (NetworkManager__RequestCR_d__213_o *)System_String__IsNullOrEmpty(
+                                                     v2->fields._failData_5__6->fields.action,
+                                                     0LL);
+      p_action = &StringLiteral_22599/*"retry"*/;
+      if ( ((unsigned __int8)this & 1) == 0 )
+      {
+        if ( !*p_failData_5__6 )
+          goto LABEL_530;
+        p_action = (__int64 *)&(*p_failData_5__6)->fields.action;
+      }
+      v384 = *p_action;
+      v2->fields._errorAction_5__5 = (struct System_String_o *)*p_action;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._errorAction_5__5, v384, v381, v382);
+      v385 = v2->fields.work;
+      if ( !v385 )
+        goto LABEL_298;
+      v386 = PurchaseByBank_UnityIap_Request_TypeInfo;
+      v387 = LOBYTE(PurchaseByBank_UnityIap_Request_TypeInfo->vtable._0_Equals.methodPtr);
+      if ( LOBYTE(v385->klass->vtable._0_Equals.methodPtr) < (unsigned int)v387
+        || (PurchaseByBank_UnityIap_Request_c *)v385->klass->_2.typeHierarchy[v387 - 1] != PurchaseByBank_UnityIap_Request_TypeInfo )
+      {
+        v236 = 0;
+        goto LABEL_391;
+      }
+      if ( !*p_failData_5__6 )
+        goto LABEL_530;
+      v465 = System_String__op_Equality((*p_failData_5__6)->fields.action, (System_String_o *)StringLiteral_22599/*"retry"*/, 0LL);
+      v385 = v2->fields.work;
+      v236 = v465;
+      if ( v385 )
+      {
+        v386 = PurchaseByBank_UnityIap_Request_TypeInfo;
+LABEL_391:
+        klass = v385->klass;
+        v389 = LOBYTE(v386->vtable._0_Equals.methodPtr);
+        if ( LOBYTE(klass->vtable._0_Equals.methodPtr) >= (unsigned int)v389
+          && (PurchaseByBank_UnityIap_Request_c *)klass->_2.typeHierarchy[v389 - 1] == v386 )
+        {
+          v390 = *p_responseList_5__7;
+          if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
+            j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
+          v391 = ResponseCommandKind__SearchData(11, v390, 0LL);
+          if ( v391 )
+          {
+            fail = (System_Collections_Generic_Dictionary_object__object__o *)v391->fields.fail;
+            if ( fail )
+            {
+              if ( System_Collections_Generic_Dictionary_object__object___TryGetValue(
+                     fail,
+                     (Il2CppObject *)StringLiteral_22589/*"result"*/,
+                     &value,
+                     (const MethodInfo_308F254 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
               {
-                if ( !*v535 )
-                  goto LABEL_543;
-                v549 = (System_Int32_array ***)&(*v535)->fields.action;
+                this = (NetworkManager__RequestCR_d__213_o *)value;
+                if ( !value )
+                  goto LABEL_530;
+                v393 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))value->klass->vtable[3].method)(
+                                            value,
+                                            value->klass->vtable[4].methodPtr);
+                if ( System_String__op_Equality(v393, (System_String_o *)StringLiteral_22194/*"pending_purchase_error"*/, 0LL)
+                  || System_String__op_Equality(v393, (System_String_o *)StringLiteral_17487/*"canceled_purchase_error"*/, 0LL) )
+                {
+                  v396 = StringLiteral_23199/*"stay_no_dialog"*/;
+                  v2->fields._errorAction_5__5 = (struct System_String_o *)StringLiteral_23199/*"stay_no_dialog"*/;
+                  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._errorAction_5__5, v396, v394, v395);
+                }
               }
-              v550 = *v549;
-              v2->fields._errorAction_5__5 = (struct System_String_o *)*v549;
-              sub_B77560(
-                (BattleServantConfConponent_o *)&v2->fields._errorAction_5__5,
-                v550,
-                v543,
-                v544,
-                v545,
-                v546,
-                v547,
-                v548);
-              goto LABEL_142;
             }
           }
         }
-LABEL_543:
-        sub_B7769C(this, method);
       }
-LABEL_142:
-      p_work = (NetworkManager__RequestCR_d__213_o **)&v2->fields.work;
+LABEL_299:
+      if ( *p_errorCode_5__3 )
+        goto LABEL_140;
+      this = (NetworkManager__RequestCR_d__213_o *)System_Collections_Generic_Dictionary_object__object___ContainsKey(
+                                                     (System_Collections_Generic_Dictionary_object__object__o *)v250,
+                                                     (Il2CppObject *)StringLiteral_17454/*"cache"*/,
+                                                     (const MethodInfo_308DC3C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+      if ( ((unsigned __int8)this & 1) != 0 )
+      {
+        v313 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        this = (NetworkManager__RequestCR_d__213_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
+                                                       (System_Collections_Generic_Dictionary_object__object__o *)v250,
+                                                       (Il2CppObject *)StringLiteral_17454/*"cache"*/,
+                                                       (const MethodInfo_308D9C8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+        if ( !v313 )
+          goto LABEL_530;
+        DataManager__updateJsonData((DataManager_o *)v313, (Il2CppObject *)this, 0LL);
+      }
+      v314 = v2->fields._responseList_5__7;
+      if ( !v314 )
+        goto LABEL_530;
+      v315 = 0LL;
+      while ( 1 )
+      {
+        v316 = v314->max_length;
+        if ( (__int64)v315 >= (int)v316 )
+          goto LABEL_140;
+        if ( v315 >= v316 )
+          goto LABEL_532;
+        v317 = v314->m_Items[v315];
+        if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+        this = (NetworkManager__RequestCR_d__213_o *)NetworkManager__ExecuteCommand(v317, 0LL);
+        if ( (_DWORD)this )
+          break;
+        v314 = v2->fields._responseList_5__7;
+        ++v315;
+        if ( !v314 )
+          goto LABEL_530;
+      }
+      if ( !v317 )
+        goto LABEL_530;
+      v428 = System_String__Concat_60325748((System_String_o *)StringLiteral_22582/*"response execute error "*/, v317->fields.nid, 0LL);
+      v2->fields._errorCode_5__3 = v428;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._errorCode_5__3, (int32_t)v428, v429, v430);
+      v431 = (ResponseFailData_o *)sub_1B00F18(ResponseFailData_TypeInfo);
+      ResponseFailData___ctor(v431, v317, 0LL);
+      v2->fields._failData_5__6 = v431;
+      v432 = &v2->fields._failData_5__6;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._failData_5__6, (int32_t)v431, v433, v434);
+      if ( !v2->fields._failData_5__6 )
+LABEL_530:
+        sub_1B00F28(this, method);
+      this = (NetworkManager__RequestCR_d__213_o *)System_String__IsNullOrEmpty(
+                                                     v2->fields._failData_5__6->fields.action,
+                                                     0LL);
+      if ( ((unsigned __int8)this & 1) != 0 )
+      {
+        v437 = &StringLiteral_22599/*"retry"*/;
+      }
+      else
+      {
+        if ( !*v432 )
+          goto LABEL_530;
+        v437 = (__int64 *)&(*v432)->fields.action;
+      }
+      v439 = *v437;
+      v2->fields._errorAction_5__5 = (struct System_String_o *)*v437;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._errorAction_5__5, v439, v435, v436);
+LABEL_140:
       this = (NetworkManager__RequestCR_d__213_o *)v2->fields.work;
       if ( !this )
-        goto LABEL_543;
+        goto LABEL_530;
       this = (NetworkManager__RequestCR_d__213_o *)((__int64 (__fastcall *)(NetworkManager__RequestCR_d__213_o *, void *))this->klass->vtable._8_System_Collections_IEnumerator_Reset.method)(
                                                      this,
                                                      this->klass[1]._1.image);
       if ( ((unsigned __int8)this & 1) == 0 )
       {
-        this = *p_work;
-        if ( !*p_work )
-          goto LABEL_543;
+        this = (NetworkManager__RequestCR_d__213_o *)v2->fields.work;
+        if ( !this )
+          goto LABEL_530;
         this = (NetworkManager__RequestCR_d__213_o *)((__int64 (__fastcall *)(NetworkManager__RequestCR_d__213_o *, const char *))this->klass[1]._1.gc_desc)(
                                                        this,
                                                        this->klass[1]._1.name);
         if ( ((unsigned __int8)this & 1) != 0 )
         {
-          this = (NetworkManager__RequestCR_d__213_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          this = (NetworkManager__RequestCR_d__213_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
           if ( !this )
-            goto LABEL_543;
+            goto LABEL_530;
           CommonUI__SetConnect((CommonUI_o *)this, 0, 0LL);
         }
       }
-      if ( !p_errorCode_5__3->klass )
+      if ( !*p_errorCode_5__3 )
       {
         if ( !_4__this )
-          goto LABEL_543;
+          goto LABEL_530;
         NetworkManager__OnEndCommunication(_4__this, v2->fields.work, v2->fields._responseList_5__7, 0LL);
-LABEL_478:
-        v449 = (System_Int32_array **)v2->fields._data_5__2;
-        if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !NetworkManager_TypeInfo->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        }
-        if ( !byte_438A0E3 )
-        {
-          sub_B775C4(&NetworkManager_TypeInfo);
-          byte_438A0E3 = 1;
-        }
-        v450 = NetworkManager_TypeInfo;
-        if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !NetworkManager_TypeInfo->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-          v450 = NetworkManager_TypeInfo;
-        }
-        p_errorDialogResponseData = (BattleServantConfConponent_o *)&v450->static_fields->errorDialogResponseData;
-        p_errorDialogResponseData->klass = (BattleServantConfConponent_c *)v449;
-        sub_B77560(p_errorDialogResponseData, v449, v6, v7, v8, v9, v10, v11);
-        return 0;
+        goto LABEL_478;
       }
-      p_responseList_5__7 = (BattleServantConfConponent_o *)&v2->fields._responseList_5__7;
       method = (const MethodInfo *)v2->fields._responseList_5__7;
       if ( !_4__this )
-        goto LABEL_543;
+        goto LABEL_530;
       _4__this->fields.communicationWorkResponseList = (struct ResponseData_array *)method;
-      sub_B77560(
-        (BattleServantConfConponent_o *)&_4__this->fields.communicationWorkResponseList,
-        (System_Int32_array **)method,
-        v190,
-        v191,
-        v192,
-        v193,
-        v194,
-        v195);
+      sub_1B00C70(
+        (ServantStatusBattleListViewItem_o *)&_4__this->fields.communicationWorkResponseList,
+        (int32_t)method,
+        v237,
+        v238);
       v2->fields._responseList_5__7 = 0LL;
-      sub_B77560(
-        (BattleServantConfConponent_o *)&v2->fields._responseList_5__7,
-        0LL,
-        v196,
-        v197,
-        v198,
-        v199,
-        v200,
-        v201);
-      p_errorLocalizeCode_5__4 = (BattleServantConfConponent_o *)&v2->fields._errorLocalizeCode_5__4;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._responseList_5__7, 0, v239, v240);
+      v241 = &v2->fields._errorLocalizeCode_5__4;
       errorLocalizeCode_5__4 = v2->fields._errorLocalizeCode_5__4;
-      if ( errorLocalizeCode_5__4 )
+      if ( !errorLocalizeCode_5__4 )
       {
-        data = (System_String_o *)StringLiteral_1/*""*/;
-        goto LABEL_309;
-      }
-      errorAction_5__5 = v2->fields._errorAction_5__5;
-      if ( !errorAction_5__5 )
-        goto LABEL_620;
-      if ( System_String__op_Equality(v2->fields._errorAction_5__5, (System_String_o *)StringLiteral_22789/*"stay"*/, 0LL)
-        || System_String__op_Equality(errorAction_5__5, (System_String_o *)StringLiteral_22800/*"stay_no_dialog"*/, 0LL) )
-      {
-        v211 = (System_Int32_array ***)&StringLiteral_9458/*"NETWORK_ERROR_SERVER_CANCEL_MESSAGE"*/;
-LABEL_307:
-        v338 = *v211;
-        p_errorLocalizeCode_5__4->klass = (BattleServantConfConponent_c *)*v211;
-        sub_B77560(
-          (BattleServantConfConponent_o *)&v2->fields._errorLocalizeCode_5__4,
-          v338,
-          v202,
-          v203,
-          v204,
-          v205,
-          v206,
-          v207);
-        goto LABEL_308;
-      }
-      if ( System_String__op_Equality(errorAction_5__5, (System_String_o *)StringLiteral_22273/*"retry"*/, 0LL)
-        || System_String__op_Equality(errorAction_5__5, (System_String_o *)StringLiteral_22223/*"reload_cache"*/, 0LL) )
-      {
-        if ( (BYTE3(ManagementManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !ManagementManager_TypeInfo->_2.cctor_finished )
+        errorAction_5__5 = v2->fields._errorAction_5__5;
+        if ( System_String__op_Equality(errorAction_5__5, (System_String_o *)StringLiteral_23188/*"stay"*/, 0LL)
+          || System_String__op_Equality(errorAction_5__5, (System_String_o *)StringLiteral_23199/*"stay_no_dialog"*/, 0LL) )
         {
-          j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
+          v248 = &StringLiteral_9128/*"NETWORK_ERROR_SERVER_CANCEL_MESSAGE"*/;
         }
-        if ( !byte_4388A00 )
-        {
-          sub_B775C4(&ManagementManager_TypeInfo);
-          byte_4388A00 = 1;
-        }
-        v324 = ManagementManager_TypeInfo;
-        if ( (BYTE3(ManagementManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !ManagementManager_TypeInfo->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-          v324 = ManagementManager_TypeInfo;
-        }
-        isDuringStartup = v324->static_fields->isDuringStartup;
-        v326 = &StringLiteral_9448/*"NETWORK_ERROR_BOOT_RETRY_MESSAGE"*/;
-        v327 = &StringLiteral_9462/*"NETWORK_ERROR_TIME_OVER_MESSAGE"*/;
-LABEL_304:
-        if ( isDuringStartup )
-          v211 = (System_Int32_array ***)v326;
         else
-          v211 = (System_Int32_array ***)v327;
-        goto LABEL_307;
+        {
+          if ( System_String__op_Equality(errorAction_5__5, (System_String_o *)StringLiteral_22599/*"retry"*/, 0LL)
+            || System_String__op_Equality(errorAction_5__5, (System_String_o *)StringLiteral_22539/*"reload_cache"*/, 0LL) )
+          {
+            if ( !ManagementManager_TypeInfo->_2.cctor_finished )
+              j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
+            if ( !byte_48E18EA )
+            {
+              sub_1B00CCC(&ManagementManager_TypeInfo, v278);
+              byte_48E18EA = 1;
+            }
+            v279 = ManagementManager_TypeInfo;
+            if ( !ManagementManager_TypeInfo->_2.cctor_finished )
+            {
+              j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
+              v279 = ManagementManager_TypeInfo;
+            }
+            isDuringStartup = v279->static_fields->isDuringStartup;
+            v281 = &StringLiteral_9132/*"NETWORK_ERROR_TIME_OVER_MESSAGE"*/;
+            v282 = &StringLiteral_9118/*"NETWORK_ERROR_BOOT_RETRY_MESSAGE"*/;
+          }
+          else
+          {
+            if ( System_String__op_Equality(errorAction_5__5, (System_String_o *)StringLiteral_19560/*"goto_login_access"*/, 0LL)
+              || System_String__op_Equality(errorAction_5__5, (System_String_o *)StringLiteral_22520/*"refresh_terminal"*/, 0LL) )
+            {
+LABEL_215:
+              errorLocalizeCode_5__4 = *v241;
+              title = (System_String_o *)StringLiteral_1/*""*/;
+              detail = (System_String_o *)StringLiteral_1/*""*/;
+              if ( !errorLocalizeCode_5__4 )
+                goto LABEL_219;
+              goto LABEL_216;
+            }
+            if ( !ManagementManager_TypeInfo->_2.cctor_finished )
+              j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
+            if ( !byte_48E18EA )
+            {
+              sub_1B00CCC(&ManagementManager_TypeInfo, method);
+              byte_48E18EA = 1;
+            }
+            v438 = ManagementManager_TypeInfo;
+            if ( !ManagementManager_TypeInfo->_2.cctor_finished )
+            {
+              j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
+              v438 = ManagementManager_TypeInfo;
+            }
+            isDuringStartup = v438->static_fields->isDuringStartup;
+            v281 = &StringLiteral_9129/*"NETWORK_ERROR_SERVER_CONNECT_MESSAGE"*/;
+            v282 = (__int64 *)&StringLiteral_9115/*"NETWORK_ERROR_BOOT_MESSAGE"*/;
+          }
+          if ( isDuringStartup )
+            v248 = v282;
+          else
+            v248 = v281;
+        }
+        v283 = *v248;
+        *v241 = (System_String_o *)*v248;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._errorLocalizeCode_5__4, v283, v246, v247);
+        goto LABEL_215;
       }
-      if ( !System_String__op_Equality(errorAction_5__5, (System_String_o *)StringLiteral_19454/*"goto_login_access"*/, 0LL)
-        && !System_String__op_Equality(errorAction_5__5, (System_String_o *)StringLiteral_22205/*"refresh_terminal"*/, 0LL) )
+      title = (System_String_o *)StringLiteral_1/*""*/;
+LABEL_216:
+      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+      detail = LocalizationManager__Get(errorLocalizeCode_5__4, 0LL);
+LABEL_219:
+      failData_5__6 = v2->fields._failData_5__6;
+      if ( failData_5__6 )
       {
-LABEL_620:
-        if ( (BYTE3(ManagementManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !ManagementManager_TypeInfo->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-        }
-        if ( !byte_4388A00 )
-        {
-          sub_B775C4(&ManagementManager_TypeInfo);
-          byte_4388A00 = 1;
-        }
-        v337 = ManagementManager_TypeInfo;
-        if ( (BYTE3(ManagementManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !ManagementManager_TypeInfo->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-          v337 = ManagementManager_TypeInfo;
-        }
-        isDuringStartup = v337->static_fields->isDuringStartup;
-        v326 = (__int64 *)&StringLiteral_9445/*"NETWORK_ERROR_BOOT_MESSAGE"*/;
-        v327 = &StringLiteral_9459/*"NETWORK_ERROR_SERVER_CONNECT_MESSAGE"*/;
-        goto LABEL_304;
-      }
-LABEL_308:
-      errorLocalizeCode_5__4 = (System_String_o *)p_errorLocalizeCode_5__4->klass;
-      data = (System_String_o *)StringLiteral_1/*""*/;
-      v339 = (System_String_o *)StringLiteral_1/*""*/;
-      if ( p_errorLocalizeCode_5__4->klass )
-      {
-LABEL_309:
-        if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !LocalizationManager_TypeInfo->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        }
-        v339 = LocalizationManager__Get(errorLocalizeCode_5__4, 0LL);
-      }
-      p_failData_5__6 = (BattleServantConfConponent_o *)&v2->fields._failData_5__6;
-      v340 = v2->fields._failData_5__6;
-      v581 = _4__this;
-      if ( v340 )
-      {
-        this = (NetworkManager__RequestCR_d__213_o *)System_String__IsNullOrEmpty(v340->fields.title, 0LL);
-        v341 = p_failData_5__6->klass;
+        this = (NetworkManager__RequestCR_d__213_o *)System_String__IsNullOrEmpty(failData_5__6->fields.title, 0LL);
+        v286 = v2->fields._failData_5__6;
         if ( ((unsigned __int8)this & 1) != 0 )
         {
-          if ( !v341 )
-            goto LABEL_543;
+          if ( !v286 )
+            goto LABEL_530;
         }
         else
         {
-          if ( !v341 )
-            goto LABEL_543;
-          data = (System_String_o *)v341->_1.this_arg.data;
+          if ( !v286 )
+            goto LABEL_530;
+          title = v286->fields.title;
         }
-        this = (NetworkManager__RequestCR_d__213_o *)System_String__IsNullOrEmpty(
-                                                       *(System_String_o **)&v341->_1.this_arg.bits,
-                                                       0LL);
+        this = (NetworkManager__RequestCR_d__213_o *)System_String__IsNullOrEmpty(v286->fields.detail, 0LL);
         if ( ((unsigned __int8)this & 1) == 0 )
         {
-          if ( !p_failData_5__6->klass )
-            goto LABEL_543;
-          v339 = *(System_String_o **)&p_failData_5__6->klass->_1.this_arg.bits;
+          v288 = v2->fields._failData_5__6;
+          if ( !v288 )
+            goto LABEL_530;
+          detail = v288->fields.detail;
         }
-        this = (NetworkManager__RequestCR_d__213_o *)System_String__IsNullOrEmpty(v339, 0LL);
+        this = (NetworkManager__RequestCR_d__213_o *)System_String__IsNullOrEmpty(detail, 0LL);
         if ( ((unsigned __int8)this & 1) == 0 )
         {
-          if ( !p_failData_5__6->klass )
-            goto LABEL_543;
-          if ( p_failData_5__6->klass->_1.byval_arg.data )
+          v289 = v2->fields._failData_5__6;
+          if ( !v289 )
+            goto LABEL_530;
+          if ( v289->fields.csId )
           {
-            if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-              && !LocalizationManager_TypeInfo->_2.cctor_finished )
-            {
+            if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            }
             this = (NetworkManager__RequestCR_d__213_o *)LocalizationManager__Get(
-                                                           (System_String_o *)StringLiteral_9449/*"NETWORK_ERROR_CSID_CODE"*/,
+                                                           (System_String_o *)StringLiteral_9119/*"NETWORK_ERROR_CSID_CODE"*/,
                                                            0LL);
-            if ( !p_failData_5__6->klass )
-              goto LABEL_543;
-            v342 = System_String__Format(
-                     (System_String_o *)this,
-                     (Il2CppObject *)p_failData_5__6->klass->_1.byval_arg.data,
-                     0LL);
-            this = (NetworkManager__RequestCR_d__213_o *)System_String__Concat_44904220(
-                                                           v339,
-                                                           (System_String_o *)StringLiteral_26/*"\n"*/,
-                                                           v342,
+            v290 = v2->fields._failData_5__6;
+            if ( !v290 )
+              goto LABEL_530;
+            v291 = System_String__Format((System_String_o *)this, (Il2CppObject *)v290->fields.csId, 0LL);
+            this = (NetworkManager__RequestCR_d__213_o *)System_String__Concat_60337008(
+                                                           detail,
+                                                           (System_String_o *)StringLiteral_43/*"\n"*/,
+                                                           v291,
                                                            0LL);
-            v339 = (System_String_o *)this;
+            detail = (System_String_o *)this;
           }
         }
-        if ( !p_failData_5__6->klass )
-          goto LABEL_543;
-        value = (System_String_o *)p_failData_5__6->klass->_1.element_class;
+        v292 = v2->fields._failData_5__6;
+        if ( !v292 )
+          goto LABEL_530;
+        url = v292->fields.url;
       }
       else
       {
-        value = 0LL;
+        url = 0LL;
       }
-      this = *p_work;
-      title = data;
-      if ( !*p_work )
-        goto LABEL_543;
-      p_errorAction_5__5 = &v2->fields._errorAction_5__5;
+      this = (NetworkManager__RequestCR_d__213_o *)v2->fields.work;
+      if ( !this )
+        goto LABEL_530;
       if ( (((__int64 (__fastcall *)(NetworkManager__RequestCR_d__213_o *, void *))this->klass->vtable._8_System_Collections_IEnumerator_Reset.method)(
               this,
-              this->klass[1]._1.image) & 1) == 0 )
-        goto LABEL_341;
-      v343 = *p_errorAction_5__5;
-      if ( !*p_errorAction_5__5 )
-        goto LABEL_468;
-      if ( !System_String__op_Equality(*p_errorAction_5__5, (System_String_o *)StringLiteral_22789/*"stay"*/, 0LL)
-        && !System_String__op_Equality(v343, (System_String_o *)StringLiteral_22800/*"stay_no_dialog"*/, 0LL)
-        && !System_String__op_Equality(v343, (System_String_o *)StringLiteral_22273/*"retry"*/, 0LL)
-        && !System_String__op_Equality(v343, (System_String_o *)StringLiteral_22223/*"reload_cache"*/, 0LL)
-        || (v344 = NetworkManager__OnBackgroundErrorCommunication(
-                     v581,
-                     v581->fields.communicationWork,
-                     (System_String_o *)p_errorCode_5__3->klass,
+              this->klass[1]._1.image) & 1) == 0
+        || (v293 = v2->fields._errorAction_5__5,
+            !System_String__op_Equality(v293, (System_String_o *)StringLiteral_23188/*"stay"*/, 0LL))
+        && !System_String__op_Equality(v293, (System_String_o *)StringLiteral_23199/*"stay_no_dialog"*/, 0LL)
+        && !System_String__op_Equality(v293, (System_String_o *)StringLiteral_22599/*"retry"*/, 0LL)
+        && !System_String__op_Equality(v293, (System_String_o *)StringLiteral_22539/*"reload_cache"*/, 0LL)
+        || (v294 = NetworkManager__OnBackgroundErrorCommunication(
+                     _4__this,
+                     _4__this->fields.communicationWork,
+                     *p_errorCode_5__3,
                      0,
                      0LL),
             result = 0,
-            !v344) )
+            !v294) )
       {
-LABEL_341:
-        v345 = *p_errorAction_5__5;
-        if ( !*p_errorAction_5__5 )
-          goto LABEL_468;
-        v346 = PrivateImplementationDetails___ComputeStringHash_28503548(*p_errorAction_5__5, 0LL);
-        if ( v346 <= 0xA56F89EB )
+        v296 = v2->fields._errorAction_5__5;
+        v297 = PrivateImplementationDetails___ComputeStringHash(v296, 0LL);
+        if ( v297 <= 0xA56F89EB )
         {
-          if ( v346 <= 0x43CDBBC3 )
+          if ( v297 <= 0x43CDBBC3 )
           {
-            if ( v346 != 1019014393 )
+            if ( v297 != 1019014393 )
             {
-              if ( v346 == 1062826843 )
+              if ( v297 == 1062826843 )
               {
-                if ( System_String__op_Equality(v345, (System_String_o *)StringLiteral_19455/*"goto_title"*/, 0LL) )
+                if ( System_String__op_Equality(v296, (System_String_o *)StringLiteral_19561/*"goto_title"*/, 0LL) )
                 {
-                  v358 = NetworkManager_TypeInfo;
-                  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 )
+                  v345 = NetworkManager_TypeInfo;
+                  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
                   {
-                    v359 = (Il2CppObject *)v581;
-                    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-                    {
-                      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-                      v358 = NetworkManager_TypeInfo;
-                    }
+                    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+                    v345 = NetworkManager_TypeInfo;
                   }
-                  else
-                  {
-                    v359 = (Il2CppObject *)v581;
-                  }
-                  v358->static_fields->isRebootBlock = 1;
-                  v551 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-                  System_Action___ctor(v551, v359, Method_NetworkManager_OnClickErrorReboot__, 0LL);
-                  NetworkManager__ErrorDialog((NetworkManager_o *)v359, title, v339, value, v551, 0LL);
+                  v345->static_fields->isRebootBlock = 1;
+                  v346 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+                  System_Action___ctor(v346, (Il2CppObject *)_4__this, Method_NetworkManager_OnClickErrorReboot__, 0LL);
+                  NetworkManager__ErrorDialog(_4__this, title, detail, url, v346, 0LL);
                   goto LABEL_470;
                 }
               }
-              else if ( v346 == 1137556419
-                     && System_String__op_Equality(v345, (System_String_o *)StringLiteral_22800/*"stay_no_dialog"*/, 0LL) )
+              else if ( v297 == 1137556419
+                     && System_String__op_Equality(v296, (System_String_o *)StringLiteral_23199/*"stay_no_dialog"*/, 0LL) )
               {
-                NetworkManager__OnClickErrorStay(v581, 0LL);
+                NetworkManager__OnClickErrorStay(_4__this, 0LL);
                 goto LABEL_470;
               }
-              goto LABEL_468;
+              goto LABEL_445;
             }
             this = (NetworkManager__RequestCR_d__213_o *)System_String__op_Equality(
-                                                           v345,
-                                                           (System_String_o *)StringLiteral_22223/*"reload_cache"*/,
+                                                           v296,
+                                                           (System_String_o *)StringLiteral_22539/*"reload_cache"*/,
                                                            0LL);
             if ( ((unsigned __int8)this & 1) != 0 )
             {
-              if ( !p_failData_5__6->klass )
-                goto LABEL_543;
-              cancleTxta = (int32_t)p_failData_5__6->klass->_1.typeMetadataHandle;
-              v360 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-              v361 = &Method_NetworkManager_OnClickReloadCache__;
-LABEL_460:
-              v401 = *v361;
-              v354 = (Il2CppObject *)v581;
-LABEL_461:
-              v402 = v360;
-              System_Action___ctor(v360, v354, v401, 0LL);
-              v404 = value;
-              v403 = title;
-              v405 = cancleTxta;
-              v406 = (NetworkManager_o *)v354;
-              v407 = v339;
-              v408 = v402;
-LABEL_462:
-              NetworkManager__WarningDialog(v406, v403, v407, v404, v405, v408, 0LL);
-              goto LABEL_470;
+              v347 = v2->fields._failData_5__6;
+              if ( !v347 )
+                goto LABEL_530;
+              errorType = v347->fields.errorType;
+              v348 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+              v349 = &Method_NetworkManager_OnClickReloadCache__;
+              goto LABEL_469;
             }
-            goto LABEL_468;
+            goto LABEL_445;
           }
-          if ( v346 <= 0x9918C6CA )
+          if ( v297 <= 0x9918C6CA )
           {
-            if ( v346 != -1726429494 )
+            if ( v297 == -1726429494 )
             {
-              if ( v346 != 2106643173 || !System_String__op_Equality(v345, (System_String_o *)StringLiteral_22205/*"refresh_terminal"*/, 0LL) )
-                goto LABEL_468;
-              if ( (BYTE3(BattleData_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-                && !BattleData_TypeInfo->_2.cctor_finished )
+              if ( System_String__op_Equality(v296, (System_String_o *)StringLiteral_20460/*"invalid_user"*/, 0LL) )
               {
-                j_il2cpp_runtime_class_init_0(BattleData_TypeInfo);
-              }
-              BattleData__deleteSaveData(0LL);
-              BattleData__setReserveResumeBattle(0, 0, 0, 0LL);
-              this = (NetworkManager__RequestCR_d__213_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
-              v354 = (Il2CppObject *)v581;
-              if ( !this )
-                goto LABEL_543;
-              ServantAssetLoadManager__EndRetryTransition((ServantAssetLoadManager_o *)this, 0LL);
-              this = (NetworkManager__RequestCR_d__213_o *)System_String__IsNullOrEmpty(v339, 0LL);
-              if ( ((unsigned __int8)this & 1) != 0 )
-              {
-                this = (NetworkManager__RequestCR_d__213_o *)System_String__IsNullOrEmpty(value, 0LL);
-                if ( ((unsigned __int8)this & 1) != 0 )
+                v397 = TitleRootComponent_TypeInfo;
+                if ( !TitleRootComponent_TypeInfo->_2.cctor_finished )
                 {
-                  NetworkManager__OnClickRefreshTerminal(v581, 0LL);
-                  goto LABEL_470;
+                  j_il2cpp_runtime_class_init_0(TitleRootComponent_TypeInfo);
+                  v397 = TitleRootComponent_TypeInfo;
                 }
-              }
-              if ( !p_failData_5__6->klass )
-                goto LABEL_543;
-              cancleTxta = (int32_t)p_failData_5__6->klass->_1.typeMetadataHandle;
-              v360 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-              v552 = &Method_NetworkManager_OnClickRefreshTerminal__;
-LABEL_570:
-              v401 = *v552;
-              goto LABEL_461;
-            }
-            if ( !System_String__op_Equality(v345, (System_String_o *)StringLiteral_20297/*"invalid_user"*/, 0LL) )
-              goto LABEL_468;
-            v362 = TitleRootComponent_TypeInfo;
-            if ( (BYTE3(TitleRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-              && !TitleRootComponent_TypeInfo->_2.cctor_finished )
-            {
-              j_il2cpp_runtime_class_init_0(TitleRootComponent_TypeInfo);
-              v362 = TitleRootComponent_TypeInfo;
-            }
-            if ( v362->static_fields->shouldFadeInOnError )
-            {
-              v363 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-              v364 = AvalonSceneManager_TypeInfo;
-              if ( (BYTE3(AvalonSceneManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-                && !AvalonSceneManager_TypeInfo->_2.cctor_finished )
-              {
-                v365 = v363;
-                j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
-                v364 = AvalonSceneManager_TypeInfo;
-                v363 = v365;
-              }
-              this = (NetworkManager__RequestCR_d__213_o *)NetworkManager___c_TypeInfo;
-              DEFAULT_FADE_TIME = v364->static_fields->DEFAULT_FADE_TIME;
-              if ( (BYTE3(NetworkManager___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-                && !NetworkManager___c_TypeInfo->_2.cctor_finished )
-              {
-                v367 = v363;
-                j_il2cpp_runtime_class_init_0(NetworkManager___c_TypeInfo);
-                this = (NetworkManager__RequestCR_d__213_o *)NetworkManager___c_TypeInfo;
-                v363 = v367;
-              }
-              v368 = this[1].fields.work;
-              v369 = (System_Action_o *)*((_QWORD *)v368 + 1);
-              if ( !v369 )
-              {
-                valuea = (System_String_o *)v363;
-                if ( (BYTE3(this[2].klass) & 4) != 0 && !LODWORD(this[1].fields._errorLocalizeCode_5__4) )
+                if ( v397->static_fields->shouldFadeInOnError )
                 {
-                  j_il2cpp_runtime_class_init_0(this);
-                  v368 = NetworkManager___c_TypeInfo->static_fields;
+                  v398 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+                  v399 = AvalonSceneManager_TypeInfo;
+                  if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
+                  {
+                    j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
+                    v399 = AvalonSceneManager_TypeInfo;
+                  }
+                  this = (NetworkManager__RequestCR_d__213_o *)NetworkManager___c_TypeInfo;
+                  DEFAULT_FADE_TIME = v399->static_fields->DEFAULT_FADE_TIME;
+                  if ( !NetworkManager___c_TypeInfo->_2.cctor_finished )
+                  {
+                    j_il2cpp_runtime_class_init_0(NetworkManager___c_TypeInfo);
+                    this = (NetworkManager__RequestCR_d__213_o *)NetworkManager___c_TypeInfo;
+                  }
+                  monitor = (System_Action_o *)this[1].fields.work->monitor;
+                  if ( !monitor )
+                  {
+                    if ( !LODWORD(this[1].fields._errorLocalizeCode_5__4) )
+                    {
+                      j_il2cpp_runtime_class_init_0(this);
+                      this = (NetworkManager__RequestCR_d__213_o *)NetworkManager___c_TypeInfo;
+                    }
+                    v402 = (Il2CppObject *)this[1].fields.work->klass;
+                    monitor = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+                    System_Action___ctor(monitor, v402, Method_NetworkManager___c__RequestCR_b__213_1__, 0LL);
+                    v403 = NetworkManager___c_TypeInfo->static_fields;
+                    v403->__9__213_1 = monitor;
+                    sub_1B00C70((ServantStatusBattleListViewItem_o *)&v403->__9__213_1, (int32_t)monitor, v404, v405);
+                  }
+                  if ( !v398 )
+                    goto LABEL_530;
+                  CommonUI__maskFadein((CommonUI_o *)v398, DEFAULT_FADE_TIME, monitor, 0LL);
                 }
-                v370 = *(Il2CppObject **)v368;
-                v369 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-                System_Action___ctor(v369, v370, Method_NetworkManager___c__RequestCR_b__213_1__, 0LL);
-                v371 = NetworkManager___c_TypeInfo->static_fields;
-                v371->__9__213_1 = v369;
-                sub_B77560(
-                  (BattleServantConfConponent_o *)&v371->__9__213_1,
-                  (System_Int32_array **)v369,
-                  v372,
-                  v373,
-                  v374,
-                  v375,
-                  v376,
-                  v377);
-                v363 = (CommonUI_o *)valuea;
-              }
-              if ( !v363 )
-                goto LABEL_543;
-              CommonUI__maskFadein(v363, DEFAULT_FADE_TIME, v369, 0LL);
-            }
-            v378 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-            if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-              && !LocalizationManager_TypeInfo->_2.cctor_finished )
-            {
-              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            }
-            valueb = LocalizationManager__Get((System_String_o *)StringLiteral_9464/*"NETWORK_USER_DELETE_DECIDE"*/, 0LL);
-            cancleTxtb = LocalizationManager__Get((System_String_o *)StringLiteral_9463/*"NETWORK_USER_DELETE_CANCEL"*/, 0LL);
-            v379 = (CommonConfirmDialog_ClickDelegate_o *)sub_B77694(CommonConfirmDialog_ClickDelegate_TypeInfo);
-            CommonConfirmDialog_ClickDelegate___ctor(
-              v379,
-              (Il2CppObject *)v581,
-              Method_NetworkManager_OnClickUserDelete__,
-              0LL);
-            if ( !v378 )
-              goto LABEL_543;
-            CommonUI__OpenConfirmDialog_18055364(v378, title, v339, valueb, cancleTxtb, v379, 0, 0, 0, 0LL);
-LABEL_470:
-            p_responseList_5__7->klass = 0LL;
-            sub_B77560(
-              (BattleServantConfConponent_o *)&v2->fields._responseList_5__7,
-              0LL,
-              v347,
-              v348,
-              v349,
-              v350,
-              v351,
-              v352);
-            if ( System_String__op_Equality(*p_errorAction_5__5, (System_String_o *)StringLiteral_22181/*"reconnection"*/, 0LL) )
-            {
-LABEL_471:
-              v2->fields._data_5__2 = 0LL;
-              sub_B77560((BattleServantConfConponent_o *)&v2->fields._data_5__2, 0LL, v6, v7, v8, v9, v10, v11);
-              v2->fields._errorCode_5__3 = 0LL;
-              sub_B77560(p_errorCode_5__3, 0LL, v411, v412, v413, v414, v415, v416);
-              v2->fields._errorLocalizeCode_5__4 = 0LL;
-              sub_B77560(p_errorLocalizeCode_5__4, 0LL, v417, v418, v419, v420, v421, v422);
-              v2->fields._errorAction_5__5 = 0LL;
-              sub_B77560((BattleServantConfConponent_o *)p_errorAction_5__5, 0LL, v423, v424, v425, v426, v427, v428);
-              v2->fields._failData_5__6 = 0LL;
-              sub_B77560(p_failData_5__6, 0LL, v429, v430, v431, v432, v433, v434);
-              v2->fields._responseList_5__7 = 0LL;
-              sub_B77560(p_responseList_5__7, 0LL, v435, v436, v437, v438, v439, v440);
-              this = (NetworkManager__RequestCR_d__213_o *)v2->fields.work;
-              if ( !this )
-                goto LABEL_543;
-              if ( (((__int64 (__fastcall *)(NetworkManager__RequestCR_d__213_o *, void *))this->klass->vtable._8_System_Collections_IEnumerator_Reset.method)(
-                      this,
-                      this->klass[1]._1.image) & 1) != 0 )
-                goto LABEL_477;
-              this = *p_work;
-              if ( !*p_work )
-                goto LABEL_543;
-              if ( (((__int64 (__fastcall *)(NetworkManager__RequestCR_d__213_o *, const char *))this->klass[1]._1.gc_desc)(
-                      this,
-                      this->klass[1]._1.name) & 1) == 0 )
-              {
-LABEL_477:
-                v441 = (UnityEngine_WaitForEndOfFrame_o *)sub_B77694(UnityEngine_WaitForEndOfFrame_TypeInfo);
-                UnityEngine_WaitForEndOfFrame___ctor(v441, 0LL);
-                v2->fields.__2__current = (Il2CppObject *)v441;
-                v442 = (BattleServantConfConponent_o *)&v2->fields.__2__current;
-                sub_B77560(v442, (System_Int32_array **)v441, v443, v444, v445, v446, v447, v448);
-                result = 1;
-                *(_DWORD *)&v442[-1].fields.isOpenAfter = 1;
-                return result;
-              }
-              this = (NetworkManager__RequestCR_d__213_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-              if ( this )
-              {
-                CommonUI__SetConnect((CommonUI_o *)this, 1, 0LL);
-                goto LABEL_477;
-              }
-              goto LABEL_543;
-            }
-            goto LABEL_478;
-          }
-          if ( v346 != -1577396083 )
-          {
-            if ( v346 != -1519416853 || !System_String__op_Equality(v345, (System_String_o *)StringLiteral_19454/*"goto_login_access"*/, 0LL) )
-              goto LABEL_468;
-            v355 = NetworkManager_TypeInfo;
-            if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 )
-            {
-              v356 = v581;
-              if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-              {
-                j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-                v355 = NetworkManager_TypeInfo;
-              }
-            }
-            else
-            {
-              v356 = v581;
-            }
-            v355->static_fields->isRebootBlock = 1;
-            this = (NetworkManager__RequestCR_d__213_o *)System_String__IsNullOrEmpty(v339, 0LL);
-            if ( ((unsigned __int8)this & 1) != 0 )
-            {
-              this = (NetworkManager__RequestCR_d__213_o *)System_String__IsNullOrEmpty(value, 0LL);
-              if ( ((unsigned __int8)this & 1) != 0 )
-              {
-                NetworkManager__OnClickErrorTerminal(v356, 0LL);
+                v406 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+                if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+                  j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+                v407 = LocalizationManager__Get((System_String_o *)StringLiteral_9134/*"NETWORK_USER_DELETE_DECIDE"*/, 0LL);
+                v408 = LocalizationManager__Get((System_String_o *)StringLiteral_9133/*"NETWORK_USER_DELETE_CANCEL"*/, 0LL);
+                v409 = (CommonConfirmDialog_ClickDelegate_o *)sub_1B00F18(CommonConfirmDialog_ClickDelegate_TypeInfo);
+                CommonConfirmDialog_ClickDelegate___ctor(
+                  v409,
+                  (Il2CppObject *)_4__this,
+                  Method_NetworkManager_OnClickUserDelete__,
+                  0LL);
+                if ( !v406 )
+                  goto LABEL_530;
+                CommonUI__OpenConfirmDialog_29936704((CommonUI_o *)v406, title, detail, v407, v408, v409, 0, 0, 0, 0LL);
                 goto LABEL_470;
               }
             }
-            if ( !p_failData_5__6->klass )
-              goto LABEL_543;
-            v354 = (Il2CppObject *)v356;
-            cancleTxta = (int32_t)p_failData_5__6->klass->_1.typeMetadataHandle;
-            v360 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-            v552 = &Method_NetworkManager_OnClickErrorTerminal__;
-            goto LABEL_570;
-          }
-          if ( !System_String__op_Equality(v345, (System_String_o *)StringLiteral_18401/*"do_signup"*/, 0LL) )
-            goto LABEL_468;
-          if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-            && !NetworkManager_TypeInfo->_2.cctor_finished )
-          {
-            j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-          }
-          NetworkManager__DeleteSignupData(0LL);
-LABEL_458:
-          if ( !p_failData_5__6->klass )
-            goto LABEL_543;
-          cancleTxta = (int32_t)p_failData_5__6->klass->_1.typeMetadataHandle;
-          v360 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-          v361 = &Method_NetworkManager_OnClickErrorStay__;
-          goto LABEL_460;
-        }
-        if ( v346 > 0xCC10A7C9 )
-        {
-          if ( v346 <= 0xDA79AAB9 )
-          {
-            if ( v346 != -809642680 )
+            else if ( v297 == 2106643173
+                   && System_String__op_Equality(v296, (System_String_o *)StringLiteral_22520/*"refresh_terminal"*/, 0LL) )
             {
-              if ( v346 == -629560647 && System_String__op_Equality(v345, (System_String_o *)StringLiteral_22273/*"retry"*/, 0LL) )
+              if ( !BattleData_TypeInfo->_2.cctor_finished )
+                j_il2cpp_runtime_class_init_0(BattleData_TypeInfo);
+              BattleData__deleteSaveData(0LL);
+              BattleData__setReserveResumeBattle(0, 0, 0, 0LL);
+              this = (NetworkManager__RequestCR_d__213_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
+              if ( !this )
+                goto LABEL_530;
+              ServantAssetLoadManager__EndRetryTransition((ServantAssetLoadManager_o *)this, 0LL);
+              this = (NetworkManager__RequestCR_d__213_o *)System_String__IsNullOrEmpty(detail, 0LL);
+              if ( ((unsigned __int8)this & 1) != 0 )
               {
-                this = *p_work;
-                if ( !*p_work )
-                  goto LABEL_543;
-                if ( (((__int64 (__fastcall *)(NetworkManager__RequestCR_d__213_o *, Il2CppClass *))this->klass[1]._1.castClass)(
-                        this,
-                        this->klass[1]._1.declaringType) & 1) != 0 )
+                this = (NetworkManager__RequestCR_d__213_o *)System_String__IsNullOrEmpty(url, 0LL);
+                if ( ((unsigned __int8)this & 1) != 0 )
                 {
-                  if ( NetworkManager__OnErrorCommunication(
-                         v581,
-                         v581->fields.communicationWork,
-                         (System_String_o *)p_errorCode_5__3->klass,
-                         0LL) )
-                  {
-                    return 0;
-                  }
+                  NetworkManager__OnClickRefreshTerminal(_4__this, 0LL);
+                  goto LABEL_470;
+                }
+              }
+              v441 = v2->fields._failData_5__6;
+              if ( !v441 )
+                goto LABEL_530;
+              errorType = v441->fields.errorType;
+              v348 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+              v349 = &Method_NetworkManager_OnClickRefreshTerminal__;
+              goto LABEL_469;
+            }
+            goto LABEL_445;
+          }
+          if ( v297 != -1577396083 )
+          {
+            if ( v297 == -1519416853 && System_String__op_Equality(v296, (System_String_o *)StringLiteral_19560/*"goto_login_access"*/, 0LL) )
+            {
+              v304 = NetworkManager_TypeInfo;
+              if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+              {
+                j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+                v304 = NetworkManager_TypeInfo;
+              }
+              v304->static_fields->isRebootBlock = 1;
+              this = (NetworkManager__RequestCR_d__213_o *)System_String__IsNullOrEmpty(detail, 0LL);
+              if ( ((unsigned __int8)this & 1) != 0 )
+              {
+                this = (NetworkManager__RequestCR_d__213_o *)System_String__IsNullOrEmpty(url, 0LL);
+                if ( ((unsigned __int8)this & 1) != 0 )
+                {
+                  NetworkManager__OnClickErrorTerminal(_4__this, 0LL);
+                  goto LABEL_470;
+                }
+              }
+              v440 = v2->fields._failData_5__6;
+              if ( !v440 )
+                goto LABEL_530;
+              errorType = v440->fields.errorType;
+              v348 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+              v349 = &Method_NetworkManager_OnClickErrorTerminal__;
+              goto LABEL_469;
+            }
+            goto LABEL_445;
+          }
+          if ( !System_String__op_Equality(v296, (System_String_o *)StringLiteral_18405/*"do_signup"*/, 0LL) )
+            goto LABEL_445;
+          if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+            j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+          NetworkManager__DeleteSignupData(0LL);
+          goto LABEL_439;
+        }
+        if ( v297 > 0xCC10A7C9 )
+        {
+          if ( v297 <= 0xDA79AAB9 )
+          {
+            if ( v297 == -809642680 )
+            {
+              this = (NetworkManager__RequestCR_d__213_o *)System_String__op_Equality(
+                                                             v296,
+                                                             (System_String_o *)StringLiteral_22496/*"reconnection"*/,
+                                                             0LL);
+              if ( ((unsigned __int8)this & 1) != 0 )
+              {
+                v410 = v2->fields._failData_5__6;
+                if ( !v410 )
+                  goto LABEL_530;
+                sandboxDomain = v410->fields.sandboxDomain;
+                sandboxSeurity = v410->fields.sandboxSeurity;
+                if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+                  j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+                NetworkManager__SetGameServerRedirect(sandboxDomain, sandboxSeurity, 0LL);
+                v415 = v2->fields._failData_5__6;
+                if ( !v415 )
+                  goto LABEL_530;
+                sandboxAssetsDomain = v415->fields.sandboxAssetsDomain;
+                if ( !byte_48E21B9 )
+                {
+                  sub_1B00CCC(&NetworkManager_TypeInfo, method);
+                  byte_48E21B9 = 1;
+                }
+                v417 = NetworkManager_TypeInfo;
+                if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+                {
+                  j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+                  v417 = NetworkManager_TypeInfo;
+                }
+                v418 = v417->static_fields;
+                v418->dataServerRedirectAddress = sandboxAssetsDomain;
+                sub_1B00C70(
+                  (ServantStatusBattleListViewItem_o *)&v418->dataServerRedirectAddress,
+                  (int32_t)sandboxAssetsDomain,
+                  v413,
+                  v414);
+                v421 = v2->fields._failData_5__6;
+                if ( !v421 )
+                  goto LABEL_530;
+                sandboxWebviewDomain = v421->fields.sandboxWebviewDomain;
+                if ( !byte_48E21BA )
+                {
+                  sub_1B00CCC(&NetworkManager_TypeInfo, method);
+                  byte_48E21BA = 1;
+                }
+                v423 = NetworkManager_TypeInfo;
+                if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+                {
+                  j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+                  v423 = NetworkManager_TypeInfo;
+                }
+                v424 = v423->static_fields;
+                v424->webServerRedirectAddress = sandboxWebviewDomain;
+                sub_1B00C70(
+                  (ServantStatusBattleListViewItem_o *)&v424->webServerRedirectAddress,
+                  (int32_t)sandboxWebviewDomain,
+                  v419,
+                  v420);
+                NetworkManager__SetServerSetting_37239144(_4__this, 0LL);
+                goto LABEL_470;
+              }
+            }
+            else if ( v297 == -629560647
+                   && System_String__op_Equality(v296, (System_String_o *)StringLiteral_22599/*"retry"*/, 0LL) )
+            {
+              this = (NetworkManager__RequestCR_d__213_o *)v2->fields.work;
+              if ( !this )
+                goto LABEL_530;
+              if ( (((__int64 (__fastcall *)(NetworkManager__RequestCR_d__213_o *, Il2CppClass *))this->klass[1]._1.castClass)(
+                      this,
+                      this->klass[1]._1.declaringType) & 1) != 0 )
+              {
+                if ( NetworkManager__OnErrorCommunication(
+                       _4__this,
+                       _4__this->fields.communicationWork,
+                       *p_errorCode_5__3,
+                       0LL) )
+                {
+                  return 0;
+                }
+              }
+              else
+              {
+                if ( !ManagementManager_TypeInfo->_2.cctor_finished )
+                  j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
+                if ( !byte_48E18EA )
+                {
+                  sub_1B00CCC(&ManagementManager_TypeInfo, v303);
+                  byte_48E18EA = 1;
+                }
+                v460 = ManagementManager_TypeInfo;
+                if ( !ManagementManager_TypeInfo->_2.cctor_finished )
+                {
+                  j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
+                  v460 = ManagementManager_TypeInfo;
+                }
+                v461 = v460->static_fields->isDuringStartup;
+                v462 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+                if ( v461 )
+                {
+                  v463 = (ErrorDialog_ClickDelegate_o *)sub_1B00F18(ErrorDialog_ClickDelegate_TypeInfo);
+                  ErrorDialog_ClickDelegate___ctor(
+                    v463,
+                    (Il2CppObject *)_4__this,
+                    Method_NetworkManager_OnClickErrorRetryDialog__,
+                    0LL);
+                  if ( !v462 )
+                    goto LABEL_530;
+                  CommonUI__OpenRetryBootDialog((CommonUI_o *)v462, title, detail, v463, 0, 0LL);
+                }
+                else if ( v236 )
+                {
+                  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+                    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+                  v467 = LocalizationManager__Get((System_String_o *)StringLiteral_3719/*"COMMON_CONFIRM_RETRY"*/, 0LL);
+                  v468 = LocalizationManager__Get((System_String_o *)StringLiteral_3715/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+                  v469 = (ErrorDialog_ClickDelegate_o *)sub_1B00F18(ErrorDialog_ClickDelegate_TypeInfo);
+                  ErrorDialog_ClickDelegate___ctor(
+                    v469,
+                    (Il2CppObject *)_4__this,
+                    Method_NetworkManager_OnClickErrorRetryDialog_UnityIap__,
+                    0LL);
+                  if ( !v462 )
+                    goto LABEL_530;
+                  CommonUI__OpenRetryDialog_29936188((CommonUI_o *)v462, title, detail, v467, v468, v469, 0, 0LL);
                 }
                 else
                 {
-                  if ( (BYTE3(ManagementManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-                    && !ManagementManager_TypeInfo->_2.cctor_finished )
-                  {
-                    j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-                  }
-                  if ( !byte_4388A00 )
-                  {
-                    sub_B775C4(&ManagementManager_TypeInfo);
-                    byte_4388A00 = 1;
-                  }
-                  v555 = ManagementManager_TypeInfo;
-                  if ( (BYTE3(ManagementManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-                    && !ManagementManager_TypeInfo->_2.cctor_finished )
-                  {
-                    j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-                    v555 = ManagementManager_TypeInfo;
-                  }
-                  v556 = v555->static_fields->isDuringStartup;
-                  v557 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-                  if ( v556 )
-                  {
-                    v558 = (CommonUI_o *)v557;
-                    v559 = (ErrorDialog_ClickDelegate_o *)sub_B77694(ErrorDialog_ClickDelegate_TypeInfo);
-                    ErrorDialog_ClickDelegate___ctor(
-                      v559,
-                      (Il2CppObject *)v581,
-                      Method_NetworkManager_OnClickErrorRetryDialog__,
-                      0LL);
-                    if ( !v558 )
-                      goto LABEL_543;
-                    CommonUI__OpenRetryBootDialog(v558, title, v339, v559, 0, 0LL);
-                  }
-                  else
-                  {
-                    v563 = (CommonUI_o *)v557;
-                    if ( v189 )
-                    {
-                      if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-                        && !LocalizationManager_TypeInfo->_2.cctor_finished )
-                      {
-                        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                      }
-                      valuec = LocalizationManager__Get((System_String_o *)StringLiteral_3391/*"COMMON_CONFIRM_RETRY"*/, 0LL);
-                      cancleTxtc = LocalizationManager__Get((System_String_o *)StringLiteral_3387/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
-                      v564 = (ErrorDialog_ClickDelegate_o *)sub_B77694(ErrorDialog_ClickDelegate_TypeInfo);
-                      ErrorDialog_ClickDelegate___ctor(
-                        v564,
-                        (Il2CppObject *)v581,
-                        Method_NetworkManager_OnClickErrorRetryDialog_UnityIap__,
-                        0LL);
-                      if ( !v563 )
-                        goto LABEL_543;
-                      CommonUI__OpenRetryDialog_18054808(v563, title, v339, valuec, cancleTxtc, v564, 0, 0LL);
-                    }
-                    else
-                    {
-                      v565 = (ErrorDialog_ClickDelegate_o *)sub_B77694(ErrorDialog_ClickDelegate_TypeInfo);
-                      ErrorDialog_ClickDelegate___ctor(
-                        v565,
-                        (Il2CppObject *)v581,
-                        Method_NetworkManager_OnClickErrorRetryDialog__,
-                        0LL);
-                      if ( !v563 )
-                        goto LABEL_543;
-                      CommonUI__OpenRetryDialog(v563, title, v339, v565, 0, 0LL);
-                    }
-                  }
+                  v470 = (ErrorDialog_ClickDelegate_o *)sub_1B00F18(ErrorDialog_ClickDelegate_TypeInfo);
+                  ErrorDialog_ClickDelegate___ctor(
+                    v470,
+                    (Il2CppObject *)_4__this,
+                    Method_NetworkManager_OnClickErrorRetryDialog__,
+                    0LL);
+                  if ( !v462 )
+                    goto LABEL_530;
+                  CommonUI__OpenRetryDialog((CommonUI_o *)v462, title, detail, v470, 0, 0LL);
                 }
-                goto LABEL_470;
               }
-              goto LABEL_468;
-            }
-            this = (NetworkManager__RequestCR_d__213_o *)System_String__op_Equality(
-                                                           v345,
-                                                           (System_String_o *)StringLiteral_22181/*"reconnection"*/,
-                                                           0LL);
-            if ( ((unsigned __int8)this & 1) == 0 )
-            {
-LABEL_468:
-              v409 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-              v410 = (ErrorDialog_ClickDelegate_o *)sub_B77694(ErrorDialog_ClickDelegate_TypeInfo);
-              ErrorDialog_ClickDelegate___ctor(
-                v410,
-                (Il2CppObject *)v581,
-                Method_NetworkManager_OnClickErrorDialog__,
-                0LL);
-              if ( !v409 )
-                goto LABEL_543;
-              CommonUI__OpenErrorDialog(v409, title, v339, v410, 0, 0LL);
               goto LABEL_470;
             }
-            v380 = p_failData_5__6->klass;
-            if ( !p_failData_5__6->klass )
-              goto LABEL_543;
-            declaringType = (System_String_o *)v380->_1.declaringType;
-            castClass_low = LOBYTE(v380->_1.castClass);
-            if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-              && !NetworkManager_TypeInfo->_2.cctor_finished )
-            {
-              j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-            }
-            NetworkManager__SetGameServerRedirect(declaringType, castClass_low != 0, 0LL);
-            if ( !p_failData_5__6->klass )
-              goto LABEL_543;
-            parent = (System_Int32_array **)p_failData_5__6->klass->_1.parent;
-            if ( !byte_438A0E1 )
-            {
-              sub_B775C4(&NetworkManager_TypeInfo);
-              byte_438A0E1 = 1;
-            }
-            v390 = NetworkManager_TypeInfo;
-            if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-              && !NetworkManager_TypeInfo->_2.cctor_finished )
-            {
-              j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-              v390 = NetworkManager_TypeInfo;
-            }
-            v391 = v390->static_fields;
-            v391->dataServerRedirectAddress = (struct System_String_o *)parent;
-            sub_B77560(
-              (BattleServantConfConponent_o *)&v391->dataServerRedirectAddress,
-              parent,
-              v383,
-              v384,
-              v385,
-              v386,
-              v387,
-              v388);
-            if ( !p_failData_5__6->klass )
-              goto LABEL_543;
-            generic_class = (System_Int32_array **)p_failData_5__6->klass->_1.generic_class;
-            if ( !byte_438A0E2 )
-            {
-              sub_B775C4(&NetworkManager_TypeInfo);
-              byte_438A0E2 = 1;
-            }
-            v399 = NetworkManager_TypeInfo;
-            if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 )
-            {
-              v400 = v581;
-              if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-              {
-                j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-                v399 = NetworkManager_TypeInfo;
-              }
-            }
-            else
-            {
-              v400 = v581;
-            }
-            v560 = v399->static_fields;
-            v560->webServerRedirectAddress = (struct System_String_o *)generic_class;
-            sub_B77560(
-              (BattleServantConfConponent_o *)&v560->webServerRedirectAddress,
-              generic_class,
-              v392,
-              v393,
-              v394,
-              v395,
-              v396,
-              v397);
-            NetworkManager__SetServerSetting_26218140(v400, 0LL);
-            goto LABEL_470;
+            goto LABEL_445;
           }
-          if ( v346 == -258062273 )
+          if ( v297 == -258062273 )
           {
-            if ( System_String__op_Equality(v345, (System_String_o *)StringLiteral_20296/*"invalid_battle"*/, 0LL) )
+            if ( System_String__op_Equality(v296, (System_String_o *)StringLiteral_20459/*"invalid_battle"*/, 0LL) )
             {
-              if ( (BYTE3(BattleData_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-                && !BattleData_TypeInfo->_2.cctor_finished )
-              {
+              if ( !BattleData_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(BattleData_TypeInfo);
-              }
               BattleData__deleteSaveData(0LL);
               NetworkManager__OnEndCommunication(
-                v581,
-                v581->fields.communicationWork,
-                v581->fields.communicationWorkResponseList,
+                _4__this,
+                _4__this->fields.communicationWork,
+                _4__this->fields.communicationWorkResponseList,
                 0LL);
               goto LABEL_470;
             }
-            goto LABEL_468;
+            goto LABEL_445;
           }
-          if ( v346 != -193734025 || !System_String__op_Equality(v345, (System_String_o *)StringLiteral_18233/*"data_update"*/, 0LL) )
-            goto LABEL_468;
-          v357 = NetworkManager_TypeInfo;
-          if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-            && !NetworkManager_TypeInfo->_2.cctor_finished )
+          if ( v297 != -193734025 || !System_String__op_Equality(v296, (System_String_o *)StringLiteral_18223/*"data_update"*/, 0LL) )
+            goto LABEL_445;
+          v305 = NetworkManager_TypeInfo;
+          if ( !NetworkManager_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-            v357 = NetworkManager_TypeInfo;
+            v305 = NetworkManager_TypeInfo;
           }
-          v357->static_fields->isRebootBlock = 1;
-          if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-            && !DataManager_TypeInfo->_2.cctor_finished )
-          {
+          v305->static_fields->isRebootBlock = 1;
+          if ( !DataManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-          }
           DataManager__ClearCacheAll(0LL);
         }
         else
         {
-          if ( v346 != -1105950412 )
+          if ( v297 != -1105950412 )
           {
-            if ( v346 != -969204192 )
+            if ( v297 != -969204192 )
             {
-              if ( v346 == -871323703 && System_String__op_Equality(v345, (System_String_o *)StringLiteral_16696/*"app_version_up"*/, 0LL) )
+              if ( v297 == -871323703 && System_String__op_Equality(v296, (System_String_o *)StringLiteral_16580/*"app_version_up"*/, 0LL) )
               {
-                if ( (BYTE3(ManagementManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-                  && !ManagementManager_TypeInfo->_2.cctor_finished )
-                {
+                if ( !ManagementManager_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-                }
                 ManagementManager__RebootCacheClear(0LL);
-                v353 = NetworkManager_TypeInfo;
-                if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-                  && !NetworkManager_TypeInfo->_2.cctor_finished )
+                v300 = NetworkManager_TypeInfo;
+                if ( !NetworkManager_TypeInfo->_2.cctor_finished )
                 {
                   j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-                  v353 = NetworkManager_TypeInfo;
+                  v300 = NetworkManager_TypeInfo;
                 }
-                v353->static_fields->isRebootBlock = 1;
-                if ( p_failData_5__6->klass )
-                  cancleTxt = (int32_t)p_failData_5__6->klass->_1.typeMetadataHandle;
+                v300->static_fields->isRebootBlock = 1;
+                v301 = v2->fields._failData_5__6;
+                if ( v301 )
+                  errorType = v301->fields.errorType;
                 else
-                  cancleTxt = 0;
-                v553 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-                System_Action___ctor(v553, (Il2CppObject *)v581, Method_NetworkManager_OnClickStore__, 0LL);
-                v404 = value;
-                v403 = title;
-                v405 = cancleTxt;
-                v406 = v581;
-                v407 = v339;
-                v408 = v553;
-                goto LABEL_462;
+                  errorType = 0;
+                v348 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+                v349 = &Method_NetworkManager_OnClickStore__;
+LABEL_469:
+                v442 = v348;
+                System_Action___ctor(v348, (Il2CppObject *)_4__this, *v349, 0LL);
+                NetworkManager__WarningDialog(_4__this, title, detail, url, errorType, v442, 0LL);
+                goto LABEL_470;
               }
-              goto LABEL_468;
+LABEL_445:
+              v426 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+              v427 = (ErrorDialog_ClickDelegate_o *)sub_1B00F18(ErrorDialog_ClickDelegate_TypeInfo);
+              ErrorDialog_ClickDelegate___ctor(
+                v427,
+                (Il2CppObject *)_4__this,
+                Method_NetworkManager_OnClickErrorDialog__,
+                0LL);
+              if ( !v426 )
+                goto LABEL_530;
+              CommonUI__OpenErrorDialog((CommonUI_o *)v426, title, detail, v427, 0, 0LL);
+LABEL_470:
+              v2->fields._responseList_5__7 = 0LL;
+              sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._responseList_5__7, 0, v298, v299);
+              if ( System_String__op_Equality(v2->fields._errorAction_5__5, (System_String_o *)StringLiteral_22496/*"reconnection"*/, 0LL) )
+              {
+LABEL_471:
+                v2->fields._data_5__2 = 0LL;
+                sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._data_5__2, 0, v129, v130);
+                v2->fields._errorCode_5__3 = 0LL;
+                sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._errorCode_5__3, 0, v443, v444);
+                v2->fields._errorLocalizeCode_5__4 = 0LL;
+                sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._errorLocalizeCode_5__4, 0, v445, v446);
+                v2->fields._errorAction_5__5 = 0LL;
+                sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._errorAction_5__5, 0, v447, v448);
+                v2->fields._failData_5__6 = 0LL;
+                sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._failData_5__6, 0, v449, v450);
+                v2->fields._responseList_5__7 = 0LL;
+                sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._responseList_5__7, 0, v451, v452);
+                this = (NetworkManager__RequestCR_d__213_o *)v2->fields.work;
+                if ( !this )
+                  goto LABEL_530;
+                if ( (((__int64 (__fastcall *)(NetworkManager__RequestCR_d__213_o *, void *))this->klass->vtable._8_System_Collections_IEnumerator_Reset.method)(
+                        this,
+                        this->klass[1]._1.image) & 1) == 0 )
+                {
+                  this = (NetworkManager__RequestCR_d__213_o *)v2->fields.work;
+                  if ( !this )
+                    goto LABEL_530;
+                  if ( (((__int64 (__fastcall *)(NetworkManager__RequestCR_d__213_o *, const char *))this->klass[1]._1.gc_desc)(
+                          this,
+                          this->klass[1]._1.name) & 1) != 0 )
+                  {
+                    this = (NetworkManager__RequestCR_d__213_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+                    if ( !this )
+                      goto LABEL_530;
+                    CommonUI__SetConnect((CommonUI_o *)this, 1, 0LL);
+                  }
+                }
+                v453 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B00F18(UnityEngine_WaitForEndOfFrame_TypeInfo);
+                UnityEngine_WaitForEndOfFrame___ctor(v453, 0LL);
+                v2->fields.__2__current = (Il2CppObject *)v453;
+                v454 = (ServantStatusBattleListViewItem_o *)&v2->fields.__2__current;
+                sub_1B00C70(v454, (int32_t)v453, v455, v456);
+                result = 1;
+                *(_DWORD *)&v454[-1].fields.isMine = 1;
+                return result;
+              }
+LABEL_478:
+              v457 = (ServantStatusBattleListViewItem_c *)v2->fields._data_5__2;
+              if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+                j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+              if ( !byte_48E21BB )
+              {
+                sub_1B00CCC(&NetworkManager_TypeInfo, v244);
+                byte_48E21BB = 1;
+              }
+              v458 = NetworkManager_TypeInfo;
+              if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+              {
+                j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+                v458 = NetworkManager_TypeInfo;
+              }
+              p_errorDialogResponseData = (ServantStatusBattleListViewItem_o *)&v458->static_fields->errorDialogResponseData;
+              p_errorDialogResponseData->klass = v457;
+              sub_1B00C70(p_errorDialogResponseData, (int32_t)v457, v129, v130);
+              return 0;
             }
             this = (NetworkManager__RequestCR_d__213_o *)System_String__op_Equality(
-                                                           v345,
-                                                           (System_String_o *)StringLiteral_22789/*"stay"*/,
+                                                           v296,
+                                                           (System_String_o *)StringLiteral_23188/*"stay"*/,
                                                            0LL);
             if ( ((unsigned __int8)this & 1) == 0 )
-              goto LABEL_468;
-            goto LABEL_458;
+              goto LABEL_445;
+LABEL_439:
+            v425 = v2->fields._failData_5__6;
+            if ( !v425 )
+              goto LABEL_530;
+            errorType = v425->fields.errorType;
+            v348 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+            v349 = &Method_NetworkManager_OnClickErrorStay__;
+            goto LABEL_469;
           }
-          if ( !System_String__op_Equality(v345, (System_String_o *)StringLiteral_20777/*"maint"*/, 0LL) )
-            goto LABEL_468;
-          if ( (BYTE3(ManagementManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-            && !ManagementManager_TypeInfo->_2.cctor_finished )
-          {
+          if ( !System_String__op_Equality(v296, (System_String_o *)StringLiteral_20975/*"maint"*/, 0LL) )
+            goto LABEL_445;
+          if ( !ManagementManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-          }
           ManagementManager__RebootCacheClear(0LL);
           this = (NetworkManager__RequestCR_d__213_o *)NetworkManager_TypeInfo;
-          if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-            && !NetworkManager_TypeInfo->_2.cctor_finished )
+          if ( !NetworkManager_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
             this = (NetworkManager__RequestCR_d__213_o *)NetworkManager_TypeInfo;
           }
           LOBYTE(this[1].fields.work[3].fields.CallBack) = 1;
         }
-        if ( !p_failData_5__6->klass )
-          goto LABEL_543;
-        cancleTxta = (int32_t)p_failData_5__6->klass->_1.typeMetadataHandle;
-        v360 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-        v361 = &Method_NetworkManager_OnClickErrorReboot__;
-        goto LABEL_460;
+        v350 = v2->fields._failData_5__6;
+        if ( !v350 )
+          goto LABEL_530;
+        errorType = v350->fields.errorType;
+        v348 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+        v349 = &Method_NetworkManager_OnClickErrorReboot__;
+        goto LABEL_469;
       }
       return result;
     case 3:
-      v27 = (NetworkManager__RequestCR_d__213_o **)&v2->fields._www_5__10;
-      v26 = v2->fields._www_5__10;
+      v144 = (NetworkManager__RequestCR_d__213_o **)&v2->fields._www_5__10;
+      v143 = v2->fields._www_5__10;
       v2->fields.__1__state = -1;
-      if ( !v26 )
-        goto LABEL_543;
-      if ( !System_String__IsNullOrEmpty(v26->fields._error_k__BackingField, 0LL) )
-        goto LABEL_21;
-      this = *v27;
-      if ( !*v27 )
-        goto LABEL_543;
-      v28 = (System_Int32_array **)DelightWorks_Network_UnityWebRequestWWW__get_text(
-                                     (DelightWorks_Network_UnityWebRequestWWW_o *)this,
-                                     0LL);
-      v2->fields._data_5__2 = (struct System_String_o *)v28;
-      sub_B77560((BattleServantConfConponent_o *)&v2->fields._data_5__2, v28, v29, v30, v31, v32, v33, v34);
-LABEL_21:
-      this = *v27;
-      if ( !*v27 )
-        goto LABEL_543;
+      if ( !v143 )
+        goto LABEL_530;
+      if ( !System_String__IsNullOrEmpty(v143->fields._error_k__BackingField, 0LL) )
+        goto LABEL_28;
+      this = *v144;
+      if ( !*v144 )
+        goto LABEL_530;
+      v145 = DelightWorks_Network_UnityWebRequestWWW__get_text((DelightWorks_Network_UnityWebRequestWWW_o *)this, 0LL);
+      v2->fields._data_5__2 = v145;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._data_5__2, (int32_t)v145, v146, v147);
+LABEL_28:
+      this = *v144;
+      if ( !*v144 )
+        goto LABEL_530;
       DelightWorks_Network_UnityWebRequestWWW__Dispose((DelightWorks_Network_UnityWebRequestWWW_o *)this, 0LL);
-      *v27 = 0LL;
-      sub_B77560((BattleServantConfConponent_o *)&v2->fields._www_5__10, 0LL, v35, v36, v37, v38, v39, v40);
-      goto LABEL_46;
+      *v144 = 0LL;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._www_5__10, 0, v148, v149);
+      goto LABEL_49;
     case 4:
-      v17 = (NetworkManager__RequestCR_d__213_o **)&v2->fields._www_5__10;
       v2->fields.__1__state = -1;
-      goto LABEL_8;
+      goto LABEL_15;
     default:
       return 0;
   }
@@ -12843,11 +10565,11 @@ void __fastcall __noreturn NetworkManager__RequestCR_d__213__System_Collections_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
+  v2 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B00F18(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B775C8(&Method_NetworkManager__RequestCR_d__213_System_Collections_IEnumerator_Reset__);
-  sub_B77668(v3, v4);
+  v4 = sub_1B00CE0(&Method_NetworkManager__RequestCR_d__213_System_Collections_IEnumerator_Reset__);
+  sub_1B00DF4(v3, v4);
 }
 
 
@@ -12881,47 +10603,43 @@ bool __fastcall NetworkManager__TimeUpdate_d__81__MoveNext(
         NetworkManager__TimeUpdate_d__81_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
   int32_t _1__state; // w8
-  NetworkManager_c *v4; // x0
-  UnityEngine_WaitForEndOfFrame_o *v5; // x20
+  NetworkManager_c *v5; // x0
+  UnityEngine_WaitForEndOfFrame_o *v6; // x20
   Il2CppObject **p__2__current; // x19
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
+  int32_t v8; // w2
+  int32_t v9; // w3
   bool result; // w0
 
-  if ( (byte_438A095 & 1) == 0 )
+  if ( (byte_48E207B & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&UnityEngine_WaitForEndOfFrame_TypeInfo);
-    byte_438A095 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    sub_1B00CCC(&UnityEngine_WaitForEndOfFrame_TypeInfo, v3);
+    byte_48E207B = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
   {
     this->fields.__1__state = -1;
-    v4 = NetworkManager_TypeInfo;
-    if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !NetworkManager_TypeInfo->_2.cctor_finished )
+    v5 = NetworkManager_TypeInfo;
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      v4 = NetworkManager_TypeInfo;
+      v5 = NetworkManager_TypeInfo;
     }
-    v4->static_fields->nowTime = -1LL;
-    goto LABEL_10;
+    v5->static_fields->nowTime = -1LL;
+    goto LABEL_9;
   }
   if ( !_1__state )
   {
     this->fields.__1__state = -1;
-LABEL_10:
-    v5 = (UnityEngine_WaitForEndOfFrame_o *)sub_B77694(UnityEngine_WaitForEndOfFrame_TypeInfo);
-    UnityEngine_WaitForEndOfFrame___ctor(v5, 0LL);
-    this->fields.__2__current = (Il2CppObject *)v5;
+LABEL_9:
+    v6 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B00F18(UnityEngine_WaitForEndOfFrame_TypeInfo);
+    UnityEngine_WaitForEndOfFrame___ctor(v6, 0LL);
+    this->fields.__2__current = (Il2CppObject *)v6;
     p__2__current = &this->fields.__2__current;
-    sub_B77560((BattleServantConfConponent_o *)p__2__current, (System_Int32_array **)v5, v7, v8, v9, v10, v11, v12);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)p__2__current, (int32_t)v6, v8, v9);
     result = 1;
     *((_DWORD *)p__2__current - 2) = 1;
     return result;
@@ -12946,11 +10664,11 @@ void __fastcall __noreturn NetworkManager__TimeUpdate_d__81__System_Collections_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
+  v2 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B00F18(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B775C8(&Method_NetworkManager__TimeUpdate_d__81_System_Collections_IEnumerator_Reset__);
-  sub_B77668(v3, v4);
+  v4 = sub_1B00CE0(&Method_NetworkManager__TimeUpdate_d__81_System_Collections_IEnumerator_Reset__);
+  sub_1B00DF4(v3, v4);
 }
 
 
@@ -12972,25 +10690,20 @@ void __fastcall NetworkManager__TimeUpdate_d__81__System_IDisposable_Dispose(
 
 void __fastcall NetworkManager___c___cctor(const MethodInfo *method)
 {
-  Il2CppObject *v1; // x19
-  BattleServantConfConponent_o *static_fields; // x0
-  System_String_array **v3; // x2
-  System_String_array **v4; // x3
-  System_Boolean_array **v5; // x4
-  System_Int32_array **v6; // x5
-  System_Int32_array *v7; // x6
-  System_Int32_array *v8; // x7
+  __int64 v1; // x1
+  Il2CppObject *v2; // x19
+  int32_t v3; // w2
+  int32_t v4; // w3
 
-  if ( (byte_438A090 & 1) == 0 )
+  if ( (byte_48E2076 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager___c_TypeInfo);
-    byte_438A090 = 1;
+    sub_1B00CCC(&NetworkManager___c_TypeInfo, v1);
+    byte_48E2076 = 1;
   }
-  v1 = (Il2CppObject *)sub_B77694(NetworkManager___c_TypeInfo);
-  System_Object___ctor(v1, 0LL);
-  static_fields = (BattleServantConfConponent_o *)NetworkManager___c_TypeInfo->static_fields;
-  static_fields->klass = (BattleServantConfConponent_c *)v1;
-  sub_B77560(static_fields, (System_Int32_array **)v1, v3, v4, v5, v6, v7, v8);
+  v2 = (Il2CppObject *)sub_1B00F18(NetworkManager___c_TypeInfo);
+  System_Object___ctor(v2, 0LL);
+  NetworkManager___c_TypeInfo->static_fields->__9 = (struct NetworkManager___c_o *)v2;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)NetworkManager___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -13004,14 +10717,13 @@ void __fastcall NetworkManager___c___RequestCR_b__213_1(NetworkManager___c_o *th
 {
   TitleRootComponent_c *v2; // x0
 
-  if ( (byte_438A091 & 1) == 0 )
+  if ( (byte_48E2077 & 1) == 0 )
   {
-    sub_B775C4(&TitleRootComponent_TypeInfo);
-    byte_438A091 = 1;
+    sub_1B00CCC(&TitleRootComponent_TypeInfo, method);
+    byte_48E2077 = 1;
   }
   v2 = TitleRootComponent_TypeInfo;
-  if ( (BYTE3(TitleRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !TitleRootComponent_TypeInfo->_2.cctor_finished )
+  if ( !TitleRootComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TitleRootComponent_TypeInfo);
     v2 = TitleRootComponent_TypeInfo;

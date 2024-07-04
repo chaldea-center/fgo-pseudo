@@ -12,36 +12,38 @@ void __fastcall SummonHistoryDialog__Init(SummonHistoryDialog_o *this, const Met
   TextLabelScrollDialog__Init((TextLabelScrollDialog_o *)this, 0LL);
   summonHistoryListViewManager = (ListViewManager_o *)this->fields.summonHistoryListViewManager;
   if ( !summonHistoryListViewManager )
-    sub_B7769C(0LL, v3);
+    sub_1B00F28(0LL, v3);
   ListViewManager__DestroyList(summonHistoryListViewManager, 0LL);
 }
 
 
 void __fastcall SummonHistoryDialog__OnClickClose(SummonHistoryDialog_o *this, const MethodInfo *method)
 {
-  _QWORD *v3; // x0
-  System_Reflection_MethodBase_o *v4; // x0
-  System_Action_o *v5; // x20
+  __int64 v3; // x1
+  __int64 v4; // x1
+  _QWORD *v5; // x0
+  System_Reflection_MethodBase_o *v6; // x0
+  System_Action_o *v7; // x20
 
-  if ( (byte_438F36F & 1) == 0 )
+  if ( (byte_48DF0AF & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&Method_SummonHistoryDialog_OnClickClose__);
-    sub_B775C4(&Method_SummonHistoryDialog__OnClickClose_b__5_0__);
-    byte_438F36F = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, method);
+    sub_1B00CCC(&Method_SummonHistoryDialog_OnClickClose__, v3);
+    sub_1B00CCC(&Method_SummonHistoryDialog__OnClickClose_b__5_0__, v4);
+    byte_48DF0AF = 1;
   }
   if ( !this->fields.state )
   {
-    v3 = Method_SummonHistoryDialog_OnClickClose__;
-    if ( (*((_BYTE *)Method_SummonHistoryDialog_OnClickClose__ + 75) & 2) != 0 )
-      v3 = (_QWORD *)sub_B775CC(Method_SummonHistoryDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_B775A8(v3, v3[3]);
-    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
+    v5 = Method_SummonHistoryDialog_OnClickClose__;
+    if ( (*((_BYTE *)Method_SummonHistoryDialog_OnClickClose__ + 83) & 2) != 0 )
+      v5 = (_QWORD *)sub_1B00CE4(Method_SummonHistoryDialog_OnClickClose__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v5, v5[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0LL);
   }
   this->fields.state = 2;
-  v5 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-  System_Action___ctor(v5, (Il2CppObject *)this, Method_SummonHistoryDialog__OnClickClose_b__5_0__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v5, 0LL);
+  v7 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+  System_Action___ctor(v7, (Il2CppObject *)this, Method_SummonHistoryDialog__OnClickClose_b__5_0__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
 }
 
 
@@ -50,120 +52,117 @@ void __fastcall SummonHistoryDialog__Open(
         VaildGachaInfo_o *gachaInfo,
         const MethodInfo *method)
 {
-  System_String_o *v5; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  System_String_o *v12; // x0
   System_String_o *name; // x0
-  const MethodInfo *v7; // x1
+  const MethodInfo *v14; // x1
   UILabel_o *summonNameLabel; // x20
   UILabel_o *UpperMessageLabel; // x20
   UILabel_o *messageLabel; // x20
-  struct UIScrollView_o *scrollView; // x8
   UILabel_o *closeLabel; // x20
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
-  System_String_array **v19; // x2
-  System_String_array **v20; // x3
-  System_Boolean_array **v21; // x4
-  System_Int32_array **v22; // x5
-  System_Int32_array *v23; // x6
-  System_Int32_array *v24; // x7
+  int32_t v19; // w2
+  int32_t v20; // w3
+  int32_t v21; // w2
+  int32_t v22; // w3
 
-  if ( (byte_438F36E & 1) == 0 )
+  if ( (byte_48DF0AE & 1) == 0 )
   {
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&string_TypeInfo);
-    sub_B775C4(&StringLiteral_26/*"\n"*/);
-    sub_B775C4(&StringLiteral_6990/*"GACHA_HISTORY_UPPER_MESSAGE"*/);
-    sub_B775C4(&StringLiteral_6984/*"GACHA_HISTORY_EMPTY"*/);
-    sub_B775C4(&StringLiteral_6989/*"GACHA_HISTORY_TITLE"*/);
-    sub_B775C4(&StringLiteral_3387/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438F36E = 1;
+    sub_1B00CCC(&LocalizationManager_TypeInfo, gachaInfo);
+    sub_1B00CCC(&string_TypeInfo, v5);
+    sub_1B00CCC(&StringLiteral_43/*"\n"*/, v6);
+    sub_1B00CCC(&StringLiteral_6808/*"GACHA_HISTORY_UPPER_MESSAGE"*/, v7);
+    sub_1B00CCC(&StringLiteral_6802/*"GACHA_HISTORY_EMPTY"*/, v8);
+    sub_1B00CCC(&StringLiteral_6807/*"GACHA_HISTORY_TITLE"*/, v9);
+    sub_1B00CCC(&StringLiteral_3715/*"COMMON_CONFIRM_CLOSE"*/, v10);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v11);
+    byte_48DF0AE = 1;
   }
   ((void (__fastcall *)(SummonHistoryDialog_o *, void *, const MethodInfo *))this->klass->vtable._7_Init.method)(
     this,
     this->klass[1]._1.image,
     method);
-  if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !LocalizationManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  }
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_6989/*"GACHA_HISTORY_TITLE"*/, 0LL);
-  TextLabelScrollDialog__Open((TextLabelScrollDialog_o *)this, v5, string_TypeInfo->static_fields->Empty, 0LL, 0LL, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_6807/*"GACHA_HISTORY_TITLE"*/, 0LL);
+  TextLabelScrollDialog__Open(
+    (TextLabelScrollDialog_o *)this,
+    v12,
+    string_TypeInfo->static_fields->Empty,
+    0LL,
+    0LL,
+    0LL);
   if ( !gachaInfo )
-    goto LABEL_27;
+    goto LABEL_23;
   name = gachaInfo->fields.name;
   if ( !name )
-    goto LABEL_27;
+    goto LABEL_23;
   summonNameLabel = this->fields.summonNameLabel;
-  name = System_String__Replace_44909172(
+  name = System_String__Replace_60345368(
            name,
-           (System_String_o *)StringLiteral_26/*"\n"*/,
+           (System_String_o *)StringLiteral_43/*"\n"*/,
            (System_String_o *)StringLiteral_1/*""*/,
            0LL);
   if ( !summonNameLabel )
-    goto LABEL_27;
+    goto LABEL_23;
   UILabel__set_text(summonNameLabel, name, 0LL);
   UpperMessageLabel = this->fields.UpperMessageLabel;
-  name = LocalizationManager__Get((System_String_o *)StringLiteral_6990/*"GACHA_HISTORY_UPPER_MESSAGE"*/, 0LL);
+  name = LocalizationManager__Get((System_String_o *)StringLiteral_6808/*"GACHA_HISTORY_UPPER_MESSAGE"*/, 0LL);
   if ( !UpperMessageLabel )
-    goto LABEL_27;
+    goto LABEL_23;
   UILabel__set_text(UpperMessageLabel, name, 0LL);
   name = (System_String_o *)this->fields.summonHistoryListViewManager;
   if ( !name )
-    goto LABEL_27;
-  SummonHistoryListViewManager__CreateList((SummonHistoryListViewManager_o *)name, v7);
+    goto LABEL_23;
+  SummonHistoryListViewManager__CreateList((SummonHistoryListViewManager_o *)name, v14);
   name = (System_String_o *)this->fields.summonHistoryListViewManager;
   if ( !name )
-    goto LABEL_27;
-  name = (System_String_o *)ListViewManager__get_ItemSum((ListViewManager_o *)name, 0LL);
-  if ( (int)name > 0 )
-    goto LABEL_20;
-  name = (System_String_o *)this->fields.messageLabel;
-  if ( !name )
-    goto LABEL_27;
-  name = (System_String_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)name, 0LL);
-  if ( !name )
-    goto LABEL_27;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)name, 1, 0LL);
-  messageLabel = this->fields.messageLabel;
-  if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !LocalizationManager_TypeInfo->_2.cctor_finished )
+    goto LABEL_23;
+  if ( ListViewManager__get_ItemSum((ListViewManager_o *)name, 0LL) <= 0 )
   {
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    name = (System_String_o *)this->fields.messageLabel;
+    if ( name )
+    {
+      name = (System_String_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)name, 0LL);
+      if ( name )
+      {
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)name, 1, 0LL);
+        messageLabel = this->fields.messageLabel;
+        if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+        name = LocalizationManager__Get((System_String_o *)StringLiteral_6802/*"GACHA_HISTORY_EMPTY"*/, 0LL);
+        if ( messageLabel )
+        {
+          UILabel__set_text(messageLabel, name, 0LL);
+          goto LABEL_18;
+        }
+      }
+    }
+LABEL_23:
+    sub_1B00F28(name, v14);
   }
-  name = LocalizationManager__Get((System_String_o *)StringLiteral_6984/*"GACHA_HISTORY_EMPTY"*/, 0LL);
-  if ( !messageLabel )
-LABEL_27:
-    sub_B7769C(name, v7);
-  UILabel__set_text(messageLabel, name, 0LL);
-LABEL_20:
-  scrollView = this->fields.scrollView;
-  if ( !scrollView )
-    goto LABEL_27;
-  HIDWORD(scrollView->fields.onDragStarted) = 1;
+LABEL_18:
   name = (System_String_o *)this->fields.scrollView;
   if ( !name )
-    goto LABEL_27;
+    goto LABEL_23;
+  HIDWORD(name[3].monitor) = 1;
   UIScrollView__ResetPosition((UIScrollView_o *)name, 0LL);
   closeLabel = this->fields.closeLabel;
-  if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !LocalizationManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  }
-  name = LocalizationManager__Get((System_String_o *)StringLiteral_3387/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+  name = LocalizationManager__Get((System_String_o *)StringLiteral_3715/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !closeLabel )
-    goto LABEL_27;
+    goto LABEL_23;
   UILabel__set_text(closeLabel, name, 0LL);
   this->fields.closeAction = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.closeAction, 0LL, v13, v14, v15, v16, v17, v18);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.closeAction, 0, v19, v20);
   this->fields.decideAction = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.decideAction, 0LL, v19, v20, v21, v22, v23, v24);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.decideAction, 0, v21, v22);
 }
 
 

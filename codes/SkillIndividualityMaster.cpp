@@ -1,83 +1,75 @@
 void __fastcall SkillIndividualityMaster___ctor(SkillIndividualityMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_438C098 & 1) == 0 )
+  if ( (byte_48E30EA & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_SkillIndividualityMaster__SkillIndividualityEntity__int___ctor__);
-    byte_438C098 = 1;
+    sub_1B00CCC(&Method_DataMasterBase_SkillIndividualityMaster__SkillIndividualityEntity__int___ctor__, method);
+    byte_48E30EA = 1;
   }
-  DataMasterBase_WarMaster__WarEntity__int____ctor(
-    (DataMasterBase_WarMaster__WarEntity__int__o *)this,
+  DataMasterBase_object__object__int____ctor(
+    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     443,
-    (const MethodInfo_21FB7F8 *)Method_DataMasterBase_SkillIndividualityMaster__SkillIndividualityEntity__int___ctor__);
+    (const MethodInfo_2FE6A0C *)Method_DataMasterBase_SkillIndividualityMaster__SkillIndividualityEntity__int___ctor__);
 }
 
 
 System_Int32_array *__fastcall SkillIndividualityMaster__GetIndividuality(int32_t skillId, const MethodInfo *method)
 {
-  WarQuestSelectionMaster_o *Master_WarQuestSelectionMaster; // x0
+  __int64 v3; // x1
   __int64 v4; // x1
-  struct System_String_o **p_age; // x8
-  _QWORD **v6; // x20
-  __int64 v7; // x19
-  __int16 v8; // w8
-  __int64 v9; // x19
-  __int64 v10; // x19
-  __int64 v11; // x19
-  WarEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
+  __int64 v5; // x1
+  Il2CppObject *Master_object; // x0
+  __int64 v7; // x1
+  System_Int32_array **p_monitor; // x8
+  _QWORD *v9; // x19
+  __int64 v10; // x8
+  __int64 v11; // x0
+  __int64 v12; // x0
+  Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_438C097 & 1) == 0 )
+  if ( (byte_48E30E9 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Array_Empty_int___);
-    sub_B775C4(&Method_DataManager_GetMaster_SkillIndividualityMaster___);
-    sub_B775C4(&DataManager_TypeInfo);
-    sub_B775C4(&Method_DataMasterBase_SkillIndividualityMaster__SkillIndividualityEntity__int__TryGetEntity__);
-    byte_438C097 = 1;
+    sub_1B00CCC(&Method_System_Array_Empty_int___, method);
+    sub_1B00CCC(&Method_DataManager_GetMaster_SkillIndividualityMaster___, v3);
+    sub_1B00CCC(&DataManager_TypeInfo, v4);
+    sub_1B00CCC(&Method_DataMasterBase_SkillIndividualityMaster__SkillIndividualityEntity__int__TryGetEntity__, v5);
+    byte_48E30E9 = 1;
   }
   entity = 0LL;
-  if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_SkillIndividualityMaster___);
-  if ( !Master_WarQuestSelectionMaster )
-    goto LABEL_23;
-  Master_WarQuestSelectionMaster = (WarQuestSelectionMaster_o *)DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
-                                                                  (DataMasterBase_WarMaster__WarEntity__int__o *)Master_WarQuestSelectionMaster,
-                                                                  &entity,
-                                                                  skillId,
-                                                                  (const MethodInfo_21FB8F0 *)Method_DataMasterBase_SkillIndividualityMaster__SkillIndividualityEntity__int__TryGetEntity__);
-  if ( ((unsigned __int8)Master_WarQuestSelectionMaster & 1) != 0 )
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_SkillIndividualityMaster___);
+  if ( !Master_object )
+    goto LABEL_19;
+  Master_object = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
+                                    (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
+                                    &entity,
+                                    skillId,
+                                    (const MethodInfo_2FE6AA0 *)Method_DataMasterBase_SkillIndividualityMaster__SkillIndividualityEntity__int__TryGetEntity__);
+  if ( ((unsigned __int8)Master_object & 1) != 0 )
   {
     if ( entity )
     {
-      p_age = &entity->fields.age;
-      return (System_Int32_array *)*p_age;
+      p_monitor = (System_Int32_array **)&entity[1].monitor;
+      return *p_monitor;
     }
-LABEL_23:
-    sub_B7769C(Master_WarQuestSelectionMaster, v4);
+LABEL_19:
+    sub_1B00F28(Master_object, v7);
   }
-  v6 = (_QWORD **)Method_System_Array_Empty_int___;
-  v7 = **((_QWORD **)Method_System_Array_Empty_int___ + 6);
-  v8 = *(_WORD *)(v7 + 306);
-  if ( (v8 & 1) == 0 )
+  v9 = Method_System_Array_Empty_int___;
+  v10 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
+  if ( !v10 )
   {
-    sub_B0F2C4(**((_QWORD **)Method_System_Array_Empty_int___ + 6));
-    v8 = *(_WORD *)(v7 + 306);
+    sub_1B52C04(Method_System_Array_Empty_int___);
+    v10 = v9[7];
   }
-  if ( (v8 & 0x400) != 0 )
-  {
-    v9 = *v6[6];
-    if ( (*(_BYTE *)(v9 + 306) & 1) == 0 )
-      sub_B0F2C4(*v6[6]);
-    if ( !*(_DWORD *)(v9 + 224) )
-    {
-      v10 = *v6[6];
-      if ( (*(_BYTE *)(v10 + 306) & 1) == 0 )
-        sub_B0F2C4(*v6[6]);
-      j_il2cpp_runtime_class_init_0(v10);
-    }
-  }
-  v11 = *v6[6];
-  if ( (*(_BYTE *)(v11 + 306) & 1) == 0 )
-    sub_B0F2C4(*v6[6]);
-  p_age = *(struct System_String_o ***)(v11 + 184);
-  return (System_Int32_array *)*p_age;
+  v11 = *(_QWORD *)(v10 + 16);
+  if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
+    v11 = sub_1B52BA8(v11);
+  if ( !*(_DWORD *)(v11 + 224) )
+    j_il2cpp_runtime_class_init_0(v11);
+  v12 = *(_QWORD *)(v9[7] + 16LL);
+  if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
+    v12 = sub_1B52BA8(v12);
+  p_monitor = *(System_Int32_array ***)(v12 + 184);
+  return *p_monitor;
 }

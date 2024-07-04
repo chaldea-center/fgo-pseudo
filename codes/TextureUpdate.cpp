@@ -12,24 +12,24 @@ void __fastcall TextureUpdate__Start(TextureUpdate_o *this, const MethodInfo *me
 
 void __fastcall TextureUpdate__Update(TextureUpdate_o *this, const MethodInfo *method)
 {
-  WebViewObject_o *Component_WebViewObject; // x0
+  Il2CppObject *Component_object; // x0
   __int64 v4; // x1
   UnityEngine_Behaviour_o *v5; // x19
 
-  if ( (byte_4387A55 & 1) == 0 )
+  if ( (byte_48E096A & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_Component_GetComponent_UITexture___);
-    byte_4387A55 = 1;
+    sub_1B00CCC(&Method_UnityEngine_Component_GetComponent_UITexture___, method);
+    byte_48E096A = 1;
   }
-  Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
-                              (UnityEngine_Component_o *)this,
-                              (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_UITexture___);
-  if ( !Component_WebViewObject )
-    sub_B7769C(0LL, v4);
-  v5 = (UnityEngine_Behaviour_o *)Component_WebViewObject;
-  ((void (__fastcall *)(WebViewObject_o *, void *))Component_WebViewObject->klass[2]._1.namespaze)(
-    Component_WebViewObject,
-    Component_WebViewObject->klass[2]._1.byval_arg.data);
+  Component_object = UnityEngine_Component__GetComponent_object_(
+                       (UnityEngine_Component_o *)this,
+                       (const MethodInfo_2D596B4 *)Method_UnityEngine_Component_GetComponent_UITexture___);
+  if ( !Component_object )
+    sub_1B00F28(0LL, v4);
+  v5 = (UnityEngine_Behaviour_o *)Component_object;
+  ((void (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Component_object->klass->vtable[30].method)(
+    Component_object,
+    Component_object->klass->vtable[31].methodPtr);
   UnityEngine_Behaviour__set_enabled(v5, 0, 0LL);
   UnityEngine_Behaviour__set_enabled(v5, 1, 0LL);
 }

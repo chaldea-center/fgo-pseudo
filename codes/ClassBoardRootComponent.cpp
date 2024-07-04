@@ -1,30 +1,18 @@
 void __fastcall ClassBoardRootComponent___ctor(ClassBoardRootComponent_o *this, const MethodInfo *method)
 {
   Il2CppObject *v3; // x20
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
+  int32_t v4; // w2
+  int32_t v5; // w3
 
-  if ( (byte_438D419 & 1) == 0 )
+  if ( (byte_48E5A39 & 1) == 0 )
   {
-    sub_B775C4(&ClassBoardPageSwitcher_TypeInfo);
-    byte_438D419 = 1;
+    sub_1B00CCC(&ClassBoardPageSwitcher_TypeInfo, method);
+    byte_48E5A39 = 1;
   }
-  v3 = (Il2CppObject *)sub_B77694(ClassBoardPageSwitcher_TypeInfo);
+  v3 = (Il2CppObject *)sub_1B00F18(ClassBoardPageSwitcher_TypeInfo);
   System_Object___ctor(v3, 0LL);
   this->fields.pageSwitcher = (struct ClassBoardPageSwitcher_o *)v3;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.pageSwitcher,
-    (System_Int32_array **)v3,
-    v4,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.pageSwitcher, (int32_t)v3, v4, v5);
   SceneRootComponent___ctor((SceneRootComponent_o *)this, 0LL);
 }
 
@@ -37,124 +25,113 @@ void __fastcall ClassBoardRootComponent__Awake(ClassBoardRootComponent_o *this, 
 
 void __fastcall ClassBoardRootComponent__CreateBackground(ClassBoardRootComponent_o *this, const MethodInfo *method)
 {
-  BattleServantConfConponent_o *p_classBoardBackground; // x19
+  __int64 v3; // x1
+  __int64 v4; // x1
+  ServantStatusBattleListViewItem_o *p_classBoardBackground; // x19
   UnityEngine_Object_o *classBoardBackground; // x21
   UnityEngine_Object_o *resourceCatalog; // x21
   UnityEngine_Object_c *klass; // x8
-  unsigned __int64 v7; // x10
-  int32_t *p_offset; // x11
-  __int64 v9; // x0
-  __int64 v10; // x0
+  __int64 v9; // x9
+  int32_t *p_offset; // x10
   __int64 v11; // x0
-  __int64 v12; // x1
-  struct IClassBoardResourceCatalog_o *v13; // x21
-  IClassBoardResourceCatalog_c *v14; // x8
-  unsigned __int64 v15; // x10
-  int32_t *v16; // x11
+  __int64 v12; // x0
+  __int64 v13; // x0
+  __int64 v14; // x1
+  struct IClassBoardResourceCatalog_o *v15; // x21
+  IClassBoardResourceCatalog_c *v16; // x8
+  __int64 v17; // x9
+  int32_t *v18; // x10
   __int64 p_method; // x0
-  UILabel_o *v18; // x21
+  Il2CppObject *v20; // x21
   UnityEngine_Transform_o *transform; // x20
-  System_Int32_array **v20; // x0
-  System_String_array **v21; // x2
-  System_String_array **v22; // x3
-  System_Boolean_array **v23; // x4
-  System_Int32_array **v24; // x5
-  System_Int32_array *v25; // x6
-  System_Int32_array *v26; // x7
+  Il2CppObject *v22; // x0
+  int32_t v23; // w2
+  int32_t v24; // w3
 
-  if ( (byte_438D416 & 1) == 0 )
+  if ( (byte_48E5A36 & 1) == 0 )
   {
-    sub_B775C4(&IClassBoardResourceCatalog_TypeInfo);
-    sub_B775C4(&Method_UnityEngine_Object_Instantiate_ClassBoardBackground___);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438D416 = 1;
+    sub_1B00CCC(&IClassBoardResourceCatalog_TypeInfo, method);
+    sub_1B00CCC(&Method_UnityEngine_Object_Instantiate_ClassBoardBackground___, v3);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v4);
+    byte_48E5A36 = 1;
   }
-  p_classBoardBackground = (BattleServantConfConponent_o *)&this->fields.classBoardBackground;
+  p_classBoardBackground = (ServantStatusBattleListViewItem_o *)&this->fields.classBoardBackground;
   classBoardBackground = (UnityEngine_Object_o *)this->fields.classBoardBackground;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( !UnityEngine_Object__op_Inequality(classBoardBackground, 0LL, 0LL) )
   {
     resourceCatalog = (UnityEngine_Object_o *)this->fields.resourceCatalog;
     if ( resourceCatalog )
     {
       klass = resourceCatalog->klass;
-      if ( *(_WORD *)&resourceCatalog->klass->_2.bitflags1 )
+      v9 = *(unsigned __int16 *)(&resourceCatalog->klass->_2.bitflags2 + 3);
+      if ( *(_WORD *)(&resourceCatalog->klass->_2.bitflags2 + 3) )
       {
-        v7 = 0LL;
         p_offset = &klass->_1.interfaceOffsets->offset;
         while ( *((IClassBoardResourceCatalog_c **)p_offset - 1) != IClassBoardResourceCatalog_TypeInfo )
         {
-          ++v7;
+          --v9;
           p_offset += 4;
-          if ( v7 >= *(unsigned __int16 *)&resourceCatalog->klass->_2.bitflags1 )
-            goto LABEL_12;
+          if ( !v9 )
+            goto LABEL_11;
         }
-        v9 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+        v11 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
       }
       else
       {
-LABEL_12:
-        v9 = sub_B0F4C0(this->fields.resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0LL);
+LABEL_11:
+        v11 = sub_1B52CAC(this->fields.resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0LL);
       }
-      v10 = (*(__int64 (__fastcall **)(UnityEngine_Object_o *, _QWORD))v9)(resourceCatalog, *(_QWORD *)(v9 + 8));
-      if ( v10 )
-        resourceCatalog = *(UnityEngine_Object_o **)(v10 + 96);
+      v12 = (*(__int64 (__fastcall **)(UnityEngine_Object_o *, _QWORD))v11)(resourceCatalog, *(_QWORD *)(v11 + 8));
+      if ( v12 )
+        resourceCatalog = *(UnityEngine_Object_o **)(v12 + 96);
       else
         resourceCatalog = 0LL;
     }
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
-    v11 = UnityEngine_Object__op_Equality(resourceCatalog, 0LL, 0LL);
-    if ( (v11 & 1) == 0 )
+    v13 = UnityEngine_Object__op_Equality(resourceCatalog, 0LL, 0LL);
+    if ( (v13 & 1) == 0 )
     {
-      v13 = this->fields.resourceCatalog;
-      if ( !v13 )
-        goto LABEL_34;
-      v14 = v13->klass;
-      if ( *(_WORD *)&v13->klass->_2.bitflags1 )
+      v15 = this->fields.resourceCatalog;
+      if ( !v15 )
+        goto LABEL_31;
+      v16 = v15->klass;
+      v17 = *(unsigned __int16 *)(&v15->klass->_2.bitflags2 + 3);
+      if ( *(_WORD *)(&v15->klass->_2.bitflags2 + 3) )
       {
-        v15 = 0LL;
-        v16 = &v14->_1.interfaceOffsets->offset;
-        while ( *((IClassBoardResourceCatalog_c **)v16 - 1) != IClassBoardResourceCatalog_TypeInfo )
+        v18 = &v16->_1.interfaceOffsets->offset;
+        while ( *((IClassBoardResourceCatalog_c **)v18 - 1) != IClassBoardResourceCatalog_TypeInfo )
         {
-          ++v15;
-          v16 += 4;
-          if ( v15 >= *(unsigned __int16 *)&v13->klass->_2.bitflags1 )
-            goto LABEL_27;
+          --v17;
+          v18 += 4;
+          if ( !v17 )
+            goto LABEL_25;
         }
-        p_method = (__int64)&v14->vtable[*v16].method;
+        p_method = (__int64)&v16->vtable[*v18].method;
       }
       else
       {
-LABEL_27:
-        p_method = sub_B0F4C0(this->fields.resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0LL);
+LABEL_25:
+        p_method = sub_1B52CAC(this->fields.resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0LL);
       }
-      v11 = (*(__int64 (__fastcall **)(struct IClassBoardResourceCatalog_o *, _QWORD))p_method)(
-              v13,
+      v13 = (*(__int64 (__fastcall **)(struct IClassBoardResourceCatalog_o *, _QWORD))p_method)(
+              v15,
               *(_QWORD *)(p_method + 8));
-      if ( !v11 )
-LABEL_34:
-        sub_B7769C(v11, v12);
-      v18 = *(UILabel_o **)(v11 + 96);
+      if ( !v13 )
+LABEL_31:
+        sub_1B00F28(v13, v14);
+      v20 = *(Il2CppObject **)(v13 + 96);
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-      if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      {
+      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      }
-      v20 = (System_Int32_array **)UnityEngine_Object__Instantiate_UILabel_(
-                                     v18,
-                                     transform,
-                                     (const MethodInfo_1DF9A3C *)Method_UnityEngine_Object_Instantiate_ClassBoardBackground___);
-      p_classBoardBackground->klass = (BattleServantConfConponent_c *)v20;
-      sub_B77560(p_classBoardBackground, v20, v21, v22, v23, v24, v25, v26);
+      v22 = UnityEngine_Object__Instantiate_object__48061460(
+              v20,
+              transform,
+              (const MethodInfo_2DD5C14 *)Method_UnityEngine_Object_Instantiate_ClassBoardBackground___);
+      p_classBoardBackground->klass = (ServantStatusBattleListViewItem_c *)v22;
+      sub_1B00C70(p_classBoardBackground, (int32_t)v22, v23, v24);
     }
   }
 }
@@ -166,7 +143,7 @@ void __fastcall ClassBoardRootComponent__Update(ClassBoardRootComponent_o *this,
 
   pageSwitcher = this->fields.pageSwitcher;
   if ( !pageSwitcher )
-    sub_B7769C(0LL, method);
+    sub_1B00F28(0LL, method);
   ClassBoardPageSwitcher__Update(pageSwitcher, method);
 }
 
@@ -175,165 +152,144 @@ void __fastcall ClassBoardRootComponent___beginInitialize_b__25_0(
         ClassBoardRootComponent_o *this,
         const MethodInfo *method)
 {
-  AvalonSceneManager_o *Instance; // x0
+  Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_438D41A & 1) == 0 )
+  if ( (byte_48E5A3A & 1) == 0 )
   {
-    sub_B775C4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_438D41A = 1;
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
+    byte_48E5A3A = 1;
   }
-  Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_B7769C(0LL, v4);
-  AvalonSceneManager__endInitialize(Instance, (SceneRootComponent_o *)this, 0LL);
+    sub_1B00F28(0LL, v4);
+  AvalonSceneManager__endInitialize((AvalonSceneManager_o *)Instance, (SceneRootComponent_o *)this, 0LL);
 }
 
 
 void __fastcall ClassBoardRootComponent__beginFinish(ClassBoardRootComponent_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
   ClassBoardPageSwitcher_o *pageSwitcher; // x0
   struct ClassBoardBackground_o **p_classBoardBackground; // x20
   UnityEngine_Object_o *classBoardBackground; // x21
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  int32_t v9; // w2
+  int32_t v10; // w3
   UnityEngine_Object_o *gameObject; // x21
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
-  BattleServantConfConponent_o *p_resourceCatalog; // x19
-  struct IClassBoardResourceCatalog_o *v20; // x20
+  int32_t v12; // w2
+  int32_t v13; // w3
+  ServantStatusBattleListViewItem_o *p_resourceCatalog; // x19
+  struct IClassBoardResourceCatalog_o *v15; // x20
   struct IClassBoardResourceCatalog_o *resourceCatalog; // t1
   IClassBoardResourceCatalog_c *klass; // x8
-  unsigned __int64 v23; // x10
-  IClassBoardResourceCatalog_c **p_offset; // x11
+  __int64 v18; // x9
+  IClassBoardResourceCatalog_c **p_offset; // x10
   __int64 p_method; // x0
 
-  if ( (byte_438D418 & 1) == 0 )
+  if ( (byte_48E5A38 & 1) == 0 )
   {
-    sub_B775C4(&System_GC_TypeInfo);
-    sub_B775C4(&IClassBoardResourceCatalog_TypeInfo);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_438D418 = 1;
+    sub_1B00CCC(&System_GC_TypeInfo, method);
+    sub_1B00CCC(&IClassBoardResourceCatalog_TypeInfo, v3);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v4);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__, v5);
+    byte_48E5A38 = 1;
   }
   pageSwitcher = this->fields.pageSwitcher;
   if ( !pageSwitcher )
-    goto LABEL_26;
+    goto LABEL_23;
   ClassBoardPageSwitcher__Release(pageSwitcher, method);
   p_classBoardBackground = &this->fields.classBoardBackground;
   classBoardBackground = (UnityEngine_Object_o *)this->fields.classBoardBackground;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(classBoardBackground, 0LL, 0LL) )
   {
     pageSwitcher = (ClassBoardPageSwitcher_o *)*p_classBoardBackground;
     if ( !*p_classBoardBackground )
-      goto LABEL_26;
+      goto LABEL_23;
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
                                            (UnityEngine_Component_o *)pageSwitcher,
                                            0LL);
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
-    UnityEngine_Object__Destroy_36309980(gameObject, 0LL);
+    UnityEngine_Object__Destroy_68077656(gameObject, 0LL);
     *p_classBoardBackground = 0LL;
-    sub_B77560((BattleServantConfConponent_o *)&this->fields.classBoardBackground, 0LL, v13, v14, v15, v16, v17, v18);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.classBoardBackground, 0, v12, v13);
   }
   resourceCatalog = this->fields.resourceCatalog;
-  p_resourceCatalog = (BattleServantConfConponent_o *)&this->fields.resourceCatalog;
-  v20 = resourceCatalog;
+  p_resourceCatalog = (ServantStatusBattleListViewItem_o *)&this->fields.resourceCatalog;
+  v15 = resourceCatalog;
   if ( resourceCatalog )
   {
-    klass = v20->klass;
-    if ( *(_WORD *)&v20->klass->_2.bitflags1 )
+    klass = v15->klass;
+    v18 = *(unsigned __int16 *)(&v15->klass->_2.bitflags2 + 3);
+    if ( *(_WORD *)(&v15->klass->_2.bitflags2 + 3) )
     {
-      v23 = 0LL;
       p_offset = (IClassBoardResourceCatalog_c **)&klass->_1.interfaceOffsets->offset;
       while ( *(p_offset - 1) != IClassBoardResourceCatalog_TypeInfo )
       {
-        ++v23;
+        --v18;
         p_offset += 2;
-        if ( v23 >= *(unsigned __int16 *)&v20->klass->_2.bitflags1 )
-          goto LABEL_18;
+        if ( !v18 )
+          goto LABEL_16;
       }
       p_method = (__int64)&klass->vtable[*(_DWORD *)p_offset + 2].method;
     }
     else
     {
-LABEL_18:
-      p_method = sub_B0F4C0(v20, IClassBoardResourceCatalog_TypeInfo, 2LL);
+LABEL_16:
+      p_method = sub_1B52CAC(v15, IClassBoardResourceCatalog_TypeInfo, 2LL);
     }
-    (*(void (__fastcall **)(struct IClassBoardResourceCatalog_o *, _QWORD))p_method)(v20, *(_QWORD *)(p_method + 8));
+    (*(void (__fastcall **)(struct IClassBoardResourceCatalog_o *, _QWORD))p_method)(v15, *(_QWORD *)(p_method + 8));
   }
   p_resourceCatalog->klass = 0LL;
-  sub_B77560(p_resourceCatalog, 0LL, v6, v7, v8, v9, v10, v11);
-  pageSwitcher = (ClassBoardPageSwitcher_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  sub_1B00C70(p_resourceCatalog, 0, v9, v10);
+  pageSwitcher = (ClassBoardPageSwitcher_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !pageSwitcher )
-LABEL_26:
-    sub_B7769C(pageSwitcher, method);
+LABEL_23:
+    sub_1B00F28(pageSwitcher, method);
   AssetManager__RequestUnloadUnusedAssets((AssetManager_o *)pageSwitcher, 0LL, 0LL);
-  if ( (BYTE3(System_GC_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !System_GC_TypeInfo->_2.cctor_finished )
+  if ( !System_GC_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_GC_TypeInfo);
-  System_GC__Collect_44383624(0LL);
+  System_GC__Collect_61371376(0LL);
 }
 
 
 void __fastcall ClassBoardRootComponent__beginInitialize(ClassBoardRootComponent_o *this, const MethodInfo *method)
 {
-  ClassBoardResourceCatalogAssetBundle_o *v3; // x20
-  const MethodInfo *v4; // x1
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  __int64 v3; // x1
+  __int64 v4; // x1
+  ClassBoardResourceCatalogAssetBundle_o *v5; // x20
+  const MethodInfo *v6; // x1
+  int32_t v7; // w2
+  int32_t v8; // w3
   ClassBoardPageSwitcher_o *pageSwitcher; // x20
-  System_Action_o *v12; // x21
-  __int64 v13; // x0
-  __int64 v14; // x1
-  const MethodInfo *v15; // x3
+  System_Action_o *v10; // x21
+  __int64 v11; // x0
+  __int64 v12; // x1
+  const MethodInfo *v13; // x3
 
-  if ( (byte_438D417 & 1) == 0 )
+  if ( (byte_48E5A37 & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&ClassBoardResourceCatalogAssetBundle_TypeInfo);
-    sub_B775C4(&Method_ClassBoardRootComponent__beginInitialize_b__25_0__);
-    byte_438D417 = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, method);
+    sub_1B00CCC(&ClassBoardResourceCatalogAssetBundle_TypeInfo, v3);
+    sub_1B00CCC(&Method_ClassBoardRootComponent__beginInitialize_b__25_0__, v4);
+    byte_48E5A37 = 1;
   }
   SceneRootComponent__beginInitialize((SceneRootComponent_o *)this, 0LL);
-  v3 = (ClassBoardResourceCatalogAssetBundle_o *)sub_B77694(ClassBoardResourceCatalogAssetBundle_TypeInfo);
-  ClassBoardResourceCatalogAssetBundle___ctor(v3, v4);
-  this->fields.resourceCatalog = (struct IClassBoardResourceCatalog_o *)v3;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.resourceCatalog,
-    (System_Int32_array **)v3,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10);
+  v5 = (ClassBoardResourceCatalogAssetBundle_o *)sub_1B00F18(ClassBoardResourceCatalogAssetBundle_TypeInfo);
+  ClassBoardResourceCatalogAssetBundle___ctor(v5, v6);
+  this->fields.resourceCatalog = (struct IClassBoardResourceCatalog_o *)v5;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.resourceCatalog, (int32_t)v5, v7, v8);
   SceneRootComponent__setMainMenuBar((SceneRootComponent_o *)this, 5, 20, 0LL);
   pageSwitcher = this->fields.pageSwitcher;
-  v12 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-  System_Action___ctor(v12, (Il2CppObject *)this, Method_ClassBoardRootComponent__beginInitialize_b__25_0__, 0LL);
+  v10 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+  System_Action___ctor(v10, (Il2CppObject *)this, Method_ClassBoardRootComponent__beginInitialize_b__25_0__, 0LL);
   if ( !pageSwitcher )
-    sub_B7769C(v13, v14);
-  ClassBoardPageSwitcher__Init(pageSwitcher, this, v12, v15);
+    sub_1B00F28(v11, v12);
+  ClassBoardPageSwitcher__Init(pageSwitcher, this, v10, v13);
 }
 
 
@@ -350,7 +306,7 @@ void __fastcall ClassBoardRootComponent__beginStartUp(
   MainMenuBar__setMenuActive(1, 0LL, 0LL);
   pageSwitcher = this->fields.pageSwitcher;
   if ( !pageSwitcher )
-    sub_B7769C(0LL, v4);
+    sub_1B00F28(0LL, v4);
   ClassBoardPageSwitcher__StartUp(pageSwitcher, v4, v5);
 }
 

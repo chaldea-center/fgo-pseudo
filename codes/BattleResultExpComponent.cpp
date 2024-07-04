@@ -1,40 +1,41 @@
 void __fastcall BattleResultExpComponent___ctor(BattleResultExpComponent_o *this, const MethodInfo *method)
 {
+  __asm { FMOV            V0.4S, #1.0 }
   this->fields.time_exptotal = 1.0;
-  this->fields.record_renewalColor = UnityEngine_Color__get_yellow(0LL);
-  this->fields.record_intactColor = UnityEngine_Color__get_white(0LL);
-  this->fields.damage_renewalColor = UnityEngine_Color__get_white(0LL);
-  this->fields.damage_intactColor = UnityEngine_Color__get_blue(0LL);
+  this->fields.record_renewalColor = (struct UnityEngine_Color_o)xmmword_B71540;
+  this->fields.record_intactColor = _Q0;
+  this->fields.damage_renewalColor = _Q0;
+  this->fields.damage_intactColor = (struct UnityEngine_Color_o)xmmword_B70650;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
 
 void __fastcall BattleResultExpComponent__Close(BattleResultExpComponent_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   struct BattleWindowComponent_o *window; // x20
-  BattleWindowComponent_EndCall_o *v4; // x21
-  __int64 v5; // x0
-  __int64 v6; // x1
+  BattleWindowComponent_EndCall_o *v5; // x21
+  __int64 v6; // x0
+  __int64 v7; // x1
 
-  if ( (byte_438B80F & 1) == 0 )
+  if ( (byte_48E585B & 1) == 0 )
   {
-    sub_B775C4(&Method_BattleResultExpComponent_endClose__);
-    sub_B775C4(&BattleWindowComponent_EndCall_TypeInfo);
-    byte_438B80F = 1;
+    sub_1B00CCC(&Method_BattleResultExpComponent_endClose__, method);
+    sub_1B00CCC(&BattleWindowComponent_EndCall_TypeInfo, v3);
+    byte_48E585B = 1;
   }
   window = this->fields.window;
-  v4 = (BattleWindowComponent_EndCall_o *)sub_B77694(BattleWindowComponent_EndCall_TypeInfo);
-  BattleWindowComponent_EndCall___ctor(v4, (Il2CppObject *)this, Method_BattleResultExpComponent_endClose__, 0LL);
+  v5 = (BattleWindowComponent_EndCall_o *)sub_1B00F18(BattleWindowComponent_EndCall_TypeInfo);
+  BattleWindowComponent_EndCall___ctor(v5, (Il2CppObject *)this, Method_BattleResultExpComponent_endClose__, 0LL);
   if ( !window )
-    sub_B7769C(v5, v6);
+    sub_1B00F28(v6, v7);
   ((void (__fastcall *)(struct BattleWindowComponent_o *, BattleWindowComponent_EndCall_o *, Il2CppMethodPointer))window->klass->vtable._12_Close.method)(
     window,
-    v4,
+    v5,
     window->klass->vtable._13_CompClose.methodPtr);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall BattleResultExpComponent__CreateRewardEffect(
         BattleResultExpComponent_o *this,
         AssetData_o *data,
@@ -43,612 +44,567 @@ void __fastcall BattleResultExpComponent__CreateRewardEffect(
         const MethodInfo *method)
 {
   BattleResultExpComponent_o *v8; // x20
-  UnityEngine_UI_Dropdown_DropdownItem_o *Object_WarBoardWaitTimeSetting; // x21
-  UnityEngine_GameObject_o *v10; // x21
-  UnityEngine_Transform_o *v11; // x22
-  UnityEngine_Transform_o *transform; // x22
-  int v13; // s0
-  UnityEngine_Transform_o *v16; // x22
-  int v17; // s0
-  int parentComp; // w8
-  BattleResultExpComponent_o *v21; // x21
-  unsigned int v22; // w22
-  __int64 v23; // x0
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  Il2CppObject *Object_object__47470892; // x21
+  BattleResultExpComponent_o *v14; // x21
+  BattleResultExpComponent_o *v15; // x22
+  BattleResultExpComponent_o *v16; // x22
+  BattleResultExpComponent_o *v17; // x22
+  int m_CancellationTokenSource; // w8
+  BattleResultExpComponent_o *v19; // x21
+  unsigned int v20; // w22
 
   v8 = this;
-  if ( (byte_438B80B & 1) == 0 )
+  if ( (byte_48E5857 & 1) == 0 )
   {
-    sub_B775C4(&Method_AssetData_GetObject_GameObject____69465408);
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponentsInChildren_UIUnityRenderer___);
-    sub_B775C4(&Method_System_Collections_Generic_List_UIUnityRenderer__AddRange__);
-    sub_B775C4(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    this = (BattleResultExpComponent_o *)sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438B80B = 1;
+    sub_1B00CCC(&Method_AssetData_GetObject_GameObject____74577936, data);
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponentsInChildren_UIUnityRenderer___, v9);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_UIUnityRenderer__AddRange__, v10);
+    sub_1B00CCC(&Method_UnityEngine_Object_Instantiate_GameObject___, v11);
+    this = (BattleResultExpComponent_o *)sub_1B00CCC(&UnityEngine_Object_TypeInfo, v12);
+    byte_48E5857 = 1;
   }
   if ( !data )
-    goto LABEL_20;
-  Object_WarBoardWaitTimeSetting = (UnityEngine_UI_Dropdown_DropdownItem_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
-                                                                               data,
-                                                                               effectName,
-                                                                               (const MethodInfo_1C5FDDC *)Method_AssetData_GetObject_GameObject____69465408);
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+    goto LABEL_23;
+  Object_object__47470892 = AssetData__GetObject_object__47470892(
+                              data,
+                              effectName,
+                              (const MethodInfo_2D4592C *)Method_AssetData_GetObject_GameObject____74577936);
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  this = (BattleResultExpComponent_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
-                                         Object_WarBoardWaitTimeSetting,
-                                         (const MethodInfo_1DF9900 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+  this = (BattleResultExpComponent_o *)UnityEngine_Object__Instantiate_object_(
+                                         Object_object__47470892,
+                                         (const MethodInfo_2DD5AE8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !this )
-    goto LABEL_20;
-  v10 = (UnityEngine_GameObject_o *)this;
+    goto LABEL_23;
+  v14 = this;
   this = (BattleResultExpComponent_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0LL);
   if ( !targetIcon )
-    goto LABEL_20;
-  v11 = (UnityEngine_Transform_o *)this;
+    goto LABEL_23;
+  v15 = this;
   this = (BattleResultExpComponent_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)targetIcon, 0LL);
-  if ( !v11 )
-    goto LABEL_20;
-  UnityEngine_Transform__set_parent(v11, (UnityEngine_Transform_o *)this, 0LL);
-  transform = UnityEngine_GameObject__get_transform(v10, 0LL);
-  *(UnityEngine_Vector3_o *)&v13 = UnityEngine_Vector3__get_zero(0LL);
-  if ( !transform )
-    goto LABEL_20;
-  UnityEngine_Transform__set_localPosition(transform, *(UnityEngine_Vector3_o *)&v13, 0LL);
-  v16 = UnityEngine_GameObject__get_transform(v10, 0LL);
-  *(UnityEngine_Vector3_o *)&v17 = UnityEngine_Vector3__get_one(0LL);
-  if ( !v16 )
-    goto LABEL_20;
-  UnityEngine_Transform__set_localScale(v16, *(UnityEngine_Vector3_o *)&v17, 0LL);
-  this = (BattleResultExpComponent_o *)UnityEngine_GameObject__GetComponentsInChildren_changeVColor__31376384(
-                                         v10,
-                                         (const MethodInfo_1DEC400 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UIUnityRenderer___);
-  if ( !this )
-    goto LABEL_20;
-  parentComp = (int)this->fields.parentComp;
-  v21 = this;
-  if ( parentComp >= 1 )
+  if ( !v15 )
+    goto LABEL_23;
+  UnityEngine_Transform__set_parent((UnityEngine_Transform_o *)v15, (UnityEngine_Transform_o *)this, 0LL);
+  this = (BattleResultExpComponent_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v14, 0LL);
+  v16 = this;
+  if ( !byte_48DD9F1 )
   {
-    v22 = 0;
+    this = (BattleResultExpComponent_o *)sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, data);
+    byte_48DD9F1 = 1;
+  }
+  if ( !v16 )
+    goto LABEL_23;
+  UnityEngine_Transform__set_localPosition(
+    (UnityEngine_Transform_o *)v16,
+    UnityEngine_Vector3_TypeInfo->static_fields->zeroVector,
+    0LL);
+  this = (BattleResultExpComponent_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v14, 0LL);
+  v17 = this;
+  if ( !byte_48DD9F6 )
+  {
+    this = (BattleResultExpComponent_o *)sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, data);
+    byte_48DD9F6 = 1;
+  }
+  if ( !v17 )
+    goto LABEL_23;
+  UnityEngine_Transform__set_localScale(
+    (UnityEngine_Transform_o *)v17,
+    UnityEngine_Vector3_TypeInfo->static_fields->oneVector,
+    0LL);
+  this = (BattleResultExpComponent_o *)UnityEngine_GameObject__GetComponentsInChildren_object__47901228(
+                                         (UnityEngine_GameObject_o *)v14,
+                                         (const MethodInfo_2DAEA2C *)Method_UnityEngine_GameObject_GetComponentsInChildren_UIUnityRenderer___);
+  if ( !this )
+    goto LABEL_23;
+  m_CancellationTokenSource = (int)this->fields.m_CancellationTokenSource;
+  v19 = this;
+  if ( m_CancellationTokenSource >= 1 )
+  {
+    v20 = 0;
     while ( 1 )
     {
-      if ( v22 >= parentComp )
-      {
-        v23 = sub_B776C8(this);
-        sub_B77668(v23, 0LL);
-      }
-      this = (BattleResultExpComponent_o *)*((_QWORD *)&v21->fields.myFsm + (int)v22);
+      if ( v20 >= m_CancellationTokenSource )
+        sub_1B00F30(this, data);
+      this = (BattleResultExpComponent_o *)*((_QWORD *)&v19->fields.parentComp + (int)v20);
       if ( !this )
         break;
       UIWidget__set_depth((UIWidget_o *)this, targetIcon->fields.mDepth - 1, 0LL);
-      parentComp = (int)v21->fields.parentComp;
-      if ( (int)++v22 >= parentComp )
-        goto LABEL_18;
+      m_CancellationTokenSource = (int)v19->fields.m_CancellationTokenSource;
+      if ( (int)++v20 >= m_CancellationTokenSource )
+        goto LABEL_21;
     }
-LABEL_20:
-    sub_B7769C(this, data);
+LABEL_23:
+    sub_1B00F28(this, data);
   }
-LABEL_18:
+LABEL_21:
   this = (BattleResultExpComponent_o *)v8->fields.effectUIList;
   if ( !this )
-    goto LABEL_20;
-  System_Collections_Generic_List_TimeZoneInfo_AdjustmentRule___AddRange(
-    (System_Collections_Generic_List_TimeZoneInfo_AdjustmentRule__o *)this,
-    (System_Collections_Generic_IEnumerable_T__o *)v21,
-    (const MethodInfo_30534E8 *)Method_System_Collections_Generic_List_UIUnityRenderer__AddRange__);
+    goto LABEL_23;
+  System_Collections_Generic_List_object___AddRange(
+    (System_Collections_Generic_List_object__o *)this,
+    (System_Collections_Generic_IEnumerable_T__o *)v19,
+    (const MethodInfo_33C1BDC *)Method_System_Collections_Generic_List_UIUnityRenderer__AddRange__);
 }
 
 
 void __fastcall BattleResultExpComponent__Init(BattleResultExpComponent_o *this, const MethodInfo *method)
 {
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v3; // x20
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
-  __int64 v10; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  System_Collections_Generic_List_object__o *v8; // x20
+  int32_t v9; // w2
+  int32_t v10; // w3
+  __int64 v11; // x1
   BattleWindowComponent_o *window; // x0
   UnityEngine_Object_o *knockdownRecordWindow; // x20
-  System_String_o *v13; // x20
   System_String_o *v14; // x20
+  System_String_o *v15; // x20
 
-  if ( (byte_438B807 & 1) == 0 )
+  if ( (byte_48E5853 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_UIUnityRenderer___ctor__);
-    sub_B775C4(&System_Collections_Generic_List_UIUnityRenderer__TypeInfo);
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&StringLiteral_2594/*"BATTLE_RESULTEXP_MASTERTITLE"*/);
-    sub_B775C4(&StringLiteral_2589/*"BATTLE_RESULTEXP_EQUIPTITLE"*/);
-    byte_438B807 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_UIUnityRenderer___ctor__, method);
+    sub_1B00CCC(&System_Collections_Generic_List_UIUnityRenderer__TypeInfo, v3);
+    sub_1B00CCC(&LocalizationManager_TypeInfo, v4);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v5);
+    sub_1B00CCC(&StringLiteral_2927/*"BATTLE_RESULTEXP_MASTERTITLE"*/, v6);
+    sub_1B00CCC(&StringLiteral_2922/*"BATTLE_RESULTEXP_EQUIPTITLE"*/, v7);
+    byte_48E5853 = 1;
   }
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_UIUnityRenderer__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v3,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_UIUnityRenderer___ctor__);
-  this->fields.effectUIList = (struct System_Collections_Generic_List_UIUnityRenderer__o *)v3;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.effectUIList,
-    (System_Int32_array **)v3,
-    v4,
-    v5,
-    v6,
-    v7,
+  v8 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_UIUnityRenderer__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
     v8,
-    v9);
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_UIUnityRenderer___ctor__);
+  this->fields.effectUIList = (struct System_Collections_Generic_List_UIUnityRenderer__o *)v8;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.effectUIList, (int32_t)v8, v9, v10);
   window = this->fields.window;
   if ( !window )
-    goto LABEL_36;
+    goto LABEL_33;
   BattleWindowComponent__setInitData(window, 2, 0.15, 0, 0LL);
   window = this->fields.window;
   if ( !window )
-    goto LABEL_36;
+    goto LABEL_33;
   ((void (__fastcall *)(BattleWindowComponent_o *, Il2CppMethodPointer))window->klass->vtable._9_setClose.method)(
     window,
     window->klass->vtable._10_Open.methodPtr);
   window = this->fields.masterupwindow;
   if ( !window )
-    goto LABEL_36;
+    goto LABEL_33;
   BattleWindowComponent__setInitData(window, 2, 0.15, 0, 0LL);
   window = this->fields.masterupwindow;
   if ( !window )
-    goto LABEL_36;
+    goto LABEL_33;
   ((void (__fastcall *)(BattleWindowComponent_o *, Il2CppMethodPointer))window->klass->vtable._9_setClose.method)(
     window,
     window->klass->vtable._10_Open.methodPtr);
   window = this->fields.equipupwindow;
   if ( !window )
-    goto LABEL_36;
+    goto LABEL_33;
   BattleWindowComponent__setInitData(window, 2, 0.15, 0, 0LL);
   window = this->fields.equipupwindow;
   if ( !window )
-    goto LABEL_36;
+    goto LABEL_33;
   ((void (__fastcall *)(BattleWindowComponent_o *, Il2CppMethodPointer))window->klass->vtable._9_setClose.method)(
     window,
     window->klass->vtable._10_Open.methodPtr);
   window = this->fields.damageRecordWindow;
   if ( !window )
-    goto LABEL_36;
+    goto LABEL_33;
   BattleWindowComponent__setInitData(window, 2, 0.15, 0, 0LL);
   window = this->fields.damageRecordWindow;
   if ( !window )
-    goto LABEL_36;
+    goto LABEL_33;
   ((void (__fastcall *)(BattleWindowComponent_o *, Il2CppMethodPointer))window->klass->vtable._9_setClose.method)(
     window,
     window->klass->vtable._10_Open.methodPtr);
   knockdownRecordWindow = (UnityEngine_Object_o *)this->fields.knockdownRecordWindow;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(knockdownRecordWindow, 0LL, 0LL) )
   {
     window = (BattleWindowComponent_o *)this->fields.knockdownRecordWindow;
     if ( !window )
-      goto LABEL_36;
+      goto LABEL_33;
     ((void (__fastcall *)(BattleWindowComponent_o *, const char *))window->klass[1]._1.gc_desc)(
       window,
       window->klass[1]._1.name);
   }
   window = (BattleWindowComponent_o *)this->fields.masterLevelupRoot;
   if ( !window )
-    goto LABEL_36;
+    goto LABEL_33;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)window, 0, 0LL);
   window = (BattleWindowComponent_o *)this->fields.equipLevelupRoot;
   if ( !window )
-    goto LABEL_36;
+    goto LABEL_33;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)window, 0, 0LL);
   window = (BattleWindowComponent_o *)this->fields.damageRecordRoot;
   if ( !window )
-    goto LABEL_36;
+    goto LABEL_33;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)window, 0, 0LL);
   window = (BattleWindowComponent_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !window )
-    goto LABEL_36;
+    goto LABEL_33;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)window, 0, 0LL);
-  if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !LocalizationManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  }
-  window = (BattleWindowComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2594/*"BATTLE_RESULTEXP_MASTERTITLE"*/, 0LL);
+  window = (BattleWindowComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2927/*"BATTLE_RESULTEXP_MASTERTITLE"*/, 0LL);
   if ( !window )
-    goto LABEL_36;
-  v13 = (System_String_o *)window;
-  if ( !System_String__Equals_44889276((System_String_o *)window, (System_String_o *)StringLiteral_2594/*"BATTLE_RESULTEXP_MASTERTITLE"*/, 0LL) )
+    goto LABEL_33;
+  v14 = (System_String_o *)window;
+  if ( !System_String__Equals_60334064((System_String_o *)window, (System_String_o *)StringLiteral_2927/*"BATTLE_RESULTEXP_MASTERTITLE"*/, 0LL) )
   {
     window = (BattleWindowComponent_o *)this->fields.mst_Title;
     if ( !window )
-      goto LABEL_36;
-    UILabel__set_text((UILabel_o *)window, v13, 0LL);
+      goto LABEL_33;
+    UILabel__set_text((UILabel_o *)window, v14, 0LL);
   }
-  if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !LocalizationManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  }
-  window = (BattleWindowComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2589/*"BATTLE_RESULTEXP_EQUIPTITLE"*/, 0LL);
+  window = (BattleWindowComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2922/*"BATTLE_RESULTEXP_EQUIPTITLE"*/, 0LL);
   if ( !window )
-LABEL_36:
-    sub_B7769C(window, v10);
-  v14 = (System_String_o *)window;
-  if ( !System_String__Equals_44889276((System_String_o *)window, (System_String_o *)StringLiteral_2589/*"BATTLE_RESULTEXP_EQUIPTITLE"*/, 0LL) )
+LABEL_33:
+    sub_1B00F28(window, v11);
+  v15 = (System_String_o *)window;
+  if ( !System_String__Equals_60334064((System_String_o *)window, (System_String_o *)StringLiteral_2922/*"BATTLE_RESULTEXP_EQUIPTITLE"*/, 0LL) )
   {
     window = (BattleWindowComponent_o *)this->fields.equip_Title;
     if ( window )
     {
-      UILabel__set_text((UILabel_o *)window, v14, 0LL);
-      goto LABEL_35;
+      UILabel__set_text((UILabel_o *)window, v15, 0LL);
+      goto LABEL_32;
     }
-    goto LABEL_36;
+    goto LABEL_33;
   }
-LABEL_35:
+LABEL_32:
   this->fields.bondsCountUp = 1;
 }
 
 
 void __fastcall BattleResultExpComponent__Open(BattleResultExpComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v3; // x1
   __int64 v4; // x1
-  UnityEngine_GameObject_c *klass; // x8
-  __int64 v6; // x11
-  UnityEngine_GameObject_c *v7; // x22
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v17; // x1
+  void *monitor; // x8
+  __int64 methodPtr_low; // x11
+  _QWORD *v20; // x22
   struct UserEquipEntity_o *oldEquip; // x8
-  __int64 v9; // x20
-  __int64 v10; // x21
-  int32_t v11; // w20
-  __int64 v12; // x8
-  struct UnityEngine_GameObject_o **p_figureRoot; // x21
-  UnityEngine_GameObject_o *v14; // x20
-  System_String_array **v15; // x2
-  System_String_array **v16; // x3
-  System_Boolean_array **v17; // x4
-  System_Int32_array **v18; // x5
-  System_Int32_array *v19; // x6
-  System_Int32_array *v20; // x7
-  System_Object_array *v21; // x21
-  UnityEngine_GameObject_o *v22; // x0
-  System_Int32_array **v23; // x1
-  __int64 v24; // x2
-  System_String_array **v25; // x2
-  System_String_array **v26; // x3
-  System_Boolean_array **v27; // x4
-  System_Int32_array **v28; // x5
-  System_Int32_array *v29; // x6
-  System_Int32_array *v30; // x7
-  System_Int32_array **v31; // x22
-  System_String_array **v32; // x2
-  System_String_array **v33; // x3
-  System_Boolean_array **v34; // x4
-  System_Int32_array **v35; // x5
-  System_Int32_array *v36; // x6
-  System_Int32_array *v37; // x7
-  System_Int32_array **v38; // x1
-  __int64 v39; // x2
-  System_String_array **v40; // x2
-  System_String_array **v41; // x3
-  System_Boolean_array **v42; // x4
-  System_Int32_array **v43; // x5
-  System_Int32_array *v44; // x6
-  System_Int32_array *v45; // x7
-  System_Int32_array **v46; // x22
-  System_String_array **v47; // x2
-  System_String_array **v48; // x3
-  System_Boolean_array **v49; // x4
-  System_Int32_array **v50; // x5
-  System_Int32_array *v51; // x6
-  System_Int32_array *v52; // x7
-  System_Int32_array **v53; // x1
-  __int64 v54; // x2
-  System_String_array **v55; // x2
-  System_String_array **v56; // x3
-  System_Boolean_array **v57; // x4
-  System_Int32_array **v58; // x5
-  System_Int32_array *v59; // x6
-  System_Int32_array *v60; // x7
-  System_Int32_array **v61; // x22
-  System_String_array **v62; // x2
-  System_String_array **v63; // x3
-  System_Boolean_array **v64; // x4
-  System_Int32_array **v65; // x5
-  System_Int32_array *v66; // x6
-  System_Int32_array *v67; // x7
-  System_Int32_array **v68; // x1
-  System_String_array **v69; // x2
-  System_String_array **v70; // x3
-  System_Boolean_array **v71; // x4
-  System_Int32_array **v72; // x5
-  System_Int32_array *v73; // x6
-  System_Int32_array *v74; // x7
-  System_Int32_array **v75; // x22
-  System_String_array **v76; // x2
-  System_String_array **v77; // x3
-  System_Boolean_array **v78; // x4
-  System_Int32_array **v79; // x5
-  System_Int32_array *v80; // x6
-  System_Int32_array *v81; // x7
-  System_Int32_array **v82; // x1
-  System_String_array **v83; // x2
-  System_String_array **v84; // x3
-  System_Boolean_array **v85; // x4
-  System_Int32_array **v86; // x5
-  System_Int32_array *v87; // x6
-  System_Int32_array *v88; // x7
-  System_Int32_array **v89; // x1
-  System_Collections_Hashtable_o *v90; // x0
-  __int64 v91; // x0
-  __int64 v92; // x0
-  char v93[4]; // [xsp+18h] [xbp-38h] BYREF
-  int v94; // [xsp+1Ch] [xbp-34h] BYREF
-  int v95; // [xsp+28h] [xbp-28h] BYREF
-  int32_t overwriteImageId; // [xsp+2Ch] [xbp-24h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v97; // 0:x0.16
+  __int64 v22; // x20
+  __int64 v23; // x21
+  int32_t v24; // w20
+  __int64 v25; // x8
+  UnityEngine_GameObject_o *figureRoot; // x20
+  int32_t v27; // w2
+  int32_t v28; // w3
+  System_Object_array *v29; // x21
+  UnityEngine_GameObject_o *v30; // x0
+  Il2CppObject *v31; // x1
+  __int64 v32; // x2
+  __int64 v33; // x3
+  __int64 v34; // x4
+  int32_t v35; // w2
+  int32_t v36; // w3
+  Il2CppObject *v37; // x22
+  int32_t v38; // w2
+  int32_t v39; // w3
+  __int64 v40; // x2
+  __int64 v41; // x3
+  __int64 v42; // x4
+  int32_t v43; // w2
+  int32_t v44; // w3
+  Il2CppObject *v45; // x22
+  int32_t v46; // w2
+  int32_t v47; // w3
+  __int64 v48; // x2
+  __int64 v49; // x3
+  __int64 v50; // x4
+  int32_t v51; // w2
+  int32_t v52; // w3
+  Il2CppObject *v53; // x22
+  int32_t v54; // w2
+  int32_t v55; // w3
+  int32_t v56; // w2
+  int32_t v57; // w3
+  Il2CppObject *v58; // x22
+  int32_t v59; // w2
+  int32_t v60; // w3
+  int32_t v61; // w2
+  int32_t v62; // w3
+  System_Collections_Hashtable_o *v63; // x0
+  __int64 v64; // x0
+  char v65[4]; // [xsp+18h] [xbp-48h] BYREF
+  int v66; // [xsp+1Ch] [xbp-44h] BYREF
+  int v67; // [xsp+28h] [xbp-38h] BYREF
+  int32_t overwriteImageId; // [xsp+2Ch] [xbp-34h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v69; // 0:x0.16
 
-  if ( (byte_438B80E & 1) == 0 )
+  if ( (byte_48E585A & 1) == 0 )
   {
-    sub_B775C4(&BattleRootComponent_TypeInfo);
-    sub_B775C4(&bool_TypeInfo);
-    sub_B775C4(&object___TypeInfo);
-    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B775C4(&float_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_B775C4(&StringLiteral_23801/*"x"*/);
-    sub_B775C4(&StringLiteral_5634/*"END_OPEN"*/);
-    sub_B775C4(&StringLiteral_23154/*"time"*/);
-    sub_B775C4(&StringLiteral_21704/*"oncompletetarget"*/);
-    sub_B775C4(&StringLiteral_18722/*"endMoveFigure"*/);
-    sub_B775C4(&StringLiteral_20375/*"islocal"*/);
-    sub_B775C4(&StringLiteral_21702/*"oncomplete"*/);
-    sub_B775C4(&iTween_TypeInfo);
-    byte_438B80E = 1;
+    sub_1B00CCC(&BattleRootComponent_TypeInfo, method);
+    sub_1B00CCC(&bool_TypeInfo, v3);
+    sub_1B00CCC(&object___TypeInfo, v4);
+    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v5);
+    sub_1B00CCC(&float_TypeInfo, v6);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v7);
+    sub_1B00CCC(&StringLiteral_24379/*"x"*/, v8);
+    sub_1B00CCC(&StringLiteral_5425/*"END_OPEN"*/, v9);
+    sub_1B00CCC(&StringLiteral_23574/*"time"*/, v10);
+    sub_1B00CCC(&StringLiteral_21973/*"oncompletetarget"*/, v11);
+    sub_1B00CCC(&StringLiteral_18760/*"endMoveFigure"*/, v12);
+    sub_1B00CCC(&StringLiteral_20550/*"islocal"*/, v13);
+    sub_1B00CCC(&StringLiteral_21971/*"oncomplete"*/, v14);
+    sub_1B00CCC(&iTween_TypeInfo, v15);
+    byte_48E585A = 1;
   }
-  overwriteImageId = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    goto LABEL_72;
+    goto LABEL_69;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
-  gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !gameObject )
-    goto LABEL_72;
-  klass = gameObject[1].klass;
-  if ( klass
-    && (v6 = *(&BattleRootComponent_TypeInfo->_2.bitflags2 + 1),
-        *((unsigned __int8 *)klass->_1.image + 300) >= (unsigned int)v6) )
+    goto LABEL_69;
+  monitor = gameObject[1].monitor;
+  if ( monitor
+    && (methodPtr_low = LOBYTE(BattleRootComponent_TypeInfo->vtable._0_Equals.methodPtr),
+        *(unsigned __int8 *)(*(_QWORD *)monitor + 304LL) >= (unsigned int)methodPtr_low) )
   {
-    v7 = *(BattleRootComponent_c **)(*((_QWORD *)klass->_1.image + 25) + 8 * v6 - 8) == BattleRootComponent_TypeInfo
-       ? gameObject[1].klass
-       : 0LL;
+    v20 = *(BattleRootComponent_c **)(*(_QWORD *)(*(_QWORD *)monitor + 200LL) + 8 * methodPtr_low - 8) == BattleRootComponent_TypeInfo
+        ? gameObject[1].monitor
+        : 0LL;
   }
   else
   {
-    v7 = 0LL;
+    v20 = 0LL;
   }
   oldEquip = this->fields.oldEquip;
   if ( !oldEquip )
-    goto LABEL_72;
-  v10 = *(_QWORD *)&oldEquip->fields.equipId.fields.currentCryptoKey;
-  v9 = *(_QWORD *)&oldEquip->fields.equipId.fields.fakeValue;
-  if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-  {
+    goto LABEL_69;
+  v23 = *(_QWORD *)&oldEquip->fields.equipId.fields.currentCryptoKey;
+  v22 = *(_QWORD *)&oldEquip->fields.equipId.fields.fakeValue;
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  }
-  *(_QWORD *)&v97.fields.currentCryptoKey = v10;
-  *(_QWORD *)&v97.fields.fakeValue = v9;
-  gameObject = (UnityEngine_GameObject_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v97, 0LL);
-  if ( !v7 )
-    goto LABEL_72;
-  v11 = (int)gameObject;
-  gameObject = *(UnityEngine_GameObject_o **)&v7->_1.this_arg.bits;
+  *(_QWORD *)&v69.fields.currentCryptoKey = v23;
+  *(_QWORD *)&v69.fields.fakeValue = v22;
+  gameObject = (UnityEngine_GameObject_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(v69, 0LL);
+  if ( !v20 )
+    goto LABEL_69;
+  v24 = (int)gameObject;
+  gameObject = (UnityEngine_GameObject_o *)v20[8];
   if ( !gameObject )
-    goto LABEL_72;
+    goto LABEL_69;
   overwriteImageId = BattleData__GetMasterIconResultImageId((BattleData_o *)gameObject, 0LL);
-  gameObject = *(UnityEngine_GameObject_o **)&v7->_1.this_arg.bits;
+  gameObject = (UnityEngine_GameObject_o *)v20[8];
   if ( !gameObject )
-    goto LABEL_72;
+    goto LABEL_69;
   BattleData__GetEquipAddImageId((BattleData_o *)gameObject, &overwriteImageId, 0LL);
-  if ( overwriteImageId == -1 )
+  if ( overwriteImageId != -1 )
   {
-    p_figureRoot = &this->fields.figureRoot;
-  }
-  else
-  {
-    v12 = *(_QWORD *)&v7->_1.this_arg.bits;
-    if ( !v12 )
-      goto LABEL_72;
-    p_figureRoot = &this->fields.figureRoot;
-    MasterFigureManagerOld__CreatePrefab_31347828(
+    v25 = v20[8];
+    if ( !v25 )
+      goto LABEL_69;
+    MasterFigureManagerOld__CreatePrefab_36715464(
       this->fields.figureRoot,
       0,
-      *(_DWORD *)(v12 + 392),
-      v11,
+      *(_DWORD *)(v25 + 400),
+      v24,
       60,
       0LL,
       overwriteImageId,
       (System_Nullable_Vector3__o)0,
       0LL);
   }
-  v14 = *p_figureRoot;
-  gameObject = (UnityEngine_GameObject_o *)sub_B775DC(object___TypeInfo, 10LL);
+  figureRoot = this->fields.figureRoot;
+  gameObject = (UnityEngine_GameObject_o *)sub_1B00D74(object___TypeInfo, 10LL);
   if ( !gameObject )
-LABEL_72:
-    sub_B7769C(gameObject, v4);
-  v21 = (System_Object_array *)gameObject;
-  v22 = (UnityEngine_GameObject_o *)StringLiteral_23801/*"x"*/;
-  if ( StringLiteral_23801/*"x"*/ )
+LABEL_69:
+    sub_1B00F28(gameObject, v17);
+  v29 = (System_Object_array *)gameObject;
+  v30 = (UnityEngine_GameObject_o *)StringLiteral_24379/*"x"*/;
+  if ( StringLiteral_24379/*"x"*/ )
   {
-    v22 = (UnityEngine_GameObject_o *)sub_B77684(StringLiteral_23801/*"x"*/, v21->obj.klass->_1.element_class);
-    if ( !v22 )
-      goto LABEL_73;
-    v23 = (System_Int32_array **)StringLiteral_23801/*"x"*/;
+    v30 = (UnityEngine_GameObject_o *)sub_1B00E08(StringLiteral_24379/*"x"*/, v29->obj.klass->_1.element_class);
+    if ( !v30 )
+      goto LABEL_70;
+    v31 = (Il2CppObject *)StringLiteral_24379/*"x"*/;
   }
   else
   {
-    v23 = 0LL;
+    v31 = 0LL;
   }
-  if ( !v21->max_length )
-    goto LABEL_71;
-  v21->m_Items[0] = (Il2CppObject *)v23;
-  sub_B77560((BattleServantConfConponent_o *)v21->m_Items, v23, v15, v16, v17, v18, v19, v20);
-  v95 = -1018691584;
-  v22 = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(float_TypeInfo, &v95, v24);
-  v31 = (System_Int32_array **)v22;
-  if ( v22 )
+  if ( !v29->max_length )
+    goto LABEL_68;
+  v29->m_Items[0] = v31;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)v29->m_Items, (int32_t)v31, v27, v28);
+  v67 = -1018691584;
+  v30 = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(float_TypeInfo, &v67, v32, v33, v34);
+  v37 = (Il2CppObject *)v30;
+  if ( v30 )
   {
-    v22 = (UnityEngine_GameObject_o *)sub_B77684(v22, v21->obj.klass->_1.element_class);
-    if ( !v22 )
-      goto LABEL_73;
+    v30 = (UnityEngine_GameObject_o *)sub_1B00E08(v30, v29->obj.klass->_1.element_class);
+    if ( !v30 )
+      goto LABEL_70;
   }
-  if ( v21->max_length <= 1 )
-    goto LABEL_71;
-  v21->m_Items[1] = (Il2CppObject *)v31;
-  sub_B77560((BattleServantConfConponent_o *)&v21->m_Items[1], v31, v25, v26, v27, v28, v29, v30);
-  v22 = (UnityEngine_GameObject_o *)StringLiteral_23154/*"time"*/;
-  if ( StringLiteral_23154/*"time"*/ )
+  if ( v29->max_length <= 1 )
+    goto LABEL_68;
+  v29->m_Items[1] = v37;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v29->m_Items[1], (int32_t)v37, v35, v36);
+  v30 = (UnityEngine_GameObject_o *)StringLiteral_23574/*"time"*/;
+  if ( StringLiteral_23574/*"time"*/ )
   {
-    v22 = (UnityEngine_GameObject_o *)sub_B77684(StringLiteral_23154/*"time"*/, v21->obj.klass->_1.element_class);
-    if ( !v22 )
-      goto LABEL_73;
-    v38 = (System_Int32_array **)StringLiteral_23154/*"time"*/;
-  }
-  else
-  {
-    v38 = 0LL;
-  }
-  if ( v21->max_length <= 2 )
-    goto LABEL_71;
-  v21->m_Items[2] = (Il2CppObject *)v38;
-  sub_B77560((BattleServantConfConponent_o *)&v21->m_Items[2], v38, v32, v33, v34, v35, v36, v37);
-  v94 = 1061997773;
-  v22 = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(float_TypeInfo, &v94, v39);
-  v46 = (System_Int32_array **)v22;
-  if ( v22 )
-  {
-    v22 = (UnityEngine_GameObject_o *)sub_B77684(v22, v21->obj.klass->_1.element_class);
-    if ( !v22 )
-      goto LABEL_73;
-  }
-  if ( v21->max_length <= 3 )
-    goto LABEL_71;
-  v21->m_Items[3] = (Il2CppObject *)v46;
-  sub_B77560((BattleServantConfConponent_o *)&v21->m_Items[3], v46, v40, v41, v42, v43, v44, v45);
-  v22 = (UnityEngine_GameObject_o *)StringLiteral_20375/*"islocal"*/;
-  if ( StringLiteral_20375/*"islocal"*/ )
-  {
-    v22 = (UnityEngine_GameObject_o *)sub_B77684(StringLiteral_20375/*"islocal"*/, v21->obj.klass->_1.element_class);
-    if ( !v22 )
-      goto LABEL_73;
-    v53 = (System_Int32_array **)StringLiteral_20375/*"islocal"*/;
+    v30 = (UnityEngine_GameObject_o *)sub_1B00E08(StringLiteral_23574/*"time"*/, v29->obj.klass->_1.element_class);
+    if ( !v30 )
+      goto LABEL_70;
+    v31 = (Il2CppObject *)StringLiteral_23574/*"time"*/;
   }
   else
   {
-    v53 = 0LL;
+    v31 = 0LL;
   }
-  if ( v21->max_length <= 4 )
-    goto LABEL_71;
-  v21->m_Items[4] = (Il2CppObject *)v53;
-  sub_B77560((BattleServantConfConponent_o *)&v21->m_Items[4], v53, v47, v48, v49, v50, v51, v52);
-  v93[0] = 1;
-  v22 = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(bool_TypeInfo, v93, v54);
-  v61 = (System_Int32_array **)v22;
-  if ( v22 )
+  if ( v29->max_length <= 2 )
+    goto LABEL_68;
+  v29->m_Items[2] = v31;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v29->m_Items[2], (int32_t)v31, v38, v39);
+  v66 = 1061997773;
+  v30 = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(float_TypeInfo, &v66, v40, v41, v42);
+  v45 = (Il2CppObject *)v30;
+  if ( v30 )
   {
-    v22 = (UnityEngine_GameObject_o *)sub_B77684(v22, v21->obj.klass->_1.element_class);
-    if ( !v22 )
-      goto LABEL_73;
+    v30 = (UnityEngine_GameObject_o *)sub_1B00E08(v30, v29->obj.klass->_1.element_class);
+    if ( !v30 )
+      goto LABEL_70;
   }
-  if ( v21->max_length <= 5 )
-    goto LABEL_71;
-  v21->m_Items[5] = (Il2CppObject *)v61;
-  sub_B77560((BattleServantConfConponent_o *)&v21->m_Items[5], v61, v55, v56, v57, v58, v59, v60);
-  v22 = (UnityEngine_GameObject_o *)StringLiteral_21704/*"oncompletetarget"*/;
-  if ( StringLiteral_21704/*"oncompletetarget"*/ )
+  if ( v29->max_length <= 3 )
+    goto LABEL_68;
+  v29->m_Items[3] = v45;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v29->m_Items[3], (int32_t)v45, v43, v44);
+  v30 = (UnityEngine_GameObject_o *)StringLiteral_20550/*"islocal"*/;
+  if ( StringLiteral_20550/*"islocal"*/ )
   {
-    v22 = (UnityEngine_GameObject_o *)sub_B77684(StringLiteral_21704/*"oncompletetarget"*/, v21->obj.klass->_1.element_class);
-    if ( !v22 )
-      goto LABEL_73;
-    v68 = (System_Int32_array **)StringLiteral_21704/*"oncompletetarget"*/;
+    v30 = (UnityEngine_GameObject_o *)sub_1B00E08(StringLiteral_20550/*"islocal"*/, v29->obj.klass->_1.element_class);
+    if ( !v30 )
+      goto LABEL_70;
+    v31 = (Il2CppObject *)StringLiteral_20550/*"islocal"*/;
   }
   else
   {
-    v68 = 0LL;
+    v31 = 0LL;
   }
-  if ( v21->max_length <= 6 )
-    goto LABEL_71;
-  v21->m_Items[6] = (Il2CppObject *)v68;
-  sub_B77560((BattleServantConfConponent_o *)&v21->m_Items[6], v68, v62, v63, v64, v65, v66, v67);
-  v22 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  v75 = (System_Int32_array **)v22;
-  if ( v22 )
+  if ( v29->max_length <= 4 )
+    goto LABEL_68;
+  v29->m_Items[4] = v31;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v29->m_Items[4], (int32_t)v31, v46, v47);
+  v65[0] = 1;
+  v30 = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(bool_TypeInfo, v65, v48, v49, v50);
+  v53 = (Il2CppObject *)v30;
+  if ( v30 )
   {
-    v22 = (UnityEngine_GameObject_o *)sub_B77684(v22, v21->obj.klass->_1.element_class);
-    if ( !v22 )
+    v30 = (UnityEngine_GameObject_o *)sub_1B00E08(v30, v29->obj.klass->_1.element_class);
+    if ( !v30 )
+      goto LABEL_70;
+  }
+  if ( v29->max_length <= 5 )
+    goto LABEL_68;
+  v29->m_Items[5] = v53;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v29->m_Items[5], (int32_t)v53, v51, v52);
+  v30 = (UnityEngine_GameObject_o *)StringLiteral_21973/*"oncompletetarget"*/;
+  if ( StringLiteral_21973/*"oncompletetarget"*/ )
+  {
+    v30 = (UnityEngine_GameObject_o *)sub_1B00E08(StringLiteral_21973/*"oncompletetarget"*/, v29->obj.klass->_1.element_class);
+    if ( !v30 )
+      goto LABEL_70;
+    v31 = (Il2CppObject *)StringLiteral_21973/*"oncompletetarget"*/;
+  }
+  else
+  {
+    v31 = 0LL;
+  }
+  if ( v29->max_length <= 6 )
+    goto LABEL_68;
+  v29->m_Items[6] = v31;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v29->m_Items[6], (int32_t)v31, v54, v55);
+  v30 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  v58 = (Il2CppObject *)v30;
+  if ( v30 )
+  {
+    v30 = (UnityEngine_GameObject_o *)sub_1B00E08(v30, v29->obj.klass->_1.element_class);
+    if ( !v30 )
     {
-LABEL_73:
-      v92 = sub_B776BC(v22);
-      sub_B77668(v92, 0LL);
+LABEL_70:
+      v64 = sub_1B00F4C(v30);
+      sub_1B00DF4(v64, 0LL);
     }
   }
-  if ( v21->max_length <= 7 )
-    goto LABEL_71;
-  v21->m_Items[7] = (Il2CppObject *)v75;
-  sub_B77560((BattleServantConfConponent_o *)&v21->m_Items[7], v75, v69, v70, v71, v72, v73, v74);
-  v22 = (UnityEngine_GameObject_o *)StringLiteral_21702/*"oncomplete"*/;
-  if ( StringLiteral_21702/*"oncomplete"*/ )
+  if ( v29->max_length <= 7 )
+    goto LABEL_68;
+  v29->m_Items[7] = v58;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v29->m_Items[7], (int32_t)v58, v56, v57);
+  v30 = (UnityEngine_GameObject_o *)StringLiteral_21971/*"oncomplete"*/;
+  if ( StringLiteral_21971/*"oncomplete"*/ )
   {
-    v22 = (UnityEngine_GameObject_o *)sub_B77684(StringLiteral_21702/*"oncomplete"*/, v21->obj.klass->_1.element_class);
-    if ( !v22 )
-      goto LABEL_73;
-    v82 = (System_Int32_array **)StringLiteral_21702/*"oncomplete"*/;
+    v30 = (UnityEngine_GameObject_o *)sub_1B00E08(StringLiteral_21971/*"oncomplete"*/, v29->obj.klass->_1.element_class);
+    if ( !v30 )
+      goto LABEL_70;
+    v31 = (Il2CppObject *)StringLiteral_21971/*"oncomplete"*/;
   }
   else
   {
-    v82 = 0LL;
+    v31 = 0LL;
   }
-  if ( v21->max_length <= 8 )
-    goto LABEL_71;
-  v21->m_Items[8] = (Il2CppObject *)v82;
-  sub_B77560((BattleServantConfConponent_o *)&v21->m_Items[8], v82, v76, v77, v78, v79, v80, v81);
-  v22 = (UnityEngine_GameObject_o *)StringLiteral_18722/*"endMoveFigure"*/;
-  if ( StringLiteral_18722/*"endMoveFigure"*/ )
+  if ( v29->max_length <= 8 )
+    goto LABEL_68;
+  v29->m_Items[8] = v31;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v29->m_Items[8], (int32_t)v31, v59, v60);
+  v30 = (UnityEngine_GameObject_o *)StringLiteral_18760/*"endMoveFigure"*/;
+  if ( StringLiteral_18760/*"endMoveFigure"*/ )
   {
-    v22 = (UnityEngine_GameObject_o *)sub_B77684(StringLiteral_18722/*"endMoveFigure"*/, v21->obj.klass->_1.element_class);
-    if ( v22 )
+    v30 = (UnityEngine_GameObject_o *)sub_1B00E08(StringLiteral_18760/*"endMoveFigure"*/, v29->obj.klass->_1.element_class);
+    if ( v30 )
     {
-      v89 = (System_Int32_array **)StringLiteral_18722/*"endMoveFigure"*/;
-      goto LABEL_64;
+      v31 = (Il2CppObject *)StringLiteral_18760/*"endMoveFigure"*/;
+      goto LABEL_62;
     }
-    goto LABEL_73;
+    goto LABEL_70;
   }
-  v89 = 0LL;
-LABEL_64:
-  if ( v21->max_length <= 9 )
-  {
-LABEL_71:
-    v91 = sub_B776C8(v22);
-    sub_B77668(v91, 0LL);
-  }
-  v21->m_Items[9] = (Il2CppObject *)v89;
-  sub_B77560((BattleServantConfConponent_o *)&v21->m_Items[9], v89, v83, v84, v85, v86, v87, v88);
-  if ( (BYTE3(iTween_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !iTween_TypeInfo->_2.cctor_finished )
+  v31 = 0LL;
+LABEL_62:
+  if ( v29->max_length <= 9 )
+LABEL_68:
+    sub_1B00F30(v30, v31);
+  v29->m_Items[9] = v31;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v29->m_Items[9], (int32_t)v31, v61, v62);
+  if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  v90 = iTween__Hash(v21, 0LL);
-  iTween__MoveFrom_43178708(v14, v90, 0LL);
+  v63 = iTween__Hash(v29, 0LL);
+  iTween__MoveFrom_58865552(figureRoot, v63, 0LL);
   gameObject = (UnityEngine_GameObject_o *)this->fields.window;
   if ( !gameObject )
-    goto LABEL_72;
+    goto LABEL_69;
   ((void (__fastcall *)(UnityEngine_GameObject_o *, _QWORD, void *))gameObject->klass[1]._1.typeMetadataHandle)(
     gameObject,
     0LL,
     gameObject->klass[1]._1.interopData);
   gameObject = (UnityEngine_GameObject_o *)this->fields.myFsm;
   if ( !gameObject )
-    goto LABEL_72;
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)gameObject, (System_String_o *)StringLiteral_5634/*"END_OPEN"*/, 0LL);
+    goto LABEL_69;
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)gameObject, (System_String_o *)StringLiteral_5425/*"END_OPEN"*/, 0LL);
 }
 
 
@@ -665,59 +621,64 @@ void __fastcall BattleResultExpComponent__UpdateValue(
 
 void __fastcall BattleResultExpComponent__activeTouch(BattleResultExpComponent_o *this, const MethodInfo *method)
 {
-  struct BattleResultComponent_o *parentComp; // x8
+  BattleResultComponent_o *parentComp; // x0
 
   parentComp = this->fields.parentComp;
-  if ( !parentComp || (this = (BattleResultExpComponent_o *)parentComp->fields.obj_fronttouch) == 0LL )
-    sub_B7769C(this, method);
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
+  if ( !parentComp )
+    sub_1B00F28(0LL, method);
+  BattleResultComponent__setTouch(parentComp, 1, 0LL);
 }
 
 
 void __fastcall BattleResultExpComponent__checkDamageRecord(BattleResultExpComponent_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
   PlayMakerFSM_o *myFsm; // x0
   UnityEngine_Object_o *damage_LvupSimpleAnim; // x20
   PlayMakerFSM_c *klass; // x8
-  PlayMakerFSM_o *v6; // x20
-  unsigned __int64 v7; // x10
-  SimpleAnimation_State_c **p_offset; // x11
-  __int64 v9; // x0
+  PlayMakerFSM_o *v12; // x20
+  __int64 v13; // x9
+  SimpleAnimation_State_c **p_offset; // x10
+  __int64 v15; // x0
   UnityEngine_Object_o *damage_LvupAnim; // x20
   struct BattleWindowComponent_o *damageRecordWindow; // x20
-  BattleWindowComponent_EndCall_o *v12; // x21
+  BattleWindowComponent_EndCall_o *v18; // x21
+  _QWORD *v19; // x0
+  System_Reflection_MethodBase_o *v20; // x0
 
-  if ( (byte_438B81B & 1) == 0 )
+  if ( (byte_48E5867 & 1) == 0 )
   {
-    sub_B775C4(&Method_BattleResultExpComponent_endOpenDamageRecord__);
-    sub_B775C4(&BattleWindowComponent_EndCall_TypeInfo);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&SoundManager_TypeInfo);
-    sub_B775C4(&SimpleAnimation_State_TypeInfo);
-    sub_B775C4(&StringLiteral_17147/*"bit_result_levelup01"*/);
-    sub_B775C4(&StringLiteral_3213/*"CLOSE"*/);
-    byte_438B81B = 1;
+    sub_1B00CCC(&Method_BattleResultExpComponent_checkDamageRecord__, method);
+    sub_1B00CCC(&Method_BattleResultExpComponent_endOpenDamageRecord__, v3);
+    sub_1B00CCC(&BattleWindowComponent_EndCall_TypeInfo, v4);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v5);
+    sub_1B00CCC(&SimpleAnimation_State_TypeInfo, v6);
+    sub_1B00CCC(&StringLiteral_17048/*"bit_result_levelup01"*/, v7);
+    sub_1B00CCC(&StringLiteral_3540/*"CLOSE"*/, v8);
+    byte_48E5867 = 1;
   }
   if ( this->fields.bestTurnDamage < 1 )
   {
     myFsm = this->fields.myFsm;
     if ( myFsm )
     {
-      PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3213/*"CLOSE"*/, 0LL);
+      PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3540/*"CLOSE"*/, 0LL);
       return;
     }
-    goto LABEL_34;
+    goto LABEL_31;
   }
   myFsm = (PlayMakerFSM_o *)this->fields.damageRecordRoot;
   if ( !myFsm )
-    goto LABEL_34;
+    goto LABEL_31;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)myFsm, 1, 0LL);
   damage_LvupSimpleAnim = (UnityEngine_Object_o *)this->fields.damage_LvupSimpleAnim;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(damage_LvupSimpleAnim, 0LL, 0LL) )
   {
     myFsm = (PlayMakerFSM_o *)this->fields.damage_LvupSimpleAnim;
@@ -725,48 +686,45 @@ void __fastcall BattleResultExpComponent__checkDamageRecord(BattleResultExpCompo
     {
       myFsm = (PlayMakerFSM_o *)SimpleAnimation__get_Item(
                                   (SimpleAnimation_o *)myFsm,
-                                  (System_String_o *)StringLiteral_17147/*"bit_result_levelup01"*/,
+                                  (System_String_o *)StringLiteral_17048/*"bit_result_levelup01"*/,
                                   0LL);
       if ( myFsm )
       {
         klass = myFsm->klass;
-        v6 = myFsm;
-        if ( *(_WORD *)&myFsm->klass->_2.bitflags1 )
+        v12 = myFsm;
+        v13 = *(unsigned __int16 *)(&myFsm->klass->_2.bitflags2 + 3);
+        if ( *(_WORD *)(&myFsm->klass->_2.bitflags2 + 3) )
         {
-          v7 = 0LL;
           p_offset = (SimpleAnimation_State_c **)&klass->_1.interfaceOffsets->offset;
           while ( *(p_offset - 1) != SimpleAnimation_State_TypeInfo )
           {
-            ++v7;
+            --v13;
             p_offset += 2;
-            if ( v7 >= *(unsigned __int16 *)&myFsm->klass->_2.bitflags1 )
-              goto LABEL_15;
+            if ( !v13 )
+              goto LABEL_14;
           }
-          v9 = (__int64)(&klass->vtable._4_OnBeforeSerialize.method + 2 * *(_DWORD *)p_offset);
+          v15 = (__int64)(&klass->vtable._4_OnBeforeSerialize.method + 2 * *(_DWORD *)p_offset);
         }
         else
         {
-LABEL_15:
-          v9 = sub_B0F4C0(myFsm, SimpleAnimation_State_TypeInfo, 4LL);
+LABEL_14:
+          v15 = sub_1B52CAC(myFsm, SimpleAnimation_State_TypeInfo, 4LL);
         }
-        (*(void (__fastcall **)(PlayMakerFSM_o *, _QWORD, float))v9)(v6, *(_QWORD *)(v9 + 8), 0.0);
+        (*(void (__fastcall **)(PlayMakerFSM_o *, _QWORD, float))v15)(v12, *(_QWORD *)(v15 + 8), 0.0);
         myFsm = (PlayMakerFSM_o *)this->fields.damage_LvupSimpleAnim;
         if ( myFsm )
         {
-          SimpleAnimation__Play_16815192((SimpleAnimation_o *)myFsm, (System_String_o *)StringLiteral_17147/*"bit_result_levelup01"*/, 0LL);
-          goto LABEL_29;
+          SimpleAnimation__Play_62462980((SimpleAnimation_o *)myFsm, (System_String_o *)StringLiteral_17048/*"bit_result_levelup01"*/, 0LL);
+          goto LABEL_27;
         }
       }
     }
-LABEL_34:
-    sub_B7769C(myFsm, method);
+LABEL_31:
+    sub_1B00F28(myFsm, method);
   }
   damage_LvupAnim = (UnityEngine_Object_o *)this->fields.damage_LvupAnim;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(damage_LvupAnim, 0LL, 0LL) )
   {
     myFsm = (PlayMakerFSM_o *)this->fields.damage_LvupAnim;
@@ -774,7 +732,7 @@ LABEL_34:
     {
       myFsm = (PlayMakerFSM_o *)UnityEngine_Animation__get_Item(
                                   (UnityEngine_Animation_o *)myFsm,
-                                  (System_String_o *)StringLiteral_17147/*"bit_result_levelup01"*/,
+                                  (System_String_o *)StringLiteral_17048/*"bit_result_levelup01"*/,
                                   0LL);
       if ( myFsm )
       {
@@ -782,89 +740,96 @@ LABEL_34:
         myFsm = (PlayMakerFSM_o *)this->fields.damage_LvupAnim;
         if ( myFsm )
         {
-          UnityEngine_Animation__Play_51745976(
+          UnityEngine_Animation__Play_67822748(
             (UnityEngine_Animation_o *)myFsm,
-            (System_String_o *)StringLiteral_17147/*"bit_result_levelup01"*/,
+            (System_String_o *)StringLiteral_17048/*"bit_result_levelup01"*/,
             0LL);
-          goto LABEL_29;
+          goto LABEL_27;
         }
       }
     }
-    goto LABEL_34;
+    goto LABEL_31;
   }
-LABEL_29:
+LABEL_27:
   damageRecordWindow = this->fields.damageRecordWindow;
-  v12 = (BattleWindowComponent_EndCall_o *)sub_B77694(BattleWindowComponent_EndCall_TypeInfo);
+  v18 = (BattleWindowComponent_EndCall_o *)sub_1B00F18(BattleWindowComponent_EndCall_TypeInfo);
   BattleWindowComponent_EndCall___ctor(
-    v12,
+    v18,
     (Il2CppObject *)this,
     Method_BattleResultExpComponent_endOpenDamageRecord__,
     0LL);
   if ( !damageRecordWindow )
-    goto LABEL_34;
+    goto LABEL_31;
   ((void (__fastcall *)(struct BattleWindowComponent_o *, BattleWindowComponent_EndCall_o *, Il2CppMethodPointer))damageRecordWindow->klass->vtable._10_Open.method)(
     damageRecordWindow,
-    v12,
+    v18,
     damageRecordWindow->klass->vtable._11_CompOpen.methodPtr);
-  if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  SoundManager__playSystemSe(6, 0LL);
+  v19 = Method_BattleResultExpComponent_checkDamageRecord__;
+  if ( (*((_BYTE *)Method_BattleResultExpComponent_checkDamageRecord__ + 83) & 2) != 0 )
+    v19 = (_QWORD *)sub_1B00CE4(Method_BattleResultExpComponent_checkDamageRecord__);
+  v20 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v19, v19[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v20, 6, 0LL);
 }
 
 
 void __fastcall BattleResultExpComponent__checkEquipLevelUp(BattleResultExpComponent_o *this, const MethodInfo *method)
 {
   BattleResultExpComponent_o *v2; // x19
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
   struct UserEquipEntity_o *oldEquip; // x8
   struct UserEquipEntity_o *newEquip; // x9
   UnityEngine_Object_o *equip_LvupSimpleAnim; // x20
   BattleResultExpComponent_c *klass; // x8
-  BattleResultExpComponent_o *v7; // x20
-  unsigned __int64 v8; // x10
-  int32_t *p_offset; // x11
-  __int64 v10; // x0
+  BattleResultExpComponent_o *v13; // x20
+  __int64 v14; // x9
+  int32_t *p_offset; // x10
+  __int64 v16; // x0
   UnityEngine_Object_o *equip_LvupAnim; // x20
   struct BattleWindowComponent_o *equipupwindow; // x20
-  BattleWindowComponent_EndCall_o *v13; // x21
+  BattleWindowComponent_EndCall_o *v19; // x21
+  _QWORD *v20; // x0
+  System_Reflection_MethodBase_o *v21; // x0
 
   v2 = this;
-  if ( (byte_438B818 & 1) == 0 )
+  if ( (byte_48E5864 & 1) == 0 )
   {
-    sub_B775C4(&Method_BattleResultExpComponent_endOpenEquipUp__);
-    sub_B775C4(&BattleWindowComponent_EndCall_TypeInfo);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&SoundManager_TypeInfo);
-    sub_B775C4(&SimpleAnimation_State_TypeInfo);
-    sub_B775C4(&StringLiteral_17147/*"bit_result_levelup01"*/);
-    this = (BattleResultExpComponent_o *)sub_B775C4(&StringLiteral_3213/*"CLOSE"*/);
-    byte_438B818 = 1;
+    sub_1B00CCC(&Method_BattleResultExpComponent_checkEquipLevelUp__, method);
+    sub_1B00CCC(&Method_BattleResultExpComponent_endOpenEquipUp__, v3);
+    sub_1B00CCC(&BattleWindowComponent_EndCall_TypeInfo, v4);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v5);
+    sub_1B00CCC(&SimpleAnimation_State_TypeInfo, v6);
+    sub_1B00CCC(&StringLiteral_17048/*"bit_result_levelup01"*/, v7);
+    this = (BattleResultExpComponent_o *)sub_1B00CCC(&StringLiteral_3540/*"CLOSE"*/, v8);
+    byte_48E5864 = 1;
   }
   oldEquip = v2->fields.oldEquip;
   if ( !oldEquip )
-    goto LABEL_36;
+    goto LABEL_33;
   newEquip = v2->fields.newEquip;
   if ( !newEquip )
-    goto LABEL_36;
+    goto LABEL_33;
   if ( oldEquip->fields.lv >= newEquip->fields.lv )
   {
     this = (BattleResultExpComponent_o *)v2->fields.myFsm;
     if ( this )
     {
-      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)StringLiteral_3213/*"CLOSE"*/, 0LL);
+      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)StringLiteral_3540/*"CLOSE"*/, 0LL);
       return;
     }
-    goto LABEL_36;
+    goto LABEL_33;
   }
   this = (BattleResultExpComponent_o *)v2->fields.equipLevelupRoot;
   if ( !this )
-    goto LABEL_36;
+    goto LABEL_33;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
   equip_LvupSimpleAnim = (UnityEngine_Object_o *)v2->fields.equip_LvupSimpleAnim;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(equip_LvupSimpleAnim, 0LL, 0LL) )
   {
     this = (BattleResultExpComponent_o *)v2->fields.equip_LvupSimpleAnim;
@@ -872,48 +837,45 @@ void __fastcall BattleResultExpComponent__checkEquipLevelUp(BattleResultExpCompo
     {
       this = (BattleResultExpComponent_o *)SimpleAnimation__get_Item(
                                              (SimpleAnimation_o *)this,
-                                             (System_String_o *)StringLiteral_17147/*"bit_result_levelup01"*/,
+                                             (System_String_o *)StringLiteral_17048/*"bit_result_levelup01"*/,
                                              0LL);
       if ( this )
       {
         klass = this->klass;
-        v7 = this;
-        if ( *(_WORD *)&this->klass->_2.bitflags1 )
+        v13 = this;
+        v14 = *(unsigned __int16 *)(&this->klass->_2.bitflags2 + 3);
+        if ( *(_WORD *)(&this->klass->_2.bitflags2 + 3) )
         {
-          v8 = 0LL;
           p_offset = &klass->_1.interfaceOffsets->offset;
           while ( *((SimpleAnimation_State_c **)p_offset - 1) != SimpleAnimation_State_TypeInfo )
           {
-            ++v8;
+            --v14;
             p_offset += 4;
-            if ( v8 >= *(unsigned __int16 *)&this->klass->_2.bitflags1 )
-              goto LABEL_17;
+            if ( !v14 )
+              goto LABEL_16;
           }
-          v10 = (__int64)(&klass[1]._1.gc_desc + 2 * *p_offset);
+          v16 = (__int64)(&klass[1]._1.gc_desc + 2 * *p_offset);
         }
         else
         {
-LABEL_17:
-          v10 = sub_B0F4C0(this, SimpleAnimation_State_TypeInfo, 4LL);
+LABEL_16:
+          v16 = sub_1B52CAC(this, SimpleAnimation_State_TypeInfo, 4LL);
         }
-        (*(void (__fastcall **)(BattleResultExpComponent_o *, _QWORD, float))v10)(v7, *(_QWORD *)(v10 + 8), 0.0);
+        (*(void (__fastcall **)(BattleResultExpComponent_o *, _QWORD, float))v16)(v13, *(_QWORD *)(v16 + 8), 0.0);
         this = (BattleResultExpComponent_o *)v2->fields.equip_LvupSimpleAnim;
         if ( this )
         {
-          SimpleAnimation__Play_16815192((SimpleAnimation_o *)this, (System_String_o *)StringLiteral_17147/*"bit_result_levelup01"*/, 0LL);
-          goto LABEL_31;
+          SimpleAnimation__Play_62462980((SimpleAnimation_o *)this, (System_String_o *)StringLiteral_17048/*"bit_result_levelup01"*/, 0LL);
+          goto LABEL_29;
         }
       }
     }
-LABEL_36:
-    sub_B7769C(this, method);
+LABEL_33:
+    sub_1B00F28(this, method);
   }
   equip_LvupAnim = (UnityEngine_Object_o *)v2->fields.equip_LvupAnim;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(equip_LvupAnim, 0LL, 0LL) )
   {
     this = (BattleResultExpComponent_o *)v2->fields.equip_LvupAnim;
@@ -921,7 +883,7 @@ LABEL_36:
     {
       this = (BattleResultExpComponent_o *)UnityEngine_Animation__get_Item(
                                              (UnityEngine_Animation_o *)this,
-                                             (System_String_o *)StringLiteral_17147/*"bit_result_levelup01"*/,
+                                             (System_String_o *)StringLiteral_17048/*"bit_result_levelup01"*/,
                                              0LL);
       if ( this )
       {
@@ -929,29 +891,31 @@ LABEL_36:
         this = (BattleResultExpComponent_o *)v2->fields.equip_LvupAnim;
         if ( this )
         {
-          UnityEngine_Animation__Play_51745976(
+          UnityEngine_Animation__Play_67822748(
             (UnityEngine_Animation_o *)this,
-            (System_String_o *)StringLiteral_17147/*"bit_result_levelup01"*/,
+            (System_String_o *)StringLiteral_17048/*"bit_result_levelup01"*/,
             0LL);
-          goto LABEL_31;
+          goto LABEL_29;
         }
       }
     }
-    goto LABEL_36;
+    goto LABEL_33;
   }
-LABEL_31:
+LABEL_29:
   equipupwindow = v2->fields.equipupwindow;
-  v13 = (BattleWindowComponent_EndCall_o *)sub_B77694(BattleWindowComponent_EndCall_TypeInfo);
-  BattleWindowComponent_EndCall___ctor(v13, (Il2CppObject *)v2, Method_BattleResultExpComponent_endOpenEquipUp__, 0LL);
+  v19 = (BattleWindowComponent_EndCall_o *)sub_1B00F18(BattleWindowComponent_EndCall_TypeInfo);
+  BattleWindowComponent_EndCall___ctor(v19, (Il2CppObject *)v2, Method_BattleResultExpComponent_endOpenEquipUp__, 0LL);
   if ( !equipupwindow )
-    goto LABEL_36;
+    goto LABEL_33;
   ((void (__fastcall *)(struct BattleWindowComponent_o *, BattleWindowComponent_EndCall_o *, Il2CppMethodPointer))equipupwindow->klass->vtable._10_Open.method)(
     equipupwindow,
-    v13,
+    v19,
     equipupwindow->klass->vtable._11_CompOpen.methodPtr);
-  if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  SoundManager__playSystemSe(6, 0LL);
+  v20 = Method_BattleResultExpComponent_checkEquipLevelUp__;
+  if ( (*((_BYTE *)Method_BattleResultExpComponent_checkEquipLevelUp__ + 83) & 2) != 0 )
+    v20 = (_QWORD *)sub_1B00CE4(Method_BattleResultExpComponent_checkEquipLevelUp__);
+  v21 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v20, v20[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v21, 6, 0LL);
 }
 
 
@@ -959,73 +923,80 @@ void __fastcall BattleResultExpComponent__checkMasterLevelUp(
         BattleResultExpComponent_o *this,
         const MethodInfo *method)
 {
-  UnityEngine_GameObject_o *gameObject; // x20
-  const MethodInfo *v4; // x2
+  __int64 v3; // x1
+  __int64 v4; // x1
   __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  UnityEngine_GameObject_o *gameObject; // x20
+  const MethodInfo *v12; // x2
+  __int64 v13; // x1
   SePlayer_o *MeterSePlayer; // x0
   struct UserGameEntity_o *oldGame; // x8
   struct UserGameEntity_o *newGame; // x9
   UnityEngine_Object_o *mst_LvupSimpleAnim; // x20
   SePlayer_c *klass; // x8
-  SePlayer_o *v11; // x20
-  unsigned __int64 v12; // x10
-  SimpleAnimation_State_c **p_offset; // x11
-  __int64 v14; // x0
+  SePlayer_o *v19; // x20
+  __int64 v20; // x9
+  SimpleAnimation_State_c **p_offset; // x10
+  __int64 v22; // x0
   UnityEngine_Object_o *mst_LvupAnim; // x20
   struct BattleWindowComponent_o *masterupwindow; // x20
-  BattleWindowComponent_EndCall_o *v17; // x21
-  struct UserGameEntity_o *v18; // x9
-  struct UserGameEntity_o *v19; // x8
-  int32_t v20; // w20
+  BattleWindowComponent_EndCall_o *v25; // x21
+  _QWORD *v26; // x0
+  System_Reflection_MethodBase_o *v27; // x0
+  struct UserGameEntity_o *v28; // x9
+  struct UserGameEntity_o *v29; // x8
+  int32_t v30; // w20
 
-  if ( (byte_438B814 & 1) == 0 )
+  if ( (byte_48E5860 & 1) == 0 )
   {
-    sub_B775C4(&Method_BattleResultExpComponent_endOpenMasterUp__);
-    sub_B775C4(&BattleWindowComponent_EndCall_TypeInfo);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_AdManager__get_Instance__);
-    sub_B775C4(&SoundManager_TypeInfo);
-    sub_B775C4(&SimpleAnimation_State_TypeInfo);
-    sub_B775C4(&StringLiteral_17147/*"bit_result_levelup01"*/);
-    sub_B775C4(&StringLiteral_9466/*"NEXT"*/);
-    sub_B775C4(&iTween_TypeInfo);
-    byte_438B814 = 1;
+    sub_1B00CCC(&Method_BattleResultExpComponent_checkMasterLevelUp__, method);
+    sub_1B00CCC(&Method_BattleResultExpComponent_endOpenMasterUp__, v3);
+    sub_1B00CCC(&BattleWindowComponent_EndCall_TypeInfo, v4);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v5);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_AdManager__get_Instance__, v6);
+    sub_1B00CCC(&SimpleAnimation_State_TypeInfo, v7);
+    sub_1B00CCC(&StringLiteral_17048/*"bit_result_levelup01"*/, v8);
+    sub_1B00CCC(&StringLiteral_9136/*"NEXT"*/, v9);
+    sub_1B00CCC(&iTween_TypeInfo, v10);
+    byte_48E5860 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  if ( (BYTE3(iTween_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !iTween_TypeInfo->_2.cctor_finished )
+  if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  iTween__Stop_43295052(gameObject, 0LL);
-  BattleResultExpComponent__updateValueActual(this, 1.0, 1, v4);
+  iTween__Stop_58974420(gameObject, 0LL);
+  BattleResultExpComponent__updateValueActual(this, 1.0, 1, v12);
   MeterSePlayer = this->fields.MeterSePlayer;
   if ( MeterSePlayer )
     SePlayer__StopSe(MeterSePlayer, 0.0, 0LL);
   oldGame = this->fields.oldGame;
   this->fields.bondsCountUp = 0;
   if ( !oldGame )
-    goto LABEL_46;
+    goto LABEL_42;
   newGame = this->fields.newGame;
   if ( !newGame )
-    goto LABEL_46;
+    goto LABEL_42;
   if ( oldGame->fields.lv >= newGame->fields.lv )
   {
     MeterSePlayer = (SePlayer_o *)this->fields.myFsm;
     if ( MeterSePlayer )
     {
-      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)MeterSePlayer, (System_String_o *)StringLiteral_9466/*"NEXT"*/, 0LL);
+      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)MeterSePlayer, (System_String_o *)StringLiteral_9136/*"NEXT"*/, 0LL);
       return;
     }
-    goto LABEL_46;
+    goto LABEL_42;
   }
   MeterSePlayer = (SePlayer_o *)this->fields.masterLevelupRoot;
   if ( !MeterSePlayer )
-    goto LABEL_46;
+    goto LABEL_42;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)MeterSePlayer, 1, 0LL);
   mst_LvupSimpleAnim = (UnityEngine_Object_o *)this->fields.mst_LvupSimpleAnim;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(mst_LvupSimpleAnim, 0LL, 0LL) )
   {
     MeterSePlayer = (SePlayer_o *)this->fields.mst_LvupSimpleAnim;
@@ -1033,107 +1004,106 @@ void __fastcall BattleResultExpComponent__checkMasterLevelUp(
     {
       MeterSePlayer = (SePlayer_o *)SimpleAnimation__get_Item(
                                       (SimpleAnimation_o *)MeterSePlayer,
-                                      (System_String_o *)StringLiteral_17147/*"bit_result_levelup01"*/,
+                                      (System_String_o *)StringLiteral_17048/*"bit_result_levelup01"*/,
                                       0LL);
       if ( MeterSePlayer )
       {
         klass = MeterSePlayer->klass;
-        v11 = MeterSePlayer;
-        if ( *(_WORD *)&MeterSePlayer->klass->_2.bitflags1 )
+        v19 = MeterSePlayer;
+        v20 = *(unsigned __int16 *)(&MeterSePlayer->klass->_2.bitflags2 + 3);
+        if ( *(_WORD *)(&MeterSePlayer->klass->_2.bitflags2 + 3) )
         {
-          v12 = 0LL;
           p_offset = (SimpleAnimation_State_c **)&klass->_1.interfaceOffsets->offset;
           while ( *(p_offset - 1) != SimpleAnimation_State_TypeInfo )
           {
-            ++v12;
+            --v20;
             p_offset += 2;
-            if ( v12 >= *(unsigned __int16 *)&MeterSePlayer->klass->_2.bitflags1 )
-              goto LABEL_22;
+            if ( !v20 )
+              goto LABEL_20;
           }
-          v14 = (__int64)(&klass[1]._1.gc_desc + 2 * *(_DWORD *)p_offset);
+          v22 = (__int64)(&klass[1]._1.gc_desc + 2 * *(_DWORD *)p_offset);
         }
         else
         {
-LABEL_22:
-          v14 = sub_B0F4C0(MeterSePlayer, SimpleAnimation_State_TypeInfo, 4LL);
+LABEL_20:
+          v22 = sub_1B52CAC(MeterSePlayer, SimpleAnimation_State_TypeInfo, 4LL);
         }
-        (*(void (__fastcall **)(SePlayer_o *, _QWORD, float))v14)(v11, *(_QWORD *)(v14 + 8), 0.0);
+        (*(void (__fastcall **)(SePlayer_o *, _QWORD, float))v22)(v19, *(_QWORD *)(v22 + 8), 0.0);
         MeterSePlayer = (SePlayer_o *)this->fields.mst_LvupSimpleAnim;
         if ( MeterSePlayer )
         {
-          SimpleAnimation__Play_16815192(
+          SimpleAnimation__Play_62462980(
             (SimpleAnimation_o *)MeterSePlayer,
-            (System_String_o *)StringLiteral_17147/*"bit_result_levelup01"*/,
+            (System_String_o *)StringLiteral_17048/*"bit_result_levelup01"*/,
             0LL);
-          goto LABEL_36;
+          goto LABEL_33;
         }
       }
     }
-LABEL_46:
-    sub_B7769C(MeterSePlayer, v5);
+LABEL_42:
+    sub_1B00F28(MeterSePlayer, v13);
   }
   mst_LvupAnim = (UnityEngine_Object_o *)this->fields.mst_LvupAnim;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(mst_LvupAnim, 0LL, 0LL) )
   {
     MeterSePlayer = (SePlayer_o *)this->fields.mst_LvupAnim;
     if ( !MeterSePlayer )
-      goto LABEL_46;
+      goto LABEL_42;
     MeterSePlayer = (SePlayer_o *)UnityEngine_Animation__get_Item(
                                     (UnityEngine_Animation_o *)MeterSePlayer,
-                                    (System_String_o *)StringLiteral_17147/*"bit_result_levelup01"*/,
+                                    (System_String_o *)StringLiteral_17048/*"bit_result_levelup01"*/,
                                     0LL);
     if ( !MeterSePlayer )
-      goto LABEL_46;
+      goto LABEL_42;
     UnityEngine_AnimationState__set_time((UnityEngine_AnimationState_o *)MeterSePlayer, 0.0, 0LL);
     MeterSePlayer = (SePlayer_o *)this->fields.mst_LvupAnim;
     if ( !MeterSePlayer )
-      goto LABEL_46;
-    UnityEngine_Animation__Play_51745976(
+      goto LABEL_42;
+    UnityEngine_Animation__Play_67822748(
       (UnityEngine_Animation_o *)MeterSePlayer,
-      (System_String_o *)StringLiteral_17147/*"bit_result_levelup01"*/,
+      (System_String_o *)StringLiteral_17048/*"bit_result_levelup01"*/,
       0LL);
   }
-LABEL_36:
+LABEL_33:
   masterupwindow = this->fields.masterupwindow;
-  v17 = (BattleWindowComponent_EndCall_o *)sub_B77694(BattleWindowComponent_EndCall_TypeInfo);
+  v25 = (BattleWindowComponent_EndCall_o *)sub_1B00F18(BattleWindowComponent_EndCall_TypeInfo);
   BattleWindowComponent_EndCall___ctor(
-    v17,
+    v25,
     (Il2CppObject *)this,
     Method_BattleResultExpComponent_endOpenMasterUp__,
     0LL);
   if ( !masterupwindow )
-    goto LABEL_46;
+    goto LABEL_42;
   ((void (__fastcall *)(struct BattleWindowComponent_o *, BattleWindowComponent_EndCall_o *, Il2CppMethodPointer))masterupwindow->klass->vtable._10_Open.method)(
     masterupwindow,
-    v17,
+    v25,
     masterupwindow->klass->vtable._11_CompOpen.methodPtr);
-  if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  SoundManager__playSystemSe(6, 0LL);
-  v18 = this->fields.oldGame;
-  if ( !v18 )
-    goto LABEL_46;
-  v19 = this->fields.newGame;
-  if ( !v19 )
-    goto LABEL_46;
-  v20 = v18->fields.lv + 1;
-  while ( v20 <= v19->fields.lv )
+  v26 = Method_BattleResultExpComponent_checkMasterLevelUp__;
+  if ( (*((_BYTE *)Method_BattleResultExpComponent_checkMasterLevelUp__ + 83) & 2) != 0 )
+    v26 = (_QWORD *)sub_1B00CE4(Method_BattleResultExpComponent_checkMasterLevelUp__);
+  v27 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v26, v26[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v27, 6, 0LL);
+  v28 = this->fields.oldGame;
+  if ( !v28 )
+    goto LABEL_42;
+  v29 = this->fields.newGame;
+  if ( !v29 )
+    goto LABEL_42;
+  v30 = v28->fields.lv + 1;
+  while ( v30 <= v29->fields.lv )
   {
-    MeterSePlayer = (SePlayer_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+    MeterSePlayer = (SePlayer_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
     if ( MeterSePlayer )
     {
-      AdManager__TrackEvent((AdManager_o *)MeterSePlayer, 3, 2, v20, -1, 0LL, 0LL);
-      v19 = this->fields.newGame;
-      ++v20;
-      if ( v19 )
+      AdManager__TrackEvent((AdManager_o *)MeterSePlayer, 3, 2, v30, -1, 0LL, 0LL);
+      v29 = this->fields.newGame;
+      ++v30;
+      if ( v29 )
         continue;
     }
-    goto LABEL_46;
+    goto LABEL_42;
   }
 }
 
@@ -1142,28 +1112,26 @@ void __fastcall BattleResultExpComponent__checkOpenKnockdownRecord(
         BattleResultExpComponent_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_Object_o *knockdownRecordWindow; // x20
-  __int64 v4; // x1
+  __int64 v5; // x1
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_438B81E & 1) == 0 )
+  if ( (byte_48E586A & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&StringLiteral_3213/*"CLOSE"*/);
-    byte_438B81E = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_3540/*"CLOSE"*/, v3);
+    byte_48E586A = 1;
   }
   knockdownRecordWindow = (UnityEngine_Object_o *)this->fields.knockdownRecordWindow;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(knockdownRecordWindow, 0LL, 0LL) )
   {
     myFsm = (PlayMakerFSM_o *)this->fields.knockdownRecordWindow;
     if ( !myFsm )
-      goto LABEL_12;
-    if ( LOBYTE(myFsm[2].fields.m_CachedPtr) )
+      goto LABEL_11;
+    if ( LOBYTE(myFsm[2].monitor) )
     {
       ((void (__fastcall *)(PlayMakerFSM_o *, _QWORD, Il2CppClass *))myFsm->klass[1]._1.castClass)(
         myFsm,
@@ -1174,73 +1142,77 @@ void __fastcall BattleResultExpComponent__checkOpenKnockdownRecord(
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-LABEL_12:
-    sub_B7769C(myFsm, v4);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3213/*"CLOSE"*/, 0LL);
+LABEL_11:
+    sub_1B00F28(myFsm, v5);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3540/*"CLOSE"*/, 0LL);
 }
 
 
 void __fastcall BattleResultExpComponent__closeDamageRecord(BattleResultExpComponent_o *this, const MethodInfo *method)
 {
-  Il2CppObject *v2; // x19
-  void *monitor; // x8
-  void *v4; // x20
-  BattleWindowComponent_EndCall_o *v5; // x21
+  __int64 v3; // x1
+  BattleResultComponent_o *parentComp; // x0
+  struct BattleWindowComponent_o *damageRecordWindow; // x20
+  BattleWindowComponent_EndCall_o *v6; // x21
 
-  v2 = (Il2CppObject *)this;
-  if ( (byte_438B81C & 1) == 0 )
+  if ( (byte_48E5868 & 1) == 0 )
   {
-    sub_B775C4(&Method_BattleResultExpComponent_endCloseDamageRecord__);
-    this = (BattleResultExpComponent_o *)sub_B775C4(&BattleWindowComponent_EndCall_TypeInfo);
-    byte_438B81C = 1;
+    sub_1B00CCC(&Method_BattleResultExpComponent_endCloseDamageRecord__, method);
+    sub_1B00CCC(&BattleWindowComponent_EndCall_TypeInfo, v3);
+    byte_48E5868 = 1;
   }
-  monitor = v2[1].monitor;
-  if ( !monitor
-    || (this = (BattleResultExpComponent_o *)*((_QWORD *)monitor + 6)) == 0LL
-    || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL),
-        v4 = v2[19].monitor,
-        v5 = (BattleWindowComponent_EndCall_o *)sub_B77694(BattleWindowComponent_EndCall_TypeInfo),
-        BattleWindowComponent_EndCall___ctor(v5, v2, Method_BattleResultExpComponent_endCloseDamageRecord__, 0LL),
-        !v4) )
+  parentComp = this->fields.parentComp;
+  if ( !parentComp
+    || (BattleResultComponent__setTouch(parentComp, 0, 0LL),
+        damageRecordWindow = this->fields.damageRecordWindow,
+        v6 = (BattleWindowComponent_EndCall_o *)sub_1B00F18(BattleWindowComponent_EndCall_TypeInfo),
+        BattleWindowComponent_EndCall___ctor(
+          v6,
+          (Il2CppObject *)this,
+          Method_BattleResultExpComponent_endCloseDamageRecord__,
+          0LL),
+        !damageRecordWindow) )
   {
-    sub_B7769C(this, method);
+    sub_1B00F28(parentComp, method);
   }
-  (*(void (__fastcall **)(void *, BattleWindowComponent_EndCall_o *, _QWORD))(*(_QWORD *)v4 + 504LL))(
-    v4,
-    v5,
-    *(_QWORD *)(*(_QWORD *)v4 + 512LL));
+  ((void (__fastcall *)(struct BattleWindowComponent_o *, BattleWindowComponent_EndCall_o *, Il2CppMethodPointer))damageRecordWindow->klass->vtable._12_Close.method)(
+    damageRecordWindow,
+    v6,
+    damageRecordWindow->klass->vtable._13_CompClose.methodPtr);
 }
 
 
 void __fastcall BattleResultExpComponent__closeEquipUp(BattleResultExpComponent_o *this, const MethodInfo *method)
 {
-  Il2CppObject *v2; // x19
-  void *monitor; // x8
-  Il2CppClass *klass; // x20
-  BattleWindowComponent_EndCall_o *v5; // x21
+  __int64 v3; // x1
+  BattleResultComponent_o *parentComp; // x0
+  struct BattleWindowComponent_o *equipupwindow; // x20
+  BattleWindowComponent_EndCall_o *v6; // x21
 
-  v2 = (Il2CppObject *)this;
-  if ( (byte_438B819 & 1) == 0 )
+  if ( (byte_48E5865 & 1) == 0 )
   {
-    sub_B775C4(&Method_BattleResultExpComponent_endCloseEquipUp__);
-    this = (BattleResultExpComponent_o *)sub_B775C4(&BattleWindowComponent_EndCall_TypeInfo);
-    byte_438B819 = 1;
+    sub_1B00CCC(&Method_BattleResultExpComponent_endCloseEquipUp__, method);
+    sub_1B00CCC(&BattleWindowComponent_EndCall_TypeInfo, v3);
+    byte_48E5865 = 1;
   }
-  monitor = v2[1].monitor;
-  if ( !monitor
-    || (this = (BattleResultExpComponent_o *)*((_QWORD *)monitor + 6)) == 0LL
-    || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL),
-        klass = v2[16].klass,
-        v5 = (BattleWindowComponent_EndCall_o *)sub_B77694(BattleWindowComponent_EndCall_TypeInfo),
-        BattleWindowComponent_EndCall___ctor(v5, v2, Method_BattleResultExpComponent_endCloseEquipUp__, 0LL),
-        !klass) )
+  parentComp = this->fields.parentComp;
+  if ( !parentComp
+    || (BattleResultComponent__setTouch(parentComp, 0, 0LL),
+        equipupwindow = this->fields.equipupwindow,
+        v6 = (BattleWindowComponent_EndCall_o *)sub_1B00F18(BattleWindowComponent_EndCall_TypeInfo),
+        BattleWindowComponent_EndCall___ctor(
+          v6,
+          (Il2CppObject *)this,
+          Method_BattleResultExpComponent_endCloseEquipUp__,
+          0LL),
+        !equipupwindow) )
   {
-    sub_B7769C(this, method);
+    sub_1B00F28(parentComp, method);
   }
-  (*((void (__fastcall **)(Il2CppClass *, BattleWindowComponent_EndCall_o *, _QWORD))klass->_1.image + 63))(
-    klass,
-    v5,
-    *((_QWORD *)klass->_1.image + 64));
+  ((void (__fastcall *)(struct BattleWindowComponent_o *, BattleWindowComponent_EndCall_o *, Il2CppMethodPointer))equipupwindow->klass->vtable._12_Close.method)(
+    equipupwindow,
+    v6,
+    equipupwindow->klass->vtable._13_CompClose.methodPtr);
 }
 
 
@@ -1252,22 +1224,19 @@ void __fastcall BattleResultExpComponent__closeKnockdownRecord(
   __int64 v4; // x1
   struct BattleResultKnockdownComponent_o *v5; // x0
 
-  if ( (byte_438B81F & 1) == 0 )
+  if ( (byte_48E586B & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438B81F = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    byte_48E586B = 1;
   }
   knockdownRecordWindow = (UnityEngine_Object_o *)this->fields.knockdownRecordWindow;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(knockdownRecordWindow, 0LL, 0LL) )
   {
     v5 = this->fields.knockdownRecordWindow;
     if ( !v5 )
-      sub_B7769C(0LL, v4);
+      sub_1B00F28(0LL, v4);
     ((void (__fastcall *)(struct BattleResultKnockdownComponent_o *, _QWORD, Il2CppMethodPointer))v5->klass->vtable._12_Close.method)(
       v5,
       0LL,
@@ -1278,68 +1247,69 @@ void __fastcall BattleResultExpComponent__closeKnockdownRecord(
 
 void __fastcall BattleResultExpComponent__closeMasterUp(BattleResultExpComponent_o *this, const MethodInfo *method)
 {
-  Il2CppObject *v2; // x19
-  _DWORD *monitor; // x21
-  int v4; // w8
-  unsigned int v5; // w20
-  void *v6; // x8
-  void *v7; // x20
-  BattleWindowComponent_EndCall_o *v8; // x21
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  System_Collections_Generic_List_object__o *effectUIList; // x0
+  int32_t v7; // w20
+  struct BattleWindowComponent_o *masterupwindow; // x20
+  BattleWindowComponent_EndCall_o *v9; // x21
 
-  v2 = (Il2CppObject *)this;
-  if ( (byte_438B816 & 1) == 0 )
+  if ( (byte_48E5862 & 1) == 0 )
   {
-    sub_B775C4(&Method_BattleResultExpComponent_endCloseMasterUp__);
-    sub_B775C4(&BattleWindowComponent_EndCall_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_UIUnityRenderer__get_Count__);
-    this = (BattleResultExpComponent_o *)sub_B775C4(&Method_System_Collections_Generic_List_UIUnityRenderer__get_Item__);
-    byte_438B816 = 1;
+    sub_1B00CCC(&Method_BattleResultExpComponent_endCloseMasterUp__, method);
+    sub_1B00CCC(&BattleWindowComponent_EndCall_TypeInfo, v3);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_UIUnityRenderer__get_Count__, v4);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_UIUnityRenderer__get_Item__, v5);
+    byte_48E5862 = 1;
   }
-  monitor = v2[31].monitor;
-  if ( !monitor )
-    goto LABEL_16;
-  v4 = monitor[6];
-  if ( v4 >= 1 )
+  effectUIList = (System_Collections_Generic_List_object__o *)this->fields.effectUIList;
+  if ( !effectUIList )
+    goto LABEL_13;
+  if ( effectUIList->fields._size >= 1 )
   {
-    v5 = 0;
+    v7 = 0;
     while ( 1 )
     {
-      if ( v4 <= v5 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-      this = *(BattleResultExpComponent_o **)(*((_QWORD *)monitor + 2) + 8LL * (int)v5 + 32);
-      if ( !this )
+      effectUIList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
+                                                                    effectUIList,
+                                                                    v7,
+                                                                    (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_UIUnityRenderer__get_Item__);
+      if ( !effectUIList )
         break;
-      this = (BattleResultExpComponent_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-      if ( !this )
+      effectUIList = (System_Collections_Generic_List_object__o *)UnityEngine_Component__get_gameObject(
+                                                                    (UnityEngine_Component_o *)effectUIList,
+                                                                    0LL);
+      if ( !effectUIList )
         break;
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
-      monitor = v2[31].monitor;
-      if ( !monitor )
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)effectUIList, 0, 0LL);
+      effectUIList = (System_Collections_Generic_List_object__o *)this->fields.effectUIList;
+      if ( !effectUIList )
         break;
-      v4 = monitor[6];
-      if ( (int)++v5 >= v4 )
-        goto LABEL_12;
+      if ( ++v7 >= effectUIList->fields._size )
+        goto LABEL_10;
     }
-LABEL_16:
-    sub_B7769C(this, method);
+LABEL_13:
+    sub_1B00F28(effectUIList, method);
   }
-LABEL_12:
-  v6 = v2[1].monitor;
-  if ( !v6 )
-    goto LABEL_16;
-  this = (BattleResultExpComponent_o *)*((_QWORD *)v6 + 6);
-  if ( !this )
-    goto LABEL_16;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
-  v7 = v2[8].monitor;
-  v8 = (BattleWindowComponent_EndCall_o *)sub_B77694(BattleWindowComponent_EndCall_TypeInfo);
-  BattleWindowComponent_EndCall___ctor(v8, v2, Method_BattleResultExpComponent_endCloseMasterUp__, 0LL);
-  if ( !v7 )
-    goto LABEL_16;
-  (*(void (__fastcall **)(void *, BattleWindowComponent_EndCall_o *, _QWORD))(*(_QWORD *)v7 + 504LL))(
-    v7,
-    v8,
-    *(_QWORD *)(*(_QWORD *)v7 + 512LL));
+LABEL_10:
+  effectUIList = (System_Collections_Generic_List_object__o *)this->fields.parentComp;
+  if ( !effectUIList )
+    goto LABEL_13;
+  BattleResultComponent__setTouch((BattleResultComponent_o *)effectUIList, 0, 0LL);
+  masterupwindow = this->fields.masterupwindow;
+  v9 = (BattleWindowComponent_EndCall_o *)sub_1B00F18(BattleWindowComponent_EndCall_TypeInfo);
+  BattleWindowComponent_EndCall___ctor(
+    v9,
+    (Il2CppObject *)this,
+    Method_BattleResultExpComponent_endCloseMasterUp__,
+    0LL);
+  if ( !masterupwindow )
+    goto LABEL_13;
+  ((void (__fastcall *)(struct BattleWindowComponent_o *, BattleWindowComponent_EndCall_o *, Il2CppMethodPointer))masterupwindow->klass->vtable._12_Close.method)(
+    masterupwindow,
+    v9,
+    masterupwindow->klass->vtable._13_CompClose.methodPtr);
 }
 
 
@@ -1348,19 +1318,19 @@ void __fastcall BattleResultExpComponent__endClose(BattleResultExpComponent_o *t
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v4; // x1
 
-  if ( (byte_438B810 & 1) == 0 )
+  if ( (byte_48E585C & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_5639/*"END_PROC"*/);
-    byte_438B810 = 1;
+    sub_1B00CCC(&StringLiteral_5430/*"END_PROC"*/, method);
+    byte_48E585C = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject
     || (UnityEngine_GameObject__SetActive(gameObject, 0, 0LL),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.myFsm) == 0LL) )
   {
-    sub_B7769C(gameObject, v4);
+    sub_1B00F28(gameObject, v4);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)gameObject, (System_String_o *)StringLiteral_5639/*"END_PROC"*/, 0LL);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)gameObject, (System_String_o *)StringLiteral_5430/*"END_PROC"*/, 0LL);
 }
 
 
@@ -1370,19 +1340,19 @@ void __fastcall BattleResultExpComponent__endCloseDamageRecord(
 {
   UnityEngine_GameObject_o *damageRecordRoot; // x0
 
-  if ( (byte_438B81D & 1) == 0 )
+  if ( (byte_48E5869 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_5639/*"END_PROC"*/);
-    byte_438B81D = 1;
+    sub_1B00CCC(&StringLiteral_5430/*"END_PROC"*/, method);
+    byte_48E5869 = 1;
   }
   damageRecordRoot = this->fields.damageRecordRoot;
   if ( !damageRecordRoot
     || (UnityEngine_GameObject__SetActive(damageRecordRoot, 0, 0LL),
         (damageRecordRoot = (UnityEngine_GameObject_o *)this->fields.myFsm) == 0LL) )
   {
-    sub_B7769C(damageRecordRoot, method);
+    sub_1B00F28(damageRecordRoot, method);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)damageRecordRoot, (System_String_o *)StringLiteral_5639/*"END_PROC"*/, 0LL);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)damageRecordRoot, (System_String_o *)StringLiteral_5430/*"END_PROC"*/, 0LL);
 }
 
 
@@ -1390,19 +1360,19 @@ void __fastcall BattleResultExpComponent__endCloseEquipUp(BattleResultExpCompone
 {
   UnityEngine_GameObject_o *equipLevelupRoot; // x0
 
-  if ( (byte_438B81A & 1) == 0 )
+  if ( (byte_48E5866 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_5639/*"END_PROC"*/);
-    byte_438B81A = 1;
+    sub_1B00CCC(&StringLiteral_5430/*"END_PROC"*/, method);
+    byte_48E5866 = 1;
   }
   equipLevelupRoot = this->fields.equipLevelupRoot;
   if ( !equipLevelupRoot
     || (UnityEngine_GameObject__SetActive(equipLevelupRoot, 0, 0LL),
         (equipLevelupRoot = (UnityEngine_GameObject_o *)this->fields.myFsm) == 0LL) )
   {
-    sub_B7769C(equipLevelupRoot, method);
+    sub_1B00F28(equipLevelupRoot, method);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)equipLevelupRoot, (System_String_o *)StringLiteral_5639/*"END_PROC"*/, 0LL);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)equipLevelupRoot, (System_String_o *)StringLiteral_5430/*"END_PROC"*/, 0LL);
 }
 
 
@@ -1410,319 +1380,274 @@ void __fastcall BattleResultExpComponent__endCloseMasterUp(BattleResultExpCompon
 {
   UnityEngine_GameObject_o *masterLevelupRoot; // x0
 
-  if ( (byte_438B817 & 1) == 0 )
+  if ( (byte_48E5863 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_5639/*"END_PROC"*/);
-    byte_438B817 = 1;
+    sub_1B00CCC(&StringLiteral_5430/*"END_PROC"*/, method);
+    byte_48E5863 = 1;
   }
   masterLevelupRoot = this->fields.masterLevelupRoot;
   if ( !masterLevelupRoot
     || (UnityEngine_GameObject__SetActive(masterLevelupRoot, 0, 0LL),
         (masterLevelupRoot = (UnityEngine_GameObject_o *)this->fields.myFsm) == 0LL) )
   {
-    sub_B7769C(masterLevelupRoot, method);
+    sub_1B00F28(masterLevelupRoot, method);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)masterLevelupRoot, (System_String_o *)StringLiteral_5639/*"END_PROC"*/, 0LL);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)masterLevelupRoot, (System_String_o *)StringLiteral_5430/*"END_PROC"*/, 0LL);
 }
 
 
 void __fastcall BattleResultExpComponent__endMoveFigure(BattleResultExpComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_GameObject_o *gameObject; // x20
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
   __int64 v5; // x1
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
-  System_Object_array *v12; // x21
-  __int64 v13; // x0
-  System_Int32_array **v14; // x1
-  __int64 v15; // x2
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
-  System_Int32_array **v22; // x22
-  System_String_array **v23; // x2
-  System_String_array **v24; // x3
-  System_Boolean_array **v25; // x4
-  System_Int32_array **v26; // x5
-  System_Int32_array *v27; // x6
-  System_Int32_array *v28; // x7
-  System_Int32_array **v29; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  UnityEngine_GameObject_o *gameObject; // x20
+  __int64 v15; // x0
+  __int64 v16; // x1
+  int32_t v17; // w2
+  int32_t v18; // w3
+  System_Object_array *v19; // x21
+  __int64 v20; // x0
+  __int64 v21; // x1
+  __int64 v22; // x2
+  __int64 v23; // x3
+  __int64 v24; // x4
+  int32_t v25; // w2
+  int32_t v26; // w3
+  Il2CppObject *v27; // x22
+  int32_t v28; // w2
+  int32_t v29; // w3
   __int64 v30; // x2
-  System_String_array **v31; // x2
-  System_String_array **v32; // x3
-  System_Boolean_array **v33; // x4
-  System_Int32_array **v34; // x5
-  System_Int32_array *v35; // x6
-  System_Int32_array *v36; // x7
-  System_Int32_array **v37; // x22
-  System_String_array **v38; // x2
-  System_String_array **v39; // x3
-  System_Boolean_array **v40; // x4
-  System_Int32_array **v41; // x5
-  System_Int32_array *v42; // x6
-  System_Int32_array *v43; // x7
-  System_Int32_array **v44; // x1
-  System_String_array **v45; // x2
-  System_String_array **v46; // x3
-  System_Boolean_array **v47; // x4
-  System_Int32_array **v48; // x5
-  System_Int32_array *v49; // x6
-  System_Int32_array *v50; // x7
-  System_Int32_array **v51; // x1
-  System_String_array **v52; // x2
-  System_String_array **v53; // x3
-  System_Boolean_array **v54; // x4
-  System_Int32_array **v55; // x5
-  System_Int32_array *v56; // x6
-  System_Int32_array *v57; // x7
-  System_Int32_array **v58; // x1
-  System_String_array **v59; // x2
-  System_String_array **v60; // x3
-  System_Boolean_array **v61; // x4
-  System_Int32_array **v62; // x5
-  System_Int32_array *v63; // x6
-  System_Int32_array *v64; // x7
-  System_Int32_array **v65; // x1
-  System_String_array **v66; // x2
-  System_String_array **v67; // x3
-  System_Boolean_array **v68; // x4
-  System_Int32_array **v69; // x5
-  System_Int32_array *v70; // x6
-  System_Int32_array *v71; // x7
-  System_Int32_array **v72; // x1
-  __int64 v73; // x2
-  System_String_array **v74; // x2
-  System_String_array **v75; // x3
-  System_Boolean_array **v76; // x4
-  System_Int32_array **v77; // x5
-  System_Int32_array *v78; // x6
-  System_Int32_array *v79; // x7
-  System_Int32_array **v80; // x22
-  System_Collections_Hashtable_o *v81; // x0
-  System_String_o *CommonSeName; // x20
-  struct SePlayer_o *v83; // x0
-  System_String_array **v84; // x2
-  System_String_array **v85; // x3
-  System_Boolean_array **v86; // x4
-  System_Int32_array **v87; // x5
-  System_Int32_array *v88; // x6
-  System_Int32_array *v89; // x7
-  __int64 v90; // x0
-  __int64 v91; // x0
-  float time_exptotal; // [xsp+Ch] [xbp-34h] BYREF
-  int v93; // [xsp+18h] [xbp-28h] BYREF
-  int v94; // [xsp+1Ch] [xbp-24h] BYREF
+  __int64 v31; // x3
+  __int64 v32; // x4
+  int32_t v33; // w2
+  int32_t v34; // w3
+  Il2CppObject *v35; // x22
+  int32_t v36; // w2
+  int32_t v37; // w3
+  int32_t v38; // w2
+  int32_t v39; // w3
+  int32_t v40; // w2
+  int32_t v41; // w3
+  int32_t v42; // w2
+  int32_t v43; // w3
+  int32_t v44; // w2
+  int32_t v45; // w3
+  __int64 v46; // x2
+  __int64 v47; // x3
+  __int64 v48; // x4
+  int32_t v49; // w2
+  int32_t v50; // w3
+  Il2CppObject *v51; // x22
+  System_Collections_Hashtable_o *v52; // x0
+  _QWORD *v53; // x0
+  System_Reflection_MethodBase_o *v54; // x20
+  System_String_o *CommonSeName; // x0
+  struct SePlayer_o *v56; // x0
+  int32_t v57; // w2
+  int32_t v58; // w3
+  __int64 v59; // x0
+  float time_exptotal; // [xsp+Ch] [xbp-44h] BYREF
+  int v61; // [xsp+18h] [xbp-38h] BYREF
+  int v62; // [xsp+1Ch] [xbp-34h] BYREF
 
-  if ( (byte_438B811 & 1) == 0 )
+  if ( (byte_48E585D & 1) == 0 )
   {
-    sub_B775C4(&object___TypeInfo);
-    sub_B775C4(&SeManager_TypeInfo);
-    sub_B775C4(&float_TypeInfo);
-    sub_B775C4(&SoundManager_TypeInfo);
-    sub_B775C4(&StringLiteral_19296/*"from"*/);
-    sub_B775C4(&StringLiteral_23154/*"time"*/);
-    sub_B775C4(&StringLiteral_21711/*"onupdate"*/);
-    sub_B775C4(&StringLiteral_15328/*"UpdateValue"*/);
-    sub_B775C4(&StringLiteral_23192/*"to"*/);
-    sub_B775C4(&StringLiteral_19118/*"finishUpdateValue"*/);
-    sub_B775C4(&StringLiteral_21702/*"oncomplete"*/);
-    sub_B775C4(&iTween_TypeInfo);
-    byte_438B811 = 1;
+    sub_1B00CCC(&Method_BattleResultExpComponent_endMoveFigure__, method);
+    sub_1B00CCC(&object___TypeInfo, v3);
+    sub_1B00CCC(&SeManager_TypeInfo, v4);
+    sub_1B00CCC(&float_TypeInfo, v5);
+    sub_1B00CCC(&StringLiteral_19387/*"from"*/, v6);
+    sub_1B00CCC(&StringLiteral_23574/*"time"*/, v7);
+    sub_1B00CCC(&StringLiteral_21979/*"onupdate"*/, v8);
+    sub_1B00CCC(&StringLiteral_14965/*"UpdateValue"*/, v9);
+    sub_1B00CCC(&StringLiteral_23614/*"to"*/, v10);
+    sub_1B00CCC(&StringLiteral_19177/*"finishUpdateValue"*/, v11);
+    sub_1B00CCC(&StringLiteral_21971/*"oncomplete"*/, v12);
+    sub_1B00CCC(&iTween_TypeInfo, v13);
+    byte_48E585D = 1;
   }
   if ( this->fields.bondsCountUp )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-    v4 = sub_B775DC(object___TypeInfo, 10LL);
-    if ( !v4 )
-      sub_B7769C(0LL, v5);
-    v12 = (System_Object_array *)v4;
-    v13 = StringLiteral_19296/*"from"*/;
-    if ( StringLiteral_19296/*"from"*/ )
+    v15 = sub_1B00D74(object___TypeInfo, 10LL);
+    if ( !v15 )
+      sub_1B00F28(0LL, v16);
+    v19 = (System_Object_array *)v15;
+    v20 = StringLiteral_19387/*"from"*/;
+    if ( StringLiteral_19387/*"from"*/ )
     {
-      v13 = sub_B77684(StringLiteral_19296/*"from"*/, v12->obj.klass->_1.element_class);
-      if ( !v13 )
-        goto LABEL_62;
-      v14 = (System_Int32_array **)StringLiteral_19296/*"from"*/;
+      v20 = sub_1B00E08(StringLiteral_19387/*"from"*/, v19->obj.klass->_1.element_class);
+      if ( !v20 )
+        goto LABEL_59;
+      v21 = StringLiteral_19387/*"from"*/;
     }
     else
     {
-      v14 = 0LL;
+      v21 = 0LL;
     }
-    if ( !v12->max_length )
-      goto LABEL_61;
-    v12->m_Items[0] = (Il2CppObject *)v14;
-    sub_B77560((BattleServantConfConponent_o *)v12->m_Items, v14, v6, v7, v8, v9, v10, v11);
-    v94 = 0;
-    v13 = j_il2cpp_value_box_0(float_TypeInfo, &v94, v15);
-    v22 = (System_Int32_array **)v13;
-    if ( !v13 || (v13 = sub_B77684(v13, v12->obj.klass->_1.element_class)) != 0 )
+    if ( !v19->max_length )
+      goto LABEL_58;
+    v19->m_Items[0] = (Il2CppObject *)v21;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)v19->m_Items, v21, v17, v18);
+    v62 = 0;
+    v20 = j_il2cpp_value_box_0(float_TypeInfo, &v62, v22, v23, v24);
+    v27 = (Il2CppObject *)v20;
+    if ( !v20 || (v20 = sub_1B00E08(v20, v19->obj.klass->_1.element_class)) != 0 )
     {
-      if ( v12->max_length <= 1 )
-        goto LABEL_61;
-      v12->m_Items[1] = (Il2CppObject *)v22;
-      sub_B77560((BattleServantConfConponent_o *)&v12->m_Items[1], v22, v16, v17, v18, v19, v20, v21);
-      v13 = StringLiteral_23192/*"to"*/;
-      if ( StringLiteral_23192/*"to"*/ )
+      if ( v19->max_length <= 1 )
+        goto LABEL_58;
+      v19->m_Items[1] = v27;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&v19->m_Items[1], (int32_t)v27, v25, v26);
+      v20 = StringLiteral_23614/*"to"*/;
+      if ( StringLiteral_23614/*"to"*/ )
       {
-        v13 = sub_B77684(StringLiteral_23192/*"to"*/, v12->obj.klass->_1.element_class);
-        if ( !v13 )
-          goto LABEL_62;
-        v29 = (System_Int32_array **)StringLiteral_23192/*"to"*/;
+        v20 = sub_1B00E08(StringLiteral_23614/*"to"*/, v19->obj.klass->_1.element_class);
+        if ( !v20 )
+          goto LABEL_59;
+        v21 = StringLiteral_23614/*"to"*/;
       }
       else
       {
-        v29 = 0LL;
+        v21 = 0LL;
       }
-      if ( v12->max_length <= 2 )
-        goto LABEL_61;
-      v12->m_Items[2] = (Il2CppObject *)v29;
-      sub_B77560((BattleServantConfConponent_o *)&v12->m_Items[2], v29, v23, v24, v25, v26, v27, v28);
-      v93 = 1065353216;
-      v13 = j_il2cpp_value_box_0(float_TypeInfo, &v93, v30);
-      v37 = (System_Int32_array **)v13;
-      if ( !v13 || (v13 = sub_B77684(v13, v12->obj.klass->_1.element_class)) != 0 )
+      if ( v19->max_length <= 2 )
+        goto LABEL_58;
+      v19->m_Items[2] = (Il2CppObject *)v21;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&v19->m_Items[2], v21, v28, v29);
+      v61 = 1065353216;
+      v20 = j_il2cpp_value_box_0(float_TypeInfo, &v61, v30, v31, v32);
+      v35 = (Il2CppObject *)v20;
+      if ( !v20 || (v20 = sub_1B00E08(v20, v19->obj.klass->_1.element_class)) != 0 )
       {
-        if ( v12->max_length <= 3 )
-          goto LABEL_61;
-        v12->m_Items[3] = (Il2CppObject *)v37;
-        sub_B77560((BattleServantConfConponent_o *)&v12->m_Items[3], v37, v31, v32, v33, v34, v35, v36);
-        v13 = StringLiteral_21711/*"onupdate"*/;
-        if ( StringLiteral_21711/*"onupdate"*/ )
+        if ( v19->max_length <= 3 )
+          goto LABEL_58;
+        v19->m_Items[3] = v35;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v19->m_Items[3], (int32_t)v35, v33, v34);
+        v20 = StringLiteral_21979/*"onupdate"*/;
+        if ( StringLiteral_21979/*"onupdate"*/ )
         {
-          v13 = sub_B77684(StringLiteral_21711/*"onupdate"*/, v12->obj.klass->_1.element_class);
-          if ( !v13 )
-            goto LABEL_62;
-          v44 = (System_Int32_array **)StringLiteral_21711/*"onupdate"*/;
+          v20 = sub_1B00E08(StringLiteral_21979/*"onupdate"*/, v19->obj.klass->_1.element_class);
+          if ( !v20 )
+            goto LABEL_59;
+          v21 = StringLiteral_21979/*"onupdate"*/;
         }
         else
         {
-          v44 = 0LL;
+          v21 = 0LL;
         }
-        if ( v12->max_length <= 4 )
-          goto LABEL_61;
-        v12->m_Items[4] = (Il2CppObject *)v44;
-        sub_B77560((BattleServantConfConponent_o *)&v12->m_Items[4], v44, v38, v39, v40, v41, v42, v43);
-        v13 = StringLiteral_15328/*"UpdateValue"*/;
-        if ( StringLiteral_15328/*"UpdateValue"*/ )
+        if ( v19->max_length <= 4 )
+          goto LABEL_58;
+        v19->m_Items[4] = (Il2CppObject *)v21;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v19->m_Items[4], v21, v36, v37);
+        v20 = StringLiteral_14965/*"UpdateValue"*/;
+        if ( StringLiteral_14965/*"UpdateValue"*/ )
         {
-          v13 = sub_B77684(StringLiteral_15328/*"UpdateValue"*/, v12->obj.klass->_1.element_class);
-          if ( !v13 )
-            goto LABEL_62;
-          v51 = (System_Int32_array **)StringLiteral_15328/*"UpdateValue"*/;
+          v20 = sub_1B00E08(StringLiteral_14965/*"UpdateValue"*/, v19->obj.klass->_1.element_class);
+          if ( !v20 )
+            goto LABEL_59;
+          v21 = StringLiteral_14965/*"UpdateValue"*/;
         }
         else
         {
-          v51 = 0LL;
+          v21 = 0LL;
         }
-        if ( v12->max_length <= 5 )
-          goto LABEL_61;
-        v12->m_Items[5] = (Il2CppObject *)v51;
-        sub_B77560((BattleServantConfConponent_o *)&v12->m_Items[5], v51, v45, v46, v47, v48, v49, v50);
-        v13 = StringLiteral_21702/*"oncomplete"*/;
-        if ( StringLiteral_21702/*"oncomplete"*/ )
+        if ( v19->max_length <= 5 )
+          goto LABEL_58;
+        v19->m_Items[5] = (Il2CppObject *)v21;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v19->m_Items[5], v21, v38, v39);
+        v20 = StringLiteral_21971/*"oncomplete"*/;
+        if ( StringLiteral_21971/*"oncomplete"*/ )
         {
-          v13 = sub_B77684(StringLiteral_21702/*"oncomplete"*/, v12->obj.klass->_1.element_class);
-          if ( !v13 )
-            goto LABEL_62;
-          v58 = (System_Int32_array **)StringLiteral_21702/*"oncomplete"*/;
+          v20 = sub_1B00E08(StringLiteral_21971/*"oncomplete"*/, v19->obj.klass->_1.element_class);
+          if ( !v20 )
+            goto LABEL_59;
+          v21 = StringLiteral_21971/*"oncomplete"*/;
         }
         else
         {
-          v58 = 0LL;
+          v21 = 0LL;
         }
-        if ( v12->max_length <= 6 )
-          goto LABEL_61;
-        v12->m_Items[6] = (Il2CppObject *)v58;
-        sub_B77560((BattleServantConfConponent_o *)&v12->m_Items[6], v58, v52, v53, v54, v55, v56, v57);
-        v13 = StringLiteral_19118/*"finishUpdateValue"*/;
-        if ( StringLiteral_19118/*"finishUpdateValue"*/ )
+        if ( v19->max_length <= 6 )
+          goto LABEL_58;
+        v19->m_Items[6] = (Il2CppObject *)v21;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v19->m_Items[6], v21, v40, v41);
+        v20 = StringLiteral_19177/*"finishUpdateValue"*/;
+        if ( StringLiteral_19177/*"finishUpdateValue"*/ )
         {
-          v13 = sub_B77684(StringLiteral_19118/*"finishUpdateValue"*/, v12->obj.klass->_1.element_class);
-          if ( !v13 )
-            goto LABEL_62;
-          v65 = (System_Int32_array **)StringLiteral_19118/*"finishUpdateValue"*/;
+          v20 = sub_1B00E08(StringLiteral_19177/*"finishUpdateValue"*/, v19->obj.klass->_1.element_class);
+          if ( !v20 )
+            goto LABEL_59;
+          v21 = StringLiteral_19177/*"finishUpdateValue"*/;
         }
         else
         {
-          v65 = 0LL;
+          v21 = 0LL;
         }
-        if ( v12->max_length <= 7 )
-          goto LABEL_61;
-        v12->m_Items[7] = (Il2CppObject *)v65;
-        sub_B77560((BattleServantConfConponent_o *)&v12->m_Items[7], v65, v59, v60, v61, v62, v63, v64);
-        v13 = StringLiteral_23154/*"time"*/;
-        if ( StringLiteral_23154/*"time"*/ )
+        if ( v19->max_length <= 7 )
+          goto LABEL_58;
+        v19->m_Items[7] = (Il2CppObject *)v21;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v19->m_Items[7], v21, v42, v43);
+        v20 = StringLiteral_23574/*"time"*/;
+        if ( StringLiteral_23574/*"time"*/ )
         {
-          v13 = sub_B77684(StringLiteral_23154/*"time"*/, v12->obj.klass->_1.element_class);
-          if ( !v13 )
-            goto LABEL_62;
-          v72 = (System_Int32_array **)StringLiteral_23154/*"time"*/;
+          v20 = sub_1B00E08(StringLiteral_23574/*"time"*/, v19->obj.klass->_1.element_class);
+          if ( !v20 )
+            goto LABEL_59;
+          v21 = StringLiteral_23574/*"time"*/;
         }
         else
         {
-          v72 = 0LL;
+          v21 = 0LL;
         }
-        if ( v12->max_length <= 8 )
-          goto LABEL_61;
-        v12->m_Items[8] = (Il2CppObject *)v72;
-        sub_B77560((BattleServantConfConponent_o *)&v12->m_Items[8], v72, v66, v67, v68, v69, v70, v71);
+        if ( v19->max_length <= 8 )
+          goto LABEL_58;
+        v19->m_Items[8] = (Il2CppObject *)v21;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v19->m_Items[8], v21, v44, v45);
         time_exptotal = this->fields.time_exptotal;
-        v13 = j_il2cpp_value_box_0(float_TypeInfo, &time_exptotal, v73);
-        v80 = (System_Int32_array **)v13;
-        if ( !v13 || (v13 = sub_B77684(v13, v12->obj.klass->_1.element_class)) != 0 )
+        v20 = j_il2cpp_value_box_0(float_TypeInfo, &time_exptotal, v46, v47, v48);
+        v51 = (Il2CppObject *)v20;
+        if ( !v20 || (v20 = sub_1B00E08(v20, v19->obj.klass->_1.element_class)) != 0 )
         {
-          if ( v12->max_length > 9 )
+          if ( v19->max_length > 9 )
           {
-            v12->m_Items[9] = (Il2CppObject *)v80;
-            sub_B77560((BattleServantConfConponent_o *)&v12->m_Items[9], v80, v74, v75, v76, v77, v78, v79);
-            if ( (BYTE3(iTween_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !iTween_TypeInfo->_2.cctor_finished )
+            v19->m_Items[9] = v51;
+            sub_1B00C70((ServantStatusBattleListViewItem_o *)&v19->m_Items[9], (int32_t)v51, v49, v50);
+            if ( !iTween_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-            v81 = iTween__Hash(v12, 0LL);
-            iTween__ValueTo(gameObject, v81, 0LL);
+            v52 = iTween__Hash(v19, 0LL);
+            iTween__ValueTo(gameObject, v52, 0LL);
             if ( this->fields.updateFlg )
             {
-              if ( (BYTE3(SeManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-                && !SeManager_TypeInfo->_2.cctor_finished )
-              {
+              v53 = Method_BattleResultExpComponent_endMoveFigure__;
+              if ( (*((_BYTE *)Method_BattleResultExpComponent_endMoveFigure__ + 83) & 2) != 0 )
+                v53 = (_QWORD *)sub_1B00CE4(Method_BattleResultExpComponent_endMoveFigure__);
+              v54 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v53, v53[4]);
+              if ( !SeManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
-              }
               CommonSeName = SeManager__GetCommonSeName(15, 0LL);
-              if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-                && !SoundManager_TypeInfo->_2.cctor_finished )
-              {
-                j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-              }
-              v83 = SoundManager__playSe(CommonSeName, 0LL);
-              this->fields.MeterSePlayer = v83;
-              sub_B77560(
-                (BattleServantConfConponent_o *)&this->fields.MeterSePlayer,
-                (System_Int32_array **)v83,
-                v84,
-                v85,
-                v86,
-                v87,
-                v88,
-                v89);
+              v56 = OverwriteAssetSoundName__PlaySe(v54, CommonSeName, 0LL);
+              this->fields.MeterSePlayer = v56;
+              sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.MeterSePlayer, (int32_t)v56, v57, v58);
             }
             return;
           }
-LABEL_61:
-          v90 = sub_B776C8(v13);
-          sub_B77668(v90, 0LL);
+LABEL_58:
+          sub_1B00F30(v20, v21);
         }
       }
     }
-LABEL_62:
-    v91 = sub_B776BC(v13);
-    sub_B77668(v91, 0LL);
+LABEL_59:
+    v59 = sub_1B00F4C(v20);
+    sub_1B00DF4(v59, 0LL);
   }
 }
 
@@ -1731,23 +1656,23 @@ void __fastcall BattleResultExpComponent__endOpenDamageRecord(
         BattleResultExpComponent_o *this,
         const MethodInfo *method)
 {
-  struct BattleResultComponent_o *parentComp; // x8
+  BattleResultComponent_o *parentComp; // x0
 
   parentComp = this->fields.parentComp;
-  if ( !parentComp || (this = (BattleResultExpComponent_o *)parentComp->fields.obj_fronttouch) == 0LL )
-    sub_B7769C(this, method);
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
+  if ( !parentComp )
+    sub_1B00F28(0LL, method);
+  BattleResultComponent__setTouch(parentComp, 1, 0LL);
 }
 
 
 void __fastcall BattleResultExpComponent__endOpenEquipUp(BattleResultExpComponent_o *this, const MethodInfo *method)
 {
-  struct BattleResultComponent_o *parentComp; // x8
+  BattleResultComponent_o *parentComp; // x0
 
   parentComp = this->fields.parentComp;
-  if ( !parentComp || (this = (BattleResultExpComponent_o *)parentComp->fields.obj_fronttouch) == 0LL )
-    sub_B7769C(this, method);
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
+  if ( !parentComp )
+    sub_1B00F28(0LL, method);
+  BattleResultComponent__setTouch(parentComp, 1, 0LL);
 }
 
 
@@ -1755,15 +1680,15 @@ void __fastcall BattleResultExpComponent__endOpenMasterUp(BattleResultExpCompone
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_438B815 & 1) == 0 )
+  if ( (byte_48E5861 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_15489/*"WAIT_OPEN"*/);
-    byte_438B815 = 1;
+    sub_1B00CCC(&StringLiteral_15151/*"WAIT_OPEN"*/, method);
+    byte_48E5861 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_B7769C(0LL, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_15489/*"WAIT_OPEN"*/, 0LL);
+    sub_1B00F28(0LL, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_15151/*"WAIT_OPEN"*/, 0LL);
 }
 
 
@@ -1772,21 +1697,22 @@ void __fastcall BattleResultExpComponent__finishUpdateValue(BattleResultExpCompo
   SePlayer_o *MeterSePlayer; // x0
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_438B812 & 1) == 0 )
+  if ( (byte_48E585E & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_9466/*"NEXT"*/);
-    byte_438B812 = 1;
+    sub_1B00CCC(&StringLiteral_9136/*"NEXT"*/, method);
+    byte_48E585E = 1;
   }
   MeterSePlayer = this->fields.MeterSePlayer;
   if ( MeterSePlayer )
     SePlayer__StopSe(MeterSePlayer, 0.0, 0LL);
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_B7769C(0LL, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9466/*"NEXT"*/, 0LL);
+    sub_1B00F28(0LL, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9136/*"NEXT"*/, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall BattleResultExpComponent__setEquipExp(
         BattleResultExpComponent_o *this,
         int32_t equipId,
@@ -1795,89 +1721,91 @@ bool __fastcall BattleResultExpComponent__setEquipExp(
         int32_t start_level,
         const MethodInfo *method)
 {
-  UILabel_o *equip_getexpLabel; // x23
-  Il2CppObject *v11; // x0
-  System_String_o *Instance; // x0
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
   __int64 v13; // x1
-  EquipExpMaster_o *v14; // x25
+  __int64 v14; // x1
+  UILabel_o *equip_getexpLabel; // x23
+  Il2CppObject *v16; // x0
+  System_String_o *Instance; // x0
+  __int64 v18; // x1
+  EquipExpMaster_o *v19; // x25
   int32_t Level; // w22
   int32_t LevelMax; // w24
-  System_String_o *v17; // x23
+  System_String_o *v22; // x23
   UILabel_o *equip_atexpLabel; // x26
-  const MethodInfo *v19; // x2
+  const MethodInfo *v24; // x2
   int32_t exp; // w21
   float value; // s0
-  float v22; // s8
-  float v23; // s0
-  int v25; // [xsp+Ch] [xbp-64h] BYREF
-  EquipExpEntity_o *entity; // [xsp+10h] [xbp-60h] BYREF
-  int32_t v27; // [xsp+1Ch] [xbp-54h] BYREF
+  float v27; // s8
+  float v28; // s0
+  EquipExpEntity_o *entity; // [xsp+8h] [xbp-68h] BYREF
+  int v31; // [xsp+18h] [xbp-58h] BYREF
+  int32_t v32; // [xsp+1Ch] [xbp-54h] BYREF
 
-  v27 = getexp;
-  if ( (byte_438B80D & 1) == 0 )
+  v32 = getexp;
+  if ( (byte_48E5859 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_EquipExpMaster___);
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B775C4(&StringLiteral_9434/*"N0"*/);
-    sub_B775C4(&StringLiteral_11326/*"RESULT_EQUIP_MAXEXP"*/);
-    sub_B775C4(&StringLiteral_708/*"+ {0}"*/);
-    byte_438B80D = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_EquipExpMaster___, *(_QWORD *)&equipId);
+    sub_1B00CCC(&LocalizationManager_TypeInfo, v10);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
+    sub_1B00CCC(&StringLiteral_9103/*"N0"*/, v12);
+    sub_1B00CCC(&StringLiteral_10917/*"RESULT_EQUIP_MAXEXP"*/, v13);
+    sub_1B00CCC(&StringLiteral_859/*"+ {0}"*/, v14);
+    byte_48E5859 = 1;
   }
   entity = 0LL;
-  v25 = 0;
+  v31 = 0;
   equip_getexpLabel = this->fields.equip_getexpLabel;
-  v11 = (Il2CppObject *)System_Int32__ToString_39547236((int32_t)&v27, (System_String_o *)StringLiteral_9434/*"N0"*/, 0LL);
-  Instance = System_String__Format((System_String_o *)StringLiteral_708/*"+ {0}"*/, v11, 0LL);
+  v16 = (Il2CppObject *)System_Int32__ToString_61130888((int32_t)&v32, (System_String_o *)StringLiteral_9103/*"N0"*/, 0LL);
+  Instance = System_String__Format((System_String_o *)StringLiteral_859/*"+ {0}"*/, v16, 0LL);
   if ( !equip_getexpLabel )
-    goto LABEL_28;
+    goto LABEL_27;
   UILabel__set_text(equip_getexpLabel, Instance, 0LL);
-  Instance = (System_String_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_28;
-  Instance = (System_String_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+    goto LABEL_27;
+  Instance = (System_String_o *)DataManager__GetMasterData_object_(
                                   (DataManager_o *)Instance,
-                                  (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EquipExpMaster___);
+                                  (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_EquipExpMaster___);
   if ( !Instance )
-    goto LABEL_28;
-  v14 = (EquipExpMaster_o *)Instance;
+    goto LABEL_27;
+  v19 = (EquipExpMaster_o *)Instance;
   Level = EquipExpMaster__getLevel((EquipExpMaster_o *)Instance, equipId, nowexp, start_level, 0LL);
-  LevelMax = EquipExpMaster__getLevelMax(v14, equipId, 0LL);
-  Instance = (System_String_o *)EquipExpMaster__GetEntity(v14, equipId, Level, 0LL);
+  LevelMax = EquipExpMaster__getLevelMax(v19, equipId, 0LL);
+  Instance = (System_String_o *)EquipExpMaster__GetEntity(v19, equipId, Level, 0LL);
   if ( !this->fields.equip_nextSprite )
-    goto LABEL_28;
-  v17 = Instance;
+    goto LABEL_27;
+  v22 = Instance;
   if ( Level == LevelMax )
   {
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this->fields.equip_nextSprite, 0, 0LL);
     equip_atexpLabel = this->fields.equip_atexpLabel;
-    if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
+    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    }
-    Instance = LocalizationManager__Get((System_String_o *)StringLiteral_11326/*"RESULT_EQUIP_MAXEXP"*/, 0LL);
+    Instance = LocalizationManager__Get((System_String_o *)StringLiteral_10917/*"RESULT_EQUIP_MAXEXP"*/, 0LL);
     if ( !equip_atexpLabel )
-      goto LABEL_28;
+      goto LABEL_27;
   }
   else
   {
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this->fields.equip_nextSprite, 1, 0LL);
-    if ( !v17 )
-      goto LABEL_28;
+    if ( !v22 )
+      goto LABEL_27;
     equip_atexpLabel = this->fields.equip_atexpLabel;
-    v25 = LODWORD(v17[1].klass) - nowexp;
-    Instance = System_Int32__ToString_39547236((int32_t)&v25, (System_String_o *)StringLiteral_9434/*"N0"*/, 0LL);
+    v31 = LODWORD(v22[1].klass) - nowexp;
+    Instance = System_Int32__ToString_61130888((int32_t)&v31, (System_String_o *)StringLiteral_9103/*"N0"*/, 0LL);
     if ( !equip_atexpLabel )
-      goto LABEL_28;
+      goto LABEL_27;
   }
   UILabel__set_text(equip_atexpLabel, Instance, 0LL);
-  BattleResultExpComponent__setEquipLv(this, Level, v19);
-  Instance = (System_String_o *)EquipExpMaster__TryGetEntity(v14, &entity, equipId, Level - 1, 0LL);
+  BattleResultExpComponent__setEquipLv(this, Level, v24);
+  Instance = (System_String_o *)EquipExpMaster__TryGetEntity(v19, &entity, equipId, Level - 1, 0LL);
   if ( ((unsigned __int8)Instance & 1) != 0 )
   {
     if ( !entity )
-      goto LABEL_28;
+      goto LABEL_27;
     exp = entity->fields.exp;
   }
   else
@@ -1886,83 +1814,86 @@ bool __fastcall BattleResultExpComponent__setEquipExp(
   }
   Instance = (System_String_o *)this->fields.equip_slider;
   if ( !Instance )
-LABEL_28:
-    sub_B7769C(Instance, v13);
+LABEL_27:
+    sub_1B00F28(Instance, v18);
   value = UIProgressBar__get_value((UIProgressBar_o *)Instance, 0LL);
   Instance = (System_String_o *)this->fields.equip_slider;
-  v22 = value;
+  v27 = value;
   if ( Level == LevelMax )
   {
+    v28 = 1.0;
     if ( !Instance )
-      goto LABEL_28;
-    v23 = 1.0;
+      goto LABEL_27;
   }
   else
   {
-    if ( !v17 || !Instance )
-      goto LABEL_28;
-    v23 = 1.0 - (float)((float)(LODWORD(v17[1].klass) - nowexp) / (float)(LODWORD(v17[1].klass) - exp));
+    if ( !v22 || !Instance )
+      goto LABEL_27;
+    v28 = 1.0 - (float)((float)(LODWORD(v22[1].klass) - nowexp) / (float)(LODWORD(v22[1].klass) - exp));
   }
-  UIProgressBar__set_value((UIProgressBar_o *)Instance, v23, 0LL);
+  UIProgressBar__set_value((UIProgressBar_o *)Instance, v28, 0LL);
   Instance = (System_String_o *)this->fields.equip_slider;
   if ( !Instance )
-    goto LABEL_28;
-  return v22 != UIProgressBar__get_value((UIProgressBar_o *)Instance, 0LL);
+    goto LABEL_27;
+  return v27 != UIProgressBar__get_value((UIProgressBar_o *)Instance, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall BattleResultExpComponent__setEquipLv(
         BattleResultExpComponent_o *this,
         int32_t level,
         const MethodInfo *method)
 {
-  System_String_o *v5; // x0
+  __int64 v5; // x1
   __int64 v6; // x1
-  System_String_o *v7; // x21
-  bool v8; // w0
-  __int64 v9; // x2
+  __int64 v7; // x1
+  System_String_o *v8; // x0
+  __int64 v9; // x1
+  System_String_o *v10; // x21
+  bool v11; // w0
+  __int64 v12; // x2
+  __int64 v13; // x3
+  __int64 v14; // x4
   UILabel_o *equip_Lv; // x20
-  Il2CppObject *v11; // x1
-  System_String_o *v12; // x0
-  int32_t v13; // [xsp+8h] [xbp-28h] BYREF
-  int32_t v14; // [xsp+Ch] [xbp-24h] BYREF
+  Il2CppObject *v16; // x1
+  System_String_o *v17; // x0
+  int32_t v18; // [xsp+8h] [xbp-28h] BYREF
+  int32_t v19; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_438B809 & 1) == 0 )
+  if ( (byte_48E5855 & 1) == 0 )
   {
-    sub_B775C4(&int_TypeInfo);
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&StringLiteral_2588/*"BATTLE_RESULTEXP_EQUIPLV"*/);
-    sub_B775C4(&StringLiteral_24025/*"{0}"*/);
-    byte_438B809 = 1;
+    sub_1B00CCC(&int_TypeInfo, *(_QWORD *)&level);
+    sub_1B00CCC(&LocalizationManager_TypeInfo, v5);
+    sub_1B00CCC(&StringLiteral_2921/*"BATTLE_RESULTEXP_EQUIPLV"*/, v6);
+    sub_1B00CCC(&StringLiteral_24618/*"{0}"*/, v7);
+    byte_48E5855 = 1;
   }
-  if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !LocalizationManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  }
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_2588/*"BATTLE_RESULTEXP_EQUIPLV"*/, 0LL);
-  if ( !v5 )
-    goto LABEL_12;
-  v7 = v5;
-  v8 = System_String__Equals_44889276(v5, (System_String_o *)StringLiteral_2588/*"BATTLE_RESULTEXP_EQUIPLV"*/, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_2921/*"BATTLE_RESULTEXP_EQUIPLV"*/, 0LL);
+  if ( !v8 )
+    goto LABEL_11;
+  v10 = v8;
+  v11 = System_String__Equals_60334064(v8, (System_String_o *)StringLiteral_2921/*"BATTLE_RESULTEXP_EQUIPLV"*/, 0LL);
   equip_Lv = this->fields.equip_Lv;
-  if ( v8 )
+  if ( v11 )
   {
-    v13 = level;
-    v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v13, v9);
-    v12 = (System_String_o *)StringLiteral_24025/*"{0}"*/;
+    v18 = level;
+    v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v18, v12, v13, v14);
+    v17 = (System_String_o *)StringLiteral_24618/*"{0}"*/;
   }
   else
   {
-    v14 = level;
-    v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14, v9);
-    v12 = v7;
+    v19 = level;
+    v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v19, v12, v13, v14);
+    v17 = v10;
   }
-  v5 = System_String__Format(v12, v11, 0LL);
+  v8 = System_String__Format(v17, v16, 0LL);
   if ( !equip_Lv )
-LABEL_12:
-    sub_B7769C(v5, v6);
-  UILabel__set_text(equip_Lv, v5, 0LL);
+LABEL_11:
+    sub_1B00F28(v8, v9);
+  UILabel__set_text(equip_Lv, v8, 0LL);
 }
 
 
@@ -1973,204 +1904,209 @@ bool __fastcall BattleResultExpComponent__setMasterExp(
         int32_t start_level,
         const MethodInfo *method)
 {
-  UILabel_o *mst_getexpLabel; // x22
-  Il2CppObject *v9; // x0
-  System_String_o *mst_slider; // x0
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
   __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  UILabel_o *mst_getexpLabel; // x22
+  Il2CppObject *v17; // x0
+  System_String_o *mst_slider; // x0
+  __int64 v19; // x1
   float value; // s8
   UILabel_o *mst_atexpLabel; // x21
-  const MethodInfo *v14; // x2
-  bool v15; // w21
-  DataMasterBase_WarMaster__WarEntity__int__o *v16; // x23
-  UILabel_o *v17; // x24
-  System_String_o *v18; // x22
-  struct System_String_o *age; // x8
-  float v20; // s0
-  UILabel_o *v21; // x20
-  int64_t v23; // [xsp+0h] [xbp-60h] BYREF
-  WarEntity_o *entity; // [xsp+8h] [xbp-58h] BYREF
-  int64_t v25; // [xsp+18h] [xbp-48h] BYREF
+  const MethodInfo *v22; // x2
+  bool v23; // w21
+  DataMasterBase_TMaster__TEntity__PKType__o *v24; // x23
+  UILabel_o *v25; // x24
+  System_String_o *v26; // x22
+  char *monitor; // x8
+  float v28; // s0
+  UILabel_o *v29; // x20
+  int64_t v31; // [xsp+8h] [xbp-68h] BYREF
+  Il2CppObject *entity; // [xsp+10h] [xbp-60h] BYREF
+  int64_t v33; // [xsp+18h] [xbp-58h] BYREF
 
-  v25 = getexp;
-  if ( (byte_438B80C & 1) == 0 )
+  v33 = getexp;
+  if ( (byte_48E5858 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_UserExpMaster___);
-    sub_B775C4(&Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
-    sub_B775C4(&Method_DataMasterBase_UserExpMaster__UserExpEntity__int__TryGetEntity__);
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B775C4(&StringLiteral_9434/*"N0"*/);
-    sub_B775C4(&StringLiteral_11326/*"RESULT_EQUIP_MAXEXP"*/);
-    sub_B775C4(&StringLiteral_8864/*"MAX_USER_LV"*/);
-    sub_B775C4(&StringLiteral_708/*"+ {0}"*/);
-    byte_438B80C = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_UserExpMaster___, getexp);
+    sub_1B00CCC(&Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__, v8);
+    sub_1B00CCC(&Method_DataMasterBase_UserExpMaster__UserExpEntity__int__TryGetEntity__, v9);
+    sub_1B00CCC(&LocalizationManager_TypeInfo, v10);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
+    sub_1B00CCC(&StringLiteral_9103/*"N0"*/, v12);
+    sub_1B00CCC(&StringLiteral_10917/*"RESULT_EQUIP_MAXEXP"*/, v13);
+    sub_1B00CCC(&StringLiteral_8502/*"MAX_USER_LV"*/, v14);
+    sub_1B00CCC(&StringLiteral_859/*"+ {0}"*/, v15);
+    byte_48E5858 = 1;
   }
-  v23 = 0LL;
+  v31 = 0LL;
   entity = 0LL;
   mst_getexpLabel = this->fields.mst_getexpLabel;
-  v9 = (Il2CppObject *)System_Int64__ToString_39550020((int64_t)&v25, (System_String_o *)StringLiteral_9434/*"N0"*/, 0LL);
-  mst_slider = System_String__Format((System_String_o *)StringLiteral_708/*"+ {0}"*/, v9, 0LL);
+  v17 = (Il2CppObject *)System_Int64__ToString_61136064((int64_t)&v33, (System_String_o *)StringLiteral_9103/*"N0"*/, 0LL);
+  mst_slider = System_String__Format((System_String_o *)StringLiteral_859/*"+ {0}"*/, v17, 0LL);
   if ( !mst_getexpLabel )
-    goto LABEL_32;
+    goto LABEL_30;
   UILabel__set_text(mst_getexpLabel, mst_slider, 0LL);
   mst_slider = (System_String_o *)this->fields.mst_slider;
   if ( !mst_slider )
-    goto LABEL_32;
+    goto LABEL_30;
   value = UIProgressBar__get_value((UIProgressBar_o *)mst_slider, 0LL);
-  mst_slider = (System_String_o *)ConstantMaster__getValue((System_String_o *)StringLiteral_8864/*"MAX_USER_LV"*/, 0LL);
+  mst_slider = (System_String_o *)ConstantMaster__getValue((System_String_o *)StringLiteral_8502/*"MAX_USER_LV"*/, 0LL);
   if ( !this->fields.mst_nextSprite )
-    goto LABEL_32;
+    goto LABEL_30;
   if ( (_DWORD)mst_slider == start_level )
   {
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this->fields.mst_nextSprite, 0, 0LL);
     mst_atexpLabel = this->fields.mst_atexpLabel;
-    if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
+    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    }
-    mst_slider = LocalizationManager__Get((System_String_o *)StringLiteral_11326/*"RESULT_EQUIP_MAXEXP"*/, 0LL);
+    mst_slider = LocalizationManager__Get((System_String_o *)StringLiteral_10917/*"RESULT_EQUIP_MAXEXP"*/, 0LL);
     if ( !mst_atexpLabel )
-      goto LABEL_32;
+      goto LABEL_30;
     UILabel__set_text(mst_atexpLabel, mst_slider, 0LL);
     mst_slider = (System_String_o *)this->fields.mst_slider;
     if ( !mst_slider )
-      goto LABEL_32;
+      goto LABEL_30;
     UIProgressBar__set_value((UIProgressBar_o *)mst_slider, 1.0, 0LL);
-    v15 = 0;
+    v23 = 0;
   }
   else
   {
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this->fields.mst_nextSprite, 1, 0LL);
-    mst_slider = (System_String_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    mst_slider = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !mst_slider )
-      goto LABEL_32;
-    mst_slider = (System_String_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+      goto LABEL_30;
+    mst_slider = (System_String_o *)DataManager__GetMasterData_object_(
                                       (DataManager_o *)mst_slider,
-                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserExpMaster___);
+                                      (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_UserExpMaster___);
     if ( !mst_slider )
-      goto LABEL_32;
-    v16 = (DataMasterBase_WarMaster__WarEntity__int__o *)mst_slider;
+      goto LABEL_30;
+    v24 = (DataMasterBase_TMaster__TEntity__PKType__o *)mst_slider;
     start_level = UserExpMaster__getLevel((UserExpMaster_o *)mst_slider, nowexp, start_level, 0LL);
-    mst_slider = (System_String_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-                                      v16,
+    mst_slider = (System_String_o *)DataMasterBase_object__object__int___GetEntity(
+                                      v24,
                                       start_level,
-                                      (const MethodInfo_21FB894 *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
+                                      (const MethodInfo_2FE6A4C *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
     if ( !mst_slider )
-      goto LABEL_32;
-    v17 = this->fields.mst_atexpLabel;
-    v18 = mst_slider;
-    v23 = (int64_t)mst_slider[1].klass - nowexp;
-    mst_slider = System_Int64__ToString_39550020((int64_t)&v23, (System_String_o *)StringLiteral_9434/*"N0"*/, 0LL);
-    if ( !v17 )
-      goto LABEL_32;
-    UILabel__set_text(v17, mst_slider, 0LL);
-    mst_slider = (System_String_o *)DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
-                                      v16,
+      goto LABEL_30;
+    v25 = this->fields.mst_atexpLabel;
+    v26 = mst_slider;
+    v31 = (int64_t)mst_slider[1].klass - nowexp;
+    mst_slider = System_Int64__ToString_61136064((int64_t)&v31, (System_String_o *)StringLiteral_9103/*"N0"*/, 0LL);
+    if ( !v25 )
+      goto LABEL_30;
+    UILabel__set_text(v25, mst_slider, 0LL);
+    mst_slider = (System_String_o *)DataMasterBase_object__object__int___TryGetEntity(
+                                      v24,
                                       &entity,
                                       start_level - 1,
-                                      (const MethodInfo_21FB8F0 *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int__TryGetEntity__);
-    age = 0LL;
+                                      (const MethodInfo_2FE6AA0 *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int__TryGetEntity__);
+    monitor = 0LL;
     if ( ((unsigned __int8)mst_slider & 1) != 0 )
     {
       if ( !entity )
-        goto LABEL_32;
-      age = entity->fields.age;
+        goto LABEL_30;
+      monitor = (char *)entity[1].monitor;
     }
     mst_slider = (System_String_o *)this->fields.mst_slider;
     if ( !mst_slider
-      || (v20 = 1.0 - (double)((unsigned __int64)v18[1].klass - nowexp) / (double)((char *)v18[1].klass - (char *)age),
-          UIProgressBar__set_value((UIProgressBar_o *)mst_slider, v20, 0LL),
+      || (v28 = 1.0 - (double)((unsigned __int64)v26[1].klass - nowexp) / (double)((char *)v26[1].klass - monitor),
+          UIProgressBar__set_value((UIProgressBar_o *)mst_slider, v28, 0LL),
           (mst_slider = (System_String_o *)this->fields.mst_slider) == 0LL) )
     {
-LABEL_32:
-      sub_B7769C(mst_slider, v11);
+LABEL_30:
+      sub_1B00F28(mst_slider, v19);
     }
-    v15 = value != UIProgressBar__get_value((UIProgressBar_o *)mst_slider, 0LL);
+    v23 = value != UIProgressBar__get_value((UIProgressBar_o *)mst_slider, 0LL);
   }
-  BattleResultExpComponent__setMasterLv(this, start_level, v14);
-  if ( start_level == ConstantMaster__getValue((System_String_o *)StringLiteral_8864/*"MAX_USER_LV"*/, 0LL) )
+  BattleResultExpComponent__setMasterLv(this, start_level, v22);
+  if ( start_level == ConstantMaster__getValue((System_String_o *)StringLiteral_8502/*"MAX_USER_LV"*/, 0LL) )
   {
     mst_slider = (System_String_o *)this->fields.mst_nextSprite;
     if ( mst_slider )
     {
       UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)mst_slider, 0, 0LL);
-      v21 = this->fields.mst_atexpLabel;
-      if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !LocalizationManager_TypeInfo->_2.cctor_finished )
-      {
+      v29 = this->fields.mst_atexpLabel;
+      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      }
-      mst_slider = LocalizationManager__Get((System_String_o *)StringLiteral_11326/*"RESULT_EQUIP_MAXEXP"*/, 0LL);
-      if ( v21 )
+      mst_slider = LocalizationManager__Get((System_String_o *)StringLiteral_10917/*"RESULT_EQUIP_MAXEXP"*/, 0LL);
+      if ( v29 )
       {
-        UILabel__set_text(v21, mst_slider, 0LL);
+        UILabel__set_text(v29, mst_slider, 0LL);
         mst_slider = (System_String_o *)this->fields.mst_slider;
         if ( mst_slider )
         {
           UIProgressBar__set_value((UIProgressBar_o *)mst_slider, 1.0, 0LL);
-          return v15;
+          return v23;
         }
       }
     }
-    goto LABEL_32;
+    goto LABEL_30;
   }
-  return v15;
+  return v23;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall BattleResultExpComponent__setMasterLv(
         BattleResultExpComponent_o *this,
         int32_t level,
         const MethodInfo *method)
 {
-  System_String_o *v5; // x0
+  __int64 v5; // x1
   __int64 v6; // x1
-  System_String_o *v7; // x21
-  bool v8; // w0
-  __int64 v9; // x2
+  __int64 v7; // x1
+  System_String_o *v8; // x0
+  __int64 v9; // x1
+  System_String_o *v10; // x21
+  bool v11; // w0
+  __int64 v12; // x2
+  __int64 v13; // x3
+  __int64 v14; // x4
   UILabel_o *mst_Lv; // x20
-  Il2CppObject *v11; // x1
-  System_String_o *v12; // x0
-  int32_t v13; // [xsp+8h] [xbp-28h] BYREF
-  int32_t v14; // [xsp+Ch] [xbp-24h] BYREF
+  Il2CppObject *v16; // x1
+  System_String_o *v17; // x0
+  int32_t v18; // [xsp+8h] [xbp-28h] BYREF
+  int32_t v19; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_438B808 & 1) == 0 )
+  if ( (byte_48E5854 & 1) == 0 )
   {
-    sub_B775C4(&int_TypeInfo);
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&StringLiteral_24025/*"{0}"*/);
-    sub_B775C4(&StringLiteral_2593/*"BATTLE_RESULTEXP_MASTERLV"*/);
-    byte_438B808 = 1;
+    sub_1B00CCC(&int_TypeInfo, *(_QWORD *)&level);
+    sub_1B00CCC(&LocalizationManager_TypeInfo, v5);
+    sub_1B00CCC(&StringLiteral_24618/*"{0}"*/, v6);
+    sub_1B00CCC(&StringLiteral_2926/*"BATTLE_RESULTEXP_MASTERLV"*/, v7);
+    byte_48E5854 = 1;
   }
-  if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !LocalizationManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  }
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_2593/*"BATTLE_RESULTEXP_MASTERLV"*/, 0LL);
-  if ( !v5 )
-    goto LABEL_12;
-  v7 = v5;
-  v8 = System_String__Equals_44889276(v5, (System_String_o *)StringLiteral_2593/*"BATTLE_RESULTEXP_MASTERLV"*/, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_2926/*"BATTLE_RESULTEXP_MASTERLV"*/, 0LL);
+  if ( !v8 )
+    goto LABEL_11;
+  v10 = v8;
+  v11 = System_String__Equals_60334064(v8, (System_String_o *)StringLiteral_2926/*"BATTLE_RESULTEXP_MASTERLV"*/, 0LL);
   mst_Lv = this->fields.mst_Lv;
-  if ( v8 )
+  if ( v11 )
   {
-    v13 = level;
-    v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v13, v9);
-    v12 = (System_String_o *)StringLiteral_24025/*"{0}"*/;
+    v18 = level;
+    v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v18, v12, v13, v14);
+    v17 = (System_String_o *)StringLiteral_24618/*"{0}"*/;
   }
   else
   {
-    v14 = level;
-    v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14, v9);
-    v12 = v7;
+    v19 = level;
+    v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v19, v12, v13, v14);
+    v17 = v10;
   }
-  v5 = System_String__Format(v12, v11, 0LL);
+  v8 = System_String__Format(v17, v16, 0LL);
   if ( !mst_Lv )
-LABEL_12:
-    sub_B7769C(v5, v6);
-  UILabel__set_text(mst_Lv, v5, 0LL);
+LABEL_11:
+    sub_1B00F28(v8, v9);
+  UILabel__set_text(mst_Lv, v8, 0LL);
 }
 
 
@@ -2185,712 +2121,646 @@ void __fastcall BattleResultExpComponent__setResultData(
         QuestKnockdownResult_o *knockdownResult,
         const MethodInfo *method)
 {
-  __int64 v16; // x27
-  __int64 Instance; // x0
+  __int64 v17; // x1
   __int64 v18; // x1
-  System_String_array **v19; // x2
-  System_String_array **v20; // x3
-  System_Boolean_array **v21; // x4
-  System_Int32_array **v22; // x5
-  System_Int32_array *v23; // x6
-  System_Int32_array *v24; // x7
-  __int64 v25; // x23
-  System_String_array **v26; // x2
-  System_String_array **v27; // x3
-  System_Boolean_array **v28; // x4
-  System_Int32_array **v29; // x5
-  System_Int32_array *v30; // x6
-  System_Int32_array *v31; // x7
-  __int64 *v32; // x26
-  System_String_array **v33; // x2
-  System_String_array **v34; // x3
-  System_Boolean_array **v35; // x4
-  System_Int32_array **v36; // x5
-  System_Int32_array *v37; // x6
-  System_Int32_array *v38; // x7
-  struct UserGameEntity_o *v39; // x1
+  __int64 v19; // x1
+  __int64 v20; // x1
+  __int64 v21; // x1
+  __int64 v22; // x1
+  __int64 v23; // x1
+  __int64 v24; // x1
+  __int64 v25; // x1
+  __int64 v26; // x1
+  __int64 v27; // x1
+  __int64 v28; // x1
+  __int64 v29; // x1
+  __int64 v30; // x1
+  __int64 v31; // x1
+  __int64 v32; // x1
+  __int64 v33; // x1
+  __int64 v34; // x1
+  __int64 v35; // x1
+  __int64 v36; // x1
+  __int64 v37; // x1
+  __int64 v38; // x27
+  __int64 Instance; // x0
+  __int64 v40; // x1
+  int32_t v41; // w2
+  int32_t v42; // w3
+  __int64 v43; // x23
+  int32_t v44; // w2
+  int32_t v45; // w3
+  __int64 *v46; // x26
+  int32_t v47; // w2
+  int32_t v48; // w3
+  struct UserGameEntity_o *v49; // x1
   struct UserGameEntity_o **p_oldGame; // x28
-  System_String_array **v41; // x2
-  System_String_array **v42; // x3
-  System_Boolean_array **v43; // x4
-  System_Int32_array **v44; // x5
-  System_Int32_array *v45; // x6
-  System_Int32_array *v46; // x7
-  System_String_array **v47; // x2
-  System_String_array **v48; // x3
-  System_Boolean_array **v49; // x4
-  System_Int32_array **v50; // x5
-  System_Int32_array *v51; // x6
-  System_Int32_array *v52; // x7
+  int32_t v51; // w2
+  int32_t v52; // w3
+  int32_t v53; // w2
+  int32_t v54; // w3
   UnityEngine_Object_o *knockdownRecordWindow; // x24
-  const MethodInfo *v54; // x2
-  UserServantEntity_o *v55; // x0
+  const MethodInfo *v56; // x2
+  Il2CppObject *v57; // x0
   struct UserGameEntity_o **p_newGame; // x24
-  System_String_array **v57; // x2
-  System_String_array **v58; // x3
-  System_Boolean_array **v59; // x4
-  System_Int32_array **v60; // x5
-  System_Int32_array *v61; // x6
-  System_Int32_array *v62; // x7
-  UserServantEntity_o *v63; // x0
-  System_String_array **v64; // x2
-  System_String_array **v65; // x3
-  System_Boolean_array **v66; // x4
-  System_Int32_array **v67; // x5
-  System_Int32_array *v68; // x6
-  System_Int32_array *v69; // x7
-  const MethodInfo *v70; // x4
+  int32_t v59; // w2
+  int32_t v60; // w3
+  Il2CppObject *v61; // x0
+  struct UserEquipEntity_o **p_newEquip; // x21
+  int32_t v63; // w2
+  int32_t v64; // w3
+  const MethodInfo *v65; // x4
   struct UserGameEntity_o *newGame; // x8
+  UserEquipEntity_o *v67; // x9
   UILabel_o *equip_nameLabel; // x25
-  __int64 v73; // x21
-  __int64 v74; // x28
-  int32_t v75; // w0
-  const MethodInfo *v76; // x5
-  int32_t *p_lv; // x25
-  const MethodInfo *v78; // x2
+  __int64 v69; // x29
+  __int64 v70; // x28
+  int32_t v71; // w0
+  UserEquipEntity_o *v72; // x29
+  const MethodInfo *v73; // x5
+  const MethodInfo *v74; // x2
+  const MethodInfo *v75; // x3
   struct BattleResultMasterUpStatusComponent_array *upParamList; // x8
-  System_Func_float__int__int__o *v80; // x28
-  const MethodInfo *v81; // x4
-  int v82; // w27
-  __int64 v83; // x8
-  BattleResultExpComponent_o *v84; // x28
-  signed __int64 v85; // x19
+  __int64 v77; // x28
+  const MethodInfo *v78; // x4
+  int v79; // w27
+  __int64 v80; // x8
+  signed __int64 v81; // x20
   struct UISprite_array *lvUpRewardSpArray; // x9
   unsigned __int64 max_length; // x10
-  struct BattleResultMasterUpStatusComponent_array *v88; // x8
-  UserEquipEntity_o *v89; // x21
-  int v90; // w8
-  __int64 v91; // x26
-  unsigned int v92; // w20
-  struct UISprite_array *v93; // x8
+  struct BattleResultMasterUpStatusComponent_array *v84; // x8
+  UserEquipEntity_o **v85; // x21
+  int v86; // w8
+  __int64 v87; // x26
+  unsigned int v88; // w20
+  struct UISprite_array *v89; // x8
+  struct UISprite_array *v90; // x8
+  struct UISprite_array *v91; // x8
+  struct UISprite_array *v92; // x8
+  const MethodInfo *v93; // x4
   struct UISprite_array *v94; // x8
-  struct UISprite_array *v95; // x8
+  const MethodInfo *v95; // x4
   struct UISprite_array *v96; // x8
-  const MethodInfo *v97; // x4
-  struct UISprite_array *v98; // x8
-  const MethodInfo *v99; // x4
-  struct UISprite_array *v100; // x8
-  int v101; // w8
-  const MethodInfo *v102; // x2
+  int v97; // w8
+  const MethodInfo *v98; // x2
   UILabel_o *equip_oldlevelLabel; // x22
-  System_String_o *v104; // x1
+  System_String_o *v100; // x1
   struct UserEquipEntity_o *newEquip; // x8
-  UILabel_o *equip_newlevelLabel; // x21
-  System_String_o *v107; // x1
-  System_Text_StringBuilder_o *v108; // x22
-  __int64 v109; // x23
+  UILabel_o *equip_newlevelLabel; // x22
+  System_String_o *v103; // x1
+  System_Text_StringBuilder_o *v104; // x22
+  __int64 v105; // x23
   System_Int32_array *SkillIdList; // x24
   System_Int32_array *SkillLvList; // x26
-  DataMasterBase_WarMaster__WarEntity__int__o *v112; // x27
-  int v113; // w20
-  unsigned __int64 v114; // x25
-  int32_t *v115; // x19
-  System_String_o *v116; // x28
-  __int64 v117; // x2
-  Il2CppObject *v118; // x21
-  Il2CppObject *v119; // x0
-  System_String_o *v120; // x21
+  DataMasterBase_TMaster__TEntity__PKType__o *v108; // x27
+  int v109; // w21
+  unsigned __int64 v110; // x20
+  int32_t *v111; // x25
+  System_String_o *v112; // x28
+  __int64 v113; // x2
+  __int64 v114; // x3
+  __int64 v115; // x4
+  Il2CppObject *v116; // x29
+  Il2CppObject *v117; // x0
+  System_String_o *v118; // x28
   Il2CppObject *Name; // x0
   UnityEngine_Transform_o *eqConfRoot; // x23
-  UILabel_o *equip_confLabel; // x21
-  int64_t bestTurnDamage; // x11
-  int64_t oldRecordDamage; // x12
+  UILabel_o *equip_confLabel; // x23
+  int64_t oldRecordDamage; // x11
+  int64_t bestTurnDamage; // x12
   UILabel_o *damage_recordLabel; // x21
-  UILabel_o *v127; // x21
-  bool v128; // w1
+  UILabel_o *v125; // x21
+  bool v126; // w1
   UILabel_o *damage_battleLabel; // x21
-  __int64 v130; // x0
-  UserEquipEntity_o *v131; // [xsp+0h] [xbp-A0h]
-  UserEquipEntity_o **p_newEquip; // [xsp+8h] [xbp-98h]
-  __int64 v133; // [xsp+18h] [xbp-88h]
-  int32_t *v134; // [xsp+20h] [xbp-80h]
-  int32_t v136; // [xsp+3Ch] [xbp-64h] BYREF
-  WarEntity_o *entity; // [xsp+48h] [xbp-58h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v138; // 0:x0.16
-  UnityEngine_Vector3_o v139; // 0:s0.4,4:s1.4,8:s2.4
+  struct UserEquipEntity_o **v128; // [xsp+0h] [xbp-A0h]
+  UserEquipEntity_o *v129; // [xsp+8h] [xbp-98h]
+  __int64 v130; // [xsp+18h] [xbp-88h]
+  int32_t *v131; // [xsp+20h] [xbp-80h]
+  int32_t v132; // [xsp+34h] [xbp-6Ch] BYREF
+  Il2CppObject *entity; // [xsp+38h] [xbp-68h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v134; // 0:x0.16
+  UnityEngine_Vector3_o v135; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_438B80A & 1) == 0 )
+  if ( (byte_48E5856 & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_Component_GetComponentsInChildren_UILabel___);
-    sub_B775C4(&Method_DataManager_GetMasterData_SkillMaster___);
-    sub_B775C4(&Method_DataManager_GetMasterData_UserEquipMaster___);
-    sub_B775C4(&Method_DataManager_GetMasterData_UserGameMaster___);
-    sub_B775C4(&Method_DataMasterBase_UserGameMaster__UserGameEntity__long__GetEntity__);
-    sub_B775C4(&Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
-    sub_B775C4(&Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
-    sub_B775C4(&Method_System_Func_float__int__int__Invoke__);
-    sub_B775C4(&Method_System_Func_float__int__int___ctor__);
-    sub_B775C4(&System_Func_float__int__int__TypeInfo);
-    sub_B775C4(&int_TypeInfo);
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B775C4(&System_Text_StringBuilder_TypeInfo);
-    sub_B775C4(&Method_BattleResultExpComponent___c__DisplayClass61_0__setResultData_b__0__);
-    sub_B775C4(&BattleResultExpComponent___c__DisplayClass61_0_TypeInfo);
-    sub_B775C4(&StringLiteral_17160/*"bit_reward_shine01"*/);
-    sub_B775C4(&StringLiteral_11325/*"RESULT_EQEXP_UPSKILLLV"*/);
-    sub_B775C4(&StringLiteral_11324/*"RESULT_EQEXP_GETSKILL"*/);
-    sub_B775C4(&StringLiteral_17161/*"bit_reward_shine02"*/);
-    sub_B775C4(&StringLiteral_349/*"#,#"*/);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438B80A = 1;
+    sub_1B00CCC(&Method_UnityEngine_Component_GetComponentsInChildren_UILabel___, oldGame);
+    sub_1B00CCC(&Method_DataManager_GetMasterData_SkillMaster___, v17);
+    sub_1B00CCC(&Method_DataManager_GetMasterData_UserEquipMaster___, v18);
+    sub_1B00CCC(&Method_DataManager_GetMasterData_UserGameMaster___, v19);
+    sub_1B00CCC(&Method_DataMasterBase_UserGameMaster__UserGameEntity__long__GetEntity__, v20);
+    sub_1B00CCC(&Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__, v21);
+    sub_1B00CCC(&Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__, v22);
+    sub_1B00CCC(&System_Func_float__int__int__TypeInfo, v23);
+    sub_1B00CCC(&int_TypeInfo, v24);
+    sub_1B00CCC(&LocalizationManager_TypeInfo, v25);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v26);
+    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v27);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v28);
+    sub_1B00CCC(&System_Text_StringBuilder_TypeInfo, v29);
+    sub_1B00CCC(&Method_BattleResultExpComponent___c__DisplayClass61_0__setResultData_b__0__, v30);
+    sub_1B00CCC(&BattleResultExpComponent___c__DisplayClass61_0_TypeInfo, v31);
+    sub_1B00CCC(&StringLiteral_17061/*"bit_reward_shine01"*/, v32);
+    sub_1B00CCC(&StringLiteral_10916/*"RESULT_EQEXP_UPSKILLLV"*/, v33);
+    sub_1B00CCC(&StringLiteral_10915/*"RESULT_EQEXP_GETSKILL"*/, v34);
+    sub_1B00CCC(&StringLiteral_17062/*"bit_reward_shine02"*/, v35);
+    sub_1B00CCC(&StringLiteral_425/*"#,#"*/, v36);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v37);
+    byte_48E5856 = 1;
   }
   entity = 0LL;
-  v16 = sub_B77694(BattleResultExpComponent___c__DisplayClass61_0_TypeInfo);
-  BattleResultExpComponent___c__DisplayClass61_0___ctor((BattleResultExpComponent___c__DisplayClass61_0_o *)v16, 0LL);
-  if ( !v16 )
-    goto LABEL_139;
-  *(_QWORD *)(v16 + 16) = oldGame;
-  v25 = v16 + 16;
-  sub_B77560((BattleServantConfConponent_o *)(v16 + 16), (System_Int32_array **)oldGame, v19, v20, v21, v22, v23, v24);
-  *(_QWORD *)(v16 + 24) = this;
-  sub_B77560((BattleServantConfConponent_o *)(v16 + 24), (System_Int32_array **)this, v26, v27, v28, v29, v30, v31);
-  *(_QWORD *)(v16 + 32) = masterLvInfoArray;
-  v32 = (__int64 *)(v16 + 32);
-  sub_B77560(
-    (BattleServantConfConponent_o *)(v16 + 32),
-    (System_Int32_array **)masterLvInfoArray,
-    v33,
-    v34,
-    v35,
-    v36,
-    v37,
-    v38);
-  v39 = *(struct UserGameEntity_o **)(v16 + 16);
+  v38 = sub_1B00F18(BattleResultExpComponent___c__DisplayClass61_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v38, 0LL);
+  if ( !v38 )
+    goto LABEL_134;
+  *(_QWORD *)(v38 + 16) = oldGame;
+  v43 = v38 + 16;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v38 + 16), (int32_t)oldGame, v41, v42);
+  *(_QWORD *)(v38 + 24) = this;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v38 + 24), (int32_t)this, v44, v45);
+  *(_QWORD *)(v38 + 32) = masterLvInfoArray;
+  v46 = (__int64 *)(v38 + 32);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v38 + 32), (int32_t)masterLvInfoArray, v47, v48);
+  v49 = *(struct UserGameEntity_o **)(v38 + 16);
   p_oldGame = &this->fields.oldGame;
-  this->fields.oldGame = v39;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.oldGame,
-    (System_Int32_array **)v39,
-    v41,
-    v42,
-    v43,
-    v44,
-    v45,
-    v46);
+  this->fields.oldGame = v49;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.oldGame, (int32_t)v49, v51, v52);
   this->fields.oldEquip = oldEquip;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.oldEquip,
-    (System_Int32_array **)oldEquip,
-    v47,
-    v48,
-    v49,
-    v50,
-    v51,
-    v52);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.oldEquip, (int32_t)oldEquip, v53, v54);
   this->fields.bestTurnDamage = maxTurnDamage;
   this->fields.oldRecordDamage = oldRecord;
   knockdownRecordWindow = (UnityEngine_Object_o *)this->fields.knockdownRecordWindow;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(knockdownRecordWindow, 0LL, 0LL) )
   {
     Instance = (__int64)this->fields.knockdownRecordWindow;
     if ( !Instance )
-      goto LABEL_139;
-    BattleResultKnockdownComponent__setData((BattleResultKnockdownComponent_o *)Instance, knockdownResult, v54);
+      goto LABEL_134;
+    BattleResultKnockdownComponent__setData((BattleResultKnockdownComponent_o *)Instance, knockdownResult, v56);
   }
   this->fields.updateFlg = 0;
-  Instance = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_139;
-  Instance = (__int64)DataManager__GetMasterData_WarQuestSelectionMaster_(
+    goto LABEL_134;
+  Instance = (__int64)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserGameMaster___);
+                        (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_UserGameMaster___);
   if ( !*p_oldGame )
-    goto LABEL_139;
+    goto LABEL_134;
   if ( !Instance )
-    goto LABEL_139;
-  v55 = DataMasterBase_UserServantStorageMaster__UserServantEntity__long___GetEntity(
-          (DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *)Instance,
+    goto LABEL_134;
+  v57 = DataMasterBase_object__object__long___GetEntity(
+          (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
           (*p_oldGame)->fields.userId,
-          (const MethodInfo_21FBABC *)Method_DataMasterBase_UserGameMaster__UserGameEntity__long__GetEntity__);
+          (const MethodInfo_2FE6BF8 *)Method_DataMasterBase_UserGameMaster__UserGameEntity__long__GetEntity__);
   p_newGame = &this->fields.newGame;
-  this->fields.newGame = (struct UserGameEntity_o *)v55;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.newGame,
-    (System_Int32_array **)v55,
-    v57,
-    v58,
-    v59,
-    v60,
-    v61,
-    v62);
-  Instance = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this->fields.newGame = (struct UserGameEntity_o *)v57;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.newGame, (int32_t)v57, v59, v60);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_139;
-  Instance = (__int64)DataManager__GetMasterData_WarQuestSelectionMaster_(
+    goto LABEL_134;
+  Instance = (__int64)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserEquipMaster___);
+                        (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_UserEquipMaster___);
   if ( !oldEquip )
-    goto LABEL_139;
+    goto LABEL_134;
   if ( !Instance )
-    goto LABEL_139;
-  v63 = DataMasterBase_UserServantStorageMaster__UserServantEntity__long___GetEntity(
-          (DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *)Instance,
+    goto LABEL_134;
+  v61 = DataMasterBase_object__object__long___GetEntity(
+          (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
           oldEquip->fields.id,
-          (const MethodInfo_21FBABC *)Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
-  this->fields.newEquip = (struct UserEquipEntity_o *)v63;
+          (const MethodInfo_2FE6BF8 *)Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
   p_newEquip = &this->fields.newEquip;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.newEquip,
-    (System_Int32_array **)v63,
-    v64,
-    v65,
-    v66,
-    v67,
-    v68,
-    v69);
+  this->fields.newEquip = (struct UserEquipEntity_o *)v61;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.newEquip, (int32_t)v61, v63, v64);
   newGame = this->fields.newGame;
-  if ( !newGame || !*(_QWORD *)v25 )
-    goto LABEL_139;
+  if ( !newGame || !*(_QWORD *)v43 )
+    goto LABEL_134;
   BattleResultExpComponent__setMasterExp(
     this,
-    newGame->fields.exp - *(_QWORD *)(*(_QWORD *)v25 + 88LL),
-    *(_QWORD *)(*(_QWORD *)v25 + 88LL),
-    *(_DWORD *)(*(_QWORD *)v25 + 80LL),
-    v70);
+    newGame->fields.exp - *(_QWORD *)(*(_QWORD *)v43 + 88LL),
+    *(_QWORD *)(*(_QWORD *)v43 + 88LL),
+    *(_DWORD *)(*(_QWORD *)v43 + 80LL),
+    v65);
+  v67 = oldEquip;
   equip_nameLabel = this->fields.equip_nameLabel;
-  v74 = *(_QWORD *)&oldEquip->fields.equipId.fields.currentCryptoKey;
-  v73 = *(_QWORD *)&oldEquip->fields.equipId.fields.fakeValue;
-  if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-  {
+  v69 = *(_QWORD *)&oldEquip->fields.equipId.fields.currentCryptoKey;
+  v70 = *(_QWORD *)&v67->fields.equipId.fields.fakeValue;
+  v129 = v67;
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  }
-  *(_QWORD *)&v138.fields.currentCryptoKey = v74;
-  *(_QWORD *)&v138.fields.fakeValue = v73;
-  v75 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v138, 0LL);
-  Instance = (__int64)EquipMaster__getEquipName(v75, 0LL);
+  *(_QWORD *)&v134.fields.currentCryptoKey = v69;
+  *(_QWORD *)&v134.fields.fakeValue = v70;
+  v71 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(v134, 0LL);
+  Instance = (__int64)EquipMaster__getEquipName(v71, 0LL);
   if ( !equip_nameLabel
     || (UILabel__set_text(equip_nameLabel, (System_String_o *)Instance, 0LL),
-        Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(oldEquip->fields.equipId, 0LL),
+        v72 = v129,
+        Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(v129->fields.equipId, 0LL),
         !*p_newEquip)
-    || (p_lv = &oldEquip->fields.lv,
-        Instance = BattleResultExpComponent__setEquipExp(
+    || (Instance = BattleResultExpComponent__setEquipExp(
                      this,
                      Instance,
-                     (*p_newEquip)->fields.exp - oldEquip->fields.exp,
-                     oldEquip->fields.exp,
-                     oldEquip->fields.lv,
-                     v76),
-        !*(_QWORD *)v25)
-    || (BattleResultExpComponent__setMasterLv(this, *(_DWORD *)(*(_QWORD *)v25 + 80LL), v78),
+                     (*p_newEquip)->fields.exp - v129->fields.exp,
+                     v129->fields.exp,
+                     v129->fields.lv,
+                     v73),
+        !*(_QWORD *)v43)
+    || (BattleResultExpComponent__setMasterLv(this, *(_DWORD *)(*(_QWORD *)v43 + 80LL), v74),
         (upParamList = this->fields.upParamList) == 0LL) )
   {
-LABEL_139:
-    sub_B7769C(Instance, v18);
+LABEL_134:
+    sub_1B00F28(Instance, v40);
   }
   if ( !upParamList->max_length )
-    goto LABEL_140;
-  if ( !*(_QWORD *)v25 )
-    goto LABEL_139;
+    goto LABEL_135;
+  if ( !*(_QWORD *)v43 )
+    goto LABEL_134;
   if ( !*p_newGame )
-    goto LABEL_139;
+    goto LABEL_134;
   Instance = (__int64)upParamList->m_Items[0];
+  v128 = &this->fields.newEquip;
   if ( !Instance )
-    goto LABEL_139;
+    goto LABEL_134;
   BattleResultMasterUpStatusComponent__setData(
     (BattleResultMasterUpStatusComponent_o *)Instance,
-    *(_DWORD *)(*(_QWORD *)v25 + 80LL),
+    *(_DWORD *)(*(_QWORD *)v43 + 80LL),
     (*p_newGame)->fields.lv,
-    0LL);
-  v80 = (System_Func_float__int__int__o *)sub_B77694(System_Func_float__int__int__TypeInfo);
+    v75);
+  v77 = sub_1B00F18(System_Func_float__int__int__TypeInfo);
   System_Func_float__int__int____ctor(
-    v80,
-    (Il2CppObject *)v16,
+    (System_Func_float__int__int__o *)v77,
+    (Il2CppObject *)v38,
     Method_BattleResultExpComponent___c__DisplayClass61_0__setResultData_b__0__,
-    (const MethodInfo_29F5480 *)Method_System_Func_float__int__int___ctor__);
-  if ( !v80 )
-    goto LABEL_139;
-  Instance = System_Func_float__int__int___Invoke(
-               v80,
-               -186.0,
-               35,
-               (const MethodInfo_29F5494 *)Method_System_Func_float__int__int__Invoke__);
-  v82 = Instance;
+    0LL);
+  if ( !v77 )
+    goto LABEL_134;
+  Instance = (*(__int64 (__fastcall **)(_QWORD, __int64, _QWORD, float))(v77 + 24))(
+               *(_QWORD *)(v77 + 64),
+               35LL,
+               *(_QWORD *)(v77 + 40),
+               -186.0);
+  v79 = Instance;
   if ( (int)Instance < 6 )
   {
-    v83 = *v32;
-    if ( *v32 )
+    v80 = *v46;
+    if ( *v46 )
     {
-      v84 = this;
-      v85 = 0LL;
-      while ( v85 < *(int *)(v83 + 24) )
+      v81 = 0LL;
+      while ( v81 < *(int *)(v80 + 24) )
       {
         lvUpRewardSpArray = this->fields.lvUpRewardSpArray;
         if ( !lvUpRewardSpArray )
-          goto LABEL_139;
+          goto LABEL_134;
         max_length = lvUpRewardSpArray->max_length;
-        if ( v85 < (int)max_length )
+        if ( v81 < (int)max_length )
         {
-          if ( v85 >= max_length )
-            goto LABEL_140;
+          if ( v81 >= max_length )
+            goto LABEL_135;
           BattleResultExpComponent__CreateRewardEffect(
             this,
             resultAssetData,
-            lvUpRewardSpArray->m_Items[v85],
-            (System_String_o *)StringLiteral_17160/*"bit_reward_shine01"*/,
-            v81);
-          v83 = *v32;
+            lvUpRewardSpArray->m_Items[v81],
+            (System_String_o *)StringLiteral_17061/*"bit_reward_shine01"*/,
+            v78);
+          v80 = *v46;
         }
-        ++v85;
-        if ( !v83 )
-          goto LABEL_139;
+        ++v81;
+        if ( !v80 )
+          goto LABEL_134;
       }
-      v101 = 35;
     }
-    else
-    {
-      v84 = this;
-      v101 = 35;
-    }
-    goto LABEL_70;
+    v85 = &this->fields.newEquip;
+    v97 = 35;
+    goto LABEL_67;
   }
-  v88 = this->fields.upParamList;
-  if ( !v88 )
-    goto LABEL_139;
-  if ( !v88->max_length )
-    goto LABEL_140;
-  Instance = (__int64)v88->m_Items[0];
+  v84 = this->fields.upParamList;
+  if ( !v84 )
+    goto LABEL_134;
+  if ( !v84->max_length )
+    goto LABEL_135;
+  Instance = (__int64)v84->m_Items[0];
+  v85 = &this->fields.newEquip;
   if ( !Instance )
-    goto LABEL_139;
+    goto LABEL_134;
   Instance = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)Instance, 0LL);
   if ( !Instance )
-    goto LABEL_139;
+    goto LABEL_134;
   Instance = (__int64)UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)Instance, 0LL);
   if ( !Instance )
-    goto LABEL_139;
-  v89 = oldEquip;
-  Instance = (__int64)UnityEngine_Component__GetComponentsInChildren_USTimelineContainer_(
+    goto LABEL_134;
+  Instance = (__int64)UnityEngine_Component__GetComponentsInChildren_object__47554852(
                         (UnityEngine_Component_o *)Instance,
-                        (const MethodInfo_1C6DAB8 *)Method_UnityEngine_Component_GetComponentsInChildren_UILabel___);
+                        (const MethodInfo_2D5A124 *)Method_UnityEngine_Component_GetComponentsInChildren_UILabel___);
   if ( !Instance )
-    goto LABEL_139;
-  v90 = *(_DWORD *)(Instance + 24);
-  v91 = Instance;
-  if ( v90 >= 1 )
+    goto LABEL_134;
+  v86 = *(_DWORD *)(Instance + 24);
+  v87 = Instance;
+  if ( v86 >= 1 )
   {
-    v92 = 0;
-    while ( v92 < v90 )
+    v88 = 0;
+    while ( v88 < v86 )
     {
-      Instance = *(_QWORD *)(v91 + 8LL * (int)v92 + 32);
+      Instance = *(_QWORD *)(v87 + 8LL * (int)v88 + 32);
       if ( !Instance )
-        goto LABEL_139;
-      UILabel__set_fontSize((UILabel_o *)Instance, *(_DWORD *)(Instance + 416) - 2, 0LL);
-      v90 = *(_DWORD *)(v91 + 24);
-      if ( (int)++v92 >= v90 )
-        goto LABEL_51;
+        goto LABEL_134;
+      UILabel__set_fontSize((UILabel_o *)Instance, *(_DWORD *)(Instance + 424) - 2, 0LL);
+      v86 = *(_DWORD *)(v87 + 24);
+      if ( (int)++v88 >= v86 )
+        goto LABEL_49;
     }
-    goto LABEL_140;
+    goto LABEL_135;
   }
-LABEL_51:
-  v93 = this->fields.lvUpRewardSpArray;
-  if ( !v93 )
-    goto LABEL_139;
-  if ( !v93->max_length )
-    goto LABEL_140;
-  Instance = (__int64)v93->m_Items[0];
+LABEL_49:
+  v89 = this->fields.lvUpRewardSpArray;
+  if ( !v89 )
+    goto LABEL_134;
+  if ( !v89->max_length )
+    goto LABEL_135;
+  Instance = (__int64)v89->m_Items[0];
   if ( !Instance )
-    goto LABEL_139;
-  UIWidget__set_width((UIWidget_o *)Instance, *(_DWORD *)(Instance + 160) - 5, 0LL);
+    goto LABEL_134;
+  UIWidget__set_width((UIWidget_o *)Instance, *(_DWORD *)(Instance + 168) - 5, 0LL);
+  v90 = this->fields.lvUpRewardSpArray;
+  if ( !v90 )
+    goto LABEL_134;
+  if ( !v90->max_length )
+    goto LABEL_135;
+  Instance = (__int64)v90->m_Items[0];
+  if ( !Instance )
+    goto LABEL_134;
+  UIWidget__set_height((UIWidget_o *)Instance, *(_DWORD *)(Instance + 172) - 5, 0LL);
+  v91 = this->fields.lvUpRewardSpArray;
+  if ( !v91 )
+    goto LABEL_134;
+  if ( v91->max_length <= 1 )
+    goto LABEL_135;
+  Instance = (__int64)v91->m_Items[1];
+  if ( !Instance )
+    goto LABEL_134;
+  UIWidget__set_width((UIWidget_o *)Instance, *(_DWORD *)(Instance + 168) - 5, 0LL);
+  v92 = this->fields.lvUpRewardSpArray;
+  if ( !v92 )
+    goto LABEL_134;
+  if ( v92->max_length <= 1 )
+    goto LABEL_135;
+  Instance = (__int64)v92->m_Items[1];
+  if ( !Instance )
+    goto LABEL_134;
+  UIWidget__set_height((UIWidget_o *)Instance, *(_DWORD *)(Instance + 172) - 5, 0LL);
+  Instance = (*(__int64 (__fastcall **)(_QWORD, __int64, _QWORD, float))(v77 + 24))(
+               *(_QWORD *)(v77 + 64),
+               31LL,
+               *(_QWORD *)(v77 + 40),
+               -186.0);
   v94 = this->fields.lvUpRewardSpArray;
   if ( !v94 )
-    goto LABEL_139;
+    goto LABEL_134;
   if ( !v94->max_length )
-    goto LABEL_140;
-  Instance = (__int64)v94->m_Items[0];
-  if ( !Instance )
-    goto LABEL_139;
-  oldEquip = v89;
-  UIWidget__set_height((UIWidget_o *)Instance, *(_DWORD *)(Instance + 164) - 5, 0LL);
-  v95 = this->fields.lvUpRewardSpArray;
-  if ( !v95 )
-    goto LABEL_139;
-  if ( v95->max_length <= 1 )
-    goto LABEL_140;
-  Instance = (__int64)v95->m_Items[1];
-  if ( !Instance )
-    goto LABEL_139;
-  UIWidget__set_width((UIWidget_o *)Instance, *(_DWORD *)(Instance + 160) - 5, 0LL);
+    goto LABEL_135;
+  BattleResultExpComponent__CreateRewardEffect(
+    this,
+    resultAssetData,
+    v94->m_Items[0],
+    (System_String_o *)StringLiteral_17062/*"bit_reward_shine02"*/,
+    v93);
   v96 = this->fields.lvUpRewardSpArray;
   if ( !v96 )
-    goto LABEL_139;
+    goto LABEL_134;
   if ( v96->max_length <= 1 )
-    goto LABEL_140;
-  Instance = (__int64)v96->m_Items[1];
-  if ( !Instance )
-    goto LABEL_139;
-  UIWidget__set_height((UIWidget_o *)Instance, *(_DWORD *)(Instance + 164) - 5, 0LL);
-  Instance = System_Func_float__int__int___Invoke(
-               v80,
-               -186.0,
-               31,
-               (const MethodInfo_29F5494 *)Method_System_Func_float__int__int__Invoke__);
-  v84 = this;
-  v98 = this->fields.lvUpRewardSpArray;
-  if ( !v98 )
-    goto LABEL_139;
-  if ( !v98->max_length )
-    goto LABEL_140;
+LABEL_135:
+    sub_1B00F30(Instance, v40);
   BattleResultExpComponent__CreateRewardEffect(
     this,
     resultAssetData,
-    v98->m_Items[0],
-    (System_String_o *)StringLiteral_17161/*"bit_reward_shine02"*/,
-    v97);
-  v100 = this->fields.lvUpRewardSpArray;
-  if ( !v100 )
-    goto LABEL_139;
-  if ( v100->max_length <= 1 )
-  {
-LABEL_140:
-    v130 = sub_B776C8(Instance);
-    sub_B77668(v130, 0LL);
-  }
-  BattleResultExpComponent__CreateRewardEffect(
-    this,
-    resultAssetData,
-    v100->m_Items[1],
-    (System_String_o *)StringLiteral_17161/*"bit_reward_shine02"*/,
-    v99);
-  v101 = 31;
-LABEL_70:
-  Instance = (__int64)v84->fields.masterLevelwindowSprite;
+    v96->m_Items[1],
+    (System_String_o *)StringLiteral_17062/*"bit_reward_shine02"*/,
+    v95);
+  v97 = 31;
+LABEL_67:
+  Instance = (__int64)this->fields.masterLevelwindowSprite;
   if ( !Instance )
-    goto LABEL_139;
-  UIWidget__set_height((UIWidget_o *)Instance, v101 * v82 + 134, 0LL);
-  if ( !*(_QWORD *)v25 )
-    goto LABEL_139;
+    goto LABEL_134;
+  UIWidget__set_height((UIWidget_o *)Instance, v97 * v79 + 134, 0LL);
+  if ( !*(_QWORD *)v43 )
+    goto LABEL_134;
   if ( !*p_newGame )
-    goto LABEL_139;
-  v84->fields.updateFlg |= *(_QWORD *)(*(_QWORD *)v25 + 88LL) != (*p_newGame)->fields.exp;
-  BattleResultExpComponent__setEquipLv(v84, *p_lv, v102);
-  equip_oldlevelLabel = v84->fields.equip_oldlevelLabel;
-  Instance = (__int64)System_Int32__ToString((int32_t)p_lv, 0LL);
+    goto LABEL_134;
+  this->fields.updateFlg |= *(_QWORD *)(*(_QWORD *)v43 + 88LL) != (*p_newGame)->fields.exp;
+  BattleResultExpComponent__setEquipLv(this, v129->fields.lv, v98);
+  equip_oldlevelLabel = this->fields.equip_oldlevelLabel;
+  Instance = (__int64)System_Int32__ToString((int)v129 + 48, 0LL);
   if ( !equip_oldlevelLabel )
-    goto LABEL_139;
-  v104 = Instance ? (System_String_o *)Instance : (System_String_o *)StringLiteral_1/*""*/;
-  UILabel__set_text(equip_oldlevelLabel, v104, 0LL);
-  newEquip = v84->fields.newEquip;
+    goto LABEL_134;
+  v100 = Instance ? (System_String_o *)Instance : (System_String_o *)StringLiteral_1/*""*/;
+  UILabel__set_text(equip_oldlevelLabel, v100, 0LL);
+  newEquip = this->fields.newEquip;
   if ( !newEquip )
-    goto LABEL_139;
-  equip_newlevelLabel = v84->fields.equip_newlevelLabel;
+    goto LABEL_134;
+  equip_newlevelLabel = this->fields.equip_newlevelLabel;
   Instance = (__int64)System_Int32__ToString((int)newEquip + 48, 0LL);
   if ( !equip_newlevelLabel )
-    goto LABEL_139;
-  v107 = Instance ? (System_String_o *)Instance : (System_String_o *)StringLiteral_1/*""*/;
-  UILabel__set_text(equip_newlevelLabel, v107, 0LL);
-  v108 = (System_Text_StringBuilder_o *)sub_B77694(System_Text_StringBuilder_TypeInfo);
-  System_Text_StringBuilder___ctor(v108, 0LL);
-  Instance = (__int64)UserEquipEntity__getSkillIdList(oldEquip, 0LL);
-  if ( !*p_newEquip )
-    goto LABEL_139;
-  v109 = Instance;
-  SkillIdList = UserEquipEntity__getSkillIdList(*p_newEquip, 0LL);
-  Instance = (__int64)UserEquipEntity__getSkillLvList(oldEquip, 0LL);
-  v133 = Instance;
-  if ( !*p_newEquip )
-    goto LABEL_139;
-  SkillLvList = UserEquipEntity__getSkillLvList(*p_newEquip, 0LL);
-  Instance = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    goto LABEL_134;
+  v103 = Instance ? (System_String_o *)Instance : (System_String_o *)StringLiteral_1/*""*/;
+  UILabel__set_text(equip_newlevelLabel, v103, 0LL);
+  v104 = (System_Text_StringBuilder_o *)sub_1B00F18(System_Text_StringBuilder_TypeInfo);
+  System_Text_StringBuilder___ctor(v104, 0LL);
+  Instance = (__int64)UserEquipEntity__getSkillIdList(v129, 0LL);
+  if ( !*v85 )
+    goto LABEL_134;
+  v105 = Instance;
+  SkillIdList = UserEquipEntity__getSkillIdList(*v85, 0LL);
+  Instance = (__int64)UserEquipEntity__getSkillLvList(v129, 0LL);
+  v130 = Instance;
+  if ( !*v85 )
+    goto LABEL_134;
+  SkillLvList = UserEquipEntity__getSkillLvList(*v85, 0LL);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_139;
-  Instance = (__int64)DataManager__GetMasterData_WarQuestSelectionMaster_(
+    goto LABEL_134;
+  Instance = (__int64)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_SkillMaster___);
-  if ( !v109 )
-    goto LABEL_139;
-  v131 = oldEquip;
-  if ( *(int *)(v109 + 24) >= 1 )
+                        (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_SkillMaster___);
+  if ( !v105 )
+    goto LABEL_134;
+  if ( *(int *)(v105 + 24) >= 1 )
   {
-    v112 = (DataMasterBase_WarMaster__WarEntity__int__o *)Instance;
-    v113 = 0;
-    v134 = &SkillLvList->m_Items[1];
-    v114 = 0LL;
-    v115 = &SkillIdList->m_Items[1];
+    v108 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
+    v109 = 0;
+    v110 = 0LL;
+    v111 = &SkillIdList->m_Items[1];
+    v131 = &SkillLvList->m_Items[1];
     while ( 1 )
     {
       entity = 0LL;
       if ( !SkillIdList )
-        goto LABEL_139;
-      if ( v114 >= SkillIdList->max_length )
-        goto LABEL_140;
-      if ( !v112 )
-        goto LABEL_139;
-      Instance = DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
-                   v112,
+        goto LABEL_134;
+      if ( v110 >= SkillIdList->max_length )
+        goto LABEL_135;
+      if ( !v108 )
+        goto LABEL_134;
+      Instance = DataMasterBase_object__object__int___TryGetEntity(
+                   v108,
                    &entity,
-                   v115[v114],
-                   (const MethodInfo_21FB8F0 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
+                   v111[v110],
+                   (const MethodInfo_2FE6AA0 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
       if ( entity && (Instance & 1) != 0 )
       {
-        if ( v114 >= *(unsigned int *)(v109 + 24) || v114 >= SkillIdList->max_length )
-          goto LABEL_140;
-        if ( *(_DWORD *)(v109 + 32 + 4 * v114) != v115[v114] )
+        if ( v110 >= *(unsigned int *)(v105 + 24) || v110 >= SkillIdList->max_length )
+          goto LABEL_135;
+        if ( *(_DWORD *)(v105 + 32 + 4 * v110) != v111[v110] )
         {
-          if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-            && !LocalizationManager_TypeInfo->_2.cctor_finished )
-          {
+          if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          }
-          Instance = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11324/*"RESULT_EQEXP_GETSKILL"*/, 0LL);
+          Instance = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_10915/*"RESULT_EQEXP_GETSKILL"*/, 0LL);
           if ( !entity )
-            goto LABEL_139;
-          v120 = (System_String_o *)Instance;
+            goto LABEL_134;
+          v118 = (System_String_o *)Instance;
           Name = (Il2CppObject *)SkillEntity__getName((SkillEntity_o *)entity, 0LL);
-          Instance = (__int64)System_String__Format(v120, Name, 0LL);
-          if ( !v108 )
-            goto LABEL_139;
-          Instance = (__int64)System_Text_StringBuilder__AppendLine_42952760(v108, (System_String_o *)Instance, 0LL);
-LABEL_114:
-          v113 += 3;
-          goto LABEL_115;
+          Instance = (__int64)System_String__Format(v118, Name, 0LL);
+          if ( !v104 )
+            goto LABEL_134;
+          Instance = (__int64)System_Text_StringBuilder__AppendLine_59488868(v104, (System_String_o *)Instance, 0LL);
+LABEL_109:
+          v109 += 3;
+          goto LABEL_110;
         }
-        if ( !v133 )
-          goto LABEL_139;
-        if ( v114 >= *(unsigned int *)(v133 + 24) )
-          goto LABEL_140;
+        if ( !v130 )
+          goto LABEL_134;
+        if ( v110 >= *(unsigned int *)(v130 + 24) )
+          goto LABEL_135;
         if ( !SkillLvList )
-          goto LABEL_139;
-        if ( v114 >= SkillLvList->max_length )
-          goto LABEL_140;
-        if ( *(_DWORD *)(v133 + 32 + 4 * v114) != v134[v114] )
+          goto LABEL_134;
+        if ( v110 >= SkillLvList->max_length )
+          goto LABEL_135;
+        if ( *(_DWORD *)(v130 + 32 + 4 * v110) != v131[v110] )
         {
-          if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-            && !LocalizationManager_TypeInfo->_2.cctor_finished )
-          {
+          if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          }
-          Instance = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11325/*"RESULT_EQEXP_UPSKILLLV"*/, 0LL);
+          Instance = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_10916/*"RESULT_EQEXP_UPSKILLLV"*/, 0LL);
           if ( !entity )
-            goto LABEL_139;
-          v116 = (System_String_o *)Instance;
+            goto LABEL_134;
+          v112 = (System_String_o *)Instance;
           Instance = (__int64)SkillEntity__getName((SkillEntity_o *)entity, 0LL);
-          if ( v114 >= SkillLvList->max_length )
-            goto LABEL_140;
-          v118 = (Il2CppObject *)Instance;
-          v136 = v134[v114];
-          v119 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v136, v117);
-          Instance = (__int64)System_String__Format_44897472(v116, v118, v119, 0LL);
-          if ( !v108 )
-            goto LABEL_139;
-          Instance = (__int64)System_Text_StringBuilder__AppendLine_42952760(v108, (System_String_o *)Instance, 0LL);
-          v84 = this;
-          goto LABEL_114;
+          if ( v110 >= SkillLvList->max_length )
+            goto LABEL_135;
+          v116 = (Il2CppObject *)Instance;
+          v132 = v131[v110];
+          v117 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v132, v113, v114, v115);
+          Instance = (__int64)System_String__Format_60340120(v112, v116, v117, 0LL);
+          if ( !v104 )
+            goto LABEL_134;
+          Instance = (__int64)System_Text_StringBuilder__AppendLine_59488868(v104, (System_String_o *)Instance, 0LL);
+          v72 = v129;
+          goto LABEL_109;
         }
       }
-LABEL_115:
-      if ( (__int64)++v114 >= *(int *)(v109 + 24) )
-        goto LABEL_118;
+LABEL_110:
+      if ( (__int64)++v110 >= *(int *)(v105 + 24) )
+        goto LABEL_113;
     }
   }
-  v113 = 0;
-LABEL_118:
-  eqConfRoot = v84->fields.eqConfRoot;
+  v109 = 0;
+LABEL_113:
+  eqConfRoot = this->fields.eqConfRoot;
   if ( !eqConfRoot )
-    goto LABEL_139;
-  LODWORD(v139.fields.x) = (unsigned int)UnityEngine_Transform__get_localPosition(v84->fields.eqConfRoot, 0LL);
-  v139.fields.y = (float)v113 * 10.0;
-  v139.fields.z = 0.0;
-  UnityEngine_Transform__set_localPosition(eqConfRoot, v139, 0LL);
-  Instance = (__int64)v84->fields.eqLevelwindowSprite;
+    goto LABEL_134;
+  LODWORD(v135.fields.x) = (unsigned int)UnityEngine_Transform__get_localPosition(this->fields.eqConfRoot, 0LL);
+  v135.fields.y = (float)v109 * 10.0;
+  v135.fields.z = 0.0;
+  UnityEngine_Transform__set_localPosition(eqConfRoot, v135, 0LL);
+  Instance = (__int64)this->fields.eqLevelwindowSprite;
   if ( !Instance )
-    goto LABEL_139;
-  UIWidget__set_height((UIWidget_o *)Instance, 22 * v113 + 134, 0LL);
-  if ( !v108 )
-    goto LABEL_139;
-  equip_confLabel = v84->fields.equip_confLabel;
-  Instance = ((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v108->klass->vtable._3_ToString.method)(
-               v108,
-               v108->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
+    goto LABEL_134;
+  UIWidget__set_height((UIWidget_o *)Instance, 22 * v109 + 134, 0LL);
+  if ( !v104 )
+    goto LABEL_134;
+  equip_confLabel = this->fields.equip_confLabel;
+  Instance = ((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v104->klass->vtable._3_ToString.method)(
+               v104,
+               v104->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
   if ( !equip_confLabel )
-    goto LABEL_139;
+    goto LABEL_134;
   UILabel__set_text(equip_confLabel, (System_String_o *)Instance, 0LL);
-  if ( !*p_newEquip )
-    goto LABEL_139;
-  bestTurnDamage = v84->fields.bestTurnDamage;
-  oldRecordDamage = v84->fields.oldRecordDamage;
-  v84->fields.updateFlg |= v131->fields.exp != (*p_newEquip)->fields.exp;
-  damage_recordLabel = v84->fields.damage_recordLabel;
+  if ( !*v128 )
+    goto LABEL_134;
+  bestTurnDamage = this->fields.bestTurnDamage;
+  oldRecordDamage = this->fields.oldRecordDamage;
+  damage_recordLabel = this->fields.damage_recordLabel;
+  this->fields.updateFlg |= v72->fields.exp != (*v128)->fields.exp;
   if ( oldRecordDamage >= bestTurnDamage )
   {
-    Instance = (__int64)System_Int64__ToString_39550020(
-                          (int64_t)&v84->fields.oldRecordDamage,
-                          (System_String_o *)StringLiteral_349/*"#,#"*/,
+    Instance = (__int64)System_Int64__ToString_61136064(
+                          (int64_t)&this->fields.oldRecordDamage,
+                          (System_String_o *)StringLiteral_425/*"#,#"*/,
                           0LL);
     if ( damage_recordLabel )
     {
       UILabel__set_text(damage_recordLabel, (System_String_o *)Instance, 0LL);
-      damage_battleLabel = v84->fields.damage_battleLabel;
-      Instance = (__int64)System_Int64__ToString_39550020(
-                            (int64_t)&v84->fields.bestTurnDamage,
-                            (System_String_o *)StringLiteral_349/*"#,#"*/,
+      damage_battleLabel = this->fields.damage_battleLabel;
+      Instance = (__int64)System_Int64__ToString_61136064(
+                            (int64_t)&this->fields.bestTurnDamage,
+                            (System_String_o *)StringLiteral_425/*"#,#"*/,
                             0LL);
       if ( damage_battleLabel )
       {
         UILabel__set_text(damage_battleLabel, (System_String_o *)Instance, 0LL);
-        Instance = (__int64)v84->fields.damage_recordLabel;
+        Instance = (__int64)this->fields.damage_recordLabel;
         if ( Instance )
         {
-          UIWidget__set_color((UIWidget_o *)Instance, v84->fields.record_intactColor, 0LL);
-          Instance = (__int64)v84->fields.damage_battleLabel;
+          UIWidget__set_color((UIWidget_o *)Instance, this->fields.record_intactColor, 0LL);
+          Instance = (__int64)this->fields.damage_battleLabel;
           if ( Instance )
           {
-            UIWidget__set_color((UIWidget_o *)Instance, v84->fields.damage_intactColor, 0LL);
-            Instance = (__int64)v84->fields.damage_recordRenewalSp;
+            UIWidget__set_color((UIWidget_o *)Instance, this->fields.damage_intactColor, 0LL);
+            Instance = (__int64)this->fields.damage_recordRenewalSp;
             if ( Instance )
             {
               Instance = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
               if ( Instance )
               {
-                v128 = 0;
-                goto LABEL_138;
+                v126 = 0;
+                goto LABEL_133;
               }
             }
           }
         }
       }
     }
-    goto LABEL_139;
+    goto LABEL_134;
   }
-  Instance = (__int64)System_Int64__ToString_39550020(
-                        (int64_t)&v84->fields.bestTurnDamage,
-                        (System_String_o *)StringLiteral_349/*"#,#"*/,
+  Instance = (__int64)System_Int64__ToString_61136064(
+                        (int64_t)&this->fields.bestTurnDamage,
+                        (System_String_o *)StringLiteral_425/*"#,#"*/,
                         0LL);
   if ( !damage_recordLabel )
-    goto LABEL_139;
+    goto LABEL_134;
   UILabel__set_text(damage_recordLabel, (System_String_o *)Instance, 0LL);
-  v127 = v84->fields.damage_battleLabel;
-  Instance = (__int64)System_Int64__ToString_39550020(
-                        (int64_t)&v84->fields.bestTurnDamage,
-                        (System_String_o *)StringLiteral_349/*"#,#"*/,
+  v125 = this->fields.damage_battleLabel;
+  Instance = (__int64)System_Int64__ToString_61136064(
+                        (int64_t)&this->fields.bestTurnDamage,
+                        (System_String_o *)StringLiteral_425/*"#,#"*/,
                         0LL);
-  if ( !v127 )
-    goto LABEL_139;
-  UILabel__set_text(v127, (System_String_o *)Instance, 0LL);
-  Instance = (__int64)v84->fields.damage_recordLabel;
+  if ( !v125 )
+    goto LABEL_134;
+  UILabel__set_text(v125, (System_String_o *)Instance, 0LL);
+  Instance = (__int64)this->fields.damage_recordLabel;
   if ( !Instance )
-    goto LABEL_139;
-  UIWidget__set_color((UIWidget_o *)Instance, v84->fields.record_renewalColor, 0LL);
-  Instance = (__int64)v84->fields.damage_battleLabel;
+    goto LABEL_134;
+  UIWidget__set_color((UIWidget_o *)Instance, this->fields.record_renewalColor, 0LL);
+  Instance = (__int64)this->fields.damage_battleLabel;
   if ( !Instance )
-    goto LABEL_139;
-  UIWidget__set_color((UIWidget_o *)Instance, v84->fields.damage_renewalColor, 0LL);
-  Instance = (__int64)v84->fields.damage_recordRenewalSp;
+    goto LABEL_134;
+  UIWidget__set_color((UIWidget_o *)Instance, this->fields.damage_renewalColor, 0LL);
+  Instance = (__int64)this->fields.damage_recordRenewalSp;
   if ( !Instance )
-    goto LABEL_139;
+    goto LABEL_134;
   Instance = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
   if ( !Instance )
-    goto LABEL_139;
-  v128 = 1;
-LABEL_138:
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, v128, 0LL);
+    goto LABEL_134;
+  v126 = 1;
+LABEL_133:
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, v126, 0LL);
 }
 
 
@@ -2922,35 +2792,35 @@ void __fastcall BattleResultExpComponent__updateValueActual(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v24; // 0:x0.16
 
   v6 = this;
-  if ( (byte_438B813 & 1) == 0 )
+  if ( (byte_48E585F & 1) == 0 )
   {
-    this = (BattleResultExpComponent_o *)sub_B775C4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_438B813 = 1;
+    this = (BattleResultExpComponent_o *)sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, isFinish);
+    byte_48E585F = 1;
   }
   oldGame = v6->fields.oldGame;
   if ( !oldGame )
-    goto LABEL_22;
+    goto LABEL_21;
   newGame = v6->fields.newGame;
   if ( !newGame )
-    goto LABEL_22;
+    goto LABEL_21;
   v9 = BattleUtility__LerpDouble((double)oldGame->fields.exp, (double)newGame->fields.exp, val, 0LL);
   this = (BattleResultExpComponent_o *)BattleUtility__FloorToLong(v9, 0LL);
   v11 = v6->fields.newGame;
   if ( isFinish )
   {
     if ( !v11 )
-      goto LABEL_22;
+      goto LABEL_21;
     exp = (BattleResultExpComponent_o *)v11->fields.exp;
   }
   else
   {
     exp = this;
     if ( !v11 )
-      goto LABEL_22;
+      goto LABEL_21;
   }
   v13 = v6->fields.oldGame;
   if ( !v13 )
-    goto LABEL_22;
+    goto LABEL_21;
   this = (BattleResultExpComponent_o *)BattleResultExpComponent__setMasterExp(
                                          v6,
                                          v11->fields.exp - v13->fields.exp,
@@ -2959,39 +2829,36 @@ void __fastcall BattleResultExpComponent__updateValueActual(
                                          v10);
   oldEquip = v6->fields.oldEquip;
   if ( !oldEquip )
-    goto LABEL_22;
+    goto LABEL_21;
   newEquip = v6->fields.newEquip;
   if ( !newEquip )
-    goto LABEL_22;
+    goto LABEL_21;
   v16 = BattleUtility__LerpDouble((double)oldEquip->fields.exp, (double)newEquip->fields.exp, val, 0LL);
-  this = (BattleResultExpComponent_o *)BattleUtility__FloorToInt_24289972(v16, 0LL);
+  this = (BattleResultExpComponent_o *)BattleUtility__FloorToInt_41679340(v16, 0LL);
   v17 = v6->fields.newEquip;
   if ( isFinish )
   {
     if ( !v17 )
-      goto LABEL_22;
+      goto LABEL_21;
     v18 = v17->fields.exp;
   }
   else
   {
     v18 = (int)this;
     if ( !v17 )
-      goto LABEL_22;
+      goto LABEL_21;
   }
   v20 = *(_QWORD *)&v17->fields.equipId.fields.currentCryptoKey;
   v19 = *(_QWORD *)&v17->fields.equipId.fields.fakeValue;
-  if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-  {
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  }
   *(_QWORD *)&v24.fields.currentCryptoKey = v20;
   *(_QWORD *)&v24.fields.fakeValue = v19;
-  this = (BattleResultExpComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45425956(v24, 0LL);
+  this = (BattleResultExpComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(v24, 0LL);
   v22 = v6->fields.newEquip;
   if ( !v22 || (v23 = v6->fields.oldEquip) == 0LL )
-LABEL_22:
-    sub_B7769C(this, isFinish);
+LABEL_21:
+    sub_1B00F28(this, isFinish);
   BattleResultExpComponent__setEquipExp(v6, (int32_t)this, v22->fields.exp - v23->fields.exp, v18, v23->fields.lv, v21);
 }
 
@@ -3011,553 +2878,566 @@ int32_t __fastcall BattleResultExpComponent___c__DisplayClass61_0___setResultDat
         int32_t baseHeight,
         const MethodInfo *method)
 {
-  BattleResultExpComponent___c__DisplayClass61_0_o *v5; // x20
+  BattleResultExpComponent___c__DisplayClass61_0_o *v6; // x20
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
   struct UserGameEntity_o *oldGame; // x8
   struct BattleResultExpComponent_o *_4__this; // x10
   struct UserGameEntity_o *newGame; // x9
   struct BattleResultMasterUpStatusComponent_array *upParamList; // x10
-  int32_t actMax; // w19
-  int32_t v11; // w21
-  struct BattleResultExpComponent_o *v12; // x8
-  struct BattleResultMasterUpStatusComponent_array *v13; // x8
-  struct BattleResultExpComponent_o *v14; // x8
-  struct BattleResultMasterUpStatusComponent_array *v15; // x9
-  struct UserGameEntity_o *v16; // x10
-  struct UserGameEntity_o *v17; // x8
-  int v18; // w22
-  struct UserGameEntity_o *v19; // x8
-  struct BattleResultExpComponent_o *v20; // x10
-  struct UserGameEntity_o *v21; // x9
-  struct BattleResultMasterUpStatusComponent_array *v22; // x10
-  int32_t costMax; // w19
-  int32_t v24; // w21
-  struct BattleResultExpComponent_o *v25; // x8
-  struct BattleResultMasterUpStatusComponent_array *v26; // x8
+  int32_t actMax; // w21
+  int32_t v22; // w22
+  const MethodInfo *v23; // x2
+  struct BattleResultExpComponent_o *v24; // x8
+  struct BattleResultMasterUpStatusComponent_array *v25; // x8
+  const MethodInfo *v26; // x3
   struct BattleResultExpComponent_o *v27; // x8
   struct BattleResultMasterUpStatusComponent_array *v28; // x9
   struct UserGameEntity_o *v29; // x10
   struct UserGameEntity_o *v30; // x8
-  struct BattleResultExpComponent_o *v31; // x8
-  struct BattleResultMasterUpStatusComponent_array *v32; // x8
-  struct UserGameEntity_o *v33; // x8
-  struct BattleResultExpComponent_o *v34; // x10
-  struct UserGameEntity_o *v35; // x9
-  struct BattleResultMasterUpStatusComponent_array *v36; // x10
-  int32_t friendKeep; // w19
-  int32_t v38; // w21
+  int v31; // w22
+  struct UserGameEntity_o *v32; // x8
+  struct BattleResultExpComponent_o *v33; // x10
+  struct UserGameEntity_o *v34; // x9
+  struct BattleResultMasterUpStatusComponent_array *v35; // x10
+  int32_t costMax; // w21
+  int32_t v37; // w23
+  const MethodInfo *v38; // x2
   struct BattleResultExpComponent_o *v39; // x8
   struct BattleResultMasterUpStatusComponent_array *v40; // x8
-  struct BattleResultExpComponent_o *v41; // x8
-  struct BattleResultMasterUpStatusComponent_array *v42; // x9
-  struct UserGameEntity_o *v43; // x10
-  struct UserGameEntity_o *v44; // x8
-  struct BattleResultExpComponent_o *v45; // x8
-  struct BattleResultMasterUpStatusComponent_array *v46; // x8
-  struct BattleResultExpComponent_o *v47; // x8
-  struct BattleResultMasterUpStatusComponent_array *v48; // x8
-  EventMaster_o *v49; // x21
-  struct BattleResultExpComponent_o *v50; // x8
-  struct BattleResultMasterUpStatusComponent_array *v51; // x8
-  BattleResultMasterUpStatusComponent_o *v52; // x8
-  __int64 *v53; // x9
-  struct BattleResultExpComponent_o *v54; // x8
-  struct BattleResultMasterUpStatusComponent_array *v55; // x8
-  struct MasterLvRewardInfo_array *masterLvInfoArray; // x8
-  __int64 v57; // x8
-  il2cpp_array_size_t v58; // w24
-  int v59; // w25
-  struct BattleResultExpComponent_o *v60; // x8
-  struct UISprite_array *lvUpRewardSpArray; // x8
+  const MethodInfo *v41; // x3
+  struct BattleResultExpComponent_o *v42; // x8
+  struct BattleResultMasterUpStatusComponent_array *v43; // x9
+  struct UserGameEntity_o *v44; // x10
+  struct UserGameEntity_o *v45; // x8
+  struct BattleResultExpComponent_o *v46; // x8
+  struct BattleResultMasterUpStatusComponent_array *v47; // x8
+  struct UserGameEntity_o *v48; // x8
+  struct BattleResultExpComponent_o *v49; // x10
+  struct UserGameEntity_o *v50; // x9
+  struct BattleResultMasterUpStatusComponent_array *v51; // x10
+  int32_t friendKeep; // w21
+  int32_t v53; // w23
+  const MethodInfo *v54; // x2
+  struct BattleResultExpComponent_o *v55; // x8
+  struct BattleResultMasterUpStatusComponent_array *v56; // x8
+  const MethodInfo *v57; // x3
+  struct BattleResultExpComponent_o *v58; // x8
+  struct BattleResultMasterUpStatusComponent_array *v59; // x9
+  struct UserGameEntity_o *v60; // x10
+  struct UserGameEntity_o *v61; // x8
   struct BattleResultExpComponent_o *v62; // x8
-  struct UISprite_array *v63; // x8
-  struct MasterLvRewardInfo_array *v64; // x9
-  UISprite_o *v65; // x22
+  struct BattleResultMasterUpStatusComponent_array *v63; // x8
+  struct BattleResultExpComponent_o *v64; // x8
+  struct BattleResultMasterUpStatusComponent_array *v65; // x8
+  EventMaster_o *v66; // x21
+  const MethodInfo *v67; // x2
+  struct BattleResultExpComponent_o *v68; // x8
+  struct BattleResultMasterUpStatusComponent_array *v69; // x8
+  BattleResultMasterUpStatusComponent_o *v70; // x8
+  System_String_o **v71; // x9
+  struct BattleResultExpComponent_o *v72; // x8
+  struct BattleResultMasterUpStatusComponent_array *v73; // x8
+  struct MasterLvRewardInfo_array *masterLvInfoArray; // x8
+  __int64 v75; // x8
+  il2cpp_array_size_t v76; // w24
+  int v77; // w25
+  struct BattleResultExpComponent_o *v78; // x8
+  struct UISprite_array *lvUpRewardSpArray; // x8
+  struct BattleResultExpComponent_o *v80; // x8
+  struct UISprite_array *v81; // x8
+  struct MasterLvRewardInfo_array *v82; // x9
+  UISprite_o *v83; // x22
   int32_t IconImageId; // w23
-  struct MasterLvRewardInfo_array *v67; // x8
-  __int64 v68; // x2
-  struct BattleResultExpComponent_o *v69; // x8
+  struct MasterLvRewardInfo_array *v85; // x8
+  __int64 v86; // x2
+  __int64 v87; // x3
+  __int64 v88; // x4
+  struct BattleResultExpComponent_o *v89; // x8
   struct UILabel_array *lvUpRewardLabelArray; // x8
-  struct MasterLvRewardInfo_array *v71; // x9
-  MasterLvRewardInfo_o *v72; // x9
-  Il2CppObject *v73; // x23
-  UILabel_o *v74; // x22
-  Il2CppObject *v75; // x0
-  struct MasterLvRewardInfo_array *v76; // x8
-  __int64 v77; // x0
-  int v79; // [xsp+4h] [xbp-7Ch]
-  int32_t num; // [xsp+Ch] [xbp-74h] BYREF
-  System_String_o *nameText; // [xsp+10h] [xbp-70h] BYREF
+  struct MasterLvRewardInfo_array *v91; // x9
+  MasterLvRewardInfo_o *v92; // x9
+  Il2CppObject *v93; // x23
+  UILabel_o *v94; // x22
+  Il2CppObject *v95; // x0
+  struct MasterLvRewardInfo_array *v96; // x8
+  int v98; // [xsp+0h] [xbp-80h]
+  int32_t num; // [xsp+4h] [xbp-7Ch] BYREF
+  System_String_o *nameText; // [xsp+8h] [xbp-78h] BYREF
   System_String_o *countText; // [xsp+18h] [xbp-68h] BYREF
-  UnityEngine_Vector3_o v84; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v85; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v86; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v87; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v102; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v103; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v104; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v105; // 0:s0.4,4:s1.4,8:s2.4
 
-  v5 = this;
-  if ( (byte_4388E08 & 1) == 0 )
+  v6 = this;
+  if ( (byte_48E586C & 1) == 0 )
   {
-    sub_B775C4(&AtlasManager_TypeInfo);
-    sub_B775C4(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_B775C4(&int_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B775C4(&StringLiteral_2591/*"BATTLE_RESULTEXP_FULLAP"*/);
-    sub_B775C4(&StringLiteral_2590/*"BATTLE_RESULTEXP_FRIENDMAX"*/);
-    sub_B775C4(&StringLiteral_2586/*"BATTLE_RESULTEXP_APMAX"*/);
-    sub_B775C4(&StringLiteral_2592/*"BATTLE_RESULTEXP_FULLAP_FULLBP"*/);
-    sub_B775C4(&StringLiteral_2587/*"BATTLE_RESULTEXP_COSTMAX"*/);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    this = (BattleResultExpComponent___c__DisplayClass61_0_o *)sub_B775C4(&StringLiteral_24064/*"{0} {1}個"*/);
-    byte_4388E08 = 1;
+    sub_1B00CCC(&AtlasManager_TypeInfo, *(_QWORD *)&baseHeight);
+    sub_1B00CCC(&Method_DataManager_GetMasterData_EventMaster___, v7);
+    sub_1B00CCC(&int_TypeInfo, v8);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    sub_1B00CCC(&StringLiteral_2924/*"BATTLE_RESULTEXP_FULLAP"*/, v10);
+    sub_1B00CCC(&StringLiteral_2923/*"BATTLE_RESULTEXP_FRIENDMAX"*/, v11);
+    sub_1B00CCC(&StringLiteral_2919/*"BATTLE_RESULTEXP_APMAX"*/, v12);
+    sub_1B00CCC(&StringLiteral_2925/*"BATTLE_RESULTEXP_FULLAP_FULLBP"*/, v13);
+    sub_1B00CCC(&StringLiteral_2920/*"BATTLE_RESULTEXP_COSTMAX"*/, v14);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v15);
+    this = (BattleResultExpComponent___c__DisplayClass61_0_o *)sub_1B00CCC(&StringLiteral_24655/*"{0} {1}個"*/, v16);
+    byte_48E586C = 1;
   }
-  nameText = 0LL;
   countText = 0LL;
-  oldGame = v5->fields.oldGame;
+  nameText = 0LL;
+  oldGame = v6->fields.oldGame;
   if ( !oldGame )
-    goto LABEL_130;
-  _4__this = v5->fields.__4__this;
+    goto LABEL_128;
+  _4__this = v6->fields.__4__this;
   if ( !_4__this )
-    goto LABEL_130;
+    goto LABEL_128;
   newGame = _4__this->fields.newGame;
   if ( !newGame )
-    goto LABEL_130;
+    goto LABEL_128;
   upParamList = _4__this->fields.upParamList;
   if ( !upParamList )
-    goto LABEL_130;
+    goto LABEL_128;
   if ( upParamList->max_length <= 1 )
-    goto LABEL_131;
+    goto LABEL_129;
   this = (BattleResultExpComponent___c__DisplayClass61_0_o *)upParamList->m_Items[1];
   if ( !this )
-    goto LABEL_130;
+    goto LABEL_128;
   actMax = oldGame->fields.actMax;
-  v11 = newGame->fields.actMax;
+  v22 = newGame->fields.actMax;
   this = (BattleResultExpComponent___c__DisplayClass61_0_o *)UnityEngine_Component__get_gameObject(
                                                                (UnityEngine_Component_o *)this,
                                                                0LL);
   if ( !this )
-    goto LABEL_130;
-  if ( actMax >= v11 )
+    goto LABEL_128;
+  if ( actMax >= v22 )
   {
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
-    v18 = 0;
+    v31 = 0;
   }
   else
   {
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-    v12 = v5->fields.__4__this;
-    if ( !v12 )
-      goto LABEL_130;
-    v13 = v12->fields.upParamList;
-    if ( !v13 )
-      goto LABEL_130;
-    if ( v13->max_length <= 1 )
-      goto LABEL_131;
-    this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v13->m_Items[1];
-    if ( !this )
-      goto LABEL_130;
-    BattleResultMasterUpStatusComponent__setTitle(
-      (BattleResultMasterUpStatusComponent_o *)this,
-      (System_String_o *)StringLiteral_2586/*"BATTLE_RESULTEXP_APMAX"*/,
-      0LL);
-    v14 = v5->fields.__4__this;
-    if ( !v14 )
-      goto LABEL_130;
-    v15 = v14->fields.upParamList;
-    if ( !v15 )
-      goto LABEL_130;
-    if ( v15->max_length <= 1 )
-      goto LABEL_131;
-    v16 = v5->fields.oldGame;
-    if ( !v16 )
-      goto LABEL_130;
-    v17 = v14->fields.newGame;
-    if ( !v17 )
-      goto LABEL_130;
-    this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v15->m_Items[1];
-    if ( !this )
-      goto LABEL_130;
-    BattleResultMasterUpStatusComponent__setData(
-      (BattleResultMasterUpStatusComponent_o *)this,
-      v16->fields.actMax,
-      v17->fields.actMax,
-      0LL);
-    v18 = 1;
-  }
-  v19 = v5->fields.oldGame;
-  if ( !v19 )
-    goto LABEL_130;
-  v20 = v5->fields.__4__this;
-  if ( !v20 )
-    goto LABEL_130;
-  v21 = v20->fields.newGame;
-  if ( !v21 )
-    goto LABEL_130;
-  v22 = v20->fields.upParamList;
-  if ( !v22 )
-    goto LABEL_130;
-  if ( v22->max_length <= 2 )
-    goto LABEL_131;
-  this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v22->m_Items[2];
-  if ( !this )
-    goto LABEL_130;
-  costMax = v19->fields.costMax;
-  v24 = v21->fields.costMax;
-  this = (BattleResultExpComponent___c__DisplayClass61_0_o *)UnityEngine_Component__get_gameObject(
-                                                               (UnityEngine_Component_o *)this,
-                                                               0LL);
-  if ( !this )
-    goto LABEL_130;
-  if ( costMax >= v24 )
-  {
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
-  }
-  else
-  {
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-    v25 = v5->fields.__4__this;
+    v24 = v6->fields.__4__this;
+    if ( !v24 )
+      goto LABEL_128;
+    v25 = v24->fields.upParamList;
     if ( !v25 )
-      goto LABEL_130;
-    v26 = v25->fields.upParamList;
-    if ( !v26 )
-      goto LABEL_130;
-    if ( v26->max_length <= 2 )
-      goto LABEL_131;
-    this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v26->m_Items[2];
+      goto LABEL_128;
+    if ( v25->max_length <= 1 )
+      goto LABEL_129;
+    this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v25->m_Items[1];
     if ( !this )
-      goto LABEL_130;
+      goto LABEL_128;
     BattleResultMasterUpStatusComponent__setTitle(
       (BattleResultMasterUpStatusComponent_o *)this,
-      (System_String_o *)StringLiteral_2587/*"BATTLE_RESULTEXP_COSTMAX"*/,
-      0LL);
-    v27 = v5->fields.__4__this;
+      (System_String_o *)StringLiteral_2919/*"BATTLE_RESULTEXP_APMAX"*/,
+      v23);
+    v27 = v6->fields.__4__this;
     if ( !v27 )
-      goto LABEL_130;
+      goto LABEL_128;
     v28 = v27->fields.upParamList;
     if ( !v28 )
-      goto LABEL_130;
-    if ( v28->max_length <= 2 )
-      goto LABEL_131;
-    v29 = v5->fields.oldGame;
+      goto LABEL_128;
+    if ( v28->max_length <= 1 )
+      goto LABEL_129;
+    v29 = v6->fields.oldGame;
     if ( !v29 )
-      goto LABEL_130;
+      goto LABEL_128;
     v30 = v27->fields.newGame;
     if ( !v30 )
-      goto LABEL_130;
-    this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v28->m_Items[2];
+      goto LABEL_128;
+    this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v28->m_Items[1];
     if ( !this )
-      goto LABEL_130;
+      goto LABEL_128;
     BattleResultMasterUpStatusComponent__setData(
       (BattleResultMasterUpStatusComponent_o *)this,
-      v29->fields.costMax,
-      v30->fields.costMax,
-      0LL);
-    v31 = v5->fields.__4__this;
-    if ( !v31 )
-      goto LABEL_130;
-    v32 = v31->fields.upParamList;
-    if ( !v32 )
-      goto LABEL_130;
-    if ( v32->max_length <= 2 )
-      goto LABEL_131;
-    this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v32->m_Items[2];
-    if ( !this )
-      goto LABEL_130;
-    this = (BattleResultExpComponent___c__DisplayClass61_0_o *)UnityEngine_Component__get_gameObject(
-                                                                 (UnityEngine_Component_o *)this,
-                                                                 0LL);
-    if ( !this )
-      goto LABEL_130;
-    this = (BattleResultExpComponent___c__DisplayClass61_0_o *)UnityEngine_GameObject__get_transform(
-                                                                 (UnityEngine_GameObject_o *)this,
-                                                                 0LL);
-    if ( !this )
-      goto LABEL_130;
-    v84.fields.z = 0.0;
-    v84.fields.y = height - (float)(v18 * baseHeight);
-    v84.fields.x = 0.0;
-    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v84, 0LL);
-    ++v18;
+      v29->fields.actMax,
+      v30->fields.actMax,
+      v26);
+    v31 = 1;
   }
-  v33 = v5->fields.oldGame;
+  v32 = v6->fields.oldGame;
+  if ( !v32 )
+    goto LABEL_128;
+  v33 = v6->fields.__4__this;
   if ( !v33 )
-    goto LABEL_130;
-  v34 = v5->fields.__4__this;
+    goto LABEL_128;
+  v34 = v33->fields.newGame;
   if ( !v34 )
-    goto LABEL_130;
-  v35 = v34->fields.newGame;
+    goto LABEL_128;
+  v35 = v33->fields.upParamList;
   if ( !v35 )
-    goto LABEL_130;
-  v36 = v34->fields.upParamList;
-  if ( !v36 )
-    goto LABEL_130;
-  if ( v36->max_length <= 3 )
-    goto LABEL_131;
-  this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v36->m_Items[3];
+    goto LABEL_128;
+  if ( v35->max_length <= 2 )
+    goto LABEL_129;
+  this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v35->m_Items[2];
   if ( !this )
-    goto LABEL_130;
-  friendKeep = v33->fields.friendKeep;
-  v38 = v35->fields.friendKeep;
+    goto LABEL_128;
+  costMax = v32->fields.costMax;
+  v37 = v34->fields.costMax;
   this = (BattleResultExpComponent___c__DisplayClass61_0_o *)UnityEngine_Component__get_gameObject(
                                                                (UnityEngine_Component_o *)this,
                                                                0LL);
   if ( !this )
-    goto LABEL_130;
-  if ( friendKeep >= v38 )
+    goto LABEL_128;
+  if ( costMax >= v37 )
   {
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
   }
   else
   {
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-    v39 = v5->fields.__4__this;
+    v39 = v6->fields.__4__this;
     if ( !v39 )
-      goto LABEL_130;
+      goto LABEL_128;
     v40 = v39->fields.upParamList;
     if ( !v40 )
-      goto LABEL_130;
-    if ( v40->max_length <= 3 )
-      goto LABEL_131;
-    this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v40->m_Items[3];
+      goto LABEL_128;
+    if ( v40->max_length <= 2 )
+      goto LABEL_129;
+    this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v40->m_Items[2];
     if ( !this )
-      goto LABEL_130;
+      goto LABEL_128;
     BattleResultMasterUpStatusComponent__setTitle(
       (BattleResultMasterUpStatusComponent_o *)this,
-      (System_String_o *)StringLiteral_2590/*"BATTLE_RESULTEXP_FRIENDMAX"*/,
-      0LL);
-    v41 = v5->fields.__4__this;
-    if ( !v41 )
-      goto LABEL_130;
-    v42 = v41->fields.upParamList;
+      (System_String_o *)StringLiteral_2920/*"BATTLE_RESULTEXP_COSTMAX"*/,
+      v38);
+    v42 = v6->fields.__4__this;
     if ( !v42 )
-      goto LABEL_130;
-    if ( v42->max_length <= 3 )
-      goto LABEL_131;
-    v43 = v5->fields.oldGame;
+      goto LABEL_128;
+    v43 = v42->fields.upParamList;
     if ( !v43 )
-      goto LABEL_130;
-    v44 = v41->fields.newGame;
+      goto LABEL_128;
+    if ( v43->max_length <= 2 )
+      goto LABEL_129;
+    v44 = v6->fields.oldGame;
     if ( !v44 )
-      goto LABEL_130;
-    this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v42->m_Items[3];
+      goto LABEL_128;
+    v45 = v42->fields.newGame;
+    if ( !v45 )
+      goto LABEL_128;
+    this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v43->m_Items[2];
     if ( !this )
-      goto LABEL_130;
+      goto LABEL_128;
     BattleResultMasterUpStatusComponent__setData(
       (BattleResultMasterUpStatusComponent_o *)this,
-      v43->fields.friendKeep,
-      v44->fields.friendKeep,
-      0LL);
-    v45 = v5->fields.__4__this;
-    if ( !v45 )
-      goto LABEL_130;
-    v46 = v45->fields.upParamList;
+      v44->fields.costMax,
+      v45->fields.costMax,
+      v41);
+    v46 = v6->fields.__4__this;
     if ( !v46 )
-      goto LABEL_130;
-    if ( v46->max_length <= 3 )
-      goto LABEL_131;
-    this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v46->m_Items[3];
+      goto LABEL_128;
+    v47 = v46->fields.upParamList;
+    if ( !v47 )
+      goto LABEL_128;
+    if ( v47->max_length <= 2 )
+      goto LABEL_129;
+    this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v47->m_Items[2];
     if ( !this )
-      goto LABEL_130;
+      goto LABEL_128;
     this = (BattleResultExpComponent___c__DisplayClass61_0_o *)UnityEngine_Component__get_gameObject(
                                                                  (UnityEngine_Component_o *)this,
                                                                  0LL);
     if ( !this )
-      goto LABEL_130;
+      goto LABEL_128;
     this = (BattleResultExpComponent___c__DisplayClass61_0_o *)UnityEngine_GameObject__get_transform(
                                                                  (UnityEngine_GameObject_o *)this,
                                                                  0LL);
     if ( !this )
-      goto LABEL_130;
-    v85.fields.z = 0.0;
-    v85.fields.y = height - (float)(v18 * baseHeight);
-    v85.fields.x = 0.0;
-    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v85, 0LL);
-    ++v18;
+      goto LABEL_128;
+    v102.fields.y = height - (float)(v31 * baseHeight);
+    v102.fields.x = 0.0;
+    v102.fields.z = 0.0;
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v102, 0LL);
+    ++v31;
   }
-  this = (BattleResultExpComponent___c__DisplayClass61_0_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-  if ( !this )
-    goto LABEL_130;
-  this = (BattleResultExpComponent___c__DisplayClass61_0_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                               (DataManager_o *)this,
-                                                               (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventMaster___);
-  v47 = v5->fields.__4__this;
-  if ( !v47 )
-    goto LABEL_130;
-  v48 = v47->fields.upParamList;
+  v48 = v6->fields.oldGame;
   if ( !v48 )
-    goto LABEL_130;
-  if ( v48->max_length <= 4 )
-    goto LABEL_131;
-  v49 = (EventMaster_o *)this;
-  this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v48->m_Items[4];
-  if ( !this )
-    goto LABEL_130;
-  this = (BattleResultExpComponent___c__DisplayClass61_0_o *)UnityEngine_Component__get_gameObject(
-                                                               (UnityEngine_Component_o *)this,
-                                                               0LL);
-  if ( !this )
-    goto LABEL_130;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
+    goto LABEL_128;
+  v49 = v6->fields.__4__this;
   if ( !v49 )
-    goto LABEL_130;
-  this = (BattleResultExpComponent___c__DisplayClass61_0_o *)EventMaster__IsBPEnable(v49, 0LL);
-  v50 = v5->fields.__4__this;
+    goto LABEL_128;
+  v50 = v49->fields.newGame;
   if ( !v50 )
-    goto LABEL_130;
-  v51 = v50->fields.upParamList;
+    goto LABEL_128;
+  v51 = v49->fields.upParamList;
   if ( !v51 )
-    goto LABEL_130;
-  if ( v51->max_length <= 4 )
-    goto LABEL_131;
-  v52 = v51->m_Items[4];
-  if ( !v52
-    || (((unsigned __int8)this & 1) == 0 ? (v53 = &StringLiteral_2591/*"BATTLE_RESULTEXP_FULLAP"*/) : (v53 = &StringLiteral_2592/*"BATTLE_RESULTEXP_FULLAP_FULLBP"*/),
-        (BattleResultMasterUpStatusComponent__setTitle(v52, (System_String_o *)*v53, 0LL),
-         (v54 = v5->fields.__4__this) == 0LL)
-     || (v55 = v54->fields.upParamList) == 0LL) )
-  {
-LABEL_130:
-    sub_B7769C(this, *(_QWORD *)&baseHeight);
-  }
-  if ( v55->max_length <= 4 )
-  {
-LABEL_131:
-    v77 = sub_B776C8(this);
-    sub_B77668(v77, 0LL);
-  }
-  this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v55->m_Items[4];
+    goto LABEL_128;
+  if ( v51->max_length <= 3 )
+    goto LABEL_129;
+  this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v51->m_Items[3];
   if ( !this )
-    goto LABEL_130;
+    goto LABEL_128;
+  friendKeep = v48->fields.friendKeep;
+  v53 = v50->fields.friendKeep;
   this = (BattleResultExpComponent___c__DisplayClass61_0_o *)UnityEngine_Component__get_gameObject(
                                                                (UnityEngine_Component_o *)this,
                                                                0LL);
   if ( !this )
-    goto LABEL_130;
+    goto LABEL_128;
+  if ( friendKeep >= v53 )
+  {
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
+  }
+  else
+  {
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
+    v55 = v6->fields.__4__this;
+    if ( !v55 )
+      goto LABEL_128;
+    v56 = v55->fields.upParamList;
+    if ( !v56 )
+      goto LABEL_128;
+    if ( v56->max_length <= 3 )
+      goto LABEL_129;
+    this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v56->m_Items[3];
+    if ( !this )
+      goto LABEL_128;
+    BattleResultMasterUpStatusComponent__setTitle(
+      (BattleResultMasterUpStatusComponent_o *)this,
+      (System_String_o *)StringLiteral_2923/*"BATTLE_RESULTEXP_FRIENDMAX"*/,
+      v54);
+    v58 = v6->fields.__4__this;
+    if ( !v58 )
+      goto LABEL_128;
+    v59 = v58->fields.upParamList;
+    if ( !v59 )
+      goto LABEL_128;
+    if ( v59->max_length <= 3 )
+      goto LABEL_129;
+    v60 = v6->fields.oldGame;
+    if ( !v60 )
+      goto LABEL_128;
+    v61 = v58->fields.newGame;
+    if ( !v61 )
+      goto LABEL_128;
+    this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v59->m_Items[3];
+    if ( !this )
+      goto LABEL_128;
+    BattleResultMasterUpStatusComponent__setData(
+      (BattleResultMasterUpStatusComponent_o *)this,
+      v60->fields.friendKeep,
+      v61->fields.friendKeep,
+      v57);
+    v62 = v6->fields.__4__this;
+    if ( !v62 )
+      goto LABEL_128;
+    v63 = v62->fields.upParamList;
+    if ( !v63 )
+      goto LABEL_128;
+    if ( v63->max_length <= 3 )
+      goto LABEL_129;
+    this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v63->m_Items[3];
+    if ( !this )
+      goto LABEL_128;
+    this = (BattleResultExpComponent___c__DisplayClass61_0_o *)UnityEngine_Component__get_gameObject(
+                                                                 (UnityEngine_Component_o *)this,
+                                                                 0LL);
+    if ( !this )
+      goto LABEL_128;
+    this = (BattleResultExpComponent___c__DisplayClass61_0_o *)UnityEngine_GameObject__get_transform(
+                                                                 (UnityEngine_GameObject_o *)this,
+                                                                 0LL);
+    if ( !this )
+      goto LABEL_128;
+    v103.fields.y = height - (float)(v31 * baseHeight);
+    v103.fields.x = 0.0;
+    v103.fields.z = 0.0;
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v103, 0LL);
+    ++v31;
+  }
+  this = (BattleResultExpComponent___c__DisplayClass61_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  if ( !this )
+    goto LABEL_128;
+  this = (BattleResultExpComponent___c__DisplayClass61_0_o *)DataManager__GetMasterData_object_(
+                                                               (DataManager_o *)this,
+                                                               (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_EventMaster___);
+  v64 = v6->fields.__4__this;
+  if ( !v64 )
+    goto LABEL_128;
+  v65 = v64->fields.upParamList;
+  if ( !v65 )
+    goto LABEL_128;
+  if ( v65->max_length <= 4 )
+    goto LABEL_129;
+  v66 = (EventMaster_o *)this;
+  this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v65->m_Items[4];
+  if ( !this )
+    goto LABEL_128;
+  this = (BattleResultExpComponent___c__DisplayClass61_0_o *)UnityEngine_Component__get_gameObject(
+                                                               (UnityEngine_Component_o *)this,
+                                                               0LL);
+  if ( !this )
+    goto LABEL_128;
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
+  if ( !v66 )
+    goto LABEL_128;
+  this = (BattleResultExpComponent___c__DisplayClass61_0_o *)EventMaster__IsBPEnable(v66, 0LL);
+  v68 = v6->fields.__4__this;
+  if ( !v68 )
+    goto LABEL_128;
+  v69 = v68->fields.upParamList;
+  if ( !v69 )
+    goto LABEL_128;
+  if ( v69->max_length <= 4 )
+    goto LABEL_129;
+  v70 = v69->m_Items[4];
+  if ( !v70 )
+    goto LABEL_128;
+  v71 = (System_String_o **)&StringLiteral_2925/*"BATTLE_RESULTEXP_FULLAP_FULLBP"*/;
+  if ( ((unsigned __int8)this & 1) == 0 )
+    v71 = (System_String_o **)&StringLiteral_2924/*"BATTLE_RESULTEXP_FULLAP"*/;
+  BattleResultMasterUpStatusComponent__setTitle(v70, *v71, v67);
+  v72 = v6->fields.__4__this;
+  if ( !v72 || (v73 = v72->fields.upParamList) == 0LL )
+LABEL_128:
+    sub_1B00F28(this, *(_QWORD *)&baseHeight);
+  if ( v73->max_length <= 4 )
+LABEL_129:
+    sub_1B00F30(this, *(_QWORD *)&baseHeight);
+  this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v73->m_Items[4];
+  if ( !this )
+    goto LABEL_128;
+  this = (BattleResultExpComponent___c__DisplayClass61_0_o *)UnityEngine_Component__get_gameObject(
+                                                               (UnityEngine_Component_o *)this,
+                                                               0LL);
+  if ( !this )
+    goto LABEL_128;
   this = (BattleResultExpComponent___c__DisplayClass61_0_o *)UnityEngine_GameObject__get_transform(
                                                                (UnityEngine_GameObject_o *)this,
                                                                0LL);
   if ( !this )
-    goto LABEL_130;
-  v86.fields.z = 0.0;
-  v86.fields.y = height - (float)(v18 * baseHeight);
-  v86.fields.x = 0.0;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v86, 0LL);
-  masterLvInfoArray = v5->fields.masterLvInfoArray;
-  this = (BattleResultExpComponent___c__DisplayClass61_0_o *)(unsigned int)(v18 + 1);
+    goto LABEL_128;
+  v104.fields.y = height - (float)(v31 * baseHeight);
+  v104.fields.x = 0.0;
+  v104.fields.z = 0.0;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v104, 0LL);
+  masterLvInfoArray = v6->fields.masterLvInfoArray;
+  this = (BattleResultExpComponent___c__DisplayClass61_0_o *)(unsigned int)(v31 + 1);
   if ( masterLvInfoArray )
   {
-    v57 = *(_QWORD *)&masterLvInfoArray->max_length;
-    if ( (int)v57 <= 2 && (int)v57 >= 1 )
+    v75 = *(_QWORD *)&masterLvInfoArray->max_length;
+    if ( (int)v75 <= 2 && (int)v75 >= 1 )
     {
-      v79 = v18 + 1;
-      v58 = 0;
-      v59 = baseHeight * (_DWORD)this;
+      v98 = v31 + 1;
+      v76 = 0;
+      v77 = baseHeight * (_DWORD)this;
       do
       {
-        v60 = v5->fields.__4__this;
-        if ( !v60 )
-          goto LABEL_130;
-        lvUpRewardSpArray = v60->fields.lvUpRewardSpArray;
+        v78 = v6->fields.__4__this;
+        if ( !v78 )
+          goto LABEL_128;
+        lvUpRewardSpArray = v78->fields.lvUpRewardSpArray;
         if ( !lvUpRewardSpArray )
-          goto LABEL_130;
-        if ( v58 >= lvUpRewardSpArray->max_length )
-          goto LABEL_131;
-        this = (BattleResultExpComponent___c__DisplayClass61_0_o *)lvUpRewardSpArray->m_Items[v58];
+          goto LABEL_128;
+        if ( v76 >= lvUpRewardSpArray->max_length )
+          goto LABEL_129;
+        this = (BattleResultExpComponent___c__DisplayClass61_0_o *)lvUpRewardSpArray->m_Items[v76];
         if ( !this )
-          goto LABEL_130;
+          goto LABEL_128;
         this = (BattleResultExpComponent___c__DisplayClass61_0_o *)UnityEngine_Component__get_transform(
                                                                      (UnityEngine_Component_o *)this,
                                                                      0LL);
         if ( !this )
-          goto LABEL_130;
+          goto LABEL_128;
         this = (BattleResultExpComponent___c__DisplayClass61_0_o *)UnityEngine_Transform__get_parent(
                                                                      (UnityEngine_Transform_o *)this,
                                                                      0LL);
         if ( !this )
-          goto LABEL_130;
-        v87.fields.y = height - (float)v59;
-        v87.fields.z = 0.0;
-        v87.fields.x = -30.0;
-        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v87, 0LL);
-        v62 = v5->fields.__4__this;
-        if ( !v62 )
-          goto LABEL_130;
-        v63 = v62->fields.lvUpRewardSpArray;
-        if ( !v63 )
-          goto LABEL_130;
-        if ( v58 >= v63->max_length )
-          goto LABEL_131;
-        v64 = v5->fields.masterLvInfoArray;
-        if ( !v64 )
-          goto LABEL_130;
-        if ( v58 >= v64->max_length )
-          goto LABEL_131;
-        this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v64->m_Items[v58];
+          goto LABEL_128;
+        v105.fields.y = height - (float)v77;
+        v105.fields.x = -30.0;
+        v105.fields.z = 0.0;
+        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v105, 0LL);
+        v80 = v6->fields.__4__this;
+        if ( !v80 )
+          goto LABEL_128;
+        v81 = v80->fields.lvUpRewardSpArray;
+        if ( !v81 )
+          goto LABEL_128;
+        if ( v76 >= v81->max_length )
+          goto LABEL_129;
+        v82 = v6->fields.masterLvInfoArray;
+        if ( !v82 )
+          goto LABEL_128;
+        if ( v76 >= v82->max_length )
+          goto LABEL_129;
+        this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v82->m_Items[v76];
         if ( !this )
-          goto LABEL_130;
-        v65 = v63->m_Items[v58];
+          goto LABEL_128;
+        v83 = v81->m_Items[v76];
         this = (BattleResultExpComponent___c__DisplayClass61_0_o *)MasterLvRewardInfo__getGiftEntity(
                                                                      (MasterLvRewardInfo_o *)this,
                                                                      0LL);
         if ( !this )
-          goto LABEL_130;
+          goto LABEL_128;
         IconImageId = GiftEntity__getIconImageId((GiftEntity_o *)this, 0LL);
-        if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !AtlasManager_TypeInfo->_2.cctor_finished )
-        {
+        if ( !AtlasManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-        }
-        this = (BattleResultExpComponent___c__DisplayClass61_0_o *)AtlasManager__SetItem(v65, IconImageId, 0LL);
-        nameText = (System_String_o *)StringLiteral_1/*""*/;
+        this = (BattleResultExpComponent___c__DisplayClass61_0_o *)AtlasManager__SetItem(v83, IconImageId, 0LL);
         countText = (System_String_o *)StringLiteral_1/*""*/;
-        v67 = v5->fields.masterLvInfoArray;
-        if ( !v67 )
-          goto LABEL_130;
-        if ( v58 >= v67->max_length )
-          goto LABEL_131;
-        this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v67->m_Items[v58];
+        nameText = (System_String_o *)StringLiteral_1/*""*/;
+        v85 = v6->fields.masterLvInfoArray;
+        if ( !v85 )
+          goto LABEL_128;
+        if ( v76 >= v85->max_length )
+          goto LABEL_129;
+        this = (BattleResultExpComponent___c__DisplayClass61_0_o *)v85->m_Items[v76];
         if ( !this )
-          goto LABEL_130;
+          goto LABEL_128;
         this = (BattleResultExpComponent___c__DisplayClass61_0_o *)MasterLvRewardInfo__getGiftEntity(
                                                                      (MasterLvRewardInfo_o *)this,
                                                                      0LL);
         if ( !this )
-          goto LABEL_130;
+          goto LABEL_128;
         GiftEntity__GetInfo((GiftEntity_o *)this, &nameText, &countText, 0LL);
-        v69 = v5->fields.__4__this;
-        if ( !v69 )
-          goto LABEL_130;
-        lvUpRewardLabelArray = v69->fields.lvUpRewardLabelArray;
+        v89 = v6->fields.__4__this;
+        if ( !v89 )
+          goto LABEL_128;
+        lvUpRewardLabelArray = v89->fields.lvUpRewardLabelArray;
         if ( !lvUpRewardLabelArray )
-          goto LABEL_130;
-        if ( v58 >= lvUpRewardLabelArray->max_length )
-          goto LABEL_131;
-        v71 = v5->fields.masterLvInfoArray;
-        if ( !v71 )
-          goto LABEL_130;
-        if ( v58 >= v71->max_length )
-          goto LABEL_131;
-        v72 = v71->m_Items[v58];
-        if ( !v72 )
-          goto LABEL_130;
-        v73 = (Il2CppObject *)nameText;
-        v74 = lvUpRewardLabelArray->m_Items[v58];
-        num = v72->fields.num;
-        v75 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &num, v68);
-        this = (BattleResultExpComponent___c__DisplayClass61_0_o *)System_String__Format_44897472(
-                                                                     (System_String_o *)StringLiteral_24064/*"{0} {1}個"*/,
-                                                                     v73,
-                                                                     v75,
+          goto LABEL_128;
+        if ( v76 >= lvUpRewardLabelArray->max_length )
+          goto LABEL_129;
+        v91 = v6->fields.masterLvInfoArray;
+        if ( !v91 )
+          goto LABEL_128;
+        if ( v76 >= v91->max_length )
+          goto LABEL_129;
+        v92 = v91->m_Items[v76];
+        if ( !v92 )
+          goto LABEL_128;
+        v93 = (Il2CppObject *)nameText;
+        v94 = lvUpRewardLabelArray->m_Items[v76];
+        num = v92->fields.num;
+        v95 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &num, v86, v87, v88);
+        this = (BattleResultExpComponent___c__DisplayClass61_0_o *)System_String__Format_60340120(
+                                                                     (System_String_o *)StringLiteral_24655/*"{0} {1}個"*/,
+                                                                     v93,
+                                                                     v95,
                                                                      0LL);
-        if ( !v74 )
-          goto LABEL_130;
-        UILabel__set_text(v74, (System_String_o *)this, 0LL);
-        v76 = v5->fields.masterLvInfoArray;
-        if ( !v76 )
-          goto LABEL_130;
-        ++v58;
-        v59 += baseHeight;
+        if ( !v94 )
+          goto LABEL_128;
+        UILabel__set_text(v94, (System_String_o *)this, 0LL);
+        v96 = v6->fields.masterLvInfoArray;
+        if ( !v96 )
+          goto LABEL_128;
+        ++v76;
+        v77 += baseHeight;
       }
-      while ( (signed int)v58 < (signed int)v76->max_length );
-      LODWORD(this) = v79 + v58;
+      while ( (signed int)v76 < (signed int)v96->max_length );
+      LODWORD(this) = v98 + v76;
     }
   }
   return (int)this;

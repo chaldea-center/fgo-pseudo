@@ -1,9 +1,11 @@
 void __fastcall ResultListWindow___cctor(const MethodInfo *method)
 {
-  if ( (byte_438DC1D & 1) == 0 )
+  __int64 v1; // x1
+
+  if ( (byte_48E65D1 & 1) == 0 )
   {
-    sub_B775C4(&ResultListWindow_TypeInfo);
-    byte_438DC1D = 1;
+    sub_1B00CCC(&ResultListWindow_TypeInfo, v1);
+    byte_48E65D1 = 1;
   }
   LODWORD(ResultListWindow_TypeInfo->static_fields->EFFECT_PLAY_TIME) = (struct ResultListWindow_StaticFields)1061997773;
 }
@@ -11,69 +13,44 @@ void __fastcall ResultListWindow___cctor(const MethodInfo *method)
 
 void __fastcall ResultListWindow___ctor(ResultListWindow_o *this, const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  System_Int32_array **v9; // x1
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v10; // x20
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v17; // x20
-  System_String_array **v18; // x2
-  System_String_array **v19; // x3
-  System_Boolean_array **v20; // x4
-  System_Int32_array **v21; // x5
-  System_Int32_array *v22; // x6
-  System_Int32_array *v23; // x7
+  int32_t v2; // w2
+  int32_t v3; // w3
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  int32_t v8; // w1
+  System_Collections_Generic_List_object__o *v9; // x20
+  int32_t v10; // w2
+  int32_t v11; // w3
+  System_Collections_Generic_List_object__o *v12; // x20
+  int32_t v13; // w2
+  int32_t v14; // w3
 
-  if ( (byte_438DC1C & 1) == 0 )
+  if ( (byte_48E65D0 & 1) == 0 )
   {
-    sub_B775C4(&BaseDialog_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_B775C4(&System_Collections_Generic_List_GameObject__TypeInfo);
-    sub_B775C4(&StringLiteral_18530/*"ef_boxitem_fall"*/);
-    byte_438DC1C = 1;
+    sub_1B00CCC(&BaseDialog_TypeInfo, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_GameObject___ctor__, v5);
+    sub_1B00CCC(&System_Collections_Generic_List_GameObject__TypeInfo, v6);
+    sub_1B00CCC(&StringLiteral_18559/*"ef_boxitem_fall"*/, v7);
+    byte_48E65D0 = 1;
   }
-  *(_OWORD *)&this->fields.itemDropTime = xmmword_3320630;
-  v9 = (System_Int32_array **)StringLiteral_18530/*"ef_boxitem_fall"*/;
-  this->fields.aniName = (struct System_String_o *)StringLiteral_18530/*"ef_boxitem_fall"*/;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.aniName, v9, v2, v3, v4, v5, v6, v7);
-  v10 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_GameObject__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v10,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
-  this->fields.fallEffectObjList = (struct System_Collections_Generic_List_GameObject__o *)v10;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.fallEffectObjList,
-    (System_Int32_array **)v10,
-    v11,
+  *(_OWORD *)&this->fields.itemDropTime = xmmword_B71140;
+  v8 = StringLiteral_18559/*"ef_boxitem_fall"*/;
+  this->fields.aniName = (struct System_String_o *)StringLiteral_18559/*"ef_boxitem_fall"*/;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.aniName, v8, v2, v3);
+  v9 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_GameObject__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v9,
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_GameObject___ctor__);
+  this->fields.fallEffectObjList = (struct System_Collections_Generic_List_GameObject__o *)v9;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.fallEffectObjList, (int32_t)v9, v10, v11);
+  v12 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_GameObject__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
     v12,
-    v13,
-    v14,
-    v15,
-    v16);
-  v17 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_GameObject__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v17,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
-  this->fields.dropEffectObjList = (struct System_Collections_Generic_List_GameObject__o *)v17;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.dropEffectObjList,
-    (System_Int32_array **)v17,
-    v18,
-    v19,
-    v20,
-    v21,
-    v22,
-    v23);
-  if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_GameObject___ctor__);
+  this->fields.dropEffectObjList = (struct System_Collections_Generic_List_GameObject__o *)v12;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.dropEffectObjList, (int32_t)v12, v13, v14);
+  if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0LL);
 }
@@ -105,10 +82,10 @@ void __fastcall ResultListWindow__ClearGridAllChild(ResultListWindow_o *this, UI
   int32_t v5; // w20
   UnityEngine_Object_o *gameObject; // x21
 
-  if ( (byte_438DC1A & 1) == 0 )
+  if ( (byte_48E65CE & 1) == 0 )
   {
-    this = (ResultListWindow_o *)sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438DC1A = 1;
+    this = (ResultListWindow_o *)sub_1B00CCC(&UnityEngine_Object_TypeInfo, grid);
+    byte_48E65CE = 1;
   }
   if ( !grid )
     goto LABEL_13;
@@ -117,7 +94,7 @@ void __fastcall ResultListWindow__ClearGridAllChild(ResultListWindow_o *this, UI
     goto LABEL_13;
   childCount = UnityEngine_Transform__get_childCount((UnityEngine_Transform_o *)this, 0LL);
   v5 = childCount - 1;
-  if ( childCount >= 1 )
+  if ( childCount >= 1 && (v5 & 0x80000000) == 0 )
   {
     while ( 1 )
     {
@@ -128,118 +105,103 @@ void __fastcall ResultListWindow__ClearGridAllChild(ResultListWindow_o *this, UI
       if ( !this )
         break;
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-      if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      {
+      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      }
-      UnityEngine_Object__DestroyObject(gameObject, 0LL);
+      UnityEngine_Object__Destroy_68077656(gameObject, 0LL);
       if ( --v5 < 0 )
         return;
     }
 LABEL_13:
-    sub_B7769C(this, grid);
+    sub_1B00F28(this, grid);
   }
 }
 
 
 void __fastcall ResultListWindow__ClickSkip(ResultListWindow_o *this, const MethodInfo *method)
 {
-  struct UnityEngine_BoxCollider_o *skipCollider; // x0
-  struct System_Collections_Generic_List_GameObject__o *fallEffectObjList; // x20
-  signed __int64 size; // x21
-  unsigned __int64 v6; // x22
-  UnityEngine_Object_o *v7; // x20
-  struct System_Collections_Generic_List_GameObject__o *dropEffectObjList; // x20
-  signed __int64 v9; // x21
-  unsigned __int64 v10; // x22
-  UnityEngine_Object_o *v11; // x20
+  __int64 v3; // x1
+  __int64 v4; // x1
+  void *skipCollider; // x0
+  int v6; // w22
+  int32_t v7; // w20
+  Il2CppObject *Item; // x21
+  int v9; // w22
+  int32_t v10; // w20
+  Il2CppObject *v11; // x21
 
-  if ( (byte_438DC1B & 1) == 0 )
+  if ( (byte_48E65CF & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438DC1B = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_GameObject__get_Count__, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_GameObject__get_Item__, v3);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v4);
+    byte_48E65CF = 1;
   }
   skipCollider = this->fields.skipCollider;
   if ( !skipCollider )
-    goto LABEL_37;
+    goto LABEL_29;
   if ( !UnityEngine_Collider__get_enabled((UnityEngine_Collider_o *)skipCollider, 0LL) )
     return;
   skipCollider = this->fields.skipCollider;
   if ( !skipCollider )
-LABEL_37:
-    sub_B7769C(skipCollider, method);
+LABEL_29:
+    sub_1B00F28(skipCollider, method);
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)skipCollider, 0, 0LL);
-  fallEffectObjList = this->fields.fallEffectObjList;
+  skipCollider = this->fields.fallEffectObjList;
   this->fields.isSkip = 1;
-  if ( fallEffectObjList )
+  if ( skipCollider )
   {
-    size = fallEffectObjList->fields._size;
-    if ( (int)size >= 1 )
+    v6 = *((_DWORD *)skipCollider + 6);
+    if ( v6 >= 1 )
     {
-      v6 = 0LL;
+      v7 = 0;
       while ( 1 )
       {
-        if ( v6 >= (unsigned int)fallEffectObjList->fields._size )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-        v7 = (UnityEngine_Object_o *)fallEffectObjList->fields._items->m_Items[v6];
-        if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        {
+        Item = System_Collections_Generic_List_object___get_Item(
+                 (System_Collections_Generic_List_object__o *)skipCollider,
+                 v7,
+                 (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        }
-        skipCollider = (struct UnityEngine_BoxCollider_o *)UnityEngine_Object__op_Inequality(v7, 0LL, 0LL);
-        if ( ((unsigned __int8)skipCollider & 1) != 0 )
+        if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Item, 0LL, 0LL) )
         {
-          if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-            && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          {
+          if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          }
-          UnityEngine_Object__Destroy_36309980(v7, 0LL);
+          UnityEngine_Object__Destroy_68077656((UnityEngine_Object_o *)Item, 0LL);
         }
-        if ( (__int64)++v6 >= size )
+        if ( v6 == ++v7 )
           break;
-        fallEffectObjList = this->fields.fallEffectObjList;
-        if ( !fallEffectObjList )
-          goto LABEL_37;
+        skipCollider = this->fields.fallEffectObjList;
+        if ( !skipCollider )
+          goto LABEL_29;
       }
     }
   }
-  dropEffectObjList = this->fields.dropEffectObjList;
-  if ( dropEffectObjList )
+  skipCollider = this->fields.dropEffectObjList;
+  if ( skipCollider )
   {
-    v9 = dropEffectObjList->fields._size;
-    if ( (int)v9 >= 1 )
+    v9 = *((_DWORD *)skipCollider + 6);
+    if ( v9 >= 1 )
     {
-      v10 = 0LL;
+      v10 = 0;
       while ( 1 )
       {
-        if ( v10 >= (unsigned int)dropEffectObjList->fields._size )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-        v11 = (UnityEngine_Object_o *)dropEffectObjList->fields._items->m_Items[v10];
-        if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        {
+        v11 = System_Collections_Generic_List_object___get_Item(
+                (System_Collections_Generic_List_object__o *)skipCollider,
+                v10,
+                (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        }
-        skipCollider = (struct UnityEngine_BoxCollider_o *)UnityEngine_Object__op_Inequality(v11, 0LL, 0LL);
-        if ( ((unsigned __int8)skipCollider & 1) != 0 )
+        if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v11, 0LL, 0LL) )
         {
-          if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-            && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          {
+          if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          }
-          UnityEngine_Object__Destroy_36309980(v11, 0LL);
+          UnityEngine_Object__Destroy_68077656((UnityEngine_Object_o *)v11, 0LL);
         }
-        if ( (__int64)++v10 >= v9 )
+        if ( v9 == ++v10 )
           break;
-        dropEffectObjList = this->fields.dropEffectObjList;
-        if ( !dropEffectObjList )
-          goto LABEL_37;
+        skipCollider = this->fields.dropEffectObjList;
+        if ( !skipCollider )
+          goto LABEL_29;
       }
     }
   }
@@ -248,80 +210,68 @@ LABEL_37:
 
 void __fastcall ResultListWindow__Close(ResultListWindow_o *this, const MethodInfo *method)
 {
-  System_Action_o *v3; // x20
-  const MethodInfo *v4; // x2
+  __int64 v3; // x1
+  System_Action_o *v4; // x20
+  const MethodInfo *v5; // x2
 
-  if ( (byte_438DC18 & 1) == 0 )
+  if ( (byte_48E65CC & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&Method_ResultListWindow_EndClose__);
-    byte_438DC18 = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, method);
+    sub_1B00CCC(&Method_ResultListWindow_EndClose__, v3);
+    byte_48E65CC = 1;
   }
-  v3 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-  System_Action___ctor(v3, (Il2CppObject *)this, Method_ResultListWindow_EndClose__, 0LL);
-  ResultListWindow__Close_30168648(this, v3, v4);
+  v4 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+  System_Action___ctor(v4, (Il2CppObject *)this, Method_ResultListWindow_EndClose__, 0LL);
+  ResultListWindow__Close_44395968(this, v4, v5);
 }
 
 
-void __fastcall ResultListWindow__Close_30168648(
+void __fastcall ResultListWindow__Close_44395968(
         ResultListWindow_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  System_Action_o *v10; // x20
+  int32_t v3; // w3
+  __int64 v6; // x1
+  System_Action_o *v7; // x20
 
-  if ( (byte_438DC19 & 1) == 0 )
+  if ( (byte_48E65CD & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&Method_ResultListWindow_EndClose__);
-    byte_438DC19 = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, callback);
+    sub_1B00CCC(&Method_ResultListWindow_EndClose__, v6);
+    byte_48E65CD = 1;
   }
   this->fields.closeCallBack = callback;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.closeCallBack,
-    (System_Int32_array **)callback,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
-  v10 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-  System_Action___ctor(v10, (Il2CppObject *)this, Method_ResultListWindow_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v10, 0LL);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.closeCallBack, (int32_t)callback, (int32_t)method, v3);
+  v7 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+  System_Action___ctor(v7, (Il2CppObject *)this, Method_ResultListWindow_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
 }
 
 
 void __fastcall ResultListWindow__EndClose(ResultListWindow_o *this, const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  System_Action_o *closeCallBack; // x20
-  const MethodInfo *v10; // x1
+  int32_t v2; // w2
+  int32_t v3; // w3
+  struct System_Action_o *closeCallBack; // x20
+  const MethodInfo *v6; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v12; // x1
+  __int64 v8; // x1
 
   closeCallBack = this->fields.closeCallBack;
   if ( closeCallBack )
   {
     this->fields.closeCallBack = 0LL;
-    sub_B77560((BattleServantConfConponent_o *)&this->fields.closeCallBack, 0LL, v2, v3, v4, v5, v6, v7);
-    System_Action__Invoke(closeCallBack, 0LL);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.closeCallBack, 0, v2, v3);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))closeCallBack->fields.m_target)(
+      closeCallBack->fields.original_method_info,
+      *(_QWORD *)&closeCallBack->fields.extra_arg);
   }
   ResultListWindow__Init(this, method);
-  ResultListWindow__ClearAllGrid(this, v10);
+  ResultListWindow__ClearAllGrid(this, v6);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B7769C(0LL, v12);
+    sub_1B00F28(0LL, v8);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
 }
 
@@ -331,83 +281,101 @@ void __fastcall ResultListWindow__EndOpen(ResultListWindow_o *this, const Method
   const MethodInfo *v2; // x2
   UnityEngine_Object_o *scrollBar; // x20
   __int64 v5; // x1
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
-  UIProgressBar_o *v12; // x0
-  System_Action_o *openCallBack; // x20
+  int32_t v6; // w2
+  int32_t v7; // w3
+  UIProgressBar_o *v8; // x0
+  struct System_Action_o *openCallBack; // x20
 
-  if ( (byte_438DC17 & 1) == 0 )
+  if ( (byte_48E65CB & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438DC17 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    byte_48E65CB = 1;
   }
   if ( this->fields.maxPlayCnt <= 50 )
     ResultListWindow__SetScrollControllEnabled(this, 0, v2);
   scrollBar = (UnityEngine_Object_o *)this->fields.scrollBar;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(scrollBar, 0LL, 0LL)
     && this->fields.maxPlayCnt + 1 >= 52
     && !this->fields.isLastLineEffectPlay )
   {
-    v12 = (UIProgressBar_o *)this->fields.scrollBar;
-    if ( !v12 )
-      sub_B7769C(0LL, v5);
-    UIProgressBar__set_value(v12, 1.0, 0LL);
+    v8 = (UIProgressBar_o *)this->fields.scrollBar;
+    if ( !v8 )
+      sub_1B00F28(0LL, v5);
+    UIProgressBar__set_value(v8, 1.0, 0LL);
     this->fields.isLastLineEffectPlay = 1;
   }
   openCallBack = this->fields.openCallBack;
   if ( openCallBack )
   {
     this->fields.openCallBack = 0LL;
-    sub_B77560((BattleServantConfConponent_o *)&this->fields.openCallBack, 0LL, v6, v7, v8, v9, v10, v11);
-    System_Action__Invoke(openCallBack, 0LL);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.openCallBack, 0, v6, v7);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))openCallBack->fields.m_target)(
+      openCallBack->fields.original_method_info,
+      *(_QWORD *)&openCallBack->fields.extra_arg);
   }
 }
 
 
 void __fastcall ResultListWindow__Init(ResultListWindow_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v4; // x1
-  System_Collections_Generic_List_XWeaponTrail_Element__o *fallEffectObjList; // x0
-  System_Collections_Generic_List_XWeaponTrail_Element__o *dropEffectObjList; // x0
+  __int64 v5; // x1
+  struct System_Collections_Generic_List_GameObject__o *fallEffectObjList; // x8
+  int32_t size; // w2
+  System_Array_o *items; // x0
+  int v9; // w9
+  struct System_Collections_Generic_List_GameObject__o *dropEffectObjList; // x8
+  int32_t v11; // w2
+  System_Array_o *v12; // x0
+  int v13; // w9
 
-  if ( (byte_438DC0C & 1) == 0 )
+  if ( (byte_48E65C0 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__Clear__);
-    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    byte_438DC0C = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_GameObject__Clear__, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_GameObject__get_Count__, v3);
+    byte_48E65C0 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject
     || (UnityEngine_GameObject__SetActive(gameObject, 0, 0LL),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.skipCollider) == 0LL) )
   {
-    sub_B7769C(gameObject, v4);
+    sub_1B00F28(gameObject, v5);
   }
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)gameObject, 0, 0LL);
-  fallEffectObjList = (System_Collections_Generic_List_XWeaponTrail_Element__o *)this->fields.fallEffectObjList;
+  fallEffectObjList = this->fields.fallEffectObjList;
   this->fields.playCnt = 0;
   this->fields.maxPlayCnt = 0;
   this->fields.isRare = 0;
   this->fields.isSkip = 0;
-  if ( fallEffectObjList && fallEffectObjList->fields._size >= 1 )
-    System_Collections_Generic_List_XWeaponTrail_Element___Clear(
-      fallEffectObjList,
-      (const MethodInfo_30536A0 *)Method_System_Collections_Generic_List_GameObject__Clear__);
-  dropEffectObjList = (System_Collections_Generic_List_XWeaponTrail_Element__o *)this->fields.dropEffectObjList;
-  if ( dropEffectObjList && dropEffectObjList->fields._size >= 1 )
-    System_Collections_Generic_List_XWeaponTrail_Element___Clear(
-      dropEffectObjList,
-      (const MethodInfo_30536A0 *)Method_System_Collections_Generic_List_GameObject__Clear__);
+  if ( fallEffectObjList )
+  {
+    size = fallEffectObjList->fields._size;
+    if ( size >= 1 )
+    {
+      items = (System_Array_o *)fallEffectObjList->fields._items;
+      v9 = fallEffectObjList->fields._version + 1;
+      fallEffectObjList->fields._size = 0;
+      fallEffectObjList->fields._version = v9;
+      System_Array__Clear(items, 0, size, 0LL);
+    }
+  }
+  dropEffectObjList = this->fields.dropEffectObjList;
+  if ( dropEffectObjList )
+  {
+    v11 = dropEffectObjList->fields._size;
+    if ( v11 >= 1 )
+    {
+      v12 = (System_Array_o *)dropEffectObjList->fields._items;
+      v13 = dropEffectObjList->fields._version + 1;
+      dropEffectObjList->fields._size = 0;
+      dropEffectObjList->fields._version = v13;
+      System_Array__Clear(v12, 0, v11, 0LL);
+    }
+  }
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -424,107 +392,75 @@ void __fastcall ResultListWindow__OpenResultList(
         System_Action_o *callback,
         const MethodInfo *method)
 {
+  __int64 v17; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  const MethodInfo *v18; // x1
-  const MethodInfo *v19; // x2
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
-  struct System_Collections_Generic_List_GameObject__o *fallEffectObjList; // x0
-  struct System_Collections_Generic_List_GameObject__o *dropEffectObjList; // x0
-  System_String_array **v28; // x2
-  System_String_array **v29; // x3
-  System_Boolean_array **v30; // x4
-  System_Int32_array **v31; // x5
-  System_Int32_array *v32; // x6
-  System_Int32_array *v33; // x7
-  System_String_array **v34; // x2
-  System_String_array **v35; // x3
-  System_Boolean_array **v36; // x4
-  System_Int32_array **v37; // x5
-  System_Int32_array *v38; // x6
-  System_Int32_array *v39; // x7
-  System_String_array **v40; // x2
-  System_String_array **v41; // x3
-  System_Boolean_array **v42; // x4
-  System_Int32_array **v43; // x5
-  System_Int32_array *v44; // x6
-  System_Int32_array *v45; // x7
+  const MethodInfo *v19; // x1
+  bool v20; // w26
+  const MethodInfo *v21; // x2
+  int32_t size; // w2
+  int32_t v23; // w3
+  struct System_Collections_Generic_List_GameObject__o *fallEffectObjList; // x8
+  int v25; // w9
+  struct System_Collections_Generic_List_GameObject__o *dropEffectObjList; // x8
+  int v27; // w9
+  int32_t v28; // w2
+  int32_t v29; // w3
+  int32_t v30; // w2
+  int32_t v31; // w3
+  int32_t v32; // w2
+  int32_t v33; // w3
   struct System_Int32_array *resultIdList; // x8
   int max_length; // w21
   UnityEngine_Object_o *scrollBar; // x20
   UnityEngine_Object_o *resultScrollView; // x20
-  const MethodInfo *v50; // x2
+  const MethodInfo *v38; // x2
 
-  if ( (byte_438DC0D & 1) == 0 )
+  if ( (byte_48E65C1 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__Clear__);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438DC0D = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_GameObject__Clear__, resultIds);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v17);
+    byte_48E65C1 = 1;
   }
   if ( !this->fields.state )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( gameObject )
     {
+      v20 = isDischargeGetEffectItem;
       UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
-      ResultListWindow__setDispResultListBg(this, 1, v19);
+      ResultListWindow__setDispResultListBg(this, 1, v21);
       fallEffectObjList = this->fields.fallEffectObjList;
       if ( fallEffectObjList )
-        System_Collections_Generic_List_XWeaponTrail_Element___Clear(
-          (System_Collections_Generic_List_XWeaponTrail_Element__o *)fallEffectObjList,
-          (const MethodInfo_30536A0 *)Method_System_Collections_Generic_List_GameObject__Clear__);
+      {
+        size = fallEffectObjList->fields._size;
+        v25 = fallEffectObjList->fields._version + 1;
+        fallEffectObjList->fields._size = 0;
+        fallEffectObjList->fields._version = v25;
+        if ( size >= 1 )
+          System_Array__Clear((System_Array_o *)fallEffectObjList->fields._items, 0, size, 0LL);
+      }
       dropEffectObjList = this->fields.dropEffectObjList;
       if ( dropEffectObjList )
-        System_Collections_Generic_List_XWeaponTrail_Element___Clear(
-          (System_Collections_Generic_List_XWeaponTrail_Element__o *)dropEffectObjList,
-          (const MethodInfo_30536A0 *)Method_System_Collections_Generic_List_GameObject__Clear__);
+      {
+        size = dropEffectObjList->fields._size;
+        v27 = dropEffectObjList->fields._version + 1;
+        dropEffectObjList->fields._size = 0;
+        dropEffectObjList->fields._version = v27;
+        if ( size >= 1 )
+          System_Array__Clear((System_Array_o *)dropEffectObjList->fields._items, 0, size, 0LL);
+      }
       this->fields.openCallBack = callback;
-      sub_B77560(
-        (BattleServantConfConponent_o *)&this->fields.openCallBack,
-        (System_Int32_array **)callback,
-        v20,
-        v21,
-        v22,
-        v23,
-        v24,
-        v25);
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.openCallBack, (int32_t)callback, size, v23);
       this->fields.resultIdList = resultIds;
-      sub_B77560(
-        (BattleServantConfConponent_o *)&this->fields.resultIdList,
-        (System_Int32_array **)resultIds,
-        v28,
-        v29,
-        v30,
-        v31,
-        v32,
-        v33);
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.resultIdList, (int32_t)resultIds, v28, v29);
       this->fields.rareIdxList = rareIdxs;
-      sub_B77560(
-        (BattleServantConfConponent_o *)&this->fields.rareIdxList,
-        (System_Int32_array **)rareIdxs,
-        v34,
-        v35,
-        v36,
-        v37,
-        v38,
-        v39);
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.rareIdxList, (int32_t)rareIdxs, v30, v31);
       this->fields.baseNoList = baseNos;
-      sub_B77560(
-        (BattleServantConfConponent_o *)&this->fields.baseNoList,
-        (System_Int32_array **)baseNos,
-        v40,
-        v41,
-        v42,
-        v43,
-        v44,
-        v45);
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.baseNoList, (int32_t)baseNos, v32, v33);
       this->fields.currentBaseId = baseId;
       this->fields.currentEventId = eventId;
-      *(_WORD *)&this->fields.isDischargeGetEffectItem = isDischargeGetEffectItem;
+      this->fields.isDischargeGetEffectItem = v20;
+      this->fields.isLastLineEffectPlay = 0;
       if ( resultIds )
       {
         resultIdList = this->fields.resultIdList;
@@ -537,19 +473,13 @@ void __fastcall ResultListWindow__OpenResultList(
             max_length = resultIdList->max_length;
             UIProgressBar__set_value((UIProgressBar_o *)gameObject, 0.0, 0LL);
             scrollBar = (UnityEngine_Object_o *)this->fields.scrollBar;
-            if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-              && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-            {
+            if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-            }
             if ( !UnityEngine_Object__op_Inequality(scrollBar, 0LL, 0LL) )
               goto LABEL_23;
             resultScrollView = (UnityEngine_Object_o *)this->fields.resultScrollView;
-            if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-              && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-            {
+            if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-            }
             if ( !UnityEngine_Object__op_Inequality(resultScrollView, 0LL, 0LL) )
               goto LABEL_23;
             gameObject = (UnityEngine_GameObject_o *)this->fields.scrollBar;
@@ -559,9 +489,9 @@ void __fastcall ResultListWindow__OpenResultList(
               if ( gameObject )
               {
                 UnityEngine_GameObject__SetActive(gameObject, max_length > 50, 0LL);
-                ResultListWindow__SetScrollControllEnabled(this, max_length > 50, v50);
+                ResultListWindow__SetScrollControllEnabled(this, max_length > 50, v38);
 LABEL_23:
-                ResultListWindow__setResultItem(this, v18);
+                ResultListWindow__setResultItem(this, v19);
                 BaseDialog__Open((BaseDialog_o *)this, 0LL, 0, 0LL);
                 return;
               }
@@ -570,11 +500,12 @@ LABEL_23:
         }
       }
     }
-    sub_B7769C(gameObject, v18);
+    sub_1B00F28(gameObject, v19);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ResultListWindow__SetScrollControllEnabled(
         ResultListWindow_o *this,
         bool enabled,
@@ -584,22 +515,19 @@ void __fastcall ResultListWindow__SetScrollControllEnabled(
   __int64 v6; // x1
   UnityEngine_Behaviour_o *v7; // x0
 
-  if ( (byte_438DC0E & 1) == 0 )
+  if ( (byte_48E65C2 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438DC0E = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, enabled);
+    byte_48E65C2 = 1;
   }
   resultScrollView = (UnityEngine_Object_o *)this->fields.resultScrollView;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(resultScrollView, 0LL, 0LL) )
   {
     v7 = (UnityEngine_Behaviour_o *)this->fields.resultScrollView;
     if ( !v7 )
-      sub_B7769C(0LL, v6);
+      sub_1B00F28(0LL, v6);
     UnityEngine_Behaviour__set_enabled(v7, enabled, 0LL);
   }
 }
@@ -610,26 +538,19 @@ System_Collections_IEnumerator_o *__fastcall ResultListWindow__StartDisp(
         const MethodInfo *method)
 {
   __int64 v3; // x20
-  __int64 v4; // x0
-  __int64 v5; // x1
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  int32_t v4; // w2
+  int32_t v5; // w3
 
-  if ( (byte_438DC10 & 1) == 0 )
+  if ( (byte_48E65C4 & 1) == 0 )
   {
-    sub_B775C4(&ResultListWindow__StartDisp_d__47_TypeInfo);
-    byte_438DC10 = 1;
+    sub_1B00CCC(&ResultListWindow__StartDisp_d__47_TypeInfo, method);
+    byte_48E65C4 = 1;
   }
-  v3 = sub_B77694(ResultListWindow__StartDisp_d__47_TypeInfo);
-  ResultListWindow__StartDisp_d__47___ctor((ResultListWindow__StartDisp_d__47_o *)v3, 0, 0LL);
-  if ( !v3 )
-    sub_B7769C(v4, v5);
+  v3 = sub_1B00F18(ResultListWindow__StartDisp_d__47_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v3, 0LL);
+  *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_B77560((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -640,57 +561,37 @@ System_Collections_IEnumerator_o *__fastcall ResultListWindow__StartRewardAction
         const MethodInfo *method)
 {
   __int64 v5; // x21
-  __int64 v6; // x0
-  __int64 v7; // x1
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
-  System_String_array **v14; // x2
-  System_String_array **v15; // x3
-  System_Boolean_array **v16; // x4
-  System_Int32_array **v17; // x5
-  System_Int32_array *v18; // x6
-  System_Int32_array *v19; // x7
+  int32_t v6; // w2
+  int32_t v7; // w3
+  int32_t v8; // w2
+  int32_t v9; // w3
 
-  if ( (byte_438DC11 & 1) == 0 )
+  if ( (byte_48E65C5 & 1) == 0 )
   {
-    sub_B775C4(&ResultListWindow__StartRewardAction_d__48_TypeInfo);
-    byte_438DC11 = 1;
+    sub_1B00CCC(&ResultListWindow__StartRewardAction_d__48_TypeInfo, rewardAction);
+    byte_48E65C5 = 1;
   }
-  v5 = sub_B77694(ResultListWindow__StartRewardAction_d__48_TypeInfo);
-  ResultListWindow__StartRewardAction_d__48___ctor((ResultListWindow__StartRewardAction_d__48_o *)v5, 0, 0LL);
-  if ( !v5 )
-    sub_B7769C(v6, v7);
+  v5 = sub_1B00F18(ResultListWindow__StartRewardAction_d__48_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0LL);
+  *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_B77560((BattleServantConfConponent_o *)(v5 + 32), (System_Int32_array **)this, v8, v9, v10, v11, v12, v13);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v5 + 32), (int32_t)this, v6, v7);
   *(_QWORD *)(v5 + 40) = rewardAction;
-  sub_B77560(
-    (BattleServantConfConponent_o *)(v5 + 40),
-    (System_Int32_array **)rewardAction,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18,
-    v19);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v5 + 40), (int32_t)rewardAction, v8, v9);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall ResultListWindow__checkRare(ResultListWindow_o *this, int32_t idx, const MethodInfo *method)
 {
   struct System_Int32_array *rareIdxList; // x8
   __int64 v4; // x9
   _BOOL8 v6; // x0
   unsigned __int64 v8; // x21
-  __int64 v9; // x1
-  __int64 v10; // x0
-  int32_t v12; // [xsp+Ch] [xbp-14h] BYREF
+  int32_t v10; // [xsp+Ch] [xbp-24h] BYREF
 
-  v12 = 0;
+  v10 = 0;
   rareIdxList = this->fields.rareIdxList;
   if ( rareIdxList )
   {
@@ -699,30 +600,25 @@ bool __fastcall ResultListWindow__checkRare(ResultListWindow_o *this, int32_t id
     if ( v4 && (int)v4 >= 1 )
     {
       v8 = 0LL;
-      while ( 1 )
+      do
       {
         if ( v8 >= (unsigned int)v4 )
-        {
-          v10 = sub_B776C8(v6);
-          sub_B77668(v10, 0LL);
-        }
-        v12 = rareIdxList->m_Items[v8 + 1];
-        v6 = System_Int32__Equals_39547160((int32_t)&v12, idx, 0LL);
+          sub_1B00F30(v6, *(_QWORD *)&idx);
+        v10 = rareIdxList->m_Items[v8 + 1];
+        v6 = System_Int32__Equals_61130716((int32_t)&v10, idx, 0LL);
         if ( v6 )
           break;
         rareIdxList = this->fields.rareIdxList;
         if ( !rareIdxList )
-          sub_B7769C(v6, v9);
+          sub_1B00F28(v6, *(_QWORD *)&idx);
         LODWORD(v4) = rareIdxList->max_length;
-        if ( (__int64)++v8 >= (int)v4 )
-          goto LABEL_9;
+        ++v8;
       }
-      LOBYTE(v6) = 1;
+      while ( (__int64)v8 < (int)v4 );
     }
   }
   else
   {
-LABEL_9:
     LOBYTE(v6) = 0;
   }
   return v6;
@@ -731,14 +627,15 @@ LABEL_9:
 
 void __fastcall ResultListWindow__endDisp(ResultListWindow_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   int32_t maxPlayCnt; // w8
   _BOOL4 isDischargeGetEffectItem; // w9
 
-  if ( (byte_438DC16 & 1) == 0 )
+  if ( (byte_48E65CA & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_6118/*"EndOpen"*/);
-    sub_B775C4(&StringLiteral_22480/*"setDisp"*/);
-    byte_438DC16 = 1;
+    sub_1B00CCC(&StringLiteral_5919/*"EndOpen"*/, method);
+    sub_1B00CCC(&StringLiteral_22830/*"setDisp"*/, v3);
+    byte_48E65CA = 1;
   }
   maxPlayCnt = this->fields.maxPlayCnt;
   if ( this->fields.playCnt >= maxPlayCnt )
@@ -749,7 +646,7 @@ void __fastcall ResultListWindow__endDisp(ResultListWindow_o *this, const Method
     {
       UnityEngine_MonoBehaviour__Invoke(
         (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_6118/*"EndOpen"*/,
+        (System_String_o *)StringLiteral_5919/*"EndOpen"*/,
         0.5,
         0LL);
     }
@@ -763,7 +660,7 @@ LABEL_6:
   {
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_22480/*"setDisp"*/,
+      (System_String_o *)StringLiteral_22830/*"setDisp"*/,
       0.00001,
       0LL);
     if ( !this->fields.isDischargeGetEffectItem && this->fields.playCnt == this->fields.maxPlayCnt - 1 )
@@ -775,111 +672,131 @@ LABEL_6:
 // local variable allocation has failed, the output may be wrong!
 void __fastcall ResultListWindow__playEffectDrop(ResultListWindow_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
   UnityEngine_Collider_o *skipCollider; // x0
-  System_String_o **v4; // x8
-  System_String_o *v5; // x20
-  UnityEngine_Transform_o *transform; // x21
-  int v7; // w22
-  UnityEngine_GameObject_o *v8; // x20
-  UnityEngine_Transform_o *v9; // x21
-  int v10; // s0
-  BoxGachaUtility_c *v13; // x0
+  int32_t maxPlayCnt; // w8
+  _BOOL4 v9; // w22
+  System_String_o **v10; // x9
+  System_String_o *v11; // x20
+  UnityEngine_Transform_o *transform; // x0
+  const MethodInfo *v13; // x2
+  UnityEngine_GameObject_o *v14; // x20
+  UnityEngine_Transform_o *v15; // x21
+  int v16; // s0
+  int32_t v19; // w2
+  int32_t v20; // w3
+  BoxGachaUtility_c *v21; // x0
+  __int64 v22; // x8
+  _QWORD *v23; // x9
+  __int64 klass_low; // x10
+  __int64 v25; // x8
 
-  if ( (byte_438DC14 & 1) == 0 )
+  if ( (byte_48E65C8 & 1) == 0 )
   {
-    sub_B775C4(&BoxGachaResultEffectComponent_TypeInfo);
-    sub_B775C4(&BoxGachaUtility_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_B775C4(&StringLiteral_18528/*"ef_boxitem_drop_rare"*/);
-    sub_B775C4(&StringLiteral_18527/*"ef_boxitem_drop"*/);
-    sub_B775C4(&StringLiteral_22591/*"showResultItem"*/);
-    byte_438DC14 = 1;
+    sub_1B00CCC(&BoxGachaUtility_TypeInfo, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_GameObject__Add__, v3);
+    sub_1B00CCC(&StringLiteral_18557/*"ef_boxitem_drop_rare"*/, v4);
+    sub_1B00CCC(&StringLiteral_18556/*"ef_boxitem_drop"*/, v5);
+    sub_1B00CCC(&StringLiteral_22967/*"showResultItem"*/, v6);
+    byte_48E65C8 = 1;
   }
   if ( this->fields.isSkip && !this->fields.isRare )
-    goto LABEL_32;
+    goto LABEL_30;
   skipCollider = (UnityEngine_Collider_o *)this->fields.skipCollider;
   if ( !skipCollider )
-    goto LABEL_33;
+    goto LABEL_31;
   UnityEngine_Collider__set_enabled(skipCollider, 1, 0LL);
+  maxPlayCnt = this->fields.maxPlayCnt;
+  v9 = maxPlayCnt > 10;
   if ( this->fields.isRare )
-    v4 = (System_String_o **)&StringLiteral_18528/*"ef_boxitem_drop_rare"*/;
+    v10 = (System_String_o **)&StringLiteral_18557/*"ef_boxitem_drop_rare"*/;
   else
-    v4 = (System_String_o **)&StringLiteral_18527/*"ef_boxitem_drop"*/;
-  v5 = *v4;
-  if ( this->fields.maxPlayCnt < 11 )
+    v10 = (System_String_o **)&StringLiteral_18556/*"ef_boxitem_drop"*/;
+  v11 = *v10;
+  if ( maxPlayCnt < 11 )
   {
-    v7 = 0;
-LABEL_15:
+    v9 = 0;
+LABEL_14:
     skipCollider = (UnityEngine_Collider_o *)GameObjectExtensions__GetParent(this->fields.dispObj, 0LL);
     if ( !skipCollider )
-      goto LABEL_33;
+      goto LABEL_31;
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)skipCollider, 0LL);
-    goto LABEL_17;
+    goto LABEL_16;
   }
   if ( this->fields.playCnt >= 31 )
-  {
-    v7 = 1;
-    goto LABEL_15;
-  }
+    goto LABEL_14;
   skipCollider = (UnityEngine_Collider_o *)this->fields.effectRoot;
   if ( !skipCollider )
-    goto LABEL_33;
+    goto LABEL_31;
   transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)skipCollider, 0LL);
-  v7 = 1;
-LABEL_17:
-  if ( (BYTE3(BoxGachaResultEffectComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !BoxGachaResultEffectComponent_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(BoxGachaResultEffectComponent_TypeInfo);
-  }
-  skipCollider = (UnityEngine_Collider_o *)BoxGachaResultEffectComponent__getEffect(v5, transform, 0LL);
+LABEL_16:
+  skipCollider = (UnityEngine_Collider_o *)BoxGachaResultEffectComponent__getEffect(v11, transform, v13);
   if ( !skipCollider )
-    goto LABEL_33;
-  v8 = (UnityEngine_GameObject_o *)skipCollider;
+    goto LABEL_31;
+  v14 = (UnityEngine_GameObject_o *)skipCollider;
   skipCollider = (UnityEngine_Collider_o *)UnityEngine_GameObject__get_transform(
                                              (UnityEngine_GameObject_o *)skipCollider,
                                              0LL);
   if ( !this->fields.dispObj )
-    goto LABEL_33;
-  v9 = (UnityEngine_Transform_o *)skipCollider;
+    goto LABEL_31;
+  v15 = (UnityEngine_Transform_o *)skipCollider;
   skipCollider = (UnityEngine_Collider_o *)UnityEngine_GameObject__get_transform(this->fields.dispObj, 0LL);
   if ( !skipCollider )
-    goto LABEL_33;
-  *(UnityEngine_Vector3_o *)&v10 = UnityEngine_Transform__get_localPosition(
+    goto LABEL_31;
+  *(UnityEngine_Vector3_o *)&v16 = UnityEngine_Transform__get_localPosition(
                                      (UnityEngine_Transform_o *)skipCollider,
                                      0LL);
-  if ( !v9 )
-    goto LABEL_33;
-  UnityEngine_Transform__set_localPosition(v9, *(UnityEngine_Vector3_o *)&v10, 0LL);
-  if ( v7 )
+  if ( !v15 )
+    goto LABEL_31;
+  UnityEngine_Transform__set_localPosition(v15, *(UnityEngine_Vector3_o *)&v16, 0LL);
+  if ( v9 )
   {
-    v13 = BoxGachaUtility_TypeInfo;
-    if ( (BYTE3(BoxGachaUtility_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !BoxGachaUtility_TypeInfo->_2.cctor_finished )
+    v21 = BoxGachaUtility_TypeInfo;
+    if ( !BoxGachaUtility_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BoxGachaUtility_TypeInfo);
-      v13 = BoxGachaUtility_TypeInfo;
+      v21 = BoxGachaUtility_TypeInfo;
     }
-    GameObjectExtensions__SetLocalScale(v8, v13->static_fields->CHANGE_MAX_DRAW_EFFECT_SCALE, 0LL);
+    GameObjectExtensions__SetLocalScale(v14, v21->static_fields->CHANGE_MAX_DRAW_EFFECT_SCALE, 0LL);
   }
   if ( !this->fields.isRare )
   {
     skipCollider = (UnityEngine_Collider_o *)this->fields.dropEffectObjList;
     if ( skipCollider )
     {
-      System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-        (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)skipCollider,
-        (EventMissionProgressRequest_Argument_ProgressData_o *)v8,
-        (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_GameObject__Add__);
-      goto LABEL_32;
+      v22 = *(_QWORD *)&skipCollider->fields.m_CachedPtr;
+      v23 = Method_System_Collections_Generic_List_GameObject__Add__;
+      ++HIDWORD(skipCollider[1].klass);
+      if ( v22 )
+      {
+        klass_low = SLODWORD(skipCollider[1].klass);
+        if ( (unsigned int)klass_low >= *(_DWORD *)(v22 + 24) )
+        {
+          System_Collections_Generic_List_object___AddWithResize(
+            (System_Collections_Generic_List_object__o *)skipCollider,
+            (Il2CppObject *)v14,
+            *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+        }
+        else
+        {
+          v25 = v22 + 8 * klass_low;
+          LODWORD(skipCollider[1].klass) = klass_low + 1;
+          *(_QWORD *)(v25 + 32) = v14;
+          sub_1B00C70((ServantStatusBattleListViewItem_o *)(v25 + 32), (int32_t)v14, v19, v20);
+        }
+        goto LABEL_30;
+      }
     }
-LABEL_33:
-    sub_B7769C(skipCollider, method);
+LABEL_31:
+    sub_1B00F28(skipCollider, method);
   }
-LABEL_32:
+LABEL_30:
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_22591/*"showResultItem"*/,
+    (System_String_o *)StringLiteral_22967/*"showResultItem"*/,
     this->fields.itemDispWaitTime,
     0LL);
 }
@@ -888,173 +805,185 @@ LABEL_32:
 // local variable allocation has failed, the output may be wrong!
 void __fastcall ResultListWindow__setDisp(ResultListWindow_o *this, const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  ResultListWindow_o *v8; // x19
-  struct System_Collections_Generic_List_GameObject__o *resultItemObjList; // x20
-  __int64 playCnt; // x21
-  System_Int32_array **v11; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  System_Collections_Generic_List_object__o *resultItemObjList; // x0
+  Il2CppObject *Item; // x0
   UnityEngine_GameObject_o **p_dispObj; // x21
-  const MethodInfo *v13; // x2
-  bool v14; // w0
-  int32_t v15; // w8
-  int v16; // w8
-  int maxPlayCnt; // w22
+  int32_t v13; // w2
+  int32_t v14; // w3
+  const MethodInfo *v15; // x2
+  bool v16; // w0
+  int32_t playCnt; // w8
+  _BOOL4 isSkip; // w9
+  int32_t v19; // w8
+  int32_t maxPlayCnt; // w22
   UnityEngine_Transform_o *transform; // x0
-  UnityEngine_Transform_o *v19; // x20
-  UnityEngine_GameObject_o *v20; // x20
-  UnityEngine_GameObject_o *v21; // x8
-  UnityEngine_Transform_o *v22; // x21
-  int v23; // s0
-  BoxGachaUtility_c *v26; // x0
-  UnityEngine_Object_o *ComponentInChildren_Dropdown_DropdownItem; // x21
-  UnityEngine_Object_o *v28; // x20
+  const MethodInfo *v22; // x2
+  UnityEngine_GameObject_o *v23; // x20
+  UnityEngine_GameObject_o *v24; // x8
+  UnityEngine_Transform_o *v25; // x21
+  int v26; // s0
+  int32_t v29; // w2
+  int32_t v30; // w3
+  BoxGachaUtility_c *v31; // x0
+  struct System_Object_array *items; // x8
+  _QWORD *v33; // x9
+  __int64 size; // x10
+  Il2CppClass **v35; // x8
+  Il2CppObject *ComponentInChildren_object; // x21
+  Il2CppObject *v37; // x20
 
-  v8 = this;
-  if ( (byte_438DC13 & 1) == 0 )
+  if ( (byte_48E65C7 & 1) == 0 )
   {
-    sub_B775C4(&BoxGachaResultEffectComponent_TypeInfo);
-    sub_B775C4(&BoxGachaUtility_TypeInfo);
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponentInChildren_Animation___);
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponentInChildren_SimpleAnimation___);
-    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&StringLiteral_21943/*"playEffectDrop"*/);
-    this = (ResultListWindow_o *)sub_B775C4(&StringLiteral_18530/*"ef_boxitem_fall"*/);
-    byte_438DC13 = 1;
+    sub_1B00CCC(&BoxGachaUtility_TypeInfo, method);
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponentInChildren_Animation___, v3);
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponentInChildren_SimpleAnimation___, v4);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_GameObject__Add__, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_GameObject__get_Item__, v6);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v7);
+    sub_1B00CCC(&StringLiteral_22243/*"playEffectDrop"*/, v8);
+    sub_1B00CCC(&StringLiteral_18559/*"ef_boxitem_fall"*/, v9);
+    byte_48E65C7 = 1;
   }
-  resultItemObjList = v8->fields.resultItemObjList;
+  resultItemObjList = (System_Collections_Generic_List_object__o *)this->fields.resultItemObjList;
   if ( !resultItemObjList )
-    goto LABEL_42;
-  playCnt = v8->fields.playCnt;
-  if ( resultItemObjList->fields._size <= (unsigned int)playCnt )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-  v11 = (System_Int32_array **)resultItemObjList->fields._items->m_Items[playCnt];
-  p_dispObj = &v8->fields.dispObj;
-  v8->fields.dispObj = (struct UnityEngine_GameObject_o *)v11;
-  sub_B77560((BattleServantConfConponent_o *)&v8->fields.dispObj, v11, v2, v3, v4, v5, v6, v7);
-  v14 = ResultListWindow__checkRare(v8, v8->fields.playCnt, v13);
-  v15 = v8->fields.playCnt;
-  v8->fields.isRare = v14;
-  v16 = v15 + 1;
-  v8->fields.playCnt = v16;
-  if ( !v14 && v8->fields.isSkip )
+    goto LABEL_38;
+  Item = System_Collections_Generic_List_object___get_Item(
+           resultItemObjList,
+           this->fields.playCnt,
+           (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+  p_dispObj = &this->fields.dispObj;
+  this->fields.dispObj = (struct UnityEngine_GameObject_o *)Item;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.dispObj, (int32_t)Item, v13, v14);
+  v16 = ResultListWindow__checkRare(this, this->fields.playCnt, v15);
+  playCnt = this->fields.playCnt;
+  isSkip = this->fields.isSkip;
+  this->fields.isRare = v16;
+  v19 = playCnt + 1;
+  this->fields.playCnt = v19;
+  if ( isSkip && !v16 )
   {
-    ResultListWindow__showResultItem(v8, method);
+    ResultListWindow__showResultItem(this, method);
     return;
   }
-  maxPlayCnt = v8->fields.maxPlayCnt;
-  if ( v16 > 30 || maxPlayCnt <= 10 )
+  maxPlayCnt = this->fields.maxPlayCnt;
+  if ( v19 > 30 || maxPlayCnt <= 10 )
   {
-    this = (ResultListWindow_o *)GameObjectExtensions__GetParent(*p_dispObj, 0LL);
-    if ( !this )
-      goto LABEL_42;
-    transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+    resultItemObjList = (System_Collections_Generic_List_object__o *)GameObjectExtensions__GetParent(*p_dispObj, 0LL);
+    if ( !resultItemObjList )
+      goto LABEL_38;
+    transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)resultItemObjList, 0LL);
   }
   else
   {
-    this = (ResultListWindow_o *)v8->fields.effectRoot;
-    if ( !this )
-      goto LABEL_42;
-    transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0LL);
+    resultItemObjList = (System_Collections_Generic_List_object__o *)this->fields.effectRoot;
+    if ( !resultItemObjList )
+      goto LABEL_38;
+    transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)resultItemObjList, 0LL);
   }
-  v19 = transform;
-  if ( (BYTE3(BoxGachaResultEffectComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !BoxGachaResultEffectComponent_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(BoxGachaResultEffectComponent_TypeInfo);
-  }
-  this = (ResultListWindow_o *)BoxGachaResultEffectComponent__getEffect(
-                                 (System_String_o *)StringLiteral_18530/*"ef_boxitem_fall"*/,
-                                 v19,
-                                 0LL);
-  if ( !this )
-    goto LABEL_42;
-  v20 = (UnityEngine_GameObject_o *)this;
-  this = (ResultListWindow_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0LL);
-  v21 = *p_dispObj;
+  resultItemObjList = (System_Collections_Generic_List_object__o *)BoxGachaResultEffectComponent__getEffect(
+                                                                     (System_String_o *)StringLiteral_18559/*"ef_boxitem_fall"*/,
+                                                                     transform,
+                                                                     v22);
+  if ( !resultItemObjList )
+    goto LABEL_38;
+  v23 = (UnityEngine_GameObject_o *)resultItemObjList;
+  resultItemObjList = (System_Collections_Generic_List_object__o *)UnityEngine_GameObject__get_transform(
+                                                                     (UnityEngine_GameObject_o *)resultItemObjList,
+                                                                     0LL);
+  v24 = *p_dispObj;
   if ( !*p_dispObj )
-    goto LABEL_42;
-  v22 = (UnityEngine_Transform_o *)this;
-  this = (ResultListWindow_o *)UnityEngine_GameObject__get_transform(v21, 0LL);
-  if ( !this )
-    goto LABEL_42;
-  *(UnityEngine_Vector3_o *)&v23 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0LL);
-  if ( !v22 )
-    goto LABEL_42;
-  UnityEngine_Transform__set_localPosition(v22, *(UnityEngine_Vector3_o *)&v23, 0LL);
+    goto LABEL_38;
+  v25 = (UnityEngine_Transform_o *)resultItemObjList;
+  resultItemObjList = (System_Collections_Generic_List_object__o *)UnityEngine_GameObject__get_transform(v24, 0LL);
+  if ( !resultItemObjList )
+    goto LABEL_38;
+  *(UnityEngine_Vector3_o *)&v26 = UnityEngine_Transform__get_localPosition(
+                                     (UnityEngine_Transform_o *)resultItemObjList,
+                                     0LL);
+  if ( !v25 )
+    goto LABEL_38;
+  UnityEngine_Transform__set_localPosition(v25, *(UnityEngine_Vector3_o *)&v26, 0LL);
   if ( maxPlayCnt >= 11 )
   {
-    v26 = BoxGachaUtility_TypeInfo;
-    if ( (BYTE3(BoxGachaUtility_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !BoxGachaUtility_TypeInfo->_2.cctor_finished )
+    v31 = BoxGachaUtility_TypeInfo;
+    if ( !BoxGachaUtility_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BoxGachaUtility_TypeInfo);
-      v26 = BoxGachaUtility_TypeInfo;
+      v31 = BoxGachaUtility_TypeInfo;
     }
-    GameObjectExtensions__SetLocalScale(v20, v26->static_fields->CHANGE_MAX_DRAW_EFFECT_SCALE, 0LL);
+    GameObjectExtensions__SetLocalScale(v23, v31->static_fields->CHANGE_MAX_DRAW_EFFECT_SCALE, 0LL);
   }
-  this = (ResultListWindow_o *)v8->fields.fallEffectObjList;
-  if ( !this )
-LABEL_42:
-    sub_B7769C(this, method);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-    (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this,
-    (EventMissionProgressRequest_Argument_ProgressData_o *)v20,
-    (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_GameObject__Add__);
-  if ( !v8->fields.isSkip )
+  resultItemObjList = (System_Collections_Generic_List_object__o *)this->fields.fallEffectObjList;
+  if ( !resultItemObjList
+    || (items = resultItemObjList->fields._items,
+        v33 = Method_System_Collections_Generic_List_GameObject__Add__,
+        ++resultItemObjList->fields._version,
+        !items) )
   {
-    ComponentInChildren_Dropdown_DropdownItem = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponentInChildren_Dropdown_DropdownItem_(
-                                                                          v20,
-                                                                          (const MethodInfo_1DEC070 *)Method_UnityEngine_GameObject_GetComponentInChildren_SimpleAnimation___);
-    v28 = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponentInChildren_Dropdown_DropdownItem_(
-                                    v20,
-                                    (const MethodInfo_1DEC070 *)Method_UnityEngine_GameObject_GetComponentInChildren_Animation___);
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
-    this = (ResultListWindow_o *)UnityEngine_Object__op_Inequality(ComponentInChildren_Dropdown_DropdownItem, 0LL, 0LL);
-    if ( ((unsigned __int8)this & 1) != 0 )
-    {
-      if ( ComponentInChildren_Dropdown_DropdownItem )
-      {
-        SimpleAnimation__Play_16815192(
-          (SimpleAnimation_o *)ComponentInChildren_Dropdown_DropdownItem,
-          v8->fields.aniName,
-          0LL);
-        goto LABEL_41;
-      }
-    }
-    else
-    {
-      if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      }
-      this = (ResultListWindow_o *)UnityEngine_Object__op_Inequality(v28, 0LL, 0LL);
-      if ( ((unsigned __int8)this & 1) == 0 )
-        goto LABEL_41;
-      if ( v28 )
-      {
-        UnityEngine_Animation__Play_51745976((UnityEngine_Animation_o *)v28, v8->fields.aniName, 0LL);
-        goto LABEL_41;
-      }
-    }
-    goto LABEL_42;
+LABEL_38:
+    sub_1B00F28(resultItemObjList, method);
   }
-LABEL_41:
+  size = resultItemObjList->fields._size;
+  if ( (unsigned int)size >= items->max_length )
+  {
+    System_Collections_Generic_List_object___AddWithResize(
+      resultItemObjList,
+      (Il2CppObject *)v23,
+      *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
+  }
+  else
+  {
+    v35 = &items->obj.klass + size;
+    resultItemObjList->fields._size = size + 1;
+    v35[4] = (Il2CppClass *)v23;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)(v35 + 4), (int32_t)v23, v29, v30);
+  }
+  if ( this->fields.isSkip )
+    goto LABEL_37;
+  ComponentInChildren_object = UnityEngine_GameObject__GetComponentInChildren_object_(
+                                 v23,
+                                 (const MethodInfo_2DAE06C *)Method_UnityEngine_GameObject_GetComponentInChildren_SimpleAnimation___);
+  v37 = UnityEngine_GameObject__GetComponentInChildren_object_(
+          v23,
+          (const MethodInfo_2DAE06C *)Method_UnityEngine_GameObject_GetComponentInChildren_Animation___);
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  resultItemObjList = (System_Collections_Generic_List_object__o *)UnityEngine_Object__op_Inequality(
+                                                                     (UnityEngine_Object_o *)ComponentInChildren_object,
+                                                                     0LL,
+                                                                     0LL);
+  if ( ((unsigned __int8)resultItemObjList & 1) == 0 )
+  {
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    resultItemObjList = (System_Collections_Generic_List_object__o *)UnityEngine_Object__op_Inequality(
+                                                                       (UnityEngine_Object_o *)v37,
+                                                                       0LL,
+                                                                       0LL);
+    if ( ((unsigned __int8)resultItemObjList & 1) == 0 )
+      goto LABEL_37;
+    if ( v37 )
+    {
+      UnityEngine_Animation__Play_67822748((UnityEngine_Animation_o *)v37, this->fields.aniName, 0LL);
+      goto LABEL_37;
+    }
+    goto LABEL_38;
+  }
+  if ( !ComponentInChildren_object )
+    goto LABEL_38;
+  SimpleAnimation__Play_62462980((SimpleAnimation_o *)ComponentInChildren_object, this->fields.aniName, 0LL);
+LABEL_37:
   UnityEngine_MonoBehaviour__Invoke(
-    (UnityEngine_MonoBehaviour_o *)v8,
-    (System_String_o *)StringLiteral_21943/*"playEffectDrop"*/,
-    v8->fields.itemDropTime,
+    (UnityEngine_MonoBehaviour_o *)this,
+    (System_String_o *)StringLiteral_22243/*"playEffectDrop"*/,
+    this->fields.itemDropTime,
     0LL);
 }
 
@@ -1074,7 +1003,7 @@ void __fastcall ResultListWindow__setDispResultListBg(ResultListWindow_o *this, 
         (firstLineGrid = (UnityEngine_Component_o *)this->fields.thrLineGrid) == 0LL)
     || (firstLineGrid = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(firstLineGrid, 0LL)) == 0LL )
   {
-    sub_B7769C(firstLineGrid, isDisp);
+    sub_1B00F28(firstLineGrid, isDisp);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)firstLineGrid, isDisp, 0LL);
 }
@@ -1083,418 +1012,403 @@ void __fastcall ResultListWindow__setDispResultListBg(ResultListWindow_o *this, 
 // local variable allocation has failed, the output may be wrong!
 void __fastcall ResultListWindow__setResultItem(ResultListWindow_o *this, const MethodInfo *method)
 {
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v3; // x21
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
-  char *Master_WarQuestSelectionMaster; // x0
-  const MethodInfo *v11; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  System_Collections_Generic_List_object__o *v14; // x21
+  int32_t v15; // w2
+  int32_t v16; // w3
+  __int64 Master_object; // x0
+  const MethodInfo *v18; // x1
   struct UIGrid_o *firstResultGrid; // x8
-  float cellWidth; // w23
+  int32_t maxPerLine; // w20
   struct UIGrid_o *sceResultGrid; // x8
-  DataManager_c **v15; // x26
-  float v16; // w22
+  DataManager_c **v22; // x27
+  int32_t v23; // w23
   struct System_Int32_array *resultIdList; // x8
-  int max_length; // w27
-  signed __int64 v19; // x20
-  struct UIGrid_o **v20; // x8
-  DataManager_c *v21; // x0
-  UnityEngine_Component_o *v22; // x22
+  int max_length; // w22
+  __int64 v26; // x26
+  __int64 v27; // x29
+  signed __int64 v28; // x21
+  struct UIGrid_o **v29; // x8
+  UnityEngine_Component_o *v30; // x23
   struct System_Int32_array *baseNoList; // x8
-  UnityEngine_GameObject_o *resultListItemPrefab; // x24
-  BoxGachaBaseEntity_o *v25; // x23
+  UnityEngine_GameObject_o *resultListItemPrefab; // x25
+  BoxGachaBaseEntity_o *v33; // x24
   UnityEngine_Transform_o *transform; // x0
-  UnityEngine_GameObject_o *v27; // x22
-  UnityEngine_Transform_o *v28; // x24
-  int v29; // s0
-  ResultItemComponent_o *v32; // x24
-  BoxGachaUtility_c *v33; // x8
-  struct BoxGachaUtility_StaticFields *static_fields; // x10
-  float *p_x; // x8
-  float *p_y; // x9
-  float *p_z; // x10
-  const MethodInfo *v38; // x1
-  UnityEngine_GameObject_o *resultListResultFrame; // x25
-  DataManager_c **v40; // x21
-  UnityEngine_Transform_o *v41; // x0
-  UnityEngine_GameObject_o *v42; // x25
-  UnityEngine_Transform_o *v43; // x26
-  int v44; // s0
-  BoxGachaUtility_c *v47; // x0
-  System_String_array **v48; // x2
-  System_String_array **v49; // x3
-  System_Boolean_array **v50; // x4
-  System_Int32_array **v51; // x5
-  System_Int32_array *v52; // x6
-  System_Int32_array *v53; // x7
-  System_Int32_array **resultScrollView; // x1
+  UnityEngine_GameObject_o *v35; // x23
+  UnityEngine_Transform_o *v36; // x25
+  ResultItemComponent_o *v37; // x25
+  BoxGachaUtility_c *v38; // x8
+  int *static_fields; // x8
+  int v40; // s2
+  int v41; // s1
+  int v42; // s0
+  const MethodInfo *v43; // x1
+  __int64 v44; // x22
+  __int64 v45; // x29
+  UnityEngine_GameObject_o *resultListResultFrame; // x26
+  DataManager_c **v47; // x20
+  UnityEngine_Transform_o *v48; // x0
+  UnityEngine_GameObject_o *v49; // x26
+  UnityEngine_Transform_o *v50; // x27
+  BoxGachaUtility_c *v51; // x0
+  int32_t v52; // w2
+  int32_t v53; // w3
+  struct UIScrollView_o *resultScrollView; // x1
   int32_t type; // w8
   const MethodInfo *v56; // x3
   int32_t v57; // w2
   const MethodInfo *v58; // x3
-  struct System_Int32_array *v59; // x8
+  int32_t v59; // w2
+  int32_t v60; // w3
+  __int64 v61; // x8
+  _QWORD *v62; // x9
+  __int64 v63; // x10
+  __int64 v64; // x8
+  struct System_Int32_array *v65; // x8
   UnityEngine_Object_o *adjustSprite; // x20
   int32_t maxPlayCnt; // w20
-  float v62; // s0
-  double v63; // d0
-  const MethodInfo *v64; // x1
-  __int64 v65; // x0
-  signed __int64 v66; // [xsp+8h] [xbp-98h]
-  struct System_Collections_Generic_List_GameObject__o **p_resultItemObjList; // [xsp+10h] [xbp-90h]
-  struct UIGrid_o **p_thrResultGrid; // [xsp+18h] [xbp-88h]
-  struct UIGrid_o **p_sceResultGrid; // [xsp+20h] [xbp-80h]
-  GiftMaster_o *v70; // [xsp+28h] [xbp-78h]
-  signed __int64 v71; // [xsp+30h] [xbp-70h]
-  int v72; // [xsp+3Ch] [xbp-64h]
-  struct UIGrid_o **p_resultScrollViewGrid; // [xsp+40h] [xbp-60h]
-  struct UIGrid_o **p_firstResultGrid; // [xsp+48h] [xbp-58h]
-  UnityEngine_Vector3_o v75; // 0:s0.4,4:s1.4,8:s2.4
+  float v68; // s0
+  int32_t v69; // w1
+  const MethodInfo *v70; // x1
+  signed __int64 v71; // [xsp+8h] [xbp-A8h]
+  struct System_Collections_Generic_List_GameObject__o **p_resultItemObjList; // [xsp+10h] [xbp-A0h]
+  struct UIGrid_o **p_thrResultGrid; // [xsp+18h] [xbp-98h]
+  struct UIGrid_o **p_sceResultGrid; // [xsp+20h] [xbp-90h]
+  GiftMaster_o *v75; // [xsp+28h] [xbp-88h]
+  int v76; // [xsp+34h] [xbp-7Ch]
+  signed __int64 v77; // [xsp+38h] [xbp-78h]
+  struct UIGrid_o **p_resultScrollViewGrid; // [xsp+40h] [xbp-70h]
+  struct UIGrid_o **p_firstResultGrid; // [xsp+48h] [xbp-68h]
 
-  if ( (byte_438DC0F & 1) == 0 )
+  if ( (byte_48E65C3 & 1) == 0 )
   {
-    sub_B775C4(&BoxGachaUtility_TypeInfo);
-    sub_B775C4(&Method_DataManager_GetMaster_BoxGachaBaseMaster___);
-    sub_B775C4(&Method_DataManager_GetMaster_GiftMaster___);
-    sub_B775C4(&DataManager_TypeInfo);
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_ResultItemComponent___);
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_UIDragScrollView___);
-    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_B775C4(&System_Collections_Generic_List_GameObject__TypeInfo);
-    sub_B775C4(&System_Math_TypeInfo);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&StringLiteral_13287/*"StartDisp"*/);
-    byte_438DC0F = 1;
+    sub_1B00CCC(&BoxGachaUtility_TypeInfo, method);
+    sub_1B00CCC(&Method_DataManager_GetMaster_BoxGachaBaseMaster___, v3);
+    sub_1B00CCC(&Method_DataManager_GetMaster_GiftMaster___, v4);
+    sub_1B00CCC(&DataManager_TypeInfo, v5);
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_ResultItemComponent___, v6);
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_UIDragScrollView___, v7);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_GameObject__Add__, v8);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_GameObject___ctor__, v9);
+    sub_1B00CCC(&System_Collections_Generic_List_GameObject__TypeInfo, v10);
+    sub_1B00CCC(&System_Math_TypeInfo, v11);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v12);
+    sub_1B00CCC(&StringLiteral_12740/*"StartDisp"*/, v13);
+    byte_48E65C3 = 1;
   }
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_GameObject__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v3,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
-  this->fields.resultItemObjList = (struct System_Collections_Generic_List_GameObject__o *)v3;
+  v14 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_GameObject__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v14,
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_GameObject___ctor__);
+  this->fields.resultItemObjList = (struct System_Collections_Generic_List_GameObject__o *)v14;
   p_resultItemObjList = &this->fields.resultItemObjList;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.resultItemObjList,
-    (System_Int32_array **)v3,
-    v4,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.resultItemObjList, (int32_t)v14, v15, v16);
   firstResultGrid = this->fields.firstResultGrid;
   p_firstResultGrid = &this->fields.firstResultGrid;
   if ( !firstResultGrid )
-    goto LABEL_85;
-  cellWidth = firstResultGrid->fields.cellWidth;
+    goto LABEL_87;
+  maxPerLine = firstResultGrid->fields.maxPerLine;
   sceResultGrid = this->fields.sceResultGrid;
   p_sceResultGrid = &this->fields.sceResultGrid;
   if ( !sceResultGrid )
-    goto LABEL_85;
-  v15 = &DataManager_TypeInfo;
-  v16 = sceResultGrid->fields.cellWidth;
-  if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+    goto LABEL_87;
+  v22 = &DataManager_TypeInfo;
+  v23 = sceResultGrid->fields.maxPerLine;
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (char *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_GiftMaster___);
+  Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_GiftMaster___);
   resultIdList = this->fields.resultIdList;
-  v70 = (GiftMaster_o *)Master_WarQuestSelectionMaster;
+  v75 = (GiftMaster_o *)Master_object;
   if ( !resultIdList )
-    goto LABEL_85;
+    goto LABEL_87;
   max_length = resultIdList->max_length;
-  p_resultScrollViewGrid = &this->fields.resultScrollViewGrid;
   p_thrResultGrid = &this->fields.thrResultGrid;
+  if ( max_length <= 10 )
+    v26 = 8LL;
+  else
+    v26 = 20LL;
+  if ( max_length <= 10 )
+    v27 = 4LL;
+  else
+    v27 = 16LL;
+  p_resultScrollViewGrid = &this->fields.resultScrollViewGrid;
   if ( max_length >= 1 )
   {
-    v19 = 0LL;
-    v71 = LODWORD(cellWidth) - 1;
-    v66 = LODWORD(v16) + LODWORD(cellWidth) - 1;
-    v72 = resultIdList->max_length;
+    v28 = 0LL;
+    v77 = maxPerLine - 1;
+    v71 = v23 + maxPerLine - 1;
+    v76 = resultIdList->max_length;
     do
     {
-      Master_WarQuestSelectionMaster = (char *)this->fields.resultList;
-      if ( !Master_WarQuestSelectionMaster )
-        goto LABEL_85;
-      Master_WarQuestSelectionMaster = (char *)UnityEngine_GameObject__get_gameObject(
-                                                 (UnityEngine_GameObject_o *)Master_WarQuestSelectionMaster,
-                                                 0LL);
-      if ( !Master_WarQuestSelectionMaster )
-        goto LABEL_85;
+      Master_object = (__int64)this->fields.resultList;
+      if ( !Master_object )
+        goto LABEL_87;
+      Master_object = (__int64)UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)Master_object, 0LL);
+      if ( !Master_object )
+        goto LABEL_87;
       if ( max_length < 11 )
       {
-        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_WarQuestSelectionMaster, 1, 0LL);
-        v20 = &this->fields.firstResultGrid;
-        if ( v19 > v71 )
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, 1, 0LL);
+        v29 = &this->fields.firstResultGrid;
+        if ( v28 > v77 )
         {
-          v20 = &this->fields.sceResultGrid;
-          if ( v19 > v66 )
-            v20 = &this->fields.thrResultGrid;
+          v29 = &this->fields.sceResultGrid;
+          if ( v28 > v71 )
+            v29 = &this->fields.thrResultGrid;
         }
       }
       else
       {
-        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_WarQuestSelectionMaster, 0, 0LL);
-        v20 = &this->fields.resultScrollViewGrid;
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, 0, 0LL);
+        v29 = &this->fields.resultScrollViewGrid;
       }
-      v21 = *v15;
-      v22 = (UnityEngine_Component_o *)*v20;
-      if ( (BYTE3((*v15)->vtable._0_Equals.methodPtr) & 4) != 0 && !v21->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(v21);
-      Master_WarQuestSelectionMaster = (char *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_BoxGachaBaseMaster___);
+      v30 = (UnityEngine_Component_o *)*v29;
+      if ( !(*v22)->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(*v22);
+      Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_BoxGachaBaseMaster___);
       baseNoList = this->fields.baseNoList;
       if ( !baseNoList )
-        goto LABEL_85;
-      if ( v19 >= (unsigned __int64)baseNoList->max_length )
-      {
-        v65 = sub_B776C8(Master_WarQuestSelectionMaster);
-        sub_B77668(v65, 0LL);
-      }
-      if ( !Master_WarQuestSelectionMaster )
-        goto LABEL_85;
-      Master_WarQuestSelectionMaster = (char *)BoxGachaBaseMaster__GetEntity(
-                                                 (BoxGachaBaseMaster_o *)Master_WarQuestSelectionMaster,
-                                                 this->fields.currentBaseId,
-                                                 baseNoList->m_Items[v19 + 1],
-                                                 0LL);
-      if ( !v22 )
-        goto LABEL_85;
+        goto LABEL_87;
+      if ( v28 >= (unsigned __int64)baseNoList->max_length )
+        sub_1B00F30(Master_object, v18);
+      if ( !Master_object )
+        goto LABEL_87;
+      Master_object = (__int64)BoxGachaBaseMaster__GetEntity(
+                                 (BoxGachaBaseMaster_o *)Master_object,
+                                 this->fields.currentBaseId,
+                                 baseNoList->m_Items[v28 + 1],
+                                 0LL);
+      if ( !v30 )
+        goto LABEL_87;
       resultListItemPrefab = this->fields.resultListItemPrefab;
-      v25 = (BoxGachaBaseEntity_o *)Master_WarQuestSelectionMaster;
-      transform = UnityEngine_Component__get_transform(v22, 0LL);
-      Master_WarQuestSelectionMaster = (char *)BaseMonoBehaviour__createObject(
-                                                 (BaseMonoBehaviour_o *)this,
-                                                 resultListItemPrefab,
-                                                 transform,
-                                                 0LL,
-                                                 0LL);
-      if ( !Master_WarQuestSelectionMaster )
-        goto LABEL_85;
-      v27 = (UnityEngine_GameObject_o *)Master_WarQuestSelectionMaster;
-      v28 = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Master_WarQuestSelectionMaster, 0LL);
-      *(UnityEngine_Vector3_o *)&v29 = UnityEngine_Vector3__get_one(0LL);
-      if ( !v28 )
-        goto LABEL_85;
-      UnityEngine_Transform__set_localScale(v28, *(UnityEngine_Vector3_o *)&v29, 0LL);
-      Master_WarQuestSelectionMaster = (char *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                                 v27,
-                                                 (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_ResultItemComponent___);
-      v32 = (ResultItemComponent_o *)Master_WarQuestSelectionMaster;
-      v33 = BoxGachaUtility_TypeInfo;
-      if ( max_length <= 10 )
+      v33 = (BoxGachaBaseEntity_o *)Master_object;
+      transform = UnityEngine_Component__get_transform(v30, 0LL);
+      Master_object = (__int64)BaseMonoBehaviour__createObject(
+                                 (BaseMonoBehaviour_o *)this,
+                                 resultListItemPrefab,
+                                 transform,
+                                 0LL,
+                                 0LL);
+      if ( !Master_object )
+        goto LABEL_87;
+      v35 = (UnityEngine_GameObject_o *)Master_object;
+      Master_object = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Master_object, 0LL);
+      v36 = (UnityEngine_Transform_o *)Master_object;
+      if ( !byte_48DD9F6 )
       {
-        if ( (WORD1(BoxGachaUtility_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
-          && !BoxGachaUtility_TypeInfo->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(BoxGachaUtility_TypeInfo);
-          v33 = BoxGachaUtility_TypeInfo;
-        }
-        p_x = &v33->static_fields->NORMAL_ITEM_SIZE.fields.x;
-        p_y = p_x + 1;
-        p_z = p_x + 2;
-        if ( !v32 )
-          goto LABEL_85;
+        Master_object = sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, v18);
+        byte_48DD9F6 = 1;
       }
-      else
+      if ( !v36 )
+        goto LABEL_87;
+      UnityEngine_Transform__set_localScale(v36, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
+      Master_object = (__int64)UnityEngine_GameObject__GetComponent_object_(
+                                 v35,
+                                 (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_ResultItemComponent___);
+      v37 = (ResultItemComponent_o *)Master_object;
+      v38 = BoxGachaUtility_TypeInfo;
+      if ( !BoxGachaUtility_TypeInfo->_2.cctor_finished )
       {
-        if ( (WORD1(BoxGachaUtility_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
-          && !BoxGachaUtility_TypeInfo->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(BoxGachaUtility_TypeInfo);
-          v33 = BoxGachaUtility_TypeInfo;
-        }
-        static_fields = v33->static_fields;
-        p_x = &static_fields->CHANGE_MAX_ITEM_SIZE.fields.x;
-        p_y = &static_fields->CHANGE_MAX_ITEM_SIZE.fields.y;
-        p_z = &static_fields->CHANGE_MAX_ITEM_SIZE.fields.z;
-        if ( !v32 )
-          goto LABEL_85;
+        j_il2cpp_runtime_class_init_0(BoxGachaUtility_TypeInfo);
+        v38 = BoxGachaUtility_TypeInfo;
       }
-      v75.fields.y = *p_y;
-      v75.fields.x = *p_x;
-      v75.fields.z = *p_z;
-      ResultItemComponent__SetItemIconScale(v32, v75, v11);
-      ResultItemComponent__Clear(v32, v38);
+      if ( !v37 )
+        goto LABEL_87;
+      static_fields = (int *)v38->static_fields;
+      v40 = *(int *)((char *)static_fields + v26);
+      v41 = *(int *)((char *)static_fields + v27);
+      if ( max_length > 10 )
+        static_fields += 3;
+      v42 = *static_fields;
+      ResultItemComponent__SetItemIconScale(v37, *(UnityEngine_Vector3_o *)(&v41 - 1), v18);
+      ResultItemComponent__Clear(v37, v43);
       if ( max_length >= 11 )
       {
-        Master_WarQuestSelectionMaster = (char *)this->fields.resultScrollViewResultFrameGrid;
-        if ( !Master_WarQuestSelectionMaster )
-          goto LABEL_85;
+        Master_object = (__int64)this->fields.resultScrollViewResultFrameGrid;
+        if ( !Master_object )
+          goto LABEL_87;
+        v44 = v27;
+        v45 = v26;
         resultListResultFrame = this->fields.resultListResultFrame;
-        v40 = v15;
-        v41 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)Master_WarQuestSelectionMaster, 0LL);
-        Master_WarQuestSelectionMaster = (char *)BaseMonoBehaviour__createObject(
-                                                   (BaseMonoBehaviour_o *)this,
-                                                   resultListResultFrame,
-                                                   v41,
-                                                   0LL,
-                                                   0LL);
-        if ( !Master_WarQuestSelectionMaster )
-          goto LABEL_85;
-        v42 = (UnityEngine_GameObject_o *)Master_WarQuestSelectionMaster;
-        v43 = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Master_WarQuestSelectionMaster, 0LL);
-        *(UnityEngine_Vector3_o *)&v44 = UnityEngine_Vector3__get_one(0LL);
-        if ( !v43 )
-          goto LABEL_85;
-        UnityEngine_Transform__set_localScale(v43, *(UnityEngine_Vector3_o *)&v44, 0LL);
-        v47 = BoxGachaUtility_TypeInfo;
-        if ( (BYTE3(BoxGachaUtility_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 )
+        v47 = v22;
+        v48 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)Master_object, 0LL);
+        Master_object = (__int64)BaseMonoBehaviour__createObject(
+                                   (BaseMonoBehaviour_o *)this,
+                                   resultListResultFrame,
+                                   v48,
+                                   0LL,
+                                   0LL);
+        if ( !Master_object )
+          goto LABEL_87;
+        v49 = (UnityEngine_GameObject_o *)Master_object;
+        Master_object = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Master_object, 0LL);
+        v50 = (UnityEngine_Transform_o *)Master_object;
+        if ( !byte_48DD9F6 )
         {
-          v15 = v40;
-          if ( !BoxGachaUtility_TypeInfo->_2.cctor_finished )
-          {
-            j_il2cpp_runtime_class_init_0(BoxGachaUtility_TypeInfo);
-            v47 = BoxGachaUtility_TypeInfo;
-          }
+          Master_object = sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, v18);
+          byte_48DD9F6 = 1;
         }
-        else
+        if ( !v50 )
+          goto LABEL_87;
+        UnityEngine_Transform__set_localScale(v50, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
+        v51 = BoxGachaUtility_TypeInfo;
+        if ( !BoxGachaUtility_TypeInfo->_2.cctor_finished )
         {
-          v15 = v40;
+          j_il2cpp_runtime_class_init_0(BoxGachaUtility_TypeInfo);
+          v51 = BoxGachaUtility_TypeInfo;
         }
-        GameObjectExtensions__SetLocalScale(v42, v47->static_fields->CHANGE_MAX_DRAW_EFFECT_SCALE, 0LL);
-        Master_WarQuestSelectionMaster = (char *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                                   v27,
-                                                   (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_UIDragScrollView___);
-        if ( !Master_WarQuestSelectionMaster )
-          goto LABEL_85;
-        resultScrollView = (System_Int32_array **)this->fields.resultScrollView;
-        *((_QWORD *)Master_WarQuestSelectionMaster + 3) = resultScrollView;
-        sub_B77560(
-          (BattleServantConfConponent_o *)(Master_WarQuestSelectionMaster + 24),
-          resultScrollView,
-          v48,
-          v49,
-          v50,
-          v51,
-          v52,
-          v53);
-        max_length = v72;
+        v22 = v47;
+        GameObjectExtensions__SetLocalScale(v49, v51->static_fields->CHANGE_MAX_DRAW_EFFECT_SCALE, 0LL);
+        Master_object = (__int64)UnityEngine_GameObject__GetComponent_object_(
+                                   v35,
+                                   (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_UIDragScrollView___);
+        if ( !Master_object )
+          goto LABEL_87;
+        resultScrollView = this->fields.resultScrollView;
+        *(_QWORD *)(Master_object + 32) = resultScrollView;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)(Master_object + 32), (int32_t)resultScrollView, v52, v53);
+        v26 = v45;
+        v27 = v44;
+        max_length = v76;
       }
-      if ( v25 )
+      if ( v33 )
       {
-        if ( v25->fields.isRare )
-          ResultItemComponent__SetRareItem(v32, v11);
-        type = v25->fields.type;
+        if ( v33->fields.isRare )
+          ResultItemComponent__SetRareItem(v37, v18);
+        type = v33->fields.type;
         if ( type == 1 )
         {
-          Master_WarQuestSelectionMaster = (char *)v70;
-          if ( !v70 )
-            goto LABEL_85;
-          Master_WarQuestSelectionMaster = (char *)GiftMaster__getDataById(v70, v25->fields.targetId, 0LL);
-          if ( Master_WarQuestSelectionMaster )
+          Master_object = (__int64)v75;
+          if ( !v75 )
+            goto LABEL_87;
+          Master_object = (__int64)GiftMaster__getDataById(v75, v33->fields.targetId, 0LL);
+          if ( Master_object )
           {
-            if ( *((int *)Master_WarQuestSelectionMaster + 7) <= 1 )
+            if ( *(int *)(Master_object + 28) <= 1 )
               v57 = 0;
             else
-              v57 = *((_DWORD *)Master_WarQuestSelectionMaster + 7);
-            ResultItemComponent__Set(v32, (GiftEntity_o *)Master_WarQuestSelectionMaster, v57, v56);
-            goto LABEL_60;
+              v57 = *(_DWORD *)(Master_object + 28);
+            ResultItemComponent__Set(v37, (GiftEntity_o *)Master_object, v57, v56);
+            goto LABEL_61;
           }
         }
         else if ( (type & 0xFFFFFFFE) == 2 )
         {
-          Master_WarQuestSelectionMaster = (char *)BoxGachaBaseEntity__getRewardSetData(
-                                                     v25,
-                                                     this->fields.currentEventId,
-                                                     0LL);
-          if ( Master_WarQuestSelectionMaster )
+          Master_object = (__int64)BoxGachaBaseEntity__getRewardSetData(v33, this->fields.currentEventId, 0LL);
+          if ( Master_object )
           {
-            ResultItemComponent__SetExtra(
-              v32,
-              *((_DWORD *)Master_WarQuestSelectionMaster + 7),
-              *((_DWORD *)Master_WarQuestSelectionMaster + 12),
-              v58);
-LABEL_60:
-            UnityEngine_GameObject__SetActive(v27, 0, 0LL);
-            Master_WarQuestSelectionMaster = (char *)*p_resultItemObjList;
+            ResultItemComponent__SetExtra(v37, *(_DWORD *)(Master_object + 28), *(_DWORD *)(Master_object + 48), v58);
+LABEL_61:
+            UnityEngine_GameObject__SetActive(v35, 0, 0LL);
+            Master_object = (__int64)*p_resultItemObjList;
             if ( !*p_resultItemObjList )
-              goto LABEL_85;
-            System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-              (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)Master_WarQuestSelectionMaster,
-              (EventMissionProgressRequest_Argument_ProgressData_o *)v27,
-              (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_GameObject__Add__);
+              goto LABEL_87;
+            v61 = *(_QWORD *)(Master_object + 16);
+            v62 = Method_System_Collections_Generic_List_GameObject__Add__;
+            ++*(_DWORD *)(Master_object + 28);
+            if ( !v61 )
+              goto LABEL_87;
+            v63 = *(int *)(Master_object + 24);
+            if ( (unsigned int)v63 >= *(_DWORD *)(v61 + 24) )
+            {
+              System_Collections_Generic_List_object___AddWithResize(
+                (System_Collections_Generic_List_object__o *)Master_object,
+                (Il2CppObject *)v35,
+                *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v62[4] + 192LL) + 112LL));
+            }
+            else
+            {
+              v64 = v61 + 8 * v63;
+              *(_DWORD *)(Master_object + 24) = v63 + 1;
+              *(_QWORD *)(v64 + 32) = v35;
+              sub_1B00C70((ServantStatusBattleListViewItem_o *)(v64 + 32), (int32_t)v35, v59, v60);
+            }
           }
         }
       }
-      v59 = this->fields.resultIdList;
-      if ( !v59 )
-        goto LABEL_85;
-      ++v19;
+      v65 = this->fields.resultIdList;
+      if ( !v65 )
+        goto LABEL_87;
+      ++v28;
     }
-    while ( v19 < (int)v59->max_length );
+    while ( v28 < (int)v65->max_length );
   }
   if ( max_length >= 11 )
   {
     adjustSprite = (UnityEngine_Object_o *)this->fields.adjustSprite;
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
     if ( UnityEngine_Object__op_Inequality(adjustSprite, 0LL, 0LL) )
     {
       maxPlayCnt = this->fields.maxPlayCnt;
-      if ( (BYTE3(System_Math_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !System_Math_TypeInfo->_2.cctor_finished )
-      {
+      if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-      }
-      Master_WarQuestSelectionMaster = (char *)this->fields.adjustSprite;
-      if ( Master_WarQuestSelectionMaster )
+      Master_object = (__int64)this->fields.adjustSprite;
+      if ( Master_object )
       {
-        v62 = ceilf((float)maxPlayCnt / 10.0);
-        if ( v62 == INFINITY )
-          v63 = -v62;
+        v68 = ceilf((float)maxPlayCnt / 10.0);
+        if ( v68 == INFINITY )
+          v69 = 5;
         else
-          v63 = v62;
-        UIWidget__set_height((UIWidget_o *)Master_WarQuestSelectionMaster, 60 * (int)v63 + 5, 0LL);
-        goto LABEL_77;
+          v69 = 60 * (int)v68 + 5;
+        UIWidget__set_height((UIWidget_o *)Master_object, v69, 0LL);
+        goto LABEL_79;
       }
-LABEL_85:
-      sub_B7769C(Master_WarQuestSelectionMaster, v11);
+LABEL_87:
+      sub_1B00F28(Master_object, v18);
     }
   }
-LABEL_77:
-  Master_WarQuestSelectionMaster = (char *)*p_firstResultGrid;
+LABEL_79:
+  Master_object = (__int64)*p_firstResultGrid;
   if ( !*p_firstResultGrid )
-    goto LABEL_85;
-  UIGrid__set_repositionNow((UIGrid_o *)Master_WarQuestSelectionMaster, 1, 0LL);
-  Master_WarQuestSelectionMaster = (char *)*p_sceResultGrid;
+    goto LABEL_87;
+  UIGrid__set_repositionNow((UIGrid_o *)Master_object, 1, 0LL);
+  Master_object = (__int64)*p_sceResultGrid;
   if ( !*p_sceResultGrid )
-    goto LABEL_85;
-  UIGrid__set_repositionNow((UIGrid_o *)Master_WarQuestSelectionMaster, 1, 0LL);
-  Master_WarQuestSelectionMaster = (char *)*p_thrResultGrid;
+    goto LABEL_87;
+  UIGrid__set_repositionNow((UIGrid_o *)Master_object, 1, 0LL);
+  Master_object = (__int64)*p_thrResultGrid;
   if ( !*p_thrResultGrid )
-    goto LABEL_85;
-  UIGrid__set_repositionNow((UIGrid_o *)Master_WarQuestSelectionMaster, 1, 0LL);
-  Master_WarQuestSelectionMaster = (char *)*p_resultScrollViewGrid;
+    goto LABEL_87;
+  UIGrid__set_repositionNow((UIGrid_o *)Master_object, 1, 0LL);
+  Master_object = (__int64)*p_resultScrollViewGrid;
   if ( !*p_resultScrollViewGrid )
-    goto LABEL_85;
-  UIGrid__set_repositionNow((UIGrid_o *)Master_WarQuestSelectionMaster, 1, 0LL);
-  Master_WarQuestSelectionMaster = (char *)this->fields.resultScrollViewResultFrameGrid;
-  if ( !Master_WarQuestSelectionMaster )
-    goto LABEL_85;
-  UIGrid__set_repositionNow((UIGrid_o *)Master_WarQuestSelectionMaster, 1, 0LL);
+    goto LABEL_87;
+  UIGrid__set_repositionNow((UIGrid_o *)Master_object, 1, 0LL);
+  Master_object = (__int64)this->fields.resultScrollViewResultFrameGrid;
+  if ( !Master_object )
+    goto LABEL_87;
+  UIGrid__set_repositionNow((UIGrid_o *)Master_object, 1, 0LL);
   if ( max_length < 11 )
-    ResultListWindow__showResultEffect(this, v64);
+    ResultListWindow__showResultEffect(this, v70);
   else
     UnityEngine_MonoBehaviour__StartCoroutine(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_13287/*"StartDisp"*/,
+      (System_String_o *)StringLiteral_12740/*"StartDisp"*/,
       0LL);
 }
 
 
 void __fastcall ResultListWindow__showResultEffect(ResultListWindow_o *this, const MethodInfo *method)
 {
-  if ( (byte_438DC12 & 1) == 0 )
+  if ( (byte_48E65C6 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_22480/*"setDisp"*/);
-    byte_438DC12 = 1;
+    sub_1B00CCC(&StringLiteral_22830/*"setDisp"*/, method);
+    byte_48E65C6 = 1;
   }
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_22480/*"setDisp"*/,
+    (System_String_o *)StringLiteral_22830/*"setDisp"*/,
     0.3,
     0LL);
 }
@@ -1504,18 +1418,18 @@ void __fastcall ResultListWindow__showResultItem(ResultListWindow_o *this, const
 {
   UnityEngine_GameObject_o *dispObj; // x0
 
-  if ( (byte_438DC15 & 1) == 0 )
+  if ( (byte_48E65C9 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_18712/*"endDisp"*/);
-    byte_438DC15 = 1;
+    sub_1B00CCC(&StringLiteral_18750/*"endDisp"*/, method);
+    byte_48E65C9 = 1;
   }
   dispObj = this->fields.dispObj;
   if ( !dispObj )
-    sub_B7769C(0LL, method);
+    sub_1B00F28(0LL, method);
   UnityEngine_GameObject__SetActive(dispObj, 1, 0LL);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_18712/*"endDisp"*/,
+    (System_String_o *)StringLiteral_18750/*"endDisp"*/,
     this->fields.itemDispTime,
     0LL);
 }
@@ -1541,276 +1455,305 @@ bool __fastcall ResultListWindow__StartDisp_d__47__MoveNext(
         ResultListWindow__StartDisp_d__47_o *this,
         const MethodInfo *method)
 {
-  ResultListWindow__StartDisp_d__47_o *v2; // x20
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
   int32_t _1__state; // w8
   struct ResultListWindow_o *_4__this; // x19
-  UnityEngine_WaitForSeconds_o *v5; // x19
+  UnityEngine_WaitForSeconds_o *v15; // x19
+  int32_t v16; // w2
+  int32_t v17; // w3
   bool result; // w0
-  ResultListWindow__StartDisp_d__47_o **p_listRewardAction_5__2; // x21
-  ResultListWindow__StartDisp_d__47_o *listRewardAction_5__2; // x23
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v9; // x22
-  unsigned int v10; // w23
-  __int64 v11; // x22
-  float v12; // s0
-  unsigned int v13; // w9
+  System_Collections_Generic_List_object__o *listRewardAction_5__2; // x0
+  System_Collections_Generic_List_object__o *v20; // x22
+  System_Collections_Generic_List_object__o **p_listRewardAction_5__2; // x21
+  int32_t v22; // w2
+  int32_t v23; // w3
+  int v24; // w23
+  __int64 v25; // x22
+  int32_t v26; // w2
+  int32_t v27; // w3
+  float v28; // s0
+  unsigned int v29; // w9
   int maxPlayCnt; // w8
-  signed int v15; // w9
-  int v16; // w9
-  unsigned int v17; // w8
-  __int64 v20; // x24
-  __int64 v21; // x25
-  int _2__current; // w8
-  __int64 v23; // x22
+  signed int v31; // w9
+  int v32; // w9
+  unsigned int v33; // w8
+  struct System_Object_array *items; // x8
+  _QWORD *v36; // x9
+  __int64 size; // x10
+  Il2CppClass **v38; // x8
+  int v39; // w8
+  int32_t v40; // w22
+  System_Collections_Generic_List_object__o *v41; // x23
+  Il2CppObject *Item; // x0
+  const MethodInfo *v43; // x2
   System_Collections_IEnumerator_o *started; // x0
-  int v25; // w8
-  __int64 v26; // x8
-  ResultListWindow__StartDisp_d__47_o *v27; // x22
-  __int64 v28; // x20
-  int v29; // w8
-  __int64 v30; // x8
-  struct System_Collections_Generic_List_GameObject__o *resultItemObjList; // x21
-  __int64 v32; // x20
-  int size; // w8
+  int32_t v45; // w2
+  int32_t v46; // w3
+  int32_t v47; // w2
+  int32_t v48; // w3
+  struct System_Collections_Generic_List_ResultListWindow_RewardAction__o **v49; // x21
+  int32_t v50; // w20
+  int32_t v51; // w20
   float EFFECT_PLAY_TIME; // s0
-  System_String_o *v35; // x1
-  ResultListWindow_c *v36; // x0
+  System_String_o *v53; // x1
+  ResultListWindow_c *v54; // x0
   Il2CppObject **p__2__current; // x20
 
-  v2 = this;
-  if ( (byte_4388A2A & 1) == 0 )
+  if ( (byte_48E65D2 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_ResultListWindow_RewardAction__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_ResultListWindow_RewardAction___ctor__);
-    sub_B775C4(&Method_System_Collections_Generic_List_ResultListWindow_RewardAction__get_Count__);
-    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_B775C4(&Method_System_Collections_Generic_List_ResultListWindow_RewardAction__get_Item__);
-    sub_B775C4(&System_Collections_Generic_List_ResultListWindow_RewardAction__TypeInfo);
-    sub_B775C4(&ResultListWindow_TypeInfo);
-    sub_B775C4(&ResultListWindow_RewardAction_TypeInfo);
-    sub_B775C4(&UnityEngine_WaitForSeconds_TypeInfo);
-    this = (ResultListWindow__StartDisp_d__47_o *)sub_B775C4(&StringLiteral_6118/*"EndOpen"*/);
-    byte_4388A2A = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_ResultListWindow_RewardAction__Add__, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_ResultListWindow_RewardAction___ctor__, v3);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_GameObject__get_Count__, v4);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_ResultListWindow_RewardAction__get_Count__, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_ResultListWindow_RewardAction__get_Item__, v6);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_GameObject__get_Item__, v7);
+    sub_1B00CCC(&System_Collections_Generic_List_ResultListWindow_RewardAction__TypeInfo, v8);
+    sub_1B00CCC(&ResultListWindow_TypeInfo, v9);
+    sub_1B00CCC(&ResultListWindow_RewardAction_TypeInfo, v10);
+    sub_1B00CCC(&UnityEngine_WaitForSeconds_TypeInfo, v11);
+    sub_1B00CCC(&StringLiteral_5919/*"EndOpen"*/, v12);
+    byte_48E65D2 = 1;
   }
-  _1__state = v2->fields.__1__state;
-  _4__this = v2->fields.__4__this;
+  _1__state = this->fields.__1__state;
+  _4__this = this->fields.__4__this;
   if ( _1__state == 2 )
   {
-    p_listRewardAction_5__2 = (ResultListWindow__StartDisp_d__47_o **)&v2->fields._listRewardAction_5__2;
-    listRewardAction_5__2 = (ResultListWindow__StartDisp_d__47_o *)v2->fields._listRewardAction_5__2;
-    v2->fields.__1__state = -1;
+    listRewardAction_5__2 = (System_Collections_Generic_List_object__o *)this->fields._listRewardAction_5__2;
+    this->fields.__1__state = -1;
     if ( listRewardAction_5__2 )
-      goto LABEL_38;
-    goto LABEL_77;
+      goto LABEL_37;
+    goto LABEL_69;
   }
   if ( _1__state != 1 )
   {
     if ( !_1__state )
     {
-      v2->fields.__1__state = -1;
-      v5 = (UnityEngine_WaitForSeconds_o *)sub_B77694(UnityEngine_WaitForSeconds_TypeInfo);
-      UnityEngine_WaitForSeconds___ctor(v5, 0.2, 0LL);
-      v2->fields.__2__current = (Il2CppObject *)v5;
-      sub_B77560(&v2->fields.__2__current);
+      this->fields.__1__state = -1;
+      v15 = (UnityEngine_WaitForSeconds_o *)sub_1B00F18(UnityEngine_WaitForSeconds_TypeInfo);
+      UnityEngine_WaitForSeconds___ctor(v15, 0.2, 0LL);
+      this->fields.__2__current = (Il2CppObject *)v15;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.__2__current, (int32_t)v15, v16, v17);
       result = 1;
-      v2->fields.__1__state = 1;
+      this->fields.__1__state = 1;
       return result;
     }
     return 0;
   }
-  p_listRewardAction_5__2 = (ResultListWindow__StartDisp_d__47_o **)&v2->fields._listRewardAction_5__2;
-  v2->fields.__1__state = -1;
+  this->fields.__1__state = -1;
   while ( 1 )
   {
-    v9 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_ResultListWindow_RewardAction__TypeInfo);
-    System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-      v9,
-      (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_ResultListWindow_RewardAction___ctor__);
-    *p_listRewardAction_5__2 = (ResultListWindow__StartDisp_d__47_o *)v9;
-    sub_B77560(p_listRewardAction_5__2);
+    v20 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_ResultListWindow_RewardAction__TypeInfo);
+    System_Collections_Generic_List_object____ctor(
+      v20,
+      (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_ResultListWindow_RewardAction___ctor__);
+    this->fields._listRewardAction_5__2 = (struct System_Collections_Generic_List_ResultListWindow_RewardAction__o *)v20;
+    p_listRewardAction_5__2 = (System_Collections_Generic_List_object__o **)&this->fields._listRewardAction_5__2;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields._listRewardAction_5__2, (int32_t)v20, v22, v23);
     if ( !_4__this )
-      goto LABEL_77;
-    v10 = 0;
-    while ( (signed int)(v10 + _4__this->fields.playCnt) < _4__this->fields.maxPlayCnt )
+      goto LABEL_69;
+    v24 = 0;
+    while ( v24 + _4__this->fields.playCnt < _4__this->fields.maxPlayCnt )
     {
-      v11 = sub_B77694(ResultListWindow_RewardAction_TypeInfo);
-      System_Object___ctor((Il2CppObject *)v11, 0LL);
-      if ( !v11 )
-        goto LABEL_77;
-      *(_DWORD *)(v11 + 16) = v10;
-      v12 = 0.0;
-      v13 = v10 + _4__this->fields.playCnt;
-      *(_DWORD *)(v11 + 20) = v13;
+      v25 = sub_1B00F18(ResultListWindow_RewardAction_TypeInfo);
+      System_Object___ctor((Il2CppObject *)v25, 0LL);
+      if ( !v25 )
+        goto LABEL_69;
+      *(_DWORD *)(v25 + 16) = v24;
+      v28 = 0.0;
+      v29 = v24 + _4__this->fields.playCnt;
+      *(_DWORD *)(v25 + 20) = v29;
       maxPlayCnt = _4__this->fields.maxPlayCnt;
-      if ( maxPlayCnt >= 51 && (int)(v13 + 1) >= 51 )
+      if ( maxPlayCnt >= 51 && (int)(v29 + 1) >= 51 )
       {
-        v15 = v13 / 0xA;
-        v12 = (float)v15 / (float)((maxPlayCnt - 1) / 10);
-        v16 = v15 + 1;
-        v17 = maxPlayCnt / 0xAu;
-        if ( v12 >= 0.85 || v16 == v17 )
-          v12 = 1.0;
+        v31 = v29 / 0xA;
+        v28 = (float)v31 / (float)((maxPlayCnt - 1) / 10);
+        v32 = v31 + 1;
+        v33 = maxPlayCnt / 0xAu;
+        if ( v28 >= 0.85 || v32 == v33 )
+          v28 = 1.0;
       }
-      *(float *)(v11 + 24) = v12;
-      this = *p_listRewardAction_5__2;
+      *(float *)(v25 + 24) = v28;
+      listRewardAction_5__2 = *p_listRewardAction_5__2;
       if ( !*p_listRewardAction_5__2 )
-        goto LABEL_77;
-      System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-        (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this,
-        (EventMissionProgressRequest_Argument_ProgressData_o *)v11,
-        (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_ResultListWindow_RewardAction__Add__);
-      if ( v10++ > 8 )
+        goto LABEL_69;
+      items = listRewardAction_5__2->fields._items;
+      v36 = Method_System_Collections_Generic_List_ResultListWindow_RewardAction__Add__;
+      ++listRewardAction_5__2->fields._version;
+      if ( !items )
+        goto LABEL_69;
+      size = listRewardAction_5__2->fields._size;
+      if ( (unsigned int)size >= items->max_length )
+      {
+        System_Collections_Generic_List_object___AddWithResize(
+          listRewardAction_5__2,
+          (Il2CppObject *)v25,
+          *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
+      }
+      else
+      {
+        v38 = &items->obj.klass + size;
+        listRewardAction_5__2->fields._size = size + 1;
+        v38[4] = (Il2CppClass *)v25;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)(v38 + 4), v25, v26, v27);
+      }
+      if ( ++v24 == 10 )
         break;
     }
-    if ( !*p_listRewardAction_5__2 )
-      goto LABEL_77;
-    _4__this->fields.playCnt += LODWORD((*p_listRewardAction_5__2)->fields.__2__current);
     listRewardAction_5__2 = *p_listRewardAction_5__2;
     if ( !*p_listRewardAction_5__2 )
-      goto LABEL_77;
-    v20 = 0LL;
-    v21 = 32LL;
-    while ( 1 )
+      goto LABEL_69;
+    v39 = listRewardAction_5__2->fields._size;
+    _4__this->fields.playCnt += v39;
+    if ( v39 >= 1 )
     {
-      _2__current = (int)listRewardAction_5__2->fields.__2__current;
-      if ( (int)v20 >= _2__current )
-        break;
-      if ( _2__current <= (unsigned int)v20 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-      v23 = *(_QWORD *)(*(_QWORD *)&listRewardAction_5__2->fields.__1__state + v21);
-      if ( LODWORD(listRewardAction_5__2->fields.__2__current) <= (unsigned int)v20 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-      started = ResultListWindow__StartRewardAction(
-                  _4__this,
-                  *(ResultListWindow_RewardAction_o **)(*(_QWORD *)&listRewardAction_5__2->fields.__1__state
-                                                      + 8 * v20
-                                                      + 32),
-                  0LL);
-      this = (ResultListWindow__StartDisp_d__47_o *)UnityEngine_MonoBehaviour__StartCoroutine_36304832(
-                                                      (UnityEngine_MonoBehaviour_o *)_4__this,
-                                                      started,
-                                                      0LL);
-      if ( v23 )
+      v40 = 0;
+      do
       {
-        *(_QWORD *)(v23 + 32) = this;
-        sub_B77560(v23 + 32);
+        listRewardAction_5__2 = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
+                                                                               listRewardAction_5__2,
+                                                                               v40,
+                                                                               (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_ResultListWindow_RewardAction__get_Item__);
+        if ( !*p_listRewardAction_5__2 )
+          goto LABEL_69;
+        v41 = listRewardAction_5__2;
+        Item = System_Collections_Generic_List_object___get_Item(
+                 *p_listRewardAction_5__2,
+                 v40,
+                 (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_ResultListWindow_RewardAction__get_Item__);
+        started = ResultListWindow__StartRewardAction(_4__this, (ResultListWindow_RewardAction_o *)Item, v43);
+        listRewardAction_5__2 = (System_Collections_Generic_List_object__o *)UnityEngine_MonoBehaviour__StartCoroutine_68062928(
+                                                                               (UnityEngine_MonoBehaviour_o *)_4__this,
+                                                                               started,
+                                                                               0LL);
+        if ( !v41 )
+          goto LABEL_69;
+        v41->fields._syncRoot = (Il2CppObject *)listRewardAction_5__2;
+        sub_1B00C70(
+          (ServantStatusBattleListViewItem_o *)&v41->fields._syncRoot,
+          (int32_t)listRewardAction_5__2,
+          v45,
+          v46);
         listRewardAction_5__2 = *p_listRewardAction_5__2;
-        ++v20;
-        v21 += 8LL;
-        if ( *p_listRewardAction_5__2 )
-          continue;
+        if ( !*p_listRewardAction_5__2 )
+          goto LABEL_69;
+        v39 = listRewardAction_5__2->fields._size;
       }
-      goto LABEL_77;
+      while ( ++v40 < v39 );
     }
-    if ( !_2__current || _2__current == _4__this->fields.maxPlayCnt )
-      goto LABEL_65;
-LABEL_38:
-    v25 = (int)listRewardAction_5__2->fields.__2__current;
-    if ( !v25 )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-    v26 = *(_QWORD *)(*(_QWORD *)&listRewardAction_5__2->fields.__1__state + 8LL * (v25 - 1) + 32);
-    if ( !v26 )
-      goto LABEL_77;
-    if ( *(_BYTE *)(v26 + 28) )
+    if ( !v39 || v39 == _4__this->fields.maxPlayCnt )
+      goto LABEL_58;
+LABEL_37:
+    listRewardAction_5__2 = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
+                                                                           listRewardAction_5__2,
+                                                                           listRewardAction_5__2->fields._size - 1,
+                                                                           (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_ResultListWindow_RewardAction__get_Item__);
+    if ( !listRewardAction_5__2 )
+      goto LABEL_69;
+    if ( LOBYTE(listRewardAction_5__2->fields._version) )
     {
       if ( !_4__this )
-        goto LABEL_77;
-      goto LABEL_46;
+        goto LABEL_69;
+      goto LABEL_43;
     }
     if ( !_4__this )
-      goto LABEL_77;
+      goto LABEL_69;
     if ( !_4__this->fields.isSkip )
       break;
-LABEL_46:
+LABEL_43:
+    v49 = &this->fields._listRewardAction_5__2;
     if ( _4__this->fields.isSkip )
     {
-      v27 = *p_listRewardAction_5__2;
-      if ( *p_listRewardAction_5__2 )
+      listRewardAction_5__2 = (System_Collections_Generic_List_object__o *)*v49;
+      if ( *v49 )
       {
-        v28 = 0LL;
-        while ( 1 )
+        v50 = 0;
+        while ( v50 < listRewardAction_5__2->fields._size )
         {
-          v29 = (int)v27->fields.__2__current;
-          if ( (int)v28 >= v29 )
-            break;
-          if ( v29 <= (unsigned int)v28 )
-            System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-          v30 = *(_QWORD *)(*(_QWORD *)&v27->fields.__1__state + 8 * v28 + 32);
-          if ( v30 )
+          listRewardAction_5__2 = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
+                                                                                 listRewardAction_5__2,
+                                                                                 v50,
+                                                                                 (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_ResultListWindow_RewardAction__get_Item__);
+          if ( listRewardAction_5__2 )
           {
-            UnityEngine_MonoBehaviour__StopCoroutine_36305500(
+            UnityEngine_MonoBehaviour__StopCoroutine_68063548(
               (UnityEngine_MonoBehaviour_o *)_4__this,
-              *(UnityEngine_Coroutine_o **)(v30 + 32),
+              (UnityEngine_Coroutine_o *)listRewardAction_5__2->fields._syncRoot,
               0LL);
-            v27 = *p_listRewardAction_5__2;
-            ++v28;
-            if ( *p_listRewardAction_5__2 )
+            listRewardAction_5__2 = (System_Collections_Generic_List_object__o *)*v49;
+            ++v50;
+            if ( *v49 )
               continue;
           }
-          goto LABEL_77;
+          goto LABEL_69;
         }
-        resultItemObjList = _4__this->fields.resultItemObjList;
-        if ( resultItemObjList )
+        listRewardAction_5__2 = (System_Collections_Generic_List_object__o *)_4__this->fields.resultItemObjList;
+        if ( listRewardAction_5__2 )
         {
-          v32 = 0LL;
-          while ( 1 )
+          v51 = 0;
+          while ( v51 < listRewardAction_5__2->fields._size )
           {
-            size = resultItemObjList->fields._size;
-            if ( (int)v32 >= size )
-              break;
-            if ( size <= (unsigned int)v32 )
-              System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-            this = (ResultListWindow__StartDisp_d__47_o *)resultItemObjList->fields._items->m_Items[v32];
-            if ( this )
+            listRewardAction_5__2 = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
+                                                                                   listRewardAction_5__2,
+                                                                                   v51,
+                                                                                   (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+            if ( listRewardAction_5__2 )
             {
-              UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-              resultItemObjList = _4__this->fields.resultItemObjList;
-              ++v32;
-              if ( resultItemObjList )
+              UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)listRewardAction_5__2, 1, 0LL);
+              listRewardAction_5__2 = (System_Collections_Generic_List_object__o *)_4__this->fields.resultItemObjList;
+              ++v51;
+              if ( listRewardAction_5__2 )
                 continue;
             }
-            goto LABEL_77;
+            goto LABEL_69;
           }
           _4__this->fields.playCnt = _4__this->fields.maxPlayCnt;
-          ResultListWindow__EndOpen(_4__this, 0LL);
-LABEL_65:
-          this = (ResultListWindow__StartDisp_d__47_o *)_4__this->fields.skipCollider;
-          if ( this )
+          ResultListWindow__EndOpen(_4__this, method);
+LABEL_58:
+          listRewardAction_5__2 = (System_Collections_Generic_List_object__o *)_4__this->fields.skipCollider;
+          if ( listRewardAction_5__2 )
           {
-            UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)this, 0, 0LL);
+            UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)listRewardAction_5__2, 0, 0LL);
             if ( _4__this->fields.isDischargeGetEffectItem )
             {
               EFFECT_PLAY_TIME = 0.5;
-              v35 = (System_String_o *)StringLiteral_6118/*"EndOpen"*/;
+              v53 = (System_String_o *)StringLiteral_5919/*"EndOpen"*/;
             }
             else
             {
               if ( _4__this->fields.maxPlayCnt != 1 && _4__this->fields.playCnt != _4__this->fields.maxPlayCnt - 1 )
                 return 0;
-              v36 = ResultListWindow_TypeInfo;
-              if ( (BYTE3(ResultListWindow_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-                && !ResultListWindow_TypeInfo->_2.cctor_finished )
+              v54 = ResultListWindow_TypeInfo;
+              if ( !ResultListWindow_TypeInfo->_2.cctor_finished )
               {
                 j_il2cpp_runtime_class_init_0(ResultListWindow_TypeInfo);
-                v36 = ResultListWindow_TypeInfo;
+                v54 = ResultListWindow_TypeInfo;
               }
-              EFFECT_PLAY_TIME = v36->static_fields->EFFECT_PLAY_TIME;
-              v35 = (System_String_o *)StringLiteral_6118/*"EndOpen"*/;
+              EFFECT_PLAY_TIME = v54->static_fields->EFFECT_PLAY_TIME;
+              v53 = (System_String_o *)StringLiteral_5919/*"EndOpen"*/;
             }
-            UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)_4__this, v35, EFFECT_PLAY_TIME, 0LL);
+            UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)_4__this, v53, EFFECT_PLAY_TIME, 0LL);
             return 0;
           }
         }
       }
-LABEL_77:
-      sub_B7769C(this, method);
+LABEL_69:
+      sub_1B00F28(listRewardAction_5__2, method);
     }
-    *p_listRewardAction_5__2 = 0LL;
-    sub_B77560(p_listRewardAction_5__2);
+    *v49 = 0LL;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields._listRewardAction_5__2, 0, v47, v48);
   }
-  v2->fields.__2__current = 0LL;
-  p__2__current = &v2->fields.__2__current;
-  sub_B77560(p__2__current);
+  this->fields.__2__current = 0LL;
+  p__2__current = &this->fields.__2__current;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)p__2__current, 0, v47, v48);
   *((_DWORD *)p__2__current - 2) = 2;
   return 1;
 }
@@ -1832,11 +1775,11 @@ void __fastcall __noreturn ResultListWindow__StartDisp_d__47__System_Collections
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
+  v2 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B00F18(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B775C8(&Method_ResultListWindow__StartDisp_d__47_System_Collections_IEnumerator_Reset__);
-  sub_B77668(v3, v4);
+  v4 = sub_1B00CE0(&Method_ResultListWindow__StartDisp_d__47_System_Collections_IEnumerator_Reset__);
+  sub_1B00DF4(v3, v4);
 }
 
 
@@ -1870,364 +1813,402 @@ bool __fastcall ResultListWindow__StartRewardAction_d__48__MoveNext(
         ResultListWindow__StartRewardAction_d__48_o *this,
         const MethodInfo *method)
 {
-  ResultListWindow__StartRewardAction_d__48_o *v2; // x19
+  const MethodInfo *v2; // x2
+  ResultListWindow__StartRewardAction_d__48_o *v3; // x19
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
   struct ResultListWindow_o *_4__this; // x20
-  int32_t v4; // w9
+  int32_t v17; // w9
   int32_t i_5__2; // w8
   struct ResultListWindow_RewardAction_o *rewardAction; // x8
   float maxDrawItemDispWaitTime; // s8
-  UnityEngine_WaitForSeconds_o *v8; // x20
-  Il2CppObject **p__2__current; // x19
+  UnityEngine_WaitForSeconds_o *v21; // x20
+  ServantStatusBattleListViewItem_o *p__2__current; // x19
+  int32_t v23; // w2
+  int32_t v24; // w3
   bool result; // w0
-  int isRare; // w8
-  System_String_o **v12; // x8
-  int v13; // w23
-  System_String_o *v14; // x21
-  UnityEngine_Transform_o *v15; // x22
-  UnityEngine_GameObject_o *v16; // x21
-  struct ResultListWindow_RewardAction_o *v17; // x8
-  struct System_Collections_Generic_List_GameObject__o *v18; // x24
-  __int64 v19; // x25
-  ResultListWindow__StartRewardAction_d__48_o *v20; // x22
-  BoxGachaUtility_c *v21; // x0
-  Il2CppObject **v22; // x19
-  int v23; // w8
-  struct ResultListWindow_RewardAction_o *v24; // x8
-  struct System_Collections_Generic_List_GameObject__o *v25; // x21
-  __int64 v26; // x22
-  struct ResultListWindow_RewardAction_o *v27; // x8
-  struct ResultListWindow_RewardAction_o *v28; // x8
-  ResultListWindow_c *v29; // x0
-  float scrollValue; // s0
-  bool v31; // w0
-  int maxPlayCnt; // w23
-  UnityEngine_Transform_o *transform; // x21
-  UnityEngine_GameObject_o *v34; // x21
-  struct ResultListWindow_RewardAction_o *v35; // x8
-  struct System_Collections_Generic_List_GameObject__o *resultItemObjList; // x24
-  __int64 playCnt; // x25
-  ResultListWindow__StartRewardAction_d__48_o *v38; // x22
+  int32_t v26; // w2
+  int32_t v27; // w3
+  int v28; // w23
+  System_String_o **v29; // x8
+  System_String_o *v30; // x21
+  UnityEngine_Transform_o *v31; // x0
+  const MethodInfo *v32; // x2
+  ResultListWindow__StartRewardAction_d__48_o *v33; // x21
+  struct ResultListWindow_RewardAction_o *v34; // x8
+  ResultListWindow__StartRewardAction_d__48_o *v35; // x22
+  int32_t v36; // w2
+  int32_t v37; // w3
+  const MethodInfo *v38; // x1
   BoxGachaUtility_c *v39; // x0
-  UnityEngine_Object_o *ComponentInChildren_Dropdown_DropdownItem; // x22
-  UnityEngine_Object_o *v41; // x21
+  __int64 v40; // x8
+  _QWORD *v41; // x9
+  __int64 v42; // x10
+  __int64 v43; // x8
+  struct ResultListWindow_RewardAction_o *v44; // x8
+  struct ResultListWindow_RewardAction_o *v45; // x8
+  ResultListWindow_c *v46; // x0
+  float scrollValue; // s0
+  bool v48; // w0
+  _BOOL4 isSkip; // w8
+  int maxPlayCnt; // w23
+  UnityEngine_Transform_o *transform; // x0
+  const MethodInfo *v52; // x2
+  ResultListWindow__StartRewardAction_d__48_o *v53; // x21
+  struct ResultListWindow_RewardAction_o *v54; // x8
+  ResultListWindow__StartRewardAction_d__48_o *v55; // x22
+  int32_t v56; // w2
+  int32_t v57; // w3
+  const MethodInfo *v58; // x1
+  int32_t v59; // w2
+  int32_t v60; // w3
+  BoxGachaUtility_c *v61; // x0
+  __int64 v62; // x8
+  _QWORD *v63; // x9
+  __int64 _2__current_low; // x10
+  __int64 v65; // x8
+  Il2CppObject *ComponentInChildren_object; // x22
+  Il2CppObject *v67; // x21
+  ServantStatusBattleListViewItem_o *v68; // x19
+  int v69; // w8
   float itemDropTime; // s8
-  UnityEngine_WaitForSeconds_o *v43; // x20
+  UnityEngine_WaitForSeconds_o *v71; // x20
+  int32_t v72; // w2
+  int32_t v73; // w3
 
-  v2 = this;
-  if ( (byte_4388A2B & 1) == 0 )
+  v3 = this;
+  if ( (byte_48E65D3 & 1) == 0 )
   {
-    sub_B775C4(&BoxGachaResultEffectComponent_TypeInfo);
-    sub_B775C4(&BoxGachaUtility_TypeInfo);
-    sub_B775C4(&Method_UnityEngine_GameObject_AddComponent_SyncPositionComponent___);
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponentInChildren_Animation___);
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponentInChildren_SimpleAnimation___);
-    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&ResultListWindow_TypeInfo);
-    sub_B775C4(&UnityEngine_WaitForSeconds_TypeInfo);
-    sub_B775C4(&StringLiteral_18528/*"ef_boxitem_drop_rare"*/);
-    sub_B775C4(&StringLiteral_18529/*"ef_boxitem_drop_scalable"*/);
-    sub_B775C4(&StringLiteral_18531/*"ef_boxitem_fall_scalable"*/);
-    this = (ResultListWindow__StartRewardAction_d__48_o *)sub_B775C4(&StringLiteral_6118/*"EndOpen"*/);
-    byte_4388A2B = 1;
+    sub_1B00CCC(&BoxGachaUtility_TypeInfo, method);
+    sub_1B00CCC(&Method_UnityEngine_GameObject_AddComponent_SyncPositionComponent___, v4);
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponentInChildren_Animation___, v5);
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponentInChildren_SimpleAnimation___, v6);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_GameObject__Add__, v7);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_GameObject__get_Item__, v8);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v9);
+    sub_1B00CCC(&ResultListWindow_TypeInfo, v10);
+    sub_1B00CCC(&UnityEngine_WaitForSeconds_TypeInfo, v11);
+    sub_1B00CCC(&StringLiteral_18557/*"ef_boxitem_drop_rare"*/, v12);
+    sub_1B00CCC(&StringLiteral_18558/*"ef_boxitem_drop_scalable"*/, v13);
+    sub_1B00CCC(&StringLiteral_18560/*"ef_boxitem_fall_scalable"*/, v14);
+    this = (ResultListWindow__StartRewardAction_d__48_o *)sub_1B00CCC(&StringLiteral_5919/*"EndOpen"*/, v15);
+    byte_48E65D3 = 1;
   }
-  _4__this = v2->fields.__4__this;
-  switch ( v2->fields.__1__state )
+  _4__this = v3->fields.__4__this;
+  switch ( v3->fields.__1__state )
   {
     case 0:
-      v4 = 0;
-      v2->fields.__1__state = -1;
-      v2->fields._i_5__2 = 0;
+      v17 = 0;
+      v3->fields.__1__state = -1;
+      v3->fields._i_5__2 = 0;
       goto LABEL_6;
     case 1:
-      i_5__2 = v2->fields._i_5__2;
-      v2->fields.__1__state = -1;
-      v4 = i_5__2 + 1;
-      v2->fields._i_5__2 = i_5__2 + 1;
+      i_5__2 = v3->fields._i_5__2;
+      v3->fields.__1__state = -1;
+      v17 = i_5__2 + 1;
+      v3->fields._i_5__2 = i_5__2 + 1;
 LABEL_6:
-      rewardAction = v2->fields.rewardAction;
+      rewardAction = v3->fields.rewardAction;
       if ( !rewardAction )
-        goto LABEL_97;
-      if ( v4 < rewardAction->fields.index )
+        goto LABEL_84;
+      if ( v17 < rewardAction->fields.index )
       {
         if ( _4__this )
         {
           maxDrawItemDispWaitTime = _4__this->fields.maxDrawItemDispWaitTime;
-          v8 = (UnityEngine_WaitForSeconds_o *)sub_B77694(UnityEngine_WaitForSeconds_TypeInfo);
-          UnityEngine_WaitForSeconds___ctor(v8, maxDrawItemDispWaitTime, 0LL);
-          v2->fields.__2__current = (Il2CppObject *)v8;
-          p__2__current = &v2->fields.__2__current;
-          sub_B77560(p__2__current);
+          v21 = (UnityEngine_WaitForSeconds_o *)sub_1B00F18(UnityEngine_WaitForSeconds_TypeInfo);
+          UnityEngine_WaitForSeconds___ctor(v21, maxDrawItemDispWaitTime, 0LL);
+          v3->fields.__2__current = (Il2CppObject *)v21;
+          p__2__current = (ServantStatusBattleListViewItem_o *)&v3->fields.__2__current;
+          sub_1B00C70(p__2__current, (int32_t)v21, v23, v24);
           result = 1;
-          *((_DWORD *)p__2__current - 2) = 1;
+          *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
           return result;
         }
-LABEL_97:
-        sub_B7769C(this, method);
+LABEL_84:
+        sub_1B00F28(this, method);
       }
       scrollValue = rewardAction->fields.scrollValue;
       if ( scrollValue > 0.0 && rewardAction->fields.playCnt + 1 >= 51 )
       {
         if ( !_4__this )
-          goto LABEL_97;
+          goto LABEL_84;
         if ( !_4__this->fields.isLastLineEffectPlay )
         {
           this = (ResultListWindow__StartRewardAction_d__48_o *)_4__this->fields.scrollBar;
           if ( !this )
-            goto LABEL_97;
+            goto LABEL_84;
           UIProgressBar__set_value((UIProgressBar_o *)this, scrollValue, 0LL);
-          rewardAction = v2->fields.rewardAction;
+          rewardAction = v3->fields.rewardAction;
           if ( !rewardAction )
-            goto LABEL_97;
+            goto LABEL_84;
           if ( rewardAction->fields.scrollValue >= 1.0 )
-          {
             _4__this->fields.isLastLineEffectPlay = 1;
-            rewardAction = v2->fields.rewardAction;
-            if ( !rewardAction )
-              goto LABEL_97;
-          }
         }
       }
       else if ( !_4__this )
       {
-        goto LABEL_97;
+        goto LABEL_84;
       }
-      v31 = ResultListWindow__checkRare(_4__this, rewardAction->fields.playCnt, 0LL);
-      _4__this->fields.isRare = v31;
-      if ( v31 || !_4__this->fields.isSkip )
+      v48 = ResultListWindow__checkRare(_4__this, rewardAction->fields.playCnt, v2);
+      isSkip = _4__this->fields.isSkip;
+      _4__this->fields.isRare = v48;
+      if ( !isSkip || v48 )
       {
         this = (ResultListWindow__StartRewardAction_d__48_o *)_4__this->fields.effectRoot;
         if ( !this )
-          goto LABEL_97;
+          goto LABEL_84;
         maxPlayCnt = _4__this->fields.maxPlayCnt;
         transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0LL);
-        if ( (BYTE3(BoxGachaResultEffectComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !BoxGachaResultEffectComponent_TypeInfo->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(BoxGachaResultEffectComponent_TypeInfo);
-        }
         this = (ResultListWindow__StartRewardAction_d__48_o *)BoxGachaResultEffectComponent__getEffect(
-                                                                (System_String_o *)StringLiteral_18531/*"ef_boxitem_fall_scalable"*/,
+                                                                (System_String_o *)StringLiteral_18560/*"ef_boxitem_fall_scalable"*/,
                                                                 transform,
-                                                                0LL);
+                                                                v52);
         if ( !this )
-          goto LABEL_97;
-        v34 = (UnityEngine_GameObject_o *)this;
-        this = (ResultListWindow__StartRewardAction_d__48_o *)UnityEngine_GameObject__AddComponent_UnitySynchronizationContext_SynchronizationContextBehavoir_(
+          goto LABEL_84;
+        v53 = this;
+        this = (ResultListWindow__StartRewardAction_d__48_o *)UnityEngine_GameObject__AddComponent_object_(
                                                                 (UnityEngine_GameObject_o *)this,
-                                                                (const MethodInfo_1DEBEC8 *)Method_UnityEngine_GameObject_AddComponent_SyncPositionComponent___);
-        v35 = v2->fields.rewardAction;
-        if ( !v35 )
-          goto LABEL_97;
-        resultItemObjList = _4__this->fields.resultItemObjList;
-        if ( !resultItemObjList )
-          goto LABEL_97;
-        playCnt = v35->fields.playCnt;
-        v38 = this;
-        if ( resultItemObjList->fields._size <= (unsigned int)playCnt )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-        this = (ResultListWindow__StartRewardAction_d__48_o *)resultItemObjList->fields._items->m_Items[playCnt];
+                                                                (const MethodInfo_2DADD20 *)Method_UnityEngine_GameObject_AddComponent_SyncPositionComponent___);
+        v54 = v3->fields.rewardAction;
+        if ( !v54 )
+          goto LABEL_84;
+        v55 = this;
+        this = (ResultListWindow__StartRewardAction_d__48_o *)_4__this->fields.resultItemObjList;
         if ( !this )
-          goto LABEL_97;
+          goto LABEL_84;
+        this = (ResultListWindow__StartRewardAction_d__48_o *)System_Collections_Generic_List_object___get_Item(
+                                                                (System_Collections_Generic_List_object__o *)this,
+                                                                v54->fields.playCnt,
+                                                                (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+        if ( !this )
+          goto LABEL_84;
         this = (ResultListWindow__StartRewardAction_d__48_o *)UnityEngine_GameObject__get_transform(
                                                                 (UnityEngine_GameObject_o *)this,
                                                                 0LL);
-        if ( !v38 )
-          goto LABEL_97;
-        SyncPositionComponent__SetTarget((SyncPositionComponent_o *)v38, (UnityEngine_Transform_o *)this, 0LL);
+        if ( !v55 )
+          goto LABEL_84;
+        v55->fields.__4__this = (struct ResultListWindow_o *)this;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v55->fields.__4__this, (int32_t)this, v56, v57);
+        SyncPositionComponent__SyncPosition((SyncPositionComponent_o *)v55, v58);
         if ( maxPlayCnt >= 11 )
         {
-          v39 = BoxGachaUtility_TypeInfo;
-          if ( (BYTE3(BoxGachaUtility_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-            && !BoxGachaUtility_TypeInfo->_2.cctor_finished )
+          v61 = BoxGachaUtility_TypeInfo;
+          if ( !BoxGachaUtility_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(BoxGachaUtility_TypeInfo);
-            v39 = BoxGachaUtility_TypeInfo;
+            v61 = BoxGachaUtility_TypeInfo;
           }
-          GameObjectExtensions__SetLocalScale(v34, v39->static_fields->CHANGE_MAX_DRAW_EFFECT_SCALE, 0LL);
+          GameObjectExtensions__SetLocalScale(
+            (UnityEngine_GameObject_o *)v53,
+            v61->static_fields->CHANGE_MAX_DRAW_EFFECT_SCALE,
+            0LL);
         }
         this = (ResultListWindow__StartRewardAction_d__48_o *)_4__this->fields.fallEffectObjList;
         if ( !this )
-          goto LABEL_97;
-        System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-          (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this,
-          (EventMissionProgressRequest_Argument_ProgressData_o *)v34,
-          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_GameObject__Add__);
+          goto LABEL_84;
+        v62 = *(_QWORD *)&this->fields.__1__state;
+        v63 = Method_System_Collections_Generic_List_GameObject__Add__;
+        ++HIDWORD(this->fields.__2__current);
+        if ( !v62 )
+          goto LABEL_84;
+        _2__current_low = SLODWORD(this->fields.__2__current);
+        if ( (unsigned int)_2__current_low >= *(_DWORD *)(v62 + 24) )
+        {
+          System_Collections_Generic_List_object___AddWithResize(
+            (System_Collections_Generic_List_object__o *)this,
+            (Il2CppObject *)v53,
+            *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v63[4] + 192LL) + 112LL));
+        }
+        else
+        {
+          v65 = v62 + 8 * _2__current_low;
+          LODWORD(this->fields.__2__current) = _2__current_low + 1;
+          *(_QWORD *)(v65 + 32) = v53;
+          sub_1B00C70((ServantStatusBattleListViewItem_o *)(v65 + 32), (int32_t)v53, v59, v60);
+        }
         if ( !_4__this->fields.isSkip )
         {
-          ComponentInChildren_Dropdown_DropdownItem = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponentInChildren_Dropdown_DropdownItem_(
-                                                                                v34,
-                                                                                (const MethodInfo_1DEC070 *)Method_UnityEngine_GameObject_GetComponentInChildren_SimpleAnimation___);
-          v41 = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponentInChildren_Dropdown_DropdownItem_(
-                                          v34,
-                                          (const MethodInfo_1DEC070 *)Method_UnityEngine_GameObject_GetComponentInChildren_Animation___);
-          if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-            && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          {
+          ComponentInChildren_object = UnityEngine_GameObject__GetComponentInChildren_object_(
+                                         (UnityEngine_GameObject_o *)v53,
+                                         (const MethodInfo_2DAE06C *)Method_UnityEngine_GameObject_GetComponentInChildren_SimpleAnimation___);
+          v67 = UnityEngine_GameObject__GetComponentInChildren_object_(
+                  (UnityEngine_GameObject_o *)v53,
+                  (const MethodInfo_2DAE06C *)Method_UnityEngine_GameObject_GetComponentInChildren_Animation___);
+          if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          }
           this = (ResultListWindow__StartRewardAction_d__48_o *)UnityEngine_Object__op_Inequality(
-                                                                  ComponentInChildren_Dropdown_DropdownItem,
+                                                                  (UnityEngine_Object_o *)ComponentInChildren_object,
                                                                   0LL,
                                                                   0LL);
           if ( ((unsigned __int8)this & 1) != 0 )
           {
-            if ( !ComponentInChildren_Dropdown_DropdownItem )
-              goto LABEL_97;
-            SimpleAnimation__Play_16815192(
-              (SimpleAnimation_o *)ComponentInChildren_Dropdown_DropdownItem,
+            if ( !ComponentInChildren_object )
+              goto LABEL_84;
+            SimpleAnimation__Play_62462980(
+              (SimpleAnimation_o *)ComponentInChildren_object,
               _4__this->fields.aniName,
               0LL);
           }
           else
           {
-            if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-              && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-            {
+            if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-            }
-            this = (ResultListWindow__StartRewardAction_d__48_o *)UnityEngine_Object__op_Inequality(v41, 0LL, 0LL);
+            this = (ResultListWindow__StartRewardAction_d__48_o *)UnityEngine_Object__op_Inequality(
+                                                                    (UnityEngine_Object_o *)v67,
+                                                                    0LL,
+                                                                    0LL);
             if ( ((unsigned __int8)this & 1) != 0 )
             {
-              if ( !v41 )
-                goto LABEL_97;
-              UnityEngine_Animation__Play_51745976((UnityEngine_Animation_o *)v41, _4__this->fields.aniName, 0LL);
+              if ( !v67 )
+                goto LABEL_84;
+              UnityEngine_Animation__Play_67822748((UnityEngine_Animation_o *)v67, _4__this->fields.aniName, 0LL);
             }
           }
         }
       }
       itemDropTime = _4__this->fields.itemDropTime;
-      v43 = (UnityEngine_WaitForSeconds_o *)sub_B77694(UnityEngine_WaitForSeconds_TypeInfo);
-      UnityEngine_WaitForSeconds___ctor(v43, itemDropTime, 0LL);
-      v2->fields.__2__current = (Il2CppObject *)v43;
-      v22 = &v2->fields.__2__current;
-      sub_B77560(v22);
-      v23 = 2;
-LABEL_96:
-      *((_DWORD *)v22 - 2) = v23;
+      v71 = (UnityEngine_WaitForSeconds_o *)sub_1B00F18(UnityEngine_WaitForSeconds_TypeInfo);
+      UnityEngine_WaitForSeconds___ctor(v71, itemDropTime, 0LL);
+      v3->fields.__2__current = (Il2CppObject *)v71;
+      v68 = (ServantStatusBattleListViewItem_o *)&v3->fields.__2__current;
+      sub_1B00C70(v68, (int32_t)v71, v72, v73);
+      v69 = 2;
+LABEL_83:
+      *(_DWORD *)&v68[-1].fields.isMine = v69;
       return 1;
     case 2:
-      v2->fields.__1__state = -1;
+      v3->fields.__1__state = -1;
       if ( !_4__this )
-        goto LABEL_97;
+        goto LABEL_84;
       this = (ResultListWindow__StartRewardAction_d__48_o *)_4__this->fields.skipCollider;
       if ( !this )
-        goto LABEL_97;
+        goto LABEL_84;
       UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)this, 1, 0LL);
-      isRare = _4__this->fields.isRare;
-      if ( !_4__this->fields.isSkip )
-        goto LABEL_15;
-      if ( !_4__this->fields.isRare )
-        goto LABEL_37;
-      isRare = 1;
-LABEL_15:
+      if ( _4__this->fields.isSkip && !_4__this->fields.isRare )
+        goto LABEL_76;
       this = (ResultListWindow__StartRewardAction_d__48_o *)_4__this->fields.effectRoot;
-      if ( isRare )
-        v12 = (System_String_o **)&StringLiteral_18528/*"ef_boxitem_drop_rare"*/;
-      else
-        v12 = (System_String_o **)&StringLiteral_18529/*"ef_boxitem_drop_scalable"*/;
       if ( !this )
-        goto LABEL_97;
-      v13 = _4__this->fields.maxPlayCnt;
-      v14 = *v12;
-      v15 = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0LL);
-      if ( (BYTE3(BoxGachaResultEffectComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !BoxGachaResultEffectComponent_TypeInfo->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(BoxGachaResultEffectComponent_TypeInfo);
-      }
-      this = (ResultListWindow__StartRewardAction_d__48_o *)BoxGachaResultEffectComponent__getEffect(v14, v15, 0LL);
+        goto LABEL_84;
+      v28 = _4__this->fields.maxPlayCnt;
+      v29 = (System_String_o **)(_4__this->fields.isRare ? &StringLiteral_18557/*"ef_boxitem_drop_rare"*/ : &StringLiteral_18558/*"ef_boxitem_drop_scalable"*/);
+      v30 = *v29;
+      v31 = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0LL);
+      this = (ResultListWindow__StartRewardAction_d__48_o *)BoxGachaResultEffectComponent__getEffect(v30, v31, v32);
       if ( !this )
-        goto LABEL_97;
-      v16 = (UnityEngine_GameObject_o *)this;
-      this = (ResultListWindow__StartRewardAction_d__48_o *)UnityEngine_GameObject__AddComponent_UnitySynchronizationContext_SynchronizationContextBehavoir_(
+        goto LABEL_84;
+      v33 = this;
+      this = (ResultListWindow__StartRewardAction_d__48_o *)UnityEngine_GameObject__AddComponent_object_(
                                                               (UnityEngine_GameObject_o *)this,
-                                                              (const MethodInfo_1DEBEC8 *)Method_UnityEngine_GameObject_AddComponent_SyncPositionComponent___);
-      v17 = v2->fields.rewardAction;
-      if ( !v17 )
-        goto LABEL_97;
-      v18 = _4__this->fields.resultItemObjList;
-      if ( !v18 )
-        goto LABEL_97;
-      v19 = v17->fields.playCnt;
-      v20 = this;
-      if ( v18->fields._size <= (unsigned int)v19 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-      this = (ResultListWindow__StartRewardAction_d__48_o *)v18->fields._items->m_Items[v19];
+                                                              (const MethodInfo_2DADD20 *)Method_UnityEngine_GameObject_AddComponent_SyncPositionComponent___);
+      v34 = v3->fields.rewardAction;
+      if ( !v34 )
+        goto LABEL_84;
+      v35 = this;
+      this = (ResultListWindow__StartRewardAction_d__48_o *)_4__this->fields.resultItemObjList;
       if ( !this )
-        goto LABEL_97;
+        goto LABEL_84;
+      this = (ResultListWindow__StartRewardAction_d__48_o *)System_Collections_Generic_List_object___get_Item(
+                                                              (System_Collections_Generic_List_object__o *)this,
+                                                              v34->fields.playCnt,
+                                                              (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+      if ( !this )
+        goto LABEL_84;
       this = (ResultListWindow__StartRewardAction_d__48_o *)UnityEngine_GameObject__get_transform(
                                                               (UnityEngine_GameObject_o *)this,
                                                               0LL);
-      if ( !v20 )
-        goto LABEL_97;
-      SyncPositionComponent__SetTarget((SyncPositionComponent_o *)v20, (UnityEngine_Transform_o *)this, 0LL);
-      if ( v13 >= 11 )
+      if ( !v35 )
+        goto LABEL_84;
+      v35->fields.__4__this = (struct ResultListWindow_o *)this;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&v35->fields.__4__this, (int32_t)this, v36, v37);
+      SyncPositionComponent__SyncPosition((SyncPositionComponent_o *)v35, v38);
+      if ( v28 >= 11 )
       {
-        v21 = BoxGachaUtility_TypeInfo;
-        if ( (BYTE3(BoxGachaUtility_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !BoxGachaUtility_TypeInfo->_2.cctor_finished )
+        v39 = BoxGachaUtility_TypeInfo;
+        if ( !BoxGachaUtility_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(BoxGachaUtility_TypeInfo);
-          v21 = BoxGachaUtility_TypeInfo;
+          v39 = BoxGachaUtility_TypeInfo;
         }
-        GameObjectExtensions__SetLocalScale(v16, v21->static_fields->CHANGE_MAX_DRAW_EFFECT_SCALE, 0LL);
+        GameObjectExtensions__SetLocalScale(
+          (UnityEngine_GameObject_o *)v33,
+          v39->static_fields->CHANGE_MAX_DRAW_EFFECT_SCALE,
+          0LL);
       }
       if ( _4__this->fields.isRare )
-        goto LABEL_37;
+        goto LABEL_76;
       this = (ResultListWindow__StartRewardAction_d__48_o *)_4__this->fields.dropEffectObjList;
       if ( !this )
-        goto LABEL_97;
-      System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-        (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this,
-        (EventMissionProgressRequest_Argument_ProgressData_o *)v16,
-        (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_GameObject__Add__);
-LABEL_37:
-      v2->fields.__2__current = 0LL;
-      v22 = &v2->fields.__2__current;
-      sub_B77560(v22);
-      v23 = 3;
-      goto LABEL_96;
-    case 3:
-      v2->fields.__1__state = -1;
-      if ( !_4__this )
-        goto LABEL_97;
-      v24 = v2->fields.rewardAction;
-      if ( !v24 )
-        goto LABEL_97;
-      v25 = _4__this->fields.resultItemObjList;
-      if ( !v25 )
-        goto LABEL_97;
-      v26 = v24->fields.playCnt;
-      if ( v25->fields._size <= (unsigned int)v26 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-      this = (ResultListWindow__StartRewardAction_d__48_o *)v25->fields._items->m_Items[v26];
-      if ( !this )
-        goto LABEL_97;
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-      v27 = v2->fields.rewardAction;
-      if ( !v27 )
-        goto LABEL_97;
-      v27->fields.isEnd = 1;
-      if ( _4__this->fields.isDischargeGetEffectItem )
-        return 0;
-      v28 = v2->fields.rewardAction;
-      if ( !v28 )
-        goto LABEL_97;
-      if ( v28->fields.playCnt == _4__this->fields.maxPlayCnt - 1 )
+        goto LABEL_84;
+      v40 = *(_QWORD *)&this->fields.__1__state;
+      v41 = Method_System_Collections_Generic_List_GameObject__Add__;
+      ++HIDWORD(this->fields.__2__current);
+      if ( !v40 )
+        goto LABEL_84;
+      v42 = SLODWORD(this->fields.__2__current);
+      if ( (unsigned int)v42 >= *(_DWORD *)(v40 + 24) )
       {
-        v29 = ResultListWindow_TypeInfo;
-        if ( (BYTE3(ResultListWindow_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !ResultListWindow_TypeInfo->_2.cctor_finished )
+        System_Collections_Generic_List_object___AddWithResize(
+          (System_Collections_Generic_List_object__o *)this,
+          (Il2CppObject *)v33,
+          *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
+      }
+      else
+      {
+        v43 = v40 + 8 * v42;
+        LODWORD(this->fields.__2__current) = v42 + 1;
+        *(_QWORD *)(v43 + 32) = v33;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)(v43 + 32), (int32_t)v33, v26, v27);
+      }
+LABEL_76:
+      v3->fields.__2__current = 0LL;
+      v68 = (ServantStatusBattleListViewItem_o *)&v3->fields.__2__current;
+      sub_1B00C70(v68, 0, v26, v27);
+      v69 = 3;
+      goto LABEL_83;
+    case 3:
+      v3->fields.__1__state = -1;
+      if ( !_4__this )
+        goto LABEL_84;
+      v44 = v3->fields.rewardAction;
+      if ( !v44 )
+        goto LABEL_84;
+      this = (ResultListWindow__StartRewardAction_d__48_o *)_4__this->fields.resultItemObjList;
+      if ( !this )
+        goto LABEL_84;
+      this = (ResultListWindow__StartRewardAction_d__48_o *)System_Collections_Generic_List_object___get_Item(
+                                                              (System_Collections_Generic_List_object__o *)this,
+                                                              v44->fields.playCnt,
+                                                              (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+      if ( !this )
+        goto LABEL_84;
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
+      v45 = v3->fields.rewardAction;
+      if ( !v45 )
+        goto LABEL_84;
+      v45->fields.isEnd = 1;
+      if ( !_4__this->fields.isDischargeGetEffectItem && v45->fields.playCnt == _4__this->fields.maxPlayCnt - 1 )
+      {
+        v46 = ResultListWindow_TypeInfo;
+        if ( !ResultListWindow_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(ResultListWindow_TypeInfo);
-          v29 = ResultListWindow_TypeInfo;
+          v46 = ResultListWindow_TypeInfo;
         }
         UnityEngine_MonoBehaviour__Invoke(
           (UnityEngine_MonoBehaviour_o *)_4__this,
-          (System_String_o *)StringLiteral_6118/*"EndOpen"*/,
-          v29->static_fields->EFFECT_PLAY_TIME,
+          (System_String_o *)StringLiteral_5919/*"EndOpen"*/,
+          v46->static_fields->EFFECT_PLAY_TIME,
           0LL);
       }
       return 0;
@@ -2253,11 +2234,11 @@ void __fastcall __noreturn ResultListWindow__StartRewardAction_d__48__System_Col
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
+  v2 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B00F18(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B775C8(&Method_ResultListWindow__StartRewardAction_d__48_System_Collections_IEnumerator_Reset__);
-  sub_B77668(v3, v4);
+  v4 = sub_1B00CE0(&Method_ResultListWindow__StartRewardAction_d__48_System_Collections_IEnumerator_Reset__);
+  sub_1B00DF4(v3, v4);
 }
 
 

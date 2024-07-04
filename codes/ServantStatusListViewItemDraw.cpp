@@ -90,5 +90,5 @@ void __fastcall ServantStatusListViewItemDraw__SetItem(
         int32_t mode,
         const MethodInfo *method)
 {
-  LODWORD(this[1].klass) = mode;
+  this->fields.dispMode = mode;
 }

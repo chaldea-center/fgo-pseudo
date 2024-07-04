@@ -1,18 +1,17 @@
 void __fastcall NpcServantFollowerMaster___ctor(NpcServantFollowerMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_438A249 & 1) == 0 )
+  if ( (byte_48E2BD0 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long___ctor__);
-    byte_438A249 = 1;
+    sub_1B00CCC(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long___ctor__, method);
+    byte_48E2BD0 = 1;
   }
-  DataMasterBase_UserSubEquipMaster__UserSubEquipEntity__long____ctor(
-    (DataMasterBase_UserSubEquipMaster__UserSubEquipEntity__long__o *)this,
+  DataMasterBase_object__object__long____ctor(
+    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     95,
-    (const MethodInfo_21FBA20 *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long___ctor__);
+    (const MethodInfo_2FE6BB8 *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool __fastcall NpcServantFollowerMaster__TryGetEntityByQuestIdAndSvtId(
         NpcServantFollowerMaster_o *this,
         NpcServantFollowerEntity_o **npcServantFollowerEntity,
@@ -21,92 +20,77 @@ bool __fastcall NpcServantFollowerMaster__TryGetEntityByQuestIdAndSvtId(
         int32_t svtId,
         const MethodInfo *method)
 {
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  WarQuestSelectionMaster_o *Master_WarQuestSelectionMaster; // x0
-  System_Int32_array **v13; // x1
-  const MethodInfo *v14; // x3
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  Il2CppObject *Master_object; // x0
+  Il2CppObject *v14; // x1
+  const MethodInfo *v15; // x3
   NpcFollowerEntity_array *EntityArray; // x21
   int max_length; // w8
-  DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *v17; // x22
-  unsigned int v18; // w23
-  NpcFollowerEntity_o *v19; // x8
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
-  __int64 v27; // x0
-  UserServantEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
+  bool v18; // w23
+  DataMasterBase_TMaster__TEntity__PKType__o *v19; // x22
+  int v20; // w24
+  NpcFollowerEntity_o *v21; // x8
+  int32_t v22; // w2
+  int32_t v23; // w3
+  Il2CppObject *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_438A24A & 1) == 0 )
+  if ( (byte_48E2BD1 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMaster_NpcFollowerMaster___);
-    sub_B775C4(&Method_DataManager_GetMaster_NpcServantFollowerMaster___);
-    sub_B775C4(&DataManager_TypeInfo);
-    sub_B775C4(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__);
-    byte_438A24A = 1;
+    sub_1B00CCC(&Method_DataManager_GetMaster_NpcFollowerMaster___, npcServantFollowerEntity);
+    sub_1B00CCC(&Method_DataManager_GetMaster_NpcServantFollowerMaster___, v10);
+    sub_1B00CCC(&DataManager_TypeInfo, v11);
+    sub_1B00CCC(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__, v12);
+    byte_48E2BD1 = 1;
   }
   entity = 0LL;
   *npcServantFollowerEntity = 0LL;
-  sub_B77560(
-    (BattleServantConfConponent_o *)npcServantFollowerEntity,
-    0LL,
-    *(System_String_array ***)&questId,
-    *(System_String_array ***)&questPhase,
-    *(System_Boolean_array ***)&svtId,
-    (System_Int32_array **)method,
-    v6,
-    v7);
-  if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)npcServantFollowerEntity, 0, questId, questPhase);
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_NpcFollowerMaster___);
-  if ( !Master_WarQuestSelectionMaster
-    || (EntityArray = NpcFollowerMaster__GetEntityArray(
-                        (NpcFollowerMaster_o *)Master_WarQuestSelectionMaster,
-                        questId,
-                        questPhase,
-                        v14),
-        Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_NpcServantFollowerMaster___),
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_NpcFollowerMaster___);
+  if ( !Master_object
+    || (EntityArray = NpcFollowerMaster__GetEntityArray((NpcFollowerMaster_o *)Master_object, questId, questPhase, v15),
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_NpcServantFollowerMaster___),
         !EntityArray) )
   {
-LABEL_20:
-    sub_B7769C(Master_WarQuestSelectionMaster, v13);
+LABEL_19:
+    sub_1B00F28(Master_object, v14);
   }
   max_length = EntityArray->max_length;
-  if ( max_length < 1 )
-    return 0;
-  v17 = (DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *)Master_WarQuestSelectionMaster;
-  v18 = 0;
-  while ( 1 )
+  v18 = max_length > 0;
+  if ( max_length >= 1 )
   {
-    if ( v18 >= max_length )
+    v19 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
+    v20 = 0;
+    while ( 1 )
     {
-      v27 = sub_B776C8(Master_WarQuestSelectionMaster);
-      sub_B77668(v27, 0LL);
+      if ( v20 >= (unsigned int)max_length )
+        sub_1B00F30(Master_object, v14);
+      v21 = EntityArray->m_Items[v20];
+      if ( !v21 || !v19 )
+        goto LABEL_19;
+      Master_object = (Il2CppObject *)DataMasterBase_object__object__long___TryGetEntity(
+                                        v19,
+                                        &entity,
+                                        v21->fields.leaderSvtId,
+                                        (const MethodInfo_2FE6C4C *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__);
+      if ( ((unsigned __int8)Master_object & 1) != 0 )
+      {
+        v14 = entity;
+        if ( !entity )
+          goto LABEL_19;
+        if ( LODWORD(entity[1].monitor) == svtId )
+          break;
+      }
+      max_length = EntityArray->max_length;
+      v18 = ++v20 < max_length;
+      if ( v20 >= max_length )
+        return v18;
     }
-    v19 = EntityArray->m_Items[v18];
-    if ( !v19 || !v17 )
-      goto LABEL_20;
-    Master_WarQuestSelectionMaster = (WarQuestSelectionMaster_o *)DataMasterBase_UserServantStorageMaster__UserServantEntity__long___TryGetEntity(
-                                                                    v17,
-                                                                    &entity,
-                                                                    v19->fields.leaderSvtId,
-                                                                    (const MethodInfo_21FBB18 *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__);
-    if ( ((unsigned __int8)Master_WarQuestSelectionMaster & 1) != 0 )
-    {
-      v13 = (System_Int32_array **)entity;
-      if ( !entity )
-        goto LABEL_20;
-      if ( LODWORD(entity->fields.id.fields.hiddenValue) == svtId )
-        break;
-    }
-    max_length = EntityArray->max_length;
-    if ( (int)++v18 >= max_length )
-      return 0;
+    *npcServantFollowerEntity = (NpcServantFollowerEntity_o *)entity;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)npcServantFollowerEntity, (int32_t)v14, v22, v23);
   }
-  *npcServantFollowerEntity = (NpcServantFollowerEntity_o *)entity;
-  sub_B77560((BattleServantConfConponent_o *)npcServantFollowerEntity, v13, v20, v21, v22, v23, v24, v25);
-  return 1;
+  return v18;
 }

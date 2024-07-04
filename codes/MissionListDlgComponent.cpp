@@ -1,29 +1,28 @@
 void __fastcall MissionListDlgComponent___cctor(const MethodInfo *method)
 {
-  MissionListDlgComponent_c *v1; // x8
+  __int64 v1; // x1
+  struct MissionListDlgComponent_StaticFields *static_fields; // x8
 
-  if ( (byte_4389B11 & 1) == 0 )
+  if ( (byte_48E5B23 & 1) == 0 )
   {
-    sub_B775C4(&MissionListDlgComponent_TypeInfo);
-    byte_4389B11 = 1;
+    sub_1B00CCC(&MissionListDlgComponent_TypeInfo, v1);
+    byte_48E5B23 = 1;
   }
-  MissionListDlgComponent_TypeInfo->static_fields->SCROLL_ENABLED_VIEW_COUNT = 1;
-  MissionListDlgComponent_TypeInfo->static_fields->SINGLE_DESIGN_TITLE_POS_Y = 180.0;
-  v1 = MissionListDlgComponent_TypeInfo;
-  MissionListDlgComponent_TypeInfo->static_fields->SINGLE_DESIGN_SUB_TITLE_POS_Y = 140.0;
-  v1->static_fields->SINGLE_DESIGN_BTN_POS_Y = -165.0;
-  v1->static_fields->SINGLE_DESIGN_LIST_BG_HEIGHT = 180;
+  static_fields = MissionListDlgComponent_TypeInfo->static_fields;
+  static_fields->SCROLL_ENABLED_VIEW_COUNT = 1;
+  *(_QWORD *)&static_fields->SINGLE_DESIGN_TITLE_POS_Y = 0x430C000043340000LL;
+  *(_QWORD *)&static_fields->SINGLE_DESIGN_BTN_POS_Y = 0xB4C3250000LL;
 }
 
 
 void __fastcall MissionListDlgComponent___ctor(MissionListDlgComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4389B10 & 1) == 0 )
+  if ( (byte_48E5B22 & 1) == 0 )
   {
-    sub_B775C4(&BaseDialog_TypeInfo);
-    byte_4389B10 = 1;
+    sub_1B00CCC(&BaseDialog_TypeInfo, method);
+    byte_48E5B22 = 1;
   }
-  if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
+  if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0LL);
 }
@@ -31,161 +30,149 @@ void __fastcall MissionListDlgComponent___ctor(MissionListDlgComponent_o *this, 
 
 void __fastcall MissionListDlgComponent__OnClickClose(MissionListDlgComponent_o *this, const MethodInfo *method)
 {
-  TitleInfoControl_o *genericContainerHandle; // x0
-  UISprite_c *klass; // x8
-  CommonUI_o *v5; // x19
-  MissionListDlgComponent___c_c *v6; // x8
-  struct MissionListDlgComponent___c_StaticFields *static_fields; // x9
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  TitleInfoControl_o *Instance; // x0
+  UnityEngine_GameObject_c *klass; // x8
+  _QWORD *v10; // x0
+  System_Reflection_MethodBase_o *v11; // x0
+  MissionListDlgComponent___c_c *v12; // x8
+  CommonUI_o *v13; // x19
   System_Action_o *_9__17_0; // x20
-  Il2CppObject *v9; // x21
-  struct MissionListDlgComponent___c_StaticFields *v10; // x0
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
+  Il2CppObject *v15; // x21
+  struct MissionListDlgComponent___c_StaticFields *static_fields; // x0
+  int32_t v17; // w2
+  int32_t v18; // w3
 
-  if ( (byte_4389B0F & 1) == 0 )
+  if ( (byte_48E5B21 & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B775C4(&SoundManager_TypeInfo);
-    sub_B775C4(&TerminalSceneComponent_TypeInfo);
-    sub_B775C4(&Method_MissionListDlgComponent___c__OnClickClose_b__17_0__);
-    sub_B775C4(&MissionListDlgComponent___c_TypeInfo);
-    byte_4389B0F = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, method);
+    sub_1B00CCC(&Method_MissionListDlgComponent_OnClickClose__, v3);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
+    sub_1B00CCC(&TerminalSceneComponent_TypeInfo, v5);
+    sub_1B00CCC(&Method_MissionListDlgComponent___c__OnClickClose_b__17_0__, v6);
+    sub_1B00CCC(&MissionListDlgComponent___c_TypeInfo, v7);
+    byte_48E5B21 = 1;
   }
   if ( this->fields.isTouchEnabled )
   {
     this->fields.isTouchEnabled = 0;
-    if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
+    if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
+    if ( !byte_48DDF7C )
+    {
+      sub_1B00CCC(&TerminalSceneComponent_TypeInfo, method);
+      byte_48DDF7C = 1;
+    }
+    Instance = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
+    if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
+      Instance = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
     }
-    if ( !byte_4387463 )
-    {
-      sub_B775C4(&TerminalSceneComponent_TypeInfo);
-      byte_4387463 = 1;
-    }
-    genericContainerHandle = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
-    if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-      genericContainerHandle = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
-    }
-    klass = genericContainerHandle->fields.mEventItemEventBtn->klass;
+    klass = Instance->fields.mEventRoot->klass;
     if ( !klass )
-      goto LABEL_28;
-    genericContainerHandle = (TitleInfoControl_o *)klass->_2.genericContainerHandle;
-    if ( !genericContainerHandle )
-      goto LABEL_28;
-    TitleInfoControl__SetTouchEnable(genericContainerHandle, 0, 0LL);
-    if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !SoundManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    }
-    SoundManager__playSystemSe(0, 0LL);
-    genericContainerHandle = (TitleInfoControl_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v5 = (CommonUI_o *)genericContainerHandle;
-    v6 = MissionListDlgComponent___c_TypeInfo;
-    if ( (BYTE3(MissionListDlgComponent___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !MissionListDlgComponent___c_TypeInfo->_2.cctor_finished )
+      goto LABEL_23;
+    Instance = *(TitleInfoControl_o **)&klass->_2.instance_size;
+    if ( !Instance )
+      goto LABEL_23;
+    TitleInfoControl__SetTouchEnable(Instance, 0, 0LL);
+    v10 = Method_MissionListDlgComponent_OnClickClose__;
+    if ( (*((_BYTE *)Method_MissionListDlgComponent_OnClickClose__ + 83) & 2) != 0 )
+      v10 = (_QWORD *)sub_1B00CE4(Method_MissionListDlgComponent_OnClickClose__);
+    v11 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v10, v10[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v11, 0, 0LL);
+    Instance = (TitleInfoControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v12 = MissionListDlgComponent___c_TypeInfo;
+    v13 = (CommonUI_o *)Instance;
+    if ( !MissionListDlgComponent___c_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(MissionListDlgComponent___c_TypeInfo);
-      v6 = MissionListDlgComponent___c_TypeInfo;
+      v12 = MissionListDlgComponent___c_TypeInfo;
     }
-    static_fields = v6->static_fields;
-    _9__17_0 = static_fields->__9__17_0;
+    _9__17_0 = v12->static_fields->__9__17_0;
     if ( !_9__17_0 )
     {
-      if ( (BYTE3(v6->vtable._0_Equals.methodPtr) & 4) != 0 && !v6->_2.cctor_finished )
+      if ( !v12->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v6);
-        static_fields = MissionListDlgComponent___c_TypeInfo->static_fields;
+        j_il2cpp_runtime_class_init_0(v12);
+        v12 = MissionListDlgComponent___c_TypeInfo;
       }
-      v9 = (Il2CppObject *)static_fields->__9;
-      _9__17_0 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-      System_Action___ctor(_9__17_0, v9, Method_MissionListDlgComponent___c__OnClickClose_b__17_0__, 0LL);
-      v10 = MissionListDlgComponent___c_TypeInfo->static_fields;
-      v10->__9__17_0 = _9__17_0;
-      sub_B77560(
-        (BattleServantConfConponent_o *)&v10->__9__17_0,
-        (System_Int32_array **)_9__17_0,
-        v11,
-        v12,
-        v13,
-        v14,
-        v15,
-        v16);
+      v15 = (Il2CppObject *)v12->static_fields->__9;
+      _9__17_0 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+      System_Action___ctor(_9__17_0, v15, Method_MissionListDlgComponent___c__OnClickClose_b__17_0__, 0LL);
+      static_fields = MissionListDlgComponent___c_TypeInfo->static_fields;
+      static_fields->__9__17_0 = _9__17_0;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->__9__17_0, (int32_t)_9__17_0, v17, v18);
     }
-    if ( !v5 )
-LABEL_28:
-      sub_B7769C(genericContainerHandle, method);
-    CommonUI__CloseEventMissionListDialog(v5, _9__17_0, 0LL);
+    if ( !v13 )
+LABEL_23:
+      sub_1B00F28(Instance, method);
+    CommonUI__CloseEventMissionListDialog(v13, _9__17_0, 0LL);
   }
 }
 
 
 void __fastcall MissionListDlgComponent__OnClickMissionList(MissionListDlgComponent_o *this, const MethodInfo *method)
 {
-  TitleInfoControl_o *genericContainerHandle; // x0
-  UISprite_c *klass; // x8
-  CommonUI_o *Instance; // x20
-  System_Action_o *v6; // x21
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  TitleInfoControl_o *v7; // x0
+  UnityEngine_GameObject_c *klass; // x8
+  _QWORD *v9; // x0
+  System_Reflection_MethodBase_o *v10; // x0
+  Il2CppObject *Instance; // x20
+  System_Action_o *v12; // x21
 
-  if ( (byte_4389B0E & 1) == 0 )
+  if ( (byte_48E5B20 & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&Method_MissionListDlgComponent__OnClickMissionList_b__16_0__);
-    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B775C4(&SoundManager_TypeInfo);
-    sub_B775C4(&TerminalSceneComponent_TypeInfo);
-    byte_4389B0E = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, method);
+    sub_1B00CCC(&Method_MissionListDlgComponent_OnClickMissionList__, v3);
+    sub_1B00CCC(&Method_MissionListDlgComponent__OnClickMissionList_b__16_0__, v4);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    sub_1B00CCC(&TerminalSceneComponent_TypeInfo, v6);
+    byte_48E5B20 = 1;
   }
   if ( this->fields.isTouchEnabled )
   {
     this->fields.isTouchEnabled = 0;
-    if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
+    if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
+    if ( !byte_48DDF7C )
+    {
+      sub_1B00CCC(&TerminalSceneComponent_TypeInfo, method);
+      byte_48DDF7C = 1;
+    }
+    v7 = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
+    if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
+      v7 = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
     }
-    if ( !byte_4387463 )
-    {
-      sub_B775C4(&TerminalSceneComponent_TypeInfo);
-      byte_4387463 = 1;
-    }
-    genericContainerHandle = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
-    if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-      genericContainerHandle = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
-    }
-    klass = genericContainerHandle->fields.mEventItemEventBtn->klass;
+    klass = v7->fields.mEventRoot->klass;
     if ( !klass )
-      goto LABEL_20;
-    genericContainerHandle = (TitleInfoControl_o *)klass->_2.genericContainerHandle;
-    if ( !genericContainerHandle )
-      goto LABEL_20;
-    TitleInfoControl__SetTouchEnable(genericContainerHandle, 0, 0LL);
-    if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !SoundManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    }
-    SoundManager__playSystemSe(0, 0LL);
-    Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v6 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-    System_Action___ctor(v6, (Il2CppObject *)this, Method_MissionListDlgComponent__OnClickMissionList_b__16_0__, 0LL);
+      goto LABEL_17;
+    v7 = *(TitleInfoControl_o **)&klass->_2.instance_size;
+    if ( !v7 )
+      goto LABEL_17;
+    TitleInfoControl__SetTouchEnable(v7, 0, 0LL);
+    v9 = Method_MissionListDlgComponent_OnClickMissionList__;
+    if ( (*((_BYTE *)Method_MissionListDlgComponent_OnClickMissionList__ + 83) & 2) != 0 )
+      v9 = (_QWORD *)sub_1B00CE4(Method_MissionListDlgComponent_OnClickMissionList__);
+    v10 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v9, v9[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v10, 0, 0LL);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v12 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+    System_Action___ctor(v12, (Il2CppObject *)this, Method_MissionListDlgComponent__OnClickMissionList_b__16_0__, 0LL);
     if ( !Instance )
-LABEL_20:
-      sub_B7769C(genericContainerHandle, method);
-    CommonUI__CloseEventMissionListDialog(Instance, v6, 0LL);
+LABEL_17:
+      sub_1B00F28(v7, method);
+    CommonUI__CloseEventMissionListDialog((CommonUI_o *)Instance, v12, 0LL);
   }
 }
 
@@ -199,95 +186,50 @@ void __fastcall MissionListDlgComponent__OpenEventMissionListDialog(
         System_Action_o *missionBtnCallback,
         const MethodInfo *method)
 {
-  __int64 v13; // x19
-  UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v13; // x1
+  __int64 v14; // x1
   __int64 v15; // x1
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
-  System_String_array **v22; // x2
-  System_String_array **v23; // x3
-  System_Boolean_array **v24; // x4
-  System_Int32_array **v25; // x5
-  System_Int32_array *v26; // x6
-  System_Int32_array *v27; // x7
-  System_String_array **v28; // x2
-  System_String_array **v29; // x3
-  System_Boolean_array **v30; // x4
-  System_Int32_array **v31; // x5
-  System_Int32_array *v32; // x6
-  System_Int32_array *v33; // x7
-  System_String_array **v34; // x2
-  System_String_array **v35; // x3
-  System_Boolean_array **v36; // x4
-  System_Int32_array **v37; // x5
-  System_Int32_array *v38; // x6
-  System_Int32_array *v39; // x7
-  System_String_array **v40; // x2
-  System_String_array **v41; // x3
-  System_Boolean_array **v42; // x4
-  System_Int32_array **v43; // x5
-  System_Int32_array *v44; // x6
-  System_Int32_array *v45; // x7
-  System_String_array **v46; // x2
-  System_String_array **v47; // x3
-  System_Boolean_array **v48; // x4
-  System_Int32_array **v49; // x5
-  System_Int32_array *v50; // x6
-  System_Int32_array *v51; // x7
-  System_Action_o *v52; // x20
+  __int64 v16; // x19
+  UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v18; // x1
+  int32_t v19; // w2
+  int32_t v20; // w3
+  int32_t v21; // w2
+  int32_t v22; // w3
+  int32_t v23; // w2
+  int32_t v24; // w3
+  int32_t v25; // w2
+  int32_t v26; // w3
+  int32_t v27; // w2
+  int32_t v28; // w3
+  int32_t v29; // w2
+  int32_t v30; // w3
+  System_Action_o *v31; // x20
 
-  if ( (byte_4389B0D & 1) == 0 )
+  if ( (byte_48E5B1F & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&AtlasManager_TypeInfo);
-    sub_B775C4(&Method_MissionListDlgComponent___c__DisplayClass15_0__OpenEventMissionListDialog_b__0__);
-    sub_B775C4(&MissionListDlgComponent___c__DisplayClass15_0_TypeInfo);
-    byte_4389B0D = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, title);
+    sub_1B00CCC(&AtlasManager_TypeInfo, v13);
+    sub_1B00CCC(&Method_MissionListDlgComponent___c__DisplayClass15_0__OpenEventMissionListDialog_b__0__, v14);
+    sub_1B00CCC(&MissionListDlgComponent___c__DisplayClass15_0_TypeInfo, v15);
+    byte_48E5B1F = 1;
   }
-  v13 = sub_B77694(MissionListDlgComponent___c__DisplayClass15_0_TypeInfo);
-  MissionListDlgComponent___c__DisplayClass15_0___ctor((MissionListDlgComponent___c__DisplayClass15_0_o *)v13, 0LL);
-  if ( !v13 )
-    goto LABEL_11;
-  *(_QWORD *)(v13 + 16) = this;
-  sub_B77560((BattleServantConfConponent_o *)(v13 + 16), (System_Int32_array **)this, v16, v17, v18, v19, v20, v21);
-  *(_QWORD *)(v13 + 24) = title;
-  sub_B77560((BattleServantConfConponent_o *)(v13 + 24), (System_Int32_array **)title, v22, v23, v24, v25, v26, v27);
-  *(_QWORD *)(v13 + 32) = subTitle;
-  sub_B77560((BattleServantConfConponent_o *)(v13 + 32), (System_Int32_array **)subTitle, v28, v29, v30, v31, v32, v33);
-  *(_QWORD *)(v13 + 40) = eventDetailEnt;
-  sub_B77560(
-    (BattleServantConfConponent_o *)(v13 + 40),
-    (System_Int32_array **)eventDetailEnt,
-    v34,
-    v35,
-    v36,
-    v37,
-    v38,
-    v39);
-  *(_QWORD *)(v13 + 48) = eventMissionEntList;
-  sub_B77560(
-    (BattleServantConfConponent_o *)(v13 + 48),
-    (System_Int32_array **)eventMissionEntList,
-    v40,
-    v41,
-    v42,
-    v43,
-    v44,
-    v45);
-  *(_QWORD *)(v13 + 56) = missionBtnCallback;
-  sub_B77560(
-    (BattleServantConfConponent_o *)(v13 + 56),
-    (System_Int32_array **)missionBtnCallback,
-    v46,
-    v47,
-    v48,
-    v49,
-    v50,
-    v51);
+  v16 = sub_1B00F18(MissionListDlgComponent___c__DisplayClass15_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v16, 0LL);
+  if ( !v16 )
+    goto LABEL_10;
+  *(_QWORD *)(v16 + 16) = this;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v16 + 16), (int32_t)this, v19, v20);
+  *(_QWORD *)(v16 + 24) = title;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v16 + 24), (int32_t)title, v21, v22);
+  *(_QWORD *)(v16 + 32) = subTitle;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v16 + 32), (int32_t)subTitle, v23, v24);
+  *(_QWORD *)(v16 + 40) = eventDetailEnt;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v16 + 40), (int32_t)eventDetailEnt, v25, v26);
+  *(_QWORD *)(v16 + 48) = eventMissionEntList;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v16 + 48), (int32_t)eventMissionEntList, v27, v28);
+  *(_QWORD *)(v16 + 56) = missionBtnCallback;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v16 + 56), (int32_t)missionBtnCallback, v29, v30);
   this->fields.isTouchEnabled = 1;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject
@@ -295,19 +237,19 @@ void __fastcall MissionListDlgComponent__OpenEventMissionListDialog(
         (gameObject = (UnityEngine_GameObject_o *)this->fields.maskSprite) == 0LL)
     || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL)) == 0LL )
   {
-LABEL_11:
-    sub_B7769C(gameObject, v15);
+LABEL_10:
+    sub_1B00F28(gameObject, v18);
   }
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
-  v52 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
+  v31 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
   System_Action___ctor(
-    v52,
-    (Il2CppObject *)v13,
+    v31,
+    (Il2CppObject *)v16,
     Method_MissionListDlgComponent___c__DisplayClass15_0__OpenEventMissionListDialog_b__0__,
     0LL);
-  if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
+  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__LoadNotification(v52, 0LL);
+  AtlasManager__LoadNotification(v31, 0LL);
 }
 
 
@@ -316,38 +258,35 @@ void __fastcall MissionListDlgComponent___OnClickMissionList_b__16_0(
         const MethodInfo *method)
 {
   __int64 v3; // x1
-  TitleInfoControl_o *genericContainerHandle; // x0
-  UISprite_c *klass; // x8
+  __int64 v4; // x1
+  TitleInfoControl_o *v5; // x0
+  UnityEngine_GameObject_c *klass; // x8
 
-  if ( (byte_4389B12 & 1) == 0 )
+  if ( (byte_48E5B24 & 1) == 0 )
   {
-    sub_B775C4(&AtlasManager_TypeInfo);
-    sub_B775C4(&TerminalSceneComponent_TypeInfo);
-    byte_4389B12 = 1;
+    sub_1B00CCC(&AtlasManager_TypeInfo, method);
+    sub_1B00CCC(&TerminalSceneComponent_TypeInfo, v3);
+    byte_48E5B24 = 1;
   }
   ActionExtensions__Call(this->fields.missionBtnCallbackFunc, 0LL);
-  if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
+  if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
+  if ( !byte_48DDF7C )
+  {
+    sub_1B00CCC(&TerminalSceneComponent_TypeInfo, v4);
+    byte_48DDF7C = 1;
+  }
+  v5 = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
+  if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
+    v5 = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
   }
-  if ( !byte_4387463 )
-  {
-    sub_B775C4(&TerminalSceneComponent_TypeInfo);
-    byte_4387463 = 1;
-  }
-  genericContainerHandle = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
-  if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    genericContainerHandle = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
-  }
-  klass = genericContainerHandle->fields.mEventItemEventBtn->klass;
-  if ( !klass || (genericContainerHandle = (TitleInfoControl_o *)klass->_2.genericContainerHandle) == 0LL )
-    sub_B7769C(genericContainerHandle, v3);
-  TitleInfoControl__SetTouchEnable(genericContainerHandle, 1, 0LL);
-  if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
+  klass = v5->fields.mEventRoot->klass;
+  if ( !klass || (v5 = *(TitleInfoControl_o **)&klass->_2.instance_size) == 0LL )
+    sub_1B00F28(v5, v4);
+  TitleInfoControl__SetTouchEnable(v5, 1, 0LL);
+  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   AtlasManager__ReleaseNotification(0LL);
 }
@@ -355,19 +294,24 @@ void __fastcall MissionListDlgComponent___OnClickMissionList_b__16_0(
 
 void __fastcall MissionListDlgComponent___c___cctor(const MethodInfo *method)
 {
-  Il2CppObject *v1; // x19
-  struct MissionListDlgComponent___c_StaticFields *static_fields; // x0
+  __int64 v1; // x1
+  Il2CppObject *v2; // x19
+  int32_t v3; // w2
+  int32_t v4; // w3
 
-  if ( (byte_43889D1 & 1) == 0 )
+  if ( (byte_48E5B25 & 1) == 0 )
   {
-    sub_B775C4(&MissionListDlgComponent___c_TypeInfo);
-    byte_43889D1 = 1;
+    sub_1B00CCC(&MissionListDlgComponent___c_TypeInfo, v1);
+    byte_48E5B25 = 1;
   }
-  v1 = (Il2CppObject *)sub_B77694(MissionListDlgComponent___c_TypeInfo);
-  System_Object___ctor(v1, 0LL);
-  static_fields = MissionListDlgComponent___c_TypeInfo->static_fields;
-  static_fields->__9 = (struct MissionListDlgComponent___c_o *)v1;
-  sub_B77560(static_fields);
+  v2 = (Il2CppObject *)sub_1B00F18(MissionListDlgComponent___c_TypeInfo);
+  System_Object___ctor(v2, 0LL);
+  MissionListDlgComponent___c_TypeInfo->static_fields->__9 = (struct MissionListDlgComponent___c_o *)v2;
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)MissionListDlgComponent___c_TypeInfo->static_fields,
+    (int32_t)v2,
+    v3,
+    v4);
 }
 
 
@@ -381,37 +325,34 @@ void __fastcall MissionListDlgComponent___c___OnClickClose_b__17_0(
         MissionListDlgComponent___c_o *this,
         const MethodInfo *method)
 {
-  TitleInfoControl_o *genericContainerHandle; // x0
-  UISprite_c *klass; // x8
+  __int64 v2; // x1
+  TitleInfoControl_o *v3; // x0
+  UnityEngine_GameObject_c *klass; // x8
 
-  if ( (byte_43889D2 & 1) == 0 )
+  if ( (byte_48E5B26 & 1) == 0 )
   {
-    sub_B775C4(&AtlasManager_TypeInfo);
-    sub_B775C4(&TerminalSceneComponent_TypeInfo);
-    byte_43889D2 = 1;
+    sub_1B00CCC(&AtlasManager_TypeInfo, method);
+    sub_1B00CCC(&TerminalSceneComponent_TypeInfo, v2);
+    byte_48E5B26 = 1;
   }
-  if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
+  if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
+  if ( !byte_48DDF7C )
+  {
+    sub_1B00CCC(&TerminalSceneComponent_TypeInfo, method);
+    byte_48DDF7C = 1;
+  }
+  v3 = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
+  if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
+    v3 = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
   }
-  if ( !byte_4387463 )
-  {
-    sub_B775C4(&TerminalSceneComponent_TypeInfo);
-    byte_4387463 = 1;
-  }
-  genericContainerHandle = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
-  if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    genericContainerHandle = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
-  }
-  klass = genericContainerHandle->fields.mEventItemEventBtn->klass;
-  if ( !klass || (genericContainerHandle = (TitleInfoControl_o *)klass->_2.genericContainerHandle) == 0LL )
-    sub_B7769C(genericContainerHandle, method);
-  TitleInfoControl__SetTouchEnable(genericContainerHandle, 1, 0LL);
-  if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
+  klass = v3->fields.mEventRoot->klass;
+  if ( !klass || (v3 = *(TitleInfoControl_o **)&klass->_2.instance_size) == 0LL )
+    sub_1B00F28(v3, method);
+  TitleInfoControl__SetTouchEnable(v3, 1, 0LL);
+  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   AtlasManager__ReleaseNotification(0LL);
 }
@@ -438,223 +379,233 @@ void __fastcall MissionListDlgComponent___c__DisplayClass15_0___OpenEventMission
         const MethodInfo *method)
 {
   MissionListDlgComponent___c__DisplayClass15_0_o *v2; // x19
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
   struct MissionListDlgComponent_o *_4__this; // x8
-  struct MissionListDlgComponent_o *v4; // x8
-  struct MissionListDlgComponent_o *v5; // x8
-  struct MissionListDlgComponent_o *v6; // x8
-  UnityEngine_Object_o *eventMissionListViewManager; // x20
-  struct EventMissionEntity_array *eventMissionEntList; // x20
+  struct MissionListDlgComponent_o *v8; // x8
   struct MissionListDlgComponent_o *v9; // x8
-  UnityEngine_GameObject_o *gameObject; // x0
-  MissionListDlgComponent_c *v11; // x8
-  UnityEngine_GameObject_o *v12; // x20
-  struct MissionListDlgComponent_o *v13; // x8
-  UnityEngine_GameObject_o *v14; // x0
-  struct MissionListDlgComponent_o *v15; // x8
-  struct MissionListDlgComponent_o *v16; // x8
-  struct MissionListDlgComponent_o *v17; // x8
-  struct MissionListDlgComponent_o *v18; // x8
+  int32_t v10; // w2
+  int32_t v11; // w3
+  struct MissionListDlgComponent_o *eventDetailEnt; // x1
+  int32_t v13; // w2
+  int32_t v14; // w3
+  struct System_String_o *eventMissionEntList; // x1
+  int32_t v16; // w2
+  int32_t v17; // w3
+  struct System_String_o *missionBtnCallback; // x1
   struct MissionListDlgComponent_o *v19; // x8
-  EventMissionItemListViewManager_o *v20; // x20
-  EventMissionEntity_array *v21; // x21
-  int32_t v22; // w22
-  BaseDialog_o *v23; // x19
-  void *missionBtnCallback; // x8
-  System_Action_o *v25; // x20
-  Il2CppObject *v26; // x21
+  UnityEngine_Object_o *eventMissionListViewManager; // x20
+  struct EventMissionEntity_array *v21; // x20
+  struct MissionListDlgComponent_o *v22; // x8
+  UnityEngine_GameObject_o *gameObject; // x0
+  MissionListDlgComponent_c *v24; // x8
+  UnityEngine_GameObject_o *v25; // x20
+  struct MissionListDlgComponent_o *v26; // x8
+  UnityEngine_GameObject_o *v27; // x0
+  struct MissionListDlgComponent_o *v28; // x8
+  struct MissionListDlgComponent_o *v29; // x8
+  struct MissionListDlgComponent_o *v30; // x8
+  struct MissionListDlgComponent_o *v31; // x8
+  struct MissionListDlgComponent_o *v32; // x8
+  EventMissionItemListViewManager_o *v33; // x20
+  EventMissionEntity_array *v34; // x21
+  int32_t v35; // w22
+  BaseDialog_o *v36; // x19
+  System_Action_o *monitor; // x20
+  Il2CppObject *klass; // x21
   struct MissionListDlgComponent___c_StaticFields *static_fields; // x0
+  int32_t v40; // w2
+  int32_t v41; // w3
 
   v2 = this;
-  if ( (byte_43889D3 & 1) == 0 )
+  if ( (byte_48E5B27 & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&MissionListDlgComponent_TypeInfo);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    sub_B775C4(&Method_MissionListDlgComponent___c__OpenEventMissionListDialog_b__15_1__);
-    this = (MissionListDlgComponent___c__DisplayClass15_0_o *)sub_B775C4(&MissionListDlgComponent___c_TypeInfo);
-    byte_43889D3 = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, method);
+    sub_1B00CCC(&MissionListDlgComponent_TypeInfo, v3);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v4);
+    sub_1B00CCC(&Method_MissionListDlgComponent___c__OpenEventMissionListDialog_b__15_1__, v5);
+    this = (MissionListDlgComponent___c__DisplayClass15_0_o *)sub_1B00CCC(&MissionListDlgComponent___c_TypeInfo, v6);
+    byte_48E5B27 = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
-    goto LABEL_53;
+    goto LABEL_48;
   this = (MissionListDlgComponent___c__DisplayClass15_0_o *)_4__this->fields.baseWindow;
   if ( !this )
-    goto LABEL_53;
+    goto LABEL_48;
   this = (MissionListDlgComponent___c__DisplayClass15_0_o *)UnityEngine_GameObject__get_gameObject(
                                                               (UnityEngine_GameObject_o *)this,
                                                               0LL);
   if ( !this )
-    goto LABEL_53;
+    goto LABEL_48;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-  v4 = v2->fields.__4__this;
-  if ( !v4 )
-    goto LABEL_53;
-  this = (MissionListDlgComponent___c__DisplayClass15_0_o *)v4->fields.titleLabel;
+  v8 = v2->fields.__4__this;
+  if ( !v8 )
+    goto LABEL_48;
+  this = (MissionListDlgComponent___c__DisplayClass15_0_o *)v8->fields.titleLabel;
   if ( !this )
-    goto LABEL_53;
+    goto LABEL_48;
   UILabel__set_text((UILabel_o *)this, v2->fields.title, 0LL);
-  v5 = v2->fields.__4__this;
-  if ( !v5 )
-    goto LABEL_53;
-  this = (MissionListDlgComponent___c__DisplayClass15_0_o *)v5->fields.subTitleLabel;
+  v9 = v2->fields.__4__this;
+  if ( !v9 )
+    goto LABEL_48;
+  this = (MissionListDlgComponent___c__DisplayClass15_0_o *)v9->fields.subTitleLabel;
   if ( !this )
-    goto LABEL_53;
+    goto LABEL_48;
   UILabel__set_text((UILabel_o *)this, v2->fields.subTitle, 0LL);
   this = (MissionListDlgComponent___c__DisplayClass15_0_o *)v2->fields.__4__this;
   if ( !this )
-    goto LABEL_53;
-  this[2].monitor = v2->fields.eventDetailEnt;
-  sub_B77560(&this[2].monitor);
+    goto LABEL_48;
+  eventDetailEnt = (struct MissionListDlgComponent_o *)v2->fields.eventDetailEnt;
+  this[2].fields.__4__this = eventDetailEnt;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this[2].fields, (int32_t)eventDetailEnt, v10, v11);
   this = (MissionListDlgComponent___c__DisplayClass15_0_o *)v2->fields.__4__this;
   if ( !this )
-    goto LABEL_53;
-  this[2].fields.__4__this = (struct MissionListDlgComponent_o *)v2->fields.eventMissionEntList;
-  sub_B77560(&this[2].fields);
+    goto LABEL_48;
+  eventMissionEntList = (struct System_String_o *)v2->fields.eventMissionEntList;
+  this[2].fields.title = eventMissionEntList;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this[2].fields.title, (int32_t)eventMissionEntList, v13, v14);
   this = (MissionListDlgComponent___c__DisplayClass15_0_o *)v2->fields.__4__this;
   if ( !this )
-    goto LABEL_53;
-  this[2].fields.title = (struct System_String_o *)v2->fields.missionBtnCallback;
-  sub_B77560(&this[2].fields.title);
-  v6 = v2->fields.__4__this;
-  if ( !v6 )
-    goto LABEL_53;
-  eventMissionListViewManager = (UnityEngine_Object_o *)v6->fields.eventMissionListViewManager;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+    goto LABEL_48;
+  missionBtnCallback = (struct System_String_o *)v2->fields.missionBtnCallback;
+  this[2].fields.subTitle = missionBtnCallback;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this[2].fields.subTitle, (int32_t)missionBtnCallback, v16, v17);
+  v19 = v2->fields.__4__this;
+  if ( !v19 )
+    goto LABEL_48;
+  eventMissionListViewManager = (UnityEngine_Object_o *)v19->fields.eventMissionListViewManager;
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   this = (MissionListDlgComponent___c__DisplayClass15_0_o *)UnityEngine_Object__op_Inequality(
                                                               eventMissionListViewManager,
                                                               0LL,
                                                               0LL);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
-    eventMissionEntList = v2->fields.eventMissionEntList;
-    if ( !eventMissionEntList )
-      goto LABEL_53;
+    v21 = v2->fields.eventMissionEntList;
+    if ( !v21 )
+      goto LABEL_48;
     this = (MissionListDlgComponent___c__DisplayClass15_0_o *)MissionListDlgComponent_TypeInfo;
-    if ( (BYTE3(MissionListDlgComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !MissionListDlgComponent_TypeInfo->_2.cctor_finished )
+    if ( !MissionListDlgComponent_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(MissionListDlgComponent_TypeInfo);
       this = (MissionListDlgComponent___c__DisplayClass15_0_o *)MissionListDlgComponent_TypeInfo;
     }
-    if ( (__int64)this[2].fields.missionBtnCallback->klass >= eventMissionEntList->max_length )
+    if ( (__int64)this[2].fields.missionBtnCallback->klass >= v21->max_length )
     {
-      v9 = v2->fields.__4__this;
-      if ( !v9 )
-        goto LABEL_53;
-      this = (MissionListDlgComponent___c__DisplayClass15_0_o *)v9->fields.titleLabel;
+      v22 = v2->fields.__4__this;
+      if ( !v22 )
+        goto LABEL_48;
+      this = (MissionListDlgComponent___c__DisplayClass15_0_o *)v22->fields.titleLabel;
       if ( !this )
-        goto LABEL_53;
+        goto LABEL_48;
       gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-      v11 = MissionListDlgComponent_TypeInfo;
-      v12 = gameObject;
-      if ( (BYTE3(MissionListDlgComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !MissionListDlgComponent_TypeInfo->_2.cctor_finished )
+      v24 = MissionListDlgComponent_TypeInfo;
+      v25 = gameObject;
+      if ( !MissionListDlgComponent_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(MissionListDlgComponent_TypeInfo);
-        v11 = MissionListDlgComponent_TypeInfo;
+        v24 = MissionListDlgComponent_TypeInfo;
       }
-      GameObjectExtensions__SetLocalPositionY(v12, v11->static_fields->SINGLE_DESIGN_TITLE_POS_Y, 0LL);
-      v13 = v2->fields.__4__this;
-      if ( !v13 )
-        goto LABEL_53;
-      this = (MissionListDlgComponent___c__DisplayClass15_0_o *)v13->fields.subTitleLabel;
+      GameObjectExtensions__SetLocalPositionY(v25, v24->static_fields->SINGLE_DESIGN_TITLE_POS_Y, 0LL);
+      v26 = v2->fields.__4__this;
+      if ( !v26 )
+        goto LABEL_48;
+      this = (MissionListDlgComponent___c__DisplayClass15_0_o *)v26->fields.subTitleLabel;
       if ( !this )
-        goto LABEL_53;
-      v14 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+        goto LABEL_48;
+      v27 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
       GameObjectExtensions__SetLocalPositionY(
-        v14,
+        v27,
         MissionListDlgComponent_TypeInfo->static_fields->SINGLE_DESIGN_SUB_TITLE_POS_Y,
         0LL);
-      v15 = v2->fields.__4__this;
-      if ( !v15 )
-        goto LABEL_53;
+      v28 = v2->fields.__4__this;
+      if ( !v28 )
+        goto LABEL_48;
       GameObjectExtensions__SetLocalPositionY(
-        v15->fields.closeBtn,
+        v28->fields.closeBtn,
         MissionListDlgComponent_TypeInfo->static_fields->SINGLE_DESIGN_BTN_POS_Y,
         0LL);
-      v16 = v2->fields.__4__this;
-      if ( !v16 )
-        goto LABEL_53;
+      v29 = v2->fields.__4__this;
+      if ( !v29 )
+        goto LABEL_48;
       GameObjectExtensions__SetLocalPositionY(
-        v16->fields.missionBtn,
+        v29->fields.missionBtn,
         MissionListDlgComponent_TypeInfo->static_fields->SINGLE_DESIGN_BTN_POS_Y,
         0LL);
-      v17 = v2->fields.__4__this;
-      if ( !v17 )
-        goto LABEL_53;
-      this = (MissionListDlgComponent___c__DisplayClass15_0_o *)v17->fields.listBg;
+      v30 = v2->fields.__4__this;
+      if ( !v30 )
+        goto LABEL_48;
+      this = (MissionListDlgComponent___c__DisplayClass15_0_o *)v30->fields.listBg;
       if ( !this )
-        goto LABEL_53;
+        goto LABEL_48;
       UIWidget__set_height(
         (UIWidget_o *)this,
         MissionListDlgComponent_TypeInfo->static_fields->SINGLE_DESIGN_LIST_BG_HEIGHT,
         0LL);
-      v18 = v2->fields.__4__this;
-      if ( !v18 )
-        goto LABEL_53;
-      this = (MissionListDlgComponent___c__DisplayClass15_0_o *)v18->fields.eventMissionListViewManager;
+      v31 = v2->fields.__4__this;
+      if ( !v31 )
+        goto LABEL_48;
+      this = (MissionListDlgComponent___c__DisplayClass15_0_o *)v31->fields.eventMissionListViewManager;
       if ( !this )
-        goto LABEL_53;
+        goto LABEL_48;
       EventMissionItemListViewManager__SetScrollEnable((EventMissionItemListViewManager_o *)this, 0, 0LL);
     }
-    if ( !byte_43889FD )
+    if ( !byte_48DF7B7 )
     {
-      this = (MissionListDlgComponent___c__DisplayClass15_0_o *)sub_B775C4(&EventRewardSaveData_TypeInfo);
-      byte_43889FD = 1;
+      this = (MissionListDlgComponent___c__DisplayClass15_0_o *)sub_1B00CCC(&EventRewardSaveData_TypeInfo, method);
+      byte_48DF7B7 = 1;
     }
     EventRewardSaveData_TypeInfo->static_fields->_FilterId_k__BackingField = 0;
-    v19 = v2->fields.__4__this;
-    if ( v19 )
+    v32 = v2->fields.__4__this;
+    if ( v32 )
     {
       this = (MissionListDlgComponent___c__DisplayClass15_0_o *)v2->fields.eventDetailEnt;
       if ( this )
       {
-        v20 = v19->fields.eventMissionListViewManager;
-        v21 = v2->fields.eventMissionEntList;
-        v22 = (int32_t)this->fields.__4__this;
+        v33 = v32->fields.eventMissionListViewManager;
+        v34 = v2->fields.eventMissionEntList;
+        v35 = (int32_t)this->fields.__4__this;
         this = (MissionListDlgComponent___c__DisplayClass15_0_o *)EventDetailEntity__isDailyMission(
                                                                     (EventDetailEntity_o *)this,
                                                                     0LL);
-        if ( v20 )
+        if ( v33 )
         {
-          EventMissionItemListViewManager__CreateList_25617628(v20, v21, v22, (unsigned __int8)this & 1, 0, 0LL);
-          goto LABEL_43;
+          EventMissionItemListViewManager__CreateList_44307840(v33, v34, v35, (unsigned __int8)this & 1, 0, 0LL);
+          goto LABEL_40;
         }
       }
     }
-LABEL_53:
-    sub_B7769C(this, method);
+LABEL_48:
+    sub_1B00F28(this, method);
   }
-LABEL_43:
-  v23 = (BaseDialog_o *)v2->fields.__4__this;
+LABEL_40:
+  v36 = (BaseDialog_o *)v2->fields.__4__this;
   this = (MissionListDlgComponent___c__DisplayClass15_0_o *)MissionListDlgComponent___c_TypeInfo;
-  if ( (BYTE3(MissionListDlgComponent___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !MissionListDlgComponent___c_TypeInfo->_2.cctor_finished )
+  if ( !MissionListDlgComponent___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MissionListDlgComponent___c_TypeInfo);
     this = (MissionListDlgComponent___c__DisplayClass15_0_o *)MissionListDlgComponent___c_TypeInfo;
   }
-  missionBtnCallback = this[2].fields.missionBtnCallback;
-  v25 = (System_Action_o *)*((_QWORD *)missionBtnCallback + 1);
-  if ( !v25 )
+  monitor = (System_Action_o *)this[2].fields.missionBtnCallback->monitor;
+  if ( !monitor )
   {
-    if ( (BYTE3(this[4].fields.eventMissionEntList) & 4) != 0 && !LODWORD(this[3].fields.subTitle) )
+    if ( !LODWORD(this[3].fields.subTitle) )
     {
       j_il2cpp_runtime_class_init_0(this);
-      missionBtnCallback = MissionListDlgComponent___c_TypeInfo->static_fields;
+      this = (MissionListDlgComponent___c__DisplayClass15_0_o *)MissionListDlgComponent___c_TypeInfo;
     }
-    v26 = *(Il2CppObject **)missionBtnCallback;
-    v25 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-    System_Action___ctor(v25, v26, Method_MissionListDlgComponent___c__OpenEventMissionListDialog_b__15_1__, 0LL);
+    klass = (Il2CppObject *)this[2].fields.missionBtnCallback->klass;
+    monitor = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+    System_Action___ctor(monitor, klass, Method_MissionListDlgComponent___c__OpenEventMissionListDialog_b__15_1__, 0LL);
     static_fields = MissionListDlgComponent___c_TypeInfo->static_fields;
-    static_fields->__9__15_1 = v25;
-    sub_B77560(&static_fields->__9__15_1);
+    static_fields->__9__15_1 = monitor;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->__9__15_1, (int32_t)monitor, v40, v41);
   }
-  if ( !v23 )
-    goto LABEL_53;
-  BaseDialog__Open(v23, v25, 1, 0LL);
+  if ( !v36 )
+    goto LABEL_48;
+  BaseDialog__Open(v36, monitor, 1, 0LL);
 }

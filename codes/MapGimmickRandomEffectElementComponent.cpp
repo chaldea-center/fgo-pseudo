@@ -11,30 +11,24 @@ bool __fastcall MapGimmickRandomEffectElementComponent__get_IsValid(
         const MethodInfo *method)
 {
   SpotEntity_o *SpotEntity; // x0
-  QuestTree_o *v4; // x20
+  Il2CppObject *Instance; // x20
   const MethodInfo *v5; // x1
   SpotEntity_o *v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_438E58E & 1) == 0 )
+  if ( (byte_48DF760 & 1) == 0 )
   {
-    sub_B775C4(&Method_SingletonTemplate_QuestTree__get_Instance__);
-    sub_B775C4(&SingletonTemplate_QuestTree__TypeInfo);
-    byte_438E58E = 1;
+    sub_1B00CCC(&Method_SingletonTemplate_QuestTree__get_Instance__, method);
+    byte_48DF760 = 1;
   }
   SpotEntity = MapGimmickRandomEffectElementComponent__get_SpotEntity(this, method);
   if ( SpotEntity )
   {
-    if ( (BYTE3(SingletonTemplate_QuestTree__TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !SingletonTemplate_QuestTree__TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(SingletonTemplate_QuestTree__TypeInfo);
-    }
-    v4 = (QuestTree_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2D168C0 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_35FC010 *)Method_SingletonTemplate_QuestTree__get_Instance__);
     v6 = MapGimmickRandomEffectElementComponent__get_SpotEntity(this, v5);
-    if ( !v4 )
-      sub_B7769C(v6, v7);
-    LOBYTE(SpotEntity) = QuestTree__IsSpotSatisfyingDisplayCond(v4, v6, 1, 0LL);
+    if ( !Instance )
+      sub_1B00F28(v6, v7);
+    LOBYTE(SpotEntity) = QuestTree__IsSpotSatisfyingDisplayCond((QuestTree_o *)Instance, v6, 1, 0LL);
   }
   return (char)SpotEntity;
 }
@@ -44,28 +38,30 @@ SpotEntity_o *__fastcall MapGimmickRandomEffectElementComponent__get_SpotEntity(
         MapGimmickRandomEffectElementComponent_o *this,
         const MethodInfo *method)
 {
-  DataMasterBase_WarMaster__WarEntity__int__o *Master_WarQuestSelectionMaster; // x0
+  __int64 v3; // x1
   __int64 v4; // x1
-  WarEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
+  Il2CppObject *Master_object; // x0
+  __int64 v6; // x1
+  Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_438E58F & 1) == 0 )
+  if ( (byte_48DF761 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMaster_SpotMaster___);
-    sub_B775C4(&DataManager_TypeInfo);
-    sub_B775C4(&Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__);
-    byte_438E58F = 1;
+    sub_1B00CCC(&Method_DataManager_GetMaster_SpotMaster___, method);
+    sub_1B00CCC(&DataManager_TypeInfo, v3);
+    sub_1B00CCC(&Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__, v4);
+    byte_48DF761 = 1;
   }
   entity = 0LL;
-  if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_SpotMaster___);
-  if ( !Master_WarQuestSelectionMaster )
-    sub_B7769C(0LL, v4);
-  if ( DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
-         Master_WarQuestSelectionMaster,
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_SpotMaster___);
+  if ( !Master_object )
+    sub_1B00F28(0LL, v6);
+  if ( DataMasterBase_object__object__int___TryGetEntity(
+         (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
          &entity,
-         this->fields.weight,
-         (const MethodInfo_21FB8F0 *)Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__) )
+         this->fields.spotId,
+         (const MethodInfo_2FE6AA0 *)Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__) )
   {
     return (SpotEntity_o *)entity;
   }
@@ -80,7 +76,7 @@ int32_t __fastcall MapGimmickRandomEffectElementComponent__get_SpotId(
         MapGimmickRandomEffectElementComponent_o *this,
         const MethodInfo *method)
 {
-  return this->fields.weight;
+  return this->fields.spotId;
 }
 
 
@@ -88,5 +84,5 @@ int32_t __fastcall MapGimmickRandomEffectElementComponent__get_Weight(
         MapGimmickRandomEffectElementComponent_o *this,
         const MethodInfo *method)
 {
-  return *((_DWORD *)&this->fields + 3);
+  return this->fields.weight;
 }

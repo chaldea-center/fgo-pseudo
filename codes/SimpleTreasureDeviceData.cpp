@@ -14,23 +14,24 @@ bool __fastcall SimpleTreasureDeviceData__Equals(
         Il2CppObject *obj,
         const MethodInfo *method)
 {
-  _QWORD *v5; // x0
+  __int64 v3; // x3
+  _QWORD *v6; // x0
   bool result; // w0
 
-  if ( (byte_438C039 & 1) == 0 )
+  if ( (byte_48E4BA6 & 1) == 0 )
   {
-    sub_B775C4(&SimpleTreasureDeviceData_TypeInfo);
-    byte_438C039 = 1;
+    sub_1B00CCC(&SimpleTreasureDeviceData_TypeInfo, obj);
+    byte_48E4BA6 = 1;
   }
   result = obj
         && (SimpleTreasureDeviceData_c *)obj->klass == SimpleTreasureDeviceData_TypeInfo
-        && (v5 = (_QWORD *)j_il2cpp_object_unbox_0(obj), *(_DWORD *)this.fields.id == (unsigned int)*v5)
-        && *(_DWORD *)(*(_QWORD *)&this + 4LL) == HIDWORD(*v5);
+        && (v6 = (_QWORD *)j_il2cpp_object_unbox_0(obj, obj, method, v3), *(_DWORD *)this.fields.id == (unsigned int)*v6)
+        && *(_DWORD *)(*(_QWORD *)&this + 4LL) == HIDWORD(*v6);
   return result;
 }
 
 
-bool __fastcall SimpleTreasureDeviceData__Equals_26817804(
+bool __fastcall SimpleTreasureDeviceData__Equals_41339272(
         SimpleTreasureDeviceData_o this,
         SimpleTreasureDeviceData_o toCompare,
         const MethodInfo *method)
@@ -44,17 +45,17 @@ int32_t __fastcall SimpleTreasureDeviceData__GetHashCode(SimpleTreasureDeviceDat
   System_Tuple_T1__T2__o *int__int; // x0
   __int64 v4; // x1
 
-  if ( (byte_438C03A & 1) == 0 )
+  if ( (byte_48E4BA7 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Tuple_Create_int__int___);
-    byte_438C03A = 1;
+    sub_1B00CCC(&Method_System_Tuple_Create_int__int___, method);
+    byte_48E4BA7 = 1;
   }
   int__int = System_Tuple__Create_int__int_(
                *(_DWORD *)this.fields.id,
                *(_DWORD *)(*(_QWORD *)&this + 4LL),
-               (const MethodInfo_1E04990 *)Method_System_Tuple_Create_int__int___);
+               (const MethodInfo_2DFFB04 *)Method_System_Tuple_Create_int__int___);
   if ( !int__int )
-    sub_B7769C(0LL, v4);
+    sub_1B00F28(0LL, v4);
   return ((__int64 (__fastcall *)(System_Tuple_T1__T2__o *, Il2CppMethodPointer))int__int->klass->vtable._2_GetHashCode.method)(
            int__int,
            int__int->klass->vtable._3_ToString.methodPtr);

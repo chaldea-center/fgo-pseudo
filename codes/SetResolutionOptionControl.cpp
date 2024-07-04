@@ -1,121 +1,110 @@
 void __fastcall SetResolutionOptionControl___ctor(SetResolutionOptionControl_o *this, const MethodInfo *method)
 {
-  GameOptionContentBase___ctor((GameOptionContentBase_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
 
 void __fastcall SetResolutionOptionControl__Init(SetResolutionOptionControl_o *this, const MethodInfo *method)
 {
   SetResolutionOptionControl_o *v2; // x19
-  int klass_low; // w8
-  struct UIButton_o *normalButton; // x8
-  __int128 v5; // q0
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  int enableResolutionSetting; // w8
   struct UILabel_o *lowLabel; // x8
-  System_Int32_array **normalSprite; // x0
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
-  System_Int32_array **v14; // x0
-  System_String_array **v15; // x2
-  System_String_array **v16; // x3
-  System_Boolean_array **v17; // x4
-  System_Int32_array **v18; // x5
-  System_Int32_array *v19; // x6
-  System_Int32_array *v20; // x7
+  struct UnityEngine_Color_o mEffectColor; // q0
+  struct UILabel_o *normalLabel; // x8
+  System_String_o *normalSprite; // x0
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x0
+  int32_t v17; // w2
+  int32_t v18; // w3
   bool IsEnableResolutionSetting; // w0
-  UILabel_o *normalLabel; // x20
-  System_String_o **v23; // x8
-  System_String_o *v24; // x21
-  UILabel_o *v25; // x20
-  UILabel_o *v26; // x20
+  UILabel_o *infoLabel; // x20
+  System_String_o **v21; // x8
+  System_String_o *v22; // x21
+  UILabel_o *v23; // x20
+  UILabel_o *v24; // x20
   int32_t ResolutionType; // w1
-  const MethodInfo *v28; // x2
+  const MethodInfo *v26; // x2
 
   v2 = this;
-  if ( (byte_438F96E & 1) == 0 )
+  if ( (byte_48DE193 & 1) == 0 )
   {
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&OptionManager_TypeInfo);
-    sub_B775C4(&ResolutionManager_TypeInfo);
-    sub_B775C4(&StringLiteral_9981/*"OPTION_RERSOLUTION_INFO_DISABLE"*/);
-    sub_B775C4(&StringLiteral_9980/*"OPTION_RERSOLUTION_INFO"*/);
-    sub_B775C4(&StringLiteral_9983/*"OPTION_RERSOLUTION_NORMAL"*/);
-    this = (SetResolutionOptionControl_o *)sub_B775C4(&StringLiteral_9982/*"OPTION_RERSOLUTION_LOW"*/);
-    byte_438F96E = 1;
+    sub_1B00CCC(&LocalizationManager_TypeInfo, method);
+    sub_1B00CCC(&OptionManager_TypeInfo, v3);
+    sub_1B00CCC(&ResolutionManager_TypeInfo, v4);
+    sub_1B00CCC(&StringLiteral_9575/*"OPTION_RERSOLUTION_INFO_DISABLE"*/, v5);
+    sub_1B00CCC(&StringLiteral_9574/*"OPTION_RERSOLUTION_INFO"*/, v6);
+    sub_1B00CCC(&StringLiteral_9577/*"OPTION_RERSOLUTION_NORMAL"*/, v7);
+    this = (SetResolutionOptionControl_o *)sub_1B00CCC(&StringLiteral_9576/*"OPTION_RERSOLUTION_LOW"*/, v8);
+    byte_48DE193 = 1;
   }
-  if ( LOBYTE(v2->fields.onButtonOutlineColor.fields.g) )
+  if ( v2->fields.isInit )
   {
-    klass_low = LOBYTE(v2[1].klass);
+    enableResolutionSetting = v2->fields.enableResolutionSetting;
   }
   else
   {
-    normalButton = v2->fields.normalButton;
-    LOBYTE(v2->fields.onButtonOutlineColor.fields.g) = 1;
-    if ( !normalButton )
-      goto LABEL_26;
-    v5 = *(_OWORD *)&normalButton[1].fields.mSprite2D;
     lowLabel = v2->fields.lowLabel;
-    *(_OWORD *)&v2->fields.onButtonOutlineColor.fields.b = v5;
+    v2->fields.isInit = 1;
     if ( !lowLabel )
-      goto LABEL_26;
-    this = *(SetResolutionOptionControl_o **)&v2->fields.isInit;
-    *(struct UnityEngine_Color_o *)&v2->fields.offButtonOutlineColor.fields.b = lowLabel->fields.mEffectColor;
-    if ( !this )
-      goto LABEL_26;
-    normalSprite = (System_Int32_array **)UIButton__get_normalSprite((UIButton_o *)this, 0LL);
-    v2->fields.offButtonName = (struct System_String_o *)normalSprite;
-    sub_B77560((BattleServantConfConponent_o *)&v2->fields.offButtonName, normalSprite, v8, v9, v10, v11, v12, v13);
+      goto LABEL_23;
+    mEffectColor = lowLabel->fields.mEffectColor;
+    normalLabel = v2->fields.normalLabel;
+    v2->fields.onButtonOutlineColor = mEffectColor;
+    if ( !normalLabel )
+      goto LABEL_23;
     this = (SetResolutionOptionControl_o *)v2->fields.lowButton;
+    v2->fields.offButtonOutlineColor = normalLabel->fields.mEffectColor;
     if ( !this )
-      goto LABEL_26;
-    v14 = (System_Int32_array **)UIButton__get_normalSprite((UIButton_o *)this, 0LL);
-    *(_QWORD *)&v2->fields.enableResolutionSetting = v14;
-    sub_B77560((BattleServantConfConponent_o *)&v2->fields.enableResolutionSetting, v14, v15, v16, v17, v18, v19, v20);
-    if ( (BYTE3(ResolutionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !ResolutionManager_TypeInfo->_2.cctor_finished )
-    {
+      goto LABEL_23;
+    normalSprite = UIButton__get_normalSprite((UIButton_o *)this, 0LL);
+    v2->fields.onButtonName = normalSprite;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields.onButtonName, (int32_t)normalSprite, v14, v15);
+    this = (SetResolutionOptionControl_o *)v2->fields.normalButton;
+    if ( !this )
+      goto LABEL_23;
+    v16 = UIButton__get_normalSprite((UIButton_o *)this, 0LL);
+    v2->fields.offButtonName = v16;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields.offButtonName, (int32_t)v16, v17, v18);
+    if ( !ResolutionManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ResolutionManager_TypeInfo);
-    }
     IsEnableResolutionSetting = ResolutionManager__IsEnableResolutionSetting(0LL);
-    klass_low = IsEnableResolutionSetting;
-    LOBYTE(v2[1].klass) = IsEnableResolutionSetting;
+    enableResolutionSetting = IsEnableResolutionSetting;
+    v2->fields.enableResolutionSetting = IsEnableResolutionSetting;
   }
-  normalLabel = v2->fields.normalLabel;
-  if ( klass_low )
-    v23 = (System_String_o **)&StringLiteral_9980/*"OPTION_RERSOLUTION_INFO"*/;
+  infoLabel = v2->fields.infoLabel;
+  if ( enableResolutionSetting )
+    v21 = (System_String_o **)&StringLiteral_9574/*"OPTION_RERSOLUTION_INFO"*/;
   else
-    v23 = (System_String_o **)&StringLiteral_9981/*"OPTION_RERSOLUTION_INFO_DISABLE"*/;
-  v24 = *v23;
-  if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !LocalizationManager_TypeInfo->_2.cctor_finished )
-  {
+    v21 = (System_String_o **)&StringLiteral_9575/*"OPTION_RERSOLUTION_INFO_DISABLE"*/;
+  v22 = *v21;
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  }
-  this = (SetResolutionOptionControl_o *)LocalizationManager__Get(v24, 0LL);
-  if ( !normalLabel
-    || (UILabel__set_text(normalLabel, (System_String_o *)this, 0LL),
-        v25 = v2->fields.lowLabel,
-        this = (SetResolutionOptionControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9983/*"OPTION_RERSOLUTION_NORMAL"*/, 0LL),
-        !v25)
-    || (UILabel__set_text(v25, (System_String_o *)this, 0LL),
-        v26 = (UILabel_o *)v2->fields.normalButton,
-        this = (SetResolutionOptionControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9982/*"OPTION_RERSOLUTION_LOW"*/, 0LL),
-        !v26) )
+  this = (SetResolutionOptionControl_o *)LocalizationManager__Get(v22, 0LL);
+  if ( !infoLabel
+    || (UILabel__set_text(infoLabel, (System_String_o *)this, 0LL),
+        v23 = v2->fields.normalLabel,
+        this = (SetResolutionOptionControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9577/*"OPTION_RERSOLUTION_NORMAL"*/, 0LL),
+        !v23)
+    || (UILabel__set_text(v23, (System_String_o *)this, 0LL),
+        v24 = v2->fields.lowLabel,
+        this = (SetResolutionOptionControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9576/*"OPTION_RERSOLUTION_LOW"*/, 0LL),
+        !v24) )
   {
-LABEL_26:
-    sub_B7769C(this, method);
+LABEL_23:
+    sub_1B00F28(this, method);
   }
-  UILabel__set_text(v26, (System_String_o *)this, 0LL);
-  if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !OptionManager_TypeInfo->_2.cctor_finished )
-  {
+  UILabel__set_text(v24, (System_String_o *)this, 0LL);
+  if ( !OptionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-  }
   ResolutionType = OptionManager__GetResolutionType(0LL);
-  SetResolutionOptionControl__RefreshDisplay(v2, ResolutionType, v28);
+  SetResolutionOptionControl__RefreshDisplay(v2, ResolutionType, v26);
 }
 
 
@@ -123,38 +112,34 @@ void __fastcall SetResolutionOptionControl__OnClickLowButton(
         SetResolutionOptionControl_o *this,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x2
+  __int64 v3; // x1
+  _QWORD *v4; // x0
+  _BOOL4 enableResolutionSetting; // w20
+  System_Reflection_MethodBase_o *v6; // x0
+  const MethodInfo *v7; // x2
 
-  if ( (byte_438F970 & 1) == 0 )
+  if ( (byte_48DE195 & 1) == 0 )
   {
-    sub_B775C4(&OptionManager_TypeInfo);
-    sub_B775C4(&SoundManager_TypeInfo);
-    byte_438F970 = 1;
+    sub_1B00CCC(&OptionManager_TypeInfo, method);
+    sub_1B00CCC(&Method_SetResolutionOptionControl_OnClickLowButton__, v3);
+    byte_48DE195 = 1;
   }
-  if ( LOBYTE(this[1].klass) )
+  v4 = Method_SetResolutionOptionControl_OnClickLowButton__;
+  enableResolutionSetting = this->fields.enableResolutionSetting;
+  if ( (*((_BYTE *)Method_SetResolutionOptionControl_OnClickLowButton__ + 83) & 2) != 0 )
+    v4 = (_QWORD *)sub_1B00CE4(Method_SetResolutionOptionControl_OnClickLowButton__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v4, v4[4]);
+  if ( enableResolutionSetting )
   {
-    if ( (WORD1(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
-      && !SoundManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    }
-    SoundManager__playSystemSe(0, 0LL);
-    SetResolutionOptionControl__RefreshDisplay(this, 1, v3);
-    if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !OptionManager_TypeInfo->_2.cctor_finished )
-    {
+    OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0LL);
+    SetResolutionOptionControl__RefreshDisplay(this, 1, v7);
+    if ( !OptionManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    }
     OptionManager__SetResolutionType(1, 0LL);
   }
   else
   {
-    if ( (WORD1(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
-      && !SoundManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    }
-    SoundManager__playSystemSe(2, 0LL);
+    OverwriteAssetSoundName__PlaySystemSe(v6, 2, 0LL);
   }
 }
 
@@ -163,38 +148,34 @@ void __fastcall SetResolutionOptionControl__OnClickNormalButton(
         SetResolutionOptionControl_o *this,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x2
+  __int64 v3; // x1
+  _QWORD *v4; // x0
+  _BOOL4 enableResolutionSetting; // w20
+  System_Reflection_MethodBase_o *v6; // x0
+  const MethodInfo *v7; // x2
 
-  if ( (byte_438F96F & 1) == 0 )
+  if ( (byte_48DE194 & 1) == 0 )
   {
-    sub_B775C4(&OptionManager_TypeInfo);
-    sub_B775C4(&SoundManager_TypeInfo);
-    byte_438F96F = 1;
+    sub_1B00CCC(&OptionManager_TypeInfo, method);
+    sub_1B00CCC(&Method_SetResolutionOptionControl_OnClickNormalButton__, v3);
+    byte_48DE194 = 1;
   }
-  if ( LOBYTE(this[1].klass) )
+  v4 = Method_SetResolutionOptionControl_OnClickNormalButton__;
+  enableResolutionSetting = this->fields.enableResolutionSetting;
+  if ( (*((_BYTE *)Method_SetResolutionOptionControl_OnClickNormalButton__ + 83) & 2) != 0 )
+    v4 = (_QWORD *)sub_1B00CE4(Method_SetResolutionOptionControl_OnClickNormalButton__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v4, v4[4]);
+  if ( enableResolutionSetting )
   {
-    if ( (WORD1(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
-      && !SoundManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    }
-    SoundManager__playSystemSe(0, 0LL);
-    SetResolutionOptionControl__RefreshDisplay(this, 0, v3);
-    if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !OptionManager_TypeInfo->_2.cctor_finished )
-    {
+    OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0LL);
+    SetResolutionOptionControl__RefreshDisplay(this, 0, v7);
+    if ( !OptionManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    }
     OptionManager__SetResolutionType(0, 0LL);
   }
   else
   {
-    if ( (WORD1(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
-      && !SoundManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    }
-    SoundManager__playSystemSe(2, 0LL);
+    OverwriteAssetSoundName__PlaySystemSe(v6, 2, 0LL);
   }
 }
 
@@ -205,83 +186,60 @@ void __fastcall SetResolutionOptionControl__RefreshDisplay(
         int32_t type,
         const MethodInfo *method)
 {
-  UILabel_o *lowLabel; // x0
+  UILabel_o *normalLabel; // x0
   System_String_o *offButtonName; // x1
-  UIWidget_o *normalButton; // x20
-  int v7; // s0
-  UIButtonColor_o *v11; // x20
-  int v12; // s0
-  _DWORD *v16; // x20
-  int v17; // s0
-  int v18; // s1
-  int v19; // s2
-  int v20; // s3
-  _DWORD *v21; // x20
-  int v22; // s0
-  int v23; // s1
-  int v24; // s2
-  int v25; // s3
-  _DWORD *v26; // x19
-  int v27; // s0
-  int v28; // s1
-  int v29; // s2
-  int v30; // s3
+  struct UIButton_o *lowButton; // x8
+  struct UIButton_o *v7; // x8
+  struct UIButton_o *v8; // x8
+  UnityEngine_Color_o v9; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( !LOBYTE(this[1].klass) )
+  if ( !this->fields.enableResolutionSetting )
   {
-    lowLabel = this->fields.lowLabel;
-    if ( lowLabel )
+    normalLabel = this->fields.normalLabel;
+    if ( normalLabel )
     {
-      UILabel__set_effectColor(lowLabel, *(UnityEngine_Color_o *)&this->fields.onButtonOutlineColor.fields.b, 0LL);
-      lowLabel = (UILabel_o *)this->fields.normalButton;
-      if ( lowLabel )
+      UILabel__set_effectColor(normalLabel, this->fields.onButtonOutlineColor, 0LL);
+      normalLabel = this->fields.lowLabel;
+      if ( normalLabel )
       {
-        UILabel__set_effectColor(lowLabel, *(UnityEngine_Color_o *)&this->fields.offButtonOutlineColor.fields.b, 0LL);
-        lowLabel = (UILabel_o *)this->fields.lowButton;
-        if ( lowLabel )
+        UILabel__set_effectColor(normalLabel, this->fields.offButtonOutlineColor, 0LL);
+        normalLabel = (UILabel_o *)this->fields.normalButton;
+        if ( normalLabel )
         {
-          UIButton__set_normalSprite((UIButton_o *)lowLabel, this->fields.offButtonName, 0LL);
-          lowLabel = *(UILabel_o **)&this->fields.isInit;
-          if ( lowLabel )
+          UIButton__set_normalSprite((UIButton_o *)normalLabel, this->fields.onButtonName, 0LL);
+          normalLabel = (UILabel_o *)this->fields.lowButton;
+          if ( normalLabel )
           {
-            UIButton__set_normalSprite(
-              (UIButton_o *)lowLabel,
-              *(System_String_o **)&this->fields.enableResolutionSetting,
-              0LL);
-            normalButton = (UIWidget_o *)this->fields.normalButton;
-            *(UnityEngine_Color_o *)&v7 = UnityEngine_Color__get_grey(0LL);
-            if ( normalButton )
+            UIButton__set_normalSprite((UIButton_o *)normalLabel, this->fields.offButtonName, 0LL);
+            normalLabel = this->fields.lowLabel;
+            if ( normalLabel )
             {
-              UIWidget__set_color(normalButton, *(UnityEngine_Color_o *)&v7, 0LL);
-              v11 = *(UIButtonColor_o **)&this->fields.isInit;
-              *(UnityEngine_Color_o *)&v12 = UnityEngine_Color__get_grey(0LL);
-              if ( v11 )
+              v9.fields.r = 0.5;
+              v9.fields.g = 0.5;
+              v9.fields.b = 0.5;
+              v9.fields.a = 1.0;
+              UIWidget__set_color((UIWidget_o *)normalLabel, v9, 0LL);
+              normalLabel = (UILabel_o *)this->fields.lowButton;
+              if ( normalLabel )
               {
-                UIButtonColor__set_defaultColor(v11, *(UnityEngine_Color_o *)&v12, 0LL);
-                v16 = *(_DWORD **)&this->fields.isInit;
-                *(UnityEngine_Color_o *)&v17 = UnityEngine_Color__get_grey(0LL);
-                if ( v16 )
+                v10.fields.r = 0.5;
+                v10.fields.g = 0.5;
+                v10.fields.b = 0.5;
+                v10.fields.a = 1.0;
+                UIButtonColor__set_defaultColor((UIButtonColor_o *)normalLabel, v10, 0LL);
+                lowButton = this->fields.lowButton;
+                if ( lowButton )
                 {
-                  v16[8] = v17;
-                  v16[9] = v18;
-                  v16[10] = v19;
-                  v16[11] = v20;
-                  v21 = *(_DWORD **)&this->fields.isInit;
-                  *(UnityEngine_Color_o *)&v22 = UnityEngine_Color__get_grey(0LL);
-                  if ( v21 )
+                  lowButton->fields.hover = (struct UnityEngine_Color_o)xmmword_B70510;
+                  v7 = this->fields.lowButton;
+                  if ( v7 )
                   {
-                    v21[12] = v22;
-                    v21[13] = v23;
-                    v21[14] = v24;
-                    v21[15] = v25;
-                    v26 = *(_DWORD **)&this->fields.isInit;
-                    *(UnityEngine_Color_o *)&v27 = UnityEngine_Color__get_grey(0LL);
-                    if ( v26 )
+                    v7->fields.pressed = (struct UnityEngine_Color_o)xmmword_B70510;
+                    v8 = this->fields.lowButton;
+                    if ( v8 )
                     {
-                      v26[16] = v27;
-                      v26[17] = v28;
-                      v26[18] = v29;
-                      v26[19] = v30;
+                      v8->fields.disabledColor = (struct UnityEngine_Color_o)xmmword_B70510;
                       return;
                     }
                   }
@@ -294,47 +252,47 @@ void __fastcall SetResolutionOptionControl__RefreshDisplay(
     }
     goto LABEL_24;
   }
-  lowLabel = this->fields.lowLabel;
+  normalLabel = this->fields.normalLabel;
   if ( !type )
   {
-    if ( lowLabel )
+    if ( normalLabel )
     {
-      UILabel__set_effectColor(lowLabel, *(UnityEngine_Color_o *)&this->fields.onButtonOutlineColor.fields.b, 0LL);
-      lowLabel = (UILabel_o *)this->fields.normalButton;
-      if ( lowLabel )
+      UILabel__set_effectColor(normalLabel, this->fields.onButtonOutlineColor, 0LL);
+      normalLabel = this->fields.lowLabel;
+      if ( normalLabel )
       {
-        UILabel__set_effectColor(lowLabel, *(UnityEngine_Color_o *)&this->fields.offButtonOutlineColor.fields.b, 0LL);
-        lowLabel = (UILabel_o *)this->fields.lowButton;
-        if ( lowLabel )
+        UILabel__set_effectColor(normalLabel, this->fields.offButtonOutlineColor, 0LL);
+        normalLabel = (UILabel_o *)this->fields.normalButton;
+        if ( normalLabel )
         {
-          UIButton__set_normalSprite((UIButton_o *)lowLabel, this->fields.offButtonName, 0LL);
-          lowLabel = *(UILabel_o **)&this->fields.isInit;
-          if ( lowLabel )
+          UIButton__set_normalSprite((UIButton_o *)normalLabel, this->fields.onButtonName, 0LL);
+          normalLabel = (UILabel_o *)this->fields.lowButton;
+          if ( normalLabel )
           {
-            offButtonName = *(System_String_o **)&this->fields.enableResolutionSetting;
+            offButtonName = this->fields.offButtonName;
             goto LABEL_23;
           }
         }
       }
     }
 LABEL_24:
-    sub_B7769C(lowLabel, *(_QWORD *)&type);
+    sub_1B00F28(normalLabel, *(_QWORD *)&type);
   }
-  if ( !lowLabel )
+  if ( !normalLabel )
     goto LABEL_24;
-  UILabel__set_effectColor(lowLabel, *(UnityEngine_Color_o *)&this->fields.offButtonOutlineColor.fields.b, 0LL);
-  lowLabel = (UILabel_o *)this->fields.normalButton;
-  if ( !lowLabel )
+  UILabel__set_effectColor(normalLabel, this->fields.offButtonOutlineColor, 0LL);
+  normalLabel = this->fields.lowLabel;
+  if ( !normalLabel )
     goto LABEL_24;
-  UILabel__set_effectColor(lowLabel, *(UnityEngine_Color_o *)&this->fields.onButtonOutlineColor.fields.b, 0LL);
-  lowLabel = (UILabel_o *)this->fields.lowButton;
-  if ( !lowLabel )
+  UILabel__set_effectColor(normalLabel, this->fields.onButtonOutlineColor, 0LL);
+  normalLabel = (UILabel_o *)this->fields.normalButton;
+  if ( !normalLabel )
     goto LABEL_24;
-  UIButton__set_normalSprite((UIButton_o *)lowLabel, *(System_String_o **)&this->fields.enableResolutionSetting, 0LL);
-  lowLabel = *(UILabel_o **)&this->fields.isInit;
-  if ( !lowLabel )
+  UIButton__set_normalSprite((UIButton_o *)normalLabel, this->fields.offButtonName, 0LL);
+  normalLabel = (UILabel_o *)this->fields.lowButton;
+  if ( !normalLabel )
     goto LABEL_24;
-  offButtonName = this->fields.offButtonName;
+  offButtonName = this->fields.onButtonName;
 LABEL_23:
-  UIButton__set_normalSprite((UIButton_o *)lowLabel, offButtonName, 0LL);
+  UIButton__set_normalSprite((UIButton_o *)normalLabel, offButtonName, 0LL);
 }

@@ -1,66 +1,36 @@
 void __fastcall DataAsset___ctor(DataAsset_o *this, System_Byte_array *bytes, const MethodInfo *method)
 {
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  int32_t v5; // w2
+  int32_t v6; // w3
 
-  if ( (byte_438C87C & 1) == 0 )
+  if ( (byte_48E1AA3 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438C87C = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, bytes);
+    byte_48E1AA3 = 1;
   }
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   UnityEngine_Object___ctor((UnityEngine_Object_o *)this, 0LL);
   this->fields.byteData = bytes;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.byteData,
-    (System_Int32_array **)bytes,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.byteData, (int32_t)bytes, v5, v6);
 }
 
 
-void __fastcall DataAsset___ctor_28019924(DataAsset_o *this, System_String_o *text, const MethodInfo *method)
+void __fastcall DataAsset___ctor_36710572(DataAsset_o *this, System_String_o *text, const MethodInfo *method)
 {
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  int32_t v5; // w2
+  int32_t v6; // w3
 
-  if ( (byte_438C87D & 1) == 0 )
+  if ( (byte_48E1AA4 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438C87D = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, text);
+    byte_48E1AA4 = 1;
   }
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   UnityEngine_Object___ctor((UnityEngine_Object_o *)this, 0LL);
   this->fields.textData = text;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.textData,
-    (System_Int32_array **)text,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.textData, (int32_t)text, v5, v6);
 }
 
 

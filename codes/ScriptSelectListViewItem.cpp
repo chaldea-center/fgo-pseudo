@@ -5,40 +5,16 @@ void __fastcall ScriptSelectListViewItem___ctor(
         UnityEngine_Font_o *fontType,
         const MethodInfo *method)
 {
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
-  System_String_array **v14; // x2
-  System_String_array **v15; // x3
-  System_Boolean_array **v16; // x4
-  System_Int32_array **v17; // x5
-  System_Int32_array *v18; // x6
-  System_Int32_array *v19; // x7
+  int32_t v8; // w2
+  int32_t v9; // w3
+  int32_t v10; // w2
+  int32_t v11; // w3
 
-  ListViewItem___ctor_24167012((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_39415512((ListViewItem_o *)this, index, 0LL);
   this->fields.message = message;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.message,
-    (System_Int32_array **)message,
-    v8,
-    v9,
-    v10,
-    v11,
-    v12,
-    v13);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.message, (int32_t)message, v8, v9);
   this->fields.fontType = fontType;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.fontType,
-    (System_Int32_array **)fontType,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18,
-    v19);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.fontType, (int32_t)fontType, v10, v11);
 }
 
 
@@ -52,12 +28,12 @@ System_String_o *__fastcall ScriptSelectListViewItem__ToString(
         ScriptSelectListViewItem_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4390C6E & 1) == 0 )
+  if ( (byte_48E438D & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_20890/*"message "*/);
-    byte_4390C6E = 1;
+    sub_1B00CCC(&StringLiteral_21113/*"message "*/, method);
+    byte_48E438D = 1;
   }
-  return System_String__Concat_44901936((System_String_o *)StringLiteral_20890/*"message "*/, this->fields.message, 0LL);
+  return System_String__Concat_60325748((System_String_o *)StringLiteral_21113/*"message "*/, this->fields.message, 0LL);
 }
 
 

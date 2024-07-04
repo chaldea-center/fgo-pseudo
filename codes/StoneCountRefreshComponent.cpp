@@ -10,52 +10,43 @@ void __fastcall StoneCountRefreshComponent__AttachToGameObject(
         bool checkDeferredPurchaseExists,
         const MethodInfo *method)
 {
-  Firebase_Unity_UnitySynchronizationContext_SynchronizationContextBehavoir_o *HasComponent_StoneCountRefreshComponent; // x0
+  __int64 v7; // x1
   __int64 v8; // x1
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
+  PurchaseBehaviour_c *v9; // x0
+  Il2CppObject *HasComponent_object; // x0
+  __int64 v11; // x1
+  int32_t v12; // w2
+  int32_t v13; // w3
 
-  if ( (byte_438A533 & 1) == 0 )
+  if ( (byte_48E2156 & 1) == 0 )
   {
-    sub_B775C4(&Method_GameObjectExtensions_HasComponent_StoneCountRefreshComponent___);
-    sub_B775C4(&Method_UnityEngine_GameObject_AddComponent_StoneCountRefreshComponent___);
-    sub_B775C4(&PurchaseBehaviour_TypeInfo);
-    byte_438A533 = 1;
+    sub_1B00CCC(&Method_GameObjectExtensions_HasComponent_StoneCountRefreshComponent___, refreshAction);
+    sub_1B00CCC(&Method_UnityEngine_GameObject_AddComponent_StoneCountRefreshComponent___, v7);
+    sub_1B00CCC(&PurchaseBehaviour_TypeInfo, v8);
+    byte_48E2156 = 1;
   }
   if ( !checkDeferredPurchaseExists )
-    goto LABEL_8;
-  if ( (BYTE3(PurchaseBehaviour_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !PurchaseBehaviour_TypeInfo->_2.cctor_finished )
-  {
+    goto LABEL_7;
+  v9 = PurchaseBehaviour_TypeInfo;
+  if ( !PurchaseBehaviour_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(PurchaseBehaviour_TypeInfo);
-  }
-  if ( PurchaseBehaviour__IsDeferredPurchaseExists(0LL) )
+  if ( PurchaseBehaviour__IsDeferredPurchaseExists((const MethodInfo *)v9) )
   {
-LABEL_8:
-    HasComponent_StoneCountRefreshComponent = (Firebase_Unity_UnitySynchronizationContext_SynchronizationContextBehavoir_o *)GameObjectExtensions__HasComponent_StoneCountRefreshComponent_(targetGameObject, (const MethodInfo_1DECB3C *)Method_GameObjectExtensions_HasComponent_StoneCountRefreshComponent___);
-    if ( ((unsigned __int8)HasComponent_StoneCountRefreshComponent & 1) == 0 )
+LABEL_7:
+    HasComponent_object = (Il2CppObject *)GameObjectExtensions__HasComponent_object_(
+                                            targetGameObject,
+                                            (const MethodInfo_2DAF728 *)Method_GameObjectExtensions_HasComponent_StoneCountRefreshComponent___);
+    if ( ((unsigned __int8)HasComponent_object & 1) == 0 )
     {
       if ( !targetGameObject
-        || (HasComponent_StoneCountRefreshComponent = UnityEngine_GameObject__AddComponent_UnitySynchronizationContext_SynchronizationContextBehavoir_(
-                                                        targetGameObject,
-                                                        (const MethodInfo_1DEBEC8 *)Method_UnityEngine_GameObject_AddComponent_StoneCountRefreshComponent___)) == 0LL )
+        || (HasComponent_object = UnityEngine_GameObject__AddComponent_object_(
+                                    targetGameObject,
+                                    (const MethodInfo_2DADD20 *)Method_UnityEngine_GameObject_AddComponent_StoneCountRefreshComponent___)) == 0LL )
       {
-        sub_B7769C(HasComponent_StoneCountRefreshComponent, v8);
+        sub_1B00F28(HasComponent_object, v11);
       }
-      HasComponent_StoneCountRefreshComponent->fields.callbackQueue = (struct System_Collections_Generic_Queue_Tuple_SendOrPostCallback__object___o *)refreshAction;
-      sub_B77560(
-        (BattleServantConfConponent_o *)&HasComponent_StoneCountRefreshComponent->fields.callbackQueue,
-        (System_Int32_array **)refreshAction,
-        v9,
-        v10,
-        v11,
-        v12,
-        v13,
-        v14);
+      HasComponent_object[2].klass = (Il2CppClass *)refreshAction;
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)&HasComponent_object[2], (int32_t)refreshAction, v12, v13);
     }
   }
 }
@@ -66,19 +57,14 @@ void __fastcall StoneCountRefreshComponent__Refresh(
         int32_t stoneCount,
         const MethodInfo *method)
 {
-  System_Action_int__o *refreshAction; // x0
+  struct System_Action_int__o *refreshAction; // x8
 
-  if ( (byte_438A532 & 1) == 0 )
-  {
-    sub_B775C4(&Method_System_Action_int__Invoke__);
-    byte_438A532 = 1;
-  }
   refreshAction = this->fields._refreshAction;
   if ( refreshAction )
-    System_Action_int___Invoke(
-      refreshAction,
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, int32_t, _QWORD))refreshAction->fields.m_target)(
+      refreshAction->fields.original_method_info,
       stoneCount,
-      (const MethodInfo_269F2EC *)Method_System_Action_int__Invoke__);
+      *(_QWORD *)&refreshAction->fields.extra_arg);
 }
 
 
@@ -95,55 +81,52 @@ void __fastcall StoneCountRefreshComponent__RefreshAllStoneCount(const MethodInf
 
 void __fastcall StoneCountRefreshComponent__RefreshAllStoneCount_Inner(int32_t stoneCount, const MethodInfo *method)
 {
-  StoneCountRefreshComponent_array *ObjectsOfType_StoneCountRefreshComponent; // x0
-  __int64 v4; // x1
-  const MethodInfo *v5; // x2
+  __int64 v3; // x1
+  System_Object_array *ObjectsOfType_object__48060984; // x0
+  __int64 v5; // x1
   int max_length; // w8
-  StoneCountRefreshComponent_array *v7; // x20
+  System_Object_array *v7; // x20
   unsigned int v8; // w21
-  __int64 v9; // x0
+  Il2CppObject *v9; // x8
+  Il2CppClass *klass; // x8
 
-  if ( (byte_438A534 & 1) == 0 )
+  if ( (byte_48E2157 & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_Object_FindObjectsOfType_StoneCountRefreshComponent___);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438A534 = 1;
+    sub_1B00CCC(&Method_UnityEngine_Object_FindObjectsOfType_StoneCountRefreshComponent___, method);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v3);
+    byte_48E2157 = 1;
   }
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  ObjectsOfType_StoneCountRefreshComponent = UnityEngine_Object__FindObjectsOfType_StoneCountRefreshComponent_(
-                                               1,
-                                               (const MethodInfo_1DF9834 *)Method_UnityEngine_Object_FindObjectsOfType_StoneCountRefreshComponent___);
-  if ( !ObjectsOfType_StoneCountRefreshComponent )
-    goto LABEL_14;
-  max_length = ObjectsOfType_StoneCountRefreshComponent->max_length;
-  v7 = ObjectsOfType_StoneCountRefreshComponent;
+  ObjectsOfType_object__48060984 = UnityEngine_Object__FindObjectsOfType_object__48060984(
+                                     1,
+                                     (const MethodInfo_2DD5A38 *)Method_UnityEngine_Object_FindObjectsOfType_StoneCountRefreshComponent___);
+  if ( !ObjectsOfType_object__48060984 )
+    goto LABEL_15;
+  max_length = ObjectsOfType_object__48060984->max_length;
+  v7 = ObjectsOfType_object__48060984;
   if ( max_length >= 1 )
   {
     v8 = 0;
     while ( 1 )
     {
       if ( v8 >= max_length )
-      {
-        v9 = sub_B776C8(ObjectsOfType_StoneCountRefreshComponent);
-        sub_B77668(v9, 0LL);
-      }
-      ObjectsOfType_StoneCountRefreshComponent = (StoneCountRefreshComponent_array *)v7->m_Items[v8];
-      if ( !ObjectsOfType_StoneCountRefreshComponent )
+        sub_1B00F30(ObjectsOfType_object__48060984, v5);
+      v9 = v7->m_Items[v8];
+      if ( !v9 )
         break;
-      StoneCountRefreshComponent__Refresh(
-        (StoneCountRefreshComponent_o *)ObjectsOfType_StoneCountRefreshComponent,
-        stoneCount,
-        v5);
+      klass = v9[2].klass;
+      if ( klass )
+        ObjectsOfType_object__48060984 = (System_Object_array *)((__int64 (__fastcall *)(Il2CppClass *, _QWORD, _QWORD))klass->_1.namespaze)(
+                                                                  klass->_1.element_class,
+                                                                  (unsigned int)stoneCount,
+                                                                  *(_QWORD *)&klass->_1.byval_arg.bits);
       max_length = v7->max_length;
       if ( (int)++v8 >= max_length )
         return;
     }
-LABEL_14:
-    sub_B7769C(ObjectsOfType_StoneCountRefreshComponent, v4);
+LABEL_15:
+    sub_1B00F28(ObjectsOfType_object__48060984, v5);
   }
 }
 
@@ -153,20 +136,12 @@ void __fastcall StoneCountRefreshComponent__RegisterRefreshAction(
         System_Action_int__o *refreshAction,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._refreshAction = refreshAction;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._refreshAction,
-    (System_Int32_array **)refreshAction,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._refreshAction,
+    (int32_t)refreshAction,
+    (int32_t)method,
+    v3);
 }

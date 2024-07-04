@@ -19,20 +19,8 @@ void __fastcall SupportSelectUIDragDropListViewSurface__set_DropObject(
         SupportSelectListViewDropObject_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields.dropObject = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.dropObject,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.dropObject, (int32_t)value, (int32_t)method, v3);
 }

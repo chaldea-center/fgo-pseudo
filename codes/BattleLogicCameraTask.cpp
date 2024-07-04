@@ -3,23 +3,14 @@ void __fastcall BattleLogicCameraTask___ctor(
         System_String_o *cameraName,
         const MethodInfo *method)
 {
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  BattleLogicCameraTask_o *v4; // x20
+  int32_t v5; // w2
+  int32_t v6; // w3
 
-  BattleLogicTask___ctor((BattleLogicTask_o *)this, 0LL);
-  BattleLogicTask__setCamera((BattleLogicTask_o *)this, 0LL);
-  this->fields.endCameraName = cameraName;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.endCameraName,
-    (System_Int32_array **)cameraName,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10);
+  v4 = this;
+  BattleLogicTask___ctor((BattleLogicTask_o *)this, (const MethodInfo *)cameraName);
+  v4->fields.endCameraName = cameraName;
+  v4 = (BattleLogicCameraTask_o *)((char *)v4 + 128);
+  *(_DWORD *)&v4[-1].fields.isForcedSpeedOne = 27;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)v4, (int32_t)cameraName, v5, v6);
 }

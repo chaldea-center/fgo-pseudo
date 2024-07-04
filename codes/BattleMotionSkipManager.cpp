@@ -3,41 +3,47 @@ void __fastcall BattleMotionSkipManager___ctor(
         BattlePerformance_o *perf,
         const MethodInfo *method)
 {
-  BaseMotionSkip_o *v5; // x21
+  Il2CppObject *v5; // x21
+  int32_t v6; // w2
+  int32_t v7; // w3
+  int32_t v8; // w2
+  int32_t v9; // w3
 
-  if ( (byte_4387729 & 1) == 0 )
+  if ( (byte_48E4D29 & 1) == 0 )
   {
-    sub_B775C4(&BaseMotionSkip_TypeInfo);
-    byte_4387729 = 1;
+    sub_1B00CCC(&BaseMotionSkip_TypeInfo, perf);
+    byte_48E4D29 = 1;
   }
-  v5 = (BaseMotionSkip_o *)sub_B77694(BaseMotionSkip_TypeInfo);
-  BaseMotionSkip___ctor(v5, 0LL);
-  this->fields.defaultMotionSkip = v5;
-  sub_B77560(&this->fields);
+  v5 = (Il2CppObject *)sub_1B00F18(BaseMotionSkip_TypeInfo);
+  System_Object___ctor(v5, 0LL);
+  this->fields.defaultMotionSkip = (struct BaseMotionSkip_o *)v5;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)v5, v6, v7);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._Perf_k__BackingField = perf;
-  sub_B77560(&this->fields._Perf_k__BackingField);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields._Perf_k__BackingField, (int32_t)perf, v8, v9);
 }
 
 
 void __fastcall BattleMotionSkipManager__ReleaseMotionSkip(BattleMotionSkipManager_o *this, const MethodInfo *method)
 {
   struct BaseMotionSkip_o *mainMotionSkip; // x0
-  struct BaseMotionSkip_o **p_mainMotionSkip; // x19
+  ServantStatusBattleListViewItem_o *p_mainMotionSkip; // x19
+  int32_t v5; // w2
+  int32_t v6; // w3
 
-  p_mainMotionSkip = &this->fields.mainMotionSkip;
+  p_mainMotionSkip = (ServantStatusBattleListViewItem_o *)&this->fields.mainMotionSkip;
   mainMotionSkip = this->fields.mainMotionSkip;
   if ( !mainMotionSkip )
   {
     mainMotionSkip = this->fields.defaultMotionSkip;
     if ( !mainMotionSkip )
-      sub_B7769C(0LL, method);
+      sub_1B00F28(0LL, method);
   }
   ((void (__fastcall *)(struct BaseMotionSkip_o *, Il2CppMethodPointer))mainMotionSkip->klass->vtable._7_Release.method)(
     mainMotionSkip,
     mainMotionSkip->klass->vtable._8_ResetSkipTimeScale.methodPtr);
-  *p_mainMotionSkip = 0LL;
-  sub_B77560(p_mainMotionSkip);
+  p_mainMotionSkip->klass = 0LL;
+  sub_1B00C70(p_mainMotionSkip, 0, v5, v6);
 }
 
 
@@ -48,17 +54,21 @@ void __fastcall BattleMotionSkipManager__SetMotionSkip(
 {
   struct BaseMotionSkip_o *mainMotionSkip; // x0
   __int64 v6; // x1
+  struct BaseMotionSkip_o *v7; // x0
+  int32_t v8; // w2
+  int32_t v9; // w3
 
   BattleMotionSkipManager__ReleaseMotionSkip(this, (const MethodInfo *)skillInfo);
   if ( !skillInfo
-    || (this->fields.mainMotionSkip = (struct BaseMotionSkip_o *)((__int64 (__fastcall *)(BattleSkillInfoData_o *, Il2CppMethodPointer))skillInfo->klass->vtable._14_MakeSkillSkip.method)(
-                                                                   skillInfo,
-                                                                   skillInfo->klass->vtable._15_CommonMakeSkillSkip.methodPtr),
-        sub_B77560(&this->fields.mainMotionSkip),
+    || (v7 = (struct BaseMotionSkip_o *)((__int64 (__fastcall *)(BattleSkillInfoData_o *, Il2CppMethodPointer))skillInfo->klass->vtable._14_MakeSkillSkip.method)(
+                                          skillInfo,
+                                          skillInfo->klass->vtable._15_CommonMakeSkillSkip.methodPtr),
+        this->fields.mainMotionSkip = v7,
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.mainMotionSkip, (int32_t)v7, v8, v9),
         (mainMotionSkip = this->fields.mainMotionSkip) == 0LL)
     && (mainMotionSkip = this->fields.defaultMotionSkip) == 0LL )
   {
-    sub_B7769C(mainMotionSkip, v6);
+    sub_1B00F28(mainMotionSkip, v6);
   }
   ((void (__fastcall *)(struct BaseMotionSkip_o *, BattleMotionSkipManager_o *, Il2CppMethodPointer))mainMotionSkip->klass->vtable._6_Init.method)(
     mainMotionSkip,
@@ -93,8 +103,10 @@ void __fastcall BattleMotionSkipManager__set_Current(
         BaseMotionSkip_o *value,
         const MethodInfo *method)
 {
+  int32_t v3; // w3
+
   this->fields.mainMotionSkip = value;
-  sub_B77560(&this->fields.mainMotionSkip);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.mainMotionSkip, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -103,6 +115,12 @@ void __fastcall BattleMotionSkipManager__set_Perf(
         BattlePerformance_o *value,
         const MethodInfo *method)
 {
+  int32_t v3; // w3
+
   this->fields._Perf_k__BackingField = value;
-  sub_B77560(&this->fields._Perf_k__BackingField);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._Perf_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }

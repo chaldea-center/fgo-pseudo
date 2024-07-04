@@ -16,7 +16,7 @@ void __fastcall ResultItemComponent__Clear(ResultItemComponent_o *this, const Me
     || (UnityEngine_GameObject__SetActive(baseObject, 0, 0LL),
         (baseObject = (UnityEngine_GameObject_o *)this->fields.itemIcon) == 0LL) )
   {
-    sub_B7769C(baseObject, method);
+    sub_1B00F28(baseObject, method);
   }
   ItemIconComponent__Clear((ItemIconComponent_o *)baseObject, 0LL);
 }
@@ -56,7 +56,7 @@ void __fastcall ResultItemComponent__Set(
         num = -1;
       else
         num = v4->fields.num;
-      ItemIconComponent__SetItemImage_28178620(
+      ItemIconComponent__SetItemImage_36938260(
         (ItemIconComponent_o *)this,
         (int32_t)giftEnt,
         v4->fields.objectId,
@@ -65,7 +65,7 @@ void __fastcall ResultItemComponent__Set(
       return;
     }
 LABEL_16:
-    sub_B7769C(this, giftEnt);
+    sub_1B00F28(this, giftEnt);
   }
   if ( !this )
     goto LABEL_16;
@@ -97,9 +97,9 @@ void __fastcall ResultItemComponent__SetExtra(
       || (UnityEngine_GameObject__SetActive(baseObject, 1, 0LL),
           (baseObject = (UnityEngine_GameObject_o *)this->fields.itemIcon) == 0LL) )
     {
-      sub_B7769C(baseObject, *(_QWORD *)&imgId);
+      sub_1B00F28(baseObject, *(_QWORD *)&imgId);
     }
-    ItemIconComponent__SetItemImage_28175904((ItemIconComponent_o *)baseObject, imgId, bgId, -1, -1, 0LL);
+    ItemIconComponent__SetItemImage_36932388((ItemIconComponent_o *)baseObject, imgId, bgId, -1, -1, 0LL);
   }
 }
 
@@ -119,7 +119,7 @@ void __fastcall ResultItemComponent__SetItemIconScale(
 
   itemIcon = (UnityEngine_Component_o *)this->fields.itemIcon;
   if ( !itemIcon )
-    sub_B7769C(0LL, method);
+    sub_1B00F28(0LL, method);
   z = vec.fields.z;
   y = vec.fields.y;
   x = vec.fields.x;
@@ -139,7 +139,7 @@ void __fastcall ResultItemComponent__SetRareItem(ResultItemComponent_o *this, co
   if ( !bonusSprite
     || (bonusSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(bonusSprite, 0LL)) == 0LL )
   {
-    sub_B7769C(bonusSprite, method);
+    sub_1B00F28(bonusSprite, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bonusSprite, 1, 0LL);
 }

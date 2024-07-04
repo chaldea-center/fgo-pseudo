@@ -1,22 +1,18 @@
 void __fastcall DataLostResetEffectComponent___ctor(DataLostResetEffectComponent_o *this, const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  System_Int32_array **v9; // x1
+  int32_t v2; // w2
+  int32_t v3; // w3
+  int32_t v5; // w1
 
-  if ( (byte_438C87E & 1) == 0 )
+  if ( (byte_48E1721 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438C87E = 1;
+    sub_1B00CCC(&StringLiteral_1/*""*/, method);
+    byte_48E1721 = 1;
   }
-  LODWORD(this->fields.whiteOutSe) = 1069547520;
-  *(_QWORD *)&this->fields.effectWaitTime = 0x40D000003FC00000LL;
-  v9 = (System_Int32_array **)StringLiteral_1/*""*/;
-  this[1].klass = (DataLostResetEffectComponent_c *)StringLiteral_1/*""*/;
-  sub_B77560((BattleServantConfConponent_o *)&this[1], v9, v2, v3, v4, v5, v6, v7);
+  this->fields.whiteOutTime = 1.5;
+  *(_QWORD *)&this->fields.bgmFadeOutTime = 0x40D000003FC00000LL;
+  v5 = (int)StringLiteral_1/*""*/;
+  this->fields.whiteOutSe = (struct System_String_o *)StringLiteral_1/*""*/;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.whiteOutSe, v5, v2, v3);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }

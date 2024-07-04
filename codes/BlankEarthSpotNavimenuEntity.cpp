@@ -1,13 +1,13 @@
 void __fastcall BlankEarthSpotNavimenuEntity___ctor(BlankEarthSpotNavimenuEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438ADE0 & 1) == 0 )
+  if ( (byte_48E24FB & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_int___ctor__);
-    byte_438ADE0 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_int___ctor__, method);
+    byte_48E24FB = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_2FE684C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -25,15 +25,15 @@ bool __fastcall BlankEarthSpotNavimenuEntity__IsEnable(BlankEarthSpotNavimenuEnt
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_438ADDF & 1) == 0 )
+  if ( (byte_48E24FA & 1) == 0 )
   {
-    sub_B775C4(&CondType_TypeInfo);
-    byte_438ADDF = 1;
+    sub_1B00CCC(&CondType_TypeInfo, method);
+    byte_48E24FA = 1;
   }
   condType = this->fields.condType;
   condId = this->fields.condId;
   condNum = this->fields.condNum;
-  if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
+  if ( !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
   return CondType__IsOpen(condType, condId, condNum, 0, 0LL);
 }

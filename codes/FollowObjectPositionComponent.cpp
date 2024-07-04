@@ -4,60 +4,46 @@ void __fastcall FollowObjectPositionComponent___ctor(FollowObjectPositionCompone
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall FollowObjectPositionComponent__SetObj(
         FollowObjectPositionComponent_o *this,
         UnityEngine_GameObject_o *obj,
         bool IsInversion,
         const MethodInfo *method)
 {
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  struct UnityEngine_GameObject_o **p_TargetObj; // x20
+  struct UnityEngine_GameObject_o **p_TargetObj; // x19
+  bool v5; // w20
 
   this->fields.TargetObj = obj;
   p_TargetObj = &this->fields.TargetObj;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.TargetObj,
-    (System_Int32_array **)obj,
-    (System_String_array **)IsInversion,
-    (System_String_array **)method,
-    v4,
-    v5,
-    v6,
-    v7);
-  *((_BYTE *)p_TargetObj + 8) = IsInversion;
+  v5 = IsInversion;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.TargetObj, (int32_t)obj, IsInversion, (int32_t)method);
+  *((_BYTE *)p_TargetObj + 8) = v5;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 void __fastcall FollowObjectPositionComponent__Update(FollowObjectPositionComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_Object_o *TargetObj; // x20
+  UnityEngine_Object_o *TargetObj; // x19
   _BOOL4 IsInversion; // w21
   UnityEngine_Transform_o *transform; // x0
   __int64 v6; // x1
-  UnityEngine_Transform_o *v7; // x20
-  float v8; // s0
-  float v9; // s1
-  int v10; // s2
+  UnityEngine_Transform_o *v7; // x19
+  float v8; // s1
+  int v9; // s2
+  float v10; // s0
   float v11; // s8
   float v12; // s1
-  UnityEngine_Transform_o *v13; // x0
+  float v13; // s0
 
-  if ( (byte_4389750 & 1) == 0 )
+  if ( (byte_48E1D16 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_4389750 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
+    byte_48E1D16 = 1;
   }
   TargetObj = (UnityEngine_Object_o *)this->fields.TargetObj;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( !UnityEngine_Object__op_Equality(TargetObj, 0LL, 0LL) )
   {
     IsInversion = this->fields.IsInversion;
@@ -68,8 +54,8 @@ void __fastcall FollowObjectPositionComponent__Update(FollowObjectPositionCompon
       transform = UnityEngine_GameObject__get_transform(this->fields.TargetObj, 0LL);
       if ( transform )
       {
-        *(UnityEngine_Vector3_o *)&v8 = UnityEngine_Transform__get_localPosition(transform, 0LL);
-        v11 = v8;
+        *(UnityEngine_Vector3_o *)(&v8 - 1) = UnityEngine_Transform__get_localPosition(transform, 0LL);
+        v11 = v10;
         if ( IsInversion )
         {
           transform = (UnityEngine_Transform_o *)this->fields.TargetObj;
@@ -81,12 +67,12 @@ void __fastcall FollowObjectPositionComponent__Update(FollowObjectPositionCompon
               *(UnityEngine_Vector3_o *)(&v12 - 1) = UnityEngine_Transform__get_localPosition(transform, 0LL);
               if ( v7 )
               {
-                v9 = -v12;
-                v8 = -v11;
-                v10 = 0;
-                v13 = v7;
-LABEL_16:
-                UnityEngine_Transform__set_localPosition(v13, *(UnityEngine_Vector3_o *)&v8, 0LL);
+                v8 = -v12;
+                v11 = -v11;
+                v9 = 0;
+LABEL_14:
+                v13 = v11;
+                UnityEngine_Transform__set_localPosition(v7, *(UnityEngine_Vector3_o *)(&v8 - 1), 0LL);
                 return;
               }
             }
@@ -94,11 +80,10 @@ LABEL_16:
         }
         else if ( v7 )
         {
-          v13 = v7;
-          goto LABEL_16;
+          goto LABEL_14;
         }
       }
     }
-    sub_B7769C(transform, v6);
+    sub_1B00F28(transform, v6);
   }
 }

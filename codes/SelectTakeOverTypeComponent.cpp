@@ -1,9 +1,3 @@
-void __fastcall SelectTakeOverTypeComponent___cctor(const MethodInfo *method)
-{
-  ;
-}
-
-
 void __fastcall SelectTakeOverTypeComponent___ctor(SelectTakeOverTypeComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
@@ -20,30 +14,27 @@ void __fastcall SelectTakeOverTypeComponent__SetupTitleImg(
         SelectTakeOverTypeComponent_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
   UISprite_o *titleImg; // x0
-  __int64 *v4; // x8
+  __int64 *v6; // x8
 
-  if ( (byte_438C462 & 1) == 0 )
+  if ( (byte_48E0292 & 1) == 0 )
   {
-    sub_B775C4(&SelectTakeOverTypeComponent_TypeInfo);
-    sub_B775C4(&StringLiteral_20058/*"img_txt_account"*/);
-    sub_B775C4(&StringLiteral_20059/*"img_txt_account_overwrite"*/);
-    byte_438C462 = 1;
-  }
-  if ( (BYTE3(SelectTakeOverTypeComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !SelectTakeOverTypeComponent_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(SelectTakeOverTypeComponent_TypeInfo);
+    sub_1B00CCC(&SelectTakeOverTypeComponent_TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_20218/*"img_txt_account"*/, v3);
+    sub_1B00CCC(&StringLiteral_20219/*"img_txt_account_overwrite"*/, v4);
+    byte_48E0292 = 1;
   }
   titleImg = this->fields.titleImg;
   if ( !titleImg
     || (!SelectTakeOverTypeComponent_TypeInfo->static_fields->isOverride
-      ? (v4 = &StringLiteral_20058/*"img_txt_account"*/)
-      : (v4 = &StringLiteral_20059/*"img_txt_account_overwrite"*/),
-        UISprite__set_spriteName(titleImg, (System_String_o *)*v4, 0LL),
+      ? (v6 = &StringLiteral_20218/*"img_txt_account"*/)
+      : (v6 = &StringLiteral_20219/*"img_txt_account_overwrite"*/),
+        UISprite__set_spriteName(titleImg, (System_String_o *)*v6, 0LL),
         (titleImg = this->fields.titleImg) == 0LL) )
   {
-    sub_B7769C(titleImg, method);
+    sub_1B00F28(titleImg, method);
   }
   ((void (__fastcall *)(UISprite_o *, Il2CppMethodPointer))titleImg->klass->vtable._33_MakePixelPerfect.method)(
     titleImg,

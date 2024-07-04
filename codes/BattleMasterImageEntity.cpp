@@ -1,27 +1,28 @@
 void __fastcall BattleMasterImageEntity___ctor(BattleMasterImageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_43876E8 & 1) == 0 )
+  if ( (byte_48E24B6 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    byte_43876E8 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
+    byte_48E24B6 = 1;
   }
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall BattleMasterImageEntity__CreatePK(int32_t id, int32_t type, const MethodInfo *method)
 {
-  if ( (byte_43876E5 & 1) == 0 )
+  if ( (byte_48E24B3 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_43876E5 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&type);
+    byte_48E24B3 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            type,
-           (const MethodInfo_1D171BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2D60E34 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -42,17 +43,17 @@ bool __fastcall BattleMasterImageEntity__checkScript(
 {
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
 
-  if ( (byte_43876E6 & 1) == 0 )
+  if ( (byte_48E24B4 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    byte_43876E6 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
+    byte_48E24B4 = 1;
   }
   script = this->fields.script;
   if ( script )
-    LOBYTE(script) = System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
-                       (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-                       (System_Xml_XmlQualifiedName_o *)key,
-                       (const MethodInfo_2F7D86C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    LOBYTE(script) = System_Collections_Generic_Dictionary_object__object___ContainsKey(
+                       (System_Collections_Generic_Dictionary_object__object__o *)script,
+                       (Il2CppObject *)key,
+                       (const MethodInfo_308DC3C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
   return (char)script;
 }
 
@@ -66,32 +67,35 @@ int32_t __fastcall BattleMasterImageEntity__getScript(
 {
   int32_t v4; // w20
   __int64 v7; // x1
-  System_Collections_Generic_Dictionary_Type__IStoreExtension__o *script; // x0
+  __int64 v8; // x1
+  System_Collections_Generic_Dictionary_object__object__o *script; // x0
+  __int64 v10; // x2
+  __int64 v11; // x3
   int32_t result; // w0
-  BattleMasterImageEntity_o *v10; // x0
-  const MethodInfo *v11; // x1
+  BattleMasterImageEntity_o *v13; // x0
+  const MethodInfo *v14; // x1
 
   v4 = defVal;
-  if ( (byte_43876E7 & 1) == 0 )
+  if ( (byte_48E24B5 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_B775C4(&long_TypeInfo);
-    byte_43876E7 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, key);
+    sub_1B00CCC(&long_TypeInfo, v7);
+    byte_48E24B5 = 1;
   }
   if ( !BattleMasterImageEntity__checkScript(this, key, *(const MethodInfo **)&defVal) )
     return v4;
-  script = (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)this->fields.script;
+  script = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.script;
   if ( !script
-    || (script = (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-                                                                                     script,
-                                                                                     (System_Type_o *)key,
-                                                                                     (const MethodInfo_2F7D534 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+    || (script = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
+                                                                              script,
+                                                                              (Il2CppObject *)key,
+                                                                              (const MethodInfo_308D9C8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
   {
-    sub_B7769C(script, v7);
+    sub_1B00F28(script, v8);
   }
   if ( script->klass->_1.element_class == long_TypeInfo->_1.element_class )
-    return *(_DWORD *)j_il2cpp_object_unbox_0();
-  v10 = (BattleMasterImageEntity_o *)sub_B77990(script);
-  BattleMasterImageEntity___ctor(v10, v11);
+    return *(_DWORD *)j_il2cpp_object_unbox_0(script, long_TypeInfo, v10, v11);
+  sub_1B011E8(script);
+  BattleMasterImageEntity___ctor(v13, v14);
   return result;
 }

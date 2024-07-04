@@ -6,37 +6,37 @@ void __fastcall ColorChange___ctor(ColorChange_o *this, const MethodInfo *method
 
 void __fastcall ColorChange__Awake(ColorChange_o *this, const MethodInfo *method)
 {
-  LOBYTE(this->fields.mFromColor.fields.r) = 0;
-  BYTE4(this[1].klass) = 0;
+  this->fields.mIsChangeColor = 0;
+  this->fields.mIsSkip = 0;
 }
 
 
 UnityEngine_Color_o __fastcall ColorChange__GetColor(ColorChange_o *this, const MethodInfo *method)
 {
-  float g; // s0
-  float b; // s1
-  float a; // s2
-  float mStartTime; // s3
+  float r; // s0
+  float g; // s1
+  float b; // s2
+  float a; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
+  r = this->fields.mNowColor.fields.r;
   g = this->fields.mNowColor.fields.g;
   b = this->fields.mNowColor.fields.b;
   a = this->fields.mNowColor.fields.a;
-  mStartTime = this->fields.mStartTime;
-  result.fields.a = mStartTime;
-  result.fields.b = a;
-  result.fields.g = b;
-  result.fields.r = g;
+  result.fields.a = a;
+  result.fields.b = b;
+  result.fields.g = g;
+  result.fields.r = r;
   return result;
 }
 
 
 void __fastcall ColorChange__Pause(ColorChange_o *this, const MethodInfo *method)
 {
-  if ( !LOBYTE(this->fields.mEasingType) )
+  if ( !this->fields.mPause )
   {
-    LOBYTE(this->fields.mEasingType) = 1;
-    *(float *)&this->fields.mIsSkip = UnityEngine_Time__get_time(0LL);
+    this->fields.mPause = 1;
+    this->fields.mPauseStartTime = UnityEngine_Time__get_time(0LL);
   }
 }
 
@@ -50,73 +50,40 @@ UnityEngine_Color_o __fastcall ColorChange__PingPong(
         int32_t easingType,
         const MethodInfo *method)
 {
-  float b; // s9
-  float g; // s11
-  float r; // s13
-  float v10; // s10
-  float v11; // s12
-  float v12; // s14
-  float v13; // s15
-  float v14; // s7
-  float v15; // s0
-  float v16; // s1
-  float v17; // s2
-  float v18; // s3
-  float v19; // s4
-  float v20; // s5
-  float v21; // s6
-  float v22; // s0
-  float v23; // s1
-  float v24; // s2
-  float v25; // s3
-  float a; // [xsp+4Ch] [xbp-4h]
-  float timea; // [xsp+60h] [xbp+10h]
+  float r; // s19
+  float g; // s18
+  float a; // s16
+  float b; // s17
+  float v10; // s0
+  float v11; // s1
+  float v12; // s2
+  float v13; // s3
+  float v14; // [xsp+0h] [xbp+0h]
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  BYTE4(this[1].klass) = 0;
-  a = to.fields.a;
-  b = to.fields.b;
-  g = to.fields.g;
-  r = to.fields.r;
-  v10 = from.fields.a;
-  v11 = from.fields.b;
-  v12 = from.fields.g;
-  v13 = from.fields.r;
-  UnityEngine_Color__get_white(0LL);
-  if ( time >= 0.5 )
+  r = from.fields.r;
+  g = from.fields.g;
+  a = from.fields.a;
+  b = from.fields.b;
+  this->fields.mIsSkip = 0;
+  if ( time < 0.5 )
   {
-    v18 = a;
-    timea = (float)(time + -0.5) + (float)(time + -0.5);
-    v15 = r;
-    v16 = g;
-    v17 = b;
-    v19 = v13;
-    v20 = v12;
-    v21 = v11;
-    v14 = v10;
+    v14 = time + time;
   }
   else
   {
-    v14 = a;
-    timea = time + time;
-    v15 = v13;
-    v16 = v12;
-    v17 = v11;
-    v18 = v10;
-    v19 = r;
-    v20 = g;
-    v21 = b;
+    v14 = (float)(time + -0.5) + (float)(time + -0.5);
+    from = to;
+    to.fields.r = r;
+    to.fields.g = g;
+    to.fields.b = b;
+    to.fields.a = a;
   }
-  *(UnityEngine_Color_o *)&v22 = Easing__Func_34147824(
-                                   *(UnityEngine_Color_o *)&v15,
-                                   *(UnityEngine_Color_o *)&v19,
-                                   timea,
-                                   easingType,
-                                   0LL);
-  result.fields.a = v25;
-  result.fields.b = v24;
-  result.fields.g = v23;
-  result.fields.r = v22;
+  *(UnityEngine_Color_o *)&v10 = Easing__Func_45431520(from, to, v14, easingType, 0LL);
+  result.fields.a = v13;
+  result.fields.b = v12;
+  result.fields.g = v11;
+  result.fields.r = v10;
   return result;
 }
 
@@ -140,62 +107,49 @@ void __fastcall ColorChange__Play(
   float b; // s9
   float g; // s10
   float r; // s11
-  System_String_array **v21; // x2
-  System_String_array **v22; // x3
-  System_Boolean_array **v23; // x4
-  System_Int32_array **v24; // x5
-  System_Int32_array *v25; // x6
-  System_Int32_array *v26; // x7
-  System_String_array **v27; // x2
-  System_String_array **v28; // x3
-  System_Boolean_array **v29; // x4
-  System_Int32_array **v30; // x5
-  System_Int32_array *v31; // x6
-  System_Int32_array *v32; // x7
+  int32_t v21; // w2
+  int32_t v22; // w3
+  int32_t v23; // w2
+  int32_t v24; // w3
+  System_Action_o *klass; // x0
 
   v11 = this;
-  *(UnityEngine_Color_o *)&this->fields.mFromColor.fields.g = from;
-  LOBYTE(this->fields.mFromColor.fields.r) = 1;
-  *(UnityEngine_Color_o *)&this->fields.mToColor.fields.g = to;
+  this->fields.mFromColor = from;
+  this->fields.mIsChangeColor = 1;
+  this->fields.mToColor = to;
   a = from.fields.a;
   b = from.fields.b;
   g = from.fields.g;
   r = from.fields.r;
-  this->fields.mTime = UnityEngine_Time__get_time(0LL);
-  *(float *)&v11->fields.mStyle = sec;
-  v11->fields.mCount = style;
-  v11->fields.mNowCount = count;
-  v11->fields.mDelay = 0.0;
-  *(_QWORD *)&v11->fields.mPause = endAct;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&v11->fields.mPause,
-    (System_Int32_array **)endAct,
-    v21,
-    v22,
-    v23,
-    v24,
-    v25,
-    v26);
-  v11->fields.mEndAct = procAct;
-  v11 = (ColorChange_o *)((char *)v11 + 104);
-  *(float *)&v11[-1].fields.mCount = r;
-  *(float *)&v11[-1].fields.mNowCount = g;
-  v11[-1].fields.mDelay = b;
+  this->fields.mStartTime = UnityEngine_Time__get_time(0LL);
+  v11->fields.mTime = sec;
+  v11->fields.mStyle = style;
+  v11->fields.mCount = count;
+  v11->fields.mNowCount = 0;
+  v11->fields.mEndAct = endAct;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v11->fields.mEndAct, (int32_t)endAct, v21, v22);
+  v11->fields.mProcessAct = procAct;
+  v11 = (ColorChange_o *)((char *)v11 + 112);
+  *(float *)&v11[-1].fields.mNowCount = r;
+  v11[-1].fields.mDelay = g;
+  *(&v11[-1].fields.mDelay + 1) = b;
   *(float *)&v11[-1].fields.mProcessAct = a;
-  sub_B77560((BattleServantConfConponent_o *)v11, (System_Int32_array **)procAct, v27, v28, v29, v30, v31, v32);
-  LODWORD(v11->fields.mFromColor.fields.r) = easingType;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)v11, (int32_t)procAct, v23, v24);
+  klass = (System_Action_o *)v11->klass;
+  LODWORD(v11->fields.m_CancellationTokenSource) = easingType;
   *(float *)&v11[-1].fields.mEasingType = delay;
-  LOBYTE(v11->fields.mFromColor.fields.g) = 0;
-  ActionExtensions__Call((System_Action_o *)v11->klass, 0LL);
+  BYTE4(v11->fields.m_CancellationTokenSource) = 0;
+  ActionExtensions__Call(klass, 0LL);
 }
 
 
 void __fastcall ColorChange__Resume(ColorChange_o *this, const MethodInfo *method)
 {
-  if ( LOBYTE(this->fields.mEasingType) )
+  if ( this->fields.mPause )
   {
-    LOBYTE(this->fields.mEasingType) = 0;
-    this->fields.mTime = this->fields.mTime + (float)(UnityEngine_Time__get_time(0LL) - *(float *)&this->fields.mIsSkip);
+    this->fields.mPause = 0;
+    this->fields.mStartTime = this->fields.mStartTime
+                            + (float)(UnityEngine_Time__get_time(0LL) - this->fields.mPauseStartTime);
   }
 }
 
@@ -203,7 +157,7 @@ void __fastcall ColorChange__Resume(ColorChange_o *this, const MethodInfo *metho
 // local variable allocation has failed, the output may be wrong!
 void __fastcall ColorChange__SetColor(ColorChange_o *this, UnityEngine_Color_o color, const MethodInfo *method)
 {
-  *(UnityEngine_Color_o *)&this->fields.mNowColor.fields.g = color;
+  this->fields.mNowColor = color;
 }
 
 
@@ -211,135 +165,139 @@ void __fastcall ColorChange__SetPause(ColorChange_o *this, bool isPause, const M
 {
   if ( isPause )
   {
-    if ( !LOBYTE(this->fields.mEasingType) )
+    if ( !this->fields.mPause )
     {
-      LOBYTE(this->fields.mEasingType) = 1;
-      *(float *)&this->fields.mIsSkip = UnityEngine_Time__get_time(0LL);
+      this->fields.mPause = 1;
+      this->fields.mPauseStartTime = UnityEngine_Time__get_time(0LL);
     }
   }
-  else if ( LOBYTE(this->fields.mEasingType) )
+  else if ( this->fields.mPause )
   {
-    LOBYTE(this->fields.mEasingType) = 0;
-    this->fields.mTime = this->fields.mTime + (float)(UnityEngine_Time__get_time(0LL) - *(float *)&this->fields.mIsSkip);
+    this->fields.mPause = 0;
+    this->fields.mStartTime = this->fields.mStartTime
+                            + (float)(UnityEngine_Time__get_time(0LL) - this->fields.mPauseStartTime);
   }
 }
 
 
 void __fastcall ColorChange__Skip(ColorChange_o *this, const MethodInfo *method)
 {
-  BYTE4(this[1].klass) = 1;
+  this->fields.mIsSkip = 1;
 }
 
 
 void __fastcall ColorChange__Stop(ColorChange_o *this, const MethodInfo *method)
 {
-  LOBYTE(this->fields.mFromColor.fields.r) = 0;
+  this->fields.mIsChangeColor = 0;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 void __fastcall ColorChange__Update(ColorChange_o *this, const MethodInfo *method)
 {
-  float mTime; // s8
-  float v4; // s9
-  float v5; // s0
-  const MethodInfo *v6; // x2
-  float v7; // s16
-  float g; // s0
-  float b; // s1
-  float a; // s2
-  float r; // s3
-  float v12; // s4
-  float v13; // s5
-  float v14; // s6
-  float v15; // s7
-  int32_t klass; // w1
-  float time; // s9
-  float v18; // s0
-  float v19; // s1
-  float v20; // s2
-  float v21; // s3
-  System_Action_o *mEndAct; // x0
-  int32_t mNowCount; // w8
-  float v24; // w9
-  System_Action_o *v25; // x0
-  float v26; // s0
+  float mStartTime; // s8
+  float mDelay; // s9
+  const MethodInfo *v5; // x2
+  float v6; // s6
+  float v7; // s17
+  float v8; // s7
+  float r; // s0
+  float g; // s1
+  float b; // s2
+  float a; // s3
+  float v13; // s4
+  float v14; // s5
+  float v15; // s6
+  float v16; // s7
+  int32_t mEasingType; // w1
+  float time; // s8
+  float v19; // s0
+  float v20; // s1
+  float v21; // s2
+  float v22; // s3
+  struct System_Action_o *mProcessAct; // x8
   int32_t mCount; // w8
-  __int128 v28; // q0
+  int32_t v25; // w9
+  struct System_Action_o *mEndAct; // x8
+  float v27; // s0
+  int32_t mStyle; // w8
+  struct UnityEngine_Color_o mFromColor; // q0
 
-  if ( LOBYTE(this->fields.mFromColor.fields.r) )
+  if ( this->fields.mIsChangeColor && !this->fields.mPause )
   {
-    if ( !LOBYTE(this->fields.mEasingType) )
+    if ( this->fields.mIsSkip
+      || (mStartTime = this->fields.mStartTime,
+          mDelay = this->fields.mDelay,
+          (float)(mStartTime + mDelay) <= UnityEngine_Time__get_time(0LL)) )
     {
-      if ( BYTE4(this[1].klass)
-        || (mTime = this->fields.mTime,
-            v4 = *(float *)&this->fields.mProcessAct,
-            (float)(mTime + v4) <= UnityEngine_Time__get_time(0LL)) )
+      v6 = (float)(UnityEngine_Time__get_time(0LL) - (float)(this->fields.mStartTime + this->fields.mDelay))
+         / this->fields.mTime;
+      v7 = 0.0;
+      v8 = fminf(v6, 1.0);
+      r = this->fields.mFromColor.fields.r;
+      g = this->fields.mFromColor.fields.g;
+      b = this->fields.mFromColor.fields.b;
+      a = this->fields.mFromColor.fields.a;
+      v13 = this->fields.mToColor.fields.r;
+      v14 = this->fields.mToColor.fields.g;
+      if ( v6 >= 0.0 )
+        v7 = v8;
+      v15 = this->fields.mToColor.fields.b;
+      v16 = this->fields.mToColor.fields.a;
+      mEasingType = this->fields.mEasingType;
+      time = this->fields.mIsSkip ? 1.0 : v7;
+      *(UnityEngine_Color_o *)&v19 = this->fields.mStyle == 1
+                                   ? ColorChange__PingPong(
+                                       this,
+                                       *(UnityEngine_Color_o *)&r,
+                                       *(UnityEngine_Color_o *)&v13,
+                                       time,
+                                       mEasingType,
+                                       v5)
+                                   : Easing__Func_45431520(
+                                       *(UnityEngine_Color_o *)&r,
+                                       *(UnityEngine_Color_o *)&v13,
+                                       time,
+                                       mEasingType,
+                                       0LL);
+      mProcessAct = this->fields.mProcessAct;
+      this->fields.mNowColor.fields.r = v19;
+      this->fields.mNowColor.fields.g = v20;
+      this->fields.mNowColor.fields.b = v21;
+      this->fields.mNowColor.fields.a = v22;
+      if ( mProcessAct )
+        ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))mProcessAct->fields.m_target)(
+          mProcessAct->fields.original_method_info,
+          *(_QWORD *)&mProcessAct->fields.extra_arg);
+      if ( time >= 1.0 )
       {
-        v5 = UnityEngine_Time__get_time(0LL);
-        v7 = UnityEngine_Mathf__Clamp01(
-               (float)(v5 - (float)(this->fields.mTime + *(float *)&this->fields.mProcessAct))
-             / *(float *)&this->fields.mStyle,
-               0LL);
-        g = this->fields.mFromColor.fields.g;
-        b = this->fields.mFromColor.fields.b;
-        a = this->fields.mFromColor.fields.a;
-        r = this->fields.mToColor.fields.r;
-        v12 = this->fields.mToColor.fields.g;
-        v13 = this->fields.mToColor.fields.b;
-        v14 = this->fields.mToColor.fields.a;
-        v15 = this->fields.mNowColor.fields.r;
-        klass = (int32_t)this[1].klass;
-        time = BYTE4(this[1].klass) ? 1.0 : v7;
-        *(UnityEngine_Color_o *)&v18 = this->fields.mCount == 1
-                                     ? ColorChange__PingPong(
-                                         this,
-                                         *(UnityEngine_Color_o *)&g,
-                                         *(UnityEngine_Color_o *)&v12,
-                                         time,
-                                         klass,
-                                         v6)
-                                     : Easing__Func_34147824(
-                                         *(UnityEngine_Color_o *)&g,
-                                         *(UnityEngine_Color_o *)&v12,
-                                         time,
-                                         klass,
-                                         0LL);
-        mEndAct = this->fields.mEndAct;
-        this->fields.mNowColor.fields.g = v18;
-        this->fields.mNowColor.fields.b = v19;
-        this->fields.mNowColor.fields.a = v20;
-        this->fields.mStartTime = v21;
-        if ( mEndAct )
-          System_Action__Invoke(mEndAct, 0LL);
-        if ( time >= 1.0 )
+        mCount = this->fields.mCount;
+        v25 = this->fields.mNowCount + 1;
+        this->fields.mNowCount = v25;
+        if ( mCount > v25 || !mCount )
         {
-          mNowCount = this->fields.mNowCount;
-          LODWORD(v24) = LODWORD(this->fields.mDelay) + 1;
-          this->fields.mDelay = v24;
-          if ( mNowCount > SLODWORD(v24) || !mNowCount )
+          v27 = UnityEngine_Time__get_time(0LL);
+          mStyle = this->fields.mStyle;
+          this->fields.mStartTime = v27;
+          if ( mStyle == 1 )
           {
-            v26 = UnityEngine_Time__get_time(0LL);
-            mCount = this->fields.mCount;
-            this->fields.mTime = v26;
-            if ( mCount == 1 )
-            {
-              v28 = *(_OWORD *)&this->fields.mFromColor.fields.g;
-            }
-            else
-            {
-              if ( mCount )
-                return;
-              v28 = *(_OWORD *)&this->fields.mToColor.fields.g;
-            }
-            *(_OWORD *)&this->fields.mNowColor.fields.g = v28;
-            return;
+            mFromColor = this->fields.mFromColor;
           }
-          v25 = *(System_Action_o **)&this->fields.mPause;
-          LOBYTE(this->fields.mFromColor.fields.r) = 0;
-          if ( v25 )
-            System_Action__Invoke(v25, 0LL);
+          else
+          {
+            if ( mStyle )
+              return;
+            mFromColor = this->fields.mToColor;
+          }
+          this->fields.mNowColor = mFromColor;
+          return;
         }
+        mEndAct = this->fields.mEndAct;
+        this->fields.mIsChangeColor = 0;
+        if ( mEndAct )
+          ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))mEndAct->fields.m_target)(
+            mEndAct->fields.original_method_info,
+            *(_QWORD *)&mEndAct->fields.extra_arg);
       }
     }
   }

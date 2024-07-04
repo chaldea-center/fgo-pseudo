@@ -1,14 +1,14 @@
 void __fastcall ItemSelectMaster___ctor(ItemSelectMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_438A74B & 1) == 0 )
+  if ( (byte_48E2B19 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string___ctor__);
-    byte_438A74B = 1;
+    sub_1B00CCC(&Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string___ctor__, method);
+    byte_48E2B19 = 1;
   }
-  DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
-    (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
+  DataMasterBase_object__object__object____ctor(
+    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     209,
-    (const MethodInfo_21FBC48 *)Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string___ctor__);
+    (const MethodInfo_2FE6D64 *)Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string___ctor__);
 }
 
 
@@ -19,69 +19,101 @@ ItemSelectEntity_o *__fastcall ItemSelectMaster__GetEntity(
         int32_t idx,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x1
+  Il2CppObject *PK; // x1
 
-  if ( (byte_438A749 & 1) == 0 )
+  if ( (byte_48E2B17 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string__GetEntity__);
-    byte_438A749 = 1;
+    sub_1B00CCC(&Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string__GetEntity__, *(_QWORD *)&itemId);
+    byte_48E2B17 = 1;
   }
-  PK = ItemSelectEntity__CreatePK(itemId, idx, *(const MethodInfo **)&idx);
-  return (ItemSelectEntity_o *)DataMasterBase_WarMessageMaster__WarMessageEntity__string___GetEntity(
-                                 (DataMasterBase_WarMessageMaster__WarMessageEntity__string__o *)this,
+  PK = (Il2CppObject *)ItemSelectEntity__CreatePK(itemId, idx, *(const MethodInfo **)&idx);
+  return (ItemSelectEntity_o *)DataMasterBase_object__object__object___GetEntity(
+                                 (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                  PK,
-                                 (const MethodInfo_21FBCE4 *)Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string__GetEntity__);
+                                 (const MethodInfo_2FE6DA4 *)Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string__GetEntity__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 ItemSelectEntity_array *__fastcall ItemSelectMaster__GetSelectables(
         ItemSelectMaster_o *this,
         int32_t itemId,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v5; // x21
-  const MethodInfo *v6; // x4
-  _BOOL8 v7; // x0
-  __int64 v8; // x1
-  int32_t v9; // w22
-  const MethodInfo *v10; // x4
-  ItemSelectEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  System_Collections_Generic_List_object__o *v8; // x21
+  const MethodInfo *v9; // x4
+  _BOOL8 v10; // x0
+  Il2CppObject *v11; // x1
+  int32_t v12; // w2
+  int32_t v13; // w3
+  int32_t v14; // w22
+  struct System_Object_array *items; // x8
+  _QWORD *v16; // x9
+  __int64 size; // x10
+  Il2CppClass **v18; // x0
+  const MethodInfo *v19; // x4
+  ItemSelectEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_438A74C & 1) == 0 )
+  if ( (byte_48E2B1A & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_ItemSelectEntity__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_ItemSelectEntity__ToArray__);
-    sub_B775C4(&Method_System_Collections_Generic_List_ItemSelectEntity___ctor__);
-    sub_B775C4(&System_Collections_Generic_List_ItemSelectEntity__TypeInfo);
-    byte_438A74C = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_ItemSelectEntity__Add__, *(_QWORD *)&itemId);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_ItemSelectEntity__ToArray__, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_ItemSelectEntity___ctor__, v6);
+    sub_1B00CCC(&System_Collections_Generic_List_ItemSelectEntity__TypeInfo, v7);
+    byte_48E2B1A = 1;
   }
   entity = 0LL;
-  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_ItemSelectEntity__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v5,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_ItemSelectEntity___ctor__);
-  v7 = ItemSelectMaster__TryGetEntity(this, &entity, itemId, 1, v6);
-  if ( v7 )
+  v8 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_ItemSelectEntity__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v8,
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_ItemSelectEntity___ctor__);
+  v10 = ItemSelectMaster__TryGetEntity(this, &entity, itemId, 1, v9);
+  if ( v10 )
   {
-    if ( !v5 )
-      goto LABEL_9;
-    v9 = 2;
-    do
+    if ( v8 )
     {
-      System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-        v5,
-        (EventMissionProgressRequest_Argument_ProgressData_o *)entity,
-        (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_ItemSelectEntity__Add__);
-      v7 = ItemSelectMaster__TryGetEntity(this, &entity, itemId, v9++, v10);
+      v14 = 2;
+      while ( 1 )
+      {
+        v11 = (Il2CppObject *)entity;
+        items = v8->fields._items;
+        v16 = Method_System_Collections_Generic_List_ItemSelectEntity__Add__;
+        ++v8->fields._version;
+        if ( !items )
+          break;
+        size = v8->fields._size;
+        if ( (unsigned int)size >= items->max_length )
+        {
+          System_Collections_Generic_List_object___AddWithResize(
+            v8,
+            v11,
+            *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+        }
+        else
+        {
+          v18 = &items->obj.klass + size;
+          v8->fields._size = size + 1;
+          v18[4] = (Il2CppClass *)v11;
+          sub_1B00C70((ServantStatusBattleListViewItem_o *)(v18 + 4), (int32_t)v11, v12, v13);
+        }
+        v10 = ItemSelectMaster__TryGetEntity(this, &entity, itemId, v14++, v19);
+        if ( !v10 )
+          return (ItemSelectEntity_array *)System_Collections_Generic_List_object___ToArray(
+                                             v8,
+                                             (const MethodInfo_33C3528 *)Method_System_Collections_Generic_List_ItemSelectEntity__ToArray__);
+      }
     }
-    while ( v7 );
+LABEL_14:
+    sub_1B00F28(v10, v11);
   }
-  if ( !v5 )
-LABEL_9:
-    sub_B7769C(v7, v8);
-  return (ItemSelectEntity_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
-                                     (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v5,
-                                     (const MethodInfo_30553E4 *)Method_System_Collections_Generic_List_ItemSelectEntity__ToArray__);
+  if ( !v8 )
+    goto LABEL_14;
+  return (ItemSelectEntity_array *)System_Collections_Generic_List_object___ToArray(
+                                     v8,
+                                     (const MethodInfo_33C3528 *)Method_System_Collections_Generic_List_ItemSelectEntity__ToArray__);
 }
 
 
@@ -93,17 +125,17 @@ bool __fastcall ItemSelectMaster__TryGetEntity(
         int32_t idx,
         const MethodInfo *method)
 {
-  System_String_o *PK; // x2
+  Il2CppObject *PK; // x2
 
-  if ( (byte_438A74A & 1) == 0 )
+  if ( (byte_48E2B18 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string__TryGetEntity__);
-    byte_438A74A = 1;
+    sub_1B00CCC(&Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string__TryGetEntity__, entity);
+    byte_48E2B18 = 1;
   }
-  PK = ItemSelectEntity__CreatePK(itemId, idx, *(const MethodInfo **)&itemId);
-  return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
-           (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
-           (WarQuestSelectionEntity_o **)entity,
+  PK = (Il2CppObject *)ItemSelectEntity__CreatePK(itemId, idx, *(const MethodInfo **)&itemId);
+  return DataMasterBase_object__object__object___TryGetEntity(
+           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
+           (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_21FBD3C *)Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string__TryGetEntity__);
+           (const MethodInfo_2FE6DF4 *)Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string__TryGetEntity__);
 }

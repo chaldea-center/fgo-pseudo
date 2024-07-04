@@ -1,32 +1,33 @@
 void __fastcall EventCombineCostumeEntity___ctor(EventCombineCostumeEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438DD95 & 1) == 0 )
+  if ( (byte_48E2722 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    byte_438DD95 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
+    byte_48E2722 = 1;
   }
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventCombineCostumeEntity__CreatePK(
         int32_t svtId,
         int32_t costumeId,
         int32_t eventId,
         const MethodInfo *method)
 {
-  if ( (byte_438DD93 & 1) == 0 )
+  if ( (byte_48E2720 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_438DD93 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&costumeId);
+    byte_48E2720 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            svtId,
            costumeId,
            eventId,
-           (const MethodInfo_1D175E4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2D612C4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -44,44 +45,42 @@ bool __fastcall EventCombineCostumeEntity__IsShortEventItem(
         EventCombineCostumeEntity_o *this,
         const MethodInfo *method)
 {
-  int64_t Instance; // x0
+  __int64 v3; // x1
   __int64 v4; // x1
-  UserItemMaster_o *MasterData_WarQuestSelectionMaster; // x20
+  int64_t Instance; // x0
+  __int64 v6; // x1
+  Il2CppObject *MasterData_object; // x20
   struct System_Int32_array *itemIds; // x8
   struct System_Int32_array *itemNums; // x9
-  __int64 v9; // x0
-  UserItemEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
+  UserItemEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_438DD94 & 1) == 0 )
+  if ( (byte_48E2721 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438DD94 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_UserItemMaster___, method);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v3);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_48E2721 = 1;
   }
   entity = 0LL;
-  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_17;
-  MasterData_WarQuestSelectionMaster = (UserItemMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                             (DataManager_o *)Instance,
-                                                             (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserItemMaster___);
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+    goto LABEL_16;
+  MasterData_object = DataManager__GetMasterData_object_(
+                        (DataManager_o *)Instance,
+                        (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_UserItemMaster___);
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
   Instance = NetworkManager__get_UserId(0LL);
   itemIds = this->fields.itemIds;
   if ( !itemIds )
-    goto LABEL_17;
+    goto LABEL_16;
   if ( !itemIds->max_length )
-    goto LABEL_18;
-  if ( !MasterData_WarQuestSelectionMaster )
-LABEL_17:
-    sub_B7769C(Instance, v4);
+    goto LABEL_17;
+  if ( !MasterData_object )
+LABEL_16:
+    sub_1B00F28(Instance, v6);
   Instance = UserItemMaster__TryGetEntity(
-               MasterData_WarQuestSelectionMaster,
+               (UserItemMaster_o *)MasterData_object,
                &entity,
                Instance,
                itemIds->m_Items[1],
@@ -95,12 +94,11 @@ LABEL_17:
       {
         if ( itemNums->max_length )
           return entity->fields.num < itemNums->m_Items[1];
-LABEL_18:
-        v9 = sub_B776C8(Instance);
-        sub_B77668(v9, 0LL);
+LABEL_17:
+        sub_1B00F30(Instance, v6);
       }
     }
-    goto LABEL_17;
+    goto LABEL_16;
   }
   return 1;
 }

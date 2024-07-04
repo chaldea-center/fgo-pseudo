@@ -1,42 +1,38 @@
 void __fastcall CoinRoomUtility___cctor(const MethodInfo *method)
 {
-  System_String_array **v1; // x2
-  System_String_array **v2; // x3
-  System_Boolean_array **v3; // x4
-  System_Int32_array **v4; // x5
-  System_Int32_array *v5; // x6
-  System_Int32_array *v6; // x7
-  BattleServantConfConponent_o *static_fields; // x0
-  System_Int32_array **v8; // x1
-  uint64_t v9; // [xsp+18h] [xbp-8h] BYREF
-  System_DateTime_o v10; // 0:x0.8
+  __int64 v1; // x1
+  int32_t v2; // w2
+  int32_t v3; // w3
+  __int64 v4; // x1
+  uint64_t v5; // [xsp+8h] [xbp-28h] BYREF
+  System_DateTime_o v6; // 0:x0.8
 
-  if ( (byte_438B752 & 1) == 0 )
+  if ( (byte_48E5D19 & 1) == 0 )
   {
-    sub_B775C4(&CoinRoomUtility_TypeInfo);
-    sub_B775C4(&StringLiteral_4246/*"CoinRoom"*/);
-    byte_438B752 = 1;
+    sub_1B00CCC(&CoinRoomUtility_TypeInfo, v1);
+    sub_1B00CCC(&StringLiteral_4513/*"CoinRoom"*/, v4);
+    byte_48E5D19 = 1;
   }
-  static_fields = (BattleServantConfConponent_o *)CoinRoomUtility_TypeInfo->static_fields;
-  v8 = (System_Int32_array **)StringLiteral_4246/*"CoinRoom"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_4246/*"CoinRoom"*/;
-  sub_B77560(static_fields, v8, v1, v2, v3, v4, v5, v6);
-  v10.fields.dateData = (uint64_t)&v9;
+  CoinRoomUtility_TypeInfo->static_fields->ASSET_NAME = (struct System_String_o *)StringLiteral_4513/*"CoinRoom"*/;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)CoinRoomUtility_TypeInfo->static_fields, StringLiteral_4513/*"CoinRoom"*/, v2, v3);
+  v6.fields._dateData = (uint64_t)&v5;
   CoinRoomUtility_TypeInfo->static_fields->EFFECT_FADE_TIME = 0.5;
-  v9 = 0LL;
-  System_DateTime___ctor_15684052(v10, 1970, 1, 1, 0, 0, 0, 1, 0LL);
-  CoinRoomUtility_TypeInfo->static_fields->UnixEpoch.fields.dateData = v9;
+  v5 = 0LL;
+  System_DateTime___ctor_61004432(v6, 1970, 1, 1, 0, 0, 0, 1, 0LL);
+  CoinRoomUtility_TypeInfo->static_fields->UnixEpoch.fields._dateData = v5;
 }
 
 
 int32_t __fastcall CoinRoomUtility__CalcPoint(const MethodInfo *method)
 {
-  if ( (byte_438B748 & 1) == 0 )
+  __int64 v1; // x1
+
+  if ( (byte_48E5D0F & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_3257/*"COIN_ROOM_GET"*/);
-    byte_438B748 = 1;
+    sub_1B00CCC(&StringLiteral_3585/*"COIN_ROOM_GET"*/, v1);
+    byte_48E5D0F = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_3257/*"COIN_ROOM_GET"*/, 0LL);
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_3585/*"COIN_ROOM_GET"*/, 0LL);
 }
 
 
@@ -46,113 +42,145 @@ System_Collections_Generic_List_UIAtlas__o *__fastcall CoinRoomUtility__GetDownl
         const MethodInfo *method)
 {
   AssetData_o *v4; // x20
-  int v5; // w23
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v6; // x21
-  int v7; // w24
-  System_String_o *v8; // x0
-  System_String_o *v9; // x0
-  UnityEngine_Object_o *Object_WarBoardWaitTimeSetting; // x22
-  int v12; // [xsp+Ch] [xbp-54h] BYREF
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  int v11; // w23
+  System_Collections_Generic_List_object__o *v12; // x21
+  int v13; // w24
+  System_String_o *v14; // x0
+  System_String_o *v15; // x0
+  Il2CppObject *Object_object__47470892; // x22
+  int32_t v17; // w2
+  int32_t v18; // w3
+  struct System_Object_array *items; // x8
+  _QWORD *v20; // x9
+  __int64 size; // x10
+  AssetData_o *v22; // x1
+  Il2CppClass **v23; // x0
+  int v25; // [xsp+Ch] [xbp-54h] BYREF
 
   v4 = assetData;
-  if ( (byte_438B750 & 1) == 0 )
+  if ( (byte_48E5D17 & 1) == 0 )
   {
-    sub_B775C4(&Method_AssetData_GetObjectList_GameObject___);
-    sub_B775C4(&Method_AssetData_GetObject_GameObject____69465408);
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
-    sub_B775C4(&Method_System_Collections_Generic_List_UIAtlas__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_UIAtlas___ctor__);
-    sub_B775C4(&System_Collections_Generic_List_UIAtlas__TypeInfo);
-    assetData = (AssetData_o *)sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438B750 = 1;
+    sub_1B00CCC(&Method_AssetData_GetObjectList_GameObject___, name);
+    sub_1B00CCC(&Method_AssetData_GetObject_GameObject____74577936, v5);
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, v6);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_UIAtlas__Add__, v7);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_UIAtlas___ctor__, v8);
+    sub_1B00CCC(&System_Collections_Generic_List_UIAtlas__TypeInfo, v9);
+    assetData = (AssetData_o *)sub_1B00CCC(&UnityEngine_Object_TypeInfo, v10);
+    byte_48E5D17 = 1;
   }
-  v12 = 0;
   if ( !v4
-    || (assetData = (AssetData_o *)AssetData__GetObjectList_Texture2D_(
+    || (assetData = (AssetData_o *)AssetData__GetObjectList_object_(
                                      v4,
-                                     (const MethodInfo_1C5FF90 *)Method_AssetData_GetObjectList_GameObject___)) == 0LL )
+                                     (const MethodInfo_2D45AE4 *)Method_AssetData_GetObjectList_GameObject___)) == 0LL )
   {
-LABEL_16:
-    sub_B7769C(assetData, name);
+LABEL_18:
+    sub_1B00F28(assetData, name);
   }
-  v5 = (int)assetData->fields.name;
-  v6 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_UIAtlas__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v6,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_UIAtlas___ctor__);
-  if ( v5 >= 1 )
+  v11 = (int)assetData->fields.name;
+  v12 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_UIAtlas__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v12,
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_UIAtlas___ctor__);
+  if ( v11 >= 1 )
   {
-    v7 = 0;
+    v13 = 0;
     do
     {
-      v12 = ++v7;
-      v8 = System_Int32__ToString((int32_t)&v12, 0LL);
-      v9 = System_String__Concat_44901936(name, v8, 0LL);
-      Object_WarBoardWaitTimeSetting = (UnityEngine_Object_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
-                                                                 v4,
-                                                                 v9,
-                                                                 (const MethodInfo_1C5FDDC *)Method_AssetData_GetObject_GameObject____69465408);
-      if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      {
+      v25 = ++v13;
+      v14 = System_Int32__ToString((int32_t)&v25, 0LL);
+      v15 = System_String__Concat_60325748(name, v14, 0LL);
+      Object_object__47470892 = AssetData__GetObject_object__47470892(
+                                  v4,
+                                  v15,
+                                  (const MethodInfo_2D4592C *)Method_AssetData_GetObject_GameObject____74577936);
+      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      }
-      assetData = (AssetData_o *)UnityEngine_Object__op_Equality(Object_WarBoardWaitTimeSetting, 0LL, 0LL);
+      assetData = (AssetData_o *)UnityEngine_Object__op_Equality(
+                                   (UnityEngine_Object_o *)Object_object__47470892,
+                                   0LL,
+                                   0LL);
       if ( ((unsigned __int8)assetData & 1) == 0 )
       {
-        if ( !Object_WarBoardWaitTimeSetting )
-          goto LABEL_16;
-        assetData = (AssetData_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                     (UnityEngine_GameObject_o *)Object_WarBoardWaitTimeSetting,
-                                     (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
-        if ( !v6 )
-          goto LABEL_16;
-        System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-          v6,
-          (EventMissionProgressRequest_Argument_ProgressData_o *)assetData,
-          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_UIAtlas__Add__);
+        if ( !Object_object__47470892 )
+          goto LABEL_18;
+        assetData = (AssetData_o *)UnityEngine_GameObject__GetComponent_object_(
+                                     (UnityEngine_GameObject_o *)Object_object__47470892,
+                                     (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+        if ( !v12 )
+          goto LABEL_18;
+        items = v12->fields._items;
+        v20 = Method_System_Collections_Generic_List_UIAtlas__Add__;
+        ++v12->fields._version;
+        if ( !items )
+          goto LABEL_18;
+        size = v12->fields._size;
+        v22 = assetData;
+        if ( (unsigned int)size >= items->max_length )
+        {
+          System_Collections_Generic_List_object___AddWithResize(
+            v12,
+            (Il2CppObject *)assetData,
+            *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+        }
+        else
+        {
+          v23 = &items->obj.klass + size;
+          v12->fields._size = size + 1;
+          v23[4] = (Il2CppClass *)v22;
+          sub_1B00C70((ServantStatusBattleListViewItem_o *)(v23 + 4), (int32_t)v22, v17, v18);
+        }
       }
     }
-    while ( v7 < v5 );
+    while ( v11 != v13 );
   }
-  return (System_Collections_Generic_List_UIAtlas__o *)v6;
+  return (System_Collections_Generic_List_UIAtlas__o *)v12;
 }
 
 
 UserCoinRoomEntity_o *__fastcall CoinRoomUtility__GetUserCoinRoomEntity(const MethodInfo *method)
 {
-  DataManager_o *Instance; // x0
+  __int64 v1; // x1
   __int64 v2; // x1
-  DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *MasterData_WarQuestSelectionMaster; // x19
-  UserServantEntity_o *entity; // [xsp+8h] [xbp-8h] BYREF
+  __int64 v3; // x1
+  __int64 v4; // x1
+  DataManager_o *Instance; // x0
+  __int64 v6; // x1
+  Il2CppObject *MasterData_object; // x19
+  Il2CppObject *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_438B74B & 1) == 0 )
+  if ( (byte_48E5D12 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_UserCoinRoomMaster___);
-    sub_B775C4(&Method_DataMasterBase_UserCoinRoomMaster__UserCoinRoomEntity__long__TryGetEntity__);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_438B74B = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_UserCoinRoomMaster___, v1);
+    sub_1B00CCC(&Method_DataMasterBase_UserCoinRoomMaster__UserCoinRoomEntity__long__TryGetEntity__, v2);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v3);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_48E5D12 = 1;
   }
   entity = 0LL;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_9;
-  MasterData_WarQuestSelectionMaster = (DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(Instance, (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserCoinRoomMaster___);
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+    goto LABEL_8;
+  MasterData_object = DataManager__GetMasterData_object_(
+                        Instance,
+                        (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_UserCoinRoomMaster___);
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
   Instance = (DataManager_o *)NetworkManager__get_UserId(0LL);
-  if ( !MasterData_WarQuestSelectionMaster )
-LABEL_9:
-    sub_B7769C(Instance, v2);
-  DataMasterBase_UserServantStorageMaster__UserServantEntity__long___TryGetEntity(
-    MasterData_WarQuestSelectionMaster,
+  if ( !MasterData_object )
+LABEL_8:
+    sub_1B00F28(Instance, v6);
+  DataMasterBase_object__object__long___TryGetEntity(
+    (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
     &entity,
     (int64_t)Instance,
-    (const MethodInfo_21FBB18 *)Method_DataMasterBase_UserCoinRoomMaster__UserCoinRoomEntity__long__TryGetEntity__);
+    (const MethodInfo_2FE6C4C *)Method_DataMasterBase_UserCoinRoomMaster__UserCoinRoomEntity__long__TryGetEntity__);
   return (UserCoinRoomEntity_o *)entity;
 }
 
@@ -160,225 +188,264 @@ LABEL_9:
 System_Collections_Generic_List_DataEntityBase__o *__fastcall CoinRoomUtility__GetUserSvtCoins(
         const MethodInfo *method)
 {
-  WarQuestSelectionMaster_o *Master_WarQuestSelectionMaster; // x0
+  __int64 v1; // x1
   __int64 v2; // x1
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x20
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v4; // x19
+  __int64 v3; // x1
+  __int64 v4; // x1
   __int64 v5; // x1
-  System_Collections_Generic_IEnumerator_T__o *Enumerator; // x20
-  System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  unsigned __int64 v8; // x10
-  int32_t *p_offset; // x11
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  Il2CppObject *Master_object; // x0
+  __int64 v12; // x1
+  System_Collections_ObjectModel_Collection_T__o *klass; // x19
+  System_Collections_Generic_List_object__o *v14; // x20
+  __int64 v15; // x1
+  System_Collections_Generic_IEnumerator_T__o *Enumerator; // x19
+  System_Collections_Generic_IEnumerator_T__c *v17; // x8
+  __int64 v18; // x9
+  int32_t *p_offset; // x10
   __int64 p_method; // x0
-  System_Collections_Generic_IEnumerator_T__c *v11; // x8
-  unsigned __int64 v12; // x10
-  int32_t *v13; // x11
-  __int64 v14; // x0
-  EventMissionProgressRequest_Argument_ProgressData_o *v15; // x0
-  __int64 v16; // x1
-  __int64 v17; // x10
-  System_Collections_Generic_IEnumerator_T__c *v18; // x8
-  unsigned __int64 v19; // x10
-  int32_t *v20; // x11
-  __int64 v21; // x0
+  System_Collections_Generic_IEnumerator_T__c *v21; // x8
+  __int64 v22; // x9
+  int32_t *v23; // x10
+  __int64 v24; // x0
+  __int64 v25; // x0
+  __int64 v26; // x1
+  int32_t v27; // w2
+  int32_t v28; // w3
+  __int64 v29; // x8
+  UserSvtCoinEntity_c *v30; // x1
+  __int64 methodPtr_low; // x10
+  struct System_Object_array *items; // x9
+  _QWORD *v33; // x10
+  __int64 size; // x11
+  Il2CppClass **v35; // x0
+  System_Collections_Generic_IEnumerator_T__c *v36; // x8
+  __int64 v37; // x9
+  int32_t *v38; // x10
+  __int64 v39; // x0
 
-  if ( (byte_438B74C & 1) == 0 )
+  if ( (byte_48E5D13 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
-    sub_B775C4(&Method_DataManager_GetMaster_UserSvtCoinMaster___);
-    sub_B775C4(&DataManager_TypeInfo);
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    sub_B775C4(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
-    sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_DataEntityBase__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_DataEntityBase___ctor__);
-    sub_B775C4(&System_Collections_Generic_List_DataEntityBase__TypeInfo);
-    sub_B775C4(&UserSvtCoinEntity_TypeInfo);
-    byte_438B74C = 1;
+    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, v1);
+    sub_1B00CCC(&Method_DataManager_GetMaster_UserSvtCoinMaster___, v2);
+    sub_1B00CCC(&DataManager_TypeInfo, v3);
+    sub_1B00CCC(&System_IDisposable_TypeInfo, v4);
+    sub_1B00CCC(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v5);
+    sub_1B00CCC(&System_Collections_IEnumerator_TypeInfo, v6);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_DataEntityBase__Add__, v7);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_DataEntityBase___ctor__, v8);
+    sub_1B00CCC(&System_Collections_Generic_List_DataEntityBase__TypeInfo, v9);
+    sub_1B00CCC(&UserSvtCoinEntity_TypeInfo, v10);
+    byte_48E5D13 = 1;
   }
-  if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1D18390 *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
-  if ( !Master_WarQuestSelectionMaster
-    || (list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)Master_WarQuestSelectionMaster->fields.list,
-        v4 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_DataEntityBase__TypeInfo),
-        System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-          v4,
-          (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_DataEntityBase___ctor__),
-        !list) )
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
+  if ( !Master_object
+    || (klass = (System_Collections_ObjectModel_Collection_T__o *)Master_object[2].klass,
+        v14 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_DataEntityBase__TypeInfo),
+        System_Collections_Generic_List_object____ctor(
+          v14,
+          (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_DataEntityBase___ctor__),
+        !klass) )
   {
-    sub_B7769C(Master_WarQuestSelectionMaster, v2);
+    sub_1B00F28(Master_object, v12);
   }
-  Enumerator = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___GetEnumerator(
-                 list,
-                 (const MethodInfo_2CC56C8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+  Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
+                 klass,
+                 (const MethodInfo_2F83C88 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_B7769C(0LL, v5);
+    sub_1B00F28(0LL, v15);
   while ( 1 )
   {
-    klass = Enumerator->klass;
-    if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
+    v17 = Enumerator->klass;
+    v18 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
-      v8 = 0LL;
-      p_offset = &klass->_1.interfaceOffsets->offset;
+      p_offset = &v17->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        ++v8;
+        --v18;
         p_offset += 4;
-        if ( v8 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
-          goto LABEL_13;
+        if ( !v18 )
+          goto LABEL_12;
       }
-      p_method = (__int64)&klass->vtable[*p_offset].method;
+      p_method = (__int64)&v17->vtable[*p_offset].method;
     }
     else
     {
-LABEL_13:
-      p_method = sub_B0F4C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+LABEL_12:
+      p_method = sub_1B52CAC(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
       break;
-    v11 = Enumerator->klass;
-    if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
+    v21 = Enumerator->klass;
+    v22 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
-      v12 = 0LL;
-      v13 = &v11->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v13 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
+      v23 = &v21->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v23 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
       {
-        ++v12;
-        v13 += 4;
-        if ( v12 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
-          goto LABEL_20;
+        --v22;
+        v23 += 4;
+        if ( !v22 )
+          goto LABEL_19;
       }
-      v14 = (__int64)&v11->vtable[*v13].method;
+      v24 = (__int64)&v21->vtable[*v23].method;
     }
     else
     {
-LABEL_20:
-      v14 = sub_B0F4C0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+LABEL_19:
+      v24 = sub_1B52CAC(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
-    v15 = (EventMissionProgressRequest_Argument_ProgressData_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v14)(
-                                                                   Enumerator,
-                                                                   *(_QWORD *)(v14 + 8));
-    if ( !v15 )
-      goto LABEL_36;
-    v17 = *(&UserSvtCoinEntity_TypeInfo->_2.bitflags2 + 1);
-    if ( *(&v15->klass->_2.bitflags2 + 1) < (unsigned int)v17
-      || (UserSvtCoinEntity_c *)v15->klass->_2.typeHierarchy[v17 - 1] != UserSvtCoinEntity_TypeInfo )
+    v25 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v24)(
+            Enumerator,
+            *(_QWORD *)(v24 + 8));
+    v29 = v25;
+    if ( !v25 )
+      goto LABEL_38;
+    v30 = UserSvtCoinEntity_TypeInfo;
+    methodPtr_low = LOBYTE(UserSvtCoinEntity_TypeInfo->vtable._0_Equals.methodPtr);
+    if ( *(unsigned __int8 *)(*(_QWORD *)v25 + 304LL) < (unsigned int)methodPtr_low
+      || *(UserSvtCoinEntity_c **)(*(_QWORD *)(*(_QWORD *)v25 + 200LL) + 8 * methodPtr_low - 8) != UserSvtCoinEntity_TypeInfo )
     {
-      v15 = (EventMissionProgressRequest_Argument_ProgressData_o *)sub_B77990(v15);
-LABEL_36:
-      sub_B7769C(v15, v16);
+      sub_1B011E8(v25);
+LABEL_38:
+      sub_1B00F28(v25, v26);
     }
-    if ( v15->fields.eventId )
+    if ( *(_DWORD *)(v25 + 28) )
     {
-      if ( !v4 )
-        sub_B7769C(v15, UserSvtCoinEntity_TypeInfo);
-      System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-        v4,
-        v15,
-        (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_DataEntityBase__Add__);
+      if ( !v14 )
+        sub_1B00F28(v25, UserSvtCoinEntity_TypeInfo);
+      items = v14->fields._items;
+      v33 = Method_System_Collections_Generic_List_DataEntityBase__Add__;
+      ++v14->fields._version;
+      if ( !items )
+        sub_1B00F28(v25, v30);
+      size = v14->fields._size;
+      if ( (unsigned int)size >= items->max_length )
+      {
+        System_Collections_Generic_List_object___AddWithResize(
+          v14,
+          (Il2CppObject *)v25,
+          *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
+      }
+      else
+      {
+        v35 = &items->obj.klass + size;
+        v14->fields._size = size + 1;
+        v35[4] = (Il2CppClass *)v29;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)(v35 + 4), v29, v27, v28);
+      }
     }
   }
-  v18 = Enumerator->klass;
-  if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
+  v36 = Enumerator->klass;
+  v37 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
   {
-    v19 = 0LL;
-    v20 = &v18->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v20 - 1) != System_IDisposable_TypeInfo )
+    v38 = &v36->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v38 - 1) != System_IDisposable_TypeInfo )
     {
-      ++v19;
-      v20 += 4;
-      if ( v19 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
-        goto LABEL_32;
+      --v37;
+      v38 += 4;
+      if ( !v37 )
+        goto LABEL_34;
     }
-    v21 = (__int64)&v18->vtable[*v20].method;
+    v39 = (__int64)&v36->vtable[*v38].method;
   }
   else
   {
-LABEL_32:
-    v21 = sub_B0F4C0(Enumerator, System_IDisposable_TypeInfo, 0LL);
+LABEL_34:
+    v39 = sub_1B52CAC(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v21)(Enumerator, *(_QWORD *)(v21 + 8));
-  return (System_Collections_Generic_List_DataEntityBase__o *)v4;
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v39)(Enumerator, *(_QWORD *)(v39 + 8));
+  return (System_Collections_Generic_List_DataEntityBase__o *)v14;
 }
 
 
 bool __fastcall CoinRoomUtility__IsTargetQuestClear(const MethodInfo *method)
 {
+  __int64 v1; // x1
+  __int64 v2; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
   int32_t Value; // w19
   DataManager_o *Instance; // x0
-  __int64 v3; // x1
-  UserQuestMaster_o *MasterData_WarQuestSelectionMaster; // x20
+  __int64 v7; // x1
+  Il2CppObject *MasterData_object; // x20
 
-  if ( (byte_438B74F & 1) == 0 )
+  if ( (byte_48E5D16 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_UserQuestMaster___);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B775C4(&StringLiteral_3262/*"COIN_ROOM_RELEASE_QUEST_ID"*/);
-    byte_438B74F = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_UserQuestMaster___, v1);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v2);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    sub_1B00CCC(&StringLiteral_3590/*"COIN_ROOM_RELEASE_QUEST_ID"*/, v4);
+    byte_48E5D16 = 1;
   }
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_3262/*"COIN_ROOM_RELEASE_QUEST_ID"*/, 0LL);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_3590/*"COIN_ROOM_RELEASE_QUEST_ID"*/, 0LL);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_9;
-  MasterData_WarQuestSelectionMaster = (UserQuestMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                              Instance,
-                                                              (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_UserQuestMaster___);
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+    goto LABEL_8;
+  MasterData_object = DataManager__GetMasterData_object_(
+                        Instance,
+                        (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_UserQuestMaster___);
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
   Instance = (DataManager_o *)NetworkManager__get_UserId(0LL);
-  if ( !MasterData_WarQuestSelectionMaster )
-LABEL_9:
-    sub_B7769C(Instance, v3);
-  return UserQuestMaster__getClearCountsFromId(MasterData_WarQuestSelectionMaster, (int64_t)Instance, Value, 0LL) > 0;
+  if ( !MasterData_object )
+LABEL_8:
+    sub_1B00F28(Instance, v7);
+  return UserQuestMaster__getClearCountsFromId((UserQuestMaster_o *)MasterData_object, (int64_t)Instance, Value, 0LL) > 0;
 }
 
 
 int32_t __fastcall CoinRoomUtility__MaxPoint(const MethodInfo *method)
 {
-  if ( (byte_438B749 & 1) == 0 )
+  __int64 v1; // x1
+
+  if ( (byte_48E5D10 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_3260/*"COIN_ROOM_MAX"*/);
-    byte_438B749 = 1;
+    sub_1B00CCC(&StringLiteral_3588/*"COIN_ROOM_MAX"*/, v1);
+    byte_48E5D10 = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_3260/*"COIN_ROOM_MAX"*/, 0LL);
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_3588/*"COIN_ROOM_MAX"*/, 0LL);
 }
 
 
 int32_t __fastcall CoinRoomUtility__MonthExchangeMaxNum(const MethodInfo *method)
 {
-  if ( (byte_438B74A & 1) == 0 )
+  __int64 v1; // x1
+
+  if ( (byte_48E5D11 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_3261/*"COIN_ROOM_MAX_NUM"*/);
-    byte_438B74A = 1;
+    sub_1B00CCC(&StringLiteral_3589/*"COIN_ROOM_MAX_NUM"*/, v1);
+    byte_48E5D11 = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_3261/*"COIN_ROOM_MAX_NUM"*/, 0LL);
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_3589/*"COIN_ROOM_MAX_NUM"*/, 0LL);
 }
 
 
 int32_t __fastcall CoinRoomUtility__MonthExchangeNum(const MethodInfo *method)
 {
-  CoinRoomUtility_c *v1; // x0
+  __int64 v1; // x1
+  CoinRoomUtility_c *v2; // x0
   UserCoinRoomEntity_o *UserCoinRoomEntity; // x0
 
-  if ( (byte_438B74E & 1) == 0 )
+  if ( (byte_48E5D15 & 1) == 0 )
   {
-    sub_B775C4(&CoinRoomUtility_TypeInfo);
-    byte_438B74E = 1;
+    sub_1B00CCC(&CoinRoomUtility_TypeInfo, v1);
+    byte_48E5D15 = 1;
   }
-  v1 = CoinRoomUtility_TypeInfo;
-  if ( (BYTE3(CoinRoomUtility_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CoinRoomUtility_TypeInfo->_2.cctor_finished )
-  {
+  v2 = CoinRoomUtility_TypeInfo;
+  if ( !CoinRoomUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CoinRoomUtility_TypeInfo);
-  }
-  UserCoinRoomEntity = CoinRoomUtility__GetUserCoinRoomEntity((const MethodInfo *)v1);
+  UserCoinRoomEntity = CoinRoomUtility__GetUserCoinRoomEntity((const MethodInfo *)v2);
   if ( UserCoinRoomEntity )
     LODWORD(UserCoinRoomEntity) = UserCoinRoomEntity->fields.num;
   return (int)UserCoinRoomEntity;
@@ -387,35 +454,30 @@ int32_t __fastcall CoinRoomUtility__MonthExchangeNum(const MethodInfo *method)
 
 int32_t __fastcall CoinRoomUtility__MonthExchangePoint(const MethodInfo *method)
 {
-  CoinRoomUtility_c *v1; // x0
+  __int64 v1; // x1
+  CoinRoomUtility_c *v2; // x0
   UserCoinRoomEntity_o *UserCoinRoomEntity; // x0
-  UserCoinRoomEntity_o *v3; // x8
-  CoinRoomUtility_c *v4; // x0
+  UserCoinRoomEntity_o *v4; // x8
+  CoinRoomUtility_c *v5; // x0
   int32_t cnt; // w19
 
-  if ( (byte_438B74D & 1) == 0 )
+  if ( (byte_48E5D14 & 1) == 0 )
   {
-    sub_B775C4(&CoinRoomUtility_TypeInfo);
-    byte_438B74D = 1;
+    sub_1B00CCC(&CoinRoomUtility_TypeInfo, v1);
+    byte_48E5D14 = 1;
   }
-  v1 = CoinRoomUtility_TypeInfo;
-  if ( (BYTE3(CoinRoomUtility_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CoinRoomUtility_TypeInfo->_2.cctor_finished )
-  {
+  v2 = CoinRoomUtility_TypeInfo;
+  if ( !CoinRoomUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CoinRoomUtility_TypeInfo);
-  }
-  UserCoinRoomEntity = CoinRoomUtility__GetUserCoinRoomEntity((const MethodInfo *)v1);
+  UserCoinRoomEntity = CoinRoomUtility__GetUserCoinRoomEntity((const MethodInfo *)v2);
   if ( UserCoinRoomEntity )
   {
-    v3 = UserCoinRoomEntity;
-    v4 = CoinRoomUtility_TypeInfo;
-    cnt = v3->fields.cnt;
-    if ( (BYTE3(CoinRoomUtility_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !CoinRoomUtility_TypeInfo->_2.cctor_finished )
-    {
+    v4 = UserCoinRoomEntity;
+    v5 = CoinRoomUtility_TypeInfo;
+    cnt = v4->fields.cnt;
+    if ( !CoinRoomUtility_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CoinRoomUtility_TypeInfo);
-    }
-    LODWORD(UserCoinRoomEntity) = CoinRoomUtility__CalcPoint((const MethodInfo *)v4) * cnt;
+    LODWORD(UserCoinRoomEntity) = CoinRoomUtility__CalcPoint((const MethodInfo *)v5) * cnt;
   }
   return (int)UserCoinRoomEntity;
 }
@@ -423,85 +485,90 @@ int32_t __fastcall CoinRoomUtility__MonthExchangePoint(const MethodInfo *method)
 
 int32_t __fastcall CoinRoomUtility__MonthRemainingNum(const MethodInfo *method)
 {
-  CoinRoomUtility_c *v1; // x0
-  const MethodInfo *v2; // x0
+  __int64 v1; // x1
+  CoinRoomUtility_c *v2; // x0
+  const MethodInfo *v3; // x0
 
-  if ( (byte_438B747 & 1) == 0 )
+  if ( (byte_48E5D0E & 1) == 0 )
   {
-    sub_B775C4(&CoinRoomUtility_TypeInfo);
-    byte_438B747 = 1;
+    sub_1B00CCC(&CoinRoomUtility_TypeInfo, v1);
+    byte_48E5D0E = 1;
   }
-  v1 = CoinRoomUtility_TypeInfo;
-  if ( (BYTE3(CoinRoomUtility_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CoinRoomUtility_TypeInfo->_2.cctor_finished )
-  {
+  v2 = CoinRoomUtility_TypeInfo;
+  if ( !CoinRoomUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CoinRoomUtility_TypeInfo);
-  }
-  v2 = (const MethodInfo *)CoinRoomUtility__MonthExchangeNum((const MethodInfo *)v1);
-  return CoinRoomUtility__MonthExchangeMaxNum(v2) - (_DWORD)v2;
+  v3 = (const MethodInfo *)CoinRoomUtility__MonthExchangeNum((const MethodInfo *)v2);
+  return CoinRoomUtility__MonthExchangeMaxNum(v3) - (_DWORD)v3;
 }
 
 
 int64_t __fastcall CoinRoomUtility__NextMonthUnixTime(const MethodInfo *method)
 {
+  __int64 v1; // x1
+  __int64 v2; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
   int32_t Year; // w19
   int32_t Month; // w2
-  CoinRoomUtility_c *v3; // x8
+  System_DateTime_o v7; // x0
+  CoinRoomUtility_c *v8; // x8
   double TotalSeconds; // d0
-  __int64 v6; // [xsp+0h] [xbp-30h] BYREF
-  int64_t ticks; // [xsp+8h] [xbp-28h] BYREF
-  __int64 v8; // [xsp+10h] [xbp-20h] BYREF
-  uint64_t v9; // [xsp+18h] [xbp-18h] BYREF
-  uint64_t dateData; // [xsp+28h] [xbp-8h] BYREF
-  System_DateTime_o v11; // 0:x0.8
-  System_DateTime_o v12; // 0:x0.8
-  System_DateTime_o v13; // 0:x0.8
-  System_DateTime_o v14; // 0:x0.8
-  System_DateTime_o v15; // 0:x0.8
+  __int64 v11; // [xsp+8h] [xbp-48h] BYREF
+  int64_t ticks; // [xsp+10h] [xbp-40h] BYREF
+  __int64 v13; // [xsp+18h] [xbp-38h] BYREF
+  uint64_t v14; // [xsp+20h] [xbp-30h] BYREF
+  uint64_t dateData; // [xsp+28h] [xbp-28h] BYREF
   System_DateTime_o v16; // 0:x0.8
-  System_TimeSpan_o v17; // 0:x0.8
-  System_DateTime_o v18; // 0:x1.8
+  System_DateTime_o v17; // 0:x0.8
+  System_DateTime_o v18; // 0:x0.8
+  System_DateTime_o v19; // 0:x0.8
+  System_DateTime_o v20; // 0:x0.8
+  System_DateTime_o v21; // 0:x0.8
+  System_TimeSpan_o v22; // 0:x0.8
+  System_DateTime_o v23; // 0:x1.8
 
-  if ( (byte_438B751 & 1) == 0 )
+  if ( (byte_48E5D18 & 1) == 0 )
   {
-    sub_B775C4(&CoinRoomUtility_TypeInfo);
-    sub_B775C4(&NetworkManager_TypeInfo);
-    byte_438B751 = 1;
+    sub_1B00CCC(&CoinRoomUtility_TypeInfo, v1);
+    sub_1B00CCC(&System_DateTime_TypeInfo, v2);
+    sub_1B00CCC(&NetworkManager_TypeInfo, v3);
+    sub_1B00CCC(&System_TimeSpan_TypeInfo, v4);
+    byte_48E5D18 = 1;
   }
-  dateData = 0LL;
-  v8 = 0LL;
-  v9 = 0LL;
+  v13 = 0LL;
+  v14 = 0LL;
   ticks = 0LL;
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
-  dateData = NetworkManager__getServerDateTime(0LL).fields.dateData;
-  v11.fields.dateData = (uint64_t)&dateData;
-  Year = System_DateTime__get_Year(v11, 0LL);
-  v12.fields.dateData = (uint64_t)&dateData;
-  Month = System_DateTime__get_Month(v12, 0LL);
-  v13.fields.dateData = (uint64_t)&v6;
-  v6 = 0LL;
-  System_DateTime___ctor_15683012(v13, Year, Month, 1, 0LL);
-  v14.fields.dateData = (uint64_t)&v8;
-  v8 = v6;
-  v9 = System_DateTime__AddMonths(v14, 1, 0LL).fields.dateData;
-  v15.fields.dateData = (uint64_t)&v9;
-  v9 = System_DateTime__ToUniversalTime(v15, 0LL).fields.dateData;
-  v3 = CoinRoomUtility_TypeInfo;
-  if ( (BYTE3(CoinRoomUtility_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CoinRoomUtility_TypeInfo->_2.cctor_finished )
+  dateData = NetworkManager__getServerDateTime(0LL).fields._dateData;
+  if ( !System_DateTime_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
+  v16.fields._dateData = (uint64_t)&dateData;
+  Year = System_DateTime__get_Year(v16, 0LL);
+  v17.fields._dateData = (uint64_t)&dateData;
+  Month = System_DateTime__get_Month(v17, 0LL);
+  v18.fields._dateData = (uint64_t)&v11;
+  v11 = 0LL;
+  System_DateTime___ctor_61003488(v18, Year, Month, 1, 0LL);
+  v19.fields._dateData = (uint64_t)&v13;
+  v13 = v11;
+  v14 = System_DateTime__AddMonths(v19, 1, 0LL).fields._dateData;
+  v20.fields._dateData = (uint64_t)&v14;
+  v7.fields._dateData = System_DateTime__ToUniversalTime(v20, 0LL).fields._dateData;
+  v8 = CoinRoomUtility_TypeInfo;
+  v14 = v7.fields._dateData;
+  if ( !CoinRoomUtility_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CoinRoomUtility_TypeInfo);
-    v3 = CoinRoomUtility_TypeInfo;
+    v8 = CoinRoomUtility_TypeInfo;
   }
-  v16.fields.dateData = (uint64_t)&v9;
-  v18.fields.dateData = v3->static_fields->UnixEpoch.fields.dateData;
-  ticks = System_DateTime__Subtract(v16, v18, 0LL).fields._ticks;
-  v17.fields._ticks = (int64_t)&ticks;
-  TotalSeconds = System_TimeSpan__get_TotalSeconds(v17, 0LL);
+  v21.fields._dateData = (uint64_t)&v14;
+  v23.fields._dateData = v8->static_fields->UnixEpoch.fields._dateData;
+  ticks = System_DateTime__Subtract(v21, v23, 0LL).fields._ticks;
+  if ( !System_TimeSpan_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo);
+  v22.fields._ticks = (int64_t)&ticks;
+  TotalSeconds = System_TimeSpan__get_TotalSeconds(v22, 0LL);
   if ( TotalSeconds >= 0.0 )
     return (unsigned int)TotalSeconds;
   else

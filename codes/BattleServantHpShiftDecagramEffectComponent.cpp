@@ -2,20 +2,18 @@ void __fastcall BattleServantHpShiftDecagramEffectComponent___ctor(
         BattleServantHpShiftDecagramEffectComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_438E1AE & 1) == 0 )
+  if ( (byte_48E56D7 & 1) == 0 )
   {
-    sub_B775C4(&CommonEffectComponent_TypeInfo);
-    byte_438E1AE = 1;
+    sub_1B00CCC(&CommonEffectComponent_TypeInfo, method);
+    byte_48E56D7 = 1;
   }
-  if ( (BYTE3(CommonEffectComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CommonEffectComponent_TypeInfo->_2.cctor_finished )
-  {
+  if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
-  }
   CommonEffectComponent___ctor((CommonEffectComponent_o *)this, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall BattleServantHpShiftDecagramEffectComponent__UpdateIcon(
         BattleServantHpShiftDecagramEffectComponent_o *this,
         int32_t index,
@@ -23,30 +21,27 @@ void __fastcall BattleServantHpShiftDecagramEffectComponent__UpdateIcon(
 {
   UnityEngine_Object_o *Parent_k__BackingField; // x21
   __int64 v6; // x1
-  const MethodInfo *v7; // x3
-  BattleServantHpShiftComponent_o *v8; // x0
+  BattleServantHpShiftComponent_o *v7; // x0
 
-  if ( (byte_438E1AC & 1) == 0 )
+  if ( (byte_48E56D5 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438E1AC = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
+    byte_48E56D5 = 1;
   }
   Parent_k__BackingField = (UnityEngine_Object_o *)this->fields._Parent_k__BackingField;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(Parent_k__BackingField, 0LL, 0LL) )
   {
-    v8 = this->fields._Parent_k__BackingField;
-    if ( !v8 )
-      sub_B7769C(0LL, v6);
-    BattleServantHpShiftComponent__UpdateIconActive(v8, index, 1, v7);
+    v7 = this->fields._Parent_k__BackingField;
+    if ( !v7 )
+      sub_1B00F28(0LL, v6);
+    BattleServantHpShiftComponent__UpdateIconActive(v7, index, 1, 0LL);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall BattleServantHpShiftDecagramEffectComponent__UpdateIconInactive(
         BattleServantHpShiftDecagramEffectComponent_o *this,
         int32_t index,
@@ -54,26 +49,22 @@ void __fastcall BattleServantHpShiftDecagramEffectComponent__UpdateIconInactive(
 {
   UnityEngine_Object_o *Parent_k__BackingField; // x21
   __int64 v6; // x1
-  const MethodInfo *v7; // x3
-  BattleServantHpShiftComponent_o *v8; // x0
+  BattleServantHpShiftComponent_o *v7; // x0
 
-  if ( (byte_438E1AD & 1) == 0 )
+  if ( (byte_48E56D6 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438E1AD = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
+    byte_48E56D6 = 1;
   }
   Parent_k__BackingField = (UnityEngine_Object_o *)this->fields._Parent_k__BackingField;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( UnityEngine_Object__op_Inequality(Parent_k__BackingField, 0LL, 0LL) )
   {
-    v8 = this->fields._Parent_k__BackingField;
-    if ( !v8 )
-      sub_B7769C(0LL, v6);
-    BattleServantHpShiftComponent__UpdateIconActive(v8, index, 0, v7);
+    v7 = this->fields._Parent_k__BackingField;
+    if ( !v7 )
+      sub_1B00F28(0LL, v6);
+    BattleServantHpShiftComponent__UpdateIconActive(v7, index, 0, 0LL);
   }
 }
 
@@ -91,20 +82,12 @@ void __fastcall BattleServantHpShiftDecagramEffectComponent__set_Parent(
         BattleServantHpShiftComponent_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._Parent_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._Parent_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._Parent_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }

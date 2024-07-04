@@ -11,6 +11,7 @@ BattleFieldEnvironmentData_BGMData_o *__fastcall WarboardBattleFieldEnvironmentD
         WarboardBattleFieldEnvironmentData_o *this,
         Generator_BGM_o *bgmGenerator,
         int32_t grantType,
+        AddBgmArgument_o *arg,
         const MethodInfo *method)
 {
   return 0LL;

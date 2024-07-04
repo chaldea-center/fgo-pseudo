@@ -3,8 +3,11 @@ void __fastcall CharaGraphDefine_CharaGraphItemBulkModifyArgs___ctor(
         bool isResetSwap,
         const MethodInfo *method)
 {
+  bool v3; // w20
+
+  v3 = isResetSwap;
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  this->fields._IsResetSwap_k__BackingField = isResetSwap;
+  this->fields._IsResetSwap_k__BackingField = v3;
 }
 
 
@@ -20,24 +23,20 @@ UserGameEntity_o *__fastcall CharaGraphDefine_CharaGraphItemBulkModifyArgs__get_
         CharaGraphDefine_CharaGraphItemBulkModifyArgs_o *this,
         const MethodInfo *method)
 {
-  BattleServantConfConponent_o *p_userGameEntity; // x19
-  System_Int32_array **userGameEntity; // x20
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
+  ServantStatusBattleListViewItem_o *p_userGameEntity; // x19
+  UserGameEntity_o *userGameEntity; // x20
+  int32_t v4; // w2
+  int32_t v5; // w3
 
-  p_userGameEntity = (BattleServantConfConponent_o *)&this->fields.userGameEntity;
-  userGameEntity = (System_Int32_array **)this->fields.userGameEntity;
+  p_userGameEntity = (ServantStatusBattleListViewItem_o *)&this->fields.userGameEntity;
+  userGameEntity = this->fields.userGameEntity;
   if ( !userGameEntity )
   {
-    userGameEntity = (System_Int32_array **)UserGameMaster__getSelfUserGame(0LL);
-    p_userGameEntity->klass = (BattleServantConfConponent_c *)userGameEntity;
-    sub_B77560(p_userGameEntity, userGameEntity, v4, v5, v6, v7, v8, v9);
+    userGameEntity = UserGameMaster__getSelfUserGame(0LL);
+    p_userGameEntity->klass = (ServantStatusBattleListViewItem_c *)userGameEntity;
+    sub_1B00C70(p_userGameEntity, (int32_t)userGameEntity, v4, v5);
   }
-  return (UserGameEntity_o *)userGameEntity;
+  return userGameEntity;
 }
 
 

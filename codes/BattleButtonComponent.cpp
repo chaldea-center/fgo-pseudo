@@ -6,61 +6,58 @@ void __fastcall BattleButtonComponent___ctor(BattleButtonComponent_o *this, cons
 
 bool __fastcall BattleButtonComponent__get_isHide(BattleButtonComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_Object_o *Component_WebViewObject; // x19
-  _BOOL8 v4; // x0
-  __int64 v5; // x1
+  __int64 v3; // x1
+  Il2CppObject *Component_object; // x19
+  _BOOL8 v5; // x0
+  __int64 v6; // x1
 
-  if ( (byte_438EBF6 & 1) == 0 )
+  if ( (byte_48E54A7 & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438EBF6 = 1;
+    sub_1B00CCC(&Method_UnityEngine_Component_GetComponent_Collider___, method);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v3);
+    byte_48E54A7 = 1;
   }
   if ( !UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0LL) )
     return 0;
-  Component_WebViewObject = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
-                                                      (UnityEngine_Component_o *)this,
-                                                      (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_Collider___);
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  Component_object = UnityEngine_Component__GetComponent_object_(
+                       (UnityEngine_Component_o *)this,
+                       (const MethodInfo_2D596B4 *)Method_UnityEngine_Component_GetComponent_Collider___);
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  v4 = UnityEngine_Object__op_Implicit(Component_WebViewObject, 0LL);
-  if ( !v4 )
+  v5 = UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)Component_object, 0LL);
+  if ( !v5 )
     return 0;
-  if ( !Component_WebViewObject )
-    sub_B7769C(v4, v5);
-  return UnityEngine_Collider__get_enabled((UnityEngine_Collider_o *)Component_WebViewObject, 0LL);
+  if ( !Component_object )
+    sub_1B00F28(v5, v6);
+  return UnityEngine_Collider__get_enabled((UnityEngine_Collider_o *)Component_object, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall BattleButtonComponent__set_isHide(BattleButtonComponent_o *this, bool value, const MethodInfo *method)
 {
-  UnityEngine_Object_o *Component_WebViewObject; // x21
-  _BOOL8 v6; // x0
-  __int64 v7; // x1
+  __int64 v5; // x1
+  Il2CppObject *Component_object; // x21
+  _BOOL8 v7; // x0
+  __int64 v8; // x1
 
-  if ( (byte_438EBF7 & 1) == 0 )
+  if ( (byte_48E54A8 & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438EBF7 = 1;
+    sub_1B00CCC(&Method_UnityEngine_Component_GetComponent_Collider___, value);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v5);
+    byte_48E54A8 = 1;
   }
-  Component_WebViewObject = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
-                                                      (UnityEngine_Component_o *)this,
-                                                      (const MethodInfo_1C6D6B0 *)Method_UnityEngine_Component_GetComponent_Collider___);
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  Component_object = UnityEngine_Component__GetComponent_object_(
+                       (UnityEngine_Component_o *)this,
+                       (const MethodInfo_2D596B4 *)Method_UnityEngine_Component_GetComponent_Collider___);
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  v6 = UnityEngine_Object__op_Inequality(Component_WebViewObject, 0LL, 0LL);
-  if ( v6 )
+  v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
+  if ( v7 )
   {
-    if ( !Component_WebViewObject )
-      sub_B7769C(v6, v7);
-    UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_WebViewObject, value, 0LL);
+    if ( !Component_object )
+      sub_1B00F28(v7, v8);
+    UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, value, 0LL);
   }
   else
   {

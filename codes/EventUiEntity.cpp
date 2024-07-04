@@ -1,9 +1,11 @@
 void __fastcall EventUiEntity___cctor(const MethodInfo *method)
 {
-  if ( (byte_438A6E7 & 1) == 0 )
+  __int64 v1; // x1
+
+  if ( (byte_48E2A04 & 1) == 0 )
   {
-    sub_B775C4(&EventUiEntity_TypeInfo);
-    byte_438A6E7 = 1;
+    sub_1B00CCC(&EventUiEntity_TypeInfo, v1);
+    byte_48E2A04 = 1;
   }
   LODWORD(EventUiEntity_TypeInfo->static_fields->EVNET_UI_POSITION_MAGNIFICATION) = (struct EventUiEntity_StaticFields)1008981770;
 }
@@ -12,27 +14,23 @@ void __fastcall EventUiEntity___cctor(const MethodInfo *method)
 void __fastcall EventUiEntity___ctor(EventUiEntity_o *this, const MethodInfo *method)
 {
   struct System_Int32_array **p_spotIds; // x19
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
+  int32_t v4; // w2
+  int32_t v5; // w3
 
-  if ( (byte_438A6E4 & 1) == 0 )
+  if ( (byte_48E2A01 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    byte_438A6E4 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
+    byte_48E2A01 = 1;
   }
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
   this->fields.spotIds = 0LL;
   p_spotIds = &this->fields.spotIds;
   *(p_spotIds - 3) = 0LL;
   *(p_spotIds - 2) = 0LL;
   *((_DWORD *)p_spotIds - 2) = 0;
-  sub_B77560((BattleServantConfConponent_o *)p_spotIds, 0LL, v4, v5, v6, v7, v8, v9);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)p_spotIds, 0, v4, v5);
   *(struct System_Int32_array **)((char *)p_spotIds + 20) = 0LL;
   *(struct System_Int32_array **)((char *)p_spotIds + 12) = 0LL;
   *((_DWORD *)p_spotIds + 2) = 1;
@@ -40,17 +38,18 @@ void __fastcall EventUiEntity___ctor(EventUiEntity_o *this, const MethodInfo *me
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventUiEntity__CreatePK(int32_t id, int32_t priority, const MethodInfo *method)
 {
-  if ( (byte_438A6E6 & 1) == 0 )
+  if ( (byte_48E2A03 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_438A6E6 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&priority);
+    byte_48E2A03 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            priority,
-           (const MethodInfo_1D171BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2D60E34 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -60,18 +59,15 @@ System_String_o *__fastcall EventUiEntity__CreatePrimaryKey(EventUiEntity_o *thi
   int32_t priority; // w19
   int32_t id; // w20
 
-  if ( (byte_438A6E5 & 1) == 0 )
+  if ( (byte_48E2A02 & 1) == 0 )
   {
-    sub_B775C4(&EventUiEntity_TypeInfo);
-    byte_438A6E5 = 1;
+    sub_1B00CCC(&EventUiEntity_TypeInfo, method);
+    byte_48E2A02 = 1;
   }
   id = this->fields.id;
   priority = this->fields.priority;
-  if ( (BYTE3(EventUiEntity_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !EventUiEntity_TypeInfo->_2.cctor_finished )
-  {
+  if ( !EventUiEntity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventUiEntity_TypeInfo);
-  }
   return EventUiEntity__CreatePK(id, priority, v2);
 }
 
@@ -109,10 +105,12 @@ bool __fastcall EventUiEntity__IsDispArea(EventUiEntity_o *this, int32_t type, c
 bool __fastcall EventUiEntity__IsDispEventUIForSpot(EventUiEntity_o *this, int32_t spotId, const MethodInfo *method)
 {
   bool result; // w0
-  struct System_Int32_array *spotIds; // x10
-  __int64 v6; // x8
-  __int64 v7; // x9
-  int32_t *v8; // x10
+  struct System_Int32_array *spotIds; // x8
+  __int64 v6; // x9
+  bool v7; // vf
+  int v8; // w9
+  int v9; // w10
+  int32_t v10; // w11
 
   if ( (this->fields.dispAreaFlag & 8) == 0 )
     return 0;
@@ -120,26 +118,24 @@ bool __fastcall EventUiEntity__IsDispEventUIForSpot(EventUiEntity_o *this, int32
   if ( spotId >= 1 && this->fields.objectType != 1 )
   {
     spotIds = this->fields.spotIds;
-    if ( spotIds )
+    if ( !spotIds )
+      return 0;
+    v6 = *(_QWORD *)&spotIds->max_length;
+    if ( !v6 )
+      return 1;
+    v7 = __OFSUB__((_DWORD)v6, 1);
+    v8 = v6 - 1;
+    if ( v8 < 0 != v7 )
+      return 0;
+    v9 = 0;
+    do
     {
-      v6 = *(_QWORD *)&spotIds->max_length;
-      if ( !v6 )
-        return 1;
-      if ( (int)v6 >= 1 )
-      {
-        v7 = 0LL;
-        v8 = &spotIds->m_Items[1];
-        while ( v8[v7] != spotId )
-        {
-          ++v7;
-          result = 0;
-          if ( (int)v7 >= (int)v6 )
-            return result;
-        }
-        return 1;
-      }
+      v10 = spotIds->m_Items[v9 + 1];
+      result = v10 == spotId;
+      if ( v10 == spotId )
+        break;
     }
-    return 0;
+    while ( v8 != v9++ );
   }
   return result;
 }

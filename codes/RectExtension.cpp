@@ -5,77 +5,116 @@ bool __fastcall RectExtension__HasAnyIntersects(
         bool allowInverse,
         const MethodInfo *method)
 {
-  int v4; // s4
-  UnityEngine_Rect_array *v8; // x19
-  _BOOL4 v9; // w20
-  il2cpp_array_size_t v10; // w21
-  UnityEngine_Rect_o *v11; // x8
-  UnityEngine_Rect_o *v12; // x22
-  __int64 v14; // x0
-  UnityEngine_Rect_o v15; // [xsp+0h] [xbp-30h] BYREF
+  il2cpp_array_size_t max_length; // w8
+  float v5; // s4
+  float v6; // s5
+  float v7; // s6
+  float v8; // s7
+  float v9; // s2
+  float m_XMin; // s2
+  float v11; // s1
+  float v12; // s3
+  float v13; // s1
+  float v14; // s3
+  float v15; // s3
+  float v16; // s6
+  float v17; // s7
+  il2cpp_array_size_t v18; // w10
+  signed int v19; // w9
+  float *v20; // x10
+  float v21; // s16
+  float v22; // s18
+  float v23; // s17
+  float v24; // s19
+  float v25; // s20
+  float v26; // s21
+  bool v27; // cc
+  float v28; // s23
+  float v29; // s22
+  float v30; // s21
+  float m_YMin; // s20
 
-  v15 = self;
   if ( !rects )
-    sub_B7769C(0LL, allowInverse);
-  v8 = rects;
-  v9 = allowInverse;
-  v10 = rects->max_length - 1;
-  v11 = &rects->m_Items[(int)v10 + 1];
-  while ( (v10 & 0x80000000) == 0 )
+    sub_1B00F28(0LL, allowInverse);
+  max_length = rects->max_length;
+  v5 = self.fields.m_XMin + self.fields.m_Width;
+  v6 = self.fields.m_YMin + self.fields.m_Height;
+  v7 = self.fields.m_XMin - (float)(self.fields.m_XMin + self.fields.m_Width);
+  v8 = self.fields.m_YMin - (float)(self.fields.m_YMin + self.fields.m_Height);
+  if ( self.fields.m_XMin <= (float)(self.fields.m_XMin + self.fields.m_Width) )
+    v7 = v9;
+  if ( self.fields.m_XMin <= (float)(self.fields.m_XMin + self.fields.m_Width) )
+    m_XMin = self.fields.m_XMin;
+  else
+    m_XMin = self.fields.m_XMin + self.fields.m_Width;
+  if ( v11 <= v6 )
+    v8 = v12;
+  if ( v13 <= v6 )
+    v15 = v13;
+  else
+    v15 = v13 + v14;
+  v16 = m_XMin + v7;
+  v17 = v15 + v8;
+  v18 = max_length - 1;
+  do
   {
-    if ( v10 >= v8->max_length )
+    v19 = v18;
+    if ( (v18 & 0x80000000) != 0 )
+      break;
+    if ( v18 >= max_length )
+      sub_1B00F30(rects, allowInverse);
+    v20 = (float *)(&rects->obj + v18);
+    v22 = v20[8];
+    v21 = v20[9];
+    v24 = v20[10];
+    v23 = v20[11];
+    if ( allowInverse )
     {
-      v14 = sub_B776C8(rects);
-      sub_B77668(v14, 0LL);
+      v25 = v22 + v24;
+      v26 = v21 + v23;
+      v27 = v22 <= (float)(v22 + v24);
+      if ( v22 > (float)(v22 + v24) )
+        v24 = v22 - (float)(v22 + v24);
+      if ( !v27 )
+        v22 = v25;
+      if ( v21 > v26 )
+        v23 = v21 - (float)(v21 + v23);
+      if ( v21 > v26 )
+        v21 = v26;
+      v28 = v17;
+      v29 = v16;
+      v30 = m_XMin;
+      m_YMin = v15;
     }
-    --v10;
-    v12 = v11 - 1;
-    rects = (UnityEngine_Rect_array *)UnityEngine_Rect__Overlaps_36345424(
-                                        *(UnityEngine_Rect_o *)((char *)v11 - 12),
-                                        *(UnityEngine_Rect_o *)&v4,
-                                        (bool)&v15,
-                                        (const MethodInfo *)v9);
-    v11 = v12;
-    if ( ((unsigned __int8)rects & 1) != 0 )
-      return 1;
+    else
+    {
+      v28 = v6;
+      v29 = v5;
+      v30 = self.fields.m_XMin;
+      m_YMin = self.fields.m_YMin;
+    }
+    v18 = v19 - 1;
   }
-  return 0;
+  while ( v21 >= v28 || v22 >= v29 || (float)(v22 + v24) <= v30 || (float)(v21 + v23) <= m_YMin );
+  return v19 >= 0;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 bool __fastcall RectExtension__IsContain(UnityEngine_Rect_o self, UnityEngine_Rect_o b, const MethodInfo *method)
 {
-  float m_XMin; // s8
-  float xMin; // s0
-  float v8; // s8
-  float xMax; // s0
-  float v13; // s8
-  float yMin; // s0
-  UnityEngine_Rect_o v19; // [xsp+0h] [xbp-30h] BYREF
-  UnityEngine_Rect_o anonymous0[3]; // [xsp+10h] [xbp-20h] BYREF
-  UnityEngine_Rect_o v21; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v23; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v24; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  bool result; // w0
+  float v4; // s1
+  float v5; // s5
+  float v6; // s1
+  float v7; // s3
+  float v8; // s5
+  float v9; // s7
 
-  anonymous0[0] = self;
-  v19 = b;
-  v21.fields.m_XMin = UnityEngine_Rect__get_xMin(self, (const MethodInfo *)&v19);
-  m_XMin = v21.fields.m_XMin;
-  xMin = UnityEngine_Rect__get_xMin(v21, (const MethodInfo *)anonymous0);
-  if ( m_XMin < xMin )
+  if ( b.fields.m_XMin < self.fields.m_XMin )
     return 0;
-  v22.fields.m_XMin = UnityEngine_Rect__get_xMax(*(UnityEngine_Rect_o *)&xMin, (const MethodInfo *)anonymous0);
-  v8 = v22.fields.m_XMin;
-  xMax = UnityEngine_Rect__get_xMax(v22, (const MethodInfo *)&v19);
-  if ( v8 < xMax )
-    return 0;
-  v23.fields.m_XMin = UnityEngine_Rect__get_yMin(*(UnityEngine_Rect_o *)&xMax, (const MethodInfo *)&v19);
-  v13 = v23.fields.m_XMin;
-  yMin = UnityEngine_Rect__get_yMin(v23, (const MethodInfo *)anonymous0);
-  if ( v13 < yMin )
-    return 0;
-  v24.fields.m_XMin = UnityEngine_Rect__get_yMax(*(UnityEngine_Rect_o *)&yMin, (const MethodInfo *)anonymous0);
-  return v24.fields.m_XMin >= UnityEngine_Rect__get_yMax(v24, (const MethodInfo *)&v19);
+  result = 0;
+  if ( v5 >= v4 && (float)(self.fields.m_Width + self.fields.m_XMin) >= (float)(b.fields.m_Width + b.fields.m_XMin) )
+    return (float)(v7 + v6) >= (float)(v9 + v8);
+  return result;
 }

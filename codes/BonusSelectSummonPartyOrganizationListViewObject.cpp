@@ -2,16 +2,13 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewObject___ctor(
         BonusSelectSummonPartyOrganizationListViewObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_438AE35 & 1) == 0 )
+  if ( (byte_48DF076 & 1) == 0 )
   {
-    sub_B775C4(&ListViewObject_TypeInfo);
-    byte_438AE35 = 1;
+    sub_1B00CCC(&ListViewObject_TypeInfo, method);
+    byte_48DF076 = 1;
   }
-  if ( (BYTE3(ListViewObject_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ListViewObject_TypeInfo->_2.cctor_finished )
-  {
+  if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
-  }
   ListViewObject___ctor((ListViewObject_o *)this, 0LL);
 }
 
@@ -30,44 +27,24 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewObject__Init(
         BonusSelectSummonConfirmDialog_OnTapPartyMemberEvent_o *onTapEvent,
         const MethodInfo *method)
 {
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  System_String_array **v10; // x2
-  System_String_array **v11; // x3
-  System_Boolean_array **v12; // x4
-  System_Int32_array **v13; // x5
-  System_Int32_array *v14; // x6
-  System_Int32_array *v15; // x7
-  __int64 v16; // x1
-  const MethodInfo *v17; // x3
+  int32_t v6; // w2
+  int32_t v7; // w3
+  __int64 v8; // x1
+  const MethodInfo *v9; // x3
   BonusSelectSummonPartyOrganizationListViewItemDraw_o *itemDraw; // x0
 
   this->fields.listViewItem = item;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.listViewItem,
-    (System_Int32_array **)item,
-    (System_String_array **)onTapEvent,
-    (System_String_array **)method,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields.listViewItem,
+    (int32_t)item,
+    (int32_t)onTapEvent,
+    (int32_t)method);
   this->fields.onTapEvent = onTapEvent;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.onTapEvent,
-    (System_Int32_array **)onTapEvent,
-    v10,
-    v11,
-    v12,
-    v13,
-    v14,
-    v15);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.onTapEvent, (int32_t)onTapEvent, v6, v7);
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
-    sub_B7769C(0LL, v16);
-  BonusSelectSummonPartyOrganizationListViewItemDraw__SetItem(itemDraw, this->fields.listViewItem, 3, v17);
+    sub_1B00F28(0LL, v8);
+  BonusSelectSummonPartyOrganizationListViewItemDraw__SetItem(itemDraw, this->fields.listViewItem, 3, v9);
   ((void (__fastcall *)(BonusSelectSummonPartyOrganizationListViewObject_o *, __int64, Il2CppMethodPointer))this->klass->vtable._9_SetInput.method)(
     this,
     1LL,
@@ -84,7 +61,7 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewObject__Modfy(
 
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
-    sub_B7769C(0LL, method);
+    sub_1B00F28(0LL, method);
   BonusSelectSummonPartyOrganizationListViewItemDraw__SetItem(itemDraw, this->fields.listViewItem, 3, v2);
 }
 
@@ -93,13 +70,17 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewObject__OnLongTapServa
         BonusSelectSummonPartyOrganizationListViewObject_o *this,
         const MethodInfo *method)
 {
-  BonusSelectSummonConfirmDialog_OnTapPartyMemberEvent_o *onTapEvent; // x0
+  struct BonusSelectSummonConfirmDialog_OnTapPartyMemberEvent_o *onTapEvent; // x8
 
   if ( this->fields.isEnableTouch )
   {
     onTapEvent = this->fields.onTapEvent;
     if ( onTapEvent )
-      BonusSelectSummonConfirmDialog_OnTapPartyMemberEvent__Invoke(onTapEvent, this->fields.listViewItem, 1, 0LL);
+      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, struct BonusSelectSummonPartyOrganizationListViewItem_o *, __int64, _QWORD))onTapEvent->fields.m_target)(
+        onTapEvent->fields.original_method_info,
+        this->fields.listViewItem,
+        1LL,
+        *(_QWORD *)&onTapEvent->fields.extra_arg);
   }
 }
 
@@ -109,14 +90,17 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewObject__OnTapEvent(
         bool isLongTap,
         const MethodInfo *method)
 {
+  struct BonusSelectSummonConfirmDialog_OnTapPartyMemberEvent_o *onTapEvent; // x9
+
   if ( this->fields.isEnableTouch )
   {
-    if ( this->fields.onTapEvent )
-      BonusSelectSummonConfirmDialog_OnTapPartyMemberEvent__Invoke(
-        this->fields.onTapEvent,
+    onTapEvent = this->fields.onTapEvent;
+    if ( onTapEvent )
+      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, struct BonusSelectSummonPartyOrganizationListViewItem_o *, bool, _QWORD))onTapEvent->fields.m_target)(
+        onTapEvent->fields.original_method_info,
         this->fields.listViewItem,
         isLongTap,
-        0LL);
+        *(_QWORD *)&onTapEvent->fields.extra_arg);
   }
 }
 
@@ -125,14 +109,17 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewObject__OnTapServant(
         BonusSelectSummonPartyOrganizationListViewObject_o *this,
         const MethodInfo *method)
 {
+  struct BonusSelectSummonConfirmDialog_OnTapPartyMemberEvent_o *onTapEvent; // x8
+
   if ( this->fields.isEnableTouch )
   {
-    if ( this->fields.onTapEvent )
-      BonusSelectSummonConfirmDialog_OnTapPartyMemberEvent__Invoke(
-        this->fields.onTapEvent,
+    onTapEvent = this->fields.onTapEvent;
+    if ( onTapEvent )
+      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, struct BonusSelectSummonPartyOrganizationListViewItem_o *, _QWORD, _QWORD))onTapEvent->fields.m_target)(
+        onTapEvent->fields.original_method_info,
         this->fields.listViewItem,
-        0,
-        0LL);
+        0LL,
+        *(_QWORD *)&onTapEvent->fields.extra_arg);
   }
 }
 

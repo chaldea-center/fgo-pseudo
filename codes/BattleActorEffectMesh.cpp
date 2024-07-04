@@ -1,32 +1,25 @@
 void __fastcall BattleActorEffectMesh___ctor(BattleActorEffectMesh_o *this, const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  System_Int32_array **v9; // x1
-  System_Int32_array **v10; // x1
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
+  int32_t v2; // w2
+  int32_t v3; // w3
+  __int64 v5; // x1
+  int32_t v6; // w1
+  int32_t v7; // w1
+  int32_t v8; // w2
+  int32_t v9; // w3
 
-  if ( (byte_438EB21 & 1) == 0 )
+  if ( (byte_48E48A9 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_17770/*"chr(Clone)"*/);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438EB21 = 1;
+    sub_1B00CCC(&StringLiteral_17720/*"chr(Clone)"*/, method);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v5);
+    byte_48E48A9 = 1;
   }
-  v9 = (System_Int32_array **)StringLiteral_17770/*"chr(Clone)"*/;
-  this->fields.topNodeName = (struct System_String_o *)StringLiteral_17770/*"chr(Clone)"*/;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.topNodeName, v9, v2, v3, v4, v5, v6, v7);
-  v10 = (System_Int32_array **)StringLiteral_1/*""*/;
+  v6 = StringLiteral_17720/*"chr(Clone)"*/;
+  this->fields.topNodeName = (struct System_String_o *)StringLiteral_17720/*"chr(Clone)"*/;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.topNodeName, v6, v2, v3);
+  v7 = (int)StringLiteral_1/*""*/;
   this->fields.meshObjName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.meshObjName, v10, v11, v12, v13, v14, v15, v16);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.meshObjName, v7, v8, v9);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -35,253 +28,249 @@ void __fastcall BattleActorEffectMesh__OnTransformParentChanged(
         BattleActorEffectMesh_o *this,
         const MethodInfo *method)
 {
-  struct UnityEngine_ParticleSystem_array *particles; // x8
-  UnityEngine_Object_o *ComponentsInParent_Transform; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
   __int64 v5; // x1
+  struct UnityEngine_ParticleSystem_array *particles; // x8
+  UnityEngine_Object_o *ComponentsInParent_object__47555476; // x0
+  __int64 v8; // x1
   int klass; // w8
-  UnityEngine_Object_o *v7; // x20
-  unsigned int v8; // w21
-  UnityEngine_Object_c **v9; // x22
-  UnityEngine_Object_o **v10; // x22
-  UnityEngine_SkinnedMeshRenderer_o *v11; // t1
-  UnityEngine_Object_o *v12; // x20
-  struct UnityEngine_ParticleSystem_array *v13; // x8
-  il2cpp_array_size_t v14; // w22
+  UnityEngine_Object_o *v10; // x20
+  unsigned int v11; // w21
+  UnityEngine_Object_c **v12; // x22
+  UnityEngine_Object_o **v13; // x22
+  UnityEngine_SkinnedMeshRenderer_o *v14; // t1
+  UnityEngine_Object_o *v15; // x20
+  struct UnityEngine_ParticleSystem_array *v16; // x8
+  il2cpp_array_size_t v17; // w22
   il2cpp_array_size_t max_length; // w9
   int32_t type; // w8
-  int v17; // w8
-  UnityEngine_Object_o *v18; // x21
-  unsigned int v19; // w25
-  UnityEngine_Object_c **v20; // x26
-  UnityEngine_SkinnedMeshRenderer_o **v21; // x26
-  UnityEngine_SkinnedMeshRenderer_o *v22; // t1
-  int v23; // w8
-  UnityEngine_Object_o *v24; // x21
-  unsigned int v25; // w25
-  UnityEngine_Object_c **v26; // x26
-  UnityEngine_MeshRenderer_o **v27; // x26
-  UnityEngine_SkinnedMeshRenderer_o *v28; // t1
-  __int64 v29; // x0
-  UnityEngine_Object_o *v30; // [xsp+8h] [xbp-48h] BYREF
-  UnityEngine_ParticleSystem_ShapeModule_o v31; // 0:x0.8
-  UnityEngine_ParticleSystem_ShapeModule_o v32; // 0:x0.8
+  int v20; // w8
+  UnityEngine_Object_o *v21; // x21
+  unsigned int v22; // w25
+  UnityEngine_Object_c **v23; // x26
+  UnityEngine_SkinnedMeshRenderer_o **v24; // x26
+  UnityEngine_SkinnedMeshRenderer_o *v25; // t1
+  int v26; // w8
+  UnityEngine_Object_o *v27; // x21
+  unsigned int v28; // w25
+  UnityEngine_Object_c **v29; // x26
+  UnityEngine_MeshRenderer_o **v30; // x26
+  UnityEngine_SkinnedMeshRenderer_o *v31; // t1
+  UnityEngine_Object_o *v32; // [xsp+8h] [xbp-48h] BYREF
+  UnityEngine_ParticleSystem_ShapeModule_o v33; // 0:x0.8
+  UnityEngine_ParticleSystem_ShapeModule_o v34; // 0:x0.8
 
-  if ( (byte_438EB20 & 1) == 0 )
+  if ( (byte_48E48A8 & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_Component_GetComponentsInChildren_MeshRenderer___);
-    sub_B775C4(&Method_UnityEngine_Component_GetComponentsInChildren_SkinnedMeshRenderer___);
-    sub_B775C4(&Method_UnityEngine_Component_GetComponentsInParent_Transform___);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438EB20 = 1;
+    sub_1B00CCC(&Method_UnityEngine_Component_GetComponentsInChildren_MeshRenderer___, method);
+    sub_1B00CCC(&Method_UnityEngine_Component_GetComponentsInChildren_SkinnedMeshRenderer___, v3);
+    sub_1B00CCC(&Method_UnityEngine_Component_GetComponentsInParent_Transform___, v4);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v5);
+    byte_48E48A8 = 1;
   }
-  v30 = 0LL;
+  v32 = 0LL;
   particles = this->fields.particles;
   if ( !particles || !*(_QWORD *)&particles->max_length )
     return;
-  ComponentsInParent_Transform = (UnityEngine_Object_o *)UnityEngine_Component__GetComponentsInParent_Transform_(
-                                                           (UnityEngine_Component_o *)this,
-                                                           (const MethodInfo_1C6DBA0 *)Method_UnityEngine_Component_GetComponentsInParent_Transform___);
-  if ( !ComponentsInParent_Transform )
+  ComponentsInParent_object__47555476 = (UnityEngine_Object_o *)UnityEngine_Component__GetComponentsInParent_object__47555476(
+                                                                  (UnityEngine_Component_o *)this,
+                                                                  (const MethodInfo_2D5A394 *)Method_UnityEngine_Component_GetComponentsInParent_Transform___);
+  if ( !ComponentsInParent_object__47555476 )
     goto LABEL_60;
-  klass = (int)ComponentsInParent_Transform[1].klass;
-  v7 = ComponentsInParent_Transform;
+  klass = (int)ComponentsInParent_object__47555476[1].klass;
+  v10 = ComponentsInParent_object__47555476;
   if ( klass < 1 )
   {
 LABEL_13:
-    v12 = 0LL;
+    v15 = 0LL;
   }
   else
   {
-    v8 = 0;
+    v11 = 0;
     while ( 1 )
     {
-      if ( v8 >= klass )
-        goto LABEL_62;
-      v9 = &v7->klass + (int)v8;
-      v11 = (UnityEngine_SkinnedMeshRenderer_o *)v9[4];
-      v10 = (UnityEngine_Object_o **)(v9 + 4);
-      ComponentsInParent_Transform = (UnityEngine_Object_o *)v11;
-      if ( !v11 )
+      if ( v11 >= klass )
+        goto LABEL_61;
+      v12 = &v10->klass + (int)v11;
+      v14 = (UnityEngine_SkinnedMeshRenderer_o *)v12[4];
+      v13 = (UnityEngine_Object_o **)(v12 + 4);
+      ComponentsInParent_object__47555476 = (UnityEngine_Object_o *)v14;
+      if ( !v14 )
         goto LABEL_60;
-      ComponentsInParent_Transform = (UnityEngine_Object_o *)UnityEngine_Object__get_name(
-                                                               ComponentsInParent_Transform,
-                                                               0LL);
-      if ( !ComponentsInParent_Transform )
+      ComponentsInParent_object__47555476 = (UnityEngine_Object_o *)UnityEngine_Object__get_name(
+                                                                      ComponentsInParent_object__47555476,
+                                                                      0LL);
+      if ( !ComponentsInParent_object__47555476 )
         goto LABEL_60;
-      ComponentsInParent_Transform = (UnityEngine_Object_o *)System_String__Equals_44889276(
-                                                               (System_String_o *)ComponentsInParent_Transform,
-                                                               this->fields.topNodeName,
-                                                               0LL);
-      if ( ((unsigned __int8)ComponentsInParent_Transform & 1) != 0 )
+      ComponentsInParent_object__47555476 = (UnityEngine_Object_o *)System_String__Equals_60334064(
+                                                                      (System_String_o *)ComponentsInParent_object__47555476,
+                                                                      this->fields.topNodeName,
+                                                                      0LL);
+      if ( ((unsigned __int8)ComponentsInParent_object__47555476 & 1) != 0 )
         break;
-      klass = (int)v7[1].klass;
-      if ( (int)++v8 >= klass )
+      klass = (int)v10[1].klass;
+      if ( (int)++v11 >= klass )
         goto LABEL_13;
     }
-    if ( v8 >= LODWORD(v7[1].klass) )
-    {
-LABEL_62:
-      v29 = sub_B776C8(ComponentsInParent_Transform);
-      sub_B77668(v29, 0LL);
-    }
-    v12 = *v10;
+    if ( v11 >= LODWORD(v10[1].klass) )
+LABEL_61:
+      sub_1B00F30(ComponentsInParent_object__47555476, v8);
+    v15 = *v13;
   }
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  ComponentsInParent_Transform = (UnityEngine_Object_o *)UnityEngine_Object__op_Equality(v12, 0LL, 0LL);
-  if ( ((unsigned __int8)ComponentsInParent_Transform & 1) == 0 )
+  ComponentsInParent_object__47555476 = (UnityEngine_Object_o *)UnityEngine_Object__op_Equality(v15, 0LL, 0LL);
+  if ( ((unsigned __int8)ComponentsInParent_object__47555476 & 1) == 0 )
   {
-    v13 = this->fields.particles;
-    if ( v13 )
+    v16 = this->fields.particles;
+    if ( v16 )
     {
-      v14 = 0;
+      v17 = 0;
       do
       {
-        max_length = v13->max_length;
-        if ( (int)v14 >= (int)max_length )
+        max_length = v16->max_length;
+        if ( (int)v17 >= (int)max_length )
           return;
-        if ( v14 >= max_length )
-          goto LABEL_62;
-        ComponentsInParent_Transform = (UnityEngine_Object_o *)v13->m_Items[v14];
-        if ( !ComponentsInParent_Transform )
+        if ( v17 >= max_length )
+          goto LABEL_61;
+        ComponentsInParent_object__47555476 = (UnityEngine_Object_o *)v16->m_Items[v17];
+        if ( !ComponentsInParent_object__47555476 )
           break;
-        ComponentsInParent_Transform = (UnityEngine_Object_o *)UnityEngine_ParticleSystem__get_shape(
-                                                                 (UnityEngine_ParticleSystem_o *)ComponentsInParent_Transform,
-                                                                 0LL).fields.m_ParticleSystem;
-        v30 = ComponentsInParent_Transform;
+        ComponentsInParent_object__47555476 = (UnityEngine_Object_o *)UnityEngine_ParticleSystem__get_shape(
+                                                                        (UnityEngine_ParticleSystem_o *)ComponentsInParent_object__47555476,
+                                                                        0LL).fields.m_ParticleSystem;
+        v32 = ComponentsInParent_object__47555476;
         type = this->fields.type;
         if ( type == 1 )
         {
-          if ( !v12 )
+          if ( !v15 )
             break;
-          ComponentsInParent_Transform = (UnityEngine_Object_o *)UnityEngine_Component__GetComponentsInChildren_USTimelineContainer_(
-                                                                   (UnityEngine_Component_o *)v12,
-                                                                   (const MethodInfo_1C6DAB8 *)Method_UnityEngine_Component_GetComponentsInChildren_MeshRenderer___);
-          if ( !ComponentsInParent_Transform )
+          ComponentsInParent_object__47555476 = (UnityEngine_Object_o *)UnityEngine_Component__GetComponentsInChildren_object__47554852(
+                                                                          (UnityEngine_Component_o *)v15,
+                                                                          (const MethodInfo_2D5A124 *)Method_UnityEngine_Component_GetComponentsInChildren_MeshRenderer___);
+          if ( !ComponentsInParent_object__47555476 )
             break;
-          v23 = (int)ComponentsInParent_Transform[1].klass;
-          v24 = ComponentsInParent_Transform;
-          if ( v23 >= 1 )
+          v26 = (int)ComponentsInParent_object__47555476[1].klass;
+          v27 = ComponentsInParent_object__47555476;
+          if ( v26 >= 1 )
           {
-            v25 = 0;
+            v28 = 0;
             while ( 1 )
             {
-              if ( v25 >= v23 )
-                goto LABEL_62;
-              v26 = &v24->klass + (int)v25;
-              v28 = (UnityEngine_SkinnedMeshRenderer_o *)v26[4];
-              v27 = (UnityEngine_MeshRenderer_o **)(v26 + 4);
-              ComponentsInParent_Transform = (UnityEngine_Object_o *)v28;
-              if ( !v28 )
+              if ( v28 >= v26 )
+                goto LABEL_61;
+              v29 = &v27->klass + (int)v28;
+              v31 = (UnityEngine_SkinnedMeshRenderer_o *)v29[4];
+              v30 = (UnityEngine_MeshRenderer_o **)(v29 + 4);
+              ComponentsInParent_object__47555476 = (UnityEngine_Object_o *)v31;
+              if ( !v31 )
                 goto LABEL_60;
-              ComponentsInParent_Transform = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
-                                                                       (UnityEngine_Component_o *)ComponentsInParent_Transform,
-                                                                       0LL);
-              if ( !ComponentsInParent_Transform )
+              ComponentsInParent_object__47555476 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
+                                                                              (UnityEngine_Component_o *)ComponentsInParent_object__47555476,
+                                                                              0LL);
+              if ( !ComponentsInParent_object__47555476 )
                 goto LABEL_60;
-              ComponentsInParent_Transform = (UnityEngine_Object_o *)UnityEngine_GameObject__get_active(
-                                                                       (UnityEngine_GameObject_o *)ComponentsInParent_Transform,
-                                                                       0LL);
-              if ( ((unsigned __int8)ComponentsInParent_Transform & 1) != 0 )
+              ComponentsInParent_object__47555476 = (UnityEngine_Object_o *)UnityEngine_GameObject__get_activeSelf(
+                                                                              (UnityEngine_GameObject_o *)ComponentsInParent_object__47555476,
+                                                                              0LL);
+              if ( ((unsigned __int8)ComponentsInParent_object__47555476 & 1) != 0 )
               {
-                if ( v25 >= LODWORD(v24[1].klass) )
-                  goto LABEL_62;
-                ComponentsInParent_Transform = (UnityEngine_Object_o *)*v27;
-                if ( !*v27 )
+                if ( v28 >= LODWORD(v27[1].klass) )
+                  goto LABEL_61;
+                ComponentsInParent_object__47555476 = (UnityEngine_Object_o *)*v30;
+                if ( !*v30 )
                   goto LABEL_60;
-                ComponentsInParent_Transform = (UnityEngine_Object_o *)UnityEngine_Object__get_name(
-                                                                         ComponentsInParent_Transform,
-                                                                         0LL);
-                if ( !ComponentsInParent_Transform )
+                ComponentsInParent_object__47555476 = (UnityEngine_Object_o *)UnityEngine_Object__get_name(
+                                                                                ComponentsInParent_object__47555476,
+                                                                                0LL);
+                if ( !ComponentsInParent_object__47555476 )
                   goto LABEL_60;
-                ComponentsInParent_Transform = (UnityEngine_Object_o *)System_String__IndexOf_44974284(
-                                                                         (System_String_o *)ComponentsInParent_Transform,
-                                                                         this->fields.meshObjName,
-                                                                         0LL);
-                if ( ((unsigned int)ComponentsInParent_Transform & 0x80000000) == 0 )
+                ComponentsInParent_object__47555476 = (UnityEngine_Object_o *)System_String__IndexOf_60357184(
+                                                                                (System_String_o *)ComponentsInParent_object__47555476,
+                                                                                this->fields.meshObjName,
+                                                                                0LL);
+                if ( ((unsigned int)ComponentsInParent_object__47555476 & 0x80000000) == 0 )
                   break;
               }
-              v23 = (int)v24[1].klass;
-              if ( (int)++v25 >= v23 )
+              v26 = (int)v27[1].klass;
+              if ( (int)++v28 >= v26 )
                 goto LABEL_59;
             }
-            if ( v25 >= LODWORD(v24[1].klass) )
-              goto LABEL_62;
-            v32.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v30;
-            UnityEngine_ParticleSystem_ShapeModule__set_meshRenderer(v32, *v27, 0LL);
+            if ( v28 >= LODWORD(v27[1].klass) )
+              goto LABEL_61;
+            v34.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v32;
+            UnityEngine_ParticleSystem_ShapeModule__set_meshRenderer(v34, *v30, 0LL);
           }
         }
         else if ( !type )
         {
-          if ( !v12 )
+          if ( !v15 )
             break;
-          ComponentsInParent_Transform = (UnityEngine_Object_o *)UnityEngine_Component__GetComponentsInChildren_USTimelineContainer_(
-                                                                   (UnityEngine_Component_o *)v12,
-                                                                   (const MethodInfo_1C6DAB8 *)Method_UnityEngine_Component_GetComponentsInChildren_SkinnedMeshRenderer___);
-          if ( !ComponentsInParent_Transform )
+          ComponentsInParent_object__47555476 = (UnityEngine_Object_o *)UnityEngine_Component__GetComponentsInChildren_object__47554852(
+                                                                          (UnityEngine_Component_o *)v15,
+                                                                          (const MethodInfo_2D5A124 *)Method_UnityEngine_Component_GetComponentsInChildren_SkinnedMeshRenderer___);
+          if ( !ComponentsInParent_object__47555476 )
             break;
-          v17 = (int)ComponentsInParent_Transform[1].klass;
-          v18 = ComponentsInParent_Transform;
-          if ( v17 >= 1 )
+          v20 = (int)ComponentsInParent_object__47555476[1].klass;
+          v21 = ComponentsInParent_object__47555476;
+          if ( v20 >= 1 )
           {
-            v19 = 0;
+            v22 = 0;
             while ( 1 )
             {
-              if ( v19 >= v17 )
-                goto LABEL_62;
-              v20 = &v18->klass + (int)v19;
-              v22 = (UnityEngine_SkinnedMeshRenderer_o *)v20[4];
-              v21 = (UnityEngine_SkinnedMeshRenderer_o **)(v20 + 4);
-              ComponentsInParent_Transform = (UnityEngine_Object_o *)v22;
-              if ( !v22 )
+              if ( v22 >= v20 )
+                goto LABEL_61;
+              v23 = &v21->klass + (int)v22;
+              v25 = (UnityEngine_SkinnedMeshRenderer_o *)v23[4];
+              v24 = (UnityEngine_SkinnedMeshRenderer_o **)(v23 + 4);
+              ComponentsInParent_object__47555476 = (UnityEngine_Object_o *)v25;
+              if ( !v25 )
                 goto LABEL_60;
-              ComponentsInParent_Transform = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
-                                                                       (UnityEngine_Component_o *)ComponentsInParent_Transform,
-                                                                       0LL);
-              if ( !ComponentsInParent_Transform )
+              ComponentsInParent_object__47555476 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
+                                                                              (UnityEngine_Component_o *)ComponentsInParent_object__47555476,
+                                                                              0LL);
+              if ( !ComponentsInParent_object__47555476 )
                 goto LABEL_60;
-              ComponentsInParent_Transform = (UnityEngine_Object_o *)UnityEngine_GameObject__get_active(
-                                                                       (UnityEngine_GameObject_o *)ComponentsInParent_Transform,
-                                                                       0LL);
-              if ( ((unsigned __int8)ComponentsInParent_Transform & 1) != 0 )
+              ComponentsInParent_object__47555476 = (UnityEngine_Object_o *)UnityEngine_GameObject__get_activeSelf(
+                                                                              (UnityEngine_GameObject_o *)ComponentsInParent_object__47555476,
+                                                                              0LL);
+              if ( ((unsigned __int8)ComponentsInParent_object__47555476 & 1) != 0 )
               {
-                if ( v19 >= LODWORD(v18[1].klass) )
-                  goto LABEL_62;
-                ComponentsInParent_Transform = (UnityEngine_Object_o *)*v21;
-                if ( !*v21 )
+                if ( v22 >= LODWORD(v21[1].klass) )
+                  goto LABEL_61;
+                ComponentsInParent_object__47555476 = (UnityEngine_Object_o *)*v24;
+                if ( !*v24 )
                   goto LABEL_60;
-                ComponentsInParent_Transform = (UnityEngine_Object_o *)UnityEngine_Object__get_name(
-                                                                         ComponentsInParent_Transform,
-                                                                         0LL);
-                if ( !ComponentsInParent_Transform )
+                ComponentsInParent_object__47555476 = (UnityEngine_Object_o *)UnityEngine_Object__get_name(
+                                                                                ComponentsInParent_object__47555476,
+                                                                                0LL);
+                if ( !ComponentsInParent_object__47555476 )
                   goto LABEL_60;
-                ComponentsInParent_Transform = (UnityEngine_Object_o *)System_String__IndexOf_44974284(
-                                                                         (System_String_o *)ComponentsInParent_Transform,
-                                                                         this->fields.meshObjName,
-                                                                         0LL);
-                if ( ((unsigned int)ComponentsInParent_Transform & 0x80000000) == 0 )
+                ComponentsInParent_object__47555476 = (UnityEngine_Object_o *)System_String__IndexOf_60357184(
+                                                                                (System_String_o *)ComponentsInParent_object__47555476,
+                                                                                this->fields.meshObjName,
+                                                                                0LL);
+                if ( ((unsigned int)ComponentsInParent_object__47555476 & 0x80000000) == 0 )
                   break;
               }
-              v17 = (int)v18[1].klass;
-              if ( (int)++v19 >= v17 )
+              v20 = (int)v21[1].klass;
+              if ( (int)++v22 >= v20 )
                 goto LABEL_59;
             }
-            if ( v19 >= LODWORD(v18[1].klass) )
-              goto LABEL_62;
-            v31.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v30;
-            UnityEngine_ParticleSystem_ShapeModule__set_skinnedMeshRenderer(v31, *v21, 0LL);
+            if ( v22 >= LODWORD(v21[1].klass) )
+              goto LABEL_61;
+            v33.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v32;
+            UnityEngine_ParticleSystem_ShapeModule__set_skinnedMeshRenderer(v33, *v24, 0LL);
           }
         }
 LABEL_59:
-        v13 = this->fields.particles;
-        ++v14;
+        v16 = this->fields.particles;
+        ++v17;
       }
-      while ( v13 );
+      while ( v16 );
     }
 LABEL_60:
-    sub_B7769C(ComponentsInParent_Transform, v5);
+    sub_1B00F28(ComponentsInParent_object__47555476, v8);
   }
 }

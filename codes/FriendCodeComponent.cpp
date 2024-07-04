@@ -18,74 +18,68 @@ void __fastcall FriendCodeComponent__ChangeDispState(
         System_String_o *code,
         const MethodInfo *method)
 {
-  UILabel_o *v7; // x0
-  const MethodInfo *v8; // x2
-  FriendCodeComponent_o *v9; // x0
-  bool v10; // w1
-  struct UILabel_o *v11; // x20
-  System_String_o *v12; // x21
-  Il2CppObject *v13; // x0
-  System_String_o *v14; // x1
-  UILabel_o *v15; // x0
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  UILabel_o *v10; // x0
+  const MethodInfo *v11; // x2
+  bool v12; // w1
   struct UILabel_o *friendCodeLabel; // x21
-  System_String_o *v17; // x0
+  System_String_o *v14; // x0
+  System_String_o *v15; // x1
+  UILabel_o *v16; // x0
+  struct UILabel_o *v17; // x20
+  System_String_o *v18; // x21
+  Il2CppObject *v19; // x0
 
-  if ( (byte_438EA9F & 1) == 0 )
+  if ( (byte_48E49CE & 1) == 0 )
   {
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&StringLiteral_15000/*"USER_FRIEND_CODE"*/);
-    sub_B775C4(&StringLiteral_15001/*"USER_FRIEND_CODE_HIDDEN"*/);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438EA9F = 1;
+    sub_1B00CCC(&LocalizationManager_TypeInfo, *(_QWORD *)&state);
+    sub_1B00CCC(&StringLiteral_14609/*"USER_FRIEND_CODE"*/, v7);
+    sub_1B00CCC(&StringLiteral_14610/*"USER_FRIEND_CODE_HIDDEN"*/, v8);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v9);
+    byte_48E49CE = 1;
   }
   switch ( state )
   {
     case 2:
       friendCodeLabel = this->fields.friendCodeLabel;
-      if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !LocalizationManager_TypeInfo->_2.cctor_finished )
-      {
+      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      }
-      v17 = LocalizationManager__Get((System_String_o *)StringLiteral_15000/*"USER_FRIEND_CODE"*/, 0LL);
-      v7 = (UILabel_o *)System_String__Format(v17, (Il2CppObject *)code, 0LL);
+      v14 = LocalizationManager__Get((System_String_o *)StringLiteral_14609/*"USER_FRIEND_CODE"*/, 0LL);
+      v10 = (UILabel_o *)System_String__Format(v14, (Il2CppObject *)code, 0LL);
       if ( !friendCodeLabel )
-        goto LABEL_21;
-      v14 = (System_String_o *)v7;
-      v15 = friendCodeLabel;
-LABEL_18:
-      UILabel__set_text(v15, v14, 0LL);
-      v10 = 1;
-      v9 = this;
-      goto LABEL_19;
+        goto LABEL_19;
+      v15 = (System_String_o *)v10;
+      v16 = friendCodeLabel;
+LABEL_16:
+      UILabel__set_text(v16, v15, 0LL);
+      v12 = 1;
+      goto LABEL_17;
     case 1:
-      v11 = this->fields.friendCodeLabel;
-      if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !LocalizationManager_TypeInfo->_2.cctor_finished )
-      {
+      v17 = this->fields.friendCodeLabel;
+      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      }
-      v12 = LocalizationManager__Get((System_String_o *)StringLiteral_15000/*"USER_FRIEND_CODE"*/, 0LL);
-      v13 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_15001/*"USER_FRIEND_CODE_HIDDEN"*/, 0LL);
-      v7 = (UILabel_o *)System_String__Format(v12, v13, 0LL);
-      if ( !v11 )
-        goto LABEL_21;
-      v14 = (System_String_o *)v7;
-      v15 = v11;
-      goto LABEL_18;
+      v18 = LocalizationManager__Get((System_String_o *)StringLiteral_14609/*"USER_FRIEND_CODE"*/, 0LL);
+      v19 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_14610/*"USER_FRIEND_CODE_HIDDEN"*/, 0LL);
+      v10 = (UILabel_o *)System_String__Format(v18, v19, 0LL);
+      if ( !v17 )
+        goto LABEL_19;
+      v15 = (System_String_o *)v10;
+      v16 = v17;
+      goto LABEL_16;
     case 0:
-      v7 = this->fields.friendCodeLabel;
-      if ( v7 )
+      v10 = this->fields.friendCodeLabel;
+      if ( v10 )
       {
-        UILabel__set_text(v7, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-        v9 = this;
-        v10 = 0;
-LABEL_19:
-        FriendCodeComponent__SetTouchEnable(v9, v10, v8);
+        UILabel__set_text(v10, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+        v12 = 0;
+LABEL_17:
+        FriendCodeComponent__SetTouchEnable(this, v12, v11);
         return;
       }
-LABEL_21:
-      sub_B7769C(v7, *(_QWORD *)&state);
+LABEL_19:
+      sub_1B00F28(v10, *(_QWORD *)&state);
   }
 }
 
@@ -94,24 +88,24 @@ System_String_o *__fastcall FriendCodeComponent__GetFriendCodeFromNetworkManager
         FriendCodeComponent_o *this,
         const MethodInfo *method)
 {
-  NetworkManager_o *Instance; // x0
+  Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_438EAA0 & 1) == 0 )
+  if ( (byte_48E49CF & 1) == 0 )
   {
-    sub_B775C4(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
-    byte_438EAA0 = 1;
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, method);
+    byte_48E49CF = 1;
   }
-  Instance = (NetworkManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
   if ( !Instance )
     goto LABEL_8;
-  if ( NetworkManager__ReadFriendCode(Instance, 0LL) )
+  if ( NetworkManager__ReadFriendCode((NetworkManager_o *)Instance, 0LL) )
   {
-    Instance = (NetworkManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
     if ( Instance )
-      return NetworkManager__GetDispFriendCode(Instance, 0LL);
+      return NetworkManager__GetDispFriendCode((NetworkManager_o *)Instance, 0LL);
 LABEL_8:
-    sub_B7769C(Instance, v3);
+    sub_1B00F28(Instance, v3);
   }
   return 0LL;
 }
@@ -119,34 +113,36 @@ LABEL_8:
 
 void __fastcall FriendCodeComponent__OnClickFriendCode(FriendCodeComponent_o *this, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  const MethodInfo *v5; // x3
   System_String_o *friendCode; // x2
-  int32_t v5; // w1
+  int32_t v7; // w1
 
-  if ( (byte_438EA9E & 1) == 0 )
+  if ( (byte_48E49CD & 1) == 0 )
   {
-    sub_B775C4(&SoundManager_TypeInfo);
-    byte_438EA9E = 1;
+    sub_1B00CCC(&Method_FriendCodeComponent_OnClickFriendCode__, method);
+    byte_48E49CD = 1;
   }
   if ( this->fields.dispState )
   {
-    if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !SoundManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    }
-    SoundManager__playSystemSe(0, 0LL);
+    v3 = Method_FriendCodeComponent_OnClickFriendCode__;
+    if ( (*((_BYTE *)Method_FriendCodeComponent_OnClickFriendCode__ + 83) & 2) != 0 )
+      v3 = (_QWORD *)sub_1B00CE4(Method_FriendCodeComponent_OnClickFriendCode__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     friendCode = this->fields.friendCode;
     if ( this->fields.dispState == 1 )
-      v5 = 2;
+      v7 = 2;
     else
-      v5 = 1;
-    this->fields.dispState = v5;
-    FriendCodeComponent__ChangeDispState(this, v5, friendCode, v3);
+      v7 = 1;
+    this->fields.dispState = v7;
+    FriendCodeComponent__ChangeDispState(this, v7, friendCode, v5);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall FriendCodeComponent__SetTouchEnable(
         FriendCodeComponent_o *this,
         bool isEnable,
@@ -156,165 +152,135 @@ void __fastcall FriendCodeComponent__SetTouchEnable(
   __int64 v6; // x1
   UnityEngine_Collider_o *v7; // x0
 
-  if ( (byte_438EAA2 & 1) == 0 )
+  if ( (byte_48E49D1 & 1) == 0 )
   {
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438EAA2 = 1;
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, isEnable);
+    byte_48E49D1 = 1;
   }
   if ( this->fields.dispState )
   {
     touchCollider = (UnityEngine_Object_o *)this->fields.touchCollider;
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
     if ( !UnityEngine_Object__op_Equality(touchCollider, 0LL, 0LL) )
     {
       v7 = (UnityEngine_Collider_o *)this->fields.touchCollider;
       if ( !v7 )
-        sub_B7769C(0LL, v6);
+        sub_1B00F28(0LL, v6);
       UnityEngine_Collider__set_enabled(v7, isEnable, 0LL);
     }
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall FriendCodeComponent__Setup(FriendCodeComponent_o *this, const MethodInfo *method)
 {
   FriendCodeComponent_o *v2; // x19
-  System_Int32_array **FriendCodeFromNetworkManager; // x0
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
+  __int64 v3; // x1
+  System_String_o *FriendCodeFromNetworkManager; // x0
+  int32_t v5; // w2
+  int32_t v6; // w3
+  System_String_o *friendCode; // x2
+  _BOOL4 v8; // w1
+  const MethodInfo *v9; // x3
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v11; // x1
-  const MethodInfo *v12; // x3
-  System_String_o *friendCode; // x2
-  _BOOL4 v14; // w1
   int32_t *p_m_Handle; // x0
   System_String_o *name; // x20
   System_String_o *SceneName; // x0
   unsigned int StoryProgress; // w0
-  int v19; // s3
-  float v20; // s4
-  float v21; // s5
-  float v22; // s6
-  UIWidget_o *v23; // x20
-  int v24; // s0
-  UILabel_o *v28; // x19
-  float v29; // s4
-  float v30; // s5
-  float v31; // s6
-  UIWidget_o *v32; // x20
-  int v33; // s0
-  int v37; // s0
-  int v38; // s1
-  int v39; // s2
-  UIWidget_o *friendCodeLabel; // x19
-  UnityEngine_Color_o v41; // [xsp+8h] [xbp-28h] BYREF
-  int32_t m_Handle; // [xsp+18h] [xbp-18h] BYREF
-  UnityEngine_Color_o v43; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  int32_t m_Handle; // [xsp+8h] [xbp-18h] BYREF
+  UnityEngine_Color_o v17; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v18; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v19; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v20; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = this;
-  if ( (byte_438EA9D & 1) == 0 )
+  if ( (byte_48E49CC & 1) == 0 )
   {
-    sub_B775C4(&SceneList_TypeInfo);
-    this = (FriendCodeComponent_o *)sub_B775C4(&TitleRootComponent_TypeInfo);
-    byte_438EA9D = 1;
+    sub_1B00CCC(&SceneList_TypeInfo, method);
+    this = (FriendCodeComponent_o *)sub_1B00CCC(&TitleRootComponent_TypeInfo, v3);
+    byte_48E49CC = 1;
   }
-  m_Handle = 0;
-  FriendCodeFromNetworkManager = (System_Int32_array **)FriendCodeComponent__GetFriendCodeFromNetworkManager(
-                                                          this,
-                                                          method);
-  v2->fields.friendCode = (struct System_String_o *)FriendCodeFromNetworkManager;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&v2->fields.friendCode,
-    FriendCodeFromNetworkManager,
-    v4,
+  FriendCodeFromNetworkManager = FriendCodeComponent__GetFriendCodeFromNetworkManager(this, method);
+  v2->fields.friendCode = FriendCodeFromNetworkManager;
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&v2->fields.friendCode,
+    (int32_t)FriendCodeFromNetworkManager,
     v5,
-    v6,
-    v7,
-    v8,
-    v9);
-  if ( !v2 )
-    goto LABEL_24;
+    v6);
   friendCode = v2->fields.friendCode;
-  v14 = friendCode != 0LL;
-  v2->fields.dispState = v14;
-  FriendCodeComponent__ChangeDispState(v2, v14, friendCode, v12);
+  v8 = friendCode != 0LL;
+  v2->fields.dispState = v8;
+  FriendCodeComponent__ChangeDispState(v2, v8, friendCode, v9);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v2, 0LL);
   if ( !gameObject )
-    goto LABEL_24;
+    goto LABEL_21;
   m_Handle = UnityEngine_GameObject__get_scene(gameObject, 0LL).fields.m_Handle;
   p_m_Handle = &m_Handle;
   name = UnityEngine_SceneManagement_Scene__get_name((UnityEngine_SceneManagement_Scene_o)p_m_Handle, 0LL);
-  if ( (BYTE3(SceneList_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SceneList_TypeInfo->_2.cctor_finished )
+  if ( !SceneList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SceneList_TypeInfo);
   SceneName = SceneList__getSceneName(9, 0LL);
   if ( System_String__op_Equality(name, SceneName, 0LL) )
   {
-    if ( (BYTE3(TitleRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !TitleRootComponent_TypeInfo->_2.cctor_finished )
-    {
+    if ( !TitleRootComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TitleRootComponent_TypeInfo);
-    }
     StoryProgress = TitleRootComponent__GetStoryProgress(0LL);
     if ( StoryProgress < 3 )
     {
-      v37 = 1033410713;
-      v38 = 1045483729;
-      v39 = 1058247572;
-      friendCodeLabel = (UIWidget_o *)v2->fields.friendCodeLabel;
-      v41 = (UnityEngine_Color_o)0LL;
-      UnityEngine_Color___ctor_41410832(*(UnityEngine_Color_o *)(&v19 - 3), v20, v21, v22, (const MethodInfo *)&v41);
-      if ( !friendCodeLabel )
-        goto LABEL_24;
-      UIWidget__set_color(friendCodeLabel, v41, 0LL);
+      gameObject = (UnityEngine_GameObject_o *)v2->fields.friendCodeLabel;
+      if ( !gameObject )
+        goto LABEL_21;
+      v20.fields.r = 0.07451;
+      v20.fields.g = 0.20392;
+      v20.fields.b = 0.57647;
+      v20.fields.a = 1.0;
+      UIWidget__set_color((UIWidget_o *)gameObject, v20, 0LL);
     }
     else if ( StoryProgress == 3 )
     {
-      v23 = (UIWidget_o *)v2->fields.friendCodeLabel;
-      *(UnityEngine_Color_o *)&v24 = UnityEngine_Color__get_white(0LL);
-      if ( v23 )
+      gameObject = (UnityEngine_GameObject_o *)v2->fields.friendCodeLabel;
+      if ( gameObject )
       {
-        UIWidget__set_color(v23, *(UnityEngine_Color_o *)&v24, 0LL);
+        v17.fields.r = 1.0;
+        v17.fields.g = 1.0;
+        v17.fields.b = 1.0;
+        v17.fields.a = 1.0;
+        UIWidget__set_color((UIWidget_o *)gameObject, v17, 0LL);
         gameObject = (UnityEngine_GameObject_o *)v2->fields.friendCodeLabel;
         if ( gameObject )
         {
           UILabel__set_effectStyle((UILabel_o *)gameObject, 2, 0LL);
-          v43.fields.r = 0.0078431;
-          v43.fields.g = 0.45098;
-          v43.fields.b = 0.84706;
-          v28 = v2->fields.friendCodeLabel;
-          *(_QWORD *)&v41.fields.r = 0LL;
-          *(_QWORD *)&v41.fields.b = 0LL;
-          UnityEngine_Color___ctor_41410832(v43, v29, v30, v31, (const MethodInfo *)&v41);
-          if ( v28 )
+          gameObject = (UnityEngine_GameObject_o *)v2->fields.friendCodeLabel;
+          if ( gameObject )
           {
-            UILabel__set_effectColor(v28, v41, 0LL);
+            v18.fields.r = 0.0078431;
+            v18.fields.g = 0.45098;
+            v18.fields.b = 0.84706;
+            v18.fields.a = 1.0;
+            UILabel__set_effectColor((UILabel_o *)gameObject, v18, 0LL);
             return;
           }
         }
       }
-LABEL_24:
-      sub_B7769C(gameObject, v11);
+LABEL_21:
+      sub_1B00F28(gameObject, v11);
     }
   }
   else
   {
-    v32 = (UIWidget_o *)v2->fields.friendCodeLabel;
-    *(UnityEngine_Color_o *)&v33 = UnityEngine_Color__get_white(0LL);
-    if ( !v32 )
-      goto LABEL_24;
-    UIWidget__set_color(v32, *(UnityEngine_Color_o *)&v33, 0LL);
     gameObject = (UnityEngine_GameObject_o *)v2->fields.friendCodeLabel;
     if ( !gameObject )
-      goto LABEL_24;
+      goto LABEL_21;
+    v19.fields.r = 1.0;
+    v19.fields.g = 1.0;
+    v19.fields.b = 1.0;
+    v19.fields.a = 1.0;
+    UIWidget__set_color((UIWidget_o *)gameObject, v19, 0LL);
+    gameObject = (UnityEngine_GameObject_o *)v2->fields.friendCodeLabel;
+    if ( !gameObject )
+      goto LABEL_21;
     UILabel__set_alignment((UILabel_o *)gameObject, 1, 0LL);
   }
 }
@@ -322,43 +288,28 @@ LABEL_24:
 
 void __fastcall FriendCodeComponent__UpdateFriendCode(FriendCodeComponent_o *this, const MethodInfo *method)
 {
-  NetworkManager_o *Instance; // x0
+  Il2CppObject *Instance; // x0
   __int64 v4; // x1
   struct System_String_o *DispFriendCode; // x0
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
-  const MethodInfo *v12; // x3
+  int32_t v6; // w2
+  int32_t v7; // w3
   System_String_o *friendCode; // x2
-  _BOOL4 v14; // w1
+  _BOOL4 v9; // w1
+  const MethodInfo *v10; // x3
 
-  if ( (byte_438EAA1 & 1) == 0 )
+  if ( (byte_48E49D0 & 1) == 0 )
   {
-    sub_B775C4(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
-    byte_438EAA1 = 1;
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, method);
+    byte_48E49D0 = 1;
   }
-  Instance = (NetworkManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
-  if ( !Instance
-    || (DispFriendCode = NetworkManager__GetDispFriendCode(Instance, 0LL),
-        this->fields.friendCode = DispFriendCode,
-        sub_B77560(
-          (BattleServantConfConponent_o *)&this->fields.friendCode,
-          (System_Int32_array **)DispFriendCode,
-          v6,
-          v7,
-          v8,
-          v9,
-          v10,
-          v11),
-        !this) )
-  {
-    sub_B7769C(Instance, v4);
-  }
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  if ( !Instance )
+    sub_1B00F28(0LL, v4);
+  DispFriendCode = NetworkManager__GetDispFriendCode((NetworkManager_o *)Instance, 0LL);
+  this->fields.friendCode = DispFriendCode;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.friendCode, (int32_t)DispFriendCode, v6, v7);
   friendCode = this->fields.friendCode;
-  v14 = friendCode != 0LL;
-  this->fields.dispState = v14;
-  FriendCodeComponent__ChangeDispState(this, v14, friendCode, v12);
+  v9 = friendCode != 0LL;
+  this->fields.dispState = v9;
+  FriendCodeComponent__ChangeDispState(this, v9, friendCode, v10);
 }

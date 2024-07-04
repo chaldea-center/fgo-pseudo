@@ -1,32 +1,33 @@
 void __fastcall BattleMessageEntity___ctor(BattleMessageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438771A & 1) == 0 )
+  if ( (byte_48E24BC & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_string___ctor__);
-    byte_438771A = 1;
+    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
+    byte_48E24BC = 1;
   }
-  DataEntityBase_string____ctor(
-    (DataEntityBase_string__o *)this,
-    (const MethodInfo_21FB7E0 *)Method_DataEntityBase_string___ctor__);
+  DataEntityBase_object____ctor(
+    (DataEntityBase_PKType__o *)this,
+    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall BattleMessageEntity__CreatePK(
         int32_t id,
         int32_t idx,
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4387717 & 1) == 0 )
+  if ( (byte_48E24B9 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4387717 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&idx);
+    byte_48E24B9 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            id,
            idx,
            priority,
-           (const MethodInfo_1D175E4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2D612C4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -46,23 +47,24 @@ float __fastcall BattleMessageEntity__GetScriptFloat(
         int32_t def,
         const MethodInfo *method)
 {
-  int32_t ScriptInt; // w19
+  int32_t ScriptInt; // w0
   BattleDataDefine_c *v8; // x8
+  int v9; // w19
 
-  if ( (byte_4387718 & 1) == 0 )
+  if ( (byte_48E24BA & 1) == 0 )
   {
-    sub_B775C4(&BattleDataDefine_TypeInfo);
-    byte_4387718 = 1;
+    sub_1B00CCC(&BattleDataDefine_TypeInfo, key);
+    byte_48E24BA = 1;
   }
   ScriptInt = BattleMessageEntity__GetScriptInt(this, key, def, method);
   v8 = BattleDataDefine_TypeInfo;
-  if ( (BYTE3(BattleDataDefine_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !BattleDataDefine_TypeInfo->_2.cctor_finished )
+  v9 = ScriptInt;
+  if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo);
     v8 = BattleDataDefine_TypeInfo;
   }
-  return (float)ScriptInt / v8->static_fields->PERMILLAGE_DENOMINATOR;
+  return (float)v9 / v8->static_fields->PERMILLAGE_DENOMINATOR;
 }
 
 
@@ -72,14 +74,14 @@ int32_t __fastcall BattleMessageEntity__GetScriptInt(
         int64_t def,
         const MethodInfo *method)
 {
-  if ( (byte_4387719 & 1) == 0 )
+  if ( (byte_48E24BB & 1) == 0 )
   {
-    sub_B775C4(&Method_BasicHelper_GetValue_long___);
-    byte_4387719 = 1;
+    sub_1B00CCC(&Method_BasicHelper_GetValue_long___, key);
+    byte_48E24BB = 1;
   }
   return BasicHelper__GetValue_long_(
            this->fields.script,
            key,
            def,
-           (const MethodInfo_1C67D94 *)Method_BasicHelper_GetValue_long___);
+           (const MethodInfo_2D51008 *)Method_BasicHelper_GetValue_long___);
 }

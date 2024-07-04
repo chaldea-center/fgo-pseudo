@@ -1,6 +1,6 @@
 void __fastcall ChangeBattlePhaseObserver___ctor(ChangeBattlePhaseObserver_o *this, const MethodInfo *method)
 {
-  BattleObserver___ctor((BattleObserver_o *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 
@@ -9,18 +9,18 @@ void __fastcall ChangeBattlePhaseObserver__Update(
         BattleSubject_o *subject,
         const MethodInfo *method)
 {
-  __int64 v5; // x10
+  __int64 methodPtr_low; // x10
 
-  if ( (byte_438E469 & 1) == 0 )
+  if ( (byte_48E53A1 & 1) == 0 )
   {
-    sub_B775C4(&ChangeBattlePhaseNotify_TypeInfo);
-    byte_438E469 = 1;
+    sub_1B00CCC(&ChangeBattlePhaseNotify_TypeInfo, subject);
+    byte_48E53A1 = 1;
   }
   if ( subject )
   {
-    v5 = *(&ChangeBattlePhaseNotify_TypeInfo->_2.bitflags2 + 1);
-    if ( *(&subject->klass->_2.bitflags2 + 1) >= (unsigned int)v5
-      && (ChangeBattlePhaseNotify_c *)subject->klass->_2.typeHierarchy[v5 - 1] == ChangeBattlePhaseNotify_TypeInfo )
+    methodPtr_low = LOBYTE(ChangeBattlePhaseNotify_TypeInfo->vtable._0_Equals.methodPtr);
+    if ( LOBYTE(subject->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low
+      && (ChangeBattlePhaseNotify_c *)subject->klass->_2.typeHierarchy[methodPtr_low - 1] == ChangeBattlePhaseNotify_TypeInfo )
     {
       ((void (__fastcall *)(ChangeBattlePhaseObserver_o *, BattleSubject_o *, const char *))this->klass[1]._1.gc_desc)(
         this,

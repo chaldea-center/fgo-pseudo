@@ -1,24 +1,22 @@
 void __fastcall TitleInfoEventTowerBase___cctor(const MethodInfo *method)
 {
-  System_String_array **v1; // x2
-  System_String_array **v2; // x3
-  System_Boolean_array **v3; // x4
-  System_Int32_array **v4; // x5
-  System_Int32_array *v5; // x6
-  System_Int32_array *v6; // x7
-  BattleServantConfConponent_o *static_fields; // x0
-  System_Int32_array **v8; // x1
+  __int64 v1; // x1
+  int32_t v2; // w2
+  int32_t v3; // w3
+  __int64 v4; // x1
 
-  if ( (byte_438915C & 1) == 0 )
+  if ( (byte_48E138E & 1) == 0 )
   {
-    sub_B775C4(&TitleInfoEventTowerBase_TypeInfo);
-    sub_B775C4(&StringLiteral_23220/*"tower_img_base{0:00}"*/);
-    byte_438915C = 1;
+    sub_1B00CCC(&TitleInfoEventTowerBase_TypeInfo, v1);
+    sub_1B00CCC(&StringLiteral_23647/*"tower_img_base{0:00}"*/, v4);
+    byte_48E138E = 1;
   }
-  static_fields = (BattleServantConfConponent_o *)TitleInfoEventTowerBase_TypeInfo->static_fields;
-  v8 = (System_Int32_array **)StringLiteral_23220/*"tower_img_base{0:00}"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_23220/*"tower_img_base{0:00}"*/;
-  sub_B77560(static_fields, v8, v1, v2, v3, v4, v5, v6);
+  TitleInfoEventTowerBase_TypeInfo->static_fields->SPRITE_NAME_TOWER_BASE = (struct System_String_o *)StringLiteral_23647/*"tower_img_base{0:00}"*/;
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)TitleInfoEventTowerBase_TypeInfo->static_fields,
+    StringLiteral_23647/*"tower_img_base{0:00}"*/,
+    v2,
+    v3);
 }
 
 
@@ -28,67 +26,72 @@ void __fastcall TitleInfoEventTowerBase___ctor(TitleInfoEventTowerBase_o *this, 
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall TitleInfoEventTowerBase__SetBaseSprite(
         TitleInfoEventTowerBase_o *this,
         int32_t towerId,
         bool changeSize,
         const MethodInfo *method)
 {
-  UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v7; // x1
   __int64 v8; // x1
-  UIWidget_o *v9; // x20
-  int32_t towerBaseDefaultWidth; // w1
-  __int64 v11; // x2
-  TitleInfoEventTowerBase_c *v12; // x0
+  __int64 v9; // x1
+  UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v11; // x1
+  UIWidget_o *v12; // x20
+  int32_t *p_towerBaseHeight; // x8
+  __int64 v14; // x2
+  __int64 v15; // x3
+  __int64 v16; // x4
+  TitleInfoEventTowerBase_c *v17; // x0
   System_String_o *SPRITE_NAME_TOWER_BASE; // x21
-  Il2CppObject *v14; // x0
-  System_String_o *v15; // x19
-  int32_t v16; // [xsp+Ch] [xbp-24h] BYREF
+  Il2CppObject *v19; // x0
+  System_String_o *v20; // x19
+  int32_t v21; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_438915B & 1) == 0 )
+  if ( (byte_48E138D & 1) == 0 )
   {
-    sub_B775C4(&AtlasManager_TypeInfo);
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_B775C4(&int_TypeInfo);
-    sub_B775C4(&TitleInfoEventTowerBase_TypeInfo);
-    byte_438915B = 1;
+    sub_1B00CCC(&AtlasManager_TypeInfo, *(_QWORD *)&towerId);
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v7);
+    sub_1B00CCC(&int_TypeInfo, v8);
+    sub_1B00CCC(&TitleInfoEventTowerBase_TypeInfo, v9);
+    byte_48E138D = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    goto LABEL_16;
-  gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
+    goto LABEL_14;
+  gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                              gameObject,
-                                             (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
-  v9 = (UIWidget_o *)gameObject;
-  if ( !changeSize )
+                                             (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+  v12 = (UIWidget_o *)gameObject;
+  if ( changeSize )
   {
     if ( gameObject )
     {
-      UIWidget__set_width((UIWidget_o *)gameObject, this->fields.towerBaseDefaultHeight, 0LL);
-      towerBaseDefaultWidth = *((_DWORD *)&this->fields + 5);
+      UIWidget__set_width((UIWidget_o *)gameObject, this->fields.towerBaseWidth, 0LL);
+      p_towerBaseHeight = &this->fields.towerBaseHeight;
       goto LABEL_9;
     }
-LABEL_16:
-    sub_B7769C(gameObject, v8);
+LABEL_14:
+    sub_1B00F28(gameObject, v11);
   }
   if ( !gameObject )
-    goto LABEL_16;
-  UIWidget__set_width((UIWidget_o *)gameObject, this->fields.towerBaseHeight, 0LL);
-  towerBaseDefaultWidth = this->fields.towerBaseDefaultWidth;
+    goto LABEL_14;
+  UIWidget__set_width((UIWidget_o *)gameObject, this->fields.towerBaseDefaultWidth, 0LL);
+  p_towerBaseHeight = &this->fields.towerBaseDefaultHeight;
 LABEL_9:
-  UIWidget__set_height(v9, towerBaseDefaultWidth, 0LL);
-  v12 = TitleInfoEventTowerBase_TypeInfo;
-  if ( (BYTE3(TitleInfoEventTowerBase_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !TitleInfoEventTowerBase_TypeInfo->_2.cctor_finished )
+  UIWidget__set_height(v12, *p_towerBaseHeight, 0LL);
+  v17 = TitleInfoEventTowerBase_TypeInfo;
+  if ( !TitleInfoEventTowerBase_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TitleInfoEventTowerBase_TypeInfo);
-    v12 = TitleInfoEventTowerBase_TypeInfo;
+    v17 = TitleInfoEventTowerBase_TypeInfo;
   }
-  SPRITE_NAME_TOWER_BASE = v12->static_fields->SPRITE_NAME_TOWER_BASE;
-  v16 = towerId;
-  v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16, v11);
-  v15 = System_String__Format(SPRITE_NAME_TOWER_BASE, v14, 0LL);
-  if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
+  SPRITE_NAME_TOWER_BASE = v17->static_fields->SPRITE_NAME_TOWER_BASE;
+  v21 = towerId;
+  v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v21, v14, v15, v16);
+  v20 = System_String__Format(SPRITE_NAME_TOWER_BASE, v19, 0LL);
+  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI((UISprite_o *)v9, v15, 0LL);
+  AtlasManager__SetEventUI((UISprite_o *)v12, v20, 0LL);
 }

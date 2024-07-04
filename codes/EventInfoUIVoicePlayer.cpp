@@ -1,101 +1,66 @@
 void __fastcall EventInfoUIVoicePlayer___cctor(const MethodInfo *method)
 {
-  System_String_array **v1; // x2
-  System_String_array **v2; // x3
-  System_Boolean_array **v3; // x4
-  System_Int32_array **v4; // x5
-  System_Int32_array *v5; // x6
-  System_Int32_array *v6; // x7
-  BattleServantConfConponent_o *static_fields; // x0
-  System_Int32_array **v8; // x1
+  __int64 v1; // x1
+  int32_t v2; // w2
+  int32_t v3; // w3
+  __int64 v4; // x1
 
-  if ( (byte_438C62F & 1) == 0 )
+  if ( (byte_48E49A6 & 1) == 0 )
   {
-    sub_B775C4(&EventInfoUIVoicePlayer_TypeInfo);
-    sub_B775C4(&StringLiteral_6316/*"EventInfoUiVoiceHistory_"*/);
-    byte_438C62F = 1;
+    sub_1B00CCC(&EventInfoUIVoicePlayer_TypeInfo, v1);
+    sub_1B00CCC(&StringLiteral_6121/*"EventInfoUiVoiceHistory_"*/, v4);
+    byte_48E49A6 = 1;
   }
-  static_fields = (BattleServantConfConponent_o *)EventInfoUIVoicePlayer_TypeInfo->static_fields;
-  v8 = (System_Int32_array **)StringLiteral_6316/*"EventInfoUiVoiceHistory_"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6316/*"EventInfoUiVoiceHistory_"*/;
-  sub_B77560(static_fields, v8, v1, v2, v3, v4, v5, v6);
+  EventInfoUIVoicePlayer_TypeInfo->static_fields->SAVE_KEY_PREFIX_VOICE_HISTORY = (struct System_String_o *)StringLiteral_6121/*"EventInfoUiVoiceHistory_"*/;
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)EventInfoUIVoicePlayer_TypeInfo->static_fields,
+    StringLiteral_6121/*"EventInfoUiVoiceHistory_"*/,
+    v2,
+    v3);
 }
 
 
 void __fastcall EventInfoUIVoicePlayer___ctor(EventInfoUIVoicePlayer_o *this, const MethodInfo *method)
 {
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v3; // x20
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v10; // x20
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
-  System_Collections_Generic_List_int__o *v17; // x20
-  System_String_array **v18; // x2
-  System_String_array **v19; // x3
-  System_Boolean_array **v20; // x4
-  System_Int32_array **v21; // x5
-  System_Int32_array *v22; // x6
-  System_Int32_array *v23; // x7
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  System_Collections_Generic_List_object__o *v6; // x20
+  int32_t v7; // w2
+  int32_t v8; // w3
+  System_Collections_Generic_List_object__o *v9; // x20
+  int32_t v10; // w2
+  int32_t v11; // w3
+  System_Collections_Generic_List_int__o *v12; // x20
+  int32_t v13; // w2
+  int32_t v14; // w3
 
-  if ( (byte_438C62E & 1) == 0 )
+  if ( (byte_48E49A5 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_string___ctor___69407008);
-    sub_B775C4(&Method_System_Collections_Generic_List_int___ctor___69397304);
-    sub_B775C4(&System_Collections_Generic_List_int__TypeInfo);
-    sub_B775C4(&System_Collections_Generic_List_string__TypeInfo);
-    byte_438C62E = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_int___ctor__, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string___ctor__, v3);
+    sub_1B00CCC(&System_Collections_Generic_List_int__TypeInfo, v4);
+    sub_1B00CCC(&System_Collections_Generic_List_string__TypeInfo, v5);
+    byte_48E49A5 = 1;
   }
-  v3 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_string__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v3,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_string___ctor___69407008);
-  this->fields.voiceAssetNameList = (struct System_Collections_Generic_List_string__o *)v3;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.voiceAssetNameList,
-    (System_Int32_array **)v3,
-    v4,
-    v5,
+  v6 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_string__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
     v6,
-    v7,
-    v8,
-    v9);
-  v10 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_string__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v10,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_string___ctor___69407008);
-  this->fields.voiceCueList = (struct System_Collections_Generic_List_string__o *)v10;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.voiceCueList,
-    (System_Int32_array **)v10,
-    v11,
-    v12,
-    v13,
-    v14,
-    v15,
-    v16);
-  v17 = (System_Collections_Generic_List_int__o *)sub_B77694(System_Collections_Generic_List_int__TypeInfo);
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_string___ctor__);
+  this->fields.voiceAssetNameList = (struct System_Collections_Generic_List_string__o *)v6;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.voiceAssetNameList, (int32_t)v6, v7, v8);
+  v9 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_string__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v9,
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_string___ctor__);
+  this->fields.voiceCueList = (struct System_Collections_Generic_List_string__o *)v9;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.voiceCueList, (int32_t)v9, v10, v11);
+  v12 = (System_Collections_Generic_List_int__o *)sub_1B00F18(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v17,
-    (const MethodInfo_30E508C *)Method_System_Collections_Generic_List_int___ctor___69397304);
-  this->fields.playedIdList = v17;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.playedIdList,
-    (System_Int32_array **)v17,
-    v18,
-    v19,
-    v20,
-    v21,
-    v22,
-    v23);
+    v12,
+    (const MethodInfo_33A4158 *)Method_System_Collections_Generic_List_int___ctor__);
+  this->fields.playedIdList = v12;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.playedIdList, (int32_t)v12, v13, v14);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -105,20 +70,42 @@ void __fastcall EventInfoUIVoicePlayer__AddCueName(
         System_String_o *name,
         const MethodInfo *method)
 {
-  struct System_Collections_Generic_List_string__o *voiceCueList; // x0
+  int32_t v3; // w3
+  System_Collections_Generic_List_object__o *voiceCueList; // x0
+  struct System_Object_array *items; // x8
+  _QWORD *v8; // x9
+  __int64 size; // x10
+  Il2CppClass **v10; // x8
 
-  if ( (byte_438C628 & 1) == 0 )
+  if ( (byte_48E499F & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_string__Add__);
-    byte_438C628 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__Add__, name);
+    byte_48E499F = 1;
   }
-  voiceCueList = this->fields.voiceCueList;
-  if ( !voiceCueList )
-    sub_B7769C(0LL, name);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-    (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)voiceCueList,
-    (EventMissionProgressRequest_Argument_ProgressData_o *)name,
-    (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_string__Add__);
+  voiceCueList = (System_Collections_Generic_List_object__o *)this->fields.voiceCueList;
+  if ( !voiceCueList
+    || (items = voiceCueList->fields._items,
+        v8 = Method_System_Collections_Generic_List_string__Add__,
+        ++voiceCueList->fields._version,
+        !items) )
+  {
+    sub_1B00F28(voiceCueList, name);
+  }
+  size = voiceCueList->fields._size;
+  if ( (unsigned int)size >= items->max_length )
+  {
+    System_Collections_Generic_List_object___AddWithResize(
+      voiceCueList,
+      (Il2CppObject *)name,
+      *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+  }
+  else
+  {
+    v10 = &items->obj.klass + size;
+    voiceCueList->fields._size = size + 1;
+    v10[4] = (Il2CppClass *)name;
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)(v10 + 4), (int32_t)name, (int32_t)method, v3);
+  }
 }
 
 
@@ -128,20 +115,38 @@ void __fastcall EventInfoUIVoicePlayer__AddHistory(
         int32_t id,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_int__o *playedIdList; // x0
+  struct System_Collections_Generic_List_int__o *playedIdList; // x0
+  struct System_Int32_array *items; // x8
+  _QWORD *v7; // x9
+  __int64 size; // x10
 
-  if ( (byte_438C624 & 1) == 0 )
+  if ( (byte_48E499B & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_int__Add__);
-    byte_438C624 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_int__Add__, *(_QWORD *)&id);
+    byte_48E499B = 1;
   }
   playedIdList = this->fields.playedIdList;
-  if ( !playedIdList )
-    sub_B7769C(0LL, *(_QWORD *)&id);
-  System_Collections_Generic_List_int___Add(
-    playedIdList,
-    id,
-    (const MethodInfo_30E5DE8 *)Method_System_Collections_Generic_List_int__Add__);
+  if ( !playedIdList
+    || (items = playedIdList->fields._items,
+        v7 = Method_System_Collections_Generic_List_int__Add__,
+        ++playedIdList->fields._version,
+        !items) )
+  {
+    sub_1B00F28(playedIdList, *(_QWORD *)&id);
+  }
+  size = playedIdList->fields._size;
+  if ( (unsigned int)size >= items->max_length )
+  {
+    System_Collections_Generic_List_int___AddWithResize(
+      playedIdList,
+      id,
+      *(const MethodInfo_33A49AC **)(*(_QWORD *)(v7[4] + 192LL) + 112LL));
+  }
+  else
+  {
+    playedIdList->fields._size = size + 1;
+    items->m_Items[size + 1] = id;
+  }
 }
 
 
@@ -154,108 +159,114 @@ void __fastcall EventInfoUIVoicePlayer__Awake(EventInfoUIVoicePlayer_o *this, co
 
 void __fastcall EventInfoUIVoicePlayer__ClearCueNameList(EventInfoUIVoicePlayer_o *this, const MethodInfo *method)
 {
-  struct System_Collections_Generic_List_string__o *voiceCueList; // x0
+  EventInfoUIVoicePlayer_o *v2; // x19
+  struct System_Collections_Generic_List_string__o *voiceCueList; // x8
+  int32_t size; // w2
+  int v5; // w9
 
-  if ( (byte_438C629 & 1) == 0 )
+  v2 = this;
+  if ( (byte_48E49A0 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_string__Clear__);
-    byte_438C629 = 1;
+    this = (EventInfoUIVoicePlayer_o *)sub_1B00CCC(&Method_System_Collections_Generic_List_string__Clear__, method);
+    byte_48E49A0 = 1;
   }
-  voiceCueList = this->fields.voiceCueList;
+  voiceCueList = v2->fields.voiceCueList;
   if ( !voiceCueList )
-    sub_B7769C(0LL, method);
-  System_Collections_Generic_List_XWeaponTrail_Element___Clear(
-    (System_Collections_Generic_List_XWeaponTrail_Element__o *)voiceCueList,
-    (const MethodInfo_30536A0 *)Method_System_Collections_Generic_List_string__Clear__);
+    sub_1B00F28(this, method);
+  size = voiceCueList->fields._size;
+  v5 = voiceCueList->fields._version + 1;
+  voiceCueList->fields._size = 0;
+  voiceCueList->fields._version = v5;
+  if ( size >= 1 )
+    System_Array__Clear((System_Array_o *)voiceCueList->fields._items, 0, size, 0LL);
 }
 
 
 void __fastcall EventInfoUIVoicePlayer__ClearHistory(EventInfoUIVoicePlayer_o *this, const MethodInfo *method)
 {
-  System_Collections_Generic_List_int__o *playedIdList; // x0
+  EventInfoUIVoicePlayer_o *v2; // x19
+  struct System_Collections_Generic_List_int__o *playedIdList; // x8
+  int v4; // w9
 
-  if ( (byte_438C623 & 1) == 0 )
+  v2 = this;
+  if ( (byte_48E499A & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_int__Clear__);
-    byte_438C623 = 1;
+    this = (EventInfoUIVoicePlayer_o *)sub_1B00CCC(&Method_System_Collections_Generic_List_int__Clear__, method);
+    byte_48E499A = 1;
   }
-  playedIdList = this->fields.playedIdList;
+  playedIdList = v2->fields.playedIdList;
   if ( !playedIdList )
-    sub_B7769C(0LL, method);
-  System_Collections_Generic_List_int___Clear(
-    playedIdList,
-    (const MethodInfo_30E61F4 *)Method_System_Collections_Generic_List_int__Clear__);
+    sub_1B00F28(this, method);
+  v4 = playedIdList->fields._version + 1;
+  playedIdList->fields._size = 0;
+  playedIdList->fields._version = v4;
 }
 
 
 void __fastcall EventInfoUIVoicePlayer__DestroyAsset(EventInfoUIVoicePlayer_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
   struct System_Collections_Generic_List_string__o *voiceAssetNameList; // x0
   Il2CppObject *current; // x20
+  int32_t v11; // w3
+  struct System_Collections_Generic_List_string__o *v12; // x8
+  int32_t size; // w2
+  int v14; // w9
   struct System_String_StaticFields *static_fields; // x8
   struct System_String_o *Empty; // x1
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
-  System_Collections_Generic_List_Enumerator_T__o v13; // [xsp+8h] [xbp-38h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v17; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_438C627 & 1) == 0 )
+  if ( (byte_48E499E & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__Clear__);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__GetEnumerator__);
-    sub_B775C4(&SoundManager_TypeInfo);
-    sub_B775C4(&string_TypeInfo);
-    byte_438C627 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__, v3);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__, v4);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__Clear__, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__GetEnumerator__, v6);
+    sub_1B00CCC(&SoundManager_TypeInfo, v7);
+    sub_1B00CCC(&string_TypeInfo, v8);
+    byte_48E499E = 1;
   }
-  memset(&v13, 0, sizeof(v13));
+  memset(&v17, 0, sizeof(v17));
   voiceAssetNameList = this->fields.voiceAssetNameList;
   if ( !voiceAssetNameList )
-    goto LABEL_12;
-  System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-    &v13,
-    (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)voiceAssetNameList,
-    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_string__GetEnumerator__);
-  while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-            &v13,
-            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
+    goto LABEL_13;
+  System_Collections_Generic_List_object___GetEnumerator(
+    (System_Collections_Generic_List_Enumerator_T__o *)&v17,
+    (System_Collections_Generic_List_object__o *)voiceAssetNameList,
+    (const MethodInfo_33C24C8 *)Method_System_Collections_Generic_List_string__GetEnumerator__);
+  while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v17,
+            (const MethodInfo_313E218 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
   {
-    current = v13.fields.current;
-    if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !SoundManager_TypeInfo->_2.cctor_finished )
-    {
+    current = v17.fields._current;
+    if ( !SoundManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    }
     SoundManager__releaseAudioAssetStorage((System_String_o *)current, 0LL);
   }
-  System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-    &v13,
-    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
-  voiceAssetNameList = this->fields.voiceAssetNameList;
-  if ( !voiceAssetNameList )
-LABEL_12:
-    sub_B7769C(voiceAssetNameList, method);
-  System_Collections_Generic_List_XWeaponTrail_Element___Clear(
-    (System_Collections_Generic_List_XWeaponTrail_Element__o *)voiceAssetNameList,
-    (const MethodInfo_30536A0 *)Method_System_Collections_Generic_List_string__Clear__);
+  System_Collections_Generic_List_Enumerator_object___Dispose(
+    &v17,
+    (const MethodInfo_313E214 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+  v12 = this->fields.voiceAssetNameList;
+  if ( !v12 )
+LABEL_13:
+    sub_1B00F28(voiceAssetNameList, method);
+  size = v12->fields._size;
+  v14 = v12->fields._version + 1;
+  v12->fields._size = 0;
+  v12->fields._version = v14;
+  if ( size >= 1 )
+    System_Array__Clear((System_Array_o *)v12->fields._items, 0, size, 0LL);
   this->fields.voiceIndex = 0;
   static_fields = string_TypeInfo->static_fields;
   Empty = static_fields->Empty;
   this->fields.currentAssetName = static_fields->Empty;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.currentAssetName,
-    (System_Int32_array **)Empty,
-    v7,
-    v8,
-    v9,
-    v10,
-    v11,
-    v12);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.currentAssetName, (int32_t)Empty, size, v11);
 }
 
 
@@ -266,250 +277,318 @@ EventInfoUIVoicePlayer_VoiceData_o *__fastcall EventInfoUIVoicePlayer__GetTarget
         int32_t cleardQuestId,
         const MethodInfo *method)
 {
-  EventInfoUIVoicePlayer_o *v5; // x19
-  struct EventInfoUIVoicePlayer_VoiceData_array *voiceDataList; // x20
+  int32_t v5; // w20
+  EventInfoUIVoicePlayer_o *v6; // x19
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  __int64 v18; // x1
+  __int64 v19; // x1
+  __int64 v20; // x1
+  __int64 v21; // x1
+  __int64 v22; // x1
+  __int64 v23; // x1
+  struct EventInfoUIVoicePlayer_VoiceData_array *voiceDataList; // x26
   int max_length; // w8
-  unsigned int v8; // w26
-  EventInfoUIVoicePlayer_VoiceData_o *v9; // x22
+  unsigned int v26; // w27
+  EventInfoUIVoicePlayer_VoiceData_o *v27; // x22
   int32_t CondId; // w23
   int32_t CondKind; // w25
   int64_t CondValue; // x24
-  struct EventInfoUIVoicePlayer_VoiceData_array *v13; // x27
-  unsigned __int64 v14; // x28
-  __int64 v15; // x23
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
-  System_Int32_array **v22; // x1
-  EventMissionProgressRequest_Argument_ProgressData_o **v23; // x22
-  __int64 v24; // x8
-  __int64 v25; // x9
-  int32_t v26; // w24
-  int32_t v27; // w26
-  int64_t v28; // x25
-  struct System_String_o *age; // x24
-  System_Func_int__bool__o *v30; // x25
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v31; // x20
-  _BOOL8 v32; // x0
-  __int64 v33; // x1
-  const MethodInfo *v34; // x2
+  System_Collections_Generic_List_object__o *v31; // x26
+  struct EventInfoUIVoicePlayer_VoiceData_array *v32; // x29
+  unsigned __int64 i; // x27
+  __int64 v34; // x22
+  int32_t v35; // w2
+  int32_t v36; // w3
+  EventInfoUIVoicePlayer_VoiceData_o *v37; // x1
+  _QWORD *v38; // x23
+  __int64 v39; // x8
+  __int64 v40; // x9
+  int32_t v41; // w19
+  System_Collections_Generic_List_object__o *v42; // x20
+  int32_t v43; // w24
+  int32_t v44; // w26
+  int64_t v45; // x25
+  int32_t v46; // w2
+  int32_t v47; // w3
+  System_Int32_array *monitor; // x24
+  System_Func_int__bool__o *v49; // x25
+  struct System_Object_array *items; // x8
+  _QWORD *v51; // x9
+  __int64 size; // x10
+  Il2CppClass **v53; // x0
+  System_Collections_Generic_List_object__o *v54; // x20
+  _BOOL8 v55; // x0
+  __int64 v56; // x1
+  const MethodInfo *v57; // x2
   Il2CppObject *current; // x22
   _BOOL8 IsPlayed; // x0
-  __int64 v37; // x1
-  _BOOL8 v38; // x0
-  const MethodInfo *v39; // x1
-  const MethodInfo *v40; // x2
-  System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__o *v41; // x1
-  __int64 v43; // x0
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v44; // [xsp+0h] [xbp-80h]
-  System_Collections_Generic_List_Enumerator_T__o v46; // [xsp+10h] [xbp-70h] BYREF
-  WarEntity_o *entity; // [xsp+28h] [xbp-58h] BYREF
+  __int64 v60; // x1
+  int32_t v61; // w2
+  int32_t v62; // w3
+  struct System_Object_array *v63; // x8
+  _QWORD *v64; // x9
+  __int64 v65; // x10
+  Il2CppClass **v66; // x0
+  _BOOL8 v67; // x0
+  const MethodInfo *v68; // x1
+  const MethodInfo *v69; // x2
+  System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__o *v70; // x1
+  EventInfoUIVoicePlayer_o *v72; // [xsp+0h] [xbp-A0h]
+  System_Collections_Generic_List_Enumerator_object__o v73; // [xsp+8h] [xbp-98h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v74; // [xsp+20h] [xbp-80h] BYREF
+  Il2CppObject *entity; // [xsp+38h] [xbp-68h] BYREF
 
-  v5 = this;
-  if ( (byte_438C62B & 1) == 0 )
+  v5 = groupId;
+  v6 = this;
+  if ( (byte_48E49A2 & 1) == 0 )
   {
-    sub_B775C4(&Method_BasicHelper_Any_int____69468304);
-    sub_B775C4(&CondType_TypeInfo);
-    sub_B775C4(&Method_DataManager_GetMasterData_QuestConsumeItemMaster___);
-    sub_B775C4(&Method_DataMasterBase_QuestConsumeItemMaster__QuestConsumeItemEntity__int__TryGetEntity__);
-    sub_B775C4(&Method_System_Linq_Enumerable_Any_EventInfoUIVoicePlayer_VoiceData___);
-    sub_B775C4(&Method_System_Linq_Enumerable_Contains_int___);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventInfoUIVoicePlayer_VoiceData__Dispose__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventInfoUIVoicePlayer_VoiceData__MoveNext__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_EventInfoUIVoicePlayer_VoiceData__get_Current__);
-    sub_B775C4(&Method_System_Func_int__bool___ctor__);
-    sub_B775C4(&System_Func_int__bool__TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__GetEnumerator__);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData___ctor__);
-    sub_B775C4(&Method_System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__get_Count__);
-    sub_B775C4(&System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B775C4(&Method_EventInfoUIVoicePlayer___c__DisplayClass28_0__GetTargetVoiceData_b__0__);
-    this = (EventInfoUIVoicePlayer_o *)sub_B775C4(&EventInfoUIVoicePlayer___c__DisplayClass28_0_TypeInfo);
-    byte_438C62B = 1;
+    sub_1B00CCC(&Method_BasicHelper_Any_int____74581360, *(_QWORD *)&groupId);
+    sub_1B00CCC(&CondType_TypeInfo, v7);
+    sub_1B00CCC(&Method_DataManager_GetMasterData_QuestConsumeItemMaster___, v8);
+    sub_1B00CCC(&Method_DataMasterBase_QuestConsumeItemMaster__QuestConsumeItemEntity__int__TryGetEntity__, v9);
+    sub_1B00CCC(&Method_System_Linq_Enumerable_Any_EventInfoUIVoicePlayer_VoiceData___, v10);
+    sub_1B00CCC(&Method_System_Linq_Enumerable_Contains_int___, v11);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_EventInfoUIVoicePlayer_VoiceData__Dispose__, v12);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_EventInfoUIVoicePlayer_VoiceData__MoveNext__, v13);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_EventInfoUIVoicePlayer_VoiceData__get_Current__, v14);
+    sub_1B00CCC(&System_Func_int__bool__TypeInfo, v15);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__Add__, v16);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__GetEnumerator__, v17);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData___ctor__, v18);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__get_Count__, v19);
+    sub_1B00CCC(&System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__TypeInfo, v20);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v21);
+    sub_1B00CCC(&Method_EventInfoUIVoicePlayer___c__DisplayClass28_0__GetTargetVoiceData_b__0__, v22);
+    this = (EventInfoUIVoicePlayer_o *)sub_1B00CCC(&EventInfoUIVoicePlayer___c__DisplayClass28_0_TypeInfo, v23);
+    byte_48E49A2 = 1;
   }
   entity = 0LL;
-  memset(&v46, 0, sizeof(v46));
-  voiceDataList = v5->fields.voiceDataList;
+  memset(&v74, 0, sizeof(v74));
+  voiceDataList = v6->fields.voiceDataList;
   if ( !voiceDataList )
-    goto LABEL_53;
+    goto LABEL_58;
   max_length = voiceDataList->max_length;
   if ( max_length >= 1 )
   {
-    v8 = 0;
-    while ( v8 < max_length )
+    v26 = 0;
+    while ( 1 )
     {
-      v9 = voiceDataList->m_Items[v8];
-      if ( !v9 )
-        goto LABEL_53;
-      this = (EventInfoUIVoicePlayer_o *)v9->fields.ForceClearQuestIds;
+      if ( v26 >= max_length )
+LABEL_59:
+        sub_1B00F30(this, *(_QWORD *)&groupId);
+      v27 = voiceDataList->m_Items[v26];
+      if ( !v27 )
+        break;
+      this = (EventInfoUIVoicePlayer_o *)v27->fields.ForceClearQuestIds;
       if ( !this )
-        goto LABEL_53;
-      if ( this->fields.voiceDataList )
+        break;
+      if ( this->fields.m_CancellationTokenSource )
       {
         this = (EventInfoUIVoicePlayer_o *)System_Linq_Enumerable__Contains_int_(
                                              (System_Collections_Generic_IEnumerable_TSource__o *)this,
                                              cleardQuestId,
-                                             (const MethodInfo_1D2A620 *)Method_System_Linq_Enumerable_Contains_int___);
-        if ( ((unsigned __int8)this & 1) != 0 && v9->fields.GroupId == groupId )
+                                             (const MethodInfo_2D7A61C *)Method_System_Linq_Enumerable_Contains_int___);
+        if ( ((unsigned __int8)this & 1) != 0 && v27->fields.GroupId == v5 )
         {
-          CondKind = v9->fields.CondKind;
-          CondId = v9->fields.CondId;
-          CondValue = v9->fields.CondValue;
-          if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
+          CondKind = v27->fields.CondKind;
+          CondId = v27->fields.CondId;
+          CondValue = v27->fields.CondValue;
+          if ( !CondType_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
           this = (EventInfoUIVoicePlayer_o *)CondType__IsOpen(CondKind, CondId, CondValue, 0, 0LL);
           if ( ((unsigned __int8)this & 1) != 0 )
-            return v9;
+            return v27;
         }
       }
       max_length = voiceDataList->max_length;
-      if ( (int)++v8 >= max_length )
-        goto LABEL_17;
+      if ( (int)++v26 >= max_length )
+        goto LABEL_16;
     }
-LABEL_54:
-    v43 = sub_B776C8(this);
-    sub_B77668(v43, 0LL);
+LABEL_58:
+    sub_1B00F28(this, *(_QWORD *)&groupId);
   }
-LABEL_17:
-  this = (EventInfoUIVoicePlayer_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+LABEL_16:
+  this = (EventInfoUIVoicePlayer_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
-    goto LABEL_53;
-  this = (EventInfoUIVoicePlayer_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+    goto LABEL_58;
+  this = (EventInfoUIVoicePlayer_o *)DataManager__GetMasterData_object_(
                                        (DataManager_o *)this,
-                                       (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_QuestConsumeItemMaster___);
+                                       (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_QuestConsumeItemMaster___);
   if ( !this )
-    goto LABEL_53;
-  DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
-    (DataMasterBase_WarMaster__WarEntity__int__o *)this,
+    goto LABEL_58;
+  DataMasterBase_object__object__int___TryGetEntity(
+    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     &entity,
     cleardQuestId,
-    (const MethodInfo_21FB8F0 *)Method_DataMasterBase_QuestConsumeItemMaster__QuestConsumeItemEntity__int__TryGetEntity__);
-  v44 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v44,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData___ctor__);
-  v13 = v5->fields.voiceDataList;
-  if ( !v13 )
-    goto LABEL_53;
-  if ( (int)v13->max_length >= 1 )
+    (const MethodInfo_2FE6AA0 *)Method_DataMasterBase_QuestConsumeItemMaster__QuestConsumeItemEntity__int__TryGetEntity__);
+  v31 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v31,
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData___ctor__);
+  v32 = v6->fields.voiceDataList;
+  v72 = v6;
+  if ( !v32 )
+    goto LABEL_58;
+  if ( (int)v32->max_length >= 1 )
   {
-    v14 = 0LL;
-    do
+    for ( i = 0LL; (__int64)i < (int)v32->max_length; ++i )
     {
-      v15 = sub_B77694(EventInfoUIVoicePlayer___c__DisplayClass28_0_TypeInfo);
-      EventInfoUIVoicePlayer___c__DisplayClass28_0___ctor((EventInfoUIVoicePlayer___c__DisplayClass28_0_o *)v15, 0LL);
-      if ( v14 >= v13->max_length )
-        goto LABEL_54;
-      if ( !v15 )
-        goto LABEL_53;
-      v22 = (System_Int32_array **)v13->m_Items[v14];
-      *(_QWORD *)(v15 + 16) = v22;
-      v23 = (EventMissionProgressRequest_Argument_ProgressData_o **)(v15 + 16);
-      sub_B77560((BattleServantConfConponent_o *)(v15 + 16), v22, v16, v17, v18, v19, v20, v21);
-      v24 = *(_QWORD *)(v15 + 16);
-      if ( !v24 )
-        goto LABEL_53;
-      v25 = *(_QWORD *)(v24 + 48);
-      if ( !v25 )
-        goto LABEL_53;
-      if ( !*(_QWORD *)(v25 + 24) && *(_DWORD *)(v24 + 24) == groupId )
+      v34 = sub_1B00F18(EventInfoUIVoicePlayer___c__DisplayClass28_0_TypeInfo);
+      System_Object___ctor((Il2CppObject *)v34, 0LL);
+      if ( i >= v32->max_length )
+        goto LABEL_59;
+      if ( !v34 )
+        goto LABEL_58;
+      v37 = v32->m_Items[i];
+      *(_QWORD *)(v34 + 16) = v37;
+      v38 = (_QWORD *)(v34 + 16);
+      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v34 + 16), (int32_t)v37, v35, v36);
+      v39 = *(_QWORD *)(v34 + 16);
+      if ( !v39 )
+        goto LABEL_58;
+      v40 = *(_QWORD *)(v39 + 48);
+      if ( !v40 )
+        goto LABEL_58;
+      if ( !*(_QWORD *)(v40 + 24) && *(_DWORD *)(v39 + 24) == v5 )
       {
-        v27 = *(_DWORD *)(v24 + 28);
-        v26 = *(_DWORD *)(v24 + 32);
-        v28 = *(int *)(v24 + 36);
-        if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
+        v41 = v5;
+        v42 = v31;
+        v44 = *(_DWORD *)(v39 + 28);
+        v43 = *(_DWORD *)(v39 + 32);
+        v45 = *(int *)(v39 + 36);
+        if ( !CondType_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-        this = (EventInfoUIVoicePlayer_o *)CondType__IsOpen(v27, v26, v28, 0, 0LL);
+        this = (EventInfoUIVoicePlayer_o *)CondType__IsOpen(v44, v43, v45, 0, 0LL);
+        v31 = v42;
+        v5 = v41;
         if ( ((unsigned __int8)this & 1) != 0 )
         {
-          if ( !*v23 )
-            goto LABEL_53;
-          if ( (*v23)[1].fields.missionTargetId < 1
-            || !entity
-            || (age = entity->fields.age,
-                v30 = (System_Func_int__bool__o *)sub_B77694(System_Func_int__bool__TypeInfo),
-                System_Func_int__bool____ctor(
-                  v30,
-                  (Il2CppObject *)v15,
-                  Method_EventInfoUIVoicePlayer___c__DisplayClass28_0__GetTargetVoiceData_b__0__,
-                  (const MethodInfo_29E3034 *)Method_System_Func_int__bool___ctor__),
-                this = (EventInfoUIVoicePlayer_o *)BasicHelper__Any_int__29777580(
-                                                     (System_Int32_array *)age,
-                                                     (System_Func_T__bool__o *)v30,
-                                                     (const MethodInfo_1C65EAC *)Method_BasicHelper_Any_int____69468304),
-                ((unsigned __int8)this & 1) != 0) )
+          *(_QWORD *)&groupId = *v38;
+          if ( !*v38 )
+            goto LABEL_58;
+          if ( *(int *)(*(_QWORD *)&groupId + 56LL) >= 1 && entity )
           {
-            this = (EventInfoUIVoicePlayer_o *)v44;
-            if ( !v44 )
-              goto LABEL_53;
-            System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-              v44,
-              *v23,
-              (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__Add__);
+            monitor = (System_Int32_array *)entity[1].monitor;
+            v49 = (System_Func_int__bool__o *)sub_1B00F18(System_Func_int__bool__TypeInfo);
+            System_Func_int__bool____ctor(
+              v49,
+              (Il2CppObject *)v34,
+              Method_EventInfoUIVoicePlayer___c__DisplayClass28_0__GetTargetVoiceData_b__0__,
+              0LL);
+            this = (EventInfoUIVoicePlayer_o *)BasicHelper__Any_int__47506688(
+                                                 monitor,
+                                                 (System_Func_T__bool__o *)v49,
+                                                 (const MethodInfo_2D4E500 *)Method_BasicHelper_Any_int____74581360);
+            if ( ((unsigned __int8)this & 1) == 0 )
+              continue;
+            *(_QWORD *)&groupId = *v38;
+          }
+          if ( !v31 )
+            goto LABEL_58;
+          items = v31->fields._items;
+          v51 = Method_System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__Add__;
+          ++v31->fields._version;
+          if ( !items )
+            goto LABEL_58;
+          size = v31->fields._size;
+          if ( (unsigned int)size >= items->max_length )
+          {
+            System_Collections_Generic_List_object___AddWithResize(
+              v31,
+              *(Il2CppObject **)&groupId,
+              *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v51[4] + 192LL) + 112LL));
+          }
+          else
+          {
+            v53 = &items->obj.klass + size;
+            v31->fields._size = size + 1;
+            v53[4] = *(Il2CppClass **)&groupId;
+            sub_1B00C70((ServantStatusBattleListViewItem_o *)(v53 + 4), groupId, v46, v47);
           }
         }
       }
     }
-    while ( (__int64)++v14 < (int)v13->max_length );
   }
-  if ( !v44 )
-LABEL_53:
-    sub_B7769C(this, *(_QWORD *)&groupId);
-  if ( v44->fields._size < 1 )
+  if ( !v31 )
+    goto LABEL_58;
+  if ( v31->fields._size < 1 )
     return 0LL;
-  v31 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
+  v54 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v54,
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData___ctor__);
+  System_Collections_Generic_List_object___GetEnumerator(
+    (System_Collections_Generic_List_Enumerator_T__o *)&v73,
     v31,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData___ctor__);
-  System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-    &v46,
-    (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)v44,
-    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__GetEnumerator__);
+    (const MethodInfo_33C24C8 *)Method_System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__GetEnumerator__);
+  v74 = v73;
   while ( 1 )
   {
-    v32 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-            &v46,
-            (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_EventInfoUIVoicePlayer_VoiceData__MoveNext__);
-    if ( !v32 )
+    v55 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v74,
+            (const MethodInfo_313E218 *)Method_System_Collections_Generic_List_Enumerator_EventInfoUIVoicePlayer_VoiceData__MoveNext__);
+    if ( !v55 )
       break;
-    current = v46.fields.current;
-    if ( !v46.fields.current )
-      sub_B7769C(v32, v33);
-    IsPlayed = EventInfoUIVoicePlayer__IsPlayed(v5, (int32_t)v46.fields.current[1].klass, v34);
+    current = v74.fields._current;
+    if ( !v74.fields._current )
+      sub_1B00F28(v55, v56);
+    IsPlayed = EventInfoUIVoicePlayer__IsPlayed(v72, (int32_t)v74.fields._current[1].klass, v57);
     if ( !IsPlayed )
     {
-      if ( !v31 )
-        sub_B7769C(IsPlayed, v37);
-      System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-        v31,
-        (EventMissionProgressRequest_Argument_ProgressData_o *)current,
-        (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__Add__);
+      if ( !v54 )
+        sub_1B00F28(IsPlayed, v60);
+      v63 = v54->fields._items;
+      v64 = Method_System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__Add__;
+      ++v54->fields._version;
+      if ( !v63 )
+        sub_1B00F28(IsPlayed, v60);
+      v65 = v54->fields._size;
+      if ( (unsigned int)v65 >= v63->max_length )
+      {
+        System_Collections_Generic_List_object___AddWithResize(
+          v54,
+          current,
+          *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v64[4] + 192LL) + 112LL));
+      }
+      else
+      {
+        v66 = &v63->obj.klass + v65;
+        v54->fields._size = v65 + 1;
+        v66[4] = (Il2CppClass *)current;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)(v66 + 4), (int32_t)current, v61, v62);
+      }
     }
   }
-  System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-    &v46,
-    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_EventInfoUIVoicePlayer_VoiceData__Dispose__);
-  v38 = System_Linq_Enumerable__Any_WarBoardMovieHistoryManager_HistoryInfo_(
-          (System_Collections_Generic_IEnumerable_TSource__o *)v31,
-          (const MethodInfo_1D1D960 *)Method_System_Linq_Enumerable_Any_EventInfoUIVoicePlayer_VoiceData___);
-  if ( v38 )
+  System_Collections_Generic_List_Enumerator_object___Dispose(
+    &v74,
+    (const MethodInfo_313E214 *)Method_System_Collections_Generic_List_Enumerator_EventInfoUIVoicePlayer_VoiceData__Dispose__);
+  v67 = System_Linq_Enumerable__Any_object_(
+          (System_Collections_Generic_IEnumerable_TSource__o *)v54,
+          (const MethodInfo_2D6DE20 *)Method_System_Linq_Enumerable_Any_EventInfoUIVoicePlayer_VoiceData___);
+  if ( v67 )
   {
-    v41 = (System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__o *)v31;
+    v70 = (System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__o *)v54;
   }
   else
   {
-    EventInfoUIVoicePlayer__ClearHistory(v5, v39);
-    v41 = (System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__o *)v44;
+    EventInfoUIVoicePlayer__ClearHistory(v72, v68);
+    v70 = (System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__o *)v31;
   }
-  return EventInfoUIVoicePlayer__LotVoiceDataFromList((EventInfoUIVoicePlayer_o *)v38, v41, v40);
+  return EventInfoUIVoicePlayer__LotVoiceDataFromList((EventInfoUIVoicePlayer_o *)v67, v70, v69);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall EventInfoUIVoicePlayer__HasSaveData(
         EventInfoUIVoicePlayer_o *this,
         int32_t eventId,
@@ -519,24 +598,23 @@ bool __fastcall EventInfoUIVoicePlayer__HasSaveData(
   System_String_o *SAVE_KEY_PREFIX_VOICE_HISTORY; // x19
   System_String_o *v5; // x0
   System_String_o *v6; // x0
-  int32_t v8; // [xsp+Ch] [xbp-4h] BYREF
+  int32_t v8; // [xsp+Ch] [xbp-14h] BYREF
 
   v8 = eventId;
-  if ( (byte_438C621 & 1) == 0 )
+  if ( (byte_48E4998 & 1) == 0 )
   {
-    sub_B775C4(&EventInfoUIVoicePlayer_TypeInfo);
-    byte_438C621 = 1;
+    sub_1B00CCC(&EventInfoUIVoicePlayer_TypeInfo, *(_QWORD *)&eventId);
+    byte_48E4998 = 1;
   }
   v3 = EventInfoUIVoicePlayer_TypeInfo;
-  if ( (BYTE3(EventInfoUIVoicePlayer_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !EventInfoUIVoicePlayer_TypeInfo->_2.cctor_finished )
+  if ( !EventInfoUIVoicePlayer_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EventInfoUIVoicePlayer_TypeInfo);
     v3 = EventInfoUIVoicePlayer_TypeInfo;
   }
   SAVE_KEY_PREFIX_VOICE_HISTORY = v3->static_fields->SAVE_KEY_PREFIX_VOICE_HISTORY;
   v5 = System_Int32__ToString((int32_t)&v8, 0LL);
-  v6 = System_String__Concat_44901936(SAVE_KEY_PREFIX_VOICE_HISTORY, v5, 0LL);
+  v6 = System_String__Concat_60325748(SAVE_KEY_PREFIX_VOICE_HISTORY, v5, 0LL);
   return UnityEngine_PlayerPrefs__HasKey(v6, 0LL);
 }
 
@@ -546,171 +624,177 @@ bool __fastcall EventInfoUIVoicePlayer__IsPlayed(EventInfoUIVoicePlayer_o *this,
 {
   System_Collections_Generic_List_int__o *playedIdList; // x0
 
-  if ( (byte_438C62C & 1) == 0 )
+  if ( (byte_48E49A3 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_int__Contains__);
-    byte_438C62C = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_int__Contains__, *(_QWORD *)&id);
+    byte_48E49A3 = 1;
   }
   playedIdList = this->fields.playedIdList;
   if ( !playedIdList )
-    sub_B7769C(0LL, *(_QWORD *)&id);
+    sub_1B00F28(0LL, *(_QWORD *)&id);
   return System_Collections_Generic_List_int___Contains(
            playedIdList,
            id,
-           (const MethodInfo_30E623C *)Method_System_Collections_Generic_List_int__Contains__);
+           (const MethodInfo_33A4D24 *)Method_System_Collections_Generic_List_int__Contains__);
 }
 
 
 void __fastcall EventInfoUIVoicePlayer__LoadAsset(EventInfoUIVoicePlayer_o *this, const MethodInfo *method)
 {
   EventInfoUIVoicePlayer_o *v2; // x19
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
   struct EventInfoUIVoicePlayer_VoiceData_array *voiceDataList; // x21
   int max_length; // w8
-  unsigned int v5; // w22
-  EventInfoUIVoicePlayer_VoiceData_o *v6; // x8
-  EventInfoUIVoicePlayer_o *v7; // x20
-  System_Action_o *v8; // x20
-  const MethodInfo *v9; // x3
-  __int64 v10; // x0
+  unsigned int v8; // w22
+  EventInfoUIVoicePlayer_VoiceData_o *v9; // x8
+  Il2CppObject *v10; // x20
+  int32_t v11; // w2
+  int32_t v12; // w3
+  __int64 v13; // x8
+  _QWORD *v14; // x9
+  __int64 m_CancellationTokenSource_low; // x10
+  __int64 v16; // x8
+  System_Action_o *v17; // x20
+  const MethodInfo *v18; // x3
 
   v2 = this;
-  if ( (byte_438C625 & 1) == 0 )
+  if ( (byte_48E499C & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&Method_EventInfoUIVoicePlayer__LoadAsset_b__20_0__);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__Add__);
-    this = (EventInfoUIVoicePlayer_o *)sub_B775C4(&Method_System_Collections_Generic_List_string__Contains__);
-    byte_438C625 = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, method);
+    sub_1B00CCC(&Method_EventInfoUIVoicePlayer__LoadAsset_b__20_0__, v3);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__Add__, v4);
+    this = (EventInfoUIVoicePlayer_o *)sub_1B00CCC(&Method_System_Collections_Generic_List_string__Contains__, v5);
+    byte_48E499C = 1;
   }
   voiceDataList = v2->fields.voiceDataList;
   if ( !voiceDataList )
-    goto LABEL_14;
+    goto LABEL_17;
   max_length = voiceDataList->max_length;
   if ( max_length >= 1 )
   {
-    v5 = 0;
+    v8 = 0;
     while ( 1 )
     {
-      if ( v5 >= max_length )
-      {
-        v10 = sub_B776C8(this);
-        sub_B77668(v10, 0LL);
-      }
-      v6 = voiceDataList->m_Items[v5];
-      if ( !v6 )
+      if ( v8 >= max_length )
+        sub_1B00F30(this, method);
+      v9 = voiceDataList->m_Items[v8];
+      if ( !v9 )
         break;
-      this = (EventInfoUIVoicePlayer_o *)ServantVoiceEntity__getVoiceAssetName_30265396(v6->fields.ServantId, 0LL);
+      this = (EventInfoUIVoicePlayer_o *)ServantVoiceEntity__getVoiceAssetName_38497884(v9->fields.ServantId, 0LL);
       if ( !v2->fields.voiceAssetNameList )
         break;
-      v7 = this;
-      this = (EventInfoUIVoicePlayer_o *)System_Collections_Generic_List_WarBoardManager_TaskList___Contains(
-                                           (System_Collections_Generic_List_WarBoardManager_TaskList__o *)v2->fields.voiceAssetNameList,
-                                           (WarBoardManager_TaskList_o *)this,
-                                           (const MethodInfo_30536E8 *)Method_System_Collections_Generic_List_string__Contains__);
+      v10 = (Il2CppObject *)this;
+      this = (EventInfoUIVoicePlayer_o *)System_Collections_Generic_List_object___Contains(
+                                           (System_Collections_Generic_List_object__o *)v2->fields.voiceAssetNameList,
+                                           (Il2CppObject *)this,
+                                           (const MethodInfo_33C1D60 *)Method_System_Collections_Generic_List_string__Contains__);
       if ( ((unsigned __int8)this & 1) == 0 )
       {
         this = (EventInfoUIVoicePlayer_o *)v2->fields.voiceAssetNameList;
         if ( !this )
           break;
-        System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-          (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this,
-          (EventMissionProgressRequest_Argument_ProgressData_o *)v7,
-          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_string__Add__);
+        v13 = *(_QWORD *)&this->fields.m_CachedPtr;
+        v14 = Method_System_Collections_Generic_List_string__Add__;
+        ++HIDWORD(this->fields.m_CancellationTokenSource);
+        if ( !v13 )
+          break;
+        m_CancellationTokenSource_low = SLODWORD(this->fields.m_CancellationTokenSource);
+        if ( (unsigned int)m_CancellationTokenSource_low >= *(_DWORD *)(v13 + 24) )
+        {
+          System_Collections_Generic_List_object___AddWithResize(
+            (System_Collections_Generic_List_object__o *)this,
+            v10,
+            *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+        }
+        else
+        {
+          v16 = v13 + 8 * m_CancellationTokenSource_low;
+          LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
+          *(_QWORD *)(v16 + 32) = v10;
+          sub_1B00C70((ServantStatusBattleListViewItem_o *)(v16 + 32), (int32_t)v10, v11, v12);
+        }
       }
       max_length = voiceDataList->max_length;
-      if ( (int)++v5 >= max_length )
-        goto LABEL_13;
+      if ( (int)++v8 >= max_length )
+        goto LABEL_16;
     }
-LABEL_14:
-    sub_B7769C(this, method);
+LABEL_17:
+    sub_1B00F28(this, method);
   }
-LABEL_13:
-  v8 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
-  System_Action___ctor(v8, (Il2CppObject *)v2, Method_EventInfoUIVoicePlayer__LoadAsset_b__20_0__, 0LL);
-  EventInfoUIVoicePlayer__LoadAudioAssetStorage(v2, 0, v8, v9);
+LABEL_16:
+  v17 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+  System_Action___ctor(v17, (Il2CppObject *)v2, Method_EventInfoUIVoicePlayer__LoadAsset_b__20_0__, 0LL);
+  EventInfoUIVoicePlayer__LoadAudioAssetStorage(v2, 0, v17, v18);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall EventInfoUIVoicePlayer__LoadAudioAssetStorage(
         EventInfoUIVoicePlayer_o *this,
         int32_t index,
         System_Action_o *endAction,
         const MethodInfo *method)
 {
-  __int64 v7; // x21
-  __int64 v8; // x0
+  __int64 v7; // x1
+  __int64 v8; // x1
   __int64 v9; // x1
-  System_String_array **v10; // x2
-  System_String_array **v11; // x3
-  System_Boolean_array **v12; // x4
-  System_Int32_array **v13; // x5
-  System_Int32_array *v14; // x6
-  System_Int32_array *v15; // x7
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
-  struct System_Collections_Generic_List_string__o *voiceAssetNameList; // x19
-  int size; // w8
-  __int64 v24; // x20
-  System_String_o *v25; // x19
-  System_Action_o *v26; // x20
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x22
+  System_Collections_Generic_List_object__o *voiceAssetNameList; // x0
+  __int64 v14; // x1
+  int32_t v15; // w2
+  int32_t v16; // w3
+  int32_t v17; // w2
+  int32_t v18; // w3
+  int32_t v19; // w1
+  Il2CppObject *Item; // x19
+  System_Action_o *v21; // x20
 
-  if ( (byte_438C626 & 1) == 0 )
+  if ( (byte_48E499D & 1) == 0 )
   {
-    sub_B775C4(&System_Action_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_B775C4(&SoundManager_TypeInfo);
-    sub_B775C4(&Method_EventInfoUIVoicePlayer___c__DisplayClass21_0__LoadAudioAssetStorage_b__0__);
-    sub_B775C4(&EventInfoUIVoicePlayer___c__DisplayClass21_0_TypeInfo);
-    byte_438C626 = 1;
+    sub_1B00CCC(&System_Action_TypeInfo, *(_QWORD *)&index);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__get_Count__, v7);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__get_Item__, v8);
+    sub_1B00CCC(&SoundManager_TypeInfo, v9);
+    sub_1B00CCC(&Method_EventInfoUIVoicePlayer___c__DisplayClass21_0__LoadAudioAssetStorage_b__0__, v10);
+    sub_1B00CCC(&EventInfoUIVoicePlayer___c__DisplayClass21_0_TypeInfo, v11);
+    byte_48E499D = 1;
   }
-  v7 = sub_B77694(EventInfoUIVoicePlayer___c__DisplayClass21_0_TypeInfo);
-  EventInfoUIVoicePlayer___c__DisplayClass21_0___ctor((EventInfoUIVoicePlayer___c__DisplayClass21_0_o *)v7, 0LL);
-  if ( !v7
-    || (*(_QWORD *)(v7 + 16) = this,
-        sub_B77560((BattleServantConfConponent_o *)(v7 + 16), (System_Int32_array **)this, v10, v11, v12, v13, v14, v15),
-        *(_QWORD *)(v7 + 32) = endAction,
-        *(_DWORD *)(v7 + 24) = index,
-        sub_B77560(
-          (BattleServantConfConponent_o *)(v7 + 32),
-          (System_Int32_array **)endAction,
-          v16,
-          v17,
-          v18,
-          v19,
-          v20,
-          v21),
-        (voiceAssetNameList = this->fields.voiceAssetNameList) == 0LL) )
+  v12 = sub_1B00F18(EventInfoUIVoicePlayer___c__DisplayClass21_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v12, 0LL);
+  if ( !v12
+    || (*(_QWORD *)(v12 + 16) = this,
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)(v12 + 16), (int32_t)this, v15, v16),
+        *(_QWORD *)(v12 + 32) = endAction,
+        *(_DWORD *)(v12 + 24) = index,
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)(v12 + 32), (int32_t)endAction, v17, v18),
+        (voiceAssetNameList = (System_Collections_Generic_List_object__o *)this->fields.voiceAssetNameList) == 0LL) )
   {
-    sub_B7769C(v8, v9);
+    sub_1B00F28(voiceAssetNameList, v14);
   }
-  size = voiceAssetNameList->fields._size;
-  v24 = *(int *)(v7 + 24);
-  if ( size <= (int)v24 )
+  v19 = *(_DWORD *)(v12 + 24);
+  if ( voiceAssetNameList->fields._size <= v19 )
   {
-    ActionExtensions__Call(*(System_Action_o **)(v7 + 32), 0LL);
+    ActionExtensions__Call(*(System_Action_o **)(v12 + 32), 0LL);
   }
   else
   {
-    if ( size <= (unsigned int)v24 )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-    v25 = voiceAssetNameList->fields._items->m_Items[v24];
-    v26 = (System_Action_o *)sub_B77694(System_Action_TypeInfo);
+    Item = System_Collections_Generic_List_object___get_Item(
+             voiceAssetNameList,
+             v19,
+             (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_string__get_Item__);
+    v21 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
     System_Action___ctor(
-      v26,
-      (Il2CppObject *)v7,
+      v21,
+      (Il2CppObject *)v12,
       Method_EventInfoUIVoicePlayer___c__DisplayClass21_0__LoadAudioAssetStorage_b__0__,
       0LL);
-    if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !SoundManager_TypeInfo->_2.cctor_finished )
-    {
+    if ( !SoundManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    }
-    SoundManager__loadAudioAssetStorage(v25, v26, 1, 0LL);
+    SoundManager__loadAudioAssetStorage((System_String_o *)Item, v21, 1, 0LL);
   }
 }
 
@@ -721,80 +805,77 @@ void __fastcall EventInfoUIVoicePlayer__LoadHistory(
         int32_t eventId,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_int__o *playedIdList; // x0
-  EventInfoUIVoicePlayer_c *v5; // x0
+  EventInfoUIVoicePlayer_o *v3; // x19
+  __int64 v4; // x1
+  __int64 v5; // x1
+  struct System_Collections_Generic_List_int__o *playedIdList; // x8
+  int v7; // w9
+  EventInfoUIVoicePlayer_c *v8; // x0
   System_String_o *SAVE_KEY_PREFIX_VOICE_HISTORY; // x20
-  System_String_o *v7; // x0
-  System_String_o *v8; // x0
+  System_String_o *v10; // x0
+  System_String_o *v11; // x0
   System_String_o *String; // x20
-  __int64 v10; // x8
-  System_Collections_Generic_List_int__o *v11; // x20
-  unsigned __int64 v12; // x21
-  int32_t v13; // w0
-  const MethodInfo *v14; // x2
-  __int64 v15; // x0
-  int32_t v16; // [xsp+Ch] [xbp-24h] BYREF
+  struct System_Threading_CancellationTokenSource_o *m_CancellationTokenSource; // x8
+  EventInfoUIVoicePlayer_o *v14; // x20
+  unsigned __int64 v15; // x21
+  int32_t v16; // w0
+  const MethodInfo *v17; // x2
+  int32_t v18; // [xsp+Ch] [xbp-24h] BYREF
 
-  v16 = eventId;
-  if ( (byte_438C620 & 1) == 0 )
+  v3 = this;
+  v18 = eventId;
+  if ( (byte_48E4997 & 1) == 0 )
   {
-    sub_B775C4(&char___TypeInfo);
-    sub_B775C4(&EventInfoUIVoicePlayer_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_int__Clear__);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438C620 = 1;
+    sub_1B00CCC(&EventInfoUIVoicePlayer_TypeInfo, *(_QWORD *)&eventId);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_int__Clear__, v4);
+    this = (EventInfoUIVoicePlayer_o *)sub_1B00CCC(&StringLiteral_1/*""*/, v5);
+    byte_48E4997 = 1;
   }
-  playedIdList = this->fields.playedIdList;
+  playedIdList = v3->fields.playedIdList;
   if ( !playedIdList )
-    goto LABEL_18;
-  System_Collections_Generic_List_int___Clear(
-    playedIdList,
-    (const MethodInfo_30E61F4 *)Method_System_Collections_Generic_List_int__Clear__);
-  v5 = EventInfoUIVoicePlayer_TypeInfo;
-  if ( (BYTE3(EventInfoUIVoicePlayer_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !EventInfoUIVoicePlayer_TypeInfo->_2.cctor_finished )
+    goto LABEL_15;
+  v7 = playedIdList->fields._version + 1;
+  playedIdList->fields._size = 0;
+  playedIdList->fields._version = v7;
+  v8 = EventInfoUIVoicePlayer_TypeInfo;
+  if ( !EventInfoUIVoicePlayer_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EventInfoUIVoicePlayer_TypeInfo);
-    v5 = EventInfoUIVoicePlayer_TypeInfo;
+    v8 = EventInfoUIVoicePlayer_TypeInfo;
   }
-  SAVE_KEY_PREFIX_VOICE_HISTORY = v5->static_fields->SAVE_KEY_PREFIX_VOICE_HISTORY;
-  v7 = System_Int32__ToString((int32_t)&v16, 0LL);
-  v8 = System_String__Concat_44901936(SAVE_KEY_PREFIX_VOICE_HISTORY, v7, 0LL);
-  String = UnityEngine_PlayerPrefs__GetString(v8, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-  if ( System_String__IsNullOrEmpty(String, 0LL) )
-    return;
-  playedIdList = (System_Collections_Generic_List_int__o *)sub_B775DC(char___TypeInfo, 1LL);
-  if ( !playedIdList )
-    goto LABEL_18;
-  *(_QWORD *)&eventId = playedIdList;
-  if ( !playedIdList->fields._size )
-    goto LABEL_17;
-  LOWORD(playedIdList->fields._syncRoot) = 44;
-  if ( !String
-    || (playedIdList = (System_Collections_Generic_List_int__o *)System_String__Split(
-                                                                   String,
-                                                                   (System_Char_array *)playedIdList,
-                                                                   0LL)) == 0LL )
+  SAVE_KEY_PREFIX_VOICE_HISTORY = v8->static_fields->SAVE_KEY_PREFIX_VOICE_HISTORY;
+  v10 = System_Int32__ToString((int32_t)&v18, 0LL);
+  v11 = System_String__Concat_60325748(SAVE_KEY_PREFIX_VOICE_HISTORY, v10, 0LL);
+  String = UnityEngine_PlayerPrefs__GetString(v11, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+  this = (EventInfoUIVoicePlayer_o *)System_String__IsNullOrEmpty(String, 0LL);
+  if ( ((unsigned __int8)this & 1) == 0 )
   {
-LABEL_18:
-    sub_B7769C(playedIdList, *(_QWORD *)&eventId);
-  }
-  v10 = *(_QWORD *)&playedIdList->fields._size;
-  v11 = playedIdList;
-  if ( (int)v10 >= 1 )
-  {
-    v12 = 0LL;
-    while ( v12 < (unsigned int)v10 )
+    if ( String )
     {
-      v13 = System_Int32__Parse(*((System_String_o **)&v11->fields._syncRoot + v12), 0LL);
-      EventInfoUIVoicePlayer__AddHistory(this, v13, v14);
-      LODWORD(v10) = v11->fields._size;
-      if ( (__int64)++v12 >= (int)v10 )
+      this = (EventInfoUIVoicePlayer_o *)System_String__Split(String, 0x2Cu, 0, 0LL);
+      if ( this )
+      {
+        m_CancellationTokenSource = this->fields.m_CancellationTokenSource;
+        v14 = this;
+        if ( (int)m_CancellationTokenSource >= 1 )
+        {
+          v15 = 0LL;
+          do
+          {
+            if ( v15 >= (unsigned int)m_CancellationTokenSource )
+              sub_1B00F30(this, *(_QWORD *)&eventId);
+            v16 = System_Int32__Parse(*((System_String_o **)&v14->fields.voiceDataList + v15), 0LL);
+            EventInfoUIVoicePlayer__AddHistory(v3, v16, v17);
+            LODWORD(m_CancellationTokenSource) = v14->fields.m_CancellationTokenSource;
+            ++v15;
+          }
+          while ( (__int64)v15 < (int)m_CancellationTokenSource );
+        }
         return;
+      }
     }
-LABEL_17:
-    v15 = sub_B776C8(playedIdList);
-    sub_B77668(v15, 0LL);
+LABEL_15:
+    sub_1B00F28(this, *(_QWORD *)&eventId);
   }
 }
 
@@ -804,20 +885,24 @@ EventInfoUIVoicePlayer_VoiceData_o *__fastcall EventInfoUIVoicePlayer__LotVoiceD
         System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__o *voiceDataList,
         const MethodInfo *method)
 {
-  unsigned int v4; // w20
+  __int64 v4; // x1
+  int32_t v5; // w1
 
-  if ( (byte_438C62D & 1) == 0 )
+  if ( (byte_48E49A4 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__get_Count__);
-    this = (EventInfoUIVoicePlayer_o *)sub_B775C4(&Method_System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__get_Item__);
-    byte_438C62D = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__get_Count__, voiceDataList);
+    this = (EventInfoUIVoicePlayer_o *)sub_1B00CCC(
+                                         &Method_System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__get_Item__,
+                                         v4);
+    byte_48E49A4 = 1;
   }
   if ( !voiceDataList )
-    sub_B7769C(this, voiceDataList);
-  v4 = UnityEngine_Random__Range_36343764(0, voiceDataList->fields._size, 0LL);
-  if ( voiceDataList->fields._size <= v4 )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-  return voiceDataList->fields._items->m_Items[v4];
+    sub_1B00F28(this, voiceDataList);
+  v5 = UnityEngine_Random__Range_68037396(0, voiceDataList->fields._size, 0LL);
+  return (EventInfoUIVoicePlayer_VoiceData_o *)System_Collections_Generic_List_object___get_Item(
+                                                 (System_Collections_Generic_List_object__o *)voiceDataList,
+                                                 v5,
+                                                 (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_EventInfoUIVoicePlayer_VoiceData__get_Item__);
 }
 
 
@@ -833,101 +918,83 @@ void __fastcall EventInfoUIVoicePlayer__Play(
         EventInfoUIVoicePlayer_VoiceData_o *voiceData,
         const MethodInfo *method)
 {
-  struct System_String_o *VoiceAssetName_30265396; // x0
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
-  System_String_o *VoiceCueInfo; // x20
-  System_Char_array *v13; // x0
-  System_Char_array *v14; // x1
+  struct System_String_o *VoiceAssetName_38497884; // x0
+  int32_t v6; // w2
+  int32_t v7; // w3
+  __int64 v8; // x1
+  System_String_o *VoiceCueInfo; // x0
   struct System_Collections_Generic_List_string__o *voiceCueList; // x8
-  __int64 v16; // x0
 
-  if ( (byte_438C62A & 1) == 0 )
+  if ( (byte_48E49A1 & 1) == 0 )
   {
-    sub_B775C4(&char___TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__AddRange__);
-    byte_438C62A = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__AddRange__, voiceData);
+    byte_48E49A1 = 1;
   }
   if ( voiceData && this->fields.state != 1 )
   {
     EventInfoUIVoicePlayer__AddHistory(this, voiceData->fields.id, method);
     this->fields.state = 1;
-    VoiceAssetName_30265396 = ServantVoiceEntity__getVoiceAssetName_30265396(voiceData->fields.ServantId, 0LL);
-    this->fields.currentAssetName = VoiceAssetName_30265396;
-    sub_B77560(
-      (BattleServantConfConponent_o *)&this->fields.currentAssetName,
-      (System_Int32_array **)VoiceAssetName_30265396,
+    VoiceAssetName_38497884 = ServantVoiceEntity__getVoiceAssetName_38497884(voiceData->fields.ServantId, 0LL);
+    this->fields.currentAssetName = VoiceAssetName_38497884;
+    sub_1B00C70(
+      (ServantStatusBattleListViewItem_o *)&this->fields.currentAssetName,
+      (int32_t)VoiceAssetName_38497884,
       v6,
-      v7,
-      v8,
-      v9,
-      v10,
-      v11);
+      v7);
     VoiceCueInfo = voiceData->fields.VoiceCueInfo;
-    v13 = (System_Char_array *)sub_B775DC(char___TypeInfo, 1LL);
-    if ( !v13 )
-      goto LABEL_11;
-    v14 = v13;
-    if ( !v13->max_length )
-    {
-      v16 = sub_B776C8(v13);
-      sub_B77668(v16, 0LL);
-    }
-    v13->m_Items[2] = 44;
     if ( !VoiceCueInfo
-      || (v13 = (System_Char_array *)System_String__Split(VoiceCueInfo, v13, 0LL),
+      || (VoiceCueInfo = (System_String_o *)System_String__Split(VoiceCueInfo, 0x2Cu, 0, 0LL),
           (voiceCueList = this->fields.voiceCueList) == 0LL) )
     {
-LABEL_11:
-      sub_B7769C(v13, v14);
+      sub_1B00F28(VoiceCueInfo, v8);
     }
-    System_Collections_Generic_List_TimeZoneInfo_AdjustmentRule___AddRange(
-      (System_Collections_Generic_List_TimeZoneInfo_AdjustmentRule__o *)voiceCueList,
-      (System_Collections_Generic_IEnumerable_T__o *)v13,
-      (const MethodInfo_30534E8 *)Method_System_Collections_Generic_List_string__AddRange__);
+    System_Collections_Generic_List_object___AddRange(
+      (System_Collections_Generic_List_object__o *)voiceCueList,
+      (System_Collections_Generic_IEnumerable_T__o *)VoiceCueInfo,
+      (const MethodInfo_33C1BDC *)Method_System_Collections_Generic_List_string__AddRange__);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall EventInfoUIVoicePlayer__SaveHistrory(
         EventInfoUIVoicePlayer_o *this,
         int32_t eventId,
         const MethodInfo *method)
 {
-  System_String_o *v4; // x19
-  EventInfoUIVoicePlayer_c *v5; // x8
+  __int64 v4; // x1
+  __int64 v5; // x1
+  System_String_o *v6; // x0
+  EventInfoUIVoicePlayer_c *v7; // x8
+  System_String_o *v8; // x19
   System_String_o *SAVE_KEY_PREFIX_VOICE_HISTORY; // x20
-  System_String_o *v7; // x0
-  System_String_o *v8; // x0
-  int32_t v9; // [xsp+Ch] [xbp-14h] BYREF
+  System_String_o *v10; // x0
+  System_String_o *v11; // x0
+  int32_t v12; // [xsp+Ch] [xbp-34h] BYREF
 
-  v9 = eventId;
-  if ( (byte_438C622 & 1) == 0 )
+  v12 = eventId;
+  if ( (byte_48E4999 & 1) == 0 )
   {
-    sub_B775C4(&EventInfoUIVoicePlayer_TypeInfo);
-    sub_B775C4(&Method_System_String_Join_int___);
-    sub_B775C4(&StringLiteral_714/*","*/);
-    byte_438C622 = 1;
+    sub_1B00CCC(&EventInfoUIVoicePlayer_TypeInfo, *(_QWORD *)&eventId);
+    sub_1B00CCC(&Method_System_String_Join_int___, v4);
+    sub_1B00CCC(&StringLiteral_865/*","*/, v5);
+    byte_48E4999 = 1;
   }
-  v4 = System_String__Join_int_(
-         (System_String_o *)StringLiteral_714/*","*/,
+  v6 = System_String__Join_int_(
+         (System_String_o *)StringLiteral_865/*","*/,
          (System_Collections_Generic_IEnumerable_T__o *)this->fields.playedIdList,
-         (const MethodInfo_1E0036C *)Method_System_String_Join_int___);
-  v5 = EventInfoUIVoicePlayer_TypeInfo;
-  if ( (BYTE3(EventInfoUIVoicePlayer_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !EventInfoUIVoicePlayer_TypeInfo->_2.cctor_finished )
+         (const MethodInfo_2DF38A4 *)Method_System_String_Join_int___);
+  v7 = EventInfoUIVoicePlayer_TypeInfo;
+  v8 = v6;
+  if ( !EventInfoUIVoicePlayer_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EventInfoUIVoicePlayer_TypeInfo);
-    v5 = EventInfoUIVoicePlayer_TypeInfo;
+    v7 = EventInfoUIVoicePlayer_TypeInfo;
   }
-  SAVE_KEY_PREFIX_VOICE_HISTORY = v5->static_fields->SAVE_KEY_PREFIX_VOICE_HISTORY;
-  v7 = System_Int32__ToString((int32_t)&v9, 0LL);
-  v8 = System_String__Concat_44901936(SAVE_KEY_PREFIX_VOICE_HISTORY, v7, 0LL);
-  UnityEngine_PlayerPrefs__SetString(v8, v4, 0LL);
+  SAVE_KEY_PREFIX_VOICE_HISTORY = v7->static_fields->SAVE_KEY_PREFIX_VOICE_HISTORY;
+  v10 = System_Int32__ToString((int32_t)&v12, 0LL);
+  v11 = System_String__Concat_60325748(SAVE_KEY_PREFIX_VOICE_HISTORY, v10, 0LL);
+  UnityEngine_PlayerPrefs__SetString(v11, v8, 0LL);
 }
 
 
@@ -936,67 +1003,43 @@ void __fastcall EventInfoUIVoicePlayer__SetAssetName(
         int32_t servantId,
         const MethodInfo *method)
 {
-  struct System_String_o *VoiceAssetName_30265396; // x0
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  struct System_String_o *VoiceAssetName_38497884; // x0
+  int32_t v5; // w2
+  int32_t v6; // w3
 
-  VoiceAssetName_30265396 = ServantVoiceEntity__getVoiceAssetName_30265396(servantId, 0LL);
-  this->fields.currentAssetName = VoiceAssetName_30265396;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.currentAssetName,
-    (System_Int32_array **)VoiceAssetName_30265396,
+  VoiceAssetName_38497884 = ServantVoiceEntity__getVoiceAssetName_38497884(servantId, 0LL);
+  this->fields.currentAssetName = VoiceAssetName_38497884;
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields.currentAssetName,
+    (int32_t)VoiceAssetName_38497884,
     v5,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10);
+    v6);
 }
 
 
 void __fastcall EventInfoUIVoicePlayer__Setup(EventInfoUIVoicePlayer_o *this, const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v2; // w2
+  int32_t v3; // w3
   struct System_String_StaticFields *static_fields; // x8
   struct System_String_o *Empty; // x1
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
-  const MethodInfo *v17; // x1
+  int32_t v7; // w2
+  int32_t v8; // w3
+  const MethodInfo *v9; // x1
 
-  if ( (byte_438C61F & 1) == 0 )
+  if ( (byte_48E4996 & 1) == 0 )
   {
-    sub_B775C4(&string_TypeInfo);
-    byte_438C61F = 1;
+    sub_1B00CCC(&string_TypeInfo, method);
+    byte_48E4996 = 1;
   }
   this->fields.voicePlayer = 0LL;
   *(_QWORD *)&this->fields.state = 0LL;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.voicePlayer, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.voicePlayer, 0, v2, v3);
   static_fields = string_TypeInfo->static_fields;
   Empty = static_fields->Empty;
   this->fields.currentAssetName = static_fields->Empty;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.currentAssetName,
-    (System_Int32_array **)Empty,
-    v11,
-    v12,
-    v13,
-    v14,
-    v15,
-    v16);
-  EventInfoUIVoicePlayer__ClearCueNameList(this, v17);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.currentAssetName, (int32_t)Empty, v7, v8);
+  EventInfoUIVoicePlayer__ClearCueNameList(this, v9);
 }
 
 
@@ -1013,99 +1056,79 @@ void __fastcall EventInfoUIVoicePlayer__Stop(EventInfoUIVoicePlayer_o *this, con
 
 void __fastcall EventInfoUIVoicePlayer__Update(EventInfoUIVoicePlayer_o *this, const MethodInfo *method)
 {
-  _BOOL8 IsNullOrEmpty; // x0
-  const MethodInfo *v4; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
   struct SePlayer_o *voicePlayer; // x8
-  struct System_Collections_Generic_List_string__o *voiceCueList; // x23
-  __int64 voiceIndex; // x22
-  int size; // w8
+  System_Collections_Generic_List_object__o *voiceCueList; // x0
+  const MethodInfo *voiceIndex; // x1
   System_String_o *currentAssetName; // x21
-  System_String_o *v10; // x22
-  SeManager_c *v11; // x0
+  Il2CppObject *Item; // x22
+  SeManager_c *v12; // x8
   float DEFAULT_VOLUME; // s8
-  struct SePlayer_o *v13; // x0
-  System_String_array **v14; // x2
-  System_String_array **v15; // x3
-  System_Boolean_array **v16; // x4
-  System_Int32_array **v17; // x5
-  System_Int32_array *v18; // x6
-  System_Int32_array *v19; // x7
+  struct SePlayer_o *v14; // x0
+  int32_t v15; // w2
+  int32_t v16; // w3
 
-  if ( (byte_438C61E & 1) == 0 )
+  if ( (byte_48E4995 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_B775C4(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_B775C4(&SeManager_TypeInfo);
-    sub_B775C4(&SoundManager_TypeInfo);
-    byte_438C61E = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__get_Count__, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_string__get_Item__, v3);
+    sub_1B00CCC(&SeManager_TypeInfo, v4);
+    sub_1B00CCC(&SoundManager_TypeInfo, v5);
+    byte_48E4995 = 1;
   }
-  if ( this->fields.state == 1 )
+  if ( this->fields.state == 1 && !System_String__IsNullOrEmpty(this->fields.currentAssetName, 0LL) )
   {
-    IsNullOrEmpty = System_String__IsNullOrEmpty(this->fields.currentAssetName, 0LL);
-    if ( !IsNullOrEmpty )
+    voicePlayer = this->fields.voicePlayer;
+    if ( voicePlayer )
     {
-      voicePlayer = this->fields.voicePlayer;
-      if ( voicePlayer )
+      if ( !voicePlayer->fields.isStop )
+        return;
+      voiceCueList = (System_Collections_Generic_List_object__o *)this->fields.voiceCueList;
+      if ( voiceCueList )
       {
-        if ( !voicePlayer->fields.isStop )
-          return;
-        voiceCueList = this->fields.voiceCueList;
-        if ( voiceCueList )
+        voiceIndex = (const MethodInfo *)(unsigned int)this->fields.voiceIndex;
+        if ( (int)voiceIndex >= voiceCueList->fields._size )
         {
-          voiceIndex = this->fields.voiceIndex;
-          size = voiceCueList->fields._size;
-          if ( (int)voiceIndex >= size )
-          {
-            EventInfoUIVoicePlayer__Setup(this, v4);
-            return;
-          }
+          EventInfoUIVoicePlayer__Setup(this, voiceIndex);
+          return;
+        }
 LABEL_12:
-          currentAssetName = this->fields.currentAssetName;
-          if ( size <= (unsigned int)voiceIndex )
-            System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-          v10 = voiceCueList->fields._items->m_Items[voiceIndex];
-          v11 = SeManager_TypeInfo;
-          if ( (BYTE3(SeManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-            && !SeManager_TypeInfo->_2.cctor_finished )
-          {
-            j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
-            v11 = SeManager_TypeInfo;
-          }
-          DEFAULT_VOLUME = v11->static_fields->DEFAULT_VOLUME;
-          if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-            && !SoundManager_TypeInfo->_2.cctor_finished )
-          {
-            j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-          }
-          v13 = SoundManager__playVoice_23512556(currentAssetName, v10, DEFAULT_VOLUME, 0LL, 0LL);
-          this->fields.voicePlayer = v13;
-          sub_B77560(
-            (BattleServantConfConponent_o *)&this->fields.voicePlayer,
-            (System_Int32_array **)v13,
-            v14,
-            v15,
-            v16,
-            v17,
-            v18,
-            v19);
-          ++this->fields.voiceIndex;
-          return;
-        }
-      }
-      else
-      {
-        voiceCueList = this->fields.voiceCueList;
-        if ( voiceCueList )
+        currentAssetName = this->fields.currentAssetName;
+        Item = System_Collections_Generic_List_object___get_Item(
+                 voiceCueList,
+                 (int32_t)voiceIndex,
+                 (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_string__get_Item__);
+        v12 = SeManager_TypeInfo;
+        if ( !SeManager_TypeInfo->_2.cctor_finished )
         {
-          voiceIndex = this->fields.voiceIndex;
-          size = voiceCueList->fields._size;
-          if ( (int)voiceIndex >= size )
-            return;
-          goto LABEL_12;
+          j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
+          v12 = SeManager_TypeInfo;
         }
+        DEFAULT_VOLUME = v12->static_fields->DEFAULT_VOLUME;
+        if ( !SoundManager_TypeInfo->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
+        v14 = SoundManager__playVoice_37481500(currentAssetName, (System_String_o *)Item, DEFAULT_VOLUME, 0LL, 0LL);
+        this->fields.voicePlayer = v14;
+        sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.voicePlayer, (int32_t)v14, v15, v16);
+        ++this->fields.voiceIndex;
+        return;
       }
-      sub_B7769C(IsNullOrEmpty, v4);
     }
+    else
+    {
+      voiceCueList = (System_Collections_Generic_List_object__o *)this->fields.voiceCueList;
+      if ( voiceCueList )
+      {
+        LODWORD(voiceIndex) = this->fields.voiceIndex;
+        if ( (int)voiceIndex >= voiceCueList->fields._size )
+          return;
+        goto LABEL_12;
+      }
+    }
+    sub_1B00F28(voiceCueList, v6);
   }
 }
 
@@ -1130,12 +1153,13 @@ void __fastcall EventInfoUIVoicePlayer___c__DisplayClass21_0___LoadAudioAssetSto
         EventInfoUIVoicePlayer___c__DisplayClass21_0_o *this,
         const MethodInfo *method)
 {
+  const MethodInfo *v2; // x3
   EventInfoUIVoicePlayer_o *_4__this; // x0
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_B7769C(0LL, method);
-  EventInfoUIVoicePlayer__LoadAudioAssetStorage(_4__this, this->fields.index + 1, this->fields.endAction, 0LL);
+    sub_1B00F28(0LL, method);
+  EventInfoUIVoicePlayer__LoadAudioAssetStorage(_4__this, this->fields.index + 1, this->fields.endAction, v2);
 }
 
 
@@ -1156,6 +1180,6 @@ bool __fastcall EventInfoUIVoicePlayer___c__DisplayClass28_0___GetTargetVoiceDat
 
   voiceData = this->fields.voiceData;
   if ( !voiceData )
-    sub_B7769C(this, id);
+    sub_1B00F28(this, id);
   return voiceData->fields.ConsumeItemId == id;
 }

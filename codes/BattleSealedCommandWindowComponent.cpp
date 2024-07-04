@@ -13,12 +13,12 @@ System_String_o *__fastcall BattleSealedCommandWindowComponent__get_closeBtnPath
         BattleSealedCommandWindowComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_438825D & 1) == 0 )
+  if ( (byte_48E5678 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_17324/*"btn_close"*/);
-    byte_438825D = 1;
+    sub_1B00CCC(&StringLiteral_17262/*"btn_close"*/, method);
+    byte_48E5678 = 1;
   }
-  return (System_String_o *)StringLiteral_17324/*"btn_close"*/;
+  return (System_String_o *)StringLiteral_17262/*"btn_close"*/;
 }
 
 
@@ -29,81 +29,79 @@ void __fastcall BattleSealedCommandWindowComponent__setLabel(
         BattleSealedCommandWindowComponent_LabelAdjustArgs_o *args,
         const MethodInfo *method)
 {
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
   UnityEngine_Object_o *confLabel; // x22
-  struct System_Nullable_int__o fontSize_k__BackingField; // x1
+  __int64 value; // x1
   UILabel_o *transform; // x0
-  float z; // s2
+  __int64 v15; // x8
   float x; // s0
+  float z; // s2
   float y; // s1
 
-  if ( (byte_438825C & 1) == 0 )
+  if ( (byte_48E5677 & 1) == 0 )
   {
-    sub_B775C4(&BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo);
-    sub_B775C4(&Method_System_Nullable_Vector3__GetValueOrDefault__);
-    sub_B775C4(&Method_System_Nullable_int__GetValueOrDefault__);
-    sub_B775C4(&Method_System_Nullable_int__get_HasValue__);
-    sub_B775C4(&Method_System_Nullable_Vector3__get_HasValue__);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438825C = 1;
+    sub_1B00CCC(&BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo, str);
+    sub_1B00CCC(&Method_System_Nullable_int__GetValueOrDefault__, v7);
+    sub_1B00CCC(&Method_System_Nullable_Vector3__GetValueOrDefault__, v8);
+    sub_1B00CCC(&Method_System_Nullable_Vector3__get_HasValue__, v9);
+    sub_1B00CCC(&Method_System_Nullable_int__get_HasValue__, v10);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v11);
+    byte_48E5677 = 1;
   }
   confLabel = (UnityEngine_Object_o *)this->fields.confLabel;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
   if ( !UnityEngine_Object__op_Equality(confLabel, 0LL, 0LL) )
   {
     if ( !args )
     {
-      args = (BattleSealedCommandWindowComponent_LabelAdjustArgs_o *)sub_B77694(BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo);
-      BattleSealedCommandWindowComponent_LabelAdjustArgs___ctor(args, 0LL);
+      args = (BattleSealedCommandWindowComponent_LabelAdjustArgs_o *)sub_1B00F18(BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo);
+      System_Object___ctor((Il2CppObject *)args, 0LL);
     }
     transform = this->fields.confLabel;
-    if ( transform )
+    if ( !transform || (UILabel__set_text(transform, str, 0LL), !args) )
+LABEL_19:
+      sub_1B00F28(transform, value);
+    transform = this->fields.confLabel;
+    if ( args->fields._fontSize_k__BackingField.fields.hasValue )
     {
-      UILabel__set_text(transform, str, 0LL);
-      if ( args )
-      {
-        fontSize_k__BackingField = args->fields._fontSize_k__BackingField;
-        transform = this->fields.confLabel;
-        if ( (*(_QWORD *)&fontSize_k__BackingField & 0xFF00000000LL) == 0 )
-          fontSize_k__BackingField = (struct System_Nullable_int__o)(unsigned int)this->fields.labelDefaultFontSize;
-        if ( transform )
-        {
-          UILabel__set_fontSize(transform, fontSize_k__BackingField.fields.value, 0LL);
-          transform = this->fields.confLabel;
-          if ( transform )
-          {
-            transform = (UILabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0LL);
-            if ( (*(_QWORD *)&args->fields._localPosition_k__BackingField.fields.value.fields.z & 0xFF00000000LL) != 0 )
-            {
-              LODWORD(z) = *(_QWORD *)&args->fields._localPosition_k__BackingField.fields.value.fields.z;
-              LODWORD(x) = *(_QWORD *)&args->fields._localPosition_k__BackingField.fields.value.fields.x;
-              LODWORD(y) = HIDWORD(*(_QWORD *)&args->fields._localPosition_k__BackingField.fields.value.fields.x);
-              if ( transform )
-              {
-LABEL_17:
-                UnityEngine_Transform__set_localPosition(
-                  (UnityEngine_Transform_o *)transform,
-                  *(UnityEngine_Vector3_o *)&x,
-                  0LL);
-                return;
-              }
-            }
-            else
-            {
-              x = this->fields.labelDefaultPosition.fields.x;
-              y = this->fields.labelDefaultPosition.fields.y;
-              z = this->fields.labelDefaultPosition.fields.z;
-              if ( transform )
-                goto LABEL_17;
-            }
-          }
-        }
-      }
+      value = (unsigned int)args->fields._fontSize_k__BackingField.fields.value;
+      if ( !transform )
+        goto LABEL_19;
     }
-    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_B7769C)(transform, fontSize_k__BackingField);
+    else
+    {
+      value = (unsigned int)this->fields.labelDefaultFontSize;
+      if ( !transform )
+        goto LABEL_19;
+    }
+    UILabel__set_fontSize(transform, value, 0LL);
+    transform = this->fields.confLabel;
+    if ( !transform )
+      goto LABEL_19;
+    transform = (UILabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0LL);
+    v15 = *(_QWORD *)&args->fields._localPosition_k__BackingField.fields.hasValue;
+    if ( (_BYTE)v15 )
+    {
+      x = *((float *)&v15 + 1);
+      LODWORD(z) = HIDWORD(*(_QWORD *)&args->fields._localPosition_k__BackingField.fields.value.fields.y);
+      LODWORD(y) = *(_QWORD *)&args->fields._localPosition_k__BackingField.fields.value.fields.y;
+      if ( !transform )
+        goto LABEL_19;
+    }
+    else
+    {
+      x = this->fields.labelDefaultPosition.fields.x;
+      y = this->fields.labelDefaultPosition.fields.y;
+      z = this->fields.labelDefaultPosition.fields.z;
+      if ( !transform )
+        goto LABEL_19;
+    }
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, *(UnityEngine_Vector3_o *)&x, 0LL);
   }
 }
 
@@ -133,10 +131,10 @@ System_Nullable_Vector3__o __fastcall BattleSealedCommandWindowComponent_LabelAd
   __int64 v3; // x0 OVERLAPPED
   System_Nullable_Vector3__o result; // 0:x0.16
 
-  v2 = *(_QWORD *)&this->fields._localPosition_k__BackingField.fields.value.fields.z;
-  v3 = *(_QWORD *)&this->fields._localPosition_k__BackingField.fields.value.fields.x;
-  *(_QWORD *)&result.fields.value.fields.z = v2;
-  *(_QWORD *)&result.fields.value.fields.x = v3;
+  v2 = *(_QWORD *)&this->fields._localPosition_k__BackingField.fields.value.fields.y;
+  v3 = *(_QWORD *)&this->fields._localPosition_k__BackingField.fields.hasValue;
+  *(_QWORD *)&result.fields.value.fields.y = v2;
+  *(_QWORD *)&result.fields.hasValue = v3;
   return result;
 }
 

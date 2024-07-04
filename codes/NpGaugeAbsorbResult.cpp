@@ -3,24 +3,12 @@ void __fastcall NpGaugeAbsorbResult___ctor(
         BaseNpGaugeConvert_o *convert,
         const MethodInfo *method)
 {
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  int32_t v5; // w2
+  int32_t v6; // w3
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._Convert_k__BackingField = convert;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._Convert_k__BackingField,
-    (System_Int32_array **)convert,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields._Convert_k__BackingField, (int32_t)convert, v5, v6);
 }
 
 
@@ -34,7 +22,7 @@ void __fastcall NpGaugeAbsorbResult__AddPoint(NpGaugeAbsorbResult_o *this, int32
   Convert_k__BackingField = this->fields._Convert_k__BackingField;
   this->fields._Point_k__BackingField = Point_k__BackingField + (float)point;
   if ( !Convert_k__BackingField )
-    sub_B7769C(0LL, point);
+    sub_1B00F28(0LL, point);
   Turn_k__BackingField = this->fields._Turn_k__BackingField;
   this->fields._Turn_k__BackingField = Turn_k__BackingField
                                      + ((float (__fastcall *)(struct BaseNpGaugeConvert_o *))Convert_k__BackingField->klass->vtable._7_PointToTurn.method)(Convert_k__BackingField);
@@ -51,7 +39,7 @@ void __fastcall NpGaugeAbsorbResult__AddTurn(NpGaugeAbsorbResult_o *this, int32_
   Convert_k__BackingField = this->fields._Convert_k__BackingField;
   this->fields._Turn_k__BackingField = Turn_k__BackingField + (float)turn;
   if ( !Convert_k__BackingField )
-    sub_B7769C(0LL, turn);
+    sub_1B00F28(0LL, turn);
   Point_k__BackingField = this->fields._Point_k__BackingField;
   this->fields._Point_k__BackingField = Point_k__BackingField
                                       + ((float (__fastcall *)(struct BaseNpGaugeConvert_o *))Convert_k__BackingField->klass->vtable._6_TurnToPoint.method)(Convert_k__BackingField);
@@ -83,22 +71,14 @@ void __fastcall NpGaugeAbsorbResult__set_Convert(
         BaseNpGaugeConvert_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields._Convert_k__BackingField = value;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields._Convert_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields._Convert_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 

@@ -1,15 +1,12 @@
 void __fastcall RaceResultEffectComponent___ctor(RaceResultEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4389981 & 1) == 0 )
+  if ( (byte_48E3AFD & 1) == 0 )
   {
-    sub_B775C4(&CommonEffectComponent_TypeInfo);
-    byte_4389981 = 1;
+    sub_1B00CCC(&CommonEffectComponent_TypeInfo, method);
+    byte_48E3AFD = 1;
   }
-  if ( (BYTE3(CommonEffectComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CommonEffectComponent_TypeInfo->_2.cctor_finished )
-  {
+  if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
-  }
   CommonEffectComponent___ctor((CommonEffectComponent_o *)this, 0LL);
 }
 
@@ -27,84 +24,70 @@ void __fastcall RaceResultEffectComponent__SetParam(
         Il2CppObject *param,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
   Il2CppObject **p_param; // x19
-  iTween_array *Components_iTween; // x0
-  __int64 v12; // x1
-  __int64 v13; // x21
-  int v14; // w8
-  unsigned int v15; // w22
+  System_Object_array *Components_object; // x0
+  __int64 v8; // x1
+  __int64 v9; // x21
+  int v10; // w8
+  unsigned int v11; // w22
   int max_length; // w8
-  iTween_array *v17; // x20
-  __int64 v18; // x24
-  __int64 v19; // x0
+  System_Object_array *v13; // x20
+  __int64 v14; // x24
 
-  if ( (byte_4389980 & 1) == 0 )
+  if ( (byte_48E3AFC & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
-    byte_4389980 = 1;
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___, param);
+    byte_48E3AFC = 1;
   }
   this->fields.param = param;
   p_param = &this->fields.param;
-  sub_B77560(
-    (BattleServantConfConponent_o *)p_param,
-    (System_Int32_array **)param,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
-  v13 = (__int64)*(p_param - 1);
-  if ( !v13 )
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)p_param, (int32_t)param, (int32_t)method, v3);
+  v9 = (__int64)*(p_param - 1);
+  if ( !v9 )
 LABEL_17:
-    sub_B7769C(Components_iTween, v12);
-  v14 = *(_DWORD *)(v13 + 24);
-  if ( v14 >= 1 )
+    sub_1B00F28(Components_object, v8);
+  v10 = *(_DWORD *)(v9 + 24);
+  if ( v10 >= 1 )
   {
-    v15 = 0;
+    v11 = 0;
     while ( 1 )
     {
-      if ( v15 >= v14 )
+      if ( v11 >= v10 )
         goto LABEL_16;
-      Components_iTween = *(iTween_array **)(v13 + 8LL * (int)v15 + 32);
-      if ( !Components_iTween )
+      Components_object = *(System_Object_array **)(v9 + 8LL * (int)v11 + 32);
+      if ( !Components_object )
         goto LABEL_17;
-      Components_iTween = UnityEngine_GameObject__GetComponents_iTween_(
-                            (UnityEngine_GameObject_o *)Components_iTween,
-                            (const MethodInfo_1DEC270 *)Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
-      if ( Components_iTween )
+      Components_object = UnityEngine_GameObject__GetComponents_object_(
+                            (UnityEngine_GameObject_o *)Components_object,
+                            (const MethodInfo_2DAE764 *)Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
+      if ( Components_object )
       {
-        max_length = Components_iTween->max_length;
-        v17 = Components_iTween;
+        max_length = Components_object->max_length;
+        v13 = Components_object;
         if ( max_length >= 1 )
           break;
       }
 LABEL_14:
-      v14 = *(_DWORD *)(v13 + 24);
-      if ( (int)++v15 >= v14 )
+      v10 = *(_DWORD *)(v9 + 24);
+      if ( (int)++v11 >= v10 )
         return;
     }
-    v18 = 0LL;
-    while ( (unsigned int)v18 < max_length )
+    v14 = 0LL;
+    while ( (unsigned int)v14 < max_length )
     {
-      Components_iTween = (iTween_array *)v17->m_Items[v18];
-      if ( !Components_iTween )
+      Components_object = (System_Object_array *)v13->m_Items[v14];
+      if ( !Components_object )
         goto LABEL_17;
-      Components_iTween = (iTween_array *)((__int64 (__fastcall *)(iTween_array *, Il2CppObject *, Il2CppMethodPointer))Components_iTween->obj.klass->vtable[4].method)(
-                                            Components_iTween,
-                                            *p_param,
-                                            Components_iTween->obj.klass->vtable[5].methodPtr);
-      max_length = v17->max_length;
-      if ( (int)++v18 >= max_length )
+      Components_object = (System_Object_array *)((__int64 (__fastcall *)(System_Object_array *, Il2CppObject *, Il2CppMethodPointer))Components_object->obj.klass->vtable[4].method)(
+                                                   Components_object,
+                                                   *p_param,
+                                                   Components_object->obj.klass->vtable[5].methodPtr);
+      max_length = v13->max_length;
+      if ( (int)++v14 >= max_length )
         goto LABEL_14;
     }
 LABEL_16:
-    v19 = sub_B776C8(Components_iTween);
-    sub_B77668(v19, 0LL);
+    sub_1B00F30(Components_object, v8);
   }
 }

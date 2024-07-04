@@ -1,15 +1,5 @@
 void __fastcall BlankEarthShortcutUIButton___ctor(BlankEarthShortcutUIButton_o *this, const MethodInfo *method)
 {
-  if ( (byte_438ADC7 & 1) == 0 )
-  {
-    sub_B775C4(&UICommonButton_TypeInfo);
-    byte_438ADC7 = 1;
-  }
-  if ( (BYTE3(UICommonButton_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UICommonButton_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(UICommonButton_TypeInfo);
-  }
   UICommonButton___ctor((UICommonButton_o *)this, 0LL);
 }
 
@@ -76,22 +66,14 @@ void __fastcall BlankEarthShortcutUIButton__SetPressAction(
         System_Action_o *pressAction,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  int32_t v3; // w3
 
   this->fields.onPressedAction = pressAction;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.onPressedAction,
-    (System_Int32_array **)pressAction,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)&this->fields.onPressedAction,
+    (int32_t)pressAction,
+    (int32_t)method,
+    v3);
 }
 
 

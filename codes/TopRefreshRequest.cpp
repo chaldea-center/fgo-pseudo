@@ -6,10 +6,10 @@ void __fastcall TopRefreshRequest___ctor(TopRefreshRequest_o *this, const Method
 
 System_String_o *__fastcall TopRefreshRequest__getMockData(TopRefreshRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_438D5D5 & 1) == 0 )
+  if ( (byte_48E40B5 & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438D5D5 = 1;
+    sub_1B00CCC(&StringLiteral_1/*""*/, method);
+    byte_48E40B5 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -17,21 +17,19 @@ System_String_o *__fastcall TopRefreshRequest__getMockData(TopRefreshRequest_o *
 
 System_String_o *__fastcall TopRefreshRequest__getURL(TopRefreshRequest_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_438D5D4 & 1) == 0 )
+  if ( (byte_48E40B4 & 1) == 0 )
   {
-    sub_B775C4(&NetworkManager_TypeInfo);
-    sub_B775C4(&StringLiteral_22203/*"refresh/top"*/);
-    byte_438D5D4 = 1;
+    sub_1B00CCC(&NetworkManager_TypeInfo, method);
+    sub_1B00CCC(&StringLiteral_22518/*"refresh/top"*/, v2);
+    byte_48E40B4 = 1;
   }
-  if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !NetworkManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_44901936(BaseUrl, (System_String_o *)StringLiteral_22203/*"refresh/top"*/, 0LL);
+  return System_String__Concat_60325748(BaseUrl, (System_String_o *)StringLiteral_22518/*"refresh/top"*/, 0LL);
 }
 
 
@@ -40,34 +38,25 @@ void __fastcall TopRefreshRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  TopHomeRequest_c *v5; // x0
-  ResponseData_o *v6; // x0
-  __int64 *v7; // x8
+  __int64 v5; // x1
+  __int64 v6; // x1
+  ResponseData_o *v7; // x0
+  __int64 *v8; // x8
 
-  if ( (byte_438D5D6 & 1) == 0 )
+  if ( (byte_48E40B6 & 1) == 0 )
   {
-    sub_B775C4(&ResponseCommandKind_TypeInfo);
-    sub_B775C4(&TopHomeRequest_TypeInfo);
-    sub_B775C4(&StringLiteral_21657/*"ok"*/);
-    sub_B775C4(&StringLiteral_21504/*"ng"*/);
-    byte_438D5D6 = 1;
+    sub_1B00CCC(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1B00CCC(&StringLiteral_21923/*"ok"*/, v5);
+    sub_1B00CCC(&StringLiteral_21754/*"ng"*/, v6);
+    byte_48E40B6 = 1;
   }
-  v5 = TopHomeRequest_TypeInfo;
-  if ( (BYTE3(TopHomeRequest_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !TopHomeRequest_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(TopHomeRequest_TypeInfo);
-  }
-  TopHomeRequest__clearExpirationDate((const MethodInfo *)v5);
-  if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ResponseCommandKind_TypeInfo->_2.cctor_finished )
-  {
+  TopHomeRequest__clearExpirationDate(0LL);
+  if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  }
-  v6 = ResponseCommandKind__SearchData(5, responseList, 0LL);
-  if ( v6 && ResponseData__checkError_30128096(v6, 0LL) )
-    v7 = &StringLiteral_21657/*"ok"*/;
+  v7 = ResponseCommandKind__SearchData(5, responseList, 0LL);
+  if ( v7 && ResponseData__checkError_39752340(v7, 0LL) )
+    v8 = &StringLiteral_21923/*"ok"*/;
   else
-    v7 = &StringLiteral_21504/*"ng"*/;
-  RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v7, 0LL);
+    v8 = &StringLiteral_21754/*"ng"*/;
+  RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v8, 0LL);
 }

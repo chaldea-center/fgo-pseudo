@@ -1,20 +1,20 @@
 void __fastcall WarBoardRatingBaseEntity___ctor(WarBoardRatingBaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_438D200 & 1) == 0 )
+  if ( (byte_48E3749 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_int___ctor__);
-    byte_438D200 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_int___ctor__, method);
+    byte_48E3749 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_2FE684C *)Method_DataEntityBase_int___ctor__);
   *(_QWORD *)&this->fields.id = 0LL;
   *(_QWORD *)&this->fields.viewPoint = 0LL;
   *(_QWORD *)&this->fields.adjustmentValueA2 = 0LL;
 }
 
 
-void __fastcall WarBoardRatingBaseEntity___ctor_29004300(
+void __fastcall WarBoardRatingBaseEntity___ctor_39068600(
         WarBoardRatingBaseEntity_o *this,
         WarBoardRatingBaseEntity_o *cSrc,
         const MethodInfo *method)
@@ -22,22 +22,18 @@ void __fastcall WarBoardRatingBaseEntity___ctor_29004300(
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_438D201 & 1) == 0 )
+  if ( (byte_48E374A & 1) == 0 )
   {
-    sub_B775C4(&Method_DataEntityBase_int___ctor__);
-    byte_438D201 = 1;
+    sub_1B00CCC(&Method_DataEntityBase_int___ctor__, cSrc);
+    byte_48E374A = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_21FB740 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_2FE684C *)Method_DataEntityBase_int___ctor__);
   if ( !cSrc )
-    sub_B7769C(v5, v6);
-  this->fields.id = cSrc->fields.id;
-  this->fields.type = cSrc->fields.type;
-  this->fields.viewPoint = cSrc->fields.viewPoint;
-  this->fields.adjustmentValueA1 = cSrc->fields.adjustmentValueA1;
-  this->fields.adjustmentValueA2 = cSrc->fields.adjustmentValueA2;
-  this->fields.adjustmentValueB = cSrc->fields.adjustmentValueB;
+    sub_1B00F28(v5, v6);
+  *(_OWORD *)&this->fields.id = *(_OWORD *)&cSrc->fields.id;
+  *(_QWORD *)&this->fields.adjustmentValueA2 = *(_QWORD *)&cSrc->fields.adjustmentValueA2;
 }
 
 

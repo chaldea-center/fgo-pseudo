@@ -1,53 +1,38 @@
 void __fastcall UserMissionProgressManager___cctor(const MethodInfo *method)
 {
-  System_String_array **v1; // x2
-  System_String_array **v2; // x3
-  System_Boolean_array **v3; // x4
-  System_Int32_array **v4; // x5
-  System_Int32_array *v5; // x6
-  System_Int32_array *v6; // x7
-  BattleServantConfConponent_o *static_fields; // x0
-  System_Int32_array **v8; // x1
-  UserMissionProgressManager_c *v9; // x8
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v10; // x19
-  struct UserMissionProgressManager_StaticFields *v11; // x0
-  System_String_array **v12; // x2
-  System_String_array **v13; // x3
-  System_Boolean_array **v14; // x4
-  System_Int32_array **v15; // x5
-  System_Int32_array *v16; // x6
-  System_Int32_array *v17; // x7
+  __int64 v1; // x1
+  int32_t v2; // w2
+  int32_t v3; // w3
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  System_Collections_Generic_List_object__o *v7; // x19
+  struct UserMissionProgressManager_StaticFields *static_fields; // x0
+  int32_t v9; // w2
+  int32_t v10; // w3
 
-  if ( (byte_4389DAB & 1) == 0 )
+  if ( (byte_48E39AF & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_UserMissionProgressInfo___ctor__);
-    sub_B775C4(&System_Collections_Generic_List_UserMissionProgressInfo__TypeInfo);
-    sub_B775C4(&UserMissionProgressManager_TypeInfo);
-    sub_B775C4(&StringLiteral_6763/*"Fgo_20160211_1"*/);
-    byte_4389DAB = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_UserMissionProgressInfo___ctor__, v1);
+    sub_1B00CCC(&System_Collections_Generic_List_UserMissionProgressInfo__TypeInfo, v4);
+    sub_1B00CCC(&UserMissionProgressManager_TypeInfo, v5);
+    sub_1B00CCC(&StringLiteral_6573/*"Fgo_20160211_1"*/, v6);
+    byte_48E39AF = 1;
   }
-  static_fields = (BattleServantConfConponent_o *)UserMissionProgressManager_TypeInfo->static_fields;
-  v8 = (System_Int32_array **)StringLiteral_6763/*"Fgo_20160211_1"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6763/*"Fgo_20160211_1"*/;
-  sub_B77560(static_fields, v8, v1, v2, v3, v4, v5, v6);
-  v9 = UserMissionProgressManager_TypeInfo;
-  UserMissionProgressManager_TypeInfo->static_fields->isModfiy = 0;
-  v9->static_fields->isContinueDevice = 0;
-  v10 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B77694(System_Collections_Generic_List_UserMissionProgressInfo__TypeInfo);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v10,
-    (const MethodInfo_30525D4 *)Method_System_Collections_Generic_List_UserMissionProgressInfo___ctor__);
-  v11 = UserMissionProgressManager_TypeInfo->static_fields;
-  v11->missionProgList = (struct System_Collections_Generic_List_UserMissionProgressInfo__o *)v10;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&v11->missionProgList,
-    (System_Int32_array **)v10,
-    v12,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17);
+  UserMissionProgressManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6573/*"Fgo_20160211_1"*/;
+  sub_1B00C70(
+    (ServantStatusBattleListViewItem_o *)UserMissionProgressManager_TypeInfo->static_fields,
+    StringLiteral_6573/*"Fgo_20160211_1"*/,
+    v2,
+    v3);
+  *(_WORD *)&UserMissionProgressManager_TypeInfo->static_fields->isModfiy = 0;
+  v7 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_UserMissionProgressInfo__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v7,
+    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_UserMissionProgressInfo___ctor__);
+  static_fields = UserMissionProgressManager_TypeInfo->static_fields;
+  static_fields->missionProgList = (struct System_Collections_Generic_List_UserMissionProgressInfo__o *)v7;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->missionProgList, (int32_t)v7, v9, v10);
 }
 
 
@@ -60,97 +45,96 @@ void __fastcall UserMissionProgressManager___ctor(UserMissionProgressManager_o *
 void __fastcall UserMissionProgressManager__ClearSaveDataList(const MethodInfo *method)
 {
   __int64 v1; // x1
-  UserMissionProgressManager_c *v2; // x0
-  System_Collections_Generic_List_XWeaponTrail_Element__o *missionProgList; // x8
+  __int64 v2; // x1
+  __int64 v3; // x1
+  UserMissionProgressManager_c *v4; // x0
+  struct System_Collections_Generic_List_UserMissionProgressInfo__o *missionProgList; // x8
+  int32_t size; // w2
+  int v7; // w9
 
-  if ( (byte_4389DA5 & 1) == 0 )
+  if ( (byte_48E39A9 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_UserMissionProgressInfo__Clear__);
-    sub_B775C4(&Method_System_Collections_Generic_List_UserMissionProgressInfo__get_Count__);
-    sub_B775C4(&UserMissionProgressManager_TypeInfo);
-    byte_4389DA5 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_UserMissionProgressInfo__Clear__, v1);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_UserMissionProgressInfo__get_Count__, v2);
+    sub_1B00CCC(&UserMissionProgressManager_TypeInfo, v3);
+    byte_48E39A9 = 1;
   }
-  v2 = UserMissionProgressManager_TypeInfo;
-  if ( (BYTE3(UserMissionProgressManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
+  v4 = UserMissionProgressManager_TypeInfo;
+  if ( !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UserMissionProgressManager_TypeInfo);
-    v2 = UserMissionProgressManager_TypeInfo;
+    v4 = UserMissionProgressManager_TypeInfo;
   }
-  missionProgList = (System_Collections_Generic_List_XWeaponTrail_Element__o *)v2->static_fields->missionProgList;
+  missionProgList = v4->static_fields->missionProgList;
   if ( !missionProgList )
-    goto LABEL_16;
-  if ( missionProgList->fields._size >= 1 )
+    goto LABEL_14;
+  if ( missionProgList->fields._size < 1 )
+    goto LABEL_11;
+  if ( !v4->_2.cctor_finished )
   {
-    if ( (BYTE3(v2->vtable._0_Equals.methodPtr) & 4) == 0
-      || v2->_2.cctor_finished
-      || (j_il2cpp_runtime_class_init_0(v2),
-          (missionProgList = (System_Collections_Generic_List_XWeaponTrail_Element__o *)UserMissionProgressManager_TypeInfo->static_fields->missionProgList) != 0LL) )
-    {
-      System_Collections_Generic_List_XWeaponTrail_Element___Clear(
-        missionProgList,
-        (const MethodInfo_30536A0 *)Method_System_Collections_Generic_List_UserMissionProgressInfo__Clear__);
-      v2 = UserMissionProgressManager_TypeInfo;
-      goto LABEL_12;
-    }
-LABEL_16:
-    sub_B7769C(v2, v1);
+    j_il2cpp_runtime_class_init_0(v4);
+    v4 = UserMissionProgressManager_TypeInfo;
+    missionProgList = UserMissionProgressManager_TypeInfo->static_fields->missionProgList;
+    if ( !missionProgList )
+LABEL_14:
+      sub_1B00F28(v4, v1);
   }
-LABEL_12:
-  if ( (BYTE3(v2->vtable._0_Equals.methodPtr) & 4) != 0 && !v2->_2.cctor_finished )
+  size = missionProgList->fields._size;
+  v7 = missionProgList->fields._version + 1;
+  missionProgList->fields._size = 0;
+  missionProgList->fields._version = v7;
+  if ( size >= 1 )
   {
-    j_il2cpp_runtime_class_init_0(v2);
-    v2 = UserMissionProgressManager_TypeInfo;
+    System_Array__Clear((System_Array_o *)missionProgList->fields._items, 0, size, 0LL);
+    v4 = UserMissionProgressManager_TypeInfo;
   }
-  v2->static_fields->isContinueDevice = 0;
-  v2->static_fields->isModfiy = 1;
+LABEL_11:
+  if ( !v4->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(v4);
+    v4 = UserMissionProgressManager_TypeInfo;
+  }
+  *(_WORD *)&v4->static_fields->isModfiy = 1;
 }
 
 
 void __fastcall UserMissionProgressManager__CreateContinueDeviceSaveData(const MethodInfo *method)
 {
-  UserMissionProgressManager_c *v1; // x0
-  const MethodInfo *v2; // x0
-  UserMissionProgressManager_c *v3; // x8
+  __int64 v1; // x1
+  UserMissionProgressManager_c *v2; // x0
+  const MethodInfo *v3; // x0
   const MethodInfo *v4; // x0
 
-  if ( (byte_4389DA3 & 1) == 0 )
+  if ( (byte_48E39A7 & 1) == 0 )
   {
-    sub_B775C4(&UserMissionProgressManager_TypeInfo);
-    byte_4389DA3 = 1;
+    sub_1B00CCC(&UserMissionProgressManager_TypeInfo, v1);
+    byte_48E39A7 = 1;
   }
-  v1 = UserMissionProgressManager_TypeInfo;
-  if ( (BYTE3(UserMissionProgressManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
-  {
+  v2 = UserMissionProgressManager_TypeInfo;
+  if ( !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UserMissionProgressManager_TypeInfo);
-  }
-  UserMissionProgressManager__DeleteSaveData((const MethodInfo *)v1);
-  UserMissionProgressManager__ClearSaveDataList(v2);
-  v3 = UserMissionProgressManager_TypeInfo;
-  UserMissionProgressManager_TypeInfo->static_fields->isContinueDevice = 1;
-  v3->static_fields->isModfiy = 1;
+  UserMissionProgressManager__DeleteSaveData((const MethodInfo *)v2);
+  UserMissionProgressManager__ClearSaveDataList(v3);
+  *(_WORD *)&UserMissionProgressManager_TypeInfo->static_fields->isModfiy = 257;
   UserMissionProgressManager__WriteData(v4);
 }
 
 
 void __fastcall UserMissionProgressManager__DeleteSaveData(const MethodInfo *method)
 {
-  UserMissionProgressManager_c *v1; // x0
+  __int64 v1; // x1
+  UserMissionProgressManager_c *v2; // x0
   System_String_o *SaveFileName; // x19
 
-  if ( (byte_4389DA2 & 1) == 0 )
+  if ( (byte_48E39A6 & 1) == 0 )
   {
-    sub_B775C4(&UserMissionProgressManager_TypeInfo);
-    byte_4389DA2 = 1;
+    sub_1B00CCC(&UserMissionProgressManager_TypeInfo, v1);
+    byte_48E39A6 = 1;
   }
-  v1 = UserMissionProgressManager_TypeInfo;
-  if ( (BYTE3(UserMissionProgressManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
-  {
+  v2 = UserMissionProgressManager_TypeInfo;
+  if ( !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UserMissionProgressManager_TypeInfo);
-  }
-  SaveFileName = UserMissionProgressManager__getSaveFileName((const MethodInfo *)v1);
+  SaveFileName = UserMissionProgressManager__getSaveFileName((const MethodInfo *)v2);
   if ( System_IO_File__Exists(SaveFileName, 0LL) )
     System_IO_File__Delete(SaveFileName, 0LL);
 }
@@ -159,238 +143,239 @@ void __fastcall UserMissionProgressManager__DeleteSaveData(const MethodInfo *met
 System_Collections_Generic_List_UserMissionProgressInfo__o *__fastcall UserMissionProgressManager__GetMissionProgInfoList(
         const MethodInfo *method)
 {
-  UserMissionProgressManager_c *v1; // x0
+  __int64 v1; // x1
+  UserMissionProgressManager_c *v2; // x0
 
-  if ( (byte_4389DAA & 1) == 0 )
+  if ( (byte_48E39AE & 1) == 0 )
   {
-    sub_B775C4(&UserMissionProgressManager_TypeInfo);
-    byte_4389DAA = 1;
+    sub_1B00CCC(&UserMissionProgressManager_TypeInfo, v1);
+    byte_48E39AE = 1;
   }
-  v1 = UserMissionProgressManager_TypeInfo;
-  if ( (BYTE3(UserMissionProgressManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
+  v2 = UserMissionProgressManager_TypeInfo;
+  if ( !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UserMissionProgressManager_TypeInfo);
-    v1 = UserMissionProgressManager_TypeInfo;
+    v2 = UserMissionProgressManager_TypeInfo;
   }
-  return v1->static_fields->missionProgList;
+  return v2->static_fields->missionProgList;
 }
 
 
 void __fastcall UserMissionProgressManager__Initialize(const MethodInfo *method)
 {
-  UserMissionProgressManager_c *v1; // x0
+  __int64 v1; // x1
+  UserMissionProgressManager_c *v2; // x0
 
-  if ( (byte_4389DA4 & 1) == 0 )
+  if ( (byte_48E39A8 & 1) == 0 )
   {
-    sub_B775C4(&UserMissionProgressManager_TypeInfo);
-    byte_4389DA4 = 1;
+    sub_1B00CCC(&UserMissionProgressManager_TypeInfo, v1);
+    byte_48E39A8 = 1;
   }
-  v1 = UserMissionProgressManager_TypeInfo;
-  if ( (BYTE3(UserMissionProgressManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
-  {
+  v2 = UserMissionProgressManager_TypeInfo;
+  if ( !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UserMissionProgressManager_TypeInfo);
-  }
-  UserMissionProgressManager__ReadData((const MethodInfo *)v1);
+  UserMissionProgressManager__ReadData((const MethodInfo *)v2);
 }
 
 
 bool __fastcall UserMissionProgressManager__ReadData(const MethodInfo *method)
 {
-  const MethodInfo *v1; // x0
+  __int64 v1; // x1
+  __int64 v2; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  const MethodInfo *v6; // x0
   System_String_o *SaveFileName; // x19
-  UserMissionProgressManager_c *v3; // x0
-  System_IO_Stream_o *v4; // x20
-  System_IO_BinaryReader_o *v5; // x28
-  __int64 v6; // x0
-  __int64 v7; // x1
-  System_String_o *v8; // x20
-  UserMissionProgressManager_c *v9; // x0
-  char v10; // w20
-  UserMissionProgressManager_c *v11; // x0
-  int v12; // w19
-  int v13; // w20
-  int v14; // w21
-  int v15; // w22
-  int v16; // w23
-  int v17; // w24
-  __int64 v18; // x26
-  __int64 v19; // x27
-  int v20; // w28
-  __int64 v21; // x25
-  __int64 v22; // x0
-  __int64 v23; // x1
-  UserMissionProgressManager_c *v24; // x0
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *missionProgList; // x0
-  System_IO_BinaryReader_c *klass; // x8
-  unsigned __int64 v27; // x10
-  int32_t *p_offset; // x11
-  __int64 v29; // x0
+  UserMissionProgressManager_c *v8; // x0
+  System_IO_Stream_o *v9; // x20
+  System_IO_BinaryReader_o *v10; // x19
+  __int64 v11; // x0
+  __int64 v12; // x1
+  System_String_o *v13; // x20
+  UserMissionProgressManager_c *v14; // x0
+  int v15; // w20
+  char v16; // w20
+  UserMissionProgressManager_c *v17; // x0
+  int v18; // w20
+  int v19; // w21
+  int v20; // w22
+  int v21; // w24
+  int v22; // w25
+  __int64 v23; // x26
+  __int64 v24; // x27
+  int v25; // w28
+  __int64 v26; // x23
+  __int64 v27; // x0
+  __int64 v28; // x1
+  int32_t v29; // w2
+  int32_t v30; // w3
   UserMissionProgressManager_c *v31; // x0
-  System_IO_BinaryReader_o *v32; // [xsp+0h] [xbp-70h]
-  int v33; // [xsp+8h] [xbp-68h]
+  System_Collections_Generic_List_object__o *missionProgList; // x0
+  struct System_Object_array *items; // x8
+  _QWORD *v34; // x9
+  __int64 size; // x10
+  Il2CppClass **v36; // x8
+  System_IO_BinaryReader_c *klass; // x8
+  __int64 v38; // x9
+  int32_t *p_offset; // x10
+  __int64 v40; // x0
+  UserMissionProgressManager_c *v42; // x0
 
-  if ( (byte_4389DA6 & 1) == 0 )
+  if ( (byte_48E39AA & 1) == 0 )
   {
-    sub_B775C4(&System_IO_BinaryReader_TypeInfo);
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_UserMissionProgressInfo__Add__);
-    sub_B775C4(&UserMissionProgressInfo_TypeInfo);
-    sub_B775C4(&UserMissionProgressManager_TypeInfo);
-    byte_4389DA6 = 1;
+    sub_1B00CCC(&System_IO_BinaryReader_TypeInfo, v1);
+    sub_1B00CCC(&System_IDisposable_TypeInfo, v2);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_UserMissionProgressInfo__Add__, v3);
+    sub_1B00CCC(&UserMissionProgressInfo_TypeInfo, v4);
+    sub_1B00CCC(&UserMissionProgressManager_TypeInfo, v5);
+    byte_48E39AA = 1;
   }
-  v1 = (const MethodInfo *)UserMissionProgressManager_TypeInfo;
-  if ( (BYTE3(UserMissionProgressManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
+  v6 = (const MethodInfo *)UserMissionProgressManager_TypeInfo;
+  if ( !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UserMissionProgressManager_TypeInfo);
-    v1 = (const MethodInfo *)UserMissionProgressManager_TypeInfo;
+    v6 = (const MethodInfo *)UserMissionProgressManager_TypeInfo;
   }
-  LOBYTE(v1[2].klass->_1.gc_desc) = 0;
-  SaveFileName = UserMissionProgressManager__getSaveFileName(v1);
-  if ( System_IO_File__Exists(SaveFileName, 0LL) )
+  *((_BYTE *)v6[2].virtualMethodPointer + 8) = 0;
+  SaveFileName = UserMissionProgressManager__getSaveFileName(v6);
+  if ( !System_IO_File__Exists(SaveFileName, 0LL) )
   {
-    v3 = UserMissionProgressManager_TypeInfo;
-    if ( (BYTE3(UserMissionProgressManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
-    {
+    v42 = UserMissionProgressManager_TypeInfo;
+    if ( !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UserMissionProgressManager_TypeInfo);
-    }
-    UserMissionProgressManager__ClearSaveDataList((const MethodInfo *)v3);
-    v4 = (System_IO_Stream_o *)System_IO_File__OpenRead(SaveFileName, 0LL);
-    v5 = (System_IO_BinaryReader_o *)sub_B77694(System_IO_BinaryReader_TypeInfo);
-    System_IO_BinaryReader___ctor(v5, v4, 0LL);
-    if ( !v5 )
-      sub_B7769C(v6, v7);
-    v8 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v5->klass->vtable._22_ReadString.method)(
-                              v5,
-                              v5->klass->vtable._23_ReadChars.methodPtr);
-    v9 = UserMissionProgressManager_TypeInfo;
-    if ( (BYTE3(UserMissionProgressManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(UserMissionProgressManager_TypeInfo);
-      v9 = UserMissionProgressManager_TypeInfo;
-    }
-    if ( System_String__op_Inequality(v9->static_fields->SAVE_DATA_VERSION, v8, 0LL) )
-    {
-      v33 = 273;
-    }
-    else
-    {
-      v10 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v5->klass->vtable._9_ReadBoolean.method)(
-              v5,
-              v5->klass->vtable._10_ReadByte.methodPtr);
-      v11 = UserMissionProgressManager_TypeInfo;
-      if ( (BYTE3(UserMissionProgressManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(UserMissionProgressManager_TypeInfo);
-        v11 = UserMissionProgressManager_TypeInfo;
-      }
-      v11->static_fields->isContinueDevice = v10 & 1;
-      v12 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v5->klass->vtable._15_ReadInt32.method)(
-              v5,
-              v5->klass->vtable._16_ReadUInt32.methodPtr);
-      if ( v12 >= 1 )
-      {
-        v13 = 0;
-        v32 = v5;
-        do
-        {
-          v14 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v5->klass->vtable._15_ReadInt32.method)(
-                  v5,
-                  v5->klass->vtable._16_ReadUInt32.methodPtr);
-          v15 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v5->klass->vtable._15_ReadInt32.method)(
-                  v5,
-                  v5->klass->vtable._16_ReadUInt32.methodPtr);
-          v16 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v5->klass->vtable._15_ReadInt32.method)(
-                  v5,
-                  v5->klass->vtable._16_ReadUInt32.methodPtr);
-          v17 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v5->klass->vtable._15_ReadInt32.method)(
-                  v5,
-                  v5->klass->vtable._16_ReadUInt32.methodPtr);
-          v18 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v5->klass->vtable._17_ReadInt64.method)(
-                  v5,
-                  v5->klass->vtable._18_ReadUInt64.methodPtr);
-          v19 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v5->klass->vtable._17_ReadInt64.method)(
-                  v5,
-                  v5->klass->vtable._18_ReadUInt64.methodPtr);
-          v20 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v5->klass->vtable._15_ReadInt32.method)(
-                  v5,
-                  v5->klass->vtable._16_ReadUInt32.methodPtr);
-          v21 = sub_B77694(UserMissionProgressInfo_TypeInfo);
-          System_Object___ctor((Il2CppObject *)v21, 0LL);
-          if ( !v21 )
-            sub_B7769C(v22, v23);
-          *(_DWORD *)(v21 + 16) = v14;
-          *(_DWORD *)(v21 + 20) = v15;
-          *(_DWORD *)(v21 + 24) = v16;
-          *(_DWORD *)(v21 + 28) = v17;
-          *(_QWORD *)(v21 + 32) = v18;
-          *(_QWORD *)(v21 + 40) = v19;
-          *(_DWORD *)(v21 + 48) = v20;
-          v24 = UserMissionProgressManager_TypeInfo;
-          if ( (BYTE3(UserMissionProgressManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 )
-          {
-            v5 = v32;
-            if ( !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
-            {
-              j_il2cpp_runtime_class_init_0(UserMissionProgressManager_TypeInfo);
-              v24 = UserMissionProgressManager_TypeInfo;
-            }
-          }
-          else
-          {
-            v5 = v32;
-          }
-          missionProgList = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)v24->static_fields->missionProgList;
-          if ( !missionProgList )
-            sub_B7769C(0LL, v23);
-          System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-            missionProgList,
-            (EventMissionProgressRequest_Argument_ProgressData_o *)v21,
-            (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_UserMissionProgressInfo__Add__);
-          ++v13;
-        }
-        while ( v13 < v12 );
-      }
-      v33 = 258;
-    }
-    klass = v5->klass;
-    if ( *(_WORD *)&v5->klass->_2.bitflags1 )
-    {
-      v27 = 0LL;
-      p_offset = &klass->_1.interfaceOffsets->offset;
-      while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
-      {
-        ++v27;
-        p_offset += 4;
-        if ( v27 >= *(unsigned __int16 *)&v5->klass->_2.bitflags1 )
-          goto LABEL_33;
-      }
-      v29 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
-    }
-    else
-    {
-LABEL_33:
-      v29 = sub_B0F4C0(v5, System_IDisposable_TypeInfo, 0LL);
-    }
-    (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v29)(v5, *(_QWORD *)(v29 + 8));
-    return v33 == 258;
+    UserMissionProgressManager__ClearSaveDataList((const MethodInfo *)v42);
+    return 0;
+  }
+  v8 = UserMissionProgressManager_TypeInfo;
+  if ( !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UserMissionProgressManager_TypeInfo);
+  UserMissionProgressManager__ClearSaveDataList((const MethodInfo *)v8);
+  v9 = (System_IO_Stream_o *)System_IO_File__OpenRead(SaveFileName, 0LL);
+  v10 = (System_IO_BinaryReader_o *)sub_1B00F18(System_IO_BinaryReader_TypeInfo);
+  System_IO_BinaryReader___ctor(v10, v9, 0LL);
+  if ( !v10 )
+    sub_1B00F28(v11, v12);
+  v13 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v10->klass->vtable._22_ReadString.method)(
+                             v10,
+                             v10->klass->vtable._23_ReadChars.methodPtr);
+  v14 = UserMissionProgressManager_TypeInfo;
+  if ( !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(UserMissionProgressManager_TypeInfo);
+    v14 = UserMissionProgressManager_TypeInfo;
+  }
+  if ( System_String__op_Inequality(v14->static_fields->SAVE_DATA_VERSION, v13, 0LL) )
+  {
+    v15 = 4;
   }
   else
   {
-    v31 = UserMissionProgressManager_TypeInfo;
-    if ( (BYTE3(UserMissionProgressManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
+    v16 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v10->klass->vtable._9_ReadBoolean.method)(
+            v10,
+            v10->klass->vtable._10_ReadByte.methodPtr);
+    v17 = UserMissionProgressManager_TypeInfo;
+    if ( !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UserMissionProgressManager_TypeInfo);
+      v17 = UserMissionProgressManager_TypeInfo;
     }
-    UserMissionProgressManager__ClearSaveDataList((const MethodInfo *)v31);
-    return 0;
+    v17->static_fields->isContinueDevice = v16 & 1;
+    v18 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v10->klass->vtable._15_ReadInt32.method)(
+            v10,
+            v10->klass->vtable._16_ReadUInt32.methodPtr);
+    if ( v18 >= 1 )
+    {
+      do
+      {
+        v19 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v10->klass->vtable._15_ReadInt32.method)(
+                v10,
+                v10->klass->vtable._16_ReadUInt32.methodPtr);
+        v20 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v10->klass->vtable._15_ReadInt32.method)(
+                v10,
+                v10->klass->vtable._16_ReadUInt32.methodPtr);
+        v21 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v10->klass->vtable._15_ReadInt32.method)(
+                v10,
+                v10->klass->vtable._16_ReadUInt32.methodPtr);
+        v22 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v10->klass->vtable._15_ReadInt32.method)(
+                v10,
+                v10->klass->vtable._16_ReadUInt32.methodPtr);
+        v23 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v10->klass->vtable._17_ReadInt64.method)(
+                v10,
+                v10->klass->vtable._18_ReadUInt64.methodPtr);
+        v24 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v10->klass->vtable._17_ReadInt64.method)(
+                v10,
+                v10->klass->vtable._18_ReadUInt64.methodPtr);
+        v25 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v10->klass->vtable._15_ReadInt32.method)(
+                v10,
+                v10->klass->vtable._16_ReadUInt32.methodPtr);
+        v26 = sub_1B00F18(UserMissionProgressInfo_TypeInfo);
+        System_Object___ctor((Il2CppObject *)v26, 0LL);
+        if ( !v26 )
+          sub_1B00F28(v27, v28);
+        *(_DWORD *)(v26 + 16) = v19;
+        *(_DWORD *)(v26 + 20) = v20;
+        *(_DWORD *)(v26 + 24) = v21;
+        *(_DWORD *)(v26 + 28) = v22;
+        *(_QWORD *)(v26 + 32) = v23;
+        *(_QWORD *)(v26 + 40) = v24;
+        *(_DWORD *)(v26 + 48) = v25;
+        v31 = UserMissionProgressManager_TypeInfo;
+        if ( !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
+        {
+          j_il2cpp_runtime_class_init_0(UserMissionProgressManager_TypeInfo);
+          v31 = UserMissionProgressManager_TypeInfo;
+        }
+        missionProgList = (System_Collections_Generic_List_object__o *)v31->static_fields->missionProgList;
+        if ( !missionProgList )
+          sub_1B00F28(0LL, v28);
+        items = missionProgList->fields._items;
+        v34 = Method_System_Collections_Generic_List_UserMissionProgressInfo__Add__;
+        ++missionProgList->fields._version;
+        if ( !items )
+          sub_1B00F28(missionProgList, v28);
+        size = missionProgList->fields._size;
+        if ( (unsigned int)size >= items->max_length )
+        {
+          System_Collections_Generic_List_object___AddWithResize(
+            missionProgList,
+            (Il2CppObject *)v26,
+            *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
+        }
+        else
+        {
+          v36 = &items->obj.klass + size;
+          missionProgList->fields._size = size + 1;
+          v36[4] = (Il2CppClass *)v26;
+          sub_1B00C70((ServantStatusBattleListViewItem_o *)(v36 + 4), v26, v29, v30);
+        }
+        --v18;
+      }
+      while ( v18 );
+    }
+    v15 = 7;
   }
+  klass = v10->klass;
+  v38 = *(unsigned __int16 *)(&v10->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v10->klass->_2.bitflags2 + 3) )
+  {
+    p_offset = &klass->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
+    {
+      --v38;
+      p_offset += 4;
+      if ( !v38 )
+        goto LABEL_30;
+    }
+    v40 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+  }
+  else
+  {
+LABEL_30:
+    v40 = sub_1B52CAC(v10, System_IDisposable_TypeInfo, 0LL);
+  }
+  (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v40)(v10, *(_QWORD *)(v40 + 8));
+  return v15 == 7;
 }
 
 
@@ -400,142 +385,167 @@ void __fastcall UserMissionProgressManager__SetAchiveMission(
         int32_t progStatus,
         const MethodInfo *method)
 {
-  UserMissionProgressManager_c *v5; // x0
-  System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *missionProgList; // x0
-  UserMissionProgressManager_c *v7; // x0
-  _BOOL8 v8; // x0
-  __int64 v9; // x1
-  System_Collections_Generic_List_Enumerator_T__o v10; // [xsp+8h] [xbp-48h] BYREF
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  UserMissionProgressManager_c *v9; // x0
+  System_Collections_Generic_List_object__o *missionProgList; // x0
+  _BOOL8 v11; // x0
+  __int64 v12; // x1
+  UserMissionProgressManager_c *v13; // x0
+  System_Collections_Generic_List_Enumerator_object__o v14; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4389DA9 & 1) == 0 )
+  if ( (byte_48E39AD & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_UserMissionProgressInfo__Dispose__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_UserMissionProgressInfo__MoveNext__);
-    sub_B775C4(&Method_System_Collections_Generic_List_Enumerator_UserMissionProgressInfo__get_Current__);
-    sub_B775C4(&Method_System_Collections_Generic_List_UserMissionProgressInfo__GetEnumerator__);
-    sub_B775C4(&UserMissionProgressManager_TypeInfo);
-    byte_4389DA9 = 1;
+    sub_1B00CCC(
+      &Method_System_Collections_Generic_List_Enumerator_UserMissionProgressInfo__Dispose__,
+      *(_QWORD *)&progStatus);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_UserMissionProgressInfo__MoveNext__, v5);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_UserMissionProgressInfo__get_Current__, v6);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_UserMissionProgressInfo__GetEnumerator__, v7);
+    sub_1B00CCC(&UserMissionProgressManager_TypeInfo, v8);
+    byte_48E39AD = 1;
   }
-  memset(&v10, 0, sizeof(v10));
-  v5 = UserMissionProgressManager_TypeInfo;
-  if ( (BYTE3(UserMissionProgressManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
+  v9 = UserMissionProgressManager_TypeInfo;
+  memset(&v14, 0, sizeof(v14));
+  if ( !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UserMissionProgressManager_TypeInfo);
-    v5 = UserMissionProgressManager_TypeInfo;
+    v9 = UserMissionProgressManager_TypeInfo;
   }
-  missionProgList = (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)v5->static_fields->missionProgList;
+  missionProgList = (System_Collections_Generic_List_object__o *)v9->static_fields->missionProgList;
   if ( !missionProgList )
-    sub_B7769C(0LL, *(_QWORD *)&progStatus);
-  System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-    &v10,
+    sub_1B00F28(0LL, *(_QWORD *)&progStatus);
+  System_Collections_Generic_List_object___GetEnumerator(
+    (System_Collections_Generic_List_Enumerator_T__o *)&v14,
     missionProgList,
-    (const MethodInfo_3054114 *)Method_System_Collections_Generic_List_UserMissionProgressInfo__GetEnumerator__);
+    (const MethodInfo_33C24C8 *)Method_System_Collections_Generic_List_UserMissionProgressInfo__GetEnumerator__);
   while ( 1 )
   {
-    v8 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-           &v10,
-           (const MethodInfo_225C720 *)Method_System_Collections_Generic_List_Enumerator_UserMissionProgressInfo__MoveNext__);
-    if ( !v8 )
+    v11 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v14,
+            (const MethodInfo_313E218 *)Method_System_Collections_Generic_List_Enumerator_UserMissionProgressInfo__MoveNext__);
+    if ( !v11 )
       break;
-    if ( !v10.fields.current )
-      sub_B7769C(v8, v9);
-    if ( HIDWORD(v10.fields.current[1].klass) == missionId && LODWORD(v10.fields.current[1].monitor) == 4 )
+    if ( !v14.fields._current )
+      sub_1B00F28(v11, v12);
+    if ( HIDWORD(v14.fields._current[1].klass) == missionId && LODWORD(v14.fields._current[1].monitor) == 4 )
     {
-      if ( HIDWORD(v10.fields.current[1].monitor) == progStatus )
+      if ( HIDWORD(v14.fields._current[1].monitor) == progStatus )
         break;
-      HIDWORD(v10.fields.current[1].monitor) = progStatus;
-      v7 = UserMissionProgressManager_TypeInfo;
-      if ( (BYTE3(UserMissionProgressManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
+      HIDWORD(v14.fields._current[1].monitor) = progStatus;
+      v13 = UserMissionProgressManager_TypeInfo;
+      if ( !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(UserMissionProgressManager_TypeInfo);
-        v7 = UserMissionProgressManager_TypeInfo;
+        v13 = UserMissionProgressManager_TypeInfo;
       }
-      v7->static_fields->isModfiy = 1;
+      v13->static_fields->isModfiy = 1;
     }
   }
-  System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-    &v10,
-    (const MethodInfo_225C71C *)Method_System_Collections_Generic_List_Enumerator_UserMissionProgressInfo__Dispose__);
+  System_Collections_Generic_List_Enumerator_object___Dispose(
+    &v14,
+    (const MethodInfo_313E214 *)Method_System_Collections_Generic_List_Enumerator_UserMissionProgressInfo__Dispose__);
 }
 
 
 void __fastcall UserMissionProgressManager__SetMissionProgData(int32_t eventId, const MethodInfo *method)
 {
-  void *Instance; // x0
+  __int64 v3; // x1
   __int64 v4; // x1
-  int v5; // w8
-  void *v6; // x20
-  __int64 v7; // x22
-  __int64 v8; // x8
-  int v9; // w27
-  __int64 v10; // x21
-  const MethodInfo *v11; // x1
-  UserMissionProgressManager_c *v12; // x0
-  __int64 v13; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
+  EventMissionEntity_array *Instance; // x0
+  __int64 v8; // x1
+  int max_length; // w8
+  EventMissionEntity_array *v10; // x20
+  __int64 v11; // x22
+  EventMissionEntity_o *v12; // x8
+  int32_t id; // w27
+  __int64 v14; // x21
+  const MethodInfo *v15; // x1
+  int32_t v16; // w2
+  int32_t v17; // w3
+  UserMissionProgressManager_c *v18; // x0
+  Il2CppArrayBounds *bounds; // x8
+  _QWORD *v20; // x9
+  __int64 v21; // x10
+  Il2CppArrayBounds *v22; // x8
 
-  if ( (byte_4389DA7 & 1) == 0 )
+  if ( (byte_48E39AB & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_EventMissionMaster___);
-    sub_B775C4(&Method_System_Collections_Generic_List_UserMissionProgressInfo__Add__);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B775C4(&UserMissionProgressInfo_TypeInfo);
-    sub_B775C4(&UserMissionProgressManager_TypeInfo);
-    byte_4389DA7 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_EventMissionMaster___, method);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_UserMissionProgressInfo__Add__, v3);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    sub_1B00CCC(&UserMissionProgressInfo_TypeInfo, v5);
+    sub_1B00CCC(&UserMissionProgressManager_TypeInfo, v6);
+    byte_48E39AB = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (EventMissionEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_16;
-  Instance = DataManager__GetMasterData_WarQuestSelectionMaster_(
-               (DataManager_o *)Instance,
-               (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_EventMissionMaster___);
+    goto LABEL_19;
+  Instance = (EventMissionEntity_array *)DataManager__GetMasterData_object_(
+                                           (DataManager_o *)Instance,
+                                           (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_EventMissionMaster___);
   if ( !Instance )
-    goto LABEL_16;
+    goto LABEL_19;
   Instance = EventMissionMaster__getEventMissionList((EventMissionMaster_o *)Instance, eventId, 0LL);
   if ( Instance )
   {
-    v5 = *((_DWORD *)Instance + 6);
-    v6 = Instance;
-    if ( v5 >= 1 )
+    max_length = Instance->max_length;
+    v10 = Instance;
+    if ( max_length >= 1 )
     {
-      v7 = 0LL;
+      v11 = 0LL;
       while ( 1 )
       {
-        if ( (unsigned int)v7 >= v5 )
-        {
-          v13 = sub_B776C8(Instance);
-          sub_B77668(v13, 0LL);
-        }
-        v8 = *((_QWORD *)v6 + v7 + 4);
-        if ( !v8 )
+        if ( (unsigned int)v11 >= max_length )
+          sub_1B00F30(Instance, v8);
+        v12 = v10->m_Items[v11];
+        if ( !v12 )
           break;
-        v9 = *(_DWORD *)(v8 + 16);
-        v10 = sub_B77694(UserMissionProgressInfo_TypeInfo);
-        System_Object___ctor((Il2CppObject *)v10, 0LL);
-        *(_DWORD *)(v10 + 16) = eventId;
-        *(_DWORD *)(v10 + 20) = v9;
-        UserMissionProgressInfo__checkMissionCond((UserMissionProgressInfo_o *)v10, v11);
-        v12 = UserMissionProgressManager_TypeInfo;
-        if ( (BYTE3(UserMissionProgressManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
+        id = v12->fields.id;
+        v14 = sub_1B00F18(UserMissionProgressInfo_TypeInfo);
+        System_Object___ctor((Il2CppObject *)v14, 0LL);
+        *(_DWORD *)(v14 + 16) = eventId;
+        *(_DWORD *)(v14 + 20) = id;
+        UserMissionProgressInfo__checkMissionCond((UserMissionProgressInfo_o *)v14, v15);
+        v18 = UserMissionProgressManager_TypeInfo;
+        if ( !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(UserMissionProgressManager_TypeInfo);
-          v12 = UserMissionProgressManager_TypeInfo;
+          v18 = UserMissionProgressManager_TypeInfo;
         }
-        Instance = v12->static_fields->missionProgList;
+        Instance = (EventMissionEntity_array *)v18->static_fields->missionProgList;
         if ( !Instance )
           break;
-        System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-          (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)Instance,
-          (EventMissionProgressRequest_Argument_ProgressData_o *)v10,
-          (const MethodInfo_3053298 *)Method_System_Collections_Generic_List_UserMissionProgressInfo__Add__);
-        v5 = *((_DWORD *)v6 + 6);
-        if ( (int)++v7 >= v5 )
+        bounds = Instance->bounds;
+        v20 = Method_System_Collections_Generic_List_UserMissionProgressInfo__Add__;
+        ++*(&Instance->max_length + 1);
+        if ( !bounds )
+          break;
+        v21 = (int)Instance->max_length;
+        if ( (unsigned int)v21 >= bounds[3].length )
+        {
+          System_Collections_Generic_List_object___AddWithResize(
+            (System_Collections_Generic_List_object__o *)Instance,
+            (Il2CppObject *)v14,
+            *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+        }
+        else
+        {
+          v22 = &bounds[v21];
+          Instance->max_length = v21 + 1;
+          v22[4] = (Il2CppArrayBounds)v14;
+          sub_1B00C70((ServantStatusBattleListViewItem_o *)&v22[4], v14, v16, v17);
+        }
+        max_length = v10->max_length;
+        if ( (int)++v11 >= max_length )
           return;
       }
-LABEL_16:
-      sub_B7769C(Instance, v4);
+LABEL_19:
+      sub_1B00F28(Instance, v8);
     }
   }
 }
@@ -543,201 +553,200 @@ LABEL_16:
 
 bool __fastcall UserMissionProgressManager__WriteData(const MethodInfo *method)
 {
-  UserMissionProgressManager_c *v1; // x0
-  struct UserMissionProgressManager_StaticFields *static_fields; // x8
-  bool *p_isModfiy; // x8
-  _BOOL4 isModfiy; // t1
-  ManagerConfig_c *v5; // x0
+  __int64 v1; // x1
+  __int64 v2; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
   UserMissionProgressManager_c *v7; // x0
+  struct UserMissionProgressManager_StaticFields *static_fields; // x8
+  ManagerConfig_c *v9; // x0
+  UserMissionProgressManager_c *v11; // x0
   System_String_o *SaveFileName; // x0
-  System_IO_Stream_o *v9; // x20
-  System_IO_BinaryWriter_o *v10; // x19
-  __int64 v11; // x1
-  UserMissionProgressManager_c *v12; // x0
-  struct UserMissionProgressManager_StaticFields *v13; // x8
+  System_IO_Stream_o *v13; // x20
+  System_IO_BinaryWriter_o *v14; // x19
+  __int64 v15; // x1
+  UserMissionProgressManager_c *v16; // x0
+  struct UserMissionProgressManager_StaticFields *v17; // x8
   struct System_Collections_Generic_List_UserMissionProgressInfo__o *missionProgList; // x9
   int size; // w20
-  __int64 v16; // x1
-  __int64 v17; // x22
-  UserMissionProgressManager_c *v18; // x0
-  struct System_Collections_Generic_List_UserMissionProgressInfo__o *v19; // x23
-  UserMissionProgressInfo_o *v20; // x23
+  __int64 v20; // x1
+  int32_t i; // w21
+  UserMissionProgressManager_c *v22; // x0
+  System_Collections_Generic_List_object__o *v23; // x0
+  Il2CppObject *Item; // x0
+  __int64 v25; // x1
+  Il2CppObject *v26; // x22
   System_IO_BinaryWriter_c *klass; // x8
-  unsigned __int64 v22; // x10
-  int32_t *p_offset; // x11
-  __int64 v24; // x0
+  __int64 v28; // x9
+  int32_t *p_offset; // x10
+  __int64 v30; // x0
 
-  if ( (byte_4389DA8 & 1) == 0 )
+  if ( (byte_48E39AC & 1) == 0 )
   {
-    sub_B775C4(&System_IO_BinaryWriter_TypeInfo);
-    sub_B775C4(&System_IDisposable_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_List_UserMissionProgressInfo__get_Count__);
-    sub_B775C4(&Method_System_Collections_Generic_List_UserMissionProgressInfo__get_Item__);
-    sub_B775C4(&ManagerConfig_TypeInfo);
-    sub_B775C4(&UserMissionProgressManager_TypeInfo);
-    byte_4389DA8 = 1;
+    sub_1B00CCC(&System_IO_BinaryWriter_TypeInfo, v1);
+    sub_1B00CCC(&System_IDisposable_TypeInfo, v2);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_UserMissionProgressInfo__get_Count__, v3);
+    sub_1B00CCC(&Method_System_Collections_Generic_List_UserMissionProgressInfo__get_Item__, v4);
+    sub_1B00CCC(&ManagerConfig_TypeInfo, v5);
+    sub_1B00CCC(&UserMissionProgressManager_TypeInfo, v6);
+    byte_48E39AC = 1;
   }
-  v1 = UserMissionProgressManager_TypeInfo;
-  if ( (BYTE3(UserMissionProgressManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
+  v7 = UserMissionProgressManager_TypeInfo;
+  if ( !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UserMissionProgressManager_TypeInfo);
-    v1 = UserMissionProgressManager_TypeInfo;
+    v7 = UserMissionProgressManager_TypeInfo;
   }
-  static_fields = v1->static_fields;
-  isModfiy = static_fields->isModfiy;
-  p_isModfiy = &static_fields->isModfiy;
-  if ( !isModfiy )
+  static_fields = v7->static_fields;
+  if ( !static_fields->isModfiy )
     return 0;
-  if ( (BYTE3(v1->vtable._0_Equals.methodPtr) & 4) != 0 && !v1->_2.cctor_finished )
+  if ( !v7->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v1);
-    p_isModfiy = &UserMissionProgressManager_TypeInfo->static_fields->isModfiy;
+    j_il2cpp_runtime_class_init_0(v7);
+    static_fields = UserMissionProgressManager_TypeInfo->static_fields;
   }
-  *p_isModfiy = 0;
-  v5 = ManagerConfig_TypeInfo;
-  if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !ManagerConfig_TypeInfo->_2.cctor_finished )
+  static_fields->isModfiy = 0;
+  v9 = ManagerConfig_TypeInfo;
+  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v5 = ManagerConfig_TypeInfo;
+    v9 = ManagerConfig_TypeInfo;
   }
-  if ( v5->static_fields->UseMock )
+  if ( v9->static_fields->UseMock )
     return 0;
-  v7 = UserMissionProgressManager_TypeInfo;
-  if ( (BYTE3(UserMissionProgressManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
+  v11 = UserMissionProgressManager_TypeInfo;
+  if ( !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UserMissionProgressManager_TypeInfo);
+  SaveFileName = UserMissionProgressManager__getSaveFileName((const MethodInfo *)v11);
+  v13 = (System_IO_Stream_o *)System_IO_File__OpenWrite(SaveFileName, 0LL);
+  v14 = (System_IO_BinaryWriter_o *)sub_1B00F18(System_IO_BinaryWriter_TypeInfo);
+  System_IO_BinaryWriter___ctor_60563772(v14, v13, 0LL);
+  v16 = UserMissionProgressManager_TypeInfo;
+  if ( !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UserMissionProgressManager_TypeInfo);
+    v16 = UserMissionProgressManager_TypeInfo;
   }
-  SaveFileName = UserMissionProgressManager__getSaveFileName((const MethodInfo *)v7);
-  v9 = (System_IO_Stream_o *)System_IO_File__OpenWrite(SaveFileName, 0LL);
-  v10 = (System_IO_BinaryWriter_o *)sub_B77694(System_IO_BinaryWriter_TypeInfo);
-  System_IO_BinaryWriter___ctor_40221404(v10, v9, 0LL);
-  v12 = UserMissionProgressManager_TypeInfo;
-  if ( (BYTE3(UserMissionProgressManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(UserMissionProgressManager_TypeInfo);
-    v12 = UserMissionProgressManager_TypeInfo;
-  }
-  v13 = v12->static_fields;
-  missionProgList = v13->missionProgList;
+  v17 = v16->static_fields;
+  missionProgList = v17->missionProgList;
   if ( !missionProgList )
-    sub_B7769C(v12, v11);
-  if ( !v10 )
-    sub_B7769C(v12, v11);
+    sub_1B00F28(v16, v15);
+  if ( !v14 )
+    sub_1B00F28(v16, v15);
   size = missionProgList->fields._size;
-  ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, void *))v10->klass->vtable._22_Write.method)(
-    v10,
-    v13->SAVE_DATA_VERSION,
-    v10->klass[1]._1.image);
-  ((void (__fastcall *)(System_IO_BinaryWriter_o *, bool, Il2CppMethodPointer))v10->klass->vtable._8_Write.method)(
-    v10,
+  ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, void *))v14->klass->vtable._22_Write.method)(
+    v14,
+    v17->SAVE_DATA_VERSION,
+    v14->klass[1]._1.image);
+  ((void (__fastcall *)(System_IO_BinaryWriter_o *, bool, Il2CppMethodPointer))v14->klass->vtable._8_Write.method)(
+    v14,
     UserMissionProgressManager_TypeInfo->static_fields->isContinueDevice,
-    v10->klass->vtable._9_Write.methodPtr);
-  ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v10->klass->vtable._17_Write.method)(
-    v10,
+    v14->klass->vtable._9_Write.methodPtr);
+  ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v14->klass->vtable._17_Write.method)(
+    v14,
     (unsigned int)size,
-    v10->klass->vtable._18_Write.methodPtr);
+    v14->klass->vtable._18_Write.methodPtr);
   if ( size >= 1 )
   {
-    v17 = 0LL;
-    do
+    for ( i = 0; i != size; ++i )
     {
-      v18 = UserMissionProgressManager_TypeInfo;
-      if ( (BYTE3(UserMissionProgressManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
+      v22 = UserMissionProgressManager_TypeInfo;
+      if ( !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(UserMissionProgressManager_TypeInfo);
-        v18 = UserMissionProgressManager_TypeInfo;
+        v22 = UserMissionProgressManager_TypeInfo;
       }
-      v19 = v18->static_fields->missionProgList;
-      if ( !v19 )
-        sub_B7769C(v18, v16);
-      if ( v19->fields._size <= (unsigned int)v17 )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_42293568(0LL);
-      v20 = v19->fields._items->m_Items[v17];
-      if ( !v20 )
-        sub_B7769C(v18, v16);
-      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v10->klass->vtable._17_Write.method)(
-        v10,
-        (unsigned int)v20->fields.eventId,
-        v10->klass->vtable._18_Write.methodPtr);
-      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v10->klass->vtable._17_Write.method)(
-        v10,
-        (unsigned int)v20->fields.missionId,
-        v10->klass->vtable._18_Write.methodPtr);
-      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v10->klass->vtable._17_Write.method)(
-        v10,
-        (unsigned int)v20->fields.currentProgressType,
-        v10->klass->vtable._18_Write.methodPtr);
-      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v10->klass->vtable._17_Write.method)(
-        v10,
-        (unsigned int)v20->fields.currentProgStatus,
-        v10->klass->vtable._18_Write.methodPtr);
-      ((void (__fastcall *)(System_IO_BinaryWriter_o *, int64_t, Il2CppMethodPointer))v10->klass->vtable._19_Write.method)(
-        v10,
-        v20->fields.progNum,
-        v10->klass->vtable._20_Write.methodPtr);
-      ((void (__fastcall *)(System_IO_BinaryWriter_o *, int64_t, Il2CppMethodPointer))v10->klass->vtable._19_Write.method)(
-        v10,
-        v20->fields.targetNum,
-        v10->klass->vtable._20_Write.methodPtr);
-      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v10->klass->vtable._17_Write.method)(
-        v10,
-        (unsigned int)v20->fields.condMsgType,
-        v10->klass->vtable._18_Write.methodPtr);
-      ++v17;
+      v23 = (System_Collections_Generic_List_object__o *)v22->static_fields->missionProgList;
+      if ( !v23 )
+        sub_1B00F28(0LL, v20);
+      Item = System_Collections_Generic_List_object___get_Item(
+               v23,
+               i,
+               (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_UserMissionProgressInfo__get_Item__);
+      v26 = Item;
+      if ( !Item )
+        sub_1B00F28(0LL, v25);
+      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v14->klass->vtable._17_Write.method)(
+        v14,
+        LODWORD(Item[1].klass),
+        v14->klass->vtable._18_Write.methodPtr);
+      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v14->klass->vtable._17_Write.method)(
+        v14,
+        HIDWORD(v26[1].klass),
+        v14->klass->vtable._18_Write.methodPtr);
+      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v14->klass->vtable._17_Write.method)(
+        v14,
+        LODWORD(v26[1].monitor),
+        v14->klass->vtable._18_Write.methodPtr);
+      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v14->klass->vtable._17_Write.method)(
+        v14,
+        HIDWORD(v26[1].monitor),
+        v14->klass->vtable._18_Write.methodPtr);
+      ((void (__fastcall *)(System_IO_BinaryWriter_o *, Il2CppClass *, Il2CppMethodPointer))v14->klass->vtable._19_Write.method)(
+        v14,
+        v26[2].klass,
+        v14->klass->vtable._20_Write.methodPtr);
+      ((void (__fastcall *)(System_IO_BinaryWriter_o *, void *, Il2CppMethodPointer))v14->klass->vtable._19_Write.method)(
+        v14,
+        v26[2].monitor,
+        v14->klass->vtable._20_Write.methodPtr);
+      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v14->klass->vtable._17_Write.method)(
+        v14,
+        LODWORD(v26[3].klass),
+        v14->klass->vtable._18_Write.methodPtr);
     }
-    while ( (int)v17 < size );
   }
-  klass = v10->klass;
-  if ( *(_WORD *)&v10->klass->_2.bitflags1 )
+  klass = v14->klass;
+  v28 = *(unsigned __int16 *)(&v14->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v14->klass->_2.bitflags2 + 3) )
   {
-    v22 = 0LL;
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
     {
-      ++v22;
+      --v28;
       p_offset += 4;
-      if ( v22 >= *(unsigned __int16 *)&v10->klass->_2.bitflags1 )
-        goto LABEL_37;
+      if ( !v28 )
+        goto LABEL_29;
     }
-    v24 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+    v30 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
   }
   else
   {
-LABEL_37:
-    v24 = sub_B0F4C0(v10, System_IDisposable_TypeInfo, 0LL);
+LABEL_29:
+    v30 = sub_1B52CAC(v14, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v24)(v10, *(_QWORD *)(v24 + 8));
+  (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v30)(v14, *(_QWORD *)(v30 + 8));
   return 1;
 }
 
 
 System_String_o *__fastcall UserMissionProgressManager__getSaveFileName(const MethodInfo *method)
 {
-  System_String_o *DatFileSavePath; // x19
-  UserMissionProgressManager_c *v2; // x8
+  __int64 v1; // x1
+  __int64 v2; // x1
+  System_String_o *DatFileSavePath; // x0
+  UserMissionProgressManager_c *v4; // x8
+  System_String_o *v5; // x19
 
-  if ( (byte_4389DA1 & 1) == 0 )
+  if ( (byte_48E39A5 & 1) == 0 )
   {
-    sub_B775C4(&AndroidUtil_TypeInfo);
-    sub_B775C4(&UserMissionProgressManager_TypeInfo);
-    byte_4389DA1 = 1;
+    sub_1B00CCC(&AndroidUtil_TypeInfo, v1);
+    sub_1B00CCC(&UserMissionProgressManager_TypeInfo, v2);
+    byte_48E39A5 = 1;
   }
-  if ( (BYTE3(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AndroidUtil_TypeInfo->_2.cctor_finished )
+  if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
   DatFileSavePath = AndroidUtil__GetDatFileSavePath(0LL);
-  v2 = UserMissionProgressManager_TypeInfo;
-  if ( (BYTE3(UserMissionProgressManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
+  v4 = UserMissionProgressManager_TypeInfo;
+  v5 = DatFileSavePath;
+  if ( !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UserMissionProgressManager_TypeInfo);
-    v2 = UserMissionProgressManager_TypeInfo;
+    v4 = UserMissionProgressManager_TypeInfo;
   }
-  return System_String__Concat_44901936(DatFileSavePath, v2->static_fields->saveName, 0LL);
+  return System_String__Concat_60325748(v5, v4->static_fields->saveName, 0LL);
 }
 
 
@@ -745,129 +754,127 @@ System_String_o *__fastcall UserMissionProgressManager__getSaveFileNameByEvent(
         int32_t eventId,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
   System_String_o *DatFileSavePath; // x20
-  System_String_o *FileName_28016868; // x2
+  System_String_o *FileName_36482908; // x2
 
-  if ( (byte_4389D9F & 1) == 0 )
+  if ( (byte_48E39A3 & 1) == 0 )
   {
-    sub_B775C4(&AndroidUtil_TypeInfo);
-    sub_B775C4(&DatFileName_TypeInfo);
-    sub_B775C4(&StringLiteral_892/*"/"*/);
-    byte_4389D9F = 1;
+    sub_1B00CCC(&AndroidUtil_TypeInfo, method);
+    sub_1B00CCC(&DatFileName_TypeInfo, v3);
+    sub_1B00CCC(&StringLiteral_1120/*"/"*/, v4);
+    byte_48E39A3 = 1;
   }
-  if ( (BYTE3(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AndroidUtil_TypeInfo->_2.cctor_finished )
+  if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
   DatFileSavePath = AndroidUtil__GetDatFileSavePath(0LL);
-  if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
+  if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
-  FileName_28016868 = DatFileName__getFileName_28016868(23, eventId, 0, 0LL);
-  return System_String__Concat_44904220(DatFileSavePath, (System_String_o *)StringLiteral_892/*"/"*/, FileName_28016868, 0LL);
+  FileName_36482908 = DatFileName__getFileName_36482908(23, eventId, 0, 0LL);
+  return System_String__Concat_60337008(DatFileSavePath, (System_String_o *)StringLiteral_1120/*"/"*/, FileName_36482908, 0LL);
 }
 
 
-System_String_o *__fastcall UserMissionProgressManager__getSaveFileNameByEvent_23070324(
+// local variable allocation has failed, the output may be wrong!
+System_String_o *__fastcall UserMissionProgressManager__getSaveFileNameByEvent_39267212(
         int32_t eventId,
         int32_t slot,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
+  __int64 v6; // x1
   System_String_o *DatFileSavePath; // x21
-  System_String_o *FileName_28016868; // x2
+  System_String_o *FileName_36482908; // x2
 
-  if ( (byte_4389DA0 & 1) == 0 )
+  if ( (byte_48E39A4 & 1) == 0 )
   {
-    sub_B775C4(&AndroidUtil_TypeInfo);
-    sub_B775C4(&DatFileName_TypeInfo);
-    sub_B775C4(&StringLiteral_892/*"/"*/);
-    byte_4389DA0 = 1;
+    sub_1B00CCC(&AndroidUtil_TypeInfo, *(_QWORD *)&slot);
+    sub_1B00CCC(&DatFileName_TypeInfo, v5);
+    sub_1B00CCC(&StringLiteral_1120/*"/"*/, v6);
+    byte_48E39A4 = 1;
   }
-  if ( (BYTE3(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AndroidUtil_TypeInfo->_2.cctor_finished )
+  if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
   DatFileSavePath = AndroidUtil__GetDatFileSavePath(0LL);
-  if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
+  if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
-  FileName_28016868 = DatFileName__getFileName_28016868(24, eventId, slot, 0LL);
-  return System_String__Concat_44904220(DatFileSavePath, (System_String_o *)StringLiteral_892/*"/"*/, FileName_28016868, 0LL);
+  FileName_36482908 = DatFileName__getFileName_36482908(24, eventId, slot, 0LL);
+  return System_String__Concat_60337008(DatFileSavePath, (System_String_o *)StringLiteral_1120/*"/"*/, FileName_36482908, 0LL);
 }
 
 
 void __fastcall UserMissionProgressManager__setSaveFileName(int32_t eventId, const MethodInfo *method)
 {
-  System_String_o *FileName_28016868; // x0
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
-  System_Int32_array **v10; // x19
-  UserMissionProgressManager_c *v11; // x8
+  __int64 v3; // x1
+  __int64 v4; // x1
+  System_String_o *FileName_36482908; // x0
+  System_String_o *v6; // x0
+  int32_t v7; // w2
+  int32_t v8; // w3
+  UserMissionProgressManager_c *v9; // x8
+  System_String_o *v10; // x19
   struct UserMissionProgressManager_StaticFields *static_fields; // x0
 
-  if ( (byte_4389D9D & 1) == 0 )
+  if ( (byte_48E39A1 & 1) == 0 )
   {
-    sub_B775C4(&DatFileName_TypeInfo);
-    sub_B775C4(&UserMissionProgressManager_TypeInfo);
-    sub_B775C4(&StringLiteral_892/*"/"*/);
-    byte_4389D9D = 1;
+    sub_1B00CCC(&DatFileName_TypeInfo, method);
+    sub_1B00CCC(&UserMissionProgressManager_TypeInfo, v3);
+    sub_1B00CCC(&StringLiteral_1120/*"/"*/, v4);
+    byte_48E39A1 = 1;
   }
-  if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
+  if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
-  FileName_28016868 = DatFileName__getFileName_28016868(23, eventId, 0, 0LL);
-  v10 = (System_Int32_array **)System_String__Concat_44901936(
-                                 (System_String_o *)StringLiteral_892/*"/"*/,
-                                 FileName_28016868,
-                                 0LL);
+  FileName_36482908 = DatFileName__getFileName_36482908(23, eventId, 0, 0LL);
+  v6 = System_String__Concat_60325748((System_String_o *)StringLiteral_1120/*"/"*/, FileName_36482908, 0LL);
+  v9 = UserMissionProgressManager_TypeInfo;
+  v10 = v6;
+  if ( !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(UserMissionProgressManager_TypeInfo);
+    v9 = UserMissionProgressManager_TypeInfo;
+  }
+  static_fields = v9->static_fields;
+  static_fields->saveName = v10;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->saveName, (int32_t)v10, v7, v8);
+}
+
+
+// local variable allocation has failed, the output may be wrong!
+void __fastcall UserMissionProgressManager__setSaveFileName_39266812(
+        int32_t eventId,
+        int32_t slot,
+        const MethodInfo *method)
+{
+  __int64 v5; // x1
+  __int64 v6; // x1
+  System_String_o *FileName_36482908; // x0
+  System_String_o *v8; // x0
+  int32_t v9; // w2
+  int32_t v10; // w3
+  UserMissionProgressManager_c *v11; // x8
+  System_String_o *v12; // x19
+  struct UserMissionProgressManager_StaticFields *static_fields; // x0
+
+  if ( (byte_48E39A2 & 1) == 0 )
+  {
+    sub_1B00CCC(&DatFileName_TypeInfo, *(_QWORD *)&slot);
+    sub_1B00CCC(&UserMissionProgressManager_TypeInfo, v5);
+    sub_1B00CCC(&StringLiteral_1120/*"/"*/, v6);
+    byte_48E39A2 = 1;
+  }
+  if ( !DatFileName_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
+  FileName_36482908 = DatFileName__getFileName_36482908(24, eventId, slot, 0LL);
+  v8 = System_String__Concat_60325748((System_String_o *)StringLiteral_1120/*"/"*/, FileName_36482908, 0LL);
   v11 = UserMissionProgressManager_TypeInfo;
-  if ( (BYTE3(UserMissionProgressManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
+  v12 = v8;
+  if ( !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UserMissionProgressManager_TypeInfo);
     v11 = UserMissionProgressManager_TypeInfo;
   }
   static_fields = v11->static_fields;
-  static_fields->saveName = (struct System_String_o *)v10;
-  sub_B77560((BattleServantConfConponent_o *)&static_fields->saveName, v10, v4, v5, v6, v7, v8, v9);
-}
-
-
-void __fastcall UserMissionProgressManager__setSaveFileName_23069884(
-        int32_t eventId,
-        int32_t slot,
-        const MethodInfo *method)
-{
-  System_String_o *FileName_28016868; // x0
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
-  System_Int32_array **v12; // x19
-  UserMissionProgressManager_c *v13; // x8
-  struct UserMissionProgressManager_StaticFields *static_fields; // x0
-
-  if ( (byte_4389D9E & 1) == 0 )
-  {
-    sub_B775C4(&DatFileName_TypeInfo);
-    sub_B775C4(&UserMissionProgressManager_TypeInfo);
-    sub_B775C4(&StringLiteral_892/*"/"*/);
-    byte_4389D9E = 1;
-  }
-  if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
-  FileName_28016868 = DatFileName__getFileName_28016868(24, eventId, slot, 0LL);
-  v12 = (System_Int32_array **)System_String__Concat_44901936(
-                                 (System_String_o *)StringLiteral_892/*"/"*/,
-                                 FileName_28016868,
-                                 0LL);
-  v13 = UserMissionProgressManager_TypeInfo;
-  if ( (BYTE3(UserMissionProgressManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UserMissionProgressManager_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(UserMissionProgressManager_TypeInfo);
-    v13 = UserMissionProgressManager_TypeInfo;
-  }
-  static_fields = v13->static_fields;
-  static_fields->saveName = (struct System_String_o *)v12;
-  sub_B77560((BattleServantConfConponent_o *)&static_fields->saveName, v12, v6, v7, v8, v9, v10, v11);
+  static_fields->saveName = v12;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->saveName, (int32_t)v12, v9, v10);
 }

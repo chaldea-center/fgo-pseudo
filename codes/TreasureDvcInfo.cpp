@@ -1,37 +1,31 @@
 void __fastcall TreasureDvcInfo___ctor(TreasureDvcInfo_o *this, const MethodInfo *method)
 {
-  System_Int32_array **v3; // x1
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
-  System_Int32_array **v10; // x1
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
+  int32_t v3; // w1
+  int32_t v4; // w2
+  int32_t v5; // w3
+  int32_t v6; // w1
+  struct System_String_o **p_explanation; // x19
+  int32_t v8; // w2
+  int32_t v9; // w3
 
-  if ( (byte_438D676 & 1) == 0 )
+  if ( (byte_48E396F & 1) == 0 )
   {
-    sub_B775C4(&StringLiteral_1/*""*/);
-    byte_438D676 = 1;
+    sub_1B00CCC(&StringLiteral_1/*""*/, method);
+    byte_48E396F = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   *(_QWORD *)&this->fields.id = 0LL;
   this->fields.maxLv = 0;
-  v3 = (System_Int32_array **)StringLiteral_1/*""*/;
+  v3 = (int)StringLiteral_1/*""*/;
   this->fields.name = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.name, v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Int32_array **)StringLiteral_1/*""*/;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.name, v3, v4, v5);
+  v6 = (int)StringLiteral_1/*""*/;
   this->fields.explanation = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.explanation, v10, v11, v12, v13, v14, v15, v16);
-  *(_QWORD *)&this->fields.guageCount = 0LL;
-  *(_QWORD *)&this->fields.strengthStatus = 0LL;
-  this->fields.isUse = 0;
+  p_explanation = &this->fields.explanation;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)p_explanation, v6, v8, v9);
+  p_explanation[1] = 0LL;
+  p_explanation[2] = 0LL;
+  *((_BYTE *)p_explanation + 24) = 0;
 }
 
 
@@ -53,66 +47,67 @@ bool __fastcall TreasureDvcInfo__Equals(TreasureDvcInfo_o *this, TreasureDvcInfo
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall TreasureDvcInfo__GetName(TreasureDvcInfo_o *this, int32_t svtId, const MethodInfo *method)
 {
-  DataManager_o *Instance; // x0
+  __int64 v5; // x1
   __int64 v6; // x1
-  const MethodInfo *v7; // x3
-  TreasureDvcEntity_o *v8; // x0
-  TreasureDvcEntity_o *v9; // x19
-  System_String_o *v10; // x0
-  LocalizationManager_c *v12; // x0
+  __int64 v7; // x1
+  __int64 v8; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v10; // x1
+  TreasureDvcEntity_o *v11; // x0
+  __int64 v12; // x1
+  TreasureDvcEntity_o *v13; // x19
+  System_String_o *v14; // x0
+  LocalizationManager_c *v16; // x0
 
-  if ( (byte_438D677 & 1) == 0 )
+  if ( (byte_48E3970 & 1) == 0 )
   {
-    sub_B775C4(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_B775C4(&StringLiteral_1/*""*/);
-    sub_B775C4(&StringLiteral_9554/*"NP_NAME"*/);
-    byte_438D677 = 1;
+    sub_1B00CCC(&Method_DataManager_GetMasterData_TreasureDvcMaster___, *(_QWORD *)&svtId);
+    sub_1B00CCC(&LocalizationManager_TypeInfo, v5);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    sub_1B00CCC(&StringLiteral_1/*""*/, v7);
+    sub_1B00CCC(&StringLiteral_9226/*"NP_NAME"*/, v8);
+    byte_48E3970 = 1;
   }
   if ( this->fields.id < 1 )
     return (System_String_o *)StringLiteral_1/*""*/;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
-    || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                      Instance,
-                                      (const MethodInfo_1D183F0 *)Method_DataManager_GetMasterData_TreasureDvcMaster___)) == 0LL )
+    || (Instance = DataManager__GetMasterData_object_(
+                     (DataManager_o *)Instance,
+                     (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_TreasureDvcMaster___)) == 0LL )
   {
-    sub_B7769C(Instance, v6);
+    sub_1B00F28(Instance, v10);
   }
-  v8 = TreasureDvcMaster__GetEntityCheckServantOverwrite((TreasureDvcMaster_o *)Instance, svtId, this->fields.id, v7);
-  if ( v8 )
+  v11 = TreasureDvcMaster__GetEntityCheckServantOverwrite((TreasureDvcMaster_o *)Instance, svtId, this->fields.id, 0LL);
+  v13 = v11;
+  if ( LocalizationManager_TypeInfo->_2.cctor_finished )
   {
-    v9 = v8;
-    if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
+    if ( v11 )
     {
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+LABEL_8:
+      v14 = LocalizationManager__Get((System_String_o *)StringLiteral_9226/*"NP_NAME"*/, 0LL);
+      return System_String__Format(v14, (Il2CppObject *)v13->fields.name, 0LL);
     }
-    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_9554/*"NP_NAME"*/, 0LL);
-    return System_String__Format(v10, (Il2CppObject *)v9->fields.name, 0LL);
   }
   else
   {
-    if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    }
-    if ( !byte_4388DC6 )
-    {
-      sub_B775C4(&LocalizationManager_TypeInfo);
-      byte_4388DC6 = 1;
-    }
-    v12 = LocalizationManager_TypeInfo;
-    if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !LocalizationManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v12 = LocalizationManager_TypeInfo;
-    }
-    return v12->static_fields->unknownNameText;
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    if ( v13 )
+      goto LABEL_8;
   }
+  if ( !byte_48DE045 )
+  {
+    sub_1B00CCC(&LocalizationManager_TypeInfo, v12);
+    byte_48DE045 = 1;
+  }
+  v16 = LocalizationManager_TypeInfo;
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    v16 = LocalizationManager_TypeInfo;
+  }
+  return v16->static_fields->unknownNameText;
 }

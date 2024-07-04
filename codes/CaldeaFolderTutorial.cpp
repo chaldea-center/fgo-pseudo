@@ -1,106 +1,112 @@
 void __fastcall CaldeaFolderTutorial___cctor(const MethodInfo *method)
 {
-  System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *v1; // x19
-  int32_t CALDEA_GATE_WAR_ID; // w20
-  __int64 v3; // x0
+  __int64 v1; // x1
+  __int64 v2; // x1
+  __int64 v3; // x1
   __int64 v4; // x1
-  TutorialFlag_ImageId_array *v5; // x21
-  CaldeaFolderTutorial_TutorialData_o *v6; // x22
+  __int64 v5; // x1
+  __int64 v6; // x1
+  struct CaldeaFolderTutorial_StaticFields *static_fields; // x8
+  System_Collections_Generic_Dictionary_int__object__o *v8; // x19
+  int32_t CALDEA_GATE_WAR_ID; // w20
+  __int64 v10; // x0
+  __int64 v11; // x1
+  __int64 v12; // x21
+  __int64 v13; // x22
+  int32_t v14; // w2
+  int32_t v15; // w3
   int32_t CALDEA_WEEKLY_WAR_ID; // w20
-  TutorialFlag_ImageId_array *v8; // x21
-  CaldeaFolderTutorial_TutorialData_o *v9; // x22
+  __int64 v17; // x21
+  __int64 v18; // x22
+  int32_t v19; // w2
+  int32_t v20; // w3
   int32_t CALDEA_FRIEND_STORY_WAR_ID; // w20
-  TutorialFlag_ImageId_array *v11; // x21
-  CaldeaFolderTutorial_TutorialData_o *v12; // x22
-  struct CaldeaFolderTutorial_StaticFields *static_fields; // x0
-  System_String_array **v14; // x2
-  System_String_array **v15; // x3
-  System_Boolean_array **v16; // x4
-  System_Int32_array **v17; // x5
-  System_Int32_array *v18; // x6
-  System_Int32_array *v19; // x7
-  __int64 v20; // x0
+  __int64 v22; // x21
+  __int64 v23; // x22
+  int32_t v24; // w2
+  int32_t v25; // w3
+  struct CaldeaFolderTutorial_StaticFields *v26; // x0
+  int32_t v27; // w2
+  int32_t v28; // w3
 
-  if ( (byte_438E3B2 & 1) == 0 )
+  if ( (byte_48DF4C8 & 1) == 0 )
   {
-    sub_B775C4(&CaldeaFolderTutorial_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__CaldeaFolderTutorial_TutorialData__Add__);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__CaldeaFolderTutorial_TutorialData___ctor__);
-    sub_B775C4(&System_Collections_Generic_Dictionary_int__CaldeaFolderTutorial_TutorialData__TypeInfo);
-    sub_B775C4(&TutorialFlag_ImageId___TypeInfo);
-    sub_B775C4(&CaldeaFolderTutorial_TutorialData_TypeInfo);
-    byte_438E3B2 = 1;
+    sub_1B00CCC(&CaldeaFolderTutorial_TypeInfo, v1);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_int__CaldeaFolderTutorial_TutorialData__Add__, v2);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_int__CaldeaFolderTutorial_TutorialData___ctor__, v3);
+    sub_1B00CCC(&System_Collections_Generic_Dictionary_int__CaldeaFolderTutorial_TutorialData__TypeInfo, v4);
+    sub_1B00CCC(&TutorialFlag_ImageId___TypeInfo, v5);
+    sub_1B00CCC(&CaldeaFolderTutorial_TutorialData_TypeInfo, v6);
+    byte_48DF4C8 = 1;
   }
-  CaldeaFolderTutorial_TypeInfo->static_fields->CALDEA_GATE_WAR_ID = 9999;
-  CaldeaFolderTutorial_TypeInfo->static_fields->CALDEA_WEEKLY_WAR_ID = 1002;
-  CaldeaFolderTutorial_TypeInfo->static_fields->CALDEA_FRIEND_STORY_WAR_ID = 1003;
-  v1 = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)sub_B77694(System_Collections_Generic_Dictionary_int__CaldeaFolderTutorial_TutorialData__TypeInfo);
-  System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare____ctor(
-    v1,
-    (const MethodInfo_2FF35C4 *)Method_System_Collections_Generic_Dictionary_int__CaldeaFolderTutorial_TutorialData___ctor__);
-  CALDEA_GATE_WAR_ID = CaldeaFolderTutorial_TypeInfo->static_fields->CALDEA_GATE_WAR_ID;
-  v3 = sub_B775DC(TutorialFlag_ImageId___TypeInfo, 1LL);
-  if ( !v3 )
-    goto LABEL_11;
-  v5 = (TutorialFlag_ImageId_array *)v3;
-  if ( !*(_DWORD *)(v3 + 24) )
-    goto LABEL_12;
-  *(_DWORD *)(v3 + 32) = 21;
-  v6 = (CaldeaFolderTutorial_TutorialData_o *)sub_B77694(CaldeaFolderTutorial_TutorialData_TypeInfo);
-  CaldeaFolderTutorial_TutorialData___ctor(v6, v5, 129, 0LL);
-  if ( !v1 )
-    goto LABEL_11;
-  System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___Add(
-    v1,
-    CALDEA_GATE_WAR_ID,
-    (WarBoardEvalValueSquare_EvalValueSquare_o *)v6,
-    (const MethodInfo_2FF4178 *)Method_System_Collections_Generic_Dictionary_int__CaldeaFolderTutorial_TutorialData__Add__);
-  CALDEA_WEEKLY_WAR_ID = CaldeaFolderTutorial_TypeInfo->static_fields->CALDEA_WEEKLY_WAR_ID;
-  v3 = sub_B775DC(TutorialFlag_ImageId___TypeInfo, 1LL);
-  if ( !v3 )
-    goto LABEL_11;
-  v8 = (TutorialFlag_ImageId_array *)v3;
-  if ( !*(_DWORD *)(v3 + 24) )
-    goto LABEL_12;
-  *(_DWORD *)(v3 + 32) = 22;
-  v9 = (CaldeaFolderTutorial_TutorialData_o *)sub_B77694(CaldeaFolderTutorial_TutorialData_TypeInfo);
-  CaldeaFolderTutorial_TutorialData___ctor(v9, v8, 130, 0LL);
-  System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___Add(
-    v1,
-    CALDEA_WEEKLY_WAR_ID,
-    (WarBoardEvalValueSquare_EvalValueSquare_o *)v9,
-    (const MethodInfo_2FF4178 *)Method_System_Collections_Generic_Dictionary_int__CaldeaFolderTutorial_TutorialData__Add__);
-  CALDEA_FRIEND_STORY_WAR_ID = CaldeaFolderTutorial_TypeInfo->static_fields->CALDEA_FRIEND_STORY_WAR_ID;
-  v3 = sub_B775DC(TutorialFlag_ImageId___TypeInfo, 1LL);
-  if ( !v3 )
-LABEL_11:
-    sub_B7769C(v3, v4);
-  v11 = (TutorialFlag_ImageId_array *)v3;
-  if ( !*(_DWORD *)(v3 + 24) )
-  {
-LABEL_12:
-    v20 = sub_B776C8(v3);
-    sub_B77668(v20, 0LL);
-  }
-  *(_DWORD *)(v3 + 32) = 33;
-  v12 = (CaldeaFolderTutorial_TutorialData_o *)sub_B77694(CaldeaFolderTutorial_TutorialData_TypeInfo);
-  CaldeaFolderTutorial_TutorialData___ctor(v12, v11, 131, 0LL);
-  System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___Add(
-    v1,
-    CALDEA_FRIEND_STORY_WAR_ID,
-    (WarBoardEvalValueSquare_EvalValueSquare_o *)v12,
-    (const MethodInfo_2FF4178 *)Method_System_Collections_Generic_Dictionary_int__CaldeaFolderTutorial_TutorialData__Add__);
   static_fields = CaldeaFolderTutorial_TypeInfo->static_fields;
-  static_fields->FolderTutorials = (struct System_Collections_Generic_Dictionary_int__CaldeaFolderTutorial_TutorialData__o *)v1;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&static_fields->FolderTutorials,
-    (System_Int32_array **)v1,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18,
-    v19);
+  *(_QWORD *)&static_fields->CALDEA_GATE_WAR_ID = 0x3EA0000270FLL;
+  static_fields->CALDEA_FRIEND_STORY_WAR_ID = 1003;
+  v8 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1B00F18(System_Collections_Generic_Dictionary_int__CaldeaFolderTutorial_TutorialData__TypeInfo);
+  System_Collections_Generic_Dictionary_int__object____ctor(
+    v8,
+    (const MethodInfo_3035B58 *)Method_System_Collections_Generic_Dictionary_int__CaldeaFolderTutorial_TutorialData___ctor__);
+  CALDEA_GATE_WAR_ID = CaldeaFolderTutorial_TypeInfo->static_fields->CALDEA_GATE_WAR_ID;
+  v10 = sub_1B00D74(TutorialFlag_ImageId___TypeInfo, 1LL);
+  if ( !v10 )
+    goto LABEL_11;
+  v12 = v10;
+  if ( !*(_DWORD *)(v10 + 24) )
+    goto LABEL_12;
+  *(_DWORD *)(v10 + 32) = 21;
+  v13 = sub_1B00F18(CaldeaFolderTutorial_TutorialData_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v13, 0LL);
+  *(_QWORD *)(v13 + 16) = v12;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v13 + 16), v12, v14, v15);
+  *(_DWORD *)(v13 + 24) = 129;
+  if ( !v8 )
+    goto LABEL_11;
+  System_Collections_Generic_Dictionary_int__object___Add(
+    v8,
+    CALDEA_GATE_WAR_ID,
+    (Il2CppObject *)v13,
+    (const MethodInfo_303652C *)Method_System_Collections_Generic_Dictionary_int__CaldeaFolderTutorial_TutorialData__Add__);
+  CALDEA_WEEKLY_WAR_ID = CaldeaFolderTutorial_TypeInfo->static_fields->CALDEA_WEEKLY_WAR_ID;
+  v10 = sub_1B00D74(TutorialFlag_ImageId___TypeInfo, 1LL);
+  if ( !v10 )
+    goto LABEL_11;
+  v17 = v10;
+  if ( !*(_DWORD *)(v10 + 24) )
+    goto LABEL_12;
+  *(_DWORD *)(v10 + 32) = 22;
+  v18 = sub_1B00F18(CaldeaFolderTutorial_TutorialData_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v18, 0LL);
+  *(_QWORD *)(v18 + 16) = v17;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v18 + 16), v17, v19, v20);
+  *(_DWORD *)(v18 + 24) = 130;
+  System_Collections_Generic_Dictionary_int__object___Add(
+    v8,
+    CALDEA_WEEKLY_WAR_ID,
+    (Il2CppObject *)v18,
+    (const MethodInfo_303652C *)Method_System_Collections_Generic_Dictionary_int__CaldeaFolderTutorial_TutorialData__Add__);
+  CALDEA_FRIEND_STORY_WAR_ID = CaldeaFolderTutorial_TypeInfo->static_fields->CALDEA_FRIEND_STORY_WAR_ID;
+  v10 = sub_1B00D74(TutorialFlag_ImageId___TypeInfo, 1LL);
+  if ( !v10 )
+LABEL_11:
+    sub_1B00F28(v10, v11);
+  v22 = v10;
+  if ( !*(_DWORD *)(v10 + 24) )
+LABEL_12:
+    sub_1B00F30(v10, v11);
+  *(_DWORD *)(v10 + 32) = 33;
+  v23 = sub_1B00F18(CaldeaFolderTutorial_TutorialData_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v23, 0LL);
+  *(_QWORD *)(v23 + 16) = v22;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v23 + 16), v22, v24, v25);
+  *(_DWORD *)(v23 + 24) = 131;
+  System_Collections_Generic_Dictionary_int__object___Add(
+    v8,
+    CALDEA_FRIEND_STORY_WAR_ID,
+    (Il2CppObject *)v23,
+    (const MethodInfo_303652C *)Method_System_Collections_Generic_Dictionary_int__CaldeaFolderTutorial_TutorialData__Add__);
+  v26 = CaldeaFolderTutorial_TypeInfo->static_fields;
+  v26->FolderTutorials = (struct System_Collections_Generic_Dictionary_int__CaldeaFolderTutorial_TutorialData__o *)v8;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v26->FolderTutorials, (int32_t)v8, v27, v28);
 }
 
 
@@ -112,64 +118,70 @@ void __fastcall CaldeaFolderTutorial___ctor(CaldeaFolderTutorial_o *this, const 
 
 bool __fastcall CaldeaFolderTutorial__CheckTutorial(int32_t warId, System_Action_o *callback, const MethodInfo *method)
 {
-  CaldeaFolderTutorial_c *v5; // x0
-  System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__o *FolderTutorials; // x0
-  float eval; // w20
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  CaldeaFolderTutorial_c *v8; // x0
+  System_Collections_Generic_Dictionary_int__object__o *FolderTutorials; // x0
+  int32_t monitor; // w20
   bool IsTutorialAvailable; // w20
   int32_t EventID; // w0
-  WarBoardEvalValueSquare_CalcEval_o *value; // [xsp+8h] [xbp-18h] BYREF
+  Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_438E3B0 & 1) == 0 )
+  if ( (byte_48DF4C6 & 1) == 0 )
   {
-    sub_B775C4(&CaldeaFolderTutorial_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__CaldeaFolderTutorial_TutorialData__TryGetValue__);
-    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B775C4(&TutorialFlag_TypeInfo);
-    byte_438E3B0 = 1;
+    sub_1B00CCC(&CaldeaFolderTutorial_TypeInfo, callback);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_int__CaldeaFolderTutorial_TutorialData__TryGetValue__, v5);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    sub_1B00CCC(&TutorialFlag_TypeInfo, v7);
+    byte_48DF4C6 = 1;
   }
+  v8 = CaldeaFolderTutorial_TypeInfo;
   value = 0LL;
-  v5 = CaldeaFolderTutorial_TypeInfo;
-  if ( (BYTE3(CaldeaFolderTutorial_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CaldeaFolderTutorial_TypeInfo->_2.cctor_finished )
+  if ( !CaldeaFolderTutorial_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CaldeaFolderTutorial_TypeInfo);
-    v5 = CaldeaFolderTutorial_TypeInfo;
+    v8 = CaldeaFolderTutorial_TypeInfo;
   }
-  FolderTutorials = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__o *)v5->static_fields->FolderTutorials;
+  FolderTutorials = (System_Collections_Generic_Dictionary_int__object__o *)v8->static_fields->FolderTutorials;
   if ( !FolderTutorials )
-    goto LABEL_20;
-  FolderTutorials = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__o *)System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval___TryGetValue(FolderTutorials, warId, &value, (const MethodInfo_2FF5E9C *)Method_System_Collections_Generic_Dictionary_int__CaldeaFolderTutorial_TutorialData__TryGetValue__);
+    goto LABEL_18;
+  FolderTutorials = (System_Collections_Generic_Dictionary_int__object__o *)System_Collections_Generic_Dictionary_int__object___TryGetValue(
+                                                                              FolderTutorials,
+                                                                              warId,
+                                                                              &value,
+                                                                              (const MethodInfo_3037CB8 *)Method_System_Collections_Generic_Dictionary_int__CaldeaFolderTutorial_TutorialData__TryGetValue__);
   if ( ((unsigned __int8)FolderTutorials & 1) == 0 )
   {
     EventID = WarMaster__getEventID(warId, 0LL);
     IsTutorialAvailable = EventTutorialMaster__IsTutorialAvailable(EventID, 33, 0, 0, 0, 0, 0LL);
-    goto LABEL_15;
+    goto LABEL_13;
   }
   if ( !value )
-LABEL_20:
-    sub_B7769C(FolderTutorials, callback);
-  eval = value->fields.eval;
-  if ( (BYTE3(TutorialFlag_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !TutorialFlag_TypeInfo->_2.cctor_finished )
+LABEL_18:
+    sub_1B00F28(FolderTutorials, callback);
+  monitor = (int32_t)value[1].monitor;
+  if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  if ( !TutorialFlag__Get_29515752(SLODWORD(eval), 0LL) )
+  if ( !TutorialFlag__Get_36489460(monitor, 0LL) )
   {
-    FolderTutorials = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    FolderTutorials = (System_Collections_Generic_Dictionary_int__object__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( value && FolderTutorials )
     {
       CommonUI__OpenTutorialImageDialog(
         (CommonUI_o *)FolderTutorials,
-        *(TutorialFlag_ImageId_array **)&value->fields.viewpoint,
-        LODWORD(value->fields.eval),
+        (TutorialFlag_ImageId_array *)value[1].klass,
+        (int32_t)value[1].monitor,
         callback,
         0LL,
         0LL,
         0LL);
       return 1;
     }
-    goto LABEL_20;
+    goto LABEL_18;
   }
   IsTutorialAvailable = 1;
-LABEL_15:
+LABEL_13:
   ActionExtensions__Call(callback, 0LL);
   return IsTutorialAvailable;
 }
@@ -178,45 +190,51 @@ LABEL_15:
 void __fastcall CaldeaFolderTutorial__OnClickHelp(int32_t warId, const MethodInfo *method)
 {
   __int64 v3; // x1
-  CaldeaFolderTutorial_c *v4; // x0
-  CommonUI_o *FolderTutorials; // x0
+  __int64 v4; // x1
+  __int64 v5; // x1
+  _QWORD *v6; // x0
+  System_Reflection_MethodBase_o *v7; // x0
+  __int64 v8; // x1
+  CaldeaFolderTutorial_c *v9; // x0
+  Il2CppObject *FolderTutorials; // x0
   int32_t EventID; // w0
-  WarBoardEvalValueSquare_CalcEval_o *value; // [xsp+8h] [xbp-18h] BYREF
+  Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_438E3B1 & 1) == 0 )
+  if ( (byte_48DF4C7 & 1) == 0 )
   {
-    sub_B775C4(&CaldeaFolderTutorial_TypeInfo);
-    sub_B775C4(&Method_System_Collections_Generic_Dictionary_int__CaldeaFolderTutorial_TutorialData__TryGetValue__);
-    sub_B775C4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_B775C4(&SoundManager_TypeInfo);
-    byte_438E3B1 = 1;
+    sub_1B00CCC(&Method_CaldeaFolderTutorial_OnClickHelp__, method);
+    sub_1B00CCC(&CaldeaFolderTutorial_TypeInfo, v3);
+    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_int__CaldeaFolderTutorial_TutorialData__TryGetValue__, v4);
+    sub_1B00CCC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    byte_48DF4C7 = 1;
   }
+  v6 = Method_CaldeaFolderTutorial_OnClickHelp__;
   value = 0LL;
-  if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  SoundManager__playSystemSe(0, 0LL);
-  v4 = CaldeaFolderTutorial_TypeInfo;
-  if ( (BYTE3(CaldeaFolderTutorial_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !CaldeaFolderTutorial_TypeInfo->_2.cctor_finished )
+  if ( (*((_BYTE *)Method_CaldeaFolderTutorial_OnClickHelp__ + 83) & 2) != 0 )
+    v6 = (_QWORD *)sub_1B00CE4(Method_CaldeaFolderTutorial_OnClickHelp__);
+  v7 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v6, v6[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v7, 0, 0LL);
+  v9 = CaldeaFolderTutorial_TypeInfo;
+  if ( !CaldeaFolderTutorial_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CaldeaFolderTutorial_TypeInfo);
-    v4 = CaldeaFolderTutorial_TypeInfo;
+    v9 = CaldeaFolderTutorial_TypeInfo;
   }
-  FolderTutorials = (CommonUI_o *)v4->static_fields->FolderTutorials;
+  FolderTutorials = (Il2CppObject *)v9->static_fields->FolderTutorials;
   if ( !FolderTutorials )
-    goto LABEL_16;
-  if ( System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval___TryGetValue(
-         (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__o *)FolderTutorials,
+    goto LABEL_14;
+  if ( System_Collections_Generic_Dictionary_int__object___TryGetValue(
+         (System_Collections_Generic_Dictionary_int__object__o *)FolderTutorials,
          warId,
          &value,
-         (const MethodInfo_2FF5E9C *)Method_System_Collections_Generic_Dictionary_int__CaldeaFolderTutorial_TutorialData__TryGetValue__) )
+         (const MethodInfo_3037CB8 *)Method_System_Collections_Generic_Dictionary_int__CaldeaFolderTutorial_TutorialData__TryGetValue__) )
   {
-    FolderTutorials = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2D1653C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    FolderTutorials = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( value && FolderTutorials )
     {
       CommonUI__OpenTutorialImageDialog(
-        FolderTutorials,
-        *(TutorialFlag_ImageId_array **)&value->fields.viewpoint,
+        (CommonUI_o *)FolderTutorials,
+        (TutorialFlag_ImageId_array *)value[1].klass,
         -1,
         0LL,
         0LL,
@@ -224,8 +242,8 @@ void __fastcall CaldeaFolderTutorial__OnClickHelp(int32_t warId, const MethodInf
         0LL);
       return;
     }
-LABEL_16:
-    sub_B7769C(FolderTutorials, v3);
+LABEL_14:
+    sub_1B00F28(FolderTutorials, v8);
   }
   EventID = WarMaster__getEventID(warId, 0LL);
   EventTutorialMaster__ShowTutorialWithoutCheck(EventID, 33, 0LL, 0LL);
@@ -239,11 +257,13 @@ void __fastcall CaldeaFolderTutorial_TutorialData___ctor(
         const MethodInfo *method)
 {
   CaldeaFolderTutorial_TutorialData_o *v6; // x21
+  int32_t v7; // w2
+  int32_t v8; // w3
 
   v6 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v6->fields.imageIds = imgs;
   v6 = (CaldeaFolderTutorial_TutorialData_o *)((char *)v6 + 16);
-  sub_B77560(v6);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)v6, (int32_t)imgs, v7, v8);
   LODWORD(v6->monitor) = flg;
 }

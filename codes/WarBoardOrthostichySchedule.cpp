@@ -3,55 +3,39 @@ void __fastcall WarBoardOrthostichySchedule___ctor(
         WarBoardTaskBase_array *taskBases,
         const MethodInfo *method)
 {
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  int32_t v5; // w2
+  int32_t v6; // w3
 
-  WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, 0LL);
+  WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)taskBases);
   this->fields.tasks = taskBases;
-  sub_B77560(
-    (BattleServantConfConponent_o *)&this->fields.tasks,
-    (System_Int32_array **)taskBases,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.tasks, (int32_t)taskBases, v5, v6);
 }
 
 
-void __fastcall WarBoardOrthostichySchedule___ctor_24884056(
+void __fastcall WarBoardOrthostichySchedule___ctor_34533184(
         WarBoardOrthostichySchedule_o *this,
         System_Collections_Generic_List_WarBoardTaskBase__o *taskBases,
         const MethodInfo *method)
 {
   __int64 v5; // x0
   __int64 v6; // x1
-  struct WarBoardTaskBase_array *v7; // x0
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
+  System_Object_array *v7; // x0
+  int32_t v8; // w2
+  int32_t v9; // w3
 
-  if ( (byte_438AEC0 & 1) == 0 )
+  if ( (byte_48E07C7 & 1) == 0 )
   {
-    sub_B775C4(&Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__);
-    byte_438AEC0 = 1;
+    sub_1B00CCC(&Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__, taskBases);
+    byte_48E07C7 = 1;
   }
-  WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, 0LL);
+  WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)taskBases);
   if ( !taskBases )
-    sub_B7769C(v5, v6);
-  v7 = (struct WarBoardTaskBase_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
-                                          (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)taskBases,
-                                          (const MethodInfo_30553E4 *)Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__);
-  this->fields.tasks = v7;
-  sub_B77560((BattleServantConfConponent_o *)&this->fields.tasks, (System_Int32_array **)v7, v8, v9, v10, v11, v12, v13);
+    sub_1B00F28(v5, v6);
+  v7 = System_Collections_Generic_List_object___ToArray(
+         (System_Collections_Generic_List_object__o *)taskBases,
+         (const MethodInfo_33C3528 *)Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__);
+  this->fields.tasks = (struct WarBoardTaskBase_array *)v7;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.tasks, (int32_t)v7, v8, v9);
 }
 
 
@@ -60,39 +44,46 @@ System_Collections_IEnumerator_o *__fastcall WarBoardOrthostichySchedule__Execut
         const MethodInfo *method)
 {
   __int64 v3; // x20
-  __int64 v4; // x0
-  __int64 v5; // x1
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  int32_t v4; // w2
+  int32_t v5; // w3
 
-  if ( (byte_438AEC1 & 1) == 0 )
+  if ( (byte_48E07C8 & 1) == 0 )
   {
-    sub_B775C4(&WarBoardOrthostichySchedule__Execute_d__4_TypeInfo);
-    byte_438AEC1 = 1;
+    sub_1B00CCC(&WarBoardOrthostichySchedule__Execute_d__4_TypeInfo, method);
+    byte_48E07C8 = 1;
   }
-  v3 = sub_B77694(WarBoardOrthostichySchedule__Execute_d__4_TypeInfo);
-  WarBoardOrthostichySchedule__Execute_d__4___ctor((WarBoardOrthostichySchedule__Execute_d__4_o *)v3, 0, 0LL);
-  if ( !v3 )
-    sub_B7769C(v4, v5);
+  v3 = sub_1B00F18(WarBoardOrthostichySchedule__Execute_d__4_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v3, 0LL);
+  *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_B77560((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
 
 void __fastcall WarBoardOrthostichySchedule__OnEnd(WarBoardOrthostichySchedule_o *this, const MethodInfo *method)
 {
-  WarBoardTaskBase__OnEnd((WarBoardTaskBase_o *)this, 0LL);
+  struct WarBoardTaskBase_TaskCallback_o *EndCallback; // x8
+
+  EndCallback = this->fields.EndCallback;
+  this->fields._isPlaying_k__BackingField = 0;
+  if ( EndCallback )
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))EndCallback->fields.m_target)(
+      EndCallback->fields.original_method_info,
+      *(_QWORD *)&EndCallback->fields.extra_arg);
 }
 
 
 void __fastcall WarBoardOrthostichySchedule__OnStart(WarBoardOrthostichySchedule_o *this, const MethodInfo *method)
 {
-  WarBoardTaskBase__OnStart((WarBoardTaskBase_o *)this, 0LL);
+  struct WarBoardTaskBase_TaskCallback_o *StartCallback; // x8
+
+  StartCallback = this->fields.StartCallback;
+  this->fields._isPlaying_k__BackingField = 1;
+  if ( StartCallback )
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))StartCallback->fields.m_target)(
+      StartCallback->fields.original_method_info,
+      *(_QWORD *)&StartCallback->fields.extra_arg);
 }
 
 
@@ -115,59 +106,43 @@ bool __fastcall WarBoardOrthostichySchedule__Execute_d__4__MoveNext(
   struct WarBoardOrthostichySchedule_o *_4__this; // x22
   struct WarBoardTaskBase_array *tasks; // x9
   int32_t max_length; // w9
-  int32_t *p_i_5__3; // x21
-  int32_t v8; // w8
-  BattleServantConfConponent_o *p_executes_5__4; // x20
-  struct WarBoardTaskBase_array *v10; // x10
-  struct WarBoardTaskBase_array *v11; // x8
-  __int64 v12; // x9
-  System_Int32_array **v13; // x0
-  System_String_array **v14; // x2
-  System_String_array **v15; // x3
-  System_Boolean_array **v16; // x4
-  System_Int32_array **v17; // x5
-  System_Int32_array *v18; // x6
-  System_Int32_array *v19; // x7
-  BattleServantConfConponent_c *klass; // x21
-  _QWORD *image; // x8
-  unsigned __int64 v22; // x10
-  int *v23; // x11
-  __int64 v24; // x0
-  struct WarBoardTaskBase_array *v25; // x8
+  int32_t v7; // w8
+  struct WarBoardTaskBase_array *v8; // x10
+  struct WarBoardTaskBase_array *v9; // x8
   __int64 i_5__3; // x9
-  System_String_array **v27; // x2
-  System_String_array **v28; // x3
-  System_Boolean_array **v29; // x4
-  System_Int32_array **v30; // x5
-  System_Int32_array *v31; // x6
-  System_Int32_array *v32; // x7
+  __int64 v11; // x0
+  int32_t v12; // w2
+  int32_t v13; // w3
+  struct System_Collections_IEnumerator_o *executes_5__4; // x21
+  System_Collections_IEnumerator_c *klass; // x8
+  __int64 v16; // x9
+  int *p_offset; // x10
+  __int64 p_method; // x0
+  struct WarBoardTaskBase_array *v19; // x8
+  __int64 v20; // x9
+  int32_t v21; // w2
+  int32_t v22; // w3
   bool result; // w0
-  BattleServantConfConponent_c *v34; // x20
-  _QWORD *v35; // x8
-  unsigned __int64 v36; // x10
-  System_Collections_IEnumerator_c **v37; // x11
-  __int64 v38; // x0
-  System_Int32_array **v39; // x0
-  BattleServantConfConponent_o *p__2__current; // x19
-  System_String_array **v41; // x2
-  System_String_array **v42; // x3
-  System_Boolean_array **v43; // x4
-  System_Int32_array **v44; // x5
-  System_Int32_array *v45; // x6
-  System_Int32_array *v46; // x7
-  __int64 v47; // x0
+  struct System_Collections_IEnumerator_o *v24; // x20
+  System_Collections_IEnumerator_c *v25; // x8
+  __int64 v26; // x9
+  System_Collections_IEnumerator_c **v27; // x10
+  __int64 v28; // x0
+  __int64 v29; // x0
+  ServantStatusBattleListViewItem_o *p__2__current; // x19
+  int32_t v31; // w2
+  int32_t v32; // w3
 
   v2 = this;
-  if ( (byte_4389258 & 1) == 0 )
+  if ( (byte_48E07C9 & 1) == 0 )
   {
-    this = (WarBoardOrthostichySchedule__Execute_d__4_o *)sub_B775C4(&System_Collections_IEnumerator_TypeInfo);
-    byte_4389258 = 1;
+    this = (WarBoardOrthostichySchedule__Execute_d__4_o *)sub_1B00CCC(&System_Collections_IEnumerator_TypeInfo, method);
+    byte_48E07C9 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
   if ( _1__state == 1 )
   {
-    p_executes_5__4 = (BattleServantConfConponent_o *)&v2->fields._executes_5__4;
     v2->fields.__1__state = -1;
     goto LABEL_16;
   }
@@ -180,127 +155,118 @@ bool __fastcall WarBoardOrthostichySchedule__Execute_d__4__MoveNext(
   if ( !tasks )
     goto LABEL_40;
   max_length = tasks->max_length;
-  v2->fields._i_5__3 = 0;
-  p_i_5__3 = &v2->fields._i_5__3;
-  v8 = 0;
-  v2->fields._count_5__2 = max_length;
+  v7 = 0;
+  *(_QWORD *)&v2->fields._count_5__2 = (unsigned int)max_length;
   while ( 1 )
   {
-    if ( v8 >= max_length )
+    if ( v7 >= max_length )
       return 0;
-    v10 = _4__this->fields.tasks;
-    if ( !v10 )
+    v8 = _4__this->fields.tasks;
+    if ( !v8 )
       goto LABEL_40;
-    if ( v8 >= v10->max_length )
+    if ( v7 >= v8->max_length )
       goto LABEL_41;
-    this = (WarBoardOrthostichySchedule__Execute_d__4_o *)v10->m_Items[v8];
+    this = (WarBoardOrthostichySchedule__Execute_d__4_o *)v8->m_Items[v7];
     if ( this )
       break;
 LABEL_29:
-    *p_i_5__3 = ++v8;
+    v2->fields._i_5__3 = ++v7;
   }
   this = (WarBoardOrthostichySchedule__Execute_d__4_o *)((__int64 (__fastcall *)(WarBoardOrthostichySchedule__Execute_d__4_o *, Il2CppMethodPointer))this->klass->vtable._5_System_IDisposable_Dispose.method)(
                                                           this,
                                                           this->klass->vtable._6_MoveNext.methodPtr);
-  v11 = _4__this->fields.tasks;
-  if ( !v11 )
+  v9 = _4__this->fields.tasks;
+  if ( !v9 )
     goto LABEL_40;
-  v12 = *p_i_5__3;
-  if ( (unsigned int)v12 >= v11->max_length )
-  {
+  i_5__3 = v2->fields._i_5__3;
+  if ( (unsigned int)i_5__3 >= v9->max_length )
 LABEL_41:
-    v47 = sub_B776C8(this);
-    sub_B77668(v47, 0LL);
-  }
-  this = (WarBoardOrthostichySchedule__Execute_d__4_o *)v11->m_Items[v12];
+    sub_1B00F30(this, method);
+  this = (WarBoardOrthostichySchedule__Execute_d__4_o *)v9->m_Items[i_5__3];
   if ( !this )
     goto LABEL_40;
-  v13 = (System_Int32_array **)((__int64 (__fastcall *)(WarBoardOrthostichySchedule__Execute_d__4_o *, Il2CppMethodPointer))this->klass->vtable._4_System_Collections_Generic_IEnumerator_System_Object__get_Current.method)(
-                                 this,
-                                 this->klass->vtable._5_System_IDisposable_Dispose.methodPtr);
-  v2->fields._executes_5__4 = (struct System_Collections_IEnumerator_o *)v13;
-  p_executes_5__4 = (BattleServantConfConponent_o *)&v2->fields._executes_5__4;
-  sub_B77560((BattleServantConfConponent_o *)&v2->fields._executes_5__4, v13, v14, v15, v16, v17, v18, v19);
+  v11 = ((__int64 (__fastcall *)(WarBoardOrthostichySchedule__Execute_d__4_o *, Il2CppMethodPointer))this->klass->vtable._4_System_Collections_Generic_IEnumerator_System_Object__get_Current.method)(
+          this,
+          this->klass->vtable._5_System_IDisposable_Dispose.methodPtr);
+  v2->fields._executes_5__4 = (struct System_Collections_IEnumerator_o *)v11;
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._executes_5__4, v11, v12, v13);
 LABEL_16:
-  klass = p_executes_5__4->klass;
-  if ( !p_executes_5__4->klass )
+  executes_5__4 = v2->fields._executes_5__4;
+  if ( !executes_5__4 )
     goto LABEL_40;
-  image = klass->_1.image;
-  if ( *((_WORD *)klass->_1.image + 149) )
+  klass = executes_5__4->klass;
+  v16 = *(unsigned __int16 *)(&executes_5__4->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&executes_5__4->klass->_2.bitflags2 + 3) )
   {
-    v22 = 0LL;
-    v23 = (int *)(image[22] + 8LL);
-    while ( *((System_Collections_IEnumerator_c **)v23 - 1) != System_Collections_IEnumerator_TypeInfo )
+    p_offset = &klass->_1.interfaceOffsets->offset;
+    while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
     {
-      ++v22;
-      v23 += 4;
-      if ( v22 >= *((unsigned __int16 *)klass->_1.image + 149) )
+      --v16;
+      p_offset += 4;
+      if ( !v16 )
         goto LABEL_21;
     }
-    v24 = (__int64)&image[2 * *v23 + 39];
+    p_method = (__int64)&klass->vtable[*p_offset].method;
   }
   else
   {
 LABEL_21:
-    v24 = sub_B0F4C0(p_executes_5__4->klass, System_Collections_IEnumerator_TypeInfo, 0LL);
+    p_method = sub_1B52CAC(v2->fields._executes_5__4, System_Collections_IEnumerator_TypeInfo, 0LL);
   }
-  this = (WarBoardOrthostichySchedule__Execute_d__4_o *)(*(__int64 (__fastcall **)(BattleServantConfConponent_c *, _QWORD))v24)(
-                                                          klass,
-                                                          *(_QWORD *)(v24 + 8));
+  this = (WarBoardOrthostichySchedule__Execute_d__4_o *)(*(__int64 (__fastcall **)(struct System_Collections_IEnumerator_o *, _QWORD))p_method)(
+                                                          executes_5__4,
+                                                          *(_QWORD *)(p_method + 8));
   if ( ((unsigned __int8)this & 1) == 0 )
   {
     if ( !_4__this )
       goto LABEL_40;
-    v25 = _4__this->fields.tasks;
-    p_i_5__3 = &v2->fields._i_5__3;
-    i_5__3 = v2->fields._i_5__3;
-    if ( !v25 )
+    v19 = _4__this->fields.tasks;
+    if ( !v19 )
       goto LABEL_40;
-    if ( (unsigned int)i_5__3 >= v25->max_length )
+    v20 = v2->fields._i_5__3;
+    if ( (unsigned int)v20 >= v19->max_length )
       goto LABEL_41;
-    this = (WarBoardOrthostichySchedule__Execute_d__4_o *)v25->m_Items[i_5__3];
+    this = (WarBoardOrthostichySchedule__Execute_d__4_o *)v19->m_Items[v20];
     if ( !this )
       goto LABEL_40;
     ((void (__fastcall *)(WarBoardOrthostichySchedule__Execute_d__4_o *, Il2CppMethodPointer))this->klass->vtable._6_MoveNext.method)(
       this,
       this->klass->vtable._7_System_Collections_IEnumerator_get_Current.methodPtr);
     v2->fields._executes_5__4 = 0LL;
-    sub_B77560(p_executes_5__4, 0LL, v27, v28, v29, v30, v31, v32);
+    sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._executes_5__4, 0, v21, v22);
     max_length = v2->fields._count_5__2;
-    v8 = v2->fields._i_5__3;
+    v7 = v2->fields._i_5__3;
     goto LABEL_29;
   }
-  v34 = p_executes_5__4->klass;
-  if ( !v34 )
+  v24 = v2->fields._executes_5__4;
+  if ( !v24 )
 LABEL_40:
-    sub_B7769C(this, method);
-  v35 = v34->_1.image;
-  if ( *((_WORD *)v34->_1.image + 149) )
+    sub_1B00F28(this, method);
+  v25 = v24->klass;
+  v26 = *(unsigned __int16 *)(&v24->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v24->klass->_2.bitflags2 + 3) )
   {
-    v36 = 0LL;
-    v37 = (System_Collections_IEnumerator_c **)(v35[22] + 8LL);
-    while ( *(v37 - 1) != System_Collections_IEnumerator_TypeInfo )
+    v27 = (System_Collections_IEnumerator_c **)&v25->_1.interfaceOffsets->offset;
+    while ( *(v27 - 1) != System_Collections_IEnumerator_TypeInfo )
     {
-      ++v36;
-      v37 += 2;
-      if ( v36 >= *((unsigned __int16 *)v34->_1.image + 149) )
+      --v26;
+      v27 += 2;
+      if ( !v26 )
         goto LABEL_37;
     }
-    v38 = (__int64)&v35[2 * *(_DWORD *)v37 + 41];
+    v28 = (__int64)&v25->vtable[*(_DWORD *)v27 + 1].method;
   }
   else
   {
 LABEL_37:
-    v38 = sub_B0F4C0(v34, System_Collections_IEnumerator_TypeInfo, 1LL);
+    v28 = sub_1B52CAC(v24, System_Collections_IEnumerator_TypeInfo, 1LL);
   }
-  v39 = (System_Int32_array **)(*(__int64 (__fastcall **)(BattleServantConfConponent_c *, _QWORD))v38)(
-                                 v34,
-                                 *(_QWORD *)(v38 + 8));
-  v2->fields.__2__current = (Il2CppObject *)v39;
-  p__2__current = (BattleServantConfConponent_o *)&v2->fields.__2__current;
-  sub_B77560(p__2__current, v39, v41, v42, v43, v44, v45, v46);
+  v29 = (*(__int64 (__fastcall **)(struct System_Collections_IEnumerator_o *, _QWORD))v28)(v24, *(_QWORD *)(v28 + 8));
+  v2->fields.__2__current = (Il2CppObject *)v29;
+  p__2__current = (ServantStatusBattleListViewItem_o *)&v2->fields.__2__current;
+  sub_1B00C70(p__2__current, v29, v31, v32);
   result = 1;
-  *(_DWORD *)&p__2__current[-1].fields.isOpenAfter = 1;
+  *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
   return result;
 }
 
@@ -321,11 +287,11 @@ void __fastcall __noreturn WarBoardOrthostichySchedule__Execute_d__4__System_Col
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_B775C8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B77694(v2);
+  v2 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B00F18(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B775C8(&Method_WarBoardOrthostichySchedule__Execute_d__4_System_Collections_IEnumerator_Reset__);
-  sub_B77668(v3, v4);
+  v4 = sub_1B00CE0(&Method_WarBoardOrthostichySchedule__Execute_d__4_System_Collections_IEnumerator_Reset__);
+  sub_1B00DF4(v3, v4);
 }
 
 

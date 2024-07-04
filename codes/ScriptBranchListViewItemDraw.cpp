@@ -11,121 +11,98 @@ void __fastcall ScriptBranchListViewItemDraw__SetItem(
         int32_t mode,
         const MethodInfo *method)
 {
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
+  __int64 v7; // x1
   System_String_o *title; // x1
   UILabel_o *titleTextLabel; // x0
   UILabel_o *commentTextLabel; // x22
-  UnityEngine_Object_o *Component_srcLineSprite; // x22
-  UIWidget_o *baseImageTexture; // x22
-  int v16; // s0
-  struct ScriptBranchListViewItem_o **p_drawItem; // x0
-  System_Int32_array **v21; // x1
-  const MethodInfo *v22; // x1
+  Il2CppObject *Component_object; // x22
+  float v12; // s0
+  float v13; // s3
+  float v14; // s1
+  float v15; // s2
+  const MethodInfo *v16; // x1
   bool IsFlagOn; // w0
   UIWidget_o *checkSprite; // x21
-  const MethodInfo *v25; // x1
-  int v26; // s0
+  const MethodInfo *v19; // x1
+  float v20; // s0
+  float v21; // s3
+  float v22; // s1
+  float v23; // s2
+  struct ScriptBranchListViewItem_o **p_drawItem; // x0
+  int32_t v25; // w1
 
-  if ( (byte_438FB46 & 1) == 0 )
+  if ( (byte_48E00A3 & 1) == 0 )
   {
-    sub_B775C4(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
-    sub_B775C4(&UnityEngine_Object_TypeInfo);
-    byte_438FB46 = 1;
+    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_TweenColor___, item);
+    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v7);
+    byte_48E00A3 = 1;
   }
-  if ( item && mode )
-  {
-    title = item->fields.title;
-    if ( title )
-    {
-      titleTextLabel = this->fields.titleTextLabel;
-      if ( !titleTextLabel )
-        goto LABEL_30;
-      UILabel__set_text(titleTextLabel, title, 0LL);
-    }
-    if ( ScriptBranchListViewItem__get_CommentText(item, (const MethodInfo *)title) )
-    {
-      commentTextLabel = this->fields.commentTextLabel;
-      titleTextLabel = (UILabel_o *)ScriptBranchListViewItem__get_CommentText(item, (const MethodInfo *)title);
-      if ( !commentTextLabel )
-        goto LABEL_30;
-      UILabel__set_text(commentTextLabel, (System_String_o *)titleTextLabel, 0LL);
-    }
-    titleTextLabel = (UILabel_o *)this->fields.baseImageTexture;
-    if ( !titleTextLabel
-      || (titleTextLabel = (UILabel_o *)UnityEngine_Component__get_gameObject(
-                                          (UnityEngine_Component_o *)titleTextLabel,
-                                          0LL)) == 0LL )
-    {
-LABEL_30:
-      sub_B7769C(titleTextLabel, title);
-    }
-    Component_srcLineSprite = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                                        (UnityEngine_GameObject_o *)titleTextLabel,
-                                                        (const MethodInfo_1DEBFC4 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
-    titleTextLabel = (UILabel_o *)UnityEngine_Object__op_Inequality(Component_srcLineSprite, 0LL, 0LL);
-    if ( ((unsigned __int8)titleTextLabel & 1) != 0 )
-    {
-      if ( !Component_srcLineSprite )
-        goto LABEL_30;
-      UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_srcLineSprite, 0, 0LL);
-    }
-    baseImageTexture = (UIWidget_o *)this->fields.baseImageTexture;
-    if ( mode == 1 )
-    {
-      *(UnityEngine_Color_o *)&v16 = UnityEngine_Color__get_gray(0LL);
-      if ( !baseImageTexture )
-        goto LABEL_30;
-    }
-    else
-    {
-      *(UnityEngine_Color_o *)&v16 = UnityEngine_Color__get_white(0LL);
-      if ( !baseImageTexture )
-        goto LABEL_30;
-    }
-    UIWidget__set_color(baseImageTexture, *(UnityEngine_Color_o *)&v16, 0LL);
-    IsFlagOn = ScriptBranchListViewItem__get_IsFlagOn(item, v22);
-    checkSprite = (UIWidget_o *)this->fields.checkSprite;
-    this->fields.checkFlag = IsFlagOn;
-    if ( ScriptBranchListViewItem__get_IsFlagOn(item, v25) )
-    {
-      *(UnityEngine_Color_o *)&v26 = UnityEngine_Color__get_white(0LL);
-      if ( !checkSprite )
-        goto LABEL_30;
-    }
-    else
-    {
-      *(UnityEngine_Color_o *)&v26 = UnityEngine_Color__get_gray(0LL);
-      if ( !checkSprite )
-        goto LABEL_30;
-    }
-    UIWidget__set_color(checkSprite, *(UnityEngine_Color_o *)&v26, 0LL);
-    this->fields.drawItem = item;
-    p_drawItem = &this->fields.drawItem;
-    v21 = (System_Int32_array **)item;
-  }
-  else
+  if ( !item || !mode )
   {
     this->fields.drawItem = 0LL;
     p_drawItem = &this->fields.drawItem;
-    v21 = 0LL;
+    v25 = 0;
+    goto LABEL_28;
   }
-  sub_B77560(
-    (BattleServantConfConponent_o *)p_drawItem,
-    v21,
-    *(System_String_array ***)&mode,
-    (System_String_array **)method,
-    v4,
-    v5,
-    v6,
-    v7);
+  title = item->fields.title;
+  if ( title )
+  {
+    titleTextLabel = this->fields.titleTextLabel;
+    if ( !titleTextLabel )
+      goto LABEL_29;
+    UILabel__set_text(titleTextLabel, title, 0LL);
+  }
+  if ( ScriptBranchListViewItem__get_CommentText(item, (const MethodInfo *)title) )
+  {
+    commentTextLabel = this->fields.commentTextLabel;
+    titleTextLabel = (UILabel_o *)ScriptBranchListViewItem__get_CommentText(item, (const MethodInfo *)title);
+    if ( !commentTextLabel )
+      goto LABEL_29;
+    UILabel__set_text(commentTextLabel, (System_String_o *)titleTextLabel, 0LL);
+  }
+  titleTextLabel = (UILabel_o *)this->fields.baseImageTexture;
+  if ( !titleTextLabel )
+    goto LABEL_29;
+  titleTextLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)titleTextLabel, 0LL);
+  if ( !titleTextLabel )
+    goto LABEL_29;
+  Component_object = UnityEngine_GameObject__GetComponent_object_(
+                       (UnityEngine_GameObject_o *)titleTextLabel,
+                       (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  titleTextLabel = (UILabel_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
+  if ( ((unsigned __int8)titleTextLabel & 1) != 0 )
+  {
+    if ( !Component_object )
+      goto LABEL_29;
+    UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 0, 0LL);
+  }
+  titleTextLabel = (UILabel_o *)this->fields.baseImageTexture;
+  v12 = mode == 1 ? 0.5 : 1.0;
+  if ( !titleTextLabel )
+    goto LABEL_29;
+  v13 = 1.0;
+  v14 = v12;
+  v15 = v12;
+  UIWidget__set_color((UIWidget_o *)titleTextLabel, *(UnityEngine_Color_o *)&v12, 0LL);
+  IsFlagOn = ScriptBranchListViewItem__get_IsFlagOn(item, v16);
+  checkSprite = (UIWidget_o *)this->fields.checkSprite;
+  this->fields.checkFlag = IsFlagOn;
+  titleTextLabel = (UILabel_o *)ScriptBranchListViewItem__get_IsFlagOn(item, v19);
+  v20 = ((unsigned __int8)titleTextLabel & 1) != 0 ? 1.0 : 0.5;
+  if ( !checkSprite )
+LABEL_29:
+    sub_1B00F28(titleTextLabel, title);
+  v21 = 1.0;
+  v22 = v20;
+  v23 = v20;
+  UIWidget__set_color(checkSprite, *(UnityEngine_Color_o *)&v20, 0LL);
+  this->fields.drawItem = item;
+  p_drawItem = &this->fields.drawItem;
+  v25 = (int)item;
+LABEL_28:
+  sub_1B00C70((ServantStatusBattleListViewItem_o *)p_drawItem, v25, mode, (int32_t)method);
 }
 
 
@@ -133,48 +110,44 @@ LABEL_30:
 void __fastcall ScriptBranchListViewItemDraw__Update(ScriptBranchListViewItemDraw_o *this, const MethodInfo *method)
 {
   ScriptBranchListViewItem_o *drawItem; // x0
-  int v4; // w20
+  _BOOL4 v4; // w20
   struct ScriptBranchListViewItem_o *v5; // x8
-  UIWidget_o *checkSprite; // x21
-  int v7; // s0
+  float v6; // s0
+  float v7; // s3
+  float v8; // s1
+  float v9; // s2
 
   drawItem = this->fields.drawItem;
-  if ( !drawItem
-    || (drawItem = (ScriptBranchListViewItem_o *)ScriptBranchListViewItem__get_IsFlagOn(drawItem, method),
-        !this->fields.drawItem) )
-  {
-LABEL_15:
-    sub_B7769C(drawItem, method);
-  }
-  v4 = (int)drawItem;
+  if ( !drawItem )
+    goto LABEL_14;
+  drawItem = (ScriptBranchListViewItem_o *)ScriptBranchListViewItem__get_IsFlagOn(drawItem, method);
+  if ( !this->fields.drawItem )
+    goto LABEL_14;
+  v4 = (unsigned __int8)drawItem & 1;
   drawItem = (ScriptBranchListViewItem_o *)ScriptBranchListViewItem__get_CommentText(this->fields.drawItem, method);
-  if ( ((v4 ^ this->fields.checkFlag) & 1) != 0 )
+  if ( this->fields.checkFlag == v4 )
+    return;
+  v5 = this->fields.drawItem;
+  if ( !v5 )
+    goto LABEL_14;
+  method = (const MethodInfo *)drawItem;
+  if ( drawItem && v5->fields.branchType == -1 )
   {
-    v5 = this->fields.drawItem;
-    if ( !v5 )
-      goto LABEL_15;
-    method = (const MethodInfo *)drawItem;
-    if ( drawItem && v5->fields.branchType == -1 )
-    {
-      drawItem = (ScriptBranchListViewItem_o *)this->fields.commentTextLabel;
-      if ( !drawItem )
-        goto LABEL_15;
-      UILabel__set_text((UILabel_o *)drawItem, (System_String_o *)method, 0LL);
-    }
-    checkSprite = (UIWidget_o *)this->fields.checkSprite;
-    if ( (v4 & 1) != 0 )
-    {
-      *(UnityEngine_Color_o *)&v7 = UnityEngine_Color__get_white(0LL);
-      if ( !checkSprite )
-        goto LABEL_15;
-    }
-    else
-    {
-      *(UnityEngine_Color_o *)&v7 = UnityEngine_Color__get_gray(0LL);
-      if ( !checkSprite )
-        goto LABEL_15;
-    }
-    UIWidget__set_color(checkSprite, *(UnityEngine_Color_o *)&v7, 0LL);
-    this->fields.checkFlag = v4 & 1;
+    drawItem = (ScriptBranchListViewItem_o *)this->fields.commentTextLabel;
+    if ( !drawItem )
+      goto LABEL_14;
+    UILabel__set_text((UILabel_o *)drawItem, (System_String_o *)method, 0LL);
   }
+  drawItem = (ScriptBranchListViewItem_o *)this->fields.checkSprite;
+  v6 = 0.5;
+  if ( v4 )
+    v6 = 1.0;
+  if ( !drawItem )
+LABEL_14:
+    sub_1B00F28(drawItem, method);
+  v7 = 1.0;
+  v8 = v6;
+  v9 = v6;
+  UIWidget__set_color((UIWidget_o *)drawItem, *(UnityEngine_Color_o *)&v6, 0LL);
+  this->fields.checkFlag = v4;
 }

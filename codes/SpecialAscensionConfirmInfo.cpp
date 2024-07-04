@@ -10,35 +10,35 @@ void __fastcall SpecialAscensionConfirmInfo__SetSpecialAscensionConfirmInfo(
         int32_t fontSize,
         const MethodInfo *method)
 {
-  UILabel_o *title; // x21
-  System_String_o *v7; // x0
+  __int64 v6; // x1
+  __int64 v7; // x1
   __int64 v8; // x1
-  UILabel_o *subTitle; // x20
+  UILabel_o *title; // x21
   System_String_o *v10; // x0
+  __int64 v11; // x1
+  UILabel_o *subTitle; // x20
+  System_String_o *v13; // x0
 
-  if ( (byte_438BEBF & 1) == 0 )
+  if ( (byte_48E6136 & 1) == 0 )
   {
-    sub_B775C4(&LocalizationManager_TypeInfo);
-    sub_B775C4(&StringLiteral_12520/*"SPECIAL_ASCENSION_DIALOG_TXT"*/);
-    sub_B775C4(&StringLiteral_3462/*"CONFIRM_TITLE_SPECIAL_ASCENSION"*/);
-    sub_B775C4(&StringLiteral_27/*"\n\n"*/);
-    byte_438BEBF = 1;
+    sub_1B00CCC(&LocalizationManager_TypeInfo, text);
+    sub_1B00CCC(&StringLiteral_11994/*"SPECIAL_ASCENSION_DIALOG_TXT"*/, v6);
+    sub_1B00CCC(&StringLiteral_3790/*"CONFIRM_TITLE_SPECIAL_ASCENSION"*/, v7);
+    sub_1B00CCC(&StringLiteral_44/*"\n\n"*/, v8);
+    byte_48E6136 = 1;
   }
   title = this->fields.title;
-  if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !LocalizationManager_TypeInfo->_2.cctor_finished )
-  {
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  }
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_3462/*"CONFIRM_TITLE_SPECIAL_ASCENSION"*/, 0LL);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_3790/*"CONFIRM_TITLE_SPECIAL_ASCENSION"*/, 0LL);
   if ( !title
-    || (UILabel__set_text(title, v7, 0LL),
+    || (UILabel__set_text(title, v10, 0LL),
         subTitle = this->fields.subTitle,
-        v10 = LocalizationManager__Get((System_String_o *)StringLiteral_12520/*"SPECIAL_ASCENSION_DIALOG_TXT"*/, 0LL),
-        v7 = System_String__Concat_44904220(v10, (System_String_o *)StringLiteral_27/*"\n\n"*/, text, 0LL),
+        v13 = LocalizationManager__Get((System_String_o *)StringLiteral_11994/*"SPECIAL_ASCENSION_DIALOG_TXT"*/, 0LL),
+        v10 = System_String__Concat_60337008(v13, (System_String_o *)StringLiteral_44/*"\n\n"*/, text, 0LL),
         !subTitle) )
   {
-    sub_B7769C(v7, v8);
+    sub_1B00F28(v10, v11);
   }
-  UILabel__set_text(subTitle, v7, 0LL);
+  UILabel__set_text(subTitle, v10, 0LL);
 }
