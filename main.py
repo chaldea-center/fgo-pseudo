@@ -1,6 +1,8 @@
 import argparse
+import io
 import json
 import re
+import shutil
 import subprocess
 import time
 from pathlib import Path
@@ -21,16 +23,38 @@ def load_json(fp):
 
 def download_apk():
     apk_folder: Path = Path(__file__).resolve().parent / "apk"
-    resp = httpx.get(f"https://fgo.bigcereal.com/apk/current_ver.json?v={int(time.time())}")
+    resp = httpx.get(
+        f"https://fgo.bigcereal.com/apk/current_ver.json?v={int(time.time())}"
+    )
     ver: str = resp.json()["JP"]
     # ver = '2.93.5'
-    apk_fn = f"com.aniplex.fategrandorder.v{ver}.apk"
+    apk_fn = f"com.aniplex.fategrandorder.v{ver}.xapk"
     apk_fp = apk_folder / ver / apk_fn
     if not apk_fp.exists():
         apk_fp.parent.mkdir(exist_ok=True, parents=True)
         url = f"https://static.atlasacademy.io/apk/{apk_fn}"
         print("[download] getting ", url)
-        resp = httpx.get(url,follow_redirects=True)
+        resp = httpx.get(url, follow_redirects=True)
+        assert resp.content
+        apk_fp.write_bytes(resp.content)
+    print("[download]", apk_fp)
+    return apk_fp
+
+
+def download_apk_en():
+    apk_folder: Path = Path(__file__).resolve().parent / "apk/en"
+    resp = httpx.get(
+        f"https://fgo.bigcereal.com/apk/current_ver.json?v={int(time.time())}"
+    )
+    ver: str = resp.json()["NA"]
+    # ver = '2.93.5'
+    apk_fn = f"com.aniplex.fategrandorder.en.v{ver}.apk"
+    apk_fp = apk_folder / ver / apk_fn
+    if not apk_fp.exists():
+        apk_fp.parent.mkdir(exist_ok=True, parents=True)
+        url = f"https://static.atlasacademy.io/apk/{apk_fn}"
+        print("[download] getting ", url)
+        resp = httpx.get(url, follow_redirects=True)
         assert resp.content
         apk_fp.write_bytes(resp.content)
     print("[download]", apk_fp)
@@ -38,6 +62,20 @@ def download_apk():
 
 
 def extract_apk(apk_fp: str, output_folder: str) -> None:
+    if str(apk_fp).endswith(".xapk"):
+        with ZipFile(apk_fp, "r") as xapk:
+            manifest: dict[list] = json.loads(xapk.read("manifest.json"))
+            files: dict[str, str] = {
+                file["id"]: file["file"] for file in manifest["split_apks"]
+            }
+            for split in ("base", "config.arm64_v8a"):
+                apk_data = xapk.read(files[split])
+                extract_apk_bytes(apk_data, output_folder)
+    else:
+        extract_apk_bytes(Path(apk_fp).read_bytes(), output_folder)
+
+
+def extract_apk_bytes(apk_data: bytes, output_folder: str) -> None:
     FILES_TO_EXTRACT = [
         "assets/bin/Data/Managed/Metadata/global-metadata.dat",
         "lib/arm64-v8a/libil2cpp.so",
@@ -45,8 +83,10 @@ def extract_apk(apk_fp: str, output_folder: str) -> None:
     output = Path(output_folder).resolve()
     output.mkdir(parents=True, exist_ok=True)
 
-    with ZipFile(apk_fp, "r") as apk:
+    with ZipFile(io.BytesIO(apk_data), "r") as apk:
         for extract_file in FILES_TO_EXTRACT:
+            if extract_file not in apk.NameToInfo:
+                continue
             with apk.open(extract_file) as extract:
                 fp = output / extract_file.split("/")[-1]
                 with open(fp, "wb") as fd:
@@ -107,12 +147,14 @@ def main(il2cppdumper: str):
     extract_apk(apk_fp, apk_folder)
     dump_cs(apk_folder, il2cppdumper, dump_folder)
     # get_class_names(dump_folder, pwd / "01_class_names.txt")
-    stringliterals:dict = load_json(dump_folder/'stringliteral.json')
+    stringliterals: dict = load_json(dump_folder / "stringliteral.json")
     stringliterals2 = {}
     for index, item in enumerate(stringliterals):
-        stringliterals2[f'StringLiteral_{index+1}']=item['value']
-    dum_json(stringliterals2, pwd/'04_stringliteral.json')
-    dump_folder.joinpath('ida_with_struct_py3.py').write_bytes(Path('ida_scripts/ida_with_struct_py3.py').read_bytes())
+        stringliterals2[f"StringLiteral_{index+1}"] = item["value"]
+    dum_json(stringliterals2, pwd / "04_stringliteral.json")
+    shutil.copy(
+        "ida_scripts/ida_with_struct_py3.py", dump_folder / "ida_with_struct_py3.py"
+    )
 
 
 if __name__ == "__main__":
