@@ -2,10 +2,10 @@ void __fastcall ServantEquipEffectFilterItem___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_48E638A & 1) == 0 )
+  if ( (byte_49F775D & 1) == 0 )
   {
-    sub_1B00CCC(&ServantEquipEffectFilterItem_TypeInfo, v1);
-    byte_48E638A = 1;
+    sub_1B640C8(&ServantEquipEffectFilterItem_TypeInfo, v1);
+    byte_49F775D = 1;
   }
   ServantEquipEffectFilterItem_TypeInfo->static_fields->LABEL_MAX_WIDTH = 160;
 }
@@ -26,43 +26,38 @@ void __fastcall ServantEquipEffectFilterItem__Init(
         const MethodInfo *method)
 {
   UILabel_o *titleLabel; // x0
-  __int64 v12; // x1
-  struct FunctionCategoryEntity_o *v13; // x8
-  UILabel_o *v14; // x23
-  int32_t v15; // w2
-  char v16; // w3
-  int32_t v17; // w2
-  char v18; // w3
-  const MethodInfo *v19; // x1
+  struct FunctionCategoryEntity_o *v12; // x8
+  UILabel_o *v13; // x23
+  const MethodInfo *v14; // x1
 
-  if ( (byte_48E6389 & 1) == 0 )
+  if ( (byte_49F775C & 1) == 0 )
   {
-    sub_1B00CCC(&ServantEquipEffectFilterItem_TypeInfo, entity);
-    byte_48E6389 = 1;
+    sub_1B640C8(&ServantEquipEffectFilterItem_TypeInfo, entity);
+    byte_49F775C = 1;
   }
   this->fields.entity = entity;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.entity, (int32_t)entity, (int32_t)sort, isSelected);
-  v13 = this->fields.entity;
-  if ( !v13 )
+  titleLabel = (UILabel_o *)sub_1B6406C(&this->fields.entity);
+  v12 = this->fields.entity;
+  if ( !v12 )
     goto LABEL_9;
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_9;
-  UILabel__set_text(titleLabel, v13->fields.name, 0LL);
+  UILabel__set_text(titleLabel, v12->fields.name, 0LL);
   titleLabel = (UILabel_o *)ServantEquipEffectFilterItem_TypeInfo;
-  v14 = this->fields.titleLabel;
+  v13 = this->fields.titleLabel;
   if ( !ServantEquipEffectFilterItem_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ServantEquipEffectFilterItem_TypeInfo);
-  if ( !v14 )
+    titleLabel = (UILabel_o *)j_il2cpp_runtime_class_init_0(ServantEquipEffectFilterItem_TypeInfo);
+  if ( !v13 )
 LABEL_9:
-    sub_1B00F28(titleLabel, v12);
-  UILabel__SetCondensedScale(v14, ServantEquipEffectFilterItem_TypeInfo->static_fields->LABEL_MAX_WIDTH, 0LL);
+    sub_1B64324(titleLabel);
+  UILabel__SetCondensedScale(v13, ServantEquipEffectFilterItem_TypeInfo->static_fields->LABEL_MAX_WIDTH, 0LL);
   this->fields.isSelected = isSelected;
   this->fields.sort = sort;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.sort, (int32_t)sort, v15, v16);
+  sub_1B6406C(&this->fields.sort);
   this->fields.onClickEvent = onClickEvent;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.onClickEvent, (int32_t)onClickEvent, v17, v18);
-  ServantEquipEffectFilterItem__SetCheckMark(this, v19);
+  sub_1B6406C(&this->fields.onClickEvent);
+  ServantEquipEffectFilterItem__SetCheckMark(this, v14);
 }
 
 
@@ -107,7 +102,7 @@ void __fastcall ServantEquipEffectFilterItem__SetCheckMark(
   if ( !checkMarkSprite
     || (checkMarkSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(checkMarkSprite, 0LL)) == 0LL )
   {
-    sub_1B00F28(checkMarkSprite, method);
+    sub_1B64324(checkMarkSprite);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)checkMarkSprite, this->fields.isSelected, 0LL);
 }
@@ -122,7 +117,7 @@ void __fastcall ServantEquipEffectFilterItem__SetEnableFilterButton(
 
   button = this->fields.button;
   if ( !button )
-    sub_1B00F28(0LL, isEnable);
+    sub_1B64324(0LL);
   UICommonButton__SetButtonEnableWithCollider(button, isEnable, 0LL);
 }
 
@@ -134,13 +129,12 @@ void __fastcall ServantEquipEffectFilterItem__SetSelectState(
         const MethodInfo *method)
 {
   ListViewSort_o *sort; // x0
-  __int64 v5; // x1
   struct FunctionCategoryEntity_o *entity; // x8
 
   this->fields.isSelected = isSelected;
   ServantEquipEffectFilterItem__SetCheckMark(this, (const MethodInfo *)isSelected);
   entity = this->fields.entity;
   if ( !entity || (sort = this->fields.sort) == 0LL )
-    sub_1B00F28(sort, v5);
-  ListViewSort__SetSvtEquipEffectFilter_39491952(sort, entity->fields.id, this->fields.isSelected, 0LL);
+    sub_1B64324(sort);
+  ListViewSort__SetSvtEquipEffectFilter_40454872(sort, entity->fields.id, this->fields.isSelected, 0LL);
 }

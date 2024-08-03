@@ -8,11 +8,11 @@ void __fastcall StandFigureRenderWaitStatus___ctor(
 {
   const MethodInfo *v6; // [xsp+0h] [xbp-20h]
 
-  StandFigureRenderWaitStatus___ctor_36776496(this, 0LL, id, faceType, 0, 0, textureList, callback, v6);
+  StandFigureRenderWaitStatus___ctor_37665812(this, 0LL, id, faceType, 0, 0, textureList, callback, v6);
 }
 
 
-void __fastcall StandFigureRenderWaitStatus___ctor_36775796(
+void __fastcall StandFigureRenderWaitStatus___ctor_37665112(
         StandFigureRenderWaitStatus_o *this,
         UnityEngine_RenderTexture_o *renderTex,
         int32_t id,
@@ -23,11 +23,11 @@ void __fastcall StandFigureRenderWaitStatus___ctor_36775796(
 {
   const MethodInfo *v7; // [xsp+0h] [xbp-20h]
 
-  StandFigureRenderWaitStatus___ctor_36776496(this, renderTex, id, faceType, 0, 0, textureList, callback, v7);
+  StandFigureRenderWaitStatus___ctor_37665812(this, renderTex, id, faceType, 0, 0, textureList, callback, v7);
 }
 
 
-void __fastcall StandFigureRenderWaitStatus___ctor_36776260(
+void __fastcall StandFigureRenderWaitStatus___ctor_37665576(
         StandFigureRenderWaitStatus_o *this,
         UnityEngine_RenderTexture_o *renderTex,
         int32_t id,
@@ -39,11 +39,11 @@ void __fastcall StandFigureRenderWaitStatus___ctor_36776260(
 {
   const MethodInfo *v8; // [xsp+0h] [xbp-20h]
 
-  StandFigureRenderWaitStatus___ctor_36776496(this, renderTex, id, faceType, formId, 0, textureList, callback, v8);
+  StandFigureRenderWaitStatus___ctor_37665812(this, renderTex, id, faceType, formId, 0, textureList, callback, v8);
 }
 
 
-void __fastcall StandFigureRenderWaitStatus___ctor_36776496(
+void __fastcall StandFigureRenderWaitStatus___ctor_37665812(
         StandFigureRenderWaitStatus_o *this,
         UnityEngine_RenderTexture_o *renderTex,
         int32_t id,
@@ -68,14 +68,14 @@ void __fastcall StandFigureRenderWaitStatus___ctor_36776496(
   this->fields.faceType = faceType;
   this->fields.formId = formId;
   this->fields.textureList = textureList;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.textureList, (int32_t)textureList, v17, v18);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.textureList, (int32_t)textureList, v17, v18);
   this->fields.renderTex = renderTex;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.renderTex, (int32_t)renderTex, v19, v20);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.renderTex, (int32_t)renderTex, v19, v20);
   this->fields.isFaceOnly = v16;
   if ( callback )
   {
     this->fields.callbackFunc = callback;
-    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v21, v22);
+    sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v21, v22);
   }
 }
 
@@ -98,7 +98,7 @@ void __fastcall StandFigureRenderWaitStatus__Callback(
   else
   {
     if ( !renderTex )
-      sub_1B00F28(this, 0LL);
+      sub_1B64324(this);
     UnityEngine_RenderTexture__Release(renderTex, 0LL);
   }
 }
@@ -129,7 +129,7 @@ void __fastcall StandFigureRenderWaitStatus__SetCharacter(
   UnityEngine_Texture2D_array *textureList; // x4
 
   if ( !standFigureRender )
-    sub_1B00F28(this, 0LL);
+    sub_1B64324(this);
   imageId = this->fields.imageId;
   faceType = this->fields.faceType;
   formId = this->fields.formId;
@@ -156,10 +156,10 @@ void __fastcall StandFigureRenderWaitStatus__add_callbackFunc(
   StandFigureRenderWaitStatus_EndHandler_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_48E1B9B & 1) == 0 )
+  if ( (byte_49FB763 & 1) == 0 )
   {
-    sub_1B00CCC(&StandFigureRenderWaitStatus_EndHandler_TypeInfo, value);
-    byte_48E1B9B = 1;
+    sub_1B640C8(&StandFigureRenderWaitStatus_EndHandler_TypeInfo, value);
+    byte_49FB763 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -172,13 +172,13 @@ void __fastcall StandFigureRenderWaitStatus__add_callbackFunc(
       if ( (StandFigureRenderWaitStatus_EndHandler_c *)v8->klass != StandFigureRenderWaitStatus_EndHandler_TypeInfo )
         break;
     }
-    v9 = sub_1B3C1BC(p_callbackFunc, v8, v6);
+    v9 = sub_1B9F5B8(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B011E8(v8);
+  sub_1B645E4(v8);
   StandFigureRenderWaitStatus__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -197,10 +197,10 @@ void __fastcall StandFigureRenderWaitStatus__remove_callbackFunc(
   StandFigureRenderWaitStatus_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_48E1B9C & 1) == 0 )
+  if ( (byte_49FB764 & 1) == 0 )
   {
-    sub_1B00CCC(&StandFigureRenderWaitStatus_EndHandler_TypeInfo, value);
-    byte_48E1B9C = 1;
+    sub_1B640C8(&StandFigureRenderWaitStatus_EndHandler_TypeInfo, value);
+    byte_49FB764 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -213,13 +213,13 @@ void __fastcall StandFigureRenderWaitStatus__remove_callbackFunc(
       if ( (StandFigureRenderWaitStatus_EndHandler_c *)v8->klass != StandFigureRenderWaitStatus_EndHandler_TypeInfo )
         break;
     }
-    v9 = sub_1B3C1BC(p_callbackFunc, v8, v6);
+    v9 = sub_1B9F5B8(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B011E8(v8);
+  sub_1B645E4(v8);
   StandFigureRenderWaitStatus__GetRenderTexture(v11, v12);
 }
 
@@ -245,14 +245,14 @@ void __fastcall StandFigureRenderWaitStatus_EndHandler___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B00D8C(v6) & 1) != 0 )
+  if ( (sub_1B64188(v6) & 1) != 0 )
   {
     if ( v8 == 1 )
     {
-      v9 = (Il2CppObject *)sub_194AC38;
+      v9 = (Il2CppObject *)sub_19ABD64;
 LABEL_16:
       this->fields.m_target = v9;
       goto LABEL_17;
@@ -264,41 +264,41 @@ LABEL_16:
     {
       if ( LOBYTE(this[1].fields.method_ptr) )
       {
-        v11 = sub_1B00D84(v6);
-        v12 = sub_1B01240(v6);
+        v11 = sub_1B64180(v6);
+        v12 = sub_1B6463C(v6);
         if ( (v11 & 1) != 0 )
         {
           if ( (v12 & 1) != 0 )
-            v9 = (Il2CppObject *)sub_194AD34;
+            v9 = (Il2CppObject *)sub_19ABE60;
           else
-            v9 = (Il2CppObject *)sub_194ACF8;
+            v9 = (Il2CppObject *)sub_19ABE24;
         }
         else if ( (v12 & 1) != 0 )
         {
-          v9 = (Il2CppObject *)sub_194AC74;
+          v9 = (Il2CppObject *)sub_19ABDA0;
         }
         else
         {
-          v9 = (Il2CppObject *)sub_194AC48;
+          v9 = (Il2CppObject *)sub_19ABD74;
         }
       }
       else
       {
-        v9 = (Il2CppObject *)sub_194AC18;
+        v9 = (Il2CppObject *)sub_19ABD44;
       }
       goto LABEL_16;
     }
     if ( !object )
     {
-      v13 = sub_1B00F44(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B00DF4(v13, 0LL);
+      v13 = sub_1B64340(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B641F0(v13, 0LL);
     }
   }
   v10 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
   this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
   this->fields.original_method_info = v10;
 LABEL_17:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_194ABD0;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19ABCFC;
 }
 
 
@@ -312,7 +312,7 @@ System_IAsyncResult_o *__fastcall StandFigureRenderWaitStatus_EndHandler__BeginI
   UnityEngine_RenderTexture_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = texture;
-  return (System_IAsyncResult_o *)sub_1B00C80(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_1B6407C(this, &v6, callback, object);
 }
 
 
@@ -321,7 +321,7 @@ void __fastcall StandFigureRenderWaitStatus_EndHandler__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B00C84(result, 0LL, method);
+  sub_1B64080(result, 0LL, method);
 }
 
 

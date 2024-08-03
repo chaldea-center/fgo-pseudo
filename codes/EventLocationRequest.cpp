@@ -1,3 +1,9 @@
+void __fastcall EventLocationRequest___ctor(EventLocationRequest_o *this, const MethodInfo *method)
+{
+  RequestBase___ctor((RequestBase_o *)this, 0LL);
+}
+
+
 // local variable allocation has failed, the output may be wrong!
 void __fastcall EventLocationRequest__beginRequest(
         EventLocationRequest_o *this,
@@ -12,44 +18,37 @@ void __fastcall EventLocationRequest__beginRequest(
   __int64 v11; // x1
   __int64 v12; // x1
   float latitude; // s0
-  const MethodInfo *v14; // x2
   float longitude; // s0
-  const MethodInfo *v16; // x2
   float altitude; // s0
-  const MethodInfo *v18; // x2
   float horizontalAccuracy; // s0
-  const MethodInfo *v20; // x2
   float verticalAccuracy; // s0
-  const MethodInfo *v22; // x2
   double timestamp; // d0
-  const MethodInfo *v24; // x2
-  const MethodInfo *v25; // x1
 
-  if ( (byte_48E3EEE & 1) == 0 )
+  if ( (byte_49FDB97 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_20769/*"latitude"*/, *(_QWORD *)&eventId);
-    sub_1B00CCC(&StringLiteral_18880/*"eventId"*/, v7);
-    sub_1B00CCC(&StringLiteral_19677/*"horizontalAccuracy"*/, v8);
-    sub_1B00CCC(&StringLiteral_24174/*"verticalAccuracy"*/, v9);
-    sub_1B00CCC(&StringLiteral_23598/*"timestamp"*/, v10);
-    sub_1B00CCC(&StringLiteral_20926/*"longitude"*/, v11);
-    sub_1B00CCC(&StringLiteral_16506/*"altitude"*/, v12);
-    byte_48E3EEE = 1;
+    sub_1B640C8(&StringLiteral_20969/*"latitude"*/, *(_QWORD *)&eventId);
+    sub_1B640C8(&StringLiteral_19059/*"eventId"*/, v7);
+    sub_1B640C8(&StringLiteral_19869/*"horizontalAccuracy"*/, v8);
+    sub_1B640C8(&StringLiteral_24437/*"verticalAccuracy"*/, v9);
+    sub_1B640C8(&StringLiteral_23854/*"timestamp"*/, v10);
+    sub_1B640C8(&StringLiteral_21126/*"longitude"*/, v11);
+    sub_1B640C8(&StringLiteral_16671/*"altitude"*/, v12);
+    byte_49FDB97 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18880/*"eventId"*/, eventId, method);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19059/*"eventId"*/, eventId, 0LL);
   latitude = UnityEngine_LocationInfo__get_latitude(locInfo, 0LL);
-  RequestBase__addField_39804216((RequestBase_o *)this, (System_String_o *)StringLiteral_20769/*"latitude"*/, latitude, v14);
+  RequestBase__addField_40877276((RequestBase_o *)this, (System_String_o *)StringLiteral_20969/*"latitude"*/, latitude, 0LL);
   longitude = UnityEngine_LocationInfo__get_longitude(locInfo, 0LL);
-  RequestBase__addField_39804216((RequestBase_o *)this, (System_String_o *)StringLiteral_20926/*"longitude"*/, longitude, v16);
+  RequestBase__addField_40877276((RequestBase_o *)this, (System_String_o *)StringLiteral_21126/*"longitude"*/, longitude, 0LL);
   altitude = UnityEngine_LocationInfo__get_altitude(locInfo, 0LL);
-  RequestBase__addField_39804216((RequestBase_o *)this, (System_String_o *)StringLiteral_16506/*"altitude"*/, altitude, v18);
+  RequestBase__addField_40877276((RequestBase_o *)this, (System_String_o *)StringLiteral_16671/*"altitude"*/, altitude, 0LL);
   horizontalAccuracy = UnityEngine_LocationInfo__get_horizontalAccuracy(locInfo, 0LL);
-  RequestBase__addField_39804216((RequestBase_o *)this, (System_String_o *)StringLiteral_19677/*"horizontalAccuracy"*/, horizontalAccuracy, v20);
+  RequestBase__addField_40877276((RequestBase_o *)this, (System_String_o *)StringLiteral_19869/*"horizontalAccuracy"*/, horizontalAccuracy, 0LL);
   verticalAccuracy = UnityEngine_LocationInfo__get_verticalAccuracy(locInfo, 0LL);
-  RequestBase__addField_39804216((RequestBase_o *)this, (System_String_o *)StringLiteral_24174/*"verticalAccuracy"*/, verticalAccuracy, v22);
+  RequestBase__addField_40877276((RequestBase_o *)this, (System_String_o *)StringLiteral_24437/*"verticalAccuracy"*/, verticalAccuracy, 0LL);
   timestamp = UnityEngine_LocationInfo__get_timestamp(locInfo, 0LL);
-  RequestBase__addField_39804368((RequestBase_o *)this, (System_String_o *)StringLiteral_23598/*"timestamp"*/, timestamp, v24);
-  RequestBase__beginRequest((RequestBase_o *)this, v25);
+  RequestBase__addField_40877428((RequestBase_o *)this, (System_String_o *)StringLiteral_23854/*"timestamp"*/, timestamp, 0LL);
+  RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
 
@@ -58,16 +57,16 @@ System_String_o *__fastcall EventLocationRequest__getURL(EventLocationRequest_o 
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_48E3EED & 1) == 0 )
+  if ( (byte_49FDB96 & 1) == 0 )
   {
-    sub_1B00CCC(&NetworkManager_TypeInfo, method);
-    sub_1B00CCC(&StringLiteral_18866/*"event/location"*/, v2);
-    byte_48E3EED = 1;
+    sub_1B640C8(&NetworkManager_TypeInfo, method);
+    sub_1B640C8(&StringLiteral_19045/*"event/location"*/, v2);
+    byte_49FDB96 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_60325748(BaseUrl, (System_String_o *)StringLiteral_18866/*"event/location"*/, 0LL);
+  return System_String__Concat_61375396(BaseUrl, (System_String_o *)StringLiteral_19045/*"event/location"*/, 0LL);
 }
 
 
@@ -82,67 +81,51 @@ void __fastcall EventLocationRequest__requestCompleted(
   __int64 v8; // x1
   __int64 v9; // x1
   ResponseData_o *v10; // x0
-  const MethodInfo *v11; // x2
-  ResponseData_o *v12; // x20
+  ResponseData_o *v11; // x20
   System_Collections_Generic_Dictionary_object__object__o *success; // x0
-  Il2CppObject *v14; // x20
-  System_String_o *v15; // x0
-  struct NetworkManager_ResultCallbackFunc_o *v16; // x8
-  struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  __int64 *v18; // x9
+  Il2CppObject *v13; // x20
+  System_String_o *v14; // x1
+  __int64 *v15; // x8
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_48E3EEF & 1) == 0 )
+  if ( (byte_49FDB98 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, responseList);
-    sub_1B00CCC(&JsonManager_TypeInfo, v5);
-    sub_1B00CCC(&ResponseCommandKind_TypeInfo, v6);
-    sub_1B00CCC(&StringLiteral_20905/*"locationCampaign"*/, v7);
-    sub_1B00CCC(&StringLiteral_21754/*"ng"*/, v8);
-    sub_1B00CCC(&StringLiteral_21755/*"ngParse"*/, v9);
-    byte_48E3EEF = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, responseList);
+    sub_1B640C8(&JsonManager_TypeInfo, v5);
+    sub_1B640C8(&ResponseCommandKind_TypeInfo, v6);
+    sub_1B640C8(&StringLiteral_21105/*"locationCampaign"*/, v7);
+    sub_1B640C8(&StringLiteral_21968/*"ng"*/, v8);
+    sub_1B640C8(&StringLiteral_21969/*"ngParse"*/, v9);
+    byte_49FDB98 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v10 = ResponseCommandKind__SearchData(69, responseList, 0LL);
-  if ( !v10 || (v12 = v10, !ResponseData__checkError(v10, v10->fields.resCode, v11)) )
+  if ( !v10 || (v11 = v10, !ResponseData__checkError_40846016(v10, 0LL)) )
   {
-    CallBack = this->fields.CallBack;
-    if ( !CallBack )
-      return;
-    v18 = &StringLiteral_21754/*"ng"*/;
-LABEL_17:
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
-      CallBack->fields.original_method_info,
-      *v18,
-      *(_QWORD *)&CallBack->fields.extra_arg);
-    return;
+    v15 = &StringLiteral_21968/*"ng"*/;
+LABEL_14:
+    v14 = (System_String_o *)*v15;
+    goto LABEL_15;
   }
-  success = (System_Collections_Generic_Dictionary_object__object__o *)v12->fields.success;
+  success = (System_Collections_Generic_Dictionary_object__object__o *)v11->fields.success;
   value = 0LL;
   if ( !success
     || !System_Collections_Generic_Dictionary_object__object___TryGetValue(
           success,
-          (Il2CppObject *)StringLiteral_20905/*"locationCampaign"*/,
+          (Il2CppObject *)StringLiteral_21105/*"locationCampaign"*/,
           &value,
-          (const MethodInfo_308F254 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+          (const MethodInfo_317AC04 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
-    CallBack = this->fields.CallBack;
-    if ( !CallBack )
-      return;
-    v18 = &StringLiteral_21755/*"ngParse"*/;
-    goto LABEL_17;
+    v15 = &StringLiteral_21969/*"ngParse"*/;
+    goto LABEL_14;
   }
-  v14 = value;
+  v13 = value;
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-  v15 = JsonManager__toJson(v14, 0, 0, 0LL);
-  v16 = this->fields.CallBack;
-  if ( v16 )
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))v16->fields.m_target)(
-      v16->fields.original_method_info,
-      v15,
-      *(_QWORD *)&v16->fields.extra_arg);
+  v14 = JsonManager__toJson(v13, 0, 0, 0LL);
+LABEL_15:
+  RequestBase__completed((RequestBase_o *)this, v14, 0LL);
 }
 
 

@@ -14,15 +14,15 @@ void __fastcall BattleSyncFromTargetTransformComponent__SyncTarget(
 {
   UnityEngine_Object_o *targetObj; // x20
   UnityEngine_Transform_o *transform; // x0
-  const MethodInfo *v5; // x1
   struct BattleSyncTransformComponent_SyncData_o *syncData; // x8
-  struct BattleSyncTransformComponent_SyncData_o *v7; // x21
-  UnityEngine_Transform_o *v8; // x20
-  float v9; // s0
-  float v10; // s1
-  float v11; // s2
-  BattleSyncTransformComponent_SyncData_o *v12; // x21
-  UnityEngine_Transform_o *v13; // x20
+  struct BattleSyncTransformComponent_SyncData_o *v6; // x21
+  UnityEngine_Transform_o *v7; // x20
+  float v8; // s0
+  float v9; // s1
+  float v10; // s2
+  BattleSyncTransformComponent_SyncData_o *v11; // x21
+  UnityEngine_Transform_o *v12; // x20
+  const MethodInfo *v13; // x1
   int v14; // s0
   int v18; // s0
   UnityEngine_Transform_o *v22; // x8
@@ -34,10 +34,10 @@ void __fastcall BattleSyncFromTargetTransformComponent__SyncTarget(
   UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_48E575E & 1) == 0 )
+  if ( (byte_49FF454 & 1) == 0 )
   {
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
-    byte_48E575E = 1;
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, method);
+    byte_49FF454 = 1;
   }
   targetObj = (UnityEngine_Object_o *)this->fields.targetObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -53,17 +53,17 @@ void __fastcall BattleSyncFromTargetTransformComponent__SyncTarget(
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
       if ( this->fields.targetObj )
       {
-        v7 = this->fields.syncData;
-        v8 = transform;
-        *(UnityEngine_Vector3_o *)&v9 = UnityEngine_Transform__get_position(this->fields.targetObj, 0LL);
-        if ( v7 )
+        v6 = this->fields.syncData;
+        v7 = transform;
+        *(UnityEngine_Vector3_o *)&v8 = UnityEngine_Transform__get_position(this->fields.targetObj, 0LL);
+        if ( v6 )
         {
-          if ( v8 )
+          if ( v7 )
           {
-            v28.fields.z = v11 + v7->fields.positionDiff.fields.z;
-            v28.fields.y = v10 + v7->fields.positionDiff.fields.y;
-            v28.fields.x = v9 + v7->fields.positionDiff.fields.x;
-            UnityEngine_Transform__set_position(v8, v28, 0LL);
+            v28.fields.z = v10 + v6->fields.positionDiff.fields.z;
+            v28.fields.y = v9 + v6->fields.positionDiff.fields.y;
+            v28.fields.x = v8 + v6->fields.positionDiff.fields.x;
+            UnityEngine_Transform__set_position(v7, v28, 0LL);
             syncData = this->fields.syncData;
             if ( syncData )
             {
@@ -71,16 +71,16 @@ LABEL_26:
               if ( (syncData->fields.syncType & 2) == 0
                 || (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL),
                     this->fields.targetObj)
-                && (v12 = this->fields.syncData,
-                    v13 = transform,
+                && (v11 = this->fields.syncData,
+                    v12 = transform,
                     *(UnityEngine_Quaternion_o *)&v14 = UnityEngine_Transform__get_rotation(this->fields.targetObj, 0LL),
-                    v12)
+                    v11)
                 && (*(UnityEngine_Quaternion_o *)&v18 = BattleSyncTransformComponent_SyncData__GetFixRotation(
-                                                          v12,
+                                                          v11,
                                                           *(UnityEngine_Quaternion_o *)&v14,
-                                                          v5),
-                    v13)
-                && (UnityEngine_Transform__set_rotation(v13, *(UnityEngine_Quaternion_o *)&v18, 0LL),
+                                                          v13),
+                    v12)
+                && (UnityEngine_Transform__set_rotation(v12, *(UnityEngine_Quaternion_o *)&v18, 0LL),
                     (syncData = this->fields.syncData) != 0LL) )
               {
                 if ( (syncData->fields.syncType & 4) == 0 )
@@ -110,6 +110,6 @@ LABEL_26:
         }
       }
     }
-    sub_1B00F28(transform, v5);
+    sub_1B64324(transform);
   }
 }

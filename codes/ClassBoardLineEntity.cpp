@@ -1,13 +1,13 @@
 void __fastcall ClassBoardLineEntity___ctor(ClassBoardLineEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E37FB & 1) == 0 )
+  if ( (byte_49FD484 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
-    byte_48E37FB = 1;
+    sub_1B640C8(&Method_DataEntityBase_string___ctor__, method);
+    byte_49FD484 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D3D1C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall ClassBoardLineEntity__CreatePK(
         int32_t id,
         const MethodInfo *method)
 {
-  if ( (byte_48E37FA & 1) == 0 )
+  if ( (byte_49FD483 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&id);
-    byte_48E37FA = 1;
+    sub_1B640C8(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&id);
+    byte_49FD483 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            classBoardBaseId,
            id,
-           (const MethodInfo_2D60E34 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2E37610 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

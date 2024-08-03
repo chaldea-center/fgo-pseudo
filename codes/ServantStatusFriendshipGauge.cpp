@@ -2,10 +2,10 @@ void __fastcall ServantStatusFriendshipGauge___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_48DF1BA & 1) == 0 )
+  if ( (byte_49F8976 & 1) == 0 )
   {
-    sub_1B00CCC(&ServantStatusFriendshipGauge_TypeInfo, v1);
-    byte_48DF1BA = 1;
+    sub_1B640C8(&ServantStatusFriendshipGauge_TypeInfo, v1);
+    byte_49F8976 = 1;
   }
   *ServantStatusFriendshipGauge_TypeInfo->static_fields = (struct ServantStatusFriendshipGauge_StaticFields)0xC0000000C1A00000LL;
 }
@@ -20,17 +20,17 @@ void __fastcall ServantStatusFriendshipGauge___ctor(ServantStatusFriendshipGauge
   int32_t v7; // w2
   int32_t v8; // w3
 
-  if ( (byte_48DF1B9 & 1) == 0 )
+  if ( (byte_49F8975 & 1) == 0 )
   {
-    sub_1B00CCC(&UISlider___TypeInfo, method);
-    byte_48DF1B9 = 1;
+    sub_1B640C8(&UISlider___TypeInfo, method);
+    byte_49F8975 = 1;
   }
-  v3 = (struct UISlider_array *)sub_1B00D74(UISlider___TypeInfo, 10LL);
+  v3 = (struct UISlider_array *)sub_1B64170(UISlider___TypeInfo, 10LL);
   this->fields.gaugeSliderList = v3;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.gaugeSliderList, (int32_t)v3, v4, v5);
-  v6 = (struct UISlider_array *)sub_1B00D74(UISlider___TypeInfo, 10LL);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.gaugeSliderList, (int32_t)v3, v4, v5);
+  v6 = (struct UISlider_array *)sub_1B64170(UISlider___TypeInfo, 10LL);
   this->fields.overLimitGaugeSliderList = v6;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.overLimitGaugeSliderList, (int32_t)v6, v7, v8);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.overLimitGaugeSliderList, (int32_t)v6, v7, v8);
   this->fields.isInit = 1;
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
@@ -48,10 +48,10 @@ void __fastcall ServantStatusFriendshipGauge__DisplayGauge(
   BalanceConfig_c *v10; // x0
   int DisableFriendshipExceed; // w22
 
-  if ( (byte_48DF1B7 & 1) == 0 )
+  if ( (byte_49F8973 & 1) == 0 )
   {
-    sub_1B00CCC(&BalanceConfig_TypeInfo, *(_QWORD *)&currentRank);
-    byte_48DF1B7 = 1;
+    sub_1B640C8(&BalanceConfig_TypeInfo, *(_QWORD *)&currentRank);
+    byte_49F8973 = 1;
   }
   if ( maxRank <= 10 )
   {
@@ -98,7 +98,7 @@ void __fastcall ServantStatusFriendshipGauge__DisplayNomalGauge(
   gaugeSliderList = this->fields.gaugeSliderList;
   if ( !gaugeSliderList )
 LABEL_22:
-    sub_1B00F28(this, *(_QWORD *)&currentRank);
+    sub_1B64324(this);
   v8 = this;
   v10 = 0LL;
   while ( 1 )
@@ -107,7 +107,7 @@ LABEL_22:
     if ( (int)v10 >= max_length )
       break;
     if ( (unsigned int)v10 >= max_length )
-      sub_1B00F30(this, *(_QWORD *)&currentRank);
+      sub_1B6432C(this, *(_QWORD *)&currentRank);
     v13 = &gaugeSliderList->obj.klass + v10;
     v14 = (UnityEngine_Component_o *)v13[4];
     if ( !v14
@@ -116,7 +116,7 @@ LABEL_22:
                                                      0LL)) == 0LL )
     {
 LABEL_24:
-      sub_1B00F28(this, *(_QWORD *)&currentRank);
+      sub_1B64324(this);
     }
     if ( (int)v10 >= maxRank )
     {
@@ -185,17 +185,17 @@ void __fastcall ServantStatusFriendshipGauge__DisplayOverLimitGauge(
 
   v7 = currentRank;
   v8 = this;
-  if ( (byte_48DF1B8 & 1) == 0 )
+  if ( (byte_49F8974 & 1) == 0 )
   {
-    this = (ServantStatusFriendshipGauge_o *)sub_1B00CCC(
+    this = (ServantStatusFriendshipGauge_o *)sub_1B640C8(
                                                &ServantStatusFriendshipGauge_TypeInfo,
                                                *(_QWORD *)&currentRank);
-    byte_48DF1B8 = 1;
+    byte_49F8974 = 1;
   }
   overLimitGaugeSliderList = v8->fields.overLimitGaugeSliderList;
   if ( !overLimitGaugeSliderList )
 LABEL_22:
-    sub_1B00F28(this, *(_QWORD *)&currentRank);
+    sub_1B64324(this);
   v10 = 0LL;
   v11 = maxRank - 10;
   while ( 1 )
@@ -204,7 +204,7 @@ LABEL_22:
     if ( (int)v10 >= max_length )
       break;
     if ( (unsigned int)v10 >= max_length )
-      sub_1B00F30(this, *(_QWORD *)&currentRank);
+      sub_1B6432C(this, *(_QWORD *)&currentRank);
     v13 = &overLimitGaugeSliderList->obj.klass + v10;
     v14 = (UIProgressBar_o *)v13[4];
     if ( v14 )
@@ -277,12 +277,12 @@ void __fastcall ServantStatusFriendshipGauge__Initialize(
   UISprite_o *overLimitGaugeSprite; // x19
 
   v2 = this;
-  if ( (byte_48DF1B5 & 1) == 0 )
+  if ( (byte_49F8971 & 1) == 0 )
   {
-    sub_1B00CCC(&AtlasManager_TypeInfo, method);
-    sub_1B00CCC(&BalanceConfig_TypeInfo, v3);
-    this = (ServantStatusFriendshipGauge_o *)sub_1B00CCC(&StringLiteral_19997/*"img_bondsgage_11"*/, v4);
-    byte_48DF1B5 = 1;
+    sub_1B640C8(&AtlasManager_TypeInfo, method);
+    sub_1B640C8(&BalanceConfig_TypeInfo, v3);
+    this = (ServantStatusFriendshipGauge_o *)sub_1B640C8(&StringLiteral_20191/*"img_bondsgage_11"*/, v4);
+    byte_49F8971 = 1;
   }
   gaugeSliderList = v2->fields.gaugeSliderList;
   if ( !gaugeSliderList )
@@ -315,14 +315,14 @@ void __fastcall ServantStatusFriendshipGauge__Initialize(
         !v12) )
   {
 LABEL_24:
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   }
   v13 = v12->max_length;
   if ( v13 < 5 )
     goto LABEL_18;
   if ( v13 == 5 )
 LABEL_25:
-    sub_1B00F30(this, method);
+    sub_1B6432C(this, method);
   this = (ServantStatusFriendshipGauge_o *)v12->m_Items[5];
   if ( !this )
     goto LABEL_24;
@@ -343,7 +343,7 @@ LABEL_18:
     overLimitGaugeSprite = v2->fields.overLimitGaugeSprite;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetBondAtlasImage(overLimitGaugeSprite, (System_String_o *)StringLiteral_19997/*"img_bondsgage_11"*/, 0LL);
+    AtlasManager__SetBondAtlasImage(overLimitGaugeSprite, (System_String_o *)StringLiteral_20191/*"img_bondsgage_11"*/, 0LL);
   }
 }
 
@@ -364,22 +364,22 @@ void __fastcall ServantStatusFriendshipGauge__Set(
   _BOOL4 v15; // w8
   UIExtrusionLabel_o *levelLabel; // x21
   System_String_o *NumberFormat; // x0
-  System_String_o *v18; // x1
   UILabel_o *maxLevelLabel; // x21
   UILabel_o *latePointLabel; // x21
+  System_String_o *v20; // x1
   const MethodInfo *v21; // x3
   int32_t v22; // [xsp+8h] [xbp-38h] BYREF
   int32_t v23; // [xsp+Ch] [xbp-34h] BYREF
 
   v22 = maxRank;
   v23 = currentRank;
-  if ( (byte_48DF1B6 & 1) == 0 )
+  if ( (byte_49F8972 & 1) == 0 )
   {
-    sub_1B00CCC(&BalanceConfig_TypeInfo, *(_QWORD *)&currentRank);
-    sub_1B00CCC(&LocalizationManager_TypeInfo, v11);
-    sub_1B00CCC(&StringLiteral_14576/*"UNIT_REST_NONE"*/, v12);
-    sub_1B00CCC(&StringLiteral_1/*""*/, v13);
-    byte_48DF1B6 = 1;
+    sub_1B640C8(&BalanceConfig_TypeInfo, *(_QWORD *)&currentRank);
+    sub_1B640C8(&LocalizationManager_TypeInfo, v11);
+    sub_1B640C8(&StringLiteral_14730/*"UNIT_REST_NONE"*/, v12);
+    sub_1B640C8(&StringLiteral_1/*""*/, v13);
+    byte_49F8972 = 1;
   }
   if ( this->fields.isInit )
   {
@@ -420,26 +420,25 @@ void __fastcall ServantStatusFriendshipGauge__Set(
   }
   if ( (late & 0x80000000) == 0 )
   {
-    v18 = (System_String_o *)StringLiteral_1/*""*/;
+    v20 = (System_String_o *)StringLiteral_1/*""*/;
     if ( latePointLabel )
       goto LABEL_19;
 LABEL_22:
-    sub_1B00F28(NumberFormat, v18);
+    sub_1B64324(NumberFormat);
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  NumberFormat = LocalizationManager__Get((System_String_o *)StringLiteral_14576/*"UNIT_REST_NONE"*/, 0LL);
+  NumberFormat = LocalizationManager__Get((System_String_o *)StringLiteral_14730/*"UNIT_REST_NONE"*/, 0LL);
 LABEL_18:
-  v18 = NumberFormat;
+  v20 = NumberFormat;
   if ( !latePointLabel )
     goto LABEL_22;
 LABEL_19:
-  UILabel__set_text(latePointLabel, v18, 0LL);
+  UILabel__set_text(latePointLabel, v20, 0LL);
   ServantStatusFriendshipGauge__DisplayGauge(this, v23, v22, fraction, v21);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall ServantStatusFriendshipGauge__SetActiveContainer(
         ServantStatusFriendshipGauge_o *this,
         bool isOverLimit,
@@ -452,7 +451,7 @@ void __fastcall ServantStatusFriendshipGauge__SetActiveContainer(
     || (UnityEngine_GameObject__SetActive(nomalGaugeContainer, !isOverLimit, 0LL),
         (nomalGaugeContainer = this->fields.overLimitGaugeContainer) == 0LL) )
   {
-    sub_1B00F28(nomalGaugeContainer, isOverLimit);
+    sub_1B64324(nomalGaugeContainer);
   }
   UnityEngine_GameObject__SetActive(nomalGaugeContainer, isOverLimit, 0LL);
 }

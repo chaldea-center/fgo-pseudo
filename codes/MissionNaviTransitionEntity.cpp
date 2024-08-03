@@ -1,13 +1,13 @@
 void __fastcall MissionNaviTransitionEntity___ctor(MissionNaviTransitionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E2B7D & 1) == 0 )
+  if ( (byte_49FC796 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_int___ctor__, method);
-    byte_48E2B7D = 1;
+    sub_1B640C8(&Method_DataEntityBase_int___ctor__, method);
+    byte_49FC796 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_2FE684C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_30D3CA4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -19,27 +19,63 @@ int32_t __fastcall MissionNaviTransitionEntity__CreatePrimaryKey(
 }
 
 
-System_String_o *__fastcall MissionNaviTransitionEntity__GetConfirmDialogMessage(
+bool __fastcall MissionNaviTransitionEntity__TryGetChallengeIconName(
         MissionNaviTransitionEntity_o *this,
+        System_String_o **challengeIconName,
         const MethodInfo *method)
 {
-  if ( (byte_48E2B7C & 1) == 0 )
+  int32_t v3; // w3
+  __int64 v6; // x1
+  int32_t v7; // w2
+  int32_t v8; // w3
+  System_String_o *iconName; // x1
+
+  if ( (byte_49FC795 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_21263/*"msg"*/, method);
-    byte_48E2B7C = 1;
+    sub_1B640C8(&StringLiteral_117/*" "*/, challengeIconName);
+    sub_1B640C8(&StringLiteral_1/*""*/, v6);
+    byte_49FC795 = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_21263/*"msg"*/, 0LL, 0LL);
+  *challengeIconName = (System_String_o *)StringLiteral_1/*""*/;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)challengeIconName, (int32_t)StringLiteral_1/*""*/, (int32_t)method, v3);
+  if ( System_String__IsNullOrEmpty(this->fields.iconName, 0LL)
+    || System_String__op_Equality(this->fields.iconName, (System_String_o *)StringLiteral_117/*" "*/, 0LL) )
+  {
+    return 0;
+  }
+  iconName = this->fields.iconName;
+  *challengeIconName = iconName;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)challengeIconName, (int32_t)iconName, v7, v8);
+  return 1;
 }
 
 
-System_String_o *__fastcall MissionNaviTransitionEntity__GetTransitionParam(
+bool __fastcall MissionNaviTransitionEntity__TryGetChallengeNaviName(
         MissionNaviTransitionEntity_o *this,
+        System_String_o **challengeNaviName,
         const MethodInfo *method)
 {
-  if ( (byte_48E2B7B & 1) == 0 )
+  int32_t v3; // w3
+  __int64 v6; // x1
+  int32_t v7; // w2
+  int32_t v8; // w3
+  System_String_o *title; // x1
+
+  if ( (byte_49FC794 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_23692/*"transitionParam"*/, method);
-    byte_48E2B7B = 1;
+    sub_1B640C8(&StringLiteral_117/*" "*/, challengeNaviName);
+    sub_1B640C8(&StringLiteral_1/*""*/, v6);
+    byte_49FC794 = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_23692/*"transitionParam"*/, 0LL, 0LL);
+  *challengeNaviName = (System_String_o *)StringLiteral_1/*""*/;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)challengeNaviName, (int32_t)StringLiteral_1/*""*/, (int32_t)method, v3);
+  if ( System_String__IsNullOrEmpty(this->fields.title, 0LL)
+    || System_String__op_Equality(this->fields.title, (System_String_o *)StringLiteral_117/*" "*/, 0LL) )
+  {
+    return 0;
+  }
+  title = this->fields.title;
+  *challengeNaviName = title;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)challengeNaviName, (int32_t)title, v7, v8);
+  return 1;
 }

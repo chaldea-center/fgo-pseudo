@@ -1,12 +1,12 @@
 void __fastcall TelopMaster___ctor(TelopMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E31CB & 1) == 0 )
+  if ( (byte_49FCE2B & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataMasterBase_TelopMaster__TelopEntity__int___ctor__, method);
-    byte_48E31CB = 1;
+    sub_1B640C8(&Method_DataMasterBase_TelopMaster__TelopEntity__int___ctor__, method);
+    byte_49FCE2B = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    62,
-    (const MethodInfo_2FE6A0C *)Method_DataMasterBase_TelopMaster__TelopEntity__int___ctor__);
+    63,
+    (const MethodInfo_30D3E64 *)Method_DataMasterBase_TelopMaster__TelopEntity__int___ctor__);
 }

@@ -33,27 +33,28 @@ void __fastcall LocalNotificationService__Schedule(
 LocalNotificationService_o *__fastcall LocalNotificationService__getNullObject(const MethodInfo *method)
 {
   __int64 v1; // x1
+  __int64 v2; // x2
   LocalNotificationService_o *nullObject; // x8
-  Il2CppObject *v3; // x19
-  int32_t v4; // w2
-  int32_t v5; // w3
+  Il2CppObject *v4; // x19
+  int32_t v5; // w2
+  int32_t v6; // w3
 
-  if ( (byte_48E3E07 & 1) == 0 )
+  if ( (byte_49FDAAD & 1) == 0 )
   {
-    sub_1B00CCC(&LocalNotificationService_TypeInfo, v1);
-    byte_48E3E07 = 1;
+    sub_1B640C8(&LocalNotificationService_TypeInfo, v1);
+    byte_49FDAAD = 1;
   }
   nullObject = LocalNotificationService_TypeInfo->static_fields->nullObject;
   if ( !nullObject )
   {
-    v3 = (Il2CppObject *)sub_1B00F18(LocalNotificationService_TypeInfo);
-    System_Object___ctor(v3, 0LL);
-    LocalNotificationService_TypeInfo->static_fields->nullObject = (struct LocalNotificationService_o *)v3;
-    sub_1B00C70(
+    v4 = (Il2CppObject *)sub_1B64314(LocalNotificationService_TypeInfo, v1, v2);
+    System_Object___ctor(v4, 0LL);
+    LocalNotificationService_TypeInfo->static_fields->nullObject = (struct LocalNotificationService_o *)v4;
+    sub_1B6406C(
       (ServantStatusBattleListViewItem_o *)LocalNotificationService_TypeInfo->static_fields,
-      (int32_t)v3,
-      v4,
-      v5);
+      (int32_t)v4,
+      v5,
+      v6);
     return LocalNotificationService_TypeInfo->static_fields->nullObject;
   }
   return nullObject;

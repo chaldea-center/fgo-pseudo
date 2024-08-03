@@ -23,16 +23,15 @@ void __fastcall EventInfoReleaseEventPointControl__PlayChangeNextPointAnim(
   __int64 v5; // x1
   __int64 v6; // x1
   UnityEngine_Object_o *pointLabel; // x21
-  __int64 v8; // x1
   UILabel_o *animation; // x0
-  System_String_o **v10; // x8
+  System_String_o **v9; // x8
 
-  if ( (byte_48E4030 & 1) == 0 )
+  if ( (byte_49FDC12 & 1) == 0 )
   {
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, isFadeIn);
-    sub_1B00CCC(&StringLiteral_21751/*"next_release_title_fade_in"*/, v5);
-    sub_1B00CCC(&StringLiteral_21752/*"next_release_title_fade_out"*/, v6);
-    byte_48E4030 = 1;
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, isFadeIn);
+    sub_1B640C8(&StringLiteral_21965/*"next_release_title_fade_in"*/, v5);
+    sub_1B640C8(&StringLiteral_21966/*"next_release_title_fade_out"*/, v6);
+    byte_49FDC12 = 1;
   }
   pointLabel = (UnityEngine_Object_o *)this->fields.pointLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -47,11 +46,11 @@ void __fastcall EventInfoReleaseEventPointControl__PlayChangeNextPointAnim(
   animation = (UILabel_o *)this->fields.animation;
   if ( !animation )
 LABEL_12:
-    sub_1B00F28(animation, v8);
-  v10 = (System_String_o **)&StringLiteral_21751/*"next_release_title_fade_in"*/;
+    sub_1B64324(animation);
+  v9 = (System_String_o **)&StringLiteral_21965/*"next_release_title_fade_in"*/;
   if ( !isFadeIn )
-    v10 = (System_String_o **)&StringLiteral_21752/*"next_release_title_fade_out"*/;
-  SimpleAnimation__Play_62462980((SimpleAnimation_o *)animation, *v10, 0LL);
+    v9 = (System_String_o **)&StringLiteral_21966/*"next_release_title_fade_out"*/;
+  SimpleAnimation__Play_63513060((SimpleAnimation_o *)animation, *v9, 0LL);
 }
 
 
@@ -68,19 +67,19 @@ void __fastcall EventInfoReleaseEventPointControl__PlayCheckInAnim(
   const MethodInfo *v9; // x2
   UnityEngine_Object_o *pointClearCheck; // x20
 
-  if ( (byte_48E4031 & 1) == 0 )
+  if ( (byte_49FDC13 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___, isFreeQuestCheck);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v5);
-    sub_1B00CCC(&StringLiteral_17707/*"check_in"*/, v6);
-    byte_48E4031 = 1;
+    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___, isFreeQuestCheck);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v5);
+    sub_1B640C8(&StringLiteral_17882/*"check_in"*/, v6);
+    byte_49FDC13 = 1;
   }
   questClearCheck = this->fields.questClearCheck;
   if ( !questClearCheck )
     goto LABEL_21;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        questClearCheck,
-                       (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+                       (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
@@ -114,16 +113,16 @@ void __fastcall EventInfoReleaseEventPointControl__PlayCheckInAnim(
             (questClearCheck = this->fields.pointClearCheck) == 0LL) )
       {
 LABEL_21:
-        sub_1B00F28(questClearCheck, isFreeQuestCheck);
+        sub_1B64324(questClearCheck);
       }
       questClearCheck = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                       questClearCheck,
-                                                      (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+                                                      (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
       Component_object = (Il2CppObject *)questClearCheck;
     }
     if ( Component_object )
     {
-      SimpleAnimation__Play_62462980((SimpleAnimation_o *)Component_object, (System_String_o *)StringLiteral_17707/*"check_in"*/, 0LL);
+      SimpleAnimation__Play_63513060((SimpleAnimation_o *)Component_object, (System_String_o *)StringLiteral_17882/*"check_in"*/, 0LL);
       return;
     }
     goto LABEL_21;
@@ -156,10 +155,10 @@ void __fastcall EventInfoReleaseEventPointControl__PlaySe(
   SePlayer_o *v11; // x20
   float result; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_48E4032 & 1) == 0 )
+  if ( (byte_49FDC14 & 1) == 0 )
   {
-    sub_1B00CCC(&SoundManager_TypeInfo, name);
-    byte_48E4032 = 1;
+    sub_1B640C8(&SoundManager_TypeInfo, name);
+    byte_49FDC14 = 1;
   }
   IsNullOrEmpty = (System_String_array *)System_String__IsNullOrEmpty(name, 0LL);
   if ( ((unsigned __int8)IsNullOrEmpty & 1) == 0 )
@@ -172,7 +171,7 @@ void __fastcall EventInfoReleaseEventPointControl__PlaySe(
     max_length = IsNullOrEmpty->max_length;
     v7 = IsNullOrEmpty;
     if ( !max_length )
-      sub_1B00F30(IsNullOrEmpty, v5);
+      sub_1B6432C(IsNullOrEmpty, v5);
     v8 = IsNullOrEmpty->m_Items[0];
     if ( max_length < 2 )
     {
@@ -184,7 +183,7 @@ void __fastcall EventInfoReleaseEventPointControl__PlaySe(
     v9 = IsNullOrEmpty->m_Items[1];
     if ( !SoundManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    v10 = SoundManager__playSe_37479232(v8, v9, 0LL);
+    v10 = SoundManager__playSe_38384912(v8, v9, 0LL);
     result = 0.0;
     if ( (int)v7->max_length >= 3 )
     {
@@ -198,7 +197,7 @@ void __fastcall EventInfoReleaseEventPointControl__PlaySe(
           return;
         }
 LABEL_18:
-        sub_1B00F28(IsNullOrEmpty, v5);
+        sub_1B64324(IsNullOrEmpty);
       }
     }
   }
@@ -211,11 +210,10 @@ void __fastcall EventInfoReleaseEventPointControl__SetActive(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v5; // x1
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B00F28(0LL, v5);
+    sub_1B64324(0LL);
   UnityEngine_GameObject__SetActive(gameObject, isActive, 0LL);
 }
 
@@ -234,15 +232,14 @@ void __fastcall EventInfoReleaseEventPointControl__SetPointLabel(
   int64_t UserPointEventMax; // x21
   int64_t v12; // x19
   System_String_o *NumberFormatLong; // x0
-  __int64 v14; // x1
 
-  if ( (byte_48E402F & 1) == 0 )
+  if ( (byte_49FDC11 & 1) == 0 )
   {
-    sub_1B00CCC(&BalanceConfig_TypeInfo, point);
-    sub_1B00CCC(&LocalizationManager_TypeInfo, v5);
-    sub_1B00CCC(&System_Math_TypeInfo, v6);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v7);
-    byte_48E402F = 1;
+    sub_1B640C8(&BalanceConfig_TypeInfo, point);
+    sub_1B640C8(&LocalizationManager_TypeInfo, v5);
+    sub_1B640C8(&System_Math_TypeInfo, v6);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v7);
+    byte_49FDC11 = 1;
   }
   pointLabel = (UnityEngine_Object_o *)this->fields.pointLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -259,12 +256,12 @@ void __fastcall EventInfoReleaseEventPointControl__SetPointLabel(
     UserPointEventMax = v10->static_fields->UserPointEventMax;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v12 = System_Math__Min_61144596(point, UserPointEventMax, 0LL);
+    v12 = System_Math__Min_62194376(point, UserPointEventMax, 0LL);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     NumberFormatLong = LocalizationManager__GetNumberFormatLong(v12, 0LL);
     if ( !v9 )
-      sub_1B00F28(NumberFormatLong, v14);
+      sub_1B64324(NumberFormatLong);
     UILabel__set_text(v9, NumberFormatLong, 0LL);
   }
 }
@@ -279,44 +276,44 @@ void __fastcall EventInfoReleaseEventPointControl__Setup(
   __int64 v6; // x1
   struct EventInfoPointRiverProgressControl_ProgressData_o **p_progressData; // x20
   UnityEngine_GameObject_o *questClearCheck; // x0
-  _BOOL8 IsFreeQuestClear; // x1
-  const MethodInfo *v10; // x2
-  UnityEngine_GameObject_o *v11; // x21
+  const MethodInfo *v9; // x2
+  UnityEngine_GameObject_o *v10; // x21
   Il2CppObject *Component_object; // x22
   struct EventInfoPointRiverProgressControl_ProgressData_o *progressData; // x8
-  struct EventInfoPointRiverProgressControl_ProgressData_o *v14; // x8
+  struct EventInfoPointRiverProgressControl_ProgressData_o *v13; // x8
+  bool IsFreeQuestClear; // w1
 
-  if ( (byte_48E402E & 1) == 0 )
+  if ( (byte_49FDC10 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___, progressData_);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v6);
-    byte_48E402E = 1;
+    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___, progressData_);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v6);
+    byte_49FDC10 = 1;
   }
   this->fields.progressData = progressData_;
   p_progressData = &this->fields.progressData;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields.progressData,
     (int32_t)progressData_,
     (int32_t)method,
     v3);
   if ( !progressData_ )
     goto LABEL_24;
-  EventInfoReleaseEventPointControl__SetPointLabel(this, progressData_->fields.NextPoint, v10);
+  EventInfoReleaseEventPointControl__SetPointLabel(this, progressData_->fields.NextPoint, v9);
   questClearCheck = this->fields.questClearCheck;
   if ( !questClearCheck )
     goto LABEL_24;
   questClearCheck = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                   questClearCheck,
-                                                  (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+                                                  (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
   if ( !this->fields.pointClearCheck )
     goto LABEL_24;
-  v11 = questClearCheck;
+  v10 = questClearCheck;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        this->fields.pointClearCheck,
-                       (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+                       (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  questClearCheck = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v11, 0LL, 0LL);
+  questClearCheck = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v10, 0LL, 0LL);
   if ( ((unsigned __int8)questClearCheck & 1) != 0 )
   {
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -327,9 +324,9 @@ void __fastcall EventInfoReleaseEventPointControl__Setup(
                                                     0LL);
     if ( ((unsigned __int8)questClearCheck & 1) != 0 )
     {
-      if ( !v11 )
+      if ( !v10 )
         goto LABEL_24;
-      LOBYTE(v11[4].monitor) = 0;
+      LOBYTE(v10[4].monitor) = 0;
       if ( !Component_object )
         goto LABEL_24;
       LOBYTE(Component_object[6].monitor) = 0;
@@ -338,14 +335,14 @@ void __fastcall EventInfoReleaseEventPointControl__Setup(
   if ( (progressData = this->fields.progressData) == 0LL
     || (questClearCheck = this->fields.questClearCheck) == 0LL
     || (UnityEngine_GameObject__SetActive(questClearCheck, progressData->fields.IsFreeQuestClear, 0LL),
-        (v14 = *p_progressData) == 0LL)
-    || (v14->fields.OldTotalPoint < v14->fields.NextPoint || !v14->fields.IsReleaseScenarioAnimEnd
-      ? (IsFreeQuestClear = 0LL)
-      : (IsFreeQuestClear = v14->fields.IsFreeQuestClear),
+        (v13 = *p_progressData) == 0LL)
+    || (v13->fields.OldTotalPoint < v13->fields.NextPoint || !v13->fields.IsReleaseScenarioAnimEnd
+      ? (IsFreeQuestClear = 0)
+      : (IsFreeQuestClear = v13->fields.IsFreeQuestClear),
         (questClearCheck = this->fields.pointClearCheck) == 0LL) )
   {
 LABEL_24:
-    sub_1B00F28(questClearCheck, IsFreeQuestClear);
+    sub_1B64324(questClearCheck);
   }
   UnityEngine_GameObject__SetActive(questClearCheck, IsFreeQuestClear, 0LL);
 }

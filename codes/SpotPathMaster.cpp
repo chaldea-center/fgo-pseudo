@@ -1,14 +1,14 @@
 void __fastcall SpotPathMaster___ctor(SpotPathMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E314D & 1) == 0 )
+  if ( (byte_49FCDAD & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__, method);
-    byte_48E314D = 1;
+    sub_1B640C8(&Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__, method);
+    byte_49FCDAD = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    216,
-    (const MethodInfo_2FE6A0C *)Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__);
+    217,
+    (const MethodInfo_30D3E64 *)Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__);
 }
 
 
@@ -51,19 +51,19 @@ SpotPathEntity_o *__fastcall SpotPathMaster__GetSpotPathEntity(
   int v15; // w23
   __int64 methodPtr_low; // x10
 
-  if ( (byte_48E314E & 1) == 0 )
+  if ( (byte_49FCDAE & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
-    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v9);
-    sub_1B00CCC(&SpotPathEntity_TypeInfo, v10);
-    byte_48E314E = 1;
+    sub_1B640C8(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
+    sub_1B640C8(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v9);
+    sub_1B640C8(&SpotPathEntity_TypeInfo, v10);
+    byte_49FCDAE = 1;
   }
   result = (SpotPathEntity_o *)this->fields.list;
   if ( !result )
     goto LABEL_16;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)result,
-            (const MethodInfo_2F836B0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_3070B08 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
     v13 = Count;
@@ -77,7 +77,7 @@ SpotPathEntity_o *__fastcall SpotPathMaster__GetSpotPathEntity(
       result = (SpotPathEntity_o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                      (System_Collections_ObjectModel_Collection_T__o *)result,
                                      v14,
-                                     (const MethodInfo_2F83740 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                     (const MethodInfo_3070B98 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( !result )
         break;
       methodPtr_low = LOBYTE(SpotPathEntity_TypeInfo->vtable._0_Equals.methodPtr);
@@ -92,7 +92,7 @@ SpotPathEntity_o *__fastcall SpotPathMaster__GetSpotPathEntity(
         return 0LL;
     }
 LABEL_16:
-    sub_1B00F28(result, *(_QWORD *)&eventId);
+    sub_1B64324(result);
   }
   return 0LL;
 }

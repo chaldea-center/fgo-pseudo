@@ -5,15 +5,15 @@ void __fastcall UIScriptEquip___ctor(UIScriptEquip_o *this, const MethodInfo *me
   int32_t v5; // w2
   int32_t v6; // w3
 
-  if ( (byte_48E4403 & 1) == 0 )
+  if ( (byte_49FE0B3 & 1) == 0 )
   {
-    sub_1B00CCC(&UIEquipGraphM___TypeInfo, method);
-    sub_1B00CCC(&UIScriptChara_TypeInfo, v3);
-    byte_48E4403 = 1;
+    sub_1B640C8(&UIEquipGraphM___TypeInfo, method);
+    sub_1B640C8(&UIScriptChara_TypeInfo, v3);
+    byte_49FE0B3 = 1;
   }
-  v4 = (struct UIEquipGraphM_array *)sub_1B00D74(UIEquipGraphM___TypeInfo, 2LL);
+  v4 = (struct UIEquipGraphM_array *)sub_1B64170(UIEquipGraphM___TypeInfo, 2LL);
   this->fields.equipGraphList = v4;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.equipGraphList, (int32_t)v4, v5, v6);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.equipGraphList, (int32_t)v4, v5, v6);
   if ( !UIScriptChara_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UIScriptChara_TypeInfo);
   this->fields.backIndex = -1;
@@ -40,15 +40,17 @@ void __fastcall UIScriptEquip__ChangeCharacter(
   __int64 backIndex; // x10
   UIEquipGraphRender_o *v20; // x22
   UIEquipGraphRender_o *v21; // x23
-  System_Action_o *v22; // x23
+  __int64 v22; // x1
+  __int64 v23; // x2
+  System_Action_o *v24; // x23
 
-  if ( (byte_48E43FE & 1) == 0 )
+  if ( (byte_49FE0AE & 1) == 0 )
   {
-    sub_1B00CCC(&System_Action_TypeInfo, *(_QWORD *)&kind);
-    sub_1B00CCC(&Method_UIScriptEquip_UpdateChange__, v13);
-    byte_48E43FE = 1;
+    sub_1B640C8(&System_Action_TypeInfo, *(_QWORD *)&kind);
+    sub_1B640C8(&Method_UIScriptEquip_UpdateChange__, v13);
+    byte_49FE0AE = 1;
   }
-  UIScriptChara__ChangeCharacter_40430504((UIScriptChara_o *)this, kind, speed, imageName, faceType, callback, method);
+  UIScriptChara__ChangeCharacter_41398356((UIScriptChara_o *)this, kind, speed, imageName, faceType, callback, method);
   equipGraphList = this->fields.equipGraphList;
   if ( !equipGraphList )
     goto LABEL_9;
@@ -57,7 +59,7 @@ void __fastcall UIScriptEquip__ChangeCharacter(
   if ( (unsigned int)mainIndex >= max_length
     || (backIndex = this->fields.backIndex, (unsigned int)backIndex >= max_length) )
   {
-    sub_1B00F30(v14, v15);
+    sub_1B6432C(v14, v15);
   }
   v20 = (UIEquipGraphRender_o *)equipGraphList->m_Items[mainIndex];
   v21 = (UIEquipGraphRender_o *)equipGraphList->m_Items[backIndex];
@@ -69,27 +71,27 @@ void __fastcall UIScriptEquip__ChangeCharacter(
         !v21) )
   {
 LABEL_9:
-    sub_1B00F28(v14, v15);
+    sub_1B64324(v14);
   }
   UIEquipGraphRender__SetDepth(v21, 0.0, 0LL);
   UIEquipGraphRender__SetShadow(v20, this->fields.isShadow, 0LL);
-  v22 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
-  System_Action___ctor(v22, (Il2CppObject *)this, Method_UIScriptEquip_UpdateChange__, 0LL);
-  UIEquipGraphM__SetCharacter((UIEquipGraphM_o *)v20, imageName, faceType, v22, 0LL);
+  v24 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v22, v23);
+  System_Action___ctor(v24, (Il2CppObject *)this, Method_UIScriptEquip_UpdateChange__, 0LL);
+  UIEquipGraphM__SetCharacter((UIEquipGraphM_o *)v20, imageName, faceType, v24, 0LL);
 }
 
 
 void __fastcall UIScriptEquip__ContinueChangeFade(UIScriptEquip_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E4400 & 1) == 0 )
+  if ( (byte_49FE0B0 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_14953/*"UpdateChange"*/, method);
-    byte_48E4400 = 1;
+    sub_1B640C8(&StringLiteral_15111/*"UpdateChange"*/, method);
+    byte_49FE0B0 = 1;
   }
   UIScriptEquip__SetOverlap(this, 1.0, method);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_14953/*"UpdateChange"*/,
+    (System_String_o *)StringLiteral_15111/*"UpdateChange"*/,
     this->fields.changeStep,
     0LL);
 }
@@ -118,7 +120,7 @@ void __fastcall UIScriptEquip__EndChange(UIScriptEquip_o *this, const MethodInfo
   if ( (unsigned int)mainIndex >= max_length
     || (backIndex = this->fields.backIndex, (unsigned int)backIndex >= max_length) )
   {
-    sub_1B00F30(this, method);
+    sub_1B6432C(this, method);
   }
   this = (UIScriptEquip_o *)equipGraphList->m_Items[mainIndex];
   if ( !this
@@ -127,7 +129,7 @@ void __fastcall UIScriptEquip__EndChange(UIScriptEquip_o *this, const MethodInfo
         !v7) )
   {
 LABEL_9:
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   }
   UIEquipGraphRender__SetAlpha(v7, 0.0, 0LL);
   UIEquipGraphM__ReleaseCharacter((UIEquipGraphM_o *)v7, 0LL);
@@ -138,7 +140,7 @@ LABEL_9:
   if ( changeCallback )
   {
     p_changeCallback->klass = 0LL;
-    sub_1B00C70(p_changeCallback, 0, v8, v9);
+    sub_1B6406C(p_changeCallback, 0, v8, v9);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v11->fields.m_target)(
       v11->fields.original_method_info,
       *(_QWORD *)&v11->fields.extra_arg);
@@ -179,7 +181,7 @@ void __fastcall UIScriptEquip__EndSet(UIScriptEquip_o *this, const MethodInfo *m
   mainIndex = this->fields.mainIndex;
   v4 = this;
   if ( (unsigned int)mainIndex >= equipGraphList->max_length )
-    sub_1B00F30(this, method);
+    sub_1B6432C(this, method);
   v5 = &equipGraphList->obj.klass + mainIndex;
   v6 = (UIEquipGraphRender_o *)v5[4];
   if ( !v6 )
@@ -251,7 +253,7 @@ void __fastcall UIScriptEquip__EndSet(UIScriptEquip_o *this, const MethodInfo *m
         (this = (UIScriptEquip_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0LL)) == 0LL) )
   {
 LABEL_23:
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   }
   v24.fields.x = CenterOffset.fields.x;
   v24.fields.y = CenterOffset.fields.y;
@@ -263,7 +265,7 @@ LABEL_23:
   if ( setCallback )
   {
     p_setCallback->klass = 0LL;
-    sub_1B00C70(p_setCallback, 0, v16, v17);
+    sub_1B6406C(p_setCallback, 0, v16, v17);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v19->fields.m_target)(
       v19->fields.original_method_info,
       *(_QWORD *)&v19->fields.extra_arg);
@@ -282,11 +284,11 @@ bool __fastcall UIScriptEquip__IsBusyMoveAlpha(UIScriptEquip_o *this, const Meth
     goto LABEL_5;
   mainIndex = this->fields.mainIndex;
   if ( (unsigned int)mainIndex >= equipGraphList->max_length )
-    sub_1B00F30(this, method);
+    sub_1B6432C(this, method);
   v4 = equipGraphList->m_Items[mainIndex];
   if ( !v4 )
 LABEL_5:
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   return v4->fields.isBusyMoveAlpha;
 }
 
@@ -305,11 +307,11 @@ void __fastcall UIScriptEquip__MoveAlpha(UIScriptEquip_o *this, float duration, 
   mainIndex = this->fields.mainIndex;
   v6 = (UIScriptChara_o *)this;
   if ( (unsigned int)mainIndex >= equipGraphList->max_length )
-    sub_1B00F30(this, method);
+    sub_1B6432C(this, method);
   this = (UIScriptEquip_o *)equipGraphList->m_Items[mainIndex];
   if ( !this )
 LABEL_5:
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   UIEquipGraphRender__MoveAlpha((UIEquipGraphRender_o *)this, duration, a, 0LL, 0LL, 0LL);
   UIScriptChara__RecoverShadowEffect(v6, 0, v7);
 }
@@ -329,11 +331,11 @@ void __fastcall UIScriptEquip__MoveAlphaSpeed(UIScriptEquip_o *this, float speed
   mainIndex = this->fields.mainIndex;
   v6 = (UIScriptChara_o *)this;
   if ( (unsigned int)mainIndex >= equipGraphList->max_length )
-    sub_1B00F30(this, method);
+    sub_1B6432C(this, method);
   this = (UIScriptEquip_o *)equipGraphList->m_Items[mainIndex];
   if ( !this )
 LABEL_5:
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   UIEquipGraphRender__MoveAlphaSpeed((UIEquipGraphRender_o *)this, speed, a, 0LL, 0LL, 0LL);
   UIScriptChara__RecoverShadowEffect(v6, 0, v7);
 }
@@ -353,11 +355,11 @@ void __fastcall UIScriptEquip__SetAlpha(UIScriptEquip_o *this, float a, const Me
   mainIndex = this->fields.mainIndex;
   v5 = (UIScriptChara_o *)this;
   if ( (unsigned int)mainIndex >= equipGraphList->max_length )
-    sub_1B00F30(this, method);
+    sub_1B6432C(this, method);
   this = (UIScriptEquip_o *)equipGraphList->m_Items[mainIndex];
   if ( !this )
 LABEL_5:
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   UIEquipGraphRender__SetAlpha((UIEquipGraphRender_o *)this, a, 0LL);
   UIScriptChara__RecoverShadowEffect(v5, 0, v6);
 }
@@ -376,15 +378,17 @@ void __fastcall UIScriptEquip__SetCharacter(
   __int64 mainIndex; // x9
   Il2CppClass **v13; // x8
   UIEquipGraphM_o *v14; // x22
-  System_Action_o *v15; // x23
+  __int64 v15; // x1
+  __int64 v16; // x2
+  System_Action_o *v17; // x23
 
-  if ( (byte_48E4401 & 1) == 0 )
+  if ( (byte_49FE0B1 & 1) == 0 )
   {
-    sub_1B00CCC(&System_Action_TypeInfo, imageName);
-    byte_48E4401 = 1;
+    sub_1B640C8(&System_Action_TypeInfo, imageName);
+    byte_49FE0B1 = 1;
   }
   this->fields.setCallback = callback;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields.setCallback,
     (int32_t)callback,
     faceType,
@@ -394,16 +398,16 @@ void __fastcall UIScriptEquip__SetCharacter(
     goto LABEL_7;
   mainIndex = this->fields.mainIndex;
   if ( (unsigned int)mainIndex >= equipGraphList->max_length )
-    sub_1B00F30(v9, v10);
+    sub_1B6432C(v9, v10);
   v13 = &equipGraphList->obj.klass + mainIndex;
   v14 = (UIEquipGraphM_o *)v13[4];
   if ( !v14 )
 LABEL_7:
-    sub_1B00F28(v9, v10);
+    sub_1B64324(v9);
   UIEquipGraphRender__SetFilter((UIEquipGraphRender_o *)v13[4], this->fields.filterName, this->fields.filterColor, 0LL);
-  v15 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
-  System_Action___ctor(v15, (Il2CppObject *)this, (intptr_t)this->klass->vtable._13_SetFace.methodPtr, 0LL);
-  UIEquipGraphM__SetCharacter(v14, imageName, faceType, v15, 0LL);
+  v17 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v15, v16);
+  System_Action___ctor(v17, (Il2CppObject *)this, (intptr_t)this->klass->vtable._13_SetFace.methodPtr, 0LL);
+  UIEquipGraphM__SetCharacter(v14, imageName, faceType, v17, 0LL);
 }
 
 
@@ -423,7 +427,7 @@ void __fastcall UIScriptEquip__SetDepth(UIScriptEquip_o *this, int32_t d, const 
   mainIndex = this->fields.mainIndex;
   v5 = this;
   if ( (unsigned int)mainIndex >= equipGraphList->max_length )
-    sub_1B00F30(this, *(_QWORD *)&d);
+    sub_1B6432C(this, *(_QWORD *)&d);
   this = (UIScriptEquip_o *)this->fields.baseDepth;
   if ( !this
     || (v6 = (UIEquipGraphRender_o *)equipGraphList->m_Items[mainIndex],
@@ -434,7 +438,7 @@ void __fastcall UIScriptEquip__SetDepth(UIScriptEquip_o *this, int32_t d, const 
         !v6) )
   {
 LABEL_7:
-    sub_1B00F28(this, *(_QWORD *)&d);
+    sub_1B64324(this);
   }
   UIEquipGraphRender__SetDepth(v6, 0.1, 0LL);
 }
@@ -465,7 +469,7 @@ void __fastcall UIScriptEquip__SetFilter(
   b = filterColor.fields.b;
   g = filterColor.fields.g;
   r = filterColor.fields.r;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.filterName, (int32_t)filterName, (int32_t)method, v4);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.filterName, (int32_t)filterName, (int32_t)method, v4);
   v12 = p_filterName[13];
   *((float *)p_filterName + 2) = r;
   *((float *)p_filterName + 3) = g;
@@ -475,11 +479,11 @@ void __fastcall UIScriptEquip__SetFilter(
     goto LABEL_5;
   v13 = *((int *)p_filterName + 16);
   if ( (unsigned int)v13 >= LODWORD(v12[1].klass) )
-    sub_1B00F30(v10, v11);
+    sub_1B6432C(v10, v11);
   v10 = (UIEquipGraphRender_o *)*((_QWORD *)&v12[1].monitor + v13);
   if ( !v10 )
 LABEL_5:
-    sub_1B00F28(v10, v11);
+    sub_1B64324(v10);
   v14.fields.b = b;
   v14.fields.a = a;
   v14.fields.r = r;
@@ -508,7 +512,7 @@ void __fastcall UIScriptEquip__SetMaskInteraction(
     while ( 1 )
     {
       if ( v6 >= max_length )
-        sub_1B00F30(this, *(_QWORD *)&maskInteraction);
+        sub_1B6432C(this, *(_QWORD *)&maskInteraction);
       this = (UIScriptEquip_o *)equipGraphList->m_Items[v6];
       if ( !this )
         break;
@@ -518,7 +522,7 @@ void __fastcall UIScriptEquip__SetMaskInteraction(
         return;
     }
 LABEL_9:
-    sub_1B00F28(this, *(_QWORD *)&maskInteraction);
+    sub_1B64324(this);
   }
 }
 
@@ -539,7 +543,7 @@ void __fastcall UIScriptEquip__SetOverlap(UIScriptEquip_o *this, float a, const 
   if ( (unsigned int)mainIndex >= max_length
     || (backIndex = this->fields.backIndex, (unsigned int)backIndex >= max_length) )
   {
-    sub_1B00F30(this, method);
+    sub_1B6432C(this, method);
   }
   this = (UIScriptEquip_o *)equipGraphList->m_Items[mainIndex];
   if ( !this
@@ -548,7 +552,7 @@ void __fastcall UIScriptEquip__SetOverlap(UIScriptEquip_o *this, float a, const 
         !v7) )
   {
 LABEL_7:
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   }
   UIEquipGraphRender__SetAlpha(v7, 1.0 - a, 0LL);
 }
@@ -588,7 +592,7 @@ LABEL_10:
       klass = v5[1].klass;
       if ( !klass )
 LABEL_11:
-        sub_1B00F28(this, isShadow);
+        sub_1B64324(this);
       if ( (unsigned int)backIndex < LODWORD(klass->_1.namespaze) )
       {
         this = (UIScriptEquip_o *)*((_QWORD *)&klass->_1.byval_arg.data + backIndex);
@@ -600,7 +604,7 @@ LABEL_11:
         goto LABEL_11;
       }
     }
-    sub_1B00F30(this, isShadow);
+    sub_1B6432C(this, isShadow);
   }
 }
 
@@ -622,7 +626,7 @@ void __fastcall UIScriptEquip__SetSortingOrder(UIScriptEquip_o *this, int32_t or
     while ( 1 )
     {
       if ( v6 >= max_length )
-        sub_1B00F30(this, *(_QWORD *)&order);
+        sub_1B6432C(this, *(_QWORD *)&order);
       this = (UIScriptEquip_o *)equipGraphList->m_Items[v6];
       if ( !this )
         break;
@@ -632,7 +636,7 @@ void __fastcall UIScriptEquip__SetSortingOrder(UIScriptEquip_o *this, int32_t or
         return;
     }
 LABEL_9:
-    sub_1B00F28(this, *(_QWORD *)&order);
+    sub_1B64324(this);
   }
 }
 
@@ -685,23 +689,23 @@ void __fastcall UIScriptEquip__SetSpecialEffect(
   z = pos.fields.z;
   y = pos.fields.y;
   x = pos.fields.x;
-  if ( (byte_48E4402 & 1) == 0 )
+  if ( (byte_49FE0B2 & 1) == 0 )
   {
     colora = v20;
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, n);
-    sub_1B00CCC(&StringLiteral_24349/*"wipe"*/, v21);
-    sub_1B00CCC(&StringLiteral_16583/*"appearanceReverse"*/, v22);
-    sub_1B00CCC(&StringLiteral_18191/*"darkEnemyErasure"*/, v23);
-    sub_1B00CCC(&StringLiteral_24355/*"wipeTimeRe"*/, v24);
-    sub_1B00CCC(&StringLiteral_18192/*"darkWipe"*/, v25);
-    sub_1B00CCC(&StringLiteral_19201/*"flashErasure"*/, v26);
-    sub_1B00CCC(&StringLiteral_16582/*"appearance"*/, v27);
-    sub_1B00CCC(&StringLiteral_18798/*"erasure"*/, v28);
-    sub_1B00CCC(&StringLiteral_18799/*"erasureReverse"*/, v29);
-    sub_1B00CCC(&StringLiteral_18767/*"enemyErasure"*/, v30);
-    sub_1B00CCC(&StringLiteral_24354/*"wipeTime"*/, v31);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, n);
+    sub_1B640C8(&StringLiteral_24614/*"wipe"*/, v21);
+    sub_1B640C8(&StringLiteral_16748/*"appearanceReverse"*/, v22);
+    sub_1B640C8(&StringLiteral_18369/*"darkEnemyErasure"*/, v23);
+    sub_1B640C8(&StringLiteral_24620/*"wipeTimeRe"*/, v24);
+    sub_1B640C8(&StringLiteral_18370/*"darkWipe"*/, v25);
+    sub_1B640C8(&StringLiteral_19383/*"flashErasure"*/, v26);
+    sub_1B640C8(&StringLiteral_16747/*"appearance"*/, v27);
+    sub_1B640C8(&StringLiteral_18977/*"erasure"*/, v28);
+    sub_1B640C8(&StringLiteral_18978/*"erasureReverse"*/, v29);
+    sub_1B640C8(&StringLiteral_18946/*"enemyErasure"*/, v30);
+    sub_1B640C8(&StringLiteral_24619/*"wipeTime"*/, v31);
     v32 = colora;
-    byte_48E4402 = 1;
+    byte_49FE0B2 = 1;
   }
   v41.fields.x = x;
   v41.fields.y = y;
@@ -726,9 +730,9 @@ void __fastcall UIScriptEquip__SetSpecialEffect(
   {
     equipGraphList = this->fields.equipGraphList;
     if ( !equipGraphList )
-      sub_1B00F28(v34, v35);
+      sub_1B64324(v34);
     if ( this->fields.mainIndex >= equipGraphList->max_length )
-      sub_1B00F30(v34, v35);
+      sub_1B6432C(v34, v35);
     v37 = PrivateImplementationDetails___ComputeStringHash(n, 0LL);
     if ( v37 > 0x8D759330 )
     {
@@ -737,13 +741,13 @@ void __fastcall UIScriptEquip__SetSpecialEffect(
         switch ( v37 )
         {
           case 0xE7555186:
-            v38 = &StringLiteral_24349/*"wipe"*/;
+            v38 = &StringLiteral_24614/*"wipe"*/;
             break;
           case 0xEC9DA126:
-            v38 = &StringLiteral_18192/*"darkWipe"*/;
+            v38 = &StringLiteral_18370/*"darkWipe"*/;
             break;
           case 0xEE11C37F:
-            v38 = &StringLiteral_16582/*"appearance"*/;
+            v38 = &StringLiteral_16747/*"appearance"*/;
             break;
           default:
             return;
@@ -754,13 +758,13 @@ void __fastcall UIScriptEquip__SetSpecialEffect(
         switch ( v37 )
         {
           case 0x8DA714B6:
-            v38 = &StringLiteral_24355/*"wipeTimeRe"*/;
+            v38 = &StringLiteral_24620/*"wipeTimeRe"*/;
             break;
           case 0x9C7CDA94:
-            v38 = &StringLiteral_19201/*"flashErasure"*/;
+            v38 = &StringLiteral_19383/*"flashErasure"*/;
             break;
           case 0xD4B34506:
-            v38 = &StringLiteral_18799/*"erasureReverse"*/;
+            v38 = &StringLiteral_18978/*"erasureReverse"*/;
             break;
           default:
             return;
@@ -772,13 +776,13 @@ void __fastcall UIScriptEquip__SetSpecialEffect(
       switch ( v37 )
       {
         case 0x8D759330:
-          v38 = &StringLiteral_18798/*"erasure"*/;
+          v38 = &StringLiteral_18977/*"erasure"*/;
           break;
         case 0x4DE5D9DEu:
-          v38 = &StringLiteral_18767/*"enemyErasure"*/;
+          v38 = &StringLiteral_18946/*"enemyErasure"*/;
           break;
         case 0x50AF70CBu:
-          v38 = &StringLiteral_16583/*"appearanceReverse"*/;
+          v38 = &StringLiteral_16748/*"appearanceReverse"*/;
           break;
         default:
           return;
@@ -786,13 +790,13 @@ void __fastcall UIScriptEquip__SetSpecialEffect(
     }
     else if ( v37 == 242689791 )
     {
-      v38 = &StringLiteral_24354/*"wipeTime"*/;
+      v38 = &StringLiteral_24619/*"wipeTime"*/;
     }
     else
     {
       if ( v37 != 1242641086 )
         return;
-      v38 = &StringLiteral_18191/*"darkEnemyErasure"*/;
+      v38 = &StringLiteral_18369/*"darkEnemyErasure"*/;
     }
     if ( System_String__op_Equality(n, (System_String_o *)*v38, 0LL) )
       UIScriptChara__StopShadowEffect((UIScriptChara_o *)this, isSkip, v39);
@@ -826,12 +830,12 @@ void __fastcall UIScriptEquip__UpdateChange(UIScriptEquip_o *this, const MethodI
   float UNIT_SPEED; // s0
 
   v2 = this;
-  if ( (byte_48E43FF & 1) == 0 )
+  if ( (byte_49FE0AF & 1) == 0 )
   {
-    sub_1B00CCC(&UIScriptChara_TypeInfo, method);
-    sub_1B00CCC(&StringLiteral_5885/*"EndChange"*/, v3);
-    this = (UIScriptEquip_o *)sub_1B00CCC(&StringLiteral_4683/*"ContinueChangeFade"*/, v4);
-    byte_48E43FF = 1;
+    sub_1B640C8(&UIScriptChara_TypeInfo, method);
+    sub_1B640C8(&StringLiteral_5922/*"EndChange"*/, v3);
+    this = (UIScriptEquip_o *)sub_1B640C8(&StringLiteral_4712/*"ContinueChangeFade"*/, v4);
+    byte_49FE0AF = 1;
   }
   equipGraphList = v2->fields.equipGraphList;
   if ( !equipGraphList )
@@ -841,7 +845,7 @@ void __fastcall UIScriptEquip__UpdateChange(UIScriptEquip_o *this, const MethodI
   if ( (unsigned int)mainIndex >= max_length
     || (backIndex = v2->fields.backIndex, (unsigned int)backIndex >= max_length) )
   {
-    sub_1B00F30(this, method);
+    sub_1B6432C(this, method);
   }
   changeKind = v2->fields.changeKind;
   if ( changeKind != 3 )
@@ -868,13 +872,13 @@ LABEL_16:
           changeSpeed,
           1.0,
           (UnityEngine_GameObject_o *)this,
-          (System_String_o *)StringLiteral_5885/*"EndChange"*/,
+          (System_String_o *)StringLiteral_5922/*"EndChange"*/,
           0LL);
         return;
       }
     }
 LABEL_25:
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   }
   v10 = v2->fields.changeSpeed;
   if ( v10 <= 0.0 )
@@ -914,5 +918,5 @@ LABEL_25:
     v2->fields.changeTotal = v15 + (float)(v16 + (float)(v17 + v17));
     v2->fields.changeStep = v16 + v17;
   }
-  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)v2, (System_String_o *)StringLiteral_4683/*"ContinueChangeFade"*/, v17, 0LL);
+  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)v2, (System_String_o *)StringLiteral_4712/*"ContinueChangeFade"*/, v17, 0LL);
 }

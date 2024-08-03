@@ -1,14 +1,14 @@
 void __fastcall SkillLvMaster___ctor(SkillLvMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E311E & 1) == 0 )
+  if ( (byte_49FCD7E & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataMasterBase_SkillLvMaster__SkillLvEntity__string___ctor__, method);
-    byte_48E311E = 1;
+    sub_1B640C8(&Method_DataMasterBase_SkillLvMaster__SkillLvEntity__string___ctor__, method);
+    byte_49FCD7E = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    52,
-    (const MethodInfo_2FE6D64 *)Method_DataMasterBase_SkillLvMaster__SkillLvEntity__string___ctor__);
+    53,
+    (const MethodInfo_30D41BC *)Method_DataMasterBase_SkillLvMaster__SkillLvEntity__string___ctor__);
 }
 
 
@@ -37,7 +37,7 @@ SkillLvEntity_o *__fastcall SkillLvMaster__GetAddInvokeSkillLvEntity(
 
   entity = 0LL;
   if ( !skillLvEnt )
-    sub_1B00F28(this, 0LL);
+    sub_1B64324(this);
   v5 = SkillLvEntity__GetAddInvokeSkillId(skillLvEnt, (const MethodInfo *)skillLvEnt);
   v7 = SkillLvEntity__GetAddInvokeSkillLv(skillLvEnt, v6);
   SkillLvMaster__TryGetEntity(this, &entity, v5, v7, v8);
@@ -51,11 +51,11 @@ int64_t __fastcall SkillLvMaster__GetBaseTime(const MethodInfo *method)
   __int64 v2; // x1
   int64_t result; // x0
 
-  if ( (byte_48E3121 & 1) == 0 )
+  if ( (byte_49FCD81 & 1) == 0 )
   {
-    sub_1B00CCC(&NetworkManager_TypeInfo, v1);
-    sub_1B00CCC(&SkillLvMaster_TypeInfo, v2);
-    byte_48E3121 = 1;
+    sub_1B640C8(&NetworkManager_TypeInfo, v1);
+    sub_1B640C8(&SkillLvMaster_TypeInfo, v2);
+    byte_49FCD81 = 1;
   }
   result = SkillLvMaster_TypeInfo->static_fields->propertyOverwriteBaseTime;
   if ( !result )
@@ -84,90 +84,91 @@ System_Int32_array *__fastcall SkillLvMaster__GetDispValFromSkill(
   __int64 v13; // x1
   Il2CppObject *Master_object; // x0
   const MethodInfo *v15; // x2
-  SkillLvEntity_o *v16; // x1
   struct System_Int32_array *funcId; // x22
   DataVals_array *SetTypeDataValArray; // x20
-  System_Collections_Generic_List_int__o *v19; // x19
-  FunctionMaster_o *v20; // x21
-  unsigned __int64 v21; // x23
+  __int64 v18; // x1
+  __int64 v19; // x2
+  System_Collections_Generic_List_int__o *v20; // x19
+  __int64 v21; // x1
+  FunctionMaster_o *v22; // x21
+  unsigned __int64 v23; // x23
   struct System_Int32_array *items; // x8
-  _QWORD *v23; // x9
+  _QWORD *v25; // x9
   __int64 size; // x10
   SkillLvEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_48E3123 & 1) == 0 )
+  if ( (byte_49FCD83 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataManager_GetMaster_FunctionMaster___, *(_QWORD *)&skillId);
-    sub_1B00CCC(&DataManager_TypeInfo, v8);
-    sub_1B00CCC(&int___TypeInfo, v9);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_int__Add__, v10);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_int__ToArray__, v11);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_int___ctor__, v12);
-    sub_1B00CCC(&System_Collections_Generic_List_int__TypeInfo, v13);
-    byte_48E3123 = 1;
+    sub_1B640C8(&Method_DataManager_GetMaster_FunctionMaster___, *(_QWORD *)&skillId);
+    sub_1B640C8(&DataManager_TypeInfo, v8);
+    sub_1B640C8(&int___TypeInfo, v9);
+    sub_1B640C8(&Method_System_Collections_Generic_List_int__Add__, v10);
+    sub_1B640C8(&Method_System_Collections_Generic_List_int__ToArray__, v11);
+    sub_1B640C8(&Method_System_Collections_Generic_List_int___ctor__, v12);
+    sub_1B640C8(&System_Collections_Generic_List_int__TypeInfo, v13);
+    byte_49FCD83 = 1;
   }
   entity = 0LL;
   Master_object = (Il2CppObject *)SkillLvMaster__TryGetEntity(this, &entity, skillId, skillLv, v4);
   if ( ((unsigned __int8)Master_object & 1) == 0 )
-    return (System_Int32_array *)sub_1B00D74(int___TypeInfo, 1LL);
-  v16 = entity;
+    return (System_Int32_array *)sub_1B64170(int___TypeInfo, 1LL);
   if ( !entity )
     goto LABEL_23;
   funcId = entity->fields.funcId;
   SetTypeDataValArray = SkillLvMaster__GetSetTypeDataValArray((SkillLvMaster_o *)Master_object, entity, v15);
-  v19 = (System_Collections_Generic_List_int__o *)sub_1B00F18(System_Collections_Generic_List_int__TypeInfo);
+  v20 = (System_Collections_Generic_List_int__o *)sub_1B64314(System_Collections_Generic_List_int__TypeInfo, v18, v19);
   System_Collections_Generic_List_int____ctor(
-    v19,
-    (const MethodInfo_33A4158 *)Method_System_Collections_Generic_List_int___ctor__);
+    v20,
+    (const MethodInfo_348F688 *)Method_System_Collections_Generic_List_int___ctor__);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_FunctionMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_FunctionMaster___);
   if ( !funcId )
     goto LABEL_23;
   if ( (int)funcId->max_length >= 1 )
   {
-    v20 = (FunctionMaster_o *)Master_object;
-    v21 = 0LL;
+    v22 = (FunctionMaster_o *)Master_object;
+    v23 = 0LL;
     while ( SetTypeDataValArray )
     {
-      if ( v21 >= SetTypeDataValArray->max_length )
-        sub_1B00F30(Master_object, v16);
+      if ( v23 >= SetTypeDataValArray->max_length )
+        sub_1B6432C(Master_object, v21);
+      if ( !v22 )
+        break;
+      Master_object = (Il2CppObject *)FunctionMaster__GetDispValFromFunc(v22, SetTypeDataValArray->m_Items[v23], 3, 0LL);
       if ( !v20 )
         break;
-      Master_object = (Il2CppObject *)FunctionMaster__GetDispValFromFunc(v20, SetTypeDataValArray->m_Items[v21], 3, 0LL);
-      if ( !v19 )
-        break;
-      items = v19->fields._items;
-      v23 = Method_System_Collections_Generic_List_int__Add__;
-      ++v19->fields._version;
+      items = v20->fields._items;
+      v25 = Method_System_Collections_Generic_List_int__Add__;
+      ++v20->fields._version;
       if ( !items )
         break;
-      size = v19->fields._size;
-      v16 = (SkillLvEntity_o *)(unsigned int)Master_object;
+      size = v20->fields._size;
+      v21 = (unsigned int)Master_object;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_int___AddWithResize(
-          v19,
+          v20,
           (int32_t)Master_object,
-          *(const MethodInfo_33A49AC **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+          *(const MethodInfo_348FEDC **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
       }
       else
       {
-        v19->fields._size = size + 1;
+        v20->fields._size = size + 1;
         items->m_Items[size + 1] = (int)Master_object;
       }
-      if ( (__int64)++v21 >= (int)funcId->max_length )
+      if ( (__int64)++v23 >= (int)funcId->max_length )
         goto LABEL_19;
     }
 LABEL_23:
-    sub_1B00F28(Master_object, v16);
+    sub_1B64324(Master_object);
   }
 LABEL_19:
-  if ( !v19 )
+  if ( !v20 )
     goto LABEL_23;
   return System_Collections_Generic_List_int___ToArray(
-           v19,
-           (const MethodInfo_33A6464 *)Method_System_Collections_Generic_List_int__ToArray__);
+           v20,
+           (const MethodInfo_3491A34 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -183,17 +184,17 @@ SkillLvEntity_o *__fastcall SkillLvMaster__GetEntity(
   Il2CppObject *Entity; // x0
   const MethodInfo *v10; // x3
 
-  if ( (byte_48E311B & 1) == 0 )
+  if ( (byte_49FCD7B & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataMasterBase_SkillLvMaster__SkillLvEntity__string__GetEntity__, *(_QWORD *)&skillId);
-    sub_1B00CCC(&SkillLvMaster_TypeInfo, v7);
-    byte_48E311B = 1;
+    sub_1B640C8(&Method_DataMasterBase_SkillLvMaster__SkillLvEntity__string__GetEntity__, *(_QWORD *)&skillId);
+    sub_1B640C8(&SkillLvMaster_TypeInfo, v7);
+    byte_49FCD7B = 1;
   }
   PK = (Il2CppObject *)SkillLvEntity__CreatePK(skillId, lv, *(const MethodInfo **)&lv);
   Entity = DataMasterBase_object__object__object___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)this,
              PK,
-             (const MethodInfo_2FE6DA4 *)Method_DataMasterBase_SkillLvMaster__SkillLvEntity__string__GetEntity__);
+             (const MethodInfo_30D41FC *)Method_DataMasterBase_SkillLvMaster__SkillLvEntity__string__GetEntity__);
   return SkillLvMaster__GetOverwriteEntity(
            (SkillLvMaster_o *)Entity,
            (SkillLvEntity_o *)Entity,
@@ -216,36 +217,38 @@ SkillLvEntity_o *__fastcall SkillLvMaster__GetOverwriteEntity(
   __int64 v10; // x1
   __int64 v11; // x1
   System_Int32_array *Master_object; // x0
-  System_Int32_array *v13; // x1
-  const MethodInfo *v14; // x3
+  const MethodInfo *v13; // x3
+  __int64 v14; // x1
   __int64 v15; // x8
   System_Int32_array *v16; // x21
   unsigned __int64 v17; // x24
   int32_t v18; // w22
   const MethodInfo *v19; // x4
-  __int64 v20; // x20
-  const MethodInfo *v21; // x2
-  int32_t v22; // w2
-  int32_t v23; // w3
-  System_Int32_array *v24; // x19
-  int32_t v25; // w2
-  int32_t v26; // w3
+  __int64 v20; // x2
+  __int64 v21; // x20
+  const MethodInfo *v22; // x2
+  int32_t v23; // w2
+  int32_t v24; // w3
+  System_Int32_array *v25; // x19
+  System_Int32_array *v26; // x1
+  int32_t v27; // w2
+  int32_t v28; // w3
   System_Array_o *svals; // x0
-  Il2CppObject *v28; // x0
-  __int64 v29; // x1
+  Il2CppObject *v30; // x0
+  __int64 v31; // x1
   SkillGroupOverwriteEntity_o *entitya; // [xsp+8h] [xbp-48h] BYREF
 
   v5 = entity;
-  if ( (byte_48E311D & 1) == 0 )
+  if ( (byte_49FCD7D & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataManager_GetMaster_SkillGroupMaster___, entity);
-    sub_1B00CCC(&Method_DataManager_GetMaster_SkillGroupOverwriteMaster___, v6);
-    sub_1B00CCC(&DataManager_TypeInfo, v7);
-    sub_1B00CCC(&int___TypeInfo, v8);
-    sub_1B00CCC(&NetworkManager_TypeInfo, v9);
-    sub_1B00CCC(&SkillLvEntity_TypeInfo, v10);
-    sub_1B00CCC(&string___TypeInfo, v11);
-    byte_48E311D = 1;
+    sub_1B640C8(&Method_DataManager_GetMaster_SkillGroupMaster___, entity);
+    sub_1B640C8(&Method_DataManager_GetMaster_SkillGroupOverwriteMaster___, v6);
+    sub_1B640C8(&DataManager_TypeInfo, v7);
+    sub_1B640C8(&int___TypeInfo, v8);
+    sub_1B640C8(&NetworkManager_TypeInfo, v9);
+    sub_1B640C8(&SkillLvEntity_TypeInfo, v10);
+    sub_1B640C8(&string___TypeInfo, v11);
+    byte_49FCD7D = 1;
   }
   entitya = 0LL;
   if ( v5 )
@@ -258,14 +261,14 @@ SkillLvEntity_o *__fastcall SkillLvMaster__GetOverwriteEntity(
     }
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_SkillGroupMaster___);
+    Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_SkillGroupMaster___);
     if ( !Master_object )
       goto LABEL_37;
     Master_object = SkillGroupMaster__GetSkillGroupIdArray(
                       (SkillGroupMaster_o *)Master_object,
                       v5->fields.skillId,
                       v5->fields.lv,
-                      v14);
+                      v13);
     if ( !Master_object )
       goto LABEL_37;
     v15 = *(_QWORD *)&Master_object->max_length;
@@ -276,11 +279,11 @@ SkillLvEntity_o *__fastcall SkillLvMaster__GetOverwriteEntity(
       while ( 1 )
       {
         if ( v17 >= (unsigned int)v15 )
-          sub_1B00F30(Master_object, v13);
+          sub_1B6432C(Master_object, v14);
         v18 = v16->m_Items[v17 + 1];
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_SkillGroupOverwriteMaster___);
+        Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_SkillGroupOverwriteMaster___);
         if ( !Master_object )
           goto LABEL_37;
         Master_object = (System_Int32_array *)SkillGroupOverwriteMaster__TryGetSkillGroupOverwriteEntity(
@@ -295,55 +298,55 @@ SkillLvEntity_o *__fastcall SkillLvMaster__GetOverwriteEntity(
         if ( (__int64)++v17 >= (int)v15 )
           return v5;
       }
-      v20 = sub_1B00F18(SkillLvEntity_TypeInfo);
-      SkillLvEntity___ctor_38591576((SkillLvEntity_o *)v20, v5, v21);
+      v21 = sub_1B64314(SkillLvEntity_TypeInfo, v14, v20);
+      SkillLvEntity___ctor_39531324((SkillLvEntity_o *)v21, v5, v22);
       if ( !entitya )
         goto LABEL_37;
       Master_object = entitya->fields.funcId;
       if ( Master_object
         && (Master_object = (System_Int32_array *)System_Array__Clone((System_Array_o *)Master_object, 0LL)) != 0LL )
       {
-        v24 = Master_object;
-        Master_object = (System_Int32_array *)sub_1B00E08(Master_object, int___TypeInfo);
-        v13 = Master_object;
+        v25 = Master_object;
+        Master_object = (System_Int32_array *)sub_1B64204(Master_object, int___TypeInfo);
+        v26 = Master_object;
         if ( !Master_object )
           goto LABEL_32;
       }
       else
       {
-        v13 = 0LL;
+        v26 = 0LL;
       }
-      if ( !v20 )
+      if ( !v21 )
         goto LABEL_37;
-      *(_QWORD *)(v20 + 32) = v13;
-      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v20 + 32), (int32_t)v13, v22, v23);
+      *(_QWORD *)(v21 + 32) = v26;
+      sub_1B6406C((ServantStatusBattleListViewItem_o *)(v21 + 32), (int32_t)v26, v23, v24);
       if ( !entitya )
         goto LABEL_37;
       svals = (System_Array_o *)entitya->fields.svals;
       if ( !svals )
         goto LABEL_33;
-      v28 = System_Array__Clone(svals, 0LL);
-      if ( !v28 )
+      v30 = System_Array__Clone(svals, 0LL);
+      if ( !v30 )
         goto LABEL_33;
-      v24 = (System_Int32_array *)v28;
-      v29 = sub_1B00E08(v28, string___TypeInfo);
-      if ( v29 )
+      v25 = (System_Int32_array *)v30;
+      v31 = sub_1B64204(v30, string___TypeInfo);
+      if ( v31 )
         goto LABEL_34;
 LABEL_32:
-      sub_1B011E8(v24);
+      sub_1B645E4(v25);
 LABEL_33:
-      v29 = 0LL;
+      v31 = 0LL;
 LABEL_34:
-      *(_QWORD *)(v20 + 40) = v29;
-      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v20 + 40), v29, v25, v26);
+      *(_QWORD *)(v21 + 40) = v31;
+      sub_1B6406C((ServantStatusBattleListViewItem_o *)(v21 + 40), v31, v27, v28);
       if ( entitya )
       {
-        v5 = (SkillLvEntity_o *)v20;
-        *(_DWORD *)(v20 + 48) = entitya->fields.skillDetailId;
+        v5 = (SkillLvEntity_o *)v21;
+        *(_DWORD *)(v21 + 48) = entitya->fields.skillDetailId;
         return v5;
       }
 LABEL_37:
-      sub_1B00F28(Master_object, v13);
+      sub_1B64324(Master_object);
     }
   }
   return v5;
@@ -359,29 +362,28 @@ System_Collections_Generic_Dictionary_string__object__o *__fastcall SkillLvMaste
 {
   const MethodInfo *v4; // x4
   __int64 v8; // x1
-  __int64 v9; // x1
-  bool v10; // w8
+  bool v9; // w8
   System_Collections_Generic_Dictionary_string__object__o *result; // x0
   SkillLvEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_48E311F & 1) == 0 )
+  if ( (byte_49FCD7F & 1) == 0 )
   {
-    sub_1B00CCC(&Method_BasicHelper_GetValue_Dictionary_string__object____, *(_QWORD *)&skillId);
-    sub_1B00CCC(&StringLiteral_12362/*"SelectAddInfo"*/, v8);
-    byte_48E311F = 1;
+    sub_1B640C8(&Method_BasicHelper_GetValue_Dictionary_string__object____, *(_QWORD *)&skillId);
+    sub_1B640C8(&StringLiteral_12511/*"SelectAddInfo"*/, v8);
+    byte_49FCD7F = 1;
   }
   entity = 0LL;
-  v10 = SkillLvMaster__TryGetEntity(this, &entity, skillId, skillLv, v4);
+  v9 = SkillLvMaster__TryGetEntity(this, &entity, skillId, skillLv, v4);
   result = 0LL;
-  if ( v10 )
+  if ( v9 )
   {
     if ( !entity )
-      sub_1B00F28(0LL, v9);
+      sub_1B64324(0LL);
     return (System_Collections_Generic_Dictionary_string__object__o *)BasicHelper__GetValue_object_(
                                                                         entity->fields.script,
-                                                                        (System_String_o *)StringLiteral_12362/*"SelectAddInfo"*/,
+                                                                        (System_String_o *)StringLiteral_12511/*"SelectAddInfo"*/,
                                                                         0LL,
-                                                                        (const MethodInfo_2D510F4 *)Method_BasicHelper_GetValue_Dictionary_string__object____);
+                                                                        (const MethodInfo_2E27808 *)Method_BasicHelper_GetValue_Dictionary_string__object____);
   }
   return result;
 }
@@ -398,22 +400,22 @@ DataVals_array *__fastcall SkillLvMaster__GetSetTypeDataValArray(
   System_Int32_array *funcId; // x21
   FunctionMaster_o *v8; // x20
 
-  if ( (byte_48E3124 & 1) == 0 )
+  if ( (byte_49FCD84 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataManager_GetMaster_FunctionMaster___, skillEnity);
-    sub_1B00CCC(&DataManager_TypeInfo, v4);
-    byte_48E3124 = 1;
+    sub_1B640C8(&Method_DataManager_GetMaster_FunctionMaster___, skillEnity);
+    sub_1B640C8(&DataManager_TypeInfo, v4);
+    byte_49FCD84 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataVals_array *)DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_FunctionMaster___);
+  Master_object = (DataVals_array *)DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_FunctionMaster___);
   if ( !skillEnity
     || (funcId = skillEnity->fields.funcId,
         v8 = (FunctionMaster_o *)Master_object,
         Master_object = SkillLvEntity__getDataValsList(skillEnity, v6),
         !v8) )
   {
-    sub_1B00F28(Master_object, v6);
+    sub_1B64324(Master_object);
   }
   return FunctionMaster__GetSetTypeDataValArray(v8, funcId, Master_object, 0LL);
 }
@@ -434,10 +436,10 @@ void __fastcall SkillLvMaster__GetUniqueFuncIdsFromSkill(
   SkillLvEntity_o *v14; // x0
   const MethodInfo *v15; // x2
 
-  if ( (byte_48E3125 & 1) == 0 )
+  if ( (byte_49FCD85 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataMasterBase_SkillLvMaster__SkillLvEntity__string__GetEntity__, ret);
-    byte_48E3125 = 1;
+    sub_1B640C8(&Method_DataMasterBase_SkillLvMaster__SkillLvEntity__string__GetEntity__, ret);
+    byte_49FCD85 = 1;
   }
   if ( includeBeforeOverwrite )
   {
@@ -445,7 +447,7 @@ void __fastcall SkillLvMaster__GetUniqueFuncIdsFromSkill(
     Entity = DataMasterBase_object__object__object___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                PK,
-               (const MethodInfo_2FE6DA4 *)Method_DataMasterBase_SkillLvMaster__SkillLvEntity__string__GetEntity__);
+               (const MethodInfo_30D41FC *)Method_DataMasterBase_SkillLvMaster__SkillLvEntity__string__GetEntity__);
     if ( Entity )
       SkillLvEntity__GetUniqueFuncIds((SkillLvEntity_o *)Entity, ret, v13);
   }
@@ -459,10 +461,10 @@ void __fastcall SkillLvMaster__ResetBaseTime(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_48E3122 & 1) == 0 )
+  if ( (byte_49FCD82 & 1) == 0 )
   {
-    sub_1B00CCC(&SkillLvMaster_TypeInfo, v1);
-    byte_48E3122 = 1;
+    sub_1B640C8(&SkillLvMaster_TypeInfo, v1);
+    byte_49FCD82 = 1;
   }
   SkillLvMaster_TypeInfo->static_fields->propertyOverwriteBaseTime = 0LL;
 }
@@ -470,10 +472,10 @@ void __fastcall SkillLvMaster__ResetBaseTime(const MethodInfo *method)
 
 void __fastcall SkillLvMaster__SetBaseTime(int64_t value, const MethodInfo *method)
 {
-  if ( (byte_48E3120 & 1) == 0 )
+  if ( (byte_49FCD80 & 1) == 0 )
   {
-    sub_1B00CCC(&SkillLvMaster_TypeInfo, method);
-    byte_48E3120 = 1;
+    sub_1B640C8(&SkillLvMaster_TypeInfo, method);
+    byte_49FCD80 = 1;
   }
   SkillLvMaster_TypeInfo->static_fields->propertyOverwriteBaseTime = value;
 }
@@ -496,18 +498,18 @@ bool __fastcall SkillLvMaster__TryGetEntity(
   int32_t v15; // w2
   int32_t v16; // w3
 
-  if ( (byte_48E311C & 1) == 0 )
+  if ( (byte_49FCD7C & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataMasterBase_SkillLvMaster__SkillLvEntity__string__TryGetEntity__, entity);
-    sub_1B00CCC(&SkillLvMaster_TypeInfo, v9);
-    byte_48E311C = 1;
+    sub_1B640C8(&Method_DataMasterBase_SkillLvMaster__SkillLvEntity__string__TryGetEntity__, entity);
+    sub_1B640C8(&SkillLvMaster_TypeInfo, v9);
+    byte_49FCD7C = 1;
   }
   PK = (Il2CppObject *)SkillLvEntity__CreatePK(skillId, lv, *(const MethodInfo **)&skillId);
   v11 = DataMasterBase_object__object__object___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
           (Il2CppObject **)entity,
           PK,
-          (const MethodInfo_2FE6DF4 *)Method_DataMasterBase_SkillLvMaster__SkillLvEntity__string__TryGetEntity__);
+          (const MethodInfo_30D424C *)Method_DataMasterBase_SkillLvMaster__SkillLvEntity__string__TryGetEntity__);
   v13 = v11;
   if ( v11 )
   {
@@ -517,7 +519,7 @@ bool __fastcall SkillLvMaster__TryGetEntity(
                         SkillLvMaster_TypeInfo->static_fields->propertyOverwriteBaseTime,
                         v12);
     *entity = OverwriteEntity;
-    sub_1B00C70((ServantStatusBattleListViewItem_o *)entity, (int32_t)OverwriteEntity, v15, v16);
+    sub_1B6406C((ServantStatusBattleListViewItem_o *)entity, (int32_t)OverwriteEntity, v15, v16);
   }
   return v13;
 }

@@ -5,31 +5,30 @@ void __fastcall SoundLoadWrapper__LoadAudioAssetStorage(
         int32_t cueType,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
-  const MethodInfo *v10; // x2
+  const MethodInfo *v9; // x2
   AssetPathLoadCounter_o *pathCounter; // x0
 
-  if ( (byte_48E1986 & 1) == 0 )
+  if ( (byte_49FB548 & 1) == 0 )
   {
-    sub_1B00CCC(&SoundManager_TypeInfo, path);
-    byte_48E1986 = 1;
+    sub_1B640C8(&SoundManager_TypeInfo, path);
+    byte_49FB548 = 1;
   }
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__loadAudioAssetStorage(path, callbackFunc, cueType, 0LL);
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
-    sub_1B00F28(0LL, v9);
-  AssetPathLoadCounter__AddCount(pathCounter, path, v10);
+    sub_1B64324(0LL);
+  AssetPathLoadCounter__AddCount(pathCounter, path, v9);
 }
 
 
 void __fastcall SoundLoadWrapper__Release(SoundLoadWrapper_o *this, System_String_o *path, const MethodInfo *method)
 {
-  if ( (byte_48E1987 & 1) == 0 )
+  if ( (byte_49FB549 & 1) == 0 )
   {
-    sub_1B00CCC(&SoundManager_TypeInfo, path);
-    byte_48E1987 = 1;
+    sub_1B640C8(&SoundManager_TypeInfo, path);
+    byte_49FB549 = 1;
   }
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
@@ -42,8 +41,7 @@ void __fastcall SoundLoadWrapper__ReleaseAudioAssetStorage(
         System_String_o *path,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  const MethodInfo *v6; // x2
+  const MethodInfo *v5; // x2
   AssetPathLoadCounter_o *pathCounter; // x0
 
   ((void (__fastcall *)(SoundLoadWrapper_o *, System_String_o *, void *))this->klass->vtable._4_Release.method)(
@@ -52,6 +50,6 @@ void __fastcall SoundLoadWrapper__ReleaseAudioAssetStorage(
     this->klass[1]._1.image);
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
-    sub_1B00F28(0LL, v5);
-  AssetPathLoadCounter__SubCount(pathCounter, path, v6);
+    sub_1B64324(0LL);
+  AssetPathLoadCounter__SubCount(pathCounter, path, v5);
 }

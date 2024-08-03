@@ -6,7 +6,6 @@ bool __fastcall AliveServantExistReactTaskCreator__IsCreatable(
         const MethodInfo *method)
 {
   _BOOL8 IsCreatable; // x0
-  __int64 v10; // x1
 
   IsCreatable = AliveServantReactTaskCreator__IsCreatable(
                   (AliveServantReactTaskCreator_o *)this,
@@ -17,7 +16,7 @@ bool __fastcall AliveServantExistReactTaskCreator__IsCreatable(
   if ( !IsCreatable )
     return 0;
   if ( !svtData )
-    sub_1B00F28(IsCreatable, v10);
+    sub_1B64324(IsCreatable);
   return ((__int64 (__fastcall *)(BattleServantData_o *, BattleLogic_o *, _QWORD, _QWORD, Il2CppMethodPointer))svtData->klass->vtable._19_ExistAiThinking.method)(
            svtData,
            logic,

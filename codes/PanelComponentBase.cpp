@@ -20,7 +20,7 @@ void __fastcall PanelComponentBase__Initialize(PanelComponentBase_o *this, const
   int32_t v3; // w3
 
   this->fields._OnClickPanel_k__BackingField = 0LL;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields._OnClickPanel_k__BackingField, 0, v2, v3);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields._OnClickPanel_k__BackingField, 0, v2, v3);
 }
 
 
@@ -31,23 +31,22 @@ void __fastcall PanelComponentBase__SetClosedPanelVisible(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *closedPanel; // x21
-  __int64 v6; // x1
-  UnityEngine_GameObject_o *v7; // x0
+  UnityEngine_GameObject_o *v6; // x0
 
-  if ( (byte_48E6851 & 1) == 0 )
+  if ( (byte_4A00557 & 1) == 0 )
   {
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, value);
-    byte_48E6851 = 1;
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, value);
+    byte_4A00557 = 1;
   }
   closedPanel = (UnityEngine_Object_o *)this->fields.closedPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(closedPanel, 0LL, 0LL) )
   {
-    v7 = this->fields.closedPanel;
-    if ( !v7 )
-      sub_1B00F28(0LL, v6);
-    UnityEngine_GameObject__SetActive(v7, value, 0LL);
+    v6 = this->fields.closedPanel;
+    if ( !v6 )
+      sub_1B64324(0LL);
+    UnityEngine_GameObject__SetActive(v6, value, 0LL);
   }
 }
 
@@ -60,7 +59,7 @@ void __fastcall PanelComponentBase__SetTheCallBackWhenClickPanel(
   int32_t v3; // w3
 
   this->fields._OnClickPanel_k__BackingField = callback;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._OnClickPanel_k__BackingField,
     (int32_t)callback,
     (int32_t)method,
@@ -82,7 +81,7 @@ void __fastcall PanelComponentBase__set_OnClickPanel(
   int32_t v3; // w3
 
   this->fields._OnClickPanel_k__BackingField = value;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._OnClickPanel_k__BackingField,
     (int32_t)value,
     (int32_t)method,

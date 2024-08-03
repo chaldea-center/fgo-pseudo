@@ -13,12 +13,12 @@ System_String_o *__fastcall BattleSealedCommandWindowComponent__get_closeBtnPath
         BattleSealedCommandWindowComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_48E5678 & 1) == 0 )
+  if ( (byte_49FF369 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_17262/*"btn_close"*/, method);
-    byte_48E5678 = 1;
+    sub_1B640C8(&StringLiteral_17433/*"btn_close"*/, method);
+    byte_49FF369 = 1;
   }
-  return (System_String_o *)StringLiteral_17262/*"btn_close"*/;
+  return (System_String_o *)StringLiteral_17433/*"btn_close"*/;
 }
 
 
@@ -35,22 +35,24 @@ void __fastcall BattleSealedCommandWindowComponent__setLabel(
   __int64 v10; // x1
   __int64 v11; // x1
   UnityEngine_Object_o *confLabel; // x22
-  __int64 value; // x1
+  __int64 v13; // x1
+  __int64 v14; // x2
   UILabel_o *transform; // x0
-  __int64 v15; // x8
+  int32_t value; // w1
+  __int64 v17; // x8
   float x; // s0
   float z; // s2
   float y; // s1
 
-  if ( (byte_48E5677 & 1) == 0 )
+  if ( (byte_49FF368 & 1) == 0 )
   {
-    sub_1B00CCC(&BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo, str);
-    sub_1B00CCC(&Method_System_Nullable_int__GetValueOrDefault__, v7);
-    sub_1B00CCC(&Method_System_Nullable_Vector3__GetValueOrDefault__, v8);
-    sub_1B00CCC(&Method_System_Nullable_Vector3__get_HasValue__, v9);
-    sub_1B00CCC(&Method_System_Nullable_int__get_HasValue__, v10);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v11);
-    byte_48E5677 = 1;
+    sub_1B640C8(&BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo, str);
+    sub_1B640C8(&Method_System_Nullable_int__GetValueOrDefault__, v7);
+    sub_1B640C8(&Method_System_Nullable_Vector3__GetValueOrDefault__, v8);
+    sub_1B640C8(&Method_System_Nullable_Vector3__get_HasValue__, v9);
+    sub_1B640C8(&Method_System_Nullable_int__get_HasValue__, v10);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v11);
+    byte_49FF368 = 1;
   }
   confLabel = (UnityEngine_Object_o *)this->fields.confLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -59,23 +61,26 @@ void __fastcall BattleSealedCommandWindowComponent__setLabel(
   {
     if ( !args )
     {
-      args = (BattleSealedCommandWindowComponent_LabelAdjustArgs_o *)sub_1B00F18(BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo);
+      args = (BattleSealedCommandWindowComponent_LabelAdjustArgs_o *)sub_1B64314(
+                                                                       BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo,
+                                                                       v13,
+                                                                       v14);
       System_Object___ctor((Il2CppObject *)args, 0LL);
     }
     transform = this->fields.confLabel;
     if ( !transform || (UILabel__set_text(transform, str, 0LL), !args) )
 LABEL_19:
-      sub_1B00F28(transform, value);
+      sub_1B64324(transform);
     transform = this->fields.confLabel;
     if ( args->fields._fontSize_k__BackingField.fields.hasValue )
     {
-      value = (unsigned int)args->fields._fontSize_k__BackingField.fields.value;
+      value = args->fields._fontSize_k__BackingField.fields.value;
       if ( !transform )
         goto LABEL_19;
     }
     else
     {
-      value = (unsigned int)this->fields.labelDefaultFontSize;
+      value = this->fields.labelDefaultFontSize;
       if ( !transform )
         goto LABEL_19;
     }
@@ -84,10 +89,10 @@ LABEL_19:
     if ( !transform )
       goto LABEL_19;
     transform = (UILabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0LL);
-    v15 = *(_QWORD *)&args->fields._localPosition_k__BackingField.fields.hasValue;
-    if ( (_BYTE)v15 )
+    v17 = *(_QWORD *)&args->fields._localPosition_k__BackingField.fields.hasValue;
+    if ( (_BYTE)v17 )
     {
-      x = *((float *)&v15 + 1);
+      x = *((float *)&v17 + 1);
       LODWORD(z) = HIDWORD(*(_QWORD *)&args->fields._localPosition_k__BackingField.fields.value.fields.y);
       LODWORD(y) = *(_QWORD *)&args->fields._localPosition_k__BackingField.fields.value.fields.y;
       if ( !transform )

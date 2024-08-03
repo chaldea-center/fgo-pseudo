@@ -6,19 +6,12 @@ void __fastcall OrganizationTopItemInfo___ctor(
         System_String_o *eventData,
         const MethodInfo *method)
 {
-  int32_t v11; // w2
-  int32_t v12; // w3
-  int32_t v13; // w2
-  int32_t v14; // w3
-  int32_t v15; // w2
-  int32_t v16; // w3
-
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.kind = kind;
   this->fields.textCode = textCode;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.textCode, (int32_t)textCode, v11, v12);
+  sub_1B6406C(&this->fields.textCode);
   this->fields.imageName = imageName;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.imageName, (int32_t)imageName, v13, v14);
+  sub_1B6406C(&this->fields.imageName);
   this->fields.eventData = eventData;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.eventData, (int32_t)eventData, v15, v16);
+  sub_1B6406C(&this->fields.eventData);
 }

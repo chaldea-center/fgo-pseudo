@@ -11,46 +11,45 @@ void __fastcall BuddyPointResultReplayButton__SetBgSprite(
 {
   __int64 v5; // x1
   UnityEngine_Object_o *bgSprite; // x21
-  __int64 v7; // x1
-  struct UISprite_o *v8; // x0
-  UnityEngine_Object_o *v9; // x21
-  UISprite_o *v10; // x21
+  struct UISprite_o *v7; // x0
+  UnityEngine_Object_o *v8; // x21
+  UISprite_o *v9; // x21
 
-  if ( (byte_48E66A1 & 1) == 0 )
+  if ( (byte_4A003A8 & 1) == 0 )
   {
-    sub_1B00CCC(&AtlasManager_TypeInfo, spriteName);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v5);
-    byte_48E66A1 = 1;
+    sub_1B640C8(&AtlasManager_TypeInfo, spriteName);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v5);
+    byte_4A003A8 = 1;
   }
   bgSprite = (UnityEngine_Object_o *)this->fields.bgSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality(bgSprite, 0LL, 0LL) )
   {
-    v8 = this->fields.bgSprite;
-    if ( v8 )
+    v7 = this->fields.bgSprite;
+    if ( v7 )
     {
-      v9 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))v8->klass->vtable._26_get_mainTexture.method)(
-                                     v8,
-                                     v8->klass->vtable._27_set_mainTexture.methodPtr);
+      v8 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))v7->klass->vtable._26_get_mainTexture.method)(
+                                     v7,
+                                     v7->klass->vtable._27_set_mainTexture.methodPtr);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      if ( UnityEngine_Object__op_Inequality(v9, 0LL, 0LL) || System_String__IsNullOrEmpty(spriteName, 0LL) )
+      if ( UnityEngine_Object__op_Inequality(v8, 0LL, 0LL) || System_String__IsNullOrEmpty(spriteName, 0LL) )
         return;
-      v10 = this->fields.bgSprite;
+      v9 = this->fields.bgSprite;
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      AtlasManager__SetEventUI(v10, spriteName, 0LL);
-      v8 = this->fields.bgSprite;
-      if ( v8 )
+      AtlasManager__SetEventUI(v9, spriteName, 0LL);
+      v7 = this->fields.bgSprite;
+      if ( v7 )
       {
-        ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))v8->klass->vtable._33_MakePixelPerfect.method)(
-          v8,
-          v8->klass->vtable._34_get_minWidth.methodPtr);
+        ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))v7->klass->vtable._33_MakePixelPerfect.method)(
+          v7,
+          v7->klass->vtable._34_get_minWidth.methodPtr);
         return;
       }
     }
-    sub_1B00F28(v8, v7);
+    sub_1B64324(v7);
   }
 }
 
@@ -69,7 +68,7 @@ void __fastcall BuddyPointResultReplayButton__Setup(
   const MethodInfo *v11; // x2
   struct UICommonButton_o *v12; // x8
   struct System_Collections_Generic_List_EventDelegate__o *onClick; // x9
-  int32_t size; // w2
+  __int64 size; // x2
   int v15; // w10
   System_Collections_Generic_List_object__o *v16; // x21
   EventDelegate_o *v17; // x22
@@ -80,13 +79,13 @@ void __fastcall BuddyPointResultReplayButton__Setup(
   __int64 v22; // x10
   Il2CppClass **v23; // x0
 
-  if ( (byte_48E66A0 & 1) == 0 )
+  if ( (byte_4A003A7 & 1) == 0 )
   {
-    sub_1B00CCC(&EventDelegate_TypeInfo, onClickAction);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_EventDelegate__Add__, v5);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_EventDelegate__Clear__, v6);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v7);
-    byte_48E66A0 = 1;
+    sub_1B640C8(&EventDelegate_TypeInfo, onClickAction);
+    sub_1B640C8(&Method_System_Collections_Generic_List_EventDelegate__Add__, v5);
+    sub_1B640C8(&Method_System_Collections_Generic_List_EventDelegate__Clear__, v6);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v7);
+    byte_4A003A7 = 1;
   }
   button = (UnityEngine_Object_o *)this->fields.button;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -100,11 +99,11 @@ void __fastcall BuddyPointResultReplayButton__Setup(
     onClick = v12->fields.onClick;
     if ( !onClick )
       goto LABEL_16;
-    size = onClick->fields._size;
+    size = (unsigned int)onClick->fields._size;
     v15 = onClick->fields._version + 1;
     onClick->fields._size = 0;
     onClick->fields._version = v15;
-    if ( size >= 1 )
+    if ( (int)size >= 1 )
     {
       System_Array__Clear((System_Array_o *)onClick->fields._items, 0, size, 0LL);
       v12 = this->fields.button;
@@ -112,8 +111,8 @@ void __fastcall BuddyPointResultReplayButton__Setup(
         goto LABEL_16;
     }
     v16 = (System_Collections_Generic_List_object__o *)v12->fields.onClick;
-    v17 = (EventDelegate_o *)sub_1B00F18(EventDelegate_TypeInfo);
-    EventDelegate___ctor_45649980(v17, onClickAction, 0LL);
+    v17 = (EventDelegate_o *)sub_1B64314(EventDelegate_TypeInfo, v10, size);
+    EventDelegate___ctor_46508544(v17, onClickAction, 0LL);
     if ( !v16
       || (items = v16->fields._items,
           v21 = Method_System_Collections_Generic_List_EventDelegate__Add__,
@@ -121,7 +120,7 @@ void __fastcall BuddyPointResultReplayButton__Setup(
           !items) )
     {
 LABEL_16:
-      sub_1B00F28(v9, v10);
+      sub_1B64324(v9);
     }
     v22 = v16->fields._size;
     if ( (unsigned int)v22 >= items->max_length )
@@ -129,14 +128,14 @@ LABEL_16:
       System_Collections_Generic_List_object___AddWithResize(
         v16,
         (Il2CppObject *)v17,
-        *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+        *(const MethodInfo_34AD6D4 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
     }
     else
     {
       v23 = &items->obj.klass + v22;
       v16->fields._size = v22 + 1;
       v23[4] = (Il2CppClass *)v17;
-      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v23 + 4), (int32_t)v17, v18, v19);
+      sub_1B6406C((ServantStatusBattleListViewItem_o *)(v23 + 4), (int32_t)v17, v18, v19);
     }
   }
   BuddyPointResultReplayButton__SetBgSprite(this, this->fields.bgSpriteName, v11);

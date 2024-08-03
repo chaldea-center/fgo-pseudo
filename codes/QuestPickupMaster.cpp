@@ -1,14 +1,14 @@
 void __fastcall QuestPickupMaster___ctor(QuestPickupMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E2D08 & 1) == 0 )
+  if ( (byte_49FC946 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataMasterBase_QuestPickupMaster__QuestPickupEntity__int___ctor__, method);
-    byte_48E2D08 = 1;
+    sub_1B640C8(&Method_DataMasterBase_QuestPickupMaster__QuestPickupEntity__int___ctor__, method);
+    byte_49FC946 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    269,
-    (const MethodInfo_2FE6A0C *)Method_DataMasterBase_QuestPickupMaster__QuestPickupEntity__int___ctor__);
+    270,
+    (const MethodInfo_30D3E64 *)Method_DataMasterBase_QuestPickupMaster__QuestPickupEntity__int___ctor__);
 }
 
 
@@ -18,15 +18,14 @@ int32_t __fastcall QuestPickupMaster__GetPriority(QuestPickupMaster_o *this, int
   int64_t Time; // x19
   const MethodInfo *v6; // x2
   QuestPickupEntity_array *List; // x0
-  __int64 v8; // x1
-  __int64 v9; // x8
-  int v10; // w9
-  int *v11; // x10
+  __int64 v8; // x8
+  int v9; // w9
+  int *v10; // x10
 
-  if ( (byte_48E2D0A & 1) == 0 )
+  if ( (byte_49FC948 & 1) == 0 )
   {
-    sub_1B00CCC(&NetworkManager_TypeInfo, *(_QWORD *)&questId);
-    byte_48E2D0A = 1;
+    sub_1B640C8(&NetworkManager_TypeInfo, *(_QWORD *)&questId);
+    byte_49FC948 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -34,19 +33,19 @@ int32_t __fastcall QuestPickupMaster__GetPriority(QuestPickupMaster_o *this, int
   List = QuestPickupMaster__getList(this, questId, v6);
   if ( !List )
 LABEL_15:
-    sub_1B00F28(List, v8);
-  v9 = *(_QWORD *)&List->max_length;
-  if ( !v9 || (int)v9 < 1 )
+    sub_1B64324(List);
+  v8 = *(_QWORD *)&List->max_length;
+  if ( !v8 || (int)v8 < 1 )
     return 0;
-  v10 = 0;
+  v9 = 0;
   while ( 1 )
   {
-    v11 = (int *)List->m_Items[v10];
-    if ( !v11 )
+    v10 = (int *)List->m_Items[v9];
+    if ( !v10 )
       goto LABEL_15;
-    if ( Time >= v11[5] && Time <= v11[6] )
-      return v11[7];
-    if ( (_DWORD)v9 == ++v10 )
+    if ( Time >= v10[5] && Time <= v10[6] )
+      return v10[7];
+    if ( (_DWORD)v8 == ++v9 )
       return 0;
   }
 }
@@ -65,53 +64,56 @@ QuestPickupEntity_array *__fastcall QuestPickupMaster__getList(
   __int64 v9; // x1
   __int64 v10; // x1
   System_Collections_Generic_List_object__o *v11; // x21
-  System_Collections_ObjectModel_Collection_T__o *v12; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
-  int32_t v14; // w22
-  int32_t v15; // w2
-  int32_t v16; // w3
+  int32_t v13; // w22
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_Collections_ObjectModel_Collection_T__o *v16; // x1
   __int64 methodPtr_low; // x10
   struct System_Object_array *items; // x8
   _QWORD *v19; // x9
   __int64 size; // x10
   Il2CppClass **v21; // x0
 
-  if ( (byte_48E2D09 & 1) == 0 )
+  if ( (byte_49FC947 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&questId);
-    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_QuestPickupEntity__Add__, v6);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_QuestPickupEntity__ToArray__, v7);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_QuestPickupEntity___ctor__, v8);
-    sub_1B00CCC(&System_Collections_Generic_List_QuestPickupEntity__TypeInfo, v9);
-    sub_1B00CCC(&QuestPickupEntity_TypeInfo, v10);
-    byte_48E2D09 = 1;
+    sub_1B640C8(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&questId);
+    sub_1B640C8(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
+    sub_1B640C8(&Method_System_Collections_Generic_List_QuestPickupEntity__Add__, v6);
+    sub_1B640C8(&Method_System_Collections_Generic_List_QuestPickupEntity__ToArray__, v7);
+    sub_1B640C8(&Method_System_Collections_Generic_List_QuestPickupEntity___ctor__, v8);
+    sub_1B640C8(&System_Collections_Generic_List_QuestPickupEntity__TypeInfo, v9);
+    sub_1B640C8(&QuestPickupEntity_TypeInfo, v10);
+    byte_49FC947 = 1;
   }
-  v11 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_QuestPickupEntity__TypeInfo);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1B64314(
+                                                       System_Collections_Generic_List_QuestPickupEntity__TypeInfo,
+                                                       *(_QWORD *)&questId,
+                                                       method);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_QuestPickupEntity___ctor__);
+    (const MethodInfo_34ACEA0 *)Method_System_Collections_Generic_List_QuestPickupEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_20;
-  v14 = 0;
+  v13 = 0;
   while ( 1 )
   {
     list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Count(
                                                                list,
-                                                               (const MethodInfo_2F836B0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    if ( v14 >= (int)list )
+                                                               (const MethodInfo_3070B08 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    if ( v13 >= (int)list )
       break;
     list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
     if ( !list )
       goto LABEL_20;
     list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                list,
-                                                               v14,
-                                                               (const MethodInfo_2F83740 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                                               v13,
+                                                               (const MethodInfo_3070B98 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
     if ( list )
     {
-      v12 = list;
+      v16 = list;
       methodPtr_low = LOBYTE(QuestPickupEntity_TypeInfo->vtable._0_Equals.methodPtr);
       if ( LOBYTE(list->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low
         && (QuestPickupEntity_c *)list->klass->_2.typeHierarchy[methodPtr_low - 1] == QuestPickupEntity_TypeInfo
@@ -130,26 +132,26 @@ QuestPickupEntity_array *__fastcall QuestPickupMaster__getList(
           System_Collections_Generic_List_object___AddWithResize(
             v11,
             (Il2CppObject *)list,
-            *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+            *(const MethodInfo_34AD6D4 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
         }
         else
         {
           v21 = &items->obj.klass + size;
           v11->fields._size = size + 1;
-          v21[4] = (Il2CppClass *)v12;
-          sub_1B00C70((ServantStatusBattleListViewItem_o *)(v21 + 4), (int32_t)v12, v15, v16);
+          v21[4] = (Il2CppClass *)v16;
+          sub_1B6406C((ServantStatusBattleListViewItem_o *)(v21 + 4), (int32_t)v16, v14, v15);
         }
       }
     }
     list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
-    ++v14;
+    ++v13;
     if ( !list )
       goto LABEL_20;
   }
   if ( !v11 )
 LABEL_20:
-    sub_1B00F28(list, v12);
+    sub_1B64324(list);
   return (QuestPickupEntity_array *)System_Collections_Generic_List_object___ToArray(
                                       v11,
-                                      (const MethodInfo_33C3528 *)Method_System_Collections_Generic_List_QuestPickupEntity__ToArray__);
+                                      (const MethodInfo_34AF2CC *)Method_System_Collections_Generic_List_QuestPickupEntity__ToArray__);
 }

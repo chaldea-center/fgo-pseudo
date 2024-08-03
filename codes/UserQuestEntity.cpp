@@ -2,10 +2,10 @@ void __fastcall UserQuestEntity___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_48E34F2 & 1) == 0 )
+  if ( (byte_49FD164 & 1) == 0 )
   {
-    sub_1B00CCC(&UserQuestEntity_TypeInfo, v1);
-    byte_48E34F2 = 1;
+    sub_1B640C8(&UserQuestEntity_TypeInfo, v1);
+    byte_49FD164 = 1;
   }
   UserQuestEntity_TypeInfo->static_fields->oldId = -1LL;
 }
@@ -13,15 +13,15 @@ void __fastcall UserQuestEntity___cctor(const MethodInfo *method)
 
 void __fastcall UserQuestEntity___ctor(UserQuestEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E34F1 & 1) == 0 )
+  if ( (byte_49FD163 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
-    byte_48E34F1 = 1;
+    sub_1B640C8(&Method_DataEntityBase_string___ctor__, method);
+    byte_49FD163 = 1;
   }
   this->fields.EXPIRE_NO_LIMIT_TIME = 1893423600LL;
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D3D1C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -43,11 +43,11 @@ System_String_o *__fastcall UserQuestEntity__CreatePK(int64_t userId, int32_t qu
 
   v16 = userId;
   v15 = questId;
-  if ( (byte_48E34EE & 1) == 0 )
+  if ( (byte_49FD160 & 1) == 0 )
   {
-    sub_1B00CCC(&UserQuestEntity_TypeInfo, *(_QWORD *)&questId);
-    sub_1B00CCC(&StringLiteral_1540/*":"*/, v4);
-    byte_48E34EE = 1;
+    sub_1B640C8(&UserQuestEntity_TypeInfo, *(_QWORD *)&questId);
+    sub_1B640C8(&StringLiteral_1546/*":"*/, v4);
+    byte_49FD160 = 1;
   }
   v5 = UserQuestEntity_TypeInfo;
   if ( !UserQuestEntity_TypeInfo->_2.cctor_finished )
@@ -65,10 +65,10 @@ System_String_o *__fastcall UserQuestEntity__CreatePK(int64_t userId, int32_t qu
     }
     static_fields->oldId = userId;
     v7 = System_Int64__ToString((int64_t)&v16, 0LL);
-    v8 = System_String__Concat_60325748(v7, (System_String_o *)StringLiteral_1540/*":"*/, 0LL);
+    v8 = System_String__Concat_61375396(v7, (System_String_o *)StringLiteral_1546/*":"*/, 0LL);
     v9 = UserQuestEntity_TypeInfo->static_fields;
     v9->userIdString = v8;
-    sub_1B00C70((ServantStatusBattleListViewItem_o *)&v9->userIdString, (int32_t)v8, v10, v11);
+    sub_1B6406C((ServantStatusBattleListViewItem_o *)&v9->userIdString, (int32_t)v8, v10, v11);
     v5 = UserQuestEntity_TypeInfo;
   }
   if ( !v5->_2.cctor_finished )
@@ -78,7 +78,7 @@ System_String_o *__fastcall UserQuestEntity__CreatePK(int64_t userId, int32_t qu
   }
   userIdString = v5->static_fields->userIdString;
   v13 = System_Int32__ToString((int32_t)&v15, 0LL);
-  return System_String__Concat_60325748(userIdString, v13, 0LL);
+  return System_String__Concat_61375396(userIdString, v13, 0LL);
 }
 
 
@@ -88,10 +88,10 @@ System_String_o *__fastcall UserQuestEntity__CreatePrimaryKey(UserQuestEntity_o 
   int64_t userId; // x20
   int32_t questId; // w19
 
-  if ( (byte_48E34ED & 1) == 0 )
+  if ( (byte_49FD15F & 1) == 0 )
   {
-    sub_1B00CCC(&UserQuestEntity_TypeInfo, method);
-    byte_48E34ED = 1;
+    sub_1B640C8(&UserQuestEntity_TypeInfo, method);
+    byte_49FD15F = 1;
   }
   userId = this->fields.userId;
   questId = this->fields.questId;
@@ -107,7 +107,7 @@ bool __fastcall UserQuestEntity__HasStatus(UserQuestEntity_o *this, int32_t stat
 }
 
 
-bool __fastcall UserQuestEntity__HasStatus_38875184(UserQuestEntity_o *this, int32_t status, const MethodInfo *method)
+bool __fastcall UserQuestEntity__HasStatus_39817532(UserQuestEntity_o *this, int32_t status, const MethodInfo *method)
 {
   return ((unsigned int)this->fields.status >> status) & 1;
 }
@@ -123,10 +123,10 @@ bool __fastcall UserQuestEntity__IsNotExpired(UserQuestEntity_o *this, const Met
 {
   int64_t expireAt; // x19
 
-  if ( (byte_48E34EF & 1) == 0 )
+  if ( (byte_49FD161 & 1) == 0 )
   {
-    sub_1B00CCC(&NetworkManager_TypeInfo, method);
-    byte_48E34EF = 1;
+    sub_1B640C8(&NetworkManager_TypeInfo, method);
+    byte_49FD161 = 1;
   }
   expireAt = this->fields.expireAt;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -141,31 +141,30 @@ bool __fastcall UserQuestEntity__IsResetInterval(UserQuestEntity_o *this, const 
   __int64 v4; // x1
   __int64 v5; // x1
   int64_t Instance; // x0
-  __int64 v7; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_48E34F0 & 1) == 0 )
+  if ( (byte_49FD162 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataManager_GetMasterData_QuestMaster___, method);
-    sub_1B00CCC(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__, v3);
-    sub_1B00CCC(&NetworkManager_TypeInfo, v4);
-    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_48E34F0 = 1;
+    sub_1B640C8(&Method_DataManager_GetMasterData_QuestMaster___, method);
+    sub_1B640C8(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__, v3);
+    sub_1B640C8(&NetworkManager_TypeInfo, v4);
+    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_49FD162 = 1;
   }
   entity = 0LL;
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   Instance = (int64_t)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_QuestMaster___);
+                        (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_QuestMaster___);
   if ( !Instance )
     goto LABEL_14;
   Instance = DataMasterBase_object__object__int___TryGetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                &entity,
                this->fields.questId,
-               (const MethodInfo_2FE6AA0 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
+               (const MethodInfo_30D3EF8 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
   if ( (Instance & 1) != 0 )
   {
     if ( !entity )
@@ -179,7 +178,7 @@ bool __fastcall UserQuestEntity__IsResetInterval(UserQuestEntity_o *this, const 
         return Instance >= this->fields.lastStartedAt
                          + 3600 * QuestEntity__getIntervalHours((QuestEntity_o *)entity, 0LL);
 LABEL_14:
-      sub_1B00F28(Instance, v7);
+      sub_1B64324(Instance);
     }
   }
   return 0;

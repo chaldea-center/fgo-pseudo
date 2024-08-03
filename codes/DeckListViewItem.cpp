@@ -7,9 +7,9 @@ void __fastcall DeckListViewItem___ctor(
   int32_t v6; // w2
   int32_t v7; // w3
 
-  ListViewItem___ctor_39415512((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_40370988((ListViewItem_o *)this, index, 0LL);
   this->fields.partyItem = partyItem;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.partyItem, (int32_t)partyItem, v6, v7);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.partyItem, (int32_t)partyItem, v6, v7);
 }
 
 
@@ -28,8 +28,8 @@ PartyOrganizationListViewItem_o *__fastcall DeckListViewItem__GetMember(
 
   partyItem = this->fields.partyItem;
   if ( !partyItem )
-    sub_1B00F28(0LL, num);
-  return PartyListViewItem__GetMember(partyItem, num, method);
+    sub_1B64324(0LL);
+  return PartyListViewItem__GetMember(partyItem, num, 0LL);
 }
 
 
@@ -50,8 +50,8 @@ UserDeckEntity_o *__fastcall DeckListViewItem__GetUserDeck(
 
   partyItem = this->fields.partyItem;
   if ( !partyItem )
-    sub_1B00F28(0LL, baseItem);
-  return PartyListViewItem__GetUserDeck(partyItem, baseItem, method);
+    sub_1B64324(0LL);
+  return PartyListViewItem__GetUserDeck(partyItem, baseItem, 0LL);
 }
 
 
@@ -61,7 +61,7 @@ int64_t __fastcall DeckListViewItem__get_DeckId(DeckListViewItem_o *this, const 
 
   partyItem = this->fields.partyItem;
   if ( !partyItem )
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   return partyItem->fields.id;
 }
 
@@ -72,17 +72,17 @@ System_String_o *__fastcall DeckListViewItem__get_DeckName(DeckListViewItem_o *t
 
   partyItem = this->fields.partyItem;
   if ( !partyItem )
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   return partyItem->fields.deckName;
 }
 
 
 int32_t __fastcall DeckListViewItem__get_DeckNum(DeckListViewItem_o *this, const MethodInfo *method)
 {
-  struct PartyListViewItem_o *partyItem; // x8
+  PartyListViewItem_o *partyItem; // x0
 
   partyItem = this->fields.partyItem;
   if ( !partyItem )
-    sub_1B00F28(this, method);
-  return partyItem->fields.index + 1;
+    sub_1B64324(0LL);
+  return PartyListViewItem__get_DeckNum(partyItem, 0LL);
 }

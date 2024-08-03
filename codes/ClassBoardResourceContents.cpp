@@ -12,7 +12,7 @@ void __fastcall ClassBoardResourceContents__SetBoardUIAtlas(
   int32_t v3; // w3
 
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = boardUiAtlasManagerUnit;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
     (int32_t)boardUiAtlasManagerUnit,
     (int32_t)method,
@@ -36,13 +36,13 @@ void __fastcall ClassBoardResourceContents__SetContents(
   int32_t v15; // w3
 
   this->fields._Square_k__BackingField = square;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)square, (int32_t)line, (int32_t)lockAsset);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)square, (int32_t)line, (int32_t)lockAsset);
   this->fields._Line_k__BackingField = line;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields._Line_k__BackingField, (int32_t)line, v10, v11);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields._Line_k__BackingField, (int32_t)line, v10, v11);
   this->fields._Lock_k__BackingField = lockAsset;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields._Lock_k__BackingField, (int32_t)lockAsset, v12, v13);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields._Lock_k__BackingField, (int32_t)lockAsset, v12, v13);
   this->fields._Blank_k__BackingField = blank;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields._Blank_k__BackingField, (int32_t)blank, v14, v15);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields._Blank_k__BackingField, (int32_t)blank, v14, v15);
 }
 
 
@@ -54,7 +54,7 @@ void __fastcall ClassBoardResourceContents__SetContentsBgModel(
   int32_t v3; // w3
 
   this->fields._BgModel_k__BackingField = bgModel;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._BgModel_k__BackingField,
     (int32_t)bgModel,
     (int32_t)method,
@@ -70,7 +70,7 @@ void __fastcall ClassBoardResourceContents__SetContentsBoardSelectView(
   int32_t v3; // w3
 
   this->fields._BoardSelectViewPrefab_k__BackingField = boardSelectViewPrefab;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._BoardSelectViewPrefab_k__BackingField,
     (int32_t)boardSelectViewPrefab,
     (int32_t)method,
@@ -97,31 +97,31 @@ void __fastcall ClassBoardResourceContents__SetContentsDialog(
   int32_t v19; // w3
 
   this->fields._DisableOpenDialog_k__BackingField = classBoardDisableOpenDialog;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._DisableOpenDialog_k__BackingField,
     (int32_t)classBoardDisableOpenDialog,
     (int32_t)classBoardSquareOpenConfirmDialog,
     (int32_t)classBoardLockOpenConfirmDialog);
   this->fields._SquareOpenConfirmDialog_k__BackingField = classBoardSquareOpenConfirmDialog;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._SquareOpenConfirmDialog_k__BackingField,
     (int32_t)classBoardSquareOpenConfirmDialog,
     v12,
     v13);
   this->fields._LockOpenConfirmDialog_k__BackingField = classBoardLockOpenConfirmDialog;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._LockOpenConfirmDialog_k__BackingField,
     (int32_t)classBoardLockOpenConfirmDialog,
     v14,
     v15);
   this->fields._LockReleaseConditionDialog_k__BackingField = classBoardLockReleaseConditionDialog;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._LockReleaseConditionDialog_k__BackingField,
     (int32_t)classBoardLockReleaseConditionDialog,
     v16,
     v17);
   this->fields._SquareDetailDialog_k__BackingField = classBoardSquareDetailDialog;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._SquareDetailDialog_k__BackingField,
     (int32_t)classBoardSquareDetailDialog,
     v18,
@@ -137,7 +137,7 @@ void __fastcall ClassBoardResourceContents__SetContentsForwardIconAnimObject(
   int32_t v3; // w3
 
   this->fields._ForwardIconAnimObjectPrefab_k__BackingField = prefab;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._ForwardIconAnimObjectPrefab_k__BackingField,
     (int32_t)prefab,
     (int32_t)method,
@@ -161,25 +161,25 @@ void __fastcall ClassBoardResourceContents__SetContentsUI(
   int32_t v15; // w3
 
   this->fields._BoardUiController_k__BackingField = uiController;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._BoardUiController_k__BackingField,
     (int32_t)uiController,
     (int32_t)boardUiAtlasManagerUnit,
     (int32_t)iconAtlasManagerUnit);
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = boardUiAtlasManagerUnit;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
     (int32_t)boardUiAtlasManagerUnit,
     v10,
     v11);
   this->fields._IconAtlasManagerUnit_k__BackingField = iconAtlasManagerUnit;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._IconAtlasManagerUnit_k__BackingField,
     (int32_t)iconAtlasManagerUnit,
     v12,
     v13);
   this->fields._ClassUiAtlasManagerUnit_k__BackingField = classUiAtlasManagerUnit;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._ClassUiAtlasManagerUnit_k__BackingField,
     (int32_t)classUiAtlasManagerUnit,
     v14,
@@ -323,7 +323,7 @@ void __fastcall ClassBoardResourceContents__set_BgModel(
   int32_t v3; // w3
 
   this->fields._BgModel_k__BackingField = value;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._BgModel_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -339,7 +339,7 @@ void __fastcall ClassBoardResourceContents__set_Blank(
   int32_t v3; // w3
 
   this->fields._Blank_k__BackingField = value;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._Blank_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -355,7 +355,7 @@ void __fastcall ClassBoardResourceContents__set_BoardSelectViewPrefab(
   int32_t v3; // w3
 
   this->fields._BoardSelectViewPrefab_k__BackingField = value;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._BoardSelectViewPrefab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -371,7 +371,7 @@ void __fastcall ClassBoardResourceContents__set_BoardUiAtlasManagerUnit(
   int32_t v3; // w3
 
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = value;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -387,7 +387,7 @@ void __fastcall ClassBoardResourceContents__set_BoardUiController(
   int32_t v3; // w3
 
   this->fields._BoardUiController_k__BackingField = value;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._BoardUiController_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -403,7 +403,7 @@ void __fastcall ClassBoardResourceContents__set_ClassUiAtlasManagerUnit(
   int32_t v3; // w3
 
   this->fields._ClassUiAtlasManagerUnit_k__BackingField = value;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._ClassUiAtlasManagerUnit_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -419,7 +419,7 @@ void __fastcall ClassBoardResourceContents__set_DisableOpenDialog(
   int32_t v3; // w3
 
   this->fields._DisableOpenDialog_k__BackingField = value;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._DisableOpenDialog_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -435,7 +435,7 @@ void __fastcall ClassBoardResourceContents__set_ForwardIconAnimObjectPrefab(
   int32_t v3; // w3
 
   this->fields._ForwardIconAnimObjectPrefab_k__BackingField = value;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._ForwardIconAnimObjectPrefab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -451,7 +451,7 @@ void __fastcall ClassBoardResourceContents__set_IconAtlasManagerUnit(
   int32_t v3; // w3
 
   this->fields._IconAtlasManagerUnit_k__BackingField = value;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._IconAtlasManagerUnit_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -467,7 +467,7 @@ void __fastcall ClassBoardResourceContents__set_Line(
   int32_t v3; // w3
 
   this->fields._Line_k__BackingField = value;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._Line_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -483,7 +483,7 @@ void __fastcall ClassBoardResourceContents__set_Lock(
   int32_t v3; // w3
 
   this->fields._Lock_k__BackingField = value;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._Lock_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -499,7 +499,7 @@ void __fastcall ClassBoardResourceContents__set_LockOpenConfirmDialog(
   int32_t v3; // w3
 
   this->fields._LockOpenConfirmDialog_k__BackingField = value;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._LockOpenConfirmDialog_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -515,7 +515,7 @@ void __fastcall ClassBoardResourceContents__set_LockReleaseConditionDialog(
   int32_t v3; // w3
 
   this->fields._LockReleaseConditionDialog_k__BackingField = value;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._LockReleaseConditionDialog_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -531,7 +531,7 @@ void __fastcall ClassBoardResourceContents__set_Square(
   int32_t v3; // w3
 
   this->fields._Square_k__BackingField = value;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -543,7 +543,7 @@ void __fastcall ClassBoardResourceContents__set_SquareDetailDialog(
   int32_t v3; // w3
 
   this->fields._SquareDetailDialog_k__BackingField = value;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._SquareDetailDialog_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -559,7 +559,7 @@ void __fastcall ClassBoardResourceContents__set_SquareOpenConfirmDialog(
   int32_t v3; // w3
 
   this->fields._SquareOpenConfirmDialog_k__BackingField = value;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._SquareOpenConfirmDialog_k__BackingField,
     (int32_t)value,
     (int32_t)method,

@@ -8,7 +8,7 @@ System_Int32_array *__fastcall OpponentRangeAggregator__GetCandidate(
         OpponentRangeAggregator_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
   __int64 v4; // x1
   __int64 v5; // x1
   __int64 v6; // x1
@@ -22,9 +22,9 @@ System_Int32_array *__fastcall OpponentRangeAggregator__GetCandidate(
   __int64 v14; // x1
   __int64 v15; // x1
   __int64 v16; // x1
-  __int64 v17; // x20
+  __int64 v17; // x1
+  __int64 v18; // x20
   BattleData_o *battleData_k__BackingField; // x0
-  __int64 v19; // x1
   int32_t v20; // w2
   int32_t v21; // w3
   struct TargetAggregator_Args_o *args; // x8
@@ -38,50 +38,56 @@ System_Int32_array *__fastcall OpponentRangeAggregator__GetCandidate(
   int32_t v30; // w3
   const MethodInfo *v31; // x1
   System_Collections_Generic_IEnumerable_TSource__o *Candidate; // x19
-  System_Func_T__TResult__o *v33; // x21
-  System_Collections_Generic_IEnumerable_T__o *v34; // x0
-  System_Collections_Generic_IEnumerable_T__o *v35; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v36; // x19
-  System_Func_object__bool__o *v37; // x21
-  System_Collections_Generic_IEnumerable_TSource__o *v38; // x0
-  OpponentRangeAggregator___c_c *v39; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v40; // x19
+  __int64 v33; // x1
+  __int64 v34; // x2
+  System_Func_T__TResult__o *v35; // x21
+  System_Collections_Generic_IEnumerable_T__o *v36; // x0
+  System_Collections_Generic_IEnumerable_T__o *v37; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v38; // x19
+  __int64 v39; // x1
+  __int64 v40; // x2
+  System_Func_object__bool__o *v41; // x21
+  System_Collections_Generic_IEnumerable_TSource__o *v42; // x0
+  __int64 v43; // x1
+  __int64 v44; // x2
+  OpponentRangeAggregator___c_c *v45; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v46; // x19
   System_Func_object__int__o *_9__0_2; // x20
-  Il2CppObject *v42; // x21
+  Il2CppObject *v48; // x21
   struct OpponentRangeAggregator___c_StaticFields *static_fields; // x0
-  int32_t v44; // w2
-  int32_t v45; // w3
-  System_Collections_Generic_IEnumerable_TSource__o *v46; // x0
-  _QWORD *v48; // x19
-  __int64 v49; // x8
-  __int64 v50; // x0
-  __int64 v51; // x0
+  int32_t v50; // w2
+  int32_t v51; // w3
+  System_Collections_Generic_IEnumerable_TSource__o *v52; // x0
+  _QWORD *v54; // x19
+  __int64 v55; // x8
+  __int64 v56; // x0
+  __int64 v57; // x0
 
-  if ( (byte_48E5385 & 1) == 0 )
+  if ( (byte_49FF064 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Array_Empty_int___, method);
-    sub_1B00CCC(&Method_BasicHelper_ExcludeNull_BattleServantData___, v3);
-    sub_1B00CCC(&Method_System_Linq_Enumerable_Select_BattleServantData__int___, v4);
-    sub_1B00CCC(&Method_System_Linq_Enumerable_Select_int__BattleServantData___, v5);
-    sub_1B00CCC(&Method_System_Linq_Enumerable_ToArray_BattleServantData___, v6);
-    sub_1B00CCC(&Method_System_Linq_Enumerable_ToArray_int___, v7);
-    sub_1B00CCC(&Method_System_Linq_Enumerable_Where_BattleServantData___, v8);
-    sub_1B00CCC(&System_Func_BattleServantData__int__TypeInfo, v9);
-    sub_1B00CCC(&System_Func_int__BattleServantData__TypeInfo, v10);
-    sub_1B00CCC(&System_Func_BattleServantData__bool__TypeInfo, v11);
-    sub_1B00CCC(&Method_OpponentRangeAggregator___c__GetCandidate_b__0_2__, v12);
-    sub_1B00CCC(&Method_OpponentRangeAggregator___c__DisplayClass0_0__GetCandidate_b__0__, v13);
-    sub_1B00CCC(&Method_OpponentRangeAggregator___c__DisplayClass0_0__GetCandidate_b__1__, v14);
-    sub_1B00CCC(&OpponentRangeAggregator___c__DisplayClass0_0_TypeInfo, v15);
-    sub_1B00CCC(&OpponentRangeAggregator___c_TypeInfo, v16);
-    byte_48E5385 = 1;
+    sub_1B640C8(&Method_System_Array_Empty_int___, method);
+    sub_1B640C8(&Method_BasicHelper_ExcludeNull_BattleServantData___, v4);
+    sub_1B640C8(&Method_System_Linq_Enumerable_Select_BattleServantData__int___, v5);
+    sub_1B640C8(&Method_System_Linq_Enumerable_Select_int__BattleServantData___, v6);
+    sub_1B640C8(&Method_System_Linq_Enumerable_ToArray_BattleServantData___, v7);
+    sub_1B640C8(&Method_System_Linq_Enumerable_ToArray_int___, v8);
+    sub_1B640C8(&Method_System_Linq_Enumerable_Where_BattleServantData___, v9);
+    sub_1B640C8(&System_Func_BattleServantData__int__TypeInfo, v10);
+    sub_1B640C8(&System_Func_int__BattleServantData__TypeInfo, v11);
+    sub_1B640C8(&System_Func_BattleServantData__bool__TypeInfo, v12);
+    sub_1B640C8(&Method_OpponentRangeAggregator___c__GetCandidate_b__0_2__, v13);
+    sub_1B640C8(&Method_OpponentRangeAggregator___c__DisplayClass0_0__GetCandidate_b__0__, v14);
+    sub_1B640C8(&Method_OpponentRangeAggregator___c__DisplayClass0_0__GetCandidate_b__1__, v15);
+    sub_1B640C8(&OpponentRangeAggregator___c__DisplayClass0_0_TypeInfo, v16);
+    sub_1B640C8(&OpponentRangeAggregator___c_TypeInfo, v17);
+    byte_49FF064 = 1;
   }
-  v17 = sub_1B00F18(OpponentRangeAggregator___c__DisplayClass0_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v17, 0LL);
-  if ( !v17 )
+  v18 = sub_1B64314(OpponentRangeAggregator___c__DisplayClass0_0_TypeInfo, method, v2);
+  System_Object___ctor((Il2CppObject *)v18, 0LL);
+  if ( !v18 )
     goto LABEL_25;
-  *(_QWORD *)(v17 + 16) = this;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v17 + 16), (int32_t)this, v20, v21);
+  *(_QWORD *)(v18 + 16) = this;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v18 + 16), (int32_t)this, v20, v21);
   args = this->fields.args;
   if ( !args )
     goto LABEL_25;
@@ -103,87 +109,87 @@ System_Int32_array *__fastcall OpponentRangeAggregator__GetCandidate(
                        (Target_BattleTargetArgs_o *)battleData_k__BackingField,
                        0LL);
         TargetIndexArray = OpponentRangeAggregator__GetTargetIndexArray(EnemyRange, v25, v27);
-        *(_QWORD *)(v17 + 24) = TargetIndexArray;
-        sub_1B00C70((ServantStatusBattleListViewItem_o *)(v17 + 24), (int32_t)TargetIndexArray, v29, v30);
+        *(_QWORD *)(v18 + 24) = TargetIndexArray;
+        sub_1B6406C((ServantStatusBattleListViewItem_o *)(v18 + 24), (int32_t)TargetIndexArray, v29, v30);
         Candidate = (System_Collections_Generic_IEnumerable_TSource__o *)OpponentAllFieldTargetAggregator__GetCandidate(
                                                                            (OpponentAllFieldTargetAggregator_o *)this,
                                                                            v31);
-        v33 = (System_Func_T__TResult__o *)sub_1B00F18(System_Func_int__BattleServantData__TypeInfo);
+        v35 = (System_Func_T__TResult__o *)sub_1B64314(System_Func_int__BattleServantData__TypeInfo, v33, v34);
         System_Func_int__object____ctor(
-          v33,
-          (Il2CppObject *)v17,
+          v35,
+          (Il2CppObject *)v18,
           Method_OpponentRangeAggregator___c__DisplayClass0_0__GetCandidate_b__0__,
           0LL);
-        v34 = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__Select_int__object_(
+        v36 = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__Select_int__object_(
                                                                Candidate,
-                                                               (System_Func_TSource__TResult__o *)v33,
-                                                               (const MethodInfo_2D8DC18 *)Method_System_Linq_Enumerable_Select_int__BattleServantData___);
-        v35 = BasicHelper__ExcludeNull_object_(
-                v34,
-                (const MethodInfo_2D4F0D4 *)Method_BasicHelper_ExcludeNull_BattleServantData___);
-        v36 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToArray_object_(
-                                                                     (System_Collections_Generic_IEnumerable_TSource__o *)v35,
-                                                                     (const MethodInfo_2D976BC *)Method_System_Linq_Enumerable_ToArray_BattleServantData___);
-        v37 = (System_Func_object__bool__o *)sub_1B00F18(System_Func_BattleServantData__bool__TypeInfo);
+                                                               (System_Func_TSource__TResult__o *)v35,
+                                                               (const MethodInfo_2E66FCC *)Method_System_Linq_Enumerable_Select_int__BattleServantData___);
+        v37 = BasicHelper__ExcludeNull_object_(
+                v36,
+                (const MethodInfo_2E251C4 *)Method_BasicHelper_ExcludeNull_BattleServantData___);
+        v38 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToArray_object_(
+                                                                     (System_Collections_Generic_IEnumerable_TSource__o *)v37,
+                                                                     (const MethodInfo_2E713C4 *)Method_System_Linq_Enumerable_ToArray_BattleServantData___);
+        v41 = (System_Func_object__bool__o *)sub_1B64314(System_Func_BattleServantData__bool__TypeInfo, v39, v40);
         System_Func_object__bool____ctor(
-          v37,
-          (Il2CppObject *)v17,
+          v41,
+          (Il2CppObject *)v18,
           Method_OpponentRangeAggregator___c__DisplayClass0_0__GetCandidate_b__1__,
           0LL);
-        v38 = System_Linq_Enumerable__Where_object_(
-                v36,
-                (System_Func_TSource__bool__o *)v37,
-                (const MethodInfo_2D9D054 *)Method_System_Linq_Enumerable_Where_BattleServantData___);
-        v39 = OpponentRangeAggregator___c_TypeInfo;
-        v40 = v38;
+        v42 = System_Linq_Enumerable__Where_object_(
+                v38,
+                (System_Func_TSource__bool__o *)v41,
+                (const MethodInfo_2E7709C *)Method_System_Linq_Enumerable_Where_BattleServantData___);
+        v45 = OpponentRangeAggregator___c_TypeInfo;
+        v46 = v42;
         if ( !OpponentRangeAggregator___c_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(OpponentRangeAggregator___c_TypeInfo);
-          v39 = OpponentRangeAggregator___c_TypeInfo;
+          v45 = OpponentRangeAggregator___c_TypeInfo;
         }
-        _9__0_2 = (System_Func_object__int__o *)v39->static_fields->__9__0_2;
+        _9__0_2 = (System_Func_object__int__o *)v45->static_fields->__9__0_2;
         if ( !_9__0_2 )
         {
-          if ( !v39->_2.cctor_finished )
+          if ( !v45->_2.cctor_finished )
           {
-            j_il2cpp_runtime_class_init_0(v39);
-            v39 = OpponentRangeAggregator___c_TypeInfo;
+            j_il2cpp_runtime_class_init_0(v45);
+            v45 = OpponentRangeAggregator___c_TypeInfo;
           }
-          v42 = (Il2CppObject *)v39->static_fields->__9;
-          _9__0_2 = (System_Func_object__int__o *)sub_1B00F18(System_Func_BattleServantData__int__TypeInfo);
-          System_Func_object__int____ctor(_9__0_2, v42, Method_OpponentRangeAggregator___c__GetCandidate_b__0_2__, 0LL);
+          v48 = (Il2CppObject *)v45->static_fields->__9;
+          _9__0_2 = (System_Func_object__int__o *)sub_1B64314(System_Func_BattleServantData__int__TypeInfo, v43, v44);
+          System_Func_object__int____ctor(_9__0_2, v48, Method_OpponentRangeAggregator___c__GetCandidate_b__0_2__, 0LL);
           static_fields = OpponentRangeAggregator___c_TypeInfo->static_fields;
           static_fields->__9__0_2 = (struct System_Func_BattleServantData__int__o *)_9__0_2;
-          sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->__9__0_2, (int32_t)_9__0_2, v44, v45);
+          sub_1B6406C((ServantStatusBattleListViewItem_o *)&static_fields->__9__0_2, (int32_t)_9__0_2, v50, v51);
         }
-        v46 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
-                                                                     v40,
+        v52 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
+                                                                     v46,
                                                                      (System_Func_TSource__TResult__o *)_9__0_2,
-                                                                     (const MethodInfo_2D8F428 *)Method_System_Linq_Enumerable_Select_BattleServantData__int___);
+                                                                     (const MethodInfo_2E68AD0 *)Method_System_Linq_Enumerable_Select_BattleServantData__int___);
         return System_Linq_Enumerable__ToArray_int_(
-                 v46,
-                 (const MethodInfo_2D97524 *)Method_System_Linq_Enumerable_ToArray_int___);
+                 v52,
+                 (const MethodInfo_2E7122C *)Method_System_Linq_Enumerable_ToArray_int___);
       }
     }
 LABEL_25:
-    sub_1B00F28(battleData_k__BackingField, v19);
+    sub_1B64324(battleData_k__BackingField);
   }
-  v48 = Method_System_Array_Empty_int___;
-  v49 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
-  if ( !v49 )
+  v54 = Method_System_Array_Empty_int___;
+  v55 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
+  if ( !v55 )
   {
-    sub_1B52C04(Method_System_Array_Empty_int___);
-    v49 = v48[7];
+    sub_1BB6000(Method_System_Array_Empty_int___);
+    v55 = v54[7];
   }
-  v50 = *(_QWORD *)(v49 + 16);
-  if ( (*(_BYTE *)(v50 + 309) & 1) == 0 )
-    v50 = sub_1B52BA8(v50);
-  if ( !*(_DWORD *)(v50 + 224) )
-    j_il2cpp_runtime_class_init_0(v50);
-  v51 = *(_QWORD *)(v48[7] + 16LL);
-  if ( (*(_BYTE *)(v51 + 309) & 1) == 0 )
-    v51 = sub_1B52BA8(v51);
-  return **(System_Int32_array ***)(v51 + 184);
+  v56 = *(_QWORD *)(v55 + 16);
+  if ( (*(_BYTE *)(v56 + 309) & 1) == 0 )
+    v56 = sub_1BB5FA4(v56);
+  if ( !*(_DWORD *)(v56 + 224) )
+    j_il2cpp_runtime_class_init_0(v56);
+  v57 = *(_QWORD *)(v54[7] + 16LL);
+  if ( (*(_BYTE *)(v57 + 309) & 1) == 0 )
+    v57 = sub_1BB5FA4(v57);
+  return **(System_Int32_array ***)(v57 + 184);
 }
 
 
@@ -212,18 +218,21 @@ System_Int32_array *__fastcall OpponentRangeAggregator__GetTargetIndexArray(
   _QWORD *v21; // x11
   __int64 size; // x12
 
-  if ( (byte_48E5386 & 1) == 0 )
+  if ( (byte_49FF065 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_List_int__Add__, *(_QWORD *)&baseIndex);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_int__ToArray__, v5);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_int___ctor__, v6);
-    sub_1B00CCC(&System_Collections_Generic_List_int__TypeInfo, v7);
-    byte_48E5386 = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_List_int__Add__, *(_QWORD *)&baseIndex);
+    sub_1B640C8(&Method_System_Collections_Generic_List_int__ToArray__, v5);
+    sub_1B640C8(&Method_System_Collections_Generic_List_int___ctor__, v6);
+    sub_1B640C8(&System_Collections_Generic_List_int__TypeInfo, v7);
+    byte_49FF065 = 1;
   }
-  v8 = (System_Collections_Generic_List_int__o *)sub_1B00F18(System_Collections_Generic_List_int__TypeInfo);
+  v8 = (System_Collections_Generic_List_int__o *)sub_1B64314(
+                                                   System_Collections_Generic_List_int__TypeInfo,
+                                                   *(_QWORD *)&baseIndex,
+                                                   method);
   System_Collections_Generic_List_int____ctor(
     v8,
-    (const MethodInfo_33A4158 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_348F688 *)Method_System_Collections_Generic_List_int___ctor__);
   if ( !baseRangeArray )
     goto LABEL_18;
   v11 = *(_QWORD *)&baseRangeArray->max_length;
@@ -236,7 +245,7 @@ System_Int32_array *__fastcall OpponentRangeAggregator__GetTargetIndexArray(
     do
     {
       if ( v14 >= (unsigned int)v11 )
-        sub_1B00F30(v9, v10);
+        sub_1B6432C(v9, v10);
       v16 = baseRangeArray->m_Items[v14 + 1] - 2 * ((baseRangeArray->m_Items[v14 + 1] - 1) % 3) + 1;
       v17 = (unsigned int)(v16 / 3);
       v18 = v16 % 3 + v15;
@@ -259,7 +268,7 @@ System_Int32_array *__fastcall OpponentRangeAggregator__GetTargetIndexArray(
             System_Collections_Generic_List_int___AddWithResize(
               v8,
               v10,
-              *(const MethodInfo_33A49AC **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+              *(const MethodInfo_348FEDC **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
           }
           else
           {
@@ -274,10 +283,10 @@ System_Int32_array *__fastcall OpponentRangeAggregator__GetTargetIndexArray(
   }
   if ( !v8 )
 LABEL_18:
-    sub_1B00F28(v9, v10);
+    sub_1B64324(v9);
   return System_Collections_Generic_List_int___ToArray(
            v8,
-           (const MethodInfo_33A6464 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_3491A34 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -291,7 +300,7 @@ void __fastcall OpponentRangeAggregator_Cell___ctor(
 }
 
 
-void __fastcall OpponentRangeAggregator_Cell___ctor_42267408(
+void __fastcall OpponentRangeAggregator_Cell___ctor_43272200(
         OpponentRangeAggregator_Cell_o this,
         int32_t col,
         int32_t row,
@@ -349,23 +358,24 @@ OpponentRangeAggregator_Cell_o __fastcall OpponentRangeAggregator_Cell__op_Subtr
 void __fastcall OpponentRangeAggregator___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int32_t v3; // w2
-  int32_t v4; // w3
+  __int64 v2; // x2
+  Il2CppObject *v3; // x19
+  int32_t v4; // w2
+  int32_t v5; // w3
 
-  if ( (byte_48E5387 & 1) == 0 )
+  if ( (byte_49FF066 & 1) == 0 )
   {
-    sub_1B00CCC(&OpponentRangeAggregator___c_TypeInfo, v1);
-    byte_48E5387 = 1;
+    sub_1B640C8(&OpponentRangeAggregator___c_TypeInfo, v1);
+    byte_49FF066 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B00F18(OpponentRangeAggregator___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  OpponentRangeAggregator___c_TypeInfo->static_fields->__9 = (struct OpponentRangeAggregator___c_o *)v2;
-  sub_1B00C70(
+  v3 = (Il2CppObject *)sub_1B64314(OpponentRangeAggregator___c_TypeInfo, v1, v2);
+  System_Object___ctor(v3, 0LL);
+  OpponentRangeAggregator___c_TypeInfo->static_fields->__9 = (struct OpponentRangeAggregator___c_o *)v3;
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)OpponentRangeAggregator___c_TypeInfo->static_fields,
-    (int32_t)v2,
-    v3,
-    v4);
+    (int32_t)v3,
+    v4,
+    v5);
 }
 
 
@@ -381,7 +391,7 @@ int32_t __fastcall OpponentRangeAggregator___c___GetCandidate_b__0_2(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B00F28(this, 0LL);
+    sub_1B64324(this);
   return x->fields.uniqueId;
 }
 
@@ -407,7 +417,7 @@ BattleServantData_o *__fastcall OpponentRangeAggregator___c__DisplayClass0_0___G
     || (args = _4__this->fields.args) == 0LL
     || (this = (OpponentRangeAggregator___c__DisplayClass0_0_o *)args->fields._battleData_k__BackingField) == 0LL )
   {
-    sub_1B00F28(this, i);
+    sub_1B64324(this);
   }
   return BattleData__getServantData((BattleData_o *)this, i, 0LL);
 }
@@ -423,19 +433,19 @@ bool __fastcall OpponentRangeAggregator___c__DisplayClass0_0___GetCandidate_b__1
   int32_t DeckIndex; // w1
 
   v4 = this;
-  if ( (byte_48E5388 & 1) == 0 )
+  if ( (byte_49FF067 & 1) == 0 )
   {
-    this = (OpponentRangeAggregator___c__DisplayClass0_0_o *)sub_1B00CCC(
+    this = (OpponentRangeAggregator___c__DisplayClass0_0_o *)sub_1B640C8(
                                                                &Method_System_Linq_Enumerable_Contains_int___,
                                                                x);
-    byte_48E5388 = 1;
+    byte_49FF067 = 1;
   }
   if ( !x )
-    sub_1B00F28(this, x);
+    sub_1B64324(this);
   indexArray = (System_Collections_Generic_IEnumerable_TSource__o *)v4->fields.indexArray;
   DeckIndex = BattleServantData__getDeckIndex(x, 0LL);
   return System_Linq_Enumerable__Contains_int_(
            indexArray,
            DeckIndex,
-           (const MethodInfo_2D7A61C *)Method_System_Linq_Enumerable_Contains_int___);
+           (const MethodInfo_2E52CA8 *)Method_System_Linq_Enumerable_Contains_int___);
 }

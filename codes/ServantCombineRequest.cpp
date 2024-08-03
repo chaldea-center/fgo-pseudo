@@ -15,22 +15,22 @@ void __fastcall ServantCombineRequest__beginRequest(
   const MethodInfo *v16; // x3
   const MethodInfo *v17; // x1
 
-  if ( (byte_48E3F9A & 1) == 0 )
+  if ( (byte_49FDD23 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_16850/*"baseUserSvtId"*/, baseUsrSvtId);
-    sub_1B00CCC(&StringLiteral_19470/*"getExp"*/, v11);
-    sub_1B00CCC(&StringLiteral_24005/*"useQp"*/, v12);
-    sub_1B00CCC(&StringLiteral_21052/*"materialUserSvtIds"*/, v13);
-    byte_48E3F9A = 1;
+    sub_1B640C8(&StringLiteral_17016/*"baseUserSvtId"*/, baseUsrSvtId);
+    sub_1B640C8(&StringLiteral_19662/*"getExp"*/, v11);
+    sub_1B640C8(&StringLiteral_24262/*"useQp"*/, v12);
+    sub_1B640C8(&StringLiteral_21253/*"materialUserSvtIds"*/, v13);
+    byte_49FDD23 = 1;
   }
-  RequestBase__addField_39759196(
+  RequestBase__addField_40849372(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_16850/*"baseUserSvtId"*/,
+    (System_String_o *)StringLiteral_17016/*"baseUserSvtId"*/,
     baseUsrSvtId,
     *(const MethodInfo **)&useQp);
-  RequestBase__addField_39752868((RequestBase_o *)this, (System_String_o *)StringLiteral_21052/*"materialUserSvtIds"*/, materialSvtIds, v14);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24005/*"useQp"*/, useQp, v15);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19470/*"getExp"*/, getExp, v16);
+  RequestBase__addField_40850936((RequestBase_o *)this, (System_String_o *)StringLiteral_21253/*"materialUserSvtIds"*/, materialSvtIds, v14);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24262/*"useQp"*/, useQp, v15);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19662/*"getExp"*/, getExp, v16);
   RequestBase__beginRequest((RequestBase_o *)this, v17);
 }
 
@@ -39,15 +39,15 @@ System_String_o *__fastcall ServantCombineRequest__getMockData(ServantCombineReq
 {
   __int64 v2; // x1
 
-  if ( (byte_48E3F99 & 1) == 0 )
+  if ( (byte_49FDD22 & 1) == 0 )
   {
-    sub_1B00CCC(&NetworkManager_TypeInfo, method);
-    sub_1B00CCC(&StringLiteral_9005/*"MockSvtCombineResponse"*/, v2);
-    byte_48E3F99 = 1;
+    sub_1B640C8(&NetworkManager_TypeInfo, method);
+    sub_1B640C8(&StringLiteral_9066/*"MockSvtCombineResponse"*/, v2);
+    byte_49FDD22 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9005/*"MockSvtCombineResponse"*/, 0LL);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9066/*"MockSvtCombineResponse"*/, 0LL);
 }
 
 
@@ -56,16 +56,16 @@ System_String_o *__fastcall ServantCombineRequest__getURL(ServantCombineRequest_
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_48E3F98 & 1) == 0 )
+  if ( (byte_49FDD21 & 1) == 0 )
   {
-    sub_1B00CCC(&NetworkManager_TypeInfo, method);
-    sub_1B00CCC(&StringLiteral_17500/*"card/combine"*/, v2);
-    byte_48E3F98 = 1;
+    sub_1B640C8(&NetworkManager_TypeInfo, method);
+    sub_1B640C8(&StringLiteral_17674/*"card/combine"*/, v2);
+    byte_49FDD21 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_60325748(BaseUrl, (System_String_o *)StringLiteral_17500/*"card/combine"*/, 0LL);
+  return System_String__Concat_61375396(BaseUrl, (System_String_o *)StringLiteral_17674/*"card/combine"*/, 0LL);
 }
 
 
@@ -82,20 +82,19 @@ void __fastcall ServantCombineRequest__requestCompleted(
   ResponseData_o *v10; // x20
   System_Collections_Generic_Dictionary_object__object__o *success; // x0
   Il2CppObject *Item; // x0
-  __int64 v13; // x1
-  __int64 v14; // x0
+  __int64 v13; // x0
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  __int64 v16; // x1
+  __int64 v15; // x1
   Il2CppObject *m_target; // x3
   struct System_Reflection_MethodInfo_o *original_method_info; // x0
 
-  if ( (byte_48E3F9B & 1) == 0 )
+  if ( (byte_49FDD24 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, responseList);
-    sub_1B00CCC(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B00CCC(&StringLiteral_23313/*"successResult"*/, v6);
-    sub_1B00CCC(&StringLiteral_21754/*"ng"*/, v7);
-    byte_48E3F9B = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, responseList);
+    sub_1B640C8(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B640C8(&StringLiteral_23566/*"successResult"*/, v6);
+    sub_1B640C8(&StringLiteral_21968/*"ng"*/, v7);
+    byte_49FDD24 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -106,23 +105,23 @@ void __fastcall ServantCombineRequest__requestCompleted(
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              success,
-             (Il2CppObject *)StringLiteral_23313/*"successResult"*/,
-             (const MethodInfo_308D9C8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_23566/*"successResult"*/,
+             (const MethodInfo_3179378 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
-      sub_1B00F28(0LL, v13);
-    v14 = ((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
+      sub_1B64324(0LL);
+    v13 = ((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
             Item,
             Item->klass->vtable[4].methodPtr);
     CallBack = this->fields.CallBack;
     if ( CallBack )
     {
-      v16 = v14;
+      v15 = v13;
       m_target = CallBack->fields.m_target;
       original_method_info = CallBack->fields.original_method_info;
 LABEL_13:
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))m_target)(
         original_method_info,
-        v16,
+        v15,
         *(_QWORD *)&CallBack->fields.extra_arg);
     }
   }
@@ -133,7 +132,7 @@ LABEL_13:
     {
       m_target = CallBack->fields.m_target;
       original_method_info = CallBack->fields.original_method_info;
-      v16 = StringLiteral_21754/*"ng"*/;
+      v15 = StringLiteral_21968/*"ng"*/;
       goto LABEL_13;
     }
   }

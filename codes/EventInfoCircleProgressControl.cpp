@@ -15,51 +15,55 @@ void __fastcall EventInfoCircleProgressControl___cctor(const MethodInfo *method)
   int32_t v13; // w2
   int32_t v14; // w3
 
-  if ( (byte_48E3313 & 1) == 0 )
+  if ( (byte_49FCF62 & 1) == 0 )
   {
-    sub_1B00CCC(&EventInfoCircleProgressControl_TypeInfo, v1);
-    sub_1B00CCC(&StringLiteral_4424/*"CircleProgressData_"*/, v4);
-    sub_1B00CCC(&StringLiteral_4426/*"CircleProgressTitleState_"*/, v5);
-    sub_1B00CCC(&StringLiteral_4425/*"CircleProgressExtraData_"*/, v6);
-    byte_48E3313 = 1;
+    sub_1B640C8(&EventInfoCircleProgressControl_TypeInfo, v1);
+    sub_1B640C8(&StringLiteral_4445/*"CircleProgressData_"*/, v4);
+    sub_1B640C8(&StringLiteral_4447/*"CircleProgressTitleState_"*/, v5);
+    sub_1B640C8(&StringLiteral_4446/*"CircleProgressExtraData_"*/, v6);
+    byte_49FCF62 = 1;
   }
-  EventInfoCircleProgressControl_TypeInfo->static_fields->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE = (struct System_String_o *)StringLiteral_4426/*"CircleProgressTitleState_"*/;
-  sub_1B00C70(
+  EventInfoCircleProgressControl_TypeInfo->static_fields->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE = (struct System_String_o *)StringLiteral_4447/*"CircleProgressTitleState_"*/;
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)EventInfoCircleProgressControl_TypeInfo->static_fields,
-    StringLiteral_4426/*"CircleProgressTitleState_"*/,
+    StringLiteral_4447/*"CircleProgressTitleState_"*/,
     v2,
     v3);
-  v7 = StringLiteral_4424/*"CircleProgressData_"*/;
+  v7 = StringLiteral_4445/*"CircleProgressData_"*/;
   static_fields = EventInfoCircleProgressControl_TypeInfo->static_fields;
-  static_fields->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA = (struct System_String_o *)StringLiteral_4424/*"CircleProgressData_"*/;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA, v7, v9, v10);
-  v11 = StringLiteral_4425/*"CircleProgressExtraData_"*/;
+  static_fields->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA = (struct System_String_o *)StringLiteral_4445/*"CircleProgressData_"*/;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&static_fields->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA, v7, v9, v10);
+  v11 = StringLiteral_4446/*"CircleProgressExtraData_"*/;
   v12 = EventInfoCircleProgressControl_TypeInfo->static_fields;
-  v12->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA = (struct System_String_o *)StringLiteral_4425/*"CircleProgressExtraData_"*/;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v12->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA, v11, v13, v14);
+  v12->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA = (struct System_String_o *)StringLiteral_4446/*"CircleProgressExtraData_"*/;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&v12->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA, v11, v13, v14);
 }
 
 
 void __fastcall EventInfoCircleProgressControl___ctor(EventInfoCircleProgressControl_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  System_Collections_Generic_List_object__o *v4; // x20
-  int32_t v5; // w2
-  int32_t v6; // w3
+  __int64 v2; // x2
+  __int64 v4; // x1
+  System_Collections_Generic_List_object__o *v5; // x20
+  int32_t v6; // w2
+  int32_t v7; // w3
 
-  if ( (byte_48E3312 & 1) == 0 )
+  if ( (byte_49FCF61 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData___ctor__, method);
-    sub_1B00CCC(&System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__TypeInfo, v3);
-    byte_48E3312 = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData___ctor__, method);
+    sub_1B640C8(&System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__TypeInfo, v4);
+    byte_49FCF61 = 1;
   }
   this->fields.extraCircleHidePosX = -212.0;
-  v4 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1B64314(
+                                                      System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__TypeInfo,
+                                                      method,
+                                                      v2);
   System_Collections_Generic_List_object____ctor(
-    v4,
-    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData___ctor__);
-  this->fields.progressDataList = (struct System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__o *)v4;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.progressDataList, (int32_t)v4, v5, v6);
+    v5,
+    (const MethodInfo_34ACEA0 *)Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData___ctor__);
+  this->fields.progressDataList = (struct System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__o *)v5;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.progressDataList, (int32_t)v5, v6, v7);
   EventInfoUIBase___ctor((EventInfoUIBase_o *)this, 0LL);
 }
 
@@ -83,28 +87,27 @@ void __fastcall EventInfoCircleProgressControl__AddProgressData(
   int32_t v18; // w20
   int32_t v19; // w19
   Il2CppObject *ProgressData; // x0
-  __int64 v21; // x1
-  int32_t v22; // w2
-  int32_t v23; // w3
+  int32_t v21; // w2
+  int32_t v22; // w3
   System_Collections_Generic_List_object__o *progressDataList; // x8
   struct System_Object_array *items; // x9
-  _QWORD *v26; // x10
+  _QWORD *v25; // x10
   __int64 size; // x11
-  Il2CppObject *v28; // x1
-  Il2CppClass **v29; // x0
-  const MethodInfo *v30; // [xsp+18h] [xbp-68h]
+  Il2CppObject *v27; // x1
+  Il2CppClass **v28; // x0
+  const MethodInfo *v29; // [xsp+18h] [xbp-68h]
 
   v17 = this;
-  if ( (byte_48E330D & 1) == 0 )
+  if ( (byte_49FCF5C & 1) == 0 )
   {
     v18 = oldDispState;
     v19 = dispState;
-    this = (EventInfoCircleProgressControl_o *)sub_1B00CCC(
+    this = (EventInfoCircleProgressControl_o *)sub_1B640C8(
                                                  &Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__Add__,
                                                  *(_QWORD *)&id);
     dispState = v19;
     oldDispState = v18;
-    byte_48E330D = 1;
+    byte_49FCF5C = 1;
   }
   ProgressData = (Il2CppObject *)EventInfoCircleProgressControl__CreateProgressData(
                                    this,
@@ -118,31 +121,31 @@ void __fastcall EventInfoCircleProgressControl__AddProgressData(
                                    isCompleted,
                                    isOldCompleted,
                                    ent,
-                                   v30);
+                                   v29);
   progressDataList = (System_Collections_Generic_List_object__o *)v17->fields.progressDataList;
   if ( !progressDataList
     || (items = progressDataList->fields._items,
-        v26 = Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__Add__,
+        v25 = Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__Add__,
         ++progressDataList->fields._version,
         !items) )
   {
-    sub_1B00F28(ProgressData, v21);
+    sub_1B64324(ProgressData);
   }
   size = progressDataList->fields._size;
-  v28 = ProgressData;
+  v27 = ProgressData;
   if ( (unsigned int)size >= items->max_length )
   {
     System_Collections_Generic_List_object___AddWithResize(
       progressDataList,
       ProgressData,
-      *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+      *(const MethodInfo_34AD6D4 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
   }
   else
   {
-    v29 = &items->obj.klass + size;
+    v28 = &items->obj.klass + size;
     progressDataList->fields._size = size + 1;
-    v29[4] = (Il2CppClass *)v28;
-    sub_1B00C70((ServantStatusBattleListViewItem_o *)(v29 + 4), (int32_t)v28, v22, v23);
+    v28[4] = (Il2CppClass *)v27;
+    sub_1B6406C((ServantStatusBattleListViewItem_o *)(v28 + 4), (int32_t)v27, v21, v22);
   }
 }
 
@@ -154,17 +157,17 @@ void __fastcall EventInfoCircleProgressControl__Awake(EventInfoCircleProgressCon
   int32_t v5; // w2
   int32_t v6; // w3
 
-  if ( (byte_48E32FB & 1) == 0 )
+  if ( (byte_49FCF4A & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataManager_GetMaster_UserEventPointMaster___, method);
-    sub_1B00CCC(&DataManager_TypeInfo, v3);
-    byte_48E32FB = 1;
+    sub_1B640C8(&Method_DataManager_GetMaster_UserEventPointMaster___, method);
+    sub_1B640C8(&DataManager_TypeInfo, v3);
+    byte_49FCF4A = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_UserEventPointMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_UserEventPointMaster___);
   this->fields.userEventPointMaster = (struct UserEventPointMaster_o *)Master_object;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.userEventPointMaster, (int32_t)Master_object, v5, v6);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.userEventPointMaster, (int32_t)Master_object, v5, v6);
 }
 
 
@@ -185,19 +188,18 @@ EventInfoCircleProgressControl_ProgressData_o *__fastcall EventInfoCircleProgres
 {
   __int64 v19; // x26
   __int64 v20; // x0
-  __int64 v21; // x1
-  int32_t v22; // w2
-  int32_t v23; // w3
+  int32_t v21; // w2
+  int32_t v22; // w3
 
-  if ( (byte_48E330E & 1) == 0 )
+  if ( (byte_49FCF5D & 1) == 0 )
   {
-    sub_1B00CCC(&EventInfoCircleProgressControl_ProgressData_TypeInfo, *(_QWORD *)&id);
-    byte_48E330E = 1;
+    sub_1B640C8(&EventInfoCircleProgressControl_ProgressData_TypeInfo, *(_QWORD *)&id);
+    byte_49FCF5D = 1;
   }
-  v19 = sub_1B00F18(EventInfoCircleProgressControl_ProgressData_TypeInfo);
+  v19 = sub_1B64314(EventInfoCircleProgressControl_ProgressData_TypeInfo, *(_QWORD *)&id, point);
   System_Object___ctor((Il2CppObject *)v19, 0LL);
   if ( !v19 )
-    sub_1B00F28(v20, v21);
+    sub_1B64324(v20);
   *(_DWORD *)(v19 + 16) = id;
   *(_QWORD *)(v19 + 24) = point;
   *(_QWORD *)(v19 + 32) = oldPoint;
@@ -208,7 +210,7 @@ EventInfoCircleProgressControl_ProgressData_o *__fastcall EventInfoCircleProgres
   *(_BYTE *)(v19 + 56) = isCompleted;
   *(_BYTE *)(v19 + 57) = isOldCompleted;
   *(_QWORD *)(v19 + 64) = ent;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v19 + 64), (int32_t)ent, v22, v23);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v19 + 64), (int32_t)ent, v21, v22);
   return (EventInfoCircleProgressControl_ProgressData_o *)v19;
 }
 
@@ -226,183 +228,179 @@ void __fastcall EventInfoCircleProgressControl__DeleteContinueData(const MethodI
   __int64 v9; // x1
   __int64 v10; // x1
   Il2CppObject *Master_object; // x0
-  __int64 v12; // x1
   System_Collections_ObjectModel_Collection_T__o *klass; // x19
-  DataMasterBase_TMaster__TEntity__PKType__o *v14; // x20
-  __int64 v15; // x1
+  DataMasterBase_TMaster__TEntity__PKType__o *v13; // x20
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x19
-  System_Collections_Generic_IEnumerator_T__c *v17; // x8
-  __int64 v18; // x9
+  System_Collections_Generic_IEnumerator_T__c *v15; // x8
+  __int64 v16; // x9
   int32_t *p_offset; // x10
   __int64 p_method; // x0
-  System_Collections_Generic_IEnumerator_T__c *v21; // x8
-  __int64 v22; // x9
-  int32_t *v23; // x10
-  __int64 v24; // x0
-  _DWORD *v25; // x0
-  __int64 v26; // x1
+  System_Collections_Generic_IEnumerator_T__c *v19; // x8
+  __int64 v20; // x9
+  int32_t *v21; // x10
+  __int64 v22; // x0
+  _DWORD *v23; // x0
   __int64 methodPtr_low; // x10
-  int32_t v28; // w2
-  __int64 v29; // x1
-  EventInfoCircleProgressControl_c *v30; // x0
+  int32_t v25; // w2
+  EventInfoCircleProgressControl_c *v26; // x0
   System_String_o *SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE; // x21
-  System_String_o *v32; // x1
-  System_String_o *v33; // x0
+  System_String_o *v28; // x1
+  System_String_o *v29; // x0
   System_String_o *SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA; // x21
-  System_String_o *v35; // x1
-  System_String_o *v36; // x0
+  System_String_o *v31; // x1
+  System_String_o *v32; // x0
   System_String_o *SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA; // x21
-  System_String_o *v38; // x1
-  System_String_o *v39; // x0
-  System_Collections_Generic_IEnumerator_T__c *v40; // x8
-  __int64 v41; // x9
-  int32_t *v42; // x10
-  __int64 v43; // x0
-  EventDetailEntity_o *v44; // [xsp+0h] [xbp-60h] BYREF
-  int32_t v45; // [xsp+Ch] [xbp-54h] BYREF
+  System_String_o *v34; // x1
+  System_String_o *v35; // x0
+  System_Collections_Generic_IEnumerator_T__c *v36; // x8
+  __int64 v37; // x9
+  int32_t *v38; // x10
+  __int64 v39; // x0
+  EventDetailEntity_o *v40; // [xsp+0h] [xbp-60h] BYREF
+  int32_t v41; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_48E3307 & 1) == 0 )
+  if ( (byte_49FCF56 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, v1);
-    sub_1B00CCC(&Method_DataManager_GetMaster_EventDetailMaster___, v2);
-    sub_1B00CCC(&Method_DataManager_GetMaster_EventMaster___, v3);
-    sub_1B00CCC(&DataManager_TypeInfo, v4);
-    sub_1B00CCC(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v5);
-    sub_1B00CCC(&EventEntity_TypeInfo, v6);
-    sub_1B00CCC(&EventInfoCircleProgressControl_TypeInfo, v7);
-    sub_1B00CCC(&System_IDisposable_TypeInfo, v8);
-    sub_1B00CCC(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v9);
-    sub_1B00CCC(&System_Collections_IEnumerator_TypeInfo, v10);
-    byte_48E3307 = 1;
+    sub_1B640C8(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, v1);
+    sub_1B640C8(&Method_DataManager_GetMaster_EventDetailMaster___, v2);
+    sub_1B640C8(&Method_DataManager_GetMaster_EventMaster___, v3);
+    sub_1B640C8(&DataManager_TypeInfo, v4);
+    sub_1B640C8(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v5);
+    sub_1B640C8(&EventEntity_TypeInfo, v6);
+    sub_1B640C8(&EventInfoCircleProgressControl_TypeInfo, v7);
+    sub_1B640C8(&System_IDisposable_TypeInfo, v8);
+    sub_1B640C8(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v9);
+    sub_1B640C8(&System_Collections_IEnumerator_TypeInfo, v10);
+    byte_49FCF56 = 1;
   }
-  v45 = 0;
-  v44 = 0LL;
+  v41 = 0;
+  v40 = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_EventMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_EventMaster___);
   if ( !Master_object
     || (klass = (System_Collections_ObjectModel_Collection_T__o *)Master_object[2].klass,
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_EventDetailMaster___),
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_EventDetailMaster___),
         !klass) )
   {
-    sub_1B00F28(Master_object, v12);
+    sub_1B64324(Master_object);
   }
-  v14 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
+  v13 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  klass,
-                 (const MethodInfo_2F83C88 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_30710E0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_1B00F28(0LL, v15);
+    sub_1B64324(0LL);
   while ( 1 )
   {
-    v17 = Enumerator->klass;
-    v18 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v15 = Enumerator->klass;
+    v16 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
-      p_offset = &v17->_1.interfaceOffsets->offset;
+      p_offset = &v15->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v18;
+        --v16;
         p_offset += 4;
-        if ( !v18 )
+        if ( !v16 )
           goto LABEL_12;
       }
-      p_method = (__int64)&v17->vtable[*p_offset].method;
+      p_method = (__int64)&v15->vtable[*p_offset].method;
     }
     else
     {
 LABEL_12:
-      p_method = sub_1B52CAC(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1BB60A8(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
       break;
-    v21 = Enumerator->klass;
-    v22 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v19 = Enumerator->klass;
+    v20 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
-      v23 = &v21->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v23 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
+      v21 = &v19->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v21 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
       {
-        --v22;
-        v23 += 4;
-        if ( !v22 )
+        --v20;
+        v21 += 4;
+        if ( !v20 )
           goto LABEL_19;
       }
-      v24 = (__int64)&v21->vtable[*v23].method;
+      v22 = (__int64)&v19->vtable[*v21].method;
     }
     else
     {
 LABEL_19:
-      v24 = sub_1B52CAC(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v22 = sub_1BB60A8(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
-    v25 = (_DWORD *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v24)(
+    v23 = (_DWORD *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v22)(
                       Enumerator,
-                      *(_QWORD *)(v24 + 8));
-    if ( v25 )
+                      *(_QWORD *)(v22 + 8));
+    if ( v23 )
     {
       methodPtr_low = LOBYTE(EventEntity_TypeInfo->vtable._0_Equals.methodPtr);
-      if ( *(unsigned __int8 *)(*(_QWORD *)v25 + 304LL) >= (unsigned int)methodPtr_low
-        && *(EventEntity_c **)(*(_QWORD *)(*(_QWORD *)v25 + 200LL) + 8 * methodPtr_low - 8) == EventEntity_TypeInfo )
+      if ( *(unsigned __int8 *)(*(_QWORD *)v23 + 304LL) >= (unsigned int)methodPtr_low
+        && *(EventEntity_c **)(*(_QWORD *)(*(_QWORD *)v23 + 200LL) + 8 * methodPtr_low - 8) == EventEntity_TypeInfo )
       {
-        v28 = v25[4];
-        v45 = v28;
-        if ( !v14 )
-          sub_1B00F28(v25, v26);
+        v25 = v23[4];
+        v41 = v25;
+        if ( !v13 )
+          sub_1B64324(v23);
         if ( DataMasterBase_object__object__int___TryGetEntity(
-               v14,
-               (Il2CppObject **)&v44,
-               v28,
-               (const MethodInfo_2FE6AA0 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
+               v13,
+               (Il2CppObject **)&v40,
+               v25,
+               (const MethodInfo_30D3EF8 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
         {
-          if ( !v44 )
-            sub_1B00F28(0LL, v29);
-          if ( EventDetailEntity__IsEventCircleProgress(v44, 0LL) )
+          if ( !v40 )
+            sub_1B64324(0LL);
+          if ( EventDetailEntity__IsEventCircleProgress(v40, 0LL) )
           {
-            v30 = EventInfoCircleProgressControl_TypeInfo;
+            v26 = EventInfoCircleProgressControl_TypeInfo;
             if ( !EventInfoCircleProgressControl_TypeInfo->_2.cctor_finished )
             {
               j_il2cpp_runtime_class_init_0(EventInfoCircleProgressControl_TypeInfo);
-              v30 = EventInfoCircleProgressControl_TypeInfo;
+              v26 = EventInfoCircleProgressControl_TypeInfo;
             }
-            SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE = v30->static_fields->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE;
-            v32 = System_Int32__ToString((int32_t)&v45, 0LL);
-            v33 = System_String__Concat_60325748(SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE, v32, 0LL);
-            UnityEngine_PlayerPrefs__DeleteKey(v33, 0LL);
+            SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE = v26->static_fields->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE;
+            v28 = System_Int32__ToString((int32_t)&v41, 0LL);
+            v29 = System_String__Concat_61375396(SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE, v28, 0LL);
+            UnityEngine_PlayerPrefs__DeleteKey(v29, 0LL);
             SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA = EventInfoCircleProgressControl_TypeInfo->static_fields->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA;
-            v35 = System_Int32__ToString((int32_t)&v45, 0LL);
-            v36 = System_String__Concat_60325748(SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA, v35, 0LL);
-            UnityEngine_PlayerPrefs__DeleteKey(v36, 0LL);
+            v31 = System_Int32__ToString((int32_t)&v41, 0LL);
+            v32 = System_String__Concat_61375396(SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA, v31, 0LL);
+            UnityEngine_PlayerPrefs__DeleteKey(v32, 0LL);
             SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA = EventInfoCircleProgressControl_TypeInfo->static_fields->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA;
-            v38 = System_Int32__ToString((int32_t)&v45, 0LL);
-            v39 = System_String__Concat_60325748(SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA, v38, 0LL);
-            UnityEngine_PlayerPrefs__DeleteKey(v39, 0LL);
+            v34 = System_Int32__ToString((int32_t)&v41, 0LL);
+            v35 = System_String__Concat_61375396(SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA, v34, 0LL);
+            UnityEngine_PlayerPrefs__DeleteKey(v35, 0LL);
           }
         }
       }
     }
   }
-  v40 = Enumerator->klass;
-  v41 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+  v36 = Enumerator->klass;
+  v37 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
   {
-    v42 = &v40->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v42 - 1) != System_IDisposable_TypeInfo )
+    v38 = &v36->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v38 - 1) != System_IDisposable_TypeInfo )
     {
-      --v41;
-      v42 += 4;
-      if ( !v41 )
+      --v37;
+      v38 += 4;
+      if ( !v37 )
         goto LABEL_35;
     }
-    v43 = (__int64)&v40->vtable[*v42].method;
+    v39 = (__int64)&v36->vtable[*v38].method;
   }
   else
   {
 LABEL_35:
-    v43 = sub_1B52CAC(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v39 = sub_1BB60A8(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v43)(Enumerator, *(_QWORD *)(v43 + 8));
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v39)(Enumerator, *(_QWORD *)(v39 + 8));
 }
 
 
@@ -426,40 +424,40 @@ void __fastcall EventInfoCircleProgressControl__GetEnableEventPointBuffEntity(
   __int64 v18; // x1
   EventPointBuffMaster_o *Master_object; // x0
   __int64 v20; // x1
-  EventInfoCircleProgressControl___c_c *v21; // x8
-  System_Collections_Generic_List_object__o *v22; // x21
+  __int64 v21; // x2
+  EventInfoCircleProgressControl___c_c *v22; // x8
+  System_Collections_Generic_List_object__o *v23; // x21
   System_Comparison_T__o *_9__39_0; // x22
-  Il2CppObject *v24; // x23
+  Il2CppObject *v25; // x23
   struct EventInfoCircleProgressControl___c_StaticFields *static_fields; // x0
-  int32_t v26; // w2
-  int32_t v27; // w3
-  int32_t v28; // w2
-  int32_t v29; // w3
-  _BOOL8 v30; // x0
-  __int64 v31; // x1
+  int32_t v27; // w2
+  int32_t v28; // w3
+  int32_t v29; // w2
+  int32_t v30; // w3
+  _BOOL8 v31; // x0
   Il2CppObject *current; // x21
   int32_t v33; // w2
   int32_t v34; // w3
   System_Collections_Generic_List_Enumerator_object__o v35; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_48E3302 & 1) == 0 )
+  if ( (byte_49FCF51 & 1) == 0 )
   {
-    sub_1B00CCC(&System_Comparison_EventPointBuffEntity__TypeInfo, *(_QWORD *)&eventId);
-    sub_1B00CCC(&Method_DataManager_GetMaster_EventPointBuffMaster___, v10);
-    sub_1B00CCC(&DataManager_TypeInfo, v11);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_EventPointBuffEntity__Dispose__, v12);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_EventPointBuffEntity__MoveNext__, v13);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_EventPointBuffEntity__get_Current__, v14);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_EventPointBuffEntity__GetEnumerator__, v15);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_EventPointBuffEntity__Sort__, v16);
-    sub_1B00CCC(&Method_EventInfoCircleProgressControl___c__GetEnableEventPointBuffEntity_b__39_0__, v17);
-    sub_1B00CCC(&EventInfoCircleProgressControl___c_TypeInfo, v18);
-    byte_48E3302 = 1;
+    sub_1B640C8(&System_Comparison_EventPointBuffEntity__TypeInfo, *(_QWORD *)&eventId);
+    sub_1B640C8(&Method_DataManager_GetMaster_EventPointBuffMaster___, v10);
+    sub_1B640C8(&DataManager_TypeInfo, v11);
+    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_EventPointBuffEntity__Dispose__, v12);
+    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_EventPointBuffEntity__MoveNext__, v13);
+    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_EventPointBuffEntity__get_Current__, v14);
+    sub_1B640C8(&Method_System_Collections_Generic_List_EventPointBuffEntity__GetEnumerator__, v15);
+    sub_1B640C8(&Method_System_Collections_Generic_List_EventPointBuffEntity__Sort__, v16);
+    sub_1B640C8(&Method_EventInfoCircleProgressControl___c__GetEnableEventPointBuffEntity_b__39_0__, v17);
+    sub_1B640C8(&EventInfoCircleProgressControl___c_TypeInfo, v18);
+    byte_49FCF51 = 1;
   }
   memset(&v35, 0, sizeof(v35));
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (EventPointBuffMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_EventPointBuffMaster___);
+  Master_object = (EventPointBuffMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_EventPointBuffMaster___);
   if ( !Master_object )
     goto LABEL_20;
   Master_object = (EventPointBuffMaster_o *)EventPointBuffMaster__GetEntityListWithGroupId(
@@ -467,65 +465,65 @@ void __fastcall EventInfoCircleProgressControl__GetEnableEventPointBuffEntity(
                                               eventId,
                                               groupId,
                                               0LL);
-  v21 = EventInfoCircleProgressControl___c_TypeInfo;
-  v22 = (System_Collections_Generic_List_object__o *)Master_object;
+  v22 = EventInfoCircleProgressControl___c_TypeInfo;
+  v23 = (System_Collections_Generic_List_object__o *)Master_object;
   if ( !EventInfoCircleProgressControl___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EventInfoCircleProgressControl___c_TypeInfo);
-    v21 = EventInfoCircleProgressControl___c_TypeInfo;
+    v22 = EventInfoCircleProgressControl___c_TypeInfo;
   }
-  _9__39_0 = (System_Comparison_T__o *)v21->static_fields->__9__39_0;
+  _9__39_0 = (System_Comparison_T__o *)v22->static_fields->__9__39_0;
   if ( !_9__39_0 )
   {
-    if ( !v21->_2.cctor_finished )
+    if ( !v22->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v21);
-      v21 = EventInfoCircleProgressControl___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v22);
+      v22 = EventInfoCircleProgressControl___c_TypeInfo;
     }
-    v24 = (Il2CppObject *)v21->static_fields->__9;
-    _9__39_0 = (System_Comparison_T__o *)sub_1B00F18(System_Comparison_EventPointBuffEntity__TypeInfo);
+    v25 = (Il2CppObject *)v22->static_fields->__9;
+    _9__39_0 = (System_Comparison_T__o *)sub_1B64314(System_Comparison_EventPointBuffEntity__TypeInfo, v20, v21);
     System_Comparison_object____ctor(
       _9__39_0,
-      v24,
+      v25,
       Method_EventInfoCircleProgressControl___c__GetEnableEventPointBuffEntity_b__39_0__,
       0LL);
     static_fields = EventInfoCircleProgressControl___c_TypeInfo->static_fields;
     static_fields->__9__39_0 = (struct System_Comparison_EventPointBuffEntity__o *)_9__39_0;
-    sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->__9__39_0, (int32_t)_9__39_0, v26, v27);
+    sub_1B6406C((ServantStatusBattleListViewItem_o *)&static_fields->__9__39_0, (int32_t)_9__39_0, v27, v28);
   }
-  if ( !v22 )
+  if ( !v23 )
 LABEL_20:
-    sub_1B00F28(Master_object, v20);
-  System_Collections_Generic_List_object___Sort_54277268(
-    v22,
+    sub_1B64324(Master_object);
+  System_Collections_Generic_List_object___Sort_55243320(
+    v23,
     _9__39_0,
-    (const MethodInfo_33C3494 *)Method_System_Collections_Generic_List_EventPointBuffEntity__Sort__);
+    (const MethodInfo_34AF238 *)Method_System_Collections_Generic_List_EventPointBuffEntity__Sort__);
   *nowEventPointBuff = 0LL;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)nowEventPointBuff, 0, v28, v29);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)nowEventPointBuff, 0, v29, v30);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v35,
-    v22,
-    (const MethodInfo_33C24C8 *)Method_System_Collections_Generic_List_EventPointBuffEntity__GetEnumerator__);
+    v23,
+    (const MethodInfo_34AE26C *)Method_System_Collections_Generic_List_EventPointBuffEntity__GetEnumerator__);
   while ( 1 )
   {
-    v30 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+    v31 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v35,
-            (const MethodInfo_313E218 *)Method_System_Collections_Generic_List_Enumerator_EventPointBuffEntity__MoveNext__);
-    if ( !v30 )
+            (const MethodInfo_322A0B0 *)Method_System_Collections_Generic_List_Enumerator_EventPointBuffEntity__MoveNext__);
+    if ( !v31 )
       break;
     current = v35.fields._current;
     if ( !v35.fields._current )
-      sub_1B00F28(v30, v31);
+      sub_1B64324(v31);
     if ( EventPointBuffEntity__IsEnable((EventPointBuffEntity_o *)v35.fields._current, userPoint, 0LL) )
     {
       *nowEventPointBuff = (EventPointBuffEntity_o *)current;
-      sub_1B00C70((ServantStatusBattleListViewItem_o *)nowEventPointBuff, (int32_t)current, v33, v34);
+      sub_1B6406C((ServantStatusBattleListViewItem_o *)nowEventPointBuff, (int32_t)current, v33, v34);
       break;
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v35,
-    (const MethodInfo_313E214 *)Method_System_Collections_Generic_List_Enumerator_EventPointBuffEntity__Dispose__);
+    (const MethodInfo_322A0AC *)Method_System_Collections_Generic_List_Enumerator_EventPointBuffEntity__Dispose__);
 }
 
 
@@ -533,62 +531,66 @@ EventInfoCircleProgressObjectComponent_o *__fastcall EventInfoCircleProgressCont
         EventInfoCircleProgressControl_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
   __int64 v4; // x1
   __int64 v5; // x1
+  __int64 v6; // x1
   EventInfoCircleProgressObjectComponent_o *result; // x0
   struct EventInfoCircleProgressControl_ProgressData_o *progressData; // x8
   struct EventInfoCircleProgressObjectComponent_array *circleProgressList; // x19
-  EventInfoCircleProgressControl___c_c *v9; // x0
+  EventInfoCircleProgressControl___c_c *v10; // x0
   System_Func_object__bool__o *_9__36_0; // x20
-  Il2CppObject *v11; // x21
+  Il2CppObject *v12; // x21
   struct EventInfoCircleProgressControl___c_StaticFields *static_fields; // x0
-  int32_t v13; // w2
-  int32_t v14; // w3
+  int32_t v14; // w2
+  int32_t v15; // w3
 
-  if ( (byte_48E32FF & 1) == 0 )
+  if ( (byte_49FCF4E & 1) == 0 )
   {
-    sub_1B00CCC(&Method_BasicHelper_Find_EventInfoCircleProgressObjectComponent___, method);
-    sub_1B00CCC(&System_Func_EventInfoCircleProgressObjectComponent__bool__TypeInfo, v3);
-    sub_1B00CCC(&Method_EventInfoCircleProgressControl___c__GetProgressBarAnimObject_b__36_0__, v4);
-    sub_1B00CCC(&EventInfoCircleProgressControl___c_TypeInfo, v5);
-    byte_48E32FF = 1;
+    sub_1B640C8(&Method_BasicHelper_Find_EventInfoCircleProgressObjectComponent___, method);
+    sub_1B640C8(&System_Func_EventInfoCircleProgressObjectComponent__bool__TypeInfo, v4);
+    sub_1B640C8(&Method_EventInfoCircleProgressControl___c__GetProgressBarAnimObject_b__36_0__, v5);
+    sub_1B640C8(&EventInfoCircleProgressControl___c_TypeInfo, v6);
+    byte_49FCF4E = 1;
   }
   result = this->fields.extraCircleProgres;
   if ( !result || (progressData = result->fields.progressData) == 0LL )
-    sub_1B00F28(result, method);
+    sub_1B64324(result);
   if ( progressData->fields.Point <= progressData->fields.OldPoint )
   {
     circleProgressList = this->fields.circleProgressList;
-    v9 = EventInfoCircleProgressControl___c_TypeInfo;
+    v10 = EventInfoCircleProgressControl___c_TypeInfo;
     if ( !EventInfoCircleProgressControl___c_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(EventInfoCircleProgressControl___c_TypeInfo);
-      v9 = EventInfoCircleProgressControl___c_TypeInfo;
+      v10 = EventInfoCircleProgressControl___c_TypeInfo;
     }
-    _9__36_0 = (System_Func_object__bool__o *)v9->static_fields->__9__36_0;
+    _9__36_0 = (System_Func_object__bool__o *)v10->static_fields->__9__36_0;
     if ( !_9__36_0 )
     {
-      if ( !v9->_2.cctor_finished )
+      if ( !v10->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v9);
-        v9 = EventInfoCircleProgressControl___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v10);
+        v10 = EventInfoCircleProgressControl___c_TypeInfo;
       }
-      v11 = (Il2CppObject *)v9->static_fields->__9;
-      _9__36_0 = (System_Func_object__bool__o *)sub_1B00F18(System_Func_EventInfoCircleProgressObjectComponent__bool__TypeInfo);
+      v12 = (Il2CppObject *)v10->static_fields->__9;
+      _9__36_0 = (System_Func_object__bool__o *)sub_1B64314(
+                                                  System_Func_EventInfoCircleProgressObjectComponent__bool__TypeInfo,
+                                                  method,
+                                                  v2);
       System_Func_object__bool____ctor(
         _9__36_0,
-        v11,
+        v12,
         Method_EventInfoCircleProgressControl___c__GetProgressBarAnimObject_b__36_0__,
         0LL);
       static_fields = EventInfoCircleProgressControl___c_TypeInfo->static_fields;
       static_fields->__9__36_0 = (struct System_Func_EventInfoCircleProgressObjectComponent__bool__o *)_9__36_0;
-      sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->__9__36_0, (int32_t)_9__36_0, v13, v14);
+      sub_1B6406C((ServantStatusBattleListViewItem_o *)&static_fields->__9__36_0, (int32_t)_9__36_0, v14, v15);
     }
     return (EventInfoCircleProgressObjectComponent_o *)BasicHelper__Find_object_(
                                                          (System_Object_array *)circleProgressList,
                                                          (System_Func_T__bool__o *)_9__36_0,
-                                                         (const MethodInfo_2D4F34C *)Method_BasicHelper_Find_EventInfoCircleProgressObjectComponent___);
+                                                         (const MethodInfo_2E2543C *)Method_BasicHelper_Find_EventInfoCircleProgressObjectComponent___);
   }
   return result;
 }
@@ -598,62 +600,66 @@ EventInfoCircleProgressObjectComponent_o *__fastcall EventInfoCircleProgressCont
         EventInfoCircleProgressControl_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
   __int64 v4; // x1
   __int64 v5; // x1
+  __int64 v6; // x1
   EventInfoCircleProgressObjectComponent_o *result; // x0
   struct EventInfoCircleProgressControl_ProgressData_o *progressData; // x8
   struct EventInfoCircleProgressObjectComponent_array *circleProgressList; // x19
-  EventInfoCircleProgressControl___c_c *v9; // x0
+  EventInfoCircleProgressControl___c_c *v10; // x0
   System_Func_object__bool__o *_9__37_0; // x20
-  Il2CppObject *v11; // x21
+  Il2CppObject *v12; // x21
   struct EventInfoCircleProgressControl___c_StaticFields *static_fields; // x0
-  int32_t v13; // w2
-  int32_t v14; // w3
+  int32_t v14; // w2
+  int32_t v15; // w3
 
-  if ( (byte_48E3300 & 1) == 0 )
+  if ( (byte_49FCF4F & 1) == 0 )
   {
-    sub_1B00CCC(&Method_BasicHelper_Find_EventInfoCircleProgressObjectComponent___, method);
-    sub_1B00CCC(&System_Func_EventInfoCircleProgressObjectComponent__bool__TypeInfo, v3);
-    sub_1B00CCC(&Method_EventInfoCircleProgressControl___c__GetProgressCompleteAnimObjcet_b__37_0__, v4);
-    sub_1B00CCC(&EventInfoCircleProgressControl___c_TypeInfo, v5);
-    byte_48E3300 = 1;
+    sub_1B640C8(&Method_BasicHelper_Find_EventInfoCircleProgressObjectComponent___, method);
+    sub_1B640C8(&System_Func_EventInfoCircleProgressObjectComponent__bool__TypeInfo, v4);
+    sub_1B640C8(&Method_EventInfoCircleProgressControl___c__GetProgressCompleteAnimObjcet_b__37_0__, v5);
+    sub_1B640C8(&EventInfoCircleProgressControl___c_TypeInfo, v6);
+    byte_49FCF4F = 1;
   }
   result = this->fields.extraCircleProgres;
   if ( !result || (progressData = result->fields.progressData) == 0LL )
-    sub_1B00F28(result, method);
+    sub_1B64324(result);
   if ( progressData->fields.IsOldCompleted || !progressData->fields.IsCompleted )
   {
     circleProgressList = this->fields.circleProgressList;
-    v9 = EventInfoCircleProgressControl___c_TypeInfo;
+    v10 = EventInfoCircleProgressControl___c_TypeInfo;
     if ( !EventInfoCircleProgressControl___c_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(EventInfoCircleProgressControl___c_TypeInfo);
-      v9 = EventInfoCircleProgressControl___c_TypeInfo;
+      v10 = EventInfoCircleProgressControl___c_TypeInfo;
     }
-    _9__37_0 = (System_Func_object__bool__o *)v9->static_fields->__9__37_0;
+    _9__37_0 = (System_Func_object__bool__o *)v10->static_fields->__9__37_0;
     if ( !_9__37_0 )
     {
-      if ( !v9->_2.cctor_finished )
+      if ( !v10->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v9);
-        v9 = EventInfoCircleProgressControl___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v10);
+        v10 = EventInfoCircleProgressControl___c_TypeInfo;
       }
-      v11 = (Il2CppObject *)v9->static_fields->__9;
-      _9__37_0 = (System_Func_object__bool__o *)sub_1B00F18(System_Func_EventInfoCircleProgressObjectComponent__bool__TypeInfo);
+      v12 = (Il2CppObject *)v10->static_fields->__9;
+      _9__37_0 = (System_Func_object__bool__o *)sub_1B64314(
+                                                  System_Func_EventInfoCircleProgressObjectComponent__bool__TypeInfo,
+                                                  method,
+                                                  v2);
       System_Func_object__bool____ctor(
         _9__37_0,
-        v11,
+        v12,
         Method_EventInfoCircleProgressControl___c__GetProgressCompleteAnimObjcet_b__37_0__,
         0LL);
       static_fields = EventInfoCircleProgressControl___c_TypeInfo->static_fields;
       static_fields->__9__37_0 = (struct System_Func_EventInfoCircleProgressObjectComponent__bool__o *)_9__37_0;
-      sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->__9__37_0, (int32_t)_9__37_0, v13, v14);
+      sub_1B6406C((ServantStatusBattleListViewItem_o *)&static_fields->__9__37_0, (int32_t)_9__37_0, v14, v15);
     }
     return (EventInfoCircleProgressObjectComponent_o *)BasicHelper__Find_object_(
                                                          (System_Object_array *)circleProgressList,
                                                          (System_Func_T__bool__o *)_9__37_0,
-                                                         (const MethodInfo_2D4F34C *)Method_BasicHelper_Find_EventInfoCircleProgressObjectComponent___);
+                                                         (const MethodInfo_2E2543C *)Method_BasicHelper_Find_EventInfoCircleProgressObjectComponent___);
   }
   return result;
 }
@@ -672,41 +678,45 @@ EventInfoCircleProgressControl_ProgressData_o *__fastcall EventInfoCircleProgres
   __int64 v9; // x21
   __int64 v10; // x0
   __int64 v11; // x1
+  __int64 v12; // x2
   struct System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__o *progressDataList; // x19
-  System_Predicate_object__o *v13; // x20
+  System_Predicate_object__o *v14; // x20
 
-  if ( (byte_48E330C & 1) == 0 )
+  if ( (byte_49FCF5B & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Linq_Enumerable_Any_EventInfoCircleProgressControl_ProgressData___, *(_QWORD *)&id);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__Find__, v5);
-    sub_1B00CCC(&System_Predicate_EventInfoCircleProgressControl_ProgressData__TypeInfo, v6);
-    sub_1B00CCC(&Method_EventInfoCircleProgressControl___c__DisplayClass51_0__GetProgressData_b__0__, v7);
-    sub_1B00CCC(&EventInfoCircleProgressControl___c__DisplayClass51_0_TypeInfo, v8);
-    byte_48E330C = 1;
+    sub_1B640C8(&Method_System_Linq_Enumerable_Any_EventInfoCircleProgressControl_ProgressData___, *(_QWORD *)&id);
+    sub_1B640C8(&Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__Find__, v5);
+    sub_1B640C8(&System_Predicate_EventInfoCircleProgressControl_ProgressData__TypeInfo, v6);
+    sub_1B640C8(&Method_EventInfoCircleProgressControl___c__DisplayClass51_0__GetProgressData_b__0__, v7);
+    sub_1B640C8(&EventInfoCircleProgressControl___c__DisplayClass51_0_TypeInfo, v8);
+    byte_49FCF5B = 1;
   }
-  v9 = sub_1B00F18(EventInfoCircleProgressControl___c__DisplayClass51_0_TypeInfo);
+  v9 = sub_1B64314(EventInfoCircleProgressControl___c__DisplayClass51_0_TypeInfo, *(_QWORD *)&id, method);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   if ( !v9 )
     goto LABEL_8;
   *(_DWORD *)(v9 + 16) = id;
   if ( System_Linq_Enumerable__Any_object_(
          (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.progressDataList,
-         (const MethodInfo_2D6DE20 *)Method_System_Linq_Enumerable_Any_EventInfoCircleProgressControl_ProgressData___) )
+         (const MethodInfo_2E46A94 *)Method_System_Linq_Enumerable_Any_EventInfoCircleProgressControl_ProgressData___) )
   {
     progressDataList = this->fields.progressDataList;
-    v13 = (System_Predicate_object__o *)sub_1B00F18(System_Predicate_EventInfoCircleProgressControl_ProgressData__TypeInfo);
+    v14 = (System_Predicate_object__o *)sub_1B64314(
+                                          System_Predicate_EventInfoCircleProgressControl_ProgressData__TypeInfo,
+                                          v11,
+                                          v12);
     System_Predicate_object____ctor(
-      v13,
+      v14,
       (Il2CppObject *)v9,
       Method_EventInfoCircleProgressControl___c__DisplayClass51_0__GetProgressData_b__0__,
       0LL);
     if ( progressDataList )
       return (EventInfoCircleProgressControl_ProgressData_o *)System_Collections_Generic_List_object___Find(
                                                                 (System_Collections_Generic_List_object__o *)progressDataList,
-                                                                (System_Predicate_T__o *)v13,
-                                                                (const MethodInfo_33C2038 *)Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__Find__);
+                                                                (System_Predicate_T__o *)v14,
+                                                                (const MethodInfo_34ADD3C *)Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__Find__);
 LABEL_8:
-    sub_1B00F28(v10, v11);
+    sub_1B64324(v10);
   }
   return 0LL;
 }
@@ -731,10 +741,10 @@ int64_t __fastcall EventInfoCircleProgressControl__GetUserEventPoint(
   UserEventPointMaster_o *userEventPointMaster; // x21
   int64_t UserId; // x1
 
-  if ( (byte_48E3303 & 1) == 0 )
+  if ( (byte_49FCF52 & 1) == 0 )
   {
-    sub_1B00CCC(&NetworkManager_TypeInfo, *(_QWORD *)&eventId);
-    byte_48E3303 = 1;
+    sub_1B640C8(&NetworkManager_TypeInfo, *(_QWORD *)&eventId);
+    byte_49FCF52 = 1;
   }
   userEventPointMaster = this->fields.userEventPointMaster;
   if ( !userEventPointMaster )
@@ -752,68 +762,69 @@ bool __fastcall EventInfoCircleProgressControl__HasSaveData(
 {
   EventInfoCircleProgressControl_o *v2; // x19
   struct EventUiEntity_o *eventUiEntity; // x8
-  EventInfoCircleProgressControl_c *v4; // x0
+  int32_t eventId; // w1
+  EventInfoCircleProgressControl_c *v5; // x0
   System_String_o *SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE; // x19
-  System_String_o *v6; // x0
   System_String_o *v7; // x0
-  EventInfoCircleProgressControl_c *v8; // x0
+  System_String_o *v8; // x0
+  EventInfoCircleProgressControl_c *v9; // x0
   System_String_o *SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA; // x19
-  System_String_o *v10; // x0
   System_String_o *v11; // x0
-  EventInfoCircleProgressControl_c *v12; // x0
+  System_String_o *v12; // x0
+  EventInfoCircleProgressControl_c *v13; // x0
   System_String_o *SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA; // x19
-  System_String_o *v14; // x0
   System_String_o *v15; // x0
-  int32_t eventId; // [xsp+Ch] [xbp-14h] BYREF
+  System_String_o *v16; // x0
+  int32_t v19; // [xsp+Ch] [xbp-14h] BYREF
 
   v2 = this;
-  if ( (byte_48E3308 & 1) == 0 )
+  if ( (byte_49FCF57 & 1) == 0 )
   {
-    this = (EventInfoCircleProgressControl_o *)sub_1B00CCC(&EventInfoCircleProgressControl_TypeInfo, method);
-    byte_48E3308 = 1;
+    this = (EventInfoCircleProgressControl_o *)sub_1B640C8(&EventInfoCircleProgressControl_TypeInfo, method);
+    byte_49FCF57 = 1;
   }
   eventUiEntity = v2->fields.eventUiEntity;
   if ( !eventUiEntity
-    || (method = (const MethodInfo *)(unsigned int)eventUiEntity->fields.eventId,
-        eventId = eventUiEntity->fields.eventId,
+    || (eventId = eventUiEntity->fields.eventId,
+        v19 = eventId,
         (this = (EventInfoCircleProgressControl_o *)v2->fields.uiVoicePlayer) == 0LL) )
   {
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   }
-  if ( !EventInfoUIVoicePlayer__HasSaveData((EventInfoUIVoicePlayer_o *)this, (int32_t)method, 0LL) )
+  if ( !EventInfoUIVoicePlayer__HasSaveData((EventInfoUIVoicePlayer_o *)this, eventId, 0LL) )
     return 0;
-  v4 = EventInfoCircleProgressControl_TypeInfo;
+  v5 = EventInfoCircleProgressControl_TypeInfo;
   if ( !EventInfoCircleProgressControl_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EventInfoCircleProgressControl_TypeInfo);
-    v4 = EventInfoCircleProgressControl_TypeInfo;
+    v5 = EventInfoCircleProgressControl_TypeInfo;
   }
-  SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE = v4->static_fields->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE;
-  v6 = System_Int32__ToString((int32_t)&eventId, 0LL);
-  v7 = System_String__Concat_60325748(SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE, v6, 0LL);
-  if ( !UnityEngine_PlayerPrefs__HasKey(v7, 0LL) )
+  SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE = v5->static_fields->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE;
+  v7 = System_Int32__ToString((int32_t)&v19, 0LL);
+  v8 = System_String__Concat_61375396(SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE, v7, 0LL);
+  if ( !UnityEngine_PlayerPrefs__HasKey(v8, 0LL) )
     return 0;
-  v8 = EventInfoCircleProgressControl_TypeInfo;
+  v9 = EventInfoCircleProgressControl_TypeInfo;
   if ( !EventInfoCircleProgressControl_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EventInfoCircleProgressControl_TypeInfo);
-    v8 = EventInfoCircleProgressControl_TypeInfo;
+    v9 = EventInfoCircleProgressControl_TypeInfo;
   }
-  SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA = v8->static_fields->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA;
-  v10 = System_Int32__ToString((int32_t)&eventId, 0LL);
-  v11 = System_String__Concat_60325748(SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA, v10, 0LL);
-  if ( UnityEngine_PlayerPrefs__HasKey(v11, 0LL) )
+  SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA = v9->static_fields->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA;
+  v11 = System_Int32__ToString((int32_t)&v19, 0LL);
+  v12 = System_String__Concat_61375396(SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA, v11, 0LL);
+  if ( UnityEngine_PlayerPrefs__HasKey(v12, 0LL) )
   {
-    v12 = EventInfoCircleProgressControl_TypeInfo;
+    v13 = EventInfoCircleProgressControl_TypeInfo;
     if ( !EventInfoCircleProgressControl_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(EventInfoCircleProgressControl_TypeInfo);
-      v12 = EventInfoCircleProgressControl_TypeInfo;
+      v13 = EventInfoCircleProgressControl_TypeInfo;
     }
-    SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA = v12->static_fields->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA;
-    v14 = System_Int32__ToString((int32_t)&eventId, 0LL);
-    v15 = System_String__Concat_60325748(SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA, v14, 0LL);
-    return UnityEngine_PlayerPrefs__HasKey(v15, 0LL);
+    SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA = v13->static_fields->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA;
+    v15 = System_Int32__ToString((int32_t)&v19, 0LL);
+    v16 = System_String__Concat_61375396(SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA, v15, 0LL);
+    return UnityEngine_PlayerPrefs__HasKey(v16, 0LL);
   }
   else
   {
@@ -830,29 +841,34 @@ void __fastcall EventInfoCircleProgressControl__Initialization(
   int32_t v3; // w3
   __int64 v6; // x1
   EventUiEntity_o *eventUiEntity; // x20
-  System_Action_o *v8; // x22
+  __int64 v8; // x1
+  __int64 v9; // x2
+  System_Action_o *v10; // x22
   EventInfoUIVoicePlayer_o *uiVoicePlayer; // x0
-  __int64 v10; // x1
-  struct EventUiEntity_o *v11; // x8
+  struct EventUiEntity_o *v12; // x8
 
-  if ( (byte_48E32FC & 1) == 0 )
+  if ( (byte_49FCF4B & 1) == 0 )
   {
-    sub_1B00CCC(&System_Action_TypeInfo, entity);
-    sub_1B00CCC(&Method_EventInfoCircleProgressControl__Initialization_b__30_0__, v6);
-    byte_48E32FC = 1;
+    sub_1B640C8(&System_Action_TypeInfo, entity);
+    sub_1B640C8(&Method_EventInfoCircleProgressControl__Initialization_b__30_0__, v6);
+    byte_49FCF4B = 1;
   }
   if ( entity )
   {
     this->fields.eventUiEntity = entity;
-    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.eventUiEntity, (int32_t)entity, (int32_t)method, v3);
+    sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.eventUiEntity, (int32_t)entity, (int32_t)method, v3);
     eventUiEntity = this->fields.eventUiEntity;
-    v8 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
-    System_Action___ctor(v8, (Il2CppObject *)this, Method_EventInfoCircleProgressControl__Initialization_b__30_0__, 0LL);
-    EventInfoUIBase__LoadEventUIAssetData((EventInfoUIBase_o *)this, eventUiEntity, v8, 0LL);
-    v11 = this->fields.eventUiEntity;
-    if ( !v11 || (uiVoicePlayer = this->fields.uiVoicePlayer) == 0LL )
-      sub_1B00F28(uiVoicePlayer, v10);
-    EventInfoUIVoicePlayer__LoadHistory(uiVoicePlayer, v11->fields.eventId, 0LL);
+    v10 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v8, v9);
+    System_Action___ctor(
+      v10,
+      (Il2CppObject *)this,
+      Method_EventInfoCircleProgressControl__Initialization_b__30_0__,
+      0LL);
+    EventInfoUIBase__LoadEventUIAssetData((EventInfoUIBase_o *)this, eventUiEntity, v10, 0LL);
+    v12 = this->fields.eventUiEntity;
+    if ( !v12 || (uiVoicePlayer = this->fields.uiVoicePlayer) == 0LL )
+      sub_1B64324(uiVoicePlayer);
+    EventInfoUIVoicePlayer__LoadHistory(uiVoicePlayer, v12->fields.eventId, 0LL);
   }
 }
 
@@ -866,22 +882,21 @@ void __fastcall EventInfoCircleProgressControl__InsertMuralButton(
   __int64 v6; // x1
   __int64 v7; // x1
   UnityEngine_Object_o *muralButtonObject; // x21
-  __int64 v9; // x1
   UnityEngine_GameObject_o *muralButton; // x0
   struct EventUiEntity_o *eventUiEntity; // x8
   Il2CppObject *Component_object; // x21
-  Il2CppObject *v13; // x22
-  int32_t v14; // w2
-  int32_t v15; // w3
-  System_Collections_IEnumerator_o *v16; // x0
+  Il2CppObject *v12; // x22
+  int32_t v13; // w2
+  int32_t v14; // w3
+  System_Collections_IEnumerator_o *v15; // x0
 
-  if ( (byte_48E3311 & 1) == 0 )
+  if ( (byte_49FCF60 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_Animation___, endAction);
-    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, v5);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v6);
-    sub_1B00CCC(&StringLiteral_9072/*"MuralButton_in"*/, v7);
-    byte_48E3311 = 1;
+    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponent_Animation___, endAction);
+    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, v5);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v6);
+    sub_1B640C8(&StringLiteral_9133/*"MuralButton_in"*/, v7);
+    byte_49FCF60 = 1;
   }
   muralButtonObject = (UnityEngine_Object_o *)this->fields.muralButtonObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -918,7 +933,7 @@ void __fastcall EventInfoCircleProgressControl__InsertMuralButton(
     goto LABEL_25;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        muralButton,
-                       (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+                       (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
@@ -930,33 +945,33 @@ LABEL_15:
   muralButton = this->fields.muralButtonObject;
   if ( !muralButton )
     goto LABEL_25;
-  v13 = UnityEngine_GameObject__GetComponent_object_(
+  v12 = UnityEngine_GameObject__GetComponent_object_(
           muralButton,
-          (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+          (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  muralButton = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v13, 0LL, 0LL);
+  muralButton = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v12, 0LL, 0LL);
   if ( ((unsigned __int8)muralButton & 1) != 0 )
   {
-    v16 = BasicHelper__DelayCall(1.133, endAction, 0LL);
-    muralButton = (UnityEngine_GameObject_o *)UnityEngine_MonoBehaviour__StartCoroutine_68062928(
+    v15 = BasicHelper__DelayCall(1.133, endAction, 0LL);
+    muralButton = (UnityEngine_GameObject_o *)UnityEngine_MonoBehaviour__StartCoroutine_69113008(
                                                 (UnityEngine_MonoBehaviour_o *)this,
-                                                v16,
+                                                v15,
                                                 0LL);
   }
   else
   {
-    if ( !v13 )
+    if ( !v12 )
       goto LABEL_25;
-    v13[2].monitor = endAction;
-    sub_1B00C70((ServantStatusBattleListViewItem_o *)&v13[2].monitor, (int32_t)endAction, v14, v15);
+    v12[2].monitor = endAction;
+    sub_1B6406C((ServantStatusBattleListViewItem_o *)&v12[2].monitor, (int32_t)endAction, v13, v14);
   }
   if ( !Component_object )
 LABEL_25:
-    sub_1B00F28(muralButton, v9);
-  UnityEngine_Animation__Play_67822748(
+    sub_1B64324(muralButton);
+  UnityEngine_Animation__Play_68872828(
     (UnityEngine_Animation_o *)Component_object,
-    (System_String_o *)StringLiteral_9072/*"MuralButton_in"*/,
+    (System_String_o *)StringLiteral_9133/*"MuralButton_in"*/,
     0LL);
 }
 
@@ -972,14 +987,14 @@ bool __fastcall EventInfoCircleProgressControl__IsBackDrawState(
   int64_t CondValue; // x20
 
   v2 = this;
-  if ( (byte_48E330F & 1) == 0 )
+  if ( (byte_49FCF5E & 1) == 0 )
   {
-    this = (EventInfoCircleProgressControl_o *)sub_1B00CCC(&CondType_TypeInfo, method);
-    byte_48E330F = 1;
+    this = (EventInfoCircleProgressControl_o *)sub_1B640C8(&CondType_TypeInfo, method);
+    byte_49FCF5E = 1;
   }
   titleReverseCondition = v2->fields.titleReverseCondition;
   if ( !titleReverseCondition )
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   CondKind = titleReverseCondition->fields.CondKind;
   CondId = titleReverseCondition->fields.CondId;
   CondValue = titleReverseCondition->fields.CondValue;
@@ -1000,14 +1015,14 @@ bool __fastcall EventInfoCircleProgressControl__IsExtraCircleDisp(
   int64_t CondValue; // x20
 
   v2 = this;
-  if ( (byte_48E3310 & 1) == 0 )
+  if ( (byte_49FCF5F & 1) == 0 )
   {
-    this = (EventInfoCircleProgressControl_o *)sub_1B00CCC(&CondType_TypeInfo, method);
-    byte_48E3310 = 1;
+    this = (EventInfoCircleProgressControl_o *)sub_1B640C8(&CondType_TypeInfo, method);
+    byte_49FCF5F = 1;
   }
   extraCircleOpenCondition = v2->fields.extraCircleOpenCondition;
   if ( !extraCircleOpenCondition )
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   CondKind = extraCircleOpenCondition->fields.CondKind;
   CondId = extraCircleOpenCondition->fields.CondId;
   CondValue = extraCircleOpenCondition->fields.CondValue;
@@ -1028,10 +1043,10 @@ bool __fastcall EventInfoCircleProgressControl__IsPlayAnim(
   UnityEngine_Object_o *ProgressCompleteAnimObjcet; // x20
   const MethodInfo *v8; // x1
 
-  if ( (byte_48E32FD & 1) == 0 )
+  if ( (byte_49FCF4C & 1) == 0 )
   {
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&type);
-    byte_48E32FD = 1;
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, *(_QWORD *)&type);
+    byte_49FCF4C = 1;
   }
   if ( type != 1 )
     return 0;
@@ -1075,62 +1090,65 @@ void __fastcall EventInfoCircleProgressControl__LoadProgressData(
   System_String_o *v16; // x0
   System_String_o *v17; // x0
   System_String_o *String; // x20
-  const MethodInfo *v19; // x3
+  const MethodInfo *v19; // x1
+  const MethodInfo *v20; // x3
   struct EventInfoCircleProgressObjectComponent_array *circleProgressList; // x19
   int max_length; // w8
-  unsigned int v22; // w25
-  EventInfoCircleProgressObjectComponent_o *v23; // x22
+  unsigned int v23; // w25
+  EventInfoCircleProgressObjectComponent_o *v24; // x22
   int32_t circleId; // w20
   EventInfoCircleProgressControl_o *UserEventPoint; // x21
-  const MethodInfo *v26; // x5
-  const MethodInfo *v27; // x1
+  const MethodInfo *v27; // x5
+  const MethodInfo *v28; // x1
   int32_t lv; // w23
   _BOOL4 IsBackDrawState; // w24
-  const MethodInfo *v30; // x2
+  const MethodInfo *v31; // x2
   bool IsCompletedState; // w0
+  __int64 v33; // x2
   int m_CancellationTokenSource; // w8
-  int v33; // w20
-  System_String_o *v34; // x22
-  __int64 v35; // x21
-  const MethodInfo *v36; // x3
-  int v37; // w19
-  EventInfoCircleProgressControl_o *v38; // x22
-  int32_t v39; // w2
-  const MethodInfo *v40; // x5
-  EventInfoCircleProgressControl_o *v41; // x23
-  EventInfoCircleProgressControl_o *v42; // x29
-  int32_t v43; // w26
-  int32_t v44; // w25
-  System_Object_array *v45; // x27
-  System_Func_object__bool__o *v46; // x28
+  int v35; // w20
+  System_String_o *v36; // x22
+  __int64 v37; // x21
+  const MethodInfo *v38; // x3
+  int v39; // w19
+  EventInfoCircleProgressControl_o *v40; // x22
+  int32_t v41; // w2
+  const MethodInfo *v42; // x5
+  EventInfoCircleProgressControl_o *v43; // x23
+  EventInfoCircleProgressControl_o *v44; // x29
+  __int64 v45; // x2
+  int32_t v46; // w26
+  int32_t v47; // w25
+  System_Object_array *v48; // x27
+  System_Func_object__bool__o *v49; // x28
   Il2CppObject *object; // x28
-  const MethodInfo *v48; // x2
-  int v49; // w27
-  int32_t v50; // w24
-  char v51; // w28
-  bool v52; // w8
+  const MethodInfo *v51; // x2
+  int v52; // w27
+  int32_t v53; // w24
+  char v54; // w28
+  bool v55; // w8
   bool isCompleted; // w8
   bool isOldCompleted; // [xsp+8h] [xbp-A8h]
-  const MethodInfo *v55; // [xsp+18h] [xbp-98h]
-  EventInfoCircleProgressControl_o *v56; // [xsp+28h] [xbp-88h]
-  EventInfoCircleProgressControl_o *v57; // [xsp+30h] [xbp-80h]
+  const MethodInfo *v58; // [xsp+18h] [xbp-98h]
+  EventInfoCircleProgressControl_o *v59; // [xsp+28h] [xbp-88h]
+  EventInfoCircleProgressControl_o *v60; // [xsp+30h] [xbp-80h]
   EventPointBuffEntity_o *ent; // [xsp+38h] [xbp-78h] BYREF
   EventPointBuffEntity_o *nowEventPointBuff; // [xsp+40h] [xbp-70h] BYREF
   int32_t eventIda; // [xsp+4Ch] [xbp-64h] BYREF
 
   v3 = this;
   eventIda = eventId;
-  if ( (byte_48E3305 & 1) == 0 )
+  if ( (byte_49FCF54 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_BasicHelper_Find_EventInfoCircleProgressObjectComponent___, *(_QWORD *)&eventId);
-    sub_1B00CCC(&EventInfoCircleProgressControl_TypeInfo, v4);
-    sub_1B00CCC(&System_Func_EventInfoCircleProgressObjectComponent__bool__TypeInfo, v5);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__Clear__, v6);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v7);
-    sub_1B00CCC(&Method_EventInfoCircleProgressControl___c__DisplayClass43_0__LoadProgressData_b__0__, v8);
-    sub_1B00CCC(&EventInfoCircleProgressControl___c__DisplayClass43_0_TypeInfo, v9);
-    this = (EventInfoCircleProgressControl_o *)sub_1B00CCC(&StringLiteral_1/*""*/, v10);
-    byte_48E3305 = 1;
+    sub_1B640C8(&Method_BasicHelper_Find_EventInfoCircleProgressObjectComponent___, *(_QWORD *)&eventId);
+    sub_1B640C8(&EventInfoCircleProgressControl_TypeInfo, v4);
+    sub_1B640C8(&System_Func_EventInfoCircleProgressObjectComponent__bool__TypeInfo, v5);
+    sub_1B640C8(&Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__Clear__, v6);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v7);
+    sub_1B640C8(&Method_EventInfoCircleProgressControl___c__DisplayClass43_0__LoadProgressData_b__0__, v8);
+    sub_1B640C8(&EventInfoCircleProgressControl___c__DisplayClass43_0_TypeInfo, v9);
+    this = (EventInfoCircleProgressControl_o *)sub_1B640C8(&StringLiteral_1/*""*/, v10);
+    byte_49FCF54 = 1;
   }
   ent = 0LL;
   nowEventPointBuff = 0LL;
@@ -1151,7 +1169,7 @@ void __fastcall EventInfoCircleProgressControl__LoadProgressData(
   }
   SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA = v14->static_fields->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA;
   v16 = System_Int32__ToString((int32_t)&eventIda, 0LL);
-  v17 = System_String__Concat_60325748(SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA, v16, 0LL);
+  v17 = System_String__Concat_61375396(SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA, v16, 0LL);
   String = UnityEngine_PlayerPrefs__GetString(v17, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this = (EventInfoCircleProgressControl_o *)System_String__IsNullOrEmpty(String, 0LL);
   if ( ((unsigned __int8)this & 1) != 0 )
@@ -1162,31 +1180,31 @@ void __fastcall EventInfoCircleProgressControl__LoadProgressData(
       max_length = circleProgressList->max_length;
       if ( max_length >= 1 )
       {
-        v22 = 0;
-        while ( v22 < max_length )
+        v23 = 0;
+        while ( v23 < max_length )
         {
-          v23 = circleProgressList->m_Items[v22];
-          if ( !v23 )
+          v24 = circleProgressList->m_Items[v23];
+          if ( !v24 )
             goto LABEL_58;
-          circleId = v23->fields.circleId;
+          circleId = v24->fields.circleId;
           UserEventPoint = (EventInfoCircleProgressControl_o *)EventInfoCircleProgressControl__GetUserEventPoint(
                                                                  v3,
                                                                  eventIda,
                                                                  circleId,
-                                                                 v19);
+                                                                 v20);
           EventInfoCircleProgressControl__GetEnableEventPointBuffEntity(
             UserEventPoint,
             eventIda,
             circleId,
             (int64_t)UserEventPoint,
             &nowEventPointBuff,
-            v26);
+            v27);
           if ( nowEventPointBuff )
             lv = nowEventPointBuff->fields.lv;
           else
             lv = 1;
-          IsBackDrawState = EventInfoCircleProgressObjectComponent__IsBackDrawState(v23, v27);
-          IsCompletedState = EventInfoCircleProgressObjectComponent__IsCompletedState(v23, IsBackDrawState, v30);
+          IsBackDrawState = EventInfoCircleProgressObjectComponent__IsBackDrawState(v24, v28);
+          IsCompletedState = EventInfoCircleProgressObjectComponent__IsCompletedState(v24, IsBackDrawState, v31);
           EventInfoCircleProgressControl__AddProgressData(
             v3,
             circleId,
@@ -1199,9 +1217,9 @@ void __fastcall EventInfoCircleProgressControl__LoadProgressData(
             IsCompletedState,
             IsCompletedState,
             nowEventPointBuff,
-            v55);
+            v58);
           max_length = circleProgressList->max_length;
-          if ( (int)++v22 >= max_length )
+          if ( (int)++v23 >= max_length )
             return;
         }
         goto LABEL_59;
@@ -1209,7 +1227,7 @@ void __fastcall EventInfoCircleProgressControl__LoadProgressData(
       return;
     }
 LABEL_58:
-    sub_1B00F28(this, *(_QWORD *)&eventId);
+    sub_1B64324(this);
   }
   if ( !String )
     goto LABEL_58;
@@ -1219,81 +1237,84 @@ LABEL_58:
   m_CancellationTokenSource = (int)this->fields.m_CancellationTokenSource;
   if ( m_CancellationTokenSource >= 1 )
   {
-    v33 = 0;
-    v56 = v3;
-    v57 = this;
-    while ( v33 < (unsigned int)m_CancellationTokenSource )
+    v35 = 0;
+    v59 = v3;
+    v60 = this;
+    while ( v35 < (unsigned int)m_CancellationTokenSource )
     {
-      v34 = (System_String_o *)*((_QWORD *)&this->fields.datas + v33);
-      v35 = sub_1B00F18(EventInfoCircleProgressControl___c__DisplayClass43_0_TypeInfo);
-      System_Object___ctor((Il2CppObject *)v35, 0LL);
-      if ( !v34 )
+      v36 = (System_String_o *)*((_QWORD *)&this->fields.datas + v35);
+      v37 = sub_1B64314(EventInfoCircleProgressControl___c__DisplayClass43_0_TypeInfo, v19, v33);
+      System_Object___ctor((Il2CppObject *)v37, 0LL);
+      if ( !v36 )
         goto LABEL_58;
-      this = (EventInfoCircleProgressControl_o *)System_String__Split(v34, 0x3Au, 0, 0LL);
+      this = (EventInfoCircleProgressControl_o *)System_String__Split(v36, 0x3Au, 0, 0LL);
       if ( !this )
         goto LABEL_58;
-      v37 = (int)this->fields.m_CancellationTokenSource;
-      v38 = this;
-      if ( v37 < 1 )
+      v39 = (int)this->fields.m_CancellationTokenSource;
+      v40 = this;
+      if ( v39 < 1 )
       {
-        v39 = 0;
-        if ( !v35 )
+        v41 = 0;
+        if ( !v37 )
           goto LABEL_58;
       }
       else
       {
         this = (EventInfoCircleProgressControl_o *)System_Int32__Parse((System_String_o *)this->fields.datas, 0LL);
-        v39 = (int)this;
-        if ( !v35 )
+        v41 = (int)this;
+        if ( !v37 )
           goto LABEL_58;
       }
-      *(_DWORD *)(v35 + 16) = v39;
+      *(_DWORD *)(v37 + 16) = v41;
       this = (EventInfoCircleProgressControl_o *)EventInfoCircleProgressControl__GetUserEventPoint(
                                                    v3,
                                                    eventIda,
-                                                   v39,
-                                                   v36);
-      v41 = this;
-      if ( v37 < 2 )
+                                                   v41,
+                                                   v38);
+      v43 = this;
+      if ( v39 < 2 )
       {
-        v42 = 0LL;
+        v44 = 0LL;
       }
       else
       {
-        if ( LODWORD(v38->fields.m_CancellationTokenSource) <= 1 )
+        if ( LODWORD(v40->fields.m_CancellationTokenSource) <= 1 )
           break;
-        this = (EventInfoCircleProgressControl_o *)System_Int64__Parse(*(System_String_o **)&v38->fields.playType, 0LL);
-        v42 = this;
+        this = (EventInfoCircleProgressControl_o *)System_Int64__Parse(*(System_String_o **)&v40->fields.playType, 0LL);
+        v44 = this;
       }
       EventInfoCircleProgressControl__GetEnableEventPointBuffEntity(
         this,
         eventIda,
-        *(_DWORD *)(v35 + 16),
-        (int64_t)v41,
+        *(_DWORD *)(v37 + 16),
+        (int64_t)v43,
         &ent,
-        v40);
-      v43 = ent ? ent->fields.lv : 1;
-      if ( v37 < 3 )
+        v42);
+      v46 = ent ? ent->fields.lv : 1;
+      if ( v39 < 3 )
       {
-        v44 = 0;
+        v47 = 0;
       }
       else
       {
-        if ( LODWORD(v38->fields.m_CancellationTokenSource) <= 2 )
+        if ( LODWORD(v40->fields.m_CancellationTokenSource) <= 2 )
           break;
-        v44 = System_Int32__Parse((System_String_o *)v38->fields.assetData, 0LL);
+        v47 = System_Int32__Parse((System_String_o *)v40->fields.assetData, 0LL);
       }
-      v45 = (System_Object_array *)v3->fields.circleProgressList;
-      v46 = (System_Func_object__bool__o *)sub_1B00F18(System_Func_EventInfoCircleProgressObjectComponent__bool__TypeInfo);
+      v48 = (System_Object_array *)v3->fields.circleProgressList;
+      v49 = (System_Func_object__bool__o *)sub_1B64314(
+                                             System_Func_EventInfoCircleProgressObjectComponent__bool__TypeInfo,
+                                             v19,
+                                             v45);
       System_Func_object__bool____ctor(
-        v46,
-        (Il2CppObject *)v35,
+        v49,
+        (Il2CppObject *)v37,
         Method_EventInfoCircleProgressControl___c__DisplayClass43_0__LoadProgressData_b__0__,
         0LL);
       object = BasicHelper__Find_object_(
-                 v45,
-                 (System_Func_T__bool__o *)v46,
-                 (const MethodInfo_2D4F34C *)Method_BasicHelper_Find_EventInfoCircleProgressObjectComponent___);
+                 v48,
+                 (System_Func_T__bool__o *)v49,
+                 (const MethodInfo_2E2543C *)Method_BasicHelper_Find_EventInfoCircleProgressObjectComponent___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       this = (EventInfoCircleProgressControl_o *)UnityEngine_Object__op_Inequality(
@@ -1306,65 +1327,65 @@ LABEL_58:
           goto LABEL_58;
         this = (EventInfoCircleProgressControl_o *)EventInfoCircleProgressObjectComponent__IsBackDrawState(
                                                      (EventInfoCircleProgressObjectComponent_o *)object,
-                                                     *(const MethodInfo **)&eventId);
-        v49 = (unsigned __int8)this & 1;
-      }
-      else
-      {
-        v49 = 0;
-      }
-      if ( v37 < 4 )
-      {
-        v50 = 0;
-      }
-      else
-      {
-        if ( LODWORD(v38->fields.m_CancellationTokenSource) <= 3 )
-          break;
-        this = (EventInfoCircleProgressControl_o *)System_Int32__Parse((System_String_o *)v38->fields.assetData2, 0LL);
-        v50 = (int)this;
-      }
-      if ( !object )
-        goto LABEL_58;
-      this = (EventInfoCircleProgressControl_o *)EventInfoCircleProgressObjectComponent__IsCompletedState(
-                                                   (EventInfoCircleProgressObjectComponent_o *)object,
-                                                   v49,
-                                                   v48);
-      v51 = (char)this;
-      if ( v37 >= 5 )
-      {
-        if ( LODWORD(v38->fields.m_CancellationTokenSource) <= 4 )
-          break;
-        v52 = System_Int32__Parse((System_String_o *)v38->fields.assetDataList, 0LL) == 1;
+                                                     v19);
+        v52 = (unsigned __int8)this & 1;
       }
       else
       {
         v52 = 0;
       }
-      isOldCompleted = v52;
-      isCompleted = v51 & 1;
-      v3 = v56;
+      if ( v39 < 4 )
+      {
+        v53 = 0;
+      }
+      else
+      {
+        if ( LODWORD(v40->fields.m_CancellationTokenSource) <= 3 )
+          break;
+        this = (EventInfoCircleProgressControl_o *)System_Int32__Parse((System_String_o *)v40->fields.assetData2, 0LL);
+        v53 = (int)this;
+      }
+      if ( !object )
+        goto LABEL_58;
+      this = (EventInfoCircleProgressControl_o *)EventInfoCircleProgressObjectComponent__IsCompletedState(
+                                                   (EventInfoCircleProgressObjectComponent_o *)object,
+                                                   v52,
+                                                   v51);
+      v54 = (char)this;
+      if ( v39 >= 5 )
+      {
+        if ( LODWORD(v40->fields.m_CancellationTokenSource) <= 4 )
+          break;
+        v55 = System_Int32__Parse((System_String_o *)v40->fields.assetDataList, 0LL) == 1;
+      }
+      else
+      {
+        v55 = 0;
+      }
+      isOldCompleted = v55;
+      isCompleted = v54 & 1;
+      v3 = v59;
       EventInfoCircleProgressControl__AddProgressData(
-        v56,
-        *(_DWORD *)(v35 + 16),
-        (int64_t)v41,
-        (int64_t)v42,
-        v43,
-        v44,
-        v49,
-        v50,
+        v59,
+        *(_DWORD *)(v37 + 16),
+        (int64_t)v43,
+        (int64_t)v44,
+        v46,
+        v47,
+        v52,
+        v53,
         isCompleted,
         isOldCompleted,
         ent,
-        v55);
-      this = v57;
-      ++v33;
-      m_CancellationTokenSource = (int)v57->fields.m_CancellationTokenSource;
-      if ( v33 >= m_CancellationTokenSource )
+        v58);
+      this = v60;
+      ++v35;
+      m_CancellationTokenSource = (int)v60->fields.m_CancellationTokenSource;
+      if ( v35 >= m_CancellationTokenSource )
         return;
     }
 LABEL_59:
-    sub_1B00F30(this, *(_QWORD *)&eventId);
+    sub_1B6432C(this, v19);
   }
 }
 
@@ -1382,12 +1403,12 @@ void __fastcall EventInfoCircleProgressControl__LoadProgressExtraData(
   System_String_o *v8; // x0
   System_String_o *String; // x20
   void *IsNullOrEmpty; // x0
-  const MethodInfo *v11; // x1
-  const MethodInfo *v12; // x3
+  const MethodInfo *v11; // x3
   struct EventInfoCircleProgressObjectComponent_o *extraCircleProgres; // x8
   int32_t circleId; // w20
   EventInfoCircleProgressControl_o *UserEventPoint; // x21
-  const MethodInfo *v16; // x5
+  const MethodInfo *v15; // x5
+  const MethodInfo *v16; // x1
   int32_t v17; // w22
   const MethodInfo *v18; // x3
   int v19; // w29
@@ -1395,41 +1416,42 @@ void __fastcall EventInfoCircleProgressControl__LoadProgressExtraData(
   int32_t v21; // w22
   const MethodInfo *v22; // x3
   int64_t IsBackDrawState; // x0
-  const MethodInfo *v24; // x5
-  int64_t v25; // x21
-  int64_t v26; // x23
-  const MethodInfo *v27; // x2
-  int32_t v28; // w23
+  const MethodInfo *v24; // x1
+  const MethodInfo *v25; // x5
+  int64_t v26; // x21
+  int64_t v27; // x23
+  const MethodInfo *v28; // x2
+  int32_t v29; // w23
   _BOOL8 IsCompletedState; // x0
   struct EventInfoCircleProgressControl_ProgressData_o *ProgressData; // x0
-  int32_t v31; // w2
-  int32_t v32; // w3
-  const MethodInfo *v33; // x1
-  int32_t v34; // w8
+  int32_t v32; // w2
+  int32_t v33; // w3
+  const MethodInfo *v34; // x1
+  int32_t v35; // w8
   int32_t lv; // w24
-  int32_t v36; // w25
-  const MethodInfo *v37; // x2
-  char v38; // w27
-  int32_t v39; // w26
-  int v40; // w27
-  char v41; // w28
+  int32_t v37; // w25
+  const MethodInfo *v38; // x2
+  char v39; // w27
+  int32_t v40; // w26
+  int v41; // w27
+  char v42; // w28
   bool isOldCompleted; // w8
-  struct EventInfoCircleProgressControl_ProgressData_o *v43; // x0
-  int32_t v44; // w2
-  int32_t v45; // w3
-  int32_t v46; // w0
+  struct EventInfoCircleProgressControl_ProgressData_o *v44; // x0
+  int32_t v45; // w2
+  int32_t v46; // w3
+  int32_t v47; // w0
   int32_t *p_extraCircleState; // x20
-  const MethodInfo *v48; // [xsp+18h] [xbp-88h]
+  const MethodInfo *v49; // [xsp+18h] [xbp-88h]
   EventPointBuffEntity_o *ent; // [xsp+28h] [xbp-78h] BYREF
   EventPointBuffEntity_o *nowEventPointBuff; // [xsp+30h] [xbp-70h] BYREF
   int32_t eventIda; // [xsp+3Ch] [xbp-64h] BYREF
 
   eventIda = eventId;
-  if ( (byte_48E3306 & 1) == 0 )
+  if ( (byte_49FCF55 & 1) == 0 )
   {
-    sub_1B00CCC(&EventInfoCircleProgressControl_TypeInfo, *(_QWORD *)&eventId);
-    sub_1B00CCC(&StringLiteral_1/*""*/, v4);
-    byte_48E3306 = 1;
+    sub_1B640C8(&EventInfoCircleProgressControl_TypeInfo, *(_QWORD *)&eventId);
+    sub_1B640C8(&StringLiteral_1/*""*/, v4);
+    byte_49FCF55 = 1;
   }
   v5 = EventInfoCircleProgressControl_TypeInfo;
   ent = 0LL;
@@ -1441,7 +1463,7 @@ void __fastcall EventInfoCircleProgressControl__LoadProgressExtraData(
   }
   SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA = v5->static_fields->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA;
   v7 = System_Int32__ToString((int32_t)&eventIda, 0LL);
-  v8 = System_String__Concat_60325748(SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA, v7, 0LL);
+  v8 = System_String__Concat_61375396(SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA, v7, 0LL);
   String = UnityEngine_PlayerPrefs__GetString(v8, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   IsNullOrEmpty = (void *)System_String__IsNullOrEmpty(String, 0LL);
   if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
@@ -1454,28 +1476,28 @@ void __fastcall EventInfoCircleProgressControl__LoadProgressExtraData(
                                                              this,
                                                              eventIda,
                                                              circleId,
-                                                             v12);
+                                                             v11);
       EventInfoCircleProgressControl__GetEnableEventPointBuffEntity(
         UserEventPoint,
         eventIda,
         circleId,
         (int64_t)UserEventPoint,
         &nowEventPointBuff,
-        v16);
+        v15);
       v17 = nowEventPointBuff ? nowEventPointBuff->fields.lv : 1;
       IsNullOrEmpty = this->fields.extraCircleProgres;
       if ( IsNullOrEmpty )
       {
         IsNullOrEmpty = (void *)EventInfoCircleProgressObjectComponent__IsBackDrawState(
                                   (EventInfoCircleProgressObjectComponent_o *)IsNullOrEmpty,
-                                  v11);
+                                  v16);
         if ( this->fields.extraCircleProgres )
         {
-          v28 = (unsigned __int8)IsNullOrEmpty & 1;
+          v29 = (unsigned __int8)IsNullOrEmpty & 1;
           IsCompletedState = EventInfoCircleProgressObjectComponent__IsCompletedState(
                                this->fields.extraCircleProgres,
-                               v28,
-                               v27);
+                               v29,
+                               v28);
           ProgressData = EventInfoCircleProgressControl__CreateProgressData(
                            (EventInfoCircleProgressControl_o *)IsCompletedState,
                            circleId,
@@ -1483,29 +1505,29 @@ void __fastcall EventInfoCircleProgressControl__LoadProgressExtraData(
                            (int64_t)UserEventPoint,
                            v17,
                            v17,
-                           v28,
-                           v28,
+                           v29,
+                           v29,
                            IsCompletedState,
                            IsCompletedState,
                            nowEventPointBuff,
-                           v48);
+                           v49);
           this->fields.progressExtraData = ProgressData;
-          sub_1B00C70(
+          sub_1B6406C(
             (ServantStatusBattleListViewItem_o *)&this->fields.progressExtraData,
             (int32_t)ProgressData,
-            v31,
-            v32);
-          if ( EventInfoCircleProgressControl__IsExtraCircleDisp(this, v33) )
-            v34 = 2;
+            v32,
+            v33);
+          if ( EventInfoCircleProgressControl__IsExtraCircleDisp(this, v34) )
+            v35 = 2;
           else
-            v34 = 0;
-          this->fields.extraCircleState = v34;
+            v35 = 0;
+          this->fields.extraCircleState = v35;
           return;
         }
       }
     }
 LABEL_49:
-    sub_1B00F28(IsNullOrEmpty, v11);
+    sub_1B64324(IsNullOrEmpty);
   }
   if ( !String )
     goto LABEL_49;
@@ -1517,71 +1539,71 @@ LABEL_49:
   if ( v19 <= 0 )
   {
     IsBackDrawState = EventInfoCircleProgressControl__GetUserEventPoint(this, eventIda, 0, v18);
-    v25 = IsBackDrawState;
+    v26 = IsBackDrawState;
     v21 = 0;
     goto LABEL_23;
   }
   v21 = System_Int32__Parse(*((System_String_o **)IsNullOrEmpty + 4), 0LL);
   IsBackDrawState = EventInfoCircleProgressControl__GetUserEventPoint(this, eventIda, v21, v22);
-  v25 = IsBackDrawState;
+  v26 = IsBackDrawState;
   if ( v19 == 1 )
   {
 LABEL_23:
-    v26 = 0LL;
+    v27 = 0LL;
     goto LABEL_24;
   }
   if ( *((_DWORD *)v20 + 6) <= 1u )
     goto LABEL_50;
   IsBackDrawState = System_Int64__Parse(*((System_String_o **)v20 + 5), 0LL);
-  v26 = IsBackDrawState;
+  v27 = IsBackDrawState;
 LABEL_24:
   EventInfoCircleProgressControl__GetEnableEventPointBuffEntity(
     (EventInfoCircleProgressControl_o *)IsBackDrawState,
     eventIda,
     v21,
-    v25,
+    v26,
     &ent,
-    v24);
+    v25);
   if ( ent )
     lv = ent->fields.lv;
   else
     lv = 1;
   if ( v19 < 3 )
   {
-    v36 = 0;
+    v37 = 0;
   }
   else
   {
     if ( *((_DWORD *)v20 + 6) <= 2u )
       goto LABEL_50;
-    v36 = System_Int32__Parse(*((System_String_o **)v20 + 6), 0LL);
+    v37 = System_Int32__Parse(*((System_String_o **)v20 + 6), 0LL);
   }
   IsNullOrEmpty = this->fields.extraCircleProgres;
   if ( !IsNullOrEmpty )
     goto LABEL_49;
   IsBackDrawState = EventInfoCircleProgressObjectComponent__IsBackDrawState(
                       (EventInfoCircleProgressObjectComponent_o *)IsNullOrEmpty,
-                      v11);
-  v38 = IsBackDrawState;
+                      v24);
+  v39 = IsBackDrawState;
   if ( v19 < 4 )
   {
-    v39 = 1;
+    v40 = 1;
   }
   else
   {
     if ( *((_DWORD *)v20 + 6) <= 3u )
       goto LABEL_50;
-    v39 = System_Int32__Parse(*((System_String_o **)v20 + 7), 0LL);
+    v40 = System_Int32__Parse(*((System_String_o **)v20 + 7), 0LL);
   }
   IsNullOrEmpty = this->fields.extraCircleProgres;
   if ( !IsNullOrEmpty )
     goto LABEL_49;
-  v40 = v38 & 1;
+  v41 = v39 & 1;
   IsBackDrawState = EventInfoCircleProgressObjectComponent__IsCompletedState(
                       (EventInfoCircleProgressObjectComponent_o *)IsNullOrEmpty,
-                      v40,
-                      v37);
-  v41 = IsBackDrawState;
+                      v41,
+                      v38);
+  v42 = IsBackDrawState;
   if ( v19 >= 5 )
   {
     if ( *((_DWORD *)v20 + 6) <= 4u )
@@ -1593,39 +1615,39 @@ LABEL_24:
   {
     isOldCompleted = 0;
   }
-  v43 = EventInfoCircleProgressControl__CreateProgressData(
+  v44 = EventInfoCircleProgressControl__CreateProgressData(
           (EventInfoCircleProgressControl_o *)IsBackDrawState,
           v21,
-          v25,
           v26,
+          v27,
           lv,
-          v36,
+          v37,
+          v41,
           v40,
-          v39,
-          v41 & 1,
+          v42 & 1,
           isOldCompleted,
           ent,
-          v48);
-  this->fields.progressExtraData = v43;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.progressExtraData, (int32_t)v43, v44, v45);
+          v49);
+  this->fields.progressExtraData = v44;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.progressExtraData, (int32_t)v44, v45, v46);
   if ( v19 > 5 )
   {
     if ( *((_DWORD *)v20 + 6) > 5u )
     {
-      v46 = System_Int32__Parse(*((System_String_o **)v20 + 9), 0LL);
-      this->fields.extraCircleState = v46;
+      v47 = System_Int32__Parse(*((System_String_o **)v20 + 9), 0LL);
+      this->fields.extraCircleState = v47;
       p_extraCircleState = &this->fields.extraCircleState;
-      if ( v46 )
+      if ( v47 )
         return;
       goto LABEL_46;
     }
 LABEL_50:
-    sub_1B00F30(IsBackDrawState, v11);
+    sub_1B6432C(IsBackDrawState, v24);
   }
   this->fields.extraCircleState = 0;
   p_extraCircleState = &this->fields.extraCircleState;
 LABEL_46:
-  if ( EventInfoCircleProgressControl__IsExtraCircleDisp(this, v11) )
+  if ( EventInfoCircleProgressControl__IsExtraCircleDisp(this, v24) )
     *p_extraCircleState = 1;
 }
 
@@ -1644,16 +1666,15 @@ void __fastcall EventInfoCircleProgressControl__LoadTitleState(
   System_String_o *String; // x20
   const MethodInfo *v10; // x1
   _BOOL8 IsBackDrawState; // x0
-  __int64 v12; // x1
-  int32_t v13; // w0
-  int32_t v14; // [xsp+Ch] [xbp-24h] BYREF
+  int32_t v12; // w0
+  int32_t v13; // [xsp+Ch] [xbp-24h] BYREF
 
-  v14 = eventId;
-  if ( (byte_48E3304 & 1) == 0 )
+  v13 = eventId;
+  if ( (byte_49FCF53 & 1) == 0 )
   {
-    sub_1B00CCC(&EventInfoCircleProgressControl_TypeInfo, *(_QWORD *)&eventId);
-    sub_1B00CCC(&StringLiteral_1/*""*/, v4);
-    byte_48E3304 = 1;
+    sub_1B640C8(&EventInfoCircleProgressControl_TypeInfo, *(_QWORD *)&eventId);
+    sub_1B640C8(&StringLiteral_1/*""*/, v4);
+    byte_49FCF53 = 1;
   }
   v5 = EventInfoCircleProgressControl_TypeInfo;
   if ( !EventInfoCircleProgressControl_TypeInfo->_2.cctor_finished )
@@ -1662,21 +1683,21 @@ void __fastcall EventInfoCircleProgressControl__LoadTitleState(
     v5 = EventInfoCircleProgressControl_TypeInfo;
   }
   SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE = v5->static_fields->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE;
-  v7 = System_Int32__ToString((int32_t)&v14, 0LL);
-  v8 = System_String__Concat_60325748(SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE, v7, 0LL);
+  v7 = System_Int32__ToString((int32_t)&v13, 0LL);
+  v8 = System_String__Concat_61375396(SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE, v7, 0LL);
   String = UnityEngine_PlayerPrefs__GetString(v8, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( System_String__IsNullOrEmpty(String, 0LL) )
   {
     IsBackDrawState = EventInfoCircleProgressControl__IsBackDrawState(this, v10);
     if ( !this )
-      sub_1B00F28(IsBackDrawState, v12);
-    v13 = IsBackDrawState;
+      sub_1B64324(IsBackDrawState);
+    v12 = IsBackDrawState;
   }
   else
   {
-    v13 = System_Int32__Parse(String, 0LL);
+    v12 = System_Int32__Parse(String, 0LL);
   }
-  this->fields.titleDispState = v13;
+  this->fields.titleDispState = v12;
 }
 
 
@@ -1700,23 +1721,22 @@ void __fastcall EventInfoCircleProgressControl__OnDisable(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *uiVoicePlayer; // x20
-  __int64 v4; // x1
-  EventInfoUIVoicePlayer_o *v5; // x0
+  EventInfoUIVoicePlayer_o *v4; // x0
 
-  if ( (byte_48E32FA & 1) == 0 )
+  if ( (byte_49FCF49 & 1) == 0 )
   {
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
-    byte_48E32FA = 1;
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, method);
+    byte_49FCF49 = 1;
   }
   uiVoicePlayer = (UnityEngine_Object_o *)this->fields.uiVoicePlayer;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(uiVoicePlayer, 0LL, 0LL) )
   {
-    v5 = this->fields.uiVoicePlayer;
-    if ( !v5 )
-      sub_1B00F28(0LL, v4);
-    EventInfoUIVoicePlayer__Stop(v5, 0LL);
+    v4 = this->fields.uiVoicePlayer;
+    if ( !v4 )
+      sub_1B64324(0LL);
+    EventInfoUIVoicePlayer__Stop(v4, 0LL);
   }
 }
 
@@ -1740,158 +1760,164 @@ void __fastcall EventInfoCircleProgressControl__PlayAnim(
   __int64 v16; // x1
   __int64 v17; // x20
   UnityEngine_GameObject_o *IsBackDrawState; // x0
-  const MethodInfo *v19; // x1
-  int32_t v20; // w2
-  int32_t v21; // w3
-  int32_t v22; // w2
-  int32_t v23; // w3
-  const MethodInfo *v24; // x1
+  int32_t v19; // w2
+  int32_t v20; // w3
+  int32_t v21; // w2
+  int32_t v22; // w3
+  const MethodInfo *v23; // x1
   EventInfoCircleProgressObjectComponent_o *ProgressBarAnimObject; // x0
-  UnityEngine_GameObject_o **v26; // x22
-  int32_t v27; // w2
-  int32_t v28; // w3
-  const MethodInfo *v29; // x1
+  UnityEngine_GameObject_o **v25; // x22
+  int32_t v26; // w2
+  int32_t v27; // w3
+  const MethodInfo *v28; // x1
   EventInfoCircleProgressObjectComponent_o *ProgressCompleteAnimObjcet; // x0
-  int32_t v31; // w2
-  int32_t v32; // w3
-  UnityEngine_Object_o *v33; // x24
-  __int64 v34; // x9
-  EventInfoCircleProgressDrawComponent_o *v35; // x19
-  System_Action_o *v36; // x21
-  const MethodInfo *v37; // x2
-  UnityEngine_Object_o *v38; // x22
-  const MethodInfo *v39; // x1
-  System_Action_o *v40; // x21
-  System_Collections_IEnumerator_o *v41; // x0
-  EventInfoCircleProgressObjectComponent_o *v42; // x19
+  int32_t v30; // w2
+  int32_t v31; // w3
+  UnityEngine_Object_o *v32; // x24
+  const MethodInfo *v33; // x1
+  __int64 v34; // x1
+  __int64 v35; // x2
+  __int64 v36; // x9
+  EventInfoCircleProgressDrawComponent_o *v37; // x19
+  System_Action_o *v38; // x21
+  const MethodInfo *v39; // x2
+  UnityEngine_Object_o *v40; // x22
+  const MethodInfo *v41; // x1
+  __int64 v42; // x2
   System_Action_o *v43; // x21
-  const MethodInfo *v44; // x2
-  System_Action_o *v45; // x21
+  System_Collections_IEnumerator_o *v44; // x0
+  EventInfoCircleProgressObjectComponent_o *v45; // x19
+  __int64 v46; // x1
+  __int64 v47; // x2
+  System_Action_o *v48; // x21
+  const MethodInfo *v49; // x2
+  System_Action_o *v50; // x21
   Il2CppObject *Component_object; // x20
-  Il2CppObject *v47; // x22
-  const MethodInfo *v48; // x2
+  Il2CppObject *v52; // x22
+  __int64 v53; // x1
+  const MethodInfo *v54; // x2
   struct EventInfoCircleProgressObjectComponent_array *circleProgressList; // x8
   int max_length; // w20
-  il2cpp_array_size_t v51; // w22
+  il2cpp_array_size_t v57; // w22
   EventInfoCircleProgressObjectComponent_o *extraCircleProgres; // x19
-  System_Action_o *v53; // x21
-  const MethodInfo *v54; // x2
-  int32_t v55; // w2
-  int32_t v56; // w3
+  System_Action_o *v59; // x21
+  const MethodInfo *v60; // x2
+  int32_t v61; // w2
+  int32_t v62; // w3
 
-  if ( (byte_48E32FE & 1) == 0 )
+  if ( (byte_49FCF4D & 1) == 0 )
   {
-    sub_1B00CCC(&System_Action_TypeInfo, *(_QWORD *)&type);
-    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_Animation___, v7);
-    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, v8);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v9);
-    sub_1B00CCC(&Method_EventInfoCircleProgressControl___c__DisplayClass35_0__PlayAnim_b__0__, v10);
-    sub_1B00CCC(&Method_EventInfoCircleProgressControl___c__DisplayClass35_0__PlayAnim_b__1__, v11);
-    sub_1B00CCC(&Method_EventInfoCircleProgressControl___c__DisplayClass35_0__PlayAnim_b__2__, v12);
-    sub_1B00CCC(&Method_EventInfoCircleProgressControl___c__DisplayClass35_0__PlayAnim_b__3__, v13);
-    sub_1B00CCC(&Method_EventInfoCircleProgressControl___c__DisplayClass35_0__PlayAnim_b__4__, v14);
-    sub_1B00CCC(&EventInfoCircleProgressControl___c__DisplayClass35_0_TypeInfo, v15);
-    sub_1B00CCC(&StringLiteral_16977/*"bit_circlemeter_rotate"*/, v16);
-    byte_48E32FE = 1;
+    sub_1B640C8(&System_Action_TypeInfo, *(_QWORD *)&type);
+    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponent_Animation___, v7);
+    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, v8);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v9);
+    sub_1B640C8(&Method_EventInfoCircleProgressControl___c__DisplayClass35_0__PlayAnim_b__0__, v10);
+    sub_1B640C8(&Method_EventInfoCircleProgressControl___c__DisplayClass35_0__PlayAnim_b__1__, v11);
+    sub_1B640C8(&Method_EventInfoCircleProgressControl___c__DisplayClass35_0__PlayAnim_b__2__, v12);
+    sub_1B640C8(&Method_EventInfoCircleProgressControl___c__DisplayClass35_0__PlayAnim_b__3__, v13);
+    sub_1B640C8(&Method_EventInfoCircleProgressControl___c__DisplayClass35_0__PlayAnim_b__4__, v14);
+    sub_1B640C8(&EventInfoCircleProgressControl___c__DisplayClass35_0_TypeInfo, v15);
+    sub_1B640C8(&StringLiteral_17145/*"bit_circlemeter_rotate"*/, v16);
+    byte_49FCF4D = 1;
   }
-  v17 = sub_1B00F18(EventInfoCircleProgressControl___c__DisplayClass35_0_TypeInfo);
+  v17 = sub_1B64314(EventInfoCircleProgressControl___c__DisplayClass35_0_TypeInfo, *(_QWORD *)&type, callback);
   System_Object___ctor((Il2CppObject *)v17, 0LL);
   if ( !v17 )
     goto LABEL_36;
   *(_QWORD *)(v17 + 16) = this;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v17 + 16), (int32_t)this, v20, v21);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v17 + 16), (int32_t)this, v19, v20);
   *(_QWORD *)(v17 + 32) = callback;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v17 + 32), (int32_t)callback, v22, v23);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v17 + 32), (int32_t)callback, v21, v22);
   if ( type != 1 )
     goto LABEL_40;
-  ProgressBarAnimObject = EventInfoCircleProgressControl__GetProgressBarAnimObject(this, v24);
+  ProgressBarAnimObject = EventInfoCircleProgressControl__GetProgressBarAnimObject(this, v23);
   *(_QWORD *)(v17 + 24) = ProgressBarAnimObject;
-  v26 = (UnityEngine_GameObject_o **)(v17 + 24);
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v17 + 24), (int32_t)ProgressBarAnimObject, v27, v28);
-  ProgressCompleteAnimObjcet = EventInfoCircleProgressControl__GetProgressCompleteAnimObjcet(this, v29);
+  v25 = (UnityEngine_GameObject_o **)(v17 + 24);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v17 + 24), (int32_t)ProgressBarAnimObject, v26, v27);
+  ProgressCompleteAnimObjcet = EventInfoCircleProgressControl__GetProgressCompleteAnimObjcet(this, v28);
   *(_QWORD *)(v17 + 40) = ProgressCompleteAnimObjcet;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v17 + 40), (int32_t)ProgressCompleteAnimObjcet, v31, v32);
-  v33 = *(UnityEngine_Object_o **)(v17 + 24);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v17 + 40), (int32_t)ProgressCompleteAnimObjcet, v30, v31);
+  v32 = *(UnityEngine_Object_o **)(v17 + 24);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(v33, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v32, 0LL, 0LL) )
   {
-    IsBackDrawState = *v26;
-    if ( *v26 )
+    IsBackDrawState = *v25;
+    if ( *v25 )
     {
       IsBackDrawState = (UnityEngine_GameObject_o *)EventInfoCircleProgressObjectComponent__IsBackDrawState(
                                                       (EventInfoCircleProgressObjectComponent_o *)IsBackDrawState,
-                                                      v19);
-      if ( *v26 )
+                                                      v33);
+      if ( *v25 )
       {
-        v34 = 40LL;
+        v36 = 40LL;
         if ( ((unsigned __int8)IsBackDrawState & 1) != 0 )
-          v34 = 48LL;
-        v35 = *(EventInfoCircleProgressDrawComponent_o **)((char *)&(*v26)->klass + v34);
-        v36 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+          v36 = 48LL;
+        v37 = *(EventInfoCircleProgressDrawComponent_o **)((char *)&(*v25)->klass + v36);
+        v38 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v34, v35);
         System_Action___ctor(
-          v36,
+          v38,
           (Il2CppObject *)v17,
           Method_EventInfoCircleProgressControl___c__DisplayClass35_0__PlayAnim_b__3__,
           0LL);
-        if ( v35 )
+        if ( v37 )
         {
-          EventInfoCircleProgressDrawComponent__PlayProgressBarAnim(v35, v36, v37);
+          EventInfoCircleProgressDrawComponent__PlayProgressBarAnim(v37, v38, v39);
           return;
         }
       }
     }
 LABEL_36:
-    sub_1B00F28(IsBackDrawState, v19);
+    sub_1B64324(IsBackDrawState);
   }
-  v38 = *(UnityEngine_Object_o **)(v17 + 40);
+  v40 = *(UnityEngine_Object_o **)(v17 + 40);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(v38, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v40, 0LL, 0LL) )
   {
-    v40 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
-    System_Action___ctor(
-      v40,
-      (Il2CppObject *)v17,
-      Method_EventInfoCircleProgressControl___c__DisplayClass35_0__PlayAnim_b__0__,
-      0LL);
-    v41 = BasicHelper__DelayCall(1.0, v40, 0LL);
-    UnityEngine_MonoBehaviour__StartCoroutine_68062928((UnityEngine_MonoBehaviour_o *)this, v41, 0LL);
-    v42 = *(EventInfoCircleProgressObjectComponent_o **)(v17 + 40);
-    v43 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+    v43 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v41, v42);
     System_Action___ctor(
       v43,
       (Il2CppObject *)v17,
+      Method_EventInfoCircleProgressControl___c__DisplayClass35_0__PlayAnim_b__0__,
+      0LL);
+    v44 = BasicHelper__DelayCall(1.0, v43, 0LL);
+    UnityEngine_MonoBehaviour__StartCoroutine_69113008((UnityEngine_MonoBehaviour_o *)this, v44, 0LL);
+    v45 = *(EventInfoCircleProgressObjectComponent_o **)(v17 + 40);
+    v48 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v46, v47);
+    System_Action___ctor(
+      v48,
+      (Il2CppObject *)v17,
       Method_EventInfoCircleProgressControl___c__DisplayClass35_0__PlayAnim_b__1__,
       0LL);
-    if ( !v42 )
+    if ( !v45 )
       goto LABEL_36;
-    EventInfoCircleProgressObjectComponent__PlayCompleteAnim(v42, v43, v44);
+    EventInfoCircleProgressObjectComponent__PlayCompleteAnim(v45, v48, v49);
     return;
   }
-  if ( this->fields.titleDispState || !EventInfoCircleProgressControl__IsBackDrawState(this, v39) )
+  if ( this->fields.titleDispState || !EventInfoCircleProgressControl__IsBackDrawState(this, v41) )
   {
     if ( this->fields.extraCircleState == 1 )
     {
       extraCircleProgres = this->fields.extraCircleProgres;
-      v53 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+      v59 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v41, v42);
       System_Action___ctor(
-        v53,
+        v59,
         (Il2CppObject *)v17,
         Method_EventInfoCircleProgressControl___c__DisplayClass35_0__PlayAnim_b__2__,
         0LL);
       if ( !extraCircleProgres )
         goto LABEL_36;
-      EventInfoCircleProgressObjectComponent__PlayAnimSlideIn(extraCircleProgres, v53, v54);
+      EventInfoCircleProgressObjectComponent__PlayAnimSlideIn(extraCircleProgres, v59, v60);
       return;
     }
 LABEL_40:
     ActionExtensions__Call(*(System_Action_o **)(v17 + 32), 0LL);
     return;
   }
-  v45 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+  v50 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v41, v42);
   System_Action___ctor(
-    v45,
+    v50,
     (Il2CppObject *)v17,
     Method_EventInfoCircleProgressControl___c__DisplayClass35_0__PlayAnim_b__4__,
     0LL);
@@ -1900,13 +1926,13 @@ LABEL_40:
     goto LABEL_36;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        IsBackDrawState,
-                       (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+                       (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
   IsBackDrawState = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !IsBackDrawState )
     goto LABEL_36;
-  v47 = UnityEngine_GameObject__GetComponent_object_(
+  v52 = UnityEngine_GameObject__GetComponent_object_(
           IsBackDrawState,
-          (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+          (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   IsBackDrawState = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(
@@ -1917,7 +1943,7 @@ LABEL_40:
     goto LABEL_29;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  IsBackDrawState = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v47, 0LL, 0LL);
+  IsBackDrawState = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v52, 0LL, 0LL);
   if ( ((unsigned __int8)IsBackDrawState & 1) != 0 )
   {
 LABEL_29:
@@ -1927,19 +1953,19 @@ LABEL_29:
     max_length = circleProgressList->max_length;
     if ( max_length >= 1 )
     {
-      v51 = 0;
+      v57 = 0;
       do
       {
-        if ( v51 >= circleProgressList->max_length )
-          sub_1B00F30(IsBackDrawState, v19);
-        IsBackDrawState = (UnityEngine_GameObject_o *)circleProgressList->m_Items[v51];
+        if ( v57 >= circleProgressList->max_length )
+          sub_1B6432C(IsBackDrawState, v53);
+        IsBackDrawState = (UnityEngine_GameObject_o *)circleProgressList->m_Items[v57];
         if ( !IsBackDrawState )
           break;
         EventInfoCircleProgressObjectComponent__PlayAnimToBackDraw(
           (EventInfoCircleProgressObjectComponent_o *)IsBackDrawState,
           0LL,
-          v48);
-        if ( max_length == ++v51 )
+          v54);
+        if ( max_length == ++v57 )
           goto LABEL_41;
         circleProgressList = this->fields.circleProgressList;
       }
@@ -1947,20 +1973,20 @@ LABEL_29:
       goto LABEL_36;
     }
 LABEL_41:
-    EventInfoCircleProgressControl__PlayTitleAnimToBackDraw(this, v45, v48);
+    EventInfoCircleProgressControl__PlayTitleAnimToBackDraw(this, v50, v54);
   }
   else
   {
     if ( !Component_object )
       goto LABEL_36;
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 1, 0LL);
-    if ( !v47 )
+    if ( !v52 )
       goto LABEL_36;
-    v47[2].monitor = v45;
-    sub_1B00C70((ServantStatusBattleListViewItem_o *)&v47[2].monitor, (int32_t)v45, v55, v56);
-    UnityEngine_Animation__Play_67822748(
+    v52[2].monitor = v50;
+    sub_1B6406C((ServantStatusBattleListViewItem_o *)&v52[2].monitor, (int32_t)v50, v61, v62);
+    UnityEngine_Animation__Play_68872828(
       (UnityEngine_Animation_o *)Component_object,
-      (System_String_o *)StringLiteral_16977/*"bit_circlemeter_rotate"*/,
+      (System_String_o *)StringLiteral_17145/*"bit_circlemeter_rotate"*/,
       0LL);
   }
 }
@@ -1978,90 +2004,95 @@ void __fastcall EventInfoCircleProgressControl__PlayTitleAnimToBackDraw(
   __int64 v9; // x1
   __int64 v10; // x21
   UnityEngine_GameObject_o *titleBaseObject; // x0
-  __int64 v12; // x1
-  int32_t v13; // w2
-  int32_t v14; // w3
-  int32_t v15; // w2
-  int32_t v16; // w3
+  int32_t v12; // w2
+  int32_t v13; // w3
+  int32_t v14; // w2
+  int32_t v15; // w3
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v18; // x20
-  int32_t v19; // w2
-  int32_t v20; // w3
-  __int64 v21; // x22
-  UnityEngine_GameObject_o *v22; // x0
+  __int64 v17; // x1
+  __int64 v18; // x2
+  __int64 v19; // x20
+  int32_t v20; // w2
+  int32_t v21; // w3
+  __int64 v22; // x22
+  UnityEngine_GameObject_o *v23; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v24; // w2
-  int32_t v25; // w3
-  EasingObject_o *v26; // x19
-  System_Action_o *v27; // x21
-  Il2CppObject *v28; // x22
-  System_Action_o *v29; // x20
-  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
+  int32_t v25; // w2
+  int32_t v26; // w3
+  EasingObject_o *v27; // x19
+  __int64 v28; // x1
+  __int64 v29; // x2
+  System_Action_o *v30; // x21
+  Il2CppObject *v31; // x22
+  __int64 v32; // x1
+  __int64 v33; // x2
+  System_Action_o *v34; // x20
+  UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_48E3301 & 1) == 0 )
+  if ( (byte_49FCF50 & 1) == 0 )
   {
-    sub_1B00CCC(&System_Action_TypeInfo, endAction);
-    sub_1B00CCC(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___, v5);
-    sub_1B00CCC(&Method_EventInfoCircleProgressControl___c__DisplayClass38_0__PlayTitleAnimToBackDraw_b__1__, v6);
-    sub_1B00CCC(&EventInfoCircleProgressControl___c__DisplayClass38_0_TypeInfo, v7);
-    sub_1B00CCC(&Method_EventInfoCircleProgressControl___c__DisplayClass38_1__PlayTitleAnimToBackDraw_b__0__, v8);
-    sub_1B00CCC(&EventInfoCircleProgressControl___c__DisplayClass38_1_TypeInfo, v9);
-    byte_48E3301 = 1;
+    sub_1B640C8(&System_Action_TypeInfo, endAction);
+    sub_1B640C8(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___, v5);
+    sub_1B640C8(&Method_EventInfoCircleProgressControl___c__DisplayClass38_0__PlayTitleAnimToBackDraw_b__1__, v6);
+    sub_1B640C8(&EventInfoCircleProgressControl___c__DisplayClass38_0_TypeInfo, v7);
+    sub_1B640C8(&Method_EventInfoCircleProgressControl___c__DisplayClass38_1__PlayTitleAnimToBackDraw_b__0__, v8);
+    sub_1B640C8(&EventInfoCircleProgressControl___c__DisplayClass38_1_TypeInfo, v9);
+    byte_49FCF50 = 1;
   }
-  v10 = sub_1B00F18(EventInfoCircleProgressControl___c__DisplayClass38_0_TypeInfo);
+  v10 = sub_1B64314(EventInfoCircleProgressControl___c__DisplayClass38_0_TypeInfo, endAction, method);
   System_Object___ctor((Il2CppObject *)v10, 0LL);
   if ( !v10 )
     goto LABEL_10;
   *(_QWORD *)(v10 + 24) = this;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v10 + 24), (int32_t)this, v13, v14);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v10 + 24), (int32_t)this, v12, v13);
   *(_QWORD *)(v10 + 32) = endAction;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v10 + 32), (int32_t)endAction, v15, v16);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v10 + 32), (int32_t)endAction, v14, v15);
   titleBaseObject = this->fields.titleBaseObject;
   if ( !titleBaseObject )
     goto LABEL_10;
   gameObject = UnityEngine_GameObject__get_gameObject(titleBaseObject, 0LL);
   *(float *)(v10 + 16) = GameObjectExtensions__GetLocalEulerAngleX(gameObject, 0LL);
   *(_DWORD *)(v10 + 20) = 1151172608;
-  v18 = sub_1B00F18(EventInfoCircleProgressControl___c__DisplayClass38_1_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v18, 0LL);
-  if ( !v18 )
+  v19 = sub_1B64314(EventInfoCircleProgressControl___c__DisplayClass38_1_TypeInfo, v17, v18);
+  System_Object___ctor((Il2CppObject *)v19, 0LL);
+  if ( !v19 )
     goto LABEL_10;
-  *(_QWORD *)(v18 + 32) = v10;
-  v21 = v18 + 32;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v18 + 32), v10, v19, v20);
-  if ( !*(_QWORD *)(v18 + 32) )
+  *(_QWORD *)(v19 + 32) = v10;
+  v22 = v19 + 32;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v19 + 32), v10, v20, v21);
+  if ( !*(_QWORD *)(v19 + 32) )
     goto LABEL_10;
-  v30.fields.x = *(float *)(*(_QWORD *)(v18 + 32) + 16LL);
-  v30.fields.y = 0.0;
-  v30.fields.z = 0.0;
-  GameObjectExtensions__SetLocalEulerAngle(this->fields.titleBaseObject, v30, 0LL);
-  if ( !*(_QWORD *)v21 )
+  v35.fields.x = *(float *)(*(_QWORD *)(v19 + 32) + 16LL);
+  v35.fields.y = 0.0;
+  v35.fields.z = 0.0;
+  GameObjectExtensions__SetLocalEulerAngle(this->fields.titleBaseObject, v35, 0LL);
+  if ( !*(_QWORD *)v22 )
     goto LABEL_10;
-  *(_DWORD *)(v18 + 24) = *(_DWORD *)(*(_QWORD *)v21 + 16LL);
-  v22 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  *(_DWORD *)(v19 + 24) = *(_DWORD *)(*(_QWORD *)v22 + 16LL);
+  v23 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
-                       v22,
-                       (const MethodInfo_2DAF8F0 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-  *(_QWORD *)(v18 + 16) = Component_object;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v18 + 16), (int32_t)Component_object, v24, v25);
-  v26 = *(EasingObject_o **)(v18 + 16);
-  v27 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+                       v23,
+                       (const MethodInfo_2E899C0 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+  *(_QWORD *)(v19 + 16) = Component_object;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v19 + 16), (int32_t)Component_object, v25, v26);
+  v27 = *(EasingObject_o **)(v19 + 16);
+  v30 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v28, v29);
   System_Action___ctor(
-    v27,
-    (Il2CppObject *)v18,
+    v30,
+    (Il2CppObject *)v19,
     Method_EventInfoCircleProgressControl___c__DisplayClass38_1__PlayTitleAnimToBackDraw_b__0__,
     0LL);
-  v28 = *(Il2CppObject **)(v18 + 32);
-  v29 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+  v31 = *(Il2CppObject **)(v19 + 32);
+  v34 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v32, v33);
   System_Action___ctor(
-    v29,
-    v28,
+    v34,
+    v31,
     Method_EventInfoCircleProgressControl___c__DisplayClass38_0__PlayTitleAnimToBackDraw_b__1__,
     0LL);
-  if ( !v26 )
+  if ( !v27 )
 LABEL_10:
-    sub_1B00F28(titleBaseObject, v12);
-  EasingObject__Play(v26, 0.5, v27, v29, 0.0, 0, 0LL);
+    sub_1B64324(titleBaseObject);
+  EasingObject__Play(v27, 0.5, v30, v34, 0.0, 0, 0LL);
 }
 
 
@@ -2087,7 +2118,7 @@ void __fastcall EventInfoCircleProgressControl__SaveAllData(
 
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity || (v3 = this, (this = (EventInfoCircleProgressControl_o *)this->fields.uiVoicePlayer) == 0LL) )
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   eventId = eventUiEntity->fields.eventId;
   EventInfoUIVoicePlayer__SaveHistrory((EventInfoUIVoicePlayer_o *)this, eventId, 0LL);
   EventInfoCircleProgressControl__SaveTitleState(v3, eventId, v5);
@@ -2130,15 +2161,15 @@ void __fastcall EventInfoCircleProgressControl__SaveProgressData(
 
   v3 = this;
   v26 = eventId;
-  if ( (byte_48E330A & 1) == 0 )
+  if ( (byte_49FCF59 & 1) == 0 )
   {
-    sub_1B00CCC(&EventInfoCircleProgressControl_TypeInfo, *(_QWORD *)&eventId);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__get_Count__, v4);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__get_Item__, v5);
-    sub_1B00CCC(&System_Text_StringBuilder_TypeInfo, v6);
-    sub_1B00CCC(&StringLiteral_1540/*":"*/, v7);
-    this = (EventInfoCircleProgressControl_o *)sub_1B00CCC(&StringLiteral_865/*","*/, v8);
-    byte_48E330A = 1;
+    sub_1B640C8(&EventInfoCircleProgressControl_TypeInfo, *(_QWORD *)&eventId);
+    sub_1B640C8(&Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__get_Count__, v4);
+    sub_1B640C8(&Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__get_Item__, v5);
+    sub_1B640C8(&System_Text_StringBuilder_TypeInfo, v6);
+    sub_1B640C8(&StringLiteral_1546/*":"*/, v7);
+    this = (EventInfoCircleProgressControl_o *)sub_1B640C8(&StringLiteral_869/*","*/, v8);
+    byte_49FCF59 = 1;
   }
   m_CachedPtr = 0;
   animType = 0LL;
@@ -2148,7 +2179,7 @@ void __fastcall EventInfoCircleProgressControl__SaveProgressData(
   if ( !progressDataList )
     goto LABEL_25;
   size = progressDataList->fields._size;
-  v11 = (System_Text_StringBuilder_o *)sub_1B00F18(System_Text_StringBuilder_TypeInfo);
+  v11 = (System_Text_StringBuilder_o *)sub_1B64314(System_Text_StringBuilder_TypeInfo, *(_QWORD *)&eventId, method);
   System_Text_StringBuilder___ctor(v11, 0LL);
   if ( size >= 1 )
   {
@@ -2159,7 +2190,7 @@ void __fastcall EventInfoCircleProgressControl__SaveProgressData(
       {
         if ( !v11 )
           break;
-        System_Text_StringBuilder__Append_59487644(v11, (System_String_o *)StringLiteral_865/*","*/, 0LL);
+        System_Text_StringBuilder__Append_60536548(v11, (System_String_o *)StringLiteral_869/*","*/, 0LL);
       }
       this = (EventInfoCircleProgressControl_o *)v3->fields.progressDataList;
       if ( !this )
@@ -2167,71 +2198,71 @@ void __fastcall EventInfoCircleProgressControl__SaveProgressData(
       this = (EventInfoCircleProgressControl_o *)System_Collections_Generic_List_object___get_Item(
                                                    (System_Collections_Generic_List_object__o *)this,
                                                    v12,
-                                                   (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__get_Item__);
+                                                   (const MethodInfo_34AD404 *)Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__get_Item__);
       if ( !this )
         break;
       m_CachedPtr = this->fields.m_CachedPtr;
       this = (EventInfoCircleProgressControl_o *)System_Int32__ToString((int32_t)&m_CachedPtr, 0LL);
       if ( !v11 )
         break;
-      System_Text_StringBuilder__Append_59487644(v11, (System_String_o *)this, 0LL);
-      System_Text_StringBuilder__Append_59487644(v11, (System_String_o *)StringLiteral_1540/*":"*/, 0LL);
+      System_Text_StringBuilder__Append_60536548(v11, (System_String_o *)this, 0LL);
+      System_Text_StringBuilder__Append_60536548(v11, (System_String_o *)StringLiteral_1546/*":"*/, 0LL);
       this = (EventInfoCircleProgressControl_o *)v3->fields.progressDataList;
       if ( !this )
         break;
       this = (EventInfoCircleProgressControl_o *)System_Collections_Generic_List_object___get_Item(
                                                    (System_Collections_Generic_List_object__o *)this,
                                                    v12,
-                                                   (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__get_Item__);
+                                                   (const MethodInfo_34AD404 *)Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__get_Item__);
       if ( !this )
         break;
       datas = this->fields.datas;
       v13 = System_Int64__ToString((int64_t)&datas, 0LL);
-      System_Text_StringBuilder__Append_59487644(v11, v13, 0LL);
-      System_Text_StringBuilder__Append_59487644(v11, (System_String_o *)StringLiteral_1540/*":"*/, 0LL);
+      System_Text_StringBuilder__Append_60536548(v11, v13, 0LL);
+      System_Text_StringBuilder__Append_60536548(v11, (System_String_o *)StringLiteral_1546/*":"*/, 0LL);
       this = (EventInfoCircleProgressControl_o *)v3->fields.progressDataList;
       if ( !this )
         break;
       this = (EventInfoCircleProgressControl_o *)System_Collections_Generic_List_object___get_Item(
                                                    (System_Collections_Generic_List_object__o *)this,
                                                    v12,
-                                                   (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__get_Item__);
+                                                   (const MethodInfo_34AD404 *)Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__get_Item__);
       if ( !this )
         break;
       animType = this->fields.animType;
       v14 = System_Int64__ToString((int64_t)&animType, 0LL);
-      System_Text_StringBuilder__Append_59487644(v11, v14, 0LL);
-      System_Text_StringBuilder__Append_59487644(v11, (System_String_o *)StringLiteral_1540/*":"*/, 0LL);
+      System_Text_StringBuilder__Append_60536548(v11, v14, 0LL);
+      System_Text_StringBuilder__Append_60536548(v11, (System_String_o *)StringLiteral_1546/*":"*/, 0LL);
       this = (EventInfoCircleProgressControl_o *)v3->fields.progressDataList;
       if ( !this )
         break;
       this = (EventInfoCircleProgressControl_o *)System_Collections_Generic_List_object___get_Item(
                                                    (System_Collections_Generic_List_object__o *)this,
                                                    v12,
-                                                   (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__get_Item__);
+                                                   (const MethodInfo_34AD404 *)Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__get_Item__);
       if ( !this )
         break;
       HIDWORD(v22) = HIDWORD(this->fields.assetData);
       v15 = System_Int32__ToString((int32_t)&v22 + 4, 0LL);
-      System_Text_StringBuilder__Append_59487644(v11, v15, 0LL);
-      System_Text_StringBuilder__Append_59487644(v11, (System_String_o *)StringLiteral_1540/*":"*/, 0LL);
+      System_Text_StringBuilder__Append_60536548(v11, v15, 0LL);
+      System_Text_StringBuilder__Append_60536548(v11, (System_String_o *)StringLiteral_1546/*":"*/, 0LL);
       this = (EventInfoCircleProgressControl_o *)v3->fields.progressDataList;
       if ( !this )
         break;
       this = (EventInfoCircleProgressControl_o *)System_Collections_Generic_List_object___get_Item(
                                                    (System_Collections_Generic_List_object__o *)this,
                                                    v12,
-                                                   (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__get_Item__);
+                                                   (const MethodInfo_34AD404 *)Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__get_Item__);
       if ( !this )
         break;
       LODWORD(v22) = BYTE1(this->fields.assetData2);
       v16 = System_Int32__ToString((int32_t)&v22, 0LL);
-      this = (EventInfoCircleProgressControl_o *)System_Text_StringBuilder__Append_59487644(v11, v16, 0LL);
+      this = (EventInfoCircleProgressControl_o *)System_Text_StringBuilder__Append_60536548(v11, v16, 0LL);
       if ( size == ++v12 )
         goto LABEL_21;
     }
 LABEL_25:
-    sub_1B00F28(this, *(_QWORD *)&eventId);
+    sub_1B64324(this);
   }
 LABEL_21:
   v17 = EventInfoCircleProgressControl_TypeInfo;
@@ -2242,7 +2273,7 @@ LABEL_21:
   }
   SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA = v17->static_fields->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA;
   v19 = System_Int32__ToString((int32_t)&v26, 0LL);
-  this = (EventInfoCircleProgressControl_o *)System_String__Concat_60325748(
+  this = (EventInfoCircleProgressControl_o *)System_String__Concat_61375396(
                                                SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA,
                                                v19,
                                                0LL);
@@ -2266,42 +2297,41 @@ void __fastcall EventInfoCircleProgressControl__SaveProgressExtraData(
   __int64 v5; // x1
   System_Text_StringBuilder_o *v6; // x19
   System_String_o *appended; // x0
-  __int64 v8; // x1
   struct EventInfoCircleProgressControl_ProgressData_o *progressExtraData; // x8
-  struct EventInfoCircleProgressControl_ProgressData_o *v10; // x8
-  System_String_o *v11; // x0
-  struct EventInfoCircleProgressControl_ProgressData_o *v12; // x8
-  System_String_o *v13; // x0
-  struct EventInfoCircleProgressControl_ProgressData_o *v14; // x8
-  System_String_o *v15; // x0
-  struct EventInfoCircleProgressControl_ProgressData_o *v16; // x8
+  struct EventInfoCircleProgressControl_ProgressData_o *v9; // x8
+  System_String_o *v10; // x0
+  struct EventInfoCircleProgressControl_ProgressData_o *v11; // x8
+  System_String_o *v12; // x0
+  struct EventInfoCircleProgressControl_ProgressData_o *v13; // x8
+  System_String_o *v14; // x0
+  struct EventInfoCircleProgressControl_ProgressData_o *v15; // x8
+  System_String_o *v16; // x0
   System_String_o *v17; // x0
-  System_String_o *v18; // x0
-  EventInfoCircleProgressControl_c *v19; // x0
+  EventInfoCircleProgressControl_c *v18; // x0
   System_String_o *SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA; // x20
-  System_String_o *v21; // x0
-  System_String_o *v22; // x20
-  System_String_o *v23; // x0
+  System_String_o *v20; // x0
+  System_String_o *v21; // x20
+  System_String_o *v22; // x0
   int32_t extraCircleState; // [xsp+4h] [xbp-4Ch] BYREF
-  __int64 v25; // [xsp+8h] [xbp-48h] BYREF
+  __int64 v24; // [xsp+8h] [xbp-48h] BYREF
   __int64 OldLevel; // [xsp+10h] [xbp-40h] BYREF
   int64_t OldPoint; // [xsp+18h] [xbp-38h] BYREF
   int32_t Id; // [xsp+28h] [xbp-28h] BYREF
-  int32_t v29; // [xsp+2Ch] [xbp-24h] BYREF
+  int32_t v28; // [xsp+2Ch] [xbp-24h] BYREF
 
-  v29 = eventId;
-  if ( (byte_48E330B & 1) == 0 )
+  v28 = eventId;
+  if ( (byte_49FCF5A & 1) == 0 )
   {
-    sub_1B00CCC(&EventInfoCircleProgressControl_TypeInfo, *(_QWORD *)&eventId);
-    sub_1B00CCC(&System_Text_StringBuilder_TypeInfo, v4);
-    sub_1B00CCC(&StringLiteral_1540/*":"*/, v5);
-    byte_48E330B = 1;
+    sub_1B640C8(&EventInfoCircleProgressControl_TypeInfo, *(_QWORD *)&eventId);
+    sub_1B640C8(&System_Text_StringBuilder_TypeInfo, v4);
+    sub_1B640C8(&StringLiteral_1546/*":"*/, v5);
+    byte_49FCF5A = 1;
   }
   OldLevel = 0LL;
   OldPoint = 0LL;
-  v25 = 0LL;
+  v24 = 0LL;
   extraCircleState = 0;
-  v6 = (System_Text_StringBuilder_o *)sub_1B00F18(System_Text_StringBuilder_TypeInfo);
+  v6 = (System_Text_StringBuilder_o *)sub_1B64314(System_Text_StringBuilder_TypeInfo, *(_QWORD *)&eventId, method);
   System_Text_StringBuilder___ctor(v6, 0LL);
   progressExtraData = this->fields.progressExtraData;
   if ( !progressExtraData )
@@ -2310,65 +2340,65 @@ void __fastcall EventInfoCircleProgressControl__SaveProgressExtraData(
   appended = System_Int32__ToString((int32_t)&Id, 0LL);
   if ( !v6 )
     goto LABEL_12;
-  System_Text_StringBuilder__Append_59487644(v6, appended, 0LL);
-  appended = (System_String_o *)System_Text_StringBuilder__Append_59487644(
+  System_Text_StringBuilder__Append_60536548(v6, appended, 0LL);
+  appended = (System_String_o *)System_Text_StringBuilder__Append_60536548(
                                   v6,
-                                  (System_String_o *)StringLiteral_1540/*":"*/,
+                                  (System_String_o *)StringLiteral_1546/*":"*/,
                                   0LL);
-  v10 = this->fields.progressExtraData;
-  if ( !v10 )
+  v9 = this->fields.progressExtraData;
+  if ( !v9 )
     goto LABEL_12;
-  OldPoint = v10->fields.OldPoint;
-  v11 = System_Int64__ToString((int64_t)&OldPoint, 0LL);
-  System_Text_StringBuilder__Append_59487644(v6, v11, 0LL);
-  appended = (System_String_o *)System_Text_StringBuilder__Append_59487644(
+  OldPoint = v9->fields.OldPoint;
+  v10 = System_Int64__ToString((int64_t)&OldPoint, 0LL);
+  System_Text_StringBuilder__Append_60536548(v6, v10, 0LL);
+  appended = (System_String_o *)System_Text_StringBuilder__Append_60536548(
                                   v6,
-                                  (System_String_o *)StringLiteral_1540/*":"*/,
+                                  (System_String_o *)StringLiteral_1546/*":"*/,
                                   0LL);
-  v12 = this->fields.progressExtraData;
-  if ( !v12 )
+  v11 = this->fields.progressExtraData;
+  if ( !v11 )
     goto LABEL_12;
-  OldLevel = v12->fields.OldLevel;
-  v13 = System_Int64__ToString((int64_t)&OldLevel, 0LL);
-  System_Text_StringBuilder__Append_59487644(v6, v13, 0LL);
-  appended = (System_String_o *)System_Text_StringBuilder__Append_59487644(
+  OldLevel = v11->fields.OldLevel;
+  v12 = System_Int64__ToString((int64_t)&OldLevel, 0LL);
+  System_Text_StringBuilder__Append_60536548(v6, v12, 0LL);
+  appended = (System_String_o *)System_Text_StringBuilder__Append_60536548(
                                   v6,
-                                  (System_String_o *)StringLiteral_1540/*":"*/,
+                                  (System_String_o *)StringLiteral_1546/*":"*/,
                                   0LL);
-  v14 = this->fields.progressExtraData;
-  if ( !v14
-    || (HIDWORD(v25) = v14->fields.OldDispState,
-        v15 = System_Int32__ToString((int32_t)&v25 + 4, 0LL),
-        System_Text_StringBuilder__Append_59487644(v6, v15, 0LL),
-        appended = (System_String_o *)System_Text_StringBuilder__Append_59487644(
+  v13 = this->fields.progressExtraData;
+  if ( !v13
+    || (HIDWORD(v24) = v13->fields.OldDispState,
+        v14 = System_Int32__ToString((int32_t)&v24 + 4, 0LL),
+        System_Text_StringBuilder__Append_60536548(v6, v14, 0LL),
+        appended = (System_String_o *)System_Text_StringBuilder__Append_60536548(
                                         v6,
-                                        (System_String_o *)StringLiteral_1540/*":"*/,
+                                        (System_String_o *)StringLiteral_1546/*":"*/,
                                         0LL),
-        (v16 = this->fields.progressExtraData) == 0LL) )
+        (v15 = this->fields.progressExtraData) == 0LL) )
   {
 LABEL_12:
-    sub_1B00F28(appended, v8);
+    sub_1B64324(appended);
   }
-  LODWORD(v25) = v16->fields.IsOldCompleted;
-  v17 = System_Int32__ToString((int32_t)&v25, 0LL);
-  System_Text_StringBuilder__Append_59487644(v6, v17, 0LL);
-  System_Text_StringBuilder__Append_59487644(v6, (System_String_o *)StringLiteral_1540/*":"*/, 0LL);
+  LODWORD(v24) = v15->fields.IsOldCompleted;
+  v16 = System_Int32__ToString((int32_t)&v24, 0LL);
+  System_Text_StringBuilder__Append_60536548(v6, v16, 0LL);
+  System_Text_StringBuilder__Append_60536548(v6, (System_String_o *)StringLiteral_1546/*":"*/, 0LL);
   extraCircleState = this->fields.extraCircleState;
-  v18 = System_Int32__ToString((int32_t)&extraCircleState, 0LL);
-  System_Text_StringBuilder__Append_59487644(v6, v18, 0LL);
-  v19 = EventInfoCircleProgressControl_TypeInfo;
+  v17 = System_Int32__ToString((int32_t)&extraCircleState, 0LL);
+  System_Text_StringBuilder__Append_60536548(v6, v17, 0LL);
+  v18 = EventInfoCircleProgressControl_TypeInfo;
   if ( !EventInfoCircleProgressControl_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EventInfoCircleProgressControl_TypeInfo);
-    v19 = EventInfoCircleProgressControl_TypeInfo;
+    v18 = EventInfoCircleProgressControl_TypeInfo;
   }
-  SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA = v19->static_fields->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA;
-  v21 = System_Int32__ToString((int32_t)&v29, 0LL);
-  v22 = System_String__Concat_60325748(SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA, v21, 0LL);
-  v23 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v6->klass->vtable._3_ToString.method)(
+  SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA = v18->static_fields->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA;
+  v20 = System_Int32__ToString((int32_t)&v28, 0LL);
+  v21 = System_String__Concat_61375396(SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA, v20, 0LL);
+  v22 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v6->klass->vtable._3_ToString.method)(
                              v6,
                              v6->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
-  UnityEngine_PlayerPrefs__SetString(v22, v23, 0LL);
+  UnityEngine_PlayerPrefs__SetString(v21, v22, 0LL);
 }
 
 
@@ -2387,10 +2417,10 @@ void __fastcall EventInfoCircleProgressControl__SaveTitleState(
   int32_t v10; // [xsp+Ch] [xbp-24h] BYREF
 
   v10 = eventId;
-  if ( (byte_48E3309 & 1) == 0 )
+  if ( (byte_49FCF58 & 1) == 0 )
   {
-    sub_1B00CCC(&EventInfoCircleProgressControl_TypeInfo, *(_QWORD *)&eventId);
-    byte_48E3309 = 1;
+    sub_1B640C8(&EventInfoCircleProgressControl_TypeInfo, *(_QWORD *)&eventId);
+    byte_49FCF58 = 1;
   }
   v4 = EventInfoCircleProgressControl_TypeInfo;
   titleDispState = this->fields.titleDispState;
@@ -2401,7 +2431,7 @@ void __fastcall EventInfoCircleProgressControl__SaveTitleState(
   }
   SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE = v4->static_fields->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE;
   v6 = System_Int32__ToString((int32_t)&v10, 0LL);
-  v7 = System_String__Concat_60325748(SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE, v6, 0LL);
+  v7 = System_String__Concat_61375396(SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE, v6, 0LL);
   v8 = System_Int32__ToString((int32_t)&titleDispState, 0LL);
   UnityEngine_PlayerPrefs__SetString(v7, v8, 0LL);
 }
@@ -2447,22 +2477,23 @@ void __fastcall EventInfoCircleProgressControl__SetupDisp(
   int v7; // s2
   const MethodInfo *v8; // x2
   struct EventUiEntity_o *v9; // x8
-  const MethodInfo *v10; // x2
+  __int64 v10; // x1
+  const MethodInfo *v11; // x2
   struct EventInfoCircleProgressObjectComponent_array *circleProgressList; // x8
   int max_length; // w21
-  il2cpp_array_size_t v13; // w22
-  Il2CppClass **v14; // x8
-  EventInfoCircleProgressObjectComponent_o *v15; // x20
-  const MethodInfo *v16; // x2
+  il2cpp_array_size_t v14; // w22
+  Il2CppClass **v15; // x8
+  EventInfoCircleProgressObjectComponent_o *v16; // x20
+  const MethodInfo *v17; // x2
   EventInfoCircleProgressControl_ProgressData_o *ProgressData; // x0
-  const MethodInfo *v18; // x3
-  struct EventUiEntity_o *v19; // x8
+  const MethodInfo *v19; // x3
+  struct EventUiEntity_o *v20; // x8
   UnityEngine_Component_o *extraCircleProgres; // x20
   int32_t extraCircleState; // w21
   float extraCircleHidePosX; // s8
   UnityEngine_GameObject_o *gameObject; // x0
-  const MethodInfo *v24; // x3
-  const MethodInfo *v25; // x1
+  const MethodInfo *v25; // x3
+  const MethodInfo *v26; // x1
 
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity )
@@ -2485,31 +2516,31 @@ void __fastcall EventInfoCircleProgressControl__SetupDisp(
   max_length = circleProgressList->max_length;
   if ( max_length >= 1 )
   {
-    v13 = 0;
+    v14 = 0;
     do
     {
-      if ( v13 >= circleProgressList->max_length )
-        sub_1B00F30(this, method);
-      v14 = &circleProgressList->obj.klass + (int)v13;
-      v15 = (EventInfoCircleProgressObjectComponent_o *)v14[4];
-      if ( !v15 )
+      if ( v14 >= circleProgressList->max_length )
+        sub_1B6432C(this, v10);
+      v15 = &circleProgressList->obj.klass + (int)v14;
+      v16 = (EventInfoCircleProgressObjectComponent_o *)v15[4];
+      if ( !v16 )
         break;
-      EventInfoCircleProgressObjectComponent__SetActive((EventInfoCircleProgressObjectComponent_o *)v14[4], 1, v10);
-      ProgressData = EventInfoCircleProgressControl__GetProgressData(v4, v15->fields.circleId, v16);
-      EventInfoCircleProgressObjectComponent__Setup(v15, v4, ProgressData, v18);
-      if ( max_length == ++v13 )
+      EventInfoCircleProgressObjectComponent__SetActive((EventInfoCircleProgressObjectComponent_o *)v15[4], 1, v11);
+      ProgressData = EventInfoCircleProgressControl__GetProgressData(v4, v16->fields.circleId, v17);
+      EventInfoCircleProgressObjectComponent__Setup(v16, v4, ProgressData, v19);
+      if ( max_length == ++v14 )
         goto LABEL_13;
       circleProgressList = v4->fields.circleProgressList;
     }
     while ( circleProgressList );
 LABEL_12:
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   }
 LABEL_13:
-  v19 = v4->fields.eventUiEntity;
-  if ( !v19 )
+  v20 = v4->fields.eventUiEntity;
+  if ( !v20 )
     goto LABEL_12;
-  EventInfoCircleProgressControl__LoadProgressExtraData(v4, v19->fields.eventId, v10);
+  EventInfoCircleProgressControl__LoadProgressExtraData(v4, v20->fields.eventId, v11);
   extraCircleProgres = (UnityEngine_Component_o *)v4->fields.extraCircleProgres;
   if ( !extraCircleProgres )
     goto LABEL_12;
@@ -2529,8 +2560,8 @@ LABEL_13:
     (EventInfoCircleProgressObjectComponent_o *)extraCircleProgres,
     v4,
     v4->fields.progressExtraData,
-    v24);
-  EventInfoCircleProgressControl__SetupMuralButton(v4, v25);
+    v25);
+  EventInfoCircleProgressControl__SetupMuralButton(v4, v26);
 }
 
 
@@ -2539,27 +2570,25 @@ void __fastcall EventInfoCircleProgressControl__SetupMuralButton(
         const MethodInfo *method)
 {
   struct UnityEngine_GameObject_o *IsTargetScene; // x0
-  struct UnityEngine_GameObject_o *v4; // x1
-  char v5; // w20
-  int32_t v6; // w2
-  int32_t v7; // w3
+  char v4; // w20
+  int32_t v5; // w2
+  int32_t v6; // w3
   struct EventUiEntity_o *eventUiEntity; // x8
 
   IsTargetScene = (struct UnityEngine_GameObject_o *)EventInfoUIBase__IsTargetScene((EventInfoUIBase_o *)this, 72, 0LL);
   if ( !this->fields.muralButton )
     goto LABEL_12;
-  v5 = (char)IsTargetScene;
+  v4 = (char)IsTargetScene;
   IsTargetScene = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this->fields.muralButton, 0LL);
-  v4 = IsTargetScene;
-  if ( (v5 & 1) != 0 )
+  if ( (v4 & 1) != 0 )
   {
     if ( IsTargetScene )
       goto LABEL_11;
 LABEL_12:
-    sub_1B00F28(IsTargetScene, v4);
+    sub_1B64324(IsTargetScene);
   }
   this->fields.muralButtonObject = IsTargetScene;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.muralButtonObject, (int32_t)IsTargetScene, v6, v7);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.muralButtonObject, (int32_t)IsTargetScene, v5, v6);
   IsTargetScene = this->fields.muralButtonObject;
   if ( !IsTargetScene )
     goto LABEL_12;
@@ -2603,7 +2632,7 @@ void __fastcall EventInfoCircleProgressControl___Initialization_b__30_0(
 
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity )
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   EventInfoUIBase__LoadLocalAtlas((EventInfoUIBase_o *)this, eventUiEntity->fields.eventId, 0LL);
 }
 
@@ -2627,23 +2656,24 @@ void __fastcall EventInfoCircleProgressControl_ProgressData___ctor(
 void __fastcall EventInfoCircleProgressControl___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int32_t v3; // w2
-  int32_t v4; // w3
+  __int64 v2; // x2
+  Il2CppObject *v3; // x19
+  int32_t v4; // w2
+  int32_t v5; // w3
 
-  if ( (byte_48E3314 & 1) == 0 )
+  if ( (byte_49FCF63 & 1) == 0 )
   {
-    sub_1B00CCC(&EventInfoCircleProgressControl___c_TypeInfo, v1);
-    byte_48E3314 = 1;
+    sub_1B640C8(&EventInfoCircleProgressControl___c_TypeInfo, v1);
+    byte_49FCF63 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B00F18(EventInfoCircleProgressControl___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  EventInfoCircleProgressControl___c_TypeInfo->static_fields->__9 = (struct EventInfoCircleProgressControl___c_o *)v2;
-  sub_1B00C70(
+  v3 = (Il2CppObject *)sub_1B64314(EventInfoCircleProgressControl___c_TypeInfo, v1, v2);
+  System_Object___ctor(v3, 0LL);
+  EventInfoCircleProgressControl___c_TypeInfo->static_fields->__9 = (struct EventInfoCircleProgressControl___c_o *)v3;
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)EventInfoCircleProgressControl___c_TypeInfo->static_fields,
-    (int32_t)v2,
-    v3,
-    v4);
+    (int32_t)v3,
+    v4,
+    v5);
 }
 
 
@@ -2662,7 +2692,7 @@ int32_t __fastcall EventInfoCircleProgressControl___c___GetEnableEventPointBuffE
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1B00F28(this, a);
+    sub_1B64324(this);
   return b->fields.eventPoint - a->fields.eventPoint;
 }
 
@@ -2675,7 +2705,7 @@ bool __fastcall EventInfoCircleProgressControl___c___GetProgressBarAnimObject_b_
   struct EventInfoCircleProgressControl_ProgressData_o *progressData; // x8
 
   if ( !n || (progressData = n->fields.progressData) == 0LL )
-    sub_1B00F28(this, n);
+    sub_1B64324(this);
   return progressData->fields.Point > progressData->fields.OldPoint;
 }
 
@@ -2688,7 +2718,7 @@ bool __fastcall EventInfoCircleProgressControl___c___GetProgressCompleteAnimObjc
   struct EventInfoCircleProgressControl_ProgressData_o *progressData; // x8
 
   if ( !n || (progressData = n->fields.progressData) == 0LL )
-    sub_1B00F28(this, n);
+    sub_1B64324(this);
   return !progressData->fields.IsOldCompleted && progressData->fields.IsCompleted;
 }
 
@@ -2709,12 +2739,13 @@ void __fastcall EventInfoCircleProgressControl___c__DisplayClass35_0___PlayAnim_
   struct EventInfoCircleProgressControl_o *_4__this; // x8
   EventInfoUIVoicePlayer_o *uiVoicePlayer; // x20
   struct EventInfoCircleProgressControl_o *v5; // x8
+  EventInfoCircleProgressControl___c__DisplayClass35_0_o *v6; // x1
 
   v2 = this;
-  if ( (byte_48E3316 & 1) == 0 )
+  if ( (byte_49FCF65 & 1) == 0 )
   {
-    this = (EventInfoCircleProgressControl___c__DisplayClass35_0_o *)sub_1B00CCC(&TerminalPramsManager_TypeInfo, method);
-    byte_48E3316 = 1;
+    this = (EventInfoCircleProgressControl___c__DisplayClass35_0_o *)sub_1B640C8(&TerminalPramsManager_TypeInfo, method);
+    byte_49FCF65 = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -2722,10 +2753,10 @@ void __fastcall EventInfoCircleProgressControl___c__DisplayClass35_0___PlayAnim_
   uiVoicePlayer = _4__this->fields.uiVoicePlayer;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_48DF503 )
+  if ( !byte_49F9045 )
   {
-    sub_1B00CCC(&TerminalPramsManager_TypeInfo, method);
-    byte_48DF503 = 1;
+    sub_1B640C8(&TerminalPramsManager_TypeInfo, method);
+    byte_49F9045 = 1;
   }
   this = (EventInfoCircleProgressControl___c__DisplayClass35_0_o *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -2740,13 +2771,12 @@ void __fastcall EventInfoCircleProgressControl___c__DisplayClass35_0___PlayAnim_
                                                                            this[2].fields.__9__5->fields.method_ptr,
                                                                            0LL),
         (v5 = v2->fields.__4__this) == 0LL)
-    || (method = (const MethodInfo *)this,
-        (this = (EventInfoCircleProgressControl___c__DisplayClass35_0_o *)v5->fields.uiVoicePlayer) == 0LL) )
+    || (v6 = this, (this = (EventInfoCircleProgressControl___c__DisplayClass35_0_o *)v5->fields.uiVoicePlayer) == 0LL) )
   {
 LABEL_14:
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   }
-  EventInfoUIVoicePlayer__Play((EventInfoUIVoicePlayer_o *)this, (EventInfoUIVoicePlayer_VoiceData_o *)method, 0LL);
+  EventInfoUIVoicePlayer__Play((EventInfoUIVoicePlayer_o *)this, (EventInfoUIVoicePlayer_VoiceData_o *)v6, 0LL);
 }
 
 
@@ -2778,7 +2808,7 @@ void __fastcall EventInfoCircleProgressControl___c__DisplayClass35_0___PlayAnim_
   this = (EventInfoCircleProgressControl___c__DisplayClass35_0_o *)this->fields.__4__this;
   if ( !this )
 LABEL_5:
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   EventInfoCircleProgressControl__SaveAllData((EventInfoCircleProgressControl_o *)this, method);
   ActionExtensions__Call(v7->fields.callback, 0LL);
 }
@@ -2788,37 +2818,37 @@ void __fastcall EventInfoCircleProgressControl___c__DisplayClass35_0___PlayAnim_
         EventInfoCircleProgressControl___c__DisplayClass35_0_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
+  __int64 v4; // x1
   System_Action_o *_9__5; // x22
   UnityEngine_MonoBehaviour_o *_4__this; // x19
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_Collections_IEnumerator_o *v8; // x0
-  __int64 v9; // x1
+  int32_t v7; // w2
+  int32_t v8; // w3
+  System_Collections_IEnumerator_o *v9; // x0
 
-  if ( (byte_48E3317 & 1) == 0 )
+  if ( (byte_49FCF66 & 1) == 0 )
   {
-    sub_1B00CCC(&System_Action_TypeInfo, method);
-    sub_1B00CCC(&Method_EventInfoCircleProgressControl___c__DisplayClass35_0__PlayAnim_b__5__, v3);
-    byte_48E3317 = 1;
+    sub_1B640C8(&System_Action_TypeInfo, method);
+    sub_1B640C8(&Method_EventInfoCircleProgressControl___c__DisplayClass35_0__PlayAnim_b__5__, v4);
+    byte_49FCF66 = 1;
   }
   _9__5 = this->fields.__9__5;
   _4__this = (UnityEngine_MonoBehaviour_o *)this->fields.__4__this;
   if ( !_9__5 )
   {
-    _9__5 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+    _9__5 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, method, v2);
     System_Action___ctor(
       _9__5,
       (Il2CppObject *)this,
       Method_EventInfoCircleProgressControl___c__DisplayClass35_0__PlayAnim_b__5__,
       0LL);
     this->fields.__9__5 = _9__5;
-    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.__9__5, (int32_t)_9__5, v6, v7);
+    sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.__9__5, (int32_t)_9__5, v7, v8);
   }
-  v8 = BasicHelper__DelayCall(0.5, _9__5, 0LL);
+  v9 = BasicHelper__DelayCall(0.5, _9__5, 0LL);
   if ( !_4__this )
-    sub_1B00F28(v8, v9);
-  UnityEngine_MonoBehaviour__StartCoroutine_68062928(_4__this, v8, 0LL);
+    sub_1B64324(v9);
+  UnityEngine_MonoBehaviour__StartCoroutine_69113008(_4__this, v9, 0LL);
 }
 
 
@@ -2830,6 +2860,8 @@ void __fastcall EventInfoCircleProgressControl___c__DisplayClass35_0___PlayAnim_
   struct EventInfoCircleProgressControl_o *_4__this; // x8
   EventInfoUIVoicePlayer_o *uiVoicePlayer; // x20
   struct EventInfoCircleProgressControl_o *v5; // x8
+  EventInfoCircleProgressControl___c__DisplayClass35_0_o *v6; // x1
+  const MethodInfo *v7; // x1
   struct EventInfoCircleProgressObjectComponent_o *progressBarAnimObject; // x8
   struct EventInfoCircleProgressControl_ProgressData_o *progressData; // x8
   int32_t Level; // w10
@@ -2837,10 +2869,10 @@ void __fastcall EventInfoCircleProgressControl___c__DisplayClass35_0___PlayAnim_
   bool IsCompleted; // w12
 
   v2 = this;
-  if ( (byte_48E3315 & 1) == 0 )
+  if ( (byte_49FCF64 & 1) == 0 )
   {
-    this = (EventInfoCircleProgressControl___c__DisplayClass35_0_o *)sub_1B00CCC(&TerminalPramsManager_TypeInfo, method);
-    byte_48E3315 = 1;
+    this = (EventInfoCircleProgressControl___c__DisplayClass35_0_o *)sub_1B640C8(&TerminalPramsManager_TypeInfo, method);
+    byte_49FCF64 = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -2848,10 +2880,10 @@ void __fastcall EventInfoCircleProgressControl___c__DisplayClass35_0___PlayAnim_
   uiVoicePlayer = _4__this->fields.uiVoicePlayer;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_48DF503 )
+  if ( !byte_49F9045 )
   {
-    sub_1B00CCC(&TerminalPramsManager_TypeInfo, method);
-    byte_48DF503 = 1;
+    sub_1B640C8(&TerminalPramsManager_TypeInfo, method);
+    byte_49F9045 = 1;
   }
   this = (EventInfoCircleProgressControl___c__DisplayClass35_0_o *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -2869,11 +2901,11 @@ void __fastcall EventInfoCircleProgressControl___c__DisplayClass35_0___PlayAnim_
   v5 = v2->fields.__4__this;
   if ( !v5 )
     goto LABEL_17;
-  method = (const MethodInfo *)this;
+  v6 = this;
   this = (EventInfoCircleProgressControl___c__DisplayClass35_0_o *)v5->fields.uiVoicePlayer;
   if ( !this )
     goto LABEL_17;
-  EventInfoUIVoicePlayer__Play((EventInfoUIVoicePlayer_o *)this, (EventInfoUIVoicePlayer_VoiceData_o *)method, 0LL);
+  EventInfoUIVoicePlayer__Play((EventInfoUIVoicePlayer_o *)this, (EventInfoUIVoicePlayer_VoiceData_o *)v6, 0LL);
   progressBarAnimObject = v2->fields.progressBarAnimObject;
   if ( !progressBarAnimObject )
     goto LABEL_17;
@@ -2890,8 +2922,8 @@ void __fastcall EventInfoCircleProgressControl___c__DisplayClass35_0___PlayAnim_
   this = (EventInfoCircleProgressControl___c__DisplayClass35_0_o *)v2->fields.__4__this;
   if ( !this )
 LABEL_17:
-    sub_1B00F28(this, method);
-  EventInfoCircleProgressControl__SaveAllData((EventInfoCircleProgressControl_o *)this, method);
+    sub_1B64324(this);
+  EventInfoCircleProgressControl__SaveAllData((EventInfoCircleProgressControl_o *)this, v7);
   ActionExtensions__Call(v2->fields.callback, 0LL);
 }
 
@@ -2939,7 +2971,7 @@ void __fastcall EventInfoCircleProgressControl___c__DisplayClass35_0___PlayAnim_
         goto LABEL_8;
     }
 LABEL_9:
-    sub_1B00F28(_4__this, method);
+    sub_1B64324(_4__this);
   }
 LABEL_8:
   EventInfoCircleProgressControl__SaveAllData(_4__this, method);
@@ -2960,29 +2992,29 @@ void __fastcall EventInfoCircleProgressControl___c__DisplayClass35_0___PlayAnim_
   int32_t v8; // w3
 
   v3 = this;
-  if ( (byte_48E3318 & 1) == 0 )
+  if ( (byte_49FCF67 & 1) == 0 )
   {
-    sub_1B00CCC(&System_Action_TypeInfo, method);
-    this = (EventInfoCircleProgressControl___c__DisplayClass35_0_o *)sub_1B00CCC(
+    sub_1B640C8(&System_Action_TypeInfo, method);
+    this = (EventInfoCircleProgressControl___c__DisplayClass35_0_o *)sub_1B640C8(
                                                                        &Method_EventInfoCircleProgressControl___c__DisplayClass35_0__PlayAnim_b__6__,
                                                                        v4);
-    byte_48E3318 = 1;
+    byte_49FCF67 = 1;
   }
   _9__6 = v3->fields.__9__6;
   _4__this = v3->fields.__4__this;
   if ( !_9__6 )
   {
-    _9__6 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+    _9__6 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, method, v2);
     System_Action___ctor(
       _9__6,
       (Il2CppObject *)v3,
       Method_EventInfoCircleProgressControl___c__DisplayClass35_0__PlayAnim_b__6__,
       0LL);
     v3->fields.__9__6 = _9__6;
-    sub_1B00C70((ServantStatusBattleListViewItem_o *)&v3->fields.__9__6, (int32_t)_9__6, v7, v8);
+    sub_1B6406C((ServantStatusBattleListViewItem_o *)&v3->fields.__9__6, (int32_t)_9__6, v7, v8);
   }
   if ( !_4__this )
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   EventInfoCircleProgressControl__InsertMuralButton(_4__this, _9__6, v2);
 }
 
@@ -3005,7 +3037,7 @@ void __fastcall EventInfoCircleProgressControl___c__DisplayClass35_0___PlayAnim_
         !extraCircleProgres)
     || (progressData = extraCircleProgres->fields.progressData) == 0LL )
   {
-    sub_1B00F28(_4__this, method);
+    sub_1B64324(_4__this);
   }
   Level = progressData->fields.Level;
   DispState = progressData->fields.DispState;
@@ -3071,7 +3103,7 @@ void __fastcall EventInfoCircleProgressControl___c__DisplayClass38_1___PlayTitle
     v9 = v7;
   if ( !_4__this )
 LABEL_7:
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   v10 = CS___8__locals1->fields.fromAngle
       + (float)((float)(CS___8__locals1->fields.toAngle - CS___8__locals1->fields.fromAngle) * v9);
   GameObjectExtensions__AddLocalEulerAngleX(_4__this->fields.titleBaseObject, v10 - this->fields.oldAngle, 0LL);
@@ -3093,7 +3125,7 @@ bool __fastcall EventInfoCircleProgressControl___c__DisplayClass43_0___LoadProgr
         const MethodInfo *method)
 {
   if ( !n )
-    sub_1B00F28(this, 0LL);
+    sub_1B64324(this);
   return n->fields.circleId == this->fields.id;
 }
 
@@ -3112,6 +3144,6 @@ bool __fastcall EventInfoCircleProgressControl___c__DisplayClass51_0___GetProgre
         const MethodInfo *method)
 {
   if ( !n )
-    sub_1B00F28(this, 0LL);
+    sub_1B64324(this);
   return n->fields.Id == this->fields.id;
 }

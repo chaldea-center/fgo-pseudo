@@ -1,34 +1,33 @@
 void __fastcall ReprintStageEntity___ctor(ReprintStageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E2DA0 & 1) == 0 )
+  if ( (byte_49FC9ED & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
-    byte_48E2DA0 = 1;
+    sub_1B640C8(&Method_DataEntityBase_string___ctor__, method);
+    byte_49FC9ED = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D3D1C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-void __fastcall ReprintStageEntity___ctor_38316640(
+void __fastcall ReprintStageEntity___ctor_39250264(
         ReprintStageEntity_o *this,
         ReprintStageEntity_o *cSrc,
         const MethodInfo *method)
 {
   __int64 v5; // x0
-  __int64 v6; // x1
 
-  if ( (byte_48E2DA1 & 1) == 0 )
+  if ( (byte_49FC9EE & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, cSrc);
-    byte_48E2DA1 = 1;
+    sub_1B640C8(&Method_DataEntityBase_string___ctor__, cSrc);
+    byte_49FC9EE = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D3D1C *)Method_DataEntityBase_string___ctor__);
   if ( !cSrc )
-    sub_1B00F28(v5, v6);
+    sub_1B64324(v5);
   *(_OWORD *)&this->fields.questId = *(_OWORD *)&cSrc->fields.questId;
   *(_QWORD *)&this->fields.remapPhase = *(_QWORD *)&cSrc->fields.remapPhase;
 }
@@ -41,16 +40,16 @@ System_String_o *__fastcall ReprintStageEntity__CreatePK(
         int32_t wave,
         const MethodInfo *method)
 {
-  if ( (byte_48E2D9F & 1) == 0 )
+  if ( (byte_49FC9EC & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&questPhase);
-    byte_48E2D9F = 1;
+    sub_1B640C8(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&questPhase);
+    byte_49FC9EC = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            questId,
            questPhase,
            wave,
-           (const MethodInfo_2D612C4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2E37AA0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

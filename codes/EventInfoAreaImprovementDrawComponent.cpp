@@ -13,19 +13,18 @@ void __fastcall EventInfoAreaImprovementDrawComponent__UpdateAreaName(
 {
   __int64 v3; // x1
   EventCooltimeRewardMaster_o *Master_object; // x0
-  __int64 v5; // x1
   EventCooltimeRewardEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_48E32BE & 1) == 0 )
+  if ( (byte_49FCF0D & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataManager_GetMaster_EventCooltimeRewardMaster___, method);
-    sub_1B00CCC(&DataManager_TypeInfo, v3);
-    byte_48E32BE = 1;
+    sub_1B640C8(&Method_DataManager_GetMaster_EventCooltimeRewardMaster___, method);
+    sub_1B640C8(&DataManager_TypeInfo, v3);
+    byte_49FCF0D = 1;
   }
   entity = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (EventCooltimeRewardMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
+  Master_object = (EventCooltimeRewardMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
   if ( !Master_object )
     goto LABEL_12;
   Master_object = (EventCooltimeRewardMaster_o *)EventCooltimeRewardMaster__TryGetEntity(
@@ -43,7 +42,7 @@ void __fastcall EventInfoAreaImprovementDrawComponent__UpdateAreaName(
         (Master_object = (EventCooltimeRewardMaster_o *)this->fields.areaName) == 0LL) )
   {
 LABEL_12:
-    sub_1B00F28(Master_object, v5);
+    sub_1B64324(Master_object);
   }
   UILabel__SetCondensedScale((UILabel_o *)Master_object, this->fields.areaNameWidth, 0LL);
 }
@@ -58,24 +57,23 @@ void __fastcall EventInfoAreaImprovementDrawComponent__UpdateLevelLabel(
   System_String_o *v5; // x21
   Il2CppObject *v6; // x0
   System_String_o *v7; // x0
-  __int64 v8; // x1
   int32_t Level_k__BackingField; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_48E32BD & 1) == 0 )
+  if ( (byte_49FCF0C & 1) == 0 )
   {
-    sub_1B00CCC(&LocalizationManager_TypeInfo, method);
-    sub_1B00CCC(&StringLiteral_8145/*"LEVEL_INFO"*/, v3);
-    byte_48E32BD = 1;
+    sub_1B640C8(&LocalizationManager_TypeInfo, method);
+    sub_1B640C8(&StringLiteral_8198/*"LEVEL_INFO"*/, v3);
+    byte_49FCF0C = 1;
   }
   levelLabel = this->fields.levelLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_8145/*"LEVEL_INFO"*/, 0LL);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_8198/*"LEVEL_INFO"*/, 0LL);
   Level_k__BackingField = this->fields._Level_k__BackingField;
   v6 = (Il2CppObject *)System_Int32__ToString((int32_t)&Level_k__BackingField, 0LL);
   v7 = System_String__Format(v5, v6, 0LL);
   if ( !levelLabel )
-    sub_1B00F28(v7, v8);
+    sub_1B64324(v7);
   UILabel__set_text(levelLabel, v7, 0LL);
 }
 

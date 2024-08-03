@@ -2,10 +2,10 @@ void __fastcall AppendSkillListComponent___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_48E1C80 & 1) == 0 )
+  if ( (byte_49FB856 & 1) == 0 )
   {
-    sub_1B00CCC(&AppendSkillListComponent_TypeInfo, v1);
-    byte_48E1C80 = 1;
+    sub_1B640C8(&AppendSkillListComponent_TypeInfo, v1);
+    byte_49FB856 = 1;
   }
   AppendSkillListComponent_TypeInfo->static_fields->SKILL_LEVEL_LABEL_MAX_LENGTH = 122;
 }
@@ -21,17 +21,17 @@ void __fastcall AppendSkillListComponent__Clear(AppendSkillListComponent_o *this
 {
   UILabel_o *skillLevelListLabel; // x0
 
-  if ( (byte_48E1C7E & 1) == 0 )
+  if ( (byte_49FB854 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_1/*""*/, method);
-    byte_48E1C7E = 1;
+    sub_1B640C8(&StringLiteral_1/*""*/, method);
+    byte_49FB854 = 1;
   }
   skillLevelListLabel = this->fields.skillLevelListLabel;
   if ( !skillLevelListLabel
     || (UILabel__set_text(skillLevelListLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (skillLevelListLabel = (UILabel_o *)this->fields.skillIconSprite) == 0LL) )
   {
-    sub_1B00F28(skillLevelListLabel, method);
+    sub_1B64324(skillLevelListLabel);
   }
   UISprite__set_spriteName((UISprite_o *)skillLevelListLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
@@ -49,12 +49,12 @@ void __fastcall AppendSkillListComponent__Set(
   UILabel_o *v9; // x20
   UISprite_o *skillIconSprite; // x20
 
-  if ( (byte_48E1C7F & 1) == 0 )
+  if ( (byte_49FB855 & 1) == 0 )
   {
-    sub_1B00CCC(&AppendSkillListComponent_TypeInfo, skillLevelListText);
-    sub_1B00CCC(&AtlasManager_TypeInfo, v5);
-    sub_1B00CCC(&StringLiteral_19812/*"icon_append_mini"*/, v6);
-    byte_48E1C7F = 1;
+    sub_1B640C8(&AppendSkillListComponent_TypeInfo, skillLevelListText);
+    sub_1B640C8(&AtlasManager_TypeInfo, v5);
+    sub_1B640C8(&StringLiteral_20004/*"icon_append_mini"*/, v6);
+    byte_49FB855 = 1;
   }
   if ( System_String__IsNullOrEmpty(skillLevelListText, 0LL) )
   {
@@ -76,11 +76,11 @@ void __fastcall AppendSkillListComponent__Set(
     skillIconSprite = this->fields.skillIconSprite;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetEventSprite(skillIconSprite, (System_String_o *)StringLiteral_19812/*"icon_append_mini"*/, 0LL);
+    AtlasManager__SetEventSprite(skillIconSprite, (System_String_o *)StringLiteral_20004/*"icon_append_mini"*/, 0LL);
     skillLevelListLabel = (UILabel_o *)this->fields.skillIconSprite;
     if ( !skillLevelListLabel )
 LABEL_13:
-      sub_1B00F28(skillLevelListLabel, v7);
+      sub_1B64324(skillLevelListLabel);
     ((void (__fastcall *)(UILabel_o *, Il2CppMethodPointer))skillLevelListLabel->klass->vtable._33_MakePixelPerfect.method)(
       skillLevelListLabel,
       skillLevelListLabel->klass->vtable._34_get_minWidth.methodPtr);

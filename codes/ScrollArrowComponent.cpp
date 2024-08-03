@@ -1,32 +1,36 @@
 void __fastcall ScrollArrowComponent___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  __int64 v2; // x1
+  __int64 v2; // x2
   __int64 v3; // x1
+  __int64 v4; // x1
   struct ScrollArrowComponent_StaticFields *static_fields; // x8
-  System_Collections_Generic_List_object__o *v5; // x19
-  struct ScrollArrowComponent_StaticFields *v6; // x0
-  int32_t v7; // w2
-  int32_t v8; // w3
+  System_Collections_Generic_List_object__o *v6; // x19
+  struct ScrollArrowComponent_StaticFields *v7; // x0
+  int32_t v8; // w2
+  int32_t v9; // w3
 
-  if ( (byte_48DF6AA & 1) == 0 )
+  if ( (byte_49F91EC & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_List_ScrollArrowComponent___ctor__, v1);
-    sub_1B00CCC(&System_Collections_Generic_List_ScrollArrowComponent__TypeInfo, v2);
-    sub_1B00CCC(&ScrollArrowComponent_TypeInfo, v3);
-    byte_48DF6AA = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_List_ScrollArrowComponent___ctor__, v1);
+    sub_1B640C8(&System_Collections_Generic_List_ScrollArrowComponent__TypeInfo, v3);
+    sub_1B640C8(&ScrollArrowComponent_TypeInfo, v4);
+    byte_49F91EC = 1;
   }
   static_fields = ScrollArrowComponent_TypeInfo->static_fields;
   static_fields->MOVE_RANGE = 20;
   *(_QWORD *)&static_fields->MOVE_TIME = 0x3E80000040200000LL;
   static_fields->ALPHA_FADE_FRAME_NUM = 16;
-  v5 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_ScrollArrowComponent__TypeInfo);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1B64314(
+                                                      System_Collections_Generic_List_ScrollArrowComponent__TypeInfo,
+                                                      v1,
+                                                      v2);
   System_Collections_Generic_List_object____ctor(
-    v5,
-    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_ScrollArrowComponent___ctor__);
-  v6 = ScrollArrowComponent_TypeInfo->static_fields;
-  v6->_arrowList = (struct System_Collections_Generic_List_ScrollArrowComponent__o *)v5;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v6->_arrowList, (int32_t)v5, v7, v8);
+    v6,
+    (const MethodInfo_34ACEA0 *)Method_System_Collections_Generic_List_ScrollArrowComponent___ctor__);
+  v7 = ScrollArrowComponent_TypeInfo->static_fields;
+  v7->_arrowList = (struct System_Collections_Generic_List_ScrollArrowComponent__o *)v6;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&v7->_arrowList, (int32_t)v6, v8, v9);
 }
 
 
@@ -35,10 +39,10 @@ void __fastcall ScrollArrowComponent___ctor(ScrollArrowComponent_o *this, const 
   ScrollArrowComponent_c *v3; // x0
   struct ScrollArrowComponent_StaticFields *static_fields; // x8
 
-  if ( (byte_48DF6A9 & 1) == 0 )
+  if ( (byte_49F91EB & 1) == 0 )
   {
-    sub_1B00CCC(&ScrollArrowComponent_TypeInfo, method);
-    byte_48DF6A9 = 1;
+    sub_1B640C8(&ScrollArrowComponent_TypeInfo, method);
+    byte_49F91EB = 1;
   }
   v3 = ScrollArrowComponent_TypeInfo;
   if ( !ScrollArrowComponent_TypeInfo->_2.cctor_finished )
@@ -61,20 +65,20 @@ void __fastcall ScrollArrowComponent__Awake(ScrollArrowComponent_o *this, const 
   __int64 v6; // x1
   __int64 v7; // x1
   UnityEngine_Object_o *mWidget; // x21
-  __int64 v9; // x1
   __int64 gameObject; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v12; // w2
-  int32_t v13; // w3
-  ScrollArrowComponent_c *v14; // x0
-  int32_t v15; // w2
-  int32_t v16; // w3
-  ScrollArrowComponent_c *v17; // x0
-  __int64 v18; // x8
-  _QWORD *v19; // x9
-  __int64 v20; // x10
-  __int64 v21; // x8
-  Il2CppObject *v22; // x20
+  int32_t v11; // w2
+  int32_t v12; // w3
+  ScrollArrowComponent_c *v13; // x0
+  int32_t v14; // w2
+  int32_t v15; // w3
+  ScrollArrowComponent_c *v16; // x0
+  __int64 v17; // x8
+  _QWORD *v18; // x9
+  __int64 v19; // x10
+  __int64 v20; // x8
+  Il2CppObject *v21; // x20
+  __int64 v22; // x1
   struct UnityEngine_Vector3_StaticFields *static_fields; // x9
   float y; // s9
   float x; // s10
@@ -83,15 +87,15 @@ void __fastcall ScrollArrowComponent__Awake(ScrollArrowComponent_o *this, const 
   const MethodInfo *v28; // x1
   UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_48DF6A2 & 1) == 0 )
+  if ( (byte_49F91E4 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, method);
-    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_UIWidget___, v3);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_ScrollArrowComponent__Add__, v4);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_ScrollArrowComponent__Contains__, v5);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v6);
-    sub_1B00CCC(&ScrollArrowComponent_TypeInfo, v7);
-    byte_48DF6A2 = 1;
+    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, method);
+    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponent_UIWidget___, v3);
+    sub_1B640C8(&Method_System_Collections_Generic_List_ScrollArrowComponent__Add__, v4);
+    sub_1B640C8(&Method_System_Collections_Generic_List_ScrollArrowComponent__Contains__, v5);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v6);
+    sub_1B640C8(&ScrollArrowComponent_TypeInfo, v7);
+    byte_49F91E4 = 1;
   }
   mWidget = (UnityEngine_Object_o *)this->fields.mWidget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -103,70 +107,70 @@ void __fastcall ScrollArrowComponent__Awake(ScrollArrowComponent_o *this, const 
       goto LABEL_33;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)gameObject,
-                         (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+                         (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
     this->fields.mWidget = (struct UIWidget_o *)Component_object;
-    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.mWidget, (int32_t)Component_object, v12, v13);
+    sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.mWidget, (int32_t)Component_object, v11, v12);
   }
-  v14 = ScrollArrowComponent_TypeInfo;
+  v13 = ScrollArrowComponent_TypeInfo;
   if ( !ScrollArrowComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ScrollArrowComponent_TypeInfo);
-    v14 = ScrollArrowComponent_TypeInfo;
+    v13 = ScrollArrowComponent_TypeInfo;
   }
-  gameObject = (__int64)v14->static_fields->_arrowList;
+  gameObject = (__int64)v13->static_fields->_arrowList;
   if ( !gameObject )
 LABEL_33:
-    sub_1B00F28(gameObject, v9);
+    sub_1B64324(gameObject);
   if ( !System_Collections_Generic_List_object___Contains(
           (System_Collections_Generic_List_object__o *)gameObject,
           (Il2CppObject *)this,
-          (const MethodInfo_33C1D60 *)Method_System_Collections_Generic_List_ScrollArrowComponent__Contains__) )
+          (const MethodInfo_34ADA64 *)Method_System_Collections_Generic_List_ScrollArrowComponent__Contains__) )
   {
-    v17 = ScrollArrowComponent_TypeInfo;
+    v16 = ScrollArrowComponent_TypeInfo;
     if ( !ScrollArrowComponent_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(ScrollArrowComponent_TypeInfo);
-      v17 = ScrollArrowComponent_TypeInfo;
+      v16 = ScrollArrowComponent_TypeInfo;
     }
-    gameObject = (__int64)v17->static_fields->_arrowList;
+    gameObject = (__int64)v16->static_fields->_arrowList;
     if ( !gameObject )
       goto LABEL_33;
-    v18 = *(_QWORD *)(gameObject + 16);
-    v19 = Method_System_Collections_Generic_List_ScrollArrowComponent__Add__;
+    v17 = *(_QWORD *)(gameObject + 16);
+    v18 = Method_System_Collections_Generic_List_ScrollArrowComponent__Add__;
     ++*(_DWORD *)(gameObject + 28);
-    if ( !v18 )
+    if ( !v17 )
       goto LABEL_33;
-    v20 = *(int *)(gameObject + 24);
-    if ( (unsigned int)v20 >= *(_DWORD *)(v18 + 24) )
+    v19 = *(int *)(gameObject + 24);
+    if ( (unsigned int)v19 >= *(_DWORD *)(v17 + 24) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)gameObject,
         (Il2CppObject *)this,
-        *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+        *(const MethodInfo_34AD6D4 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
     }
     else
     {
-      v21 = v18 + 8 * v20;
-      *(_DWORD *)(gameObject + 24) = v20 + 1;
-      *(_QWORD *)(v21 + 32) = this;
-      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v21 + 32), (int32_t)this, v15, v16);
+      v20 = v17 + 8 * v19;
+      *(_DWORD *)(gameObject + 24) = v19 + 1;
+      *(_QWORD *)(v20 + 32) = this;
+      sub_1B6406C((ServantStatusBattleListViewItem_o *)(v20 + 32), (int32_t)this, v14, v15);
     }
   }
   gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     goto LABEL_33;
-  v22 = UnityEngine_GameObject__GetComponent_object_(
+  v21 = UnityEngine_GameObject__GetComponent_object_(
           (UnityEngine_GameObject_o *)gameObject,
-          (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+          (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  gameObject = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v22, 0LL, 0LL);
+  gameObject = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v21, 0LL, 0LL);
   if ( (gameObject & 1) != 0 )
   {
-    if ( !byte_48DD9F1 )
+    if ( !byte_49F7111 )
     {
-      gameObject = sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, v9);
-      byte_48DD9F1 = 1;
+      gameObject = sub_1B640C8(&UnityEngine_Vector3_TypeInfo, v22);
+      byte_49F7111 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     x = static_fields->zeroVector.fields.x;
@@ -189,15 +193,15 @@ LABEL_33:
       default:
         break;
     }
-    if ( v22 )
+    if ( v21 )
     {
-      *(float *)&v22[3].monitor = this->fields.moveTime;
+      *(float *)&v21[3].monitor = this->fields.moveTime;
       v27 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
       LocalPosition = GameObjectExtensions__GetLocalPosition(v27, v28);
-      *(UnityEngine_Vector3_o *)&v22[8].klass = LocalPosition;
-      *((float *)&v22[8].monitor + 1) = x + LocalPosition.fields.x;
-      *(float *)&v22[9].klass = y + LocalPosition.fields.y;
-      *((float *)&v22[9].klass + 1) = z + LocalPosition.fields.z;
+      *(UnityEngine_Vector3_o *)&v21[8].klass = LocalPosition;
+      *((float *)&v21[8].monitor + 1) = x + LocalPosition.fields.x;
+      *(float *)&v21[9].klass = y + LocalPosition.fields.y;
+      *((float *)&v21[9].klass + 1) = z + LocalPosition.fields.z;
       return;
     }
     goto LABEL_33;
@@ -213,14 +217,16 @@ AlphaTransitionCalculator_o *__fastcall ScrollArrowComponent__CreateWidgetAlphaC
   ScrollArrowComponent_c *v3; // x0
   float v4; // s8
   System_Func_float__float__float__float__o *v5; // x19
-  AlphaTransitionCalculator_o *v6; // x20
-  const MethodInfo *v7; // x2
+  __int64 v6; // x1
+  __int64 v7; // x2
+  AlphaTransitionCalculator_o *v8; // x20
+  const MethodInfo *v9; // x2
 
-  if ( (byte_48DF6A8 & 1) == 0 )
+  if ( (byte_49F91EA & 1) == 0 )
   {
-    sub_1B00CCC(&AlphaTransitionCalculator_TypeInfo, method);
-    sub_1B00CCC(&ScrollArrowComponent_TypeInfo, v2);
-    byte_48DF6A8 = 1;
+    sub_1B640C8(&AlphaTransitionCalculator_TypeInfo, method);
+    sub_1B640C8(&ScrollArrowComponent_TypeInfo, v2);
+    byte_49F91EA = 1;
   }
   v3 = ScrollArrowComponent_TypeInfo;
   if ( !ScrollArrowComponent_TypeInfo->_2.cctor_finished )
@@ -233,9 +239,9 @@ AlphaTransitionCalculator_o *__fastcall ScrollArrowComponent__CreateWidgetAlphaC
          ScrollArrowComponent_TypeInfo->static_fields->TGT_ALP_SPD_RATE,
          (float)ScrollArrowComponent_TypeInfo->static_fields->ALPHA_FADE_FRAME_NUM,
          0LL);
-  v6 = (AlphaTransitionCalculator_o *)sub_1B00F18(AlphaTransitionCalculator_TypeInfo);
-  AlphaTransitionCalculator___ctor(v6, v4, v5, v7);
-  return v6;
+  v8 = (AlphaTransitionCalculator_o *)sub_1B64314(AlphaTransitionCalculator_TypeInfo, v6, v7);
+  AlphaTransitionCalculator___ctor(v8, v4, v5, v9);
+  return v8;
 }
 
 
@@ -252,22 +258,21 @@ ScrollArrowComponent_o *__fastcall ScrollArrowComponent__FetchActiveArrow(
   System_Collections_Generic_List_object__o *arrowList; // x0
   Il2CppObject *current; // x20
   _BOOL8 v11; // x0
-  __int64 v12; // x1
-  System_Collections_Generic_List_Enumerator_object__o v14; // [xsp+8h] [xbp-68h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v15; // [xsp+20h] [xbp-50h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+8h] [xbp-68h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v14; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_48DF6A6 & 1) == 0 )
+  if ( (byte_49F91E8 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_ScrollArrowComponent__Dispose__, method);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_ScrollArrowComponent__MoveNext__, v3);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_ScrollArrowComponent__get_Current__, v4);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_ScrollArrowComponent__GetEnumerator__, v5);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v6);
-    sub_1B00CCC(&ScrollArrowComponent_TypeInfo, v7);
-    byte_48DF6A6 = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_ScrollArrowComponent__Dispose__, method);
+    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_ScrollArrowComponent__MoveNext__, v3);
+    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_ScrollArrowComponent__get_Current__, v4);
+    sub_1B640C8(&Method_System_Collections_Generic_List_ScrollArrowComponent__GetEnumerator__, v5);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v6);
+    sub_1B640C8(&ScrollArrowComponent_TypeInfo, v7);
+    byte_49F91E8 = 1;
   }
   v8 = ScrollArrowComponent_TypeInfo;
-  memset(&v15, 0, sizeof(v15));
+  memset(&v14, 0, sizeof(v14));
   if ( !ScrollArrowComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ScrollArrowComponent_TypeInfo);
@@ -275,24 +280,24 @@ ScrollArrowComponent_o *__fastcall ScrollArrowComponent__FetchActiveArrow(
   }
   arrowList = (System_Collections_Generic_List_object__o *)v8->static_fields->_arrowList;
   if ( !arrowList )
-    sub_1B00F28(0LL, method);
+    sub_1B64324(0LL);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v14,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v13,
     arrowList,
-    (const MethodInfo_33C24C8 *)Method_System_Collections_Generic_List_ScrollArrowComponent__GetEnumerator__);
-  v15 = v14;
+    (const MethodInfo_34AE26C *)Method_System_Collections_Generic_List_ScrollArrowComponent__GetEnumerator__);
+  v14 = v13;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v15,
-            (const MethodInfo_313E218 *)Method_System_Collections_Generic_List_Enumerator_ScrollArrowComponent__MoveNext__) )
+            &v14,
+            (const MethodInfo_322A0B0 *)Method_System_Collections_Generic_List_Enumerator_ScrollArrowComponent__MoveNext__) )
   {
-    current = v15.fields._current;
+    current = v14.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v11 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0LL, 0LL);
     if ( v11 )
     {
       if ( !current )
-        sub_1B00F28(v11, v12);
+        sub_1B64324(v11);
       if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)current, 0LL) )
       {
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -305,8 +310,8 @@ ScrollArrowComponent_o *__fastcall ScrollArrowComponent__FetchActiveArrow(
   current = 0LL;
 LABEL_18:
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v15,
-    (const MethodInfo_313E214 *)Method_System_Collections_Generic_List_Enumerator_ScrollArrowComponent__Dispose__);
+    &v14,
+    (const MethodInfo_322A0AC *)Method_System_Collections_Generic_List_Enumerator_ScrollArrowComponent__Dispose__);
   return (ScrollArrowComponent_o *)current;
 }
 
@@ -317,11 +322,11 @@ void __fastcall ScrollArrowComponent__OnDestroy(ScrollArrowComponent_o *this, co
   ScrollArrowComponent_c *v4; // x0
   System_Collections_Generic_List_object__o *arrowList; // x0
 
-  if ( (byte_48DF6A3 & 1) == 0 )
+  if ( (byte_49F91E5 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_List_ScrollArrowComponent__Remove__, method);
-    sub_1B00CCC(&ScrollArrowComponent_TypeInfo, v3);
-    byte_48DF6A3 = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_List_ScrollArrowComponent__Remove__, method);
+    sub_1B640C8(&ScrollArrowComponent_TypeInfo, v3);
+    byte_49F91E5 = 1;
   }
   v4 = ScrollArrowComponent_TypeInfo;
   if ( !ScrollArrowComponent_TypeInfo->_2.cctor_finished )
@@ -331,11 +336,11 @@ void __fastcall ScrollArrowComponent__OnDestroy(ScrollArrowComponent_o *this, co
   }
   arrowList = (System_Collections_Generic_List_object__o *)v4->static_fields->_arrowList;
   if ( !arrowList )
-    sub_1B00F28(0LL, method);
+    sub_1B64324(0LL);
   System_Collections_Generic_List_object___Remove(
     arrowList,
     (Il2CppObject *)this,
-    (const MethodInfo_33C2EF8 *)Method_System_Collections_Generic_List_ScrollArrowComponent__Remove__);
+    (const MethodInfo_34AEC9C *)Method_System_Collections_Generic_List_ScrollArrowComponent__Remove__);
 }
 
 
@@ -360,11 +365,11 @@ void __fastcall ScrollArrowComponent__SetDisp(
   struct UIWidget_o *mWidget; // x20
   const MethodInfo *v12; // x1
 
-  if ( (byte_48DF6A5 & 1) == 0 )
+  if ( (byte_49F91E7 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_TransitionCalculator_float__ToEnd__, is_disp);
-    sub_1B00CCC(&Method_TransitionCalculator_float__get_Current__, v7);
-    byte_48DF6A5 = 1;
+    sub_1B640C8(&Method_TransitionCalculator_float__ToEnd__, is_disp);
+    sub_1B640C8(&Method_TransitionCalculator_float__get_Current__, v7);
+    byte_49F91E7 = 1;
   }
   WidgetAlphaCalculator = ScrollArrowComponent__get_WidgetAlphaCalculator(this, (const MethodInfo *)is_disp);
   if ( !WidgetAlphaCalculator )
@@ -385,7 +390,7 @@ LABEL_8:
     {
       TransitionCalculator_float___ToEnd(
         (TransitionCalculator_float__o *)WidgetAlphaCalculator,
-        (const MethodInfo_367BD10 *)Method_TransitionCalculator_float__ToEnd__);
+        (const MethodInfo_376C15C *)Method_TransitionCalculator_float__ToEnd__);
       mWidget = this->fields.mWidget;
       WidgetAlphaCalculator = ScrollArrowComponent__get_WidgetAlphaCalculator(this, v12);
       if ( WidgetAlphaCalculator )
@@ -401,7 +406,7 @@ LABEL_8:
       }
     }
 LABEL_12:
-    sub_1B00F28(WidgetAlphaCalculator, v9);
+    sub_1B64324(WidgetAlphaCalculator);
   }
 }
 
@@ -412,15 +417,14 @@ void __fastcall ScrollArrowComponent__SyncAnimation(ScrollArrowComponent_o *this
   __int64 v4; // x1
   UnityEngine_Component_o *ActiveArrow; // x20
   void *gameObject; // x0
-  __int64 v7; // x1
-  UITweener_o *v8; // x19
+  UITweener_o *v7; // x19
 
-  if ( (byte_48DF6A7 & 1) == 0 )
+  if ( (byte_49F91E9 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_UnityEngine_Component_GetComponent_TweenPosition___, method);
-    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, v3);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v4);
-    byte_48DF6A7 = 1;
+    sub_1B640C8(&Method_UnityEngine_Component_GetComponent_TweenPosition___, method);
+    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, v3);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v4);
+    byte_49F91E9 = 1;
   }
   ActiveArrow = (UnityEngine_Component_o *)ScrollArrowComponent__FetchActiveArrow(this, method);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -431,17 +435,17 @@ void __fastcall ScrollArrowComponent__SyncAnimation(ScrollArrowComponent_o *this
     if ( !gameObject
       || (gameObject = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)gameObject,
-                         (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___),
+                         (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___),
           !ActiveArrow)
-      || (v8 = (UITweener_o *)gameObject,
+      || (v7 = (UITweener_o *)gameObject,
           (gameObject = UnityEngine_Component__GetComponent_object_(
                           ActiveArrow,
-                          (const MethodInfo_2D596B4 *)Method_UnityEngine_Component_GetComponent_TweenPosition___)) == 0LL)
-      || !v8 )
+                          (const MethodInfo_2E2FE90 *)Method_UnityEngine_Component_GetComponent_TweenPosition___)) == 0LL)
+      || !v7 )
     {
-      sub_1B00F28(gameObject, v7);
+      sub_1B64324(gameObject);
     }
-    UITweener__set_tweenFactor(v8, *((float *)gameObject + 28), 0LL);
+    UITweener__set_tweenFactor(v7, *((float *)gameObject + 28), 0LL);
   }
 }
 
@@ -453,14 +457,13 @@ void __fastcall ScrollArrowComponent__Update(ScrollArrowComponent_o *this, const
   const MethodInfo *v5; // x1
   struct UIWidget_o *v6; // x20
   TransitionCalculator_float__o *WidgetAlphaCalculator; // x0
-  __int64 v8; // x1
-  float v9; // s0
+  float v8; // s0
 
-  if ( (byte_48DF6A4 & 1) == 0 )
+  if ( (byte_49F91E6 & 1) == 0 )
   {
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
-    sub_1B00CCC(&Method_TransitionCalculator_float__Update__, v3);
-    byte_48DF6A4 = 1;
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, method);
+    sub_1B640C8(&Method_TransitionCalculator_float__Update__, v3);
+    byte_49F91E6 = 1;
   }
   mWidget = (UnityEngine_Object_o *)this->fields.mWidget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -470,17 +473,17 @@ void __fastcall ScrollArrowComponent__Update(ScrollArrowComponent_o *this, const
     v6 = this->fields.mWidget;
     WidgetAlphaCalculator = (TransitionCalculator_float__o *)ScrollArrowComponent__get_WidgetAlphaCalculator(this, v5);
     if ( !WidgetAlphaCalculator
-      || (v9 = TransitionCalculator_float___Update(
+      || (v8 = TransitionCalculator_float___Update(
                  WidgetAlphaCalculator,
-                 (const MethodInfo_367BC54 *)Method_TransitionCalculator_float__Update__),
+                 (const MethodInfo_376C0A0 *)Method_TransitionCalculator_float__Update__),
           !v6) )
     {
-      sub_1B00F28(WidgetAlphaCalculator, v8);
+      sub_1B64324(WidgetAlphaCalculator);
     }
     ((void (__fastcall *)(struct UIWidget_o *, Il2CppMethodPointer, float))v6->klass->vtable._8_set_alpha.method)(
       v6,
       v6->klass->vtable._9_CalculateFinalAlpha.methodPtr,
-      v9);
+      v8);
   }
 }
 
@@ -502,9 +505,9 @@ AlphaTransitionCalculator_o *__fastcall ScrollArrowComponent__get_WidgetAlphaCal
   {
     WidgetAlphaCalculator = ScrollArrowComponent__CreateWidgetAlphaCalculator(0LL, method);
     p_widgetAlphaCalculator->klass = (ServantStatusBattleListViewItem_c *)WidgetAlphaCalculator;
-    sub_1B00C70(p_widgetAlphaCalculator, (int32_t)WidgetAlphaCalculator, v5, v6);
+    sub_1B6406C(p_widgetAlphaCalculator, (int32_t)WidgetAlphaCalculator, v5, v6);
     if ( !p_widgetAlphaCalculator->klass )
-      sub_1B00F28(0LL, v7);
+      sub_1B64324(0LL);
     AlphaTransitionCalculator__MakeFadeInFinished((AlphaTransitionCalculator_o *)p_widgetAlphaCalculator->klass, v7);
     return (AlphaTransitionCalculator_o *)p_widgetAlphaCalculator->klass;
   }

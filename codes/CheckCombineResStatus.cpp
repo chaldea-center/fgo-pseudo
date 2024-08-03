@@ -2,10 +2,10 @@ void __fastcall CheckCombineResStatus___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_48E5E39 & 1) == 0 )
+  if ( (byte_49FFB51 & 1) == 0 )
   {
-    sub_1B00CCC(&CheckCombineResStatus_TypeInfo, v1);
-    byte_48E5E39 = 1;
+    sub_1B640C8(&CheckCombineResStatus_TypeInfo, v1);
+    byte_49FFB51 = 1;
   }
   CheckCombineResStatus_TypeInfo->static_fields->LOT_RATE = 1000;
 }
@@ -35,102 +35,99 @@ float __fastcall CheckCombineResStatus__GetCombineEventCampaignValue(
   __int64 v16; // x1
   float v17; // s8
   Il2CppObject *Instance; // x0
-  __int64 v19; // x1
   Il2CppObject *MasterData_object; // x21
-  Il2CppObject *v21; // x22
-  _BOOL8 v22; // x0
-  __int64 v23; // x1
+  Il2CppObject *v20; // x22
+  _BOOL8 v21; // x0
   Il2CppObject *current; // x28
   int64_t Time; // x0
-  __int64 v26; // x1
   Il2CppClass *klass; // x8
   EventCampaignEntity_o *Data; // x0
-  __int64 v29; // x1
-  EventCampaignEntity_o *v30; // x23
-  Il2CppClass *v31; // x29
+  __int64 v26; // x1
+  EventCampaignEntity_o *v27; // x23
+  Il2CppClass *v28; // x29
   const char *namespaze; // x8
-  __int64 v33; // x27
-  int v34; // w21
-  __int64 v35; // x23
-  __int64 v36; // x24
-  Il2CppObject *v38; // [xsp+0h] [xbp-B0h]
-  System_Collections_Generic_List_Enumerator_object__o v39; // [xsp+8h] [xbp-A8h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v40; // [xsp+20h] [xbp-90h] BYREF
+  __int64 v30; // x27
+  int v31; // w21
+  __int64 v32; // x23
+  __int64 v33; // x24
+  Il2CppObject *v35; // [xsp+0h] [xbp-B0h]
+  System_Collections_Generic_List_Enumerator_object__o v36; // [xsp+8h] [xbp-A8h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v37; // [xsp+20h] [xbp-90h] BYREF
   EventCampaignReleaseEntity_o *entity; // [xsp+48h] [xbp-68h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v42; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v39; // 0:x0.16
 
-  if ( (byte_48E5E38 & 1) == 0 )
+  if ( (byte_49FFB50 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataManager_GetMasterData_EventCampaignMaster___, baseSvt);
-    sub_1B00CCC(&Method_DataManager_GetMasterData_EventCampaignReleaseMaster___, v8);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_EventInfoData__Dispose__, v9);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_EventInfoData__MoveNext__, v10);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_EventInfoData__get_Current__, v11);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_EventInfoData__GetEnumerator__, v12);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_EventInfoData__get_Count__, v13);
-    sub_1B00CCC(&NetworkManager_TypeInfo, v14);
-    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v15);
-    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
-    byte_48E5E38 = 1;
+    sub_1B640C8(&Method_DataManager_GetMasterData_EventCampaignMaster___, baseSvt);
+    sub_1B640C8(&Method_DataManager_GetMasterData_EventCampaignReleaseMaster___, v8);
+    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_EventInfoData__Dispose__, v9);
+    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_EventInfoData__MoveNext__, v10);
+    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_EventInfoData__get_Current__, v11);
+    sub_1B640C8(&Method_System_Collections_Generic_List_EventInfoData__GetEnumerator__, v12);
+    sub_1B640C8(&Method_System_Collections_Generic_List_EventInfoData__get_Count__, v13);
+    sub_1B640C8(&NetworkManager_TypeInfo, v14);
+    sub_1B640C8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v15);
+    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
+    byte_49FFB50 = 1;
   }
   v17 = 1.0;
   entity = 0LL;
-  memset(&v40, 0, sizeof(v40));
+  memset(&v37, 0, sizeof(v37));
   if ( combineEventList && baseSvt && combineEventList->fields._size >= 1 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance
       || (MasterData_object = DataManager__GetMasterData_object_(
                                 (DataManager_o *)Instance,
-                                (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_EventCampaignReleaseMaster___),
-          (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL) )
+                                (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_EventCampaignReleaseMaster___),
+          (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL) )
     {
-      sub_1B00F28(Instance, v19);
+      sub_1B64324(Instance);
     }
-    v21 = DataManager__GetMasterData_object_(
+    v20 = DataManager__GetMasterData_object_(
             (DataManager_o *)Instance,
-            (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_EventCampaignMaster___);
+            (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_EventCampaignMaster___);
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v39,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v36,
       (System_Collections_Generic_List_object__o *)combineEventList,
-      (const MethodInfo_33C24C8 *)Method_System_Collections_Generic_List_EventInfoData__GetEnumerator__);
+      (const MethodInfo_34AE26C *)Method_System_Collections_Generic_List_EventInfoData__GetEnumerator__);
     v17 = 1.0;
-    v40 = v39;
+    v37 = v36;
     while ( 1 )
     {
       while ( 1 )
       {
-        v22 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-                &v40,
-                (const MethodInfo_313E218 *)Method_System_Collections_Generic_List_Enumerator_EventInfoData__MoveNext__);
-        if ( !v22 )
+        v21 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+                &v37,
+                (const MethodInfo_322A0B0 *)Method_System_Collections_Generic_List_Enumerator_EventInfoData__MoveNext__);
+        if ( !v21 )
         {
           System_Collections_Generic_List_Enumerator_object___Dispose(
-            &v40,
-            (const MethodInfo_313E214 *)Method_System_Collections_Generic_List_Enumerator_EventInfoData__Dispose__);
+            &v37,
+            (const MethodInfo_322A0AC *)Method_System_Collections_Generic_List_Enumerator_EventInfoData__Dispose__);
           return v17;
         }
-        current = v40.fields._current;
-        if ( !v40.fields._current )
-          sub_1B00F28(v22, v23);
-        if ( HIDWORD(v40.fields._current[1].klass) == type )
+        current = v37.fields._current;
+        if ( !v37.fields._current )
+          sub_1B64324(v21);
+        if ( HIDWORD(v37.fields._current[1].klass) == type )
         {
           if ( !NetworkManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
           Time = NetworkManager__getTime(0LL);
           klass = current[5].klass;
           if ( !klass )
-            sub_1B00F28(Time, v26);
+            sub_1B64324(Time);
           if ( Time <= (__int64)klass->_1.generic_class )
           {
-            if ( !v21 )
-              sub_1B00F28(Time, v26);
-            Data = EventCampaignMaster__getData((EventCampaignMaster_o *)v21, (int32_t)current[1].klass, 0LL);
-            v30 = Data;
+            if ( !v20 )
+              sub_1B64324(Time);
+            Data = EventCampaignMaster__getData((EventCampaignMaster_o *)v20, (int32_t)current[1].klass, 0LL);
+            v27 = Data;
             if ( !Data )
               break;
             if ( !MasterData_object )
-              sub_1B00F28(Data, v29);
+              sub_1B64324(Data);
             Data = (EventCampaignEntity_o *)EventCampaignReleaseMaster__TryGetEntity(
                                               (EventCampaignReleaseMaster_o *)MasterData_object,
                                               &entity,
@@ -141,13 +138,13 @@ float __fastcall CheckCombineResStatus__GetCombineEventCampaignValue(
             if ( ((unsigned __int8)Data & 1) == 0 )
               break;
             if ( !entity )
-              sub_1B00F28(Data, v29);
+              sub_1B64324(Data);
             if ( entity->fields.condType != 1 )
               break;
             Data = (EventCampaignEntity_o *)EventCampaignReleaseMaster__isRelease(
                                               (EventCampaignReleaseMaster_o *)MasterData_object,
-                                              v30->fields.eventId,
-                                              v30->fields.target,
+                                              v27->fields.eventId,
+                                              v27->fields.target,
                                               0LL);
             if ( ((unsigned __int8)Data & 1) != 0 )
               break;
@@ -161,36 +158,36 @@ float __fastcall CheckCombineResStatus__GetCombineEventCampaignValue(
       }
       else
       {
-        v31 = current[2].klass;
-        if ( v31 && (namespaze = v31->_1.namespaze) != 0LL )
+        v28 = current[2].klass;
+        if ( v28 && (namespaze = v28->_1.namespaze) != 0LL )
         {
           if ( (int)namespaze >= 1 )
           {
-            v33 = 0LL;
-            v38 = MasterData_object;
+            v30 = 0LL;
+            v35 = MasterData_object;
             while ( 1 )
             {
-              if ( (unsigned int)v33 >= (unsigned int)namespaze )
-                sub_1B00F30(Data, v29);
-              v34 = *((_DWORD *)&v31->_1.byval_arg.data + v33);
-              v36 = *(_QWORD *)&baseSvt->fields.svtId.fields.currentCryptoKey;
-              v35 = *(_QWORD *)&baseSvt->fields.svtId.fields.fakeValue;
+              if ( (unsigned int)v30 >= (unsigned int)namespaze )
+                sub_1B6432C(Data, v26);
+              v31 = *((_DWORD *)&v28->_1.byval_arg.data + v30);
+              v33 = *(_QWORD *)&baseSvt->fields.svtId.fields.currentCryptoKey;
+              v32 = *(_QWORD *)&baseSvt->fields.svtId.fields.fakeValue;
               if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-              *(_QWORD *)&v42.fields.currentCryptoKey = v36;
-              *(_QWORD *)&v42.fields.fakeValue = v35;
-              Data = (EventCampaignEntity_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(
-                                                v42,
+              *(_QWORD *)&v39.fields.currentCryptoKey = v33;
+              *(_QWORD *)&v39.fields.fakeValue = v32;
+              Data = (EventCampaignEntity_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46171608(
+                                                v39,
                                                 0LL);
-              if ( (_DWORD)Data == v34 )
+              if ( (_DWORD)Data == v31 )
                 break;
-              LODWORD(namespaze) = v31->_1.namespaze;
-              if ( (int)++v33 >= (int)namespaze )
+              LODWORD(namespaze) = v28->_1.namespaze;
+              if ( (int)++v30 >= (int)namespaze )
                 goto LABEL_38;
             }
             v17 = v17 * *(float *)&current[3].monitor;
 LABEL_38:
-            MasterData_object = v38;
+            MasterData_object = v35;
           }
         }
         else
@@ -242,26 +239,25 @@ bool __fastcall CheckCombineResStatus__checkIncrementLv(
   __int64 v5; // x1
   int32_t maxLv; // w8
   void *Instance; // x0
-  __int64 v8; // x1
   bool result; // w0
 
-  if ( (byte_48E5E32 & 1) == 0 )
+  if ( (byte_49FFB4A & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataManager_GetMasterData_ServantExpMaster___, *(_QWORD *)&lv);
-    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_48E5E32 = 1;
+    sub_1B640C8(&Method_DataManager_GetMasterData_ServantExpMaster___, *(_QWORD *)&lv);
+    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_49FFB4A = 1;
   }
   maxLv = this->fields.maxLv;
   if ( maxLv > lv )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance
       || (Instance = DataManager__GetMasterData_object_(
                        (DataManager_o *)Instance,
-                       (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_ServantExpMaster___)) == 0LL
+                       (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_ServantExpMaster___)) == 0LL
       || (Instance = ServantExpMaster__GetEntity((ServantExpMaster_o *)Instance, this->fields.expType, lv, 0LL)) == 0LL )
     {
-      sub_1B00F28(Instance, v8);
+      sub_1B64324(Instance);
     }
     if ( *((_DWORD *)Instance + 6) < this->fields.totalExp )
     {
@@ -312,17 +308,17 @@ void __fastcall CheckCombineResStatus__getCombineResStatus(
   int atk; // w8
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v35; // 0:x0.16
 
-  if ( (byte_48E5E33 & 1) == 0 )
+  if ( (byte_49FFB4B & 1) == 0 )
   {
-    sub_1B00CCC(&BalanceConfig_TypeInfo, afterHp);
-    sub_1B00CCC(&CheckCombineResStatus_TypeInfo, v10);
-    sub_1B00CCC(&Method_DataManager_GetMasterData_ServantExpMaster___, v11);
-    sub_1B00CCC(&Method_DataManager_GetMasterData_ServantLimitMaster___, v12);
-    sub_1B00CCC(&Method_DataManager_GetMasterData_ServantMaster___, v13);
-    sub_1B00CCC(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v14);
-    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v15);
-    this = (CheckCombineResStatus_o *)sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
-    byte_48E5E33 = 1;
+    sub_1B640C8(&BalanceConfig_TypeInfo, afterHp);
+    sub_1B640C8(&CheckCombineResStatus_TypeInfo, v10);
+    sub_1B640C8(&Method_DataManager_GetMasterData_ServantExpMaster___, v11);
+    sub_1B640C8(&Method_DataManager_GetMasterData_ServantLimitMaster___, v12);
+    sub_1B640C8(&Method_DataManager_GetMasterData_ServantMaster___, v13);
+    sub_1B640C8(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v14);
+    sub_1B640C8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v15);
+    this = (CheckCombineResStatus_o *)sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
+    byte_49FFB4B = 1;
   }
   if ( !baseData )
     goto LABEL_22;
@@ -332,38 +328,38 @@ void __fastcall CheckCombineResStatus__getCombineResStatus(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v35.fields.currentCryptoKey = v18;
   *(_QWORD *)&v35.fields.fakeValue = v17;
-  v19 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(v35, 0LL);
-  v20 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(baseData->fields.limitCount, 0LL);
-  this = (CheckCombineResStatus_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v19 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46171608(v35, 0LL);
+  v20 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46171608(baseData->fields.limitCount, 0LL);
+  this = (CheckCombineResStatus_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_22;
   this = (CheckCombineResStatus_o *)DataManager__GetMasterData_object_(
                                       (DataManager_o *)this,
-                                      (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                      (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( !this )
     goto LABEL_22;
   this = (CheckCombineResStatus_o *)DataMasterBase_object__object__int___GetEntity(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                       v19,
-                                      (const MethodInfo_2FE6A4C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                                      (const MethodInfo_30D3EA4 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
   if ( !this )
     goto LABEL_22;
   v21 = *((_DWORD *)&this[2].fields.UnityEngine_Behaviour_Fields + 1);
-  this = (CheckCombineResStatus_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (CheckCombineResStatus_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_22;
   this = (CheckCombineResStatus_o *)DataManager__GetMasterData_object_(
                                       (DataManager_o *)this,
-                                      (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
+                                      (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_ServantLimitMaster___);
   if ( !this )
     goto LABEL_22;
   Entity = ServantLimitMaster__GetEntity((ServantLimitMaster_o *)this, v19, v20, 0LL);
-  this = (CheckCombineResStatus_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (CheckCombineResStatus_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_22;
   this = (CheckCombineResStatus_o *)DataManager__GetMasterData_object_(
                                       (DataManager_o *)this,
-                                      (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_ServantExpMaster___);
+                                      (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_ServantExpMaster___);
   if ( !this )
     goto LABEL_22;
   this = (CheckCombineResStatus_o *)ServantExpMaster__GetEntity((ServantExpMaster_o *)this, v21, increLv, 0LL);
@@ -375,7 +371,7 @@ void __fastcall CheckCombineResStatus__getCombineResStatus(
   }
   if ( !Entity )
 LABEL_22:
-    sub_1B00F28(this, afterHp);
+    sub_1B64324(this);
   hpBase = Entity->fields.hpBase;
   hpMax = Entity->fields.hpMax;
   atkBase = Entity->fields.atkBase;
@@ -419,26 +415,25 @@ void __fastcall CheckCombineResStatus__getExpInfo(
 {
   __int64 v16; // x1
   DataManager_o *Instance; // x0
-  __int64 v18; // x1
-  ServantExpMaster_o *v19; // x25
+  ServantExpMaster_o *v18; // x25
   int m_CancellationTokenSource; // w26
-  float v21; // s0
+  float v20; // s0
 
-  if ( (byte_48E5E37 & 1) == 0 )
+  if ( (byte_49FFB4F & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataManager_GetMasterData_ServantExpMaster___, exp);
-    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
-    byte_48E5E37 = 1;
+    sub_1B640C8(&Method_DataManager_GetMasterData_ServantExpMaster___, exp);
+    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
+    byte_49FFB4F = 1;
   }
   if ( startLv < maxLv )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_15;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_ServantExpMaster___);
-    v19 = (ServantExpMaster_o *)Instance;
+                                  (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_ServantExpMaster___);
+    v18 = (ServantExpMaster_o *)Instance;
     if ( startLv >= 2 )
     {
       if ( !Instance )
@@ -454,22 +449,22 @@ void __fastcall CheckCombineResStatus__getExpInfo(
         goto LABEL_15;
       m_CancellationTokenSource = 0;
     }
-    Instance = (DataManager_o *)ServantExpMaster__GetEntity(v19, expType, startLv, 0LL);
+    Instance = (DataManager_o *)ServantExpMaster__GetEntity(v18, expType, startLv, 0LL);
     *exp = targetExp - m_CancellationTokenSource;
     if ( Instance )
     {
       *lateExp = LODWORD(Instance->fields.m_CancellationTokenSource) - targetExp;
-      v21 = (float)*exp / (float)(LODWORD(Instance->fields.m_CancellationTokenSource) - m_CancellationTokenSource);
+      v20 = (float)*exp / (float)(LODWORD(Instance->fields.m_CancellationTokenSource) - m_CancellationTokenSource);
       goto LABEL_14;
     }
 LABEL_15:
-    sub_1B00F28(Instance, v18);
+    sub_1B64324(Instance);
   }
-  v21 = 1.0;
+  v20 = 1.0;
   *exp = 0;
   *lateExp = 0;
 LABEL_14:
-  *barExp = v21;
+  *barExp = v20;
 }
 
 
@@ -484,21 +479,20 @@ int32_t __fastcall CheckCombineResStatus__getIncreLevel(
 {
   __int64 v10; // x1
   Il2CppObject *Instance; // x0
-  __int64 v12; // x1
 
-  if ( (byte_48E5E30 & 1) == 0 )
+  if ( (byte_49FFB48 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataManager_GetMasterData_ServantExpMaster___, *(_QWORD *)&getExp);
-    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    byte_48E5E30 = 1;
+    sub_1B640C8(&Method_DataManager_GetMasterData_ServantExpMaster___, *(_QWORD *)&getExp);
+    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
+    byte_49FFB48 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_ServantExpMaster___)) == 0LL )
+                     (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_ServantExpMaster___)) == 0LL )
   {
-    sub_1B00F28(Instance, v12);
+    sub_1B64324(Instance);
   }
   return ServantExpMaster__getLevel((ServantExpMaster_o *)Instance, getExp, svtExpType, svtMaxLv, startLv, 0LL);
 }
@@ -514,48 +508,47 @@ int32_t __fastcall CheckCombineResStatus__getIncrementLv(
   __int64 v8; // x1
   __int64 v9; // x1
   Il2CppObject *Instance; // x0
-  __int64 v11; // x1
-  DataMasterBase_TMaster__TEntity__PKType__o *v12; // x22
-  __int64 v13; // x23
-  __int64 v14; // x24
+  DataMasterBase_TMaster__TEntity__PKType__o *v11; // x22
+  __int64 v12; // x23
+  __int64 v13; // x24
   int32_t result; // w0
-  const MethodInfo *v16; // x2
+  const MethodInfo *v15; // x2
   int32_t checkLv; // w1
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v18; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v17; // 0:x0.16
 
-  if ( (byte_48E5E31 & 1) == 0 )
+  if ( (byte_49FFB49 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataManager_GetMasterData_ServantMaster___, baseData);
-    sub_1B00CCC(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v7);
-    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v8);
-    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    byte_48E5E31 = 1;
+    sub_1B640C8(&Method_DataManager_GetMasterData_ServantMaster___, baseData);
+    sub_1B640C8(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v7);
+    sub_1B640C8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v8);
+    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    byte_49FFB49 = 1;
   }
   this->fields.increLv = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_ServantMaster___);
+               (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( !baseData )
     goto LABEL_14;
-  v12 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
-  v14 = *(_QWORD *)&baseData->fields.svtId.fields.currentCryptoKey;
-  v13 = *(_QWORD *)&baseData->fields.svtId.fields.fakeValue;
+  v11 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
+  v13 = *(_QWORD *)&baseData->fields.svtId.fields.currentCryptoKey;
+  v12 = *(_QWORD *)&baseData->fields.svtId.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v18.fields.currentCryptoKey = v14;
-  *(_QWORD *)&v18.fields.fakeValue = v13;
-  Instance = (Il2CppObject *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(v18, 0LL);
-  if ( !v12
+  *(_QWORD *)&v17.fields.currentCryptoKey = v13;
+  *(_QWORD *)&v17.fields.fakeValue = v12;
+  Instance = (Il2CppObject *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46171608(v17, 0LL);
+  if ( !v11
     || (Instance = DataMasterBase_object__object__int___GetEntity(
-                     v12,
+                     v11,
                      (int32_t)Instance,
-                     (const MethodInfo_2FE6A4C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__)) == 0LL )
+                     (const MethodInfo_30D3EA4 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__)) == 0LL )
   {
 LABEL_14:
-    sub_1B00F28(Instance, v11);
+    sub_1B64324(Instance);
   }
   this->fields.expType = HIDWORD(Instance[8].klass);
   this->fields.totalExp = baseData->fields.exp + getExp;
@@ -569,7 +562,7 @@ LABEL_14:
   }
   else
   {
-    while ( !CheckCombineResStatus__checkIncrementLv(this, checkLv, v16) )
+    while ( !CheckCombineResStatus__checkIncrementLv(this, checkLv, v15) )
       checkLv = this->fields.checkLv;
     return this->fields.increLv;
   }
@@ -590,21 +583,21 @@ System_String_o *__fastcall CheckCombineResStatus__getOpenSkillNameByCombine(
   System_String_array *skillNameList; // [xsp+8h] [xbp-38h] BYREF
   System_Int32_array *idList; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_48E5E34 & 1) == 0 )
+  if ( (byte_49FFB4C & 1) == 0 )
   {
-    this = (CheckCombineResStatus_o *)sub_1B00CCC(&StringLiteral_1/*""*/, baseData);
-    byte_48E5E34 = 1;
+    this = (CheckCombineResStatus_o *)sub_1B640C8(&StringLiteral_1/*""*/, baseData);
+    byte_49FFB4C = 1;
   }
   idList = 0LL;
   skillNameList = 0LL;
   if ( !baseData )
-    sub_1B00F28(this, baseData);
+    sub_1B64324(this);
   v8 = (System_String_o *)StringLiteral_1/*""*/;
   UserServantEntity__getNextUseSkillInfo(baseData, &idList, &skillNameList, increLv, limitCntSum, 1, 0LL);
   if ( skillNameList )
   {
     if ( !skillNameList->max_length )
-      sub_1B00F30(v9, v10);
+      sub_1B6432C(v9, v10);
     if ( skillNameList->m_Items[0] )
       return skillNameList->m_Items[0];
   }
@@ -629,26 +622,30 @@ System_String_o *__fastcall CheckCombineResStatus__getSvtEqSkillByCombine(
   __int64 v15; // x1
   System_String_o *v16; // x22
   System_Collections_Generic_IEnumerable_T__o *UseSvtEqSkillInfo; // x20
-  System_Collections_Generic_List_object__o *v18; // x19
-  CheckCombineResStatus___c_c *v19; // x0
+  __int64 v18; // x1
+  __int64 v19; // x2
+  System_Collections_Generic_List_object__o *v20; // x19
+  __int64 v21; // x1
+  __int64 v22; // x2
+  CheckCombineResStatus___c_c *v23; // x0
   System_Comparison_T__o *_9__11_0; // x20
-  Il2CppObject *v21; // x21
+  Il2CppObject *v25; // x21
   struct CheckCombineResStatus___c_StaticFields *static_fields; // x0
-  int32_t v23; // w2
-  int32_t v24; // w3
+  int32_t v27; // w2
+  int32_t v28; // w3
 
-  if ( (byte_48E5E35 & 1) == 0 )
+  if ( (byte_49FFB4D & 1) == 0 )
   {
-    sub_1B00CCC(&System_Comparison_ServantSkillEntity__TypeInfo, baseData);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_ServantSkillEntity__Sort__, v8);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_ServantSkillEntity___ctor___74538568, v9);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_ServantSkillEntity__get_Count__, v10);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_ServantSkillEntity__get_Item__, v11);
-    sub_1B00CCC(&System_Collections_Generic_List_ServantSkillEntity__TypeInfo, v12);
-    sub_1B00CCC(&Method_CheckCombineResStatus___c__getSvtEqSkillByCombine_b__11_0__, v13);
-    sub_1B00CCC(&CheckCombineResStatus___c_TypeInfo, v14);
-    this = (CheckCombineResStatus_o *)sub_1B00CCC(&StringLiteral_1/*""*/, v15);
-    byte_48E5E35 = 1;
+    sub_1B640C8(&System_Comparison_ServantSkillEntity__TypeInfo, baseData);
+    sub_1B640C8(&Method_System_Collections_Generic_List_ServantSkillEntity__Sort__, v8);
+    sub_1B640C8(&Method_System_Collections_Generic_List_ServantSkillEntity___ctor___75666128, v9);
+    sub_1B640C8(&Method_System_Collections_Generic_List_ServantSkillEntity__get_Count__, v10);
+    sub_1B640C8(&Method_System_Collections_Generic_List_ServantSkillEntity__get_Item__, v11);
+    sub_1B640C8(&System_Collections_Generic_List_ServantSkillEntity__TypeInfo, v12);
+    sub_1B640C8(&Method_CheckCombineResStatus___c__getSvtEqSkillByCombine_b__11_0__, v13);
+    sub_1B640C8(&CheckCombineResStatus___c_TypeInfo, v14);
+    this = (CheckCombineResStatus_o *)sub_1B640C8(&StringLiteral_1/*""*/, v15);
+    byte_49FFB4D = 1;
   }
   if ( !baseData )
     goto LABEL_15;
@@ -658,52 +655,55 @@ System_String_o *__fastcall CheckCombineResStatus__getSvtEqSkillByCombine(
                                                                        increLv,
                                                                        limitCntSum,
                                                                        0LL);
-  v18 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_ServantSkillEntity__TypeInfo);
-  System_Collections_Generic_List_object____ctor_54268612(
-    v18,
+  v20 = (System_Collections_Generic_List_object__o *)sub_1B64314(
+                                                       System_Collections_Generic_List_ServantSkillEntity__TypeInfo,
+                                                       v18,
+                                                       v19);
+  System_Collections_Generic_List_object____ctor_55234504(
+    v20,
     UseSvtEqSkillInfo,
-    (const MethodInfo_33C12C4 *)Method_System_Collections_Generic_List_ServantSkillEntity___ctor___74538568);
-  if ( !v18 )
+    (const MethodInfo_34ACFC8 *)Method_System_Collections_Generic_List_ServantSkillEntity___ctor___75666128);
+  if ( !v20 )
     goto LABEL_15;
-  if ( v18->fields._size >= 1 )
+  if ( v20->fields._size >= 1 )
   {
-    v19 = CheckCombineResStatus___c_TypeInfo;
+    v23 = CheckCombineResStatus___c_TypeInfo;
     if ( !CheckCombineResStatus___c_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(CheckCombineResStatus___c_TypeInfo);
-      v19 = CheckCombineResStatus___c_TypeInfo;
+      v23 = CheckCombineResStatus___c_TypeInfo;
     }
-    _9__11_0 = (System_Comparison_T__o *)v19->static_fields->__9__11_0;
+    _9__11_0 = (System_Comparison_T__o *)v23->static_fields->__9__11_0;
     if ( !_9__11_0 )
     {
-      if ( !v19->_2.cctor_finished )
+      if ( !v23->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v19);
-        v19 = CheckCombineResStatus___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v23);
+        v23 = CheckCombineResStatus___c_TypeInfo;
       }
-      v21 = (Il2CppObject *)v19->static_fields->__9;
-      _9__11_0 = (System_Comparison_T__o *)sub_1B00F18(System_Comparison_ServantSkillEntity__TypeInfo);
+      v25 = (Il2CppObject *)v23->static_fields->__9;
+      _9__11_0 = (System_Comparison_T__o *)sub_1B64314(System_Comparison_ServantSkillEntity__TypeInfo, v21, v22);
       System_Comparison_object____ctor(
         _9__11_0,
-        v21,
+        v25,
         Method_CheckCombineResStatus___c__getSvtEqSkillByCombine_b__11_0__,
         0LL);
       static_fields = CheckCombineResStatus___c_TypeInfo->static_fields;
       static_fields->__9__11_0 = (struct System_Comparison_ServantSkillEntity__o *)_9__11_0;
-      sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->__9__11_0, (int32_t)_9__11_0, v23, v24);
+      sub_1B6406C((ServantStatusBattleListViewItem_o *)&static_fields->__9__11_0, (int32_t)_9__11_0, v27, v28);
     }
-    System_Collections_Generic_List_object___Sort_54277268(
-      v18,
+    System_Collections_Generic_List_object___Sort_55243320(
+      v20,
       _9__11_0,
-      (const MethodInfo_33C3494 *)Method_System_Collections_Generic_List_ServantSkillEntity__Sort__);
+      (const MethodInfo_34AF238 *)Method_System_Collections_Generic_List_ServantSkillEntity__Sort__);
     this = (CheckCombineResStatus_o *)System_Collections_Generic_List_object___get_Item(
-                                        v18,
+                                        v20,
                                         0,
-                                        (const MethodInfo_33C1700 *)Method_System_Collections_Generic_List_ServantSkillEntity__get_Item__);
+                                        (const MethodInfo_34AD404 *)Method_System_Collections_Generic_List_ServantSkillEntity__get_Item__);
     if ( this )
       return ServantSkillEntity__getSkillName((ServantSkillEntity_o *)this, 0LL);
 LABEL_15:
-    sub_1B00F28(this, baseData);
+    sub_1B64324(this);
   }
   return v16;
 }
@@ -721,32 +721,31 @@ void __fastcall CheckCombineResStatus__setSvtExp(
 {
   __int64 v14; // x1
   DataManager_o *Instance; // x0
-  __int64 v16; // x1
-  ServantExpMaster_o *v17; // x25
+  ServantExpMaster_o *v16; // x25
   int32_t Level; // w23
   int m_CancellationTokenSource; // w24
   ServantExpEntity_o *Entity; // x0
   int32_t exp; // w8
 
-  if ( (byte_48E5E36 & 1) == 0 )
+  if ( (byte_49FFB4E & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataManager_GetMasterData_ServantExpMaster___, expVal);
-    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
-    byte_48E5E36 = 1;
+    sub_1B640C8(&Method_DataManager_GetMasterData_ServantExpMaster___, expVal);
+    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
+    byte_49FFB4E = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                       Instance,
-                                      (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_ServantExpMaster___)) == 0LL
-    || (v17 = (ServantExpMaster_o *)Instance,
+                                      (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_ServantExpMaster___)) == 0LL
+    || (v16 = (ServantExpMaster_o *)Instance,
         Level = ServantExpMaster__getLevel((ServantExpMaster_o *)Instance, targetExp, expType, maxLv, startLv, 0LL),
-        (Instance = (DataManager_o *)ServantExpMaster__GetEntity(v17, expType, Level, 0LL)) == 0LL) )
+        (Instance = (DataManager_o *)ServantExpMaster__GetEntity(v16, expType, Level, 0LL)) == 0LL) )
   {
-    sub_1B00F28(Instance, v16);
+    sub_1B64324(Instance);
   }
   m_CancellationTokenSource = (int)Instance->fields.m_CancellationTokenSource;
-  Entity = ServantExpMaster__GetEntity(v17, expType, Level - 1, 0LL);
+  Entity = ServantExpMaster__GetEntity(v16, expType, Level - 1, 0LL);
   if ( Entity )
     exp = Entity->fields.exp;
   else
@@ -759,23 +758,24 @@ void __fastcall CheckCombineResStatus__setSvtExp(
 void __fastcall CheckCombineResStatus___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int32_t v3; // w2
-  int32_t v4; // w3
+  __int64 v2; // x2
+  Il2CppObject *v3; // x19
+  int32_t v4; // w2
+  int32_t v5; // w3
 
-  if ( (byte_48E5E3A & 1) == 0 )
+  if ( (byte_49FFB52 & 1) == 0 )
   {
-    sub_1B00CCC(&CheckCombineResStatus___c_TypeInfo, v1);
-    byte_48E5E3A = 1;
+    sub_1B640C8(&CheckCombineResStatus___c_TypeInfo, v1);
+    byte_49FFB52 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B00F18(CheckCombineResStatus___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  CheckCombineResStatus___c_TypeInfo->static_fields->__9 = (struct CheckCombineResStatus___c_o *)v2;
-  sub_1B00C70(
+  v3 = (Il2CppObject *)sub_1B64314(CheckCombineResStatus___c_TypeInfo, v1, v2);
+  System_Object___ctor(v3, 0LL);
+  CheckCombineResStatus___c_TypeInfo->static_fields->__9 = (struct CheckCombineResStatus___c_o *)v3;
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)CheckCombineResStatus___c_TypeInfo->static_fields,
-    (int32_t)v2,
-    v3,
-    v4);
+    (int32_t)v3,
+    v4,
+    v5);
 }
 
 
@@ -792,6 +792,6 @@ int32_t __fastcall CheckCombineResStatus___c___getSvtEqSkillByCombine_b__11_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1B00F28(this, a);
+    sub_1B64324(this);
   return b->fields.priority - a->fields.priority;
 }

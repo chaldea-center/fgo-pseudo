@@ -2,10 +2,10 @@ void __fastcall MasterMissionReceiveResultListViewObject___ctor(
         MasterMissionReceiveResultListViewObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_48E5264 & 1) == 0 )
+  if ( (byte_49FF6C2 & 1) == 0 )
   {
-    sub_1B00CCC(&ListViewObject_TypeInfo, method);
-    byte_48E5264 = 1;
+    sub_1B640C8(&ListViewObject_TypeInfo, method);
+    byte_49FF6C2 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -17,26 +17,25 @@ void __fastcall MasterMissionReceiveResultListViewObject__Awake(
         MasterMissionReceiveResultListViewObject_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v6; // w2
-  int32_t v7; // w3
+  int32_t v5; // w2
+  int32_t v6; // w3
 
-  if ( (byte_48E5262 & 1) == 0 )
+  if ( (byte_49FF6C0 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_MasterMissionReceiveResultListViewItemDraw___, method);
-    byte_48E5262 = 1;
+    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponent_MasterMissionReceiveResultListViewItemDraw___, method);
+    byte_49FF6C0 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1B00F28(0LL, v3);
+    sub_1B64324(0LL);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_MasterMissionReceiveResultListViewItemDraw___);
+                       (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_MasterMissionReceiveResultListViewItemDraw___);
   this->fields.itemDraw = (struct MasterMissionReceiveResultListViewItemDraw_o *)Component_object;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v5, v6);
 }
 
 
@@ -62,13 +61,13 @@ void __fastcall MasterMissionReceiveResultListViewObject__SetItem(
     goto LABEL_13;
   v4 = this;
   item->fields.viewObject = (struct ListViewObject_o *)this;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&item->fields.viewObject,
     (int32_t)this,
     (int32_t)seed,
     (int32_t)method);
   v4->fields.linkItem = item;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v4->fields.linkItem, (int32_t)item, v7, v8);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&v4->fields.linkItem, (int32_t)item, v7, v8);
   this = (MasterMissionReceiveResultListViewObject_o *)UnityEngine_Component__get_transform(
                                                          (UnityEngine_Component_o *)v4,
                                                          0LL);
@@ -117,7 +116,7 @@ void __fastcall MasterMissionReceiveResultListViewObject__SetItem(
         !v20) )
   {
 LABEL_13:
-    sub_1B00F28(this, item);
+    sub_1B64324(this);
   }
   UnityEngine_GameObject__set_layer((UnityEngine_GameObject_o *)v20, (int32_t)this, 0LL);
   ListViewObject__SetVisible((ListViewObject_o *)v4, 1, 0LL);
@@ -138,14 +137,13 @@ void __fastcall MasterMissionReceiveResultListViewObject__SetupDisp(
   struct ListViewItem_o *v6; // x21
   UnityEngine_Object_o *itemDraw; // x20
   MasterMissionReceiveResultListViewItemDraw_o *v8; // x0
-  __int64 v9; // x1
-  const MethodInfo *v10; // x2
+  const MethodInfo *v9; // x2
 
-  if ( (byte_48E5263 & 1) == 0 )
+  if ( (byte_49FF6C1 & 1) == 0 )
   {
-    sub_1B00CCC(&MasterMissionReceiveResultListViewItem_TypeInfo, method);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v3);
-    byte_48E5263 = 1;
+    sub_1B640C8(&MasterMissionReceiveResultListViewItem_TypeInfo, method);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v3);
+    byte_49FF6C1 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -169,7 +167,7 @@ void __fastcall MasterMissionReceiveResultListViewObject__SetupDisp(
   if ( ((unsigned __int8)v8 & 1) != 0 )
   {
     if ( !v6 || (v8 = this->fields.itemDraw) == 0LL )
-      sub_1B00F28(v8, v9);
-    MasterMissionReceiveResultListViewItemDraw__SetItem(v8, (System_String_o *)v6[1].klass, v10);
+      sub_1B64324(v8);
+    MasterMissionReceiveResultListViewItemDraw__SetItem(v8, (System_String_o *)v6[1].klass, v9);
   }
 }

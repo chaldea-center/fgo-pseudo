@@ -2,10 +2,10 @@ void __fastcall TitleInfoEventTimeStatus___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_48E137C & 1) == 0 )
+  if ( (byte_49FAF22 & 1) == 0 )
   {
-    sub_1B00CCC(&TitleInfoEventTimeStatus_TypeInfo, v1);
-    byte_48E137C = 1;
+    sub_1B640C8(&TitleInfoEventTimeStatus_TypeInfo, v1);
+    byte_49FAF22 = 1;
   }
   TitleInfoEventTimeStatus_TypeInfo->static_fields->TIME_STATUS_DAY_MAX = 7;
 }
@@ -27,21 +27,20 @@ EventStatusEntity_o *__fastcall TitleInfoEventTimeStatus__GetEventStatusEntity(
 {
   __int64 v4; // x1
   Il2CppObject *Instance; // x0
-  __int64 v6; // x1
 
-  if ( (byte_48E137B & 1) == 0 )
+  if ( (byte_49FAF21 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataManager_GetMasterData_EventStatusMaster___, *(_QWORD *)&eventId);
-    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    byte_48E137B = 1;
+    sub_1B640C8(&Method_DataManager_GetMasterData_EventStatusMaster___, *(_QWORD *)&eventId);
+    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_49FAF21 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_EventStatusMaster___)) == 0LL )
+                     (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_EventStatusMaster___)) == 0LL )
   {
-    sub_1B00F28(Instance, v6);
+    sub_1B64324(Instance);
   }
   return EventStatusMaster__getNowEntity((EventStatusMaster_o *)Instance, eventId, 0LL);
 }
@@ -75,28 +74,27 @@ UserEventEntity_o *__fastcall TitleInfoEventTimeStatus__GetUserEventEntity(
   __int64 v4; // x1
   __int64 v5; // x1
   DataManager_o *Instance; // x0
-  __int64 v7; // x1
   Il2CppObject *MasterData_object; // x20
 
-  if ( (byte_48E137A & 1) == 0 )
+  if ( (byte_49FAF20 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataManager_GetMasterData_UserEventMaster___, *(_QWORD *)&eventId);
-    sub_1B00CCC(&NetworkManager_TypeInfo, v4);
-    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_48E137A = 1;
+    sub_1B640C8(&Method_DataManager_GetMasterData_UserEventMaster___, *(_QWORD *)&eventId);
+    sub_1B640C8(&NetworkManager_TypeInfo, v4);
+    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_49FAF20 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_8;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_UserEventMaster___);
+                        (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_UserEventMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = (DataManager_o *)NetworkManager__get_UserId(0LL);
   if ( !MasterData_object )
 LABEL_8:
-    sub_1B00F28(Instance, v7);
+    sub_1B64324(Instance);
   return UserEventMaster__GetEntity((UserEventMaster_o *)MasterData_object, (int64_t)Instance, eventId, 0LL);
 }
 
@@ -107,7 +105,7 @@ bool __fastcall TitleInfoEventTimeStatus__IsChangedDay(TitleInfoEventTimeStatus_
 
   iconList = this->fields.iconList;
   if ( !iconList )
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   return (iconList->fields.startState & 0xFFFFFFFE) == 2 && iconList->fields.endState < 2u;
 }
 
@@ -123,25 +121,31 @@ void __fastcall TitleInfoEventTimeStatus__PlayChangeDayAnime(
   __int64 v6; // x1
   struct TitleInfoEventTimeImgListComponent_o *iconList; // x8
   UITweener_o *dayCountTween; // x20
-  EventDelegate_Callback_o *v9; // x21
-  const MethodInfo *v10; // x2
+  __int64 v9; // x1
+  __int64 v10; // x2
+  EventDelegate_Callback_o *v11; // x21
+  const MethodInfo *v12; // x2
   UnityEngine_GameObject_o *gameObject; // x0
-  UITweener_o *v12; // x20
-  EventDelegate_Callback_o *v13; // x21
-  UnityEngine_GameObject_o *v14; // x0
-  UITweener_o *v15; // x20
-  EventDelegate_Callback_o *v16; // x21
-  TitleInfoEventTimeStatus_c *v17; // x0
+  UITweener_o *v14; // x20
+  __int64 v15; // x1
+  __int64 v16; // x2
+  EventDelegate_Callback_o *v17; // x21
+  UnityEngine_GameObject_o *v18; // x0
+  UITweener_o *v19; // x20
+  __int64 v20; // x1
+  __int64 v21; // x2
+  EventDelegate_Callback_o *v22; // x21
+  TitleInfoEventTimeStatus_c *v23; // x0
 
   v2 = this;
-  if ( (byte_48E1378 & 1) == 0 )
+  if ( (byte_49FAF1E & 1) == 0 )
   {
-    sub_1B00CCC(&EventDelegate_Callback_TypeInfo, method);
-    sub_1B00CCC(&Method_TitleInfoEventTimeStatus__PlayChangeDayAnime_b__20_0__, v3);
-    sub_1B00CCC(&Method_TitleInfoEventTimeStatus__PlayChangeDayAnime_b__20_3__, v4);
-    sub_1B00CCC(&Method_TitleInfoEventTimeStatus__PlayChangeDayAnime_b__20_4__, v5);
-    this = (TitleInfoEventTimeStatus_o *)sub_1B00CCC(&TitleInfoEventTimeStatus_TypeInfo, v6);
-    byte_48E1378 = 1;
+    sub_1B640C8(&EventDelegate_Callback_TypeInfo, method);
+    sub_1B640C8(&Method_TitleInfoEventTimeStatus__PlayChangeDayAnime_b__20_0__, v3);
+    sub_1B640C8(&Method_TitleInfoEventTimeStatus__PlayChangeDayAnime_b__20_3__, v4);
+    sub_1B640C8(&Method_TitleInfoEventTimeStatus__PlayChangeDayAnime_b__20_4__, v5);
+    this = (TitleInfoEventTimeStatus_o *)sub_1B640C8(&TitleInfoEventTimeStatus_TypeInfo, v6);
+    byte_49FAF1E = 1;
   }
   iconList = v2->fields.iconList;
   if ( !iconList )
@@ -153,31 +157,31 @@ void __fastcall TitleInfoEventTimeStatus__PlayChangeDayAnime(
     goto LABEL_24;
   UITweener__PlayForward((UITweener_o *)this, 0LL);
   dayCountTween = (UITweener_o *)v2->fields.dayCountTween;
-  v9 = (EventDelegate_Callback_o *)sub_1B00F18(EventDelegate_Callback_TypeInfo);
+  v11 = (EventDelegate_Callback_o *)sub_1B64314(EventDelegate_Callback_TypeInfo, v9, v10);
   EventDelegate_Callback___ctor(
-    v9,
+    v11,
     (Il2CppObject *)v2,
     Method_TitleInfoEventTimeStatus__PlayChangeDayAnime_b__20_0__,
     0LL);
   if ( !dayCountTween )
     goto LABEL_24;
-  UITweener__SetOnFinished(dayCountTween, v9, 0LL);
+  UITweener__SetOnFinished(dayCountTween, v11, 0LL);
   if ( v2->fields.currentDay == 1 )
   {
     this = (TitleInfoEventTimeStatus_o *)v2->fields.loopCountLabel;
     if ( !this )
       goto LABEL_24;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-    v12 = (UITweener_o *)TweenAlpha__Begin(gameObject, v2->fields.TIME_STATUS_DAY_ANIME_TIME, 0.0, 0LL);
-    v13 = (EventDelegate_Callback_o *)sub_1B00F18(EventDelegate_Callback_TypeInfo);
+    v14 = (UITweener_o *)TweenAlpha__Begin(gameObject, v2->fields.TIME_STATUS_DAY_ANIME_TIME, 0.0, 0LL);
+    v17 = (EventDelegate_Callback_o *)sub_1B64314(EventDelegate_Callback_TypeInfo, v15, v16);
     EventDelegate_Callback___ctor(
-      v13,
+      v17,
       (Il2CppObject *)v2,
       Method_TitleInfoEventTimeStatus__PlayChangeDayAnime_b__20_3__,
       0LL);
-    if ( !v12 )
+    if ( !v14 )
       goto LABEL_24;
-    UITweener__SetOnFinished(v12, v13, 0LL);
+    UITweener__SetOnFinished(v14, v17, 0LL);
     this = (TitleInfoEventTimeStatus_o *)v2->fields.loopTitleSprite;
     if ( !this )
       goto LABEL_24;
@@ -203,17 +207,17 @@ void __fastcall TitleInfoEventTimeStatus__PlayChangeDayAnime(
             this = (TitleInfoEventTimeStatus_o *)v2->fields.loopTitleSprite;
             if ( this )
             {
-              v14 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-              v15 = (UITweener_o *)TweenAlpha__Begin(v14, v2->fields.TIME_STATUS_DAY_ANIME_TIME, 0.0, 0LL);
-              v16 = (EventDelegate_Callback_o *)sub_1B00F18(EventDelegate_Callback_TypeInfo);
+              v18 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+              v19 = (UITweener_o *)TweenAlpha__Begin(v18, v2->fields.TIME_STATUS_DAY_ANIME_TIME, 0.0, 0LL);
+              v22 = (EventDelegate_Callback_o *)sub_1B64314(EventDelegate_Callback_TypeInfo, v20, v21);
               EventDelegate_Callback___ctor(
-                v16,
+                v22,
                 (Il2CppObject *)v2,
                 Method_TitleInfoEventTimeStatus__PlayChangeDayAnime_b__20_4__,
                 0LL);
-              if ( v15 )
+              if ( v19 )
               {
-                UITweener__SetOnFinished(v15, v16, 0LL);
+                UITweener__SetOnFinished(v19, v22, 0LL);
                 goto LABEL_20;
               }
             }
@@ -221,17 +225,17 @@ void __fastcall TitleInfoEventTimeStatus__PlayChangeDayAnime(
         }
       }
 LABEL_24:
-      sub_1B00F28(this, method);
+      sub_1B64324(this);
     }
   }
 LABEL_20:
-  v17 = TitleInfoEventTimeStatus_TypeInfo;
+  v23 = TitleInfoEventTimeStatus_TypeInfo;
   if ( !TitleInfoEventTimeStatus_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TitleInfoEventTimeStatus_TypeInfo);
-    v17 = TitleInfoEventTimeStatus_TypeInfo;
+    v23 = TitleInfoEventTimeStatus_TypeInfo;
   }
-  TitleInfoEventTimeStatus__SetRestDay(v2, v17->static_fields->TIME_STATUS_DAY_MAX - v2->fields.currentDay, v10);
+  TitleInfoEventTimeStatus__SetRestDay(v2, v23->static_fields->TIME_STATUS_DAY_MAX - v2->fields.currentDay, v12);
 }
 
 
@@ -239,70 +243,71 @@ void __fastcall TitleInfoEventTimeStatus__PlayIconScrollAnime(
         TitleInfoEventTimeStatus_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
   __int64 v4; // x1
+  __int64 v5; // x1
   TitleInfoEventTimeImgListComponent_o *iconList; // x20
-  System_Action_o *v6; // x21
-  TerminalPramsManager_c *v7; // x0
-  __int64 v8; // x1
+  System_Action_o *v7; // x21
+  TerminalPramsManager_c *v8; // x0
   const MethodInfo *v9; // x2
-  TerminalPramsManager_c *v10; // x0
-  struct TitleInfoEventTimeImgListComponent_o *v11; // x8
+  __int64 v10; // x1
+  TerminalPramsManager_c *v11; // x0
+  struct TitleInfoEventTimeImgListComponent_o *v12; // x8
   struct TimeStatusRecord_o *timeStatusRecord_k__BackingField; // x9
 
-  if ( (byte_48E1377 & 1) == 0 )
+  if ( (byte_49FAF1D & 1) == 0 )
   {
-    sub_1B00CCC(&System_Action_TypeInfo, method);
-    sub_1B00CCC(&TerminalPramsManager_TypeInfo, v3);
-    sub_1B00CCC(&Method_TitleInfoEventTimeStatus_PlayChangeDayAnime__, v4);
-    byte_48E1377 = 1;
+    sub_1B640C8(&System_Action_TypeInfo, method);
+    sub_1B640C8(&TerminalPramsManager_TypeInfo, v4);
+    sub_1B640C8(&Method_TitleInfoEventTimeStatus_PlayChangeDayAnime__, v5);
+    byte_49FAF1D = 1;
   }
   iconList = this->fields.iconList;
-  v6 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
-  System_Action___ctor(v6, (Il2CppObject *)this, Method_TitleInfoEventTimeStatus_PlayChangeDayAnime__, 0LL);
+  v7 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, method, v2);
+  System_Action___ctor(v7, (Il2CppObject *)this, Method_TitleInfoEventTimeStatus_PlayChangeDayAnime__, 0LL);
   if ( !iconList )
     goto LABEL_21;
-  TitleInfoEventTimeImgListComponent__SetupTimeAnime(iconList, v6, v9);
+  TitleInfoEventTimeImgListComponent__SetupTimeAnime(iconList, v7, v9);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_48E140B )
+  if ( !byte_49FAFB1 )
   {
-    sub_1B00CCC(&TerminalPramsManager_TypeInfo, v8);
-    byte_48E140B = 1;
+    sub_1B640C8(&TerminalPramsManager_TypeInfo, v10);
+    byte_49FAFB1 = 1;
   }
-  v10 = TerminalPramsManager_TypeInfo;
+  v11 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    v10 = TerminalPramsManager_TypeInfo;
+    v11 = TerminalPramsManager_TypeInfo;
   }
-  if ( v10->static_fields->_timeStatusRecord_k__BackingField )
+  if ( v11->static_fields->_timeStatusRecord_k__BackingField )
   {
-    if ( !v10->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(v10);
-    if ( !byte_48E140B )
+    if ( !v11->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(v11);
+    if ( !byte_49FAFB1 )
     {
-      sub_1B00CCC(&TerminalPramsManager_TypeInfo, v8);
-      byte_48E140B = 1;
+      sub_1B640C8(&TerminalPramsManager_TypeInfo, v10);
+      byte_49FAFB1 = 1;
     }
-    v7 = TerminalPramsManager_TypeInfo;
+    v8 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      v7 = TerminalPramsManager_TypeInfo;
+      v8 = TerminalPramsManager_TypeInfo;
     }
-    v11 = this->fields.iconList;
-    if ( v11 )
+    v12 = this->fields.iconList;
+    if ( v12 )
     {
-      timeStatusRecord_k__BackingField = v7->static_fields->_timeStatusRecord_k__BackingField;
+      timeStatusRecord_k__BackingField = v8->static_fields->_timeStatusRecord_k__BackingField;
       if ( timeStatusRecord_k__BackingField )
       {
-        timeStatusRecord_k__BackingField->fields.state = v11->fields.endState;
+        timeStatusRecord_k__BackingField->fields.state = v12->fields.endState;
         return;
       }
     }
 LABEL_21:
-    sub_1B00F28(v7, v8);
+    sub_1B64324(v8);
   }
 }
 
@@ -314,14 +319,13 @@ void __fastcall TitleInfoEventTimeStatus__SetDay(
 {
   UILabel_o *dayCountLabel; // x19
   System_String_o *v4; // x0
-  __int64 v5; // x1
-  int32_t v6; // [xsp+Ch] [xbp-14h] BYREF
+  int32_t v5; // [xsp+Ch] [xbp-14h] BYREF
 
-  v6 = day;
+  v5 = day;
   dayCountLabel = this->fields.dayCountLabel;
-  v4 = System_Int32__ToString((int32_t)&v6, 0LL);
+  v4 = System_Int32__ToString((int32_t)&v5, 0LL);
   if ( !dayCountLabel )
-    sub_1B00F28(v4, v5);
+    sub_1B64324(v4);
   UILabel__set_text(dayCountLabel, v4, 0LL);
 }
 
@@ -335,23 +339,22 @@ void __fastcall TitleInfoEventTimeStatus__SetLoop(
   __int64 v5; // x1
   __int64 v6; // x1
   UISprite_o *loopTitleSprite; // x21
-  __int64 v8; // x1
   UnityEngine_Component_o *gameObject; // x0
   UILabel_o *loopCountLabel; // x19
-  int32_t v11; // [xsp+Ch] [xbp-24h] BYREF
+  int32_t v10; // [xsp+Ch] [xbp-24h] BYREF
 
-  v11 = loop;
-  if ( (byte_48E1375 & 1) == 0 )
+  v10 = loop;
+  if ( (byte_49FAF1B & 1) == 0 )
   {
-    sub_1B00CCC(&AtlasManager_TypeInfo, *(_QWORD *)&loop);
-    sub_1B00CCC(&StringLiteral_1/*""*/, v5);
-    sub_1B00CCC(&StringLiteral_23583/*"time_status_icon_loop"*/, v6);
-    byte_48E1375 = 1;
+    sub_1B640C8(&AtlasManager_TypeInfo, *(_QWORD *)&loop);
+    sub_1B640C8(&StringLiteral_1/*""*/, v5);
+    sub_1B640C8(&StringLiteral_23839/*"time_status_icon_loop"*/, v6);
+    byte_49FAF1B = 1;
   }
   loopTitleSprite = this->fields.loopTitleSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI(loopTitleSprite, (System_String_o *)StringLiteral_23583/*"time_status_icon_loop"*/, 0LL);
+  AtlasManager__SetEventUI(loopTitleSprite, (System_String_o *)StringLiteral_23839/*"time_status_icon_loop"*/, 0LL);
   gameObject = (UnityEngine_Component_o *)this->fields.loopTitleSprite;
   if ( !gameObject )
     goto LABEL_13;
@@ -368,7 +371,7 @@ void __fastcall TitleInfoEventTimeStatus__SetLoop(
         gameObject,
         gameObject->klass[2]._1.interopData);
       loopCountLabel = this->fields.loopCountLabel;
-      gameObject = (UnityEngine_Component_o *)System_Int32__ToString((int32_t)&v11, 0LL);
+      gameObject = (UnityEngine_Component_o *)System_Int32__ToString((int32_t)&v10, 0LL);
       if ( loopCountLabel )
       {
         UILabel__set_text(loopCountLabel, (System_String_o *)gameObject, 0LL);
@@ -376,7 +379,7 @@ void __fastcall TitleInfoEventTimeStatus__SetLoop(
       }
     }
 LABEL_13:
-    sub_1B00F28(gameObject, v8);
+    sub_1B64324(gameObject);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
   gameObject = (UnityEngine_Component_o *)this->fields.loopCountLabel;
@@ -401,51 +404,47 @@ void __fastcall TitleInfoEventTimeStatus__SetRestDay(
   UISprite_o *restDayTextSprite; // x21
   UILabel_o *restDayCountLabel; // x20
   System_String_o *v13; // x21
-  __int64 v14; // x2
-  __int64 v15; // x3
-  __int64 v16; // x4
-  Il2CppObject *v17; // x0
-  System_String_o *v18; // x0
-  __int64 v19; // x1
-  int32_t v20; // [xsp+Ch] [xbp-34h] BYREF
+  Il2CppObject *v14; // x0
+  System_String_o *v15; // x0
+  int32_t v16; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_48E1376 & 1) == 0 )
+  if ( (byte_49FAF1C & 1) == 0 )
   {
-    sub_1B00CCC(&AtlasManager_TypeInfo, *(_QWORD *)&restDay);
-    sub_1B00CCC(&int_TypeInfo, v5);
-    sub_1B00CCC(&LocalizationManager_TypeInfo, v6);
-    sub_1B00CCC(&StringLiteral_23580/*"time_status_fes01"*/, v7);
-    sub_1B00CCC(&StringLiteral_23581/*"time_status_fes02"*/, v8);
-    sub_1B00CCC(&StringLiteral_1/*""*/, v9);
-    sub_1B00CCC(&StringLiteral_13091/*"TIME_REST2_DAYS"*/, v10);
-    byte_48E1376 = 1;
+    sub_1B640C8(&AtlasManager_TypeInfo, *(_QWORD *)&restDay);
+    sub_1B640C8(&int_TypeInfo, v5);
+    sub_1B640C8(&LocalizationManager_TypeInfo, v6);
+    sub_1B640C8(&StringLiteral_23836/*"time_status_fes01"*/, v7);
+    sub_1B640C8(&StringLiteral_23837/*"time_status_fes02"*/, v8);
+    sub_1B640C8(&StringLiteral_1/*""*/, v9);
+    sub_1B640C8(&StringLiteral_13244/*"TIME_REST2_DAYS"*/, v10);
+    byte_49FAF1C = 1;
   }
   restDayTextSprite = this->fields.restDayTextSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   if ( restDay >= 1 )
   {
-    AtlasManager__SetEventUI(restDayTextSprite, (System_String_o *)StringLiteral_23580/*"time_status_fes01"*/, 0LL);
+    AtlasManager__SetEventUI(restDayTextSprite, (System_String_o *)StringLiteral_23836/*"time_status_fes01"*/, 0LL);
     restDayCountLabel = this->fields.restDayCountLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_13091/*"TIME_REST2_DAYS"*/, 0LL);
-    v20 = restDay;
-    v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v20, v14, v15, v16);
-    v18 = System_String__Format(v13, v17, 0LL);
+    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_13244/*"TIME_REST2_DAYS"*/, 0LL);
+    v16 = restDay;
+    v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16);
+    v15 = System_String__Format(v13, v14, 0LL);
     if ( restDayCountLabel )
     {
-      UILabel__set_text(restDayCountLabel, v18, 0LL);
+      UILabel__set_text(restDayCountLabel, v15, 0LL);
       return;
     }
 LABEL_12:
-    sub_1B00F28(v18, v19);
+    sub_1B64324(v15);
   }
-  AtlasManager__SetEventUI(restDayTextSprite, (System_String_o *)StringLiteral_23581/*"time_status_fes02"*/, 0LL);
-  v18 = (System_String_o *)this->fields.restDayCountLabel;
-  if ( !v18 )
+  AtlasManager__SetEventUI(restDayTextSprite, (System_String_o *)StringLiteral_23837/*"time_status_fes02"*/, 0LL);
+  v15 = (System_String_o *)this->fields.restDayCountLabel;
+  if ( !v15 )
     goto LABEL_12;
-  UILabel__set_text((UILabel_o *)v18, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+  UILabel__set_text((UILabel_o *)v15, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
 
 
@@ -460,10 +459,10 @@ void __fastcall TitleInfoEventTimeStatus__SetYesterday(TitleInfoEventTimeStatus_
   const MethodInfo *v9; // x2
   TitleInfoEventTimeStatus_c *v10; // x0
 
-  if ( (byte_48E1379 & 1) == 0 )
+  if ( (byte_49FAF1F & 1) == 0 )
   {
-    sub_1B00CCC(&TitleInfoEventTimeStatus_TypeInfo, method);
-    byte_48E1379 = 1;
+    sub_1B640C8(&TitleInfoEventTimeStatus_TypeInfo, method);
+    byte_49FAF1F = 1;
   }
   currentDay = this->fields.currentDay;
   currentLoop = this->fields.currentLoop;
@@ -525,47 +524,47 @@ void __fastcall TitleInfoEventTimeStatus__Setup(
   UISprite_o *restDayTextSprite; // x22
   TitleInfoEventTimeStatus_o *restDayCountLabel; // x22
   System_String_o *v31; // x23
-  __int64 v32; // x2
-  __int64 v33; // x3
-  __int64 v34; // x4
-  Il2CppObject *v35; // x0
-  TitleInfoEventTimeStatus_o *v36; // x1
-  TitleInfoEventTimeStatus_o *v37; // x0
-  const MethodInfo *v38; // x2
-  const MethodInfo *v39; // x3
+  Il2CppObject *v32; // x0
+  TitleInfoEventTimeStatus_o *v33; // x1
+  TitleInfoEventTimeStatus_o *v34; // x0
+  const MethodInfo *v35; // x2
+  __int64 v36; // x1
+  __int64 v37; // x2
+  const MethodInfo *v38; // x3
   int32_t NowTimeState; // w21
-  TerminalPramsManager_c *v41; // x0
-  TimeStatusRecord_o *v42; // x23
-  __int64 v43; // x1
-  int32_t v44; // w2
-  int32_t v45; // w3
-  TerminalPramsManager_c *v46; // x0
+  TerminalPramsManager_c *v40; // x0
+  TimeStatusRecord_o *v41; // x23
+  __int64 v42; // x1
+  int32_t v43; // w2
+  int32_t v44; // w3
+  TerminalPramsManager_c *v45; // x0
   ServantStatusBattleListViewItem_o *p_timeStatusRecord_k__BackingField; // x0
-  __int64 v48; // x8
-  __int64 v49; // x8
-  __int64 v50; // x8
-  __int64 v51; // x8
+  struct UIDrawCall_o *drawCall; // x8
+  struct UIDrawCall_o *v48; // x8
+  struct UIDrawCall_o *v49; // x8
+  struct UIDrawCall_o *v50; // x8
+  const MethodInfo *v51; // x1
   struct TitleInfoEventTimeImgListComponent_o *iconList; // x8
   int v53; // [xsp+8h] [xbp-48h] BYREF
   int32_t v54; // [xsp+Ch] [xbp-44h] BYREF
 
   v4 = this;
-  if ( (byte_48E1374 & 1) == 0 )
+  if ( (byte_49FAF1A & 1) == 0 )
   {
-    sub_1B00CCC(&AtlasManager_TypeInfo, eventDetailEntity);
-    sub_1B00CCC(&int_TypeInfo, v5);
-    sub_1B00CCC(&LocalizationManager_TypeInfo, v6);
-    sub_1B00CCC(&TerminalPramsManager_TypeInfo, v7);
-    sub_1B00CCC(&TimeStatusRecord_TypeInfo, v8);
-    sub_1B00CCC(&TitleInfoEventTimeStatus_TypeInfo, v9);
-    sub_1B00CCC(&StringLiteral_23591/*"time_status_top"*/, v10);
-    sub_1B00CCC(&StringLiteral_23580/*"time_status_fes01"*/, v11);
-    sub_1B00CCC(&StringLiteral_23581/*"time_status_fes02"*/, v12);
-    sub_1B00CCC(&StringLiteral_1/*""*/, v13);
-    sub_1B00CCC(&StringLiteral_13091/*"TIME_REST2_DAYS"*/, v14);
-    sub_1B00CCC(&StringLiteral_23583/*"time_status_icon_loop"*/, v15);
-    this = (TitleInfoEventTimeStatus_o *)sub_1B00CCC(&StringLiteral_1207/*"0"*/, v16);
-    byte_48E1374 = 1;
+    sub_1B640C8(&AtlasManager_TypeInfo, eventDetailEntity);
+    sub_1B640C8(&int_TypeInfo, v5);
+    sub_1B640C8(&LocalizationManager_TypeInfo, v6);
+    sub_1B640C8(&TerminalPramsManager_TypeInfo, v7);
+    sub_1B640C8(&TimeStatusRecord_TypeInfo, v8);
+    sub_1B640C8(&TitleInfoEventTimeStatus_TypeInfo, v9);
+    sub_1B640C8(&StringLiteral_23847/*"time_status_top"*/, v10);
+    sub_1B640C8(&StringLiteral_23836/*"time_status_fes01"*/, v11);
+    sub_1B640C8(&StringLiteral_23837/*"time_status_fes02"*/, v12);
+    sub_1B640C8(&StringLiteral_1/*""*/, v13);
+    sub_1B640C8(&StringLiteral_13244/*"TIME_REST2_DAYS"*/, v14);
+    sub_1B640C8(&StringLiteral_23839/*"time_status_icon_loop"*/, v15);
+    this = (TitleInfoEventTimeStatus_o *)sub_1B640C8(&StringLiteral_1213/*"0"*/, v16);
+    byte_49FAF1A = 1;
   }
   v54 = 0;
   if ( !eventDetailEntity )
@@ -577,7 +576,7 @@ void __fastcall TitleInfoEventTimeStatus__Setup(
   if ( !v4->fields.dayCountLabel )
     goto LABEL_81;
   v17 = this;
-  UILabel__set_text(v4->fields.dayCountLabel, (System_String_o *)StringLiteral_1207/*"0"*/, 0LL);
+  UILabel__set_text(v4->fields.dayCountLabel, (System_String_o *)StringLiteral_1213/*"0"*/, 0LL);
   if ( v17 )
   {
     Day = EventStatusEntity__GetDay((EventStatusEntity_o *)v17, 0LL);
@@ -603,8 +602,8 @@ void __fastcall TitleInfoEventTimeStatus__Setup(
   bgSprite = v4->fields.bgSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI(bgSprite, (System_String_o *)StringLiteral_23591/*"time_status_top"*/, 0LL);
-  v23 = AtlasManager__SetEventUI(v4->fields.loopTitleSprite, (System_String_o *)StringLiteral_23583/*"time_status_icon_loop"*/, 0LL);
+  AtlasManager__SetEventUI(bgSprite, (System_String_o *)StringLiteral_23847/*"time_status_top"*/, 0LL);
+  v23 = AtlasManager__SetEventUI(v4->fields.loopTitleSprite, (System_String_o *)StringLiteral_23839/*"time_status_icon_loop"*/, 0LL);
   UserEventEntity = TitleInfoEventTimeStatus__GetUserEventEntity(
                       (TitleInfoEventTimeStatus_o *)v23,
                       eventDetailEntity->fields.eventId,
@@ -652,70 +651,70 @@ void __fastcall TitleInfoEventTimeStatus__Setup(
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   if ( v21 < 1 )
   {
-    AtlasManager__SetEventUI(restDayTextSprite, (System_String_o *)StringLiteral_23581/*"time_status_fes02"*/, 0LL);
+    AtlasManager__SetEventUI(restDayTextSprite, (System_String_o *)StringLiteral_23837/*"time_status_fes02"*/, 0LL);
     this = (TitleInfoEventTimeStatus_o *)v4->fields.restDayCountLabel;
     if ( !this )
       goto LABEL_81;
-    v36 = (TitleInfoEventTimeStatus_o *)StringLiteral_1/*""*/;
+    v33 = (TitleInfoEventTimeStatus_o *)StringLiteral_1/*""*/;
   }
   else
   {
-    AtlasManager__SetEventUI(restDayTextSprite, (System_String_o *)StringLiteral_23580/*"time_status_fes01"*/, 0LL);
+    AtlasManager__SetEventUI(restDayTextSprite, (System_String_o *)StringLiteral_23836/*"time_status_fes01"*/, 0LL);
     restDayCountLabel = (TitleInfoEventTimeStatus_o *)v4->fields.restDayCountLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v31 = LocalizationManager__Get((System_String_o *)StringLiteral_13091/*"TIME_REST2_DAYS"*/, 0LL);
+    v31 = LocalizationManager__Get((System_String_o *)StringLiteral_13244/*"TIME_REST2_DAYS"*/, 0LL);
     v53 = v21;
-    v35 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v53, v32, v33, v34);
-    this = (TitleInfoEventTimeStatus_o *)System_String__Format(v31, v35, 0LL);
+    v32 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v53);
+    this = (TitleInfoEventTimeStatus_o *)System_String__Format(v31, v32, 0LL);
     if ( !restDayCountLabel )
       goto LABEL_81;
-    v36 = this;
+    v33 = this;
     this = restDayCountLabel;
   }
-  UILabel__set_text((UILabel_o *)this, (System_String_o *)v36, 0LL);
-  NowTimeState = TitleInfoEventTimeStatus__GetNowTimeState(v37, (EventStatusEntity_o *)v17, v38);
+  UILabel__set_text((UILabel_o *)this, (System_String_o *)v33, 0LL);
+  NowTimeState = TitleInfoEventTimeStatus__GetNowTimeState(v34, (EventStatusEntity_o *)v17, v35);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_48E140B )
+  if ( !byte_49FAFB1 )
   {
-    sub_1B00CCC(&TerminalPramsManager_TypeInfo, eventDetailEntity);
-    byte_48E140B = 1;
+    sub_1B640C8(&TerminalPramsManager_TypeInfo, v36);
+    byte_49FAFB1 = 1;
   }
-  v41 = TerminalPramsManager_TypeInfo;
+  v40 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    v41 = TerminalPramsManager_TypeInfo;
+    v40 = TerminalPramsManager_TypeInfo;
   }
-  if ( !v41->static_fields->_timeStatusRecord_k__BackingField )
+  if ( !v40->static_fields->_timeStatusRecord_k__BackingField )
   {
-    v42 = (TimeStatusRecord_o *)sub_1B00F18(TimeStatusRecord_TypeInfo);
-    TimeStatusRecord___ctor(v42, 0LL);
+    v41 = (TimeStatusRecord_o *)sub_1B64314(TimeStatusRecord_TypeInfo, v36, v37);
+    TimeStatusRecord___ctor(v41, 0LL);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_48DFF74 )
+    if ( !byte_49F9ABA )
     {
-      sub_1B00CCC(&TerminalPramsManager_TypeInfo, v43);
-      byte_48DFF74 = 1;
+      sub_1B640C8(&TerminalPramsManager_TypeInfo, v42);
+      byte_49F9ABA = 1;
     }
-    v46 = TerminalPramsManager_TypeInfo;
+    v45 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      v46 = TerminalPramsManager_TypeInfo;
+      v45 = TerminalPramsManager_TypeInfo;
     }
-    p_timeStatusRecord_k__BackingField = (ServantStatusBattleListViewItem_o *)&v46->static_fields->_timeStatusRecord_k__BackingField;
-    p_timeStatusRecord_k__BackingField->klass = (ServantStatusBattleListViewItem_c *)v42;
-    sub_1B00C70(p_timeStatusRecord_k__BackingField, (int32_t)v42, v44, v45);
-    v41 = TerminalPramsManager_TypeInfo;
+    p_timeStatusRecord_k__BackingField = (ServantStatusBattleListViewItem_o *)&v45->static_fields->_timeStatusRecord_k__BackingField;
+    p_timeStatusRecord_k__BackingField->klass = (ServantStatusBattleListViewItem_c *)v41;
+    sub_1B6406C(p_timeStatusRecord_k__BackingField, (int32_t)v41, v43, v44);
+    v40 = TerminalPramsManager_TypeInfo;
   }
-  if ( !v41->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(v41);
-  if ( !byte_48E140B )
+  if ( !v40->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(v40);
+  if ( !byte_49FAFB1 )
   {
-    sub_1B00CCC(&TerminalPramsManager_TypeInfo, eventDetailEntity);
-    byte_48E140B = 1;
+    sub_1B640C8(&TerminalPramsManager_TypeInfo, v36);
+    byte_49FAFB1 = 1;
   }
   this = (TitleInfoEventTimeStatus_o *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -723,17 +722,17 @@ void __fastcall TitleInfoEventTimeStatus__Setup(
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     this = (TitleInfoEventTimeStatus_o *)TerminalPramsManager_TypeInfo;
   }
-  v48 = *(_QWORD *)&this[1].fields.dayCountLabel->fields.mLastAlpha;
-  if ( !v48 )
+  drawCall = this[1].fields.dayCountLabel->fields.drawCall;
+  if ( !drawCall )
     goto LABEL_81;
-  if ( *(_DWORD *)(v48 + 16) == eventDetailEntity->fields.eventId )
+  if ( drawCall->fields.m_CachedPtr == eventDetailEntity->fields.eventId )
     goto LABEL_68;
   if ( !LODWORD(this[1].fields.dayCountTween) )
     j_il2cpp_runtime_class_init_0(this);
-  if ( !byte_48E140B )
+  if ( !byte_49FAFB1 )
   {
-    sub_1B00CCC(&TerminalPramsManager_TypeInfo, eventDetailEntity);
-    byte_48E140B = 1;
+    sub_1B640C8(&TerminalPramsManager_TypeInfo, v36);
+    byte_49FAFB1 = 1;
   }
   this = (TitleInfoEventTimeStatus_o *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -741,33 +740,33 @@ void __fastcall TitleInfoEventTimeStatus__Setup(
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     this = (TitleInfoEventTimeStatus_o *)TerminalPramsManager_TypeInfo;
   }
-  v49 = *(_QWORD *)&this[1].fields.dayCountLabel->fields.mLastAlpha;
-  if ( !v49 )
+  v48 = this[1].fields.dayCountLabel->fields.drawCall;
+  if ( !v48 )
     goto LABEL_81;
-  *(_DWORD *)(v49 + 16) = eventDetailEntity->fields.eventId;
-  if ( !byte_48E140B )
+  v48->fields.m_CachedPtr = eventDetailEntity->fields.eventId;
+  if ( !byte_49FAFB1 )
   {
-    sub_1B00CCC(&TerminalPramsManager_TypeInfo, eventDetailEntity);
+    sub_1B640C8(&TerminalPramsManager_TypeInfo, v36);
     this = (TitleInfoEventTimeStatus_o *)TerminalPramsManager_TypeInfo;
-    byte_48E140B = 1;
+    byte_49FAFB1 = 1;
   }
   if ( !LODWORD(this[1].fields.dayCountTween) )
   {
     j_il2cpp_runtime_class_init_0(this);
     this = (TitleInfoEventTimeStatus_o *)TerminalPramsManager_TypeInfo;
   }
-  v50 = *(_QWORD *)&this[1].fields.dayCountLabel->fields.mLastAlpha;
-  if ( !v50 )
+  v49 = this[1].fields.dayCountLabel->fields.drawCall;
+  if ( !v49 )
 LABEL_81:
-    sub_1B00F28(this, eventDetailEntity);
-  *(_DWORD *)(v50 + 20) = NowTimeState;
+    sub_1B64324(this);
+  *((_DWORD *)&v49->fields.UnityEngine_Behaviour_Fields + 1) = NowTimeState;
 LABEL_68:
   if ( !LODWORD(this[1].fields.dayCountTween) )
     j_il2cpp_runtime_class_init_0(this);
-  if ( !byte_48E140B )
+  if ( !byte_49FAFB1 )
   {
-    sub_1B00CCC(&TerminalPramsManager_TypeInfo, eventDetailEntity);
-    byte_48E140B = 1;
+    sub_1B640C8(&TerminalPramsManager_TypeInfo, v36);
+    byte_49FAFB1 = 1;
   }
   this = (TitleInfoEventTimeStatus_o *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -775,22 +774,22 @@ LABEL_68:
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     this = (TitleInfoEventTimeStatus_o *)TerminalPramsManager_TypeInfo;
   }
-  v51 = *(_QWORD *)&this[1].fields.dayCountLabel->fields.mLastAlpha;
-  if ( !v51 )
+  v50 = this[1].fields.dayCountLabel->fields.drawCall;
+  if ( !v50 )
     goto LABEL_81;
   this = (TitleInfoEventTimeStatus_o *)v4->fields.iconList;
   if ( !this )
     goto LABEL_81;
   TitleInfoEventTimeImgListComponent__Init(
     (TitleInfoEventTimeImgListComponent_o *)this,
-    *(_DWORD *)(v51 + 20),
+    *((_DWORD *)&v50->fields.UnityEngine_Behaviour_Fields + 1),
     NowTimeState,
-    v39);
+    v38);
   iconList = v4->fields.iconList;
   if ( !iconList )
     goto LABEL_81;
   if ( (iconList->fields.startState & 0xFFFFFFFE) == 2 && iconList->fields.endState <= 1u )
-    TitleInfoEventTimeStatus__SetYesterday(v4, (const MethodInfo *)eventDetailEntity);
+    TitleInfoEventTimeStatus__SetYesterday(v4, v51);
 }
 
 
@@ -800,33 +799,34 @@ void __fastcall TitleInfoEventTimeStatus___PlayChangeDayAnime_b__20_0(
 {
   const MethodInfo *v2; // x2
   __int64 v4; // x1
-  __int64 v5; // x1
   UITweener_o *dayCountTween; // x0
-  UITweener_o *v7; // x20
-  EventDelegate_Callback_o *v8; // x21
+  UITweener_o *v6; // x20
+  __int64 v7; // x1
+  __int64 v8; // x2
+  EventDelegate_Callback_o *v9; // x21
 
-  if ( (byte_48E137D & 1) == 0 )
+  if ( (byte_49FAF23 & 1) == 0 )
   {
-    sub_1B00CCC(&EventDelegate_Callback_TypeInfo, method);
-    sub_1B00CCC(&Method_TitleInfoEventTimeStatus__PlayChangeDayAnime_b__20_1__, v4);
-    byte_48E137D = 1;
+    sub_1B640C8(&EventDelegate_Callback_TypeInfo, method);
+    sub_1B640C8(&Method_TitleInfoEventTimeStatus__PlayChangeDayAnime_b__20_1__, v4);
+    byte_49FAF23 = 1;
   }
   TitleInfoEventTimeStatus__SetDay(this, this->fields.currentDay, v2);
   dayCountTween = (UITweener_o *)this->fields.dayCountTween;
   if ( !dayCountTween
     || (UITweener__PlayReverse(dayCountTween, 0LL),
-        v7 = (UITweener_o *)this->fields.dayCountTween,
-        v8 = (EventDelegate_Callback_o *)sub_1B00F18(EventDelegate_Callback_TypeInfo),
+        v6 = (UITweener_o *)this->fields.dayCountTween,
+        v9 = (EventDelegate_Callback_o *)sub_1B64314(EventDelegate_Callback_TypeInfo, v7, v8),
         EventDelegate_Callback___ctor(
-          v8,
+          v9,
           (Il2CppObject *)this,
           Method_TitleInfoEventTimeStatus__PlayChangeDayAnime_b__20_1__,
           0LL),
-        !v7) )
+        !v6) )
   {
-    sub_1B00F28(dayCountTween, v5);
+    sub_1B64324(dayCountTween);
   }
-  UITweener__SetOnFinished(v7, v8, 0LL);
+  UITweener__SetOnFinished(v6, v9, 0LL);
 }
 
 
@@ -834,12 +834,12 @@ void __fastcall TitleInfoEventTimeStatus___PlayChangeDayAnime_b__20_1(
         TitleInfoEventTimeStatus_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
   __int64 v4; // x1
   __int64 v5; // x1
   __int64 v6; // x1
-  __int64 v7; // x20
-  __int64 v8; // x1
+  __int64 v7; // x1
+  __int64 v8; // x20
   UnityEngine_GameObject_o *dayCountLabel; // x0
   Il2CppObject *gameObject; // x21
   int32_t v11; // w2
@@ -855,20 +855,22 @@ void __fastcall TitleInfoEventTimeStatus___PlayChangeDayAnime_b__20_1(
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   UnityEngine_GameObject_o *v22; // x0
   UITweener_o *v23; // x19
-  EventDelegate_Callback_o *v24; // x21
-  UnityEngine_Vector3_o v25; // 0:s1.4,4:s2.4,8:s3.4
+  __int64 v24; // x1
+  __int64 v25; // x2
+  EventDelegate_Callback_o *v26; // x21
+  UnityEngine_Vector3_o v27; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_48E137E & 1) == 0 )
+  if ( (byte_49FAF24 & 1) == 0 )
   {
-    sub_1B00CCC(&EventDelegate_Callback_TypeInfo, method);
-    sub_1B00CCC(&Method_UnityEngine_Object_Instantiate_GameObject___, v3);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v4);
-    sub_1B00CCC(&Method_TitleInfoEventTimeStatus___c__DisplayClass20_0__PlayChangeDayAnime_b__2__, v5);
-    sub_1B00CCC(&TitleInfoEventTimeStatus___c__DisplayClass20_0_TypeInfo, v6);
-    byte_48E137E = 1;
+    sub_1B640C8(&EventDelegate_Callback_TypeInfo, method);
+    sub_1B640C8(&Method_UnityEngine_Object_Instantiate_GameObject___, v4);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v5);
+    sub_1B640C8(&Method_TitleInfoEventTimeStatus___c__DisplayClass20_0__PlayChangeDayAnime_b__2__, v6);
+    sub_1B640C8(&TitleInfoEventTimeStatus___c__DisplayClass20_0_TypeInfo, v7);
+    byte_49FAF24 = 1;
   }
-  v7 = sub_1B00F18(TitleInfoEventTimeStatus___c__DisplayClass20_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v7, 0LL);
+  v8 = sub_1B64314(TitleInfoEventTimeStatus___c__DisplayClass20_0_TypeInfo, method, v2);
+  System_Object___ctor((Il2CppObject *)v8, 0LL);
   dayCountLabel = (UnityEngine_GameObject_o *)this->fields.dayCountLabel;
   if ( !dayCountLabel )
     goto LABEL_14;
@@ -877,12 +879,12 @@ void __fastcall TitleInfoEventTimeStatus___PlayChangeDayAnime_b__20_1(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   dayCountLabel = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                                 gameObject,
-                                                (const MethodInfo_2DD5AE8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-  if ( !v7 )
+                                                (const MethodInfo_2EBBCA0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+  if ( !v8 )
     goto LABEL_14;
-  *(_QWORD *)(v7 + 16) = dayCountLabel;
-  v13 = (UnityEngine_GameObject_o **)(v7 + 16);
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v7 + 16), (int32_t)dayCountLabel, v11, v12);
+  *(_QWORD *)(v8 + 16) = dayCountLabel;
+  v13 = (UnityEngine_GameObject_o **)(v8 + 16);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v8 + 16), (int32_t)dayCountLabel, v11, v12);
   dayCountLabel = (UnityEngine_GameObject_o *)this->fields.dayCountLabel;
   if ( !dayCountLabel )
     goto LABEL_14;
@@ -896,33 +898,33 @@ void __fastcall TitleInfoEventTimeStatus___PlayChangeDayAnime_b__20_1(
   v16 = UnityEngine_GameObject__get_gameObject(dayCountLabel, 0LL);
   TIME_STATUS_DAY_EFFECT_TIME = this->fields.TIME_STATUS_DAY_EFFECT_TIME;
   v19 = v16;
-  if ( !byte_48DD9F6 )
+  if ( !byte_49F7116 )
   {
-    sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, v17);
-    byte_48DD9F6 = 1;
+    sub_1B640C8(&UnityEngine_Vector3_TypeInfo, v17);
+    byte_49F7116 = 1;
   }
   TIME_STATUS_DAY_EFFECT_SIZE = this->fields.TIME_STATUS_DAY_EFFECT_SIZE;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-  v25.fields.x = static_fields->oneVector.fields.x * TIME_STATUS_DAY_EFFECT_SIZE;
-  v25.fields.y = static_fields->oneVector.fields.y * TIME_STATUS_DAY_EFFECT_SIZE;
-  v25.fields.z = static_fields->oneVector.fields.z * TIME_STATUS_DAY_EFFECT_SIZE;
-  TweenScale__Begin(v19, TIME_STATUS_DAY_EFFECT_TIME, v25, 0LL);
+  v27.fields.x = static_fields->oneVector.fields.x * TIME_STATUS_DAY_EFFECT_SIZE;
+  v27.fields.y = static_fields->oneVector.fields.y * TIME_STATUS_DAY_EFFECT_SIZE;
+  v27.fields.z = static_fields->oneVector.fields.z * TIME_STATUS_DAY_EFFECT_SIZE;
+  TweenScale__Begin(v19, TIME_STATUS_DAY_EFFECT_TIME, v27, 0LL);
   dayCountLabel = *v13;
   if ( !*v13
     || (v22 = UnityEngine_GameObject__get_gameObject(dayCountLabel, 0LL),
         v23 = (UITweener_o *)TweenAlpha__Begin(v22, this->fields.TIME_STATUS_DAY_EFFECT_TIME, 0.0, 0LL),
-        v24 = (EventDelegate_Callback_o *)sub_1B00F18(EventDelegate_Callback_TypeInfo),
+        v26 = (EventDelegate_Callback_o *)sub_1B64314(EventDelegate_Callback_TypeInfo, v24, v25),
         EventDelegate_Callback___ctor(
-          v24,
-          (Il2CppObject *)v7,
+          v26,
+          (Il2CppObject *)v8,
           Method_TitleInfoEventTimeStatus___c__DisplayClass20_0__PlayChangeDayAnime_b__2__,
           0LL),
         !v23) )
   {
 LABEL_14:
-    sub_1B00F28(dayCountLabel, v8);
+    sub_1B64324(dayCountLabel);
   }
-  UITweener__SetOnFinished(v23, v24, 0LL);
+  UITweener__SetOnFinished(v23, v26, 0LL);
 }
 
 
@@ -931,14 +933,13 @@ void __fastcall TitleInfoEventTimeStatus___PlayChangeDayAnime_b__20_3(
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
-  __int64 v4; // x1
   UnityEngine_Component_o *loopCountLabel; // x0
   UnityEngine_GameObject_o *gameObject; // x0
 
   TitleInfoEventTimeStatus__SetLoop(this, this->fields.currentLoop, v2);
   loopCountLabel = (UnityEngine_Component_o *)this->fields.loopCountLabel;
   if ( !loopCountLabel )
-    sub_1B00F28(0LL, v4);
+    sub_1B64324(0LL);
   gameObject = UnityEngine_Component__get_gameObject(loopCountLabel, 0LL);
   TweenAlpha__Begin(gameObject, this->fields.TIME_STATUS_DAY_ANIME_TIME, 1.0, 0LL);
 }
@@ -953,7 +954,7 @@ void __fastcall TitleInfoEventTimeStatus___PlayChangeDayAnime_b__20_4(
 
   loopTitleSprite = (UnityEngine_Component_o *)this->fields.loopTitleSprite;
   if ( !loopTitleSprite )
-    sub_1B00F28(0LL, method);
+    sub_1B64324(0LL);
   gameObject = UnityEngine_Component__get_gameObject(loopTitleSprite, 0LL);
   TweenAlpha__Begin(gameObject, this->fields.TIME_STATUS_DAY_ANIME_TIME, 1.0, 0LL);
 }
@@ -982,16 +983,16 @@ void __fastcall TitleInfoEventTimeStatus___c__DisplayClass20_0___PlayChangeDayAn
   UnityEngine_GameObject_o *effect; // x0
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_48E137F & 1) == 0 )
+  if ( (byte_49FAF25 & 1) == 0 )
   {
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
-    byte_48E137F = 1;
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, method);
+    byte_49FAF25 = 1;
   }
   effect = this->fields.effect;
   if ( !effect )
-    sub_1B00F28(0LL, method);
+    sub_1B64324(0LL);
   gameObject = (UnityEngine_Object_o *)UnityEngine_GameObject__get_gameObject(effect, 0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_68077656(gameObject, 0LL);
+  UnityEngine_Object__Destroy_69127736(gameObject, 0LL);
 }

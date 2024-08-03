@@ -1,4 +1,4 @@
 __int64 start()
 {
-  return __cxa_finalize(&off_4357BB0);
+  return __cxa_finalize(&off_44584C0);
 }

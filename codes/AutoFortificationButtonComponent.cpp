@@ -27,31 +27,30 @@ void __fastcall AutoFortificationButtonComponent__Init(
   UISprite_o *ButtonBg; // x22
   UILabel_o *ButtonLb; // x21
   System_String_o *v12; // x0
-  __int64 v13; // x1
-  int32_t v14; // w2
-  int32_t v15; // w3
+  int32_t v13; // w2
+  int32_t v14; // w3
 
-  if ( (byte_48E63D1 & 1) == 0 )
+  if ( (byte_4A000D8 & 1) == 0 )
   {
-    sub_1B00CCC(&AtlasManager_TypeInfo, *(_QWORD *)&eventId);
-    sub_1B00CCC(&LocalizationManager_TypeInfo, v7);
-    sub_1B00CCC(&StringLiteral_2147/*"AUTO_ORGANIZATION_BTN_LABEL"*/, v8);
-    sub_1B00CCC(&StringLiteral_17245/*"btn_bg_auto_organization"*/, v9);
-    byte_48E63D1 = 1;
+    sub_1B640C8(&AtlasManager_TypeInfo, *(_QWORD *)&eventId);
+    sub_1B640C8(&LocalizationManager_TypeInfo, v7);
+    sub_1B640C8(&StringLiteral_2153/*"AUTO_ORGANIZATION_BTN_LABEL"*/, v8);
+    sub_1B640C8(&StringLiteral_17416/*"btn_bg_auto_organization"*/, v9);
+    byte_4A000D8 = 1;
   }
   ButtonBg = this->fields.ButtonBg;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_36656832(eventId, ButtonBg, (System_String_o *)StringLiteral_17245/*"btn_bg_auto_organization"*/, 0LL);
+  AtlasManager__SetEventUI_37544692(eventId, ButtonBg, (System_String_o *)StringLiteral_17416/*"btn_bg_auto_organization"*/, 0LL);
   ButtonLb = this->fields.ButtonLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_2147/*"AUTO_ORGANIZATION_BTN_LABEL"*/, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_2153/*"AUTO_ORGANIZATION_BTN_LABEL"*/, 0LL);
   if ( !ButtonLb )
-    sub_1B00F28(v12, v13);
+    sub_1B64324(v12);
   UILabel__set_text(ButtonLb, v12, 0LL);
   this->fields.onClickAction = onClickAction;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.onClickAction, (int32_t)onClickAction, v14, v15);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.onClickAction, (int32_t)onClickAction, v13, v14);
 }
 
 

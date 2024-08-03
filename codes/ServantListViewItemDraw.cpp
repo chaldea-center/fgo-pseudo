@@ -18,34 +18,33 @@ void __fastcall ServantListViewItemDraw__SetInput(
   __int64 v12; // x1
   __int64 v13; // x1
   UnityEngine_Object_o *baseButton; // x22
-  __int64 v15; // x1
   UnityEngine_Component_o *Component_object; // x0
   UnityEngine_Object_o *lockSprite; // x21
-  bool isLock; // w1
+  UnityEngine_GameObject_o *gameObject; // x21
   UnityEngine_Object_o *choiceSprite; // x21
-  bool isChoice; // w1
+  UnityEngine_GameObject_o *v19; // x21
   UnityEngine_Object_o *friendShipSprite; // x21
   UnityEngine_Object_o *chocolateSprite; // x21
   _BOOL4 isEventJoin; // w22
   struct UILabel_o *warningLabel; // x21
-  __int64 *v25; // x8
-  System_String_o *v26; // x1
+  __int64 *v24; // x8
+  System_String_o *v25; // x1
   UnityEngine_Object_o *pushSprite; // x21
   UnityEngine_Object_o *materialTdSprite; // x21
-  UISprite_o *v29; // x21
-  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
+  UISprite_o *v28; // x21
+  UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_48DED68 & 1) == 0 )
+  if ( (byte_49F885B & 1) == 0 )
   {
-    sub_1B00CCC(&AtlasManager_TypeInfo, item);
-    sub_1B00CCC(&Method_UnityEngine_Component_GetComponent_Collider___, v7);
-    sub_1B00CCC(&LocalizationManager_TypeInfo, v8);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v9);
-    sub_1B00CCC(&StringLiteral_22619/*"ribbon_noblephantasmup_01"*/, v10);
-    sub_1B00CCC(&StringLiteral_11306/*"SELECT_CANNOT"*/, v11);
-    sub_1B00CCC(&StringLiteral_11330/*"SELECT_SERVANT_EVENT_JOIN"*/, v12);
-    sub_1B00CCC(&StringLiteral_1/*""*/, v13);
-    byte_48DED68 = 1;
+    sub_1B640C8(&AtlasManager_TypeInfo, item);
+    sub_1B640C8(&Method_UnityEngine_Component_GetComponent_Collider___, v7);
+    sub_1B640C8(&LocalizationManager_TypeInfo, v8);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v9);
+    sub_1B640C8(&StringLiteral_22841/*"ribbon_noblephantasmup_01"*/, v10);
+    sub_1B640C8(&StringLiteral_11441/*"SELECT_CANNOT"*/, v11);
+    sub_1B640C8(&StringLiteral_11465/*"SELECT_SERVANT_EVENT_JOIN"*/, v12);
+    sub_1B640C8(&StringLiteral_1/*""*/, v13);
+    byte_49F885B = 1;
   }
   if ( !item )
     return;
@@ -56,16 +55,16 @@ void __fastcall ServantListViewItemDraw__SetInput(
   {
     Component_object = (UnityEngine_Component_o *)this->fields.baseButton;
     if ( !Component_object )
-      goto LABEL_78;
+      goto LABEL_72;
     Component_object = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                     Component_object,
-                                                    (const MethodInfo_2D596B4 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                    (const MethodInfo_2E2FE90 *)Method_UnityEngine_Component_GetComponent_Collider___);
     if ( !Component_object )
-      goto LABEL_78;
+      goto LABEL_72;
     UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0LL);
     Component_object = (UnityEngine_Component_o *)this->fields.baseButton;
     if ( !Component_object )
-      goto LABEL_78;
+      goto LABEL_72;
     ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, __int64, Il2CppRuntimeInterfaceOffsetPair *))Component_object->klass[1]._1.implementedInterfaces)(
       Component_object,
       0LL,
@@ -79,15 +78,12 @@ void __fastcall ServantListViewItemDraw__SetInput(
   {
     Component_object = (UnityEngine_Component_o *)this->fields.lockSprite;
     if ( !Component_object )
-      goto LABEL_78;
-    Component_object = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(Component_object, 0LL);
-    if ( !Component_object )
-      goto LABEL_78;
-    if ( item->fields.isSwapLock )
-      isLock = !item->fields.isLock;
-    else
-      isLock = item->fields.isLock;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Component_object, isLock, 0LL);
+      goto LABEL_72;
+    gameObject = UnityEngine_Component__get_gameObject(Component_object, 0LL);
+    Component_object = (UnityEngine_Component_o *)ServantListViewItem__get_IsDispLock(item, 0LL);
+    if ( !gameObject )
+      goto LABEL_72;
+    UnityEngine_GameObject__SetActive(gameObject, (unsigned __int8)Component_object & 1, 0LL);
   }
   choiceSprite = (UnityEngine_Object_o *)this->fields.choiceSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -96,15 +92,12 @@ void __fastcall ServantListViewItemDraw__SetInput(
   {
     Component_object = (UnityEngine_Component_o *)this->fields.choiceSprite;
     if ( !Component_object )
-      goto LABEL_78;
-    Component_object = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(Component_object, 0LL);
-    if ( !Component_object )
-      goto LABEL_78;
-    if ( item->fields.isSwapChoice )
-      isChoice = !item->fields.isChoice;
-    else
-      isChoice = item->fields.isChoice;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Component_object, isChoice, 0LL);
+      goto LABEL_72;
+    v19 = UnityEngine_Component__get_gameObject(Component_object, 0LL);
+    Component_object = (UnityEngine_Component_o *)ServantListViewItem__get_IsDispChoice(item, 0LL);
+    if ( !v19 )
+      goto LABEL_72;
+    UnityEngine_GameObject__SetActive(v19, (unsigned __int8)Component_object & 1, 0LL);
   }
   friendShipSprite = (UnityEngine_Object_o *)this->fields.friendShipSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -113,10 +106,10 @@ void __fastcall ServantListViewItemDraw__SetInput(
   {
     Component_object = (UnityEngine_Component_o *)this->fields.friendShipSprite;
     if ( !Component_object )
-      goto LABEL_78;
+      goto LABEL_72;
     Component_object = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(Component_object, 0LL);
     if ( !Component_object )
-      goto LABEL_78;
+      goto LABEL_72;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Component_object, item->fields.isFriendShipSvtEq, 0LL);
   }
   chocolateSprite = (UnityEngine_Object_o *)this->fields.chocolateSprite;
@@ -126,10 +119,10 @@ void __fastcall ServantListViewItemDraw__SetInput(
   {
     Component_object = (UnityEngine_Component_o *)this->fields.chocolateSprite;
     if ( !Component_object )
-      goto LABEL_78;
+      goto LABEL_72;
     Component_object = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(Component_object, 0LL);
     if ( !Component_object )
-      goto LABEL_78;
+      goto LABEL_72;
     UnityEngine_GameObject__SetActive(
       (UnityEngine_GameObject_o *)Component_object,
       item->fields.isChocolateSvtEquip,
@@ -139,27 +132,27 @@ void __fastcall ServantListViewItemDraw__SetInput(
   {
     Component_object = (UnityEngine_Component_o *)this->fields.maskSprite;
     if ( !Component_object )
-      goto LABEL_78;
+      goto LABEL_72;
     Component_object = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(Component_object, 0LL);
     if ( !Component_object )
-      goto LABEL_78;
+      goto LABEL_72;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Component_object, 0, 0LL);
     Component_object = (UnityEngine_Component_o *)this->fields.warningLabel;
     if ( !Component_object )
-      goto LABEL_78;
-    v26 = (System_String_o *)StringLiteral_1/*""*/;
-    goto LABEL_58;
+      goto LABEL_72;
+    v25 = (System_String_o *)StringLiteral_1/*""*/;
+    goto LABEL_52;
   }
   Component_object = (UnityEngine_Component_o *)this->fields.maskSprite;
   if ( !Component_object )
-    goto LABEL_78;
+    goto LABEL_72;
   Component_object = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(Component_object, 0LL);
   if ( !Component_object )
-    goto LABEL_78;
+    goto LABEL_72;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Component_object, 1, 0LL);
   Component_object = (UnityEngine_Component_o *)this->fields.warningLabel;
   if ( !Component_object )
-    goto LABEL_78;
+    goto LABEL_72;
   UILabel__set_text((UILabel_o *)Component_object, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( !item->fields.isEnabled )
   {
@@ -169,29 +162,29 @@ void __fastcall ServantListViewItemDraw__SetInput(
     {
       if ( item->fields.isEventJoin )
       {
-LABEL_48:
-        v25 = &StringLiteral_11330/*"SELECT_SERVANT_EVENT_JOIN"*/;
-LABEL_56:
-        Component_object = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)*v25, 0LL);
+LABEL_42:
+        v24 = &StringLiteral_11465/*"SELECT_SERVANT_EVENT_JOIN"*/;
+LABEL_50:
+        Component_object = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)*v24, 0LL);
         if ( !warningLabel )
-          goto LABEL_78;
-        v26 = (System_String_o *)Component_object;
+          goto LABEL_72;
+        v25 = (System_String_o *)Component_object;
         Component_object = (UnityEngine_Component_o *)warningLabel;
-LABEL_58:
-        UILabel__set_text((UILabel_o *)Component_object, v26, 0LL);
-        goto LABEL_59;
+LABEL_52:
+        UILabel__set_text((UILabel_o *)Component_object, v25, 0LL);
+        goto LABEL_53;
       }
     }
     else
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       if ( isEventJoin )
-        goto LABEL_48;
+        goto LABEL_42;
     }
-    v25 = &StringLiteral_11306/*"SELECT_CANNOT"*/;
-    goto LABEL_56;
+    v24 = &StringLiteral_11441/*"SELECT_CANNOT"*/;
+    goto LABEL_50;
   }
-LABEL_59:
+LABEL_53:
   pushSprite = (UnityEngine_Object_o *)this->fields.pushSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -199,15 +192,15 @@ LABEL_59:
   {
     Component_object = (UnityEngine_Component_o *)this->fields.pushSprite;
     if ( !Component_object )
-      goto LABEL_78;
+      goto LABEL_72;
     Component_object = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(Component_object, 0LL);
     if ( !Component_object )
-      goto LABEL_78;
+      goto LABEL_72;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Component_object, item->fields.isPush, 0LL);
   }
   Component_object = (UnityEngine_Component_o *)this->fields.servantFaceIcon;
   if ( !Component_object )
-    goto LABEL_78;
+    goto LABEL_72;
   ServantFaceIconComponent__ResetIconLabelScale((ServantFaceIconComponent_o *)Component_object, 0LL);
   materialTdSprite = (UnityEngine_Object_o *)this->fields.materialTdSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -216,30 +209,30 @@ LABEL_59:
   {
     Component_object = (UnityEngine_Component_o *)this->fields.materialTdSprite;
     if ( !Component_object )
-      goto LABEL_78;
+      goto LABEL_72;
     Component_object = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(Component_object, 0LL);
     if ( !Component_object )
-      goto LABEL_78;
+      goto LABEL_72;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Component_object, item->fields.isMaterialTdSvt, 0LL);
     if ( item->fields.isMaterialTdSvt )
     {
-      v29 = this->fields.materialTdSprite;
+      v28 = this->fields.materialTdSprite;
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      AtlasManager__SetEventSprite(v29, (System_String_o *)StringLiteral_22619/*"ribbon_noblephantasmup_01"*/, 0LL);
+      AtlasManager__SetEventSprite(v28, (System_String_o *)StringLiteral_22841/*"ribbon_noblephantasmup_01"*/, 0LL);
       if ( item->fields.isNeedAdjustIconLabelScale )
       {
         Component_object = (UnityEngine_Component_o *)this->fields.servantFaceIcon;
         if ( Component_object )
         {
-          v30.fields.x = 0.65;
-          v30.fields.y = 1.0;
-          v30.fields.z = 1.0;
-          ServantFaceIconComponent__AdjustIconLabelScale((ServantFaceIconComponent_o *)Component_object, v30, 0LL);
+          v29.fields.x = 0.65;
+          v29.fields.y = 1.0;
+          v29.fields.z = 1.0;
+          ServantFaceIconComponent__AdjustIconLabelScale((ServantFaceIconComponent_o *)Component_object, v29, 0LL);
           return;
         }
-LABEL_78:
-        sub_1B00F28(Component_object, v15);
+LABEL_72:
+        sub_1B64324(Component_object);
       }
     }
   }
@@ -263,36 +256,38 @@ void __fastcall ServantListViewItemDraw__SetItem(
   UserCommandCodeEntity_o *userCommandCodeEntity; // x1
   ServantFaceIconComponent_o *servantFaceIcon; // x0
   UnityEngine_Object_o *partyIcon; // x21
+  FlashingIconComponent_o *v18; // x21
+  bool v19; // w1
   UnityEngine_Object_o *useSprite; // x21
   _BOOL4 isUse; // w21
-  __int64 *v20; // x8
+  __int64 *v22; // x8
   UnityEngine_Object_o *lockSprite; // x21
-  bool isLock; // w1
+  UnityEngine_GameObject_o *gameObject; // x21
   UnityEngine_Object_o *choiceSprite; // x21
-  bool isChoice; // w1
+  UnityEngine_GameObject_o *v26; // x21
   UnityEngine_Object_o *friendShipSprite; // x21
   UnityEngine_Object_o *chocolateSprite; // x21
   _BOOL4 isEventJoin; // w23
   struct UILabel_o *warningLabel; // x21
-  __int64 *v29; // x8
-  System_String_o *v30; // x1
+  __int64 *v31; // x8
+  System_String_o *v32; // x1
   UnityEngine_Object_o *pushSprite; // x21
   UnityEngine_Object_o *materialTdSprite; // x21
-  UISprite_o *v33; // x21
-  UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
+  UISprite_o *v35; // x21
+  UnityEngine_Vector3_o v36; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_48DED67 & 1) == 0 )
+  if ( (byte_49F885A & 1) == 0 )
   {
-    sub_1B00CCC(&AtlasManager_TypeInfo, item);
-    sub_1B00CCC(&LocalizationManager_TypeInfo, v7);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v8);
-    sub_1B00CCC(&StringLiteral_22619/*"ribbon_noblephantasmup_01"*/, v9);
-    sub_1B00CCC(&StringLiteral_11306/*"SELECT_CANNOT"*/, v10);
-    sub_1B00CCC(&StringLiteral_11330/*"SELECT_SERVANT_EVENT_JOIN"*/, v11);
-    sub_1B00CCC(&StringLiteral_19868/*"icon_equip"*/, v12);
-    sub_1B00CCC(&StringLiteral_1/*""*/, v13);
-    sub_1B00CCC(&StringLiteral_19869/*"icon_equip_cc"*/, v14);
-    byte_48DED67 = 1;
+    sub_1B640C8(&AtlasManager_TypeInfo, item);
+    sub_1B640C8(&LocalizationManager_TypeInfo, v7);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v8);
+    sub_1B640C8(&StringLiteral_22841/*"ribbon_noblephantasmup_01"*/, v9);
+    sub_1B640C8(&StringLiteral_11441/*"SELECT_CANNOT"*/, v10);
+    sub_1B640C8(&StringLiteral_11465/*"SELECT_SERVANT_EVENT_JOIN"*/, v11);
+    sub_1B640C8(&StringLiteral_20060/*"icon_equip"*/, v12);
+    sub_1B640C8(&StringLiteral_1/*""*/, v13);
+    sub_1B640C8(&StringLiteral_20061/*"icon_equip_cc"*/, v14);
+    byte_49F885A = 1;
   }
   if ( !item || !mode )
     return;
@@ -301,8 +296,8 @@ void __fastcall ServantListViewItemDraw__SetItem(
   if ( userCommandCodeEntity )
   {
     if ( !servantFaceIcon )
-      goto LABEL_97;
-    ServantFaceIconComponent__Set_37014452(
+      goto LABEL_91;
+    ServantFaceIconComponent__Set_37911612(
       servantFaceIcon,
       userCommandCodeEntity,
       item->fields.iconLabelInfo1,
@@ -312,8 +307,8 @@ void __fastcall ServantListViewItemDraw__SetItem(
   else
   {
     if ( !servantFaceIcon )
-      goto LABEL_97;
-    ServantFaceIconComponent__Set_37007740(
+      goto LABEL_91;
+    ServantFaceIconComponent__Set_37904900(
       servantFaceIcon,
       item->fields.userSvtEntity,
       item->fields.iconLabelInfo1,
@@ -323,22 +318,24 @@ void __fastcall ServantListViewItemDraw__SetItem(
   partyIcon = (UnityEngine_Object_o *)this->fields.partyIcon;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(partyIcon, 0LL, 0LL) )
+  servantFaceIcon = (ServantFaceIconComponent_o *)UnityEngine_Object__op_Inequality(partyIcon, 0LL, 0LL);
+  if ( ((unsigned __int8)servantFaceIcon & 1) != 0 )
   {
-    servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.partyIcon;
+    v18 = this->fields.partyIcon;
     if ( item->fields.isUse )
     {
-      userCommandCodeEntity = 0LL;
-      if ( !servantFaceIcon )
-        goto LABEL_97;
+      v19 = 0;
+      if ( !v18 )
+        goto LABEL_91;
     }
     else
     {
-      userCommandCodeEntity = (UserCommandCodeEntity_o *)(item->fields.partyIndex >= 0);
-      if ( !servantFaceIcon )
-        goto LABEL_97;
+      servantFaceIcon = (ServantFaceIconComponent_o *)ServantListViewItem__get_IsParty(item, 0LL);
+      v19 = (unsigned __int8)servantFaceIcon & 1;
+      if ( !v18 )
+        goto LABEL_91;
     }
-    FlashingIconComponent__Set_36917472((FlashingIconComponent_o *)servantFaceIcon, (bool)userCommandCodeEntity, 0LL);
+    FlashingIconComponent__Set_37811588(v18, v19, 0LL);
   }
   useSprite = (UnityEngine_Object_o *)this->fields.useSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -347,24 +344,24 @@ void __fastcall ServantListViewItemDraw__SetItem(
   {
     servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.useSprite;
     if ( !servantFaceIcon )
-      goto LABEL_97;
+      goto LABEL_91;
     isUse = item->fields.isUse;
     servantFaceIcon = (ServantFaceIconComponent_o *)UnityEngine_Component__get_gameObject(
                                                       (UnityEngine_Component_o *)servantFaceIcon,
                                                       0LL);
     if ( !servantFaceIcon )
-      goto LABEL_97;
+      goto LABEL_91;
     if ( isUse )
     {
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, 1, 0LL);
       servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.useSprite;
       if ( !servantFaceIcon )
-        goto LABEL_97;
+        goto LABEL_91;
       if ( item->fields.userCommandCodeEntity )
-        v20 = &StringLiteral_19869/*"icon_equip_cc"*/;
+        v22 = &StringLiteral_20061/*"icon_equip_cc"*/;
       else
-        v20 = &StringLiteral_19868/*"icon_equip"*/;
-      UISprite__set_spriteName((UISprite_o *)servantFaceIcon, (System_String_o *)*v20, 0LL);
+        v22 = &StringLiteral_20060/*"icon_equip"*/;
+      UISprite__set_spriteName((UISprite_o *)servantFaceIcon, (System_String_o *)*v22, 0LL);
     }
     else
     {
@@ -378,17 +375,12 @@ void __fastcall ServantListViewItemDraw__SetItem(
   {
     servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.lockSprite;
     if ( !servantFaceIcon )
-      goto LABEL_97;
-    servantFaceIcon = (ServantFaceIconComponent_o *)UnityEngine_Component__get_gameObject(
-                                                      (UnityEngine_Component_o *)servantFaceIcon,
-                                                      0LL);
-    if ( !servantFaceIcon )
-      goto LABEL_97;
-    if ( item->fields.isSwapLock )
-      isLock = !item->fields.isLock;
-    else
-      isLock = item->fields.isLock;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, isLock, 0LL);
+      goto LABEL_91;
+    gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)servantFaceIcon, 0LL);
+    servantFaceIcon = (ServantFaceIconComponent_o *)ServantListViewItem__get_IsDispLock(item, 0LL);
+    if ( !gameObject )
+      goto LABEL_91;
+    UnityEngine_GameObject__SetActive(gameObject, (unsigned __int8)servantFaceIcon & 1, 0LL);
   }
   choiceSprite = (UnityEngine_Object_o *)this->fields.choiceSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -397,17 +389,12 @@ void __fastcall ServantListViewItemDraw__SetItem(
   {
     servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.choiceSprite;
     if ( !servantFaceIcon )
-      goto LABEL_97;
-    servantFaceIcon = (ServantFaceIconComponent_o *)UnityEngine_Component__get_gameObject(
-                                                      (UnityEngine_Component_o *)servantFaceIcon,
-                                                      0LL);
-    if ( !servantFaceIcon )
-      goto LABEL_97;
-    if ( item->fields.isSwapChoice )
-      isChoice = !item->fields.isChoice;
-    else
-      isChoice = item->fields.isChoice;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, isChoice, 0LL);
+      goto LABEL_91;
+    v26 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)servantFaceIcon, 0LL);
+    servantFaceIcon = (ServantFaceIconComponent_o *)ServantListViewItem__get_IsDispChoice(item, 0LL);
+    if ( !v26 )
+      goto LABEL_91;
+    UnityEngine_GameObject__SetActive(v26, (unsigned __int8)servantFaceIcon & 1, 0LL);
   }
   friendShipSprite = (UnityEngine_Object_o *)this->fields.friendShipSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -416,12 +403,12 @@ void __fastcall ServantListViewItemDraw__SetItem(
   {
     servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.friendShipSprite;
     if ( !servantFaceIcon )
-      goto LABEL_97;
+      goto LABEL_91;
     servantFaceIcon = (ServantFaceIconComponent_o *)UnityEngine_Component__get_gameObject(
                                                       (UnityEngine_Component_o *)servantFaceIcon,
                                                       0LL);
     if ( !servantFaceIcon )
-      goto LABEL_97;
+      goto LABEL_91;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, item->fields.isFriendShipSvtEq, 0LL);
   }
   chocolateSprite = (UnityEngine_Object_o *)this->fields.chocolateSprite;
@@ -431,12 +418,12 @@ void __fastcall ServantListViewItemDraw__SetItem(
   {
     servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.chocolateSprite;
     if ( !servantFaceIcon )
-      goto LABEL_97;
+      goto LABEL_91;
     servantFaceIcon = (ServantFaceIconComponent_o *)UnityEngine_Component__get_gameObject(
                                                       (UnityEngine_Component_o *)servantFaceIcon,
                                                       0LL);
     if ( !servantFaceIcon )
-      goto LABEL_97;
+      goto LABEL_91;
     UnityEngine_GameObject__SetActive(
       (UnityEngine_GameObject_o *)servantFaceIcon,
       item->fields.isChocolateSvtEquip,
@@ -446,31 +433,31 @@ void __fastcall ServantListViewItemDraw__SetItem(
   {
     servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.maskSprite;
     if ( !servantFaceIcon )
-      goto LABEL_97;
+      goto LABEL_91;
     servantFaceIcon = (ServantFaceIconComponent_o *)UnityEngine_Component__get_gameObject(
                                                       (UnityEngine_Component_o *)servantFaceIcon,
                                                       0LL);
     if ( !servantFaceIcon )
-      goto LABEL_97;
+      goto LABEL_91;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, 0, 0LL);
     servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.warningLabel;
     if ( !servantFaceIcon )
-      goto LABEL_97;
-    v30 = (System_String_o *)StringLiteral_1/*""*/;
-    goto LABEL_77;
+      goto LABEL_91;
+    v32 = (System_String_o *)StringLiteral_1/*""*/;
+    goto LABEL_71;
   }
   servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.maskSprite;
   if ( !servantFaceIcon )
-    goto LABEL_97;
+    goto LABEL_91;
   servantFaceIcon = (ServantFaceIconComponent_o *)UnityEngine_Component__get_gameObject(
                                                     (UnityEngine_Component_o *)servantFaceIcon,
                                                     0LL);
   if ( !servantFaceIcon )
-    goto LABEL_97;
+    goto LABEL_91;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, 1, 0LL);
   servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.warningLabel;
   if ( !servantFaceIcon )
-    goto LABEL_97;
+    goto LABEL_91;
   UILabel__set_text((UILabel_o *)servantFaceIcon, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( !item->fields.isEnabled )
   {
@@ -480,29 +467,29 @@ void __fastcall ServantListViewItemDraw__SetItem(
     {
       if ( item->fields.isEventJoin )
       {
-LABEL_67:
-        v29 = &StringLiteral_11330/*"SELECT_SERVANT_EVENT_JOIN"*/;
-LABEL_75:
-        servantFaceIcon = (ServantFaceIconComponent_o *)LocalizationManager__Get((System_String_o *)*v29, 0LL);
+LABEL_61:
+        v31 = &StringLiteral_11465/*"SELECT_SERVANT_EVENT_JOIN"*/;
+LABEL_69:
+        servantFaceIcon = (ServantFaceIconComponent_o *)LocalizationManager__Get((System_String_o *)*v31, 0LL);
         if ( !warningLabel )
-          goto LABEL_97;
-        v30 = (System_String_o *)servantFaceIcon;
+          goto LABEL_91;
+        v32 = (System_String_o *)servantFaceIcon;
         servantFaceIcon = (ServantFaceIconComponent_o *)warningLabel;
-LABEL_77:
-        UILabel__set_text((UILabel_o *)servantFaceIcon, v30, 0LL);
-        goto LABEL_78;
+LABEL_71:
+        UILabel__set_text((UILabel_o *)servantFaceIcon, v32, 0LL);
+        goto LABEL_72;
       }
     }
     else
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       if ( isEventJoin )
-        goto LABEL_67;
+        goto LABEL_61;
     }
-    v29 = &StringLiteral_11306/*"SELECT_CANNOT"*/;
-    goto LABEL_75;
+    v31 = &StringLiteral_11441/*"SELECT_CANNOT"*/;
+    goto LABEL_69;
   }
-LABEL_78:
+LABEL_72:
   pushSprite = (UnityEngine_Object_o *)this->fields.pushSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -510,17 +497,17 @@ LABEL_78:
   {
     servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.pushSprite;
     if ( !servantFaceIcon )
-      goto LABEL_97;
+      goto LABEL_91;
     servantFaceIcon = (ServantFaceIconComponent_o *)UnityEngine_Component__get_gameObject(
                                                       (UnityEngine_Component_o *)servantFaceIcon,
                                                       0LL);
     if ( !servantFaceIcon )
-      goto LABEL_97;
+      goto LABEL_91;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, item->fields.isPush, 0LL);
   }
   servantFaceIcon = this->fields.servantFaceIcon;
   if ( !servantFaceIcon )
-    goto LABEL_97;
+    goto LABEL_91;
   ServantFaceIconComponent__ResetIconLabelScale(servantFaceIcon, 0LL);
   materialTdSprite = (UnityEngine_Object_o *)this->fields.materialTdSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -533,25 +520,25 @@ LABEL_78:
                                                           (UnityEngine_Component_o *)servantFaceIcon,
                                                           0LL)) == 0LL )
   {
-LABEL_97:
-    sub_1B00F28(servantFaceIcon, userCommandCodeEntity);
+LABEL_91:
+    sub_1B64324(servantFaceIcon);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, item->fields.isMaterialTdSvt, 0LL);
   if ( item->fields.isMaterialTdSvt )
   {
-    v33 = this->fields.materialTdSprite;
+    v35 = this->fields.materialTdSprite;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetEventSprite(v33, (System_String_o *)StringLiteral_22619/*"ribbon_noblephantasmup_01"*/, 0LL);
+    AtlasManager__SetEventSprite(v35, (System_String_o *)StringLiteral_22841/*"ribbon_noblephantasmup_01"*/, 0LL);
     if ( item->fields.isNeedAdjustIconLabelScale )
     {
       servantFaceIcon = this->fields.servantFaceIcon;
       if ( !servantFaceIcon )
-        goto LABEL_97;
-      v34.fields.x = 0.65;
-      v34.fields.y = 1.0;
-      v34.fields.z = 1.0;
-      ServantFaceIconComponent__AdjustIconLabelScale(servantFaceIcon, v34, 0LL);
+        goto LABEL_91;
+      v36.fields.x = 0.65;
+      v36.fields.y = 1.0;
+      v36.fields.z = 1.0;
+      ServantFaceIconComponent__AdjustIconLabelScale(servantFaceIcon, v36, 0LL);
     }
   }
 }

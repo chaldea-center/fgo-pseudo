@@ -10,35 +10,34 @@ void __fastcall StonePurchaseListViewItem___ctor(
   int32_t v9; // w2
   int32_t v10; // w3
   Il2CppObject *Instance; // x0
-  __int64 v12; // x1
   Il2CppObject *Entity; // x0
-  int32_t v14; // w2
-  int32_t v15; // w3
+  int32_t v13; // w2
+  int32_t v14; // w3
 
-  if ( (byte_48E04B2 & 1) == 0 )
+  if ( (byte_49F9C91 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataManager_GetMasterData_ItemMaster___, *(_QWORD *)&index);
-    sub_1B00CCC(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v7);
-    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    byte_48E04B2 = 1;
+    sub_1B640C8(&Method_DataManager_GetMasterData_ItemMaster___, *(_QWORD *)&index);
+    sub_1B640C8(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v7);
+    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    byte_49F9C91 = 1;
   }
-  ListViewItem___ctor_39415512((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_40370988((ListViewItem_o *)this, index, 0LL);
   this->fields.bankShop = bankShop;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.bankShop, (int32_t)bankShop, v9, v10);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.bankShop, (int32_t)bankShop, v9, v10);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_ItemMaster___)) == 0LL )
+                     (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_ItemMaster___)) == 0LL )
   {
-    sub_1B00F28(Instance, v12);
+    sub_1B64324(Instance);
   }
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              2,
-             (const MethodInfo_2FE6A4C *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+             (const MethodInfo_30D3EA4 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
   this->fields.entity = (struct ItemEntity_o *)Entity;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.entity, (int32_t)Entity, v14, v15);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.entity, (int32_t)Entity, v13, v14);
 }
 
 
@@ -56,15 +55,15 @@ System_String_o *__fastcall StonePurchaseListViewItem__ToString(
   System_String_o **p_name; // x9
   struct ItemEntity_o *entity; // x9
 
-  if ( (byte_48E04B8 & 1) == 0 )
+  if ( (byte_49F9C97 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_8018/*"Item "*/, method);
-    byte_48E04B8 = 1;
+    sub_1B640C8(&StringLiteral_8069/*"Item "*/, method);
+    byte_49F9C97 = 1;
   }
-  if ( (byte_48E04B3 & 1) == 0 )
+  if ( (byte_49F9C92 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_18800/*"error"*/, method);
-    byte_48E04B3 = 1;
+    sub_1B640C8(&StringLiteral_18979/*"error"*/, method);
+    byte_49F9C92 = 1;
   }
   bankShop = this->fields.bankShop;
   if ( bankShop )
@@ -77,9 +76,9 @@ System_String_o *__fastcall StonePurchaseListViewItem__ToString(
     if ( entity )
       p_name = &entity->fields.name;
     else
-      p_name = (System_String_o **)&StringLiteral_18800/*"error"*/;
+      p_name = (System_String_o **)&StringLiteral_18979/*"error"*/;
   }
-  return System_String__Concat_60325748((System_String_o *)StringLiteral_8018/*"Item "*/, *p_name, 0LL);
+  return System_String__Concat_61375396((System_String_o *)StringLiteral_8069/*"Item "*/, *p_name, 0LL);
 }
 
 
@@ -98,10 +97,10 @@ System_String_o *__fastcall StonePurchaseListViewItem__get_CountDetailText(
   struct BankShopEntity_o *bankShop; // x8
   System_String_o **p_numDetail; // x8
 
-  if ( (byte_48E04B5 & 1) == 0 )
+  if ( (byte_49F9C94 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_1/*""*/, method);
-    byte_48E04B5 = 1;
+    sub_1B640C8(&StringLiteral_1/*""*/, method);
+    byte_49F9C94 = 1;
   }
   bankShop = this->fields.bankShop;
   if ( bankShop )
@@ -119,10 +118,10 @@ System_String_o *__fastcall StonePurchaseListViewItem__get_CountText(
   BankShopEntity_o *bankShop; // x0
   ItemEntity_o *entity; // x0
 
-  if ( (byte_48E04B4 & 1) == 0 )
+  if ( (byte_49F9C93 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_18800/*"error"*/, method);
-    byte_48E04B4 = 1;
+    sub_1B640C8(&StringLiteral_18979/*"error"*/, method);
+    byte_49F9C93 = 1;
   }
   bankShop = this->fields.bankShop;
   if ( bankShop )
@@ -131,7 +130,7 @@ System_String_o *__fastcall StonePurchaseListViewItem__get_CountText(
   if ( entity )
     return ItemEntity__GetCountText(entity, 1, 0LL);
   else
-    return (System_String_o *)StringLiteral_18800/*"error"*/;
+    return (System_String_o *)StringLiteral_18979/*"error"*/;
 }
 
 
@@ -142,16 +141,16 @@ System_String_o *__fastcall StonePurchaseListViewItem__get_DetailText(
   struct ItemEntity_o *entity; // x8
   System_String_o **p_detail; // x8
 
-  if ( (byte_48E04B7 & 1) == 0 )
+  if ( (byte_49F9C96 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_18800/*"error"*/, method);
-    byte_48E04B7 = 1;
+    sub_1B640C8(&StringLiteral_18979/*"error"*/, method);
+    byte_49F9C96 = 1;
   }
   entity = this->fields.entity;
   if ( entity )
     p_detail = &entity->fields.detail;
   else
-    p_detail = (System_String_o **)&StringLiteral_18800/*"error"*/;
+    p_detail = (System_String_o **)&StringLiteral_18979/*"error"*/;
   return *p_detail;
 }
 
@@ -176,10 +175,10 @@ System_String_o *__fastcall StonePurchaseListViewItem__get_NameText(
   System_String_o **p_name; // x8
   struct ItemEntity_o *entity; // x8
 
-  if ( (byte_48E04B3 & 1) == 0 )
+  if ( (byte_49F9C92 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_18800/*"error"*/, method);
-    byte_48E04B3 = 1;
+    sub_1B640C8(&StringLiteral_18979/*"error"*/, method);
+    byte_49F9C92 = 1;
   }
   bankShop = this->fields.bankShop;
   if ( bankShop )
@@ -192,7 +191,7 @@ System_String_o *__fastcall StonePurchaseListViewItem__get_NameText(
     if ( entity )
       p_name = &entity->fields.name;
     else
-      p_name = (System_String_o **)&StringLiteral_18800/*"error"*/;
+      p_name = (System_String_o **)&StringLiteral_18979/*"error"*/;
   }
   return *p_name;
 }
@@ -201,22 +200,16 @@ System_String_o *__fastcall StonePurchaseListViewItem__get_NameText(
 int32_t __fastcall StonePurchaseListViewItem__get_Price(StonePurchaseListViewItem_o *this, const MethodInfo *method)
 {
   struct BankShopEntity_o *bankShop; // x8
-  int32_t *p_googlePrice; // x8
   struct ItemEntity_o *entity; // x8
 
   bankShop = this->fields.bankShop;
   if ( bankShop )
-  {
-    p_googlePrice = &bankShop->fields.googlePrice;
-    return *p_googlePrice;
-  }
+    return bankShop->fields.googlePrice;
   entity = this->fields.entity;
   if ( entity )
-  {
-    p_googlePrice = &entity->fields.sellQp;
-    return *p_googlePrice;
-  }
-  return 0;
+    return entity->fields.sellQp;
+  else
+    return 0;
 }
 
 
@@ -227,10 +220,10 @@ System_String_o *__fastcall StonePurchaseListViewItem__get_PriceDetilText(
   struct BankShopEntity_o *bankShop; // x8
   System_String_o **p_priceDetail; // x8
 
-  if ( (byte_48E04B6 & 1) == 0 )
+  if ( (byte_49F9C95 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_1/*""*/, method);
-    byte_48E04B6 = 1;
+    sub_1B640C8(&StringLiteral_1/*""*/, method);
+    byte_49F9C95 = 1;
   }
   bankShop = this->fields.bankShop;
   if ( bankShop )

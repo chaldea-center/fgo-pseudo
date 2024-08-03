@@ -1,9 +1,9 @@
 void __fastcall MissionRewardGetDialog___ctor(MissionRewardGetDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E527F & 1) == 0 )
+  if ( (byte_49FF6DD & 1) == 0 )
   {
-    sub_1B00CCC(&BaseDialog_TypeInfo, method);
-    byte_48E527F = 1;
+    sub_1B640C8(&BaseDialog_TypeInfo, method);
+    byte_49FF6DD = 1;
   }
   *(_QWORD *)&this->fields.ICON_SCALE_SIZE = 0xC28000003F59999ALL;
   *(_QWORD *)&this->fields.NORMAL_FONT_SIZE = 0x1800000018LL;
@@ -21,35 +21,37 @@ void __fastcall MissionRewardGetDialog__Close(MissionRewardGetDialog_o *this, co
 {
   const MethodInfo *v2; // x2
 
-  MissionRewardGetDialog__Close_42169736(this, 0LL, v2);
+  MissionRewardGetDialog__Close_44000880(this, 0LL, v2);
 }
 
 
-void __fastcall MissionRewardGetDialog__Close_42169736(
+void __fastcall MissionRewardGetDialog__Close_44000880(
         MissionRewardGetDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
   int32_t v3; // w3
   __int64 v6; // x1
-  System_Action_o *v7; // x20
+  __int64 v7; // x1
+  __int64 v8; // x2
+  System_Action_o *v9; // x20
 
-  if ( (byte_48E527D & 1) == 0 )
+  if ( (byte_49FF6DB & 1) == 0 )
   {
-    sub_1B00CCC(&System_Action_TypeInfo, callback);
-    sub_1B00CCC(&Method_MissionRewardGetDialog_EndClose__, v6);
-    byte_48E527D = 1;
+    sub_1B640C8(&System_Action_TypeInfo, callback);
+    sub_1B640C8(&Method_MissionRewardGetDialog_EndClose__, v6);
+    byte_49FF6DB = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)callback,
     (int32_t)method,
     v3);
   this->fields.state = 3;
-  v7 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
-  System_Action___ctor(v7, (Il2CppObject *)this, Method_MissionRewardGetDialog_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
+  v9 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v7, v8);
+  System_Action___ctor(v9, (Il2CppObject *)this, Method_MissionRewardGetDialog_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v9, 0LL);
 }
 
 
@@ -68,7 +70,7 @@ void __fastcall MissionRewardGetDialog__EndClose(MissionRewardGetDialog_o *this,
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1B00C70(p_closeCallbackFunc, 0, v3, v4);
+    sub_1B6406C(p_closeCallbackFunc, 0, v3, v4);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v6->fields.m_target)(
       v6->fields.original_method_info,
       *(_QWORD *)&v6->fields.extra_arg);
@@ -89,35 +91,33 @@ void __fastcall MissionRewardGetDialog__Init(MissionRewardGetDialog_o *this, con
   __int64 v5; // x1
   __int64 v6; // x1
   UILabel_o *itemGetDetailLabel; // x0
-  __int64 v8; // x1
   System_Collections_IEnumerator_o *Enumerator; // x20
   System_Collections_IEnumerator_c *klass; // x8
-  __int64 v11; // x9
+  __int64 v10; // x9
   int32_t *p_offset; // x10
   __int64 p_method; // x0
-  System_Collections_IEnumerator_c *v14; // x8
-  __int64 v15; // x9
-  System_Collections_IEnumerator_c **v16; // x10
-  __int64 v17; // x0
-  UnityEngine_Component_o *v18; // x0
-  __int64 v19; // x1
+  System_Collections_IEnumerator_c *v13; // x8
+  __int64 v14; // x9
+  System_Collections_IEnumerator_c **v15; // x10
+  __int64 v16; // x0
+  UnityEngine_Component_o *v17; // x0
   __int64 methodPtr_low; // x9
   UnityEngine_Object_o *gameObject; // x21
-  __int64 v22; // x0
-  __int64 v23; // x8
-  __int64 v24; // x20
-  __int64 v25; // x9
-  int *v26; // x10
-  __int64 v27; // x0
+  __int64 v20; // x0
+  __int64 v21; // x8
+  __int64 v22; // x20
+  __int64 v23; // x9
+  int *v24; // x10
+  __int64 v25; // x0
 
-  if ( (byte_48E527A & 1) == 0 )
+  if ( (byte_49FF6D8 & 1) == 0 )
   {
-    sub_1B00CCC(&System_IDisposable_TypeInfo, method);
-    sub_1B00CCC(&System_Collections_IEnumerator_TypeInfo, v3);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v4);
-    sub_1B00CCC(&UnityEngine_Transform_TypeInfo, v5);
-    sub_1B00CCC(&StringLiteral_1/*""*/, v6);
-    byte_48E527A = 1;
+    sub_1B640C8(&System_IDisposable_TypeInfo, method);
+    sub_1B640C8(&System_Collections_IEnumerator_TypeInfo, v3);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v4);
+    sub_1B640C8(&UnityEngine_Transform_TypeInfo, v5);
+    sub_1B640C8(&StringLiteral_1/*""*/, v6);
+    byte_49FF6D8 = 1;
   }
   itemGetDetailLabel = this->fields.itemGetDetailLabel;
   this->fields.state = 0;
@@ -134,19 +134,19 @@ void __fastcall MissionRewardGetDialog__Init(MissionRewardGetDialog_o *this, con
     goto LABEL_38;
   Enumerator = UnityEngine_Transform__GetEnumerator((UnityEngine_Transform_o *)itemGetDetailLabel, 0LL);
   if ( !Enumerator )
-    sub_1B00F28(0LL, v8);
+    sub_1B64324(0LL);
   while ( 1 )
   {
     klass = Enumerator->klass;
-    v11 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v10 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v11;
+        --v10;
         p_offset += 4;
-        if ( !v11 )
+        if ( !v10 )
           goto LABEL_11;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -154,78 +154,78 @@ void __fastcall MissionRewardGetDialog__Init(MissionRewardGetDialog_o *this, con
     else
     {
 LABEL_11:
-      p_method = sub_1B52CAC(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1BB60A8(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
       break;
-    v14 = Enumerator->klass;
-    v15 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v13 = Enumerator->klass;
+    v14 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
-      v16 = (System_Collections_IEnumerator_c **)&v14->_1.interfaceOffsets->offset;
-      while ( *(v16 - 1) != System_Collections_IEnumerator_TypeInfo )
+      v15 = (System_Collections_IEnumerator_c **)&v13->_1.interfaceOffsets->offset;
+      while ( *(v15 - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v15;
-        v16 += 2;
-        if ( !v15 )
+        --v14;
+        v15 += 2;
+        if ( !v14 )
           goto LABEL_18;
       }
-      v17 = (__int64)&v14->vtable[*(_DWORD *)v16 + 1].method;
+      v16 = (__int64)&v13->vtable[*(_DWORD *)v15 + 1].method;
     }
     else
     {
 LABEL_18:
-      v17 = sub_1B52CAC(Enumerator, System_Collections_IEnumerator_TypeInfo, 1LL);
+      v16 = sub_1BB60A8(Enumerator, System_Collections_IEnumerator_TypeInfo, 1LL);
     }
-    v18 = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v17)(
+    v17 = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v16)(
                                        Enumerator,
-                                       *(_QWORD *)(v17 + 8));
-    if ( !v18 )
+                                       *(_QWORD *)(v16 + 8));
+    if ( !v17 )
       goto LABEL_37;
     methodPtr_low = LOBYTE(UnityEngine_Transform_TypeInfo->vtable._0_Equals.methodPtr);
-    if ( LOBYTE(v18->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
-      || (UnityEngine_Transform_c *)v18->klass->_2.typeHierarchy[methodPtr_low - 1] != UnityEngine_Transform_TypeInfo )
+    if ( LOBYTE(v17->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
+      || (UnityEngine_Transform_c *)v17->klass->_2.typeHierarchy[methodPtr_low - 1] != UnityEngine_Transform_TypeInfo )
     {
-      sub_1B011E8(v18);
+      sub_1B645E4(v17);
 LABEL_37:
-      sub_1B00F28(v18, v19);
+      sub_1B64324(v17);
     }
-    gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v18, 0LL);
+    gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v17, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_68077656(gameObject, 0LL);
+    UnityEngine_Object__Destroy_69127736(gameObject, 0LL);
   }
-  v22 = sub_1B00E08(Enumerator, System_IDisposable_TypeInfo);
-  if ( v22 )
+  v20 = sub_1B64204(Enumerator, System_IDisposable_TypeInfo);
+  if ( v20 )
   {
-    v23 = *(_QWORD *)v22;
-    v24 = v22;
-    v25 = *(unsigned __int16 *)(*(_QWORD *)v22 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v22 + 302LL) )
+    v21 = *(_QWORD *)v20;
+    v22 = v20;
+    v23 = *(unsigned __int16 *)(*(_QWORD *)v20 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v20 + 302LL) )
     {
-      v26 = (int *)(*(_QWORD *)(v23 + 176) + 8LL);
-      while ( *((System_IDisposable_c **)v26 - 1) != System_IDisposable_TypeInfo )
+      v24 = (int *)(*(_QWORD *)(v21 + 176) + 8LL);
+      while ( *((System_IDisposable_c **)v24 - 1) != System_IDisposable_TypeInfo )
       {
-        --v25;
-        v26 += 4;
-        if ( !v25 )
+        --v23;
+        v24 += 4;
+        if ( !v23 )
           goto LABEL_31;
       }
-      v27 = v23 + 16LL * *v26 + 312;
+      v25 = v21 + 16LL * *v24 + 312;
     }
     else
     {
 LABEL_31:
-      v27 = sub_1B52CAC(v22, System_IDisposable_TypeInfo, 0LL);
+      v25 = sub_1BB60A8(v20, System_IDisposable_TypeInfo, 0LL);
     }
-    (*(void (__fastcall **)(__int64, _QWORD))v27)(v24, *(_QWORD *)(v27 + 8));
+    (*(void (__fastcall **)(__int64, _QWORD))v25)(v22, *(_QWORD *)(v25 + 8));
   }
   itemGetDetailLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !itemGetDetailLabel )
 LABEL_38:
-    sub_1B00F28(itemGetDetailLabel, method);
+    sub_1B64324(itemGetDetailLabel);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)itemGetDetailLabel, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -236,24 +236,23 @@ void __fastcall MissionRewardGetDialog__OnClickClose(MissionRewardGetDialog_o *t
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
   __int64 v5; // x0
-  __int64 v6; // x1
   struct MissionRewardGetDialog_ClickDelegate_o *closeFunc; // x8
 
-  if ( (byte_48E527E & 1) == 0 )
+  if ( (byte_49FF6DC & 1) == 0 )
   {
-    sub_1B00CCC(&Method_MissionRewardGetDialog_OnClickClose__, method);
-    byte_48E527E = 1;
+    sub_1B640C8(&Method_MissionRewardGetDialog_OnClickClose__, method);
+    byte_49FF6DC = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_MissionRewardGetDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_MissionRewardGetDialog_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B00CE4(Method_MissionRewardGetDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B640E0(Method_MissionRewardGetDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     closeFunc = this->fields.closeFunc;
     if ( !closeFunc )
-      sub_1B00F28(v5, v6);
+      sub_1B64324(v5);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))closeFunc->fields.m_target)(
       closeFunc->fields.original_method_info,
       *(_QWORD *)&closeFunc->fields.extra_arg);
@@ -275,115 +274,124 @@ void __fastcall MissionRewardGetDialog__Open(
   __int64 v13; // x1
   __int64 v14; // x1
   UnityEngine_GameObject_o *transform; // x0
-  __int64 v16; // x1
-  __int64 v17; // x8
-  int v18; // w26
-  int v19; // w27
+  __int64 v16; // x8
+  int v17; // w26
+  int v18; // w27
   Il2CppObject *itemIcon; // x24
-  GiftEntity_o *v21; // x29
-  UnityEngine_GameObject_o *v22; // x24
-  UnityEngine_Transform_o *v23; // x25
+  GiftEntity_o *v20; // x29
+  UnityEngine_GameObject_o *v21; // x24
+  UnityEngine_Transform_o *v22; // x25
+  __int64 v23; // x1
   UnityEngine_Transform_o *v24; // x25
   ItemIconComponent_o *v25; // x24
   int32_t num; // w3
   __int64 v27; // x0
+  __int64 v28; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_GameObject_o *v29; // x0
-  UIWidget_o *v30; // x22
-  int32_t v31; // w23
-  int v32; // w20
+  UnityEngine_GameObject_o *v30; // x0
+  UIWidget_o *v31; // x22
+  int32_t v32; // w23
+  int v33; // w20
   uint16_t Chars; // w0
-  bool v34; // w8
+  bool v35; // w8
   int32_t *p_NORMAL_FONT_SIZE; // x8
-  UnityEngine_GameObject_o *v36; // x0
   UnityEngine_GameObject_o *v37; // x0
   UnityEngine_GameObject_o *v38; // x0
-  System_Action_o *v39; // x20
-  UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_GameObject_o *v39; // x0
+  __int64 v40; // x1
+  __int64 v41; // x2
+  System_Action_o *v42; // x20
+  UnityEngine_Vector3_o v44; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_48E527B & 1) == 0 )
+  if ( (byte_49FF6D9 & 1) == 0 )
   {
-    sub_1B00CCC(&System_Action_TypeInfo, rewards);
-    sub_1B00CCC(&Method_UnityEngine_Component_GetComponent_UIWidget___, v10);
-    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___, v11);
-    sub_1B00CCC(&Method_MissionRewardGetDialog_EndOpen__, v12);
-    sub_1B00CCC(&Method_UnityEngine_Object_Instantiate_GameObject___, v13);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v14);
-    byte_48E527B = 1;
+    sub_1B640C8(&System_Action_TypeInfo, rewards);
+    sub_1B640C8(&Method_UnityEngine_Component_GetComponent_UIWidget___, v10);
+    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___, v11);
+    sub_1B640C8(&Method_MissionRewardGetDialog_EndOpen__, v12);
+    sub_1B640C8(&Method_UnityEngine_Object_Instantiate_GameObject___, v13);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v14);
+    byte_49FF6D9 = 1;
   }
   this->fields.closeFunc = closeCb;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields.closeFunc,
     (int32_t)closeCb,
     (int32_t)detail,
     (int32_t)closeCb);
   if ( !rewards )
     goto LABEL_57;
-  v17 = *(_QWORD *)&rewards->max_length;
-  v18 = v17 - 1;
-  if ( (int)v17 >= 1 )
+  v16 = *(_QWORD *)&rewards->max_length;
+  v17 = v16 - 1;
+  if ( (int)v16 >= 1 )
   {
-    v19 = 0;
+    v18 = 0;
     while ( 1 )
     {
       itemIcon = (Il2CppObject *)this->fields.itemIcon;
-      v21 = rewards->m_Items[v19];
+      v20 = rewards->m_Items[v18];
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       transform = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                                 itemIcon,
-                                                (const MethodInfo_2DD5AE8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                                (const MethodInfo_2EBBCA0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
       if ( !transform )
         break;
-      v22 = transform;
+      v21 = transform;
       transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0LL);
       if ( !this->fields.itemIconGrid )
         break;
-      v23 = (UnityEngine_Transform_o *)transform;
+      v22 = (UnityEngine_Transform_o *)transform;
       transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                 (UnityEngine_Component_o *)this->fields.itemIconGrid,
                                                 0LL);
-      if ( !v23 )
+      if ( !v22 )
         break;
-      UnityEngine_Transform__set_parent(v23, (UnityEngine_Transform_o *)transform, 0LL);
-      transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v22, 0LL);
+      UnityEngine_Transform__set_parent(v22, (UnityEngine_Transform_o *)transform, 0LL);
+      transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v21, 0LL);
       v24 = (UnityEngine_Transform_o *)transform;
-      if ( !byte_48DD9F1 )
+      if ( !byte_49F7111 )
       {
-        transform = (UnityEngine_GameObject_o *)sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, v16);
-        byte_48DD9F1 = 1;
+        transform = (UnityEngine_GameObject_o *)sub_1B640C8(&UnityEngine_Vector3_TypeInfo, v23);
+        byte_49F7111 = 1;
       }
       if ( !v24 )
         break;
       UnityEngine_Transform__set_localPosition(v24, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
-      transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v22, 0LL);
+      transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v21, 0LL);
       if ( !transform )
         break;
-      v41.fields.x = this->fields.ICON_SCALE_SIZE;
-      v41.fields.y = v41.fields.x;
-      v41.fields.z = v41.fields.x;
-      UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)transform, v41, 0LL);
+      v44.fields.x = this->fields.ICON_SCALE_SIZE;
+      v44.fields.y = v44.fields.x;
+      v44.fields.z = v44.fields.x;
+      UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)transform, v44, 0LL);
       transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
-                                                v22,
-                                                (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
-      if ( !v21 )
+                                                v21,
+                                                (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
+      if ( !v20 )
         break;
       v25 = (ItemIconComponent_o *)transform;
       if ( !transform )
         break;
-      if ( v21->fields.num <= 1 )
+      if ( v20->fields.num <= 1 )
         num = -1;
       else
-        num = v21->fields.num;
-      ItemIconComponent__SetGift((ItemIconComponent_o *)transform, v21->fields.type, v21->fields.objectId, num, 0, 0LL);
+        num = v20->fields.num;
+      ItemIconComponent__SetGift_37829292(
+        (ItemIconComponent_o *)transform,
+        v20->fields.type,
+        v20->fields.objectId,
+        num,
+        0,
+        0LL);
       ItemIconComponent__setTypeSpritePositionY(v25, this->fields.TYPE_SPRITE_POS_Y, 0LL);
-      if ( v18 == v19 )
+      if ( v17 == v18 )
         goto LABEL_23;
-      if ( ++v19 >= rewards->max_length )
-        sub_1B00F30(v27, v16);
+      if ( ++v18 >= rewards->max_length )
+        sub_1B6432C(v27, v28);
     }
 LABEL_57:
-    sub_1B00F28(transform, v16);
+    sub_1B64324(transform);
   }
 LABEL_23:
   transform = (UnityEngine_GameObject_o *)this->fields.itemIconGrid;
@@ -413,40 +421,40 @@ LABEL_23:
   transform = (UnityEngine_GameObject_o *)this->fields.closeButton;
   if ( !transform )
     goto LABEL_57;
-  v29 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)transform, 0LL);
-  GameObjectExtensions__SetLocalPositionY(v29, this->fields.CLOSE_BUTTON_POS_Y_DEF, 0LL);
+  v30 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)transform, 0LL);
+  GameObjectExtensions__SetLocalPositionY(v30, this->fields.CLOSE_BUTTON_POS_Y_DEF, 0LL);
   transform = (UnityEngine_GameObject_o *)this->fields.closeButton;
   if ( !transform )
     goto LABEL_57;
   transform = (UnityEngine_GameObject_o *)UnityEngine_Component__GetComponent_object_(
                                             (UnityEngine_Component_o *)transform,
-                                            (const MethodInfo_2D596B4 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                                            (const MethodInfo_2E2FE90 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   if ( !transform )
     goto LABEL_57;
-  v30 = (UIWidget_o *)transform;
+  v31 = (UIWidget_o *)transform;
   UIWidget__set_width((UIWidget_o *)transform, this->fields.CLOSE_BUTTON_WIDGET_W_DEF, 0LL);
-  UIWidget__set_height(v30, this->fields.CLOSE_BUTTON_WIDGET_H_DEF, 0LL);
+  UIWidget__set_height(v31, this->fields.CLOSE_BUTTON_WIDGET_H_DEF, 0LL);
   if ( !detail )
     goto LABEL_57;
   if ( detail->fields._stringLength < 1 )
   {
-    v34 = 1;
+    v35 = 1;
   }
   else
   {
-    v31 = 0;
     v32 = 0;
+    v33 = 0;
     do
     {
-      Chars = System_String__get_Chars(detail, v31++, 0LL);
+      Chars = System_String__get_Chars(detail, v32++, 0LL);
       if ( Chars == 10 )
-        ++v32;
+        ++v33;
     }
-    while ( v31 < detail->fields._stringLength );
-    v34 = v32 < 5;
+    while ( v32 < detail->fields._stringLength );
+    v35 = v33 < 5;
   }
   transform = (UnityEngine_GameObject_o *)this->fields.itemGetDetailLabel;
-  if ( v34 )
+  if ( v35 )
   {
     if ( !transform )
       goto LABEL_57;
@@ -479,35 +487,35 @@ LABEL_23:
     transform = (UnityEngine_GameObject_o *)this->fields.itemGetDetailLabel;
     if ( !transform )
       goto LABEL_57;
-    v36 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)transform, 0LL);
-    GameObjectExtensions__SetLocalPositionY(v36, 36.0, 0LL);
+    v37 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)transform, 0LL);
+    GameObjectExtensions__SetLocalPositionY(v37, 36.0, 0LL);
     transform = (UnityEngine_GameObject_o *)this->fields.closeButton;
     if ( !transform )
       goto LABEL_57;
-    v37 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)transform, 0LL);
-    GameObjectExtensions__SetLocalPositionY(v37, -162.0, 0LL);
-    UIWidget__set_width(v30, 218, 0LL);
-    UIWidget__set_height(v30, 56, 0LL);
+    v38 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)transform, 0LL);
+    GameObjectExtensions__SetLocalPositionY(v38, -162.0, 0LL);
+    UIWidget__set_width(v31, 218, 0LL);
+    UIWidget__set_height(v31, 56, 0LL);
   }
   else
   {
     transform = (UnityEngine_GameObject_o *)this->fields.itemGetDetailLabel;
     if ( !transform )
       goto LABEL_57;
-    v38 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)transform, 0LL);
-    GameObjectExtensions__SetLocalPositionY(v38, this->fields.ITEM_GET_DETAIL_LABEL_POS_Y, 0LL);
+    v39 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)transform, 0LL);
+    GameObjectExtensions__SetLocalPositionY(v39, this->fields.ITEM_GET_DETAIL_LABEL_POS_Y, 0LL);
   }
   transform = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
     goto LABEL_57;
   UnityEngine_GameObject__SetActive(transform, 1, 0LL);
-  v39 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
-  System_Action___ctor(v39, (Il2CppObject *)this, Method_MissionRewardGetDialog_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v39, 0, 0LL);
+  v42 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v40, v41);
+  System_Action___ctor(v42, (Il2CppObject *)this, Method_MissionRewardGetDialog_EndOpen__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v42, 0, 0LL);
 }
 
 
-void __fastcall MissionRewardGetDialog__Open_42169536(
+void __fastcall MissionRewardGetDialog__Open_44000680(
         MissionRewardGetDialog_o *this,
         EventRewardSetEntity_o *reward,
         System_String_o *detail,
@@ -517,27 +525,28 @@ void __fastcall MissionRewardGetDialog__Open_42169536(
   __int64 v7; // x1
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v9; // x1
-  System_Action_o *v10; // x20
+  __int64 v10; // x2
+  System_Action_o *v11; // x20
 
-  if ( (byte_48E527C & 1) == 0 )
+  if ( (byte_49FF6DA & 1) == 0 )
   {
-    sub_1B00CCC(&System_Action_TypeInfo, reward);
-    sub_1B00CCC(&Method_MissionRewardGetDialog_EndOpen__, v7);
-    byte_48E527C = 1;
+    sub_1B640C8(&System_Action_TypeInfo, reward);
+    sub_1B640C8(&Method_MissionRewardGetDialog_EndOpen__, v7);
+    byte_49FF6DA = 1;
   }
   this->fields.closeFunc = closeCb;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields.closeFunc,
     (int32_t)closeCb,
     (int32_t)detail,
     (int32_t)closeCb);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B00F28(0LL, v9);
+    sub_1B64324(0LL);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
-  v10 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
-  System_Action___ctor(v10, (Il2CppObject *)this, Method_MissionRewardGetDialog_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v10, 0, 0LL);
+  v11 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v9, v10);
+  System_Action___ctor(v11, (Il2CppObject *)this, Method_MissionRewardGetDialog_EndOpen__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v11, 0, 0LL);
 }
 
 
@@ -559,15 +568,15 @@ void __fastcall MissionRewardGetDialog_ClickDelegate___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B00D8C(v6) & 1) == 0 )
+  if ( (sub_1B64188(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B00F44(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B00DF4(v10, 0LL);
+      v10 = sub_1B64340(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B641F0(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -579,9 +588,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_194E154;
+  this->fields.m_target = (Il2CppObject *)sub_19B0098;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_194E114;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19B0058;
 }
 
 
@@ -594,7 +603,7 @@ System_IAsyncResult_o *__fastcall MissionRewardGetDialog_ClickDelegate__BeginInv
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0LL;
-  return (System_IAsyncResult_o *)sub_1B00C80(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1B6407C(this, &v5, callback, object);
 }
 
 
@@ -603,7 +612,7 @@ void __fastcall MissionRewardGetDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B00C84(result, 0LL, method);
+  sub_1B64080(result, 0LL, method);
 }
 
 

@@ -18,7 +18,7 @@ void __fastcall LinkableSprite__MakePixelPerfect(LinkableSprite_o *this, const M
         (v4 = this->fields.mUiSprite) == 0LL)
     || (mUiSprite = this->fields.mCollider) == 0LL )
   {
-    sub_1B00F28(mUiSprite, method);
+    sub_1B64324(mUiSprite);
   }
   v5.fields.y = (float)v4->fields.mHeight;
   v5.fields.x = (float)v4->fields.mWidth;
@@ -27,7 +27,6 @@ void __fastcall LinkableSprite__MakePixelPerfect(LinkableSprite_o *this, const M
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall LinkableSprite__SetSize(LinkableSprite_o *this, int32_t w, int32_t h, const MethodInfo *method)
 {
   UIWidget_o *mUiSprite; // x0
@@ -38,7 +37,7 @@ void __fastcall LinkableSprite__SetSize(LinkableSprite_o *this, int32_t w, int32
     || (UIWidget__set_width(mUiSprite, w, 0LL), (mUiSprite = (UIWidget_o *)this->fields.mUiSprite) == 0LL)
     || (UIWidget__set_height(mUiSprite, h, 0LL), (mUiSprite = (UIWidget_o *)this->fields.mCollider) == 0LL) )
   {
-    sub_1B00F28(mUiSprite, *(_QWORD *)&w);
+    sub_1B64324(mUiSprite);
   }
   v8.fields.y = (float)h;
   v8.fields.x = (float)w;
@@ -58,5 +57,5 @@ void __fastcall LinkableSprite__SetUp(
   this->fields.linkUrl = lnkUrl;
   p_linkUrl = &this->fields.linkUrl;
   *((_DWORD *)p_linkUrl - 2) = lnkType;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)p_linkUrl, (int32_t)lnkUrl, (int32_t)lnkUrl, (int32_t)method);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)p_linkUrl, (int32_t)lnkUrl, (int32_t)lnkUrl, (int32_t)method);
 }

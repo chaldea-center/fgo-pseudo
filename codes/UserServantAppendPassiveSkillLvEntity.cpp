@@ -2,14 +2,14 @@ void __fastcall UserServantAppendPassiveSkillLvEntity___ctor(
         UserServantAppendPassiveSkillLvEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_48E3519 & 1) == 0 )
+  if ( (byte_49FD199 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_long___ctor__, method);
-    byte_48E3519 = 1;
+    sub_1B640C8(&Method_DataEntityBase_long___ctor__, method);
+    byte_49FD199 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_2FE6894 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_30D3CEC *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -21,10 +21,10 @@ int64_t __fastcall UserServantAppendPassiveSkillLvEntity__CreatePrimaryKey(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v5; // [xsp+0h] [xbp-60h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v6; // [xsp+20h] [xbp-40h]
 
-  if ( (byte_48E3518 & 1) == 0 )
+  if ( (byte_49FD198 & 1) == 0 )
   {
-    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method);
-    byte_48E3518 = 1;
+    sub_1B640C8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method);
+    byte_49FD198 = 1;
   }
   v3 = *(_OWORD *)&this->fields.userSvtId.fields.fakeValue;
   *(_OWORD *)&v6.fields.currentCryptoKey = *(_OWORD *)&this->fields.userSvtId.fields.currentCryptoKey;
@@ -32,5 +32,5 @@ int64_t __fastcall UserServantAppendPassiveSkillLvEntity__CreatePrimaryKey(
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v5 = v6;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45316568(&v5, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46175132(&v5, 0LL);
 }

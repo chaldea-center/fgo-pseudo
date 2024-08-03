@@ -14,18 +14,18 @@ void __fastcall EventInfoPossessionItemCounter__Initialization(
   System_Action_o *v6; // x21
 
   v4 = this;
-  if ( (byte_48E4012 & 1) == 0 )
+  if ( (byte_49FDBF4 & 1) == 0 )
   {
-    sub_1B00CCC(&System_Action_TypeInfo, entity);
-    this = (EventInfoPossessionItemCounter_o *)sub_1B00CCC(
+    sub_1B640C8(&System_Action_TypeInfo, entity);
+    this = (EventInfoPossessionItemCounter_o *)sub_1B640C8(
                                                  &Method_EventInfoPossessionItemCounter__Initialization_b__8_0__,
                                                  v5);
-    byte_48E4012 = 1;
+    byte_49FDBF4 = 1;
   }
   if ( !entity )
-    sub_1B00F28(this, entity);
+    sub_1B64324(this);
   v4->fields.eventId = entity->fields.eventId;
-  v6 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, entity, method);
   System_Action___ctor(v6, (Il2CppObject *)v4, Method_EventInfoPossessionItemCounter__Initialization_b__8_0__, 0LL);
   EventInfoUIBase__LoadEventUIAssetData((EventInfoUIBase_o *)v4, entity, v6, 0LL);
 }
@@ -55,12 +55,12 @@ void __fastcall EventInfoPossessionItemCounter__Setup(
   UILabel_o *v11; // x20
 
   v4 = this;
-  if ( (byte_48E4013 & 1) == 0 )
+  if ( (byte_49FDBF5 & 1) == 0 )
   {
-    sub_1B00CCC(&LocalizationManager_TypeInfo, entity);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v5);
-    this = (EventInfoPossessionItemCounter_o *)sub_1B00CCC(&StringLiteral_5603/*"EVENT_POSSESSION_ITEM_TITLE"*/, v6);
-    byte_48E4013 = 1;
+    sub_1B640C8(&LocalizationManager_TypeInfo, entity);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v5);
+    this = (EventInfoPossessionItemCounter_o *)sub_1B640C8(&StringLiteral_5636/*"EVENT_POSSESSION_ITEM_TITLE"*/, v6);
+    byte_49FDBF5 = 1;
   }
   if ( entity )
   {
@@ -68,7 +68,7 @@ void __fastcall EventInfoPossessionItemCounter__Setup(
     if ( v7 )
     {
       if ( !(_DWORD)v7 )
-        sub_1B00F30(this, entity);
+        sub_1B6432C(this, entity);
       v8 = entity->m_Items[0];
       if ( !v8 )
         goto LABEL_17;
@@ -83,7 +83,7 @@ void __fastcall EventInfoPossessionItemCounter__Setup(
         v11 = v4->fields.possessionTitleLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        this = (EventInfoPossessionItemCounter_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5603/*"EVENT_POSSESSION_ITEM_TITLE"*/, 0LL);
+        this = (EventInfoPossessionItemCounter_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5636/*"EVENT_POSSESSION_ITEM_TITLE"*/, 0LL);
         if ( v11 )
         {
           UILabel__set_text(v11, (System_String_o *)this, 0LL);
@@ -92,7 +92,7 @@ LABEL_15:
           return;
         }
 LABEL_17:
-        sub_1B00F28(this, entity);
+        sub_1B64324(this);
       }
     }
   }
@@ -109,34 +109,30 @@ void __fastcall EventInfoPossessionItemCounter__UpdateDisp(
   __int64 v6; // x1
   __int64 v7; // x1
   int64_t Instance; // x0
-  __int64 v9; // x1
   Il2CppObject *MasterData_object; // x20
-  int64_t v11; // x10
+  int64_t v10; // x10
   int64_t possessionNumMax; // x9
   UILabel_o *possessionValueLabel; // x20
-  System_String_o *v14; // x21
-  __int64 v15; // x2
-  __int64 v16; // x3
-  __int64 v17; // x4
-  Il2CppObject *v18; // x0
+  System_String_o *v13; // x21
+  Il2CppObject *v14; // x0
   int64_t itemNum; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_48E4014 & 1) == 0 )
+  if ( (byte_49FDBF6 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataManager_GetMasterData_UserItemMaster___, method);
-    sub_1B00CCC(&long_TypeInfo, v3);
-    sub_1B00CCC(&LocalizationManager_TypeInfo, v4);
-    sub_1B00CCC(&NetworkManager_TypeInfo, v5);
-    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_1B00CCC(&StringLiteral_5604/*"EVENT_POSSESSION_ITEM_VALUE"*/, v7);
-    byte_48E4014 = 1;
+    sub_1B640C8(&Method_DataManager_GetMasterData_UserItemMaster___, method);
+    sub_1B640C8(&long_TypeInfo, v3);
+    sub_1B640C8(&LocalizationManager_TypeInfo, v4);
+    sub_1B640C8(&NetworkManager_TypeInfo, v5);
+    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    sub_1B640C8(&StringLiteral_5637/*"EVENT_POSSESSION_ITEM_VALUE"*/, v7);
+    byte_49FDBF6 = 1;
   }
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                        (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = NetworkManager__get_UserId(0LL);
@@ -149,21 +145,21 @@ void __fastcall EventInfoPossessionItemCounter__UpdateDisp(
                         0LL);
   if ( !Instance )
     goto LABEL_15;
-  v11 = *(int *)(Instance + 28);
+  v10 = *(int *)(Instance + 28);
   possessionNumMax = (unsigned int)this->fields.possessionNumMax;
-  this->fields.itemNum = v11;
-  if ( (possessionNumMax & 0x80000000) == 0 && v11 > possessionNumMax )
+  this->fields.itemNum = v10;
+  if ( (possessionNumMax & 0x80000000) == 0 && v10 > possessionNumMax )
     this->fields.itemNum = possessionNumMax;
   possessionValueLabel = this->fields.possessionValueLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_5604/*"EVENT_POSSESSION_ITEM_VALUE"*/, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_5637/*"EVENT_POSSESSION_ITEM_VALUE"*/, 0LL);
   itemNum = this->fields.itemNum;
-  v18 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &itemNum, v15, v16, v17);
-  Instance = (int64_t)System_String__Format(v14, v18, 0LL);
+  v14 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &itemNum);
+  Instance = (int64_t)System_String__Format(v13, v14, 0LL);
   if ( !possessionValueLabel )
 LABEL_15:
-    sub_1B00F28(Instance, v9);
+    sub_1B64324(Instance);
   UILabel__set_text(possessionValueLabel, (System_String_o *)Instance, 0LL);
 }
 

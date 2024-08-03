@@ -3,23 +3,23 @@ void __fastcall TakeOverDialog___cctor(const MethodInfo *method)
   __int64 v1; // x1
   __int64 v2; // x1
 
-  if ( (byte_48DDD67 & 1) == 0 )
+  if ( (byte_49F7487 & 1) == 0 )
   {
-    sub_1B00CCC(&TakeOverDialog_TypeInfo, v1);
-    sub_1B00CCC(&StringLiteral_441/*"#787878"*/, v2);
-    byte_48DDD67 = 1;
+    sub_1B640C8(&TakeOverDialog_TypeInfo, v1);
+    sub_1B640C8(&StringLiteral_445/*"#787878"*/, v2);
+    byte_49F7487 = 1;
   }
-  TakeOverDialog_TypeInfo->static_fields->PUSH_BUTTON_DISABLED_COLOR_CODE = (struct System_String_o *)StringLiteral_441/*"#787878"*/;
-  sub_1B00C70(TakeOverDialog_TypeInfo->static_fields);
+  TakeOverDialog_TypeInfo->static_fields->PUSH_BUTTON_DISABLED_COLOR_CODE = (struct System_String_o *)StringLiteral_445/*"#787878"*/;
+  sub_1B6406C(TakeOverDialog_TypeInfo->static_fields);
 }
 
 
 void __fastcall TakeOverDialog___ctor(TakeOverDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_48DDD66 & 1) == 0 )
+  if ( (byte_49F7486 & 1) == 0 )
   {
-    sub_1B00CCC(&BaseDialog_TypeInfo, method);
-    byte_48DDD66 = 1;
+    sub_1B640C8(&BaseDialog_TypeInfo, method);
+    byte_49F7486 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -31,30 +31,32 @@ void __fastcall TakeOverDialog__Close(TakeOverDialog_o *this, const MethodInfo *
 {
   const MethodInfo *v2; // x2
 
-  TakeOverDialog__Close_29857376(this, 0LL, v2);
+  TakeOverDialog__Close_30263892(this, 0LL, v2);
 }
 
 
-void __fastcall TakeOverDialog__Close_29857376(
+void __fastcall TakeOverDialog__Close_30263892(
         TakeOverDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  System_Action_o *v6; // x20
-  const MethodInfo *v7; // x2
+  __int64 v6; // x1
+  __int64 v7; // x2
+  System_Action_o *v8; // x20
+  const MethodInfo *v9; // x2
 
-  if ( (byte_48DDD62 & 1) == 0 )
+  if ( (byte_49F7482 & 1) == 0 )
   {
-    sub_1B00CCC(&System_Action_TypeInfo, callback);
-    sub_1B00CCC(&Method_TakeOverDialog_EndClose__, v5);
-    byte_48DDD62 = 1;
+    sub_1B640C8(&System_Action_TypeInfo, callback);
+    sub_1B640C8(&Method_TakeOverDialog_EndClose__, v5);
+    byte_49F7482 = 1;
   }
   this->fields.closeEndFunc = callback;
-  sub_1B00C70(&this->fields.closeEndFunc);
-  v6 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
-  System_Action___ctor(v6, (Il2CppObject *)this, Method_TakeOverDialog_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v6, v7);
+  sub_1B6406C(&this->fields.closeEndFunc);
+  v8 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v6, v7);
+  System_Action___ctor(v8, (Il2CppObject *)this, Method_TakeOverDialog_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v8, v9);
 }
 
 
@@ -71,7 +73,7 @@ void __fastcall TakeOverDialog__EndClose(TakeOverDialog_o *this, const MethodInf
   if ( closeEndFunc )
   {
     *p_closeEndFunc = 0LL;
-    sub_1B00C70(p_closeEndFunc);
+    sub_1B6406C(p_closeEndFunc);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v4->fields.m_target)(
       v4->fields.original_method_info,
       *(_QWORD *)&v4->fields.extra_arg);
@@ -83,7 +85,6 @@ void __fastcall TakeOverDialog__Init(TakeOverDialog_o *this, const MethodInfo *m
 {
   __int64 v3; // x1
   UnityEngine_Object_o *titleLabel; // x20
-  __int64 v5; // x1
   UILabel_o *gameObject; // x0
   UnityEngine_Object_o *takeOverAccountTitleLabel; // x20
   UnityEngine_Object_o *takeOverAccountDataLabel; // x20
@@ -91,13 +92,13 @@ void __fastcall TakeOverDialog__Init(TakeOverDialog_o *this, const MethodInfo *m
   UnityEngine_Object_o *warningLabel2; // x20
   UnityEngine_Object_o *buttonDecideLabel; // x20
   UnityEngine_Object_o *buttonCancelLabel; // x20
-  const MethodInfo *v13; // x1
+  const MethodInfo *v12; // x1
 
-  if ( (byte_48DDD59 & 1) == 0 )
+  if ( (byte_49F7479 & 1) == 0 )
   {
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
-    sub_1B00CCC(&StringLiteral_1/*""*/, v3);
-    byte_48DDD59 = 1;
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, method);
+    sub_1B640C8(&StringLiteral_1/*""*/, v3);
+    byte_49F7479 = 1;
   }
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -172,9 +173,9 @@ void __fastcall TakeOverDialog__Init(TakeOverDialog_o *this, const MethodInfo *m
   gameObject = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
 LABEL_40:
-    sub_1B00F28(gameObject, v5);
+    sub_1B64324(gameObject);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
-  BaseDialog__Init((BaseDialog_o *)this, v13);
+  BaseDialog__Init((BaseDialog_o *)this, v12);
 }
 
 
@@ -184,31 +185,30 @@ void __fastcall TakeOverDialog__OnClickCancel(TakeOverDialog_o *this, const Meth
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
   __int64 v6; // x0
-  __int64 v7; // x1
   struct TakeOverDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_48DDD64 & 1) == 0 )
+  if ( (byte_49F7484 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_TakeOverDialog_OnClickCancel__, method);
-    byte_48DDD64 = 1;
+    sub_1B640C8(&Method_TakeOverDialog_OnClickCancel__, method);
+    byte_49F7484 = 1;
   }
   v3 = Method_TakeOverDialog_OnClickCancel__;
   if ( (*((_BYTE *)Method_TakeOverDialog_OnClickCancel__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1B00CE4();
-  v4 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v3, v3[4]);
+    v3 = (_QWORD *)sub_1B640E0();
+  v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
   if ( this->fields.clickFunc )
   {
-    TakeOverDialog__Close_29857376(this, 0LL, v5);
+    TakeOverDialog__Close_30263892(this, 0LL, v5);
     clickFunc = this->fields.clickFunc;
     if ( !clickFunc )
-      sub_1B00F28(v6, v7);
+      sub_1B64324(v6);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))clickFunc->fields.m_target)(
       clickFunc->fields.original_method_info,
       0LL,
       *(_QWORD *)&clickFunc->fields.extra_arg);
     this->fields.clickFunc = 0LL;
-    sub_1B00C70(&this->fields.clickFunc);
+    sub_1B6406C(&this->fields.clickFunc);
   }
 }
 
@@ -223,10 +223,10 @@ void __fastcall TakeOverDialog__OnClickDecide(TakeOverDialog_o *this, const Meth
   const MethodInfo *v8; // x2
   struct TakeOverDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_48DDD63 & 1) == 0 )
+  if ( (byte_49F7483 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_TakeOverDialog_OnClickDecide__, method);
-    byte_48DDD63 = 1;
+    sub_1B640C8(&Method_TakeOverDialog_OnClickDecide__, method);
+    byte_49F7483 = 1;
   }
   checkSlider = (UIProgressBar_o *)this->fields.checkSlider;
   if ( !checkSlider )
@@ -235,8 +235,8 @@ void __fastcall TakeOverDialog__OnClickDecide(TakeOverDialog_o *this, const Meth
   v5 = Method_TakeOverDialog_OnClickDecide__;
   v6 = value;
   if ( (*((_BYTE *)Method_TakeOverDialog_OnClickDecide__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1B00CE4();
-  v7 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v5, v5[4]);
+    v5 = (_QWORD *)sub_1B640E0();
+  v7 = (System_Reflection_MethodBase_o *)sub_1B640AC(v5, v5[4]);
   if ( v6 < 1.0 )
   {
     OverwriteAssetSoundName__PlaySystemSe(v7, 2, 0LL);
@@ -245,7 +245,7 @@ void __fastcall TakeOverDialog__OnClickDecide(TakeOverDialog_o *this, const Meth
   OverwriteAssetSoundName__PlaySystemSe(v7, 8, 0LL);
   if ( this->fields.clickFunc )
   {
-    TakeOverDialog__Close_29857376(this, 0LL, v8);
+    TakeOverDialog__Close_30263892(this, 0LL, v8);
     clickFunc = this->fields.clickFunc;
     if ( clickFunc )
     {
@@ -254,11 +254,11 @@ void __fastcall TakeOverDialog__OnClickDecide(TakeOverDialog_o *this, const Meth
         1LL,
         *(_QWORD *)&clickFunc->fields.extra_arg);
       this->fields.clickFunc = 0LL;
-      sub_1B00C70(&this->fields.clickFunc);
+      sub_1B6406C(&this->fields.clickFunc);
       return;
     }
 LABEL_12:
-    sub_1B00F28(checkSlider, method);
+    sub_1B64324(checkSlider);
   }
 }
 
@@ -267,13 +267,13 @@ void __fastcall TakeOverDialog__OnEnable(TakeOverDialog_o *this, const MethodInf
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_48DDD65 & 1) == 0 )
+  if ( (byte_49F7485 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_15418/*"Window/Objects/Buttons/CancelButton"*/, method);
-    byte_48DDD65 = 1;
+    sub_1B640C8(&StringLiteral_15581/*"Window/Objects/Buttons/CancelButton"*/, method);
+    byte_49F7485 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  AndroidBackKeyManager__AddBackBtn_40637724(transform, (System_String_o *)StringLiteral_15418/*"Window/Objects/Buttons/CancelButton"*/, 0LL);
+  AndroidBackKeyManager__AddBackBtn_41446668(transform, (System_String_o *)StringLiteral_15581/*"Window/Objects/Buttons/CancelButton"*/, 0LL);
 }
 
 
@@ -291,7 +291,7 @@ void __fastcall TakeOverDialog__OnSliderDragFinished(TakeOverDialog_o *this, con
     || (value = UIProgressBar__get_value(checkSlider, 0LL),
         (checkSlider = (UIProgressBar_o *)this->fields.checkSlider) == 0LL) )
   {
-    sub_1B00F28(checkSlider, method);
+    sub_1B64324(checkSlider);
   }
   v5 = value < 0.9;
   if ( value >= 0.9 )
@@ -310,35 +310,40 @@ void __fastcall TakeOverDialog__Open(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x1
   UIProgressBar_o *checkSlider; // x0
-  struct UISlider_o *v8; // x20
-  UIProgressBar_OnDragFinished_o *v9; // x21
-  const MethodInfo *v10; // x2
-  const MethodInfo *v11; // x3
+  struct UISlider_o *v7; // x20
+  __int64 v8; // x1
+  __int64 v9; // x2
+  UIProgressBar_OnDragFinished_o *v10; // x21
+  const MethodInfo *v11; // x2
+  const MethodInfo *v12; // x3
 
-  if ( (byte_48DDD60 & 1) == 0 )
+  if ( (byte_49F7480 & 1) == 0 )
   {
-    sub_1B00CCC(&UIProgressBar_OnDragFinished_TypeInfo, func);
-    sub_1B00CCC(&Method_TakeOverDialog_OnSliderDragFinished__, v5);
-    byte_48DDD60 = 1;
+    sub_1B640C8(&UIProgressBar_OnDragFinished_TypeInfo, func);
+    sub_1B640C8(&Method_TakeOverDialog_OnSliderDragFinished__, v5);
+    byte_49F7480 = 1;
   }
   this->fields.clickFunc = func;
-  sub_1B00C70(&this->fields.clickFunc);
+  sub_1B6406C(&this->fields.clickFunc);
   checkSlider = (UIProgressBar_o *)this->fields.checkSlider;
   if ( !checkSlider
     || (UIProgressBar__set_value(checkSlider, 0.0, 0LL),
-        v8 = this->fields.checkSlider,
-        v9 = (UIProgressBar_OnDragFinished_o *)sub_1B00F18(UIProgressBar_OnDragFinished_TypeInfo),
-        UIProgressBar_OnDragFinished___ctor(v9, (Il2CppObject *)this, Method_TakeOverDialog_OnSliderDragFinished__, 0LL),
-        !v8) )
+        v7 = this->fields.checkSlider,
+        v10 = (UIProgressBar_OnDragFinished_o *)sub_1B64314(UIProgressBar_OnDragFinished_TypeInfo, v8, v9),
+        UIProgressBar_OnDragFinished___ctor(
+          v10,
+          (Il2CppObject *)this,
+          Method_TakeOverDialog_OnSliderDragFinished__,
+          0LL),
+        !v7) )
   {
-    sub_1B00F28(checkSlider, v6);
+    sub_1B64324(checkSlider);
   }
-  v8->fields.onDragFinished = v9;
-  sub_1B00C70(&v8->fields.onDragFinished);
-  TakeOverDialog__SetSlider(this, 0, v10);
-  BaseDialog__Open((BaseDialog_o *)this, 0LL, 0, v11);
+  v7->fields.onDragFinished = v10;
+  sub_1B6406C(&v7->fields.onDragFinished);
+  TakeOverDialog__SetSlider(this, 0, v11);
+  BaseDialog__Open((BaseDialog_o *)this, 0LL, 0, v12);
 }
 
 
@@ -349,14 +354,13 @@ void __fastcall TakeOverDialog__SetAccountTitleLabel(TakeOverDialog_o *this, con
   UnityEngine_Object_o *takeOverAccountTitleLabel; // x20
   UILabel_o *v6; // x19
   System_String_o *v7; // x0
-  __int64 v8; // x1
 
-  if ( (byte_48DDD5B & 1) == 0 )
+  if ( (byte_49F747B & 1) == 0 )
   {
-    sub_1B00CCC(&LocalizationManager_TypeInfo, method);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v3);
-    sub_1B00CCC(&StringLiteral_2029/*"ACCOUNT_LINKAGE_TAKEOVER_OVERRIDE_TITLE"*/, v4);
-    byte_48DDD5B = 1;
+    sub_1B640C8(&LocalizationManager_TypeInfo, method);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v3);
+    sub_1B640C8(&StringLiteral_2035/*"ACCOUNT_LINKAGE_TAKEOVER_OVERRIDE_TITLE"*/, v4);
+    byte_49F747B = 1;
   }
   takeOverAccountTitleLabel = (UnityEngine_Object_o *)this->fields.takeOverAccountTitleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -366,9 +370,9 @@ void __fastcall TakeOverDialog__SetAccountTitleLabel(TakeOverDialog_o *this, con
     v6 = this->fields.takeOverAccountTitleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v7 = LocalizationManager__Get((System_String_o *)StringLiteral_2029/*"ACCOUNT_LINKAGE_TAKEOVER_OVERRIDE_TITLE"*/, 0LL);
+    v7 = LocalizationManager__Get((System_String_o *)StringLiteral_2035/*"ACCOUNT_LINKAGE_TAKEOVER_OVERRIDE_TITLE"*/, 0LL);
     if ( !v6 )
-      sub_1B00F28(v7, v8);
+      sub_1B64324(v7);
     UILabel__set_text(v6, v7, 0LL);
   }
 }
@@ -380,23 +384,22 @@ void __fastcall TakeOverDialog__SetButtonCancelLabel(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *buttonCancelLabel; // x21
-  __int64 v6; // x1
-  UILabel_o *v7; // x0
+  UILabel_o *v6; // x0
 
-  if ( (byte_48DDD5E & 1) == 0 )
+  if ( (byte_49F747E & 1) == 0 )
   {
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, buttonCancel);
-    byte_48DDD5E = 1;
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, buttonCancel);
+    byte_49F747E = 1;
   }
   buttonCancelLabel = (UnityEngine_Object_o *)this->fields.buttonCancelLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(buttonCancelLabel, 0LL, 0LL) )
   {
-    v7 = this->fields.buttonCancelLabel;
-    if ( !v7 )
-      sub_1B00F28(0LL, v6);
-    UILabel__set_text(v7, buttonCancel, 0LL);
+    v6 = this->fields.buttonCancelLabel;
+    if ( !v6 )
+      sub_1B64324(0LL);
+    UILabel__set_text(v6, buttonCancel, 0LL);
   }
 }
 
@@ -407,23 +410,22 @@ void __fastcall TakeOverDialog__SetButtonDecideLabel(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *buttonDecideLabel; // x21
-  __int64 v6; // x1
-  UILabel_o *v7; // x0
+  UILabel_o *v6; // x0
 
-  if ( (byte_48DDD5F & 1) == 0 )
+  if ( (byte_49F747F & 1) == 0 )
   {
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, buttonDecide);
-    byte_48DDD5F = 1;
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, buttonDecide);
+    byte_49F747F = 1;
   }
   buttonDecideLabel = (UnityEngine_Object_o *)this->fields.buttonDecideLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(buttonDecideLabel, 0LL, 0LL) )
   {
-    v7 = this->fields.buttonDecideLabel;
-    if ( !v7 )
-      sub_1B00F28(0LL, v6);
-    UILabel__set_text(v7, buttonDecide, 0LL);
+    v6 = this->fields.buttonDecideLabel;
+    if ( !v6 )
+      sub_1B64324(0LL);
+    UILabel__set_text(v6, buttonDecide, 0LL);
   }
 }
 
@@ -443,21 +445,21 @@ void __fastcall TakeOverDialog__SetSlider(TakeOverDialog_o *this, bool sliderOn,
   float r; // s0
   UnityEngine_Color_o v15; // [xsp+0h] [xbp-30h] BYREF
 
-  if ( (byte_48DDD61 & 1) == 0 )
+  if ( (byte_49F7481 & 1) == 0 )
   {
-    sub_1B00CCC(&TakeOverDialog_TypeInfo, sliderOn);
-    sub_1B00CCC(&StringLiteral_20191/*"img_slider_thumb_locked"*/, v5);
-    sub_1B00CCC(&StringLiteral_20190/*"img_slider_thumb"*/, v6);
-    byte_48DDD61 = 1;
+    sub_1B640C8(&TakeOverDialog_TypeInfo, sliderOn);
+    sub_1B640C8(&StringLiteral_20389/*"img_slider_thumb_locked"*/, v5);
+    sub_1B640C8(&StringLiteral_20388/*"img_slider_thumb"*/, v6);
+    byte_49F7481 = 1;
   }
   *(_QWORD *)&v15.fields.r = 0LL;
   *(_QWORD *)&v15.fields.b = 0LL;
   sliderSprite = this->fields.sliderSprite;
   if ( !sliderSprite )
     goto LABEL_17;
-  v8 = (System_String_o **)&StringLiteral_20190/*"img_slider_thumb"*/;
+  v8 = (System_String_o **)&StringLiteral_20388/*"img_slider_thumb"*/;
   if ( !sliderOn )
-    v8 = (System_String_o **)&StringLiteral_20191/*"img_slider_thumb_locked"*/;
+    v8 = (System_String_o **)&StringLiteral_20389/*"img_slider_thumb_locked"*/;
   UISprite__set_spriteName(sliderSprite, *v8, 0LL);
   v9 = TakeOverDialog_TypeInfo;
   if ( !TakeOverDialog_TypeInfo->_2.cctor_finished )
@@ -492,7 +494,7 @@ void __fastcall TakeOverDialog__SetSlider(TakeOverDialog_o *this, bool sliderOn,
         (sliderSprite = (UISprite_o *)this->fields.decideButton) == 0LL) )
   {
 LABEL_17:
-    sub_1B00F28(sliderSprite, sliderOn);
+    sub_1B64324(sliderSprite);
   }
   ((void (__fastcall *)(UISprite_o *, bool, Il2CppMethodPointer))sliderSprite->klass->vtable._5_get_isAnchoredVertically.method)(
     sliderSprite,
@@ -507,23 +509,22 @@ void __fastcall TakeOverDialog__SetTakeOverAccountDataLabel(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *takeOverAccountDataLabel; // x21
-  __int64 v6; // x1
-  UILabel_o *v7; // x0
+  UILabel_o *v6; // x0
 
-  if ( (byte_48DDD5C & 1) == 0 )
+  if ( (byte_49F747C & 1) == 0 )
   {
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, takeOverAccountData);
-    byte_48DDD5C = 1;
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, takeOverAccountData);
+    byte_49F747C = 1;
   }
   takeOverAccountDataLabel = (UnityEngine_Object_o *)this->fields.takeOverAccountDataLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(takeOverAccountDataLabel, 0LL, 0LL) )
   {
-    v7 = this->fields.takeOverAccountDataLabel;
-    if ( !v7 )
-      sub_1B00F28(0LL, v6);
-    UILabel__set_text(v7, takeOverAccountData, 0LL);
+    v6 = this->fields.takeOverAccountDataLabel;
+    if ( !v6 )
+      sub_1B64324(0LL);
+    UILabel__set_text(v6, takeOverAccountData, 0LL);
   }
 }
 
@@ -531,23 +532,22 @@ void __fastcall TakeOverDialog__SetTakeOverAccountDataLabel(
 void __fastcall TakeOverDialog__SetTitleLabel(TakeOverDialog_o *this, System_String_o *title, const MethodInfo *method)
 {
   UnityEngine_Object_o *titleLabel; // x21
-  __int64 v6; // x1
-  UILabel_o *v7; // x0
+  UILabel_o *v6; // x0
 
-  if ( (byte_48DDD5A & 1) == 0 )
+  if ( (byte_49F747A & 1) == 0 )
   {
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, title);
-    byte_48DDD5A = 1;
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, title);
+    byte_49F747A = 1;
   }
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(titleLabel, 0LL, 0LL) )
   {
-    v7 = this->fields.titleLabel;
-    if ( !v7 )
-      sub_1B00F28(0LL, v6);
-    UILabel__set_text(v7, title, 0LL);
+    v6 = this->fields.titleLabel;
+    if ( !v6 )
+      sub_1B64324(0LL);
+    UILabel__set_text(v6, title, 0LL);
   }
 }
 
@@ -559,38 +559,37 @@ void __fastcall TakeOverDialog__SetWarningLabel(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *warningLabel1; // x22
-  __int64 v8; // x1
-  UILabel_o *v9; // x0
+  UILabel_o *v8; // x0
   UnityEngine_Object_o *warningLabel2; // x21
 
-  if ( (byte_48DDD5D & 1) == 0 )
+  if ( (byte_49F747D & 1) == 0 )
   {
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, warning1);
-    byte_48DDD5D = 1;
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, warning1);
+    byte_49F747D = 1;
   }
   warningLabel1 = (UnityEngine_Object_o *)this->fields.warningLabel1;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(warningLabel1, 0LL, 0LL) )
   {
-    v9 = this->fields.warningLabel1;
-    if ( !v9 )
+    v8 = this->fields.warningLabel1;
+    if ( !v8 )
       goto LABEL_14;
-    UILabel__set_text(v9, warning1, 0LL);
+    UILabel__set_text(v8, warning1, 0LL);
   }
   warningLabel2 = (UnityEngine_Object_o *)this->fields.warningLabel2;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(warningLabel2, 0LL, 0LL) )
   {
-    v9 = this->fields.warningLabel2;
-    if ( v9 )
+    v8 = this->fields.warningLabel2;
+    if ( v8 )
     {
-      UILabel__set_text(v9, warning2, 0LL);
+      UILabel__set_text(v8, warning2, 0LL);
       return;
     }
 LABEL_14:
-    sub_1B00F28(v9, v8);
+    sub_1B64324(v8);
   }
 }
 
@@ -613,15 +612,15 @@ void __fastcall TakeOverDialog_ClickDelegate___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B00C70(&this->fields.method);
+  sub_1B6406C(&this->fields.method);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B00D8C(v6) & 1) == 0 )
+  if ( (sub_1B64188(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B00F44(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B00DF4(v10, 0LL);
+      v10 = sub_1B64340(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B641F0(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -633,9 +632,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1943C4C;
+  this->fields.m_target = (Il2CppObject *)sub_19A4434;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1943C04;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19A43EC;
 }
 
 
@@ -651,14 +650,14 @@ System_IAsyncResult_o *__fastcall TakeOverDialog_ClickDelegate__BeginInvoke(
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isDecide;
-  if ( (byte_48DDD68 & 1) == 0 )
+  if ( (byte_49F7488 & 1) == 0 )
   {
-    sub_1B00CCC(&bool_TypeInfo, isDecide);
-    byte_48DDD68 = 1;
+    sub_1B640C8(&bool_TypeInfo, isDecide);
+    byte_49F7488 = 1;
   }
   v9[1] = 0LL;
-  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1B00C80(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
+  return (System_IAsyncResult_o *)sub_1B6407C(this, v9, callback, object);
 }
 
 
@@ -667,7 +666,7 @@ void __fastcall TakeOverDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B00C84(result, 0LL, method);
+  sub_1B64080(result, 0LL, method);
 }
 
 

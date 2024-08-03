@@ -12,7 +12,8 @@ System_Int32_array *__fastcall OpponentAllFieldTargetAggregator__GetCandidate(
 {
   struct TargetAggregator_Args_o *args; // x8
   TargetAggregator_o *v3; // x19
-  struct TargetAggregator_Args_o *v4; // x8
+  const MethodInfo *v4; // x1
+  struct TargetAggregator_Args_o *v5; // x8
   BattleData_o *battleData_k__BackingField; // x20
 
   args = this->fields.args;
@@ -26,18 +27,18 @@ System_Int32_array *__fastcall OpponentAllFieldTargetAggregator__GetCandidate(
                                                  (BattleData_o *)this,
                                                  args->fields._actorId_k__BackingField,
                                                  0LL);
-  v4 = v3->fields.args;
-  if ( !v4 )
+  v5 = v3->fields.args;
+  if ( !v5 )
     goto LABEL_9;
-  battleData_k__BackingField = v4->fields._battleData_k__BackingField;
+  battleData_k__BackingField = v5->fields._battleData_k__BackingField;
   if ( ((unsigned __int8)this & 1) != 0 )
   {
     if ( battleData_k__BackingField )
-      return BattleData__getFieldPlayerServantIDList(v4->fields._battleData_k__BackingField, 0LL, 0LL);
+      return BattleData__getFieldPlayerServantIDList(v5->fields._battleData_k__BackingField, 0LL, 0LL);
 LABEL_9:
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   }
-  this = (OpponentAllFieldTargetAggregator_o *)TargetAggregator__get_IsOpponentTargetOnly(v3, method);
+  this = (OpponentAllFieldTargetAggregator_o *)TargetAggregator__get_IsOpponentTargetOnly(v3, v4);
   if ( !battleData_k__BackingField )
     goto LABEL_9;
   return BattleData__getFieldEnemyServantIDList(battleData_k__BackingField, (unsigned __int8)this & 1, 0LL);

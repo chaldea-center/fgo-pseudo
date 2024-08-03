@@ -2,10 +2,10 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewObject___ctor(
         BonusSelectSummonPartyOrganizationListViewObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_48DF076 & 1) == 0 )
+  if ( (byte_49F8C09 & 1) == 0 )
   {
-    sub_1B00CCC(&ListViewObject_TypeInfo, method);
-    byte_48DF076 = 1;
+    sub_1B640C8(&ListViewObject_TypeInfo, method);
+    byte_49F8C09 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -29,22 +29,21 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewObject__Init(
 {
   int32_t v6; // w2
   int32_t v7; // w3
-  __int64 v8; // x1
-  const MethodInfo *v9; // x3
+  const MethodInfo *v8; // x3
   BonusSelectSummonPartyOrganizationListViewItemDraw_o *itemDraw; // x0
 
   this->fields.listViewItem = item;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields.listViewItem,
     (int32_t)item,
     (int32_t)onTapEvent,
     (int32_t)method);
   this->fields.onTapEvent = onTapEvent;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.onTapEvent, (int32_t)onTapEvent, v6, v7);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.onTapEvent, (int32_t)onTapEvent, v6, v7);
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
-    sub_1B00F28(0LL, v8);
-  BonusSelectSummonPartyOrganizationListViewItemDraw__SetItem(itemDraw, this->fields.listViewItem, 3, v9);
+    sub_1B64324(0LL);
+  BonusSelectSummonPartyOrganizationListViewItemDraw__SetItem(itemDraw, this->fields.listViewItem, 3, v8);
   ((void (__fastcall *)(BonusSelectSummonPartyOrganizationListViewObject_o *, __int64, Il2CppMethodPointer))this->klass->vtable._9_SetInput.method)(
     this,
     1LL,
@@ -61,7 +60,7 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewObject__Modfy(
 
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
-    sub_1B00F28(0LL, method);
+    sub_1B64324(0LL);
   BonusSelectSummonPartyOrganizationListViewItemDraw__SetItem(itemDraw, this->fields.listViewItem, 3, v2);
 }
 

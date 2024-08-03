@@ -1,14 +1,14 @@
 void __fastcall ClassBoardLineMaster___ctor(ClassBoardLineMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E25A8 & 1) == 0 )
+  if ( (byte_49FC1A8 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataMasterBase_ClassBoardLineMaster__ClassBoardLineEntity__string___ctor__, method);
-    byte_48E25A8 = 1;
+    sub_1B640C8(&Method_DataMasterBase_ClassBoardLineMaster__ClassBoardLineEntity__string___ctor__, method);
+    byte_49FC1A8 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    426,
-    (const MethodInfo_2FE6D64 *)Method_DataMasterBase_ClassBoardLineMaster__ClassBoardLineEntity__string___ctor__);
+    427,
+    (const MethodInfo_30D41BC *)Method_DataMasterBase_ClassBoardLineMaster__ClassBoardLineEntity__string___ctor__);
 }
 
 
@@ -20,15 +20,15 @@ ClassBoardLineEntity_array *__fastcall ClassBoardLineMaster__GetAllEntity(
 {
   System_Collections_Generic_IEnumerable_ClassBoardLineEntity__o *AllEntityEnumerable; // x0
 
-  if ( (byte_48E25A6 & 1) == 0 )
+  if ( (byte_49FC1A6 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Linq_Enumerable_ToArray_ClassBoardLineEntity___, *(_QWORD *)&baseId);
-    byte_48E25A6 = 1;
+    sub_1B640C8(&Method_System_Linq_Enumerable_ToArray_ClassBoardLineEntity___, *(_QWORD *)&baseId);
+    byte_49FC1A6 = 1;
   }
   AllEntityEnumerable = ClassBoardLineMaster__GetAllEntityEnumerable(this, baseId, method);
   return (ClassBoardLineEntity_array *)System_Linq_Enumerable__ToArray_object_(
                                          (System_Collections_Generic_IEnumerable_TSource__o *)AllEntityEnumerable,
-                                         (const MethodInfo_2D976BC *)Method_System_Linq_Enumerable_ToArray_ClassBoardLineEntity___);
+                                         (const MethodInfo_2E713C4 *)Method_System_Linq_Enumerable_ToArray_ClassBoardLineEntity___);
 }
 
 
@@ -44,37 +44,38 @@ System_Collections_Generic_IEnumerable_ClassBoardLineEntity__o *__fastcall Class
   __int64 v8; // x1
   __int64 v9; // x21
   __int64 v10; // x0
-  __int64 v11; // x1
   System_Collections_Generic_IEnumerable_TSource__o *Entitys_object; // x19
-  System_Func_object__bool__o *v13; // x20
+  __int64 v12; // x1
+  __int64 v13; // x2
+  System_Func_object__bool__o *v14; // x20
 
-  if ( (byte_48E25A7 & 1) == 0 )
+  if ( (byte_49FC1A7 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataMasterBase_getEntitys_ClassBoardLineEntity___, *(_QWORD *)&baseId);
-    sub_1B00CCC(&Method_System_Linq_Enumerable_Where_ClassBoardLineEntity___, v5);
-    sub_1B00CCC(&System_Func_ClassBoardLineEntity__bool__TypeInfo, v6);
-    sub_1B00CCC(&Method_ClassBoardLineMaster___c__DisplayClass1_0__GetAllEntityEnumerable_b__0__, v7);
-    sub_1B00CCC(&ClassBoardLineMaster___c__DisplayClass1_0_TypeInfo, v8);
-    byte_48E25A7 = 1;
+    sub_1B640C8(&Method_DataMasterBase_getEntitys_ClassBoardLineEntity___, *(_QWORD *)&baseId);
+    sub_1B640C8(&Method_System_Linq_Enumerable_Where_ClassBoardLineEntity___, v5);
+    sub_1B640C8(&System_Func_ClassBoardLineEntity__bool__TypeInfo, v6);
+    sub_1B640C8(&Method_ClassBoardLineMaster___c__DisplayClass1_0__GetAllEntityEnumerable_b__0__, v7);
+    sub_1B640C8(&ClassBoardLineMaster___c__DisplayClass1_0_TypeInfo, v8);
+    byte_49FC1A7 = 1;
   }
-  v9 = sub_1B00F18(ClassBoardLineMaster___c__DisplayClass1_0_TypeInfo);
+  v9 = sub_1B64314(ClassBoardLineMaster___c__DisplayClass1_0_TypeInfo, *(_QWORD *)&baseId, method);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   if ( !v9 )
-    sub_1B00F28(v10, v11);
+    sub_1B64324(v10);
   *(_DWORD *)(v9 + 16) = baseId;
   Entitys_object = (System_Collections_Generic_IEnumerable_TSource__o *)DataMasterBase__getEntitys_object_(
                                                                           (DataMasterBase_o *)this,
-                                                                          (const MethodInfo_2D634A4 *)Method_DataMasterBase_getEntitys_ClassBoardLineEntity___);
-  v13 = (System_Func_object__bool__o *)sub_1B00F18(System_Func_ClassBoardLineEntity__bool__TypeInfo);
+                                                                          (const MethodInfo_2E39C80 *)Method_DataMasterBase_getEntitys_ClassBoardLineEntity___);
+  v14 = (System_Func_object__bool__o *)sub_1B64314(System_Func_ClassBoardLineEntity__bool__TypeInfo, v12, v13);
   System_Func_object__bool____ctor(
-    v13,
+    v14,
     (Il2CppObject *)v9,
     Method_ClassBoardLineMaster___c__DisplayClass1_0__GetAllEntityEnumerable_b__0__,
     0LL);
   return (System_Collections_Generic_IEnumerable_ClassBoardLineEntity__o *)System_Linq_Enumerable__Where_object_(
                                                                              Entitys_object,
-                                                                             (System_Func_TSource__bool__o *)v13,
-                                                                             (const MethodInfo_2D9D054 *)Method_System_Linq_Enumerable_Where_ClassBoardLineEntity___);
+                                                                             (System_Func_TSource__bool__o *)v14,
+                                                                             (const MethodInfo_2E7709C *)Method_System_Linq_Enumerable_Where_ClassBoardLineEntity___);
 }
 
 
@@ -87,18 +88,18 @@ ClassBoardLineEntity_o *__fastcall ClassBoardLineMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_48E25A9 & 1) == 0 )
+  if ( (byte_49FC1A9 & 1) == 0 )
   {
-    sub_1B00CCC(
+    sub_1B640C8(
       &Method_DataMasterBase_ClassBoardLineMaster__ClassBoardLineEntity__string__GetEntity__,
       *(_QWORD *)&classBoardBaseId);
-    byte_48E25A9 = 1;
+    byte_49FC1A9 = 1;
   }
   PK = (Il2CppObject *)ClassBoardLineEntity__CreatePK(classBoardBaseId, id, 0LL);
   return (ClassBoardLineEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      PK,
-                                     (const MethodInfo_2FE6DA4 *)Method_DataMasterBase_ClassBoardLineMaster__ClassBoardLineEntity__string__GetEntity__);
+                                     (const MethodInfo_30D41FC *)Method_DataMasterBase_ClassBoardLineMaster__ClassBoardLineEntity__string__GetEntity__);
 }
 
 
@@ -111,17 +112,17 @@ bool __fastcall ClassBoardLineMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_48E25AA & 1) == 0 )
+  if ( (byte_49FC1AA & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataMasterBase_ClassBoardLineMaster__ClassBoardLineEntity__string__TryGetEntity__, entity);
-    byte_48E25AA = 1;
+    sub_1B640C8(&Method_DataMasterBase_ClassBoardLineMaster__ClassBoardLineEntity__string__TryGetEntity__, entity);
+    byte_49FC1AA = 1;
   }
   PK = (Il2CppObject *)ClassBoardLineEntity__CreatePK(classBoardBaseId, id, 0LL);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_2FE6DF4 *)Method_DataMasterBase_ClassBoardLineMaster__ClassBoardLineEntity__string__TryGetEntity__);
+           (const MethodInfo_30D424C *)Method_DataMasterBase_ClassBoardLineMaster__ClassBoardLineEntity__string__TryGetEntity__);
 }
 
 
@@ -139,6 +140,6 @@ bool __fastcall ClassBoardLineMaster___c__DisplayClass1_0___GetAllEntityEnumerab
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B00F28(this, 0LL);
+    sub_1B64324(this);
   return x->fields.classBoardBaseId == this->fields.baseId;
 }

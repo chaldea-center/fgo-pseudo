@@ -1,7 +1,6 @@
-// attributes: thunk
 void __fastcall MasterMissionListViewObject___ctor(MasterMissionListViewObject_o *this, const MethodInfo *method)
 {
-  MissionListViewObject___ctor((MissionListViewObject_o *)this, method);
+  MissionListViewObject___ctor((MissionListViewObject_o *)this, 0LL);
 }
 
 
@@ -12,10 +11,10 @@ MasterMissionListViewItem_o *__fastcall MasterMissionListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_48E5244 & 1) == 0 )
+  if ( (byte_49FEEDD & 1) == 0 )
   {
-    sub_1B00CCC(&MasterMissionListViewItem_TypeInfo, method);
-    byte_48E5244 = 1;
+    sub_1B640C8(&MasterMissionListViewItem_TypeInfo, method);
+    byte_49FEEDD = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -38,13 +37,12 @@ void __fastcall MasterMissionListViewObject__OnChangeAlphaAnim(
   __int64 methodPtr_low; // x11
   struct ListViewManager_o *v6; // x20
   MasterMissionListViewItemDraw_o *MasterMissionItemDraw; // x0
-  __int64 v8; // x1
-  const MethodInfo *v9; // x2
+  const MethodInfo *v8; // x2
 
-  if ( (byte_48E5245 & 1) == 0 )
+  if ( (byte_49FEEDE & 1) == 0 )
   {
-    sub_1B00CCC(&MasterMissionListViewManager_TypeInfo, method);
-    byte_48E5245 = 1;
+    sub_1B640C8(&MasterMissionListViewManager_TypeInfo, method);
+    byte_49FEEDE = 1;
   }
   if ( this->fields.linkItem )
   {
@@ -65,8 +63,8 @@ void __fastcall MasterMissionListViewObject__OnChangeAlphaAnim(
     }
     MasterMissionItemDraw = MasterMissionListViewObject__get_MasterMissionItemDraw(this, v3);
     if ( !MasterMissionItemDraw )
-      sub_1B00F28(0LL, v8);
-    MasterMissionListViewItemDraw__ChangeNextRewardIcon(MasterMissionItemDraw, (MasterMissionListViewManager_o *)v6, v9);
+      sub_1B64324(0LL);
+    MasterMissionListViewItemDraw__ChangeNextRewardIcon(MasterMissionItemDraw, (MasterMissionListViewManager_o *)v6, v8);
   }
 }
 
@@ -81,15 +79,14 @@ void __fastcall MasterMissionListViewObject__Update(MasterMissionListViewObject_
   __int64 methodPtr_low; // x11
   struct ListViewManager_o *v9; // x21
   MasterMissionListViewItemDraw_o *MasterMissionItemDraw; // x0
-  __int64 v11; // x1
-  const MethodInfo *v12; // x4
+  const MethodInfo *v11; // x4
 
-  if ( (byte_48E5243 & 1) == 0 )
+  if ( (byte_49FEEDC & 1) == 0 )
   {
-    sub_1B00CCC(&MasterMissionListViewManager_TypeInfo, method);
-    byte_48E5243 = 1;
+    sub_1B640C8(&MasterMissionListViewManager_TypeInfo, method);
+    byte_49FEEDC = 1;
   }
-  MissionListViewObject__RedispResTime((MissionListViewObject_o *)this, method);
+  MissionListViewObject__RedispResTime((MissionListViewObject_o *)this, 0LL);
   if ( this->fields.linkItem )
   {
     Item = MasterMissionListViewObject__GetItem(this, v3);
@@ -110,13 +107,13 @@ void __fastcall MasterMissionListViewObject__Update(MasterMissionListViewObject_
     }
     MasterMissionItemDraw = MasterMissionListViewObject__get_MasterMissionItemDraw(this, v5);
     if ( !MasterMissionItemDraw )
-      sub_1B00F28(0LL, v11);
+      sub_1B64324(0LL);
     MasterMissionListViewItemDraw__UpdateItem(
       MasterMissionItemDraw,
       v7,
       this->fields.dispMode,
       (MasterMissionListViewManager_o *)v9,
-      v12);
+      v11);
   }
 }
 
@@ -128,10 +125,10 @@ MasterMissionListViewItemDraw_o *__fastcall MasterMissionListViewObject__get_Mas
   struct MissionListViewItemDraw_o *itemDraw; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_48E5242 & 1) == 0 )
+  if ( (byte_49FEEDB & 1) == 0 )
   {
-    sub_1B00CCC(&MasterMissionListViewItemDraw_TypeInfo, method);
-    byte_48E5242 = 1;
+    sub_1B640C8(&MasterMissionListViewItemDraw_TypeInfo, method);
+    byte_49FEEDB = 1;
   }
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )

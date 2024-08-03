@@ -13,16 +13,15 @@ bool __fastcall WarBoardTouchBlockObject__Activate(
   int32_t v6; // w3
   bool isActiveAndEnabled; // w19
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v9; // x1
 
   isActiveAndEnabled = UnityEngine_Behaviour__get_isActiveAndEnabled((UnityEngine_Behaviour_o *)this, 0LL);
   if ( !isActiveAndEnabled )
   {
     this->fields.onClickCallback = callback;
-    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.onClickCallback, (int32_t)callback, v5, v6);
+    sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.onClickCallback, (int32_t)callback, v5, v6);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !gameObject )
-      sub_1B00F28(0LL, v9);
+      sub_1B64324(0LL);
     UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
   }
   return !isActiveAndEnabled;
@@ -32,16 +31,15 @@ bool __fastcall WarBoardTouchBlockObject__Activate(
 void __fastcall WarBoardTouchBlockObject__Deactivate(WarBoardTouchBlockObject_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v4; // x1
-  int32_t v5; // w2
-  int32_t v6; // w3
+  int32_t v4; // w2
+  int32_t v5; // w3
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B00F28(0LL, v4);
+    sub_1B64324(0LL);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   this->fields.onClickCallback = 0LL;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.onClickCallback, 0, v5, v6);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.onClickCallback, 0, v4, v5);
 }
 
 
@@ -60,7 +58,7 @@ void __fastcall WarBoardTouchBlockObject__OnClickObject(WarBoardTouchBlockObject
       onClickCallback->fields.original_method_info,
       *(_QWORD *)&onClickCallback->fields.extra_arg);
     p_onClickCallback->klass = 0LL;
-    sub_1B00C70(p_onClickCallback, 0, v4, v5);
+    sub_1B6406C(p_onClickCallback, 0, v4, v5);
   }
 }
 
@@ -79,7 +77,7 @@ void __fastcall WarBoardTouchBlockObject__RemoveCallback(WarBoardTouchBlockObjec
     if ( onClickCallback )
     {
       p_onClickCallback->klass = 0LL;
-      sub_1B00C70(p_onClickCallback, 0, v3, v4);
+      sub_1B6406C(p_onClickCallback, 0, v3, v4);
     }
   }
 }
@@ -102,7 +100,7 @@ void __fastcall WarBoardTouchBlockObject__SetCallback(
     if ( !onClickCallback )
     {
       p_onClickCallback->klass = (ServantStatusBattleListViewItem_c *)callback;
-      sub_1B00C70(p_onClickCallback, (int32_t)callback, v5, v6);
+      sub_1B6406C(p_onClickCallback, (int32_t)callback, v5, v6);
     }
   }
 }

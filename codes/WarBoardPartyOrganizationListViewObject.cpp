@@ -21,26 +21,25 @@ void __fastcall WarBoardPartyOrganizationListViewObject__Init(
 {
   int32_t v3; // w3
   UnityEngine_Object_o *itemDraw; // x20
-  __int64 v7; // x1
-  const MethodInfo *v8; // x3
-  WarBoardPartyOrganizationListViewItemDraw_o *v9; // x0
+  const MethodInfo *v7; // x3
+  WarBoardPartyOrganizationListViewItemDraw_o *v8; // x0
 
-  if ( (byte_48E0791 & 1) == 0 )
+  if ( (byte_49FA2FA & 1) == 0 )
   {
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, onTapEvent);
-    byte_48E0791 = 1;
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, onTapEvent);
+    byte_49FA2FA = 1;
   }
   this->fields.onTapEvent = onTapEvent;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.onTapEvent, (int32_t)onTapEvent, (int32_t)method, v3);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.onTapEvent, (int32_t)onTapEvent, (int32_t)method, v3);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
   {
-    v9 = this->fields.itemDraw;
-    if ( !v9 )
-      sub_1B00F28(0LL, v7);
-    WarBoardPartyOrganizationListViewItemDraw__SetItem(v9, this->fields.listViewItem, 3, v8);
+    v8 = this->fields.itemDraw;
+    if ( !v8 )
+      sub_1B64324(0LL);
+    WarBoardPartyOrganizationListViewItemDraw__SetItem(v8, this->fields.listViewItem, 3, v7);
   }
 }
 
@@ -164,5 +163,5 @@ void __fastcall WarBoardPartyOrganizationListViewObject__SetItem(
   int32_t v3; // w3
 
   this->fields.listViewItem = item;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.listViewItem, (int32_t)item, (int32_t)method, v3);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.listViewItem, (int32_t)item, (int32_t)method, v3);
 }

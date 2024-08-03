@@ -1,13 +1,13 @@
 void __fastcall WarBoardRoadEntity___ctor(WarBoardRoadEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E375F & 1) == 0 )
+  if ( (byte_49FD3E7 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
-    byte_48E375F = 1;
+    sub_1B640C8(&Method_DataEntityBase_string___ctor__, method);
+    byte_49FD3E7 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D3D1C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,16 +18,16 @@ System_String_o *__fastcall WarBoardRoadEntity__CreatePK(
         int32_t squareIndex2,
         const MethodInfo *method)
 {
-  if ( (byte_48E375E & 1) == 0 )
+  if ( (byte_49FD3E6 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&squareIndex1);
-    byte_48E375E = 1;
+    sub_1B640C8(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&squareIndex1);
+    byte_49FD3E6 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            warBoardId,
            squareIndex1,
            squareIndex2,
-           (const MethodInfo_2D612C4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2E37AA0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

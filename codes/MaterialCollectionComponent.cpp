@@ -10,17 +10,17 @@ void __fastcall MaterialCollectionComponent___openMenu_b__5_0(
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_48DE25C & 1) == 0 )
+  if ( (byte_49F7B29 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_6864/*"GO_NEXT"*/, method);
-    byte_48DE25C = 1;
+    sub_1B640C8(&StringLiteral_6910/*"GO_NEXT"*/, method);
+    byte_49F7B29 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm
-    || (PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6864/*"GO_NEXT"*/, 0LL),
+    || (PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6910/*"GO_NEXT"*/, 0LL),
         (myRoomFsm = (PlayMakerFSM_o *)this->fields.myRoomCtrl) == 0LL) )
   {
-    sub_1B00F28(myRoomFsm, method);
+    sub_1B64324(myRoomFsm);
   }
   MyRoomControl__SetBackButtonIgnore((MyRoomControl_o *)myRoomFsm, 0, 0LL);
 }
@@ -28,25 +28,25 @@ void __fastcall MaterialCollectionComponent___openMenu_b__5_0(
 
 bool __fastcall MaterialCollectionComponent__closeMenu(MaterialCollectionComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
+  __int64 v4; // x1
   MaterialCollectionMenu_o *materialCollectionMenu; // x20
-  System_Action_o *v5; // x21
-  __int64 v6; // x0
-  __int64 v7; // x1
+  System_Action_o *v6; // x21
+  __int64 v7; // x0
   const MethodInfo *v8; // x2
 
-  if ( (byte_48DE259 & 1) == 0 )
+  if ( (byte_49F7B26 & 1) == 0 )
   {
-    sub_1B00CCC(&System_Action_TypeInfo, method);
-    sub_1B00CCC(&Method_MaterialCollectionComponent_onClose__, v3);
-    byte_48DE259 = 1;
+    sub_1B640C8(&System_Action_TypeInfo, method);
+    sub_1B640C8(&Method_MaterialCollectionComponent_onClose__, v4);
+    byte_49F7B26 = 1;
   }
   materialCollectionMenu = this->fields.materialCollectionMenu;
-  v5 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
-  System_Action___ctor(v5, (Il2CppObject *)this, Method_MaterialCollectionComponent_onClose__, 0LL);
+  v6 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, method, v2);
+  System_Action___ctor(v6, (Il2CppObject *)this, Method_MaterialCollectionComponent_onClose__, 0LL);
   if ( !materialCollectionMenu )
-    sub_1B00F28(v6, v7);
-  MaterialCollectionMenu__Close_30283744(materialCollectionMenu, v5, v8);
+    sub_1B64324(v7);
+  MaterialCollectionMenu__Close_30881096(materialCollectionMenu, v6, v8);
   return 1;
 }
 
@@ -62,7 +62,7 @@ void __fastcall MaterialCollectionComponent__hideMenu(MaterialCollectionComponen
                                                                 (UnityEngine_Component_o *)this,
                                                                 0LL)) == 0LL) )
   {
-    sub_1B00F28(materialCollectionMenu, method);
+    sub_1B64324(materialCollectionMenu);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)materialCollectionMenu, 0, 0LL);
 }
@@ -72,15 +72,15 @@ void __fastcall MaterialCollectionComponent__onClose(MaterialCollectionComponent
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_48DE25A & 1) == 0 )
+  if ( (byte_49F7B27 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_3555/*"CLOSE_MENU"*/, method);
-    byte_48DE25A = 1;
+    sub_1B640C8(&StringLiteral_3573/*"CLOSE_MENU"*/, method);
+    byte_49F7B27 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_1B00F28(0LL, method);
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3555/*"CLOSE_MENU"*/, 0LL);
+    sub_1B64324(0LL);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3573/*"CLOSE_MENU"*/, 0LL);
 }
 
 
@@ -90,15 +90,15 @@ void __fastcall MaterialCollectionComponent__onCloseWebView(
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_48DE258 & 1) == 0 )
+  if ( (byte_49F7B25 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_3552/*"CLOSE_MATERIAL"*/, method);
-    byte_48DE258 = 1;
+    sub_1B640C8(&StringLiteral_3570/*"CLOSE_MATERIAL"*/, method);
+    byte_49F7B25 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_1B00F28(0LL, method);
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3552/*"CLOSE_MATERIAL"*/, 0LL);
+    sub_1B64324(0LL);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3570/*"CLOSE_MATERIAL"*/, 0LL);
 }
 
 
@@ -112,18 +112,18 @@ void __fastcall MaterialCollectionComponent__onEndMenu(
   PlayMakerFSM_o *myRoomFsm; // x0
   __int64 *v7; // x8
 
-  if ( (byte_48DE25B & 1) == 0 )
+  if ( (byte_49F7B28 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_3552/*"CLOSE_MATERIAL"*/, *(_QWORD *)&result);
-    sub_1B00CCC(&StringLiteral_3488/*"CLICK_BACK"*/, v5);
-    byte_48DE25B = 1;
+    sub_1B640C8(&StringLiteral_3570/*"CLOSE_MATERIAL"*/, *(_QWORD *)&result);
+    sub_1B640C8(&StringLiteral_3506/*"CLICK_BACK"*/, v5);
+    byte_49F7B28 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_1B00F28(0LL, *(_QWORD *)&result);
-  v7 = &StringLiteral_3488/*"CLICK_BACK"*/;
+    sub_1B64324(0LL);
+  v7 = &StringLiteral_3506/*"CLICK_BACK"*/;
   if ( result != 1 )
-    v7 = &StringLiteral_3552/*"CLOSE_MATERIAL"*/;
+    v7 = &StringLiteral_3570/*"CLOSE_MATERIAL"*/;
   PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)*v7, 0LL);
 }
 
@@ -134,38 +134,44 @@ bool __fastcall MaterialCollectionComponent__openMenu(MaterialCollectionComponen
   __int64 v4; // x1
   __int64 v5; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v7; // x1
   MaterialCollectionMenu_o *materialCollectionMenu; // x20
-  System_Action_o *v9; // x21
-  MaterialCollectionMenu_CallbackFunc_o *v10; // x22
-  const MethodInfo *v11; // x3
-  const MethodInfo *v12; // x3
+  __int64 v8; // x1
+  __int64 v9; // x2
+  System_Action_o *v10; // x21
+  __int64 v11; // x1
+  __int64 v12; // x2
+  MaterialCollectionMenu_CallbackFunc_o *v13; // x22
+  const MethodInfo *v14; // x3
+  const MethodInfo *v15; // x3
 
-  if ( (byte_48DE257 & 1) == 0 )
+  if ( (byte_49F7B24 & 1) == 0 )
   {
-    sub_1B00CCC(&System_Action_TypeInfo, method);
-    sub_1B00CCC(&MaterialCollectionMenu_CallbackFunc_TypeInfo, v3);
-    sub_1B00CCC(&Method_MaterialCollectionComponent__openMenu_b__5_0__, v4);
-    sub_1B00CCC(&Method_MaterialCollectionComponent_onEndMenu__, v5);
-    byte_48DE257 = 1;
+    sub_1B640C8(&System_Action_TypeInfo, method);
+    sub_1B640C8(&MaterialCollectionMenu_CallbackFunc_TypeInfo, v3);
+    sub_1B640C8(&Method_MaterialCollectionComponent__openMenu_b__5_0__, v4);
+    sub_1B640C8(&Method_MaterialCollectionComponent_onEndMenu__, v5);
+    byte_49F7B24 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject
     || (UnityEngine_GameObject__SetActive(gameObject, 1, 0LL),
         materialCollectionMenu = this->fields.materialCollectionMenu,
-        v9 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo),
-        System_Action___ctor(v9, (Il2CppObject *)this, Method_MaterialCollectionComponent__openMenu_b__5_0__, 0LL),
-        v10 = (MaterialCollectionMenu_CallbackFunc_o *)sub_1B00F18(MaterialCollectionMenu_CallbackFunc_TypeInfo),
+        v10 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v8, v9),
+        System_Action___ctor(v10, (Il2CppObject *)this, Method_MaterialCollectionComponent__openMenu_b__5_0__, 0LL),
+        v13 = (MaterialCollectionMenu_CallbackFunc_o *)sub_1B64314(
+                                                         MaterialCollectionMenu_CallbackFunc_TypeInfo,
+                                                         v11,
+                                                         v12),
         MaterialCollectionMenu_CallbackFunc___ctor(
-          v10,
+          v13,
           (Il2CppObject *)this,
           Method_MaterialCollectionComponent_onEndMenu__,
-          v11),
+          v14),
         !materialCollectionMenu) )
   {
-    sub_1B00F28(gameObject, v7);
+    sub_1B64324(gameObject);
   }
-  MaterialCollectionMenu__Open(materialCollectionMenu, v9, v10, v12);
+  MaterialCollectionMenu__Open(materialCollectionMenu, v10, v13, v15);
   return 1;
 }
 
@@ -180,7 +186,7 @@ void __fastcall MaterialCollectionComponent__showMenu(MaterialCollectionComponen
     || (UnityEngine_GameObject__SetActive(gameObject, 1, 0LL),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.materialCollectionMenu) == 0LL) )
   {
-    sub_1B00F28(gameObject, v4);
+    sub_1B64324(gameObject);
   }
   MaterialCollectionMenu__Init((MaterialCollectionMenu_o *)gameObject, v4);
 }

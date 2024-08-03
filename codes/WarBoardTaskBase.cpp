@@ -4,14 +4,14 @@ void __fastcall WarBoardTaskBase___ctor(WarBoardTaskBase_o *this, const MethodIn
   int32_t v3; // w3
   int32_t v5; // w1
 
-  if ( (byte_48E07E6 & 1) == 0 )
+  if ( (byte_49FA34F & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_1/*""*/, method);
-    byte_48E07E6 = 1;
+    sub_1B640C8(&StringLiteral_1/*""*/, method);
+    byte_49FA34F = 1;
   }
   v5 = (int)StringLiteral_1/*""*/;
   this->fields.Key = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, v5, v2, v3);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields, v5, v2, v3);
   this->fields.IsEnabled = 1;
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
@@ -21,17 +21,18 @@ System_Collections_IEnumerator_o *__fastcall WarBoardTaskBase__Execute(
         WarBoardTaskBase_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x19
+  __int64 v2; // x2
+  __int64 v3; // x19
 
-  if ( (byte_48E07E5 & 1) == 0 )
+  if ( (byte_49FA34E & 1) == 0 )
   {
-    sub_1B00CCC(&WarBoardTaskBase__Execute_d__15_TypeInfo, method);
-    byte_48E07E5 = 1;
+    sub_1B640C8(&WarBoardTaskBase__Execute_d__15_TypeInfo, method);
+    byte_49FA34E = 1;
   }
-  v2 = sub_1B00F18(WarBoardTaskBase__Execute_d__15_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v2, 0LL);
-  *(_DWORD *)(v2 + 16) = 0;
-  return (System_Collections_IEnumerator_o *)v2;
+  v3 = sub_1B64314(WarBoardTaskBase__Execute_d__15_TypeInfo, method, v2);
+  System_Object___ctor((Il2CppObject *)v3, 0LL);
+  *(_DWORD *)(v3 + 16) = 0;
+  return (System_Collections_IEnumerator_o *)v3;
 }
 
 
@@ -115,15 +116,15 @@ void __fastcall WarBoardTaskBase_TaskCallback___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B00D8C(v6) & 1) == 0 )
+  if ( (sub_1B64188(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B00F44(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B00DF4(v10, 0LL);
+      v10 = sub_1B64340(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B641F0(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -135,9 +136,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1949400;
+  this->fields.m_target = (Il2CppObject *)sub_19AA52C;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19493C0;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19AA4EC;
 }
 
 
@@ -150,7 +151,7 @@ System_IAsyncResult_o *__fastcall WarBoardTaskBase_TaskCallback__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0LL;
-  return (System_IAsyncResult_o *)sub_1B00C80(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1B6407C(this, &v5, callback, object);
 }
 
 
@@ -159,7 +160,7 @@ void __fastcall WarBoardTaskBase_TaskCallback__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B00C84(result, 0LL, method);
+  sub_1B64080(result, 0LL, method);
 }
 
 
@@ -204,14 +205,16 @@ void __fastcall __noreturn WarBoardTaskBase__Execute_d__15__System_Collections_I
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x2
+  System_NotSupportedException_o *v5; // x19
+  __int64 v6; // x0
 
-  v2 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B00F18(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B00CE0(&Method_WarBoardTaskBase__Execute_d__15_System_Collections_IEnumerator_Reset__);
-  sub_1B00DF4(v3, v4);
+  v2 = sub_1B640DC(&System_NotSupportedException_TypeInfo);
+  v5 = (System_NotSupportedException_o *)sub_1B64314(v2, v3, v4);
+  System_NotSupportedException___ctor(v5, 0LL);
+  v6 = sub_1B640DC(&Method_WarBoardTaskBase__Execute_d__15_System_Collections_IEnumerator_Reset__);
+  sub_1B641F0(v5, v6);
 }
 
 

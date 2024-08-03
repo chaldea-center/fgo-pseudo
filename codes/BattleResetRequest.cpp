@@ -1,16 +1,19 @@
+void __fastcall BattleResetRequest___ctor(BattleResetRequest_o *this, const MethodInfo *method)
+{
+  RequestBase___ctor((RequestBase_o *)this, 0LL);
+}
+
+
 // local variable allocation has failed, the output may be wrong!
 void __fastcall BattleResetRequest__beginRequest(BattleResetRequest_o *this, int32_t questId, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-  const MethodInfo *v6; // x1
-
-  if ( (byte_48E3E33 & 1) == 0 )
+  if ( (byte_49FDAD9 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_22380/*"questId"*/, *(_QWORD *)&questId);
-    byte_48E3E33 = 1;
+    sub_1B640C8(&StringLiteral_22598/*"questId"*/, *(_QWORD *)&questId);
+    byte_49FDAD9 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22380/*"questId"*/, questId, v3);
-  RequestBase__beginRequest((RequestBase_o *)this, v6);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22598/*"questId"*/, questId, 0LL);
+  RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
 
@@ -19,16 +22,16 @@ System_String_o *__fastcall BattleResetRequest__getURL(BattleResetRequest_o *thi
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_48E3E32 & 1) == 0 )
+  if ( (byte_49FDAD8 & 1) == 0 )
   {
-    sub_1B00CCC(&NetworkManager_TypeInfo, method);
-    sub_1B00CCC(&StringLiteral_16859/*"battle/reset"*/, v2);
-    byte_48E3E32 = 1;
+    sub_1B640C8(&NetworkManager_TypeInfo, method);
+    sub_1B640C8(&StringLiteral_17025/*"battle/reset"*/, v2);
+    byte_49FDAD8 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_60325748(BaseUrl, (System_String_o *)StringLiteral_16859/*"battle/reset"*/, 0LL);
+  return System_String__Concat_61375396(BaseUrl, (System_String_o *)StringLiteral_17025/*"battle/reset"*/, 0LL);
 }
 
 
@@ -40,43 +43,30 @@ void __fastcall BattleResetRequest__requestCompleted(
   __int64 v5; // x1
   __int64 v6; // x1
   ResponseData_o *v7; // x0
-  const MethodInfo *v8; // x2
-  ResponseData_o *v9; // x20
+  ResponseData_o *v8; // x20
   Il2CppObject *success; // x20
-  System_String_o *v11; // x0
-  struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  struct NetworkManager_ResultCallbackFunc_o *v13; // x8
+  System_String_o *v10; // x1
 
-  if ( (byte_48E3E34 & 1) == 0 )
+  if ( (byte_49FDADA & 1) == 0 )
   {
-    sub_1B00CCC(&JsonManager_TypeInfo, responseList);
-    sub_1B00CCC(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B00CCC(&StringLiteral_21754/*"ng"*/, v6);
-    byte_48E3E34 = 1;
+    sub_1B640C8(&JsonManager_TypeInfo, responseList);
+    sub_1B640C8(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B640C8(&StringLiteral_21968/*"ng"*/, v6);
+    byte_49FDADA = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(113, responseList, 0LL);
-  if ( v7 && (v9 = v7, ResponseData__checkError(v7, v7->fields.resCode, v8)) )
+  if ( v7 && (v8 = v7, ResponseData__checkError_40846016(v7, 0LL)) )
   {
-    success = (Il2CppObject *)v9->fields.success;
+    success = (Il2CppObject *)v8->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v11 = JsonManager__toJson(success, 0, 0, 0LL);
-    CallBack = this->fields.CallBack;
-    if ( CallBack )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))CallBack->fields.m_target)(
-        CallBack->fields.original_method_info,
-        v11,
-        *(_QWORD *)&CallBack->fields.extra_arg);
+    v10 = JsonManager__toJson(success, 0, 0, 0LL);
   }
   else
   {
-    v13 = this->fields.CallBack;
-    if ( v13 )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v13->fields.m_target)(
-        v13->fields.original_method_info,
-        StringLiteral_21754/*"ng"*/,
-        *(_QWORD *)&v13->fields.extra_arg);
+    v10 = (System_String_o *)StringLiteral_21968/*"ng"*/;
   }
+  RequestBase__completed((RequestBase_o *)this, v10, 0LL);
 }

@@ -16,39 +16,41 @@ void __fastcall AiState__Initialize(AiState_o *this, int32_t groupId, const Meth
 
 AiState_o *__fastcall AiState__MakeAiState(int32_t groupId, const MethodInfo *method)
 {
-  __int64 v3; // x20
+  __int64 v2; // x2
+  __int64 v4; // x20
 
-  if ( (byte_48E50D4 & 1) == 0 )
+  if ( (byte_49FEDB4 & 1) == 0 )
   {
-    sub_1B00CCC(&AiState_TypeInfo, method);
-    byte_48E50D4 = 1;
+    sub_1B640C8(&AiState_TypeInfo, method);
+    byte_49FEDB4 = 1;
   }
-  v3 = sub_1B00F18(AiState_TypeInfo);
-  *(_DWORD *)(v3 + 44) = -1;
-  System_Object___ctor((Il2CppObject *)v3, 0LL);
-  *(_DWORD *)(v3 + 16) = groupId;
-  *(_DWORD *)(v3 + 20) = groupId;
-  *(_QWORD *)(v3 + 24) = 0LL;
-  *(_QWORD *)(v3 + 32) = 0LL;
-  return (AiState_o *)v3;
+  v4 = sub_1B64314(AiState_TypeInfo, method, v2);
+  *(_DWORD *)(v4 + 44) = -1;
+  System_Object___ctor((Il2CppObject *)v4, 0LL);
+  *(_DWORD *)(v4 + 16) = groupId;
+  *(_DWORD *)(v4 + 20) = groupId;
+  *(_QWORD *)(v4 + 24) = 0LL;
+  *(_QWORD *)(v4 + 32) = 0LL;
+  return (AiState_o *)v4;
 }
 
 
-AiState_o *__fastcall AiState__MakeAiState_41911380(AiState_SaveData_o *sv, const MethodInfo *method)
+AiState_o *__fastcall AiState__MakeAiState_42904600(AiState_SaveData_o *sv, const MethodInfo *method)
 {
-  __int64 v3; // x20
-  const MethodInfo *v4; // x2
+  __int64 v2; // x2
+  __int64 v4; // x20
+  const MethodInfo *v5; // x2
 
-  if ( (byte_48E50D5 & 1) == 0 )
+  if ( (byte_49FEDB5 & 1) == 0 )
   {
-    sub_1B00CCC(&AiState_TypeInfo, method);
-    byte_48E50D5 = 1;
+    sub_1B640C8(&AiState_TypeInfo, method);
+    byte_49FEDB5 = 1;
   }
-  v3 = sub_1B00F18(AiState_TypeInfo);
-  *(_DWORD *)(v3 + 44) = -1;
-  System_Object___ctor((Il2CppObject *)v3, 0LL);
-  AiState__setSaveData((AiState_o *)v3, sv, v4);
-  return (AiState_o *)v3;
+  v4 = sub_1B64314(AiState_TypeInfo, method, v2);
+  *(_DWORD *)(v4 + 44) = -1;
+  System_Object___ctor((Il2CppObject *)v4, 0LL);
+  AiState__setSaveData((AiState_o *)v4, sv, v5);
+  return (AiState_o *)v4;
 }
 
 
@@ -56,24 +58,27 @@ BattleWarBoardInfo_TakeOverAiStateData_o *__fastcall AiState__MakeTakeOverAiStat
         AiState_o *aiState,
         const MethodInfo *method)
 {
-  BattleWarBoardInfo_TakeOverAiStateData_o *v3; // x20
-  __int64 v4; // x0
-  __int64 v5; // x1
+  __int64 v2; // x2
+  BattleWarBoardInfo_TakeOverAiStateData_o *v4; // x20
+  __int64 v5; // x0
   BattleWarBoardInfo_TakeOverAiStateData_o *result; // x0
 
-  if ( (byte_48E50D6 & 1) == 0 )
+  if ( (byte_49FEDB6 & 1) == 0 )
   {
-    sub_1B00CCC(&BattleWarBoardInfo_TakeOverAiStateData_TypeInfo, method);
-    byte_48E50D6 = 1;
+    sub_1B640C8(&BattleWarBoardInfo_TakeOverAiStateData_TypeInfo, method);
+    byte_49FEDB6 = 1;
   }
-  v3 = (BattleWarBoardInfo_TakeOverAiStateData_o *)sub_1B00F18(BattleWarBoardInfo_TakeOverAiStateData_TypeInfo);
-  BattleWarBoardInfo_TakeOverAiStateData___ctor(v3, 0LL);
-  if ( !aiState || !v3 )
-    sub_1B00F28(v4, v5);
-  result = v3;
-  v3->fields.firstAiGroupId = aiState->fields.firstAiGroupId;
-  v3->fields.overwriteAiGroupId = aiState->fields.overwriteAiGroupId;
-  v3->fields.currentAiGroupId = aiState->fields.aiGroupId;
+  v4 = (BattleWarBoardInfo_TakeOverAiStateData_o *)sub_1B64314(
+                                                     BattleWarBoardInfo_TakeOverAiStateData_TypeInfo,
+                                                     method,
+                                                     v2);
+  BattleWarBoardInfo_TakeOverAiStateData___ctor(v4, 0LL);
+  if ( !aiState || !v4 )
+    sub_1B64324(v5);
+  result = v4;
+  v4->fields.firstAiGroupId = aiState->fields.firstAiGroupId;
+  v4->fields.overwriteAiGroupId = aiState->fields.overwriteAiGroupId;
+  v4->fields.currentAiGroupId = aiState->fields.aiGroupId;
   return result;
 }
 
@@ -84,7 +89,7 @@ void __fastcall AiState__SetOverwriteAiGroupId(AiState_o *this, AiBaseEntity_o *
 
   baseAiId = 0;
   if ( !aiBaseEnt )
-    sub_1B00F28(this, 0LL);
+    sub_1B64324(this);
   if ( AiBaseEntity__TryGetOverwriteBaseAiId(aiBaseEnt, &baseAiId, 0LL) )
     this->fields.overwriteAiGroupId = baseAiId;
 }
@@ -143,25 +148,25 @@ int32_t __fastcall AiState__getBeforeAiActType(AiState_o *this, const MethodInfo
 
 AiState_SaveData_o *__fastcall AiState__getSaveData(AiState_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x20
-  __int64 v4; // x0
-  __int64 v5; // x1
+  __int64 v2; // x2
+  __int64 v4; // x20
+  __int64 v5; // x0
   AiState_SaveData_o *result; // x0
 
-  if ( (byte_48E50D3 & 1) == 0 )
+  if ( (byte_49FEDB3 & 1) == 0 )
   {
-    sub_1B00CCC(&AiState_SaveData_TypeInfo, method);
-    byte_48E50D3 = 1;
+    sub_1B640C8(&AiState_SaveData_TypeInfo, method);
+    byte_49FEDB3 = 1;
   }
-  v3 = sub_1B00F18(AiState_SaveData_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v3, 0LL);
-  if ( !v3 )
-    sub_1B00F28(v4, v5);
-  *(_OWORD *)(v3 + 16) = *(_OWORD *)&this->fields.firstAiGroupId;
-  *(_DWORD *)(v3 + 32) = AiAct__getInt(this->fields.beforeActType, 0LL);
-  result = (AiState_SaveData_o *)v3;
-  *(_DWORD *)(v3 + 36) = this->fields.beforeActId;
-  *(_QWORD *)(v3 + 40) = *(_QWORD *)&this->fields.fieldTurn;
+  v4 = sub_1B64314(AiState_SaveData_TypeInfo, method, v2);
+  System_Object___ctor((Il2CppObject *)v4, 0LL);
+  if ( !v4 )
+    sub_1B64324(v5);
+  *(_OWORD *)(v4 + 16) = *(_OWORD *)&this->fields.firstAiGroupId;
+  *(_DWORD *)(v4 + 32) = AiAct__getInt(this->fields.beforeActType, 0LL);
+  result = (AiState_SaveData_o *)v4;
+  *(_DWORD *)(v4 + 36) = this->fields.beforeActId;
+  *(_QWORD *)(v4 + 40) = *(_QWORD *)&this->fields.fieldTurn;
   return result;
 }
 

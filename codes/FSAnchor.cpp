@@ -1,47 +1,54 @@
 void __fastcall FSAnchor___ctor(FSAnchor_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  __int64 v6; // x20
-  int32_t v7; // w2
-  int32_t v8; // w3
+  __int64 v2; // x2
+  __int64 v4; // x20
+  int32_t v5; // w2
+  int32_t v6; // w3
+  __int64 v7; // x1
+  __int64 v8; // x2
   __int64 v9; // x20
   int32_t v10; // w2
   int32_t v11; // w3
-  __int64 v12; // x20
-  int32_t v13; // w2
-  int32_t v14; // w3
+  __int64 v12; // x1
+  __int64 v13; // x2
+  __int64 v14; // x20
+  int32_t v15; // w2
+  int32_t v16; // w3
+  __int64 v17; // x1
+  __int64 v18; // x2
+  __int64 v19; // x20
+  int32_t v20; // w2
+  int32_t v21; // w3
 
-  if ( (byte_48E3DC1 & 1) == 0 )
+  if ( (byte_49FDA68 & 1) == 0 )
   {
-    sub_1B00CCC(&FSAnchor_Absolute_TypeInfo, method);
-    byte_48E3DC1 = 1;
+    sub_1B640C8(&FSAnchor_Absolute_TypeInfo, method);
+    byte_49FDA68 = 1;
   }
-  v3 = sub_1B00F18(FSAnchor_Absolute_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v3, 0LL);
-  *(_BYTE *)(v3 + 16) = 1;
-  *(_QWORD *)(v3 + 20) = 0x4400000000LL;
-  this->fields.leftAbsolute = (struct FSAnchor_Absolute_o *)v3;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.leftAbsolute, v3, v4, v5);
-  v6 = sub_1B00F18(FSAnchor_Absolute_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v6, 0LL);
-  *(_BYTE *)(v6 + 16) = 1;
-  *(_QWORD *)(v6 + 20) = 0xFFFFFFBC00000000LL;
-  this->fields.rightAbsolute = (struct FSAnchor_Absolute_o *)v6;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.rightAbsolute, v6, v7, v8);
-  v9 = sub_1B00F18(FSAnchor_Absolute_TypeInfo);
+  v4 = sub_1B64314(FSAnchor_Absolute_TypeInfo, method, v2);
+  System_Object___ctor((Il2CppObject *)v4, 0LL);
+  *(_BYTE *)(v4 + 16) = 1;
+  *(_QWORD *)(v4 + 20) = 0x4400000000LL;
+  this->fields.leftAbsolute = (struct FSAnchor_Absolute_o *)v4;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.leftAbsolute, v4, v5, v6);
+  v9 = sub_1B64314(FSAnchor_Absolute_TypeInfo, v7, v8);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
-  *(_BYTE *)(v9 + 16) = 0;
-  *(_QWORD *)(v9 + 20) = 0LL;
-  this->fields.bottomAbsolute = (struct FSAnchor_Absolute_o *)v9;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.bottomAbsolute, v9, v10, v11);
-  v12 = sub_1B00F18(FSAnchor_Absolute_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v12, 0LL);
-  *(_BYTE *)(v12 + 16) = 0;
-  *(_QWORD *)(v12 + 20) = 0LL;
-  this->fields.topAbsolute = (struct FSAnchor_Absolute_o *)v12;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.topAbsolute, v12, v13, v14);
+  *(_BYTE *)(v9 + 16) = 1;
+  *(_QWORD *)(v9 + 20) = 0xFFFFFFBC00000000LL;
+  this->fields.rightAbsolute = (struct FSAnchor_Absolute_o *)v9;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.rightAbsolute, v9, v10, v11);
+  v14 = sub_1B64314(FSAnchor_Absolute_TypeInfo, v12, v13);
+  System_Object___ctor((Il2CppObject *)v14, 0LL);
+  *(_BYTE *)(v14 + 16) = 0;
+  *(_QWORD *)(v14 + 20) = 0LL;
+  this->fields.bottomAbsolute = (struct FSAnchor_Absolute_o *)v14;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.bottomAbsolute, v14, v15, v16);
+  v19 = sub_1B64314(FSAnchor_Absolute_TypeInfo, v17, v18);
+  System_Object___ctor((Il2CppObject *)v19, 0LL);
+  *(_BYTE *)(v19 + 16) = 0;
+  *(_QWORD *)(v19 + 20) = 0LL;
+  this->fields.topAbsolute = (struct FSAnchor_Absolute_o *)v19;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.topAbsolute, v19, v20, v21);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -110,10 +117,10 @@ void __fastcall FSAnchor__SetAnchor(FSAnchor_o *this, const MethodInfo *method)
   struct UIWidget_o *v53; // x9
   struct UIRect_AnchorPoint_o *v54; // x9
 
-  if ( (byte_48E3DC0 & 1) == 0 )
+  if ( (byte_49FDA67 & 1) == 0 )
   {
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
-    byte_48E3DC0 = 1;
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, method);
+    byte_49FDA67 = 1;
   }
   widget = (UnityEngine_Object_o *)this->fields.widget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -166,10 +173,10 @@ void __fastcall FSAnchor__SetAnchor(FSAnchor_o *this, const MethodInfo *method)
         bottomAnchor->fields.absolute = vista;
         if ( v8 < 1.7778 )
         {
-          if ( !byte_48DD9F0 )
+          if ( !byte_49F7110 )
           {
-            sub_1B00CCC(&System_Math_TypeInfo, v6);
-            byte_48DD9F0 = 1;
+            sub_1B640C8(&System_Math_TypeInfo, v6);
+            byte_49F7110 = 1;
           }
           v18 = (float)((float)((float)(1.7778 - v8) * 576.0) * 16.0) / 9.0;
           height = System_Math_TypeInfo;
@@ -199,10 +206,10 @@ void __fastcall FSAnchor__SetAnchor(FSAnchor_o *this, const MethodInfo *method)
             if ( v8 < 1.7778 )
             {
               v25 = (float)((float)(1.7778 - v8) * 576.0) * 16.0;
-              if ( !byte_48DD9F0 )
+              if ( !byte_49F7110 )
               {
-                sub_1B00CCC(&System_Math_TypeInfo, v6);
-                byte_48DD9F0 = 1;
+                sub_1B640C8(&System_Math_TypeInfo, v6);
+                byte_49F7110 = 1;
               }
               v26 = v25 / 9.0;
               if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -231,10 +238,10 @@ void __fastcall FSAnchor__SetAnchor(FSAnchor_o *this, const MethodInfo *method)
       v30->fields.absolute = leftAbsolute->fields.scope;
       if ( v8 > 2.3333 )
       {
-        if ( !byte_48DD9F0 )
+        if ( !byte_49F7110 )
         {
-          sub_1B00CCC(&System_Math_TypeInfo, v6);
-          byte_48DD9F0 = 1;
+          sub_1B640C8(&System_Math_TypeInfo, v6);
+          byte_49F7110 = 1;
         }
         v31 = (float)((float)((float)(v8 + -2.3333) * 512.0) * 9.0) * 0.0625;
         height = System_Math_TypeInfo;
@@ -282,10 +289,10 @@ LABEL_61:
     if ( v8 <= 2.3333 )
       goto LABEL_80;
     v41 = (float)((float)(v8 + -2.3333) * 512.0) * 9.0;
-    if ( !byte_48DD9F0 )
+    if ( !byte_49F7110 )
     {
-      sub_1B00CCC(&System_Math_TypeInfo, v6);
-      byte_48DD9F0 = 1;
+      sub_1B640C8(&System_Math_TypeInfo, v6);
+      byte_49F7110 = 1;
     }
     v42 = v41 * 0.0625;
     height = System_Math_TypeInfo;
@@ -342,7 +349,7 @@ LABEL_80:
           }
         }
 LABEL_91:
-        sub_1B00F28(height, v6);
+        sub_1B64324(height);
       }
       v48 = v46->fields.absolute - v45;
     }

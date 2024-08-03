@@ -34,10 +34,10 @@ float __fastcall ClassBoardDialogSkillDetailPartsComponent__SetDetail(
   int32_t v18; // w1
   System_String_o *ClassBoardSkillIconName; // x20
 
-  if ( (byte_48E59A4 & 1) == 0 )
+  if ( (byte_49FF6A0 & 1) == 0 )
   {
-    sub_1B00CCC(&ClassBoardUtility_TypeInfo, name);
-    byte_48E59A4 = 1;
+    sub_1B640C8(&ClassBoardUtility_TypeInfo, name);
+    byte_49FF6A0 = 1;
   }
   effectNameLabel = this->fields.effectNameLabel;
   if ( !effectNameLabel )
@@ -72,7 +72,7 @@ float __fastcall ClassBoardDialogSkillDetailPartsComponent__SetDetail(
   effectNameLabel = (UILabel_o *)ClassBoardGlobalObject__get_IconAtlasManagerUnit(0LL);
   if ( !effectNameLabel )
 LABEL_17:
-    sub_1B00F28(effectNameLabel, name);
+    sub_1B64324(effectNameLabel);
   AtlasManagerUnit__SetUI((AtlasManagerUnit_o *)effectNameLabel, this->fields.effectIcon, ClassBoardSkillIconName, 0LL);
   return v17;
 }

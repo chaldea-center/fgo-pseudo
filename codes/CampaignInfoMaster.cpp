@@ -1,14 +1,14 @@
 void __fastcall CampaignInfoMaster___ctor(CampaignInfoMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E2582 & 1) == 0 )
+  if ( (byte_49FC182 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataMasterBase_CampaignInfoMaster__CampaignInfoEntity__int___ctor__, method);
-    byte_48E2582 = 1;
+    sub_1B640C8(&Method_DataMasterBase_CampaignInfoMaster__CampaignInfoEntity__int___ctor__, method);
+    byte_49FC182 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    226,
-    (const MethodInfo_2FE6A0C *)Method_DataMasterBase_CampaignInfoMaster__CampaignInfoEntity__int___ctor__);
+    227,
+    (const MethodInfo_30D3E64 *)Method_DataMasterBase_CampaignInfoMaster__CampaignInfoEntity__int___ctor__);
 }
 
 
@@ -18,27 +18,26 @@ CampaignInformation_array *__fastcall CampaignInfoMaster__GetInformationById(
         int32_t id,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  bool v6; // w8
+  bool v5; // w8
   CampaignInformation_array *result; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_48E2583 & 1) == 0 )
+  if ( (byte_49FC183 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataMasterBase_CampaignInfoMaster__CampaignInfoEntity__int__TryGetEntity__, *(_QWORD *)&id);
-    byte_48E2583 = 1;
+    sub_1B640C8(&Method_DataMasterBase_CampaignInfoMaster__CampaignInfoEntity__int__TryGetEntity__, *(_QWORD *)&id);
+    byte_49FC183 = 1;
   }
   entity = 0LL;
-  v6 = DataMasterBase_object__object__int___TryGetEntity(
+  v5 = DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
          &entity,
          id,
-         (const MethodInfo_2FE6AA0 *)Method_DataMasterBase_CampaignInfoMaster__CampaignInfoEntity__int__TryGetEntity__);
+         (const MethodInfo_30D3EF8 *)Method_DataMasterBase_CampaignInfoMaster__CampaignInfoEntity__int__TryGetEntity__);
   result = 0LL;
-  if ( v6 )
+  if ( v5 )
   {
     if ( !entity )
-      sub_1B00F28(0LL, v5);
+      sub_1B64324(0LL);
     return (CampaignInformation_array *)entity[1].monitor;
   }
   return result;

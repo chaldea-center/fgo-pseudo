@@ -1,14 +1,14 @@
 void __fastcall UserNpcSvtRecordMaster___ctor(UserNpcSvtRecordMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E34C9 & 1) == 0 )
+  if ( (byte_49FD13B & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string___ctor__, method);
-    byte_48E34C9 = 1;
+    sub_1B640C8(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string___ctor__, method);
+    byte_49FD13B = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    410,
-    (const MethodInfo_2FE6D64 *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string___ctor__);
+    411,
+    (const MethodInfo_30D41BC *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ UserNpcSvtRecordEntity_o *__fastcall UserNpcSvtRecordMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_48E34CA & 1) == 0 )
+  if ( (byte_49FD13C & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__GetEntity__, userId);
-    byte_48E34CA = 1;
+    sub_1B640C8(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__GetEntity__, userId);
+    byte_49FD13C = 1;
   }
   PK = (Il2CppObject *)UserNpcSvtRecordEntity__CreatePK(userId, svtId, *(const MethodInfo **)&svtId);
   return (UserNpcSvtRecordEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                        (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                        PK,
-                                       (const MethodInfo_2FE6DA4 *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__GetEntity__);
+                                       (const MethodInfo_30D41FC *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__GetEntity__);
 }
 
 
@@ -42,26 +42,25 @@ System_Int32_array *__fastcall UserNpcSvtRecordMaster__GetTdPlayed(
 {
   int64_t UserId; // x0
   const MethodInfo *v6; // x4
-  __int64 v7; // x1
-  bool v8; // w8
+  bool v7; // w8
   System_Int32_array *result; // x0
   UserNpcSvtRecordEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_48E34CC & 1) == 0 )
+  if ( (byte_49FD13E & 1) == 0 )
   {
-    sub_1B00CCC(&NetworkManager_TypeInfo, *(_QWORD *)&svtId);
-    byte_48E34CC = 1;
+    sub_1B640C8(&NetworkManager_TypeInfo, *(_QWORD *)&svtId);
+    byte_49FD13E = 1;
   }
   entity = 0LL;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   UserId = NetworkManager__get_UserId(0LL);
-  v8 = UserNpcSvtRecordMaster__TryGetEntity(this, &entity, UserId, svtId, v6);
+  v7 = UserNpcSvtRecordMaster__TryGetEntity(this, &entity, UserId, svtId, v6);
   result = 0LL;
-  if ( v8 )
+  if ( v7 )
   {
     if ( !entity )
-      sub_1B00F28(0LL, v7);
+      sub_1B64324(0LL);
     return entity->fields.tdPlayed;
   }
   return result;
@@ -77,15 +76,15 @@ bool __fastcall UserNpcSvtRecordMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_48E34CB & 1) == 0 )
+  if ( (byte_49FD13D & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__TryGetEntity__, entity);
-    byte_48E34CB = 1;
+    sub_1B640C8(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__TryGetEntity__, entity);
+    byte_49FD13D = 1;
   }
   PK = (Il2CppObject *)UserNpcSvtRecordEntity__CreatePK(userId, svtId, (const MethodInfo *)userId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_2FE6DF4 *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__TryGetEntity__);
+           (const MethodInfo_30D424C *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__TryGetEntity__);
 }

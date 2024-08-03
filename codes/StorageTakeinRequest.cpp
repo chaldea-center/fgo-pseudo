@@ -7,29 +7,31 @@ void __fastcall StorageTakeinRequest__beginRequest(
   __int64 v6; // x1
   MiniMessagePack_MiniMessagePacker_o *v7; // x21
   __int64 v8; // x0
-  __int64 v9; // x1
-  System_Byte_array *v10; // x20
-  System_String_o *v11; // x0
-  const MethodInfo *v12; // x3
-  const MethodInfo *v13; // x1
+  System_Byte_array *v9; // x20
+  System_String_o *v10; // x0
+  const MethodInfo *v11; // x3
+  const MethodInfo *v12; // x1
 
-  if ( (byte_48E3FBC & 1) == 0 )
+  if ( (byte_49FDD45 & 1) == 0 )
   {
-    sub_1B00CCC(&System_Convert_TypeInfo, userSvtIds);
-    sub_1B00CCC(&MiniMessagePack_MiniMessagePacker_TypeInfo, v5);
-    sub_1B00CCC(&StringLiteral_24093/*"userSvtIds"*/, v6);
-    byte_48E3FBC = 1;
+    sub_1B640C8(&System_Convert_TypeInfo, userSvtIds);
+    sub_1B640C8(&MiniMessagePack_MiniMessagePacker_TypeInfo, v5);
+    sub_1B640C8(&StringLiteral_24355/*"userSvtIds"*/, v6);
+    byte_49FDD45 = 1;
   }
-  v7 = (MiniMessagePack_MiniMessagePacker_o *)sub_1B00F18(MiniMessagePack_MiniMessagePacker_TypeInfo);
+  v7 = (MiniMessagePack_MiniMessagePacker_o *)sub_1B64314(
+                                                MiniMessagePack_MiniMessagePacker_TypeInfo,
+                                                userSvtIds,
+                                                method);
   MiniMessagePack_MiniMessagePacker___ctor(v7, 0LL);
   if ( !v7 )
-    sub_1B00F28(v8, v9);
-  v10 = MiniMessagePack_MiniMessagePacker__PackClass(v7, &userSvtIds->obj, 0LL);
+    sub_1B64324(v8);
+  v9 = MiniMessagePack_MiniMessagePacker__PackClass(v7, &userSvtIds->obj, 0LL);
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  v11 = System_Convert__ToBase64String(v10, 0LL);
-  RequestBase__addField_39752868((RequestBase_o *)this, (System_String_o *)StringLiteral_24093/*"userSvtIds"*/, v11, v12);
-  RequestBase__beginRequest((RequestBase_o *)this, v13);
+  v10 = System_Convert__ToBase64String(v9, 0LL);
+  RequestBase__addField_40850936((RequestBase_o *)this, (System_String_o *)StringLiteral_24355/*"userSvtIds"*/, v10, v11);
+  RequestBase__beginRequest((RequestBase_o *)this, v12);
 }
 
 
@@ -38,16 +40,16 @@ System_String_o *__fastcall StorageTakeinRequest__getURL(StorageTakeinRequest_o 
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_48E3FBB & 1) == 0 )
+  if ( (byte_49FDD44 & 1) == 0 )
   {
-    sub_1B00CCC(&NetworkManager_TypeInfo, method);
-    sub_1B00CCC(&StringLiteral_23207/*"storage/takein"*/, v2);
-    byte_48E3FBB = 1;
+    sub_1B640C8(&NetworkManager_TypeInfo, method);
+    sub_1B640C8(&StringLiteral_23457/*"storage/takein"*/, v2);
+    byte_49FDD44 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_60325748(BaseUrl, (System_String_o *)StringLiteral_23207/*"storage/takein"*/, 0LL);
+  return System_String__Concat_61375396(BaseUrl, (System_String_o *)StringLiteral_23457/*"storage/takein"*/, 0LL);
 }
 
 
@@ -66,12 +68,12 @@ void __fastcall StorageTakeinRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v13; // x8
 
-  if ( (byte_48E3FBD & 1) == 0 )
+  if ( (byte_49FDD46 & 1) == 0 )
   {
-    sub_1B00CCC(&JsonManager_TypeInfo, responseList);
-    sub_1B00CCC(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B00CCC(&StringLiteral_21754/*"ng"*/, v6);
-    byte_48E3FBD = 1;
+    sub_1B640C8(&JsonManager_TypeInfo, responseList);
+    sub_1B640C8(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B640C8(&StringLiteral_21968/*"ng"*/, v6);
+    byte_49FDD46 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -96,7 +98,7 @@ void __fastcall StorageTakeinRequest__requestCompleted(
     if ( v13 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v13->fields.m_target)(
         v13->fields.original_method_info,
-        StringLiteral_21754/*"ng"*/,
+        StringLiteral_21968/*"ng"*/,
         *(_QWORD *)&v13->fields.extra_arg);
   }
 }

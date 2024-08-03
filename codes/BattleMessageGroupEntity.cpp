@@ -1,13 +1,13 @@
 void __fastcall BattleMessageGroupEntity___ctor(BattleMessageGroupEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E24BE & 1) == 0 )
+  if ( (byte_49FC0AE & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
-    byte_48E24BE = 1;
+    sub_1B640C8(&Method_DataEntityBase_string___ctor__, method);
+    byte_49FC0AE = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D3D1C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall BattleMessageGroupEntity__CreatePK(
         int32_t messageId,
         const MethodInfo *method)
 {
-  if ( (byte_48E24BD & 1) == 0 )
+  if ( (byte_49FC0AD & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&messageId);
-    byte_48E24BD = 1;
+    sub_1B640C8(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&messageId);
+    byte_49FC0AD = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            groupId,
            messageId,
-           (const MethodInfo_2D60E34 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2E37610 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

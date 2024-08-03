@@ -1,28 +1,28 @@
 void __fastcall MapCondEntity___ctor(MapCondEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E2B28 & 1) == 0 )
+  if ( (byte_49FC73D & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
-    byte_48E2B28 = 1;
+    sub_1B640C8(&Method_DataEntityBase_string___ctor__, method);
+    byte_49FC73D = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D3D1C *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall MapCondEntity__CreatePK(int32_t id, int32_t mapId, const MethodInfo *method)
 {
-  if ( (byte_48E2B26 & 1) == 0 )
+  if ( (byte_49FC73B & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&mapId);
-    byte_48E2B26 = 1;
+    sub_1B640C8(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&mapId);
+    byte_49FC73B = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            mapId,
-           (const MethodInfo_2D60E34 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2E37610 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -70,10 +70,10 @@ bool __fastcall MapCondEntity__IsOpen(MapCondEntity_o *this, const MethodInfo *m
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_48E2B27 & 1) == 0 )
+  if ( (byte_49FC73C & 1) == 0 )
   {
-    sub_1B00CCC(&CondType_TypeInfo, method);
-    byte_48E2B27 = 1;
+    sub_1B640C8(&CondType_TypeInfo, method);
+    byte_49FC73C = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

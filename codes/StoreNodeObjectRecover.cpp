@@ -1,22 +1,26 @@
 void __fastcall StoreNodeObjectRecover___ctor(StoreNodeObjectRecover_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  System_Collections_Generic_Dictionary_object__object__o *v4; // x20
-  int32_t v5; // w2
-  int32_t v6; // w3
+  __int64 v2; // x2
+  __int64 v4; // x1
+  System_Collections_Generic_Dictionary_object__object__o *v5; // x20
+  int32_t v6; // w2
+  int32_t v7; // w3
 
-  if ( (byte_48E58F2 & 1) == 0 )
+  if ( (byte_49FF5EC & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__Action___ctor__, method);
-    sub_1B00CCC(&System_Collections_Generic_Dictionary_string__Action__TypeInfo, v3);
-    byte_48E58F2 = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_string__Action___ctor__, method);
+    sub_1B640C8(&System_Collections_Generic_Dictionary_string__Action__TypeInfo, v4);
+    byte_49FF5EC = 1;
   }
-  v4 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1B00F18(System_Collections_Generic_Dictionary_string__Action__TypeInfo);
+  v5 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1B64314(
+                                                                    System_Collections_Generic_Dictionary_string__Action__TypeInfo,
+                                                                    method,
+                                                                    v2);
   System_Collections_Generic_Dictionary_object__object____ctor(
-    v4,
-    (const MethodInfo_308D098 *)Method_System_Collections_Generic_Dictionary_string__Action___ctor__);
-  this->fields.recoverPairDictionary = (struct System_Collections_Generic_Dictionary_string__Action__o *)v4;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.recoverPairDictionary, (int32_t)v4, v5, v6);
+    v5,
+    (const MethodInfo_3178A48 *)Method_System_Collections_Generic_Dictionary_string__Action___ctor__);
+  this->fields.recoverPairDictionary = (struct System_Collections_Generic_Dictionary_string__Action__o *)v5;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.recoverPairDictionary, (int32_t)v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -34,19 +38,19 @@ void __fastcall StoreNodeObjectRecover__AddRecoverComponent(
   void *Component_object; // x22
 
   v6 = gameObject;
-  if ( (byte_48E58F0 & 1) == 0 )
+  if ( (byte_49FF5EA & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__Action__set_Item__, storeObject);
-    sub_1B00CCC(&Method_UnityEngine_GameObject_AddComponent_StoreNodeObjectRecover___, v7);
-    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_StoreNodeObjectRecover___, v8);
-    gameObject = (UnityEngine_GameObject_o *)sub_1B00CCC(&UnityEngine_Object_TypeInfo, v9);
-    byte_48E58F0 = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_string__Action__set_Item__, storeObject);
+    sub_1B640C8(&Method_UnityEngine_GameObject_AddComponent_StoreNodeObjectRecover___, v7);
+    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponent_StoreNodeObjectRecover___, v8);
+    gameObject = (UnityEngine_GameObject_o *)sub_1B640C8(&UnityEngine_Object_TypeInfo, v9);
+    byte_49FF5EA = 1;
   }
   if ( !v6 )
     goto LABEL_12;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        v6,
-                       (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_StoreNodeObjectRecover___);
+                       (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_StoreNodeObjectRecover___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(
@@ -57,7 +61,7 @@ void __fastcall StoreNodeObjectRecover__AddRecoverComponent(
   {
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__AddComponent_object_(
                                                v6,
-                                               (const MethodInfo_2DADD20 *)Method_UnityEngine_GameObject_AddComponent_StoreNodeObjectRecover___);
+                                               (const MethodInfo_2E87DF0 *)Method_UnityEngine_GameObject_AddComponent_StoreNodeObjectRecover___);
     Component_object = gameObject;
   }
   if ( !Component_object
@@ -65,13 +69,13 @@ void __fastcall StoreNodeObjectRecover__AddRecoverComponent(
     || (gameObject = (UnityEngine_GameObject_o *)*((_QWORD *)Component_object + 4)) == 0LL )
   {
 LABEL_12:
-    sub_1B00F28(gameObject, storeObject);
+    sub_1B64324(gameObject);
   }
   System_Collections_Generic_Dictionary_object__object___set_Item(
     (System_Collections_Generic_Dictionary_object__object__o *)gameObject,
     (Il2CppObject *)storeObject->fields.name,
     (Il2CppObject *)recovery,
-    (const MethodInfo_308DA34 *)Method_System_Collections_Generic_Dictionary_string__Action__set_Item__);
+    (const MethodInfo_31793E4 *)Method_System_Collections_Generic_Dictionary_string__Action__set_Item__);
 }
 
 
@@ -84,11 +88,11 @@ void __fastcall StoreNodeObjectRecover__Recovery(
   struct System_Collections_Generic_Dictionary_string__Action__o *recoverPairDictionary; // x0
   Il2CppObject *Item; // x0
 
-  if ( (byte_48E58F1 & 1) == 0 )
+  if ( (byte_49FF5EB & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__Action__ContainsKey__, recoverTargetVarName);
-    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__Action__get_Item__, v5);
-    byte_48E58F1 = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_string__Action__ContainsKey__, recoverTargetVarName);
+    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_string__Action__get_Item__, v5);
+    byte_49FF5EB = 1;
   }
   recoverPairDictionary = this->fields.recoverPairDictionary;
   if ( !recoverPairDictionary )
@@ -96,16 +100,16 @@ void __fastcall StoreNodeObjectRecover__Recovery(
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)recoverPairDictionary,
           (Il2CppObject *)recoverTargetVarName,
-          (const MethodInfo_308DC3C *)Method_System_Collections_Generic_Dictionary_string__Action__ContainsKey__) )
+          (const MethodInfo_31795EC *)Method_System_Collections_Generic_Dictionary_string__Action__ContainsKey__) )
     return;
   recoverPairDictionary = this->fields.recoverPairDictionary;
   if ( !recoverPairDictionary )
 LABEL_9:
-    sub_1B00F28(recoverPairDictionary, recoverTargetVarName);
+    sub_1B64324(recoverPairDictionary);
   Item = System_Collections_Generic_Dictionary_object__object___get_Item(
            (System_Collections_Generic_Dictionary_object__object__o *)recoverPairDictionary,
            (Il2CppObject *)recoverTargetVarName,
-           (const MethodInfo_308D9C8 *)Method_System_Collections_Generic_Dictionary_string__Action__get_Item__);
+           (const MethodInfo_3179378 *)Method_System_Collections_Generic_Dictionary_string__Action__get_Item__);
   if ( Item )
     ((void (__fastcall *)(Il2CppClass *, void *))Item[1].monitor)(Item[4].klass, Item[2].monitor);
 }

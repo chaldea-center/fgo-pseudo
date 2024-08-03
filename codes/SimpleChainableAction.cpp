@@ -8,7 +8,7 @@ void __fastcall SimpleChainableAction___ctor(
 
   ChainableActionBase___ctor((ChainableActionBase_o *)this, (const MethodInfo *)action);
   this->fields.sysChainAction = action;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.sysChainAction, (int32_t)action, v5, v6);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.sysChainAction, (int32_t)action, v5, v6);
 }
 
 
@@ -21,88 +21,90 @@ SimpleChainableAction_array *__fastcall SimpleChainableAction__ConvertToChainabl
   __int64 v4; // x21
   __int64 v5; // x0
   __int64 v6; // x1
-  SimpleChainableAction_array *v7; // x20
-  unsigned __int64 v8; // x24
-  __int64 v9; // x26
+  __int64 v7; // x2
+  SimpleChainableAction_array *v8; // x20
+  unsigned __int64 v9; // x24
+  __int64 v10; // x26
   System_Action_Action__o **m_Items; // x27
-  ServantStatusBattleListViewItem_o *v11; // x21
-  System_Action_Action__o *v12; // x23
-  __int64 v13; // x22
-  const MethodInfo *v14; // x1
-  int32_t v15; // w2
-  int32_t v16; // w3
-  int32_t v17; // w2
-  int32_t v18; // w3
-  __int64 v20; // x0
+  ServantStatusBattleListViewItem_o *v12; // x21
+  System_Action_Action__o *v13; // x23
+  __int64 v14; // x22
+  const MethodInfo *v15; // x1
+  int32_t v16; // w2
+  int32_t v17; // w3
+  int32_t v18; // w2
+  int32_t v19; // w3
+  __int64 v21; // x0
 
   v2 = sysActions;
-  if ( (byte_48E7073 & 1) == 0 )
+  if ( (byte_4A00C0B & 1) == 0 )
   {
-    sub_1B00CCC(&SimpleChainableAction___TypeInfo, method);
-    sysActions = (System_Action_Action__array *)sub_1B00CCC(&SimpleChainableAction_TypeInfo, v3);
-    byte_48E7073 = 1;
+    sub_1B640C8(&SimpleChainableAction___TypeInfo, method);
+    sysActions = (System_Action_Action__array *)sub_1B640C8(&SimpleChainableAction_TypeInfo, v3);
+    byte_4A00C0B = 1;
   }
   if ( !v2 )
 LABEL_13:
-    sub_1B00F28(sysActions, method);
+    sub_1B64324(sysActions);
   v4 = *(_QWORD *)&v2->max_length;
-  v5 = sub_1B00D74(SimpleChainableAction___TypeInfo, (unsigned int)v4);
-  v7 = (SimpleChainableAction_array *)v5;
+  v5 = sub_1B64170(SimpleChainableAction___TypeInfo, (unsigned int)v4);
+  v8 = (SimpleChainableAction_array *)v5;
   if ( (int)v4 >= 1 )
   {
-    v8 = 0LL;
-    v9 = (unsigned int)v4;
+    v9 = 0LL;
+    v10 = (unsigned int)v4;
     m_Items = v2->m_Items;
-    v11 = (ServantStatusBattleListViewItem_o *)(v5 + 32);
+    v12 = (ServantStatusBattleListViewItem_o *)(v5 + 32);
     do
     {
-      if ( v8 >= v2->max_length )
+      if ( v9 >= v2->max_length )
         goto LABEL_12;
-      v12 = *m_Items;
-      v13 = sub_1B00F18(SimpleChainableAction_TypeInfo);
-      ChainableActionBase___ctor((ChainableActionBase_o *)v13, v14);
-      *(_QWORD *)(v13 + 40) = v12;
-      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v13 + 40), (int32_t)v12, v15, v16);
-      if ( !v7 )
+      v13 = *m_Items;
+      v14 = sub_1B64314(SimpleChainableAction_TypeInfo, v6, v7);
+      ChainableActionBase___ctor((ChainableActionBase_o *)v14, v15);
+      *(_QWORD *)(v14 + 40) = v13;
+      sub_1B6406C((ServantStatusBattleListViewItem_o *)(v14 + 40), (int32_t)v13, v16, v17);
+      if ( !v8 )
         goto LABEL_13;
-      v5 = sub_1B00E08(v13, v7->obj.klass->_1.element_class);
+      v5 = sub_1B64204(v14, v8->obj.klass->_1.element_class);
       if ( !v5 )
       {
-        v20 = sub_1B00F4C(0LL);
-        sub_1B00DF4(v20, 0LL);
+        v21 = sub_1B64348(0LL);
+        sub_1B641F0(v21, 0LL);
       }
-      if ( v8 >= v7->max_length )
+      if ( v9 >= v8->max_length )
 LABEL_12:
-        sub_1B00F30(v5, v6);
-      v11->klass = (ServantStatusBattleListViewItem_c *)v13;
-      sub_1B00C70(v11, v13, v17, v18);
-      ++v8;
+        sub_1B6432C(v5, v6);
+      v12->klass = (ServantStatusBattleListViewItem_c *)v14;
+      sub_1B6406C(v12, v14, v18, v19);
+      ++v9;
       ++m_Items;
-      v11 = (ServantStatusBattleListViewItem_o *)((char *)v11 + 8);
+      v12 = (ServantStatusBattleListViewItem_o *)((char *)v12 + 8);
     }
-    while ( v9 != v8 );
+    while ( v10 != v9 );
   }
-  return v7;
+  return v8;
 }
 
 
 void __fastcall SimpleChainableAction__ExecuteOnDetail(SimpleChainableAction_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
+  __int64 v4; // x1
   System_Action_T__o *sysChainAction; // x20
-  System_Action_o *v5; // x21
+  System_Action_o *v6; // x21
 
-  if ( (byte_48E7072 & 1) == 0 )
+  if ( (byte_4A00C0A & 1) == 0 )
   {
-    sub_1B00CCC(&Method_ActionExtensions_Call_Action___, method);
-    sub_1B00CCC(&System_Action_TypeInfo, v3);
-    byte_48E7072 = 1;
+    sub_1B640C8(&Method_ActionExtensions_Call_Action___, method);
+    sub_1B640C8(&System_Action_TypeInfo, v4);
+    byte_4A00C0A = 1;
   }
   sysChainAction = (System_Action_T__o *)this->fields.sysChainAction;
-  v5 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
-  System_Action___ctor(v5, (Il2CppObject *)this, (intptr_t)this->klass[1]._1.image, 0LL);
+  v6 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, method, v2);
+  System_Action___ctor(v6, (Il2CppObject *)this, (intptr_t)this->klass[1]._1.image, 0LL);
   ActionExtensions__Call_object_(
     sysChainAction,
-    (Il2CppObject *)v5,
-    (const MethodInfo_2CBB45C *)Method_ActionExtensions_Call_Action___);
+    (Il2CppObject *)v6,
+    (const MethodInfo_2D90A78 *)Method_ActionExtensions_Call_Action___);
 }

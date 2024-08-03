@@ -12,26 +12,26 @@ void __fastcall EffectSystemBehaviour__Awake(EffectSystemBehaviour_o *this, cons
   __int64 v6; // x1
   Il2CppObject *Component_object; // x20
   void *gameObject; // x0
-  __int64 v9; // x1
-  Il2CppObject *v10; // x20
+  Il2CppObject *v9; // x20
+  __int64 v10; // x1
   int v11; // w8
   void *v12; // x19
   __int64 v13; // x23
   UnityEngine_Component_o *v14; // x20
   Il2CppObject *v15; // x21
 
-  if ( (byte_48E1668 & 1) == 0 )
+  if ( (byte_49FB211 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_UnityEngine_Component_GetComponent_ParticleSystem___, method);
-    sub_1B00CCC(&Method_UnityEngine_GameObject_AddComponent_EffectRenderBehaviour___, v3);
-    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_EffectRenderBehaviour___, v4);
-    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponentsInChildren_ParticleSystem___, v5);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v6);
-    byte_48E1668 = 1;
+    sub_1B640C8(&Method_UnityEngine_Component_GetComponent_ParticleSystem___, method);
+    sub_1B640C8(&Method_UnityEngine_GameObject_AddComponent_EffectRenderBehaviour___, v3);
+    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponent_EffectRenderBehaviour___, v4);
+    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponentsInChildren_ParticleSystem___, v5);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v6);
+    byte_49FB211 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2D596B4 *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
+                       (const MethodInfo_2E2FE90 *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
@@ -39,28 +39,28 @@ void __fastcall EffectSystemBehaviour__Awake(EffectSystemBehaviour_o *this, cons
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !gameObject )
       goto LABEL_26;
-    v10 = UnityEngine_GameObject__GetComponent_object_(
-            (UnityEngine_GameObject_o *)gameObject,
-            (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_EffectRenderBehaviour___);
+    v9 = UnityEngine_GameObject__GetComponent_object_(
+           (UnityEngine_GameObject_o *)gameObject,
+           (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_EffectRenderBehaviour___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v10, 0LL, 0LL) )
+    if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v9, 0LL, 0LL) )
     {
       gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
       if ( !gameObject )
         goto LABEL_26;
       UnityEngine_GameObject__AddComponent_object_(
         (UnityEngine_GameObject_o *)gameObject,
-        (const MethodInfo_2DADD20 *)Method_UnityEngine_GameObject_AddComponent_EffectRenderBehaviour___);
+        (const MethodInfo_2E87DF0 *)Method_UnityEngine_GameObject_AddComponent_EffectRenderBehaviour___);
     }
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
 LABEL_26:
-    sub_1B00F28(gameObject, v9);
-  gameObject = UnityEngine_GameObject__GetComponentsInChildren_object__47901228(
+    sub_1B64324(gameObject);
+  gameObject = UnityEngine_GameObject__GetComponentsInChildren_object__48794364(
                  (UnityEngine_GameObject_o *)gameObject,
-                 (const MethodInfo_2DAEA2C *)Method_UnityEngine_GameObject_GetComponentsInChildren_ParticleSystem___);
+                 (const MethodInfo_2E88AFC *)Method_UnityEngine_GameObject_GetComponentsInChildren_ParticleSystem___);
   if ( gameObject )
   {
     v11 = *((_DWORD *)gameObject + 6);
@@ -71,7 +71,7 @@ LABEL_26:
       while ( 1 )
       {
         if ( (unsigned int)v13 >= v11 )
-          sub_1B00F30(gameObject, v9);
+          sub_1B6432C(gameObject, v10);
         v14 = (UnityEngine_Component_o *)*((_QWORD *)v12 + v13 + 4);
         if ( !v14 )
           goto LABEL_26;
@@ -80,7 +80,7 @@ LABEL_26:
           goto LABEL_26;
         v15 = UnityEngine_GameObject__GetComponent_object_(
                 (UnityEngine_GameObject_o *)gameObject,
-                (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_EffectRenderBehaviour___);
+                (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_EffectRenderBehaviour___);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         gameObject = (void *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v15, 0LL, 0LL);
@@ -91,7 +91,7 @@ LABEL_26:
             goto LABEL_26;
           gameObject = UnityEngine_GameObject__AddComponent_object_(
                          (UnityEngine_GameObject_o *)gameObject,
-                         (const MethodInfo_2DADD20 *)Method_UnityEngine_GameObject_AddComponent_EffectRenderBehaviour___);
+                         (const MethodInfo_2E87DF0 *)Method_UnityEngine_GameObject_AddComponent_EffectRenderBehaviour___);
         }
         v11 = *((_DWORD *)v12 + 6);
         if ( (int)++v13 >= v11 )

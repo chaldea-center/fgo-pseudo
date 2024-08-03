@@ -1,36 +1,35 @@
 void __fastcall WarBoardStagePieceDetailEntity___ctor(WarBoardStagePieceDetailEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E379B & 1) == 0 )
+  if ( (byte_49FD422 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
-    byte_48E379B = 1;
+    sub_1B640C8(&Method_DataEntityBase_string___ctor__, method);
+    byte_49FD422 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D3D1C *)Method_DataEntityBase_string___ctor__);
   *(_QWORD *)&this->fields.stageId = 0LL;
   *(_QWORD *)&this->fields.groupId = 0LL;
 }
 
 
-void __fastcall WarBoardStagePieceDetailEntity___ctor_39080540(
+void __fastcall WarBoardStagePieceDetailEntity___ctor_40028564(
         WarBoardStagePieceDetailEntity_o *this,
         WarBoardStagePieceDetailEntity_o *cSrc,
         const MethodInfo *method)
 {
   __int64 v5; // x0
-  __int64 v6; // x1
 
-  if ( (byte_48E379C & 1) == 0 )
+  if ( (byte_49FD423 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, cSrc);
-    byte_48E379C = 1;
+    sub_1B640C8(&Method_DataEntityBase_string___ctor__, cSrc);
+    byte_49FD423 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D3D1C *)Method_DataEntityBase_string___ctor__);
   if ( !cSrc )
-    sub_1B00F28(v5, v6);
+    sub_1B64324(v5);
   *(_OWORD *)&this->fields.stageId = *(_OWORD *)&cSrc->fields.stageId;
 }
 
@@ -43,17 +42,17 @@ System_String_o *__fastcall WarBoardStagePieceDetailEntity__CreatePK(
         int32_t pieceIndex,
         const MethodInfo *method)
 {
-  if ( (byte_48E379A & 1) == 0 )
+  if ( (byte_49FD421 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&forceId);
-    byte_48E379A = 1;
+    sub_1B640C8(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&forceId);
+    byte_49FD421 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            stageId,
            forceId,
            groupId,
            pieceIndex,
-           (const MethodInfo_2D61784 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_2E37F60 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -78,12 +77,12 @@ int32_t __fastcall WarBoardStagePieceDetailEntity__GetDeadEffectType(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_48E37A4 & 1) == 0 )
+  if ( (byte_49FD42B & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_18258/*"deadEffect"*/, method);
-    byte_48E37A4 = 1;
+    sub_1B640C8(&StringLiteral_18436/*"deadEffect"*/, method);
+    byte_49FD42B = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_18258/*"deadEffect"*/, 0, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_18436/*"deadEffect"*/, 0, v2);
 }
 
 
@@ -93,12 +92,12 @@ int32_t __fastcall WarBoardStagePieceDetailEntity__GetDispLimitCnt(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_48E37A7 & 1) == 0 )
+  if ( (byte_49FD42E & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_18391/*"dispLimitCount"*/, method);
-    byte_48E37A7 = 1;
+    sub_1B640C8(&StringLiteral_18569/*"dispLimitCount"*/, method);
+    byte_49FD42E = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_18391/*"dispLimitCount"*/, -1, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_18569/*"dispLimitCount"*/, -1, v2);
 }
 
 
@@ -108,12 +107,12 @@ int32_t __fastcall WarBoardStagePieceDetailEntity__GetImageSvtId(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_48E37A8 & 1) == 0 )
+  if ( (byte_49FD42F & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_19964/*"imageSvtId"*/, method);
-    byte_48E37A8 = 1;
+    sub_1B640C8(&StringLiteral_20158/*"imageSvtId"*/, method);
+    byte_49FD42F = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_19964/*"imageSvtId"*/, 0, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_20158/*"imageSvtId"*/, 0, v2);
 }
 
 
@@ -123,12 +122,12 @@ int32_t __fastcall WarBoardStagePieceDetailEntity__GetMoveAfterAttackType(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_48E37A5 & 1) == 0 )
+  if ( (byte_49FD42C & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_21788/*"noMoveAfterAttack"*/, method);
-    byte_48E37A5 = 1;
+    sub_1B640C8(&StringLiteral_22002/*"noMoveAfterAttack"*/, method);
+    byte_49FD42C = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_21788/*"noMoveAfterAttack"*/, 0, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22002/*"noMoveAfterAttack"*/, 0, v2);
 }
 
 
@@ -138,12 +137,12 @@ int32_t __fastcall WarBoardStagePieceDetailEntity__GetMovedAfterDefendType(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_48E37A6 & 1) == 0 )
+  if ( (byte_49FD42D & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_21791/*"noMovedAfterDefend"*/, method);
-    byte_48E37A6 = 1;
+    sub_1B640C8(&StringLiteral_22005/*"noMovedAfterDefend"*/, method);
+    byte_49FD42D = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_21791/*"noMovedAfterDefend"*/, 0, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22005/*"noMovedAfterDefend"*/, 0, v2);
 }
 
 
@@ -153,12 +152,12 @@ int32_t __fastcall WarBoardStagePieceDetailEntity__GetOverwriteAttackCost(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_48E37A2 & 1) == 0 )
+  if ( (byte_49FD429 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_22071/*"overwriteAttackCost"*/, method);
-    byte_48E37A2 = 1;
+    sub_1B640C8(&StringLiteral_22286/*"overwriteAttackCost"*/, method);
+    byte_49FD429 = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22071/*"overwriteAttackCost"*/, -1, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22286/*"overwriteAttackCost"*/, -1, v2);
 }
 
 
@@ -168,12 +167,12 @@ int32_t __fastcall WarBoardStagePieceDetailEntity__GetOverwriteBaseActionPoint(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_48E37A1 & 1) == 0 )
+  if ( (byte_49FD428 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_22073/*"overwriteBaseActionPoint"*/, method);
-    byte_48E37A1 = 1;
+    sub_1B640C8(&StringLiteral_22288/*"overwriteBaseActionPoint"*/, method);
+    byte_49FD428 = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22073/*"overwriteBaseActionPoint"*/, -1, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22288/*"overwriteBaseActionPoint"*/, -1, v2);
 }
 
 
@@ -183,12 +182,12 @@ int32_t __fastcall WarBoardStagePieceDetailEntity__GetOverwriteMoveCost(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_48E37A3 & 1) == 0 )
+  if ( (byte_49FD42A & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_22093/*"overwriteMoveCost"*/, method);
-    byte_48E37A3 = 1;
+    sub_1B640C8(&StringLiteral_22308/*"overwriteMoveCost"*/, method);
+    byte_49FD42A = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22093/*"overwriteMoveCost"*/, -1, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22308/*"overwriteMoveCost"*/, -1, v2);
 }
 
 
@@ -209,12 +208,12 @@ int32_t __fastcall WarBoardStagePieceDetailEntity__GetOverwriteWallAttackCost(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_48E37A0 & 1) == 0 )
+  if ( (byte_49FD427 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_22112/*"overwriteWallAttackCost"*/, method);
-    byte_48E37A0 = 1;
+    sub_1B640C8(&StringLiteral_22327/*"overwriteWallAttackCost"*/, method);
+    byte_49FD427 = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22112/*"overwriteWallAttackCost"*/, -1, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22327/*"overwriteWallAttackCost"*/, -1, v2);
 }
 
 
@@ -241,12 +240,12 @@ int32_t __fastcall WarBoardStagePieceDetailEntity__getRoleType(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_48E379F & 1) == 0 )
+  if ( (byte_49FD426 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_24264/*"warBoardSvtDetail"*/, method);
-    byte_48E379F = 1;
+    sub_1B640C8(&StringLiteral_24528/*"warBoardSvtDetail"*/, method);
+    byte_49FD426 = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_24264/*"warBoardSvtDetail"*/, 0, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_24528/*"warBoardSvtDetail"*/, 0, v2);
 }
 
 
@@ -266,17 +265,17 @@ int32_t __fastcall WarBoardStagePieceDetailEntity__getScriptIntParam(
   const MethodInfo *v13; // x2
 
   v4 = defVal;
-  if ( (byte_48E379D & 1) == 0 )
+  if ( (byte_49FD424 & 1) == 0 )
   {
-    sub_1B00CCC(&long_TypeInfo, key);
-    byte_48E379D = 1;
+    sub_1B640C8(&long_TypeInfo, key);
+    byte_49FD424 = 1;
   }
   ScriptObj = WarBoardStagePieceDetailEntity__getScriptObj(this, key, *(const MethodInfo **)&defVal);
   if ( !ScriptObj )
     return v4;
   if ( ScriptObj->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(ScriptObj, long_TypeInfo, v8, v9);
-  sub_1B011E8(ScriptObj);
+  sub_1B645E4(ScriptObj);
   return (unsigned int)WarBoardStagePieceDetailEntity__getScriptObj(v11, v12, v13);
 }
 
@@ -289,10 +288,10 @@ Il2CppObject *__fastcall WarBoardStagePieceDetailEntity__getScriptObj(
   Il2CppObject *result; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_48E379E & 1) == 0 )
+  if ( (byte_49FD425 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
-    byte_48E379E = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
+    byte_49FD425 = 1;
   }
   result = (Il2CppObject *)this->fields.script;
   if ( result )
@@ -302,7 +301,7 @@ Il2CppObject *__fastcall WarBoardStagePieceDetailEntity__getScriptObj(
            (System_Collections_Generic_Dictionary_object__object__o *)result,
            (Il2CppObject *)key,
            &value,
-           (const MethodInfo_308F254 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_317AC04 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
       return value;
     }

@@ -1,13 +1,13 @@
 void __fastcall WarBoardEventEntity___ctor(WarBoardEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E36E0 & 1) == 0 )
+  if ( (byte_49FD368 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_int___ctor__, method);
-    byte_48E36E0 = 1;
+    sub_1B640C8(&Method_DataEntityBase_int___ctor__, method);
+    byte_49FD368 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_2FE684C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_30D3CA4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -21,12 +21,12 @@ System_Int32_array *__fastcall WarBoardEventEntity__GetSquareIndicesToAdd(
         WarBoardEventEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_48E36DD & 1) == 0 )
+  if ( (byte_49FD365 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_16441/*"addSquareIndex"*/, method);
-    byte_48E36DD = 1;
+    sub_1B640C8(&StringLiteral_16606/*"addSquareIndex"*/, method);
+    byte_49FD365 = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_16441/*"addSquareIndex"*/, 0LL, 0LL);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_16606/*"addSquareIndex"*/, 0LL, 0LL);
 }
 
 
@@ -46,7 +46,7 @@ bool __fastcall WarBoardEventEntity__IsCorrectEntity(WarBoardEventEntity_o *this
   warBoardCommonReleaseIds = this->fields.warBoardCommonReleaseIds;
   if ( !warBoardCommonReleaseIds )
 LABEL_7:
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   v5 = warBoardCommonReleaseIds->max_length;
   if ( v5 >= 1 )
     return max_length == v5;
@@ -56,23 +56,23 @@ LABEL_7:
 
 bool __fastcall WarBoardEventEntity__IsIncludeInvolvedAttacker(WarBoardEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E36DE & 1) == 0 )
+  if ( (byte_49FD366 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_20331/*"includeInvolvedAttacker"*/, method);
-    byte_48E36DE = 1;
+    sub_1B640C8(&StringLiteral_20531/*"includeInvolvedAttacker"*/, method);
+    byte_49FD366 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20331/*"includeInvolvedAttacker"*/, 0, 0LL) == 1;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20531/*"includeInvolvedAttacker"*/, 0, 0LL) == 1;
 }
 
 
 bool __fastcall WarBoardEventEntity__IsIncludeInvolvedDefender(WarBoardEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E36DF & 1) == 0 )
+  if ( (byte_49FD367 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_20332/*"includeInvolvedDefender"*/, method);
-    byte_48E36DF = 1;
+    sub_1B640C8(&StringLiteral_20532/*"includeInvolvedDefender"*/, method);
+    byte_49FD367 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20332/*"includeInvolvedDefender"*/, 0, 0LL) == 1;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20532/*"includeInvolvedDefender"*/, 0, 0LL) == 1;
 }
 
 
@@ -88,20 +88,19 @@ bool __fastcall WarBoardEventEntity__IsOpenEventTiming(
 bool __fastcall WarBoardEventEntity__IsPlayableEvent(WarBoardEventEntity_o *this, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
-  __int64 v4; // x1
   WarBoardData_o *monitor; // x20
   WarBoardEventData_o *PlayedEventData; // x0
   int32_t frequencyType; // w8
   int32_t latestPlayedTurn_k__BackingField; // w19
 
-  if ( (byte_48E36DC & 1) == 0 )
+  if ( (byte_49FD364 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
-    byte_48E36DC = 1;
+    sub_1B640C8(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
+    byte_49FD364 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance || (monitor = (WarBoardData_o *)Instance[27].monitor) == 0LL )
-    sub_1B00F28(Instance, v4);
+    sub_1B64324(Instance);
   PlayedEventData = WarBoardData__GetPlayedEventData((WarBoardData_o *)Instance[27].monitor, this->fields.id, 0LL);
   if ( !PlayedEventData )
     return 1;

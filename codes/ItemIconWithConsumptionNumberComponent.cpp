@@ -2,10 +2,10 @@ void __fastcall ItemIconWithConsumptionNumberComponent___ctor(
         ItemIconWithConsumptionNumberComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_48E1D4D & 1) == 0 )
+  if ( (byte_49FB926 & 1) == 0 )
   {
-    sub_1B00CCC(&ItemIconComponent_TypeInfo, method);
-    byte_48E1D4D = 1;
+    sub_1B640C8(&ItemIconComponent_TypeInfo, method);
+    byte_49FB926 = 1;
   }
   if ( !ItemIconComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ItemIconComponent_TypeInfo);
@@ -27,16 +27,15 @@ void __fastcall ItemIconWithConsumptionNumberComponent__SetConsumptionNumber(
   System_String_o *v8; // x21
   Il2CppObject *v9; // x0
   System_String_o *v10; // x0
-  __int64 v11; // x1
-  int32_t v12; // [xsp+Ch] [xbp-24h] BYREF
+  int32_t v11; // [xsp+Ch] [xbp-24h] BYREF
 
-  v12 = consumptionNumber;
-  if ( (byte_48E1D4C & 1) == 0 )
+  v11 = consumptionNumber;
+  if ( (byte_49FB925 & 1) == 0 )
   {
-    sub_1B00CCC(&LocalizationManager_TypeInfo, *(_QWORD *)&consumptionNumber);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v4);
-    sub_1B00CCC(&StringLiteral_10735/*"QUEST_CONFIRM_NO_CONSUME_COUNT"*/, v5);
-    byte_48E1D4C = 1;
+    sub_1B640C8(&LocalizationManager_TypeInfo, *(_QWORD *)&consumptionNumber);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v4);
+    sub_1B640C8(&StringLiteral_10818/*"QUEST_CONFIRM_NO_CONSUME_COUNT"*/, v5);
+    byte_49FB925 = 1;
   }
   consumptionNumberLabel = (UnityEngine_Object_o *)this->fields.consumptionNumberLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -46,11 +45,11 @@ void __fastcall ItemIconWithConsumptionNumberComponent__SetConsumptionNumber(
     v7 = this->fields.consumptionNumberLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_10735/*"QUEST_CONFIRM_NO_CONSUME_COUNT"*/, 0LL);
-    v9 = (Il2CppObject *)System_Int32__ToString((int32_t)&v12, 0LL);
+    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_10818/*"QUEST_CONFIRM_NO_CONSUME_COUNT"*/, 0LL);
+    v9 = (Il2CppObject *)System_Int32__ToString((int32_t)&v11, 0LL);
     v10 = System_String__Format(v8, v9, 0LL);
     if ( !v7 || (UILabel__set_text(v7, v10, 0LL), (v10 = (System_String_o *)this->fields.consumptionNumberLabel) == 0LL) )
-      sub_1B00F28(v10, v11);
+      sub_1B64324(v10);
     UILabel__set_fontSize((UILabel_o *)v10, 23, 0LL);
   }
 }

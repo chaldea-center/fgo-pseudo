@@ -16,7 +16,7 @@ void __fastcall FollowObjectPositionComponent__SetObj(
   this->fields.TargetObj = obj;
   p_TargetObj = &this->fields.TargetObj;
   v5 = IsInversion;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.TargetObj, (int32_t)obj, IsInversion, (int32_t)method);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.TargetObj, (int32_t)obj, IsInversion, (int32_t)method);
   *((_BYTE *)p_TargetObj + 8) = v5;
 }
 
@@ -27,19 +27,18 @@ void __fastcall FollowObjectPositionComponent__Update(FollowObjectPositionCompon
   UnityEngine_Object_o *TargetObj; // x19
   _BOOL4 IsInversion; // w21
   UnityEngine_Transform_o *transform; // x0
-  __int64 v6; // x1
-  UnityEngine_Transform_o *v7; // x19
-  float v8; // s1
-  int v9; // s2
-  float v10; // s0
-  float v11; // s8
-  float v12; // s1
-  float v13; // s0
+  UnityEngine_Transform_o *v6; // x19
+  float v7; // s1
+  int v8; // s2
+  float v9; // s0
+  float v10; // s8
+  float v11; // s1
+  float v12; // s0
 
-  if ( (byte_48E1D16 & 1) == 0 )
+  if ( (byte_49FB8EF & 1) == 0 )
   {
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
-    byte_48E1D16 = 1;
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, method);
+    byte_49FB8EF = 1;
   }
   TargetObj = (UnityEngine_Object_o *)this->fields.TargetObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -50,12 +49,12 @@ void __fastcall FollowObjectPositionComponent__Update(FollowObjectPositionCompon
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
     if ( this->fields.TargetObj )
     {
-      v7 = transform;
+      v6 = transform;
       transform = UnityEngine_GameObject__get_transform(this->fields.TargetObj, 0LL);
       if ( transform )
       {
-        *(UnityEngine_Vector3_o *)(&v8 - 1) = UnityEngine_Transform__get_localPosition(transform, 0LL);
-        v11 = v10;
+        *(UnityEngine_Vector3_o *)(&v7 - 1) = UnityEngine_Transform__get_localPosition(transform, 0LL);
+        v10 = v9;
         if ( IsInversion )
         {
           transform = (UnityEngine_Transform_o *)this->fields.TargetObj;
@@ -64,26 +63,26 @@ void __fastcall FollowObjectPositionComponent__Update(FollowObjectPositionCompon
             transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)transform, 0LL);
             if ( transform )
             {
-              *(UnityEngine_Vector3_o *)(&v12 - 1) = UnityEngine_Transform__get_localPosition(transform, 0LL);
-              if ( v7 )
+              *(UnityEngine_Vector3_o *)(&v11 - 1) = UnityEngine_Transform__get_localPosition(transform, 0LL);
+              if ( v6 )
               {
-                v8 = -v12;
-                v11 = -v11;
-                v9 = 0;
+                v7 = -v11;
+                v10 = -v10;
+                v8 = 0;
 LABEL_14:
-                v13 = v11;
-                UnityEngine_Transform__set_localPosition(v7, *(UnityEngine_Vector3_o *)(&v8 - 1), 0LL);
+                v12 = v10;
+                UnityEngine_Transform__set_localPosition(v6, *(UnityEngine_Vector3_o *)(&v7 - 1), 0LL);
                 return;
               }
             }
           }
         }
-        else if ( v7 )
+        else if ( v6 )
         {
           goto LABEL_14;
         }
       }
     }
-    sub_1B00F28(transform, v6);
+    sub_1B64324(transform);
   }
 }

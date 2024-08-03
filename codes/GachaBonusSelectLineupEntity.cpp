@@ -1,13 +1,13 @@
 void __fastcall GachaBonusSelectLineupEntity___ctor(GachaBonusSelectLineupEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E2A75 & 1) == 0 )
+  if ( (byte_49FC67C & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
-    byte_48E2A75 = 1;
+    sub_1B640C8(&Method_DataEntityBase_string___ctor__, method);
+    byte_49FC67C = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D3D1C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,16 +18,16 @@ System_String_o *__fastcall GachaBonusSelectLineupEntity__CreatePK(
         int32_t giftId,
         const MethodInfo *method)
 {
-  if ( (byte_48E2A73 & 1) == 0 )
+  if ( (byte_49FC67A & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&type);
-    byte_48E2A73 = 1;
+    sub_1B640C8(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&type);
+    byte_49FC67A = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            id,
            type,
            giftId,
-           (const MethodInfo_2D612C4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2E37AA0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -47,10 +47,10 @@ int32_t __fastcall GachaBonusSelectLineupEntity__GetSummonCategoryId(
         int32_t defId,
         const MethodInfo *method)
 {
-  if ( (byte_48E2A74 & 1) == 0 )
+  if ( (byte_49FC67B & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_23320/*"summonCategoryId"*/, *(_QWORD *)&defId);
-    byte_48E2A74 = 1;
+    sub_1B640C8(&StringLiteral_23573/*"summonCategoryId"*/, *(_QWORD *)&defId);
+    byte_49FC67B = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_23320/*"summonCategoryId"*/, defId, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_23573/*"summonCategoryId"*/, defId, 0LL);
 }

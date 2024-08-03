@@ -1,9 +1,9 @@
 void __fastcall ScriptAssetListViewObject___ctor(ScriptAssetListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E0098 & 1) == 0 )
+  if ( (byte_49F9BF9 & 1) == 0 )
   {
-    sub_1B00CCC(&ListViewObject_TypeInfo, method);
-    byte_48E0098 = 1;
+    sub_1B640C8(&ListViewObject_TypeInfo, method);
+    byte_49F9BF9 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -13,26 +13,25 @@ void __fastcall ScriptAssetListViewObject___ctor(ScriptAssetListViewObject_o *th
 
 void __fastcall ScriptAssetListViewObject__Awake(ScriptAssetListViewObject_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v6; // w2
-  int32_t v7; // w3
+  int32_t v5; // w2
+  int32_t v6; // w3
 
-  if ( (byte_48E0092 & 1) == 0 )
+  if ( (byte_49F9BF3 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_ScriptAssetListViewItemDraw___, method);
-    byte_48E0092 = 1;
+    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponent_ScriptAssetListViewItemDraw___, method);
+    byte_49F9BF3 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1B00F28(0LL, v3);
+    sub_1B64324(0LL);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_ScriptAssetListViewItemDraw___);
+                       (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_ScriptAssetListViewItemDraw___);
   this->fields.itemDraw = (struct ScriptAssetListViewItemDraw_o *)Component_object;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v5, v6);
 }
 
 
@@ -41,26 +40,25 @@ UnityEngine_GameObject_o *__fastcall ScriptAssetListViewObject__CreateDragObject
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *DragObject; // x0
-  __int64 v4; // x1
-  UnityEngine_GameObject_o *v5; // x19
-  const MethodInfo *v6; // x2
+  UnityEngine_GameObject_o *v4; // x19
+  const MethodInfo *v5; // x2
 
-  if ( (byte_48E0095 & 1) == 0 )
+  if ( (byte_49F9BF6 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_ScriptAssetListViewObject___, method);
-    byte_48E0095 = 1;
+    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponent_ScriptAssetListViewObject___, method);
+    byte_49F9BF6 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0LL);
   if ( !DragObject
-    || (v5 = DragObject,
+    || (v4 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_ScriptAssetListViewObject___)) == 0LL) )
+                                                    (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_ScriptAssetListViewObject___)) == 0LL) )
   {
-    sub_1B00F28(DragObject, v4);
+    sub_1B64324(DragObject);
   }
-  ScriptAssetListViewObject__Init_33668140((ScriptAssetListViewObject_o *)DragObject, 2, v6);
-  return v5;
+  ScriptAssetListViewObject__Init_34520404((ScriptAssetListViewObject_o *)DragObject, 2, v5);
+  return v4;
 }
 
 
@@ -80,7 +78,7 @@ void __fastcall ScriptAssetListViewObject__EventMoveEnd(ScriptAssetListViewObjec
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1B00C70(p_callbackFunc, 0, v2, v3);
+    sub_1B6406C(p_callbackFunc, 0, v2, v3);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v5->fields.m_target)(
       v5->fields.original_method_info,
       *(_QWORD *)&v5->fields.extra_arg);
@@ -95,10 +93,10 @@ ScriptAssetListViewItem_o *__fastcall ScriptAssetListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_48E0094 & 1) == 0 )
+  if ( (byte_49F9BF5 & 1) == 0 )
   {
-    sub_1B00CCC(&ScriptAssetListViewItem_TypeInfo, method);
-    byte_48E0094 = 1;
+    sub_1B640C8(&ScriptAssetListViewItem_TypeInfo, method);
+    byte_49F9BF5 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -127,20 +125,19 @@ void __fastcall ScriptAssetListViewObject__Init(
   int32_t dispMode; // w22
   int32_t state; // w24
   UnityEngine_Transform_o *transform; // x0
-  __int64 v15; // x1
   ServantStatusBattleListViewItem_o *p_callbackFunc; // x21
-  int32_t v17; // w2
-  int32_t v18; // w3
-  const MethodInfo *v19; // x1
-  int32_t v20; // w2
-  int32_t v21; // w3
-  int32_t v22; // w9
+  int32_t v16; // w2
+  int32_t v17; // w3
+  const MethodInfo *v18; // x1
+  int32_t v19; // w2
+  int32_t v20; // w3
+  int32_t v21; // w9
   ServantStatusBattleListViewItem_c *klass; // x19
 
-  if ( (byte_48E0096 & 1) == 0 )
+  if ( (byte_49F9BF7 & 1) == 0 )
   {
-    sub_1B00CCC(&ScriptAssetListViewItem_TypeInfo, *(_QWORD *)&initMode);
-    byte_48E0096 = 1;
+    sub_1B640C8(&ScriptAssetListViewItem_TypeInfo, *(_QWORD *)&initMode);
+    byte_49F9BF7 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -168,25 +165,25 @@ void __fastcall ScriptAssetListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1B00F28(transform, v15);
+    sub_1B64324(transform);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v17, v18);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v16, v17);
   if ( (unsigned int)v11 <= 3 )
   {
-    v22 = dword_B701B0[v11];
-    this->fields.dispMode = *((_DWORD *)&xmmword_B70DB0 + v11);
-    this->fields.state = v22;
+    v21 = dword_BA25B0[v11];
+    this->fields.dispMode = *((_DWORD *)&xmmword_BA31D0 + v11);
+    this->fields.state = v21;
   }
   if ( !state || dispMode != this->fields.dispMode )
-    ScriptAssetListViewObject__SetupDisp(this, v19);
+    ScriptAssetListViewObject__SetupDisp(this, v18);
   klass = p_callbackFunc->klass;
   if ( p_callbackFunc->klass )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1B00C70(p_callbackFunc, 0, v20, v21);
+    sub_1B6406C(p_callbackFunc, 0, v19, v20);
     ((void (__fastcall *)(Il2CppClass *, _QWORD))klass->_1.namespaze)(
       klass->_1.element_class,
       *(_QWORD *)&klass->_1.byval_arg.bits);
@@ -195,7 +192,7 @@ void __fastcall ScriptAssetListViewObject__Init(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ScriptAssetListViewObject__Init_33668140(
+void __fastcall ScriptAssetListViewObject__Init_34520404(
         ScriptAssetListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -204,17 +201,17 @@ void __fastcall ScriptAssetListViewObject__Init_33668140(
   float v4; // s0
   int v5; // s1
 
-  if ( !byte_48DD9F1 )
+  if ( !byte_49F7111 )
   {
-    sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_48DD9F1 = 1;
+    sub_1B640C8(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_49F7111 = 1;
   }
   ScriptAssetListViewObject__Init(this, initMode, 0LL, v4, *(UnityEngine_Vector3_o *)&v5, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ScriptAssetListViewObject__Init_33669368(
+void __fastcall ScriptAssetListViewObject__Init_34521632(
         ScriptAssetListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -223,17 +220,17 @@ void __fastcall ScriptAssetListViewObject__Init_33669368(
 {
   int v5; // s1
 
-  if ( !byte_48DD9F1 )
+  if ( !byte_49F7111 )
   {
-    sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_48DD9F1 = 1;
+    sub_1B640C8(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_49F7111 = 1;
   }
   ScriptAssetListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ScriptAssetListViewObject__Init_33669452(
+void __fastcall ScriptAssetListViewObject__Init_34521716(
         ScriptAssetListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -242,10 +239,10 @@ void __fastcall ScriptAssetListViewObject__Init_33669452(
   float v4; // s0
   int v5; // s1
 
-  if ( !byte_48DD9F1 )
+  if ( !byte_49F7111 )
   {
-    sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_48DD9F1 = 1;
+    sub_1B640C8(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_49F7111 = 1;
   }
   ScriptAssetListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
 }
@@ -261,11 +258,11 @@ void __fastcall ScriptAssetListViewObject__OnDestroy(ScriptAssetListViewObject_o
   int32_t v8; // w2
   int32_t v9; // w3
 
-  if ( (byte_48E0093 & 1) == 0 )
+  if ( (byte_49F9BF4 & 1) == 0 )
   {
-    sub_1B00CCC(&NGUITools_TypeInfo, method);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v3);
-    byte_48E0093 = 1;
+    sub_1B640C8(&NGUITools_TypeInfo, method);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v3);
+    byte_49F9BF4 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (ServantStatusBattleListViewItem_o *)&this->fields.dragObject;
@@ -279,7 +276,7 @@ void __fastcall ScriptAssetListViewObject__OnDestroy(ScriptAssetListViewObject_o
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0LL);
     p_dragObject->klass = 0LL;
-    sub_1B00C70(p_dragObject, 0, v8, v9);
+    sub_1B6406C(p_dragObject, 0, v8, v9);
   }
 }
 
@@ -291,7 +288,7 @@ void __fastcall ScriptAssetListViewObject__SetItem(
         const MethodInfo *method)
 {
   this->fields.state = 0;
-  ListViewObject__SetItem_39462468((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_40419096((ListViewObject_o *)this, item, seed, 0LL);
 }
 
 
@@ -302,15 +299,14 @@ void __fastcall ScriptAssetListViewObject__SetupDisp(ScriptAssetListViewObject_o
   __int64 methodPtr_low; // x10
   bool v6; // w1
   UnityEngine_Object_o *itemDraw; // x21
-  __int64 v8; // x1
-  const MethodInfo *v9; // x3
-  ScriptAssetListViewItemDraw_o *v10; // x0
+  const MethodInfo *v8; // x3
+  ScriptAssetListViewItemDraw_o *v9; // x0
 
-  if ( (byte_48E0097 & 1) == 0 )
+  if ( (byte_49F9BF8 & 1) == 0 )
   {
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
-    sub_1B00CCC(&ScriptAssetListViewItem_TypeInfo, v3);
-    byte_48E0097 = 1;
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, method);
+    sub_1B640C8(&ScriptAssetListViewItem_TypeInfo, v3);
+    byte_49F9BF8 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -332,10 +328,10 @@ LABEL_8:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
   {
-    v10 = this->fields.itemDraw;
-    if ( !v10 )
-      sub_1B00F28(0LL, v8);
-    ScriptAssetListViewItemDraw__SetItem(v10, (ScriptAssetListViewItem_o *)linkItem, this->fields.dispMode, v9);
+    v9 = this->fields.itemDraw;
+    if ( !v9 )
+      sub_1B64324(0LL);
+    ScriptAssetListViewItemDraw__SetItem(v9, (ScriptAssetListViewItem_o *)linkItem, this->fields.dispMode, v8);
   }
 }
 
@@ -345,7 +341,7 @@ void __fastcall ScriptAssetListViewObject__Start(ScriptAssetListViewObject_o *th
   const MethodInfo *v2; // x2
 
   if ( !this->fields.state )
-    ScriptAssetListViewObject__Init_33668140(this, 2, v2);
+    ScriptAssetListViewObject__Init_34520404(this, 2, v2);
 }
 
 
@@ -364,10 +360,10 @@ void __fastcall ScriptAssetListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_48E0090 & 1) == 0 )
+  if ( (byte_49F9BF1 & 1) == 0 )
   {
-    sub_1B00CCC(&System_Action_TypeInfo, value);
-    byte_48E0090 = 1;
+    sub_1B640C8(&System_Action_TypeInfo, value);
+    byte_49F9BF1 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -380,13 +376,13 @@ void __fastcall ScriptAssetListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1B3C1BC(p_callbackFunc, v8, v6);
+    v9 = sub_1B9F5B8(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B011E8(v8);
+  sub_1B645E4(v8);
   ScriptAssetListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -405,10 +401,10 @@ void __fastcall ScriptAssetListViewObject__remove_callbackFunc(
   ScriptAssetListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_48E0091 & 1) == 0 )
+  if ( (byte_49F9BF2 & 1) == 0 )
   {
-    sub_1B00CCC(&System_Action_TypeInfo, value);
-    byte_48E0091 = 1;
+    sub_1B640C8(&System_Action_TypeInfo, value);
+    byte_49F9BF2 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -421,12 +417,12 @@ void __fastcall ScriptAssetListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1B3C1BC(p_callbackFunc, v8, v6);
+    v9 = sub_1B9F5B8(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B011E8(v8);
+  sub_1B645E4(v8);
   ScriptAssetListViewObject__Awake(v11, v12);
 }

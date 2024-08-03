@@ -13,26 +13,26 @@ WarBoardUserWallData_o *__fastcall WarBoardUserWallData__FromJson(System_String_
   __int64 v7; // x1
   __int64 v8; // x8
 
-  if ( (byte_48E070A & 1) == 0 )
+  if ( (byte_49FA272 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_JsonManager_DeserializeArray_WarBoardUserWallData___, method);
-    sub_1B00CCC(&JsonManager_TypeInfo, v3);
-    sub_1B00CCC(&StringLiteral_15793/*"[{0}]"*/, v4);
-    byte_48E070A = 1;
+    sub_1B640C8(&Method_JsonManager_DeserializeArray_WarBoardUserWallData___, method);
+    sub_1B640C8(&JsonManager_TypeInfo, v3);
+    sub_1B640C8(&StringLiteral_15956/*"[{0}]"*/, v4);
+    byte_49FA272 = 1;
   }
-  v5 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_15793/*"[{0}]"*/, (Il2CppObject *)json, 0LL);
+  v5 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_15956/*"[{0}]"*/, (Il2CppObject *)json, 0LL);
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   result = (WarBoardUserWallData_o *)JsonManager__DeserializeArray_object_(
                                        v5,
-                                       (const MethodInfo_2DB84AC *)Method_JsonManager_DeserializeArray_WarBoardUserWallData___);
+                                       (const MethodInfo_2E9EEC0 *)Method_JsonManager_DeserializeArray_WarBoardUserWallData___);
   if ( result )
   {
     v8 = *(_QWORD *)&result->fields.squareIndex;
     if ( v8 )
     {
       if ( !(_DWORD)v8 )
-        sub_1B00F30(result, v7);
+        sub_1B6432C(result, v7);
       return (WarBoardUserWallData_o *)result[1].klass;
     }
     else
@@ -52,7 +52,7 @@ void __fastcall WarBoardUserWallData__SetSaveData(
   int breakPoint; // w8
 
   if ( !saveData )
-    sub_1B00F28(this, 0LL);
+    sub_1B64324(this);
   breakPoint = saveData->fields.breakPoint;
   this->fields.defeatPoint = breakPoint;
   if ( breakPoint >= 1 )
@@ -62,10 +62,10 @@ void __fastcall WarBoardUserWallData__SetSaveData(
 
 System_String_o *__fastcall WarBoardUserWallData__ToJson(WarBoardUserWallData_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E0709 & 1) == 0 )
+  if ( (byte_49FA271 & 1) == 0 )
   {
-    sub_1B00CCC(&JsonManager_TypeInfo, method);
-    byte_48E0709 = 1;
+    sub_1B640C8(&JsonManager_TypeInfo, method);
+    byte_49FA271 = 1;
   }
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);

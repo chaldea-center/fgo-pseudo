@@ -10,6 +10,6 @@ BattleServantData_array *__fastcall ReactTaskTargetEnemy__TargetServants(
         const MethodInfo *method)
 {
   if ( !data )
-    sub_1B00F28(this, 0LL);
+    sub_1B64324(this);
   return BattleData__getFieldEnemyServantList(data, 1, 0LL);
 }

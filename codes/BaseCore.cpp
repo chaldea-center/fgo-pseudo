@@ -17,7 +17,7 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o __fastcall BaseCore__Crea
         float x,
         float y,
         float z,
-        const MethodInfo_2D4D57C *method)
+        const MethodInfo_2E2366C *method)
 {
   __int64 v6; // x3
   __int64 v7; // x20
@@ -30,31 +30,30 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o __fastcall BaseCore__Crea
   UnityEngine_GameObject_o *mEarthPointRoot; // x1
   UnityEngine_GameObject_o *v20; // x23
   System_String_o *v21; // x0
-  __int64 v22; // x1
   UnityEngine_Object_o *transform; // x24
-  System_String_o *v24; // x0
-  __int64 *v25; // x1
-  __int64 v26; // x0
-  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v27; // x0 OVERLAPPED
-  void *v28; // x1
-  _BYTE v29[12]; // [xsp+0h] [xbp-38h] BYREF
-  int32_t v30; // [xsp+Ch] [xbp-2Ch] BYREF
-  __int64 v31[2]; // [xsp+10h] [xbp-28h] BYREF
+  System_String_o *v23; // x0
+  __int64 *v24; // x1
+  __int64 v25; // x0
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v26; // x0 OVERLAPPED
+  void *v27; // x1
+  _BYTE v28[12]; // [xsp+0h] [xbp-38h] BYREF
+  int32_t v29; // [xsp+Ch] [xbp-2Ch] BYREF
+  __int64 v30[2]; // [xsp+10h] [xbp-28h] BYREF
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o result; // 0:x0.16
 
   v7 = v6;
-  v31[1] = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
-  v30 = warId;
+  v30[1] = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
+  v29 = warId;
   v10 = *(_QWORD *)(v6 + 56);
   if ( !v10 )
   {
-    sub_1B00CCC(&Method_UnityEngine_Object_Instantiate_GameObject___, *(_QWORD *)&warId);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v14);
-    sub_1B00CCC(&StringLiteral_5743/*"EarthPoint_"*/, v15);
+    sub_1B640C8(&Method_UnityEngine_Object_Instantiate_GameObject___, *(_QWORD *)&warId);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v14);
+    sub_1B640C8(&StringLiteral_5777/*"EarthPoint_"*/, v15);
     v10 = *(_QWORD *)(v7 + 56);
     if ( !v10 )
     {
-      sub_1B52C04(v7);
+      sub_1BB6000(v7);
       v10 = *(_QWORD *)(v7 + 56);
     }
   }
@@ -64,35 +63,35 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o __fastcall BaseCore__Crea
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v18 = UnityEngine_Object__Instantiate_object_(
           mEarthPointPrefab,
-          (const MethodInfo_2DD5AE8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+          (const MethodInfo_2EBBCA0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   mEarthPointRoot = this->fields.mEarthPointRoot;
   v20 = (UnityEngine_GameObject_o *)v18;
-  GameObjectExtensions__SetParent_32541180((UnityEngine_GameObject_o *)v18, mEarthPointRoot, 0LL);
+  GameObjectExtensions__SetParent_33381176((UnityEngine_GameObject_o *)v18, mEarthPointRoot, 0LL);
   if ( !v20
     || (transform = (UnityEngine_Object_o *)UnityEngine_GameObject__get_transform(v20, 0LL),
-        v24 = System_Int32__ToString((int32_t)&v30, 0LL),
-        v21 = System_String__Concat_60325748((System_String_o *)StringLiteral_5743/*"EarthPoint_"*/, v24, 0LL),
+        v23 = System_Int32__ToString((int32_t)&v29, 0LL),
+        v21 = System_String__Concat_61375396((System_String_o *)StringLiteral_5777/*"EarthPoint_"*/, v23, 0LL),
         !transform) )
   {
-    sub_1B00F28(v21, v22);
+    sub_1B64324(v21);
   }
   UnityEngine_Object__set_name(transform, v21, 0LL);
-  GameObjectExtensions__SetLocalPosition_32535568(v20, x, y, z, 0LL);
-  v25 = **(__int64 ***)(v7 + 56);
-  v26 = *v25;
-  v31[0] = (__int64)&v29[-((v16 + 15) & 0x1FFFFFFF0LL)];
-  ((void (__fastcall *)(__int64, __int64 *, UnityEngine_GameObject_o *, __int64 *, __int64))v25[2])(
-    v26,
+  GameObjectExtensions__SetLocalPosition_33375564(v20, x, y, z, 0LL);
+  v24 = **(__int64 ***)(v7 + 56);
+  v25 = *v24;
+  v30[0] = (__int64)&v28[-((v16 + 15) & 0x1FFFFFFF0LL)];
+  ((void (__fastcall *)(__int64, __int64 *, UnityEngine_GameObject_o *, __int64 *, __int64))v24[2])(
     v25,
+    v24,
     v20,
-    v31,
-    v31[0]);
-  v27 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
+    v30,
+    v30[0]);
+  v26 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
                                                                     (void *)method,
-                                                                    &v29[-((v16 + 15) & 0x1FFFFFFF0LL)],
+                                                                    &v28[-((v16 + 15) & 0x1FFFFFFF0LL)],
                                                                     v16);
-  result.monitor = v28;
-  result.klass = v27;
+  result.monitor = v27;
+  result.klass = v26;
   return result;
 }
 
@@ -104,7 +103,7 @@ Il2CppObject *__fastcall BaseCore__CreateEarthPoint_object_(
         float x,
         float y,
         float z,
-        const MethodInfo_2D4D448 *method)
+        const MethodInfo_2E23538 *method)
 {
   __int64 v11; // x1
   __int64 v12; // x1
@@ -113,42 +112,41 @@ Il2CppObject *__fastcall BaseCore__CreateEarthPoint_object_(
   UnityEngine_GameObject_o *mEarthPointRoot; // x1
   UnityEngine_GameObject_o *v16; // x20
   System_String_o *v17; // x0
-  __int64 v18; // x1
   UnityEngine_Object_o *transform; // x21
-  System_String_o *v20; // x0
-  int32_t v22; // [xsp+Ch] [xbp-34h] BYREF
+  System_String_o *v19; // x0
+  int32_t v21; // [xsp+Ch] [xbp-34h] BYREF
 
-  v22 = warId;
+  v21 = warId;
   if ( !method->rgctx_data )
   {
-    sub_1B00CCC(&Method_UnityEngine_Object_Instantiate_GameObject___, *(_QWORD *)&warId);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v11);
-    sub_1B00CCC(&StringLiteral_5743/*"EarthPoint_"*/, v12);
+    sub_1B640C8(&Method_UnityEngine_Object_Instantiate_GameObject___, *(_QWORD *)&warId);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v11);
+    sub_1B640C8(&StringLiteral_5777/*"EarthPoint_"*/, v12);
     if ( !method->rgctx_data )
-      sub_1B52C04(method);
+      sub_1BB6000(method);
   }
   mEarthPointPrefab = (Il2CppObject *)this->fields.mEarthPointPrefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v14 = UnityEngine_Object__Instantiate_object_(
           mEarthPointPrefab,
-          (const MethodInfo_2DD5AE8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+          (const MethodInfo_2EBBCA0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   mEarthPointRoot = this->fields.mEarthPointRoot;
   v16 = (UnityEngine_GameObject_o *)v14;
-  GameObjectExtensions__SetParent_32541180((UnityEngine_GameObject_o *)v14, mEarthPointRoot, 0LL);
+  GameObjectExtensions__SetParent_33381176((UnityEngine_GameObject_o *)v14, mEarthPointRoot, 0LL);
   if ( !v16
     || (transform = (UnityEngine_Object_o *)UnityEngine_GameObject__get_transform(v16, 0LL),
-        v20 = System_Int32__ToString((int32_t)&v22, 0LL),
-        v17 = System_String__Concat_60325748((System_String_o *)StringLiteral_5743/*"EarthPoint_"*/, v20, 0LL),
+        v19 = System_Int32__ToString((int32_t)&v21, 0LL),
+        v17 = System_String__Concat_61375396((System_String_o *)StringLiteral_5777/*"EarthPoint_"*/, v19, 0LL),
         !transform) )
   {
-    sub_1B00F28(v17, v18);
+    sub_1B64324(v17);
   }
   UnityEngine_Object__set_name(transform, v17, 0LL);
-  GameObjectExtensions__SetLocalPosition_32535568(v16, x, y, z, 0LL);
+  GameObjectExtensions__SetLocalPosition_33375564(v16, x, y, z, 0LL);
   return UnityEngine_GameObject__GetComponent_object_(
            v16,
-           (const MethodInfo_2DADE08 *)method->rgctx_data->_0_UnityEngine_GameObject_GetComponent_T_);
+           (const MethodInfo_2E87ED8 *)method->rgctx_data->_0_UnityEngine_GameObject_GetComponent_T_);
 }
 
 
@@ -179,7 +177,7 @@ void __fastcall BaseCore__EndSlideServant(BaseCore_o *this, const MethodInfo *me
       }
     }
 LABEL_8:
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   }
 }
 
@@ -229,19 +227,19 @@ BaseEarthPoint_o *__fastcall BaseCore__GetEarthPoint(BaseCore_o *this, int32_t w
   int32_t v11; // [xsp+Ch] [xbp-14h] BYREF
 
   v11 = warId;
-  if ( (byte_48DF443 & 1) == 0 )
+  if ( (byte_49F8F85 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_UnityEngine_GameObject_GetComponent_BaseEarthPoint___, *(_QWORD *)&warId);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v4);
-    sub_1B00CCC(&StringLiteral_5743/*"EarthPoint_"*/, v5);
-    byte_48DF443 = 1;
+    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponent_BaseEarthPoint___, *(_QWORD *)&warId);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v4);
+    sub_1B640C8(&StringLiteral_5777/*"EarthPoint_"*/, v5);
+    byte_49F8F85 = 1;
   }
   result = (BaseEarthPoint_o *)this->fields.mEarthPointRoot;
   if ( !result )
     goto LABEL_12;
   transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)result, 0LL);
   v8 = System_Int32__ToString((int32_t)&v11, 0LL);
-  result = (BaseEarthPoint_o *)System_String__Concat_60325748((System_String_o *)StringLiteral_5743/*"EarthPoint_"*/, v8, 0LL);
+  result = (BaseEarthPoint_o *)System_String__Concat_61375396((System_String_o *)StringLiteral_5777/*"EarthPoint_"*/, v8, 0LL);
   if ( !transform )
     goto LABEL_12;
   v9 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(transform, (System_String_o *)result, 0LL);
@@ -257,10 +255,10 @@ BaseEarthPoint_o *__fastcall BaseCore__GetEarthPoint(BaseCore_o *this, int32_t w
       if ( result )
         return (BaseEarthPoint_o *)UnityEngine_GameObject__GetComponent_object_(
                                      (UnityEngine_GameObject_o *)result,
-                                     (const MethodInfo_2DADE08 *)Method_UnityEngine_GameObject_GetComponent_BaseEarthPoint___);
+                                     (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_BaseEarthPoint___);
     }
 LABEL_12:
-    sub_1B00F28(result, *(_QWORD *)&warId);
+    sub_1B64324(result);
   }
   return result;
 }
@@ -283,12 +281,11 @@ void __fastcall BaseCore__HideEarthPoint(BaseCore_o *this, int32_t warId, const 
 {
   UnityEngine_Object_o *EarthPoint; // x19
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v7; // x1
 
-  if ( (byte_48DF445 & 1) == 0 )
+  if ( (byte_49F8F87 & 1) == 0 )
   {
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&warId);
-    byte_48DF445 = 1;
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, *(_QWORD *)&warId);
+    byte_49F8F87 = 1;
   }
   EarthPoint = (UnityEngine_Object_o *)BaseCore__GetEarthPoint(this, warId, method);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -299,7 +296,7 @@ void __fastcall BaseCore__HideEarthPoint(BaseCore_o *this, int32_t warId, const 
     if ( !EarthPoint
       || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)EarthPoint, 0LL)) == 0LL )
     {
-      sub_1B00F28(gameObject, v7);
+      sub_1B64324(gameObject);
     }
     UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   }
@@ -310,10 +307,10 @@ bool __fastcall BaseCore__IsWarOpen(BaseCore_o *this, MapControl_WarInfo_o *warI
 {
   Il2CppObject *Instance; // x20
 
-  if ( (byte_48DF444 & 1) == 0 )
+  if ( (byte_49F8F86 & 1) == 0 )
   {
-    this = (BaseCore_o *)sub_1B00CCC(&Method_SingletonTemplate_QuestTree__get_Instance__, warInfo);
-    byte_48DF444 = 1;
+    this = (BaseCore_o *)sub_1B640C8(&Method_SingletonTemplate_QuestTree__get_Instance__, warInfo);
+    byte_49F8F86 = 1;
   }
   if ( !warInfo )
     goto LABEL_9;
@@ -322,12 +319,12 @@ bool __fastcall BaseCore__IsWarOpen(BaseCore_o *this, MapControl_WarInfo_o *warI
     goto LABEL_9;
   if ( WarEntity__IsEvent((WarEntity_o *)this, 0LL) )
   {
-    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_35FC010 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_36EC45C *)Method_SingletonTemplate_QuestTree__get_Instance__);
     this = (BaseCore_o *)MapControl_WarInfo__GetMine(warInfo, 0LL);
     if ( Instance )
-      return QuestTree__IsActiveEventWar_32912392((QuestTree_o *)Instance, (WarEntity_o *)this, 0LL);
+      return QuestTree__IsActiveEventWar_33825952((QuestTree_o *)Instance, (WarEntity_o *)this, 0LL);
 LABEL_9:
-    sub_1B00F28(this, warInfo);
+    sub_1B64324(this);
   }
   return (unsigned int)(MapControl_WarInfo__GetStatus(warInfo, 0LL) - 1) < 2;
 }
@@ -359,19 +356,18 @@ void __fastcall BaseCore__SetFocusEarthPoint(BaseCore_o *this, int32_t warId, co
 
   EarthPoint = BaseCore__GetEarthPoint(this, warId, method);
   this->fields.mFocusEarthPoint = EarthPoint;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.mFocusEarthPoint, (int32_t)EarthPoint, v5, v6);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.mFocusEarthPoint, (int32_t)EarthPoint, v5, v6);
 }
 
 
 void __fastcall BaseCore__SetRotateY_PointInitAngle(BaseCore_o *this, const MethodInfo *method)
 {
   UnityEngine_Transform_o *transform; // x0
-  __int64 v4; // x1
   float PointInitAngle_k__BackingField; // s10
   float x; // s8
   float z; // s9
   UnityEngine_Vector3_o localEulerAngles; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v8; // 0:s0.4,4:s1.4,8:s2.4
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform
@@ -381,12 +377,12 @@ void __fastcall BaseCore__SetRotateY_PointInitAngle(BaseCore_o *this, const Meth
         z = localEulerAngles.fields.z,
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1B00F28(transform, v4);
+    sub_1B64324(transform);
   }
-  v9.fields.x = x;
-  v9.fields.z = z;
-  v9.fields.y = PointInitAngle_k__BackingField;
-  UnityEngine_Transform__set_localEulerAngles(transform, v9, 0LL);
+  v8.fields.x = x;
+  v8.fields.z = z;
+  v8.fields.y = PointInitAngle_k__BackingField;
+  UnityEngine_Transform__set_localEulerAngles(transform, v8, 0LL);
 }
 
 
@@ -404,27 +400,26 @@ void __fastcall BaseCore__SetTerminalData(BaseCore_o *this, const MethodInfo *me
   struct TerminalSceneComponent_o **p_mInstance; // x8
   struct TerminalSceneComponent_o *v7; // x1
   UnityEngine_Component_o *mTerminalMap; // x0
-  __int64 v9; // x1
   struct TerminalSceneComponent_o *mTerminalScene; // x8
   struct UnityEngine_GameObject_o *gameObject; // x0
-  int32_t v12; // w2
-  int32_t v13; // w3
-  int32_t v14; // w2
-  int32_t v15; // w3
-  struct TerminalSceneComponent_o *v16; // x8
+  int32_t v11; // w2
+  int32_t v12; // w3
+  int32_t v13; // w2
+  int32_t v14; // w3
+  struct TerminalSceneComponent_o *v15; // x8
   struct UnityEngine_Camera_o *mEarthEffCamera; // x1
 
-  if ( (byte_48DF442 & 1) == 0 )
+  if ( (byte_49F8F84 & 1) == 0 )
   {
-    sub_1B00CCC(&TerminalSceneComponent_TypeInfo, method);
-    byte_48DF442 = 1;
+    sub_1B640C8(&TerminalSceneComponent_TypeInfo, method);
+    byte_49F8F84 = 1;
   }
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_48DDF7C )
+  if ( !byte_49F76BD )
   {
-    sub_1B00CCC(&TerminalSceneComponent_TypeInfo, method);
-    byte_48DDF7C = 1;
+    sub_1B640C8(&TerminalSceneComponent_TypeInfo, method);
+    byte_49F76BD = 1;
   }
   v5 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -435,20 +430,20 @@ void __fastcall BaseCore__SetTerminalData(BaseCore_o *this, const MethodInfo *me
   p_mInstance = &v5->static_fields->mInstance;
   v7 = *p_mInstance;
   this->fields.mTerminalScene = *p_mInstance;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.mTerminalScene, (int32_t)v7, v2, v3);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.mTerminalScene, (int32_t)v7, v2, v3);
   mTerminalScene = this->fields.mTerminalScene;
   if ( !mTerminalScene
     || (mTerminalMap = (UnityEngine_Component_o *)mTerminalScene->fields.mTerminalMap) == 0LL
     || (gameObject = UnityEngine_Component__get_gameObject(mTerminalMap, 0LL),
         this->fields.mTerminalMap = gameObject,
-        sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.mTerminalMap, (int32_t)gameObject, v12, v13),
-        (v16 = this->fields.mTerminalScene) == 0LL) )
+        sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.mTerminalMap, (int32_t)gameObject, v11, v12),
+        (v15 = this->fields.mTerminalScene) == 0LL) )
   {
-    sub_1B00F28(mTerminalMap, v9);
+    sub_1B64324(mTerminalMap);
   }
-  mEarthEffCamera = v16->fields.mEarthEffCamera;
+  mEarthEffCamera = v15->fields.mEarthEffCamera;
   this->fields.mEarthEffCamera = mEarthEffCamera;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.mEarthEffCamera, (int32_t)mEarthEffCamera, v14, v15);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.mEarthEffCamera, (int32_t)mEarthEffCamera, v13, v14);
 }
 
 

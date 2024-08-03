@@ -2,7 +2,7 @@ void __fastcall PointGroupNameEffectSubComponent___ctor(
         PointGroupNameEffectSubComponent_o *this,
         const MethodInfo *method)
 {
-  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
+  EffectSubComponent___ctor((EffectSubComponent_o *)this, 0LL);
 }
 
 
@@ -23,13 +23,13 @@ void __fastcall PointGroupNameEffectSubComponent__RecvParam(
   int32_t v14; // w21
   EventPointGroupEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_48E3AE4 & 1) == 0 )
+  if ( (byte_49FD791 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataManager_GetMasterData_EventPointGroupMaster___, param);
-    sub_1B00CCC(&RaceResultEffectParam_TypeInfo, v5);
-    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_1B00CCC(&StringLiteral_1/*""*/, v7);
-    byte_48E3AE4 = 1;
+    sub_1B640C8(&Method_DataManager_GetMasterData_EventPointGroupMaster___, param);
+    sub_1B640C8(&RaceResultEffectParam_TypeInfo, v5);
+    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    sub_1B640C8(&StringLiteral_1/*""*/, v7);
+    byte_49FD791 = 1;
   }
   entity = 0LL;
   if ( param )
@@ -48,12 +48,12 @@ void __fastcall PointGroupNameEffectSubComponent__RecvParam(
           {
             v13 = *((_DWORD *)monitor + 8);
             v14 = *((_DWORD *)monitor + 12);
-            Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+            Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
             if ( !Instance )
               goto LABEL_18;
             Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                           Instance,
-                                          (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
+                                          (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
             if ( !Instance )
               goto LABEL_18;
             Instance = (DataManager_o *)EventPointGroupMaster__TryGetEntity(
@@ -74,7 +74,7 @@ void __fastcall PointGroupNameEffectSubComponent__RecvParam(
                 }
               }
 LABEL_18:
-              sub_1B00F28(Instance, param);
+              sub_1B64324(Instance);
             }
           }
         }

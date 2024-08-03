@@ -1,14 +1,14 @@
 void __fastcall UserGachaExtraCountMaster___ctor(UserGachaExtraCountMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E3484 & 1) == 0 )
+  if ( (byte_49FD0F1 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataMasterBase_UserGachaExtraCountMaster__UserGachaExtraCountEntity__string___ctor__, method);
-    byte_48E3484 = 1;
+    sub_1B640C8(&Method_DataMasterBase_UserGachaExtraCountMaster__UserGachaExtraCountEntity__string___ctor__, method);
+    byte_49FD0F1 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    278,
-    (const MethodInfo_2FE6D64 *)Method_DataMasterBase_UserGachaExtraCountMaster__UserGachaExtraCountEntity__string___ctor__);
+    279,
+    (const MethodInfo_30D41BC *)Method_DataMasterBase_UserGachaExtraCountMaster__UserGachaExtraCountEntity__string___ctor__);
 }
 
 
@@ -21,18 +21,18 @@ UserGachaExtraCountEntity_o *__fastcall UserGachaExtraCountMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_48E3482 & 1) == 0 )
+  if ( (byte_49FD0EF & 1) == 0 )
   {
-    sub_1B00CCC(
+    sub_1B640C8(
       &Method_DataMasterBase_UserGachaExtraCountMaster__UserGachaExtraCountEntity__string__GetEntity__,
       userId);
-    byte_48E3482 = 1;
+    byte_49FD0EF = 1;
   }
   PK = (Il2CppObject *)UserGachaExtraCountEntity__CreatePK(userId, extraGroupId, *(const MethodInfo **)&extraGroupId);
   return (UserGachaExtraCountEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                           PK,
-                                          (const MethodInfo_2FE6DA4 *)Method_DataMasterBase_UserGachaExtraCountMaster__UserGachaExtraCountEntity__string__GetEntity__);
+                                          (const MethodInfo_30D41FC *)Method_DataMasterBase_UserGachaExtraCountMaster__UserGachaExtraCountEntity__string__GetEntity__);
 }
 
 
@@ -45,19 +45,19 @@ bool __fastcall UserGachaExtraCountMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_48E3483 & 1) == 0 )
+  if ( (byte_49FD0F0 & 1) == 0 )
   {
-    sub_1B00CCC(
+    sub_1B640C8(
       &Method_DataMasterBase_UserGachaExtraCountMaster__UserGachaExtraCountEntity__string__TryGetEntity__,
       entity);
-    byte_48E3483 = 1;
+    byte_49FD0F0 = 1;
   }
   PK = (Il2CppObject *)UserGachaExtraCountEntity__CreatePK(userId, extraGroupId, (const MethodInfo *)userId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_2FE6DF4 *)Method_DataMasterBase_UserGachaExtraCountMaster__UserGachaExtraCountEntity__string__TryGetEntity__);
+           (const MethodInfo_30D424C *)Method_DataMasterBase_UserGachaExtraCountMaster__UserGachaExtraCountEntity__string__TryGetEntity__);
 }
 
 
@@ -76,20 +76,20 @@ int32_t __fastcall UserGachaExtraCountMaster__getExtraCount(
   int32_t *Item; // x0
   __int64 methodPtr_low; // x10
 
-  if ( (byte_48E3485 & 1) == 0 )
+  if ( (byte_49FD0F2 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&extraGroupId);
-    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
-    sub_1B00CCC(&UserGachaExtraCountEntity_TypeInfo, v6);
-    byte_48E3485 = 1;
+    sub_1B640C8(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&extraGroupId);
+    sub_1B640C8(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
+    sub_1B640C8(&UserGachaExtraCountEntity_TypeInfo, v6);
+    byte_49FD0F2 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
 LABEL_14:
-    sub_1B00F28(list, *(_QWORD *)&extraGroupId);
+    sub_1B64324(list);
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_2F836B0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_3070B08 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count < 1 )
     return 0;
   v9 = Count;
@@ -102,7 +102,7 @@ LABEL_14:
     Item = (int32_t *)System_Collections_ObjectModel_Collection_object___get_Item(
                         list,
                         v10,
-                        (const MethodInfo_2F83740 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                        (const MethodInfo_3070B98 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
     if ( Item )
     {
       methodPtr_low = LOBYTE(UserGachaExtraCountEntity_TypeInfo->vtable._0_Equals.methodPtr);

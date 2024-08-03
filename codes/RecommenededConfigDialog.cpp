@@ -9,19 +9,19 @@ void __fastcall RecommenededConfigDialog___ctor(RecommenededConfigDialog_o *this
   int32_t v9; // w2
   int32_t v10; // w3
 
-  if ( (byte_48E5FF9 & 1) == 0 )
+  if ( (byte_49FFD11 & 1) == 0 )
   {
-    sub_1B00CCC(&BaseDialog_TypeInfo, method);
-    sub_1B00CCC(&StringLiteral_17233/*"btn_bg_04"*/, v5);
-    sub_1B00CCC(&StringLiteral_17232/*"btn_bg_03"*/, v6);
-    byte_48E5FF9 = 1;
+    sub_1B640C8(&BaseDialog_TypeInfo, method);
+    sub_1B640C8(&StringLiteral_17401/*"btn_bg_04"*/, v5);
+    sub_1B640C8(&StringLiteral_17400/*"btn_bg_03"*/, v6);
+    byte_49FFD11 = 1;
   }
-  v7 = StringLiteral_17232/*"btn_bg_03"*/;
-  this->fields.ON_BTN_SPRITE_NAME = (struct System_String_o *)StringLiteral_17232/*"btn_bg_03"*/;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.ON_BTN_SPRITE_NAME, v7, v2, v3);
-  v8 = StringLiteral_17233/*"btn_bg_04"*/;
-  this->fields.OFF_BTN_SPRITE_NAME = (struct System_String_o *)StringLiteral_17233/*"btn_bg_04"*/;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.OFF_BTN_SPRITE_NAME, v8, v9, v10);
+  v7 = StringLiteral_17400/*"btn_bg_03"*/;
+  this->fields.ON_BTN_SPRITE_NAME = (struct System_String_o *)StringLiteral_17400/*"btn_bg_03"*/;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.ON_BTN_SPRITE_NAME, v7, v2, v3);
+  v8 = StringLiteral_17401/*"btn_bg_04"*/;
+  this->fields.OFF_BTN_SPRITE_NAME = (struct System_String_o *)StringLiteral_17401/*"btn_bg_04"*/;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.OFF_BTN_SPRITE_NAME, v8, v9, v10);
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0LL);
@@ -32,11 +32,11 @@ void __fastcall RecommenededConfigDialog__Close(RecommenededConfigDialog_o *this
 {
   const MethodInfo *v2; // x2
 
-  RecommenededConfigDialog__Close_43666240(this, 0LL, v2);
+  RecommenededConfigDialog__Close_44687120(this, 0LL, v2);
 }
 
 
-void __fastcall RecommenededConfigDialog__Close_43666240(
+void __fastcall RecommenededConfigDialog__Close_44687120(
         RecommenededConfigDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -45,26 +45,28 @@ void __fastcall RecommenededConfigDialog__Close_43666240(
   __int64 v6; // x1
   int32_t v7; // w2
   int32_t v8; // w3
-  System_Action_o *v9; // x20
+  __int64 v9; // x1
+  __int64 v10; // x2
+  System_Action_o *v11; // x20
 
-  if ( (byte_48E5FF2 & 1) == 0 )
+  if ( (byte_49FFD0A & 1) == 0 )
   {
-    sub_1B00CCC(&System_Action_TypeInfo, callback);
-    sub_1B00CCC(&Method_RecommenededConfigDialog_EndClose__, v6);
-    byte_48E5FF2 = 1;
+    sub_1B640C8(&System_Action_TypeInfo, callback);
+    sub_1B640C8(&Method_RecommenededConfigDialog_EndClose__, v6);
+    byte_49FFD0A = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)callback,
     (int32_t)method,
     v3);
   this->fields.state = 3;
   this->fields.closeFunc = 0LL;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.closeFunc, 0, v7, v8);
-  v9 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
-  System_Action___ctor(v9, (Il2CppObject *)this, Method_RecommenededConfigDialog_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v9, 0LL);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.closeFunc, 0, v7, v8);
+  v11 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v9, v10);
+  System_Action___ctor(v11, (Il2CppObject *)this, Method_RecommenededConfigDialog_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v11, 0LL);
 }
 
 
@@ -83,7 +85,7 @@ void __fastcall RecommenededConfigDialog__EndClose(RecommenededConfigDialog_o *t
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1B00C70(p_closeCallbackFunc, 0, v3, v4);
+    sub_1B6406C(p_closeCallbackFunc, 0, v3, v4);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v6->fields.m_target)(
       v6->fields.original_method_info,
       *(_QWORD *)&v6->fields.extra_arg);
@@ -100,17 +102,18 @@ void __fastcall RecommenededConfigDialog__EndOpen(RecommenededConfigDialog_o *th
 void __fastcall RecommenededConfigDialog__Init(RecommenededConfigDialog_o *this, const MethodInfo *method)
 {
   UILabel_o *titleLabel; // x0
+  __int64 v4; // x1
   struct UILabel_array *classButtonLabelList; // x8
   int max_length; // w21
-  il2cpp_array_size_t v6; // w22
+  il2cpp_array_size_t v7; // w22
   struct UILabel_array *rarityButtonLabelList; // x8
-  int v8; // w21
-  il2cpp_array_size_t v9; // w22
+  int v9; // w21
+  il2cpp_array_size_t v10; // w22
 
-  if ( (byte_48E5FEE & 1) == 0 )
+  if ( (byte_49FFD06 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_1/*""*/, method);
-    byte_48E5FEE = 1;
+    sub_1B640C8(&StringLiteral_1/*""*/, method);
+    byte_49FFD06 = 1;
   }
   titleLabel = this->fields.titleLabel;
   this->fields.state = 0;
@@ -135,37 +138,37 @@ void __fastcall RecommenededConfigDialog__Init(RecommenededConfigDialog_o *this,
   max_length = classButtonLabelList->max_length;
   if ( max_length >= 1 )
   {
-    v6 = 0;
-    while ( v6 < classButtonLabelList->max_length )
+    v7 = 0;
+    while ( v7 < classButtonLabelList->max_length )
     {
-      titleLabel = classButtonLabelList->m_Items[v6];
+      titleLabel = classButtonLabelList->m_Items[v7];
       if ( !titleLabel )
         goto LABEL_29;
       UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-      if ( max_length == ++v6 )
+      if ( max_length == ++v7 )
         goto LABEL_15;
       classButtonLabelList = this->fields.classButtonLabelList;
       if ( !classButtonLabelList )
         goto LABEL_29;
     }
 LABEL_30:
-    sub_1B00F30(titleLabel, method);
+    sub_1B6432C(titleLabel, v4);
   }
 LABEL_15:
   rarityButtonLabelList = this->fields.rarityButtonLabelList;
   if ( !rarityButtonLabelList )
     goto LABEL_29;
-  v8 = rarityButtonLabelList->max_length;
-  if ( v8 >= 1 )
+  v9 = rarityButtonLabelList->max_length;
+  if ( v9 >= 1 )
   {
-    v9 = 0;
-    while ( v9 < rarityButtonLabelList->max_length )
+    v10 = 0;
+    while ( v10 < rarityButtonLabelList->max_length )
     {
-      titleLabel = rarityButtonLabelList->m_Items[v9];
+      titleLabel = rarityButtonLabelList->m_Items[v10];
       if ( !titleLabel )
         goto LABEL_29;
       UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-      if ( v8 == ++v9 )
+      if ( v9 == ++v10 )
         goto LABEL_23;
       rarityButtonLabelList = this->fields.rarityButtonLabelList;
       if ( !rarityButtonLabelList )
@@ -188,7 +191,7 @@ LABEL_23:
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
 LABEL_29:
-    sub_1B00F28(titleLabel, method);
+    sub_1B64324(titleLabel);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -200,24 +203,23 @@ void __fastcall RecommenededConfigDialog__OnClickCancel(RecommenededConfigDialog
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
   __int64 v5; // x0
-  __int64 v6; // x1
   struct RecommenededConfigDialog_ClickDelegate_o *closeFunc; // x8
 
-  if ( (byte_48E5FF8 & 1) == 0 )
+  if ( (byte_49FFD10 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_RecommenededConfigDialog_OnClickCancel__, method);
-    byte_48E5FF8 = 1;
+    sub_1B640C8(&Method_RecommenededConfigDialog_OnClickCancel__, method);
+    byte_49FFD10 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_RecommenededConfigDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_RecommenededConfigDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B00CE4(Method_RecommenededConfigDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B640E0(Method_RecommenededConfigDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     closeFunc = this->fields.closeFunc;
     if ( !closeFunc )
-      sub_1B00F28(v5, v6);
+      sub_1B64324(v5);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))closeFunc->fields.m_target)(
       closeFunc->fields.original_method_info,
       0LL,
@@ -242,17 +244,17 @@ void __fastcall RecommenededConfigDialog__OnClickClass(
   int v12; // w8
   struct RecommendedConfigSaveData_o *saveData; // x8
 
-  if ( (byte_48E5FF3 & 1) == 0 )
+  if ( (byte_49FFD0B & 1) == 0 )
   {
-    sub_1B00CCC(&Method_RecommenededConfigDialog_OnClickClass__, *(_QWORD *)&kind);
-    byte_48E5FF3 = 1;
+    sub_1B640C8(&Method_RecommenededConfigDialog_OnClickClass__, *(_QWORD *)&kind);
+    byte_49FFD0B = 1;
   }
   if ( this->fields.state == 2 )
   {
     v5 = Method_RecommenededConfigDialog_OnClickClass__;
     if ( (*((_BYTE *)Method_RecommenededConfigDialog_OnClickClass__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B00CE4(Method_RecommenededConfigDialog_OnClickClass__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v5, v5[4]);
+      v5 = (_QWORD *)sub_1B640E0(Method_RecommenededConfigDialog_OnClickClass__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1B640AC(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0LL);
     classButtonList = this->fields.classButtonList;
     if ( classButtonList )
@@ -271,7 +273,7 @@ LABEL_11:
         return;
       }
     }
-    sub_1B00F28(v7, v8);
+    sub_1B64324(v7);
   }
 }
 
@@ -287,24 +289,24 @@ void __fastcall RecommenededConfigDialog__OnClickClear(RecommenededConfigDialog_
   struct System_Collections_Generic_List_int__o *selectRarityList; // x8
   int v10; // w9
 
-  if ( (byte_48E5FF6 & 1) == 0 )
+  if ( (byte_49FFD0E & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_List_int__Clear__, method);
-    sub_1B00CCC(&Method_RecommenededConfigDialog_OnClickClear__, v3);
-    byte_48E5FF6 = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_List_int__Clear__, method);
+    sub_1B640C8(&Method_RecommenededConfigDialog_OnClickClear__, v3);
+    byte_49FFD0E = 1;
   }
   if ( this->fields.state == 2 )
   {
     v4 = Method_RecommenededConfigDialog_OnClickClear__;
     if ( (*((_BYTE *)Method_RecommenededConfigDialog_OnClickClear__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1B00CE4(Method_RecommenededConfigDialog_OnClickClear__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v4, v4[4]);
+      v4 = (_QWORD *)sub_1B640E0(Method_RecommenededConfigDialog_OnClickClear__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1B640AC(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0LL);
     saveData = this->fields.saveData;
     if ( !saveData
       || (selectRarityList = saveData->fields.selectRarityList, saveData->fields.selectClass = 0, !selectRarityList) )
     {
-      sub_1B00F28(v6, v7);
+      sub_1B64324(v6);
     }
     v10 = selectRarityList->fields._version + 1;
     selectRarityList->fields._size = 0;
@@ -320,24 +322,23 @@ void __fastcall RecommenededConfigDialog__OnClickDecide(RecommenededConfigDialog
   __int64 v4; // x1
   _QWORD *v5; // x0
   System_Reflection_MethodBase_o *v6; // x0
-  __int64 v7; // x1
   struct RecommendedConfigSaveData_o *saveData; // x0
   struct System_Collections_Generic_List_int__o *selectRarityList; // x8
   struct RecommenededConfigDialog_ClickDelegate_o *closeFunc; // x8
 
-  if ( (byte_48E5FF7 & 1) == 0 )
+  if ( (byte_49FFD0F & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_List_int__Sort__, method);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_int__get_Count__, v3);
-    sub_1B00CCC(&Method_RecommenededConfigDialog_OnClickDecide__, v4);
-    byte_48E5FF7 = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_List_int__Sort__, method);
+    sub_1B640C8(&Method_System_Collections_Generic_List_int__get_Count__, v3);
+    sub_1B640C8(&Method_RecommenededConfigDialog_OnClickDecide__, v4);
+    byte_49FFD0F = 1;
   }
   if ( this->fields.state == 2 )
   {
     v5 = Method_RecommenededConfigDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_RecommenededConfigDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B00CE4(Method_RecommenededConfigDialog_OnClickDecide__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v5, v5[4]);
+      v5 = (_QWORD *)sub_1B640E0(Method_RecommenededConfigDialog_OnClickDecide__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1B640AC(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0LL);
     saveData = this->fields.saveData;
     if ( !saveData
@@ -345,11 +346,11 @@ void __fastcall RecommenededConfigDialog__OnClickDecide(RecommenededConfigDialog
       || selectRarityList->fields._size >= 1
       && (System_Collections_Generic_List_int___Sort(
             saveData->fields.selectRarityList,
-            (const MethodInfo_33A62F0 *)Method_System_Collections_Generic_List_int__Sort__),
+            (const MethodInfo_34918C0 *)Method_System_Collections_Generic_List_int__Sort__),
           (saveData = this->fields.saveData) == 0LL)
       || (RecommendedConfigSaveData__SaveConfig(saveData, saveData, 0LL), (closeFunc = this->fields.closeFunc) == 0LL) )
     {
-      sub_1B00F28(saveData, v7);
+      sub_1B64324(saveData);
     }
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))closeFunc->fields.m_target)(
       closeFunc->fields.original_method_info,
@@ -371,28 +372,28 @@ void __fastcall RecommenededConfigDialog__OnClickRarity(
   _QWORD *v8; // x0
   System_Reflection_MethodBase_o *v9; // x0
   System_Collections_Generic_List_int__o *selectRarityList; // x0
-  const MethodInfo *v11; // x1
   struct RecommendedConfigSaveData_o *saveData; // x8
+  const MethodInfo *v12; // x1
   struct RecommendedConfigSaveData_o *v13; // x9
   char v14; // w8
   struct System_Int32_array *items; // x8
   _QWORD *v16; // x9
   __int64 size; // x10
 
-  if ( (byte_48E5FF4 & 1) == 0 )
+  if ( (byte_49FFD0C & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_List_int__Add__, *(_QWORD *)&rarity);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_int__Contains__, v5);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_int__Remove__, v6);
-    sub_1B00CCC(&Method_RecommenededConfigDialog_OnClickRarity__, v7);
-    byte_48E5FF4 = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_List_int__Add__, *(_QWORD *)&rarity);
+    sub_1B640C8(&Method_System_Collections_Generic_List_int__Contains__, v5);
+    sub_1B640C8(&Method_System_Collections_Generic_List_int__Remove__, v6);
+    sub_1B640C8(&Method_RecommenededConfigDialog_OnClickRarity__, v7);
+    byte_49FFD0C = 1;
   }
   if ( this->fields.state == 2 )
   {
     v8 = Method_RecommenededConfigDialog_OnClickRarity__;
     if ( (*((_BYTE *)Method_RecommenededConfigDialog_OnClickRarity__ + 83) & 2) != 0 )
-      v8 = (_QWORD *)sub_1B00CE4(Method_RecommenededConfigDialog_OnClickRarity__);
-    v9 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v8, v8[4]);
+      v8 = (_QWORD *)sub_1B640E0(Method_RecommenededConfigDialog_OnClickRarity__);
+    v9 = (System_Reflection_MethodBase_o *)sub_1B640AC(v8, v8[4]);
     OverwriteAssetSoundName__PlaySystemSe(v9, 0, 0LL);
     saveData = this->fields.saveData;
     if ( saveData )
@@ -403,7 +404,7 @@ void __fastcall RecommenededConfigDialog__OnClickRarity(
         selectRarityList = (System_Collections_Generic_List_int__o *)System_Collections_Generic_List_int___Contains(
                                                                        selectRarityList,
                                                                        rarity,
-                                                                       (const MethodInfo_33A4D24 *)Method_System_Collections_Generic_List_int__Contains__);
+                                                                       (const MethodInfo_3490254 *)Method_System_Collections_Generic_List_int__Contains__);
         v13 = this->fields.saveData;
         if ( v13 )
         {
@@ -416,9 +417,9 @@ void __fastcall RecommenededConfigDialog__OnClickRarity(
               System_Collections_Generic_List_int___Remove(
                 selectRarityList,
                 rarity,
-                (const MethodInfo_33A5EA8 *)Method_System_Collections_Generic_List_int__Remove__);
+                (const MethodInfo_3491478 *)Method_System_Collections_Generic_List_int__Remove__);
 LABEL_17:
-              RecommenededConfigDialog__SetButtonState(this, v11);
+              RecommenededConfigDialog__SetButtonState(this, v12);
               return;
             }
             items = selectRarityList->fields._items;
@@ -432,7 +433,7 @@ LABEL_17:
                 System_Collections_Generic_List_int___AddWithResize(
                   selectRarityList,
                   rarity,
-                  *(const MethodInfo_33A49AC **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+                  *(const MethodInfo_348FEDC **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
               }
               else
               {
@@ -445,7 +446,7 @@ LABEL_17:
         }
       }
     }
-    sub_1B00F28(selectRarityList, v11);
+    sub_1B64324(selectRarityList);
   }
 }
 
@@ -457,17 +458,17 @@ void __fastcall RecommenededConfigDialog__OnClickReset(RecommenededConfigDialog_
   const MethodInfo *v5; // x1
   const MethodInfo *v6; // x1
 
-  if ( (byte_48E5FF5 & 1) == 0 )
+  if ( (byte_49FFD0D & 1) == 0 )
   {
-    sub_1B00CCC(&Method_RecommenededConfigDialog_OnClickReset__, method);
-    byte_48E5FF5 = 1;
+    sub_1B640C8(&Method_RecommenededConfigDialog_OnClickReset__, method);
+    byte_49FFD0D = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_RecommenededConfigDialog_OnClickReset__;
     if ( (*((_BYTE *)Method_RecommenededConfigDialog_OnClickReset__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B00CE4(Method_RecommenededConfigDialog_OnClickReset__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B640E0(Method_RecommenededConfigDialog_OnClickReset__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     RecommenededConfigDialog__SetInitConfig(this, v5);
     RecommenededConfigDialog__SetButtonState(this, v6);
@@ -506,123 +507,133 @@ void __fastcall RecommenededConfigDialog__OpenRecommendedConfig(
   int32_t v28; // w3
   UILabel_o *titleLabel; // x22
   System_String_o *gameObject; // x0
-  __int64 v31; // x1
   UILabel_o *messageLabel; // x22
   UILabel_o *classLabel; // x22
+  __int64 v33; // x1
+  __int64 v34; // x2
   struct UILabel_array *classButtonLabelList; // x8
   int max_length; // w25
-  __int64 v36; // x22
-  int32_t v37; // w2
-  int32_t v38; // w3
-  struct UILabel_array *v39; // x8
-  UILabel_o *v40; // x23
-  System_String_o *v41; // x0
-  System_String_o *v42; // x24
-  int v43; // w9
+  __int64 v37; // x22
+  int32_t v38; // w2
+  int32_t v39; // w3
+  __int64 v40; // x1
+  struct UILabel_array *v41; // x8
+  UILabel_o *v42; // x23
+  System_String_o *v43; // x0
+  System_String_o *v44; // x24
+  int v45; // w9
   struct UICommonButton_array *classButtonList; // x8
-  UICommonButton_o *v45; // x10
+  UICommonButton_o *v47; // x10
   struct System_Collections_Generic_List_EventDelegate__o *onClick; // x10
-  int32_t size; // w2
-  int v48; // w11
-  UICommonButton_o *v49; // x8
-  System_Collections_Generic_List_object__o *v50; // x23
-  EventDelegate_Callback_o *v51; // x24
-  EventDelegate_o *v52; // x22
-  int32_t v53; // w2
-  int32_t v54; // w3
+  __int64 size; // x2
+  int v50; // w11
+  UICommonButton_o *v51; // x8
+  System_Collections_Generic_List_object__o *v52; // x23
+  EventDelegate_Callback_o *v53; // x24
+  __int64 v54; // x1
+  __int64 v55; // x2
+  EventDelegate_o *v56; // x22
+  int32_t v57; // w2
+  int32_t v58; // w3
   struct System_Object_array *items; // x8
-  _QWORD *v56; // x9
-  __int64 v57; // x10
-  Il2CppClass **v58; // x0
-  struct UICommonButton_array *v59; // x8
+  _QWORD *v60; // x9
+  __int64 v61; // x10
+  Il2CppClass **v62; // x0
+  struct UICommonButton_array *v63; // x8
   UILabel_o *rarityLabel; // x22
+  __int64 v65; // x1
+  __int64 v66; // x2
   struct UILabel_array *rarityButtonLabelList; // x8
-  int v62; // w20
-  __int64 v63; // x22
-  int32_t v64; // w2
-  int32_t v65; // w3
-  struct UILabel_array *v66; // x8
-  UILabel_o *v67; // x23
-  System_String_o *v68; // x0
-  System_String_o *v69; // x24
-  int v70; // w9
+  int v68; // w20
+  __int64 v69; // x22
+  int32_t v70; // w2
+  int32_t v71; // w3
+  struct UILabel_array *v72; // x8
+  UILabel_o *v73; // x23
+  System_String_o *v74; // x0
+  System_String_o *v75; // x24
+  int v76; // w9
   struct UICommonButton_array *rarityButtonList; // x8
-  UICommonButton_o *v72; // x10
-  struct System_Collections_Generic_List_EventDelegate__o *v73; // x10
-  int32_t v74; // w2
-  int v75; // w11
-  UICommonButton_o *v76; // x8
-  System_Collections_Generic_List_object__o *v77; // x23
-  EventDelegate_Callback_o *v78; // x24
-  EventDelegate_o *v79; // x22
-  int32_t v80; // w2
-  int32_t v81; // w3
-  struct System_Object_array *v82; // x8
-  _QWORD *v83; // x9
-  __int64 v84; // x10
-  Il2CppClass **v85; // x0
+  UICommonButton_o *v78; // x10
+  struct System_Collections_Generic_List_EventDelegate__o *v79; // x10
+  __int64 v80; // x2
+  int v81; // w11
+  UICommonButton_o *v82; // x8
+  System_Collections_Generic_List_object__o *v83; // x23
+  EventDelegate_Callback_o *v84; // x24
+  __int64 v85; // x1
+  __int64 v86; // x2
+  EventDelegate_o *v87; // x22
+  int32_t v88; // w2
+  int32_t v89; // w3
+  struct System_Object_array *v90; // x8
+  _QWORD *v91; // x9
+  __int64 v92; // x10
+  Il2CppClass **v93; // x0
   UILabel_o *resetButtonLabel; // x22
   UILabel_o *clearButtonLabel; // x22
   UILabel_o *decideButtonLabel; // x22
   UILabel_o *cancelButtonLabel; // x22
-  const MethodInfo *v90; // x1
+  const MethodInfo *v98; // x1
   RecommendedConfigSaveData_o *ConfigSaveData; // x0
-  int32_t v92; // w2
-  int32_t v93; // w3
-  const MethodInfo *v94; // x1
-  int32_t v95; // w2
-  int32_t v96; // w3
-  System_Action_o *v97; // x20
+  int32_t v100; // w2
+  int32_t v101; // w3
+  const MethodInfo *v102; // x1
+  int32_t v103; // w2
+  int32_t v104; // w3
+  __int64 v105; // x1
+  __int64 v106; // x2
+  System_Action_o *v107; // x20
   ServantStatusBattleListViewItem_o *p_saveData; // [xsp+10h] [xbp-70h]
-  unsigned int v99; // [xsp+18h] [xbp-68h] BYREF
-  unsigned int v100; // [xsp+1Ch] [xbp-64h] BYREF
+  unsigned int v109; // [xsp+18h] [xbp-68h] BYREF
+  unsigned int v110; // [xsp+1Ch] [xbp-64h] BYREF
 
-  if ( (byte_48E5FEF & 1) == 0 )
+  if ( (byte_49FFD07 & 1) == 0 )
   {
-    sub_1B00CCC(&System_Action_TypeInfo, closeCallback);
-    sub_1B00CCC(&EventDelegate_Callback_TypeInfo, v5);
-    sub_1B00CCC(&EventDelegate_TypeInfo, v6);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_EventDelegate__Add__, v7);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_EventDelegate__Clear__, v8);
-    sub_1B00CCC(&LocalizationManager_TypeInfo, v9);
-    sub_1B00CCC(&RecommendedConfigSaveData_TypeInfo, v10);
-    sub_1B00CCC(&Method_RecommenededConfigDialog_EndOpen__, v11);
-    sub_1B00CCC(&Method_RecommenededConfigDialog___c__DisplayClass23_0__OpenRecommendedConfig_b__0__, v12);
-    sub_1B00CCC(&RecommenededConfigDialog___c__DisplayClass23_0_TypeInfo, v13);
-    sub_1B00CCC(&Method_RecommenededConfigDialog___c__DisplayClass23_1__OpenRecommendedConfig_b__1__, v14);
-    sub_1B00CCC(&RecommenededConfigDialog___c__DisplayClass23_1_TypeInfo, v15);
-    sub_1B00CCC(&StringLiteral_10858/*"RECOMMENDED_DIALOG_TITLE"*/, v16);
-    sub_1B00CCC(&StringLiteral_10864/*"RECOMMENDED_RARITY_TITLE"*/, v17);
-    sub_1B00CCC(&StringLiteral_10863/*"RECOMMENDED_RARITY_"*/, v18);
-    sub_1B00CCC(&StringLiteral_10856/*"RECOMMENDED_CLEAR"*/, v19);
-    sub_1B00CCC(&StringLiteral_3716/*"COMMON_CONFIRM_DECIDE"*/, v20);
-    sub_1B00CCC(&StringLiteral_3714/*"COMMON_CONFIRM_CANCEL"*/, v21);
-    sub_1B00CCC(&StringLiteral_10865/*"RECOMMENDED_RESET"*/, v22);
-    sub_1B00CCC(&StringLiteral_10855/*"RECOMMENDED_CLASS_TITLE"*/, v23);
-    sub_1B00CCC(&StringLiteral_10854/*"RECOMMENDED_CLASS_"*/, v24);
-    sub_1B00CCC(&StringLiteral_10857/*"RECOMMENDED_DIALOG_MESSAGE"*/, v25);
-    byte_48E5FEF = 1;
+    sub_1B640C8(&System_Action_TypeInfo, closeCallback);
+    sub_1B640C8(&EventDelegate_Callback_TypeInfo, v5);
+    sub_1B640C8(&EventDelegate_TypeInfo, v6);
+    sub_1B640C8(&Method_System_Collections_Generic_List_EventDelegate__Add__, v7);
+    sub_1B640C8(&Method_System_Collections_Generic_List_EventDelegate__Clear__, v8);
+    sub_1B640C8(&LocalizationManager_TypeInfo, v9);
+    sub_1B640C8(&RecommendedConfigSaveData_TypeInfo, v10);
+    sub_1B640C8(&Method_RecommenededConfigDialog_EndOpen__, v11);
+    sub_1B640C8(&Method_RecommenededConfigDialog___c__DisplayClass23_0__OpenRecommendedConfig_b__0__, v12);
+    sub_1B640C8(&RecommenededConfigDialog___c__DisplayClass23_0_TypeInfo, v13);
+    sub_1B640C8(&Method_RecommenededConfigDialog___c__DisplayClass23_1__OpenRecommendedConfig_b__1__, v14);
+    sub_1B640C8(&RecommenededConfigDialog___c__DisplayClass23_1_TypeInfo, v15);
+    sub_1B640C8(&StringLiteral_10942/*"RECOMMENDED_DIALOG_TITLE"*/, v16);
+    sub_1B640C8(&StringLiteral_10948/*"RECOMMENDED_RARITY_TITLE"*/, v17);
+    sub_1B640C8(&StringLiteral_10947/*"RECOMMENDED_RARITY_"*/, v18);
+    sub_1B640C8(&StringLiteral_10940/*"RECOMMENDED_CLEAR"*/, v19);
+    sub_1B640C8(&StringLiteral_3735/*"COMMON_CONFIRM_DECIDE"*/, v20);
+    sub_1B640C8(&StringLiteral_3733/*"COMMON_CONFIRM_CANCEL"*/, v21);
+    sub_1B640C8(&StringLiteral_10949/*"RECOMMENDED_RESET"*/, v22);
+    sub_1B640C8(&StringLiteral_10939/*"RECOMMENDED_CLASS_TITLE"*/, v23);
+    sub_1B640C8(&StringLiteral_10938/*"RECOMMENDED_CLASS_"*/, v24);
+    sub_1B640C8(&StringLiteral_10941/*"RECOMMENDED_DIALOG_MESSAGE"*/, v25);
+    byte_49FFD07 = 1;
   }
-  v99 = 0;
-  v26 = (RecommendedConfigSaveData_o *)sub_1B00F18(RecommendedConfigSaveData_TypeInfo);
+  v109 = 0;
+  v26 = (RecommendedConfigSaveData_o *)sub_1B64314(RecommendedConfigSaveData_TypeInfo, closeCallback, method);
   RecommendedConfigSaveData___ctor(v26, 0LL);
   this->fields.saveData = v26;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.saveData, (int32_t)v26, v27, v28);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.saveData, (int32_t)v26, v27, v28);
   titleLabel = this->fields.titleLabel;
   p_saveData = (ServantStatusBattleListViewItem_o *)&this->fields.saveData;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_10858/*"RECOMMENDED_DIALOG_TITLE"*/, 0LL);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_10942/*"RECOMMENDED_DIALOG_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_74;
   UILabel__set_text(titleLabel, gameObject, 0LL);
   messageLabel = this->fields.messageLabel;
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_10857/*"RECOMMENDED_DIALOG_MESSAGE"*/, 0LL);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_10941/*"RECOMMENDED_DIALOG_MESSAGE"*/, 0LL);
   if ( !messageLabel )
     goto LABEL_74;
   UILabel__set_text(messageLabel, gameObject, 0LL);
   classLabel = this->fields.classLabel;
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_10855/*"RECOMMENDED_CLASS_TITLE"*/, 0LL);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_10939/*"RECOMMENDED_CLASS_TITLE"*/, 0LL);
   if ( !classLabel )
     goto LABEL_74;
   UILabel__set_text(classLabel, gameObject, 0LL);
@@ -630,231 +641,231 @@ void __fastcall RecommenededConfigDialog__OpenRecommendedConfig(
   if ( !classButtonLabelList )
     goto LABEL_74;
   max_length = classButtonLabelList->max_length;
-  v100 = 0;
+  v110 = 0;
   if ( max_length >= 1 )
   {
     while ( 1 )
     {
-      v36 = sub_1B00F18(RecommenededConfigDialog___c__DisplayClass23_0_TypeInfo);
-      System_Object___ctor((Il2CppObject *)v36, 0LL);
-      if ( !v36 )
+      v37 = sub_1B64314(RecommenededConfigDialog___c__DisplayClass23_0_TypeInfo, v33, v34);
+      System_Object___ctor((Il2CppObject *)v37, 0LL);
+      if ( !v37 )
         break;
-      *(_QWORD *)(v36 + 24) = this;
-      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v36 + 24), (int32_t)this, v37, v38);
-      v39 = this->fields.classButtonLabelList;
-      if ( !v39 )
+      *(_QWORD *)(v37 + 24) = this;
+      sub_1B6406C((ServantStatusBattleListViewItem_o *)(v37 + 24), (int32_t)this, v38, v39);
+      v41 = this->fields.classButtonLabelList;
+      if ( !v41 )
         break;
-      if ( v100 >= v39->max_length )
+      if ( v110 >= v41->max_length )
         goto LABEL_75;
-      v40 = v39->m_Items[v100];
-      v41 = System_Int32__ToString((int32_t)&v100, 0LL);
-      v42 = System_String__Concat_60325748((System_String_o *)StringLiteral_10854/*"RECOMMENDED_CLASS_"*/, v41, 0LL);
+      v42 = v41->m_Items[v110];
+      v43 = System_Int32__ToString((int32_t)&v110, 0LL);
+      v44 = System_String__Concat_61375396((System_String_o *)StringLiteral_10938/*"RECOMMENDED_CLASS_"*/, v43, 0LL);
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      gameObject = LocalizationManager__Get(v42, 0LL);
-      if ( !v40 )
+      gameObject = LocalizationManager__Get(v44, 0LL);
+      if ( !v42 )
         break;
-      UILabel__set_text(v40, gameObject, 0LL);
-      v43 = v100;
-      *(_DWORD *)(v36 + 16) = v100;
+      UILabel__set_text(v42, gameObject, 0LL);
+      v45 = v110;
+      *(_DWORD *)(v37 + 16) = v110;
       classButtonList = this->fields.classButtonList;
       if ( !classButtonList )
         break;
-      if ( v43 >= classButtonList->max_length )
+      if ( v45 >= classButtonList->max_length )
         goto LABEL_75;
-      v45 = classButtonList->m_Items[v43];
-      if ( !v45 )
+      v47 = classButtonList->m_Items[v45];
+      if ( !v47 )
         break;
-      onClick = v45->fields.onClick;
+      onClick = v47->fields.onClick;
       if ( !onClick )
         break;
-      size = onClick->fields._size;
-      v48 = onClick->fields._version + 1;
+      size = (unsigned int)onClick->fields._size;
+      v50 = onClick->fields._version + 1;
       onClick->fields._size = 0;
-      onClick->fields._version = v48;
-      if ( size >= 1 )
+      onClick->fields._version = v50;
+      if ( (int)size >= 1 )
       {
         System_Array__Clear((System_Array_o *)onClick->fields._items, 0, size, 0LL);
         classButtonList = this->fields.classButtonList;
         if ( !classButtonList )
           break;
-        v43 = v100;
+        v45 = v110;
       }
-      if ( v43 >= classButtonList->max_length )
+      if ( v45 >= classButtonList->max_length )
 LABEL_75:
-        sub_1B00F30(gameObject, v31);
-      v49 = classButtonList->m_Items[v43];
-      if ( !v49 )
+        sub_1B6432C(gameObject, v40);
+      v51 = classButtonList->m_Items[v45];
+      if ( !v51 )
         break;
-      v50 = (System_Collections_Generic_List_object__o *)v49->fields.onClick;
-      v51 = (EventDelegate_Callback_o *)sub_1B00F18(EventDelegate_Callback_TypeInfo);
+      v52 = (System_Collections_Generic_List_object__o *)v51->fields.onClick;
+      v53 = (EventDelegate_Callback_o *)sub_1B64314(EventDelegate_Callback_TypeInfo, v40, size);
       EventDelegate_Callback___ctor(
-        v51,
-        (Il2CppObject *)v36,
+        v53,
+        (Il2CppObject *)v37,
         Method_RecommenededConfigDialog___c__DisplayClass23_0__OpenRecommendedConfig_b__0__,
         0LL);
-      v52 = (EventDelegate_o *)sub_1B00F18(EventDelegate_TypeInfo);
-      EventDelegate___ctor_45649980(v52, v51, 0LL);
-      if ( !v50 )
+      v56 = (EventDelegate_o *)sub_1B64314(EventDelegate_TypeInfo, v54, v55);
+      EventDelegate___ctor_46508544(v56, v53, 0LL);
+      if ( !v52 )
         break;
-      items = v50->fields._items;
-      v56 = Method_System_Collections_Generic_List_EventDelegate__Add__;
-      ++v50->fields._version;
+      items = v52->fields._items;
+      v60 = Method_System_Collections_Generic_List_EventDelegate__Add__;
+      ++v52->fields._version;
       if ( !items )
         break;
-      v57 = v50->fields._size;
-      if ( (unsigned int)v57 >= items->max_length )
+      v61 = v52->fields._size;
+      if ( (unsigned int)v61 >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
-          v50,
-          (Il2CppObject *)v52,
-          *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v56[4] + 192LL) + 112LL));
+          v52,
+          (Il2CppObject *)v56,
+          *(const MethodInfo_34AD6D4 **)(*(_QWORD *)(v60[4] + 192LL) + 112LL));
       }
       else
       {
-        v58 = &items->obj.klass + v57;
-        v50->fields._size = v57 + 1;
-        v58[4] = (Il2CppClass *)v52;
-        sub_1B00C70((ServantStatusBattleListViewItem_o *)(v58 + 4), (int32_t)v52, v53, v54);
+        v62 = &items->obj.klass + v61;
+        v52->fields._size = v61 + 1;
+        v62[4] = (Il2CppClass *)v56;
+        sub_1B6406C((ServantStatusBattleListViewItem_o *)(v62 + 4), (int32_t)v56, v57, v58);
       }
-      v59 = this->fields.classButtonList;
-      if ( !v59 )
+      v63 = this->fields.classButtonList;
+      if ( !v63 )
         break;
-      if ( v100 >= v59->max_length )
+      if ( v110 >= v63->max_length )
         goto LABEL_75;
-      gameObject = (System_String_o *)v59->m_Items[v100];
+      gameObject = (System_String_o *)v63->m_Items[v110];
       if ( !gameObject )
         break;
       gameObject = (System_String_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
       if ( !gameObject )
         break;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
-      if ( (int)++v100 >= max_length )
+      if ( (int)++v110 >= max_length )
         goto LABEL_35;
     }
 LABEL_74:
-    sub_1B00F28(gameObject, v31);
+    sub_1B64324(gameObject);
   }
 LABEL_35:
   rarityLabel = this->fields.rarityLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_10864/*"RECOMMENDED_RARITY_TITLE"*/, 0LL);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_10948/*"RECOMMENDED_RARITY_TITLE"*/, 0LL);
   if ( !rarityLabel )
     goto LABEL_74;
   UILabel__set_text(rarityLabel, gameObject, 0LL);
   rarityButtonLabelList = this->fields.rarityButtonLabelList;
   if ( !rarityButtonLabelList )
     goto LABEL_74;
-  v62 = rarityButtonLabelList->max_length;
-  v99 = 0;
-  if ( v62 >= 1 )
+  v68 = rarityButtonLabelList->max_length;
+  v109 = 0;
+  if ( v68 >= 1 )
   {
     do
     {
-      v63 = sub_1B00F18(RecommenededConfigDialog___c__DisplayClass23_1_TypeInfo);
-      System_Object___ctor((Il2CppObject *)v63, 0LL);
-      if ( !v63 )
+      v69 = sub_1B64314(RecommenededConfigDialog___c__DisplayClass23_1_TypeInfo, v65, v66);
+      System_Object___ctor((Il2CppObject *)v69, 0LL);
+      if ( !v69 )
         goto LABEL_74;
-      *(_QWORD *)(v63 + 24) = this;
-      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v63 + 24), (int32_t)this, v64, v65);
-      v66 = this->fields.rarityButtonLabelList;
-      if ( !v66 )
+      *(_QWORD *)(v69 + 24) = this;
+      sub_1B6406C((ServantStatusBattleListViewItem_o *)(v69 + 24), (int32_t)this, v70, v71);
+      v72 = this->fields.rarityButtonLabelList;
+      if ( !v72 )
         goto LABEL_74;
-      if ( v99 >= v66->max_length )
+      if ( v109 >= v72->max_length )
         goto LABEL_75;
-      v67 = v66->m_Items[v99];
-      v68 = System_Int32__ToString((int32_t)&v99, 0LL);
-      v69 = System_String__Concat_60325748((System_String_o *)StringLiteral_10863/*"RECOMMENDED_RARITY_"*/, v68, 0LL);
+      v73 = v72->m_Items[v109];
+      v74 = System_Int32__ToString((int32_t)&v109, 0LL);
+      v75 = System_String__Concat_61375396((System_String_o *)StringLiteral_10947/*"RECOMMENDED_RARITY_"*/, v74, 0LL);
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      gameObject = LocalizationManager__Get(v69, 0LL);
-      if ( !v67 )
+      gameObject = LocalizationManager__Get(v75, 0LL);
+      if ( !v73 )
         goto LABEL_74;
-      UILabel__set_text(v67, gameObject, 0LL);
-      v70 = v99;
-      *(_DWORD *)(v63 + 16) = v99 + 1;
+      UILabel__set_text(v73, gameObject, 0LL);
+      v76 = v109;
+      *(_DWORD *)(v69 + 16) = v109 + 1;
       rarityButtonList = this->fields.rarityButtonList;
       if ( !rarityButtonList )
         goto LABEL_74;
-      if ( v70 >= rarityButtonList->max_length )
+      if ( v76 >= rarityButtonList->max_length )
         goto LABEL_75;
-      v72 = rarityButtonList->m_Items[v70];
-      if ( !v72 )
+      v78 = rarityButtonList->m_Items[v76];
+      if ( !v78 )
         goto LABEL_74;
-      v73 = v72->fields.onClick;
-      if ( !v73 )
+      v79 = v78->fields.onClick;
+      if ( !v79 )
         goto LABEL_74;
-      v74 = v73->fields._size;
-      v75 = v73->fields._version + 1;
-      v73->fields._size = 0;
-      v73->fields._version = v75;
-      if ( v74 >= 1 )
+      v80 = (unsigned int)v79->fields._size;
+      v81 = v79->fields._version + 1;
+      v79->fields._size = 0;
+      v79->fields._version = v81;
+      if ( (int)v80 >= 1 )
       {
-        System_Array__Clear((System_Array_o *)v73->fields._items, 0, v74, 0LL);
+        System_Array__Clear((System_Array_o *)v79->fields._items, 0, v80, 0LL);
         rarityButtonList = this->fields.rarityButtonList;
         if ( !rarityButtonList )
           goto LABEL_74;
-        v70 = v99;
+        v76 = v109;
       }
-      if ( v70 >= rarityButtonList->max_length )
+      if ( v76 >= rarityButtonList->max_length )
         goto LABEL_75;
-      v76 = rarityButtonList->m_Items[v70];
-      if ( !v76 )
-        goto LABEL_74;
-      v77 = (System_Collections_Generic_List_object__o *)v76->fields.onClick;
-      v78 = (EventDelegate_Callback_o *)sub_1B00F18(EventDelegate_Callback_TypeInfo);
-      EventDelegate_Callback___ctor(
-        v78,
-        (Il2CppObject *)v63,
-        Method_RecommenededConfigDialog___c__DisplayClass23_1__OpenRecommendedConfig_b__1__,
-        0LL);
-      v79 = (EventDelegate_o *)sub_1B00F18(EventDelegate_TypeInfo);
-      EventDelegate___ctor_45649980(v79, v78, 0LL);
-      if ( !v77 )
-        goto LABEL_74;
-      v82 = v77->fields._items;
-      v83 = Method_System_Collections_Generic_List_EventDelegate__Add__;
-      ++v77->fields._version;
+      v82 = rarityButtonList->m_Items[v76];
       if ( !v82 )
         goto LABEL_74;
-      v84 = v77->fields._size;
-      if ( (unsigned int)v84 >= v82->max_length )
+      v83 = (System_Collections_Generic_List_object__o *)v82->fields.onClick;
+      v84 = (EventDelegate_Callback_o *)sub_1B64314(EventDelegate_Callback_TypeInfo, v40, v80);
+      EventDelegate_Callback___ctor(
+        v84,
+        (Il2CppObject *)v69,
+        Method_RecommenededConfigDialog___c__DisplayClass23_1__OpenRecommendedConfig_b__1__,
+        0LL);
+      v87 = (EventDelegate_o *)sub_1B64314(EventDelegate_TypeInfo, v85, v86);
+      EventDelegate___ctor_46508544(v87, v84, 0LL);
+      if ( !v83 )
+        goto LABEL_74;
+      v90 = v83->fields._items;
+      v91 = Method_System_Collections_Generic_List_EventDelegate__Add__;
+      ++v83->fields._version;
+      if ( !v90 )
+        goto LABEL_74;
+      v92 = v83->fields._size;
+      if ( (unsigned int)v92 >= v90->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
-          v77,
-          (Il2CppObject *)v79,
-          *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v83[4] + 192LL) + 112LL));
+          v83,
+          (Il2CppObject *)v87,
+          *(const MethodInfo_34AD6D4 **)(*(_QWORD *)(v91[4] + 192LL) + 112LL));
       }
       else
       {
-        v85 = &v82->obj.klass + v84;
-        v77->fields._size = v84 + 1;
-        v85[4] = (Il2CppClass *)v79;
-        sub_1B00C70((ServantStatusBattleListViewItem_o *)(v85 + 4), (int32_t)v79, v80, v81);
+        v93 = &v90->obj.klass + v92;
+        v83->fields._size = v92 + 1;
+        v93[4] = (Il2CppClass *)v87;
+        sub_1B6406C((ServantStatusBattleListViewItem_o *)(v93 + 4), (int32_t)v87, v88, v89);
       }
     }
-    while ( (int)++v99 < v62 );
+    while ( (int)++v109 < v68 );
   }
   resetButtonLabel = this->fields.resetButtonLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_10865/*"RECOMMENDED_RESET"*/, 0LL);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_10949/*"RECOMMENDED_RESET"*/, 0LL);
   if ( !resetButtonLabel )
     goto LABEL_74;
   UILabel__set_text(resetButtonLabel, gameObject, 0LL);
   clearButtonLabel = this->fields.clearButtonLabel;
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_10856/*"RECOMMENDED_CLEAR"*/, 0LL);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_10940/*"RECOMMENDED_CLEAR"*/, 0LL);
   if ( !clearButtonLabel )
     goto LABEL_74;
   UILabel__set_text(clearButtonLabel, gameObject, 0LL);
   decideButtonLabel = this->fields.decideButtonLabel;
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3716/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3735/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideButtonLabel )
     goto LABEL_74;
   UILabel__set_text(decideButtonLabel, gameObject, 0LL);
   cancelButtonLabel = this->fields.cancelButtonLabel;
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3714/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3733/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelButtonLabel )
     goto LABEL_74;
   UILabel__set_text(cancelButtonLabel, gameObject, 0LL);
@@ -867,18 +878,18 @@ LABEL_35:
       j_il2cpp_runtime_class_init_0(RecommendedConfigSaveData_TypeInfo);
     ConfigSaveData = RecommendedConfigSaveData__LoadConfigSaveData(0LL);
     p_saveData->klass = (ServantStatusBattleListViewItem_c *)ConfigSaveData;
-    sub_1B00C70(p_saveData, (int32_t)ConfigSaveData, v92, v93);
+    sub_1B6406C(p_saveData, (int32_t)ConfigSaveData, v100, v101);
   }
   else
   {
-    RecommenededConfigDialog__SetInitConfig(this, v90);
+    RecommenededConfigDialog__SetInitConfig(this, v98);
   }
-  RecommenededConfigDialog__SetButtonState(this, v94);
+  RecommenededConfigDialog__SetButtonState(this, v102);
   this->fields.closeFunc = closeCallback;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.closeFunc, (int32_t)closeCallback, v95, v96);
-  v97 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
-  System_Action___ctor(v97, (Il2CppObject *)this, Method_RecommenededConfigDialog_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v97, 0, 0LL);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.closeFunc, (int32_t)closeCallback, v103, v104);
+  v107 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v105, v106);
+  System_Action___ctor(v107, (Il2CppObject *)this, Method_RecommenededConfigDialog_EndOpen__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v107, 0, 0LL);
 }
 
 
@@ -903,10 +914,10 @@ void __fastcall RecommenededConfigDialog__SetButtonState(RecommenededConfigDialo
   System_String_o **p_OFF_BTN_SPRITE_NAME; // x8
 
   v2 = this;
-  if ( (byte_48E5FF1 & 1) == 0 )
+  if ( (byte_49FFD09 & 1) == 0 )
   {
-    this = (RecommenededConfigDialog_o *)sub_1B00CCC(&Method_System_Collections_Generic_List_int__Contains__, method);
-    byte_48E5FF1 = 1;
+    this = (RecommenededConfigDialog_o *)sub_1B640C8(&Method_System_Collections_Generic_List_int__Contains__, method);
+    byte_49FFD09 = 1;
   }
   classButtonSpriteList = v2->fields.classButtonSpriteList;
   if ( !classButtonSpriteList )
@@ -926,7 +937,7 @@ void __fastcall RecommenededConfigDialog__SetButtonState(RecommenededConfigDialo
         break;
       if ( v5 >= v8->max_length )
 LABEL_28:
-        sub_1B00F30(this, method);
+        sub_1B6432C(this, method);
       this = (RecommenededConfigDialog_o *)v8->m_Items[v5];
       if ( v5 == saveData->fields.selectClass )
       {
@@ -945,7 +956,7 @@ LABEL_28:
         goto LABEL_14;
     }
 LABEL_27:
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   }
 LABEL_14:
   rarityButtonSpriteList = v2->fields.rarityButtonSpriteList;
@@ -968,7 +979,7 @@ LABEL_14:
       this = (RecommenededConfigDialog_o *)System_Collections_Generic_List_int___Contains(
                                              (System_Collections_Generic_List_int__o *)this,
                                              v12 + 1,
-                                             (const MethodInfo_33A4D24 *)Method_System_Collections_Generic_List_int__Contains__);
+                                             (const MethodInfo_3490254 *)Method_System_Collections_Generic_List_int__Contains__);
       v16 = v2->fields.rarityButtonSpriteList;
       if ( !v16 )
         goto LABEL_27;
@@ -1012,11 +1023,11 @@ void __fastcall RecommenededConfigDialog__SetInitConfig(RecommenededConfigDialog
   __int64 m_CancellationTokenSource_low; // x10
 
   v2 = this;
-  if ( (byte_48E5FF0 & 1) == 0 )
+  if ( (byte_49FFD08 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_List_int__Add__, method);
-    this = (RecommenededConfigDialog_o *)sub_1B00CCC(&Method_System_Collections_Generic_List_int__Clear__, v3);
-    byte_48E5FF0 = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_List_int__Add__, method);
+    this = (RecommenededConfigDialog_o *)sub_1B640C8(&Method_System_Collections_Generic_List_int__Clear__, v3);
+    byte_49FFD08 = 1;
   }
   saveData = v2->fields.saveData;
   if ( !saveData )
@@ -1051,7 +1062,7 @@ void __fastcall RecommenededConfigDialog__SetInitConfig(RecommenededConfigDialog
         System_Collections_Generic_List_int___AddWithResize(
           (System_Collections_Generic_List_int__o *)this,
           v9,
-          *(const MethodInfo_33A49AC **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
+          *(const MethodInfo_348FEDC **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
       }
       else
       {
@@ -1065,7 +1076,7 @@ void __fastcall RecommenededConfigDialog__SetInitConfig(RecommenededConfigDialog
     }
     while ( saveData );
 LABEL_15:
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   }
 }
 
@@ -1088,15 +1099,15 @@ void __fastcall RecommenededConfigDialog_ClickDelegate___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B00D8C(v6) & 1) == 0 )
+  if ( (sub_1B64188(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B00F44(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B00DF4(v10, 0LL);
+      v10 = sub_1B64340(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B641F0(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -1108,9 +1119,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_194F634;
+  this->fields.m_target = (Il2CppObject *)sub_19B06A4;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_194F5EC;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19B065C;
 }
 
 
@@ -1126,14 +1137,14 @@ System_IAsyncResult_o *__fastcall RecommenededConfigDialog_ClickDelegate__BeginI
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isDecide;
-  if ( (byte_48E5FFA & 1) == 0 )
+  if ( (byte_49FFD12 & 1) == 0 )
   {
-    sub_1B00CCC(&bool_TypeInfo, isDecide);
-    byte_48E5FFA = 1;
+    sub_1B640C8(&bool_TypeInfo, isDecide);
+    byte_49FFD12 = 1;
   }
   v9[1] = 0LL;
-  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1B00C80(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
+  return (System_IAsyncResult_o *)sub_1B6407C(this, v9, callback, object);
 }
 
 
@@ -1142,7 +1153,7 @@ void __fastcall RecommenededConfigDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B00C84(result, 0LL, method);
+  sub_1B64080(result, 0LL, method);
 }
 
 
@@ -1173,7 +1184,7 @@ void __fastcall RecommenededConfigDialog___c__DisplayClass23_0___OpenRecommended
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   RecommenededConfigDialog__OnClickClass(this->fields.__4__this, this->fields.classKind, v2);
 }
 
@@ -1193,6 +1204,6 @@ void __fastcall RecommenededConfigDialog___c__DisplayClass23_1___OpenRecommended
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   RecommenededConfigDialog__OnClickRarity(this->fields.__4__this, this->fields.rarityKind, v2);
 }

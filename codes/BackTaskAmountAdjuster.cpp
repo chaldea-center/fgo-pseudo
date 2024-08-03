@@ -1,27 +1,28 @@
 void __fastcall BackTaskAmountAdjuster___ctor(BackTaskAmountAdjuster_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  System_Diagnostics_Stopwatch_o *v4; // x20
-  int32_t v5; // w2
-  int32_t v6; // w3
-  float v7; // s0
+  __int64 v2; // x2
+  __int64 v4; // x1
+  System_Diagnostics_Stopwatch_o *v5; // x20
+  int32_t v6; // w2
+  int32_t v7; // w3
+  float v8; // s0
 
-  if ( (byte_48E4118 & 1) == 0 )
+  if ( (byte_49FDDC5 & 1) == 0 )
   {
-    sub_1B00CCC(&UnityEngine_Application_TypeInfo, method);
-    sub_1B00CCC(&System_Diagnostics_Stopwatch_TypeInfo, v3);
-    byte_48E4118 = 1;
+    sub_1B640C8(&UnityEngine_Application_TypeInfo, method);
+    sub_1B640C8(&System_Diagnostics_Stopwatch_TypeInfo, v4);
+    byte_49FDDC5 = 1;
   }
-  v4 = (System_Diagnostics_Stopwatch_o *)sub_1B00F18(System_Diagnostics_Stopwatch_TypeInfo);
-  System_Diagnostics_Stopwatch___ctor(v4, 0LL);
-  this->fields.stopwatch = v4;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.stopwatch, (int32_t)v4, v5, v6);
+  v5 = (System_Diagnostics_Stopwatch_o *)sub_1B64314(System_Diagnostics_Stopwatch_TypeInfo, method, v2);
+  System_Diagnostics_Stopwatch___ctor(v5, 0LL);
+  this->fields.stopwatch = v5;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.stopwatch, (int32_t)v5, v6, v7);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
-  v7 = 1.0 / (float)UnityEngine_Application__get_targetFrameRate(0LL);
-  this->fields.plannedWorkDeltaTime = v7 * 0.5;
-  this->fields.expectedDeltaTime = v7;
+  v8 = 1.0 / (float)UnityEngine_Application__get_targetFrameRate(0LL);
+  this->fields.plannedWorkDeltaTime = v8 * 0.5;
+  this->fields.expectedDeltaTime = v8;
 }
 
 
@@ -45,18 +46,18 @@ System_Collections_IEnumerator_o *__fastcall BackTaskAmountAdjuster__Execute(
   int32_t v8; // w2
   int32_t v9; // w3
 
-  if ( (byte_48E4119 & 1) == 0 )
+  if ( (byte_49FDDC6 & 1) == 0 )
   {
-    sub_1B00CCC(&BackTaskAmountAdjuster__Execute_d__9_TypeInfo, bgTask);
-    byte_48E4119 = 1;
+    sub_1B640C8(&BackTaskAmountAdjuster__Execute_d__9_TypeInfo, bgTask);
+    byte_49FDDC6 = 1;
   }
-  v5 = sub_1B00F18(BackTaskAmountAdjuster__Execute_d__9_TypeInfo);
+  v5 = sub_1B64314(BackTaskAmountAdjuster__Execute_d__9_TypeInfo, bgTask, method);
   System_Object___ctor((Il2CppObject *)v5, 0LL);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v5 + 32), (int32_t)this, v6, v7);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v5 + 32), (int32_t)this, v6, v7);
   *(_QWORD *)(v5 + 40) = bgTask;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v5 + 40), (int32_t)bgTask, v8, v9);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v5 + 40), (int32_t)bgTask, v8, v9);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -68,7 +69,7 @@ bool __fastcall BackTaskAmountAdjuster__IsOverWork(BackTaskAmountAdjuster_o *thi
 
   stopwatch = this->fields.stopwatch;
   if ( !stopwatch )
-    sub_1B00F28(0LL, method);
+    sub_1B64324(0LL);
   if ( !stopwatch->fields.is_running )
     return 1;
   plannedWorkDeltaTime = this->fields.plannedWorkDeltaTime;
@@ -79,7 +80,6 @@ bool __fastcall BackTaskAmountAdjuster__IsOverWork(BackTaskAmountAdjuster_o *thi
 
 void __fastcall BackTaskAmountAdjuster__PlanNextWork(BackTaskAmountAdjuster_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   float deltaTime; // s0
   float expectedDeltaTime; // s1
   float minWorkDeltaTime; // s0
@@ -100,7 +100,7 @@ void __fastcall BackTaskAmountAdjuster__PlanNextWork(BackTaskAmountAdjuster_o *t
   stopwatch = this->fields.stopwatch;
   this->fields.plannedWorkDeltaTime = minWorkDeltaTime;
   if ( !stopwatch || (System_Diagnostics_Stopwatch__Reset(stopwatch, 0LL), (stopwatch = this->fields.stopwatch) == 0LL) )
-    sub_1B00F28(stopwatch, v3);
+    sub_1B64324(stopwatch);
   System_Diagnostics_Stopwatch__Start(stopwatch, 0LL);
 }
 
@@ -113,7 +113,7 @@ void __fastcall BackTaskAmountAdjuster__SaveActualWorkDeltaTime(
 
   stopwatch = this->fields.stopwatch;
   if ( !stopwatch )
-    sub_1B00F28(0LL, method);
+    sub_1B64324(0LL);
   this->fields.actualWorkDeltaTime = (float)System_Diagnostics_Stopwatch__get_ElapsedMilliseconds(stopwatch, 0LL)
                                    / 1000.0;
 }
@@ -149,17 +149,18 @@ bool __fastcall BackTaskAmountAdjuster__Execute_d__9__MoveNext(
   const MethodInfo *v15; // x1
   int32_t v16; // w2
   int32_t v17; // w3
+  const MethodInfo *v18; // x1
   ServantStatusBattleListViewItem_o *p__2__current; // x19
-  int32_t v19; // w2
-  int32_t v20; // w3
+  int32_t v20; // w2
+  int32_t v21; // w3
   bool result; // w0
-  ServantStatusBattleListViewItem_o *v22; // x19
+  ServantStatusBattleListViewItem_o *v23; // x19
 
   v2 = this;
-  if ( (byte_48E411A & 1) == 0 )
+  if ( (byte_49FDDC7 & 1) == 0 )
   {
-    this = (BackTaskAmountAdjuster__Execute_d__9_o *)sub_1B00CCC(&System_Collections_IEnumerator_TypeInfo, method);
-    byte_48E411A = 1;
+    this = (BackTaskAmountAdjuster__Execute_d__9_o *)sub_1B640C8(&System_Collections_IEnumerator_TypeInfo, method);
+    byte_49FDDC7 = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( v2->fields.__1__state > 2u )
@@ -167,7 +168,7 @@ bool __fastcall BackTaskAmountAdjuster__Execute_d__9__MoveNext(
   v2->fields.__1__state = -1;
   if ( !_4__this )
 LABEL_26:
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   BackTaskAmountAdjuster__PlanNextWork(_4__this, method);
   while ( 1 )
   {
@@ -191,7 +192,7 @@ LABEL_26:
     else
     {
 LABEL_11:
-      p_method = sub_1B52CAC(v2->fields.bgTask, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1BB60A8(v2->fields.bgTask, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     this = (BackTaskAmountAdjuster__Execute_d__9_o *)(*(__int64 (__fastcall **)(struct System_Collections_IEnumerator_o *, _QWORD))p_method)(
                                                        bgTask,
@@ -218,7 +219,7 @@ LABEL_11:
     else
     {
 LABEL_19:
-      v13 = sub_1B52CAC(v2->fields.bgTask, System_Collections_IEnumerator_TypeInfo, 1LL);
+      v13 = sub_1BB60A8(v2->fields.bgTask, System_Collections_IEnumerator_TypeInfo, 1LL);
     }
     v14 = (*(__int64 (__fastcall **)(struct System_Collections_IEnumerator_o *, _QWORD))v13)(v9, *(_QWORD *)(v13 + 8));
     if ( v14 )
@@ -226,19 +227,19 @@ LABEL_19:
     this = (BackTaskAmountAdjuster__Execute_d__9_o *)BackTaskAmountAdjuster__IsOverWork(_4__this, v15);
     if ( ((unsigned __int8)this & 1) != 0 )
     {
-      BackTaskAmountAdjuster__SaveActualWorkDeltaTime(_4__this, method);
+      BackTaskAmountAdjuster__SaveActualWorkDeltaTime(_4__this, v18);
       v2->fields.__2__current = 0LL;
       p__2__current = (ServantStatusBattleListViewItem_o *)&v2->fields.__2__current;
-      sub_1B00C70(p__2__current, 0, v19, v20);
+      sub_1B6406C(p__2__current, 0, v20, v21);
       *(_DWORD *)&p__2__current[-1].fields.isMine = 2;
       return 1;
     }
   }
   v2->fields.__2__current = (Il2CppObject *)v14;
-  v22 = (ServantStatusBattleListViewItem_o *)&v2->fields.__2__current;
-  sub_1B00C70(v22, v14, v16, v17);
+  v23 = (ServantStatusBattleListViewItem_o *)&v2->fields.__2__current;
+  sub_1B6406C(v23, v14, v16, v17);
   result = 1;
-  *(_DWORD *)&v22[-1].fields.isMine = 1;
+  *(_DWORD *)&v23[-1].fields.isMine = 1;
   return result;
 }
 
@@ -256,14 +257,16 @@ void __fastcall __noreturn BackTaskAmountAdjuster__Execute_d__9__System_Collecti
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x2
+  System_NotSupportedException_o *v5; // x19
+  __int64 v6; // x0
 
-  v2 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B00F18(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B00CE0(&Method_BackTaskAmountAdjuster__Execute_d__9_System_Collections_IEnumerator_Reset__);
-  sub_1B00DF4(v3, v4);
+  v2 = sub_1B640DC(&System_NotSupportedException_TypeInfo);
+  v5 = (System_NotSupportedException_o *)sub_1B64314(v2, v3, v4);
+  System_NotSupportedException___ctor(v5, 0LL);
+  v6 = sub_1B640DC(&Method_BackTaskAmountAdjuster__Execute_d__9_System_Collections_IEnumerator_Reset__);
+  sub_1B641F0(v5, v6);
 }
 
 

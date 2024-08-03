@@ -1,14 +1,14 @@
 void __fastcall MstMissionDisplayInfoMaster___ctor(MstMissionDisplayInfoMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E2B80 & 1) == 0 )
+  if ( (byte_49FC799 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataMasterBase_MstMissionDisplayInfoMaster__MstMissionDisplayInfoEntity__int___ctor__, method);
-    byte_48E2B80 = 1;
+    sub_1B640C8(&Method_DataMasterBase_MstMissionDisplayInfoMaster__MstMissionDisplayInfoEntity__int___ctor__, method);
+    byte_49FC799 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    159,
-    (const MethodInfo_2FE6A0C *)Method_DataMasterBase_MstMissionDisplayInfoMaster__MstMissionDisplayInfoEntity__int___ctor__);
+    160,
+    (const MethodInfo_30D3E64 *)Method_DataMasterBase_MstMissionDisplayInfoMaster__MstMissionDisplayInfoEntity__int___ctor__);
 }
 
 
@@ -28,20 +28,20 @@ bool __fastcall MstMissionDisplayInfoMaster__IsBefOpenTime(
   Il2CppObject *Item; // x0
   __int64 methodPtr_low; // x10
 
-  if ( (byte_48E2B82 & 1) == 0 )
+  if ( (byte_49FC79B & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, method);
-    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v3);
-    sub_1B00CCC(&MstMissionDisplayInfoEntity_TypeInfo, v4);
-    sub_1B00CCC(&NetworkManager_TypeInfo, v5);
-    byte_48E2B82 = 1;
+    sub_1B640C8(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, method);
+    sub_1B640C8(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v3);
+    sub_1B640C8(&MstMissionDisplayInfoEntity_TypeInfo, v4);
+    sub_1B640C8(&NetworkManager_TypeInfo, v5);
+    byte_49FC79B = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_17;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_2F836B0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_3070B08 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0LL);
@@ -58,7 +58,7 @@ bool __fastcall MstMissionDisplayInfoMaster__IsBefOpenTime(
       Item = System_Collections_ObjectModel_Collection_object___get_Item(
                list,
                v10,
-               (const MethodInfo_2F83740 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+               (const MethodInfo_3070B98 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( !Item
         || (methodPtr_low = LOBYTE(MstMissionDisplayInfoEntity_TypeInfo->vtable._0_Equals.methodPtr),
             LOBYTE(Item->klass->vtable[0].methodPtr) < (unsigned int)methodPtr_low)
@@ -72,7 +72,7 @@ bool __fastcall MstMissionDisplayInfoMaster__IsBefOpenTime(
       return v11;
     }
 LABEL_17:
-    sub_1B00F28(list, method);
+    sub_1B64324(list);
   }
   return 0;
 }
@@ -88,21 +88,22 @@ bool __fastcall MstMissionDisplayInfoMaster__IsOpenNow(MstMissionDisplayInfoMast
   int32_t v8; // w21
   bool v9; // w24
   Il2CppObject *Item; // x0
+  const MethodInfo *v11; // x1
   __int64 methodPtr_low; // x10
 
-  if ( (byte_48E2B81 & 1) == 0 )
+  if ( (byte_49FC79A & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, method);
-    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v3);
-    sub_1B00CCC(&MstMissionDisplayInfoEntity_TypeInfo, v4);
-    byte_48E2B81 = 1;
+    sub_1B640C8(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, method);
+    sub_1B640C8(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v3);
+    sub_1B640C8(&MstMissionDisplayInfoEntity_TypeInfo, v4);
+    byte_49FC79A = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_15;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_2F836B0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_3070B08 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
     v7 = Count;
@@ -116,12 +117,12 @@ bool __fastcall MstMissionDisplayInfoMaster__IsOpenNow(MstMissionDisplayInfoMast
       Item = System_Collections_ObjectModel_Collection_object___get_Item(
                list,
                v8,
-               (const MethodInfo_2F83740 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+               (const MethodInfo_3070B98 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( !Item
         || (methodPtr_low = LOBYTE(MstMissionDisplayInfoEntity_TypeInfo->vtable._0_Equals.methodPtr),
             LOBYTE(Item->klass->vtable[0].methodPtr) < (unsigned int)methodPtr_low)
         || (MstMissionDisplayInfoEntity_c *)Item->klass->_2.typeHierarchy[methodPtr_low - 1] != MstMissionDisplayInfoEntity_TypeInfo
-        || !MstMissionDisplayInfoEntity__isOpenNow((MstMissionDisplayInfoEntity_o *)Item, method) )
+        || !MstMissionDisplayInfoEntity__isOpenNow((MstMissionDisplayInfoEntity_o *)Item, v11) )
       {
         v9 = ++v8 < v7;
         if ( v7 != v8 )
@@ -130,7 +131,7 @@ bool __fastcall MstMissionDisplayInfoMaster__IsOpenNow(MstMissionDisplayInfoMast
       return v9;
     }
 LABEL_15:
-    sub_1B00F28(list, method);
+    sub_1B64324(list);
   }
   return 0;
 }

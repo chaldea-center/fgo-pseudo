@@ -1,13 +1,13 @@
 void __fastcall ServantScriptAddEntity___ctor(ServantScriptAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E2F7B & 1) == 0 )
+  if ( (byte_49FCBDA & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_int___ctor__, method);
-    byte_48E2F7B = 1;
+    sub_1B640C8(&Method_DataEntityBase_int___ctor__, method);
+    byte_49FCBDA = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_2FE684C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_30D3CA4 *)Method_DataEntityBase_int___ctor__);
 }
 
 

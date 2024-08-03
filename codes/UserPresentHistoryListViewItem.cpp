@@ -7,9 +7,9 @@ void __fastcall UserPresentHistoryListViewItem___ctor(
   int32_t v6; // w2
   int32_t v7; // w3
 
-  ListViewItem___ctor_39415512((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_40370988((ListViewItem_o *)this, index, 0LL);
   this->fields._Message_k__BackingField = message;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields._Message_k__BackingField, (int32_t)message, v6, v7);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields._Message_k__BackingField, (int32_t)message, v6, v7);
 }
 
 
@@ -29,7 +29,7 @@ void __fastcall UserPresentHistoryListViewItem__set_Message(
   int32_t v3; // w3
 
   this->fields._Message_k__BackingField = value;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields._Message_k__BackingField,
     (int32_t)value,
     (int32_t)method,

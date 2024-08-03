@@ -5,14 +5,14 @@ void __fastcall GachaDrawRequest___ctor(GachaDrawRequest_o *this, const MethodIn
   int32_t v5; // w1
   const MethodInfo *v6; // x1
 
-  if ( (byte_48E3F43 & 1) == 0 )
+  if ( (byte_49FDCC1 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_9003/*"MockGachaResponse"*/, method);
-    byte_48E3F43 = 1;
+    sub_1B640C8(&StringLiteral_9064/*"MockGachaResponse"*/, method);
+    byte_49FDCC1 = 1;
   }
-  v5 = StringLiteral_9003/*"MockGachaResponse"*/;
-  this->fields.resMsg = (struct System_String_o *)StringLiteral_9003/*"MockGachaResponse"*/;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.resMsg, v5, v2, v3);
+  v5 = StringLiteral_9064/*"MockGachaResponse"*/;
+  this->fields.resMsg = (struct System_String_o *)StringLiteral_9064/*"MockGachaResponse"*/;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.resMsg, v5, v2, v3);
   RequestBase___ctor((RequestBase_o *)this, v6);
 }
 
@@ -44,37 +44,37 @@ void __fastcall GachaDrawRequest__beginRequest(
   const MethodInfo *v28; // x3
   const MethodInfo *v29; // x1
 
-  if ( (byte_48E3F41 & 1) == 0 )
+  if ( (byte_49FDCBF & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_21876/*"num"*/, *(_QWORD *)&gachaId);
-    sub_1B00CCC(&StringLiteral_19423/*"gachaId"*/, v17);
-    sub_1B00CCC(&StringLiteral_23219/*"storyAdjustIds"*/, v18);
-    sub_1B00CCC(&StringLiteral_23572/*"ticketItemId"*/, v19);
-    sub_1B00CCC(&StringLiteral_22947/*"shopIdIndex"*/, v20);
-    sub_1B00CCC(&StringLiteral_19425/*"gachaSubId"*/, v21);
-    sub_1B00CCC(&StringLiteral_22765/*"selectBonusList"*/, v22);
-    byte_48E3F41 = 1;
+    sub_1B640C8(&StringLiteral_22090/*"num"*/, *(_QWORD *)&gachaId);
+    sub_1B640C8(&StringLiteral_19615/*"gachaId"*/, v17);
+    sub_1B640C8(&StringLiteral_23469/*"storyAdjustIds"*/, v18);
+    sub_1B640C8(&StringLiteral_23828/*"ticketItemId"*/, v19);
+    sub_1B640C8(&StringLiteral_23176/*"shopIdIndex"*/, v20);
+    sub_1B640C8(&StringLiteral_19617/*"gachaSubId"*/, v21);
+    sub_1B640C8(&StringLiteral_22987/*"selectBonusList"*/, v22);
+    byte_49FDCBF = 1;
   }
   this->fields.gachaId = gachaId;
   this->fields.num = num;
   this->fields.ticketItemId = ticketItemId;
   RequestBase__addField(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_19423/*"gachaId"*/,
+    (System_String_o *)StringLiteral_19615/*"gachaId"*/,
     gachaId,
     *(const MethodInfo **)&warId);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21876/*"num"*/, num, v23);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23572/*"ticketItemId"*/, ticketItemId, v24);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22947/*"shopIdIndex"*/, shopIdIdx, v25);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19425/*"gachaSubId"*/, gachaSubId, v26);
-  RequestBase__addField_39761928(
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22090/*"num"*/, num, v23);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23828/*"ticketItemId"*/, ticketItemId, v24);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23176/*"shopIdIndex"*/, shopIdIdx, v25);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19617/*"gachaSubId"*/, gachaSubId, v26);
+  RequestBase__addField_40848776(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_23219/*"storyAdjustIds"*/,
+    (System_String_o *)StringLiteral_23469/*"storyAdjustIds"*/,
     &storyAdjustIds->obj,
     v27);
-  RequestBase__addField_39752868(
+  RequestBase__addField_40850936(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_22765/*"selectBonusList"*/,
+    (System_String_o *)StringLiteral_22987/*"selectBonusList"*/,
     selectBonusListData,
     v28);
   RequestBase__beginRequest((RequestBase_o *)this, v29);
@@ -85,10 +85,10 @@ System_String_o *__fastcall GachaDrawRequest__getMockData(GachaDrawRequest_o *th
 {
   System_String_o *resMsg; // x19
 
-  if ( (byte_48E3F3F & 1) == 0 )
+  if ( (byte_49FDCBD & 1) == 0 )
   {
-    sub_1B00CCC(&NetworkManager_TypeInfo, method);
-    byte_48E3F3F = 1;
+    sub_1B640C8(&NetworkManager_TypeInfo, method);
+    byte_49FDCBD = 1;
   }
   resMsg = this->fields.resMsg;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -102,16 +102,16 @@ System_String_o *__fastcall GachaDrawRequest__getURL(GachaDrawRequest_o *this, c
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_48E3F3E & 1) == 0 )
+  if ( (byte_49FDCBC & 1) == 0 )
   {
-    sub_1B00CCC(&NetworkManager_TypeInfo, method);
-    sub_1B00CCC(&StringLiteral_19421/*"gacha/draw"*/, v2);
-    byte_48E3F3E = 1;
+    sub_1B640C8(&NetworkManager_TypeInfo, method);
+    sub_1B640C8(&StringLiteral_19613/*"gacha/draw"*/, v2);
+    byte_49FDCBC = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_60325748(BaseUrl, (System_String_o *)StringLiteral_19421/*"gacha/draw"*/, 0LL);
+  return System_String__Concat_61375396(BaseUrl, (System_String_o *)StringLiteral_19613/*"gacha/draw"*/, 0LL);
 }
 
 
@@ -130,12 +130,12 @@ void __fastcall GachaDrawRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v13; // x8
 
-  if ( (byte_48E3F42 & 1) == 0 )
+  if ( (byte_49FDCC0 & 1) == 0 )
   {
-    sub_1B00CCC(&JsonManager_TypeInfo, responseList);
-    sub_1B00CCC(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B00CCC(&StringLiteral_21754/*"ng"*/, v6);
-    byte_48E3F42 = 1;
+    sub_1B640C8(&JsonManager_TypeInfo, responseList);
+    sub_1B640C8(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B640C8(&StringLiteral_21968/*"ng"*/, v6);
+    byte_49FDCC0 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -160,7 +160,7 @@ void __fastcall GachaDrawRequest__requestCompleted(
     if ( v13 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v13->fields.m_target)(
         v13->fields.original_method_info,
-        StringLiteral_21754/*"ng"*/,
+        StringLiteral_21968/*"ng"*/,
         *(_QWORD *)&v13->fields.extra_arg);
   }
 }
@@ -172,15 +172,15 @@ void __fastcall GachaDrawRequest__setResTime(GachaDrawRequest_o *this, int32_t t
   int32_t v3; // w3
   int32_t v6; // w1
 
-  if ( (byte_48E3F40 & 1) == 0 )
+  if ( (byte_49FDCBE & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_9004/*"MockMultiGachaResponse"*/, *(_QWORD *)&time);
-    byte_48E3F40 = 1;
+    sub_1B640C8(&StringLiteral_9065/*"MockMultiGachaResponse"*/, *(_QWORD *)&time);
+    byte_49FDCBE = 1;
   }
   if ( time >= 2 )
   {
-    v6 = StringLiteral_9004/*"MockMultiGachaResponse"*/;
-    this->fields.resMsg = (struct System_String_o *)StringLiteral_9004/*"MockMultiGachaResponse"*/;
-    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.resMsg, v6, (int32_t)method, v3);
+    v6 = StringLiteral_9065/*"MockMultiGachaResponse"*/;
+    this->fields.resMsg = (struct System_String_o *)StringLiteral_9065/*"MockMultiGachaResponse"*/;
+    sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.resMsg, v6, (int32_t)method, v3);
   }
 }

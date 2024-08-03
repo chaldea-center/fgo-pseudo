@@ -11,14 +11,13 @@ void __fastcall ServantCostumeListViewItemDraw__SetButtonState(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *baseButton; // x21
-  __int64 v6; // x1
   UITouchPress_o *touchPress; // x0
-  _BOOL4 v8; // w20
+  _BOOL4 v7; // w20
 
-  if ( (byte_48E6140 & 1) == 0 )
+  if ( (byte_49FFE58 & 1) == 0 )
   {
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, isEnabled);
-    byte_48E6140 = 1;
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, isEnabled);
+    byte_49FFE58 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -27,16 +26,16 @@ void __fastcall ServantCostumeListViewItemDraw__SetButtonState(
   {
     touchPress = (UITouchPress_o *)this->fields.baseButton;
     if ( !touchPress
-      || (v8 = isEnabled,
+      || (v7 = isEnabled,
           ((void (__fastcall *)(UITouchPress_o *, _BOOL4, void *))touchPress->klass[1]._1.namespaze)(
             touchPress,
-            v8,
+            v7,
             touchPress->klass[1]._1.byval_arg.data),
           (touchPress = this->fields.touchPress) == 0LL)
-      || (UITouchPress__set_IsEnabled(touchPress, v8, 0LL),
+      || (UITouchPress__set_IsEnabled(touchPress, v7, 0LL),
           (touchPress = (UITouchPress_o *)this->fields.baseButton) == 0LL) )
     {
-      sub_1B00F28(touchPress, v6);
+      sub_1B64324(touchPress);
     }
     ((void (__fastcall *)(UITouchPress_o *, _QWORD, __int64, Il2CppRuntimeInterfaceOffsetPair *))touchPress->klass[1]._1.implementedInterfaces)(
       touchPress,
@@ -71,8 +70,8 @@ void __fastcall ServantCostumeListViewItemDraw__SetItem(
         const MethodInfo *method)
 {
   ServantFaceIconComponent_o *servantFaceIcon; // x0
-  UserServantEntity_o *userServantEntity; // x1
   struct ServantCostumeItemInfo_o *servantData; // x8
+  UserServantEntity_o *userServantEntity; // x1
   const MethodInfo *v10; // x2
   ServantCostumeListViewItemDraw_o *v11; // x0
   const MethodInfo *v12; // x3
@@ -101,7 +100,7 @@ void __fastcall ServantCostumeListViewItemDraw__SetItem(
       {
         if ( !servantFaceIcon )
           goto LABEL_12;
-        ServantFaceIconComponent__Set_37007740(
+        ServantFaceIconComponent__Set_37904900(
           servantFaceIcon,
           userServantEntity,
           item->fields.iconLabelInfo1,
@@ -112,7 +111,7 @@ void __fastcall ServantCostumeListViewItemDraw__SetItem(
       {
         if ( !servantFaceIcon )
           goto LABEL_12;
-        ServantFaceIconComponent__Set_37012136(
+        ServantFaceIconComponent__Set_37909296(
           servantFaceIcon,
           servantData->fields.notHaveServantEntity,
           item->fields.iconLabelInfo1,
@@ -142,7 +141,7 @@ void __fastcall ServantCostumeListViewItemDraw__SetItem(
         return;
       }
 LABEL_12:
-      sub_1B00F28(servantFaceIcon, userServantEntity);
+      sub_1B64324(servantFaceIcon);
     }
   }
 }
@@ -162,21 +161,22 @@ void __fastcall ServantCostumeListViewItemDraw__SetMaskLabelText(
   UnityEngine_GameObject_o *gameObject; // x21
   const MethodInfo *v12; // x1
   const MethodInfo *v13; // x1
+  const MethodInfo *v14; // x1
   struct ServantCostumeItemInfo_o *servantData; // x8
-  struct UILabel_o *v15; // x19
-  __int64 *v16; // x8
-  System_String_o *v17; // x1
+  struct UILabel_o *v16; // x19
+  __int64 *v17; // x8
+  System_String_o *v18; // x1
   _BOOL4 isLetgo; // w20
 
-  if ( (byte_48E6142 & 1) == 0 )
+  if ( (byte_49FFE5A & 1) == 0 )
   {
-    sub_1B00CCC(&LocalizationManager_TypeInfo, item);
-    sub_1B00CCC(&StringLiteral_9188/*"NOT_SELECT_LET_GO"*/, v5);
-    sub_1B00CCC(&StringLiteral_11306/*"SELECT_CANNOT"*/, v6);
-    sub_1B00CCC(&StringLiteral_1/*""*/, v7);
-    sub_1B00CCC(&StringLiteral_8457/*"MATERIAL_FIND_SERVANT"*/, v8);
-    sub_1B00CCC(&StringLiteral_9186/*"NOT_SELECT_COSTUME"*/, v9);
-    byte_48E6142 = 1;
+    sub_1B640C8(&LocalizationManager_TypeInfo, item);
+    sub_1B640C8(&StringLiteral_9249/*"NOT_SELECT_LET_GO"*/, v5);
+    sub_1B640C8(&StringLiteral_11441/*"SELECT_CANNOT"*/, v6);
+    sub_1B640C8(&StringLiteral_1/*""*/, v7);
+    sub_1B640C8(&StringLiteral_8511/*"MATERIAL_FIND_SERVANT"*/, v8);
+    sub_1B640C8(&StringLiteral_9247/*"NOT_SELECT_COSTUME"*/, v9);
+    byte_49FFE5A = 1;
   }
   if ( !item )
     return;
@@ -194,13 +194,13 @@ void __fastcall ServantCostumeListViewItemDraw__SetMaskLabelText(
     maskLabel = (UnityEngine_Component_o *)this->fields.maskLabel;
     if ( maskLabel )
     {
-      v17 = (System_String_o *)StringLiteral_1/*""*/;
+      v18 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_27:
-      UILabel__set_text((UILabel_o *)maskLabel, v17, 0LL);
+      UILabel__set_text((UILabel_o *)maskLabel, v18, 0LL);
       return;
     }
 LABEL_28:
-    sub_1B00F28(maskLabel, item);
+    sub_1B64324(maskLabel);
   }
   servantData = item->fields.servantData;
   if ( !servantData )
@@ -208,37 +208,37 @@ LABEL_28:
   if ( !servantData->fields.userServantEntity )
   {
     isLetgo = item->fields.isLetgo;
-    v15 = this->fields.maskLabel;
+    v16 = this->fields.maskLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     if ( isLetgo )
-      v16 = &StringLiteral_9188/*"NOT_SELECT_LET_GO"*/;
+      v17 = &StringLiteral_9249/*"NOT_SELECT_LET_GO"*/;
     else
-      v16 = &StringLiteral_8457/*"MATERIAL_FIND_SERVANT"*/;
+      v17 = &StringLiteral_8511/*"MATERIAL_FIND_SERVANT"*/;
 LABEL_25:
-    maskLabel = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)*v16, 0LL);
-    if ( v15 )
+    maskLabel = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)*v17, 0LL);
+    if ( v16 )
     {
-      v17 = (System_String_o *)maskLabel;
-      maskLabel = (UnityEngine_Component_o *)v15;
+      v18 = (System_String_o *)maskLabel;
+      maskLabel = (UnityEngine_Component_o *)v16;
       goto LABEL_27;
     }
     goto LABEL_28;
   }
-  if ( ServantCostumeListViewItem__get_IsHeroineLeave(item, (const MethodInfo *)item) )
+  if ( ServantCostumeListViewItem__get_IsHeroineLeave(item, v14) )
   {
-    v15 = this->fields.maskLabel;
+    v16 = this->fields.maskLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v16 = &StringLiteral_11306/*"SELECT_CANNOT"*/;
+    v17 = &StringLiteral_11441/*"SELECT_CANNOT"*/;
     goto LABEL_25;
   }
   if ( !item->fields.isReleaseItemHaving )
   {
-    v15 = this->fields.maskLabel;
+    v16 = this->fields.maskLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v16 = &StringLiteral_9186/*"NOT_SELECT_COSTUME"*/;
+    v17 = &StringLiteral_9247/*"NOT_SELECT_COSTUME"*/;
     goto LABEL_25;
   }
 }
@@ -249,82 +249,79 @@ void __fastcall ServantCostumeListViewItemDraw__SetNonColorStatusLabel(
         ServantCostumeListViewItem_o *item,
         const MethodInfo *method)
 {
-  ServantCostumeListViewItem_o *v3; // x20
   __int64 v5; // x1
   __int64 v6; // x1
   UnityEngine_Component_o *nonColorStatusLabel; // x0
   const MethodInfo *v8; // x1
   UnityEngine_GameObject_o *v9; // x21
   UnityEngine_GameObject_o *v10; // x22
-  System_String_o *v11; // x1
-  struct UILabel_o *v12; // x19
+  bool v11; // w1
+  const MethodInfo *v12; // x1
+  System_String_o *v13; // x1
+  struct UILabel_o *v14; // x19
 
-  v3 = item;
-  if ( (byte_48E6144 & 1) == 0 )
+  if ( (byte_49FFE5C & 1) == 0 )
   {
-    sub_1B00CCC(&LocalizationManager_TypeInfo, item);
-    sub_1B00CCC(&StringLiteral_9184/*"NOT_RELEASE_COSTUME"*/, v5);
-    sub_1B00CCC(&StringLiteral_1/*""*/, v6);
-    byte_48E6144 = 1;
+    sub_1B640C8(&LocalizationManager_TypeInfo, item);
+    sub_1B640C8(&StringLiteral_9245/*"NOT_RELEASE_COSTUME"*/, v5);
+    sub_1B640C8(&StringLiteral_1/*""*/, v6);
+    byte_49FFE5C = 1;
   }
-  if ( v3 )
+  if ( item )
   {
     nonColorStatusLabel = (UnityEngine_Component_o *)this->fields.nonColorStatusLabel;
     if ( !nonColorStatusLabel )
       goto LABEL_29;
     nonColorStatusLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(nonColorStatusLabel, 0LL);
     v9 = (UnityEngine_GameObject_o *)nonColorStatusLabel;
-    if ( v3->fields.isReleaseItemHaving )
+    if ( item->fields.isReleaseItemHaving )
       v10 = (UnityEngine_GameObject_o *)nonColorStatusLabel;
     else
       v10 = 0LL;
-    if ( v3->fields.isReleaseItemHaving
-      && (nonColorStatusLabel = (UnityEngine_Component_o *)ServantCostumeListViewItem__get_IsCanNotSelect(v3, v8),
+    if ( item->fields.isReleaseItemHaving
+      && (nonColorStatusLabel = (UnityEngine_Component_o *)ServantCostumeListViewItem__get_IsCanNotSelect(item, v8),
           ((unsigned __int8)nonColorStatusLabel & 1) == 0) )
     {
-      if ( v3->fields.isClearAllCond )
-        item = 0LL;
-      else
-        item = (ServantCostumeListViewItem_o *)!v3->fields.isHavingAllReleasedCostume;
+      v11 = !item->fields.isClearAllCond && !item->fields.isHavingAllReleasedCostume;
       v9 = v10;
       if ( !v10 )
         goto LABEL_29;
     }
     else
     {
-      item = 0LL;
+      v11 = 0;
       if ( !v9 )
         goto LABEL_29;
     }
-    UnityEngine_GameObject__SetActive(v9, (bool)item, 0LL);
-    if ( !v3->fields.isReleaseItemHaving
-      || ServantCostumeListViewItem__get_IsCanNotSelect(v3, (const MethodInfo *)item)
-      || v3->fields.isClearAllCond
-      || v3->fields.isHavingAllReleasedCostume
-      || v3->fields.isOpenEventCostume )
+    UnityEngine_GameObject__SetActive(v9, v11, 0LL);
+    if ( !item->fields.isReleaseItemHaving
+      || ServantCostumeListViewItem__get_IsCanNotSelect(item, v12)
+      || item->fields.isClearAllCond
+      || item->fields.isHavingAllReleasedCostume
+      || item->fields.isOpenEventCostume )
     {
       nonColorStatusLabel = (UnityEngine_Component_o *)this->fields.nonColorStatusLabel;
       if ( !nonColorStatusLabel )
         goto LABEL_29;
-      v11 = (System_String_o *)StringLiteral_1/*""*/;
+      v13 = (System_String_o *)StringLiteral_1/*""*/;
       goto LABEL_24;
     }
-    v12 = this->fields.nonColorStatusLabel;
+    v14 = this->fields.nonColorStatusLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     nonColorStatusLabel = (UnityEngine_Component_o *)LocalizationManager__Get(
-                                                       (System_String_o *)StringLiteral_9184/*"NOT_RELEASE_COSTUME"*/,
+                                                       (System_String_o *)StringLiteral_9245/*"NOT_RELEASE_COSTUME"*/,
                                                        0LL);
-    if ( v12 )
+    if ( v14 )
     {
-      v11 = (System_String_o *)nonColorStatusLabel;
-      nonColorStatusLabel = (UnityEngine_Component_o *)v12;
+      v13 = (System_String_o *)nonColorStatusLabel;
+      nonColorStatusLabel = (UnityEngine_Component_o *)v14;
 LABEL_24:
-      UILabel__set_text((UILabel_o *)nonColorStatusLabel, v11, 0LL);
+      UILabel__set_text((UILabel_o *)nonColorStatusLabel, v13, 0LL);
       return;
     }
 LABEL_29:
-    sub_1B00F28(nonColorStatusLabel, item);
+    sub_1B64324(nonColorStatusLabel);
   }
 }
 
@@ -338,7 +335,7 @@ void __fastcall ServantCostumeListViewItemDraw__SetPartyIcon(
 
   partyIcon = this->fields.partyIcon;
   if ( !partyIcon )
-    sub_1B00F28(0LL, isShow);
+    sub_1B64324(0LL);
   if ( isShow )
     FlashingIconComponent__Set(partyIcon, 0LL);
   else
@@ -353,12 +350,11 @@ void __fastcall ServantCostumeListViewItemDraw__SetSpriteActive(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v7; // x1
 
-  if ( (byte_48E6141 & 1) == 0 )
+  if ( (byte_49FFE59 & 1) == 0 )
   {
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, sprite);
-    byte_48E6141 = 1;
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, sprite);
+    byte_49FFE59 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -366,7 +362,7 @@ void __fastcall ServantCostumeListViewItemDraw__SetSpriteActive(
   if ( ((unsigned __int8)gameObject & 1) == 0 )
   {
     if ( !sprite || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)sprite, 0LL)) == 0LL )
-      sub_1B00F28(gameObject, v7);
+      sub_1B64324(gameObject);
     UnityEngine_GameObject__SetActive(gameObject, isActive, 0LL);
   }
 }
@@ -397,18 +393,18 @@ void __fastcall ServantCostumeListViewItemDraw__SetStatusLabel(
   UnityEngine_Color_o v22; // [xsp+0h] [xbp-40h] BYREF
   UnityEngine_Color_o color; // [xsp+10h] [xbp-30h] BYREF
 
-  if ( (byte_48E6143 & 1) == 0 )
+  if ( (byte_49FFE5B & 1) == 0 )
   {
-    sub_1B00CCC(&LocalizationManager_TypeInfo, item);
-    sub_1B00CCC(&StringLiteral_454/*"#FFFFFF"*/, v5);
-    sub_1B00CCC(&StringLiteral_451/*"#FEEF99"*/, v6);
-    sub_1B00CCC(&StringLiteral_453/*"#FFFF00"*/, v7);
-    sub_1B00CCC(&StringLiteral_5516/*"EVENT_COMBINE_COSTUME_LF"*/, v8);
-    sub_1B00CCC(&StringLiteral_3848/*"COSTUME_CAN_RELEASE"*/, v9);
-    sub_1B00CCC(&StringLiteral_1/*""*/, v10);
-    sub_1B00CCC(&StringLiteral_446/*"#E1A545"*/, v11);
-    sub_1B00CCC(&StringLiteral_5508/*"EVENT_COMBINE_COSTUME_ITEM"*/, v12);
-    byte_48E6143 = 1;
+    sub_1B640C8(&LocalizationManager_TypeInfo, item);
+    sub_1B640C8(&StringLiteral_458/*"#FFFFFF"*/, v5);
+    sub_1B640C8(&StringLiteral_455/*"#FEEF99"*/, v6);
+    sub_1B640C8(&StringLiteral_457/*"#FFFF00"*/, v7);
+    sub_1B640C8(&StringLiteral_5549/*"EVENT_COMBINE_COSTUME_LF"*/, v8);
+    sub_1B640C8(&StringLiteral_3868/*"COSTUME_CAN_RELEASE"*/, v9);
+    sub_1B640C8(&StringLiteral_1/*""*/, v10);
+    sub_1B640C8(&StringLiteral_450/*"#E1A545"*/, v11);
+    sub_1B640C8(&StringLiteral_5541/*"EVENT_COMBINE_COSTUME_ITEM"*/, v12);
+    byte_49FFE5B = 1;
   }
   *(_QWORD *)&color.fields.r = 0LL;
   *(_QWORD *)&color.fields.b = 0LL;
@@ -427,14 +423,14 @@ void __fastcall ServantCostumeListViewItemDraw__SetStatusLabel(
         v15 = this->fields.statusTxtLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v16 = LocalizationManager__Get((System_String_o *)StringLiteral_5516/*"EVENT_COMBINE_COSTUME_LF"*/, 0LL);
-        v17 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5508/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0LL);
+        v16 = LocalizationManager__Get((System_String_o *)StringLiteral_5549/*"EVENT_COMBINE_COSTUME_LF"*/, 0LL);
+        v17 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5541/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0LL);
         statusTxtLabel = (UILabel_o *)System_String__Format(v16, v17, 0LL);
         if ( !v15 )
           goto LABEL_24;
         UILabel__set_text(v15, (System_String_o *)statusTxtLabel, 0LL);
-        UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_446/*"#E1A545"*/, &v22, 0LL);
-        v18 = &StringLiteral_451/*"#FEEF99"*/;
+        UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_450/*"#E1A545"*/, &v22, 0LL);
+        v18 = &StringLiteral_455/*"#FEEF99"*/;
 LABEL_16:
         UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)*v18, &color, 0LL);
         statusTxtLabel = this->fields.statusTxtLabel;
@@ -452,12 +448,12 @@ LABEL_16:
         v19 = this->fields.statusTxtLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        statusTxtLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3848/*"COSTUME_CAN_RELEASE"*/, 0LL);
+        statusTxtLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3868/*"COSTUME_CAN_RELEASE"*/, 0LL);
         if ( !v19 )
           goto LABEL_24;
         UILabel__set_text(v19, (System_String_o *)statusTxtLabel, 0LL);
-        UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_454/*"#FFFFFF"*/, &v22, 0LL);
-        v18 = &StringLiteral_453/*"#FFFF00"*/;
+        UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_458/*"#FFFFFF"*/, &v22, 0LL);
+        v18 = &StringLiteral_457/*"#FFFF00"*/;
         goto LABEL_16;
       }
     }
@@ -481,6 +477,6 @@ LABEL_19:
       }
     }
 LABEL_24:
-    sub_1B00F28(statusTxtLabel, item);
+    sub_1B64324(statusTxtLabel);
   }
 }

@@ -1,9 +1,9 @@
 void __fastcall TitleInfoEventOpenHeaderEffect___ctor(TitleInfoEventOpenHeaderEffect_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E0C51 & 1) == 0 )
+  if ( (byte_49FA501 & 1) == 0 )
   {
-    sub_1B00CCC(&CommonEffectComponent_TypeInfo, method);
-    byte_48E0C51 = 1;
+    sub_1B640C8(&CommonEffectComponent_TypeInfo, method);
+    byte_49FA501 = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -55,22 +55,22 @@ void __fastcall TitleInfoEventOpenHeaderEffect__setup(
   int32_t v17; // [xsp+Ch] [xbp-34h] BYREF
 
   v17 = eventId;
-  if ( (byte_48E0C50 & 1) == 0 )
+  if ( (byte_49FA500 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_16293/*"_anim"*/, *(_QWORD *)&eventId);
-    sub_1B00CCC(&StringLiteral_18588/*"ef_mapnamechange_"*/, v8);
-    byte_48E0C50 = 1;
+    sub_1B640C8(&StringLiteral_16458/*"_anim"*/, *(_QWORD *)&eventId);
+    sub_1B640C8(&StringLiteral_18767/*"ef_mapnamechange_"*/, v8);
+    byte_49FA500 = 1;
   }
   v9 = System_Int32__ToString((int32_t)&v17, 0LL);
-  v10 = System_String__Concat_60337008(
-          (System_String_o *)StringLiteral_18588/*"ef_mapnamechange_"*/,
+  v10 = System_String__Concat_61386656(
+          (System_String_o *)StringLiteral_18767/*"ef_mapnamechange_"*/,
           v9,
-          (System_String_o *)StringLiteral_16293/*"_anim"*/,
+          (System_String_o *)StringLiteral_16458/*"_anim"*/,
           0LL);
   this->fields.baseName = v10;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.baseName, (int32_t)v10, v11, v12);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.baseName, (int32_t)v10, v11, v12);
   this->fields.changeUiCallback = changeUiCallback;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.changeUiCallback, (int32_t)changeUiCallback, v13, v14);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.changeUiCallback, (int32_t)changeUiCallback, v13, v14);
   this->fields.animEndCallback = endCallback;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.animEndCallback, (int32_t)endCallback, v15, v16);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.animEndCallback, (int32_t)endCallback, v15, v16);
 }

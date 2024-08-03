@@ -13,7 +13,7 @@ void __fastcall CombineListViewItem___ctor(
   v6->fields.info = info;
   v6 = (CombineListViewItem_o *)((char *)v6 + 112);
   v6[-1].fields.loopIndex = index;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)v6, (int32_t)info, v7, v8);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)v6, (int32_t)info, v7, v8);
 }
 
 
@@ -29,7 +29,7 @@ System_String_o *__fastcall CombineListViewItem__get_EventData(CombineListViewIt
 
   info = this->fields.info;
   if ( !info )
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   return info->fields.eventData;
 }
 
@@ -46,7 +46,7 @@ System_String_o *__fastcall CombineListViewItem__get_SpriteName(CombineListViewI
 
   info = this->fields.info;
   if ( !info )
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   return info->fields.spriteName;
 }
 
@@ -57,6 +57,6 @@ int32_t __fastcall CombineListViewItem__get_Type(CombineListViewItem_o *this, co
 
   info = this->fields.info;
   if ( !info )
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   return info->fields.type;
 }

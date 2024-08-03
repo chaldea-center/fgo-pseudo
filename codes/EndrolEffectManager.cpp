@@ -2,10 +2,10 @@ void __fastcall EndrolEffectManager___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_48E622E & 1) == 0 )
+  if ( (byte_49FFFFF & 1) == 0 )
   {
-    sub_1B00CCC(&EndrolEffectManager_TypeInfo, v1);
-    byte_48E622E = 1;
+    sub_1B640C8(&EndrolEffectManager_TypeInfo, v1);
+    byte_49FFFFF = 1;
   }
   *EndrolEffectManager_TypeInfo->static_fields = (struct EndrolEffectManager_StaticFields)0x101FFFFFEFFLL;
 }
@@ -13,27 +13,27 @@ void __fastcall EndrolEffectManager___cctor(const MethodInfo *method)
 
 void __fastcall EndrolEffectManager___ctor(EndrolEffectManager_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E622D & 1) == 0 )
+  if ( (byte_49FFFFE & 1) == 0 )
   {
-    sub_1B00CCC(&Method_SingletonMonoBehaviour_EndrolEffectManager___ctor__, method);
-    byte_48E622D = 1;
+    sub_1B640C8(&Method_SingletonMonoBehaviour_EndrolEffectManager___ctor__, method);
+    byte_49FFFFE = 1;
   }
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_35FC008 *)Method_SingletonMonoBehaviour_EndrolEffectManager___ctor__);
+    (const MethodInfo_36EC454 *)Method_SingletonMonoBehaviour_EndrolEffectManager___ctor__);
 }
 
 
 void __fastcall EndrolEffectManager__CalcGridPoint(EndrolEffectManager_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
   __int64 v4; // x1
   __int64 v5; // x1
-  System_Collections_Generic_List_Vector2__o *v6; // x20
+  __int64 v6; // x1
+  System_Collections_Generic_List_Vector2__o *v7; // x20
   struct System_Collections_Generic_List_Vector2__o **p_bgGridPointList; // x19
-  int32_t v8; // w2
-  int32_t v9; // w3
-  __int64 v10; // x1
+  int32_t v9; // w2
+  int32_t v10; // w3
   int i; // w20
   int j; // w27
   EndrolEffectManager_c *v13; // x0
@@ -46,21 +46,24 @@ void __fastcall EndrolEffectManager__CalcGridPoint(EndrolEffectManager_o *this, 
   float *v20; // x8
   UnityEngine_Vector2_o v21; // 0:s0.4,4:s1.4
 
-  if ( (byte_48E6229 & 1) == 0 )
+  if ( (byte_49FFFFA & 1) == 0 )
   {
-    sub_1B00CCC(&EndrolEffectManager_TypeInfo, method);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_Vector2__Add__, v3);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_Vector2___ctor__, v4);
-    sub_1B00CCC(&System_Collections_Generic_List_Vector2__TypeInfo, v5);
-    byte_48E6229 = 1;
+    sub_1B640C8(&EndrolEffectManager_TypeInfo, method);
+    sub_1B640C8(&Method_System_Collections_Generic_List_Vector2__Add__, v4);
+    sub_1B640C8(&Method_System_Collections_Generic_List_Vector2___ctor__, v5);
+    sub_1B640C8(&System_Collections_Generic_List_Vector2__TypeInfo, v6);
+    byte_49FFFFA = 1;
   }
-  v6 = (System_Collections_Generic_List_Vector2__o *)sub_1B00F18(System_Collections_Generic_List_Vector2__TypeInfo);
+  v7 = (System_Collections_Generic_List_Vector2__o *)sub_1B64314(
+                                                       System_Collections_Generic_List_Vector2__TypeInfo,
+                                                       method,
+                                                       v2);
   System_Collections_Generic_List_Vector2____ctor(
-    v6,
-    (const MethodInfo_3414BEC *)Method_System_Collections_Generic_List_Vector2___ctor__);
-  this->fields.bgGridPointList = v6;
+    v7,
+    (const MethodInfo_3502044 *)Method_System_Collections_Generic_List_Vector2___ctor__);
+  this->fields.bgGridPointList = v7;
   p_bgGridPointList = &this->fields.bgGridPointList;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)p_bgGridPointList, (int32_t)v6, v8, v9);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)p_bgGridPointList, (int32_t)v7, v9, v10);
   for ( i = 0; i != 26; ++i )
   {
     for ( j = 0; j != 46; ++j )
@@ -95,7 +98,7 @@ LABEL_15:
                 ++v16->fields._version,
                 !items) )
           {
-            sub_1B00F28(v16, v10);
+            sub_1B64324(v16);
           }
           size = v16->fields._size;
           if ( (unsigned int)size >= items->max_length )
@@ -105,7 +108,7 @@ LABEL_15:
             System_Collections_Generic_List_Vector2___AddWithResize(
               v16,
               v21,
-              *(const MethodInfo_3415454 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+              *(const MethodInfo_35028AC **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
           }
           else
           {
@@ -134,34 +137,34 @@ int32_t __fastcall EndrolEffectManager__CheckOverlap(
   System_Collections_Generic_List_Enumerator_T__o v11; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_T__o v12; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_48E622B & 1) == 0 )
+  if ( (byte_49FFFFC & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_double__Dispose__, method);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_double__MoveNext__, v5);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_Enumerator_double__get_Current__, v6);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_double__GetEnumerator__, v7);
-    byte_48E622B = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_double__Dispose__, method);
+    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_double__MoveNext__, v5);
+    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_double__get_Current__, v6);
+    sub_1B640C8(&Method_System_Collections_Generic_List_double__GetEnumerator__, v7);
+    byte_49FFFFC = 1;
   }
   memset(&v12, 0, sizeof(v12));
   effectOccurrenceTime = this->fields.effectOccurrenceTime;
   if ( !effectOccurrenceTime )
-    sub_1B00F28(0LL, method);
+    sub_1B64324(0LL);
   System_Collections_Generic_List_double___GetEnumerator(
     &v11,
     effectOccurrenceTime,
-    (const MethodInfo_3398574 *)Method_System_Collections_Generic_List_double__GetEnumerator__);
+    (const MethodInfo_34837D8 *)Method_System_Collections_Generic_List_double__GetEnumerator__);
   v9 = 0;
   v12 = v11;
   while ( System_Collections_Generic_List_Enumerator_double___MoveNext(
             &v12,
-            (const MethodInfo_3138E80 *)Method_System_Collections_Generic_List_Enumerator_double__MoveNext__) )
+            (const MethodInfo_3224D18 *)Method_System_Collections_Generic_List_Enumerator_double__MoveNext__) )
   {
     if ( *(double *)&v12.fields._current == checkTime )
       ++v9;
   }
   System_Collections_Generic_List_Enumerator_double___Dispose(
     &v12,
-    (const MethodInfo_3138E7C *)Method_System_Collections_Generic_List_Enumerator_double__Dispose__);
+    (const MethodInfo_3224D14 *)Method_System_Collections_Generic_List_Enumerator_double__Dispose__);
   return v9;
 }
 
@@ -170,16 +173,16 @@ void __fastcall EndrolEffectManager__EndEffect(EndrolEffectManager_o *this, cons
 {
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_48E622C & 1) == 0 )
+  if ( (byte_49FFFFD & 1) == 0 )
   {
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, method);
-    byte_48E622C = 1;
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, method);
+    byte_49FFFFD = 1;
   }
   this->fields.isForceEnd = 1;
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_68077656(gameObject, 0LL);
+  UnityEngine_Object__Destroy_69127736(gameObject, 0LL);
 }
 
 
@@ -201,31 +204,32 @@ void __fastcall EndrolEffectManager__InstansiateEffect(
   EndrolEffectManager_o *v12; // x19
   UnityEngine_Component_o *objectParent; // x8
   EndrolEffectManager_o *v14; // x20
-  EndrolEffectManager_o *v15; // x20
-  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
+  __int64 v15; // x1
+  EndrolEffectManager_o *v16; // x20
+  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
 
   y = pos.fields.y;
   x = pos.fields.x;
   v5 = this;
-  if ( (byte_48E622A & 1) == 0 )
+  if ( (byte_49FFFFB & 1) == 0 )
   {
-    sub_1B00CCC(&Method_UnityEngine_GameObject_AddComponent_EndrolEffectItem___, method);
-    sub_1B00CCC(&Method_UnityEngine_Object_Instantiate_GameObject___, v6);
-    this = (EndrolEffectManager_o *)sub_1B00CCC(&UnityEngine_Object_TypeInfo, v7);
-    byte_48E622A = 1;
+    sub_1B640C8(&Method_UnityEngine_GameObject_AddComponent_EndrolEffectItem___, method);
+    sub_1B640C8(&Method_UnityEngine_Object_Instantiate_GameObject___, v6);
+    this = (EndrolEffectManager_o *)sub_1B640C8(&UnityEngine_Object_TypeInfo, v7);
+    byte_49FFFFB = 1;
   }
   effectObject = v5->fields.effectObject;
   if ( !effectObject )
     goto LABEL_15;
-  v9 = UnityEngine_Random__Range_68037396(0, effectObject->max_length, 0LL);
+  v9 = UnityEngine_Random__Range_69087476(0, effectObject->max_length, 0LL);
   if ( (unsigned int)v9 >= effectObject->max_length )
-    sub_1B00F30(v9, v10);
+    sub_1B6432C(v9, v10);
   v11 = (Il2CppObject *)effectObject->m_Items[(int)v9];
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   this = (EndrolEffectManager_o *)UnityEngine_Object__Instantiate_object_(
                                     v11,
-                                    (const MethodInfo_2DD5AE8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                    (const MethodInfo_2EBBCA0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !this )
     goto LABEL_15;
   v12 = this;
@@ -241,27 +245,27 @@ void __fastcall EndrolEffectManager__InstansiateEffect(
   this = (EndrolEffectManager_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v12, 0LL);
   if ( !this )
     goto LABEL_15;
-  v16.fields.z = 0.0;
-  v16.fields.x = x;
-  v16.fields.y = y;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v16, 0LL);
+  v17.fields.z = 0.0;
+  v17.fields.x = x;
+  v17.fields.y = y;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v17, 0LL);
   this = (EndrolEffectManager_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v12, 0LL);
-  v15 = this;
-  if ( !byte_48DD9F6 )
+  v16 = this;
+  if ( !byte_49F7116 )
   {
-    this = (EndrolEffectManager_o *)sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, method);
-    byte_48DD9F6 = 1;
+    this = (EndrolEffectManager_o *)sub_1B640C8(&UnityEngine_Vector3_TypeInfo, v15);
+    byte_49F7116 = 1;
   }
-  if ( !v15 )
+  if ( !v16 )
 LABEL_15:
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   UnityEngine_Transform__set_localScale(
-    (UnityEngine_Transform_o *)v15,
+    (UnityEngine_Transform_o *)v16,
     UnityEngine_Vector3_TypeInfo->static_fields->oneVector,
     0LL);
   UnityEngine_GameObject__AddComponent_object_(
     (UnityEngine_GameObject_o *)v12,
-    (const MethodInfo_2DADD20 *)Method_UnityEngine_GameObject_AddComponent_EndrolEffectItem___);
+    (const MethodInfo_2E87DF0 *)Method_UnityEngine_GameObject_AddComponent_EndrolEffectItem___);
 }
 
 
@@ -307,29 +311,32 @@ void __fastcall EndrolEffectManager__SetEndRollTimes(
   double v44; // d0
   const MethodInfo *v45; // x1
 
-  if ( (byte_48E6228 & 1) == 0 )
+  if ( (byte_49FFFF9 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_List_double__Add__, *(_QWORD *)&miny);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_double__Sort__, v17);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_double___ctor__, v18);
-    sub_1B00CCC(&System_Collections_Generic_List_double__TypeInfo, v19);
-    byte_48E6228 = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_List_double__Add__, *(_QWORD *)&miny);
+    sub_1B640C8(&Method_System_Collections_Generic_List_double__Sort__, v17);
+    sub_1B640C8(&Method_System_Collections_Generic_List_double___ctor__, v18);
+    sub_1B640C8(&System_Collections_Generic_List_double__TypeInfo, v19);
+    byte_49FFFF9 = 1;
   }
-  v20 = (System_Collections_Generic_List_double__o *)sub_1B00F18(System_Collections_Generic_List_double__TypeInfo);
+  v20 = (System_Collections_Generic_List_double__o *)sub_1B64314(
+                                                       System_Collections_Generic_List_double__TypeInfo,
+                                                       *(_QWORD *)&miny,
+                                                       *(_QWORD *)&maxy);
   System_Collections_Generic_List_double____ctor(
     v20,
-    (const MethodInfo_3397240 *)Method_System_Collections_Generic_List_double___ctor__);
+    (const MethodInfo_3482404 *)Method_System_Collections_Generic_List_double___ctor__);
   this->fields.effectOccurrenceTime = v20;
   p_effectOccurrenceTime = &this->fields.effectOccurrenceTime;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.effectOccurrenceTime, (int32_t)v20, v22, v23);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.effectOccurrenceTime, (int32_t)v20, v22, v23);
   this->fields.objectParent = parent;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.objectParent, (int32_t)parent, v24, v25);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.objectParent, (int32_t)parent, v24, v25);
   this->fields.totalTime = allTime;
   v27 = x - z;
-  if ( !byte_48DE043 )
+  if ( !byte_49F779D )
   {
-    sub_1B00CCC(&System_Math_TypeInfo, v26);
-    byte_48DE043 = 1;
+    sub_1B640C8(&System_Math_TypeInfo, v26);
+    byte_49F779D = 1;
   }
   v28 = allTime / v27;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -348,7 +355,7 @@ void __fastcall EndrolEffectManager__SetEndRollTimes(
       v33 = v27 * (float)v31;
       v34 = (float)(v33 + x) > allTime && v31 == v30 - 1;
       v35 = v34 ? allTime - v33 : x;
-      v36 = UnityEngine_Random__Range_68037396(miny, v32, 0LL);
+      v36 = UnityEngine_Random__Range_69087476(miny, v32, 0LL);
       if ( v36 >= 1 )
         break;
 LABEL_26:
@@ -375,7 +382,7 @@ LABEL_26:
         System_Collections_Generic_List_double___AddWithResize(
           v40,
           v44,
-          *(const MethodInfo_3397A9C **)(*(_QWORD *)(v42[4] + 192LL) + 112LL));
+          *(const MethodInfo_3482C60 **)(*(_QWORD *)(v42[4] + 192LL) + 112LL));
       }
       else
       {
@@ -386,7 +393,7 @@ LABEL_26:
         goto LABEL_26;
     }
 LABEL_29:
-    sub_1B00F28(v40, v26);
+    sub_1B64324(v40);
   }
 LABEL_27:
   v40 = *p_effectOccurrenceTime;
@@ -394,7 +401,7 @@ LABEL_27:
     goto LABEL_29;
   System_Collections_Generic_List_double___Sort(
     v40,
-    (const MethodInfo_33993E0 *)Method_System_Collections_Generic_List_double__Sort__);
+    (const MethodInfo_3484644 *)Method_System_Collections_Generic_List_double__Sort__);
   EndrolEffectManager__CalcGridPoint(this, v45);
 }
 
@@ -423,14 +430,14 @@ void __fastcall EndrolEffectManager__Update(EndrolEffectManager_o *this, const M
   UnityEngine_Vector2_o v21; // 0:s0.4,4:s1.4
 
   v2 = this;
-  if ( (byte_48E6227 & 1) == 0 )
+  if ( (byte_49FFFF8 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_List_Vector2__Remove__, method);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_double__get_Count__, v3);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_Vector2__get_Count__, v4);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_Vector2__get_Item__, v5);
-    this = (EndrolEffectManager_o *)sub_1B00CCC(&Method_System_Collections_Generic_List_double__get_Item__, v6);
-    byte_48E6227 = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_List_Vector2__Remove__, method);
+    sub_1B640C8(&Method_System_Collections_Generic_List_double__get_Count__, v3);
+    sub_1B640C8(&Method_System_Collections_Generic_List_Vector2__get_Count__, v4);
+    sub_1B640C8(&Method_System_Collections_Generic_List_Vector2__get_Item__, v5);
+    this = (EndrolEffectManager_o *)sub_1B640C8(&Method_System_Collections_Generic_List_double__get_Item__, v6);
+    byte_49FFFF8 = 1;
   }
   effectOccurrenceTime = v2->fields.effectOccurrenceTime;
   if ( !effectOccurrenceTime )
@@ -453,7 +460,7 @@ void __fastcall EndrolEffectManager__Update(EndrolEffectManager_o *this, const M
         Item = System_Collections_Generic_List_double___get_Item(
                  (System_Collections_Generic_List_double__o *)this,
                  v2->fields.nowPlayEffectNumber,
-                 (const MethodInfo_33977A4 *)Method_System_Collections_Generic_List_double__get_Item__);
+                 (const MethodInfo_3482968 *)Method_System_Collections_Generic_List_double__get_Item__);
         v14 = v2->fields.truncateTime;
         if ( Item == v14 )
         {
@@ -466,14 +473,14 @@ void __fastcall EndrolEffectManager__Update(EndrolEffectManager_o *this, const M
               bgGridPointList = v2->fields.bgGridPointList;
               if ( !bgGridPointList )
                 break;
-              this = (EndrolEffectManager_o *)UnityEngine_Random__Range_68037396(0, bgGridPointList->fields._size, 0LL);
+              this = (EndrolEffectManager_o *)UnityEngine_Random__Range_69087476(0, bgGridPointList->fields._size, 0LL);
               if ( !v2->fields.bgGridPointList )
                 break;
               v17 = (int)this;
               v20 = System_Collections_Generic_List_Vector2___get_Item(
                       v2->fields.bgGridPointList,
                       (int32_t)this,
-                      (const MethodInfo_3415150 *)Method_System_Collections_Generic_List_Vector2__get_Item__);
+                      (const MethodInfo_35025A8 *)Method_System_Collections_Generic_List_Vector2__get_Item__);
               EndrolEffectManager__InstansiateEffect(v2, v20, v18);
               v19 = v2->fields.bgGridPointList;
               if ( !v19 )
@@ -481,18 +488,18 @@ void __fastcall EndrolEffectManager__Update(EndrolEffectManager_o *this, const M
               v21 = System_Collections_Generic_List_Vector2___get_Item(
                       v2->fields.bgGridPointList,
                       v17,
-                      (const MethodInfo_3415150 *)Method_System_Collections_Generic_List_Vector2__get_Item__);
+                      (const MethodInfo_35025A8 *)Method_System_Collections_Generic_List_Vector2__get_Item__);
               this = (EndrolEffectManager_o *)System_Collections_Generic_List_Vector2___Remove(
                                                 v19,
                                                 v21,
-                                                (const MethodInfo_341699C *)Method_System_Collections_Generic_List_Vector2__Remove__);
+                                                (const MethodInfo_3503E98 *)Method_System_Collections_Generic_List_Vector2__Remove__);
               --v15;
               ++v2->fields.nowPlayEffectNumber;
               if ( !v15 )
                 return;
             }
 LABEL_18:
-            sub_1B00F28(this, method);
+            sub_1B64324(this);
           }
         }
       }

@@ -1,14 +1,14 @@
 void __fastcall TreasureDvcDetailMaster___ctor(TreasureDvcDetailMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E3215 & 1) == 0 )
+  if ( (byte_49FCE75 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int___ctor__, method);
-    byte_48E3215 = 1;
+    sub_1B640C8(&Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int___ctor__, method);
+    byte_49FCE75 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    92,
-    (const MethodInfo_2FE6A0C *)Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int___ctor__);
+    93,
+    (const MethodInfo_30D3E64 *)Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int___ctor__);
 }
 
 
@@ -19,126 +19,126 @@ System_String_o *__fastcall TreasureDvcDetailMaster__getDetail(int32_t id, const
   __int64 v4; // x1
   __int64 v5; // x1
   DataManager_o *Instance; // x0
-  const MethodInfo *v7; // x1
   Il2CppObject *MasterData_object; // x20
-  DataManager_o *v9; // x19
+  DataManager_o *v8; // x19
   DataManager_c *klass; // x8
-  DataManager_o *v11; // x21
-  __int64 v12; // x9
+  DataManager_o *v10; // x21
+  __int64 v11; // x9
   int32_t *p_offset; // x10
-  __int64 v14; // x0
-  __int64 v15; // x1
-  DataManager_c *v16; // x8
-  DataManager_o *v17; // x20
-  __int64 v18; // x9
-  System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **v19; // x10
-  __int64 v20; // x0
-  LocalizationManager_c *v21; // x0
+  __int64 v13; // x0
+  __int64 v14; // x1
+  DataManager_c *v15; // x8
+  DataManager_o *v16; // x20
+  __int64 v17; // x9
+  System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **v18; // x10
+  __int64 v19; // x0
+  LocalizationManager_c *v20; // x0
+  const MethodInfo *v22; // x1
   __int64 methodPtr_low; // x10
   int32_t v24; // [xsp+Ch] [xbp-24h] BYREF
 
   v24 = id;
-  if ( (byte_48E3216 & 1) == 0 )
+  if ( (byte_49FCE76 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataManager_GetMasterData_TreasureDvcDetailMaster___, method);
-    sub_1B00CCC(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, v2);
-    sub_1B00CCC(&LocalizationManager_TypeInfo, v3);
-    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    sub_1B00CCC(&TreasureDvcDetailEntity_TypeInfo, v5);
-    byte_48E3216 = 1;
+    sub_1B640C8(&Method_DataManager_GetMasterData_TreasureDvcDetailMaster___, method);
+    sub_1B640C8(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, v2);
+    sub_1B640C8(&LocalizationManager_TypeInfo, v3);
+    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    sub_1B640C8(&TreasureDvcDetailEntity_TypeInfo, v5);
+    byte_49FCE76 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_31;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_TreasureDvcDetailMaster___);
+                        (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_TreasureDvcDetailMaster___);
   Instance = (DataManager_o *)System_Int32__ToString((int32_t)&v24, 0LL);
   if ( !MasterData_object )
     goto LABEL_31;
-  v9 = Instance;
+  v8 = Instance;
   Instance = (DataManager_o *)DataMasterBase__get_lookup((DataMasterBase_o *)MasterData_object, 0LL);
   if ( !Instance )
     goto LABEL_31;
   klass = Instance->klass;
-  v11 = Instance;
-  v12 = *(unsigned __int16 *)(&Instance->klass->_2.bitflags2 + 3);
+  v10 = Instance;
+  v11 = *(unsigned __int16 *)(&Instance->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&Instance->klass->_2.bitflags2 + 3) )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **)p_offset - 1) != System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo )
     {
-      --v12;
+      --v11;
       p_offset += 4;
-      if ( !v12 )
+      if ( !v11 )
         goto LABEL_10;
     }
-    v14 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+    v13 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
   }
   else
   {
 LABEL_10:
-    v14 = sub_1B52CAC(Instance, System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, 0LL);
+    v13 = sub_1BB60A8(Instance, System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, 0LL);
   }
-  if ( ((*(__int64 (__fastcall **)(DataManager_o *, DataManager_o *, _QWORD))v14)(v11, v9, *(_QWORD *)(v14 + 8)) & 1) != 0 )
+  if ( ((*(__int64 (__fastcall **)(DataManager_o *, DataManager_o *, _QWORD))v13)(v10, v8, *(_QWORD *)(v13 + 8)) & 1) != 0 )
   {
     Instance = (DataManager_o *)DataMasterBase__get_lookup((DataMasterBase_o *)MasterData_object, 0LL);
     if ( Instance )
     {
-      v16 = Instance->klass;
-      v17 = Instance;
-      v18 = *(unsigned __int16 *)(&Instance->klass->_2.bitflags2 + 3);
+      v15 = Instance->klass;
+      v16 = Instance;
+      v17 = *(unsigned __int16 *)(&Instance->klass->_2.bitflags2 + 3);
       if ( *(_WORD *)(&Instance->klass->_2.bitflags2 + 3) )
       {
-        v19 = (System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **)&v16->_1.interfaceOffsets->offset;
-        while ( *(v19 - 1) != System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo )
+        v18 = (System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **)&v15->_1.interfaceOffsets->offset;
+        while ( *(v18 - 1) != System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo )
         {
-          --v18;
-          v19 += 2;
-          if ( !v18 )
+          --v17;
+          v18 += 2;
+          if ( !v17 )
             goto LABEL_18;
         }
-        v20 = (__int64)(&v16->vtable._2_GetHashCode.method + 2 * *(_DWORD *)v19);
+        v19 = (__int64)(&v15->vtable._2_GetHashCode.method + 2 * *(_DWORD *)v18);
       }
       else
       {
 LABEL_18:
-        v20 = sub_1B52CAC(
+        v19 = sub_1BB60A8(
                 Instance,
                 System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo,
                 2LL);
       }
-      Instance = (DataManager_o *)(*(__int64 (__fastcall **)(DataManager_o *, DataManager_o *, _QWORD))v20)(
-                                    v17,
-                                    v9,
-                                    *(_QWORD *)(v20 + 8));
+      Instance = (DataManager_o *)(*(__int64 (__fastcall **)(DataManager_o *, DataManager_o *, _QWORD))v19)(
+                                    v16,
+                                    v8,
+                                    *(_QWORD *)(v19 + 8));
       if ( Instance )
       {
         methodPtr_low = LOBYTE(TreasureDvcDetailEntity_TypeInfo->vtable._0_Equals.methodPtr);
         if ( LOBYTE(Instance->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low
           && (TreasureDvcDetailEntity_c *)Instance->klass->_2.typeHierarchy[methodPtr_low - 1] == TreasureDvcDetailEntity_TypeInfo )
         {
-          return TreasureDvcDetailEntity__getDetail((TreasureDvcDetailEntity_o *)Instance, v7);
+          return TreasureDvcDetailEntity__getDetail((TreasureDvcDetailEntity_o *)Instance, v22);
         }
       }
     }
 LABEL_31:
-    sub_1B00F28(Instance, v7);
+    sub_1B64324(Instance);
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  if ( !byte_48DE045 )
+  if ( !byte_49F7D6A )
   {
-    sub_1B00CCC(&LocalizationManager_TypeInfo, v15);
-    byte_48DE045 = 1;
+    sub_1B640C8(&LocalizationManager_TypeInfo, v14);
+    byte_49F7D6A = 1;
   }
-  v21 = LocalizationManager_TypeInfo;
+  v20 = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v21 = LocalizationManager_TypeInfo;
+    v20 = LocalizationManager_TypeInfo;
   }
-  return v21->static_fields->unknownNameText;
+  return v20->static_fields->unknownNameText;
 }
 
 
@@ -149,124 +149,124 @@ System_String_o *__fastcall TreasureDvcDetailMaster__getDetailShort(int32_t id, 
   __int64 v4; // x1
   __int64 v5; // x1
   DataManager_o *Instance; // x0
-  const MethodInfo *v7; // x1
   Il2CppObject *MasterData_object; // x20
-  DataManager_o *v9; // x19
+  DataManager_o *v8; // x19
   DataManager_c *klass; // x8
-  DataManager_o *v11; // x21
-  __int64 v12; // x9
+  DataManager_o *v10; // x21
+  __int64 v11; // x9
   int32_t *p_offset; // x10
-  __int64 v14; // x0
-  __int64 v15; // x1
-  DataManager_c *v16; // x8
-  DataManager_o *v17; // x20
-  __int64 v18; // x9
-  System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **v19; // x10
-  __int64 v20; // x0
-  LocalizationManager_c *v21; // x0
+  __int64 v13; // x0
+  __int64 v14; // x1
+  DataManager_c *v15; // x8
+  DataManager_o *v16; // x20
+  __int64 v17; // x9
+  System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **v18; // x10
+  __int64 v19; // x0
+  LocalizationManager_c *v20; // x0
+  const MethodInfo *v22; // x1
   __int64 methodPtr_low; // x10
   int32_t v24; // [xsp+Ch] [xbp-24h] BYREF
 
   v24 = id;
-  if ( (byte_48E3217 & 1) == 0 )
+  if ( (byte_49FCE77 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataManager_GetMasterData_TreasureDvcDetailMaster___, method);
-    sub_1B00CCC(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, v2);
-    sub_1B00CCC(&LocalizationManager_TypeInfo, v3);
-    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    sub_1B00CCC(&TreasureDvcDetailEntity_TypeInfo, v5);
-    byte_48E3217 = 1;
+    sub_1B640C8(&Method_DataManager_GetMasterData_TreasureDvcDetailMaster___, method);
+    sub_1B640C8(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, v2);
+    sub_1B640C8(&LocalizationManager_TypeInfo, v3);
+    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    sub_1B640C8(&TreasureDvcDetailEntity_TypeInfo, v5);
+    byte_49FCE77 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_31;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_TreasureDvcDetailMaster___);
+                        (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_TreasureDvcDetailMaster___);
   Instance = (DataManager_o *)System_Int32__ToString((int32_t)&v24, 0LL);
   if ( !MasterData_object )
     goto LABEL_31;
-  v9 = Instance;
+  v8 = Instance;
   Instance = (DataManager_o *)DataMasterBase__get_lookup((DataMasterBase_o *)MasterData_object, 0LL);
   if ( !Instance )
     goto LABEL_31;
   klass = Instance->klass;
-  v11 = Instance;
-  v12 = *(unsigned __int16 *)(&Instance->klass->_2.bitflags2 + 3);
+  v10 = Instance;
+  v11 = *(unsigned __int16 *)(&Instance->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&Instance->klass->_2.bitflags2 + 3) )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **)p_offset - 1) != System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo )
     {
-      --v12;
+      --v11;
       p_offset += 4;
-      if ( !v12 )
+      if ( !v11 )
         goto LABEL_10;
     }
-    v14 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+    v13 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
   }
   else
   {
 LABEL_10:
-    v14 = sub_1B52CAC(Instance, System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, 0LL);
+    v13 = sub_1BB60A8(Instance, System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, 0LL);
   }
-  if ( ((*(__int64 (__fastcall **)(DataManager_o *, DataManager_o *, _QWORD))v14)(v11, v9, *(_QWORD *)(v14 + 8)) & 1) != 0 )
+  if ( ((*(__int64 (__fastcall **)(DataManager_o *, DataManager_o *, _QWORD))v13)(v10, v8, *(_QWORD *)(v13 + 8)) & 1) != 0 )
   {
     Instance = (DataManager_o *)DataMasterBase__get_lookup((DataMasterBase_o *)MasterData_object, 0LL);
     if ( Instance )
     {
-      v16 = Instance->klass;
-      v17 = Instance;
-      v18 = *(unsigned __int16 *)(&Instance->klass->_2.bitflags2 + 3);
+      v15 = Instance->klass;
+      v16 = Instance;
+      v17 = *(unsigned __int16 *)(&Instance->klass->_2.bitflags2 + 3);
       if ( *(_WORD *)(&Instance->klass->_2.bitflags2 + 3) )
       {
-        v19 = (System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **)&v16->_1.interfaceOffsets->offset;
-        while ( *(v19 - 1) != System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo )
+        v18 = (System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **)&v15->_1.interfaceOffsets->offset;
+        while ( *(v18 - 1) != System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo )
         {
-          --v18;
-          v19 += 2;
-          if ( !v18 )
+          --v17;
+          v18 += 2;
+          if ( !v17 )
             goto LABEL_18;
         }
-        v20 = (__int64)(&v16->vtable._2_GetHashCode.method + 2 * *(_DWORD *)v19);
+        v19 = (__int64)(&v15->vtable._2_GetHashCode.method + 2 * *(_DWORD *)v18);
       }
       else
       {
 LABEL_18:
-        v20 = sub_1B52CAC(
+        v19 = sub_1BB60A8(
                 Instance,
                 System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo,
                 2LL);
       }
-      Instance = (DataManager_o *)(*(__int64 (__fastcall **)(DataManager_o *, DataManager_o *, _QWORD))v20)(
-                                    v17,
-                                    v9,
-                                    *(_QWORD *)(v20 + 8));
+      Instance = (DataManager_o *)(*(__int64 (__fastcall **)(DataManager_o *, DataManager_o *, _QWORD))v19)(
+                                    v16,
+                                    v8,
+                                    *(_QWORD *)(v19 + 8));
       if ( Instance )
       {
         methodPtr_low = LOBYTE(TreasureDvcDetailEntity_TypeInfo->vtable._0_Equals.methodPtr);
         if ( LOBYTE(Instance->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low
           && (TreasureDvcDetailEntity_c *)Instance->klass->_2.typeHierarchy[methodPtr_low - 1] == TreasureDvcDetailEntity_TypeInfo )
         {
-          return TreasureDvcDetailEntity__getDetailShort((TreasureDvcDetailEntity_o *)Instance, v7);
+          return TreasureDvcDetailEntity__getDetailShort((TreasureDvcDetailEntity_o *)Instance, v22);
         }
       }
     }
 LABEL_31:
-    sub_1B00F28(Instance, v7);
+    sub_1B64324(Instance);
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  if ( !byte_48DE045 )
+  if ( !byte_49F7D6A )
   {
-    sub_1B00CCC(&LocalizationManager_TypeInfo, v15);
-    byte_48DE045 = 1;
+    sub_1B640C8(&LocalizationManager_TypeInfo, v14);
+    byte_49F7D6A = 1;
   }
-  v21 = LocalizationManager_TypeInfo;
+  v20 = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v21 = LocalizationManager_TypeInfo;
+    v20 = LocalizationManager_TypeInfo;
   }
-  return v21->static_fields->unknownNameText;
+  return v20->static_fields->unknownNameText;
 }

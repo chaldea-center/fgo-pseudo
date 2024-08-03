@@ -1,63 +1,71 @@
 void __fastcall Spawner___ctor(Spawner_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E1B59 & 1) == 0 )
+  if ( (byte_49FB721 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_SingletonMonoBehaviour_Spawner___ctor__, method);
-    byte_48E1B59 = 1;
+    sub_1B640C8(&Method_SingletonMonoBehaviour_Spawner___ctor__, method);
+    byte_49FB721 = 1;
   }
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_35FC008 *)Method_SingletonMonoBehaviour_Spawner___ctor__);
+    (const MethodInfo_36EC454 *)Method_SingletonMonoBehaviour_Spawner___ctor__);
 }
 
 
 void __fastcall Spawner__Awake(Spawner_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
   __int64 v4; // x1
   __int64 v5; // x1
   __int64 v6; // x1
-  Spawner_ResourcePrecacher_o *v7; // x20
-  const MethodInfo *v8; // x1
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_Collections_Generic_Queue_Spawner_RequestByPath__o *v11; // x20
-  int32_t v12; // w2
-  int32_t v13; // w3
+  __int64 v7; // x1
+  Spawner_ResourcePrecacher_o *v8; // x20
+  const MethodInfo *v9; // x1
+  int32_t v10; // w2
+  int32_t v11; // w3
+  __int64 v12; // x1
+  __int64 v13; // x2
+  System_Collections_Generic_Queue_Spawner_RequestByPath__o *v14; // x20
+  int32_t v15; // w2
+  int32_t v16; // w3
   UnityEngine_Transform_o *transform; // x20
-  Spawner_SpawnerImpl_o *v15; // x21
-  const MethodInfo *v16; // x2
-  int32_t v17; // w2
-  int32_t v18; // w3
+  __int64 v18; // x1
+  __int64 v19; // x2
+  Spawner_SpawnerImpl_o *v20; // x21
+  const MethodInfo *v21; // x2
+  int32_t v22; // w2
+  int32_t v23; // w3
 
-  if ( (byte_48E1B56 & 1) == 0 )
+  if ( (byte_49FB71E & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_Queue_Spawner_RequestByPath___ctor__, method);
-    sub_1B00CCC(&System_Collections_Generic_Queue_Spawner_RequestByPath__TypeInfo, v3);
-    sub_1B00CCC(&Spawner_ResourcePrecacher_TypeInfo, v4);
-    sub_1B00CCC(&Method_SingletonMonoBehaviour_Spawner__Awake__, v5);
-    sub_1B00CCC(&Spawner_SpawnerImpl_TypeInfo, v6);
-    byte_48E1B56 = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_Queue_Spawner_RequestByPath___ctor__, method);
+    sub_1B640C8(&System_Collections_Generic_Queue_Spawner_RequestByPath__TypeInfo, v4);
+    sub_1B640C8(&Spawner_ResourcePrecacher_TypeInfo, v5);
+    sub_1B640C8(&Method_SingletonMonoBehaviour_Spawner__Awake__, v6);
+    sub_1B640C8(&Spawner_SpawnerImpl_TypeInfo, v7);
+    byte_49FB71E = 1;
   }
-  v7 = (Spawner_ResourcePrecacher_o *)sub_1B00F18(Spawner_ResourcePrecacher_TypeInfo);
-  Spawner_ResourcePrecacher___ctor(v7, v8);
-  this->fields.resourcePrecacher = v7;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.resourcePrecacher, (int32_t)v7, v9, v10);
-  v11 = (System_Collections_Generic_Queue_Spawner_RequestByPath__o *)sub_1B00F18(System_Collections_Generic_Queue_Spawner_RequestByPath__TypeInfo);
-  System_Collections_Generic_Queue_Spawner_RequestByPath____ctor_55798376(
-    v11,
+  v8 = (Spawner_ResourcePrecacher_o *)sub_1B64314(Spawner_ResourcePrecacher_TypeInfo, method, v2);
+  Spawner_ResourcePrecacher___ctor(v8, v9);
+  this->fields.resourcePrecacher = v8;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.resourcePrecacher, (int32_t)v8, v10, v11);
+  v14 = (System_Collections_Generic_Queue_Spawner_RequestByPath__o *)sub_1B64314(
+                                                                       System_Collections_Generic_Queue_Spawner_RequestByPath__TypeInfo,
+                                                                       v12,
+                                                                       v13);
+  System_Collections_Generic_Queue_Spawner_RequestByPath____ctor_56779428(
+    v14,
     32,
-    (const MethodInfo_3536A68 *)Method_System_Collections_Generic_Queue_Spawner_RequestByPath___ctor__);
-  this->fields.requestsByPath = v11;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.requestsByPath, (int32_t)v11, v12, v13);
+    (const MethodInfo_36262A4 *)Method_System_Collections_Generic_Queue_Spawner_RequestByPath___ctor__);
+  this->fields.requestsByPath = v14;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.requestsByPath, (int32_t)v14, v15, v16);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  v15 = (Spawner_SpawnerImpl_o *)sub_1B00F18(Spawner_SpawnerImpl_TypeInfo);
-  Spawner_SpawnerImpl___ctor(v15, transform, v16);
-  this->fields.spawnerImpl = v15;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.spawnerImpl, (int32_t)v15, v17, v18);
+  v20 = (Spawner_SpawnerImpl_o *)sub_1B64314(Spawner_SpawnerImpl_TypeInfo, v18, v19);
+  Spawner_SpawnerImpl___ctor(v20, transform, v21);
+  this->fields.spawnerImpl = v20;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.spawnerImpl, (int32_t)v20, v22, v23);
   SingletonMonoBehaviour_object___Awake(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_35FBF14 *)Method_SingletonMonoBehaviour_Spawner__Awake__);
+    (const MethodInfo_36EC360 *)Method_SingletonMonoBehaviour_Spawner__Awake__);
 }
 
 
@@ -67,7 +75,7 @@ bool __fastcall Spawner__ContainCache(Spawner_o *this, UnityEngine_GameObject_o 
 
   spawnerImpl = this->fields.spawnerImpl;
   if ( !spawnerImpl )
-    sub_1B00F28(0LL, obj);
+    sub_1B64324(0LL);
   return Spawner_SpawnerImpl__ContainCache(spawnerImpl, (UnityEngine_Object_o *)obj, method);
 }
 
@@ -82,7 +90,7 @@ void __fastcall Spawner__Despawn(
 
   spawnerImpl = this->fields.spawnerImpl;
   if ( !spawnerImpl )
-    sub_1B00F28(0LL, objectToDespawn);
+    sub_1B64324(0LL);
   Spawner_SpawnerImpl__Despawn(spawnerImpl, objectToDespawn, sendsDespawn, method);
 }
 
@@ -91,14 +99,15 @@ bool __fastcall Spawner__HasCached(Spawner_o *this, const MethodInfo *method)
 {
   __int64 v3; // x1
   Spawner_ResourcePrecacher_o *resourcePrecacher; // x0
-  Spawner_RequestByPath_o v5; // kr00_16
-  const MethodInfo *v6; // x4
+  const MethodInfo *v5; // x1
+  Spawner_RequestByPath_o v6; // kr00_16
+  const MethodInfo *v7; // x4
 
-  if ( (byte_48E1B58 & 1) == 0 )
+  if ( (byte_49FB720 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_Queue_Spawner_RequestByPath__Dequeue__, method);
-    sub_1B00CCC(&Method_System_Collections_Generic_Queue_Spawner_RequestByPath__get_Count__, v3);
-    byte_48E1B58 = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_Queue_Spawner_RequestByPath__Dequeue__, method);
+    sub_1B640C8(&Method_System_Collections_Generic_Queue_Spawner_RequestByPath__get_Count__, v3);
+    byte_49FB720 = 1;
   }
   resourcePrecacher = this->fields.resourcePrecacher;
   if ( !resourcePrecacher )
@@ -110,25 +119,24 @@ bool __fastcall Spawner__HasCached(Spawner_o *this, const MethodInfo *method)
     goto LABEL_14;
   while ( SLODWORD(resourcePrecacher[1].monitor) > 0 )
   {
-    v5 = System_Collections_Generic_Queue_Spawner_RequestByPath___Dequeue(
+    v6 = System_Collections_Generic_Queue_Spawner_RequestByPath___Dequeue(
            (System_Collections_Generic_Queue_Spawner_RequestByPath__o *)resourcePrecacher,
-           (const MethodInfo_3537134 *)Method_System_Collections_Generic_Queue_Spawner_RequestByPath__Dequeue__);
-    method = *(const MethodInfo **)&v5.fields.cacheSize;
+           (const MethodInfo_3626970 *)Method_System_Collections_Generic_Queue_Spawner_RequestByPath__Dequeue__);
     resourcePrecacher = this->fields.resourcePrecacher;
     if ( resourcePrecacher )
     {
       resourcePrecacher = (Spawner_ResourcePrecacher_o *)Spawner_ResourcePrecacher__GetResource(
                                                            resourcePrecacher,
-                                                           v5.fields.path,
-                                                           (const MethodInfo *)v5.fields.path);
+                                                           v6.fields.path,
+                                                           (const MethodInfo *)v6.fields.path);
       if ( this->fields.spawnerImpl )
       {
         Spawner_SpawnerImpl__Precache(
           this->fields.spawnerImpl,
           (UnityEngine_Object_o *)resourcePrecacher,
-          v5.fields.cacheSize,
-          v5.fields.overflowPolicy,
-          v6);
+          v6.fields.cacheSize,
+          v6.fields.overflowPolicy,
+          v7);
         resourcePrecacher = (Spawner_ResourcePrecacher_o *)this->fields.requestsByPath;
         if ( resourcePrecacher )
           continue;
@@ -139,8 +147,8 @@ bool __fastcall Spawner__HasCached(Spawner_o *this, const MethodInfo *method)
   resourcePrecacher = (Spawner_ResourcePrecacher_o *)this->fields.spawnerImpl;
   if ( !resourcePrecacher )
 LABEL_14:
-    sub_1B00F28(resourcePrecacher, method);
-  return Spawner_SpawnerImpl__HasCached((Spawner_SpawnerImpl_o *)resourcePrecacher, method);
+    sub_1B64324(resourcePrecacher);
+  return Spawner_SpawnerImpl__HasCached((Spawner_SpawnerImpl_o *)resourcePrecacher, v5);
 }
 
 
@@ -148,11 +156,11 @@ void __fastcall Spawner__Precache(Spawner_o *this, System_String_o *path, const 
 {
   const MethodInfo *v3; // x4
 
-  Spawner__Precache_36759416(this, path, 0, 0, v3);
+  Spawner__Precache_37648732(this, path, 0, 0, v3);
 }
 
 
-void __fastcall Spawner__Precache_36759408(
+void __fastcall Spawner__Precache_37648724(
         Spawner_o *this,
         System_String_o *path,
         int32_t cacheSize,
@@ -160,12 +168,12 @@ void __fastcall Spawner__Precache_36759408(
 {
   const MethodInfo *v4; // x4
 
-  Spawner__Precache_36759416(this, path, cacheSize, 0, v4);
+  Spawner__Precache_37648732(this, path, cacheSize, 0, v4);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall Spawner__Precache_36759416(
+void __fastcall Spawner__Precache_37648732(
         Spawner_o *this,
         System_String_o *path,
         int32_t cacheSize,
@@ -179,10 +187,10 @@ void __fastcall Spawner__Precache_36759416(
   int32_t v13; // w3
   Spawner_RequestByPath_o v14; // [xsp+0h] [xbp-40h] BYREF
 
-  if ( (byte_48E1B57 & 1) == 0 )
+  if ( (byte_49FB71F & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_Queue_Spawner_RequestByPath__Enqueue__, path);
-    byte_48E1B57 = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_Queue_Spawner_RequestByPath__Enqueue__, path);
+    byte_49FB71F = 1;
   }
   resourcePrecacher = this->fields.resourcePrecacher;
   if ( !resourcePrecacher )
@@ -195,29 +203,29 @@ void __fastcall Spawner__Precache_36759416(
         requestsByPath = this->fields.requestsByPath,
         v14.fields.path = path,
         *(_QWORD *)&v14.fields.cacheSize = 0LL,
-        sub_1B00C70((ServantStatusBattleListViewItem_o *)&v14, (int32_t)path, v12, v13),
+        sub_1B6406C((ServantStatusBattleListViewItem_o *)&v14, (int32_t)path, v12, v13),
         *(_QWORD *)&v14.fields.cacheSize = __PAIR64__(overflowPolicy, cacheSize),
         !requestsByPath) )
   {
 LABEL_9:
-    sub_1B00F28(resourcePrecacher, path);
+    sub_1B64324(resourcePrecacher);
   }
   System_Collections_Generic_Queue_Spawner_RequestByPath___Enqueue(
     requestsByPath,
     v14,
-    (const MethodInfo_3536FAC *)Method_System_Collections_Generic_Queue_Spawner_RequestByPath__Enqueue__);
+    (const MethodInfo_36267E8 *)Method_System_Collections_Generic_Queue_Spawner_RequestByPath__Enqueue__);
 }
 
 
-void __fastcall Spawner__Precache_36759916(Spawner_o *this, UnityEngine_Object_o *prefab, const MethodInfo *method)
+void __fastcall Spawner__Precache_37649232(Spawner_o *this, UnityEngine_Object_o *prefab, const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
 
-  Spawner__Precache_36759924(this, prefab, 0, v3);
+  Spawner__Precache_37649240(this, prefab, 0, v3);
 }
 
 
-void __fastcall Spawner__Precache_36759924(
+void __fastcall Spawner__Precache_37649240(
         Spawner_o *this,
         UnityEngine_Object_o *prefab,
         int32_t cacheSize,
@@ -228,12 +236,12 @@ void __fastcall Spawner__Precache_36759924(
 
   spawnerImpl = this->fields.spawnerImpl;
   if ( !spawnerImpl )
-    sub_1B00F28(0LL, prefab);
+    sub_1B64324(0LL);
   Spawner_SpawnerImpl__Precache(spawnerImpl, prefab, cacheSize, 0, v4);
 }
 
 
-void __fastcall Spawner__Precache_36759952(
+void __fastcall Spawner__Precache_37649268(
         Spawner_o *this,
         UnityEngine_Object_o *prefab,
         int32_t cacheSize,
@@ -244,7 +252,7 @@ void __fastcall Spawner__Precache_36759952(
 
   spawnerImpl = this->fields.spawnerImpl;
   if ( !spawnerImpl )
-    sub_1B00F28(0LL, prefab);
+    sub_1B64324(0LL);
   Spawner_SpawnerImpl__Precache(spawnerImpl, prefab, cacheSize, overflowPolicy, method);
 }
 
@@ -257,13 +265,13 @@ UnityEngine_GameObject_o *__fastcall Spawner__Spawn(Spawner_o *this, System_Stri
 
   resourcePrecacher = this->fields.resourcePrecacher;
   if ( !resourcePrecacher )
-    sub_1B00F28(0LL, path);
+    sub_1B64324(0LL);
   Resource = Spawner_ResourcePrecacher__GetResource(resourcePrecacher, path, method);
-  return Spawner__Spawn_36761576(this, Resource, v6);
+  return Spawner__Spawn_37650892(this, Resource, v6);
 }
 
 
-UnityEngine_GameObject_o *__fastcall Spawner__Spawn_36761576(
+UnityEngine_GameObject_o *__fastcall Spawner__Spawn_37650892(
         Spawner_o *this,
         UnityEngine_Object_o *prefab,
         const MethodInfo *method)
@@ -277,22 +285,22 @@ UnityEngine_GameObject_o *__fastcall Spawner__Spawn_36761576(
   UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
 
   spawnerImpl = this->fields.spawnerImpl;
-  if ( !byte_48DD9F1 )
+  if ( !byte_49F7111 )
   {
-    this = (Spawner_o *)sub_1B00CCC(&UnityEngine_Vector3_TypeInfo, prefab);
-    byte_48DD9F1 = 1;
+    this = (Spawner_o *)sub_1B640C8(&UnityEngine_Vector3_TypeInfo, prefab);
+    byte_49F7111 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   x = static_fields->zeroVector.fields.x;
   y = static_fields->zeroVector.fields.y;
   z = static_fields->zeroVector.fields.z;
-  if ( !byte_48DD9F7 )
+  if ( !byte_49F7117 )
   {
-    this = (Spawner_o *)sub_1B00CCC(&UnityEngine_Quaternion_TypeInfo, prefab);
-    byte_48DD9F7 = 1;
+    this = (Spawner_o *)sub_1B640C8(&UnityEngine_Quaternion_TypeInfo, prefab);
+    byte_49F7117 = 1;
   }
   if ( !spawnerImpl )
-    sub_1B00F28(this, prefab);
+    sub_1B64324(this);
   v11.fields.y = y;
   v11.fields.z = z;
   v11.fields.x = x;
@@ -307,7 +315,7 @@ UnityEngine_GameObject_o *__fastcall Spawner__Spawn_36761576(
 
 
 // local variable allocation has failed, the output may be wrong!
-UnityEngine_GameObject_o *__fastcall Spawner__Spawn_36761764(
+UnityEngine_GameObject_o *__fastcall Spawner__Spawn_37651080(
         Spawner_o *this,
         System_String_o *path,
         UnityEngine_Vector3_o position,
@@ -329,7 +337,7 @@ UnityEngine_GameObject_o *__fastcall Spawner__Spawn_36761764(
 
   resourcePrecacher = this->fields.resourcePrecacher;
   if ( !resourcePrecacher )
-    sub_1B00F28(0LL, path);
+    sub_1B64324(0LL);
   w = rotation.fields.w;
   z = rotation.fields.z;
   y = rotation.fields.y;
@@ -345,12 +353,12 @@ UnityEngine_GameObject_o *__fastcall Spawner__Spawn_36761764(
   v18.fields.z = z;
   v18.fields.w = w;
   v17.fields.x = v13;
-  return Spawner__Spawn_36761892(this, Resource, v17, v18, v15);
+  return Spawner__Spawn_37651208(this, Resource, v17, v18, v15);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-UnityEngine_GameObject_o *__fastcall Spawner__Spawn_36761892(
+UnityEngine_GameObject_o *__fastcall Spawner__Spawn_37651208(
         Spawner_o *this,
         UnityEngine_Object_o *prefab,
         UnityEngine_Vector3_o position,
@@ -362,7 +370,7 @@ UnityEngine_GameObject_o *__fastcall Spawner__Spawn_36761892(
 
   spawnerImpl = this->fields.spawnerImpl;
   if ( !spawnerImpl )
-    sub_1B00F28(0LL, prefab);
+    sub_1B64324(0LL);
   return Spawner_SpawnerImpl__Spawn(spawnerImpl, prefab, position, rotation, 1, v5);
 }
 
@@ -380,7 +388,7 @@ void __fastcall Spawner_RequestByPath___ctor(
   v6 = (int)path;
   v7 = this.fields.path;
   this.fields.path->klass = *(System_String_c **)&this.fields.cacheSize;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)this.fields.path, this.fields.cacheSize, (int32_t)path, cacheSize);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)this.fields.path, this.fields.cacheSize, (int32_t)path, cacheSize);
   LODWORD(v7->monitor) = v6;
   HIDWORD(v7->monitor) = cacheSize;
 }
@@ -388,26 +396,30 @@ void __fastcall Spawner_RequestByPath___ctor(
 
 void __fastcall Spawner_ResourcePrecacher___ctor(Spawner_ResourcePrecacher_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  System_Collections_Generic_Dictionary_object__object__o *v4; // x20
-  int32_t v5; // w2
-  int32_t v6; // w3
+  __int64 v2; // x2
+  __int64 v4; // x1
+  System_Collections_Generic_Dictionary_object__object__o *v5; // x20
+  int32_t v6; // w2
+  int32_t v7; // w3
 
-  if ( (byte_48E1B61 & 1) == 0 )
+  if ( (byte_49FB729 & 1) == 0 )
   {
-    sub_1B00CCC(
+    sub_1B640C8(
       &Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element___ctor__,
       method);
-    sub_1B00CCC(&System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__TypeInfo, v3);
-    byte_48E1B61 = 1;
+    sub_1B640C8(&System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__TypeInfo, v4);
+    byte_49FB729 = 1;
   }
-  v4 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1B00F18(System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__TypeInfo);
-  System_Collections_Generic_Dictionary_object__object____ctor_50909360(
-    v4,
+  v5 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1B64314(
+                                                                    System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__TypeInfo,
+                                                                    method,
+                                                                    v2);
+  System_Collections_Generic_Dictionary_object__object____ctor_51874400(
+    v5,
     32,
-    (const MethodInfo_308D0B0 *)Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element___ctor__);
-  this->fields.elements = (struct System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__o *)v4;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)v4, v5, v6);
+    (const MethodInfo_3178A60 *)Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element___ctor__);
+  this->fields.elements = (struct System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__o *)v5;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)v5, v6, v7);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -422,19 +434,19 @@ UnityEngine_Object_o *__fastcall Spawner_ResourcePrecacher__GetResource(
   UnityEngine_Object_o *monitor; // x20
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_48E1B5F & 1) == 0 )
+  if ( (byte_49FB727 & 1) == 0 )
   {
-    sub_1B00CCC(
+    sub_1B640C8(
       &Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__TryGetValue__,
       path);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v5);
-    byte_48E1B5F = 1;
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v5);
+    byte_49FB727 = 1;
   }
   value = 0LL;
   elements = this->fields.elements;
   if ( !elements )
     goto LABEL_13;
-  elements = (struct System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__o *)System_Collections_Generic_Dictionary_object__object___TryGetValue((System_Collections_Generic_Dictionary_object__object__o *)elements, (Il2CppObject *)path, &value, (const MethodInfo_308F254 *)Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__TryGetValue__);
+  elements = (struct System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__o *)System_Collections_Generic_Dictionary_object__object___TryGetValue((System_Collections_Generic_Dictionary_object__object__o *)elements, (Il2CppObject *)path, &value, (const MethodInfo_317AC04 *)Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__TryGetValue__);
   if ( ((unsigned __int8)elements & 1) != 0 )
   {
     if ( value )
@@ -443,7 +455,7 @@ UnityEngine_Object_o *__fastcall Spawner_ResourcePrecacher__GetResource(
       goto LABEL_8;
     }
 LABEL_13:
-    sub_1B00F28(elements, path);
+    sub_1B64324(elements);
   }
   monitor = 0LL;
 LABEL_8:
@@ -463,88 +475,86 @@ bool __fastcall Spawner_ResourcePrecacher__HasCached(Spawner_ResourcePrecacher_o
   __int64 v6; // x1
   System_Collections_Generic_Dictionary_object__object__o *elements; // x0
   _BOOL8 v8; // x0
-  __int64 v9; // x1
   Il2CppObject *currentValue; // x20
   Il2CppClass *klass; // x0
-  UnityEngine_ResourceRequest_o **v12; // x19
-  __int64 v13; // x1
+  UnityEngine_ResourceRequest_o **v11; // x19
   UnityEngine_Object_o *asset; // x0
+  int32_t v13; // w2
+  int32_t v14; // w3
   int32_t v15; // w2
   int32_t v16; // w3
-  int32_t v17; // w2
-  int32_t v18; // w3
-  int v19; // w19
-  System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v21; // [xsp+8h] [xbp-68h] BYREF
-  System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v22; // [xsp+20h] [xbp-50h] BYREF
+  int v17; // w19
+  System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v19; // [xsp+8h] [xbp-68h] BYREF
+  System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v20; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_48E1B5D & 1) == 0 )
+  if ( (byte_49FB725 & 1) == 0 )
   {
-    sub_1B00CCC(
+    sub_1B640C8(
       &Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__get_Values__,
       method);
-    sub_1B00CCC(
+    sub_1B640C8(
       &Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__Spawner_ResourcePrecacher_Element__Dispose__,
       v3);
-    sub_1B00CCC(
+    sub_1B640C8(
       &Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__Spawner_ResourcePrecacher_Element__MoveNext__,
       v4);
-    sub_1B00CCC(
+    sub_1B640C8(
       &Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__Spawner_ResourcePrecacher_Element__get_Current__,
       v5);
-    sub_1B00CCC(
+    sub_1B640C8(
       &Method_System_Collections_Generic_Dictionary_ValueCollection_string__Spawner_ResourcePrecacher_Element__GetEnumerator__,
       v6);
-    byte_48E1B5D = 1;
+    byte_49FB725 = 1;
   }
-  memset(&v22, 0, sizeof(v22));
+  memset(&v20, 0, sizeof(v20));
   elements = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.elements;
   if ( !elements
     || (elements = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Values(
                                                                                 elements,
-                                                                                (const MethodInfo_308D878 *)Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__get_Values__)) == 0LL )
+                                                                                (const MethodInfo_3179228 *)Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__get_Values__)) == 0LL )
   {
-    sub_1B00F28(elements, method);
+    sub_1B64324(elements);
   }
   System_Collections_Generic_Dictionary_ValueCollection_object__object___GetEnumerator(
-    &v21,
+    &v19,
     (System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *)elements,
-    (const MethodInfo_36CDF94 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__Spawner_ResourcePrecacher_Element__GetEnumerator__);
-  v22 = v21;
+    (const MethodInfo_37BDDB4 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__Spawner_ResourcePrecacher_Element__GetEnumerator__);
+  v20 = v19;
   while ( 1 )
   {
     do
     {
       v8 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___MoveNext(
-             &v22,
-             (const MethodInfo_318F37C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__Spawner_ResourcePrecacher_Element__MoveNext__);
+             &v20,
+             (const MethodInfo_3277270 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__Spawner_ResourcePrecacher_Element__MoveNext__);
       if ( !v8 )
       {
-        v19 = 6;
+        v17 = 6;
         goto LABEL_14;
       }
-      currentValue = v22.fields._currentValue;
-      if ( !v22.fields._currentValue )
-        sub_1B00F28(v8, v9);
-      v12 = (UnityEngine_ResourceRequest_o **)&v22.fields._currentValue[1];
-      klass = v22.fields._currentValue[1].klass;
+      currentValue = v20.fields._currentValue;
+      if ( !v20.fields._currentValue )
+        sub_1B64324(v8);
+      v11 = (UnityEngine_ResourceRequest_o **)&v20.fields._currentValue[1];
+      klass = v20.fields._currentValue[1].klass;
     }
     while ( !klass );
     if ( !UnityEngine_AsyncOperation__get_isDone((UnityEngine_AsyncOperation_o *)klass, 0LL) )
       break;
-    if ( !*v12 )
-      sub_1B00F28(0LL, v13);
-    asset = UnityEngine_ResourceRequest__get_asset(*v12, 0LL);
+    if ( !*v11 )
+      sub_1B64324(0LL);
+    asset = UnityEngine_ResourceRequest__get_asset(*v11, 0LL);
     currentValue[1].monitor = asset;
-    sub_1B00C70((ServantStatusBattleListViewItem_o *)&currentValue[1].monitor, (int32_t)asset, v15, v16);
-    *v12 = 0LL;
-    sub_1B00C70((ServantStatusBattleListViewItem_o *)v12, 0, v17, v18);
+    sub_1B6406C((ServantStatusBattleListViewItem_o *)&currentValue[1].monitor, (int32_t)asset, v13, v14);
+    *v11 = 0LL;
+    sub_1B6406C((ServantStatusBattleListViewItem_o *)v11, 0, v15, v16);
   }
-  v19 = 5;
+  v17 = 5;
 LABEL_14:
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___Dispose(
-    &v22,
-    (const MethodInfo_318F378 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__Spawner_ResourcePrecacher_Element__Dispose__);
-  return v19 != 5;
+    &v20,
+    (const MethodInfo_327726C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__Spawner_ResourcePrecacher_Element__Dispose__);
+  return v17 != 5;
 }
 
 
@@ -555,20 +565,20 @@ bool __fastcall Spawner_ResourcePrecacher__HasElement(
 {
   struct System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__o *elements; // x0
 
-  if ( (byte_48E1B5B & 1) == 0 )
+  if ( (byte_49FB723 & 1) == 0 )
   {
-    sub_1B00CCC(
+    sub_1B640C8(
       &Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__ContainsKey__,
       path);
-    byte_48E1B5B = 1;
+    byte_49FB723 = 1;
   }
   elements = this->fields.elements;
   if ( !elements )
-    sub_1B00F28(0LL, path);
+    sub_1B64324(0LL);
   return System_Collections_Generic_Dictionary_object__object___ContainsKey(
            (System_Collections_Generic_Dictionary_object__object__o *)elements,
            (Il2CppObject *)path,
-           (const MethodInfo_308DC3C *)Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__ContainsKey__);
+           (const MethodInfo_31795EC *)Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__ContainsKey__);
 }
 
 
@@ -576,19 +586,19 @@ bool __fastcall Spawner_ResourcePrecacher__HasElements(Spawner_ResourcePrecacher
 {
   struct System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__o *elements; // x0
 
-  if ( (byte_48E1B5C & 1) == 0 )
+  if ( (byte_49FB724 & 1) == 0 )
   {
-    sub_1B00CCC(
+    sub_1B640C8(
       &Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__get_Count__,
       method);
-    byte_48E1B5C = 1;
+    byte_49FB724 = 1;
   }
   elements = this->fields.elements;
   if ( !elements )
-    sub_1B00F28(0LL, method);
+    sub_1B64324(0LL);
   return System_Collections_Generic_Dictionary_object__object___get_Count(
            (System_Collections_Generic_Dictionary_object__object__o *)elements,
-           (const MethodInfo_308D718 *)Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__get_Count__) > 0;
+           (const MethodInfo_31790C8 *)Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__get_Count__) > 0;
 }
 
 
@@ -605,35 +615,36 @@ void __fastcall Spawner_ResourcePrecacher__Precache(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x21
+  __int64 v6; // x1
+  __int64 v7; // x2
+  __int64 v8; // x21
   System_Collections_Generic_Dictionary_object__object__o *elements; // x0
-  __int64 v8; // x1
-  int32_t v9; // w2
-  int32_t v10; // w3
+  int32_t v10; // w2
+  int32_t v11; // w3
 
-  if ( (byte_48E1B5A & 1) == 0 )
+  if ( (byte_49FB722 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__Add__, path);
-    sub_1B00CCC(&Spawner_ResourcePrecacher_Element_TypeInfo, v5);
-    byte_48E1B5A = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__Add__, path);
+    sub_1B640C8(&Spawner_ResourcePrecacher_Element_TypeInfo, v5);
+    byte_49FB722 = 1;
   }
   if ( !Spawner_ResourcePrecacher__HasElement(this, path, method) )
   {
-    v6 = sub_1B00F18(Spawner_ResourcePrecacher_Element_TypeInfo);
-    System_Object___ctor((Il2CppObject *)v6, 0LL);
+    v8 = sub_1B64314(Spawner_ResourcePrecacher_Element_TypeInfo, v6, v7);
+    System_Object___ctor((Il2CppObject *)v8, 0LL);
     elements = (System_Collections_Generic_Dictionary_object__object__o *)UnityEngine_Resources__Load(path, 0LL);
-    if ( !v6
-      || (*(_QWORD *)(v6 + 24) = elements,
-          sub_1B00C70((ServantStatusBattleListViewItem_o *)(v6 + 24), (int32_t)elements, v9, v10),
+    if ( !v8
+      || (*(_QWORD *)(v8 + 24) = elements,
+          sub_1B6406C((ServantStatusBattleListViewItem_o *)(v8 + 24), (int32_t)elements, v10, v11),
           (elements = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.elements) == 0LL) )
     {
-      sub_1B00F28(elements, v8);
+      sub_1B64324(elements);
     }
     System_Collections_Generic_Dictionary_object__object___Add(
       elements,
       (Il2CppObject *)path,
-      (Il2CppObject *)v6,
-      (const MethodInfo_308DA48 *)Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__Add__);
+      (Il2CppObject *)v8,
+      (const MethodInfo_31793F8 *)Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__Add__);
   }
 }
 
@@ -648,73 +659,72 @@ void __fastcall Spawner_ResourcePrecacher__UnloadAndClear(Spawner_ResourcePrecac
   __int64 v8; // x1
   System_Collections_Generic_Dictionary_object__object__o *elements; // x0
   _BOOL8 v10; // x0
-  __int64 v11; // x1
   Il2CppObject *currentValue; // x25
   UnityEngine_Object_o *monitor; // x20
-  System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v14; // [xsp+8h] [xbp-58h] BYREF
+  System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v13; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_48E1B60 & 1) == 0 )
+  if ( (byte_49FB728 & 1) == 0 )
   {
-    sub_1B00CCC(
+    sub_1B640C8(
       &Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__Clear__,
       method);
-    sub_1B00CCC(
+    sub_1B640C8(
       &Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__get_Values__,
       v3);
-    sub_1B00CCC(
+    sub_1B640C8(
       &Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__Spawner_ResourcePrecacher_Element__Dispose__,
       v4);
-    sub_1B00CCC(
+    sub_1B640C8(
       &Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__Spawner_ResourcePrecacher_Element__MoveNext__,
       v5);
-    sub_1B00CCC(
+    sub_1B640C8(
       &Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__Spawner_ResourcePrecacher_Element__get_Current__,
       v6);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v7);
-    sub_1B00CCC(
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v7);
+    sub_1B640C8(
       &Method_System_Collections_Generic_Dictionary_ValueCollection_string__Spawner_ResourcePrecacher_Element__GetEnumerator__,
       v8);
-    byte_48E1B60 = 1;
+    byte_49FB728 = 1;
   }
-  memset(&v14, 0, sizeof(v14));
+  memset(&v13, 0, sizeof(v13));
   elements = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.elements;
   if ( !elements )
     goto LABEL_15;
   elements = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Values(
                                                                           elements,
-                                                                          (const MethodInfo_308D878 *)Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__get_Values__);
+                                                                          (const MethodInfo_3179228 *)Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__get_Values__);
   if ( !elements )
     goto LABEL_15;
   System_Collections_Generic_Dictionary_ValueCollection_object__object___GetEnumerator(
-    &v14,
+    &v13,
     (System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *)elements,
-    (const MethodInfo_36CDF94 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__Spawner_ResourcePrecacher_Element__GetEnumerator__);
+    (const MethodInfo_37BDDB4 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__Spawner_ResourcePrecacher_Element__GetEnumerator__);
   while ( 1 )
   {
     v10 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___MoveNext(
-            &v14,
-            (const MethodInfo_318F37C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__Spawner_ResourcePrecacher_Element__MoveNext__);
+            &v13,
+            (const MethodInfo_3277270 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__Spawner_ResourcePrecacher_Element__MoveNext__);
     if ( !v10 )
       break;
-    currentValue = v14.fields._currentValue;
-    if ( !v14.fields._currentValue )
-      sub_1B00F28(v10, v11);
-    monitor = (UnityEngine_Object_o *)v14.fields._currentValue[1].monitor;
+    currentValue = v13.fields._currentValue;
+    if ( !v13.fields._currentValue )
+      sub_1B64324(v10);
+    monitor = (UnityEngine_Object_o *)v13.fields._currentValue[1].monitor;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality(monitor, 0LL, 0LL) )
       UnityEngine_Resources__UnloadAsset((UnityEngine_Object_o *)currentValue[1].monitor, 0LL);
   }
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___Dispose(
-    &v14,
-    (const MethodInfo_318F378 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__Spawner_ResourcePrecacher_Element__Dispose__);
+    &v13,
+    (const MethodInfo_327726C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__Spawner_ResourcePrecacher_Element__Dispose__);
   elements = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.elements;
   if ( !elements )
 LABEL_15:
-    sub_1B00F28(elements, method);
+    sub_1B64324(elements);
   System_Collections_Generic_Dictionary_object__object___Clear(
     elements,
-    (const MethodInfo_308DBD0 *)Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__Clear__);
+    (const MethodInfo_3179580 *)Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__Clear__);
 }
 
 
@@ -724,19 +734,19 @@ System_Collections_Generic_ICollection_string__o *__fastcall Spawner_ResourcePre
 {
   struct System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__o *elements; // x0
 
-  if ( (byte_48E1B5E & 1) == 0 )
+  if ( (byte_49FB726 & 1) == 0 )
   {
-    sub_1B00CCC(
+    sub_1B640C8(
       &Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__get_Keys__,
       method);
-    byte_48E1B5E = 1;
+    byte_49FB726 = 1;
   }
   elements = this->fields.elements;
   if ( !elements )
-    sub_1B00F28(0LL, method);
+    sub_1B64324(0LL);
   return (System_Collections_Generic_ICollection_string__o *)System_Collections_Generic_Dictionary_object__object___get_Keys(
                                                                (System_Collections_Generic_Dictionary_object__object__o *)elements,
-                                                               (const MethodInfo_308D728 *)Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__get_Keys__);
+                                                               (const MethodInfo_31790D8 *)Method_System_Collections_Generic_Dictionary_string__Spawner_ResourcePrecacher_Element__get_Keys__);
 }
 
 
@@ -751,25 +761,29 @@ void __fastcall Spawner_ResourcePrecacher_Element___ctor(
 void __fastcall Spawner_SpawnerImpl___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  __int64 v2; // x1
+  __int64 v2; // x2
   __int64 v3; // x1
-  System_Collections_Generic_Queue_T__o *v4; // x19
-  int32_t v5; // w2
-  int32_t v6; // w3
+  __int64 v4; // x1
+  System_Collections_Generic_Queue_T__o *v5; // x19
+  int32_t v6; // w2
+  int32_t v7; // w3
 
-  if ( (byte_48E1B6E & 1) == 0 )
+  if ( (byte_49FB736 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_Queue_Transform___ctor__, v1);
-    sub_1B00CCC(&System_Collections_Generic_Queue_Transform__TypeInfo, v2);
-    sub_1B00CCC(&Spawner_SpawnerImpl_TypeInfo, v3);
-    byte_48E1B6E = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_Queue_Transform___ctor__, v1);
+    sub_1B640C8(&System_Collections_Generic_Queue_Transform__TypeInfo, v3);
+    sub_1B640C8(&Spawner_SpawnerImpl_TypeInfo, v4);
+    byte_49FB736 = 1;
   }
-  v4 = (System_Collections_Generic_Queue_T__o *)sub_1B00F18(System_Collections_Generic_Queue_Transform__TypeInfo);
+  v5 = (System_Collections_Generic_Queue_T__o *)sub_1B64314(
+                                                  System_Collections_Generic_Queue_Transform__TypeInfo,
+                                                  v1,
+                                                  v2);
   System_Collections_Generic_Queue_object____ctor(
-    v4,
-    (const MethodInfo_3532CE0 *)Method_System_Collections_Generic_Queue_Transform___ctor__);
-  Spawner_SpawnerImpl_TypeInfo->static_fields->q = (struct System_Collections_Generic_Queue_Transform__o *)v4;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)Spawner_SpawnerImpl_TypeInfo->static_fields, (int32_t)v4, v5, v6);
+    v5,
+    (const MethodInfo_362251C *)Method_System_Collections_Generic_Queue_Transform___ctor__);
+  Spawner_SpawnerImpl_TypeInfo->static_fields->q = (struct System_Collections_Generic_Queue_Transform__o *)v5;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)Spawner_SpawnerImpl_TypeInfo->static_fields, (int32_t)v5, v6, v7);
 }
 
 
@@ -787,61 +801,81 @@ void __fastcall Spawner_SpawnerImpl___ctor(
   __int64 v11; // x1
   int32_t v12; // w2
   int32_t v13; // w3
-  System_Collections_Generic_Dictionary_object__object__o *v14; // x20
-  int32_t v15; // w2
-  int32_t v16; // w3
-  System_Collections_Generic_Dictionary_TKey__TValue__o *v17; // x20
-  int32_t v18; // w2
-  int32_t v19; // w3
-  System_Collections_Generic_HashSet_T__o *v20; // x20
-  int32_t v21; // w2
-  int32_t v22; // w3
-  System_Collections_Generic_Dictionary_object__int__o *v23; // x20
-  int32_t v24; // w2
-  int32_t v25; // w3
+  __int64 v14; // x1
+  __int64 v15; // x2
+  System_Collections_Generic_Dictionary_object__object__o *v16; // x20
+  int32_t v17; // w2
+  int32_t v18; // w3
+  __int64 v19; // x1
+  __int64 v20; // x2
+  System_Collections_Generic_Dictionary_TKey__TValue__o *v21; // x20
+  int32_t v22; // w2
+  int32_t v23; // w3
+  __int64 v24; // x1
+  __int64 v25; // x2
+  System_Collections_Generic_HashSet_T__o *v26; // x20
+  int32_t v27; // w2
+  int32_t v28; // w3
+  __int64 v29; // x1
+  __int64 v30; // x2
+  System_Collections_Generic_Dictionary_object__int__o *v31; // x20
+  int32_t v32; // w2
+  int32_t v33; // w3
 
-  if ( (byte_48E1B62 & 1) == 0 )
+  if ( (byte_49FB72A & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache___ctor__, parent);
-    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_Object__int___ctor__, v5);
-    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_GameObject__bool___ctor__, v6);
-    sub_1B00CCC(&System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache__TypeInfo, v7);
-    sub_1B00CCC(&System_Collections_Generic_Dictionary_GameObject__bool__TypeInfo, v8);
-    sub_1B00CCC(&System_Collections_Generic_Dictionary_Object__int__TypeInfo, v9);
-    sub_1B00CCC(&Method_System_Collections_Generic_HashSet_GameObject___ctor__, v10);
-    sub_1B00CCC(&System_Collections_Generic_HashSet_GameObject__TypeInfo, v11);
-    byte_48E1B62 = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache___ctor__, parent);
+    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_Object__int___ctor__, v5);
+    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_GameObject__bool___ctor__, v6);
+    sub_1B640C8(&System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache__TypeInfo, v7);
+    sub_1B640C8(&System_Collections_Generic_Dictionary_GameObject__bool__TypeInfo, v8);
+    sub_1B640C8(&System_Collections_Generic_Dictionary_Object__int__TypeInfo, v9);
+    sub_1B640C8(&Method_System_Collections_Generic_HashSet_GameObject___ctor__, v10);
+    sub_1B640C8(&System_Collections_Generic_HashSet_GameObject__TypeInfo, v11);
+    byte_49FB72A = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.parent = parent;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)parent, v12, v13);
-  v14 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1B00F18(System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache__TypeInfo);
-  System_Collections_Generic_Dictionary_object__object____ctor_50909360(
-    v14,
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)parent, v12, v13);
+  v16 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1B64314(
+                                                                     System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache__TypeInfo,
+                                                                     v14,
+                                                                     v15);
+  System_Collections_Generic_Dictionary_object__object____ctor_51874400(
+    v16,
     32,
-    (const MethodInfo_308D0B0 *)Method_System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache___ctor__);
-  this->fields.caches = (struct System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache__o *)v14;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.caches, (int32_t)v14, v15, v16);
-  v17 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1B00F18(System_Collections_Generic_Dictionary_GameObject__bool__TypeInfo);
-  System_Collections_Generic_Dictionary_object__bool____ctor_50835956(
-    v17,
+    (const MethodInfo_3178A60 *)Method_System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache___ctor__);
+  this->fields.caches = (struct System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache__o *)v16;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.caches, (int32_t)v16, v17, v18);
+  v21 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1B64314(
+                                                                   System_Collections_Generic_Dictionary_GameObject__bool__TypeInfo,
+                                                                   v19,
+                                                                   v20);
+  System_Collections_Generic_Dictionary_object__bool____ctor_51801204(
+    v21,
     128,
-    (const MethodInfo_307B1F4 *)Method_System_Collections_Generic_Dictionary_GameObject__bool___ctor__);
-  this->fields.managedObjects = (struct System_Collections_Generic_Dictionary_GameObject__bool__o *)v17;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.managedObjects, (int32_t)v17, v18, v19);
-  v20 = (System_Collections_Generic_HashSet_T__o *)sub_1B00F18(System_Collections_Generic_HashSet_GameObject__TypeInfo);
+    (const MethodInfo_3166C74 *)Method_System_Collections_Generic_Dictionary_GameObject__bool___ctor__);
+  this->fields.managedObjects = (struct System_Collections_Generic_Dictionary_GameObject__bool__o *)v21;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.managedObjects, (int32_t)v21, v22, v23);
+  v26 = (System_Collections_Generic_HashSet_T__o *)sub_1B64314(
+                                                     System_Collections_Generic_HashSet_GameObject__TypeInfo,
+                                                     v24,
+                                                     v25);
   System_Collections_Generic_HashSet_object____ctor(
-    v20,
-    (const MethodInfo_3280260 *)Method_System_Collections_Generic_HashSet_GameObject___ctor__);
-  this->fields.destroyedUnmanagedObjects = (struct System_Collections_Generic_HashSet_GameObject__o *)v20;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.destroyedUnmanagedObjects, (int32_t)v20, v21, v22);
-  v23 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1B00F18(System_Collections_Generic_Dictionary_Object__int__TypeInfo);
-  System_Collections_Generic_Dictionary_object__int____ctor_50872980(
-    v23,
+    v26,
+    (const MethodInfo_3369DD0 *)Method_System_Collections_Generic_HashSet_GameObject___ctor__);
+  this->fields.destroyedUnmanagedObjects = (struct System_Collections_Generic_HashSet_GameObject__o *)v26;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.destroyedUnmanagedObjects, (int32_t)v26, v27, v28);
+  v31 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1B64314(
+                                                                  System_Collections_Generic_Dictionary_Object__int__TypeInfo,
+                                                                  v29,
+                                                                  v30);
+  System_Collections_Generic_Dictionary_object__int____ctor_51838228(
+    v31,
     32,
-    (const MethodInfo_3084294 *)Method_System_Collections_Generic_Dictionary_Object__int___ctor__);
-  this->fields.serialNumbers = (struct System_Collections_Generic_Dictionary_Object__int__o *)v23;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.serialNumbers, (int32_t)v23, v24, v25);
+    (const MethodInfo_316FD14 *)Method_System_Collections_Generic_Dictionary_Object__int___ctor__);
+  this->fields.serialNumbers = (struct System_Collections_Generic_Dictionary_Object__int__o *)v31;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.serialNumbers, (int32_t)v31, v32, v33);
 }
 
 
@@ -849,15 +883,15 @@ System_Collections_Generic_List_Transform__o *__fastcall Spawner_SpawnerImpl__Br
         UnityEngine_Transform_o *root,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
   __int64 v4; // x1
   __int64 v5; // x1
   __int64 v6; // x1
   __int64 v7; // x1
   __int64 v8; // x1
   __int64 v9; // x1
-  System_Collections_Generic_List_object__o *v10; // x19
-  __int64 v11; // x1
+  __int64 v10; // x1
+  System_Collections_Generic_List_object__o *v11; // x19
   Spawner_SpawnerImpl_c *v12; // x0
   System_Collections_Generic_Queue_T__o *q; // x0
   System_Collections_Generic_Queue_T__o *klass; // x8
@@ -873,22 +907,25 @@ System_Collections_Generic_List_Transform__o *__fastcall Spawner_SpawnerImpl__Br
   Spawner_SpawnerImpl_c *v24; // x0
   System_Collections_Generic_Queue_T__o *v25; // x22
 
-  if ( (byte_48E1B67 & 1) == 0 )
+  if ( (byte_49FB72F & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_List_Transform__Add__, method);
-    sub_1B00CCC(&Method_System_Collections_Generic_List_Transform___ctor__, v3);
-    sub_1B00CCC(&System_Collections_Generic_List_Transform__TypeInfo, v4);
-    sub_1B00CCC(&Method_System_Collections_Generic_Queue_Transform__Clear__, v5);
-    sub_1B00CCC(&Method_System_Collections_Generic_Queue_Transform__Dequeue__, v6);
-    sub_1B00CCC(&Method_System_Collections_Generic_Queue_Transform__Enqueue__, v7);
-    sub_1B00CCC(&Method_System_Collections_Generic_Queue_Transform__get_Count__, v8);
-    sub_1B00CCC(&Spawner_SpawnerImpl_TypeInfo, v9);
-    byte_48E1B67 = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_List_Transform__Add__, method);
+    sub_1B640C8(&Method_System_Collections_Generic_List_Transform___ctor__, v4);
+    sub_1B640C8(&System_Collections_Generic_List_Transform__TypeInfo, v5);
+    sub_1B640C8(&Method_System_Collections_Generic_Queue_Transform__Clear__, v6);
+    sub_1B640C8(&Method_System_Collections_Generic_Queue_Transform__Dequeue__, v7);
+    sub_1B640C8(&Method_System_Collections_Generic_Queue_Transform__Enqueue__, v8);
+    sub_1B640C8(&Method_System_Collections_Generic_Queue_Transform__get_Count__, v9);
+    sub_1B640C8(&Spawner_SpawnerImpl_TypeInfo, v10);
+    byte_49FB72F = 1;
   }
-  v10 = (System_Collections_Generic_List_object__o *)sub_1B00F18(System_Collections_Generic_List_Transform__TypeInfo);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1B64314(
+                                                       System_Collections_Generic_List_Transform__TypeInfo,
+                                                       method,
+                                                       v2);
   System_Collections_Generic_List_object____ctor(
-    v10,
-    (const MethodInfo_33C119C *)Method_System_Collections_Generic_List_Transform___ctor__);
+    v11,
+    (const MethodInfo_34ACEA0 *)Method_System_Collections_Generic_List_Transform___ctor__);
   v12 = Spawner_SpawnerImpl_TypeInfo;
   if ( !Spawner_SpawnerImpl_TypeInfo->_2.cctor_finished )
   {
@@ -901,7 +938,7 @@ System_Collections_Generic_List_Transform__o *__fastcall Spawner_SpawnerImpl__Br
   System_Collections_Generic_Queue_object___Enqueue(
     q,
     (Il2CppObject *)root,
-    (const MethodInfo_35332A8 *)Method_System_Collections_Generic_Queue_Transform__Enqueue__);
+    (const MethodInfo_3622AE4 *)Method_System_Collections_Generic_Queue_Transform__Enqueue__);
   while ( 1 )
   {
 LABEL_7:
@@ -926,29 +963,29 @@ LABEL_7:
       break;
     q = (System_Collections_Generic_Queue_T__o *)System_Collections_Generic_Queue_object___Dequeue(
                                                    klass,
-                                                   (const MethodInfo_3533438 *)Method_System_Collections_Generic_Queue_Transform__Dequeue__);
-    if ( !v10 )
+                                                   (const MethodInfo_3622C74 *)Method_System_Collections_Generic_Queue_Transform__Dequeue__);
+    if ( !v11 )
       goto LABEL_27;
-    items = v10->fields._items;
+    items = v11->fields._items;
     v19 = Method_System_Collections_Generic_List_Transform__Add__;
-    ++v10->fields._version;
+    ++v11->fields._version;
     if ( !items )
       goto LABEL_27;
-    v20 = v10->fields._size;
+    v20 = v11->fields._size;
     v21 = (UnityEngine_Transform_o *)q;
     if ( (unsigned int)v20 >= items->max_length )
     {
       System_Collections_Generic_List_object___AddWithResize(
-        v10,
+        v11,
         (Il2CppObject *)q,
-        *(const MethodInfo_33C19D0 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+        *(const MethodInfo_34AD6D4 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
     }
     else
     {
       v22 = &items->obj.klass + v20;
-      v10->fields._size = v20 + 1;
+      v11->fields._size = v20 + 1;
       v22[4] = (Il2CppClass *)v21;
-      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v22 + 4), (int32_t)v21, v16, v17);
+      sub_1B6406C((ServantStatusBattleListViewItem_o *)(v22 + 4), (int32_t)v21, v16, v17);
     }
     if ( !v21 )
       goto LABEL_27;
@@ -970,18 +1007,18 @@ LABEL_7:
         System_Collections_Generic_Queue_object___Enqueue(
           v25,
           (Il2CppObject *)q,
-          (const MethodInfo_35332A8 *)Method_System_Collections_Generic_Queue_Transform__Enqueue__);
+          (const MethodInfo_3622AE4 *)Method_System_Collections_Generic_Queue_Transform__Enqueue__);
         if ( ++v23 >= UnityEngine_Transform__get_childCount(v21, 0LL) )
           goto LABEL_7;
       }
 LABEL_27:
-      sub_1B00F28(q, v11);
+      sub_1B64324(q);
     }
   }
   System_Collections_Generic_Queue_object___Clear(
     klass,
-    (const MethodInfo_3532F68 *)Method_System_Collections_Generic_Queue_Transform__Clear__);
-  return (System_Collections_Generic_List_Transform__o *)v10;
+    (const MethodInfo_36227A4 *)Method_System_Collections_Generic_Queue_Transform__Clear__);
+  return (System_Collections_Generic_List_Transform__o *)v11;
 }
 
 
@@ -992,20 +1029,20 @@ bool __fastcall Spawner_SpawnerImpl__ContainCache(
 {
   struct System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache__o *caches; // x0
 
-  if ( (byte_48E1B6D & 1) == 0 )
+  if ( (byte_49FB735 & 1) == 0 )
   {
-    sub_1B00CCC(
+    sub_1B640C8(
       &Method_System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache__ContainsKey__,
       obj);
-    byte_48E1B6D = 1;
+    byte_49FB735 = 1;
   }
   caches = this->fields.caches;
   if ( !caches )
-    sub_1B00F28(0LL, obj);
+    sub_1B64324(0LL);
   return System_Collections_Generic_Dictionary_object__object___ContainsKey(
            (System_Collections_Generic_Dictionary_object__object__o *)caches,
            (Il2CppObject *)obj,
-           (const MethodInfo_308DC3C *)Method_System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache__ContainsKey__);
+           (const MethodInfo_31795EC *)Method_System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache__ContainsKey__);
 }
 
 
@@ -1017,12 +1054,12 @@ void __fastcall Spawner_SpawnerImpl__DeactivateCachedObject(
   Spawner_SpawnerImpl_o *v4; // x19
 
   v4 = this;
-  if ( (byte_48E1B69 & 1) == 0 )
+  if ( (byte_49FB731 & 1) == 0 )
   {
-    this = (Spawner_SpawnerImpl_o *)sub_1B00CCC(
+    this = (Spawner_SpawnerImpl_o *)sub_1B640C8(
                                       &Method_System_Collections_Generic_Dictionary_GameObject__bool__set_Item__,
                                       obj);
-    byte_48E1B69 = 1;
+    byte_49FB731 = 1;
   }
   if ( !obj
     || (UnityEngine_GameObject__SetActive(obj, 0, 0LL),
@@ -1031,10 +1068,10 @@ void __fastcall Spawner_SpawnerImpl__DeactivateCachedObject(
           (System_Collections_Generic_Dictionary_TKey__TValue__o *)this,
           (Il2CppObject *)obj,
           0,
-          (const MethodInfo_307BB84 *)Method_System_Collections_Generic_Dictionary_GameObject__bool__set_Item__),
+          (const MethodInfo_3167604 *)Method_System_Collections_Generic_Dictionary_GameObject__bool__set_Item__),
         (this = (Spawner_SpawnerImpl_o *)UnityEngine_GameObject__get_transform(obj, 0LL)) == 0LL) )
   {
-    sub_1B00F28(this, obj);
+    sub_1B64324(this);
   }
   UnityEngine_Transform__set_parent((UnityEngine_Transform_o *)this, v4->fields.parent, 0LL);
 }
@@ -1063,62 +1100,64 @@ void __fastcall Spawner_SpawnerImpl__Despawn(
   __int64 v20; // x1
   __int64 v21; // x1
   System_Collections_Generic_Dictionary_TKey__TValue__o *IsAlive; // x0
-  __int64 v23; // x1
-  const MethodInfo *v24; // x1
+  const MethodInfo *v23; // x1
   UnityEngine_Transform_o *transform; // x21
   System_Collections_Generic_List_Transform__o *Search; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v27; // x21
-  Spawner_SpawnerImpl___c_c *v28; // x8
+  __int64 v26; // x1
+  __int64 v27; // x2
+  System_Collections_Generic_IEnumerable_TSource__o *v28; // x21
+  Spawner_SpawnerImpl___c_c *v29; // x8
   System_Func_object__object__o *_9__17_0; // x22
-  Il2CppObject *v30; // x23
+  Il2CppObject *v31; // x23
   struct Spawner_SpawnerImpl___c_StaticFields *static_fields; // x0
-  int32_t v32; // w2
-  int32_t v33; // w3
-  System_Collections_Generic_IEnumerable_TSource__o *v34; // x21
-  System_Func_object__bool__o *v35; // x22
-  System_Collections_Generic_IEnumerable_TSource__o *v36; // x0
+  int32_t v33; // w2
+  int32_t v34; // w3
+  System_Collections_Generic_IEnumerable_TSource__o *v35; // x21
+  __int64 v36; // x1
+  __int64 v37; // x2
+  System_Func_object__bool__o *v38; // x22
+  System_Collections_Generic_IEnumerable_TSource__o *v39; // x0
   System_Collections_Generic_Dictionary_TKey__TValue__c *klass; // x8
-  System_Collections_Generic_Dictionary_TKey__TValue__o *v38; // x21
-  __int64 v39; // x9
+  System_Collections_Generic_Dictionary_TKey__TValue__o *v41; // x21
+  __int64 v42; // x9
   int32_t *p_offset; // x10
-  __int64 v41; // x0
-  __int64 v42; // x1
-  __int64 v43; // x21
-  __int64 v44; // x8
-  __int64 v45; // x9
-  int *v46; // x10
-  __int64 v47; // x0
-  __int64 v48; // x8
-  __int64 v49; // x9
-  int *v50; // x10
-  __int64 v51; // x0
-  UnityEngine_GameObject_o *v52; // x1
-  const MethodInfo *v53; // x2
-  __int64 v54; // x8
-  __int64 v55; // x9
-  int *v56; // x10
-  __int64 v57; // x0
-  const MethodInfo *v58; // x2
+  __int64 v44; // x0
+  __int64 v45; // x21
+  __int64 v46; // x8
+  __int64 v47; // x9
+  int *v48; // x10
+  __int64 v49; // x0
+  __int64 v50; // x8
+  __int64 v51; // x9
+  int *v52; // x10
+  __int64 v53; // x0
+  UnityEngine_GameObject_o *v54; // x1
+  const MethodInfo *v55; // x2
+  __int64 v56; // x8
+  __int64 v57; // x9
+  int *v58; // x10
+  __int64 v59; // x0
+  const MethodInfo *v60; // x2
 
-  if ( (byte_48E1B68 & 1) == 0 )
+  if ( (byte_49FB730 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_GameObject__bool__ContainsKey__, objectToDespawn);
-    sub_1B00CCC(&Method_System_Linq_Enumerable_Reverse_GameObject___, v7);
-    sub_1B00CCC(&Method_System_Linq_Enumerable_Select_Transform__GameObject___, v8);
-    sub_1B00CCC(&Method_System_Linq_Enumerable_Skip_Transform___, v9);
-    sub_1B00CCC(&Method_System_Linq_Enumerable_Where_GameObject___, v10);
-    sub_1B00CCC(&System_Func_Transform__GameObject__TypeInfo, v11);
-    sub_1B00CCC(&System_Func_GameObject__bool__TypeInfo, v12);
-    sub_1B00CCC(&System_IDisposable_TypeInfo, v13);
-    sub_1B00CCC(&System_Collections_Generic_IEnumerable_GameObject__TypeInfo, v14);
-    sub_1B00CCC(&System_Collections_Generic_IEnumerator_GameObject__TypeInfo, v15);
-    sub_1B00CCC(&System_Collections_IEnumerator_TypeInfo, v16);
-    sub_1B00CCC(&Method_Spawner_SpawnerImpl__Despawn_b__17_1__, v17);
-    sub_1B00CCC(&Spawner_SpawnerImpl_TypeInfo, v18);
-    sub_1B00CCC(&Method_Spawner_SpawnerImpl___c__Despawn_b__17_0__, v19);
-    sub_1B00CCC(&Spawner_SpawnerImpl___c_TypeInfo, v20);
-    sub_1B00CCC(&StringLiteral_9772/*"OnDespawn"*/, v21);
-    byte_48E1B68 = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_GameObject__bool__ContainsKey__, objectToDespawn);
+    sub_1B640C8(&Method_System_Linq_Enumerable_Reverse_GameObject___, v7);
+    sub_1B640C8(&Method_System_Linq_Enumerable_Select_Transform__GameObject___, v8);
+    sub_1B640C8(&Method_System_Linq_Enumerable_Skip_Transform___, v9);
+    sub_1B640C8(&Method_System_Linq_Enumerable_Where_GameObject___, v10);
+    sub_1B640C8(&System_Func_Transform__GameObject__TypeInfo, v11);
+    sub_1B640C8(&System_Func_GameObject__bool__TypeInfo, v12);
+    sub_1B640C8(&System_IDisposable_TypeInfo, v13);
+    sub_1B640C8(&System_Collections_Generic_IEnumerable_GameObject__TypeInfo, v14);
+    sub_1B640C8(&System_Collections_Generic_IEnumerator_GameObject__TypeInfo, v15);
+    sub_1B640C8(&System_Collections_IEnumerator_TypeInfo, v16);
+    sub_1B640C8(&Method_Spawner_SpawnerImpl__Despawn_b__17_1__, v17);
+    sub_1B640C8(&Spawner_SpawnerImpl_TypeInfo, v18);
+    sub_1B640C8(&Method_Spawner_SpawnerImpl___c__Despawn_b__17_0__, v19);
+    sub_1B640C8(&Spawner_SpawnerImpl___c_TypeInfo, v20);
+    sub_1B640C8(&StringLiteral_9837/*"OnDespawn"*/, v21);
+    byte_49FB730 = 1;
   }
   IsAlive = (System_Collections_Generic_Dictionary_TKey__TValue__o *)Spawner_SpawnerImpl__IsAlive(
                                                                        this,
@@ -1130,7 +1169,7 @@ void __fastcall Spawner_SpawnerImpl__Despawn(
     {
       if ( !objectToDespawn )
         goto LABEL_49;
-      UnityEngine_GameObject__BroadcastMessage(objectToDespawn, (System_String_o *)StringLiteral_9772/*"OnDespawn"*/, 1, 0LL);
+      UnityEngine_GameObject__BroadcastMessage(objectToDespawn, (System_String_o *)StringLiteral_9837/*"OnDespawn"*/, 1, 0LL);
     }
     else if ( !objectToDespawn )
     {
@@ -1139,156 +1178,156 @@ void __fastcall Spawner_SpawnerImpl__Despawn(
     transform = UnityEngine_GameObject__get_transform(objectToDespawn, 0LL);
     if ( !Spawner_SpawnerImpl_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(Spawner_SpawnerImpl_TypeInfo);
-    Search = Spawner_SpawnerImpl__BreadthFirstSearch(transform, v24);
-    v27 = System_Linq_Enumerable__Skip_object_(
+    Search = Spawner_SpawnerImpl__BreadthFirstSearch(transform, v23);
+    v28 = System_Linq_Enumerable__Skip_object_(
             (System_Collections_Generic_IEnumerable_TSource__o *)Search,
             1,
-            (const MethodInfo_2D96124 *)Method_System_Linq_Enumerable_Skip_Transform___);
-    v28 = Spawner_SpawnerImpl___c_TypeInfo;
+            (const MethodInfo_2E6FAC0 *)Method_System_Linq_Enumerable_Skip_Transform___);
+    v29 = Spawner_SpawnerImpl___c_TypeInfo;
     if ( !Spawner_SpawnerImpl___c_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(Spawner_SpawnerImpl___c_TypeInfo);
-      v28 = Spawner_SpawnerImpl___c_TypeInfo;
+      v29 = Spawner_SpawnerImpl___c_TypeInfo;
     }
-    _9__17_0 = (System_Func_object__object__o *)v28->static_fields->__9__17_0;
+    _9__17_0 = (System_Func_object__object__o *)v29->static_fields->__9__17_0;
     if ( !_9__17_0 )
     {
-      if ( !v28->_2.cctor_finished )
+      if ( !v29->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v28);
-        v28 = Spawner_SpawnerImpl___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v29);
+        v29 = Spawner_SpawnerImpl___c_TypeInfo;
       }
-      v30 = (Il2CppObject *)v28->static_fields->__9;
-      _9__17_0 = (System_Func_object__object__o *)sub_1B00F18(System_Func_Transform__GameObject__TypeInfo);
-      System_Func_object__object____ctor(_9__17_0, v30, Method_Spawner_SpawnerImpl___c__Despawn_b__17_0__, 0LL);
+      v31 = (Il2CppObject *)v29->static_fields->__9;
+      _9__17_0 = (System_Func_object__object__o *)sub_1B64314(System_Func_Transform__GameObject__TypeInfo, v26, v27);
+      System_Func_object__object____ctor(_9__17_0, v31, Method_Spawner_SpawnerImpl___c__Despawn_b__17_0__, 0LL);
       static_fields = Spawner_SpawnerImpl___c_TypeInfo->static_fields;
       static_fields->__9__17_0 = (struct System_Func_Transform__GameObject__o *)_9__17_0;
-      sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->__9__17_0, (int32_t)_9__17_0, v32, v33);
+      sub_1B6406C((ServantStatusBattleListViewItem_o *)&static_fields->__9__17_0, (int32_t)_9__17_0, v33, v34);
     }
-    v34 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
-                                                                 v27,
+    v35 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
+                                                                 v28,
                                                                  (System_Func_TSource__TResult__o *)_9__17_0,
-                                                                 (const MethodInfo_2D8FA10 *)Method_System_Linq_Enumerable_Select_Transform__GameObject___);
-    v35 = (System_Func_object__bool__o *)sub_1B00F18(System_Func_GameObject__bool__TypeInfo);
-    System_Func_object__bool____ctor(v35, (Il2CppObject *)this, Method_Spawner_SpawnerImpl__Despawn_b__17_1__, 0LL);
-    v36 = System_Linq_Enumerable__Where_object_(
-            v34,
-            (System_Func_TSource__bool__o *)v35,
-            (const MethodInfo_2D9D054 *)Method_System_Linq_Enumerable_Where_GameObject___);
+                                                                 (const MethodInfo_2E693AC *)Method_System_Linq_Enumerable_Select_Transform__GameObject___);
+    v38 = (System_Func_object__bool__o *)sub_1B64314(System_Func_GameObject__bool__TypeInfo, v36, v37);
+    System_Func_object__bool____ctor(v38, (Il2CppObject *)this, Method_Spawner_SpawnerImpl__Despawn_b__17_1__, 0LL);
+    v39 = System_Linq_Enumerable__Where_object_(
+            v35,
+            (System_Func_TSource__bool__o *)v38,
+            (const MethodInfo_2E7709C *)Method_System_Linq_Enumerable_Where_GameObject___);
     IsAlive = (System_Collections_Generic_Dictionary_TKey__TValue__o *)System_Linq_Enumerable__Reverse_object_(
-                                                                         v36,
-                                                                         (const MethodInfo_2D8AD3C *)Method_System_Linq_Enumerable_Reverse_GameObject___);
+                                                                         v39,
+                                                                         (const MethodInfo_2E640F0 *)Method_System_Linq_Enumerable_Reverse_GameObject___);
     if ( IsAlive )
     {
       klass = IsAlive->klass;
-      v38 = IsAlive;
-      v39 = *(unsigned __int16 *)(&IsAlive->klass->_2.bitflags2 + 3);
+      v41 = IsAlive;
+      v42 = *(unsigned __int16 *)(&IsAlive->klass->_2.bitflags2 + 3);
       if ( *(_WORD *)(&IsAlive->klass->_2.bitflags2 + 3) )
       {
         p_offset = &klass->_1.interfaceOffsets->offset;
         while ( *((System_Collections_Generic_IEnumerable_GameObject__c **)p_offset - 1) != System_Collections_Generic_IEnumerable_GameObject__TypeInfo )
         {
-          --v39;
+          --v42;
           p_offset += 4;
-          if ( !v39 )
+          if ( !v42 )
             goto LABEL_21;
         }
-        v41 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+        v44 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
       }
       else
       {
 LABEL_21:
-        v41 = sub_1B52CAC(IsAlive, System_Collections_Generic_IEnumerable_GameObject__TypeInfo, 0LL);
+        v44 = sub_1BB60A8(IsAlive, System_Collections_Generic_IEnumerable_GameObject__TypeInfo, 0LL);
       }
-      v43 = (*(__int64 (__fastcall **)(System_Collections_Generic_Dictionary_TKey__TValue__o *, _QWORD))v41)(
-              v38,
-              *(_QWORD *)(v41 + 8));
-      if ( !v43 )
-        sub_1B00F28(0LL, v42);
+      v45 = (*(__int64 (__fastcall **)(System_Collections_Generic_Dictionary_TKey__TValue__o *, _QWORD))v44)(
+              v41,
+              *(_QWORD *)(v44 + 8));
+      if ( !v45 )
+        sub_1B64324(0LL);
       while ( 1 )
       {
-        v44 = *(_QWORD *)v43;
-        v45 = *(unsigned __int16 *)(*(_QWORD *)v43 + 302LL);
-        if ( *(_WORD *)(*(_QWORD *)v43 + 302LL) )
+        v46 = *(_QWORD *)v45;
+        v47 = *(unsigned __int16 *)(*(_QWORD *)v45 + 302LL);
+        if ( *(_WORD *)(*(_QWORD *)v45 + 302LL) )
         {
-          v46 = (int *)(*(_QWORD *)(v44 + 176) + 8LL);
-          while ( *((System_Collections_IEnumerator_c **)v46 - 1) != System_Collections_IEnumerator_TypeInfo )
+          v48 = (int *)(*(_QWORD *)(v46 + 176) + 8LL);
+          while ( *((System_Collections_IEnumerator_c **)v48 - 1) != System_Collections_IEnumerator_TypeInfo )
           {
-            --v45;
-            v46 += 4;
-            if ( !v45 )
+            --v47;
+            v48 += 4;
+            if ( !v47 )
               goto LABEL_28;
           }
-          v47 = v44 + 16LL * *v46 + 312;
+          v49 = v46 + 16LL * *v48 + 312;
         }
         else
         {
 LABEL_28:
-          v47 = sub_1B52CAC(v43, System_Collections_IEnumerator_TypeInfo, 0LL);
+          v49 = sub_1BB60A8(v45, System_Collections_IEnumerator_TypeInfo, 0LL);
         }
-        if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v47)(v43, *(_QWORD *)(v47 + 8)) & 1) == 0 )
+        if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v49)(v45, *(_QWORD *)(v49 + 8)) & 1) == 0 )
           break;
-        v48 = *(_QWORD *)v43;
-        v49 = *(unsigned __int16 *)(*(_QWORD *)v43 + 302LL);
-        if ( *(_WORD *)(*(_QWORD *)v43 + 302LL) )
+        v50 = *(_QWORD *)v45;
+        v51 = *(unsigned __int16 *)(*(_QWORD *)v45 + 302LL);
+        if ( *(_WORD *)(*(_QWORD *)v45 + 302LL) )
         {
-          v50 = (int *)(*(_QWORD *)(v48 + 176) + 8LL);
-          while ( *((System_Collections_Generic_IEnumerator_GameObject__c **)v50 - 1) != System_Collections_Generic_IEnumerator_GameObject__TypeInfo )
+          v52 = (int *)(*(_QWORD *)(v50 + 176) + 8LL);
+          while ( *((System_Collections_Generic_IEnumerator_GameObject__c **)v52 - 1) != System_Collections_Generic_IEnumerator_GameObject__TypeInfo )
           {
-            --v49;
-            v50 += 4;
-            if ( !v49 )
+            --v51;
+            v52 += 4;
+            if ( !v51 )
               goto LABEL_35;
           }
-          v51 = v48 + 16LL * *v50 + 312;
+          v53 = v50 + 16LL * *v52 + 312;
         }
         else
         {
 LABEL_35:
-          v51 = sub_1B52CAC(v43, System_Collections_Generic_IEnumerator_GameObject__TypeInfo, 0LL);
+          v53 = sub_1BB60A8(v45, System_Collections_Generic_IEnumerator_GameObject__TypeInfo, 0LL);
         }
-        v52 = (UnityEngine_GameObject_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v51)(v43, *(_QWORD *)(v51 + 8));
-        Spawner_SpawnerImpl__DeactivateCachedObject(this, v52, v53);
+        v54 = (UnityEngine_GameObject_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v53)(v45, *(_QWORD *)(v53 + 8));
+        Spawner_SpawnerImpl__DeactivateCachedObject(this, v54, v55);
       }
-      v54 = *(_QWORD *)v43;
-      v55 = *(unsigned __int16 *)(*(_QWORD *)v43 + 302LL);
-      if ( *(_WORD *)(*(_QWORD *)v43 + 302LL) )
+      v56 = *(_QWORD *)v45;
+      v57 = *(unsigned __int16 *)(*(_QWORD *)v45 + 302LL);
+      if ( *(_WORD *)(*(_QWORD *)v45 + 302LL) )
       {
-        v56 = (int *)(*(_QWORD *)(v54 + 176) + 8LL);
-        while ( *((System_IDisposable_c **)v56 - 1) != System_IDisposable_TypeInfo )
+        v58 = (int *)(*(_QWORD *)(v56 + 176) + 8LL);
+        while ( *((System_IDisposable_c **)v58 - 1) != System_IDisposable_TypeInfo )
         {
-          --v55;
-          v56 += 4;
-          if ( !v55 )
+          --v57;
+          v58 += 4;
+          if ( !v57 )
             goto LABEL_42;
         }
-        v57 = v54 + 16LL * *v56 + 312;
+        v59 = v56 + 16LL * *v58 + 312;
       }
       else
       {
 LABEL_42:
-        v57 = sub_1B52CAC(v43, System_IDisposable_TypeInfo, 0LL);
+        v59 = sub_1BB60A8(v45, System_IDisposable_TypeInfo, 0LL);
       }
-      (*(void (__fastcall **)(__int64, _QWORD))v57)(v43, *(_QWORD *)(v57 + 8));
+      (*(void (__fastcall **)(__int64, _QWORD))v59)(v45, *(_QWORD *)(v59 + 8));
       IsAlive = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.managedObjects;
       if ( IsAlive )
       {
         if ( System_Collections_Generic_Dictionary_object__bool___ContainsKey(
                IsAlive,
                (Il2CppObject *)objectToDespawn,
-               (const MethodInfo_307BDA4 *)Method_System_Collections_Generic_Dictionary_GameObject__bool__ContainsKey__) )
+               (const MethodInfo_3167824 *)Method_System_Collections_Generic_Dictionary_GameObject__bool__ContainsKey__) )
         {
-          Spawner_SpawnerImpl__DeactivateCachedObject(this, objectToDespawn, v58);
+          Spawner_SpawnerImpl__DeactivateCachedObject(this, objectToDespawn, v60);
         }
         else
         {
-          Spawner_SpawnerImpl__DestroyUnmanagedObject(this, objectToDespawn, v58);
+          Spawner_SpawnerImpl__DestroyUnmanagedObject(this, objectToDespawn, v60);
         }
         return;
       }
     }
 LABEL_49:
-    sub_1B00F28(IsAlive, v23);
+    sub_1B64324(IsAlive);
   }
 }
 
@@ -1299,85 +1338,85 @@ void __fastcall Spawner_SpawnerImpl__DestroyUnmanagedObject(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x1
   System_Collections_Generic_HashSet_T__o *destroyedUnmanagedObjects; // x0
-  const MethodInfo *v8; // x1
+  const MethodInfo *v7; // x1
   float unscaledTime; // s0
 
-  if ( (byte_48E1B6A & 1) == 0 )
+  if ( (byte_49FB732 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_HashSet_GameObject__Add__, obj);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v5);
-    byte_48E1B6A = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_HashSet_GameObject__Add__, obj);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v5);
+    byte_49FB732 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_68077656((UnityEngine_Object_o *)obj, 0LL);
+  UnityEngine_Object__Destroy_69127736((UnityEngine_Object_o *)obj, 0LL);
   destroyedUnmanagedObjects = (System_Collections_Generic_HashSet_T__o *)this->fields.destroyedUnmanagedObjects;
   if ( !destroyedUnmanagedObjects )
-    sub_1B00F28(0LL, v6);
+    sub_1B64324(0LL);
   System_Collections_Generic_HashSet_object___Add(
     destroyedUnmanagedObjects,
     (Il2CppObject *)obj,
-    (const MethodInfo_3281444 *)Method_System_Collections_Generic_HashSet_GameObject__Add__);
+    (const MethodInfo_336AFB4 *)Method_System_Collections_Generic_HashSet_GameObject__Add__);
   unscaledTime = UnityEngine_Time__get_unscaledTime(0LL);
   if ( (float)(unscaledTime - this->fields.lastGCAt) > 59.0 )
   {
     this->fields.lastGCAt = unscaledTime;
-    Spawner_SpawnerImpl__GC(this, v8);
+    Spawner_SpawnerImpl__GC(this, v7);
   }
 }
 
 
 void __fastcall Spawner_SpawnerImpl__GC(Spawner_SpawnerImpl_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
   __int64 v4; // x1
   __int64 v5; // x1
-  Spawner_SpawnerImpl___c_c *v6; // x0
+  __int64 v6; // x1
+  Spawner_SpawnerImpl___c_c *v7; // x0
   System_Collections_Generic_HashSet_T__o *destroyedUnmanagedObjects; // x19
   System_Predicate_object__o *_9__20_0; // x20
-  Il2CppObject *v9; // x21
+  Il2CppObject *v10; // x21
   struct Spawner_SpawnerImpl___c_StaticFields *static_fields; // x0
-  int32_t v11; // w2
-  int32_t v12; // w3
+  int32_t v12; // w2
+  int32_t v13; // w3
 
-  if ( (byte_48E1B6B & 1) == 0 )
+  if ( (byte_49FB733 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_HashSet_GameObject__RemoveWhere__, method);
-    sub_1B00CCC(&System_Predicate_GameObject__TypeInfo, v3);
-    sub_1B00CCC(&Method_Spawner_SpawnerImpl___c__GC_b__20_0__, v4);
-    sub_1B00CCC(&Spawner_SpawnerImpl___c_TypeInfo, v5);
-    byte_48E1B6B = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_HashSet_GameObject__RemoveWhere__, method);
+    sub_1B640C8(&System_Predicate_GameObject__TypeInfo, v4);
+    sub_1B640C8(&Method_Spawner_SpawnerImpl___c__GC_b__20_0__, v5);
+    sub_1B640C8(&Spawner_SpawnerImpl___c_TypeInfo, v6);
+    byte_49FB733 = 1;
   }
-  v6 = Spawner_SpawnerImpl___c_TypeInfo;
+  v7 = Spawner_SpawnerImpl___c_TypeInfo;
   destroyedUnmanagedObjects = (System_Collections_Generic_HashSet_T__o *)this->fields.destroyedUnmanagedObjects;
   if ( !Spawner_SpawnerImpl___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(Spawner_SpawnerImpl___c_TypeInfo);
-    v6 = Spawner_SpawnerImpl___c_TypeInfo;
+    v7 = Spawner_SpawnerImpl___c_TypeInfo;
   }
-  _9__20_0 = (System_Predicate_object__o *)v6->static_fields->__9__20_0;
+  _9__20_0 = (System_Predicate_object__o *)v7->static_fields->__9__20_0;
   if ( !_9__20_0 )
   {
-    if ( !v6->_2.cctor_finished )
+    if ( !v7->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v6);
-      v6 = Spawner_SpawnerImpl___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v7);
+      v7 = Spawner_SpawnerImpl___c_TypeInfo;
     }
-    v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__20_0 = (System_Predicate_object__o *)sub_1B00F18(System_Predicate_GameObject__TypeInfo);
-    System_Predicate_object____ctor(_9__20_0, v9, Method_Spawner_SpawnerImpl___c__GC_b__20_0__, 0LL);
+    v10 = (Il2CppObject *)v7->static_fields->__9;
+    _9__20_0 = (System_Predicate_object__o *)sub_1B64314(System_Predicate_GameObject__TypeInfo, method, v2);
+    System_Predicate_object____ctor(_9__20_0, v10, Method_Spawner_SpawnerImpl___c__GC_b__20_0__, 0LL);
     static_fields = Spawner_SpawnerImpl___c_TypeInfo->static_fields;
     static_fields->__9__20_0 = (struct System_Predicate_GameObject__o *)_9__20_0;
-    sub_1B00C70((ServantStatusBattleListViewItem_o *)&static_fields->__9__20_0, (int32_t)_9__20_0, v11, v12);
+    sub_1B6406C((ServantStatusBattleListViewItem_o *)&static_fields->__9__20_0, (int32_t)_9__20_0, v12, v13);
   }
   if ( !destroyedUnmanagedObjects )
-    sub_1B00F28(v6, method);
+    sub_1B64324(v7);
   System_Collections_Generic_HashSet_object___RemoveWhere(
     destroyedUnmanagedObjects,
     (System_Predicate_T__o *)_9__20_0,
-    (const MethodInfo_32819A4 *)Method_System_Collections_Generic_HashSet_GameObject__RemoveWhere__);
+    (const MethodInfo_336B514 *)Method_System_Collections_Generic_HashSet_GameObject__RemoveWhere__);
 }
 
 
@@ -1395,49 +1434,49 @@ bool __fastcall Spawner_SpawnerImpl__HasCached(Spawner_SpawnerImpl_o *this, cons
   int v12; // w19
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v14; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_48E1B64 & 1) == 0 )
+  if ( (byte_49FB72C & 1) == 0 )
   {
-    sub_1B00CCC(
+    sub_1B640C8(
       &Method_System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache__get_Values__,
       method);
-    sub_1B00CCC(
+    sub_1B640C8(
       &Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_Object__Spawner_SpawnerImpl_ObjectCache__Dispose__,
       v3);
-    sub_1B00CCC(
+    sub_1B640C8(
       &Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_Object__Spawner_SpawnerImpl_ObjectCache__MoveNext__,
       v4);
-    sub_1B00CCC(
+    sub_1B640C8(
       &Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_Object__Spawner_SpawnerImpl_ObjectCache__get_Current__,
       v5);
-    sub_1B00CCC(
+    sub_1B640C8(
       &Method_System_Collections_Generic_Dictionary_ValueCollection_Object__Spawner_SpawnerImpl_ObjectCache__GetEnumerator__,
       v6);
-    byte_48E1B64 = 1;
+    byte_49FB72C = 1;
   }
   memset(&v14, 0, sizeof(v14));
   caches = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.caches;
   if ( !caches
     || (caches = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Values(
                                                                               caches,
-                                                                              (const MethodInfo_308D878 *)Method_System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache__get_Values__)) == 0LL )
+                                                                              (const MethodInfo_3179228 *)Method_System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache__get_Values__)) == 0LL )
   {
-    sub_1B00F28(caches, method);
+    sub_1B64324(caches);
   }
   System_Collections_Generic_Dictionary_ValueCollection_object__object___GetEnumerator(
     &v14,
     (System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *)caches,
-    (const MethodInfo_36CDF94 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Object__Spawner_SpawnerImpl_ObjectCache__GetEnumerator__);
+    (const MethodInfo_37BDDB4 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Object__Spawner_SpawnerImpl_ObjectCache__GetEnumerator__);
   v8 = 0;
   while ( 1 )
   {
     v9 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___MoveNext(
            &v14,
-           (const MethodInfo_318F37C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_Object__Spawner_SpawnerImpl_ObjectCache__MoveNext__);
+           (const MethodInfo_3277270 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_Object__Spawner_SpawnerImpl_ObjectCache__MoveNext__);
     if ( !v9 )
       break;
     currentValue = v14.fields._currentValue;
     if ( !v14.fields._currentValue )
-      sub_1B00F28(v9, v10);
+      sub_1B64324(v9);
     if ( !v14.fields._currentValue[2].monitor )
     {
       Spawner_SpawnerImpl_ObjectCache__Initialize((Spawner_SpawnerImpl_ObjectCache_o *)v14.fields._currentValue, v10);
@@ -1453,7 +1492,7 @@ bool __fastcall Spawner_SpawnerImpl__HasCached(Spawner_SpawnerImpl_o *this, cons
 LABEL_13:
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___Dispose(
     &v14,
-    (const MethodInfo_318F378 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_Object__Spawner_SpawnerImpl_ObjectCache__Dispose__);
+    (const MethodInfo_327726C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_Object__Spawner_SpawnerImpl_ObjectCache__Dispose__);
   return v12 != 5;
 }
 
@@ -1465,16 +1504,15 @@ bool __fastcall Spawner_SpawnerImpl__IsAlive(
 {
   __int64 v5; // x1
   __int64 v6; // x1
-  __int64 v7; // x1
   System_Collections_Generic_Dictionary_TKey__TValue__o *managedObjects; // x0
   bool value; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_48E1B6C & 1) == 0 )
+  if ( (byte_49FB734 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_GameObject__bool__TryGetValue__, obj);
-    sub_1B00CCC(&Method_System_Collections_Generic_HashSet_GameObject__Contains__, v5);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v6);
-    byte_48E1B6C = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_GameObject__bool__TryGetValue__, obj);
+    sub_1B640C8(&Method_System_Collections_Generic_HashSet_GameObject__Contains__, v5);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v6);
+    byte_49FB734 = 1;
   }
   value = 0;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1488,7 +1526,7 @@ bool __fastcall Spawner_SpawnerImpl__IsAlive(
              managedObjects,
              (Il2CppObject *)obj,
              &value,
-             (const MethodInfo_307D368 *)Method_System_Collections_Generic_Dictionary_GameObject__bool__TryGetValue__) )
+             (const MethodInfo_3168DE8 *)Method_System_Collections_Generic_Dictionary_GameObject__bool__TryGetValue__) )
       {
         return value;
       }
@@ -1497,9 +1535,9 @@ bool __fastcall Spawner_SpawnerImpl__IsAlive(
         return !System_Collections_Generic_HashSet_object___Contains(
                   (System_Collections_Generic_HashSet_T__o *)managedObjects,
                   (Il2CppObject *)obj,
-                  (const MethodInfo_3280954 *)Method_System_Collections_Generic_HashSet_GameObject__Contains__);
+                  (const MethodInfo_336A4C4 *)Method_System_Collections_Generic_HashSet_GameObject__Contains__);
     }
-    sub_1B00F28(managedObjects, v7);
+    sub_1B64324(managedObjects);
   }
   return 0;
 }
@@ -1517,20 +1555,17 @@ void __fastcall Spawner_SpawnerImpl__Number(
   System_Collections_Generic_Dictionary_object__int__o *serialNumbers; // x0
   int32_t v11; // w2
   Il2CppObject *name; // x20
-  __int64 v13; // x2
-  __int64 v14; // x3
-  __int64 v15; // x4
-  Il2CppObject *v16; // x0
-  int32_t v17; // [xsp+8h] [xbp-28h] BYREF
+  Il2CppObject *v13; // x0
+  int32_t v14; // [xsp+8h] [xbp-28h] BYREF
   int32_t value; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_48E1B66 & 1) == 0 )
+  if ( (byte_49FB72E & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_Object__int__TryGetValue__, prefab);
-    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_Object__int__set_Item__, v7);
-    sub_1B00CCC(&int_TypeInfo, v8);
-    sub_1B00CCC(&StringLiteral_24660/*"{0}({1})"*/, v9);
-    byte_48E1B66 = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_Object__int__TryGetValue__, prefab);
+    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_Object__int__set_Item__, v7);
+    sub_1B640C8(&int_TypeInfo, v8);
+    sub_1B640C8(&StringLiteral_24925/*"{0}({1})"*/, v9);
+    byte_49FB72E = 1;
   }
   value = 0;
   serialNumbers = (System_Collections_Generic_Dictionary_object__int__o *)this->fields.serialNumbers;
@@ -1540,7 +1575,7 @@ void __fastcall Spawner_SpawnerImpl__Number(
     serialNumbers,
     (Il2CppObject *)prefab,
     &value,
-    (const MethodInfo_30863EC *)Method_System_Collections_Generic_Dictionary_Object__int__TryGetValue__);
+    (const MethodInfo_3171E6C *)Method_System_Collections_Generic_Dictionary_Object__int__TryGetValue__);
   serialNumbers = (System_Collections_Generic_Dictionary_object__int__o *)this->fields.serialNumbers;
   v11 = ++value;
   if ( !serialNumbers
@@ -1548,20 +1583,20 @@ void __fastcall Spawner_SpawnerImpl__Number(
           serialNumbers,
           (Il2CppObject *)prefab,
           v11,
-          (const MethodInfo_3084C1C *)Method_System_Collections_Generic_Dictionary_Object__int__set_Item__),
+          (const MethodInfo_317069C *)Method_System_Collections_Generic_Dictionary_Object__int__set_Item__),
         !prefab)
     || (name = (Il2CppObject *)UnityEngine_Object__get_name(prefab, 0LL),
-        v17 = value,
-        v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17, v13, v14, v15),
-        serialNumbers = (System_Collections_Generic_Dictionary_object__int__o *)System_String__Format_60340120(
-                                                                                  (System_String_o *)StringLiteral_24660/*"{0}({1})"*/,
+        v14 = value,
+        v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14),
+        serialNumbers = (System_Collections_Generic_Dictionary_object__int__o *)System_String__Format_61389768(
+                                                                                  (System_String_o *)StringLiteral_24925/*"{0}({1})"*/,
                                                                                   name,
-                                                                                  v16,
+                                                                                  v13,
                                                                                   0LL),
         !obj) )
   {
 LABEL_8:
-    sub_1B00F28(serialNumbers, prefab);
+    sub_1B64324(serialNumbers);
   }
   UnityEngine_Object__set_name((UnityEngine_Object_o *)obj, (System_String_o *)serialNumbers, 0LL);
 }
@@ -1577,18 +1612,20 @@ void __fastcall Spawner_SpawnerImpl__Precache(
   __int64 v9; // x1
   __int64 v10; // x1
   struct System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache__o *caches; // x0
-  struct System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache__o *v12; // x23
-  Spawner_SpawnerImpl_ObjectCache_o *v13; // x24
-  const MethodInfo *v14; // x5
+  __int64 v12; // x1
+  __int64 v13; // x2
+  struct System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache__o *v14; // x23
+  Spawner_SpawnerImpl_ObjectCache_o *v15; // x24
+  const MethodInfo *v16; // x5
 
-  if ( (byte_48E1B63 & 1) == 0 )
+  if ( (byte_49FB72B & 1) == 0 )
   {
-    sub_1B00CCC(
+    sub_1B640C8(
       &Method_System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache__ContainsKey__,
       prefab);
-    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache__set_Item__, v9);
-    sub_1B00CCC(&Spawner_SpawnerImpl_ObjectCache_TypeInfo, v10);
-    byte_48E1B63 = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache__set_Item__, v9);
+    sub_1B640C8(&Spawner_SpawnerImpl_ObjectCache_TypeInfo, v10);
+    byte_49FB72B = 1;
   }
   caches = this->fields.caches;
   if ( !caches )
@@ -1596,21 +1633,21 @@ void __fastcall Spawner_SpawnerImpl__Precache(
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)caches,
          (Il2CppObject *)prefab,
-         (const MethodInfo_308DC3C *)Method_System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache__ContainsKey__) )
+         (const MethodInfo_31795EC *)Method_System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache__ContainsKey__) )
   {
     return;
   }
-  v12 = this->fields.caches;
-  v13 = (Spawner_SpawnerImpl_ObjectCache_o *)sub_1B00F18(Spawner_SpawnerImpl_ObjectCache_TypeInfo);
-  Spawner_SpawnerImpl_ObjectCache___ctor(v13, this, prefab, cacheSize, overflowPolicy, v14);
-  if ( !v12 )
+  v14 = this->fields.caches;
+  v15 = (Spawner_SpawnerImpl_ObjectCache_o *)sub_1B64314(Spawner_SpawnerImpl_ObjectCache_TypeInfo, v12, v13);
+  Spawner_SpawnerImpl_ObjectCache___ctor(v15, this, prefab, cacheSize, overflowPolicy, v16);
+  if ( !v14 )
 LABEL_7:
-    sub_1B00F28(caches, prefab);
+    sub_1B64324(caches);
   System_Collections_Generic_Dictionary_object__object___set_Item(
-    (System_Collections_Generic_Dictionary_object__object__o *)v12,
+    (System_Collections_Generic_Dictionary_object__object__o *)v14,
     (Il2CppObject *)prefab,
-    (Il2CppObject *)v13,
-    (const MethodInfo_308DA34 *)Method_System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache__set_Item__);
+    (Il2CppObject *)v15,
+    (const MethodInfo_31793E4 *)Method_System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache__set_Item__);
 }
 
 
@@ -1635,19 +1672,20 @@ UnityEngine_GameObject_o *__fastcall Spawner_SpawnerImpl__Spawn(
   __int64 v18; // x1
   __int64 v19; // x1
   System_Collections_Generic_Dictionary_object__object__o *caches; // x0
+  const MethodInfo *v21; // x1
   UnityEngine_Object_o *NextObjectInCache; // x21
-  UnityEngine_Object_o *v22; // x0
-  const MethodInfo *v23; // x3
+  UnityEngine_Object_o *v23; // x0
+  const MethodInfo *v24; // x3
   UnityEngine_GameObject_o *result; // x0
-  Spawner_o *v25; // x0
-  UnityEngine_GameObject_o *v26; // x1
-  bool v27; // w2
-  const MethodInfo *v28; // x3
+  Spawner_o *v26; // x0
+  UnityEngine_GameObject_o *v27; // x1
+  bool v28; // w2
+  const MethodInfo *v29; // x3
   Il2CppObject *value; // [xsp+8h] [xbp-68h] BYREF
-  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Quaternion_o v32; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Quaternion_o v33; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
+  UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Quaternion_o v33; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v34; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
 
   w = rotation.fields.w;
   z = rotation.fields.z;
@@ -1656,16 +1694,16 @@ UnityEngine_GameObject_o *__fastcall Spawner_SpawnerImpl__Spawn(
   v11 = position.fields.z;
   v12 = position.fields.y;
   v13 = position.fields.x;
-  if ( (byte_48E1B65 & 1) == 0 )
+  if ( (byte_49FB72D & 1) == 0 )
   {
-    sub_1B00CCC(
+    sub_1B640C8(
       &Method_System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache__TryGetValue__,
       prefab);
-    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_GameObject__bool__set_Item__, v16);
-    sub_1B00CCC(&UnityEngine_GameObject_TypeInfo, v17);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v18);
-    sub_1B00CCC(&StringLiteral_9847/*"OnSpawn"*/, v19);
-    byte_48E1B65 = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_GameObject__bool__set_Item__, v16);
+    sub_1B640C8(&UnityEngine_GameObject_TypeInfo, v17);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v18);
+    sub_1B640C8(&StringLiteral_9912/*"OnSpawn"*/, v19);
+    byte_49FB72D = 1;
   }
   value = 0LL;
   caches = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.caches;
@@ -1675,14 +1713,14 @@ UnityEngine_GameObject_o *__fastcall Spawner_SpawnerImpl__Spawn(
          caches,
          (Il2CppObject *)prefab,
          &value,
-         (const MethodInfo_308F254 *)Method_System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache__TryGetValue__) )
+         (const MethodInfo_317AC04 *)Method_System_Collections_Generic_Dictionary_Object__Spawner_SpawnerImpl_ObjectCache__TryGetValue__) )
   {
     caches = (System_Collections_Generic_Dictionary_object__object__o *)value;
     if ( !value )
       goto LABEL_27;
     NextObjectInCache = (UnityEngine_Object_o *)Spawner_SpawnerImpl_ObjectCache__GetNextObjectInCache(
                                                   (Spawner_SpawnerImpl_ObjectCache_o *)value,
-                                                  (const MethodInfo *)prefab);
+                                                  v21);
   }
   else
   {
@@ -1705,20 +1743,20 @@ UnityEngine_GameObject_o *__fastcall Spawner_SpawnerImpl__Spawn(
                                                                             0LL);
       if ( !caches )
         goto LABEL_27;
-      v31.fields.x = v13;
-      v31.fields.y = v12;
-      v31.fields.z = v11;
-      UnityEngine_Transform__set_position((UnityEngine_Transform_o *)caches, v31, 0LL);
+      v32.fields.x = v13;
+      v32.fields.y = v12;
+      v32.fields.z = v11;
+      UnityEngine_Transform__set_position((UnityEngine_Transform_o *)caches, v32, 0LL);
       caches = (System_Collections_Generic_Dictionary_object__object__o *)UnityEngine_GameObject__get_transform(
                                                                             (UnityEngine_GameObject_o *)NextObjectInCache,
                                                                             0LL);
       if ( !caches )
         goto LABEL_27;
-      v32.fields.x = x;
-      v32.fields.y = y;
-      v32.fields.z = z;
-      v32.fields.w = w;
-      UnityEngine_Transform__set_rotation((UnityEngine_Transform_o *)caches, v32, 0LL);
+      v33.fields.x = x;
+      v33.fields.y = y;
+      v33.fields.z = z;
+      v33.fields.w = w;
+      UnityEngine_Transform__set_rotation((UnityEngine_Transform_o *)caches, v33, 0LL);
     }
     caches = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.managedObjects;
     if ( caches )
@@ -1727,52 +1765,52 @@ UnityEngine_GameObject_o *__fastcall Spawner_SpawnerImpl__Spawn(
         (System_Collections_Generic_Dictionary_TKey__TValue__o *)caches,
         (Il2CppObject *)NextObjectInCache,
         1,
-        (const MethodInfo_307BB84 *)Method_System_Collections_Generic_Dictionary_GameObject__bool__set_Item__);
+        (const MethodInfo_3167604 *)Method_System_Collections_Generic_Dictionary_GameObject__bool__set_Item__);
       if ( NextObjectInCache )
         goto LABEL_24;
     }
 LABEL_27:
-    sub_1B00F28(caches, prefab);
+    sub_1B64324(caches);
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( overridesPositionAndRotation )
   {
-    v30.fields.x = v13;
-    v30.fields.y = v12;
-    v30.fields.z = v11;
-    v33.fields.x = x;
-    v33.fields.y = y;
-    v33.fields.z = z;
-    v33.fields.w = w;
-    v22 = UnityEngine_Object__Instantiate(prefab, v30, v33, 0LL);
-    if ( v22 )
+    v31.fields.x = v13;
+    v31.fields.y = v12;
+    v31.fields.z = v11;
+    v34.fields.x = x;
+    v34.fields.y = y;
+    v34.fields.z = z;
+    v34.fields.w = w;
+    v23 = UnityEngine_Object__Instantiate(prefab, v31, v34, 0LL);
+    if ( v23 )
       goto LABEL_15;
     goto LABEL_26;
   }
-  v22 = UnityEngine_Object__Instantiate_68076860(prefab, 0LL);
-  if ( !v22 )
+  v23 = UnityEngine_Object__Instantiate_69126940(prefab, 0LL);
+  if ( !v23 )
   {
 LABEL_26:
-    Spawner_SpawnerImpl__Number(this, prefab, 0LL, v23);
+    Spawner_SpawnerImpl__Number(this, prefab, 0LL, v24);
     goto LABEL_27;
   }
 LABEL_15:
-  NextObjectInCache = v22;
-  if ( (UnityEngine_GameObject_c *)v22->klass == UnityEngine_GameObject_TypeInfo )
+  NextObjectInCache = v23;
+  if ( (UnityEngine_GameObject_c *)v23->klass == UnityEngine_GameObject_TypeInfo )
   {
-    Spawner_SpawnerImpl__Number(this, prefab, (UnityEngine_GameObject_o *)v22, v23);
+    Spawner_SpawnerImpl__Number(this, prefab, (UnityEngine_GameObject_o *)v23, v24);
 LABEL_24:
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)NextObjectInCache, 1, 0LL);
     UnityEngine_GameObject__BroadcastMessage(
       (UnityEngine_GameObject_o *)NextObjectInCache,
-      (System_String_o *)StringLiteral_9847/*"OnSpawn"*/,
+      (System_String_o *)StringLiteral_9912/*"OnSpawn"*/,
       1,
       0LL);
     return (UnityEngine_GameObject_o *)NextObjectInCache;
   }
-  sub_1B011E8(v22);
-  Spawner__Despawn(v25, v26, v27, v28);
+  sub_1B645E4(v23);
+  Spawner__Despawn(v26, v27, v28, v29);
   return result;
 }
 
@@ -1784,18 +1822,18 @@ bool __fastcall Spawner_SpawnerImpl___Despawn_b__17_1(
 {
   System_Collections_Generic_Dictionary_TKey__TValue__o *managedObjects; // x0
 
-  if ( (byte_48E1B6F & 1) == 0 )
+  if ( (byte_49FB737 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_Generic_Dictionary_GameObject__bool__ContainsKey__, x);
-    byte_48E1B6F = 1;
+    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_GameObject__bool__ContainsKey__, x);
+    byte_49FB737 = 1;
   }
   managedObjects = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.managedObjects;
   if ( !managedObjects )
-    sub_1B00F28(0LL, x);
+    sub_1B64324(0LL);
   return System_Collections_Generic_Dictionary_object__bool___ContainsKey(
            managedObjects,
            (Il2CppObject *)x,
-           (const MethodInfo_307BDA4 *)Method_System_Collections_Generic_Dictionary_GameObject__bool__ContainsKey__);
+           (const MethodInfo_3167824 *)Method_System_Collections_Generic_Dictionary_GameObject__bool__ContainsKey__);
 }
 
 
@@ -1816,10 +1854,10 @@ void __fastcall Spawner_SpawnerImpl_ObjectCache___ctor(
   v10 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v10->fields.spawnerImpl = spawnerImpl;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v10->fields, (int32_t)spawnerImpl, v11, v12);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&v10->fields, (int32_t)spawnerImpl, v11, v12);
   v10->fields.prefab = prefab;
   v10 = (Spawner_SpawnerImpl_ObjectCache_o *)((char *)v10 + 24);
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)v10, (int32_t)prefab, v13, v14);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)v10, (int32_t)prefab, v13, v14);
   LODWORD(v10->monitor) = cacheSize;
   HIDWORD(v10->monitor) = overflowPolicy;
 }
@@ -1841,12 +1879,12 @@ UnityEngine_GameObject_o *__fastcall Spawner_SpawnerImpl_ObjectCache__GetNextObj
   Spawner_SpawnerImpl_ObjectCache_o *v11; // x21
 
   v2 = this;
-  if ( (byte_48E1B71 & 1) == 0 )
+  if ( (byte_49FB739 & 1) == 0 )
   {
-    this = (Spawner_SpawnerImpl_ObjectCache_o *)sub_1B00CCC(
+    this = (Spawner_SpawnerImpl_ObjectCache_o *)sub_1B640C8(
                                                   &Method_System_Collections_Generic_Dictionary_GameObject__bool__get_Item__,
                                                   method);
-    byte_48E1B71 = 1;
+    byte_49FB739 = 1;
   }
   objects = v2->fields.objects;
   if ( !objects || v2->fields.cacheSize < 1 )
@@ -1856,7 +1894,7 @@ UnityEngine_GameObject_o *__fastcall Spawner_SpawnerImpl_ObjectCache__GetNextObj
   while ( 1 )
   {
     if ( cacheIndex >= objects->max_length )
-      sub_1B00F30(this, method);
+      sub_1B6432C(this, method);
     spawnerImpl = v2->fields.spawnerImpl;
     if ( !spawnerImpl )
       goto LABEL_12;
@@ -1867,7 +1905,7 @@ UnityEngine_GameObject_o *__fastcall Spawner_SpawnerImpl_ObjectCache__GetNextObj
     this = (Spawner_SpawnerImpl_ObjectCache_o *)System_Collections_Generic_Dictionary_object__bool___get_Item(
                                                   (System_Collections_Generic_Dictionary_TKey__TValue__o *)this,
                                                   v7,
-                                                  (const MethodInfo_307BB10 *)Method_System_Collections_Generic_Dictionary_GameObject__bool__get_Item__);
+                                                  (const MethodInfo_3167590 *)Method_System_Collections_Generic_Dictionary_GameObject__bool__get_Item__);
     if ( ((unsigned __int8)this & 1) == 0 )
       break;
     cacheSize = v2->fields.cacheSize;
@@ -1883,11 +1921,11 @@ UnityEngine_GameObject_o *__fastcall Spawner_SpawnerImpl_ObjectCache__GetNextObj
   v9 = v2->fields.spawnerImpl;
   if ( !v9 || (this = (Spawner_SpawnerImpl_ObjectCache_o *)v9->fields.managedObjects) == 0LL )
 LABEL_12:
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   this = (Spawner_SpawnerImpl_ObjectCache_o *)System_Collections_Generic_Dictionary_object__bool___get_Item(
                                                 (System_Collections_Generic_Dictionary_TKey__TValue__o *)this,
                                                 v7,
-                                                (const MethodInfo_307BB10 *)Method_System_Collections_Generic_Dictionary_GameObject__bool__get_Item__);
+                                                (const MethodInfo_3167590 *)Method_System_Collections_Generic_Dictionary_GameObject__bool__get_Item__);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
     if ( v2->fields.overflowPolicy == 1 )
@@ -1940,18 +1978,18 @@ void __fastcall Spawner_SpawnerImpl_ObjectCache__Initialize(
   Spawner_SpawnerImpl_ObjectCache_o *v20; // x0
   const MethodInfo *v21; // x1
 
-  if ( (byte_48E1B70 & 1) == 0 )
+  if ( (byte_49FB738 & 1) == 0 )
   {
-    sub_1B00CCC(&UnityEngine_GameObject___TypeInfo, method);
-    sub_1B00CCC(&UnityEngine_GameObject_TypeInfo, v3);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v4);
-    byte_48E1B70 = 1;
+    sub_1B640C8(&UnityEngine_GameObject___TypeInfo, method);
+    sub_1B640C8(&UnityEngine_GameObject_TypeInfo, v3);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v4);
+    byte_49FB738 = 1;
   }
-  v5 = (struct UnityEngine_GameObject_array *)sub_1B00D74(
+  v5 = (struct UnityEngine_GameObject_array *)sub_1B64170(
                                                 UnityEngine_GameObject___TypeInfo,
                                                 (unsigned int)this->fields.cacheSize);
   this->fields.objects = v5;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.objects, (int32_t)v5, v6, v7);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.objects, (int32_t)v5, v6, v7);
   if ( this->fields.cacheSize >= 1 )
   {
     v8 = 0LL;
@@ -1961,7 +1999,7 @@ void __fastcall Spawner_SpawnerImpl_ObjectCache__Initialize(
       prefab = this->fields.prefab;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      transform = (UnityEngine_Transform_o *)UnityEngine_Object__Instantiate_68076860(prefab, 0LL);
+      transform = (UnityEngine_Transform_o *)UnityEngine_Object__Instantiate_69126940(prefab, 0LL);
       v16 = (UnityEngine_GameObject_o *)transform;
       if ( transform )
       {
@@ -1972,14 +2010,14 @@ void __fastcall Spawner_SpawnerImpl_ObjectCache__Initialize(
       if ( !objects )
         goto LABEL_19;
       if ( v8 >= objects->max_length )
-        sub_1B00F30(transform, v13);
+        sub_1B6432C(transform, v13);
       *(Il2CppClass **)((char *)&objects->obj.klass + i) = (Il2CppClass *)transform;
-      sub_1B00C70((ServantStatusBattleListViewItem_o *)((char *)objects + i), (int32_t)transform, v14, v15);
+      sub_1B6406C((ServantStatusBattleListViewItem_o *)((char *)objects + i), (int32_t)transform, v14, v15);
       if ( i == 32 )
       {
         if ( !v16 || (transform = UnityEngine_GameObject__get_transform(v16, 0LL)) == 0LL )
 LABEL_19:
-          sub_1B00F28(transform, v13);
+          sub_1B64324(transform);
         v18 = transform;
         this->fields.defaultLocalPosition = UnityEngine_Transform__get_localPosition(transform, 0LL);
         this->fields.defaultLocalRotation = UnityEngine_Transform__get_localRotation(v18, 0LL);
@@ -1996,7 +2034,7 @@ LABEL_19:
       if ( (__int64)++v8 >= this->fields.cacheSize )
         return;
     }
-    sub_1B011E8(transform);
+    sub_1B645E4(transform);
     Spawner_SpawnerImpl_ObjectCache__GetNextObjectInCache(v20, v21);
   }
 }
@@ -2021,19 +2059,20 @@ bool __fastcall Spawner_SpawnerImpl_ObjectCache__get_IsInitialized(
 void __fastcall Spawner_SpawnerImpl___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int32_t v3; // w2
-  int32_t v4; // w3
+  __int64 v2; // x2
+  Il2CppObject *v3; // x19
+  int32_t v4; // w2
+  int32_t v5; // w3
 
-  if ( (byte_48E1B72 & 1) == 0 )
+  if ( (byte_49FB73A & 1) == 0 )
   {
-    sub_1B00CCC(&Spawner_SpawnerImpl___c_TypeInfo, v1);
-    byte_48E1B72 = 1;
+    sub_1B640C8(&Spawner_SpawnerImpl___c_TypeInfo, v1);
+    byte_49FB73A = 1;
   }
-  v2 = (Il2CppObject *)sub_1B00F18(Spawner_SpawnerImpl___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  Spawner_SpawnerImpl___c_TypeInfo->static_fields->__9 = (struct Spawner_SpawnerImpl___c_o *)v2;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)Spawner_SpawnerImpl___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  v3 = (Il2CppObject *)sub_1B64314(Spawner_SpawnerImpl___c_TypeInfo, v1, v2);
+  System_Object___ctor(v3, 0LL);
+  Spawner_SpawnerImpl___c_TypeInfo->static_fields->__9 = (struct Spawner_SpawnerImpl___c_o *)v3;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)Spawner_SpawnerImpl___c_TypeInfo->static_fields, (int32_t)v3, v4, v5);
 }
 
 
@@ -2049,7 +2088,7 @@ UnityEngine_GameObject_o *__fastcall Spawner_SpawnerImpl___c___Despawn_b__17_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B00F28(this, 0LL);
+    sub_1B64324(this);
   return UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)x, 0LL);
 }
 
@@ -2059,10 +2098,10 @@ bool __fastcall Spawner_SpawnerImpl___c___GC_b__20_0(
         UnityEngine_GameObject_o *x,
         const MethodInfo *method)
 {
-  if ( (byte_48E1B73 & 1) == 0 )
+  if ( (byte_49FB73B & 1) == 0 )
   {
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, x);
-    byte_48E1B73 = 1;
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, x);
+    byte_49FB73B = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);

@@ -1,13 +1,13 @@
 void __fastcall StoneShopEntity___ctor(StoneShopEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E31A4 & 1) == 0 )
+  if ( (byte_49FCE04 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_int___ctor__, method);
-    byte_48E31A4 = 1;
+    sub_1B640C8(&Method_DataEntityBase_int___ctor__, method);
+    byte_49FCE04 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_2FE684C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_30D3CA4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -19,10 +19,10 @@ int32_t __fastcall StoneShopEntity__CreatePrimaryKey(StoneShopEntity_o *this, co
 
 System_String_o *__fastcall StoneShopEntity__GetCountText(StoneShopEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E31A3 & 1) == 0 )
+  if ( (byte_49FCE03 & 1) == 0 )
   {
-    sub_1B00CCC(&LocalizationManager_TypeInfo, method);
-    byte_48E31A3 = 1;
+    sub_1B640C8(&LocalizationManager_TypeInfo, method);
+    byte_49FCE03 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -54,10 +54,10 @@ bool __fastcall StoneShopEntity__IsClosed(StoneShopEntity_o *this, int64_t nowTi
   int64_t closedAt; // x8
 
   Time = nowTime;
-  if ( (byte_48E31A2 & 1) == 0 )
+  if ( (byte_49FCE02 & 1) == 0 )
   {
-    sub_1B00CCC(&NetworkManager_TypeInfo, nowTime);
-    byte_48E31A2 = 1;
+    sub_1B640C8(&NetworkManager_TypeInfo, nowTime);
+    byte_49FCE02 = 1;
   }
   if ( !Time )
   {
@@ -77,10 +77,10 @@ bool __fastcall StoneShopEntity__IsEnable(StoneShopEntity_o *this, int64_t nowTi
   bool result; // w0
 
   Time = nowTime;
-  if ( (byte_48E31A0 & 1) == 0 )
+  if ( (byte_49FCE00 & 1) == 0 )
   {
-    sub_1B00CCC(&NetworkManager_TypeInfo, nowTime);
-    byte_48E31A0 = 1;
+    sub_1B640C8(&NetworkManager_TypeInfo, nowTime);
+    byte_49FCE00 = 1;
   }
   if ( !Time )
   {
@@ -106,10 +106,10 @@ bool __fastcall StoneShopEntity__IsOpened(StoneShopEntity_o *this, int64_t nowTi
   int64_t Time; // x20
 
   Time = nowTime;
-  if ( (byte_48E31A1 & 1) == 0 )
+  if ( (byte_49FCE01 & 1) == 0 )
   {
-    sub_1B00CCC(&NetworkManager_TypeInfo, nowTime);
-    byte_48E31A1 = 1;
+    sub_1B640C8(&NetworkManager_TypeInfo, nowTime);
+    byte_49FCE01 = 1;
   }
   if ( !Time )
   {

@@ -1,4 +1,9 @@
-// local variable allocation has failed, the output may be wrong!
+void __fastcall CardStatusSyncRequest___ctor(CardStatusSyncRequest_o *this, const MethodInfo *method)
+{
+  RequestBase___ctor((RequestBase_o *)this, 0LL);
+}
+
+
 void __fastcall CardStatusSyncRequest__beginRequest(
         CardStatusSyncRequest_o *this,
         System_Int64_array *changeUserSvtIds,
@@ -14,61 +19,51 @@ void __fastcall CardStatusSyncRequest__beginRequest(
   __int64 v16; // x1
   __int64 v17; // x1
   System_String_o *v18; // x0
-  const MethodInfo *v19; // x3
-  System_String_o *v20; // x0
-  const MethodInfo *v21; // x3
+  System_String_o *v19; // x0
 
-  if ( (byte_48E3E83 & 1) == 0 )
+  if ( (byte_49FDB2C & 1) == 0 )
   {
-    sub_1B00CCC(&JsonManager_TypeInfo, changeUserSvtIds);
-    sub_1B00CCC(&StringLiteral_20538/*"isStorage"*/, v13);
-    sub_1B00CCC(&StringLiteral_17575/*"changeUserSvtIds"*/, v14);
-    sub_1B00CCC(&StringLiteral_20517/*"isLock"*/, v15);
-    sub_1B00CCC(&StringLiteral_20502/*"isChoice"*/, v16);
-    sub_1B00CCC(&StringLiteral_22610/*"revokeUserSvtIds"*/, v17);
-    byte_48E3E83 = 1;
+    sub_1B640C8(&JsonManager_TypeInfo, changeUserSvtIds);
+    sub_1B640C8(&StringLiteral_20738/*"isStorage"*/, v13);
+    sub_1B640C8(&StringLiteral_17749/*"changeUserSvtIds"*/, v14);
+    sub_1B640C8(&StringLiteral_20717/*"isLock"*/, v15);
+    sub_1B640C8(&StringLiteral_20702/*"isChoice"*/, v16);
+    sub_1B640C8(&StringLiteral_22832/*"revokeUserSvtIds"*/, v17);
+    byte_49FDB2C = 1;
   }
   if ( changeUserSvtIds && *(_QWORD *)&changeUserSvtIds->max_length )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v18 = JsonManager__toJson(&changeUserSvtIds->obj, 0, 0, 0LL);
-    RequestBase__addField_39752868((RequestBase_o *)this, (System_String_o *)StringLiteral_17575/*"changeUserSvtIds"*/, v18, v19);
+    RequestBase__addField_40850936((RequestBase_o *)this, (System_String_o *)StringLiteral_17749/*"changeUserSvtIds"*/, v18, 0LL);
   }
   if ( revokeUserSvtIds && *(_QWORD *)&revokeUserSvtIds->max_length )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v20 = JsonManager__toJson(&revokeUserSvtIds->obj, 0, 0, 0LL);
-    RequestBase__addField_39752868((RequestBase_o *)this, (System_String_o *)StringLiteral_22610/*"revokeUserSvtIds"*/, v20, v21);
+    v19 = JsonManager__toJson(&revokeUserSvtIds->obj, 0, 0, 0LL);
+    RequestBase__addField_40850936((RequestBase_o *)this, (System_String_o *)StringLiteral_22832/*"revokeUserSvtIds"*/, v19, 0LL);
   }
   if ( !isStorage )
   {
     if ( !isLock )
       goto LABEL_15;
 LABEL_19:
-    RequestBase__addField(
-      (RequestBase_o *)this,
-      (System_String_o *)StringLiteral_20517/*"isLock"*/,
-      1,
-      (const MethodInfo *)isStorage);
+    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20717/*"isLock"*/, 1, 0LL);
     if ( !isChoice )
       goto LABEL_17;
     goto LABEL_16;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20538/*"isStorage"*/, 1, (const MethodInfo *)isStorage);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20738/*"isStorage"*/, 1, 0LL);
   if ( isLock )
     goto LABEL_19;
 LABEL_15:
   if ( isChoice )
 LABEL_16:
-    RequestBase__addField(
-      (RequestBase_o *)this,
-      (System_String_o *)StringLiteral_20502/*"isChoice"*/,
-      1,
-      (const MethodInfo *)isStorage);
+    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20702/*"isChoice"*/, 1, 0LL);
 LABEL_17:
-  RequestBase__beginRequest((RequestBase_o *)this, (const MethodInfo *)changeUserSvtIds);
+  RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
 
@@ -76,11 +71,11 @@ System_String_o *__fastcall CardStatusSyncRequest__getMockData(CardStatusSyncReq
 {
   __int64 v2; // x1
 
-  if ( (byte_48E3E82 & 1) == 0 )
+  if ( (byte_49FDB2B & 1) == 0 )
   {
-    sub_1B00CCC(&NetworkManager_TypeInfo, method);
-    sub_1B00CCC(&StringLiteral_1/*""*/, v2);
-    byte_48E3E82 = 1;
+    sub_1B640C8(&NetworkManager_TypeInfo, method);
+    sub_1B640C8(&StringLiteral_1/*""*/, v2);
+    byte_49FDB2B = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -93,16 +88,16 @@ System_String_o *__fastcall CardStatusSyncRequest__getURL(CardStatusSyncRequest_
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_48E3E81 & 1) == 0 )
+  if ( (byte_49FDB2A & 1) == 0 )
   {
-    sub_1B00CCC(&NetworkManager_TypeInfo, method);
-    sub_1B00CCC(&StringLiteral_17513/*"card/statusSync"*/, v2);
-    byte_48E3E81 = 1;
+    sub_1B640C8(&NetworkManager_TypeInfo, method);
+    sub_1B640C8(&StringLiteral_17687/*"card/statusSync"*/, v2);
+    byte_49FDB2A = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_60325748(BaseUrl, (System_String_o *)StringLiteral_17513/*"card/statusSync"*/, 0LL);
+  return System_String__Concat_61375396(BaseUrl, (System_String_o *)StringLiteral_17687/*"card/statusSync"*/, 0LL);
 }
 
 
@@ -114,36 +109,21 @@ void __fastcall CardStatusSyncRequest__requestCompleted(
   __int64 v5; // x1
   __int64 v6; // x1
   ResponseData_o *v7; // x0
-  const MethodInfo *v8; // x2
-  struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  __int64 *v10; // x9
+  __int64 *v8; // x8
 
-  if ( (byte_48E3E84 & 1) == 0 )
+  if ( (byte_49FDB2D & 1) == 0 )
   {
-    sub_1B00CCC(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1B00CCC(&StringLiteral_21923/*"ok"*/, v5);
-    sub_1B00CCC(&StringLiteral_21754/*"ng"*/, v6);
-    byte_48E3E84 = 1;
+    sub_1B640C8(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1B640C8(&StringLiteral_22137/*"ok"*/, v5);
+    sub_1B640C8(&StringLiteral_21968/*"ng"*/, v6);
+    byte_49FDB2D = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(70, responseList, 0LL);
-  if ( v7 && ResponseData__checkError(v7, v7->fields.resCode, v8) )
-  {
-    CallBack = this->fields.CallBack;
-    if ( !CallBack )
-      return;
-    v10 = &StringLiteral_21923/*"ok"*/;
-  }
+  if ( v7 && ResponseData__checkError_40846016(v7, 0LL) )
+    v8 = &StringLiteral_22137/*"ok"*/;
   else
-  {
-    CallBack = this->fields.CallBack;
-    if ( !CallBack )
-      return;
-    v10 = &StringLiteral_21754/*"ng"*/;
-  }
-  ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
-    CallBack->fields.original_method_info,
-    *v10,
-    *(_QWORD *)&CallBack->fields.extra_arg);
+    v8 = &StringLiteral_21968/*"ng"*/;
+  RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v8, 0LL);
 }

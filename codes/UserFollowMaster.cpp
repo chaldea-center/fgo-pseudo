@@ -1,14 +1,14 @@
 void __fastcall UserFollowMaster___ctor(UserFollowMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E346C & 1) == 0 )
+  if ( (byte_49FD0D9 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataMasterBase_UserFollowMaster__UserFollowEntity__string___ctor__, method);
-    byte_48E346C = 1;
+    sub_1B640C8(&Method_DataMasterBase_UserFollowMaster__UserFollowEntity__string___ctor__, method);
+    byte_49FD0D9 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    261,
-    (const MethodInfo_2FE6D64 *)Method_DataMasterBase_UserFollowMaster__UserFollowEntity__string___ctor__);
+    262,
+    (const MethodInfo_30D41BC *)Method_DataMasterBase_UserFollowMaster__UserFollowEntity__string___ctor__);
 }
 
 
@@ -20,16 +20,16 @@ UserFollowEntity_o *__fastcall UserFollowMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_48E346A & 1) == 0 )
+  if ( (byte_49FD0D7 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataMasterBase_UserFollowMaster__UserFollowEntity__string__GetEntity__, userId);
-    byte_48E346A = 1;
+    sub_1B640C8(&Method_DataMasterBase_UserFollowMaster__UserFollowEntity__string__GetEntity__, userId);
+    byte_49FD0D7 = 1;
   }
   PK = (Il2CppObject *)UserFollowEntity__CreatePK(userId, followId, (const MethodInfo *)followId);
   return (UserFollowEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                  (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                  PK,
-                                 (const MethodInfo_2FE6DA4 *)Method_DataMasterBase_UserFollowMaster__UserFollowEntity__string__GetEntity__);
+                                 (const MethodInfo_30D41FC *)Method_DataMasterBase_UserFollowMaster__UserFollowEntity__string__GetEntity__);
 }
 
 
@@ -37,17 +37,17 @@ int32_t __fastcall UserFollowMaster__GetFollowSum(UserFollowMaster_o *this, cons
 {
   System_Collections_ObjectModel_Collection_T__o *list; // x0
 
-  if ( (byte_48E346D & 1) == 0 )
+  if ( (byte_49FD0DA & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, method);
-    byte_48E346D = 1;
+    sub_1B640C8(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, method);
+    byte_49FD0DA = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1B00F28(0LL, method);
+    sub_1B64324(0LL);
   return System_Collections_ObjectModel_Collection_object___get_Count(
            list,
-           (const MethodInfo_2F836B0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+           (const MethodInfo_3070B08 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
 }
 
 
@@ -60,23 +60,23 @@ bool __fastcall UserFollowMaster__IsFollowUser(UserFollowMaster_o *this, int64_t
   int32_t Count; // w22
   __int64 methodPtr_low; // x10
 
-  if ( (byte_48E346E & 1) == 0 )
+  if ( (byte_49FD0DB & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, userId);
-    sub_1B00CCC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
-    sub_1B00CCC(&UserFollowEntity_TypeInfo, v6);
-    byte_48E346E = 1;
+    sub_1B640C8(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, userId);
+    sub_1B640C8(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
+    sub_1B640C8(&UserFollowEntity_TypeInfo, v6);
+    byte_49FD0DB = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
 LABEL_12:
-    sub_1B00F28(list, userId);
+    sub_1B64324(list);
   v8 = 0;
   while ( 1 )
   {
     Count = System_Collections_ObjectModel_Collection_object___get_Count(
               list,
-              (const MethodInfo_2F836B0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+              (const MethodInfo_3070B08 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
     if ( v8 >= Count )
       return v8 < Count;
     list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
@@ -85,7 +85,7 @@ LABEL_12:
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
                                                                  v8,
-                                                                 (const MethodInfo_2F83740 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                                                 (const MethodInfo_3070B98 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( list )
       {
         methodPtr_low = LOBYTE(UserFollowEntity_TypeInfo->vtable._0_Equals.methodPtr);
@@ -115,15 +115,15 @@ bool __fastcall UserFollowMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_48E346B & 1) == 0 )
+  if ( (byte_49FD0D8 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataMasterBase_UserFollowMaster__UserFollowEntity__string__TryGetEntity__, entity);
-    byte_48E346B = 1;
+    sub_1B640C8(&Method_DataMasterBase_UserFollowMaster__UserFollowEntity__string__TryGetEntity__, entity);
+    byte_49FD0D8 = 1;
   }
   PK = (Il2CppObject *)UserFollowEntity__CreatePK(userId, followId, (const MethodInfo *)userId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_2FE6DF4 *)Method_DataMasterBase_UserFollowMaster__UserFollowEntity__string__TryGetEntity__);
+           (const MethodInfo_30D424C *)Method_DataMasterBase_UserFollowMaster__UserFollowEntity__string__TryGetEntity__);
 }

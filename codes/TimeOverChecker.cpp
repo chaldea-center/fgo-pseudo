@@ -11,9 +11,9 @@ void __fastcall TimeOverChecker___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.monoBehaviour = monoBehaviour;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)monoBehaviour, v7, v8);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)monoBehaviour, v7, v8);
   this->fields.onFinish = onFinish;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.onFinish, (int32_t)onFinish, v9, v10);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.onFinish, (int32_t)onFinish, v9, v10);
 }
 
 
@@ -21,33 +21,33 @@ System_Collections_IEnumerator_o *__fastcall TimeOverChecker__CheckTimeOver(
         TimeOverChecker_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
+  __int64 v2; // x2
+  __int64 v4; // x20
+  int32_t v5; // w2
+  int32_t v6; // w3
 
-  if ( (byte_48E6208 & 1) == 0 )
+  if ( (byte_49FFFD9 & 1) == 0 )
   {
-    sub_1B00CCC(&TimeOverChecker__CheckTimeOver_d__7_TypeInfo, method);
-    byte_48E6208 = 1;
+    sub_1B640C8(&TimeOverChecker__CheckTimeOver_d__7_TypeInfo, method);
+    byte_49FFFD9 = 1;
   }
-  v3 = sub_1B00F18(TimeOverChecker__CheckTimeOver_d__7_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v3, 0LL);
-  *(_DWORD *)(v3 + 16) = 0;
-  *(_QWORD *)(v3 + 32) = this;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
-  return (System_Collections_IEnumerator_o *)v3;
+  v4 = sub_1B64314(TimeOverChecker__CheckTimeOver_d__7_TypeInfo, method, v2);
+  System_Object___ctor((Il2CppObject *)v4, 0LL);
+  *(_DWORD *)(v4 + 16) = 0;
+  *(_QWORD *)(v4 + 32) = this;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v4 + 32), (int32_t)this, v5, v6);
+  return (System_Collections_IEnumerator_o *)v4;
 }
 
 
 void __fastcall TimeOverChecker__Start(TimeOverChecker_o *this, int64_t finishedAt, const MethodInfo *method)
 {
-  __int64 v4; // x1
   System_Collections_IEnumerator_o *monoBehaviour; // x0
-  const MethodInfo *v6; // x1
-  UnityEngine_MonoBehaviour_o *v7; // x20
+  const MethodInfo *v5; // x1
+  UnityEngine_MonoBehaviour_o *v6; // x20
   struct UnityEngine_Coroutine_o *started; // x0
-  int32_t v9; // w2
-  int32_t v10; // w3
+  int32_t v8; // w2
+  int32_t v9; // w3
 
   this->fields.finishedAt = finishedAt;
   TimeOverChecker__Stop(this, (const MethodInfo *)finishedAt);
@@ -58,17 +58,17 @@ void __fastcall TimeOverChecker__Start(TimeOverChecker_o *this, int64_t finished
       goto LABEL_7;
     if ( UnityEngine_Behaviour__get_isActiveAndEnabled((UnityEngine_Behaviour_o *)monoBehaviour, 0LL) )
     {
-      v7 = this->fields.monoBehaviour;
-      monoBehaviour = TimeOverChecker__CheckTimeOver(this, v6);
-      if ( v7 )
+      v6 = this->fields.monoBehaviour;
+      monoBehaviour = TimeOverChecker__CheckTimeOver(this, v5);
+      if ( v6 )
       {
-        started = UnityEngine_MonoBehaviour__StartCoroutine_68062928(v7, monoBehaviour, 0LL);
+        started = UnityEngine_MonoBehaviour__StartCoroutine_69113008(v6, monoBehaviour, 0LL);
         this->fields.coroutine = started;
-        sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.coroutine, (int32_t)started, v9, v10);
+        sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.coroutine, (int32_t)started, v8, v9);
         return;
       }
 LABEL_7:
-      sub_1B00F28(monoBehaviour, v4);
+      sub_1B64324(monoBehaviour);
     }
   }
 }
@@ -88,10 +88,10 @@ void __fastcall TimeOverChecker__Stop(TimeOverChecker_o *this, const MethodInfo 
   {
     monoBehaviour = this->fields.monoBehaviour;
     if ( !monoBehaviour )
-      sub_1B00F28(0LL, coroutine);
-    UnityEngine_MonoBehaviour__StopCoroutine_68063548(monoBehaviour, coroutine, 0LL);
+      sub_1B64324(0LL);
+    UnityEngine_MonoBehaviour__StopCoroutine_69113628(monoBehaviour, coroutine, 0LL);
     p_coroutine->klass = 0LL;
-    sub_1B00C70(p_coroutine, 0, v5, v6);
+    sub_1B6406C(p_coroutine, 0, v5, v6);
   }
 }
 
@@ -110,33 +110,34 @@ bool __fastcall TimeOverChecker__CheckTimeOver_d__7__MoveNext(
         TimeOverChecker__CheckTimeOver_d__7_o *this,
         const MethodInfo *method)
 {
-  TimeOverChecker__CheckTimeOver_d__7_o *v2; // x19
-  __int64 v3; // x1
+  __int64 v2; // x2
+  TimeOverChecker__CheckTimeOver_d__7_o *v3; // x19
+  __int64 v4; // x1
   int32_t _1__state; // w8
   struct TimeOverChecker_o *_4__this; // x21
-  UnityEngine_WaitForSeconds_o *v6; // x20
-  int32_t v7; // w2
-  int32_t v8; // w3
+  UnityEngine_WaitForSeconds_o *v7; // x20
+  int32_t v8; // w2
+  int32_t v9; // w3
   __int64 finishedAt; // x20
-  int32_t v10; // w2
-  int32_t v11; // w3
+  int32_t v11; // w2
+  int32_t v12; // w3
   struct System_Action_o *onFinish; // x8
   bool result; // w0
   Il2CppObject *waitTime_5__2; // x1
   ServantStatusBattleListViewItem_o *p__2__current; // x19
 
-  v2 = this;
-  if ( (byte_48E6209 & 1) == 0 )
+  v3 = this;
+  if ( (byte_49FFFDA & 1) == 0 )
   {
-    sub_1B00CCC(&NetworkManager_TypeInfo, method);
-    this = (TimeOverChecker__CheckTimeOver_d__7_o *)sub_1B00CCC(&UnityEngine_WaitForSeconds_TypeInfo, v3);
-    byte_48E6209 = 1;
+    sub_1B640C8(&NetworkManager_TypeInfo, method);
+    this = (TimeOverChecker__CheckTimeOver_d__7_o *)sub_1B640C8(&UnityEngine_WaitForSeconds_TypeInfo, v4);
+    byte_49FFFDA = 1;
   }
-  _1__state = v2->fields.__1__state;
-  _4__this = v2->fields.__4__this;
+  _1__state = v3->fields.__1__state;
+  _4__this = v3->fields.__4__this;
   if ( _1__state == 1 )
   {
-    v2->fields.__1__state = -1;
+    v3->fields.__1__state = -1;
     if ( !_4__this )
       goto LABEL_16;
   }
@@ -144,15 +145,15 @@ bool __fastcall TimeOverChecker__CheckTimeOver_d__7__MoveNext(
   {
     if ( _1__state )
       return 0;
-    v2->fields.__1__state = -1;
+    v3->fields.__1__state = -1;
     if ( !_4__this )
       goto LABEL_16;
     if ( !_4__this->fields.onFinish )
       return 0;
-    v6 = (UnityEngine_WaitForSeconds_o *)sub_1B00F18(UnityEngine_WaitForSeconds_TypeInfo);
-    UnityEngine_WaitForSeconds___ctor(v6, 1.0, 0LL);
-    v2->fields._waitTime_5__2 = v6;
-    sub_1B00C70((ServantStatusBattleListViewItem_o *)&v2->fields._waitTime_5__2, (int32_t)v6, v7, v8);
+    v7 = (UnityEngine_WaitForSeconds_o *)sub_1B64314(UnityEngine_WaitForSeconds_TypeInfo, method, v2);
+    UnityEngine_WaitForSeconds___ctor(v7, 1.0, 0LL);
+    v3->fields._waitTime_5__2 = v7;
+    sub_1B6406C((ServantStatusBattleListViewItem_o *)&v3->fields._waitTime_5__2, (int32_t)v7, v8, v9);
   }
   finishedAt = _4__this->fields.finishedAt;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -169,12 +170,12 @@ bool __fastcall TimeOverChecker__CheckTimeOver_d__7__MoveNext(
       return 0;
     }
 LABEL_16:
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   }
-  waitTime_5__2 = (Il2CppObject *)v2->fields._waitTime_5__2;
-  v2->fields.__2__current = waitTime_5__2;
-  p__2__current = (ServantStatusBattleListViewItem_o *)&v2->fields.__2__current;
-  sub_1B00C70(p__2__current, (int32_t)waitTime_5__2, v10, v11);
+  waitTime_5__2 = (Il2CppObject *)v3->fields._waitTime_5__2;
+  v3->fields.__2__current = waitTime_5__2;
+  p__2__current = (ServantStatusBattleListViewItem_o *)&v3->fields.__2__current;
+  sub_1B6406C(p__2__current, (int32_t)waitTime_5__2, v11, v12);
   result = 1;
   *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
   return result;
@@ -194,14 +195,16 @@ void __fastcall __noreturn TimeOverChecker__CheckTimeOver_d__7__System_Collectio
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x2
+  System_NotSupportedException_o *v5; // x19
+  __int64 v6; // x0
 
-  v2 = sub_1B00CE0(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B00F18(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B00CE0(&Method_TimeOverChecker__CheckTimeOver_d__7_System_Collections_IEnumerator_Reset__);
-  sub_1B00DF4(v3, v4);
+  v2 = sub_1B640DC(&System_NotSupportedException_TypeInfo);
+  v5 = (System_NotSupportedException_o *)sub_1B64314(v2, v3, v4);
+  System_NotSupportedException___ctor(v5, 0LL);
+  v6 = sub_1B640DC(&Method_TimeOverChecker__CheckTimeOver_d__7_System_Collections_IEnumerator_Reset__);
+  sub_1B641F0(v5, v6);
 }
 
 

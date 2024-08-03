@@ -1,3 +1,9 @@
+void __fastcall EventExpeditionStartRequest___ctor(EventExpeditionStartRequest_o *this, const MethodInfo *method)
+{
+  RequestBase___ctor((RequestBase_o *)this, 0LL);
+}
+
+
 // local variable allocation has failed, the output may be wrong!
 void __fastcall EventExpeditionStartRequest__beginRequest(
         EventExpeditionStartRequest_o *this,
@@ -8,25 +14,18 @@ void __fastcall EventExpeditionStartRequest__beginRequest(
 {
   __int64 v9; // x1
   __int64 v10; // x1
-  const MethodInfo *v11; // x3
-  const MethodInfo *v12; // x3
-  const MethodInfo *v13; // x1
 
-  if ( (byte_48E3EEB & 1) == 0 )
+  if ( (byte_49FDB94 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_18880/*"eventId"*/, *(_QWORD *)&eventId);
-    sub_1B00CCC(&StringLiteral_19052/*"expeditionIdx"*/, v9);
-    sub_1B00CCC(&StringLiteral_22225/*"pieceIdx"*/, v10);
-    byte_48E3EEB = 1;
+    sub_1B640C8(&StringLiteral_19059/*"eventId"*/, *(_QWORD *)&eventId);
+    sub_1B640C8(&StringLiteral_19232/*"expeditionIdx"*/, v9);
+    sub_1B640C8(&StringLiteral_22441/*"pieceIdx"*/, v10);
+    byte_49FDB94 = 1;
   }
-  RequestBase__addField(
-    (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_18880/*"eventId"*/,
-    eventId,
-    *(const MethodInfo **)&pieceIdx);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19052/*"expeditionIdx"*/, expeditionIdx, v11);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22225/*"pieceIdx"*/, pieceIdx, v12);
-  RequestBase__beginRequest((RequestBase_o *)this, v13);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19059/*"eventId"*/, eventId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19232/*"expeditionIdx"*/, expeditionIdx, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22441/*"pieceIdx"*/, pieceIdx, 0LL);
+  RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
 
@@ -37,16 +36,16 @@ System_String_o *__fastcall EventExpeditionStartRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_48E3EEA & 1) == 0 )
+  if ( (byte_49FDB93 & 1) == 0 )
   {
-    sub_1B00CCC(&NetworkManager_TypeInfo, method);
-    sub_1B00CCC(&StringLiteral_18864/*"event/expeditionStart"*/, v2);
-    byte_48E3EEA = 1;
+    sub_1B640C8(&NetworkManager_TypeInfo, method);
+    sub_1B640C8(&StringLiteral_19043/*"event/expeditionStart"*/, v2);
+    byte_49FDB93 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_60325748(BaseUrl, (System_String_o *)StringLiteral_18864/*"event/expeditionStart"*/, 0LL);
+  return System_String__Concat_61375396(BaseUrl, (System_String_o *)StringLiteral_19043/*"event/expeditionStart"*/, 0LL);
 }
 
 
@@ -57,42 +56,36 @@ void __fastcall EventExpeditionStartRequest__requestCompleted(
 {
   __int64 v5; // x1
   ResponseData_o *v6; // x0
-  const MethodInfo *v7; // x2
-  ResponseData_o *v8; // x20
+  ResponseData_o *v7; // x20
+  bool v8; // w0
+  System_String_o *v9; // x1
   Il2CppObject *success; // x20
-  System_String_o *v10; // x0
-  struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  struct NetworkManager_ResultCallbackFunc_o *v12; // x8
 
-  if ( (byte_48E3EEC & 1) == 0 )
+  if ( (byte_49FDB95 & 1) == 0 )
   {
-    sub_1B00CCC(&JsonManager_TypeInfo, responseList);
-    sub_1B00CCC(&ResponseCommandKind_TypeInfo, v5);
-    byte_48E3EEC = 1;
+    sub_1B640C8(&JsonManager_TypeInfo, responseList);
+    sub_1B640C8(&ResponseCommandKind_TypeInfo, v5);
+    byte_49FDB95 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v6 = ResponseCommandKind__SearchData(116, responseList, 0LL);
-  if ( v6 && (v8 = v6, ResponseData__checkError(v6, v6->fields.resCode, v7)) )
+  if ( v6 )
   {
-    success = (Il2CppObject *)v8->fields.success;
-    if ( !JsonManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v10 = JsonManager__toJson(success, 0, 0, 0LL);
-    CallBack = this->fields.CallBack;
-    if ( CallBack )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))CallBack->fields.m_target)(
-        CallBack->fields.original_method_info,
-        v10,
-        *(_QWORD *)&CallBack->fields.extra_arg);
+    v7 = v6;
+    v8 = ResponseData__checkError_40846016(v6, 0LL);
+    v9 = 0LL;
+    if ( v8 )
+    {
+      success = (Il2CppObject *)v7->fields.success;
+      if ( !JsonManager_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
+      v9 = JsonManager__toJson(success, 0, 0, 0LL);
+    }
   }
   else
   {
-    v12 = this->fields.CallBack;
-    if ( v12 )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))v12->fields.m_target)(
-        v12->fields.original_method_info,
-        0LL,
-        *(_QWORD *)&v12->fields.extra_arg);
+    v9 = 0LL;
   }
+  RequestBase__completed((RequestBase_o *)this, v9, 0LL);
 }

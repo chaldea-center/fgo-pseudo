@@ -9,27 +9,31 @@ void __fastcall PhotoCampaignComponent__CancelPhotoCampaignWindow(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
+  __int64 v5; // x1
   __int64 v6; // x1
-  PhotoCampaignComponent_RequestCallbackFunc_o *v7; // x20
-  const MethodInfo *v8; // x3
-  const MethodInfo *v9; // x2
+  __int64 v7; // x2
+  PhotoCampaignComponent_RequestCallbackFunc_o *v8; // x20
+  const MethodInfo *v9; // x3
+  const MethodInfo *v10; // x2
 
-  if ( (byte_48DE623 & 1) == 0 )
+  if ( (byte_49F7EF1 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_PhotoCampaignComponent_EndCancelButton__, callback);
-    sub_1B00CCC(&PhotoCampaignComponent_RequestCallbackFunc_TypeInfo, v6);
-    byte_48DE623 = 1;
+    sub_1B640C8(&Method_PhotoCampaignComponent_EndCancelButton__, callback);
+    sub_1B640C8(&PhotoCampaignComponent_RequestCallbackFunc_TypeInfo, v5);
+    byte_49F7EF1 = 1;
   }
   this->fields.cancelCallback = callback;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.cancelCallback, (int32_t)callback, (int32_t)method, v3);
-  v7 = (PhotoCampaignComponent_RequestCallbackFunc_o *)sub_1B00F18(PhotoCampaignComponent_RequestCallbackFunc_TypeInfo);
+  sub_1B6406C(&this->fields.cancelCallback);
+  v8 = (PhotoCampaignComponent_RequestCallbackFunc_o *)sub_1B64314(
+                                                         PhotoCampaignComponent_RequestCallbackFunc_TypeInfo,
+                                                         v6,
+                                                         v7);
   PhotoCampaignComponent_RequestCallbackFunc___ctor(
-    v7,
+    v8,
     (Il2CppObject *)this,
     Method_PhotoCampaignComponent_EndCancelButton__,
-    v8);
-  PhotoCampaignComponent__StatusRequest(this, v7, v9);
+    v9);
+  PhotoCampaignComponent__StatusRequest(this, v8, v10);
 }
 
 
@@ -46,39 +50,38 @@ void __fastcall PhotoCampaignComponent__CloseSvtDetail(
   __int64 v10; // x1
   __int64 v11; // x22
   __int64 v12; // x0
-  __int64 v13; // x1
-  int32_t v14; // w2
-  int32_t v15; // w3
   Il2CppObject *Instance; // x19
-  System_Action_o *v17; // x20
+  __int64 v14; // x1
+  __int64 v15; // x2
+  System_Action_o *v16; // x20
 
-  if ( (byte_48DE629 & 1) == 0 )
+  if ( (byte_49F7EF7 & 1) == 0 )
   {
-    sub_1B00CCC(&System_Action_TypeInfo, isDecide);
-    sub_1B00CCC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
-    sub_1B00CCC(&Method_PhotoCampaignComponent___c__DisplayClass43_0__CloseSvtDetail_b__0__, v9);
-    sub_1B00CCC(&PhotoCampaignComponent___c__DisplayClass43_0_TypeInfo, v10);
-    byte_48DE629 = 1;
+    sub_1B640C8(&System_Action_TypeInfo, isDecide);
+    sub_1B640C8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
+    sub_1B640C8(&Method_PhotoCampaignComponent___c__DisplayClass43_0__CloseSvtDetail_b__0__, v9);
+    sub_1B640C8(&PhotoCampaignComponent___c__DisplayClass43_0_TypeInfo, v10);
+    byte_49F7EF7 = 1;
   }
-  v11 = sub_1B00F18(PhotoCampaignComponent___c__DisplayClass43_0_TypeInfo);
+  v11 = sub_1B64314(PhotoCampaignComponent___c__DisplayClass43_0_TypeInfo, isDecide, isNeedSort);
   System_Object___ctor((Il2CppObject *)v11, 0LL);
   if ( !v11
     || (*(_DWORD *)(v11 + 16) = questId,
         *(_QWORD *)(v11 + 24) = this,
-        sub_1B00C70((ServantStatusBattleListViewItem_o *)(v11 + 24), (int32_t)this, v14, v15),
+        sub_1B6406C(v11 + 24),
         *(_BYTE *)(v11 + 32) = isNeedSort,
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-        v17 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo),
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+        v16 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v14, v15),
         System_Action___ctor(
-          v17,
+          v16,
           (Il2CppObject *)v11,
           Method_PhotoCampaignComponent___c__DisplayClass43_0__CloseSvtDetail_b__0__,
           0LL),
         !Instance) )
   {
-    sub_1B00F28(v12, v13);
+    sub_1B64324(v12);
   }
-  CommonUI__CloseServantStatusDialog((CommonUI_o *)Instance, v17, 0LL);
+  CommonUI__CloseServantStatusDialog((CommonUI_o *)Instance, v16, 0LL);
 }
 
 
@@ -91,18 +94,18 @@ void __fastcall PhotoCampaignComponent__EndCancelButton(
   __int64 v5; // x1
   PhotoCampaignListViewManager_o *photoCampaignManager; // x0
   struct PhotoCampaignListViewManager_o *v7; // x20
-  PhotoCampaignListViewManager_CallbackFunc_o *v8; // x21
-  const MethodInfo *v9; // x3
-  int32_t v10; // w2
-  int32_t v11; // w3
+  __int64 v8; // x1
+  __int64 v9; // x2
+  PhotoCampaignListViewManager_CallbackFunc_o *v10; // x21
+  const MethodInfo *v11; // x3
   const MethodInfo *v12; // x2
   System_Action_o *cancelCallback; // x0
 
-  if ( (byte_48DE624 & 1) == 0 )
+  if ( (byte_49F7EF2 & 1) == 0 )
   {
-    sub_1B00CCC(&PhotoCampaignListViewManager_CallbackFunc_TypeInfo, isRequest);
-    sub_1B00CCC(&Method_PhotoCampaignComponent_OnClickServant__, v5);
-    byte_48DE624 = 1;
+    sub_1B640C8(&PhotoCampaignListViewManager_CallbackFunc_TypeInfo, isRequest);
+    sub_1B640C8(&Method_PhotoCampaignComponent_OnClickServant__, v5);
+    byte_49F7EF2 = 1;
   }
   if ( isRequest )
   {
@@ -110,20 +113,23 @@ void __fastcall PhotoCampaignComponent__EndCancelButton(
     if ( !photoCampaignManager
       || (PhotoCampaignListViewManager__ModifyList(photoCampaignManager, 0, method),
           v7 = this->fields.photoCampaignManager,
-          v8 = (PhotoCampaignListViewManager_CallbackFunc_o *)sub_1B00F18(PhotoCampaignListViewManager_CallbackFunc_TypeInfo),
+          v10 = (PhotoCampaignListViewManager_CallbackFunc_o *)sub_1B64314(
+                                                                 PhotoCampaignListViewManager_CallbackFunc_TypeInfo,
+                                                                 v8,
+                                                                 v9),
           PhotoCampaignListViewManager_CallbackFunc___ctor(
-            v8,
+            v10,
             (Il2CppObject *)this,
             (intptr_t)Method_PhotoCampaignComponent_OnClickServant__,
-            v9),
+            v11),
           !v7) )
     {
 LABEL_11:
-      sub_1B00F28(photoCampaignManager, isRequest);
+      sub_1B64324(photoCampaignManager);
     }
-    v7->fields.callbackFunc = v8;
-    sub_1B00C70((ServantStatusBattleListViewItem_o *)&v7->fields.callbackFunc, (int32_t)v8, v10, v11);
-    PhotoCampaignListViewManager__SetMode_30703352(v7, 2, v12);
+    v7->fields.callbackFunc = v10;
+    sub_1B6406C(&v7->fields.callbackFunc);
+    PhotoCampaignListViewManager__SetMode_31300968(v7, 2, v12);
   }
   PhotoCampaignComponent__Init(this, (const MethodInfo *)isRequest);
   photoCampaignManager = (PhotoCampaignListViewManager_o *)UnityEngine_Component__get_gameObject(
@@ -138,7 +144,6 @@ LABEL_11:
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall PhotoCampaignComponent__EndClickTabChoice(
         PhotoCampaignComponent_o *this,
         bool isRequest,
@@ -154,15 +159,14 @@ void __fastcall PhotoCampaignComponent__EndClickTabChoice(
       || (PhotoCampaignListViewManager__ModifyList(photoCampaignManager, 0, method),
           (photoCampaignManager = this->fields.photoCampaignManager) == 0LL) )
     {
-      sub_1B00F28(photoCampaignManager, isRequest);
+      sub_1B64324(photoCampaignManager);
     }
-    PhotoCampaignListViewManager__SetMode_30703352(photoCampaignManager, 2, v5);
+    PhotoCampaignListViewManager__SetMode_31300968(photoCampaignManager, 2, v5);
   }
   PhotoCampaignComponent__SetModeTabKind(this, 2, method);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall PhotoCampaignComponent__EndClickTabLock(
         PhotoCampaignComponent_o *this,
         bool isRequest,
@@ -178,15 +182,14 @@ void __fastcall PhotoCampaignComponent__EndClickTabLock(
       || (PhotoCampaignListViewManager__ModifyList(photoCampaignManager, 0, method),
           (photoCampaignManager = this->fields.photoCampaignManager) == 0LL) )
     {
-      sub_1B00F28(photoCampaignManager, isRequest);
+      sub_1B64324(photoCampaignManager);
     }
-    PhotoCampaignListViewManager__SetMode_30703352(photoCampaignManager, 2, v5);
+    PhotoCampaignListViewManager__SetMode_31300968(photoCampaignManager, 2, v5);
   }
   PhotoCampaignComponent__SetModeTabKind(this, 1, method);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall PhotoCampaignComponent__EndClickTabNormal(
         PhotoCampaignComponent_o *this,
         bool isRequest,
@@ -202,15 +205,14 @@ void __fastcall PhotoCampaignComponent__EndClickTabNormal(
       || (PhotoCampaignListViewManager__ModifyList(photoCampaignManager, 0, method),
           (photoCampaignManager = this->fields.photoCampaignManager) == 0LL) )
     {
-      sub_1B00F28(photoCampaignManager, isRequest);
+      sub_1B64324(photoCampaignManager);
     }
-    PhotoCampaignListViewManager__SetMode_30703352(photoCampaignManager, 2, v5);
+    PhotoCampaignListViewManager__SetMode_31300968(photoCampaignManager, 2, v5);
   }
   PhotoCampaignComponent__SetModeTabKind(this, 0, method);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall PhotoCampaignComponent__EndClickTabPush(
         PhotoCampaignComponent_o *this,
         bool isRequest,
@@ -226,9 +228,9 @@ void __fastcall PhotoCampaignComponent__EndClickTabPush(
       || (PhotoCampaignListViewManager__ModifyList(photoCampaignManager, 0, method),
           (photoCampaignManager = this->fields.photoCampaignManager) == 0LL) )
     {
-      sub_1B00F28(photoCampaignManager, isRequest);
+      sub_1B64324(photoCampaignManager);
     }
-    PhotoCampaignListViewManager__SetMode_30703352(photoCampaignManager, 2, v5);
+    PhotoCampaignListViewManager__SetMode_31300968(photoCampaignManager, 2, v5);
   }
   PhotoCampaignComponent__SetModeTabKind(this, 3, method);
 }
@@ -243,17 +245,17 @@ void __fastcall PhotoCampaignComponent__EndPushRequest(
   PhotoCampaignListViewManager_o *photoCampaignManager; // x0
   const MethodInfo *v6; // x2
   struct PhotoCampaignListViewManager_o *v7; // x20
-  PhotoCampaignListViewManager_CallbackFunc_o *v8; // x21
-  const MethodInfo *v9; // x3
-  int32_t v10; // w2
-  int32_t v11; // w3
+  __int64 v8; // x1
+  __int64 v9; // x2
+  PhotoCampaignListViewManager_CallbackFunc_o *v10; // x21
+  const MethodInfo *v11; // x3
   const MethodInfo *v12; // x2
 
-  if ( (byte_48DE628 & 1) == 0 )
+  if ( (byte_49F7EF6 & 1) == 0 )
   {
-    sub_1B00CCC(&PhotoCampaignListViewManager_CallbackFunc_TypeInfo, result);
-    sub_1B00CCC(&Method_PhotoCampaignComponent_OnClickServant__, v4);
-    byte_48DE628 = 1;
+    sub_1B640C8(&PhotoCampaignListViewManager_CallbackFunc_TypeInfo, result);
+    sub_1B640C8(&Method_PhotoCampaignComponent_OnClickServant__, v4);
+    byte_49F7EF6 = 1;
   }
   photoCampaignManager = this->fields.photoCampaignManager;
   if ( !photoCampaignManager
@@ -261,19 +263,22 @@ void __fastcall PhotoCampaignComponent__EndPushRequest(
         (photoCampaignManager = this->fields.photoCampaignManager) == 0LL)
     || (PhotoCampaignListViewManager__ModifyItem(photoCampaignManager, this->fields.usrSvtId, v6),
         v7 = this->fields.photoCampaignManager,
-        v8 = (PhotoCampaignListViewManager_CallbackFunc_o *)sub_1B00F18(PhotoCampaignListViewManager_CallbackFunc_TypeInfo),
+        v10 = (PhotoCampaignListViewManager_CallbackFunc_o *)sub_1B64314(
+                                                               PhotoCampaignListViewManager_CallbackFunc_TypeInfo,
+                                                               v8,
+                                                               v9),
         PhotoCampaignListViewManager_CallbackFunc___ctor(
-          v8,
+          v10,
           (Il2CppObject *)this,
           (intptr_t)Method_PhotoCampaignComponent_OnClickServant__,
-          v9),
+          v11),
         !v7) )
   {
-    sub_1B00F28(photoCampaignManager, result);
+    sub_1B64324(photoCampaignManager);
   }
-  v7->fields.callbackFunc = v8;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v7->fields.callbackFunc, (int32_t)v8, v10, v11);
-  PhotoCampaignListViewManager__SetMode_30703352(v7, 2, v12);
+  v7->fields.callbackFunc = v10;
+  sub_1B6406C(&v7->fields.callbackFunc);
+  PhotoCampaignListViewManager__SetMode_31300968(v7, 2, v12);
 }
 
 
@@ -282,22 +287,21 @@ void __fastcall PhotoCampaignComponent__EndStatusSync(
         System_String_o *result,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  ServantStatusBattleListViewItem_o *p_requestCallback; // x0
-  struct PhotoCampaignComponent_RequestCallbackFunc_o *v5; // x19
+  struct PhotoCampaignComponent_RequestCallbackFunc_o **p_requestCallback; // x0
+  struct PhotoCampaignComponent_RequestCallbackFunc_o *v4; // x19
   struct PhotoCampaignComponent_RequestCallbackFunc_o *requestCallback; // t1
 
   requestCallback = this->fields.requestCallback;
-  p_requestCallback = (ServantStatusBattleListViewItem_o *)&this->fields.requestCallback;
-  v5 = requestCallback;
+  p_requestCallback = &this->fields.requestCallback;
+  v4 = requestCallback;
   if ( requestCallback )
   {
-    p_requestCallback->klass = 0LL;
-    sub_1B00C70(p_requestCallback, 0, (int32_t)method, v3);
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v5->fields.m_target)(
-      v5->fields.original_method_info,
+    *p_requestCallback = 0LL;
+    sub_1B6406C(p_requestCallback);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v4->fields.m_target)(
+      v4->fields.original_method_info,
       1LL,
-      *(_QWORD *)&v5->fields.extra_arg);
+      *(_QWORD *)&v4->fields.extra_arg);
   }
 }
 
@@ -312,14 +316,14 @@ int64_t __fastcall PhotoCampaignComponent__GetLatestSelectedUsrSvtId(
   int64_t v5; // x0
   int64_t result; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_48DE621 & 1) == 0 )
+  if ( (byte_49F7EEF & 1) == 0 )
   {
-    sub_1B00CCC(&string_TypeInfo, method);
-    sub_1B00CCC(&StringLiteral_10487/*"PhotoCampaignSelectedUsrSvtId2024"*/, v2);
-    byte_48DE621 = 1;
+    sub_1B640C8(&string_TypeInfo, method);
+    sub_1B640C8(&StringLiteral_10568/*"PhotoCampaignSelectedUsrSvtId2024"*/, v2);
+    byte_49F7EEF = 1;
   }
   String = UnityEngine_PlayerPrefs__GetString(
-             (System_String_o *)StringLiteral_10487/*"PhotoCampaignSelectedUsrSvtId2024"*/,
+             (System_String_o *)StringLiteral_10568/*"PhotoCampaignSelectedUsrSvtId2024"*/,
              string_TypeInfo->static_fields->Empty,
              0LL);
   IsNullOrEmpty = System_String__IsNullOrEmpty(String, 0LL);
@@ -343,11 +347,11 @@ void __fastcall PhotoCampaignComponent__Init(PhotoCampaignComponent_o *this, con
   UILabel_o *infoLb; // x20
   const MethodInfo *v6; // x2
 
-  if ( (byte_48DE61F & 1) == 0 )
+  if ( (byte_49F7EED & 1) == 0 )
   {
-    sub_1B00CCC(&LocalizationManager_TypeInfo, method);
-    sub_1B00CCC(&StringLiteral_7034/*"HEADER_MSG_PHOTO_SERVANT"*/, v3);
-    byte_48DE61F = 1;
+    sub_1B640C8(&LocalizationManager_TypeInfo, method);
+    sub_1B640C8(&StringLiteral_7081/*"HEADER_MSG_PHOTO_SERVANT"*/, v3);
+    byte_49F7EED = 1;
   }
   photoCampaignManager = this->fields.photoCampaignManager;
   if ( !photoCampaignManager )
@@ -358,11 +362,11 @@ void __fastcall PhotoCampaignComponent__Init(PhotoCampaignComponent_o *this, con
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   photoCampaignManager = (PhotoCampaignListViewManager_o *)LocalizationManager__Get(
-                                                             (System_String_o *)StringLiteral_7034/*"HEADER_MSG_PHOTO_SERVANT"*/,
+                                                             (System_String_o *)StringLiteral_7081/*"HEADER_MSG_PHOTO_SERVANT"*/,
                                                              0LL);
   if ( !infoLb )
 LABEL_8:
-    sub_1B00F28(photoCampaignManager, method);
+    sub_1B64324(photoCampaignManager);
   UILabel__set_text(infoLb, (System_String_o *)photoCampaignManager, 0LL);
   PhotoCampaignComponent__SetModeTabKind(this, 0, v6);
 }
@@ -382,52 +386,59 @@ void __fastcall PhotoCampaignComponent__OnClickChoiceTabButton(
   __int64 v4; // x1
   _QWORD *v5; // x0
   System_Reflection_MethodBase_o *v6; // x0
-  const MethodInfo *v7; // x2
+  __int64 v7; // x1
+  const MethodInfo *v8; // x2
   int32_t tabModeKind; // w8
-  PhotoCampaignComponent_RequestCallbackFunc_o *v9; // x20
-  const MethodInfo *v10; // x3
-  const MethodInfo *v11; // x2
-  PhotoCampaignComponent_RequestCallbackFunc_o *v12; // x20
-  const MethodInfo *v13; // x3
-  const MethodInfo *v14; // x2
+  PhotoCampaignComponent_RequestCallbackFunc_o *v10; // x20
+  const MethodInfo *v11; // x3
+  const MethodInfo *v12; // x2
+  PhotoCampaignComponent_RequestCallbackFunc_o *v13; // x20
+  const MethodInfo *v14; // x3
+  const MethodInfo *v15; // x2
 
-  if ( (byte_48DE62C & 1) == 0 )
+  if ( (byte_49F7EFA & 1) == 0 )
   {
-    sub_1B00CCC(&Method_PhotoCampaignComponent_EndClickTabChoice__, method);
-    sub_1B00CCC(&Method_PhotoCampaignComponent_OnClickChoiceTabButton__, v3);
-    sub_1B00CCC(&PhotoCampaignComponent_RequestCallbackFunc_TypeInfo, v4);
-    byte_48DE62C = 1;
+    sub_1B640C8(&Method_PhotoCampaignComponent_EndClickTabChoice__, method);
+    sub_1B640C8(&Method_PhotoCampaignComponent_OnClickChoiceTabButton__, v3);
+    sub_1B640C8(&PhotoCampaignComponent_RequestCallbackFunc_TypeInfo, v4);
+    byte_49F7EFA = 1;
   }
   if ( this->fields.state == 2 )
   {
     v5 = Method_PhotoCampaignComponent_OnClickChoiceTabButton__;
     if ( (*((_BYTE *)Method_PhotoCampaignComponent_OnClickChoiceTabButton__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B00CE4(Method_PhotoCampaignComponent_OnClickChoiceTabButton__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v5, v5[4]);
+      v5 = (_QWORD *)sub_1B640E0(Method_PhotoCampaignComponent_OnClickChoiceTabButton__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1B640AC(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0LL);
     tabModeKind = this->fields.tabModeKind;
     if ( tabModeKind )
     {
       if ( tabModeKind == 2 )
       {
-        v9 = (PhotoCampaignComponent_RequestCallbackFunc_o *)sub_1B00F18(PhotoCampaignComponent_RequestCallbackFunc_TypeInfo);
+        v10 = (PhotoCampaignComponent_RequestCallbackFunc_o *)sub_1B64314(
+                                                                PhotoCampaignComponent_RequestCallbackFunc_TypeInfo,
+                                                                v7,
+                                                                v8);
         PhotoCampaignComponent_RequestCallbackFunc___ctor(
-          v9,
+          v10,
           (Il2CppObject *)this,
           Method_PhotoCampaignComponent_EndClickTabChoice__,
-          v10);
-        PhotoCampaignComponent__StatusRequest(this, v9, v11);
+          v11);
+        PhotoCampaignComponent__StatusRequest(this, v10, v12);
         return;
       }
-      v12 = (PhotoCampaignComponent_RequestCallbackFunc_o *)sub_1B00F18(PhotoCampaignComponent_RequestCallbackFunc_TypeInfo);
+      v13 = (PhotoCampaignComponent_RequestCallbackFunc_o *)sub_1B64314(
+                                                              PhotoCampaignComponent_RequestCallbackFunc_TypeInfo,
+                                                              v7,
+                                                              v8);
       PhotoCampaignComponent_RequestCallbackFunc___ctor(
-        v12,
+        v13,
         (Il2CppObject *)this,
         Method_PhotoCampaignComponent_EndClickTabChoice__,
-        v13);
-      PhotoCampaignComponent__StatusRequest(this, v12, v14);
+        v14);
+      PhotoCampaignComponent__StatusRequest(this, v13, v15);
     }
-    PhotoCampaignComponent__SetModeTabKind(this, 2, v7);
+    PhotoCampaignComponent__SetModeTabKind(this, 2, v8);
   }
 }
 
@@ -439,7 +450,6 @@ void __fastcall PhotoCampaignComponent__OnClickDecide(
         int32_t limitCount,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   MyRoomControl_o *myRoomControl; // x0
 
   this->fields.selectedUsrSvtId = userSvtId;
@@ -448,7 +458,7 @@ void __fastcall PhotoCampaignComponent__OnClickDecide(
   PhotoCampaignComponent__SetLatestSelectedUsrSvtId(this, userSvtId, *(const MethodInfo **)&limitCount);
   myRoomControl = this->fields.myRoomControl;
   if ( !myRoomControl )
-    sub_1B00F28(0LL, v5);
+    sub_1B64324(0LL);
   MyRoomControl__DispPhotoCampaign(
     myRoomControl,
     this->fields.selectedUsrSvtId,
@@ -465,52 +475,59 @@ void __fastcall PhotoCampaignComponent__OnClickLockTabButton(PhotoCampaignCompon
   __int64 v4; // x1
   _QWORD *v5; // x0
   System_Reflection_MethodBase_o *v6; // x0
-  const MethodInfo *v7; // x2
+  __int64 v7; // x1
+  const MethodInfo *v8; // x2
   int32_t tabModeKind; // w8
-  PhotoCampaignComponent_RequestCallbackFunc_o *v9; // x20
-  const MethodInfo *v10; // x3
-  const MethodInfo *v11; // x2
-  PhotoCampaignComponent_RequestCallbackFunc_o *v12; // x20
-  const MethodInfo *v13; // x3
-  const MethodInfo *v14; // x2
+  PhotoCampaignComponent_RequestCallbackFunc_o *v10; // x20
+  const MethodInfo *v11; // x3
+  const MethodInfo *v12; // x2
+  PhotoCampaignComponent_RequestCallbackFunc_o *v13; // x20
+  const MethodInfo *v14; // x3
+  const MethodInfo *v15; // x2
 
-  if ( (byte_48DE62B & 1) == 0 )
+  if ( (byte_49F7EF9 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_PhotoCampaignComponent_EndClickTabLock__, method);
-    sub_1B00CCC(&Method_PhotoCampaignComponent_OnClickLockTabButton__, v3);
-    sub_1B00CCC(&PhotoCampaignComponent_RequestCallbackFunc_TypeInfo, v4);
-    byte_48DE62B = 1;
+    sub_1B640C8(&Method_PhotoCampaignComponent_EndClickTabLock__, method);
+    sub_1B640C8(&Method_PhotoCampaignComponent_OnClickLockTabButton__, v3);
+    sub_1B640C8(&PhotoCampaignComponent_RequestCallbackFunc_TypeInfo, v4);
+    byte_49F7EF9 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v5 = Method_PhotoCampaignComponent_OnClickLockTabButton__;
     if ( (*((_BYTE *)Method_PhotoCampaignComponent_OnClickLockTabButton__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B00CE4(Method_PhotoCampaignComponent_OnClickLockTabButton__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v5, v5[4]);
+      v5 = (_QWORD *)sub_1B640E0(Method_PhotoCampaignComponent_OnClickLockTabButton__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1B640AC(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0LL);
     tabModeKind = this->fields.tabModeKind;
     if ( tabModeKind )
     {
       if ( tabModeKind == 1 )
       {
-        v9 = (PhotoCampaignComponent_RequestCallbackFunc_o *)sub_1B00F18(PhotoCampaignComponent_RequestCallbackFunc_TypeInfo);
+        v10 = (PhotoCampaignComponent_RequestCallbackFunc_o *)sub_1B64314(
+                                                                PhotoCampaignComponent_RequestCallbackFunc_TypeInfo,
+                                                                v7,
+                                                                v8);
         PhotoCampaignComponent_RequestCallbackFunc___ctor(
-          v9,
+          v10,
           (Il2CppObject *)this,
           Method_PhotoCampaignComponent_EndClickTabLock__,
-          v10);
-        PhotoCampaignComponent__StatusRequest(this, v9, v11);
+          v11);
+        PhotoCampaignComponent__StatusRequest(this, v10, v12);
         return;
       }
-      v12 = (PhotoCampaignComponent_RequestCallbackFunc_o *)sub_1B00F18(PhotoCampaignComponent_RequestCallbackFunc_TypeInfo);
+      v13 = (PhotoCampaignComponent_RequestCallbackFunc_o *)sub_1B64314(
+                                                              PhotoCampaignComponent_RequestCallbackFunc_TypeInfo,
+                                                              v7,
+                                                              v8);
       PhotoCampaignComponent_RequestCallbackFunc___ctor(
-        v12,
+        v13,
         (Il2CppObject *)this,
         Method_PhotoCampaignComponent_EndClickTabLock__,
-        v13);
-      PhotoCampaignComponent__StatusRequest(this, v12, v14);
+        v14);
+      PhotoCampaignComponent__StatusRequest(this, v13, v15);
     }
-    PhotoCampaignComponent__SetModeTabKind(this, 1, v7);
+    PhotoCampaignComponent__SetModeTabKind(this, 1, v8);
   }
 }
 
@@ -523,31 +540,36 @@ void __fastcall PhotoCampaignComponent__OnClickNormalTabButton(
   __int64 v4; // x1
   _QWORD *v5; // x0
   System_Reflection_MethodBase_o *v6; // x0
-  PhotoCampaignComponent_RequestCallbackFunc_o *v7; // x20
-  const MethodInfo *v8; // x3
-  const MethodInfo *v9; // x2
+  __int64 v7; // x1
+  __int64 v8; // x2
+  PhotoCampaignComponent_RequestCallbackFunc_o *v9; // x20
+  const MethodInfo *v10; // x3
+  const MethodInfo *v11; // x2
 
-  if ( (byte_48DE62A & 1) == 0 )
+  if ( (byte_49F7EF8 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_PhotoCampaignComponent_EndClickTabNormal__, method);
-    sub_1B00CCC(&Method_PhotoCampaignComponent_OnClickNormalTabButton__, v3);
-    sub_1B00CCC(&PhotoCampaignComponent_RequestCallbackFunc_TypeInfo, v4);
-    byte_48DE62A = 1;
+    sub_1B640C8(&Method_PhotoCampaignComponent_EndClickTabNormal__, method);
+    sub_1B640C8(&Method_PhotoCampaignComponent_OnClickNormalTabButton__, v3);
+    sub_1B640C8(&PhotoCampaignComponent_RequestCallbackFunc_TypeInfo, v4);
+    byte_49F7EF8 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v5 = Method_PhotoCampaignComponent_OnClickNormalTabButton__;
     if ( (*((_BYTE *)Method_PhotoCampaignComponent_OnClickNormalTabButton__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B00CE4(Method_PhotoCampaignComponent_OnClickNormalTabButton__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v5, v5[4]);
+      v5 = (_QWORD *)sub_1B640E0(Method_PhotoCampaignComponent_OnClickNormalTabButton__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1B640AC(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0LL);
-    v7 = (PhotoCampaignComponent_RequestCallbackFunc_o *)sub_1B00F18(PhotoCampaignComponent_RequestCallbackFunc_TypeInfo);
+    v9 = (PhotoCampaignComponent_RequestCallbackFunc_o *)sub_1B64314(
+                                                           PhotoCampaignComponent_RequestCallbackFunc_TypeInfo,
+                                                           v7,
+                                                           v8);
     PhotoCampaignComponent_RequestCallbackFunc___ctor(
-      v7,
+      v9,
       (Il2CppObject *)this,
       Method_PhotoCampaignComponent_EndClickTabNormal__,
-      v8);
-    PhotoCampaignComponent__StatusRequest(this, v7, v9);
+      v10);
+    PhotoCampaignComponent__StatusRequest(this, v9, v11);
   }
 }
 
@@ -558,32 +580,37 @@ void __fastcall PhotoCampaignComponent__OnClickPushTabButton(PhotoCampaignCompon
   __int64 v4; // x1
   _QWORD *v5; // x0
   System_Reflection_MethodBase_o *v6; // x0
-  PhotoCampaignComponent_RequestCallbackFunc_o *v7; // x20
-  const MethodInfo *v8; // x3
-  const MethodInfo *v9; // x2
+  __int64 v7; // x1
+  __int64 v8; // x2
+  PhotoCampaignComponent_RequestCallbackFunc_o *v9; // x20
+  const MethodInfo *v10; // x3
+  const MethodInfo *v11; // x2
 
-  if ( (byte_48DE62D & 1) == 0 )
+  if ( (byte_49F7EFB & 1) == 0 )
   {
-    sub_1B00CCC(&Method_PhotoCampaignComponent_EndClickTabPush__, method);
-    sub_1B00CCC(&Method_PhotoCampaignComponent_OnClickPushTabButton__, v3);
-    sub_1B00CCC(&PhotoCampaignComponent_RequestCallbackFunc_TypeInfo, v4);
-    byte_48DE62D = 1;
+    sub_1B640C8(&Method_PhotoCampaignComponent_EndClickTabPush__, method);
+    sub_1B640C8(&Method_PhotoCampaignComponent_OnClickPushTabButton__, v3);
+    sub_1B640C8(&PhotoCampaignComponent_RequestCallbackFunc_TypeInfo, v4);
+    byte_49F7EFB = 1;
   }
   if ( this->fields.state == 2 )
   {
     EventTutorialMaster__CheckTutorial(-1, 68, 0LL, 0, 0, 0, 0, 0LL);
     v5 = Method_PhotoCampaignComponent_OnClickPushTabButton__;
     if ( (*((_BYTE *)Method_PhotoCampaignComponent_OnClickPushTabButton__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B00CE4(Method_PhotoCampaignComponent_OnClickPushTabButton__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v5, v5[4]);
+      v5 = (_QWORD *)sub_1B640E0(Method_PhotoCampaignComponent_OnClickPushTabButton__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1B640AC(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0LL);
-    v7 = (PhotoCampaignComponent_RequestCallbackFunc_o *)sub_1B00F18(PhotoCampaignComponent_RequestCallbackFunc_TypeInfo);
+    v9 = (PhotoCampaignComponent_RequestCallbackFunc_o *)sub_1B64314(
+                                                           PhotoCampaignComponent_RequestCallbackFunc_TypeInfo,
+                                                           v7,
+                                                           v8);
     PhotoCampaignComponent_RequestCallbackFunc___ctor(
-      v7,
+      v9,
       (Il2CppObject *)this,
       Method_PhotoCampaignComponent_EndClickTabPush__,
-      v8);
-    PhotoCampaignComponent__StatusRequest(this, v7, v9);
+      v10);
+    PhotoCampaignComponent__StatusRequest(this, v9, v11);
   }
 }
 
@@ -596,21 +623,21 @@ void __fastcall PhotoCampaignComponent__OnClickScaleChange(PhotoCampaignComponen
   PhotoCampaignListViewManager_o *photoCampaignManager; // x0
   const MethodInfo *v7; // x1
 
-  if ( (byte_48DE630 & 1) == 0 )
+  if ( (byte_49F7EFE & 1) == 0 )
   {
-    sub_1B00CCC(&Method_PhotoCampaignComponent_OnClickScaleChange__, method);
-    byte_48DE630 = 1;
+    sub_1B640C8(&Method_PhotoCampaignComponent_OnClickScaleChange__, method);
+    byte_49F7EFE = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_PhotoCampaignComponent_OnClickScaleChange__;
     if ( (*((_BYTE *)Method_PhotoCampaignComponent_OnClickScaleChange__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B00CE4(Method_PhotoCampaignComponent_OnClickScaleChange__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B640E0(Method_PhotoCampaignComponent_OnClickScaleChange__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     photoCampaignManager = this->fields.photoCampaignManager;
     if ( !photoCampaignManager )
-      sub_1B00F28(0LL, v5);
+      sub_1B64324(0LL);
     PhotoCampaignListViewManager__ChangeIconScale(photoCampaignManager, v5);
     PhotoCampaignComponent__UpdateScaleChangeIconSprite(this, v7);
   }
@@ -646,121 +673,116 @@ void __fastcall PhotoCampaignComponent__OnClickServant(
   __int64 v26; // x1
   __int64 v27; // x1
   __int64 v28; // x1
-  __int64 v29; // x20
+  Il2CppObject *v29; // x20
   __int64 photoCampaignManager; // x0
-  const MethodInfo *v31; // x1
-  int32_t v32; // w2
-  int32_t v33; // w3
-  const MethodInfo *v34; // x2
-  int32_t v35; // w3
+  const MethodInfo *v31; // x2
   PhotoCampaignListViewItem_o *Item; // x1
-  PhotoCampaignListViewItem_o **v37; // x21
-  __int64 v38; // x8
-  __int128 v39; // q1
+  PhotoCampaignListViewItem_o **p_monitor; // x21
+  __int64 v34; // x8
+  __int128 v35; // q1
+  const MethodInfo *v36; // x1
   int32_t tabModeKind; // w8
-  _QWORD *v41; // x0
-  System_Reflection_MethodBase_o *v42; // x0
-  int32_t v43; // w1
+  _QWORD *v38; // x0
+  System_Reflection_MethodBase_o *v39; // x0
+  int32_t v40; // w1
+  __int64 v41; // x1
+  __int64 v42; // x2
   UserServantEntity_o *userSvtEntity; // x21
-  CommonUI_o *v45; // x20
-  ServantStatusDialog_ResultDelegate_o *v46; // x22
+  CommonUI_o *v44; // x20
+  ServantStatusDialog_ResultDelegate_o *v45; // x22
+  _QWORD *v46; // x0
   _QWORD *v47; // x0
   _QWORD *v48; // x0
-  _QWORD *v49; // x0
-  System_Reflection_MethodBase_o *v50; // x0
-  struct PhotoCampaignListViewManager_o *v51; // x20
-  PhotoCampaignListViewManager_CallbackFunc_o *v52; // x0
-  const MethodInfo *v53; // x3
-  intptr_t v54; // w2
+  System_Reflection_MethodBase_o *v49; // x0
+  struct PhotoCampaignListViewManager_o *v50; // x20
+  __int64 v51; // x1
+  __int64 v52; // x2
+  PhotoCampaignListViewManager_CallbackFunc_o *v53; // x0
+  const MethodInfo *v54; // x3
+  intptr_t v55; // w2
   int64_t selectedUsrSvtId; // x20
-  _QWORD *v56; // x0
-  struct PhotoCampaignListViewManager_CallbackFunc_o *v57; // x21
-  int32_t v58; // w2
-  int32_t v59; // w3
-  const MethodInfo *v60; // x2
-  _QWORD *v61; // x0
-  System_Reflection_MethodBase_o *v62; // x0
-  const MethodInfo *v63; // x2
-  int64_t v64; // x22
-  struct UserServantEntity_o *v65; // x8
-  __int128 v66; // q0
-  const MethodInfo *v67; // x2
+  _QWORD *v57; // x0
+  __int64 v58; // x1
+  __int64 v59; // x2
+  struct PhotoCampaignListViewManager_CallbackFunc_o *v60; // x21
+  const MethodInfo *v61; // x2
+  _QWORD *v62; // x0
+  System_Reflection_MethodBase_o *v63; // x0
+  const MethodInfo *v64; // x2
+  int64_t v65; // x22
+  struct UserServantEntity_o *v66; // x8
+  __int128 v67; // q0
+  const MethodInfo *v68; // x2
   Il2CppObject *Entity; // x25
-  DataMasterBase_TMaster__TEntity__PKType__o *v69; // x22
+  DataMasterBase_TMaster__TEntity__PKType__o *v70; // x22
   void *monitor; // x23
   Il2CppClass *klass; // x24
-  Il2CppObject *v72; // x26
-  System_String_o *v73; // x22
-  System_String_o *v74; // x23
-  __int64 v75; // x24
+  Il2CppObject *v73; // x26
+  System_String_o *v74; // x22
+  System_String_o *v75; // x23
+  System_Object_array *v76; // x24
   int32_t Rarity; // w27
-  int32_t v77; // w2
-  int32_t v78; // w3
-  __int64 v79; // x27
-  int32_t v80; // w2
-  int32_t v81; // w3
-  __int64 v82; // x27
+  __int64 v78; // x1
+  Il2CppObject *v79; // x27
+  Il2CppObject *v80; // x27
+  int32_t v81; // w0
+  Il2CppObject *v82; // x25
   int32_t v83; // w0
-  int32_t v84; // w2
-  int32_t v85; // w3
-  __int64 v86; // x25
-  int32_t v87; // w0
-  int32_t v88; // w2
-  int32_t v89; // w3
-  __int64 v90; // x25
-  int32_t v91; // w2
-  int32_t v92; // w3
-  __int64 v93; // x25
-  PhotoCampaignListViewItem_o *v94; // x8
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v95; // x9
+  Il2CppObject *v84; // x25
+  Il2CppObject *v85; // x25
+  PhotoCampaignListViewItem_o *v86; // x8
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v87; // x9
   ServantEntity_o *servantEntity; // x21
-  int32_t v97; // w2
-  int32_t v98; // w3
-  __int64 v99; // x21
-  System_String_o *v100; // x21
-  System_String_o *v101; // x23
-  System_String_o *v102; // x24
+  Il2CppObject *v89; // x21
+  System_String_o *v90; // x21
+  System_String_o *v91; // x23
+  System_String_o *v92; // x24
   Il2CppObject *Instance; // x25
-  CommonConfirmDialog_ClickDelegate_o *v104; // x26
-  __int64 v105; // x0
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v106; // [xsp+10h] [xbp-B0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v107; // [xsp+30h] [xbp-90h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v108; // [xsp+50h] [xbp-70h]
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v109; // 0:x0.16
+  __int64 v94; // x1
+  __int64 v95; // x2
+  CommonConfirmDialog_ClickDelegate_o *v96; // x26
+  __int64 v97; // x0
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v98; // [xsp+10h] [xbp-B0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v99; // [xsp+30h] [xbp-90h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v100; // [xsp+50h] [xbp-70h]
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v101; // 0:x0.16
 
-  if ( (byte_48DE625 & 1) == 0 )
+  if ( (byte_49F7EF3 & 1) == 0 )
   {
-    sub_1B00CCC(&BalanceConfig_TypeInfo, *(_QWORD *)&kind);
-    sub_1B00CCC(&PhotoCampaignListViewManager_CallbackFunc_TypeInfo, v7);
-    sub_1B00CCC(&CommonConfirmDialog_ClickDelegate_TypeInfo, v8);
-    sub_1B00CCC(&Method_DataManager_GetMaster_ServantMaster___, v9);
-    sub_1B00CCC(&Method_DataManager_GetMaster_UserServantMaster___, v10);
-    sub_1B00CCC(&DataManager_TypeInfo, v11);
-    sub_1B00CCC(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v12);
-    sub_1B00CCC(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v13);
-    sub_1B00CCC(&LocalizationManager_TypeInfo, v14);
-    sub_1B00CCC(&object___TypeInfo, v15);
-    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v16);
-    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v17);
-    sub_1B00CCC(&Method_PhotoCampaignComponent_CloseSvtDetail__, v18);
-    sub_1B00CCC(&Method_PhotoCampaignComponent_OnClickServant__, v19);
-    sub_1B00CCC(&Rarity_TypeInfo, v20);
-    sub_1B00CCC(&ServantStatusDialog_ResultDelegate_TypeInfo, v21);
-    sub_1B00CCC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v22);
-    sub_1B00CCC(&Method_PhotoCampaignComponent___c__DisplayClass39_0__OnClickServant_b__0__, v23);
-    sub_1B00CCC(&PhotoCampaignComponent___c__DisplayClass39_0_TypeInfo, v24);
-    sub_1B00CCC(&StringLiteral_11703/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, v25);
-    sub_1B00CCC(&StringLiteral_11701/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, v26);
-    sub_1B00CCC(&StringLiteral_11702/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, v27);
-    sub_1B00CCC(&StringLiteral_11704/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, v28);
-    byte_48DE625 = 1;
+    sub_1B640C8(&BalanceConfig_TypeInfo, *(_QWORD *)&kind);
+    sub_1B640C8(&PhotoCampaignListViewManager_CallbackFunc_TypeInfo, v7);
+    sub_1B640C8(&CommonConfirmDialog_ClickDelegate_TypeInfo, v8);
+    sub_1B640C8(&Method_DataManager_GetMaster_ServantMaster___, v9);
+    sub_1B640C8(&Method_DataManager_GetMaster_UserServantMaster___, v10);
+    sub_1B640C8(&DataManager_TypeInfo, v11);
+    sub_1B640C8(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v12);
+    sub_1B640C8(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v13);
+    sub_1B640C8(&LocalizationManager_TypeInfo, v14);
+    sub_1B640C8(&object___TypeInfo, v15);
+    sub_1B640C8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v16);
+    sub_1B640C8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v17);
+    sub_1B640C8(&Method_PhotoCampaignComponent_CloseSvtDetail__, v18);
+    sub_1B640C8(&Method_PhotoCampaignComponent_OnClickServant__, v19);
+    sub_1B640C8(&Rarity_TypeInfo, v20);
+    sub_1B640C8(&ServantStatusDialog_ResultDelegate_TypeInfo, v21);
+    sub_1B640C8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v22);
+    sub_1B640C8(&Method_PhotoCampaignComponent___c__DisplayClass39_0__OnClickServant_b__0__, v23);
+    sub_1B640C8(&PhotoCampaignComponent___c__DisplayClass39_0_TypeInfo, v24);
+    sub_1B640C8(&StringLiteral_11839/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, v25);
+    sub_1B640C8(&StringLiteral_11837/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, v26);
+    sub_1B640C8(&StringLiteral_11838/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, v27);
+    sub_1B640C8(&StringLiteral_11840/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, v28);
+    byte_49F7EF3 = 1;
   }
-  v29 = sub_1B00F18(PhotoCampaignComponent___c__DisplayClass39_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v29, 0LL);
+  v29 = (Il2CppObject *)sub_1B64314(
+                          PhotoCampaignComponent___c__DisplayClass39_0_TypeInfo,
+                          *(_QWORD *)&kind,
+                          *(_QWORD *)&n);
+  System_Object___ctor(v29, 0LL);
   if ( !v29 )
     goto LABEL_102;
-  *(_QWORD *)(v29 + 16) = this;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v29 + 16), (int32_t)this, v32, v33);
+  v29[1].klass = (Il2CppClass *)this;
+  sub_1B6406C(&v29[1]);
   if ( (n & 0x80000000) != 0 )
   {
     Item = 0LL;
@@ -770,40 +792,40 @@ void __fastcall PhotoCampaignComponent__OnClickServant(
     photoCampaignManager = (__int64)this->fields.photoCampaignManager;
     if ( !photoCampaignManager )
       goto LABEL_102;
-    Item = PhotoCampaignListViewManager__GetItem((PhotoCampaignListViewManager_o *)photoCampaignManager, n, v34);
+    Item = PhotoCampaignListViewManager__GetItem((PhotoCampaignListViewManager_o *)photoCampaignManager, n, v31);
   }
-  *(_QWORD *)(v29 + 24) = Item;
-  v37 = (PhotoCampaignListViewItem_o **)(v29 + 24);
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v29 + 24), (int32_t)Item, (int32_t)v34, v35);
-  if ( !*(_QWORD *)(v29 + 24) )
+  v29[1].monitor = Item;
+  p_monitor = (PhotoCampaignListViewItem_o **)&v29[1].monitor;
+  photoCampaignManager = sub_1B6406C(&v29[1].monitor);
+  if ( !v29[1].monitor )
     goto LABEL_102;
-  v38 = *(_QWORD *)(*(_QWORD *)(v29 + 24) + 112LL);
-  if ( !v38 )
+  v34 = *((_QWORD *)v29[1].monitor + 14);
+  if ( !v34 )
     goto LABEL_102;
-  v39 = *(_OWORD *)(v38 + 32);
-  *(_OWORD *)&v108.fields.currentCryptoKey = *(_OWORD *)(v38 + 16);
-  *(_OWORD *)&v108.fields.fakeValue = v39;
+  v35 = *(_OWORD *)(v34 + 32);
+  *(_OWORD *)&v100.fields.currentCryptoKey = *(_OWORD *)(v34 + 16);
+  *(_OWORD *)&v100.fields.fakeValue = v35;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  v107 = v108;
-  photoCampaignManager = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45316568(&v107, 0LL);
+  v99 = v100;
+  photoCampaignManager = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46175132(&v99, 0LL);
   this->fields.usrSvtId = photoCampaignManager;
   if ( kind == 1 )
   {
-    photoCampaignManager = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    if ( *v37 )
+    photoCampaignManager = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    if ( *p_monitor )
     {
-      userSvtEntity = (*v37)->fields.userSvtEntity;
-      v45 = (CommonUI_o *)photoCampaignManager;
-      v46 = (ServantStatusDialog_ResultDelegate_o *)sub_1B00F18(ServantStatusDialog_ResultDelegate_TypeInfo);
+      userSvtEntity = (*p_monitor)->fields.userSvtEntity;
+      v44 = (CommonUI_o *)photoCampaignManager;
+      v45 = (ServantStatusDialog_ResultDelegate_o *)sub_1B64314(ServantStatusDialog_ResultDelegate_TypeInfo, v41, v42);
       ServantStatusDialog_ResultDelegate___ctor(
-        v46,
+        v45,
         (Il2CppObject *)this,
         Method_PhotoCampaignComponent_CloseSvtDetail__,
         0LL);
-      if ( v45 )
+      if ( v44 )
       {
-        CommonUI__OpenServantStatusDialog_29947732(v45, 0, userSvtEntity, v46, 0, 0LL);
+        CommonUI__OpenServantStatusDialog_30355996(v44, 0, userSvtEntity, v45, 0, 0LL);
         return;
       }
     }
@@ -814,30 +836,30 @@ void __fastcall PhotoCampaignComponent__OnClickServant(
   tabModeKind = this->fields.tabModeKind;
   if ( tabModeKind == 2 )
   {
-    if ( !*v37 )
+    if ( !*p_monitor )
       goto LABEL_102;
-    (*v37)->fields.isSwapChoice ^= 1u;
-    v47 = Method_PhotoCampaignComponent_OnClickServant__;
+    (*p_monitor)->fields.isSwapChoice ^= 1u;
+    v46 = Method_PhotoCampaignComponent_OnClickServant__;
     if ( (*((_BYTE *)Method_PhotoCampaignComponent_OnClickServant__ + 83) & 2) != 0 )
-      v47 = (_QWORD *)sub_1B00CE4(Method_PhotoCampaignComponent_OnClickServant__);
-    v42 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v47, v47[4]);
-    v43 = 0;
+      v46 = (_QWORD *)sub_1B640E0(Method_PhotoCampaignComponent_OnClickServant__);
+    v39 = (System_Reflection_MethodBase_o *)sub_1B640AC(v46, v46[4]);
+    v40 = 0;
     goto LABEL_44;
   }
   if ( tabModeKind == 1 )
   {
-    if ( !*v37 )
+    if ( !*p_monitor )
       goto LABEL_102;
-    (*v37)->fields.isSwapLock ^= 1u;
-    v41 = Method_PhotoCampaignComponent_OnClickServant__;
+    (*p_monitor)->fields.isSwapLock ^= 1u;
+    v38 = Method_PhotoCampaignComponent_OnClickServant__;
     if ( (*((_BYTE *)Method_PhotoCampaignComponent_OnClickServant__ + 83) & 2) != 0 )
-      v41 = (_QWORD *)sub_1B00CE4(Method_PhotoCampaignComponent_OnClickServant__);
-    v42 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v41, v41[4]);
-    v43 = 11;
+      v38 = (_QWORD *)sub_1B640E0(Method_PhotoCampaignComponent_OnClickServant__);
+    v39 = (System_Reflection_MethodBase_o *)sub_1B640AC(v38, v38[4]);
+    v40 = 11;
     goto LABEL_44;
   }
-  photoCampaignManager = (__int64)*v37;
-  if ( !*v37 )
+  photoCampaignManager = (__int64)*p_monitor;
+  if ( !*p_monitor )
     goto LABEL_102;
   if ( tabModeKind == 3 )
   {
@@ -846,179 +868,185 @@ void __fastcall PhotoCampaignComponent__OnClickServant(
       if ( UserServantEntity__IsEventJoin(*(UserServantEntity_o **)(photoCampaignManager + 112), 0LL) )
       {
 LABEL_33:
-        v48 = Method_PhotoCampaignComponent_OnClickServant__;
+        v47 = Method_PhotoCampaignComponent_OnClickServant__;
         if ( (*((_BYTE *)Method_PhotoCampaignComponent_OnClickServant__ + 83) & 2) != 0 )
-          v48 = (_QWORD *)sub_1B00CE4(Method_PhotoCampaignComponent_OnClickServant__);
-        v42 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v48, v48[4]);
+          v47 = (_QWORD *)sub_1B640E0(Method_PhotoCampaignComponent_OnClickServant__);
+        v39 = (System_Reflection_MethodBase_o *)sub_1B640AC(v47, v47[4]);
 LABEL_43:
-        v43 = 2;
+        v40 = 2;
 LABEL_44:
-        OverwriteAssetSoundName__PlaySystemSe(v42, v43, 0LL);
+        OverwriteAssetSoundName__PlaySystemSe(v39, v40, 0LL);
 LABEL_45:
-        v51 = this->fields.photoCampaignManager;
-        v52 = (PhotoCampaignListViewManager_CallbackFunc_o *)sub_1B00F18(PhotoCampaignListViewManager_CallbackFunc_TypeInfo);
-        v54 = (int)Method_PhotoCampaignComponent_OnClickServant__;
+        v50 = this->fields.photoCampaignManager;
+        v53 = (PhotoCampaignListViewManager_CallbackFunc_o *)sub_1B64314(
+                                                               PhotoCampaignListViewManager_CallbackFunc_TypeInfo,
+                                                               v58,
+                                                               v59);
+        v55 = (int)Method_PhotoCampaignComponent_OnClickServant__;
         goto LABEL_46;
       }
-      photoCampaignManager = (__int64)*v37;
-      if ( !*v37 )
+      photoCampaignManager = (__int64)*p_monitor;
+      if ( !*p_monitor )
         goto LABEL_102;
     }
-    if ( PhotoCampaignListViewItem__get_IsHerioneReave((PhotoCampaignListViewItem_o *)photoCampaignManager, v31) )
+    if ( PhotoCampaignListViewItem__get_IsHerioneReave((PhotoCampaignListViewItem_o *)photoCampaignManager, v36) )
       goto LABEL_33;
-    v61 = Method_PhotoCampaignComponent_OnClickServant__;
+    v62 = Method_PhotoCampaignComponent_OnClickServant__;
     if ( (*((_BYTE *)Method_PhotoCampaignComponent_OnClickServant__ + 83) & 2) != 0 )
-      v61 = (_QWORD *)sub_1B00CE4(Method_PhotoCampaignComponent_OnClickServant__);
-    v62 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v61, v61[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v62, 0, 0LL);
+      v62 = (_QWORD *)sub_1B640E0(Method_PhotoCampaignComponent_OnClickServant__);
+    v63 = (System_Reflection_MethodBase_o *)sub_1B640AC(v62, v62[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v63, 0, 0LL);
     photoCampaignManager = (__int64)UserGameMaster__getSelfUserGame(0LL);
     if ( !photoCampaignManager )
       goto LABEL_102;
-    v64 = *(_QWORD *)(photoCampaignManager + 120);
-    if ( !v64 )
+    v65 = *(_QWORD *)(photoCampaignManager + 120);
+    if ( !v65 )
     {
 LABEL_58:
-      PhotoCampaignComponent__PushRequest(this, *v37, v63);
+      PhotoCampaignComponent__PushRequest(this, *p_monitor, v64);
       goto LABEL_45;
     }
-    if ( !*v37 )
+    if ( !*p_monitor )
       goto LABEL_102;
-    v65 = (*v37)->fields.userSvtEntity;
-    if ( !v65 )
+    v66 = (*p_monitor)->fields.userSvtEntity;
+    if ( !v66 )
       goto LABEL_102;
-    v66 = *(_OWORD *)&v65->fields.id.fields.fakeValue;
-    *(_OWORD *)&v108.fields.currentCryptoKey = *(_OWORD *)&v65->fields.id.fields.currentCryptoKey;
-    *(_OWORD *)&v108.fields.fakeValue = v66;
+    v67 = *(_OWORD *)&v66->fields.id.fields.fakeValue;
+    *(_OWORD *)&v100.fields.currentCryptoKey = *(_OWORD *)&v66->fields.id.fields.currentCryptoKey;
+    *(_OWORD *)&v100.fields.fakeValue = v67;
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    v106 = v108;
-    if ( v64 == CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45316568(&v106, 0LL) )
+    v98 = v100;
+    if ( v65 == CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46175132(&v98, 0LL) )
       goto LABEL_58;
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    photoCampaignManager = (__int64)DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_UserServantMaster___);
+    photoCampaignManager = (__int64)DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_UserServantMaster___);
     if ( !photoCampaignManager )
       goto LABEL_102;
     Entity = DataMasterBase_object__object__long___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)photoCampaignManager,
-               v64,
-               (const MethodInfo_2FE6BF8 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    photoCampaignManager = (__int64)DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_ServantMaster___);
+               v65,
+               (const MethodInfo_30D4050 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    photoCampaignManager = (__int64)DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_ServantMaster___);
     if ( !Entity )
       goto LABEL_102;
-    v69 = (DataMasterBase_TMaster__TEntity__PKType__o *)photoCampaignManager;
+    v70 = (DataMasterBase_TMaster__TEntity__PKType__o *)photoCampaignManager;
     klass = Entity[5].klass;
     monitor = Entity[5].monitor;
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    *(_QWORD *)&v109.fields.currentCryptoKey = klass;
-    *(_QWORD *)&v109.fields.fakeValue = monitor;
-    photoCampaignManager = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(v109, 0LL);
-    if ( !v69 )
+    *(_QWORD *)&v101.fields.currentCryptoKey = klass;
+    *(_QWORD *)&v101.fields.fakeValue = monitor;
+    photoCampaignManager = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46171608(v101, 0LL);
+    if ( !v70 )
       goto LABEL_102;
-    v72 = DataMasterBase_object__object__int___GetEntity(
-            v69,
+    v73 = DataMasterBase_object__object__int___GetEntity(
+            v70,
             photoCampaignManager,
-            (const MethodInfo_2FE6A4C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+            (const MethodInfo_30D3EA4 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v73 = LocalizationManager__Get((System_String_o *)StringLiteral_11704/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, 0LL);
-    v74 = LocalizationManager__Get((System_String_o *)StringLiteral_11703/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, 0LL);
-    v75 = sub_1B00D74(object___TypeInfo, 6LL);
+    v74 = LocalizationManager__Get((System_String_o *)StringLiteral_11840/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, 0LL);
+    v75 = LocalizationManager__Get((System_String_o *)StringLiteral_11839/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, 0LL);
+    v76 = (System_Object_array *)sub_1B64170(object___TypeInfo, 6LL);
     Rarity = UserServantEntity__getRarity((UserServantEntity_o *)Entity, 0LL);
     if ( !Rarity_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(Rarity_TypeInfo);
     photoCampaignManager = (__int64)Rarity__getRarityType(Rarity, 0LL);
-    if ( !v75 )
+    if ( !v76 )
 LABEL_102:
-      sub_1B00F28(photoCampaignManager, v31);
-    v79 = photoCampaignManager;
+      sub_1B64324(photoCampaignManager);
+    v79 = (Il2CppObject *)photoCampaignManager;
     if ( !photoCampaignManager
-      || (photoCampaignManager = sub_1B00E08(photoCampaignManager, *(_QWORD *)(*(_QWORD *)v75 + 64LL))) != 0 )
+      || (photoCampaignManager = sub_1B64204(photoCampaignManager, v76->obj.klass->_1.element_class)) != 0 )
     {
-      if ( !*(_DWORD *)(v75 + 24) )
+      if ( !v76->max_length )
         goto LABEL_103;
-      *(_QWORD *)(v75 + 32) = v79;
-      sub_1B00C70((ServantStatusBattleListViewItem_o *)(v75 + 32), v79, v77, v78);
-      if ( !v72 )
+      v76->m_Items[0] = v79;
+      photoCampaignManager = sub_1B6406C(v76->m_Items);
+      if ( !v73 )
         goto LABEL_102;
-      photoCampaignManager = (__int64)ServantEntity__getClassName((ServantEntity_o *)v72, 0LL);
-      v82 = photoCampaignManager;
+      photoCampaignManager = (__int64)ServantEntity__getClassName((ServantEntity_o *)v73, 0LL);
+      v80 = (Il2CppObject *)photoCampaignManager;
       if ( !photoCampaignManager
-        || (photoCampaignManager = sub_1B00E08(photoCampaignManager, *(_QWORD *)(*(_QWORD *)v75 + 64LL))) != 0 )
+        || (photoCampaignManager = sub_1B64204(photoCampaignManager, v76->obj.klass->_1.element_class)) != 0 )
       {
-        if ( *(_DWORD *)(v75 + 24) <= 1u )
+        if ( v76->max_length <= 1 )
           goto LABEL_103;
-        *(_QWORD *)(v75 + 40) = v82;
-        sub_1B00C70((ServantStatusBattleListViewItem_o *)(v75 + 40), v82, v80, v81);
-        v83 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(
+        v76->m_Items[1] = v80;
+        sub_1B6406C(&v76->m_Items[1]);
+        v81 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46171608(
                 (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o)Entity[6],
                 0LL);
-        photoCampaignManager = (__int64)ServantEntity__getName((ServantEntity_o *)v72, v83, -1, 0LL);
-        v86 = photoCampaignManager;
+        photoCampaignManager = (__int64)ServantEntity__getName((ServantEntity_o *)v73, v81, -1, 0LL);
+        v82 = (Il2CppObject *)photoCampaignManager;
         if ( !photoCampaignManager
-          || (photoCampaignManager = sub_1B00E08(photoCampaignManager, *(_QWORD *)(*(_QWORD *)v75 + 64LL))) != 0 )
+          || (photoCampaignManager = sub_1B64204(photoCampaignManager, v76->obj.klass->_1.element_class)) != 0 )
         {
-          if ( *(_DWORD *)(v75 + 24) <= 2u )
+          if ( v76->max_length <= 2 )
             goto LABEL_103;
-          *(_QWORD *)(v75 + 48) = v86;
-          sub_1B00C70((ServantStatusBattleListViewItem_o *)(v75 + 48), v86, v84, v85);
-          if ( !*v37 )
+          v76->m_Items[2] = v82;
+          photoCampaignManager = sub_1B6406C(&v76->m_Items[2]);
+          if ( !*p_monitor )
             goto LABEL_102;
-          photoCampaignManager = (__int64)(*v37)->fields.userSvtEntity;
+          photoCampaignManager = (__int64)(*p_monitor)->fields.userSvtEntity;
           if ( !photoCampaignManager )
             goto LABEL_102;
-          v87 = UserServantEntity__getRarity((UserServantEntity_o *)photoCampaignManager, 0LL);
-          photoCampaignManager = (__int64)Rarity__getRarityType(v87, 0LL);
-          v90 = photoCampaignManager;
+          v83 = UserServantEntity__getRarity((UserServantEntity_o *)photoCampaignManager, 0LL);
+          photoCampaignManager = (__int64)Rarity__getRarityType(v83, 0LL);
+          v84 = (Il2CppObject *)photoCampaignManager;
           if ( !photoCampaignManager
-            || (photoCampaignManager = sub_1B00E08(photoCampaignManager, *(_QWORD *)(*(_QWORD *)v75 + 64LL))) != 0 )
+            || (photoCampaignManager = sub_1B64204(photoCampaignManager, v76->obj.klass->_1.element_class)) != 0 )
           {
-            if ( *(_DWORD *)(v75 + 24) <= 3u )
+            if ( v76->max_length <= 3 )
               goto LABEL_103;
-            *(_QWORD *)(v75 + 56) = v90;
-            sub_1B00C70((ServantStatusBattleListViewItem_o *)(v75 + 56), v90, v88, v89);
-            if ( !*v37 )
+            v76->m_Items[3] = v84;
+            photoCampaignManager = sub_1B6406C(&v76->m_Items[3]);
+            if ( !*p_monitor )
               goto LABEL_102;
-            photoCampaignManager = (__int64)(*v37)->fields.servantEntity;
+            photoCampaignManager = (__int64)(*p_monitor)->fields.servantEntity;
             if ( !photoCampaignManager )
               goto LABEL_102;
             photoCampaignManager = (__int64)ServantEntity__getClassName((ServantEntity_o *)photoCampaignManager, 0LL);
-            v93 = photoCampaignManager;
+            v85 = (Il2CppObject *)photoCampaignManager;
             if ( !photoCampaignManager
-              || (photoCampaignManager = sub_1B00E08(photoCampaignManager, *(_QWORD *)(*(_QWORD *)v75 + 64LL))) != 0 )
+              || (photoCampaignManager = sub_1B64204(photoCampaignManager, v76->obj.klass->_1.element_class)) != 0 )
             {
-              if ( *(_DWORD *)(v75 + 24) <= 4u )
+              if ( v76->max_length <= 4 )
                 goto LABEL_103;
-              *(_QWORD *)(v75 + 64) = v93;
-              sub_1B00C70((ServantStatusBattleListViewItem_o *)(v75 + 64), v93, v91, v92);
-              v94 = *v37;
-              if ( !*v37 )
+              v76->m_Items[4] = v85;
+              photoCampaignManager = sub_1B6406C(&v76->m_Items[4]);
+              v86 = *p_monitor;
+              if ( !*p_monitor )
                 goto LABEL_102;
-              v95 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)v94->fields.userSvtEntity;
-              if ( !v95 )
+              v87 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)v86->fields.userSvtEntity;
+              if ( !v87 )
                 goto LABEL_102;
-              servantEntity = v94->fields.servantEntity;
-              photoCampaignManager = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(v95[6], 0LL);
+              servantEntity = v86->fields.servantEntity;
+              photoCampaignManager = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46171608(v87[6], 0LL);
               if ( !servantEntity )
                 goto LABEL_102;
               photoCampaignManager = (__int64)ServantEntity__getName(servantEntity, photoCampaignManager, -1, 0LL);
-              v99 = photoCampaignManager;
+              v89 = (Il2CppObject *)photoCampaignManager;
               if ( !photoCampaignManager
-                || (photoCampaignManager = sub_1B00E08(photoCampaignManager, *(_QWORD *)(*(_QWORD *)v75 + 64LL))) != 0 )
+                || (photoCampaignManager = sub_1B64204(photoCampaignManager, v76->obj.klass->_1.element_class)) != 0 )
               {
-                if ( *(_DWORD *)(v75 + 24) > 5u )
+                if ( v76->max_length > 5 )
                 {
-                  *(_QWORD *)(v75 + 72) = v99;
-                  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v75 + 72), v99, v97, v98);
-                  v100 = System_String__Format_60340256(v74, (System_Object_array *)v75, 0LL);
-                  v101 = LocalizationManager__Get((System_String_o *)StringLiteral_11702/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, 0LL);
-                  v102 = LocalizationManager__Get((System_String_o *)StringLiteral_11701/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, 0LL);
-                  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-                  v104 = (CommonConfirmDialog_ClickDelegate_o *)sub_1B00F18(CommonConfirmDialog_ClickDelegate_TypeInfo);
+                  v76->m_Items[5] = v89;
+                  sub_1B6406C(&v76->m_Items[5]);
+                  v90 = System_String__Format_61389904(v75, v76, 0LL);
+                  v91 = LocalizationManager__Get((System_String_o *)StringLiteral_11838/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, 0LL);
+                  v92 = LocalizationManager__Get((System_String_o *)StringLiteral_11837/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, 0LL);
+                  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+                  v96 = (CommonConfirmDialog_ClickDelegate_o *)sub_1B64314(
+                                                                 CommonConfirmDialog_ClickDelegate_TypeInfo,
+                                                                 v94,
+                                                                 v95);
                   CommonConfirmDialog_ClickDelegate___ctor(
-                    v104,
-                    (Il2CppObject *)v29,
+                    v96,
+                    v29,
                     Method_PhotoCampaignComponent___c__DisplayClass39_0__OnClickServant_b__0__,
                     0LL);
                   photoCampaignManager = (__int64)BalanceConfig_TypeInfo;
@@ -1026,13 +1054,13 @@ LABEL_102:
                     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
                   if ( Instance )
                   {
-                    CommonUI__OpenConfirmDialog_29936704(
+                    CommonUI__OpenConfirmDialog_30344968(
                       (CommonUI_o *)Instance,
-                      v73,
-                      v100,
-                      v101,
-                      v102,
-                      v104,
+                      v74,
+                      v90,
+                      v91,
+                      v92,
+                      v96,
                       BalanceConfig_TypeInfo->static_fields->DefaultFontSize,
                       0,
                       0,
@@ -1042,47 +1070,50 @@ LABEL_102:
                   goto LABEL_102;
                 }
 LABEL_103:
-                sub_1B00F30(photoCampaignManager, v31);
+                sub_1B6432C(photoCampaignManager, v78);
               }
             }
           }
         }
       }
     }
-    v105 = sub_1B00F4C();
-    sub_1B00DF4(v105, 0LL);
+    v97 = sub_1B64348();
+    sub_1B641F0(v97, 0LL);
   }
-  if ( !PhotoCampaignListViewItem__get_IsCanNotSelect((PhotoCampaignListViewItem_o *)photoCampaignManager, v31) )
+  if ( !PhotoCampaignListViewItem__get_IsCanNotSelect((PhotoCampaignListViewItem_o *)photoCampaignManager, v36) )
   {
     selectedUsrSvtId = this->fields.selectedUsrSvtId;
-    v56 = Method_PhotoCampaignComponent_OnClickServant__;
+    v57 = Method_PhotoCampaignComponent_OnClickServant__;
     if ( (*((_BYTE *)Method_PhotoCampaignComponent_OnClickServant__ + 83) & 2) != 0 )
-      v56 = (_QWORD *)sub_1B00CE4(Method_PhotoCampaignComponent_OnClickServant__);
-    v42 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v56, v56[4]);
+      v57 = (_QWORD *)sub_1B640E0(Method_PhotoCampaignComponent_OnClickServant__);
+    v39 = (System_Reflection_MethodBase_o *)sub_1B640AC(v57, v57[4]);
     if ( (selectedUsrSvtId & 0x8000000000000000LL) != 0 )
     {
-      OverwriteAssetSoundName__PlaySystemSe(v42, 0, 0LL);
-      PhotoCampaignComponent__RecursiveOpenSelectImageLimitDialog(this, *v37, v67);
+      OverwriteAssetSoundName__PlaySystemSe(v39, 0, 0LL);
+      PhotoCampaignComponent__RecursiveOpenSelectImageLimitDialog(this, *p_monitor, v68);
       return;
     }
     goto LABEL_43;
   }
-  v49 = Method_PhotoCampaignComponent_OnClickServant__;
+  v48 = Method_PhotoCampaignComponent_OnClickServant__;
   if ( (*((_BYTE *)Method_PhotoCampaignComponent_OnClickServant__ + 83) & 2) != 0 )
-    v49 = (_QWORD *)sub_1B00CE4(Method_PhotoCampaignComponent_OnClickServant__);
-  v50 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v49, v49[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v50, 2, 0LL);
-  v51 = this->fields.photoCampaignManager;
-  v52 = (PhotoCampaignListViewManager_CallbackFunc_o *)sub_1B00F18(PhotoCampaignListViewManager_CallbackFunc_TypeInfo);
-  v54 = (int)Method_PhotoCampaignComponent_OnClickServant__;
+    v48 = (_QWORD *)sub_1B640E0(Method_PhotoCampaignComponent_OnClickServant__);
+  v49 = (System_Reflection_MethodBase_o *)sub_1B640AC(v48, v48[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v49, 2, 0LL);
+  v50 = this->fields.photoCampaignManager;
+  v53 = (PhotoCampaignListViewManager_CallbackFunc_o *)sub_1B64314(
+                                                         PhotoCampaignListViewManager_CallbackFunc_TypeInfo,
+                                                         v51,
+                                                         v52);
+  v55 = (int)Method_PhotoCampaignComponent_OnClickServant__;
 LABEL_46:
-  v57 = v52;
-  PhotoCampaignListViewManager_CallbackFunc___ctor(v52, (Il2CppObject *)this, v54, v53);
-  if ( !v51 )
+  v60 = v53;
+  PhotoCampaignListViewManager_CallbackFunc___ctor(v53, (Il2CppObject *)this, v55, v54);
+  if ( !v50 )
     goto LABEL_102;
-  v51->fields.callbackFunc = v57;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&v51->fields.callbackFunc, (int32_t)v57, v58, v59);
-  PhotoCampaignListViewManager__SetMode_30703352(v51, 2, v60);
+  v50->fields.callbackFunc = v60;
+  sub_1B6406C(&v50->fields.callbackFunc);
+  PhotoCampaignListViewManager__SetMode_31300968(v50, 2, v61);
 }
 
 
@@ -1096,27 +1127,24 @@ void __fastcall PhotoCampaignComponent__Open(
 {
   __int64 v9; // x1
   int64_t gameObject; // x0
-  __int64 v11; // x1
-  int32_t v12; // w2
-  int32_t v13; // w3
   struct MyRoomControl_o *myRoomControl; // x8
-  UnityEngine_GameObject_o *v15; // x20
-  PhotoCampaignComponent_o *v16; // x0
-  const MethodInfo *v17; // x1
-  const MethodInfo *v18; // x3
-  const MethodInfo *v19; // x1
+  UnityEngine_GameObject_o *v12; // x20
+  PhotoCampaignComponent_o *v13; // x0
+  const MethodInfo *v14; // x1
+  const MethodInfo *v15; // x3
+  const MethodInfo *v16; // x1
   struct PhotoCampaignListViewManager_o *photoCampaignManager; // x20
-  PhotoCampaignListViewManager_CallbackFunc_o *v21; // x21
-  const MethodInfo *v22; // x3
-  int32_t v23; // w2
-  int32_t v24; // w3
-  const MethodInfo *v25; // x2
+  __int64 v18; // x1
+  __int64 v19; // x2
+  PhotoCampaignListViewManager_CallbackFunc_o *v20; // x21
+  const MethodInfo *v21; // x3
+  const MethodInfo *v22; // x2
 
-  if ( (byte_48DE620 & 1) == 0 )
+  if ( (byte_49F7EEE & 1) == 0 )
   {
-    sub_1B00CCC(&PhotoCampaignListViewManager_CallbackFunc_TypeInfo, *(_QWORD *)&type);
-    sub_1B00CCC(&Method_PhotoCampaignComponent_OnClickServant__, v9);
-    byte_48DE620 = 1;
+    sub_1B640C8(&PhotoCampaignListViewManager_CallbackFunc_TypeInfo, *(_QWORD *)&type);
+    sub_1B640C8(&Method_PhotoCampaignComponent_OnClickServant__, v9);
+    byte_49F7EEE = 1;
   }
   this->fields.selectedImageLimitCount = 0;
   this->fields.selectedMasterEquipId = equipId;
@@ -1128,12 +1156,12 @@ void __fastcall PhotoCampaignComponent__Open(
     goto LABEL_12;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
   this->fields.cancelCallback = 0LL;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.cancelCallback, 0, v12, v13);
+  sub_1B6406C(&this->fields.cancelCallback);
   gameObject = (int64_t)this->fields.titleInfo;
   this->fields.photoType = type;
   if ( !gameObject )
     goto LABEL_12;
-  TitleInfoControl__changeTitleInfo_35993624((TitleInfoControl_o *)gameObject, 1, 60, 0, 0LL);
+  TitleInfoControl__changeTitleInfo_36879176((TitleInfoControl_o *)gameObject, 1, 60, 0, 0LL);
   myRoomControl = this->fields.myRoomControl;
   if ( !myRoomControl )
     goto LABEL_12;
@@ -1144,33 +1172,36 @@ void __fastcall PhotoCampaignComponent__Open(
   gameObject = (int64_t)this->fields.bgTxtSprite;
   if ( !gameObject )
     goto LABEL_12;
-  v15 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
+  v12 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
   gameObject = BgTxtManager__IsActiveBgTxt(0LL);
-  if ( !v15
-    || (UnityEngine_GameObject__SetActive(v15, gameObject & 1, 0LL),
-        gameObject = PhotoCampaignComponent__GetLatestSelectedUsrSvtId(v16, v17),
+  if ( !v12
+    || (UnityEngine_GameObject__SetActive(v12, gameObject & 1, 0LL),
+        gameObject = PhotoCampaignComponent__GetLatestSelectedUsrSvtId(v13, v14),
         !this->fields.photoCampaignManager)
     || (PhotoCampaignListViewManager__CreateList(
           this->fields.photoCampaignManager,
           gameObject,
           this->fields.selectedUsrSvtId,
-          v18),
-        PhotoCampaignComponent__UpdateScaleChangeIconSprite(this, v19),
+          v15),
+        PhotoCampaignComponent__UpdateScaleChangeIconSprite(this, v16),
         photoCampaignManager = this->fields.photoCampaignManager,
-        v21 = (PhotoCampaignListViewManager_CallbackFunc_o *)sub_1B00F18(PhotoCampaignListViewManager_CallbackFunc_TypeInfo),
+        v20 = (PhotoCampaignListViewManager_CallbackFunc_o *)sub_1B64314(
+                                                               PhotoCampaignListViewManager_CallbackFunc_TypeInfo,
+                                                               v18,
+                                                               v19),
         PhotoCampaignListViewManager_CallbackFunc___ctor(
-          v21,
+          v20,
           (Il2CppObject *)this,
           (intptr_t)Method_PhotoCampaignComponent_OnClickServant__,
-          v22),
+          v21),
         !photoCampaignManager) )
   {
 LABEL_12:
-    sub_1B00F28(gameObject, v11);
+    sub_1B64324(gameObject);
   }
-  photoCampaignManager->fields.callbackFunc = v21;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&photoCampaignManager->fields.callbackFunc, (int32_t)v21, v23, v24);
-  PhotoCampaignListViewManager__SetMode_30703352(photoCampaignManager, 2, v25);
+  photoCampaignManager->fields.callbackFunc = v20;
+  sub_1B6406C(&photoCampaignManager->fields.callbackFunc);
+  PhotoCampaignListViewManager__SetMode_31300968(photoCampaignManager, 2, v22);
   this->fields.state = 2;
 }
 
@@ -1189,170 +1220,171 @@ void __fastcall PhotoCampaignComponent__PushRequest(
   __int64 v11; // x1
   __int64 v12; // x1
   CommonUI_o *limitCountSupport; // x0
-  __int64 v14; // x1
-  CommonUI_o *v15; // x23
+  CommonUI_o *v14; // x23
   struct UserServantEntity_o *userSvtEntity; // x19
-  UserServantCollectionMaster_o *v17; // x21
-  int64_t v18; // x22
-  __int64 v19; // x24
-  __int64 v20; // x25
+  UserServantCollectionMaster_o *v16; // x21
+  int64_t v17; // x22
+  __int64 v18; // x24
+  __int64 v19; // x25
   UserServantCollectionEntity_o *EntityDefinitely; // x22
-  __int128 v22; // q0
+  __int128 v21; // q0
   struct AssetsInfo_o *assetsInfo; // x8
   UserServantEntity_Fields *p_fields; // x24
-  int64_t v25; // x0
-  __int128 v26; // q1
-  NetworkManager_ResultCallbackFunc_o *v27; // x21
+  int64_t v24; // x0
+  __int128 v25; // q1
+  __int64 v26; // x1
+  __int64 v27; // x2
+  NetworkManager_ResultCallbackFunc_o *v28; // x21
   Il2CppObject *Request_object; // x0
-  __int128 v29; // q1
-  CardFavoriteRequest_o *v30; // x20
-  int32_t v31; // w26
-  int32_t v32; // w27
-  int32_t v33; // w28
-  int32_t v34; // w29
+  __int128 v30; // q1
+  CardFavoriteRequest_o *v31; // x20
+  int32_t v32; // w26
+  int32_t v33; // w27
+  int32_t v34; // w28
+  int32_t v35; // w29
   bool IsLock; // w21
-  char v36; // w23
+  char v37; // w23
   int32_t commonFlag; // w25
   int32_t battleVoice; // w22
   int32_t randomSettingOwn; // w24
-  int32_t v40; // w0
-  __int64 v41; // x8
+  int32_t v41; // w0
+  __int64 v42; // x8
   int32_t randomSettingSupport; // w19
   int32_t imageLimitCount; // [xsp+54h] [xbp-10Ch]
   int64_t targetUsrSVtId; // [xsp+58h] [xbp-108h]
-  int64_t v45; // [xsp+60h] [xbp-100h]
+  int64_t v46; // [xsp+60h] [xbp-100h]
   struct AllocMem_o *allocMem; // [xsp+68h] [xbp-F8h]
-  int64_t v47; // [xsp+70h] [xbp-F0h]
-  struct AssetsInfo_o *v48; // [xsp+78h] [xbp-E8h]
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v49; // [xsp+80h] [xbp-E0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v50; // [xsp+A0h] [xbp-C0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v51; // [xsp+C0h] [xbp-A0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v52; // [xsp+E0h] [xbp-80h]
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v53; // 0:x0.16
+  int64_t v48; // [xsp+70h] [xbp-F0h]
+  struct AssetsInfo_o *v49; // [xsp+78h] [xbp-E8h]
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v50; // [xsp+80h] [xbp-E0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v51; // [xsp+A0h] [xbp-C0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v52; // [xsp+C0h] [xbp-A0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v53; // [xsp+E0h] [xbp-80h]
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v54; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v55; // 0:x0.16
 
-  if ( (byte_48DE627 & 1) == 0 )
+  if ( (byte_49F7EF5 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataManager_GetMaster_UserServantCollectionMaster___, selectItem);
-    sub_1B00CCC(&DataManager_TypeInfo, v5);
-    sub_1B00CCC(&Method_NetworkManager_getRequest_CardFavoriteRequest___, v6);
-    sub_1B00CCC(&NetworkManager_TypeInfo, v7);
-    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v8);
-    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v9);
-    sub_1B00CCC(&Method_PhotoCampaignComponent_EndPushRequest__, v10);
-    sub_1B00CCC(&NetworkManager_ResultCallbackFunc_TypeInfo, v11);
-    sub_1B00CCC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v12);
-    byte_48DE627 = 1;
+    sub_1B640C8(&Method_DataManager_GetMaster_UserServantCollectionMaster___, selectItem);
+    sub_1B640C8(&DataManager_TypeInfo, v5);
+    sub_1B640C8(&Method_NetworkManager_getRequest_CardFavoriteRequest___, v6);
+    sub_1B640C8(&NetworkManager_TypeInfo, v7);
+    sub_1B640C8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v8);
+    sub_1B640C8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v9);
+    sub_1B640C8(&Method_PhotoCampaignComponent_EndPushRequest__, v10);
+    sub_1B640C8(&NetworkManager_ResultCallbackFunc_TypeInfo, v11);
+    sub_1B640C8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v12);
+    byte_49F7EF5 = 1;
   }
   limitCountSupport = (CommonUI_o *)UserGameMaster__getSelfUserGame(0LL);
   if ( !selectItem )
     goto LABEL_19;
-  v15 = limitCountSupport;
+  v14 = limitCountSupport;
   userSvtEntity = selectItem->fields.userSvtEntity;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  limitCountSupport = (CommonUI_o *)DataManager__GetMaster_object_((const MethodInfo_2D62BBC *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
-  if ( !v15 || !userSvtEntity )
+  limitCountSupport = (CommonUI_o *)DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+  if ( !v14 || !userSvtEntity )
     goto LABEL_19;
-  v17 = (UserServantCollectionMaster_o *)limitCountSupport;
-  v18 = *(_QWORD *)&v15->fields.m_CachedPtr;
-  v20 = *(_QWORD *)&userSvtEntity->fields.svtId.fields.currentCryptoKey;
-  v19 = *(_QWORD *)&userSvtEntity->fields.svtId.fields.fakeValue;
+  v16 = (UserServantCollectionMaster_o *)limitCountSupport;
+  v17 = *(_QWORD *)&v14->fields.m_CachedPtr;
+  v19 = *(_QWORD *)&userSvtEntity->fields.svtId.fields.currentCryptoKey;
+  v18 = *(_QWORD *)&userSvtEntity->fields.svtId.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v53.fields.currentCryptoKey = v20;
-  *(_QWORD *)&v53.fields.fakeValue = v19;
-  limitCountSupport = (CommonUI_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(v53, 0LL);
-  if ( !v17 )
+  *(_QWORD *)&v54.fields.currentCryptoKey = v19;
+  *(_QWORD *)&v54.fields.fakeValue = v18;
+  limitCountSupport = (CommonUI_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46171608(v54, 0LL);
+  if ( !v16 )
     goto LABEL_19;
-  EntityDefinitely = UserServantCollectionMaster__GetEntityDefinitely(v17, v18, (int32_t)limitCountSupport, 0LL);
-  limitCountSupport = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  EntityDefinitely = UserServantCollectionMaster__GetEntityDefinitely(v16, v17, (int32_t)limitCountSupport, 0LL);
+  limitCountSupport = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !limitCountSupport )
     goto LABEL_19;
   CommonUI__SetConnectMarkFadeInLag(limitCountSupport, 0, 0LL);
-  v22 = *(_OWORD *)&userSvtEntity->fields.id.fields.fakeValue;
-  assetsInfo = v15->fields.assetsInfo;
+  v21 = *(_OWORD *)&userSvtEntity->fields.id.fields.fakeValue;
+  assetsInfo = v14->fields.assetsInfo;
   p_fields = &userSvtEntity->fields;
-  *(_OWORD *)&v52.fields.currentCryptoKey = *(_OWORD *)&userSvtEntity->fields.id.fields.currentCryptoKey;
-  *(_OWORD *)&v52.fields.fakeValue = v22;
-  v48 = assetsInfo;
+  *(_OWORD *)&v53.fields.currentCryptoKey = *(_OWORD *)&userSvtEntity->fields.id.fields.currentCryptoKey;
+  *(_OWORD *)&v53.fields.fakeValue = v21;
+  v49 = assetsInfo;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  v51 = v52;
-  v25 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45316568(&v51, 0LL);
-  v26 = *(_OWORD *)&userSvtEntity->fields.id.fields.fakeValue;
-  allocMem = v15->fields.allocMem;
-  v47 = v25;
-  *(_OWORD *)&v50.fields.currentCryptoKey = *(_OWORD *)&p_fields->id.fields.currentCryptoKey;
-  *(_OWORD *)&v50.fields.fakeValue = v26;
-  v45 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45316568(&v50, 0LL);
-  v27 = (NetworkManager_ResultCallbackFunc_o *)sub_1B00F18(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v52 = v53;
+  v24 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46175132(&v52, 0LL);
+  v25 = *(_OWORD *)&userSvtEntity->fields.id.fields.fakeValue;
+  allocMem = v14->fields.allocMem;
+  v48 = v24;
+  *(_OWORD *)&v51.fields.currentCryptoKey = *(_OWORD *)&p_fields->id.fields.currentCryptoKey;
+  *(_OWORD *)&v51.fields.fakeValue = v25;
+  v46 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46175132(&v51, 0LL);
+  v28 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64314(NetworkManager_ResultCallbackFunc_TypeInfo, v26, v27);
   NetworkManager_ResultCallbackFunc___ctor(
-    v27,
+    v28,
     (Il2CppObject *)this,
     Method_PhotoCampaignComponent_EndPushRequest__,
     0LL);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
-                     v27,
-                     (const MethodInfo_2DD4818 *)Method_NetworkManager_getRequest_CardFavoriteRequest___);
-  v29 = *(_OWORD *)&userSvtEntity->fields.id.fields.fakeValue;
-  v30 = (CardFavoriteRequest_o *)Request_object;
-  *(_OWORD *)&v49.fields.currentCryptoKey = *(_OWORD *)&p_fields->id.fields.currentCryptoKey;
-  *(_OWORD *)&v49.fields.fakeValue = v29;
-  targetUsrSVtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45316568(&v49, 0LL);
-  imageLimitCount = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(
+                     v28,
+                     (const MethodInfo_2EBA9D0 *)Method_NetworkManager_getRequest_CardFavoriteRequest___);
+  v30 = *(_OWORD *)&userSvtEntity->fields.id.fields.fakeValue;
+  v31 = (CardFavoriteRequest_o *)Request_object;
+  *(_OWORD *)&v50.fields.currentCryptoKey = *(_OWORD *)&p_fields->id.fields.currentCryptoKey;
+  *(_OWORD *)&v50.fields.fakeValue = v30;
+  targetUsrSVtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46175132(&v50, 0LL);
+  imageLimitCount = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46171608(
                       userSvtEntity->fields.imageLimitCount,
                       0LL);
-  v31 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(userSvtEntity->fields.dispLimitCount, 0LL);
-  v32 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(
+  v32 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46171608(userSvtEntity->fields.dispLimitCount, 0LL);
+  v33 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46171608(
           userSvtEntity->fields.commandCardLimitCount,
           0LL);
-  v33 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(userSvtEntity->fields.iconLimitCount, 0LL);
-  v34 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(
+  v34 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46171608(userSvtEntity->fields.iconLimitCount, 0LL);
+  v35 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46171608(
           userSvtEntity->fields.portraitLimitCount,
           0LL);
   IsLock = UserServantEntity__IsLock(userSvtEntity, 0LL);
   limitCountSupport = (CommonUI_o *)UserServantEntity__IsChoice(userSvtEntity, 0LL);
   if ( !EntityDefinitely )
     goto LABEL_19;
-  v36 = (char)limitCountSupport;
+  v37 = (char)limitCountSupport;
   commonFlag = EntityDefinitely->fields.svtCommonFlag;
-  battleVoice = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(
+  battleVoice = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46171608(
                   userSvtEntity->fields.battleVoice,
                   0LL);
-  randomSettingOwn = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(
+  randomSettingOwn = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46171608(
                        userSvtEntity->fields.randomLimitCount,
                        0LL);
-  v40 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(
+  v41 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46171608(
           userSvtEntity->fields.randomLimitCountSupport,
           0LL);
-  v41 = *(_QWORD *)&userSvtEntity->fields.limitCountSupport.fields.currentCryptoKey;
-  *(_QWORD *)&v54.fields.fakeValue = *(_QWORD *)&userSvtEntity->fields.limitCountSupport.fields.fakeValue;
-  randomSettingSupport = v40;
-  *(_QWORD *)&v54.fields.currentCryptoKey = v41;
-  limitCountSupport = (CommonUI_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_45313044(v54, 0LL);
-  if ( !v30 )
+  v42 = *(_QWORD *)&userSvtEntity->fields.limitCountSupport.fields.currentCryptoKey;
+  *(_QWORD *)&v55.fields.fakeValue = *(_QWORD *)&userSvtEntity->fields.limitCountSupport.fields.fakeValue;
+  randomSettingSupport = v41;
+  *(_QWORD *)&v55.fields.currentCryptoKey = v42;
+  limitCountSupport = (CommonUI_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46171608(v55, 0LL);
+  if ( !v31 )
 LABEL_19:
-    sub_1B00F28(limitCountSupport, v14);
+    sub_1B64324(limitCountSupport);
   CardFavoriteRequest__beginRequest(
-    v30,
+    v31,
     targetUsrSVtId,
     imageLimitCount,
-    v31,
     v32,
     v33,
     v34,
-    allocMem == (struct AllocMem_o *)v45,
+    v35,
+    allocMem == (struct AllocMem_o *)v46,
     IsLock,
-    v36 & 1,
+    v37 & 1,
     commonFlag,
     battleVoice,
     randomSettingOwn,
     randomSettingSupport,
     (int32_t)limitCountSupport,
-    v48 != (struct AssetsInfo_o *)v47,
+    v49 != (struct AssetsInfo_o *)v48,
     0LL);
 }
 
@@ -1365,62 +1397,59 @@ void __fastcall PhotoCampaignComponent__RecursiveOpenSelectImageLimitDialog(
   __int64 v5; // x1
   __int64 v6; // x1
   __int64 v7; // x1
-  __int64 v8; // x20
+  Il2CppObject *v8; // x20
   __int64 v9; // x0
-  __int64 v10; // x1
-  int32_t v11; // w2
-  int32_t v12; // w3
-  int32_t v13; // w2
-  int32_t v14; // w3
-  __int64 v15; // x8
-  __int64 v16; // x8
-  __int128 v17; // q1
+  _QWORD *monitor; // x8
+  __int64 v11; // x8
+  __int128 v12; // q1
   MyRoomControl_o *myRoomControl; // x19
-  int64_t v19; // x21
-  System_Action_bool__int__o *v20; // x22
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v21; // [xsp+0h] [xbp-70h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v22; // [xsp+20h] [xbp-50h]
+  int64_t v14; // x21
+  __int64 v15; // x1
+  __int64 v16; // x2
+  System_Action_bool__int__o *v17; // x22
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v18; // [xsp+0h] [xbp-70h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v19; // [xsp+20h] [xbp-50h]
 
-  if ( (byte_48DE626 & 1) == 0 )
+  if ( (byte_49F7EF4 & 1) == 0 )
   {
-    sub_1B00CCC(&System_Action_bool__int__TypeInfo, item);
-    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v5);
-    sub_1B00CCC(&Method_PhotoCampaignComponent___c__DisplayClass40_0__RecursiveOpenSelectImageLimitDialog_b__0__, v6);
-    sub_1B00CCC(&PhotoCampaignComponent___c__DisplayClass40_0_TypeInfo, v7);
-    byte_48DE626 = 1;
+    sub_1B640C8(&System_Action_bool__int__TypeInfo, item);
+    sub_1B640C8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v5);
+    sub_1B640C8(&Method_PhotoCampaignComponent___c__DisplayClass40_0__RecursiveOpenSelectImageLimitDialog_b__0__, v6);
+    sub_1B640C8(&PhotoCampaignComponent___c__DisplayClass40_0_TypeInfo, v7);
+    byte_49F7EF4 = 1;
   }
-  v8 = sub_1B00F18(PhotoCampaignComponent___c__DisplayClass40_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v8, 0LL);
+  v8 = (Il2CppObject *)sub_1B64314(PhotoCampaignComponent___c__DisplayClass40_0_TypeInfo, item, method);
+  System_Object___ctor(v8, 0LL);
   if ( !v8 )
     goto LABEL_10;
-  *(_QWORD *)(v8 + 16) = this;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v8 + 16), (int32_t)this, v11, v12);
-  *(_QWORD *)(v8 + 24) = item;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v8 + 24), (int32_t)item, v13, v14);
-  v15 = *(_QWORD *)(v8 + 24);
-  if ( !v15 )
+  v8[1].klass = (Il2CppClass *)this;
+  sub_1B6406C(&v8[1]);
+  v8[1].monitor = item;
+  v9 = sub_1B6406C(&v8[1].monitor);
+  monitor = v8[1].monitor;
+  if ( !monitor )
     goto LABEL_10;
-  v16 = *(_QWORD *)(v15 + 112);
-  if ( !v16 )
+  v11 = monitor[14];
+  if ( !v11 )
     goto LABEL_10;
-  v17 = *(_OWORD *)(v16 + 32);
+  v12 = *(_OWORD *)(v11 + 32);
   myRoomControl = this->fields.myRoomControl;
-  *(_OWORD *)&v22.fields.currentCryptoKey = *(_OWORD *)(v16 + 16);
-  *(_OWORD *)&v22.fields.fakeValue = v17;
+  *(_OWORD *)&v19.fields.currentCryptoKey = *(_OWORD *)(v11 + 16);
+  *(_OWORD *)&v19.fields.fakeValue = v12;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  v21 = v22;
-  v19 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45316568(&v21, 0LL);
-  v20 = (System_Action_bool__int__o *)sub_1B00F18(System_Action_bool__int__TypeInfo);
+  v18 = v19;
+  v14 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46175132(&v18, 0LL);
+  v17 = (System_Action_bool__int__o *)sub_1B64314(System_Action_bool__int__TypeInfo, v15, v16);
   System_Action_bool__int____ctor(
-    v20,
-    (Il2CppObject *)v8,
+    v17,
+    v8,
     Method_PhotoCampaignComponent___c__DisplayClass40_0__RecursiveOpenSelectImageLimitDialog_b__0__,
     0LL);
   if ( !myRoomControl )
 LABEL_10:
-    sub_1B00F28(v9, v10);
-  MyRoomControl__OpenSelectImageLimit(myRoomControl, 26, v19, v20, -1, 0LL);
+    sub_1B64324(v9);
+  MyRoomControl__OpenSelectImageLimit(myRoomControl, 26, v14, v17, -1, 0LL);
 }
 
 
@@ -1433,13 +1462,13 @@ void __fastcall PhotoCampaignComponent__SetLatestSelectedUsrSvtId(
   int64_t v4; // [xsp+8h] [xbp-18h] BYREF
 
   v4 = usrSvtId;
-  if ( (byte_48DE622 & 1) == 0 )
+  if ( (byte_49F7EF0 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_10487/*"PhotoCampaignSelectedUsrSvtId2024"*/, usrSvtId);
-    byte_48DE622 = 1;
+    sub_1B640C8(&StringLiteral_10568/*"PhotoCampaignSelectedUsrSvtId2024"*/, usrSvtId);
+    byte_49F7EF0 = 1;
   }
   v3 = System_Int64__ToString((int64_t)&v4, 0LL);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_10487/*"PhotoCampaignSelectedUsrSvtId2024"*/, v3, 0LL);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_10568/*"PhotoCampaignSelectedUsrSvtId2024"*/, v3, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
 }
 
@@ -1474,22 +1503,22 @@ void __fastcall PhotoCampaignComponent__SetModeTabKind(
   __int64 *v26; // x8
   const MethodInfo *v27; // x2
 
-  if ( (byte_48DE62E & 1) == 0 )
+  if ( (byte_49F7EFC & 1) == 0 )
   {
-    sub_1B00CCC(&LocalizationManager_TypeInfo, *(_QWORD *)&modeKind);
-    sub_1B00CCC(&StringLiteral_11435/*"SERVANT_LIST_EXPLANATION_PUSH"*/, v5);
-    sub_1B00CCC(&StringLiteral_17419/*"button_push_reg"*/, v6);
-    sub_1B00CCC(&StringLiteral_17420/*"button_push_unreg"*/, v7);
-    sub_1B00CCC(&StringLiteral_17405/*"button_allchoice_reg"*/, v8);
-    sub_1B00CCC(&StringLiteral_17408/*"button_alllock_unreg"*/, v9);
-    sub_1B00CCC(&StringLiteral_11433/*"SERVANT_LIST_EXPLANATION_CHOICE"*/, v10);
-    sub_1B00CCC(&StringLiteral_7034/*"HEADER_MSG_PHOTO_SERVANT"*/, v11);
-    sub_1B00CCC(&StringLiteral_11434/*"SERVANT_LIST_EXPLANATION_LOCK"*/, v12);
-    sub_1B00CCC(&StringLiteral_17421/*"button_select_reg"*/, v13);
-    sub_1B00CCC(&StringLiteral_17422/*"button_select_unreg"*/, v14);
-    sub_1B00CCC(&StringLiteral_17407/*"button_alllock_reg"*/, v15);
-    sub_1B00CCC(&StringLiteral_17406/*"button_allchoice_unreg"*/, v16);
-    byte_48DE62E = 1;
+    sub_1B640C8(&LocalizationManager_TypeInfo, *(_QWORD *)&modeKind);
+    sub_1B640C8(&StringLiteral_11570/*"SERVANT_LIST_EXPLANATION_PUSH"*/, v5);
+    sub_1B640C8(&StringLiteral_17591/*"button_push_reg"*/, v6);
+    sub_1B640C8(&StringLiteral_17592/*"button_push_unreg"*/, v7);
+    sub_1B640C8(&StringLiteral_17577/*"button_allchoice_reg"*/, v8);
+    sub_1B640C8(&StringLiteral_17580/*"button_alllock_unreg"*/, v9);
+    sub_1B640C8(&StringLiteral_11568/*"SERVANT_LIST_EXPLANATION_CHOICE"*/, v10);
+    sub_1B640C8(&StringLiteral_7081/*"HEADER_MSG_PHOTO_SERVANT"*/, v11);
+    sub_1B640C8(&StringLiteral_11569/*"SERVANT_LIST_EXPLANATION_LOCK"*/, v12);
+    sub_1B640C8(&StringLiteral_17593/*"button_select_reg"*/, v13);
+    sub_1B640C8(&StringLiteral_17594/*"button_select_unreg"*/, v14);
+    sub_1B640C8(&StringLiteral_17579/*"button_alllock_reg"*/, v15);
+    sub_1B640C8(&StringLiteral_17578/*"button_allchoice_unreg"*/, v16);
+    byte_49F7EFC = 1;
   }
   if ( this->fields.tabModeKind != modeKind )
   {
@@ -1505,7 +1534,7 @@ void __fastcall PhotoCampaignComponent__SetModeTabKind(
     normalTabButton = (UnityEngine_Behaviour_o *)this->fields.normalTabSprite;
     if ( !normalTabButton )
       goto LABEL_51;
-    v18 = (System_String_o **)(this->fields.tabModeKind ? &StringLiteral_17422/*"button_select_unreg"*/ : &StringLiteral_17421/*"button_select_reg"*/);
+    v18 = (System_String_o **)(this->fields.tabModeKind ? &StringLiteral_17594/*"button_select_unreg"*/ : &StringLiteral_17593/*"button_select_reg"*/);
     UISprite__set_spriteName((UISprite_o *)normalTabButton, *v18, 0LL);
     normalTabButton = (UnityEngine_Behaviour_o *)this->fields.lockTabButton;
     if ( !normalTabButton )
@@ -1518,7 +1547,7 @@ void __fastcall PhotoCampaignComponent__SetModeTabKind(
     normalTabButton = (UnityEngine_Behaviour_o *)this->fields.lockTabSprite;
     if ( !normalTabButton )
       goto LABEL_51;
-    v19 = (System_String_o **)(this->fields.tabModeKind == 1 ? &StringLiteral_17407/*"button_alllock_reg"*/ : &StringLiteral_17408/*"button_alllock_unreg"*/);
+    v19 = (System_String_o **)(this->fields.tabModeKind == 1 ? &StringLiteral_17579/*"button_alllock_reg"*/ : &StringLiteral_17580/*"button_alllock_unreg"*/);
     UISprite__set_spriteName((UISprite_o *)normalTabButton, *v19, 0LL);
     normalTabButton = (UnityEngine_Behaviour_o *)this->fields.choiceTabButton;
     if ( !normalTabButton )
@@ -1531,7 +1560,7 @@ void __fastcall PhotoCampaignComponent__SetModeTabKind(
     normalTabButton = (UnityEngine_Behaviour_o *)this->fields.choiceTabSprite;
     if ( !normalTabButton )
       goto LABEL_51;
-    v20 = (System_String_o **)(this->fields.tabModeKind == 2 ? &StringLiteral_17405/*"button_allchoice_reg"*/ : &StringLiteral_17406/*"button_allchoice_unreg"*/);
+    v20 = (System_String_o **)(this->fields.tabModeKind == 2 ? &StringLiteral_17577/*"button_allchoice_reg"*/ : &StringLiteral_17578/*"button_allchoice_unreg"*/);
     UISprite__set_spriteName((UISprite_o *)normalTabButton, *v20, 0LL);
     normalTabButton = (UnityEngine_Behaviour_o *)this->fields.pushTabButton;
     if ( !normalTabButton
@@ -1544,12 +1573,12 @@ void __fastcall PhotoCampaignComponent__SetModeTabKind(
           (normalTabButton = (UnityEngine_Behaviour_o *)this->fields.pushTabSprite) == 0LL) )
     {
 LABEL_51:
-      sub_1B00F28(normalTabButton, *(_QWORD *)&modeKind);
+      sub_1B64324(normalTabButton);
     }
     if ( this->fields.tabModeKind == 3 )
-      v21 = &StringLiteral_17419/*"button_push_reg"*/;
+      v21 = &StringLiteral_17591/*"button_push_reg"*/;
     else
-      v21 = &StringLiteral_17420/*"button_push_unreg"*/;
+      v21 = &StringLiteral_17592/*"button_push_unreg"*/;
     UISprite__set_spriteName((UISprite_o *)normalTabButton, (System_String_o *)*v21, 0LL);
     switch ( modeKind )
     {
@@ -1558,7 +1587,7 @@ LABEL_51:
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         normalTabButton = (UnityEngine_Behaviour_o *)LocalizationManager__Get(
-                                                       (System_String_o *)StringLiteral_7034/*"HEADER_MSG_PHOTO_SERVANT"*/,
+                                                       (System_String_o *)StringLiteral_7081/*"HEADER_MSG_PHOTO_SERVANT"*/,
                                                        0LL);
         if ( !infoLb )
           goto LABEL_51;
@@ -1572,19 +1601,19 @@ LABEL_51:
         v25 = this->fields.infoLb;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v26 = &StringLiteral_11434/*"SERVANT_LIST_EXPLANATION_LOCK"*/;
+        v26 = &StringLiteral_11569/*"SERVANT_LIST_EXPLANATION_LOCK"*/;
         goto LABEL_45;
       case 2:
         v25 = this->fields.infoLb;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v26 = &StringLiteral_11433/*"SERVANT_LIST_EXPLANATION_CHOICE"*/;
+        v26 = &StringLiteral_11568/*"SERVANT_LIST_EXPLANATION_CHOICE"*/;
         goto LABEL_45;
       case 3:
         v25 = this->fields.infoLb;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v26 = &StringLiteral_11435/*"SERVANT_LIST_EXPLANATION_PUSH"*/;
+        v26 = &StringLiteral_11570/*"SERVANT_LIST_EXPLANATION_PUSH"*/;
 LABEL_45:
         normalTabButton = (UnityEngine_Behaviour_o *)LocalizationManager__Get((System_String_o *)*v26, 0LL);
         if ( !v25 )
@@ -1604,7 +1633,7 @@ LABEL_49:
         normalTabButton = (UnityEngine_Behaviour_o *)this->fields.photoCampaignManager;
         if ( !normalTabButton )
           goto LABEL_51;
-        PhotoCampaignListViewManager__SetMode_30703352((PhotoCampaignListViewManager_o *)normalTabButton, 2, v27);
+        PhotoCampaignListViewManager__SetMode_31300968((PhotoCampaignListViewManager_o *)normalTabButton, 2, v27);
         break;
       default:
         normalTabButton = (UnityEngine_Behaviour_o *)this->fields.photoCampaignManager;
@@ -1627,28 +1656,28 @@ void __fastcall PhotoCampaignComponent__StatusRequest(
   __int64 v8; // x1
   int32_t tabModeKind; // w8
   PhotoCampaignListViewManager_o *photoCampaignManager; // x0
-  int32_t v11; // w2
-  int32_t v12; // w3
+  __int64 v11; // x1
+  __int64 v12; // x2
   NetworkManager_ResultCallbackFunc_o *v13; // x20
   System_Int64_array *v14; // x1
   System_Int64_array *v15; // x2
   bool v16; // w4
   bool v17; // w5
-  int32_t v18; // w2
-  int32_t v19; // w3
+  __int64 v18; // x1
+  __int64 v19; // x2
   NetworkManager_ResultCallbackFunc_o *v20; // x20
   System_Int64_array *v21; // [xsp+0h] [xbp-40h] BYREF
   System_Int64_array *choiceList; // [xsp+8h] [xbp-38h] BYREF
   System_Int64_array *unlockList; // [xsp+10h] [xbp-30h] BYREF
   System_Int64_array *lockList; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_48DE62F & 1) == 0 )
+  if ( (byte_49F7EFD & 1) == 0 )
   {
-    sub_1B00CCC(&Method_NetworkManager_getRequest_CardStatusSyncRequest___, callback);
-    sub_1B00CCC(&NetworkManager_TypeInfo, v6);
-    sub_1B00CCC(&Method_PhotoCampaignComponent_EndStatusSync__, v7);
-    sub_1B00CCC(&NetworkManager_ResultCallbackFunc_TypeInfo, v8);
-    byte_48DE62F = 1;
+    sub_1B640C8(&Method_NetworkManager_getRequest_CardStatusSyncRequest___, callback);
+    sub_1B640C8(&NetworkManager_TypeInfo, v6);
+    sub_1B640C8(&Method_PhotoCampaignComponent_EndStatusSync__, v7);
+    sub_1B640C8(&NetworkManager_ResultCallbackFunc_TypeInfo, v8);
+    byte_49F7EFD = 1;
   }
   unlockList = 0LL;
   lockList = 0LL;
@@ -1663,8 +1692,8 @@ void __fastcall PhotoCampaignComponent__StatusRequest(
     if ( PhotoCampaignListViewManager__GetSwapChoiceList(photoCampaignManager, &choiceList, &v21, v3) )
     {
       this->fields.requestCallback = callback;
-      sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.requestCallback, (int32_t)callback, v18, v19);
-      v20 = (NetworkManager_ResultCallbackFunc_o *)sub_1B00F18(NetworkManager_ResultCallbackFunc_TypeInfo);
+      sub_1B6406C(&this->fields.requestCallback);
+      v20 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64314(NetworkManager_ResultCallbackFunc_TypeInfo, v18, v19);
       NetworkManager_ResultCallbackFunc___ctor(
         v20,
         (Il2CppObject *)this,
@@ -1674,7 +1703,7 @@ void __fastcall PhotoCampaignComponent__StatusRequest(
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       photoCampaignManager = (PhotoCampaignListViewManager_o *)NetworkManager__getRequest_object_(
                                                                  v20,
-                                                                 (const MethodInfo_2DD4818 *)Method_NetworkManager_getRequest_CardStatusSyncRequest___);
+                                                                 (const MethodInfo_2EBA9D0 *)Method_NetworkManager_getRequest_CardStatusSyncRequest___);
       if ( photoCampaignManager )
       {
         v15 = v21;
@@ -1684,7 +1713,7 @@ void __fastcall PhotoCampaignComponent__StatusRequest(
         goto LABEL_17;
       }
 LABEL_21:
-      sub_1B00F28(photoCampaignManager, callback);
+      sub_1B64324(photoCampaignManager);
     }
   }
   else if ( tabModeKind == 1 )
@@ -1695,8 +1724,8 @@ LABEL_21:
     if ( PhotoCampaignListViewManager__GetSwapLockList(photoCampaignManager, &lockList, &unlockList, v3) )
     {
       this->fields.requestCallback = callback;
-      sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.requestCallback, (int32_t)callback, v11, v12);
-      v13 = (NetworkManager_ResultCallbackFunc_o *)sub_1B00F18(NetworkManager_ResultCallbackFunc_TypeInfo);
+      sub_1B6406C(&this->fields.requestCallback);
+      v13 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64314(NetworkManager_ResultCallbackFunc_TypeInfo, v11, v12);
       NetworkManager_ResultCallbackFunc___ctor(
         v13,
         (Il2CppObject *)this,
@@ -1706,7 +1735,7 @@ LABEL_21:
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       photoCampaignManager = (PhotoCampaignListViewManager_o *)NetworkManager__getRequest_object_(
                                                                  v13,
-                                                                 (const MethodInfo_2DD4818 *)Method_NetworkManager_getRequest_CardStatusSyncRequest___);
+                                                                 (const MethodInfo_2EBA9D0 *)Method_NetworkManager_getRequest_CardStatusSyncRequest___);
       if ( photoCampaignManager )
       {
         v15 = unlockList;
@@ -1743,7 +1772,7 @@ void __fastcall PhotoCampaignComponent__UpdateScaleChangeIconSprite(
                                                                    method),
         !scaleChangeTabSprite) )
   {
-    sub_1B00F28(photoCampaignManager, method);
+    sub_1B64324(photoCampaignManager);
   }
   UISprite__set_spriteName(scaleChangeTabSprite, (System_String_o *)photoCampaignManager, 0LL);
 }
@@ -1767,15 +1796,15 @@ void __fastcall PhotoCampaignComponent_RequestCallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1B6406C(&this->fields.method);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B00D8C(v6) & 1) == 0 )
+  if ( (sub_1B64188(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B00F44(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B00DF4(v10, 0LL);
+      v10 = sub_1B64340(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B641F0(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -1787,9 +1816,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1944B24;
+  this->fields.m_target = (Il2CppObject *)sub_19A5820;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1944ADC;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19A57D8;
 }
 
 
@@ -1805,14 +1834,14 @@ System_IAsyncResult_o *__fastcall PhotoCampaignComponent_RequestCallbackFunc__Be
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isRequest;
-  if ( (byte_48DE631 & 1) == 0 )
+  if ( (byte_49F7EFF & 1) == 0 )
   {
-    sub_1B00CCC(&bool_TypeInfo, isRequest);
-    byte_48DE631 = 1;
+    sub_1B640C8(&bool_TypeInfo, isRequest);
+    byte_49F7EFF = 1;
   }
   v9[1] = 0LL;
-  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1B00C80(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
+  return (System_IAsyncResult_o *)sub_1B6407C(this, v9, callback, object);
 }
 
 
@@ -1821,7 +1850,7 @@ void __fastcall PhotoCampaignComponent_RequestCallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B00C84(result, 0LL, method);
+  sub_1B64080(result, 0LL, method);
 }
 
 
@@ -1855,41 +1884,40 @@ void __fastcall PhotoCampaignComponent___c__DisplayClass39_0___OnClickServant_b_
   __int64 v6; // x1
   Il2CppObject *Instance; // x0
   __int64 v8; // x1
-  CommonUI_o *v9; // x20
+  __int64 v9; // x2
+  CommonUI_o *v10; // x20
   System_Action_o *_9__1; // x22
-  int32_t v11; // w2
-  int32_t v12; // w3
 
-  if ( (byte_48DE632 & 1) == 0 )
+  if ( (byte_49F7F00 & 1) == 0 )
   {
-    sub_1B00CCC(&System_Action_TypeInfo, isDecide);
-    sub_1B00CCC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_1B00CCC(&Method_PhotoCampaignComponent___c__DisplayClass39_0__OnClickServant_b__1__, v6);
-    byte_48DE632 = 1;
+    sub_1B640C8(&System_Action_TypeInfo, isDecide);
+    sub_1B640C8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    sub_1B640C8(&Method_PhotoCampaignComponent___c__DisplayClass39_0__OnClickServant_b__1__, v6);
+    byte_49F7F00 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v9 = (CommonUI_o *)Instance;
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v10 = (CommonUI_o *)Instance;
   if ( isDecide )
   {
     _9__1 = this->fields.__9__1;
     if ( !_9__1 )
     {
-      _9__1 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+      _9__1 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v8, v9);
       System_Action___ctor(
         _9__1,
         (Il2CppObject *)this,
         Method_PhotoCampaignComponent___c__DisplayClass39_0__OnClickServant_b__1__,
         0LL);
       this->fields.__9__1 = _9__1;
-      sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.__9__1, (int32_t)_9__1, v11, v12);
+      Instance = (Il2CppObject *)sub_1B6406C(&this->fields.__9__1);
     }
-    if ( v9 )
+    if ( v10 )
     {
-      CommonUI__CloseConfirmDialog_29937364(v9, _9__1, 0LL);
+      CommonUI__CloseConfirmDialog_30345628(v10, _9__1, 0LL);
       return;
     }
 LABEL_10:
-    sub_1B00F28(Instance, v8);
+    sub_1B64324(Instance);
   }
   if ( !Instance )
     goto LABEL_10;
@@ -1904,7 +1932,7 @@ void __fastcall PhotoCampaignComponent___c__DisplayClass39_0___OnClickServant_b_
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   PhotoCampaignComponent__PushRequest(this->fields.__4__this, this->fields.item, v2);
 }
 
@@ -1934,94 +1962,96 @@ void __fastcall PhotoCampaignComponent___c__DisplayClass40_0___RecursiveOpenSele
   __int64 v14; // x20
   __int64 v15; // x0
   __int64 v16; // x1
-  int32_t v17; // w2
-  int32_t v18; // w3
+  __int64 v17; // x2
   Il2CppObject *_4__this; // x23
-  Il2CppClass *klass; // x22
-  PhotoCampaignListViewManager_CallbackFunc_o *v21; // x24
-  const MethodInfo *v22; // x3
-  int32_t v23; // w2
-  int32_t v24; // w3
-  const MethodInfo *v25; // x2
-  struct PhotoCampaignComponent_o *v26; // x21
+  PhotoCampaignListViewManager_o *klass; // x22
+  PhotoCampaignListViewManager_CallbackFunc_o *v20; // x24
+  const MethodInfo *v21; // x3
+  const MethodInfo *v22; // x2
+  __int64 v23; // x1
+  __int64 v24; // x2
+  struct PhotoCampaignComponent_o *v25; // x21
   int32_t photoType; // w8
   struct PhotoCampaignListViewItem_o *item; // x8
   struct UserServantEntity_o *userSvtEntity; // x8
-  __int128 v30; // q1
-  int64_t v31; // x0
-  const MethodInfo *v32; // x3
+  __int128 v29; // q1
+  int64_t v30; // x0
+  const MethodInfo *v31; // x3
   MyRoomControl_o *myRoomControl; // x21
-  System_Action_int__int__o *v34; // x22
+  System_Action_int__int__o *v33; // x22
+  __int64 v34; // x1
+  __int64 v35; // x2
   System_Action_o *_9__2; // x20
-  int32_t v36; // w2
-  int32_t v37; // w3
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v38; // [xsp+0h] [xbp-80h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v39; // [xsp+20h] [xbp-60h]
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v37; // [xsp+0h] [xbp-80h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v38; // [xsp+20h] [xbp-60h]
 
-  if ( (byte_48DE633 & 1) == 0 )
+  if ( (byte_49F7F01 & 1) == 0 )
   {
-    sub_1B00CCC(&System_Action_int__int__TypeInfo, result);
-    sub_1B00CCC(&System_Action_TypeInfo, v7);
-    sub_1B00CCC(&PhotoCampaignListViewManager_CallbackFunc_TypeInfo, v8);
-    sub_1B00CCC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v9);
-    sub_1B00CCC(&Method_PhotoCampaignComponent_OnClickServant__, v10);
-    sub_1B00CCC(&Method_PhotoCampaignComponent___c__DisplayClass40_0__RecursiveOpenSelectImageLimitDialog_b__2__, v11);
-    sub_1B00CCC(&Method_PhotoCampaignComponent___c__DisplayClass40_1__RecursiveOpenSelectImageLimitDialog_b__1__, v12);
-    sub_1B00CCC(&PhotoCampaignComponent___c__DisplayClass40_1_TypeInfo, v13);
-    byte_48DE633 = 1;
+    sub_1B640C8(&System_Action_int__int__TypeInfo, result);
+    sub_1B640C8(&System_Action_TypeInfo, v7);
+    sub_1B640C8(&PhotoCampaignListViewManager_CallbackFunc_TypeInfo, v8);
+    sub_1B640C8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v9);
+    sub_1B640C8(&Method_PhotoCampaignComponent_OnClickServant__, v10);
+    sub_1B640C8(&Method_PhotoCampaignComponent___c__DisplayClass40_0__RecursiveOpenSelectImageLimitDialog_b__2__, v11);
+    sub_1B640C8(&Method_PhotoCampaignComponent___c__DisplayClass40_1__RecursiveOpenSelectImageLimitDialog_b__1__, v12);
+    sub_1B640C8(&PhotoCampaignComponent___c__DisplayClass40_1_TypeInfo, v13);
+    byte_49F7F01 = 1;
   }
-  v14 = sub_1B00F18(PhotoCampaignComponent___c__DisplayClass40_1_TypeInfo);
+  v14 = sub_1B64314(PhotoCampaignComponent___c__DisplayClass40_1_TypeInfo, result, *(_QWORD *)&imageLimitCount);
   System_Object___ctor((Il2CppObject *)v14, 0LL);
   if ( !v14 )
     goto LABEL_20;
   *(_QWORD *)(v14 + 24) = this;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)(v14 + 24), (int32_t)this, v17, v18);
+  v15 = sub_1B6406C(v14 + 24);
   *(_DWORD *)(v14 + 16) = imageLimitCount;
   _4__this = (Il2CppObject *)this->fields.__4__this;
   if ( !_4__this )
     goto LABEL_20;
-  klass = _4__this[4].klass;
-  v21 = (PhotoCampaignListViewManager_CallbackFunc_o *)sub_1B00F18(PhotoCampaignListViewManager_CallbackFunc_TypeInfo);
+  klass = (PhotoCampaignListViewManager_o *)_4__this[4].klass;
+  v20 = (PhotoCampaignListViewManager_CallbackFunc_o *)sub_1B64314(
+                                                         PhotoCampaignListViewManager_CallbackFunc_TypeInfo,
+                                                         v16,
+                                                         v17);
   PhotoCampaignListViewManager_CallbackFunc___ctor(
-    v21,
+    v20,
     _4__this,
     (intptr_t)Method_PhotoCampaignComponent_OnClickServant__,
-    v22);
+    v21);
   if ( !klass )
     goto LABEL_20;
-  klass->vtable[5].methodPtr = (Il2CppMethodPointer)v21;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&klass->vtable[5], (int32_t)v21, v23, v24);
-  PhotoCampaignListViewManager__SetMode_30703352((PhotoCampaignListViewManager_o *)klass, 2, v25);
+  klass->fields.callbackFunc = v20;
+  sub_1B6406C(&klass->fields.callbackFunc);
+  PhotoCampaignListViewManager__SetMode_31300968(klass, 2, v22);
   if ( !result )
     return;
-  v26 = this->fields.__4__this;
-  if ( !v26 )
+  v25 = this->fields.__4__this;
+  if ( !v25 )
     goto LABEL_20;
-  photoType = v26->fields.photoType;
+  photoType = v25->fields.photoType;
   if ( photoType == 1 )
   {
-    myRoomControl = v26->fields.myRoomControl;
-    v34 = (System_Action_int__int__o *)sub_1B00F18(System_Action_int__int__TypeInfo);
+    myRoomControl = v25->fields.myRoomControl;
+    v33 = (System_Action_int__int__o *)sub_1B64314(System_Action_int__int__TypeInfo, v23, v24);
     System_Action_int__int____ctor(
-      v34,
+      v33,
       (Il2CppObject *)v14,
       Method_PhotoCampaignComponent___c__DisplayClass40_1__RecursiveOpenSelectImageLimitDialog_b__1__,
       0LL);
     _9__2 = this->fields.__9__2;
     if ( !_9__2 )
     {
-      _9__2 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
+      _9__2 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v34, v35);
       System_Action___ctor(
         _9__2,
         (Il2CppObject *)this,
         Method_PhotoCampaignComponent___c__DisplayClass40_0__RecursiveOpenSelectImageLimitDialog_b__2__,
         0LL);
       this->fields.__9__2 = _9__2;
-      sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.__9__2, (int32_t)_9__2, v36, v37);
+      v15 = sub_1B6406C(&this->fields.__9__2);
     }
     if ( myRoomControl )
     {
-      MyRoomControl__OpenMasterEquipSettingDialog(myRoomControl, v34, _9__2, 0LL);
+      MyRoomControl__OpenMasterEquipSettingDialog(myRoomControl, v33, _9__2, 0LL);
       return;
     }
     goto LABEL_20;
@@ -2031,15 +2061,15 @@ void __fastcall PhotoCampaignComponent___c__DisplayClass40_0___RecursiveOpenSele
   item = this->fields.item;
   if ( !item || (userSvtEntity = item->fields.userSvtEntity) == 0LL )
 LABEL_20:
-    sub_1B00F28(v15, v16);
-  v30 = *(_OWORD *)&userSvtEntity->fields.id.fields.fakeValue;
-  *(_OWORD *)&v39.fields.currentCryptoKey = *(_OWORD *)&userSvtEntity->fields.id.fields.currentCryptoKey;
-  *(_OWORD *)&v39.fields.fakeValue = v30;
+    sub_1B64324(v15);
+  v29 = *(_OWORD *)&userSvtEntity->fields.id.fields.fakeValue;
+  *(_OWORD *)&v38.fields.currentCryptoKey = *(_OWORD *)&userSvtEntity->fields.id.fields.currentCryptoKey;
+  *(_OWORD *)&v38.fields.fakeValue = v29;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  v38 = v39;
-  v31 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45316568(&v38, 0LL);
-  PhotoCampaignComponent__OnClickDecide(v26, v31, *(_DWORD *)(v14 + 16), v32);
+  v37 = v38;
+  v30 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46175132(&v37, 0LL);
+  PhotoCampaignComponent__OnClickDecide(v25, v30, *(_DWORD *)(v14 + 16), v31);
 }
 
 
@@ -2050,7 +2080,7 @@ void __fastcall PhotoCampaignComponent___c__DisplayClass40_0___RecursiveOpenSele
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_1B00F28(this, method);
+    sub_1B64324(this);
   PhotoCampaignComponent__RecursiveOpenSelectImageLimitDialog(this->fields.__4__this, this->fields.item, v2);
 }
 
@@ -2082,12 +2112,12 @@ void __fastcall PhotoCampaignComponent___c__DisplayClass40_1___RecursiveOpenSele
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v15; // [xsp+20h] [xbp-50h]
 
   v6 = this;
-  if ( (byte_48DE634 & 1) == 0 )
+  if ( (byte_49F7F02 & 1) == 0 )
   {
-    this = (PhotoCampaignComponent___c__DisplayClass40_1_o *)sub_1B00CCC(
+    this = (PhotoCampaignComponent___c__DisplayClass40_1_o *)sub_1B640C8(
                                                                &CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo,
                                                                *(_QWORD *)&equipId);
-    byte_48DE634 = 1;
+    byte_49F7F02 = 1;
   }
   CS___8__locals1 = v6->fields.CS___8__locals1;
   if ( !CS___8__locals1
@@ -2097,7 +2127,7 @@ void __fastcall PhotoCampaignComponent___c__DisplayClass40_1___RecursiveOpenSele
         (item = CS___8__locals1->fields.item) == 0LL)
     || (userSvtEntity = item->fields.userSvtEntity) == 0LL )
   {
-    sub_1B00F28(this, *(_QWORD *)&equipId);
+    sub_1B64324(this);
   }
   v11 = *(_OWORD *)&userSvtEntity->fields.id.fields.fakeValue;
   *(_OWORD *)&v15.fields.currentCryptoKey = *(_OWORD *)&userSvtEntity->fields.id.fields.currentCryptoKey;
@@ -2105,7 +2135,7 @@ void __fastcall PhotoCampaignComponent___c__DisplayClass40_1___RecursiveOpenSele
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v14 = v15;
-  v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_45316568(&v14, 0LL);
+  v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46175132(&v14, 0LL);
   PhotoCampaignComponent__OnClickDecide(_4__this, v12, v6->fields.imageLimitCount, v13);
 }
 
@@ -2127,21 +2157,21 @@ void __fastcall PhotoCampaignComponent___c__DisplayClass43_0___CloseSvtDetail_b_
   __int64 v5; // x1
   PhotoCampaignComponent_o *_4__this; // x0
   struct PhotoCampaignComponent_o *v7; // x8
-  struct PhotoCampaignComponent_o *v8; // x8
-  Il2CppObject *v9; // x20
-  Il2CppClass *klass; // x19
-  PhotoCampaignListViewManager_CallbackFunc_o *v11; // x21
-  const MethodInfo *v12; // x3
-  int32_t v13; // w2
-  int32_t v14; // w3
+  __int64 v8; // x1
+  __int64 v9; // x2
+  struct PhotoCampaignComponent_o *v10; // x8
+  Il2CppObject *v11; // x20
+  PhotoCampaignListViewManager_o *klass; // x19
+  PhotoCampaignListViewManager_CallbackFunc_o *v13; // x21
+  const MethodInfo *v14; // x3
   const MethodInfo *v15; // x2
 
-  if ( (byte_48DE635 & 1) == 0 )
+  if ( (byte_49F7F03 & 1) == 0 )
   {
-    sub_1B00CCC(&PhotoCampaignListViewManager_CallbackFunc_TypeInfo, method);
-    sub_1B00CCC(&Method_PhotoCampaignComponent_OnClickServant__, v4);
-    sub_1B00CCC(&StringLiteral_3488/*"CLICK_BACK"*/, v5);
-    byte_48DE635 = 1;
+    sub_1B640C8(&PhotoCampaignListViewManager_CallbackFunc_TypeInfo, method);
+    sub_1B640C8(&Method_PhotoCampaignComponent_OnClickServant__, v4);
+    sub_1B640C8(&StringLiteral_3506/*"CLICK_BACK"*/, v5);
+    byte_49F7F03 = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -2164,41 +2194,44 @@ void __fastcall PhotoCampaignComponent___c__DisplayClass43_0___CloseSvtDetail_b_
           _4__this = (PhotoCampaignComponent_o *)v7->fields.myRoomFsm;
           if ( _4__this )
           {
-            PlayMakerFSM__SendEvent((PlayMakerFSM_o *)_4__this, (System_String_o *)StringLiteral_3488/*"CLICK_BACK"*/, 0LL);
+            PlayMakerFSM__SendEvent((PlayMakerFSM_o *)_4__this, (System_String_o *)StringLiteral_3506/*"CLICK_BACK"*/, 0LL);
             return;
           }
         }
       }
     }
 LABEL_18:
-    sub_1B00F28(_4__this, method);
+    sub_1B64324(_4__this);
   }
   if ( !_4__this->fields.photoCampaignManager )
     goto LABEL_18;
   PhotoCampaignListViewManager__ModifyItem(_4__this->fields.photoCampaignManager, _4__this->fields.usrSvtId, v2);
   if ( this->fields.isNeedSort )
   {
-    v8 = this->fields.__4__this;
-    if ( !v8 )
+    v10 = this->fields.__4__this;
+    if ( !v10 )
       goto LABEL_18;
-    _4__this = (PhotoCampaignComponent_o *)v8->fields.photoCampaignManager;
+    _4__this = (PhotoCampaignComponent_o *)v10->fields.photoCampaignManager;
     if ( !_4__this )
       goto LABEL_18;
     ListViewManager__SortItem((ListViewManager_o *)_4__this, -1, 0, -1, 0LL);
   }
-  v9 = (Il2CppObject *)this->fields.__4__this;
-  if ( !v9 )
+  v11 = (Il2CppObject *)this->fields.__4__this;
+  if ( !v11 )
     goto LABEL_18;
-  klass = v9[4].klass;
-  v11 = (PhotoCampaignListViewManager_CallbackFunc_o *)sub_1B00F18(PhotoCampaignListViewManager_CallbackFunc_TypeInfo);
+  klass = (PhotoCampaignListViewManager_o *)v11[4].klass;
+  v13 = (PhotoCampaignListViewManager_CallbackFunc_o *)sub_1B64314(
+                                                         PhotoCampaignListViewManager_CallbackFunc_TypeInfo,
+                                                         v8,
+                                                         v9);
   PhotoCampaignListViewManager_CallbackFunc___ctor(
+    v13,
     v11,
-    v9,
     (intptr_t)Method_PhotoCampaignComponent_OnClickServant__,
-    v12);
+    v14);
   if ( !klass )
     goto LABEL_18;
-  klass->vtable[5].methodPtr = (Il2CppMethodPointer)v11;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&klass->vtable[5], (int32_t)v11, v13, v14);
-  PhotoCampaignListViewManager__SetMode_30703352((PhotoCampaignListViewManager_o *)klass, 2, v15);
+  klass->fields.callbackFunc = v13;
+  sub_1B6406C(&klass->fields.callbackFunc);
+  PhotoCampaignListViewManager__SetMode_31300968(klass, 2, v15);
 }

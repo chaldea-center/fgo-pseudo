@@ -1,9 +1,9 @@
 void __fastcall DeckSelectMenu___ctor(DeckSelectMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_48DE81A & 1) == 0 )
+  if ( (byte_49F822E & 1) == 0 )
   {
-    sub_1B00CCC(&BaseDialog_TypeInfo, method);
-    byte_48DE81A = 1;
+    sub_1B640C8(&BaseDialog_TypeInfo, method);
+    byte_49F822E = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -27,7 +27,7 @@ void __fastcall DeckSelectMenu__Callback(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1B00C70(p_callbackFunc, 0, index, (int32_t)method);
+    sub_1B6406C(p_callbackFunc, 0, index, (int32_t)method);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD, _QWORD))v5->fields.m_target)(
       v5->fields.original_method_info,
       (unsigned int)result,
@@ -41,11 +41,11 @@ void __fastcall DeckSelectMenu__Close(DeckSelectMenu_o *this, const MethodInfo *
 {
   const MethodInfo *v2; // x2
 
-  DeckSelectMenu__Close_30866188(this, 0LL, v2);
+  DeckSelectMenu__Close_31601628(this, 0LL, v2);
 }
 
 
-void __fastcall DeckSelectMenu__Close_30866188(
+void __fastcall DeckSelectMenu__Close_31601628(
         DeckSelectMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -54,24 +54,26 @@ void __fastcall DeckSelectMenu__Close_30866188(
   DeckListViewManager_o *deckListViewManager; // x0
   int32_t v7; // w2
   int32_t v8; // w3
-  System_Action_o *v9; // x20
+  __int64 v9; // x1
+  __int64 v10; // x2
+  System_Action_o *v11; // x20
 
-  if ( (byte_48DE817 & 1) == 0 )
+  if ( (byte_49F822B & 1) == 0 )
   {
-    sub_1B00CCC(&System_Action_TypeInfo, callback);
-    sub_1B00CCC(&Method_DeckSelectMenu_EndClose__, v5);
-    byte_48DE817 = 1;
+    sub_1B640C8(&System_Action_TypeInfo, callback);
+    sub_1B640C8(&Method_DeckSelectMenu_EndClose__, v5);
+    byte_49F822B = 1;
   }
   deckListViewManager = this->fields.deckListViewManager;
   if ( !deckListViewManager )
-    sub_1B00F28(0LL, callback);
-  DeckListViewManager__SetMode_30857988(deckListViewManager, 1, method);
+    sub_1B64324(0LL);
+  DeckListViewManager__SetMode_31593428(deckListViewManager, 1, method);
   this->fields.closeCallbackFunc = callback;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, v7, v8);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, v7, v8);
   this->fields.state = 4;
-  v9 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
-  System_Action___ctor(v9, (Il2CppObject *)this, Method_DeckSelectMenu_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v9, 0LL);
+  v11 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v9, v10);
+  System_Action___ctor(v11, (Il2CppObject *)this, Method_DeckSelectMenu_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v11, 0LL);
 }
 
 
@@ -90,7 +92,7 @@ void __fastcall DeckSelectMenu__EndClose(DeckSelectMenu_o *this, const MethodInf
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1B00C70(p_closeCallbackFunc, 0, v3, v4);
+    sub_1B6406C(p_closeCallbackFunc, 0, v3, v4);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v6->fields.m_target)(
       v6->fields.original_method_info,
       *(_QWORD *)&v6->fields.extra_arg);
@@ -100,12 +102,12 @@ void __fastcall DeckSelectMenu__EndClose(DeckSelectMenu_o *this, const MethodInf
 
 void __fastcall DeckSelectMenu__EndOpen(DeckSelectMenu_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
+  __int64 v4; // x1
   struct DeckListViewManager_o *deckListViewManager; // x20
-  DeckListViewManager_CallbackFunc_o *v5; // x21
-  const MethodInfo *v6; // x3
-  __int64 v7; // x0
-  __int64 v8; // x1
+  DeckListViewManager_CallbackFunc_o *v6; // x21
+  const MethodInfo *v7; // x3
+  __int64 v8; // x0
   int32_t v9; // w2
   int32_t v10; // w3
   const MethodInfo *v11; // x2
@@ -115,28 +117,28 @@ void __fastcall DeckSelectMenu__EndOpen(DeckSelectMenu_o *this, const MethodInfo
   struct System_Action_o *v15; // x20
   struct System_Action_o *openCallbackFunc; // t1
 
-  if ( (byte_48DE816 & 1) == 0 )
+  if ( (byte_49F822A & 1) == 0 )
   {
-    sub_1B00CCC(&DeckListViewManager_CallbackFunc_TypeInfo, method);
-    sub_1B00CCC(&Method_DeckSelectMenu_OnSelectItem__, v3);
-    byte_48DE816 = 1;
+    sub_1B640C8(&DeckListViewManager_CallbackFunc_TypeInfo, method);
+    sub_1B640C8(&Method_DeckSelectMenu_OnSelectItem__, v4);
+    byte_49F822A = 1;
   }
   this->fields.state = 2;
   deckListViewManager = this->fields.deckListViewManager;
-  v5 = (DeckListViewManager_CallbackFunc_o *)sub_1B00F18(DeckListViewManager_CallbackFunc_TypeInfo);
-  DeckListViewManager_CallbackFunc___ctor(v5, (Il2CppObject *)this, (intptr_t)Method_DeckSelectMenu_OnSelectItem__, v6);
+  v6 = (DeckListViewManager_CallbackFunc_o *)sub_1B64314(DeckListViewManager_CallbackFunc_TypeInfo, method, v2);
+  DeckListViewManager_CallbackFunc___ctor(v6, (Il2CppObject *)this, (intptr_t)Method_DeckSelectMenu_OnSelectItem__, v7);
   if ( !deckListViewManager )
-    sub_1B00F28(v7, v8);
-  deckListViewManager->fields.callbackFunc = v5;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&deckListViewManager->fields.callbackFunc, (int32_t)v5, v9, v10);
-  DeckListViewManager__SetMode_30857988(deckListViewManager, 2, v11);
+    sub_1B64324(v8);
+  deckListViewManager->fields.callbackFunc = v6;
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&deckListViewManager->fields.callbackFunc, (int32_t)v6, v9, v10);
+  DeckListViewManager__SetMode_31593428(deckListViewManager, 2, v11);
   openCallbackFunc = this->fields.openCallbackFunc;
   p_openCallbackFunc = (ServantStatusBattleListViewItem_o *)&this->fields.openCallbackFunc;
   v15 = openCallbackFunc;
   if ( openCallbackFunc )
   {
     p_openCallbackFunc->klass = 0LL;
-    sub_1B00C70(p_openCallbackFunc, 0, v12, v13);
+    sub_1B6406C(p_openCallbackFunc, 0, v12, v13);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v15->fields.m_target)(
       v15->fields.original_method_info,
       *(_QWORD *)&v15->fields.extra_arg);
@@ -150,7 +152,7 @@ DeckListViewItem_o *__fastcall DeckSelectMenu__GetItem(DeckSelectMenu_o *this, i
 
   deckListViewManager = this->fields.deckListViewManager;
   if ( !deckListViewManager )
-    sub_1B00F28(0LL, index);
+    sub_1B64324(0LL);
   return DeckListViewManager__GetItem(deckListViewManager, index, method);
 }
 
@@ -161,7 +163,7 @@ void __fastcall DeckSelectMenu__Init(DeckSelectMenu_o *this, const MethodInfo *m
 
   deckListViewManager = (ListViewManager_o *)this->fields.deckListViewManager;
   if ( !deckListViewManager )
-    sub_1B00F28(0LL, method);
+    sub_1B64324(0LL);
   ListViewManager__DestroyList(deckListViewManager, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -174,17 +176,17 @@ void __fastcall DeckSelectMenu__OnClickCancel(DeckSelectMenu_o *this, const Meth
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x3
 
-  if ( (byte_48DE818 & 1) == 0 )
+  if ( (byte_49F822C & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DeckSelectMenu_OnClickCancel__, method);
-    byte_48DE818 = 1;
+    sub_1B640C8(&Method_DeckSelectMenu_OnClickCancel__, method);
+    byte_49F822C = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_DeckSelectMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_DeckSelectMenu_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B00CE4(Method_DeckSelectMenu_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B640E0(Method_DeckSelectMenu_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     this->fields.state = 3;
     DeckSelectMenu__Callback(this, 0, -1, v5);
@@ -203,10 +205,10 @@ void __fastcall DeckSelectMenu__OnSelectItem(DeckSelectMenu_o *this, int32_t kin
   DeckSelectMenu_o *v12; // x0
   int32_t v13; // w2
 
-  if ( (byte_48DE819 & 1) == 0 )
+  if ( (byte_49F822D & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DeckSelectMenu_OnSelectItem__, *(_QWORD *)&kind);
-    byte_48DE819 = 1;
+    sub_1B640C8(&Method_DeckSelectMenu_OnSelectItem__, *(_QWORD *)&kind);
+    byte_49F822D = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -214,13 +216,13 @@ void __fastcall DeckSelectMenu__OnSelectItem(DeckSelectMenu_o *this, int32_t kin
     {
       deckListViewManager = this->fields.deckListViewManager;
       if ( !deckListViewManager )
-        sub_1B00F28(0LL, *(_QWORD *)&kind);
+        sub_1B64324(0LL);
       DeckListViewManager__GetItem(deckListViewManager, n, *(const MethodInfo **)&n);
     }
     v8 = Method_DeckSelectMenu_OnSelectItem__;
     if ( (*((_BYTE *)Method_DeckSelectMenu_OnSelectItem__ + 83) & 2) != 0 )
-      v8 = (_QWORD *)sub_1B00CE4(Method_DeckSelectMenu_OnSelectItem__);
-    v9 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v8, v8[4]);
+      v8 = (_QWORD *)sub_1B640E0(Method_DeckSelectMenu_OnSelectItem__);
+    v9 = (System_Reflection_MethodBase_o *)sub_1B640AC(v8, v8[4]);
     if ( kind == 1 )
     {
       OverwriteAssetSoundName__PlaySystemSe(v9, 0, 0LL);
@@ -260,51 +262,52 @@ void __fastcall DeckSelectMenu__Open(
   int32_t v17; // w2
   int32_t v18; // w3
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v20; // x1
   UILabel_o *titleLabel; // x21
   UILabel_o *titleDetailLabel; // x21
   UILabel_o *cancelLabel; // x21
-  UnityEngine_GameObject_o *v24; // x0
+  UnityEngine_GameObject_o *v23; // x0
+  const MethodInfo *v24; // x2
   const MethodInfo *v25; // x2
-  const MethodInfo *v26; // x2
-  System_Action_o *v27; // x20
-  int32_t v28; // w2
-  int32_t v29; // w3
-  const MethodInfo *v30; // x1
+  __int64 v26; // x1
+  __int64 v27; // x2
+  System_Action_o *v28; // x20
+  int32_t v29; // w2
+  int32_t v30; // w3
+  const MethodInfo *v31; // x1
 
-  if ( (byte_48DE815 & 1) == 0 )
+  if ( (byte_49F8229 & 1) == 0 )
   {
-    sub_1B00CCC(&System_Action_TypeInfo, *(_QWORD *)&kind);
-    sub_1B00CCC(&Method_DeckSelectMenu_EndOpen__, v11);
-    sub_1B00CCC(&LocalizationManager_TypeInfo, v12);
-    sub_1B00CCC(&StringLiteral_10131/*"PARTY_ORGANIZATION_DECK_SELECT_CANCEL"*/, v13);
-    sub_1B00CCC(&StringLiteral_10133/*"PARTY_ORGANIZATION_DECK_SELECT_COPY_TITLE"*/, v14);
-    sub_1B00CCC(&StringLiteral_10132/*"PARTY_ORGANIZATION_DECK_SELECT_COPY_DETAIL"*/, v15);
-    byte_48DE815 = 1;
+    sub_1B640C8(&System_Action_TypeInfo, *(_QWORD *)&kind);
+    sub_1B640C8(&Method_DeckSelectMenu_EndOpen__, v11);
+    sub_1B640C8(&LocalizationManager_TypeInfo, v12);
+    sub_1B640C8(&StringLiteral_10197/*"PARTY_ORGANIZATION_DECK_SELECT_CANCEL"*/, v13);
+    sub_1B640C8(&StringLiteral_10199/*"PARTY_ORGANIZATION_DECK_SELECT_COPY_TITLE"*/, v14);
+    sub_1B640C8(&StringLiteral_10198/*"PARTY_ORGANIZATION_DECK_SELECT_COPY_DETAIL"*/, v15);
+    byte_49F8229 = 1;
   }
   state = this->fields.state;
   if ( (unsigned int)(state - 2) < 2 )
   {
     this->fields.callbackFunc = callback;
-    sub_1B00C70(
+    sub_1B6406C(
       (ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
       (int32_t)baseDeckItemList,
       (int32_t)callback);
     this->fields.openCallbackFunc = openCallback;
-    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.openCallbackFunc, (int32_t)openCallback, v28, v29);
-    DeckSelectMenu__EndOpen(this, v30);
+    sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.openCallbackFunc, (int32_t)openCallback, v29, v30);
+    DeckSelectMenu__EndOpen(this, v31);
   }
   else if ( state == 4 || !state )
   {
     this->fields.callbackFunc = callback;
-    sub_1B00C70(
+    sub_1B6406C(
       (ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
       (int32_t)baseDeckItemList,
       (int32_t)callback);
     this->fields.openCallbackFunc = openCallback;
-    sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.openCallbackFunc, (int32_t)openCallback, v17, v18);
+    sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.openCallbackFunc, (int32_t)openCallback, v17, v18);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !gameObject )
       goto LABEL_23;
@@ -314,12 +317,12 @@ void __fastcall DeckSelectMenu__Open(
       titleLabel = this->fields.titleLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10133/*"PARTY_ORGANIZATION_DECK_SELECT_COPY_TITLE"*/, 0LL);
+      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10199/*"PARTY_ORGANIZATION_DECK_SELECT_COPY_TITLE"*/, 0LL);
       if ( !titleLabel )
         goto LABEL_23;
       UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0LL);
       titleDetailLabel = this->fields.titleDetailLabel;
-      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10132/*"PARTY_ORGANIZATION_DECK_SELECT_COPY_DETAIL"*/, 0LL);
+      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10198/*"PARTY_ORGANIZATION_DECK_SELECT_COPY_DETAIL"*/, 0LL);
       if ( !titleDetailLabel )
         goto LABEL_23;
       UILabel__set_text(titleDetailLabel, (System_String_o *)gameObject, 0LL);
@@ -327,7 +330,7 @@ void __fastcall DeckSelectMenu__Open(
     cancelLabel = this->fields.cancelLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10131/*"PARTY_ORGANIZATION_DECK_SELECT_CANCEL"*/, 0LL);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10197/*"PARTY_ORGANIZATION_DECK_SELECT_CANCEL"*/, 0LL);
     if ( cancelLabel )
     {
       UILabel__set_text(cancelLabel, (System_String_o *)gameObject, 0LL);
@@ -337,20 +340,20 @@ void __fastcall DeckSelectMenu__Open(
         gameObject = (UnityEngine_GameObject_o *)UIRect__get_parent((UIRect_o *)gameObject, 0LL);
         if ( gameObject )
         {
-          v24 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
-          AndroidBackKeyManager__AddBackBtn(v24, 0LL);
+          v23 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
+          AndroidBackKeyManager__AddBackBtn(v23, 0LL);
           gameObject = (UnityEngine_GameObject_o *)this->fields.deckListViewManager;
           if ( gameObject )
           {
-            DeckListViewManager__CreateList((DeckListViewManager_o *)gameObject, baseDeckItemList, v25);
+            DeckListViewManager__CreateList((DeckListViewManager_o *)gameObject, baseDeckItemList, v24);
             gameObject = (UnityEngine_GameObject_o *)this->fields.deckListViewManager;
             if ( gameObject )
             {
-              DeckListViewManager__SetMode_30857988((DeckListViewManager_o *)gameObject, 1, v26);
+              DeckListViewManager__SetMode_31593428((DeckListViewManager_o *)gameObject, 1, v25);
               this->fields.state = 1;
-              v27 = (System_Action_o *)sub_1B00F18(System_Action_TypeInfo);
-              System_Action___ctor(v27, (Il2CppObject *)this, Method_DeckSelectMenu_EndOpen__, 0LL);
-              BaseDialog__Open((BaseDialog_o *)this, v27, 0, 0LL);
+              v28 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v26, v27);
+              System_Action___ctor(v28, (Il2CppObject *)this, Method_DeckSelectMenu_EndOpen__, 0LL);
+              BaseDialog__Open((BaseDialog_o *)this, v28, 0, 0LL);
               return;
             }
           }
@@ -358,7 +361,7 @@ void __fastcall DeckSelectMenu__Open(
       }
     }
 LABEL_23:
-    sub_1B00F28(gameObject, v20);
+    sub_1B64324(gameObject);
   }
 }
 
@@ -378,10 +381,10 @@ void __fastcall DeckSelectMenu__add_callbackFunc(
   DeckSelectMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_48DE813 & 1) == 0 )
+  if ( (byte_49F8227 & 1) == 0 )
   {
-    sub_1B00CCC(&DeckSelectMenu_CallbackFunc_TypeInfo, value);
-    byte_48DE813 = 1;
+    sub_1B640C8(&DeckSelectMenu_CallbackFunc_TypeInfo, value);
+    byte_49F8227 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -394,13 +397,13 @@ void __fastcall DeckSelectMenu__add_callbackFunc(
       if ( (DeckSelectMenu_CallbackFunc_c *)v8->klass != DeckSelectMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1B3C1BC(p_callbackFunc, v8, v6);
+    v9 = sub_1B9F5B8(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (DeckSelectMenu_o *)sub_1B011E8(v8);
+  v11 = (DeckSelectMenu_o *)sub_1B645E4(v8);
   DeckSelectMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -420,10 +423,10 @@ void __fastcall DeckSelectMenu__remove_callbackFunc(
   int32_t v12; // w1
   const MethodInfo *v13; // x2
 
-  if ( (byte_48DE814 & 1) == 0 )
+  if ( (byte_49F8228 & 1) == 0 )
   {
-    sub_1B00CCC(&DeckSelectMenu_CallbackFunc_TypeInfo, value);
-    byte_48DE814 = 1;
+    sub_1B640C8(&DeckSelectMenu_CallbackFunc_TypeInfo, value);
+    byte_49F8228 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -436,13 +439,13 @@ void __fastcall DeckSelectMenu__remove_callbackFunc(
       if ( (DeckSelectMenu_CallbackFunc_c *)v8->klass != DeckSelectMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1B3C1BC(p_callbackFunc, v8, v6);
+    v9 = sub_1B9F5B8(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (DeckSelectMenu_o *)sub_1B011E8(v8);
+  v11 = (DeckSelectMenu_o *)sub_1B645E4(v8);
   DeckSelectMenu__GetItem(v11, v12, v13);
 }
 
@@ -465,15 +468,15 @@ void __fastcall DeckSelectMenu_CallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B00D8C(v6) & 1) == 0 )
+  if ( (sub_1B64188(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B00F44(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B00DF4(v10, 0LL);
+      v10 = sub_1B64340(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B641F0(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -485,9 +488,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19451EC;
+  this->fields.m_target = (Il2CppObject *)sub_19A62CC;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1945194;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19A6274;
 }
 
 
@@ -501,25 +504,22 @@ System_IAsyncResult_o *__fastcall DeckSelectMenu_CallbackFunc__BeginInvoke(
         const MethodInfo *method)
 {
   __int64 v9; // x1
-  __int64 v10; // x2
-  __int64 v11; // x3
-  __int64 v12; // x4
-  __int64 v14[3]; // [xsp+8h] [xbp-58h] BYREF
-  int32_t v15; // [xsp+28h] [xbp-38h] BYREF
-  int32_t v16; // [xsp+2Ch] [xbp-34h] BYREF
+  __int64 v11[3]; // [xsp+8h] [xbp-58h] BYREF
+  int32_t v12; // [xsp+28h] [xbp-38h] BYREF
+  int32_t v13; // [xsp+2Ch] [xbp-34h] BYREF
 
-  v15 = index;
-  v16 = result;
-  if ( (byte_48DE81B & 1) == 0 )
+  v12 = index;
+  v13 = result;
+  if ( (byte_49F822F & 1) == 0 )
   {
-    sub_1B00CCC(&int_TypeInfo, *(_QWORD *)&result);
-    sub_1B00CCC(&DeckSelectMenu_ResultKind_TypeInfo, v9);
-    byte_48DE81B = 1;
+    sub_1B640C8(&int_TypeInfo, *(_QWORD *)&result);
+    sub_1B640C8(&DeckSelectMenu_ResultKind_TypeInfo, v9);
+    byte_49F822F = 1;
   }
-  v14[2] = 0LL;
-  v14[0] = j_il2cpp_value_box_0(DeckSelectMenu_ResultKind_TypeInfo, &v16, *(_QWORD *)&index, callback, object);
-  v14[1] = j_il2cpp_value_box_0(int_TypeInfo, &v15, v10, v11, v12);
-  return (System_IAsyncResult_o *)sub_1B00C80(this, v14, callback, object);
+  v11[2] = 0LL;
+  v11[0] = j_il2cpp_value_box_0(DeckSelectMenu_ResultKind_TypeInfo, &v13);
+  v11[1] = j_il2cpp_value_box_0(int_TypeInfo, &v12);
+  return (System_IAsyncResult_o *)sub_1B6407C(this, v11, callback, object);
 }
 
 
@@ -528,7 +528,7 @@ void __fastcall DeckSelectMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B00C84(result, 0LL, method);
+  sub_1B64080(result, 0LL, method);
 }
 
 

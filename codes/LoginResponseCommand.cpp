@@ -4,7 +4,7 @@ int32_t __fastcall LoginResponseCommand__ExecuteResponse(
         const MethodInfo *method)
 {
   if ( !data )
-    sub_1B00F28(this, 0LL);
+    sub_1B64324(this);
   return !ResponseData__checkError((ResponseData_o *)this, data->fields.resCode, method);
 }
 

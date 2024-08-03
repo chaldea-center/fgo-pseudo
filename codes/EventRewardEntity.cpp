@@ -1,13 +1,13 @@
 void __fastcall EventRewardEntity___ctor(EventRewardEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E290D & 1) == 0 )
+  if ( (byte_49FC514 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
-    byte_48E290D = 1;
+    sub_1B640C8(&Method_DataEntityBase_string___ctor__, method);
+    byte_49FC514 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D3D1C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -19,17 +19,17 @@ System_String_o *__fastcall EventRewardEntity__CreatePK(
         int64_t point,
         const MethodInfo *method)
 {
-  if ( (byte_48E2908 & 1) == 0 )
+  if ( (byte_49FC50F & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_int__int__int__long___, *(_QWORD *)&slot);
-    byte_48E2908 = 1;
+    sub_1B640C8(&Method_DataEntityBase_CreateMultiplePK_int__int__int__long___, *(_QWORD *)&slot);
+    byte_49FC50F = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__long_(
            eventId,
            slot,
            groupId,
            point,
-           (const MethodInfo_2D61820 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
+           (const MethodInfo_2E37FFC *)Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
 }
 
 
@@ -71,21 +71,21 @@ void __fastcall EventRewardEntity__GetInfo(
   System_String_o *v23; // [xsp+0h] [xbp-40h] BYREF
   System_String_o *nameTexta; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_48E290C & 1) == 0 )
+  if ( (byte_49FC513 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_1/*""*/, nameText);
-    byte_48E290C = 1;
+    sub_1B640C8(&StringLiteral_1/*""*/, nameText);
+    byte_49FC513 = 1;
   }
   v23 = 0LL;
   nameTexta = 0LL;
   *nameText = (System_String_o *)StringLiteral_1/*""*/;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)nameText,
     (int32_t)StringLiteral_1/*""*/,
     (int32_t)countText,
     (int32_t)method);
   *countText = (System_String_o *)StringLiteral_1/*""*/;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)countText, (int32_t)StringLiteral_1/*""*/, v7, v8);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)countText, (int32_t)StringLiteral_1/*""*/, v7, v8);
   type = this->fields.type;
   if ( type == 1 )
   {
@@ -95,10 +95,10 @@ void __fastcall EventRewardEntity__GetInfo(
       GiftEntity__GetInfo(GiftData, &nameTexta, &v23, 0LL);
       v12 = (int)nameTexta;
       *nameText = nameTexta;
-      sub_1B00C70((ServantStatusBattleListViewItem_o *)nameText, v12, v13, v14);
+      sub_1B6406C((ServantStatusBattleListViewItem_o *)nameText, v12, v13, v14);
       v15 = (int)v23;
       *countText = v23;
-      sub_1B00C70((ServantStatusBattleListViewItem_o *)countText, v15, v16, v17);
+      sub_1B6406C((ServantStatusBattleListViewItem_o *)countText, v15, v16, v17);
     }
     type = this->fields.type;
   }
@@ -117,7 +117,7 @@ void __fastcall EventRewardEntity__GetInfo(
     name = SetRewardData->fields.name;
   }
   *nameText = name;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)nameText, (int32_t)name, v19, v20);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)nameText, (int32_t)name, v19, v20);
 }
 
 
@@ -125,21 +125,20 @@ GiftEntity_o *__fastcall EventRewardEntity__getGiftData(EventRewardEntity_o *thi
 {
   __int64 v3; // x1
   Il2CppObject *Instance; // x0
-  __int64 v5; // x1
 
-  if ( (byte_48E2909 & 1) == 0 )
+  if ( (byte_49FC510 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataManager_GetMasterData_GiftMaster___, method);
-    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_48E2909 = 1;
+    sub_1B640C8(&Method_DataManager_GetMasterData_GiftMaster___, method);
+    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_49FC510 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_GiftMaster___)) == 0LL )
+                     (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_GiftMaster___)) == 0LL )
   {
-    sub_1B00F28(Instance, v5);
+    sub_1B64324(Instance);
   }
   return GiftMaster__getDataById((GiftMaster_o *)Instance, this->fields.giftId, 0LL);
 }
@@ -151,29 +150,28 @@ EventRewardSetEntity_o *__fastcall EventRewardEntity__getRewardSetData(
 {
   __int64 v3; // x1
   Il2CppObject *Instance; // x0
-  __int64 v5; // x1
-  const MethodInfo *v6; // x4
+  const MethodInfo *v5; // x4
 
-  if ( (byte_48E290B & 1) == 0 )
+  if ( (byte_49FC512 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataManager_GetMasterData_EventRewardSetMaster___, method);
-    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_48E290B = 1;
+    sub_1B640C8(&Method_DataManager_GetMasterData_EventRewardSetMaster___, method);
+    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_49FC512 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_EventRewardSetMaster___)) == 0LL )
+                     (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_EventRewardSetMaster___)) == 0LL )
   {
-    sub_1B00F28(Instance, v5);
+    sub_1B64324(Instance);
   }
   return EventRewardSetMaster__GetEntity(
            (EventRewardSetMaster_o *)Instance,
            2,
            this->fields.eventId,
            this->fields.giftId,
-           v6);
+           v5);
 }
 
 
@@ -188,18 +186,18 @@ EventRewardExtraEntity_o *__fastcall EventRewardEntity__getSetRewardData(
   int v7; // w10
   EventRewardExtraEntity_o *v8; // x8
 
-  if ( (byte_48E290A & 1) == 0 )
+  if ( (byte_49FC511 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataManager_getEntitys_EventRewardExtraMaster__EventRewardExtraEntity___, method);
-    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_48E290A = 1;
+    sub_1B640C8(&Method_DataManager_getEntitys_EventRewardExtraMaster__EventRewardExtraEntity___, method);
+    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_49FC511 = 1;
   }
-  Instance = (System_Object_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (System_Object_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   Instance = DataManager__getEntitys_object__object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2D62E70 *)Method_DataManager_getEntitys_EventRewardExtraMaster__EventRewardExtraEntity___);
+               (const MethodInfo_2E3964C *)Method_DataManager_getEntitys_EventRewardExtraMaster__EventRewardExtraEntity___);
   if ( !Instance )
     goto LABEL_14;
   max_length = Instance->max_length;
@@ -209,7 +207,7 @@ EventRewardExtraEntity_o *__fastcall EventRewardEntity__getSetRewardData(
     while ( 1 )
     {
       if ( max_length == v7 )
-        sub_1B00F30(Instance, v5);
+        sub_1B6432C(Instance, v5);
       v8 = (EventRewardExtraEntity_o *)Instance->m_Items[v7];
       if ( !v8 )
         break;
@@ -219,7 +217,7 @@ EventRewardExtraEntity_o *__fastcall EventRewardEntity__getSetRewardData(
         return 0LL;
     }
 LABEL_14:
-    sub_1B00F28(Instance, v5);
+    sub_1B64324(Instance);
   }
   return 0LL;
 }

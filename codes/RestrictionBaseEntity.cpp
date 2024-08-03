@@ -1,13 +1,13 @@
 void __fastcall RestrictionBaseEntity___ctor(RestrictionBaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E2DA9 & 1) == 0 )
+  if ( (byte_49FC9F6 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
-    byte_48E2DA9 = 1;
+    sub_1B640C8(&Method_DataEntityBase_string___ctor__, method);
+    byte_49FC9F6 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D3D1C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall RestrictionBaseEntity__CreatePK(
         int32_t questPhase,
         const MethodInfo *method)
 {
-  if ( (byte_48E2DA8 & 1) == 0 )
+  if ( (byte_49FC9F5 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&questPhase);
-    byte_48E2DA8 = 1;
+    sub_1B640C8(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&questPhase);
+    byte_49FC9F5 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            questId,
            questPhase,
-           (const MethodInfo_2D60E34 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2E37610 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -62,32 +62,32 @@ bool __fastcall RestrictionBaseEntity__GetOverwriteLimitCountSvtIds(
   int32_t v23; // w2
   int32_t v24; // w3
 
-  if ( (byte_48E2DA7 & 1) == 0 )
+  if ( (byte_49FC9F4 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_22090/*"overwriteLimitCountSvtIds"*/, overwriteLimitCountSvtIds);
-    sub_1B00CCC(&StringLiteral_22091/*"overwriteLimitCounts"*/, v9);
-    sub_1B00CCC(&StringLiteral_22089/*"overwriteLimitCountIconIds"*/, v10);
-    byte_48E2DA7 = 1;
+    sub_1B640C8(&StringLiteral_22305/*"overwriteLimitCountSvtIds"*/, overwriteLimitCountSvtIds);
+    sub_1B640C8(&StringLiteral_22306/*"overwriteLimitCounts"*/, v9);
+    sub_1B640C8(&StringLiteral_22304/*"overwriteLimitCountIconIds"*/, v10);
+    byte_49FC9F4 = 1;
   }
-  IntArray = EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_22090/*"overwriteLimitCountSvtIds"*/, 0LL, 0LL);
+  IntArray = EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_22305/*"overwriteLimitCountSvtIds"*/, 0LL, 0LL);
   *overwriteLimitCountSvtIds = IntArray;
-  sub_1B00C70((ServantStatusBattleListViewItem_o *)overwriteLimitCountSvtIds, (int32_t)IntArray, v12, v13);
+  sub_1B6406C((ServantStatusBattleListViewItem_o *)overwriteLimitCountSvtIds, (int32_t)IntArray, v12, v13);
   if ( *overwriteLimitCountSvtIds )
   {
-    v16 = EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_22091/*"overwriteLimitCounts"*/, 0LL, 0LL);
+    v16 = EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_22306/*"overwriteLimitCounts"*/, 0LL, 0LL);
     *overwriteLimitCounts = v16;
-    sub_1B00C70((ServantStatusBattleListViewItem_o *)overwriteLimitCounts, (int32_t)v16, v17, v18);
-    v19 = EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_22089/*"overwriteLimitCountIconIds"*/, 0LL, 0LL);
+    sub_1B6406C((ServantStatusBattleListViewItem_o *)overwriteLimitCounts, (int32_t)v16, v17, v18);
+    v19 = EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_22304/*"overwriteLimitCountIconIds"*/, 0LL, 0LL);
     *overwriteLimitCountIconIds = v19;
-    sub_1B00C70((ServantStatusBattleListViewItem_o *)overwriteLimitCountIconIds, (int32_t)v19, v20, v21);
+    sub_1B6406C((ServantStatusBattleListViewItem_o *)overwriteLimitCountIconIds, (int32_t)v19, v20, v21);
     return *overwriteLimitCounts != 0LL;
   }
   else
   {
     *overwriteLimitCounts = 0LL;
-    sub_1B00C70((ServantStatusBattleListViewItem_o *)overwriteLimitCounts, 0, v14, v15);
+    sub_1B6406C((ServantStatusBattleListViewItem_o *)overwriteLimitCounts, 0, v14, v15);
     *overwriteLimitCountIconIds = 0LL;
-    sub_1B00C70((ServantStatusBattleListViewItem_o *)overwriteLimitCountIconIds, 0, v23, v24);
+    sub_1B6406C((ServantStatusBattleListViewItem_o *)overwriteLimitCountIconIds, 0, v23, v24);
     return 0;
   }
 }
@@ -95,12 +95,12 @@ bool __fastcall RestrictionBaseEntity__GetOverwriteLimitCountSvtIds(
 
 int32_t __fastcall RestrictionBaseEntity__GetUserEventDeckNo(RestrictionBaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E2DA6 & 1) == 0 )
+  if ( (byte_49FC9F3 & 1) == 0 )
   {
-    sub_1B00CCC(&StringLiteral_24001/*"useEventDeckNo"*/, method);
-    byte_48E2DA6 = 1;
+    sub_1B640C8(&StringLiteral_24257/*"useEventDeckNo"*/, method);
+    byte_49FC9F3 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24001/*"useEventDeckNo"*/, 1, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24257/*"useEventDeckNo"*/, 1, 0LL);
 }
 
 

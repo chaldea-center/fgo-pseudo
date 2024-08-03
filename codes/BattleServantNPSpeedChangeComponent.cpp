@@ -3,8 +3,8 @@ void __fastcall BattleServantNPSpeedChangeComponent___ctor(
         const MethodInfo *method)
 {
   this->fields.contentsHeight = 200;
-  this->fields.maskColor = (struct UnityEngine_Color_o)xmmword_B70220;
-  this->fields.maskLabelEffectColor = (struct UnityEngine_Color_o)xmmword_B700F0;
+  this->fields.maskColor = (struct UnityEngine_Color_o)xmmword_BA2620;
+  this->fields.maskLabelEffectColor = (struct UnityEngine_Color_o)xmmword_BA24F0;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -46,24 +46,23 @@ void __fastcall BattleServantNPSpeedChangeComponent__OnClickButton(
   _BOOL4 isSupport; // w21
   System_Reflection_MethodBase_o *v9; // x0
   __int64 v10; // x0
-  __int64 v11; // x1
   struct BattleServantData_o *battleServantData; // x8
   int32_t servantCollectionId_k__BackingField; // w20
   int32_t svtCommonFlag; // w21
-  const MethodInfo *v15; // x1
+  const MethodInfo *v14; // x1
 
-  if ( (byte_48E56DA & 1) == 0 )
+  if ( (byte_49FF3CC & 1) == 0 )
   {
-    sub_1B00CCC(&Method_System_Array_IndexOf_UICommonButton___, button);
-    sub_1B00CCC(&BattleData_TypeInfo, v5);
-    sub_1B00CCC(&Method_BattleServantNPSpeedChangeComponent_OnClickButton__, v6);
-    byte_48E56DA = 1;
+    sub_1B640C8(&Method_System_Array_IndexOf_UICommonButton___, button);
+    sub_1B640C8(&BattleData_TypeInfo, v5);
+    sub_1B640C8(&Method_BattleServantNPSpeedChangeComponent_OnClickButton__, v6);
+    byte_49FF3CC = 1;
   }
   v7 = Method_BattleServantNPSpeedChangeComponent_OnClickButton__;
   isSupport = this->fields.isSupport;
   if ( (*((_BYTE *)Method_BattleServantNPSpeedChangeComponent_OnClickButton__ + 83) & 2) != 0 )
-    v7 = (_QWORD *)sub_1B00CE4(Method_BattleServantNPSpeedChangeComponent_OnClickButton__);
-  v9 = (System_Reflection_MethodBase_o *)sub_1B00CB0(v7, v7[4]);
+    v7 = (_QWORD *)sub_1B640E0(Method_BattleServantNPSpeedChangeComponent_OnClickButton__);
+  v9 = (System_Reflection_MethodBase_o *)sub_1B640AC(v7, v7[4]);
   if ( isSupport )
   {
     OverwriteAssetSoundName__PlaySystemSe(v9, 2, 0LL);
@@ -74,19 +73,19 @@ void __fastcall BattleServantNPSpeedChangeComponent__OnClickButton(
     v10 = System_Array__IndexOf_object_(
             (System_Object_array *)this->fields.npSpeedButtonArray,
             (Il2CppObject *)button,
-            (const MethodInfo_2E47D4C *)Method_System_Array_IndexOf_UICommonButton___);
+            (const MethodInfo_2F32000 *)Method_System_Array_IndexOf_UICommonButton___);
     if ( !this->fields.battleServantData
       || (BattleServantData__SetServantNPSpeedCommonFlag(this->fields.battleServantData, v10, 0LL),
           (battleServantData = this->fields.battleServantData) == 0LL) )
     {
-      sub_1B00F28(v10, v11);
+      sub_1B64324(v10);
     }
     servantCollectionId_k__BackingField = battleServantData->fields._servantCollectionId_k__BackingField;
     svtCommonFlag = battleServantData->fields.svtCommonFlag;
     if ( !BattleData_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(BattleData_TypeInfo);
     BattleData__SaveServantCommonFlag(servantCollectionId_k__BackingField, svtCommonFlag, 0LL);
-    BattleServantNPSpeedChangeComponent__SetButton(this, v15);
+    BattleServantNPSpeedChangeComponent__SetButton(this, v14);
   }
 }
 
@@ -126,20 +125,20 @@ void __fastcall BattleServantNPSpeedChangeComponent__SetButton(
   float v30; // s2
   float v31; // s3
 
-  if ( (byte_48E56D9 & 1) == 0 )
+  if ( (byte_49FF3CB & 1) == 0 )
   {
-    sub_1B00CCC(&LocalizationManager_TypeInfo, method);
-    sub_1B00CCC(&StringLiteral_17241/*"btn_bg_20"*/, v3);
-    sub_1B00CCC(&StringLiteral_17242/*"btn_bg_21"*/, v4);
-    byte_48E56D9 = 1;
+    sub_1B640C8(&LocalizationManager_TypeInfo, method);
+    sub_1B640C8(&StringLiteral_17409/*"btn_bg_20"*/, v3);
+    sub_1B640C8(&StringLiteral_17410/*"btn_bg_21"*/, v4);
+    byte_49FF3CB = 1;
   }
   this->fields.isSupport = 0;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  if ( !byte_48DE046 )
+  if ( !byte_49F779B )
   {
-    sub_1B00CCC(&LocalizationManager_TypeInfo, method);
-    byte_48DE046 = 1;
+    sub_1B640C8(&LocalizationManager_TypeInfo, method);
+    byte_49F779B = 1;
   }
   supportServantLabel = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -152,11 +151,11 @@ void __fastcall BattleServantNPSpeedChangeComponent__SetButton(
   v8 = v6[21];
   v9 = v6[22];
   v10 = v6[23];
-  if ( !byte_48DE047 )
+  if ( !byte_49F779C )
   {
-    sub_1B00CCC(&LocalizationManager_TypeInfo, method);
+    sub_1B640C8(&LocalizationManager_TypeInfo, method);
     supportServantLabel = LocalizationManager_TypeInfo;
-    byte_48DE047 = 1;
+    byte_49F779C = 1;
   }
   if ( !*((_DWORD *)supportServantLabel + 56) )
   {
@@ -199,14 +198,14 @@ void __fastcall BattleServantNPSpeedChangeComponent__SetButton(
         supportServantLabel = (void *)*((_QWORD *)&npSpeedButtonSpriteArray->obj.klass + v21);
         if ( supportServantLabel )
         {
-          v26 = (System_String_o **)(v24 == 4 ? &StringLiteral_17242/*"btn_bg_21"*/ : &StringLiteral_17241/*"btn_bg_20"*/);
+          v26 = (System_String_o **)(v24 == 4 ? &StringLiteral_17410/*"btn_bg_21"*/ : &StringLiteral_17409/*"btn_bg_20"*/);
           UISprite__set_spriteName((UISprite_o *)supportServantLabel, *v26, 0LL);
           npSpeedLabelArray = this->fields.npSpeedLabelArray;
           if ( npSpeedLabelArray )
           {
             if ( v23 >= npSpeedLabelArray->max_length )
 LABEL_49:
-              sub_1B00F30(supportServantLabel, method);
+              sub_1B6432C(supportServantLabel, method);
             supportServantLabel = (void *)*((_QWORD *)&npSpeedLabelArray->obj.klass + v21);
             v28 = v24 == 4 ? v17 : v8;
             v29 = v24 == 4 ? v16 : v7;
@@ -234,7 +233,7 @@ LABEL_49:
     || (supportServantLabel = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)supportServantLabel, 0LL)) == 0LL )
   {
 LABEL_48:
-    sub_1B00F28(supportServantLabel, method);
+    sub_1B64324(supportServantLabel);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)supportServantLabel, 0, 0LL);
 }
@@ -245,16 +244,15 @@ void __fastcall BattleServantNPSpeedChangeComponent__SetButtonPosition(
         const MethodInfo *method)
 {
   UnityEngine_Transform_o *transform; // x0
-  __int64 v4; // x1
-  UnityEngine_Vector3_o v5; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v4; // 0:s0.4,4:s1.4,8:s2.4
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
-    sub_1B00F28(0LL, v4);
-  v5.fields.x = -9.0;
-  v5.fields.y = this->fields.equipeOffsetZ + -698.0;
-  v5.fields.z = 0.0;
-  UnityEngine_Transform__set_localPosition(transform, v5, 0LL);
+    sub_1B64324(0LL);
+  v4.fields.x = -9.0;
+  v4.fields.y = this->fields.equipeOffsetZ + -698.0;
+  v4.fields.z = 0.0;
+  UnityEngine_Transform__set_localPosition(transform, v4, 0LL);
 }
 
 
@@ -269,25 +267,26 @@ void __fastcall BattleServantNPSpeedChangeComponent__SetData(
   __int64 v8; // x1
   __int64 v9; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  const MethodInfo *v11; // x1
   struct BattleServantData_o **p_battleServantData; // x21
+  const MethodInfo *v12; // x1
   struct BattleDeckServantData_o *deckSvt; // x8
+  __int64 v14; // x1
   struct UIRangeLabel_array *npSpeedLabelArray; // x8
-  UIRangeLabel_o *v15; // x20
-  struct UIRangeLabel_array *v16; // x8
-  UIRangeLabel_o *v17; // x20
-  struct UIRangeLabel_array *v18; // x8
-  UIRangeLabel_o *v19; // x20
+  UIRangeLabel_o *v16; // x20
+  struct UIRangeLabel_array *v17; // x8
+  UIRangeLabel_o *v18; // x20
+  struct UIRangeLabel_array *v19; // x8
+  UIRangeLabel_o *v20; // x20
   UILabel_o *explanationLabel; // x19
 
-  if ( (byte_48E56D8 & 1) == 0 )
+  if ( (byte_49FF3CA & 1) == 0 )
   {
-    sub_1B00CCC(&LocalizationManager_TypeInfo, battleSvtData);
-    sub_1B00CCC(&StringLiteral_11745/*"SERVANT_STATUS_TD_SPEED_TWICE"*/, v6);
-    sub_1B00CCC(&StringLiteral_11743/*"SERVANT_STATUS_TD_SPEED_FREE"*/, v7);
-    sub_1B00CCC(&StringLiteral_11744/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/, v8);
-    sub_1B00CCC(&StringLiteral_11739/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/, v9);
-    byte_48E56D8 = 1;
+    sub_1B640C8(&LocalizationManager_TypeInfo, battleSvtData);
+    sub_1B640C8(&StringLiteral_11881/*"SERVANT_STATUS_TD_SPEED_TWICE"*/, v6);
+    sub_1B640C8(&StringLiteral_11879/*"SERVANT_STATUS_TD_SPEED_FREE"*/, v7);
+    sub_1B640C8(&StringLiteral_11880/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/, v8);
+    sub_1B640C8(&StringLiteral_11875/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/, v9);
+    byte_49FF3CA = 1;
   }
   if ( !battleSvtData || !battleSvtData->fields.deckSvt || battleSvtData->fields.isEnemy )
   {
@@ -298,11 +297,11 @@ void __fastcall BattleServantNPSpeedChangeComponent__SetData(
       return;
     }
 LABEL_27:
-    sub_1B00F28(gameObject, v11);
+    sub_1B64324(gameObject);
   }
   this->fields.battleServantData = battleSvtData;
   p_battleServantData = &this->fields.battleServantData;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields.battleServantData,
     (int32_t)battleSvtData,
     (int32_t)method,
@@ -317,44 +316,44 @@ LABEL_27:
   if ( !deckSvt )
     goto LABEL_27;
   if ( deckSvt->fields.isFollowerSvt )
-    BattleServantNPSpeedChangeComponent__SetSupportServantButton(this, v11);
+    BattleServantNPSpeedChangeComponent__SetSupportServantButton(this, v12);
   else
-    BattleServantNPSpeedChangeComponent__SetButton(this, v11);
+    BattleServantNPSpeedChangeComponent__SetButton(this, v12);
   npSpeedLabelArray = this->fields.npSpeedLabelArray;
   if ( !npSpeedLabelArray )
     goto LABEL_27;
   if ( !npSpeedLabelArray->max_length )
     goto LABEL_28;
-  v15 = npSpeedLabelArray->m_Items[0];
+  v16 = npSpeedLabelArray->m_Items[0];
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11743/*"SERVANT_STATUS_TD_SPEED_FREE"*/, 0LL);
-  if ( !v15 )
-    goto LABEL_27;
-  UIRangeLabel__Set(v15, (System_String_o *)gameObject, 0LL, 1, 0, 0LL);
-  v16 = this->fields.npSpeedLabelArray;
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11879/*"SERVANT_STATUS_TD_SPEED_FREE"*/, 0LL);
   if ( !v16 )
     goto LABEL_27;
-  if ( v16->max_length <= 1 )
-    goto LABEL_28;
-  v17 = v16->m_Items[1];
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11739/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/, 0LL);
+  UIRangeLabel__Set(v16, (System_String_o *)gameObject, 0LL, 1, 0, 0LL);
+  v17 = this->fields.npSpeedLabelArray;
   if ( !v17 )
     goto LABEL_27;
-  UIRangeLabel__Set(v17, (System_String_o *)gameObject, 0LL, 1, 0, 0LL);
-  v18 = this->fields.npSpeedLabelArray;
+  if ( v17->max_length <= 1 )
+    goto LABEL_28;
+  v18 = v17->m_Items[1];
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11875/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/, 0LL);
   if ( !v18 )
     goto LABEL_27;
-  if ( v18->max_length <= 2 )
-LABEL_28:
-    sub_1B00F30(gameObject, v11);
-  v19 = v18->m_Items[2];
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11745/*"SERVANT_STATUS_TD_SPEED_TWICE"*/, 0LL);
+  UIRangeLabel__Set(v18, (System_String_o *)gameObject, 0LL, 1, 0, 0LL);
+  v19 = this->fields.npSpeedLabelArray;
   if ( !v19 )
     goto LABEL_27;
-  UIRangeLabel__Set(v19, (System_String_o *)gameObject, 0LL, 1, 0, 0LL);
+  if ( v19->max_length <= 2 )
+LABEL_28:
+    sub_1B6432C(gameObject, v14);
+  v20 = v19->m_Items[2];
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11881/*"SERVANT_STATUS_TD_SPEED_TWICE"*/, 0LL);
+  if ( !v20 )
+    goto LABEL_27;
+  UIRangeLabel__Set(v20, (System_String_o *)gameObject, 0LL, 1, 0, 0LL);
   explanationLabel = this->fields.explanationLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11744/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11880/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/, 0LL);
   if ( !explanationLabel )
     goto LABEL_27;
   UILabel__set_text(explanationLabel, (System_String_o *)gameObject, 0LL);
@@ -391,21 +390,21 @@ void __fastcall BattleServantNPSpeedChangeComponent__SetSupportServantButton(
   float r; // s0
   UILabel_o *v26; // x19
 
-  if ( (byte_48E56DB & 1) == 0 )
+  if ( (byte_49FF3CD & 1) == 0 )
   {
-    sub_1B00CCC(&LocalizationManager_TypeInfo, method);
-    sub_1B00CCC(&StringLiteral_17241/*"btn_bg_20"*/, v3);
-    sub_1B00CCC(&StringLiteral_2971/*"BATTLE_SUPPORT_SERVANT_NP_SPEED"*/, v4);
-    sub_1B00CCC(&StringLiteral_17242/*"btn_bg_21"*/, v5);
-    byte_48E56DB = 1;
+    sub_1B640C8(&LocalizationManager_TypeInfo, method);
+    sub_1B640C8(&StringLiteral_17409/*"btn_bg_20"*/, v3);
+    sub_1B640C8(&StringLiteral_2977/*"BATTLE_SUPPORT_SERVANT_NP_SPEED"*/, v4);
+    sub_1B640C8(&StringLiteral_17410/*"btn_bg_21"*/, v5);
+    byte_49FF3CD = 1;
   }
   this->fields.isSupport = 1;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  if ( !byte_48DE046 )
+  if ( !byte_49F779B )
   {
-    sub_1B00CCC(&LocalizationManager_TypeInfo, method);
-    byte_48DE046 = 1;
+    sub_1B640C8(&LocalizationManager_TypeInfo, method);
+    byte_49F779B = 1;
   }
   supportServantLabel = (UICommonButton_o *)LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -451,7 +450,7 @@ void __fastcall BattleServantNPSpeedChangeComponent__SetSupportServantButton(
             supportServantLabel = (UICommonButton_o *)*((_QWORD *)&npSpeedButtonSpriteArray->obj.klass + v13);
             if ( supportServantLabel )
             {
-              v18 = (System_String_o **)((_DWORD)v13 == 4 ? &StringLiteral_17242/*"btn_bg_21"*/ : &StringLiteral_17241/*"btn_bg_20"*/);
+              v18 = (System_String_o **)((_DWORD)v13 == 4 ? &StringLiteral_17410/*"btn_bg_21"*/ : &StringLiteral_17409/*"btn_bg_20"*/);
               UISprite__set_spriteName((UISprite_o *)supportServantLabel, *v18, 0LL);
               v19 = this->fields.npSpeedButtonSpriteArray;
               if ( v19 )
@@ -476,7 +475,7 @@ void __fastcall BattleServantNPSpeedChangeComponent__SetSupportServantButton(
                       {
                         if ( v15 >= v21->max_length )
 LABEL_43:
-                          sub_1B00F30(supportServantLabel, method);
+                          sub_1B6432C(supportServantLabel, method);
                         a = v12;
                         b = v11;
                         g = v10;
@@ -524,10 +523,10 @@ LABEL_43:
   v26 = this->fields.supportServantLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  supportServantLabel = (UICommonButton_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2971/*"BATTLE_SUPPORT_SERVANT_NP_SPEED"*/, 0LL);
+  supportServantLabel = (UICommonButton_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2977/*"BATTLE_SUPPORT_SERVANT_NP_SPEED"*/, 0LL);
   if ( !v26 )
 LABEL_42:
-    sub_1B00F28(supportServantLabel, method);
+    sub_1B64324(supportServantLabel);
   UILabel__set_text(v26, (System_String_o *)supportServantLabel, 0LL);
 }
 

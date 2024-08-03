@@ -27,9 +27,8 @@ void __fastcall BaseAiActBattleLogicTask__InterruptAction(
 {
   BattleActionData_array **p_interruptActions; // x19
   _BOOL8 IsNullOrEmpty; // x0
-  __int64 v7; // x1
-  int32_t v8; // w2
-  int32_t v9; // w3
+  int32_t v7; // w2
+  int32_t v8; // w3
 
   if ( addAction )
   {
@@ -38,10 +37,10 @@ void __fastcall BaseAiActBattleLogicTask__InterruptAction(
     if ( !IsNullOrEmpty )
     {
       if ( !perf )
-        sub_1B00F28(IsNullOrEmpty, v7);
+        sub_1B64324(IsNullOrEmpty);
       BattlePerformance__addActionData(perf, *p_interruptActions, 0LL);
       *p_interruptActions = 0LL;
-      sub_1B00C70((ServantStatusBattleListViewItem_o *)p_interruptActions, 0, v8, v9);
+      sub_1B6406C((ServantStatusBattleListViewItem_o *)p_interruptActions, 0, v7, v8);
     }
   }
 }
@@ -55,7 +54,7 @@ void __fastcall BaseAiActBattleLogicTask__SetInterruptAction(
   int32_t v3; // w3
 
   this->fields.interruptActions = actions;
-  sub_1B00C70(
+  sub_1B6406C(
     (ServantStatusBattleListViewItem_o *)&this->fields.interruptActions,
     (int32_t)actions,
     (int32_t)method,

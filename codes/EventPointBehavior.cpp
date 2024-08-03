@@ -12,5 +12,5 @@ void __fastcall EventPointBehavior___ctor(EventPointBehavior_o *this, const Meth
   v2[-1].fields.name = 0LL;
   *(_QWORD *)&v2[-1].fields.dispLimitCount.fields.fakeValue = 0LL;
   *(_DWORD *)&v2[-1].fields.isMine = 0;
-  sub_1B00C70(v2, 0, v3, v4);
+  sub_1B6406C(v2, 0, v3, v4);
 }

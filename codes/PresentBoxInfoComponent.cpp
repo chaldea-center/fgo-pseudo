@@ -11,28 +11,27 @@ UserPresentBoxEntity_array *__fastcall PresentBoxInfoComponent__GetPresentList(
   __int64 v2; // x1
   __int64 v3; // x1
   DataManager_o *Instance; // x0
-  __int64 v5; // x1
   Il2CppObject *MasterData_object; // x19
 
-  if ( (byte_48E68CF & 1) == 0 )
+  if ( (byte_4A005D6 & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataManager_GetMasterData_UserPresentBoxMaster___, method);
-    sub_1B00CCC(&NetworkManager_TypeInfo, v2);
-    sub_1B00CCC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_48E68CF = 1;
+    sub_1B640C8(&Method_DataManager_GetMasterData_UserPresentBoxMaster___, method);
+    sub_1B640C8(&NetworkManager_TypeInfo, v2);
+    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4A005D6 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_35FBBF0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_8;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2D62C10 *)Method_DataManager_GetMasterData_UserPresentBoxMaster___);
+                        (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_UserPresentBoxMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = (DataManager_o *)NetworkManager__get_UserId(0LL);
   if ( !MasterData_object )
 LABEL_8:
-    sub_1B00F28(Instance, v5);
+    sub_1B64324(Instance);
   return UserPresentBoxMaster__getVaildList((UserPresentBoxMaster_o *)MasterData_object, (int64_t)Instance, 0LL);
 }
 
@@ -60,12 +59,12 @@ void __fastcall PresentBoxInfoComponent__SetPresentBoxInfo(PresentBoxInfoCompone
   int32_t v20; // w1
 
   v2 = this;
-  if ( (byte_48E68CE & 1) == 0 )
+  if ( (byte_4A005D5 & 1) == 0 )
   {
-    sub_1B00CCC(&BalanceConfig_TypeInfo, method);
-    sub_1B00CCC(&UnityEngine_Object_TypeInfo, v3);
-    this = (PresentBoxInfoComponent_o *)sub_1B00CCC(&StringLiteral_1/*""*/, v4);
-    byte_48E68CE = 1;
+    sub_1B640C8(&BalanceConfig_TypeInfo, method);
+    sub_1B640C8(&UnityEngine_Object_TypeInfo, v3);
+    this = (PresentBoxInfoComponent_o *)sub_1B640C8(&StringLiteral_1/*""*/, v4);
+    byte_4A005D5 = 1;
   }
   PresentList = (SimpleAnimation_o *)PresentBoxInfoComponent__GetPresentList(this, method);
   if ( !PresentList )
@@ -105,7 +104,7 @@ void __fastcall PresentBoxInfoComponent__SetPresentBoxInfo(PresentBoxInfoCompone
       goto LABEL_17;
     }
 LABEL_50:
-    sub_1B00F30(PresentList, v6);
+    sub_1B6432C(PresentList, v6);
   }
 LABEL_17:
   presentBoxSimpleAnimation = (UnityEngine_Object_o *)v2->fields.presentBoxSimpleAnimation;
@@ -125,7 +124,7 @@ LABEL_17:
       PresentList = v2->fields.presentBoxSimpleAnimation;
       if ( !PresentList )
         goto LABEL_49;
-      SimpleAnimation__Play_62462980(PresentList, v14, 0LL);
+      SimpleAnimation__Play_63513060(PresentList, v14, 0LL);
     }
   }
   else
@@ -148,7 +147,7 @@ LABEL_17:
         PresentList = (SimpleAnimation_o *)v2->fields.presentBoxAnimation;
         if ( !PresentList )
           goto LABEL_49;
-        UnityEngine_Animation__Play_67822748((UnityEngine_Animation_o *)PresentList, v14, 0LL);
+        UnityEngine_Animation__Play_68872828((UnityEngine_Animation_o *)PresentList, v14, 0LL);
       }
     }
   }
@@ -169,7 +168,7 @@ LABEL_17:
                                              0LL)) == 0LL )
   {
 LABEL_49:
-    sub_1B00F28(PresentList, v6);
+    sub_1B64324(PresentList);
   }
   if ( !v10 || m_CancellationTokenSource >= 1 )
   {

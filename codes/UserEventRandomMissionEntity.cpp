@@ -1,13 +1,13 @@
 void __fastcall UserEventRandomMissionEntity___ctor(UserEventRandomMissionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_48E3424 & 1) == 0 )
+  if ( (byte_49FD08F & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_string___ctor__, method);
-    byte_48E3424 = 1;
+    sub_1B640C8(&Method_DataEntityBase_string___ctor__, method);
+    byte_49FD08F = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_2FE68C4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D3D1C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall UserEventRandomMissionEntity__CreatePK(
         int32_t missionId,
         const MethodInfo *method)
 {
-  if ( (byte_48E3423 & 1) == 0 )
+  if ( (byte_49FD08E & 1) == 0 )
   {
-    sub_1B00CCC(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&missionId);
-    byte_48E3423 = 1;
+    sub_1B640C8(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&missionId);
+    byte_49FD08E = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            missionId,
-           (const MethodInfo_2D60F3C *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_2E37718 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
