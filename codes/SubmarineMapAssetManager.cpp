@@ -10,23 +10,23 @@ void __fastcall SubmarineMapAssetManager___ctor(SubmarineMapAssetManager_o *this
   int32_t v10; // w2
   int32_t v11; // w3
 
-  if ( (byte_49F9135 & 1) == 0 )
+  if ( (byte_49FB224 & 1) == 0 )
   {
-    sub_1B640C8(&string___TypeInfo, method);
-    sub_1B640C8(&StringLiteral_6140/*"Event/Submarine"*/, v3);
-    byte_49F9135 = 1;
+    sub_1B64870(&string___TypeInfo, method);
+    sub_1B64870(&StringLiteral_6140/*"Event/Submarine"*/, v3);
+    byte_49FB224 = 1;
   }
-  v4 = sub_1B64170(string___TypeInfo, 1LL);
+  v4 = sub_1B64918(string___TypeInfo, 1LL);
   if ( !v4 )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, v5);
   v8 = (struct System_String_array *)v4;
   if ( !*(_DWORD *)(v4 + 24) )
-    sub_1B6432C(v4, v5);
+    sub_1B64AD4(v4, v5);
   v9 = StringLiteral_6140/*"Event/Submarine"*/;
   *(_QWORD *)(v4 + 32) = StringLiteral_6140/*"Event/Submarine"*/;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v4 + 32), v9, v6, v7);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)(v4 + 32), v9, v6, v7);
   this->fields.loadAssetNames = v8;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.loadAssetNames, (int32_t)v8, v10, v11);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.loadAssetNames, (int32_t)v8, v10, v11);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -44,19 +44,19 @@ System_Collections_IEnumerator_o *__fastcall SubmarineMapAssetManager__CoLoadAss
   int32_t v10; // w2
   int32_t v11; // w3
 
-  if ( (byte_49F9131 & 1) == 0 )
+  if ( (byte_49FB220 & 1) == 0 )
   {
-    sub_1B640C8(&SubmarineMapAssetManager__CoLoadAssets_d__69_TypeInfo, *(_QWORD *)&eventId);
-    byte_49F9131 = 1;
+    sub_1B64870(&SubmarineMapAssetManager__CoLoadAssets_d__69_TypeInfo, *(_QWORD *)&eventId);
+    byte_49FB220 = 1;
   }
-  v7 = sub_1B64314(SubmarineMapAssetManager__CoLoadAssets_d__69_TypeInfo, *(_QWORD *)&eventId, finishCallback);
+  v7 = sub_1B64ABC(SubmarineMapAssetManager__CoLoadAssets_d__69_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0LL);
   *(_DWORD *)(v7 + 16) = 0;
   *(_QWORD *)(v7 + 32) = this;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v7 + 32), (int32_t)this, v8, v9);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)(v7 + 32), (int32_t)this, v8, v9);
   *(_DWORD *)(v7 + 40) = eventId;
   *(_QWORD *)(v7 + 48) = finishCallback;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v7 + 48), (int32_t)finishCallback, v10, v11);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)(v7 + 48), (int32_t)finishCallback, v10, v11);
   return (System_Collections_IEnumerator_o *)v7;
 }
 
@@ -100,81 +100,81 @@ void __fastcall SubmarineMapAssetManager__Finish(SubmarineMapAssetManager_o *thi
   int32_t v37; // w3
   System_String_array *v38; // x19
 
-  if ( (byte_49F9134 & 1) == 0 )
+  if ( (byte_49FB223 & 1) == 0 )
   {
-    sub_1B640C8(&AssetManager_TypeInfo, method);
-    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_int__GameObject__Clear__, v3);
-    byte_49F9134 = 1;
+    sub_1B64870(&AssetManager_TypeInfo, method);
+    sub_1B64870(&Method_System_Collections_Generic_Dictionary_int__GameObject__Clear__, v3);
+    byte_49FB223 = 1;
   }
   scannerPrefabDict = this->fields.scannerPrefabDict;
   if ( !scannerPrefabDict
     || (System_Collections_Generic_Dictionary_int__object___Clear(
           (System_Collections_Generic_Dictionary_int__object__o *)scannerPrefabDict,
-          (const MethodInfo_3123B0C *)Method_System_Collections_Generic_Dictionary_int__GameObject__Clear__),
+          (const MethodInfo_3125DE8 *)Method_System_Collections_Generic_Dictionary_int__GameObject__Clear__),
         (scannerPrefabDict = this->fields.scanRangeNotificatorPrefabDict) == 0LL) )
   {
-    sub_1B64324(scannerPrefabDict);
+    sub_1B64ACC(scannerPrefabDict, method);
   }
   System_Collections_Generic_Dictionary_int__object___Clear(
     (System_Collections_Generic_Dictionary_int__object__o *)scannerPrefabDict,
-    (const MethodInfo_3123B0C *)Method_System_Collections_Generic_Dictionary_int__GameObject__Clear__);
+    (const MethodInfo_3125DE8 *)Method_System_Collections_Generic_Dictionary_int__GameObject__Clear__);
   this->fields._PanelPrefab_k__BackingField = 0LL;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields, 0, v5, v6);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields, 0, v5, v6);
   this->fields._GridLinePrefab_k__BackingField = 0LL;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields._GridLinePrefab_k__BackingField, 0, v7, v8);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields._GridLinePrefab_k__BackingField, 0, v7, v8);
   this->fields._PanelContainerPrefab_k__BackingField = 0LL;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields._PanelContainerPrefab_k__BackingField, 0, v9, v10);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields._PanelContainerPrefab_k__BackingField, 0, v9, v10);
   this->fields._EffectContainerPrefab_k__BackingField = 0LL;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields._EffectContainerPrefab_k__BackingField, 0, v11, v12);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields._EffectContainerPrefab_k__BackingField, 0, v11, v12);
   this->fields._ClosedPanelTexture_k__BackingField = 0LL;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields._ClosedPanelTexture_k__BackingField, 0, v13, v14);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields._ClosedPanelTexture_k__BackingField, 0, v13, v14);
   this->fields._GridTexture_k__BackingField = 0LL;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields._GridTexture_k__BackingField, 0, v15, v16);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields._GridTexture_k__BackingField, 0, v15, v16);
   this->fields._EffectScannedPanelPrefab_k__BackingField = 0LL;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields._EffectScannedPanelPrefab_k__BackingField, 0, v17, v18);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields._EffectScannedPanelPrefab_k__BackingField, 0, v17, v18);
   this->fields._EffectSelectedPanelPrefab_k__BackingField = 0LL;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._EffectSelectedPanelPrefab_k__BackingField,
     0,
     v19,
     v20);
   this->fields._EffectScannablePanelPrafab_k__BackingField = 0LL;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._EffectScannablePanelPrafab_k__BackingField,
     0,
     v21,
     v22);
   this->fields._EffectScanObstaclePanelPrafab_k__BackingField = 0LL;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._EffectScanObstaclePanelPrafab_k__BackingField,
     0,
     v23,
     v24);
   this->fields._ScanProcessPreventedPrafab_k__BackingField = 0LL;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._ScanProcessPreventedPrafab_k__BackingField,
     0,
     v25,
     v26);
   this->fields._SelectScannerDialogPrefab_k__BackingField = 0LL;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._SelectScannerDialogPrefab_k__BackingField,
     0,
     v27,
     v28);
   this->fields._ScanConfirmDialogPrefab_k__BackingField = 0LL;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields._ScanConfirmDialogPrefab_k__BackingField, 0, v29, v30);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields._ScanConfirmDialogPrefab_k__BackingField, 0, v29, v30);
   this->fields._NewScannerDialogPrefab_k__BackingField = 0LL;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields._NewScannerDialogPrefab_k__BackingField, 0, v31, v32);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields._NewScannerDialogPrefab_k__BackingField, 0, v31, v32);
   this->fields._Settings_k__BackingField = 0LL;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields._Settings_k__BackingField, 0, v33, v34);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields._Settings_k__BackingField, 0, v33, v34);
   this->fields._AnimationSkipEFfectPrefab_k__BackingField = 0LL;
   p_AnimationSkipEFfectPrefab_k__BackingField = &this->fields._AnimationSkipEFfectPrefab_k__BackingField;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)p_AnimationSkipEFfectPrefab_k__BackingField, 0, v36, v37);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)p_AnimationSkipEFfectPrefab_k__BackingField, 0, v36, v37);
   v38 = (System_String_array *)p_AnimationSkipEFfectPrefab_k__BackingField[3];
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__releaseAssetStorage_37486440(v38, 0LL);
+  AssetManager__releaseAssetStorage_37490820(v38, 0LL);
 }
 
 
@@ -187,20 +187,20 @@ UnityEngine_GameObject_o *__fastcall SubmarineMapAssetManager__GetScanAnimObject
   struct System_Collections_Generic_Dictionary_int__GameObject__o *scannerPrefabDict; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_49F9132 & 1) == 0 )
+  if ( (byte_49FB221 & 1) == 0 )
   {
-    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_int__GameObject__TryGetValue__, *(_QWORD *)&scanObjectId);
-    byte_49F9132 = 1;
+    sub_1B64870(&Method_System_Collections_Generic_Dictionary_int__GameObject__TryGetValue__, *(_QWORD *)&scanObjectId);
+    byte_49FB221 = 1;
   }
   value = 0LL;
   scannerPrefabDict = this->fields.scannerPrefabDict;
   if ( !scannerPrefabDict )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, *(_QWORD *)&scanObjectId);
   System_Collections_Generic_Dictionary_int__object___TryGetValue(
     (System_Collections_Generic_Dictionary_int__object__o *)scannerPrefabDict,
     scanObjectId,
     &value,
-    (const MethodInfo_3125110 *)Method_System_Collections_Generic_Dictionary_int__GameObject__TryGetValue__);
+    (const MethodInfo_31273EC *)Method_System_Collections_Generic_Dictionary_int__GameObject__TryGetValue__);
   return (UnityEngine_GameObject_o *)value;
 }
 
@@ -214,101 +214,95 @@ UnityEngine_GameObject_o *__fastcall SubmarineMapAssetManager__GetScanRangeNotif
   struct System_Collections_Generic_Dictionary_int__GameObject__o *scanRangeNotificatorPrefabDict; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_49F9133 & 1) == 0 )
+  if ( (byte_49FB222 & 1) == 0 )
   {
-    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_int__GameObject__TryGetValue__, *(_QWORD *)&scanObjectId);
-    byte_49F9133 = 1;
+    sub_1B64870(&Method_System_Collections_Generic_Dictionary_int__GameObject__TryGetValue__, *(_QWORD *)&scanObjectId);
+    byte_49FB222 = 1;
   }
   value = 0LL;
   scanRangeNotificatorPrefabDict = this->fields.scanRangeNotificatorPrefabDict;
   if ( !scanRangeNotificatorPrefabDict )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, *(_QWORD *)&scanObjectId);
   System_Collections_Generic_Dictionary_int__object___TryGetValue(
     (System_Collections_Generic_Dictionary_int__object__o *)scanRangeNotificatorPrefabDict,
     scanObjectId,
     &value,
-    (const MethodInfo_3125110 *)Method_System_Collections_Generic_Dictionary_int__GameObject__TryGetValue__);
+    (const MethodInfo_31273EC *)Method_System_Collections_Generic_Dictionary_int__GameObject__TryGetValue__);
   return (UnityEngine_GameObject_o *)value;
 }
 
 
 void __fastcall SubmarineMapAssetManager__Initialize(SubmarineMapAssetManager_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  System_Collections_Generic_Dictionary_int__object__o *v5; // x20
-  int32_t v6; // w2
-  int32_t v7; // w3
-  __int64 v8; // x1
-  __int64 v9; // x2
-  System_Collections_Generic_Dictionary_int__object__o *v10; // x20
-  int32_t v11; // w2
-  int32_t v12; // w3
+  __int64 v3; // x1
+  System_Collections_Generic_Dictionary_int__object__o *v4; // x20
+  int32_t v5; // w2
+  int32_t v6; // w3
+  System_Collections_Generic_Dictionary_int__object__o *v7; // x20
+  int32_t v8; // w2
+  int32_t v9; // w3
 
-  if ( (byte_49F912F & 1) == 0 )
+  if ( (byte_49FB21E & 1) == 0 )
   {
-    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_int__GameObject___ctor__, method);
-    sub_1B640C8(&System_Collections_Generic_Dictionary_int__GameObject__TypeInfo, v4);
-    byte_49F912F = 1;
+    sub_1B64870(&Method_System_Collections_Generic_Dictionary_int__GameObject___ctor__, method);
+    sub_1B64870(&System_Collections_Generic_Dictionary_int__GameObject__TypeInfo, v3);
+    byte_49FB21E = 1;
   }
-  v5 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1B64314(
-                                                                 System_Collections_Generic_Dictionary_int__GameObject__TypeInfo,
-                                                                 method,
-                                                                 v2);
+  v4 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1B64ABC(System_Collections_Generic_Dictionary_int__GameObject__TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
-    v5,
-    (const MethodInfo_3122FB0 *)Method_System_Collections_Generic_Dictionary_int__GameObject___ctor__);
-  this->fields.scannerPrefabDict = (struct System_Collections_Generic_Dictionary_int__GameObject__o *)v5;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.scannerPrefabDict, (int32_t)v5, v6, v7);
-  v10 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1B64314(
-                                                                  System_Collections_Generic_Dictionary_int__GameObject__TypeInfo,
-                                                                  v8,
-                                                                  v9);
+    v4,
+    (const MethodInfo_312528C *)Method_System_Collections_Generic_Dictionary_int__GameObject___ctor__);
+  this->fields.scannerPrefabDict = (struct System_Collections_Generic_Dictionary_int__GameObject__o *)v4;
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.scannerPrefabDict, (int32_t)v4, v5, v6);
+  v7 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1B64ABC(System_Collections_Generic_Dictionary_int__GameObject__TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
-    v10,
-    (const MethodInfo_3122FB0 *)Method_System_Collections_Generic_Dictionary_int__GameObject___ctor__);
-  this->fields.scanRangeNotificatorPrefabDict = (struct System_Collections_Generic_Dictionary_int__GameObject__o *)v10;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.scanRangeNotificatorPrefabDict, (int32_t)v10, v11, v12);
+    v7,
+    (const MethodInfo_312528C *)Method_System_Collections_Generic_Dictionary_int__GameObject___ctor__);
+  this->fields.scanRangeNotificatorPrefabDict = (struct System_Collections_Generic_Dictionary_int__GameObject__o *)v7;
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.scanRangeNotificatorPrefabDict, (int32_t)v7, v8, v9);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall SubmarineMapAssetManager__LoadMapObject(
         SubmarineMapAssetManager_o *this,
         AssetData_o *assetData,
         int32_t mapId,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
+  __int64 v4; // x4
   __int64 v8; // x1
-  Il2CppObject *v9; // x0
-  System_String_o *v10; // x0
-  Il2CppObject *Object_object__48347676; // x0
-  int32_t v12; // w2
-  int32_t v13; // w3
-  int32_t v14; // [xsp+Ch] [xbp-34h] BYREF
+  __int64 v9; // x1
+  Il2CppObject *v10; // x0
+  System_String_o *v11; // x0
+  __int64 v12; // x1
+  Il2CppObject *Object_object__48356600; // x0
+  int32_t v14; // w2
+  int32_t v15; // w3
+  int32_t v16; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_49F9130 & 1) == 0 )
+  if ( (byte_49FB21F & 1) == 0 )
   {
-    sub_1B640C8(&Method_AssetData_GetObject_Texture2D____75705984, assetData);
-    sub_1B640C8(&int_TypeInfo, v7);
-    sub_1B640C8(&StringLiteral_24854/*"{0:D6}_ClosedPanelTexture"*/, v8);
-    byte_49F9130 = 1;
+    sub_1B64870(&Method_AssetData_GetObject_Texture2D____75714464, assetData);
+    sub_1B64870(&int_TypeInfo, v8);
+    sub_1B64870(&StringLiteral_24858/*"{0:D6}_ClosedPanelTexture"*/, v9);
+    byte_49FB21F = 1;
   }
-  v14 = mapId;
-  v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14);
-  v10 = System_String__Format((System_String_o *)StringLiteral_24854/*"{0:D6}_ClosedPanelTexture"*/, v9, 0LL);
+  v16 = mapId;
+  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16, *(_QWORD *)&mapId, method, v4);
+  v11 = System_String__Format((System_String_o *)StringLiteral_24858/*"{0:D6}_ClosedPanelTexture"*/, v10, 0LL);
   if ( !assetData )
-    sub_1B64324(v10);
-  Object_object__48347676 = AssetData__GetObject_object__48347676(
+    sub_1B64ACC(v11, v12);
+  Object_object__48356600 = AssetData__GetObject_object__48356600(
                               assetData,
-                              v10,
-                              (const MethodInfo_2E1BA1C *)Method_AssetData_GetObject_Texture2D____75705984);
-  this->fields._ClosedPanelTexture_k__BackingField = (struct UnityEngine_Texture2D_o *)Object_object__48347676;
-  sub_1B6406C(
+                              v11,
+                              (const MethodInfo_2E1DCF8 *)Method_AssetData_GetObject_Texture2D____75714464);
+  this->fields._ClosedPanelTexture_k__BackingField = (struct UnityEngine_Texture2D_o *)Object_object__48356600;
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._ClosedPanelTexture_k__BackingField,
-    (int32_t)Object_object__48347676,
-    v12,
-    v13);
+    (int32_t)Object_object__48356600,
+    v14,
+    v15);
 }
 
 
@@ -448,7 +442,7 @@ void __fastcall SubmarineMapAssetManager__set_AnimationSkipEFfectPrefab(
   int32_t v3; // w3
 
   this->fields._AnimationSkipEFfectPrefab_k__BackingField = value;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._AnimationSkipEFfectPrefab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -464,7 +458,7 @@ void __fastcall SubmarineMapAssetManager__set_ClosedPanelTexture(
   int32_t v3; // w3
 
   this->fields._ClosedPanelTexture_k__BackingField = value;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._ClosedPanelTexture_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -480,7 +474,7 @@ void __fastcall SubmarineMapAssetManager__set_EffectContainerPrefab(
   int32_t v3; // w3
 
   this->fields._EffectContainerPrefab_k__BackingField = value;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._EffectContainerPrefab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -496,7 +490,7 @@ void __fastcall SubmarineMapAssetManager__set_EffectScanObstaclePanelPrafab(
   int32_t v3; // w3
 
   this->fields._EffectScanObstaclePanelPrafab_k__BackingField = value;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._EffectScanObstaclePanelPrafab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -512,7 +506,7 @@ void __fastcall SubmarineMapAssetManager__set_EffectScannablePanelPrafab(
   int32_t v3; // w3
 
   this->fields._EffectScannablePanelPrafab_k__BackingField = value;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._EffectScannablePanelPrafab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -528,7 +522,7 @@ void __fastcall SubmarineMapAssetManager__set_EffectScannedPanelPrefab(
   int32_t v3; // w3
 
   this->fields._EffectScannedPanelPrefab_k__BackingField = value;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._EffectScannedPanelPrefab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -544,7 +538,7 @@ void __fastcall SubmarineMapAssetManager__set_EffectSelectedPanelPrefab(
   int32_t v3; // w3
 
   this->fields._EffectSelectedPanelPrefab_k__BackingField = value;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._EffectSelectedPanelPrefab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -560,7 +554,7 @@ void __fastcall SubmarineMapAssetManager__set_GridLinePrefab(
   int32_t v3; // w3
 
   this->fields._GridLinePrefab_k__BackingField = value;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._GridLinePrefab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -576,7 +570,7 @@ void __fastcall SubmarineMapAssetManager__set_GridTexture(
   int32_t v3; // w3
 
   this->fields._GridTexture_k__BackingField = value;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._GridTexture_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -592,7 +586,7 @@ void __fastcall SubmarineMapAssetManager__set_NewScannerDialogPrefab(
   int32_t v3; // w3
 
   this->fields._NewScannerDialogPrefab_k__BackingField = value;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._NewScannerDialogPrefab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -608,7 +602,7 @@ void __fastcall SubmarineMapAssetManager__set_PanelContainerPrefab(
   int32_t v3; // w3
 
   this->fields._PanelContainerPrefab_k__BackingField = value;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._PanelContainerPrefab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -624,7 +618,7 @@ void __fastcall SubmarineMapAssetManager__set_PanelPrefab(
   int32_t v3; // w3
 
   this->fields._PanelPrefab_k__BackingField = value;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -636,7 +630,7 @@ void __fastcall SubmarineMapAssetManager__set_ScanConfirmDialogPrefab(
   int32_t v3; // w3
 
   this->fields._ScanConfirmDialogPrefab_k__BackingField = value;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._ScanConfirmDialogPrefab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -652,7 +646,7 @@ void __fastcall SubmarineMapAssetManager__set_ScanProcessPreventedPrafab(
   int32_t v3; // w3
 
   this->fields._ScanProcessPreventedPrafab_k__BackingField = value;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._ScanProcessPreventedPrafab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -668,7 +662,7 @@ void __fastcall SubmarineMapAssetManager__set_SelectScannerDialogPrefab(
   int32_t v3; // w3
 
   this->fields._SelectScannerDialogPrefab_k__BackingField = value;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._SelectScannerDialogPrefab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -684,7 +678,7 @@ void __fastcall SubmarineMapAssetManager__set_Settings(
   int32_t v3; // w3
 
   this->fields._Settings_k__BackingField = value;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._Settings_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -706,8 +700,8 @@ bool __fastcall SubmarineMapAssetManager__CoLoadAssets_d__69__MoveNext(
         SubmarineMapAssetManager__CoLoadAssets_d__69_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  SubmarineMapAssetManager__CoLoadAssets_d__69_o *v3; // x24
+  SubmarineMapAssetManager__CoLoadAssets_d__69_o *v2; // x24
+  __int64 v3; // x1
   __int64 v4; // x1
   __int64 v5; // x1
   __int64 v6; // x1
@@ -743,49 +737,49 @@ bool __fastcall SubmarineMapAssetManager__CoLoadAssets_d__69__MoveNext(
   __int64 v36; // x1
   __int64 v37; // x1
   __int64 v38; // x1
-  __int64 v39; // x1
   int32_t _1__state; // w8
   struct SubmarineMapAssetManager_o *_4__this; // x26
-  __int64 v42; // x20
-  __int64 v43; // x1
-  __int64 v44; // x2
-  System_String_array *v45; // x22
-  System_Action_o *v46; // x23
-  bool v47; // w21
-  __int64 v48; // x1
-  __int64 v49; // x2
-  System_Func_bool__o *v50; // x22
-  __int64 v51; // x1
-  __int64 v52; // x2
-  UnityEngine_WaitUntil_o *v53; // x20
+  __int64 v41; // x20
+  System_String_array *v42; // x22
+  System_Action_o *v43; // x23
+  bool v44; // w21
+  System_Func_bool__o *v45; // x22
+  UnityEngine_WaitUntil_o *v46; // x20
   ServantStatusBattleListViewItem_o *p__2__current; // x24
-  int32_t v55; // w2
-  int32_t v56; // w3
+  int32_t v48; // w2
+  int32_t v49; // w3
   System_String_array *loadAssetNames; // x20
-  __int64 v58; // x1
-  AssetData_o *v59; // x20
-  Il2CppObject *Object_object__48347676; // x0
-  int32_t v61; // w2
-  int32_t v62; // w3
-  Il2CppObject *v63; // x0
-  int32_t v64; // w2
-  int32_t v65; // w3
-  Il2CppObject *v66; // x0
-  int32_t v67; // w2
-  int32_t v68; // w3
-  Il2CppObject *v69; // x0
-  int32_t v70; // w2
-  int32_t v71; // w3
-  Il2CppObject *v72; // x0
-  int32_t v73; // w2
-  int32_t v74; // w3
-  Il2CppObject *v75; // x0
-  int32_t v76; // w2
-  int32_t v77; // w3
-  Il2CppObject *v78; // x0
-  int32_t v79; // w2
-  int32_t v80; // w3
-  Il2CppObject *v81; // x0
+  AssetData_o *v51; // x20
+  Il2CppObject *Object_object__48356600; // x0
+  int32_t v53; // w2
+  int32_t v54; // w3
+  Il2CppObject *v55; // x0
+  int32_t v56; // w2
+  int32_t v57; // w3
+  Il2CppObject *v58; // x0
+  int32_t v59; // w2
+  int32_t v60; // w3
+  Il2CppObject *v61; // x0
+  int32_t v62; // w2
+  int32_t v63; // w3
+  Il2CppObject *v64; // x0
+  int32_t v65; // w2
+  int32_t v66; // w3
+  Il2CppObject *v67; // x0
+  int32_t v68; // w2
+  int32_t v69; // w3
+  Il2CppObject *v70; // x0
+  int32_t v71; // w2
+  int32_t v72; // w3
+  Il2CppObject *v73; // x0
+  int32_t v74; // w2
+  int32_t v75; // w3
+  Il2CppObject *v76; // x0
+  int32_t v77; // w2
+  int32_t v78; // w3
+  Il2CppObject *v79; // x0
+  int32_t v80; // w2
+  int32_t v81; // w3
   int32_t v82; // w2
   int32_t v83; // w3
   Il2CppObject *v84; // x0
@@ -794,369 +788,347 @@ bool __fastcall SubmarineMapAssetManager__CoLoadAssets_d__69__MoveNext(
   Il2CppObject *v87; // x0
   int32_t v88; // w2
   int32_t v89; // w3
-  int32_t v90; // w2
-  int32_t v91; // w3
-  Il2CppObject *v92; // x0
-  int32_t v93; // w2
-  int32_t v94; // w3
-  Il2CppObject *v95; // x0
-  int32_t v96; // w2
-  int32_t v97; // w3
-  Il2CppObject *v98; // x0
-  int32_t v99; // w2
-  int32_t v100; // w3
-  Il2CppObject *v101; // x0
-  int32_t v102; // w2
-  int32_t v103; // w3
-  __int64 v104; // x1
-  __int64 v105; // x2
+  Il2CppObject *v90; // x0
+  int32_t v91; // w2
+  int32_t v92; // w3
+  Il2CppObject *v93; // x0
+  int32_t v94; // w2
+  int32_t v95; // w3
   System_Collections_Generic_IEnumerable_TSource__o *ListByEventId; // x21
-  SubmarineMapAssetManager___c_c *v107; // x8
+  SubmarineMapAssetManager___c_c *v97; // x8
   System_Func_object__int__o *_9__69_2; // x22
-  Il2CppObject *v109; // x23
+  Il2CppObject *v99; // x23
   struct SubmarineMapAssetManager___c_StaticFields *static_fields; // x0
-  int32_t v111; // w2
-  int32_t v112; // w3
-  System_Collections_Generic_IEnumerable_TSource__o *v113; // x21
-  __int64 v114; // x1
-  __int64 v115; // x2
-  System_Text_RegularExpressions_Regex_o *v116; // x22
-  __int64 v117; // x2
+  int32_t v101; // w2
+  int32_t v102; // w3
+  System_Collections_Generic_IEnumerable_TSource__o *v103; // x21
+  System_Text_RegularExpressions_Regex_o *v104; // x22
   Il2CppObject *_2__current; // x8
-  SubmarineMapAssetManager__CoLoadAssets_d__69_o *v119; // x23
-  unsigned __int64 v120; // x29
-  struct SubmarineMapAssetManager_o **v121; // x28
-  System_String_o *v122; // x24
-  SubmarineMapAssetManager__CoLoadAssets_d__69_o *v123; // x25
-  System_String_o *v124; // x0
-  int32_t v125; // w25
-  Il2CppObject *v126; // x24
-  System_Text_RegularExpressions_Regex_o *v127; // x22
-  Il2CppObject *v128; // x8
-  SubmarineMapAssetManager__CoLoadAssets_d__69_o *v129; // x23
-  unsigned __int64 v130; // x28
+  SubmarineMapAssetManager__CoLoadAssets_d__69_o *v106; // x23
+  unsigned __int64 v107; // x29
+  struct SubmarineMapAssetManager_o **v108; // x28
+  System_String_o *v109; // x24
+  SubmarineMapAssetManager__CoLoadAssets_d__69_o *v110; // x25
+  System_String_o *v111; // x0
+  int32_t v112; // w25
+  Il2CppObject *v113; // x24
+  System_Text_RegularExpressions_Regex_o *v114; // x22
+  Il2CppObject *v115; // x8
+  SubmarineMapAssetManager__CoLoadAssets_d__69_o *v116; // x23
+  unsigned __int64 v117; // x28
   struct SubmarineMapAssetManager_o **p__4__this; // x29
-  System_String_o *v132; // x24
-  SubmarineMapAssetManager__CoLoadAssets_d__69_o *v133; // x25
+  System_String_o *v119; // x24
+  SubmarineMapAssetManager__CoLoadAssets_d__69_o *v120; // x25
   System_String_o *Value; // x0
-  int32_t v135; // w25
-  Il2CppObject *v136; // x24
+  int32_t v122; // w25
+  Il2CppObject *v123; // x24
   System_Action_o *finishCallback; // x0
-  SubmarineMapAssetManager__CoLoadAssets_d__69_o *v139; // [xsp+8h] [xbp-68h]
+  SubmarineMapAssetManager__CoLoadAssets_d__69_o *v126; // [xsp+8h] [xbp-68h]
 
-  v3 = this;
-  if ( (byte_49F9137 & 1) == 0 )
+  v2 = this;
+  if ( (byte_49FB226 & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_TypeInfo, method);
-    sub_1B640C8(&Method_AssetData_GetObject_GameObject____75705960, v4);
-    sub_1B640C8(&Method_AssetData_GetObject_SubmarineSettings___, v5);
-    sub_1B640C8(&Method_AssetData_GetObject_Texture2D____75705984, v6);
-    sub_1B640C8(&AssetManager_TypeInfo, v7);
-    sub_1B640C8(&Method_DataManager_GetMasterData_EventPanelScanMaster___, v8);
-    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_int__GameObject__set_Item__, v9);
-    sub_1B640C8(&Method_System_Linq_Enumerable_Contains_int___, v10);
-    sub_1B640C8(&Method_System_Linq_Enumerable_Select_EventPanelScanEntity__int___, v11);
-    sub_1B640C8(&System_Func_bool__TypeInfo, v12);
-    sub_1B640C8(&System_Func_EventPanelScanEntity__int__TypeInfo, v13);
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, v14);
-    sub_1B640C8(&System_Text_RegularExpressions_Regex_TypeInfo, v15);
-    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
-    sub_1B640C8(&Method_SubmarineMapAssetManager___c__CoLoadAssets_b__69_2__, v17);
-    sub_1B640C8(&Method_SubmarineMapAssetManager___c__DisplayClass69_0__CoLoadAssets_b__0__, v18);
-    sub_1B640C8(&Method_SubmarineMapAssetManager___c__DisplayClass69_0__CoLoadAssets_b__1__, v19);
-    sub_1B640C8(&SubmarineMapAssetManager___c__DisplayClass69_0_TypeInfo, v20);
-    sub_1B640C8(&SubmarineMapAssetManager___c_TypeInfo, v21);
-    sub_1B640C8(&UnityEngine_WaitUntil_TypeInfo, v22);
-    sub_1B640C8(&StringLiteral_5854/*"EffectScannedPanel"*/, v23);
-    sub_1B640C8(&StringLiteral_12454/*"Scanner_(?<ID>\\d+)"*/, v24);
-    sub_1B640C8(&StringLiteral_12996/*"SubmarineScanConfirmDialog"*/, v25);
-    sub_1B640C8(&StringLiteral_18726/*"ef_animation_skip"*/, v26);
-    sub_1B640C8(&StringLiteral_12994/*"SubmarinePanel"*/, v27);
-    sub_1B640C8(&StringLiteral_12998/*"SubmarineSelectScannerDialog"*/, v28);
-    sub_1B640C8(&StringLiteral_12987/*"SubmarineEffectScanObstaclePanel"*/, v29);
-    sub_1B640C8(&StringLiteral_12990/*"SubmarineGridLine"*/, v30);
-    sub_1B640C8(&StringLiteral_12995/*"SubmarinePanelContainer"*/, v31);
-    sub_1B640C8(&StringLiteral_12997/*"SubmarineScanRangeNotificator_(?<ID>\\d+)"*/, v32);
-    sub_1B640C8(&StringLiteral_12993/*"SubmarineNewScannerDialog"*/, v33);
-    sub_1B640C8(&StringLiteral_12991/*"SubmarineGridTexture"*/, v34);
-    sub_1B640C8(&StringLiteral_12989/*"SubmarineEffectSelectedPanel"*/, v35);
-    sub_1B640C8(&StringLiteral_12986/*"SubmarineEffectContainer"*/, v36);
-    sub_1B640C8(&StringLiteral_12988/*"SubmarineEffectScannablePanel"*/, v37);
-    sub_1B640C8(&StringLiteral_7306/*"ID"*/, v38);
-    this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)sub_1B640C8(&StringLiteral_12999/*"SubmarineSettings"*/, v39);
-    byte_49F9137 = 1;
+    sub_1B64870(&System_Action_TypeInfo, method);
+    sub_1B64870(&Method_AssetData_GetObject_GameObject____75714440, v3);
+    sub_1B64870(&Method_AssetData_GetObject_SubmarineSettings___, v4);
+    sub_1B64870(&Method_AssetData_GetObject_Texture2D____75714464, v5);
+    sub_1B64870(&AssetManager_TypeInfo, v6);
+    sub_1B64870(&Method_DataManager_GetMasterData_EventPanelScanMaster___, v7);
+    sub_1B64870(&Method_System_Collections_Generic_Dictionary_int__GameObject__set_Item__, v8);
+    sub_1B64870(&Method_System_Linq_Enumerable_Contains_int___, v9);
+    sub_1B64870(&Method_System_Linq_Enumerable_Select_EventPanelScanEntity__int___, v10);
+    sub_1B64870(&System_Func_bool__TypeInfo, v11);
+    sub_1B64870(&System_Func_EventPanelScanEntity__int__TypeInfo, v12);
+    sub_1B64870(&UnityEngine_Object_TypeInfo, v13);
+    sub_1B64870(&System_Text_RegularExpressions_Regex_TypeInfo, v14);
+    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
+    sub_1B64870(&Method_SubmarineMapAssetManager___c__CoLoadAssets_b__69_2__, v16);
+    sub_1B64870(&Method_SubmarineMapAssetManager___c__DisplayClass69_0__CoLoadAssets_b__0__, v17);
+    sub_1B64870(&Method_SubmarineMapAssetManager___c__DisplayClass69_0__CoLoadAssets_b__1__, v18);
+    sub_1B64870(&SubmarineMapAssetManager___c__DisplayClass69_0_TypeInfo, v19);
+    sub_1B64870(&SubmarineMapAssetManager___c_TypeInfo, v20);
+    sub_1B64870(&UnityEngine_WaitUntil_TypeInfo, v21);
+    sub_1B64870(&StringLiteral_5854/*"EffectScannedPanel"*/, v22);
+    sub_1B64870(&StringLiteral_12457/*"Scanner_(?<ID>\\d+)"*/, v23);
+    sub_1B64870(&StringLiteral_13000/*"SubmarineScanConfirmDialog"*/, v24);
+    sub_1B64870(&StringLiteral_18728/*"ef_animation_skip"*/, v25);
+    sub_1B64870(&StringLiteral_12998/*"SubmarinePanel"*/, v26);
+    sub_1B64870(&StringLiteral_13002/*"SubmarineSelectScannerDialog"*/, v27);
+    sub_1B64870(&StringLiteral_12991/*"SubmarineEffectScanObstaclePanel"*/, v28);
+    sub_1B64870(&StringLiteral_12994/*"SubmarineGridLine"*/, v29);
+    sub_1B64870(&StringLiteral_12999/*"SubmarinePanelContainer"*/, v30);
+    sub_1B64870(&StringLiteral_13001/*"SubmarineScanRangeNotificator_(?<ID>\\d+)"*/, v31);
+    sub_1B64870(&StringLiteral_12997/*"SubmarineNewScannerDialog"*/, v32);
+    sub_1B64870(&StringLiteral_12995/*"SubmarineGridTexture"*/, v33);
+    sub_1B64870(&StringLiteral_12993/*"SubmarineEffectSelectedPanel"*/, v34);
+    sub_1B64870(&StringLiteral_12990/*"SubmarineEffectContainer"*/, v35);
+    sub_1B64870(&StringLiteral_12992/*"SubmarineEffectScannablePanel"*/, v36);
+    sub_1B64870(&StringLiteral_7306/*"ID"*/, v37);
+    this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)sub_1B64870(&StringLiteral_13003/*"SubmarineSettings"*/, v38);
+    byte_49FB226 = 1;
   }
-  _1__state = v3->fields.__1__state;
-  _4__this = v3->fields.__4__this;
+  _1__state = v2->fields.__1__state;
+  _4__this = v2->fields.__4__this;
   if ( _1__state == 1 )
   {
-    v3->fields.__1__state = -1;
+    v2->fields.__1__state = -1;
     if ( _4__this )
     {
       loadAssetNames = _4__this->fields.loadAssetNames;
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)AssetManager__getAssetStorage_37485472(
+      this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)AssetManager__getAssetStorage_37489852(
                                                                  loadAssetNames,
                                                                  0LL);
       if ( this )
       {
         if ( !LODWORD(this->fields.__2__current) )
           goto LABEL_61;
-        v59 = (AssetData_o *)this->fields.__4__this;
-        if ( v59 )
+        v51 = (AssetData_o *)this->fields.__4__this;
+        if ( v51 )
         {
-          Object_object__48347676 = AssetData__GetObject_object__48347676(
+          Object_object__48356600 = AssetData__GetObject_object__48356600(
                                       (AssetData_o *)this->fields.__4__this,
-                                      (System_String_o *)StringLiteral_12994/*"SubmarinePanel"*/,
-                                      (const MethodInfo_2E1BA1C *)Method_AssetData_GetObject_GameObject____75705960);
-          _4__this->fields._PanelPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)Object_object__48347676;
-          sub_1B6406C(
+                                      (System_String_o *)StringLiteral_12998/*"SubmarinePanel"*/,
+                                      (const MethodInfo_2E1DCF8 *)Method_AssetData_GetObject_GameObject____75714440);
+          _4__this->fields._PanelPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)Object_object__48356600;
+          sub_1B64814(
             (ServantStatusBattleListViewItem_o *)&_4__this->fields,
-            (int32_t)Object_object__48347676,
-            v61,
-            v62);
-          v63 = AssetData__GetObject_object__48347676(
-                  v59,
-                  (System_String_o *)StringLiteral_12990/*"SubmarineGridLine"*/,
-                  (const MethodInfo_2E1BA1C *)Method_AssetData_GetObject_GameObject____75705960);
-          _4__this->fields._GridLinePrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v63;
-          sub_1B6406C(
+            (int32_t)Object_object__48356600,
+            v53,
+            v54);
+          v55 = AssetData__GetObject_object__48356600(
+                  v51,
+                  (System_String_o *)StringLiteral_12994/*"SubmarineGridLine"*/,
+                  (const MethodInfo_2E1DCF8 *)Method_AssetData_GetObject_GameObject____75714440);
+          _4__this->fields._GridLinePrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v55;
+          sub_1B64814(
             (ServantStatusBattleListViewItem_o *)&_4__this->fields._GridLinePrefab_k__BackingField,
-            (int32_t)v63,
-            v64,
-            v65);
-          v66 = AssetData__GetObject_object__48347676(
-                  v59,
-                  (System_String_o *)StringLiteral_12995/*"SubmarinePanelContainer"*/,
-                  (const MethodInfo_2E1BA1C *)Method_AssetData_GetObject_GameObject____75705960);
-          _4__this->fields._PanelContainerPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v66;
-          sub_1B6406C(
+            (int32_t)v55,
+            v56,
+            v57);
+          v58 = AssetData__GetObject_object__48356600(
+                  v51,
+                  (System_String_o *)StringLiteral_12999/*"SubmarinePanelContainer"*/,
+                  (const MethodInfo_2E1DCF8 *)Method_AssetData_GetObject_GameObject____75714440);
+          _4__this->fields._PanelContainerPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v58;
+          sub_1B64814(
             (ServantStatusBattleListViewItem_o *)&_4__this->fields._PanelContainerPrefab_k__BackingField,
-            (int32_t)v66,
-            v67,
-            v68);
-          v69 = AssetData__GetObject_object__48347676(
-                  v59,
-                  (System_String_o *)StringLiteral_12986/*"SubmarineEffectContainer"*/,
-                  (const MethodInfo_2E1BA1C *)Method_AssetData_GetObject_GameObject____75705960);
-          _4__this->fields._EffectContainerPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v69;
-          sub_1B6406C(
+            (int32_t)v58,
+            v59,
+            v60);
+          v61 = AssetData__GetObject_object__48356600(
+                  v51,
+                  (System_String_o *)StringLiteral_12990/*"SubmarineEffectContainer"*/,
+                  (const MethodInfo_2E1DCF8 *)Method_AssetData_GetObject_GameObject____75714440);
+          _4__this->fields._EffectContainerPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v61;
+          sub_1B64814(
             (ServantStatusBattleListViewItem_o *)&_4__this->fields._EffectContainerPrefab_k__BackingField,
-            (int32_t)v69,
-            v70,
-            v71);
-          v72 = AssetData__GetObject_object__48347676(
-                  v59,
+            (int32_t)v61,
+            v62,
+            v63);
+          v64 = AssetData__GetObject_object__48356600(
+                  v51,
                   (System_String_o *)StringLiteral_5854/*"EffectScannedPanel"*/,
-                  (const MethodInfo_2E1BA1C *)Method_AssetData_GetObject_GameObject____75705960);
-          _4__this->fields._EffectScannedPanelPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v72;
-          sub_1B6406C(
+                  (const MethodInfo_2E1DCF8 *)Method_AssetData_GetObject_GameObject____75714440);
+          _4__this->fields._EffectScannedPanelPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v64;
+          sub_1B64814(
             (ServantStatusBattleListViewItem_o *)&_4__this->fields._EffectScannedPanelPrefab_k__BackingField,
-            (int32_t)v72,
-            v73,
-            v74);
-          v75 = AssetData__GetObject_object__48347676(
-                  v59,
-                  (System_String_o *)StringLiteral_12989/*"SubmarineEffectSelectedPanel"*/,
-                  (const MethodInfo_2E1BA1C *)Method_AssetData_GetObject_GameObject____75705960);
-          _4__this->fields._EffectSelectedPanelPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v75;
-          sub_1B6406C(
+            (int32_t)v64,
+            v65,
+            v66);
+          v67 = AssetData__GetObject_object__48356600(
+                  v51,
+                  (System_String_o *)StringLiteral_12993/*"SubmarineEffectSelectedPanel"*/,
+                  (const MethodInfo_2E1DCF8 *)Method_AssetData_GetObject_GameObject____75714440);
+          _4__this->fields._EffectSelectedPanelPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v67;
+          sub_1B64814(
             (ServantStatusBattleListViewItem_o *)&_4__this->fields._EffectSelectedPanelPrefab_k__BackingField,
-            (int32_t)v75,
-            v76,
-            v77);
-          v78 = AssetData__GetObject_object__48347676(
-                  v59,
-                  (System_String_o *)StringLiteral_12988/*"SubmarineEffectScannablePanel"*/,
-                  (const MethodInfo_2E1BA1C *)Method_AssetData_GetObject_GameObject____75705960);
-          _4__this->fields._EffectScannablePanelPrafab_k__BackingField = (struct UnityEngine_GameObject_o *)v78;
-          sub_1B6406C(
+            (int32_t)v67,
+            v68,
+            v69);
+          v70 = AssetData__GetObject_object__48356600(
+                  v51,
+                  (System_String_o *)StringLiteral_12992/*"SubmarineEffectScannablePanel"*/,
+                  (const MethodInfo_2E1DCF8 *)Method_AssetData_GetObject_GameObject____75714440);
+          _4__this->fields._EffectScannablePanelPrafab_k__BackingField = (struct UnityEngine_GameObject_o *)v70;
+          sub_1B64814(
             (ServantStatusBattleListViewItem_o *)&_4__this->fields._EffectScannablePanelPrafab_k__BackingField,
-            (int32_t)v78,
-            v79,
-            v80);
-          v81 = AssetData__GetObject_object__48347676(
-                  v59,
-                  (System_String_o *)StringLiteral_12987/*"SubmarineEffectScanObstaclePanel"*/,
-                  (const MethodInfo_2E1BA1C *)Method_AssetData_GetObject_GameObject____75705960);
-          _4__this->fields._EffectScanObstaclePanelPrafab_k__BackingField = (struct UnityEngine_GameObject_o *)v81;
-          sub_1B6406C(
+            (int32_t)v70,
+            v71,
+            v72);
+          v73 = AssetData__GetObject_object__48356600(
+                  v51,
+                  (System_String_o *)StringLiteral_12991/*"SubmarineEffectScanObstaclePanel"*/,
+                  (const MethodInfo_2E1DCF8 *)Method_AssetData_GetObject_GameObject____75714440);
+          _4__this->fields._EffectScanObstaclePanelPrafab_k__BackingField = (struct UnityEngine_GameObject_o *)v73;
+          sub_1B64814(
             (ServantStatusBattleListViewItem_o *)&_4__this->fields._EffectScanObstaclePanelPrafab_k__BackingField,
-            (int32_t)v81,
+            (int32_t)v73,
+            v74,
+            v75);
+          v76 = AssetData__GetObject_object__48356600(
+                  v51,
+                  (System_String_o *)StringLiteral_12995/*"SubmarineGridTexture"*/,
+                  (const MethodInfo_2E1DCF8 *)Method_AssetData_GetObject_Texture2D____75714464);
+          _4__this->fields._GridTexture_k__BackingField = (struct UnityEngine_Texture2D_o *)v76;
+          sub_1B64814(
+            (ServantStatusBattleListViewItem_o *)&_4__this->fields._GridTexture_k__BackingField,
+            (int32_t)v76,
+            v77,
+            v78);
+          v79 = AssetData__GetObject_object__48356600(
+                  v51,
+                  (System_String_o *)StringLiteral_13003/*"SubmarineSettings"*/,
+                  (const MethodInfo_2E1DCF8 *)Method_AssetData_GetObject_SubmarineSettings___);
+          _4__this->fields._Settings_k__BackingField = (struct SubmarineSettings_o *)v79;
+          sub_1B64814(
+            (ServantStatusBattleListViewItem_o *)&_4__this->fields._Settings_k__BackingField,
+            (int32_t)v79,
+            v80,
+            v81);
+          _4__this->fields._ScanProcessPreventedPrafab_k__BackingField = 0LL;
+          sub_1B64814(
+            (ServantStatusBattleListViewItem_o *)&_4__this->fields._ScanProcessPreventedPrafab_k__BackingField,
+            0,
             v82,
             v83);
-          v84 = AssetData__GetObject_object__48347676(
-                  v59,
-                  (System_String_o *)StringLiteral_12991/*"SubmarineGridTexture"*/,
-                  (const MethodInfo_2E1BA1C *)Method_AssetData_GetObject_Texture2D____75705984);
-          _4__this->fields._GridTexture_k__BackingField = (struct UnityEngine_Texture2D_o *)v84;
-          sub_1B6406C(
-            (ServantStatusBattleListViewItem_o *)&_4__this->fields._GridTexture_k__BackingField,
+          v84 = AssetData__GetObject_object__48356600(
+                  v51,
+                  (System_String_o *)StringLiteral_18728/*"ef_animation_skip"*/,
+                  (const MethodInfo_2E1DCF8 *)Method_AssetData_GetObject_GameObject____75714440);
+          _4__this->fields._AnimationSkipEFfectPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v84;
+          sub_1B64814(
+            (ServantStatusBattleListViewItem_o *)&_4__this->fields._AnimationSkipEFfectPrefab_k__BackingField,
             (int32_t)v84,
             v85,
             v86);
-          v87 = AssetData__GetObject_object__48347676(
-                  v59,
-                  (System_String_o *)StringLiteral_12999/*"SubmarineSettings"*/,
-                  (const MethodInfo_2E1BA1C *)Method_AssetData_GetObject_SubmarineSettings___);
-          _4__this->fields._Settings_k__BackingField = (struct SubmarineSettings_o *)v87;
-          sub_1B6406C(
-            (ServantStatusBattleListViewItem_o *)&_4__this->fields._Settings_k__BackingField,
+          v87 = AssetData__GetObject_object__48356600(
+                  v51,
+                  (System_String_o *)StringLiteral_13002/*"SubmarineSelectScannerDialog"*/,
+                  (const MethodInfo_2E1DCF8 *)Method_AssetData_GetObject_GameObject____75714440);
+          _4__this->fields._SelectScannerDialogPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v87;
+          sub_1B64814(
+            (ServantStatusBattleListViewItem_o *)&_4__this->fields._SelectScannerDialogPrefab_k__BackingField,
             (int32_t)v87,
             v88,
             v89);
-          _4__this->fields._ScanProcessPreventedPrafab_k__BackingField = 0LL;
-          sub_1B6406C(
-            (ServantStatusBattleListViewItem_o *)&_4__this->fields._ScanProcessPreventedPrafab_k__BackingField,
-            0,
-            v90,
-            v91);
-          v92 = AssetData__GetObject_object__48347676(
-                  v59,
-                  (System_String_o *)StringLiteral_18726/*"ef_animation_skip"*/,
-                  (const MethodInfo_2E1BA1C *)Method_AssetData_GetObject_GameObject____75705960);
-          _4__this->fields._AnimationSkipEFfectPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v92;
-          sub_1B6406C(
-            (ServantStatusBattleListViewItem_o *)&_4__this->fields._AnimationSkipEFfectPrefab_k__BackingField,
-            (int32_t)v92,
-            v93,
-            v94);
-          v95 = AssetData__GetObject_object__48347676(
-                  v59,
-                  (System_String_o *)StringLiteral_12998/*"SubmarineSelectScannerDialog"*/,
-                  (const MethodInfo_2E1BA1C *)Method_AssetData_GetObject_GameObject____75705960);
-          _4__this->fields._SelectScannerDialogPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v95;
-          sub_1B6406C(
-            (ServantStatusBattleListViewItem_o *)&_4__this->fields._SelectScannerDialogPrefab_k__BackingField,
-            (int32_t)v95,
-            v96,
-            v97);
-          v98 = AssetData__GetObject_object__48347676(
-                  v59,
-                  (System_String_o *)StringLiteral_12996/*"SubmarineScanConfirmDialog"*/,
-                  (const MethodInfo_2E1BA1C *)Method_AssetData_GetObject_GameObject____75705960);
-          _4__this->fields._ScanConfirmDialogPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v98;
-          sub_1B6406C(
+          v90 = AssetData__GetObject_object__48356600(
+                  v51,
+                  (System_String_o *)StringLiteral_13000/*"SubmarineScanConfirmDialog"*/,
+                  (const MethodInfo_2E1DCF8 *)Method_AssetData_GetObject_GameObject____75714440);
+          _4__this->fields._ScanConfirmDialogPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v90;
+          sub_1B64814(
             (ServantStatusBattleListViewItem_o *)&_4__this->fields._ScanConfirmDialogPrefab_k__BackingField,
-            (int32_t)v98,
-            v99,
-            v100);
-          v101 = AssetData__GetObject_object__48347676(
-                   v59,
-                   (System_String_o *)StringLiteral_12993/*"SubmarineNewScannerDialog"*/,
-                   (const MethodInfo_2E1BA1C *)Method_AssetData_GetObject_GameObject____75705960);
-          _4__this->fields._NewScannerDialogPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v101;
-          sub_1B6406C(
+            (int32_t)v90,
+            v91,
+            v92);
+          v93 = AssetData__GetObject_object__48356600(
+                  v51,
+                  (System_String_o *)StringLiteral_12997/*"SubmarineNewScannerDialog"*/,
+                  (const MethodInfo_2E1DCF8 *)Method_AssetData_GetObject_GameObject____75714440);
+          _4__this->fields._NewScannerDialogPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v93;
+          sub_1B64814(
             (ServantStatusBattleListViewItem_o *)&_4__this->fields._NewScannerDialogPrefab_k__BackingField,
-            (int32_t)v101,
-            v102,
-            v103);
-          this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+            (int32_t)v93,
+            v94,
+            v95);
+          this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( this )
           {
             this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)DataManager__GetMasterData_object_(
                                                                        (DataManager_o *)this,
-                                                                       (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_EventPanelScanMaster___);
+                                                                       (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_EventPanelScanMaster___);
             if ( this )
             {
               ListByEventId = (System_Collections_Generic_IEnumerable_TSource__o *)EventPanelScanMaster__GetListByEventId(
                                                                                      (EventPanelScanMaster_o *)this,
-                                                                                     v3->fields.eventId,
+                                                                                     v2->fields.eventId,
                                                                                      0LL);
-              v107 = SubmarineMapAssetManager___c_TypeInfo;
+              v97 = SubmarineMapAssetManager___c_TypeInfo;
               if ( !SubmarineMapAssetManager___c_TypeInfo->_2.cctor_finished )
               {
                 j_il2cpp_runtime_class_init_0(SubmarineMapAssetManager___c_TypeInfo);
-                v107 = SubmarineMapAssetManager___c_TypeInfo;
+                v97 = SubmarineMapAssetManager___c_TypeInfo;
               }
-              _9__69_2 = (System_Func_object__int__o *)v107->static_fields->__9__69_2;
+              _9__69_2 = (System_Func_object__int__o *)v97->static_fields->__9__69_2;
               if ( !_9__69_2 )
               {
-                if ( !v107->_2.cctor_finished )
+                if ( !v97->_2.cctor_finished )
                 {
-                  j_il2cpp_runtime_class_init_0(v107);
-                  v107 = SubmarineMapAssetManager___c_TypeInfo;
+                  j_il2cpp_runtime_class_init_0(v97);
+                  v97 = SubmarineMapAssetManager___c_TypeInfo;
                 }
-                v109 = (Il2CppObject *)v107->static_fields->__9;
-                _9__69_2 = (System_Func_object__int__o *)sub_1B64314(
-                                                           System_Func_EventPanelScanEntity__int__TypeInfo,
-                                                           v104,
-                                                           v105);
+                v99 = (Il2CppObject *)v97->static_fields->__9;
+                _9__69_2 = (System_Func_object__int__o *)sub_1B64ABC(System_Func_EventPanelScanEntity__int__TypeInfo);
                 System_Func_object__int____ctor(
                   _9__69_2,
-                  v109,
+                  v99,
                   Method_SubmarineMapAssetManager___c__CoLoadAssets_b__69_2__,
                   0LL);
                 static_fields = SubmarineMapAssetManager___c_TypeInfo->static_fields;
                 static_fields->__9__69_2 = (struct System_Func_EventPanelScanEntity__int__o *)_9__69_2;
-                sub_1B6406C(
+                sub_1B64814(
                   (ServantStatusBattleListViewItem_o *)&static_fields->__9__69_2,
                   (int32_t)_9__69_2,
-                  v111,
-                  v112);
+                  v101,
+                  v102);
               }
-              v113 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
+              v103 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                             ListByEventId,
                                                                             (System_Func_TSource__TResult__o *)_9__69_2,
-                                                                            (const MethodInfo_2E68AD0 *)Method_System_Linq_Enumerable_Select_EventPanelScanEntity__int___);
-              v116 = (System_Text_RegularExpressions_Regex_o *)sub_1B64314(
-                                                                 System_Text_RegularExpressions_Regex_TypeInfo,
-                                                                 v114,
-                                                                 v115);
-              System_Text_RegularExpressions_Regex___ctor(v116, (System_String_o *)StringLiteral_12454/*"Scanner_(?<ID>\\d+)"*/, 0LL);
-              this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)AssetData__GetObjectNameList(v59, 0LL);
+                                                                            (const MethodInfo_2E6ADAC *)Method_System_Linq_Enumerable_Select_EventPanelScanEntity__int___);
+              v104 = (System_Text_RegularExpressions_Regex_o *)sub_1B64ABC(System_Text_RegularExpressions_Regex_TypeInfo);
+              System_Text_RegularExpressions_Regex___ctor(v104, (System_String_o *)StringLiteral_12457/*"Scanner_(?<ID>\\d+)"*/, 0LL);
+              this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)AssetData__GetObjectNameList(v51, 0LL);
               if ( this )
               {
                 _2__current = this->fields.__2__current;
-                v119 = this;
-                v139 = v3;
+                v106 = this;
+                v126 = v2;
                 if ( (int)_2__current < 1 )
                 {
 LABEL_40:
-                  v127 = (System_Text_RegularExpressions_Regex_o *)sub_1B64314(
-                                                                     System_Text_RegularExpressions_Regex_TypeInfo,
-                                                                     v58,
-                                                                     v117);
-                  System_Text_RegularExpressions_Regex___ctor(v127, (System_String_o *)StringLiteral_12997/*"SubmarineScanRangeNotificator_(?<ID>\\d+)"*/, 0LL);
-                  this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)AssetData__GetObjectNameList(v59, 0LL);
+                  v114 = (System_Text_RegularExpressions_Regex_o *)sub_1B64ABC(System_Text_RegularExpressions_Regex_TypeInfo);
+                  System_Text_RegularExpressions_Regex___ctor(v114, (System_String_o *)StringLiteral_13001/*"SubmarineScanRangeNotificator_(?<ID>\\d+)"*/, 0LL);
+                  this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)AssetData__GetObjectNameList(v51, 0LL);
                   if ( !this )
                     goto LABEL_60;
-                  v128 = this->fields.__2__current;
-                  v129 = this;
-                  if ( (int)v128 < 1 )
+                  v115 = this->fields.__2__current;
+                  v116 = this;
+                  if ( (int)v115 < 1 )
                   {
 LABEL_56:
-                    finishCallback = v139->fields.finishCallback;
+                    finishCallback = v126->fields.finishCallback;
                     if ( finishCallback )
                       ActionExtensions__Call(finishCallback, 0LL);
                     return 0;
                   }
-                  v130 = 0LL;
+                  v117 = 0LL;
                   p__4__this = &this->fields.__4__this;
-                  while ( v130 < (unsigned int)v128 )
+                  while ( v117 < (unsigned int)v115 )
                   {
-                    if ( !v127 )
+                    if ( !v114 )
                       goto LABEL_60;
-                    v132 = (System_String_o *)p__4__this[v130];
-                    this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)System_Text_RegularExpressions_Regex__Match_67931612(
-                                                                               v127,
-                                                                               v132,
+                    v119 = (System_String_o *)p__4__this[v117];
+                    this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)System_Text_RegularExpressions_Regex__Match_67939792(
+                                                                               v114,
+                                                                               v119,
                                                                                0LL);
                     if ( !this )
                       goto LABEL_60;
-                    v133 = this;
+                    v120 = this;
                     this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)System_Text_RegularExpressions_Group__get_Success(
                                                                                (System_Text_RegularExpressions_Group_o *)this,
                                                                                0LL);
                     if ( ((unsigned __int8)this & 1) != 0 )
                     {
-                      this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)((__int64 (__fastcall *)(SubmarineMapAssetManager__CoLoadAssets_d__69_o *, Il2CppMethodPointer))v133->klass->vtable._5_System_IDisposable_Dispose.method)(
-                                                                                 v133,
-                                                                                 v133->klass->vtable._6_MoveNext.methodPtr);
+                      this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)((__int64 (__fastcall *)(SubmarineMapAssetManager__CoLoadAssets_d__69_o *, Il2CppMethodPointer))v120->klass->vtable._5_System_IDisposable_Dispose.method)(
+                                                                                 v120,
+                                                                                 v120->klass->vtable._6_MoveNext.methodPtr);
                       if ( !this )
                         goto LABEL_60;
-                      this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)System_Text_RegularExpressions_GroupCollection__get_Item_67914656(
+                      this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)System_Text_RegularExpressions_GroupCollection__get_Item_67922836(
                                                                                  (System_Text_RegularExpressions_GroupCollection_o *)this,
                                                                                  (System_String_o *)StringLiteral_7306/*"ID"*/,
                                                                                  0LL);
@@ -1165,21 +1137,21 @@ LABEL_56:
                       Value = System_Text_RegularExpressions_Capture__get_Value(
                                 (System_Text_RegularExpressions_Capture_o *)this,
                                 0LL);
-                      v135 = System_Int32__Parse(Value, 0LL);
+                      v122 = System_Int32__Parse(Value, 0LL);
                       this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)System_Linq_Enumerable__Contains_int_(
-                                                                                 v113,
-                                                                                 v135,
-                                                                                 (const MethodInfo_2E52CA8 *)Method_System_Linq_Enumerable_Contains_int___);
+                                                                                 v103,
+                                                                                 v122,
+                                                                                 (const MethodInfo_2E54F84 *)Method_System_Linq_Enumerable_Contains_int___);
                       if ( ((unsigned __int8)this & 1) != 0 )
                       {
-                        v136 = AssetData__GetObject_object__48347676(
-                                 v59,
-                                 v132,
-                                 (const MethodInfo_2E1BA1C *)Method_AssetData_GetObject_GameObject____75705960);
+                        v123 = AssetData__GetObject_object__48356600(
+                                 v51,
+                                 v119,
+                                 (const MethodInfo_2E1DCF8 *)Method_AssetData_GetObject_GameObject____75714440);
                         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
                         this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)UnityEngine_Object__op_Equality(
-                                                                                   (UnityEngine_Object_o *)v136,
+                                                                                   (UnityEngine_Object_o *)v123,
                                                                                    0LL,
                                                                                    0LL);
                         if ( ((unsigned __int8)this & 1) == 0 )
@@ -1189,67 +1161,67 @@ LABEL_56:
                             goto LABEL_60;
                           System_Collections_Generic_Dictionary_int__object___set_Item(
                             (System_Collections_Generic_Dictionary_int__object__o *)this,
-                            v135,
-                            v136,
-                            (const MethodInfo_3123970 *)Method_System_Collections_Generic_Dictionary_int__GameObject__set_Item__);
+                            v122,
+                            v123,
+                            (const MethodInfo_3125C4C *)Method_System_Collections_Generic_Dictionary_int__GameObject__set_Item__);
                         }
                       }
                     }
-                    LODWORD(v128) = v129->fields.__2__current;
-                    if ( (__int64)++v130 >= (int)v128 )
+                    LODWORD(v115) = v116->fields.__2__current;
+                    if ( (__int64)++v117 >= (int)v115 )
                       goto LABEL_56;
                   }
                 }
                 else
                 {
-                  v120 = 0LL;
-                  v121 = &this->fields.__4__this;
-                  while ( v120 < (unsigned int)_2__current )
+                  v107 = 0LL;
+                  v108 = &this->fields.__4__this;
+                  while ( v107 < (unsigned int)_2__current )
                   {
-                    if ( !v116 )
+                    if ( !v104 )
                       goto LABEL_60;
-                    v122 = (System_String_o *)v121[v120];
-                    this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)System_Text_RegularExpressions_Regex__Match_67931612(
-                                                                               v116,
-                                                                               v122,
+                    v109 = (System_String_o *)v108[v107];
+                    this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)System_Text_RegularExpressions_Regex__Match_67939792(
+                                                                               v104,
+                                                                               v109,
                                                                                0LL);
                     if ( !this )
                       goto LABEL_60;
-                    v123 = this;
+                    v110 = this;
                     this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)System_Text_RegularExpressions_Group__get_Success(
                                                                                (System_Text_RegularExpressions_Group_o *)this,
                                                                                0LL);
                     if ( ((unsigned __int8)this & 1) != 0 )
                     {
-                      this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)((__int64 (__fastcall *)(SubmarineMapAssetManager__CoLoadAssets_d__69_o *, Il2CppMethodPointer))v123->klass->vtable._5_System_IDisposable_Dispose.method)(
-                                                                                 v123,
-                                                                                 v123->klass->vtable._6_MoveNext.methodPtr);
+                      this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)((__int64 (__fastcall *)(SubmarineMapAssetManager__CoLoadAssets_d__69_o *, Il2CppMethodPointer))v110->klass->vtable._5_System_IDisposable_Dispose.method)(
+                                                                                 v110,
+                                                                                 v110->klass->vtable._6_MoveNext.methodPtr);
                       if ( !this )
                         goto LABEL_60;
-                      this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)System_Text_RegularExpressions_GroupCollection__get_Item_67914656(
+                      this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)System_Text_RegularExpressions_GroupCollection__get_Item_67922836(
                                                                                  (System_Text_RegularExpressions_GroupCollection_o *)this,
                                                                                  (System_String_o *)StringLiteral_7306/*"ID"*/,
                                                                                  0LL);
                       if ( !this )
                         goto LABEL_60;
-                      v124 = System_Text_RegularExpressions_Capture__get_Value(
+                      v111 = System_Text_RegularExpressions_Capture__get_Value(
                                (System_Text_RegularExpressions_Capture_o *)this,
                                0LL);
-                      v125 = System_Int32__Parse(v124, 0LL);
+                      v112 = System_Int32__Parse(v111, 0LL);
                       this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)System_Linq_Enumerable__Contains_int_(
-                                                                                 v113,
-                                                                                 v125,
-                                                                                 (const MethodInfo_2E52CA8 *)Method_System_Linq_Enumerable_Contains_int___);
+                                                                                 v103,
+                                                                                 v112,
+                                                                                 (const MethodInfo_2E54F84 *)Method_System_Linq_Enumerable_Contains_int___);
                       if ( ((unsigned __int8)this & 1) != 0 )
                       {
-                        v126 = AssetData__GetObject_object__48347676(
-                                 v59,
-                                 v122,
-                                 (const MethodInfo_2E1BA1C *)Method_AssetData_GetObject_GameObject____75705960);
+                        v113 = AssetData__GetObject_object__48356600(
+                                 v51,
+                                 v109,
+                                 (const MethodInfo_2E1DCF8 *)Method_AssetData_GetObject_GameObject____75714440);
                         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
                         this = (SubmarineMapAssetManager__CoLoadAssets_d__69_o *)UnityEngine_Object__op_Equality(
-                                                                                   (UnityEngine_Object_o *)v126,
+                                                                                   (UnityEngine_Object_o *)v113,
                                                                                    0LL,
                                                                                    0LL);
                         if ( ((unsigned __int8)this & 1) == 0 )
@@ -1259,19 +1231,19 @@ LABEL_56:
                             goto LABEL_60;
                           System_Collections_Generic_Dictionary_int__object___set_Item(
                             (System_Collections_Generic_Dictionary_int__object__o *)this,
-                            v125,
-                            v126,
-                            (const MethodInfo_3123970 *)Method_System_Collections_Generic_Dictionary_int__GameObject__set_Item__);
+                            v112,
+                            v113,
+                            (const MethodInfo_3125C4C *)Method_System_Collections_Generic_Dictionary_int__GameObject__set_Item__);
                         }
                       }
                     }
-                    LODWORD(_2__current) = v119->fields.__2__current;
-                    if ( (__int64)++v120 >= (int)_2__current )
+                    LODWORD(_2__current) = v106->fields.__2__current;
+                    if ( (__int64)++v107 >= (int)_2__current )
                       goto LABEL_40;
                   }
                 }
 LABEL_61:
-                sub_1B6432C(this, v58);
+                sub_1B64AD4(this, method);
               }
             }
           }
@@ -1279,42 +1251,42 @@ LABEL_61:
       }
     }
 LABEL_60:
-    sub_1B64324(this);
+    sub_1B64ACC(this, method);
   }
   if ( _1__state )
     return 0;
-  v3->fields.__1__state = -1;
-  v42 = sub_1B64314(SubmarineMapAssetManager___c__DisplayClass69_0_TypeInfo, method, v2);
-  System_Object___ctor((Il2CppObject *)v42, 0LL);
-  if ( !v42 )
+  v2->fields.__1__state = -1;
+  v41 = sub_1B64ABC(SubmarineMapAssetManager___c__DisplayClass69_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v41, 0LL);
+  if ( !v41 )
     goto LABEL_60;
-  *(_BYTE *)(v42 + 16) = 0;
+  *(_BYTE *)(v41 + 16) = 0;
   if ( !_4__this )
     goto LABEL_60;
-  v45 = _4__this->fields.loadAssetNames;
-  v46 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v43, v44);
+  v42 = _4__this->fields.loadAssetNames;
+  v43 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
   System_Action___ctor(
-    v46,
-    (Il2CppObject *)v42,
+    v43,
+    (Il2CppObject *)v41,
     Method_SubmarineMapAssetManager___c__DisplayClass69_0__CoLoadAssets_b__0__,
     0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  v47 = 1;
-  AssetManager__loadAssetStorage_37484096(v45, v46, 1, 0LL);
-  v50 = (System_Func_bool__o *)sub_1B64314(System_Func_bool__TypeInfo, v48, v49);
+  v44 = 1;
+  AssetManager__loadAssetStorage_37488476(v42, v43, 1, 0LL);
+  v45 = (System_Func_bool__o *)sub_1B64ABC(System_Func_bool__TypeInfo);
   System_Func_bool____ctor(
-    v50,
-    (Il2CppObject *)v42,
+    v45,
+    (Il2CppObject *)v41,
     Method_SubmarineMapAssetManager___c__DisplayClass69_0__CoLoadAssets_b__1__,
     0LL);
-  v53 = (UnityEngine_WaitUntil_o *)sub_1B64314(UnityEngine_WaitUntil_TypeInfo, v51, v52);
-  UnityEngine_WaitUntil___ctor(v53, v50, 0LL);
-  v3->fields.__2__current = (Il2CppObject *)v53;
-  p__2__current = (ServantStatusBattleListViewItem_o *)&v3->fields.__2__current;
-  sub_1B6406C(p__2__current, (int32_t)v53, v55, v56);
+  v46 = (UnityEngine_WaitUntil_o *)sub_1B64ABC(UnityEngine_WaitUntil_TypeInfo);
+  UnityEngine_WaitUntil___ctor(v46, v45, 0LL);
+  v2->fields.__2__current = (Il2CppObject *)v46;
+  p__2__current = (ServantStatusBattleListViewItem_o *)&v2->fields.__2__current;
+  sub_1B64814(p__2__current, (int32_t)v46, v48, v49);
   *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
-  return v47;
+  return v44;
 }
 
 
@@ -1331,16 +1303,14 @@ void __fastcall __noreturn SubmarineMapAssetManager__CoLoadAssets_d__69__System_
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  __int64 v3; // x1
-  __int64 v4; // x2
-  System_NotSupportedException_o *v5; // x19
-  __int64 v6; // x0
+  System_NotSupportedException_o *v3; // x19
+  __int64 v4; // x0
 
-  v2 = sub_1B640DC(&System_NotSupportedException_TypeInfo);
-  v5 = (System_NotSupportedException_o *)sub_1B64314(v2, v3, v4);
-  System_NotSupportedException___ctor(v5, 0LL);
-  v6 = sub_1B640DC(&Method_SubmarineMapAssetManager__CoLoadAssets_d__69_System_Collections_IEnumerator_Reset__);
-  sub_1B641F0(v5, v6);
+  v2 = sub_1B64884(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B64ABC(v2);
+  System_NotSupportedException___ctor(v3, 0LL);
+  v4 = sub_1B64884(&Method_SubmarineMapAssetManager__CoLoadAssets_d__69_System_Collections_IEnumerator_Reset__);
+  sub_1B64998(v3, v4);
 }
 
 
@@ -1363,24 +1333,23 @@ void __fastcall SubmarineMapAssetManager__CoLoadAssets_d__69__System_IDisposable
 void __fastcall SubmarineMapAssetManager___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  __int64 v2; // x2
-  Il2CppObject *v3; // x19
-  int32_t v4; // w2
-  int32_t v5; // w3
+  Il2CppObject *v2; // x19
+  int32_t v3; // w2
+  int32_t v4; // w3
 
-  if ( (byte_49F9136 & 1) == 0 )
+  if ( (byte_49FB225 & 1) == 0 )
   {
-    sub_1B640C8(&SubmarineMapAssetManager___c_TypeInfo, v1);
-    byte_49F9136 = 1;
+    sub_1B64870(&SubmarineMapAssetManager___c_TypeInfo, v1);
+    byte_49FB225 = 1;
   }
-  v3 = (Il2CppObject *)sub_1B64314(SubmarineMapAssetManager___c_TypeInfo, v1, v2);
-  System_Object___ctor(v3, 0LL);
-  SubmarineMapAssetManager___c_TypeInfo->static_fields->__9 = (struct SubmarineMapAssetManager___c_o *)v3;
-  sub_1B6406C(
+  v2 = (Il2CppObject *)sub_1B64ABC(SubmarineMapAssetManager___c_TypeInfo);
+  System_Object___ctor(v2, 0LL);
+  SubmarineMapAssetManager___c_TypeInfo->static_fields->__9 = (struct SubmarineMapAssetManager___c_o *)v2;
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)SubmarineMapAssetManager___c_TypeInfo->static_fields,
-    (int32_t)v3,
-    v4,
-    v5);
+    (int32_t)v2,
+    v3,
+    v4);
 }
 
 
@@ -1396,7 +1365,7 @@ int32_t __fastcall SubmarineMapAssetManager___c___CoLoadAssets_b__69_2(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B64324(this);
+    sub_1B64ACC(this, 0LL);
   return x->fields.objectId;
 }
 

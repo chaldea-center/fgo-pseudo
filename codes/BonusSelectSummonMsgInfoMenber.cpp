@@ -16,10 +16,10 @@ void __fastcall BonusSelectSummonMsgInfoMenber__Init(BonusSelectSummonMsgInfoMen
 {
   UISprite_o *upperClassSprite; // x0
 
-  if ( (byte_49F8BF9 & 1) == 0 )
+  if ( (byte_49FACE8 & 1) == 0 )
   {
-    sub_1B640C8(&string_TypeInfo, method);
-    byte_49F8BF9 = 1;
+    sub_1B64870(&string_TypeInfo, method);
+    byte_49FACE8 = 1;
   }
   upperClassSprite = this->fields.upperClassSprite;
   if ( !upperClassSprite
@@ -28,7 +28,7 @@ void __fastcall BonusSelectSummonMsgInfoMenber__Init(BonusSelectSummonMsgInfoMen
     || (ServantFaceIconComponent__Clear((ServantFaceIconComponent_o *)upperClassSprite, 0LL),
         (upperClassSprite = (UISprite_o *)this->fields.treasureDeviceIconLabel) == 0LL) )
   {
-    sub_1B64324(upperClassSprite);
+    sub_1B64ACC(upperClassSprite, method);
   }
   UIIconLabel__Clear((UIIconLabel_o *)upperClassSprite, 0LL);
 }
@@ -55,51 +55,50 @@ void __fastcall BonusSelectSummonMsgInfoMenber__Set(
   __int64 v18; // x23
   ServantExceedMaster_o *v19; // x21
   UIIconLabel_o *TreasureDeviceInfo; // x0
-  int32_t FrameType_39340536; // w21
+  __int64 v21; // x1
+  int32_t FrameType_39345044; // w21
   int32_t ClassId; // w22
   UISprite_o *upperClassSprite; // x23
   ServantFaceIconComponent_o *servantFace; // x21
-  __int64 v25; // x22
-  __int64 v26; // x23
-  Il2CppObject *v27; // x21
-  __int64 v28; // x1
-  __int64 v29; // x2
-  System_Collections_Generic_List_UserServantEntity__o *v30; // x21
-  BonusSelectSummonMsgInfoMenber___c_c *v31; // x0
+  __int64 v26; // x22
+  __int64 v27; // x23
+  Il2CppObject *v28; // x21
+  System_Collections_Generic_List_UserServantEntity__o *v29; // x21
+  BonusSelectSummonMsgInfoMenber___c_c *v30; // x0
   System_Func_object__int__o *_9__4_0; // x22
-  Il2CppObject *v33; // x23
+  Il2CppObject *v32; // x23
   struct BonusSelectSummonMsgInfoMenber___c_StaticFields *static_fields; // x0
-  int32_t v35; // w2
-  int32_t v36; // w3
-  System_Collections_Generic_IEnumerable_TSource__o *v37; // x0
+  int32_t v34; // w2
+  int32_t v35; // w3
+  System_Collections_Generic_IEnumerable_TSource__o *v36; // x0
+  Il2CppObject *v37; // x0
   Il2CppObject *v38; // x0
-  Il2CppObject *v39; // x0
   UIIconLabel_o *treasureDeviceIconLabel; // x19
-  __int64 v41; // x21
-  __int64 v42; // x22
-  ServantTreasureDvcMaster_o *v43; // x20
+  __int64 v40; // x21
+  __int64 v41; // x22
+  ServantTreasureDvcMaster_o *v42; // x20
   TreasureDvcInfo_o *tdInfo; // [xsp+40h] [xbp-60h] BYREF
   System_Collections_Generic_List_UserServantEntity__o *userServantList; // [xsp+48h] [xbp-58h] BYREF
   int32_t rarity; // [xsp+5Ch] [xbp-44h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v46; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v47; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v48; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v49; // 0:x0.16
 
-  if ( (byte_49F8BFA & 1) == 0 )
+  if ( (byte_49FACE9 & 1) == 0 )
   {
-    sub_1B640C8(&AtlasManager_TypeInfo, servantEntity);
-    sub_1B640C8(&Method_DataManager_GetMaster_ServantExceedMaster___, v5);
-    sub_1B640C8(&Method_DataManager_GetMaster_ServantTreasureDvcMaster___, v6);
-    sub_1B640C8(&Method_DataManager_GetMaster_UserServantMaster___, v7);
-    sub_1B640C8(&DataManager_TypeInfo, v8);
-    sub_1B640C8(&Method_System_Linq_Enumerable_FirstOrDefault_UserServantEntity___, v9);
-    sub_1B640C8(&Method_System_Linq_Enumerable_OrderByDescending_UserServantEntity__int___, v10);
-    sub_1B640C8(&System_Func_UserServantEntity__int__TypeInfo, v11);
-    sub_1B640C8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v12);
-    sub_1B640C8(&SvtClassAttri_TypeInfo, v13);
-    sub_1B640C8(&Method_BonusSelectSummonMsgInfoMenber___c__Set_b__4_0__, v14);
-    sub_1B640C8(&BonusSelectSummonMsgInfoMenber___c_TypeInfo, v15);
-    byte_49F8BFA = 1;
+    sub_1B64870(&AtlasManager_TypeInfo, servantEntity);
+    sub_1B64870(&Method_DataManager_GetMaster_ServantExceedMaster___, v5);
+    sub_1B64870(&Method_DataManager_GetMaster_ServantTreasureDvcMaster___, v6);
+    sub_1B64870(&Method_DataManager_GetMaster_UserServantMaster___, v7);
+    sub_1B64870(&DataManager_TypeInfo, v8);
+    sub_1B64870(&Method_System_Linq_Enumerable_FirstOrDefault_UserServantEntity___, v9);
+    sub_1B64870(&Method_System_Linq_Enumerable_OrderByDescending_UserServantEntity__int___, v10);
+    sub_1B64870(&System_Func_UserServantEntity__int__TypeInfo, v11);
+    sub_1B64870(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v12);
+    sub_1B64870(&SvtClassAttri_TypeInfo, v13);
+    sub_1B64870(&Method_BonusSelectSummonMsgInfoMenber___c__Set_b__4_0__, v14);
+    sub_1B64870(&BonusSelectSummonMsgInfoMenber___c_TypeInfo, v15);
+    byte_49FACE9 = 1;
   }
   rarity = 0;
   tdInfo = 0LL;
@@ -108,18 +107,18 @@ void __fastcall BonusSelectSummonMsgInfoMenber__Set(
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_ServantExceedMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_ServantExceedMaster___);
     v18 = *(_QWORD *)&servantEntity->fields.id.fields.currentCryptoKey;
     v17 = *(_QWORD *)&servantEntity->fields.id.fields.fakeValue;
     v19 = (ServantExceedMaster_o *)Master_object;
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    *(_QWORD *)&v47.fields.currentCryptoKey = v18;
-    *(_QWORD *)&v47.fields.fakeValue = v17;
-    TreasureDeviceInfo = (UIIconLabel_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46171608(v47, 0LL);
+    *(_QWORD *)&v46.fields.currentCryptoKey = v18;
+    *(_QWORD *)&v46.fields.fakeValue = v17;
+    TreasureDeviceInfo = (UIIconLabel_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46180532(v46, 0LL);
     if ( !v19 )
       goto LABEL_45;
-    FrameType_39340536 = ServantExceedMaster__GetFrameType_39340536(
+    FrameType_39345044 = ServantExceedMaster__GetFrameType_39345044(
                            v19,
                            &rarity,
                            (int32_t)TreasureDeviceInfo,
@@ -143,18 +142,18 @@ void __fastcall BonusSelectSummonMsgInfoMenber__Set(
     upperClassSprite = this->fields.upperClassSprite;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetClass(upperClassSprite, ClassId, FrameType_39340536, 0LL);
+    AtlasManager__SetClass(upperClassSprite, ClassId, FrameType_39345044, 0LL);
     servantFace = this->fields.servantFace;
-    v26 = *(_QWORD *)&servantEntity->fields.id.fields.currentCryptoKey;
-    v25 = *(_QWORD *)&servantEntity->fields.id.fields.fakeValue;
+    v27 = *(_QWORD *)&servantEntity->fields.id.fields.currentCryptoKey;
+    v26 = *(_QWORD *)&servantEntity->fields.id.fields.fakeValue;
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    *(_QWORD *)&v48.fields.currentCryptoKey = v26;
-    *(_QWORD *)&v48.fields.fakeValue = v25;
-    TreasureDeviceInfo = (UIIconLabel_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46171608(v48, 0LL);
+    *(_QWORD *)&v47.fields.currentCryptoKey = v27;
+    *(_QWORD *)&v47.fields.fakeValue = v26;
+    TreasureDeviceInfo = (UIIconLabel_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46180532(v47, 0LL);
     if ( !servantFace )
       goto LABEL_45;
-    ServantFaceIconComponent__Set_37902064(
+    ServantFaceIconComponent__Set_37906444(
       servantFace,
       (int32_t)TreasureDeviceInfo,
       0,
@@ -173,52 +172,52 @@ void __fastcall BonusSelectSummonMsgInfoMenber__Set(
       0LL);
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    v27 = DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_UserServantMaster___);
-    TreasureDeviceInfo = (UIIconLabel_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46171608(
+    v28 = DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_UserServantMaster___);
+    TreasureDeviceInfo = (UIIconLabel_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46180532(
                                             servantEntity->fields.id,
                                             0LL);
-    if ( !v27 )
+    if ( !v28 )
       goto LABEL_45;
     if ( UserServantMaster__TryGetEntityListBySvtId(
-           (UserServantMaster_o *)v27,
+           (UserServantMaster_o *)v28,
            &userServantList,
            (int32_t)TreasureDeviceInfo,
            1,
            0LL) )
     {
-      v30 = userServantList;
-      v31 = BonusSelectSummonMsgInfoMenber___c_TypeInfo;
+      v29 = userServantList;
+      v30 = BonusSelectSummonMsgInfoMenber___c_TypeInfo;
       if ( !BonusSelectSummonMsgInfoMenber___c_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(BonusSelectSummonMsgInfoMenber___c_TypeInfo);
-        v31 = BonusSelectSummonMsgInfoMenber___c_TypeInfo;
+        v30 = BonusSelectSummonMsgInfoMenber___c_TypeInfo;
       }
-      _9__4_0 = (System_Func_object__int__o *)v31->static_fields->__9__4_0;
+      _9__4_0 = (System_Func_object__int__o *)v30->static_fields->__9__4_0;
       if ( !_9__4_0 )
       {
-        if ( !v31->_2.cctor_finished )
+        if ( !v30->_2.cctor_finished )
         {
-          j_il2cpp_runtime_class_init_0(v31);
-          v31 = BonusSelectSummonMsgInfoMenber___c_TypeInfo;
+          j_il2cpp_runtime_class_init_0(v30);
+          v30 = BonusSelectSummonMsgInfoMenber___c_TypeInfo;
         }
-        v33 = (Il2CppObject *)v31->static_fields->__9;
-        _9__4_0 = (System_Func_object__int__o *)sub_1B64314(System_Func_UserServantEntity__int__TypeInfo, v28, v29);
-        System_Func_object__int____ctor(_9__4_0, v33, Method_BonusSelectSummonMsgInfoMenber___c__Set_b__4_0__, 0LL);
+        v32 = (Il2CppObject *)v30->static_fields->__9;
+        _9__4_0 = (System_Func_object__int__o *)sub_1B64ABC(System_Func_UserServantEntity__int__TypeInfo);
+        System_Func_object__int____ctor(_9__4_0, v32, Method_BonusSelectSummonMsgInfoMenber___c__Set_b__4_0__, 0LL);
         static_fields = BonusSelectSummonMsgInfoMenber___c_TypeInfo->static_fields;
         static_fields->__9__4_0 = (struct System_Func_UserServantEntity__int__o *)_9__4_0;
-        sub_1B6406C((ServantStatusBattleListViewItem_o *)&static_fields->__9__4_0, (int32_t)_9__4_0, v35, v36);
+        sub_1B64814((ServantStatusBattleListViewItem_o *)&static_fields->__9__4_0, (int32_t)_9__4_0, v34, v35);
       }
-      v37 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderByDescending_object__int_(
-                                                                   (System_Collections_Generic_IEnumerable_TSource__o *)v30,
+      v36 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderByDescending_object__int_(
+                                                                   (System_Collections_Generic_IEnumerable_TSource__o *)v29,
                                                                    (System_Func_TSource__TKey__o *)_9__4_0,
-                                                                   (const MethodInfo_2E63584 *)Method_System_Linq_Enumerable_OrderByDescending_UserServantEntity__int___);
-      v38 = System_Linq_Enumerable__FirstOrDefault_object_(
-              v37,
-              (const MethodInfo_2E5C894 *)Method_System_Linq_Enumerable_FirstOrDefault_UserServantEntity___);
-      if ( v38 )
+                                                                   (const MethodInfo_2E65860 *)Method_System_Linq_Enumerable_OrderByDescending_UserServantEntity__int___);
+      v37 = System_Linq_Enumerable__FirstOrDefault_object_(
+              v36,
+              (const MethodInfo_2E5EB70 *)Method_System_Linq_Enumerable_FirstOrDefault_UserServantEntity___);
+      if ( v37 )
       {
         TreasureDeviceInfo = (UIIconLabel_o *)UserServantEntity__getTreasureDeviceInfo(
-                                                (UserServantEntity_o *)v38,
+                                                (UserServantEntity_o *)v37,
                                                 &tdInfo,
                                                 -1,
                                                 -1,
@@ -229,7 +228,7 @@ void __fastcall BonusSelectSummonMsgInfoMenber__Set(
           TreasureDeviceInfo = this->fields.treasureDeviceIconLabel;
           if ( TreasureDeviceInfo )
           {
-            UIIconLabel__Set_37921148(
+            UIIconLabel__Set_37925528(
               TreasureDeviceInfo,
               33,
               tdInfo->fields.lv,
@@ -244,25 +243,25 @@ void __fastcall BonusSelectSummonMsgInfoMenber__Set(
           }
         }
 LABEL_45:
-        sub_1B64324(TreasureDeviceInfo);
+        sub_1B64ACC(TreasureDeviceInfo, v21);
       }
     }
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    v39 = DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_ServantTreasureDvcMaster___);
+    v38 = DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_ServantTreasureDvcMaster___);
     treasureDeviceIconLabel = this->fields.treasureDeviceIconLabel;
-    v42 = *(_QWORD *)&servantEntity->fields.id.fields.currentCryptoKey;
-    v41 = *(_QWORD *)&servantEntity->fields.id.fields.fakeValue;
-    v43 = (ServantTreasureDvcMaster_o *)v39;
+    v41 = *(_QWORD *)&servantEntity->fields.id.fields.currentCryptoKey;
+    v40 = *(_QWORD *)&servantEntity->fields.id.fields.fakeValue;
+    v42 = (ServantTreasureDvcMaster_o *)v38;
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    *(_QWORD *)&v49.fields.currentCryptoKey = v42;
-    *(_QWORD *)&v49.fields.fakeValue = v41;
-    TreasureDeviceInfo = (UIIconLabel_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46171608(v49, 0LL);
-    if ( !v43 )
+    *(_QWORD *)&v48.fields.currentCryptoKey = v41;
+    *(_QWORD *)&v48.fields.fakeValue = v40;
+    TreasureDeviceInfo = (UIIconLabel_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46180532(v48, 0LL);
+    if ( !v42 )
       goto LABEL_45;
     TreasureDeviceInfo = (UIIconLabel_o *)ServantTreasureDvcMaster__getEntityFromSvtIdOnly(
-                                            v43,
+                                            v42,
                                             (int32_t)TreasureDeviceInfo,
                                             1,
                                             0LL);
@@ -273,7 +272,7 @@ LABEL_45:
                                             0LL);
     if ( !treasureDeviceIconLabel )
       goto LABEL_45;
-    UIIconLabel__Set_37921148(treasureDeviceIconLabel, 33, 1, (int32_t)TreasureDeviceInfo, 0, 0LL, 0, 0, 0, 0LL);
+    UIIconLabel__Set_37925528(treasureDeviceIconLabel, 33, 1, (int32_t)TreasureDeviceInfo, 0, 0LL, 0, 0, 0, 0LL);
   }
 }
 
@@ -281,24 +280,23 @@ LABEL_45:
 void __fastcall BonusSelectSummonMsgInfoMenber___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  __int64 v2; // x2
-  Il2CppObject *v3; // x19
-  int32_t v4; // w2
-  int32_t v5; // w3
+  Il2CppObject *v2; // x19
+  int32_t v3; // w2
+  int32_t v4; // w3
 
-  if ( (byte_49F8BFB & 1) == 0 )
+  if ( (byte_49FACEA & 1) == 0 )
   {
-    sub_1B640C8(&BonusSelectSummonMsgInfoMenber___c_TypeInfo, v1);
-    byte_49F8BFB = 1;
+    sub_1B64870(&BonusSelectSummonMsgInfoMenber___c_TypeInfo, v1);
+    byte_49FACEA = 1;
   }
-  v3 = (Il2CppObject *)sub_1B64314(BonusSelectSummonMsgInfoMenber___c_TypeInfo, v1, v2);
-  System_Object___ctor(v3, 0LL);
-  BonusSelectSummonMsgInfoMenber___c_TypeInfo->static_fields->__9 = (struct BonusSelectSummonMsgInfoMenber___c_o *)v3;
-  sub_1B6406C(
+  v2 = (Il2CppObject *)sub_1B64ABC(BonusSelectSummonMsgInfoMenber___c_TypeInfo);
+  System_Object___ctor(v2, 0LL);
+  BonusSelectSummonMsgInfoMenber___c_TypeInfo->static_fields->__9 = (struct BonusSelectSummonMsgInfoMenber___c_o *)v2;
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)BonusSelectSummonMsgInfoMenber___c_TypeInfo->static_fields,
-    (int32_t)v3,
-    v4,
-    v5);
+    (int32_t)v2,
+    v3,
+    v4);
 }
 
 
@@ -316,6 +314,6 @@ int32_t __fastcall BonusSelectSummonMsgInfoMenber___c___Set_b__4_0(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1B64324(this);
+    sub_1B64ACC(this, 0LL);
   return entity->fields.treasureDeviceLv1;
 }

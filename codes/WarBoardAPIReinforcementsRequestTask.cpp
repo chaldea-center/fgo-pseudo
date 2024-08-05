@@ -12,16 +12,16 @@ void __fastcall WarBoardAPIReinforcementsRequestTask___ctor(
   int32_t v13; // w2
   int32_t v14; // w3
 
-  WarBoardAPIRequestTask___ctor_35375264((WarBoardAPIRequestTask_o *)this, resultCallback, onStartBeginRequest, 0LL);
+  WarBoardAPIRequestTask___ctor_35379100((WarBoardAPIRequestTask_o *)this, resultCallback, onStartBeginRequest, 0LL);
   this->fields.reinforcementsId = stageReinforcementId;
   this->fields.reinforcementsIndexes = reinforcementsIdx;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields.reinforcementsIndexes,
     (int32_t)reinforcementsIdx,
     v11,
     v12);
   this->fields.squareIndexes = squareIds;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.squareIndexes, (int32_t)squareIds, v13, v14);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.squareIndexes, (int32_t)squareIds, v13, v14);
 }
 
 
@@ -32,20 +32,21 @@ void __fastcall WarBoardAPIReinforcementsRequestTask__SetRequest(
   __int64 v3; // x1
   __int64 v4; // x1
   WarBoardReinforcementsRequest_o *Instance; // x0
+  __int64 v6; // x1
   WarBoardData_o *klass; // x20
-  struct RequestBase_o *v7; // x21
-  int32_t v8; // w2
-  int32_t v9; // w3
+  struct RequestBase_o *v8; // x21
+  int32_t v9; // w2
+  int32_t v10; // w3
 
-  if ( (byte_49FA316 & 1) == 0 )
+  if ( (byte_49FC40B & 1) == 0 )
   {
-    sub_1B640C8(&Method_NetworkManager_getRequest_WarBoardReinforcementsRequest___, method);
-    sub_1B640C8(&NetworkManager_TypeInfo, v3);
-    sub_1B640C8(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
-    byte_49FA316 = 1;
+    sub_1B64870(&Method_NetworkManager_getRequest_WarBoardReinforcementsRequest___, method);
+    sub_1B64870(&NetworkManager_TypeInfo, v3);
+    sub_1B64870(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
+    byte_49FC40B = 1;
   }
   WarBoardAPIRequestTask__SetRequest((WarBoardAPIRequestTask_o *)this, 0LL);
-  Instance = (WarBoardReinforcementsRequest_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (WarBoardReinforcementsRequest_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_8;
   klass = (WarBoardData_o *)Instance[11].klass;
@@ -53,11 +54,11 @@ void __fastcall WarBoardAPIReinforcementsRequestTask__SetRequest(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = (WarBoardReinforcementsRequest_o *)NetworkManager__getRequest_object_(
                                                   0LL,
-                                                  (const MethodInfo_2EBA9D0 *)Method_NetworkManager_getRequest_WarBoardReinforcementsRequest___);
+                                                  (const MethodInfo_2EBCCAC *)Method_NetworkManager_getRequest_WarBoardReinforcementsRequest___);
   if ( !Instance )
 LABEL_8:
-    sub_1B64324(Instance);
-  v7 = (struct RequestBase_o *)Instance;
+    sub_1B64ACC(Instance, v6);
+  v8 = (struct RequestBase_o *)Instance;
   WarBoardReinforcementsRequest__beginRequest(
     Instance,
     klass,
@@ -65,6 +66,6 @@ LABEL_8:
     this->fields.reinforcementsIndexes,
     this->fields.squareIndexes,
     0LL);
-  this->fields.request = v7;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.request, (int32_t)v7, v8, v9);
+  this->fields.request = v8;
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.request, (int32_t)v8, v9, v10);
 }

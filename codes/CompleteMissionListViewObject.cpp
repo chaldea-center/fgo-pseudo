@@ -11,10 +11,10 @@ CompleteMissionListViewItem_o *__fastcall CompleteMissionListViewObject__GetItem
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_49FB2B7 & 1) == 0 )
+  if ( (byte_49FD3AF & 1) == 0 )
   {
-    sub_1B640C8(&CompleteMissionListViewItem_TypeInfo, method);
-    byte_49FB2B7 = 1;
+    sub_1B64870(&CompleteMissionListViewItem_TypeInfo, method);
+    byte_49FD3AF = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -37,12 +37,13 @@ void __fastcall CompleteMissionListViewObject__OnChangeAlphaAnim(
   __int64 methodPtr_low; // x11
   struct ListViewManager_o *v6; // x20
   CompleteMissionListViewItemDraw_o *CompleteMissionItemDraw; // x0
-  const MethodInfo *v8; // x2
+  __int64 v8; // x1
+  const MethodInfo *v9; // x2
 
-  if ( (byte_49FB2B8 & 1) == 0 )
+  if ( (byte_49FD3B0 & 1) == 0 )
   {
-    sub_1B640C8(&CompleteMissionListViewManager_TypeInfo, method);
-    byte_49FB2B8 = 1;
+    sub_1B64870(&CompleteMissionListViewManager_TypeInfo, method);
+    byte_49FD3B0 = 1;
   }
   if ( this->fields.linkItem )
   {
@@ -63,11 +64,11 @@ void __fastcall CompleteMissionListViewObject__OnChangeAlphaAnim(
     }
     CompleteMissionItemDraw = CompleteMissionListViewObject__get_CompleteMissionItemDraw(this, v3);
     if ( !CompleteMissionItemDraw )
-      sub_1B64324(0LL);
+      sub_1B64ACC(0LL, v8);
     CompleteMissionListViewItemDraw__ChangeNextRewardIcon(
       CompleteMissionItemDraw,
       (CompleteMissionListViewManager_o *)v6,
-      v8);
+      v9);
   }
 }
 
@@ -85,10 +86,10 @@ CompleteMissionListViewItemDraw_o *__fastcall CompleteMissionListViewObject__get
   struct MissionListViewItemDraw_o *itemDraw; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_49FB2B6 & 1) == 0 )
+  if ( (byte_49FD3AE & 1) == 0 )
   {
-    sub_1B640C8(&CompleteMissionListViewItemDraw_TypeInfo, method);
-    byte_49FB2B6 = 1;
+    sub_1B64870(&CompleteMissionListViewItemDraw_TypeInfo, method);
+    byte_49FD3AE = 1;
   }
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )

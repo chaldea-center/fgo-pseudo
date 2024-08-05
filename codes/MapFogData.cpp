@@ -4,14 +4,14 @@ void __fastcall MapFogData___ctor(MapFogData_o *this, const MethodInfo *method)
   int32_t v3; // w3
   int32_t v5; // w1
 
-  if ( (byte_49F92D5 & 1) == 0 )
+  if ( (byte_49FB3C4 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_16156/*"_FogColor"*/, method);
-    byte_49F92D5 = 1;
+    sub_1B64870(&StringLiteral_16158/*"_FogColor"*/, method);
+    byte_49FB3C4 = 1;
   }
-  v5 = StringLiteral_16156/*"_FogColor"*/;
-  this->fields.propertyName = (struct System_String_o *)StringLiteral_16156/*"_FogColor"*/;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.propertyName, v5, v2, v3);
+  v5 = StringLiteral_16158/*"_FogColor"*/;
+  this->fields.propertyName = (struct System_String_o *)StringLiteral_16158/*"_FogColor"*/;
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.propertyName, v5, v2, v3);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -24,11 +24,10 @@ void __fastcall MapFogData__ApplyColor(MapFogData_o *this, UnityEngine_Color_o c
   float b; // s9
   float g; // s10
   float r; // s11
-  __int64 v9; // x1
-  int v10; // w8
-  void *v11; // x20
-  unsigned int v12; // w21
-  UnityEngine_Color_o v13; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  int v9; // w8
+  void *v10; // x20
+  unsigned int v11; // w21
+  UnityEngine_Color_o v12; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   renderer = this->fields.renderer;
   if ( !renderer )
@@ -40,29 +39,29 @@ void __fastcall MapFogData__ApplyColor(MapFogData_o *this, UnityEngine_Color_o c
   renderer = UnityEngine_Renderer__get_materials((UnityEngine_Renderer_o *)renderer, 0LL);
   if ( !renderer )
     goto LABEL_10;
-  v10 = *((_DWORD *)renderer + 6);
-  v11 = renderer;
-  if ( v10 >= 1 )
+  v9 = *((_DWORD *)renderer + 6);
+  v10 = renderer;
+  if ( v9 >= 1 )
   {
-    v12 = 0;
+    v11 = 0;
     while ( 1 )
     {
-      if ( v12 >= v10 )
-        sub_1B6432C(renderer, v9);
-      renderer = (void *)*((_QWORD *)v11 + (int)v12 + 4);
+      if ( v11 >= v9 )
+        sub_1B64AD4(renderer, method);
+      renderer = (void *)*((_QWORD *)v10 + (int)v11 + 4);
       if ( !renderer )
         break;
-      v13.fields.r = r;
-      v13.fields.g = g;
-      v13.fields.b = b;
-      v13.fields.a = a;
-      UnityEngine_Material__SetColor((UnityEngine_Material_o *)renderer, this->fields.propertyName, v13, 0LL);
-      v10 = *((_DWORD *)v11 + 6);
-      if ( (int)++v12 >= v10 )
+      v12.fields.r = r;
+      v12.fields.g = g;
+      v12.fields.b = b;
+      v12.fields.a = a;
+      UnityEngine_Material__SetColor((UnityEngine_Material_o *)renderer, this->fields.propertyName, v12, 0LL);
+      v9 = *((_DWORD *)v10 + 6);
+      if ( (int)++v11 >= v9 )
         return;
     }
 LABEL_10:
-    sub_1B64324(renderer);
+    sub_1B64ACC(renderer, method);
   }
 }
 
@@ -75,7 +74,7 @@ void __fastcall MapFogData__SetRenderer(
   int32_t v3; // w3
 
   this->fields.renderer = setRenderer;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)setRenderer, (int32_t)method, v3);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)setRenderer, (int32_t)method, v3);
 }
 
 
@@ -86,15 +85,16 @@ System_Nullable_Color__o *__fastcall MapFogData__get_Color(
 {
   __int64 v5; // x1
   System_Nullable_Color__o *result; // x0
+  __int64 v7; // x1
   UnityEngine_Renderer_o *renderer; // x0
   UnityEngine_Object_o *material; // x21
   UnityEngine_Color_o Color; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_49F92D3 & 1) == 0 )
+  if ( (byte_49FB3C2 & 1) == 0 )
   {
-    sub_1B640C8(&Method_System_Nullable_Color___ctor__, method);
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, v5);
-    byte_49F92D3 = 1;
+    sub_1B64870(&Method_System_Nullable_Color___ctor__, method);
+    sub_1B64870(&UnityEngine_Object_TypeInfo, v5);
+    byte_49FB3C2 = 1;
   }
   result = (System_Nullable_Color__o *)MapFogData__get_HasRenderer(this, method);
   if ( ((unsigned __int8)result & 1) == 0 )
@@ -117,12 +117,12 @@ LABEL_8:
   renderer = this->fields.renderer;
   if ( !renderer || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL )
 LABEL_12:
-    sub_1B64324(renderer);
+    sub_1B64ACC(renderer, v7);
   Color = UnityEngine_Material__GetColor((UnityEngine_Material_o *)renderer, this->fields.propertyName, 0LL);
   *(_QWORD *)&retstr->fields.hasValue = 0LL;
   *(_QWORD *)&retstr->fields.value.fields.g = 0LL;
   retstr->fields.value.fields.a = 0.0;
-  System_Nullable_Color____ctor(retstr, Color, (const MethodInfo_35CAEC8 *)Method_System_Nullable_Color___ctor__);
+  System_Nullable_Color____ctor(retstr, Color, (const MethodInfo_35CD1A4 *)Method_System_Nullable_Color___ctor__);
   return result;
 }
 
@@ -131,10 +131,10 @@ bool __fastcall MapFogData__get_HasRenderer(MapFogData_o *this, const MethodInfo
 {
   UnityEngine_Object_o *renderer; // x19
 
-  if ( (byte_49F92D4 & 1) == 0 )
+  if ( (byte_49FB3C3 & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, method);
-    byte_49F92D4 = 1;
+    sub_1B64870(&UnityEngine_Object_TypeInfo, method);
+    byte_49FB3C3 = 1;
   }
   renderer = (UnityEngine_Object_o *)this->fields.renderer;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )

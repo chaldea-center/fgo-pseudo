@@ -35,7 +35,7 @@ bool __fastcall RectExtension__HasAnyIntersects(
   float m_YMin; // s20
 
   if ( !rects )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, allowInverse);
   max_length = rects->max_length;
   v5 = self.fields.m_XMin + self.fields.m_Width;
   v6 = self.fields.m_YMin + self.fields.m_Height;
@@ -62,7 +62,7 @@ bool __fastcall RectExtension__HasAnyIntersects(
     if ( (v18 & 0x80000000) != 0 )
       break;
     if ( v18 >= max_length )
-      sub_1B6432C(rects, allowInverse);
+      sub_1B64AD4(rects, allowInverse);
     v20 = (float *)(&rects->obj + v18);
     v22 = v20[8];
     v21 = v20[9];

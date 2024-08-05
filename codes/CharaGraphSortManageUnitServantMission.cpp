@@ -10,17 +10,16 @@ CharaGraphFilterLogicBase_o *__fastcall CharaGraphSortManageUnitServantMission__
         CharaGraphSortManageUnitServantMission_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  ServantCollectionCharaGraphFilterLogic_o *v3; // x19
+  ServantCollectionCharaGraphFilterLogic_o *v2; // x19
 
-  if ( (byte_49F888B & 1) == 0 )
+  if ( (byte_49FA97A & 1) == 0 )
   {
-    sub_1B640C8(&ServantMissionCharaGraphFilterLogic_TypeInfo, method);
-    byte_49F888B = 1;
+    sub_1B64870(&ServantMissionCharaGraphFilterLogic_TypeInfo, method);
+    byte_49FA97A = 1;
   }
-  v3 = (ServantCollectionCharaGraphFilterLogic_o *)sub_1B64314(ServantMissionCharaGraphFilterLogic_TypeInfo, method, v2);
-  ServantCollectionCharaGraphFilterLogic___ctor(v3, 0LL);
-  return (CharaGraphFilterLogicBase_o *)v3;
+  v2 = (ServantCollectionCharaGraphFilterLogic_o *)sub_1B64ABC(ServantMissionCharaGraphFilterLogic_TypeInfo);
+  ServantCollectionCharaGraphFilterLogic___ctor(v2, 0LL);
+  return (CharaGraphFilterLogicBase_o *)v2;
 }
 
 
@@ -28,15 +27,14 @@ CharaGraphSortLogicBase_o *__fastcall CharaGraphSortManageUnitServantMission__Cr
         CharaGraphSortManageUnitServantMission_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  ServantCollectionCharaGraphSortLogic_o *v3; // x19
+  ServantCollectionCharaGraphSortLogic_o *v2; // x19
 
-  if ( (byte_49F888A & 1) == 0 )
+  if ( (byte_49FA979 & 1) == 0 )
   {
-    sub_1B640C8(&ServantMissionCharaGraphSortLogic_TypeInfo, method);
-    byte_49F888A = 1;
+    sub_1B64870(&ServantMissionCharaGraphSortLogic_TypeInfo, method);
+    byte_49FA979 = 1;
   }
-  v3 = (ServantCollectionCharaGraphSortLogic_o *)sub_1B64314(ServantMissionCharaGraphSortLogic_TypeInfo, method, v2);
-  ServantCollectionCharaGraphSortLogic___ctor(v3, 0LL);
-  return (CharaGraphSortLogicBase_o *)v3;
+  v2 = (ServantCollectionCharaGraphSortLogic_o *)sub_1B64ABC(ServantMissionCharaGraphSortLogic_TypeInfo);
+  ServantCollectionCharaGraphSortLogic___ctor(v2, 0LL);
+  return (CharaGraphSortLogicBase_o *)v2;
 }

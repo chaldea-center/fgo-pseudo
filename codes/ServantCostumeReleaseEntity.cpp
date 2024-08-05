@@ -1,13 +1,13 @@
 void __fastcall ServantCostumeReleaseEntity___ctor(ServantCostumeReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FCAB7 & 1) == 0 )
+  if ( (byte_49FEBB0 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataEntityBase_string___ctor__, method);
-    byte_49FCAB7 = 1;
+    sub_1B64870(&Method_DataEntityBase_string___ctor__, method);
+    byte_49FEBB0 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30D3D1C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D5FF8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -20,10 +20,10 @@ System_String_o *__fastcall ServantCostumeReleaseEntity__CreatePK(
         int32_t condTargetId,
         const MethodInfo *method)
 {
-  if ( (byte_49FCAB5 & 1) == 0 )
+  if ( (byte_49FEBAE & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___, *(_QWORD *)&releaseType);
-    byte_49FCAB5 = 1;
+    sub_1B64870(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___, *(_QWORD *)&releaseType);
+    byte_49FEBAE = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int__int_(
            svtId,
@@ -31,7 +31,7 @@ System_String_o *__fastcall ServantCostumeReleaseEntity__CreatePK(
            costumeId,
            condType,
            condTargetId,
-           (const MethodInfo_2E38408 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___);
+           (const MethodInfo_2E3A6E4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___);
 }
 
 
@@ -60,10 +60,10 @@ bool __fastcall ServantCostumeReleaseEntity__IsAvailable(ServantCostumeReleaseEn
   int32_t v7; // w1
   int32_t condTargetId; // w21
 
-  if ( (byte_49FCAB6 & 1) == 0 )
+  if ( (byte_49FEBAF & 1) == 0 )
   {
-    sub_1B640C8(&CondType_TypeInfo, method);
-    byte_49FCAB6 = 1;
+    sub_1B64870(&CondType_TypeInfo, method);
+    byte_49FEBAF = 1;
   }
   condType = this->fields.condType;
   if ( condType == 64 )

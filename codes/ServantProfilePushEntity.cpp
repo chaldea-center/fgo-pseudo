@@ -1,28 +1,28 @@
 void __fastcall ServantProfilePushEntity___ctor(ServantProfilePushEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FCBD2 & 1) == 0 )
+  if ( (byte_49FECCB & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataEntityBase_string___ctor__, method);
-    byte_49FCBD2 = 1;
+    sub_1B64870(&Method_DataEntityBase_string___ctor__, method);
+    byte_49FECCB = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30D3D1C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D5FF8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall ServantProfilePushEntity__CreatePK(int32_t svtId, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_49FCBD1 & 1) == 0 )
+  if ( (byte_49FECCA & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&idx);
-    byte_49FCBD1 = 1;
+    sub_1B64870(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&idx);
+    byte_49FECCA = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            idx,
-           (const MethodInfo_2E37610 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2E398EC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -40,10 +40,10 @@ bool __fastcall ServantProfilePushEntity__TimeCheck(ServantProfilePushEntity_o *
 {
   int64_t Time; // x0
 
-  if ( (byte_49FCBCF & 1) == 0 )
+  if ( (byte_49FECC8 & 1) == 0 )
   {
-    sub_1B640C8(&NetworkManager_TypeInfo, method);
-    byte_49FCBCF = 1;
+    sub_1B64870(&NetworkManager_TypeInfo, method);
+    byte_49FECC8 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -54,10 +54,10 @@ bool __fastcall ServantProfilePushEntity__TimeCheck(ServantProfilePushEntity_o *
 
 bool __fastcall ServantProfilePushEntity__TimeEnd(ServantProfilePushEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FCBD0 & 1) == 0 )
+  if ( (byte_49FECC9 & 1) == 0 )
   {
-    sub_1B640C8(&NetworkManager_TypeInfo, method);
-    byte_49FCBD0 = 1;
+    sub_1B64870(&NetworkManager_TypeInfo, method);
+    byte_49FECC9 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);

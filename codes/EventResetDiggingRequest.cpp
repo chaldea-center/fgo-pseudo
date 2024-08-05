@@ -9,14 +9,14 @@ void __fastcall EventResetDiggingRequest__beginRequest(
   const MethodInfo *v8; // x3
   const MethodInfo *v9; // x1
 
-  if ( (byte_49FDC73 & 1) == 0 )
+  if ( (byte_49FFD6E & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_19059/*"eventId"*/, *(_QWORD *)&eventId);
-    sub_1B640C8(&StringLiteral_16818/*"areaNum"*/, v7);
-    byte_49FDC73 = 1;
+    sub_1B64870(&StringLiteral_19061/*"eventId"*/, *(_QWORD *)&eventId);
+    sub_1B64870(&StringLiteral_16820/*"areaNum"*/, v7);
+    byte_49FFD6E = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19059/*"eventId"*/, eventId, method);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16818/*"areaNum"*/, areaNum, v8);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19061/*"eventId"*/, eventId, method);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16820/*"areaNum"*/, areaNum, v8);
   RequestBase__beginRequest((RequestBase_o *)this, v9);
 }
 
@@ -28,16 +28,16 @@ System_String_o *__fastcall EventResetDiggingRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_49FDC72 & 1) == 0 )
+  if ( (byte_49FFD6D & 1) == 0 )
   {
-    sub_1B640C8(&NetworkManager_TypeInfo, method);
-    sub_1B640C8(&StringLiteral_19049/*"event/resetDigging"*/, v2);
-    byte_49FDC72 = 1;
+    sub_1B64870(&NetworkManager_TypeInfo, method);
+    sub_1B64870(&StringLiteral_19051/*"event/resetDigging"*/, v2);
+    byte_49FFD6D = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61375396(BaseUrl, (System_String_o *)StringLiteral_19049/*"event/resetDigging"*/, 0LL);
+  return System_String__Concat_61383576(BaseUrl, (System_String_o *)StringLiteral_19051/*"event/resetDigging"*/, 0LL);
 }
 
 
@@ -55,11 +55,11 @@ void __fastcall EventResetDiggingRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v12; // x8
 
-  if ( (byte_49FDC74 & 1) == 0 )
+  if ( (byte_49FFD6F & 1) == 0 )
   {
-    sub_1B640C8(&JsonManager_TypeInfo, responseList);
-    sub_1B640C8(&ResponseCommandKind_TypeInfo, v5);
-    byte_49FDC74 = 1;
+    sub_1B64870(&JsonManager_TypeInfo, responseList);
+    sub_1B64870(&ResponseCommandKind_TypeInfo, v5);
+    byte_49FFD6F = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);

@@ -2,29 +2,30 @@ void __fastcall DesignCardManager___ctor(DesignCardManager_o *this, const Method
 {
   __int64 v3; // x1
   struct System_Int32_array *v4; // x0
-  int32_t v5; // w2
-  int32_t v6; // w3
+  __int64 v5; // x1
+  int32_t v6; // w2
+  int32_t v7; // w3
   il2cpp_array_size_t max_length; // w8
 
-  if ( (byte_49FBAFD & 1) == 0 )
+  if ( (byte_49FDBF5 & 1) == 0 )
   {
-    sub_1B640C8(&int___TypeInfo, method);
-    sub_1B640C8(&Method_SingletonMonoBehaviour_DesignCardManager___ctor__, v3);
-    byte_49FBAFD = 1;
+    sub_1B64870(&int___TypeInfo, method);
+    sub_1B64870(&Method_SingletonMonoBehaviour_DesignCardManager___ctor__, v3);
+    byte_49FDBF5 = 1;
   }
-  v4 = (struct System_Int32_array *)sub_1B64170(int___TypeInfo, 2LL);
+  v4 = (struct System_Int32_array *)sub_1B64918(int___TypeInfo, 2LL);
   if ( !v4 )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, v5);
   max_length = v4->max_length;
   if ( !max_length || (v4->m_Items[1] = 512, max_length == 1) )
-    sub_1B6432C(v4, v4);
+    sub_1B64AD4(v4, v4);
   v4->m_Items[2] = 875;
   this->fields.cardTextureSize = v4;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.cardTextureSize, (int32_t)v4, v5, v6);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.cardTextureSize, (int32_t)v4, v6, v7);
   this->fields.SVT_EQ_IMAGE_ID = 9999;
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_36EC454 *)Method_SingletonMonoBehaviour_DesignCardManager___ctor__);
+    (const MethodInfo_36EE730 *)Method_SingletonMonoBehaviour_DesignCardManager___ctor__);
 }
 
 
@@ -41,40 +42,41 @@ System_String_o *__fastcall DesignCardManager__GetCommanCodeCardPath(
   __int64 v8; // x1
   __int64 v9; // x1
   System_String_o *DesignCardPrefix; // x0
-  System_String_o *v11; // x19
-  System_String_o *v12; // x0
-  int32_t v14; // [xsp+Ch] [xbp-24h] BYREF
+  __int64 v11; // x1
+  System_String_o *v12; // x19
+  System_String_o *v13; // x0
+  int32_t v15; // [xsp+Ch] [xbp-24h] BYREF
 
-  v14 = imageId;
-  if ( (byte_49FBAFA & 1) == 0 )
+  v15 = imageId;
+  if ( (byte_49FDBF2 & 1) == 0 )
   {
-    sub_1B640C8(&Rarity_TypeInfo, *(_QWORD *)&imageId);
-    sub_1B640C8(&StringLiteral_18196/*"cord_b"*/, v5);
-    sub_1B640C8(&StringLiteral_18195/*"cord"*/, v6);
-    sub_1B640C8(&StringLiteral_17914/*"class"*/, v7);
-    sub_1B640C8(&StringLiteral_4595/*"CommandCord/"*/, v8);
-    sub_1B640C8(&StringLiteral_18197/*"cord_n"*/, v9);
-    byte_49FBAFA = 1;
+    sub_1B64870(&Rarity_TypeInfo, *(_QWORD *)&imageId);
+    sub_1B64870(&StringLiteral_18198/*"cord_b"*/, v5);
+    sub_1B64870(&StringLiteral_18197/*"cord"*/, v6);
+    sub_1B64870(&StringLiteral_17916/*"class"*/, v7);
+    sub_1B64870(&StringLiteral_4595/*"CommandCord/"*/, v8);
+    sub_1B64870(&StringLiteral_18199/*"cord_n"*/, v9);
+    byte_49FDBF2 = 1;
   }
   if ( !Rarity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Rarity_TypeInfo);
   DesignCardPrefix = Rarity__getDesignCardPrefix(rarity, 0LL);
   if ( !DesignCardPrefix
-    || (DesignCardPrefix = System_String__Replace_61395016(
+    || (DesignCardPrefix = System_String__Replace_61403196(
                              DesignCardPrefix,
-                             (System_String_o *)StringLiteral_17914/*"class"*/,
-                             (System_String_o *)StringLiteral_18195/*"cord"*/,
+                             (System_String_o *)StringLiteral_17916/*"class"*/,
+                             (System_String_o *)StringLiteral_18197/*"cord"*/,
                              0LL)) == 0LL )
   {
-    sub_1B64324(DesignCardPrefix);
+    sub_1B64ACC(DesignCardPrefix, v11);
   }
-  v11 = System_String__Replace_61395016(
+  v12 = System_String__Replace_61403196(
           DesignCardPrefix,
-          (System_String_o *)StringLiteral_18197/*"cord_n"*/,
-          (System_String_o *)StringLiteral_18196/*"cord_b"*/,
+          (System_String_o *)StringLiteral_18199/*"cord_n"*/,
+          (System_String_o *)StringLiteral_18198/*"cord_b"*/,
           0LL);
-  v12 = System_Int32__ToString((int32_t)&v14, 0LL);
-  return System_String__Concat_61386656((System_String_o *)StringLiteral_4595/*"CommandCord/"*/, v11, v12, 0LL);
+  v13 = System_Int32__ToString((int32_t)&v15, 0LL);
+  return System_String__Concat_61394836((System_String_o *)StringLiteral_4595/*"CommandCord/"*/, v12, v13, 0LL);
 }
 
 
@@ -91,11 +93,11 @@ System_String_o *__fastcall DesignCardManager__GetDesignCardPath(
   System_String_o *v10; // x0
   int v12; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_49FBAF9 & 1) == 0 )
+  if ( (byte_49FDBF1 & 1) == 0 )
   {
-    sub_1B640C8(&Rarity_TypeInfo, *(_QWORD *)&imageId);
-    sub_1B640C8(&StringLiteral_4490/*"ClassCard/"*/, v7);
-    byte_49FBAF9 = 1;
+    sub_1B64870(&Rarity_TypeInfo, *(_QWORD *)&imageId);
+    sub_1B64870(&StringLiteral_4490/*"ClassCard/"*/, v7);
+    byte_49FDBF1 = 1;
   }
   if ( !Rarity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Rarity_TypeInfo);
@@ -106,7 +108,7 @@ System_String_o *__fastcall DesignCardManager__GetDesignCardPath(
     v9 = imageId + (imageId & 1) - 1;
   v12 = v9;
   v10 = System_Int32__ToString((int32_t)&v12, 0LL);
-  return System_String__Concat_61386656((System_String_o *)StringLiteral_4490/*"ClassCard/"*/, DesignCardPrefix, v10, 0LL);
+  return System_String__Concat_61394836((System_String_o *)StringLiteral_4490/*"ClassCard/"*/, DesignCardPrefix, v10, 0LL);
 }
 
 
@@ -121,10 +123,10 @@ System_String_o *__fastcall DesignCardManager__GetExceedFrameCardPath(
   System_String_o *v8; // x0
   int v10; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_49FBAFB & 1) == 0 )
+  if ( (byte_49FDBF3 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_4490/*"ClassCard/"*/, *(_QWORD *)&imageId);
-    byte_49FBAFB = 1;
+    sub_1B64870(&StringLiteral_4490/*"ClassCard/"*/, *(_QWORD *)&imageId);
+    byte_49FDBF3 = 1;
   }
   if ( this->fields.SVT_EQ_IMAGE_ID == imageId )
     v7 = 1;
@@ -132,7 +134,7 @@ System_String_o *__fastcall DesignCardManager__GetExceedFrameCardPath(
     v7 = imageId + (imageId & 1) - 1;
   v10 = v7;
   v8 = System_Int32__ToString((int32_t)&v10, 0LL);
-  return System_String__Concat_61386656((System_String_o *)StringLiteral_4490/*"ClassCard/"*/, prefix, v8, 0LL);
+  return System_String__Concat_61394836((System_String_o *)StringLiteral_4490/*"ClassCard/"*/, prefix, v8, 0LL);
 }
 
 
@@ -161,38 +163,37 @@ void __fastcall DesignCardManager__LoadDesignCardTexture(
   __int64 v11; // x1
   __int64 v12; // x23
   __int64 v13; // x0
-  int32_t v14; // w2
-  int32_t v15; // w3
-  const MethodInfo *v16; // x3
+  __int64 v14; // x1
+  int32_t v15; // w2
+  int32_t v16; // w3
+  const MethodInfo *v17; // x3
   System_String_o *DesignCardPath; // x19
-  __int64 v18; // x1
-  __int64 v19; // x2
-  AssetLoader_LoadEndDataHandler_o *v20; // x20
+  AssetLoader_LoadEndDataHandler_o *v19; // x20
 
-  if ( (byte_49FBAF6 & 1) == 0 )
+  if ( (byte_49FDBEE & 1) == 0 )
   {
-    sub_1B640C8(&AssetManager_TypeInfo, *(_QWORD *)&imageId);
-    sub_1B640C8(&AssetLoader_LoadEndDataHandler_TypeInfo, v9);
-    sub_1B640C8(&Method_DesignCardManager___c__DisplayClass2_0__LoadDesignCardTexture_b__0__, v10);
-    sub_1B640C8(&DesignCardManager___c__DisplayClass2_0_TypeInfo, v11);
-    byte_49FBAF6 = 1;
+    sub_1B64870(&AssetManager_TypeInfo, *(_QWORD *)&imageId);
+    sub_1B64870(&AssetLoader_LoadEndDataHandler_TypeInfo, v9);
+    sub_1B64870(&Method_DesignCardManager___c__DisplayClass2_0__LoadDesignCardTexture_b__0__, v10);
+    sub_1B64870(&DesignCardManager___c__DisplayClass2_0_TypeInfo, v11);
+    byte_49FDBEE = 1;
   }
-  v12 = sub_1B64314(DesignCardManager___c__DisplayClass2_0_TypeInfo, *(_QWORD *)&imageId, *(_QWORD *)&rarity);
+  v12 = sub_1B64ABC(DesignCardManager___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v12, 0LL);
   if ( !v12 )
-    sub_1B64324(v13);
+    sub_1B64ACC(v13, v14);
   *(_QWORD *)(v12 + 16) = callback;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v12 + 16), (int32_t)callback, v14, v15);
-  DesignCardPath = DesignCardManager__GetDesignCardPath(this, imageId, rarity, v16);
-  v20 = (AssetLoader_LoadEndDataHandler_o *)sub_1B64314(AssetLoader_LoadEndDataHandler_TypeInfo, v18, v19);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)(v12 + 16), (int32_t)callback, v15, v16);
+  DesignCardPath = DesignCardManager__GetDesignCardPath(this, imageId, rarity, v17);
+  v19 = (AssetLoader_LoadEndDataHandler_o *)sub_1B64ABC(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
-    v20,
+    v19,
     (Il2CppObject *)v12,
     Method_DesignCardManager___c__DisplayClass2_0__LoadDesignCardTexture_b__0__,
     0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage(DesignCardPath, v20, 1, 0LL);
+  AssetManager__loadAssetStorage(DesignCardPath, v19, 1, 0LL);
 }
 
 
@@ -205,10 +206,10 @@ void __fastcall DesignCardManager__ReleaseDesignTexture(
 {
   System_String_o *DesignCardPath; // x19
 
-  if ( (byte_49FBAF7 & 1) == 0 )
+  if ( (byte_49FDBEF & 1) == 0 )
   {
-    sub_1B640C8(&AssetManager_TypeInfo, *(_QWORD *)&imageId);
-    byte_49FBAF7 = 1;
+    sub_1B64870(&AssetManager_TypeInfo, *(_QWORD *)&imageId);
+    byte_49FDBEF = 1;
   }
   DesignCardPath = DesignCardManager__GetDesignCardPath(this, imageId, rarity, method);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
@@ -231,24 +232,24 @@ void __fastcall DesignCardManager__SetupCardImage(
   const MethodInfo *v12; // x4
 
   v8 = this;
-  if ( (byte_49FBAFC & 1) == 0 )
+  if ( (byte_49FDBF4 & 1) == 0 )
   {
-    sub_1B640C8(&Method_AssetData_GetObject_Texture2D___, d);
-    this = (DesignCardManager_o *)sub_1B640C8(&Method_UnityEngine_Component_GetComponent_UITexture___, v9);
-    byte_49FBAFC = 1;
+    sub_1B64870(&Method_AssetData_GetObject_Texture2D___, d);
+    this = (DesignCardManager_o *)sub_1B64870(&Method_UnityEngine_Component_GetComponent_UITexture___, v9);
+    byte_49FDBF4 = 1;
   }
   if ( !d
     || (this = (DesignCardManager_o *)AssetData__GetObject_object_(
                                         d,
-                                        (const MethodInfo_2E1B914 *)Method_AssetData_GetObject_Texture2D___),
+                                        (const MethodInfo_2E1DBF0 *)Method_AssetData_GetObject_Texture2D___),
         !cardNode) )
   {
-    sub_1B64324(this);
+    sub_1B64ACC(this, d);
   }
   v10 = this;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)cardNode,
-                       (const MethodInfo_2E2FE90 *)Method_UnityEngine_Component_GetComponent_UITexture___);
+                       (const MethodInfo_2E3216C *)Method_UnityEngine_Component_GetComponent_UITexture___);
   DesignCardManager__SetupDesignCardTexture(
     v8,
     imageId,
@@ -271,47 +272,47 @@ void __fastcall DesignCardManager__SetupDesignCard(
   __int64 v12; // x1
   __int64 v13; // x24
   __int64 v14; // x0
-  int32_t v15; // w2
-  int32_t v16; // w3
-  int32_t v17; // w2
-  int32_t v18; // w3
-  int32_t v19; // w2
-  int32_t v20; // w3
-  int32_t v21; // w21
-  __int64 v22; // x1
-  __int64 v23; // x2
-  System_Action_object__o *v24; // x22
-  const MethodInfo *v25; // x4
+  __int64 v15; // x1
+  int32_t v16; // w2
+  int32_t v17; // w3
+  int32_t v18; // w2
+  int32_t v19; // w3
+  int32_t v20; // w2
+  int32_t v21; // w3
+  int32_t v22; // w21
+  System_Action_object__o *v23; // x22
+  const MethodInfo *v24; // x4
 
-  if ( (byte_49FBAF8 & 1) == 0 )
+  if ( (byte_49FDBF0 & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_Texture2D__TypeInfo, *(_QWORD *)&imageId);
-    sub_1B640C8(&Method_DesignCardManager___c__DisplayClass4_0__SetupDesignCard_b__0__, v11);
-    sub_1B640C8(&DesignCardManager___c__DisplayClass4_0_TypeInfo, v12);
-    byte_49FBAF8 = 1;
+    sub_1B64870(&System_Action_Texture2D__TypeInfo, *(_QWORD *)&imageId);
+    sub_1B64870(&Method_DesignCardManager___c__DisplayClass4_0__SetupDesignCard_b__0__, v11);
+    sub_1B64870(&DesignCardManager___c__DisplayClass4_0_TypeInfo, v12);
+    byte_49FDBF0 = 1;
   }
-  v13 = sub_1B64314(DesignCardManager___c__DisplayClass4_0_TypeInfo, *(_QWORD *)&imageId, *(_QWORD *)&rarity);
+  v13 = sub_1B64ABC(DesignCardManager___c__DisplayClass4_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0LL);
   if ( !v13 )
-    sub_1B64324(v14);
+    sub_1B64ACC(v14, v15);
   *(_QWORD *)(v13 + 16) = this;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v13 + 16), (int32_t)this, v15, v16);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)(v13 + 16), (int32_t)this, v16, v17);
   *(_DWORD *)(v13 + 24) = imageId;
   *(_QWORD *)(v13 + 32) = target;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v13 + 32), (int32_t)target, v17, v18);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)(v13 + 32), (int32_t)target, v18, v19);
   *(_QWORD *)(v13 + 40) = callback;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v13 + 40), (int32_t)callback, v19, v20);
-  v21 = *(_DWORD *)(v13 + 24);
-  v24 = (System_Action_object__o *)sub_1B64314(System_Action_Texture2D__TypeInfo, v22, v23);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)(v13 + 40), (int32_t)callback, v20, v21);
+  v22 = *(_DWORD *)(v13 + 24);
+  v23 = (System_Action_object__o *)sub_1B64ABC(System_Action_Texture2D__TypeInfo);
   System_Action_object____ctor(
-    v24,
+    v23,
     (Il2CppObject *)v13,
     Method_DesignCardManager___c__DisplayClass4_0__SetupDesignCard_b__0__,
     0LL);
-  DesignCardManager__LoadDesignCardTexture(this, v21, rarity, (System_Action_Texture2D__o *)v24, v25);
+  DesignCardManager__LoadDesignCardTexture(this, v22, rarity, (System_Action_Texture2D__o *)v23, v24);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall DesignCardManager__SetupDesignCardTexture(
         DesignCardManager_o *this,
         int32_t imageId,
@@ -321,9 +322,8 @@ void __fastcall DesignCardManager__SetupDesignCardTexture(
 {
   char v6; // w20
   DesignCardManager_o *v7; // x21
-  __int64 v8; // x1
   struct System_Int32_array *cardTextureSize; // x8
-  UnityEngine_Rect_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v9; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( !target
     || (v6 = imageId,
@@ -334,15 +334,15 @@ void __fastcall DesignCardManager__SetupDesignCardTexture(
                                         target->klass->vtable._28_get_shader.methodPtr),
         (cardTextureSize = v7->fields.cardTextureSize) == 0LL) )
   {
-    sub_1B64324(this);
+    sub_1B64ACC(this, *(_QWORD *)&imageId);
   }
   if ( cardTextureSize->max_length <= 1 )
-    sub_1B6432C(this, v8);
-  v10.fields.m_XMin = (float)((v6 & 1) == 0) * 0.5;
-  v10.fields.m_Height = (float)cardTextureSize->m_Items[2] * 0.00097656;
-  v10.fields.m_YMin = 1.0 - v10.fields.m_Height;
-  v10.fields.m_Width = 0.5;
-  UITexture__set_uvRect(target, v10, 0LL);
+    sub_1B64AD4(this, *(_QWORD *)&imageId);
+  v9.fields.m_XMin = (float)((v6 & 1) == 0) * 0.5;
+  v9.fields.m_Height = (float)cardTextureSize->m_Items[2] * 0.00097656;
+  v9.fields.m_YMin = 1.0 - v9.fields.m_Height;
+  v9.fields.m_Width = 0.5;
+  UITexture__set_uvRect(target, v9, 0LL);
 }
 
 
@@ -364,16 +364,16 @@ void __fastcall DesignCardManager___c__DisplayClass2_0___LoadDesignCardTexture_b
   struct System_Action_Texture2D__o *callback; // x8
 
   v4 = this;
-  if ( (byte_49FBAFE & 1) == 0 )
+  if ( (byte_49FDBF6 & 1) == 0 )
   {
-    this = (DesignCardManager___c__DisplayClass2_0_o *)sub_1B640C8(&Method_AssetData_GetObject_Texture2D___, data);
-    byte_49FBAFE = 1;
+    this = (DesignCardManager___c__DisplayClass2_0_o *)sub_1B64870(&Method_AssetData_GetObject_Texture2D___, data);
+    byte_49FDBF6 = 1;
   }
   if ( !data )
-    sub_1B64324(this);
+    sub_1B64ACC(this, data);
   Object_object = AssetData__GetObject_object_(
                     data,
-                    (const MethodInfo_2E1B914 *)Method_AssetData_GetObject_Texture2D___);
+                    (const MethodInfo_2E1DBF0 *)Method_AssetData_GetObject_Texture2D___);
   callback = v4->fields.callback;
   if ( callback )
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, Il2CppObject *, _QWORD))callback->fields.m_target)(
@@ -402,7 +402,7 @@ void __fastcall DesignCardManager___c__DisplayClass4_0___SetupDesignCard_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, tex);
   DesignCardManager__SetupDesignCardTexture(_4__this, this->fields.imageId, this->fields.target, tex, v3);
   callback = this->fields.callback;
   if ( callback )

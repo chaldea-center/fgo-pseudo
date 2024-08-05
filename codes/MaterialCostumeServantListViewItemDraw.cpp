@@ -13,38 +13,39 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetButtonState(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *baseButton; // x21
-  struct UICommonButton_o *v6; // x0
-  __int64 v7; // x1
+  __int64 v6; // x1
+  struct UICommonButton_o *v7; // x0
+  __int64 v8; // x1
 
-  if ( (byte_49F7BC6 & 1) == 0 )
+  if ( (byte_49F9CB6 & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, isEnable);
-    byte_49F7BC6 = 1;
+    sub_1B64870(&UnityEngine_Object_TypeInfo, isEnable);
+    byte_49F9CB6 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality(baseButton, 0LL, 0LL) )
   {
-    v6 = this->fields.baseButton;
-    if ( !v6
-      || (((void (__fastcall *)(struct UICommonButton_o *, bool, Il2CppMethodPointer))v6->klass->vtable._5_set_isEnabled.method)(
-            v6,
+    v7 = this->fields.baseButton;
+    if ( !v7
+      || (((void (__fastcall *)(struct UICommonButton_o *, bool, Il2CppMethodPointer))v7->klass->vtable._5_set_isEnabled.method)(
+            v7,
             isEnable,
-            v6->klass->vtable._6_OnInit.methodPtr),
-          (v6 = this->fields.baseButton) == 0LL) )
+            v7->klass->vtable._6_OnInit.methodPtr),
+          (v7 = this->fields.baseButton) == 0LL) )
     {
-      sub_1B64324(v6);
+      sub_1B64ACC(v7, v6);
     }
     if ( isEnable )
-      v7 = 0LL;
+      v8 = 0LL;
     else
-      v7 = 3LL;
-    ((void (__fastcall *)(struct UICommonButton_o *, __int64, __int64, Il2CppMethodPointer))v6->klass->vtable._14_SetState.method)(
-      v6,
+      v8 = 3LL;
+    ((void (__fastcall *)(struct UICommonButton_o *, __int64, __int64, Il2CppMethodPointer))v7->klass->vtable._14_SetState.method)(
       v7,
+      v8,
       1LL,
-      v6->klass->vtable._15_OnPress.methodPtr);
+      v7->klass->vtable._15_OnPress.methodPtr);
   }
 }
 
@@ -77,20 +78,20 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetItem(
   UILabel_o *maskLabel; // x20
   __int64 *v16; // x8
 
-  if ( (byte_49F7BC5 & 1) == 0 )
+  if ( (byte_49F9CB5 & 1) == 0 )
   {
-    sub_1B640C8(&LocalizationManager_TypeInfo, item);
-    sub_1B640C8(&StringLiteral_1/*""*/, v7);
-    sub_1B640C8(&StringLiteral_8511/*"MATERIAL_FIND_SERVANT"*/, v8);
-    sub_1B640C8(&StringLiteral_8510/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/, v9);
-    byte_49F7BC5 = 1;
+    sub_1B64870(&LocalizationManager_TypeInfo, item);
+    sub_1B64870(&StringLiteral_1/*""*/, v7);
+    sub_1B64870(&StringLiteral_8513/*"MATERIAL_FIND_SERVANT"*/, v8);
+    sub_1B64870(&StringLiteral_8512/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/, v9);
+    byte_49F9CB5 = 1;
   }
   if ( item && mode )
   {
     servantFaceIcon = this->fields.servantFaceIcon;
     if ( !servantFaceIcon )
       goto LABEL_33;
-    ServantFaceIconComponent__Set_37908976(
+    ServantFaceIconComponent__Set_37913356(
       servantFaceIcon,
       item->fields._userSvtCollectionEntity_k__BackingField,
       item->fields._svtCostumeEntity_k__BackingField,
@@ -120,7 +121,7 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetItem(
       maskLabel = this->fields.maskLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v16 = &StringLiteral_8511/*"MATERIAL_FIND_SERVANT"*/;
+      v16 = &StringLiteral_8513/*"MATERIAL_FIND_SERVANT"*/;
     }
     else
     {
@@ -165,7 +166,7 @@ LABEL_13:
       maskLabel = this->fields.maskLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v16 = &StringLiteral_8510/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/;
+      v16 = &StringLiteral_8512/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/;
     }
     servantFaceIcon = (ServantFaceIconComponent_o *)LocalizationManager__Get((System_String_o *)*v16, 0LL);
     if ( maskLabel )
@@ -179,6 +180,6 @@ LABEL_13:
       }
     }
 LABEL_33:
-    sub_1B64324(servantFaceIcon);
+    sub_1B64ACC(servantFaceIcon, item);
   }
 }

@@ -13,13 +13,13 @@ uint32_t __fastcall FNV1a__Hash32(
   if ( offset < len )
   {
     if ( !bytes )
-      sub_1B64324(0LL);
+      sub_1B64ACC(0LL, offset);
     v5 = &bytes->m_Items[offset + 4];
     v6 = len - (__int64)offset;
     do
     {
       if ( offset >= bytes->max_length )
-        sub_1B6432C(bytes, *(_QWORD *)&offset);
+        sub_1B64AD4(bytes, *(_QWORD *)&offset);
       v7 = *v5++;
       --v6;
       *(_QWORD *)&offset = (unsigned int)(offset + 1);
@@ -31,10 +31,11 @@ uint32_t __fastcall FNV1a__Hash32(
 }
 
 
-uint32_t __fastcall FNV1a__Hash32_38067448(System_String_o *str, const MethodInfo *method)
+uint32_t __fastcall FNV1a__Hash32_38071812(System_String_o *str, const MethodInfo *method)
 {
   System_Byte_array *UTF8; // x0
-  const MethodInfo *v4; // x4
+  __int64 v4; // x1
+  const MethodInfo *v5; // x4
 
   UTF8 = (System_Byte_array *)System_Text_Encoding__get_UTF8(0LL);
   if ( !UTF8
@@ -43,9 +44,9 @@ uint32_t __fastcall FNV1a__Hash32_38067448(System_String_o *str, const MethodInf
                                       str,
                                       UTF8->obj.klass->vtable[20].methodPtr)) == 0LL )
   {
-    sub_1B64324(UTF8);
+    sub_1B64ACC(UTF8, v4);
   }
-  return FNV1a__Hash32(UTF8, 0, UTF8->max_length, 0x811C9DC5, v4);
+  return FNV1a__Hash32(UTF8, 0, UTF8->max_length, 0x811C9DC5, v5);
 }
 
 
@@ -64,13 +65,13 @@ uint64_t __fastcall FNV1a__Hash64(
   if ( offset < len )
   {
     if ( !bytes )
-      sub_1B64324(0LL);
+      sub_1B64ACC(0LL, offset);
     v5 = &bytes->m_Items[offset + 4];
     v6 = len - (__int64)offset;
     do
     {
       if ( offset >= bytes->max_length )
-        sub_1B6432C(bytes, *(_QWORD *)&offset);
+        sub_1B64AD4(bytes, *(_QWORD *)&offset);
       v7 = *v5++;
       --v6;
       *(_QWORD *)&offset = (unsigned int)(offset + 1);

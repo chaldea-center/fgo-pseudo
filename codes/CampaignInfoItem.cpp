@@ -2,10 +2,10 @@ void __fastcall CampaignInfoItem___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_49F750B & 1) == 0 )
+  if ( (byte_49F95FB & 1) == 0 )
   {
-    sub_1B640C8(&CampaignInfoItem_TypeInfo, v1);
-    byte_49F750B = 1;
+    sub_1B64870(&CampaignInfoItem_TypeInfo, v1);
+    byte_49F95FB = 1;
   }
   CampaignInfoItem_TypeInfo->static_fields->baseWidth = 900;
 }
@@ -35,13 +35,13 @@ void __fastcall CampaignInfoItem__OnClick(CampaignInfoItem_o *this, const Method
   System_String_o *v15; // x19
 
   v2 = this;
-  if ( (byte_49F750A & 1) == 0 )
+  if ( (byte_49F95FA & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Application_TypeInfo, method);
-    sub_1B640C8(&Method_CampaignInfoItem_OnClick__, v3);
-    sub_1B640C8(&WebViewManager_TypeInfo, v4);
-    this = (CampaignInfoItem_o *)sub_1B640C8(&StringLiteral_1/*""*/, v5);
-    byte_49F750A = 1;
+    sub_1B64870(&UnityEngine_Application_TypeInfo, method);
+    sub_1B64870(&Method_CampaignInfoItem_OnClick__, v3);
+    sub_1B64870(&WebViewManager_TypeInfo, v4);
+    this = (CampaignInfoItem_o *)sub_1B64870(&StringLiteral_1/*""*/, v5);
+    byte_49F95FA = 1;
   }
   target = v2->fields.target;
   if ( !target )
@@ -53,8 +53,8 @@ void __fastcall CampaignInfoItem__OnClick(CampaignInfoItem_o *this, const Method
       return;
     v8 = Method_CampaignInfoItem_OnClick__;
     if ( (*((_BYTE *)Method_CampaignInfoItem_OnClick__ + 83) & 2) != 0 )
-      v8 = (_QWORD *)sub_1B640E0();
-    v9 = (System_Reflection_MethodBase_o *)sub_1B640AC(v8, v8[4]);
+      v8 = (_QWORD *)sub_1B64888();
+    v9 = (System_Reflection_MethodBase_o *)sub_1B64854(v8, v8[4]);
     OverwriteAssetSoundName__PlaySystemSe(v9, 0, 0LL);
     v10 = v2->fields.target;
     if ( v10 )
@@ -66,12 +66,12 @@ void __fastcall CampaignInfoItem__OnClick(CampaignInfoItem_o *this, const Method
       return;
     }
 LABEL_19:
-    sub_1B64324(this);
+    sub_1B64ACC(this, method);
   }
   v12 = Method_CampaignInfoItem_OnClick__;
   if ( (*((_BYTE *)Method_CampaignInfoItem_OnClick__ + 83) & 2) != 0 )
-    v12 = (_QWORD *)sub_1B640E0();
-  v13 = (System_Reflection_MethodBase_o *)sub_1B640AC(v12, v12[4]);
+    v12 = (_QWORD *)sub_1B64888();
+  v13 = (System_Reflection_MethodBase_o *)sub_1B64854(v12, v12[4]);
   OverwriteAssetSoundName__PlaySystemSe(v13, 0, 0LL);
   v14 = v2->fields.target;
   if ( !v14 )
@@ -95,48 +95,47 @@ void __fastcall CampaignInfoItem__SetCampaignInfo(
   __int64 v12; // x1
   __int64 v13; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_Shader_o *v15; // x24
-  __int64 v16; // x1
-  __int64 v17; // x2
-  UnityEngine_Material_o *v18; // x23
+  __int64 v15; // x1
+  UnityEngine_Shader_o *v16; // x24
+  UnityEngine_Material_o *v17; // x23
   UIWidget_o *baseText; // x22
-  UITexture_o *v20; // x22
-  int v21; // w23
-  int v22; // w24
+  UITexture_o *v19; // x22
+  int v20; // w23
+  int v21; // w24
   int32_t baseWidth; // w27
-  int v24; // w25
+  int v23; // w25
+  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Rect_o v27; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v26; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_49F7509 & 1) == 0 )
+  if ( (byte_49F95F9 & 1) == 0 )
   {
-    sub_1B640C8(&CampaignInfoItem_TypeInfo, info);
-    sub_1B640C8(&UnityEngine_Material_TypeInfo, v11);
-    sub_1B640C8(&StringLiteral_4952/*"Custom/SpriteWithMask"*/, v12);
-    sub_1B640C8(&StringLiteral_16198/*"_MaskTex"*/, v13);
-    byte_49F7509 = 1;
+    sub_1B64870(&CampaignInfoItem_TypeInfo, info);
+    sub_1B64870(&UnityEngine_Material_TypeInfo, v11);
+    sub_1B64870(&StringLiteral_4952/*"Custom/SpriteWithMask"*/, v12);
+    sub_1B64870(&StringLiteral_16200/*"_MaskTex"*/, v13);
+    byte_49F95F9 = 1;
   }
   this->fields.target = info;
-  sub_1B6406C(&this->fields.target);
+  sub_1B64814(&this->fields.target);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     goto LABEL_15;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
-  v15 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4952/*"Custom/SpriteWithMask"*/, 0LL);
-  v18 = (UnityEngine_Material_o *)sub_1B64314(UnityEngine_Material_TypeInfo, v16, v17);
-  UnityEngine_Material___ctor(v18, v15, 0LL);
+  v16 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4952/*"Custom/SpriteWithMask"*/, 0LL);
+  v17 = (UnityEngine_Material_o *)sub_1B64ABC(UnityEngine_Material_TypeInfo);
+  UnityEngine_Material___ctor(v17, v16, 0LL);
   gameObject = (UnityEngine_GameObject_o *)this->fields.baseText;
   if ( !gameObject )
     goto LABEL_15;
   gameObject = (UnityEngine_GameObject_o *)((__int64 (__fastcall *)(UnityEngine_GameObject_o *, UnityEngine_Material_o *, Il2CppMethodPointer))gameObject->klass[1].vtable._2_GetHashCode.method)(
                                              gameObject,
-                                             v18,
+                                             v17,
                                              gameObject->klass[1].vtable._3_ToString.methodPtr);
-  if ( !v18 )
+  if ( !v17 )
     goto LABEL_15;
-  UnityEngine_Material__set_mainTexture(v18, (UnityEngine_Texture_o *)tex, 0LL);
-  UnityEngine_Material__SetTexture(v18, (System_String_o *)StringLiteral_16198/*"_MaskTex"*/, (UnityEngine_Texture_o *)maskTex, 0LL);
+  UnityEngine_Material__set_mainTexture(v17, (UnityEngine_Texture_o *)tex, 0LL);
+  UnityEngine_Material__SetTexture(v17, (System_String_o *)StringLiteral_16200/*"_MaskTex"*/, (UnityEngine_Texture_o *)maskTex, 0LL);
   gameObject = (UnityEngine_GameObject_o *)this->fields.baseText;
   if ( !gameObject )
     goto LABEL_15;
@@ -150,40 +149,40 @@ void __fastcall CampaignInfoItem__SetCampaignInfo(
   UIWidget__set_width(baseText, CampaignInfoItem_TypeInfo->static_fields->baseWidth, 0LL);
   if ( !tex )
     goto LABEL_15;
-  v20 = this->fields.baseText;
+  v19 = this->fields.baseText;
+  v20 = ((__int64 (__fastcall *)(UnityEngine_Texture2D_o *, Il2CppMethodPointer))tex->klass->vtable._6_get_height.method)(
+          tex,
+          tex->klass->vtable._7_set_height.methodPtr);
   v21 = ((__int64 (__fastcall *)(UnityEngine_Texture2D_o *, Il2CppMethodPointer))tex->klass->vtable._6_get_height.method)(
           tex,
           tex->klass->vtable._7_set_height.methodPtr);
-  v22 = ((__int64 (__fastcall *)(UnityEngine_Texture2D_o *, Il2CppMethodPointer))tex->klass->vtable._6_get_height.method)(
-          tex,
-          tex->klass->vtable._7_set_height.methodPtr);
   baseWidth = CampaignInfoItem_TypeInfo->static_fields->baseWidth;
-  v24 = ((__int64 (__fastcall *)(UnityEngine_Texture2D_o *, Il2CppMethodPointer))tex->klass->vtable._4_get_width.method)(
+  v23 = ((__int64 (__fastcall *)(UnityEngine_Texture2D_o *, Il2CppMethodPointer))tex->klass->vtable._4_get_width.method)(
           tex,
           tex->klass->vtable._5_set_width.methodPtr);
   gameObject = (UnityEngine_GameObject_o *)((__int64 (__fastcall *)(UnityEngine_Texture2D_o *, Il2CppMethodPointer))tex->klass->vtable._6_get_height.method)(
                                              tex,
                                              tex->klass->vtable._7_set_height.methodPtr);
-  if ( !v20 )
+  if ( !v19 )
     goto LABEL_15;
-  v27.fields.m_Height = (float)height / (float)(int)gameObject;
-  v27.fields.m_Width = (float)baseWidth / (float)v24;
-  v27.fields.m_YMin = (float)(v21 - height) / (float)v22;
-  v27.fields.m_XMin = 0.0;
-  UITexture__set_uvRect(v20, v27, 0LL);
+  v26.fields.m_Height = (float)height / (float)(int)gameObject;
+  v26.fields.m_Width = (float)baseWidth / (float)v23;
+  v26.fields.m_YMin = (float)(v20 - height) / (float)v21;
+  v26.fields.m_XMin = 0.0;
+  UITexture__set_uvRect(v19, v26, 0LL);
   gameObject = (UnityEngine_GameObject_o *)this->fields.collider;
   if ( !gameObject
-    || (v25.fields.z = 1.0,
-        v25.fields.y = (float)height,
-        v25.fields.x = (float)CampaignInfoItem_TypeInfo->static_fields->baseWidth,
-        UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)gameObject, v25, 0LL),
+    || (v24.fields.z = 1.0,
+        v24.fields.y = (float)height,
+        v24.fields.x = (float)CampaignInfoItem_TypeInfo->static_fields->baseWidth,
+        UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)gameObject, v24, 0LL),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.collider) == 0LL) )
   {
 LABEL_15:
-    sub_1B64324(gameObject);
+    sub_1B64ACC(gameObject, v15);
   }
-  v26.fields.x = 0.0;
-  v26.fields.y = (float)-height * 0.5;
-  v26.fields.z = 0.0;
-  UnityEngine_BoxCollider__set_center((UnityEngine_BoxCollider_o *)gameObject, v26, 0LL);
+  v25.fields.x = 0.0;
+  v25.fields.y = (float)-height * 0.5;
+  v25.fields.z = 0.0;
+  UnityEngine_BoxCollider__set_center((UnityEngine_BoxCollider_o *)gameObject, v25, 0LL);
 }

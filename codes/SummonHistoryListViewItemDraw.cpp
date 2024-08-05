@@ -30,7 +30,7 @@ void __fastcall SummonHistoryListViewItemDraw__SetBonusMessagePosition(
     || (bonusItemSpr = this->fields.bonusItemSpr) == 0LL
     || (titleLabel = (UnityEngine_Component_o *)this->fields.messageLabel2) == 0LL )
   {
-    sub_1B64324(titleLabel);
+    sub_1B64ACC(titleLabel, method);
   }
   v7 = *(float *)&localPosition;
   mWidth = (float)bonusItemSpr->fields.mWidth;
@@ -55,11 +55,11 @@ void __fastcall SummonHistoryListViewItemDraw__SetItem(
   const MethodInfo *v11; // x1
 
   v4 = this;
-  if ( (byte_49F8C43 & 1) == 0 )
+  if ( (byte_49FAD32 & 1) == 0 )
   {
-    sub_1B640C8(&LocalizationManager_TypeInfo, item);
-    this = (SummonHistoryListViewItemDraw_o *)sub_1B640C8(&StringLiteral_6845/*"GACHA_HISTORY_LIST_DOT"*/, v5);
-    byte_49F8C43 = 1;
+    sub_1B64870(&LocalizationManager_TypeInfo, item);
+    this = (SummonHistoryListViewItemDraw_o *)sub_1B64870(&StringLiteral_6845/*"GACHA_HISTORY_LIST_DOT"*/, v5);
+    byte_49FAD32 = 1;
   }
   if ( !item )
     goto LABEL_53;
@@ -235,7 +235,7 @@ LABEL_45:
         }
       }
 LABEL_53:
-      sub_1B64324(this);
+      sub_1B64ACC(this, item);
     case 0:
       this = (SummonHistoryListViewItemDraw_o *)v4->fields.messageLabel;
       if ( !this )
@@ -300,11 +300,11 @@ void __fastcall SummonHistoryListViewItemDraw__SetItemIconPosition(
   float v14; // s0
 
   v2 = this;
-  if ( (byte_49F8C44 & 1) == 0 )
+  if ( (byte_49FAD33 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_1529/*"7"*/, method);
-    this = (SummonHistoryListViewItemDraw_o *)sub_1B640C8(&StringLiteral_1531/*"7999"*/, v3);
-    byte_49F8C44 = 1;
+    sub_1B64870(&StringLiteral_1528/*"7"*/, method);
+    this = (SummonHistoryListViewItemDraw_o *)sub_1B64870(&StringLiteral_1530/*"7999"*/, v3);
+    byte_49FAD33 = 1;
   }
   titleLabel = v2->fields.titleLabel;
   if ( !titleLabel )
@@ -326,7 +326,7 @@ void __fastcall SummonHistoryListViewItemDraw__SetItemIconPosition(
     goto LABEL_17;
   this = (SummonHistoryListViewItemDraw_o *)System_String__op_Equality(
                                               bonusItemSpr->fields.mSpriteName,
-                                              (System_String_o *)StringLiteral_1529/*"7"*/,
+                                              (System_String_o *)StringLiteral_1528/*"7"*/,
                                               0LL);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
@@ -339,8 +339,8 @@ void __fastcall SummonHistoryListViewItemDraw__SetItemIconPosition(
   v11 = v2->fields.bonusItemSpr;
   if ( !v11 )
 LABEL_17:
-    sub_1B64324(this);
-  if ( System_String__op_Equality(v11->fields.mSpriteName, (System_String_o *)StringLiteral_1531/*"7999"*/, 0LL) )
+    sub_1B64ACC(this, method);
+  if ( System_String__op_Equality(v11->fields.mSpriteName, (System_String_o *)StringLiteral_1530/*"7999"*/, 0LL) )
   {
     this = (SummonHistoryListViewItemDraw_o *)v2->fields.bonusItemSpr;
     if ( this )

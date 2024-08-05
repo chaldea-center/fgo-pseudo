@@ -29,20 +29,20 @@ void __fastcall DisplayEffectArgument___ctor(
   int32_t v34; // w2
   int32_t v35; // w3
 
-  if ( (byte_49FE85B & 1) == 0 )
+  if ( (byte_4A0095B & 1) == 0 )
   {
-    sub_1B640C8(&int___TypeInfo, actObj);
-    sub_1B640C8(&StringLiteral_1/*""*/, v17);
-    byte_49FE85B = 1;
+    sub_1B64870(&int___TypeInfo, actObj);
+    sub_1B64870(&StringLiteral_1/*""*/, v17);
+    byte_4A0095B = 1;
   }
   v18 = (int)StringLiteral_1/*""*/;
   this->fields.attachNodeName = (struct System_String_o *)StringLiteral_1/*""*/;
   p_attachNodeName = &this->fields.attachNodeName;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.attachNodeName, v18, funcIndex, (int32_t)actData);
-  if ( !byte_49F7111 )
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.attachNodeName, v18, funcIndex, (int32_t)actData);
+  if ( !byte_49F9201 )
   {
-    sub_1B640C8(&UnityEngine_Vector3_TypeInfo, v20);
-    byte_49F7111 = 1;
+    sub_1B64870(&UnityEngine_Vector3_TypeInfo, v20);
+    byte_49F9201 = 1;
   }
   v21 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -53,20 +53,20 @@ void __fastcall DisplayEffectArgument___ctor(
   v25 = v24->zeroVector.fields.z;
   *(_QWORD *)&this->fields.popupOffset.fields.x = *(_QWORD *)&v24->zeroVector.fields.x;
   this->fields.popupOffset.fields.z = v25;
-  v26 = (struct System_Int32_array *)sub_1B64170(int___TypeInfo, 0LL);
+  v26 = (struct System_Int32_array *)sub_1B64918(int___TypeInfo, 0LL);
   this->fields.fieldIndiv = v26;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.fieldIndiv, (int32_t)v26, v27, v28);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.fieldIndiv, (int32_t)v26, v27, v28);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.actObj = actObj;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)actObj, v29, v30);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)actObj, v29, v30);
   this->fields.actData = actData;
   p_actData = &this->fields.actData;
   *((_DWORD *)p_actData - 2) = funcIndex;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)p_actData, (int32_t)actData, v32, v33);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)p_actData, (int32_t)actData, v32, v33);
   *((_BYTE *)p_actData + 8) = isCommandAfter;
   *((_BYTE *)p_actData + 9) = isTreasureDevice;
   p_actData[2] = (struct BattleActionData_o *)attachNodeName;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)p_attachNodeName, (int32_t)attachNodeName, v34, v35);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)p_attachNodeName, (int32_t)attachNodeName, v34, v35);
   *((_BYTE *)p_actData + 24) = ispopAdjustment;
 }
 
@@ -77,12 +77,13 @@ bool __fastcall DisplayEffectArgument__IsDisplayablePopupEachActType(
         const MethodInfo *method)
 {
   _BOOL8 v5; // x0
+  __int64 v6; // x1
   struct BattleActionData_o *actData; // x8
 
-  if ( (byte_49FE85D & 1) == 0 )
+  if ( (byte_4A0095D & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, targetObj);
-    byte_49FE85D = 1;
+    sub_1B64870(&UnityEngine_Object_TypeInfo, targetObj);
+    byte_4A0095D = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -97,7 +98,7 @@ bool __fastcall DisplayEffectArgument__IsDisplayablePopupEachActType(
     if ( targetObj )
       return UnityEngine_GameObject__get_activeSelf(targetObj, 0LL);
 LABEL_13:
-    sub_1B64324(v5);
+    sub_1B64ACC(v5, v6);
   }
   return 1;
 }
@@ -129,10 +130,10 @@ DisplayEffectArgument_o *__fastcall DisplayEffectArgument__SetBuffParam(
   v11 = buffOffset.fields.z;
   v12 = buffOffset.fields.y;
   v13 = buffOffset.fields.x;
-  if ( (byte_49FE85C & 1) == 0 )
+  if ( (byte_4A0095C & 1) == 0 )
   {
-    sub_1B640C8(&int___TypeInfo, overwriteEffectIds);
-    byte_49FE85C = 1;
+    sub_1B64870(&int___TypeInfo, overwriteEffectIds);
+    byte_4A0095C = 1;
   }
   this->fields.overwriteEffectIds = overwriteEffectIds;
   this->fields.buffOffset.fields.x = v13;
@@ -141,14 +142,14 @@ DisplayEffectArgument_o *__fastcall DisplayEffectArgument__SetBuffParam(
   this->fields.popupOffset.fields.x = x;
   this->fields.popupOffset.fields.y = y;
   this->fields.popupOffset.fields.z = z;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields.overwriteEffectIds,
     (int32_t)overwriteEffectIds,
     (int32_t)fieldIndiv,
     (int32_t)method);
   if ( !v6 )
-    v6 = (struct System_Int32_array *)sub_1B64170(int___TypeInfo, 0LL);
+    v6 = (struct System_Int32_array *)sub_1B64918(int___TypeInfo, 0LL);
   this->fields.fieldIndiv = v6;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.fieldIndiv, (int32_t)v6, v15, v16);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.fieldIndiv, (int32_t)v6, v15, v16);
   return this;
 }

@@ -5,16 +5,16 @@ void __fastcall EventInfoShipProgressDrawComponent___cctor(const MethodInfo *met
   int32_t v3; // w3
   __int64 v4; // x1
 
-  if ( (byte_49FDC24 & 1) == 0 )
+  if ( (byte_49FFD1F & 1) == 0 )
   {
-    sub_1B640C8(&EventInfoShipProgressDrawComponent_TypeInfo, v1);
-    sub_1B640C8(&StringLiteral_10709/*"ProgressShipData_"*/, v4);
-    byte_49FDC24 = 1;
+    sub_1B64870(&EventInfoShipProgressDrawComponent_TypeInfo, v1);
+    sub_1B64870(&StringLiteral_10710/*"ProgressShipData_"*/, v4);
+    byte_49FFD1F = 1;
   }
-  EventInfoShipProgressDrawComponent_TypeInfo->static_fields->SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA = (struct System_String_o *)StringLiteral_10709/*"ProgressShipData_"*/;
-  sub_1B6406C(
+  EventInfoShipProgressDrawComponent_TypeInfo->static_fields->SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA = (struct System_String_o *)StringLiteral_10710/*"ProgressShipData_"*/;
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)EventInfoShipProgressDrawComponent_TypeInfo->static_fields,
-    StringLiteral_10709/*"ProgressShipData_"*/,
+    StringLiteral_10710/*"ProgressShipData_"*/,
     v2,
     v3);
 }
@@ -38,7 +38,7 @@ void __fastcall EventInfoShipProgressDrawComponent__Awake(
 
   progressPathMesh = this->fields.progressPathMesh;
   if ( !progressPathMesh )
-    sub_1B64324(this);
+    sub_1B64ACC(this, method);
   max_length = progressPathMesh->max_length;
   v4 = -1;
   do
@@ -60,165 +60,169 @@ void __fastcall EventInfoShipProgressDrawComponent__DeleteContinueData(const Met
   __int64 v9; // x1
   __int64 v10; // x1
   Il2CppObject *Master_object; // x0
+  __int64 v12; // x1
   System_Collections_ObjectModel_Collection_T__o *klass; // x19
-  DataMasterBase_TMaster__TEntity__PKType__o *v13; // x20
+  DataMasterBase_TMaster__TEntity__PKType__o *v14; // x20
+  __int64 v15; // x1
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x19
-  System_Collections_Generic_IEnumerator_T__c *v15; // x8
-  __int64 v16; // x9
+  System_Collections_Generic_IEnumerator_T__c *v17; // x8
+  __int64 v18; // x9
   int32_t *p_offset; // x10
   __int64 p_method; // x0
-  System_Collections_Generic_IEnumerator_T__c *v19; // x8
-  __int64 v20; // x9
-  int32_t *v21; // x10
-  __int64 v22; // x0
-  _DWORD *v23; // x0
+  System_Collections_Generic_IEnumerator_T__c *v21; // x8
+  __int64 v22; // x9
+  int32_t *v23; // x10
+  __int64 v24; // x0
+  _DWORD *v25; // x0
+  __int64 v26; // x1
   __int64 methodPtr_low; // x10
-  int32_t v25; // w2
-  EventInfoShipProgressDrawComponent_c *v26; // x0
+  int32_t v28; // w2
+  __int64 v29; // x1
+  EventInfoShipProgressDrawComponent_c *v30; // x0
   System_String_o *SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA; // x21
-  System_String_o *v28; // x1
-  System_String_o *v29; // x0
-  System_Collections_Generic_IEnumerator_T__c *v30; // x8
-  __int64 v31; // x9
-  int32_t *v32; // x10
-  __int64 v33; // x0
-  EventDetailEntity_o *v34; // [xsp+0h] [xbp-60h] BYREF
-  int32_t v35; // [xsp+Ch] [xbp-54h] BYREF
+  System_String_o *v32; // x1
+  System_String_o *v33; // x0
+  System_Collections_Generic_IEnumerator_T__c *v34; // x8
+  __int64 v35; // x9
+  int32_t *v36; // x10
+  __int64 v37; // x0
+  EventDetailEntity_o *v38; // [xsp+0h] [xbp-60h] BYREF
+  int32_t v39; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_49FDC21 & 1) == 0 )
+  if ( (byte_49FFD1C & 1) == 0 )
   {
-    sub_1B640C8(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, v1);
-    sub_1B640C8(&Method_DataManager_GetMaster_EventDetailMaster___, v2);
-    sub_1B640C8(&Method_DataManager_GetMaster_EventMaster___, v3);
-    sub_1B640C8(&DataManager_TypeInfo, v4);
-    sub_1B640C8(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v5);
-    sub_1B640C8(&EventEntity_TypeInfo, v6);
-    sub_1B640C8(&EventInfoShipProgressDrawComponent_TypeInfo, v7);
-    sub_1B640C8(&System_IDisposable_TypeInfo, v8);
-    sub_1B640C8(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v9);
-    sub_1B640C8(&System_Collections_IEnumerator_TypeInfo, v10);
-    byte_49FDC21 = 1;
+    sub_1B64870(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, v1);
+    sub_1B64870(&Method_DataManager_GetMaster_EventDetailMaster___, v2);
+    sub_1B64870(&Method_DataManager_GetMaster_EventMaster___, v3);
+    sub_1B64870(&DataManager_TypeInfo, v4);
+    sub_1B64870(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v5);
+    sub_1B64870(&EventEntity_TypeInfo, v6);
+    sub_1B64870(&EventInfoShipProgressDrawComponent_TypeInfo, v7);
+    sub_1B64870(&System_IDisposable_TypeInfo, v8);
+    sub_1B64870(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v9);
+    sub_1B64870(&System_Collections_IEnumerator_TypeInfo, v10);
+    byte_49FFD1C = 1;
   }
-  v35 = 0;
-  v34 = 0LL;
+  v39 = 0;
+  v38 = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_EventMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_EventMaster___);
   if ( !Master_object
     || (klass = (System_Collections_ObjectModel_Collection_T__o *)Master_object[2].klass,
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_EventDetailMaster___),
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_EventDetailMaster___),
         !klass) )
   {
-    sub_1B64324(Master_object);
+    sub_1B64ACC(Master_object, v12);
   }
-  v13 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
+  v14 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  klass,
-                 (const MethodInfo_30710E0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_30733BC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, v15);
   while ( 1 )
   {
-    v15 = Enumerator->klass;
-    v16 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v17 = Enumerator->klass;
+    v18 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
-      p_offset = &v15->_1.interfaceOffsets->offset;
+      p_offset = &v17->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v16;
+        --v18;
         p_offset += 4;
-        if ( !v16 )
+        if ( !v18 )
           goto LABEL_12;
       }
-      p_method = (__int64)&v15->vtable[*p_offset].method;
+      p_method = (__int64)&v17->vtable[*p_offset].method;
     }
     else
     {
 LABEL_12:
-      p_method = sub_1BB60A8(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1BB6850(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
       break;
-    v19 = Enumerator->klass;
-    v20 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v21 = Enumerator->klass;
+    v22 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
-      v21 = &v19->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v21 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
+      v23 = &v21->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v23 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
       {
-        --v20;
-        v21 += 4;
-        if ( !v20 )
+        --v22;
+        v23 += 4;
+        if ( !v22 )
           goto LABEL_19;
       }
-      v22 = (__int64)&v19->vtable[*v21].method;
+      v24 = (__int64)&v21->vtable[*v23].method;
     }
     else
     {
 LABEL_19:
-      v22 = sub_1BB60A8(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v24 = sub_1BB6850(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
-    v23 = (_DWORD *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v22)(
+    v25 = (_DWORD *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v24)(
                       Enumerator,
-                      *(_QWORD *)(v22 + 8));
-    if ( v23 )
+                      *(_QWORD *)(v24 + 8));
+    if ( v25 )
     {
       methodPtr_low = LOBYTE(EventEntity_TypeInfo->vtable._0_Equals.methodPtr);
-      if ( *(unsigned __int8 *)(*(_QWORD *)v23 + 304LL) >= (unsigned int)methodPtr_low
-        && *(EventEntity_c **)(*(_QWORD *)(*(_QWORD *)v23 + 200LL) + 8 * methodPtr_low - 8) == EventEntity_TypeInfo )
+      if ( *(unsigned __int8 *)(*(_QWORD *)v25 + 304LL) >= (unsigned int)methodPtr_low
+        && *(EventEntity_c **)(*(_QWORD *)(*(_QWORD *)v25 + 200LL) + 8 * methodPtr_low - 8) == EventEntity_TypeInfo )
       {
-        v25 = v23[4];
-        v35 = v25;
-        if ( !v13 )
-          sub_1B64324(v23);
+        v28 = v25[4];
+        v39 = v28;
+        if ( !v14 )
+          sub_1B64ACC(v25, v26);
         if ( DataMasterBase_object__object__int___TryGetEntity(
-               v13,
-               (Il2CppObject **)&v34,
-               v25,
-               (const MethodInfo_30D3EF8 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
+               v14,
+               (Il2CppObject **)&v38,
+               v28,
+               (const MethodInfo_30D61D4 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
         {
-          if ( !v34 )
-            sub_1B64324(0LL);
-          if ( EventDetailEntity__IsEventRiverProgress(v34, 0LL) )
+          if ( !v38 )
+            sub_1B64ACC(0LL, v29);
+          if ( EventDetailEntity__IsEventRiverProgress(v38, 0LL) )
           {
-            v26 = EventInfoShipProgressDrawComponent_TypeInfo;
+            v30 = EventInfoShipProgressDrawComponent_TypeInfo;
             if ( !EventInfoShipProgressDrawComponent_TypeInfo->_2.cctor_finished )
             {
               j_il2cpp_runtime_class_init_0(EventInfoShipProgressDrawComponent_TypeInfo);
-              v26 = EventInfoShipProgressDrawComponent_TypeInfo;
+              v30 = EventInfoShipProgressDrawComponent_TypeInfo;
             }
-            SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA = v26->static_fields->SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA;
-            v28 = System_Int32__ToString((int32_t)&v35, 0LL);
-            v29 = System_String__Concat_61375396(SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA, v28, 0LL);
-            UnityEngine_PlayerPrefs__DeleteKey(v29, 0LL);
+            SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA = v30->static_fields->SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA;
+            v32 = System_Int32__ToString((int32_t)&v39, 0LL);
+            v33 = System_String__Concat_61383576(SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA, v32, 0LL);
+            UnityEngine_PlayerPrefs__DeleteKey(v33, 0LL);
           }
         }
       }
     }
   }
-  v30 = Enumerator->klass;
-  v31 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+  v34 = Enumerator->klass;
+  v35 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
   {
-    v32 = &v30->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v32 - 1) != System_IDisposable_TypeInfo )
+    v36 = &v34->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v36 - 1) != System_IDisposable_TypeInfo )
     {
-      --v31;
-      v32 += 4;
-      if ( !v31 )
+      --v35;
+      v36 += 4;
+      if ( !v35 )
         goto LABEL_35;
     }
-    v33 = (__int64)&v30->vtable[*v32].method;
+    v37 = (__int64)&v34->vtable[*v36].method;
   }
   else
   {
 LABEL_35:
-    v33 = sub_1BB60A8(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v37 = sub_1BB6850(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v33)(Enumerator, *(_QWORD *)(v33 + 8));
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v37)(Enumerator, *(_QWORD *)(v37 + 8));
 }
 
 
@@ -235,18 +239,18 @@ System_Collections_IEnumerator_o *__fastcall EventInfoShipProgressDrawComponent_
   int32_t v12; // w2
   int32_t v13; // w3
 
-  if ( (byte_49FDC1D & 1) == 0 )
+  if ( (byte_49FFD18 & 1) == 0 )
   {
-    sub_1B640C8(&EventInfoShipProgressDrawComponent__EasingMove_d__13_TypeInfo, endAction);
-    byte_49FDC1D = 1;
+    sub_1B64870(&EventInfoShipProgressDrawComponent__EasingMove_d__13_TypeInfo, endAction);
+    byte_49FFD18 = 1;
   }
-  v9 = sub_1B64314(EventInfoShipProgressDrawComponent__EasingMove_d__13_TypeInfo, endAction, method);
+  v9 = sub_1B64ABC(EventInfoShipProgressDrawComponent__EasingMove_d__13_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   *(_DWORD *)(v9 + 16) = 0;
   *(_QWORD *)(v9 + 32) = this;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v9 + 32), (int32_t)this, v10, v11);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)(v9 + 32), (int32_t)this, v10, v11);
   *(_QWORD *)(v9 + 48) = endAction;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v9 + 48), (int32_t)endAction, v12, v13);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)(v9 + 48), (int32_t)endAction, v12, v13);
   *(float *)(v9 + 40) = moveRate;
   *(float *)(v9 + 44) = endRate;
   return (System_Collections_IEnumerator_o *)v9;
@@ -264,10 +268,10 @@ bool __fastcall EventInfoShipProgressDrawComponent__HasSaveData(
   System_String_o *v6; // x0
 
   v2 = (int)this;
-  if ( (byte_49FDC22 & 1) == 0 )
+  if ( (byte_49FFD1D & 1) == 0 )
   {
-    sub_1B640C8(&EventInfoShipProgressDrawComponent_TypeInfo, method);
-    byte_49FDC22 = 1;
+    sub_1B64870(&EventInfoShipProgressDrawComponent_TypeInfo, method);
+    byte_49FFD1D = 1;
   }
   v3 = EventInfoShipProgressDrawComponent_TypeInfo;
   if ( !EventInfoShipProgressDrawComponent_TypeInfo->_2.cctor_finished )
@@ -277,7 +281,7 @@ bool __fastcall EventInfoShipProgressDrawComponent__HasSaveData(
   }
   SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA = v3->static_fields->SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA;
   v5 = System_Int32__ToString(v2 + 124, 0LL);
-  v6 = System_String__Concat_61375396(SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA, v5, 0LL);
+  v6 = System_String__Concat_61383576(SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA, v5, 0LL);
   return UnityEngine_PlayerPrefs__HasKey(v6, 0LL);
 }
 
@@ -293,21 +297,22 @@ void __fastcall EventInfoShipProgressDrawComponent__LoadProgressData(
   System_String_o *v7; // x0
   System_String_o *String; // x20
   void *IsNullOrEmpty; // x0
-  int v10; // w8
-  void *v11; // x20
-  float v12; // s8
-  int v13; // w21
-  __int64 v14; // x0
-  __int64 v15; // x1
-  float v16; // s9
-  float v17; // s10
-  UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
+  __int64 v10; // x1
+  int v11; // w8
+  void *v12; // x20
+  float v13; // s8
+  int v14; // w21
+  __int64 v15; // x0
+  __int64 v16; // x1
+  float v17; // s9
+  float v18; // s10
+  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_49FDC20 & 1) == 0 )
+  if ( (byte_49FFD1B & 1) == 0 )
   {
-    sub_1B640C8(&EventInfoShipProgressDrawComponent_TypeInfo, method);
-    sub_1B640C8(&StringLiteral_1/*""*/, v3);
-    byte_49FDC20 = 1;
+    sub_1B64870(&EventInfoShipProgressDrawComponent_TypeInfo, method);
+    sub_1B64870(&StringLiteral_1/*""*/, v3);
+    byte_49FFD1B = 1;
   }
   v4 = EventInfoShipProgressDrawComponent_TypeInfo;
   if ( !EventInfoShipProgressDrawComponent_TypeInfo->_2.cctor_finished )
@@ -317,7 +322,7 @@ void __fastcall EventInfoShipProgressDrawComponent__LoadProgressData(
   }
   SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA = v4->static_fields->SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA;
   v6 = System_Int32__ToString((int)this + 124, 0LL);
-  v7 = System_String__Concat_61375396(SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA, v6, 0LL);
+  v7 = System_String__Concat_61383576(SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA, v6, 0LL);
   String = UnityEngine_PlayerPrefs__GetString(v7, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   IsNullOrEmpty = (void *)System_String__IsNullOrEmpty(String, 0LL);
   if ( ((unsigned __int8)IsNullOrEmpty & 1) == 0 )
@@ -327,48 +332,48 @@ void __fastcall EventInfoShipProgressDrawComponent__LoadProgressData(
     IsNullOrEmpty = System_String__Split(String, 0x3Au, 0, 0LL);
     if ( !IsNullOrEmpty )
       goto LABEL_19;
-    v10 = *((_DWORD *)IsNullOrEmpty + 6);
-    v11 = IsNullOrEmpty;
-    v12 = 0.0;
-    if ( v10 < 1 )
+    v11 = *((_DWORD *)IsNullOrEmpty + 6);
+    v12 = IsNullOrEmpty;
+    v13 = 0.0;
+    if ( v11 < 1 )
     {
+      v18 = 0.0;
       v17 = 0.0;
-      v16 = 0.0;
     }
     else
     {
-      v13 = v10 & ~(v10 >> 31);
-      v16 = System_Single__Parse(*((System_String_o **)IsNullOrEmpty + 4), 0LL);
-      if ( v13 < 2 )
+      v14 = v11 & ~(v11 >> 31);
+      v17 = System_Single__Parse(*((System_String_o **)IsNullOrEmpty + 4), 0LL);
+      if ( v14 < 2 )
       {
-        v17 = 0.0;
+        v18 = 0.0;
       }
       else
       {
-        if ( *((_DWORD *)v11 + 6) <= 1u )
+        if ( *((_DWORD *)v12 + 6) <= 1u )
           goto LABEL_20;
-        v17 = System_Single__Parse(*((System_String_o **)v11 + 5), 0LL);
-        if ( v13 < 3 )
+        v18 = System_Single__Parse(*((System_String_o **)v12 + 5), 0LL);
+        if ( v14 < 3 )
           goto LABEL_16;
-        if ( *((_DWORD *)v11 + 6) <= 2u )
+        if ( *((_DWORD *)v12 + 6) <= 2u )
 LABEL_20:
-          sub_1B6432C(v14, v15);
-        v12 = System_Single__Parse(*((System_String_o **)v11 + 6), 0LL);
+          sub_1B64AD4(v15, v16);
+        v13 = System_Single__Parse(*((System_String_o **)v12 + 6), 0LL);
       }
     }
 LABEL_16:
     IsNullOrEmpty = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
     if ( IsNullOrEmpty )
     {
-      v18.fields.z = 0.0;
-      v18.fields.x = v16;
-      v18.fields.y = v17;
-      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)IsNullOrEmpty, v18, 0LL);
-      this->fields.startRate = v12;
+      v19.fields.z = 0.0;
+      v19.fields.x = v17;
+      v19.fields.y = v18;
+      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)IsNullOrEmpty, v19, 0LL);
+      this->fields.startRate = v13;
       return;
     }
 LABEL_19:
-    sub_1B64324(IsNullOrEmpty);
+    sub_1B64ACC(IsNullOrEmpty, v10);
   }
 }
 
@@ -381,7 +386,7 @@ void __fastcall EventInfoShipProgressDrawComponent__OnDestroy(
   int32_t v3; // w3
 
   this->fields.progressPathMesh = 0LL;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.progressPathMesh, 0, v2, v3);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.progressPathMesh, 0, v2, v3);
 }
 
 
@@ -396,10 +401,10 @@ void __fastcall EventInfoShipProgressDrawComponent__PlayProgressShipDefaultAnim(
   System_String_o *name; // x1
 
   v2 = this;
-  if ( (byte_49FDC1E & 1) == 0 )
+  if ( (byte_49FFD19 & 1) == 0 )
   {
-    this = (EventInfoShipProgressDrawComponent_o *)sub_1B640C8(&UnityEngine_Object_TypeInfo, method);
-    byte_49FDC1E = 1;
+    this = (EventInfoShipProgressDrawComponent_o *)sub_1B64870(&UnityEngine_Object_TypeInfo, method);
+    byte_49FFD19 = 1;
   }
   progressShipAnim = v2->fields.progressShipAnim;
   if ( !progressShipAnim )
@@ -417,12 +422,12 @@ void __fastcall EventInfoShipProgressDrawComponent__PlayProgressShipDefaultAnim(
       if ( this )
       {
         name = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0LL);
-        SimpleAnimation__Play_63513060(v5, name, 0LL);
+        SimpleAnimation__Play_63521240(v5, name, 0LL);
         return;
       }
     }
 LABEL_11:
-    sub_1B64324(this);
+    sub_1B64ACC(this, method);
   }
 }
 
@@ -453,12 +458,12 @@ void __fastcall EventInfoShipProgressDrawComponent__PlayProgressShipMoveAnim(
   const MethodInfo *v22; // x1
 
   v4 = this;
-  if ( (byte_49FDC1C & 1) == 0 )
+  if ( (byte_49FFD17 & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Application_TypeInfo, endAction);
-    sub_1B640C8(&System_Math_TypeInfo, v5);
-    this = (EventInfoShipProgressDrawComponent_o *)sub_1B640C8(&UnityEngine_Object_TypeInfo, v6);
-    byte_49FDC1C = 1;
+    sub_1B64870(&UnityEngine_Application_TypeInfo, endAction);
+    sub_1B64870(&System_Math_TypeInfo, v5);
+    this = (EventInfoShipProgressDrawComponent_o *)sub_1B64870(&UnityEngine_Object_TypeInfo, v6);
+    byte_49FFD17 = 1;
   }
   if ( v4->fields.progressData )
   {
@@ -494,7 +499,7 @@ void __fastcall EventInfoShipProgressDrawComponent__PlayProgressShipMoveAnim(
       NextPoint = progressData->fields.NextPoint;
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-      v14 = System_Math__Min_62194404((float)TotalPoint / (float)NextPoint, 1.0, 0LL);
+      v14 = System_Math__Min_62202584((float)TotalPoint / (float)NextPoint, 1.0, 0LL);
       startRate = v4->fields.startRate;
       v16 = v14;
       if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
@@ -518,14 +523,14 @@ LABEL_22:
                   v16,
                   (float)(v16 - startRate) / (float)(moveAnimTime * (float)v19),
                   v17);
-          UnityEngine_MonoBehaviour__StartCoroutine_69113008((UnityEngine_MonoBehaviour_o *)v4, v21, 0LL);
+          UnityEngine_MonoBehaviour__StartCoroutine_69121188((UnityEngine_MonoBehaviour_o *)v4, v21, 0LL);
           EventInfoShipProgressDrawComponent__PlayProgressShipDefaultAnim(v4, v22);
           return;
         }
       }
     }
 LABEL_24:
-    sub_1B64324(this);
+    sub_1B64ACC(this, endAction);
   }
 }
 
@@ -542,17 +547,17 @@ System_Collections_IEnumerator_o *__fastcall EventInfoShipProgressDrawComponent_
   int32_t v9; // w2
   int32_t v10; // w3
 
-  if ( (byte_49FDC1F & 1) == 0 )
+  if ( (byte_49FFD1A & 1) == 0 )
   {
-    sub_1B640C8(&EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_TypeInfo, isFadeIn);
-    byte_49FDC1F = 1;
+    sub_1B64870(&EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_TypeInfo, isFadeIn);
+    byte_49FFD1A = 1;
   }
   v7 = isWait;
-  v8 = sub_1B64314(EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_TypeInfo, isFadeIn, isWait);
+  v8 = sub_1B64ABC(EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   *(_DWORD *)(v8 + 16) = 0;
   *(_QWORD *)(v8 + 32) = this;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v8 + 32), (int32_t)this, v9, v10);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)(v8 + 32), (int32_t)this, v9, v10);
   *(_BYTE *)(v8 + 40) = isFadeIn;
   *(_BYTE *)(v8 + 41) = v7;
   return (System_Collections_IEnumerator_o *)v8;
@@ -587,7 +592,7 @@ void __fastcall EventInfoShipProgressDrawComponent__ResetShip(
 
   this->fields.progressData = progressData_;
   p_progressData = &this->fields.progressData;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields.progressData,
     (int32_t)progressData_,
     (int32_t)method,
@@ -621,12 +626,12 @@ void __fastcall EventInfoShipProgressDrawComponent__ResetShip(
     || (v15 = this->fields.progressPathMesh) == 0LL )
   {
 LABEL_14:
-    sub_1B64324(v6);
+    sub_1B64ACC(v6, v7);
   }
   v16 = v14->fields.ReleaseScenarioIndex;
   if ( (unsigned int)v16 >= v15->max_length )
 LABEL_15:
-    sub_1B6432C(v6, v7);
+    sub_1B64AD4(v6, v7);
   v6 = v15->m_Items[v16];
   if ( !v6 )
     goto LABEL_14;
@@ -647,11 +652,11 @@ void __fastcall EventInfoShipProgressDrawComponent__SaveProgressData(
         EventInfoShipProgressDrawComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
+  __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x1
-  System_Text_StringBuilder_o *v6; // x20
+  System_Text_StringBuilder_o *v5; // x20
   UnityEngine_Transform_o *transform; // x0
+  __int64 v7; // x1
   float v8; // s0
   System_String_o *v9; // x0
   System_String_o *v10; // x0
@@ -665,16 +670,16 @@ void __fastcall EventInfoShipProgressDrawComponent__SaveProgressData(
   _DWORD v18[15]; // [xsp+14h] [xbp-3Ch] BYREF
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_49FDC23 & 1) == 0 )
+  if ( (byte_49FFD1E & 1) == 0 )
   {
-    sub_1B640C8(&EventInfoShipProgressDrawComponent_TypeInfo, method);
-    sub_1B640C8(&System_Text_StringBuilder_TypeInfo, v4);
-    sub_1B640C8(&StringLiteral_1546/*":"*/, v5);
-    byte_49FDC23 = 1;
+    sub_1B64870(&EventInfoShipProgressDrawComponent_TypeInfo, method);
+    sub_1B64870(&System_Text_StringBuilder_TypeInfo, v3);
+    sub_1B64870(&StringLiteral_1545/*":"*/, v4);
+    byte_49FFD1E = 1;
   }
   startRate = 0.0;
-  v6 = (System_Text_StringBuilder_o *)sub_1B64314(System_Text_StringBuilder_TypeInfo, method, v2);
-  System_Text_StringBuilder___ctor(v6, 0LL);
+  v5 = (System_Text_StringBuilder_o *)sub_1B64ABC(System_Text_StringBuilder_TypeInfo);
+  System_Text_StringBuilder___ctor(v5, 0LL);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform
     || (localPosition = UnityEngine_Transform__get_localPosition(transform, 0LL),
@@ -682,18 +687,18 @@ void __fastcall EventInfoShipProgressDrawComponent__SaveProgressData(
         v18[0] = LODWORD(localPosition.fields.y),
         v18[1] = LODWORD(localPosition.fields.z),
         transform = (UnityEngine_Transform_o *)System_Single__ToString(localPosition.fields.x, (const MethodInfo *)&x),
-        !v6) )
+        !v5) )
   {
-    sub_1B64324(transform);
+    sub_1B64ACC(transform, v7);
   }
-  System_Text_StringBuilder__Append_60536548(v6, (System_String_o *)transform, 0LL);
-  System_Text_StringBuilder__Append_60536548(v6, (System_String_o *)StringLiteral_1546/*":"*/, 0LL);
+  System_Text_StringBuilder__Append_60545472(v5, (System_String_o *)transform, 0LL);
+  System_Text_StringBuilder__Append_60545472(v5, (System_String_o *)StringLiteral_1545/*":"*/, 0LL);
   v9 = System_Single__ToString(v8, (const MethodInfo *)v18);
-  System_Text_StringBuilder__Append_60536548(v6, v9, 0LL);
-  System_Text_StringBuilder__Append_60536548(v6, (System_String_o *)StringLiteral_1546/*":"*/, 0LL);
+  System_Text_StringBuilder__Append_60545472(v5, v9, 0LL);
+  System_Text_StringBuilder__Append_60545472(v5, (System_String_o *)StringLiteral_1545/*":"*/, 0LL);
   startRate = this->fields.startRate;
   v10 = System_Single__ToString(startRate, (const MethodInfo *)&startRate);
-  System_Text_StringBuilder__Append_60536548(v6, v10, 0LL);
+  System_Text_StringBuilder__Append_60545472(v5, v10, 0LL);
   v11 = EventInfoShipProgressDrawComponent_TypeInfo;
   if ( !EventInfoShipProgressDrawComponent_TypeInfo->_2.cctor_finished )
   {
@@ -702,10 +707,10 @@ void __fastcall EventInfoShipProgressDrawComponent__SaveProgressData(
   }
   SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA = v11->static_fields->SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA;
   v13 = System_Int32__ToString((int)this + 124, 0LL);
-  v14 = System_String__Concat_61375396(SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA, v13, 0LL);
-  v15 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v6->klass->vtable._3_ToString.method)(
-                             v6,
-                             v6->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
+  v14 = System_String__Concat_61383576(SAVE_KEY_PREFIX_PROGRESS_SHIP_DATA, v13, 0LL);
+  v15 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v5->klass->vtable._3_ToString.method)(
+                             v5,
+                             v5->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
   UnityEngine_PlayerPrefs__SetString(v14, v15, 0LL);
 }
 
@@ -716,10 +721,11 @@ void __fastcall EventInfoShipProgressDrawComponent__SetActive(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v5; // x1
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, v5);
   UnityEngine_GameObject__SetActive(gameObject, isActive, 0LL);
 }
 
@@ -736,12 +742,12 @@ void __fastcall EventInfoShipProgressDrawComponent__Setup(
   struct EventInfoPointRiverProgressControl_o **p_pointRiverProgressCtr; // x22
   UnityEngine_Object_o *pointRiverProgressCtr; // x23
   Custom2dSplineMesh_o *v13; // x0
-  int32_t v14; // w2
-  char v15; // w3
+  __int64 v14; // x1
+  int32_t v15; // w2
+  char v16; // w3
   struct EventInfoPointRiverProgressControl_ProgressData_o *progressData; // x1
   struct EventInfoPointRiverProgressControl_ProgressData_o **p_progressData; // x22
-  const MethodInfo *v18; // x1
-  __int64 v19; // x1
+  const MethodInfo *v19; // x1
   struct EventInfoPointRiverProgressControl_ProgressData_o *v20; // x8
   struct EventInfoPointRiverProgressControl_ProgressData_o *v21; // x8
   __int64 TotalPoint; // x20
@@ -763,16 +769,16 @@ void __fastcall EventInfoShipProgressDrawComponent__Setup(
   UnityEngine_Vector3_o PointAsWorldFlatten; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v39; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_49FDC1B & 1) == 0 )
+  if ( (byte_49FFD16 & 1) == 0 )
   {
-    sub_1B640C8(&System_Math_TypeInfo, inputPointRiverProgressCtr);
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, v9);
-    sub_1B640C8(&TerminalPramsManager_TypeInfo, v10);
-    byte_49FDC1B = 1;
+    sub_1B64870(&System_Math_TypeInfo, inputPointRiverProgressCtr);
+    sub_1B64870(&UnityEngine_Object_TypeInfo, v9);
+    sub_1B64870(&TerminalPramsManager_TypeInfo, v10);
+    byte_49FFD16 = 1;
   }
   this->fields.pointRiverProgressCtr = inputPointRiverProgressCtr;
   p_pointRiverProgressCtr = &this->fields.pointRiverProgressCtr;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields.pointRiverProgressCtr,
     (int32_t)inputPointRiverProgressCtr,
     inputEventId,
@@ -790,9 +796,9 @@ void __fastcall EventInfoShipProgressDrawComponent__Setup(
     return;
   this->fields.progressData = progressData;
   p_progressData = &this->fields.progressData;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.progressData, (int32_t)progressData, v14, v15);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.progressData, (int32_t)progressData, v15, v16);
   this->fields.eventId = inputEventId;
-  EventInfoShipProgressDrawComponent__LoadProgressData(this, v18);
+  EventInfoShipProgressDrawComponent__LoadProgressData(this, v19);
   v20 = this->fields.progressData;
   if ( isReset )
   {
@@ -811,10 +817,10 @@ LABEL_25:
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_49FB07E )
+  if ( !byte_49FD176 )
   {
-    sub_1B640C8(&TerminalPramsManager_TypeInfo, v19);
-    byte_49FB07E = 1;
+    sub_1B64870(&TerminalPramsManager_TypeInfo, v14);
+    byte_49FD176 = 1;
   }
   v13 = (Custom2dSplineMesh_o *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -831,7 +837,7 @@ LABEL_25:
     NextPoint = v21->fields.NextPoint;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    this->fields.startRate = System_Math__Min_62194404((float)TotalPoint / (float)NextPoint, 1.0, 0LL);
+    this->fields.startRate = System_Math__Min_62202584((float)TotalPoint / (float)NextPoint, 1.0, 0LL);
   }
 LABEL_27:
   v24 = this->fields.progressData;
@@ -862,12 +868,12 @@ LABEL_27:
     || (v31 = this->fields.progressPathMesh) == 0LL )
   {
 LABEL_40:
-    sub_1B64324(v13);
+    sub_1B64ACC(v13, v14);
   }
   v32 = v30->fields.ReleaseScenarioIndex;
   if ( (unsigned int)v32 >= v31->max_length )
 LABEL_41:
-    sub_1B6432C(v13, v19);
+    sub_1B64AD4(v13, v14);
   v13 = v31->m_Items[v32];
   if ( !v13 )
     goto LABEL_40;
@@ -928,11 +934,11 @@ bool __fastcall EventInfoShipProgressDrawComponent__EasingMove_d__13__MoveNext(
   UnityEngine_Vector3_o PointAsWorldFlatten; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_49FDC25 & 1) == 0 )
+  if ( (byte_49FFD20 & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Application_TypeInfo, method);
-    sub_1B640C8(&Method_UnityEngine_GameObject_AddComponent_TweenPosition___, v3);
-    byte_49FDC25 = 1;
+    sub_1B64870(&UnityEngine_Application_TypeInfo, method);
+    sub_1B64870(&Method_UnityEngine_GameObject_AddComponent_TweenPosition___, v3);
+    byte_49FFD20 = 1;
   }
   _1__state = this->fields.__1__state;
   _4__this = this->fields.__4__this;
@@ -956,7 +962,7 @@ bool __fastcall EventInfoShipProgressDrawComponent__EasingMove_d__13__MoveNext(
   targetFrameRate = (UnityEngine_GameObject_o *)UnityEngine_Application__get_targetFrameRate(0LL);
   if ( !_4__this )
 LABEL_26:
-    sub_1B64324(targetFrameRate);
+    sub_1B64ACC(targetFrameRate, v9);
   v10 = _4__this->fields.moveAnimTime * (float)(int)targetFrameRate;
   v11 = (int)v10;
   if ( v10 == INFINITY )
@@ -983,7 +989,7 @@ LABEL_26:
     goto LABEL_26;
   ReleaseScenarioIndex = progressData->fields.ReleaseScenarioIndex;
   if ( (unsigned int)ReleaseScenarioIndex >= progressPathMesh->max_length )
-    sub_1B6432C(targetFrameRate, v9);
+    sub_1B64AD4(targetFrameRate, v9);
   v15 = &progressPathMesh->obj.klass + ReleaseScenarioIndex;
   v16 = (Custom2dSplineMesh_o *)v15[4];
   if ( !v16 )
@@ -1009,7 +1015,7 @@ LABEL_26:
     goto LABEL_26;
   targetFrameRate = (UnityEngine_GameObject_o *)UnityEngine_GameObject__AddComponent_object_(
                                                   targetFrameRate,
-                                                  (const MethodInfo_2E87DF0 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
+                                                  (const MethodInfo_2E8A0CC *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
   if ( !targetFrameRate )
     goto LABEL_26;
   v23 = 1;
@@ -1028,7 +1034,7 @@ LABEL_26:
   _4__this->fields.startRate = _4__this->fields.startRate + this->fields.moveRate;
   this->fields.__2__current = 0LL;
   p__2__current = &this->fields.__2__current;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)p__2__current, 0, v26, v27);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)p__2__current, 0, v26, v27);
   *((_DWORD *)p__2__current - 2) = 1;
   return v23;
 }
@@ -1047,16 +1053,14 @@ void __fastcall __noreturn EventInfoShipProgressDrawComponent__EasingMove_d__13_
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  __int64 v3; // x1
-  __int64 v4; // x2
-  System_NotSupportedException_o *v5; // x19
-  __int64 v6; // x0
+  System_NotSupportedException_o *v3; // x19
+  __int64 v4; // x0
 
-  v2 = sub_1B640DC(&System_NotSupportedException_TypeInfo);
-  v5 = (System_NotSupportedException_o *)sub_1B64314(v2, v3, v4);
-  System_NotSupportedException___ctor(v5, 0LL);
-  v6 = sub_1B640DC(&Method_EventInfoShipProgressDrawComponent__EasingMove_d__13_System_Collections_IEnumerator_Reset__);
-  sub_1B641F0(v5, v6);
+  v2 = sub_1B64884(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B64ABC(v2);
+  System_NotSupportedException___ctor(v3, 0LL);
+  v4 = sub_1B64884(&Method_EventInfoShipProgressDrawComponent__EasingMove_d__13_System_Collections_IEnumerator_Reset__);
+  sub_1B64998(v3, v4);
 }
 
 
@@ -1117,15 +1121,15 @@ bool __fastcall EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d_
   UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
-  if ( (byte_49FDC26 & 1) == 0 )
+  if ( (byte_49FFD21 & 1) == 0 )
   {
-    sub_1B640C8(&Method_UnityEngine_Component_GetComponent_EventInfoUISlideAnimation___, method);
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, v3);
-    sub_1B640C8(&StringLiteral_23165/*"ship_fade_out"*/, v4);
-    this = (EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_o *)sub_1B640C8(
-                                                                                      &StringLiteral_23164/*"ship_fade_in"*/,
+    sub_1B64870(&Method_UnityEngine_Component_GetComponent_EventInfoUISlideAnimation___, method);
+    sub_1B64870(&UnityEngine_Object_TypeInfo, v3);
+    sub_1B64870(&StringLiteral_23168/*"ship_fade_out"*/, v4);
+    this = (EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_o *)sub_1B64870(
+                                                                                      &StringLiteral_23167/*"ship_fade_in"*/,
                                                                                       v5);
-    byte_49FDC26 = 1;
+    byte_49FFD21 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -1145,7 +1149,7 @@ bool __fastcall EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d_
     SimpleAnimation__Stop((SimpleAnimation_o *)this, 0LL);
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)_4__this,
-                         (const MethodInfo_2E2FE90 *)Method_UnityEngine_Component_GetComponent_EventInfoUISlideAnimation___);
+                         (const MethodInfo_2E3216C *)Method_UnityEngine_Component_GetComponent_EventInfoUISlideAnimation___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     this = (EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_o *)UnityEngine_Object__op_Inequality(
@@ -1173,7 +1177,7 @@ bool __fastcall EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d_
                                                                                           0LL);
         if ( !Component_object )
           goto LABEL_29;
-        GameObjectExtensions__SetLocalPosition_33375564(
+        GameObjectExtensions__SetLocalPosition_33376600(
           (UnityEngine_GameObject_o *)this,
           v15,
           v16 - *((float *)&Component_object[3].monitor + 1),
@@ -1206,7 +1210,7 @@ bool __fastcall EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d_
       v25.fields.x = v15;
       v25.fields.y = v16;
       v25.fields.z = z;
-      EventInfoUISlideAnimation__StartSlideAnim_41976668(
+      EventInfoUISlideAnimation__StartSlideAnim_41981920(
         (EventInfoUISlideAnimation_o *)Component_object,
         0LL,
         v25,
@@ -1217,27 +1221,27 @@ bool __fastcall EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d_
     {
       v2->fields.__2__current = 0LL;
       p__2__current = (ServantStatusBattleListViewItem_o *)&v2->fields.__2__current;
-      sub_1B6406C(p__2__current, 0, v9, v10);
+      sub_1B64814(p__2__current, 0, v9, v10);
       result = 1;
       *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
       return result;
     }
 LABEL_22:
     if ( v2->fields.isFadeIn )
-      v23 = (System_String_o **)&StringLiteral_23164/*"ship_fade_in"*/;
+      v23 = (System_String_o **)&StringLiteral_23167/*"ship_fade_in"*/;
     else
-      v23 = (System_String_o **)&StringLiteral_23165/*"ship_fade_out"*/;
+      v23 = (System_String_o **)&StringLiteral_23168/*"ship_fade_out"*/;
     if ( _4__this )
     {
       this = (EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_o *)_4__this->fields.progressShipAnim;
       if ( this )
       {
-        SimpleAnimation__Play_63513060((SimpleAnimation_o *)this, *v23, 0LL);
+        SimpleAnimation__Play_63521240((SimpleAnimation_o *)this, *v23, 0LL);
         return 0;
       }
     }
 LABEL_29:
-    sub_1B64324(this);
+    sub_1B64ACC(this, method);
   }
   return 0;
 }
@@ -1256,16 +1260,14 @@ void __fastcall __noreturn EventInfoShipProgressDrawComponent__PlayProgressShipR
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  __int64 v3; // x1
-  __int64 v4; // x2
-  System_NotSupportedException_o *v5; // x19
-  __int64 v6; // x0
+  System_NotSupportedException_o *v3; // x19
+  __int64 v4; // x0
 
-  v2 = sub_1B640DC(&System_NotSupportedException_TypeInfo);
-  v5 = (System_NotSupportedException_o *)sub_1B64314(v2, v3, v4);
-  System_NotSupportedException___ctor(v5, 0LL);
-  v6 = sub_1B640DC(&Method_EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_System_Collections_IEnumerator_Reset__);
-  sub_1B641F0(v5, v6);
+  v2 = sub_1B64884(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B64ABC(v2);
+  System_NotSupportedException___ctor(v3, 0LL);
+  v4 = sub_1B64884(&Method_EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_System_Collections_IEnumerator_Reset__);
+  sub_1B64998(v3, v4);
 }
 
 

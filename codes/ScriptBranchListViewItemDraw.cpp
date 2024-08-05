@@ -29,11 +29,11 @@ void __fastcall ScriptBranchListViewItemDraw__SetItem(
   struct ScriptBranchListViewItem_o **p_drawItem; // x0
   int32_t v23; // w1
 
-  if ( (byte_49F9CEA & 1) == 0 )
+  if ( (byte_49FBDDF & 1) == 0 )
   {
-    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponent_TweenColor___, item);
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, v7);
-    byte_49F9CEA = 1;
+    sub_1B64870(&Method_UnityEngine_GameObject_GetComponent_TweenColor___, item);
+    sub_1B64870(&UnityEngine_Object_TypeInfo, v7);
+    byte_49FBDDF = 1;
   }
   if ( !item || !mode )
   {
@@ -66,7 +66,7 @@ void __fastcall ScriptBranchListViewItemDraw__SetItem(
     goto LABEL_29;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)titleTextLabel,
-                       (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+                       (const MethodInfo_2E8A1B4 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   titleTextLabel = (UILabel_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
@@ -91,7 +91,7 @@ void __fastcall ScriptBranchListViewItemDraw__SetItem(
   v18 = ((unsigned __int8)titleTextLabel & 1) != 0 ? 1.0 : 0.5;
   if ( !checkSprite )
 LABEL_29:
-    sub_1B64324(titleTextLabel);
+    sub_1B64ACC(titleTextLabel, title);
   v19 = 1.0;
   v20 = v18;
   v21 = v18;
@@ -100,7 +100,7 @@ LABEL_29:
   p_drawItem = &this->fields.drawItem;
   v23 = (int)item;
 LABEL_28:
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)p_drawItem, v23, mode, (int32_t)method);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)p_drawItem, v23, mode, (int32_t)method);
 }
 
 
@@ -145,7 +145,7 @@ void __fastcall ScriptBranchListViewItemDraw__Update(ScriptBranchListViewItemDra
     v8 = 1.0;
   if ( !drawItem )
 LABEL_14:
-    sub_1B64324(drawItem);
+    sub_1B64ACC(drawItem, method);
   v9 = 1.0;
   v10 = v8;
   v11 = v8;

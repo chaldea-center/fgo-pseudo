@@ -14,82 +14,79 @@ BattleServantData_array *__fastcall ReactTaskTargetPlayer__TargetServants(
   __int64 v6; // x1
   __int64 v7; // x1
   BattleServantData_array *FieldPlayerServantList; // x0
-  __int64 v9; // x1
-  __int64 v10; // x2
-  ReactTaskTargetPlayer___c_c *v11; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v12; // x19
+  ReactTaskTargetPlayer___c_c *v9; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v10; // x19
   System_Func_object__bool__o *_9__0_0; // x20
-  Il2CppObject *v14; // x21
+  Il2CppObject *v12; // x21
   struct ReactTaskTargetPlayer___c_StaticFields *static_fields; // x0
-  int32_t v16; // w2
-  int32_t v17; // w3
-  System_Collections_Generic_IEnumerable_TSource__o *v18; // x0
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_Collections_Generic_IEnumerable_TSource__o *v16; // x0
 
-  if ( (byte_49FEFF9 & 1) == 0 )
+  if ( (byte_4A010FB & 1) == 0 )
   {
-    sub_1B640C8(&Method_System_Linq_Enumerable_ToArray_BattleServantData___, data);
-    sub_1B640C8(&Method_System_Linq_Enumerable_Where_BattleServantData___, v4);
-    sub_1B640C8(&System_Func_BattleServantData__bool__TypeInfo, v5);
-    sub_1B640C8(&Method_ReactTaskTargetPlayer___c__TargetServants_b__0_0__, v6);
-    this = (ReactTaskTargetPlayer_o *)sub_1B640C8(&ReactTaskTargetPlayer___c_TypeInfo, v7);
-    byte_49FEFF9 = 1;
+    sub_1B64870(&Method_System_Linq_Enumerable_ToArray_BattleServantData___, data);
+    sub_1B64870(&Method_System_Linq_Enumerable_Where_BattleServantData___, v4);
+    sub_1B64870(&System_Func_BattleServantData__bool__TypeInfo, v5);
+    sub_1B64870(&Method_ReactTaskTargetPlayer___c__TargetServants_b__0_0__, v6);
+    this = (ReactTaskTargetPlayer_o *)sub_1B64870(&ReactTaskTargetPlayer___c_TypeInfo, v7);
+    byte_4A010FB = 1;
   }
   if ( !data )
-    sub_1B64324(this);
+    sub_1B64ACC(this, data);
   FieldPlayerServantList = BattleData__getFieldPlayerServantList(data, 0LL);
-  v11 = ReactTaskTargetPlayer___c_TypeInfo;
-  v12 = (System_Collections_Generic_IEnumerable_TSource__o *)FieldPlayerServantList;
+  v9 = ReactTaskTargetPlayer___c_TypeInfo;
+  v10 = (System_Collections_Generic_IEnumerable_TSource__o *)FieldPlayerServantList;
   if ( !ReactTaskTargetPlayer___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ReactTaskTargetPlayer___c_TypeInfo);
-    v11 = ReactTaskTargetPlayer___c_TypeInfo;
+    v9 = ReactTaskTargetPlayer___c_TypeInfo;
   }
-  _9__0_0 = (System_Func_object__bool__o *)v11->static_fields->__9__0_0;
+  _9__0_0 = (System_Func_object__bool__o *)v9->static_fields->__9__0_0;
   if ( !_9__0_0 )
   {
-    if ( !v11->_2.cctor_finished )
+    if ( !v9->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v11);
-      v11 = ReactTaskTargetPlayer___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v9);
+      v9 = ReactTaskTargetPlayer___c_TypeInfo;
     }
-    v14 = (Il2CppObject *)v11->static_fields->__9;
-    _9__0_0 = (System_Func_object__bool__o *)sub_1B64314(System_Func_BattleServantData__bool__TypeInfo, v9, v10);
-    System_Func_object__bool____ctor(_9__0_0, v14, Method_ReactTaskTargetPlayer___c__TargetServants_b__0_0__, 0LL);
+    v12 = (Il2CppObject *)v9->static_fields->__9;
+    _9__0_0 = (System_Func_object__bool__o *)sub_1B64ABC(System_Func_BattleServantData__bool__TypeInfo);
+    System_Func_object__bool____ctor(_9__0_0, v12, Method_ReactTaskTargetPlayer___c__TargetServants_b__0_0__, 0LL);
     static_fields = ReactTaskTargetPlayer___c_TypeInfo->static_fields;
     static_fields->__9__0_0 = (struct System_Func_BattleServantData__bool__o *)_9__0_0;
-    sub_1B6406C((ServantStatusBattleListViewItem_o *)&static_fields->__9__0_0, (int32_t)_9__0_0, v16, v17);
+    sub_1B64814((ServantStatusBattleListViewItem_o *)&static_fields->__9__0_0, (int32_t)_9__0_0, v14, v15);
   }
-  v18 = System_Linq_Enumerable__Where_object_(
-          v12,
+  v16 = System_Linq_Enumerable__Where_object_(
+          v10,
           (System_Func_TSource__bool__o *)_9__0_0,
-          (const MethodInfo_2E7709C *)Method_System_Linq_Enumerable_Where_BattleServantData___);
+          (const MethodInfo_2E79378 *)Method_System_Linq_Enumerable_Where_BattleServantData___);
   return (BattleServantData_array *)System_Linq_Enumerable__ToArray_object_(
-                                      v18,
-                                      (const MethodInfo_2E713C4 *)Method_System_Linq_Enumerable_ToArray_BattleServantData___);
+                                      v16,
+                                      (const MethodInfo_2E736A0 *)Method_System_Linq_Enumerable_ToArray_BattleServantData___);
 }
 
 
 void __fastcall ReactTaskTargetPlayer___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  __int64 v2; // x2
-  Il2CppObject *v3; // x19
-  int32_t v4; // w2
-  int32_t v5; // w3
+  Il2CppObject *v2; // x19
+  int32_t v3; // w2
+  int32_t v4; // w3
 
-  if ( (byte_49FEFFA & 1) == 0 )
+  if ( (byte_4A010FC & 1) == 0 )
   {
-    sub_1B640C8(&ReactTaskTargetPlayer___c_TypeInfo, v1);
-    byte_49FEFFA = 1;
+    sub_1B64870(&ReactTaskTargetPlayer___c_TypeInfo, v1);
+    byte_4A010FC = 1;
   }
-  v3 = (Il2CppObject *)sub_1B64314(ReactTaskTargetPlayer___c_TypeInfo, v1, v2);
-  System_Object___ctor(v3, 0LL);
-  ReactTaskTargetPlayer___c_TypeInfo->static_fields->__9 = (struct ReactTaskTargetPlayer___c_o *)v3;
-  sub_1B6406C(
+  v2 = (Il2CppObject *)sub_1B64ABC(ReactTaskTargetPlayer___c_TypeInfo);
+  System_Object___ctor(v2, 0LL);
+  ReactTaskTargetPlayer___c_TypeInfo->static_fields->__9 = (struct ReactTaskTargetPlayer___c_o *)v2;
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)ReactTaskTargetPlayer___c_TypeInfo->static_fields,
-    (int32_t)v3,
-    v4,
-    v5);
+    (int32_t)v2,
+    v3,
+    v4);
 }
 
 
@@ -105,6 +102,6 @@ bool __fastcall ReactTaskTargetPlayer___c___TargetServants_b__0_0(
         const MethodInfo *method)
 {
   if ( !svt || (this = (ReactTaskTargetPlayer___c_o *)BattleServantData__get_AiStateManager(svt, 0LL)) == 0LL )
-    sub_1B64324(this);
+    sub_1B64ACC(this, svt);
   return (bool)this[3].monitor;
 }

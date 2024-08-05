@@ -16,19 +16,19 @@ void __fastcall BattleScenarioRequest__beginRequest(
   __int64 v10; // x1
   __int64 v11; // x1
 
-  if ( (byte_49FDAEB & 1) == 0 )
+  if ( (byte_49FFBE6 & 1) == 0 )
   {
-    sub_1B640C8(&int___TypeInfo, *(_QWORD *)&questId);
-    sub_1B640C8(&StringLiteral_22874/*"routeSelect"*/, v9);
-    sub_1B640C8(&StringLiteral_22600/*"questPhase"*/, v10);
-    sub_1B640C8(&StringLiteral_22598/*"questId"*/, v11);
-    byte_49FDAEB = 1;
+    sub_1B64870(&int___TypeInfo, *(_QWORD *)&questId);
+    sub_1B64870(&StringLiteral_22877/*"routeSelect"*/, v9);
+    sub_1B64870(&StringLiteral_22603/*"questPhase"*/, v10);
+    sub_1B64870(&StringLiteral_22601/*"questId"*/, v11);
+    byte_49FFBE6 = 1;
   }
   if ( !routeSelect )
-    routeSelect = (System_Int32_array *)sub_1B64170(int___TypeInfo, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22598/*"questId"*/, questId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22600/*"questPhase"*/, questPhase, 0LL);
-  RequestBase__addField_40848776((RequestBase_o *)this, (System_String_o *)StringLiteral_22874/*"routeSelect"*/, &routeSelect->obj, 0LL);
+    routeSelect = (System_Int32_array *)sub_1B64918(int___TypeInfo, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22601/*"questId"*/, questId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22603/*"questPhase"*/, questPhase, 0LL);
+  RequestBase__addField_40853908((RequestBase_o *)this, (System_String_o *)StringLiteral_22877/*"routeSelect"*/, &routeSelect->obj, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -38,16 +38,16 @@ System_String_o *__fastcall BattleScenarioRequest__getURL(BattleScenarioRequest_
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_49FDAEA & 1) == 0 )
+  if ( (byte_49FFBE5 & 1) == 0 )
   {
-    sub_1B640C8(&NetworkManager_TypeInfo, method);
-    sub_1B640C8(&StringLiteral_17029/*"battle/scenario"*/, v2);
-    byte_49FDAEA = 1;
+    sub_1B64870(&NetworkManager_TypeInfo, method);
+    sub_1B64870(&StringLiteral_17031/*"battle/scenario"*/, v2);
+    byte_49FFBE5 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61375396(BaseUrl, (System_String_o *)StringLiteral_17029/*"battle/scenario"*/, 0LL);
+  return System_String__Concat_61383576(BaseUrl, (System_String_o *)StringLiteral_17031/*"battle/scenario"*/, 0LL);
 }
 
 
@@ -59,27 +59,28 @@ void __fastcall BattleScenarioRequest__requestCompleted(
   __int64 v5; // x1
   __int64 v6; // x1
   ResponseData_o *v7; // x0
+  __int64 v8; // x1
   Il2CppObject *success; // x20
-  System_String_o *v9; // x1
+  System_String_o *v10; // x1
 
-  if ( (byte_49FDAEC & 1) == 0 )
+  if ( (byte_49FFBE7 & 1) == 0 )
   {
-    sub_1B640C8(&JsonManager_TypeInfo, responseList);
-    sub_1B640C8(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B640C8(&ServantCommentManager_TypeInfo, v6);
-    byte_49FDAEC = 1;
+    sub_1B64870(&JsonManager_TypeInfo, responseList);
+    sub_1B64870(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B64870(&ServantCommentManager_TypeInfo, v6);
+    byte_49FFBE7 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(52, responseList, 0LL);
   if ( !v7 )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, v8);
   success = (Il2CppObject *)v7->fields.success;
   if ( !ServantCommentManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantCommentManager_TypeInfo);
   ServantCommentManager__UpdateChapter(0LL);
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-  v9 = JsonManager__toJson(success, 0, 0, 0LL);
-  RequestBase__completed((RequestBase_o *)this, v9, 0LL);
+  v10 = JsonManager__toJson(success, 0, 0, 0LL);
+  RequestBase__completed((RequestBase_o *)this, v10, 0LL);
 }

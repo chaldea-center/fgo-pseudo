@@ -10,7 +10,7 @@ void __fastcall LimitCountIconComponent__Clear(LimitCountIconComponent_o *this, 
 
   limitCountBase = this->fields.limitCountBase;
   if ( !limitCountBase )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, method);
   UnityEngine_GameObject__SetActive(limitCountBase, 0, 0LL);
 }
 
@@ -26,17 +26,16 @@ void __fastcall LimitCountIconComponent__Set(
   __int64 v7; // x1
   struct UISprite_array *limitCountSpriteList; // x8
   int max_length; // w21
-  __int64 v10; // x1
-  int32_t v11; // w22
-  struct UISprite_array *v12; // x8
-  System_String_o **v13; // x8
+  int32_t v10; // w22
+  struct UISprite_array *v11; // x8
+  System_String_o **v12; // x8
 
   v6 = this;
-  if ( (byte_49FB932 & 1) == 0 )
+  if ( (byte_49FDA2A & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_20077/*"icon_limit_on"*/, *(_QWORD *)&limitCount);
-    this = (LimitCountIconComponent_o *)sub_1B640C8(&StringLiteral_20076/*"icon_limit_off"*/, v7);
-    byte_49FB932 = 1;
+    sub_1B64870(&StringLiteral_20080/*"icon_limit_on"*/, *(_QWORD *)&limitCount);
+    this = (LimitCountIconComponent_o *)sub_1B64870(&StringLiteral_20079/*"icon_limit_off"*/, v7);
+    byte_49FDA2A = 1;
   }
   if ( limitMax <= 0 )
   {
@@ -57,33 +56,33 @@ void __fastcall LimitCountIconComponent__Set(
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
     if ( max_length >= 1 )
     {
-      v11 = 0;
+      v10 = 0;
       while ( 1 )
       {
-        v12 = v6->fields.limitCountSpriteList;
-        if ( !v12 )
+        v11 = v6->fields.limitCountSpriteList;
+        if ( !v11 )
           break;
-        if ( v11 >= v12->max_length )
-          sub_1B6432C(this, v10);
-        this = (LimitCountIconComponent_o *)v12->m_Items[v11];
+        if ( v10 >= v11->max_length )
+          sub_1B64AD4(this, *(_QWORD *)&limitCount);
+        this = (LimitCountIconComponent_o *)v11->m_Items[v10];
         if ( !this )
           break;
-        if ( v11 >= limitCount )
-          v13 = (System_String_o **)&StringLiteral_20076/*"icon_limit_off"*/;
+        if ( v10 >= limitCount )
+          v12 = (System_String_o **)&StringLiteral_20079/*"icon_limit_off"*/;
         else
-          v13 = (System_String_o **)&StringLiteral_20077/*"icon_limit_on"*/;
-        UISprite__set_spriteName((UISprite_o *)this, *v13, 0LL);
-        if ( max_length == ++v11 )
+          v12 = (System_String_o **)&StringLiteral_20080/*"icon_limit_on"*/;
+        UISprite__set_spriteName((UISprite_o *)this, *v12, 0LL);
+        if ( max_length == ++v10 )
           return;
       }
 LABEL_18:
-      sub_1B64324(this);
+      sub_1B64ACC(this, *(_QWORD *)&limitCount);
     }
   }
 }
 
 
-void __fastcall LimitCountIconComponent__Set_37865080(
+void __fastcall LimitCountIconComponent__Set_37869460(
         LimitCountIconComponent_o *this,
         LimitCountIconComponent_o *limitCountIcon,
         const MethodInfo *method)
@@ -92,11 +91,10 @@ void __fastcall LimitCountIconComponent__Set_37865080(
   LimitCountIconComponent_o *v5; // x19
   int max_length; // w22
   UnityEngine_GameObject_o *limitCountBase; // x21
-  __int64 v8; // x1
-  il2cpp_array_size_t v9; // w21
-  struct UISprite_array *v10; // x8
-  struct UISprite_array *v11; // x9
-  UISprite_o *v12; // x9
+  il2cpp_array_size_t v8; // w21
+  struct UISprite_array *v9; // x8
+  struct UISprite_array *v10; // x9
+  UISprite_o *v11; // x9
 
   limitCountSpriteList = this->fields.limitCountSpriteList;
   if ( !limitCountSpriteList )
@@ -115,31 +113,31 @@ void __fastcall LimitCountIconComponent__Set_37865080(
   UnityEngine_GameObject__SetActive(limitCountBase, (unsigned __int8)this & 1, 0LL);
   if ( max_length >= 1 )
   {
-    v9 = 0;
+    v8 = 0;
     while ( 1 )
     {
-      v10 = v5->fields.limitCountSpriteList;
+      v9 = v5->fields.limitCountSpriteList;
+      if ( !v9 )
+        break;
+      if ( v8 >= v9->max_length )
+        goto LABEL_16;
+      v10 = limitCountIcon->fields.limitCountSpriteList;
       if ( !v10 )
         break;
-      if ( v9 >= v10->max_length )
-        goto LABEL_16;
-      v11 = limitCountIcon->fields.limitCountSpriteList;
+      if ( v8 >= v10->max_length )
+LABEL_16:
+        sub_1B64AD4(this, limitCountIcon);
+      v11 = v10->m_Items[v8];
       if ( !v11 )
         break;
-      if ( v9 >= v11->max_length )
-LABEL_16:
-        sub_1B6432C(this, v8);
-      v12 = v11->m_Items[v9];
-      if ( !v12 )
-        break;
-      this = (LimitCountIconComponent_o *)v10->m_Items[v9];
+      this = (LimitCountIconComponent_o *)v9->m_Items[v8];
       if ( !this )
         break;
-      UISprite__set_spriteName((UISprite_o *)this, v12->fields.mSpriteName, 0LL);
-      if ( max_length == ++v9 )
+      UISprite__set_spriteName((UISprite_o *)this, v11->fields.mSpriteName, 0LL);
+      if ( max_length == ++v8 )
         return;
     }
 LABEL_15:
-    sub_1B64324(this);
+    sub_1B64ACC(this, limitCountIcon);
   }
 }

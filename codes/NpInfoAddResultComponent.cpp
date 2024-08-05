@@ -17,44 +17,45 @@ void __fastcall NpInfoAddResultComponent__SetDisplay(
   __int64 v13; // x1
   __int64 v14; // x1
   void *Instance; // x0
-  DataManager_o *v16; // x26
+  __int64 v16; // x1
+  DataManager_o *v17; // x26
   Il2CppObject *MasterData_object; // x23
-  Il2CppObject *v18; // x22
-  _DWORD *v19; // x26
-  System_String_o **v20; // x24
-  TreasureDvcLvEntity_o *v21; // x25
-  int32_t v22; // w27
+  Il2CppObject *v19; // x22
+  _DWORD *v20; // x26
+  System_String_o **v21; // x24
+  TreasureDvcLvEntity_o *v22; // x25
+  int32_t v23; // w27
   UILabel_o *beforeLvLabel; // x26
   UILabel_o *beforeDetailLabel; // x24
-  struct UILabel_o *v25; // x8
-  _DWORD *v26; // x24
+  struct UILabel_o *v26; // x8
+  _DWORD *v27; // x24
   Il2CppObject *Entity; // x21
-  TreasureDvcLvEntity_o *v28; // x0
+  TreasureDvcLvEntity_o *v29; // x0
   UILabel_o *afterLvLabel; // x22
-  TreasureDvcLvEntity_o *v30; // x20
+  TreasureDvcLvEntity_o *v31; // x20
   UILabel_o *afterDetailLabel; // x21
-  struct UILabel_o *v32; // x8
+  struct UILabel_o *v33; // x8
 
-  if ( (byte_49FFC94 & 1) == 0 )
+  if ( (byte_4A01D96 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataManager_GetMasterData_ServantMaster___, npAddManager);
-    sub_1B640C8(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___, v11);
-    sub_1B640C8(&Method_DataManager_GetMasterData_TreasureDvcMaster___, v12);
-    sub_1B640C8(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__, v13);
-    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
-    byte_49FFC94 = 1;
+    sub_1B64870(&Method_DataManager_GetMasterData_ServantMaster___, npAddManager);
+    sub_1B64870(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___, v11);
+    sub_1B64870(&Method_DataManager_GetMasterData_TreasureDvcMaster___, v12);
+    sub_1B64870(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__, v13);
+    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
+    byte_4A01D96 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_25;
-  v16 = (DataManager_o *)Instance;
+  v17 = (DataManager_o *)Instance;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_TreasureDvcMaster___);
-  v18 = DataManager__GetMasterData_object_(
-          v16,
-          (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
-  DataManager__GetMasterData_object_(v16, (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_ServantMaster___);
+                        (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_TreasureDvcMaster___);
+  v19 = DataManager__GetMasterData_object_(
+          v17,
+          (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
+  DataManager__GetMasterData_object_(v17, (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_ServantMaster___);
   Instance = this->fields.titleLabel;
   if ( !Instance )
     goto LABEL_25;
@@ -74,66 +75,66 @@ void __fastcall NpInfoAddResultComponent__SetDisplay(
     goto LABEL_25;
   if ( !MasterData_object )
     goto LABEL_25;
-  v19 = Instance;
+  v20 = Instance;
   Instance = DataMasterBase_object__object__int___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                *((_DWORD *)Instance + 6),
-               (const MethodInfo_30D3EA4 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
-  if ( !v18 )
+               (const MethodInfo_30D6180 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+  if ( !v19 )
     goto LABEL_25;
-  v20 = (System_String_o **)Instance;
-  Instance = TreasureDvcLvMaster__GetEntity((TreasureDvcLvMaster_o *)v18, v19[6], v19[7], 0LL);
-  if ( !v20 )
+  v21 = (System_String_o **)Instance;
+  Instance = TreasureDvcLvMaster__GetEntity((TreasureDvcLvMaster_o *)v19, v20[6], v20[7], 0LL);
+  if ( !v21 )
     goto LABEL_25;
-  v21 = (TreasureDvcLvEntity_o *)Instance;
+  v22 = (TreasureDvcLvEntity_o *)Instance;
   Instance = this->fields.rubyLabel;
   if ( !Instance )
     goto LABEL_25;
-  UILabel__set_text((UILabel_o *)Instance, v20[4], 0LL);
+  UILabel__set_text((UILabel_o *)Instance, v21[4], 0LL);
   Instance = this->fields.nameLabel;
   if ( !Instance )
     goto LABEL_25;
-  v22 = (_DWORD)v19 + 28;
-  UILabel__set_text((UILabel_o *)Instance, v20[3], 0LL);
+  v23 = (_DWORD)v20 + 28;
+  UILabel__set_text((UILabel_o *)Instance, v21[3], 0LL);
   beforeLvLabel = this->fields.beforeLvLabel;
-  Instance = System_Int32__ToString(v22, 0LL);
+  Instance = System_Int32__ToString(v23, 0LL);
   if ( !beforeLvLabel )
     goto LABEL_25;
   UILabel__set_text(beforeLvLabel, (System_String_o *)Instance, 0LL);
   Instance = this->fields.beforeRankLabel;
   if ( !Instance )
     goto LABEL_25;
-  UILabel__set_text((UILabel_o *)Instance, v20[5], 0LL);
-  if ( !v21 )
+  UILabel__set_text((UILabel_o *)Instance, v21[5], 0LL);
+  if ( !v22 )
     goto LABEL_25;
   beforeDetailLabel = this->fields.beforeDetailLabel;
-  Instance = TreasureDvcLvEntity__getDetalShort(v21, 0LL);
-  v25 = this->fields.beforeDetailLabel;
-  if ( !v25 )
+  Instance = TreasureDvcLvEntity__getDetalShort(v22, 0LL);
+  v26 = this->fields.beforeDetailLabel;
+  if ( !v26 )
     goto LABEL_25;
-  WrapControlText__textAdjust(beforeDetailLabel, (System_String_o *)Instance, v25->fields.mFontSize, 0, 0, 0LL);
+  WrapControlText__textAdjust(beforeDetailLabel, (System_String_o *)Instance, v26->fields.mFontSize, 0, 0, 0LL);
   Instance = Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__GetAfterNp(npAddManager, index, 0LL);
   if ( !Instance )
     goto LABEL_25;
-  v26 = Instance;
+  v27 = Instance;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
              *((_DWORD *)Instance + 6),
-             (const MethodInfo_30D3EA4 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
-  v28 = TreasureDvcLvMaster__GetEntity((TreasureDvcLvMaster_o *)v18, v26[6], v26[7], 0LL);
+             (const MethodInfo_30D6180 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+  v29 = TreasureDvcLvMaster__GetEntity((TreasureDvcLvMaster_o *)v19, v27[6], v27[7], 0LL);
   afterLvLabel = this->fields.afterLvLabel;
-  v30 = v28;
-  Instance = System_Int32__ToString((int)v26 + 28, 0LL);
+  v31 = v29;
+  Instance = System_Int32__ToString((int)v27 + 28, 0LL);
   if ( !afterLvLabel
     || (UILabel__set_text(afterLvLabel, (System_String_o *)Instance, 0LL), !Entity)
     || (Instance = this->fields.afterRankLabel) == 0LL
-    || (UILabel__set_text((UILabel_o *)Instance, (System_String_o *)Entity[2].monitor, 0LL), !v30)
+    || (UILabel__set_text((UILabel_o *)Instance, (System_String_o *)Entity[2].monitor, 0LL), !v31)
     || (afterDetailLabel = this->fields.afterDetailLabel,
-        Instance = TreasureDvcLvEntity__getDetalShort(v30, 0LL),
-        (v32 = this->fields.afterDetailLabel) == 0LL) )
+        Instance = TreasureDvcLvEntity__getDetalShort(v31, 0LL),
+        (v33 = this->fields.afterDetailLabel) == 0LL) )
   {
 LABEL_25:
-    sub_1B64324(Instance);
+    sub_1B64ACC(Instance, v16);
   }
-  WrapControlText__textAdjust(afterDetailLabel, (System_String_o *)Instance, v32->fields.mFontSize, 0, 0, 0LL);
+  WrapControlText__textAdjust(afterDetailLabel, (System_String_o *)Instance, v33->fields.mFontSize, 0, 0, 0LL);
 }

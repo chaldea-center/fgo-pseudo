@@ -16,23 +16,24 @@ void __fastcall BattlePointData___ctor(
 }
 
 
-void __fastcall BattlePointData___ctor_42564108(
+void __fastcall BattlePointData___ctor_42572284(
         BattlePointData_o *this,
         BattlePointData_SaveData_o *sv,
         BattleServantData_o *svtData,
         const MethodInfo *method)
 {
   __int64 v7; // x0
-  const MethodInfo *v8; // x2
-  const MethodInfo *v9; // x1
+  __int64 v8; // x1
+  const MethodInfo *v9; // x2
+  const MethodInfo *v10; // x1
 
   this->fields.maxValue = 0x7FFFFFFF;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !sv )
-    sub_1B64324(v7);
+    sub_1B64ACC(v7, v8);
   *(BattlePointData_SaveData_Fields *)&this->fields.id = sv->fields;
-  BattlePointData__UpdateFlagEnableToAddValue(this, svtData, v8);
-  BattlePointData__UpdateMaxValue(this, v9);
+  BattlePointData__UpdateFlagEnableToAddValue(this, svtData, v9);
+  BattlePointData__UpdateMaxValue(this, v10);
 }
 
 
@@ -63,22 +64,22 @@ bool __fastcall BattlePointData__AddPoint(
 
 BattlePointData_SaveData_o *__fastcall BattlePointData__GetSaveData(BattlePointData_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  Il2CppObject *v4; // x20
-  __int64 v5; // x0
+  Il2CppObject *v3; // x20
+  __int64 v4; // x0
+  __int64 v5; // x1
   BattlePointData_SaveData_o *result; // x0
 
-  if ( (byte_49FEB0B & 1) == 0 )
+  if ( (byte_4A00C0C & 1) == 0 )
   {
-    sub_1B640C8(&BattlePointData_SaveData_TypeInfo, method);
-    byte_49FEB0B = 1;
+    sub_1B64870(&BattlePointData_SaveData_TypeInfo, method);
+    byte_4A00C0C = 1;
   }
-  v4 = (Il2CppObject *)sub_1B64314(BattlePointData_SaveData_TypeInfo, method, v2);
-  System_Object___ctor(v4, 0LL);
-  if ( !v4 )
-    sub_1B64324(v5);
-  result = (BattlePointData_SaveData_o *)v4;
-  v4[1].klass = *(Il2CppClass **)&this->fields.id;
+  v3 = (Il2CppObject *)sub_1B64ABC(BattlePointData_SaveData_TypeInfo);
+  System_Object___ctor(v3, 0LL);
+  if ( !v3 )
+    sub_1B64ACC(v4, v5);
+  result = (BattlePointData_SaveData_o *)v3;
+  v3[1].klass = *(Il2CppClass **)&this->fields.id;
   return result;
 }
 
@@ -97,50 +98,51 @@ void __fastcall BattlePointData__UpdateFlagEnableToAddValue(
   __int64 v5; // x1
   __int64 v6; // x1
   DataManager_o *Instance; // x0
-  BattlePointEntity_o *v8; // x21
-  char v9; // w22
+  __int64 v8; // x1
+  BattlePointEntity_o *v9; // x21
+  char v10; // w22
   bool IsHideBattlePointGauge; // w0
-  bool v11; // w21
+  bool v12; // w21
 
-  if ( (byte_49FEB08 & 1) == 0 )
+  if ( (byte_4A00C09 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataManager_GetMasterData_BattlePointMaster___, svtData);
-    sub_1B640C8(&Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int__GetEntity__, v5);
-    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_49FEB08 = 1;
+    sub_1B64870(&Method_DataManager_GetMasterData_BattlePointMaster___, svtData);
+    sub_1B64870(&Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int__GetEntity__, v5);
+    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_4A00C09 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_BattlePointMaster___);
+                                (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_BattlePointMaster___);
   if ( !Instance )
     goto LABEL_10;
   Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                 this->fields.id,
-                                (const MethodInfo_30D3EA4 *)Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int__GetEntity__);
+                                (const MethodInfo_30D6180 *)Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int__GetEntity__);
   if ( !Instance )
     goto LABEL_10;
-  v8 = (BattlePointEntity_o *)Instance;
+  v9 = (BattlePointEntity_o *)Instance;
   Instance = (DataManager_o *)BattlePointEntity__IsEnableToAddBattlePoint((BattlePointEntity_o *)Instance, svtData, 0LL);
   this->fields._IsEnableToAddValue_k__BackingField = (unsigned __int8)Instance & 1;
   if ( !svtData
-    || (v9 = (char)Instance, (Instance = (DataManager_o *)svtData->fields.deckSvt) == 0LL)
-    || (this->fields._IsEnableToAddValue_k__BackingField = v9 & ~BattleDeckServantData__IsIgnoreBattlePointUp(
-                                                                   (BattleDeckServantData_o *)Instance,
-                                                                   this->fields.id,
-                                                                   0LL) & 1,
-        IsHideBattlePointGauge = BattlePointEntity__IsHideBattlePointGauge(v8, svtData, 0LL),
+    || (v10 = (char)Instance, (Instance = (DataManager_o *)svtData->fields.deckSvt) == 0LL)
+    || (this->fields._IsEnableToAddValue_k__BackingField = v10 & ~BattleDeckServantData__IsIgnoreBattlePointUp(
+                                                                    (BattleDeckServantData_o *)Instance,
+                                                                    this->fields.id,
+                                                                    0LL) & 1,
+        IsHideBattlePointGauge = BattlePointEntity__IsHideBattlePointGauge(v9, svtData, 0LL),
         this->fields._IsHideBattlePointGauge_k__BackingField = IsHideBattlePointGauge,
-        v11 = IsHideBattlePointGauge,
+        v12 = IsHideBattlePointGauge,
         (Instance = (DataManager_o *)svtData->fields.deckSvt) == 0LL) )
   {
 LABEL_10:
-    sub_1B64324(Instance);
+    sub_1B64ACC(Instance, v8);
   }
-  this->fields._IsHideBattlePointGauge_k__BackingField = (v11 | BattleDeckServantData__IsHideBattlePointGauge(
+  this->fields._IsHideBattlePointGauge_k__BackingField = (v12 | BattleDeckServantData__IsHideBattlePointGauge(
                                                                   (BattleDeckServantData_o *)Instance,
                                                                   this->fields.id,
                                                                   0LL)) & 1;
@@ -151,20 +153,21 @@ void __fastcall BattlePointData__UpdateMaxValue(BattlePointData_o *this, const M
 {
   __int64 v3; // x1
   Il2CppObject *Instance; // x0
+  __int64 v5; // x1
 
-  if ( (byte_49FEB09 & 1) == 0 )
+  if ( (byte_4A00C0A & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataManager_GetMasterData_BattlePointPhaseMaster___, method);
-    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_49FEB09 = 1;
+    sub_1B64870(&Method_DataManager_GetMasterData_BattlePointPhaseMaster___, method);
+    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4A00C0A = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_BattlePointPhaseMaster___)) == 0LL )
+                     (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_BattlePointPhaseMaster___)) == 0LL )
   {
-    sub_1B64324(Instance);
+    sub_1B64ACC(Instance, v5);
   }
   this->fields.maxValue = BattlePointPhaseMaster__GetMaxPhaseValue(
                             (BattlePointPhaseMaster_o *)Instance,
@@ -191,14 +194,15 @@ void __fastcall BattlePointData__UpdateSetting(
   bool IsHideBattlePointGauge_k__BackingField; // w23
   bool v17; // w8
   Il2CppObject *Instance; // x0
-  bool v19; // w21
+  __int64 v19; // x1
+  bool v20; // w21
 
-  if ( (byte_49FEB0A & 1) == 0 )
+  if ( (byte_4A00C0B & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataManager_GetMasterData_BattlePointMaster___, svtData);
-    sub_1B640C8(&Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int__GetEntity__, v7);
-    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    byte_49FEB0A = 1;
+    sub_1B64870(&Method_DataManager_GetMasterData_BattlePointMaster___, svtData);
+    sub_1B64870(&Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int__GetEntity__, v7);
+    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    byte_4A00C0B = 1;
   }
   if ( battleEntity )
   {
@@ -233,20 +237,20 @@ LABEL_8:
   v17 = (v13 & 1) == 0
      && QuestPhaseEntity__IsHideBattlePointGauge((QuestPhaseEntity_o *)battleEntity, this->fields.id, 0LL);
   this->fields._IsHideBattlePointGauge_k__BackingField = v17 || IsHideBattlePointGauge_k__BackingField;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_BattlePointMaster___)) == 0LL
+                     (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_BattlePointMaster___)) == 0LL
     || (Instance = DataMasterBase_object__object__int___GetEntity(
                      (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                      this->fields.id,
-                     (const MethodInfo_30D3EA4 *)Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int__GetEntity__)) == 0LL )
+                     (const MethodInfo_30D6180 *)Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int__GetEntity__)) == 0LL )
   {
-    sub_1B64324(Instance);
+    sub_1B64ACC(Instance, v19);
   }
-  v19 = this->fields._IsHideBattlePointGauge_k__BackingField;
-  this->fields._IsHideBattlePointGauge_k__BackingField = (v19 | BattlePointEntity__IsHideBattlePointGauge(
+  v20 = this->fields._IsHideBattlePointGauge_k__BackingField;
+  this->fields._IsHideBattlePointGauge_k__BackingField = (v20 | BattlePointEntity__IsHideBattlePointGauge(
                                                                   (BattlePointEntity_o *)Instance,
                                                                   svtData,
                                                                   0LL)) & 1;
@@ -275,21 +279,22 @@ int32_t __fastcall BattlePointData__get_Phase(BattlePointData_o *this, const Met
 {
   __int64 v3; // x1
   Il2CppObject *Instance; // x0
+  __int64 v5; // x1
   BattlePointPhaseEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_49FEB07 & 1) == 0 )
+  if ( (byte_4A00C08 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataManager_GetMasterData_BattlePointPhaseMaster___, method);
-    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_49FEB07 = 1;
+    sub_1B64870(&Method_DataManager_GetMasterData_BattlePointPhaseMaster___, method);
+    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4A00C08 = 1;
   }
   entity = 0LL;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_BattlePointPhaseMaster___);
+               (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_BattlePointPhaseMaster___);
   if ( !Instance )
     goto LABEL_10;
   Instance = (Il2CppObject *)BattlePointPhaseMaster__TryGetEntityByValue(
@@ -303,7 +308,7 @@ int32_t __fastcall BattlePointData__get_Phase(BattlePointData_o *this, const Met
     if ( entity )
       return entity->fields.phase;
 LABEL_10:
-    sub_1B64324(Instance);
+    sub_1B64ACC(Instance, v5);
   }
   return 1;
 }

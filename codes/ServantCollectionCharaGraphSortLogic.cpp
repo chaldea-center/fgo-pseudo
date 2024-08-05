@@ -4,7 +4,6 @@ void __fastcall ServantCollectionCharaGraphSortLogic__SetSortValueLocal(
 {
   CharaGraphServantCollectionListViewItem_o *ListViewItem; // x0
   const MethodInfo *v4; // x1
-  const MethodInfo *v5; // x1
   struct ListViewSort_o *sort; // x8
   int32_t sortKind; // w8
   int SvtId_k__BackingField; // w0
@@ -21,7 +20,7 @@ void __fastcall ServantCollectionCharaGraphSortLogic__SetSortValueLocal(
   sortKind = sort->fields.sortKind;
   if ( sortKind == 2 )
   {
-    ListViewItem = ServantCollectionCharaGraphSortLogic__get_ListViewItem(this, v5);
+    ListViewItem = ServantCollectionCharaGraphSortLogic__get_ListViewItem(this, v4);
     if ( ListViewItem )
     {
       SvtId_k__BackingField = ((__int64 (__fastcall *)(CharaGraphServantCollectionListViewItem_o *, Il2CppMethodPointer))ListViewItem->klass->vtable._9_get_Rarity.method)(
@@ -30,11 +29,11 @@ void __fastcall ServantCollectionCharaGraphSortLogic__SetSortValueLocal(
       goto LABEL_13;
     }
 LABEL_15:
-    sub_1B64324(ListViewItem);
+    sub_1B64ACC(ListViewItem, v4);
   }
   if ( sortKind == 8 )
   {
-    ListViewItem = ServantCollectionCharaGraphSortLogic__get_ListViewItem(this, v5);
+    ListViewItem = ServantCollectionCharaGraphSortLogic__get_ListViewItem(this, v4);
     if ( ListViewItem )
     {
       SvtId_k__BackingField = -((__int64 (__fastcall *)(CharaGraphServantCollectionListViewItem_o *, Il2CppMethodPointer))ListViewItem->klass->vtable._8_get_SortPriority.method)(
@@ -46,7 +45,7 @@ LABEL_15:
   }
   if ( sortKind != 13 )
     return;
-  ListViewItem = ServantCollectionCharaGraphSortLogic__get_ListViewItem(this, v5);
+  ListViewItem = ServantCollectionCharaGraphSortLogic__get_ListViewItem(this, v4);
   if ( !ListViewItem )
     goto LABEL_15;
   SvtId_k__BackingField = ListViewItem->fields._SvtId_k__BackingField;
@@ -69,10 +68,10 @@ CharaGraphServantCollectionListViewItem_o *__fastcall ServantCollectionCharaGrap
   ServantCollectionCharaGraphSortLogic_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_49FB83F & 1) == 0 )
+  if ( (byte_49FD937 & 1) == 0 )
   {
-    sub_1B640C8(&CharaGraphServantCollectionListViewItem_TypeInfo, method);
-    byte_49FB83F = 1;
+    sub_1B64870(&CharaGraphServantCollectionListViewItem_TypeInfo, method);
+    byte_49FD937 = 1;
   }
   p_listViewItem = (ServantStatusBattleListViewItem_o *)&this->fields.listViewItem;
   listViewItem = this->fields.listViewItem;
@@ -86,10 +85,10 @@ CharaGraphServantCollectionListViewItem_o *__fastcall ServantCollectionCharaGrap
   {
     item = this->fields.item;
     p_listViewItem->klass = (ServantStatusBattleListViewItem_c *)listViewItem;
-    sub_1B6406C(p_listViewItem, (int32_t)item, v2, v3);
+    sub_1B64814(p_listViewItem, (int32_t)item, v2, v3);
     return listViewItem;
   }
-  sub_1B645E4(this->fields.item);
+  sub_1B64D8C(this->fields.item);
   ServantCollectionCharaGraphSortLogic__SetSortValueLocal(v10, v11);
   return result;
 }

@@ -14,10 +14,10 @@ void __fastcall TerminalBoardOptionTextData___ctor(
   v8 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v8->fields._ForwardText_k__BackingField = forwardText;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&v8->fields, (int32_t)forwardText, v9, v10);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&v8->fields, (int32_t)forwardText, v9, v10);
   v8->fields._BehindTextFormat_k__BackingField = behindTextFormat;
   v8 = (TerminalBoardOptionTextData_o *)((char *)v8 + 32);
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)v8, (int32_t)behindTextFormat, v11, v12);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)v8, (int32_t)behindTextFormat, v11, v12);
   LODWORD(v8->monitor) = itemImageId;
 }
 
@@ -35,19 +35,19 @@ void __fastcall TerminalBoardOptionTextData__SetParamsToBehindText(
   int32_t v10; // w3
 
   if ( !args )
-    sub_1B64324(this);
+    sub_1B64ACC(this, 0LL);
   v6 = *(_QWORD *)&args->max_length;
   BehindTextFormat_k__BackingField = this->fields._BehindTextFormat_k__BackingField;
   if ( v6 )
   {
-    v8 = System_String__Format_61389904(this->fields._BehindTextFormat_k__BackingField, args, 0LL);
+    v8 = System_String__Format_61398084(this->fields._BehindTextFormat_k__BackingField, args, 0LL);
     this->fields._BehindText_k__BackingField = v8;
-    sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields._BehindText_k__BackingField, (int32_t)v8, v9, v10);
+    sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields._BehindText_k__BackingField, (int32_t)v8, v9, v10);
   }
   else
   {
     this->fields._BehindText_k__BackingField = BehindTextFormat_k__BackingField;
-    sub_1B6406C(
+    sub_1B64814(
       (ServantStatusBattleListViewItem_o *)&this->fields._BehindText_k__BackingField,
       (int32_t)BehindTextFormat_k__BackingField,
       (int32_t)method,
@@ -96,7 +96,7 @@ void __fastcall TerminalBoardOptionTextData__set_BehindText(
   int32_t v3; // w3
 
   this->fields._BehindText_k__BackingField = value;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._BehindText_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -112,7 +112,7 @@ void __fastcall TerminalBoardOptionTextData__set_BehindTextFormat(
   int32_t v3; // w3
 
   this->fields._BehindTextFormat_k__BackingField = value;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._BehindTextFormat_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -128,7 +128,7 @@ void __fastcall TerminalBoardOptionTextData__set_ForwardText(
   int32_t v3; // w3
 
   this->fields._ForwardText_k__BackingField = value;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 

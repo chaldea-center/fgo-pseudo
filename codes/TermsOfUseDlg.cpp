@@ -1,9 +1,9 @@
 void __fastcall TermsOfUseDlg___ctor(TermsOfUseDlg_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FA4AB & 1) == 0 )
+  if ( (byte_49FC5A0 & 1) == 0 )
   {
-    sub_1B640C8(&BaseDialog_TypeInfo, method);
-    byte_49FA4AB = 1;
+    sub_1B64870(&BaseDialog_TypeInfo, method);
+    byte_49FC5A0 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -24,7 +24,7 @@ void __fastcall TermsOfUseDlg__Callback(TermsOfUseDlg_o *this, bool result, cons
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1B6406C(p_callbackFunc, 0, (int32_t)method, v3);
+    sub_1B64814(p_callbackFunc, 0, (int32_t)method, v3);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, bool, _QWORD))v5->fields.m_target)(
       v5->fields.original_method_info,
       result,
@@ -37,37 +37,35 @@ void __fastcall TermsOfUseDlg__Close(TermsOfUseDlg_o *this, const MethodInfo *me
 {
   const MethodInfo *v2; // x2
 
-  TermsOfUseDlg__Close_35541648(this, 0LL, v2);
+  TermsOfUseDlg__Close_35545484(this, 0LL, v2);
 }
 
 
-void __fastcall TermsOfUseDlg__Close_35541648(
+void __fastcall TermsOfUseDlg__Close_35545484(
         TermsOfUseDlg_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
   int32_t v3; // w3
   __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x2
-  System_Action_o *v9; // x20
+  System_Action_o *v7; // x20
 
-  if ( (byte_49FA4A7 & 1) == 0 )
+  if ( (byte_49FC59C & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_TypeInfo, callback);
-    sub_1B640C8(&Method_TermsOfUseDlg_EndClose__, v6);
-    byte_49FA4A7 = 1;
+    sub_1B64870(&System_Action_TypeInfo, callback);
+    sub_1B64870(&Method_TermsOfUseDlg_EndClose__, v6);
+    byte_49FC59C = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)callback,
     (int32_t)method,
     v3);
   this->fields.state = 4;
-  v9 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v7, v8);
-  System_Action___ctor(v9, (Il2CppObject *)this, Method_TermsOfUseDlg_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v9, 0LL);
+  v7 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  System_Action___ctor(v7, (Il2CppObject *)this, Method_TermsOfUseDlg_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
 }
 
 
@@ -86,7 +84,7 @@ void __fastcall TermsOfUseDlg__EndClose(TermsOfUseDlg_o *this, const MethodInfo 
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1B6406C(p_closeCallbackFunc, 0, v3, v4);
+    sub_1B64814(p_closeCallbackFunc, 0, v3, v4);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v6->fields.m_target)(
       v6->fields.original_method_info,
       *(_QWORD *)&v6->fields.extra_arg);
@@ -104,10 +102,10 @@ void __fastcall TermsOfUseDlg__Init(TermsOfUseDlg_o *this, const MethodInfo *met
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_49FA4A5 & 1) == 0 )
+  if ( (byte_49FC59A & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_1/*""*/, method);
-    byte_49FA4A5 = 1;
+    sub_1B64870(&StringLiteral_1/*""*/, method);
+    byte_49FC59A = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
@@ -118,7 +116,7 @@ void __fastcall TermsOfUseDlg__Init(TermsOfUseDlg_o *this, const MethodInfo *met
     || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (titleLabel = this->fields.cancelLabel) == 0LL) )
   {
-    sub_1B64324(titleLabel);
+    sub_1B64ACC(titleLabel, method);
   }
   UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
@@ -132,18 +130,18 @@ void __fastcall TermsOfUseDlg__OnClickCancel(TermsOfUseDlg_o *this, const Method
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_49FA4AA & 1) == 0 )
+  if ( (byte_49FC59F & 1) == 0 )
   {
-    sub_1B640C8(&Method_TermsOfUseDlg_OnClickCancel__, method);
-    byte_49FA4AA = 1;
+    sub_1B64870(&Method_TermsOfUseDlg_OnClickCancel__, method);
+    byte_49FC59F = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_TermsOfUseDlg_OnClickCancel__;
     if ( (*((_BYTE *)Method_TermsOfUseDlg_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B640E0(Method_TermsOfUseDlg_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64888(Method_TermsOfUseDlg_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     TermsOfUseDlg__Callback(this, 0, v5);
   }
@@ -157,19 +155,19 @@ void __fastcall TermsOfUseDlg__OnClickDecide(TermsOfUseDlg_o *this, const Method
   System_Reflection_MethodBase_o *v5; // x0
   const MethodInfo *v6; // x2
 
-  if ( (byte_49FA4A9 & 1) == 0 )
+  if ( (byte_49FC59E & 1) == 0 )
   {
-    sub_1B640C8(&Method_TermsOfUseDlg_OnClickDecide__, method);
-    sub_1B640C8(&TermsOfUseMenu_TypeInfo, v3);
-    byte_49FA4A9 = 1;
+    sub_1B64870(&Method_TermsOfUseDlg_OnClickDecide__, method);
+    sub_1B64870(&TermsOfUseMenu_TypeInfo, v3);
+    byte_49FC59E = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v4 = Method_TermsOfUseDlg_OnClickDecide__;
     if ( (*((_BYTE *)Method_TermsOfUseDlg_OnClickDecide__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1B640E0(Method_TermsOfUseDlg_OnClickDecide__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1B640AC(v4, v4[4]);
+      v4 = (_QWORD *)sub_1B64888(Method_TermsOfUseDlg_OnClickDecide__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1B64854(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, 8, 0LL);
     if ( !TermsOfUseMenu_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TermsOfUseMenu_TypeInfo);
@@ -189,37 +187,35 @@ void __fastcall TermsOfUseDlg__OnClickShow(TermsOfUseDlg_o *this, const MethodIn
   System_Reflection_MethodBase_o *v8; // x0
   System_String_o *wvTitle; // x20
   int32_t wvAddress; // w21
-  System_String_o *WebViewAddress_38174564; // x21
-  __int64 v12; // x1
-  __int64 v13; // x2
-  System_Action_o *v14; // x22
+  System_String_o *WebViewAddress_38178928; // x21
+  System_Action_o *v12; // x22
 
-  if ( (byte_49FA4A8 & 1) == 0 )
+  if ( (byte_49FC59D & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_TypeInfo, method);
-    sub_1B640C8(&NetworkManager_TypeInfo, v3);
-    sub_1B640C8(&Method_TermsOfUseDlg_OnClickShow__, v4);
-    sub_1B640C8(&Method_TermsOfUseDlg_OnEndShowWebView__, v5);
-    sub_1B640C8(&WebViewManager_TypeInfo, v6);
-    byte_49FA4A8 = 1;
+    sub_1B64870(&System_Action_TypeInfo, method);
+    sub_1B64870(&NetworkManager_TypeInfo, v3);
+    sub_1B64870(&Method_TermsOfUseDlg_OnClickShow__, v4);
+    sub_1B64870(&Method_TermsOfUseDlg_OnEndShowWebView__, v5);
+    sub_1B64870(&WebViewManager_TypeInfo, v6);
+    byte_49FC59D = 1;
   }
   if ( this->fields.state == 2 )
   {
     v7 = Method_TermsOfUseDlg_OnClickShow__;
     if ( (*((_BYTE *)Method_TermsOfUseDlg_OnClickShow__ + 83) & 2) != 0 )
-      v7 = (_QWORD *)sub_1B640E0(Method_TermsOfUseDlg_OnClickShow__);
-    v8 = (System_Reflection_MethodBase_o *)sub_1B640AC(v7, v7[4]);
+      v7 = (_QWORD *)sub_1B64888(Method_TermsOfUseDlg_OnClickShow__);
+    v8 = (System_Reflection_MethodBase_o *)sub_1B64854(v7, v7[4]);
     OverwriteAssetSoundName__PlaySystemSe(v8, 0, 0LL);
     wvTitle = this->fields.wvTitle;
     wvAddress = this->fields.wvAddress;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    WebViewAddress_38174564 = NetworkManager__getWebViewAddress_38174564(wvAddress, 0LL);
-    v14 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v12, v13);
-    System_Action___ctor(v14, (Il2CppObject *)this, Method_TermsOfUseDlg_OnEndShowWebView__, 0LL);
+    WebViewAddress_38178928 = NetworkManager__getWebViewAddress_38178928(wvAddress, 0LL);
+    v12 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+    System_Action___ctor(v12, (Il2CppObject *)this, Method_TermsOfUseDlg_OnEndShowWebView__, 0LL);
     if ( !WebViewManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(WebViewManager_TypeInfo);
-    WebViewManager__OpenView(wvTitle, WebViewAddress_38174564, v14, 0LL);
+    WebViewManager__OpenView(wvTitle, WebViewAddress_38178928, v12, 0LL);
   }
 }
 
@@ -245,22 +241,21 @@ void __fastcall TermsOfUseDlg__Open(
 {
   __int64 v19; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  int32_t v21; // w2
-  int32_t v22; // w3
-  __int64 v23; // x1
-  __int64 v24; // x2
-  System_Action_o *v25; // x20
+  __int64 v21; // x1
+  int32_t v22; // w2
+  int32_t v23; // w3
+  System_Action_o *v24; // x20
 
-  if ( (byte_49FA4A6 & 1) == 0 )
+  if ( (byte_49FC59B & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_TypeInfo, title);
-    sub_1B640C8(&Method_TermsOfUseDlg_EndOpen__, v19);
-    byte_49FA4A6 = 1;
+    sub_1B64870(&System_Action_TypeInfo, title);
+    sub_1B64870(&Method_TermsOfUseDlg_EndOpen__, v19);
+    byte_49FC59B = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.callbackFunc = callback;
-    sub_1B6406C(
+    sub_1B64814(
       (ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
       (int32_t)message,
@@ -283,17 +278,17 @@ void __fastcall TermsOfUseDlg__Open(
           (gameObject = (UnityEngine_GameObject_o *)this->fields.decideLabel) == 0LL) )
     {
 LABEL_11:
-      sub_1B64324(gameObject);
+      sub_1B64ACC(gameObject, v21);
     }
     UILabel__set_text((UILabel_o *)gameObject, decideMessage, 0LL);
     this->fields.wvAddress = address;
     this->fields.wvTitle = webViewTitle;
-    sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.wvTitle, (int32_t)webViewTitle, v21, v22);
+    sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.wvTitle, (int32_t)webViewTitle, v22, v23);
     BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, canMaskTouchClose, 0LL);
     this->fields.state = 1;
-    v25 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v23, v24);
-    System_Action___ctor(v25, (Il2CppObject *)this, Method_TermsOfUseDlg_EndOpen__, 0LL);
-    BaseDialog__Open((BaseDialog_o *)this, v25, 0, 0LL);
+    v24 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+    System_Action___ctor(v24, (Il2CppObject *)this, Method_TermsOfUseDlg_EndOpen__, 0LL);
+    BaseDialog__Open((BaseDialog_o *)this, v24, 0, 0LL);
   }
 }
 
@@ -313,10 +308,10 @@ void __fastcall TermsOfUseDlg__add_callbackFunc(
   TermsOfUseDlg_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_49FA4A3 & 1) == 0 )
+  if ( (byte_49FC598 & 1) == 0 )
   {
-    sub_1B640C8(&TermsOfUseDlg_CallbackFunc_TypeInfo, value);
-    byte_49FA4A3 = 1;
+    sub_1B64870(&TermsOfUseDlg_CallbackFunc_TypeInfo, value);
+    byte_49FC598 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -329,13 +324,13 @@ void __fastcall TermsOfUseDlg__add_callbackFunc(
       if ( (TermsOfUseDlg_CallbackFunc_c *)v8->klass != TermsOfUseDlg_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1B9F5B8(p_callbackFunc, v8, v6);
+    v9 = sub_1B9FD60(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B645E4(v8);
+  sub_1B64D8C(v8);
   TermsOfUseDlg__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -354,10 +349,10 @@ void __fastcall TermsOfUseDlg__remove_callbackFunc(
   TermsOfUseDlg_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_49FA4A4 & 1) == 0 )
+  if ( (byte_49FC599 & 1) == 0 )
   {
-    sub_1B640C8(&TermsOfUseDlg_CallbackFunc_TypeInfo, value);
-    byte_49FA4A4 = 1;
+    sub_1B64870(&TermsOfUseDlg_CallbackFunc_TypeInfo, value);
+    byte_49FC599 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -370,13 +365,13 @@ void __fastcall TermsOfUseDlg__remove_callbackFunc(
       if ( (TermsOfUseDlg_CallbackFunc_c *)v8->klass != TermsOfUseDlg_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1B9F5B8(p_callbackFunc, v8, v6);
+    v9 = sub_1B9FD60(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B645E4(v8);
+  sub_1B64D8C(v8);
   TermsOfUseDlg__Init(v11, v12);
 }
 
@@ -399,15 +394,15 @@ void __fastcall TermsOfUseDlg_CallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B64188(v6) & 1) == 0 )
+  if ( (sub_1B64930(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B64340(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B641F0(v10, 0LL);
+      v10 = sub_1B64AE8(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B64998(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -419,9 +414,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19AA7E4;
+  this->fields.m_target = (Il2CppObject *)sub_19AAF8C;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19AA79C;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19AAF44;
 }
 
 
@@ -437,14 +432,14 @@ System_IAsyncResult_o *__fastcall TermsOfUseDlg_CallbackFunc__BeginInvoke(
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = result;
-  if ( (byte_49FA4AC & 1) == 0 )
+  if ( (byte_49FC5A1 & 1) == 0 )
   {
-    sub_1B640C8(&bool_TypeInfo, result);
-    byte_49FA4AC = 1;
+    sub_1B64870(&bool_TypeInfo, result);
+    byte_49FC5A1 = 1;
   }
   v9[1] = 0LL;
-  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_1B6407C(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
+  return (System_IAsyncResult_o *)sub_1B64824(this, v9, callback, object);
 }
 
 
@@ -453,7 +448,7 @@ void __fastcall TermsOfUseDlg_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B64080(result, 0LL, method);
+  sub_1B64828(result, 0LL, method);
 }
 
 

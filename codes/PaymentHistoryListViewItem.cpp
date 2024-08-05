@@ -10,15 +10,15 @@ void __fastcall PaymentHistoryListViewItem___ctor(
   int32_t v10; // w2
   int32_t v11; // w3
 
-  ListViewItem___ctor_40370988((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_40375592((ListViewItem_o *)this, index, 0LL);
   this->fields._UpsideMessage_k__BackingField = upsideMessage;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._UpsideMessage_k__BackingField,
     (int32_t)upsideMessage,
     v8,
     v9);
   this->fields._BottomMessage_k__BackingField = bottomMessage;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._BottomMessage_k__BackingField,
     (int32_t)bottomMessage,
     v10,
@@ -50,7 +50,7 @@ void __fastcall PaymentHistoryListViewItem__set_BottomMessage(
   int32_t v3; // w3
 
   this->fields._BottomMessage_k__BackingField = value;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._BottomMessage_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -66,7 +66,7 @@ void __fastcall PaymentHistoryListViewItem__set_UpsideMessage(
   int32_t v3; // w3
 
   this->fields._UpsideMessage_k__BackingField = value;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._UpsideMessage_k__BackingField,
     (int32_t)value,
     (int32_t)method,

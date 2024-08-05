@@ -2,10 +2,10 @@ void __fastcall AccountLinkageNotificationDialog___cctor(const MethodInfo *metho
 {
   __int64 v1; // x1
 
-  if ( (byte_49F744A & 1) == 0 )
+  if ( (byte_49F953A & 1) == 0 )
   {
-    sub_1B640C8(&AccountLinkageNotificationDialog_TypeInfo, v1);
-    byte_49F744A = 1;
+    sub_1B64870(&AccountLinkageNotificationDialog_TypeInfo, v1);
+    byte_49F953A = 1;
   }
   *AccountLinkageNotificationDialog_TypeInfo->static_fields = (struct AccountLinkageNotificationDialog_StaticFields)0x1B42100000LL;
 }
@@ -15,10 +15,10 @@ void __fastcall AccountLinkageNotificationDialog___ctor(
         AccountLinkageNotificationDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_49F7449 & 1) == 0 )
+  if ( (byte_49F9539 & 1) == 0 )
   {
-    sub_1B640C8(&BaseDialog_TypeInfo, method);
-    byte_49F7449 = 1;
+    sub_1B64870(&BaseDialog_TypeInfo, method);
+    byte_49F9539 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -32,32 +32,30 @@ void __fastcall AccountLinkageNotificationDialog__Close(
 {
   const MethodInfo *v2; // x2
 
-  AccountLinkageNotificationDialog__Close_30247284(this, 0LL, v2);
+  AccountLinkageNotificationDialog__Close_30249252(this, 0LL, v2);
 }
 
 
-void __fastcall AccountLinkageNotificationDialog__Close_30247284(
+void __fastcall AccountLinkageNotificationDialog__Close_30249252(
         AccountLinkageNotificationDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x2
-  System_Action_o *v8; // x20
-  const MethodInfo *v9; // x2
+  System_Action_o *v6; // x20
+  const MethodInfo *v7; // x2
 
-  if ( (byte_49F7446 & 1) == 0 )
+  if ( (byte_49F9536 & 1) == 0 )
   {
-    sub_1B640C8(&Method_AccountLinkageNotificationDialog_EndClose__, callback);
-    sub_1B640C8(&System_Action_TypeInfo, v5);
-    byte_49F7446 = 1;
+    sub_1B64870(&Method_AccountLinkageNotificationDialog_EndClose__, callback);
+    sub_1B64870(&System_Action_TypeInfo, v5);
+    byte_49F9536 = 1;
   }
   this->fields.closeEndFunc = callback;
-  sub_1B6406C(&this->fields.closeEndFunc);
-  v8 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v6, v7);
-  System_Action___ctor(v8, (Il2CppObject *)this, Method_AccountLinkageNotificationDialog_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v8, v9);
+  sub_1B64814(&this->fields.closeEndFunc);
+  v6 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  System_Action___ctor(v6, (Il2CppObject *)this, Method_AccountLinkageNotificationDialog_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v6, v7);
 }
 
 
@@ -76,7 +74,7 @@ void __fastcall AccountLinkageNotificationDialog__EndClose(
   if ( closeEndFunc )
   {
     *p_closeEndFunc = 0LL;
-    sub_1B6406C(p_closeEndFunc);
+    sub_1B64814(p_closeEndFunc);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v4->fields.m_target)(
       v4->fields.original_method_info,
       *(_QWORD *)&v4->fields.extra_arg);
@@ -90,15 +88,16 @@ void __fastcall AccountLinkageNotificationDialog__Init(
 {
   __int64 v3; // x1
   UnityEngine_Object_o *messageLabel; // x20
+  __int64 v5; // x1
   UILabel_o *gameObject; // x0
   UnityEngine_Object_o *buttonLabel; // x20
-  const MethodInfo *v7; // x1
+  const MethodInfo *v8; // x1
 
-  if ( (byte_49F7444 & 1) == 0 )
+  if ( (byte_49F9534 & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, method);
-    sub_1B640C8(&StringLiteral_1/*""*/, v3);
-    byte_49F7444 = 1;
+    sub_1B64870(&UnityEngine_Object_TypeInfo, method);
+    sub_1B64870(&StringLiteral_1/*""*/, v3);
+    byte_49F9534 = 1;
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -123,9 +122,9 @@ void __fastcall AccountLinkageNotificationDialog__Init(
   gameObject = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
 LABEL_15:
-    sub_1B64324(gameObject);
+    sub_1B64ACC(gameObject, v5);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
-  BaseDialog__Init((BaseDialog_o *)this, v7);
+  BaseDialog__Init((BaseDialog_o *)this, v8);
 }
 
 
@@ -139,29 +138,29 @@ void __fastcall AccountLinkageNotificationDialog__OnClickOk(
   struct System_Action_o **p_clickFunc; // x0
   struct System_Action_o *clickFunc; // x20
 
-  if ( (byte_49F7447 & 1) == 0 )
+  if ( (byte_49F9537 & 1) == 0 )
   {
-    sub_1B640C8(&Method_AccountLinkageNotificationDialog_OnClickOk__, method);
-    byte_49F7447 = 1;
+    sub_1B64870(&Method_AccountLinkageNotificationDialog_OnClickOk__, method);
+    byte_49F9537 = 1;
   }
   v3 = Method_AccountLinkageNotificationDialog_OnClickOk__;
   if ( (*((_BYTE *)Method_AccountLinkageNotificationDialog_OnClickOk__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1B640E0();
-  v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
+    v3 = (_QWORD *)sub_1B64888();
+  v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
   p_clickFunc = &this->fields.clickFunc;
   clickFunc = this->fields.clickFunc;
   if ( clickFunc )
   {
     *p_clickFunc = 0LL;
-    sub_1B6406C(p_clickFunc);
+    sub_1B64814(p_clickFunc);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))clickFunc->fields.m_target)(
       clickFunc->fields.original_method_info,
       *(_QWORD *)&clickFunc->fields.extra_arg);
   }
   else
   {
-    AccountLinkageNotificationDialog__Close_30247284(this, 0LL, v5);
+    AccountLinkageNotificationDialog__Close_30249252(this, 0LL, v5);
   }
 }
 
@@ -172,13 +171,13 @@ void __fastcall AccountLinkageNotificationDialog__OnEnable(
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_49F7448 & 1) == 0 )
+  if ( (byte_49F9538 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_15584/*"Window/OkBtn"*/, method);
-    byte_49F7448 = 1;
+    sub_1B64870(&StringLiteral_15586/*"Window/OkBtn"*/, method);
+    byte_49F9538 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  AndroidBackKeyManager__AddBackBtn_41446668(transform, (System_String_o *)StringLiteral_15584/*"Window/OkBtn"*/, 0LL);
+  AndroidBackKeyManager__AddBackBtn_41451800(transform, (System_String_o *)StringLiteral_15586/*"Window/OkBtn"*/, 0LL);
 }
 
 
@@ -200,32 +199,32 @@ void __fastcall AccountLinkageNotificationDialog__Open(
   __int64 v19; // x1
   __int64 v20; // x1
   UnityEngine_Object_o *messageLabel; // x24
+  unsigned __int64 MESSAGE_FONT_SIZE; // x1
   float value; // s8
-  AccountLinkageNotificationDialog_c *v23; // x0
-  UnityEngine_Component_o *v24; // x0
+  AccountLinkageNotificationDialog_c *v24; // x0
+  UnityEngine_Component_o *v25; // x0
   UnityEngine_GameObject_o *gameObject; // x0
-  unsigned __int64 v26; // x1
   AccountLinkageNotificationDialog_c *v27; // x0
   System_String_o *v28; // x1
   UnityEngine_Object_o *buttonLabel; // x20
   const MethodInfo *v30; // x3
   UILabel_o *v31; // x20
 
-  if ( (byte_49F7445 & 1) == 0 )
+  if ( (byte_49F9535 & 1) == 0 )
   {
-    sub_1B640C8(&AccountLinkageNotificationDialog_TypeInfo, message);
-    sub_1B640C8(&LocalizationManager_TypeInfo, v13);
-    sub_1B640C8(&Method_System_Nullable_float__GetValueOrDefault__, v14);
-    sub_1B640C8(&Method_System_Nullable_int__GetValueOrDefault__, v15);
-    sub_1B640C8(&Method_System_Nullable_float__get_HasValue__, v16);
-    sub_1B640C8(&Method_System_Nullable_int__get_HasValue__, v17);
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, v18);
-    sub_1B640C8(&StringLiteral_3734/*"COMMON_CONFIRM_CLOSE"*/, v19);
-    sub_1B640C8(&StringLiteral_1/*""*/, v20);
-    byte_49F7445 = 1;
+    sub_1B64870(&AccountLinkageNotificationDialog_TypeInfo, message);
+    sub_1B64870(&LocalizationManager_TypeInfo, v13);
+    sub_1B64870(&Method_System_Nullable_float__GetValueOrDefault__, v14);
+    sub_1B64870(&Method_System_Nullable_int__GetValueOrDefault__, v15);
+    sub_1B64870(&Method_System_Nullable_float__get_HasValue__, v16);
+    sub_1B64870(&Method_System_Nullable_int__get_HasValue__, v17);
+    sub_1B64870(&UnityEngine_Object_TypeInfo, v18);
+    sub_1B64870(&StringLiteral_3733/*"COMMON_CONFIRM_CLOSE"*/, v19);
+    sub_1B64870(&StringLiteral_1/*""*/, v20);
+    byte_49F9535 = 1;
   }
   this->fields.clickFunc = func;
-  sub_1B6406C(&this->fields.clickFunc);
+  sub_1B64814(&this->fields.clickFunc);
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -237,22 +236,22 @@ void __fastcall AccountLinkageNotificationDialog__Open(
     }
     else
     {
-      v23 = AccountLinkageNotificationDialog_TypeInfo;
+      v24 = AccountLinkageNotificationDialog_TypeInfo;
       if ( !AccountLinkageNotificationDialog_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(AccountLinkageNotificationDialog_TypeInfo);
-        v23 = AccountLinkageNotificationDialog_TypeInfo;
+        v24 = AccountLinkageNotificationDialog_TypeInfo;
       }
-      value = v23->static_fields->MESSAGE_BASE_POS_Y;
+      value = v24->static_fields->MESSAGE_BASE_POS_Y;
     }
-    v24 = (UnityEngine_Component_o *)this->fields.messageLabel;
-    if ( !v24 )
+    v25 = (UnityEngine_Component_o *)this->fields.messageLabel;
+    if ( !v25 )
       goto LABEL_32;
-    gameObject = UnityEngine_Component__get_gameObject(v24, 0LL);
+    gameObject = UnityEngine_Component__get_gameObject(v25, 0LL);
     GameObjectExtensions__SetLocalPositionY(gameObject, value, 0LL);
     if ( msgFontSize.fields.hasValue )
     {
-      v26 = HIDWORD(*(unsigned __int64 *)&msgFontSize);
+      MESSAGE_FONT_SIZE = HIDWORD(*(unsigned __int64 *)&msgFontSize);
     }
     else
     {
@@ -262,21 +261,21 @@ void __fastcall AccountLinkageNotificationDialog__Open(
         j_il2cpp_runtime_class_init_0(AccountLinkageNotificationDialog_TypeInfo);
         v27 = AccountLinkageNotificationDialog_TypeInfo;
       }
-      LODWORD(v26) = v27->static_fields->MESSAGE_FONT_SIZE;
+      MESSAGE_FONT_SIZE = (unsigned int)v27->static_fields->MESSAGE_FONT_SIZE;
     }
-    v24 = (UnityEngine_Component_o *)this->fields.messageLabel;
-    if ( !v24 )
+    v25 = (UnityEngine_Component_o *)this->fields.messageLabel;
+    if ( !v25 )
       goto LABEL_32;
-    UILabel__set_fontSize((UILabel_o *)v24, v26, 0LL);
-    v24 = (UnityEngine_Component_o *)this->fields.messageLabel;
-    if ( !v24 )
+    UILabel__set_fontSize((UILabel_o *)v25, MESSAGE_FONT_SIZE, 0LL);
+    v25 = (UnityEngine_Component_o *)this->fields.messageLabel;
+    if ( !v25 )
       goto LABEL_32;
     v28 = message ? message : (System_String_o *)StringLiteral_1/*""*/;
-    UILabel__set_text((UILabel_o *)v24, v28, 0LL);
-    v24 = (UnityEngine_Component_o *)this->fields.messageLabel;
-    if ( !v24 )
+    UILabel__set_text((UILabel_o *)v25, v28, 0LL);
+    v25 = (UnityEngine_Component_o *)this->fields.messageLabel;
+    if ( !v25 )
       goto LABEL_32;
-    UILabel__set_spacingY((UILabel_o *)v24, spacingY, 0LL);
+    UILabel__set_spacingY((UILabel_o *)v25, spacingY, 0LL);
   }
   buttonLabel = (UnityEngine_Object_o *)this->fields.buttonLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -286,14 +285,14 @@ void __fastcall AccountLinkageNotificationDialog__Open(
     v31 = this->fields.buttonLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v24 = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3734/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+    v25 = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3733/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
     if ( v31 )
     {
-      UILabel__set_text(v31, (System_String_o *)v24, 0LL);
+      UILabel__set_text(v31, (System_String_o *)v25, 0LL);
       goto LABEL_31;
     }
 LABEL_32:
-    sub_1B64324(v24);
+    sub_1B64ACC(v25, MESSAGE_FONT_SIZE);
   }
 LABEL_31:
   BaseDialog__Open((BaseDialog_o *)this, 0LL, 0, v30);

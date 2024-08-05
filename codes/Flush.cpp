@@ -5,9 +5,9 @@ __int64 __fastcall Flush(_BYTE *a1)
   if ( !a1[32] )
     return 0LL;
   if ( !*(_DWORD *)(*(_QWORD *)a1 + 8LL) )
-    return sub_1BB0680(a1);
-  result = sub_1BEC760();
+    return sub_1BB0E28(a1);
+  result = sub_1BECF08();
   if ( (unsigned int)result <= 1 )
-    return sub_1BB0680(a1);
+    return sub_1BB0E28(a1);
   return result;
 }

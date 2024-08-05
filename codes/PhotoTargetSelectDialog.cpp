@@ -1,9 +1,9 @@
 void __fastcall PhotoTargetSelectDialog___ctor(PhotoTargetSelectDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_49F7F45 & 1) == 0 )
+  if ( (byte_49FA035 & 1) == 0 )
   {
-    sub_1B640C8(&BaseDialog_TypeInfo, method);
-    byte_49F7F45 = 1;
+    sub_1B64870(&BaseDialog_TypeInfo, method);
+    byte_49FA035 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -13,30 +13,30 @@ void __fastcall PhotoTargetSelectDialog___ctor(PhotoTargetSelectDialog_o *this, 
 
 void __fastcall PhotoTargetSelectDialog__CloseDialog(PhotoTargetSelectDialog_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  System_Action_o *v5; // x20
+  __int64 v3; // x1
+  System_Action_o *v4; // x20
 
-  if ( (byte_49F7F43 & 1) == 0 )
+  if ( (byte_49FA033 & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_TypeInfo, method);
-    sub_1B640C8(&Method_PhotoTargetSelectDialog_Init__, v4);
-    byte_49F7F43 = 1;
+    sub_1B64870(&System_Action_TypeInfo, method);
+    sub_1B64870(&Method_PhotoTargetSelectDialog_Init__, v3);
+    byte_49FA033 = 1;
   }
   this->fields.state = 4;
-  v5 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, method, v2);
-  System_Action___ctor(v5, (Il2CppObject *)this, Method_PhotoTargetSelectDialog_Init__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v5, 0LL);
+  v4 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  System_Action___ctor(v4, (Il2CppObject *)this, Method_PhotoTargetSelectDialog_Init__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v4, 0LL);
 }
 
 
 void __fastcall PhotoTargetSelectDialog__Init(PhotoTargetSelectDialog_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v4; // x1
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -54,25 +54,25 @@ void __fastcall PhotoTargetSelectDialog__OnClickDecideButton(
   System_Reflection_MethodBase_o *v7; // x0
   System_Action_T__o *decideCallBack; // x21
 
-  if ( (byte_49F7F41 & 1) == 0 )
+  if ( (byte_49FA031 & 1) == 0 )
   {
-    sub_1B640C8(&Method_ActionExtensions_Call_MyRoomControl_PHOTOCAMPAIGNTYPE___, *(_QWORD *)&type);
-    sub_1B640C8(&Method_PhotoTargetSelectDialog_OnClickDecideButton__, v5);
-    byte_49F7F41 = 1;
+    sub_1B64870(&Method_ActionExtensions_Call_MyRoomControl_PHOTOCAMPAIGNTYPE___, *(_QWORD *)&type);
+    sub_1B64870(&Method_PhotoTargetSelectDialog_OnClickDecideButton__, v5);
+    byte_49FA031 = 1;
   }
   this->fields.state = 3;
   v6 = Method_PhotoTargetSelectDialog_OnClickDecideButton__;
   if ( (*((_BYTE *)Method_PhotoTargetSelectDialog_OnClickDecideButton__ + 83) & 2) != 0 )
-    v6 = (_QWORD *)sub_1B640E0(Method_PhotoTargetSelectDialog_OnClickDecideButton__);
-  v7 = (System_Reflection_MethodBase_o *)sub_1B640AC(v6, v6[4]);
+    v6 = (_QWORD *)sub_1B64888(Method_PhotoTargetSelectDialog_OnClickDecideButton__);
+  v7 = (System_Reflection_MethodBase_o *)sub_1B64854(v6, v6[4]);
   OverwriteAssetSoundName__PlaySystemSe(v7, 8, 0LL);
   decideCallBack = (System_Action_T__o *)this->fields.decideCallBack;
   this->fields.decideCallBack = 0LL;
-  sub_1B6406C(&this->fields.decideCallBack);
+  sub_1B64814(&this->fields.decideCallBack);
   ActionExtensions__Call_Int32Enum_(
     decideCallBack,
     type,
-    (const MethodInfo_2D90A28 *)Method_ActionExtensions_Call_MyRoomControl_PHOTOCAMPAIGNTYPE___);
+    (const MethodInfo_2D92D04 *)Method_ActionExtensions_Call_MyRoomControl_PHOTOCAMPAIGNTYPE___);
 }
 
 
@@ -115,18 +115,18 @@ void __fastcall PhotoTargetSelectDialog__OnclickCancelButton(PhotoTargetSelectDi
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_49F7F42 & 1) == 0 )
+  if ( (byte_49FA032 & 1) == 0 )
   {
-    sub_1B640C8(&Method_PhotoTargetSelectDialog_OnclickCancelButton__, method);
-    byte_49F7F42 = 1;
+    sub_1B64870(&Method_PhotoTargetSelectDialog_OnclickCancelButton__, method);
+    byte_49FA032 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_PhotoTargetSelectDialog_OnclickCancelButton__;
     if ( (*((_BYTE *)Method_PhotoTargetSelectDialog_OnclickCancelButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B640E0(Method_PhotoTargetSelectDialog_OnclickCancelButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64888(Method_PhotoTargetSelectDialog_OnclickCancelButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     PhotoTargetSelectDialog__CloseDialog(this, v5);
   }
@@ -147,62 +147,61 @@ void __fastcall PhotoTargetSelectDialog__Open(
   __int64 v11; // x1
   UILabel_o *titleLabel; // x21
   System_String_o *v13; // x0
+  __int64 v14; // x1
   UILabel_o *messageLabel; // x21
   UILabel_o *onlyServantButtonLabel; // x21
   UILabel_o *withMasterButtonLabel; // x21
   UILabel_o *cancelButtonLabel; // x21
-  __int64 v18; // x1
-  __int64 v19; // x2
-  System_Action_o *v20; // x20
+  System_Action_o *v19; // x20
 
-  if ( (byte_49F7F40 & 1) == 0 )
+  if ( (byte_49FA030 & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_TypeInfo, callBack);
-    sub_1B640C8(&LocalizationManager_TypeInfo, v5);
-    sub_1B640C8(&Method_PhotoTargetSelectDialog__Open_b__12_0__, v6);
-    sub_1B640C8(&StringLiteral_3733/*"COMMON_CONFIRM_CANCEL"*/, v7);
-    sub_1B640C8(&StringLiteral_10330/*"PHOTO_TARGET_SELECT_DIALOG_TITLE"*/, v8);
-    sub_1B640C8(&StringLiteral_10329/*"PHOTO_TARGET_SELECT_DIALOG_ONLY_SERVANT_BUTTON"*/, v9);
-    sub_1B640C8(&StringLiteral_10328/*"PHOTO_TARGET_SELECT_DIALOG_MESSAGE"*/, v10);
-    sub_1B640C8(&StringLiteral_10331/*"PHOTO_TARGET_SELECT_DIALOG_WITH_MASTER_BUTTON"*/, v11);
-    byte_49F7F40 = 1;
+    sub_1B64870(&System_Action_TypeInfo, callBack);
+    sub_1B64870(&LocalizationManager_TypeInfo, v5);
+    sub_1B64870(&Method_PhotoTargetSelectDialog__Open_b__12_0__, v6);
+    sub_1B64870(&StringLiteral_3732/*"COMMON_CONFIRM_CANCEL"*/, v7);
+    sub_1B64870(&StringLiteral_10331/*"PHOTO_TARGET_SELECT_DIALOG_TITLE"*/, v8);
+    sub_1B64870(&StringLiteral_10330/*"PHOTO_TARGET_SELECT_DIALOG_ONLY_SERVANT_BUTTON"*/, v9);
+    sub_1B64870(&StringLiteral_10329/*"PHOTO_TARGET_SELECT_DIALOG_MESSAGE"*/, v10);
+    sub_1B64870(&StringLiteral_10332/*"PHOTO_TARGET_SELECT_DIALOG_WITH_MASTER_BUTTON"*/, v11);
+    byte_49FA030 = 1;
   }
   if ( !this->fields.state )
   {
     titleLabel = this->fields.titleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_10330/*"PHOTO_TARGET_SELECT_DIALOG_TITLE"*/, 0LL);
+    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_10331/*"PHOTO_TARGET_SELECT_DIALOG_TITLE"*/, 0LL);
     if ( !titleLabel )
       goto LABEL_12;
     UILabel__set_text(titleLabel, v13, 0LL);
     messageLabel = this->fields.messageLabel;
-    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_10328/*"PHOTO_TARGET_SELECT_DIALOG_MESSAGE"*/, 0LL);
+    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_10329/*"PHOTO_TARGET_SELECT_DIALOG_MESSAGE"*/, 0LL);
     if ( !messageLabel )
       goto LABEL_12;
     UILabel__set_text(messageLabel, v13, 0LL);
     onlyServantButtonLabel = this->fields.onlyServantButtonLabel;
-    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_10329/*"PHOTO_TARGET_SELECT_DIALOG_ONLY_SERVANT_BUTTON"*/, 0LL);
+    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_10330/*"PHOTO_TARGET_SELECT_DIALOG_ONLY_SERVANT_BUTTON"*/, 0LL);
     if ( !onlyServantButtonLabel
       || (UILabel__set_text(onlyServantButtonLabel, v13, 0LL),
           withMasterButtonLabel = this->fields.withMasterButtonLabel,
-          v13 = LocalizationManager__Get((System_String_o *)StringLiteral_10331/*"PHOTO_TARGET_SELECT_DIALOG_WITH_MASTER_BUTTON"*/, 0LL),
+          v13 = LocalizationManager__Get((System_String_o *)StringLiteral_10332/*"PHOTO_TARGET_SELECT_DIALOG_WITH_MASTER_BUTTON"*/, 0LL),
           !withMasterButtonLabel)
       || (UILabel__set_text(withMasterButtonLabel, v13, 0LL),
           cancelButtonLabel = this->fields.cancelButtonLabel,
-          v13 = LocalizationManager__Get((System_String_o *)StringLiteral_3733/*"COMMON_CONFIRM_CANCEL"*/, 0LL),
+          v13 = LocalizationManager__Get((System_String_o *)StringLiteral_3732/*"COMMON_CONFIRM_CANCEL"*/, 0LL),
           !cancelButtonLabel) )
     {
 LABEL_12:
-      sub_1B64324(v13);
+      sub_1B64ACC(v13, v14);
     }
     UILabel__set_text(cancelButtonLabel, v13, 0LL);
     this->fields.decideCallBack = callBack;
-    sub_1B6406C(&this->fields.decideCallBack);
+    sub_1B64814(&this->fields.decideCallBack);
     this->fields.state = 1;
-    v20 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v18, v19);
-    System_Action___ctor(v20, (Il2CppObject *)this, Method_PhotoTargetSelectDialog__Open_b__12_0__, 0LL);
-    BaseDialog__Open((BaseDialog_o *)this, v20, 0, 0LL);
+    v19 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+    System_Action___ctor(v19, (Il2CppObject *)this, Method_PhotoTargetSelectDialog__Open_b__12_0__, 0LL);
+    BaseDialog__Open((BaseDialog_o *)this, v19, 0, 0LL);
   }
 }
 
@@ -226,20 +225,21 @@ UnityEngine_GameObject_o *__fastcall PhotoTargetSelectDialog__get_closeBtnObject
         const MethodInfo *method)
 {
   UnityEngine_Object_o *cancelButton; // x20
-  UnityEngine_Component_o *v5; // x0
+  __int64 v4; // x1
+  UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_49F7F44 & 1) == 0 )
+  if ( (byte_49FA034 & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, method);
-    byte_49F7F44 = 1;
+    sub_1B64870(&UnityEngine_Object_TypeInfo, method);
+    byte_49FA034 = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(cancelButton, 0LL, 0LL) )
     return 0LL;
-  v5 = (UnityEngine_Component_o *)this->fields.cancelButton;
-  if ( !v5 )
-    sub_1B64324(0LL);
-  return UnityEngine_Component__get_gameObject(v5, 0LL);
+  v6 = (UnityEngine_Component_o *)this->fields.cancelButton;
+  if ( !v6 )
+    sub_1B64ACC(0LL, v4);
+  return UnityEngine_Component__get_gameObject(v6, 0LL);
 }

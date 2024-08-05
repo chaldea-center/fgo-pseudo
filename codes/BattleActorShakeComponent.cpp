@@ -8,13 +8,13 @@ void __fastcall BattleActorShakeComponent___ctor(BattleActorShakeComponent_o *th
 void __fastcall BattleActorShakeComponent__Update(BattleActorShakeComponent_o *this, const MethodInfo *method)
 {
   __int64 transform; // x0
+  __int64 v4; // x1
   float z; // s8
   float y; // s9
   float x; // s10
-  UnityEngine_Transform_o *v7; // x20
-  float v8; // s0
+  UnityEngine_Transform_o *v8; // x20
+  float v9; // s0
   float elapsedTime; // s8
-  __int64 v10; // x1
   UnityEngine_Transform_o *v11; // x19
   UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
 
@@ -22,10 +22,10 @@ void __fastcall BattleActorShakeComponent__Update(BattleActorShakeComponent_o *t
   {
     transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
     v11 = (UnityEngine_Transform_o *)transform;
-    if ( !byte_49F7111 )
+    if ( !byte_49F9201 )
     {
-      transform = sub_1B640C8(&UnityEngine_Vector3_TypeInfo, v10);
-      byte_49F7111 = 1;
+      transform = sub_1B64870(&UnityEngine_Vector3_TypeInfo, v4);
+      byte_49F9201 = 1;
     }
     if ( v11 )
     {
@@ -41,20 +41,20 @@ void __fastcall BattleActorShakeComponent__Update(BattleActorShakeComponent_o *t
     || (y = this->fields.vector.fields.y,
         z = this->fields.vector.fields.z,
         x = this->fields.vector.fields.x,
-        v7 = (UnityEngine_Transform_o *)transform,
-        v8 = UnityEngine_AnimationCurve__Evaluate(
+        v8 = (UnityEngine_Transform_o *)transform,
+        v9 = UnityEngine_AnimationCurve__Evaluate(
                this->fields.animationCurvel,
                this->fields.animationSpeed * this->fields.elapsedTime,
                0LL),
-        !v7) )
+        !v8) )
   {
 LABEL_11:
-    sub_1B64324(transform);
+    sub_1B64ACC(transform, v4);
   }
-  v12.fields.z = z * v8;
-  v12.fields.y = y * v8;
-  v12.fields.x = x * v8;
-  UnityEngine_Transform__set_localPosition(v7, v12, 0LL);
+  v12.fields.z = z * v9;
+  v12.fields.y = y * v9;
+  v12.fields.x = x * v9;
+  UnityEngine_Transform__set_localPosition(v8, v12, 0LL);
   elapsedTime = this->fields.elapsedTime;
   this->fields.elapsedTime = elapsedTime + UnityEngine_Time__get_deltaTime(0LL);
 }

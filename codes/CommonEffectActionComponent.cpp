@@ -6,27 +6,23 @@ void __fastcall CommonEffectActionComponent___ctor(CommonEffectActionComponent_o
 
 void __fastcall CommonEffectActionComponent__Awake(CommonEffectActionComponent_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  System_Collections_Generic_Dictionary_int__object__o *v5; // x20
-  int32_t v6; // w2
-  int32_t v7; // w3
+  __int64 v3; // x1
+  System_Collections_Generic_Dictionary_int__object__o *v4; // x20
+  int32_t v5; // w2
+  int32_t v6; // w3
 
-  if ( (byte_49FD721 & 1) == 0 )
+  if ( (byte_49FF81A & 1) == 0 )
   {
-    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_int__Action___ctor__, method);
-    sub_1B640C8(&System_Collections_Generic_Dictionary_int__Action__TypeInfo, v4);
-    byte_49FD721 = 1;
+    sub_1B64870(&Method_System_Collections_Generic_Dictionary_int__Action___ctor__, method);
+    sub_1B64870(&System_Collections_Generic_Dictionary_int__Action__TypeInfo, v3);
+    byte_49FF81A = 1;
   }
-  v5 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1B64314(
-                                                                 System_Collections_Generic_Dictionary_int__Action__TypeInfo,
-                                                                 method,
-                                                                 v2);
+  v4 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1B64ABC(System_Collections_Generic_Dictionary_int__Action__TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
-    v5,
-    (const MethodInfo_3122FB0 *)Method_System_Collections_Generic_Dictionary_int__Action___ctor__);
-  this->fields.eventActionList = (struct System_Collections_Generic_Dictionary_int__Action__o *)v5;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.eventActionList, (int32_t)v5, v6, v7);
+    v4,
+    (const MethodInfo_312528C *)Method_System_Collections_Generic_Dictionary_int__Action___ctor__);
+  this->fields.eventActionList = (struct System_Collections_Generic_Dictionary_int__Action__o *)v4;
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.eventActionList, (int32_t)v4, v5, v6);
 }
 
 
@@ -46,29 +42,30 @@ void __fastcall CommonEffectActionComponent__CallEventAction(
 {
   __int64 v5; // x1
   struct System_Collections_Generic_Dictionary_int__Action__o *eventActionList; // x0
-  struct System_Collections_Generic_Dictionary_int__Action__o *v7; // x0
+  __int64 v7; // x1
+  struct System_Collections_Generic_Dictionary_int__Action__o *v8; // x0
   Il2CppObject *Item; // x0
 
-  if ( (byte_49FD723 & 1) == 0 )
+  if ( (byte_49FF81C & 1) == 0 )
   {
-    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_int__Action__ContainsKey__, *(_QWORD *)&key);
-    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_int__Action__get_Item__, v5);
-    byte_49FD723 = 1;
+    sub_1B64870(&Method_System_Collections_Generic_Dictionary_int__Action__ContainsKey__, *(_QWORD *)&key);
+    sub_1B64870(&Method_System_Collections_Generic_Dictionary_int__Action__get_Item__, v5);
+    byte_49FF81C = 1;
   }
   eventActionList = this->fields.eventActionList;
   if ( eventActionList
     && System_Collections_Generic_Dictionary_int__object___ContainsKey(
          (System_Collections_Generic_Dictionary_int__object__o *)eventActionList,
          key,
-         (const MethodInfo_3123B78 *)Method_System_Collections_Generic_Dictionary_int__Action__ContainsKey__) )
+         (const MethodInfo_3125E54 *)Method_System_Collections_Generic_Dictionary_int__Action__ContainsKey__) )
   {
-    v7 = this->fields.eventActionList;
-    if ( !v7 )
-      sub_1B64324(0LL);
+    v8 = this->fields.eventActionList;
+    if ( !v8 )
+      sub_1B64ACC(0LL, v7);
     Item = System_Collections_Generic_Dictionary_int__object___get_Item(
-             (System_Collections_Generic_Dictionary_int__object__o *)v7,
+             (System_Collections_Generic_Dictionary_int__object__o *)v8,
              key,
-             (const MethodInfo_31238E4 *)Method_System_Collections_Generic_Dictionary_int__Action__get_Item__);
+             (const MethodInfo_3125BC0 *)Method_System_Collections_Generic_Dictionary_int__Action__get_Item__);
     ActionExtensions__Call((System_Action_o *)Item, 0LL);
   }
 }
@@ -90,7 +87,7 @@ void __fastcall CommonEffectActionComponent__SetEndAction(
   int32_t v3; // w3
 
   this->fields.endAction = endAction;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.endAction, (int32_t)endAction, (int32_t)method, v3);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.endAction, (int32_t)endAction, (int32_t)method, v3);
 }
 
 
@@ -103,10 +100,10 @@ void __fastcall CommonEffectActionComponent__SetEventAction(
 {
   struct System_Collections_Generic_Dictionary_int__Action__o *eventActionList; // x0
 
-  if ( (byte_49FD722 & 1) == 0 )
+  if ( (byte_49FF81B & 1) == 0 )
   {
-    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_int__Action__set_Item__, *(_QWORD *)&key);
-    byte_49FD722 = 1;
+    sub_1B64870(&Method_System_Collections_Generic_Dictionary_int__Action__set_Item__, *(_QWORD *)&key);
+    byte_49FF81B = 1;
   }
   eventActionList = this->fields.eventActionList;
   if ( eventActionList )
@@ -114,7 +111,7 @@ void __fastcall CommonEffectActionComponent__SetEventAction(
       (System_Collections_Generic_Dictionary_int__object__o *)eventActionList,
       key,
       (Il2CppObject *)action,
-      (const MethodInfo_3123970 *)Method_System_Collections_Generic_Dictionary_int__Action__set_Item__);
+      (const MethodInfo_3125C4C *)Method_System_Collections_Generic_Dictionary_int__Action__set_Item__);
 }
 
 
@@ -126,5 +123,5 @@ void __fastcall CommonEffectActionComponent__SetStartAction(
   int32_t v3; // w3
 
   this->fields.startAction = startAction;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.startAction, (int32_t)startAction, (int32_t)method, v3);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.startAction, (int32_t)startAction, (int32_t)method, v3);
 }

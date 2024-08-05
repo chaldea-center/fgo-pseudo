@@ -20,45 +20,43 @@ void __fastcall StonePurchaseListViewManager__CreateList(
   struct UIScrollView_o *scrollView; // x8
   int v11; // w9
   BankShopEntity_array *BuyableEntitiyList; // x20
-  __int64 v13; // x1
-  __int64 v14; // x2
-  int v15; // s0
-  float v16; // s1
-  int v17; // s2
-  __int64 v18; // x8
-  int v19; // s8
-  float v20; // s9
-  int v21; // s10
-  signed __int64 v22; // x21
-  BankShopEntity_o *v23; // x23
-  __int64 v24; // x22
-  const MethodInfo *v25; // x3
-  int32_t v26; // w2
-  int32_t v27; // w3
+  int v13; // s0
+  float v14; // s1
+  int v15; // s2
+  __int64 v16; // x8
+  int v17; // s8
+  float v18; // s9
+  int v19; // s10
+  signed __int64 v20; // x21
+  BankShopEntity_o *v21; // x23
+  __int64 v22; // x22
+  const MethodInfo *v23; // x3
+  int32_t v24; // w2
+  int32_t v25; // w3
   struct ListViewItemSeed_o *seed; // x8
   float y; // s12
-  struct ListViewItemSeed_o *v30; // x8
-  __int64 v31; // x8
-  _QWORD *v32; // x9
+  struct ListViewItemSeed_o *v28; // x8
+  __int64 v29; // x8
+  _QWORD *v30; // x9
   __int64 m_CancellationTokenSource_low; // x10
-  __int64 v34; // x8
-  struct ListViewItemSeed_o *v35; // x8
+  __int64 v32; // x8
+  struct ListViewItemSeed_o *v33; // x8
 
   v4 = this;
-  if ( (byte_49F9CA1 & 1) == 0 )
+  if ( (byte_49FBD96 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataManager_GetMaster_BankShopMaster___, *(_QWORD *)&kind);
-    sub_1B640C8(&DataManager_TypeInfo, v5);
-    sub_1B640C8(&Method_System_Collections_Generic_List_ListViewItem__Add__, v6);
-    sub_1B640C8(&Method_System_Collections_Generic_List_ListViewItem__get_Count__, v7);
-    this = (StonePurchaseListViewManager_o *)sub_1B640C8(&StonePurchaseListViewItem_TypeInfo, v8);
-    byte_49F9CA1 = 1;
+    sub_1B64870(&Method_DataManager_GetMaster_BankShopMaster___, *(_QWORD *)&kind);
+    sub_1B64870(&DataManager_TypeInfo, v5);
+    sub_1B64870(&Method_System_Collections_Generic_List_ListViewItem__Add__, v6);
+    sub_1B64870(&Method_System_Collections_Generic_List_ListViewItem__get_Count__, v7);
+    this = (StonePurchaseListViewManager_o *)sub_1B64870(&StonePurchaseListViewItem_TypeInfo, v8);
+    byte_49FBD96 = 1;
   }
   if ( !kind )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    this = (StonePurchaseListViewManager_o *)DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_BankShopMaster___);
+    this = (StonePurchaseListViewManager_o *)DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_BankShopMaster___);
     if ( this )
     {
       BuyableEntitiyList = BankShopMaster__GetBuyableEntitiyList((BankShopMaster_o *)this, 0LL);
@@ -66,40 +64,40 @@ void __fastcall StonePurchaseListViewManager__CreateList(
       this = (StonePurchaseListViewManager_o *)v4->fields.seed;
       if ( this )
       {
-        *(UnityEngine_Vector3_o *)&v15 = ListViewItemSeed__GetLocalPosition((ListViewItemSeed_o *)this, 0, 0LL);
+        *(UnityEngine_Vector3_o *)&v13 = ListViewItemSeed__GetLocalPosition((ListViewItemSeed_o *)this, 0, 0LL);
         if ( BuyableEntitiyList )
         {
-          v18 = *(_QWORD *)&BuyableEntitiyList->max_length;
-          if ( (int)v18 < 1 )
+          v16 = *(_QWORD *)&BuyableEntitiyList->max_length;
+          if ( (int)v16 < 1 )
             goto LABEL_4;
+          v17 = v13;
+          v18 = v14;
           v19 = v15;
-          v20 = v16;
-          v21 = v17;
-          v22 = 0LL;
+          v20 = 0LL;
           while ( 1 )
           {
-            if ( v22 >= (unsigned __int64)(unsigned int)v18 )
+            if ( v20 >= (unsigned __int64)(unsigned int)v16 )
 LABEL_39:
-              sub_1B6432C(this, v13);
-            v23 = BuyableEntitiyList->m_Items[v22];
-            v24 = sub_1B64314(StonePurchaseListViewItem_TypeInfo, v13, v14);
-            StonePurchaseListViewItem___ctor((StonePurchaseListViewItem_o *)v24, v22, v23, v25);
-            if ( !v24 )
+              sub_1B64AD4(this, *(_QWORD *)&kind);
+            v21 = BuyableEntitiyList->m_Items[v20];
+            v22 = sub_1B64ABC(StonePurchaseListViewItem_TypeInfo);
+            StonePurchaseListViewItem___ctor((StonePurchaseListViewItem_o *)v22, v20, v21, v23);
+            if ( !v22 )
               break;
-            this = *(StonePurchaseListViewManager_o **)(v24 + 112);
-            *(_DWORD *)(v24 + 92) = v19;
-            *(float *)(v24 + 96) = v20;
-            *(_DWORD *)(v24 + 100) = v21;
+            this = *(StonePurchaseListViewManager_o **)(v22 + 112);
+            *(_DWORD *)(v22 + 92) = v17;
+            *(float *)(v22 + 96) = v18;
+            *(_DWORD *)(v22 + 100) = v19;
             if ( !this )
               break;
             this = (StonePurchaseListViewManager_o *)BankShopEntity__HasFlag((BankShopEntity_o *)this, 2LL, 0LL);
             if ( ((unsigned __int8)this & 1) != 0 )
             {
-              if ( v22 >= (int)(*(_QWORD *)&BuyableEntitiyList->max_length - 1) )
+              if ( v20 >= (int)(*(_QWORD *)&BuyableEntitiyList->max_length - 1) )
                 goto LABEL_25;
-              if ( v22 + 1 >= (unsigned __int64)(unsigned int)*(_QWORD *)&BuyableEntitiyList->max_length )
+              if ( v20 + 1 >= (unsigned __int64)(unsigned int)*(_QWORD *)&BuyableEntitiyList->max_length )
                 goto LABEL_39;
-              this = (StonePurchaseListViewManager_o *)BuyableEntitiyList->m_Items[v22 + 1];
+              this = (StonePurchaseListViewManager_o *)BuyableEntitiyList->m_Items[v20 + 1];
               if ( !this )
                 break;
               this = (StonePurchaseListViewManager_o *)BankShopEntity__HasFlag((BankShopEntity_o *)this, 2LL, 0LL);
@@ -113,53 +111,53 @@ LABEL_25:
               }
               else
               {
-                v35 = v4->fields.seed;
-                if ( !v35 )
+                v33 = v4->fields.seed;
+                if ( !v33 )
                   break;
-                y = v35->fields.arrangementPich.fields.y + (float)(v4->fields.specialBoardOffset * 0.5);
+                y = v33->fields.arrangementPich.fields.y + (float)(v4->fields.specialBoardOffset * 0.5);
               }
             }
             else
             {
-              v30 = v4->fields.seed;
-              if ( !v30 )
+              v28 = v4->fields.seed;
+              if ( !v28 )
                 break;
-              y = v30->fields.arrangementPich.fields.y;
+              y = v28->fields.arrangementPich.fields.y;
             }
             this = (StonePurchaseListViewManager_o *)v4->fields.itemList;
             if ( !this )
               break;
-            v31 = *(_QWORD *)&this->fields.m_CachedPtr;
-            v32 = Method_System_Collections_Generic_List_ListViewItem__Add__;
+            v29 = *(_QWORD *)&this->fields.m_CachedPtr;
+            v30 = Method_System_Collections_Generic_List_ListViewItem__Add__;
             ++HIDWORD(this->fields.m_CancellationTokenSource);
-            if ( !v31 )
+            if ( !v29 )
               break;
             m_CancellationTokenSource_low = SLODWORD(this->fields.m_CancellationTokenSource);
-            if ( (unsigned int)m_CancellationTokenSource_low >= *(_DWORD *)(v31 + 24) )
+            if ( (unsigned int)m_CancellationTokenSource_low >= *(_DWORD *)(v29 + 24) )
             {
               System_Collections_Generic_List_object___AddWithResize(
                 (System_Collections_Generic_List_object__o *)this,
-                (Il2CppObject *)v24,
-                *(const MethodInfo_34AD6D4 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
+                (Il2CppObject *)v22,
+                *(const MethodInfo_34AF9B0 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
             }
             else
             {
-              v34 = v31 + 8 * m_CancellationTokenSource_low;
+              v32 = v29 + 8 * m_CancellationTokenSource_low;
               LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
-              *(_QWORD *)(v34 + 32) = v24;
-              sub_1B6406C((ServantStatusBattleListViewItem_o *)(v34 + 32), v24, v26, v27);
+              *(_QWORD *)(v32 + 32) = v22;
+              sub_1B64814((ServantStatusBattleListViewItem_o *)(v32 + 32), v22, v24, v25);
             }
-            LODWORD(v18) = BuyableEntitiyList->max_length;
-            ++v22;
-            v20 = v20 + y;
-            if ( v22 >= (int)v18 )
+            LODWORD(v16) = BuyableEntitiyList->max_length;
+            ++v20;
+            v18 = v18 + y;
+            if ( v20 >= (int)v16 )
               goto LABEL_4;
           }
         }
       }
     }
 LABEL_38:
-    sub_1B64324(this);
+    sub_1B64ACC(this, *(_QWORD *)&kind);
   }
 LABEL_4:
   itemList = v4->fields.itemList;
@@ -195,11 +193,11 @@ StonePurchaseListViewItem_o *__fastcall StonePurchaseListViewManager__GetItem(
   StonePurchaseListViewItem_o *result; // x0
   __int64 methodPtr_low; // x10
 
-  if ( (byte_49F9CA2 & 1) == 0 )
+  if ( (byte_49FBD97 & 1) == 0 )
   {
-    sub_1B640C8(&Method_System_Collections_Generic_List_ListViewItem__get_Item__, *(_QWORD *)&index);
-    sub_1B640C8(&StonePurchaseListViewItem_TypeInfo, v5);
-    byte_49F9CA2 = 1;
+    sub_1B64870(&Method_System_Collections_Generic_List_ListViewItem__get_Item__, *(_QWORD *)&index);
+    sub_1B64870(&StonePurchaseListViewItem_TypeInfo, v5);
+    byte_49FBD97 = 1;
   }
   result = (StonePurchaseListViewItem_o *)this->fields.itemList;
   if ( result )
@@ -207,7 +205,7 @@ StonePurchaseListViewItem_o *__fastcall StonePurchaseListViewManager__GetItem(
     result = (StonePurchaseListViewItem_o *)System_Collections_Generic_List_object___get_Item(
                                               (System_Collections_Generic_List_object__o *)result,
                                               index,
-                                              (const MethodInfo_34AD404 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                                              (const MethodInfo_34AF6E0 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
     if ( result )
     {
       methodPtr_low = LOBYTE(StonePurchaseListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
@@ -234,15 +232,16 @@ void __fastcall StonePurchaseListViewManager__OnClickListView(
   int32_t v3; // w3
   struct StonePurchaseListViewManager_CallbackFunc_o *callbackFunc; // x20
   __int64 v6; // x0
+  __int64 v7; // x1
   unsigned int Index; // w0
 
   callbackFunc = this->fields.callbackFunc;
   this->fields.callbackFunc = 0LL;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, 0, (int32_t)method, v3);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, 0, (int32_t)method, v3);
   if ( callbackFunc )
   {
     if ( !obj )
-      sub_1B64324(v6);
+      sub_1B64ACC(v6, v7);
     Index = ListViewObject__get_Index(obj, 0LL);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))callbackFunc->fields.m_target)(
       callbackFunc->fields.original_method_info,
@@ -258,15 +257,16 @@ void __fastcall StonePurchaseListViewManager__OnMoveEnd(StonePurchaseListViewMan
   bool v4; // vf
   int32_t v5; // w8
   UnityEngine_Object_o *scrollView; // x20
-  int32_t v7; // w2
-  int32_t v8; // w3
-  struct UIScrollView_o *v9; // x0
+  __int64 v7; // x1
+  int32_t v8; // w2
+  int32_t v9; // w3
+  struct UIScrollView_o *v10; // x0
   struct System_Action_o *callbackFunc2; // x20
 
-  if ( (byte_49F9CA6 & 1) == 0 )
+  if ( (byte_49FBD9B & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, method);
-    byte_49F9CA6 = 1;
+    sub_1B64870(&UnityEngine_Object_TypeInfo, method);
+    byte_49FBD9B = 1;
   }
   callbackCount = this->fields.callbackCount;
   v4 = __OFSUB__(callbackCount, 1);
@@ -281,17 +281,17 @@ void __fastcall StonePurchaseListViewManager__OnMoveEnd(StonePurchaseListViewMan
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality(scrollView, 0LL, 0LL) )
       {
-        v9 = this->fields.scrollView;
-        if ( !v9 )
-          sub_1B64324(0LL);
-        ((void (__fastcall *)(struct UIScrollView_o *, __int64, Il2CppMethodPointer))v9->klass->vtable._8_UpdateScrollbars.method)(
-          v9,
+        v10 = this->fields.scrollView;
+        if ( !v10 )
+          sub_1B64ACC(0LL, v7);
+        ((void (__fastcall *)(struct UIScrollView_o *, __int64, Il2CppMethodPointer))v10->klass->vtable._8_UpdateScrollbars.method)(
+          v10,
           1LL,
-          v9->klass->vtable._9_SetDragAmount.methodPtr);
+          v10->klass->vtable._9_SetDragAmount.methodPtr);
       }
       callbackFunc2 = this->fields.callbackFunc2;
       this->fields.callbackFunc2 = 0LL;
-      sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc2, 0, v7, v8);
+      sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc2, 0, v8, v9);
       if ( callbackFunc2 )
         ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))callbackFunc2->fields.m_target)(
           callbackFunc2->fields.original_method_info,
@@ -316,40 +316,40 @@ void __fastcall StonePurchaseListViewManager__RequestListObject(
   __int64 v12; // x1
   __int64 v13; // x1
   System_Collections_Generic_List_object__o *ObjectList; // x0
+  __int64 v15; // x1
   int32_t size; // w8
-  __int64 v16; // x1
-  __int64 v17; // x2
   Il2CppObject *current; // x21
-  System_Action_o *v19; // x22
-  __int64 v20; // x0
+  System_Action_o *v18; // x22
+  __int64 v19; // x0
+  __int64 v20; // x1
   const MethodInfo *v21; // x3
   System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_49F9CA4 & 1) == 0 )
+  if ( (byte_49FBD99 & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_TypeInfo, *(_QWORD *)&mode);
-    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_StonePurchaseListViewObject__Dispose__, v7);
-    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_StonePurchaseListViewObject__MoveNext__, v8);
-    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_StonePurchaseListViewObject__get_Current__, v9);
-    sub_1B640C8(&Method_System_Collections_Generic_List_StonePurchaseListViewObject__GetEnumerator__, v10);
-    sub_1B640C8(&Method_System_Collections_Generic_List_StonePurchaseListViewObject__get_Count__, v11);
-    sub_1B640C8(&Method_StonePurchaseListViewManager_OnMoveEnd__, v12);
-    sub_1B640C8(&StringLiteral_9890/*"OnMoveEnd"*/, v13);
-    byte_49F9CA4 = 1;
+    sub_1B64870(&System_Action_TypeInfo, *(_QWORD *)&mode);
+    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_StonePurchaseListViewObject__Dispose__, v7);
+    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_StonePurchaseListViewObject__MoveNext__, v8);
+    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_StonePurchaseListViewObject__get_Current__, v9);
+    sub_1B64870(&Method_System_Collections_Generic_List_StonePurchaseListViewObject__GetEnumerator__, v10);
+    sub_1B64870(&Method_System_Collections_Generic_List_StonePurchaseListViewObject__get_Count__, v11);
+    sub_1B64870(&Method_StonePurchaseListViewManager_OnMoveEnd__, v12);
+    sub_1B64870(&StringLiteral_9891/*"OnMoveEnd"*/, v13);
+    byte_49FBD99 = 1;
   }
   memset(&v22, 0, sizeof(v22));
   ObjectList = (System_Collections_Generic_List_object__o *)StonePurchaseListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, v15);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9890/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_9891/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -359,27 +359,27 @@ void __fastcall StonePurchaseListViewManager__RequestListObject(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v22,
       ObjectList,
-      (const MethodInfo_34AE26C *)Method_System_Collections_Generic_List_StonePurchaseListViewObject__GetEnumerator__);
+      (const MethodInfo_34B0548 *)Method_System_Collections_Generic_List_StonePurchaseListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v22,
-              (const MethodInfo_322A0B0 *)Method_System_Collections_Generic_List_Enumerator_StonePurchaseListViewObject__MoveNext__) )
+              (const MethodInfo_322C38C *)Method_System_Collections_Generic_List_Enumerator_StonePurchaseListViewObject__MoveNext__) )
     {
       current = v22.fields._current;
-      v19 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v16, v17);
-      System_Action___ctor(v19, (Il2CppObject *)this, Method_StonePurchaseListViewManager_OnMoveEnd__, 0LL);
+      v18 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+      System_Action___ctor(v18, (Il2CppObject *)this, Method_StonePurchaseListViewManager_OnMoveEnd__, 0LL);
       if ( !current )
-        sub_1B64324(v20);
-      StonePurchaseListViewObject__Init_34597548((StonePurchaseListViewObject_o *)current, mode, v19, delay, v21);
+        sub_1B64ACC(v19, v20);
+      StonePurchaseListViewObject__Init_34601156((StonePurchaseListViewObject_o *)current, mode, v18, delay, v21);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v22,
-      (const MethodInfo_322A0AC *)Method_System_Collections_Generic_List_Enumerator_StonePurchaseListViewObject__Dispose__);
+      (const MethodInfo_322C388 *)Method_System_Collections_Generic_List_Enumerator_StonePurchaseListViewObject__Dispose__);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall StonePurchaseListViewManager__RequestListObject_34596520(
+void __fastcall StonePurchaseListViewManager__RequestListObject_34600128(
         StonePurchaseListViewManager_o *this,
         int32_t mode,
         const MethodInfo *method)
@@ -392,40 +392,40 @@ void __fastcall StonePurchaseListViewManager__RequestListObject_34596520(
   __int64 v10; // x1
   __int64 v11; // x1
   System_Collections_Generic_List_object__o *ObjectList; // x0
+  __int64 v13; // x1
   int32_t size; // w8
-  __int64 v14; // x1
-  __int64 v15; // x2
   Il2CppObject *current; // x21
-  System_Action_o *v17; // x22
-  __int64 v18; // x0
+  System_Action_o *v16; // x22
+  __int64 v17; // x0
+  __int64 v18; // x1
   const MethodInfo *v19; // x3
   System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_49F9CA5 & 1) == 0 )
+  if ( (byte_49FBD9A & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_TypeInfo, *(_QWORD *)&mode);
-    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_StonePurchaseListViewObject__Dispose__, v5);
-    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_StonePurchaseListViewObject__MoveNext__, v6);
-    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_StonePurchaseListViewObject__get_Current__, v7);
-    sub_1B640C8(&Method_System_Collections_Generic_List_StonePurchaseListViewObject__GetEnumerator__, v8);
-    sub_1B640C8(&Method_System_Collections_Generic_List_StonePurchaseListViewObject__get_Count__, v9);
-    sub_1B640C8(&Method_StonePurchaseListViewManager_OnMoveEnd__, v10);
-    sub_1B640C8(&StringLiteral_9890/*"OnMoveEnd"*/, v11);
-    byte_49F9CA5 = 1;
+    sub_1B64870(&System_Action_TypeInfo, *(_QWORD *)&mode);
+    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_StonePurchaseListViewObject__Dispose__, v5);
+    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_StonePurchaseListViewObject__MoveNext__, v6);
+    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_StonePurchaseListViewObject__get_Current__, v7);
+    sub_1B64870(&Method_System_Collections_Generic_List_StonePurchaseListViewObject__GetEnumerator__, v8);
+    sub_1B64870(&Method_System_Collections_Generic_List_StonePurchaseListViewObject__get_Count__, v9);
+    sub_1B64870(&Method_StonePurchaseListViewManager_OnMoveEnd__, v10);
+    sub_1B64870(&StringLiteral_9891/*"OnMoveEnd"*/, v11);
+    byte_49FBD9A = 1;
   }
   memset(&v20, 0, sizeof(v20));
   ObjectList = (System_Collections_Generic_List_object__o *)StonePurchaseListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, v13);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9890/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_9891/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }
@@ -435,21 +435,21 @@ void __fastcall StonePurchaseListViewManager__RequestListObject_34596520(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v20,
       ObjectList,
-      (const MethodInfo_34AE26C *)Method_System_Collections_Generic_List_StonePurchaseListViewObject__GetEnumerator__);
+      (const MethodInfo_34B0548 *)Method_System_Collections_Generic_List_StonePurchaseListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v20,
-              (const MethodInfo_322A0B0 *)Method_System_Collections_Generic_List_Enumerator_StonePurchaseListViewObject__MoveNext__) )
+              (const MethodInfo_322C38C *)Method_System_Collections_Generic_List_Enumerator_StonePurchaseListViewObject__MoveNext__) )
     {
       current = v20.fields._current;
-      v17 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v14, v15);
-      System_Action___ctor(v17, (Il2CppObject *)this, Method_StonePurchaseListViewManager_OnMoveEnd__, 0LL);
+      v16 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+      System_Action___ctor(v16, (Il2CppObject *)this, Method_StonePurchaseListViewManager_OnMoveEnd__, 0LL);
       if ( !current )
-        sub_1B64324(v18);
-      StonePurchaseListViewObject__Init_34597632((StonePurchaseListViewObject_o *)current, mode, v17, v19);
+        sub_1B64ACC(v17, v18);
+      StonePurchaseListViewObject__Init_34601240((StonePurchaseListViewObject_o *)current, mode, v16, v19);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v20,
-      (const MethodInfo_322A0AC *)Method_System_Collections_Generic_List_Enumerator_StonePurchaseListViewObject__Dispose__);
+      (const MethodInfo_322C388 *)Method_System_Collections_Generic_List_Enumerator_StonePurchaseListViewObject__Dispose__);
   }
 }
 
@@ -463,16 +463,16 @@ void __fastcall StonePurchaseListViewManager__SetMode(
   const MethodInfo *v6; // x2
 
   this->fields.callbackFunc = callback;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     (int32_t)callback,
     (int32_t)method);
-  StonePurchaseListViewManager__SetMode_34596376(this, mode, v6);
+  StonePurchaseListViewManager__SetMode_34599984(this, mode, v6);
 }
 
 
-void __fastcall StonePurchaseListViewManager__SetMode_34596376(
+void __fastcall StonePurchaseListViewManager__SetMode_34599984(
         StonePurchaseListViewManager_o *this,
         int32_t mode,
         const MethodInfo *method)
@@ -483,11 +483,11 @@ void __fastcall StonePurchaseListViewManager__SetMode_34596376(
   this->fields.callbackCount = ListViewManager__get_ObjectSum((ListViewManager_o *)this, 0LL);
   ListViewManager__set_IsInput((ListViewManager_o *)this, mode == 1, 0LL);
   if ( mode == 1 )
-    StonePurchaseListViewManager__RequestListObject_34596520(this, 3, v5);
+    StonePurchaseListViewManager__RequestListObject_34600128(this, 3, v5);
 }
 
 
-void __fastcall StonePurchaseListViewManager__SetMode_34596468(
+void __fastcall StonePurchaseListViewManager__SetMode_34600076(
         StonePurchaseListViewManager_o *this,
         int32_t mode,
         System_Action_o *callback,
@@ -496,12 +496,12 @@ void __fastcall StonePurchaseListViewManager__SetMode_34596468(
   const MethodInfo *v6; // x2
 
   this->fields.callbackFunc2 = callback;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc2,
     (int32_t)callback,
     (int32_t)callback,
     (int32_t)method);
-  StonePurchaseListViewManager__SetMode_34596376(this, mode, v6);
+  StonePurchaseListViewManager__SetMode_34599984(this, mode, v6);
 }
 
 
@@ -516,23 +516,23 @@ void __fastcall StonePurchaseListViewManager__SetObjectItem(
   int32_t v7; // w1
 
   v5 = this;
-  if ( (byte_49F9CA3 & 1) == 0 )
+  if ( (byte_49FBD98 & 1) == 0 )
   {
-    this = (StonePurchaseListViewManager_o *)sub_1B640C8(&StonePurchaseListViewObject_TypeInfo, obj);
-    byte_49F9CA3 = 1;
+    this = (StonePurchaseListViewManager_o *)sub_1B64870(&StonePurchaseListViewObject_TypeInfo, obj);
+    byte_49FBD98 = 1;
   }
   if ( !obj
     || (methodPtr_low = LOBYTE(StonePurchaseListViewObject_TypeInfo->vtable._0_Equals.methodPtr),
         LOBYTE(obj->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low)
     || (StonePurchaseListViewObject_c *)obj->klass->_2.typeHierarchy[methodPtr_low - 1] != StonePurchaseListViewObject_TypeInfo )
   {
-    sub_1B64324(this);
+    sub_1B64ACC(this, obj);
   }
   if ( v5->fields.initMode == 1 )
     v7 = 3;
   else
     v7 = 2;
-  StonePurchaseListViewObject__Init_34596252((StonePurchaseListViewObject_o *)obj, v7, (const MethodInfo *)item);
+  StonePurchaseListViewObject__Init_34599860((StonePurchaseListViewObject_o *)obj, v7, (const MethodInfo *)item);
 }
 
 
@@ -550,10 +550,10 @@ void __fastcall StonePurchaseListViewManager__add_callbackFunc(
   StonePurchaseListViewManager_CallbackFunc_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_49F9C9B & 1) == 0 )
+  if ( (byte_49FBD90 & 1) == 0 )
   {
-    sub_1B640C8(&StonePurchaseListViewManager_CallbackFunc_TypeInfo, value);
-    byte_49F9C9B = 1;
+    sub_1B64870(&StonePurchaseListViewManager_CallbackFunc_TypeInfo, value);
+    byte_49FBD90 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -565,13 +565,13 @@ void __fastcall StonePurchaseListViewManager__add_callbackFunc(
       if ( (StonePurchaseListViewManager_CallbackFunc_c *)v7->klass != StonePurchaseListViewManager_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_1B9F5B8(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1B9FD60(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  sub_1B645E4(v7);
+  sub_1B64D8C(v7);
   StonePurchaseListViewManager__remove_callbackFunc(v10, v11, v12);
 }
 
@@ -590,10 +590,10 @@ void __fastcall StonePurchaseListViewManager__add_callbackFunc2(
   System_Action_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_49F9C9D & 1) == 0 )
+  if ( (byte_49FBD92 & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_TypeInfo, value);
-    byte_49F9C9D = 1;
+    sub_1B64870(&System_Action_TypeInfo, value);
+    byte_49FBD92 = 1;
   }
   callbackFunc2 = (System_Delegate_o *)this->fields.callbackFunc2;
   p_callbackFunc2 = &this->fields.callbackFunc2;
@@ -605,13 +605,13 @@ void __fastcall StonePurchaseListViewManager__add_callbackFunc2(
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_1B9F5B8(p_callbackFunc2, v7, callbackFunc2);
+    v8 = sub_1B9FD60(p_callbackFunc2, v7, callbackFunc2);
     v9 = callbackFunc2 == (System_Delegate_o *)v8;
     callbackFunc2 = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  sub_1B645E4(v7);
+  sub_1B64D8C(v7);
   StonePurchaseListViewManager__remove_callbackFunc2(v10, v11, v12);
 }
 
@@ -620,7 +620,7 @@ System_Collections_Generic_List_StonePurchaseListViewObject__o *__fastcall Stone
         StonePurchaseListViewManager_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
+  __int64 v3; // x1
   __int64 v4; // x1
   __int64 v5; // x1
   __int64 v6; // x1
@@ -628,123 +628,123 @@ System_Collections_Generic_List_StonePurchaseListViewObject__o *__fastcall Stone
   __int64 v8; // x1
   __int64 v9; // x1
   __int64 v10; // x1
-  __int64 v11; // x1
-  System_Collections_Generic_List_object__o *v12; // x19
+  System_Collections_Generic_List_object__o *v11; // x19
+  __int64 v12; // x1
   struct System_Collections_Generic_List_GameObject__o *objectList; // x0
   Il2CppObject *current; // x21
   _BOOL8 v15; // x0
+  __int64 v16; // x1
   Il2CppObject *Component_object; // x0
-  const MethodInfo *v17; // x1
-  Il2CppObject *v18; // x21
+  const MethodInfo *v18; // x1
+  Il2CppObject *v19; // x21
   ListViewItem_o *Item; // x0
-  int32_t v20; // w2
-  int32_t v21; // w3
-  _BOOL8 v22; // x0
+  __int64 v21; // x1
+  int32_t v22; // w2
+  int32_t v23; // w3
+  _BOOL8 v24; // x0
+  __int64 v25; // x1
   struct System_Object_array *items; // x8
-  _QWORD *v24; // x9
+  _QWORD *v27; // x9
   __int64 size; // x10
-  Il2CppClass **v26; // x0
-  System_Collections_Generic_List_Enumerator_object__o v28; // [xsp+8h] [xbp-88h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v29; // [xsp+20h] [xbp-70h] BYREF
+  Il2CppClass **v29; // x0
+  System_Collections_Generic_List_Enumerator_object__o v31; // [xsp+8h] [xbp-88h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v32; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_49F9CA0 & 1) == 0 )
+  if ( (byte_49FBD95 & 1) == 0 )
   {
-    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, method);
-    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v4);
-    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v5);
-    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___, v6);
-    sub_1B640C8(&Method_System_Collections_Generic_List_StonePurchaseListViewObject__Add__, v7);
-    sub_1B640C8(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v8);
-    sub_1B640C8(&Method_System_Collections_Generic_List_StonePurchaseListViewObject___ctor__, v9);
-    sub_1B640C8(&System_Collections_Generic_List_StonePurchaseListViewObject__TypeInfo, v10);
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, v11);
-    byte_49F9CA0 = 1;
+    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, method);
+    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v3);
+    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
+    sub_1B64870(&Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___, v5);
+    sub_1B64870(&Method_System_Collections_Generic_List_StonePurchaseListViewObject__Add__, v6);
+    sub_1B64870(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v7);
+    sub_1B64870(&Method_System_Collections_Generic_List_StonePurchaseListViewObject___ctor__, v8);
+    sub_1B64870(&System_Collections_Generic_List_StonePurchaseListViewObject__TypeInfo, v9);
+    sub_1B64870(&UnityEngine_Object_TypeInfo, v10);
+    byte_49FBD95 = 1;
   }
-  memset(&v29, 0, sizeof(v29));
-  v12 = (System_Collections_Generic_List_object__o *)sub_1B64314(
-                                                       System_Collections_Generic_List_StonePurchaseListViewObject__TypeInfo,
-                                                       method,
-                                                       v2);
+  memset(&v32, 0, sizeof(v32));
+  v11 = (System_Collections_Generic_List_object__o *)sub_1B64ABC(System_Collections_Generic_List_StonePurchaseListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v12,
-    (const MethodInfo_34ACEA0 *)Method_System_Collections_Generic_List_StonePurchaseListViewObject___ctor__);
+    v11,
+    (const MethodInfo_34AF17C *)Method_System_Collections_Generic_List_StonePurchaseListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, v12);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v28,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v31,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_34AE26C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-  v29 = v28;
+    (const MethodInfo_34B0548 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+  v32 = v31;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v29,
-            (const MethodInfo_322A0B0 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            &v32,
+            (const MethodInfo_322C38C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
-    current = v29.fields._current;
+    current = v32.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v15 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0LL, 0LL);
     if ( v15 )
     {
       if ( !current )
-        sub_1B64324(v15);
+        sub_1B64ACC(v15, v16);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___);
-      v18 = Component_object;
+                           (const MethodInfo_2E8A1B4 *)Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___);
+      v19 = Component_object;
       if ( !Component_object )
-        sub_1B64324(0LL);
+        sub_1B64ACC(0LL, v18);
       Item = (ListViewItem_o *)StonePurchaseListViewObject__GetItem(
                                  (StonePurchaseListViewObject_o *)Component_object,
-                                 v17);
+                                 v18);
       if ( !Item )
-        sub_1B64324(0LL);
+        sub_1B64ACC(0LL, v21);
       if ( Item->fields.isTermination )
       {
-        v22 = ListViewManager__ClippingItem_40389508((ListViewManager_o *)this, Item, 0LL);
-        if ( v22 )
+        v24 = ListViewManager__ClippingItem_40394112((ListViewManager_o *)this, Item, 0LL);
+        if ( v24 )
         {
-          if ( !v12 )
-            sub_1B64324(v22);
-          items = v12->fields._items;
-          v24 = Method_System_Collections_Generic_List_StonePurchaseListViewObject__Add__;
-          ++v12->fields._version;
+          if ( !v11 )
+            sub_1B64ACC(v24, v25);
+          items = v11->fields._items;
+          v27 = Method_System_Collections_Generic_List_StonePurchaseListViewObject__Add__;
+          ++v11->fields._version;
           if ( !items )
-            sub_1B64324(v22);
-          size = v12->fields._size;
+            sub_1B64ACC(v24, v25);
+          size = v11->fields._size;
           if ( (unsigned int)size < items->max_length )
             goto LABEL_17;
 LABEL_21:
           System_Collections_Generic_List_object___AddWithResize(
-            v12,
-            v18,
-            *(const MethodInfo_34AD6D4 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
+            v11,
+            v19,
+            *(const MethodInfo_34AF9B0 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
         }
       }
       else
       {
-        if ( !v12 )
-          sub_1B64324(Item);
-        items = v12->fields._items;
-        v24 = Method_System_Collections_Generic_List_StonePurchaseListViewObject__Add__;
-        ++v12->fields._version;
+        if ( !v11 )
+          sub_1B64ACC(Item, v21);
+        items = v11->fields._items;
+        v27 = Method_System_Collections_Generic_List_StonePurchaseListViewObject__Add__;
+        ++v11->fields._version;
         if ( !items )
-          sub_1B64324(Item);
-        size = v12->fields._size;
+          sub_1B64ACC(Item, v21);
+        size = v11->fields._size;
         if ( (unsigned int)size >= items->max_length )
           goto LABEL_21;
 LABEL_17:
-        v26 = &items->obj.klass + size;
-        v12->fields._size = size + 1;
-        v26[4] = (Il2CppClass *)v18;
-        sub_1B6406C((ServantStatusBattleListViewItem_o *)(v26 + 4), (int32_t)v18, v20, v21);
+        v29 = &items->obj.klass + size;
+        v11->fields._size = size + 1;
+        v29[4] = (Il2CppClass *)v19;
+        sub_1B64814((ServantStatusBattleListViewItem_o *)(v29 + 4), (int32_t)v19, v22, v23);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v29,
-    (const MethodInfo_322A0AC *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-  return (System_Collections_Generic_List_StonePurchaseListViewObject__o *)v12;
+    &v32,
+    (const MethodInfo_322C388 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+  return (System_Collections_Generic_List_StonePurchaseListViewObject__o *)v11;
 }
 
 
@@ -752,7 +752,7 @@ System_Collections_Generic_List_StonePurchaseListViewObject__o *__fastcall Stone
         StonePurchaseListViewManager_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
+  __int64 v3; // x1
   __int64 v4; // x1
   __int64 v5; // x1
   __int64 v6; // x1
@@ -760,95 +760,93 @@ System_Collections_Generic_List_StonePurchaseListViewObject__o *__fastcall Stone
   __int64 v8; // x1
   __int64 v9; // x1
   __int64 v10; // x1
-  __int64 v11; // x1
-  System_Collections_Generic_List_object__o *v12; // x19
+  System_Collections_Generic_List_object__o *v11; // x19
+  __int64 v12; // x1
   struct System_Collections_Generic_List_GameObject__o *objectList; // x0
   Il2CppObject *current; // x20
   _BOOL8 v15; // x0
+  __int64 v16; // x1
   Il2CppObject *Component_object; // x0
-  int32_t v17; // w2
-  int32_t v18; // w3
-  Il2CppObject *v19; // x1
+  int32_t v18; // w2
+  int32_t v19; // w3
+  Il2CppObject *v20; // x1
   struct System_Object_array *items; // x8
-  _QWORD *v21; // x9
+  _QWORD *v22; // x9
   __int64 size; // x10
-  Il2CppClass **v23; // x0
-  System_Collections_Generic_List_Enumerator_object__o v25; // [xsp+8h] [xbp-78h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v26; // [xsp+20h] [xbp-60h] BYREF
+  Il2CppClass **v24; // x0
+  System_Collections_Generic_List_Enumerator_object__o v26; // [xsp+8h] [xbp-78h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v27; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_49F9C9F & 1) == 0 )
+  if ( (byte_49FBD94 & 1) == 0 )
   {
-    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, method);
-    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v4);
-    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v5);
-    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___, v6);
-    sub_1B640C8(&Method_System_Collections_Generic_List_StonePurchaseListViewObject__Add__, v7);
-    sub_1B640C8(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v8);
-    sub_1B640C8(&Method_System_Collections_Generic_List_StonePurchaseListViewObject___ctor__, v9);
-    sub_1B640C8(&System_Collections_Generic_List_StonePurchaseListViewObject__TypeInfo, v10);
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, v11);
-    byte_49F9C9F = 1;
+    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, method);
+    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v3);
+    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
+    sub_1B64870(&Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___, v5);
+    sub_1B64870(&Method_System_Collections_Generic_List_StonePurchaseListViewObject__Add__, v6);
+    sub_1B64870(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v7);
+    sub_1B64870(&Method_System_Collections_Generic_List_StonePurchaseListViewObject___ctor__, v8);
+    sub_1B64870(&System_Collections_Generic_List_StonePurchaseListViewObject__TypeInfo, v9);
+    sub_1B64870(&UnityEngine_Object_TypeInfo, v10);
+    byte_49FBD94 = 1;
   }
-  memset(&v26, 0, sizeof(v26));
-  v12 = (System_Collections_Generic_List_object__o *)sub_1B64314(
-                                                       System_Collections_Generic_List_StonePurchaseListViewObject__TypeInfo,
-                                                       method,
-                                                       v2);
+  memset(&v27, 0, sizeof(v27));
+  v11 = (System_Collections_Generic_List_object__o *)sub_1B64ABC(System_Collections_Generic_List_StonePurchaseListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v12,
-    (const MethodInfo_34ACEA0 *)Method_System_Collections_Generic_List_StonePurchaseListViewObject___ctor__);
+    v11,
+    (const MethodInfo_34AF17C *)Method_System_Collections_Generic_List_StonePurchaseListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, v12);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v25,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v26,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_34AE26C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-  v26 = v25;
+    (const MethodInfo_34B0548 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+  v27 = v26;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v26,
-            (const MethodInfo_322A0B0 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            &v27,
+            (const MethodInfo_322C38C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
-    current = v26.fields._current;
+    current = v27.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v15 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0LL, 0LL);
     if ( v15 )
     {
       if ( !current )
-        sub_1B64324(v15);
+        sub_1B64ACC(v15, v16);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___);
-      v19 = Component_object;
-      if ( !v12 )
-        sub_1B64324(Component_object);
-      items = v12->fields._items;
-      v21 = Method_System_Collections_Generic_List_StonePurchaseListViewObject__Add__;
-      ++v12->fields._version;
+                           (const MethodInfo_2E8A1B4 *)Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___);
+      v20 = Component_object;
+      if ( !v11 )
+        sub_1B64ACC(Component_object, Component_object);
+      items = v11->fields._items;
+      v22 = Method_System_Collections_Generic_List_StonePurchaseListViewObject__Add__;
+      ++v11->fields._version;
       if ( !items )
-        sub_1B64324(Component_object);
-      size = v12->fields._size;
+        sub_1B64ACC(Component_object, Component_object);
+      size = v11->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
-          v12,
+          v11,
           Component_object,
-          *(const MethodInfo_34AD6D4 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+          *(const MethodInfo_34AF9B0 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
       }
       else
       {
-        v23 = &items->obj.klass + size;
-        v12->fields._size = size + 1;
-        v23[4] = (Il2CppClass *)v19;
-        sub_1B6406C((ServantStatusBattleListViewItem_o *)(v23 + 4), (int32_t)v19, v17, v18);
+        v24 = &items->obj.klass + size;
+        v11->fields._size = size + 1;
+        v24[4] = (Il2CppClass *)v20;
+        sub_1B64814((ServantStatusBattleListViewItem_o *)(v24 + 4), (int32_t)v20, v18, v19);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v26,
-    (const MethodInfo_322A0AC *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-  return (System_Collections_Generic_List_StonePurchaseListViewObject__o *)v12;
+    &v27,
+    (const MethodInfo_322C388 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+  return (System_Collections_Generic_List_StonePurchaseListViewObject__o *)v11;
 }
 
 
@@ -866,10 +864,10 @@ void __fastcall StonePurchaseListViewManager__remove_callbackFunc(
   System_Action_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_49F9C9C & 1) == 0 )
+  if ( (byte_49FBD91 & 1) == 0 )
   {
-    sub_1B640C8(&StonePurchaseListViewManager_CallbackFunc_TypeInfo, value);
-    byte_49F9C9C = 1;
+    sub_1B64870(&StonePurchaseListViewManager_CallbackFunc_TypeInfo, value);
+    byte_49FBD91 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -881,13 +879,13 @@ void __fastcall StonePurchaseListViewManager__remove_callbackFunc(
       if ( (StonePurchaseListViewManager_CallbackFunc_c *)v7->klass != StonePurchaseListViewManager_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_1B9F5B8(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1B9FD60(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  sub_1B645E4(v7);
+  sub_1B64D8C(v7);
   StonePurchaseListViewManager__add_callbackFunc2(v10, v11, v12);
 }
 
@@ -905,10 +903,10 @@ void __fastcall StonePurchaseListViewManager__remove_callbackFunc2(
   StonePurchaseListViewManager_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_49F9C9E & 1) == 0 )
+  if ( (byte_49FBD93 & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_TypeInfo, value);
-    byte_49F9C9E = 1;
+    sub_1B64870(&System_Action_TypeInfo, value);
+    byte_49FBD93 = 1;
   }
   callbackFunc2 = (System_Delegate_o *)this->fields.callbackFunc2;
   p_callbackFunc2 = &this->fields.callbackFunc2;
@@ -920,13 +918,13 @@ void __fastcall StonePurchaseListViewManager__remove_callbackFunc2(
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_1B9F5B8(p_callbackFunc2, v7, callbackFunc2);
+    v8 = sub_1B9FD60(p_callbackFunc2, v7, callbackFunc2);
     v9 = callbackFunc2 == (System_Delegate_o *)v8;
     callbackFunc2 = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  sub_1B645E4(v7);
+  sub_1B64D8C(v7);
   StonePurchaseListViewManager__get_ObjectList(v10, v11);
 }
 
@@ -949,15 +947,15 @@ void __fastcall StonePurchaseListViewManager_CallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B64188(v6) & 1) == 0 )
+  if ( (sub_1B64930(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B64340(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B641F0(v10, 0LL);
+      v10 = sub_1B64AE8(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B64998(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -969,9 +967,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19A93F4;
+  this->fields.m_target = (Il2CppObject *)sub_19A9B9C;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19A93AC;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19A9B54;
 }
 
 
@@ -987,14 +985,14 @@ System_IAsyncResult_o *__fastcall StonePurchaseListViewManager_CallbackFunc__Beg
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = result;
-  if ( (byte_49F9CA7 & 1) == 0 )
+  if ( (byte_49FBD9C & 1) == 0 )
   {
-    sub_1B640C8(&int_TypeInfo, *(_QWORD *)&result);
-    byte_49F9CA7 = 1;
+    sub_1B64870(&int_TypeInfo, *(_QWORD *)&result);
+    byte_49FBD9C = 1;
   }
   v9[1] = 0LL;
-  v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10);
-  return (System_IAsyncResult_o *)sub_1B6407C(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10, callback, object, method);
+  return (System_IAsyncResult_o *)sub_1B64824(this, v9, callback, object);
 }
 
 
@@ -1003,7 +1001,7 @@ void __fastcall StonePurchaseListViewManager_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B64080(result, 0LL, method);
+  sub_1B64828(result, 0LL, method);
 }
 
 

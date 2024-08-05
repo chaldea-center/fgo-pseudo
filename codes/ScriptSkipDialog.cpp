@@ -1,9 +1,9 @@
 void __fastcall ScriptSkipDialog___ctor(ScriptSkipDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FE061 & 1) == 0 )
+  if ( (byte_4A0015C & 1) == 0 )
   {
-    sub_1B640C8(&BaseDialog_TypeInfo, method);
-    byte_49FE061 = 1;
+    sub_1B64870(&BaseDialog_TypeInfo, method);
+    byte_4A0015C = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -15,64 +15,63 @@ void __fastcall ScriptSkipDialog__Close(ScriptSkipDialog_o *this, const MethodIn
 {
   const MethodInfo *v2; // x2
 
-  ScriptSkipDialog__Close_41384512(this, 0LL, v2);
+  ScriptSkipDialog__Close_41389644(this, 0LL, v2);
 }
 
 
-void __fastcall ScriptSkipDialog__Close_41384512(
+void __fastcall ScriptSkipDialog__Close_41389644(
         ScriptSkipDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
   int32_t v3; // w3
   __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x2
-  System_Action_o *v9; // x20
+  System_Action_o *v7; // x20
 
-  if ( (byte_49FE05C & 1) == 0 )
+  if ( (byte_4A00157 & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_TypeInfo, callback);
-    sub_1B640C8(&Method_ScriptSkipDialog_EndClose__, v6);
-    byte_49FE05C = 1;
+    sub_1B64870(&System_Action_TypeInfo, callback);
+    sub_1B64870(&Method_ScriptSkipDialog_EndClose__, v6);
+    byte_4A00157 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)callback,
     (int32_t)method,
     v3);
   this->fields.isButtonEnable = 0;
-  v9 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v7, v8);
-  System_Action___ctor(v9, (Il2CppObject *)this, Method_ScriptSkipDialog_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v9, 0LL);
+  v7 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  System_Action___ctor(v7, (Il2CppObject *)this, Method_ScriptSkipDialog_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
 }
 
 
 void __fastcall ScriptSkipDialog__EndClose(ScriptSkipDialog_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
-  int32_t v4; // w2
-  int32_t v5; // w3
+  __int64 v4; // x1
+  int32_t v5; // w2
+  int32_t v6; // w3
   ServantStatusBattleListViewItem_o *p_closeCallbackFunc; // x19
-  struct System_Action_o *v7; // x20
+  struct System_Action_o *v8; // x20
   struct System_Action_o *closeCallbackFunc; // t1
 
   ScriptSkipDialog__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = (ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc;
-  v7 = closeCallbackFunc;
+  v8 = closeCallbackFunc;
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1B6406C(p_closeCallbackFunc, 0, v4, v5);
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v7->fields.m_target)(
-      v7->fields.original_method_info,
-      *(_QWORD *)&v7->fields.extra_arg);
+    sub_1B64814(p_closeCallbackFunc, 0, v5, v6);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v8->fields.m_target)(
+      v8->fields.original_method_info,
+      *(_QWORD *)&v8->fields.extra_arg);
   }
 }
 
@@ -87,10 +86,10 @@ void __fastcall ScriptSkipDialog__Init(ScriptSkipDialog_o *this, const MethodInf
 {
   UILabel_o *messageLabel; // x0
 
-  if ( (byte_49FE05A & 1) == 0 )
+  if ( (byte_4A00155 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_1/*""*/, method);
-    byte_49FE05A = 1;
+    sub_1B64870(&StringLiteral_1/*""*/, method);
+    byte_4A00155 = 1;
   }
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
@@ -119,7 +118,7 @@ void __fastcall ScriptSkipDialog__Init(ScriptSkipDialog_o *this, const MethodInf
         (messageLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
 LABEL_12:
-    sub_1B64324(messageLabel);
+    sub_1B64ACC(messageLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)messageLabel, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -132,17 +131,17 @@ void __fastcall ScriptSkipDialog__OnClickCancel(ScriptSkipDialog_o *this, const 
   System_Reflection_MethodBase_o *v4; // x0
   struct ScriptSkipDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_49FE05E & 1) == 0 )
+  if ( (byte_4A00159 & 1) == 0 )
   {
-    sub_1B640C8(&Method_ScriptSkipDialog_OnClickCancel__, method);
-    byte_49FE05E = 1;
+    sub_1B64870(&Method_ScriptSkipDialog_OnClickCancel__, method);
+    byte_4A00159 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_ScriptSkipDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_ScriptSkipDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B640E0(Method_ScriptSkipDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64888(Method_ScriptSkipDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     clickFunc = this->fields.clickFunc;
     this->fields.isButtonEnable = 0;
@@ -161,17 +160,17 @@ void __fastcall ScriptSkipDialog__OnClickDecide(ScriptSkipDialog_o *this, const 
   System_Reflection_MethodBase_o *v4; // x0
   struct ScriptSkipDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_49FE05D & 1) == 0 )
+  if ( (byte_4A00158 & 1) == 0 )
   {
-    sub_1B640C8(&Method_ScriptSkipDialog_OnClickDecide__, method);
-    byte_49FE05D = 1;
+    sub_1B64870(&Method_ScriptSkipDialog_OnClickDecide__, method);
+    byte_4A00158 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_ScriptSkipDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_ScriptSkipDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B640E0(Method_ScriptSkipDialog_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64888(Method_ScriptSkipDialog_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0LL);
     clickFunc = this->fields.clickFunc;
     this->fields.isButtonEnable = 0;
@@ -190,17 +189,17 @@ void __fastcall ScriptSkipDialog__OnClickExit(ScriptSkipDialog_o *this, const Me
   System_Reflection_MethodBase_o *v4; // x0
   struct ScriptSkipDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_49FE05F & 1) == 0 )
+  if ( (byte_4A0015A & 1) == 0 )
   {
-    sub_1B640C8(&Method_ScriptSkipDialog_OnClickExit__, method);
-    byte_49FE05F = 1;
+    sub_1B64870(&Method_ScriptSkipDialog_OnClickExit__, method);
+    byte_4A0015A = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_ScriptSkipDialog_OnClickExit__;
     if ( (*((_BYTE *)Method_ScriptSkipDialog_OnClickExit__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B640E0(Method_ScriptSkipDialog_OnClickExit__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64888(Method_ScriptSkipDialog_OnClickExit__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0LL);
     clickFunc = this->fields.clickFunc;
     this->fields.isButtonEnable = 0;
@@ -219,16 +218,16 @@ void __fastcall ScriptSkipDialog__OnEnable(ScriptSkipDialog_o *this, const Metho
   UnityEngine_Transform_o *transform; // x0
   UnityEngine_Transform_o *v5; // x0
 
-  if ( (byte_49FE060 & 1) == 0 )
+  if ( (byte_4A0015B & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_15580/*"Window/NormalBase/CancelButton"*/, method);
-    sub_1B640C8(&StringLiteral_15576/*"Window/ExitBase/CancelButton"*/, v3);
-    byte_49FE060 = 1;
+    sub_1B64870(&StringLiteral_15582/*"Window/NormalBase/CancelButton"*/, method);
+    sub_1B64870(&StringLiteral_15578/*"Window/ExitBase/CancelButton"*/, v3);
+    byte_4A0015B = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  AndroidBackKeyManager__AddBackBtn_41446668(transform, (System_String_o *)StringLiteral_15580/*"Window/NormalBase/CancelButton"*/, 0LL);
+  AndroidBackKeyManager__AddBackBtn_41451800(transform, (System_String_o *)StringLiteral_15582/*"Window/NormalBase/CancelButton"*/, 0LL);
   v5 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  AndroidBackKeyManager__AddBackBtn_41446668(v5, (System_String_o *)StringLiteral_15576/*"Window/ExitBase/CancelButton"*/, 0LL);
+  AndroidBackKeyManager__AddBackBtn_41451800(v5, (System_String_o *)StringLiteral_15578/*"Window/ExitBase/CancelButton"*/, 0LL);
 }
 
 
@@ -245,31 +244,30 @@ void __fastcall ScriptSkipDialog__Open(
   __int64 v10; // x1
   __int64 v11; // x1
   __int64 v12; // x1
+  __int64 v13; // x1
   UnityEngine_GameObject_o *normalBase; // x0
   UILabel_o *message2Label; // x20
   UILabel_o *buttonDecide2Label; // x20
   UILabel_o *buttonCancel2Label; // x20
   UILabel_o *buttonExitLabel; // x20
-  __int64 *v18; // x8
+  __int64 *v19; // x8
   UILabel_o *messageLabel; // x20
   UILabel_o *buttonDecideLabel; // x20
-  __int64 v21; // x1
-  __int64 v22; // x2
-  System_Action_o *v23; // x20
+  System_Action_o *v22; // x20
 
-  if ( (byte_49FE05B & 1) == 0 )
+  if ( (byte_4A00156 & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_TypeInfo, isUseExit);
-    sub_1B640C8(&LocalizationManager_TypeInfo, v7);
-    sub_1B640C8(&Method_ScriptSkipDialog_EndOpen__, v8);
-    sub_1B640C8(&StringLiteral_11424/*"SCRIPT_ACTION_SKIP_CONFIRM_DETAIL"*/, v9);
-    sub_1B640C8(&StringLiteral_11425/*"SCRIPT_ACTION_SKIP_CONFIRM_EXIT"*/, v10);
-    sub_1B640C8(&StringLiteral_3737/*"COMMON_CONFIRM_NO"*/, v11);
-    sub_1B640C8(&StringLiteral_3740/*"COMMON_CONFIRM_YES"*/, v12);
-    byte_49FE05B = 1;
+    sub_1B64870(&System_Action_TypeInfo, isUseExit);
+    sub_1B64870(&LocalizationManager_TypeInfo, v7);
+    sub_1B64870(&Method_ScriptSkipDialog_EndOpen__, v8);
+    sub_1B64870(&StringLiteral_11427/*"SCRIPT_ACTION_SKIP_CONFIRM_DETAIL"*/, v9);
+    sub_1B64870(&StringLiteral_11428/*"SCRIPT_ACTION_SKIP_CONFIRM_EXIT"*/, v10);
+    sub_1B64870(&StringLiteral_3736/*"COMMON_CONFIRM_NO"*/, v11);
+    sub_1B64870(&StringLiteral_3740/*"COMMON_CONFIRM_YES"*/, v12);
+    byte_4A00156 = 1;
   }
   this->fields.clickFunc = func;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields.clickFunc,
     (int32_t)func,
     (int32_t)func,
@@ -287,7 +285,7 @@ void __fastcall ScriptSkipDialog__Open(
     message2Label = this->fields.message2Label;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    normalBase = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11424/*"SCRIPT_ACTION_SKIP_CONFIRM_DETAIL"*/, 0LL);
+    normalBase = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11427/*"SCRIPT_ACTION_SKIP_CONFIRM_DETAIL"*/, 0LL);
     if ( message2Label )
     {
       UILabel__set_text(message2Label, (System_String_o *)normalBase, 0LL);
@@ -297,23 +295,23 @@ void __fastcall ScriptSkipDialog__Open(
       {
         UILabel__set_text(buttonDecide2Label, (System_String_o *)normalBase, 0LL);
         buttonCancel2Label = this->fields.buttonCancel2Label;
-        normalBase = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3737/*"COMMON_CONFIRM_NO"*/, 0LL);
+        normalBase = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3736/*"COMMON_CONFIRM_NO"*/, 0LL);
         if ( buttonCancel2Label )
         {
           UILabel__set_text(buttonCancel2Label, (System_String_o *)normalBase, 0LL);
           buttonExitLabel = this->fields.buttonExitLabel;
-          v18 = &StringLiteral_11425/*"SCRIPT_ACTION_SKIP_CONFIRM_EXIT"*/;
+          v19 = &StringLiteral_11428/*"SCRIPT_ACTION_SKIP_CONFIRM_EXIT"*/;
           goto LABEL_17;
         }
       }
     }
 LABEL_19:
-    sub_1B64324(normalBase);
+    sub_1B64ACC(normalBase, v13);
   }
   messageLabel = this->fields.messageLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  normalBase = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11424/*"SCRIPT_ACTION_SKIP_CONFIRM_DETAIL"*/, 0LL);
+  normalBase = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11427/*"SCRIPT_ACTION_SKIP_CONFIRM_DETAIL"*/, 0LL);
   if ( !messageLabel )
     goto LABEL_19;
   UILabel__set_text(messageLabel, (System_String_o *)normalBase, 0LL);
@@ -323,16 +321,16 @@ LABEL_19:
     goto LABEL_19;
   UILabel__set_text(buttonDecideLabel, (System_String_o *)normalBase, 0LL);
   buttonExitLabel = this->fields.buttonCancelLabel;
-  v18 = &StringLiteral_3737/*"COMMON_CONFIRM_NO"*/;
+  v19 = &StringLiteral_3736/*"COMMON_CONFIRM_NO"*/;
 LABEL_17:
-  normalBase = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)*v18, 0LL);
+  normalBase = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)*v19, 0LL);
   if ( !buttonExitLabel )
     goto LABEL_19;
   UILabel__set_text(buttonExitLabel, (System_String_o *)normalBase, 0LL);
   this->fields.isButtonEnable = 0;
-  v23 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v21, v22);
-  System_Action___ctor(v23, (Il2CppObject *)this, Method_ScriptSkipDialog_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v23, 0, 0LL);
+  v22 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  System_Action___ctor(v22, (Il2CppObject *)this, Method_ScriptSkipDialog_EndOpen__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v22, 0, 0LL);
 }
 
 
@@ -354,15 +352,15 @@ void __fastcall ScriptSkipDialog_ClickDelegate___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B64188(v6) & 1) == 0 )
+  if ( (sub_1B64930(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B64340(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B641F0(v10, 0LL);
+      v10 = sub_1B64AE8(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B64998(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -374,9 +372,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19ADAC0;
+  this->fields.m_target = (Il2CppObject *)sub_19AE268;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19ADA78;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19AE220;
 }
 
 
@@ -392,14 +390,14 @@ System_IAsyncResult_o *__fastcall ScriptSkipDialog_ClickDelegate__BeginInvoke(
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = result;
-  if ( (byte_49FE062 & 1) == 0 )
+  if ( (byte_4A0015D & 1) == 0 )
   {
-    sub_1B640C8(&ScriptSkipDialog_ResultKind_TypeInfo, *(_QWORD *)&result);
-    byte_49FE062 = 1;
+    sub_1B64870(&ScriptSkipDialog_ResultKind_TypeInfo, *(_QWORD *)&result);
+    byte_4A0015D = 1;
   }
   v9[1] = 0LL;
-  v9[0] = j_il2cpp_value_box_0(ScriptSkipDialog_ResultKind_TypeInfo, &v10);
-  return (System_IAsyncResult_o *)sub_1B6407C(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(ScriptSkipDialog_ResultKind_TypeInfo, &v10, callback, object, method);
+  return (System_IAsyncResult_o *)sub_1B64824(this, v9, callback, object);
 }
 
 
@@ -408,7 +406,7 @@ void __fastcall ScriptSkipDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B64080(result, 0LL, method);
+  sub_1B64828(result, 0LL, method);
 }
 
 

@@ -7,31 +7,29 @@ bool __fastcall FollowerRecommendSupportSetupRequest__beginRequest(
   __int64 v6; // x1
   MiniMessagePack_MiniMessagePacker_o *v7; // x21
   __int64 v8; // x0
-  System_Byte_array *v9; // x20
-  System_String_o *v10; // x0
-  const MethodInfo *v11; // x3
-  const MethodInfo *v12; // x1
+  __int64 v9; // x1
+  System_Byte_array *v10; // x20
+  System_String_o *v11; // x0
+  const MethodInfo *v12; // x3
+  const MethodInfo *v13; // x1
 
-  if ( (byte_49FDC9B & 1) == 0 )
+  if ( (byte_49FFD96 & 1) == 0 )
   {
-    sub_1B640C8(&System_Convert_TypeInfo, updateDeckData);
-    sub_1B640C8(&MiniMessagePack_MiniMessagePacker_TypeInfo, v5);
-    sub_1B640C8(&StringLiteral_22714/*"recommendDeckData"*/, v6);
-    byte_49FDC9B = 1;
+    sub_1B64870(&System_Convert_TypeInfo, updateDeckData);
+    sub_1B64870(&MiniMessagePack_MiniMessagePacker_TypeInfo, v5);
+    sub_1B64870(&StringLiteral_22717/*"recommendDeckData"*/, v6);
+    byte_49FFD96 = 1;
   }
-  v7 = (MiniMessagePack_MiniMessagePacker_o *)sub_1B64314(
-                                                MiniMessagePack_MiniMessagePacker_TypeInfo,
-                                                updateDeckData,
-                                                method);
+  v7 = (MiniMessagePack_MiniMessagePacker_o *)sub_1B64ABC(MiniMessagePack_MiniMessagePacker_TypeInfo);
   MiniMessagePack_MiniMessagePacker___ctor(v7, 0LL);
   if ( !v7 )
-    sub_1B64324(v8);
-  v9 = MiniMessagePack_MiniMessagePacker__PackClass(v7, &updateDeckData->obj, 0LL);
+    sub_1B64ACC(v8, v9);
+  v10 = MiniMessagePack_MiniMessagePacker__PackClass(v7, &updateDeckData->obj, 0LL);
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  v10 = System_Convert__ToBase64String(v9, 0LL);
-  RequestBase__addField_40850936((RequestBase_o *)this, (System_String_o *)StringLiteral_22714/*"recommendDeckData"*/, v10, v11);
-  RequestBase__beginRequest((RequestBase_o *)this, v12);
+  v11 = System_Convert__ToBase64String(v10, 0LL);
+  RequestBase__addField_40856068((RequestBase_o *)this, (System_String_o *)StringLiteral_22717/*"recommendDeckData"*/, v11, v12);
+  RequestBase__beginRequest((RequestBase_o *)this, v13);
   return 1;
 }
 
@@ -43,16 +41,16 @@ System_String_o *__fastcall FollowerRecommendSupportSetupRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_49FDC9A & 1) == 0 )
+  if ( (byte_49FFD95 & 1) == 0 )
   {
-    sub_1B640C8(&NetworkManager_TypeInfo, method);
-    sub_1B640C8(&StringLiteral_19425/*"follower/setupRecommendSupport"*/, v2);
-    byte_49FDC9A = 1;
+    sub_1B64870(&NetworkManager_TypeInfo, method);
+    sub_1B64870(&StringLiteral_19428/*"follower/setupRecommendSupport"*/, v2);
+    byte_49FFD95 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61375396(BaseUrl, (System_String_o *)StringLiteral_19425/*"follower/setupRecommendSupport"*/, 0LL);
+  return System_String__Concat_61383576(BaseUrl, (System_String_o *)StringLiteral_19428/*"follower/setupRecommendSupport"*/, 0LL);
 }
 
 
@@ -68,12 +66,12 @@ void __fastcall FollowerRecommendSupportSetupRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v10; // x9
 
-  if ( (byte_49FDC9C & 1) == 0 )
+  if ( (byte_49FFD97 & 1) == 0 )
   {
-    sub_1B640C8(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1B640C8(&StringLiteral_22137/*"ok"*/, v5);
-    sub_1B640C8(&StringLiteral_21968/*"ng"*/, v6);
-    byte_49FDC9C = 1;
+    sub_1B64870(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1B64870(&StringLiteral_22140/*"ok"*/, v5);
+    sub_1B64870(&StringLiteral_21971/*"ng"*/, v6);
+    byte_49FFD97 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -83,14 +81,14 @@ void __fastcall FollowerRecommendSupportSetupRequest__requestCompleted(
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v10 = &StringLiteral_22137/*"ok"*/;
+    v10 = &StringLiteral_22140/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v10 = &StringLiteral_21968/*"ng"*/;
+    v10 = &StringLiteral_21971/*"ng"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,

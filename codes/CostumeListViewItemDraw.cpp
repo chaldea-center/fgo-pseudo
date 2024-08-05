@@ -15,28 +15,28 @@ void __fastcall CostumeListViewItemDraw___cctor(const MethodInfo *method)
   int32_t v13; // w2
   int32_t v14; // w3
 
-  if ( (byte_49FFD48 & 1) == 0 )
+  if ( (byte_4A01E4A & 1) == 0 )
   {
-    sub_1B640C8(&CostumeListViewItemDraw_TypeInfo, v1);
-    sub_1B640C8(&StringLiteral_20051/*"icon_costume_01"*/, v4);
-    sub_1B640C8(&StringLiteral_20053/*"icon_costume_03"*/, v5);
-    sub_1B640C8(&StringLiteral_20052/*"icon_costume_02"*/, v6);
-    byte_49FFD48 = 1;
+    sub_1B64870(&CostumeListViewItemDraw_TypeInfo, v1);
+    sub_1B64870(&StringLiteral_20054/*"icon_costume_01"*/, v4);
+    sub_1B64870(&StringLiteral_20056/*"icon_costume_03"*/, v5);
+    sub_1B64870(&StringLiteral_20055/*"icon_costume_02"*/, v6);
+    byte_4A01E4A = 1;
   }
-  CostumeListViewItemDraw_TypeInfo->static_fields->RELEASE_OK_MARK = (struct System_String_o *)StringLiteral_20051/*"icon_costume_01"*/;
-  sub_1B6406C(
+  CostumeListViewItemDraw_TypeInfo->static_fields->RELEASE_OK_MARK = (struct System_String_o *)StringLiteral_20054/*"icon_costume_01"*/;
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)CostumeListViewItemDraw_TypeInfo->static_fields,
-    StringLiteral_20051/*"icon_costume_01"*/,
+    StringLiteral_20054/*"icon_costume_01"*/,
     v2,
     v3);
-  v7 = StringLiteral_20052/*"icon_costume_02"*/;
+  v7 = StringLiteral_20055/*"icon_costume_02"*/;
   static_fields = CostumeListViewItemDraw_TypeInfo->static_fields;
-  static_fields->RELEASE_NG_MARK = (struct System_String_o *)StringLiteral_20052/*"icon_costume_02"*/;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&static_fields->RELEASE_NG_MARK, v7, v9, v10);
-  v11 = StringLiteral_20053/*"icon_costume_03"*/;
+  static_fields->RELEASE_NG_MARK = (struct System_String_o *)StringLiteral_20055/*"icon_costume_02"*/;
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&static_fields->RELEASE_NG_MARK, v7, v9, v10);
+  v11 = StringLiteral_20056/*"icon_costume_03"*/;
   v12 = CostumeListViewItemDraw_TypeInfo->static_fields;
-  v12->RELEASE_ALREADY_GET_MARK = (struct System_String_o *)StringLiteral_20053/*"icon_costume_03"*/;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&v12->RELEASE_ALREADY_GET_MARK, v11, v13, v14);
+  v12->RELEASE_ALREADY_GET_MARK = (struct System_String_o *)StringLiteral_20056/*"icon_costume_03"*/;
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&v12->RELEASE_ALREADY_GET_MARK, v11, v13, v14);
 }
 
 
@@ -56,24 +56,25 @@ void __fastcall CostumeListViewItemDraw__SetCostumeIcon(
   __int64 v6; // x1
   __int64 v7; // x1
   UnityEngine_Object_o *costomIcon; // x21
+  __int64 v9; // x1
   UISprite_o *transform; // x0
-  int32_t v10; // w20
+  int32_t v11; // w20
   int32_t iconId; // t1
-  UISprite_o *v12; // x21
-  System_String_o *v13; // x0
-  System_String_o *v14; // x20
-  UnityEngine_Transform_o *v15; // x20
-  int v16; // s0
-  float v17; // s1
-  int v18; // s2
+  UISprite_o *v13; // x21
+  System_String_o *v14; // x0
+  System_String_o *v15; // x20
+  UnityEngine_Transform_o *v16; // x20
+  int v17; // s0
+  float v18; // s1
+  int v19; // s2
 
-  if ( (byte_49FFD47 & 1) == 0 )
+  if ( (byte_4A01E49 & 1) == 0 )
   {
-    sub_1B640C8(&AtlasManager_TypeInfo, svtCostumeEntity);
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, v5);
-    sub_1B640C8(&StringLiteral_23618/*"svt_costume_icon_"*/, v6);
-    sub_1B640C8(&StringLiteral_1/*""*/, v7);
-    byte_49FFD47 = 1;
+    sub_1B64870(&AtlasManager_TypeInfo, svtCostumeEntity);
+    sub_1B64870(&UnityEngine_Object_TypeInfo, v5);
+    sub_1B64870(&StringLiteral_23622/*"svt_costume_icon_"*/, v6);
+    sub_1B64870(&StringLiteral_1/*""*/, v7);
+    byte_4A01E49 = 1;
   }
   costomIcon = (UnityEngine_Object_o *)this->fields.costomIcon;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -91,15 +92,15 @@ void __fastcall CostumeListViewItemDraw__SetCostumeIcon(
     if ( svtCostumeEntity )
     {
       iconId = svtCostumeEntity->fields.iconId;
-      v10 = (_DWORD)svtCostumeEntity + 92;
+      v11 = (_DWORD)svtCostumeEntity + 92;
       if ( iconId >= 1 )
       {
-        v12 = this->fields.costomIcon;
-        v13 = System_Int32__ToString(v10, 0LL);
-        v14 = System_String__Concat_61375396((System_String_o *)StringLiteral_23618/*"svt_costume_icon_"*/, v13, 0LL);
+        v13 = this->fields.costomIcon;
+        v14 = System_Int32__ToString(v11, 0LL);
+        v15 = System_String__Concat_61383576((System_String_o *)StringLiteral_23622/*"svt_costume_icon_"*/, v14, 0LL);
         if ( !AtlasManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-        if ( AtlasManager__SetEventSprite(v12, v14, 0LL) )
+        if ( AtlasManager__SetEventSprite(v13, v15, 0LL) )
         {
           transform = this->fields.costomIcon;
           if ( transform )
@@ -121,7 +122,7 @@ void __fastcall CostumeListViewItemDraw__SetCostumeIcon(
                                               0LL);
                   if ( this->fields.canReleaseMark )
                   {
-                    v15 = (UnityEngine_Transform_o *)transform;
+                    v16 = (UnityEngine_Transform_o *)transform;
                     transform = (UISprite_o *)UnityEngine_Component__get_gameObject(
                                                 (UnityEngine_Component_o *)this->fields.canReleaseMark,
                                                 0LL);
@@ -130,14 +131,14 @@ void __fastcall CostumeListViewItemDraw__SetCostumeIcon(
                       transform = (UISprite_o *)UnityEngine_GameObject__get_activeInHierarchy(
                                                   (UnityEngine_GameObject_o *)transform,
                                                   0LL);
-                      if ( v15 )
+                      if ( v16 )
                       {
-                        v16 = -1036779520;
-                        v17 = -32.0;
+                        v17 = -1036779520;
+                        v18 = -32.0;
                         if ( ((unsigned __int8)transform & 1) == 0 )
-                          v17 = -45.0;
-                        v18 = 0;
-                        UnityEngine_Transform__set_localPosition(v15, *(UnityEngine_Vector3_o *)&v16, 0LL);
+                          v18 = -45.0;
+                        v19 = 0;
+                        UnityEngine_Transform__set_localPosition(v16, *(UnityEngine_Vector3_o *)&v17, 0LL);
                         transform = this->fields.costomIcon;
                         if ( transform )
                         {
@@ -152,7 +153,7 @@ void __fastcall CostumeListViewItemDraw__SetCostumeIcon(
             }
           }
 LABEL_25:
-          sub_1B64324(transform);
+          sub_1B64ACC(transform, v9);
         }
       }
     }
@@ -167,13 +168,14 @@ void __fastcall CostumeListViewItemDraw__SetInput(
 {
   __int64 v5; // x1
   UnityEngine_Object_o *baseButton; // x21
+  __int64 v7; // x1
   UILabel_o *maskOnText; // x0
 
-  if ( (byte_49FFD46 & 1) == 0 )
+  if ( (byte_4A01E48 & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, item);
-    sub_1B640C8(&StringLiteral_1/*""*/, v5);
-    byte_49FFD46 = 1;
+    sub_1B64870(&UnityEngine_Object_TypeInfo, item);
+    sub_1B64870(&StringLiteral_1/*""*/, v5);
+    byte_4A01E48 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -216,7 +218,7 @@ void __fastcall CostumeListViewItemDraw__SetInput(
         }
       }
 LABEL_20:
-      sub_1B64324(maskOnText);
+      sub_1B64ACC(maskOnText, v7);
     }
     maskOnText = (UILabel_o *)this->fields.maskSprite;
     if ( !maskOnText )
@@ -283,22 +285,22 @@ void __fastcall CostumeListViewItemDraw__SetItem(
   UnityEngine_Vector3_o v48; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v49; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_49FFD45 & 1) == 0 )
+  if ( (byte_4A01E47 & 1) == 0 )
   {
-    sub_1B640C8(&AtlasManager_TypeInfo, item);
-    sub_1B640C8(&CostumeListViewItemDraw_TypeInfo, v7);
-    sub_1B640C8(&LocalizationManager_TypeInfo, v8);
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, v9);
-    sub_1B640C8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v10);
-    sub_1B640C8(&StringLiteral_453/*"#E6FF00"*/, v11);
-    sub_1B640C8(&StringLiteral_456/*"#FF8E00"*/, v12);
-    sub_1B640C8(&StringLiteral_455/*"#FEEF99"*/, v13);
-    sub_1B640C8(&StringLiteral_3868/*"COSTUME_CAN_RELEASE"*/, v14);
-    sub_1B640C8(&StringLiteral_5540/*"EVENT_COMBINE_COSTUME"*/, v15);
-    sub_1B640C8(&StringLiteral_1/*""*/, v16);
-    sub_1B640C8(&StringLiteral_450/*"#E1A545"*/, v17);
-    sub_1B640C8(&StringLiteral_5541/*"EVENT_COMBINE_COSTUME_ITEM"*/, v18);
-    byte_49FFD45 = 1;
+    sub_1B64870(&AtlasManager_TypeInfo, item);
+    sub_1B64870(&CostumeListViewItemDraw_TypeInfo, v7);
+    sub_1B64870(&LocalizationManager_TypeInfo, v8);
+    sub_1B64870(&UnityEngine_Object_TypeInfo, v9);
+    sub_1B64870(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v10);
+    sub_1B64870(&StringLiteral_453/*"#E6FF00"*/, v11);
+    sub_1B64870(&StringLiteral_456/*"#FF8E00"*/, v12);
+    sub_1B64870(&StringLiteral_455/*"#FEEF99"*/, v13);
+    sub_1B64870(&StringLiteral_3868/*"COSTUME_CAN_RELEASE"*/, v14);
+    sub_1B64870(&StringLiteral_5540/*"EVENT_COMBINE_COSTUME"*/, v15);
+    sub_1B64870(&StringLiteral_1/*""*/, v16);
+    sub_1B64870(&StringLiteral_450/*"#E1A545"*/, v17);
+    sub_1B64870(&StringLiteral_5541/*"EVENT_COMBINE_COSTUME_ITEM"*/, v18);
+    byte_4A01E47 = 1;
   }
   *(_QWORD *)&color.fields.r = 0LL;
   *(_QWORD *)&color.fields.b = 0LL;
@@ -618,7 +620,7 @@ LABEL_74:
                               j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
                             *(_QWORD *)&v47.fields.currentCryptoKey = v38;
                             *(_QWORD *)&v47.fields.fakeValue = v37;
-                            costumeNameLb = (UILabel_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46171608(
+                            costumeNameLb = (UILabel_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46180532(
                                                            v47,
                                                            0LL);
                             v39 = item->fields.costumeEntity;
@@ -645,6 +647,6 @@ LABEL_74:
       }
     }
 LABEL_83:
-    sub_1B64324(costumeNameLb);
+    sub_1B64ACC(costumeNameLb, item);
   }
 }

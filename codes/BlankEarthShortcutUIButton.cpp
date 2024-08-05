@@ -69,7 +69,7 @@ void __fastcall BlankEarthShortcutUIButton__SetPressAction(
   int32_t v3; // w3
 
   this->fields.onPressedAction = pressAction;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields.onPressedAction,
     (int32_t)pressAction,
     (int32_t)method,

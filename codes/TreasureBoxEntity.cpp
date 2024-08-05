@@ -1,14 +1,14 @@
 void __fastcall TreasureBoxEntity___ctor(TreasureBoxEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FCE5D & 1) == 0 )
+  if ( (byte_49FEF56 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataEntityBase_int___ctor__, method);
-    byte_49FCE5D = 1;
+    sub_1B64870(&Method_DataEntityBase_int___ctor__, method);
+    byte_49FEF56 = 1;
   }
   this->fields.consumeItemId = -1;
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_30D3CA4 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_30D5F80 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -27,18 +27,18 @@ int32_t __fastcall TreasureBoxEntity__get_ConsumeItemId(TreasureBoxEntity_o *thi
   struct System_String_o *MasterName_k__BackingField; // x8
   struct System_Collections_ObjectModel_ObservableCollection_DataEntityBase__o *list; // x8
 
-  if ( (byte_49FCE5C & 1) == 0 )
+  if ( (byte_49FEF55 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataManager_GetMaster_CommonConsumeMaster___, method);
-    sub_1B640C8(&DataManager_TypeInfo, v3);
-    byte_49FCE5C = 1;
+    sub_1B64870(&Method_DataManager_GetMaster_CommonConsumeMaster___, method);
+    sub_1B64870(&DataManager_TypeInfo, v3);
+    byte_49FEF55 = 1;
   }
   result = this->fields.consumeItemId;
   if ( result <= 0 )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (CommonConsumeMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_CommonConsumeMaster___);
+    Master_object = (CommonConsumeMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_CommonConsumeMaster___);
     if ( Master_object )
     {
       Master_object = (CommonConsumeMaster_o *)CommonConsumeMaster__GetIdEntityList(
@@ -51,7 +51,7 @@ int32_t __fastcall TreasureBoxEntity__get_ConsumeItemId(TreasureBoxEntity_o *thi
         goto LABEL_13;
       }
       if ( !(_DWORD)MasterName_k__BackingField )
-        sub_1B6432C(Master_object, v6);
+        sub_1B64AD4(Master_object, v6);
       list = Master_object->fields.list;
       if ( list )
       {
@@ -61,7 +61,7 @@ LABEL_13:
         return result;
       }
     }
-    sub_1B64324(Master_object);
+    sub_1B64ACC(Master_object, v6);
   }
   return result;
 }

@@ -1,13 +1,13 @@
 void __fastcall EventFatigueRecoveryEntity___ctor(EventFatigueRecoveryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FC3A7 & 1) == 0 )
+  if ( (byte_49FE49F & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataEntityBase_string___ctor__, method);
-    byte_49FC3A7 = 1;
+    sub_1B64870(&Method_DataEntityBase_string___ctor__, method);
+    byte_49FE49F = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30D3D1C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D5FF8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall EventFatigueRecoveryEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_49FC3A5 & 1) == 0 )
+  if ( (byte_49FE49D & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&priority);
-    byte_49FC3A5 = 1;
+    sub_1B64870(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&priority);
+    byte_49FE49D = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            eventId,
            priority,
-           (const MethodInfo_2E37610 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2E398EC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -43,22 +43,23 @@ bool __fastcall EventFatigueRecoveryEntity__IsOpen(EventFatigueRecoveryEntity_o 
 {
   __int64 v3; // x1
   Il2CppObject *Instance; // x0
+  __int64 v5; // x1
 
-  if ( (byte_49FC3A6 & 1) == 0 )
+  if ( (byte_49FE49E & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataManager_GetMasterData_CommonReleaseMaster___, method);
-    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_49FC3A6 = 1;
+    sub_1B64870(&Method_DataManager_GetMasterData_CommonReleaseMaster___, method);
+    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_49FE49E = 1;
   }
   if ( this->fields.commonReleaseId < 1 )
     return 1;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL )
+                     (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL )
   {
-    sub_1B64324(Instance);
+    sub_1B64ACC(Instance, v5);
   }
   return CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Instance, this->fields.commonReleaseId, 0LL, 0, 0LL);
 }

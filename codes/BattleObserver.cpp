@@ -13,7 +13,7 @@ void __fastcall BattleObserver__Add(BattleObserver_o *this, BattleSubject_o *sub
   {
     BattleSubject__Add(subject, this, method);
     this->fields.battleSubject = subject;
-    sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)subject, v5, v6);
+    sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)subject, v5, v6);
   }
 }
 

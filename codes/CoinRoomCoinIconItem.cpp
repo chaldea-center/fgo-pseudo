@@ -18,40 +18,41 @@ void __fastcall CoinRoomCoinIconItem___ctor(
   IconLabelInfo_o *v18; // x23
   int32_t v19; // w2
   int32_t v20; // w3
+  __int64 v21; // x1
   int64_t iconLabelInfo; // x0
   Il2CppObject *Master_object; // x22
   UserServantCollectionEntity_o *EntityDefinitely; // x22
-  ServantLimitMaster_o *v24; // x23
-  __int64 v25; // x24
-  __int64 v26; // x25
-  const MethodInfo *v27; // x2
+  ServantLimitMaster_o *v25; // x23
+  __int64 v26; // x24
+  __int64 v27; // x25
+  const MethodInfo *v28; // x2
   struct ServantEntity_o *svtEntity; // x8
-  const MethodInfo *v29; // x1
-  ServantLimitEntity_o *v30; // [xsp+8h] [xbp-58h] BYREF
+  const MethodInfo *v30; // x1
+  ServantLimitEntity_o *v31; // [xsp+8h] [xbp-58h] BYREF
   Il2CppObject *entitya; // [xsp+18h] [xbp-48h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v32; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v33; // 0:x0.16
 
-  if ( (byte_49FF8A1 & 1) == 0 )
+  if ( (byte_4A019A1 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataManager_GetMaster_ServantLimitMaster___, *(_QWORD *)&index);
-    sub_1B640C8(&Method_DataManager_GetMaster_ServantMaster___, v9);
-    sub_1B640C8(&Method_DataManager_GetMaster_SvtCoinMaster___, v10);
-    sub_1B640C8(&Method_DataManager_GetMaster_UserServantCollectionMaster___, v11);
-    sub_1B640C8(&DataManager_TypeInfo, v12);
-    sub_1B640C8(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v13);
-    sub_1B640C8(&Method_DataMasterBase_SvtCoinMaster__SvtCoinEntity__int__TryGetEntity__, v14);
-    sub_1B640C8(&IconLabelInfo_TypeInfo, v15);
-    sub_1B640C8(&NetworkManager_TypeInfo, v16);
-    sub_1B640C8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v17);
-    byte_49FF8A1 = 1;
+    sub_1B64870(&Method_DataManager_GetMaster_ServantLimitMaster___, *(_QWORD *)&index);
+    sub_1B64870(&Method_DataManager_GetMaster_ServantMaster___, v9);
+    sub_1B64870(&Method_DataManager_GetMaster_SvtCoinMaster___, v10);
+    sub_1B64870(&Method_DataManager_GetMaster_UserServantCollectionMaster___, v11);
+    sub_1B64870(&DataManager_TypeInfo, v12);
+    sub_1B64870(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v13);
+    sub_1B64870(&Method_DataMasterBase_SvtCoinMaster__SvtCoinEntity__int__TryGetEntity__, v14);
+    sub_1B64870(&IconLabelInfo_TypeInfo, v15);
+    sub_1B64870(&NetworkManager_TypeInfo, v16);
+    sub_1B64870(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v17);
+    byte_4A019A1 = 1;
   }
   entitya = 0LL;
-  v30 = 0LL;
-  v18 = (IconLabelInfo_o *)sub_1B64314(IconLabelInfo_TypeInfo, *(_QWORD *)&index, entity);
+  v31 = 0LL;
+  v18 = (IconLabelInfo_o *)sub_1B64ABC(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v18, 0LL);
   this->fields.iconLabelInfo = v18;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.iconLabelInfo, (int32_t)v18, v19, v20);
-  ListViewItem___ctor_40370988((ListViewItem_o *)this, index, 0LL);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.iconLabelInfo, (int32_t)v18, v19, v20);
+  ListViewItem___ctor_40375592((ListViewItem_o *)this, index, 0LL);
   iconLabelInfo = (int64_t)this->fields.iconLabelInfo;
   if ( !iconLabelInfo )
     goto LABEL_33;
@@ -62,14 +63,14 @@ void __fastcall CoinRoomCoinIconItem___ctor(
   this->fields._num_k__BackingField = entity->fields.num;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  iconLabelInfo = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_SvtCoinMaster___);
+  iconLabelInfo = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_SvtCoinMaster___);
   if ( !iconLabelInfo )
     goto LABEL_33;
   iconLabelInfo = DataMasterBase_object__object__int___TryGetEntity(
                     (DataMasterBase_TMaster__TEntity__PKType__o *)iconLabelInfo,
                     &entitya,
                     entity->fields.svtId,
-                    (const MethodInfo_30D3EF8 *)Method_DataMasterBase_SvtCoinMaster__SvtCoinEntity__int__TryGetEntity__);
+                    (const MethodInfo_30D61D4 *)Method_DataMasterBase_SvtCoinMaster__SvtCoinEntity__int__TryGetEntity__);
   if ( (iconLabelInfo & 1) != 0 )
   {
     if ( !entitya )
@@ -78,7 +79,7 @@ void __fastcall CoinRoomCoinIconItem___ctor(
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   iconLabelInfo = NetworkManager__get_UserId(0LL);
@@ -89,42 +90,42 @@ void __fastcall CoinRoomCoinIconItem___ctor(
                        iconLabelInfo,
                        entity->fields.svtId,
                        0LL);
-  iconLabelInfo = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_ServantLimitMaster___);
+  iconLabelInfo = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_ServantLimitMaster___);
   if ( !EntityDefinitely )
     goto LABEL_33;
-  v24 = (ServantLimitMaster_o *)iconLabelInfo;
-  v26 = *(_QWORD *)&EntityDefinitely->fields.svtId.fields.currentCryptoKey;
-  v25 = *(_QWORD *)&EntityDefinitely->fields.svtId.fields.fakeValue;
+  v25 = (ServantLimitMaster_o *)iconLabelInfo;
+  v27 = *(_QWORD *)&EntityDefinitely->fields.svtId.fields.currentCryptoKey;
+  v26 = *(_QWORD *)&EntityDefinitely->fields.svtId.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v32.fields.currentCryptoKey = v26;
-  *(_QWORD *)&v32.fields.fakeValue = v25;
-  iconLabelInfo = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46171608(v32, 0LL);
-  if ( !v24 )
+  *(_QWORD *)&v33.fields.currentCryptoKey = v27;
+  *(_QWORD *)&v33.fields.fakeValue = v26;
+  iconLabelInfo = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46180532(v33, 0LL);
+  if ( !v25 )
     goto LABEL_33;
   iconLabelInfo = ServantLimitMaster__TryGetEntity(
-                    v24,
-                    &v30,
+                    v25,
+                    &v31,
                     iconLabelInfo,
                     EntityDefinitely->fields.maxLimitCount,
                     0LL);
   if ( (iconLabelInfo & 1) != 0 )
   {
-    if ( !v30 )
+    if ( !v31 )
       goto LABEL_33;
-    this->fields._rarity_k__BackingField = v30->fields.rarity;
+    this->fields._rarity_k__BackingField = v31->fields.rarity;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  iconLabelInfo = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_ServantMaster___);
+  iconLabelInfo = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_ServantMaster___);
   if ( !iconLabelInfo )
 LABEL_33:
-    sub_1B64324(iconLabelInfo);
+    sub_1B64ACC(iconLabelInfo, v21);
   iconLabelInfo = DataMasterBase_object__object__int___TryGetEntity(
                     (DataMasterBase_TMaster__TEntity__PKType__o *)iconLabelInfo,
                     (Il2CppObject **)&this->fields.svtEntity,
                     entity->fields.svtId,
-                    (const MethodInfo_30D3EF8 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+                    (const MethodInfo_30D61D4 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
   svtEntity = this->fields.svtEntity;
   if ( (iconLabelInfo & 1) != 0 )
   {
@@ -132,7 +133,7 @@ LABEL_33:
     {
       this->fields._collectionNo_k__BackingField = svtEntity->fields.collectionNo;
 LABEL_30:
-      ServantEntity__getName_39327948(svtEntity, &this->fields.sortRuby, EntityDefinitely->fields.maxLimitCount, 0LL);
+      ServantEntity__getName_39332456(svtEntity, &this->fields.sortRuby, EntityDefinitely->fields.maxLimitCount, 0LL);
       goto LABEL_31;
     }
     goto LABEL_33;
@@ -140,11 +141,11 @@ LABEL_30:
   if ( svtEntity )
     goto LABEL_30;
 LABEL_31:
-  this->fields._isCanStrength_k__BackingField = CoinRoomCoinIconItem__IsCanStrength_44189068(
+  this->fields._isCanStrength_k__BackingField = CoinRoomCoinIconItem__IsCanStrength_44197372(
                                                   this->fields._svtId_k__BackingField,
                                                   0,
-                                                  v27);
-  this->fields._isHeroine_k__BackingField = CoinRoomCoinIconItem__IsHeroine(this, v29);
+                                                  v28);
+  this->fields._isHeroine_k__BackingField = CoinRoomCoinIconItem__IsHeroine(this, v30);
   this->fields._isTouchEnabled_k__BackingField = 1;
   this->fields._isDisplayNumber_k__BackingField = isDisplayNumber;
 }
@@ -159,21 +160,20 @@ bool __fastcall CoinRoomCoinIconItem__IsAppendSkillAllMaxLv(
   __int64 v4; // x1
   int64_t currentCryptoKey; // x20
   int64_t hiddenValue; // x21
-  __int64 v7; // x1
-  int v8; // w8
-  UserServantEntity_o *v9; // x19
-  unsigned int v10; // w22
+  int v7; // w8
+  UserServantEntity_o *v8; // x19
+  unsigned int v9; // w22
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
   v2 = usrSvtEntity;
-  if ( (byte_49FF8A4 & 1) == 0 )
+  if ( (byte_4A019A4 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataManager_GetMaster_SkillMaster___, method);
-    sub_1B640C8(&DataManager_TypeInfo, v3);
-    usrSvtEntity = (UserServantEntity_o *)sub_1B640C8(
+    sub_1B64870(&Method_DataManager_GetMaster_SkillMaster___, method);
+    sub_1B64870(&DataManager_TypeInfo, v3);
+    usrSvtEntity = (UserServantEntity_o *)sub_1B64870(
                                             &Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__,
                                             v4);
-    byte_49FF8A4 = 1;
+    byte_4A019A4 = 1;
   }
   entity = 0LL;
   if ( !v2 )
@@ -185,37 +185,37 @@ bool __fastcall CoinRoomCoinIconItem__IsAppendSkillAllMaxLv(
   hiddenValue = usrSvtEntity->fields.id.fields.hiddenValue;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  usrSvtEntity = (UserServantEntity_o *)DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_SkillMaster___);
+  usrSvtEntity = (UserServantEntity_o *)DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_SkillMaster___);
   if ( !currentCryptoKey )
 LABEL_20:
-    sub_1B64324(usrSvtEntity);
-  v8 = *(_DWORD *)(currentCryptoKey + 24);
-  if ( v8 < 1 )
+    sub_1B64ACC(usrSvtEntity, method);
+  v7 = *(_DWORD *)(currentCryptoKey + 24);
+  if ( v7 < 1 )
     return 1;
-  v9 = usrSvtEntity;
-  v10 = 0;
+  v8 = usrSvtEntity;
+  v9 = 0;
   while ( 1 )
   {
     if ( !hiddenValue )
       goto LABEL_20;
-    if ( v10 >= *(_DWORD *)(hiddenValue + 24) )
+    if ( v9 >= *(_DWORD *)(hiddenValue + 24) )
       goto LABEL_21;
-    if ( *(int *)(hiddenValue + 4LL * (int)v10 + 32) < 1 )
+    if ( *(int *)(hiddenValue + 4LL * (int)v9 + 32) < 1 )
       return 0;
-    if ( v10 >= v8 )
+    if ( v9 >= v7 )
 LABEL_21:
-      sub_1B6432C(usrSvtEntity, v7);
-    if ( !v9 )
+      sub_1B64AD4(usrSvtEntity, method);
+    if ( !v8 )
       goto LABEL_20;
     usrSvtEntity = (UserServantEntity_o *)DataMasterBase_object__object__int___TryGetEntity(
-                                            (DataMasterBase_TMaster__TEntity__PKType__o *)v9,
+                                            (DataMasterBase_TMaster__TEntity__PKType__o *)v8,
                                             &entity,
-                                            *(_DWORD *)(currentCryptoKey + 4LL * (int)v10 + 32),
-                                            (const MethodInfo_30D3EF8 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
+                                            *(_DWORD *)(currentCryptoKey + 4LL * (int)v9 + 32),
+                                            (const MethodInfo_30D61D4 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
     if ( ((unsigned __int8)usrSvtEntity & 1) == 0 )
       return 0;
-    v8 = *(_DWORD *)(currentCryptoKey + 24);
-    if ( (int)++v10 >= v8 )
+    v7 = *(_DWORD *)(currentCryptoKey + 24);
+    if ( (int)++v9 >= v7 )
       return 1;
   }
 }
@@ -225,12 +225,12 @@ bool __fastcall CoinRoomCoinIconItem__IsCanStrength(CoinRoomCoinIconItem_o *this
 {
   const MethodInfo *v2; // x2
 
-  return CoinRoomCoinIconItem__IsCanStrength_44189068(this->fields._svtId_k__BackingField, 0, v2);
+  return CoinRoomCoinIconItem__IsCanStrength_44197372(this->fields._svtId_k__BackingField, 0, v2);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall CoinRoomCoinIconItem__IsCanStrength_44189068(
+bool __fastcall CoinRoomCoinIconItem__IsCanStrength_44197372(
         int32_t svtId,
         bool isWarningDialog,
         const MethodInfo *method)
@@ -249,18 +249,18 @@ bool __fastcall CoinRoomCoinIconItem__IsCanStrength_44189068(
   __int64 v16; // x1
   __int64 v17; // x19
   DataMasterBase_TMaster__TEntity__PKType__o *Master_object; // x0
-  bool v19; // w20
+  __int64 v19; // x1
+  bool v20; // w20
   int32_t rarity; // w8
-  char v21; // w21
+  char v22; // w21
   System_Collections_Generic_IEnumerable_TSource__o *AllList; // x20
-  __int64 v23; // x1
-  __int64 v24; // x2
-  System_Func_object__bool__o *v25; // x21
+  System_Func_object__bool__o *v24; // x21
   DataMasterBase_TMaster__TEntity__PKType__c *klass; // x8
-  DataMasterBase_TMaster__TEntity__PKType__o *v27; // x19
-  __int64 v28; // x9
+  DataMasterBase_TMaster__TEntity__PKType__o *v26; // x19
+  __int64 v27; // x9
   int32_t *p_offset; // x10
-  __int64 v30; // x0
+  __int64 v29; // x0
+  __int64 v30; // x1
   __int64 v31; // x19
   __int64 v32; // x8
   __int64 v33; // x9
@@ -272,36 +272,37 @@ bool __fastcall CoinRoomCoinIconItem__IsCanStrength_44189068(
   int *v39; // x10
   __int64 v40; // x0
   UserServantEntity_o *v41; // x0
-  UserServantEntity_o *v42; // x20
+  __int64 v42; // x1
+  UserServantEntity_o *v43; // x20
   _BOOL4 isExceedLvMax; // w22
-  const MethodInfo *v44; // x1
-  __int64 v45; // x8
-  __int64 v46; // x9
-  int *v47; // x10
-  __int64 v48; // x0
-  ServantLimitEntity_o *v50; // [xsp+0h] [xbp-50h] BYREF
+  const MethodInfo *v45; // x1
+  __int64 v46; // x8
+  __int64 v47; // x9
+  int *v48; // x10
+  __int64 v49; // x0
+  ServantLimitEntity_o *v51; // [xsp+0h] [xbp-50h] BYREF
   Il2CppObject *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_49FF8A3 & 1) == 0 )
+  if ( (byte_4A019A3 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataManager_GetMaster_ServantLimitMaster___, isWarningDialog);
-    sub_1B640C8(&Method_DataManager_GetMaster_ServantMaster___, v5);
-    sub_1B640C8(&Method_DataManager_GetMaster_UserServantMaster___, v6);
-    sub_1B640C8(&DataManager_TypeInfo, v7);
-    sub_1B640C8(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v8);
-    sub_1B640C8(&Method_System_Linq_Enumerable_Where_UserServantEntity___, v9);
-    sub_1B640C8(&System_Func_UserServantEntity__bool__TypeInfo, v10);
-    sub_1B640C8(&System_IDisposable_TypeInfo, v11);
-    sub_1B640C8(&System_Collections_Generic_IEnumerable_UserServantEntity__TypeInfo, v12);
-    sub_1B640C8(&System_Collections_Generic_IEnumerator_UserServantEntity__TypeInfo, v13);
-    sub_1B640C8(&System_Collections_IEnumerator_TypeInfo, v14);
-    sub_1B640C8(&Method_CoinRoomCoinIconItem___c__DisplayClass62_0__IsCanStrength_b__0__, v15);
-    sub_1B640C8(&CoinRoomCoinIconItem___c__DisplayClass62_0_TypeInfo, v16);
-    byte_49FF8A3 = 1;
+    sub_1B64870(&Method_DataManager_GetMaster_ServantLimitMaster___, isWarningDialog);
+    sub_1B64870(&Method_DataManager_GetMaster_ServantMaster___, v5);
+    sub_1B64870(&Method_DataManager_GetMaster_UserServantMaster___, v6);
+    sub_1B64870(&DataManager_TypeInfo, v7);
+    sub_1B64870(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v8);
+    sub_1B64870(&Method_System_Linq_Enumerable_Where_UserServantEntity___, v9);
+    sub_1B64870(&System_Func_UserServantEntity__bool__TypeInfo, v10);
+    sub_1B64870(&System_IDisposable_TypeInfo, v11);
+    sub_1B64870(&System_Collections_Generic_IEnumerable_UserServantEntity__TypeInfo, v12);
+    sub_1B64870(&System_Collections_Generic_IEnumerator_UserServantEntity__TypeInfo, v13);
+    sub_1B64870(&System_Collections_IEnumerator_TypeInfo, v14);
+    sub_1B64870(&Method_CoinRoomCoinIconItem___c__DisplayClass62_0__IsCanStrength_b__0__, v15);
+    sub_1B64870(&CoinRoomCoinIconItem___c__DisplayClass62_0_TypeInfo, v16);
+    byte_4A019A3 = 1;
   }
-  v50 = 0LL;
+  v51 = 0LL;
   entity = 0LL;
-  v17 = sub_1B64314(CoinRoomCoinIconItem___c__DisplayClass62_0_TypeInfo, isWarningDialog, method);
+  v17 = sub_1B64ABC(CoinRoomCoinIconItem___c__DisplayClass62_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v17, 0LL);
   if ( !v17 )
     goto LABEL_56;
@@ -310,94 +311,94 @@ bool __fastcall CoinRoomCoinIconItem__IsCanStrength_44189068(
     goto LABEL_21;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_ServantMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_ServantMaster___);
   if ( !Master_object )
 LABEL_56:
-    sub_1B64324(Master_object);
+    sub_1B64ACC(Master_object, v19);
   if ( DataMasterBase_object__object__int___TryGetEntity(
          Master_object,
          &entity,
          *(_DWORD *)(v17 + 16),
-         (const MethodInfo_30D3EF8 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
+         (const MethodInfo_30D61D4 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
   {
     Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)entity;
     if ( !entity )
       goto LABEL_56;
-    v19 = ServantEntity__IsCoinRoomCheck((ServantEntity_o *)entity, 0LL);
+    v20 = ServantEntity__IsCoinRoomCheck((ServantEntity_o *)entity, 0LL);
   }
   else
   {
-    v19 = 0;
+    v20 = 0;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_ServantLimitMaster___);
-  if ( !v19 )
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_ServantLimitMaster___);
+  if ( !v20 )
   {
     if ( !Master_object )
       goto LABEL_56;
     Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)ServantLimitMaster__TryGetEntity(
                                                                     (ServantLimitMaster_o *)Master_object,
-                                                                    &v50,
+                                                                    &v51,
                                                                     *(_DWORD *)(v17 + 16),
                                                                     0,
                                                                     0LL);
     if ( ((unsigned __int8)Master_object & 1) != 0 )
     {
-      if ( !v50 )
+      if ( !v51 )
         goto LABEL_56;
-      rarity = v50->fields.rarity;
+      rarity = v51->fields.rarity;
       if ( rarity && rarity < 4 )
       {
-        v21 = 0;
-        return v21 & 1;
+        v22 = 0;
+        return v22 & 1;
       }
     }
   }
 LABEL_21:
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_UserServantMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_UserServantMaster___);
   if ( !Master_object )
     goto LABEL_56;
   AllList = (System_Collections_Generic_IEnumerable_TSource__o *)UserServantMaster__getAllList(
                                                                    (UserServantMaster_o *)Master_object,
                                                                    0LL);
-  v25 = (System_Func_object__bool__o *)sub_1B64314(System_Func_UserServantEntity__bool__TypeInfo, v23, v24);
+  v24 = (System_Func_object__bool__o *)sub_1B64ABC(System_Func_UserServantEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v25,
+    v24,
     (Il2CppObject *)v17,
     Method_CoinRoomCoinIconItem___c__DisplayClass62_0__IsCanStrength_b__0__,
     0LL);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)System_Linq_Enumerable__Where_object_(
                                                                   AllList,
-                                                                  (System_Func_TSource__bool__o *)v25,
-                                                                  (const MethodInfo_2E7709C *)Method_System_Linq_Enumerable_Where_UserServantEntity___);
+                                                                  (System_Func_TSource__bool__o *)v24,
+                                                                  (const MethodInfo_2E79378 *)Method_System_Linq_Enumerable_Where_UserServantEntity___);
   if ( !Master_object )
     goto LABEL_56;
   klass = Master_object->klass;
-  v27 = Master_object;
-  v28 = *(unsigned __int16 *)(&Master_object->klass->_2.bitflags2 + 3);
+  v26 = Master_object;
+  v27 = *(unsigned __int16 *)(&Master_object->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&Master_object->klass->_2.bitflags2 + 3) )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_Collections_Generic_IEnumerable_UserServantEntity__c **)p_offset - 1) != System_Collections_Generic_IEnumerable_UserServantEntity__TypeInfo )
     {
-      --v28;
+      --v27;
       p_offset += 4;
-      if ( !v28 )
+      if ( !v27 )
         goto LABEL_29;
     }
-    v30 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+    v29 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
   }
   else
   {
 LABEL_29:
-    v30 = sub_1BB60A8(Master_object, System_Collections_Generic_IEnumerable_UserServantEntity__TypeInfo, 0LL);
+    v29 = sub_1BB6850(Master_object, System_Collections_Generic_IEnumerable_UserServantEntity__TypeInfo, 0LL);
   }
-  v31 = (*(__int64 (__fastcall **)(DataMasterBase_TMaster__TEntity__PKType__o *, _QWORD))v30)(v27, *(_QWORD *)(v30 + 8));
+  v31 = (*(__int64 (__fastcall **)(DataMasterBase_TMaster__TEntity__PKType__o *, _QWORD))v29)(v26, *(_QWORD *)(v29 + 8));
   if ( !v31 )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, v30);
   do
   {
     v32 = *(_QWORD *)v31;
@@ -417,7 +418,7 @@ LABEL_29:
     else
     {
 LABEL_36:
-      v35 = sub_1BB60A8(v31, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v35 = sub_1BB6850(v31, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     v36 = (*(__int64 (__fastcall **)(__int64, _QWORD))v35)(v31, *(_QWORD *)(v35 + 8));
     if ( (v36 & 1) == 0 )
@@ -439,37 +440,37 @@ LABEL_36:
     else
     {
 LABEL_43:
-      v40 = sub_1BB60A8(v31, System_Collections_Generic_IEnumerator_UserServantEntity__TypeInfo, 0LL);
+      v40 = sub_1BB6850(v31, System_Collections_Generic_IEnumerator_UserServantEntity__TypeInfo, 0LL);
     }
     v41 = (UserServantEntity_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v40)(v31, *(_QWORD *)(v40 + 8));
-    v42 = v41;
+    v43 = v41;
     if ( !v41 )
-      sub_1B64324(0LL);
+      sub_1B64ACC(0LL, v42);
     isExceedLvMax = UserServantEntity__isExceedLvMax(v41, 0LL);
   }
-  while ( (isExceedLvMax & CoinRoomCoinIconItem__IsAppendSkillAllMaxLv(v42, v44) & 1) == 0 );
-  v21 = v36 ^ 1;
-  v45 = *(_QWORD *)v31;
-  v46 = *(unsigned __int16 *)(*(_QWORD *)v31 + 302LL);
+  while ( (isExceedLvMax & CoinRoomCoinIconItem__IsAppendSkillAllMaxLv(v43, v45) & 1) == 0 );
+  v22 = v36 ^ 1;
+  v46 = *(_QWORD *)v31;
+  v47 = *(unsigned __int16 *)(*(_QWORD *)v31 + 302LL);
   if ( *(_WORD *)(*(_QWORD *)v31 + 302LL) )
   {
-    v47 = (int *)(*(_QWORD *)(v45 + 176) + 8LL);
-    while ( *((System_IDisposable_c **)v47 - 1) != System_IDisposable_TypeInfo )
+    v48 = (int *)(*(_QWORD *)(v46 + 176) + 8LL);
+    while ( *((System_IDisposable_c **)v48 - 1) != System_IDisposable_TypeInfo )
     {
-      --v46;
-      v47 += 4;
-      if ( !v46 )
+      --v47;
+      v48 += 4;
+      if ( !v47 )
         goto LABEL_51;
     }
-    v48 = v45 + 16LL * *v47 + 312;
+    v49 = v46 + 16LL * *v48 + 312;
   }
   else
   {
 LABEL_51:
-    v48 = sub_1BB60A8(v31, System_IDisposable_TypeInfo, 0LL);
+    v49 = sub_1BB6850(v31, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(__int64, _QWORD))v48)(v31, *(_QWORD *)(v48 + 8));
-  return v21 & 1;
+  (*(void (__fastcall **)(__int64, _QWORD))v49)(v31, *(_QWORD *)(v49 + 8));
+  return v22 & 1;
 }
 
 
@@ -480,34 +481,33 @@ bool __fastcall CoinRoomCoinIconItem__IsHeroine(CoinRoomCoinIconItem_o *this, co
   __int64 v5; // x1
   __int64 v6; // x1
   Il2CppObject *Master_object; // x0
+  __int64 v8; // x1
   System_Object_array *OrganizationList; // x20
-  __int64 v9; // x1
-  __int64 v10; // x2
-  System_Func_object__bool__o *v11; // x21
+  System_Func_object__bool__o *v10; // x21
 
-  if ( (byte_49FF8A2 & 1) == 0 )
+  if ( (byte_4A019A2 & 1) == 0 )
   {
-    sub_1B640C8(&Method_BasicHelper_Any_UserServantEntity____75709688, method);
-    sub_1B640C8(&Method_CoinRoomCoinIconItem__IsHeroine_b__58_0__, v3);
-    sub_1B640C8(&Method_DataManager_GetMaster_UserServantMaster___, v4);
-    sub_1B640C8(&DataManager_TypeInfo, v5);
-    sub_1B640C8(&System_Func_UserServantEntity__bool__TypeInfo, v6);
-    byte_49FF8A2 = 1;
+    sub_1B64870(&Method_BasicHelper_Any_UserServantEntity____75718168, method);
+    sub_1B64870(&Method_CoinRoomCoinIconItem__IsHeroine_b__58_0__, v3);
+    sub_1B64870(&Method_DataManager_GetMaster_UserServantMaster___, v4);
+    sub_1B64870(&DataManager_TypeInfo, v5);
+    sub_1B64870(&System_Func_UserServantEntity__bool__TypeInfo, v6);
+    byte_4A019A2 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_UserServantMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_UserServantMaster___);
   if ( !Master_object )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, v8);
   OrganizationList = (System_Object_array *)UserServantMaster__getOrganizationList(
                                               (UserServantMaster_o *)Master_object,
                                               0LL);
-  v11 = (System_Func_object__bool__o *)sub_1B64314(System_Func_UserServantEntity__bool__TypeInfo, v9, v10);
-  System_Func_object__bool____ctor(v11, (Il2CppObject *)this, Method_CoinRoomCoinIconItem__IsHeroine_b__58_0__, 0LL);
-  return BasicHelper__Any_object__48384284(
+  v10 = (System_Func_object__bool__o *)sub_1B64ABC(System_Func_UserServantEntity__bool__TypeInfo);
+  System_Func_object__bool____ctor(v10, (Il2CppObject *)this, Method_CoinRoomCoinIconItem__IsHeroine_b__58_0__, 0LL);
+  return BasicHelper__Any_object__48393208(
            OrganizationList,
-           (System_Func_T__bool__o *)v11,
-           (const MethodInfo_2E2491C *)Method_BasicHelper_Any_UserServantEntity____75709688);
+           (System_Func_T__bool__o *)v10,
+           (const MethodInfo_2E26BF8 *)Method_BasicHelper_Any_UserServantEntity____75718168);
 }
 
 
@@ -524,11 +524,11 @@ bool __fastcall CoinRoomCoinIconItem__IsMatchFilter(
   FilterKindList_c *v10; // x0
   ListViewSort_FilterKind_array *v11; // x21
 
-  if ( (byte_49FF8A6 & 1) == 0 )
+  if ( (byte_4A019A6 & 1) == 0 )
   {
-    sub_1B640C8(&FilterKindList_TypeInfo, sort);
-    sub_1B640C8(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__, v5);
-    byte_49FF8A6 = 1;
+    sub_1B64870(&FilterKindList_TypeInfo, sort);
+    sub_1B64870(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__, v5);
+    byte_4A019A6 = 1;
   }
   v6 = FilterKindList_TypeInfo;
   if ( !FilterKindList_TypeInfo->_2.cctor_finished )
@@ -541,7 +541,7 @@ bool __fastcall CoinRoomCoinIconItem__IsMatchFilter(
     goto LABEL_23;
   ClassGroupFilterKindList = (System_Collections_Generic_List_T__o *)System_Collections_Generic_List_Int32Enum___ToArray(
                                                                        ClassGroupFilterKindList,
-                                                                       (const MethodInfo_3494300 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+                                                                       (const MethodInfo_34965DC *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
   if ( !sort )
     goto LABEL_23;
   if ( ListViewSort__IsUnSelectedAllTargetFilters(sort, (ListViewSort_FilterKind_array *)ClassGroupFilterKindList, 0LL) )
@@ -557,7 +557,7 @@ bool __fastcall CoinRoomCoinIconItem__IsMatchFilter(
     {
       v9 = (ListViewSort_FilterKind_array *)System_Collections_Generic_List_Int32Enum___ToArray(
                                               ClassGroupFilterKindList,
-                                              (const MethodInfo_3494300 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+                                              (const MethodInfo_34965DC *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
       if ( !ListViewSort__IsUnSelectedAllTargetFilters(sort, v9, 0LL)
         && !ListViewSort__IsMatchClassFilter(sort, this->fields.svtEntity, 0LL) )
       {
@@ -566,7 +566,7 @@ bool __fastcall CoinRoomCoinIconItem__IsMatchFilter(
       goto LABEL_15;
     }
 LABEL_23:
-    sub_1B64324(ClassGroupFilterKindList);
+    sub_1B64ACC(ClassGroupFilterKindList, sort);
   }
   if ( !ListViewSort__IsMatchClassGroupFilter(sort, this->fields.svtEntity, 0LL) )
     return 0;
@@ -582,7 +582,7 @@ LABEL_15:
     goto LABEL_23;
   v11 = (ListViewSort_FilterKind_array *)System_Collections_Generic_List_Int32Enum___ToArray(
                                            ClassGroupFilterKindList,
-                                           (const MethodInfo_3494300 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+                                           (const MethodInfo_34965DC *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
   return ListViewSort__IsUnSelectedAllTargetFilters(sort, v11, 0LL)
       || ListViewSort__IsSelectedAllTargetFilters(sort, v11, 0LL)
       || ListViewSort__IsMatchRarityFilter(sort, this->fields._rarity_k__BackingField, 0LL);
@@ -627,10 +627,10 @@ bool __fastcall CoinRoomCoinIconItem__SetSortValue(
   int64_t collectionNo_k__BackingField; // x2
 
   v5 = this;
-  if ( (byte_49FF8A5 & 1) == 0 )
+  if ( (byte_4A019A5 & 1) == 0 )
   {
-    this = (CoinRoomCoinIconItem_o *)sub_1B640C8(&StringLiteral_1/*""*/, sort);
-    byte_49FF8A5 = 1;
+    this = (CoinRoomCoinIconItem_o *)sub_1B64870(&StringLiteral_1/*""*/, sort);
+    byte_4A019A5 = 1;
   }
   selectedNum_k__BackingField = v5->fields._selectedNum_k__BackingField;
   *(_WORD *)&v5->fields.isTermination = 0;
@@ -656,13 +656,13 @@ bool __fastcall CoinRoomCoinIconItem__SetSortValue(
       v5->fields.sortValue1 = rarity_k__BackingField;
       v16 = (int)StringLiteral_1/*""*/;
       v5->fields.sortStr1 = (struct System_String_o *)StringLiteral_1/*""*/;
-      sub_1B6406C((ServantStatusBattleListViewItem_o *)&v5->fields.sortStr1, v16, (int32_t)method, v3);
+      sub_1B64814((ServantStatusBattleListViewItem_o *)&v5->fields.sortStr1, v16, (int32_t)method, v3);
       collectionNo_k__BackingField = v5->fields._collectionNo_k__BackingField;
       this = (CoinRoomCoinIconItem_o *)v5->fields.iconLabelInfo;
       v5->fields.sortValue1B = collectionNo_k__BackingField;
       if ( this )
       {
-        IconLabelInfo__Set_37825360((IconLabelInfo_o *)this, 57, collectionNo_k__BackingField, 0, 0, 0, 0, 0, 0LL);
+        IconLabelInfo__Set_37829740((IconLabelInfo_o *)this, 57, collectionNo_k__BackingField, 0, 0, 0, 0, 0, 0LL);
         goto LABEL_21;
       }
       goto LABEL_27;
@@ -683,12 +683,12 @@ LABEL_16:
     v5->fields.sortValue1 = v12;
     v13 = (int)StringLiteral_1/*""*/;
     v5->fields.sortStr1 = (struct System_String_o *)StringLiteral_1/*""*/;
-    sub_1B6406C((ServantStatusBattleListViewItem_o *)&v5->fields.sortStr1, v13, (int32_t)method, v3);
+    sub_1B64814((ServantStatusBattleListViewItem_o *)&v5->fields.sortStr1, v13, (int32_t)method, v3);
     this = (CoinRoomCoinIconItem_o *)v5->fields.iconLabelInfo;
     v5->fields.sortValue1B = 0LL;
     if ( this )
     {
-      IconLabelInfo__Set_37825360(
+      IconLabelInfo__Set_37829740(
         (IconLabelInfo_o *)this,
         57,
         v5->fields._collectionNo_k__BackingField,
@@ -701,7 +701,7 @@ LABEL_16:
       goto LABEL_21;
     }
 LABEL_27:
-    sub_1B64324(this);
+    sub_1B64ACC(this, sort);
   }
   if ( sortKind != 26 )
     goto LABEL_16;
@@ -714,7 +714,7 @@ LABEL_27:
   p_sortStr1 = &v5->fields.sortStr1;
   v5->fields.sortValue1 = svtEntity;
 LABEL_14:
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)p_sortStr1, (int32_t)sortRuby, (int32_t)method, v3);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)p_sortStr1, (int32_t)sortRuby, (int32_t)method, v3);
   this = (CoinRoomCoinIconItem_o *)p_sortStr1[14];
   p_sortStr1[1] = (struct System_String_o *)*((int *)p_sortStr1 + 18);
   if ( !this )
@@ -740,20 +740,20 @@ bool __fastcall CoinRoomCoinIconItem___IsHeroine_b__58_0(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v8; // 0:x0.16
 
   v4 = this;
-  if ( (byte_49FF8A7 & 1) == 0 )
+  if ( (byte_4A019A7 & 1) == 0 )
   {
-    this = (CoinRoomCoinIconItem_o *)sub_1B640C8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, x);
-    byte_49FF8A7 = 1;
+    this = (CoinRoomCoinIconItem_o *)sub_1B64870(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, x);
+    byte_4A019A7 = 1;
   }
   if ( !x )
-    sub_1B64324(this);
+    sub_1B64ACC(this, x);
   v6 = *(_QWORD *)&x->fields.svtId.fields.currentCryptoKey;
   v5 = *(_QWORD *)&x->fields.svtId.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v8.fields.currentCryptoKey = v6;
   *(_QWORD *)&v8.fields.fakeValue = v5;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46171608(v8, 0LL) == v4->fields._svtId_k__BackingField
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46180532(v8, 0LL) == v4->fields._svtId_k__BackingField
       && UserServantEntity__IsHeroine(x, 0LL);
 }
 
@@ -963,20 +963,20 @@ bool __fastcall CoinRoomCoinIconItem___c__DisplayClass62_0___IsCanStrength_b__0(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v8; // 0:x0.16
 
   v4 = this;
-  if ( (byte_49FF8A8 & 1) == 0 )
+  if ( (byte_4A019A8 & 1) == 0 )
   {
-    this = (CoinRoomCoinIconItem___c__DisplayClass62_0_o *)sub_1B640C8(
+    this = (CoinRoomCoinIconItem___c__DisplayClass62_0_o *)sub_1B64870(
                                                              &CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo,
                                                              x);
-    byte_49FF8A8 = 1;
+    byte_4A019A8 = 1;
   }
   if ( !x )
-    sub_1B64324(this);
+    sub_1B64ACC(this, x);
   v6 = *(_QWORD *)&x->fields.svtId.fields.currentCryptoKey;
   v5 = *(_QWORD *)&x->fields.svtId.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v8.fields.currentCryptoKey = v6;
   *(_QWORD *)&v8.fields.fakeValue = v5;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46171608(v8, 0LL) == v4->fields.svtId;
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46180532(v8, 0LL) == v4->fields.svtId;
 }

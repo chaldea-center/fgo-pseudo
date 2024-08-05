@@ -17,10 +17,10 @@ void __fastcall BattleInfoOffsetPosData___ctor(
   z = offset.fields.z;
   y = offset.fields.y;
   x = offset.fields.x;
-  if ( !byte_49F7111 )
+  if ( !byte_49F9201 )
   {
-    sub_1B640C8(&UnityEngine_Vector3_TypeInfo, obj);
-    byte_49F7111 = 1;
+    sub_1B64870(&UnityEngine_Vector3_TypeInfo, obj);
+    byte_49F9201 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   v10 = static_fields->zeroVector.fields.z;
@@ -29,7 +29,7 @@ void __fastcall BattleInfoOffsetPosData___ctor(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.obj = obj;
   p_fields = &this->fields;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)p_fields, (int32_t)obj, v12, v13);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)p_fields, (int32_t)obj, v12, v13);
   p_fields->offset.fields.x = x;
   p_fields->offset.fields.y = y;
   p_fields->offset.fields.z = z;
@@ -39,22 +39,23 @@ void __fastcall BattleInfoOffsetPosData___ctor(
 bool __fastcall BattleInfoOffsetPosData__get_IsActive(BattleInfoOffsetPosData_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *obj; // x20
-  UnityEngine_GameObject_o *v4; // x0
+  __int64 v4; // x1
+  UnityEngine_GameObject_o *v5; // x0
 
-  if ( (byte_49FE85E & 1) == 0 )
+  if ( (byte_4A0095E & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, method);
-    byte_49FE85E = 1;
+    sub_1B64870(&UnityEngine_Object_TypeInfo, method);
+    byte_4A0095E = 1;
   }
   obj = (UnityEngine_Object_o *)this->fields.obj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Inequality(obj, 0LL, 0LL) )
     return 0;
-  v4 = this->fields.obj;
-  if ( !v4 )
-    sub_1B64324(0LL);
-  return UnityEngine_GameObject__get_activeInHierarchy(v4, 0LL);
+  v5 = this->fields.obj;
+  if ( !v5 )
+    sub_1B64ACC(0LL, v4);
+  return UnityEngine_GameObject__get_activeInHierarchy(v5, 0LL);
 }
 
 

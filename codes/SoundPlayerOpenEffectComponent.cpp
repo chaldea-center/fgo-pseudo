@@ -1,9 +1,9 @@
 void __fastcall SoundPlayerOpenEffectComponent___ctor(SoundPlayerOpenEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_49F7FEF & 1) == 0 )
+  if ( (byte_49FA0DF & 1) == 0 )
   {
-    sub_1B640C8(&CommonEffectComponent_TypeInfo, method);
-    byte_49F7FEF = 1;
+    sub_1B64870(&CommonEffectComponent_TypeInfo, method);
+    byte_49FA0DF = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -53,7 +53,7 @@ void __fastcall SoundPlayerOpenEffectComponent__setAnimEndCallback(
         const MethodInfo *method)
 {
   this->fields.animEndCallback = callback;
-  sub_1B6406C(&this->fields.animEndCallback);
+  sub_1B64814(&this->fields.animEndCallback);
 }
 
 
@@ -63,7 +63,7 @@ void __fastcall SoundPlayerOpenEffectComponent__setChangeUiCallback(
         const MethodInfo *method)
 {
   this->fields.changeUiCallback = callback;
-  sub_1B6406C(&this->fields.changeUiCallback);
+  sub_1B64814(&this->fields.changeUiCallback);
 }
 
 
@@ -73,5 +73,5 @@ void __fastcall SoundPlayerOpenEffectComponent__setPlayIconAnimCallBack(
         const MethodInfo *method)
 {
   this->fields.playIconAnimCallback = callback;
-  sub_1B6406C(&this->fields.playIconAnimCallback);
+  sub_1B64814(&this->fields.playIconAnimCallback);
 }

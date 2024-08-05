@@ -6,10 +6,10 @@ void __fastcall BoxGachaUtility___cctor(const MethodInfo *method)
   struct BoxGachaUtility_StaticFields *v4; // x9
   int32x2_t *v5; // x8
 
-  if ( (byte_4A001B8 & 1) == 0 )
+  if ( (byte_4A022BA & 1) == 0 )
   {
-    sub_1B640C8(&BoxGachaUtility_TypeInfo, v1);
-    byte_4A001B8 = 1;
+    sub_1B64870(&BoxGachaUtility_TypeInfo, v1);
+    byte_4A022BA = 1;
   }
   static_fields = BoxGachaUtility_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->NORMAL_ITEM_SIZE.fields.x = 0x3F3AE1483F400000LL;
@@ -27,23 +27,26 @@ void __fastcall BoxGachaUtility___cctor(const MethodInfo *method)
 // local variable allocation has failed, the output may be wrong!
 void __fastcall BoxGachaUtility__SetBoxGachaNumSprite(UISprite_o *sprite, int32_t num, const MethodInfo *method)
 {
-  __int64 v5; // x1
-  Il2CppObject *v6; // x0
-  System_String_o *v7; // x0
-  int32_t v8; // [xsp+Ch] [xbp-34h] BYREF
+  __int64 v3; // x3
+  __int64 v4; // x4
+  __int64 v7; // x1
+  Il2CppObject *v8; // x0
+  System_String_o *v9; // x0
+  __int64 v10; // x1
+  int32_t v11; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4A001B7 & 1) == 0 )
+  if ( (byte_4A022B9 & 1) == 0 )
   {
-    sub_1B640C8(&int_TypeInfo, *(_QWORD *)&num);
-    sub_1B640C8(&StringLiteral_20242/*"img_gachatxt_{0:D2}"*/, v5);
-    byte_4A001B7 = 1;
+    sub_1B64870(&int_TypeInfo, *(_QWORD *)&num);
+    sub_1B64870(&StringLiteral_20245/*"img_gachatxt_{0:D2}"*/, v7);
+    byte_4A022B9 = 1;
   }
-  v8 = num;
-  v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v8);
-  v7 = System_String__Format((System_String_o *)StringLiteral_20242/*"img_gachatxt_{0:D2}"*/, v6, 0LL);
+  v11 = num;
+  v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v11, method, v3, v4);
+  v9 = System_String__Format((System_String_o *)StringLiteral_20245/*"img_gachatxt_{0:D2}"*/, v8, 0LL);
   if ( !sprite )
-    sub_1B64324(v7);
-  UISprite__set_spriteName(sprite, v7, 0LL);
+    sub_1B64ACC(v9, v10);
+  UISprite__set_spriteName(sprite, v9, 0LL);
   ((void (__fastcall *)(UISprite_o *, Il2CppMethodPointer))sprite->klass->vtable._33_MakePixelPerfect.method)(
     sprite,
     sprite->klass->vtable._34_get_minWidth.methodPtr);
@@ -72,10 +75,10 @@ void __fastcall BoxGachaUtility__SetMultiGachaButtonDigitNum(
   const MethodInfo *v19; // x2
 
   v8 = gachaTime;
-  if ( (byte_4A001B6 & 1) == 0 )
+  if ( (byte_4A022B8 & 1) == 0 )
   {
-    *(_QWORD *)&gachaTime = sub_1B640C8(&BoxGachaUtility_TypeInfo, oneDigit);
-    byte_4A001B6 = 1;
+    *(_QWORD *)&gachaTime = sub_1B64870(&BoxGachaUtility_TypeInfo, oneDigit);
+    byte_4A022B8 = 1;
   }
   if ( v8 < 10 )
     goto LABEL_9;
@@ -142,7 +145,7 @@ void __fastcall BoxGachaUtility__SetMultiGachaButtonDigitNum(
       }
     }
 LABEL_32:
-    sub_1B64324(*(_QWORD *)&gachaTime);
+    sub_1B64ACC(*(_QWORD *)&gachaTime, oneDigit);
   }
   if ( v9 )
     return;

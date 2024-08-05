@@ -2,10 +2,10 @@ void __fastcall SubmarineScanEvent___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_49F90ED & 1) == 0 )
+  if ( (byte_49FB1DC & 1) == 0 )
   {
-    sub_1B640C8(&SubmarineScanEvent_TypeInfo, v1);
-    byte_49F90ED = 1;
+    sub_1B64870(&SubmarineScanEvent_TypeInfo, v1);
+    byte_49FB1DC = 1;
   }
   SubmarineScanEvent_TypeInfo->static_fields->NO_DIRECTION = -1;
 }
@@ -22,11 +22,12 @@ void __fastcall SubmarineScanEvent___ctor(
         const MethodInfo *method)
 {
   __int64 v15; // x0
+  __int64 v16; // x1
   bool HasEnemyParts_k__BackingField; // w8
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !panelData )
-    sub_1B64324(v15);
+    sub_1B64ACC(v15, v16);
   *(_QWORD *)&this->fields._HIndex_k__BackingField = *(_QWORD *)&panelData->fields._HIndex_k__BackingField;
   this->fields._IsAlreadyOpened_k__BackingField = panelData->fields._IsOpened_k__BackingField;
   HasEnemyParts_k__BackingField = panelData->fields._HasEnemyParts_k__BackingField;

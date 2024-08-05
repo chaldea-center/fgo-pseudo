@@ -1,335 +1,322 @@
 void __fastcall OtherUserSortDialog___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  __int64 v2; // x2
+  __int64 v2; // x1
   __int64 v3; // x1
   __int64 v4; // x1
   __int64 v5; // x1
-  __int64 v6; // x1
-  ListViewSort_o *v7; // x19
-  System_String_o *v8; // x0
-  System_String_o *v9; // x19
-  __int64 v10; // x1
-  __int64 v11; // x2
-  ListViewSort_o *v12; // x20
+  ListViewSort_o *v6; // x19
+  System_String_o *v7; // x0
+  System_String_o *v8; // x19
+  ListViewSort_o *v9; // x20
   struct OtherUserSortDialog_StaticFields *static_fields; // x0
-  System_String_o *v14; // x0
-  System_String_o *v15; // x19
-  __int64 v16; // x1
-  __int64 v17; // x2
-  ListViewSort_o *v18; // x20
-  struct OtherUserSortDialog_StaticFields *v19; // x0
-  System_Enum_o v20; // [xsp+0h] [xbp-80h] BYREF
-  int v21; // [xsp+10h] [xbp-70h]
-  System_Enum_o v22; // [xsp+18h] [xbp-68h] BYREF
-  int v23; // [xsp+28h] [xbp-58h]
+  System_String_o *v11; // x0
+  System_String_o *v12; // x19
+  ListViewSort_o *v13; // x20
+  struct OtherUserSortDialog_StaticFields *v14; // x0
+  System_Enum_o v15; // [xsp+0h] [xbp-80h] BYREF
+  int v16; // [xsp+10h] [xbp-70h]
+  System_Enum_o v17; // [xsp+18h] [xbp-68h] BYREF
+  int v18; // [xsp+28h] [xbp-58h]
 
-  if ( (byte_49F7707 & 1) == 0 )
+  if ( (byte_49F97F7 & 1) == 0 )
   {
-    sub_1B640C8(&FriendStatus_Kind_TypeInfo, v1);
-    sub_1B640C8(&ListViewSort_TypeInfo, v3);
-    sub_1B640C8(&OtherUserSortDialog_TypeInfo, v4);
-    sub_1B640C8(&StringLiteral_6719/*"FollowerSelect"*/, v5);
-    sub_1B640C8(&StringLiteral_6816/*"FriendOperation"*/, v6);
-    byte_49F7707 = 1;
+    sub_1B64870(&FriendStatus_Kind_TypeInfo, v1);
+    sub_1B64870(&ListViewSort_TypeInfo, v2);
+    sub_1B64870(&OtherUserSortDialog_TypeInfo, v3);
+    sub_1B64870(&StringLiteral_6719/*"FollowerSelect"*/, v4);
+    sub_1B64870(&StringLiteral_6816/*"FriendOperation"*/, v5);
+    byte_49F97F7 = 1;
   }
-  v7 = (ListViewSort_o *)sub_1B64314(ListViewSort_TypeInfo, v1, v2);
-  ListViewSort___ctor_40426136(v7, (System_String_o *)StringLiteral_6719/*"FollowerSelect"*/, 11, 0, 0LL);
-  OtherUserSortDialog_TypeInfo->static_fields->supportSortInfo = v7;
-  sub_1B6406C(OtherUserSortDialog_TypeInfo->static_fields);
-  v22.klass = (System_Enum_c *)FriendStatus_Kind_TypeInfo;
-  v22.monitor = (void *)-1LL;
-  v23 = 4;
-  v8 = System_Enum__ToString(&v22, 0LL);
-  v9 = System_String__Concat_61375396((System_String_o *)StringLiteral_6816/*"FriendOperation"*/, v8, 0LL);
-  v12 = (ListViewSort_o *)sub_1B64314(ListViewSort_TypeInfo, v10, v11);
-  ListViewSort___ctor_40426136(v12, v9, 3, 0, 0LL);
+  v6 = (ListViewSort_o *)sub_1B64ABC(ListViewSort_TypeInfo);
+  ListViewSort___ctor_40431268(v6, (System_String_o *)StringLiteral_6719/*"FollowerSelect"*/, 11, 0, 0LL);
+  OtherUserSortDialog_TypeInfo->static_fields->supportSortInfo = v6;
+  sub_1B64814(OtherUserSortDialog_TypeInfo->static_fields);
+  v17.klass = (System_Enum_c *)FriendStatus_Kind_TypeInfo;
+  v17.monitor = (void *)-1LL;
+  v18 = 4;
+  v7 = System_Enum__ToString(&v17, 0LL);
+  v8 = System_String__Concat_61383576((System_String_o *)StringLiteral_6816/*"FriendOperation"*/, v7, 0LL);
+  v9 = (ListViewSort_o *)sub_1B64ABC(ListViewSort_TypeInfo);
+  ListViewSort___ctor_40431268(v9, v8, 3, 0, 0LL);
   static_fields = OtherUserSortDialog_TypeInfo->static_fields;
-  static_fields->friendMemberListSortInfo = v12;
-  sub_1B6406C(&static_fields->friendMemberListSortInfo);
-  v21 = 3;
-  v20.klass = (System_Enum_c *)FriendStatus_Kind_TypeInfo;
-  v20.monitor = (void *)-1LL;
-  v14 = System_Enum__ToString(&v20, 0LL);
-  v15 = System_String__Concat_61375396((System_String_o *)StringLiteral_6816/*"FriendOperation"*/, v14, 0LL);
-  v18 = (ListViewSort_o *)sub_1B64314(ListViewSort_TypeInfo, v16, v17);
-  ListViewSort___ctor_40426136(v18, v15, 3, 0, 0LL);
-  v19 = OtherUserSortDialog_TypeInfo->static_fields;
-  v19->friendRequestListSortInfo = v18;
-  sub_1B6406C(&v19->friendRequestListSortInfo);
+  static_fields->friendMemberListSortInfo = v9;
+  sub_1B64814(&static_fields->friendMemberListSortInfo);
+  v16 = 3;
+  v15.klass = (System_Enum_c *)FriendStatus_Kind_TypeInfo;
+  v15.monitor = (void *)-1LL;
+  v11 = System_Enum__ToString(&v15, 0LL);
+  v12 = System_String__Concat_61383576((System_String_o *)StringLiteral_6816/*"FriendOperation"*/, v11, 0LL);
+  v13 = (ListViewSort_o *)sub_1B64ABC(ListViewSort_TypeInfo);
+  ListViewSort___ctor_40431268(v13, v12, 3, 0, 0LL);
+  v14 = OtherUserSortDialog_TypeInfo->static_fields;
+  v14->friendRequestListSortInfo = v13;
+  sub_1B64814(&v14->friendRequestListSortInfo);
 }
 
 
 void __fastcall OtherUserSortDialog___ctor(OtherUserSortDialog_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
+  __int64 v3; // x1
   __int64 v4; // x1
   __int64 v5; // x1
   __int64 v6; // x1
   __int64 v7; // x1
   __int64 v8; // x1
-  __int64 v9; // x1
-  System_Collections_Generic_List_T__o *v10; // x20
-  __int64 v11; // x0
+  System_Collections_Generic_List_T__o *v9; // x20
+  __int64 v10; // x0
+  __int64 v11; // x1
   struct System_Object_array *items; // x8
   _QWORD *v13; // x9
   __int64 size; // x10
   __int64 v15; // x10
   __int64 v16; // x10
   __int64 v17; // x10
-  __int64 v18; // x1
-  __int64 v19; // x2
-  System_Collections_Generic_List_T__o *v20; // x20
-  struct System_Object_array *v21; // x9
-  _QWORD *v22; // x8
+  System_Collections_Generic_List_T__o *v18; // x20
+  struct System_Object_array *v19; // x9
+  _QWORD *v20; // x8
+  __int64 v21; // x10
+  __int64 v22; // x10
   __int64 v23; // x10
   __int64 v24; // x10
   __int64 v25; // x10
   __int64 v26; // x10
   __int64 v27; // x10
-  __int64 v28; // x10
-  __int64 v29; // x10
 
-  if ( (byte_49F7706 & 1) == 0 )
+  if ( (byte_49F97F6 & 1) == 0 )
   {
-    sub_1B640C8(&BaseDialog_TypeInfo, method);
-    sub_1B640C8(&Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__, v4);
-    sub_1B640C8(&Method_System_Collections_Generic_List_ListViewSort_PriorityKind__Add__, v5);
-    sub_1B640C8(&Method_System_Collections_Generic_List_ListViewSort_PriorityKind___ctor__, v6);
-    sub_1B640C8(&Method_System_Collections_Generic_List_ListViewSort_SortKind___ctor__, v7);
-    sub_1B640C8(&System_Collections_Generic_List_ListViewSort_PriorityKind__TypeInfo, v8);
-    sub_1B640C8(&System_Collections_Generic_List_ListViewSort_SortKind__TypeInfo, v9);
-    byte_49F7706 = 1;
+    sub_1B64870(&BaseDialog_TypeInfo, method);
+    sub_1B64870(&Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__, v3);
+    sub_1B64870(&Method_System_Collections_Generic_List_ListViewSort_PriorityKind__Add__, v4);
+    sub_1B64870(&Method_System_Collections_Generic_List_ListViewSort_PriorityKind___ctor__, v5);
+    sub_1B64870(&Method_System_Collections_Generic_List_ListViewSort_SortKind___ctor__, v6);
+    sub_1B64870(&System_Collections_Generic_List_ListViewSort_PriorityKind__TypeInfo, v7);
+    sub_1B64870(&System_Collections_Generic_List_ListViewSort_SortKind__TypeInfo, v8);
+    byte_49F97F6 = 1;
   }
-  v10 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                  System_Collections_Generic_List_ListViewSort_SortKind__TypeInfo,
-                                                  method,
-                                                  v2);
+  v9 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_SortKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
-    v10,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_SortKind___ctor__);
-  if ( !v10 )
+    v9,
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_SortKind___ctor__);
+  if ( !v9 )
     goto LABEL_43;
-  items = v10->fields._items;
+  items = v9->fields._items;
   v13 = Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__;
-  ++v10->fields._version;
+  ++v9->fields._version;
   if ( !items )
     goto LABEL_43;
-  size = v10->fields._size;
+  size = v9->fields._size;
   if ( (unsigned int)size >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v10,
+      v9,
       11,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
-    items = v10->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+    items = v9->fields._items;
     v13 = Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__;
-    ++v10->fields._version;
+    ++v9->fields._version;
     if ( !items )
       goto LABEL_43;
   }
   else
   {
-    v10->fields._size = size + 1;
+    v9->fields._size = size + 1;
     *((_DWORD *)items->m_Items + size) = 11;
-    ++v10->fields._version;
+    ++v9->fields._version;
   }
-  v15 = v10->fields._size;
+  v15 = v9->fields._size;
   if ( (unsigned int)v15 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v10,
+      v9,
       3,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
-    items = v10->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+    items = v9->fields._items;
     v13 = Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__;
-    ++v10->fields._version;
+    ++v9->fields._version;
     if ( !items )
       goto LABEL_43;
   }
   else
   {
-    v10->fields._size = v15 + 1;
+    v9->fields._size = v15 + 1;
     *((_DWORD *)items->m_Items + v15) = 3;
-    ++v10->fields._version;
+    ++v9->fields._version;
   }
-  v16 = v10->fields._size;
+  v16 = v9->fields._size;
   if ( (unsigned int)v16 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v10,
+      v9,
       5,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
-    items = v10->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+    items = v9->fields._items;
     v13 = Method_System_Collections_Generic_List_ListViewSort_SortKind__Add__;
-    ++v10->fields._version;
+    ++v9->fields._version;
     if ( !items )
       goto LABEL_43;
   }
   else
   {
-    v10->fields._size = v16 + 1;
+    v9->fields._size = v16 + 1;
     *((_DWORD *)items->m_Items + v16) = 5;
-    ++v10->fields._version;
+    ++v9->fields._version;
   }
-  v17 = v10->fields._size;
+  v17 = v9->fields._size;
   if ( (unsigned int)v17 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v10,
+      v9,
       6,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
   }
   else
   {
-    v10->fields._size = v17 + 1;
+    v9->fields._size = v17 + 1;
     *((_DWORD *)items->m_Items + v17) = 6;
   }
-  this->fields.sortKindList = (struct System_Collections_Generic_List_ListViewSort_SortKind__o *)v10;
-  sub_1B6406C(&this->fields.sortKindList);
-  v20 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                  System_Collections_Generic_List_ListViewSort_PriorityKind__TypeInfo,
-                                                  v18,
-                                                  v19);
+  this->fields.sortKindList = (struct System_Collections_Generic_List_ListViewSort_SortKind__o *)v9;
+  sub_1B64814(&this->fields.sortKindList);
+  v18 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_PriorityKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
-    v20,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_PriorityKind___ctor__);
-  if ( !v20 )
+    v18,
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_PriorityKind___ctor__);
+  if ( !v18 )
     goto LABEL_43;
-  v21 = v20->fields._items;
-  v22 = Method_System_Collections_Generic_List_ListViewSort_PriorityKind__Add__;
-  ++v20->fields._version;
-  if ( !v21 )
+  v19 = v18->fields._items;
+  v20 = Method_System_Collections_Generic_List_ListViewSort_PriorityKind__Add__;
+  ++v18->fields._version;
+  if ( !v19 )
     goto LABEL_43;
-  v23 = v20->fields._size;
-  if ( (unsigned int)v23 >= v21->max_length )
+  v21 = v18->fields._size;
+  if ( (unsigned int)v21 >= v19->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v20,
+      v18,
       0,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
-    v21 = v20->fields._items;
-    v22 = Method_System_Collections_Generic_List_ListViewSort_PriorityKind__Add__;
-    ++v20->fields._version;
-    if ( !v21 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+    v19 = v18->fields._items;
+    v20 = Method_System_Collections_Generic_List_ListViewSort_PriorityKind__Add__;
+    ++v18->fields._version;
+    if ( !v19 )
       goto LABEL_43;
   }
   else
   {
-    v20->fields._size = v23 + 1;
-    *((_DWORD *)v21->m_Items + v23) = 0;
-    ++v20->fields._version;
+    v18->fields._size = v21 + 1;
+    *((_DWORD *)v19->m_Items + v21) = 0;
+    ++v18->fields._version;
   }
-  v24 = v20->fields._size;
-  if ( (unsigned int)v24 >= v21->max_length )
+  v22 = v18->fields._size;
+  if ( (unsigned int)v22 >= v19->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v20,
+      v18,
       1,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
-    v21 = v20->fields._items;
-    v22 = Method_System_Collections_Generic_List_ListViewSort_PriorityKind__Add__;
-    ++v20->fields._version;
-    if ( !v21 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+    v19 = v18->fields._items;
+    v20 = Method_System_Collections_Generic_List_ListViewSort_PriorityKind__Add__;
+    ++v18->fields._version;
+    if ( !v19 )
       goto LABEL_43;
   }
   else
   {
-    v20->fields._size = v24 + 1;
-    *((_DWORD *)v21->m_Items + v24) = 1;
-    ++v20->fields._version;
+    v18->fields._size = v22 + 1;
+    *((_DWORD *)v19->m_Items + v22) = 1;
+    ++v18->fields._version;
   }
-  v25 = v20->fields._size;
-  if ( (unsigned int)v25 >= v21->max_length )
+  v23 = v18->fields._size;
+  if ( (unsigned int)v23 >= v19->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v20,
+      v18,
       2,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
-    v21 = v20->fields._items;
-    v22 = Method_System_Collections_Generic_List_ListViewSort_PriorityKind__Add__;
-    ++v20->fields._version;
-    if ( !v21 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+    v19 = v18->fields._items;
+    v20 = Method_System_Collections_Generic_List_ListViewSort_PriorityKind__Add__;
+    ++v18->fields._version;
+    if ( !v19 )
       goto LABEL_43;
   }
   else
   {
-    v20->fields._size = v25 + 1;
-    *((_DWORD *)v21->m_Items + v25) = 2;
-    ++v20->fields._version;
+    v18->fields._size = v23 + 1;
+    *((_DWORD *)v19->m_Items + v23) = 2;
+    ++v18->fields._version;
   }
-  v26 = v20->fields._size;
-  if ( (unsigned int)v26 >= v21->max_length )
+  v24 = v18->fields._size;
+  if ( (unsigned int)v24 >= v19->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v20,
+      v18,
       3,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
-    v21 = v20->fields._items;
-    v22 = Method_System_Collections_Generic_List_ListViewSort_PriorityKind__Add__;
-    ++v20->fields._version;
-    if ( !v21 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+    v19 = v18->fields._items;
+    v20 = Method_System_Collections_Generic_List_ListViewSort_PriorityKind__Add__;
+    ++v18->fields._version;
+    if ( !v19 )
       goto LABEL_43;
   }
   else
   {
-    v20->fields._size = v26 + 1;
-    *((_DWORD *)v21->m_Items + v26) = 3;
-    ++v20->fields._version;
+    v18->fields._size = v24 + 1;
+    *((_DWORD *)v19->m_Items + v24) = 3;
+    ++v18->fields._version;
   }
-  v27 = v20->fields._size;
-  if ( (unsigned int)v27 >= v21->max_length )
+  v25 = v18->fields._size;
+  if ( (unsigned int)v25 >= v19->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v20,
+      v18,
       4,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
-    v21 = v20->fields._items;
-    v22 = Method_System_Collections_Generic_List_ListViewSort_PriorityKind__Add__;
-    ++v20->fields._version;
-    if ( !v21 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+    v19 = v18->fields._items;
+    v20 = Method_System_Collections_Generic_List_ListViewSort_PriorityKind__Add__;
+    ++v18->fields._version;
+    if ( !v19 )
       goto LABEL_43;
   }
   else
   {
-    v20->fields._size = v27 + 1;
-    *((_DWORD *)v21->m_Items + v27) = 4;
-    ++v20->fields._version;
+    v18->fields._size = v25 + 1;
+    *((_DWORD *)v19->m_Items + v25) = 4;
+    ++v18->fields._version;
   }
-  v28 = v20->fields._size;
-  if ( (unsigned int)v28 < v21->max_length )
+  v26 = v18->fields._size;
+  if ( (unsigned int)v26 < v19->max_length )
   {
-    v20->fields._size = v28 + 1;
-    *((_DWORD *)v21->m_Items + v28) = 5;
-    ++v20->fields._version;
+    v18->fields._size = v26 + 1;
+    *((_DWORD *)v19->m_Items + v26) = 5;
+    ++v18->fields._version;
     goto LABEL_37;
   }
   System_Collections_Generic_List_Int32Enum___AddWithResize(
-    v20,
+    v18,
     5,
-    *(const MethodInfo_34927A8 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
-  v21 = v20->fields._items;
-  v22 = Method_System_Collections_Generic_List_ListViewSort_PriorityKind__Add__;
-  ++v20->fields._version;
-  if ( !v21 )
+    *(const MethodInfo_3494A84 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+  v19 = v18->fields._items;
+  v20 = Method_System_Collections_Generic_List_ListViewSort_PriorityKind__Add__;
+  ++v18->fields._version;
+  if ( !v19 )
 LABEL_43:
-    sub_1B64324(v11);
+    sub_1B64ACC(v10, v11);
 LABEL_37:
-  v29 = v20->fields._size;
-  if ( (unsigned int)v29 >= v21->max_length )
+  v27 = v18->fields._size;
+  if ( (unsigned int)v27 >= v19->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v20,
+      v18,
       6,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
   }
   else
   {
-    v20->fields._size = v29 + 1;
-    *((_DWORD *)v21->m_Items + v29) = 6;
+    v18->fields._size = v27 + 1;
+    *((_DWORD *)v19->m_Items + v27) = 6;
   }
-  this->fields.priorityKindList = (struct System_Collections_Generic_List_ListViewSort_PriorityKind__o *)v20;
-  sub_1B6406C(&this->fields.priorityKindList);
+  this->fields.priorityKindList = (struct System_Collections_Generic_List_ListViewSort_PriorityKind__o *)v18;
+  sub_1B64814(&this->fields.priorityKindList);
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0LL);
@@ -354,7 +341,7 @@ void __fastcall OtherUserSortDialog__Callback(OtherUserSortDialog_o *this, bool 
   if ( callbackFunc )
   {
     *p_callbackFunc = 0LL;
-    sub_1B6406C(p_callbackFunc);
+    sub_1B64814(p_callbackFunc);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, bool, _QWORD))v4->fields.m_target)(
       v4->fields.original_method_info,
       result,
@@ -369,23 +356,21 @@ void __fastcall OtherUserSortDialog__Close(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x2
-  System_Action_o *v8; // x20
+  System_Action_o *v6; // x20
 
-  if ( (byte_49F76F5 & 1) == 0 )
+  if ( (byte_49F97E5 & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_TypeInfo, callback);
-    sub_1B640C8(&Method_OtherUserSortDialog_EndClose__, v5);
-    byte_49F76F5 = 1;
+    sub_1B64870(&System_Action_TypeInfo, callback);
+    sub_1B64870(&Method_OtherUserSortDialog_EndClose__, v5);
+    byte_49F97E5 = 1;
   }
   OtherUserSortDialog__SetEnableButtons(this, 0, method);
   this->fields.closeCallbackFunc = callback;
-  sub_1B6406C(&this->fields.closeCallbackFunc);
+  sub_1B64814(&this->fields.closeCallbackFunc);
   this->fields.state = 4;
-  v8 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v6, v7);
-  System_Action___ctor(v8, (Il2CppObject *)this, Method_OtherUserSortDialog_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v8, 0LL);
+  v6 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  System_Action___ctor(v6, (Il2CppObject *)this, Method_OtherUserSortDialog_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v6, 0LL);
 }
 
 
@@ -403,7 +388,7 @@ void __fastcall OtherUserSortDialog__EndClose(OtherUserSortDialog_o *this, const
   if ( closeCallbackFunc )
   {
     *p_closeCallbackFunc = 0LL;
-    sub_1B6406C(p_closeCallbackFunc);
+    sub_1B64814(p_closeCallbackFunc);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v4->fields.m_target)(
       v4->fields.original_method_info,
       *(_QWORD *)&v4->fields.extra_arg);
@@ -430,18 +415,18 @@ void __fastcall OtherUserSortDialog__OnClickCancel(OtherUserSortDialog_o *this, 
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_49F76F9 & 1) == 0 )
+  if ( (byte_49F97E9 & 1) == 0 )
   {
-    sub_1B640C8(&Method_OtherUserSortDialog_OnClickCancel__, method);
-    byte_49F76F9 = 1;
+    sub_1B64870(&Method_OtherUserSortDialog_OnClickCancel__, method);
+    byte_49F97E9 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_OtherUserSortDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_OtherUserSortDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B640E0();
-    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64888();
+    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     OtherUserSortDialog__Callback(this, 0, v5);
   }
@@ -452,34 +437,35 @@ void __fastcall OtherUserSortDialog__OnClickDecide(OtherUserSortDialog_o *this, 
 {
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
+  __int64 v5; // x1
   ListViewSort_o *baseSortInfo; // x0
-  const MethodInfo *v6; // x2
+  const MethodInfo *v7; // x2
   struct ListViewSort_o *operationSortInfo; // x8
-  bool v8; // w1
+  bool v9; // w1
 
-  if ( (byte_49F76F8 & 1) == 0 )
+  if ( (byte_49F97E8 & 1) == 0 )
   {
-    sub_1B640C8(&Method_OtherUserSortDialog_OnClickDecide__, method);
-    byte_49F76F8 = 1;
+    sub_1B64870(&Method_OtherUserSortDialog_OnClickDecide__, method);
+    byte_49F97E8 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_OtherUserSortDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_OtherUserSortDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B640E0();
-    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64888();
+    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     baseSortInfo = this->fields.baseSortInfo;
     if ( !baseSortInfo
       || (ListViewSort__Set(baseSortInfo, this->fields.operationSortInfo, 0LL),
           (operationSortInfo = this->fields.operationSortInfo) == 0LL) )
     {
-      sub_1B64324(baseSortInfo);
+      sub_1B64ACC(baseSortInfo, v5);
     }
-    v8 = this->fields.openedSortKind != operationSortInfo->fields.sortKind
+    v9 = this->fields.openedSortKind != operationSortInfo->fields.sortKind
       || this->fields.openedPriorityKind != operationSortInfo->fields.priorityKind;
-    OtherUserSortDialog__Callback(this, v8, v6);
+    OtherUserSortDialog__Callback(this, v9, v7);
   }
 }
 
@@ -492,21 +478,21 @@ void __fastcall OtherUserSortDialog__OnClickPriorityBondUp(OtherUserSortDialog_o
   const MethodInfo *v6; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_49F7702 & 1) == 0 )
+  if ( (byte_49F97F2 & 1) == 0 )
   {
-    sub_1B640C8(&Method_OtherUserSortDialog_OnClickPriorityBondUp__, method);
-    byte_49F7702 = 1;
+    sub_1B64870(&Method_OtherUserSortDialog_OnClickPriorityBondUp__, method);
+    byte_49F97F2 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_OtherUserSortDialog_OnClickPriorityBondUp__;
     if ( (*((_BYTE *)Method_OtherUserSortDialog_OnClickPriorityBondUp__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B640E0();
-    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64888();
+    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_1B64324(v5);
+      sub_1B64ACC(v5, v6);
     operationSortInfo->fields.priorityKind = 4;
     OtherUserSortDialog__SetPriorityButtonSelect(this, v6);
   }
@@ -521,21 +507,21 @@ void __fastcall OtherUserSortDialog__OnClickPriorityDropUp(OtherUserSortDialog_o
   const MethodInfo *v6; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_49F7704 & 1) == 0 )
+  if ( (byte_49F97F4 & 1) == 0 )
   {
-    sub_1B640C8(&Method_OtherUserSortDialog_OnClickPriorityDropUp__, method);
-    byte_49F7704 = 1;
+    sub_1B64870(&Method_OtherUserSortDialog_OnClickPriorityDropUp__, method);
+    byte_49F97F4 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_OtherUserSortDialog_OnClickPriorityDropUp__;
     if ( (*((_BYTE *)Method_OtherUserSortDialog_OnClickPriorityDropUp__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B640E0();
-    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64888();
+    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_1B64324(v5);
+      sub_1B64ACC(v5, v6);
     operationSortInfo->fields.priorityKind = 6;
     OtherUserSortDialog__SetPriorityButtonSelect(this, v6);
   }
@@ -550,21 +536,21 @@ void __fastcall OtherUserSortDialog__OnClickPriorityEquipExpUp(OtherUserSortDial
   const MethodInfo *v6; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_49F7701 & 1) == 0 )
+  if ( (byte_49F97F1 & 1) == 0 )
   {
-    sub_1B640C8(&Method_OtherUserSortDialog_OnClickPriorityEquipExpUp__, method);
-    byte_49F7701 = 1;
+    sub_1B64870(&Method_OtherUserSortDialog_OnClickPriorityEquipExpUp__, method);
+    byte_49F97F1 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_OtherUserSortDialog_OnClickPriorityEquipExpUp__;
     if ( (*((_BYTE *)Method_OtherUserSortDialog_OnClickPriorityEquipExpUp__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B640E0();
-    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64888();
+    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_1B64324(v5);
+      sub_1B64ACC(v5, v6);
     operationSortInfo->fields.priorityKind = 3;
     OtherUserSortDialog__SetPriorityButtonSelect(this, v6);
   }
@@ -581,21 +567,21 @@ void __fastcall OtherUserSortDialog__OnClickPriorityFriendPointUp(
   const MethodInfo *v6; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_49F76FF & 1) == 0 )
+  if ( (byte_49F97EF & 1) == 0 )
   {
-    sub_1B640C8(&Method_OtherUserSortDialog_OnClickPriorityFriendPointUp__, method);
-    byte_49F76FF = 1;
+    sub_1B64870(&Method_OtherUserSortDialog_OnClickPriorityFriendPointUp__, method);
+    byte_49F97EF = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_OtherUserSortDialog_OnClickPriorityFriendPointUp__;
     if ( (*((_BYTE *)Method_OtherUserSortDialog_OnClickPriorityFriendPointUp__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B640E0();
-    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64888();
+    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_1B64324(v5);
+      sub_1B64ACC(v5, v6);
     operationSortInfo->fields.priorityKind = 1;
     OtherUserSortDialog__SetPriorityButtonSelect(this, v6);
   }
@@ -610,21 +596,21 @@ void __fastcall OtherUserSortDialog__OnClickPriorityMasterExpUp(OtherUserSortDia
   const MethodInfo *v6; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_49F7700 & 1) == 0 )
+  if ( (byte_49F97F0 & 1) == 0 )
   {
-    sub_1B640C8(&Method_OtherUserSortDialog_OnClickPriorityMasterExpUp__, method);
-    byte_49F7700 = 1;
+    sub_1B64870(&Method_OtherUserSortDialog_OnClickPriorityMasterExpUp__, method);
+    byte_49F97F0 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_OtherUserSortDialog_OnClickPriorityMasterExpUp__;
     if ( (*((_BYTE *)Method_OtherUserSortDialog_OnClickPriorityMasterExpUp__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B640E0();
-    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64888();
+    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_1B64324(v5);
+      sub_1B64ACC(v5, v6);
     operationSortInfo->fields.priorityKind = 2;
     OtherUserSortDialog__SetPriorityButtonSelect(this, v6);
   }
@@ -639,21 +625,21 @@ void __fastcall OtherUserSortDialog__OnClickPriorityNone(OtherUserSortDialog_o *
   const MethodInfo *v6; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_49F76FE & 1) == 0 )
+  if ( (byte_49F97EE & 1) == 0 )
   {
-    sub_1B640C8(&Method_OtherUserSortDialog_OnClickPriorityNone__, method);
-    byte_49F76FE = 1;
+    sub_1B64870(&Method_OtherUserSortDialog_OnClickPriorityNone__, method);
+    byte_49F97EE = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_OtherUserSortDialog_OnClickPriorityNone__;
     if ( (*((_BYTE *)Method_OtherUserSortDialog_OnClickPriorityNone__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B640E0();
-    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64888();
+    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_1B64324(v5);
+      sub_1B64ACC(v5, v6);
     operationSortInfo->fields.priorityKind = 0;
     OtherUserSortDialog__SetPriorityButtonSelect(this, v6);
   }
@@ -668,21 +654,21 @@ void __fastcall OtherUserSortDialog__OnClickPriorityQpUp(OtherUserSortDialog_o *
   const MethodInfo *v6; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_49F7703 & 1) == 0 )
+  if ( (byte_49F97F3 & 1) == 0 )
   {
-    sub_1B640C8(&Method_OtherUserSortDialog_OnClickPriorityQpUp__, method);
-    byte_49F7703 = 1;
+    sub_1B64870(&Method_OtherUserSortDialog_OnClickPriorityQpUp__, method);
+    byte_49F97F3 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_OtherUserSortDialog_OnClickPriorityQpUp__;
     if ( (*((_BYTE *)Method_OtherUserSortDialog_OnClickPriorityQpUp__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B640E0();
-    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64888();
+    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_1B64324(v5);
+      sub_1B64ACC(v5, v6);
     operationSortInfo->fields.priorityKind = 5;
     OtherUserSortDialog__SetPriorityButtonSelect(this, v6);
   }
@@ -697,21 +683,21 @@ void __fastcall OtherUserSortDialog__OnClickSortAttack(OtherUserSortDialog_o *th
   const MethodInfo *v6; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_49F76FD & 1) == 0 )
+  if ( (byte_49F97ED & 1) == 0 )
   {
-    sub_1B640C8(&Method_OtherUserSortDialog_OnClickSortAttack__, method);
-    byte_49F76FD = 1;
+    sub_1B64870(&Method_OtherUserSortDialog_OnClickSortAttack__, method);
+    byte_49F97ED = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_OtherUserSortDialog_OnClickSortAttack__;
     if ( (*((_BYTE *)Method_OtherUserSortDialog_OnClickSortAttack__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B640E0();
-    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64888();
+    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_1B64324(v5);
+      sub_1B64ACC(v5, v6);
     operationSortInfo->fields.sortKind = 6;
     OtherUserSortDialog__SetSortButtonSelect(this, v6);
   }
@@ -726,21 +712,21 @@ void __fastcall OtherUserSortDialog__OnClickSortHp(OtherUserSortDialog_o *this, 
   const MethodInfo *v6; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_49F76FC & 1) == 0 )
+  if ( (byte_49F97EC & 1) == 0 )
   {
-    sub_1B640C8(&Method_OtherUserSortDialog_OnClickSortHp__, method);
-    byte_49F76FC = 1;
+    sub_1B64870(&Method_OtherUserSortDialog_OnClickSortHp__, method);
+    byte_49F97EC = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_OtherUserSortDialog_OnClickSortHp__;
     if ( (*((_BYTE *)Method_OtherUserSortDialog_OnClickSortHp__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B640E0();
-    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64888();
+    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_1B64324(v5);
+      sub_1B64ACC(v5, v6);
     operationSortInfo->fields.sortKind = 5;
     OtherUserSortDialog__SetSortButtonSelect(this, v6);
   }
@@ -755,21 +741,21 @@ void __fastcall OtherUserSortDialog__OnClickSortLevel(OtherUserSortDialog_o *thi
   const MethodInfo *v6; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_49F76FB & 1) == 0 )
+  if ( (byte_49F97EB & 1) == 0 )
   {
-    sub_1B640C8(&Method_OtherUserSortDialog_OnClickSortLevel__, method);
-    byte_49F76FB = 1;
+    sub_1B64870(&Method_OtherUserSortDialog_OnClickSortLevel__, method);
+    byte_49F97EB = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_OtherUserSortDialog_OnClickSortLevel__;
     if ( (*((_BYTE *)Method_OtherUserSortDialog_OnClickSortLevel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B640E0();
-    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64888();
+    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_1B64324(v5);
+      sub_1B64ACC(v5, v6);
     operationSortInfo->fields.sortKind = 3;
     OtherUserSortDialog__SetSortButtonSelect(this, v6);
   }
@@ -784,21 +770,21 @@ void __fastcall OtherUserSortDialog__OnClickSortLoginAccess(OtherUserSortDialog_
   const MethodInfo *v6; // x1
   struct ListViewSort_o *operationSortInfo; // x8
 
-  if ( (byte_49F76FA & 1) == 0 )
+  if ( (byte_49F97EA & 1) == 0 )
   {
-    sub_1B640C8(&Method_OtherUserSortDialog_OnClickSortLoginAccess__, method);
-    byte_49F76FA = 1;
+    sub_1B64870(&Method_OtherUserSortDialog_OnClickSortLoginAccess__, method);
+    byte_49F97EA = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_OtherUserSortDialog_OnClickSortLoginAccess__;
     if ( (*((_BYTE *)Method_OtherUserSortDialog_OnClickSortLoginAccess__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B640E0();
-    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64888();
+    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_1B64324(v5);
+      sub_1B64ACC(v5, v6);
     operationSortInfo->fields.sortKind = 11;
     OtherUserSortDialog__SetSortButtonSelect(this, v6);
   }
@@ -827,135 +813,131 @@ void __fastcall OtherUserSortDialog__Open(
   __int64 v20; // x1
   UILabel_o *sortTitleLabel; // x21
   __int64 sortKindList; // x0
+  const MethodInfo *v23; // x1
   UILabel_o *sortExplanationLabel; // x21
   UILabel_o *priorityTitleLabel; // x21
   UILabel_o *priorityExplanationLabel; // x21
   UILabel_o *decideLabel; // x21
   UILabel_o *cancelLabel; // x21
-  __int64 v28; // x1
-  __int64 v29; // x2
   int32_t modeKind; // w8
-  OtherUserSortDialog_c *v31; // x0
+  OtherUserSortDialog_c *v30; // x0
   struct ListViewSort_o *friendRequestListSortInfo; // x1
+  OtherUserSortDialog_c *v32; // x0
   OtherUserSortDialog_c *v33; // x0
-  OtherUserSortDialog_c *v34; // x0
   struct ListViewSort_o *baseSortInfo; // x20
-  ListViewSort_o *v36; // x21
-  const MethodInfo *v37; // x1
-  __int64 v38; // x2
-  __int64 v39; // x3
+  ListViewSort_o *v35; // x21
+  __int64 v36; // x2
+  __int64 v37; // x3
   struct UILabel_array *sortButtonLabels; // x8
-  __int64 v41; // x20
+  __int64 v39; // x20
   int max_length; // w9
   ListViewSort_o *operationSortInfo; // x22
-  UILabel_o *v44; // x21
+  UILabel_o *v42; // x21
   struct UILabel_array *priorityButtonLabels; // x8
-  __int64 v46; // x20
-  int v47; // w9
-  ListViewSort_o *v48; // x22
-  UILabel_o *v49; // x21
-  const MethodInfo *v50; // x2
-  __int64 v51; // x1
-  __int64 v52; // x2
-  System_Action_o *v53; // x20
+  __int64 v44; // x20
+  int v45; // w9
+  ListViewSort_o *v46; // x22
+  UILabel_o *v47; // x21
+  const MethodInfo *v48; // x2
+  System_Action_o *v49; // x20
 
-  if ( (byte_49F76F4 & 1) == 0 )
+  if ( (byte_49F97E4 & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_TypeInfo, *(_QWORD *)&kind);
-    sub_1B640C8(&ListViewSort_TypeInfo, v9);
-    sub_1B640C8(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__, v10);
-    sub_1B640C8(&Method_System_Collections_Generic_List_ListViewSort_PriorityKind__get_Item__, v11);
-    sub_1B640C8(&LocalizationManager_TypeInfo, v12);
-    sub_1B640C8(&Method_OtherUserSortDialog_EndOpen__, v13);
-    sub_1B640C8(&OtherUserSortDialog_TypeInfo, v14);
-    sub_1B640C8(&StringLiteral_9692/*"OTHER_USER_SORT_DIALOG_SORT_TITLE"*/, v15);
-    sub_1B640C8(&StringLiteral_9690/*"OTHER_USER_SORT_DIALOG_PRIORITY_TITLE"*/, v16);
-    sub_1B640C8(&StringLiteral_9687/*"OTHER_USER_SORT_DIALOG_CANCEL"*/, v17);
-    sub_1B640C8(&StringLiteral_9689/*"OTHER_USER_SORT_DIALOG_PRIORITY_DETAIL"*/, v18);
-    sub_1B640C8(&StringLiteral_9688/*"OTHER_USER_SORT_DIALOG_DECIDE"*/, v19);
-    sub_1B640C8(&StringLiteral_9691/*"OTHER_USER_SORT_DIALOG_SORT_DETAIL"*/, v20);
-    byte_49F76F4 = 1;
+    sub_1B64870(&System_Action_TypeInfo, *(_QWORD *)&kind);
+    sub_1B64870(&ListViewSort_TypeInfo, v9);
+    sub_1B64870(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__, v10);
+    sub_1B64870(&Method_System_Collections_Generic_List_ListViewSort_PriorityKind__get_Item__, v11);
+    sub_1B64870(&LocalizationManager_TypeInfo, v12);
+    sub_1B64870(&Method_OtherUserSortDialog_EndOpen__, v13);
+    sub_1B64870(&OtherUserSortDialog_TypeInfo, v14);
+    sub_1B64870(&StringLiteral_9693/*"OTHER_USER_SORT_DIALOG_SORT_TITLE"*/, v15);
+    sub_1B64870(&StringLiteral_9691/*"OTHER_USER_SORT_DIALOG_PRIORITY_TITLE"*/, v16);
+    sub_1B64870(&StringLiteral_9688/*"OTHER_USER_SORT_DIALOG_CANCEL"*/, v17);
+    sub_1B64870(&StringLiteral_9690/*"OTHER_USER_SORT_DIALOG_PRIORITY_DETAIL"*/, v18);
+    sub_1B64870(&StringLiteral_9689/*"OTHER_USER_SORT_DIALOG_DECIDE"*/, v19);
+    sub_1B64870(&StringLiteral_9692/*"OTHER_USER_SORT_DIALOG_SORT_DETAIL"*/, v20);
+    byte_49F97E4 = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.callbackFunc = callback;
     this->fields.modeKind = kind;
-    sub_1B6406C(&this->fields.callbackFunc);
+    sub_1B64814(&this->fields.callbackFunc);
     sortTitleLabel = this->fields.sortTitleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    sortKindList = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9692/*"OTHER_USER_SORT_DIALOG_SORT_TITLE"*/, 0LL);
+    sortKindList = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9693/*"OTHER_USER_SORT_DIALOG_SORT_TITLE"*/, 0LL);
     if ( !sortTitleLabel )
       goto LABEL_50;
     UILabel__set_text(sortTitleLabel, (System_String_o *)sortKindList, 0LL);
     sortExplanationLabel = this->fields.sortExplanationLabel;
-    sortKindList = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9691/*"OTHER_USER_SORT_DIALOG_SORT_DETAIL"*/, 0LL);
+    sortKindList = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9692/*"OTHER_USER_SORT_DIALOG_SORT_DETAIL"*/, 0LL);
     if ( !sortExplanationLabel )
       goto LABEL_50;
     UILabel__set_text(sortExplanationLabel, (System_String_o *)sortKindList, 0LL);
     priorityTitleLabel = this->fields.priorityTitleLabel;
-    sortKindList = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9690/*"OTHER_USER_SORT_DIALOG_PRIORITY_TITLE"*/, 0LL);
+    sortKindList = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9691/*"OTHER_USER_SORT_DIALOG_PRIORITY_TITLE"*/, 0LL);
     if ( !priorityTitleLabel )
       goto LABEL_50;
     UILabel__set_text(priorityTitleLabel, (System_String_o *)sortKindList, 0LL);
     priorityExplanationLabel = this->fields.priorityExplanationLabel;
-    sortKindList = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9689/*"OTHER_USER_SORT_DIALOG_PRIORITY_DETAIL"*/, 0LL);
+    sortKindList = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9690/*"OTHER_USER_SORT_DIALOG_PRIORITY_DETAIL"*/, 0LL);
     if ( !priorityExplanationLabel )
       goto LABEL_50;
     UILabel__set_text(priorityExplanationLabel, (System_String_o *)sortKindList, 0LL);
     decideLabel = this->fields.decideLabel;
-    sortKindList = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9688/*"OTHER_USER_SORT_DIALOG_DECIDE"*/, 0LL);
+    sortKindList = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9689/*"OTHER_USER_SORT_DIALOG_DECIDE"*/, 0LL);
     if ( !decideLabel )
       goto LABEL_50;
     UILabel__set_text(decideLabel, (System_String_o *)sortKindList, 0LL);
     cancelLabel = this->fields.cancelLabel;
-    sortKindList = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9687/*"OTHER_USER_SORT_DIALOG_CANCEL"*/, 0LL);
+    sortKindList = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9688/*"OTHER_USER_SORT_DIALOG_CANCEL"*/, 0LL);
     if ( !cancelLabel )
       goto LABEL_50;
     UILabel__set_text(cancelLabel, (System_String_o *)sortKindList, 0LL);
     if ( sort )
     {
       this->fields.baseSortInfo = sort;
-      sortKindList = sub_1B6406C(&this->fields.baseSortInfo);
+      sortKindList = sub_1B64814(&this->fields.baseSortInfo);
 LABEL_29:
       baseSortInfo = this->fields.baseSortInfo;
       if ( baseSortInfo )
       {
         this->fields.openedSortKind = baseSortInfo->fields.sortKind;
         this->fields.openedPriorityKind = baseSortInfo->fields.priorityKind;
-        v36 = (ListViewSort_o *)sub_1B64314(ListViewSort_TypeInfo, v28, v29);
-        ListViewSort___ctor_40426860(v36, baseSortInfo, 0LL);
-        this->fields.operationSortInfo = v36;
-        sortKindList = sub_1B6406C(&this->fields.operationSortInfo);
+        v35 = (ListViewSort_o *)sub_1B64ABC(ListViewSort_TypeInfo);
+        ListViewSort___ctor_40431992(v35, baseSortInfo, 0LL);
+        this->fields.operationSortInfo = v35;
+        sortKindList = sub_1B64814(&this->fields.operationSortInfo);
         sortButtonLabels = this->fields.sortButtonLabels;
         if ( sortButtonLabels )
         {
-          v41 = 0LL;
+          v39 = 0LL;
           while ( 1 )
           {
             max_length = sortButtonLabels->max_length;
-            if ( (int)v41 >= max_length )
+            if ( (int)v39 >= max_length )
               break;
-            if ( (unsigned int)v41 >= max_length )
+            if ( (unsigned int)v39 >= max_length )
 LABEL_51:
-              sub_1B6432C(sortKindList, v37, v38, v39);
+              sub_1B64AD4(sortKindList, v23, v36, v37);
             sortKindList = (__int64)this->fields.sortKindList;
             if ( sortKindList )
             {
               operationSortInfo = this->fields.operationSortInfo;
-              v44 = sortButtonLabels->m_Items[v41];
+              v42 = sortButtonLabels->m_Items[v39];
               sortKindList = System_Collections_Generic_List_Int32Enum___get_Item(
                                (System_Collections_Generic_List_T__o *)sortKindList,
-                               v41,
-                               (const MethodInfo_34924B8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__);
+                               v39,
+                               (const MethodInfo_3494794 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__);
               if ( operationSortInfo )
               {
                 sortKindList = (__int64)ListViewSort__GetSortKindText(operationSortInfo, sortKindList, 0LL);
-                if ( v44 )
+                if ( v42 )
                 {
-                  UILabel__set_text(v44, (System_String_o *)sortKindList, 0LL);
+                  UILabel__set_text(v42, (System_String_o *)sortKindList, 0LL);
                   sortButtonLabels = this->fields.sortButtonLabels;
-                  ++v41;
+                  ++v39;
                   if ( sortButtonLabels )
                     continue;
                 }
@@ -963,35 +945,35 @@ LABEL_51:
             }
             goto LABEL_50;
           }
-          OtherUserSortDialog__SetSortButtonSelect(this, v37);
+          OtherUserSortDialog__SetSortButtonSelect(this, v23);
           priorityButtonLabels = this->fields.priorityButtonLabels;
           if ( priorityButtonLabels )
           {
-            v46 = 0LL;
+            v44 = 0LL;
             while ( 1 )
             {
-              v47 = priorityButtonLabels->max_length;
-              if ( (int)v46 >= v47 )
+              v45 = priorityButtonLabels->max_length;
+              if ( (int)v44 >= v45 )
                 break;
-              if ( (unsigned int)v46 >= v47 )
+              if ( (unsigned int)v44 >= v45 )
                 goto LABEL_51;
               sortKindList = (__int64)this->fields.priorityKindList;
               if ( sortKindList )
               {
-                v48 = this->fields.operationSortInfo;
-                v49 = priorityButtonLabels->m_Items[v46];
+                v46 = this->fields.operationSortInfo;
+                v47 = priorityButtonLabels->m_Items[v44];
                 sortKindList = System_Collections_Generic_List_Int32Enum___get_Item(
                                  (System_Collections_Generic_List_T__o *)sortKindList,
-                                 v46,
-                                 (const MethodInfo_34924B8 *)Method_System_Collections_Generic_List_ListViewSort_PriorityKind__get_Item__);
-                if ( v48 )
+                                 v44,
+                                 (const MethodInfo_3494794 *)Method_System_Collections_Generic_List_ListViewSort_PriorityKind__get_Item__);
+                if ( v46 )
                 {
-                  sortKindList = (__int64)ListViewSort__GetOtherUserPriorityKindText(v48, sortKindList, 0LL);
-                  if ( v49 )
+                  sortKindList = (__int64)ListViewSort__GetOtherUserPriorityKindText(v46, sortKindList, 0LL);
+                  if ( v47 )
                   {
-                    UILabel__set_text(v49, (System_String_o *)sortKindList, 0LL);
+                    UILabel__set_text(v47, (System_String_o *)sortKindList, 0LL);
                     priorityButtonLabels = this->fields.priorityButtonLabels;
-                    ++v46;
+                    ++v44;
                     if ( priorityButtonLabels )
                       continue;
                   }
@@ -999,26 +981,36 @@ LABEL_51:
               }
               goto LABEL_50;
             }
-            OtherUserSortDialog__SetPriorityButtonSelect(this, v37);
+            OtherUserSortDialog__SetPriorityButtonSelect(this, v23);
             sortKindList = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
             if ( sortKindList )
             {
               UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)sortKindList, 1, 0LL);
-              OtherUserSortDialog__SetEnableButtons(this, 1, v50);
+              OtherUserSortDialog__SetEnableButtons(this, 1, v48);
               this->fields.state = 1;
-              v53 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v51, v52);
-              System_Action___ctor(v53, (Il2CppObject *)this, Method_OtherUserSortDialog_EndOpen__, 0LL);
-              BaseDialog__Open((BaseDialog_o *)this, v53, 0, 0LL);
+              v49 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+              System_Action___ctor(v49, (Il2CppObject *)this, Method_OtherUserSortDialog_EndOpen__, 0LL);
+              BaseDialog__Open((BaseDialog_o *)this, v49, 0, 0LL);
               return;
             }
           }
         }
       }
 LABEL_50:
-      sub_1B64324(sortKindList);
+      sub_1B64ACC(sortKindList, v23);
     }
     modeKind = this->fields.modeKind;
     if ( modeKind == 2 )
+    {
+      v32 = OtherUserSortDialog_TypeInfo;
+      if ( !OtherUserSortDialog_TypeInfo->_2.cctor_finished )
+      {
+        j_il2cpp_runtime_class_init_0(OtherUserSortDialog_TypeInfo);
+        v32 = OtherUserSortDialog_TypeInfo;
+      }
+      friendRequestListSortInfo = v32->static_fields->friendRequestListSortInfo;
+    }
+    else if ( modeKind == 1 )
     {
       v33 = OtherUserSortDialog_TypeInfo;
       if ( !OtherUserSortDialog_TypeInfo->_2.cctor_finished )
@@ -1026,17 +1018,7 @@ LABEL_50:
         j_il2cpp_runtime_class_init_0(OtherUserSortDialog_TypeInfo);
         v33 = OtherUserSortDialog_TypeInfo;
       }
-      friendRequestListSortInfo = v33->static_fields->friendRequestListSortInfo;
-    }
-    else if ( modeKind == 1 )
-    {
-      v34 = OtherUserSortDialog_TypeInfo;
-      if ( !OtherUserSortDialog_TypeInfo->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(OtherUserSortDialog_TypeInfo);
-        v34 = OtherUserSortDialog_TypeInfo;
-      }
-      friendRequestListSortInfo = v34->static_fields->friendMemberListSortInfo;
+      friendRequestListSortInfo = v33->static_fields->friendMemberListSortInfo;
     }
     else
     {
@@ -1049,16 +1031,16 @@ LABEL_27:
         ListViewSort__Load((ListViewSort_o *)sortKindList, 0LL);
         goto LABEL_29;
       }
-      v31 = OtherUserSortDialog_TypeInfo;
+      v30 = OtherUserSortDialog_TypeInfo;
       if ( !OtherUserSortDialog_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(OtherUserSortDialog_TypeInfo);
-        v31 = OtherUserSortDialog_TypeInfo;
+        v30 = OtherUserSortDialog_TypeInfo;
       }
-      friendRequestListSortInfo = v31->static_fields->supportSortInfo;
+      friendRequestListSortInfo = v30->static_fields->supportSortInfo;
     }
     this->fields.baseSortInfo = friendRequestListSortInfo;
-    sub_1B6406C(&this->fields.baseSortInfo);
+    sub_1B64814(&this->fields.baseSortInfo);
     goto LABEL_27;
   }
 }
@@ -1088,7 +1070,7 @@ void __fastcall OtherUserSortDialog__SetEnableButtons(
     while ( 1 )
     {
       if ( v8 >= max_length )
-        sub_1B6432C(this, isEnable, method, v3);
+        sub_1B64AD4(this, isEnable, method, v3);
       this = (OtherUserSortDialog_o *)sortButtons->m_Items[v8];
       if ( !this )
         break;
@@ -1098,7 +1080,7 @@ void __fastcall OtherUserSortDialog__SetEnableButtons(
         goto LABEL_7;
     }
 LABEL_10:
-    sub_1B64324(this);
+    sub_1B64ACC(this, isEnable);
   }
 LABEL_7:
   this = (OtherUserSortDialog_o *)v6->fields.decideButton;
@@ -1129,17 +1111,17 @@ void __fastcall OtherUserSortDialog__SetPriorityButtonSelect(OtherUserSortDialog
   System_String_o **v13; // x8
 
   v4 = this;
-  if ( (byte_49F76F7 & 1) == 0 )
+  if ( (byte_49F97E7 & 1) == 0 )
   {
-    sub_1B640C8(&Method_System_Collections_Generic_List_ListViewSort_PriorityKind__get_Item__, method);
-    sub_1B640C8(&StringLiteral_17401/*"btn_bg_04"*/, v5);
-    this = (OtherUserSortDialog_o *)sub_1B640C8(&StringLiteral_17400/*"btn_bg_03"*/, v6);
-    byte_49F76F7 = 1;
+    sub_1B64870(&Method_System_Collections_Generic_List_ListViewSort_PriorityKind__get_Item__, method);
+    sub_1B64870(&StringLiteral_17403/*"btn_bg_04"*/, v5);
+    this = (OtherUserSortDialog_o *)sub_1B64870(&StringLiteral_17402/*"btn_bg_03"*/, v6);
+    byte_49F97E7 = 1;
   }
   priorityButtons = v4->fields.priorityButtons;
   if ( !priorityButtons )
 LABEL_15:
-    sub_1B64324(this);
+    sub_1B64ACC(this, method);
   v8 = 0LL;
   while ( (int)v8 < (signed int)priorityButtons->max_length )
   {
@@ -1147,7 +1129,7 @@ LABEL_15:
     if ( prioritySprites )
     {
       if ( (unsigned int)v8 >= prioritySprites->max_length )
-        sub_1B6432C(this, method, v2, v3);
+        sub_1B64AD4(this, method, v2, v3);
       operationSortInfo = v4->fields.operationSortInfo;
       if ( operationSortInfo )
       {
@@ -1159,10 +1141,10 @@ LABEL_15:
           this = (OtherUserSortDialog_o *)System_Collections_Generic_List_Int32Enum___get_Item(
                                             (System_Collections_Generic_List_T__o *)this,
                                             v8,
-                                            (const MethodInfo_34924B8 *)Method_System_Collections_Generic_List_ListViewSort_PriorityKind__get_Item__);
+                                            (const MethodInfo_3494794 *)Method_System_Collections_Generic_List_ListViewSort_PriorityKind__get_Item__);
           if ( v12 )
           {
-            v13 = (System_String_o **)(priorityKind == (_DWORD)this ? &StringLiteral_17400/*"btn_bg_03"*/ : &StringLiteral_17401/*"btn_bg_04"*/);
+            v13 = (System_String_o **)(priorityKind == (_DWORD)this ? &StringLiteral_17402/*"btn_bg_03"*/ : &StringLiteral_17403/*"btn_bg_04"*/);
             UISprite__set_spriteName(v12, *v13, 0LL);
             priorityButtons = v4->fields.priorityButtons;
             ++v8;
@@ -1193,17 +1175,17 @@ void __fastcall OtherUserSortDialog__SetSortButtonSelect(OtherUserSortDialog_o *
   System_String_o **v13; // x8
 
   v4 = this;
-  if ( (byte_49F76F6 & 1) == 0 )
+  if ( (byte_49F97E6 & 1) == 0 )
   {
-    sub_1B640C8(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__, method);
-    sub_1B640C8(&StringLiteral_17401/*"btn_bg_04"*/, v5);
-    this = (OtherUserSortDialog_o *)sub_1B640C8(&StringLiteral_17400/*"btn_bg_03"*/, v6);
-    byte_49F76F6 = 1;
+    sub_1B64870(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__, method);
+    sub_1B64870(&StringLiteral_17403/*"btn_bg_04"*/, v5);
+    this = (OtherUserSortDialog_o *)sub_1B64870(&StringLiteral_17402/*"btn_bg_03"*/, v6);
+    byte_49F97E6 = 1;
   }
   sortButtons = v4->fields.sortButtons;
   if ( !sortButtons )
 LABEL_15:
-    sub_1B64324(this);
+    sub_1B64ACC(this, method);
   v8 = 0LL;
   while ( (int)v8 < (signed int)sortButtons->max_length )
   {
@@ -1211,7 +1193,7 @@ LABEL_15:
     if ( sortSprites )
     {
       if ( (unsigned int)v8 >= sortSprites->max_length )
-        sub_1B6432C(this, method, v2, v3);
+        sub_1B64AD4(this, method, v2, v3);
       operationSortInfo = v4->fields.operationSortInfo;
       if ( operationSortInfo )
       {
@@ -1223,10 +1205,10 @@ LABEL_15:
           this = (OtherUserSortDialog_o *)System_Collections_Generic_List_Int32Enum___get_Item(
                                             (System_Collections_Generic_List_T__o *)this,
                                             v8,
-                                            (const MethodInfo_34924B8 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__);
+                                            (const MethodInfo_3494794 *)Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__);
           if ( v12 )
           {
-            v13 = (System_String_o **)(sortKind == (_DWORD)this ? &StringLiteral_17400/*"btn_bg_03"*/ : &StringLiteral_17401/*"btn_bg_04"*/);
+            v13 = (System_String_o **)(sortKind == (_DWORD)this ? &StringLiteral_17402/*"btn_bg_03"*/ : &StringLiteral_17403/*"btn_bg_04"*/);
             UISprite__set_spriteName(v12, *v13, 0LL);
             sortButtons = v4->fields.sortButtons;
             ++v8;
@@ -1256,10 +1238,10 @@ void __fastcall OtherUserSortDialog__add_callbackFunc(
   OtherUserSortDialog_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_49F76F2 & 1) == 0 )
+  if ( (byte_49F97E2 & 1) == 0 )
   {
-    sub_1B640C8(&OtherUserSortDialog_CallbackFunc_TypeInfo, value);
-    byte_49F76F2 = 1;
+    sub_1B64870(&OtherUserSortDialog_CallbackFunc_TypeInfo, value);
+    byte_49F97E2 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1272,13 +1254,13 @@ void __fastcall OtherUserSortDialog__add_callbackFunc(
       if ( (OtherUserSortDialog_CallbackFunc_c *)v8->klass != OtherUserSortDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1B9F5B8(p_callbackFunc, v8, v6);
+    v9 = sub_1B9FD60(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (OtherUserSortDialog_o *)sub_1B645E4(v8);
+  v11 = (OtherUserSortDialog_o *)sub_1B64D8C(v8);
   OtherUserSortDialog__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -1287,12 +1269,12 @@ System_String_o *__fastcall OtherUserSortDialog__get_closeBtnPath(
         OtherUserSortDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_49F7705 & 1) == 0 )
+  if ( (byte_49F97F5 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_15573/*"Window/CancelButton"*/, method);
-    byte_49F7705 = 1;
+    sub_1B64870(&StringLiteral_15575/*"Window/CancelButton"*/, method);
+    byte_49F97F5 = 1;
   }
-  return (System_String_o *)StringLiteral_15573/*"Window/CancelButton"*/;
+  return (System_String_o *)StringLiteral_15575/*"Window/CancelButton"*/;
 }
 
 
@@ -1310,10 +1292,10 @@ void __fastcall OtherUserSortDialog__remove_callbackFunc(
   OtherUserSortDialog_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_49F76F3 & 1) == 0 )
+  if ( (byte_49F97E3 & 1) == 0 )
   {
-    sub_1B640C8(&OtherUserSortDialog_CallbackFunc_TypeInfo, value);
-    byte_49F76F3 = 1;
+    sub_1B64870(&OtherUserSortDialog_CallbackFunc_TypeInfo, value);
+    byte_49F97E3 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1326,13 +1308,13 @@ void __fastcall OtherUserSortDialog__remove_callbackFunc(
       if ( (OtherUserSortDialog_CallbackFunc_c *)v8->klass != OtherUserSortDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1B9F5B8(p_callbackFunc, v8, v6);
+    v9 = sub_1B9FD60(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (OtherUserSortDialog_o *)sub_1B645E4(v8);
+  v11 = (OtherUserSortDialog_o *)sub_1B64D8C(v8);
   OtherUserSortDialog__Awake(v11, v12);
 }
 
@@ -1355,15 +1337,15 @@ void __fastcall OtherUserSortDialog_CallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B6406C(&this->fields.method);
+  sub_1B64814(&this->fields.method);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B64188(v6) & 1) == 0 )
+  if ( (sub_1B64930(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B64340(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B641F0(v10, 0LL);
+      v10 = sub_1B64AE8(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B64998(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -1375,9 +1357,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19A47C0;
+  this->fields.m_target = (Il2CppObject *)sub_19A4F68;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19A4778;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19A4F20;
 }
 
 
@@ -1393,14 +1375,14 @@ System_IAsyncResult_o *__fastcall OtherUserSortDialog_CallbackFunc__BeginInvoke(
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = result;
-  if ( (byte_49F7708 & 1) == 0 )
+  if ( (byte_49F97F8 & 1) == 0 )
   {
-    sub_1B640C8(&bool_TypeInfo, result);
-    byte_49F7708 = 1;
+    sub_1B64870(&bool_TypeInfo, result);
+    byte_49F97F8 = 1;
   }
   v9[1] = 0LL;
-  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_1B6407C(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
+  return (System_IAsyncResult_o *)sub_1B64824(this, v9, callback, object);
 }
 
 
@@ -1409,7 +1391,7 @@ void __fastcall OtherUserSortDialog_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B64080(result, 0LL, method);
+  sub_1B64828(result, 0LL, method);
 }
 
 

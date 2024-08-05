@@ -14,7 +14,7 @@ void __fastcall SkillMotionSkip__MotionStart(SkillMotionSkip_o *this, const Meth
   if ( !manager
     || (v3 = (CommonMotionSkip_o *)this, (this = (SkillMotionSkip_o *)manager->fields._Perf_k__BackingField) == 0LL) )
   {
-    sub_1B64324(this);
+    sub_1B64ACC(this, method);
   }
   if ( BattlePerformance__IsNowActionNotSkillSkip((BattlePerformance_o *)this, 0LL) )
     CommonMotionSkip__Release(v3, v4);
@@ -26,6 +26,7 @@ void __fastcall SkillMotionSkip__MotionStart(SkillMotionSkip_o *this, const Meth
 void __fastcall SkillMotionSkip__Release(SkillMotionSkip_o *this, const MethodInfo *method)
 {
   BattleInformationComponent_o *infoComp; // x0
+  __int64 v4; // x1
   struct BattleMotionSkipManager_o *manager; // x8
   struct BattlePerformance_o *Perf_k__BackingField; // x8
 
@@ -35,7 +36,7 @@ void __fastcall SkillMotionSkip__Release(SkillMotionSkip_o *this, const MethodIn
     || (Perf_k__BackingField = manager->fields._Perf_k__BackingField) == 0LL
     || (infoComp = Perf_k__BackingField->fields.infoComp) == 0LL )
   {
-    sub_1B64324(infoComp);
+    sub_1B64ACC(infoComp, v4);
   }
   BattleInformationComponent__DestroyDisplayingMessage(infoComp, 0LL);
 }
@@ -44,6 +45,7 @@ void __fastcall SkillMotionSkip__Release(SkillMotionSkip_o *this, const MethodIn
 void __fastcall SkillMotionSkip__ResetSkipTimeScale(SkillMotionSkip_o *this, const MethodInfo *method)
 {
   BattleData_o *data; // x0
+  __int64 v4; // x1
   struct BattleMotionSkipManager_o *manager; // x8
   BattlePerformance_o *Perf_k__BackingField; // x19
   float AccelSystemTimeScale; // s0
@@ -58,7 +60,7 @@ void __fastcall SkillMotionSkip__ResetSkipTimeScale(SkillMotionSkip_o *this, con
       || (Perf_k__BackingField = manager->fields._Perf_k__BackingField) == 0LL
       || (data = Perf_k__BackingField->fields.data) == 0LL )
     {
-      sub_1B64324(data);
+      sub_1B64ACC(data, v4);
     }
     AccelSystemTimeScale = BattleData__get_AccelSystemTimeScale(data, 0LL);
     BattlePerformance__SetTimeScale(Perf_k__BackingField, AccelSystemTimeScale, 0LL);

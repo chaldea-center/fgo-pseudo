@@ -12,19 +12,20 @@ void __fastcall MissionNaviTransitionBoardItemDraw__Awake(
 {
   UnityEngine_Object_o *baseSprite; // x20
   _BOOL8 v4; // x0
-  int32_t v5; // w2
-  int32_t v6; // w3
-  struct UISprite_o *v7; // x8
+  __int64 v5; // x1
+  int32_t v6; // w2
+  int32_t v7; // w3
+  struct UISprite_o *v8; // x8
   struct UIAtlas_o *mAtlas; // x1
-  int32_t v9; // w2
-  int32_t v10; // w3
-  struct UISprite_o *v11; // x8
+  int32_t v10; // w2
+  int32_t v11; // w3
+  struct UISprite_o *v12; // x8
   struct System_String_o *mSpriteName; // x1
 
-  if ( (byte_49FF743 & 1) == 0 )
+  if ( (byte_4A01841 & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, method);
-    byte_49FF743 = 1;
+    sub_1B64870(&UnityEngine_Object_TypeInfo, method);
+    byte_4A01841 = 1;
   }
   baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -32,18 +33,18 @@ void __fastcall MissionNaviTransitionBoardItemDraw__Awake(
   v4 = UnityEngine_Object__op_Inequality(baseSprite, 0LL, 0LL);
   if ( v4 )
   {
-    v7 = this->fields.baseSprite;
-    if ( !v7
-      || (mAtlas = v7->fields.mAtlas,
+    v8 = this->fields.baseSprite;
+    if ( !v8
+      || (mAtlas = v8->fields.mAtlas,
           this->fields.baseAtlas = mAtlas,
-          sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.baseAtlas, (int32_t)mAtlas, v5, v6),
-          (v11 = this->fields.baseSprite) == 0LL) )
+          sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.baseAtlas, (int32_t)mAtlas, v6, v7),
+          (v12 = this->fields.baseSprite) == 0LL) )
     {
-      sub_1B64324(v4);
+      sub_1B64ACC(v4, v5);
     }
-    mSpriteName = v11->fields.mSpriteName;
+    mSpriteName = v12->fields.mSpriteName;
     this->fields.baseSpriteName = mSpriteName;
-    sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.baseSpriteName, (int32_t)mSpriteName, v9, v10);
+    sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.baseSpriteName, (int32_t)mSpriteName, v10, v11);
   }
 }
 
@@ -56,45 +57,114 @@ void __fastcall MissionNaviTransitionBoardItemDraw__CheckSerializeFieldAssertion
 }
 
 
+void __fastcall MissionNaviTransitionBoardItemDraw__DeleteCallback(
+        MissionNaviTransitionBoardItemDraw_o *this,
+        const MethodInfo *method)
+{
+  UnityEngine_Object_o *rewardInformationComponent; // x20
+  __int64 v4; // x1
+  HorizontalQuestInformationIconListComponent_o *v5; // x0
+  UnityEngine_Object_o *enemyInformationComponent; // x20
+
+  if ( (byte_4A01849 & 1) == 0 )
+  {
+    sub_1B64870(&UnityEngine_Object_TypeInfo, method);
+    byte_4A01849 = 1;
+  }
+  rewardInformationComponent = (UnityEngine_Object_o *)this->fields.rewardInformationComponent;
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( UnityEngine_Object__op_Inequality(rewardInformationComponent, 0LL, 0LL) )
+  {
+    v5 = this->fields.rewardInformationComponent;
+    if ( !v5 )
+      goto LABEL_14;
+    HorizontalQuestInformationIconListComponent__DeleteCallback(v5, 0LL);
+  }
+  enemyInformationComponent = (UnityEngine_Object_o *)this->fields.enemyInformationComponent;
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( UnityEngine_Object__op_Inequality(enemyInformationComponent, 0LL, 0LL) )
+  {
+    v5 = this->fields.enemyInformationComponent;
+    if ( v5 )
+    {
+      HorizontalQuestInformationIconListComponent__DeleteCallback(v5, 0LL);
+      return;
+    }
+LABEL_14:
+    sub_1B64ACC(v5, v4);
+  }
+}
+
+
 System_String_o *__fastcall MissionNaviTransitionBoardItemDraw__GetIconNameByWarInfo(
         MapControl_WarInfo_o *warInfo,
         const MethodInfo *method)
 {
   __int64 v3; // x1
   __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
   WarEntity_o *Mine; // x0
-  int v6; // w19
-  bool IsEvent; // w0
-  bool v8; // zf
-  int32_t v9; // w0
-  System_String_o **v10; // x19
-  System_String_o *v11; // x0
+  __int64 v8; // x1
+  WarEntity_o *v9; // x19
+  BalanceConfig_c *v10; // x0
+  struct BalanceConfig_StaticFields *static_fields; // x8
+  int32_t id; // w1
+  int32_t v13; // w0
+  __int64 *v14; // x19
+  System_String_o *v15; // x0
 
-  if ( (byte_49FF74A & 1) == 0 )
+  if ( (byte_4A01848 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_24539/*"war_"*/, method);
-    sub_1B640C8(&StringLiteral_19072/*"event_"*/, v3);
-    sub_1B640C8(&StringLiteral_1/*""*/, v4);
-    byte_49FF74A = 1;
+    sub_1B64870(&BalanceConfig_TypeInfo, method);
+    sub_1B64870(&Method_System_Linq_Enumerable_Contains_int___, v3);
+    sub_1B64870(&StringLiteral_24543/*"war_"*/, v4);
+    sub_1B64870(&StringLiteral_19074/*"event_"*/, v5);
+    sub_1B64870(&StringLiteral_1/*""*/, v6);
+    byte_4A01848 = 1;
   }
   if ( !warInfo )
     return (System_String_o *)StringLiteral_1/*""*/;
   Mine = MapControl_WarInfo__GetMine(warInfo, 0LL);
   if ( !Mine )
-    sub_1B64324(0LL);
-  v6 = (int)Mine;
-  IsEvent = WarEntity__IsEvent(Mine, 0LL);
-  v8 = !IsEvent;
-  if ( IsEvent )
-    v9 = v6 + 96;
+    sub_1B64ACC(0LL, v8);
+  v9 = Mine;
+  if ( !WarEntity__IsEvent(Mine, 0LL) )
+    goto LABEL_12;
+  v10 = BalanceConfig_TypeInfo;
+  if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
+    v10 = BalanceConfig_TypeInfo;
+  }
+  static_fields = v10->static_fields;
+  id = v9->fields.id;
+  if ( static_fields->FesWarId == id )
+    goto LABEL_12;
+  if ( !v10->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(v10);
+    id = v9->fields.id;
+    static_fields = BalanceConfig_TypeInfo->static_fields;
+  }
+  if ( System_Linq_Enumerable__Contains_int_(
+         (System_Collections_Generic_IEnumerable_TSource__o *)static_fields->MainChaptersWithEventId,
+         id,
+         (const MethodInfo_2E54F84 *)Method_System_Linq_Enumerable_Contains_int___) )
+  {
+LABEL_12:
+    v13 = (_DWORD)v9 + 16;
+    v14 = &StringLiteral_24543/*"war_"*/;
+  }
   else
-    v9 = v6 + 16;
-  if ( v8 )
-    v10 = (System_String_o **)&StringLiteral_24539/*"war_"*/;
-  else
-    v10 = (System_String_o **)&StringLiteral_19072/*"event_"*/;
-  v11 = System_Int32__ToString(v9, 0LL);
-  return System_String__Concat_61375396(*v10, v11, 0LL);
+  {
+    v13 = (_DWORD)v9 + 96;
+    v14 = &StringLiteral_19074/*"event_"*/;
+  }
+  v15 = System_Int32__ToString(v13, 0LL);
+  return System_String__Concat_61383576((System_String_o *)*v14, v15, 0LL);
 }
 
 
@@ -103,19 +173,20 @@ void __fastcall MissionNaviTransitionBoardItemDraw__OnClickButton(
         const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
+  __int64 v4; // x1
   struct MissionNaviTransitionBoardItem_o *naviBoardItem; // x8
 
-  if ( (byte_49FF749 & 1) == 0 )
+  if ( (byte_4A01847 & 1) == 0 )
   {
-    sub_1B640C8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    byte_49FF749 = 1;
+    sub_1B64870(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    byte_4A01847 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (CommonUI__SetMissionNaviTransitionConfirmDialogState((CommonUI_o *)Instance, 4, 0LL),
         (naviBoardItem = this->fields.naviBoardItem) == 0LL) )
   {
-    sub_1B64324(Instance);
+    sub_1B64ACC(Instance, v4);
   }
   ActionExtensions__Call(naviBoardItem->fields._NaviAction_k__BackingField, 0LL);
 }
@@ -128,13 +199,14 @@ void __fastcall MissionNaviTransitionBoardItemDraw__SetBaseButtonState(
 {
   UnityEngine_Object_o *baseButton; // x21
   struct UICommonButton_o *v6; // x0
-  struct UICommonButton_o *v7; // x8
-  float v8; // s1
+  __int64 v7; // x1
+  struct UICommonButton_o *v8; // x8
+  float v9; // s1
 
-  if ( (byte_49FF745 & 1) == 0 )
+  if ( (byte_4A01843 & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, boardItem);
-    byte_49FF745 = 1;
+    sub_1B64870(&UnityEngine_Object_TypeInfo, boardItem);
+    byte_4A01843 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -144,19 +216,19 @@ void __fastcall MissionNaviTransitionBoardItemDraw__SetBaseButtonState(
   {
     if ( !boardItem )
       goto LABEL_12;
-    v7 = this->fields.baseButton;
-    v8 = 0.5;
+    v8 = this->fields.baseButton;
+    v9 = 0.5;
     if ( boardItem->fields._IsLocked_k__BackingField )
-      v8 = 1.0;
-    if ( !v7
-      || (v7->fields.specifyDisabledColor.fields.r = v8,
-          v7->fields.specifyDisabledColor.fields.g = v8,
-          v7->fields.specifyDisabledColor.fields.b = v8,
-          v7->fields.specifyDisabledColor.fields.a = 1.0,
+      v9 = 1.0;
+    if ( !v8
+      || (v8->fields.specifyDisabledColor.fields.r = v9,
+          v8->fields.specifyDisabledColor.fields.g = v9,
+          v8->fields.specifyDisabledColor.fields.b = v9,
+          v8->fields.specifyDisabledColor.fields.a = 1.0,
           (v6 = this->fields.baseButton) == 0LL) )
     {
 LABEL_12:
-      sub_1B64324(v6);
+      sub_1B64ACC(v6, v7);
     }
     ((void (__fastcall *)(struct UICommonButton_o *, bool, Il2CppMethodPointer))v6->klass->vtable._5_set_isEnabled.method)(
       v6,
@@ -172,24 +244,25 @@ void __fastcall MissionNaviTransitionBoardItemDraw__SetBoardImage(
 {
   __int64 v3; // x1
   UISprite_o *baseSprite; // x20
-  struct UISprite_o *v5; // x0
+  __int64 v5; // x1
+  struct UISprite_o *v6; // x0
 
-  if ( (byte_49FF746 & 1) == 0 )
+  if ( (byte_4A01844 & 1) == 0 )
   {
-    sub_1B640C8(&AtlasManager_TypeInfo, method);
-    sub_1B640C8(&StringLiteral_20254/*"img_list_bg03"*/, v3);
-    byte_49FF746 = 1;
+    sub_1B64870(&AtlasManager_TypeInfo, method);
+    sub_1B64870(&StringLiteral_20257/*"img_list_bg03"*/, v3);
+    byte_4A01844 = 1;
   }
   baseSprite = this->fields.baseSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetBanner(baseSprite, (System_String_o *)StringLiteral_20254/*"img_list_bg03"*/, 0LL);
-  v5 = this->fields.baseSprite;
-  if ( !v5 )
-    sub_1B64324(0LL);
-  ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))v5->klass->vtable._33_MakePixelPerfect.method)(
-    v5,
-    v5->klass->vtable._34_get_minWidth.methodPtr);
+  AtlasManager__SetBanner(baseSprite, (System_String_o *)StringLiteral_20257/*"img_list_bg03"*/, 0LL);
+  v6 = this->fields.baseSprite;
+  if ( !v6 )
+    sub_1B64ACC(0LL, v5);
+  ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))v6->klass->vtable._33_MakePixelPerfect.method)(
+    v6,
+    v6->klass->vtable._34_get_minWidth.methodPtr);
 }
 
 
@@ -219,24 +292,24 @@ void __fastcall MissionNaviTransitionBoardItemDraw__SetIconImage(
   UISprite_o *v23; // x21
 
   v6 = this;
-  if ( (byte_49FF748 & 1) == 0 )
+  if ( (byte_4A01846 & 1) == 0 )
   {
-    sub_1B640C8(&AtlasManager_TypeInfo, item);
-    sub_1B640C8(&StringLiteral_23185/*"shortcut_board_icon_"*/, v7);
-    sub_1B640C8(&StringLiteral_23192/*"shortcut_board_icon_mainquest"*/, v8);
-    sub_1B640C8(&StringLiteral_23201/*"shortcut_board_icon_war_"*/, v9);
-    sub_1B640C8(&StringLiteral_1/*""*/, v10);
-    sub_1B640C8(&StringLiteral_23187/*"shortcut_board_icon_event_"*/, v11);
-    this = (MissionNaviTransitionBoardItemDraw_o *)sub_1B640C8(&StringLiteral_23188/*"shortcut_board_icon_freequest"*/, v12);
-    byte_49FF748 = 1;
+    sub_1B64870(&AtlasManager_TypeInfo, item);
+    sub_1B64870(&StringLiteral_23188/*"shortcut_board_icon_"*/, v7);
+    sub_1B64870(&StringLiteral_23195/*"shortcut_board_icon_mainquest"*/, v8);
+    sub_1B64870(&StringLiteral_23205/*"shortcut_board_icon_war_"*/, v9);
+    sub_1B64870(&StringLiteral_1/*""*/, v10);
+    sub_1B64870(&StringLiteral_23190/*"shortcut_board_icon_event_"*/, v11);
+    this = (MissionNaviTransitionBoardItemDraw_o *)sub_1B64870(&StringLiteral_23191/*"shortcut_board_icon_freequest"*/, v12);
+    byte_4A01846 = 1;
   }
   if ( !item )
     goto LABEL_27;
   if ( !System_String__IsNullOrEmpty(item->fields._IconName_k__BackingField, 0LL) )
   {
     iconSprite = v6->fields.iconSprite;
-    v16 = System_String__Concat_61375396(
-            (System_String_o *)StringLiteral_23185/*"shortcut_board_icon_"*/,
+    v16 = System_String__Concat_61383576(
+            (System_String_o *)StringLiteral_23188/*"shortcut_board_icon_"*/,
             item->fields._IconName_k__BackingField,
             0LL);
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -250,12 +323,12 @@ void __fastcall MissionNaviTransitionBoardItemDraw__SetIconImage(
     QuestType = MapControl_QuestInfo__GetQuestType(questInfo, 0LL);
     if ( QuestType == 1 )
     {
-      v14 = &StringLiteral_23192/*"shortcut_board_icon_mainquest"*/;
+      v14 = &StringLiteral_23195/*"shortcut_board_icon_mainquest"*/;
       goto LABEL_14;
     }
     if ( QuestType == 2 )
     {
-      v14 = &StringLiteral_23188/*"shortcut_board_icon_freequest"*/;
+      v14 = &StringLiteral_23191/*"shortcut_board_icon_freequest"*/;
 LABEL_14:
       v19 = (System_String_o *)*v14;
       goto LABEL_21;
@@ -270,14 +343,14 @@ LABEL_14:
         if ( WarEntity__IsEvent((WarEntity_o *)this, 0LL) )
         {
           v21 = System_Int32__ToString(v20 + 96, 0LL);
-          v22 = &StringLiteral_23187/*"shortcut_board_icon_event_"*/;
+          v22 = &StringLiteral_23190/*"shortcut_board_icon_event_"*/;
         }
         else
         {
           v21 = System_Int32__ToString(v20 + 16, 0LL);
-          v22 = &StringLiteral_23201/*"shortcut_board_icon_war_"*/;
+          v22 = &StringLiteral_23205/*"shortcut_board_icon_war_"*/;
         }
-        v19 = System_String__Concat_61375396((System_String_o *)*v22, v21, 0LL);
+        v19 = System_String__Concat_61383576((System_String_o *)*v22, v21, 0LL);
 LABEL_21:
         v23 = v6->fields.iconSprite;
         if ( !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -290,7 +363,7 @@ LABEL_24:
       }
     }
 LABEL_27:
-    sub_1B64324(this);
+    sub_1B64ACC(this, item);
   }
 LABEL_25:
   this = (MissionNaviTransitionBoardItemDraw_o *)v6->fields.iconSprite;
@@ -316,10 +389,10 @@ bool __fastcall MissionNaviTransitionBoardItemDraw__SetItem(
   int32_t v12; // w2
   int32_t v13; // w3
   void *Instance; // x0
+  System_String_o *v15; // x1
   System_String_o *Name_k__BackingField; // x21
   struct UILabel_o *nameLabel; // x8
   int mFontSize; // w9
-  __int64 v18; // x1
   struct System_String_o *v19; // x8
   int stringLength; // w8
   float v21; // s8
@@ -334,34 +407,33 @@ bool __fastcall MissionNaviTransitionBoardItemDraw__SetItem(
   System_String_o *v30; // x24
   Il2CppObject *RestTime2; // x0
   UILabel_o *restTimeLabel; // x22
-  System_String_o *v33; // x1
   UnityEngine_Object_o *baseSprite; // x22
-  const MethodInfo *v35; // x1
+  const MethodInfo *v34; // x1
   UnityEngine_Object_o *enableMask; // x22
-  const MethodInfo *v37; // x1
+  const MethodInfo *v36; // x1
   UnityEngine_Object_o *iconSprite; // x22
-  const MethodInfo *v39; // x3
+  const MethodInfo *v38; // x3
 
-  if ( (byte_49FF744 & 1) == 0 )
+  if ( (byte_4A01842 & 1) == 0 )
   {
-    sub_1B640C8(&LocalizationManager_TypeInfo, boardItem);
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, v7);
-    sub_1B640C8(&Method_SingletonTemplate_QuestTree__get_Instance__, v8);
-    sub_1B640C8(&StringLiteral_43/*"\n"*/, v9);
-    sub_1B640C8(&StringLiteral_13277/*"TIME_REST_QUEST_BOARD_QUEST"*/, v10);
-    sub_1B640C8(&StringLiteral_8614/*"MISSION_NAVI_BOARD_TIME_DISABLE_COLOR"*/, v11);
-    byte_49FF744 = 1;
+    sub_1B64870(&LocalizationManager_TypeInfo, boardItem);
+    sub_1B64870(&UnityEngine_Object_TypeInfo, v7);
+    sub_1B64870(&Method_SingletonTemplate_QuestTree__get_Instance__, v8);
+    sub_1B64870(&StringLiteral_43/*"\n"*/, v9);
+    sub_1B64870(&StringLiteral_13281/*"TIME_REST_QUEST_BOARD_QUEST"*/, v10);
+    sub_1B64870(&StringLiteral_8616/*"MISSION_NAVI_BOARD_TIME_DISABLE_COLOR"*/, v11);
+    byte_4A01842 = 1;
   }
   if ( boardItem )
   {
     this->fields.naviBoardItem = boardItem;
-    sub_1B6406C(
+    sub_1B64814(
       (ServantStatusBattleListViewItem_o *)&this->fields.naviBoardItem,
       (int32_t)boardItem,
       (int32_t)listViewManager,
       (int32_t)method);
     this->fields.naviListViewManager = listViewManager;
-    sub_1B6406C(
+    sub_1B64814(
       (ServantStatusBattleListViewItem_o *)&this->fields.naviListViewManager,
       (int32_t)listViewManager,
       v12,
@@ -379,24 +451,24 @@ bool __fastcall MissionNaviTransitionBoardItemDraw__SetItem(
       if ( !nameLabel )
         goto LABEL_64;
       mFontSize = nameLabel->fields.mFontSize;
-      v18 = mFontSize < 1 ? 0LL : (unsigned int)(nameLabel->fields.mWidth / mFontSize);
+      v15 = mFontSize < 1 ? 0LL : (System_String_o *)(unsigned int)(nameLabel->fields.mWidth / mFontSize);
       v19 = boardItem->fields._Name_k__BackingField;
       if ( !v19 )
         goto LABEL_64;
       stringLength = v19->fields._stringLength;
-      if ( stringLength <= 2 * (int)v18 )
+      if ( stringLength <= 2 * (int)v15 )
       {
-        if ( stringLength <= (int)v18 )
+        if ( stringLength <= (int)v15 )
           goto LABEL_22;
         v23 = (System_String_o *)StringLiteral_43/*"\n"*/;
       }
       else
       {
         v21 = (float)stringLength;
-        if ( !byte_49F779D )
+        if ( !byte_49F988D )
         {
-          sub_1B640C8(&System_Math_TypeInfo, v18);
-          byte_49F779D = 1;
+          sub_1B64870(&System_Math_TypeInfo, v15);
+          byte_49F988D = 1;
         }
         v22 = v21 * 0.5;
         if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -404,11 +476,11 @@ bool __fastcall MissionNaviTransitionBoardItemDraw__SetItem(
         v23 = (System_String_o *)StringLiteral_43/*"\n"*/;
         v24 = vcvtps_s32_f32(v22);
         if ( ceilf(v22) == INFINITY )
-          LODWORD(v18) = 0x80000000;
+          LODWORD(v15) = 0x80000000;
         else
-          LODWORD(v18) = v24;
+          LODWORD(v15) = v24;
       }
-      Name_k__BackingField = System_String__Insert(Name_k__BackingField, v18, v23, 0LL);
+      Name_k__BackingField = System_String__Insert(Name_k__BackingField, (int32_t)v15, v23, 0LL);
     }
 LABEL_22:
     Instance = this->fields.nameLabel;
@@ -454,12 +526,12 @@ LABEL_22:
             0LL);
         }
       }
-      Instance = SingletonTemplate_object___get_Instance((const MethodInfo_36EC45C *)Method_SingletonTemplate_QuestTree__get_Instance__);
+      Instance = SingletonTemplate_object___get_Instance((const MethodInfo_36EE738 *)Method_SingletonTemplate_QuestTree__get_Instance__);
       if ( !Instance
         || (Instance = QuestTree__GetQuestInfo((QuestTree_o *)Instance, boardItem->fields._QuestId_k__BackingField, 0LL)) == 0LL )
       {
 LABEL_64:
-        sub_1B64324(Instance);
+        sub_1B64ACC(Instance, v15);
       }
       v28 = *((_QWORD *)Instance + 18);
       v25 = (MapControl_QuestInfo_o *)Instance;
@@ -472,20 +544,20 @@ LABEL_64:
         {
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v29 = LocalizationManager__Get((System_String_o *)StringLiteral_8614/*"MISSION_NAVI_BOARD_TIME_DISABLE_COLOR"*/, 0LL);
-          v30 = LocalizationManager__Get((System_String_o *)StringLiteral_13277/*"TIME_REST_QUEST_BOARD_QUEST"*/, 0LL);
+          v29 = LocalizationManager__Get((System_String_o *)StringLiteral_8616/*"MISSION_NAVI_BOARD_TIME_DISABLE_COLOR"*/, 0LL);
+          v30 = LocalizationManager__Get((System_String_o *)StringLiteral_13281/*"TIME_REST_QUEST_BOARD_QUEST"*/, 0LL);
           RestTime2 = (Il2CppObject *)LocalizationManager__GetRestTime2(v28, -1LL, 0LL);
           Instance = System_String__Format(v30, RestTime2, 0LL);
           restTimeLabel = this->fields.restTimeLabel;
-          v33 = (System_String_o *)Instance;
+          v15 = (System_String_o *)Instance;
           if ( boardItem->fields._IsLocked_k__BackingField )
           {
             Instance = System_String__Format(v29, (Il2CppObject *)Instance, 0LL);
-            v33 = (System_String_o *)Instance;
+            v15 = (System_String_o *)Instance;
           }
           if ( restTimeLabel )
           {
-            UILabel__set_text(restTimeLabel, v33, 0LL);
+            UILabel__set_text(restTimeLabel, v15, 0LL);
             goto LABEL_50;
           }
           goto LABEL_64;
@@ -497,17 +569,17 @@ LABEL_50:
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality(baseSprite, 0LL, 0LL) )
-      MissionNaviTransitionBoardItemDraw__SetBoardImage(this, v35);
+      MissionNaviTransitionBoardItemDraw__SetBoardImage(this, v34);
     enableMask = (UnityEngine_Object_o *)this->fields.enableMask;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality(enableMask, 0LL, 0LL) )
-      MissionNaviTransitionBoardItemDraw__SetMaskImage(this, v37);
+      MissionNaviTransitionBoardItemDraw__SetMaskImage(this, v36);
     iconSprite = (UnityEngine_Object_o *)this->fields.iconSprite;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality(iconSprite, 0LL, 0LL) )
-      MissionNaviTransitionBoardItemDraw__SetIconImage(this, boardItem, v25, v39);
+      MissionNaviTransitionBoardItemDraw__SetIconImage(this, boardItem, v25, v38);
     ((void (__fastcall *)(MissionNaviTransitionBoardItemDraw_o *, MissionNaviTransitionBoardItem_o *, void *))this->klass->vtable._5_SetLockNaviBoard.method)(
       this,
       boardItem,
@@ -549,7 +621,7 @@ void __fastcall MissionNaviTransitionBoardItemDraw__SetLockNaviBoard(
       }
     }
 LABEL_8:
-    sub_1B64324(this);
+    sub_1B64ACC(this, boardItem);
   }
 }
 
@@ -560,22 +632,23 @@ void __fastcall MissionNaviTransitionBoardItemDraw__SetMaskImage(
 {
   __int64 v3; // x1
   UISprite_o *enableMask; // x20
-  struct UISprite_o *v5; // x0
+  __int64 v5; // x1
+  struct UISprite_o *v6; // x0
 
-  if ( (byte_49FF747 & 1) == 0 )
+  if ( (byte_4A01845 & 1) == 0 )
   {
-    sub_1B640C8(&AtlasManager_TypeInfo, method);
-    sub_1B640C8(&StringLiteral_20254/*"img_list_bg03"*/, v3);
-    byte_49FF747 = 1;
+    sub_1B64870(&AtlasManager_TypeInfo, method);
+    sub_1B64870(&StringLiteral_20257/*"img_list_bg03"*/, v3);
+    byte_4A01845 = 1;
   }
   enableMask = this->fields.enableMask;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetBanner(enableMask, (System_String_o *)StringLiteral_20254/*"img_list_bg03"*/, 0LL);
-  v5 = this->fields.enableMask;
-  if ( !v5 )
-    sub_1B64324(0LL);
-  ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))v5->klass->vtable._33_MakePixelPerfect.method)(
-    v5,
-    v5->klass->vtable._34_get_minWidth.methodPtr);
+  AtlasManager__SetBanner(enableMask, (System_String_o *)StringLiteral_20257/*"img_list_bg03"*/, 0LL);
+  v6 = this->fields.enableMask;
+  if ( !v6 )
+    sub_1B64ACC(0LL, v5);
+  ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))v6->klass->vtable._33_MakePixelPerfect.method)(
+    v6,
+    v6->klass->vtable._34_get_minWidth.methodPtr);
 }

@@ -31,7 +31,7 @@ float __fastcall CondensedScaleSprite__GetAfterAdjustWidth(CondensedScaleSprite_
         maxLabelWidth = this->fields.maxLabelWidth,
         (UISprite = CondensedScaleSprite__get_UISprite(this, v4)) == 0LL) )
   {
-    sub_1B64324(UISprite);
+    sub_1B64ACC(UISprite, v4);
   }
   if ( mWidth <= maxLabelWidth )
     v8 = mWidth;
@@ -59,7 +59,7 @@ float __fastcall CondensedScaleSprite__GetCondensedRatio(CondensedScaleSprite_o 
   {
     uiLabel = this->fields.uiLabel;
     if ( !uiLabel || (mText = uiLabel->fields.mText) == 0LL )
-      sub_1B64324(v3);
+      sub_1B64ACC(v3, v4);
     if ( mText->fields._stringLength >= 1 && maxLabelWidth < uiLabel->fields.mWidth )
     {
       SpriteAndLabelWidth = CondensedScaleSprite__GetSpriteAndLabelWidth(this, v4);
@@ -75,12 +75,13 @@ float __fastcall CondensedScaleSprite__GetSpriteAndLabelWidth(CondensedScaleSpri
 {
   const MethodInfo *v3; // x1
   UISprite_o *UISprite; // x0
+  __int64 v5; // x1
   struct UILabel_o *uiLabel; // x8
 
   CondensedScaleSprite__Init(this, method);
   UISprite = CondensedScaleSprite__get_UISprite(this, v3);
   if ( !UISprite || (uiLabel = this->fields.uiLabel) == 0LL )
-    sub_1B64324(UISprite);
+    sub_1B64ACC(UISprite, v5);
   return this->fields.displayAreaAdjustValue + (float)(uiLabel->fields.mWidth + UISprite->fields.mWidth);
 }
 
@@ -109,7 +110,7 @@ LABEL_6:
         goto LABEL_6;
       }
     }
-    sub_1B64324(uiLabel);
+    sub_1B64ACC(uiLabel, method);
   }
 }
 
@@ -131,12 +132,12 @@ void __fastcall CondensedScaleSprite__SetCondensedScale(CondensedScaleSprite_o *
     || (mText = uiLabel->fields.mText,
         v6 = this,
         this->fields.previousText = mText,
-        sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.previousText, (int32_t)mText, v2, v3),
+        sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.previousText, (int32_t)mText, v2, v3),
         CondensedRatio = CondensedScaleSprite__GetCondensedRatio(v6, v7),
         (this = (CondensedScaleSprite_o *)CondensedScaleSprite__get_UISprite(v6, v9)) == 0LL)
     || (this = (CondensedScaleSprite_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL )
   {
-    sub_1B64324(this);
+    sub_1B64ACC(this, method);
   }
   v10.fields.y = 1.0;
   v10.fields.z = 1.0;
@@ -154,7 +155,7 @@ void __fastcall CondensedScaleSprite__Update(CondensedScaleSprite_o *this, const
   {
     uiLabel = this->fields.uiLabel;
     if ( !uiLabel )
-      sub_1B64324(this);
+      sub_1B64ACC(this, method);
     if ( System_String__op_Inequality(this->fields.previousText, uiLabel->fields.mText, 0LL) )
       CondensedScaleSprite__SetCondensedScale(this, v4);
   }
@@ -169,11 +170,11 @@ UISprite_o *__fastcall CondensedScaleSprite__get_UISprite(CondensedScaleSprite_o
   int32_t v6; // w2
   int32_t v7; // w3
 
-  if ( (byte_49FD7B3 & 1) == 0 )
+  if ( (byte_49FF8AD & 1) == 0 )
   {
-    sub_1B640C8(&Method_UnityEngine_Component_GetComponent_UISprite___, method);
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, v3);
-    byte_49FD7B3 = 1;
+    sub_1B64870(&Method_UnityEngine_Component_GetComponent_UISprite___, method);
+    sub_1B64870(&UnityEngine_Object_TypeInfo, v3);
+    byte_49FF8AD = 1;
   }
   uiSprite = (UnityEngine_Object_o *)this->fields.uiSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -182,9 +183,9 @@ UISprite_o *__fastcall CondensedScaleSprite__get_UISprite(CondensedScaleSprite_o
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_2E2FE90 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                         (const MethodInfo_2E3216C *)Method_UnityEngine_Component_GetComponent_UISprite___);
     this->fields.uiSprite = (struct UISprite_o *)Component_object;
-    sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.uiSprite, (int32_t)Component_object, v6, v7);
+    sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.uiSprite, (int32_t)Component_object, v6, v7);
   }
   return this->fields.uiSprite;
 }

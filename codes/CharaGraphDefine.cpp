@@ -34,7 +34,7 @@ UserGameEntity_o *__fastcall CharaGraphDefine_CharaGraphItemBulkModifyArgs__get_
   {
     userGameEntity = UserGameMaster__getSelfUserGame(0LL);
     p_userGameEntity->klass = (ServantStatusBattleListViewItem_c *)userGameEntity;
-    sub_1B6406C(p_userGameEntity, (int32_t)userGameEntity, v4, v5);
+    sub_1B64814(p_userGameEntity, (int32_t)userGameEntity, v4, v5);
   }
   return userGameEntity;
 }

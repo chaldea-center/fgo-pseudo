@@ -1,14 +1,14 @@
 void __fastcall ConstantMaster___ctor(ConstantMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FC257 & 1) == 0 )
+  if ( (byte_49FE34F & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataMasterBase_ConstantMaster__ConstantEntity__string___ctor__, method);
-    byte_49FC257 = 1;
+    sub_1B64870(&Method_DataMasterBase_ConstantMaster__ConstantEntity__string___ctor__, method);
+    byte_49FE34F = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     101,
-    (const MethodInfo_30D41BC *)Method_DataMasterBase_ConstantMaster__ConstantEntity__string___ctor__);
+    (const MethodInfo_30D6498 *)Method_DataMasterBase_ConstantMaster__ConstantEntity__string___ctor__);
 }
 
 
@@ -16,12 +16,12 @@ int32_t __fastcall ConstantMaster__GetFlagTransformSvtRestrict(const MethodInfo 
 {
   const MethodInfo *v1; // x1
 
-  if ( (byte_49FC267 & 1) == 0 )
+  if ( (byte_49FE35F & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_9237/*"NOT_CHANGE_BEHAVIOR_TRANSFORM_SVT_ID"*/, v1);
-    byte_49FC267 = 1;
+    sub_1B64870(&StringLiteral_9239/*"NOT_CHANGE_BEHAVIOR_TRANSFORM_SVT_ID"*/, v1);
+    byte_49FE35F = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_9237/*"NOT_CHANGE_BEHAVIOR_TRANSFORM_SVT_ID"*/, v1);
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_9239/*"NOT_CHANGE_BEHAVIOR_TRANSFORM_SVT_ID"*/, v1);
 }
 
 
@@ -32,23 +32,24 @@ float __fastcall ConstantMaster__GetRateValue(
         const MethodInfo *method)
 {
   _BOOL8 EntityFromId_object; // x0
+  __int64 v8; // x1
   Il2CppObject *result; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_49FC25B & 1) == 0 )
+  if ( (byte_49FE353 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___, name);
-    byte_49FC25B = 1;
+    sub_1B64870(&Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___, name);
+    byte_49FE353 = 1;
   }
   result = 0LL;
   EntityFromId_object = DataMasterBase__TryGetEntityFromId_object_(
                           (DataMasterBase_o *)this,
                           &result,
                           name,
-                          (const MethodInfo_2E3988C *)Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___);
+                          (const MethodInfo_2E3BB68 *)Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___);
   if ( EntityFromId_object )
   {
     if ( !result )
-      sub_1B64324(EntityFromId_object);
+      sub_1B64ACC(EntityFromId_object, v8);
     return (float)SLODWORD(result[1].monitor) / 1000.0;
   }
   return def;
@@ -58,51 +59,53 @@ float __fastcall ConstantMaster__GetRateValue(
 int32_t __fastcall ConstantMaster__GetValue(ConstantMaster_o *this, System_String_o *name, const MethodInfo *method)
 {
   _BOOL8 EntityFromId_object; // x0
+  __int64 v6; // x1
   Il2CppObject *result; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_49FC259 & 1) == 0 )
+  if ( (byte_49FE351 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___, name);
-    byte_49FC259 = 1;
+    sub_1B64870(&Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___, name);
+    byte_49FE351 = 1;
   }
   result = 0LL;
   EntityFromId_object = DataMasterBase__TryGetEntityFromId_object_(
                           (DataMasterBase_o *)this,
                           &result,
                           name,
-                          (const MethodInfo_2E3988C *)Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___);
+                          (const MethodInfo_2E3BB68 *)Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___);
   if ( !EntityFromId_object )
     return -1;
   if ( !result )
-    sub_1B64324(EntityFromId_object);
+    sub_1B64ACC(EntityFromId_object, v6);
   return (int32_t)result[1].monitor;
 }
 
 
-int32_t __fastcall ConstantMaster__GetValue_38731352(
+int32_t __fastcall ConstantMaster__GetValue_38735716(
         ConstantMaster_o *this,
         System_String_o *name,
         int32_t def,
         const MethodInfo *method)
 {
   _BOOL8 EntityFromId_object; // x0
+  __int64 v8; // x1
   Il2CppObject *result; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_49FC25A & 1) == 0 )
+  if ( (byte_49FE352 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___, name);
-    byte_49FC25A = 1;
+    sub_1B64870(&Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___, name);
+    byte_49FE352 = 1;
   }
   result = 0LL;
   EntityFromId_object = DataMasterBase__TryGetEntityFromId_object_(
                           (DataMasterBase_o *)this,
                           &result,
                           name,
-                          (const MethodInfo_2E3988C *)Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___);
+                          (const MethodInfo_2E3BB68 *)Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___);
   if ( EntityFromId_object )
   {
     if ( !result )
-      sub_1B64324(EntityFromId_object);
+      sub_1B64ACC(EntityFromId_object, v8);
     return (int32_t)result[1].monitor;
   }
   return def;
@@ -113,10 +116,10 @@ bool __fastcall ConstantMaster__IsDisableServantEffectFilter(const MethodInfo *m
 {
   const MethodInfo *v1; // x1
 
-  if ( (byte_49FC262 & 1) == 0 )
+  if ( (byte_49FE35A & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_5024/*"DISABLE_SERVANT_EFFECT_FILTER"*/, v1);
-    byte_49FC262 = 1;
+    sub_1B64870(&StringLiteral_5024/*"DISABLE_SERVANT_EFFECT_FILTER"*/, v1);
+    byte_49FE35A = 1;
   }
   return ConstantMaster__getValue((System_String_o *)StringLiteral_5024/*"DISABLE_SERVANT_EFFECT_FILTER"*/, v1) == 1;
 }
@@ -126,10 +129,10 @@ bool __fastcall ConstantMaster__IsFLAG20220101(const MethodInfo *method)
 {
   const MethodInfo *v1; // x1
 
-  if ( (byte_49FC25D & 1) == 0 )
+  if ( (byte_49FE355 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_6357/*"FLAG_20220101"*/, v1);
-    byte_49FC25D = 1;
+    sub_1B64870(&StringLiteral_6357/*"FLAG_20220101"*/, v1);
+    byte_49FE355 = 1;
   }
   return ConstantMaster__getValue((System_String_o *)StringLiteral_6357/*"FLAG_20220101"*/, v1) == 1;
 }
@@ -139,10 +142,10 @@ bool __fastcall ConstantMaster__IsFLAG20220119(const MethodInfo *method)
 {
   const MethodInfo *v1; // x1
 
-  if ( (byte_49FC25E & 1) == 0 )
+  if ( (byte_49FE356 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_6358/*"FLAG_20220119"*/, v1);
-    byte_49FC25E = 1;
+    sub_1B64870(&StringLiteral_6358/*"FLAG_20220119"*/, v1);
+    byte_49FE356 = 1;
   }
   return ConstantMaster__getValue((System_String_o *)StringLiteral_6358/*"FLAG_20220119"*/, v1) == 1;
 }
@@ -152,10 +155,10 @@ bool __fastcall ConstantMaster__IsFLAG20220511(const MethodInfo *method)
 {
   const MethodInfo *v1; // x1
 
-  if ( (byte_49FC25F & 1) == 0 )
+  if ( (byte_49FE357 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_6359/*"FLAG_20220511"*/, v1);
-    byte_49FC25F = 1;
+    sub_1B64870(&StringLiteral_6359/*"FLAG_20220511"*/, v1);
+    byte_49FE357 = 1;
   }
   return ConstantMaster__getValue((System_String_o *)StringLiteral_6359/*"FLAG_20220511"*/, v1) == 1;
 }
@@ -165,10 +168,10 @@ bool __fastcall ConstantMaster__IsFLAG20220730(const MethodInfo *method)
 {
   const MethodInfo *v1; // x1
 
-  if ( (byte_49FC261 & 1) == 0 )
+  if ( (byte_49FE359 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_6360/*"FLAG_20220730"*/, v1);
-    byte_49FC261 = 1;
+    sub_1B64870(&StringLiteral_6360/*"FLAG_20220730"*/, v1);
+    byte_49FE359 = 1;
   }
   return ConstantMaster__getValue((System_String_o *)StringLiteral_6360/*"FLAG_20220730"*/, v1) == 1;
 }
@@ -178,10 +181,10 @@ bool __fastcall ConstantMaster__IsFLAG20230402(const MethodInfo *method)
 {
   const MethodInfo *v1; // x1
 
-  if ( (byte_49FC263 & 1) == 0 )
+  if ( (byte_49FE35B & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_6361/*"FLAG_20230402"*/, v1);
-    byte_49FC263 = 1;
+    sub_1B64870(&StringLiteral_6361/*"FLAG_20230402"*/, v1);
+    byte_49FE35B = 1;
   }
   return ConstantMaster__getValue((System_String_o *)StringLiteral_6361/*"FLAG_20230402"*/, v1) == 1;
 }
@@ -191,10 +194,10 @@ bool __fastcall ConstantMaster__IsFLAG20240804(const MethodInfo *method)
 {
   const MethodInfo *v1; // x1
 
-  if ( (byte_49FC266 & 1) == 0 )
+  if ( (byte_49FE35E & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_6362/*"FLAG_20240804"*/, v1);
-    byte_49FC266 = 1;
+    sub_1B64870(&StringLiteral_6362/*"FLAG_20240804"*/, v1);
+    byte_49FE35E = 1;
   }
   return ConstantMaster__getValue((System_String_o *)StringLiteral_6362/*"FLAG_20240804"*/, v1) == 1;
 }
@@ -204,10 +207,10 @@ bool __fastcall ConstantMaster__IsFlag20211217(const MethodInfo *method)
 {
   const MethodInfo *v1; // x1
 
-  if ( (byte_49FC25C & 1) == 0 )
+  if ( (byte_49FE354 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_6356/*"FLAG_20211217"*/, v1);
-    byte_49FC25C = 1;
+    sub_1B64870(&StringLiteral_6356/*"FLAG_20211217"*/, v1);
+    byte_49FE354 = 1;
   }
   return ConstantMaster__getValue((System_String_o *)StringLiteral_6356/*"FLAG_20211217"*/, v1) == 1;
 }
@@ -223,12 +226,12 @@ bool __fastcall ConstantMaster__IsNotDisplayBattleAttribute(const MethodInfo *me
 {
   const MethodInfo *v1; // x1
 
-  if ( (byte_49FC265 & 1) == 0 )
+  if ( (byte_49FE35D & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_9238/*"NOT_DISPLAY_BATTLE_ATTRIBUTE"*/, v1);
-    byte_49FC265 = 1;
+    sub_1B64870(&StringLiteral_9240/*"NOT_DISPLAY_BATTLE_ATTRIBUTE"*/, v1);
+    byte_49FE35D = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_9238/*"NOT_DISPLAY_BATTLE_ATTRIBUTE"*/, v1) == 1;
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_9240/*"NOT_DISPLAY_BATTLE_ATTRIBUTE"*/, v1) == 1;
 }
 
 
@@ -236,12 +239,12 @@ bool __fastcall ConstantMaster__IsNotUseRestrictionDialog(const MethodInfo *meth
 {
   const MethodInfo *v1; // x1
 
-  if ( (byte_49FC264 & 1) == 0 )
+  if ( (byte_49FE35C & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_9253/*"NOT_USE_RESTRICTION_DIALOG"*/, v1);
-    byte_49FC264 = 1;
+    sub_1B64870(&StringLiteral_9255/*"NOT_USE_RESTRICTION_DIALOG"*/, v1);
+    byte_49FE35C = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_9253/*"NOT_USE_RESTRICTION_DIALOG"*/, v1) == 1;
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_9255/*"NOT_USE_RESTRICTION_DIALOG"*/, v1) == 1;
 }
 
 
@@ -260,18 +263,18 @@ bool __fastcall ConstantMaster__IsOtherImage(const MethodInfo *method)
   System_DateTime_o v12; // 0:x0.8
   System_DateTime_o v13; // 0:x1.8
 
-  if ( (byte_49FC260 & 1) == 0 )
+  if ( (byte_49FE358 & 1) == 0 )
   {
-    sub_1B640C8(&System_DateTime_TypeInfo, v1);
-    sub_1B640C8(&NetworkManager_TypeInfo, v2);
-    sub_1B640C8(&StringLiteral_8262/*"LOGIN_DAY"*/, v3);
-    byte_49FC260 = 1;
+    sub_1B64870(&System_DateTime_TypeInfo, v1);
+    sub_1B64870(&NetworkManager_TypeInfo, v2);
+    sub_1B64870(&StringLiteral_8263/*"LOGIN_DAY"*/, v3);
+    byte_49FE358 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   dateData = NetworkManager__getServerDateTime(0LL).fields._dateData;
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8262/*"LOGIN_DAY"*/, v4);
-  v8 = NetworkManager__getServerDateTime_38078100(Value, 0LL).fields._dateData;
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8263/*"LOGIN_DAY"*/, v4);
+  v8 = NetworkManager__getServerDateTime_38082464(Value, 0LL).fields._dateData;
   if ( !System_DateTime_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
   v10.fields._dateData = (uint64_t)&dateData;
@@ -294,35 +297,36 @@ int32_t __fastcall ConstantMaster__getValue(System_String_o *name, const MethodI
   __int64 v3; // x1
   __int64 v4; // x1
   Il2CppObject *Instance; // x0
+  __int64 v6; // x1
   Il2CppObject *result; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_49FC258 & 1) == 0 )
+  if ( (byte_49FE350 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataManager_GetMasterData_ConstantMaster___, method);
-    sub_1B640C8(&Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___, v3);
-    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    byte_49FC258 = 1;
+    sub_1B64870(&Method_DataManager_GetMasterData_ConstantMaster___, method);
+    sub_1B64870(&Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___, v3);
+    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_49FE350 = 1;
   }
   result = 0LL;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_ConstantMaster___);
+               (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_ConstantMaster___);
   if ( !Instance )
     goto LABEL_10;
   Instance = (Il2CppObject *)DataMasterBase__TryGetEntityFromId_object_(
                                (DataMasterBase_o *)Instance,
                                &result,
                                name,
-                               (const MethodInfo_2E3988C *)Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___);
+                               (const MethodInfo_2E3BB68 *)Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___);
   if ( ((unsigned __int8)Instance & 1) != 0 )
   {
     if ( result )
       return (int32_t)result[1].monitor;
 LABEL_10:
-    sub_1B64324(Instance);
+    sub_1B64ACC(Instance, v6);
   }
   return -1;
 }

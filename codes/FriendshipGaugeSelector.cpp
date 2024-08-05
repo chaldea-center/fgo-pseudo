@@ -21,10 +21,10 @@ IFriendshipGauge_o *__fastcall FriendshipGaugeSelector__GetGauge(
   __int64 p_method; // x0
 
   v6 = this;
-  if ( (byte_49FF5D6 & 1) == 0 )
+  if ( (byte_4A016D4 & 1) == 0 )
   {
-    this = (FriendshipGaugeSelector_o *)sub_1B640C8(&IFriendshipGauge_TypeInfo, *(_QWORD *)&maxFriendShipRank);
-    byte_49FF5D6 = 1;
+    this = (FriendshipGaugeSelector_o *)sub_1B64870(&IFriendshipGauge_TypeInfo, *(_QWORD *)&maxFriendShipRank);
+    byte_4A016D4 = 1;
   }
   v7 = friendshipExceedCount + maxFriendShipRank < 11 || friendshipExceedCount == 0;
   v8 = 32LL;
@@ -32,7 +32,7 @@ IFriendshipGauge_o *__fastcall FriendshipGaugeSelector__GetGauge(
     v8 = 40LL;
   v9 = *(IFriendshipGauge_o **)((char *)&v6->klass + v8);
   if ( !v9 )
-    sub_1B64324(this);
+    sub_1B64ACC(this, *(_QWORD *)&maxFriendShipRank);
   klass = v9->klass;
   v11 = *(unsigned __int16 *)(&v9->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&v9->klass->_2.bitflags2 + 3) )
@@ -50,7 +50,7 @@ IFriendshipGauge_o *__fastcall FriendshipGaugeSelector__GetGauge(
   else
   {
 LABEL_13:
-    p_method = sub_1BB60A8(v9, IFriendshipGauge_TypeInfo, 6LL);
+    p_method = sub_1BB6850(v9, IFriendshipGauge_TypeInfo, 6LL);
   }
   (*(void (__fastcall **)(IFriendshipGauge_o *, _QWORD))p_method)(v9, *(_QWORD *)(p_method + 8));
   return v9;

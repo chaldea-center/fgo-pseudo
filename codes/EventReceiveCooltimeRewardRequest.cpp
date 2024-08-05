@@ -12,12 +12,12 @@ void __fastcall EventReceiveCooltimeRewardRequest__beginRequest(
         int32_t eventId,
         const MethodInfo *method)
 {
-  if ( (byte_49FDBA5 & 1) == 0 )
+  if ( (byte_49FFCA0 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_19059/*"eventId"*/, *(_QWORD *)&eventId);
-    byte_49FDBA5 = 1;
+    sub_1B64870(&StringLiteral_19061/*"eventId"*/, *(_QWORD *)&eventId);
+    byte_49FFCA0 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19059/*"eventId"*/, eventId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19061/*"eventId"*/, eventId, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -29,16 +29,16 @@ System_String_o *__fastcall EventReceiveCooltimeRewardRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_49FDBA4 & 1) == 0 )
+  if ( (byte_49FFC9F & 1) == 0 )
   {
-    sub_1B640C8(&NetworkManager_TypeInfo, method);
-    sub_1B640C8(&StringLiteral_19046/*"event/receiveCooltimeReward"*/, v2);
-    byte_49FDBA4 = 1;
+    sub_1B64870(&NetworkManager_TypeInfo, method);
+    sub_1B64870(&StringLiteral_19048/*"event/receiveCooltimeReward"*/, v2);
+    byte_49FFC9F = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61375396(BaseUrl, (System_String_o *)StringLiteral_19046/*"event/receiveCooltimeReward"*/, 0LL);
+  return System_String__Concat_61383576(BaseUrl, (System_String_o *)StringLiteral_19048/*"event/receiveCooltimeReward"*/, 0LL);
 }
 
 
@@ -54,11 +54,11 @@ void __fastcall EventReceiveCooltimeRewardRequest__requestCompleted(
   System_String_o *v9; // x1
   Il2CppObject *success; // x20
 
-  if ( (byte_49FDBA6 & 1) == 0 )
+  if ( (byte_49FFCA1 & 1) == 0 )
   {
-    sub_1B640C8(&JsonManager_TypeInfo, responseList);
-    sub_1B640C8(&ResponseCommandKind_TypeInfo, v5);
-    byte_49FDBA6 = 1;
+    sub_1B64870(&JsonManager_TypeInfo, responseList);
+    sub_1B64870(&ResponseCommandKind_TypeInfo, v5);
+    byte_49FFCA1 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -66,7 +66,7 @@ void __fastcall EventReceiveCooltimeRewardRequest__requestCompleted(
   if ( v6 )
   {
     v7 = v6;
-    v8 = ResponseData__checkError_40846016(v6, 0LL);
+    v8 = ResponseData__checkError_40851148(v6, 0LL);
     v9 = 0LL;
     if ( v8 )
     {

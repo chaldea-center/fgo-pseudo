@@ -16,6 +16,6 @@ float __fastcall ItemLinkInfoSubHeaderObject__get_Height(ItemLinkInfoSubHeaderOb
 
   widget = this->fields.widget;
   if ( !widget )
-    sub_1B64324(this);
+    sub_1B64ACC(this, method);
   return (float)widget->fields.mHeight;
 }

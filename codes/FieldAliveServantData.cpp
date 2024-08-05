@@ -1,40 +1,31 @@
 void __fastcall FieldAliveServantData___ctor(FieldAliveServantData_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  System_Collections_Generic_List_object__o *v5; // x20
-  int32_t v6; // w2
-  int32_t v7; // w3
-  __int64 v8; // x1
-  __int64 v9; // x2
-  System_Collections_Generic_List_object__o *v10; // x20
-  int32_t v11; // w2
-  int32_t v12; // w3
+  __int64 v3; // x1
+  System_Collections_Generic_List_object__o *v4; // x20
+  int32_t v5; // w2
+  int32_t v6; // w3
+  System_Collections_Generic_List_object__o *v7; // x20
+  int32_t v8; // w2
+  int32_t v9; // w3
 
-  if ( (byte_49FE852 & 1) == 0 )
+  if ( (byte_4A00952 & 1) == 0 )
   {
-    sub_1B640C8(&Method_System_Collections_Generic_List_BattleServantData___ctor__, method);
-    sub_1B640C8(&System_Collections_Generic_List_BattleServantData__TypeInfo, v4);
-    byte_49FE852 = 1;
+    sub_1B64870(&Method_System_Collections_Generic_List_BattleServantData___ctor__, method);
+    sub_1B64870(&System_Collections_Generic_List_BattleServantData__TypeInfo, v3);
+    byte_4A00952 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1B64314(
-                                                      System_Collections_Generic_List_BattleServantData__TypeInfo,
-                                                      method,
-                                                      v2);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1B64ABC(System_Collections_Generic_List_BattleServantData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v5,
-    (const MethodInfo_34ACEA0 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
-  this->fields.playerIdList = (struct System_Collections_Generic_List_BattleServantData__o *)v5;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)v5, v6, v7);
-  v10 = (System_Collections_Generic_List_object__o *)sub_1B64314(
-                                                       System_Collections_Generic_List_BattleServantData__TypeInfo,
-                                                       v8,
-                                                       v9);
+    v4,
+    (const MethodInfo_34AF17C *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
+  this->fields.playerIdList = (struct System_Collections_Generic_List_BattleServantData__o *)v4;
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)v4, v5, v6);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1B64ABC(System_Collections_Generic_List_BattleServantData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v10,
-    (const MethodInfo_34ACEA0 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
-  this->fields.enemyIdList = (struct System_Collections_Generic_List_BattleServantData__o *)v10;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.enemyIdList, (int32_t)v10, v11, v12);
+    v7,
+    (const MethodInfo_34AF17C *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
+  this->fields.enemyIdList = (struct System_Collections_Generic_List_BattleServantData__o *)v7;
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.enemyIdList, (int32_t)v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -53,10 +44,10 @@ void __fastcall FieldAliveServantData__addSvtData(
   __int64 size; // x10
   Il2CppClass **v12; // x8
 
-  if ( (byte_49FE851 & 1) == 0 )
+  if ( (byte_4A00951 & 1) == 0 )
   {
-    sub_1B640C8(&Method_System_Collections_Generic_List_BattleServantData__Add__, isEnemySide);
-    byte_49FE851 = 1;
+    sub_1B64870(&Method_System_Collections_Generic_List_BattleServantData__Add__, isEnemySide);
+    byte_4A00951 = 1;
   }
   v7 = 16LL;
   if ( isEnemySide )
@@ -68,7 +59,7 @@ void __fastcall FieldAliveServantData__addSvtData(
         ++v8->fields._version,
         !items) )
   {
-    sub_1B64324(v8);
+    sub_1B64ACC(v8, isEnemySide);
   }
   size = v8->fields._size;
   if ( (unsigned int)size >= items->max_length )
@@ -76,14 +67,14 @@ void __fastcall FieldAliveServantData__addSvtData(
     System_Collections_Generic_List_object___AddWithResize(
       v8,
       (Il2CppObject *)svtData,
-      *(const MethodInfo_34AD6D4 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
+      *(const MethodInfo_34AF9B0 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
   }
   else
   {
     v12 = &items->obj.klass + size;
     v8->fields._size = size + 1;
     v12[4] = (Il2CppClass *)svtData;
-    sub_1B6406C((ServantStatusBattleListViewItem_o *)(v12 + 4), (int32_t)svtData, (int32_t)svtData, (int32_t)method);
+    sub_1B64814((ServantStatusBattleListViewItem_o *)(v12 + 4), (int32_t)svtData, (int32_t)svtData, (int32_t)method);
   }
 }
 

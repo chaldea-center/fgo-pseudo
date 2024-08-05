@@ -20,7 +20,7 @@ void __fastcall SyncTransformComponent__setChild(
   const MethodInfo *v5; // x1
 
   this->fields.child = trans;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.child, (int32_t)trans, (int32_t)method, v3);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.child, (int32_t)trans, (int32_t)method, v3);
   this->fields.isEnable = 1;
   SyncTransformComponent__sync(this, v5);
 }
@@ -30,18 +30,19 @@ void __fastcall SyncTransformComponent__setChild(
 void __fastcall SyncTransformComponent__sync(SyncTransformComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *child; // x20
+  __int64 v4; // x1
   UnityEngine_Component_o *gameObject; // x0
   UnityEngine_Transform_o *transform; // x20
-  int v6; // s0
-  UnityEngine_Transform_o *v9; // x20
-  int v10; // s0
-  UnityEngine_Transform_o *v14; // x20
-  int v15; // s0
+  int v7; // s0
+  UnityEngine_Transform_o *v10; // x20
+  int v11; // s0
+  UnityEngine_Transform_o *v15; // x20
+  int v16; // s0
 
-  if ( (byte_49FB9E3 & 1) == 0 )
+  if ( (byte_49FDADB & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, method);
-    byte_49FB9E3 = 1;
+    sub_1B64870(&UnityEngine_Object_TypeInfo, method);
+    byte_49FDADB = 1;
   }
   child = (UnityEngine_Object_o *)this->fields.child;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -60,14 +61,14 @@ void __fastcall SyncTransformComponent__sync(SyncTransformComponent_o *this, con
                                               0LL);
     if ( !gameObject )
       goto LABEL_20;
-    *(UnityEngine_Vector3_o *)&v6 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)gameObject, 0LL);
+    *(UnityEngine_Vector3_o *)&v7 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)gameObject, 0LL);
     if ( !transform )
       goto LABEL_20;
-    UnityEngine_Transform__set_position(transform, *(UnityEngine_Vector3_o *)&v6, 0LL);
+    UnityEngine_Transform__set_position(transform, *(UnityEngine_Vector3_o *)&v7, 0LL);
     gameObject = (UnityEngine_Component_o *)this->fields.child;
     if ( !gameObject )
       goto LABEL_20;
-    v9 = UnityEngine_Component__get_transform(gameObject, 0LL);
+    v10 = UnityEngine_Component__get_transform(gameObject, 0LL);
     gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !gameObject )
       goto LABEL_20;
@@ -75,28 +76,28 @@ void __fastcall SyncTransformComponent__sync(SyncTransformComponent_o *this, con
                                               (UnityEngine_GameObject_o *)gameObject,
                                               0LL);
     if ( !gameObject
-      || (*(UnityEngine_Quaternion_o *)&v10 = UnityEngine_Transform__get_rotation(
+      || (*(UnityEngine_Quaternion_o *)&v11 = UnityEngine_Transform__get_rotation(
                                                 (UnityEngine_Transform_o *)gameObject,
                                                 0LL),
-          !v9)
-      || (UnityEngine_Transform__set_rotation(v9, *(UnityEngine_Quaternion_o *)&v10, 0LL),
+          !v10)
+      || (UnityEngine_Transform__set_rotation(v10, *(UnityEngine_Quaternion_o *)&v11, 0LL),
           (gameObject = (UnityEngine_Component_o *)this->fields.child) == 0LL)
-      || (v14 = UnityEngine_Component__get_transform(gameObject, 0LL),
+      || (v15 = UnityEngine_Component__get_transform(gameObject, 0LL),
           (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(
                                                      (UnityEngine_Component_o *)this,
                                                      0LL)) == 0LL)
       || (gameObject = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(
                                                     (UnityEngine_GameObject_o *)gameObject,
                                                     0LL)) == 0LL
-      || (*(UnityEngine_Vector3_o *)&v15 = UnityEngine_Transform__get_localScale(
+      || (*(UnityEngine_Vector3_o *)&v16 = UnityEngine_Transform__get_localScale(
                                              (UnityEngine_Transform_o *)gameObject,
                                              0LL),
-          !v14) )
+          !v15) )
     {
 LABEL_20:
-      sub_1B64324(gameObject);
+      sub_1B64ACC(gameObject, v4);
     }
-    UnityEngine_Transform__set_localScale(v14, *(UnityEngine_Vector3_o *)&v15, 0LL);
+    UnityEngine_Transform__set_localScale(v15, *(UnityEngine_Vector3_o *)&v16, 0LL);
   }
   else
   {

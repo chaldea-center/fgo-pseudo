@@ -1,14 +1,14 @@
 void __fastcall UserEquipMaster___ctor(UserEquipMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FCFF3 & 1) == 0 )
+  if ( (byte_49FF0EC & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long___ctor__, method);
-    byte_49FCFF3 = 1;
+    sub_1B64870(&Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long___ctor__, method);
+    byte_49FF0EC = 1;
   }
   DataMasterBase_object__object__long____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     50,
-    (const MethodInfo_30D4010 *)Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long___ctor__);
+    (const MethodInfo_30D62EC *)Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long___ctor__);
 }
 
 
@@ -32,21 +32,21 @@ void __fastcall UserEquipMaster__continueDeviceEquipLvInfo(UserEquipMaster_o *th
   int32_t v18; // w23
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v19; // 0:x0.16
 
-  if ( (byte_49FCFF5 & 1) == 0 )
+  if ( (byte_49FF0EE & 1) == 0 )
   {
-    sub_1B640C8(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, method);
-    sub_1B640C8(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v3);
-    sub_1B640C8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
-    sub_1B640C8(&UserEquipEntity_TypeInfo, v5);
-    sub_1B640C8(&UserEquipNewManager_TypeInfo, v6);
-    byte_49FCFF5 = 1;
+    sub_1B64870(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, method);
+    sub_1B64870(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v3);
+    sub_1B64870(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
+    sub_1B64870(&UserEquipEntity_TypeInfo, v5);
+    sub_1B64870(&UserEquipNewManager_TypeInfo, v6);
+    byte_49FF0EE = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_17;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_3070B08 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_3072DE4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
     v9 = Count;
@@ -59,7 +59,7 @@ void __fastcall UserEquipMaster__continueDeviceEquipLvInfo(UserEquipMaster_o *th
       Item = System_Collections_ObjectModel_Collection_object___get_Item(
                list,
                v10,
-               (const MethodInfo_3070B98 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+               (const MethodInfo_3072E74 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( Item )
       {
         v12 = Item;
@@ -73,7 +73,7 @@ void __fastcall UserEquipMaster__continueDeviceEquipLvInfo(UserEquipMaster_o *th
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
           *(_QWORD *)&v19.fields.currentCryptoKey = klass;
           *(_QWORD *)&v19.fields.fakeValue = monitor;
-          v16 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46171608(v19, 0LL);
+          v16 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46180532(v19, 0LL);
           v17 = (int32_t)v12[3].klass;
           v18 = v16;
           if ( !UserEquipNewManager_TypeInfo->_2.cctor_finished )
@@ -85,7 +85,7 @@ void __fastcall UserEquipMaster__continueDeviceEquipLvInfo(UserEquipMaster_o *th
         return;
     }
 LABEL_17:
-    sub_1B64324(list);
+    sub_1B64ACC(list, method);
   }
 }
 
@@ -95,6 +95,7 @@ UserEquipEntity_array *__fastcall UserEquipMaster__getList(
         int64_t userId,
         const MethodInfo *method)
 {
+  int64_t v3; // x19
   __int64 v5; // x1
   __int64 v6; // x1
   __int64 v7; // x1
@@ -103,46 +104,41 @@ UserEquipEntity_array *__fastcall UserEquipMaster__getList(
   __int64 v10; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
   int32_t Count; // w21
-  __int64 v13; // x1
-  __int64 v14; // x2
-  System_Collections_Generic_List_object__o *v15; // x22
-  int32_t v16; // w23
-  int32_t v17; // w2
-  int32_t v18; // w3
-  System_Collections_ObjectModel_Collection_T__o *v19; // x1
+  System_Collections_Generic_List_object__o *v13; // x22
+  int32_t v14; // w23
+  int32_t v15; // w2
+  int32_t v16; // w3
   __int64 methodPtr_low; // x10
   struct System_Object_array *items; // x8
-  _QWORD *v22; // x9
+  _QWORD *v19; // x9
   __int64 size; // x10
-  Il2CppClass **v24; // x0
+  Il2CppClass **v21; // x0
 
-  if ( (byte_49FCFF4 & 1) == 0 )
+  v3 = userId;
+  if ( (byte_49FF0ED & 1) == 0 )
   {
-    sub_1B640C8(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, userId);
-    sub_1B640C8(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
-    sub_1B640C8(&Method_System_Collections_Generic_List_UserEquipEntity__Add__, v6);
-    sub_1B640C8(&Method_System_Collections_Generic_List_UserEquipEntity__ToArray__, v7);
-    sub_1B640C8(&Method_System_Collections_Generic_List_UserEquipEntity___ctor__, v8);
-    sub_1B640C8(&System_Collections_Generic_List_UserEquipEntity__TypeInfo, v9);
-    sub_1B640C8(&UserEquipEntity_TypeInfo, v10);
-    byte_49FCFF4 = 1;
+    sub_1B64870(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, userId);
+    sub_1B64870(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
+    sub_1B64870(&Method_System_Collections_Generic_List_UserEquipEntity__Add__, v6);
+    sub_1B64870(&Method_System_Collections_Generic_List_UserEquipEntity__ToArray__, v7);
+    sub_1B64870(&Method_System_Collections_Generic_List_UserEquipEntity___ctor__, v8);
+    sub_1B64870(&System_Collections_Generic_List_UserEquipEntity__TypeInfo, v9);
+    sub_1B64870(&UserEquipEntity_TypeInfo, v10);
+    byte_49FF0ED = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_19;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_3070B08 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-  v15 = (System_Collections_Generic_List_object__o *)sub_1B64314(
-                                                       System_Collections_Generic_List_UserEquipEntity__TypeInfo,
-                                                       v13,
-                                                       v14);
+            (const MethodInfo_3072DE4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+  v13 = (System_Collections_Generic_List_object__o *)sub_1B64ABC(System_Collections_Generic_List_UserEquipEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v15,
-    (const MethodInfo_34ACEA0 *)Method_System_Collections_Generic_List_UserEquipEntity___ctor__);
+    v13,
+    (const MethodInfo_34AF17C *)Method_System_Collections_Generic_List_UserEquipEntity___ctor__);
   if ( Count >= 1 )
   {
-    v16 = 0;
+    v14 = 0;
     while ( 1 )
     {
       list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
@@ -150,50 +146,50 @@ UserEquipEntity_array *__fastcall UserEquipMaster__getList(
         break;
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
-                                                                 v16,
-                                                                 (const MethodInfo_3070B98 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                                                 v14,
+                                                                 (const MethodInfo_3072E74 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( list )
       {
-        v19 = list;
+        userId = (int64_t)list;
         methodPtr_low = LOBYTE(UserEquipEntity_TypeInfo->vtable._0_Equals.methodPtr);
         if ( LOBYTE(list->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low
           && (UserEquipEntity_c *)list->klass->_2.typeHierarchy[methodPtr_low - 1] == UserEquipEntity_TypeInfo
-          && list[1].klass == (System_Collections_ObjectModel_Collection_T__c *)userId )
+          && list[1].klass == (System_Collections_ObjectModel_Collection_T__c *)v3 )
         {
-          if ( !v15 )
+          if ( !v13 )
             break;
-          items = v15->fields._items;
-          v22 = Method_System_Collections_Generic_List_UserEquipEntity__Add__;
-          ++v15->fields._version;
+          items = v13->fields._items;
+          v19 = Method_System_Collections_Generic_List_UserEquipEntity__Add__;
+          ++v13->fields._version;
           if ( !items )
             break;
-          size = v15->fields._size;
+          size = v13->fields._size;
           if ( (unsigned int)size >= items->max_length )
           {
             System_Collections_Generic_List_object___AddWithResize(
-              v15,
+              v13,
               (Il2CppObject *)list,
-              *(const MethodInfo_34AD6D4 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+              *(const MethodInfo_34AF9B0 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
           }
           else
           {
-            v24 = &items->obj.klass + size;
-            v15->fields._size = size + 1;
-            v24[4] = (Il2CppClass *)v19;
-            sub_1B6406C((ServantStatusBattleListViewItem_o *)(v24 + 4), (int32_t)v19, v17, v18);
+            v21 = &items->obj.klass + size;
+            v13->fields._size = size + 1;
+            v21[4] = (Il2CppClass *)userId;
+            sub_1B64814((ServantStatusBattleListViewItem_o *)(v21 + 4), userId, v15, v16);
           }
         }
       }
-      if ( Count == ++v16 )
+      if ( Count == ++v14 )
         goto LABEL_17;
     }
 LABEL_19:
-    sub_1B64324(list);
+    sub_1B64ACC(list, userId);
   }
 LABEL_17:
-  if ( !v15 )
+  if ( !v13 )
     goto LABEL_19;
   return (UserEquipEntity_array *)System_Collections_Generic_List_object___ToArray(
-                                    v15,
-                                    (const MethodInfo_34AF2CC *)Method_System_Collections_Generic_List_UserEquipEntity__ToArray__);
+                                    v13,
+                                    (const MethodInfo_34B15A8 *)Method_System_Collections_Generic_List_UserEquipEntity__ToArray__);
 }

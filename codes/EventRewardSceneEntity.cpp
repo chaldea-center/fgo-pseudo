@@ -1,28 +1,28 @@
 void __fastcall EventRewardSceneEntity___ctor(EventRewardSceneEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FC52D & 1) == 0 )
+  if ( (byte_49FE625 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataEntityBase_string___ctor__, method);
-    byte_49FC52D = 1;
+    sub_1B64870(&Method_DataEntityBase_string___ctor__, method);
+    byte_49FE625 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30D3D1C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D5FF8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventRewardSceneEntity__CreatePK(int32_t eventId, int32_t slot, const MethodInfo *method)
 {
-  if ( (byte_49FC52B & 1) == 0 )
+  if ( (byte_49FE623 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&slot);
-    byte_49FC52B = 1;
+    sub_1B64870(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&slot);
+    byte_49FE623 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            eventId,
            slot,
-           (const MethodInfo_2E37610 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2E398EC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -42,41 +42,42 @@ int32_t __fastcall EventRewardSceneEntity__GetBgmId(EventRewardSceneEntity_o *th
   __int64 v4; // x1
   __int64 v5; // x1
   Il2CppObject *Instance; // x0
+  __int64 v7; // x1
   Il2CppObject *Entity; // x0
-  Il2CppObject *v8; // x20
-  bool v9; // cc
-  __int64 v10; // x8
+  Il2CppObject *v9; // x20
+  bool v10; // cc
+  __int64 v11; // x8
 
-  if ( (byte_49FC52C & 1) == 0 )
+  if ( (byte_49FE624 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataManager_GetMasterData_EventMaster___, method);
-    sub_1B640C8(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__, v3);
-    sub_1B640C8(&NetworkManager_TypeInfo, v4);
-    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_49FC52C = 1;
+    sub_1B64870(&Method_DataManager_GetMasterData_EventMaster___, method);
+    sub_1B64870(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__, v3);
+    sub_1B64870(&NetworkManager_TypeInfo, v4);
+    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_49FE624 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_EventMaster___)) == 0LL )
+                     (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_EventMaster___)) == 0LL )
   {
-    sub_1B64324(Instance);
+    sub_1B64ACC(Instance, v7);
   }
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              this->fields.eventId,
-             (const MethodInfo_30D3EA4 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+             (const MethodInfo_30D6180 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
   if ( Entity )
   {
-    v8 = Entity;
+    v9 = Entity;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v9 = NetworkManager__getTime(0LL) <= (__int64)v8[6].klass;
-    v10 = 48LL;
-    if ( v9 )
-      v10 = 44LL;
-    LODWORD(Entity) = *(_DWORD *)((char *)&this->klass + v10);
+    v10 = NetworkManager__getTime(0LL) <= (__int64)v9[6].klass;
+    v11 = 48LL;
+    if ( v10 )
+      v11 = 44LL;
+    LODWORD(Entity) = *(_DWORD *)((char *)&this->klass + v11);
   }
   return (int)Entity;
 }

@@ -1,14 +1,14 @@
 void __fastcall QuestDateRangeMaster___ctor(QuestDateRangeMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FC847 & 1) == 0 )
+  if ( (byte_49FE940 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataMasterBase_QuestDateRangeMaster__QuestDateRangeEntity__string___ctor__, method);
-    byte_49FC847 = 1;
+    sub_1B64870(&Method_DataMasterBase_QuestDateRangeMaster__QuestDateRangeEntity__string___ctor__, method);
+    byte_49FE940 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     284,
-    (const MethodInfo_30D41BC *)Method_DataMasterBase_QuestDateRangeMaster__QuestDateRangeEntity__string___ctor__);
+    (const MethodInfo_30D6498 *)Method_DataMasterBase_QuestDateRangeMaster__QuestDateRangeEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ QuestDateRangeEntity_o *__fastcall QuestDateRangeMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_49FC845 & 1) == 0 )
+  if ( (byte_49FE93E & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataMasterBase_QuestDateRangeMaster__QuestDateRangeEntity__string__GetEntity__, *(_QWORD *)&id);
-    byte_49FC845 = 1;
+    sub_1B64870(&Method_DataMasterBase_QuestDateRangeMaster__QuestDateRangeEntity__string__GetEntity__, *(_QWORD *)&id);
+    byte_49FE93E = 1;
   }
   PK = (Il2CppObject *)QuestDateRangeEntity__CreatePK(id, idx, *(const MethodInfo **)&idx);
   return (QuestDateRangeEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      PK,
-                                     (const MethodInfo_30D41FC *)Method_DataMasterBase_QuestDateRangeMaster__QuestDateRangeEntity__string__GetEntity__);
+                                     (const MethodInfo_30D64D8 *)Method_DataMasterBase_QuestDateRangeMaster__QuestDateRangeEntity__string__GetEntity__);
 }
 
 
@@ -52,83 +52,82 @@ System_Collections_Generic_List_QuestDateRangeEntity__o *__fastcall QuestDateRan
   __int64 v14; // x1
   __int64 v15; // x1
   System_Collections_Generic_List_object__o *v16; // x19
+  __int64 v17; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
+  __int64 v19; // x1
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x20
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  __int64 v20; // x9
+  __int64 v22; // x9
   int32_t *p_offset; // x10
   __int64 p_method; // x0
-  System_Collections_Generic_IEnumerator_T__c *v23; // x8
-  __int64 v24; // x9
-  int32_t *v25; // x10
-  __int64 v26; // x0
-  __int64 v27; // x0
-  int32_t v28; // w2
-  int32_t v29; // w3
-  __int64 v30; // x8
+  System_Collections_Generic_IEnumerator_T__c *v25; // x8
+  __int64 v26; // x9
+  int32_t *v27; // x10
+  __int64 v28; // x0
+  __int64 v29; // x0
+  __int64 v30; // x1
+  int32_t v31; // w2
+  int32_t v32; // w3
+  __int64 v33; // x8
+  QuestDateRangeEntity_c *v34; // x1
   __int64 methodPtr_low; // x10
   struct System_Object_array *items; // x9
-  _QWORD *v33; // x10
+  _QWORD *v37; // x10
   __int64 size; // x11
-  Il2CppClass **v35; // x0
-  System_Collections_Generic_IEnumerator_T__c *v36; // x8
-  __int64 v37; // x9
-  int32_t *v38; // x10
-  __int64 v39; // x0
-  __int64 v40; // x1
-  __int64 v41; // x2
-  QuestDateRangeMaster___c_c *v42; // x8
+  Il2CppClass **v39; // x0
+  System_Collections_Generic_IEnumerator_T__c *v40; // x8
+  __int64 v41; // x9
+  int32_t *v42; // x10
+  __int64 v43; // x0
+  QuestDateRangeMaster___c_c *v44; // x8
   System_Comparison_T__o *_9__3_0; // x20
-  Il2CppObject *v44; // x21
+  Il2CppObject *v46; // x21
   struct QuestDateRangeMaster___c_StaticFields *static_fields; // x0
-  int32_t v46; // w2
-  int32_t v47; // w3
+  int32_t v48; // w2
+  int32_t v49; // w3
 
-  if ( (byte_49FC848 & 1) == 0 )
+  if ( (byte_49FE941 & 1) == 0 )
   {
-    sub_1B640C8(
+    sub_1B64870(
       &Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__,
       *(_QWORD *)&questDateRangeId);
-    sub_1B640C8(&System_Comparison_QuestDateRangeEntity__TypeInfo, v5);
-    sub_1B640C8(&System_IDisposable_TypeInfo, v6);
-    sub_1B640C8(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v7);
-    sub_1B640C8(&System_Collections_IEnumerator_TypeInfo, v8);
-    sub_1B640C8(&Method_System_Collections_Generic_List_QuestDateRangeEntity__Add__, v9);
-    sub_1B640C8(&Method_System_Collections_Generic_List_QuestDateRangeEntity__Sort__, v10);
-    sub_1B640C8(&Method_System_Collections_Generic_List_QuestDateRangeEntity___ctor__, v11);
-    sub_1B640C8(&System_Collections_Generic_List_QuestDateRangeEntity__TypeInfo, v12);
-    sub_1B640C8(&QuestDateRangeEntity_TypeInfo, v13);
-    sub_1B640C8(&Method_QuestDateRangeMaster___c__GetQuestDateRangeEntityList_b__3_0__, v14);
-    sub_1B640C8(&QuestDateRangeMaster___c_TypeInfo, v15);
-    byte_49FC848 = 1;
+    sub_1B64870(&System_Comparison_QuestDateRangeEntity__TypeInfo, v5);
+    sub_1B64870(&System_IDisposable_TypeInfo, v6);
+    sub_1B64870(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v7);
+    sub_1B64870(&System_Collections_IEnumerator_TypeInfo, v8);
+    sub_1B64870(&Method_System_Collections_Generic_List_QuestDateRangeEntity__Add__, v9);
+    sub_1B64870(&Method_System_Collections_Generic_List_QuestDateRangeEntity__Sort__, v10);
+    sub_1B64870(&Method_System_Collections_Generic_List_QuestDateRangeEntity___ctor__, v11);
+    sub_1B64870(&System_Collections_Generic_List_QuestDateRangeEntity__TypeInfo, v12);
+    sub_1B64870(&QuestDateRangeEntity_TypeInfo, v13);
+    sub_1B64870(&Method_QuestDateRangeMaster___c__GetQuestDateRangeEntityList_b__3_0__, v14);
+    sub_1B64870(&QuestDateRangeMaster___c_TypeInfo, v15);
+    byte_49FE941 = 1;
   }
-  v16 = (System_Collections_Generic_List_object__o *)sub_1B64314(
-                                                       System_Collections_Generic_List_QuestDateRangeEntity__TypeInfo,
-                                                       *(_QWORD *)&questDateRangeId,
-                                                       method);
+  v16 = (System_Collections_Generic_List_object__o *)sub_1B64ABC(System_Collections_Generic_List_QuestDateRangeEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v16,
-    (const MethodInfo_34ACEA0 *)Method_System_Collections_Generic_List_QuestDateRangeEntity___ctor__);
+    (const MethodInfo_34AF17C *)Method_System_Collections_Generic_List_QuestDateRangeEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_45;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_30710E0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_30733BC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, v19);
   while ( 1 )
   {
     klass = Enumerator->klass;
-    v20 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v22 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v20;
+        --v22;
         p_offset += 4;
-        if ( !v20 )
+        if ( !v22 )
           goto LABEL_9;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -136,125 +135,126 @@ System_Collections_Generic_List_QuestDateRangeEntity__o *__fastcall QuestDateRan
     else
     {
 LABEL_9:
-      p_method = sub_1BB60A8(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1BB6850(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
       break;
-    v23 = Enumerator->klass;
-    v24 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v25 = Enumerator->klass;
+    v26 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
-      v25 = &v23->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v25 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
+      v27 = &v25->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v27 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
       {
-        --v24;
-        v25 += 4;
-        if ( !v24 )
+        --v26;
+        v27 += 4;
+        if ( !v26 )
           goto LABEL_16;
       }
-      v26 = (__int64)&v23->vtable[*v25].method;
+      v28 = (__int64)&v25->vtable[*v27].method;
     }
     else
     {
 LABEL_16:
-      v26 = sub_1BB60A8(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v28 = sub_1BB6850(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
-    v27 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v26)(
+    v29 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v28)(
             Enumerator,
-            *(_QWORD *)(v26 + 8));
-    v30 = v27;
-    if ( !v27 )
+            *(_QWORD *)(v28 + 8));
+    v33 = v29;
+    if ( !v29 )
       goto LABEL_42;
+    v34 = QuestDateRangeEntity_TypeInfo;
     methodPtr_low = LOBYTE(QuestDateRangeEntity_TypeInfo->vtable._0_Equals.methodPtr);
-    if ( *(unsigned __int8 *)(*(_QWORD *)v27 + 304LL) < (unsigned int)methodPtr_low
-      || *(QuestDateRangeEntity_c **)(*(_QWORD *)(*(_QWORD *)v27 + 200LL) + 8 * methodPtr_low - 8) != QuestDateRangeEntity_TypeInfo )
+    if ( *(unsigned __int8 *)(*(_QWORD *)v29 + 304LL) < (unsigned int)methodPtr_low
+      || *(QuestDateRangeEntity_c **)(*(_QWORD *)(*(_QWORD *)v29 + 200LL) + 8 * methodPtr_low - 8) != QuestDateRangeEntity_TypeInfo )
     {
-      sub_1B645E4(v27);
+      sub_1B64D8C(v29);
 LABEL_42:
-      sub_1B64324(v27);
+      sub_1B64ACC(v29, v30);
     }
-    if ( *(_DWORD *)(v27 + 16) == questDateRangeId )
+    if ( *(_DWORD *)(v29 + 16) == questDateRangeId )
     {
       if ( !v16 )
-        sub_1B64324(v27);
+        sub_1B64ACC(v29, QuestDateRangeEntity_TypeInfo);
       items = v16->fields._items;
-      v33 = Method_System_Collections_Generic_List_QuestDateRangeEntity__Add__;
+      v37 = Method_System_Collections_Generic_List_QuestDateRangeEntity__Add__;
       ++v16->fields._version;
       if ( !items )
-        sub_1B64324(v27);
+        sub_1B64ACC(v29, v34);
       size = v16->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v16,
-          (Il2CppObject *)v27,
-          *(const MethodInfo_34AD6D4 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
+          (Il2CppObject *)v29,
+          *(const MethodInfo_34AF9B0 **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
       }
       else
       {
-        v35 = &items->obj.klass + size;
+        v39 = &items->obj.klass + size;
         v16->fields._size = size + 1;
-        v35[4] = (Il2CppClass *)v30;
-        sub_1B6406C((ServantStatusBattleListViewItem_o *)(v35 + 4), v30, v28, v29);
+        v39[4] = (Il2CppClass *)v33;
+        sub_1B64814((ServantStatusBattleListViewItem_o *)(v39 + 4), v33, v31, v32);
       }
     }
   }
-  v36 = Enumerator->klass;
-  v37 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+  v40 = Enumerator->klass;
+  v41 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
   {
-    v38 = &v36->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v38 - 1) != System_IDisposable_TypeInfo )
+    v42 = &v40->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v42 - 1) != System_IDisposable_TypeInfo )
     {
-      --v37;
-      v38 += 4;
-      if ( !v37 )
+      --v41;
+      v42 += 4;
+      if ( !v41 )
         goto LABEL_31;
     }
-    v39 = (__int64)&v36->vtable[*v38].method;
+    v43 = (__int64)&v40->vtable[*v42].method;
   }
   else
   {
 LABEL_31:
-    v39 = sub_1BB60A8(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v43 = sub_1BB6850(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
-  list = (System_Collections_ObjectModel_Collection_T__o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v39)(
+  list = (System_Collections_ObjectModel_Collection_T__o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v43)(
                                                              Enumerator,
-                                                             *(_QWORD *)(v39 + 8));
-  v42 = QuestDateRangeMaster___c_TypeInfo;
+                                                             *(_QWORD *)(v43 + 8));
+  v44 = QuestDateRangeMaster___c_TypeInfo;
   if ( !QuestDateRangeMaster___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(QuestDateRangeMaster___c_TypeInfo);
-    v42 = QuestDateRangeMaster___c_TypeInfo;
+    v44 = QuestDateRangeMaster___c_TypeInfo;
   }
-  _9__3_0 = (System_Comparison_T__o *)v42->static_fields->__9__3_0;
+  _9__3_0 = (System_Comparison_T__o *)v44->static_fields->__9__3_0;
   if ( !_9__3_0 )
   {
-    if ( !v42->_2.cctor_finished )
+    if ( !v44->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v42);
-      v42 = QuestDateRangeMaster___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v44);
+      v44 = QuestDateRangeMaster___c_TypeInfo;
     }
-    v44 = (Il2CppObject *)v42->static_fields->__9;
-    _9__3_0 = (System_Comparison_T__o *)sub_1B64314(System_Comparison_QuestDateRangeEntity__TypeInfo, v40, v41);
+    v46 = (Il2CppObject *)v44->static_fields->__9;
+    _9__3_0 = (System_Comparison_T__o *)sub_1B64ABC(System_Comparison_QuestDateRangeEntity__TypeInfo);
     System_Comparison_object____ctor(
       _9__3_0,
-      v44,
+      v46,
       Method_QuestDateRangeMaster___c__GetQuestDateRangeEntityList_b__3_0__,
       0LL);
     static_fields = QuestDateRangeMaster___c_TypeInfo->static_fields;
     static_fields->__9__3_0 = (struct System_Comparison_QuestDateRangeEntity__o *)_9__3_0;
-    sub_1B6406C((ServantStatusBattleListViewItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v46, v47);
+    sub_1B64814((ServantStatusBattleListViewItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v48, v49);
   }
   if ( !v16 )
 LABEL_45:
-    sub_1B64324(list);
-  System_Collections_Generic_List_object___Sort_55243320(
+    sub_1B64ACC(list, v17);
+  System_Collections_Generic_List_object___Sort_55252244(
     v16,
     _9__3_0,
-    (const MethodInfo_34AF238 *)Method_System_Collections_Generic_List_QuestDateRangeEntity__Sort__);
+    (const MethodInfo_34B1514 *)Method_System_Collections_Generic_List_QuestDateRangeEntity__Sort__);
   return (System_Collections_Generic_List_QuestDateRangeEntity__o *)v16;
 }
 
@@ -271,54 +271,56 @@ bool __fastcall QuestDateRangeMaster__IsPeriodFromOpenedToClosed(
   __int64 v9; // x1
   __int64 v10; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
+  __int64 v12; // x1
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x19
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  __int64 v14; // x9
+  __int64 v15; // x9
   int32_t *p_offset; // x10
   __int64 p_method; // x0
-  char v17; // w22
-  System_Collections_Generic_IEnumerator_T__c *v18; // x8
-  __int64 v19; // x9
-  int32_t *v20; // x10
-  __int64 v21; // x0
-  _DWORD *v22; // x0
+  char v18; // w22
+  System_Collections_Generic_IEnumerator_T__c *v19; // x8
+  __int64 v20; // x9
+  int32_t *v21; // x10
+  __int64 v22; // x0
+  _DWORD *v23; // x0
+  __int64 v24; // x1
   __int64 methodPtr_low; // x9
-  System_Collections_Generic_IEnumerator_T__c *v24; // x8
-  __int64 v25; // x9
-  int32_t *v26; // x10
-  __int64 v27; // x0
+  System_Collections_Generic_IEnumerator_T__c *v26; // x8
+  __int64 v27; // x9
+  int32_t *v28; // x10
+  __int64 v29; // x0
 
-  if ( (byte_49FC849 & 1) == 0 )
+  if ( (byte_49FE942 & 1) == 0 )
   {
-    sub_1B640C8(
+    sub_1B64870(
       &Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__,
       *(_QWORD *)&questDateRangeId);
-    sub_1B640C8(&System_IDisposable_TypeInfo, v7);
-    sub_1B640C8(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v8);
-    sub_1B640C8(&System_Collections_IEnumerator_TypeInfo, v9);
-    sub_1B640C8(&QuestDateRangeEntity_TypeInfo, v10);
-    byte_49FC849 = 1;
+    sub_1B64870(&System_IDisposable_TypeInfo, v7);
+    sub_1B64870(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v8);
+    sub_1B64870(&System_Collections_IEnumerator_TypeInfo, v9);
+    sub_1B64870(&QuestDateRangeEntity_TypeInfo, v10);
+    byte_49FE942 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, *(_QWORD *)&questDateRangeId);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_30710E0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_30733BC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, v12);
   while ( 1 )
   {
     klass = Enumerator->klass;
-    v14 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v15 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v14;
+        --v15;
         p_offset += 4;
-        if ( !v14 )
+        if ( !v15 )
           goto LABEL_9;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -326,71 +328,71 @@ bool __fastcall QuestDateRangeMaster__IsPeriodFromOpenedToClosed(
     else
     {
 LABEL_9:
-      p_method = sub_1BB60A8(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1BB6850(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
-    v17 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
+    v18 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8));
-    if ( (v17 & 1) == 0 )
+    if ( (v18 & 1) == 0 )
       break;
-    v18 = Enumerator->klass;
-    v19 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v19 = Enumerator->klass;
+    v20 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
-      v20 = &v18->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v20 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
+      v21 = &v19->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v21 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
       {
-        --v19;
-        v20 += 4;
-        if ( !v19 )
+        --v20;
+        v21 += 4;
+        if ( !v20 )
           goto LABEL_16;
       }
-      v21 = (__int64)&v18->vtable[*v20].method;
+      v22 = (__int64)&v19->vtable[*v21].method;
     }
     else
     {
 LABEL_16:
-      v21 = sub_1BB60A8(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v22 = sub_1BB6850(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
-    v22 = (_DWORD *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v21)(
+    v23 = (_DWORD *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v22)(
                       Enumerator,
-                      *(_QWORD *)(v21 + 8));
-    if ( !v22 )
+                      *(_QWORD *)(v22 + 8));
+    if ( !v23 )
       goto LABEL_34;
     methodPtr_low = LOBYTE(QuestDateRangeEntity_TypeInfo->vtable._0_Equals.methodPtr);
-    if ( *(unsigned __int8 *)(*(_QWORD *)v22 + 304LL) < (unsigned int)methodPtr_low
-      || *(QuestDateRangeEntity_c **)(*(_QWORD *)(*(_QWORD *)v22 + 200LL) + 8 * methodPtr_low - 8) != QuestDateRangeEntity_TypeInfo )
+    if ( *(unsigned __int8 *)(*(_QWORD *)v23 + 304LL) < (unsigned int)methodPtr_low
+      || *(QuestDateRangeEntity_c **)(*(_QWORD *)(*(_QWORD *)v23 + 200LL) + 8 * methodPtr_low - 8) != QuestDateRangeEntity_TypeInfo )
     {
-      sub_1B645E4(v22);
+      sub_1B64D8C(v23);
 LABEL_34:
-      sub_1B64324(v22);
+      sub_1B64ACC(v23, v24);
     }
-    if ( v22[4] == questDateRangeId && (int)v22[6] <= nowTime && (int)v22[7] > nowTime )
+    if ( v23[4] == questDateRangeId && (int)v23[6] <= nowTime && (int)v23[7] > nowTime )
       goto LABEL_26;
   }
-  v17 = 0;
+  v18 = 0;
 LABEL_26:
-  v24 = Enumerator->klass;
-  v25 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+  v26 = Enumerator->klass;
+  v27 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
   {
-    v26 = &v24->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v26 - 1) != System_IDisposable_TypeInfo )
+    v28 = &v26->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v28 - 1) != System_IDisposable_TypeInfo )
     {
-      --v25;
-      v26 += 4;
-      if ( !v25 )
+      --v27;
+      v28 += 4;
+      if ( !v27 )
         goto LABEL_30;
     }
-    v27 = (__int64)&v24->vtable[*v26].method;
+    v29 = (__int64)&v26->vtable[*v28].method;
   }
   else
   {
 LABEL_30:
-    v27 = sub_1BB60A8(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v29 = sub_1BB6850(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v27)(Enumerator, *(_QWORD *)(v27 + 8));
-  return v17 & 1;
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v29)(Enumerator, *(_QWORD *)(v29 + 8));
+  return v18 & 1;
 }
 
 
@@ -404,41 +406,40 @@ bool __fastcall QuestDateRangeMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_49FC846 & 1) == 0 )
+  if ( (byte_49FE93F & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataMasterBase_QuestDateRangeMaster__QuestDateRangeEntity__string__TryGetEntity__, entity);
-    byte_49FC846 = 1;
+    sub_1B64870(&Method_DataMasterBase_QuestDateRangeMaster__QuestDateRangeEntity__string__TryGetEntity__, entity);
+    byte_49FE93F = 1;
   }
   PK = (Il2CppObject *)QuestDateRangeEntity__CreatePK(id, idx, *(const MethodInfo **)&id);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_30D424C *)Method_DataMasterBase_QuestDateRangeMaster__QuestDateRangeEntity__string__TryGetEntity__);
+           (const MethodInfo_30D6528 *)Method_DataMasterBase_QuestDateRangeMaster__QuestDateRangeEntity__string__TryGetEntity__);
 }
 
 
 void __fastcall QuestDateRangeMaster___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  __int64 v2; // x2
-  Il2CppObject *v3; // x19
-  int32_t v4; // w2
-  int32_t v5; // w3
+  Il2CppObject *v2; // x19
+  int32_t v3; // w2
+  int32_t v4; // w3
 
-  if ( (byte_49FC84A & 1) == 0 )
+  if ( (byte_49FE943 & 1) == 0 )
   {
-    sub_1B640C8(&QuestDateRangeMaster___c_TypeInfo, v1);
-    byte_49FC84A = 1;
+    sub_1B64870(&QuestDateRangeMaster___c_TypeInfo, v1);
+    byte_49FE943 = 1;
   }
-  v3 = (Il2CppObject *)sub_1B64314(QuestDateRangeMaster___c_TypeInfo, v1, v2);
-  System_Object___ctor(v3, 0LL);
-  QuestDateRangeMaster___c_TypeInfo->static_fields->__9 = (struct QuestDateRangeMaster___c_o *)v3;
-  sub_1B6406C(
+  v2 = (Il2CppObject *)sub_1B64ABC(QuestDateRangeMaster___c_TypeInfo);
+  System_Object___ctor(v2, 0LL);
+  QuestDateRangeMaster___c_TypeInfo->static_fields->__9 = (struct QuestDateRangeMaster___c_o *)v2;
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)QuestDateRangeMaster___c_TypeInfo->static_fields,
-    (int32_t)v3,
-    v4,
-    v5);
+    (int32_t)v2,
+    v3,
+    v4);
 }
 
 
@@ -455,6 +456,6 @@ int32_t __fastcall QuestDateRangeMaster___c___GetQuestDateRangeEntityList_b__3_0
         const MethodInfo *method)
 {
   if ( !a || !b )
-    sub_1B64324(this);
+    sub_1B64ACC(this, a);
   return a->fields.idx - b->fields.idx;
 }

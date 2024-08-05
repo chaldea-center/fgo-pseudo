@@ -5,16 +5,16 @@ void __fastcall SpotCooltimeRewardDialog___ctor(SpotCooltimeRewardDialog_o *this
   int32_t v5; // w2
   int32_t v6; // w3
 
-  if ( (byte_4A00667 & 1) == 0 )
+  if ( (byte_4A02769 & 1) == 0 )
   {
-    sub_1B640C8(&BaseDialog_TypeInfo, method);
-    sub_1B640C8(&UnityEngine_Color___TypeInfo, v3);
-    byte_4A00667 = 1;
+    sub_1B64870(&BaseDialog_TypeInfo, method);
+    sub_1B64870(&UnityEngine_Color___TypeInfo, v3);
+    byte_4A02769 = 1;
   }
   this->fields.iconScale = 0.85;
-  v4 = (struct UnityEngine_Color_array *)sub_1B64170(UnityEngine_Color___TypeInfo, 2LL);
+  v4 = (struct UnityEngine_Color_array *)sub_1B64918(UnityEngine_Color___TypeInfo, 2LL);
   this->fields.viewChangeButtonLabelEffectColors = v4;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.viewChangeButtonLabelEffectColors, (int32_t)v4, v5, v6);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.viewChangeButtonLabelEffectColors, (int32_t)v4, v5, v6);
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0LL);
@@ -44,7 +44,7 @@ void __fastcall SpotCooltimeRewardDialog__EndClose(SpotCooltimeRewardDialog_o *t
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1B6406C(p_closeCallbackFunc, 0, v3, v4);
+    sub_1B64814(p_closeCallbackFunc, 0, v3, v4);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v6->fields.m_target)(
       v6->fields.original_method_info,
       *(_QWORD *)&v6->fields.extra_arg);
@@ -55,11 +55,12 @@ void __fastcall SpotCooltimeRewardDialog__EndClose(SpotCooltimeRewardDialog_o *t
 void __fastcall SpotCooltimeRewardDialog__Init(SpotCooltimeRewardDialog_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v4; // x1
 
   this->fields.state = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -78,61 +79,60 @@ void __fastcall SpotCooltimeRewardDialog__OnClickCloseButton(
   __int64 v9; // x1
   _QWORD *v10; // x0
   System_Reflection_MethodBase_o *v11; // x0
+  __int64 v12; // x1
   struct System_Collections_Generic_List_GameObject__o *resultItemObjList; // x0
   Il2CppObject *current; // x20
-  __int64 v14; // x1
-  __int64 v15; // x2
-  System_Action_o *v16; // x20
-  System_Collections_Generic_List_Enumerator_object__o v17; // [xsp+8h] [xbp-48h] BYREF
+  System_Action_o *v15; // x20
+  System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4A00663 & 1) == 0 )
+  if ( (byte_4A02765 & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_TypeInfo, method);
-    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, v3);
-    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v4);
-    sub_1B640C8(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v5);
-    sub_1B640C8(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v6);
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, v7);
-    sub_1B640C8(&Method_SpotCooltimeRewardDialog_EndClose__, v8);
-    sub_1B640C8(&Method_SpotCooltimeRewardDialog_OnClickCloseButton__, v9);
-    byte_4A00663 = 1;
+    sub_1B64870(&System_Action_TypeInfo, method);
+    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, v3);
+    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v4);
+    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v5);
+    sub_1B64870(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v6);
+    sub_1B64870(&UnityEngine_Object_TypeInfo, v7);
+    sub_1B64870(&Method_SpotCooltimeRewardDialog_EndClose__, v8);
+    sub_1B64870(&Method_SpotCooltimeRewardDialog_OnClickCloseButton__, v9);
+    byte_4A02765 = 1;
   }
-  memset(&v17, 0, sizeof(v17));
+  memset(&v16, 0, sizeof(v16));
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v10 = Method_SpotCooltimeRewardDialog_OnClickCloseButton__;
     if ( (*((_BYTE *)Method_SpotCooltimeRewardDialog_OnClickCloseButton__ + 83) & 2) != 0 )
-      v10 = (_QWORD *)sub_1B640E0(Method_SpotCooltimeRewardDialog_OnClickCloseButton__);
-    v11 = (System_Reflection_MethodBase_o *)sub_1B640AC(v10, v10[4]);
+      v10 = (_QWORD *)sub_1B64888(Method_SpotCooltimeRewardDialog_OnClickCloseButton__);
+    v11 = (System_Reflection_MethodBase_o *)sub_1B64854(v10, v10[4]);
     OverwriteAssetSoundName__PlaySystemSe(v11, this->fields.closeBtnSe, 0LL);
     resultItemObjList = this->fields.resultItemObjList;
     if ( !resultItemObjList )
-      sub_1B64324(0LL);
+      sub_1B64ACC(0LL, v12);
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v17,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v16,
       (System_Collections_Generic_List_object__o *)resultItemObjList,
-      (const MethodInfo_34AE26C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+      (const MethodInfo_34B0548 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v17,
-              (const MethodInfo_322A0B0 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+              &v16,
+              (const MethodInfo_322C38C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
     {
-      current = v17.fields._current;
+      current = v16.fields._current;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0LL, 0LL) )
       {
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        UnityEngine_Object__Destroy_69127736((UnityEngine_Object_o *)current, 0LL);
+        UnityEngine_Object__Destroy_69135916((UnityEngine_Object_o *)current, 0LL);
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v17,
-      (const MethodInfo_322A0AC *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    v16 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v14, v15);
-    System_Action___ctor(v16, (Il2CppObject *)this, Method_SpotCooltimeRewardDialog_EndClose__, 0LL);
-    BaseDialog__Close((BaseDialog_o *)this, v16, 0LL);
+      &v16,
+      (const MethodInfo_322C388 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    v15 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+    System_Action___ctor(v15, (Il2CppObject *)this, Method_SpotCooltimeRewardDialog_EndClose__, 0LL);
+    BaseDialog__Close((BaseDialog_o *)this, v15, 0LL);
   }
 }
 
@@ -150,12 +150,12 @@ void __fastcall SpotCooltimeRewardDialog__OnClickSwitchShowMode(
   __int64 v9; // x1
   _QWORD *v10; // x0
   System_Reflection_MethodBase_o *v11; // x0
+  __int64 v12; // x1
   _BOOL4 isShowPossessionNum; // w8
   UIButton_o *viewChangeButton; // x0
-  System_String_o **v14; // x8
-  UISprite_o *v15; // x20
+  System_String_o **v15; // x8
+  UISprite_o *v16; // x20
   System_String_o *normalSprite; // x21
-  __int64 v17; // x1
   struct UnityEngine_Color_array *viewChangeButtonLabelEffectColors; // x9
   unsigned int max_length; // w8
   float *p_g; // x8
@@ -165,47 +165,47 @@ void __fastcall SpotCooltimeRewardDialog__OnClickSwitchShowMode(
   int32_t v24; // w20
   UnityEngine_Color_o v25; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4A00664 & 1) == 0 )
+  if ( (byte_4A02766 & 1) == 0 )
   {
-    sub_1B640C8(&AtlasManager_TypeInfo, method);
-    sub_1B640C8(&Method_UnityEngine_Component_GetComponent_UISprite___, v3);
-    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___, v4);
-    sub_1B640C8(&Method_System_Collections_Generic_List_GameObject__get_Count__, v5);
-    sub_1B640C8(&Method_System_Collections_Generic_List_GameObject__get_Item__, v6);
-    sub_1B640C8(&Method_SpotCooltimeRewardDialog_OnClickSwitchShowMode__, v7);
-    sub_1B640C8(&StringLiteral_23966/*"treasurechest_btn"*/, v8);
-    sub_1B640C8(&StringLiteral_23968/*"treasurechest_btn_on"*/, v9);
-    byte_4A00664 = 1;
+    sub_1B64870(&AtlasManager_TypeInfo, method);
+    sub_1B64870(&Method_UnityEngine_Component_GetComponent_UISprite___, v3);
+    sub_1B64870(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___, v4);
+    sub_1B64870(&Method_System_Collections_Generic_List_GameObject__get_Count__, v5);
+    sub_1B64870(&Method_System_Collections_Generic_List_GameObject__get_Item__, v6);
+    sub_1B64870(&Method_SpotCooltimeRewardDialog_OnClickSwitchShowMode__, v7);
+    sub_1B64870(&StringLiteral_23970/*"treasurechest_btn"*/, v8);
+    sub_1B64870(&StringLiteral_23972/*"treasurechest_btn_on"*/, v9);
+    byte_4A02766 = 1;
   }
   v10 = Method_SpotCooltimeRewardDialog_OnClickSwitchShowMode__;
   if ( (*((_BYTE *)Method_SpotCooltimeRewardDialog_OnClickSwitchShowMode__ + 83) & 2) != 0 )
-    v10 = (_QWORD *)sub_1B640E0(Method_SpotCooltimeRewardDialog_OnClickSwitchShowMode__);
-  v11 = (System_Reflection_MethodBase_o *)sub_1B640AC(v10, v10[4]);
+    v10 = (_QWORD *)sub_1B64888(Method_SpotCooltimeRewardDialog_OnClickSwitchShowMode__);
+  v11 = (System_Reflection_MethodBase_o *)sub_1B64854(v10, v10[4]);
   OverwriteAssetSoundName__PlaySystemSe(v11, 0, 0LL);
   isShowPossessionNum = this->fields.isShowPossessionNum;
   viewChangeButton = this->fields.viewChangeButton;
   this->fields.isShowPossessionNum = !isShowPossessionNum;
   if ( !viewChangeButton )
     goto LABEL_26;
-  v14 = isShowPossessionNum ? (System_String_o **)&StringLiteral_23966/*"treasurechest_btn"*/ : (System_String_o **)&StringLiteral_23968/*"treasurechest_btn_on"*/;
-  UIButton__set_normalSprite(viewChangeButton, *v14, 0LL);
+  v15 = isShowPossessionNum ? (System_String_o **)&StringLiteral_23970/*"treasurechest_btn"*/ : (System_String_o **)&StringLiteral_23972/*"treasurechest_btn_on"*/;
+  UIButton__set_normalSprite(viewChangeButton, *v15, 0LL);
   viewChangeButton = this->fields.viewChangeButton;
   if ( !viewChangeButton )
     goto LABEL_26;
   viewChangeButton = (UIButton_o *)UnityEngine_Component__GetComponent_object_(
                                      (UnityEngine_Component_o *)viewChangeButton,
-                                     (const MethodInfo_2E2FE90 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                                     (const MethodInfo_2E3216C *)Method_UnityEngine_Component_GetComponent_UISprite___);
   if ( !this->fields.viewChangeButton )
     goto LABEL_26;
-  v15 = (UISprite_o *)viewChangeButton;
+  v16 = (UISprite_o *)viewChangeButton;
   normalSprite = UIButton__get_normalSprite(this->fields.viewChangeButton, 0LL);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  viewChangeButton = (UIButton_o *)AtlasManager__SetEventUI(v15, normalSprite, 0LL);
+  viewChangeButton = (UIButton_o *)AtlasManager__SetEventUI(v16, normalSprite, 0LL);
   viewChangeButtonLabelEffectColors = this->fields.viewChangeButtonLabelEffectColors;
   if ( !viewChangeButtonLabelEffectColors )
 LABEL_26:
-    sub_1B64324(viewChangeButton);
+    sub_1B64ACC(viewChangeButton, v12);
   viewChangeButton = (UIButton_o *)this->fields.viewChangeButtonLabel;
   max_length = viewChangeButtonLabelEffectColors->max_length;
   if ( !this->fields.isShowPossessionNum )
@@ -221,7 +221,7 @@ LABEL_26:
       goto LABEL_20;
     }
 LABEL_28:
-    sub_1B6432C(viewChangeButton, v17);
+    sub_1B64AD4(viewChangeButton, v12);
   }
   if ( max_length <= 1 )
     goto LABEL_28;
@@ -246,12 +246,12 @@ LABEL_20:
     viewChangeButton = (UIButton_o *)System_Collections_Generic_List_object___get_Item(
                                        (System_Collections_Generic_List_object__o *)viewChangeButton,
                                        v24,
-                                       (const MethodInfo_34AD404 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                       (const MethodInfo_34AF6E0 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     if ( viewChangeButton )
     {
       viewChangeButton = (UIButton_o *)UnityEngine_GameObject__GetComponent_object_(
                                          (UnityEngine_GameObject_o *)viewChangeButton,
-                                         (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
+                                         (const MethodInfo_2E8A1B4 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
       if ( viewChangeButton )
       {
         ItemIconComponent__ShowPossession(
@@ -292,49 +292,44 @@ void __fastcall SpotCooltimeRewardDialog__Open(
   __int64 v21; // x1
   UnityEngine_Component_o *viewChangeButton; // x0
   Il2CppObject *Component_object; // x22
-  __int64 v24; // x1
   struct UnityEngine_Color_array *viewChangeButtonLabelEffectColors; // x8
-  __int64 v26; // x1
-  __int64 v27; // x2
-  System_Collections_Generic_List_object__o *v28; // x22
-  int32_t v29; // w2
-  int32_t v30; // w3
-  UILabel_o *v31; // x22
+  System_Collections_Generic_List_object__o *v25; // x22
+  int32_t v26; // w2
+  int32_t v27; // w3
+  UILabel_o *v28; // x22
   Il2CppObject *ComponentInChildren_object; // x23
   UILabel_o *getQpTitle; // x22
   UILabel_o *totalQpTitle; // x22
   UILabel_o *titleLabel; // x22
-  const MethodInfo *v36; // x2
-  Il2CppObject *v37; // x22
-  int32_t v38; // w2
-  int32_t v39; // w3
-  UnityEngine_Component_o *v40; // x8
-  int v41; // w22
+  const MethodInfo *v33; // x2
+  Il2CppObject *v34; // x22
+  int32_t v35; // w2
+  int32_t v36; // w3
+  UnityEngine_Component_o *v37; // x8
+  int v38; // w22
   signed int max_length; // w21
-  const MethodInfo *v43; // x2
-  __int64 v44; // x1
-  __int64 v45; // x2
-  System_Action_o *v46; // x20
+  const MethodInfo *v40; // x2
+  System_Action_o *v41; // x20
 
-  if ( (byte_4A00660 & 1) == 0 )
+  if ( (byte_4A02762 & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_TypeInfo, rewardsInfo);
-    sub_1B640C8(&AtlasManager_TypeInfo, v7);
-    sub_1B640C8(&Method_UnityEngine_Component_GetComponentInChildren_UILabel____75727760, v8);
-    sub_1B640C8(&Method_UnityEngine_Component_GetComponent_UIGrid___, v9);
-    sub_1B640C8(&Method_UnityEngine_Component_GetComponent_UISprite___, v10);
-    sub_1B640C8(&Method_System_Collections_Generic_List_GameObject___ctor__, v11);
-    sub_1B640C8(&System_Collections_Generic_List_GameObject__TypeInfo, v12);
-    sub_1B640C8(&LocalizationManager_TypeInfo, v13);
-    sub_1B640C8(&Method_SpotCooltimeRewardDialog__Open_b__26_0__, v14);
-    sub_1B640C8(&StringLiteral_12149/*"SPOT_COOLTIME_REWARD_DIALOG_CLOSE"*/, v15);
-    sub_1B640C8(&StringLiteral_12154/*"SPOT_COOLTIME_REWARD_DIALOG_TOTAL_QP_TITLE"*/, v16);
-    sub_1B640C8(&StringLiteral_12152/*"SPOT_COOLTIME_REWARD_DIALOG_TITLE"*/, v17);
-    sub_1B640C8(&StringLiteral_12155/*"SPOT_COOLTIME_REWARD_VIEW_CHANGE"*/, v18);
-    sub_1B640C8(&StringLiteral_23966/*"treasurechest_btn"*/, v19);
-    sub_1B640C8(&StringLiteral_23972/*"treasurechest_img_bg_reward"*/, v20);
-    sub_1B640C8(&StringLiteral_12151/*"SPOT_COOLTIME_REWARD_DIALOG_GET_QP_TITLE"*/, v21);
-    byte_4A00660 = 1;
+    sub_1B64870(&System_Action_TypeInfo, rewardsInfo);
+    sub_1B64870(&AtlasManager_TypeInfo, v7);
+    sub_1B64870(&Method_UnityEngine_Component_GetComponentInChildren_UILabel____75736208, v8);
+    sub_1B64870(&Method_UnityEngine_Component_GetComponent_UIGrid___, v9);
+    sub_1B64870(&Method_UnityEngine_Component_GetComponent_UISprite___, v10);
+    sub_1B64870(&Method_System_Collections_Generic_List_GameObject___ctor__, v11);
+    sub_1B64870(&System_Collections_Generic_List_GameObject__TypeInfo, v12);
+    sub_1B64870(&LocalizationManager_TypeInfo, v13);
+    sub_1B64870(&Method_SpotCooltimeRewardDialog__Open_b__26_0__, v14);
+    sub_1B64870(&StringLiteral_12152/*"SPOT_COOLTIME_REWARD_DIALOG_CLOSE"*/, v15);
+    sub_1B64870(&StringLiteral_12157/*"SPOT_COOLTIME_REWARD_DIALOG_TOTAL_QP_TITLE"*/, v16);
+    sub_1B64870(&StringLiteral_12155/*"SPOT_COOLTIME_REWARD_DIALOG_TITLE"*/, v17);
+    sub_1B64870(&StringLiteral_12158/*"SPOT_COOLTIME_REWARD_VIEW_CHANGE"*/, v18);
+    sub_1B64870(&StringLiteral_23970/*"treasurechest_btn"*/, v19);
+    sub_1B64870(&StringLiteral_23976/*"treasurechest_img_bg_reward"*/, v20);
+    sub_1B64870(&StringLiteral_12154/*"SPOT_COOLTIME_REWARD_DIALOG_GET_QP_TITLE"*/, v21);
+    byte_4A02762 = 1;
   }
   viewChangeButton = (UnityEngine_Component_o *)this->fields.viewChangeButton;
   this->fields.state = 1;
@@ -342,20 +337,20 @@ void __fastcall SpotCooltimeRewardDialog__Open(
     goto LABEL_34;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        viewChangeButton,
-                       (const MethodInfo_2E2FE90 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                       (const MethodInfo_2E3216C *)Method_UnityEngine_Component_GetComponent_UISprite___);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI((UISprite_o *)Component_object, (System_String_o *)StringLiteral_23966/*"treasurechest_btn"*/, 0LL);
+  AtlasManager__SetEventUI((UISprite_o *)Component_object, (System_String_o *)StringLiteral_23970/*"treasurechest_btn"*/, 0LL);
   viewChangeButton = (UnityEngine_Component_o *)this->fields.viewChangeButton;
   this->fields.isShowPossessionNum = 0;
   if ( !viewChangeButton )
     goto LABEL_34;
-  UIButton__set_normalSprite((UIButton_o *)viewChangeButton, (System_String_o *)StringLiteral_23966/*"treasurechest_btn"*/, 0LL);
+  UIButton__set_normalSprite((UIButton_o *)viewChangeButton, (System_String_o *)StringLiteral_23970/*"treasurechest_btn"*/, 0LL);
   viewChangeButtonLabelEffectColors = this->fields.viewChangeButtonLabelEffectColors;
   if ( !viewChangeButtonLabelEffectColors )
     goto LABEL_34;
   if ( !viewChangeButtonLabelEffectColors->max_length )
-    sub_1B6432C(viewChangeButton, v24);
+    sub_1B64AD4(viewChangeButton, rewardsInfo);
   viewChangeButton = (UnityEngine_Component_o *)this->fields.viewChangeButtonLabel;
   if ( !viewChangeButton )
     goto LABEL_34;
@@ -363,15 +358,12 @@ void __fastcall SpotCooltimeRewardDialog__Open(
     (UILabel_o *)viewChangeButton,
     *(UnityEngine_Color_o *)&viewChangeButtonLabelEffectColors->m_Items[0].fields.g,
     0LL);
-  v28 = (System_Collections_Generic_List_object__o *)sub_1B64314(
-                                                       System_Collections_Generic_List_GameObject__TypeInfo,
-                                                       v26,
-                                                       v27);
+  v25 = (System_Collections_Generic_List_object__o *)sub_1B64ABC(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v28,
-    (const MethodInfo_34ACEA0 *)Method_System_Collections_Generic_List_GameObject___ctor__);
-  this->fields.resultItemObjList = (struct System_Collections_Generic_List_GameObject__o *)v28;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.resultItemObjList, (int32_t)v28, v29, v30);
+    v25,
+    (const MethodInfo_34AF17C *)Method_System_Collections_Generic_List_GameObject___ctor__);
+  this->fields.resultItemObjList = (struct System_Collections_Generic_List_GameObject__o *)v25;
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.resultItemObjList, (int32_t)v25, v26, v27);
   viewChangeButton = (UnityEngine_Component_o *)this->fields.getQpRoot;
   if ( !viewChangeButton )
     goto LABEL_34;
@@ -390,10 +382,10 @@ void __fastcall SpotCooltimeRewardDialog__Open(
   viewChangeButton = (UnityEngine_Component_o *)UnityEngine_Component__GetComponentInChildren_object_(
                                                   viewChangeButton,
                                                   1,
-                                                  (const MethodInfo_2E30314 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____75727760);
+                                                  (const MethodInfo_2E325F0 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____75736208);
   if ( !this->fields.closeButton )
     goto LABEL_34;
-  v31 = (UILabel_o *)viewChangeButton;
+  v28 = (UILabel_o *)viewChangeButton;
   viewChangeButton = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(
                                                   (UnityEngine_Component_o *)this->fields.closeButton,
                                                   0LL);
@@ -402,52 +394,52 @@ void __fastcall SpotCooltimeRewardDialog__Open(
   ComponentInChildren_object = UnityEngine_Component__GetComponentInChildren_object_(
                                  viewChangeButton,
                                  1,
-                                 (const MethodInfo_2E30314 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____75727760);
+                                 (const MethodInfo_2E325F0 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____75736208);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  viewChangeButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12155/*"SPOT_COOLTIME_REWARD_VIEW_CHANGE"*/, 0LL);
-  if ( !v31 )
+  viewChangeButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12158/*"SPOT_COOLTIME_REWARD_VIEW_CHANGE"*/, 0LL);
+  if ( !v28 )
     goto LABEL_34;
-  UILabel__set_text(v31, (System_String_o *)viewChangeButton, 0LL);
-  viewChangeButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12149/*"SPOT_COOLTIME_REWARD_DIALOG_CLOSE"*/, 0LL);
+  UILabel__set_text(v28, (System_String_o *)viewChangeButton, 0LL);
+  viewChangeButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12152/*"SPOT_COOLTIME_REWARD_DIALOG_CLOSE"*/, 0LL);
   if ( !ComponentInChildren_object )
     goto LABEL_34;
   UILabel__set_text((UILabel_o *)ComponentInChildren_object, (System_String_o *)viewChangeButton, 0LL);
   getQpTitle = this->fields.getQpTitle;
-  viewChangeButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12151/*"SPOT_COOLTIME_REWARD_DIALOG_GET_QP_TITLE"*/, 0LL);
+  viewChangeButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12154/*"SPOT_COOLTIME_REWARD_DIALOG_GET_QP_TITLE"*/, 0LL);
   if ( !getQpTitle )
     goto LABEL_34;
   UILabel__set_text(getQpTitle, (System_String_o *)viewChangeButton, 0LL);
   totalQpTitle = this->fields.totalQpTitle;
-  viewChangeButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12154/*"SPOT_COOLTIME_REWARD_DIALOG_TOTAL_QP_TITLE"*/, 0LL);
+  viewChangeButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12157/*"SPOT_COOLTIME_REWARD_DIALOG_TOTAL_QP_TITLE"*/, 0LL);
   if ( !totalQpTitle )
     goto LABEL_34;
   UILabel__set_text(totalQpTitle, (System_String_o *)viewChangeButton, 0LL);
   titleLabel = this->fields.titleLabel;
-  viewChangeButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12152/*"SPOT_COOLTIME_REWARD_DIALOG_TITLE"*/, 0LL);
+  viewChangeButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12155/*"SPOT_COOLTIME_REWARD_DIALOG_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_34;
   UILabel__set_text(titleLabel, (System_String_o *)viewChangeButton, 0LL);
-  SpotCooltimeRewardDialog__SetQpLabel(this, rewardsInfo, v36);
-  AtlasManager__SetEventUI(this->fields.totalQpBg, (System_String_o *)StringLiteral_23972/*"treasurechest_img_bg_reward"*/, 0LL);
-  AtlasManager__SetEventUI(this->fields.getQpBg, (System_String_o *)StringLiteral_23972/*"treasurechest_img_bg_reward"*/, 0LL);
+  SpotCooltimeRewardDialog__SetQpLabel(this, rewardsInfo, v33);
+  AtlasManager__SetEventUI(this->fields.totalQpBg, (System_String_o *)StringLiteral_23976/*"treasurechest_img_bg_reward"*/, 0LL);
+  AtlasManager__SetEventUI(this->fields.getQpBg, (System_String_o *)StringLiteral_23976/*"treasurechest_img_bg_reward"*/, 0LL);
   viewChangeButton = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !viewChangeButton )
     goto LABEL_34;
   viewChangeButton = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(viewChangeButton, 0LL);
   if ( !viewChangeButton )
     goto LABEL_34;
-  v37 = UnityEngine_Component__GetComponentInChildren_object_(
+  v34 = UnityEngine_Component__GetComponentInChildren_object_(
           viewChangeButton,
           1,
-          (const MethodInfo_2E30314 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____75727760);
-  viewChangeButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12149/*"SPOT_COOLTIME_REWARD_DIALOG_CLOSE"*/, 0LL);
-  if ( !v37 )
+          (const MethodInfo_2E325F0 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____75736208);
+  viewChangeButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12152/*"SPOT_COOLTIME_REWARD_DIALOG_CLOSE"*/, 0LL);
+  if ( !v34 )
     goto LABEL_34;
-  UILabel__set_text((UILabel_o *)v37, (System_String_o *)viewChangeButton, 0LL);
+  UILabel__set_text((UILabel_o *)v34, (System_String_o *)viewChangeButton, 0LL);
   this->fields.closeBtnSe = 0;
   this->fields.closeCallbackFunc = closeCallback;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc, (int32_t)closeCallback, v38, v39);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc, (int32_t)closeCallback, v35, v36);
   viewChangeButton = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(
                                                   (UnityEngine_Component_o *)this,
                                                   0LL);
@@ -461,29 +453,29 @@ void __fastcall SpotCooltimeRewardDialog__Open(
     goto LABEL_34;
   viewChangeButton = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                   viewChangeButton,
-                                                  (const MethodInfo_2E2FE90 *)Method_UnityEngine_Component_GetComponent_UIGrid___);
+                                                  (const MethodInfo_2E3216C *)Method_UnityEngine_Component_GetComponent_UIGrid___);
   if ( !viewChangeButton )
     goto LABEL_34;
-  v40 = viewChangeButton;
+  v37 = viewChangeButton;
   viewChangeButton = (UnityEngine_Component_o *)this->fields.scrollBar;
   if ( !viewChangeButton
-    || (v41 = *((_DWORD *)&v40[1].fields + 1),
+    || (v38 = *((_DWORD *)&v37[1].fields + 1),
         max_length = rewardsInfo->max_length,
         (viewChangeButton = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(viewChangeButton, 0LL)) == 0LL)
-    || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)viewChangeButton, 2 * v41 < max_length, 0LL),
-        SpotCooltimeRewardDialog__SetResultData(this, rewardsInfo, v43),
+    || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)viewChangeButton, 2 * v38 < max_length, 0LL),
+        SpotCooltimeRewardDialog__SetResultData(this, rewardsInfo, v40),
         (viewChangeButton = (UnityEngine_Component_o *)this->fields.scrollView) == 0LL) )
   {
 LABEL_34:
-    sub_1B64324(viewChangeButton);
+    sub_1B64ACC(viewChangeButton, rewardsInfo);
   }
   ((void (__fastcall *)(UnityEngine_Component_o *, Il2CppClass *, float))viewChangeButton->klass[1]._1.castClass)(
     viewChangeButton,
     viewChangeButton->klass[1]._1.declaringType,
     0.0);
-  v46 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v44, v45);
-  System_Action___ctor(v46, (Il2CppObject *)this, Method_SpotCooltimeRewardDialog__Open_b__26_0__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v46, 0, 0LL);
+  v41 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  System_Action___ctor(v41, (Il2CppObject *)this, Method_SpotCooltimeRewardDialog__Open_b__26_0__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v41, 0, 0LL);
 }
 
 
@@ -496,23 +488,24 @@ void __fastcall SpotCooltimeRewardDialog__SetPossession(
   __int64 v6; // x1
   __int64 v7; // x1
   int64_t Instance; // x0
+  __int64 v9; // x1
   Il2CppObject *MasterData_object; // x21
   UserItemEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A00665 & 1) == 0 )
+  if ( (byte_4A02767 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataManager_GetMasterData_UserItemMaster___, item);
-    sub_1B640C8(&NetworkManager_TypeInfo, v6);
-    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    byte_4A00665 = 1;
+    sub_1B64870(&Method_DataManager_GetMasterData_UserItemMaster___, item);
+    sub_1B64870(&NetworkManager_TypeInfo, v6);
+    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    byte_4A02767 = 1;
   }
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   entity = 0LL;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_UserItemMaster___);
+                        (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = NetworkManager__get_UserId(0LL);
@@ -523,7 +516,7 @@ void __fastcall SpotCooltimeRewardDialog__SetPossession(
     return;
   if ( !entity || !item )
 LABEL_12:
-    sub_1B64324(Instance);
+    sub_1B64ACC(Instance, v9);
   ItemIconComponent__SetPossession(item, entity->fields.num, 0LL);
 }
 
@@ -550,25 +543,31 @@ void __fastcall SpotCooltimeRewardDialog__SetQpLabel(
   BalanceConfig_c *v18; // x0
   UILabel_o *getQpNumLabel; // x20
   System_String_o *v20; // x21
-  Il2CppObject *v21; // x0
-  UILabel_o *totalQpNumLabel; // x19
-  System_String_o *v23; // x20
+  __int64 v21; // x2
+  __int64 v22; // x3
+  __int64 v23; // x4
   Il2CppObject *v24; // x0
-  int32_t v25; // [xsp+8h] [xbp-48h] BYREF
-  int v26; // [xsp+Ch] [xbp-44h] BYREF
+  UILabel_o *totalQpNumLabel; // x19
+  System_String_o *v26; // x20
+  __int64 v27; // x2
+  __int64 v28; // x3
+  __int64 v29; // x4
+  Il2CppObject *v30; // x0
+  int32_t v31; // [xsp+8h] [xbp-48h] BYREF
+  int v32; // [xsp+Ch] [xbp-44h] BYREF
 
   v4 = this;
-  if ( (byte_4A00661 & 1) == 0 )
+  if ( (byte_4A02763 & 1) == 0 )
   {
-    sub_1B640C8(&BalanceConfig_TypeInfo, dropItems);
-    sub_1B640C8(&Method_DataManager_GetMasterData_ItemMaster___, v5);
-    sub_1B640C8(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v6);
-    sub_1B640C8(&int_TypeInfo, v7);
-    sub_1B640C8(&LocalizationManager_TypeInfo, v8);
-    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_1B640C8(&StringLiteral_12153/*"SPOT_COOLTIME_REWARD_DIALOG_TOTAL_POINT_FORMAT"*/, v10);
-    this = (SpotCooltimeRewardDialog_o *)sub_1B640C8(&StringLiteral_12150/*"SPOT_COOLTIME_REWARD_DIALOG_GET_POINT_FORMAT"*/, v11);
-    byte_4A00661 = 1;
+    sub_1B64870(&BalanceConfig_TypeInfo, dropItems);
+    sub_1B64870(&Method_DataManager_GetMasterData_ItemMaster___, v5);
+    sub_1B64870(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v6);
+    sub_1B64870(&int_TypeInfo, v7);
+    sub_1B64870(&LocalizationManager_TypeInfo, v8);
+    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    sub_1B64870(&StringLiteral_12156/*"SPOT_COOLTIME_REWARD_DIALOG_TOTAL_POINT_FORMAT"*/, v10);
+    this = (SpotCooltimeRewardDialog_o *)sub_1B64870(&StringLiteral_12153/*"SPOT_COOLTIME_REWARD_DIALOG_GET_POINT_FORMAT"*/, v11);
+    byte_4A02763 = 1;
   }
   if ( !dropItems )
     goto LABEL_30;
@@ -580,24 +579,24 @@ void __fastcall SpotCooltimeRewardDialog__SetQpLabel(
     while ( 1 )
     {
       if ( v13 >= max_length )
-        sub_1B6432C(this, dropItems);
+        sub_1B64AD4(this, dropItems);
       v15 = dropItems->m_Items[v13];
       if ( !v15 )
         break;
       if ( v15->fields.type == 2 )
       {
-        this = (SpotCooltimeRewardDialog_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        this = (SpotCooltimeRewardDialog_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !this )
           break;
         this = (SpotCooltimeRewardDialog_o *)DataManager__GetMasterData_object_(
                                                (DataManager_o *)this,
-                                               (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_ItemMaster___);
+                                               (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_ItemMaster___);
         if ( !this )
           break;
         this = (SpotCooltimeRewardDialog_o *)DataMasterBase_object__object__int___GetEntity(
                                                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                v15->fields.objectId,
-                                               (const MethodInfo_30D3EA4 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                                               (const MethodInfo_30D6180 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
         if ( this && LODWORD(this->fields.baseWindow) == 1 )
         {
           this = (SpotCooltimeRewardDialog_o *)BattleDropItem__getTotalNum(v15, 0LL);
@@ -609,7 +608,7 @@ void __fastcall SpotCooltimeRewardDialog__SetQpLabel(
         goto LABEL_17;
     }
 LABEL_30:
-    sub_1B64324(this);
+    sub_1B64ACC(this, dropItems);
   }
   v14 = 0;
 LABEL_17:
@@ -636,18 +635,18 @@ LABEL_17:
   getQpNumLabel = v4->fields.getQpNumLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_12150/*"SPOT_COOLTIME_REWARD_DIALOG_GET_POINT_FORMAT"*/, 0LL);
-  v26 = v14;
-  v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v26);
-  this = (SpotCooltimeRewardDialog_o *)System_String__Format(v20, v21, 0LL);
+  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_12153/*"SPOT_COOLTIME_REWARD_DIALOG_GET_POINT_FORMAT"*/, 0LL);
+  v32 = v14;
+  v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v32, v21, v22, v23);
+  this = (SpotCooltimeRewardDialog_o *)System_String__Format(v20, v24, 0LL);
   if ( !getQpNumLabel )
     goto LABEL_30;
   UILabel__set_text(getQpNumLabel, (System_String_o *)this, 0LL);
   totalQpNumLabel = v4->fields.totalQpNumLabel;
-  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_12153/*"SPOT_COOLTIME_REWARD_DIALOG_TOTAL_POINT_FORMAT"*/, 0LL);
-  v25 = qp;
-  v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v25);
-  this = (SpotCooltimeRewardDialog_o *)System_String__Format(v23, v24, 0LL);
+  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_12156/*"SPOT_COOLTIME_REWARD_DIALOG_TOTAL_POINT_FORMAT"*/, 0LL);
+  v31 = qp;
+  v30 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v31, v27, v28, v29);
+  this = (SpotCooltimeRewardDialog_o *)System_String__Format(v26, v30, 0LL);
   if ( !totalQpNumLabel )
     goto LABEL_30;
   UILabel__set_text(totalQpNumLabel, (System_String_o *)this, 0LL);
@@ -673,29 +672,28 @@ void __fastcall SpotCooltimeRewardDialog__SetResultData(
   int v15; // w29
   Il2CppObject *prefabResultItem; // x22
   SpotCooltimeRewardDialog_o *v17; // x22
-  __int64 v18; // x1
-  SpotCooltimeRewardDialog_o *v19; // x25
-  int32_t v20; // w3
-  ItemIconComponent_o *v21; // x25
-  SpotCooltimeRewardDialog_o *v22; // x0
-  const MethodInfo *v23; // x3
-  int32_t v24; // w2
-  int32_t v25; // w3
-  __int64 v26; // x8
-  _QWORD *v27; // x9
+  SpotCooltimeRewardDialog_o *v18; // x25
+  int32_t v19; // w3
+  ItemIconComponent_o *v20; // x25
+  SpotCooltimeRewardDialog_o *v21; // x0
+  const MethodInfo *v22; // x3
+  int32_t v23; // w2
+  int32_t v24; // w3
+  __int64 v25; // x8
+  _QWORD *v26; // x9
   __int64 m_CancellationTokenSource_low; // x10
-  __int64 v29; // x8
-  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
+  __int64 v28; // x8
+  UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
-  if ( (byte_4A00662 & 1) == 0 )
+  if ( (byte_4A02764 & 1) == 0 )
   {
-    sub_1B640C8(&Method_UnityEngine_Component_GetComponent_UIGrid___, rewards);
-    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___, v5);
-    sub_1B640C8(&Method_System_Collections_Generic_List_GameObject__Add__, v6);
-    sub_1B640C8(&Method_UnityEngine_Object_Instantiate_GameObject___, v7);
-    this = (SpotCooltimeRewardDialog_o *)sub_1B640C8(&UnityEngine_Object_TypeInfo, v8);
-    byte_4A00662 = 1;
+    sub_1B64870(&Method_UnityEngine_Component_GetComponent_UIGrid___, rewards);
+    sub_1B64870(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___, v5);
+    sub_1B64870(&Method_System_Collections_Generic_List_GameObject__Add__, v6);
+    sub_1B64870(&Method_UnityEngine_Object_Instantiate_GameObject___, v7);
+    this = (SpotCooltimeRewardDialog_o *)sub_1B64870(&UnityEngine_Object_TypeInfo, v8);
+    byte_4A02764 = 1;
   }
   if ( rewards )
   {
@@ -706,7 +704,7 @@ void __fastcall SpotCooltimeRewardDialog__SetResultData(
       do
       {
         if ( (unsigned int)v10 >= max_length )
-          sub_1B6432C(this, rewards);
+          sub_1B64AD4(this, rewards);
         v11 = rewards->m_Items[v10];
         if ( !v11 )
           goto LABEL_31;
@@ -721,7 +719,7 @@ void __fastcall SpotCooltimeRewardDialog__SetResultData(
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         this = (SpotCooltimeRewardDialog_o *)UnityEngine_Object__Instantiate_object_(
                                                prefabResultItem,
-                                               (const MethodInfo_2EBBCA0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                               (const MethodInfo_2EBDF7C *)Method_UnityEngine_Object_Instantiate_GameObject___);
         if ( !this )
           goto LABEL_31;
         v17 = this;
@@ -732,66 +730,66 @@ void __fastcall SpotCooltimeRewardDialog__SetResultData(
           goto LABEL_31;
         UnityEngine_Transform__set_parent((UnityEngine_Transform_o *)this, v4->fields.listRoot, 0LL);
         this = (SpotCooltimeRewardDialog_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v17, 0LL);
-        v19 = this;
-        if ( !byte_49F7111 )
+        v18 = this;
+        if ( !byte_49F9201 )
         {
-          this = (SpotCooltimeRewardDialog_o *)sub_1B640C8(&UnityEngine_Vector3_TypeInfo, v18);
-          byte_49F7111 = 1;
+          this = (SpotCooltimeRewardDialog_o *)sub_1B64870(&UnityEngine_Vector3_TypeInfo, rewards);
+          byte_49F9201 = 1;
         }
-        if ( !v19 )
+        if ( !v18 )
           goto LABEL_31;
         UnityEngine_Transform__set_localPosition(
-          (UnityEngine_Transform_o *)v19,
+          (UnityEngine_Transform_o *)v18,
           UnityEngine_Vector3_TypeInfo->static_fields->zeroVector,
           0LL);
         this = (SpotCooltimeRewardDialog_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v17, 0LL);
         if ( !this )
           goto LABEL_31;
-        v30.fields.x = v4->fields.iconScale;
-        v30.fields.y = v30.fields.x;
-        v30.fields.z = v30.fields.x;
-        UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v30, 0LL);
+        v29.fields.x = v4->fields.iconScale;
+        v29.fields.y = v29.fields.x;
+        v29.fields.z = v29.fields.x;
+        UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v29, 0LL);
         this = (SpotCooltimeRewardDialog_o *)UnityEngine_GameObject__GetComponent_object_(
                                                (UnityEngine_GameObject_o *)v17,
-                                               (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
+                                               (const MethodInfo_2E8A1B4 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
         if ( !this )
           goto LABEL_31;
-        v20 = v15 <= 1 ? -1 : v15;
-        v21 = (ItemIconComponent_o *)this;
-        ItemIconComponent__SetGift_37829292((ItemIconComponent_o *)this, type, objectId, v20, 0, 0LL);
-        SpotCooltimeRewardDialog__SetPossession(v22, v21, objectId, v23);
+        v19 = v15 <= 1 ? -1 : v15;
+        v20 = (ItemIconComponent_o *)this;
+        ItemIconComponent__SetGift_37833672((ItemIconComponent_o *)this, type, objectId, v19, 0, 0LL);
+        SpotCooltimeRewardDialog__SetPossession(v21, v20, objectId, v22);
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v17, 1, 0LL);
         this = (SpotCooltimeRewardDialog_o *)v4->fields.resultItemObjList;
         if ( !this )
           goto LABEL_31;
-        v26 = *(_QWORD *)&this->fields.m_CachedPtr;
-        v27 = Method_System_Collections_Generic_List_GameObject__Add__;
+        v25 = *(_QWORD *)&this->fields.m_CachedPtr;
+        v26 = Method_System_Collections_Generic_List_GameObject__Add__;
         ++HIDWORD(this->fields.m_CancellationTokenSource);
-        if ( !v26 )
+        if ( !v25 )
           goto LABEL_31;
         m_CancellationTokenSource_low = SLODWORD(this->fields.m_CancellationTokenSource);
-        if ( (unsigned int)m_CancellationTokenSource_low >= *(_DWORD *)(v26 + 24) )
+        if ( (unsigned int)m_CancellationTokenSource_low >= *(_DWORD *)(v25 + 24) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)this,
             (Il2CppObject *)v17,
-            *(const MethodInfo_34AD6D4 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+            *(const MethodInfo_34AF9B0 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
         }
         else
         {
-          v29 = v26 + 8 * m_CancellationTokenSource_low;
+          v28 = v25 + 8 * m_CancellationTokenSource_low;
           LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
-          *(_QWORD *)(v29 + 32) = v17;
-          sub_1B6406C((ServantStatusBattleListViewItem_o *)(v29 + 32), (int32_t)v17, v24, v25);
+          *(_QWORD *)(v28 + 32) = v17;
+          sub_1B64814((ServantStatusBattleListViewItem_o *)(v28 + 32), (int32_t)v17, v23, v24);
         }
         this = (SpotCooltimeRewardDialog_o *)v4->fields.listRoot;
         if ( !this
           || (this = (SpotCooltimeRewardDialog_o *)UnityEngine_Component__GetComponent_object_(
                                                      (UnityEngine_Component_o *)this,
-                                                     (const MethodInfo_2E2FE90 *)Method_UnityEngine_Component_GetComponent_UIGrid___)) == 0LL )
+                                                     (const MethodInfo_2E3216C *)Method_UnityEngine_Component_GetComponent_UIGrid___)) == 0LL )
         {
 LABEL_31:
-          sub_1B64324(this);
+          sub_1B64ACC(this, rewards);
         }
         this = (SpotCooltimeRewardDialog_o *)((__int64 (__fastcall *)(SpotCooltimeRewardDialog_o *, void *))this->klass[1]._1.namespaze)(
                                                this,
@@ -811,7 +809,7 @@ void __fastcall SpotCooltimeRewardDialog___Open_b__26_0(SpotCooltimeRewardDialog
 
   scrollView = this->fields.scrollView;
   if ( !scrollView )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, method);
   ((void (__fastcall *)(struct UIPanel_o *, Il2CppMethodPointer, float))scrollView->klass->vtable._8_set_alpha.method)(
     scrollView,
     scrollView->klass->vtable._9_CalculateFinalAlpha.methodPtr,
@@ -825,20 +823,21 @@ UnityEngine_GameObject_o *__fastcall SpotCooltimeRewardDialog__get_closeBtnObjec
         const MethodInfo *method)
 {
   UnityEngine_Object_o *closeButton; // x20
-  UnityEngine_Component_o *v5; // x0
+  __int64 v4; // x1
+  UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4A00666 & 1) == 0 )
+  if ( (byte_4A02768 & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, method);
-    byte_4A00666 = 1;
+    sub_1B64870(&UnityEngine_Object_TypeInfo, method);
+    byte_4A02768 = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(closeButton, 0LL, 0LL) )
     return 0LL;
-  v5 = (UnityEngine_Component_o *)this->fields.closeButton;
-  if ( !v5 )
-    sub_1B64324(0LL);
-  return UnityEngine_Component__get_gameObject(v5, 0LL);
+  v6 = (UnityEngine_Component_o *)this->fields.closeButton;
+  if ( !v6 )
+    sub_1B64ACC(0LL, v4);
+  return UnityEngine_Component__get_gameObject(v6, 0LL);
 }

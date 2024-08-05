@@ -5,7 +5,7 @@ void __fastcall QuestInformationListViewItem___ctor(
         int32_t target,
         const MethodInfo *method)
 {
-  ListViewItem___ctor_40370988((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_40375592((ListViewItem_o *)this, index, 0LL);
   this->fields.infoType = 0;
   this->fields.mRewardType = type;
   this->fields.targetId = target;
@@ -14,7 +14,7 @@ void __fastcall QuestInformationListViewItem___ctor(
 }
 
 
-void __fastcall QuestInformationListViewItem___ctor_33750932(
+void __fastcall QuestInformationListViewItem___ctor_33752096(
         QuestInformationListViewItem_o *this,
         int32_t index,
         ViewEnemyEntity_o *viewEnemyEnt,
@@ -33,7 +33,7 @@ void __fastcall QuestInformationListViewItem___ctor_33750932(
   QuestInformationListViewItem_MissionTargetState_o missionTargetState; // [xsp+Ch] [xbp-24h] BYREF
 
   missionTargetState = 0;
-  ListViewItem___ctor_40370988((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_40375592((ListViewItem_o *)this, index, 0LL);
   this->fields.infoType = 1;
   if ( viewEnemyEnt )
   {
@@ -44,7 +44,7 @@ void __fastcall QuestInformationListViewItem___ctor_33750932(
       *(_QWORD *)&this->fields.targetId = 0LL;
       *(_QWORD *)&this->fields.iconId = 0LL;
       *(_QWORD *)&this->fields.dispType = 0LL;
-      sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.nameText, 0, v10, v11);
+      sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.nameText, 0, v10, v11);
       *(_WORD *)&this->fields.weeklyMissionTarget = 0;
       IsEventMission = missionTargetState.fields.IsEventMission;
       this->fields.completeMissionTarget = 0;
@@ -60,7 +60,7 @@ void __fastcall QuestInformationListViewItem___ctor_33750932(
       this->fields.enemyNameEffectId = ViewEnemyEntity__getEnemyNameEffect(viewEnemyEnt, 0LL);
       BattleName = ViewEnemyEntity__getBattleName(viewEnemyEnt, 0LL);
       this->fields.nameText = BattleName;
-      sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.nameText, (int32_t)BattleName, v14, v15);
+      sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.nameText, (int32_t)BattleName, v14, v15);
       this->fields.weeklyMissionTarget = missionTargetState.fields.IsWeeklyMission;
       this->fields.limitMissionTarget = missionTargetState.fields.IsLimitMission;
       this->fields.eventMissionTarget = missionTargetState.fields.IsEventMission;
@@ -73,7 +73,7 @@ void __fastcall QuestInformationListViewItem___ctor_33750932(
     *(_QWORD *)&this->fields.targetId = 0LL;
     *(_QWORD *)&this->fields.dispType = 0LL;
     *(_QWORD *)&this->fields.iconId = 0LL;
-    sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.nameText, 0, v8, v9);
+    sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.nameText, 0, v8, v9);
     *(_DWORD *)&this->fields.weeklyMissionTarget = 0;
   }
   if ( this->fields.targetId )

@@ -1,13 +1,13 @@
 void __fastcall QuestReleaseOverwriteEntity___ctor(QuestReleaseOverwriteEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FC976 & 1) == 0 )
+  if ( (byte_49FEA6F & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataEntityBase_string___ctor__, method);
-    byte_49FC976 = 1;
+    sub_1B64870(&Method_DataEntityBase_string___ctor__, method);
+    byte_49FEA6F = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30D3D1C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D5FF8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -15,27 +15,27 @@ QuestReleaseEntity_o *__fastcall QuestReleaseOverwriteEntity__ConvertToQuestRele
         QuestReleaseOverwriteEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x20
-  const MethodInfo *v5; // x1
-  __int64 v6; // x0
+  __int64 v3; // x20
+  const MethodInfo *v4; // x1
+  __int64 v5; // x0
+  __int64 v6; // x1
   QuestReleaseEntity_o *result; // x0
 
-  if ( (byte_49FC974 & 1) == 0 )
+  if ( (byte_49FEA6D & 1) == 0 )
   {
-    sub_1B640C8(&QuestReleaseEntity_TypeInfo, method);
-    byte_49FC974 = 1;
+    sub_1B64870(&QuestReleaseEntity_TypeInfo, method);
+    byte_49FEA6D = 1;
   }
-  v4 = sub_1B64314(QuestReleaseEntity_TypeInfo, method, v2);
-  QuestReleaseEntity___ctor((QuestReleaseEntity_o *)v4, v5);
-  if ( !v4 )
-    sub_1B64324(v6);
-  result = (QuestReleaseEntity_o *)v4;
-  *(_DWORD *)(v4 + 16) = this->fields.questId;
-  *(_QWORD *)(v4 + 20) = *(_QWORD *)&this->fields.condType;
-  *(_QWORD *)(v4 + 32) = this->fields.condNum;
-  *(_DWORD *)(v4 + 40) = this->fields.closedMessageId;
-  *(_DWORD *)(v4 + 44) = this->fields.imagePriority;
+  v3 = sub_1B64ABC(QuestReleaseEntity_TypeInfo);
+  QuestReleaseEntity___ctor((QuestReleaseEntity_o *)v3, v4);
+  if ( !v3 )
+    sub_1B64ACC(v5, v6);
+  result = (QuestReleaseEntity_o *)v3;
+  *(_DWORD *)(v3 + 16) = this->fields.questId;
+  *(_QWORD *)(v3 + 20) = *(_QWORD *)&this->fields.condType;
+  *(_QWORD *)(v3 + 32) = this->fields.condNum;
+  *(_DWORD *)(v3 + 40) = this->fields.closedMessageId;
+  *(_DWORD *)(v3 + 44) = this->fields.imagePriority;
   return result;
 }
 
@@ -47,16 +47,16 @@ System_String_o *__fastcall QuestReleaseOverwriteEntity__CreatePK(
         int32_t imagePriority,
         const MethodInfo *method)
 {
-  if ( (byte_49FC973 & 1) == 0 )
+  if ( (byte_49FEA6C & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&priority);
-    byte_49FC973 = 1;
+    sub_1B64870(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&priority);
+    byte_49FEA6C = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            questId,
            priority,
            imagePriority,
-           (const MethodInfo_2E37AA0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2E39D7C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -84,17 +84,18 @@ bool __fastcall QuestReleaseOverwriteEntity__IsPeriod(
   __int64 v6; // x1
   __int64 v7; // x1
   Il2CppObject *Master_object; // x0
+  __int64 v9; // x1
   int64_t endedAt; // x8
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
   Time = nowTime;
-  if ( (byte_49FC975 & 1) == 0 )
+  if ( (byte_49FEA6E & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataManager_GetMaster_EventMaster___, nowTime);
-    sub_1B640C8(&DataManager_TypeInfo, v5);
-    sub_1B640C8(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v6);
-    sub_1B640C8(&NetworkManager_TypeInfo, v7);
-    byte_49FC975 = 1;
+    sub_1B64870(&Method_DataManager_GetMaster_EventMaster___, nowTime);
+    sub_1B64870(&DataManager_TypeInfo, v5);
+    sub_1B64870(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v6);
+    sub_1B64870(&NetworkManager_TypeInfo, v7);
+    byte_49FEA6E = 1;
   }
   entity = 0LL;
   if ( !Time )
@@ -107,15 +108,15 @@ bool __fastcall QuestReleaseOverwriteEntity__IsPeriod(
     goto LABEL_17;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E39398 *)Method_DataManager_GetMaster_EventMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_EventMaster___);
   if ( !Master_object )
 LABEL_22:
-    sub_1B64324(Master_object);
+    sub_1B64ACC(Master_object, v9);
   Master_object = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                     &entity,
                                     this->fields.eventId,
-                                    (const MethodInfo_30D3EF8 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
+                                    (const MethodInfo_30D61D4 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_object & 1) == 0 )
   {
 LABEL_17:

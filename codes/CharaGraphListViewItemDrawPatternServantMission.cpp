@@ -15,6 +15,7 @@ void __fastcall CharaGraphListViewItemDrawPatternServantMission__SetupAccessorie
         const MethodInfo *method)
 {
   ServantFaceIconComponent_o *servantFaceIcon; // x0
+  __int64 v6; // x1
 
   CharaGraphListViewItemDrawPatternDefault__SetupAccessories(
     (CharaGraphListViewItemDrawPatternDefault_o *)this,
@@ -22,6 +23,6 @@ void __fastcall CharaGraphListViewItemDrawPatternServantMission__SetupAccessorie
     item,
     0LL);
   if ( !itemDraw || (servantFaceIcon = itemDraw->fields.servantFaceIcon) == 0LL )
-    sub_1B64324(servantFaceIcon);
+    sub_1B64ACC(servantFaceIcon, v6);
   ServantFaceIconComponent__ClearShiningIcon(servantFaceIcon, 0LL);
 }

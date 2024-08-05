@@ -1,13 +1,13 @@
 void __fastcall ServantCommentAddEntity___ctor(ServantCommentAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FCA77 & 1) == 0 )
+  if ( (byte_49FEB70 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataEntityBase_string___ctor__, method);
-    byte_49FCA77 = 1;
+    sub_1B64870(&Method_DataEntityBase_string___ctor__, method);
+    byte_49FEB70 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30D3D1C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D5FF8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -19,17 +19,17 @@ System_String_o *__fastcall ServantCommentAddEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_49FCA74 & 1) == 0 )
+  if ( (byte_49FEB6D & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&id);
-    byte_49FCA74 = 1;
+    sub_1B64870(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&id);
+    byte_49FEB6D = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            svtId,
            id,
            priority,
            idx,
-           (const MethodInfo_2E37F60 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_2E3A23C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -68,11 +68,11 @@ bool __fastcall ServantCommentAddEntity__IsOnlyOpenQuestCond(
   int64_t v17; // x23
 
   v6 = this;
-  if ( (byte_49FCA76 & 1) == 0 )
+  if ( (byte_49FEB6F & 1) == 0 )
   {
-    sub_1B640C8(&CondType_TypeInfo, *(_QWORD *)&questId);
-    this = (ServantCommentAddEntity_o *)sub_1B640C8(&NetworkManager_TypeInfo, v7);
-    byte_49FCA76 = 1;
+    sub_1B64870(&CondType_TypeInfo, *(_QWORD *)&questId);
+    this = (ServantCommentAddEntity_o *)sub_1B64870(&NetworkManager_TypeInfo, v7);
+    byte_49FEB6F = 1;
   }
   if ( v6->fields.condType != 1 || v6->fields.condValue2 != questPhase )
     return 0;
@@ -93,7 +93,7 @@ bool __fastcall ServantCommentAddEntity__IsOnlyOpenQuestCond(
       while ( 1 )
       {
         if ( v13 >= condValues->max_length )
-          sub_1B6432C(this, *(_QWORD *)&questId);
+          sub_1B64AD4(this, *(_QWORD *)&questId);
         v14 = condValues->m_Items[v13 + 1];
         if ( v14 != questId )
         {
@@ -112,7 +112,7 @@ bool __fastcall ServantCommentAddEntity__IsOnlyOpenQuestCond(
           return 1;
         condValues = v6->fields.condValues;
         if ( !condValues )
-          sub_1B64324(this);
+          sub_1B64ACC(this, *(_QWORD *)&questId);
       }
     }
     return 0;
@@ -151,11 +151,11 @@ bool __fastcall ServantCommentAddEntity__IsOpen(
   int64_t v26; // x20
 
   v4 = this;
-  if ( (byte_49FCA75 & 1) == 0 )
+  if ( (byte_49FEB6E & 1) == 0 )
   {
-    sub_1B640C8(&CondType_TypeInfo, *(_QWORD *)&oldFriendShipRank);
-    this = (ServantCommentAddEntity_o *)sub_1B640C8(&NetworkManager_TypeInfo, v5);
-    byte_49FCA75 = 1;
+    sub_1B64870(&CondType_TypeInfo, *(_QWORD *)&oldFriendShipRank);
+    this = (ServantCommentAddEntity_o *)sub_1B64870(&NetworkManager_TypeInfo, v5);
+    byte_49FEB6E = 1;
   }
   condValues = v4->fields.condValues;
   if ( condValues )
@@ -167,7 +167,7 @@ bool __fastcall ServantCommentAddEntity__IsOpen(
     while ( 1 )
     {
       if ( v7 >= condValues->max_length )
-        sub_1B6432C(this, *(_QWORD *)&oldFriendShipRank);
+        sub_1B64AD4(this, *(_QWORD *)&oldFriendShipRank);
       condType = v4->fields.condType;
       v10 = condValues->m_Items[v7 + 1];
       if ( condType == 1 )
@@ -192,7 +192,7 @@ bool __fastcall ServantCommentAddEntity__IsOpen(
         v16 = v14;
         if ( !CondType_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-        this = (ServantCommentAddEntity_o *)CondType__IsOpen_37324144(condType, v10, v16, svtId, 0LL);
+        this = (ServantCommentAddEntity_o *)CondType__IsOpen_37328508(condType, v10, v16, svtId, 0LL);
         if ( ((unsigned __int8)this & 1) != 0 )
           return 1;
       }
@@ -204,7 +204,7 @@ bool __fastcall ServantCommentAddEntity__IsOpen(
         return 0;
       condValues = v4->fields.condValues;
       if ( !condValues )
-        sub_1B64324(this);
+        sub_1B64ACC(this, *(_QWORD *)&oldFriendShipRank);
     }
   }
   v18 = v4->fields.condType;
@@ -232,7 +232,7 @@ bool __fastcall ServantCommentAddEntity__IsOpen(
       v26 = v24;
       if ( !CondType_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-      return CondType__IsOpen_37324144(v18, v23, v26, v25, 0LL);
+      return CondType__IsOpen_37328508(v18, v23, v26, v25, 0LL);
     }
     else
     {

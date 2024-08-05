@@ -10,15 +10,15 @@ void __fastcall SupportSelectListViewItem___ctor(
   int32_t v10; // w2
   int32_t v11; // w3
 
-  ListViewItem___ctor_40370988((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_40375592((ListViewItem_o *)this, index, 0LL);
   this->fields.supportServantData = supportServantData;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields.supportServantData,
     (int32_t)supportServantData,
     v8,
     v9);
   this->fields.eventFriendPoints = friendPointCampaigns;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields.eventFriendPoints,
     (int32_t)friendPointCampaigns,
     v10,
@@ -34,7 +34,7 @@ void __fastcall SupportSelectListViewItem__ResetEventCampaign(
   int32_t v3; // w3
 
   this->fields.eventFriendPoints = friendPointCampaigns;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields.eventFriendPoints,
     (int32_t)friendPointCampaigns,
     (int32_t)method,
@@ -50,7 +50,7 @@ System_String_o *__fastcall SupportSelectListViewItem__get_DeckName(
 
   supportServantData = this->fields.supportServantData;
   if ( !supportServantData )
-    sub_1B64324(this);
+    sub_1B64ACC(this, method);
   return supportServantData->fields._deckName_k__BackingField;
 }
 
@@ -71,7 +71,7 @@ void __fastcall SupportSelectListViewItem__set_listObj(
   int32_t v3; // w3
 
   this->fields._listObj_k__BackingField = value;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._listObj_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -86,21 +86,22 @@ void __fastcall SupportSelectListViewItem__setuplistObj(
 {
   int32_t v3; // w3
   SupportSelectListViewObject_o **p_listObj_k__BackingField; // x20
-  const MethodInfo *v6; // x4
+  __int64 v6; // x1
+  const MethodInfo *v7; // x4
 
   this->fields._listObj_k__BackingField = obj;
   p_listObj_k__BackingField = &this->fields._listObj_k__BackingField;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._listObj_k__BackingField,
     (int32_t)obj,
     (int32_t)method,
     v3);
   if ( !*p_listObj_k__BackingField )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, v6);
   SupportSelectListViewObject__Init(
     *p_listObj_k__BackingField,
     this->fields.supportServantData,
     this->fields.eventFriendPoints,
     this->fields.index,
-    v6);
+    v7);
 }

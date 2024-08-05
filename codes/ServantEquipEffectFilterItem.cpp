@@ -2,10 +2,10 @@ void __fastcall ServantEquipEffectFilterItem___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_49F775D & 1) == 0 )
+  if ( (byte_49F984D & 1) == 0 )
   {
-    sub_1B640C8(&ServantEquipEffectFilterItem_TypeInfo, v1);
-    byte_49F775D = 1;
+    sub_1B64870(&ServantEquipEffectFilterItem_TypeInfo, v1);
+    byte_49F984D = 1;
   }
   ServantEquipEffectFilterItem_TypeInfo->static_fields->LABEL_MAX_WIDTH = 160;
 }
@@ -26,38 +26,39 @@ void __fastcall ServantEquipEffectFilterItem__Init(
         const MethodInfo *method)
 {
   UILabel_o *titleLabel; // x0
-  struct FunctionCategoryEntity_o *v12; // x8
-  UILabel_o *v13; // x23
-  const MethodInfo *v14; // x1
+  __int64 v12; // x1
+  struct FunctionCategoryEntity_o *v13; // x8
+  UILabel_o *v14; // x23
+  const MethodInfo *v15; // x1
 
-  if ( (byte_49F775C & 1) == 0 )
+  if ( (byte_49F984C & 1) == 0 )
   {
-    sub_1B640C8(&ServantEquipEffectFilterItem_TypeInfo, entity);
-    byte_49F775C = 1;
+    sub_1B64870(&ServantEquipEffectFilterItem_TypeInfo, entity);
+    byte_49F984C = 1;
   }
   this->fields.entity = entity;
-  titleLabel = (UILabel_o *)sub_1B6406C(&this->fields.entity);
-  v12 = this->fields.entity;
-  if ( !v12 )
+  titleLabel = (UILabel_o *)sub_1B64814(&this->fields.entity);
+  v13 = this->fields.entity;
+  if ( !v13 )
     goto LABEL_9;
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_9;
-  UILabel__set_text(titleLabel, v12->fields.name, 0LL);
+  UILabel__set_text(titleLabel, v13->fields.name, 0LL);
   titleLabel = (UILabel_o *)ServantEquipEffectFilterItem_TypeInfo;
-  v13 = this->fields.titleLabel;
+  v14 = this->fields.titleLabel;
   if ( !ServantEquipEffectFilterItem_TypeInfo->_2.cctor_finished )
     titleLabel = (UILabel_o *)j_il2cpp_runtime_class_init_0(ServantEquipEffectFilterItem_TypeInfo);
-  if ( !v13 )
+  if ( !v14 )
 LABEL_9:
-    sub_1B64324(titleLabel);
-  UILabel__SetCondensedScale(v13, ServantEquipEffectFilterItem_TypeInfo->static_fields->LABEL_MAX_WIDTH, 0LL);
+    sub_1B64ACC(titleLabel, v12);
+  UILabel__SetCondensedScale(v14, ServantEquipEffectFilterItem_TypeInfo->static_fields->LABEL_MAX_WIDTH, 0LL);
   this->fields.isSelected = isSelected;
   this->fields.sort = sort;
-  sub_1B6406C(&this->fields.sort);
+  sub_1B64814(&this->fields.sort);
   this->fields.onClickEvent = onClickEvent;
-  sub_1B6406C(&this->fields.onClickEvent);
-  ServantEquipEffectFilterItem__SetCheckMark(this, v14);
+  sub_1B64814(&this->fields.onClickEvent);
+  ServantEquipEffectFilterItem__SetCheckMark(this, v15);
 }
 
 
@@ -102,7 +103,7 @@ void __fastcall ServantEquipEffectFilterItem__SetCheckMark(
   if ( !checkMarkSprite
     || (checkMarkSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(checkMarkSprite, 0LL)) == 0LL )
   {
-    sub_1B64324(checkMarkSprite);
+    sub_1B64ACC(checkMarkSprite, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)checkMarkSprite, this->fields.isSelected, 0LL);
 }
@@ -117,7 +118,7 @@ void __fastcall ServantEquipEffectFilterItem__SetEnableFilterButton(
 
   button = this->fields.button;
   if ( !button )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, isEnable);
   UICommonButton__SetButtonEnableWithCollider(button, isEnable, 0LL);
 }
 
@@ -129,12 +130,13 @@ void __fastcall ServantEquipEffectFilterItem__SetSelectState(
         const MethodInfo *method)
 {
   ListViewSort_o *sort; // x0
+  __int64 v5; // x1
   struct FunctionCategoryEntity_o *entity; // x8
 
   this->fields.isSelected = isSelected;
   ServantEquipEffectFilterItem__SetCheckMark(this, (const MethodInfo *)isSelected);
   entity = this->fields.entity;
   if ( !entity || (sort = this->fields.sort) == 0LL )
-    sub_1B64324(sort);
-  ListViewSort__SetSvtEquipEffectFilter_40454872(sort, entity->fields.id, this->fields.isSelected, 0LL);
+    sub_1B64ACC(sort, v5);
+  ListViewSort__SetSvtEquipEffectFilter_40460004(sort, entity->fields.id, this->fields.isSelected, 0LL);
 }

@@ -1,18 +1,17 @@
 AssumedBattleAssetSearcherForWave_o *__fastcall AssumedBattleAssetSearcherForWave__Create(const MethodInfo *method)
 {
   __int64 v1; // x1
-  __int64 v2; // x2
-  AssumedBattleAssetSearcherBase_o *v3; // x19
-  const MethodInfo *v4; // x1
+  AssumedBattleAssetSearcherBase_o *v2; // x19
+  const MethodInfo *v3; // x1
 
-  if ( (byte_49FE46A & 1) == 0 )
+  if ( (byte_4A00565 & 1) == 0 )
   {
-    sub_1B640C8(&AssumedBattleAssetSearcherForWave_TypeInfo, v1);
-    byte_49FE46A = 1;
+    sub_1B64870(&AssumedBattleAssetSearcherForWave_TypeInfo, v1);
+    byte_4A00565 = 1;
   }
-  v3 = (AssumedBattleAssetSearcherBase_o *)sub_1B64314(AssumedBattleAssetSearcherForWave_TypeInfo, v1, v2);
-  AssumedBattleAssetSearcherBase___ctor(v3, v4);
-  return (AssumedBattleAssetSearcherForWave_o *)v3;
+  v2 = (AssumedBattleAssetSearcherBase_o *)sub_1B64ABC(AssumedBattleAssetSearcherForWave_TypeInfo);
+  AssumedBattleAssetSearcherBase___ctor(v2, v3);
+  return (AssumedBattleAssetSearcherForWave_o *)v2;
 }
 
 
@@ -24,33 +23,28 @@ AssumedBattleAssetLoadManager_AnalyzedResultParam_o *__fastcall AssumedBattleAss
   struct AssumedBattleAssetLoadManager_o *manager; // x8
   struct BattlePerformance_o *Perf_k__BackingField; // x8
   StageEntity_o *StageEntity; // x19
-  __int64 v6; // x1
-  __int64 v7; // x2
-  AssumedBattleAssetLoadManager_AnalyzedResultParam_o *v8; // x20
-  const MethodInfo *v9; // x1
-  const MethodInfo *v10; // x2
+  AssumedBattleAssetLoadManager_AnalyzedResultParam_o *v6; // x20
+  const MethodInfo *v7; // x1
+  const MethodInfo *v8; // x2
 
   v2 = this;
-  if ( (byte_49FE469 & 1) == 0 )
+  if ( (byte_4A00564 & 1) == 0 )
   {
-    this = (AssumedBattleAssetSearcherForWave_o *)sub_1B640C8(
+    this = (AssumedBattleAssetSearcherForWave_o *)sub_1B64870(
                                                     &AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo,
                                                     method);
-    byte_49FE469 = 1;
+    byte_4A00564 = 1;
   }
   manager = v2->fields.manager;
   if ( !manager
     || (Perf_k__BackingField = manager->fields._Perf_k__BackingField) == 0LL
     || (this = (AssumedBattleAssetSearcherForWave_o *)Perf_k__BackingField->fields.data) == 0LL )
   {
-    sub_1B64324(this);
+    sub_1B64ACC(this, method);
   }
   StageEntity = BattleData__getStageEntity((BattleData_o *)this, 0LL);
-  v8 = (AssumedBattleAssetLoadManager_AnalyzedResultParam_o *)sub_1B64314(
-                                                                AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo,
-                                                                v6,
-                                                                v7);
-  AssumedBattleAssetLoadManager_AnalyzedResultParam___ctor(v8, v9);
-  AssumedEffectExtractLogic__FromStage(StageEntity, v8, v10);
-  return v8;
+  v6 = (AssumedBattleAssetLoadManager_AnalyzedResultParam_o *)sub_1B64ABC(AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo);
+  AssumedBattleAssetLoadManager_AnalyzedResultParam___ctor(v6, v7);
+  AssumedEffectExtractLogic__FromStage(StageEntity, v6, v8);
+  return v6;
 }

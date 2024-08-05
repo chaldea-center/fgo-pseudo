@@ -3,14 +3,14 @@ void __fastcall MyRoomRootComponent___cctor(const MethodInfo *method)
   __int64 v1; // x1
   __int64 v2; // x1
 
-  if ( (byte_49F7DB4 & 1) == 0 )
+  if ( (byte_49F9EA4 & 1) == 0 )
   {
-    sub_1B640C8(&MyRoomRootComponent_TypeInfo, v1);
-    sub_1B640C8(&StringLiteral_8123/*"JumpNewMaterial"*/, v2);
-    byte_49F7DB4 = 1;
+    sub_1B64870(&MyRoomRootComponent_TypeInfo, v1);
+    sub_1B64870(&StringLiteral_8124/*"JumpNewMaterial"*/, v2);
+    byte_49F9EA4 = 1;
   }
-  MyRoomRootComponent_TypeInfo->static_fields->MYROOM_STATE_NEW_MATERIAL = (struct System_String_o *)StringLiteral_8123/*"JumpNewMaterial"*/;
-  sub_1B6406C(MyRoomRootComponent_TypeInfo->static_fields);
+  MyRoomRootComponent_TypeInfo->static_fields->MYROOM_STATE_NEW_MATERIAL = (struct System_String_o *)StringLiteral_8124/*"JumpNewMaterial"*/;
+  sub_1B64814(MyRoomRootComponent_TypeInfo->static_fields);
 }
 
 
@@ -25,13 +25,14 @@ void __fastcall MyRoomRootComponent__beginFinish(MyRoomRootComponent_o *this, co
   __int64 v3; // x1
   UnityEngine_Object_o *myRoomControl; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  MyRoomControl_o *v6; // x19
+  __int64 v6; // x1
+  MyRoomControl_o *v7; // x19
 
-  if ( (byte_49F7DB3 & 1) == 0 )
+  if ( (byte_49F9EA3 & 1) == 0 )
   {
-    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponent_MyRoomControl___, method);
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, v3);
-    byte_49F7DB3 = 1;
+    sub_1B64870(&Method_UnityEngine_GameObject_GetComponent_MyRoomControl___, method);
+    sub_1B64870(&UnityEngine_Object_TypeInfo, v3);
+    byte_49F9EA3 = 1;
   }
   myRoomControl = (UnityEngine_Object_o *)this->fields.myRoomControl;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -39,7 +40,7 @@ void __fastcall MyRoomRootComponent__beginFinish(MyRoomRootComponent_o *this, co
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(myRoomControl, 0LL, 0LL);
   if ( ((unsigned __int8)gameObject & 1) != 0 )
   {
-    v6 = this->fields.myRoomControl;
+    v7 = this->fields.myRoomControl;
   }
   else
   {
@@ -48,34 +49,35 @@ void __fastcall MyRoomRootComponent__beginFinish(MyRoomRootComponent_o *this, co
       goto LABEL_11;
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                gameObject,
-                                               (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_MyRoomControl___);
-    v6 = (MyRoomControl_o *)gameObject;
+                                               (const MethodInfo_2E8A1B4 *)Method_UnityEngine_GameObject_GetComponent_MyRoomControl___);
+    v7 = (MyRoomControl_o *)gameObject;
   }
-  if ( !v6 )
+  if ( !v7 )
 LABEL_11:
-    sub_1B64324(gameObject);
-  MyRoomControl__quit(v6, 0LL);
-  MyRoomControl__hideSerialCode(v6, 0LL);
-  MyRoomControl__hideContinueDevice(v6, 0LL);
-  MyRoomControl__hideMaterialCollection(v6, 0LL);
-  MyRoomControl__hideSoundPlayerMenu(v6, 0LL);
+    sub_1B64ACC(gameObject, v6);
+  MyRoomControl__quit(v7, 0LL);
+  MyRoomControl__hideSerialCode(v7, 0LL);
+  MyRoomControl__hideContinueDevice(v7, 0LL);
+  MyRoomControl__hideMaterialCollection(v7, 0LL);
+  MyRoomControl__hideSoundPlayerMenu(v7, 0LL);
 }
 
 
 void __fastcall MyRoomRootComponent__beginInitialize(MyRoomRootComponent_o *this, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
+  __int64 v4; // x1
 
-  if ( (byte_49F7DB0 & 1) == 0 )
+  if ( (byte_49F9EA0 & 1) == 0 )
   {
-    sub_1B640C8(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
-    byte_49F7DB0 = 1;
+    sub_1B64870(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
+    byte_49F9EA0 = 1;
   }
   SceneRootComponent__beginInitialize((SceneRootComponent_o *)this, 0LL);
   SceneRootComponent__setMainMenuBar((SceneRootComponent_o *)this, 8, 35, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, v4);
   AvalonSceneManager__endInitialize((AvalonSceneManager_o *)Instance, (SceneRootComponent_o *)this, 0LL);
 }
 
@@ -95,11 +97,11 @@ void __fastcall MyRoomRootComponent__beginResume(
   Il2CppClass *parent; // x8
 
   v4 = (SceneRootComponent_o *)this;
-  if ( (byte_49F7DB2 & 1) == 0 )
+  if ( (byte_49F9EA2 & 1) == 0 )
   {
-    sub_1B640C8(&BattleSetupInfo_TypeInfo, data);
-    this = (MyRoomRootComponent_o *)sub_1B640C8(&StringLiteral_11058/*"RETURN_BLACKLIST"*/, v5);
-    byte_49F7DB2 = 1;
+    sub_1B64870(&BattleSetupInfo_TypeInfo, data);
+    this = (MyRoomRootComponent_o *)sub_1B64870(&StringLiteral_11061/*"RETURN_BLACKLIST"*/, v5);
+    byte_49F9EA2 = 1;
   }
   klass = v4[1].klass;
   if ( !klass )
@@ -121,7 +123,7 @@ void __fastcall MyRoomRootComponent__beginResume(
     p_field_count = &klass->_2.field_count;
     *(_QWORD *)&klass->_2.field_count = 0LL;
   }
-  this = (MyRoomRootComponent_o *)sub_1B6406C(p_field_count);
+  this = (MyRoomRootComponent_o *)sub_1B64814(p_field_count);
   v10 = v4[1].klass;
   if ( !v10 )
     goto LABEL_20;
@@ -136,14 +138,14 @@ LABEL_18:
   parent = v10->_1.parent;
   if ( !parent )
 LABEL_20:
-    sub_1B64324(this);
+    sub_1B64ACC(this, data);
   if ( parent->_2.static_fields_size == 1 )
   {
     SceneRootComponent__beginFinish(v4, 0LL);
-    SceneRootComponent__sendMessage(v4, (System_String_o *)StringLiteral_11058/*"RETURN_BLACKLIST"*/, 0LL);
+    SceneRootComponent__sendMessage(v4, (System_String_o *)StringLiteral_11061/*"RETURN_BLACKLIST"*/, 0LL);
     goto LABEL_18;
   }
-  SceneRootComponent__beginResume_38276972(v4, 0LL);
+  SceneRootComponent__beginResume_38281336(v4, 0LL);
 }
 
 
@@ -157,14 +159,15 @@ void __fastcall MyRoomRootComponent__beginStartUp(
   __int64 methodPtr_low; // x10
   UnityEngine_Object_o *myRoomControl; // x21
   MyRoomControl_o *v8; // x0
-  struct MyRoomControl_o *v9; // x8
+  __int64 v9; // x1
+  struct MyRoomControl_o *v10; // x8
 
   v3 = data;
-  if ( (byte_49F7DB1 & 1) == 0 )
+  if ( (byte_49F9EA1 & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, data);
-    sub_1B640C8(&SceneJumpInfo_TypeInfo, v5);
-    byte_49F7DB1 = 1;
+    sub_1B64870(&UnityEngine_Object_TypeInfo, data);
+    sub_1B64870(&SceneJumpInfo_TypeInfo, v5);
+    byte_49F9EA1 = 1;
   }
   MainMenuBar__setMenuActive(1, 0LL, 0LL);
   if ( v3 )
@@ -186,13 +189,13 @@ void __fastcall MyRoomRootComponent__beginStartUp(
   v8 = (MyRoomControl_o *)UnityEngine_Object__op_Inequality(myRoomControl, 0LL, 0LL);
   if ( ((unsigned __int8)v8 & 1) != 0 )
   {
-    v9 = this->fields.myRoomControl;
-    if ( !v9
-      || (v9->fields.sceneJumpInfo = (struct SceneJumpInfo_o *)v3,
-          sub_1B6406C(&v9->fields.sceneJumpInfo),
+    v10 = this->fields.myRoomControl;
+    if ( !v10
+      || (v10->fields.sceneJumpInfo = (struct SceneJumpInfo_o *)v3,
+          sub_1B64814(&v10->fields.sceneJumpInfo),
           (v8 = this->fields.myRoomControl) == 0LL) )
     {
-      sub_1B64324(v8);
+      sub_1B64ACC(v8, v9);
     }
     MyRoomControl__startUp(v8, 0LL);
   }

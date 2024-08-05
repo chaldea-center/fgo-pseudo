@@ -10,35 +10,31 @@ void __fastcall AttacheBattleMovieShader__OnEnable(AttacheBattleMovieShader_o *t
   __int64 v4; // x1
   Il2CppObject *Component_object; // x0
   __int64 v6; // x1
-  __int64 v7; // x2
   char *monitor; // x19
-  CriMana_Player_ShaderDispatchCallback_o *v9; // x20
-  int32_t v10; // w2
-  int32_t v11; // w3
+  CriMana_Player_ShaderDispatchCallback_o *v8; // x20
+  int32_t v9; // w2
+  int32_t v10; // w3
 
-  if ( (byte_49FE495 & 1) == 0 )
+  if ( (byte_4A00590 & 1) == 0 )
   {
-    sub_1B640C8(&Method_AttacheBattleMovieShader_ShaderDispatch__, method);
-    sub_1B640C8(&Method_UnityEngine_Component_GetComponent_CriManaMovieController___, v3);
-    sub_1B640C8(&CriMana_Player_ShaderDispatchCallback_TypeInfo, v4);
-    byte_49FE495 = 1;
+    sub_1B64870(&Method_AttacheBattleMovieShader_ShaderDispatch__, method);
+    sub_1B64870(&Method_UnityEngine_Component_GetComponent_CriManaMovieController___, v3);
+    sub_1B64870(&CriMana_Player_ShaderDispatchCallback_TypeInfo, v4);
+    byte_4A00590 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2E2FE90 *)Method_UnityEngine_Component_GetComponent_CriManaMovieController___);
+                       (const MethodInfo_2E3216C *)Method_UnityEngine_Component_GetComponent_CriManaMovieController___);
   if ( !Component_object
     || (monitor = (char *)Component_object[3].monitor,
-        v9 = (CriMana_Player_ShaderDispatchCallback_o *)sub_1B64314(
-                                                          CriMana_Player_ShaderDispatchCallback_TypeInfo,
-                                                          v6,
-                                                          v7),
-        CriMana_Player_ShaderDispatchCallback___ctor(v9, 0LL, Method_AttacheBattleMovieShader_ShaderDispatch__, 0LL),
+        v8 = (CriMana_Player_ShaderDispatchCallback_o *)sub_1B64ABC(CriMana_Player_ShaderDispatchCallback_TypeInfo),
+        CriMana_Player_ShaderDispatchCallback___ctor(v8, 0LL, Method_AttacheBattleMovieShader_ShaderDispatch__, 0LL),
         !monitor) )
   {
-    sub_1B64324(Component_object);
+    sub_1B64ACC(Component_object, v6);
   }
-  *((_QWORD *)monitor + 13) = v9;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)(monitor + 104), (int32_t)v9, v10, v11);
+  *((_QWORD *)monitor + 13) = v8;
+  sub_1B64814((ServantStatusBattleListViewItem_o *)(monitor + 104), (int32_t)v8, v9, v10);
 }
 
 
@@ -52,12 +48,12 @@ UnityEngine_Shader_o *__fastcall AttacheBattleMovieShader__ShaderDispatch(
   __int64 v4; // x1
   UnityEngine_Shader_o *v5; // x19
 
-  if ( (byte_49FE496 & 1) == 0 )
+  if ( (byte_4A00591 & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, additiveMode);
-    sub_1B640C8(&StringLiteral_4925/*"Custom/BattleMovieAndroidH264Rgb"*/, v3);
-    sub_1B640C8(&StringLiteral_4889/*"CriMana/SofdecPrimeYuv"*/, v4);
-    byte_49FE496 = 1;
+    sub_1B64870(&UnityEngine_Object_TypeInfo, additiveMode);
+    sub_1B64870(&StringLiteral_4925/*"Custom/BattleMovieAndroidH264Rgb"*/, v3);
+    sub_1B64870(&StringLiteral_4889/*"CriMana/SofdecPrimeYuv"*/, v4);
+    byte_4A00591 = 1;
   }
   v5 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4925/*"Custom/BattleMovieAndroidH264Rgb"*/, 0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )

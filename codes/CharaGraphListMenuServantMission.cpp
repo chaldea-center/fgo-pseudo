@@ -15,30 +15,31 @@ CharaGraphListViewPatternBase_o *__fastcall CharaGraphListMenuServantMission__Cr
 {
   __int64 v6; // x21
   CharaGraphSortOwnerBase_o *v7; // x0
-  int32_t v8; // w2
-  int32_t v9; // w3
+  __int64 v8; // x1
+  int32_t v9; // w2
+  int32_t v10; // w3
   struct CharaGraphSortOwnerBase_o *SortOwner_k__BackingField; // x1
   struct CharaGraphDefine_CharaGraphRootInfo_o *RootInfo_k__BackingField; // x1
-  int32_t v12; // w2
-  int32_t v13; // w3
+  int32_t v13; // w2
+  int32_t v14; // w3
 
-  if ( (byte_49F8889 & 1) == 0 )
+  if ( (byte_49FA978 & 1) == 0 )
   {
-    sub_1B640C8(&CharaGraphListViewPatternServantMission_TypeInfo, *(_QWORD *)&kind);
-    byte_49F8889 = 1;
+    sub_1B64870(&CharaGraphListViewPatternServantMission_TypeInfo, *(_QWORD *)&kind);
+    byte_49FA978 = 1;
   }
-  v6 = sub_1B64314(CharaGraphListViewPatternServantMission_TypeInfo, *(_QWORD *)&kind, setupInfo);
+  v6 = sub_1B64ABC(CharaGraphListViewPatternServantMission_TypeInfo);
   CharaGraphListViewPatternServantCollection___ctor((CharaGraphListViewPatternServantCollection_o *)v6, 0LL);
   if ( !v6
     || (SortOwner_k__BackingField = this->fields._SortOwner_k__BackingField,
         *(_QWORD *)(v6 + 16) = SortOwner_k__BackingField,
-        sub_1B6406C((ServantStatusBattleListViewItem_o *)(v6 + 16), (int32_t)SortOwner_k__BackingField, v8, v9),
+        sub_1B64814((ServantStatusBattleListViewItem_o *)(v6 + 16), (int32_t)SortOwner_k__BackingField, v9, v10),
         RootInfo_k__BackingField = this->fields._RootInfo_k__BackingField,
         *(_QWORD *)(v6 + 24) = RootInfo_k__BackingField,
-        sub_1B6406C((ServantStatusBattleListViewItem_o *)(v6 + 24), (int32_t)RootInfo_k__BackingField, v12, v13),
+        sub_1B64814((ServantStatusBattleListViewItem_o *)(v6 + 24), (int32_t)RootInfo_k__BackingField, v13, v14),
         (v7 = this->fields._SortOwner_k__BackingField) == 0LL) )
   {
-    sub_1B64324(v7);
+    sub_1B64ACC(v7, v8);
   }
   CharaGraphSortOwnerBase__SwitchCurrentViewSortUnit(v7, kind, 0LL);
   return (CharaGraphListViewPatternBase_o *)v6;

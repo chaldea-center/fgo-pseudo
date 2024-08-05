@@ -6,26 +6,26 @@ void __fastcall DropInfo___ctor(DropInfo_o *this, const MethodInfo *method)
 
 DropInfo_SaveData_o *__fastcall DropInfo__GetSaveData(DropInfo_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x20
-  __int64 v5; // x0
+  __int64 v3; // x20
+  __int64 v4; // x0
+  __int64 v5; // x1
   DropInfo_SaveData_o *result; // x0
 
-  if ( (byte_49FBFAD & 1) == 0 )
+  if ( (byte_49FE0A5 & 1) == 0 )
   {
-    sub_1B640C8(&DropInfo_SaveData_TypeInfo, method);
-    byte_49FBFAD = 1;
+    sub_1B64870(&DropInfo_SaveData_TypeInfo, method);
+    byte_49FE0A5 = 1;
   }
-  v4 = sub_1B64314(DropInfo_SaveData_TypeInfo, method, v2);
-  System_Object___ctor((Il2CppObject *)v4, 0LL);
-  if ( !v4 )
-    sub_1B64324(v5);
-  result = (DropInfo_SaveData_o *)v4;
-  *(_OWORD *)(v4 + 16) = *(_OWORD *)&this->fields.type;
-  *(_QWORD *)(v4 + 32) = *(_QWORD *)&this->fields.lv;
-  *(_BYTE *)(v4 + 40) = this->fields.isRateUp;
-  *(_QWORD *)(v4 + 44) = *(_QWORD *)&this->fields.originalNum;
-  *(_BYTE *)(v4 + 52) = this->fields.isAdd;
+  v3 = sub_1B64ABC(DropInfo_SaveData_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v3, 0LL);
+  if ( !v3 )
+    sub_1B64ACC(v4, v5);
+  result = (DropInfo_SaveData_o *)v3;
+  *(_OWORD *)(v3 + 16) = *(_OWORD *)&this->fields.type;
+  *(_QWORD *)(v3 + 32) = *(_QWORD *)&this->fields.lv;
+  *(_BYTE *)(v3 + 40) = this->fields.isRateUp;
+  *(_QWORD *)(v3 + 44) = *(_QWORD *)&this->fields.originalNum;
+  *(_BYTE *)(v3 + 52) = this->fields.isAdd;
   return result;
 }
 
@@ -36,7 +36,7 @@ void __fastcall DropInfo__SetDataFromSaveData(
         const MethodInfo *method)
 {
   if ( !saveData )
-    sub_1B64324(this);
+    sub_1B64ACC(this, 0LL);
   *(_OWORD *)&this->fields.type = *(_OWORD *)&saveData->fields.type;
   *(_QWORD *)&this->fields.lv = *(_QWORD *)&saveData->fields.lv;
   this->fields.isRateUp = saveData->fields.isRateUp;
@@ -47,13 +47,13 @@ void __fastcall DropInfo__SetDataFromSaveData(
 
 bool __fastcall DropInfo__isItem(DropInfo_o *this, const MethodInfo *method)
 {
-  return Gift__IsItem_37376280(this->fields.type, 0LL);
+  return Gift__IsItem_37380644(this->fields.type, 0LL);
 }
 
 
 bool __fastcall DropInfo__isServant(DropInfo_o *this, const MethodInfo *method)
 {
-  return Gift__IsServant_37376332(this->fields.type, 0LL);
+  return Gift__IsServant_37380696(this->fields.type, 0LL);
 }
 
 

@@ -1,13 +1,13 @@
 void __fastcall AiBaseEntity___ctor(AiBaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FC041 & 1) == 0 )
+  if ( (byte_49FE139 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataEntityBase_string___ctor__, method);
-    byte_49FC041 = 1;
+    sub_1B64870(&Method_DataEntityBase_string___ctor__, method);
+    byte_49FE139 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30D3D1C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D5FF8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -15,10 +15,10 @@ int32_t __fastcall AiBaseEntity__ChangeNpCountPlayer(AiBaseEntity_o *this, const
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_49FC03C & 1) == 0 )
+  if ( (byte_49FE134 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_4387/*"ChangeNpCountPlayer"*/, method);
-    byte_49FC03C = 1;
+    sub_1B64870(&StringLiteral_4387/*"ChangeNpCountPlayer"*/, method);
+    byte_49FE134 = 1;
   }
   return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_4387/*"ChangeNpCountPlayer"*/, 0, v2);
 }
@@ -27,15 +27,15 @@ int32_t __fastcall AiBaseEntity__ChangeNpCountPlayer(AiBaseEntity_o *this, const
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall AiBaseEntity__CreatePK(int32_t id, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_49FC033 & 1) == 0 )
+  if ( (byte_49FE12B & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&idx);
-    byte_49FC033 = 1;
+    sub_1B64870(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&idx);
+    byte_49FE12B = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            idx,
-           (const MethodInfo_2E37610 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2E398EC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -52,12 +52,12 @@ int32_t __fastcall AiBaseEntity__GetActSelectIndex(AiBaseEntity_o *this, int32_t
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_49FC03D & 1) == 0 )
+  if ( (byte_49FE135 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_2210/*"ActSelectIndex"*/, *(_QWORD *)&defIndex);
-    byte_49FC03D = 1;
+    sub_1B64870(&StringLiteral_2209/*"ActSelectIndex"*/, *(_QWORD *)&defIndex);
+    byte_49FE135 = 1;
   }
-  return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_2210/*"ActSelectIndex"*/, defIndex, v3);
+  return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_2209/*"ActSelectIndex"*/, defIndex, v3);
 }
 
 
@@ -68,12 +68,12 @@ bool __fastcall AiBaseEntity__IsDeadToEnableUpHate(AiBaseEntity_o *this, bool de
   int32_t ScriptIntParam; // w0
   bool v7; // w8
 
-  if ( (byte_49FC03E & 1) == 0 )
+  if ( (byte_49FE136 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_20703/*"isDeadToEnableUpHate"*/, def);
-    byte_49FC03E = 1;
+    sub_1B64870(&StringLiteral_20706/*"isDeadToEnableUpHate"*/, def);
+    byte_49FE136 = 1;
   }
-  ScriptIntParam = AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_20703/*"isDeadToEnableUpHate"*/, -1, v3);
+  ScriptIntParam = AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_20706/*"isDeadToEnableUpHate"*/, -1, v3);
   v7 = ScriptIntParam == 1;
   if ( ScriptIntParam == -1 )
     return def;
@@ -85,10 +85,10 @@ bool __fastcall AiBaseEntity__IsForcedActionSpeedAnyTime(AiBaseEntity_o *this, c
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_49FC039 & 1) == 0 )
+  if ( (byte_49FE131 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_6753/*"ForcedActionSpeedAnyTime"*/, method);
-    byte_49FC039 = 1;
+    sub_1B64870(&StringLiteral_6753/*"ForcedActionSpeedAnyTime"*/, method);
+    byte_49FE131 = 1;
   }
   return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_6753/*"ForcedActionSpeedAnyTime"*/, -1, v2) == 1;
 }
@@ -98,10 +98,10 @@ bool __fastcall AiBaseEntity__IsForcedStepInSpeedAnyTime(AiBaseEntity_o *this, c
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_49FC03A & 1) == 0 )
+  if ( (byte_49FE132 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_6756/*"ForcedStepInSpeedAnyTime"*/, method);
-    byte_49FC03A = 1;
+    sub_1B64870(&StringLiteral_6756/*"ForcedStepInSpeedAnyTime"*/, method);
+    byte_49FE132 = 1;
   }
   return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_6756/*"ForcedStepInSpeedAnyTime"*/, -1, v2) > 0;
 }
@@ -111,12 +111,12 @@ bool __fastcall AiBaseEntity__IsIncludeUnsubState(AiBaseEntity_o *this, const Me
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_49FC038 & 1) == 0 )
+  if ( (byte_49FE130 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_20533/*"includeUnsubState"*/, method);
-    byte_49FC038 = 1;
+    sub_1B64870(&StringLiteral_20536/*"includeUnsubState"*/, method);
+    byte_49FE130 = 1;
   }
-  return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_20533/*"includeUnsubState"*/, -1, v2) != -1;
+  return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_20536/*"includeUnsubState"*/, -1, v2) != -1;
 }
 
 
@@ -124,12 +124,12 @@ bool __fastcall AiBaseEntity__IsResetNpCountPlayer(AiBaseEntity_o *this, const M
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_49FC03B & 1) == 0 )
+  if ( (byte_49FE133 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_11280/*"ResetNpCountPlayer"*/, method);
-    byte_49FC03B = 1;
+    sub_1B64870(&StringLiteral_11283/*"ResetNpCountPlayer"*/, method);
+    byte_49FE133 = 1;
   }
-  return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_11280/*"ResetNpCountPlayer"*/, -1, v2) == 1;
+  return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_11283/*"ResetNpCountPlayer"*/, -1, v2) == 1;
 }
 
 
@@ -141,12 +141,12 @@ bool __fastcall AiBaseEntity__TryGetKeyBattleValue(AiBaseEntity_o *this, int32_t
   *key = 0;
   vals = this->fields.vals;
   if ( !vals )
-    sub_1B64324(this);
+    sub_1B64ACC(this, key);
   v4 = *(_QWORD *)&vals->max_length;
   if ( v4 )
   {
     if ( !(_DWORD)v4 )
-      sub_1B6432C(this, key);
+      sub_1B64AD4(this, key);
     *key = vals->m_Items[0];
   }
   return v4 != 0;
@@ -158,14 +158,14 @@ bool __fastcall AiBaseEntity__TryGetMultiIndividuality(
         System_Int32_array_array **resValues,
         const MethodInfo *method)
 {
-  if ( (byte_49FC03F & 1) == 0 )
+  if ( (byte_49FE137 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_7533/*"Individuality"*/, resValues);
-    byte_49FC03F = 1;
+    sub_1B64870(&StringLiteral_7534/*"Individuality"*/, resValues);
+    byte_49FE137 = 1;
   }
   return EntityScriptUtil__TryGet2DimensionalIntArray(
            this->fields.script,
-           (System_String_o *)StringLiteral_7533/*"Individuality"*/,
+           (System_String_o *)StringLiteral_7534/*"Individuality"*/,
            resValues,
            0LL);
 }
@@ -179,12 +179,12 @@ bool __fastcall AiBaseEntity__TryGetOverwriteBaseAiId(
   const MethodInfo *v3; // x3
   int32_t ScriptIntParam; // w0
 
-  if ( (byte_49FC040 & 1) == 0 )
+  if ( (byte_49FE138 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_17006/*"baseAiId"*/, baseAiId);
-    byte_49FC040 = 1;
+    sub_1B64870(&StringLiteral_17008/*"baseAiId"*/, baseAiId);
+    byte_49FE138 = 1;
   }
-  ScriptIntParam = AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_17006/*"baseAiId"*/, -1, v3);
+  ScriptIntParam = AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_17008/*"baseAiId"*/, -1, v3);
   *baseAiId = ScriptIntParam;
   return ScriptIntParam >= 0;
 }
@@ -206,14 +206,14 @@ System_Int32_array *__fastcall AiBaseEntity__getAvals(AiBaseEntity_o *this, cons
 {
   System_Int32_array *result; // x0
 
-  if ( (byte_49FC035 & 1) == 0 )
+  if ( (byte_49FE12D & 1) == 0 )
   {
-    sub_1B640C8(&int___TypeInfo, method);
-    byte_49FC035 = 1;
+    sub_1B64870(&int___TypeInfo, method);
+    byte_49FE12D = 1;
   }
   result = this->fields.avals;
   if ( !result )
-    return (System_Int32_array *)sub_1B64170(int___TypeInfo, 0LL);
+    return (System_Int32_array *)sub_1B64918(int___TypeInfo, 0LL);
   return result;
 }
 
@@ -243,7 +243,7 @@ int32_t __fastcall AiBaseEntity__getIndexAval(AiBaseEntity_o *this, int32_t inde
   if ( max_length <= index )
     return 0;
   if ( max_length <= (unsigned int)index )
-    sub_1B6432C(this, *(_QWORD *)&index);
+    sub_1B64AD4(this, *(_QWORD *)&index);
   return avals->m_Items[index + 1];
 }
 
@@ -264,17 +264,17 @@ int32_t __fastcall AiBaseEntity__getScriptIntParam(
   const MethodInfo *v13; // x2
 
   v4 = defVal;
-  if ( (byte_49FC036 & 1) == 0 )
+  if ( (byte_49FE12E & 1) == 0 )
   {
-    sub_1B640C8(&long_TypeInfo, key);
-    byte_49FC036 = 1;
+    sub_1B64870(&long_TypeInfo, key);
+    byte_49FE12E = 1;
   }
   ScriptObj = AiBaseEntity__getScriptObj(this, key, *(const MethodInfo **)&defVal);
   if ( !ScriptObj )
     return v4;
   if ( ScriptObj->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(ScriptObj, long_TypeInfo, v8, v9);
-  sub_1B645E4(ScriptObj);
+  sub_1B64D8C(ScriptObj);
   return (unsigned int)AiBaseEntity__getScriptObj(v11, v12, v13);
 }
 
@@ -287,10 +287,10 @@ Il2CppObject *__fastcall AiBaseEntity__getScriptObj(
   Il2CppObject *result; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_49FC037 & 1) == 0 )
+  if ( (byte_49FE12F & 1) == 0 )
   {
-    sub_1B640C8(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
-    byte_49FC037 = 1;
+    sub_1B64870(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
+    byte_49FE12F = 1;
   }
   result = (Il2CppObject *)this->fields.script;
   if ( result )
@@ -300,7 +300,7 @@ Il2CppObject *__fastcall AiBaseEntity__getScriptObj(
            (System_Collections_Generic_Dictionary_object__object__o *)result,
            (Il2CppObject *)key,
            &value,
-           (const MethodInfo_317AC04 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_317CEE0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
       return value;
     }
@@ -333,14 +333,14 @@ System_Int64_array *__fastcall AiBaseEntity__getVals(AiBaseEntity_o *this, const
 {
   System_Int64_array *result; // x0
 
-  if ( (byte_49FC034 & 1) == 0 )
+  if ( (byte_49FE12C & 1) == 0 )
   {
-    sub_1B640C8(&long___TypeInfo, method);
-    byte_49FC034 = 1;
+    sub_1B64870(&long___TypeInfo, method);
+    byte_49FE12C = 1;
   }
   result = this->fields.vals;
   if ( !result )
-    return (System_Int64_array *)sub_1B64170(long___TypeInfo, 0LL);
+    return (System_Int64_array *)sub_1B64918(long___TypeInfo, 0LL);
   return result;
 }
 

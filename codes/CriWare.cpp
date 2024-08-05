@@ -11,8 +11,8 @@ int32_t __fastcall CriWare_Common__CRIWARE0F286CE1(const MethodInfo *method)
   int v4; // [xsp+28h] [xbp-18h]
   char v5; // [xsp+2Ch] [xbp-14h]
 
-  v1 = (const MethodInfo *)qword_49F7198;
-  if ( !qword_49F7198 )
+  v1 = (const MethodInfo *)qword_49F9288;
+  if ( !qword_49F9288 )
   {
     v4 = 0;
     v3[0] = (__int64)"cri_ware_unity";
@@ -21,9 +21,9 @@ int32_t __fastcall CriWare_Common__CRIWARE0F286CE1(const MethodInfo *method)
     v3[3] = 15LL;
     v3[4] = 0x200000000LL;
     v5 = 0;
-    method = (const MethodInfo *)sub_1B646A4(v3);
+    method = (const MethodInfo *)sub_1B64E4C(v3);
     v1 = method;
-    qword_49F7198 = (__int64)method;
+    qword_49F9288 = (__int64)method;
   }
   return ((__int64 (__fastcall *)(const MethodInfo *))v1)(method);
 }
@@ -44,10 +44,10 @@ CriWare_Common_CpuUsage_o __fastcall CriWare_Common__GetAtomCpuUsage(const Metho
   float v4; // s2
   CriWare_Common_CpuUsage_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_49F7196 & 1) == 0 )
+  if ( (byte_49F9286 & 1) == 0 )
   {
-    sub_1B640C8(&CriAtomPlugin_TypeInfo, v1);
-    byte_49F7196 = 1;
+    sub_1B64870(&CriAtomPlugin_TypeInfo, v1);
+    byte_49F9286 = 1;
   }
   if ( !CriAtomPlugin_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CriAtomPlugin_TypeInfo);
@@ -63,10 +63,10 @@ uint32_t __fastcall CriWare_Common__GetAtomMemoryUsage(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_49F7194 & 1) == 0 )
+  if ( (byte_49F9284 & 1) == 0 )
   {
-    sub_1B640C8(&CriAtomPlugin_TypeInfo, v1);
-    byte_49F7194 = 1;
+    sub_1B64870(&CriAtomPlugin_TypeInfo, v1);
+    byte_49F9284 = 1;
   }
   if ( !CriAtomPlugin_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CriAtomPlugin_TypeInfo);
@@ -85,10 +85,10 @@ uint32_t __fastcall CriWare_Common__GetFsMemoryUsage(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_49F7193 & 1) == 0 )
+  if ( (byte_49F9283 & 1) == 0 )
   {
-    sub_1B640C8(&CriFsPlugin_TypeInfo, v1);
-    byte_49F7193 = 1;
+    sub_1B64870(&CriFsPlugin_TypeInfo, v1);
+    byte_49F9283 = 1;
   }
   if ( !CriFsPlugin_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CriFsPlugin_TypeInfo);
@@ -100,10 +100,10 @@ uint32_t __fastcall CriWare_Common__GetManaMemoryUsage(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_49F7195 & 1) == 0 )
+  if ( (byte_49F9285 & 1) == 0 )
   {
-    sub_1B640C8(&CriManaPlugin_TypeInfo, v1);
-    byte_49F7195 = 1;
+    sub_1B64870(&CriManaPlugin_TypeInfo, v1);
+    byte_49F9285 = 1;
   }
   if ( !CriManaPlugin_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CriManaPlugin_TypeInfo);
@@ -127,10 +127,10 @@ System_String_o *__fastcall CriWare_Common__GetScriptVersionString(const MethodI
 {
   __int64 v1; // x1
 
-  if ( (byte_49F7192 & 1) == 0 )
+  if ( (byte_49F9282 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_1270/*"1.01.04 (2.38.28h4-VolumeForCueInfo)"*/, v1);
-    byte_49F7192 = 1;
+    sub_1B64870(&StringLiteral_1270/*"1.01.04 (2.38.28h4-VolumeForCueInfo)"*/, v1);
+    byte_49F9282 = 1;
   }
   return (System_String_o *)StringLiteral_1270/*"1.01.04 (2.38.28h4-VolumeForCueInfo)"*/;
 }
@@ -138,28 +138,29 @@ System_String_o *__fastcall CriWare_Common__GetScriptVersionString(const MethodI
 
 bool __fastcall CriWare_Common__IsStreamingAssetsPath(System_String_o *path, const MethodInfo *method)
 {
-  _BOOL8 IsPathRooted_61641252; // x0
-  _BOOL4 v4; // w0
+  _BOOL8 IsPathRooted_61649432; // x0
+  __int64 v4; // x1
+  _BOOL4 v5; // w0
 
-  if ( (byte_49F7190 & 1) == 0 )
+  if ( (byte_49F9280 & 1) == 0 )
   {
-    sub_1B640C8(&System_IO_Path_TypeInfo, method);
-    byte_49F7190 = 1;
+    sub_1B64870(&System_IO_Path_TypeInfo, method);
+    byte_49F9280 = 1;
   }
   if ( !System_IO_Path_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_IO_Path_TypeInfo);
-  IsPathRooted_61641252 = System_IO_Path__IsPathRooted_61641252(path, 0LL);
-  if ( IsPathRooted_61641252 )
+  IsPathRooted_61649432 = System_IO_Path__IsPathRooted_61649432(path, 0LL);
+  if ( IsPathRooted_61649432 )
   {
-    LOBYTE(v4) = 0;
+    LOBYTE(v5) = 0;
   }
   else
   {
     if ( !path )
-      sub_1B64324(IsPathRooted_61641252);
+      sub_1B64ACC(IsPathRooted_61649432, v4);
     return (unsigned int)System_String__IndexOf(path, 0x3Au, 0LL) >> 31;
   }
-  return v4;
+  return v5;
 }
 
 
@@ -170,8 +171,8 @@ void __fastcall CriWare_Common__criWareUnity_SetRenderingEventOffsetForMana(int3
   int v5; // [xsp+28h] [xbp-28h]
   char v6; // [xsp+2Ch] [xbp-24h]
 
-  v2 = (void (__fastcall *)(_QWORD, const MethodInfo *))qword_49F71A0;
-  if ( !qword_49F71A0 )
+  v2 = (void (__fastcall *)(_QWORD, const MethodInfo *))qword_49F9290;
+  if ( !qword_49F9290 )
   {
     v4[0] = (__int64)"cri_ware_unity";
     v4[1] = 14LL;
@@ -180,8 +181,8 @@ void __fastcall CriWare_Common__criWareUnity_SetRenderingEventOffsetForMana(int3
     v5 = 4;
     v4[4] = 0x200000000LL;
     v6 = 0;
-    v2 = (void (__fastcall *)(_QWORD, const MethodInfo *))sub_1B646A4(v4);
-    qword_49F71A0 = (__int64)v2;
+    v2 = (void (__fastcall *)(_QWORD, const MethodInfo *))sub_1B64E4C(v4);
+    qword_49F9290 = (__int64)v2;
   }
   v2((unsigned int)offset, method);
 }
@@ -192,10 +193,10 @@ System_String_o *__fastcall CriWare_Common__get_installTargetPath(const MethodIn
   __int64 v1; // x1
   int32_t platform; // w19
 
-  if ( (byte_49F718F & 1) == 0 )
+  if ( (byte_49F927F & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Application_TypeInfo, v1);
-    byte_49F718F = 1;
+    sub_1B64870(&UnityEngine_Application_TypeInfo, v1);
+    byte_49F927F = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -218,19 +219,17 @@ UnityEngine_GameObject_o *__fastcall CriWare_Common__get_managerObject(const Met
   __int64 v5; // x1
   UnityEngine_Object_o *managerObject; // x19
   UnityEngine_Object_o *v7; // x19
-  __int64 v8; // x1
-  __int64 v9; // x2
-  UnityEngine_GameObject_o *v10; // x19
-  UnityEngine_Object_o *v11; // x19
+  UnityEngine_GameObject_o *v8; // x19
+  UnityEngine_Object_o *v9; // x19
 
-  if ( (byte_49F7191 & 1) == 0 )
+  if ( (byte_49F9281 & 1) == 0 )
   {
-    sub_1B640C8(&CriWare_Common_TypeInfo, v1);
-    sub_1B640C8(&UnityEngine_GameObject_TypeInfo, v2);
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, v3);
-    sub_1B640C8(&StringLiteral_3917/*"CRIWARE"*/, v4);
-    sub_1B640C8(&StringLiteral_1155/*"/CRIWARE"*/, v5);
-    byte_49F7191 = 1;
+    sub_1B64870(&CriWare_Common_TypeInfo, v1);
+    sub_1B64870(&UnityEngine_GameObject_TypeInfo, v2);
+    sub_1B64870(&UnityEngine_Object_TypeInfo, v3);
+    sub_1B64870(&StringLiteral_3917/*"CRIWARE"*/, v4);
+    sub_1B64870(&StringLiteral_1155/*"/CRIWARE"*/, v5);
+    byte_49F9281 = 1;
   }
   managerObject = (UnityEngine_Object_o *)CriWare_Common_TypeInfo->static_fields->_managerObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -240,21 +239,21 @@ UnityEngine_GameObject_o *__fastcall CriWare_Common__get_managerObject(const Met
     CriWare_Common_TypeInfo->static_fields->_managerObject = UnityEngine_GameObject__Find(
                                                                (System_String_o *)StringLiteral_1155/*"/CRIWARE"*/,
                                                                0LL);
-    sub_1B6406C(CriWare_Common_TypeInfo->static_fields);
+    sub_1B64814(CriWare_Common_TypeInfo->static_fields);
     v7 = (UnityEngine_Object_o *)CriWare_Common_TypeInfo->static_fields->_managerObject;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Equality(v7, 0LL, 0LL) )
     {
-      v10 = (UnityEngine_GameObject_o *)sub_1B64314(UnityEngine_GameObject_TypeInfo, v8, v9);
-      UnityEngine_GameObject___ctor(v10, (System_String_o *)StringLiteral_3917/*"CRIWARE"*/, 0LL);
-      CriWare_Common_TypeInfo->static_fields->_managerObject = v10;
-      sub_1B6406C(CriWare_Common_TypeInfo->static_fields);
+      v8 = (UnityEngine_GameObject_o *)sub_1B64ABC(UnityEngine_GameObject_TypeInfo);
+      UnityEngine_GameObject___ctor(v8, (System_String_o *)StringLiteral_3917/*"CRIWARE"*/, 0LL);
+      CriWare_Common_TypeInfo->static_fields->_managerObject = v8;
+      sub_1B64814(CriWare_Common_TypeInfo->static_fields);
     }
-    v11 = (UnityEngine_Object_o *)CriWare_Common_TypeInfo->static_fields->_managerObject;
+    v9 = (UnityEngine_Object_o *)CriWare_Common_TypeInfo->static_fields->_managerObject;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__DontDestroyOnLoad(v11, 0LL);
+    UnityEngine_Object__DontDestroyOnLoad(v9, 0LL);
   }
   return CriWare_Common_TypeInfo->static_fields->_managerObject;
 }
@@ -265,11 +264,11 @@ System_String_o *__fastcall CriWare_Common__get_streamingAssetsPath(const Method
   __int64 v1; // x1
   __int64 v2; // x1
 
-  if ( (byte_49F718E & 1) == 0 )
+  if ( (byte_49F927E & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Application_TypeInfo, v1);
-    sub_1B640C8(&StringLiteral_1/*""*/, v2);
-    byte_49F718E = 1;
+    sub_1B64870(&UnityEngine_Application_TypeInfo, v1);
+    sub_1B64870(&StringLiteral_1/*""*/, v2);
+    byte_49F927E = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);

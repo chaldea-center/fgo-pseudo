@@ -13,61 +13,67 @@ void __fastcall BattleDataDefine___cctor(const MethodInfo *method)
   int32_t v11; // w2
   int32_t v12; // w3
 
-  if ( (byte_49FE87B & 1) == 0 )
+  if ( (byte_4A0097B & 1) == 0 )
   {
-    sub_1B640C8(&BattleDataDefine_TypeInfo, v1);
-    sub_1B640C8(&int___TypeInfo, v2);
-    sub_1B640C8(&StringLiteral_3189/*"Battle/Common"*/, v3);
-    byte_49FE87B = 1;
+    sub_1B64870(&BattleDataDefine_TypeInfo, v1);
+    sub_1B64870(&int___TypeInfo, v2);
+    sub_1B64870(&StringLiteral_3188/*"Battle/Common"*/, v3);
+    byte_4A0097B = 1;
   }
   static_fields = BattleDataDefine_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->OVERWRITE_ATK_RATE_PRIORITY = 0x3E800000001LL;
   *(_QWORD *)&static_fields->PERCENTAGE_DENOMINATOR = 0x447A000042C80000LL;
-  *(_OWORD *)&static_fields->PERMILLAGE_DENOMINATOR_INT = xmmword_BA2870;
-  v5 = sub_1B64170(int___TypeInfo, 1LL);
+  *(_OWORD *)&static_fields->PERMILLAGE_DENOMINATOR_INT = xmmword_BA2BE0;
+  v5 = sub_1B64918(int___TypeInfo, 1LL);
   v6 = BattleDataDefine_TypeInfo->static_fields;
   v6->NO_INDIVIDUALITY_ARRAY = (struct System_Int32_array *)v5;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&v6->NO_INDIVIDUALITY_ARRAY, v5, v7, v8);
-  v9 = StringLiteral_3189/*"Battle/Common"*/;
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&v6->NO_INDIVIDUALITY_ARRAY, v5, v7, v8);
+  v9 = StringLiteral_3188/*"Battle/Common"*/;
   v10 = BattleDataDefine_TypeInfo->static_fields;
-  v10->ASSET_BATTLE_COMMON = (struct System_String_o *)StringLiteral_3189/*"Battle/Common"*/;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&v10->ASSET_BATTLE_COMMON, v9, v11, v12);
+  v10->ASSET_BATTLE_COMMON = (struct System_String_o *)StringLiteral_3188/*"Battle/Common"*/;
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&v10->ASSET_BATTLE_COMMON, v9, v11, v12);
 }
 
 
 System_String_o *__fastcall BattleDataDefine__AddUniqueCameraPath(int32_t cameraId, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  Il2CppObject *v4; // x0
-  int32_t v6; // [xsp+Ch] [xbp-24h] BYREF
+  __int64 v2; // x2
+  __int64 v3; // x3
+  __int64 v4; // x4
+  __int64 v6; // x1
+  Il2CppObject *v7; // x0
+  int32_t v9; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_49FE878 & 1) == 0 )
+  if ( (byte_4A00978 & 1) == 0 )
   {
-    sub_1B640C8(&int_TypeInfo, method);
-    sub_1B640C8(&StringLiteral_3205/*"Battle/UniqueCamera/Add/{0}"*/, v3);
-    byte_49FE878 = 1;
+    sub_1B64870(&int_TypeInfo, method);
+    sub_1B64870(&StringLiteral_3204/*"Battle/UniqueCamera/Add/{0}"*/, v6);
+    byte_4A00978 = 1;
   }
-  v6 = cameraId;
-  v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v6);
-  return System_String__Format((System_String_o *)StringLiteral_3205/*"Battle/UniqueCamera/Add/{0}"*/, v4, 0LL);
+  v9 = cameraId;
+  v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9, v2, v3, v4);
+  return System_String__Format((System_String_o *)StringLiteral_3204/*"Battle/UniqueCamera/Add/{0}"*/, v7, 0LL);
 }
 
 
 System_String_o *__fastcall BattleDataDefine__FieldMotionPath(int32_t motionId, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  Il2CppObject *v4; // x0
-  int32_t v6; // [xsp+Ch] [xbp-24h] BYREF
+  __int64 v2; // x2
+  __int64 v3; // x3
+  __int64 v4; // x4
+  __int64 v6; // x1
+  Il2CppObject *v7; // x0
+  int32_t v9; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_49FE877 & 1) == 0 )
+  if ( (byte_4A00977 & 1) == 0 )
   {
-    sub_1B640C8(&int_TypeInfo, method);
-    sub_1B640C8(&StringLiteral_3195/*"Battle/Field/{0}"*/, v3);
-    byte_49FE877 = 1;
+    sub_1B64870(&int_TypeInfo, method);
+    sub_1B64870(&StringLiteral_3194/*"Battle/Field/{0}"*/, v6);
+    byte_4A00977 = 1;
   }
-  v6 = motionId;
-  v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v6);
-  return System_String__Format((System_String_o *)StringLiteral_3195/*"Battle/Field/{0}"*/, v4, 0LL);
+  v9 = motionId;
+  v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9, v2, v3, v4);
+  return System_String__Format((System_String_o *)StringLiteral_3194/*"Battle/Field/{0}"*/, v7, 0LL);
 }
 
 
@@ -84,26 +90,26 @@ System_String_o *__fastcall BattleDataDefine__MakeBgPath(int32_t bgId, const Met
   int32_t v5; // [xsp+Ch] [xbp-14h] BYREF
 
   v5 = bgId;
-  if ( (byte_49FE879 & 1) == 0 )
+  if ( (byte_4A00979 & 1) == 0 )
   {
-    sub_1B640C8(&BattleDataDefine_TypeInfo, method);
-    byte_49FE879 = 1;
+    sub_1B64870(&BattleDataDefine_TypeInfo, method);
+    byte_4A00979 = 1;
   }
   v3 = System_Int32__ToString((int32_t)&v5, 0LL);
   if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo);
-  return BattleDataDefine__MakeBgPath_42312684(v3, v2);
+  return BattleDataDefine__MakeBgPath_42319632(v3, v2);
 }
 
 
-System_String_o *__fastcall BattleDataDefine__MakeBgPath_42312684(System_String_o *bgIdStr, const MethodInfo *method)
+System_String_o *__fastcall BattleDataDefine__MakeBgPath_42319632(System_String_o *bgIdStr, const MethodInfo *method)
 {
-  if ( (byte_49FE87A & 1) == 0 )
+  if ( (byte_4A0097A & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_3246/*"Bg/"*/, method);
-    byte_49FE87A = 1;
+    sub_1B64870(&StringLiteral_3245/*"Bg/"*/, method);
+    byte_4A0097A = 1;
   }
-  return System_String__Concat_61375396((System_String_o *)StringLiteral_3246/*"Bg/"*/, bgIdStr, 0LL);
+  return System_String__Concat_61383576((System_String_o *)StringLiteral_3245/*"Bg/"*/, bgIdStr, 0LL);
 }
 
 

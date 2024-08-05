@@ -1,22 +1,22 @@
 void __fastcall EventCampaignEntity___ctor(EventCampaignEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FC310 & 1) == 0 )
+  if ( (byte_49FE408 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataEntityBase_string___ctor__, method);
-    byte_49FC310 = 1;
+    sub_1B64870(&Method_DataEntityBase_string___ctor__, method);
+    byte_49FE408 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30D3D1C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D5FF8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 EventCampaignEntity_o *__fastcall EventCampaignEntity__Clone(EventCampaignEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x20
-  const MethodInfo *v5; // x1
-  __int64 v6; // x0
+  __int64 v3; // x20
+  const MethodInfo *v4; // x1
+  __int64 v5; // x0
+  __int64 v6; // x1
   int32_t v7; // w2
   int32_t v8; // w3
   struct System_Int32_array *targetIds; // x1
@@ -27,28 +27,28 @@ EventCampaignEntity_o *__fastcall EventCampaignEntity__Clone(EventCampaignEntity
   int32_t v14; // w2
   int32_t v15; // w3
 
-  if ( (byte_49FC30E & 1) == 0 )
+  if ( (byte_49FE406 & 1) == 0 )
   {
-    sub_1B640C8(&EventCampaignEntity_TypeInfo, method);
-    byte_49FC30E = 1;
+    sub_1B64870(&EventCampaignEntity_TypeInfo, method);
+    byte_49FE406 = 1;
   }
-  v4 = sub_1B64314(EventCampaignEntity_TypeInfo, method, v2);
-  EventCampaignEntity___ctor((EventCampaignEntity_o *)v4, v5);
-  if ( !v4 )
-    sub_1B64324(v6);
-  *(_OWORD *)(v4 + 16) = *(_OWORD *)&this->fields.eventId;
-  *(_DWORD *)(v4 + 32) = this->fields.priority;
+  v3 = sub_1B64ABC(EventCampaignEntity_TypeInfo);
+  EventCampaignEntity___ctor((EventCampaignEntity_o *)v3, v4);
+  if ( !v3 )
+    sub_1B64ACC(v5, v6);
+  *(_OWORD *)(v3 + 16) = *(_OWORD *)&this->fields.eventId;
+  *(_DWORD *)(v3 + 32) = this->fields.priority;
   targetIds = this->fields.targetIds;
-  *(_QWORD *)(v4 + 40) = targetIds;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v4 + 40), (int32_t)targetIds, v7, v8);
-  *(_QWORD *)(v4 + 48) = *(_QWORD *)&this->fields.value;
+  *(_QWORD *)(v3 + 40) = targetIds;
+  sub_1B64814((ServantStatusBattleListViewItem_o *)(v3 + 40), (int32_t)targetIds, v7, v8);
+  *(_QWORD *)(v3 + 48) = *(_QWORD *)&this->fields.value;
   warIds = this->fields.warIds;
-  *(_QWORD *)(v4 + 56) = warIds;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v4 + 56), (int32_t)warIds, v11, v12);
+  *(_QWORD *)(v3 + 56) = warIds;
+  sub_1B64814((ServantStatusBattleListViewItem_o *)(v3 + 56), (int32_t)warIds, v11, v12);
   entryCondMessage = this->fields.entryCondMessage;
-  *(_QWORD *)(v4 + 64) = entryCondMessage;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)(v4 + 64), (int32_t)entryCondMessage, v14, v15);
-  return (EventCampaignEntity_o *)v4;
+  *(_QWORD *)(v3 + 64) = entryCondMessage;
+  sub_1B64814((ServantStatusBattleListViewItem_o *)(v3 + 64), (int32_t)entryCondMessage, v14, v15);
+  return (EventCampaignEntity_o *)v3;
 }
 
 
@@ -59,16 +59,16 @@ System_String_o *__fastcall EventCampaignEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_49FC30F & 1) == 0 )
+  if ( (byte_49FE407 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&target);
-    byte_49FC30F = 1;
+    sub_1B64870(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&target);
+    byte_49FE407 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            eventId,
            target,
            idx,
-           (const MethodInfo_2E37AA0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2E39D7C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -174,7 +174,7 @@ bool __fastcall EventCampaignEntity__isDispWarId(EventCampaignEntity_o *this, in
 
   warIds = this->fields.warIds;
   if ( !warIds )
-    sub_1B64324(this);
+    sub_1B64ACC(this, warId);
   max_length = warIds->max_length;
   v5 = max_length > 0;
   if ( max_length >= 1 )
@@ -182,7 +182,7 @@ bool __fastcall EventCampaignEntity__isDispWarId(EventCampaignEntity_o *this, in
     for ( i = 0; i < max_length; v5 = i < max_length )
     {
       if ( i >= (unsigned int)max_length )
-        sub_1B6432C(this, *(_QWORD *)&warId);
+        sub_1B64AD4(this, *(_QWORD *)&warId);
       if ( warIds->m_Items[i + 1] == warId )
         break;
       ++i;

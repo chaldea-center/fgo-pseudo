@@ -1,53 +1,46 @@
 void __fastcall BattleActionLogManager___ctor(BattleActionLogManager_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  System_IO_MemoryStream_o *v5; // x20
-  int32_t v6; // w2
-  int32_t v7; // w3
-  __int64 v8; // x1
-  __int64 v9; // x2
-  System_IO_MemoryStream_o *v10; // x20
-  int32_t v11; // w2
-  int32_t v12; // w3
+  __int64 v3; // x1
+  System_IO_MemoryStream_o *v4; // x20
+  int32_t v5; // w2
+  int32_t v6; // w3
+  System_IO_MemoryStream_o *v7; // x20
+  int32_t v8; // w2
+  int32_t v9; // w3
   System_IO_Stream_o *header; // x20
-  __int64 v14; // x1
-  __int64 v15; // x2
-  System_IO_BinaryWriter_o *v16; // x21
-  int32_t v17; // w2
-  int32_t v18; // w3
+  System_IO_BinaryWriter_o *v11; // x21
+  int32_t v12; // w2
+  int32_t v13; // w3
   System_IO_Stream_o *data; // x20
-  __int64 v20; // x1
-  __int64 v21; // x2
-  System_IO_BinaryWriter_o *v22; // x21
-  int32_t v23; // w2
-  int32_t v24; // w3
+  System_IO_BinaryWriter_o *v15; // x21
+  int32_t v16; // w2
+  int32_t v17; // w3
 
-  if ( (byte_49FE454 & 1) == 0 )
+  if ( (byte_4A0054F & 1) == 0 )
   {
-    sub_1B640C8(&System_IO_BinaryWriter_TypeInfo, method);
-    sub_1B640C8(&System_IO_MemoryStream_TypeInfo, v4);
-    byte_49FE454 = 1;
+    sub_1B64870(&System_IO_BinaryWriter_TypeInfo, method);
+    sub_1B64870(&System_IO_MemoryStream_TypeInfo, v3);
+    byte_4A0054F = 1;
   }
-  v5 = (System_IO_MemoryStream_o *)sub_1B64314(System_IO_MemoryStream_TypeInfo, method, v2);
-  System_IO_MemoryStream___ctor(v5, 0LL);
-  this->fields.header = v5;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)v5, v6, v7);
-  v10 = (System_IO_MemoryStream_o *)sub_1B64314(System_IO_MemoryStream_TypeInfo, v8, v9);
-  System_IO_MemoryStream___ctor(v10, 0LL);
-  this->fields.data = v10;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.data, (int32_t)v10, v11, v12);
+  v4 = (System_IO_MemoryStream_o *)sub_1B64ABC(System_IO_MemoryStream_TypeInfo);
+  System_IO_MemoryStream___ctor(v4, 0LL);
+  this->fields.header = v4;
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)v4, v5, v6);
+  v7 = (System_IO_MemoryStream_o *)sub_1B64ABC(System_IO_MemoryStream_TypeInfo);
+  System_IO_MemoryStream___ctor(v7, 0LL);
+  this->fields.data = v7;
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.data, (int32_t)v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   header = (System_IO_Stream_o *)this->fields.header;
-  v16 = (System_IO_BinaryWriter_o *)sub_1B64314(System_IO_BinaryWriter_TypeInfo, v14, v15);
-  System_IO_BinaryWriter___ctor_61613552(v16, header, 0LL);
-  this->fields.headerWriter = v16;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.headerWriter, (int32_t)v16, v17, v18);
+  v11 = (System_IO_BinaryWriter_o *)sub_1B64ABC(System_IO_BinaryWriter_TypeInfo);
+  System_IO_BinaryWriter___ctor_61621732(v11, header, 0LL);
+  this->fields.headerWriter = v11;
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.headerWriter, (int32_t)v11, v12, v13);
   data = (System_IO_Stream_o *)this->fields.data;
-  v22 = (System_IO_BinaryWriter_o *)sub_1B64314(System_IO_BinaryWriter_TypeInfo, v20, v21);
-  System_IO_BinaryWriter___ctor_61613552(v22, data, 0LL);
-  this->fields.dataWriter = v22;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.dataWriter, (int32_t)v22, v23, v24);
+  v15 = (System_IO_BinaryWriter_o *)sub_1B64ABC(System_IO_BinaryWriter_TypeInfo);
+  System_IO_BinaryWriter___ctor_61621732(v15, data, 0LL);
+  this->fields.dataWriter = v15;
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.dataWriter, (int32_t)v15, v16, v17);
 }
 
 
@@ -59,6 +52,7 @@ void __fastcall BattleActionLogManager__Finalize(BattleActionLogManager_o *this,
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall BattleActionLogManager__addHeader(
         BattleActionLogManager_o *this,
         int32_t logType,
@@ -80,7 +74,7 @@ void __fastcall BattleActionLogManager__addHeader(
                                  *(_QWORD *)(*(_QWORD *)headerWriter + 512LL)),
         !v5) )
   {
-    sub_1B64324(headerWriter);
+    sub_1B64ACC(headerWriter, *(_QWORD *)&logType);
   }
   ((void (__fastcall *)(struct System_IO_BinaryWriter_o *, void *, Il2CppMethodPointer))v5->klass->vtable._19_Write.method)(
     v5,
@@ -92,12 +86,13 @@ void __fastcall BattleActionLogManager__addHeader(
 void __fastcall BattleActionLogManager__addLogContinue(BattleActionLogManager_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
+  __int64 v4; // x1
   struct System_IO_BinaryWriter_o *dataWriter; // x0
 
   BattleActionLogManager__addHeader(this, 5, v2);
   dataWriter = this->fields.dataWriter;
   if ( !dataWriter )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, v4);
   ((void (__fastcall *)(struct System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))dataWriter->klass->vtable._17_Write.method)(
     dataWriter,
     0LL,
@@ -113,6 +108,7 @@ void __fastcall BattleActionLogManager__addLogSelectCommand(
         int32_t selectIndex3,
         const MethodInfo *method)
 {
+  __int64 v9; // x1
   struct System_IO_BinaryWriter_o *dataWriter; // x0
 
   BattleActionLogManager__addHeader(this, 4, *(const MethodInfo **)&selectIndex2);
@@ -129,7 +125,7 @@ void __fastcall BattleActionLogManager__addLogSelectCommand(
           dataWriter->klass->vtable._18_Write.methodPtr),
         (dataWriter = this->fields.dataWriter) == 0LL) )
   {
-    sub_1B64324(dataWriter);
+    sub_1B64ACC(dataWriter, v9);
   }
   ((void (__fastcall *)(struct System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))dataWriter->klass->vtable._17_Write.method)(
     dataWriter,
@@ -143,12 +139,13 @@ void __fastcall BattleActionLogManager__addLogSelectTarget(
         int32_t selectIndex,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
   struct System_IO_BinaryWriter_o *dataWriter; // x0
 
   BattleActionLogManager__addHeader(this, 1, method);
   dataWriter = this->fields.dataWriter;
   if ( !dataWriter )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, v5);
   ((void (__fastcall *)(struct System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))dataWriter->klass->vtable._17_Write.method)(
     dataWriter,
     (unsigned int)selectIndex,
@@ -162,8 +159,8 @@ void __fastcall BattleActionLogManager__addLogUseCommandSpell(
         const MethodInfo *method)
 {
   void *dataWriter; // x0
+  __int64 v6; // x1
   struct System_Int32_array *ptTarget; // x8
-  __int64 v7; // x1
   struct System_Int32_array *v8; // x21
   __int64 v9; // x8
   unsigned __int64 v10; // x22
@@ -192,7 +189,7 @@ void __fastcall BattleActionLogManager__addLogUseCommandSpell(
     while ( 1 )
     {
       if ( v10 >= (unsigned int)v9 )
-        sub_1B6432C(dataWriter, v7);
+        sub_1B64AD4(dataWriter, v6);
       dataWriter = this->fields.dataWriter;
       if ( !dataWriter )
         break;
@@ -205,7 +202,7 @@ void __fastcall BattleActionLogManager__addLogUseCommandSpell(
         goto LABEL_10;
     }
 LABEL_13:
-    sub_1B64324(dataWriter);
+    sub_1B64ACC(dataWriter, v6);
   }
 LABEL_10:
   dataWriter = task->fields.skillInfo;
@@ -230,10 +227,10 @@ void __fastcall BattleActionLogManager__addLogUseSkill(
         const MethodInfo *method)
 {
   __int64 ActorId; // x0
+  __int64 v6; // x1
   struct System_IO_BinaryWriter_o *dataWriter; // x21
-  struct System_IO_BinaryWriter_o *v7; // x21
+  struct System_IO_BinaryWriter_o *v8; // x21
   struct System_Int32_array *ptTarget; // x8
-  __int64 v9; // x1
   struct System_Int32_array *v10; // x21
   __int64 v11; // x8
   unsigned __int64 v12; // x22
@@ -251,14 +248,14 @@ void __fastcall BattleActionLogManager__addLogUseSkill(
     dataWriter,
     (unsigned int)ActorId,
     dataWriter->klass->vtable._18_Write.methodPtr);
-  v7 = this->fields.dataWriter;
+  v8 = this->fields.dataWriter;
   ActorId = BattleLogicTask__getTarget(task, 0LL);
-  if ( !v7 )
+  if ( !v8 )
     goto LABEL_17;
-  ActorId = ((__int64 (__fastcall *)(struct System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v7->klass->vtable._17_Write.method)(
-              v7,
+  ActorId = ((__int64 (__fastcall *)(struct System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v8->klass->vtable._17_Write.method)(
+              v8,
               (unsigned int)ActorId,
-              v7->klass->vtable._18_Write.methodPtr);
+              v8->klass->vtable._18_Write.methodPtr);
   ptTarget = task->fields.ptTarget;
   if ( !ptTarget )
     goto LABEL_17;
@@ -279,7 +276,7 @@ void __fastcall BattleActionLogManager__addLogUseSkill(
     while ( 1 )
     {
       if ( v12 >= (unsigned int)v11 )
-        sub_1B6432C(ActorId, v9);
+        sub_1B64AD4(ActorId, v6);
       ActorId = (__int64)this->fields.dataWriter;
       if ( !ActorId )
         break;
@@ -292,7 +289,7 @@ void __fastcall BattleActionLogManager__addLogUseSkill(
         goto LABEL_12;
     }
 LABEL_17:
-    sub_1B64324(ActorId);
+    sub_1B64ACC(ActorId, v6);
   }
 LABEL_12:
   ActorId = (__int64)task->fields.skillInfo;
@@ -335,7 +332,7 @@ void __fastcall BattleActionLogManager__close(BattleActionLogManager_o *this, co
 
   header = (System_IO_Stream_o *)this->fields.header;
   if ( !header || (System_IO_Stream__Dispose(header, 0LL), (header = (System_IO_Stream_o *)this->fields.data) == 0LL) )
-    sub_1B64324(header);
+    sub_1B64ACC(header, method);
   System_IO_Stream__Dispose(header, 0LL);
   headerWriter = this->fields.headerWriter;
   if ( headerWriter )
@@ -344,7 +341,7 @@ void __fastcall BattleActionLogManager__close(BattleActionLogManager_o *this, co
       headerWriter,
       headerWriter->klass->vtable._6_Dispose.methodPtr);
     this->fields.headerWriter = 0LL;
-    sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.headerWriter, 0, v5, v6);
+    sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.headerWriter, 0, v5, v6);
   }
   dataWriter = this->fields.dataWriter;
   p_dataWriter = (ServantStatusBattleListViewItem_o *)&this->fields.dataWriter;
@@ -355,7 +352,7 @@ void __fastcall BattleActionLogManager__close(BattleActionLogManager_o *this, co
       v7,
       v7->klass->vtable._6_Dispose.methodPtr);
     p_dataWriter->klass = 0LL;
-    sub_1B6406C(p_dataWriter, 0, v10, v11);
+    sub_1B64814(p_dataWriter, 0, v10, v11);
   }
 }
 
@@ -368,7 +365,7 @@ System_Byte_array *__fastcall BattleActionLogManager__getDataRaw(
 
   data = this->fields.data;
   if ( !data )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, method);
   return (System_Byte_array *)((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, void *))data->klass->vtable._42_ToArray.method)(
                                 data,
                                 data->klass[1]._1.image);
@@ -383,7 +380,7 @@ System_Byte_array *__fastcall BattleActionLogManager__getHeaderRaw(
 
   header = this->fields.header;
   if ( !header )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, method);
   return (System_Byte_array *)((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, void *))header->klass->vtable._42_ToArray.method)(
                                 header,
                                 header->klass[1]._1.image);
@@ -399,7 +396,7 @@ void __fastcall BattleActionLogManager__setData(
 
   dataWriter = this->fields.dataWriter;
   if ( !dataWriter )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, buffer);
   ((void (__fastcall *)(struct System_IO_BinaryWriter_o *, System_Byte_array *, Il2CppMethodPointer))dataWriter->klass->vtable._10_Write.method)(
     dataWriter,
     buffer,
@@ -416,7 +413,7 @@ void __fastcall BattleActionLogManager__setHeader(
 
   headerWriter = this->fields.headerWriter;
   if ( !headerWriter )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, buffer);
   ((void (__fastcall *)(struct System_IO_BinaryWriter_o *, System_Byte_array *, Il2CppMethodPointer))headerWriter->klass->vtable._10_Write.method)(
     headerWriter,
     buffer,

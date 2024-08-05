@@ -2,48 +2,42 @@ void __fastcall CharaGraphSortOwnerAllKind___ctor(CharaGraphSortOwnerAllKind_o *
 {
   __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x2
-  Il2CppObject *v7; // x20
-  int32_t v8; // w2
-  int32_t v9; // w3
-  __int64 v10; // x1
-  __int64 v11; // x2
-  Il2CppObject *v12; // x20
-  int32_t v13; // w2
-  int32_t v14; // w3
-  __int64 v15; // x1
-  __int64 v16; // x2
-  Il2CppObject *v17; // x20
-  int32_t v18; // w2
-  int32_t v19; // w3
+  Il2CppObject *v5; // x20
+  int32_t v6; // w2
+  int32_t v7; // w3
+  Il2CppObject *v8; // x20
+  int32_t v9; // w2
+  int32_t v10; // w3
+  Il2CppObject *v11; // x20
+  int32_t v12; // w2
+  int32_t v13; // w3
 
-  if ( (byte_49FB82F & 1) == 0 )
+  if ( (byte_49FD927 & 1) == 0 )
   {
-    sub_1B640C8(&CharaGraphSortManageUnitCommandCode_TypeInfo, method);
-    sub_1B640C8(&CharaGraphSortManageUnitServantEquip_TypeInfo, v3);
-    sub_1B640C8(&CharaGraphSortManageUnitServant_TypeInfo, v4);
-    byte_49FB82F = 1;
+    sub_1B64870(&CharaGraphSortManageUnitCommandCode_TypeInfo, method);
+    sub_1B64870(&CharaGraphSortManageUnitServantEquip_TypeInfo, v3);
+    sub_1B64870(&CharaGraphSortManageUnitServant_TypeInfo, v4);
+    byte_49FD927 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v7 = (Il2CppObject *)sub_1B64314(CharaGraphSortManageUnitServant_TypeInfo, v5, v6);
-  System_Object___ctor(v7, 0LL);
-  this->fields._ServantSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v7;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)v7, v8, v9);
-  v12 = (Il2CppObject *)sub_1B64314(CharaGraphSortManageUnitServantEquip_TypeInfo, v10, v11);
-  System_Object___ctor(v12, 0LL);
-  this->fields._ServantEquipSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v12;
-  sub_1B6406C(
+  v5 = (Il2CppObject *)sub_1B64ABC(CharaGraphSortManageUnitServant_TypeInfo);
+  System_Object___ctor(v5, 0LL);
+  this->fields._ServantSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v5;
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)v5, v6, v7);
+  v8 = (Il2CppObject *)sub_1B64ABC(CharaGraphSortManageUnitServantEquip_TypeInfo);
+  System_Object___ctor(v8, 0LL);
+  this->fields._ServantEquipSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v8;
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._ServantEquipSortManageUnit_k__BackingField,
-    (int32_t)v12,
-    v13,
-    v14);
-  v17 = (Il2CppObject *)sub_1B64314(CharaGraphSortManageUnitCommandCode_TypeInfo, v15, v16);
-  System_Object___ctor(v17, 0LL);
-  this->fields._CommandCodeSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v17;
-  sub_1B6406C(
+    (int32_t)v8,
+    v9,
+    v10);
+  v11 = (Il2CppObject *)sub_1B64ABC(CharaGraphSortManageUnitCommandCode_TypeInfo);
+  System_Object___ctor(v11, 0LL);
+  this->fields._CommandCodeSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v11;
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._CommandCodeSortManageUnit_k__BackingField,
-    (int32_t)v17,
-    v18,
-    v19);
+    (int32_t)v11,
+    v12,
+    v13);
 }

@@ -8,14 +8,14 @@ void __fastcall ServantStatusBattleConfirmDialog___ctor(
   __int64 v6; // x1
   BalanceConfig_c *v7; // x0
 
-  if ( (byte_49F80DA & 1) == 0 )
+  if ( (byte_49FA1CA & 1) == 0 )
   {
-    sub_1B640C8(&BalanceConfig_TypeInfo, method);
-    sub_1B640C8(&BaseDialog_TypeInfo, v3);
-    sub_1B640C8(&UnityEngine_GameObject___TypeInfo, v4);
-    sub_1B640C8(&SkillIconComponent___TypeInfo, v5);
-    sub_1B640C8(&UIRangeLabel___TypeInfo, v6);
-    byte_49F80DA = 1;
+    sub_1B64870(&BalanceConfig_TypeInfo, method);
+    sub_1B64870(&BaseDialog_TypeInfo, v3);
+    sub_1B64870(&UnityEngine_GameObject___TypeInfo, v4);
+    sub_1B64870(&SkillIconComponent___TypeInfo, v5);
+    sub_1B64870(&UIRangeLabel___TypeInfo, v6);
+    byte_49FA1CA = 1;
   }
   v7 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -23,30 +23,30 @@ void __fastcall ServantStatusBattleConfirmDialog___ctor(
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v7 = BalanceConfig_TypeInfo;
   }
-  this->fields.nowSkillBaseList = (struct UnityEngine_GameObject_array *)sub_1B64170(
+  this->fields.nowSkillBaseList = (struct UnityEngine_GameObject_array *)sub_1B64918(
                                                                            UnityEngine_GameObject___TypeInfo,
                                                                            (unsigned int)v7->static_fields->SvtSkillListMax);
-  sub_1B6406C(&this->fields.nowSkillBaseList);
-  this->fields.nextSkillBaseList = (struct UnityEngine_GameObject_array *)sub_1B64170(
+  sub_1B64814(&this->fields.nowSkillBaseList);
+  this->fields.nextSkillBaseList = (struct UnityEngine_GameObject_array *)sub_1B64918(
                                                                             UnityEngine_GameObject___TypeInfo,
                                                                             (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtSkillListMax);
-  sub_1B6406C(&this->fields.nextSkillBaseList);
-  this->fields.nowSkillIconList = (struct SkillIconComponent_array *)sub_1B64170(
+  sub_1B64814(&this->fields.nextSkillBaseList);
+  this->fields.nowSkillIconList = (struct SkillIconComponent_array *)sub_1B64918(
                                                                        SkillIconComponent___TypeInfo,
                                                                        (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtSkillListMax);
-  sub_1B6406C(&this->fields.nowSkillIconList);
-  this->fields.nextSkillIconList = (struct SkillIconComponent_array *)sub_1B64170(
+  sub_1B64814(&this->fields.nowSkillIconList);
+  this->fields.nextSkillIconList = (struct SkillIconComponent_array *)sub_1B64918(
                                                                         SkillIconComponent___TypeInfo,
                                                                         (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtSkillListMax);
-  sub_1B6406C(&this->fields.nextSkillIconList);
-  this->fields.nowSkillNameList = (struct UIRangeLabel_array *)sub_1B64170(
+  sub_1B64814(&this->fields.nextSkillIconList);
+  this->fields.nowSkillNameList = (struct UIRangeLabel_array *)sub_1B64918(
                                                                  UIRangeLabel___TypeInfo,
                                                                  (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtSkillListMax);
-  sub_1B6406C(&this->fields.nowSkillNameList);
-  this->fields.nextSkillNameList = (struct UIRangeLabel_array *)sub_1B64170(
+  sub_1B64814(&this->fields.nowSkillNameList);
+  this->fields.nextSkillNameList = (struct UIRangeLabel_array *)sub_1B64918(
                                                                   UIRangeLabel___TypeInfo,
                                                                   (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtSkillListMax);
-  sub_1B6406C(&this->fields.nextSkillNameList);
+  sub_1B64814(&this->fields.nextSkillNameList);
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0LL);
@@ -59,32 +59,30 @@ void __fastcall ServantStatusBattleConfirmDialog__Close(
 {
   const MethodInfo *v2; // x2
 
-  ServantStatusBattleConfirmDialog__Close_31467612(this, 0LL, v2);
+  ServantStatusBattleConfirmDialog__Close_31469496(this, 0LL, v2);
 }
 
 
-void __fastcall ServantStatusBattleConfirmDialog__Close_31467612(
+void __fastcall ServantStatusBattleConfirmDialog__Close_31469496(
         ServantStatusBattleConfirmDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x2
-  System_Action_o *v8; // x20
+  System_Action_o *v6; // x20
 
-  if ( (byte_49F80D7 & 1) == 0 )
+  if ( (byte_49FA1C7 & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_TypeInfo, callback);
-    sub_1B640C8(&Method_ServantStatusBattleConfirmDialog_EndClose__, v5);
-    byte_49F80D7 = 1;
+    sub_1B64870(&System_Action_TypeInfo, callback);
+    sub_1B64870(&Method_ServantStatusBattleConfirmDialog_EndClose__, v5);
+    byte_49FA1C7 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1B6406C(&this->fields.closeCallbackFunc);
+  sub_1B64814(&this->fields.closeCallbackFunc);
   this->fields.isButtonEnable = 0;
-  v8 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v6, v7);
-  System_Action___ctor(v8, (Il2CppObject *)this, Method_ServantStatusBattleConfirmDialog_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v8, 0LL);
+  v6 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  System_Action___ctor(v6, (Il2CppObject *)this, Method_ServantStatusBattleConfirmDialog_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v6, 0LL);
 }
 
 
@@ -93,25 +91,26 @@ void __fastcall ServantStatusBattleConfirmDialog__EndClose(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v4; // x1
   struct System_Action_o **p_closeCallbackFunc; // x19
-  struct System_Action_o *v5; // x20
+  struct System_Action_o *v6; // x20
   struct System_Action_o *closeCallbackFunc; // t1
 
   ServantStatusBattleConfirmDialog__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = &this->fields.closeCallbackFunc;
-  v5 = closeCallbackFunc;
+  v6 = closeCallbackFunc;
   if ( closeCallbackFunc )
   {
     *p_closeCallbackFunc = 0LL;
-    sub_1B6406C(p_closeCallbackFunc);
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v5->fields.m_target)(
-      v5->fields.original_method_info,
-      *(_QWORD *)&v5->fields.extra_arg);
+    sub_1B64814(p_closeCallbackFunc);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v6->fields.m_target)(
+      v6->fields.original_method_info,
+      *(_QWORD *)&v6->fields.extra_arg);
   }
 }
 
@@ -130,10 +129,10 @@ void __fastcall ServantStatusBattleConfirmDialog__Init(
 {
   UILabel_o *messageLabel; // x0
 
-  if ( (byte_49F80D5 & 1) == 0 )
+  if ( (byte_49FA1C5 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_1/*""*/, method);
-    byte_49F80D5 = 1;
+    sub_1B64870(&StringLiteral_1/*""*/, method);
+    byte_49FA1C5 = 1;
   }
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
@@ -162,7 +161,7 @@ void __fastcall ServantStatusBattleConfirmDialog__Init(
         (messageLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
 LABEL_12:
-    sub_1B64324(messageLabel);
+    sub_1B64ACC(messageLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)messageLabel, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -177,17 +176,17 @@ void __fastcall ServantStatusBattleConfirmDialog__OnClickCancel(
   System_Reflection_MethodBase_o *v4; // x0
   struct ServantStatusBattleConfirmDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_49F80D9 & 1) == 0 )
+  if ( (byte_49FA1C9 & 1) == 0 )
   {
-    sub_1B640C8(&Method_ServantStatusBattleConfirmDialog_OnClickCancel__, method);
-    byte_49F80D9 = 1;
+    sub_1B64870(&Method_ServantStatusBattleConfirmDialog_OnClickCancel__, method);
+    byte_49FA1C9 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_ServantStatusBattleConfirmDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_ServantStatusBattleConfirmDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B640E0(Method_ServantStatusBattleConfirmDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64888(Method_ServantStatusBattleConfirmDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     clickFunc = this->fields.clickFunc;
     this->fields.isButtonEnable = 0;
@@ -208,17 +207,17 @@ void __fastcall ServantStatusBattleConfirmDialog__OnClickDecide(
   System_Reflection_MethodBase_o *v4; // x0
   struct ServantStatusBattleConfirmDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_49F80D8 & 1) == 0 )
+  if ( (byte_49FA1C8 & 1) == 0 )
   {
-    sub_1B640C8(&Method_ServantStatusBattleConfirmDialog_OnClickDecide__, method);
-    byte_49F80D8 = 1;
+    sub_1B64870(&Method_ServantStatusBattleConfirmDialog_OnClickDecide__, method);
+    byte_49FA1C8 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_ServantStatusBattleConfirmDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_ServantStatusBattleConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B640E0(Method_ServantStatusBattleConfirmDialog_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64888(Method_ServantStatusBattleConfirmDialog_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0LL);
     clickFunc = this->fields.clickFunc;
     this->fields.isButtonEnable = 0;
@@ -266,14 +265,14 @@ void __fastcall ServantStatusBattleConfirmDialog__Open(
   UILabel_o *messageLabel; // x27
   System_String_o *v39; // x0
   System_String_o *Name; // x0
-  struct UILabel_o *v41; // x8
+  System_String_o *OverwriteTDName; // x1
+  struct UILabel_o *v42; // x8
   UILabel_o *nowSkillTitleLabel; // x27
   UILabel_o *nextSkillTitleLabel; // x27
   UILabel_o *nowNpTitleLabel; // x27
   UILabel_o *nextNpTitleLabel; // x27
   UILabel_o *buttonDecideLabel; // x27
   UILabel_o *buttonCancelLabel; // x27
-  __int64 v48; // x1
   struct UnityEngine_GameObject_array *nowSkillBaseList; // x8
   System_String_o *v50; // x27
   __int64 v51; // x24
@@ -301,39 +300,36 @@ void __fastcall ServantStatusBattleConfirmDialog__Open(
   System_String_o *v73; // x1
   UILabel_o *nowNpNameLabel; // x0
   struct UILabel_o *v75; // x24
-  System_String_o *OverwriteTDName; // x1
   struct UILabel_o *nextNpNameLabel; // x20
-  __int64 v78; // x1
-  __int64 v79; // x2
-  System_Action_o *v80; // x20
+  System_Action_o *v77; // x20
 
-  if ( (byte_49F80D6 & 1) == 0 )
+  if ( (byte_49FA1C6 & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_TypeInfo, nowTdInfo);
-    sub_1B640C8(&Method_DataManager_GetMasterData_ServantLimitAddMaster___, v20);
-    sub_1B640C8(&LocalizationManager_TypeInfo, v21);
-    sub_1B640C8(&Method_ServantStatusBattleConfirmDialog_EndOpen__, v22);
-    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v23);
-    sub_1B640C8(&StringLiteral_11790/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MODIFY_COLOR"*/, v24);
-    sub_1B640C8(&StringLiteral_11791/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_NP_NAME"*/, v25);
-    sub_1B640C8(&StringLiteral_11794/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SKILL_TITLE"*/, v26);
-    sub_1B640C8(&StringLiteral_3737/*"COMMON_CONFIRM_NO"*/, v27);
-    sub_1B640C8(&StringLiteral_3740/*"COMMON_CONFIRM_YES"*/, v28);
-    sub_1B640C8(&StringLiteral_11789/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MESSAGE"*/, v29);
-    sub_1B640C8(&StringLiteral_9256/*"NO_ENTRY_NAME"*/, v30);
-    sub_1B640C8(&StringLiteral_11795/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SPLIT"*/, v31);
-    sub_1B640C8(&StringLiteral_11792/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_NP_TITLE"*/, v32);
-    sub_1B640C8(&StringLiteral_1/*""*/, v33);
-    sub_1B640C8(&StringLiteral_11793/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SKILL_NAME"*/, v34);
-    byte_49F80D6 = 1;
+    sub_1B64870(&System_Action_TypeInfo, nowTdInfo);
+    sub_1B64870(&Method_DataManager_GetMasterData_ServantLimitAddMaster___, v20);
+    sub_1B64870(&LocalizationManager_TypeInfo, v21);
+    sub_1B64870(&Method_ServantStatusBattleConfirmDialog_EndOpen__, v22);
+    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v23);
+    sub_1B64870(&StringLiteral_11793/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MODIFY_COLOR"*/, v24);
+    sub_1B64870(&StringLiteral_11794/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_NP_NAME"*/, v25);
+    sub_1B64870(&StringLiteral_11797/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SKILL_TITLE"*/, v26);
+    sub_1B64870(&StringLiteral_3736/*"COMMON_CONFIRM_NO"*/, v27);
+    sub_1B64870(&StringLiteral_3740/*"COMMON_CONFIRM_YES"*/, v28);
+    sub_1B64870(&StringLiteral_11792/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MESSAGE"*/, v29);
+    sub_1B64870(&StringLiteral_9258/*"NO_ENTRY_NAME"*/, v30);
+    sub_1B64870(&StringLiteral_11798/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SPLIT"*/, v31);
+    sub_1B64870(&StringLiteral_11795/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_NP_TITLE"*/, v32);
+    sub_1B64870(&StringLiteral_1/*""*/, v33);
+    sub_1B64870(&StringLiteral_11796/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SKILL_NAME"*/, v34);
+    byte_49FA1C6 = 1;
   }
   this->fields.clickFunc = func;
-  sub_1B6406C(&this->fields.clickFunc);
+  sub_1B64814(&this->fields.clickFunc);
   if ( isSkillModify )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v35 = LocalizationManager__Get((System_String_o *)StringLiteral_11793/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SKILL_NAME"*/, 0LL);
+    v35 = LocalizationManager__Get((System_String_o *)StringLiteral_11796/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SKILL_NAME"*/, 0LL);
     if ( !isTdModify )
       goto LABEL_16;
     goto LABEL_9;
@@ -346,41 +342,41 @@ LABEL_9:
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v36 = LocalizationManager__Get((System_String_o *)StringLiteral_11795/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SPLIT"*/, 0LL);
-      v35 = System_String__Concat_61375396(v35, v36, 0LL);
+      v36 = LocalizationManager__Get((System_String_o *)StringLiteral_11798/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SPLIT"*/, 0LL);
+      v35 = System_String__Concat_61383576(v35, v36, 0LL);
     }
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v37 = LocalizationManager__Get((System_String_o *)StringLiteral_11791/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_NP_NAME"*/, 0LL);
-    v35 = System_String__Concat_61375396(v35, v37, 0LL);
+    v37 = LocalizationManager__Get((System_String_o *)StringLiteral_11794/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_NP_NAME"*/, 0LL);
+    v35 = System_String__Concat_61383576(v35, v37, 0LL);
   }
 LABEL_16:
   messageLabel = this->fields.messageLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v39 = LocalizationManager__Get((System_String_o *)StringLiteral_11789/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MESSAGE"*/, 0LL);
+  v39 = LocalizationManager__Get((System_String_o *)StringLiteral_11792/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MESSAGE"*/, 0LL);
   Name = System_String__Format(v39, (Il2CppObject *)v35, 0LL);
-  v41 = this->fields.messageLabel;
-  if ( !v41 )
+  v42 = this->fields.messageLabel;
+  if ( !v42 )
     goto LABEL_107;
-  WrapControlText__textAdjust(messageLabel, Name, v41->fields.mFontSize, 0, 0, 0LL);
+  WrapControlText__textAdjust(messageLabel, Name, v42->fields.mFontSize, 0, 0, 0LL);
   nowSkillTitleLabel = this->fields.nowSkillTitleLabel;
-  Name = LocalizationManager__Get((System_String_o *)StringLiteral_11794/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SKILL_TITLE"*/, 0LL);
+  Name = LocalizationManager__Get((System_String_o *)StringLiteral_11797/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SKILL_TITLE"*/, 0LL);
   if ( !nowSkillTitleLabel )
     goto LABEL_107;
   UILabel__set_text(nowSkillTitleLabel, Name, 0LL);
   nextSkillTitleLabel = this->fields.nextSkillTitleLabel;
-  Name = LocalizationManager__Get((System_String_o *)StringLiteral_11794/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SKILL_TITLE"*/, 0LL);
+  Name = LocalizationManager__Get((System_String_o *)StringLiteral_11797/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SKILL_TITLE"*/, 0LL);
   if ( !nextSkillTitleLabel )
     goto LABEL_107;
   UILabel__set_text(nextSkillTitleLabel, Name, 0LL);
   nowNpTitleLabel = this->fields.nowNpTitleLabel;
-  Name = LocalizationManager__Get((System_String_o *)StringLiteral_11792/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_NP_TITLE"*/, 0LL);
+  Name = LocalizationManager__Get((System_String_o *)StringLiteral_11795/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_NP_TITLE"*/, 0LL);
   if ( !nowNpTitleLabel )
     goto LABEL_107;
   UILabel__set_text(nowNpTitleLabel, Name, 0LL);
   nextNpTitleLabel = this->fields.nextNpTitleLabel;
-  Name = LocalizationManager__Get((System_String_o *)StringLiteral_11792/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_NP_TITLE"*/, 0LL);
+  Name = LocalizationManager__Get((System_String_o *)StringLiteral_11795/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_NP_TITLE"*/, 0LL);
   if ( !nextNpTitleLabel )
     goto LABEL_107;
   UILabel__set_text(nextNpTitleLabel, Name, 0LL);
@@ -390,11 +386,11 @@ LABEL_16:
     goto LABEL_107;
   UILabel__set_text(buttonDecideLabel, Name, 0LL);
   buttonCancelLabel = this->fields.buttonCancelLabel;
-  Name = LocalizationManager__Get((System_String_o *)StringLiteral_3737/*"COMMON_CONFIRM_NO"*/, 0LL);
+  Name = LocalizationManager__Get((System_String_o *)StringLiteral_3736/*"COMMON_CONFIRM_NO"*/, 0LL);
   if ( !buttonCancelLabel )
     goto LABEL_107;
   UILabel__set_text(buttonCancelLabel, Name, 0LL);
-  Name = LocalizationManager__Get((System_String_o *)StringLiteral_11790/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MODIFY_COLOR"*/, 0LL);
+  Name = LocalizationManager__Get((System_String_o *)StringLiteral_11793/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MODIFY_COLOR"*/, 0LL);
   nowSkillBaseList = this->fields.nowSkillBaseList;
   if ( !nowSkillBaseList )
     goto LABEL_107;
@@ -410,7 +406,7 @@ LABEL_16:
       goto LABEL_107;
     if ( v53 >= nowSkillInfoList->max_length )
 LABEL_112:
-      sub_1B6432C(Name, v48);
+      sub_1B64AD4(Name, OverwriteTDName);
     v54 = (SkillInfo_o *)*((_QWORD *)&nowSkillInfoList->obj.klass + v51);
     if ( v54 && v54->fields.id >= 1 && v54->fields.lv >= 1 )
     {
@@ -428,7 +424,7 @@ LABEL_112:
       Name = (System_String_o *)*((_QWORD *)&nowSkillIconList->obj.klass + v51);
       if ( !Name )
         goto LABEL_107;
-      SkillIconComponent__Set_37921136((SkillIconComponent_o *)Name, v54->fields.id, v54->fields.lv, 0LL);
+      SkillIconComponent__Set_37925516((SkillIconComponent_o *)Name, v54->fields.id, v54->fields.lv, 0LL);
       nowSkillNameList = this->fields.nowSkillNameList;
       if ( !nowSkillNameList )
         goto LABEL_107;
@@ -485,7 +481,7 @@ LABEL_112:
       Name = (System_String_o *)*((_QWORD *)&nextSkillIconList->obj.klass + v59);
       if ( !Name )
         goto LABEL_107;
-      SkillIconComponent__Set_37921136((SkillIconComponent_o *)Name, v62->fields.id, v62->fields.lv, 0LL);
+      SkillIconComponent__Set_37925516((SkillIconComponent_o *)Name, v62->fields.id, v62->fields.lv, 0LL);
       if ( !nowSkillInfoList )
         goto LABEL_107;
       v64 = nowSkillInfoList->max_length;
@@ -516,7 +512,7 @@ LABEL_72:
           goto LABEL_112;
         v67 = (UIRangeLabel_o *)*((_QWORD *)&v68->obj.klass + v59);
         v69 = SkillInfo__GetName(v62, 0LL);
-        Name = System_String__Concat_61375396(v50, v69, 0LL);
+        Name = System_String__Concat_61383576(v50, v69, 0LL);
         if ( !v67 )
           goto LABEL_107;
       }
@@ -538,16 +534,16 @@ LABEL_72:
   }
   v70 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
   if ( (*(_BYTE *)(v70 + 309) & 1) == 0 )
-    v70 = sub_1BB5FA4(v70);
+    v70 = sub_1BB674C(v70);
   v71 = *(_QWORD *)(*(_QWORD *)(v70 + 192) + 16LL);
   if ( (*(_BYTE *)(v71 + 309) & 1) == 0 )
-    v71 = sub_1BB5FA4(v71);
+    v71 = sub_1BB674C(v71);
   Name = **(System_String_o ***)(v71 + 184);
   if ( !Name )
     goto LABEL_107;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Name,
-                        (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_ServantLimitAddMaster___);
+                        (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_ServantLimitAddMaster___);
   if ( nowTdInfo && nowTdInfo->fields.id >= 1 )
   {
     Name = TreasureDvcInfo__GetName(nowTdInfo, svtId, 0LL);
@@ -570,7 +566,7 @@ LABEL_72:
     v75 = this->fields.nowNpNameLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Name = LocalizationManager__Get((System_String_o *)StringLiteral_9256/*"NO_ENTRY_NAME"*/, 0LL);
+    Name = LocalizationManager__Get((System_String_o *)StringLiteral_9258/*"NO_ENTRY_NAME"*/, 0LL);
     if ( !v75 )
       goto LABEL_107;
     v73 = Name;
@@ -584,9 +580,9 @@ LABEL_72:
       nextNpNameLabel = this->fields.nextNpNameLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      OverwriteTDName = LocalizationManager__Get((System_String_o *)StringLiteral_9256/*"NO_ENTRY_NAME"*/, 0LL);
+      OverwriteTDName = LocalizationManager__Get((System_String_o *)StringLiteral_9258/*"NO_ENTRY_NAME"*/, 0LL);
 LABEL_109:
-      Name = System_String__Concat_61375396(v50, OverwriteTDName, 0LL);
+      Name = System_String__Concat_61383576(v50, OverwriteTDName, 0LL);
       if ( !nextNpNameLabel )
         goto LABEL_107;
       goto LABEL_110;
@@ -594,7 +590,7 @@ LABEL_109:
     nextNpNameLabel = this->fields.nextNpNameLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Name = LocalizationManager__Get((System_String_o *)StringLiteral_9256/*"NO_ENTRY_NAME"*/, 0LL);
+    Name = LocalizationManager__Get((System_String_o *)StringLiteral_9258/*"NO_ENTRY_NAME"*/, 0LL);
     if ( nextNpNameLabel )
     {
 LABEL_110:
@@ -603,7 +599,7 @@ LABEL_110:
       goto LABEL_111;
     }
 LABEL_107:
-    sub_1B64324(Name);
+    sub_1B64ACC(Name, OverwriteTDName);
   }
   Name = TreasureDvcInfo__GetName(nextTdInfo, svtId, 0LL);
   if ( !MasterData_object )
@@ -626,9 +622,9 @@ LABEL_107:
 LABEL_111:
   UILabel__set_text((UILabel_o *)Name, OverwriteTDName, 0LL);
   this->fields.isButtonEnable = 0;
-  v80 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v78, v79);
-  System_Action___ctor(v80, (Il2CppObject *)this, Method_ServantStatusBattleConfirmDialog_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v80, 0, 0LL);
+  v77 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  System_Action___ctor(v77, (Il2CppObject *)this, Method_ServantStatusBattleConfirmDialog_EndOpen__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v77, 0, 0LL);
 }
 
 
@@ -650,15 +646,15 @@ void __fastcall ServantStatusBattleConfirmDialog_ClickDelegate___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B6406C(&this->fields.method);
+  sub_1B64814(&this->fields.method);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B64188(v6) & 1) == 0 )
+  if ( (sub_1B64930(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B64340(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B641F0(v10, 0LL);
+      v10 = sub_1B64AE8(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B64998(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -670,9 +666,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19A5D0C;
+  this->fields.m_target = (Il2CppObject *)sub_19A64B4;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19A5CC4;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19A646C;
 }
 
 
@@ -688,14 +684,14 @@ System_IAsyncResult_o *__fastcall ServantStatusBattleConfirmDialog_ClickDelegate
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isDecide;
-  if ( (byte_49F80DB & 1) == 0 )
+  if ( (byte_49FA1CB & 1) == 0 )
   {
-    sub_1B640C8(&bool_TypeInfo, isDecide);
-    byte_49F80DB = 1;
+    sub_1B64870(&bool_TypeInfo, isDecide);
+    byte_49FA1CB = 1;
   }
   v9[1] = 0LL;
-  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_1B6407C(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
+  return (System_IAsyncResult_o *)sub_1B64824(this, v9, callback, object);
 }
 
 
@@ -704,7 +700,7 @@ void __fastcall ServantStatusBattleConfirmDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B64080(result, 0LL, method);
+  sub_1B64828(result, 0LL, method);
 }
 
 

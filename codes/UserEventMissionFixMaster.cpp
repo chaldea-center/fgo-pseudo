@@ -1,14 +1,14 @@
 void __fastcall UserEventMissionFixMaster___ctor(UserEventMissionFixMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FD05D & 1) == 0 )
+  if ( (byte_49FF156 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataMasterBase_UserEventMissionFixMaster__UserEventMissionFixEntity__string___ctor__, method);
-    byte_49FD05D = 1;
+    sub_1B64870(&Method_DataMasterBase_UserEventMissionFixMaster__UserEventMissionFixEntity__string___ctor__, method);
+    byte_49FF156 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     242,
-    (const MethodInfo_30D41BC *)Method_DataMasterBase_UserEventMissionFixMaster__UserEventMissionFixEntity__string___ctor__);
+    (const MethodInfo_30D6498 *)Method_DataMasterBase_UserEventMissionFixMaster__UserEventMissionFixEntity__string___ctor__);
 }
 
 
@@ -21,18 +21,18 @@ UserEventMissionFixEntity_o *__fastcall UserEventMissionFixMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_49FD05B & 1) == 0 )
+  if ( (byte_49FF154 & 1) == 0 )
   {
-    sub_1B640C8(
+    sub_1B64870(
       &Method_DataMasterBase_UserEventMissionFixMaster__UserEventMissionFixEntity__string__GetEntity__,
       userId);
-    byte_49FD05B = 1;
+    byte_49FF154 = 1;
   }
   PK = (Il2CppObject *)UserEventMissionFixEntity__CreatePK(userId, missionId, *(const MethodInfo **)&missionId);
   return (UserEventMissionFixEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                           PK,
-                                          (const MethodInfo_30D41FC *)Method_DataMasterBase_UserEventMissionFixMaster__UserEventMissionFixEntity__string__GetEntity__);
+                                          (const MethodInfo_30D64D8 *)Method_DataMasterBase_UserEventMissionFixMaster__UserEventMissionFixEntity__string__GetEntity__);
 }
 
 
@@ -45,17 +45,17 @@ bool __fastcall UserEventMissionFixMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_49FD05C & 1) == 0 )
+  if ( (byte_49FF155 & 1) == 0 )
   {
-    sub_1B640C8(
+    sub_1B64870(
       &Method_DataMasterBase_UserEventMissionFixMaster__UserEventMissionFixEntity__string__TryGetEntity__,
       entity);
-    byte_49FD05C = 1;
+    byte_49FF155 = 1;
   }
   PK = (Il2CppObject *)UserEventMissionFixEntity__CreatePK(userId, missionId, (const MethodInfo *)userId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_30D424C *)Method_DataMasterBase_UserEventMissionFixMaster__UserEventMissionFixEntity__string__TryGetEntity__);
+           (const MethodInfo_30D6528 *)Method_DataMasterBase_UserEventMissionFixMaster__UserEventMissionFixEntity__string__TryGetEntity__);
 }

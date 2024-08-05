@@ -6,7 +6,8 @@ void __fastcall ItemTransitionType___ctor(ItemTransitionType_o *this, const Meth
 
 int32_t __fastcall ItemTransitionType__GetSortPriority(int32_t type, const MethodInfo *method)
 {
-  if ( (unsigned int)(type - 1) >= 0x10 )
+  if ( (unsigned int)(type - 1) > 0x11 )
     return 0x7FFFFFFF;
-  return type;
+  else
+    return dword_BDD588[type - 1];
 }

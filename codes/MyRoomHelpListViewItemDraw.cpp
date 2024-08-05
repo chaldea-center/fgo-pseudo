@@ -16,9 +16,9 @@ void __fastcall MyRoomHelpListViewItemDraw__SetItem(
   __int64 v9; // x1
   UnityEngine_Object_o *rangeSprite; // x22
   UnityEngine_Component_o *gameObject; // x0
+  const MethodInfo *v12; // x1
   struct MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *info; // x8
   System_String_o *imageName; // x21
-  const MethodInfo *v14; // x1
   UILabel_o *infoTextLabel; // x22
   System_String_o *v16; // x1
   UILabel_o *itemNameLabel; // x21
@@ -40,13 +40,13 @@ void __fastcall MyRoomHelpListViewItemDraw__SetItem(
   float v33; // s9
   UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_49F7FF6 & 1) == 0 )
+  if ( (byte_49FA0E6 & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, item);
-    sub_1B640C8(&StringLiteral_20281/*"img_menuboard_01"*/, v7);
-    sub_1B640C8(&StringLiteral_1/*""*/, v8);
-    sub_1B640C8(&StringLiteral_20409/*"img_tutorial_txtbg"*/, v9);
-    byte_49F7FF6 = 1;
+    sub_1B64870(&UnityEngine_Object_TypeInfo, item);
+    sub_1B64870(&StringLiteral_20284/*"img_menuboard_01"*/, v7);
+    sub_1B64870(&StringLiteral_1/*""*/, v8);
+    sub_1B64870(&StringLiteral_20412/*"img_tutorial_txtbg"*/, v9);
+    byte_49FA0E6 = 1;
   }
   if ( item )
   {
@@ -76,12 +76,12 @@ void __fastcall MyRoomHelpListViewItemDraw__SetItem(
       {
         if ( !infoTextLabel )
           goto LABEL_41;
-        imageName = (System_String_o *)StringLiteral_20281/*"img_menuboard_01"*/;
+        imageName = (System_String_o *)StringLiteral_20284/*"img_menuboard_01"*/;
         v16 = (System_String_o *)StringLiteral_1/*""*/;
       }
       else
       {
-        gameObject = (UnityEngine_Component_o *)MyRoomHelpListViewItem__get_InfoText(item, v14);
+        gameObject = (UnityEngine_Component_o *)MyRoomHelpListViewItem__get_InfoText(item, v12);
         if ( !infoTextLabel )
           goto LABEL_41;
         v16 = (System_String_o *)gameObject;
@@ -162,7 +162,7 @@ void __fastcall MyRoomHelpListViewItemDraw__SetItem(
                   gameObject = (UnityEngine_Component_o *)this->fields.baseTextSprite;
                   if ( gameObject )
                   {
-                    UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)StringLiteral_20409/*"img_tutorial_txtbg"*/, 0LL);
+                    UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)StringLiteral_20412/*"img_tutorial_txtbg"*/, 0LL);
                     gameObject = (UnityEngine_Component_o *)this->fields.infoTextLabel;
                     if ( gameObject )
                     {
@@ -197,7 +197,7 @@ void __fastcall MyRoomHelpListViewItemDraw__SetItem(
         }
       }
 LABEL_41:
-      sub_1B64324(gameObject);
+      sub_1B64ACC(gameObject, v12);
     }
   }
 }

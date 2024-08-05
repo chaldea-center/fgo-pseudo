@@ -1,9 +1,10 @@
-// attributes: thunk
 void __fastcall BattlePointGaugeCellTypeComponent___ctor(
         BattlePointGaugeCellTypeComponent_o *this,
         const MethodInfo *method)
 {
-  BattlePointGaugeComponent___ctor((BattlePointGaugeComponent_o *)this, method);
+  *(_QWORD *)&this->fields.lastStepUpEffectIdInTween = -1LL;
+  this->fields.lastUpPhaseInTween = -1;
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
 
@@ -16,23 +17,23 @@ void __fastcall BattlePointGaugeCellTypeComponent__UpdateProgressGauge(
   System_Collections_Generic_List_object__o *progressGaugeCells; // x0
   int32_t v7; // w21
 
-  if ( (byte_49FF353 & 1) == 0 )
+  if ( (byte_4A01455 & 1) == 0 )
   {
-    sub_1B640C8(&Method_System_Collections_Generic_List_GameObject__get_Count__, entity);
-    sub_1B640C8(&Method_System_Collections_Generic_List_GameObject__get_Item__, v5);
-    byte_49FF353 = 1;
+    sub_1B64870(&Method_System_Collections_Generic_List_GameObject__get_Count__, entity);
+    sub_1B64870(&Method_System_Collections_Generic_List_GameObject__get_Item__, v5);
+    byte_4A01455 = 1;
   }
   progressGaugeCells = (System_Collections_Generic_List_object__o *)this->fields.progressGaugeCells;
   if ( !progressGaugeCells )
 LABEL_9:
-    sub_1B64324(progressGaugeCells);
+    sub_1B64ACC(progressGaugeCells, entity);
   v7 = 0;
   while ( v7 < progressGaugeCells->fields._size )
   {
     progressGaugeCells = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                         progressGaugeCells,
                                                                         v7,
-                                                                        (const MethodInfo_34AD404 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                                        (const MethodInfo_34AF6E0 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     if ( entity )
     {
       if ( progressGaugeCells )
@@ -60,11 +61,11 @@ void __fastcall BattlePointGaugeCellTypeComponent__ValidateSerializedField(
   BattlePointGaugeSetting_o *setting; // x0
   int32_t v5; // w20
 
-  if ( (byte_49FF352 & 1) == 0 )
+  if ( (byte_4A01454 & 1) == 0 )
   {
-    sub_1B640C8(&Method_System_Collections_Generic_List_GameObject__get_Count__, method);
-    sub_1B640C8(&Method_System_Collections_Generic_List_GameObject__get_Item__, v3);
-    byte_49FF352 = 1;
+    sub_1B64870(&Method_System_Collections_Generic_List_GameObject__get_Count__, method);
+    sub_1B64870(&Method_System_Collections_Generic_List_GameObject__get_Item__, v3);
+    byte_4A01454 = 1;
   }
   setting = this->fields.setting;
   if ( !setting
@@ -72,7 +73,7 @@ void __fastcall BattlePointGaugeCellTypeComponent__ValidateSerializedField(
         (setting = (BattlePointGaugeSetting_o *)this->fields.progressGaugeCells) == 0LL) )
   {
 LABEL_8:
-    sub_1B64324(setting);
+    sub_1B64ACC(setting, method);
   }
   v5 = 0;
   while ( v5 < SLODWORD(setting->fields.sprite) )
@@ -80,7 +81,7 @@ LABEL_8:
     System_Collections_Generic_List_object___get_Item(
       (System_Collections_Generic_List_object__o *)setting,
       v5,
-      (const MethodInfo_34AD404 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+      (const MethodInfo_34AF6E0 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     setting = (BattlePointGaugeSetting_o *)this->fields.progressGaugeCells;
     ++v5;
     if ( !setting )

@@ -1,13 +1,13 @@
 void __fastcall VoiceReleaseEntity___ctor(VoiceReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FD323 & 1) == 0 )
+  if ( (byte_49FF41C & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataEntityBase_string___ctor__, method);
-    byte_49FD323 = 1;
+    sub_1B64870(&Method_DataEntityBase_string___ctor__, method);
+    byte_49FF41C = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30D3D1C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D5FF8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall VoiceReleaseEntity__CreatePK(
         int32_t condType,
         const MethodInfo *method)
 {
-  if ( (byte_49FD321 & 1) == 0 )
+  if ( (byte_49FF41A & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataEntityBase_CreateMultiplePK_string__long___, *(_QWORD *)&condType);
-    byte_49FD321 = 1;
+    sub_1B64870(&Method_DataEntityBase_CreateMultiplePK_string__long___, *(_QWORD *)&condType);
+    byte_49FF41A = 1;
   }
   return DataEntityBase__CreateMultiplePK_object__long_(
            (Il2CppObject *)voiceId,
            condType,
-           (const MethodInfo_2E378A4 *)Method_DataEntityBase_CreateMultiplePK_string__long___);
+           (const MethodInfo_2E39B80 *)Method_DataEntityBase_CreateMultiplePK_string__long___);
 }
 
 
@@ -35,15 +35,15 @@ System_String_o *__fastcall VoiceReleaseEntity__CreatePrimaryKey(VoiceReleaseEnt
   System_String_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_49FD320 & 1) == 0 )
+  if ( (byte_49FF419 & 1) == 0 )
   {
-    sub_1B640C8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, method);
-    byte_49FD320 = 1;
+    sub_1B64870(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, method);
+    byte_49FF419 = 1;
   }
   voiceId = this->fields.voiceId;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-  v4 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_46207452(voiceId, 0LL);
+  v4 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_46216376(voiceId, 0LL);
   return VoiceReleaseEntity__CreatePK(v4, this->fields.condType, v5);
 }
 
@@ -56,11 +56,11 @@ bool __fastcall VoiceReleaseEntity__IsCondEnable(VoiceReleaseEntity_o *this, int
   int32_t condType; // w21
   int64_t UserId; // x22
 
-  if ( (byte_49FD322 & 1) == 0 )
+  if ( (byte_49FF41B & 1) == 0 )
   {
-    sub_1B640C8(&CondType_TypeInfo, *(_QWORD *)&svtId);
-    sub_1B640C8(&NetworkManager_TypeInfo, v5);
-    byte_49FD322 = 1;
+    sub_1B64870(&CondType_TypeInfo, *(_QWORD *)&svtId);
+    sub_1B64870(&NetworkManager_TypeInfo, v5);
+    byte_49FF41B = 1;
   }
   condType = this->fields.condType;
   condValue = this->fields.condValue;
@@ -69,5 +69,5 @@ bool __fastcall VoiceReleaseEntity__IsCondEnable(VoiceReleaseEntity_o *this, int
   UserId = NetworkManager__get_UserId(0LL);
   if ( !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-  return CondType__IsOpen_37324144(condType, condValue, UserId, svtId, 0LL);
+  return CondType__IsOpen_37328508(condType, condValue, UserId, svtId, 0LL);
 }

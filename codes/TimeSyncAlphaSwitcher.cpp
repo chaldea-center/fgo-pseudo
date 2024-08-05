@@ -13,7 +13,7 @@ void __fastcall TimeSyncAlphaSwitcher__Clear(TimeSyncAlphaSwitcher_o *this, cons
   widget = this->fields.widget;
   *(_QWORD *)&this->fields.toggleNum = 1LL;
   if ( !widget )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, method);
   ((void (__fastcall *)(struct UIWidget_o *, Il2CppMethodPointer, float))widget->klass->vtable._8_set_alpha.method)(
     widget,
     widget->klass->vtable._9_CalculateFinalAlpha.methodPtr,
@@ -60,68 +60,69 @@ void __fastcall TimeSyncAlphaSwitcher__Update(TimeSyncAlphaSwitcher_o *this, con
 
 void __fastcall TimeSyncAlphaSwitcher__UpdateAlpha(TimeSyncAlphaSwitcher_o *this, const MethodInfo *method)
 {
-  long double v3; // q0
+  __int64 v3; // x1
+  long double v4; // q0
   int32_t firstFreqCount_k__BackingField; // w8
-  struct UIWidget_o *v5; // x0
-  void (__fastcall *v6)(long double); // x2
+  struct UIWidget_o *v6; // x0
+  void (__fastcall *v7)(long double); // x2
   UnityEngine_AnimationCurve_o *alphaCurve; // x20
   float time; // s0
-  float v9; // s8
-  float v10; // s0
+  float v10; // s8
   float v11; // s0
+  float v12; // s0
   struct UIWidget_o *widget; // x20
-  float v13; // s8
-  float v14; // s0
-  int v15; // w8
-  float v16; // s0
+  float v14; // s8
+  float v15; // s0
+  int v16; // w8
+  float v17; // s0
 
   if ( this->fields.toggleNum >= 2 )
   {
-    *(float *)&v3 = UnityEngine_Time__get_time(0LL);
+    *(float *)&v4 = UnityEngine_Time__get_time(0LL);
     firstFreqCount_k__BackingField = this->fields._firstFreqCount_k__BackingField;
-    if ( *(float *)&v3 >= (float)((float)((float)firstFreqCount_k__BackingField + 0.5)
+    if ( *(float *)&v4 >= (float)((float)((float)firstFreqCount_k__BackingField + 0.5)
                                 * (float)(this->fields.toggleFreqRate * 3.1416)) )
     {
       alphaCurve = this->fields.alphaCurve;
       time = UnityEngine_Time__get_time(0LL);
       if ( alphaCurve )
       {
-        v9 = this->fields.toggleFreqRate * 3.1416;
-        v10 = fmodf(time, v9);
-        v11 = UnityEngine_AnimationCurve__Evaluate(alphaCurve, v10 / v9, 0LL);
+        v10 = this->fields.toggleFreqRate * 3.1416;
+        v11 = fmodf(time, v10);
+        v12 = UnityEngine_AnimationCurve__Evaluate(alphaCurve, v11 / v10, 0LL);
         widget = this->fields.widget;
-        v13 = v11;
-        *(float *)&v3 = UnityEngine_Time__get_time(0LL);
+        v14 = v12;
+        *(float *)&v4 = UnityEngine_Time__get_time(0LL);
         if ( widget )
         {
-          v14 = *(float *)&v3 / (float)(this->fields.toggleFreqRate * 3.1416);
-          v15 = (int)v14;
-          if ( v14 == INFINITY )
-            v15 = 0x80000000;
-          v6 = (void (__fastcall *)(long double))widget->klass->vtable._8_set_alpha.method;
-          v16 = 0.0;
-          if ( v15 % this->fields.toggleNum == this->fields.toggleIndex )
-            v16 = 1.0;
-          *(float *)&v3 = v13 * v16;
+          v15 = *(float *)&v4 / (float)(this->fields.toggleFreqRate * 3.1416);
+          v16 = (int)v15;
+          if ( v15 == INFINITY )
+            v16 = 0x80000000;
+          v7 = (void (__fastcall *)(long double))widget->klass->vtable._8_set_alpha.method;
+          v17 = 0.0;
+          if ( v16 % this->fields.toggleNum == this->fields.toggleIndex )
+            v17 = 1.0;
+          *(float *)&v4 = v14 * v17;
           goto LABEL_15;
         }
       }
     }
     else
     {
-      v5 = this->fields.widget;
-      if ( v5 )
+      v6 = this->fields.widget;
+      if ( v6 )
       {
-        LODWORD(v3) = 0;
-        v6 = (void (__fastcall *)(long double))v5->klass->vtable._8_set_alpha.method;
+        LODWORD(v4) = 0;
+        v7 = (void (__fastcall *)(long double))v6->klass->vtable._8_set_alpha.method;
         if ( this->fields.toggleIndex == firstFreqCount_k__BackingField % this->fields.toggleNum )
-          *(float *)&v3 = 1.0;
+          *(float *)&v4 = 1.0;
 LABEL_15:
-        v6(v3);
+        v7(v4);
         return;
       }
     }
-    sub_1B64324(v5);
+    sub_1B64ACC(v6, v3);
   }
 }
 

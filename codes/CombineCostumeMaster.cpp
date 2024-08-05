@@ -1,14 +1,14 @@
 void __fastcall CombineCostumeMaster___ctor(CombineCostumeMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FC1CC & 1) == 0 )
+  if ( (byte_49FE2C4 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string___ctor__, method);
-    byte_49FC1CC = 1;
+    sub_1B64870(&Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string___ctor__, method);
+    byte_49FE2C4 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     205,
-    (const MethodInfo_30D41BC *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string___ctor__);
+    (const MethodInfo_30D6498 *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string___ctor__);
 }
 
 
@@ -25,34 +25,35 @@ void __fastcall CombineCostumeMaster__CheckNeedCombineInfo(
   int32_t v14; // w3
   const MethodInfo *v15; // x4
   _BOOL8 v16; // x0
-  int32_t v17; // w2
-  int32_t v18; // w3
-  System_Int32_array *v19; // x1
-  int32_t v20; // w2
-  int32_t v21; // w3
-  System_Int32_array *v22; // x1
+  __int64 v17; // x1
+  int32_t v18; // w2
+  int32_t v19; // w3
+  System_Int32_array *v20; // x1
+  int32_t v21; // w2
+  int32_t v22; // w3
+  System_Int32_array *v23; // x1
   CombineCostumeEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
   entity = 0LL;
   *itemIds = 0LL;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)itemIds, 0, costumeId, (int32_t)itemIds);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)itemIds, 0, costumeId, (int32_t)itemIds);
   *itemNums = 0LL;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)itemNums, 0, v13, v14);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)itemNums, 0, v13, v14);
   *qp = 0;
   v16 = CombineCostumeMaster__TryGetEntity(this, &entity, svtId, costumeId, v15);
   if ( v16 )
   {
     if ( !entity
-      || (v19 = entity->fields.itemIds,
-          *itemIds = v19,
-          sub_1B6406C((ServantStatusBattleListViewItem_o *)itemIds, (int32_t)v19, v17, v18),
+      || (v20 = entity->fields.itemIds,
+          *itemIds = v20,
+          sub_1B64814((ServantStatusBattleListViewItem_o *)itemIds, (int32_t)v20, v18, v19),
           !entity)
-      || (v22 = entity->fields.itemNums,
-          *itemNums = v22,
-          sub_1B6406C((ServantStatusBattleListViewItem_o *)itemNums, (int32_t)v22, v20, v21),
+      || (v23 = entity->fields.itemNums,
+          *itemNums = v23,
+          sub_1B64814((ServantStatusBattleListViewItem_o *)itemNums, (int32_t)v23, v21, v22),
           !entity) )
     {
-      sub_1B64324(v16);
+      sub_1B64ACC(v16, v17);
     }
     *qp = entity->fields.qp;
   }
@@ -68,18 +69,18 @@ CombineCostumeEntity_o *__fastcall CombineCostumeMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_49FC1CA & 1) == 0 )
+  if ( (byte_49FE2C2 & 1) == 0 )
   {
-    sub_1B640C8(
+    sub_1B64870(
       &Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__GetEntity__,
       *(_QWORD *)&svtId);
-    byte_49FC1CA = 1;
+    byte_49FE2C2 = 1;
   }
   PK = (Il2CppObject *)CombineCostumeEntity__CreatePK(svtId, costumeId, *(const MethodInfo **)&costumeId);
   return (CombineCostumeEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      PK,
-                                     (const MethodInfo_30D41FC *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__GetEntity__);
+                                     (const MethodInfo_30D64D8 *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__GetEntity__);
 }
 
 
@@ -94,21 +95,21 @@ bool __fastcall CombineCostumeMaster__IsClearCombineCondition(
   UserGameEntity_o *SelfUserGame; // x19
   const MethodInfo *v9; // x4
   Il2CppObject *Instance; // x0
-  CombineCostumeEntity_o *v11; // x8
+  __int64 v11; // x1
+  CombineCostumeEntity_o *v12; // x8
   struct System_Int32_array *itemIds; // x9
-  __int64 v13; // x20
-  il2cpp_array_size_t v14; // w21
-  __int64 v15; // x1
+  __int64 v14; // x20
+  il2cpp_array_size_t v15; // w21
   struct System_Int32_array *v16; // x8
   struct System_Int32_array *itemNums; // x10
   UserItemEntity_o *v19; // [xsp+8h] [xbp-48h] BYREF
   CombineCostumeEntity_o *entity; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_49FC1CD & 1) == 0 )
+  if ( (byte_49FE2C5 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataManager_GetMasterData_UserItemMaster___, *(_QWORD *)&svtId);
-    sub_1B640C8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    byte_49FC1CD = 1;
+    sub_1B64870(&Method_DataManager_GetMasterData_UserItemMaster___, *(_QWORD *)&svtId);
+    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    byte_49FE2C5 = 1;
   }
   entity = 0LL;
   v19 = 0LL;
@@ -116,26 +117,26 @@ bool __fastcall CombineCostumeMaster__IsClearCombineCondition(
   Instance = (Il2CppObject *)CombineCostumeMaster__TryGetEntity(this, &entity, svtId, costumeId, v9);
   if ( ((unsigned __int8)Instance & 1) == 0 )
     return 1;
-  v11 = entity;
+  v12 = entity;
   if ( !entity )
     goto LABEL_28;
   itemIds = entity->fields.itemIds;
   if ( itemIds )
   {
-    v13 = *(_QWORD *)&itemIds->max_length;
-    if ( v13 )
+    v14 = *(_QWORD *)&itemIds->max_length;
+    if ( v14 )
     {
-      if ( (int)v13 >= 1 )
+      if ( (int)v14 >= 1 )
       {
-        v14 = 0;
+        v15 = 0;
         while ( 1 )
         {
-          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( !Instance )
             break;
           Instance = DataManager__GetMasterData_object_(
                        (DataManager_o *)Instance,
-                       (const MethodInfo_2E393EC *)Method_DataManager_GetMasterData_UserItemMaster___);
+                       (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_UserItemMaster___);
           if ( !SelfUserGame )
             break;
           if ( !entity )
@@ -143,7 +144,7 @@ bool __fastcall CombineCostumeMaster__IsClearCombineCondition(
           v16 = entity->fields.itemIds;
           if ( !v16 )
             break;
-          if ( v14 >= v16->max_length )
+          if ( v15 >= v16->max_length )
             goto LABEL_29;
           if ( !Instance )
             break;
@@ -151,34 +152,34 @@ bool __fastcall CombineCostumeMaster__IsClearCombineCondition(
                                        (UserItemMaster_o *)Instance,
                                        &v19,
                                        SelfUserGame->fields.userId,
-                                       v16->m_Items[v14 + 1],
+                                       v16->m_Items[v15 + 1],
                                        0LL);
           if ( ((unsigned __int8)Instance & 1) == 0 )
             return 0;
           if ( !v19 )
             break;
-          v11 = entity;
+          v12 = entity;
           if ( !entity )
             break;
           itemNums = entity->fields.itemNums;
           if ( !itemNums )
             break;
-          if ( v14 >= itemNums->max_length )
+          if ( v15 >= itemNums->max_length )
 LABEL_29:
-            sub_1B6432C(Instance, v15);
-          if ( v19->fields.num < itemNums->m_Items[v14 + 1] )
+            sub_1B64AD4(Instance, v11);
+          if ( v19->fields.num < itemNums->m_Items[v15 + 1] )
             return 0;
-          if ( (_DWORD)v13 == ++v14 )
-            return SelfUserGame->fields.qp >= v11->fields.qp;
+          if ( (_DWORD)v14 == ++v15 )
+            return SelfUserGame->fields.qp >= v12->fields.qp;
         }
 LABEL_28:
-        sub_1B64324(Instance);
+        sub_1B64ACC(Instance, v11);
       }
     }
   }
   if ( !SelfUserGame )
     goto LABEL_28;
-  return SelfUserGame->fields.qp >= v11->fields.qp;
+  return SelfUserGame->fields.qp >= v12->fields.qp;
 }
 
 
@@ -192,15 +193,15 @@ bool __fastcall CombineCostumeMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_49FC1CB & 1) == 0 )
+  if ( (byte_49FE2C3 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__TryGetEntity__, entity);
-    byte_49FC1CB = 1;
+    sub_1B64870(&Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__TryGetEntity__, entity);
+    byte_49FE2C3 = 1;
   }
   PK = (Il2CppObject *)CombineCostumeEntity__CreatePK(svtId, costumeId, *(const MethodInfo **)&svtId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_30D424C *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__TryGetEntity__);
+           (const MethodInfo_30D6528 *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__TryGetEntity__);
 }

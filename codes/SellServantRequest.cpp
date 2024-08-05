@@ -21,45 +21,40 @@ void __fastcall SellServantRequest__beginRequest(
   int32_t v21; // w3
   System_Collections_Generic_IEnumerable_TSource__o *v22; // x0
   System_Collections_Generic_List_TSource__o *v23; // x0
-  __int64 v24; // x1
-  __int64 v25; // x2
-  SellServantRequest___c_c *v26; // x8
-  Il2CppObject *v27; // x21
+  SellServantRequest___c_c *v24; // x8
+  Il2CppObject *v25; // x21
   System_Func_T__TResult__o *_9__2_1; // x22
-  Il2CppObject *v29; // x23
-  struct SellServantRequest___c_StaticFields *v30; // x0
-  int32_t v31; // w2
-  int32_t v32; // w3
-  System_Collections_Generic_IEnumerable_TSource__o *v33; // x0
-  Il2CppObject *v34; // x20
+  Il2CppObject *v27; // x23
+  struct SellServantRequest___c_StaticFields *v28; // x0
+  int32_t v29; // w2
+  int32_t v30; // w3
+  System_Collections_Generic_IEnumerable_TSource__o *v31; // x0
+  Il2CppObject *v32; // x20
+  MiniMessagePack_MiniMessagePacker_o *v33; // x22
+  __int64 v34; // x0
   __int64 v35; // x1
-  __int64 v36; // x2
-  MiniMessagePack_MiniMessagePacker_o *v37; // x22
-  __int64 v38; // x0
-  System_Byte_array *v39; // x21
-  System_String_o *v40; // x0
-  const MethodInfo *v41; // x3
-  __int64 v42; // x1
-  __int64 v43; // x2
-  MiniMessagePack_MiniMessagePacker_o *v44; // x21
-  System_Byte_array *v45; // x0
-  System_String_o *v46; // x0
-  const MethodInfo *v47; // x3
-  const MethodInfo *v48; // x1
+  System_Byte_array *v36; // x21
+  System_String_o *v37; // x0
+  const MethodInfo *v38; // x3
+  MiniMessagePack_MiniMessagePacker_o *v39; // x21
+  System_Byte_array *v40; // x0
+  System_String_o *v41; // x0
+  const MethodInfo *v42; // x3
+  const MethodInfo *v43; // x1
 
-  if ( (byte_49FDD1C & 1) == 0 )
+  if ( (byte_49FFE17 & 1) == 0 )
   {
-    sub_1B640C8(&System_Convert_TypeInfo, servantUserIds);
-    sub_1B640C8(&Method_System_Linq_Enumerable_Select_long__SellServantRequest_UseSvtHash___, v7);
-    sub_1B640C8(&Method_System_Linq_Enumerable_ToList_SellServantRequest_UseSvtHash___, v8);
-    sub_1B640C8(&System_Func_long__SellServantRequest_UseSvtHash__TypeInfo, v9);
-    sub_1B640C8(&MiniMessagePack_MiniMessagePacker_TypeInfo, v10);
-    sub_1B640C8(&Method_SellServantRequest___c__beginRequest_b__2_0__, v11);
-    sub_1B640C8(&Method_SellServantRequest___c__beginRequest_b__2_1__, v12);
-    sub_1B640C8(&SellServantRequest___c_TypeInfo, v13);
-    sub_1B640C8(&StringLiteral_23000/*"sellData"*/, v14);
-    sub_1B640C8(&StringLiteral_22999/*"sellCommandCode"*/, v15);
-    byte_49FDD1C = 1;
+    sub_1B64870(&System_Convert_TypeInfo, servantUserIds);
+    sub_1B64870(&Method_System_Linq_Enumerable_Select_long__SellServantRequest_UseSvtHash___, v7);
+    sub_1B64870(&Method_System_Linq_Enumerable_ToList_SellServantRequest_UseSvtHash___, v8);
+    sub_1B64870(&System_Func_long__SellServantRequest_UseSvtHash__TypeInfo, v9);
+    sub_1B64870(&MiniMessagePack_MiniMessagePacker_TypeInfo, v10);
+    sub_1B64870(&Method_SellServantRequest___c__beginRequest_b__2_0__, v11);
+    sub_1B64870(&Method_SellServantRequest___c__beginRequest_b__2_1__, v12);
+    sub_1B64870(&SellServantRequest___c_TypeInfo, v13);
+    sub_1B64870(&StringLiteral_23003/*"sellData"*/, v14);
+    sub_1B64870(&StringLiteral_23002/*"sellCommandCode"*/, v15);
+    byte_49FFE17 = 1;
   }
   v16 = SellServantRequest___c_TypeInfo;
   if ( !SellServantRequest___c_TypeInfo->_2.cctor_finished )
@@ -76,72 +71,66 @@ void __fastcall SellServantRequest__beginRequest(
       v16 = SellServantRequest___c_TypeInfo;
     }
     v18 = (Il2CppObject *)v16->static_fields->__9;
-    _9__2_0 = (System_Func_T__TResult__o *)sub_1B64314(
-                                             System_Func_long__SellServantRequest_UseSvtHash__TypeInfo,
-                                             servantUserIds,
-                                             commandCodeUserIds);
+    _9__2_0 = (System_Func_T__TResult__o *)sub_1B64ABC(System_Func_long__SellServantRequest_UseSvtHash__TypeInfo);
     System_Func_long__object____ctor(_9__2_0, v18, Method_SellServantRequest___c__beginRequest_b__2_0__, 0LL);
     static_fields = SellServantRequest___c_TypeInfo->static_fields;
     static_fields->__9__2_0 = (struct System_Func_long__SellServantRequest_UseSvtHash__o *)_9__2_0;
-    sub_1B6406C((ServantStatusBattleListViewItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v20, v21);
+    sub_1B64814((ServantStatusBattleListViewItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v20, v21);
   }
   v22 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_long__object_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)servantUserIds,
                                                                (System_Func_TSource__TResult__o *)_9__2_0,
-                                                               (const MethodInfo_2E67E90 *)Method_System_Linq_Enumerable_Select_long__SellServantRequest_UseSvtHash___);
+                                                               (const MethodInfo_2E6A16C *)Method_System_Linq_Enumerable_Select_long__SellServantRequest_UseSvtHash___);
   v23 = System_Linq_Enumerable__ToList_object_(
           v22,
-          (const MethodInfo_2E7501C *)Method_System_Linq_Enumerable_ToList_SellServantRequest_UseSvtHash___);
-  v26 = SellServantRequest___c_TypeInfo;
-  v27 = (Il2CppObject *)v23;
+          (const MethodInfo_2E772F8 *)Method_System_Linq_Enumerable_ToList_SellServantRequest_UseSvtHash___);
+  v24 = SellServantRequest___c_TypeInfo;
+  v25 = (Il2CppObject *)v23;
   if ( !SellServantRequest___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(SellServantRequest___c_TypeInfo);
-    v26 = SellServantRequest___c_TypeInfo;
+    v24 = SellServantRequest___c_TypeInfo;
   }
-  _9__2_1 = (System_Func_T__TResult__o *)v26->static_fields->__9__2_1;
+  _9__2_1 = (System_Func_T__TResult__o *)v24->static_fields->__9__2_1;
   if ( !_9__2_1 )
   {
-    if ( !v26->_2.cctor_finished )
+    if ( !v24->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v26);
-      v26 = SellServantRequest___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v24);
+      v24 = SellServantRequest___c_TypeInfo;
     }
-    v29 = (Il2CppObject *)v26->static_fields->__9;
-    _9__2_1 = (System_Func_T__TResult__o *)sub_1B64314(
-                                             System_Func_long__SellServantRequest_UseSvtHash__TypeInfo,
-                                             v24,
-                                             v25);
-    System_Func_long__object____ctor(_9__2_1, v29, Method_SellServantRequest___c__beginRequest_b__2_1__, 0LL);
-    v30 = SellServantRequest___c_TypeInfo->static_fields;
-    v30->__9__2_1 = (struct System_Func_long__SellServantRequest_UseSvtHash__o *)_9__2_1;
-    sub_1B6406C((ServantStatusBattleListViewItem_o *)&v30->__9__2_1, (int32_t)_9__2_1, v31, v32);
+    v27 = (Il2CppObject *)v24->static_fields->__9;
+    _9__2_1 = (System_Func_T__TResult__o *)sub_1B64ABC(System_Func_long__SellServantRequest_UseSvtHash__TypeInfo);
+    System_Func_long__object____ctor(_9__2_1, v27, Method_SellServantRequest___c__beginRequest_b__2_1__, 0LL);
+    v28 = SellServantRequest___c_TypeInfo->static_fields;
+    v28->__9__2_1 = (struct System_Func_long__SellServantRequest_UseSvtHash__o *)_9__2_1;
+    sub_1B64814((ServantStatusBattleListViewItem_o *)&v28->__9__2_1, (int32_t)_9__2_1, v29, v30);
   }
-  v33 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_long__object_(
+  v31 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_long__object_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)commandCodeUserIds,
                                                                (System_Func_TSource__TResult__o *)_9__2_1,
-                                                               (const MethodInfo_2E67E90 *)Method_System_Linq_Enumerable_Select_long__SellServantRequest_UseSvtHash___);
-  v34 = (Il2CppObject *)System_Linq_Enumerable__ToList_object_(
-                          v33,
-                          (const MethodInfo_2E7501C *)Method_System_Linq_Enumerable_ToList_SellServantRequest_UseSvtHash___);
-  v37 = (MiniMessagePack_MiniMessagePacker_o *)sub_1B64314(MiniMessagePack_MiniMessagePacker_TypeInfo, v35, v36);
-  MiniMessagePack_MiniMessagePacker___ctor(v37, 0LL);
-  if ( !v37 )
+                                                               (const MethodInfo_2E6A16C *)Method_System_Linq_Enumerable_Select_long__SellServantRequest_UseSvtHash___);
+  v32 = (Il2CppObject *)System_Linq_Enumerable__ToList_object_(
+                          v31,
+                          (const MethodInfo_2E772F8 *)Method_System_Linq_Enumerable_ToList_SellServantRequest_UseSvtHash___);
+  v33 = (MiniMessagePack_MiniMessagePacker_o *)sub_1B64ABC(MiniMessagePack_MiniMessagePacker_TypeInfo);
+  MiniMessagePack_MiniMessagePacker___ctor(v33, 0LL);
+  if ( !v33 )
     goto LABEL_20;
-  v39 = MiniMessagePack_MiniMessagePacker__PackClass(v37, v27, 0LL);
+  v36 = MiniMessagePack_MiniMessagePacker__PackClass(v33, v25, 0LL);
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  v40 = System_Convert__ToBase64String(v39, 0LL);
-  RequestBase__addField_40850936((RequestBase_o *)this, (System_String_o *)StringLiteral_23000/*"sellData"*/, v40, v41);
-  v44 = (MiniMessagePack_MiniMessagePacker_o *)sub_1B64314(MiniMessagePack_MiniMessagePacker_TypeInfo, v42, v43);
-  MiniMessagePack_MiniMessagePacker___ctor(v44, 0LL);
-  if ( !v44 )
+  v37 = System_Convert__ToBase64String(v36, 0LL);
+  RequestBase__addField_40856068((RequestBase_o *)this, (System_String_o *)StringLiteral_23003/*"sellData"*/, v37, v38);
+  v39 = (MiniMessagePack_MiniMessagePacker_o *)sub_1B64ABC(MiniMessagePack_MiniMessagePacker_TypeInfo);
+  MiniMessagePack_MiniMessagePacker___ctor(v39, 0LL);
+  if ( !v39 )
 LABEL_20:
-    sub_1B64324(v38);
-  v45 = MiniMessagePack_MiniMessagePacker__PackClass(v44, v34, 0LL);
-  v46 = System_Convert__ToBase64String(v45, 0LL);
-  RequestBase__addField_40850936((RequestBase_o *)this, (System_String_o *)StringLiteral_22999/*"sellCommandCode"*/, v46, v47);
-  RequestBase__beginRequest((RequestBase_o *)this, v48);
+    sub_1B64ACC(v34, v35);
+  v40 = MiniMessagePack_MiniMessagePacker__PackClass(v39, v32, 0LL);
+  v41 = System_Convert__ToBase64String(v40, 0LL);
+  RequestBase__addField_40856068((RequestBase_o *)this, (System_String_o *)StringLiteral_23002/*"sellCommandCode"*/, v41, v42);
+  RequestBase__beginRequest((RequestBase_o *)this, v43);
 }
 
 
@@ -150,16 +139,16 @@ System_String_o *__fastcall SellServantRequest__getURL(SellServantRequest_o *thi
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_49FDD1B & 1) == 0 )
+  if ( (byte_49FFE16 & 1) == 0 )
   {
-    sub_1B640C8(&NetworkManager_TypeInfo, method);
-    sub_1B640C8(&StringLiteral_23175/*"shop/sellSvt"*/, v2);
-    byte_49FDD1B = 1;
+    sub_1B64870(&NetworkManager_TypeInfo, method);
+    sub_1B64870(&StringLiteral_23178/*"shop/sellSvt"*/, v2);
+    byte_49FFE16 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61375396(BaseUrl, (System_String_o *)StringLiteral_23175/*"shop/sellSvt"*/, 0LL);
+  return System_String__Concat_61383576(BaseUrl, (System_String_o *)StringLiteral_23178/*"shop/sellSvt"*/, 0LL);
 }
 
 
@@ -178,12 +167,12 @@ void __fastcall SellServantRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v13; // x8
 
-  if ( (byte_49FDD1D & 1) == 0 )
+  if ( (byte_49FFE18 & 1) == 0 )
   {
-    sub_1B640C8(&JsonManager_TypeInfo, responseList);
-    sub_1B640C8(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B640C8(&StringLiteral_21968/*"ng"*/, v6);
-    byte_49FDD1D = 1;
+    sub_1B64870(&JsonManager_TypeInfo, responseList);
+    sub_1B64870(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B64870(&StringLiteral_21971/*"ng"*/, v6);
+    byte_49FFE18 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -208,7 +197,7 @@ void __fastcall SellServantRequest__requestCompleted(
     if ( v13 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v13->fields.m_target)(
         v13->fields.original_method_info,
-        StringLiteral_21968/*"ng"*/,
+        StringLiteral_21971/*"ng"*/,
         *(_QWORD *)&v13->fields.extra_arg);
   }
 }
@@ -223,20 +212,19 @@ void __fastcall SellServantRequest_UseSvtHash___ctor(SellServantRequest_UseSvtHa
 void __fastcall SellServantRequest___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  __int64 v2; // x2
-  Il2CppObject *v3; // x19
-  int32_t v4; // w2
-  int32_t v5; // w3
+  Il2CppObject *v2; // x19
+  int32_t v3; // w2
+  int32_t v4; // w3
 
-  if ( (byte_49FDD1E & 1) == 0 )
+  if ( (byte_49FFE19 & 1) == 0 )
   {
-    sub_1B640C8(&SellServantRequest___c_TypeInfo, v1);
-    byte_49FDD1E = 1;
+    sub_1B64870(&SellServantRequest___c_TypeInfo, v1);
+    byte_49FFE19 = 1;
   }
-  v3 = (Il2CppObject *)sub_1B64314(SellServantRequest___c_TypeInfo, v1, v2);
-  System_Object___ctor(v3, 0LL);
-  SellServantRequest___c_TypeInfo->static_fields->__9 = (struct SellServantRequest___c_o *)v3;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)SellServantRequest___c_TypeInfo->static_fields, (int32_t)v3, v4, v5);
+  v2 = (Il2CppObject *)sub_1B64ABC(SellServantRequest___c_TypeInfo);
+  System_Object___ctor(v2, 0LL);
+  SellServantRequest___c_TypeInfo->static_fields->__9 = (struct SellServantRequest___c_o *)v2;
+  sub_1B64814((ServantStatusBattleListViewItem_o *)SellServantRequest___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -253,16 +241,17 @@ SellServantRequest_UseSvtHash_o *__fastcall SellServantRequest___c___beginReques
 {
   __int64 v4; // x20
   __int64 v5; // x0
+  __int64 v6; // x1
 
-  if ( (byte_49FDD1F & 1) == 0 )
+  if ( (byte_49FFE1A & 1) == 0 )
   {
-    sub_1B640C8(&SellServantRequest_UseSvtHash_TypeInfo, i);
-    byte_49FDD1F = 1;
+    sub_1B64870(&SellServantRequest_UseSvtHash_TypeInfo, i);
+    byte_49FFE1A = 1;
   }
-  v4 = sub_1B64314(SellServantRequest_UseSvtHash_TypeInfo, i, method);
+  v4 = sub_1B64ABC(SellServantRequest_UseSvtHash_TypeInfo);
   System_Object___ctor((Il2CppObject *)v4, 0LL);
   if ( !v4 )
-    sub_1B64324(v5);
+    sub_1B64ACC(v5, v6);
   *(_QWORD *)(v4 + 16) = i;
   *(_DWORD *)(v4 + 24) = 1;
   return (SellServantRequest_UseSvtHash_o *)v4;
@@ -276,16 +265,17 @@ SellServantRequest_UseSvtHash_o *__fastcall SellServantRequest___c___beginReques
 {
   __int64 v4; // x20
   __int64 v5; // x0
+  __int64 v6; // x1
 
-  if ( (byte_49FDD20 & 1) == 0 )
+  if ( (byte_49FFE1B & 1) == 0 )
   {
-    sub_1B640C8(&SellServantRequest_UseSvtHash_TypeInfo, i);
-    byte_49FDD20 = 1;
+    sub_1B64870(&SellServantRequest_UseSvtHash_TypeInfo, i);
+    byte_49FFE1B = 1;
   }
-  v4 = sub_1B64314(SellServantRequest_UseSvtHash_TypeInfo, i, method);
+  v4 = sub_1B64ABC(SellServantRequest_UseSvtHash_TypeInfo);
   System_Object___ctor((Il2CppObject *)v4, 0LL);
   if ( !v4 )
-    sub_1B64324(v5);
+    sub_1B64ACC(v5, v6);
   *(_QWORD *)(v4 + 16) = i;
   *(_DWORD *)(v4 + 24) = 1;
   return (SellServantRequest_UseSvtHash_o *)v4;

@@ -2,10 +2,10 @@ void __fastcall BoostSupportRequestItemListViewObject___ctor(
         BoostSupportRequestItemListViewObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_49F74D5 & 1) == 0 )
+  if ( (byte_49F95C5 & 1) == 0 )
   {
-    sub_1B640C8(&ListViewObject_TypeInfo, method);
-    byte_49F74D5 = 1;
+    sub_1B64870(&ListViewObject_TypeInfo, method);
+    byte_49F95C5 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -17,21 +17,22 @@ void __fastcall BoostSupportRequestItemListViewObject__Awake(
         BoostSupportRequestItemListViewObject_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
 
-  if ( (byte_49F74D0 & 1) == 0 )
+  if ( (byte_49F95C0 & 1) == 0 )
   {
-    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponent_BoostSupportRequestItemListViewItemDraw___, method);
-    byte_49F74D0 = 1;
+    sub_1B64870(&Method_UnityEngine_GameObject_GetComponent_BoostSupportRequestItemListViewItemDraw___, method);
+    byte_49F95C0 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, v3);
   this->fields.itemDraw = (struct BoostSupportRequestItemListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                                 dispObject,
-                                                                                (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_BoostSupportRequestItemListViewItemDraw___);
-  sub_1B6406C(&this->fields.itemDraw);
+                                                                                (const MethodInfo_2E8A1B4 *)Method_UnityEngine_GameObject_GetComponent_BoostSupportRequestItemListViewItemDraw___);
+  sub_1B64814(&this->fields.itemDraw);
 }
 
 
@@ -40,21 +41,22 @@ UnityEngine_GameObject_o *__fastcall BoostSupportRequestItemListViewObject__Crea
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *DragObject; // x0
-  UnityEngine_GameObject_o *v4; // x19
+  __int64 v4; // x1
+  UnityEngine_GameObject_o *v5; // x19
 
-  if ( (byte_49F74D1 & 1) == 0 )
+  if ( (byte_49F95C1 & 1) == 0 )
   {
-    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponent_BoostSupportRequestItemListViewObject___, method);
-    byte_49F74D1 = 1;
+    sub_1B64870(&Method_UnityEngine_GameObject_GetComponent_BoostSupportRequestItemListViewObject___, method);
+    byte_49F95C1 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0LL);
   if ( !DragObject )
-    sub_1B64324(0LL);
-  v4 = DragObject;
+    sub_1B64ACC(0LL, v4);
+  v5 = DragObject;
   UnityEngine_GameObject__GetComponent_object_(
     DragObject,
-    (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_BoostSupportRequestItemListViewObject___);
-  return v4;
+    (const MethodInfo_2E8A1B4 *)Method_UnityEngine_GameObject_GetComponent_BoostSupportRequestItemListViewObject___);
+  return v5;
 }
 
 
@@ -83,7 +85,7 @@ void __fastcall BoostSupportRequestItemListViewObject__EventMoveEnd(
   if ( callbackFunc )
   {
     *p_callbackFunc = 0LL;
-    sub_1B6406C(p_callbackFunc);
+    sub_1B64814(p_callbackFunc);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v3->fields.m_target)(
       v3->fields.original_method_info,
       *(_QWORD *)&v3->fields.extra_arg);
@@ -101,20 +103,21 @@ void __fastcall BoostSupportRequestItemListViewObject__Init(
   __int64 methodPtr_low; // x11
   struct ListViewItem_o *v9; // x22
   UnityEngine_Transform_o *transform; // x0
-  const MethodInfo *v11; // x1
+  __int64 v11; // x1
+  const MethodInfo *v12; // x1
   struct System_Action_o **p_callbackFunc; // x21
-  BoostSupportRequestItemListViewObject_o *v13; // x0
-  const MethodInfo *v14; // x3
+  BoostSupportRequestItemListViewObject_o *v14; // x0
+  const MethodInfo *v15; // x3
   BoostSupportRequestItemListViewObject_c *klass; // x8
-  int32_t v16; // w9
-  BoostSupportRequestItemListViewObject_c *v17; // x8
-  const MethodInfo *v18; // x1
-  struct System_Action_o *v19; // x19
+  int32_t v17; // w9
+  BoostSupportRequestItemListViewObject_c *v18; // x8
+  const MethodInfo *v19; // x1
+  struct System_Action_o *v20; // x19
 
-  if ( (byte_49F74D2 & 1) == 0 )
+  if ( (byte_49F95C2 & 1) == 0 )
   {
-    sub_1B640C8(&BoostSupportRequsetItemListViewItem_TypeInfo, callbackFunc);
-    byte_49F74D2 = 1;
+    sub_1B64870(&BoostSupportRequsetItemListViewItem_TypeInfo, callbackFunc);
+    byte_49F95C2 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -135,44 +138,44 @@ void __fastcall BoostSupportRequestItemListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1B64324(transform);
+    sub_1B64ACC(transform, v11);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   if ( displayOnly )
   {
     this->fields.dispMode = 4;
-    BoostSupportRequestItemListViewObject__SetupDisp(this, v11);
+    BoostSupportRequestItemListViewObject__SetupDisp(this, v12);
   }
   else
   {
     this->fields.callbackFunc = callbackFunc;
     p_callbackFunc = &this->fields.callbackFunc;
-    v13 = (BoostSupportRequestItemListViewObject_o *)sub_1B6406C(&this->fields.callbackFunc);
+    v14 = (BoostSupportRequestItemListViewObject_o *)sub_1B64814(&this->fields.callbackFunc);
     if ( v9 )
     {
       if ( LOBYTE(v9[1].fields.sortIndex) )
       {
         if ( BoostSupportRequestItemListViewObject__IsAllUserItemEnough(
-               v13,
+               v14,
                *(CommonConsumeEntity_array **)&v9[1].fields.selectNum,
                (UserItemEntity_array *)v9[1].monitor,
-               v14) )
+               v15) )
         {
           klass = this->klass;
-          v16 = 2;
+          v17 = 2;
         }
         else
         {
           klass = this->klass;
-          v16 = 3;
+          v17 = 3;
         }
       }
       else
       {
         klass = this->klass;
-        v16 = 1;
+        v17 = 1;
       }
-      this->fields.dispMode = v16;
+      this->fields.dispMode = v17;
       ((void (__fastcall *)(BoostSupportRequestItemListViewObject_o *, __int64, Il2CppMethodPointer))klass->vtable._9_SetInput.method)(
         this,
         1LL,
@@ -180,28 +183,28 @@ void __fastcall BoostSupportRequestItemListViewObject__Init(
     }
     else
     {
-      v17 = this->klass;
+      v18 = this->klass;
       this->fields.dispMode = 0;
-      ((void (__fastcall *)(BoostSupportRequestItemListViewObject_o *, _QWORD, Il2CppMethodPointer))v17->vtable._9_SetInput.method)(
+      ((void (__fastcall *)(BoostSupportRequestItemListViewObject_o *, _QWORD, Il2CppMethodPointer))v18->vtable._9_SetInput.method)(
         this,
         0LL,
-        v17->vtable._10_Invalidation.methodPtr);
+        v18->vtable._10_Invalidation.methodPtr);
     }
-    BoostSupportRequestItemListViewObject__SetupDisp(this, v18);
-    v19 = this->fields.callbackFunc;
-    if ( v19 )
+    BoostSupportRequestItemListViewObject__SetupDisp(this, v19);
+    v20 = this->fields.callbackFunc;
+    if ( v20 )
     {
       *p_callbackFunc = 0LL;
-      sub_1B6406C(p_callbackFunc);
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v19->fields.m_target)(
-        v19->fields.original_method_info,
-        *(_QWORD *)&v19->fields.extra_arg);
+      sub_1B64814(p_callbackFunc);
+      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v20->fields.m_target)(
+        v20->fields.original_method_info,
+        *(_QWORD *)&v20->fields.extra_arg);
     }
   }
 }
 
 
-void __fastcall BoostSupportRequestItemListViewObject__Init_30286164(
+void __fastcall BoostSupportRequestItemListViewObject__Init_30288132(
         BoostSupportRequestItemListViewObject_o *this,
         System_Action_o *callbackFunc,
         const MethodInfo *method)
@@ -212,7 +215,7 @@ void __fastcall BoostSupportRequestItemListViewObject__Init_30286164(
 }
 
 
-void __fastcall BoostSupportRequestItemListViewObject__Init_30288428(
+void __fastcall BoostSupportRequestItemListViewObject__Init_30290396(
         BoostSupportRequestItemListViewObject_o *this,
         const MethodInfo *method)
 {
@@ -233,12 +236,12 @@ bool __fastcall BoostSupportRequestItemListViewObject__IsAllUserItemEnough(
   unsigned __int64 v8; // x23
   CommonConsumeEntity_o *v9; // x21
 
-  if ( (byte_49F74D3 & 1) == 0 )
+  if ( (byte_49F95C3 & 1) == 0 )
   {
-    this = (BoostSupportRequestItemListViewObject_o *)sub_1B640C8(
+    this = (BoostSupportRequestItemListViewObject_o *)sub_1B64870(
                                                         &Method_SingletonTemplate_BoostFunctionUtility__get_Instance__,
                                                         consumeList);
-    byte_49F74D3 = 1;
+    byte_49F95C3 = 1;
   }
   if ( !consumeList )
     goto LABEL_12;
@@ -250,9 +253,9 @@ bool __fastcall BoostSupportRequestItemListViewObject__IsAllUserItemEnough(
     while ( 1 )
     {
       if ( v8 >= (unsigned int)v6 )
-        sub_1B6432C(this, consumeList, userItemEntityList, method);
+        sub_1B64AD4(this, consumeList, userItemEntityList, method);
       v9 = consumeList->m_Items[v8];
-      this = (BoostSupportRequestItemListViewObject_o *)SingletonTemplate_object___get_Instance((const MethodInfo_36EC45C *)Method_SingletonTemplate_BoostFunctionUtility__get_Instance__);
+      this = (BoostSupportRequestItemListViewObject_o *)SingletonTemplate_object___get_Instance((const MethodInfo_36EE738 *)Method_SingletonTemplate_BoostFunctionUtility__get_Instance__);
       if ( !this )
         break;
       this = (BoostSupportRequestItemListViewObject_o *)BoostFunctionUtility__IsEnoughUserItem(
@@ -270,7 +273,7 @@ bool __fastcall BoostSupportRequestItemListViewObject__IsAllUserItemEnough(
       return !v7;
     }
 LABEL_12:
-    sub_1B64324(this);
+    sub_1B64ACC(this, consumeList);
   }
   return !v7;
 }
@@ -282,7 +285,7 @@ void __fastcall BoostSupportRequestItemListViewObject__SetDirectItem(
         const MethodInfo *method)
 {
   this->fields.linkItem = (struct ListViewItem_o *)item;
-  sub_1B6406C(&this->fields.linkItem);
+  sub_1B64814(&this->fields.linkItem);
 }
 
 
@@ -292,7 +295,7 @@ void __fastcall BoostSupportRequestItemListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_40419096((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_40424228((ListViewObject_o *)this, item, seed, 0LL);
 }
 
 
@@ -305,14 +308,15 @@ void __fastcall BoostSupportRequestItemListViewObject__SetupDisp(
   __int64 methodPtr_low; // x11
   struct ListViewItem_o *v6; // x20
   UnityEngine_Object_o *itemDraw; // x21
-  const MethodInfo *v8; // x3
-  BoostSupportRequestItemListViewItemDraw_o *v9; // x0
+  __int64 v8; // x1
+  const MethodInfo *v9; // x3
+  BoostSupportRequestItemListViewItemDraw_o *v10; // x0
 
-  if ( (byte_49F74D4 & 1) == 0 )
+  if ( (byte_49F95C4 & 1) == 0 )
   {
-    sub_1B640C8(&BoostSupportRequsetItemListViewItem_TypeInfo, method);
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, v3);
-    byte_49F74D4 = 1;
+    sub_1B64870(&BoostSupportRequsetItemListViewItem_TypeInfo, method);
+    sub_1B64870(&UnityEngine_Object_TypeInfo, v3);
+    byte_49F95C4 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -334,14 +338,14 @@ void __fastcall BoostSupportRequestItemListViewObject__SetupDisp(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
   {
-    v9 = this->fields.itemDraw;
-    if ( !v9 )
-      sub_1B64324(0LL);
+    v10 = this->fields.itemDraw;
+    if ( !v10 )
+      sub_1B64ACC(0LL, v8);
     BoostSupportRequestItemListViewItemDraw__SetItem(
-      v9,
+      v10,
       (BoostSupportRequsetItemListViewItem_o *)v6,
       this->fields.dispMode,
-      v8);
+      v9);
   }
 }
 
@@ -361,10 +365,10 @@ void __fastcall BoostSupportRequestItemListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_49F74CE & 1) == 0 )
+  if ( (byte_49F95BE & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_TypeInfo, value);
-    byte_49F74CE = 1;
+    sub_1B64870(&System_Action_TypeInfo, value);
+    byte_49F95BE = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -377,13 +381,13 @@ void __fastcall BoostSupportRequestItemListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1B9F5B8(p_callbackFunc, v8, v6);
+    v9 = sub_1B9FD60(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (BoostSupportRequestItemListViewObject_o *)sub_1B645E4(v8);
+  v11 = (BoostSupportRequestItemListViewObject_o *)sub_1B64D8C(v8);
   BoostSupportRequestItemListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -402,10 +406,10 @@ void __fastcall BoostSupportRequestItemListViewObject__remove_callbackFunc(
   BoostSupportRequestItemListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_49F74CF & 1) == 0 )
+  if ( (byte_49F95BF & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_TypeInfo, value);
-    byte_49F74CF = 1;
+    sub_1B64870(&System_Action_TypeInfo, value);
+    byte_49F95BF = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -418,12 +422,12 @@ void __fastcall BoostSupportRequestItemListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1B9F5B8(p_callbackFunc, v8, v6);
+    v9 = sub_1B9FD60(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (BoostSupportRequestItemListViewObject_o *)sub_1B645E4(v8);
+  v11 = (BoostSupportRequestItemListViewObject_o *)sub_1B64D8C(v8);
   BoostSupportRequestItemListViewObject__Awake(v11, v12);
 }

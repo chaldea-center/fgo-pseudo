@@ -12,83 +12,84 @@ void __fastcall DragSelectComponent__Set(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *dragSelectObject; // x22
-  void *v8; // x0
+  __int64 v8; // x1
+  void *v9; // x0
   UnityEngine_Object_o *dragSeletBase; // x22
   UnityEngine_Object_o *selectObject; // x21
   UILabel_o *selectTextLabel; // x21
-  int v12; // w20
+  int v13; // w20
   int32_t condensedWidth; // w1
-  int v14; // [xsp+Ch] [xbp-34h] BYREF
+  int v15; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_49FB8AF & 1) == 0 )
+  if ( (byte_49FD9A7 & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, *(_QWORD *)&selectNum);
-    byte_49FB8AF = 1;
+    sub_1B64870(&UnityEngine_Object_TypeInfo, *(_QWORD *)&selectNum);
+    byte_49FD9A7 = 1;
   }
-  v14 = 0;
+  v15 = 0;
   dragSelectObject = (UnityEngine_Object_o *)this->fields.dragSelectObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(dragSelectObject, 0LL, 0LL) )
   {
-    v8 = this->fields.dragSelectObject;
-    if ( !v8 )
+    v9 = this->fields.dragSelectObject;
+    if ( !v9 )
       goto LABEL_28;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v8, dragSelectNum > 0, 0LL);
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v9, dragSelectNum > 0, 0LL);
   }
   dragSeletBase = (UnityEngine_Object_o *)this->fields.dragSeletBase;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(dragSeletBase, 0LL, 0LL) )
   {
-    v8 = this->fields.dragSeletBase;
-    if ( !v8 )
+    v9 = this->fields.dragSeletBase;
+    if ( !v9 )
       goto LABEL_28;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v8, dragSelectNum >= 0, 0LL);
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v9, dragSelectNum >= 0, 0LL);
   }
   selectObject = (UnityEngine_Object_o *)this->fields.selectObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(selectObject, 0LL, 0LL) )
   {
-    v8 = this->fields.selectObject;
-    if ( v8 )
+    v9 = this->fields.selectObject;
+    if ( v9 )
     {
       if ( (selectNum & 0x80000000) != 0 )
       {
-        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v8, 0, 0LL);
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v9, 0, 0LL);
         return;
       }
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v8, 1, 0LL);
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v9, 1, 0LL);
       selectTextLabel = this->fields.selectTextLabel;
-      v12 = selectNum + 1;
-      v14 = v12;
-      v8 = System_Int32__ToString((int32_t)&v14, 0LL);
+      v13 = selectNum + 1;
+      v15 = v13;
+      v9 = System_Int32__ToString((int32_t)&v15, 0LL);
       if ( selectTextLabel )
       {
-        UILabel__set_text(selectTextLabel, (System_String_o *)v8, 0LL);
+        UILabel__set_text(selectTextLabel, (System_String_o *)v9, 0LL);
         if ( !this->fields.isCondensedScale )
           return;
-        v8 = this->fields.selectTextLabel;
-        if ( v12 >= 100 )
+        v9 = this->fields.selectTextLabel;
+        if ( v13 >= 100 )
         {
-          if ( v8 )
+          if ( v9 )
           {
             condensedWidth = this->fields.condensedWidth;
             goto LABEL_26;
           }
         }
-        else if ( v8 )
+        else if ( v9 )
         {
-          condensedWidth = *((_DWORD *)v8 + 42);
+          condensedWidth = *((_DWORD *)v9 + 42);
 LABEL_26:
-          UILabel__SetCondensedScale((UILabel_o *)v8, condensedWidth, 0LL);
+          UILabel__SetCondensedScale((UILabel_o *)v9, condensedWidth, 0LL);
           return;
         }
       }
     }
 LABEL_28:
-    sub_1B64324(v8);
+    sub_1B64ACC(v9, v8);
   }
 }
 

@@ -14,35 +14,33 @@ System_Int32_array *__fastcall OpponentOtherFullTargetAggregator__GetCandidate(
   __int64 v4; // x1
   __int64 v5; // x1
   System_Collections_Generic_IEnumerable_TSource__o *Candidate; // x20
-  __int64 v7; // x1
-  __int64 v8; // x2
-  System_Func_int__bool__o *v9; // x21
-  System_Collections_Generic_IEnumerable_TSource__o *v10; // x0
+  System_Func_int__bool__o *v7; // x21
+  System_Collections_Generic_IEnumerable_TSource__o *v8; // x0
 
-  if ( (byte_49FF061 & 1) == 0 )
+  if ( (byte_4A01163 & 1) == 0 )
   {
-    sub_1B640C8(&Method_System_Linq_Enumerable_ToArray_int___, method);
-    sub_1B640C8(&Method_System_Linq_Enumerable_Where_int___, v3);
-    sub_1B640C8(&System_Func_int__bool__TypeInfo, v4);
-    sub_1B640C8(&Method_OpponentOtherFullTargetAggregator__GetCandidate_b__0_0__, v5);
-    byte_49FF061 = 1;
+    sub_1B64870(&Method_System_Linq_Enumerable_ToArray_int___, method);
+    sub_1B64870(&Method_System_Linq_Enumerable_Where_int___, v3);
+    sub_1B64870(&System_Func_int__bool__TypeInfo, v4);
+    sub_1B64870(&Method_OpponentOtherFullTargetAggregator__GetCandidate_b__0_0__, v5);
+    byte_4A01163 = 1;
   }
   Candidate = (System_Collections_Generic_IEnumerable_TSource__o *)OpponentFullTargetAggregator__GetCandidate(
                                                                      (OpponentFullTargetAggregator_o *)this,
                                                                      method);
-  v9 = (System_Func_int__bool__o *)sub_1B64314(System_Func_int__bool__TypeInfo, v7, v8);
+  v7 = (System_Func_int__bool__o *)sub_1B64ABC(System_Func_int__bool__TypeInfo);
   System_Func_int__bool____ctor(
-    v9,
+    v7,
     (Il2CppObject *)this,
     Method_OpponentOtherFullTargetAggregator__GetCandidate_b__0_0__,
     0LL);
-  v10 = System_Linq_Enumerable__Where_int_(
-          Candidate,
-          (System_Func_TSource__bool__o *)v9,
-          (const MethodInfo_2E76DC8 *)Method_System_Linq_Enumerable_Where_int___);
+  v8 = System_Linq_Enumerable__Where_int_(
+         Candidate,
+         (System_Func_TSource__bool__o *)v7,
+         (const MethodInfo_2E790A4 *)Method_System_Linq_Enumerable_Where_int___);
   return System_Linq_Enumerable__ToArray_int_(
-           v10,
-           (const MethodInfo_2E7122C *)Method_System_Linq_Enumerable_ToArray_int___);
+           v8,
+           (const MethodInfo_2E73508 *)Method_System_Linq_Enumerable_ToArray_int___);
 }
 
 
@@ -55,6 +53,6 @@ bool __fastcall OpponentOtherFullTargetAggregator___GetCandidate_b__0_0(
 
   args = this->fields.args;
   if ( !args )
-    sub_1B64324(this);
+    sub_1B64ACC(this, x);
   return args->fields._targetId_k__BackingField != x;
 }

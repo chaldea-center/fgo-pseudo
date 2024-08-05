@@ -8,18 +8,18 @@ void __fastcall FsmEventData___ctor(FsmEventData_o *this, const MethodInfo *meth
   int32_t v8; // w2
   int32_t v9; // w3
 
-  if ( (byte_49FD7C7 & 1) == 0 )
+  if ( (byte_49FF8C1 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_22026/*"none"*/, method);
-    sub_1B640C8(&StringLiteral_1/*""*/, v5);
-    byte_49FD7C7 = 1;
+    sub_1B64870(&StringLiteral_22029/*"none"*/, method);
+    sub_1B64870(&StringLiteral_1/*""*/, v5);
+    byte_49FF8C1 = 1;
   }
-  v6 = StringLiteral_22026/*"none"*/;
-  this->fields.eventData = (struct System_String_o *)StringLiteral_22026/*"none"*/;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields, v6, v2, v3);
+  v6 = StringLiteral_22029/*"none"*/;
+  this->fields.eventData = (struct System_String_o *)StringLiteral_22029/*"none"*/;
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields, v6, v2, v3);
   v7 = (int)StringLiteral_1/*""*/;
   this->fields.title = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.title, v7, v8, v9);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.title, v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -47,7 +47,7 @@ void __fastcall FsmEventData__set_EventData(FsmEventData_o *this, System_String_
   int32_t v3; // w3
 
   this->fields.eventData = value;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -56,5 +56,5 @@ void __fastcall FsmEventData__set_Title(FsmEventData_o *this, System_String_o *v
   int32_t v3; // w3
 
   this->fields.title = value;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.title, (int32_t)value, (int32_t)method, v3);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.title, (int32_t)value, (int32_t)method, v3);
 }

@@ -37,22 +37,22 @@ void __fastcall ServantStatusParameterComponent__Awake(
 
   ParameterGauge = ServantStatusParameterComponent__CreateParameterGauge(this, this->fields.powerParent, v2);
   this->fields.powerGauge = ParameterGauge;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.powerGauge, (int32_t)ParameterGauge, v5, v6);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.powerGauge, (int32_t)ParameterGauge, v5, v6);
   v8 = ServantStatusParameterComponent__CreateParameterGauge(this, this->fields.defenseParent, v7);
   this->fields.defenseGauge = v8;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.defenseGauge, (int32_t)v8, v9, v10);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.defenseGauge, (int32_t)v8, v9, v10);
   v12 = ServantStatusParameterComponent__CreateParameterGauge(this, this->fields.agilityParent, v11);
   this->fields.agilityGauge = v12;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.agilityGauge, (int32_t)v12, v13, v14);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.agilityGauge, (int32_t)v12, v13, v14);
   v16 = ServantStatusParameterComponent__CreateParameterGauge(this, this->fields.magicParent, v15);
   this->fields.magicGauge = v16;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.magicGauge, (int32_t)v16, v17, v18);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.magicGauge, (int32_t)v16, v17, v18);
   v20 = ServantStatusParameterComponent__CreateParameterGauge(this, this->fields.luckParent, v19);
   this->fields.luckGauge = v20;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.luckGauge, (int32_t)v20, v21, v22);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.luckGauge, (int32_t)v20, v21, v22);
   v24 = ServantStatusParameterComponent__CreateParameterGauge(this, this->fields.npParent, v23);
   this->fields.npGauge = v24;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.npGauge, (int32_t)v24, v25, v26);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.npGauge, (int32_t)v24, v25, v26);
 }
 
 
@@ -66,28 +66,29 @@ ServantStatusParameterGauge_o *__fastcall ServantStatusParameterComponent__Creat
   Il2CppObject *baseGaugeObject; // x20
   Il2CppObject *v8; // x20
   __int64 v10; // x0
+  __int64 v11; // x1
 
-  if ( (byte_49F9C2A & 1) == 0 )
+  if ( (byte_49FBD1F & 1) == 0 )
   {
-    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponent_ServantStatusParameterGauge___, parent);
-    sub_1B640C8(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, v6);
-    byte_49F9C2A = 1;
+    sub_1B64870(&Method_UnityEngine_GameObject_GetComponent_ServantStatusParameterGauge___, parent);
+    sub_1B64870(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
+    sub_1B64870(&UnityEngine_Object_TypeInfo, v6);
+    byte_49FBD1F = 1;
   }
   baseGaugeObject = (Il2CppObject *)this->fields.baseGaugeObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v8 = UnityEngine_Object__Instantiate_object_(
          baseGaugeObject,
-         (const MethodInfo_2EBBCA0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+         (const MethodInfo_2EBDF7C *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)parent, 0LL, 0LL) )
     return 0LL;
-  GameObjectExtensions__SafeSetParent_33381252((UnityEngine_GameObject_o *)v8, parent, 0LL);
+  GameObjectExtensions__SafeSetParent_33382288((UnityEngine_GameObject_o *)v8, parent, 0LL);
   if ( !v8 )
-    sub_1B64324(v10);
+    sub_1B64ACC(v10, v11);
   return (ServantStatusParameterGauge_o *)UnityEngine_GameObject__GetComponent_object_(
                                             (UnityEngine_GameObject_o *)v8,
-                                            (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusParameterGauge___);
+                                            (const MethodInfo_2E8A1B4 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusParameterGauge___);
 }
 
 
@@ -96,105 +97,106 @@ void __fastcall ServantStatusParameterComponent__OnDestroy(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *powerGauge; // x20
-  UnityEngine_Component_o *v4; // x0
+  __int64 v4; // x1
+  UnityEngine_Component_o *v5; // x0
   UnityEngine_Object_o *gameObject; // x20
   UnityEngine_Object_o *defenseGauge; // x20
-  UnityEngine_Object_o *v7; // x20
+  UnityEngine_Object_o *v8; // x20
   UnityEngine_Object_o *agilityGauge; // x20
-  UnityEngine_Object_o *v9; // x20
+  UnityEngine_Object_o *v10; // x20
   UnityEngine_Object_o *magicGauge; // x20
-  UnityEngine_Object_o *v11; // x20
+  UnityEngine_Object_o *v12; // x20
   UnityEngine_Object_o *luckGauge; // x20
-  UnityEngine_Object_o *v13; // x20
+  UnityEngine_Object_o *v14; // x20
   UnityEngine_Object_o *npGauge; // x20
-  UnityEngine_Object_o *v15; // x19
+  UnityEngine_Object_o *v16; // x19
 
-  if ( (byte_49F9C29 & 1) == 0 )
+  if ( (byte_49FBD1E & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, method);
-    byte_49F9C29 = 1;
+    sub_1B64870(&UnityEngine_Object_TypeInfo, method);
+    byte_49FBD1E = 1;
   }
   powerGauge = (UnityEngine_Object_o *)this->fields.powerGauge;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(powerGauge, 0LL, 0LL) )
   {
-    v4 = (UnityEngine_Component_o *)this->fields.powerGauge;
-    if ( !v4 )
+    v5 = (UnityEngine_Component_o *)this->fields.powerGauge;
+    if ( !v5 )
       goto LABEL_46;
-    gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v4, 0LL);
+    gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v5, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_69127736(gameObject, 0LL);
+    UnityEngine_Object__Destroy_69135916(gameObject, 0LL);
   }
   defenseGauge = (UnityEngine_Object_o *)this->fields.defenseGauge;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(defenseGauge, 0LL, 0LL) )
   {
-    v4 = (UnityEngine_Component_o *)this->fields.defenseGauge;
-    if ( !v4 )
+    v5 = (UnityEngine_Component_o *)this->fields.defenseGauge;
+    if ( !v5 )
       goto LABEL_46;
-    v7 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v4, 0LL);
+    v8 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v5, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_69127736(v7, 0LL);
+    UnityEngine_Object__Destroy_69135916(v8, 0LL);
   }
   agilityGauge = (UnityEngine_Object_o *)this->fields.agilityGauge;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(agilityGauge, 0LL, 0LL) )
   {
-    v4 = (UnityEngine_Component_o *)this->fields.agilityGauge;
-    if ( !v4 )
+    v5 = (UnityEngine_Component_o *)this->fields.agilityGauge;
+    if ( !v5 )
       goto LABEL_46;
-    v9 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v4, 0LL);
+    v10 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v5, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_69127736(v9, 0LL);
+    UnityEngine_Object__Destroy_69135916(v10, 0LL);
   }
   magicGauge = (UnityEngine_Object_o *)this->fields.magicGauge;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(magicGauge, 0LL, 0LL) )
   {
-    v4 = (UnityEngine_Component_o *)this->fields.magicGauge;
-    if ( !v4 )
+    v5 = (UnityEngine_Component_o *)this->fields.magicGauge;
+    if ( !v5 )
       goto LABEL_46;
-    v11 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v4, 0LL);
+    v12 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v5, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_69127736(v11, 0LL);
+    UnityEngine_Object__Destroy_69135916(v12, 0LL);
   }
   luckGauge = (UnityEngine_Object_o *)this->fields.luckGauge;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(luckGauge, 0LL, 0LL) )
   {
-    v4 = (UnityEngine_Component_o *)this->fields.luckGauge;
-    if ( !v4 )
+    v5 = (UnityEngine_Component_o *)this->fields.luckGauge;
+    if ( !v5 )
       goto LABEL_46;
-    v13 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v4, 0LL);
+    v14 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v5, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_69127736(v13, 0LL);
+    UnityEngine_Object__Destroy_69135916(v14, 0LL);
   }
   npGauge = (UnityEngine_Object_o *)this->fields.npGauge;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(npGauge, 0LL, 0LL) )
   {
-    v4 = (UnityEngine_Component_o *)this->fields.npGauge;
-    if ( v4 )
+    v5 = (UnityEngine_Component_o *)this->fields.npGauge;
+    if ( v5 )
     {
-      v15 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v4, 0LL);
+      v16 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v5, 0LL);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_69127736(v15, 0LL);
+      UnityEngine_Object__Destroy_69135916(v16, 0LL);
       return;
     }
 LABEL_46:
-    sub_1B64324(v4);
+    sub_1B64ACC(v5, v4);
   }
 }
 
@@ -232,7 +234,7 @@ void __fastcall ServantStatusParameterComponent__Setup(
     || (ServantStatusParameterGauge__Set(powerGauge, 4, luck, v18), (powerGauge = this->fields.npGauge) == 0LL) )
   {
 LABEL_8:
-    sub_1B64324(powerGauge);
+    sub_1B64ACC(powerGauge, *(_QWORD *)&power);
   }
   ServantStatusParameterGauge__Set(powerGauge, 5, np, v19);
 }

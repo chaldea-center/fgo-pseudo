@@ -18,19 +18,20 @@ void __fastcall SetRandomLimitCountResetOptionControl__CloseDlg(
   __int64 v8; // x1
   NetworkManager_ResultCallbackFunc_o *v9; // x20
   Il2CppObject *Request_object; // x0
+  __int64 v11; // x1
 
-  if ( (byte_49F7A5C & 1) == 0 )
+  if ( (byte_49F9B4C & 1) == 0 )
   {
-    sub_1B640C8(&Method_NetworkManager_getRequest_CardInitRandomLimitCountRequest___, isRes);
-    sub_1B640C8(&NetworkManager_TypeInfo, v5);
-    sub_1B640C8(&NetworkManager_ResultCallbackFunc_TypeInfo, v6);
-    sub_1B640C8(&Method_SetRandomLimitCountResetOptionControl_EndCardInitRandomLimitCountRequest__, v7);
-    sub_1B640C8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
-    byte_49F7A5C = 1;
+    sub_1B64870(&Method_NetworkManager_getRequest_CardInitRandomLimitCountRequest___, isRes);
+    sub_1B64870(&NetworkManager_TypeInfo, v5);
+    sub_1B64870(&NetworkManager_ResultCallbackFunc_TypeInfo, v6);
+    sub_1B64870(&Method_SetRandomLimitCountResetOptionControl_EndCardInitRandomLimitCountRequest__, v7);
+    sub_1B64870(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
+    byte_49F9B4C = 1;
   }
   if ( isRes )
   {
-    v9 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64314(NetworkManager_ResultCallbackFunc_TypeInfo, isRes, method);
+    v9 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64ABC(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
       v9,
       (Il2CppObject *)this,
@@ -40,7 +41,7 @@ void __fastcall SetRandomLimitCountResetOptionControl__CloseDlg(
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     Request_object = NetworkManager__getRequest_object_(
                        v9,
-                       (const MethodInfo_2EBA9D0 *)Method_NetworkManager_getRequest_CardInitRandomLimitCountRequest___);
+                       (const MethodInfo_2EBCCAC *)Method_NetworkManager_getRequest_CardInitRandomLimitCountRequest___);
     if ( Request_object )
     {
       CardInitRandomLimitCountRequest__beginRequest(
@@ -51,9 +52,9 @@ void __fastcall SetRandomLimitCountResetOptionControl__CloseDlg(
       return;
     }
 LABEL_10:
-    sub_1B64324(Request_object);
+    sub_1B64ACC(Request_object, v11);
   }
-  Request_object = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Request_object = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Request_object )
     goto LABEL_10;
   CommonUI__CloseConfirmDialog((CommonUI_o *)Request_object, 0LL);
@@ -66,15 +67,16 @@ void __fastcall SetRandomLimitCountResetOptionControl__EndCardInitRandomLimitCou
         const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
+  __int64 v4; // x1
 
-  if ( (byte_49F7A5E & 1) == 0 )
+  if ( (byte_49F9B4E & 1) == 0 )
   {
-    sub_1B640C8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, result);
-    byte_49F7A5E = 1;
+    sub_1B64870(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, result);
+    byte_49F9B4E = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, v4);
   CommonUI__CloseConfirmDialog((CommonUI_o *)Instance, 0LL);
 }
 
@@ -90,29 +92,29 @@ void __fastcall SetRandomLimitCountResetOptionControl__Init(
   SetRandomLimitCountResetOptionControl_CategoryInfo_o *ownSettingInfo; // x0
   const MethodInfo *v8; // x3
 
-  if ( (byte_49F7A5B & 1) == 0 )
+  if ( (byte_49F9B4B & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_9634/*"OPTION_RANDOM_LIMIT_COUNT_RESET_OWN_BUTTON"*/, method);
-    sub_1B640C8(&StringLiteral_9631/*"OPTION_RANDOM_LIMIT_COUNT_RESET_FRIEND_BUTTON"*/, v4);
-    sub_1B640C8(&StringLiteral_9635/*"OPTION_RANDOM_LIMIT_COUNT_RESET_OWN_EXPLANATION"*/, v5);
-    sub_1B640C8(&StringLiteral_9632/*"OPTION_RANDOM_LIMIT_COUNT_RESET_FRIEND_EXPLANATION"*/, v6);
-    byte_49F7A5B = 1;
+    sub_1B64870(&StringLiteral_9635/*"OPTION_RANDOM_LIMIT_COUNT_RESET_OWN_BUTTON"*/, method);
+    sub_1B64870(&StringLiteral_9632/*"OPTION_RANDOM_LIMIT_COUNT_RESET_FRIEND_BUTTON"*/, v4);
+    sub_1B64870(&StringLiteral_9636/*"OPTION_RANDOM_LIMIT_COUNT_RESET_OWN_EXPLANATION"*/, v5);
+    sub_1B64870(&StringLiteral_9633/*"OPTION_RANDOM_LIMIT_COUNT_RESET_FRIEND_EXPLANATION"*/, v6);
+    byte_49F9B4B = 1;
   }
   ownSettingInfo = this->fields.ownSettingInfo;
   if ( !ownSettingInfo
     || (SetRandomLimitCountResetOptionControl_CategoryInfo__Init(
           ownSettingInfo,
-          (System_String_o *)StringLiteral_9634/*"OPTION_RANDOM_LIMIT_COUNT_RESET_OWN_BUTTON"*/,
-          (System_String_o *)StringLiteral_9635/*"OPTION_RANDOM_LIMIT_COUNT_RESET_OWN_EXPLANATION"*/,
+          (System_String_o *)StringLiteral_9635/*"OPTION_RANDOM_LIMIT_COUNT_RESET_OWN_BUTTON"*/,
+          (System_String_o *)StringLiteral_9636/*"OPTION_RANDOM_LIMIT_COUNT_RESET_OWN_EXPLANATION"*/,
           v2),
         (ownSettingInfo = this->fields.friendSettingInfo) == 0LL) )
   {
-    sub_1B64324(ownSettingInfo);
+    sub_1B64ACC(ownSettingInfo, method);
   }
   SetRandomLimitCountResetOptionControl_CategoryInfo__Init(
     ownSettingInfo,
-    (System_String_o *)StringLiteral_9631/*"OPTION_RANDOM_LIMIT_COUNT_RESET_FRIEND_BUTTON"*/,
-    (System_String_o *)StringLiteral_9632/*"OPTION_RANDOM_LIMIT_COUNT_RESET_FRIEND_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_9632/*"OPTION_RANDOM_LIMIT_COUNT_RESET_FRIEND_BUTTON"*/,
+    (System_String_o *)StringLiteral_9633/*"OPTION_RANDOM_LIMIT_COUNT_RESET_FRIEND_EXPLANATION"*/,
     v8);
   this->fields.isOwn = 0;
 }
@@ -157,58 +159,57 @@ void __fastcall SetRandomLimitCountResetOptionControl__OpenDialog(
   System_String_o *v17; // x21
   System_String_o *v18; // x22
   Il2CppObject *Instance; // x23
-  __int64 v20; // x1
-  __int64 v21; // x2
-  CommonConfirmDialog_ClickDelegate_o *v22; // x24
-  __int64 v23; // x0
+  CommonConfirmDialog_ClickDelegate_o *v20; // x24
+  __int64 v21; // x0
+  __int64 v22; // x1
 
-  if ( (byte_49F7A5D & 1) == 0 )
+  if ( (byte_49F9B4D & 1) == 0 )
   {
-    sub_1B640C8(&CommonConfirmDialog_ClickDelegate_TypeInfo, method);
-    sub_1B640C8(&LocalizationManager_TypeInfo, v3);
-    sub_1B640C8(&Method_SetRandomLimitCountResetOptionControl_CloseDlg__, v4);
-    sub_1B640C8(&Method_SetRandomLimitCountResetOptionControl_OpenDialog__, v5);
-    sub_1B640C8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_1B640C8(&StringLiteral_9633/*"OPTION_RANDOM_LIMIT_COUNT_RESET_FRIEND_MSG"*/, v7);
-    sub_1B640C8(&StringLiteral_9636/*"OPTION_RANDOM_LIMIT_COUNT_RESET_OWN_MSG"*/, v8);
-    sub_1B640C8(&StringLiteral_3737/*"COMMON_CONFIRM_NO"*/, v9);
-    sub_1B640C8(&StringLiteral_3740/*"COMMON_CONFIRM_YES"*/, v10);
-    sub_1B640C8(&StringLiteral_1/*""*/, v11);
-    byte_49F7A5D = 1;
+    sub_1B64870(&CommonConfirmDialog_ClickDelegate_TypeInfo, method);
+    sub_1B64870(&LocalizationManager_TypeInfo, v3);
+    sub_1B64870(&Method_SetRandomLimitCountResetOptionControl_CloseDlg__, v4);
+    sub_1B64870(&Method_SetRandomLimitCountResetOptionControl_OpenDialog__, v5);
+    sub_1B64870(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    sub_1B64870(&StringLiteral_9634/*"OPTION_RANDOM_LIMIT_COUNT_RESET_FRIEND_MSG"*/, v7);
+    sub_1B64870(&StringLiteral_9637/*"OPTION_RANDOM_LIMIT_COUNT_RESET_OWN_MSG"*/, v8);
+    sub_1B64870(&StringLiteral_3736/*"COMMON_CONFIRM_NO"*/, v9);
+    sub_1B64870(&StringLiteral_3740/*"COMMON_CONFIRM_YES"*/, v10);
+    sub_1B64870(&StringLiteral_1/*""*/, v11);
+    byte_49F9B4D = 1;
   }
   v12 = Method_SetRandomLimitCountResetOptionControl_OpenDialog__;
   if ( (*((_BYTE *)Method_SetRandomLimitCountResetOptionControl_OpenDialog__ + 83) & 2) != 0 )
-    v12 = (_QWORD *)sub_1B640E0(Method_SetRandomLimitCountResetOptionControl_OpenDialog__);
-  v13 = (System_Reflection_MethodBase_o *)sub_1B640AC(v12, v12[4]);
+    v12 = (_QWORD *)sub_1B64888(Method_SetRandomLimitCountResetOptionControl_OpenDialog__);
+  v13 = (System_Reflection_MethodBase_o *)sub_1B64854(v12, v12[4]);
   OverwriteAssetSoundName__PlaySystemSe(v13, 0, 0LL);
   isOwn = this->fields.isOwn;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   if ( isOwn )
-    v15 = (System_String_o **)&StringLiteral_9636/*"OPTION_RANDOM_LIMIT_COUNT_RESET_OWN_MSG"*/;
+    v15 = (System_String_o **)&StringLiteral_9637/*"OPTION_RANDOM_LIMIT_COUNT_RESET_OWN_MSG"*/;
   else
-    v15 = (System_String_o **)&StringLiteral_9633/*"OPTION_RANDOM_LIMIT_COUNT_RESET_FRIEND_MSG"*/;
+    v15 = (System_String_o **)&StringLiteral_9634/*"OPTION_RANDOM_LIMIT_COUNT_RESET_FRIEND_MSG"*/;
   v16 = LocalizationManager__Get(*v15, 0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3740/*"COMMON_CONFIRM_YES"*/, 0LL);
-  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_3737/*"COMMON_CONFIRM_NO"*/, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EC03C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v22 = (CommonConfirmDialog_ClickDelegate_o *)sub_1B64314(CommonConfirmDialog_ClickDelegate_TypeInfo, v20, v21);
+  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_3736/*"COMMON_CONFIRM_NO"*/, 0LL);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v20 = (CommonConfirmDialog_ClickDelegate_o *)sub_1B64ABC(CommonConfirmDialog_ClickDelegate_TypeInfo);
   CommonConfirmDialog_ClickDelegate___ctor(
-    v22,
+    v20,
     (Il2CppObject *)this,
     Method_SetRandomLimitCountResetOptionControl_CloseDlg__,
     0LL);
   if ( !Instance )
-    sub_1B64324(v23);
-  CommonUI__OpenConfirmDialog_30345400(
+    sub_1B64ACC(v21, v22);
+  CommonUI__OpenConfirmDialog_30347368(
     (CommonUI_o *)Instance,
     (System_String_o *)StringLiteral_1/*""*/,
     v16,
     v17,
     v18,
-    v22,
+    v20,
     26,
     26,
     15.0,
@@ -240,12 +241,13 @@ void __fastcall SetRandomLimitCountResetOptionControl_CategoryInfo__Init(
 {
   UILabel_o *buttonLabel; // x22
   System_String_o *v8; // x0
+  __int64 v9; // x1
   UILabel_o *explanationLabel; // x20
 
-  if ( (byte_49F7A5F & 1) == 0 )
+  if ( (byte_49F9B4F & 1) == 0 )
   {
-    sub_1B640C8(&LocalizationManager_TypeInfo, buttonKey);
-    byte_49F7A5F = 1;
+    sub_1B64870(&LocalizationManager_TypeInfo, buttonKey);
+    byte_49F9B4F = 1;
   }
   buttonLabel = this->fields.buttonLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -257,7 +259,7 @@ void __fastcall SetRandomLimitCountResetOptionControl_CategoryInfo__Init(
         v8 = LocalizationManager__Get(explanationKey, 0LL),
         !explanationLabel) )
   {
-    sub_1B64324(v8);
+    sub_1B64ACC(v8, v9);
   }
   UILabel__set_text(explanationLabel, v8, 0LL);
 }

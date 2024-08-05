@@ -3,10 +3,10 @@ void __fastcall OpenInfoWindowComponent___cctor(const MethodInfo *method)
   __int64 v1; // x1
   struct OpenInfoWindowComponent_StaticFields *static_fields; // x8
 
-  if ( (byte_49FFC9E & 1) == 0 )
+  if ( (byte_4A01DA0 & 1) == 0 )
   {
-    sub_1B640C8(&OpenInfoWindowComponent_TypeInfo, v1);
-    byte_49FFC9E = 1;
+    sub_1B64870(&OpenInfoWindowComponent_TypeInfo, v1);
+    byte_4A01DA0 = 1;
   }
   static_fields = OpenInfoWindowComponent_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->LIMIT_UP_DIALOG_GRID_POS_Y = 0x942F80000LL;
@@ -16,10 +16,10 @@ void __fastcall OpenInfoWindowComponent___cctor(const MethodInfo *method)
 
 void __fastcall OpenInfoWindowComponent___ctor(OpenInfoWindowComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FFC9D & 1) == 0 )
+  if ( (byte_4A01D9F & 1) == 0 )
   {
-    sub_1B640C8(&BaseDialog_TypeInfo, method);
-    byte_49FFC9D = 1;
+    sub_1B64870(&BaseDialog_TypeInfo, method);
+    byte_4A01D9F = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -29,25 +29,24 @@ void __fastcall OpenInfoWindowComponent___ctor(OpenInfoWindowComponent_o *this, 
 
 void __fastcall OpenInfoWindowComponent__Close(OpenInfoWindowComponent_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  System_Action_o *v5; // x0
-  System_Action_o *v6; // x1
-  const MethodInfo *v7; // x2
+  __int64 v3; // x1
+  System_Action_o *v4; // x0
+  System_Action_o *v5; // x1
+  const MethodInfo *v6; // x2
 
-  if ( (byte_49FFC9A & 1) == 0 )
+  if ( (byte_4A01D9C & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_TypeInfo, method);
-    sub_1B640C8(&Method_OpenInfoWindowComponent_EndClose__, v4);
-    byte_49FFC9A = 1;
+    sub_1B64870(&System_Action_TypeInfo, method);
+    sub_1B64870(&Method_OpenInfoWindowComponent_EndClose__, v3);
+    byte_4A01D9C = 1;
   }
-  v5 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, method, v2);
-  System_Action___ctor(v5, (Il2CppObject *)this, Method_OpenInfoWindowComponent_EndClose__, 0LL);
-  OpenInfoWindowComponent__Close_44641400(this, v6, v7);
+  v4 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  System_Action___ctor(v4, (Il2CppObject *)this, Method_OpenInfoWindowComponent_EndClose__, 0LL);
+  OpenInfoWindowComponent__Close_44650324(this, v5, v6);
 }
 
 
-void __fastcall OpenInfoWindowComponent__Close_44641400(
+void __fastcall OpenInfoWindowComponent__Close_44650324(
         OpenInfoWindowComponent_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -55,13 +54,13 @@ void __fastcall OpenInfoWindowComponent__Close_44641400(
   __int64 v4; // x1
   System_Action_o *v5; // x20
 
-  if ( (byte_49FFC9B & 1) == 0 )
+  if ( (byte_4A01D9D & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_TypeInfo, callback);
-    sub_1B640C8(&Method_OpenInfoWindowComponent_EndClose__, v4);
-    byte_49FFC9B = 1;
+    sub_1B64870(&System_Action_TypeInfo, callback);
+    sub_1B64870(&Method_OpenInfoWindowComponent_EndClose__, v4);
+    byte_4A01D9D = 1;
   }
-  v5 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, callback, method);
+  v5 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_OpenInfoWindowComponent_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v5, 0LL);
 }
@@ -70,11 +69,12 @@ void __fastcall OpenInfoWindowComponent__Close_44641400(
 void __fastcall OpenInfoWindowComponent__EndClose(OpenInfoWindowComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v4; // x1
 
   OpenInfoWindowComponent__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
 }
 
@@ -93,7 +93,7 @@ void __fastcall OpenInfoWindowComponent__EndOpen(OpenInfoWindowComponent_o *this
   if ( openCallBack )
   {
     p_openCallBack->klass = 0LL;
-    sub_1B6406C(p_openCallBack, 0, v2, v3);
+    sub_1B64814(p_openCallBack, 0, v2, v3);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v5->fields.m_target)(
       v5->fields.original_method_info,
       *(_QWORD *)&v5->fields.extra_arg);
@@ -113,52 +113,49 @@ OpenInfoWindowComponent_LayoutInfo_o *__fastcall OpenInfoWindowComponent__FindLa
   __int64 v8; // x21
   __int64 v9; // x0
   __int64 v10; // x1
-  __int64 v11; // x2
   System_Collections_Generic_IEnumerable_TSource__o *layoutInfos; // x19
-  System_Func_object__bool__o *v13; // x20
+  System_Func_object__bool__o *v12; // x20
 
-  if ( (byte_49FFC9C & 1) == 0 )
+  if ( (byte_4A01D9E & 1) == 0 )
   {
-    sub_1B640C8(
+    sub_1B64870(
       &Method_System_Linq_Enumerable_FirstOrDefault_OpenInfoWindowComponent_LayoutInfo___,
       *(_QWORD *)&infoNum);
-    sub_1B640C8(&System_Func_OpenInfoWindowComponent_LayoutInfo__bool__TypeInfo, v5);
-    sub_1B640C8(&Method_OpenInfoWindowComponent___c__DisplayClass22_0__FindLayout_b__0__, v6);
-    sub_1B640C8(&OpenInfoWindowComponent___c__DisplayClass22_0_TypeInfo, v7);
-    byte_49FFC9C = 1;
+    sub_1B64870(&System_Func_OpenInfoWindowComponent_LayoutInfo__bool__TypeInfo, v5);
+    sub_1B64870(&Method_OpenInfoWindowComponent___c__DisplayClass22_0__FindLayout_b__0__, v6);
+    sub_1B64870(&OpenInfoWindowComponent___c__DisplayClass22_0_TypeInfo, v7);
+    byte_4A01D9E = 1;
   }
-  v8 = sub_1B64314(OpenInfoWindowComponent___c__DisplayClass22_0_TypeInfo, *(_QWORD *)&infoNum, method);
+  v8 = sub_1B64ABC(OpenInfoWindowComponent___c__DisplayClass22_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
-    sub_1B64324(v9);
+    sub_1B64ACC(v9, v10);
   *(_DWORD *)(v8 + 16) = infoNum;
   layoutInfos = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.layoutInfos;
-  v13 = (System_Func_object__bool__o *)sub_1B64314(
-                                         System_Func_OpenInfoWindowComponent_LayoutInfo__bool__TypeInfo,
-                                         v10,
-                                         v11);
+  v12 = (System_Func_object__bool__o *)sub_1B64ABC(System_Func_OpenInfoWindowComponent_LayoutInfo__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v13,
+    v12,
     (Il2CppObject *)v8,
     Method_OpenInfoWindowComponent___c__DisplayClass22_0__FindLayout_b__0__,
     0LL);
-  return (OpenInfoWindowComponent_LayoutInfo_o *)System_Linq_Enumerable__FirstOrDefault_object__48617700(
+  return (OpenInfoWindowComponent_LayoutInfo_o *)System_Linq_Enumerable__FirstOrDefault_object__48626624(
                                                    layoutInfos,
-                                                   (System_Func_TSource__bool__o *)v13,
-                                                   (const MethodInfo_2E5D8E4 *)Method_System_Linq_Enumerable_FirstOrDefault_OpenInfoWindowComponent_LayoutInfo___);
+                                                   (System_Func_TSource__bool__o *)v12,
+                                                   (const MethodInfo_2E5FBC0 *)Method_System_Linq_Enumerable_FirstOrDefault_OpenInfoWindowComponent_LayoutInfo___);
 }
 
 
 void __fastcall OpenInfoWindowComponent__Init(OpenInfoWindowComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
-  const MethodInfo *v4; // x1
+  __int64 v4; // x1
+  const MethodInfo *v5; // x1
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B64324(0LL);
+    sub_1B64ACC(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
-  OpenInfoWindowComponent__clearInfoGrid(this, v4);
+  OpenInfoWindowComponent__clearInfoGrid(this, v5);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
 
@@ -182,62 +179,58 @@ void __fastcall OpenInfoWindowComponent__OpenLimitUpResultInfo(
   _QWORD *v20; // x0
   System_Reflection_MethodBase_o *v21; // x0
   UnityEngine_GameObject_o *gameObject; // x0
+  const MethodInfo *v23; // x1
   struct System_Collections_Generic_List_GameObject__o **p_resInfoList; // x20
-  int32_t v24; // w2
-  int32_t v25; // w3
-  int32_t v26; // w2
-  int32_t v27; // w3
+  int32_t v25; // w2
+  int32_t v26; // w3
+  int32_t v27; // w2
+  int32_t v28; // w3
   int32_t size; // w24
-  const MethodInfo *v29; // x2
+  const MethodInfo *v30; // x2
   int32_t LIMIT_UP_DIALOG_TRANSFORM_LAYOUT_NO; // w1
-  OpenInfoWindowComponent_c *v31; // x0
+  OpenInfoWindowComponent_c *v32; // x0
   struct OpenInfoWindowComponent_LayoutInfo_o *Layout; // x0
-  int32_t v33; // w2
-  int32_t v34; // w3
-  MethodInfo *v35; // x1
-  const MethodInfo *v36; // x2
+  int32_t v34; // w2
+  int32_t v35; // w3
+  MethodInfo *v36; // x1
+  const MethodInfo *v37; // x2
   OpenInfoWindowComponent_LayoutInfo_o *applyLayoutInfo; // x0
-  const MethodInfo *v38; // x1
-  UnityEngine_Transform_o *v39; // x22
-  OpenInfoWindowComponent_c *v40; // x8
+  const MethodInfo *v39; // x1
+  UnityEngine_Transform_o *v40; // x22
+  OpenInfoWindowComponent_c *v41; // x8
   struct OpenInfoWindowComponent_StaticFields *static_fields; // x8
   float LIMIT_UP_DIALOG_GRID_POS_Y; // s9
-  const MethodInfo *v43; // x1
-  float v44; // s8
-  OpenInfoWindowComponent_c *v45; // x0
-  const MethodInfo *v46; // x1
+  const MethodInfo *v44; // x1
+  float v45; // s8
+  OpenInfoWindowComponent_c *v46; // x0
   const MethodInfo *v47; // x1
-  const MethodInfo *v48; // x1
-  int32_t v49; // w21
+  int32_t v48; // w21
   Il2CppObject *Component_object; // x22
-  const MethodInfo *v51; // x1
-  const MethodInfo *v52; // x2
+  const MethodInfo *v50; // x2
   Il2CppObject *Item; // x22
-  const MethodInfo *v54; // x1
+  const MethodInfo *v52; // x1
   UnityEngine_Transform_o *transform; // x0
-  __int64 v56; // x1
-  __int64 v57; // x2
-  System_Action_o *v58; // x20
-  UnityEngine_Vector3_o v59; // 0:s0.4,4:s1.4,8:s2.4
+  System_Action_o *v54; // x20
+  UnityEngine_Vector3_o v55; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_49FFC97 & 1) == 0 )
+  if ( (byte_4A01D99 & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_TypeInfo, resInfo);
-    sub_1B640C8(&Method_UnityEngine_GameObject_GetComponent_LimitUpResultInfoComponent___, v13);
-    sub_1B640C8(&Method_System_Collections_Generic_List_GameObject__get_Count__, v14);
-    sub_1B640C8(&Method_System_Collections_Generic_List_GameObject__get_Item__, v15);
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, v16);
-    sub_1B640C8(&Method_OpenInfoWindowComponent_EndOpen__, v17);
-    sub_1B640C8(&Method_OpenInfoWindowComponent_OpenLimitUpResultInfo__, v18);
-    sub_1B640C8(&OpenInfoWindowComponent_TypeInfo, v19);
-    byte_49FFC97 = 1;
+    sub_1B64870(&System_Action_TypeInfo, resInfo);
+    sub_1B64870(&Method_UnityEngine_GameObject_GetComponent_LimitUpResultInfoComponent___, v13);
+    sub_1B64870(&Method_System_Collections_Generic_List_GameObject__get_Count__, v14);
+    sub_1B64870(&Method_System_Collections_Generic_List_GameObject__get_Item__, v15);
+    sub_1B64870(&UnityEngine_Object_TypeInfo, v16);
+    sub_1B64870(&Method_OpenInfoWindowComponent_EndOpen__, v17);
+    sub_1B64870(&Method_OpenInfoWindowComponent_OpenLimitUpResultInfo__, v18);
+    sub_1B64870(&OpenInfoWindowComponent_TypeInfo, v19);
+    byte_4A01D99 = 1;
   }
   if ( isFristDisp )
   {
     v20 = Method_OpenInfoWindowComponent_OpenLimitUpResultInfo__;
     if ( (*((_BYTE *)Method_OpenInfoWindowComponent_OpenLimitUpResultInfo__ + 83) & 2) != 0 )
-      v20 = (_QWORD *)sub_1B640E0(Method_OpenInfoWindowComponent_OpenLimitUpResultInfo__);
-    v21 = (System_Reflection_MethodBase_o *)sub_1B640AC(v20, v20[4]);
+      v20 = (_QWORD *)sub_1B64888(Method_OpenInfoWindowComponent_OpenLimitUpResultInfo__);
+    v21 = (System_Reflection_MethodBase_o *)sub_1B64854(v20, v20[4]);
     OverwriteAssetSoundName__PlaySystemSe(v21, 6, 0LL);
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -246,30 +239,30 @@ void __fastcall OpenInfoWindowComponent__OpenLimitUpResultInfo(
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
   this->fields.resInfoList = resInfo;
   p_resInfoList = &this->fields.resInfoList;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.resInfoList, (int32_t)resInfo, v24, v25);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.resInfoList, (int32_t)resInfo, v25, v26);
   if ( !this->fields.resInfoList )
     goto LABEL_52;
   size = this->fields.resInfoList->fields._size;
   this->fields.openCallBack = callback;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.openCallBack, (int32_t)callback, v26, v27);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.openCallBack, (int32_t)callback, v27, v28);
   LIMIT_UP_DIALOG_TRANSFORM_LAYOUT_NO = size;
   if ( size >= 2 && applyTrasformation )
   {
-    v31 = OpenInfoWindowComponent_TypeInfo;
+    v32 = OpenInfoWindowComponent_TypeInfo;
     if ( !OpenInfoWindowComponent_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(OpenInfoWindowComponent_TypeInfo);
-      v31 = OpenInfoWindowComponent_TypeInfo;
+      v32 = OpenInfoWindowComponent_TypeInfo;
     }
-    LIMIT_UP_DIALOG_TRANSFORM_LAYOUT_NO = v31->static_fields->LIMIT_UP_DIALOG_TRANSFORM_LAYOUT_NO;
+    LIMIT_UP_DIALOG_TRANSFORM_LAYOUT_NO = v32->static_fields->LIMIT_UP_DIALOG_TRANSFORM_LAYOUT_NO;
   }
-  Layout = OpenInfoWindowComponent__FindLayout(this, LIMIT_UP_DIALOG_TRANSFORM_LAYOUT_NO, v29);
+  Layout = OpenInfoWindowComponent__FindLayout(this, LIMIT_UP_DIALOG_TRANSFORM_LAYOUT_NO, v30);
   this->fields.applyLayoutInfo = Layout;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.applyLayoutInfo, (int32_t)Layout, v33, v34);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.applyLayoutInfo, (int32_t)Layout, v34, v35);
   applyLayoutInfo = this->fields.applyLayoutInfo;
   if ( !applyLayoutInfo )
   {
-    gameObject = (UnityEngine_GameObject_o *)OpenInfoWindowComponent__get_ResultInfoGrid(this, v35);
+    gameObject = (UnityEngine_GameObject_o *)OpenInfoWindowComponent__get_ResultInfoGrid(this, v36);
     if ( !gameObject )
       goto LABEL_52;
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
@@ -277,15 +270,15 @@ void __fastcall OpenInfoWindowComponent__OpenLimitUpResultInfo(
                                                0LL);
     if ( !gameObject )
       goto LABEL_52;
-    LODWORD(v44) = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0LL);
-    v45 = OpenInfoWindowComponent_TypeInfo;
+    LODWORD(v45) = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0LL);
+    v46 = OpenInfoWindowComponent_TypeInfo;
     if ( !OpenInfoWindowComponent_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(OpenInfoWindowComponent_TypeInfo);
-      v45 = OpenInfoWindowComponent_TypeInfo;
+      v46 = OpenInfoWindowComponent_TypeInfo;
     }
-    LIMIT_UP_DIALOG_GRID_POS_Y = v45->static_fields->LIMIT_UP_DIALOG_GRID_POS_Y;
-    gameObject = (UnityEngine_GameObject_o *)OpenInfoWindowComponent__get_ResultInfoGrid(this, v43);
+    LIMIT_UP_DIALOG_GRID_POS_Y = v46->static_fields->LIMIT_UP_DIALOG_GRID_POS_Y;
+    gameObject = (UnityEngine_GameObject_o *)OpenInfoWindowComponent__get_ResultInfoGrid(this, v44);
     if ( !gameObject )
       goto LABEL_52;
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
@@ -293,56 +286,56 @@ void __fastcall OpenInfoWindowComponent__OpenLimitUpResultInfo(
                                                0LL);
     if ( !gameObject )
       goto LABEL_52;
-    v39 = (UnityEngine_Transform_o *)gameObject;
+    v40 = (UnityEngine_Transform_o *)gameObject;
     goto LABEL_32;
   }
-  OpenInfoWindowComponent_LayoutInfo__Apply(applyLayoutInfo, (OpenInfoWindowComponent_o *)v35, v36);
+  OpenInfoWindowComponent_LayoutInfo__Apply(applyLayoutInfo, (OpenInfoWindowComponent_o *)v36, v37);
   if ( applyTrasformation )
   {
-    gameObject = (UnityEngine_GameObject_o *)OpenInfoWindowComponent__get_ResultInfoGrid(this, v38);
+    gameObject = (UnityEngine_GameObject_o *)OpenInfoWindowComponent__get_ResultInfoGrid(this, v39);
     if ( !gameObject )
       goto LABEL_52;
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                (UnityEngine_Component_o *)gameObject,
                                                0LL);
-    v39 = (UnityEngine_Transform_o *)gameObject;
-    v40 = OpenInfoWindowComponent_TypeInfo;
+    v40 = (UnityEngine_Transform_o *)gameObject;
+    v41 = OpenInfoWindowComponent_TypeInfo;
     if ( !OpenInfoWindowComponent_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(OpenInfoWindowComponent_TypeInfo);
-      v40 = OpenInfoWindowComponent_TypeInfo;
+      v41 = OpenInfoWindowComponent_TypeInfo;
     }
-    static_fields = v40->static_fields;
+    static_fields = v41->static_fields;
     if ( size >= 2 )
     {
-      if ( !v39 )
+      if ( !v40 )
         goto LABEL_52;
       LIMIT_UP_DIALOG_GRID_POS_Y = static_fields->LIMIT_UP_DIALOG_TRANSFORM_LAYOUT_GRIDPOS_Y_HIGH;
     }
     else
     {
-      if ( !v39 )
+      if ( !v40 )
         goto LABEL_52;
       LIMIT_UP_DIALOG_GRID_POS_Y = static_fields->LIMIT_UP_DIALOG_TRANSFORM_LAYOUT_GRIDPOS_Y_DEFAULT;
     }
-    v44 = 0.0;
+    v45 = 0.0;
 LABEL_32:
-    v59.fields.z = 0.0;
-    v59.fields.x = v44;
-    v59.fields.y = LIMIT_UP_DIALOG_GRID_POS_Y;
-    UnityEngine_Transform__set_localPosition(v39, v59, 0LL);
+    v55.fields.z = 0.0;
+    v55.fields.x = v45;
+    v55.fields.y = LIMIT_UP_DIALOG_GRID_POS_Y;
+    UnityEngine_Transform__set_localPosition(v40, v55, 0LL);
   }
-  OpenInfoWindowComponent__setCenter(this, v38);
-  gameObject = (UnityEngine_GameObject_o *)OpenInfoWindowComponent__get_ResultInfoGrid(this, v46);
+  OpenInfoWindowComponent__setCenter(this, v39);
+  gameObject = (UnityEngine_GameObject_o *)OpenInfoWindowComponent__get_ResultInfoGrid(this, v47);
   if ( !gameObject )
     goto LABEL_52;
   *((float *)&gameObject[2].klass + 1) = (float)gridHeight;
-  gameObject = (UnityEngine_GameObject_o *)OpenInfoWindowComponent__get_ResultInfoGrid(this, v47);
+  gameObject = (UnityEngine_GameObject_o *)OpenInfoWindowComponent__get_ResultInfoGrid(this, v23);
   if ( !gameObject )
     goto LABEL_52;
   if ( size >= 1 )
   {
-    v49 = 0;
+    v48 = 0;
     while ( 1 )
     {
       gameObject = (UnityEngine_GameObject_o *)*p_resInfoList;
@@ -350,18 +343,18 @@ LABEL_32:
         break;
       gameObject = (UnityEngine_GameObject_o *)System_Collections_Generic_List_object___get_Item(
                                                  (System_Collections_Generic_List_object__o *)gameObject,
-                                                 v49,
-                                                 (const MethodInfo_34AD404 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                 v48,
+                                                 (const MethodInfo_34AF6E0 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
       if ( !gameObject )
         break;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            gameObject,
-                           (const MethodInfo_2E87ED8 *)Method_UnityEngine_GameObject_GetComponent_LimitUpResultInfoComponent___);
+                           (const MethodInfo_2E8A1B4 *)Method_UnityEngine_GameObject_GetComponent_LimitUpResultInfoComponent___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
       {
-        gameObject = (UnityEngine_GameObject_o *)OpenInfoWindowComponent__get_ResultInfoGrid(this, v51);
+        gameObject = (UnityEngine_GameObject_o *)OpenInfoWindowComponent__get_ResultInfoGrid(this, v23);
         if ( !gameObject )
           break;
         gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
@@ -372,7 +365,7 @@ LABEL_32:
         LimitUpResultInfoComponent__Open(
           (LimitUpResultInfoComponent_o *)Component_object,
           (UnityEngine_Transform_o *)gameObject,
-          v52);
+          v50);
       }
       else
       {
@@ -381,9 +374,9 @@ LABEL_32:
           break;
         Item = System_Collections_Generic_List_object___get_Item(
                  (System_Collections_Generic_List_object__o *)gameObject,
-                 v49,
-                 (const MethodInfo_34AD404 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
-        gameObject = (UnityEngine_GameObject_o *)OpenInfoWindowComponent__get_ResultInfoGrid(this, v54);
+                 v48,
+                 (const MethodInfo_34AF6E0 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+        gameObject = (UnityEngine_GameObject_o *)OpenInfoWindowComponent__get_ResultInfoGrid(this, v52);
         if ( !gameObject )
           break;
         transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)gameObject, 0LL);
@@ -397,20 +390,20 @@ LABEL_32:
           break;
         UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
       }
-      if ( size == ++v49 )
+      if ( size == ++v48 )
         goto LABEL_50;
     }
 LABEL_52:
-    sub_1B64324(gameObject);
+    sub_1B64ACC(gameObject, v23);
   }
 LABEL_50:
-  gameObject = (UnityEngine_GameObject_o *)OpenInfoWindowComponent__get_ResultInfoGrid(this, v48);
+  gameObject = (UnityEngine_GameObject_o *)OpenInfoWindowComponent__get_ResultInfoGrid(this, v23);
   if ( !gameObject )
     goto LABEL_52;
   UIGrid__set_repositionNow((UIGrid_o *)gameObject, 1, 0LL);
-  v58 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v56, v57);
-  System_Action___ctor(v58, (Il2CppObject *)this, Method_OpenInfoWindowComponent_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v58, 0, 0LL);
+  v54 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  System_Action___ctor(v54, (Il2CppObject *)this, Method_OpenInfoWindowComponent_EndOpen__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v54, 0, 0LL);
 }
 
 
@@ -428,12 +421,12 @@ void __fastcall OpenInfoWindowComponent__OpenResultInfo(
   _QWORD *v13; // x0
   System_Reflection_MethodBase_o *v14; // x0
   void *gameObject; // x0
+  const MethodInfo *v16; // x1
   struct System_Collections_Generic_List_GameObject__o **p_resInfoList; // x20
-  int32_t v17; // w2
-  int32_t v18; // w3
-  int32_t v19; // w2
-  int32_t v20; // w3
-  const MethodInfo *v21; // x1
+  int32_t v18; // w2
+  int32_t v19; // w3
+  int32_t v20; // w2
+  int32_t v21; // w3
   const MethodInfo *v22; // x1
   const MethodInfo *v23; // x1
   float v24; // s9
@@ -455,27 +448,25 @@ void __fastcall OpenInfoWindowComponent__OpenResultInfo(
   float v40; // s1
   float v41; // s9
   const MethodInfo *v42; // x1
-  __int64 v43; // x1
-  __int64 v44; // x2
-  System_Action_o *v45; // x20
+  System_Action_o *v43; // x20
   double iptr; // [xsp+18h] [xbp-48h] BYREF
-  UnityEngine_Vector3_o v47; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v45; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_49FFC96 & 1) == 0 )
+  if ( (byte_4A01D98 & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_TypeInfo, resInfo);
-    sub_1B640C8(&Method_System_Collections_Generic_List_GameObject__get_Count__, v9);
-    sub_1B640C8(&Method_System_Collections_Generic_List_GameObject__get_Item__, v10);
-    sub_1B640C8(&Method_OpenInfoWindowComponent_EndOpen__, v11);
-    sub_1B640C8(&Method_OpenInfoWindowComponent_OpenResultInfo__, v12);
-    byte_49FFC96 = 1;
+    sub_1B64870(&System_Action_TypeInfo, resInfo);
+    sub_1B64870(&Method_System_Collections_Generic_List_GameObject__get_Count__, v9);
+    sub_1B64870(&Method_System_Collections_Generic_List_GameObject__get_Item__, v10);
+    sub_1B64870(&Method_OpenInfoWindowComponent_EndOpen__, v11);
+    sub_1B64870(&Method_OpenInfoWindowComponent_OpenResultInfo__, v12);
+    byte_4A01D98 = 1;
   }
   if ( isFristDisp )
   {
     v13 = Method_OpenInfoWindowComponent_OpenResultInfo__;
     if ( (*((_BYTE *)Method_OpenInfoWindowComponent_OpenResultInfo__ + 83) & 2) != 0 )
-      v13 = (_QWORD *)sub_1B640E0(Method_OpenInfoWindowComponent_OpenResultInfo__);
-    v14 = (System_Reflection_MethodBase_o *)sub_1B640AC(v13, v13[4]);
+      v13 = (_QWORD *)sub_1B64888(Method_OpenInfoWindowComponent_OpenResultInfo__);
+    v14 = (System_Reflection_MethodBase_o *)sub_1B64854(v13, v13[4]);
     OverwriteAssetSoundName__PlaySystemSe(v14, 6, 0LL);
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -484,13 +475,13 @@ void __fastcall OpenInfoWindowComponent__OpenResultInfo(
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
   this->fields.resInfoList = resInfo;
   p_resInfoList = &this->fields.resInfoList;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.resInfoList, (int32_t)resInfo, v17, v18);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.resInfoList, (int32_t)resInfo, v18, v19);
   this->fields.openCallBack = callback;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.openCallBack, (int32_t)callback, v19, v20);
-  OpenInfoWindowComponent__setCenter(this, v21);
-  gameObject = OpenInfoWindowComponent__get_ResultInfoGrid(this, v22);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.openCallBack, (int32_t)callback, v20, v21);
+  OpenInfoWindowComponent__setCenter(this, v22);
+  gameObject = OpenInfoWindowComponent__get_ResultInfoGrid(this, v23);
   if ( !gameObject
-    || (v24 = *((float *)gameObject + 13), (gameObject = OpenInfoWindowComponent__get_ResultInfoGrid(this, v23)) == 0LL)
+    || (v24 = *((float *)gameObject + 13), (gameObject = OpenInfoWindowComponent__get_ResultInfoGrid(this, v16)) == 0LL)
     || (gameObject = UnityEngine_Component__get_transform((UnityEngine_Component_o *)gameObject, 0LL)) == 0LL
     || (localPosition = (unsigned int)UnityEngine_Transform__get_localPosition(
                                         (UnityEngine_Transform_o *)gameObject,
@@ -498,7 +489,7 @@ void __fastcall OpenInfoWindowComponent__OpenResultInfo(
         (gameObject = *p_resInfoList) == 0LL) )
   {
 LABEL_32:
-    sub_1B64324(gameObject);
+    sub_1B64ACC(gameObject, v16);
   }
   v26 = *(float *)&localPosition;
   v27 = 0;
@@ -509,7 +500,7 @@ LABEL_32:
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)gameObject,
              v27,
-             (const MethodInfo_34AD404 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+             (const MethodInfo_34AF6E0 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     gameObject = OpenInfoWindowComponent__get_ResultInfoGrid(this, v31);
     if ( gameObject )
     {
@@ -567,49 +558,50 @@ LABEL_28:
   gameObject = UnityEngine_Component__get_transform((UnityEngine_Component_o *)gameObject, 0LL);
   if ( !gameObject )
     goto LABEL_32;
-  v47.fields.z = 0.0;
-  v47.fields.x = v26;
-  v47.fields.y = v41;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v47, 0LL);
+  v45.fields.z = 0.0;
+  v45.fields.x = v26;
+  v45.fields.y = v41;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v45, 0LL);
   gameObject = OpenInfoWindowComponent__get_ResultInfoGrid(this, v42);
   if ( !gameObject )
     goto LABEL_32;
   UIGrid__set_repositionNow((UIGrid_o *)gameObject, 1, 0LL);
-  v45 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v43, v44);
-  System_Action___ctor(v45, (Il2CppObject *)this, Method_OpenInfoWindowComponent_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v45, 0, 0LL);
+  v43 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  System_Action___ctor(v43, (Il2CppObject *)this, Method_OpenInfoWindowComponent_EndOpen__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v43, 0, 0LL);
 }
 
 
 void __fastcall OpenInfoWindowComponent__clearInfoGrid(OpenInfoWindowComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Component_o *ResultInfoGrid; // x0
+  __int64 v4; // x1
   int32_t childCount; // w0
-  const MethodInfo *v5; // x1
-  int32_t v6; // w20
+  const MethodInfo *v6; // x1
+  int32_t v7; // w20
   UnityEngine_Object_o *gameObject; // x21
-  int32_t v8; // w2
-  int32_t v9; // w3
+  int32_t v9; // w2
+  int32_t v10; // w3
 
-  if ( (byte_49FFC99 & 1) == 0 )
+  if ( (byte_4A01D9B & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, method);
-    byte_49FFC99 = 1;
+    sub_1B64870(&UnityEngine_Object_TypeInfo, method);
+    byte_4A01D9B = 1;
   }
   ResultInfoGrid = (UnityEngine_Component_o *)OpenInfoWindowComponent__get_ResultInfoGrid(this, method);
   if ( !ResultInfoGrid
     || (ResultInfoGrid = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(ResultInfoGrid, 0LL)) == 0LL )
   {
 LABEL_14:
-    sub_1B64324(ResultInfoGrid);
+    sub_1B64ACC(ResultInfoGrid, v4);
   }
   childCount = UnityEngine_Transform__get_childCount((UnityEngine_Transform_o *)ResultInfoGrid, 0LL);
-  v6 = childCount - 1;
+  v7 = childCount - 1;
   if ( childCount >= 1 )
   {
     do
     {
-      ResultInfoGrid = (UnityEngine_Component_o *)OpenInfoWindowComponent__get_ResultInfoGrid(this, v5);
+      ResultInfoGrid = (UnityEngine_Component_o *)OpenInfoWindowComponent__get_ResultInfoGrid(this, v6);
       if ( !ResultInfoGrid )
         goto LABEL_14;
       ResultInfoGrid = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(ResultInfoGrid, 0LL);
@@ -617,19 +609,19 @@ LABEL_14:
         goto LABEL_14;
       ResultInfoGrid = (UnityEngine_Component_o *)UnityEngine_Transform__GetChild(
                                                     (UnityEngine_Transform_o *)ResultInfoGrid,
-                                                    v6,
+                                                    v7,
                                                     0LL);
       if ( !ResultInfoGrid )
         goto LABEL_14;
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(ResultInfoGrid, 0LL);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_69127736(gameObject, 0LL);
-      --v6;
+      UnityEngine_Object__Destroy_69135916(gameObject, 0LL);
+      --v7;
     }
-    while ( v6 >= 0 );
+    while ( v7 >= 0 );
     this->fields.resInfoList = 0LL;
-    sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.resInfoList, 0, v8, v9);
+    sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.resInfoList, 0, v9, v10);
   }
 }
 
@@ -641,13 +633,14 @@ UIGrid_o *__fastcall OpenInfoWindowComponent__get_ResultInfoGrid(
   struct OpenInfoWindowComponent_LayoutInfo_o *applyLayoutInfo; // x8
   UnityEngine_Object_o *Grid; // x20
   _BOOL8 v5; // x0
-  struct OpenInfoWindowComponent_LayoutInfo_o *v6; // x8
+  __int64 v6; // x1
+  struct OpenInfoWindowComponent_LayoutInfo_o *v7; // x8
   UIGrid_o **p_Grid; // x8
 
-  if ( (byte_49FFC95 & 1) == 0 )
+  if ( (byte_4A01D97 & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, method);
-    byte_49FFC95 = 1;
+    sub_1B64870(&UnityEngine_Object_TypeInfo, method);
+    byte_4A01D97 = 1;
   }
   applyLayoutInfo = this->fields.applyLayoutInfo;
   if ( !applyLayoutInfo )
@@ -658,10 +651,10 @@ UIGrid_o *__fastcall OpenInfoWindowComponent__get_ResultInfoGrid(
   v5 = UnityEngine_Object__op_Inequality(Grid, 0LL, 0LL);
   if ( v5 )
   {
-    v6 = this->fields.applyLayoutInfo;
-    if ( !v6 )
-      sub_1B64324(v5);
-    p_Grid = &v6->fields.Grid;
+    v7 = this->fields.applyLayoutInfo;
+    if ( !v7 )
+      sub_1B64ACC(v5, v6);
+    p_Grid = &v7->fields.Grid;
   }
   else
   {
@@ -693,10 +686,10 @@ void __fastcall OpenInfoWindowComponent__setCenter(OpenInfoWindowComponent_o *th
   float v18; // s1
   UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_49FFC98 & 1) == 0 )
+  if ( (byte_4A01D9A & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, method);
-    byte_49FFC98 = 1;
+    sub_1B64870(&UnityEngine_Object_TypeInfo, method);
+    byte_4A01D9A = 1;
   }
   basePanel = (UnityEngine_Object_o *)this->fields.basePanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -722,7 +715,7 @@ void __fastcall OpenInfoWindowComponent__setCenter(OpenInfoWindowComponent_o *th
                                                  basePanel->klass[1]._1.fields)) == 0LL )
   {
 LABEL_20:
-    sub_1B64324(transform);
+    sub_1B64ACC(transform, v5);
   }
   klass = (unsigned int)transform[1].klass;
   v9 = (float32x2_t *)transform;
@@ -754,7 +747,7 @@ LABEL_20:
   while ( v10 != 4 );
   if ( klass < 3 )
 LABEL_19:
-    sub_1B6432C(transform, v5);
+    sub_1B64AD4(transform, v5);
   v18 = v9[5].n64_f32[0] + (float)((float)(v9[8].n64_f32[0] - v9[5].n64_f32[0]) * 0.5);
   *(float32x2_t *)&this->fields.center.fields.x = vadd_f32(
                                                     v9[4],
@@ -793,7 +786,7 @@ void __fastcall OpenInfoWindowComponent_LayoutInfo__Apply(
         (WindowSprite = (UnityEngine_Component_o *)this->fields.WindowSprite) == 0LL) )
   {
 LABEL_6:
-    sub_1B64324(WindowSprite);
+    sub_1B64ACC(WindowSprite, component);
   }
   UIWidget__set_height((UIWidget_o *)WindowSprite, this->fields.WindowHeight, 0LL);
 }
@@ -821,6 +814,6 @@ bool __fastcall OpenInfoWindowComponent___c__DisplayClass22_0___FindLayout_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B64324(this);
+    sub_1B64ACC(this, 0LL);
   return x->fields.InfoNum == this->fields.infoNum;
 }

@@ -4,6 +4,7 @@ void __fastcall SelectBannerSliderIcon___ctor(SelectBannerSliderIcon_o *this, co
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall SelectBannerSliderIcon__setEnableOffImg(
         SelectBannerSliderIcon_o *this,
         bool isOff,
@@ -13,11 +14,12 @@ void __fastcall SelectBannerSliderIcon__setEnableOffImg(
 
   offImg = (UnityEngine_Component_o *)this->fields.offImg;
   if ( !offImg || (offImg = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(offImg, 0LL)) == 0LL )
-    sub_1B64324(offImg);
+    sub_1B64ACC(offImg, isOff);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)offImg, isOff, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall SelectBannerSliderIcon__setEnableOnImg(
         SelectBannerSliderIcon_o *this,
         bool isOn,
@@ -27,6 +29,6 @@ void __fastcall SelectBannerSliderIcon__setEnableOnImg(
 
   onImg = (UnityEngine_Component_o *)this->fields.onImg;
   if ( !onImg || (onImg = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(onImg, 0LL)) == 0LL )
-    sub_1B64324(onImg);
+    sub_1B64ACC(onImg, isOn);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)onImg, isOn, 0LL);
 }

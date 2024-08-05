@@ -19,17 +19,18 @@ void __fastcall FSOffset__AddBottomY(FSOffset_o *this, const MethodInfo *method)
 {
   FSUtility_c *v3; // x0
   UnityEngine_Transform_o *transform; // x0
+  __int64 v5; // x1
   float addBottomY; // s11
   float x; // s8
   float y; // s10
   float z; // s9
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v10; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_49FDA6D & 1) == 0 )
+  if ( (byte_49FFB68 & 1) == 0 )
   {
-    sub_1B640C8(&FSUtility_TypeInfo, method);
-    byte_49FDA6D = 1;
+    sub_1B64870(&FSUtility_TypeInfo, method);
+    byte_49FFB68 = 1;
   }
   if ( this->fields.enableAddBottomY )
   {
@@ -47,12 +48,12 @@ void __fastcall FSOffset__AddBottomY(FSOffset_o *this, const MethodInfo *method)
             z = localPosition.fields.z,
             (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
       {
-        sub_1B64324(transform);
+        sub_1B64ACC(transform, v5);
       }
-      v10.fields.x = x;
-      v10.fields.z = z;
-      v10.fields.y = y + addBottomY;
-      UnityEngine_Transform__set_localPosition(transform, v10, 0LL);
+      v11.fields.x = x;
+      v11.fields.z = z;
+      v11.fields.y = y + addBottomY;
+      UnityEngine_Transform__set_localPosition(transform, v11, 0LL);
     }
   }
 }
@@ -66,10 +67,10 @@ void __fastcall FSOffset__AddOffsetX(FSOffset_o *this, const MethodInfo *method)
   float v6; // s0
   int32_t v7; // w20
 
-  if ( (byte_49FDA6B & 1) == 0 )
+  if ( (byte_49FFB66 & 1) == 0 )
   {
-    sub_1B640C8(&FSUtility_TypeInfo, method);
-    byte_49FDA6B = 1;
+    sub_1B64870(&FSUtility_TypeInfo, method);
+    byte_49FFB66 = 1;
   }
   if ( this->fields.enableAddOffsetX )
   {
@@ -92,13 +93,13 @@ void __fastcall FSOffset__AddOffsetX(FSOffset_o *this, const MethodInfo *method)
       v7 = UnityEngine_Screen__get_width(0LL);
       v6 = (float)v7 / (float)UnityEngine_Screen__get_height(0LL);
     }
-    FSOffset__AddOffsetX_40691780(this, v6, v5);
+    FSOffset__AddOffsetX_40696912(this, v6, v5);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall FSOffset__AddOffsetX_40691780(FSOffset_o *this, float ratio, const MethodInfo *method)
+void __fastcall FSOffset__AddOffsetX_40696912(FSOffset_o *this, float ratio, const MethodInfo *method)
 {
   float subMarginX; // s9
   FSUtility_c *v6; // x0
@@ -106,20 +107,21 @@ void __fastcall FSOffset__AddOffsetX_40691780(FSOffset_o *this, float ratio, con
   float v8; // s0
   float v9; // s8
   UnityEngine_Transform_o *transform; // x0
-  float v11; // s11
-  float v12; // s0
+  __int64 v11; // x1
+  float v12; // s11
+  float v13; // s0
   int32_t addDirectionX; // w8
-  float v14; // s9
-  float v15; // s1
-  float v16; // s8
-  float v17; // s2
-  float v18; // s10
-  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
+  float v15; // s9
+  float v16; // s1
+  float v17; // s8
+  float v18; // s2
+  float v19; // s10
+  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_49FDA6C & 1) == 0 )
+  if ( (byte_49FFB67 & 1) == 0 )
   {
-    sub_1B640C8(&FSUtility_TypeInfo, method);
-    byte_49FDA6C = 1;
+    sub_1B64870(&FSUtility_TypeInfo, method);
+    byte_49FFB67 = 1;
   }
   subMarginX = this->fields.subMarginX;
   if ( this->fields.calcNotchSize )
@@ -139,28 +141,28 @@ void __fastcall FSOffset__AddOffsetX_40691780(FSOffset_o *this, float ratio, con
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
     goto LABEL_17;
-  v11 = (float)(v9 * offsetXRatio) - subMarginX;
-  *(UnityEngine_Vector3_o *)&v12 = UnityEngine_Transform__get_localPosition(transform, 0LL);
+  v12 = (float)(v9 * offsetXRatio) - subMarginX;
+  *(UnityEngine_Vector3_o *)&v13 = UnityEngine_Transform__get_localPosition(transform, 0LL);
   addDirectionX = this->fields.addDirectionX;
-  v14 = v12;
-  v16 = v15;
-  v18 = v17;
+  v15 = v13;
+  v17 = v16;
+  v19 = v18;
   if ( addDirectionX == 1 )
   {
-    v14 = v11 + v12;
+    v15 = v12 + v13;
   }
   else if ( !addDirectionX )
   {
-    v14 = v12 - v11;
+    v15 = v13 - v12;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
 LABEL_17:
-    sub_1B64324(transform);
-  v19.fields.x = v14;
-  v19.fields.y = v16;
-  v19.fields.z = v18;
-  UnityEngine_Transform__set_localPosition(transform, v19, 0LL);
+    sub_1B64ACC(transform, v11);
+  v20.fields.x = v15;
+  v20.fields.y = v17;
+  v20.fields.z = v19;
+  UnityEngine_Transform__set_localPosition(transform, v20, 0LL);
 }
 
 
@@ -174,14 +176,15 @@ void __fastcall FSOffset__Awake(FSOffset_o *this, const MethodInfo *method)
 void __fastcall FSOffset__OnEnable(FSOffset_o *this, const MethodInfo *method)
 {
   UnityEngine_Transform_o *transform; // x0
-  const MethodInfo *v4; // x1
+  __int64 v4; // x1
   const MethodInfo *v5; // x1
   const MethodInfo *v6; // x1
+  const MethodInfo *v7; // x1
 
-  if ( (byte_49FDA69 & 1) == 0 )
+  if ( (byte_49FFB64 & 1) == 0 )
   {
-    sub_1B640C8(&CommonUI_TypeInfo, method);
-    byte_49FDA69 = 1;
+    sub_1B64870(&CommonUI_TypeInfo, method);
+    byte_49FFB64 = 1;
   }
   if ( this->fields.checkForceObi )
   {
@@ -190,16 +193,16 @@ void __fastcall FSOffset__OnEnable(FSOffset_o *this, const MethodInfo *method)
       || (UnityEngine_Transform__set_localPosition(transform, this->fields.defaultPosition, 0LL),
           (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
     {
-      sub_1B64324(transform);
+      sub_1B64ACC(transform, v4);
     }
     UnityEngine_Transform__set_localScale(transform, this->fields.defaultScale, 0LL);
     if ( !CommonUI_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CommonUI_TypeInfo);
     if ( !CommonUI__GetForceObi_16_9(0LL) )
     {
-      FSOffset__SetOffset(this, v4);
-      FSOffset__AddOffsetX(this, v5);
-      FSOffset__AddBottomY(this, v6);
+      FSOffset__SetOffset(this, v5);
+      FSOffset__AddOffsetX(this, v6);
+      FSOffset__AddBottomY(this, v7);
     }
   }
 }
@@ -210,21 +213,22 @@ void __fastcall FSOffset__SetOffset(FSOffset_o *this, const MethodInfo *method)
   FSUtility_c *v3; // x0
   bool IsUnderVista; // w20
   UnityEngine_Transform_o *transform; // x0
+  __int64 v6; // x1
   float *p_z; // x9
   struct UnityEngine_Vector3_o *p_vistaPosition; // x8
   float *p_y; // x10
-  FSUtility_c *v9; // x0
-  bool v10; // w20
-  float *v11; // x9
+  FSUtility_c *v10; // x0
+  bool v11; // w20
+  float *v12; // x9
   struct UnityEngine_Vector3_o *p_vistaScale; // x8
-  float *v13; // x10
-  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
+  float *v14; // x10
   UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_49FDA6A & 1) == 0 )
+  if ( (byte_49FFB65 & 1) == 0 )
   {
-    sub_1B640C8(&FSUtility_TypeInfo, method);
-    byte_49FDA6A = 1;
+    sub_1B64870(&FSUtility_TypeInfo, method);
+    byte_49FFB65 = 1;
   }
   if ( this->fields.enablePosition )
   {
@@ -249,42 +253,42 @@ void __fastcall FSOffset__SetOffset(FSOffset_o *this, const MethodInfo *method)
       p_vistaPosition = &this->fields.scopePosition;
       p_y = &this->fields.scopePosition.fields.y;
     }
-    v14.fields.z = *p_z;
-    v14.fields.y = *p_y;
-    v14.fields.x = p_vistaPosition->fields.x;
-    UnityEngine_Transform__set_localPosition(transform, v14, 0LL);
+    v15.fields.z = *p_z;
+    v15.fields.y = *p_y;
+    v15.fields.x = p_vistaPosition->fields.x;
+    UnityEngine_Transform__set_localPosition(transform, v15, 0LL);
   }
   if ( this->fields.enableScale )
   {
-    v9 = FSUtility_TypeInfo;
+    v10 = FSUtility_TypeInfo;
     if ( !FSUtility_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
-    v10 = FSUtility__IsUnderVista((const MethodInfo *)v9);
+    v11 = FSUtility__IsUnderVista((const MethodInfo *)v10);
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-    if ( v10 )
+    if ( v11 )
     {
       if ( transform )
       {
-        v11 = &this->fields.vistaScale.fields.z;
+        v12 = &this->fields.vistaScale.fields.z;
         p_vistaScale = &this->fields.vistaScale;
-        v13 = &this->fields.vistaScale.fields.y;
+        v14 = &this->fields.vistaScale.fields.y;
 LABEL_21:
-        v15.fields.z = *v11;
-        v15.fields.y = *v13;
-        v15.fields.x = p_vistaScale->fields.x;
-        UnityEngine_Transform__set_localScale(transform, v15, 0LL);
+        v16.fields.z = *v12;
+        v16.fields.y = *v14;
+        v16.fields.x = p_vistaScale->fields.x;
+        UnityEngine_Transform__set_localScale(transform, v16, 0LL);
         return;
       }
     }
     else if ( transform )
     {
-      v11 = &this->fields.scopeScale.fields.z;
+      v12 = &this->fields.scopeScale.fields.z;
       p_vistaScale = &this->fields.scopeScale;
-      v13 = &this->fields.scopeScale.fields.y;
+      v14 = &this->fields.scopeScale.fields.y;
       goto LABEL_21;
     }
 LABEL_22:
-    sub_1B64324(transform);
+    sub_1B64ACC(transform, v6);
   }
 }
 
@@ -292,10 +296,11 @@ LABEL_22:
 void __fastcall FSOffset__UpdateOffset(FSOffset_o *this, const MethodInfo *method)
 {
   UnityEngine_Transform_o *transform; // x0
-  const MethodInfo *v4; // x1
+  __int64 v4; // x1
+  const MethodInfo *v5; // x1
   _BOOL4 checkForceObi; // w8
-  const MethodInfo *v6; // x1
   const MethodInfo *v7; // x1
+  const MethodInfo *v8; // x1
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0LL) )
@@ -305,16 +310,16 @@ void __fastcall FSOffset__UpdateOffset(FSOffset_o *this, const MethodInfo *metho
       || (this->fields.defaultPosition = UnityEngine_Transform__get_localPosition(transform, 0LL),
           (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
     {
-      sub_1B64324(transform);
+      sub_1B64ACC(transform, v4);
     }
     localScale = UnityEngine_Transform__get_localScale(transform, 0LL);
     checkForceObi = this->fields.checkForceObi;
     this->fields.defaultScale = localScale;
     if ( !checkForceObi )
     {
-      FSOffset__SetOffset(this, v4);
-      FSOffset__AddOffsetX(this, v6);
-      FSOffset__AddBottomY(this, v7);
+      FSOffset__SetOffset(this, v5);
+      FSOffset__AddOffsetX(this, v7);
+      FSOffset__AddBottomY(this, v8);
     }
   }
 }

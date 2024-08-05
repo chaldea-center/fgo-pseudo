@@ -1,12 +1,12 @@
 void __fastcall FilterKindList___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  __int64 v2; // x2
+  __int64 v2; // x1
   __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x1
-  System_Collections_Generic_List_T__o *v6; // x19
-  __int64 v7; // x0
+  System_Collections_Generic_List_T__o *v5; // x19
+  __int64 v6; // x0
+  __int64 v7; // x1
   _QWORD *v8; // x8
   int32_t *p_version; // x23
   struct System_Object_array *items; // x9
@@ -86,14 +86,14 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   __int64 v84; // x10
   __int64 v85; // x10
   __int64 v86; // x10
-  __int64 v87; // x1
-  __int64 v88; // x2
-  System_Collections_Generic_List_T__o *v89; // x19
-  _QWORD *v90; // x8
-  int32_t *v91; // x25
-  struct System_Object_array *v92; // x9
+  System_Collections_Generic_List_T__o *v87; // x19
+  _QWORD *v88; // x8
+  int32_t *v89; // x25
+  struct System_Object_array *v90; // x9
+  __int64 v91; // x10
+  int32_t *v92; // x24
   __int64 v93; // x10
-  int32_t *v94; // x24
+  __int64 v94; // x10
   __int64 v95; // x10
   __int64 v96; // x10
   __int64 v97; // x10
@@ -106,264 +106,213 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   __int64 v104; // x10
   __int64 v105; // x10
   __int64 v106; // x10
-  __int64 v107; // x10
-  __int64 v108; // x10
   struct FilterKindList_StaticFields *static_fields; // x0
-  __int64 v110; // x1
-  __int64 v111; // x2
-  System_Collections_Generic_List_T__o *v112; // x19
-  struct System_Object_array *v113; // x8
-  _QWORD *v114; // x9
-  __int64 v115; // x10
-  __int64 v116; // x10
-  __int64 v117; // x10
-  struct FilterKindList_StaticFields *v118; // x0
-  __int64 v119; // x1
-  __int64 v120; // x2
-  System_Collections_Generic_List_T__o *v121; // x19
-  struct System_Object_array *v122; // x8
-  _QWORD *v123; // x9
-  __int64 v124; // x10
-  __int64 v125; // x10
+  System_Collections_Generic_List_T__o *v108; // x19
+  struct System_Object_array *v109; // x8
+  _QWORD *v110; // x9
+  __int64 v111; // x10
+  __int64 v112; // x10
+  __int64 v113; // x10
+  struct FilterKindList_StaticFields *v114; // x0
+  System_Collections_Generic_List_T__o *v115; // x19
+  struct System_Object_array *v116; // x8
+  _QWORD *v117; // x9
+  __int64 v118; // x10
+  __int64 v119; // x10
+  __int64 v120; // x10
+  __int64 v121; // x10
+  struct FilterKindList_StaticFields *v122; // x0
+  System_Collections_Generic_List_T__o *v123; // x19
+  struct System_Object_array *v124; // x8
+  _QWORD *v125; // x9
   __int64 v126; // x10
   __int64 v127; // x10
-  struct FilterKindList_StaticFields *v128; // x0
-  __int64 v129; // x1
-  __int64 v130; // x2
-  System_Collections_Generic_List_T__o *v131; // x19
-  struct System_Object_array *v132; // x8
-  _QWORD *v133; // x9
+  __int64 v128; // x10
+  struct FilterKindList_StaticFields *v129; // x0
+  System_Collections_Generic_List_T__o *v130; // x19
+  struct System_Object_array *v131; // x8
+  _QWORD *v132; // x9
+  __int64 v133; // x10
   __int64 v134; // x10
   __int64 v135; // x10
   __int64 v136; // x10
   struct FilterKindList_StaticFields *v137; // x0
-  __int64 v138; // x1
-  __int64 v139; // x2
-  System_Collections_Generic_List_T__o *v140; // x19
-  struct System_Object_array *v141; // x8
-  _QWORD *v142; // x9
+  System_Collections_Generic_List_T__o *v138; // x19
+  struct System_Object_array *v139; // x8
+  _QWORD *v140; // x9
+  __int64 v141; // x10
+  __int64 v142; // x10
   __int64 v143; // x10
   __int64 v144; // x10
-  __int64 v145; // x10
-  __int64 v146; // x10
-  struct FilterKindList_StaticFields *v147; // x0
-  __int64 v148; // x1
-  __int64 v149; // x2
-  System_Collections_Generic_List_T__o *v150; // x19
-  struct System_Object_array *v151; // x8
-  _QWORD *v152; // x9
-  __int64 v153; // x10
-  __int64 v154; // x10
-  __int64 v155; // x10
-  __int64 v156; // x10
-  struct FilterKindList_StaticFields *v157; // x0
-  __int64 v158; // x1
-  __int64 v159; // x2
+  struct FilterKindList_StaticFields *v145; // x0
+  System_Collections_Generic_List_T__o *v146; // x19
+  struct System_Object_array *v147; // x8
+  _QWORD *v148; // x9
+  __int64 v149; // x10
+  __int64 v150; // x10
+  __int64 v151; // x10
+  __int64 v152; // x10
+  struct FilterKindList_StaticFields *v153; // x0
+  System_Collections_Generic_List_T__o *v154; // x19
+  struct System_Object_array *v155; // x8
+  _QWORD *v156; // x9
+  __int64 v157; // x10
+  __int64 v158; // x10
+  struct FilterKindList_StaticFields *v159; // x0
   System_Collections_Generic_List_T__o *v160; // x19
   struct System_Object_array *v161; // x8
   _QWORD *v162; // x9
   __int64 v163; // x10
   __int64 v164; // x10
   __int64 v165; // x10
-  __int64 v166; // x10
-  struct FilterKindList_StaticFields *v167; // x0
-  __int64 v168; // x1
-  __int64 v169; // x2
-  System_Collections_Generic_List_T__o *v170; // x19
-  struct System_Object_array *v171; // x8
-  _QWORD *v172; // x9
-  __int64 v173; // x10
-  __int64 v174; // x10
-  struct FilterKindList_StaticFields *v175; // x0
-  __int64 v176; // x1
-  __int64 v177; // x2
-  System_Collections_Generic_List_T__o *v178; // x19
-  struct System_Object_array *v179; // x8
-  _QWORD *v180; // x9
-  __int64 v181; // x10
-  __int64 v182; // x10
-  __int64 v183; // x10
-  struct FilterKindList_StaticFields *v184; // x0
-  __int64 v185; // x1
-  __int64 v186; // x2
-  System_Collections_Generic_List_T__o *v187; // x19
-  struct System_Object_array *v188; // x8
-  _QWORD *v189; // x9
+  struct FilterKindList_StaticFields *v166; // x0
+  System_Collections_Generic_List_T__o *v167; // x19
+  struct System_Object_array *v168; // x8
+  _QWORD *v169; // x9
+  __int64 v170; // x10
+  __int64 v171; // x10
+  __int64 v172; // x10
+  struct FilterKindList_StaticFields *v173; // x0
+  System_Collections_Generic_List_T__o *v174; // x19
+  struct System_Object_array *v175; // x8
+  _QWORD *v176; // x9
+  __int64 v177; // x10
+  __int64 v178; // x10
+  __int64 v179; // x10
+  struct FilterKindList_StaticFields *v180; // x0
+  System_Collections_Generic_List_T__o *v181; // x19
+  struct System_Object_array *v182; // x9
+  _QWORD *v183; // x8
+  __int64 v184; // x10
+  __int64 v185; // x10
+  __int64 v186; // x10
+  __int64 v187; // x10
+  __int64 v188; // x10
+  __int64 v189; // x10
   __int64 v190; // x10
-  __int64 v191; // x10
-  __int64 v192; // x10
-  struct FilterKindList_StaticFields *v193; // x0
-  __int64 v194; // x1
-  __int64 v195; // x2
-  System_Collections_Generic_List_T__o *v196; // x19
-  struct System_Object_array *v197; // x8
-  _QWORD *v198; // x9
-  __int64 v199; // x10
-  __int64 v200; // x10
+  struct FilterKindList_StaticFields *v191; // x0
+  System_Collections_Generic_List_T__o *v192; // x19
+  struct System_Object_array *v193; // x8
+  _QWORD *v194; // x9
+  __int64 v195; // x10
+  __int64 v196; // x10
+  struct FilterKindList_StaticFields *v197; // x0
+  System_Collections_Generic_List_T__o *v198; // x19
+  struct System_Object_array *v199; // x8
+  _QWORD *v200; // x9
   __int64 v201; // x10
-  struct FilterKindList_StaticFields *v202; // x0
-  __int64 v203; // x1
-  __int64 v204; // x2
+  __int64 v202; // x10
+  __int64 v203; // x10
+  struct FilterKindList_StaticFields *v204; // x0
   System_Collections_Generic_List_T__o *v205; // x19
-  struct System_Object_array *v206; // x9
-  _QWORD *v207; // x8
+  struct System_Object_array *v206; // x8
+  _QWORD *v207; // x9
   __int64 v208; // x10
   __int64 v209; // x10
-  __int64 v210; // x10
-  __int64 v211; // x10
-  __int64 v212; // x10
-  __int64 v213; // x10
+  struct FilterKindList_StaticFields *v210; // x0
+  System_Collections_Generic_List_T__o *v211; // x19
+  struct System_Object_array *v212; // x8
+  _QWORD *v213; // x9
   __int64 v214; // x10
-  struct FilterKindList_StaticFields *v215; // x0
-  __int64 v216; // x1
-  __int64 v217; // x2
-  System_Collections_Generic_List_T__o *v218; // x19
-  struct System_Object_array *v219; // x8
-  _QWORD *v220; // x9
+  __int64 v215; // x10
+  struct FilterKindList_StaticFields *v216; // x0
+  System_Collections_Generic_List_T__o *v217; // x19
+  struct System_Object_array *v218; // x8
+  _QWORD *v219; // x9
+  __int64 v220; // x10
   __int64 v221; // x10
-  __int64 v222; // x10
-  struct FilterKindList_StaticFields *v223; // x0
-  __int64 v224; // x1
-  __int64 v225; // x2
-  System_Collections_Generic_List_T__o *v226; // x19
-  struct System_Object_array *v227; // x8
-  _QWORD *v228; // x9
-  __int64 v229; // x10
-  __int64 v230; // x10
-  __int64 v231; // x10
-  struct FilterKindList_StaticFields *v232; // x0
-  __int64 v233; // x1
-  __int64 v234; // x2
-  System_Collections_Generic_List_T__o *v235; // x19
-  struct System_Object_array *v236; // x8
-  _QWORD *v237; // x9
-  __int64 v238; // x10
-  __int64 v239; // x10
-  struct FilterKindList_StaticFields *v240; // x0
-  __int64 v241; // x1
-  __int64 v242; // x2
-  System_Collections_Generic_List_T__o *v243; // x19
-  struct System_Object_array *v244; // x8
-  _QWORD *v245; // x9
+  struct FilterKindList_StaticFields *v222; // x0
+  System_Collections_Generic_List_T__o *v223; // x19
+  struct System_Object_array *v224; // x8
+  _QWORD *v225; // x9
+  __int64 v226; // x10
+  __int64 v227; // x10
+  __int64 v228; // x10
+  struct FilterKindList_StaticFields *v229; // x0
+  System_Collections_Generic_List_T__o *v230; // x19
+  struct System_Object_array *v231; // x8
+  _QWORD *v232; // x9
+  __int64 v233; // x10
+  __int64 v234; // x10
+  __int64 v235; // x10
+  __int64 v236; // x10
+  __int64 v237; // x10
+  struct FilterKindList_StaticFields *v238; // x0
+  System_Collections_Generic_List_T__o *v239; // x19
+  struct System_Object_array *v240; // x9
+  _QWORD *v241; // x8
+  __int64 v242; // x10
+  __int64 v243; // x10
+  __int64 v244; // x10
+  __int64 v245; // x10
   __int64 v246; // x10
   __int64 v247; // x10
-  struct FilterKindList_StaticFields *v248; // x0
-  __int64 v249; // x1
-  __int64 v250; // x2
+  __int64 v248; // x10
+  __int64 v249; // x10
+  struct FilterKindList_StaticFields *v250; // x0
   System_Collections_Generic_List_T__o *v251; // x19
-  struct System_Object_array *v252; // x8
-  _QWORD *v253; // x9
+  struct System_Object_array *v252; // x9
+  _QWORD *v253; // x8
   __int64 v254; // x10
   __int64 v255; // x10
-  struct FilterKindList_StaticFields *v256; // x0
-  __int64 v257; // x1
-  __int64 v258; // x2
-  System_Collections_Generic_List_T__o *v259; // x19
-  struct System_Object_array *v260; // x8
-  _QWORD *v261; // x9
-  __int64 v262; // x10
-  __int64 v263; // x10
-  __int64 v264; // x10
-  struct FilterKindList_StaticFields *v265; // x0
-  __int64 v266; // x1
-  __int64 v267; // x2
-  System_Collections_Generic_List_T__o *v268; // x19
-  struct System_Object_array *v269; // x8
-  _QWORD *v270; // x9
-  __int64 v271; // x10
-  __int64 v272; // x10
+  __int64 v256; // x10
+  __int64 v257; // x10
+  __int64 v258; // x10
+  __int64 v259; // x10
+  __int64 v260; // x10
+  struct FilterKindList_StaticFields *v261; // x0
+  System_Collections_Generic_List_T__o *v262; // x19
+  struct System_Object_array *v263; // x8
+  _QWORD *v264; // x9
+  __int64 v265; // x10
+  __int64 v266; // x10
+  __int64 v267; // x10
+  __int64 v268; // x10
+  struct FilterKindList_StaticFields *v269; // x0
+  System_Collections_Generic_List_T__o *v270; // x19
+  struct System_Object_array *v271; // x8
+  _QWORD *v272; // x9
   __int64 v273; // x10
   __int64 v274; // x10
-  __int64 v275; // x10
-  struct FilterKindList_StaticFields *v276; // x0
-  __int64 v277; // x1
-  __int64 v278; // x2
-  System_Collections_Generic_List_T__o *v279; // x19
-  struct System_Object_array *v280; // x9
-  _QWORD *v281; // x8
-  __int64 v282; // x10
-  __int64 v283; // x10
-  __int64 v284; // x10
-  __int64 v285; // x10
-  __int64 v286; // x10
-  __int64 v287; // x10
-  __int64 v288; // x10
-  __int64 v289; // x10
-  struct FilterKindList_StaticFields *v290; // x0
-  __int64 v291; // x1
-  __int64 v292; // x2
-  System_Collections_Generic_List_T__o *v293; // x19
-  struct System_Object_array *v294; // x9
-  _QWORD *v295; // x8
-  __int64 v296; // x10
-  __int64 v297; // x10
-  __int64 v298; // x10
-  __int64 v299; // x10
-  __int64 v300; // x10
-  __int64 v301; // x10
-  __int64 v302; // x10
-  struct FilterKindList_StaticFields *v303; // x0
-  __int64 v304; // x1
-  __int64 v305; // x2
-  System_Collections_Generic_List_T__o *v306; // x19
-  struct System_Object_array *v307; // x8
-  _QWORD *v308; // x9
-  __int64 v309; // x10
-  __int64 v310; // x10
-  __int64 v311; // x10
-  __int64 v312; // x10
-  struct FilterKindList_StaticFields *v313; // x0
-  __int64 v314; // x1
-  __int64 v315; // x2
-  System_Collections_Generic_List_T__o *v316; // x19
-  struct System_Object_array *v317; // x8
-  _QWORD *v318; // x9
-  __int64 v319; // x10
-  __int64 v320; // x10
-  struct FilterKindList_StaticFields *v321; // x0
-  __int64 v322; // x1
-  __int64 v323; // x2
-  System_Collections_Generic_List_T__o *v324; // x19
-  struct System_Object_array *v325; // x8
-  _QWORD *v326; // x9
-  __int64 v327; // x10
-  __int64 v328; // x10
-  struct FilterKindList_StaticFields *v329; // x0
+  struct FilterKindList_StaticFields *v275; // x0
+  System_Collections_Generic_List_T__o *v276; // x19
+  struct System_Object_array *v277; // x8
+  _QWORD *v278; // x9
+  __int64 v279; // x10
+  __int64 v280; // x10
+  struct FilterKindList_StaticFields *v281; // x0
 
-  if ( (byte_49F76F1 & 1) == 0 )
+  if ( (byte_49F97E1 & 1) == 0 )
   {
-    sub_1B640C8(&FilterKindList_TypeInfo, v1);
-    sub_1B640C8(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__, v3);
-    sub_1B640C8(&Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__, v4);
-    sub_1B640C8(&System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo, v5);
-    byte_49F76F1 = 1;
+    sub_1B64870(&FilterKindList_TypeInfo, v1);
+    sub_1B64870(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__, v2);
+    sub_1B64870(&Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__, v3);
+    sub_1B64870(&System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo, v4);
+    byte_49F97E1 = 1;
   }
-  v6 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                 System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo,
-                                                 v1,
-                                                 v2);
+  v5 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
-    v6,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
-  if ( !v6 )
+    v5,
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+  if ( !v5 )
     goto LABEL_570;
   v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-  p_version = &v6->fields._version;
-  ++v6->fields._version;
-  items = v6->fields._items;
-  p_size = &v6->fields._size;
-  size = v6->fields._size;
+  p_version = &v5->fields._version;
+  ++v5->fields._version;
+  items = v5->fields._items;
+  p_size = &v5->fields._size;
+  size = v5->fields._size;
   if ( !items )
     goto LABEL_570;
   if ( (unsigned int)size >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       8,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -377,12 +326,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v13 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       9,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -396,12 +345,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v14 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       0,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -415,12 +364,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v15 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       1,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -434,12 +383,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v16 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       2,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -453,12 +402,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v17 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       3,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -472,12 +421,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v18 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       4,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -491,12 +440,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v19 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       5,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -510,12 +459,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v20 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       6,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -529,12 +478,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v21 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       7,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -548,12 +497,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v22 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       21,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -567,12 +516,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v23 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       22,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -586,12 +535,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v24 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       23,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -605,12 +554,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v25 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       24,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -624,12 +573,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v26 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       25,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -643,12 +592,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v27 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       26,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -662,12 +611,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v28 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       27,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -681,12 +630,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v29 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       28,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -700,12 +649,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v30 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       29,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -719,12 +668,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v31 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       30,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -738,12 +687,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v32 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       31,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -757,12 +706,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v33 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       34,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -776,12 +725,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v34 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       35,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -795,12 +744,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v35 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       36,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -814,12 +763,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v36 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       37,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -833,12 +782,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v37 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       38,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -852,12 +801,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v38 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       42,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -871,12 +820,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v39 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       43,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -890,12 +839,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v40 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       44,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -909,12 +858,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v41 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       45,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -928,12 +877,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v42 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       46,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -947,12 +896,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v43 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       47,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -966,12 +915,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v44 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       48,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -985,12 +934,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v45 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       39,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1004,12 +953,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v46 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       50,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1023,12 +972,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v47 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       51,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1042,12 +991,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v48 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       54,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1061,12 +1010,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v49 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       55,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1080,12 +1029,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v50 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       72,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1099,12 +1048,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v51 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       73,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1118,12 +1067,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v52 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       74,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1137,12 +1086,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v53 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       75,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1156,12 +1105,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v54 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       76,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1175,12 +1124,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v55 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       56,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1194,12 +1143,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v56 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       78,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1213,12 +1162,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v57 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       79,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1232,12 +1181,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v58 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       82,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1251,12 +1200,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v59 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       77,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1270,12 +1219,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v60 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       81,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1289,12 +1238,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v61 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       80,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1308,12 +1257,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v62 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       83,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1327,12 +1276,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v63 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       84,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1346,12 +1295,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v64 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       85,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1365,12 +1314,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v65 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       86,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1384,12 +1333,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v66 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       87,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1403,12 +1352,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v67 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       57,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1422,12 +1371,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v68 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       58,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1441,12 +1390,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v69 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       59,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1460,12 +1409,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v70 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       60,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1479,12 +1428,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v71 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       61,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1498,12 +1447,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v72 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       62,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1517,12 +1466,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v73 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       63,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1536,12 +1485,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v74 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       64,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1555,12 +1504,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v75 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       10,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1574,12 +1523,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v76 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       11,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1593,12 +1542,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v77 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       12,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1612,12 +1561,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v78 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       52,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1631,12 +1580,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v79 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       53,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1650,12 +1599,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v80 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       69,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1669,12 +1618,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v81 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       70,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1688,12 +1637,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v82 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       71,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1707,12 +1656,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v83 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       65,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1726,12 +1675,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v84 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       66,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1745,12 +1694,12 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v85 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       67,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
-    items = v6->fields._items;
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+    items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v6->fields._version;
+    ++v5->fields._version;
     if ( !items )
       goto LABEL_570;
   }
@@ -1764,719 +1713,828 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   if ( (unsigned int)v86 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v6,
+      v5,
       68,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
   }
   else
   {
     *p_size = v86 + 1;
     *((_DWORD *)items->m_Items + v86) = 68;
   }
-  FilterKindList_TypeInfo->static_fields->AllFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v6;
-  sub_1B6406C(FilterKindList_TypeInfo->static_fields);
-  v89 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                  System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo,
-                                                  v87,
-                                                  v88);
+  FilterKindList_TypeInfo->static_fields->AllFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v5;
+  sub_1B64814(FilterKindList_TypeInfo->static_fields);
+  v87 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
-    v89,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
-  if ( !v89 )
+    v87,
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+  if ( !v87 )
     goto LABEL_570;
-  v90 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-  v91 = &v89->fields._version;
-  ++v89->fields._version;
-  v92 = v89->fields._items;
-  v94 = &v89->fields._size;
-  v93 = v89->fields._size;
-  if ( !v92 )
+  v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+  v89 = &v87->fields._version;
+  ++v87->fields._version;
+  v90 = v87->fields._items;
+  v92 = &v87->fields._size;
+  v91 = v87->fields._size;
+  if ( !v90 )
     goto LABEL_570;
-  if ( (unsigned int)v93 >= v92->max_length )
+  if ( (unsigned int)v91 >= v90->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v89,
+      v87,
       0,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v90[4] + 192LL) + 112LL));
-    v92 = v89->fields._items;
-    v90 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v89->fields._version;
-    if ( !v92 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+    v90 = v87->fields._items;
+    v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v87->fields._version;
+    if ( !v90 )
       goto LABEL_570;
   }
   else
   {
-    *v94 = v93 + 1;
-    *((_DWORD *)v92->m_Items + v93) = 0;
-    ++*v91;
+    *v92 = v91 + 1;
+    *((_DWORD *)v90->m_Items + v91) = 0;
+    ++*v89;
   }
-  v95 = *v94;
-  if ( (unsigned int)v95 >= v92->max_length )
+  v93 = *v92;
+  if ( (unsigned int)v93 >= v90->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v89,
+      v87,
       1,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v90[4] + 192LL) + 112LL));
-    v92 = v89->fields._items;
-    v90 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v89->fields._version;
-    if ( !v92 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+    v90 = v87->fields._items;
+    v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v87->fields._version;
+    if ( !v90 )
       goto LABEL_570;
   }
   else
   {
-    *v94 = v95 + 1;
-    *((_DWORD *)v92->m_Items + v95) = 1;
-    ++*v91;
+    *v92 = v93 + 1;
+    *((_DWORD *)v90->m_Items + v93) = 1;
+    ++*v89;
   }
-  v96 = *v94;
-  if ( (unsigned int)v96 >= v92->max_length )
+  v94 = *v92;
+  if ( (unsigned int)v94 >= v90->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v89,
+      v87,
       2,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v90[4] + 192LL) + 112LL));
-    v92 = v89->fields._items;
-    v90 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v89->fields._version;
-    if ( !v92 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+    v90 = v87->fields._items;
+    v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v87->fields._version;
+    if ( !v90 )
       goto LABEL_570;
   }
   else
   {
-    *v94 = v96 + 1;
-    *((_DWORD *)v92->m_Items + v96) = 2;
-    ++*v91;
+    *v92 = v94 + 1;
+    *((_DWORD *)v90->m_Items + v94) = 2;
+    ++*v89;
   }
-  v97 = *v94;
-  if ( (unsigned int)v97 >= v92->max_length )
+  v95 = *v92;
+  if ( (unsigned int)v95 >= v90->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v89,
+      v87,
       3,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v90[4] + 192LL) + 112LL));
-    v92 = v89->fields._items;
-    v90 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v89->fields._version;
-    if ( !v92 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+    v90 = v87->fields._items;
+    v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v87->fields._version;
+    if ( !v90 )
       goto LABEL_570;
   }
   else
   {
-    *v94 = v97 + 1;
-    *((_DWORD *)v92->m_Items + v97) = 3;
-    ++*v91;
+    *v92 = v95 + 1;
+    *((_DWORD *)v90->m_Items + v95) = 3;
+    ++*v89;
   }
-  v98 = *v94;
-  if ( (unsigned int)v98 >= v92->max_length )
+  v96 = *v92;
+  if ( (unsigned int)v96 >= v90->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v89,
+      v87,
       4,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v90[4] + 192LL) + 112LL));
-    v92 = v89->fields._items;
-    v90 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v89->fields._version;
-    if ( !v92 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+    v90 = v87->fields._items;
+    v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v87->fields._version;
+    if ( !v90 )
       goto LABEL_570;
   }
   else
   {
-    *v94 = v98 + 1;
-    *((_DWORD *)v92->m_Items + v98) = 4;
-    ++*v91;
+    *v92 = v96 + 1;
+    *((_DWORD *)v90->m_Items + v96) = 4;
+    ++*v89;
   }
-  v99 = *v94;
-  if ( (unsigned int)v99 >= v92->max_length )
+  v97 = *v92;
+  if ( (unsigned int)v97 >= v90->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v89,
+      v87,
       5,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v90[4] + 192LL) + 112LL));
-    v92 = v89->fields._items;
-    v90 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v89->fields._version;
-    if ( !v92 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+    v90 = v87->fields._items;
+    v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v87->fields._version;
+    if ( !v90 )
       goto LABEL_570;
   }
   else
   {
-    *v94 = v99 + 1;
-    *((_DWORD *)v92->m_Items + v99) = 5;
-    ++*v91;
+    *v92 = v97 + 1;
+    *((_DWORD *)v90->m_Items + v97) = 5;
+    ++*v89;
   }
-  v100 = *v94;
-  if ( (unsigned int)v100 >= v92->max_length )
+  v98 = *v92;
+  if ( (unsigned int)v98 >= v90->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v89,
+      v87,
       6,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v90[4] + 192LL) + 112LL));
-    v92 = v89->fields._items;
-    v90 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v89->fields._version;
-    if ( !v92 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+    v90 = v87->fields._items;
+    v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v87->fields._version;
+    if ( !v90 )
       goto LABEL_570;
   }
   else
   {
-    *v94 = v100 + 1;
-    *((_DWORD *)v92->m_Items + v100) = 6;
-    ++*v91;
+    *v92 = v98 + 1;
+    *((_DWORD *)v90->m_Items + v98) = 6;
+    ++*v89;
   }
-  v101 = *v94;
-  if ( (unsigned int)v101 >= v92->max_length )
+  v99 = *v92;
+  if ( (unsigned int)v99 >= v90->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v89,
+      v87,
       57,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v90[4] + 192LL) + 112LL));
-    v92 = v89->fields._items;
-    v90 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v89->fields._version;
-    if ( !v92 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+    v90 = v87->fields._items;
+    v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v87->fields._version;
+    if ( !v90 )
       goto LABEL_570;
   }
   else
   {
-    *v94 = v101 + 1;
-    *((_DWORD *)v92->m_Items + v101) = 57;
-    ++*v91;
+    *v92 = v99 + 1;
+    *((_DWORD *)v90->m_Items + v99) = 57;
+    ++*v89;
   }
-  v102 = *v94;
-  if ( (unsigned int)v102 >= v92->max_length )
+  v100 = *v92;
+  if ( (unsigned int)v100 >= v90->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v89,
+      v87,
       58,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v90[4] + 192LL) + 112LL));
-    v92 = v89->fields._items;
-    v90 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v89->fields._version;
-    if ( !v92 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+    v90 = v87->fields._items;
+    v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v87->fields._version;
+    if ( !v90 )
       goto LABEL_570;
   }
   else
   {
-    *v94 = v102 + 1;
-    *((_DWORD *)v92->m_Items + v102) = 58;
-    ++*v91;
+    *v92 = v100 + 1;
+    *((_DWORD *)v90->m_Items + v100) = 58;
+    ++*v89;
   }
-  v103 = *v94;
-  if ( (unsigned int)v103 >= v92->max_length )
+  v101 = *v92;
+  if ( (unsigned int)v101 >= v90->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v89,
+      v87,
       59,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v90[4] + 192LL) + 112LL));
-    v92 = v89->fields._items;
-    v90 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v89->fields._version;
-    if ( !v92 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+    v90 = v87->fields._items;
+    v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v87->fields._version;
+    if ( !v90 )
       goto LABEL_570;
   }
   else
   {
-    *v94 = v103 + 1;
-    *((_DWORD *)v92->m_Items + v103) = 59;
-    ++*v91;
+    *v92 = v101 + 1;
+    *((_DWORD *)v90->m_Items + v101) = 59;
+    ++*v89;
   }
-  v104 = *v94;
-  if ( (unsigned int)v104 >= v92->max_length )
+  v102 = *v92;
+  if ( (unsigned int)v102 >= v90->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v89,
+      v87,
       60,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v90[4] + 192LL) + 112LL));
-    v92 = v89->fields._items;
-    v90 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v89->fields._version;
-    if ( !v92 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+    v90 = v87->fields._items;
+    v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v87->fields._version;
+    if ( !v90 )
       goto LABEL_570;
   }
   else
   {
-    *v94 = v104 + 1;
-    *((_DWORD *)v92->m_Items + v104) = 60;
-    ++*v91;
+    *v92 = v102 + 1;
+    *((_DWORD *)v90->m_Items + v102) = 60;
+    ++*v89;
   }
-  v105 = *v94;
-  if ( (unsigned int)v105 >= v92->max_length )
+  v103 = *v92;
+  if ( (unsigned int)v103 >= v90->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v89,
+      v87,
       61,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v90[4] + 192LL) + 112LL));
-    v92 = v89->fields._items;
-    v90 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v89->fields._version;
-    if ( !v92 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+    v90 = v87->fields._items;
+    v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v87->fields._version;
+    if ( !v90 )
       goto LABEL_570;
   }
   else
   {
-    *v94 = v105 + 1;
-    *((_DWORD *)v92->m_Items + v105) = 61;
-    ++*v91;
+    *v92 = v103 + 1;
+    *((_DWORD *)v90->m_Items + v103) = 61;
+    ++*v89;
   }
-  v106 = *v94;
-  if ( (unsigned int)v106 >= v92->max_length )
+  v104 = *v92;
+  if ( (unsigned int)v104 >= v90->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v89,
+      v87,
       62,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v90[4] + 192LL) + 112LL));
-    v92 = v89->fields._items;
-    v90 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v89->fields._version;
-    if ( !v92 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+    v90 = v87->fields._items;
+    v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v87->fields._version;
+    if ( !v90 )
       goto LABEL_570;
   }
   else
   {
-    *v94 = v106 + 1;
-    *((_DWORD *)v92->m_Items + v106) = 62;
-    ++*v91;
+    *v92 = v104 + 1;
+    *((_DWORD *)v90->m_Items + v104) = 62;
+    ++*v89;
   }
-  v107 = *v94;
-  if ( (unsigned int)v107 >= v92->max_length )
+  v105 = *v92;
+  if ( (unsigned int)v105 >= v90->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v89,
+      v87,
       63,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v90[4] + 192LL) + 112LL));
-    v92 = v89->fields._items;
-    v90 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v89->fields._version;
-    if ( !v92 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+    v90 = v87->fields._items;
+    v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v87->fields._version;
+    if ( !v90 )
       goto LABEL_570;
   }
   else
   {
-    *v94 = v107 + 1;
-    *((_DWORD *)v92->m_Items + v107) = 63;
-    ++*v91;
+    *v92 = v105 + 1;
+    *((_DWORD *)v90->m_Items + v105) = 63;
+    ++*v89;
   }
-  v108 = *v94;
-  if ( (unsigned int)v108 >= v92->max_length )
+  v106 = *v92;
+  if ( (unsigned int)v106 >= v90->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v89,
+      v87,
       64,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v90[4] + 192LL) + 112LL));
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
   }
   else
   {
-    *v94 = v108 + 1;
-    *((_DWORD *)v92->m_Items + v108) = 64;
+    *v92 = v106 + 1;
+    *((_DWORD *)v90->m_Items + v106) = 64;
   }
   static_fields = FilterKindList_TypeInfo->static_fields;
-  static_fields->ClassFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v89;
-  sub_1B6406C(&static_fields->ClassFilterKindList);
-  v112 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                   System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo,
-                                                   v110,
-                                                   v111);
+  static_fields->ClassFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v87;
+  sub_1B64814(&static_fields->ClassFilterKindList);
+  v108 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
-    v112,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
-  if ( !v112 )
+    v108,
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+  if ( !v108 )
     goto LABEL_570;
-  v113 = v112->fields._items;
-  v114 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-  ++v112->fields._version;
-  if ( !v113 )
+  v109 = v108->fields._items;
+  v110 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+  ++v108->fields._version;
+  if ( !v109 )
     goto LABEL_570;
-  v115 = v112->fields._size;
-  if ( (unsigned int)v115 >= v113->max_length )
+  v111 = v108->fields._size;
+  if ( (unsigned int)v111 >= v109->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v112,
+      v108,
       0,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v114[4] + 192LL) + 112LL));
-    v113 = v112->fields._items;
-    v114 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v112->fields._version;
-    if ( !v113 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v110[4] + 192LL) + 112LL));
+    v109 = v108->fields._items;
+    v110 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v108->fields._version;
+    if ( !v109 )
       goto LABEL_570;
   }
   else
   {
-    v112->fields._size = v115 + 1;
-    *((_DWORD *)v113->m_Items + v115) = 0;
-    ++v112->fields._version;
+    v108->fields._size = v111 + 1;
+    *((_DWORD *)v109->m_Items + v111) = 0;
+    ++v108->fields._version;
   }
-  v116 = v112->fields._size;
-  if ( (unsigned int)v116 >= v113->max_length )
+  v112 = v108->fields._size;
+  if ( (unsigned int)v112 >= v109->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v112,
+      v108,
       1,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v114[4] + 192LL) + 112LL));
-    v113 = v112->fields._items;
-    v114 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v112->fields._version;
-    if ( !v113 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v110[4] + 192LL) + 112LL));
+    v109 = v108->fields._items;
+    v110 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v108->fields._version;
+    if ( !v109 )
       goto LABEL_570;
   }
   else
   {
-    v112->fields._size = v116 + 1;
-    *((_DWORD *)v113->m_Items + v116) = 1;
-    ++v112->fields._version;
+    v108->fields._size = v112 + 1;
+    *((_DWORD *)v109->m_Items + v112) = 1;
+    ++v108->fields._version;
   }
-  v117 = v112->fields._size;
-  if ( (unsigned int)v117 >= v113->max_length )
+  v113 = v108->fields._size;
+  if ( (unsigned int)v113 >= v109->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v112,
+      v108,
       2,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v114[4] + 192LL) + 112LL));
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v110[4] + 192LL) + 112LL));
   }
   else
   {
-    v112->fields._size = v117 + 1;
-    *((_DWORD *)v113->m_Items + v117) = 2;
+    v108->fields._size = v113 + 1;
+    *((_DWORD *)v109->m_Items + v113) = 2;
   }
-  v118 = FilterKindList_TypeInfo->static_fields;
-  v118->ThreeKnightsFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v112;
-  sub_1B6406C(&v118->ThreeKnightsFilterKindList);
-  v121 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                   System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo,
-                                                   v119,
-                                                   v120);
+  v114 = FilterKindList_TypeInfo->static_fields;
+  v114->ThreeKnightsFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v108;
+  sub_1B64814(&v114->ThreeKnightsFilterKindList);
+  v115 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
-    v121,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
-  if ( !v121 )
+    v115,
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+  if ( !v115 )
     goto LABEL_570;
-  v122 = v121->fields._items;
-  v123 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-  ++v121->fields._version;
-  if ( !v122 )
+  v116 = v115->fields._items;
+  v117 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+  ++v115->fields._version;
+  if ( !v116 )
     goto LABEL_570;
-  v124 = v121->fields._size;
-  if ( (unsigned int)v124 >= v122->max_length )
+  v118 = v115->fields._size;
+  if ( (unsigned int)v118 >= v116->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v121,
+      v115,
       3,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v123[4] + 192LL) + 112LL));
-    v122 = v121->fields._items;
-    v123 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v121->fields._version;
-    if ( !v122 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v117[4] + 192LL) + 112LL));
+    v116 = v115->fields._items;
+    v117 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v115->fields._version;
+    if ( !v116 )
       goto LABEL_570;
   }
   else
   {
-    v121->fields._size = v124 + 1;
-    *((_DWORD *)v122->m_Items + v124) = 3;
-    ++v121->fields._version;
+    v115->fields._size = v118 + 1;
+    *((_DWORD *)v116->m_Items + v118) = 3;
+    ++v115->fields._version;
   }
-  v125 = v121->fields._size;
-  if ( (unsigned int)v125 >= v122->max_length )
+  v119 = v115->fields._size;
+  if ( (unsigned int)v119 >= v116->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v121,
+      v115,
       4,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v123[4] + 192LL) + 112LL));
-    v122 = v121->fields._items;
-    v123 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v121->fields._version;
-    if ( !v122 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v117[4] + 192LL) + 112LL));
+    v116 = v115->fields._items;
+    v117 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v115->fields._version;
+    if ( !v116 )
       goto LABEL_570;
   }
   else
   {
-    v121->fields._size = v125 + 1;
-    *((_DWORD *)v122->m_Items + v125) = 4;
-    ++v121->fields._version;
+    v115->fields._size = v119 + 1;
+    *((_DWORD *)v116->m_Items + v119) = 4;
+    ++v115->fields._version;
   }
-  v126 = v121->fields._size;
-  if ( (unsigned int)v126 >= v122->max_length )
+  v120 = v115->fields._size;
+  if ( (unsigned int)v120 >= v116->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v121,
+      v115,
       5,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v123[4] + 192LL) + 112LL));
-    v122 = v121->fields._items;
-    v123 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v121->fields._version;
-    if ( !v122 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v117[4] + 192LL) + 112LL));
+    v116 = v115->fields._items;
+    v117 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v115->fields._version;
+    if ( !v116 )
       goto LABEL_570;
   }
   else
   {
-    v121->fields._size = v126 + 1;
-    *((_DWORD *)v122->m_Items + v126) = 5;
-    ++v121->fields._version;
+    v115->fields._size = v120 + 1;
+    *((_DWORD *)v116->m_Items + v120) = 5;
+    ++v115->fields._version;
   }
-  v127 = v121->fields._size;
-  if ( (unsigned int)v127 >= v122->max_length )
+  v121 = v115->fields._size;
+  if ( (unsigned int)v121 >= v116->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v121,
+      v115,
       6,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v123[4] + 192LL) + 112LL));
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v117[4] + 192LL) + 112LL));
   }
   else
   {
-    v121->fields._size = v127 + 1;
-    *((_DWORD *)v122->m_Items + v127) = 6;
+    v115->fields._size = v121 + 1;
+    *((_DWORD *)v116->m_Items + v121) = 6;
   }
-  v128 = FilterKindList_TypeInfo->static_fields;
-  v128->FourCavalryFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v121;
-  sub_1B6406C(&v128->FourCavalryFilterKindList);
-  v131 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                   System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo,
-                                                   v129,
-                                                   v130);
+  v122 = FilterKindList_TypeInfo->static_fields;
+  v122->FourCavalryFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v115;
+  sub_1B64814(&v122->FourCavalryFilterKindList);
+  v123 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
-    v131,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    v123,
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+  if ( !v123 )
+    goto LABEL_570;
+  v124 = v123->fields._items;
+  v125 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+  ++v123->fields._version;
+  if ( !v124 )
+    goto LABEL_570;
+  v126 = v123->fields._size;
+  if ( (unsigned int)v126 >= v124->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v123,
+      58,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v125[4] + 192LL) + 112LL));
+    v124 = v123->fields._items;
+    v125 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v123->fields._version;
+    if ( !v124 )
+      goto LABEL_570;
+  }
+  else
+  {
+    v123->fields._size = v126 + 1;
+    *((_DWORD *)v124->m_Items + v126) = 58;
+    ++v123->fields._version;
+  }
+  v127 = v123->fields._size;
+  if ( (unsigned int)v127 >= v124->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v123,
+      59,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v125[4] + 192LL) + 112LL));
+    v124 = v123->fields._items;
+    v125 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v123->fields._version;
+    if ( !v124 )
+      goto LABEL_570;
+  }
+  else
+  {
+    v123->fields._size = v127 + 1;
+    *((_DWORD *)v124->m_Items + v127) = 59;
+    ++v123->fields._version;
+  }
+  v128 = v123->fields._size;
+  if ( (unsigned int)v128 >= v124->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v123,
+      60,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v125[4] + 192LL) + 112LL));
+  }
+  else
+  {
+    v123->fields._size = v128 + 1;
+    *((_DWORD *)v124->m_Items + v128) = 60;
+  }
+  v129 = FilterKindList_TypeInfo->static_fields;
+  v129->ClassExtra1FilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v123;
+  sub_1B64814(&v129->ClassExtra1FilterKindList);
+  v130 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  System_Collections_Generic_List_Int32Enum____ctor(
+    v130,
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+  if ( !v130 )
+    goto LABEL_570;
+  v131 = v130->fields._items;
+  v132 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+  ++v130->fields._version;
   if ( !v131 )
     goto LABEL_570;
-  v132 = v131->fields._items;
-  v133 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-  ++v131->fields._version;
-  if ( !v132 )
-    goto LABEL_570;
-  v134 = v131->fields._size;
-  if ( (unsigned int)v134 >= v132->max_length )
+  v133 = v130->fields._size;
+  if ( (unsigned int)v133 >= v131->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v131,
+      v130,
+      57,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v132[4] + 192LL) + 112LL));
+    v131 = v130->fields._items;
+    v132 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v130->fields._version;
+    if ( !v131 )
+      goto LABEL_570;
+  }
+  else
+  {
+    v130->fields._size = v133 + 1;
+    *((_DWORD *)v131->m_Items + v133) = 57;
+    ++v130->fields._version;
+  }
+  v134 = v130->fields._size;
+  if ( (unsigned int)v134 >= v131->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v130,
       58,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v133[4] + 192LL) + 112LL));
-    v132 = v131->fields._items;
-    v133 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v131->fields._version;
-    if ( !v132 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v132[4] + 192LL) + 112LL));
+    v131 = v130->fields._items;
+    v132 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v130->fields._version;
+    if ( !v131 )
       goto LABEL_570;
   }
   else
   {
-    v131->fields._size = v134 + 1;
-    *((_DWORD *)v132->m_Items + v134) = 58;
-    ++v131->fields._version;
+    v130->fields._size = v134 + 1;
+    *((_DWORD *)v131->m_Items + v134) = 58;
+    ++v130->fields._version;
   }
-  v135 = v131->fields._size;
-  if ( (unsigned int)v135 >= v132->max_length )
+  v135 = v130->fields._size;
+  if ( (unsigned int)v135 >= v131->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v131,
+      v130,
       59,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v133[4] + 192LL) + 112LL));
-    v132 = v131->fields._items;
-    v133 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v131->fields._version;
-    if ( !v132 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v132[4] + 192LL) + 112LL));
+    v131 = v130->fields._items;
+    v132 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v130->fields._version;
+    if ( !v131 )
       goto LABEL_570;
   }
   else
   {
-    v131->fields._size = v135 + 1;
-    *((_DWORD *)v132->m_Items + v135) = 59;
-    ++v131->fields._version;
+    v130->fields._size = v135 + 1;
+    *((_DWORD *)v131->m_Items + v135) = 59;
+    ++v130->fields._version;
   }
-  v136 = v131->fields._size;
-  if ( (unsigned int)v136 >= v132->max_length )
+  v136 = v130->fields._size;
+  if ( (unsigned int)v136 >= v131->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v131,
+      v130,
       60,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v133[4] + 192LL) + 112LL));
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v132[4] + 192LL) + 112LL));
   }
   else
   {
-    v131->fields._size = v136 + 1;
-    *((_DWORD *)v132->m_Items + v136) = 60;
+    v130->fields._size = v136 + 1;
+    *((_DWORD *)v131->m_Items + v136) = 60;
   }
   v137 = FilterKindList_TypeInfo->static_fields;
-  v137->ClassExtra1FilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v131;
-  sub_1B6406C(&v137->ClassExtra1FilterKindList);
-  v140 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                   System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo,
-                                                   v138,
-                                                   v139);
+  v137->ClassExtra1InShielderFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v130;
+  sub_1B64814(&v137->ClassExtra1InShielderFilterKindList);
+  v138 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
-    v140,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
-  if ( !v140 )
+    v138,
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+  if ( !v138 )
     goto LABEL_570;
-  v141 = v140->fields._items;
-  v142 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-  ++v140->fields._version;
-  if ( !v141 )
+  v139 = v138->fields._items;
+  v140 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+  ++v138->fields._version;
+  if ( !v139 )
     goto LABEL_570;
-  v143 = v140->fields._size;
-  if ( (unsigned int)v143 >= v141->max_length )
+  v141 = v138->fields._size;
+  if ( (unsigned int)v141 >= v139->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v140,
-      57,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v142[4] + 192LL) + 112LL));
-    v141 = v140->fields._items;
-    v142 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v140->fields._version;
-    if ( !v141 )
-      goto LABEL_570;
-  }
-  else
-  {
-    v140->fields._size = v143 + 1;
-    *((_DWORD *)v141->m_Items + v143) = 57;
-    ++v140->fields._version;
-  }
-  v144 = v140->fields._size;
-  if ( (unsigned int)v144 >= v141->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v140,
-      58,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v142[4] + 192LL) + 112LL));
-    v141 = v140->fields._items;
-    v142 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v140->fields._version;
-    if ( !v141 )
-      goto LABEL_570;
-  }
-  else
-  {
-    v140->fields._size = v144 + 1;
-    *((_DWORD *)v141->m_Items + v144) = 58;
-    ++v140->fields._version;
-  }
-  v145 = v140->fields._size;
-  if ( (unsigned int)v145 >= v141->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v140,
-      59,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v142[4] + 192LL) + 112LL));
-    v141 = v140->fields._items;
-    v142 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v140->fields._version;
-    if ( !v141 )
-      goto LABEL_570;
-  }
-  else
-  {
-    v140->fields._size = v145 + 1;
-    *((_DWORD *)v141->m_Items + v145) = 59;
-    ++v140->fields._version;
-  }
-  v146 = v140->fields._size;
-  if ( (unsigned int)v146 >= v141->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v140,
-      60,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v142[4] + 192LL) + 112LL));
-  }
-  else
-  {
-    v140->fields._size = v146 + 1;
-    *((_DWORD *)v141->m_Items + v146) = 60;
-  }
-  v147 = FilterKindList_TypeInfo->static_fields;
-  v147->ClassExtra1InShielderFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v140;
-  sub_1B6406C(&v147->ClassExtra1InShielderFilterKindList);
-  v150 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                   System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo,
-                                                   v148,
-                                                   v149);
-  System_Collections_Generic_List_Int32Enum____ctor(
-    v150,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
-  if ( !v150 )
-    goto LABEL_570;
-  v151 = v150->fields._items;
-  v152 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-  ++v150->fields._version;
-  if ( !v151 )
-    goto LABEL_570;
-  v153 = v150->fields._size;
-  if ( (unsigned int)v153 >= v151->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v150,
+      v138,
       61,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v152[4] + 192LL) + 112LL));
-    v151 = v150->fields._items;
-    v152 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v150->fields._version;
-    if ( !v151 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v140[4] + 192LL) + 112LL));
+    v139 = v138->fields._items;
+    v140 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v138->fields._version;
+    if ( !v139 )
       goto LABEL_570;
   }
   else
   {
-    v150->fields._size = v153 + 1;
-    *((_DWORD *)v151->m_Items + v153) = 61;
-    ++v150->fields._version;
+    v138->fields._size = v141 + 1;
+    *((_DWORD *)v139->m_Items + v141) = 61;
+    ++v138->fields._version;
   }
-  v154 = v150->fields._size;
-  if ( (unsigned int)v154 >= v151->max_length )
+  v142 = v138->fields._size;
+  if ( (unsigned int)v142 >= v139->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v150,
+      v138,
       62,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v152[4] + 192LL) + 112LL));
-    v151 = v150->fields._items;
-    v152 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v150->fields._version;
-    if ( !v151 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v140[4] + 192LL) + 112LL));
+    v139 = v138->fields._items;
+    v140 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v138->fields._version;
+    if ( !v139 )
       goto LABEL_570;
   }
   else
   {
-    v150->fields._size = v154 + 1;
-    *((_DWORD *)v151->m_Items + v154) = 62;
-    ++v150->fields._version;
+    v138->fields._size = v142 + 1;
+    *((_DWORD *)v139->m_Items + v142) = 62;
+    ++v138->fields._version;
   }
-  v155 = v150->fields._size;
-  if ( (unsigned int)v155 >= v151->max_length )
+  v143 = v138->fields._size;
+  if ( (unsigned int)v143 >= v139->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v150,
+      v138,
       63,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v152[4] + 192LL) + 112LL));
-    v151 = v150->fields._items;
-    v152 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v150->fields._version;
-    if ( !v151 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v140[4] + 192LL) + 112LL));
+    v139 = v138->fields._items;
+    v140 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v138->fields._version;
+    if ( !v139 )
       goto LABEL_570;
   }
   else
   {
-    v150->fields._size = v155 + 1;
-    *((_DWORD *)v151->m_Items + v155) = 63;
-    ++v150->fields._version;
+    v138->fields._size = v143 + 1;
+    *((_DWORD *)v139->m_Items + v143) = 63;
+    ++v138->fields._version;
   }
-  v156 = v150->fields._size;
-  if ( (unsigned int)v156 >= v151->max_length )
+  v144 = v138->fields._size;
+  if ( (unsigned int)v144 >= v139->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v150,
+      v138,
       64,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v152[4] + 192LL) + 112LL));
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v140[4] + 192LL) + 112LL));
   }
   else
   {
-    v150->fields._size = v156 + 1;
-    *((_DWORD *)v151->m_Items + v156) = 64;
+    v138->fields._size = v144 + 1;
+    *((_DWORD *)v139->m_Items + v144) = 64;
   }
-  v157 = FilterKindList_TypeInfo->static_fields;
-  v157->ClassExtra2FilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v150;
-  sub_1B6406C(&v157->ClassExtra2FilterKindList);
-  v160 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                   System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo,
-                                                   v158,
-                                                   v159);
+  v145 = FilterKindList_TypeInfo->static_fields;
+  v145->ClassExtra2FilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v138;
+  sub_1B64814(&v145->ClassExtra2FilterKindList);
+  v146 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  System_Collections_Generic_List_Int32Enum____ctor(
+    v146,
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+  if ( !v146 )
+    goto LABEL_570;
+  v147 = v146->fields._items;
+  v148 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+  ++v146->fields._version;
+  if ( !v147 )
+    goto LABEL_570;
+  v149 = v146->fields._size;
+  if ( (unsigned int)v149 >= v147->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v146,
+      65,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v148[4] + 192LL) + 112LL));
+    v147 = v146->fields._items;
+    v148 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v146->fields._version;
+    if ( !v147 )
+      goto LABEL_570;
+  }
+  else
+  {
+    v146->fields._size = v149 + 1;
+    *((_DWORD *)v147->m_Items + v149) = 65;
+    ++v146->fields._version;
+  }
+  v150 = v146->fields._size;
+  if ( (unsigned int)v150 >= v147->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v146,
+      66,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v148[4] + 192LL) + 112LL));
+    v147 = v146->fields._items;
+    v148 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v146->fields._version;
+    if ( !v147 )
+      goto LABEL_570;
+  }
+  else
+  {
+    v146->fields._size = v150 + 1;
+    *((_DWORD *)v147->m_Items + v150) = 66;
+    ++v146->fields._version;
+  }
+  v151 = v146->fields._size;
+  if ( (unsigned int)v151 >= v147->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v146,
+      67,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v148[4] + 192LL) + 112LL));
+    v147 = v146->fields._items;
+    v148 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v146->fields._version;
+    if ( !v147 )
+      goto LABEL_570;
+  }
+  else
+  {
+    v146->fields._size = v151 + 1;
+    *((_DWORD *)v147->m_Items + v151) = 67;
+    ++v146->fields._version;
+  }
+  v152 = v146->fields._size;
+  if ( (unsigned int)v152 >= v147->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v146,
+      68,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v148[4] + 192LL) + 112LL));
+  }
+  else
+  {
+    v146->fields._size = v152 + 1;
+    *((_DWORD *)v147->m_Items + v152) = 68;
+  }
+  v153 = FilterKindList_TypeInfo->static_fields;
+  v153->ClassGroupFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v146;
+  sub_1B64814(&v153->ClassGroupFilterKindList);
+  v154 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  System_Collections_Generic_List_Int32Enum____ctor(
+    v154,
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+  if ( !v154 )
+    goto LABEL_570;
+  v155 = v154->fields._items;
+  v156 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+  ++v154->fields._version;
+  if ( !v155 )
+    goto LABEL_570;
+  v157 = v154->fields._size;
+  if ( (unsigned int)v157 >= v155->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v154,
+      67,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v156[4] + 192LL) + 112LL));
+    v155 = v154->fields._items;
+    v156 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v154->fields._version;
+    if ( !v155 )
+      goto LABEL_570;
+  }
+  else
+  {
+    v154->fields._size = v157 + 1;
+    *((_DWORD *)v155->m_Items + v157) = 67;
+    ++v154->fields._version;
+  }
+  v158 = v154->fields._size;
+  if ( (unsigned int)v158 >= v155->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v154,
+      68,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v156[4] + 192LL) + 112LL));
+  }
+  else
+  {
+    v154->fields._size = v158 + 1;
+    *((_DWORD *)v155->m_Items + v158) = 68;
+  }
+  v159 = FilterKindList_TypeInfo->static_fields;
+  v159->ClassGroupExtraFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v154;
+  sub_1B64814(&v159->ClassGroupExtraFilterKindList);
+  v160 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v160,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v160 )
     goto LABEL_570;
   v161 = v160->fields._items;
@@ -2489,8 +2547,8 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v160,
-      65,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v162[4] + 192LL) + 112LL));
+      44,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v162[4] + 192LL) + 112LL));
     v161 = v160->fields._items;
     v162 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v160->fields._version;
@@ -2500,7 +2558,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   else
   {
     v160->fields._size = v163 + 1;
-    *((_DWORD *)v161->m_Items + v163) = 65;
+    *((_DWORD *)v161->m_Items + v163) = 44;
     ++v160->fields._version;
   }
   v164 = v160->fields._size;
@@ -2508,8 +2566,8 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v160,
-      66,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v162[4] + 192LL) + 112LL));
+      43,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v162[4] + 192LL) + 112LL));
     v161 = v160->fields._items;
     v162 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v160->fields._version;
@@ -2519,7 +2577,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   else
   {
     v160->fields._size = v164 + 1;
-    *((_DWORD *)v161->m_Items + v164) = 66;
+    *((_DWORD *)v161->m_Items + v164) = 43;
     ++v160->fields._version;
   }
   v165 = v160->fields._size;
@@ -2527,296 +2585,403 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v160,
-      67,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v162[4] + 192LL) + 112LL));
-    v161 = v160->fields._items;
-    v162 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v160->fields._version;
-    if ( !v161 )
-      goto LABEL_570;
+      42,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v162[4] + 192LL) + 112LL));
   }
   else
   {
     v160->fields._size = v165 + 1;
-    *((_DWORD *)v161->m_Items + v165) = 67;
-    ++v160->fields._version;
+    *((_DWORD *)v161->m_Items + v165) = 42;
   }
-  v166 = v160->fields._size;
-  if ( (unsigned int)v166 >= v161->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v160,
-      68,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v162[4] + 192LL) + 112LL));
-  }
-  else
-  {
-    v160->fields._size = v166 + 1;
-    *((_DWORD *)v161->m_Items + v166) = 68;
-  }
-  v167 = FilterKindList_TypeInfo->static_fields;
-  v167->ClassGroupFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v160;
-  sub_1B6406C(&v167->ClassGroupFilterKindList);
-  v170 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                   System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo,
-                                                   v168,
-                                                   v169);
+  v166 = FilterKindList_TypeInfo->static_fields;
+  v166->NpTypeFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v160;
+  sub_1B64814(&v166->NpTypeFilterKindList);
+  v167 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
-    v170,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
-  if ( !v170 )
+    v167,
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+  if ( !v167 )
     goto LABEL_570;
-  v171 = v170->fields._items;
-  v172 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-  ++v170->fields._version;
-  if ( !v171 )
+  v168 = v167->fields._items;
+  v169 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+  ++v167->fields._version;
+  if ( !v168 )
     goto LABEL_570;
-  v173 = v170->fields._size;
-  if ( (unsigned int)v173 >= v171->max_length )
+  v170 = v167->fields._size;
+  if ( (unsigned int)v170 >= v168->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v170,
-      67,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v172[4] + 192LL) + 112LL));
-    v171 = v170->fields._items;
-    v172 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v170->fields._version;
-    if ( !v171 )
-      goto LABEL_570;
-  }
-  else
-  {
-    v170->fields._size = v173 + 1;
-    *((_DWORD *)v171->m_Items + v173) = 67;
-    ++v170->fields._version;
-  }
-  v174 = v170->fields._size;
-  if ( (unsigned int)v174 >= v171->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v170,
-      68,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v172[4] + 192LL) + 112LL));
-  }
-  else
-  {
-    v170->fields._size = v174 + 1;
-    *((_DWORD *)v171->m_Items + v174) = 68;
-  }
-  v175 = FilterKindList_TypeInfo->static_fields;
-  v175->ClassGroupExtraFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v170;
-  sub_1B6406C(&v175->ClassGroupExtraFilterKindList);
-  v178 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                   System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo,
-                                                   v176,
-                                                   v177);
-  System_Collections_Generic_List_Int32Enum____ctor(
-    v178,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
-  if ( !v178 )
-    goto LABEL_570;
-  v179 = v178->fields._items;
-  v180 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-  ++v178->fields._version;
-  if ( !v179 )
-    goto LABEL_570;
-  v181 = v178->fields._size;
-  if ( (unsigned int)v181 >= v179->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v178,
-      44,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v180[4] + 192LL) + 112LL));
-    v179 = v178->fields._items;
-    v180 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v178->fields._version;
-    if ( !v179 )
-      goto LABEL_570;
-  }
-  else
-  {
-    v178->fields._size = v181 + 1;
-    *((_DWORD *)v179->m_Items + v181) = 44;
-    ++v178->fields._version;
-  }
-  v182 = v178->fields._size;
-  if ( (unsigned int)v182 >= v179->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v178,
-      43,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v180[4] + 192LL) + 112LL));
-    v179 = v178->fields._items;
-    v180 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v178->fields._version;
-    if ( !v179 )
-      goto LABEL_570;
-  }
-  else
-  {
-    v178->fields._size = v182 + 1;
-    *((_DWORD *)v179->m_Items + v182) = 43;
-    ++v178->fields._version;
-  }
-  v183 = v178->fields._size;
-  if ( (unsigned int)v183 >= v179->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v178,
-      42,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v180[4] + 192LL) + 112LL));
-  }
-  else
-  {
-    v178->fields._size = v183 + 1;
-    *((_DWORD *)v179->m_Items + v183) = 42;
-  }
-  v184 = FilterKindList_TypeInfo->static_fields;
-  v184->NpTypeFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v178;
-  sub_1B6406C(&v184->NpTypeFilterKindList);
-  v187 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                   System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo,
-                                                   v185,
-                                                   v186);
-  System_Collections_Generic_List_Int32Enum____ctor(
-    v187,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
-  if ( !v187 )
-    goto LABEL_570;
-  v188 = v187->fields._items;
-  v189 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-  ++v187->fields._version;
-  if ( !v188 )
-    goto LABEL_570;
-  v190 = v187->fields._size;
-  if ( (unsigned int)v190 >= v188->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v187,
+      v167,
       46,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v189[4] + 192LL) + 112LL));
-    v188 = v187->fields._items;
-    v189 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v187->fields._version;
-    if ( !v188 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v169[4] + 192LL) + 112LL));
+    v168 = v167->fields._items;
+    v169 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v167->fields._version;
+    if ( !v168 )
       goto LABEL_570;
   }
   else
   {
-    v187->fields._size = v190 + 1;
-    *((_DWORD *)v188->m_Items + v190) = 46;
-    ++v187->fields._version;
+    v167->fields._size = v170 + 1;
+    *((_DWORD *)v168->m_Items + v170) = 46;
+    ++v167->fields._version;
   }
-  v191 = v187->fields._size;
-  if ( (unsigned int)v191 >= v188->max_length )
+  v171 = v167->fields._size;
+  if ( (unsigned int)v171 >= v168->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v187,
+      v167,
       45,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v189[4] + 192LL) + 112LL));
-    v188 = v187->fields._items;
-    v189 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v187->fields._version;
-    if ( !v188 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v169[4] + 192LL) + 112LL));
+    v168 = v167->fields._items;
+    v169 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v167->fields._version;
+    if ( !v168 )
       goto LABEL_570;
   }
   else
   {
-    v187->fields._size = v191 + 1;
-    *((_DWORD *)v188->m_Items + v191) = 45;
-    ++v187->fields._version;
+    v167->fields._size = v171 + 1;
+    *((_DWORD *)v168->m_Items + v171) = 45;
+    ++v167->fields._version;
   }
-  v192 = v187->fields._size;
-  if ( (unsigned int)v192 >= v188->max_length )
+  v172 = v167->fields._size;
+  if ( (unsigned int)v172 >= v168->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v187,
+      v167,
       47,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v189[4] + 192LL) + 112LL));
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v169[4] + 192LL) + 112LL));
   }
   else
   {
-    v187->fields._size = v192 + 1;
-    *((_DWORD *)v188->m_Items + v192) = 47;
+    v167->fields._size = v172 + 1;
+    *((_DWORD *)v168->m_Items + v172) = 47;
   }
-  v193 = FilterKindList_TypeInfo->static_fields;
-  v193->NpEffectFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v187;
-  sub_1B6406C(&v193->NpEffectFilterKindList);
-  v196 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                   System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo,
-                                                   v194,
-                                                   v195);
+  v173 = FilterKindList_TypeInfo->static_fields;
+  v173->NpEffectFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v167;
+  sub_1B64814(&v173->NpEffectFilterKindList);
+  v174 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
-    v196,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
-  if ( !v196 )
+    v174,
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+  if ( !v174 )
     goto LABEL_570;
-  v197 = v196->fields._items;
-  v198 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-  ++v196->fields._version;
-  if ( !v197 )
+  v175 = v174->fields._items;
+  v176 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+  ++v174->fields._version;
+  if ( !v175 )
     goto LABEL_570;
-  v199 = v196->fields._size;
-  if ( (unsigned int)v199 >= v197->max_length )
+  v177 = v174->fields._size;
+  if ( (unsigned int)v177 >= v175->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v196,
+      v174,
       48,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v198[4] + 192LL) + 112LL));
-    v197 = v196->fields._items;
-    v198 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v196->fields._version;
-    if ( !v197 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v176[4] + 192LL) + 112LL));
+    v175 = v174->fields._items;
+    v176 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v174->fields._version;
+    if ( !v175 )
       goto LABEL_570;
   }
   else
   {
-    v196->fields._size = v199 + 1;
-    *((_DWORD *)v197->m_Items + v199) = 48;
-    ++v196->fields._version;
+    v174->fields._size = v177 + 1;
+    *((_DWORD *)v175->m_Items + v177) = 48;
+    ++v174->fields._version;
   }
-  v200 = v196->fields._size;
-  if ( (unsigned int)v200 >= v197->max_length )
+  v178 = v174->fields._size;
+  if ( (unsigned int)v178 >= v175->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v196,
+      v174,
       8,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v198[4] + 192LL) + 112LL));
-    v197 = v196->fields._items;
-    v198 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v196->fields._version;
-    if ( !v197 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v176[4] + 192LL) + 112LL));
+    v175 = v174->fields._items;
+    v176 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v174->fields._version;
+    if ( !v175 )
       goto LABEL_570;
   }
   else
   {
-    v196->fields._size = v200 + 1;
-    *((_DWORD *)v197->m_Items + v200) = 8;
-    ++v196->fields._version;
+    v174->fields._size = v178 + 1;
+    *((_DWORD *)v175->m_Items + v178) = 8;
+    ++v174->fields._version;
   }
-  v201 = v196->fields._size;
-  if ( (unsigned int)v201 >= v197->max_length )
+  v179 = v174->fields._size;
+  if ( (unsigned int)v179 >= v175->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v196,
+      v174,
       9,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v198[4] + 192LL) + 112LL));
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v176[4] + 192LL) + 112LL));
   }
   else
   {
-    v196->fields._size = v201 + 1;
-    *((_DWORD *)v197->m_Items + v201) = 9;
+    v174->fields._size = v179 + 1;
+    *((_DWORD *)v175->m_Items + v179) = 9;
   }
-  v202 = FilterKindList_TypeInfo->static_fields;
-  v202->ServantTypeFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v196;
-  sub_1B6406C(&v202->ServantTypeFilterKindList);
-  v205 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                   System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo,
-                                                   v203,
-                                                   v204);
+  v180 = FilterKindList_TypeInfo->static_fields;
+  v180->ServantTypeFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v174;
+  sub_1B64814(&v180->ServantTypeFilterKindList);
+  v181 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  System_Collections_Generic_List_Int32Enum____ctor(
+    v181,
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+  if ( !v181 )
+    goto LABEL_570;
+  v182 = v181->fields._items;
+  v183 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+  ++v181->fields._version;
+  if ( !v182 )
+    goto LABEL_570;
+  v184 = v181->fields._size;
+  if ( (unsigned int)v184 >= v182->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v181,
+      21,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v183[4] + 192LL) + 112LL));
+    v182 = v181->fields._items;
+    v183 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v181->fields._version;
+    if ( !v182 )
+      goto LABEL_570;
+  }
+  else
+  {
+    v181->fields._size = v184 + 1;
+    *((_DWORD *)v182->m_Items + v184) = 21;
+    ++v181->fields._version;
+  }
+  v185 = v181->fields._size;
+  if ( (unsigned int)v185 >= v182->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v181,
+      22,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v183[4] + 192LL) + 112LL));
+    v182 = v181->fields._items;
+    v183 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v181->fields._version;
+    if ( !v182 )
+      goto LABEL_570;
+  }
+  else
+  {
+    v181->fields._size = v185 + 1;
+    *((_DWORD *)v182->m_Items + v185) = 22;
+    ++v181->fields._version;
+  }
+  v186 = v181->fields._size;
+  if ( (unsigned int)v186 >= v182->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v181,
+      23,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v183[4] + 192LL) + 112LL));
+    v182 = v181->fields._items;
+    v183 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v181->fields._version;
+    if ( !v182 )
+      goto LABEL_570;
+  }
+  else
+  {
+    v181->fields._size = v186 + 1;
+    *((_DWORD *)v182->m_Items + v186) = 23;
+    ++v181->fields._version;
+  }
+  v187 = v181->fields._size;
+  if ( (unsigned int)v187 >= v182->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v181,
+      24,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v183[4] + 192LL) + 112LL));
+    v182 = v181->fields._items;
+    v183 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v181->fields._version;
+    if ( !v182 )
+      goto LABEL_570;
+  }
+  else
+  {
+    v181->fields._size = v187 + 1;
+    *((_DWORD *)v182->m_Items + v187) = 24;
+    ++v181->fields._version;
+  }
+  v188 = v181->fields._size;
+  if ( (unsigned int)v188 >= v182->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v181,
+      25,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v183[4] + 192LL) + 112LL));
+    v182 = v181->fields._items;
+    v183 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v181->fields._version;
+    if ( !v182 )
+      goto LABEL_570;
+  }
+  else
+  {
+    v181->fields._size = v188 + 1;
+    *((_DWORD *)v182->m_Items + v188) = 25;
+    ++v181->fields._version;
+  }
+  v189 = v181->fields._size;
+  if ( (unsigned int)v189 >= v182->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v181,
+      26,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v183[4] + 192LL) + 112LL));
+    v182 = v181->fields._items;
+    v183 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v181->fields._version;
+    if ( !v182 )
+      goto LABEL_570;
+  }
+  else
+  {
+    v181->fields._size = v189 + 1;
+    *((_DWORD *)v182->m_Items + v189) = 26;
+    ++v181->fields._version;
+  }
+  v190 = v181->fields._size;
+  if ( (unsigned int)v190 >= v182->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v181,
+      27,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v183[4] + 192LL) + 112LL));
+  }
+  else
+  {
+    v181->fields._size = v190 + 1;
+    *((_DWORD *)v182->m_Items + v190) = 27;
+  }
+  v191 = FilterKindList_TypeInfo->static_fields;
+  v191->CombineBaseServantFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v181;
+  sub_1B64814(&v191->CombineBaseServantFilterKindList);
+  v192 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  System_Collections_Generic_List_Int32Enum____ctor(
+    v192,
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+  if ( !v192 )
+    goto LABEL_570;
+  v193 = v192->fields._items;
+  v194 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+  ++v192->fields._version;
+  if ( !v193 )
+    goto LABEL_570;
+  v195 = v192->fields._size;
+  if ( (unsigned int)v195 >= v193->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v192,
+      28,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v194[4] + 192LL) + 112LL));
+    v193 = v192->fields._items;
+    v194 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v192->fields._version;
+    if ( !v193 )
+      goto LABEL_570;
+  }
+  else
+  {
+    v192->fields._size = v195 + 1;
+    *((_DWORD *)v193->m_Items + v195) = 28;
+    ++v192->fields._version;
+  }
+  v196 = v192->fields._size;
+  if ( (unsigned int)v196 >= v193->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v192,
+      29,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v194[4] + 192LL) + 112LL));
+  }
+  else
+  {
+    v192->fields._size = v196 + 1;
+    *((_DWORD *)v193->m_Items + v196) = 29;
+  }
+  v197 = FilterKindList_TypeInfo->static_fields;
+  v197->CombineMaterialFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v192;
+  sub_1B64814(&v197->CombineMaterialFilterKindList);
+  v198 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  System_Collections_Generic_List_Int32Enum____ctor(
+    v198,
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+  if ( !v198 )
+    goto LABEL_570;
+  v199 = v198->fields._items;
+  v200 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+  ++v198->fields._version;
+  if ( !v199 )
+    goto LABEL_570;
+  v201 = v198->fields._size;
+  if ( (unsigned int)v201 >= v199->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v198,
+      10,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v200[4] + 192LL) + 112LL));
+    v199 = v198->fields._items;
+    v200 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v198->fields._version;
+    if ( !v199 )
+      goto LABEL_570;
+  }
+  else
+  {
+    v198->fields._size = v201 + 1;
+    *((_DWORD *)v199->m_Items + v201) = 10;
+    ++v198->fields._version;
+  }
+  v202 = v198->fields._size;
+  if ( (unsigned int)v202 >= v199->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v198,
+      11,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v200[4] + 192LL) + 112LL));
+    v199 = v198->fields._items;
+    v200 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v198->fields._version;
+    if ( !v199 )
+      goto LABEL_570;
+  }
+  else
+  {
+    v198->fields._size = v202 + 1;
+    *((_DWORD *)v199->m_Items + v202) = 11;
+    ++v198->fields._version;
+  }
+  v203 = v198->fields._size;
+  if ( (unsigned int)v203 >= v199->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v198,
+      12,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v200[4] + 192LL) + 112LL));
+  }
+  else
+  {
+    v198->fields._size = v203 + 1;
+    *((_DWORD *)v199->m_Items + v203) = 12;
+  }
+  v204 = FilterKindList_TypeInfo->static_fields;
+  v204->CollectionStateFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v198;
+  sub_1B64814(&v204->CollectionStateFilterKindList);
+  v205 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v205,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v205 )
     goto LABEL_570;
   v206 = v205->fields._items;
@@ -2829,8 +2994,8 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v205,
-      21,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v207[4] + 192LL) + 112LL));
+      11,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v207[4] + 192LL) + 112LL));
     v206 = v205->fields._items;
     v207 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v205->fields._version;
@@ -2840,7 +3005,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   else
   {
     v205->fields._size = v208 + 1;
-    *((_DWORD *)v206->m_Items + v208) = 21;
+    *((_DWORD *)v206->m_Items + v208) = 11;
     ++v205->fields._version;
   }
   v209 = v205->fields._size;
@@ -2848,334 +3013,441 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v205,
-      22,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v207[4] + 192LL) + 112LL));
-    v206 = v205->fields._items;
-    v207 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v205->fields._version;
-    if ( !v206 )
-      goto LABEL_570;
+      12,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v207[4] + 192LL) + 112LL));
   }
   else
   {
     v205->fields._size = v209 + 1;
-    *((_DWORD *)v206->m_Items + v209) = 22;
-    ++v205->fields._version;
+    *((_DWORD *)v206->m_Items + v209) = 12;
   }
-  v210 = v205->fields._size;
-  if ( (unsigned int)v210 >= v206->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v205,
-      23,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v207[4] + 192LL) + 112LL));
-    v206 = v205->fields._items;
-    v207 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v205->fields._version;
-    if ( !v206 )
-      goto LABEL_570;
-  }
-  else
-  {
-    v205->fields._size = v210 + 1;
-    *((_DWORD *)v206->m_Items + v210) = 23;
-    ++v205->fields._version;
-  }
-  v211 = v205->fields._size;
-  if ( (unsigned int)v211 >= v206->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v205,
-      24,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v207[4] + 192LL) + 112LL));
-    v206 = v205->fields._items;
-    v207 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v205->fields._version;
-    if ( !v206 )
-      goto LABEL_570;
-  }
-  else
-  {
-    v205->fields._size = v211 + 1;
-    *((_DWORD *)v206->m_Items + v211) = 24;
-    ++v205->fields._version;
-  }
-  v212 = v205->fields._size;
-  if ( (unsigned int)v212 >= v206->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v205,
-      25,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v207[4] + 192LL) + 112LL));
-    v206 = v205->fields._items;
-    v207 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v205->fields._version;
-    if ( !v206 )
-      goto LABEL_570;
-  }
-  else
-  {
-    v205->fields._size = v212 + 1;
-    *((_DWORD *)v206->m_Items + v212) = 25;
-    ++v205->fields._version;
-  }
-  v213 = v205->fields._size;
-  if ( (unsigned int)v213 >= v206->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v205,
-      26,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v207[4] + 192LL) + 112LL));
-    v206 = v205->fields._items;
-    v207 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v205->fields._version;
-    if ( !v206 )
-      goto LABEL_570;
-  }
-  else
-  {
-    v205->fields._size = v213 + 1;
-    *((_DWORD *)v206->m_Items + v213) = 26;
-    ++v205->fields._version;
-  }
-  v214 = v205->fields._size;
-  if ( (unsigned int)v214 >= v206->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v205,
-      27,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v207[4] + 192LL) + 112LL));
-  }
-  else
-  {
-    v205->fields._size = v214 + 1;
-    *((_DWORD *)v206->m_Items + v214) = 27;
-  }
-  v215 = FilterKindList_TypeInfo->static_fields;
-  v215->CombineBaseServantFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v205;
-  sub_1B6406C(&v215->CombineBaseServantFilterKindList);
-  v218 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                   System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo,
-                                                   v216,
-                                                   v217);
+  v210 = FilterKindList_TypeInfo->static_fields;
+  v210->BonusSelectCollectionStateFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v205;
+  sub_1B64814(&v210->BonusSelectCollectionStateFilterKindList);
+  v211 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
-    v218,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    v211,
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+  if ( !v211 )
+    goto LABEL_570;
+  v212 = v211->fields._items;
+  v213 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+  ++v211->fields._version;
+  if ( !v212 )
+    goto LABEL_570;
+  v214 = v211->fields._size;
+  if ( (unsigned int)v214 >= v212->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v211,
+      52,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v213[4] + 192LL) + 112LL));
+    v212 = v211->fields._items;
+    v213 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v211->fields._version;
+    if ( !v212 )
+      goto LABEL_570;
+  }
+  else
+  {
+    v211->fields._size = v214 + 1;
+    *((_DWORD *)v212->m_Items + v214) = 52;
+    ++v211->fields._version;
+  }
+  v215 = v211->fields._size;
+  if ( (unsigned int)v215 >= v212->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v211,
+      53,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v213[4] + 192LL) + 112LL));
+  }
+  else
+  {
+    v211->fields._size = v215 + 1;
+    *((_DWORD *)v212->m_Items + v215) = 53;
+  }
+  v216 = FilterKindList_TypeInfo->static_fields;
+  v216->ServantHaveFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v211;
+  sub_1B64814(&v216->ServantHaveFilterKindList);
+  v217 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  System_Collections_Generic_List_Int32Enum____ctor(
+    v217,
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+  if ( !v217 )
+    goto LABEL_570;
+  v218 = v217->fields._items;
+  v219 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+  ++v217->fields._version;
   if ( !v218 )
     goto LABEL_570;
-  v219 = v218->fields._items;
-  v220 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-  ++v218->fields._version;
-  if ( !v219 )
-    goto LABEL_570;
-  v221 = v218->fields._size;
-  if ( (unsigned int)v221 >= v219->max_length )
+  v220 = v217->fields._size;
+  if ( (unsigned int)v220 >= v218->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v218,
-      28,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v220[4] + 192LL) + 112LL));
-    v219 = v218->fields._items;
-    v220 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v218->fields._version;
-    if ( !v219 )
+      v217,
+      50,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v219[4] + 192LL) + 112LL));
+    v218 = v217->fields._items;
+    v219 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v217->fields._version;
+    if ( !v218 )
       goto LABEL_570;
   }
   else
   {
-    v218->fields._size = v221 + 1;
-    *((_DWORD *)v219->m_Items + v221) = 28;
-    ++v218->fields._version;
+    v217->fields._size = v220 + 1;
+    *((_DWORD *)v218->m_Items + v220) = 50;
+    ++v217->fields._version;
   }
-  v222 = v218->fields._size;
-  if ( (unsigned int)v222 >= v219->max_length )
+  v221 = v217->fields._size;
+  if ( (unsigned int)v221 >= v218->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v218,
-      29,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v220[4] + 192LL) + 112LL));
+      v217,
+      51,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v219[4] + 192LL) + 112LL));
   }
   else
   {
-    v218->fields._size = v222 + 1;
-    *((_DWORD *)v219->m_Items + v222) = 29;
+    v217->fields._size = v221 + 1;
+    *((_DWORD *)v218->m_Items + v221) = 51;
   }
-  v223 = FilterKindList_TypeInfo->static_fields;
-  v223->CombineMaterialFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v218;
-  sub_1B6406C(&v223->CombineMaterialFilterKindList);
-  v226 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                   System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo,
-                                                   v224,
-                                                   v225);
+  v222 = FilterKindList_TypeInfo->static_fields;
+  v222->ServantEffectApplySubjectFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v217;
+  sub_1B64814(&v222->ServantEffectApplySubjectFilterKindList);
+  v223 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
-    v226,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
-  if ( !v226 )
+    v223,
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+  if ( !v223 )
     goto LABEL_570;
-  v227 = v226->fields._items;
-  v228 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-  ++v226->fields._version;
-  if ( !v227 )
+  v224 = v223->fields._items;
+  v225 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+  ++v223->fields._version;
+  if ( !v224 )
     goto LABEL_570;
-  v229 = v226->fields._size;
-  if ( (unsigned int)v229 >= v227->max_length )
+  v226 = v223->fields._size;
+  if ( (unsigned int)v226 >= v224->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v226,
-      10,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v228[4] + 192LL) + 112LL));
-    v227 = v226->fields._items;
-    v228 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v226->fields._version;
-    if ( !v227 )
+      v223,
+      69,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v225[4] + 192LL) + 112LL));
+    v224 = v223->fields._items;
+    v225 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v223->fields._version;
+    if ( !v224 )
       goto LABEL_570;
   }
   else
   {
-    v226->fields._size = v229 + 1;
-    *((_DWORD *)v227->m_Items + v229) = 10;
-    ++v226->fields._version;
+    v223->fields._size = v226 + 1;
+    *((_DWORD *)v224->m_Items + v226) = 69;
+    ++v223->fields._version;
   }
-  v230 = v226->fields._size;
-  if ( (unsigned int)v230 >= v227->max_length )
+  v227 = v223->fields._size;
+  if ( (unsigned int)v227 >= v224->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v226,
-      11,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v228[4] + 192LL) + 112LL));
-    v227 = v226->fields._items;
-    v228 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v226->fields._version;
-    if ( !v227 )
+      v223,
+      70,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v225[4] + 192LL) + 112LL));
+    v224 = v223->fields._items;
+    v225 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v223->fields._version;
+    if ( !v224 )
       goto LABEL_570;
   }
   else
   {
-    v226->fields._size = v230 + 1;
-    *((_DWORD *)v227->m_Items + v230) = 11;
-    ++v226->fields._version;
+    v223->fields._size = v227 + 1;
+    *((_DWORD *)v224->m_Items + v227) = 70;
+    ++v223->fields._version;
   }
-  v231 = v226->fields._size;
-  if ( (unsigned int)v231 >= v227->max_length )
+  v228 = v223->fields._size;
+  if ( (unsigned int)v228 >= v224->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v226,
-      12,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v228[4] + 192LL) + 112LL));
+      v223,
+      71,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v225[4] + 192LL) + 112LL));
   }
   else
   {
-    v226->fields._size = v231 + 1;
-    *((_DWORD *)v227->m_Items + v231) = 12;
+    v223->fields._size = v228 + 1;
+    *((_DWORD *)v224->m_Items + v228) = 71;
   }
-  v232 = FilterKindList_TypeInfo->static_fields;
-  v232->CollectionStateFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v226;
-  sub_1B6406C(&v232->CollectionStateFilterKindList);
-  v235 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                   System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo,
-                                                   v233,
-                                                   v234);
+  v229 = FilterKindList_TypeInfo->static_fields;
+  v229->ServantSummonCategoryFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v223;
+  sub_1B64814(&v229->ServantSummonCategoryFilterKindList);
+  v230 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
-    v235,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
-  if ( !v235 )
+    v230,
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+  if ( !v230 )
     goto LABEL_570;
-  v236 = v235->fields._items;
-  v237 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-  ++v235->fields._version;
-  if ( !v236 )
+  v231 = v230->fields._items;
+  v232 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+  ++v230->fields._version;
+  if ( !v231 )
     goto LABEL_570;
-  v238 = v235->fields._size;
-  if ( (unsigned int)v238 >= v236->max_length )
+  v233 = v230->fields._size;
+  if ( (unsigned int)v233 >= v231->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v235,
-      11,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v237[4] + 192LL) + 112LL));
-    v236 = v235->fields._items;
-    v237 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v235->fields._version;
-    if ( !v236 )
+      v230,
+      38,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v232[4] + 192LL) + 112LL));
+    v231 = v230->fields._items;
+    v232 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v230->fields._version;
+    if ( !v231 )
       goto LABEL_570;
   }
   else
   {
-    v235->fields._size = v238 + 1;
-    *((_DWORD *)v236->m_Items + v238) = 11;
-    ++v235->fields._version;
+    v230->fields._size = v233 + 1;
+    *((_DWORD *)v231->m_Items + v233) = 38;
+    ++v230->fields._version;
   }
-  v239 = v235->fields._size;
-  if ( (unsigned int)v239 >= v236->max_length )
+  v234 = v230->fields._size;
+  if ( (unsigned int)v234 >= v231->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v235,
-      12,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v237[4] + 192LL) + 112LL));
+      v230,
+      37,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v232[4] + 192LL) + 112LL));
+    v231 = v230->fields._items;
+    v232 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v230->fields._version;
+    if ( !v231 )
+      goto LABEL_570;
   }
   else
   {
-    v235->fields._size = v239 + 1;
-    *((_DWORD *)v236->m_Items + v239) = 12;
+    v230->fields._size = v234 + 1;
+    *((_DWORD *)v231->m_Items + v234) = 37;
+    ++v230->fields._version;
   }
-  v240 = FilterKindList_TypeInfo->static_fields;
-  v240->BonusSelectCollectionStateFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v235;
-  sub_1B6406C(&v240->BonusSelectCollectionStateFilterKindList);
-  v243 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                   System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo,
-                                                   v241,
-                                                   v242);
+  v235 = v230->fields._size;
+  if ( (unsigned int)v235 >= v231->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v230,
+      36,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v232[4] + 192LL) + 112LL));
+    v231 = v230->fields._items;
+    v232 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v230->fields._version;
+    if ( !v231 )
+      goto LABEL_570;
+  }
+  else
+  {
+    v230->fields._size = v235 + 1;
+    *((_DWORD *)v231->m_Items + v235) = 36;
+    ++v230->fields._version;
+  }
+  v236 = v230->fields._size;
+  if ( (unsigned int)v236 >= v231->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v230,
+      35,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v232[4] + 192LL) + 112LL));
+    v231 = v230->fields._items;
+    v232 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v230->fields._version;
+    if ( !v231 )
+      goto LABEL_570;
+  }
+  else
+  {
+    v230->fields._size = v236 + 1;
+    *((_DWORD *)v231->m_Items + v236) = 35;
+    ++v230->fields._version;
+  }
+  v237 = v230->fields._size;
+  if ( (unsigned int)v237 >= v231->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v230,
+      34,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v232[4] + 192LL) + 112LL));
+  }
+  else
+  {
+    v230->fields._size = v237 + 1;
+    *((_DWORD *)v231->m_Items + v237) = 34;
+  }
+  v238 = FilterKindList_TypeInfo->static_fields;
+  v238->RarityFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v230;
+  sub_1B64814(&v238->RarityFilterKindList);
+  v239 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
-    v243,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
-  if ( !v243 )
+    v239,
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+  if ( !v239 )
     goto LABEL_570;
-  v244 = v243->fields._items;
-  v245 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-  ++v243->fields._version;
-  if ( !v244 )
+  v240 = v239->fields._items;
+  v241 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+  ++v239->fields._version;
+  if ( !v240 )
     goto LABEL_570;
-  v246 = v243->fields._size;
-  if ( (unsigned int)v246 >= v244->max_length )
+  v242 = v239->fields._size;
+  if ( (unsigned int)v242 >= v240->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v243,
-      52,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v245[4] + 192LL) + 112LL));
-    v244 = v243->fields._items;
-    v245 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v243->fields._version;
-    if ( !v244 )
+      v239,
+      54,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v241[4] + 192LL) + 112LL));
+    v240 = v239->fields._items;
+    v241 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v239->fields._version;
+    if ( !v240 )
       goto LABEL_570;
   }
   else
   {
-    v243->fields._size = v246 + 1;
-    *((_DWORD *)v244->m_Items + v246) = 52;
-    ++v243->fields._version;
+    v239->fields._size = v242 + 1;
+    *((_DWORD *)v240->m_Items + v242) = 54;
+    ++v239->fields._version;
   }
-  v247 = v243->fields._size;
-  if ( (unsigned int)v247 >= v244->max_length )
+  v243 = v239->fields._size;
+  if ( (unsigned int)v243 >= v240->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v243,
-      53,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v245[4] + 192LL) + 112LL));
+      v239,
+      55,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v241[4] + 192LL) + 112LL));
+    v240 = v239->fields._items;
+    v241 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v239->fields._version;
+    if ( !v240 )
+      goto LABEL_570;
   }
   else
   {
-    v243->fields._size = v247 + 1;
-    *((_DWORD *)v244->m_Items + v247) = 53;
+    v239->fields._size = v243 + 1;
+    *((_DWORD *)v240->m_Items + v243) = 55;
+    ++v239->fields._version;
   }
-  v248 = FilterKindList_TypeInfo->static_fields;
-  v248->ServantHaveFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v243;
-  sub_1B6406C(&v248->ServantHaveFilterKindList);
-  v251 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                   System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo,
-                                                   v249,
-                                                   v250);
+  v244 = v239->fields._size;
+  if ( (unsigned int)v244 >= v240->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v239,
+      72,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v241[4] + 192LL) + 112LL));
+    v240 = v239->fields._items;
+    v241 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v239->fields._version;
+    if ( !v240 )
+      goto LABEL_570;
+  }
+  else
+  {
+    v239->fields._size = v244 + 1;
+    *((_DWORD *)v240->m_Items + v244) = 72;
+    ++v239->fields._version;
+  }
+  v245 = v239->fields._size;
+  if ( (unsigned int)v245 >= v240->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v239,
+      73,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v241[4] + 192LL) + 112LL));
+    v240 = v239->fields._items;
+    v241 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v239->fields._version;
+    if ( !v240 )
+      goto LABEL_570;
+  }
+  else
+  {
+    v239->fields._size = v245 + 1;
+    *((_DWORD *)v240->m_Items + v245) = 73;
+    ++v239->fields._version;
+  }
+  v246 = v239->fields._size;
+  if ( (unsigned int)v246 >= v240->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v239,
+      74,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v241[4] + 192LL) + 112LL));
+    v240 = v239->fields._items;
+    v241 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v239->fields._version;
+    if ( !v240 )
+      goto LABEL_570;
+  }
+  else
+  {
+    v239->fields._size = v246 + 1;
+    *((_DWORD *)v240->m_Items + v246) = 74;
+    ++v239->fields._version;
+  }
+  v247 = v239->fields._size;
+  if ( (unsigned int)v247 >= v240->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v239,
+      75,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v241[4] + 192LL) + 112LL));
+    v240 = v239->fields._items;
+    v241 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v239->fields._version;
+    if ( !v240 )
+      goto LABEL_570;
+  }
+  else
+  {
+    v239->fields._size = v247 + 1;
+    *((_DWORD *)v240->m_Items + v247) = 75;
+    ++v239->fields._version;
+  }
+  v248 = v239->fields._size;
+  if ( (unsigned int)v248 >= v240->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v239,
+      76,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v241[4] + 192LL) + 112LL));
+    v240 = v239->fields._items;
+    v241 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v239->fields._version;
+    if ( !v240 )
+      goto LABEL_570;
+  }
+  else
+  {
+    v239->fields._size = v248 + 1;
+    *((_DWORD *)v240->m_Items + v248) = 76;
+    ++v239->fields._version;
+  }
+  v249 = v239->fields._size;
+  if ( (unsigned int)v249 >= v240->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v239,
+      56,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v241[4] + 192LL) + 112LL));
+  }
+  else
+  {
+    v239->fields._size = v249 + 1;
+    *((_DWORD *)v240->m_Items + v249) = 56;
+  }
+  v250 = FilterKindList_TypeInfo->static_fields;
+  v250->ServantEquipTypeFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v239;
+  sub_1B64814(&v250->ServantEquipTypeFilterKindList);
+  v251 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v251,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v251 )
     goto LABEL_570;
   v252 = v251->fields._items;
@@ -3188,8 +3460,8 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v251,
-      50,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v253[4] + 192LL) + 112LL));
+      77,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v253[4] + 192LL) + 112LL));
     v252 = v251->fields._items;
     v253 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v251->fields._version;
@@ -3199,7 +3471,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   else
   {
     v251->fields._size = v254 + 1;
-    *((_DWORD *)v252->m_Items + v254) = 50;
+    *((_DWORD *)v252->m_Items + v254) = 77;
     ++v251->fields._version;
   }
   v255 = v251->fields._size;
@@ -3207,683 +3479,288 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v251,
-      51,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v253[4] + 192LL) + 112LL));
+      78,
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v253[4] + 192LL) + 112LL));
+    v252 = v251->fields._items;
+    v253 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v251->fields._version;
+    if ( !v252 )
+      goto LABEL_570;
   }
   else
   {
     v251->fields._size = v255 + 1;
-    *((_DWORD *)v252->m_Items + v255) = 51;
+    *((_DWORD *)v252->m_Items + v255) = 78;
+    ++v251->fields._version;
   }
-  v256 = FilterKindList_TypeInfo->static_fields;
-  v256->ServantEffectApplySubjectFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v251;
-  sub_1B6406C(&v256->ServantEffectApplySubjectFilterKindList);
-  v259 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                   System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo,
-                                                   v257,
-                                                   v258);
-  System_Collections_Generic_List_Int32Enum____ctor(
-    v259,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
-  if ( !v259 )
-    goto LABEL_570;
-  v260 = v259->fields._items;
-  v261 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-  ++v259->fields._version;
-  if ( !v260 )
-    goto LABEL_570;
-  v262 = v259->fields._size;
-  if ( (unsigned int)v262 >= v260->max_length )
+  v256 = v251->fields._size;
+  if ( (unsigned int)v256 >= v252->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v259,
-      69,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v261[4] + 192LL) + 112LL));
-    v260 = v259->fields._items;
-    v261 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v259->fields._version;
-    if ( !v260 )
-      goto LABEL_570;
-  }
-  else
-  {
-    v259->fields._size = v262 + 1;
-    *((_DWORD *)v260->m_Items + v262) = 69;
-    ++v259->fields._version;
-  }
-  v263 = v259->fields._size;
-  if ( (unsigned int)v263 >= v260->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v259,
-      70,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v261[4] + 192LL) + 112LL));
-    v260 = v259->fields._items;
-    v261 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v259->fields._version;
-    if ( !v260 )
-      goto LABEL_570;
-  }
-  else
-  {
-    v259->fields._size = v263 + 1;
-    *((_DWORD *)v260->m_Items + v263) = 70;
-    ++v259->fields._version;
-  }
-  v264 = v259->fields._size;
-  if ( (unsigned int)v264 >= v260->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v259,
-      71,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v261[4] + 192LL) + 112LL));
-  }
-  else
-  {
-    v259->fields._size = v264 + 1;
-    *((_DWORD *)v260->m_Items + v264) = 71;
-  }
-  v265 = FilterKindList_TypeInfo->static_fields;
-  v265->ServantSummonCategoryFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v259;
-  sub_1B6406C(&v265->ServantSummonCategoryFilterKindList);
-  v268 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                   System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo,
-                                                   v266,
-                                                   v267);
-  System_Collections_Generic_List_Int32Enum____ctor(
-    v268,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
-  if ( !v268 )
-    goto LABEL_570;
-  v269 = v268->fields._items;
-  v270 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-  ++v268->fields._version;
-  if ( !v269 )
-    goto LABEL_570;
-  v271 = v268->fields._size;
-  if ( (unsigned int)v271 >= v269->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v268,
-      38,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v270[4] + 192LL) + 112LL));
-    v269 = v268->fields._items;
-    v270 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v268->fields._version;
-    if ( !v269 )
-      goto LABEL_570;
-  }
-  else
-  {
-    v268->fields._size = v271 + 1;
-    *((_DWORD *)v269->m_Items + v271) = 38;
-    ++v268->fields._version;
-  }
-  v272 = v268->fields._size;
-  if ( (unsigned int)v272 >= v269->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v268,
-      37,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v270[4] + 192LL) + 112LL));
-    v269 = v268->fields._items;
-    v270 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v268->fields._version;
-    if ( !v269 )
-      goto LABEL_570;
-  }
-  else
-  {
-    v268->fields._size = v272 + 1;
-    *((_DWORD *)v269->m_Items + v272) = 37;
-    ++v268->fields._version;
-  }
-  v273 = v268->fields._size;
-  if ( (unsigned int)v273 >= v269->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v268,
-      36,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v270[4] + 192LL) + 112LL));
-    v269 = v268->fields._items;
-    v270 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v268->fields._version;
-    if ( !v269 )
-      goto LABEL_570;
-  }
-  else
-  {
-    v268->fields._size = v273 + 1;
-    *((_DWORD *)v269->m_Items + v273) = 36;
-    ++v268->fields._version;
-  }
-  v274 = v268->fields._size;
-  if ( (unsigned int)v274 >= v269->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v268,
-      35,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v270[4] + 192LL) + 112LL));
-    v269 = v268->fields._items;
-    v270 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v268->fields._version;
-    if ( !v269 )
-      goto LABEL_570;
-  }
-  else
-  {
-    v268->fields._size = v274 + 1;
-    *((_DWORD *)v269->m_Items + v274) = 35;
-    ++v268->fields._version;
-  }
-  v275 = v268->fields._size;
-  if ( (unsigned int)v275 >= v269->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v268,
-      34,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v270[4] + 192LL) + 112LL));
-  }
-  else
-  {
-    v268->fields._size = v275 + 1;
-    *((_DWORD *)v269->m_Items + v275) = 34;
-  }
-  v276 = FilterKindList_TypeInfo->static_fields;
-  v276->RarityFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v268;
-  sub_1B6406C(&v276->RarityFilterKindList);
-  v279 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                   System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo,
-                                                   v277,
-                                                   v278);
-  System_Collections_Generic_List_Int32Enum____ctor(
-    v279,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
-  if ( !v279 )
-    goto LABEL_570;
-  v280 = v279->fields._items;
-  v281 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-  ++v279->fields._version;
-  if ( !v280 )
-    goto LABEL_570;
-  v282 = v279->fields._size;
-  if ( (unsigned int)v282 >= v280->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v279,
-      54,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v281[4] + 192LL) + 112LL));
-    v280 = v279->fields._items;
-    v281 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v279->fields._version;
-    if ( !v280 )
-      goto LABEL_570;
-  }
-  else
-  {
-    v279->fields._size = v282 + 1;
-    *((_DWORD *)v280->m_Items + v282) = 54;
-    ++v279->fields._version;
-  }
-  v283 = v279->fields._size;
-  if ( (unsigned int)v283 >= v280->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v279,
-      55,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v281[4] + 192LL) + 112LL));
-    v280 = v279->fields._items;
-    v281 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v279->fields._version;
-    if ( !v280 )
-      goto LABEL_570;
-  }
-  else
-  {
-    v279->fields._size = v283 + 1;
-    *((_DWORD *)v280->m_Items + v283) = 55;
-    ++v279->fields._version;
-  }
-  v284 = v279->fields._size;
-  if ( (unsigned int)v284 >= v280->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v279,
-      72,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v281[4] + 192LL) + 112LL));
-    v280 = v279->fields._items;
-    v281 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v279->fields._version;
-    if ( !v280 )
-      goto LABEL_570;
-  }
-  else
-  {
-    v279->fields._size = v284 + 1;
-    *((_DWORD *)v280->m_Items + v284) = 72;
-    ++v279->fields._version;
-  }
-  v285 = v279->fields._size;
-  if ( (unsigned int)v285 >= v280->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v279,
-      73,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v281[4] + 192LL) + 112LL));
-    v280 = v279->fields._items;
-    v281 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v279->fields._version;
-    if ( !v280 )
-      goto LABEL_570;
-  }
-  else
-  {
-    v279->fields._size = v285 + 1;
-    *((_DWORD *)v280->m_Items + v285) = 73;
-    ++v279->fields._version;
-  }
-  v286 = v279->fields._size;
-  if ( (unsigned int)v286 >= v280->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v279,
-      74,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v281[4] + 192LL) + 112LL));
-    v280 = v279->fields._items;
-    v281 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v279->fields._version;
-    if ( !v280 )
-      goto LABEL_570;
-  }
-  else
-  {
-    v279->fields._size = v286 + 1;
-    *((_DWORD *)v280->m_Items + v286) = 74;
-    ++v279->fields._version;
-  }
-  v287 = v279->fields._size;
-  if ( (unsigned int)v287 >= v280->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v279,
-      75,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v281[4] + 192LL) + 112LL));
-    v280 = v279->fields._items;
-    v281 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v279->fields._version;
-    if ( !v280 )
-      goto LABEL_570;
-  }
-  else
-  {
-    v279->fields._size = v287 + 1;
-    *((_DWORD *)v280->m_Items + v287) = 75;
-    ++v279->fields._version;
-  }
-  v288 = v279->fields._size;
-  if ( (unsigned int)v288 >= v280->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v279,
-      76,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v281[4] + 192LL) + 112LL));
-    v280 = v279->fields._items;
-    v281 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v279->fields._version;
-    if ( !v280 )
-      goto LABEL_570;
-  }
-  else
-  {
-    v279->fields._size = v288 + 1;
-    *((_DWORD *)v280->m_Items + v288) = 76;
-    ++v279->fields._version;
-  }
-  v289 = v279->fields._size;
-  if ( (unsigned int)v289 >= v280->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v279,
-      56,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v281[4] + 192LL) + 112LL));
-  }
-  else
-  {
-    v279->fields._size = v289 + 1;
-    *((_DWORD *)v280->m_Items + v289) = 56;
-  }
-  v290 = FilterKindList_TypeInfo->static_fields;
-  v290->ServantEquipTypeFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v279;
-  sub_1B6406C(&v290->ServantEquipTypeFilterKindList);
-  v293 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                   System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo,
-                                                   v291,
-                                                   v292);
-  System_Collections_Generic_List_Int32Enum____ctor(
-    v293,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
-  if ( !v293 )
-    goto LABEL_570;
-  v294 = v293->fields._items;
-  v295 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-  ++v293->fields._version;
-  if ( !v294 )
-    goto LABEL_570;
-  v296 = v293->fields._size;
-  if ( (unsigned int)v296 >= v294->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v293,
-      77,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v295[4] + 192LL) + 112LL));
-    v294 = v293->fields._items;
-    v295 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v293->fields._version;
-    if ( !v294 )
-      goto LABEL_570;
-  }
-  else
-  {
-    v293->fields._size = v296 + 1;
-    *((_DWORD *)v294->m_Items + v296) = 77;
-    ++v293->fields._version;
-  }
-  v297 = v293->fields._size;
-  if ( (unsigned int)v297 >= v294->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v293,
-      78,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v295[4] + 192LL) + 112LL));
-    v294 = v293->fields._items;
-    v295 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v293->fields._version;
-    if ( !v294 )
-      goto LABEL_570;
-  }
-  else
-  {
-    v293->fields._size = v297 + 1;
-    *((_DWORD *)v294->m_Items + v297) = 78;
-    ++v293->fields._version;
-  }
-  v298 = v293->fields._size;
-  if ( (unsigned int)v298 >= v294->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v293,
+      v251,
       79,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v295[4] + 192LL) + 112LL));
-    v294 = v293->fields._items;
-    v295 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v293->fields._version;
-    if ( !v294 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v253[4] + 192LL) + 112LL));
+    v252 = v251->fields._items;
+    v253 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v251->fields._version;
+    if ( !v252 )
       goto LABEL_570;
   }
   else
   {
-    v293->fields._size = v298 + 1;
-    *((_DWORD *)v294->m_Items + v298) = 79;
-    ++v293->fields._version;
+    v251->fields._size = v256 + 1;
+    *((_DWORD *)v252->m_Items + v256) = 79;
+    ++v251->fields._version;
   }
-  v299 = v293->fields._size;
-  if ( (unsigned int)v299 >= v294->max_length )
+  v257 = v251->fields._size;
+  if ( (unsigned int)v257 >= v252->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v293,
+      v251,
       80,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v295[4] + 192LL) + 112LL));
-    v294 = v293->fields._items;
-    v295 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v293->fields._version;
-    if ( !v294 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v253[4] + 192LL) + 112LL));
+    v252 = v251->fields._items;
+    v253 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v251->fields._version;
+    if ( !v252 )
       goto LABEL_570;
   }
   else
   {
-    v293->fields._size = v299 + 1;
-    *((_DWORD *)v294->m_Items + v299) = 80;
-    ++v293->fields._version;
+    v251->fields._size = v257 + 1;
+    *((_DWORD *)v252->m_Items + v257) = 80;
+    ++v251->fields._version;
   }
-  v300 = v293->fields._size;
-  if ( (unsigned int)v300 >= v294->max_length )
+  v258 = v251->fields._size;
+  if ( (unsigned int)v258 >= v252->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v293,
+      v251,
       81,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v295[4] + 192LL) + 112LL));
-    v294 = v293->fields._items;
-    v295 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v293->fields._version;
-    if ( !v294 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v253[4] + 192LL) + 112LL));
+    v252 = v251->fields._items;
+    v253 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v251->fields._version;
+    if ( !v252 )
       goto LABEL_570;
   }
   else
   {
-    v293->fields._size = v300 + 1;
-    *((_DWORD *)v294->m_Items + v300) = 81;
-    ++v293->fields._version;
+    v251->fields._size = v258 + 1;
+    *((_DWORD *)v252->m_Items + v258) = 81;
+    ++v251->fields._version;
   }
-  v301 = v293->fields._size;
-  if ( (unsigned int)v301 >= v294->max_length )
+  v259 = v251->fields._size;
+  if ( (unsigned int)v259 >= v252->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v293,
+      v251,
       82,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v295[4] + 192LL) + 112LL));
-    v294 = v293->fields._items;
-    v295 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v293->fields._version;
-    if ( !v294 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v253[4] + 192LL) + 112LL));
+    v252 = v251->fields._items;
+    v253 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v251->fields._version;
+    if ( !v252 )
       goto LABEL_570;
   }
   else
   {
-    v293->fields._size = v301 + 1;
-    *((_DWORD *)v294->m_Items + v301) = 82;
-    ++v293->fields._version;
+    v251->fields._size = v259 + 1;
+    *((_DWORD *)v252->m_Items + v259) = 82;
+    ++v251->fields._version;
   }
-  v302 = v293->fields._size;
-  if ( (unsigned int)v302 >= v294->max_length )
+  v260 = v251->fields._size;
+  if ( (unsigned int)v260 >= v252->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v293,
+      v251,
       83,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v295[4] + 192LL) + 112LL));
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v253[4] + 192LL) + 112LL));
   }
   else
   {
-    v293->fields._size = v302 + 1;
-    *((_DWORD *)v294->m_Items + v302) = 83;
+    v251->fields._size = v260 + 1;
+    *((_DWORD *)v252->m_Items + v260) = 83;
   }
-  v303 = FilterKindList_TypeInfo->static_fields;
-  v303->ServantEquipCombineStatusFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v293;
-  sub_1B6406C(&v303->ServantEquipCombineStatusFilterKindList);
-  v306 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                   System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo,
-                                                   v304,
-                                                   v305);
+  v261 = FilterKindList_TypeInfo->static_fields;
+  v261->ServantEquipCombineStatusFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v251;
+  sub_1B64814(&v261->ServantEquipCombineStatusFilterKindList);
+  v262 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
-    v306,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
-  if ( !v306 )
+    v262,
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+  if ( !v262 )
     goto LABEL_570;
-  v307 = v306->fields._items;
-  v308 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-  ++v306->fields._version;
-  if ( !v307 )
+  v263 = v262->fields._items;
+  v264 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+  ++v262->fields._version;
+  if ( !v263 )
     goto LABEL_570;
-  v309 = v306->fields._size;
-  if ( (unsigned int)v309 >= v307->max_length )
+  v265 = v262->fields._size;
+  if ( (unsigned int)v265 >= v263->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v306,
+      v262,
       84,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v308[4] + 192LL) + 112LL));
-    v307 = v306->fields._items;
-    v308 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v306->fields._version;
-    if ( !v307 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v264[4] + 192LL) + 112LL));
+    v263 = v262->fields._items;
+    v264 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v262->fields._version;
+    if ( !v263 )
       goto LABEL_570;
   }
   else
   {
-    v306->fields._size = v309 + 1;
-    *((_DWORD *)v307->m_Items + v309) = 84;
-    ++v306->fields._version;
+    v262->fields._size = v265 + 1;
+    *((_DWORD *)v263->m_Items + v265) = 84;
+    ++v262->fields._version;
   }
-  v310 = v306->fields._size;
-  if ( (unsigned int)v310 >= v307->max_length )
+  v266 = v262->fields._size;
+  if ( (unsigned int)v266 >= v263->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v306,
+      v262,
       85,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v308[4] + 192LL) + 112LL));
-    v307 = v306->fields._items;
-    v308 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v306->fields._version;
-    if ( !v307 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v264[4] + 192LL) + 112LL));
+    v263 = v262->fields._items;
+    v264 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v262->fields._version;
+    if ( !v263 )
       goto LABEL_570;
   }
   else
   {
-    v306->fields._size = v310 + 1;
-    *((_DWORD *)v307->m_Items + v310) = 85;
-    ++v306->fields._version;
+    v262->fields._size = v266 + 1;
+    *((_DWORD *)v263->m_Items + v266) = 85;
+    ++v262->fields._version;
   }
-  v311 = v306->fields._size;
-  if ( (unsigned int)v311 >= v307->max_length )
+  v267 = v262->fields._size;
+  if ( (unsigned int)v267 >= v263->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v306,
+      v262,
       86,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v308[4] + 192LL) + 112LL));
-    v307 = v306->fields._items;
-    v308 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v306->fields._version;
-    if ( !v307 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v264[4] + 192LL) + 112LL));
+    v263 = v262->fields._items;
+    v264 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v262->fields._version;
+    if ( !v263 )
       goto LABEL_570;
   }
   else
   {
-    v306->fields._size = v311 + 1;
-    *((_DWORD *)v307->m_Items + v311) = 86;
-    ++v306->fields._version;
+    v262->fields._size = v267 + 1;
+    *((_DWORD *)v263->m_Items + v267) = 86;
+    ++v262->fields._version;
   }
-  v312 = v306->fields._size;
-  if ( (unsigned int)v312 >= v307->max_length )
+  v268 = v262->fields._size;
+  if ( (unsigned int)v268 >= v263->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v306,
+      v262,
       87,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v308[4] + 192LL) + 112LL));
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v264[4] + 192LL) + 112LL));
   }
   else
   {
-    v306->fields._size = v312 + 1;
-    *((_DWORD *)v307->m_Items + v312) = 87;
+    v262->fields._size = v268 + 1;
+    *((_DWORD *)v263->m_Items + v268) = 87;
   }
-  v313 = FilterKindList_TypeInfo->static_fields;
-  v313->ServantEquipHaveStatusFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v306;
-  sub_1B6406C(&v313->ServantEquipHaveStatusFilterKindList);
-  v316 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                   System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo,
-                                                   v314,
-                                                   v315);
+  v269 = FilterKindList_TypeInfo->static_fields;
+  v269->ServantEquipHaveStatusFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v262;
+  sub_1B64814(&v269->ServantEquipHaveStatusFilterKindList);
+  v270 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
-    v316,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
-  if ( !v316 )
+    v270,
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+  if ( !v270 )
     goto LABEL_570;
-  v317 = v316->fields._items;
-  v318 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-  ++v316->fields._version;
-  if ( !v317 )
+  v271 = v270->fields._items;
+  v272 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+  ++v270->fields._version;
+  if ( !v271 )
     goto LABEL_570;
-  v319 = v316->fields._size;
-  if ( (unsigned int)v319 >= v317->max_length )
+  v273 = v270->fields._size;
+  if ( (unsigned int)v273 >= v271->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v316,
+      v270,
       30,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v318[4] + 192LL) + 112LL));
-    v317 = v316->fields._items;
-    v318 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-    ++v316->fields._version;
-    if ( !v317 )
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v272[4] + 192LL) + 112LL));
+    v271 = v270->fields._items;
+    v272 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+    ++v270->fields._version;
+    if ( !v271 )
       goto LABEL_570;
   }
   else
   {
-    v316->fields._size = v319 + 1;
-    *((_DWORD *)v317->m_Items + v319) = 30;
-    ++v316->fields._version;
+    v270->fields._size = v273 + 1;
+    *((_DWORD *)v271->m_Items + v273) = 30;
+    ++v270->fields._version;
   }
-  v320 = v316->fields._size;
-  if ( (unsigned int)v320 >= v317->max_length )
+  v274 = v270->fields._size;
+  if ( (unsigned int)v274 >= v271->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v316,
+      v270,
       31,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v318[4] + 192LL) + 112LL));
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v272[4] + 192LL) + 112LL));
   }
   else
   {
-    v316->fields._size = v320 + 1;
-    *((_DWORD *)v317->m_Items + v320) = 31;
+    v270->fields._size = v274 + 1;
+    *((_DWORD *)v271->m_Items + v274) = 31;
   }
-  v321 = FilterKindList_TypeInfo->static_fields;
-  v321->ServantCostumeFilterKind = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v316;
-  sub_1B6406C(&v321->ServantCostumeFilterKind);
-  v324 = (System_Collections_Generic_List_T__o *)sub_1B64314(
-                                                   System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo,
-                                                   v322,
-                                                   v323);
+  v275 = FilterKindList_TypeInfo->static_fields;
+  v275->ServantCostumeFilterKind = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v270;
+  sub_1B64814(&v275->ServantCostumeFilterKind);
+  v276 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
-    v324,
-    (const MethodInfo_3491F54 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
-  if ( !v324 )
+    v276,
+    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+  if ( !v276 )
     goto LABEL_570;
-  v325 = v324->fields._items;
-  v326 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-  ++v324->fields._version;
-  if ( !v325 )
+  v277 = v276->fields._items;
+  v278 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+  ++v276->fields._version;
+  if ( !v277 )
     goto LABEL_570;
-  v327 = v324->fields._size;
-  if ( (unsigned int)v327 < v325->max_length )
+  v279 = v276->fields._size;
+  if ( (unsigned int)v279 < v277->max_length )
   {
-    v324->fields._size = v327 + 1;
-    *((_DWORD *)v325->m_Items + v327) = 32;
-    ++v324->fields._version;
+    v276->fields._size = v279 + 1;
+    *((_DWORD *)v277->m_Items + v279) = 32;
+    ++v276->fields._version;
     goto LABEL_566;
   }
   System_Collections_Generic_List_Int32Enum___AddWithResize(
-    v324,
+    v276,
     32,
-    *(const MethodInfo_34927A8 **)(*(_QWORD *)(v326[4] + 192LL) + 112LL));
-  v325 = v324->fields._items;
-  v326 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
-  ++v324->fields._version;
-  if ( !v325 )
+    *(const MethodInfo_3494A84 **)(*(_QWORD *)(v278[4] + 192LL) + 112LL));
+  v277 = v276->fields._items;
+  v278 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
+  ++v276->fields._version;
+  if ( !v277 )
 LABEL_570:
-    sub_1B64324(v7);
+    sub_1B64ACC(v6, v7);
 LABEL_566:
-  v328 = v324->fields._size;
-  if ( (unsigned int)v328 >= v325->max_length )
+  v280 = v276->fields._size;
+  if ( (unsigned int)v280 >= v277->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v324,
+      v276,
       33,
-      *(const MethodInfo_34927A8 **)(*(_QWORD *)(v326[4] + 192LL) + 112LL));
+      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v278[4] + 192LL) + 112LL));
   }
   else
   {
-    v324->fields._size = v328 + 1;
-    *((_DWORD *)v325->m_Items + v328) = 33;
+    v276->fields._size = v280 + 1;
+    *((_DWORD *)v277->m_Items + v280) = 33;
   }
-  v329 = FilterKindList_TypeInfo->static_fields;
-  v329->MaterialServantCostumeFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v324;
-  sub_1B6406C(&v329->MaterialServantCostumeFilterKindList);
+  v281 = FilterKindList_TypeInfo->static_fields;
+  v281->MaterialServantCostumeFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v276;
+  sub_1B64814(&v281->MaterialServantCostumeFilterKindList);
 }
 
 

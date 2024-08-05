@@ -5,15 +5,15 @@ void __fastcall CylinderPoint___cctor(const MethodInfo *method)
   struct UnityEngine_Vector3_StaticFields *v3; // x8
   float z; // s1
 
-  if ( (byte_49F9074 & 1) == 0 )
+  if ( (byte_49FB163 & 1) == 0 )
   {
-    sub_1B640C8(&CylinderPoint_TypeInfo, v1);
-    byte_49F9074 = 1;
+    sub_1B64870(&CylinderPoint_TypeInfo, v1);
+    byte_49FB163 = 1;
   }
-  if ( !byte_49F9038 )
+  if ( !byte_49FB127 )
   {
-    sub_1B640C8(&UnityEngine_Vector3_TypeInfo, v1);
-    byte_49F9038 = 1;
+    sub_1B64870(&UnityEngine_Vector3_TypeInfo, v1);
+    byte_49FB127 = 1;
   }
   static_fields = CylinderPoint_TypeInfo->static_fields;
   v3 = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -25,10 +25,10 @@ void __fastcall CylinderPoint___cctor(const MethodInfo *method)
 
 void __fastcall CylinderPoint___ctor(CylinderPoint_o *this, const MethodInfo *method)
 {
-  if ( (byte_49F9073 & 1) == 0 )
+  if ( (byte_49FB162 & 1) == 0 )
   {
-    sub_1B640C8(&BaseEarthPoint_TypeInfo, method);
-    byte_49F9073 = 1;
+    sub_1B64870(&BaseEarthPoint_TypeInfo, method);
+    byte_49FB162 = 1;
   }
   if ( !BaseEarthPoint_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseEarthPoint_TypeInfo);
@@ -38,12 +38,12 @@ void __fastcall CylinderPoint___ctor(CylinderPoint_o *this, const MethodInfo *me
 
 System_String_o *__fastcall CylinderPoint__GetEffectName(CylinderPoint_o *this, const MethodInfo *method)
 {
-  if ( (byte_49F9072 & 1) == 0 )
+  if ( (byte_49FB161 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_18753/*"ef_difference21"*/, method);
-    byte_49F9072 = 1;
+    sub_1B64870(&StringLiteral_18755/*"ef_difference21"*/, method);
+    byte_49FB161 = 1;
   }
-  return (System_String_o *)StringLiteral_18753/*"ef_difference21"*/;
+  return (System_String_o *)StringLiteral_18755/*"ef_difference21"*/;
 }
 
 
@@ -55,30 +55,31 @@ void __fastcall CylinderPoint__LateUpdate(CylinderPoint_o *this, const MethodInf
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float z; // s1
   UnityEngine_ParticleSystem_o *transform; // x0
+  __int64 v9; // x1
   float DotXZ; // s0
-  struct UIWidget_o *v10; // x8
+  struct UIWidget_o *v11; // x8
   float r; // s8
   float g; // s9
   float b; // s10
   UnityEngine_Object_o *mParticleSystem; // x20
-  UnityEngine_ParticleSystem_MainModule_o v15; // x0
-  UnityEngine_Transform_o *v16; // x20
-  CylinderPoint_c *v17; // x8
-  UnityEngine_Object_o *v18; // x20
-  UnityEngine_ParticleSystem_MinMaxGradient_o v19; // [xsp+0h] [xbp-D0h] BYREF
-  UnityEngine_ParticleSystem_MinMaxGradient_o v20; // [xsp+38h] [xbp-98h] BYREF
+  UnityEngine_ParticleSystem_MainModule_o v16; // x0
+  UnityEngine_Transform_o *v17; // x20
+  CylinderPoint_c *v18; // x8
+  UnityEngine_Object_o *v19; // x20
+  UnityEngine_ParticleSystem_MinMaxGradient_o v20; // [xsp+0h] [xbp-D0h] BYREF
+  UnityEngine_ParticleSystem_MinMaxGradient_o v21; // [xsp+38h] [xbp-98h] BYREF
   struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+70h] [xbp-60h] BYREF
   float value; // [xsp+7Ch] [xbp-54h]
   UnityEngine_Vector3_o vec; // [xsp+80h] [xbp-50h] BYREF
-  UnityEngine_ParticleSystem_MainModule_o v24; // 0:x0.8
-  UnityEngine_Color_o v25; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_ParticleSystem_MainModule_o v25; // 0:x0.8
   UnityEngine_Color_o v26; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v27; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_49F9071 & 1) == 0 )
+  if ( (byte_49FB160 & 1) == 0 )
   {
-    sub_1B640C8(&CylinderPoint_TypeInfo, method);
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, v3);
-    byte_49F9071 = 1;
+    sub_1B64870(&CylinderPoint_TypeInfo, method);
+    sub_1B64870(&UnityEngine_Object_TypeInfo, v3);
+    byte_49FB160 = 1;
   }
   vec.fields.z = 0.0;
   *(_QWORD *)&vec.fields.x = 0LL;
@@ -88,23 +89,23 @@ void __fastcall CylinderPoint__LateUpdate(CylinderPoint_o *this, const MethodInf
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality(mWidget, 0LL, 0LL) )
   {
-    if ( !byte_49F7111 )
+    if ( !byte_49F9201 )
     {
-      sub_1B640C8(&UnityEngine_Vector3_TypeInfo, v5);
-      byte_49F7111 = 1;
+      sub_1B64870(&UnityEngine_Vector3_TypeInfo, v5);
+      byte_49F9201 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     z = static_fields->zeroVector.fields.z;
     *(_QWORD *)&vec.fields.x = *(_QWORD *)&static_fields->zeroVector.fields.x;
     vec.fields.z = z;
     DotXZ = BaseEarthPoint__GetDotXZ((BaseEarthPoint_o *)this, &vec, 0LL);
-    v10 = this->fields.mWidget;
+    v11 = this->fields.mWidget;
     this->fields.mIsForward = DotXZ > 0.0;
-    if ( !v10 )
+    if ( !v11 )
       goto LABEL_30;
-    r = v10->fields.mColor.fields.r;
-    g = v10->fields.mColor.fields.g;
-    b = v10->fields.mColor.fields.b;
+    r = v11->fields.mColor.fields.r;
+    g = v11->fields.mColor.fields.g;
+    b = v11->fields.mColor.fields.b;
     value = fmaxf(DotXZ, 0.0);
     mParticleSystem = (UnityEngine_Object_o *)this->fields.mParticleSystem;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -114,48 +115,48 @@ void __fastcall CylinderPoint__LateUpdate(CylinderPoint_o *this, const MethodInf
       transform = this->fields.mParticleSystem;
       if ( !transform )
         goto LABEL_30;
-      v15.fields.m_ParticleSystem = UnityEngine_ParticleSystem__get_main(transform, 0LL).fields.m_ParticleSystem;
-      v25.fields.a = value;
-      m_ParticleSystem = v15.fields.m_ParticleSystem;
-      v25.fields.r = r;
-      v25.fields.g = g;
-      v25.fields.b = b;
-      UnityEngine_ParticleSystem_MinMaxGradient__op_Implicit(&v20, v25, 0LL);
-      v24.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
-      v19 = v20;
-      UnityEngine_ParticleSystem_MainModule__set_startColor(v24, &v19, 0LL);
+      v16.fields.m_ParticleSystem = UnityEngine_ParticleSystem__get_main(transform, 0LL).fields.m_ParticleSystem;
+      v26.fields.a = value;
+      m_ParticleSystem = v16.fields.m_ParticleSystem;
+      v26.fields.r = r;
+      v26.fields.g = g;
+      v26.fields.b = b;
+      UnityEngine_ParticleSystem_MinMaxGradient__op_Implicit(&v21, v26, 0LL);
+      v25.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+      v20 = v21;
+      UnityEngine_ParticleSystem_MainModule__set_startColor(v25, &v20, 0LL);
     }
     transform = (UnityEngine_ParticleSystem_o *)this->fields.mWidget;
     if ( !transform )
 LABEL_30:
-      sub_1B64324(transform);
-    v26.fields.a = value;
-    v26.fields.r = r;
-    v26.fields.g = g;
-    v26.fields.b = b;
-    UIWidget__set_color((UIWidget_o *)transform, v26, 0LL);
+      sub_1B64ACC(transform, v9);
+    v27.fields.a = value;
+    v27.fields.r = r;
+    v27.fields.g = g;
+    v27.fields.b = b;
+    UIWidget__set_color((UIWidget_o *)transform, v27, 0LL);
     if ( this->fields.mIsForward )
     {
       transform = (UnityEngine_ParticleSystem_o *)UnityEngine_Component__get_transform(
                                                     (UnityEngine_Component_o *)this,
                                                     0LL);
-      v16 = (UnityEngine_Transform_o *)transform;
-      v17 = CylinderPoint_TypeInfo;
+      v17 = (UnityEngine_Transform_o *)transform;
+      v18 = CylinderPoint_TypeInfo;
       if ( !CylinderPoint_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(CylinderPoint_TypeInfo);
-        v17 = CylinderPoint_TypeInfo;
+        v18 = CylinderPoint_TypeInfo;
       }
-      if ( !v16 )
+      if ( !v17 )
         goto LABEL_30;
-      UnityEngine_Transform__set_localEulerAngles(v16, v17->static_fields->FORWARD_VEC, 0LL);
+      UnityEngine_Transform__set_localEulerAngles(v17, v18->static_fields->FORWARD_VEC, 0LL);
     }
     if ( !this->fields.IsParticleDisp )
     {
-      v18 = (UnityEngine_Object_o *)this->fields.mParticleSystem;
+      v19 = (UnityEngine_Object_o *)this->fields.mParticleSystem;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      if ( UnityEngine_Object__op_Inequality(v18, 0LL, 0LL) )
+      if ( UnityEngine_Object__op_Inequality(v19, 0LL, 0LL) )
       {
         transform = this->fields.mParticleSystem;
         if ( transform )

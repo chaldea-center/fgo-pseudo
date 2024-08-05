@@ -13,7 +13,7 @@ void __fastcall BattleNoSynchroAnime__Start(BattleNoSynchroAnime_o *this, const 
   __int64 v7; // x1
   __int64 v8; // x1
   __int64 v9; // x1
-  System_Object_array *ComponentsInChildren_object__48433408; // x19
+  System_Object_array *ComponentsInChildren_object__48442332; // x19
   System_Object_array *v11; // x0
   __int64 v12; // x1
   int max_length; // w8
@@ -24,95 +24,99 @@ void __fastcall BattleNoSynchroAnime__Start(BattleNoSynchroAnime_o *this, const 
   __int64 v18; // x9
   int32_t *p_offset; // x10
   __int64 v20; // x0
-  __int64 v21; // x20
-  __int64 v22; // x8
-  __int64 v23; // x9
-  int *v24; // x10
-  __int64 v25; // x0
-  __int64 v26; // x8
-  __int64 v27; // x9
-  int *v28; // x10
-  __int64 v29; // x0
+  __int64 v21; // x1
+  __int64 v22; // x20
+  __int64 v23; // x8
+  __int64 v24; // x9
+  int *v25; // x10
+  __int64 v26; // x0
+  __int64 v27; // x8
+  __int64 v28; // x9
+  int *v29; // x10
   __int64 v30; // x0
-  __int64 v31; // x21
-  __int64 v32; // x8
-  __int64 v33; // x9
-  SimpleAnimation_State_c **v34; // x10
-  __int64 v35; // x0
-  __int64 v36; // x8
-  __int64 v37; // x9
-  SimpleAnimation_State_c **v38; // x10
-  __int64 v39; // x0
-  __int64 v40; // x8
-  __int64 v41; // x9
-  SimpleAnimation_State_c **v42; // x10
-  __int64 v43; // x0
-  long double v44; // q0
-  long double v45; // q0
-  __int64 v46; // x8
-  long double v47; // q8
-  __int64 v48; // x9
-  SimpleAnimation_State_c **v49; // x10
-  __int64 v50; // x0
-  __int64 v51; // x8
-  __int64 v52; // x9
-  int *v53; // x10
-  __int64 v54; // x0
-  System_Object_array *v55; // x20
-  int v56; // w8
-  unsigned int v57; // w23
+  __int64 v31; // x0
+  __int64 v32; // x1
+  __int64 v33; // x21
+  __int64 v34; // x8
+  __int64 v35; // x9
+  SimpleAnimation_State_c **v36; // x10
+  __int64 v37; // x0
+  __int64 v38; // x8
+  __int64 v39; // x9
+  SimpleAnimation_State_c **v40; // x10
+  __int64 v41; // x0
+  __int64 v42; // x8
+  __int64 v43; // x9
+  SimpleAnimation_State_c **v44; // x10
+  __int64 v45; // x0
+  long double v46; // q0
+  long double v47; // q0
+  __int64 v48; // x8
+  long double v49; // q8
+  __int64 v50; // x9
+  SimpleAnimation_State_c **v51; // x10
+  __int64 v52; // x0
+  __int64 v53; // x8
+  __int64 v54; // x9
+  int *v55; // x10
+  __int64 v56; // x0
+  System_Object_array *v57; // x20
+  int v58; // w8
+  unsigned int v59; // w23
+  __int64 v60; // x1
   System_Collections_IEnumerator_o *Enumerator; // x19
-  System_Collections_IEnumerator_c *v59; // x8
-  __int64 v60; // x9
-  int32_t *v61; // x10
+  System_Collections_IEnumerator_c *v62; // x8
+  __int64 v63; // x9
+  int32_t *v64; // x10
   __int64 p_method; // x0
-  System_Collections_IEnumerator_c *v63; // x8
-  __int64 v64; // x9
-  System_Collections_IEnumerator_c **v65; // x10
-  __int64 v66; // x0
-  UnityEngine_AnimationState_o *v67; // x0
-  UnityEngine_AnimationState_o *v68; // x21
+  System_Collections_IEnumerator_c *v66; // x8
+  __int64 v67; // x9
+  System_Collections_IEnumerator_c **v68; // x10
+  __int64 v69; // x0
+  UnityEngine_AnimationState_o *v70; // x0
+  __int64 v71; // x1
+  UnityEngine_AnimationState_o *v72; // x21
   float length; // s1
-  float v70; // s0
-  Il2CppClass *v71; // x8
-  System_Object_array *v72; // x19
-  __int64 v73; // x9
-  int32_t *v74; // x10
-  __int64 v75; // x0
-  __int64 v76; // x0
-  __int64 v77; // x19
-  __int64 v78; // x8
-  __int64 v79; // x9
-  int *v80; // x10
-  __int64 v81; // x0
+  float v74; // s0
+  Il2CppClass *v75; // x8
+  System_Object_array *v76; // x19
+  __int64 v77; // x9
+  int32_t *v78; // x10
+  __int64 v79; // x0
+  __int64 v80; // x0
+  __int64 v81; // x19
+  __int64 v82; // x8
+  __int64 v83; // x9
+  int *v84; // x10
+  __int64 v85; // x0
 
-  if ( (byte_49FF1F9 & 1) == 0 )
+  if ( (byte_4A012FB & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_AnimationState_TypeInfo, method);
-    sub_1B640C8(&Method_UnityEngine_Component_GetComponentsInChildren_Animation___, v3);
-    sub_1B640C8(&Method_UnityEngine_Component_GetComponentsInChildren_SimpleAnimation___, v4);
-    sub_1B640C8(&System_IDisposable_TypeInfo, v5);
-    sub_1B640C8(&System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo, v6);
-    sub_1B640C8(&System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo, v7);
-    sub_1B640C8(&System_Collections_IEnumerator_TypeInfo, v8);
-    sub_1B640C8(&SimpleAnimation_State_TypeInfo, v9);
-    byte_49FF1F9 = 1;
+    sub_1B64870(&UnityEngine_AnimationState_TypeInfo, method);
+    sub_1B64870(&Method_UnityEngine_Component_GetComponentsInChildren_Animation___, v3);
+    sub_1B64870(&Method_UnityEngine_Component_GetComponentsInChildren_SimpleAnimation___, v4);
+    sub_1B64870(&System_IDisposable_TypeInfo, v5);
+    sub_1B64870(&System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo, v6);
+    sub_1B64870(&System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo, v7);
+    sub_1B64870(&System_Collections_IEnumerator_TypeInfo, v8);
+    sub_1B64870(&SimpleAnimation_State_TypeInfo, v9);
+    byte_4A012FB = 1;
   }
-  ComponentsInChildren_object__48433408 = UnityEngine_Component__GetComponentsInChildren_object__48433408(
+  ComponentsInChildren_object__48442332 = UnityEngine_Component__GetComponentsInChildren_object__48442332(
                                             (UnityEngine_Component_o *)this,
-                                            (const MethodInfo_2E30900 *)Method_UnityEngine_Component_GetComponentsInChildren_SimpleAnimation___);
-  v11 = UnityEngine_Component__GetComponentsInChildren_object__48433408(
+                                            (const MethodInfo_2E32BDC *)Method_UnityEngine_Component_GetComponentsInChildren_SimpleAnimation___);
+  v11 = UnityEngine_Component__GetComponentsInChildren_object__48442332(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_2E30900 *)Method_UnityEngine_Component_GetComponentsInChildren_Animation___);
-  if ( ComponentsInChildren_object__48433408 )
+          (const MethodInfo_2E32BDC *)Method_UnityEngine_Component_GetComponentsInChildren_Animation___);
+  if ( ComponentsInChildren_object__48442332 )
   {
-    max_length = ComponentsInChildren_object__48433408->max_length;
+    max_length = ComponentsInChildren_object__48442332->max_length;
     if ( max_length >= 1 )
     {
       v14 = 0;
       while ( v14 < max_length )
       {
-        States = (SimpleAnimation_o *)ComponentsInChildren_object__48433408->m_Items[v14];
+        States = (SimpleAnimation_o *)ComponentsInChildren_object__48442332->m_Items[v14];
         if ( !States )
           goto LABEL_104;
         States = (SimpleAnimation_o *)SimpleAnimation__GetStates(States, 0LL);
@@ -136,164 +140,164 @@ void __fastcall BattleNoSynchroAnime__Start(BattleNoSynchroAnime_o *this, const 
         else
         {
 LABEL_13:
-          v20 = sub_1BB60A8(States, System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo, 0LL);
+          v20 = sub_1BB6850(States, System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo, 0LL);
         }
-        v21 = (*(__int64 (__fastcall **)(SimpleAnimation_o *, _QWORD))v20)(v17, *(_QWORD *)(v20 + 8));
-        if ( !v21 )
-          sub_1B64324(0LL);
+        v22 = (*(__int64 (__fastcall **)(SimpleAnimation_o *, _QWORD))v20)(v17, *(_QWORD *)(v20 + 8));
+        if ( !v22 )
+          sub_1B64ACC(0LL, v21);
         while ( 1 )
         {
-          v22 = *(_QWORD *)v21;
-          v23 = *(unsigned __int16 *)(*(_QWORD *)v21 + 302LL);
-          if ( *(_WORD *)(*(_QWORD *)v21 + 302LL) )
+          v23 = *(_QWORD *)v22;
+          v24 = *(unsigned __int16 *)(*(_QWORD *)v22 + 302LL);
+          if ( *(_WORD *)(*(_QWORD *)v22 + 302LL) )
           {
-            v24 = (int *)(*(_QWORD *)(v22 + 176) + 8LL);
-            while ( *((System_Collections_IEnumerator_c **)v24 - 1) != System_Collections_IEnumerator_TypeInfo )
+            v25 = (int *)(*(_QWORD *)(v23 + 176) + 8LL);
+            while ( *((System_Collections_IEnumerator_c **)v25 - 1) != System_Collections_IEnumerator_TypeInfo )
             {
-              --v23;
-              v24 += 4;
-              if ( !v23 )
+              --v24;
+              v25 += 4;
+              if ( !v24 )
                 goto LABEL_20;
             }
-            v25 = v22 + 16LL * *v24 + 312;
+            v26 = v23 + 16LL * *v25 + 312;
           }
           else
           {
 LABEL_20:
-            v25 = sub_1BB60A8(v21, System_Collections_IEnumerator_TypeInfo, 0LL);
+            v26 = sub_1BB6850(v22, System_Collections_IEnumerator_TypeInfo, 0LL);
           }
-          if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v25)(v21, *(_QWORD *)(v25 + 8)) & 1) == 0 )
+          if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v26)(v22, *(_QWORD *)(v26 + 8)) & 1) == 0 )
             break;
-          v26 = *(_QWORD *)v21;
-          v27 = *(unsigned __int16 *)(*(_QWORD *)v21 + 302LL);
-          if ( *(_WORD *)(*(_QWORD *)v21 + 302LL) )
+          v27 = *(_QWORD *)v22;
+          v28 = *(unsigned __int16 *)(*(_QWORD *)v22 + 302LL);
+          if ( *(_WORD *)(*(_QWORD *)v22 + 302LL) )
           {
-            v28 = (int *)(*(_QWORD *)(v26 + 176) + 8LL);
-            while ( *((System_Collections_Generic_IEnumerator_SimpleAnimation_State__c **)v28 - 1) != System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo )
+            v29 = (int *)(*(_QWORD *)(v27 + 176) + 8LL);
+            while ( *((System_Collections_Generic_IEnumerator_SimpleAnimation_State__c **)v29 - 1) != System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo )
             {
-              --v27;
-              v28 += 4;
-              if ( !v27 )
+              --v28;
+              v29 += 4;
+              if ( !v28 )
                 goto LABEL_27;
             }
-            v29 = v26 + 16LL * *v28 + 312;
+            v30 = v27 + 16LL * *v29 + 312;
           }
           else
           {
 LABEL_27:
-            v29 = sub_1BB60A8(v21, System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo, 0LL);
+            v30 = sub_1BB6850(v22, System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo, 0LL);
           }
-          v30 = (*(__int64 (__fastcall **)(__int64, _QWORD))v29)(v21, *(_QWORD *)(v29 + 8));
-          v31 = v30;
-          if ( !v30 )
-            sub_1B64324(0LL);
-          v32 = *(_QWORD *)v30;
-          v33 = *(unsigned __int16 *)(*(_QWORD *)v30 + 302LL);
-          if ( *(_WORD *)(*(_QWORD *)v30 + 302LL) )
+          v31 = (*(__int64 (__fastcall **)(__int64, _QWORD))v30)(v22, *(_QWORD *)(v30 + 8));
+          v33 = v31;
+          if ( !v31 )
+            sub_1B64ACC(0LL, v32);
+          v34 = *(_QWORD *)v31;
+          v35 = *(unsigned __int16 *)(*(_QWORD *)v31 + 302LL);
+          if ( *(_WORD *)(*(_QWORD *)v31 + 302LL) )
           {
-            v34 = (SimpleAnimation_State_c **)(*(_QWORD *)(v32 + 176) + 8LL);
-            while ( *(v34 - 1) != SimpleAnimation_State_TypeInfo )
+            v36 = (SimpleAnimation_State_c **)(*(_QWORD *)(v34 + 176) + 8LL);
+            while ( *(v36 - 1) != SimpleAnimation_State_TypeInfo )
             {
-              --v33;
-              v34 += 2;
-              if ( !v33 )
+              --v35;
+              v36 += 2;
+              if ( !v35 )
                 goto LABEL_34;
             }
-            v35 = v32 + 16LL * (*(_DWORD *)v34 + 15) + 312;
+            v37 = v34 + 16LL * (*(_DWORD *)v36 + 15) + 312;
           }
           else
           {
 LABEL_34:
-            v35 = sub_1BB60A8(v30, SimpleAnimation_State_TypeInfo, 15LL);
+            v37 = sub_1BB6850(v31, SimpleAnimation_State_TypeInfo, 15LL);
           }
-          if ( (*(unsigned int (__fastcall **)(__int64, _QWORD))v35)(v31, *(_QWORD *)(v35 + 8)) != 2 )
+          if ( (*(unsigned int (__fastcall **)(__int64, _QWORD))v37)(v33, *(_QWORD *)(v37 + 8)) != 2 )
           {
-            v36 = *(_QWORD *)v31;
-            v37 = *(unsigned __int16 *)(*(_QWORD *)v31 + 302LL);
-            if ( *(_WORD *)(*(_QWORD *)v31 + 302LL) )
+            v38 = *(_QWORD *)v33;
+            v39 = *(unsigned __int16 *)(*(_QWORD *)v33 + 302LL);
+            if ( *(_WORD *)(*(_QWORD *)v33 + 302LL) )
             {
-              v38 = (SimpleAnimation_State_c **)(*(_QWORD *)(v36 + 176) + 8LL);
-              while ( *(v38 - 1) != SimpleAnimation_State_TypeInfo )
+              v40 = (SimpleAnimation_State_c **)(*(_QWORD *)(v38 + 176) + 8LL);
+              while ( *(v40 - 1) != SimpleAnimation_State_TypeInfo )
               {
-                --v37;
-                v38 += 2;
-                if ( !v37 )
+                --v39;
+                v40 += 2;
+                if ( !v39 )
                   goto LABEL_41;
               }
-              v39 = v36 + 16LL * (*(_DWORD *)v38 + 17) + 312;
+              v41 = v38 + 16LL * (*(_DWORD *)v40 + 17) + 312;
             }
             else
             {
 LABEL_41:
-              v39 = sub_1BB60A8(v31, SimpleAnimation_State_TypeInfo, 17LL);
+              v41 = sub_1BB6850(v33, SimpleAnimation_State_TypeInfo, 17LL);
             }
-            if ( (*(unsigned int (__fastcall **)(__int64, _QWORD))v39)(v31, *(_QWORD *)(v39 + 8)) != 2 )
+            if ( (*(unsigned int (__fastcall **)(__int64, _QWORD))v41)(v33, *(_QWORD *)(v41 + 8)) != 2 )
               continue;
           }
-          v40 = *(_QWORD *)v31;
-          v41 = *(unsigned __int16 *)(*(_QWORD *)v31 + 302LL);
-          if ( *(_WORD *)(*(_QWORD *)v31 + 302LL) )
+          v42 = *(_QWORD *)v33;
+          v43 = *(unsigned __int16 *)(*(_QWORD *)v33 + 302LL);
+          if ( *(_WORD *)(*(_QWORD *)v33 + 302LL) )
           {
-            v42 = (SimpleAnimation_State_c **)(*(_QWORD *)(v40 + 176) + 8LL);
-            while ( *(v42 - 1) != SimpleAnimation_State_TypeInfo )
+            v44 = (SimpleAnimation_State_c **)(*(_QWORD *)(v42 + 176) + 8LL);
+            while ( *(v44 - 1) != SimpleAnimation_State_TypeInfo )
             {
-              --v41;
-              v42 += 2;
-              if ( !v41 )
+              --v43;
+              v44 += 2;
+              if ( !v43 )
                 goto LABEL_48;
             }
-            v43 = v40 + 16LL * (*(_DWORD *)v42 + 13) + 312;
+            v45 = v42 + 16LL * (*(_DWORD *)v44 + 13) + 312;
           }
           else
           {
 LABEL_48:
-            v43 = sub_1BB60A8(v31, SimpleAnimation_State_TypeInfo, 13LL);
+            v45 = sub_1BB6850(v33, SimpleAnimation_State_TypeInfo, 13LL);
           }
-          v44 = ((long double (__fastcall *)(__int64, _QWORD))*(_QWORD *)v43)(v31, *(_QWORD *)(v43 + 8));
-          *(float *)&v45 = UnityEngine_Random__Range(0.0, *(float *)&v44, 0LL);
-          v46 = *(_QWORD *)v31;
-          v47 = v45;
-          v48 = *(unsigned __int16 *)(*(_QWORD *)v31 + 302LL);
-          if ( *(_WORD *)(*(_QWORD *)v31 + 302LL) )
+          v46 = ((long double (__fastcall *)(__int64, _QWORD))*(_QWORD *)v45)(v33, *(_QWORD *)(v45 + 8));
+          *(float *)&v47 = UnityEngine_Random__Range(0.0, *(float *)&v46, 0LL);
+          v48 = *(_QWORD *)v33;
+          v49 = v47;
+          v50 = *(unsigned __int16 *)(*(_QWORD *)v33 + 302LL);
+          if ( *(_WORD *)(*(_QWORD *)v33 + 302LL) )
           {
-            v49 = (SimpleAnimation_State_c **)(*(_QWORD *)(v46 + 176) + 8LL);
-            while ( *(v49 - 1) != SimpleAnimation_State_TypeInfo )
+            v51 = (SimpleAnimation_State_c **)(*(_QWORD *)(v48 + 176) + 8LL);
+            while ( *(v51 - 1) != SimpleAnimation_State_TypeInfo )
             {
-              --v48;
-              v49 += 2;
-              if ( !v48 )
+              --v50;
+              v51 += 2;
+              if ( !v50 )
                 goto LABEL_54;
             }
-            v50 = v46 + 16LL * (*(_DWORD *)v49 + 4) + 312;
+            v52 = v48 + 16LL * (*(_DWORD *)v51 + 4) + 312;
           }
           else
           {
 LABEL_54:
-            v50 = sub_1BB60A8(v31, SimpleAnimation_State_TypeInfo, 4LL);
+            v52 = sub_1BB6850(v33, SimpleAnimation_State_TypeInfo, 4LL);
           }
-          (*(void (__fastcall **)(__int64, _QWORD, long double))v50)(v31, *(_QWORD *)(v50 + 8), v47);
+          (*(void (__fastcall **)(__int64, _QWORD, long double))v52)(v33, *(_QWORD *)(v52 + 8), v49);
         }
-        v51 = *(_QWORD *)v21;
-        v52 = *(unsigned __int16 *)(*(_QWORD *)v21 + 302LL);
-        if ( *(_WORD *)(*(_QWORD *)v21 + 302LL) )
+        v53 = *(_QWORD *)v22;
+        v54 = *(unsigned __int16 *)(*(_QWORD *)v22 + 302LL);
+        if ( *(_WORD *)(*(_QWORD *)v22 + 302LL) )
         {
-          v53 = (int *)(*(_QWORD *)(v51 + 176) + 8LL);
-          while ( *((System_IDisposable_c **)v53 - 1) != System_IDisposable_TypeInfo )
+          v55 = (int *)(*(_QWORD *)(v53 + 176) + 8LL);
+          while ( *((System_IDisposable_c **)v55 - 1) != System_IDisposable_TypeInfo )
           {
-            --v52;
-            v53 += 4;
-            if ( !v52 )
+            --v54;
+            v55 += 4;
+            if ( !v54 )
               goto LABEL_61;
           }
-          v54 = v51 + 16LL * *v53 + 312;
+          v56 = v53 + 16LL * *v55 + 312;
         }
         else
         {
 LABEL_61:
-          v54 = sub_1BB60A8(v21, System_IDisposable_TypeInfo, 0LL);
+          v56 = sub_1BB6850(v22, System_IDisposable_TypeInfo, 0LL);
         }
-        v11 = (System_Object_array *)(*(__int64 (__fastcall **)(__int64, _QWORD))v54)(v21, *(_QWORD *)(v54 + 8));
-        max_length = ComponentsInChildren_object__48433408->max_length;
+        v11 = (System_Object_array *)(*(__int64 (__fastcall **)(__int64, _QWORD))v56)(v22, *(_QWORD *)(v56 + 8));
+        max_length = ComponentsInChildren_object__48442332->max_length;
         if ( (int)++v14 >= max_length )
           return;
       }
@@ -302,144 +306,144 @@ LABEL_61:
   }
   else
   {
-    v55 = v11;
+    v57 = v11;
     if ( v11 )
     {
-      v56 = v11->max_length;
-      if ( v56 >= 1 )
+      v58 = v11->max_length;
+      if ( v58 >= 1 )
       {
-        v57 = 0;
-        while ( v57 < v56 )
+        v59 = 0;
+        while ( v59 < v58 )
         {
-          States = (SimpleAnimation_o *)v55->m_Items[v57];
+          States = (SimpleAnimation_o *)v57->m_Items[v59];
           if ( !States )
 LABEL_104:
-            sub_1B64324(States);
+            sub_1B64ACC(States, v12);
           Enumerator = UnityEngine_Animation__GetEnumerator((UnityEngine_Animation_o *)States, 0LL);
           if ( !Enumerator )
-            sub_1B64324(0LL);
+            sub_1B64ACC(0LL, v60);
           while ( 1 )
           {
-            v59 = Enumerator->klass;
-            v60 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+            v62 = Enumerator->klass;
+            v63 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
             if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
             {
-              v61 = &v59->_1.interfaceOffsets->offset;
-              while ( *((System_Collections_IEnumerator_c **)v61 - 1) != System_Collections_IEnumerator_TypeInfo )
+              v64 = &v62->_1.interfaceOffsets->offset;
+              while ( *((System_Collections_IEnumerator_c **)v64 - 1) != System_Collections_IEnumerator_TypeInfo )
               {
-                --v60;
-                v61 += 4;
-                if ( !v60 )
+                --v63;
+                v64 += 4;
+                if ( !v63 )
                   goto LABEL_77;
               }
-              p_method = (__int64)&v59->vtable[*v61].method;
+              p_method = (__int64)&v62->vtable[*v64].method;
             }
             else
             {
 LABEL_77:
-              p_method = sub_1BB60A8(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+              p_method = sub_1BB6850(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
             }
             if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))p_method)(
                     Enumerator,
                     *(_QWORD *)(p_method + 8)) & 1) == 0 )
               break;
-            v63 = Enumerator->klass;
-            v64 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+            v66 = Enumerator->klass;
+            v67 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
             if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
             {
-              v65 = (System_Collections_IEnumerator_c **)&v63->_1.interfaceOffsets->offset;
-              while ( *(v65 - 1) != System_Collections_IEnumerator_TypeInfo )
+              v68 = (System_Collections_IEnumerator_c **)&v66->_1.interfaceOffsets->offset;
+              while ( *(v68 - 1) != System_Collections_IEnumerator_TypeInfo )
               {
-                --v64;
-                v65 += 2;
-                if ( !v64 )
+                --v67;
+                v68 += 2;
+                if ( !v67 )
                   goto LABEL_84;
               }
-              v66 = (__int64)&v63->vtable[*(_DWORD *)v65 + 1].method;
+              v69 = (__int64)&v66->vtable[*(_DWORD *)v68 + 1].method;
             }
             else
             {
 LABEL_84:
-              v66 = sub_1BB60A8(Enumerator, System_Collections_IEnumerator_TypeInfo, 1LL);
+              v69 = sub_1BB6850(Enumerator, System_Collections_IEnumerator_TypeInfo, 1LL);
             }
-            v67 = (UnityEngine_AnimationState_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v66)(
+            v70 = (UnityEngine_AnimationState_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v69)(
                                                     Enumerator,
-                                                    *(_QWORD *)(v66 + 8));
-            v68 = v67;
-            if ( !v67 )
-              sub_1B64324(0LL);
-            if ( v67->klass != UnityEngine_AnimationState_TypeInfo )
+                                                    *(_QWORD *)(v69 + 8));
+            v72 = v70;
+            if ( !v70 )
+              sub_1B64ACC(0LL, v71);
+            if ( v70->klass != UnityEngine_AnimationState_TypeInfo )
             {
-              sub_1B645E4(v67);
-              v76 = sub_1B64204(Enumerator, System_IDisposable_TypeInfo);
-              v77 = v76;
-              if ( v76 )
+              sub_1B64D8C(v70);
+              v80 = sub_1B649AC(Enumerator, System_IDisposable_TypeInfo);
+              v81 = v80;
+              if ( v80 )
               {
-                v78 = *(_QWORD *)v76;
-                v79 = *(unsigned __int16 *)(*(_QWORD *)v76 + 302LL);
-                if ( *(_WORD *)(*(_QWORD *)v76 + 302LL) )
+                v82 = *(_QWORD *)v80;
+                v83 = *(unsigned __int16 *)(*(_QWORD *)v80 + 302LL);
+                if ( *(_WORD *)(*(_QWORD *)v80 + 302LL) )
                 {
-                  v80 = (int *)(*(_QWORD *)(v78 + 176) + 8LL);
-                  while ( *((System_IDisposable_c **)v80 - 1) != System_IDisposable_TypeInfo )
+                  v84 = (int *)(*(_QWORD *)(v82 + 176) + 8LL);
+                  while ( *((System_IDisposable_c **)v84 - 1) != System_IDisposable_TypeInfo )
                   {
-                    --v79;
-                    v80 += 4;
-                    if ( !v79 )
+                    --v83;
+                    v84 += 4;
+                    if ( !v83 )
                       goto LABEL_111;
                   }
-                  v81 = v78 + 16LL * *v80 + 312;
+                  v85 = v82 + 16LL * *v84 + 312;
                 }
                 else
                 {
 LABEL_111:
-                  v81 = sub_1BB60A8(v76, System_IDisposable_TypeInfo, 0LL);
+                  v85 = sub_1BB6850(v80, System_IDisposable_TypeInfo, 0LL);
                 }
-                (*(void (__fastcall **)(__int64, _QWORD))v81)(v77, *(_QWORD *)(v81 + 8));
+                (*(void (__fastcall **)(__int64, _QWORD))v85)(v81, *(_QWORD *)(v85 + 8));
               }
-              if ( v68 )
-                sub_1B6431C(v68);
-              sub_1C4EB58();
+              if ( v72 )
+                sub_1B64AC4(v72);
+              sub_1C4F300();
             }
-            if ( UnityEngine_AnimationState__get_wrapMode(v67, 0LL) == 2 )
+            if ( UnityEngine_AnimationState__get_wrapMode(v70, 0LL) == 2 )
             {
-              length = UnityEngine_AnimationState__get_length(v68, 0LL);
-              v70 = UnityEngine_Random__Range(0.0, length, 0LL);
-              UnityEngine_AnimationState__set_time(v68, v70, 0LL);
+              length = UnityEngine_AnimationState__get_length(v72, 0LL);
+              v74 = UnityEngine_Random__Range(0.0, length, 0LL);
+              UnityEngine_AnimationState__set_time(v72, v74, 0LL);
             }
           }
-          v11 = (System_Object_array *)sub_1B64204(Enumerator, System_IDisposable_TypeInfo);
+          v11 = (System_Object_array *)sub_1B649AC(Enumerator, System_IDisposable_TypeInfo);
           if ( v11 )
           {
-            v71 = v11->obj.klass;
-            v72 = v11;
-            v73 = *(unsigned __int16 *)(&v11->obj.klass->_2.bitflags2 + 3);
+            v75 = v11->obj.klass;
+            v76 = v11;
+            v77 = *(unsigned __int16 *)(&v11->obj.klass->_2.bitflags2 + 3);
             if ( *(_WORD *)(&v11->obj.klass->_2.bitflags2 + 3) )
             {
-              v74 = &v71->_1.interfaceOffsets->offset;
-              while ( *((System_IDisposable_c **)v74 - 1) != System_IDisposable_TypeInfo )
+              v78 = &v75->_1.interfaceOffsets->offset;
+              while ( *((System_IDisposable_c **)v78 - 1) != System_IDisposable_TypeInfo )
               {
-                --v73;
-                v74 += 4;
-                if ( !v73 )
+                --v77;
+                v78 += 4;
+                if ( !v77 )
                   goto LABEL_95;
               }
-              v75 = (__int64)&v71->vtable[*v74].method;
+              v79 = (__int64)&v75->vtable[*v78].method;
             }
             else
             {
 LABEL_95:
-              v75 = sub_1BB60A8(v11, System_IDisposable_TypeInfo, 0LL);
+              v79 = sub_1BB6850(v11, System_IDisposable_TypeInfo, 0LL);
             }
-            v11 = (System_Object_array *)(*(__int64 (__fastcall **)(System_Object_array *, _QWORD))v75)(
-                                           v72,
-                                           *(_QWORD *)(v75 + 8));
+            v11 = (System_Object_array *)(*(__int64 (__fastcall **)(System_Object_array *, _QWORD))v79)(
+                                           v76,
+                                           *(_QWORD *)(v79 + 8));
           }
-          v56 = v55->max_length;
-          if ( (int)++v57 >= v56 )
+          v58 = v57->max_length;
+          if ( (int)++v59 >= v58 )
             return;
         }
 LABEL_105:
-        sub_1B6432C(v11, v12);
+        sub_1B64AD4(v11, v12);
       }
     }
   }

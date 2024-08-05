@@ -17,20 +17,21 @@ void __fastcall BattleResultMasterUpStatusComponent__setData(
   UnityEngine_Object_o *oldParamLabel; // x20
   UILabel_o *v7; // x20
   System_String_o *v8; // x0
-  System_String_o *v9; // x1
+  __int64 v9; // x1
+  System_String_o *v10; // x1
   UnityEngine_Object_o *newParamLabel; // x20
-  UILabel_o *v11; // x19
-  System_String_o *v12; // x1
-  int32_t v13; // [xsp+8h] [xbp-28h] BYREF
-  int32_t v14; // [xsp+Ch] [xbp-24h] BYREF
+  UILabel_o *v12; // x19
+  System_String_o *v13; // x1
+  int32_t v14; // [xsp+8h] [xbp-28h] BYREF
+  int32_t v15; // [xsp+Ch] [xbp-24h] BYREF
 
-  v13 = newVal;
-  v14 = oldVal;
-  if ( (byte_49FF5AE & 1) == 0 )
+  v14 = newVal;
+  v15 = oldVal;
+  if ( (byte_4A016AC & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, *(_QWORD *)&oldVal);
-    sub_1B640C8(&StringLiteral_1/*""*/, v5);
-    byte_49FF5AE = 1;
+    sub_1B64870(&UnityEngine_Object_TypeInfo, *(_QWORD *)&oldVal);
+    sub_1B64870(&StringLiteral_1/*""*/, v5);
+    byte_4A016AC = 1;
   }
   oldParamLabel = (UnityEngine_Object_o *)this->fields.oldParamLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -38,33 +39,33 @@ void __fastcall BattleResultMasterUpStatusComponent__setData(
   if ( UnityEngine_Object__op_Inequality(oldParamLabel, 0LL, 0LL) )
   {
     v7 = this->fields.oldParamLabel;
-    v8 = System_Int32__ToString((int32_t)&v14, 0LL);
+    v8 = System_Int32__ToString((int32_t)&v15, 0LL);
     if ( !v7 )
       goto LABEL_20;
     if ( v8 )
-      v9 = v8;
+      v10 = v8;
     else
-      v9 = (System_String_o *)StringLiteral_1/*""*/;
-    UILabel__set_text(v7, v9, 0LL);
+      v10 = (System_String_o *)StringLiteral_1/*""*/;
+    UILabel__set_text(v7, v10, 0LL);
   }
   newParamLabel = (UnityEngine_Object_o *)this->fields.newParamLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(newParamLabel, 0LL, 0LL) )
   {
-    v11 = this->fields.newParamLabel;
-    v8 = System_Int32__ToString((int32_t)&v13, 0LL);
-    if ( v11 )
+    v12 = this->fields.newParamLabel;
+    v8 = System_Int32__ToString((int32_t)&v14, 0LL);
+    if ( v12 )
     {
       if ( v8 )
-        v12 = v8;
+        v13 = v8;
       else
-        v12 = (System_String_o *)StringLiteral_1/*""*/;
-      UILabel__set_text(v11, v12, 0LL);
+        v13 = (System_String_o *)StringLiteral_1/*""*/;
+      UILabel__set_text(v12, v13, 0LL);
       return;
     }
 LABEL_20:
-    sub_1B64324(v8);
+    sub_1B64ACC(v8, v9);
   }
 }
 
@@ -77,13 +78,14 @@ void __fastcall BattleResultMasterUpStatusComponent__setTitle(
   __int64 v5; // x1
   UnityEngine_Object_o *titleParamLabel; // x21
   System_String_o *v7; // x0
-  System_String_o *v8; // x21
+  __int64 v8; // x1
+  System_String_o *v9; // x21
 
-  if ( (byte_49FF5AD & 1) == 0 )
+  if ( (byte_4A016AB & 1) == 0 )
   {
-    sub_1B640C8(&LocalizationManager_TypeInfo, key);
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, v5);
-    byte_49FF5AD = 1;
+    sub_1B64870(&LocalizationManager_TypeInfo, key);
+    sub_1B64870(&UnityEngine_Object_TypeInfo, v5);
+    byte_4A016AB = 1;
   }
   titleParamLabel = (UnityEngine_Object_o *)this->fields.titleParamLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -95,16 +97,16 @@ void __fastcall BattleResultMasterUpStatusComponent__setTitle(
     v7 = LocalizationManager__Get(key, 0LL);
     if ( v7 )
     {
-      v8 = v7;
-      if ( System_String__Equals_61383712(v7, key, 0LL) )
+      v9 = v7;
+      if ( System_String__Equals_61391892(v7, key, 0LL) )
         return;
       v7 = (System_String_o *)this->fields.titleParamLabel;
       if ( v7 )
       {
-        UILabel__set_text((UILabel_o *)v7, v8, 0LL);
+        UILabel__set_text((UILabel_o *)v7, v9, 0LL);
         return;
       }
     }
-    sub_1B64324(v7);
+    sub_1B64ACC(v7, v8);
   }
 }

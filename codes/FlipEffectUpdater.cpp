@@ -16,22 +16,20 @@ void __fastcall FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const
   UnityEngine_Object_o *ConnectTarget; // x19
   UnityEngine_Transform_o **p_mTrans; // x19
   UnityEngine_Object_o *mTrans; // x20
+  __int64 v6; // x1
   struct UnityEngine_Transform_o *transform; // x0
-  int32_t v7; // w2
-  int32_t v8; // w3
+  int32_t v8; // w2
+  int32_t v9; // w3
   UnityEngine_Transform_o *parent; // x0
-  UnityEngine_Transform_o *v10; // x20
-  __int64 v11; // x1
+  UnityEngine_Transform_o *v11; // x20
   UnityEngine_Transform_o *v12; // x21
-  __int64 v13; // x1
+  UnityEngine_Transform_o *v13; // x21
   UnityEngine_Transform_o *v14; // x21
-  __int64 v15; // x1
-  UnityEngine_Transform_o *v16; // x21
 
-  if ( (byte_49FB8EE & 1) == 0 )
+  if ( (byte_49FD9E6 & 1) == 0 )
   {
-    sub_1B640C8(&UnityEngine_Object_TypeInfo, method);
-    byte_49FB8EE = 1;
+    sub_1B64870(&UnityEngine_Object_TypeInfo, method);
+    byte_49FD9E6 = 1;
   }
   ConnectTarget = (UnityEngine_Object_o *)this->fields.ConnectTarget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -46,7 +44,7 @@ void __fastcall FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const
     {
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
       this->fields.mTrans = transform;
-      sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.mTrans, (int32_t)transform, v7, v8);
+      sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.mTrans, (int32_t)transform, v8, v9);
     }
     parent = *p_mTrans;
     if ( !*p_mTrans )
@@ -54,40 +52,40 @@ void __fastcall FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const
     parent = UnityEngine_Transform__get_parent(parent, 0LL);
     if ( !*p_mTrans )
       goto LABEL_24;
-    v10 = parent;
+    v11 = parent;
     UnityEngine_Transform__set_parent(*p_mTrans, this->fields.ConnectTarget, 0LL);
     v12 = this->fields.mTrans;
-    if ( !byte_49F7111 )
+    if ( !byte_49F9201 )
     {
-      parent = (UnityEngine_Transform_o *)sub_1B640C8(&UnityEngine_Vector3_TypeInfo, v11);
-      byte_49F7111 = 1;
+      parent = (UnityEngine_Transform_o *)sub_1B64870(&UnityEngine_Vector3_TypeInfo, v6);
+      byte_49F9201 = 1;
     }
     if ( !v12 )
       goto LABEL_24;
     UnityEngine_Transform__set_localPosition(v12, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
-    v14 = *p_mTrans;
-    if ( !byte_49F7111 )
+    v13 = *p_mTrans;
+    if ( !byte_49F9201 )
     {
-      parent = (UnityEngine_Transform_o *)sub_1B640C8(&UnityEngine_Vector3_TypeInfo, v13);
-      byte_49F7111 = 1;
+      parent = (UnityEngine_Transform_o *)sub_1B64870(&UnityEngine_Vector3_TypeInfo, v6);
+      byte_49F9201 = 1;
     }
-    if ( !v14 )
+    if ( !v13 )
       goto LABEL_24;
-    UnityEngine_Transform__set_localEulerAngles(v14, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
-    v16 = *p_mTrans;
-    if ( !byte_49F7116 )
+    UnityEngine_Transform__set_localEulerAngles(v13, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
+    v14 = *p_mTrans;
+    if ( !byte_49F9206 )
     {
-      parent = (UnityEngine_Transform_o *)sub_1B640C8(&UnityEngine_Vector3_TypeInfo, v15);
-      byte_49F7116 = 1;
+      parent = (UnityEngine_Transform_o *)sub_1B64870(&UnityEngine_Vector3_TypeInfo, v6);
+      byte_49F9206 = 1;
     }
-    if ( !v16
-      || (UnityEngine_Transform__set_localScale(v16, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL),
+    if ( !v14
+      || (UnityEngine_Transform__set_localScale(v14, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL),
           (parent = *p_mTrans) == 0LL) )
     {
 LABEL_24:
-      sub_1B64324(parent);
+      sub_1B64ACC(parent, v6);
     }
-    UnityEngine_Transform__set_parent(parent, v10, 0LL);
+    UnityEngine_Transform__set_parent(parent, v11, 0LL);
   }
 }
 
@@ -100,5 +98,5 @@ void __fastcall FlipEffectUpdater__Start(FlipEffectUpdater_o *this, const Method
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   this->fields.mTrans = transform;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5);
 }

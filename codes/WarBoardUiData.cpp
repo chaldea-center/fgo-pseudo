@@ -8,43 +8,44 @@ void __fastcall WarBoardUiData___ctor(WarBoardUiData_o *this, const MethodInfo *
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._squareIndex_k__BackingField = -1;
   this->fields._pieceIndex_k__BackingField = 0LL;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields._pieceIndex_k__BackingField, 0, v3, v4);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields._pieceIndex_k__BackingField, 0, v3, v4);
   this->fields._keys_k__BackingField = 0LL;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields._keys_k__BackingField, 0, v5, v6);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields._keys_k__BackingField, 0, v5, v6);
 }
 
 
-void __fastcall WarBoardUiData___ctor_35284548(
+void __fastcall WarBoardUiData___ctor_35288384(
         WarBoardUiData_o *this,
         WarBoardUiData_SaveData_o *saveData,
         const MethodInfo *method)
 {
   __int64 v5; // x0
-  int32_t v6; // w2
-  int32_t v7; // w3
+  __int64 v6; // x1
+  int32_t v7; // w2
+  int32_t v8; // w3
   struct System_Int32_array *pieceIndex; // x1
   struct System_String_array *keys; // x1
-  int32_t v10; // w2
-  int32_t v11; // w3
+  int32_t v11; // w2
+  int32_t v12; // w3
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !saveData )
-    sub_1B64324(v5);
+    sub_1B64ACC(v5, v6);
   this->fields._squareIndex_k__BackingField = saveData->fields.squareIndex;
   pieceIndex = saveData->fields.pieceIndex;
   this->fields._pieceIndex_k__BackingField = pieceIndex;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._pieceIndex_k__BackingField,
     (int32_t)pieceIndex,
-    v6,
-    v7);
+    v7,
+    v8);
   keys = saveData->fields.keys;
   this->fields._keys_k__BackingField = keys;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields._keys_k__BackingField, (int32_t)keys, v10, v11);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields._keys_k__BackingField, (int32_t)keys, v11, v12);
 }
 
 
-void __fastcall WarBoardUiData___ctor_35284628(
+void __fastcall WarBoardUiData___ctor_35288464(
         WarBoardUiData_o *this,
         int32_t index,
         System_String_array *setKeys,
@@ -58,13 +59,13 @@ void __fastcall WarBoardUiData___ctor_35284628(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._squareIndex_k__BackingField = index;
   this->fields._pieceIndex_k__BackingField = 0LL;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields._pieceIndex_k__BackingField, 0, v7, v8);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields._pieceIndex_k__BackingField, 0, v7, v8);
   this->fields._keys_k__BackingField = setKeys;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields._keys_k__BackingField, (int32_t)setKeys, v9, v10);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields._keys_k__BackingField, (int32_t)setKeys, v9, v10);
 }
 
 
-void __fastcall WarBoardUiData___ctor_35284700(
+void __fastcall WarBoardUiData___ctor_35288536(
         WarBoardUiData_o *this,
         System_Int32_array *indexes,
         System_String_array *setKeys,
@@ -78,9 +79,9 @@ void __fastcall WarBoardUiData___ctor_35284700(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._squareIndex_k__BackingField = -1;
   this->fields._pieceIndex_k__BackingField = indexes;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields._pieceIndex_k__BackingField, (int32_t)indexes, v7, v8);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields._pieceIndex_k__BackingField, (int32_t)indexes, v7, v8);
   this->fields._keys_k__BackingField = setKeys;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields._keys_k__BackingField, (int32_t)setKeys, v9, v10);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields._keys_k__BackingField, (int32_t)setKeys, v9, v10);
 }
 
 
@@ -89,7 +90,7 @@ void __fastcall WarBoardUiData__SetKeys(WarBoardUiData_o *this, System_String_ar
   int32_t v3; // w3
 
   this->fields._keys_k__BackingField = setKeys;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._keys_k__BackingField,
     (int32_t)setKeys,
     (int32_t)method,
@@ -120,7 +121,7 @@ void __fastcall WarBoardUiData__set_keys(WarBoardUiData_o *this, System_String_a
   int32_t v3; // w3
 
   this->fields._keys_k__BackingField = value;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._keys_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -136,7 +137,7 @@ void __fastcall WarBoardUiData__set_pieceIndex(
   int32_t v3; // w3
 
   this->fields._pieceIndex_k__BackingField = value;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields._pieceIndex_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -160,37 +161,38 @@ void __fastcall WarBoardUiData_SaveData___ctor(WarBoardUiData_SaveData_o *this, 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.squareIndex = -1;
   this->fields.pieceIndex = 0LL;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.pieceIndex, 0, v3, v4);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.pieceIndex, 0, v3, v4);
   this->fields.keys = 0LL;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.keys, 0, v5, v6);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.keys, 0, v5, v6);
 }
 
 
-void __fastcall WarBoardUiData_SaveData___ctor_35241788(
+void __fastcall WarBoardUiData_SaveData___ctor_35245624(
         WarBoardUiData_SaveData_o *this,
         WarBoardUiData_o *uiData,
         const MethodInfo *method)
 {
   __int64 v5; // x0
-  int32_t v6; // w2
-  int32_t v7; // w3
+  __int64 v6; // x1
+  int32_t v7; // w2
+  int32_t v8; // w3
   struct System_Int32_array *pieceIndex_k__BackingField; // x1
   struct System_String_array *keys_k__BackingField; // x1
-  int32_t v10; // w2
-  int32_t v11; // w3
+  int32_t v11; // w2
+  int32_t v12; // w3
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !uiData )
-    sub_1B64324(v5);
+    sub_1B64ACC(v5, v6);
   this->fields.squareIndex = uiData->fields._squareIndex_k__BackingField;
   pieceIndex_k__BackingField = uiData->fields._pieceIndex_k__BackingField;
   this->fields.pieceIndex = pieceIndex_k__BackingField;
-  sub_1B6406C(
+  sub_1B64814(
     (ServantStatusBattleListViewItem_o *)&this->fields.pieceIndex,
     (int32_t)pieceIndex_k__BackingField,
-    v6,
-    v7);
+    v7,
+    v8);
   keys_k__BackingField = uiData->fields._keys_k__BackingField;
   this->fields.keys = keys_k__BackingField;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.keys, (int32_t)keys_k__BackingField, v10, v11);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.keys, (int32_t)keys_k__BackingField, v11, v12);
 }

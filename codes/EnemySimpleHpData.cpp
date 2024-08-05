@@ -4,10 +4,11 @@ void __fastcall EnemySimpleHpData___ctor(
         const MethodInfo *method)
 {
   __int64 v5; // x0
+  __int64 v6; // x1
 
   SimpleHpData___ctor((SimpleHpData_o *)this, svtData, method);
   if ( !svtData )
-    sub_1B64324(v5);
+    sub_1B64ACC(v5, v6);
   *(int32x2_t *)&this->fields._NextTpTurn_k__BackingField = vrev64_s32(*(int32x2_t *)&svtData->fields.maxtpturn);
 }
 

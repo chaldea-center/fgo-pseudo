@@ -1,9 +1,9 @@
 void __fastcall SupportSelectConfirmDeckMenu___ctor(SupportSelectConfirmDeckMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_49F8DF2 & 1) == 0 )
+  if ( (byte_49FAEE1 & 1) == 0 )
   {
-    sub_1B640C8(&BaseDialog_TypeInfo, method);
-    byte_49F8DF2 = 1;
+    sub_1B64870(&BaseDialog_TypeInfo, method);
+    byte_49FAEE1 = 1;
   }
   this->fields.currentState = 2;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
@@ -14,20 +14,19 @@ void __fastcall SupportSelectConfirmDeckMenu___ctor(SupportSelectConfirmDeckMenu
 
 void __fastcall SupportSelectConfirmDeckMenu__Close(SupportSelectConfirmDeckMenu_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  System_Action_o *v5; // x20
+  __int64 v3; // x1
+  System_Action_o *v4; // x20
 
-  if ( (byte_49F8DEE & 1) == 0 )
+  if ( (byte_49FAEDD & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_TypeInfo, method);
-    sub_1B640C8(&Method_SupportSelectConfirmDeckMenu_OnFinishedClose__, v4);
-    byte_49F8DEE = 1;
+    sub_1B64870(&System_Action_TypeInfo, method);
+    sub_1B64870(&Method_SupportSelectConfirmDeckMenu_OnFinishedClose__, v3);
+    byte_49FAEDD = 1;
   }
   this->fields.currentState = 2;
-  v5 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, method, v2);
-  System_Action___ctor(v5, (Il2CppObject *)this, Method_SupportSelectConfirmDeckMenu_OnFinishedClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v5, 0LL);
+  v4 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  System_Action___ctor(v4, (Il2CppObject *)this, Method_SupportSelectConfirmDeckMenu_OnFinishedClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v4, 0LL);
 }
 
 
@@ -39,17 +38,17 @@ void __fastcall SupportSelectConfirmDeckMenu__OnClickCancel(
   System_Reflection_MethodBase_o *v4; // x0
   struct SupportSelectConfirmDeckMenu_OnClickButtonEvent_o *onClickButton; // x8
 
-  if ( (byte_49F8DF0 & 1) == 0 )
+  if ( (byte_49FAEDF & 1) == 0 )
   {
-    sub_1B640C8(&Method_SupportSelectConfirmDeckMenu_OnClickCancel__, method);
-    byte_49F8DF0 = 1;
+    sub_1B64870(&Method_SupportSelectConfirmDeckMenu_OnClickCancel__, method);
+    byte_49FAEDF = 1;
   }
   if ( this->fields.currentState == 1 )
   {
     v3 = Method_SupportSelectConfirmDeckMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_SupportSelectConfirmDeckMenu_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B640E0(Method_SupportSelectConfirmDeckMenu_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64888(Method_SupportSelectConfirmDeckMenu_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     onClickButton = this->fields.onClickButton;
     if ( onClickButton )
@@ -69,17 +68,17 @@ void __fastcall SupportSelectConfirmDeckMenu__OnClickDecide(
   System_Reflection_MethodBase_o *v4; // x0
   struct SupportSelectConfirmDeckMenu_OnClickButtonEvent_o *onClickButton; // x8
 
-  if ( (byte_49F8DEF & 1) == 0 )
+  if ( (byte_49FAEDE & 1) == 0 )
   {
-    sub_1B640C8(&Method_SupportSelectConfirmDeckMenu_OnClickDecide__, method);
-    byte_49F8DEF = 1;
+    sub_1B64870(&Method_SupportSelectConfirmDeckMenu_OnClickDecide__, method);
+    byte_49FAEDE = 1;
   }
   if ( this->fields.currentState == 1 )
   {
     v3 = Method_SupportSelectConfirmDeckMenu_OnClickDecide__;
     if ( (*((_BYTE *)Method_SupportSelectConfirmDeckMenu_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B640E0(Method_SupportSelectConfirmDeckMenu_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B640AC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64888(Method_SupportSelectConfirmDeckMenu_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0LL);
     onClickButton = this->fields.onClickButton;
     if ( onClickButton )
@@ -99,7 +98,7 @@ void __fastcall SupportSelectConfirmDeckMenu__OnFinishedClose(
   int32_t v3; // w3
 
   this->fields.onClickButton = 0LL;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.onClickButton, 0, v2, v3);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.onClickButton, 0, v2, v3);
 }
 
 
@@ -132,39 +131,38 @@ void __fastcall SupportSelectConfirmDeckMenu__Open(
   __int64 v19; // x1
   __int64 v20; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  UILabel_o *v22; // x22
+  __int64 v22; // x1
+  UILabel_o *v23; // x22
   UILabel_o *messageLabel; // x22
-  __int64 *v24; // x8
+  __int64 *v25; // x8
   UILabel_o *titleLabel; // x22
   System_String_o *Empty; // x1
-  UILabel_o *v27; // x22
   UILabel_o *v28; // x22
+  UILabel_o *v29; // x22
   struct UILabel_o *nameLabel; // x22
   UILabel_o *decideButtonLabel; // x22
   UILabel_o *cancelButtonLabel; // x22
-  const MethodInfo *v32; // x4
-  int32_t v33; // w2
-  int32_t v34; // w3
-  __int64 v35; // x1
-  __int64 v36; // x2
-  System_Action_o *v37; // x20
+  const MethodInfo *v33; // x4
+  int32_t v34; // w2
+  int32_t v35; // w3
+  System_Action_o *v36; // x20
 
-  if ( (byte_49F8DED & 1) == 0 )
+  if ( (byte_49FAEDC & 1) == 0 )
   {
-    sub_1B640C8(&System_Action_TypeInfo, *(_QWORD *)&kind);
-    sub_1B640C8(&LocalizationManager_TypeInfo, v9);
-    sub_1B640C8(&string_TypeInfo, v10);
-    sub_1B640C8(&Method_SupportSelectConfirmDeckMenu_OnFinishedOpen__, v11);
-    sub_1B640C8(&StringLiteral_12372/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_INIT_ALL_DECK_NAME"*/, v12);
-    sub_1B640C8(&StringLiteral_12371/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_DECIDE"*/, v13);
-    sub_1B640C8(&StringLiteral_12377/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_MESSAGE"*/, v14);
-    sub_1B640C8(&StringLiteral_12374/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_INIT_ALL_TITLE"*/, v15);
-    sub_1B640C8(&StringLiteral_12373/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_INIT_ALL_MESSAGE"*/, v16);
-    sub_1B640C8(&StringLiteral_12375/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_EQUIP_MESSAGE"*/, v17);
-    sub_1B640C8(&StringLiteral_12376/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_EQUIP_TITLE"*/, v18);
-    sub_1B640C8(&StringLiteral_12378/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_TITLE"*/, v19);
-    sub_1B640C8(&StringLiteral_12359/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_CANCEL"*/, v20);
-    byte_49F8DED = 1;
+    sub_1B64870(&System_Action_TypeInfo, *(_QWORD *)&kind);
+    sub_1B64870(&LocalizationManager_TypeInfo, v9);
+    sub_1B64870(&string_TypeInfo, v10);
+    sub_1B64870(&Method_SupportSelectConfirmDeckMenu_OnFinishedOpen__, v11);
+    sub_1B64870(&StringLiteral_12375/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_INIT_ALL_DECK_NAME"*/, v12);
+    sub_1B64870(&StringLiteral_12374/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_DECIDE"*/, v13);
+    sub_1B64870(&StringLiteral_12380/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_MESSAGE"*/, v14);
+    sub_1B64870(&StringLiteral_12377/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_INIT_ALL_TITLE"*/, v15);
+    sub_1B64870(&StringLiteral_12376/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_INIT_ALL_MESSAGE"*/, v16);
+    sub_1B64870(&StringLiteral_12378/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_EQUIP_MESSAGE"*/, v17);
+    sub_1B64870(&StringLiteral_12379/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_EQUIP_TITLE"*/, v18);
+    sub_1B64870(&StringLiteral_12381/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_TITLE"*/, v19);
+    sub_1B64870(&StringLiteral_12362/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_CANCEL"*/, v20);
+    byte_49FAEDC = 1;
   }
   if ( this->fields.currentState == 2 )
   {
@@ -177,31 +175,31 @@ void __fastcall SupportSelectConfirmDeckMenu__Open(
       titleLabel = this->fields.titleLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12376/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_EQUIP_TITLE"*/, 0LL);
+      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12379/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_EQUIP_TITLE"*/, 0LL);
       if ( !titleLabel )
         goto LABEL_34;
       UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0LL);
       messageLabel = this->fields.messageLabel;
-      v24 = &StringLiteral_12375/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_EQUIP_MESSAGE"*/;
+      v25 = &StringLiteral_12378/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_EQUIP_MESSAGE"*/;
     }
     else
     {
       if ( kind == 1 )
       {
-        v27 = this->fields.titleLabel;
+        v28 = this->fields.titleLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12374/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_INIT_ALL_TITLE"*/, 0LL);
-        if ( !v27 )
-          goto LABEL_34;
-        UILabel__set_text(v27, (System_String_o *)gameObject, 0LL);
-        v28 = this->fields.messageLabel;
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12373/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_INIT_ALL_MESSAGE"*/, 0LL);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12377/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_INIT_ALL_TITLE"*/, 0LL);
         if ( !v28 )
           goto LABEL_34;
         UILabel__set_text(v28, (System_String_o *)gameObject, 0LL);
+        v29 = this->fields.messageLabel;
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12376/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_INIT_ALL_MESSAGE"*/, 0LL);
+        if ( !v29 )
+          goto LABEL_34;
+        UILabel__set_text(v29, (System_String_o *)gameObject, 0LL);
         nameLabel = this->fields.nameLabel;
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12372/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_INIT_ALL_DECK_NAME"*/, 0LL);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12375/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_INIT_ALL_DECK_NAME"*/, 0LL);
         if ( !supportData )
           goto LABEL_34;
         gameObject = (UnityEngine_GameObject_o *)System_String__Format(
@@ -216,17 +214,17 @@ void __fastcall SupportSelectConfirmDeckMenu__Open(
       }
       if ( kind )
         goto LABEL_28;
-      v22 = this->fields.titleLabel;
+      v23 = this->fields.titleLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12378/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_TITLE"*/, 0LL);
-      if ( !v22 )
+      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12381/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_TITLE"*/, 0LL);
+      if ( !v23 )
         goto LABEL_34;
-      UILabel__set_text(v22, (System_String_o *)gameObject, 0LL);
+      UILabel__set_text(v23, (System_String_o *)gameObject, 0LL);
       messageLabel = this->fields.messageLabel;
-      v24 = &StringLiteral_12377/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_MESSAGE"*/;
+      v25 = &StringLiteral_12380/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_MESSAGE"*/;
     }
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)*v24, 0LL);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)*v25, 0LL);
     if ( !messageLabel )
       goto LABEL_34;
     UILabel__set_text(messageLabel, (System_String_o *)gameObject, 0LL);
@@ -240,12 +238,12 @@ LABEL_28:
     decideButtonLabel = this->fields.decideButtonLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12371/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_DECIDE"*/, 0LL);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12374/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_DECIDE"*/, 0LL);
     if ( decideButtonLabel )
     {
       UILabel__set_text(decideButtonLabel, (System_String_o *)gameObject, 0LL);
       cancelButtonLabel = this->fields.cancelButtonLabel;
-      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12359/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_CANCEL"*/, 0LL);
+      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12362/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_CANCEL"*/, 0LL);
       if ( cancelButtonLabel )
       {
         UILabel__set_text(cancelButtonLabel, (System_String_o *)gameObject, 0LL);
@@ -257,22 +255,22 @@ LABEL_28:
             supportData,
             0,
             1,
-            v32);
+            v33);
           this->fields.onClickButton = onClickButton;
-          sub_1B6406C(
+          sub_1B64814(
             (ServantStatusBattleListViewItem_o *)&this->fields.onClickButton,
             (int32_t)onClickButton,
-            v33,
-            v34);
-          v37 = (System_Action_o *)sub_1B64314(System_Action_TypeInfo, v35, v36);
-          System_Action___ctor(v37, (Il2CppObject *)this, Method_SupportSelectConfirmDeckMenu_OnFinishedOpen__, 0LL);
-          BaseDialog__Open((BaseDialog_o *)this, v37, 0, 0LL);
+            v34,
+            v35);
+          v36 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+          System_Action___ctor(v36, (Il2CppObject *)this, Method_SupportSelectConfirmDeckMenu_OnFinishedOpen__, 0LL);
+          BaseDialog__Open((BaseDialog_o *)this, v36, 0, 0LL);
           return;
         }
       }
     }
 LABEL_34:
-    sub_1B64324(gameObject);
+    sub_1B64ACC(gameObject, v22);
   }
 }
 
@@ -292,10 +290,10 @@ void __fastcall SupportSelectConfirmDeckMenu__add_onClickButton(
   SupportSelectConfirmDeckMenu_OnClickButtonEvent_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_49F8DEB & 1) == 0 )
+  if ( (byte_49FAEDA & 1) == 0 )
   {
-    sub_1B640C8(&SupportSelectConfirmDeckMenu_OnClickButtonEvent_TypeInfo, value);
-    byte_49F8DEB = 1;
+    sub_1B64870(&SupportSelectConfirmDeckMenu_OnClickButtonEvent_TypeInfo, value);
+    byte_49FAEDA = 1;
   }
   onClickButton = this->fields.onClickButton;
   p_onClickButton = &this->fields.onClickButton;
@@ -308,13 +306,13 @@ void __fastcall SupportSelectConfirmDeckMenu__add_onClickButton(
       if ( (SupportSelectConfirmDeckMenu_OnClickButtonEvent_c *)v8->klass != SupportSelectConfirmDeckMenu_OnClickButtonEvent_TypeInfo )
         break;
     }
-    v9 = sub_1B9F5B8(p_onClickButton, v8, v6);
+    v9 = sub_1B9FD60(p_onClickButton, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B645E4(v8);
+  sub_1B64D8C(v8);
   SupportSelectConfirmDeckMenu__remove_onClickButton(v11, v12, v13);
 }
 
@@ -323,10 +321,10 @@ System_String_o *__fastcall SupportSelectConfirmDeckMenu__get_closeBtnPath(
         SupportSelectConfirmDeckMenu_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_49F8DF1 & 1) == 0 )
+  if ( (byte_49FAEE0 & 1) == 0 )
   {
-    sub_1B640C8(&StringLiteral_4654/*"ConfirmWindow/CancelButton"*/, method);
-    byte_49F8DF1 = 1;
+    sub_1B64870(&StringLiteral_4654/*"ConfirmWindow/CancelButton"*/, method);
+    byte_49FAEE0 = 1;
   }
   return (System_String_o *)StringLiteral_4654/*"ConfirmWindow/CancelButton"*/;
 }
@@ -349,10 +347,10 @@ void __fastcall SupportSelectConfirmDeckMenu__remove_onClickButton(
   SupportSelectConfirmDeckMenu_OnClickButtonEvent_o *v14; // x3
   const MethodInfo *v15; // x4
 
-  if ( (byte_49F8DEC & 1) == 0 )
+  if ( (byte_49FAEDB & 1) == 0 )
   {
-    sub_1B640C8(&SupportSelectConfirmDeckMenu_OnClickButtonEvent_TypeInfo, value);
-    byte_49F8DEC = 1;
+    sub_1B64870(&SupportSelectConfirmDeckMenu_OnClickButtonEvent_TypeInfo, value);
+    byte_49FAEDB = 1;
   }
   onClickButton = this->fields.onClickButton;
   p_onClickButton = &this->fields.onClickButton;
@@ -365,13 +363,13 @@ void __fastcall SupportSelectConfirmDeckMenu__remove_onClickButton(
       if ( (SupportSelectConfirmDeckMenu_OnClickButtonEvent_c *)v8->klass != SupportSelectConfirmDeckMenu_OnClickButtonEvent_TypeInfo )
         break;
     }
-    v9 = sub_1B9F5B8(p_onClickButton, v8, v6);
+    v9 = sub_1B9FD60(p_onClickButton, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B645E4(v8);
+  sub_1B64D8C(v8);
   SupportSelectConfirmDeckMenu__Open(v11, v12, v13, v14, v15);
 }
 
@@ -394,15 +392,15 @@ void __fastcall SupportSelectConfirmDeckMenu_OnClickButtonEvent___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B6406C((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B64188(v6) & 1) == 0 )
+  if ( (sub_1B64930(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B64340(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B641F0(v10, 0LL);
+      v10 = sub_1B64AE8(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B64998(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -414,9 +412,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19A885C;
+  this->fields.m_target = (Il2CppObject *)sub_19A9004;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19A8814;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19A8FBC;
 }
 
 
@@ -432,14 +430,14 @@ System_IAsyncResult_o *__fastcall SupportSelectConfirmDeckMenu_OnClickButtonEven
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isDecide;
-  if ( (byte_49F8DF3 & 1) == 0 )
+  if ( (byte_49FAEE2 & 1) == 0 )
   {
-    sub_1B640C8(&bool_TypeInfo, isDecide);
-    byte_49F8DF3 = 1;
+    sub_1B64870(&bool_TypeInfo, isDecide);
+    byte_49FAEE2 = 1;
   }
   v9[1] = 0LL;
-  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_1B6407C(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
+  return (System_IAsyncResult_o *)sub_1B64824(this, v9, callback, object);
 }
 
 
@@ -448,7 +446,7 @@ void __fastcall SupportSelectConfirmDeckMenu_OnClickButtonEvent__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B64080(result, 0LL, method);
+  sub_1B64828(result, 0LL, method);
 }
 
 

@@ -1,13 +1,13 @@
 void __fastcall WarBoardSquareEntity___ctor(WarBoardSquareEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FD3F0 & 1) == 0 )
+  if ( (byte_49FF4E9 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataEntityBase_string___ctor__, method);
-    byte_49FD3F0 = 1;
+    sub_1B64870(&Method_DataEntityBase_string___ctor__, method);
+    byte_49FF4E9 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30D3D1C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D5FF8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall WarBoardSquareEntity__CreatePK(
         int32_t squareIndex,
         const MethodInfo *method)
 {
-  if ( (byte_49FD3EF & 1) == 0 )
+  if ( (byte_49FF4E8 & 1) == 0 )
   {
-    sub_1B640C8(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&squareIndex);
-    byte_49FD3EF = 1;
+    sub_1B64870(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&squareIndex);
+    byte_49FF4E8 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            warBoardId,
            squareIndex,
-           (const MethodInfo_2E37610 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2E398EC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -44,7 +44,7 @@ UnityEngine_Vector3_o __fastcall WarBoardSquareEntity__GetPosition(
         WarBoardSquareEntity_o *this,
         const MethodInfo *method)
 {
-  const MethodInfo_35D2010 *v2; // x2
+  const MethodInfo_35D42EC *v2; // x2
   __int64 v4; // x1
   __int64 v5; // x1
   float v6; // s0
@@ -56,12 +56,12 @@ UnityEngine_Vector3_o __fastcall WarBoardSquareEntity__GetPosition(
   UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_49FD3EE & 1) == 0 )
+  if ( (byte_49FF4E7 & 1) == 0 )
   {
-    sub_1B640C8(&Method_System_Nullable_Vector3___ctor__, method);
-    sub_1B640C8(&Method_System_Nullable_Vector3__get_HasValue__, v4);
-    sub_1B640C8(&Method_System_Nullable_Vector3__get_Value__, v5);
-    byte_49FD3EE = 1;
+    sub_1B64870(&Method_System_Nullable_Vector3___ctor__, method);
+    sub_1B64870(&Method_System_Nullable_Vector3__get_HasValue__, v4);
+    sub_1B64870(&Method_System_Nullable_Vector3__get_Value__, v5);
+    byte_49FF4E7 = 1;
   }
   if ( !this->fields.position.fields.hasValue )
   {
@@ -76,7 +76,7 @@ UnityEngine_Vector3_o __fastcall WarBoardSquareEntity__GetPosition(
   }
   *(_QWORD *)&v11.fields.value.fields.y = Method_System_Nullable_Vector3__get_Value__;
   *(_QWORD *)&v11.fields.hasValue = &this->fields;
-  *(UnityEngine_Vector3_o *)&v6 = System_Nullable_Vector3___get_Value(v11, (const MethodInfo_35D202C *)v2);
+  *(UnityEngine_Vector3_o *)&v6 = System_Nullable_Vector3___get_Value(v11, (const MethodInfo_35D4308 *)v2);
   result.fields.z = v8;
   result.fields.y = v7;
   result.fields.x = v6;
