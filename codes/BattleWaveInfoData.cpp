@@ -53,15 +53,15 @@ BattleWaveInfoData_SaveData_o *__fastcall BattleWaveInfoData__GetSaveData(
   BattleWaveInfoData_SaveData_o *result; // x0
   __int64 v46; // x0
 
-  if ( (byte_49FE01D & 1) == 0 )
+  if ( (byte_49FE63D & 1) == 0 )
   {
-    sub_1B64870(&int___TypeInfo, method);
-    sub_1B64870(&BattleWaveInfoData_BattleItemInfo_SaveData___TypeInfo, v3);
-    sub_1B64870(&DropInfo_SaveData___TypeInfo, v4);
-    sub_1B64870(&BattleWaveInfoData_SaveData_TypeInfo, v5);
-    byte_49FE01D = 1;
+    sub_1B64A00(&int___TypeInfo, method);
+    sub_1B64A00(&BattleWaveInfoData_BattleItemInfo_SaveData___TypeInfo, v3);
+    sub_1B64A00(&DropInfo_SaveData___TypeInfo, v4);
+    sub_1B64A00(&BattleWaveInfoData_SaveData_TypeInfo, v5);
+    byte_49FE63D = 1;
   }
-  v6 = sub_1B64ABC(BattleWaveInfoData_SaveData_TypeInfo);
+  v6 = sub_1B64C4C(BattleWaveInfoData_SaveData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v6, 0LL);
   if ( !v6 )
     goto LABEL_44;
@@ -78,10 +78,10 @@ BattleWaveInfoData_SaveData_o *__fastcall BattleWaveInfoData__GetSaveData(
       goto LABEL_44;
     max_length = equipSkillChargeNum->max_length;
   }
-  v11 = sub_1B64918(int___TypeInfo, (unsigned int)max_length);
+  v11 = sub_1B64AA8(int___TypeInfo, (unsigned int)max_length);
   *(_QWORD *)(v6 + 24) = v11;
   v12 = (__int64 *)(v6 + 24);
-  sub_1B64814((ServantStatusBattleListViewItem_o *)(v6 + 24), v11, v13, v14);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v6 + 24), v11, v13, v14);
   if ( max_length >= 1 )
   {
     v15 = this->fields.equipSkillChargeNum;
@@ -100,7 +100,7 @@ BattleWaveInfoData_SaveData_o *__fastcall BattleWaveInfoData__GetSaveData(
         goto LABEL_44;
       if ( v18 >= *(unsigned int *)(v16 + 24) )
 LABEL_45:
-        sub_1B64AD4(IsNullOrEmpty, v8);
+        sub_1B64C64(IsNullOrEmpty, v8);
       *(_DWORD *)(v20 + 4 * v18) = v19[v18];
       ++v18;
     }
@@ -118,9 +118,9 @@ LABEL_45:
       goto LABEL_44;
     v21 = dropInfos->max_length;
   }
-  v23 = sub_1B64918(DropInfo_SaveData___TypeInfo, (unsigned int)v21);
+  v23 = sub_1B64AA8(DropInfo_SaveData___TypeInfo, (unsigned int)v21);
   *(_QWORD *)(v6 + 32) = v23;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)(v6 + 32), v23, v24, v25);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v6 + 32), v23, v24, v25);
   if ( v21 >= 1 )
   {
     v26 = 0;
@@ -141,24 +141,24 @@ LABEL_45:
       v31 = IsNullOrEmpty;
       if ( IsNullOrEmpty )
       {
-        IsNullOrEmpty = sub_1B649AC(IsNullOrEmpty, *(_QWORD *)(*(_QWORD *)v28 + 64LL));
+        IsNullOrEmpty = sub_1B64B3C(IsNullOrEmpty, *(_QWORD *)(*(_QWORD *)v28 + 64LL));
         if ( !IsNullOrEmpty )
         {
 LABEL_46:
-          v46 = sub_1B64AF0(IsNullOrEmpty);
-          sub_1B64998(v46, 0LL);
+          v46 = sub_1B64C80(IsNullOrEmpty);
+          sub_1B64B28(v46, 0LL);
         }
       }
       if ( v26 >= v28[6] )
         goto LABEL_45;
       v32 = &v28[2 * v26];
       *((_QWORD *)v32 + 4) = v31;
-      sub_1B64814((ServantStatusBattleListViewItem_o *)(v32 + 8), v31, v29, v30);
+      sub_1B649A4((ServantStatusBattleListViewItem_o *)(v32 + 8), v31, v29, v30);
       if ( v21 == ++v26 )
         goto LABEL_29;
     }
 LABEL_44:
-    sub_1B64ACC(IsNullOrEmpty, v8);
+    sub_1B64C5C(IsNullOrEmpty, v8);
   }
 LABEL_29:
   IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.battleItemInfos, 0LL);
@@ -173,9 +173,9 @@ LABEL_29:
       goto LABEL_44;
     v33 = battleItemInfos->max_length;
   }
-  v35 = sub_1B64918(BattleWaveInfoData_BattleItemInfo_SaveData___TypeInfo, (unsigned int)v33);
+  v35 = sub_1B64AA8(BattleWaveInfoData_BattleItemInfo_SaveData___TypeInfo, (unsigned int)v33);
   *(_QWORD *)(v6 + 40) = v35;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)(v6 + 40), v35, v36, v37);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v6 + 40), v35, v36, v37);
   if ( v33 >= 1 )
   {
     v38 = 0;
@@ -198,7 +198,7 @@ LABEL_29:
       v43 = IsNullOrEmpty;
       if ( IsNullOrEmpty )
       {
-        IsNullOrEmpty = sub_1B649AC(IsNullOrEmpty, *(_QWORD *)(*(_QWORD *)v40 + 64LL));
+        IsNullOrEmpty = sub_1B64B3C(IsNullOrEmpty, *(_QWORD *)(*(_QWORD *)v40 + 64LL));
         if ( !IsNullOrEmpty )
           goto LABEL_46;
       }
@@ -206,7 +206,7 @@ LABEL_29:
         goto LABEL_45;
       v44 = &v40[2 * v38];
       *((_QWORD *)v44 + 4) = v43;
-      sub_1B64814((ServantStatusBattleListViewItem_o *)(v44 + 8), v43, v41, v42);
+      sub_1B649A4((ServantStatusBattleListViewItem_o *)(v44 + 8), v43, v41, v42);
     }
     while ( v33 != ++v38 );
   }
@@ -269,14 +269,14 @@ void __fastcall BattleWaveInfoData__SetDataFromSaveData(
   __int64 v49; // x0
 
   v4 = this;
-  if ( (byte_49FE01C & 1) == 0 )
+  if ( (byte_49FE63C & 1) == 0 )
   {
-    sub_1B64870(&BattleWaveInfoData_BattleItemInfo___TypeInfo, saveData);
-    sub_1B64870(&BattleWaveInfoData_BattleItemInfo_TypeInfo, v5);
-    sub_1B64870(&DropInfo___TypeInfo, v6);
-    sub_1B64870(&DropInfo_TypeInfo, v7);
-    this = (BattleWaveInfoData_o *)sub_1B64870(&int___TypeInfo, v8);
-    byte_49FE01C = 1;
+    sub_1B64A00(&BattleWaveInfoData_BattleItemInfo___TypeInfo, saveData);
+    sub_1B64A00(&BattleWaveInfoData_BattleItemInfo_TypeInfo, v5);
+    sub_1B64A00(&DropInfo___TypeInfo, v6);
+    sub_1B64A00(&DropInfo_TypeInfo, v7);
+    this = (BattleWaveInfoData_o *)sub_1B64A00(&int___TypeInfo, v8);
+    byte_49FE63C = 1;
   }
   if ( !saveData )
     goto LABEL_34;
@@ -285,10 +285,10 @@ void __fastcall BattleWaveInfoData__SetDataFromSaveData(
   if ( !equipSkillChargeNum )
     goto LABEL_34;
   v10 = *(_QWORD *)&equipSkillChargeNum->max_length;
-  v11 = sub_1B64918(int___TypeInfo, (unsigned int)v10);
+  v11 = sub_1B64AA8(int___TypeInfo, (unsigned int)v10);
   v4->fields.equipSkillChargeNum = (struct System_Int32_array *)v11;
   p_equipSkillChargeNum = &v4->fields.equipSkillChargeNum;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&v4->fields.equipSkillChargeNum, v11, v13, v14);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&v4->fields.equipSkillChargeNum, v11, v13, v14);
   if ( (int)v10 >= 1 )
   {
     v15 = saveData->fields.equipSkillChargeNum;
@@ -307,7 +307,7 @@ void __fastcall BattleWaveInfoData__SetDataFromSaveData(
         goto LABEL_34;
       if ( v18 >= v16->max_length )
 LABEL_35:
-        sub_1B64AD4(this, saveData);
+        sub_1B64C64(this, saveData);
       *(_DWORD *)(v20 + 4 * v18) = v19[v18];
       ++v18;
     }
@@ -316,12 +316,12 @@ LABEL_35:
   dropInfos = saveData->fields.dropInfos;
   if ( !dropInfos )
 LABEL_34:
-    sub_1B64ACC(this, saveData);
+    sub_1B64C5C(this, saveData);
   v22 = *(_QWORD *)&dropInfos->max_length;
-  v23 = sub_1B64918(DropInfo___TypeInfo, (unsigned int)v22);
+  v23 = sub_1B64AA8(DropInfo___TypeInfo, (unsigned int)v22);
   v4->fields.dropInfos = (struct DropInfo_array *)v23;
   p_dropInfos = (unsigned int **)&v4->fields.dropInfos;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&v4->fields.dropInfos, v23, v25, v26);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&v4->fields.dropInfos, v23, v25, v26);
   if ( (int)v22 >= 1 )
   {
     v27 = 0LL;
@@ -329,7 +329,7 @@ LABEL_34:
     v29 = 8LL;
     do
     {
-      v30 = (DropInfo_o *)sub_1B64ABC(DropInfo_TypeInfo);
+      v30 = (DropInfo_o *)sub_1B64C4C(DropInfo_TypeInfo);
       DropInfo___ctor(v30, 0LL);
       v31 = saveData->fields.dropInfos;
       if ( !v31 )
@@ -342,17 +342,17 @@ LABEL_34:
       v32 = *p_dropInfos;
       if ( !*p_dropInfos )
         goto LABEL_34;
-      this = (BattleWaveInfoData_o *)sub_1B649AC(v30, *(_QWORD *)(*(_QWORD *)v32 + 64LL));
+      this = (BattleWaveInfoData_o *)sub_1B64B3C(v30, *(_QWORD *)(*(_QWORD *)v32 + 64LL));
       if ( !this )
       {
 LABEL_36:
-        v49 = sub_1B64AF0(this);
-        sub_1B64998(v49, 0LL);
+        v49 = sub_1B64C80(this);
+        sub_1B64B28(v49, 0LL);
       }
       if ( v27 >= v32[6] )
         goto LABEL_35;
       *(_QWORD *)&v32[v29] = v30;
-      sub_1B64814((ServantStatusBattleListViewItem_o *)&v32[v29], (int32_t)v30, v33, v34);
+      sub_1B649A4((ServantStatusBattleListViewItem_o *)&v32[v29], (int32_t)v30, v33, v34);
       ++v27;
       v29 += 2LL;
     }
@@ -362,16 +362,16 @@ LABEL_36:
   if ( !battleItemInfos )
     goto LABEL_34;
   v36 = battleItemInfos->max_length;
-  v37 = sub_1B64918(BattleWaveInfoData_BattleItemInfo___TypeInfo, (unsigned int)v36);
+  v37 = sub_1B64AA8(BattleWaveInfoData_BattleItemInfo___TypeInfo, (unsigned int)v36);
   v4->fields.battleItemInfos = (struct BattleWaveInfoData_BattleItemInfo_array *)v37;
   p_battleItemInfos = &v4->fields.battleItemInfos;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&v4->fields.battleItemInfos, v37, v39, v40);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&v4->fields.battleItemInfos, v37, v39, v40);
   if ( v36 >= 1 )
   {
     v41 = 0;
     do
     {
-      v42 = (Il2CppObject *)sub_1B64ABC(BattleWaveInfoData_BattleItemInfo_TypeInfo);
+      v42 = (Il2CppObject *)sub_1B64C4C(BattleWaveInfoData_BattleItemInfo_TypeInfo);
       System_Object___ctor(v42, 0LL);
       v43 = saveData->fields.battleItemInfos;
       if ( !v43 )
@@ -387,14 +387,14 @@ LABEL_36:
       v45 = *p_battleItemInfos;
       if ( !*p_battleItemInfos )
         goto LABEL_34;
-      this = (BattleWaveInfoData_o *)sub_1B649AC(v42, v45->obj.klass->_1.element_class);
+      this = (BattleWaveInfoData_o *)sub_1B64B3C(v42, v45->obj.klass->_1.element_class);
       if ( !this )
         goto LABEL_36;
       if ( v41 >= v45->max_length )
         goto LABEL_35;
       v48 = &v45->obj.klass + (int)v41;
       v48[4] = (Il2CppClass *)v42;
-      sub_1B64814((ServantStatusBattleListViewItem_o *)(v48 + 4), (int32_t)v42, v46, v47);
+      sub_1B649A4((ServantStatusBattleListViewItem_o *)(v48 + 4), (int32_t)v42, v46, v47);
     }
     while ( v36 != ++v41 );
   }
@@ -447,18 +447,18 @@ void __fastcall BattleWaveInfoData__SetWaveInfoData(
   __int64 v41; // x0
 
   v4 = this;
-  if ( (byte_49FE01E & 1) == 0 )
+  if ( (byte_49FE63E & 1) == 0 )
   {
-    sub_1B64870(&BattleWaveInfoData_BattleItemInfo___TypeInfo, battleData);
-    sub_1B64870(&BattleWaveInfoData_BattleItemInfo_TypeInfo, v5);
-    sub_1B64870(&DropInfo___TypeInfo, v6);
-    sub_1B64870(&int___TypeInfo, v7);
-    sub_1B64870(&Method_System_Collections_Generic_List_BattleDropItem__get_Count__, v8);
-    sub_1B64870(&Method_System_Collections_Generic_List_BattleSkillInfoData__get_Count__, v9);
-    sub_1B64870(&Method_System_Collections_Generic_List_BattleDropItem__get_Item__, v10);
-    sub_1B64870(&Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__, v11);
-    this = (BattleWaveInfoData_o *)sub_1B64870(&Method_SingletonTemplate_BattleItemData__get_Instance__, v12);
-    byte_49FE01E = 1;
+    sub_1B64A00(&BattleWaveInfoData_BattleItemInfo___TypeInfo, battleData);
+    sub_1B64A00(&BattleWaveInfoData_BattleItemInfo_TypeInfo, v5);
+    sub_1B64A00(&DropInfo___TypeInfo, v6);
+    sub_1B64A00(&int___TypeInfo, v7);
+    sub_1B64A00(&Method_System_Collections_Generic_List_BattleDropItem__get_Count__, v8);
+    sub_1B64A00(&Method_System_Collections_Generic_List_BattleSkillInfoData__get_Count__, v9);
+    sub_1B64A00(&Method_System_Collections_Generic_List_BattleDropItem__get_Item__, v10);
+    sub_1B64A00(&Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__, v11);
+    this = (BattleWaveInfoData_o *)sub_1B64A00(&Method_SingletonTemplate_BattleItemData__get_Instance__, v12);
+    byte_49FE63E = 1;
   }
   if ( !battleData )
     goto LABEL_31;
@@ -469,9 +469,9 @@ void __fastcall BattleWaveInfoData__SetWaveInfoData(
   if ( !masterSkillInfo )
     goto LABEL_31;
   size = (unsigned int)masterSkillInfo->fields._size;
-  v15 = sub_1B64918(int___TypeInfo, (unsigned int)size);
+  v15 = sub_1B64AA8(int___TypeInfo, (unsigned int)size);
   v4->fields.equipSkillChargeNum = (struct System_Int32_array *)v15;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&v4->fields.equipSkillChargeNum, v15, v16, v17);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&v4->fields.equipSkillChargeNum, v15, v16, v17);
   if ( (int)size >= 1 )
   {
     v18 = 0LL;
@@ -484,7 +484,7 @@ void __fastcall BattleWaveInfoData__SetWaveInfoData(
       this = (BattleWaveInfoData_o *)System_Collections_Generic_List_object___get_Item(
                                        (System_Collections_Generic_List_object__o *)this,
                                        v18,
-                                       (const MethodInfo_34AF6E0 *)Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__);
+                                       (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__);
       if ( !this || !equipSkillChargeNum )
         break;
       if ( v18 >= equipSkillChargeNum->max_length )
@@ -495,7 +495,7 @@ void __fastcall BattleWaveInfoData__SetWaveInfoData(
         goto LABEL_12;
     }
 LABEL_31:
-    sub_1B64ACC(this, battleData);
+    sub_1B64C5C(this, battleData);
   }
 LABEL_12:
   this = (BattleWaveInfoData_o *)BasicHelper__IsNullOrEmpty(
@@ -507,9 +507,9 @@ LABEL_12:
     if ( !droplist )
       goto LABEL_31;
     v22 = (unsigned int)droplist->fields._size;
-    v23 = sub_1B64918(DropInfo___TypeInfo, (unsigned int)v22);
+    v23 = sub_1B64AA8(DropInfo___TypeInfo, (unsigned int)v22);
     v4->fields.dropInfos = (struct DropInfo_array *)v23;
-    sub_1B64814((ServantStatusBattleListViewItem_o *)&v4->fields.dropInfos, v23, v24, v25);
+    sub_1B649A4((ServantStatusBattleListViewItem_o *)&v4->fields.dropInfos, v23, v24, v25);
     if ( (int)v22 >= 1 )
     {
       v26 = 0LL;
@@ -523,7 +523,7 @@ LABEL_12:
         this = (BattleWaveInfoData_o *)System_Collections_Generic_List_object___get_Item(
                                          (System_Collections_Generic_List_object__o *)this,
                                          v26,
-                                         (const MethodInfo_34AF6E0 *)Method_System_Collections_Generic_List_BattleDropItem__get_Item__);
+                                         (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_BattleDropItem__get_Item__);
         if ( !this )
           goto LABEL_31;
         this = (BattleWaveInfoData_o *)BattleDropItem__GetDropInfo((BattleDropItem_o *)this, 0LL);
@@ -532,50 +532,50 @@ LABEL_12:
         v31 = this;
         if ( this )
         {
-          this = (BattleWaveInfoData_o *)sub_1B649AC(this, *(_QWORD *)(*(_QWORD *)dropInfos + 64LL));
+          this = (BattleWaveInfoData_o *)sub_1B64B3C(this, *(_QWORD *)(*(_QWORD *)dropInfos + 64LL));
           if ( !this )
             goto LABEL_33;
         }
         if ( v26 >= dropInfos[6] )
           goto LABEL_32;
         *(_QWORD *)&dropInfos[v27] = v31;
-        sub_1B64814((ServantStatusBattleListViewItem_o *)&dropInfos[v27], (int32_t)v31, v29, v30);
+        sub_1B649A4((ServantStatusBattleListViewItem_o *)&dropInfos[v27], (int32_t)v31, v29, v30);
         ++v26;
         v27 += 2LL;
       }
       while ( v22 != v26 );
     }
   }
-  this = (BattleWaveInfoData_o *)SingletonTemplate_object___get_Instance((const MethodInfo_36EE738 *)Method_SingletonTemplate_BattleItemData__get_Instance__);
+  this = (BattleWaveInfoData_o *)SingletonTemplate_object___get_Instance((const MethodInfo_36EED50 *)Method_SingletonTemplate_BattleItemData__get_Instance__);
   if ( !this )
     goto LABEL_31;
   wave = this->fields.wave;
   v33 = this;
-  v34 = sub_1B64918(BattleWaveInfoData_BattleItemInfo___TypeInfo, wave > 0);
+  v34 = sub_1B64AA8(BattleWaveInfoData_BattleItemInfo___TypeInfo, wave > 0);
   v4->fields.battleItemInfos = (struct BattleWaveInfoData_BattleItemInfo_array *)v34;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&v4->fields.battleItemInfos, v34, v35, v36);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&v4->fields.battleItemInfos, v34, v35, v36);
   if ( wave >= 1 )
   {
     battleItemInfos = v4->fields.battleItemInfos;
-    v38 = (Il2CppObject *)sub_1B64ABC(BattleWaveInfoData_BattleItemInfo_TypeInfo);
+    v38 = (Il2CppObject *)sub_1B64C4C(BattleWaveInfoData_BattleItemInfo_TypeInfo);
     System_Object___ctor(v38, 0LL);
     if ( !v38 )
       goto LABEL_31;
     v38[1].klass = *(Il2CppClass **)&v33->fields.wave;
     if ( !battleItemInfos )
       goto LABEL_31;
-    this = (BattleWaveInfoData_o *)sub_1B649AC(v38, battleItemInfos->obj.klass->_1.element_class);
+    this = (BattleWaveInfoData_o *)sub_1B64B3C(v38, battleItemInfos->obj.klass->_1.element_class);
     if ( !this )
     {
 LABEL_33:
-      v41 = sub_1B64AF0(this);
-      sub_1B64998(v41, 0LL);
+      v41 = sub_1B64C80(this);
+      sub_1B64B28(v41, 0LL);
     }
     if ( !battleItemInfos->max_length )
 LABEL_32:
-      sub_1B64AD4(this, battleData);
+      sub_1B64C64(this, battleData);
     battleItemInfos->m_Items[0] = (BattleWaveInfoData_BattleItemInfo_o *)v38;
-    sub_1B64814((ServantStatusBattleListViewItem_o *)battleItemInfos->m_Items, (int32_t)v38, v39, v40);
+    sub_1B649A4((ServantStatusBattleListViewItem_o *)battleItemInfos->m_Items, (int32_t)v38, v39, v40);
   }
   v4->fields.star = battleData->fields.criticalstars;
 }
@@ -598,15 +598,15 @@ BattleWaveInfoData_BattleItemInfo_SaveData_o *__fastcall BattleWaveInfoData_Batt
   __int64 v5; // x1
   BattleWaveInfoData_BattleItemInfo_SaveData_o *result; // x0
 
-  if ( (byte_49FE01F & 1) == 0 )
+  if ( (byte_49FE63F & 1) == 0 )
   {
-    sub_1B64870(&BattleWaveInfoData_BattleItemInfo_SaveData_TypeInfo, method);
-    byte_49FE01F = 1;
+    sub_1B64A00(&BattleWaveInfoData_BattleItemInfo_SaveData_TypeInfo, method);
+    byte_49FE63F = 1;
   }
-  v3 = sub_1B64ABC(BattleWaveInfoData_BattleItemInfo_SaveData_TypeInfo);
+  v3 = sub_1B64C4C(BattleWaveInfoData_BattleItemInfo_SaveData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   if ( !v3 )
-    sub_1B64ACC(v4, v5);
+    sub_1B64C5C(v4, v5);
   result = (BattleWaveInfoData_BattleItemInfo_SaveData_o *)v3;
   *(BattleWaveInfoData_BattleItemInfo_Fields *)(v3 + 16) = this->fields;
   return result;
@@ -619,7 +619,7 @@ void __fastcall BattleWaveInfoData_BattleItemInfo__SetDataFromSaveData(
         const MethodInfo *method)
 {
   if ( !saveData )
-    sub_1B64ACC(this, 0LL);
+    sub_1B64C5C(this, 0LL);
   this->fields = (BattleWaveInfoData_BattleItemInfo_Fields)saveData->fields;
 }
 

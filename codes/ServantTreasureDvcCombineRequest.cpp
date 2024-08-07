@@ -15,22 +15,22 @@ void __fastcall ServantTreasureDvcCombineRequest__beginRequest(
   const MethodInfo *v16; // x3
   const MethodInfo *v17; // x1
 
-  if ( (byte_49FFE3A & 1) == 0 )
+  if ( (byte_4A0045B & 1) == 0 )
   {
-    sub_1B64870(&StringLiteral_17018/*"baseUserSvtId"*/, baseUsrSvtId);
-    sub_1B64870(&StringLiteral_23962/*"treasureDeviceId"*/, v11);
-    sub_1B64870(&StringLiteral_22093/*"num"*/, v12);
-    sub_1B64870(&StringLiteral_21256/*"materialUserSvtIds"*/, v13);
-    byte_49FFE3A = 1;
+    sub_1B64A00(&StringLiteral_17019/*"baseUserSvtId"*/, baseUsrSvtId);
+    sub_1B64A00(&StringLiteral_23962/*"treasureDeviceId"*/, v11);
+    sub_1B64A00(&StringLiteral_22093/*"num"*/, v12);
+    sub_1B64A00(&StringLiteral_21256/*"materialUserSvtIds"*/, v13);
+    byte_4A0045B = 1;
   }
-  RequestBase__addField_40854504(
+  RequestBase__addField_40855016(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_17018/*"baseUserSvtId"*/,
+    (System_String_o *)StringLiteral_17019/*"baseUserSvtId"*/,
     baseUsrSvtId,
     *(const MethodInfo **)&selectTdId);
   RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22093/*"num"*/, selectTdIndex, v14);
   RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23962/*"treasureDeviceId"*/, selectTdId, v15);
-  RequestBase__addField_40856068((RequestBase_o *)this, (System_String_o *)StringLiteral_21256/*"materialUserSvtIds"*/, materialSvtIds, v16);
+  RequestBase__addField_40856580((RequestBase_o *)this, (System_String_o *)StringLiteral_21256/*"materialUserSvtIds"*/, materialSvtIds, v16);
   RequestBase__beginRequest((RequestBase_o *)this, v17);
 }
 
@@ -42,16 +42,16 @@ System_String_o *__fastcall ServantTreasureDvcCombineRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_49FFE39 & 1) == 0 )
+  if ( (byte_4A0045A & 1) == 0 )
   {
-    sub_1B64870(&NetworkManager_TypeInfo, method);
-    sub_1B64870(&StringLiteral_17683/*"card/combineTd"*/, v2);
-    byte_49FFE39 = 1;
+    sub_1B64A00(&NetworkManager_TypeInfo, method);
+    sub_1B64A00(&StringLiteral_17684/*"card/combineTd"*/, v2);
+    byte_4A0045A = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61383576(BaseUrl, (System_String_o *)StringLiteral_17683/*"card/combineTd"*/, 0LL);
+  return System_String__Concat_61385136(BaseUrl, (System_String_o *)StringLiteral_17684/*"card/combineTd"*/, 0LL);
 }
 
 
@@ -70,12 +70,12 @@ void __fastcall ServantTreasureDvcCombineRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v13; // x8
 
-  if ( (byte_49FFE3B & 1) == 0 )
+  if ( (byte_4A0045C & 1) == 0 )
   {
-    sub_1B64870(&JsonManager_TypeInfo, responseList);
-    sub_1B64870(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B64870(&StringLiteral_21971/*"ng"*/, v6);
-    byte_49FFE3B = 1;
+    sub_1B64A00(&JsonManager_TypeInfo, responseList);
+    sub_1B64A00(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B64A00(&StringLiteral_21971/*"ng"*/, v6);
+    byte_4A0045C = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);

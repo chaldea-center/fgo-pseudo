@@ -1,13 +1,13 @@
 void __fastcall EventTradePickupEntity___ctor(EventTradePickupEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FE6AD & 1) == 0 )
+  if ( (byte_49FECCD & 1) == 0 )
   {
-    sub_1B64870(&Method_DataEntityBase_string___ctor__, method);
-    byte_49FE6AD = 1;
+    sub_1B64A00(&Method_DataEntityBase_string___ctor__, method);
+    byte_49FECCD = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30D5FF8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D6610 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -16,15 +16,15 @@ System_String_o *__fastcall EventTradePickupEntity__CreatePK(
         int64_t startedAt,
         const MethodInfo *method)
 {
-  if ( (byte_49FE6AC & 1) == 0 )
+  if ( (byte_49FECCC & 1) == 0 )
   {
-    sub_1B64870(&Method_DataEntityBase_CreateMultiplePK_int__long___, startedAt);
-    byte_49FE6AC = 1;
+    sub_1B64A00(&Method_DataEntityBase_CreateMultiplePK_int__long___, startedAt);
+    byte_49FECCC = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__long_(
            tradeGoodsId,
            startedAt,
-           (const MethodInfo_2E39970 *)Method_DataEntityBase_CreateMultiplePK_int__long___);
+           (const MethodInfo_2E39F88 *)Method_DataEntityBase_CreateMultiplePK_int__long___);
 }
 
 

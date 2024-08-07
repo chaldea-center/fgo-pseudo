@@ -1,9 +1,9 @@
 void __fastcall RecoverDlgComponent___ctor(RecoverDlgComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A02029 & 1) == 0 )
+  if ( (byte_4A0264A & 1) == 0 )
   {
-    sub_1B64870(&BaseDialog_TypeInfo, method);
-    byte_4A02029 = 1;
+    sub_1B64A00(&BaseDialog_TypeInfo, method);
+    byte_4A0264A = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -22,7 +22,7 @@ void __fastcall RecoverDlgComponent__Callback(RecoverDlgComponent_o *this, int32
   p_callbackFunc = (ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc;
   v5 = callbackFunc;
   p_callbackFunc->klass = 0LL;
-  sub_1B64814(p_callbackFunc, 0, (int32_t)method, v3);
+  sub_1B649A4(p_callbackFunc, 0, (int32_t)method, v3);
   if ( callbackFunc )
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))v5->fields.m_target)(
       v5->fields.original_method_info,
@@ -37,19 +37,19 @@ void __fastcall RecoverDlgComponent__Close(RecoverDlgComponent_o *this, const Me
   System_Action_o *v4; // x20
   const MethodInfo *v5; // x2
 
-  if ( (byte_4A02023 & 1) == 0 )
+  if ( (byte_4A02644 & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, method);
-    sub_1B64870(&Method_RecoverDlgComponent_EndClose__, v3);
-    byte_4A02023 = 1;
+    sub_1B64A00(&System_Action_TypeInfo, method);
+    sub_1B64A00(&Method_RecoverDlgComponent_EndClose__, v3);
+    byte_4A02644 = 1;
   }
-  v4 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_RecoverDlgComponent_EndClose__, 0LL);
-  RecoverDlgComponent__Close_45015928(this, v4, v5);
+  RecoverDlgComponent__Close_45017488(this, v4, v5);
 }
 
 
-void __fastcall RecoverDlgComponent__Close_45015928(
+void __fastcall RecoverDlgComponent__Close_45017488(
         RecoverDlgComponent_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -67,22 +67,22 @@ void __fastcall RecoverDlgComponent__Close_45015928(
   UnityEngine_Object_o *tradeApButton; // x21
   System_Action_o *v16; // x21
 
-  if ( (byte_4A02024 & 1) == 0 )
+  if ( (byte_4A02645 & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, callback);
-    sub_1B64870(&UnityEngine_Object_TypeInfo, v5);
-    sub_1B64870(&Method_RecoverDlgComponent___c__DisplayClass21_0__Close_b__0__, v6);
-    sub_1B64870(&RecoverDlgComponent___c__DisplayClass21_0_TypeInfo, v7);
-    byte_4A02024 = 1;
+    sub_1B64A00(&System_Action_TypeInfo, callback);
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, v5);
+    sub_1B64A00(&Method_RecoverDlgComponent___c__DisplayClass21_0__Close_b__0__, v6);
+    sub_1B64A00(&RecoverDlgComponent___c__DisplayClass21_0_TypeInfo, v7);
+    byte_4A02645 = 1;
   }
-  v8 = sub_1B64ABC(RecoverDlgComponent___c__DisplayClass21_0_TypeInfo);
+  v8 = sub_1B64C4C(RecoverDlgComponent___c__DisplayClass21_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
     goto LABEL_10;
   *(_QWORD *)(v8 + 16) = this;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)(v8 + 16), (int32_t)this, v11, v12);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v8 + 16), (int32_t)this, v11, v12);
   *(_QWORD *)(v8 + 24) = callback;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)(v8 + 24), (int32_t)callback, v13, v14);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v8 + 24), (int32_t)callback, v13, v14);
   this->fields.isClosed = 1;
   tradeApButton = (UnityEngine_Object_o *)this->fields.tradeApButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -96,10 +96,10 @@ void __fastcall RecoverDlgComponent__Close_45015928(
       goto LABEL_9;
     }
 LABEL_10:
-    sub_1B64ACC(v9, v10);
+    sub_1B64C5C(v9, v10);
   }
 LABEL_9:
-  v16 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  v16 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
   System_Action___ctor(v16, (Il2CppObject *)v8, Method_RecoverDlgComponent___c__DisplayClass21_0__Close_b__0__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v16, 0LL);
 }
@@ -113,7 +113,7 @@ void __fastcall RecoverDlgComponent__EndClose(RecoverDlgComponent_o *this, const
   RecoverDlgComponent__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B64ACC(0LL, v4);
+    sub_1B64C5C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
 }
 
@@ -140,7 +140,7 @@ void __fastcall RecoverDlgComponent__Init(RecoverDlgComponent_o *this, const Met
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B64ACC(0LL, v4);
+    sub_1B64C5C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -152,17 +152,17 @@ void __fastcall RecoverDlgComponent__OnClickClose(RecoverDlgComponent_o *this, c
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4A02027 & 1) == 0 )
+  if ( (byte_4A02648 & 1) == 0 )
   {
-    sub_1B64870(&Method_RecoverDlgComponent_OnClickClose__, method);
-    byte_4A02027 = 1;
+    sub_1B64A00(&Method_RecoverDlgComponent_OnClickClose__, method);
+    byte_4A02648 = 1;
   }
   if ( !this->fields.isClosed )
   {
     v3 = Method_RecoverDlgComponent_OnClickClose__;
     if ( (*((_BYTE *)Method_RecoverDlgComponent_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B64888(Method_RecoverDlgComponent_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64A18(Method_RecoverDlgComponent_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B649E4(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     RecoverDlgComponent__Callback(this, 0, v5);
   }
@@ -223,38 +223,38 @@ void __fastcall RecoverDlgComponent__OpenApRecvItemDlg(
   System_Action_o *v51; // x20
   bool v52; // [xsp+8h] [xbp-68h]
 
-  if ( (byte_4A02020 & 1) == 0 )
+  if ( (byte_4A02641 & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, *(_QWORD *)&needAp);
-    sub_1B64870(&RecoverItemComponent_CallbackFunc_TypeInfo, v8);
-    sub_1B64870(&Method_DataManager_GetMasterData_RecoverMaster___, v9);
-    sub_1B64870(&Method_UnityEngine_GameObject_GetComponent_RecoverItemComponent___, v10);
-    sub_1B64870(&Method_System_Collections_Generic_List_RecoverItemComponent__Add__, v11);
-    sub_1B64870(&Method_System_Collections_Generic_List_RecoverEntity__ToArray__, v12);
-    sub_1B64870(&Method_System_Collections_Generic_List_RecoverItemComponent___ctor__, v13);
-    sub_1B64870(&System_Collections_Generic_List_RecoverItemComponent__TypeInfo, v14);
-    sub_1B64870(&LocalizationManager_TypeInfo, v15);
-    sub_1B64870(&UnityEngine_Object_TypeInfo, v16);
-    sub_1B64870(&Method_RecoverDlgComponent_EndOpen__, v17);
-    sub_1B64870(&Method_RecoverDlgComponent_requestRecover__, v18);
-    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v19);
-    sub_1B64870(&StringLiteral_2118/*"APRECV_TITILE_DETAIL_TXT"*/, v20);
-    sub_1B64870(&StringLiteral_2119/*"APRECV_TITILE_TXT"*/, v21);
-    byte_4A02020 = 1;
+    sub_1B64A00(&System_Action_TypeInfo, *(_QWORD *)&needAp);
+    sub_1B64A00(&RecoverItemComponent_CallbackFunc_TypeInfo, v8);
+    sub_1B64A00(&Method_DataManager_GetMasterData_RecoverMaster___, v9);
+    sub_1B64A00(&Method_UnityEngine_GameObject_GetComponent_RecoverItemComponent___, v10);
+    sub_1B64A00(&Method_System_Collections_Generic_List_RecoverItemComponent__Add__, v11);
+    sub_1B64A00(&Method_System_Collections_Generic_List_RecoverEntity__ToArray__, v12);
+    sub_1B64A00(&Method_System_Collections_Generic_List_RecoverItemComponent___ctor__, v13);
+    sub_1B64A00(&System_Collections_Generic_List_RecoverItemComponent__TypeInfo, v14);
+    sub_1B64A00(&LocalizationManager_TypeInfo, v15);
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, v16);
+    sub_1B64A00(&Method_RecoverDlgComponent_EndOpen__, v17);
+    sub_1B64A00(&Method_RecoverDlgComponent_requestRecover__, v18);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v19);
+    sub_1B64A00(&StringLiteral_2119/*"APRECV_TITILE_DETAIL_TXT"*/, v20);
+    sub_1B64A00(&StringLiteral_2120/*"APRECV_TITILE_TXT"*/, v21);
+    byte_4A02641 = 1;
   }
   RecoverDlgComponent__clearInfoGrid(this, *(const MethodInfo **)&needAp);
   this->fields.callbackFunc = callback;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v22, v23);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v22, v23);
   titleLabel = this->fields.titleLabel;
   this->fields.needAp = needAp;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_2119/*"APRECV_TITILE_TXT"*/, 0LL);
+  gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_2120/*"APRECV_TITILE_TXT"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_39;
   UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0LL);
   titleDetailLabel = this->fields.titleDetailLabel;
-  gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_2118/*"APRECV_TITILE_DETAIL_TXT"*/, 0LL);
+  gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_2119/*"APRECV_TITILE_DETAIL_TXT"*/, 0LL);
   if ( !titleDetailLabel )
     goto LABEL_39;
   UILabel__set_text(titleDetailLabel, (System_String_o *)gameObject, 0LL);
@@ -283,25 +283,25 @@ void __fastcall RecoverDlgComponent__OpenApRecvItemDlg(
       goto LABEL_39;
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)gameObject, 1, 0LL);
   }
-  v30 = (System_Collections_Generic_List_object__o *)sub_1B64ABC(System_Collections_Generic_List_RecoverItemComponent__TypeInfo);
+  v30 = (System_Collections_Generic_List_object__o *)sub_1B64C4C(System_Collections_Generic_List_RecoverItemComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v30,
-    (const MethodInfo_34AF17C *)Method_System_Collections_Generic_List_RecoverItemComponent___ctor__);
+    (const MethodInfo_34AF794 *)Method_System_Collections_Generic_List_RecoverItemComponent___ctor__);
   this->fields.recoverItemList = (struct System_Collections_Generic_List_RecoverItemComponent__o *)v30;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.recoverItemList, (int32_t)v30, v31, v32);
-  gameObject = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.recoverItemList, (int32_t)v30, v31, v32);
+  gameObject = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !gameObject
     || (gameObject = (__int64)DataManager__GetMasterData_object_(
                                 (DataManager_o *)gameObject,
-                                (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_RecoverMaster___)) == 0
+                                (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_RecoverMaster___)) == 0
     || (v52 = canMaskTouchClose,
         (gameObject = (__int64)RecoverMaster__getRecvEntityList((RecoverMaster_o *)gameObject, 1, 0LL)) == 0)
     || (gameObject = (__int64)System_Collections_Generic_List_object___ToArray(
                                 (System_Collections_Generic_List_object__o *)gameObject,
-                                (const MethodInfo_34B15A8 *)Method_System_Collections_Generic_List_RecoverEntity__ToArray__)) == 0 )
+                                (const MethodInfo_34B1BC0 *)Method_System_Collections_Generic_List_RecoverEntity__ToArray__)) == 0 )
   {
 LABEL_39:
-    sub_1B64ACC(gameObject, v26);
+    sub_1B64C5C(gameObject, v26);
   }
   v33 = *(_QWORD *)(gameObject + 24);
   v34 = gameObject;
@@ -311,7 +311,7 @@ LABEL_39:
     do
     {
       if ( v35 >= (unsigned int)v33 )
-        sub_1B64AD4(gameObject, v26);
+        sub_1B64C64(gameObject, v26);
       gameObject = (__int64)this->fields.itemListInfoGrid;
       if ( !gameObject )
         goto LABEL_39;
@@ -329,18 +329,18 @@ LABEL_39:
       v39 = (UnityEngine_GameObject_o *)gameObject;
       gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0LL);
       v40 = (UnityEngine_Transform_o *)gameObject;
-      if ( !byte_49F9201 )
+      if ( !byte_49F9821 )
       {
-        gameObject = sub_1B64870(&UnityEngine_Vector3_TypeInfo, v26);
-        byte_49F9201 = 1;
+        gameObject = sub_1B64A00(&UnityEngine_Vector3_TypeInfo, v26);
+        byte_49F9821 = 1;
       }
       if ( !v40 )
         goto LABEL_39;
       UnityEngine_Transform__set_localPosition(v40, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            v39,
-                           (const MethodInfo_2E8A1B4 *)Method_UnityEngine_GameObject_GetComponent_RecoverItemComponent___);
-      v42 = (RecoverItemComponent_CallbackFunc_o *)sub_1B64ABC(RecoverItemComponent_CallbackFunc_TypeInfo);
+                           (const MethodInfo_2E8A7CC *)Method_UnityEngine_GameObject_GetComponent_RecoverItemComponent___);
+      v42 = (RecoverItemComponent_CallbackFunc_o *)sub_1B64C4C(RecoverItemComponent_CallbackFunc_TypeInfo);
       RecoverItemComponent_CallbackFunc___ctor(
         v42,
         (Il2CppObject *)this,
@@ -363,14 +363,14 @@ LABEL_39:
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)gameObject,
           Component_object,
-          *(const MethodInfo_34AF9B0 **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
+          *(const MethodInfo_34AFFC8 **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
       }
       else
       {
         v50 = v47 + 8 * v49;
         *(_DWORD *)(gameObject + 24) = v49 + 1;
         *(_QWORD *)(v50 + 32) = Component_object;
-        sub_1B64814((ServantStatusBattleListViewItem_o *)(v50 + 32), (int32_t)Component_object, v45, v46);
+        sub_1B649A4((ServantStatusBattleListViewItem_o *)(v50 + 32), (int32_t)Component_object, v45, v46);
       }
       UnityEngine_GameObject__SetActive(v39, 1, 0LL);
       LODWORD(v33) = *(_DWORD *)(v34 + 24);
@@ -382,7 +382,7 @@ LABEL_39:
     goto LABEL_39;
   UIGrid__set_repositionNow((UIGrid_o *)gameObject, 1, 0LL);
   BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, v52, 0LL);
-  v51 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  v51 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
   System_Action___ctor(v51, (Il2CppObject *)this, Method_RecoverDlgComponent_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v51, 0, 0LL);
 }
@@ -427,33 +427,33 @@ void __fastcall RecoverDlgComponent__OpenRpRecvItemDlg(
   System_Action_o *v36; // x20
   bool v37; // [xsp+8h] [xbp-68h]
 
-  if ( (byte_4A02022 & 1) == 0 )
+  if ( (byte_4A02643 & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, *(_QWORD *)&needRp);
-    sub_1B64870(&RecoverItemComponent_CallbackFunc_TypeInfo, v8);
-    sub_1B64870(&Method_DataManager_GetMasterData_RecoverMaster___, v9);
-    sub_1B64870(&Method_UnityEngine_GameObject_GetComponent_RecoverItemComponent___, v10);
-    sub_1B64870(&Method_System_Collections_Generic_List_RecoverEntity__ToArray__, v11);
-    sub_1B64870(&LocalizationManager_TypeInfo, v12);
-    sub_1B64870(&Method_RecoverDlgComponent_EndOpen__, v13);
-    sub_1B64870(&Method_RecoverDlgComponent_requestRecover__, v14);
-    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    sub_1B64870(&StringLiteral_11077/*"RPRECV_TITILE_TXT"*/, v16);
-    sub_1B64870(&StringLiteral_11076/*"RPRECV_TITILE_DETAIL_TXT"*/, v17);
-    byte_4A02022 = 1;
+    sub_1B64A00(&System_Action_TypeInfo, *(_QWORD *)&needRp);
+    sub_1B64A00(&RecoverItemComponent_CallbackFunc_TypeInfo, v8);
+    sub_1B64A00(&Method_DataManager_GetMasterData_RecoverMaster___, v9);
+    sub_1B64A00(&Method_UnityEngine_GameObject_GetComponent_RecoverItemComponent___, v10);
+    sub_1B64A00(&Method_System_Collections_Generic_List_RecoverEntity__ToArray__, v11);
+    sub_1B64A00(&LocalizationManager_TypeInfo, v12);
+    sub_1B64A00(&Method_RecoverDlgComponent_EndOpen__, v13);
+    sub_1B64A00(&Method_RecoverDlgComponent_requestRecover__, v14);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
+    sub_1B64A00(&StringLiteral_11078/*"RPRECV_TITILE_TXT"*/, v16);
+    sub_1B64A00(&StringLiteral_11077/*"RPRECV_TITILE_DETAIL_TXT"*/, v17);
+    byte_4A02643 = 1;
   }
   RecoverDlgComponent__clearInfoGrid(this, *(const MethodInfo **)&needRp);
   this->fields.callbackFunc = callback;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v18, v19);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v18, v19);
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_11077/*"RPRECV_TITILE_TXT"*/, 0LL);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_11078/*"RPRECV_TITILE_TXT"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_24;
   UILabel__set_text(titleLabel, gameObject, 0LL);
   titleDetailLabel = this->fields.titleDetailLabel;
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_11076/*"RPRECV_TITILE_DETAIL_TXT"*/, 0LL);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_11077/*"RPRECV_TITILE_DETAIL_TXT"*/, 0LL);
   if ( !titleDetailLabel )
     goto LABEL_24;
   UILabel__set_text(titleDetailLabel, gameObject, 0LL);
@@ -462,12 +462,12 @@ void __fastcall RecoverDlgComponent__OpenRpRecvItemDlg(
     goto LABEL_24;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
   this->fields.isClosed = 0;
-  gameObject = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  gameObject = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !gameObject )
     goto LABEL_24;
   gameObject = (System_String_o *)DataManager__GetMasterData_object_(
                                     (DataManager_o *)gameObject,
-                                    (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_RecoverMaster___);
+                                    (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_RecoverMaster___);
   if ( !gameObject )
     goto LABEL_24;
   v37 = canMaskTouchClose;
@@ -476,7 +476,7 @@ void __fastcall RecoverDlgComponent__OpenRpRecvItemDlg(
     goto LABEL_24;
   gameObject = (System_String_o *)System_Collections_Generic_List_object___ToArray(
                                     (System_Collections_Generic_List_object__o *)gameObject,
-                                    (const MethodInfo_34B15A8 *)Method_System_Collections_Generic_List_RecoverEntity__ToArray__);
+                                    (const MethodInfo_34B1BC0 *)Method_System_Collections_Generic_List_RecoverEntity__ToArray__);
   if ( !gameObject )
     goto LABEL_24;
   klass = gameObject[1].klass;
@@ -487,7 +487,7 @@ void __fastcall RecoverDlgComponent__OpenRpRecvItemDlg(
     while ( 1 )
     {
       if ( v26 >= (unsigned int)klass )
-        sub_1B64AD4(gameObject, v22);
+        sub_1B64C64(gameObject, v22);
       gameObject = (System_String_o *)this->fields.itemListInfoGrid;
       if ( !gameObject )
         break;
@@ -505,18 +505,18 @@ void __fastcall RecoverDlgComponent__OpenRpRecvItemDlg(
       v30 = (UnityEngine_GameObject_o *)gameObject;
       gameObject = (System_String_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0LL);
       v31 = (UnityEngine_Transform_o *)gameObject;
-      if ( !byte_49F9201 )
+      if ( !byte_49F9821 )
       {
-        gameObject = (System_String_o *)sub_1B64870(&UnityEngine_Vector3_TypeInfo, v22);
-        byte_49F9201 = 1;
+        gameObject = (System_String_o *)sub_1B64A00(&UnityEngine_Vector3_TypeInfo, v22);
+        byte_49F9821 = 1;
       }
       if ( !v31 )
         break;
       UnityEngine_Transform__set_localPosition(v31, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            v30,
-                           (const MethodInfo_2E8A1B4 *)Method_UnityEngine_GameObject_GetComponent_RecoverItemComponent___);
-      v33 = (RecoverItemComponent_CallbackFunc_o *)sub_1B64ABC(RecoverItemComponent_CallbackFunc_TypeInfo);
+                           (const MethodInfo_2E8A7CC *)Method_UnityEngine_GameObject_GetComponent_RecoverItemComponent___);
+      v33 = (RecoverItemComponent_CallbackFunc_o *)sub_1B64C4C(RecoverItemComponent_CallbackFunc_TypeInfo);
       RecoverItemComponent_CallbackFunc___ctor(
         v33,
         (Il2CppObject *)this,
@@ -531,7 +531,7 @@ void __fastcall RecoverDlgComponent__OpenRpRecvItemDlg(
         goto LABEL_22;
     }
 LABEL_24:
-    sub_1B64ACC(gameObject, v22);
+    sub_1B64C5C(gameObject, v22);
   }
 LABEL_22:
   gameObject = (System_String_o *)this->fields.itemListInfoGrid;
@@ -539,7 +539,7 @@ LABEL_22:
     goto LABEL_24;
   UIGrid__set_repositionNow((UIGrid_o *)gameObject, 1, 0LL);
   BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, v37, 0LL);
-  v36 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  v36 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
   System_Action___ctor(v36, (Il2CppObject *)this, Method_RecoverDlgComponent_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v36, 0, 0LL);
 }
@@ -567,24 +567,24 @@ void __fastcall RecoverDlgComponent__UpdateApRecvItemDlg(RecoverDlgComponent_o *
   const MethodInfo *v20; // x3
   const MethodInfo *v21; // x5
 
-  if ( (byte_4A02021 & 1) == 0 )
+  if ( (byte_4A02642 & 1) == 0 )
   {
-    sub_1B64870(&RecoverItemComponent_CallbackFunc_TypeInfo, method);
-    sub_1B64870(&Method_DataManager_GetMaster_RecoverMaster___, v3);
-    sub_1B64870(&DataManager_TypeInfo, v4);
-    sub_1B64870(&Method_System_Collections_Generic_List_RecoverEntity__ToArray__, v5);
-    sub_1B64870(&Method_System_Collections_Generic_List_RecoverItemComponent__get_Count__, v6);
-    sub_1B64870(&Method_System_Collections_Generic_List_RecoverItemComponent__get_Item__, v7);
-    sub_1B64870(&UnityEngine_Object_TypeInfo, v8);
-    sub_1B64870(&Method_RecoverDlgComponent_requestRecover__, v9);
-    byte_4A02021 = 1;
+    sub_1B64A00(&RecoverItemComponent_CallbackFunc_TypeInfo, method);
+    sub_1B64A00(&Method_DataManager_GetMaster_RecoverMaster___, v3);
+    sub_1B64A00(&DataManager_TypeInfo, v4);
+    sub_1B64A00(&Method_System_Collections_Generic_List_RecoverEntity__ToArray__, v5);
+    sub_1B64A00(&Method_System_Collections_Generic_List_RecoverItemComponent__get_Count__, v6);
+    sub_1B64A00(&Method_System_Collections_Generic_List_RecoverItemComponent__get_Item__, v7);
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, v8);
+    sub_1B64A00(&Method_RecoverDlgComponent_requestRecover__, v9);
+    byte_4A02642 = 1;
   }
   recoverItemList = this->fields.recoverItemList;
   if ( recoverItemList && recoverItemList->fields._size )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (RecoverMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_RecoverMaster___);
+    Master_object = (RecoverMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2E3BC8C *)Method_DataManager_GetMaster_RecoverMaster___);
     if ( !Master_object )
       goto LABEL_22;
     Master_object = (RecoverMaster_o *)RecoverMaster__getRecvEntityList(Master_object, 1, 0LL);
@@ -592,7 +592,7 @@ void __fastcall RecoverDlgComponent__UpdateApRecvItemDlg(RecoverDlgComponent_o *
       goto LABEL_22;
     Master_object = (RecoverMaster_o *)System_Collections_Generic_List_object___ToArray(
                                          (System_Collections_Generic_List_object__o *)Master_object,
-                                         (const MethodInfo_34B15A8 *)Method_System_Collections_Generic_List_RecoverEntity__ToArray__);
+                                         (const MethodInfo_34B1BC0 *)Method_System_Collections_Generic_List_RecoverEntity__ToArray__);
     if ( !Master_object )
       goto LABEL_22;
     MasterName_k__BackingField = Master_object->fields._MasterName_k__BackingField;
@@ -608,18 +608,18 @@ void __fastcall RecoverDlgComponent__UpdateApRecvItemDlg(RecoverDlgComponent_o *
         if ( (__int64)v15 < SLODWORD(Master_object->fields._MasterName_k__BackingField) )
         {
           if ( v15 >= (unsigned int)MasterName_k__BackingField )
-            sub_1B64AD4(Master_object, v12);
+            sub_1B64C64(Master_object, v12);
           v16 = (RecoverEntity_o *)*((_QWORD *)&v14->fields.list + v15);
           Item = System_Collections_Generic_List_object___get_Item(
                    (System_Collections_Generic_List_object__o *)Master_object,
                    v15,
-                   (const MethodInfo_34AF6E0 *)Method_System_Collections_Generic_List_RecoverItemComponent__get_Item__);
+                   (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_RecoverItemComponent__get_Item__);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Item, 0LL, 0LL) )
           {
             needAp = this->fields.needAp;
-            v19 = (RecoverItemComponent_CallbackFunc_o *)sub_1B64ABC(RecoverItemComponent_CallbackFunc_TypeInfo);
+            v19 = (RecoverItemComponent_CallbackFunc_o *)sub_1B64C4C(RecoverItemComponent_CallbackFunc_TypeInfo);
             RecoverItemComponent_CallbackFunc___ctor(
               v19,
               (Il2CppObject *)this,
@@ -635,7 +635,7 @@ void __fastcall RecoverDlgComponent__UpdateApRecvItemDlg(RecoverDlgComponent_o *
           return;
       }
 LABEL_22:
-      sub_1B64ACC(Master_object, v12);
+      sub_1B64C5C(Master_object, v12);
     }
   }
 }
@@ -656,10 +656,10 @@ void __fastcall RecoverDlgComponent__add_callbackFunc(
   RecoverDlgComponent_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4A0201E & 1) == 0 )
+  if ( (byte_4A0263F & 1) == 0 )
   {
-    sub_1B64870(&RecoverDlgComponent_CallbackFunc_TypeInfo, value);
-    byte_4A0201E = 1;
+    sub_1B64A00(&RecoverDlgComponent_CallbackFunc_TypeInfo, value);
+    byte_4A0263F = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -672,13 +672,13 @@ void __fastcall RecoverDlgComponent__add_callbackFunc(
       if ( (RecoverDlgComponent_CallbackFunc_c *)v8->klass != RecoverDlgComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1B9FD60(p_callbackFunc, v8, v6);
+    v9 = sub_1B9FEF0(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B64D8C(v8);
+  sub_1B64F1C(v8);
   RecoverDlgComponent__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -690,10 +690,10 @@ void __fastcall RecoverDlgComponent__clearInfoGrid(RecoverDlgComponent_o *this, 
   int32_t v5; // w20
   UnityEngine_Object_o *gameObject; // x21
 
-  if ( (byte_4A02025 & 1) == 0 )
+  if ( (byte_4A02646 & 1) == 0 )
   {
-    sub_1B64870(&UnityEngine_Object_TypeInfo, method);
-    byte_4A02025 = 1;
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, method);
+    byte_4A02646 = 1;
   }
   itemListInfoGrid = (UnityEngine_Component_o *)this->fields.itemListInfoGrid;
   if ( !itemListInfoGrid )
@@ -722,12 +722,12 @@ void __fastcall RecoverDlgComponent__clearInfoGrid(RecoverDlgComponent_o *this, 
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(itemListInfoGrid, 0LL);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_69135916(gameObject, 0LL);
+      UnityEngine_Object__Destroy_69137476(gameObject, 0LL);
       if ( --v5 < 0 )
         return;
     }
 LABEL_14:
-    sub_1B64ACC(itemListInfoGrid, method);
+    sub_1B64C5C(itemListInfoGrid, method);
   }
 }
 
@@ -736,12 +736,12 @@ System_String_o *__fastcall RecoverDlgComponent__get_closeBtnPath(
         RecoverDlgComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A02028 & 1) == 0 )
+  if ( (byte_4A02649 & 1) == 0 )
   {
-    sub_1B64870(&StringLiteral_3176/*"BaseWindow/CloseBtn"*/, method);
-    byte_4A02028 = 1;
+    sub_1B64A00(&StringLiteral_3177/*"BaseWindow/CloseBtn"*/, method);
+    byte_4A02649 = 1;
   }
-  return (System_String_o *)StringLiteral_3176/*"BaseWindow/CloseBtn"*/;
+  return (System_String_o *)StringLiteral_3177/*"BaseWindow/CloseBtn"*/;
 }
 
 
@@ -765,10 +765,10 @@ void __fastcall RecoverDlgComponent__remove_callbackFunc(
   RecoverDlgComponent_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4A0201F & 1) == 0 )
+  if ( (byte_4A02640 & 1) == 0 )
   {
-    sub_1B64870(&RecoverDlgComponent_CallbackFunc_TypeInfo, value);
-    byte_4A0201F = 1;
+    sub_1B64A00(&RecoverDlgComponent_CallbackFunc_TypeInfo, value);
+    byte_4A02640 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -781,13 +781,13 @@ void __fastcall RecoverDlgComponent__remove_callbackFunc(
       if ( (RecoverDlgComponent_CallbackFunc_c *)v8->klass != RecoverDlgComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1B9FD60(p_callbackFunc, v8, v6);
+    v9 = sub_1B9FEF0(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B64D8C(v8);
+  sub_1B64F1C(v8);
   RecoverDlgComponent__Init(v11, v12);
 }
 
@@ -826,18 +826,18 @@ void __fastcall RecoverDlgComponent__requestRecover(
   int32_t v32; // [xsp+18h] [xbp-48h] BYREF
   int32_t v33; // [xsp+1Ch] [xbp-44h] BYREF
 
-  if ( (byte_4A02026 & 1) == 0 )
+  if ( (byte_4A02647 & 1) == 0 )
   {
-    sub_1B64870(&int_TypeInfo, *(_QWORD *)&type);
-    sub_1B64870(&Method_NetworkManager_getRequest_PurchaseByStoneRequest___, v9);
-    sub_1B64870(&Method_NetworkManager_getRequest_RecoverCmdSpellRequest___, v10);
-    sub_1B64870(&Method_NetworkManager_getRequest_RecoverUseItemRequest___, v11);
-    sub_1B64870(&NetworkManager_TypeInfo, v12);
-    sub_1B64870(&Method_RecoverDlgComponent_EndRequestUserGameActRecover__, v13);
-    sub_1B64870(&NetworkManager_ResultCallbackFunc_TypeInfo, v14);
-    sub_1B64870(&RecoverType_Type_TypeInfo, v15);
-    sub_1B64870(&StringLiteral_22790/*"requestApItem Param: {0}, {1}, {2}"*/, v16);
-    byte_4A02026 = 1;
+    sub_1B64A00(&int_TypeInfo, *(_QWORD *)&type);
+    sub_1B64A00(&Method_NetworkManager_getRequest_PurchaseByStoneRequest___, v9);
+    sub_1B64A00(&Method_NetworkManager_getRequest_RecoverCmdSpellRequest___, v10);
+    sub_1B64A00(&Method_NetworkManager_getRequest_RecoverUseItemRequest___, v11);
+    sub_1B64A00(&NetworkManager_TypeInfo, v12);
+    sub_1B64A00(&Method_RecoverDlgComponent_EndRequestUserGameActRecover__, v13);
+    sub_1B64A00(&NetworkManager_ResultCallbackFunc_TypeInfo, v14);
+    sub_1B64A00(&RecoverType_Type_TypeInfo, v15);
+    sub_1B64A00(&StringLiteral_22790/*"requestApItem Param: {0}, {1}, {2}"*/, v16);
+    byte_4A02647 = 1;
   }
   v33 = type;
   v17 = (Il2CppObject *)j_il2cpp_value_box_0(RecoverType_Type_TypeInfo, &v33, *(_QWORD *)&id, *(_QWORD *)&num, method);
@@ -845,11 +845,11 @@ void __fastcall RecoverDlgComponent__requestRecover(
   v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v32, v18, v19, v20);
   v31 = num;
   v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v31, v22, v23, v24);
-  System_String__Format_61398016((System_String_o *)StringLiteral_22790/*"requestApItem Param: {0}, {1}, {2}"*/, v17, v21, v25, 0LL);
+  System_String__Format_61399576((System_String_o *)StringLiteral_22790/*"requestApItem Param: {0}, {1}, {2}"*/, v17, v21, v25, 0LL);
   switch ( type )
   {
     case 1:
-      v29 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64ABC(NetworkManager_ResultCallbackFunc_TypeInfo);
+      v29 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64C4C(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
         v29,
         (Il2CppObject *)this,
@@ -859,13 +859,13 @@ void __fastcall RecoverDlgComponent__requestRecover(
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       Request_object = NetworkManager__getRequest_object_(
                          v29,
-                         (const MethodInfo_2EBCCAC *)Method_NetworkManager_getRequest_RecoverCmdSpellRequest___);
+                         (const MethodInfo_2EBD2C4 *)Method_NetworkManager_getRequest_RecoverCmdSpellRequest___);
       if ( !Request_object )
         goto LABEL_19;
       RecoverCmdSpellRequest__beginRequest((RecoverCmdSpellRequest_o *)Request_object, id, 0LL);
       break;
     case 3:
-      v30 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64ABC(NetworkManager_ResultCallbackFunc_TypeInfo);
+      v30 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64C4C(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
         v30,
         (Il2CppObject *)this,
@@ -875,13 +875,13 @@ void __fastcall RecoverDlgComponent__requestRecover(
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       Request_object = NetworkManager__getRequest_object_(
                          v30,
-                         (const MethodInfo_2EBCCAC *)Method_NetworkManager_getRequest_RecoverUseItemRequest___);
+                         (const MethodInfo_2EBD2C4 *)Method_NetworkManager_getRequest_RecoverUseItemRequest___);
       if ( !Request_object )
         goto LABEL_19;
       RecoverUseItemRequest__beginRequest((RecoverUseItemRequest_o *)Request_object, id, num, 0LL);
       break;
     case 2:
-      v26 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64ABC(NetworkManager_ResultCallbackFunc_TypeInfo);
+      v26 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64C4C(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
         v26,
         (Il2CppObject *)this,
@@ -891,14 +891,14 @@ void __fastcall RecoverDlgComponent__requestRecover(
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       Request_object = NetworkManager__getRequest_object_(
                          v26,
-                         (const MethodInfo_2EBCCAC *)Method_NetworkManager_getRequest_PurchaseByStoneRequest___);
+                         (const MethodInfo_2EBD2C4 *)Method_NetworkManager_getRequest_PurchaseByStoneRequest___);
       if ( Request_object )
       {
         PurchaseByStoneRequest__beginRequest((PurchaseByStoneRequest_o *)Request_object, id, num, 0LL);
         return;
       }
 LABEL_19:
-      sub_1B64ACC(Request_object, v28);
+      sub_1B64C5C(Request_object, v28);
   }
 }
 
@@ -921,15 +921,15 @@ void __fastcall RecoverDlgComponent_CallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B64930(v6) & 1) == 0 )
+  if ( (sub_1B64AC0(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B64AE8(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B64998(v10, 0LL);
+      v10 = sub_1B64C78(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B64B28(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -941,9 +941,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19B1368;
+  this->fields.m_target = (Il2CppObject *)sub_19B14F8;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19B1320;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19B14B0;
 }
 
 
@@ -959,14 +959,14 @@ System_IAsyncResult_o *__fastcall RecoverDlgComponent_CallbackFunc__BeginInvoke(
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = result;
-  if ( (byte_4A0202A & 1) == 0 )
+  if ( (byte_4A0264B & 1) == 0 )
   {
-    sub_1B64870(&RecoverDlgComponent_Result_TypeInfo, *(_QWORD *)&result);
-    byte_4A0202A = 1;
+    sub_1B64A00(&RecoverDlgComponent_Result_TypeInfo, *(_QWORD *)&result);
+    byte_4A0264B = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(RecoverDlgComponent_Result_TypeInfo, &v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1B64824(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1B649B4(this, v9, callback, object);
 }
 
 
@@ -975,7 +975,7 @@ void __fastcall RecoverDlgComponent_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B64828(result, 0LL, method);
+  sub_1B649B8(result, 0LL, method);
 }
 
 
@@ -1007,7 +1007,7 @@ void __fastcall RecoverDlgComponent___c__DisplayClass21_0___Close_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1B64ACC(0LL, method);
+    sub_1B64C5C(0LL, method);
   RecoverDlgComponent__EndClose(_4__this, method);
   ActionExtensions__Call(this->fields.callback, 0LL);
 }

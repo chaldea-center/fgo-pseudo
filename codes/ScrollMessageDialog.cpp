@@ -1,9 +1,9 @@
 void __fastcall ScrollMessageDialog___ctor(ScrollMessageDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A0205C & 1) == 0 )
+  if ( (byte_4A0267D & 1) == 0 )
   {
-    sub_1B64870(&BaseDialog_TypeInfo, method);
-    byte_4A0205C = 1;
+    sub_1B64A00(&BaseDialog_TypeInfo, method);
+    byte_4A0267D = 1;
   }
   *(_QWORD *)&this->fields.MULTILINE_TITLE_MESSAGE_HEIGHT = 0x4180000000000118LL;
   *(_QWORD *)&this->fields.TITLE_LABEL_MAX_WIDTH = 0x18000002BCLL;
@@ -18,11 +18,11 @@ void __fastcall ScrollMessageDialog__Close(ScrollMessageDialog_o *this, const Me
 {
   const MethodInfo *v2; // x2
 
-  ScrollMessageDialog__Close_45041288(this, 0LL, v2);
+  ScrollMessageDialog__Close_45042848(this, 0LL, v2);
 }
 
 
-void __fastcall ScrollMessageDialog__Close_45041288(
+void __fastcall ScrollMessageDialog__Close_45042848(
         ScrollMessageDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -31,16 +31,16 @@ void __fastcall ScrollMessageDialog__Close_45041288(
   __int64 v6; // x1
   System_Action_o *v7; // x20
 
-  if ( (byte_4A02058 & 1) == 0 )
+  if ( (byte_4A02679 & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, callback);
-    sub_1B64870(&Method_ScrollMessageDialog_EndClose__, v6);
-    byte_4A02058 = 1;
+    sub_1B64A00(&System_Action_TypeInfo, callback);
+    sub_1B64A00(&Method_ScrollMessageDialog_EndClose__, v6);
+    byte_4A02679 = 1;
   }
   this->fields.closeEndFunc = callback;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.closeEndFunc, (int32_t)callback, (int32_t)method, v3);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.closeEndFunc, (int32_t)callback, (int32_t)method, v3);
   this->fields.isButtonEnable = 0;
-  v7 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_ScrollMessageDialog_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
 }
@@ -61,7 +61,7 @@ void __fastcall ScrollMessageDialog__EndClose(ScrollMessageDialog_o *this, const
   if ( closeEndFunc )
   {
     p_closeEndFunc->klass = 0LL;
-    sub_1B64814(p_closeEndFunc, 0, v3, v4);
+    sub_1B649A4(p_closeEndFunc, 0, v3, v4);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v6->fields.m_target)(
       v6->fields.original_method_info,
       *(_QWORD *)&v6->fields.extra_arg);
@@ -86,11 +86,11 @@ void __fastcall ScrollMessageDialog__Init(ScrollMessageDialog_o *this, const Met
   UnityEngine_Object_o *okBtn; // x20
   UnityEngine_Object_o *okBtnLabel; // x20
 
-  if ( (byte_4A02055 & 1) == 0 )
+  if ( (byte_4A02676 & 1) == 0 )
   {
-    sub_1B64870(&UnityEngine_Object_TypeInfo, method);
-    sub_1B64870(&StringLiteral_1/*""*/, v3);
-    byte_4A02055 = 1;
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, method);
+    sub_1B64A00(&StringLiteral_1/*""*/, v3);
+    byte_4A02676 = 1;
   }
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -145,7 +145,7 @@ void __fastcall ScrollMessageDialog__Init(ScrollMessageDialog_o *this, const Met
   gameObject = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
 LABEL_30:
-    sub_1B64ACC(gameObject, v5);
+    sub_1B64C5C(gameObject, v5);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -160,22 +160,22 @@ void __fastcall ScrollMessageDialog__OnClickCancel(ScrollMessageDialog_o *this, 
   __int64 v7; // x1
   struct ScrollMessageDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4A0205A & 1) == 0 )
+  if ( (byte_4A0267B & 1) == 0 )
   {
-    sub_1B64870(&Method_ScrollMessageDialog_OnClickCancel__, method);
-    sub_1B64870(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    byte_4A0205A = 1;
+    sub_1B64A00(&Method_ScrollMessageDialog_OnClickCancel__, method);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
+    byte_4A0267B = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v4 = Method_ScrollMessageDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_ScrollMessageDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1B64888(Method_ScrollMessageDialog_OnClickCancel__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1B64854(v4, v4[4]);
+      v4 = (_QWORD *)sub_1B64A18(Method_ScrollMessageDialog_OnClickCancel__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1B649E4(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, this->fields.onClickSeKind, 0LL);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
-      sub_1B64ACC(0LL, v7);
+      sub_1B64C5C(0LL, v7);
     CommonUI__CloseScrollMessageDialog((CommonUI_o *)Instance, 0LL, 0LL);
     clickFunc = this->fields.clickFunc;
     if ( clickFunc )
@@ -196,22 +196,22 @@ void __fastcall ScrollMessageDialog__OnClickOk(ScrollMessageDialog_o *this, cons
   __int64 v7; // x1
   struct ScrollMessageDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4A02059 & 1) == 0 )
+  if ( (byte_4A0267A & 1) == 0 )
   {
-    sub_1B64870(&Method_ScrollMessageDialog_OnClickOk__, method);
-    sub_1B64870(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    byte_4A02059 = 1;
+    sub_1B64A00(&Method_ScrollMessageDialog_OnClickOk__, method);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
+    byte_4A0267A = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v4 = Method_ScrollMessageDialog_OnClickOk__;
     if ( (*((_BYTE *)Method_ScrollMessageDialog_OnClickOk__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1B64888(Method_ScrollMessageDialog_OnClickOk__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1B64854(v4, v4[4]);
+      v4 = (_QWORD *)sub_1B64A18(Method_ScrollMessageDialog_OnClickOk__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1B649E4(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, this->fields.onClickSeKind, 0LL);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
-      sub_1B64ACC(0LL, v7);
+      sub_1B64C5C(0LL, v7);
     CommonUI__CloseScrollMessageDialog((CommonUI_o *)Instance, 0LL, 0LL);
     clickFunc = this->fields.clickFunc;
     if ( clickFunc )
@@ -282,20 +282,20 @@ void __fastcall ScrollMessageDialog__Open(
   UnityEngine_Vector4_o v59; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v13 = title;
-  if ( (byte_4A02056 & 1) == 0 )
+  if ( (byte_4A02677 & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, title);
-    sub_1B64870(&Method_UnityEngine_Component_GetComponent_UIWidget___, v15);
-    sub_1B64870(&LocalizationManager_TypeInfo, v16);
-    sub_1B64870(&UnityEngine_Object_TypeInfo, v17);
-    sub_1B64870(&Method_ScrollMessageDialog_EndOpen__, v18);
-    sub_1B64870(&StringLiteral_43/*"\n"*/, v19);
-    sub_1B64870(&StringLiteral_3733/*"COMMON_CONFIRM_CLOSE"*/, v20);
-    sub_1B64870(&StringLiteral_1/*""*/, v21);
-    byte_4A02056 = 1;
+    sub_1B64A00(&System_Action_TypeInfo, title);
+    sub_1B64A00(&Method_UnityEngine_Component_GetComponent_UIWidget___, v15);
+    sub_1B64A00(&LocalizationManager_TypeInfo, v16);
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, v17);
+    sub_1B64A00(&Method_ScrollMessageDialog_EndOpen__, v18);
+    sub_1B64A00(&StringLiteral_43/*"\n"*/, v19);
+    sub_1B64A00(&StringLiteral_3734/*"COMMON_CONFIRM_CLOSE"*/, v20);
+    sub_1B64A00(&StringLiteral_1/*""*/, v21);
+    byte_4A02677 = 1;
   }
   this->fields.clickFunc = func;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.clickFunc, (int32_t)func, (int32_t)message, leftIndent);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.clickFunc, (int32_t)func, (int32_t)message, leftIndent);
   if ( !v13 )
     goto LABEL_84;
   v24 = StringLiteral_1/*""*/;
@@ -305,7 +305,7 @@ void __fastcall ScrollMessageDialog__Open(
     if ( !mPanel )
       goto LABEL_84;
     if ( *((_DWORD *)mPanel + 6) < 2u )
-      sub_1B64AD4(mPanel, v23);
+      sub_1B64C64(mPanel, v23);
     v13 = (System_String_o *)*((_QWORD *)mPanel + 4);
     v24 = (void *)*((_QWORD *)mPanel + 5);
     listViewBack = (UnityEngine_Object_o *)this->fields.listViewBack;
@@ -450,7 +450,7 @@ void __fastcall ScrollMessageDialog__Open(
         goto LABEL_84;
       mPanel = UnityEngine_Component__GetComponent_object_(
                  (UnityEngine_Component_o *)mPanel,
-                 (const MethodInfo_2E3216C *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                 (const MethodInfo_2E32784 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
       if ( !mPanel )
         goto LABEL_84;
       UIWidget__set_width((UIWidget_o *)mPanel, 660 - leftIndent, 0LL);
@@ -470,7 +470,7 @@ void __fastcall ScrollMessageDialog__Open(
           (mPanel = this->fields.messageLabel) == 0LL) )
     {
 LABEL_84:
-      sub_1B64ACC(mPanel, v23);
+      sub_1B64C5C(mPanel, v23);
     }
     UILabel__set_overflowMethod((UILabel_o *)mPanel, 3, 0LL);
     messageCollider = (UnityEngine_Object_o *)this->fields.messageCollider;
@@ -527,7 +527,7 @@ LABEL_84:
     v56 = this->fields.okBtnLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    mPanel = LocalizationManager__Get((System_String_o *)StringLiteral_3733/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+    mPanel = LocalizationManager__Get((System_String_o *)StringLiteral_3734/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
     if ( v56 )
     {
       UILabel__set_text(v56, (System_String_o *)mPanel, 0LL);
@@ -543,13 +543,13 @@ LABEL_82:
     goto LABEL_84;
   UIScrollView__ResetPosition((UIScrollView_o *)mPanel, 0LL);
   this->fields.isButtonEnable = 0;
-  v57 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  v57 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
   System_Action___ctor(v57, (Il2CppObject *)this, Method_ScrollMessageDialog_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v57, 0, 0LL);
 }
 
 
-void __fastcall ScrollMessageDialog__Open_45040996(
+void __fastcall ScrollMessageDialog__Open_45042556(
         ScrollMessageDialog_o *this,
         System_String_o *title,
         System_String_o *subTitle,
@@ -565,10 +565,10 @@ void __fastcall ScrollMessageDialog__Open_45040996(
   __int64 v19; // x1
   UnityEngine_Component_o *gameObject; // x0
 
-  if ( (byte_4A02057 & 1) == 0 )
+  if ( (byte_4A02678 & 1) == 0 )
   {
-    sub_1B64870(&UnityEngine_Object_TypeInfo, title);
-    byte_4A02057 = 1;
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, title);
+    byte_4A02678 = 1;
   }
   if ( !System_String__IsNullOrEmpty(subTitle, 0LL) )
   {
@@ -584,7 +584,7 @@ void __fastcall ScrollMessageDialog__Open_45040996(
             (gameObject = (UnityEngine_Component_o *)this->fields.subTitleLabel) == 0LL) )
       {
 LABEL_13:
-        sub_1B64ACC(gameObject, v19);
+        sub_1B64C5C(gameObject, v19);
       }
       UILabel__set_text((UILabel_o *)gameObject, subTitle, 0LL);
     }
@@ -605,10 +605,10 @@ UnityEngine_GameObject_o *__fastcall ScrollMessageDialog__get_closeBtnObject(
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4A0205B & 1) == 0 )
+  if ( (byte_4A0267C & 1) == 0 )
   {
-    sub_1B64870(&UnityEngine_Object_TypeInfo, method);
-    byte_4A0205B = 1;
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, method);
+    byte_4A0267C = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -617,7 +617,7 @@ UnityEngine_GameObject_o *__fastcall ScrollMessageDialog__get_closeBtnObject(
     return 0LL;
   v6 = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !v6 )
-    sub_1B64ACC(0LL, v4);
+    sub_1B64C5C(0LL, v4);
   return UnityEngine_Component__get_gameObject(v6, 0LL);
 }
 
@@ -640,15 +640,15 @@ void __fastcall ScrollMessageDialog_ClickDelegate___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B64930(v6) & 1) == 0 )
+  if ( (sub_1B64AC0(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B64AE8(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B64998(v10, 0LL);
+      v10 = sub_1B64C78(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B64B28(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -660,9 +660,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19B1458;
+  this->fields.m_target = (Il2CppObject *)sub_19B15E8;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19B1410;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19B15A0;
 }
 
 
@@ -678,14 +678,14 @@ System_IAsyncResult_o *__fastcall ScrollMessageDialog_ClickDelegate__BeginInvoke
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isOk;
-  if ( (byte_4A0205D & 1) == 0 )
+  if ( (byte_4A0267E & 1) == 0 )
   {
-    sub_1B64870(&bool_TypeInfo, isOk);
-    byte_4A0205D = 1;
+    sub_1B64A00(&bool_TypeInfo, isOk);
+    byte_4A0267E = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1B64824(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1B649B4(this, v9, callback, object);
 }
 
 
@@ -694,7 +694,7 @@ void __fastcall ScrollMessageDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B64828(result, 0LL, method);
+  sub_1B649B8(result, 0LL, method);
 }
 
 

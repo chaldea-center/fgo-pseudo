@@ -4,15 +4,15 @@ void __fastcall MoveLabelTextControl___ctor(MoveLabelTextControl_o *this, const 
   int32_t v4; // w2
   int32_t v5; // w3
 
-  if ( (byte_4A01F89 & 1) == 0 )
+  if ( (byte_4A025AA & 1) == 0 )
   {
-    sub_1B64870(&System_Collections_Hashtable_TypeInfo, method);
-    byte_4A01F89 = 1;
+    sub_1B64A00(&System_Collections_Hashtable_TypeInfo, method);
+    byte_4A025AA = 1;
   }
-  v3 = (System_Collections_Hashtable_o *)sub_1B64ABC(System_Collections_Hashtable_TypeInfo);
-  System_Collections_Hashtable___ctor_61963000(v3, 0LL);
+  v3 = (System_Collections_Hashtable_o *)sub_1B64C4C(System_Collections_Hashtable_TypeInfo);
+  System_Collections_Hashtable___ctor_61964560(v3, 0LL);
   this->fields.table = v3;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.table, (int32_t)v3, v4, v5);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.table, (int32_t)v3, v4, v5);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -23,7 +23,7 @@ void __fastcall MoveLabelTextControl__onMoveComplete(MoveLabelTextControl_o *thi
 
   targetLb = (UnityEngine_Component_o *)this->fields.targetLb;
   if ( !targetLb || (targetLb = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(targetLb, 0LL)) == 0LL )
-    sub_1B64ACC(targetLb, method);
+    sub_1B64C5C(targetLb, method);
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)targetLb, this->fields.lbStartPosition, 0LL);
 }
 
@@ -87,32 +87,32 @@ void __fastcall MoveLabelTextControl__setMoveTextOver(
   char v56[4]; // [xsp+2Ch] [xbp-34h] BYREF
 
   v6 = this;
-  if ( (byte_4A01F88 & 1) == 0 )
+  if ( (byte_4A025A9 & 1) == 0 )
   {
-    sub_1B64870(&bool_TypeInfo, parent);
-    sub_1B64870(&iTween_LoopType_TypeInfo, v7);
-    sub_1B64870(&float_TypeInfo, v8);
-    sub_1B64870(&StringLiteral_24648/*"x"*/, v9);
-    sub_1B64870(&StringLiteral_18684/*"easetype"*/, v10);
-    sub_1B64870(&StringLiteral_22175/*"onMoveComplete"*/, v11);
-    sub_1B64870(&StringLiteral_23834/*"time"*/, v12);
-    sub_1B64870(&StringLiteral_22190/*"oncompletetarget"*/, v13);
-    sub_1B64870(&StringLiteral_18481/*"delay"*/, v14);
-    sub_1B64870(&StringLiteral_21138/*"looptype"*/, v15);
-    sub_1B64870(&StringLiteral_21040/*"linear"*/, v16);
-    sub_1B64870(&StringLiteral_20719/*"isLocal"*/, v17);
-    sub_1B64870(&StringLiteral_22188/*"oncomplete"*/, v18);
-    this = (MoveLabelTextControl_o *)sub_1B64870(&iTween_TypeInfo, v19);
-    byte_4A01F88 = 1;
+    sub_1B64A00(&bool_TypeInfo, parent);
+    sub_1B64A00(&iTween_LoopType_TypeInfo, v7);
+    sub_1B64A00(&float_TypeInfo, v8);
+    sub_1B64A00(&StringLiteral_24648/*"x"*/, v9);
+    sub_1B64A00(&StringLiteral_18685/*"easetype"*/, v10);
+    sub_1B64A00(&StringLiteral_22175/*"onMoveComplete"*/, v11);
+    sub_1B64A00(&StringLiteral_23834/*"time"*/, v12);
+    sub_1B64A00(&StringLiteral_22190/*"oncompletetarget"*/, v13);
+    sub_1B64A00(&StringLiteral_18482/*"delay"*/, v14);
+    sub_1B64A00(&StringLiteral_21138/*"looptype"*/, v15);
+    sub_1B64A00(&StringLiteral_21040/*"linear"*/, v16);
+    sub_1B64A00(&StringLiteral_20719/*"isLocal"*/, v17);
+    sub_1B64A00(&StringLiteral_22188/*"oncomplete"*/, v18);
+    this = (MoveLabelTextControl_o *)sub_1B64A00(&iTween_TypeInfo, v19);
+    byte_4A025A9 = 1;
   }
   if ( !targetLb )
     goto LABEL_28;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)targetLb, 0LL);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  iTween__Stop_60032248(gameObject, 0LL);
+  iTween__Stop_60033808(gameObject, 0LL);
   v6->fields.targetLb = targetLb;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&v6->fields.targetLb, (int32_t)targetLb, v21, v22);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&v6->fields.targetLb, (int32_t)targetLb, v21, v22);
   mText = targetLb->fields.mText;
   if ( !mText )
     goto LABEL_28;
@@ -193,7 +193,7 @@ void __fastcall MoveLabelTextControl__setMoveTextOver(
     goto LABEL_28;
   ((void (__fastcall *)(MoveLabelTextControl_o *, __int64, __int64, Il2CppMethodPointer))this->klass[1].vtable._0_Equals.method)(
     this,
-    StringLiteral_18684/*"easetype"*/,
+    StringLiteral_18685/*"easetype"*/,
     StringLiteral_21040/*"linear"*/,
     this->klass[1].vtable._1_Finalize.methodPtr);
   v39 = v6->fields.table;
@@ -212,7 +212,7 @@ void __fastcall MoveLabelTextControl__setMoveTextOver(
   if ( !v43
     || (((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, MoveLabelTextControl_o *, Il2CppMethodPointer))v43->klass->vtable._23_Add.method)(
           v43,
-          StringLiteral_18481/*"delay"*/,
+          StringLiteral_18482/*"delay"*/,
           this,
           v43->klass->vtable._24_Clear.methodPtr),
         v47 = v6->fields.table,
@@ -221,7 +221,7 @@ void __fastcall MoveLabelTextControl__setMoveTextOver(
         !v47) )
   {
 LABEL_28:
-    sub_1B64ACC(this, parent);
+    sub_1B64C5C(this, parent);
   }
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, MoveLabelTextControl_o *, Il2CppMethodPointer))v47->klass->vtable._23_Add.method)(
     v47,
@@ -231,5 +231,5 @@ LABEL_28:
   v51 = v6->fields.table;
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  iTween__MoveTo_59921908(v27, v51, 0LL);
+  iTween__MoveTo_59923468(v27, v51, 0LL);
 }

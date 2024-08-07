@@ -58,13 +58,13 @@ void __fastcall WarBoardControlPlayTalkUiComponent__SetDispLocal(
   int32_t v29; // w3
 
   v7 = this;
-  if ( (byte_49FC00B & 1) == 0 )
+  if ( (byte_49FC62B & 1) == 0 )
   {
-    sub_1B64870(&Method_BasicHelper_AddNotExistComponent_UIWidget___, isDisp);
-    sub_1B64870(&bool___TypeInfo, v8);
-    sub_1B64870(&Method_UnityEngine_GameObject_GetComponent_ParticleSystem___, v9);
-    this = (WarBoardControlPlayTalkUiComponent_o *)sub_1B64870(&UnityEngine_Object_TypeInfo, v10);
-    byte_49FC00B = 1;
+    sub_1B64A00(&Method_BasicHelper_AddNotExistComponent_UIWidget___, isDisp);
+    sub_1B64A00(&bool___TypeInfo, v8);
+    sub_1B64A00(&Method_UnityEngine_GameObject_GetComponent_ParticleSystem___, v9);
+    this = (WarBoardControlPlayTalkUiComponent_o *)sub_1B64A00(&UnityEngine_Object_TypeInfo, v10);
+    byte_49FC62B = 1;
   }
   if ( isDisp || v7->fields.activeStates )
   {
@@ -75,10 +75,10 @@ void __fastcall WarBoardControlPlayTalkUiComponent__SetDispLocal(
     controlUiObjects = v7->fields.controlUiObjects;
     if ( !controlUiObjects )
 LABEL_28:
-      sub_1B64ACC(this, isDisp);
-    v27 = sub_1B64918(bool___TypeInfo, controlUiObjects->max_length);
+      sub_1B64C5C(this, isDisp);
+    v27 = sub_1B64AA8(bool___TypeInfo, controlUiObjects->max_length);
     v7->fields.activeStates = (struct System_Boolean_array *)v27;
-    sub_1B64814((ServantStatusBattleListViewItem_o *)&v7->fields.activeStates, v27, v28, v29);
+    sub_1B649A4((ServantStatusBattleListViewItem_o *)&v7->fields.activeStates, v27, v28, v29);
     v11 = 1;
   }
   v12 = v7->fields.controlUiObjects;
@@ -103,7 +103,7 @@ LABEL_28:
       goto LABEL_28;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)v17[4],
-                         (const MethodInfo_2E8A1B4 *)Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
+                         (const MethodInfo_2E8A7CC *)Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     this = (WarBoardControlPlayTalkUiComponent_o *)UnityEngine_Object__op_Inequality(
@@ -135,7 +135,7 @@ LABEL_28:
             goto LABEL_28;
           if ( (unsigned int)v13 >= v24->max_length )
 LABEL_34:
-            sub_1B64AD4(this, isDisp);
+            sub_1B64C64(this, isDisp);
           v24->m_Items[v13 + 4] = (unsigned __int8)this & 1;
         }
         v23 = v18;
@@ -147,7 +147,7 @@ LABEL_27:
     transform = UnityEngine_GameObject__get_transform(v18, 0LL);
     BasicHelper__AddNotExistComponent_object_(
       transform,
-      (const MethodInfo_2E26760 *)Method_BasicHelper_AddNotExistComponent_UIWidget___);
+      (const MethodInfo_2E26D78 *)Method_BasicHelper_AddNotExistComponent_UIWidget___);
     this = (WarBoardControlPlayTalkUiComponent_o *)TweenAlpha__Begin(v18, time, v15, 0LL);
     v12 = v7->fields.controlUiObjects;
     ++v13;
@@ -157,6 +157,6 @@ LABEL_27:
   if ( isDisp )
   {
     *p_activeStates = 0LL;
-    sub_1B64814((ServantStatusBattleListViewItem_o *)&v7->fields.activeStates, 0, (int32_t)method, v4);
+    sub_1B649A4((ServantStatusBattleListViewItem_o *)&v7->fields.activeStates, 0, (int32_t)method, v4);
   }
 }

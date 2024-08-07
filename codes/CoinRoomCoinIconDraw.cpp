@@ -19,11 +19,11 @@ void __fastcall CoinRoomCoinIconDraw__ResetItem(
   char v12; // w1
   bool v13; // w2
 
-  if ( (byte_4A0199F & 1) == 0 )
+  if ( (byte_4A01FC0 & 1) == 0 )
   {
-    sub_1B64870(&UnityEngine_Object_TypeInfo, iconItem);
-    sub_1B64870(&StringLiteral_1/*""*/, v6);
-    byte_4A0199F = 1;
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, iconItem);
+    sub_1B64A00(&StringLiteral_1/*""*/, v6);
+    byte_4A01FC0 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -82,7 +82,7 @@ void __fastcall CoinRoomCoinIconDraw__ResetItem(
     || (UnityEngine_GameObject__SetActive(infoObject, 1, 0LL), (infoObject = this->fields.canStrengthObject) == 0LL) )
   {
 LABEL_25:
-    sub_1B64ACC(infoObject, v8);
+    sub_1B64C5C(infoObject, v8);
   }
   UnityEngine_GameObject__SetActive(infoObject, 0, 0LL);
   isHeroine_k__BackingField = iconItem->fields._isHeroine_k__BackingField;
@@ -115,12 +115,12 @@ void __fastcall CoinRoomCoinIconDraw__SetEnabledMask(
   UILabel_o *infoLabel; // x20
   __int64 *v11; // x8
 
-  if ( (byte_4A019A0 & 1) == 0 )
+  if ( (byte_4A01FC1 & 1) == 0 )
   {
-    sub_1B64870(&LocalizationManager_TypeInfo, enabled);
-    sub_1B64870(&StringLiteral_3596/*"COIN_ROOM_CAN_NOT_SELECTED"*/, v7);
-    sub_1B64870(&StringLiteral_3599/*"COIN_ROOM_COIN_ICON_NOT_SELECT"*/, v8);
-    byte_4A019A0 = 1;
+    sub_1B64A00(&LocalizationManager_TypeInfo, enabled);
+    sub_1B64A00(&StringLiteral_3597/*"COIN_ROOM_CAN_NOT_SELECTED"*/, v7);
+    sub_1B64A00(&StringLiteral_3600/*"COIN_ROOM_COIN_ICON_NOT_SELECT"*/, v8);
+    byte_4A01FC1 = 1;
   }
   maskSprite = (UnityEngine_Component_o *)this->fields.maskSprite;
   if ( !maskSprite )
@@ -159,7 +159,7 @@ void __fastcall CoinRoomCoinIconDraw__SetEnabledMask(
       if ( isHeroine )
       {
 LABEL_14:
-        v11 = &StringLiteral_3596/*"COIN_ROOM_CAN_NOT_SELECTED"*/;
+        v11 = &StringLiteral_3597/*"COIN_ROOM_CAN_NOT_SELECTED"*/;
         goto LABEL_18;
       }
     }
@@ -169,7 +169,7 @@ LABEL_14:
       if ( isHeroine )
         goto LABEL_14;
     }
-    v11 = &StringLiteral_3599/*"COIN_ROOM_COIN_ICON_NOT_SELECT"*/;
+    v11 = &StringLiteral_3600/*"COIN_ROOM_COIN_ICON_NOT_SELECT"*/;
 LABEL_18:
     maskSprite = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)*v11, 0LL);
     if ( infoLabel )
@@ -178,7 +178,7 @@ LABEL_18:
       return;
     }
 LABEL_20:
-    sub_1B64ACC(maskSprite, enabled);
+    sub_1B64C5C(maskSprite, enabled);
   }
 }
 
@@ -205,14 +205,14 @@ void __fastcall CoinRoomCoinIconDraw__SetItem(
   const MethodInfo *v21; // x3
   int32_t num_k__BackingField; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4A0199D & 1) == 0 )
+  if ( (byte_4A01FBE & 1) == 0 )
   {
-    sub_1B64870(&int_TypeInfo, iconItem);
-    sub_1B64870(&LocalizationManager_TypeInfo, v9);
-    sub_1B64870(&StringLiteral_24838/*"{0:#,0}"*/, v10);
-    sub_1B64870(&StringLiteral_3596/*"COIN_ROOM_CAN_NOT_SELECTED"*/, v11);
-    sub_1B64870(&StringLiteral_1/*""*/, v12);
-    byte_4A0199D = 1;
+    sub_1B64A00(&int_TypeInfo, iconItem);
+    sub_1B64A00(&LocalizationManager_TypeInfo, v9);
+    sub_1B64A00(&StringLiteral_24838/*"{0:#,0}"*/, v10);
+    sub_1B64A00(&StringLiteral_3597/*"COIN_ROOM_CAN_NOT_SELECTED"*/, v11);
+    sub_1B64A00(&StringLiteral_1/*""*/, v12);
+    byte_4A01FBE = 1;
   }
   if ( iconItem && mode )
   {
@@ -298,7 +298,7 @@ LABEL_27:
                     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                     itemIcon = (ItemIconComponent_o *)LocalizationManager__Get(
-                                                        (System_String_o *)StringLiteral_3596/*"COIN_ROOM_CAN_NOT_SELECTED"*/,
+                                                        (System_String_o *)StringLiteral_3597/*"COIN_ROOM_CAN_NOT_SELECTED"*/,
                                                         0LL);
                     if ( infoLabel )
                     {
@@ -314,7 +314,7 @@ LABEL_27:
       }
     }
 LABEL_29:
-    sub_1B64ACC(itemIcon, iconItem);
+    sub_1B64C5C(itemIcon, iconItem);
   }
 }
 
@@ -341,14 +341,14 @@ void __fastcall CoinRoomCoinIconDraw__UpdateItem(
   Il2CppObject *v20; // x0
   int32_t selectedNum_k__BackingField; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4A0199E & 1) == 0 )
+  if ( (byte_4A01FBF & 1) == 0 )
   {
-    sub_1B64870(&int_TypeInfo, iconItem);
-    sub_1B64870(&LocalizationManager_TypeInfo, v8);
-    sub_1B64870(&UnityEngine_Object_TypeInfo, v9);
-    sub_1B64870(&StringLiteral_1/*""*/, v10);
-    sub_1B64870(&StringLiteral_3598/*"COIN_ROOM_COIN_ICON_CONFIRM_NUM"*/, v11);
-    byte_4A0199E = 1;
+    sub_1B64A00(&int_TypeInfo, iconItem);
+    sub_1B64A00(&LocalizationManager_TypeInfo, v8);
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, v9);
+    sub_1B64A00(&StringLiteral_1/*""*/, v10);
+    sub_1B64A00(&StringLiteral_3599/*"COIN_ROOM_COIN_ICON_CONFIRM_NUM"*/, v11);
+    byte_4A01FBF = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -376,7 +376,7 @@ void __fastcall CoinRoomCoinIconDraw__UpdateItem(
     return;
   if ( !iconItem )
 LABEL_24:
-    sub_1B64ACC(infoObject, v14);
+    sub_1B64C5C(infoObject, v14);
   if ( iconItem->fields._selectedNum_k__BackingField >= 1 )
   {
     infoObject = this->fields.infoObject;
@@ -389,7 +389,7 @@ LABEL_24:
         UnityEngine_GameObject__SetActive(infoObject, 0, 0LL);
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        infoObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3598/*"COIN_ROOM_COIN_ICON_CONFIRM_NUM"*/, 0LL);
+        infoObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3599/*"COIN_ROOM_COIN_ICON_CONFIRM_NUM"*/, 0LL);
         if ( this->fields.selectedNumLabel )
         {
           v15 = (System_String_o *)infoObject;

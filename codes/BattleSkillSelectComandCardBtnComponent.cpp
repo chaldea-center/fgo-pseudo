@@ -21,12 +21,12 @@ void __fastcall BattleSkillSelectComandCardBtnComponent__SetBtnSprite(
   struct System_String_array *commandBtnSpriteNameList; // x8
   int32_t result; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4A01551 & 1) == 0 )
+  if ( (byte_4A01B72 & 1) == 0 )
   {
-    sub_1B64870(&Method_System_Enum_TryParse_BattleSkillSelectComandCardBtnComponent_CommandCardType___, selBtnInfo);
-    sub_1B64870(&System_Enum_TypeInfo, v7);
-    sub_1B64870(&UnityEngine_Object_TypeInfo, v8);
-    byte_4A01551 = 1;
+    sub_1B64A00(&Method_System_Enum_TryParse_BattleSkillSelectComandCardBtnComponent_CommandCardType___, selBtnInfo);
+    sub_1B64A00(&System_Enum_TypeInfo, v7);
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, v8);
+    byte_4A01B72 = 1;
   }
   result = 0;
   btnAtlas = (UnityEngine_Object_o *)this->fields.btnAtlas;
@@ -46,13 +46,13 @@ void __fastcall BattleSkillSelectComandCardBtnComponent__SetBtnSprite(
     v10 = System_Enum__TryParse_Int32Enum_(
             Name_k__BackingField,
             &result,
-            (const MethodInfo_2E44740 *)Method_System_Enum_TryParse_BattleSkillSelectComandCardBtnComponent_CommandCardType___);
+            (const MethodInfo_2E44D58 *)Method_System_Enum_TryParse_BattleSkillSelectComandCardBtnComponent_CommandCardType___);
     commandBtnSpriteNameList = this->fields.commandBtnSpriteNameList;
     if ( !commandBtnSpriteNameList )
 LABEL_14:
-      sub_1B64ACC(v10, v11);
+      sub_1B64C5C(v10, v11);
     if ( result >= commandBtnSpriteNameList->max_length )
-      sub_1B64AD4(v10, v11);
+      sub_1B64C64(v10, v11);
     UISprite__set_spriteName(btn, commandBtnSpriteNameList->m_Items[result], 0LL);
     ((void (__fastcall *)(UISprite_o *, Il2CppMethodPointer))btn->klass->vtable._33_MakePixelPerfect.method)(
       btn,

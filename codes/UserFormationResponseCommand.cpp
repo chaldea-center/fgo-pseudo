@@ -4,7 +4,7 @@ int32_t __fastcall UserFormationResponseCommand__ExecuteResponse(
         const MethodInfo *method)
 {
   if ( !data )
-    sub_1B64ACC(this, 0LL);
+    sub_1B64C5C(this, 0LL);
   return !ResponseData__checkError((ResponseData_o *)this, data->fields.resCode, method) || !data->fields.success;
 }
 

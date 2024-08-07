@@ -20,33 +20,33 @@ void __fastcall PosterizationShader__OnRenderImage(
   __int64 v12; // x1
   UnityEngine_Material_o *v13; // x21
 
-  if ( (byte_4A015B4 & 1) == 0 )
+  if ( (byte_4A01BD5 & 1) == 0 )
   {
-    sub_1B64870(&UnityEngine_Graphics_TypeInfo, source);
-    sub_1B64870(&StringLiteral_16124/*"_DisplayColor"*/, v7);
-    sub_1B64870(&StringLiteral_16236/*"_PetternNumber"*/, v8);
-    sub_1B64870(&StringLiteral_16126/*"_Divedenum"*/, v9);
-    sub_1B64870(&StringLiteral_16255/*"_Saturation"*/, v10);
-    byte_4A015B4 = 1;
+    sub_1B64A00(&UnityEngine_Graphics_TypeInfo, source);
+    sub_1B64A00(&StringLiteral_16125/*"_DisplayColor"*/, v7);
+    sub_1B64A00(&StringLiteral_16237/*"_PetternNumber"*/, v8);
+    sub_1B64A00(&StringLiteral_16127/*"_Divedenum"*/, v9);
+    sub_1B64A00(&StringLiteral_16256/*"_Saturation"*/, v10);
+    byte_4A01BD5 = 1;
   }
   material = ImageEffectBase__get_material((ImageEffectBase_o *)this, 0LL);
   if ( !material
-    || (UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16255/*"_Saturation"*/, this->fields.saturation, 0LL),
+    || (UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16256/*"_Saturation"*/, this->fields.saturation, 0LL),
         (material = ImageEffectBase__get_material((ImageEffectBase_o *)this, 0LL)) == 0LL)
-    || (UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16126/*"_Divedenum"*/, this->fields.divedenum, 0LL),
+    || (UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16127/*"_Divedenum"*/, this->fields.divedenum, 0LL),
         (material = ImageEffectBase__get_material((ImageEffectBase_o *)this, 0LL)) == 0LL)
     || (UnityEngine_Material__SetFloat(
           material,
-          (System_String_o *)StringLiteral_16124/*"_DisplayColor"*/,
+          (System_String_o *)StringLiteral_16125/*"_DisplayColor"*/,
           this->fields.displaycolorwhithinrange,
           0LL),
         (material = ImageEffectBase__get_material((ImageEffectBase_o *)this, 0LL)) == 0LL) )
   {
-    sub_1B64ACC(material, v12);
+    sub_1B64C5C(material, v12);
   }
-  UnityEngine_Material__SetInt(material, (System_String_o *)StringLiteral_16236/*"_PetternNumber"*/, this->fields.petternNumber, 0LL);
+  UnityEngine_Material__SetInt(material, (System_String_o *)StringLiteral_16237/*"_PetternNumber"*/, this->fields.petternNumber, 0LL);
   v13 = ImageEffectBase__get_material((ImageEffectBase_o *)this, 0LL);
   if ( !UnityEngine_Graphics_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo);
-  UnityEngine_Graphics__Blit_68981964((UnityEngine_Texture_o *)source, destination, v13, 0LL);
+  UnityEngine_Graphics__Blit_68983524((UnityEngine_Texture_o *)source, destination, v13, 0LL);
 }

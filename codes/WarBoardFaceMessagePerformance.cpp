@@ -21,16 +21,16 @@ System_Collections_IEnumerator_o *__fastcall WarBoardFaceMessagePerformance__Exe
   int32_t v4; // w2
   int32_t v5; // w3
 
-  if ( (byte_49FC41C & 1) == 0 )
+  if ( (byte_49FCA3C & 1) == 0 )
   {
-    sub_1B64870(&WarBoardFaceMessagePerformance__Execute_d__7_TypeInfo, method);
-    byte_49FC41C = 1;
+    sub_1B64A00(&WarBoardFaceMessagePerformance__Execute_d__7_TypeInfo, method);
+    byte_49FCA3C = 1;
   }
-  v3 = sub_1B64ABC(WarBoardFaceMessagePerformance__Execute_d__7_TypeInfo);
+  v3 = sub_1B64C4C(WarBoardFaceMessagePerformance__Execute_d__7_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -42,15 +42,15 @@ void __fastcall WarBoardFaceMessagePerformance__MessageEndCallback(
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_49FC41B & 1) == 0 )
+  if ( (byte_49FCA3B & 1) == 0 )
   {
-    sub_1B64870(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
-    byte_49FC41B = 1;
+    sub_1B64A00(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
+    byte_49FCA3B = 1;
   }
   *(&this->fields._isPause_k__BackingField + 1) = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
-    sub_1B64ACC(0LL, v4);
+    sub_1B64C5C(0LL, v4);
   WarBoardManager__AbleTimeAcceleration((WarBoardManager_o *)Instance, 0LL);
 }
 
@@ -61,14 +61,14 @@ void __fastcall WarBoardFaceMessagePerformance__OnEnd(WarBoardFaceMessagePerform
   __int64 v4; // x1
   struct WarBoardTaskBase_TaskCallback_o *EndCallback; // x8
 
-  if ( (byte_49FC41D & 1) == 0 )
+  if ( (byte_49FCA3D & 1) == 0 )
   {
-    sub_1B64870(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
-    byte_49FC41D = 1;
+    sub_1B64A00(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
+    byte_49FCA3D = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
-    sub_1B64ACC(0LL, v4);
+    sub_1B64C5C(0LL, v4);
   WarBoardManager__StopEffectAllScript((WarBoardManager_o *)Instance, 0LL);
   EndCallback = this->fields.EndCallback;
   this->fields._isPlaying_k__BackingField = 0;
@@ -94,13 +94,13 @@ void __fastcall WarBoardFaceMessagePerformance__OnStart(
   int64_t v11; // x22
   System_Action_o *v12; // x23
 
-  if ( (byte_49FC41A & 1) == 0 )
+  if ( (byte_49FCA3A & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, method);
-    sub_1B64870(&ScriptManager_TypeInfo, v3);
-    sub_1B64870(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
-    sub_1B64870(&Method_WarBoardFaceMessagePerformance_MessageEndCallback__, v5);
-    byte_49FC41A = 1;
+    sub_1B64A00(&System_Action_TypeInfo, method);
+    sub_1B64A00(&ScriptManager_TypeInfo, v3);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
+    sub_1B64A00(&Method_WarBoardFaceMessagePerformance_MessageEndCallback__, v5);
+    byte_49FCA3A = 1;
   }
   StartCallback = this->fields.StartCallback;
   this->fields._isPlaying_k__BackingField = 1;
@@ -108,15 +108,15 @@ void __fastcall WarBoardFaceMessagePerformance__OnStart(
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))StartCallback->fields.m_target)(
       StartCallback->fields.original_method_info,
       *(_QWORD *)&StartCallback->fields.extra_arg);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
-    sub_1B64ACC(0LL, v8);
+    sub_1B64C5C(0LL, v8);
   WarBoardManager__DisableTimeAcceleration((WarBoardManager_o *)Instance, 0LL);
   *(&this->fields._isPause_k__BackingField + 1) = 1;
   v9 = *(_DWORD *)(&this->fields._isPause_k__BackingField + 3);
   v10 = *(_DWORD *)&this->fields.messagePlay;
   v11 = *(_QWORD *)&this->fields.sceneType;
-  v12 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  v12 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
   System_Action___ctor(v12, (Il2CppObject *)this, Method_WarBoardFaceMessagePerformance_MessageEndCallback__, 0LL);
   if ( !ScriptManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
@@ -157,12 +157,12 @@ bool __fastcall WarBoardFaceMessagePerformance__Execute_d__7__MoveNext(
   int32_t v11; // w3
   int32_t v12; // w8
 
-  if ( (byte_49FC41E & 1) == 0 )
+  if ( (byte_49FCA3E & 1) == 0 )
   {
-    sub_1B64870(&System_Func_bool__TypeInfo, method);
-    sub_1B64870(&UnityEngine_WaitWhile_TypeInfo, v3);
-    sub_1B64870(&Method_WarBoardFaceMessagePerformance__Execute_b__7_0__, v4);
-    byte_49FC41E = 1;
+    sub_1B64A00(&System_Func_bool__TypeInfo, method);
+    sub_1B64A00(&UnityEngine_WaitWhile_TypeInfo, v3);
+    sub_1B64A00(&Method_WarBoardFaceMessagePerformance__Execute_b__7_0__, v4);
+    byte_49FCA3E = 1;
   }
   _1__state = this->fields.__1__state;
   result = 0;
@@ -176,12 +176,12 @@ bool __fastcall WarBoardFaceMessagePerformance__Execute_d__7__MoveNext(
       return result;
     this->fields.__1__state = -1;
     _4__this = (Il2CppObject *)this->fields.__4__this;
-    v8 = (System_Func_bool__o *)sub_1B64ABC(System_Func_bool__TypeInfo);
+    v8 = (System_Func_bool__o *)sub_1B64C4C(System_Func_bool__TypeInfo);
     System_Func_bool____ctor(v8, _4__this, Method_WarBoardFaceMessagePerformance__Execute_b__7_0__, 0LL);
-    v9 = (UnityEngine_WaitWhile_o *)sub_1B64ABC(UnityEngine_WaitWhile_TypeInfo);
+    v9 = (UnityEngine_WaitWhile_o *)sub_1B64C4C(UnityEngine_WaitWhile_TypeInfo);
     UnityEngine_WaitWhile___ctor(v9, v8, 0LL);
     this->fields.__2__current = (Il2CppObject *)v9;
-    sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.__2__current, (int32_t)v9, v10, v11);
+    sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.__2__current, (int32_t)v9, v10, v11);
     v12 = 1;
     result = 1;
   }
@@ -206,11 +206,11 @@ void __fastcall __noreturn WarBoardFaceMessagePerformance__Execute_d__7__System_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B64884(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B64ABC(v2);
+  v2 = sub_1B64A14(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B64C4C(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B64884(&Method_WarBoardFaceMessagePerformance__Execute_d__7_System_Collections_IEnumerator_Reset__);
-  sub_1B64998(v3, v4);
+  v4 = sub_1B64A14(&Method_WarBoardFaceMessagePerformance__Execute_d__7_System_Collections_IEnumerator_Reset__);
+  sub_1B64B28(v3, v4);
 }
 
 

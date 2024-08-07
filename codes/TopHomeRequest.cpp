@@ -3,11 +3,11 @@ bool __fastcall TopHomeRequest__IsExpirationDateUpdateEventMap(const MethodInfo 
   __int64 v1; // x1
   __int64 v2; // x1
 
-  if ( (byte_49FFE4F & 1) == 0 )
+  if ( (byte_4A00470 & 1) == 0 )
   {
-    sub_1B64870(&NetworkManager_TypeInfo, v1);
-    sub_1B64870(&TopHomeRequest_TypeInfo, v2);
-    byte_49FFE4F = 1;
+    sub_1B64A00(&NetworkManager_TypeInfo, v1);
+    sub_1B64A00(&TopHomeRequest_TypeInfo, v2);
+    byte_4A00470 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -26,12 +26,12 @@ void __fastcall TopHomeRequest__UpdateAccessTime(const MethodInfo *method)
   struct BalanceConfig_StaticFields *static_fields; // x8
   struct TopHomeRequest_StaticFields *v8; // x9
 
-  if ( (byte_49FFE51 & 1) == 0 )
+  if ( (byte_4A00472 & 1) == 0 )
   {
-    sub_1B64870(&BalanceConfig_TypeInfo, v1);
-    sub_1B64870(&NetworkManager_TypeInfo, v2);
-    sub_1B64870(&TopHomeRequest_TypeInfo, v3);
-    byte_49FFE51 = 1;
+    sub_1B64A00(&BalanceConfig_TypeInfo, v1);
+    sub_1B64A00(&NetworkManager_TypeInfo, v2);
+    sub_1B64A00(&TopHomeRequest_TypeInfo, v3);
+    byte_4A00472 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -58,11 +58,11 @@ bool __fastcall TopHomeRequest__checkExpirationDate(TopHomeRequest_o *this, cons
   int64_t nextRefreshTime; // x9
   bool result; // w0
 
-  if ( (byte_49FFE4C & 1) == 0 )
+  if ( (byte_4A0046D & 1) == 0 )
   {
-    sub_1B64870(&NetworkManager_TypeInfo, method);
-    sub_1B64870(&TopHomeRequest_TypeInfo, v2);
-    byte_49FFE4C = 1;
+    sub_1B64A00(&NetworkManager_TypeInfo, method);
+    sub_1B64A00(&TopHomeRequest_TypeInfo, v2);
+    byte_4A0046D = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -83,10 +83,10 @@ void __fastcall TopHomeRequest__clearExpirationDate(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_49FFE49 & 1) == 0 )
+  if ( (byte_4A0046A & 1) == 0 )
   {
-    sub_1B64870(&TopHomeRequest_TypeInfo, v1);
-    byte_49FFE49 = 1;
+    sub_1B64A00(&TopHomeRequest_TypeInfo, v1);
+    byte_4A0046A = 1;
   }
   TopHomeRequest_TypeInfo->static_fields->accessTime = 0LL;
 }
@@ -96,15 +96,15 @@ System_String_o *__fastcall TopHomeRequest__getMockData(TopHomeRequest_o *this, 
 {
   __int64 v2; // x1
 
-  if ( (byte_49FFE4B & 1) == 0 )
+  if ( (byte_4A0046C & 1) == 0 )
   {
-    sub_1B64870(&NetworkManager_TypeInfo, method);
-    sub_1B64870(&StringLiteral_9071/*"MockTopLoginRequest"*/, v2);
-    byte_49FFE4B = 1;
+    sub_1B64A00(&NetworkManager_TypeInfo, method);
+    sub_1B64A00(&StringLiteral_9072/*"MockTopLoginRequest"*/, v2);
+    byte_4A0046C = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9071/*"MockTopLoginRequest"*/, 0LL);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9072/*"MockTopLoginRequest"*/, 0LL);
 }
 
 
@@ -113,25 +113,25 @@ System_String_o *__fastcall TopHomeRequest__getURL(TopHomeRequest_o *this, const
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_49FFE4A & 1) == 0 )
+  if ( (byte_4A0046B & 1) == 0 )
   {
-    sub_1B64870(&NetworkManager_TypeInfo, method);
-    sub_1B64870(&StringLiteral_19867/*"home/top"*/, v2);
-    byte_49FFE4A = 1;
+    sub_1B64A00(&NetworkManager_TypeInfo, method);
+    sub_1B64A00(&StringLiteral_19867/*"home/top"*/, v2);
+    byte_4A0046B = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61383576(BaseUrl, (System_String_o *)StringLiteral_19867/*"home/top"*/, 0LL);
+  return System_String__Concat_61385136(BaseUrl, (System_String_o *)StringLiteral_19867/*"home/top"*/, 0LL);
 }
 
 
 bool __fastcall TopHomeRequest__isBackgroundRequest(TopHomeRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FFE4D & 1) == 0 )
+  if ( (byte_4A0046E & 1) == 0 )
   {
-    sub_1B64870(&TopHomeRequest_TypeInfo, method);
-    byte_49FFE4D = 1;
+    sub_1B64A00(&TopHomeRequest_TypeInfo, method);
+    byte_4A0046E = 1;
   }
   return TopHomeRequest_TypeInfo->static_fields->isBackgroundRequestEnabled;
 }
@@ -159,14 +159,14 @@ void __fastcall TopHomeRequest__requestCompleted(
   struct TopHomeRequest_StaticFields *static_fields; // x8
   __int64 *v20; // x9
 
-  if ( (byte_49FFE52 & 1) == 0 )
+  if ( (byte_4A00473 & 1) == 0 )
   {
-    sub_1B64870(&JsonManager_TypeInfo, responseList);
-    sub_1B64870(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B64870(&TopHomeRequest_TypeInfo, v6);
-    sub_1B64870(&StringLiteral_22140/*"ok"*/, v7);
-    sub_1B64870(&StringLiteral_21971/*"ng"*/, v8);
-    byte_49FFE52 = 1;
+    sub_1B64A00(&JsonManager_TypeInfo, responseList);
+    sub_1B64A00(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B64A00(&TopHomeRequest_TypeInfo, v6);
+    sub_1B64A00(&StringLiteral_22140/*"ok"*/, v7);
+    sub_1B64A00(&StringLiteral_21971/*"ng"*/, v8);
+    byte_4A00473 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -217,10 +217,10 @@ LABEL_15:
 // local variable allocation has failed, the output may be wrong!
 void __fastcall TopHomeRequest__setBackgroundRequest(TopHomeRequest_o *this, bool isEnabled, const MethodInfo *method)
 {
-  if ( (byte_49FFE4E & 1) == 0 )
+  if ( (byte_4A0046F & 1) == 0 )
   {
-    sub_1B64870(&TopHomeRequest_TypeInfo, isEnabled);
-    byte_49FFE4E = 1;
+    sub_1B64A00(&TopHomeRequest_TypeInfo, isEnabled);
+    byte_4A0046F = 1;
   }
   TopHomeRequest_TypeInfo->static_fields->isBackgroundRequestEnabled = isEnabled;
 }
@@ -232,11 +232,11 @@ void __fastcall TopHomeRequest__setRecentRefreshTime(int64_t time, const MethodI
   int64_t v4; // x0
   struct TopHomeRequest_StaticFields *static_fields; // x8
 
-  if ( (byte_49FFE50 & 1) == 0 )
+  if ( (byte_4A00471 & 1) == 0 )
   {
-    sub_1B64870(&NetworkManager_TypeInfo, method);
-    sub_1B64870(&TopHomeRequest_TypeInfo, v3);
-    byte_49FFE50 = 1;
+    sub_1B64A00(&NetworkManager_TypeInfo, method);
+    sub_1B64A00(&TopHomeRequest_TypeInfo, v3);
+    byte_4A00471 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);

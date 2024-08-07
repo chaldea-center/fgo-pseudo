@@ -12,16 +12,16 @@ System_Collections_IEnumerator_o *__fastcall UICounterLabel__ExecAnimation(
   int32_t v4; // w2
   int32_t v5; // w3
 
-  if ( (byte_49FDADD & 1) == 0 )
+  if ( (byte_49FE0FD & 1) == 0 )
   {
-    sub_1B64870(&UICounterLabel__ExecAnimation_d__16_TypeInfo, method);
-    byte_49FDADD = 1;
+    sub_1B64A00(&UICounterLabel__ExecAnimation_d__16_TypeInfo, method);
+    byte_49FE0FD = 1;
   }
-  v3 = sub_1B64ABC(UICounterLabel__ExecAnimation_d__16_TypeInfo);
+  v3 = sub_1B64C4C(UICounterLabel__ExecAnimation_d__16_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -33,7 +33,7 @@ void __fastcall UICounterLabel__PlayAnimation(UICounterLabel_o *this, const Meth
   if ( this->fields._AddCount_k__BackingField )
   {
     v3 = UICounterLabel__ExecAnimation(this, method);
-    UnityEngine_MonoBehaviour__StartCoroutine_69121188((UnityEngine_MonoBehaviour_o *)this, v3, 0LL);
+    UnityEngine_MonoBehaviour__StartCoroutine_69122748((UnityEngine_MonoBehaviour_o *)this, v3, 0LL);
   }
 }
 
@@ -55,10 +55,10 @@ void __fastcall UICounterLabel__SetCountLabel(UICounterLabel_o *this, int32_t co
 
   v4 = this;
   v14 = count;
-  if ( (byte_49FDADE & 1) == 0 )
+  if ( (byte_49FE0FE & 1) == 0 )
   {
-    this = (UICounterLabel_o *)sub_1B64870(&int_TypeInfo, *(_QWORD *)&count);
-    byte_49FDADE = 1;
+    this = (UICounterLabel_o *)sub_1B64A00(&int_TypeInfo, *(_QWORD *)&count);
+    byte_49FE0FE = 1;
   }
   countLabel = v4->fields.countLabel;
   if ( !countLabel )
@@ -85,7 +85,7 @@ void __fastcall UICounterLabel__SetCountLabel(UICounterLabel_o *this, int32_t co
       return;
     }
 LABEL_11:
-    sub_1B64ACC(this, *(_QWORD *)&count);
+    sub_1B64C5C(this, *(_QWORD *)&count);
   }
 }
 
@@ -106,7 +106,7 @@ void __fastcall UICounterLabel__Setup(
   this->fields._MainCount_k__BackingField = count;
   v7 = isFixedWidth;
   this->fields.animTime = animTime;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.format, (int32_t)format, (int32_t)format, isFixedWidth);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.format, (int32_t)format, (int32_t)format, isFixedWidth);
   *((_BYTE *)p_format + 16) = v7;
 }
 
@@ -180,11 +180,11 @@ bool __fastcall UICounterLabel__ExecAnimation_d__16__MoveNext(
   int v24; // [xsp+Ch] [xbp-34h] BYREF
 
   v2 = this;
-  if ( (byte_49FDADF & 1) == 0 )
+  if ( (byte_49FE0FF & 1) == 0 )
   {
-    sub_1B64870(&UnityEngine_Application_TypeInfo, method);
-    this = (UICounterLabel__ExecAnimation_d__16_o *)sub_1B64870(&int_TypeInfo, v3);
-    byte_49FDADF = 1;
+    sub_1B64A00(&UnityEngine_Application_TypeInfo, method);
+    this = (UICounterLabel__ExecAnimation_d__16_o *)sub_1B64A00(&int_TypeInfo, v3);
+    byte_49FE0FF = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -202,7 +202,7 @@ bool __fastcall UICounterLabel__ExecAnimation_d__16__MoveNext(
     v2->fields.__1__state = -1;
     if ( !_4__this )
 LABEL_23:
-      sub_1B64ACC(this, method);
+      sub_1B64C5C(this, method);
     AddCount_k__BackingField = _4__this->fields._AddCount_k__BackingField;
     if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -241,7 +241,7 @@ LABEL_23:
     v18 = j_il2cpp_value_box_0(int_TypeInfo, &v24, v15, v16, v17);
     v2->fields.__2__current = (Il2CppObject *)v18;
     p__2__current = (ServantStatusBattleListViewItem_o *)&v2->fields.__2__current;
-    sub_1B64814(p__2__current, v18, v20, v21);
+    sub_1B649A4(p__2__current, v18, v20, v21);
     result = 1;
     *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
   }
@@ -265,11 +265,11 @@ void __fastcall __noreturn UICounterLabel__ExecAnimation_d__16__System_Collectio
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B64884(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B64ABC(v2);
+  v2 = sub_1B64A14(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B64C4C(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B64884(&Method_UICounterLabel__ExecAnimation_d__16_System_Collections_IEnumerator_Reset__);
-  sub_1B64998(v3, v4);
+  v4 = sub_1B64A14(&Method_UICounterLabel__ExecAnimation_d__16_System_Collections_IEnumerator_Reset__);
+  sub_1B64B28(v3, v4);
 }
 
 

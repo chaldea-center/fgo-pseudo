@@ -1,16 +1,16 @@
 void __fastcall NotEndEventMissionFixMaster___ctor(NotEndEventMissionFixMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FE8B5 & 1) == 0 )
+  if ( (byte_49FEED5 & 1) == 0 )
   {
-    sub_1B64870(
+    sub_1B64A00(
       &Method_DataMasterBase_NotEndEventMissionFixMaster__NotEndEventMissionFixEntity__string___ctor__,
       method);
-    byte_49FE8B5 = 1;
+    byte_49FEED5 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     243,
-    (const MethodInfo_30D6498 *)Method_DataMasterBase_NotEndEventMissionFixMaster__NotEndEventMissionFixEntity__string___ctor__);
+    (const MethodInfo_30D6AB0 *)Method_DataMasterBase_NotEndEventMissionFixMaster__NotEndEventMissionFixEntity__string___ctor__);
 }
 
 
@@ -23,18 +23,18 @@ NotEndEventMissionFixEntity_o *__fastcall NotEndEventMissionFixMaster__GetEntity
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_49FE8B3 & 1) == 0 )
+  if ( (byte_49FEED3 & 1) == 0 )
   {
-    sub_1B64870(
+    sub_1B64A00(
       &Method_DataMasterBase_NotEndEventMissionFixMaster__NotEndEventMissionFixEntity__string__GetEntity__,
       *(_QWORD *)&eventId);
-    byte_49FE8B3 = 1;
+    byte_49FEED3 = 1;
   }
   PK = (Il2CppObject *)NotEndEventMissionFixEntity__CreatePK(eventId, missionId, *(const MethodInfo **)&missionId);
   return (NotEndEventMissionFixEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                             (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                             PK,
-                                            (const MethodInfo_30D64D8 *)Method_DataMasterBase_NotEndEventMissionFixMaster__NotEndEventMissionFixEntity__string__GetEntity__);
+                                            (const MethodInfo_30D6AF0 *)Method_DataMasterBase_NotEndEventMissionFixMaster__NotEndEventMissionFixEntity__string__GetEntity__);
 }
 
 
@@ -48,17 +48,17 @@ bool __fastcall NotEndEventMissionFixMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_49FE8B4 & 1) == 0 )
+  if ( (byte_49FEED4 & 1) == 0 )
   {
-    sub_1B64870(
+    sub_1B64A00(
       &Method_DataMasterBase_NotEndEventMissionFixMaster__NotEndEventMissionFixEntity__string__TryGetEntity__,
       entity);
-    byte_49FE8B4 = 1;
+    byte_49FEED4 = 1;
   }
   PK = (Il2CppObject *)NotEndEventMissionFixEntity__CreatePK(eventId, missionId, *(const MethodInfo **)&eventId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_30D6528 *)Method_DataMasterBase_NotEndEventMissionFixMaster__NotEndEventMissionFixEntity__string__TryGetEntity__);
+           (const MethodInfo_30D6B40 *)Method_DataMasterBase_NotEndEventMissionFixMaster__NotEndEventMissionFixEntity__string__TryGetEntity__);
 }

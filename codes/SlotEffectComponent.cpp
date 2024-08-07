@@ -20,30 +20,30 @@ void __fastcall SlotEffectComponent___ctor(SlotEffectComponent_o *this, const Me
   int32_t v20; // w2
   int32_t v21; // w3
 
-  if ( (byte_4A016E6 & 1) == 0 )
+  if ( (byte_4A01D07 & 1) == 0 )
   {
-    sub_1B64870(&string___TypeInfo, method);
-    sub_1B64870(&StringLiteral_12594/*"Servants"*/, v5);
-    sub_1B64870(&StringLiteral_16462/*"_blurOnOff"*/, v6);
-    sub_1B64870(&StringLiteral_16488/*"_mapIdVal"*/, v7);
-    sub_1B64870(&StringLiteral_1/*""*/, v8);
-    byte_4A016E6 = 1;
+    sub_1B64A00(&string___TypeInfo, method);
+    sub_1B64A00(&StringLiteral_12595/*"Servants"*/, v5);
+    sub_1B64A00(&StringLiteral_16463/*"_blurOnOff"*/, v6);
+    sub_1B64A00(&StringLiteral_16489/*"_mapIdVal"*/, v7);
+    sub_1B64A00(&StringLiteral_1/*""*/, v8);
+    byte_4A01D07 = 1;
   }
-  v9 = StringLiteral_12594/*"Servants"*/;
-  this->fields.voiceTypeName = (struct System_String_o *)StringLiteral_12594/*"Servants"*/;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.voiceTypeName, v9, v2, v3);
-  v10 = StringLiteral_16488/*"_mapIdVal"*/;
-  this->fields.reelUvIdKey = (struct System_String_o *)StringLiteral_16488/*"_mapIdVal"*/;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.reelUvIdKey, v10, v11, v12);
-  v13 = StringLiteral_16462/*"_blurOnOff"*/;
-  this->fields.reelBlurKey = (struct System_String_o *)StringLiteral_16462/*"_blurOnOff"*/;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.reelBlurKey, v13, v14, v15);
+  v9 = StringLiteral_12595/*"Servants"*/;
+  this->fields.voiceTypeName = (struct System_String_o *)StringLiteral_12595/*"Servants"*/;
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.voiceTypeName, v9, v2, v3);
+  v10 = StringLiteral_16489/*"_mapIdVal"*/;
+  this->fields.reelUvIdKey = (struct System_String_o *)StringLiteral_16489/*"_mapIdVal"*/;
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.reelUvIdKey, v10, v11, v12);
+  v13 = StringLiteral_16463/*"_blurOnOff"*/;
+  this->fields.reelBlurKey = (struct System_String_o *)StringLiteral_16463/*"_blurOnOff"*/;
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.reelBlurKey, v13, v14, v15);
   v16 = (int)StringLiteral_1/*""*/;
   this->fields.voiceDataStr = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.voiceDataStr, v16, v17, v18);
-  v19 = (struct System_String_array *)sub_1B64918(string___TypeInfo, 0LL);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.voiceDataStr, v16, v17, v18);
+  v19 = (struct System_String_array *)sub_1B64AA8(string___TypeInfo, 0LL);
   this->fields.voiceIdArray = v19;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.voiceIdArray, (int32_t)v19, v20, v21);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.voiceIdArray, (int32_t)v19, v20, v21);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -60,11 +60,11 @@ void __fastcall SlotEffectComponent__CommonBlurFunc(
   int32_t v9; // w21
 
   v6 = this;
-  if ( (byte_4A016E1 & 1) == 0 )
+  if ( (byte_4A01D02 & 1) == 0 )
   {
-    sub_1B64870(&Method_System_Collections_Generic_List_MeshRenderer__get_Count__, list);
-    this = (SlotEffectComponent_o *)sub_1B64870(&Method_System_Collections_Generic_List_MeshRenderer__get_Item__, v7);
-    byte_4A016E1 = 1;
+    sub_1B64A00(&Method_System_Collections_Generic_List_MeshRenderer__get_Count__, list);
+    this = (SlotEffectComponent_o *)sub_1B64A00(&Method_System_Collections_Generic_List_MeshRenderer__get_Item__, v7);
+    byte_4A01D02 = 1;
   }
   if ( flg )
     v8 = 1.0;
@@ -80,7 +80,7 @@ void __fastcall SlotEffectComponent__CommonBlurFunc(
       this = (SlotEffectComponent_o *)System_Collections_Generic_List_object___get_Item(
                                         (System_Collections_Generic_List_object__o *)list,
                                         v9,
-                                        (const MethodInfo_34AF6E0 *)Method_System_Collections_Generic_List_MeshRenderer__get_Item__);
+                                        (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_MeshRenderer__get_Item__);
       if ( !this )
         break;
       this = (SlotEffectComponent_o *)UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)this, 0LL);
@@ -91,7 +91,7 @@ void __fastcall SlotEffectComponent__CommonBlurFunc(
         return;
     }
 LABEL_13:
-    sub_1B64ACC(this, list);
+    sub_1B64C5C(this, list);
   }
 }
 
@@ -106,10 +106,10 @@ void __fastcall SlotEffectComponent__CommonReelFunc(
   unsigned __int64 v7; // x22
 
   v6 = this;
-  if ( (byte_4A016E0 & 1) == 0 )
+  if ( (byte_4A01D01 & 1) == 0 )
   {
-    this = (SlotEffectComponent_o *)sub_1B64870(&Method_System_Collections_Generic_List_MeshRenderer__get_Item__, list);
-    byte_4A016E0 = 1;
+    this = (SlotEffectComponent_o *)sub_1B64A00(&Method_System_Collections_Generic_List_MeshRenderer__get_Item__, list);
+    byte_4A01D01 = 1;
   }
   if ( !ids )
     goto LABEL_12;
@@ -121,12 +121,12 @@ void __fastcall SlotEffectComponent__CommonReelFunc(
       this = (SlotEffectComponent_o *)System_Collections_Generic_List_object___get_Item(
                                         (System_Collections_Generic_List_object__o *)list,
                                         v7,
-                                        (const MethodInfo_34AF6E0 *)Method_System_Collections_Generic_List_MeshRenderer__get_Item__);
+                                        (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_MeshRenderer__get_Item__);
       if ( !this )
         break;
       this = (SlotEffectComponent_o *)UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)this, 0LL);
       if ( v7 >= ids->max_length )
-        sub_1B64AD4(this, list);
+        sub_1B64C64(this, list);
       if ( !this )
         break;
       UnityEngine_Material__SetFloat(
@@ -138,7 +138,7 @@ void __fastcall SlotEffectComponent__CommonReelFunc(
         return;
     }
 LABEL_12:
-    sub_1B64ACC(this, list);
+    sub_1B64C5C(this, list);
   }
 }
 
@@ -167,19 +167,19 @@ void __fastcall SlotEffectComponent__PlaySe(
   System_String_o *leftReelList; // x1
   unsigned int v9; // w8
 
-  if ( (byte_4A016E4 & 1) == 0 )
+  if ( (byte_4A01D05 & 1) == 0 )
   {
-    this = (SlotEffectComponent_o *)sub_1B64870(&Method_SlotEffectComponent_PlaySe__, seName);
-    byte_4A016E4 = 1;
+    this = (SlotEffectComponent_o *)sub_1B64A00(&Method_SlotEffectComponent_PlaySe__, seName);
+    byte_4A01D05 = 1;
   }
   if ( !seName || (this = (SlotEffectComponent_o *)System_String__Split(seName, 0x3Au, 0, 0LL)) == 0LL )
-    sub_1B64ACC(this, seName);
+    sub_1B64C5C(this, seName);
   v4 = this;
   m_CancellationTokenSource = (int)this->fields.m_CancellationTokenSource;
   v6 = Method_SlotEffectComponent_PlaySe__;
   if ( (*((_BYTE *)Method_SlotEffectComponent_PlaySe__ + 83) & 2) != 0 )
-    v6 = (_QWORD *)sub_1B64888(Method_SlotEffectComponent_PlaySe__);
-  v7 = (System_Reflection_MethodBase_o *)sub_1B64854(v6, v6[4]);
+    v6 = (_QWORD *)sub_1B64A18(Method_SlotEffectComponent_PlaySe__);
+  v7 = (System_Reflection_MethodBase_o *)sub_1B649E4(v6, v6[4]);
   v9 = (unsigned int)v4->fields.m_CancellationTokenSource;
   if ( !v9 )
     goto LABEL_13;
@@ -191,8 +191,8 @@ void __fastcall SlotEffectComponent__PlaySe(
   }
   if ( v9 <= 1 )
 LABEL_13:
-    sub_1B64AD4(v7, leftReelList);
-  OverwriteAssetSoundName__PlaySe_38220984(
+    sub_1B64C64(v7, leftReelList);
+  OverwriteAssetSoundName__PlaySe_38221336(
     v7,
     leftReelList,
     (System_String_o *)v4->fields.centerReelList,
@@ -215,20 +215,20 @@ void __fastcall SlotEffectComponent__PlayVoice(SlotEffectComponent_o *this, int3
   float DEFAULT_VOLUME; // s8
 
   v4 = this;
-  if ( (byte_4A016E5 & 1) == 0 )
+  if ( (byte_4A01D06 & 1) == 0 )
   {
-    sub_1B64870(&SeManager_TypeInfo, *(_QWORD *)&index);
-    this = (SlotEffectComponent_o *)sub_1B64870(&SoundManager_TypeInfo, v5);
-    byte_4A016E5 = 1;
+    sub_1B64A00(&SeManager_TypeInfo, *(_QWORD *)&index);
+    this = (SlotEffectComponent_o *)sub_1B64A00(&SoundManager_TypeInfo, v5);
+    byte_4A01D06 = 1;
   }
   voiceIdArray = v4->fields.voiceIdArray;
   if ( !voiceIdArray )
-    sub_1B64ACC(this, *(_QWORD *)&index);
+    sub_1B64C5C(this, *(_QWORD *)&index);
   max_length = voiceIdArray->max_length;
   if ( max_length > index )
   {
     if ( max_length <= (unsigned int)index )
-      sub_1B64AD4(this, *(_QWORD *)&index);
+      sub_1B64C64(this, *(_QWORD *)&index);
     voiceDataStr = v4->fields.voiceDataStr;
     v9 = voiceIdArray->m_Items[index];
     v10 = SeManager_TypeInfo;
@@ -240,7 +240,7 @@ void __fastcall SlotEffectComponent__PlayVoice(SlotEffectComponent_o *this, int3
     DEFAULT_VOLUME = v10->static_fields->DEFAULT_VOLUME;
     if ( !SoundManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    SoundManager__playVoice_38391544(voiceDataStr, v9, DEFAULT_VOLUME, 0LL, 0LL);
+    SoundManager__playVoice_38391896(voiceDataStr, v9, DEFAULT_VOLUME, 0LL, 0LL);
   }
 }
 
@@ -249,10 +249,10 @@ void __fastcall SlotEffectComponent__ReleaseGimmickData(SlotEffectComponent_o *t
 {
   System_String_o *voiceDataStr; // x19
 
-  if ( (byte_4A016E3 & 1) == 0 )
+  if ( (byte_4A01D04 & 1) == 0 )
   {
-    sub_1B64870(&SoundManager_TypeInfo, method);
-    byte_4A016E3 = 1;
+    sub_1B64A00(&SoundManager_TypeInfo, method);
+    byte_4A01D04 = 1;
   }
   voiceDataStr = this->fields.voiceDataStr;
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
@@ -333,34 +333,34 @@ void __fastcall SlotEffectComponent__SetGimmick(
   const MethodInfo *v59; // x4
   int32_t v60; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4A016DF & 1) == 0 )
+  if ( (byte_4A01D00 & 1) == 0 )
   {
-    sub_1B64870(&Method_BasicHelper_Shuffle_object___, *(_QWORD *)&svtId);
-    sub_1B64870(&Method_BasicHelper_Shuffle_string___, v9);
-    sub_1B64870(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v10);
-    sub_1B64870(&System_Collections_Generic_Dictionary_string__object__TypeInfo, v11);
-    sub_1B64870(&int_TypeInfo, v12);
-    sub_1B64870(&Method_System_Collections_Generic_List_string__AddRange__, v13);
-    sub_1B64870(&Method_System_Collections_Generic_List_object__AddRange__, v14);
-    sub_1B64870(&Method_System_Collections_Generic_List_object__Clear__, v15);
-    sub_1B64870(&Method_System_Collections_Generic_List_object___ctor___75668744, v16);
-    sub_1B64870(&Method_System_Collections_Generic_List_string___ctor__, v17);
-    sub_1B64870(&Method_System_Collections_Generic_List_string__get_Item__, v18);
-    sub_1B64870(&Method_System_Collections_Generic_List_object__get_Item__, v19);
-    sub_1B64870(&System_Collections_Generic_List_object__TypeInfo, v20);
-    sub_1B64870(&System_Collections_Generic_List_string__TypeInfo, v21);
-    sub_1B64870(&SoundManager_TypeInfo, v22);
-    sub_1B64870(&string___TypeInfo, v23);
-    sub_1B64870(&StringLiteral_25001/*"{0}_{1}"*/, v24);
-    sub_1B64870(&StringLiteral_24491/*"voice"*/, v25);
-    byte_4A016DF = 1;
+    sub_1B64A00(&Method_BasicHelper_Shuffle_object___, *(_QWORD *)&svtId);
+    sub_1B64A00(&Method_BasicHelper_Shuffle_string___, v9);
+    sub_1B64A00(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v10);
+    sub_1B64A00(&System_Collections_Generic_Dictionary_string__object__TypeInfo, v11);
+    sub_1B64A00(&int_TypeInfo, v12);
+    sub_1B64A00(&Method_System_Collections_Generic_List_string__AddRange__, v13);
+    sub_1B64A00(&Method_System_Collections_Generic_List_object__AddRange__, v14);
+    sub_1B64A00(&Method_System_Collections_Generic_List_object__Clear__, v15);
+    sub_1B64A00(&Method_System_Collections_Generic_List_object___ctor___75670296, v16);
+    sub_1B64A00(&Method_System_Collections_Generic_List_string___ctor__, v17);
+    sub_1B64A00(&Method_System_Collections_Generic_List_string__get_Item__, v18);
+    sub_1B64A00(&Method_System_Collections_Generic_List_object__get_Item__, v19);
+    sub_1B64A00(&System_Collections_Generic_List_object__TypeInfo, v20);
+    sub_1B64A00(&System_Collections_Generic_List_string__TypeInfo, v21);
+    sub_1B64A00(&SoundManager_TypeInfo, v22);
+    sub_1B64A00(&string___TypeInfo, v23);
+    sub_1B64A00(&StringLiteral_25001/*"{0}_{1}"*/, v24);
+    sub_1B64A00(&StringLiteral_24491/*"voice"*/, v25);
+    byte_4A01D00 = 1;
   }
   voiceTypeName = (Il2CppObject *)this->fields.voiceTypeName;
   v60 = svtId;
   v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v60, data, endCb, method);
-  v28 = System_String__Format_61397948((System_String_o *)StringLiteral_25001/*"{0}_{1}"*/, voiceTypeName, v27, 0LL);
+  v28 = System_String__Format_61399508((System_String_o *)StringLiteral_25001/*"{0}_{1}"*/, voiceTypeName, v27, 0LL);
   this->fields.voiceDataStr = v28;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.voiceDataStr, (int32_t)v28, v29, v30);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.voiceDataStr, (int32_t)v28, v29, v30);
   if ( !data )
     goto LABEL_29;
   indexArray = data->fields.indexArray;
@@ -375,44 +375,44 @@ void __fastcall SlotEffectComponent__SetGimmick(
   if ( (unsigned int)v35 >= animationTypes->max_length )
     goto LABEL_30;
   this->fields.animationType = animationTypes->m_Items[v35 + 1];
-  v36 = (System_Collections_Generic_List_object__o *)sub_1B64ABC(System_Collections_Generic_List_string__TypeInfo);
+  v36 = (System_Collections_Generic_List_object__o *)sub_1B64C4C(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v36,
-    (const MethodInfo_34AF17C *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_34AF794 *)Method_System_Collections_Generic_List_string___ctor__);
   if ( !v36 )
     goto LABEL_29;
   System_Collections_Generic_List_object___AddRange(
     v36,
     (System_Collections_Generic_IEnumerable_T__o *)data->fields.startVoiceIdArray,
-    (const MethodInfo_34AFBBC *)Method_System_Collections_Generic_List_string__AddRange__);
+    (const MethodInfo_34B01D4 *)Method_System_Collections_Generic_List_string__AddRange__);
   Item = (char *)BasicHelper__Shuffle_object_(
                    (System_Collections_Generic_List_T__o *)v36,
-                   (const MethodInfo_2E2B2A4 *)Method_BasicHelper_Shuffle_string___);
+                   (const MethodInfo_2E2B8BC *)Method_BasicHelper_Shuffle_string___);
   if ( !Item )
     goto LABEL_29;
   Item = (char *)System_Collections_Generic_List_object___get_Item(
                    (System_Collections_Generic_List_object__o *)Item,
                    0,
-                   (const MethodInfo_34AF6E0 *)Method_System_Collections_Generic_List_string__get_Item__);
+                   (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_string__get_Item__);
   resultVoiceIdArray = data->fields.resultVoiceIdArray;
   if ( !resultVoiceIdArray )
     goto LABEL_29;
   v38 = Item;
-  v39 = sub_1B64ABC(System_Collections_Generic_List_object__TypeInfo);
-  System_Collections_Generic_List_object____ctor_55243244(
+  v39 = sub_1B64C4C(System_Collections_Generic_List_object__TypeInfo);
+  System_Collections_Generic_List_object____ctor_55244804(
     (System_Collections_Generic_List_object__o *)v39,
     resultVoiceIdArray->max_length,
-    (const MethodInfo_34AF1EC *)Method_System_Collections_Generic_List_object___ctor___75668744);
+    (const MethodInfo_34AF804 *)Method_System_Collections_Generic_List_object___ctor___75670296);
   if ( !v39 )
     goto LABEL_29;
   System_Collections_Generic_List_object___AddRange(
     (System_Collections_Generic_List_object__o *)v39,
     (System_Collections_Generic_IEnumerable_T__o *)resultVoiceIdArray,
-    (const MethodInfo_34AFBBC *)Method_System_Collections_Generic_List_object__AddRange__);
+    (const MethodInfo_34B01D4 *)Method_System_Collections_Generic_List_object__AddRange__);
   Item = (char *)System_Collections_Generic_List_object___get_Item(
                    (System_Collections_Generic_List_object__o *)v39,
                    v35,
-                   (const MethodInfo_34AF6E0 *)Method_System_Collections_Generic_List_object__get_Item__);
+                   (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_object__get_Item__);
   v40 = (System_Collections_Generic_Dictionary_object__object__o *)Item;
   if ( Item )
   {
@@ -434,11 +434,11 @@ void __fastcall SlotEffectComponent__SetGimmick(
     System_Array__Clear(*(System_Array_o **)(v39 + 16), 0, v42, 0LL);
   if ( !v40 )
 LABEL_29:
-    sub_1B64ACC(Item, v32);
+    sub_1B64C5C(Item, v32);
   Item = (char *)System_Collections_Generic_Dictionary_object__object___get_Item(
                    v40,
                    (Il2CppObject *)StringLiteral_24491/*"voice"*/,
-                   (const MethodInfo_317B654 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                   (const MethodInfo_317BC6C *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( Item )
   {
     v44 = LOBYTE(System_Collections_Generic_List_object__TypeInfo->vtable._0_Equals.methodPtr);
@@ -446,42 +446,42 @@ LABEL_29:
       || *(System_Collections_Generic_List_object__c **)(*(_QWORD *)(*(_QWORD *)Item + 200LL) + 8 * v44 - 8) != System_Collections_Generic_List_object__TypeInfo )
     {
 LABEL_31:
-      sub_1B64D8C(Item);
+      sub_1B64F1C(Item);
       SlotEffectComponent__SetReelVal(v55, v56, v57, v58, v59);
       return;
     }
   }
   Item = (char *)BasicHelper__Shuffle_object_(
                    (System_Collections_Generic_List_T__o *)Item,
-                   (const MethodInfo_2E2B2A4 *)Method_BasicHelper_Shuffle_object___);
+                   (const MethodInfo_2E2B8BC *)Method_BasicHelper_Shuffle_object___);
   if ( !Item )
     goto LABEL_29;
   Item = (char *)System_Collections_Generic_List_object___get_Item(
                    (System_Collections_Generic_List_object__o *)Item,
                    0,
-                   (const MethodInfo_34AF6E0 *)Method_System_Collections_Generic_List_object__get_Item__);
+                   (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_object__get_Item__);
   if ( !Item )
     goto LABEL_29;
   v45 = (*(__int64 (__fastcall **)(char *, _QWORD))(*(_QWORD *)Item + 360LL))(
           Item,
           *(_QWORD *)(*(_QWORD *)Item + 368LL));
-  Item = (char *)sub_1B64918(string___TypeInfo, 2LL);
+  Item = (char *)sub_1B64AA8(string___TypeInfo, 2LL);
   if ( !Item )
     goto LABEL_29;
   v48 = Item;
   if ( !*((_DWORD *)Item + 6)
     || (*((_QWORD *)Item + 4) = v38,
-        sub_1B64814((ServantStatusBattleListViewItem_o *)(Item + 32), (int32_t)v38, v46, v47),
+        sub_1B649A4((ServantStatusBattleListViewItem_o *)(Item + 32), (int32_t)v38, v46, v47),
         *((_DWORD *)v48 + 6) <= 1u) )
   {
 LABEL_30:
-    sub_1B64AD4(Item, v32);
+    sub_1B64C64(Item, v32);
   }
   *((_QWORD *)v48 + 5) = v45;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)(v48 + 40), v45, v49, v50);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v48 + 40), v45, v49, v50);
   this->fields.voiceIdArray = (struct System_String_array *)v48;
   p_voiceIdArray = &this->fields.voiceIdArray;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)p_voiceIdArray, (int32_t)v48, v52, v53);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)p_voiceIdArray, (int32_t)v48, v52, v53);
   v54 = (System_String_o *)*(p_voiceIdArray - 1);
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
@@ -549,17 +549,17 @@ void __fastcall SlotEffectComponent__StartGimmick(
   __int64 v19; // x1
   int32_t animationType; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4A016E2 & 1) == 0 )
+  if ( (byte_4A01D03 & 1) == 0 )
   {
-    sub_1B64870(&Method_UnityEngine_Component_GetComponent_Animation___, animCallback);
-    sub_1B64870(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, v6);
-    sub_1B64870(&int_TypeInfo, v7);
-    sub_1B64870(&UnityEngine_Object_TypeInfo, v8);
-    sub_1B64870(&StringLiteral_25009/*"{0}{1}"*/, v9);
-    byte_4A016E2 = 1;
+    sub_1B64A00(&Method_UnityEngine_Component_GetComponent_Animation___, animCallback);
+    sub_1B64A00(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, v6);
+    sub_1B64A00(&int_TypeInfo, v7);
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, v8);
+    sub_1B64A00(&StringLiteral_25009/*"{0}{1}"*/, v9);
+    byte_4A01D03 = 1;
   }
   this->fields.endCallback = animCallback;
-  sub_1B64814(
+  sub_1B649A4(
     (ServantStatusBattleListViewItem_o *)&this->fields.endCallback,
     (int32_t)animCallback,
     (int32_t)method,
@@ -567,13 +567,13 @@ void __fastcall SlotEffectComponent__StartGimmick(
   animationName = (Il2CppObject *)this->fields.animationName;
   animationType = this->fields.animationType;
   v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &animationType, v11, v12, v13);
-  v15 = System_String__Format_61397948((System_String_o *)StringLiteral_25009/*"{0}{1}"*/, animationName, v14, 0LL);
+  v15 = System_String__Format_61399508((System_String_o *)StringLiteral_25009/*"{0}{1}"*/, animationName, v14, 0LL);
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2E3216C *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+                       (const MethodInfo_2E32784 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
   v17 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_2E3216C *)Method_UnityEngine_Component_GetComponent_Animation___);
+          (const MethodInfo_2E32784 *)Method_UnityEngine_Component_GetComponent_Animation___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v18 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
@@ -581,11 +581,11 @@ void __fastcall SlotEffectComponent__StartGimmick(
   {
     if ( Component_object )
     {
-      SimpleAnimation__Play_63521240((SimpleAnimation_o *)Component_object, v15, 0LL);
+      SimpleAnimation__Play_63522800((SimpleAnimation_o *)Component_object, v15, 0LL);
       return;
     }
 LABEL_14:
-    sub_1B64ACC(v18, v19);
+    sub_1B64C5C(v18, v19);
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -594,6 +594,6 @@ LABEL_14:
   {
     if ( !v17 )
       goto LABEL_14;
-    UnityEngine_Animation__Play_68881008((UnityEngine_Animation_o *)v17, v15, 0LL);
+    UnityEngine_Animation__Play_68882568((UnityEngine_Animation_o *)v17, v15, 0LL);
   }
 }

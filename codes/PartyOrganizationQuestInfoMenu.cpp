@@ -1,9 +1,9 @@
 void __fastcall PartyOrganizationQuestInfoMenu___ctor(PartyOrganizationQuestInfoMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FA5FC & 1) == 0 )
+  if ( (byte_49FAC1C & 1) == 0 )
   {
-    sub_1B64870(&BaseDialog_TypeInfo, method);
-    byte_49FA5FC = 1;
+    sub_1B64A00(&BaseDialog_TypeInfo, method);
+    byte_49FAC1C = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -17,7 +17,7 @@ void __fastcall PartyOrganizationQuestInfoMenu__Close(PartyOrganizationQuestInfo
 
   callbackFunc = this->fields.callbackFunc;
   if ( !callbackFunc )
-    sub_1B64ACC(this, method);
+    sub_1B64C5C(this, method);
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))callbackFunc->fields.m_target)(
     callbackFunc->fields.original_method_info,
     0LL,
@@ -25,7 +25,7 @@ void __fastcall PartyOrganizationQuestInfoMenu__Close(PartyOrganizationQuestInfo
 }
 
 
-void __fastcall PartyOrganizationQuestInfoMenu__Close_31985172(
+void __fastcall PartyOrganizationQuestInfoMenu__Close_31985580(
         PartyOrganizationQuestInfoMenu_o *this,
         System_Action_o *onFinishedClose,
         const MethodInfo *method)
@@ -34,19 +34,19 @@ void __fastcall PartyOrganizationQuestInfoMenu__Close_31985172(
   __int64 v6; // x1
   System_Action_o *v7; // x20
 
-  if ( (byte_49FA5FA & 1) == 0 )
+  if ( (byte_49FAC1A & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, onFinishedClose);
-    sub_1B64870(&Method_PartyOrganizationQuestInfoMenu_EndClose__, v6);
-    byte_49FA5FA = 1;
+    sub_1B64A00(&System_Action_TypeInfo, onFinishedClose);
+    sub_1B64A00(&Method_PartyOrganizationQuestInfoMenu_EndClose__, v6);
+    byte_49FAC1A = 1;
   }
   this->fields.onfinishedClose = onFinishedClose;
-  sub_1B64814(
+  sub_1B649A4(
     (ServantStatusBattleListViewItem_o *)&this->fields.onfinishedClose,
     (int32_t)onFinishedClose,
     (int32_t)method,
     v3);
-  v7 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_PartyOrganizationQuestInfoMenu_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
 }
@@ -75,7 +75,7 @@ void __fastcall PartyOrganizationQuestInfoMenu__Init(PartyOrganizationQuestInfoM
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B64ACC(0LL, v4);
+    sub_1B64C5C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -96,15 +96,15 @@ void __fastcall PartyOrganizationQuestInfoMenu__Open(
   System_Action_o *v12; // x22
   System_Action_o *v13; // x23
 
-  if ( (byte_49FA5F8 & 1) == 0 )
+  if ( (byte_49FAC18 & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, *(_QWORD *)&questId);
-    sub_1B64870(&Method_PartyOrganizationQuestInfoMenu_Close__, v7);
-    sub_1B64870(&Method_PartyOrganizationQuestInfoMenu_Open__, v8);
-    byte_49FA5F8 = 1;
+    sub_1B64A00(&System_Action_TypeInfo, *(_QWORD *)&questId);
+    sub_1B64A00(&Method_PartyOrganizationQuestInfoMenu_Close__, v7);
+    sub_1B64A00(&Method_PartyOrganizationQuestInfoMenu_Open__, v8);
+    byte_49FAC18 = 1;
   }
   this->fields.callbackFunc = callback;
-  sub_1B64814(
+  sub_1B649A4(
     (ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     (int32_t)callback,
@@ -114,9 +114,9 @@ void __fastcall PartyOrganizationQuestInfoMenu__Open(
     goto LABEL_9;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
   questInfoWindow = this->fields.questInfoWindow;
-  v12 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  v12 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
   System_Action___ctor(v12, (Il2CppObject *)this, Method_PartyOrganizationQuestInfoMenu_Open__, 0LL);
-  v13 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  v13 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
   System_Action___ctor(v13, (Il2CppObject *)this, Method_PartyOrganizationQuestInfoMenu_Close__, 0LL);
   if ( !questInfoWindow )
     goto LABEL_9;
@@ -129,25 +129,25 @@ void __fastcall PartyOrganizationQuestInfoMenu__Open(
       return;
     }
 LABEL_9:
-    sub_1B64ACC(gameObject, v10);
+    sub_1B64C5C(gameObject, v10);
   }
 }
 
 
-void __fastcall PartyOrganizationQuestInfoMenu__Open_31984992(
+void __fastcall PartyOrganizationQuestInfoMenu__Open_31985400(
         PartyOrganizationQuestInfoMenu_o *this,
         const MethodInfo *method)
 {
   __int64 v3; // x1
   System_Action_o *v4; // x20
 
-  if ( (byte_49FA5F9 & 1) == 0 )
+  if ( (byte_49FAC19 & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, method);
-    sub_1B64870(&Method_PartyOrganizationQuestInfoMenu_EndOpen__, v3);
-    byte_49FA5F9 = 1;
+    sub_1B64A00(&System_Action_TypeInfo, method);
+    sub_1B64A00(&Method_PartyOrganizationQuestInfoMenu_EndOpen__, v3);
+    byte_49FAC19 = 1;
   }
-  v4 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_PartyOrganizationQuestInfoMenu_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v4, 0, 0LL);
 }
@@ -168,10 +168,10 @@ void __fastcall PartyOrganizationQuestInfoMenu__add_callbackFunc(
   PartyOrganizationQuestInfoMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_49FA5F6 & 1) == 0 )
+  if ( (byte_49FAC16 & 1) == 0 )
   {
-    sub_1B64870(&PartyOrganizationQuestInfoMenu_CallbackFunc_TypeInfo, value);
-    byte_49FA5F6 = 1;
+    sub_1B64A00(&PartyOrganizationQuestInfoMenu_CallbackFunc_TypeInfo, value);
+    byte_49FAC16 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -184,13 +184,13 @@ void __fastcall PartyOrganizationQuestInfoMenu__add_callbackFunc(
       if ( (PartyOrganizationQuestInfoMenu_CallbackFunc_c *)v8->klass != PartyOrganizationQuestInfoMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1B9FD60(p_callbackFunc, v8, v6);
+    v9 = sub_1B9FEF0(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (PartyOrganizationQuestInfoMenu_o *)sub_1B64D8C(v8);
+  v11 = (PartyOrganizationQuestInfoMenu_o *)sub_1B64F1C(v8);
   PartyOrganizationQuestInfoMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -199,12 +199,12 @@ System_String_o *__fastcall PartyOrganizationQuestInfoMenu__get_closeBtnPath(
         PartyOrganizationQuestInfoMenu_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_49FA5FB & 1) == 0 )
+  if ( (byte_49FAC1B & 1) == 0 )
   {
-    sub_1B64870(&StringLiteral_10872/*"QuestInfoWindowPrefab/QuestInfo/BgSp/CloseButton"*/, method);
-    byte_49FA5FB = 1;
+    sub_1B64A00(&StringLiteral_10873/*"QuestInfoWindowPrefab/QuestInfo/BgSp/CloseButton"*/, method);
+    byte_49FAC1B = 1;
   }
-  return (System_String_o *)StringLiteral_10872/*"QuestInfoWindowPrefab/QuestInfo/BgSp/CloseButton"*/;
+  return (System_String_o *)StringLiteral_10873/*"QuestInfoWindowPrefab/QuestInfo/BgSp/CloseButton"*/;
 }
 
 
@@ -222,10 +222,10 @@ void __fastcall PartyOrganizationQuestInfoMenu__remove_callbackFunc(
   PartyOrganizationQuestInfoMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_49FA5F7 & 1) == 0 )
+  if ( (byte_49FAC17 & 1) == 0 )
   {
-    sub_1B64870(&PartyOrganizationQuestInfoMenu_CallbackFunc_TypeInfo, value);
-    byte_49FA5F7 = 1;
+    sub_1B64A00(&PartyOrganizationQuestInfoMenu_CallbackFunc_TypeInfo, value);
+    byte_49FAC17 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -238,13 +238,13 @@ void __fastcall PartyOrganizationQuestInfoMenu__remove_callbackFunc(
       if ( (PartyOrganizationQuestInfoMenu_CallbackFunc_c *)v8->klass != PartyOrganizationQuestInfoMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1B9FD60(p_callbackFunc, v8, v6);
+    v9 = sub_1B9FEF0(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (PartyOrganizationQuestInfoMenu_o *)sub_1B64D8C(v8);
+  v11 = (PartyOrganizationQuestInfoMenu_o *)sub_1B64F1C(v8);
   PartyOrganizationQuestInfoMenu__Init(v11, v12);
 }
 
@@ -267,15 +267,15 @@ void __fastcall PartyOrganizationQuestInfoMenu_CallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B64930(v6) & 1) == 0 )
+  if ( (sub_1B64AC0(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B64AE8(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B64998(v10, 0LL);
+      v10 = sub_1B64C78(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B64B28(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -287,9 +287,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19A7304;
+  this->fields.m_target = (Il2CppObject *)sub_19A7494;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19A72BC;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19A744C;
 }
 
 
@@ -305,14 +305,14 @@ System_IAsyncResult_o *__fastcall PartyOrganizationQuestInfoMenu_CallbackFunc__B
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = result;
-  if ( (byte_49FA5FD & 1) == 0 )
+  if ( (byte_49FAC1D & 1) == 0 )
   {
-    sub_1B64870(&bool_TypeInfo, result);
-    byte_49FA5FD = 1;
+    sub_1B64A00(&bool_TypeInfo, result);
+    byte_49FAC1D = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1B64824(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1B649B4(this, v9, callback, object);
 }
 
 
@@ -321,7 +321,7 @@ void __fastcall PartyOrganizationQuestInfoMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B64828(result, 0LL, method);
+  sub_1B649B8(result, 0LL, method);
 }
 
 

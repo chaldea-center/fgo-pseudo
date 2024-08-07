@@ -12,12 +12,12 @@ void __fastcall PurchaseRequest__beginRequest(
   const MethodInfo *v12; // x1
   const MethodInfo *v13; // x3
 
-  if ( (byte_49FFDE8 & 1) == 0 )
+  if ( (byte_4A00409 & 1) == 0 )
   {
-    sub_1B64870(&StringLiteral_22093/*"num"*/, *(_QWORD *)&id);
-    sub_1B64870(&StringLiteral_20123/*"id"*/, v9);
-    sub_1B64870(&StringLiteral_16724/*"anotherPayFlag"*/, v10);
-    byte_49FFDE8 = 1;
+    sub_1B64A00(&StringLiteral_22093/*"num"*/, *(_QWORD *)&id);
+    sub_1B64A00(&StringLiteral_20123/*"id"*/, v9);
+    sub_1B64A00(&StringLiteral_16725/*"anotherPayFlag"*/, v10);
+    byte_4A00409 = 1;
   }
   RequestBase__addField(
     (RequestBase_o *)this,
@@ -26,7 +26,7 @@ void __fastcall PurchaseRequest__beginRequest(
     *(const MethodInfo **)&anotherPayFlag);
   RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22093/*"num"*/, num, v11);
   if ( anotherPayFlag >= 1 )
-    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16724/*"anotherPayFlag"*/, anotherPayFlag, v13);
+    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16725/*"anotherPayFlag"*/, anotherPayFlag, v13);
   RequestBase__beginRequest((RequestBase_o *)this, v12);
 }
 
@@ -36,16 +36,16 @@ System_String_o *__fastcall PurchaseRequest__getURL(PurchaseRequest_o *this, con
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_49FFDE7 & 1) == 0 )
+  if ( (byte_4A00408 & 1) == 0 )
   {
-    sub_1B64870(&NetworkManager_TypeInfo, method);
-    sub_1B64870(&StringLiteral_23175/*"shop/purchase"*/, v2);
-    byte_49FFDE7 = 1;
+    sub_1B64A00(&NetworkManager_TypeInfo, method);
+    sub_1B64A00(&StringLiteral_23175/*"shop/purchase"*/, v2);
+    byte_4A00408 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61383576(BaseUrl, (System_String_o *)StringLiteral_23175/*"shop/purchase"*/, 0LL);
+  return System_String__Concat_61385136(BaseUrl, (System_String_o *)StringLiteral_23175/*"shop/purchase"*/, 0LL);
 }
 
 
@@ -64,12 +64,12 @@ void __fastcall PurchaseRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v13; // x8
 
-  if ( (byte_49FFDE9 & 1) == 0 )
+  if ( (byte_4A0040A & 1) == 0 )
   {
-    sub_1B64870(&JsonManager_TypeInfo, responseList);
-    sub_1B64870(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B64870(&StringLiteral_21971/*"ng"*/, v6);
-    byte_49FFDE9 = 1;
+    sub_1B64A00(&JsonManager_TypeInfo, responseList);
+    sub_1B64A00(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B64A00(&StringLiteral_21971/*"ng"*/, v6);
+    byte_4A0040A = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);

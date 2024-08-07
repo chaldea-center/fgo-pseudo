@@ -26,15 +26,15 @@ void __fastcall ServantStatusBattleListViewManager__ChangeSelectIndex(
   const MethodInfo *v16; // x2
   System_Collections_Generic_List_Enumerator_object__o v17; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_49FA1E0 & 1) == 0 )
+  if ( (byte_49FA800 & 1) == 0 )
   {
-    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__, *(_QWORD *)&index);
-    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__, v5);
-    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__get_Current__, v6);
-    sub_1B64870(&Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__, v7);
-    sub_1B64870(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__get_Count__, v8);
-    sub_1B64870(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__get_Item__, v9);
-    byte_49FA1E0 = 1;
+    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__, *(_QWORD *)&index);
+    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__, v5);
+    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__get_Current__, v6);
+    sub_1B64A00(&Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__, v7);
+    sub_1B64A00(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__get_Count__, v8);
+    sub_1B64A00(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__get_Item__, v9);
+    byte_49FA800 = 1;
   }
   memset(&v17, 0, sizeof(v17));
   itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
@@ -43,13 +43,13 @@ void __fastcall ServantStatusBattleListViewManager__ChangeSelectIndex(
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v17,
     itemList,
-    (const MethodInfo_34B0548 *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
+    (const MethodInfo_34B0B60 *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v17,
-            (const MethodInfo_322C38C *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__) )
+            (const MethodInfo_322C9A4 *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__) )
   {
     if ( !v17.fields._current )
-      sub_1B64ACC(0LL, v11);
+      sub_1B64C5C(0LL, v11);
     ListViewItem__set_IsSelect(
       (ListViewItem_o *)v17.fields._current,
       HIDWORD(v17.fields._current[1].klass) == index,
@@ -57,7 +57,7 @@ void __fastcall ServantStatusBattleListViewManager__ChangeSelectIndex(
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v17,
-    (const MethodInfo_322C388 *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
+    (const MethodInfo_322C9A0 *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
   itemList = (System_Collections_Generic_List_object__o *)ServantStatusBattleListViewManager__get_ObjectList(this, v12);
   if ( !itemList )
     goto LABEL_15;
@@ -72,15 +72,15 @@ void __fastcall ServantStatusBattleListViewManager__ChangeSelectIndex(
       itemList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                 v14,
                                                                 v15,
-                                                                (const MethodInfo_34AF6E0 *)Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__get_Item__);
+                                                                (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__get_Item__);
       if ( !itemList )
         break;
-      ServantStatusBattleListViewObject__Init_31477076((ServantStatusBattleListViewObject_o *)itemList, 4, v16);
+      ServantStatusBattleListViewObject__Init_31477484((ServantStatusBattleListViewObject_o *)itemList, 4, v16);
       if ( ++v15 >= v14->fields._size )
         return;
     }
 LABEL_15:
-    sub_1B64ACC(itemList, *(_QWORD *)&index);
+    sub_1B64C5C(itemList, *(_QWORD *)&index);
   }
 }
 
@@ -135,12 +135,12 @@ void __fastcall ServantStatusBattleListViewManager__CreateList(
   unsigned __int64 v46; // [xsp+38h] [xbp-68h]
 
   v3 = mainInfo;
-  if ( (byte_49FA1D8 & 1) == 0 )
+  if ( (byte_49FA7F8 & 1) == 0 )
   {
-    sub_1B64870(&Method_System_Collections_Generic_List_ListViewItem__Add__, mainInfo);
-    sub_1B64870(&Method_System_Collections_Generic_List_ListViewItem__get_Count__, v5);
-    sub_1B64870(&ServantStatusBattleListViewItem_TypeInfo, v6);
-    byte_49FA1D8 = 1;
+    sub_1B64A00(&Method_System_Collections_Generic_List_ListViewItem__Add__, mainInfo);
+    sub_1B64A00(&Method_System_Collections_Generic_List_ListViewItem__get_Count__, v5);
+    sub_1B64A00(&ServantStatusBattleListViewItem_TypeInfo, v6);
+    byte_49FA7F8 = 1;
   }
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0LL);
   if ( !v3 )
@@ -179,7 +179,7 @@ void __fastcall ServantStatusBattleListViewManager__CreateList(
     if ( (__int64)v15 >= (int)max_length )
       goto LABEL_18;
     if ( v15 >= max_length )
-      sub_1B64AD4(ConvertOverwriteDispImageLimitCount, v8);
+      sub_1B64C64(ConvertOverwriteDispImageLimitCount, v8);
     v17 = v40[v15];
     if ( (v17 & 0x80000000) != 0 )
     {
@@ -202,7 +202,7 @@ LABEL_18:
     SvtId = ServantStatusListViewItem__get_SvtId(v3, 0LL);
     v23 = v3;
     IsMine = ServantStatusListViewItem__get_IsMine(v3, 0LL);
-    v25 = (ServantStatusBattleListViewItem_o *)sub_1B64ABC(ServantStatusBattleListViewItem_TypeInfo);
+    v25 = (ServantStatusBattleListViewItem_o *)sub_1B64C4C(ServantStatusBattleListViewItem_TypeInfo);
     ServantStatusBattleListViewItem___ctor(v25, size, SvtId, v17, v18 && v45, v18, v21, IsMine, v39);
     items = itemList->fields._items;
     v33 = Method_System_Collections_Generic_List_ListViewItem__Add__;
@@ -215,14 +215,14 @@ LABEL_18:
       System_Collections_Generic_List_object___AddWithResize(
         itemList,
         (Il2CppObject *)v25,
-        *(const MethodInfo_34AF9B0 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
+        *(const MethodInfo_34AFFC8 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
     }
     else
     {
       v35 = &items->obj.klass + v34;
       itemList->fields._size = v34 + 1;
       v35[4] = (Il2CppClass *)v25;
-      sub_1B64814((ServantStatusBattleListViewItem_o *)(v35 + 4), (int32_t)v25, v26, v27, v28, v29, v30, v31, v39);
+      sub_1B649A4((ServantStatusBattleListViewItem_o *)(v35 + 4), (int32_t)v25, v26, v27, v28, v29, v30, v31, v39);
     }
     this = v44;
     if ( v43 == v46 )
@@ -235,7 +235,7 @@ LABEL_18:
   v36 = v44->fields.itemList;
   if ( !v36 || (scrollView = v44->fields.scrollView) == 0LL )
 LABEL_36:
-    sub_1B64ACC(ConvertOverwriteDispImageLimitCount, v8);
+    sub_1B64C5C(ConvertOverwriteDispImageLimitCount, v8);
   if ( v36->fields._size > 5 )
     v38 = 1;
   else
@@ -265,11 +265,11 @@ ServantStatusBattleListViewItem_o *__fastcall ServantStatusBattleListViewManager
   ServantStatusBattleListViewItem_o *result; // x0
   __int64 methodPtr_low; // x10
 
-  if ( (byte_49FA1D9 & 1) == 0 )
+  if ( (byte_49FA7F9 & 1) == 0 )
   {
-    sub_1B64870(&Method_System_Collections_Generic_List_ListViewItem__get_Item__, *(_QWORD *)&index);
-    sub_1B64870(&ServantStatusBattleListViewItem_TypeInfo, v5);
-    byte_49FA1D9 = 1;
+    sub_1B64A00(&Method_System_Collections_Generic_List_ListViewItem__get_Item__, *(_QWORD *)&index);
+    sub_1B64A00(&ServantStatusBattleListViewItem_TypeInfo, v5);
+    byte_49FA7F9 = 1;
   }
   result = (ServantStatusBattleListViewItem_o *)this->fields.itemList;
   if ( result )
@@ -277,7 +277,7 @@ ServantStatusBattleListViewItem_o *__fastcall ServantStatusBattleListViewManager
     result = (ServantStatusBattleListViewItem_o *)System_Collections_Generic_List_object___get_Item(
                                                     (System_Collections_Generic_List_object__o *)result,
                                                     index,
-                                                    (const MethodInfo_34AF6E0 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                                                    (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
     if ( result )
     {
       methodPtr_low = LOBYTE(ServantStatusBattleListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
@@ -318,10 +318,10 @@ void __fastcall ServantStatusBattleListViewManager__OnClickListViewButton(
   unsigned int Index; // w0
 
   v5 = this;
-  if ( (byte_49FA1DF & 1) == 0 )
+  if ( (byte_49FA7FF & 1) == 0 )
   {
-    this = (ServantStatusBattleListViewManager_o *)sub_1B64870(&ServantStatusBattleListViewItem_TypeInfo, selectObj);
-    byte_49FA1DF = 1;
+    this = (ServantStatusBattleListViewManager_o *)sub_1B64A00(&ServantStatusBattleListViewItem_TypeInfo, selectObj);
+    byte_49FA7FF = 1;
   }
   if ( !selectObj
     || (linkItem = selectObj->fields.linkItem) == 0LL
@@ -329,13 +329,13 @@ void __fastcall ServantStatusBattleListViewManager__OnClickListViewButton(
         LOBYTE(linkItem->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low)
     || (ServantStatusBattleListViewItem_c *)linkItem->klass->_2.typeHierarchy[methodPtr_low - 1] != ServantStatusBattleListViewItem_TypeInfo )
   {
-    sub_1B64ACC(this, selectObj);
+    sub_1B64C5C(this, selectObj);
   }
   if ( BYTE1(linkItem[1].fields.sortValue0) && LOBYTE(linkItem[1].fields.sortValue0) )
   {
     callbackFunc = v5->fields.callbackFunc;
     v5->fields.callbackFunc = 0LL;
-    sub_1B64814((ServantStatusBattleListViewItem_o *)&v5->fields.callbackFunc, 0, (int32_t)method, v3);
+    sub_1B649A4((ServantStatusBattleListViewItem_o *)&v5->fields.callbackFunc, 0, (int32_t)method, v3);
     if ( callbackFunc )
     {
       Index = ListViewObject__get_Index(selectObj, 0LL);
@@ -362,10 +362,10 @@ void __fastcall ServantStatusBattleListViewManager__OnMoveEnd(
   struct UIScrollView_o *v10; // x0
   struct System_Action_o *callbackFunc2; // x20
 
-  if ( (byte_49FA1DE & 1) == 0 )
+  if ( (byte_49FA7FE & 1) == 0 )
   {
-    sub_1B64870(&UnityEngine_Object_TypeInfo, method);
-    byte_49FA1DE = 1;
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, method);
+    byte_49FA7FE = 1;
   }
   callbackCount = this->fields.callbackCount;
   v4 = __OFSUB__(callbackCount, 1);
@@ -382,7 +382,7 @@ void __fastcall ServantStatusBattleListViewManager__OnMoveEnd(
       {
         v10 = this->fields.scrollView;
         if ( !v10 )
-          sub_1B64ACC(0LL, v7);
+          sub_1B64C5C(0LL, v7);
         ((void (__fastcall *)(struct UIScrollView_o *, __int64, Il2CppMethodPointer))v10->klass->vtable._8_UpdateScrollbars.method)(
           v10,
           1LL,
@@ -390,7 +390,7 @@ void __fastcall ServantStatusBattleListViewManager__OnMoveEnd(
       }
       callbackFunc2 = this->fields.callbackFunc2;
       this->fields.callbackFunc2 = 0LL;
-      sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc2, 0, v8, v9);
+      sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc2, 0, v8, v9);
       if ( callbackFunc2 )
         ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))callbackFunc2->fields.m_target)(
           callbackFunc2->fields.original_method_info,
@@ -424,31 +424,31 @@ void __fastcall ServantStatusBattleListViewManager__RequestListObject(
   const MethodInfo *v21; // x3
   System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_49FA1DC & 1) == 0 )
+  if ( (byte_49FA7FC & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, *(_QWORD *)&mode);
-    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_ServantStatusBattleListViewObject__Dispose__, v7);
-    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_ServantStatusBattleListViewObject__MoveNext__, v8);
-    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_ServantStatusBattleListViewObject__get_Current__, v9);
-    sub_1B64870(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__GetEnumerator__, v10);
-    sub_1B64870(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__get_Count__, v11);
-    sub_1B64870(&Method_ServantStatusBattleListViewManager_OnMoveEnd__, v12);
-    sub_1B64870(&StringLiteral_9891/*"OnMoveEnd"*/, v13);
-    byte_49FA1DC = 1;
+    sub_1B64A00(&System_Action_TypeInfo, *(_QWORD *)&mode);
+    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_ServantStatusBattleListViewObject__Dispose__, v7);
+    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_ServantStatusBattleListViewObject__MoveNext__, v8);
+    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_ServantStatusBattleListViewObject__get_Current__, v9);
+    sub_1B64A00(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__GetEnumerator__, v10);
+    sub_1B64A00(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__get_Count__, v11);
+    sub_1B64A00(&Method_ServantStatusBattleListViewManager_OnMoveEnd__, v12);
+    sub_1B64A00(&StringLiteral_9892/*"OnMoveEnd"*/, v13);
+    byte_49FA7FC = 1;
   }
   memset(&v22, 0, sizeof(v22));
   ObjectList = (System_Collections_Generic_List_object__o *)ServantStatusBattleListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1B64ACC(0LL, v15);
+    sub_1B64C5C(0LL, v15);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9891/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_9892/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -458,17 +458,17 @@ void __fastcall ServantStatusBattleListViewManager__RequestListObject(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v22,
       ObjectList,
-      (const MethodInfo_34B0548 *)Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__GetEnumerator__);
+      (const MethodInfo_34B0B60 *)Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v22,
-              (const MethodInfo_322C38C *)Method_System_Collections_Generic_List_Enumerator_ServantStatusBattleListViewObject__MoveNext__) )
+              (const MethodInfo_322C9A4 *)Method_System_Collections_Generic_List_Enumerator_ServantStatusBattleListViewObject__MoveNext__) )
     {
       current = v22.fields._current;
-      v18 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+      v18 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
       System_Action___ctor(v18, (Il2CppObject *)this, Method_ServantStatusBattleListViewManager_OnMoveEnd__, 0LL);
       if ( !current )
-        sub_1B64ACC(v19, v20);
-      ServantStatusBattleListViewObject__Init_31478216(
+        sub_1B64C5C(v19, v20);
+      ServantStatusBattleListViewObject__Init_31478624(
         (ServantStatusBattleListViewObject_o *)current,
         mode,
         v18,
@@ -477,13 +477,13 @@ void __fastcall ServantStatusBattleListViewManager__RequestListObject(
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v22,
-      (const MethodInfo_322C388 *)Method_System_Collections_Generic_List_Enumerator_ServantStatusBattleListViewObject__Dispose__);
+      (const MethodInfo_322C9A0 *)Method_System_Collections_Generic_List_Enumerator_ServantStatusBattleListViewObject__Dispose__);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ServantStatusBattleListViewManager__RequestListObject_31477712(
+void __fastcall ServantStatusBattleListViewManager__RequestListObject_31478120(
         ServantStatusBattleListViewManager_o *this,
         int32_t mode,
         const MethodInfo *method)
@@ -505,31 +505,31 @@ void __fastcall ServantStatusBattleListViewManager__RequestListObject_31477712(
   const MethodInfo *v19; // x3
   System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_49FA1DD & 1) == 0 )
+  if ( (byte_49FA7FD & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, *(_QWORD *)&mode);
-    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_ServantStatusBattleListViewObject__Dispose__, v5);
-    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_ServantStatusBattleListViewObject__MoveNext__, v6);
-    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_ServantStatusBattleListViewObject__get_Current__, v7);
-    sub_1B64870(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__GetEnumerator__, v8);
-    sub_1B64870(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__get_Count__, v9);
-    sub_1B64870(&Method_ServantStatusBattleListViewManager_OnMoveEnd__, v10);
-    sub_1B64870(&StringLiteral_9891/*"OnMoveEnd"*/, v11);
-    byte_49FA1DD = 1;
+    sub_1B64A00(&System_Action_TypeInfo, *(_QWORD *)&mode);
+    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_ServantStatusBattleListViewObject__Dispose__, v5);
+    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_ServantStatusBattleListViewObject__MoveNext__, v6);
+    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_ServantStatusBattleListViewObject__get_Current__, v7);
+    sub_1B64A00(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__GetEnumerator__, v8);
+    sub_1B64A00(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__get_Count__, v9);
+    sub_1B64A00(&Method_ServantStatusBattleListViewManager_OnMoveEnd__, v10);
+    sub_1B64A00(&StringLiteral_9892/*"OnMoveEnd"*/, v11);
+    byte_49FA7FD = 1;
   }
   memset(&v20, 0, sizeof(v20));
   ObjectList = (System_Collections_Generic_List_object__o *)ServantStatusBattleListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1B64ACC(0LL, v13);
+    sub_1B64C5C(0LL, v13);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9891/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_9892/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }
@@ -539,21 +539,21 @@ void __fastcall ServantStatusBattleListViewManager__RequestListObject_31477712(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v20,
       ObjectList,
-      (const MethodInfo_34B0548 *)Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__GetEnumerator__);
+      (const MethodInfo_34B0B60 *)Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v20,
-              (const MethodInfo_322C38C *)Method_System_Collections_Generic_List_Enumerator_ServantStatusBattleListViewObject__MoveNext__) )
+              (const MethodInfo_322C9A4 *)Method_System_Collections_Generic_List_Enumerator_ServantStatusBattleListViewObject__MoveNext__) )
     {
       current = v20.fields._current;
-      v16 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+      v16 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
       System_Action___ctor(v16, (Il2CppObject *)this, Method_ServantStatusBattleListViewManager_OnMoveEnd__, 0LL);
       if ( !current )
-        sub_1B64ACC(v17, v18);
-      ServantStatusBattleListViewObject__Init_31478824((ServantStatusBattleListViewObject_o *)current, mode, v16, v19);
+        sub_1B64C5C(v17, v18);
+      ServantStatusBattleListViewObject__Init_31479232((ServantStatusBattleListViewObject_o *)current, mode, v16, v19);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v20,
-      (const MethodInfo_322C388 *)Method_System_Collections_Generic_List_Enumerator_ServantStatusBattleListViewObject__Dispose__);
+      (const MethodInfo_322C9A0 *)Method_System_Collections_Generic_List_Enumerator_ServantStatusBattleListViewObject__Dispose__);
   }
 }
 
@@ -568,17 +568,17 @@ void __fastcall ServantStatusBattleListViewManager__SetMode(
   const MethodInfo *v7; // x3
 
   this->fields.callbackFunc = callback;
-  sub_1B64814(
+  sub_1B649A4(
     (ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     (int32_t)callback,
     (int32_t)method);
-  ServantStatusBattleListViewManager__SetMode_31477200(this, mode, v6, v7);
+  ServantStatusBattleListViewManager__SetMode_31477608(this, mode, v6, v7);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ServantStatusBattleListViewManager__SetMode_31477200(
+void __fastcall ServantStatusBattleListViewManager__SetMode_31477608(
         ServantStatusBattleListViewManager_o *this,
         int32_t mode,
         int32_t select,
@@ -599,21 +599,21 @@ void __fastcall ServantStatusBattleListViewManager__SetMode_31477200(
   System_Action_o *v18; // x23
   const MethodInfo *v19; // x3
 
-  if ( (byte_49FA1DB & 1) == 0 )
+  if ( (byte_49FA7FB & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, *(_QWORD *)&mode);
-    sub_1B64870(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__get_Count__, v6);
-    sub_1B64870(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__get_Item__, v7);
-    sub_1B64870(&Method_ServantStatusBattleListViewManager_OnMoveEnd__, v8);
-    sub_1B64870(&StringLiteral_9891/*"OnMoveEnd"*/, v9);
-    byte_49FA1DB = 1;
+    sub_1B64A00(&System_Action_TypeInfo, *(_QWORD *)&mode);
+    sub_1B64A00(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__get_Count__, v6);
+    sub_1B64A00(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__get_Item__, v7);
+    sub_1B64A00(&Method_ServantStatusBattleListViewManager_OnMoveEnd__, v8);
+    sub_1B64A00(&StringLiteral_9892/*"OnMoveEnd"*/, v9);
+    byte_49FA7FB = 1;
   }
   this->fields.initMode = mode;
   this->fields.callbackCount = ListViewManager__get_ObjectSum((ListViewManager_o *)this, 0LL);
   ListViewManager__set_IsInput((ListViewManager_o *)this, mode == 1, 0LL);
   if ( mode == 1 )
   {
-    ServantStatusBattleListViewManager__RequestListObject_31477712(this, 3, v11);
+    ServantStatusBattleListViewManager__RequestListObject_31478120(this, 3, v11);
     return;
   }
   if ( mode == 2 )
@@ -632,29 +632,29 @@ void __fastcall ServantStatusBattleListViewManager__SetMode_31477200(
         Item = System_Collections_Generic_List_object___get_Item(
                  v15,
                  v16,
-                 (const MethodInfo_34AF6E0 *)Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__get_Item__);
-        v18 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+                 (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__get_Item__);
+        v18 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
         System_Action___ctor(v18, (Il2CppObject *)this, Method_ServantStatusBattleListViewManager_OnMoveEnd__, 0LL);
         if ( !Item )
           break;
-        ServantStatusBattleListViewObject__Init_31478216((ServantStatusBattleListViewObject_o *)Item, 4, v18, 0.1, v19);
+        ServantStatusBattleListViewObject__Init_31478624((ServantStatusBattleListViewObject_o *)Item, 4, v18, 0.1, v19);
         if ( ++v16 >= v15->fields._size )
           return;
       }
 LABEL_13:
-      sub_1B64ACC(ClippingObjectList, v13);
+      sub_1B64C5C(ClippingObjectList, v13);
     }
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9891/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_9892/*"OnMoveEnd"*/,
       0.2,
       0LL);
   }
 }
 
 
-void __fastcall ServantStatusBattleListViewManager__SetMode_31477660(
+void __fastcall ServantStatusBattleListViewManager__SetMode_31478068(
         ServantStatusBattleListViewManager_o *this,
         int32_t mode,
         System_Action_o *callback,
@@ -664,12 +664,12 @@ void __fastcall ServantStatusBattleListViewManager__SetMode_31477660(
   const MethodInfo *v7; // x3
 
   this->fields.callbackFunc2 = callback;
-  sub_1B64814(
+  sub_1B649A4(
     (ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc2,
     (int32_t)callback,
     (int32_t)callback,
     (int32_t)method);
-  ServantStatusBattleListViewManager__SetMode_31477200(this, mode, v6, v7);
+  ServantStatusBattleListViewManager__SetMode_31477608(this, mode, v6, v7);
 }
 
 
@@ -684,23 +684,23 @@ void __fastcall ServantStatusBattleListViewManager__SetObjectItem(
   int32_t v7; // w1
 
   v5 = this;
-  if ( (byte_49FA1DA & 1) == 0 )
+  if ( (byte_49FA7FA & 1) == 0 )
   {
-    this = (ServantStatusBattleListViewManager_o *)sub_1B64870(&ServantStatusBattleListViewObject_TypeInfo, obj);
-    byte_49FA1DA = 1;
+    this = (ServantStatusBattleListViewManager_o *)sub_1B64A00(&ServantStatusBattleListViewObject_TypeInfo, obj);
+    byte_49FA7FA = 1;
   }
   if ( !obj
     || (methodPtr_low = LOBYTE(ServantStatusBattleListViewObject_TypeInfo->vtable._0_Equals.methodPtr),
         LOBYTE(obj->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low)
     || (ServantStatusBattleListViewObject_c *)obj->klass->_2.typeHierarchy[methodPtr_low - 1] != ServantStatusBattleListViewObject_TypeInfo )
   {
-    sub_1B64ACC(this, obj);
+    sub_1B64C5C(this, obj);
   }
   if ( v5->fields.initMode == 1 )
     v7 = 3;
   else
     v7 = 2;
-  ServantStatusBattleListViewObject__Init_31477076(
+  ServantStatusBattleListViewObject__Init_31477484(
     (ServantStatusBattleListViewObject_o *)obj,
     v7,
     (const MethodInfo *)item);
@@ -721,10 +721,10 @@ void __fastcall ServantStatusBattleListViewManager__add_callbackFunc(
   ServantStatusBattleListViewManager_CallbackFunc_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_49FA1D2 & 1) == 0 )
+  if ( (byte_49FA7F2 & 1) == 0 )
   {
-    sub_1B64870(&ServantStatusBattleListViewManager_CallbackFunc_TypeInfo, value);
-    byte_49FA1D2 = 1;
+    sub_1B64A00(&ServantStatusBattleListViewManager_CallbackFunc_TypeInfo, value);
+    byte_49FA7F2 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -736,13 +736,13 @@ void __fastcall ServantStatusBattleListViewManager__add_callbackFunc(
       if ( (ServantStatusBattleListViewManager_CallbackFunc_c *)v7->klass != ServantStatusBattleListViewManager_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_1B9FD60(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1B9FEF0(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  v10 = (ServantStatusBattleListViewManager_o *)sub_1B64D8C(v7);
+  v10 = (ServantStatusBattleListViewManager_o *)sub_1B64F1C(v7);
   ServantStatusBattleListViewManager__remove_callbackFunc(v10, v11, v12);
 }
 
@@ -761,10 +761,10 @@ void __fastcall ServantStatusBattleListViewManager__add_callbackFunc2(
   System_Action_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_49FA1D4 & 1) == 0 )
+  if ( (byte_49FA7F4 & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, value);
-    byte_49FA1D4 = 1;
+    sub_1B64A00(&System_Action_TypeInfo, value);
+    byte_49FA7F4 = 1;
   }
   callbackFunc2 = (System_Delegate_o *)this->fields.callbackFunc2;
   p_callbackFunc2 = &this->fields.callbackFunc2;
@@ -776,13 +776,13 @@ void __fastcall ServantStatusBattleListViewManager__add_callbackFunc2(
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_1B9FD60(p_callbackFunc2, v7, callbackFunc2);
+    v8 = sub_1B9FEF0(p_callbackFunc2, v7, callbackFunc2);
     v9 = callbackFunc2 == (System_Delegate_o *)v8;
     callbackFunc2 = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  v10 = (ServantStatusBattleListViewManager_o *)sub_1B64D8C(v7);
+  v10 = (ServantStatusBattleListViewManager_o *)sub_1B64F1C(v7);
   ServantStatusBattleListViewManager__remove_callbackFunc2(v10, v11, v12);
 }
 
@@ -826,35 +826,35 @@ System_Collections_Generic_List_ServantStatusBattleListViewObject__o *__fastcall
   System_Collections_Generic_List_Enumerator_object__o v36; // [xsp+8h] [xbp-88h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v37; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_49FA1D7 & 1) == 0 )
+  if ( (byte_49FA7F7 & 1) == 0 )
   {
-    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, method);
-    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v3);
-    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
-    sub_1B64870(&Method_UnityEngine_GameObject_GetComponent_ServantStatusBattleListViewObject___, v5);
-    sub_1B64870(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__Add__, v6);
-    sub_1B64870(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v7);
-    sub_1B64870(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject___ctor__, v8);
-    sub_1B64870(&System_Collections_Generic_List_ServantStatusBattleListViewObject__TypeInfo, v9);
-    sub_1B64870(&UnityEngine_Object_TypeInfo, v10);
-    byte_49FA1D7 = 1;
+    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, method);
+    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v3);
+    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
+    sub_1B64A00(&Method_UnityEngine_GameObject_GetComponent_ServantStatusBattleListViewObject___, v5);
+    sub_1B64A00(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__Add__, v6);
+    sub_1B64A00(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v7);
+    sub_1B64A00(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject___ctor__, v8);
+    sub_1B64A00(&System_Collections_Generic_List_ServantStatusBattleListViewObject__TypeInfo, v9);
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, v10);
+    byte_49FA7F7 = 1;
   }
   memset(&v37, 0, sizeof(v37));
-  v11 = (System_Collections_Generic_List_object__o *)sub_1B64ABC(System_Collections_Generic_List_ServantStatusBattleListViewObject__TypeInfo);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1B64C4C(System_Collections_Generic_List_ServantStatusBattleListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_34AF17C *)Method_System_Collections_Generic_List_ServantStatusBattleListViewObject___ctor__);
+    (const MethodInfo_34AF794 *)Method_System_Collections_Generic_List_ServantStatusBattleListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1B64ACC(0LL, v12);
+    sub_1B64C5C(0LL, v12);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v36,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_34B0548 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_34B0B60 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   v37 = v36;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v37,
-            (const MethodInfo_322C38C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_322C9A4 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     current = v37.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -863,30 +863,30 @@ System_Collections_Generic_List_ServantStatusBattleListViewObject__o *__fastcall
     if ( v15 )
     {
       if ( !current )
-        sub_1B64ACC(v15, v16);
+        sub_1B64C5C(v15, v16);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_2E8A1B4 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusBattleListViewObject___);
+                           (const MethodInfo_2E8A7CC *)Method_UnityEngine_GameObject_GetComponent_ServantStatusBattleListViewObject___);
       v19 = Component_object;
       if ( !Component_object )
-        sub_1B64ACC(0LL, v18);
+        sub_1B64C5C(0LL, v18);
       Item = (ListViewItem_o *)ServantStatusBattleListViewObject__GetItem(
                                  (ServantStatusBattleListViewObject_o *)Component_object,
                                  v18);
       if ( !Item )
-        sub_1B64ACC(0LL, v21);
+        sub_1B64C5C(0LL, v21);
       if ( Item->fields.isTermination )
       {
-        v28 = ListViewManager__ClippingItem_40394112((ListViewManager_o *)this, Item, 0LL);
+        v28 = ListViewManager__ClippingItem_40394624((ListViewManager_o *)this, Item, 0LL);
         if ( v28 )
         {
           if ( !v11 )
-            sub_1B64ACC(v28, v29);
+            sub_1B64C5C(v28, v29);
           items = v11->fields._items;
           v31 = Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__Add__;
           ++v11->fields._version;
           if ( !items )
-            sub_1B64ACC(v28, v29);
+            sub_1B64C5C(v28, v29);
           size = v11->fields._size;
           if ( (unsigned int)size < items->max_length )
             goto LABEL_17;
@@ -894,18 +894,18 @@ LABEL_21:
           System_Collections_Generic_List_object___AddWithResize(
             v11,
             v19,
-            *(const MethodInfo_34AF9B0 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+            *(const MethodInfo_34AFFC8 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
         }
       }
       else
       {
         if ( !v11 )
-          sub_1B64ACC(Item, v21);
+          sub_1B64C5C(Item, v21);
         items = v11->fields._items;
         v31 = Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__Add__;
         ++v11->fields._version;
         if ( !items )
-          sub_1B64ACC(Item, v21);
+          sub_1B64C5C(Item, v21);
         size = v11->fields._size;
         if ( (unsigned int)size >= items->max_length )
           goto LABEL_21;
@@ -913,13 +913,13 @@ LABEL_17:
         v33 = &items->obj.klass + size;
         v11->fields._size = size + 1;
         v33[4] = (Il2CppClass *)v19;
-        sub_1B64814((ServantStatusBattleListViewItem_o *)(v33 + 4), (int32_t)v19, v22, v23, v24, v25, v26, v27, v35);
+        sub_1B649A4((ServantStatusBattleListViewItem_o *)(v33 + 4), (int32_t)v19, v22, v23, v24, v25, v26, v27, v35);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v37,
-    (const MethodInfo_322C388 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_322C9A0 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   return (System_Collections_Generic_List_ServantStatusBattleListViewObject__o *)v11;
 }
 
@@ -958,35 +958,35 @@ System_Collections_Generic_List_ServantStatusBattleListViewObject__o *__fastcall
   System_Collections_Generic_List_Enumerator_object__o v31; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v32; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_49FA1D6 & 1) == 0 )
+  if ( (byte_49FA7F6 & 1) == 0 )
   {
-    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, method);
-    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v3);
-    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
-    sub_1B64870(&Method_UnityEngine_GameObject_GetComponent_ServantStatusBattleListViewObject___, v5);
-    sub_1B64870(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__Add__, v6);
-    sub_1B64870(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v7);
-    sub_1B64870(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject___ctor__, v8);
-    sub_1B64870(&System_Collections_Generic_List_ServantStatusBattleListViewObject__TypeInfo, v9);
-    sub_1B64870(&UnityEngine_Object_TypeInfo, v10);
-    byte_49FA1D6 = 1;
+    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, method);
+    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v3);
+    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
+    sub_1B64A00(&Method_UnityEngine_GameObject_GetComponent_ServantStatusBattleListViewObject___, v5);
+    sub_1B64A00(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__Add__, v6);
+    sub_1B64A00(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v7);
+    sub_1B64A00(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject___ctor__, v8);
+    sub_1B64A00(&System_Collections_Generic_List_ServantStatusBattleListViewObject__TypeInfo, v9);
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, v10);
+    byte_49FA7F6 = 1;
   }
   memset(&v32, 0, sizeof(v32));
-  v11 = (System_Collections_Generic_List_object__o *)sub_1B64ABC(System_Collections_Generic_List_ServantStatusBattleListViewObject__TypeInfo);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1B64C4C(System_Collections_Generic_List_ServantStatusBattleListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_34AF17C *)Method_System_Collections_Generic_List_ServantStatusBattleListViewObject___ctor__);
+    (const MethodInfo_34AF794 *)Method_System_Collections_Generic_List_ServantStatusBattleListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1B64ACC(0LL, v12);
+    sub_1B64C5C(0LL, v12);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v31,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_34B0548 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_34B0B60 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   v32 = v31;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v32,
-            (const MethodInfo_322C38C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_322C9A4 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     current = v32.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -995,38 +995,38 @@ System_Collections_Generic_List_ServantStatusBattleListViewObject__o *__fastcall
     if ( v15 )
     {
       if ( !current )
-        sub_1B64ACC(v15, v16);
+        sub_1B64C5C(v15, v16);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_2E8A1B4 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusBattleListViewObject___);
+                           (const MethodInfo_2E8A7CC *)Method_UnityEngine_GameObject_GetComponent_ServantStatusBattleListViewObject___);
       v24 = Component_object;
       if ( !v11 )
-        sub_1B64ACC(Component_object, Component_object);
+        sub_1B64C5C(Component_object, Component_object);
       items = v11->fields._items;
       v26 = Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__Add__;
       ++v11->fields._version;
       if ( !items )
-        sub_1B64ACC(Component_object, Component_object);
+        sub_1B64C5C(Component_object, Component_object);
       size = v11->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v11,
           Component_object,
-          *(const MethodInfo_34AF9B0 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+          *(const MethodInfo_34AFFC8 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
       }
       else
       {
         v28 = &items->obj.klass + size;
         v11->fields._size = size + 1;
         v28[4] = (Il2CppClass *)v24;
-        sub_1B64814((ServantStatusBattleListViewItem_o *)(v28 + 4), (int32_t)v24, v18, v19, v20, v21, v22, v23, v30);
+        sub_1B649A4((ServantStatusBattleListViewItem_o *)(v28 + 4), (int32_t)v24, v18, v19, v20, v21, v22, v23, v30);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v32,
-    (const MethodInfo_322C388 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_322C9A0 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   return (System_Collections_Generic_List_ServantStatusBattleListViewObject__o *)v11;
 }
 
@@ -1045,10 +1045,10 @@ void __fastcall ServantStatusBattleListViewManager__remove_callbackFunc(
   System_Action_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_49FA1D3 & 1) == 0 )
+  if ( (byte_49FA7F3 & 1) == 0 )
   {
-    sub_1B64870(&ServantStatusBattleListViewManager_CallbackFunc_TypeInfo, value);
-    byte_49FA1D3 = 1;
+    sub_1B64A00(&ServantStatusBattleListViewManager_CallbackFunc_TypeInfo, value);
+    byte_49FA7F3 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1060,13 +1060,13 @@ void __fastcall ServantStatusBattleListViewManager__remove_callbackFunc(
       if ( (ServantStatusBattleListViewManager_CallbackFunc_c *)v7->klass != ServantStatusBattleListViewManager_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_1B9FD60(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1B9FEF0(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  v10 = (ServantStatusBattleListViewManager_o *)sub_1B64D8C(v7);
+  v10 = (ServantStatusBattleListViewManager_o *)sub_1B64F1C(v7);
   ServantStatusBattleListViewManager__add_callbackFunc2(v10, v11, v12);
 }
 
@@ -1084,10 +1084,10 @@ void __fastcall ServantStatusBattleListViewManager__remove_callbackFunc2(
   ServantStatusBattleListViewManager_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_49FA1D5 & 1) == 0 )
+  if ( (byte_49FA7F5 & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, value);
-    byte_49FA1D5 = 1;
+    sub_1B64A00(&System_Action_TypeInfo, value);
+    byte_49FA7F5 = 1;
   }
   callbackFunc2 = (System_Delegate_o *)this->fields.callbackFunc2;
   p_callbackFunc2 = &this->fields.callbackFunc2;
@@ -1099,13 +1099,13 @@ void __fastcall ServantStatusBattleListViewManager__remove_callbackFunc2(
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_1B9FD60(p_callbackFunc2, v7, callbackFunc2);
+    v8 = sub_1B9FEF0(p_callbackFunc2, v7, callbackFunc2);
     v9 = callbackFunc2 == (System_Delegate_o *)v8;
     callbackFunc2 = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  v10 = (ServantStatusBattleListViewManager_o *)sub_1B64D8C(v7);
+  v10 = (ServantStatusBattleListViewManager_o *)sub_1B64F1C(v7);
   ServantStatusBattleListViewManager__get_ObjectList(v10, v11);
 }
 
@@ -1128,15 +1128,15 @@ void __fastcall ServantStatusBattleListViewManager_CallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B64930(v6) & 1) == 0 )
+  if ( (sub_1B64AC0(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B64AE8(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B64998(v10, 0LL);
+      v10 = sub_1B64C78(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B64B28(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -1148,9 +1148,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19A6518;
+  this->fields.m_target = (Il2CppObject *)sub_19A66A8;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19A64D0;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19A6660;
 }
 
 
@@ -1166,14 +1166,14 @@ System_IAsyncResult_o *__fastcall ServantStatusBattleListViewManager_CallbackFun
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = result;
-  if ( (byte_49FA1E1 & 1) == 0 )
+  if ( (byte_49FA801 & 1) == 0 )
   {
-    sub_1B64870(&int_TypeInfo, *(_QWORD *)&result);
-    byte_49FA1E1 = 1;
+    sub_1B64A00(&int_TypeInfo, *(_QWORD *)&result);
+    byte_49FA801 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1B64824(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1B649B4(this, v9, callback, object);
 }
 
 
@@ -1182,7 +1182,7 @@ void __fastcall ServantStatusBattleListViewManager_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B64828(result, 0LL, method);
+  sub_1B649B8(result, 0LL, method);
 }
 
 

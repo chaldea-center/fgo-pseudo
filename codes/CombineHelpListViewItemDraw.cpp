@@ -13,10 +13,10 @@ void __fastcall CombineHelpListViewItemDraw__Awake(CombineHelpListViewItemDraw_o
 
   baseImageSprite = this->fields.baseImageSprite;
   if ( !baseImageSprite )
-    sub_1B64ACC(this, method);
+    sub_1B64C5C(this, method);
   mAtlas = baseImageSprite->fields.mAtlas;
   this->fields.baseImageBasicAtlas = mAtlas;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.baseImageBasicAtlas, (int32_t)mAtlas, v2, v3);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.baseImageBasicAtlas, (int32_t)mAtlas, v2, v3);
 }
 
 
@@ -59,14 +59,14 @@ void __fastcall CombineHelpListViewItemDraw__SetItem(
   float v36; // s9
   UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A01CBB & 1) == 0 )
+  if ( (byte_4A022DC & 1) == 0 )
   {
-    sub_1B64870(&AtlasManager_TypeInfo, item);
-    sub_1B64870(&UnityEngine_Object_TypeInfo, v7);
-    sub_1B64870(&StringLiteral_20365/*"img_shop_0"*/, v8);
-    sub_1B64870(&StringLiteral_1/*""*/, v9);
-    sub_1B64870(&StringLiteral_20412/*"img_tutorial_txtbg"*/, v10);
-    byte_4A01CBB = 1;
+    sub_1B64A00(&AtlasManager_TypeInfo, item);
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, v7);
+    sub_1B64A00(&StringLiteral_20365/*"img_shop_0"*/, v8);
+    sub_1B64A00(&StringLiteral_1/*""*/, v9);
+    sub_1B64A00(&StringLiteral_20412/*"img_tutorial_txtbg"*/, v10);
+    byte_4A022DC = 1;
   }
   if ( item )
   {
@@ -244,7 +244,7 @@ void __fastcall CombineHelpListViewItemDraw__SetItem(
         }
       }
 LABEL_52:
-      sub_1B64ACC(gameObject, v13);
+      sub_1B64C5C(gameObject, v13);
     }
   }
 }

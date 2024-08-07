@@ -1,28 +1,28 @@
 void __fastcall UserGachaHistoryEntity___ctor(UserGachaHistoryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FF1EF & 1) == 0 )
+  if ( (byte_49FF80F & 1) == 0 )
   {
-    sub_1B64870(&Method_DataEntityBase_string___ctor__, method);
-    byte_49FF1EF = 1;
+    sub_1B64A00(&Method_DataEntityBase_string___ctor__, method);
+    byte_49FF80F = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30D5FF8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D6610 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall UserGachaHistoryEntity__CreatePK(int64_t userId, int32_t gachaId, const MethodInfo *method)
 {
-  if ( (byte_49FF1EE & 1) == 0 )
+  if ( (byte_49FF80E & 1) == 0 )
   {
-    sub_1B64870(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&gachaId);
-    byte_49FF1EE = 1;
+    sub_1B64A00(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&gachaId);
+    byte_49FF80E = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            gachaId,
-           (const MethodInfo_2E399F4 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_2E3A00C *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -47,7 +47,7 @@ System_String_o *__fastcall UserGachaHistoryEntity__ToString(UserGachaHistoryEnt
          this->fields.num,
          0LL);
   if ( !v2 )
-    sub_1B64ACC(0LL, v3);
+    sub_1B64C5C(0LL, v3);
   return v2->fields.name;
 }
 
@@ -62,10 +62,10 @@ System_String_o *__fastcall UserGachaHistoryEntity__get_CreatedAtToString(
   int32_t v6; // w2
   int32_t v7; // w3
 
-  if ( (byte_49FF1EC & 1) == 0 )
+  if ( (byte_49FF80C & 1) == 0 )
   {
-    sub_1B64870(&LocalizationManager_TypeInfo, method);
-    byte_49FF1EC = 1;
+    sub_1B64A00(&LocalizationManager_TypeInfo, method);
+    byte_49FF80C = 1;
   }
   p_createdAtString = (ServantStatusBattleListViewItem_o *)&this->fields.createdAtString;
   if ( System_String__IsNullOrEmpty(this->fields.createdAtString, 0LL) )
@@ -75,7 +75,7 @@ System_String_o *__fastcall UserGachaHistoryEntity__get_CreatedAtToString(
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     DateTime = LocalizationManager__GetDateTime(createdAt, 0LL);
     p_createdAtString->klass = (ServantStatusBattleListViewItem_c *)DateTime;
-    sub_1B64814(p_createdAtString, (int32_t)DateTime, v6, v7);
+    sub_1B649A4(p_createdAtString, (int32_t)DateTime, v6, v7);
   }
   return (System_String_o *)p_createdAtString->klass;
 }
@@ -94,12 +94,12 @@ System_String_o *__fastcall UserGachaHistoryEntity__get_TitleToString(
   int32_t v9; // w2
   int32_t v10; // w3
 
-  if ( (byte_49FF1ED & 1) == 0 )
+  if ( (byte_49FF80D & 1) == 0 )
   {
-    sub_1B64870(&LocalizationManager_TypeInfo, method);
-    sub_1B64870(&StringLiteral_12283/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/, v3);
-    sub_1B64870(&StringLiteral_12296/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/, v4);
-    byte_49FF1ED = 1;
+    sub_1B64A00(&LocalizationManager_TypeInfo, method);
+    sub_1B64A00(&StringLiteral_12284/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/, v3);
+    sub_1B64A00(&StringLiteral_12297/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/, v4);
+    byte_49FF80D = 1;
   }
   p_titleString = (ServantStatusBattleListViewItem_o *)&this->fields.titleString;
   if ( System_String__IsNullOrEmpty(this->fields.titleString, 0LL) )
@@ -108,12 +108,12 @@ System_String_o *__fastcall UserGachaHistoryEntity__get_TitleToString(
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     if ( gachaExtraGiftBonusType == 2 )
-      v7 = (System_String_o **)&StringLiteral_12296/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/;
+      v7 = (System_String_o **)&StringLiteral_12297/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/;
     else
-      v7 = (System_String_o **)&StringLiteral_12283/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/;
+      v7 = (System_String_o **)&StringLiteral_12284/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/;
     v8 = LocalizationManager__Get(*v7, 0LL);
     p_titleString->klass = (ServantStatusBattleListViewItem_c *)v8;
-    sub_1B64814(p_titleString, (int32_t)v8, v9, v10);
+    sub_1B649A4(p_titleString, (int32_t)v8, v9, v10);
   }
   return (System_String_o *)p_titleString->klass;
 }

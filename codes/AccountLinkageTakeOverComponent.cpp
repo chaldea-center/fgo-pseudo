@@ -15,14 +15,14 @@ void __fastcall AccountLinkageTakeOverComponent__AccountLinkageTakeOverCallback(
   const MethodInfo *v5; // x1
 
   v4 = this;
-  if ( (byte_49FBF9F & 1) == 0 )
+  if ( (byte_49FC5BF & 1) == 0 )
   {
-    this = (AccountLinkageTakeOverComponent_o *)sub_1B64870(&StringLiteral_22140/*"ok"*/, result);
-    byte_49FBF9F = 1;
+    this = (AccountLinkageTakeOverComponent_o *)sub_1B64A00(&StringLiteral_22140/*"ok"*/, result);
+    byte_49FC5BF = 1;
   }
   if ( !result )
-    sub_1B64ACC(this, result);
-  if ( System_String__Equals_61391892(result, (System_String_o *)StringLiteral_22140/*"ok"*/, 0LL) )
+    sub_1B64C5C(this, result);
+  if ( System_String__Equals_61393452(result, (System_String_o *)StringLiteral_22140/*"ok"*/, 0LL) )
     AccountLinkageTakeOverComponent__AccountLinkageUpdateUserData(v4, v5);
   else
     AccountLinkageParams__ResetParams(0LL);
@@ -82,59 +82,59 @@ void __fastcall AccountLinkageTakeOverComponent__AccountLinkageUpdateUserData(
   System_Nullable_float__o v49; // 0:x3.8
   System_Nullable_int__o v50; // 0:x4.8
 
-  if ( (byte_49FBFA2 & 1) == 0 )
+  if ( (byte_49FC5C2 & 1) == 0 )
   {
-    sub_1B64870(&AccountLinkageParams_TypeInfo, method);
-    sub_1B64870(&Method_AccountLinkageTakeOverComponent__AccountLinkageUpdateUserData_b__21_0__, v3);
-    sub_1B64870(&System_Action_TypeInfo, v4);
-    sub_1B64870(&CommonUI_TypeInfo, v5);
-    sub_1B64870(&Method_DataManager_GetMaster_UserGameMaster___, v6);
-    sub_1B64870(&DataManager_TypeInfo, v7);
-    sub_1B64870(&Method_DataMasterBase_UserGameMaster__UserGameEntity__long__TryGetSingleEntity__, v8);
-    sub_1B64870(&System_DateTime_TypeInfo, v9);
-    sub_1B64870(&LocalizationManager_TypeInfo, v10);
-    sub_1B64870(&NetworkManager_TypeInfo, v11);
-    sub_1B64870(&OtherUserNewManager_TypeInfo, v12);
-    sub_1B64870(&PurchaseBehaviour_TypeInfo, v13);
-    sub_1B64870(&ServantCommentManager_TypeInfo, v14);
-    sub_1B64870(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v15);
-    sub_1B64870(&Method_SingletonMonoBehaviour_AdManager__get_Instance__, v16);
-    sub_1B64870(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, v17);
-    sub_1B64870(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__, v18);
-    sub_1B64870(&TermsOfUseMenu_TypeInfo, v19);
-    sub_1B64870(&UserCommandCodeCollectionManager_TypeInfo, v20);
-    sub_1B64870(&UserCommandCodeNewManager_TypeInfo, v21);
-    sub_1B64870(&UserEquipNewManager_TypeInfo, v22);
-    sub_1B64870(&UserServantCollectionManager_TypeInfo, v23);
-    sub_1B64870(&UserServantNewManager_TypeInfo, v24);
-    sub_1B64870(&WarBoardData_TypeInfo, v25);
-    sub_1B64870(&StringLiteral_3853/*"CONTINUE_DEVICE_TAKEOVER_DECIDE_MESSAGE"*/, v26);
-    sub_1B64870(&StringLiteral_3856/*"CONTINUE_DEVICE_TAKEOVER_GOOGLE_PLAY_ACCOUNT_ID_ERROR_MESSAGE"*/, v27);
-    sub_1B64870(&StringLiteral_1997/*"ACCOUNT_LINKAGE_CONTINUE_SUCCESS"*/, v28);
-    byte_49FBFA2 = 1;
+    sub_1B64A00(&AccountLinkageParams_TypeInfo, method);
+    sub_1B64A00(&Method_AccountLinkageTakeOverComponent__AccountLinkageUpdateUserData_b__21_0__, v3);
+    sub_1B64A00(&System_Action_TypeInfo, v4);
+    sub_1B64A00(&CommonUI_TypeInfo, v5);
+    sub_1B64A00(&Method_DataManager_GetMaster_UserGameMaster___, v6);
+    sub_1B64A00(&DataManager_TypeInfo, v7);
+    sub_1B64A00(&Method_DataMasterBase_UserGameMaster__UserGameEntity__long__TryGetSingleEntity__, v8);
+    sub_1B64A00(&System_DateTime_TypeInfo, v9);
+    sub_1B64A00(&LocalizationManager_TypeInfo, v10);
+    sub_1B64A00(&NetworkManager_TypeInfo, v11);
+    sub_1B64A00(&OtherUserNewManager_TypeInfo, v12);
+    sub_1B64A00(&PurchaseBehaviour_TypeInfo, v13);
+    sub_1B64A00(&ServantCommentManager_TypeInfo, v14);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v15);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_AdManager__get_Instance__, v16);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, v17);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__, v18);
+    sub_1B64A00(&TermsOfUseMenu_TypeInfo, v19);
+    sub_1B64A00(&UserCommandCodeCollectionManager_TypeInfo, v20);
+    sub_1B64A00(&UserCommandCodeNewManager_TypeInfo, v21);
+    sub_1B64A00(&UserEquipNewManager_TypeInfo, v22);
+    sub_1B64A00(&UserServantCollectionManager_TypeInfo, v23);
+    sub_1B64A00(&UserServantNewManager_TypeInfo, v24);
+    sub_1B64A00(&WarBoardData_TypeInfo, v25);
+    sub_1B64A00(&StringLiteral_3854/*"CONTINUE_DEVICE_TAKEOVER_DECIDE_MESSAGE"*/, v26);
+    sub_1B64A00(&StringLiteral_3857/*"CONTINUE_DEVICE_TAKEOVER_GOOGLE_PLAY_ACCOUNT_ID_ERROR_MESSAGE"*/, v27);
+    sub_1B64A00(&StringLiteral_1998/*"ACCOUNT_LINKAGE_CONTINUE_SUCCESS"*/, v28);
+    byte_49FC5C2 = 1;
   }
   entity = 0LL;
   dateData = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_UserGameMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2E3BC8C *)Method_DataManager_GetMaster_UserGameMaster___);
   if ( !Master_object )
     goto LABEL_64;
   if ( !DataMasterBase_object__object__long___TryGetSingleEntity(
           Master_object,
           &entity,
-          (const MethodInfo_30D6408 *)Method_DataMasterBase_UserGameMaster__UserGameEntity__long__TryGetSingleEntity__) )
+          (const MethodInfo_30D6A20 *)Method_DataMasterBase_UserGameMaster__UserGameEntity__long__TryGetSingleEntity__) )
     goto LABEL_63;
   v31 = System_Int64__ToString((int64_t)&AccountLinkageParams_TypeInfo->static_fields->newUserId, 0LL);
   static_fields = AccountLinkageParams_TypeInfo->static_fields;
   newAuthKey = static_fields->newAuthKey;
   newSecretKey = static_fields->newSecretKey;
   UserSaveData__DeleteAndInitContinueData(1, 0LL);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
   if ( !Master_object )
     goto LABEL_64;
   NetworkManager__SetAuth((NetworkManager_o *)Master_object, v31, newAuthKey, newSecretKey, 0LL);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
   if ( !Master_object )
     goto LABEL_64;
   NetworkManager__WriteAuth((NetworkManager_o *)Master_object, 0LL);
@@ -143,8 +143,8 @@ void __fastcall AccountLinkageTakeOverComponent__AccountLinkageUpdateUserData(
   klass = entity[2].klass;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  dateData = NetworkManager__getDateTime_38077776((int64_t)klass, 0LL).fields._dateData;
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  dateData = NetworkManager__getDateTime_38078128((int64_t)klass, 0LL).fields._dateData;
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
   if ( !entity )
     goto LABEL_64;
   v36 = (NetworkManager_o *)Master_object;
@@ -158,8 +158,8 @@ void __fastcall AccountLinkageTakeOverComponent__AccountLinkageUpdateUserData(
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)System_DateTime__get_Day(v48, 0LL);
   if ( !v36 )
     goto LABEL_64;
-  NetworkManager__SetSignup_38156936(v36, monitor, monitor_high, Month, (int32_t)Master_object, 0LL);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  NetworkManager__SetSignup_38157288(v36, monitor, monitor_high, Month, (int32_t)Master_object, 0LL);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
   if ( !Master_object )
     goto LABEL_64;
   NetworkManager__WriteSignup((NetworkManager_o *)Master_object, 0LL);
@@ -188,13 +188,13 @@ void __fastcall AccountLinkageTakeOverComponent__AccountLinkageUpdateUserData(
   if ( !WarBoardData_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(WarBoardData_TypeInfo);
   WarBoardData__CreateContinueDeviceSaveData(0LL);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
   if ( !entity )
     goto LABEL_64;
   if ( !Master_object )
     goto LABEL_64;
   NetworkManager__SetFriendCode((NetworkManager_o *)Master_object, (System_String_o *)entity[6].monitor, 0LL);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
   if ( !Master_object )
     goto LABEL_64;
   NetworkManager__WriteFriendCode((NetworkManager_o *)Master_object, 0LL);
@@ -205,20 +205,20 @@ void __fastcall AccountLinkageTakeOverComponent__AccountLinkageUpdateUserData(
   if ( !TermsOfUseMenu_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TermsOfUseMenu_TypeInfo);
   TermsOfUseMenu__Save(0LL);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
   if ( !entity )
     goto LABEL_64;
   if ( !Master_object )
     goto LABEL_64;
   AdManager__SetUserId((AdManager_o *)Master_object, (int64_t)entity[1].klass, 0LL);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
   if ( !entity || !Master_object )
     goto LABEL_64;
   AdManager__SetFriendCode((AdManager_o *)Master_object, (System_String_o *)entity[6].monitor, 0LL);
   ListViewSort__FirstLoginSave(0LL);
   if ( !ServantCommentManager__GetUiFlag(0LL) )
   {
-    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
     if ( !Master_object )
       goto LABEL_64;
     AtlasManager__ReleaseUISkinDialog((AtlasManager_o *)Master_object, 0LL);
@@ -226,7 +226,7 @@ void __fastcall AccountLinkageTakeOverComponent__AccountLinkageUpdateUserData(
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)LocalizationManager__Get(
-                                                                  (System_String_o *)StringLiteral_3853/*"CONTINUE_DEVICE_TAKEOVER_DECIDE_MESSAGE"*/,
+                                                                  (System_String_o *)StringLiteral_3854/*"CONTINUE_DEVICE_TAKEOVER_DECIDE_MESSAGE"*/,
                                                                   0LL);
   if ( !entity )
     goto LABEL_64;
@@ -240,14 +240,14 @@ void __fastcall AccountLinkageTakeOverComponent__AccountLinkageUpdateUserData(
     PurchaseBehaviour__SetInitializedWithMismatchedObfuscatedAccountId(1, 0LL);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v41 = LocalizationManager__Get((System_String_o *)StringLiteral_3856/*"CONTINUE_DEVICE_TAKEOVER_GOOGLE_PLAY_ACCOUNT_ID_ERROR_MESSAGE"*/, 0LL);
-    System_String__Concat_61383576(v40, v41, 0LL);
+    v41 = LocalizationManager__Get((System_String_o *)StringLiteral_3857/*"CONTINUE_DEVICE_TAKEOVER_GOOGLE_PLAY_ACCOUNT_ID_ERROR_MESSAGE"*/, 0LL);
+    System_String__Concat_61385136(v40, v41, 0LL);
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v42 = LocalizationManager__Get((System_String_o *)StringLiteral_1997/*"ACCOUNT_LINKAGE_CONTINUE_SUCCESS"*/, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v44 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  v42 = LocalizationManager__Get((System_String_o *)StringLiteral_1998/*"ACCOUNT_LINKAGE_CONTINUE_SUCCESS"*/, 0LL);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v44 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
   System_Action___ctor(
     v44,
     (Il2CppObject *)this,
@@ -255,7 +255,7 @@ void __fastcall AccountLinkageTakeOverComponent__AccountLinkageUpdateUserData(
     0LL);
   if ( !Instance )
 LABEL_64:
-    sub_1B64ACC(Master_object, v30);
+    sub_1B64C5C(Master_object, v30);
   v49 = 0LL;
   v50 = 0LL;
   CommonUI__OpenAccountLinkageNotificationDialog((CommonUI_o *)Instance, v42, v44, v49, v50, 0, 0LL);
@@ -287,15 +287,15 @@ void __fastcall AccountLinkageTakeOverComponent__CheckMaintenanceInfo(
   Il2CppObject *Request_object; // x0
   __int64 v8; // x1
 
-  if ( (byte_49FBF98 & 1) == 0 )
+  if ( (byte_49FC5B8 & 1) == 0 )
   {
-    sub_1B64870(&Method_AccountLinkageTakeOverComponent_OpenLoginWebview__, method);
-    sub_1B64870(&Method_NetworkManager_getRequest_AccountLinkageInfoRequest___, v3);
-    sub_1B64870(&NetworkManager_TypeInfo, v4);
-    sub_1B64870(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
-    byte_49FBF98 = 1;
+    sub_1B64A00(&Method_AccountLinkageTakeOverComponent_OpenLoginWebview__, method);
+    sub_1B64A00(&Method_NetworkManager_getRequest_AccountLinkageInfoRequest___, v3);
+    sub_1B64A00(&NetworkManager_TypeInfo, v4);
+    sub_1B64A00(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
+    byte_49FC5B8 = 1;
   }
-  v6 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64ABC(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v6 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64C4C(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v6,
     (Il2CppObject *)this,
@@ -305,9 +305,9 @@ void __fastcall AccountLinkageTakeOverComponent__CheckMaintenanceInfo(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v6,
-                     (const MethodInfo_2EBCCAC *)Method_NetworkManager_getRequest_AccountLinkageInfoRequest___);
+                     (const MethodInfo_2EBD2C4 *)Method_NetworkManager_getRequest_AccountLinkageInfoRequest___);
   if ( !Request_object )
-    sub_1B64ACC(0LL, v8);
+    sub_1B64C5C(0LL, v8);
   AccountLinkageInfoRequest__beginRequest((AccountLinkageInfoRequest_o *)Request_object, 0LL);
 }
 
@@ -342,26 +342,26 @@ void __fastcall AccountLinkageTakeOverComponent__CloseWebViewCallback(
   System_Nullable_float__o v26; // 0:x3.8
   System_Nullable_int__o v27; // 0:x4.8
 
-  if ( (byte_49FBF9B & 1) == 0 )
+  if ( (byte_49FC5BB & 1) == 0 )
   {
-    sub_1B64870(&AccountLinkageParams_TypeInfo, method);
-    sub_1B64870(&System_Action_TypeInfo, v3);
-    sub_1B64870(&LocalizationManager_TypeInfo, v4);
-    sub_1B64870(&Method_System_Nullable_int___ctor__, v5);
-    sub_1B64870(&Method_System_Nullable_float___ctor__, v6);
-    sub_1B64870(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
-    sub_1B64870(&Method_AccountLinkageTakeOverComponent___c__CloseWebViewCallback_b__14_0__, v8);
-    sub_1B64870(&AccountLinkageTakeOverComponent___c_TypeInfo, v9);
-    sub_1B64870(&StringLiteral_2033/*"ACCOUNT_LINKAGE_TAKEOVER_ERROR_MESSAGE"*/, v10);
-    byte_49FBF9B = 1;
+    sub_1B64A00(&AccountLinkageParams_TypeInfo, method);
+    sub_1B64A00(&System_Action_TypeInfo, v3);
+    sub_1B64A00(&LocalizationManager_TypeInfo, v4);
+    sub_1B64A00(&Method_System_Nullable_int___ctor__, v5);
+    sub_1B64A00(&Method_System_Nullable_float___ctor__, v6);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
+    sub_1B64A00(&Method_AccountLinkageTakeOverComponent___c__CloseWebViewCallback_b__14_0__, v8);
+    sub_1B64A00(&AccountLinkageTakeOverComponent___c_TypeInfo, v9);
+    sub_1B64A00(&StringLiteral_2034/*"ACCOUNT_LINKAGE_TAKEOVER_ERROR_MESSAGE"*/, v10);
+    byte_49FC5BB = 1;
   }
   if ( System_String__IsNullOrEmpty(AccountLinkageParams_TypeInfo->static_fields->authorizationCode, 0LL) )
   {
     AccountLinkageParams__ResetParams(0LL);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_2033/*"ACCOUNT_LINKAGE_TAKEOVER_ERROR_MESSAGE"*/, 0LL);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_2034/*"ACCOUNT_LINKAGE_TAKEOVER_ERROR_MESSAGE"*/, 0LL);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v14 = AccountLinkageTakeOverComponent___c_TypeInfo;
     if ( !AccountLinkageTakeOverComponent___c_TypeInfo->_2.cctor_finished )
     {
@@ -377,7 +377,7 @@ void __fastcall AccountLinkageTakeOverComponent__CloseWebViewCallback(
         v14 = AccountLinkageTakeOverComponent___c_TypeInfo;
       }
       v16 = (Il2CppObject *)v14->static_fields->__9;
-      _9__14_0 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+      _9__14_0 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
       System_Action___ctor(
         _9__14_0,
         v16,
@@ -385,16 +385,16 @@ void __fastcall AccountLinkageTakeOverComponent__CloseWebViewCallback(
         0LL);
       static_fields = AccountLinkageTakeOverComponent___c_TypeInfo->static_fields;
       static_fields->__9__14_0 = _9__14_0;
-      sub_1B64814((ServantStatusBattleListViewItem_o *)&static_fields->__9__14_0, (int32_t)_9__14_0, v18, v19);
+      sub_1B649A4((ServantStatusBattleListViewItem_o *)&static_fields->__9__14_0, (int32_t)_9__14_0, v18, v19);
     }
     v24 = (System_Nullable_float__o)&v23;
     v23 = 0LL;
-    System_Nullable_float____ctor(v24, 35.0, (const MethodInfo_35D2288 *)Method_System_Nullable_float___ctor__);
+    System_Nullable_float____ctor(v24, 35.0, (const MethodInfo_35D28A0 *)Method_System_Nullable_float___ctor__);
     v25 = (System_Nullable_int__o)&v22;
     v22 = 0LL;
-    System_Nullable_int____ctor(v25, 30, (const MethodInfo_35D0064 *)Method_System_Nullable_int___ctor__);
+    System_Nullable_int____ctor(v25, 30, (const MethodInfo_35D067C *)Method_System_Nullable_int___ctor__);
     if ( !Instance )
-      sub_1B64ACC(v20, v21);
+      sub_1B64C5C(v20, v21);
     v27 = v22;
     v26 = v23;
     CommonUI__OpenAccountLinkageNotificationDialog((CommonUI_o *)Instance, v12, _9__14_0, v26, v27, 2, 0LL);
@@ -418,16 +418,16 @@ void __fastcall AccountLinkageTakeOverComponent__DoAccountLinkageTakeOver(
   Il2CppObject *Request_object; // x0
   __int64 v9; // x1
 
-  if ( (byte_49FBF9E & 1) == 0 )
+  if ( (byte_49FC5BE & 1) == 0 )
   {
-    sub_1B64870(&AccountLinkageParams_TypeInfo, method);
-    sub_1B64870(&Method_AccountLinkageTakeOverComponent_AccountLinkageTakeOverCallback__, v3);
-    sub_1B64870(&Method_NetworkManager_getRequest_AccountLinkageContinueUserRequest___, v4);
-    sub_1B64870(&NetworkManager_TypeInfo, v5);
-    sub_1B64870(&NetworkManager_ResultCallbackFunc_TypeInfo, v6);
-    byte_49FBF9E = 1;
+    sub_1B64A00(&AccountLinkageParams_TypeInfo, method);
+    sub_1B64A00(&Method_AccountLinkageTakeOverComponent_AccountLinkageTakeOverCallback__, v3);
+    sub_1B64A00(&Method_NetworkManager_getRequest_AccountLinkageContinueUserRequest___, v4);
+    sub_1B64A00(&NetworkManager_TypeInfo, v5);
+    sub_1B64A00(&NetworkManager_ResultCallbackFunc_TypeInfo, v6);
+    byte_49FC5BE = 1;
   }
-  v7 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64ABC(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v7 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64C4C(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v7,
     (Il2CppObject *)this,
@@ -437,9 +437,9 @@ void __fastcall AccountLinkageTakeOverComponent__DoAccountLinkageTakeOver(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v7,
-                     (const MethodInfo_2EBCCAC *)Method_NetworkManager_getRequest_AccountLinkageContinueUserRequest___);
+                     (const MethodInfo_2EBD2C4 *)Method_NetworkManager_getRequest_AccountLinkageContinueUserRequest___);
   if ( !Request_object )
-    sub_1B64ACC(0LL, v9);
+    sub_1B64C5C(0LL, v9);
   AccountLinkageContinueUserRequest__beginRequest(
     (AccountLinkageContinueUserRequest_o *)Request_object,
     AccountLinkageParams_TypeInfo->static_fields->accountLinkageToken,
@@ -458,15 +458,15 @@ void __fastcall AccountLinkageTakeOverComponent__IssueTokenCallback(
   const MethodInfo *v7; // x1
 
   v4 = this;
-  if ( (byte_49FBF9D & 1) == 0 )
+  if ( (byte_49FC5BD & 1) == 0 )
   {
-    sub_1B64870(&AccountLinkageParams_TypeInfo, result);
-    this = (AccountLinkageTakeOverComponent_o *)sub_1B64870(&StringLiteral_22140/*"ok"*/, v5);
-    byte_49FBF9D = 1;
+    sub_1B64A00(&AccountLinkageParams_TypeInfo, result);
+    this = (AccountLinkageTakeOverComponent_o *)sub_1B64A00(&StringLiteral_22140/*"ok"*/, v5);
+    byte_49FC5BD = 1;
   }
   if ( !result )
-    sub_1B64ACC(this, result);
-  v6 = System_String__Equals_61391892(result, (System_String_o *)StringLiteral_22140/*"ok"*/, 0LL);
+    sub_1B64C5C(this, result);
+  v6 = System_String__Equals_61393452(result, (System_String_o *)StringLiteral_22140/*"ok"*/, 0LL);
   if ( v6 )
   {
     if ( AccountLinkageParams_TypeInfo->static_fields->isRequestedAccountLinked )
@@ -492,15 +492,15 @@ void __fastcall AccountLinkageTakeOverComponent__LinkageStatusCheck(
   Il2CppObject *Request_object; // x0
   __int64 v8; // x1
 
-  if ( (byte_49FBF95 & 1) == 0 )
+  if ( (byte_49FC5B5 & 1) == 0 )
   {
-    sub_1B64870(&Method_AccountLinkageTakeOverComponent_UserDataStatusCheck__, method);
-    sub_1B64870(&Method_NetworkManager_getRequest_AccountLinkageInfoRequest___, v3);
-    sub_1B64870(&NetworkManager_TypeInfo, v4);
-    sub_1B64870(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
-    byte_49FBF95 = 1;
+    sub_1B64A00(&Method_AccountLinkageTakeOverComponent_UserDataStatusCheck__, method);
+    sub_1B64A00(&Method_NetworkManager_getRequest_AccountLinkageInfoRequest___, v3);
+    sub_1B64A00(&NetworkManager_TypeInfo, v4);
+    sub_1B64A00(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
+    byte_49FC5B5 = 1;
   }
-  v6 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64ABC(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v6 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64C4C(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v6,
     (Il2CppObject *)this,
@@ -510,9 +510,9 @@ void __fastcall AccountLinkageTakeOverComponent__LinkageStatusCheck(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v6,
-                     (const MethodInfo_2EBCCAC *)Method_NetworkManager_getRequest_AccountLinkageInfoRequest___);
+                     (const MethodInfo_2EBD2C4 *)Method_NetworkManager_getRequest_AccountLinkageInfoRequest___);
   if ( !Request_object )
-    sub_1B64ACC(0LL, v8);
+    sub_1B64C5C(0LL, v8);
   AccountLinkageInfoRequest__beginRequest((AccountLinkageInfoRequest_o *)Request_object, 0LL);
 }
 
@@ -539,20 +539,20 @@ void __fastcall AccountLinkageTakeOverComponent__NoticeCannotTakeOver(
   System_Nullable_float__o v17; // 0:x3.8
   System_Nullable_int__o v18; // 0:x4.8
 
-  if ( (byte_49FBFA0 & 1) == 0 )
+  if ( (byte_49FC5C0 & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, method);
-    sub_1B64870(&LocalizationManager_TypeInfo, v2);
-    sub_1B64870(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    sub_1B64870(&Method_AccountLinkageTakeOverComponent___c__NoticeCannotTakeOver_b__19_0__, v4);
-    sub_1B64870(&AccountLinkageTakeOverComponent___c_TypeInfo, v5);
-    sub_1B64870(&StringLiteral_1994/*"ACCOUNT_LINKAGE_CANNOT_CONTINUE"*/, v6);
-    byte_49FBFA0 = 1;
+    sub_1B64A00(&System_Action_TypeInfo, method);
+    sub_1B64A00(&LocalizationManager_TypeInfo, v2);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
+    sub_1B64A00(&Method_AccountLinkageTakeOverComponent___c__NoticeCannotTakeOver_b__19_0__, v4);
+    sub_1B64A00(&AccountLinkageTakeOverComponent___c_TypeInfo, v5);
+    sub_1B64A00(&StringLiteral_1995/*"ACCOUNT_LINKAGE_CANNOT_CONTINUE"*/, v6);
+    byte_49FC5C0 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_1994/*"ACCOUNT_LINKAGE_CANNOT_CONTINUE"*/, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_1995/*"ACCOUNT_LINKAGE_CANNOT_CONTINUE"*/, 0LL);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v10 = AccountLinkageTakeOverComponent___c_TypeInfo;
   v11 = (CommonUI_o *)Instance;
   if ( !AccountLinkageTakeOverComponent___c_TypeInfo->_2.cctor_finished )
@@ -569,14 +569,14 @@ void __fastcall AccountLinkageTakeOverComponent__NoticeCannotTakeOver(
       v10 = AccountLinkageTakeOverComponent___c_TypeInfo;
     }
     v13 = (Il2CppObject *)v10->static_fields->__9;
-    _9__19_0 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+    _9__19_0 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
     System_Action___ctor(_9__19_0, v13, Method_AccountLinkageTakeOverComponent___c__NoticeCannotTakeOver_b__19_0__, 0LL);
     static_fields = AccountLinkageTakeOverComponent___c_TypeInfo->static_fields;
     static_fields->__9__19_0 = _9__19_0;
-    sub_1B64814((ServantStatusBattleListViewItem_o *)&static_fields->__9__19_0, (int32_t)_9__19_0, v15, v16);
+    sub_1B649A4((ServantStatusBattleListViewItem_o *)&static_fields->__9__19_0, (int32_t)_9__19_0, v15, v16);
   }
   if ( !v11 )
-    sub_1B64ACC(Instance, v9);
+    sub_1B64C5C(Instance, v9);
   v17 = 0LL;
   v18 = 0LL;
   CommonUI__OpenAccountLinkageNotificationDialog(v11, v7, _9__19_0, v17, v18, 0, 0LL);
@@ -604,16 +604,16 @@ void __fastcall AccountLinkageTakeOverComponent__OnCloseTakeOverDecide(
   int32_t v15; // w2
   int32_t v16; // w3
 
-  if ( (byte_49FBFA6 & 1) == 0 )
+  if ( (byte_49FC5C6 & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, method);
-    sub_1B64870(&AvalonSceneManager_TypeInfo, v2);
-    sub_1B64870(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    sub_1B64870(&Method_AccountLinkageTakeOverComponent___c__OnCloseTakeOverDecide_b__25_0__, v4);
-    sub_1B64870(&AccountLinkageTakeOverComponent___c_TypeInfo, v5);
-    byte_49FBFA6 = 1;
+    sub_1B64A00(&System_Action_TypeInfo, method);
+    sub_1B64A00(&AvalonSceneManager_TypeInfo, v2);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
+    sub_1B64A00(&Method_AccountLinkageTakeOverComponent___c__OnCloseTakeOverDecide_b__25_0__, v4);
+    sub_1B64A00(&AccountLinkageTakeOverComponent___c_TypeInfo, v5);
+    byte_49FC5C6 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v8 = AvalonSceneManager_TypeInfo;
   v9 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -637,7 +637,7 @@ void __fastcall AccountLinkageTakeOverComponent__OnCloseTakeOverDecide(
       v10 = AccountLinkageTakeOverComponent___c_TypeInfo;
     }
     v13 = (Il2CppObject *)v10->static_fields->__9;
-    _9__25_0 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+    _9__25_0 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
     System_Action___ctor(
       _9__25_0,
       v13,
@@ -645,10 +645,10 @@ void __fastcall AccountLinkageTakeOverComponent__OnCloseTakeOverDecide(
       0LL);
     static_fields = AccountLinkageTakeOverComponent___c_TypeInfo->static_fields;
     static_fields->__9__25_0 = _9__25_0;
-    sub_1B64814((ServantStatusBattleListViewItem_o *)&static_fields->__9__25_0, (int32_t)_9__25_0, v15, v16);
+    sub_1B649A4((ServantStatusBattleListViewItem_o *)&static_fields->__9__25_0, (int32_t)_9__25_0, v15, v16);
   }
   if ( !v9 )
-    sub_1B64ACC(v10, v7);
+    sub_1B64C5C(v10, v7);
   CommonUI__maskFadeout(v9, 1, DEFAULT_FADE_TIME, _9__25_0, 0LL);
 }
 
@@ -680,17 +680,17 @@ void __fastcall AccountLinkageTakeOverComponent__OnPartialMaintenance(
   System_Nullable_float__o v23; // 0:x3.8
   System_Nullable_int__o v24; // 0:x4.8
 
-  if ( (byte_49FBFA4 & 1) == 0 )
+  if ( (byte_49FC5C4 & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, mainteMessage);
-    sub_1B64870(&Method_System_Nullable_int___ctor__, v4);
-    sub_1B64870(&Method_System_Nullable_float___ctor__, v5);
-    sub_1B64870(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_1B64870(&Method_AccountLinkageTakeOverComponent___c__OnPartialMaintenance_b__23_0__, v7);
-    sub_1B64870(&AccountLinkageTakeOverComponent___c_TypeInfo, v8);
-    byte_49FBFA4 = 1;
+    sub_1B64A00(&System_Action_TypeInfo, mainteMessage);
+    sub_1B64A00(&Method_System_Nullable_int___ctor__, v4);
+    sub_1B64A00(&Method_System_Nullable_float___ctor__, v5);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    sub_1B64A00(&Method_AccountLinkageTakeOverComponent___c__OnPartialMaintenance_b__23_0__, v7);
+    sub_1B64A00(&AccountLinkageTakeOverComponent___c_TypeInfo, v8);
+    byte_49FC5C4 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v10 = AccountLinkageTakeOverComponent___c_TypeInfo;
   v11 = (CommonUI_o *)Instance;
   if ( !AccountLinkageTakeOverComponent___c_TypeInfo->_2.cctor_finished )
@@ -707,20 +707,20 @@ void __fastcall AccountLinkageTakeOverComponent__OnPartialMaintenance(
       v10 = AccountLinkageTakeOverComponent___c_TypeInfo;
     }
     v13 = (Il2CppObject *)v10->static_fields->__9;
-    _9__23_0 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+    _9__23_0 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
     System_Action___ctor(_9__23_0, v13, Method_AccountLinkageTakeOverComponent___c__OnPartialMaintenance_b__23_0__, 0LL);
     static_fields = AccountLinkageTakeOverComponent___c_TypeInfo->static_fields;
     static_fields->__9__23_0 = _9__23_0;
-    sub_1B64814((ServantStatusBattleListViewItem_o *)&static_fields->__9__23_0, (int32_t)_9__23_0, v15, v16);
+    sub_1B649A4((ServantStatusBattleListViewItem_o *)&static_fields->__9__23_0, (int32_t)_9__23_0, v15, v16);
   }
   v21 = (System_Nullable_float__o)&v20;
   v20 = 0LL;
-  System_Nullable_float____ctor(v21, 36.0, (const MethodInfo_35D2288 *)Method_System_Nullable_float___ctor__);
+  System_Nullable_float____ctor(v21, 36.0, (const MethodInfo_35D28A0 *)Method_System_Nullable_float___ctor__);
   v22 = (System_Nullable_int__o)&v19;
   v19 = 0LL;
-  System_Nullable_int____ctor(v22, 26, (const MethodInfo_35D0064 *)Method_System_Nullable_int___ctor__);
+  System_Nullable_int____ctor(v22, 26, (const MethodInfo_35D067C *)Method_System_Nullable_int___ctor__);
   if ( !v11 )
-    sub_1B64ACC(v17, v18);
+    sub_1B64C5C(v17, v18);
   v24 = v19;
   v23 = v20;
   CommonUI__OpenAccountLinkageNotificationDialog(v11, mainteMessage, _9__23_0, v23, v24, 0, 0LL);
@@ -753,22 +753,22 @@ void __fastcall AccountLinkageTakeOverComponent__OnSiteMaintenance(
   System_Nullable_float__o v21; // 0:x3.8
   System_Nullable_int__o v22; // 0:x4.8
 
-  if ( (byte_49FBFA3 & 1) == 0 )
+  if ( (byte_49FC5C3 & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, method);
-    sub_1B64870(&LocalizationManager_TypeInfo, v2);
-    sub_1B64870(&Method_System_Nullable_int___ctor__, v3);
-    sub_1B64870(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
-    sub_1B64870(&Method_AccountLinkageTakeOverComponent___c__OnSiteMaintenance_b__22_0__, v5);
-    sub_1B64870(&AccountLinkageTakeOverComponent___c_TypeInfo, v6);
-    sub_1B64870(&StringLiteral_2006/*"ACCOUNT_LINKAGE_MAINTENANCE_MESSAGE"*/, v7);
-    byte_49FBFA3 = 1;
+    sub_1B64A00(&System_Action_TypeInfo, method);
+    sub_1B64A00(&LocalizationManager_TypeInfo, v2);
+    sub_1B64A00(&Method_System_Nullable_int___ctor__, v3);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
+    sub_1B64A00(&Method_AccountLinkageTakeOverComponent___c__OnSiteMaintenance_b__22_0__, v5);
+    sub_1B64A00(&AccountLinkageTakeOverComponent___c_TypeInfo, v6);
+    sub_1B64A00(&StringLiteral_2007/*"ACCOUNT_LINKAGE_MAINTENANCE_MESSAGE"*/, v7);
+    byte_49FC5C3 = 1;
   }
   msgFontSize = 0LL;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_2006/*"ACCOUNT_LINKAGE_MAINTENANCE_MESSAGE"*/, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_2007/*"ACCOUNT_LINKAGE_MAINTENANCE_MESSAGE"*/, 0LL);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v10 = AccountLinkageTakeOverComponent___c_TypeInfo;
   v11 = (CommonUI_o *)Instance;
   if ( !AccountLinkageTakeOverComponent___c_TypeInfo->_2.cctor_finished )
@@ -785,16 +785,16 @@ void __fastcall AccountLinkageTakeOverComponent__OnSiteMaintenance(
       v10 = AccountLinkageTakeOverComponent___c_TypeInfo;
     }
     v13 = (Il2CppObject *)v10->static_fields->__9;
-    _9__22_0 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+    _9__22_0 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
     System_Action___ctor(_9__22_0, v13, Method_AccountLinkageTakeOverComponent___c__OnSiteMaintenance_b__22_0__, 0LL);
     static_fields = AccountLinkageTakeOverComponent___c_TypeInfo->static_fields;
     static_fields->__9__22_0 = _9__22_0;
-    sub_1B64814((ServantStatusBattleListViewItem_o *)&static_fields->__9__22_0, (int32_t)_9__22_0, v15, v16);
+    sub_1B649A4((ServantStatusBattleListViewItem_o *)&static_fields->__9__22_0, (int32_t)_9__22_0, v15, v16);
   }
   p_msgFontSize = (System_Nullable_int__o)&msgFontSize;
-  System_Nullable_int____ctor(p_msgFontSize, 28, (const MethodInfo_35D0064 *)Method_System_Nullable_int___ctor__);
+  System_Nullable_int____ctor(p_msgFontSize, 28, (const MethodInfo_35D067C *)Method_System_Nullable_int___ctor__);
   if ( !v11 )
-    sub_1B64ACC(v17, v18);
+    sub_1B64C5C(v17, v18);
   v22 = msgFontSize;
   v21 = 0LL;
   CommonUI__OpenAccountLinkageNotificationDialog(v11, v8, _9__22_0, v21, v22, 0, 0LL);
@@ -822,28 +822,28 @@ void __fastcall AccountLinkageTakeOverComponent__OpenLoginWebview(
   NetworkManager_ResultCallbackFunc_o *v17; // x20
 
   v4 = (Il2CppObject *)this;
-  if ( (byte_49FBF99 & 1) == 0 )
+  if ( (byte_49FC5B9 & 1) == 0 )
   {
-    sub_1B64870(&AccountLinkageParams_TypeInfo, result);
-    sub_1B64870(&Method_AccountLinkageTakeOverComponent_OpenWebViewCallback__, v5);
-    sub_1B64870(&Method_DataManager_GetMasterData_PartialMaintenanceMaster___, v6);
-    sub_1B64870(&Method_NetworkManager_getRequest_AccountLinkageBeginAuthRequest___, v7);
-    sub_1B64870(&NetworkManager_TypeInfo, v8);
-    sub_1B64870(&NetworkManager_ResultCallbackFunc_TypeInfo, v9);
-    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    this = (AccountLinkageTakeOverComponent_o *)sub_1B64870(&StringLiteral_22140/*"ok"*/, v11);
-    byte_49FBF99 = 1;
+    sub_1B64A00(&AccountLinkageParams_TypeInfo, result);
+    sub_1B64A00(&Method_AccountLinkageTakeOverComponent_OpenWebViewCallback__, v5);
+    sub_1B64A00(&Method_DataManager_GetMasterData_PartialMaintenanceMaster___, v6);
+    sub_1B64A00(&Method_NetworkManager_getRequest_AccountLinkageBeginAuthRequest___, v7);
+    sub_1B64A00(&NetworkManager_TypeInfo, v8);
+    sub_1B64A00(&NetworkManager_ResultCallbackFunc_TypeInfo, v9);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
+    this = (AccountLinkageTakeOverComponent_o *)sub_1B64A00(&StringLiteral_22140/*"ok"*/, v11);
+    byte_49FC5B9 = 1;
   }
   if ( !result )
     goto LABEL_16;
-  if ( System_String__Equals_61391892(result, (System_String_o *)StringLiteral_22140/*"ok"*/, 0LL) )
+  if ( System_String__Equals_61393452(result, (System_String_o *)StringLiteral_22140/*"ok"*/, 0LL) )
   {
-    this = (AccountLinkageTakeOverComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    this = (AccountLinkageTakeOverComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( this )
     {
       this = (AccountLinkageTakeOverComponent_o *)DataManager__GetMasterData_object_(
                                                     (DataManager_o *)this,
-                                                    (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_PartialMaintenanceMaster___);
+                                                    (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_PartialMaintenanceMaster___);
       if ( this )
       {
         v12 = (PartialMaintenanceMaster_o *)this;
@@ -870,7 +870,7 @@ void __fastcall AccountLinkageTakeOverComponent__OpenLoginWebview(
         }
         AccountLinkageParams__ResetParams(0LL);
         AccountLinkageParams__GetCodeChallenge(0LL);
-        v17 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64ABC(NetworkManager_ResultCallbackFunc_TypeInfo);
+        v17 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64C4C(NetworkManager_ResultCallbackFunc_TypeInfo);
         NetworkManager_ResultCallbackFunc___ctor(
           v17,
           v4,
@@ -880,7 +880,7 @@ void __fastcall AccountLinkageTakeOverComponent__OpenLoginWebview(
           j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
         this = (AccountLinkageTakeOverComponent_o *)NetworkManager__getRequest_object_(
                                                       v17,
-                                                      (const MethodInfo_2EBCCAC *)Method_NetworkManager_getRequest_AccountLinkageBeginAuthRequest___);
+                                                      (const MethodInfo_2EBD2C4 *)Method_NetworkManager_getRequest_AccountLinkageBeginAuthRequest___);
         if ( this )
         {
           RequestBase__beginRequest((RequestBase_o *)this, 0LL);
@@ -889,7 +889,7 @@ void __fastcall AccountLinkageTakeOverComponent__OpenLoginWebview(
       }
     }
 LABEL_16:
-    sub_1B64ACC(this, result);
+    sub_1B64C5C(this, result);
   }
 }
 
@@ -912,25 +912,25 @@ void __fastcall AccountLinkageTakeOverComponent__OpenWebViewCallback(
   System_Action_o *v14; // x23
 
   v4 = (Il2CppObject *)this;
-  if ( (byte_49FBF9A & 1) == 0 )
+  if ( (byte_49FC5BA & 1) == 0 )
   {
-    sub_1B64870(&AccountLinkageParams_TypeInfo, result);
-    sub_1B64870(&Method_AccountLinkageTakeOverComponent_CloseWebViewCallback__, v5);
-    sub_1B64870(&System_Action_TypeInfo, v6);
-    sub_1B64870(&WebViewManager_TypeInfo, v7);
-    sub_1B64870(&StringLiteral_22140/*"ok"*/, v8);
-    this = (AccountLinkageTakeOverComponent_o *)sub_1B64870(&StringLiteral_1/*""*/, v9);
-    byte_49FBF9A = 1;
+    sub_1B64A00(&AccountLinkageParams_TypeInfo, result);
+    sub_1B64A00(&Method_AccountLinkageTakeOverComponent_CloseWebViewCallback__, v5);
+    sub_1B64A00(&System_Action_TypeInfo, v6);
+    sub_1B64A00(&WebViewManager_TypeInfo, v7);
+    sub_1B64A00(&StringLiteral_22140/*"ok"*/, v8);
+    this = (AccountLinkageTakeOverComponent_o *)sub_1B64A00(&StringLiteral_1/*""*/, v9);
+    byte_49FC5BA = 1;
   }
   if ( !result )
-    sub_1B64ACC(this, result);
-  if ( System_String__Equals_61391892(result, (System_String_o *)StringLiteral_22140/*"ok"*/, 0LL) )
+    sub_1B64C5C(this, result);
+  if ( System_String__Equals_61393452(result, (System_String_o *)StringLiteral_22140/*"ok"*/, 0LL) )
   {
     AuthURL = AccountLinkageParams__GetAuthURL(1, 0LL);
     static_fields = AccountLinkageParams_TypeInfo->static_fields;
     basicUserName = static_fields->basicUserName;
     basicPassword = static_fields->basicPassword;
-    v14 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+    v14 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
     System_Action___ctor(v14, v4, Method_AccountLinkageTakeOverComponent_CloseWebViewCallback__, 0LL);
     if ( !WebViewManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(WebViewManager_TypeInfo);
@@ -974,7 +974,7 @@ void __fastcall AccountLinkageTakeOverComponent__ReConfirmAccountLinkage(
   System_String_o *v22; // x29
   System_String_o *v23; // x22
   Il2CppObject *v24; // x19
-  Il2CppObject *NumberFormat_38084784; // x21
+  Il2CppObject *NumberFormat_38085136; // x21
   __int64 v26; // x2
   __int64 v27; // x3
   __int64 v28; // x4
@@ -1008,55 +1008,55 @@ void __fastcall AccountLinkageTakeOverComponent__ReConfirmAccountLinkage(
   int32_t requestedAccountLevel; // [xsp+24h] [xbp-6Ch] BYREF
   UserGameEntity_o *entity; // [xsp+28h] [xbp-68h] BYREF
 
-  if ( (byte_49FBFA1 & 1) == 0 )
+  if ( (byte_49FC5C1 & 1) == 0 )
   {
-    sub_1B64870(&AccountLinkageParams_TypeInfo, method);
-    sub_1B64870(&Method_AccountLinkageTakeOverComponent__ReConfirmAccountLinkage_b__20_0__, v3);
-    sub_1B64870(&Method_AccountLinkageTakeOverComponent__ReConfirmAccountLinkage_b__20_1__, v4);
-    sub_1B64870(&TakeOverDialog_ClickDelegate_TypeInfo, v5);
-    sub_1B64870(&AccountLinkageOverrideTakeOverDialog_ClickDelegate_TypeInfo, v6);
-    sub_1B64870(&int_TypeInfo, v7);
-    sub_1B64870(&LocalizationManager_TypeInfo, v8);
-    sub_1B64870(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
-    sub_1B64870(&StringLiteral_13187/*"TAKEOVER_OVERRIDE_WARNING"*/, v10);
-    sub_1B64870(&StringLiteral_14763/*"USER_DATA_INFO"*/, v11);
-    sub_1B64870(&StringLiteral_5731/*"EXIST_ACCOUNT_DATA"*/, v12);
-    sub_1B64870(&StringLiteral_10991/*"RECONFIRM_CONTINUE_OVERRIDE"*/, v13);
-    sub_1B64870(&StringLiteral_2014/*"ACCOUNT_LINKAGE_RECONFIRM_DECIDE"*/, v14);
-    sub_1B64870(&StringLiteral_2012/*"ACCOUNT_LINKAGE_RECONFIRM_CANCEL"*/, v15);
-    sub_1B64870(&StringLiteral_2018/*"ACCOUNT_LINKAGE_RECONFIRM_OVERRIDE_DECIDE"*/, v16);
-    sub_1B64870(&StringLiteral_2016/*"ACCOUNT_LINKAGE_RECONFIRM_MESSAGE_NO_DATA"*/, v17);
-    sub_1B64870(&StringLiteral_2022/*"ACCOUNT_LINKAGE_RECONFIRM_WARNING_HAS_DATA"*/, v18);
-    sub_1B64870(&StringLiteral_10990/*"RECONFIRM_CONTINUE"*/, v19);
-    sub_1B64870(&StringLiteral_14780/*"USER_NAME_NOT_SET"*/, v20);
-    sub_1B64870(&StringLiteral_2023/*"ACCOUNT_LINKAGE_RECONFIRM_WARNING_NO_DATA"*/, v21);
-    byte_49FBFA1 = 1;
+    sub_1B64A00(&AccountLinkageParams_TypeInfo, method);
+    sub_1B64A00(&Method_AccountLinkageTakeOverComponent__ReConfirmAccountLinkage_b__20_0__, v3);
+    sub_1B64A00(&Method_AccountLinkageTakeOverComponent__ReConfirmAccountLinkage_b__20_1__, v4);
+    sub_1B64A00(&TakeOverDialog_ClickDelegate_TypeInfo, v5);
+    sub_1B64A00(&AccountLinkageOverrideTakeOverDialog_ClickDelegate_TypeInfo, v6);
+    sub_1B64A00(&int_TypeInfo, v7);
+    sub_1B64A00(&LocalizationManager_TypeInfo, v8);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
+    sub_1B64A00(&StringLiteral_13188/*"TAKEOVER_OVERRIDE_WARNING"*/, v10);
+    sub_1B64A00(&StringLiteral_14764/*"USER_DATA_INFO"*/, v11);
+    sub_1B64A00(&StringLiteral_5732/*"EXIST_ACCOUNT_DATA"*/, v12);
+    sub_1B64A00(&StringLiteral_10992/*"RECONFIRM_CONTINUE_OVERRIDE"*/, v13);
+    sub_1B64A00(&StringLiteral_2015/*"ACCOUNT_LINKAGE_RECONFIRM_DECIDE"*/, v14);
+    sub_1B64A00(&StringLiteral_2013/*"ACCOUNT_LINKAGE_RECONFIRM_CANCEL"*/, v15);
+    sub_1B64A00(&StringLiteral_2019/*"ACCOUNT_LINKAGE_RECONFIRM_OVERRIDE_DECIDE"*/, v16);
+    sub_1B64A00(&StringLiteral_2017/*"ACCOUNT_LINKAGE_RECONFIRM_MESSAGE_NO_DATA"*/, v17);
+    sub_1B64A00(&StringLiteral_2023/*"ACCOUNT_LINKAGE_RECONFIRM_WARNING_HAS_DATA"*/, v18);
+    sub_1B64A00(&StringLiteral_10991/*"RECONFIRM_CONTINUE"*/, v19);
+    sub_1B64A00(&StringLiteral_14781/*"USER_NAME_NOT_SET"*/, v20);
+    sub_1B64A00(&StringLiteral_2024/*"ACCOUNT_LINKAGE_RECONFIRM_WARNING_NO_DATA"*/, v21);
+    byte_49FC5C1 = 1;
   }
   entity = 0LL;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_2012/*"ACCOUNT_LINKAGE_RECONFIRM_CANCEL"*/, 0LL);
-  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_14763/*"USER_DATA_INFO"*/, 0LL);
+  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_2013/*"ACCOUNT_LINKAGE_RECONFIRM_CANCEL"*/, 0LL);
+  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_14764/*"USER_DATA_INFO"*/, 0LL);
   v24 = (Il2CppObject *)AccountLinkageParams__AddColorCodeBracket(
                           AccountLinkageParams_TypeInfo->static_fields->requestedAccountName,
                           0LL);
-  NumberFormat_38084784 = (Il2CppObject *)LocalizationManager__GetNumberFormat_38084784(
+  NumberFormat_38085136 = (Il2CppObject *)LocalizationManager__GetNumberFormat_38085136(
                                             AccountLinkageParams_TypeInfo->static_fields->requestedAccountFriendCode,
                                             0LL);
   requestedAccountLevel = AccountLinkageParams_TypeInfo->static_fields->requestedAccountLevel;
   v29 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &requestedAccountLevel, v26, v27, v28);
-  v30 = System_String__Format_61398016(v23, NumberFormat_38084784, v24, v29, 0LL);
+  v30 = System_String__Format_61399576(v23, NumberFormat_38085136, v24, v29, 0LL);
   SelfUserGame = UserGameMaster__TryGetSelfUserGame(&entity, 0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   if ( !SelfUserGame )
   {
-    v38 = LocalizationManager__Get((System_String_o *)StringLiteral_10990/*"RECONFIRM_CONTINUE"*/, 0LL);
-    v39 = LocalizationManager__Get((System_String_o *)StringLiteral_2014/*"ACCOUNT_LINKAGE_RECONFIRM_DECIDE"*/, 0LL);
-    v40 = LocalizationManager__Get((System_String_o *)StringLiteral_2016/*"ACCOUNT_LINKAGE_RECONFIRM_MESSAGE_NO_DATA"*/, 0LL);
-    v41 = LocalizationManager__Get((System_String_o *)StringLiteral_2023/*"ACCOUNT_LINKAGE_RECONFIRM_WARNING_NO_DATA"*/, 0LL);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v43 = (TakeOverDialog_ClickDelegate_o *)sub_1B64ABC(TakeOverDialog_ClickDelegate_TypeInfo);
+    v38 = LocalizationManager__Get((System_String_o *)StringLiteral_10991/*"RECONFIRM_CONTINUE"*/, 0LL);
+    v39 = LocalizationManager__Get((System_String_o *)StringLiteral_2015/*"ACCOUNT_LINKAGE_RECONFIRM_DECIDE"*/, 0LL);
+    v40 = LocalizationManager__Get((System_String_o *)StringLiteral_2017/*"ACCOUNT_LINKAGE_RECONFIRM_MESSAGE_NO_DATA"*/, 0LL);
+    v41 = LocalizationManager__Get((System_String_o *)StringLiteral_2024/*"ACCOUNT_LINKAGE_RECONFIRM_WARNING_NO_DATA"*/, 0LL);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v43 = (TakeOverDialog_ClickDelegate_o *)sub_1B64C4C(TakeOverDialog_ClickDelegate_TypeInfo);
     TakeOverDialog_ClickDelegate___ctor(
       v43,
       (Il2CppObject *)this,
@@ -1068,14 +1068,14 @@ void __fastcall AccountLinkageTakeOverComponent__ReConfirmAccountLinkage(
       return;
     }
 LABEL_23:
-    sub_1B64ACC(v33, v34);
+    sub_1B64C5C(v33, v34);
   }
-  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_10991/*"RECONFIRM_CONTINUE_OVERRIDE"*/, 0LL);
-  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_2018/*"ACCOUNT_LINKAGE_RECONFIRM_OVERRIDE_DECIDE"*/, 0LL);
+  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_10992/*"RECONFIRM_CONTINUE_OVERRIDE"*/, 0LL);
+  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_2019/*"ACCOUNT_LINKAGE_RECONFIRM_OVERRIDE_DECIDE"*/, 0LL);
   if ( !entity )
     goto LABEL_23;
   v35 = v33;
-  v33 = LocalizationManager__GetNumberFormat_38084784(entity->fields.friendCode, 0LL);
+  v33 = LocalizationManager__GetNumberFormat_38085136(entity->fields.friendCode, 0LL);
   if ( !entity )
     goto LABEL_23;
   v36 = (Il2CppObject *)v33;
@@ -1084,7 +1084,7 @@ LABEL_23:
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    name = LocalizationManager__Get((System_String_o *)StringLiteral_14780/*"USER_NAME_NOT_SET"*/, 0LL);
+    name = LocalizationManager__Get((System_String_o *)StringLiteral_14781/*"USER_NAME_NOT_SET"*/, 0LL);
   }
   else
   {
@@ -1100,12 +1100,12 @@ LABEL_23:
   v48 = (Il2CppObject *)System_Int32__ToString((int)entity + 80, 0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v49 = LocalizationManager__Get((System_String_o *)StringLiteral_5731/*"EXIST_ACCOUNT_DATA"*/, 0LL);
-  v50 = LocalizationManager__Get((System_String_o *)StringLiteral_13187/*"TAKEOVER_OVERRIDE_WARNING"*/, 0LL);
-  v51 = LocalizationManager__Get((System_String_o *)StringLiteral_2022/*"ACCOUNT_LINKAGE_RECONFIRM_WARNING_HAS_DATA"*/, 0LL);
-  v52 = System_String__Format_61398016(v23, v36, v44, v48, 0LL);
-  v53 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v54 = (AccountLinkageOverrideTakeOverDialog_ClickDelegate_o *)sub_1B64ABC(AccountLinkageOverrideTakeOverDialog_ClickDelegate_TypeInfo);
+  v49 = LocalizationManager__Get((System_String_o *)StringLiteral_5732/*"EXIST_ACCOUNT_DATA"*/, 0LL);
+  v50 = LocalizationManager__Get((System_String_o *)StringLiteral_13188/*"TAKEOVER_OVERRIDE_WARNING"*/, 0LL);
+  v51 = LocalizationManager__Get((System_String_o *)StringLiteral_2023/*"ACCOUNT_LINKAGE_RECONFIRM_WARNING_HAS_DATA"*/, 0LL);
+  v52 = System_String__Format_61399576(v23, v36, v44, v48, 0LL);
+  v53 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v54 = (AccountLinkageOverrideTakeOverDialog_ClickDelegate_o *)sub_1B64C4C(AccountLinkageOverrideTakeOverDialog_ClickDelegate_TypeInfo);
   AccountLinkageOverrideTakeOverDialog_ClickDelegate___ctor(
     v54,
     v47,
@@ -1140,16 +1140,16 @@ void __fastcall AccountLinkageTakeOverComponent__SendIssueTokenRequest(
   Il2CppObject *Request_object; // x0
   __int64 v9; // x1
 
-  if ( (byte_49FBF9C & 1) == 0 )
+  if ( (byte_49FC5BC & 1) == 0 )
   {
-    sub_1B64870(&AccountLinkageParams_TypeInfo, method);
-    sub_1B64870(&Method_AccountLinkageTakeOverComponent_IssueTokenCallback__, v3);
-    sub_1B64870(&Method_NetworkManager_getRequest_AccountLinkageIssueTokenRequest___, v4);
-    sub_1B64870(&NetworkManager_TypeInfo, v5);
-    sub_1B64870(&NetworkManager_ResultCallbackFunc_TypeInfo, v6);
-    byte_49FBF9C = 1;
+    sub_1B64A00(&AccountLinkageParams_TypeInfo, method);
+    sub_1B64A00(&Method_AccountLinkageTakeOverComponent_IssueTokenCallback__, v3);
+    sub_1B64A00(&Method_NetworkManager_getRequest_AccountLinkageIssueTokenRequest___, v4);
+    sub_1B64A00(&NetworkManager_TypeInfo, v5);
+    sub_1B64A00(&NetworkManager_ResultCallbackFunc_TypeInfo, v6);
+    byte_49FC5BC = 1;
   }
-  v7 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64ABC(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v7 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64C4C(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v7,
     (Il2CppObject *)this,
@@ -1159,9 +1159,9 @@ void __fastcall AccountLinkageTakeOverComponent__SendIssueTokenRequest(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v7,
-                     (const MethodInfo_2EBCCAC *)Method_NetworkManager_getRequest_AccountLinkageIssueTokenRequest___);
+                     (const MethodInfo_2EBD2C4 *)Method_NetworkManager_getRequest_AccountLinkageIssueTokenRequest___);
   if ( !Request_object )
-    sub_1B64ACC(0LL, v9);
+    sub_1B64C5C(0LL, v9);
   AccountLinkageIssueTokenRequest__beginRequest(
     (AccountLinkageIssueTokenRequest_o *)Request_object,
     AccountLinkageParams_TypeInfo->static_fields->authorizationCode,
@@ -1179,12 +1179,12 @@ void __fastcall AccountLinkageTakeOverComponent__SetupTitleImg(
   UISprite_o *titleImg; // x0
   __int64 *v6; // x8
 
-  if ( (byte_49FBFA5 & 1) == 0 )
+  if ( (byte_49FC5C5 & 1) == 0 )
   {
-    sub_1B64870(&SelectTakeOverTypeComponent_TypeInfo, method);
-    sub_1B64870(&StringLiteral_20417/*"img_txt_a_online_acount"*/, v3);
-    sub_1B64870(&StringLiteral_20418/*"img_txt_a_online_acount_overwrite"*/, v4);
-    byte_49FBFA5 = 1;
+    sub_1B64A00(&SelectTakeOverTypeComponent_TypeInfo, method);
+    sub_1B64A00(&StringLiteral_20417/*"img_txt_a_online_acount"*/, v3);
+    sub_1B64A00(&StringLiteral_20418/*"img_txt_a_online_acount_overwrite"*/, v4);
+    byte_49FC5C5 = 1;
   }
   titleImg = this->fields.titleImg;
   if ( !titleImg
@@ -1194,7 +1194,7 @@ void __fastcall AccountLinkageTakeOverComponent__SetupTitleImg(
         UISprite__set_spriteName(titleImg, (System_String_o *)*v6, 0LL),
         (titleImg = this->fields.titleImg) == 0LL) )
   {
-    sub_1B64ACC(titleImg, method);
+    sub_1B64C5C(titleImg, method);
   }
   ((void (__fastcall *)(UISprite_o *, Il2CppMethodPointer))titleImg->klass->vtable._33_MakePixelPerfect.method)(
     titleImg,
@@ -1210,15 +1210,15 @@ void __fastcall AccountLinkageTakeOverComponent__StartAccountLinkageTakeOver(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_49FBF97 & 1) == 0 )
+  if ( (byte_49FC5B7 & 1) == 0 )
   {
-    sub_1B64870(&Method_AccountLinkageTakeOverComponent_StartAccountLinkageTakeOver__, method);
-    byte_49FBF97 = 1;
+    sub_1B64A00(&Method_AccountLinkageTakeOverComponent_StartAccountLinkageTakeOver__, method);
+    byte_49FC5B7 = 1;
   }
   v3 = Method_AccountLinkageTakeOverComponent_StartAccountLinkageTakeOver__;
   if ( (*((_BYTE *)Method_AccountLinkageTakeOverComponent_StartAccountLinkageTakeOver__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1B64888(Method_AccountLinkageTakeOverComponent_StartAccountLinkageTakeOver__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
+    v3 = (_QWORD *)sub_1B64A18(Method_AccountLinkageTakeOverComponent_StartAccountLinkageTakeOver__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1B649E4(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
   AccountLinkageTakeOverComponent__CheckMaintenanceInfo(this, v5);
 }
@@ -1261,44 +1261,44 @@ void __fastcall AccountLinkageTakeOverComponent__UserDataStatusCheck(
   const MethodInfo *v34; // x1
   UserGameEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_49FBF96 & 1) == 0 )
+  if ( (byte_49FC5B6 & 1) == 0 )
   {
-    sub_1B64870(&AccountLinkageComponent_TypeInfo, result);
-    sub_1B64870(&Method_DataManager_GetMasterData_PartialMaintenanceMaster___, v5);
-    sub_1B64870(&LocalizationManager_TypeInfo, v6);
-    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_1B64870(&StringLiteral_2030/*"ACCOUNT_LINKAGE_TAKEOVER_BUTTON_NO_USER_DATA"*/, v8);
-    sub_1B64870(&StringLiteral_22140/*"ok"*/, v9);
-    sub_1B64870(&StringLiteral_14763/*"USER_DATA_INFO"*/, v10);
-    sub_1B64870(&StringLiteral_2029/*"ACCOUNT_LINKAGE_TAKEOVER_BUTTON"*/, v11);
-    sub_1B64870(&StringLiteral_9267/*"NO_USER_DATA"*/, v12);
-    sub_1B64870(&StringLiteral_2032/*"ACCOUNT_LINKAGE_TAKEOVER_DETAIL_MESSAGE"*/, v13);
-    sub_1B64870(&StringLiteral_2024/*"ACCOUNT_LINKAGE_SELECT_CONTINUE_TYPE_CONTENT"*/, v14);
-    sub_1B64870(&StringLiteral_14780/*"USER_NAME_NOT_SET"*/, v15);
-    sub_1B64870(&StringLiteral_11442/*"SELECT_ACCOUNT_LINKAGE_TAKEOVER"*/, v16);
-    byte_49FBF96 = 1;
+    sub_1B64A00(&AccountLinkageComponent_TypeInfo, result);
+    sub_1B64A00(&Method_DataManager_GetMasterData_PartialMaintenanceMaster___, v5);
+    sub_1B64A00(&LocalizationManager_TypeInfo, v6);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    sub_1B64A00(&StringLiteral_2031/*"ACCOUNT_LINKAGE_TAKEOVER_BUTTON_NO_USER_DATA"*/, v8);
+    sub_1B64A00(&StringLiteral_22140/*"ok"*/, v9);
+    sub_1B64A00(&StringLiteral_14764/*"USER_DATA_INFO"*/, v10);
+    sub_1B64A00(&StringLiteral_2030/*"ACCOUNT_LINKAGE_TAKEOVER_BUTTON"*/, v11);
+    sub_1B64A00(&StringLiteral_9268/*"NO_USER_DATA"*/, v12);
+    sub_1B64A00(&StringLiteral_2033/*"ACCOUNT_LINKAGE_TAKEOVER_DETAIL_MESSAGE"*/, v13);
+    sub_1B64A00(&StringLiteral_2025/*"ACCOUNT_LINKAGE_SELECT_CONTINUE_TYPE_CONTENT"*/, v14);
+    sub_1B64A00(&StringLiteral_14781/*"USER_NAME_NOT_SET"*/, v15);
+    sub_1B64A00(&StringLiteral_11443/*"SELECT_ACCOUNT_LINKAGE_TAKEOVER"*/, v16);
+    byte_49FC5B6 = 1;
   }
   entity = 0LL;
   detailLabel = this->fields.detailLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_2032/*"ACCOUNT_LINKAGE_TAKEOVER_DETAIL_MESSAGE"*/, 0LL);
+  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_2033/*"ACCOUNT_LINKAGE_TAKEOVER_DETAIL_MESSAGE"*/, 0LL);
   if ( !detailLabel )
     goto LABEL_39;
   UILabel__set_text(detailLabel, Instance, 0LL);
   contentLabel = this->fields.contentLabel;
-  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_2024/*"ACCOUNT_LINKAGE_SELECT_CONTINUE_TYPE_CONTENT"*/, 0LL);
+  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_2025/*"ACCOUNT_LINKAGE_SELECT_CONTINUE_TYPE_CONTENT"*/, 0LL);
   if ( !contentLabel )
     goto LABEL_39;
   UILabel__set_text(contentLabel, Instance, 0LL);
   if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_22140/*"ok"*/, 0LL) )
     return;
-  Instance = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_39;
   Instance = (System_String_o *)DataManager__GetMasterData_object_(
                                   (DataManager_o *)Instance,
-                                  (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_PartialMaintenanceMaster___);
+                                  (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_PartialMaintenanceMaster___);
   if ( !Instance )
     goto LABEL_39;
   v21 = (PartialMaintenanceMaster_o *)Instance;
@@ -1321,7 +1321,7 @@ void __fastcall AccountLinkageTakeOverComponent__UserDataStatusCheck(
       friendCode = entity->fields.friendCode;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      Instance = LocalizationManager__GetNumberFormat_38084784(friendCode, 0LL);
+      Instance = LocalizationManager__GetNumberFormat_38085136(friendCode, 0LL);
       if ( entity )
       {
         v25 = (Il2CppObject *)Instance;
@@ -1329,7 +1329,7 @@ void __fastcall AccountLinkageTakeOverComponent__UserDataStatusCheck(
         {
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          name = LocalizationManager__Get((System_String_o *)StringLiteral_14780/*"USER_NAME_NOT_SET"*/, 0LL);
+          name = LocalizationManager__Get((System_String_o *)StringLiteral_14781/*"USER_NAME_NOT_SET"*/, 0LL);
         }
         else
         {
@@ -1342,29 +1342,29 @@ void __fastcall AccountLinkageTakeOverComponent__UserDataStatusCheck(
           v30 = (Il2CppObject *)System_Int32__ToString((int)entity + 80, 0LL);
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v31 = LocalizationManager__Get((System_String_o *)StringLiteral_14763/*"USER_DATA_INFO"*/, 0LL);
-          Instance = System_String__Format_61398016(v31, v25, v29, v30, 0LL);
+          v31 = LocalizationManager__Get((System_String_o *)StringLiteral_14764/*"USER_DATA_INFO"*/, 0LL);
+          Instance = System_String__Format_61399576(v31, v25, v29, v30, 0LL);
           if ( this->fields.userDataStatusInfoLabel )
           {
             UILabel__set_text(this->fields.userDataStatusInfoLabel, Instance, 0LL);
             takeOverButtonLabel = this->fields.takeOverButtonLabel;
-            v28 = &StringLiteral_2029/*"ACCOUNT_LINKAGE_TAKEOVER_BUTTON"*/;
+            v28 = &StringLiteral_2030/*"ACCOUNT_LINKAGE_TAKEOVER_BUTTON"*/;
             goto LABEL_31;
           }
         }
       }
     }
 LABEL_39:
-    sub_1B64ACC(Instance, v19);
+    sub_1B64C5C(Instance, v19);
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_9267/*"NO_USER_DATA"*/, 0LL);
+  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_9268/*"NO_USER_DATA"*/, 0LL);
   if ( !this->fields.userDataStatusInfoLabel )
     goto LABEL_39;
   UILabel__set_text(this->fields.userDataStatusInfoLabel, Instance, 0LL);
   takeOverButtonLabel = this->fields.takeOverButtonLabel;
-  v28 = &StringLiteral_2030/*"ACCOUNT_LINKAGE_TAKEOVER_BUTTON_NO_USER_DATA"*/;
+  v28 = &StringLiteral_2031/*"ACCOUNT_LINKAGE_TAKEOVER_BUTTON_NO_USER_DATA"*/;
 LABEL_31:
   Instance = LocalizationManager__Get((System_String_o *)*v28, 0LL);
   if ( !takeOverButtonLabel )
@@ -1392,7 +1392,7 @@ LABEL_31:
   Instance = (System_String_o *)this->fields.titleFsm;
   if ( !Instance )
     goto LABEL_39;
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)StringLiteral_11442/*"SELECT_ACCOUNT_LINKAGE_TAKEOVER"*/, 0LL);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)StringLiteral_11443/*"SELECT_ACCOUNT_LINKAGE_TAKEOVER"*/, 0LL);
 }
 
 
@@ -1407,18 +1407,18 @@ void __fastcall AccountLinkageTakeOverComponent___AccountLinkageUpdateUserData_b
   __int64 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_49FBFA9 & 1) == 0 )
+  if ( (byte_49FC5C9 & 1) == 0 )
   {
-    sub_1B64870(&Method_AccountLinkageTakeOverComponent_OnCloseTakeOverDecide__, method);
-    sub_1B64870(&System_Action_TypeInfo, v3);
-    sub_1B64870(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
-    byte_49FBFA9 = 1;
+    sub_1B64A00(&Method_AccountLinkageTakeOverComponent_OnCloseTakeOverDecide__, method);
+    sub_1B64A00(&System_Action_TypeInfo, v3);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
+    byte_49FC5C9 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v6 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v6 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_AccountLinkageTakeOverComponent_OnCloseTakeOverDecide__, 0LL);
   if ( !Instance )
-    sub_1B64ACC(v7, v8);
+    sub_1B64C5C(v7, v8);
   CommonUI__CloseAccountLinkageNotificationDialog((CommonUI_o *)Instance, v6, 0LL);
 }
 
@@ -1433,14 +1433,14 @@ void __fastcall AccountLinkageTakeOverComponent___ReConfirmAccountLinkage_b__20_
   __int64 v6; // x1
   const MethodInfo *v7; // x1
 
-  if ( (byte_49FBFA7 & 1) == 0 )
+  if ( (byte_49FC5C7 & 1) == 0 )
   {
-    sub_1B64870(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isDecide);
-    byte_49FBFA7 = 1;
+    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isDecide);
+    byte_49FC5C7 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1B64ACC(0LL, v6);
+    sub_1B64C5C(0LL, v6);
   CommonUI__CloseAccountLinkageOverrideTakeOverDialog((CommonUI_o *)Instance, 0LL, 0LL);
   if ( isDecide )
     AccountLinkageTakeOverComponent__DoAccountLinkageTakeOver(this, v7);
@@ -1457,14 +1457,14 @@ void __fastcall AccountLinkageTakeOverComponent___ReConfirmAccountLinkage_b__20_
   __int64 v6; // x1
   const MethodInfo *v7; // x1
 
-  if ( (byte_49FBFA8 & 1) == 0 )
+  if ( (byte_49FC5C8 & 1) == 0 )
   {
-    sub_1B64870(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isDecide);
-    byte_49FBFA8 = 1;
+    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isDecide);
+    byte_49FC5C8 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1B64ACC(0LL, v6);
+    sub_1B64C5C(0LL, v6);
   CommonUI__CloseTakeOverDialog((CommonUI_o *)Instance, 0LL, 0LL);
   if ( isDecide )
     AccountLinkageTakeOverComponent__DoAccountLinkageTakeOver(this, v7);
@@ -1478,15 +1478,15 @@ void __fastcall AccountLinkageTakeOverComponent___c___cctor(const MethodInfo *me
   int32_t v3; // w2
   int32_t v4; // w3
 
-  if ( (byte_49FBFAA & 1) == 0 )
+  if ( (byte_49FC5CA & 1) == 0 )
   {
-    sub_1B64870(&AccountLinkageTakeOverComponent___c_TypeInfo, v1);
-    byte_49FBFAA = 1;
+    sub_1B64A00(&AccountLinkageTakeOverComponent___c_TypeInfo, v1);
+    byte_49FC5CA = 1;
   }
-  v2 = (Il2CppObject *)sub_1B64ABC(AccountLinkageTakeOverComponent___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B64C4C(AccountLinkageTakeOverComponent___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   AccountLinkageTakeOverComponent___c_TypeInfo->static_fields->__9 = (struct AccountLinkageTakeOverComponent___c_o *)v2;
-  sub_1B64814(
+  sub_1B649A4(
     (ServantStatusBattleListViewItem_o *)AccountLinkageTakeOverComponent___c_TypeInfo->static_fields,
     (int32_t)v2,
     v3,
@@ -1509,14 +1509,14 @@ void __fastcall AccountLinkageTakeOverComponent___c___CloseWebViewCallback_b__14
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_49FBFAB & 1) == 0 )
+  if ( (byte_49FC5CB & 1) == 0 )
   {
-    sub_1B64870(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    byte_49FBFAB = 1;
+    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    byte_49FC5CB = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1B64ACC(0LL, v3);
+    sub_1B64C5C(0LL, v3);
   CommonUI__CloseAccountLinkageNotificationDialog((CommonUI_o *)Instance, 0LL, 0LL);
 }
 
@@ -1528,14 +1528,14 @@ void __fastcall AccountLinkageTakeOverComponent___c___NoticeCannotTakeOver_b__19
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_49FBFAC & 1) == 0 )
+  if ( (byte_49FC5CC & 1) == 0 )
   {
-    sub_1B64870(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    byte_49FBFAC = 1;
+    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    byte_49FC5CC = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1B64ACC(0LL, v3);
+    sub_1B64C5C(0LL, v3);
   CommonUI__CloseAccountLinkageNotificationDialog((CommonUI_o *)Instance, 0LL, 0LL);
 }
 
@@ -1547,14 +1547,14 @@ void __fastcall AccountLinkageTakeOverComponent___c___OnCloseTakeOverDecide_b__2
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_49FBFAF & 1) == 0 )
+  if ( (byte_49FC5CF & 1) == 0 )
   {
-    sub_1B64870(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__, method);
-    byte_49FBFAF = 1;
+    sub_1B64A00(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__, method);
+    byte_49FC5CF = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
   if ( !Instance )
-    sub_1B64ACC(0LL, v3);
+    sub_1B64C5C(0LL, v3);
   ManagementManager__reboot((ManagementManager_o *)Instance, 0, 1, 0LL);
 }
 
@@ -1566,14 +1566,14 @@ void __fastcall AccountLinkageTakeOverComponent___c___OnPartialMaintenance_b__23
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_49FBFAE & 1) == 0 )
+  if ( (byte_49FC5CE & 1) == 0 )
   {
-    sub_1B64870(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    byte_49FBFAE = 1;
+    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    byte_49FC5CE = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1B64ACC(0LL, v3);
+    sub_1B64C5C(0LL, v3);
   CommonUI__CloseAccountLinkageNotificationDialog((CommonUI_o *)Instance, 0LL, 0LL);
 }
 
@@ -1585,13 +1585,13 @@ void __fastcall AccountLinkageTakeOverComponent___c___OnSiteMaintenance_b__22_0(
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_49FBFAD & 1) == 0 )
+  if ( (byte_49FC5CD & 1) == 0 )
   {
-    sub_1B64870(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    byte_49FBFAD = 1;
+    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    byte_49FC5CD = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1B64ACC(0LL, v3);
+    sub_1B64C5C(0LL, v3);
   CommonUI__CloseAccountLinkageNotificationDialog((CommonUI_o *)Instance, 0LL, 0LL);
 }

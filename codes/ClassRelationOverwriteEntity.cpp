@@ -1,13 +1,13 @@
 void __fastcall ClassRelationOverwriteEntity___ctor(ClassRelationOverwriteEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FE2B4 & 1) == 0 )
+  if ( (byte_49FE8D4 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataEntityBase_string___ctor__, method);
-    byte_49FE2B4 = 1;
+    sub_1B64A00(&Method_DataEntityBase_string___ctor__, method);
+    byte_49FE8D4 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30D5FF8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D6610 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -19,17 +19,17 @@ System_String_o *__fastcall ClassRelationOverwriteEntity__CreatePK(
         int32_t defClass,
         const MethodInfo *method)
 {
-  if ( (byte_49FE2B2 & 1) == 0 )
+  if ( (byte_49FE8D2 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&atkSide);
-    byte_49FE2B2 = 1;
+    sub_1B64A00(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&atkSide);
+    byte_49FE8D2 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            id,
            atkSide,
            atkClass,
            defClass,
-           (const MethodInfo_2E3A23C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_2E3A854 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -101,82 +101,82 @@ System_String_o *__fastcall ClassRelationOverwriteEntity__getFieldsLogString(
   int32_t atkSide; // [xsp+38h] [xbp-28h] BYREF
   int32_t id; // [xsp+3Ch] [xbp-24h] BYREF
 
-  if ( (byte_49FE2B3 & 1) == 0 )
+  if ( (byte_49FE8D3 & 1) == 0 )
   {
-    sub_1B64870(&int_TypeInfo, method);
-    sub_1B64870(&object___TypeInfo, v3);
-    sub_1B64870(&ClassRelationOverwriteEntity_TYPE_TypeInfo, v4);
-    sub_1B64870(&StringLiteral_20128/*"id:{0} side:{1} atk:{2} def:{3} rate:{4} type:{5}"*/, v5);
-    byte_49FE2B3 = 1;
+    sub_1B64A00(&int_TypeInfo, method);
+    sub_1B64A00(&object___TypeInfo, v3);
+    sub_1B64A00(&ClassRelationOverwriteEntity_TYPE_TypeInfo, v4);
+    sub_1B64A00(&StringLiteral_20128/*"id:{0} side:{1} atk:{2} def:{3} rate:{4} type:{5}"*/, v5);
+    byte_49FE8D3 = 1;
   }
-  v6 = (System_Object_array *)sub_1B64918(object___TypeInfo, 6LL);
+  v6 = (System_Object_array *)sub_1B64AA8(object___TypeInfo, 6LL);
   id = this->fields.id;
   v10 = (System_String_o *)j_il2cpp_value_box_0(int_TypeInfo, &id, v7, v8, v9);
   if ( !v6 )
-    sub_1B64ACC(v10, v11);
+    sub_1B64C5C(v10, v11);
   v14 = (Il2CppObject *)v10;
   if ( v10 )
   {
-    v10 = (System_String_o *)sub_1B649AC(v10, v6->obj.klass->_1.element_class);
+    v10 = (System_String_o *)sub_1B64B3C(v10, v6->obj.klass->_1.element_class);
     if ( !v10 )
       goto LABEL_24;
   }
   if ( !v6->max_length )
     goto LABEL_23;
   v6->m_Items[0] = v14;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)v6->m_Items, (int32_t)v14, v12, v13);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)v6->m_Items, (int32_t)v14, v12, v13);
   atkSide = this->fields.atkSide;
   v10 = (System_String_o *)j_il2cpp_value_box_0(int_TypeInfo, &atkSide, v15, v16, v17);
   v20 = (Il2CppObject *)v10;
   if ( v10 )
   {
-    v10 = (System_String_o *)sub_1B649AC(v10, v6->obj.klass->_1.element_class);
+    v10 = (System_String_o *)sub_1B64B3C(v10, v6->obj.klass->_1.element_class);
     if ( !v10 )
       goto LABEL_24;
   }
   if ( v6->max_length <= 1 )
     goto LABEL_23;
   v6->m_Items[1] = v20;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&v6->m_Items[1], (int32_t)v20, v18, v19);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&v6->m_Items[1], (int32_t)v20, v18, v19);
   atkClass = this->fields.atkClass;
   v10 = (System_String_o *)j_il2cpp_value_box_0(int_TypeInfo, &atkClass, v21, v22, v23);
   v26 = (Il2CppObject *)v10;
   if ( v10 )
   {
-    v10 = (System_String_o *)sub_1B649AC(v10, v6->obj.klass->_1.element_class);
+    v10 = (System_String_o *)sub_1B64B3C(v10, v6->obj.klass->_1.element_class);
     if ( !v10 )
       goto LABEL_24;
   }
   if ( v6->max_length <= 2 )
     goto LABEL_23;
   v6->m_Items[2] = v26;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&v6->m_Items[2], (int32_t)v26, v24, v25);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&v6->m_Items[2], (int32_t)v26, v24, v25);
   defClass = this->fields.defClass;
   v10 = (System_String_o *)j_il2cpp_value_box_0(int_TypeInfo, &defClass, v27, v28, v29);
   v32 = (Il2CppObject *)v10;
   if ( v10 )
   {
-    v10 = (System_String_o *)sub_1B649AC(v10, v6->obj.klass->_1.element_class);
+    v10 = (System_String_o *)sub_1B64B3C(v10, v6->obj.klass->_1.element_class);
     if ( !v10 )
       goto LABEL_24;
   }
   if ( v6->max_length <= 3 )
     goto LABEL_23;
   v6->m_Items[3] = v32;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&v6->m_Items[3], (int32_t)v32, v30, v31);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&v6->m_Items[3], (int32_t)v32, v30, v31);
   damageRate = this->fields.damageRate;
   v10 = (System_String_o *)j_il2cpp_value_box_0(int_TypeInfo, &damageRate, v33, v34, v35);
   v38 = (Il2CppObject *)v10;
   if ( v10 )
   {
-    v10 = (System_String_o *)sub_1B649AC(v10, v6->obj.klass->_1.element_class);
+    v10 = (System_String_o *)sub_1B64B3C(v10, v6->obj.klass->_1.element_class);
     if ( !v10 )
       goto LABEL_24;
   }
   if ( v6->max_length <= 4 )
     goto LABEL_23;
   v6->m_Items[4] = v38;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&v6->m_Items[4], (int32_t)v38, v36, v37);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&v6->m_Items[4], (int32_t)v38, v36, v37);
   type = this->fields.type;
   v45.klass = (System_Enum_c *)ClassRelationOverwriteEntity_TYPE_TypeInfo;
   v45.monitor = (void *)-1LL;
@@ -185,20 +185,20 @@ System_String_o *__fastcall ClassRelationOverwriteEntity__getFieldsLogString(
   v42 = (Il2CppObject *)v10;
   if ( v10 )
   {
-    v10 = (System_String_o *)sub_1B649AC(v10, v6->obj.klass->_1.element_class);
+    v10 = (System_String_o *)sub_1B64B3C(v10, v6->obj.klass->_1.element_class);
     if ( !v10 )
     {
 LABEL_24:
-      v44 = sub_1B64AF0(v10);
-      sub_1B64998(v44, 0LL);
+      v44 = sub_1B64C80(v10);
+      sub_1B64B28(v44, 0LL);
     }
   }
   if ( v6->max_length <= 5 )
 LABEL_23:
-    sub_1B64AD4(v10, v11);
+    sub_1B64C64(v10, v11);
   v6->m_Items[5] = v42;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&v6->m_Items[5], (int32_t)v42, v40, v41);
-  return System_String__Format_61398084((System_String_o *)StringLiteral_20128/*"id:{0} side:{1} atk:{2} def:{3} rate:{4} type:{5}"*/, v6, 0LL);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&v6->m_Items[5], (int32_t)v42, v40, v41);
+  return System_String__Format_61399644((System_String_o *)StringLiteral_20128/*"id:{0} side:{1} atk:{2} def:{3} rate:{4} type:{5}"*/, v6, 0LL);
 }
 
 

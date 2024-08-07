@@ -22,17 +22,17 @@ void __fastcall BattleModelObjectVisibleControlComponent__Awake(
   int32_t v11; // w2
   int32_t v12; // w3
 
-  if ( (byte_49FD969 & 1) == 0 )
+  if ( (byte_49FDF89 & 1) == 0 )
   {
-    sub_1B64870(
+    sub_1B64A00(
       &System_Action_BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct__TypeInfo,
       method);
-    sub_1B64870(
+    sub_1B64A00(
       &Method_BasicHelper_ForEach_BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct___,
       v3);
-    sub_1B64870(&Method_BattleModelObjectVisibleControlComponent___c__Awake_b__5_0__, v4);
-    sub_1B64870(&BattleModelObjectVisibleControlComponent___c_TypeInfo, v5);
-    byte_49FD969 = 1;
+    sub_1B64A00(&Method_BattleModelObjectVisibleControlComponent___c__Awake_b__5_0__, v4);
+    sub_1B64A00(&BattleModelObjectVisibleControlComponent___c_TypeInfo, v5);
+    byte_49FDF89 = 1;
   }
   v6 = BattleModelObjectVisibleControlComponent___c_TypeInfo;
   visibleChangeObjects = (System_Collections_Generic_IEnumerable_T__o *)this->fields.visibleChangeObjects;
@@ -50,16 +50,16 @@ void __fastcall BattleModelObjectVisibleControlComponent__Awake(
       v6 = BattleModelObjectVisibleControlComponent___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__5_0 = (System_Action_object__o *)sub_1B64ABC(System_Action_BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct__TypeInfo);
+    _9__5_0 = (System_Action_object__o *)sub_1B64C4C(System_Action_BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct__TypeInfo);
     System_Action_object____ctor(_9__5_0, v9, Method_BattleModelObjectVisibleControlComponent___c__Awake_b__5_0__, 0LL);
     static_fields = BattleModelObjectVisibleControlComponent___c_TypeInfo->static_fields;
     static_fields->__9__5_0 = (struct System_Action_BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct__o *)_9__5_0;
-    sub_1B64814((ServantStatusBattleListViewItem_o *)&static_fields->__9__5_0, (int32_t)_9__5_0, v11, v12);
+    sub_1B649A4((ServantStatusBattleListViewItem_o *)&static_fields->__9__5_0, (int32_t)_9__5_0, v11, v12);
   }
   BasicHelper__ForEach_object_(
     visibleChangeObjects,
     (System_Action_T__o *)_9__5_0,
-    (const MethodInfo_2E28B3C *)Method_BasicHelper_ForEach_BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct___);
+    (const MethodInfo_2E29154 *)Method_BasicHelper_ForEach_BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct___);
 }
 
 
@@ -72,7 +72,7 @@ bool __fastcall BattleModelObjectVisibleControlComponent__CheckTiming(
 
   visibleChangeObjects = this->fields.visibleChangeObjects;
   if ( !visibleChangeObjects )
-    sub_1B64ACC(this, timing);
+    sub_1B64C5C(this, timing);
   return *(_QWORD *)&visibleChangeObjects->max_length && this->fields.executeTiming == timing;
 }
 
@@ -90,25 +90,25 @@ bool __fastcall BattleModelObjectVisibleControlComponent__EndProc(
   System_Action_object__o *v8; // x20
 
   v4 = this;
-  if ( (byte_49FD96B & 1) == 0 )
+  if ( (byte_49FDF8B & 1) == 0 )
   {
-    sub_1B64870(
+    sub_1B64A00(
       &System_Action_BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct__TypeInfo,
       *(_QWORD *)&timing);
-    sub_1B64870(
+    sub_1B64A00(
       &Method_BasicHelper_ForEach_BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct___,
       v5);
-    this = (BattleModelObjectVisibleControlComponent_o *)sub_1B64870(
+    this = (BattleModelObjectVisibleControlComponent_o *)sub_1B64A00(
                                                            &Method_BattleModelObjectVisibleControlComponent__EndProc_b__8_0__,
                                                            v6);
-    byte_49FD96B = 1;
+    byte_49FDF8B = 1;
   }
   visibleChangeObjects = (System_Collections_Generic_IEnumerable_T__o *)v4->fields.visibleChangeObjects;
   if ( !visibleChangeObjects )
-    sub_1B64ACC(this, *(_QWORD *)&timing);
+    sub_1B64C5C(this, *(_QWORD *)&timing);
   if ( !visibleChangeObjects[1].monitor || v4->fields.executeTiming != timing )
     return 0;
-  v8 = (System_Action_object__o *)sub_1B64ABC(System_Action_BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct__TypeInfo);
+  v8 = (System_Action_object__o *)sub_1B64C4C(System_Action_BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct__TypeInfo);
   System_Action_object____ctor(
     v8,
     (Il2CppObject *)v4,
@@ -117,7 +117,7 @@ bool __fastcall BattleModelObjectVisibleControlComponent__EndProc(
   BasicHelper__ForEach_object_(
     visibleChangeObjects,
     (System_Action_T__o *)v8,
-    (const MethodInfo_2E28B3C *)Method_BasicHelper_ForEach_BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct___);
+    (const MethodInfo_2E29154 *)Method_BasicHelper_ForEach_BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct___);
   return 1;
 }
 
@@ -135,25 +135,25 @@ bool __fastcall BattleModelObjectVisibleControlComponent__ExecuteProc(
   System_Action_object__o *v8; // x20
 
   v4 = this;
-  if ( (byte_49FD96A & 1) == 0 )
+  if ( (byte_49FDF8A & 1) == 0 )
   {
-    sub_1B64870(
+    sub_1B64A00(
       &System_Action_BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct__TypeInfo,
       *(_QWORD *)&timing);
-    sub_1B64870(
+    sub_1B64A00(
       &Method_BasicHelper_ForEach_BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct___,
       v5);
-    this = (BattleModelObjectVisibleControlComponent_o *)sub_1B64870(
+    this = (BattleModelObjectVisibleControlComponent_o *)sub_1B64A00(
                                                            &Method_BattleModelObjectVisibleControlComponent__ExecuteProc_b__7_0__,
                                                            v6);
-    byte_49FD96A = 1;
+    byte_49FDF8A = 1;
   }
   visibleChangeObjects = (System_Collections_Generic_IEnumerable_T__o *)v4->fields.visibleChangeObjects;
   if ( !visibleChangeObjects )
-    sub_1B64ACC(this, *(_QWORD *)&timing);
+    sub_1B64C5C(this, *(_QWORD *)&timing);
   if ( !visibleChangeObjects[1].monitor || v4->fields.executeTiming != timing )
     return 0;
-  v8 = (System_Action_object__o *)sub_1B64ABC(System_Action_BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct__TypeInfo);
+  v8 = (System_Action_object__o *)sub_1B64C4C(System_Action_BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct__TypeInfo);
   System_Action_object____ctor(
     v8,
     (Il2CppObject *)v4,
@@ -162,7 +162,7 @@ bool __fastcall BattleModelObjectVisibleControlComponent__ExecuteProc(
   BasicHelper__ForEach_object_(
     visibleChangeObjects,
     (System_Action_T__o *)v8,
-    (const MethodInfo_2E28B3C *)Method_BasicHelper_ForEach_BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct___);
+    (const MethodInfo_2E29154 *)Method_BasicHelper_ForEach_BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct___);
   return 1;
 }
 
@@ -180,25 +180,25 @@ bool __fastcall BattleModelObjectVisibleControlComponent__IsSkinnedMesh(
   System_Collections_Generic_IEnumerable_T__o *visibleChangeObjects; // x19
   System_Action_object__o *v10; // x21
 
-  if ( (byte_49FD96C & 1) == 0 )
+  if ( (byte_49FDF8C & 1) == 0 )
   {
-    sub_1B64870(
+    sub_1B64A00(
       &System_Action_BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct__TypeInfo,
       method);
-    sub_1B64870(
+    sub_1B64A00(
       &Method_BasicHelper_ForEach_BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct___,
       v3);
-    sub_1B64870(&Method_BattleModelObjectVisibleControlComponent___c__DisplayClass9_0__IsSkinnedMesh_b__0__, v4);
-    sub_1B64870(&BattleModelObjectVisibleControlComponent___c__DisplayClass9_0_TypeInfo, v5);
-    byte_49FD96C = 1;
+    sub_1B64A00(&Method_BattleModelObjectVisibleControlComponent___c__DisplayClass9_0__IsSkinnedMesh_b__0__, v4);
+    sub_1B64A00(&BattleModelObjectVisibleControlComponent___c__DisplayClass9_0_TypeInfo, v5);
+    byte_49FDF8C = 1;
   }
-  v6 = sub_1B64ABC(BattleModelObjectVisibleControlComponent___c__DisplayClass9_0_TypeInfo);
+  v6 = sub_1B64C4C(BattleModelObjectVisibleControlComponent___c__DisplayClass9_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v6, 0LL);
   if ( !v6 )
-    sub_1B64ACC(v7, v8);
+    sub_1B64C5C(v7, v8);
   *(_BYTE *)(v6 + 16) = 0;
   visibleChangeObjects = (System_Collections_Generic_IEnumerable_T__o *)this->fields.visibleChangeObjects;
-  v10 = (System_Action_object__o *)sub_1B64ABC(System_Action_BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct__TypeInfo);
+  v10 = (System_Action_object__o *)sub_1B64C4C(System_Action_BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct__TypeInfo);
   System_Action_object____ctor(
     v10,
     (Il2CppObject *)v6,
@@ -207,7 +207,7 @@ bool __fastcall BattleModelObjectVisibleControlComponent__IsSkinnedMesh(
   BasicHelper__ForEach_object_(
     visibleChangeObjects,
     (System_Action_T__o *)v10,
-    (const MethodInfo_2E28B3C *)Method_BasicHelper_ForEach_BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct___);
+    (const MethodInfo_2E29154 *)Method_BasicHelper_ForEach_BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct___);
   return *(_BYTE *)(v6 + 16);
 }
 
@@ -218,7 +218,7 @@ void __fastcall BattleModelObjectVisibleControlComponent___EndProc_b__8_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B64ACC(this, 0LL);
+    sub_1B64C5C(this, 0LL);
   BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct__SetVisible(x, !this->fields.visible, method);
 }
 
@@ -229,7 +229,7 @@ void __fastcall BattleModelObjectVisibleControlComponent___ExecuteProc_b__7_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B64ACC(this, 0LL);
+    sub_1B64C5C(this, 0LL);
   BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct__SetVisible(x, this->fields.visible, method);
 }
 
@@ -243,18 +243,18 @@ void __fastcall BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCom
   int32_t v5; // w2
   int32_t v6; // w3
 
-  if ( (byte_49FD970 & 1) == 0 )
+  if ( (byte_49FDF90 & 1) == 0 )
   {
-    sub_1B64870(&Method_System_Collections_Generic_List_SkinnedMeshRenderer___ctor__, method);
-    sub_1B64870(&System_Collections_Generic_List_SkinnedMeshRenderer__TypeInfo, v3);
-    byte_49FD970 = 1;
+    sub_1B64A00(&Method_System_Collections_Generic_List_SkinnedMeshRenderer___ctor__, method);
+    sub_1B64A00(&System_Collections_Generic_List_SkinnedMeshRenderer__TypeInfo, v3);
+    byte_49FDF90 = 1;
   }
-  v4 = (System_Collections_Generic_List_object__o *)sub_1B64ABC(System_Collections_Generic_List_SkinnedMeshRenderer__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1B64C4C(System_Collections_Generic_List_SkinnedMeshRenderer__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_34AF17C *)Method_System_Collections_Generic_List_SkinnedMeshRenderer___ctor__);
+    (const MethodInfo_34AF794 *)Method_System_Collections_Generic_List_SkinnedMeshRenderer___ctor__);
   this->fields.skinnedMeshList = (struct System_Collections_Generic_List_SkinnedMeshRenderer__o *)v4;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.skinnedMeshList, (int32_t)v4, v5, v6);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.skinnedMeshList, (int32_t)v4, v5, v6);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -276,12 +276,12 @@ void __fastcall BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCom
   __int64 klass_low; // x10
   __int64 v14; // x8
 
-  if ( (byte_49FD96D & 1) == 0 )
+  if ( (byte_49FDF8D & 1) == 0 )
   {
-    sub_1B64870(&Method_UnityEngine_GameObject_GetComponentInChildren_SkinnedMeshRenderer___, method);
-    sub_1B64870(&Method_System_Collections_Generic_List_SkinnedMeshRenderer__Add__, v3);
-    sub_1B64870(&UnityEngine_Object_TypeInfo, v4);
-    byte_49FD96D = 1;
+    sub_1B64A00(&Method_UnityEngine_GameObject_GetComponentInChildren_SkinnedMeshRenderer___, method);
+    sub_1B64A00(&Method_System_Collections_Generic_List_SkinnedMeshRenderer__Add__, v3);
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, v4);
+    byte_49FDF8D = 1;
   }
   gameObject = (UnityEngine_Object_o *)this->fields.gameObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -293,7 +293,7 @@ void __fastcall BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCom
     {
       ComponentInChildren_object = UnityEngine_GameObject__GetComponentInChildren_object_(
                                      skinnedMeshList,
-                                     (const MethodInfo_2E8A418 *)Method_UnityEngine_GameObject_GetComponentInChildren_SkinnedMeshRenderer___);
+                                     (const MethodInfo_2E8AA30 *)Method_UnityEngine_GameObject_GetComponentInChildren_SkinnedMeshRenderer___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)ComponentInChildren_object, 0LL, 0LL) )
@@ -312,20 +312,20 @@ void __fastcall BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCom
             System_Collections_Generic_List_object___AddWithResize(
               (System_Collections_Generic_List_object__o *)skinnedMeshList,
               ComponentInChildren_object,
-              *(const MethodInfo_34AF9B0 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+              *(const MethodInfo_34AFFC8 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
           }
           else
           {
             v14 = v11 + 8 * klass_low;
             LODWORD(skinnedMeshList[1].klass) = klass_low + 1;
             *(_QWORD *)(v14 + 32) = ComponentInChildren_object;
-            sub_1B64814((ServantStatusBattleListViewItem_o *)(v14 + 32), (int32_t)ComponentInChildren_object, v9, v10);
+            sub_1B649A4((ServantStatusBattleListViewItem_o *)(v14 + 32), (int32_t)ComponentInChildren_object, v9, v10);
           }
           return;
         }
       }
     }
-    sub_1B64ACC(skinnedMeshList, v6);
+    sub_1B64C5C(skinnedMeshList, v6);
   }
 }
 
@@ -338,16 +338,16 @@ bool __fastcall BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCom
   struct System_Collections_Generic_List_SkinnedMeshRenderer__o *skinnedMeshList; // x8
 
   v2 = this;
-  if ( (byte_49FD96F & 1) == 0 )
+  if ( (byte_49FDF8F & 1) == 0 )
   {
-    this = (BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct_o *)sub_1B64870(
+    this = (BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct_o *)sub_1B64A00(
                                                                                           &Method_System_Collections_Generic_List_SkinnedMeshRenderer__get_Count__,
                                                                                           method);
-    byte_49FD96F = 1;
+    byte_49FDF8F = 1;
   }
   skinnedMeshList = v2->fields.skinnedMeshList;
   if ( !skinnedMeshList )
-    sub_1B64ACC(this, method);
+    sub_1B64C5C(this, method);
   return skinnedMeshList->fields._size > 0;
 }
 
@@ -366,13 +366,13 @@ void __fastcall BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCom
   __int64 v10; // x1
   System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_49FD96E & 1) == 0 )
+  if ( (byte_49FDF8E & 1) == 0 )
   {
-    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_SkinnedMeshRenderer__Dispose__, flg);
-    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_SkinnedMeshRenderer__MoveNext__, v5);
-    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_SkinnedMeshRenderer__get_Current__, v6);
-    sub_1B64870(&Method_System_Collections_Generic_List_SkinnedMeshRenderer__GetEnumerator__, v7);
-    byte_49FD96E = 1;
+    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_SkinnedMeshRenderer__Dispose__, flg);
+    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_SkinnedMeshRenderer__MoveNext__, v5);
+    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_SkinnedMeshRenderer__get_Current__, v6);
+    sub_1B64A00(&Method_System_Collections_Generic_List_SkinnedMeshRenderer__GetEnumerator__, v7);
+    byte_49FDF8E = 1;
   }
   memset(&v11, 0, sizeof(v11));
   if ( !BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct__IsSkinnedMesh(
@@ -386,7 +386,7 @@ void __fastcall BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCom
       return;
     }
 LABEL_14:
-    sub_1B64ACC(gameObject, v8);
+    sub_1B64C5C(gameObject, v8);
   }
   gameObject = (UnityEngine_GameObject_o *)this->fields.skinnedMeshList;
   if ( !gameObject )
@@ -394,18 +394,18 @@ LABEL_14:
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v11,
     (System_Collections_Generic_List_object__o *)gameObject,
-    (const MethodInfo_34B0548 *)Method_System_Collections_Generic_List_SkinnedMeshRenderer__GetEnumerator__);
+    (const MethodInfo_34B0B60 *)Method_System_Collections_Generic_List_SkinnedMeshRenderer__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v11,
-            (const MethodInfo_322C38C *)Method_System_Collections_Generic_List_Enumerator_SkinnedMeshRenderer__MoveNext__) )
+            (const MethodInfo_322C9A4 *)Method_System_Collections_Generic_List_Enumerator_SkinnedMeshRenderer__MoveNext__) )
   {
     if ( !v11.fields._current )
-      sub_1B64ACC(0LL, v10);
+      sub_1B64C5C(0LL, v10);
     UnityEngine_Renderer__set_enabled((UnityEngine_Renderer_o *)v11.fields._current, flg, 0LL);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v11,
-    (const MethodInfo_322C388 *)Method_System_Collections_Generic_List_Enumerator_SkinnedMeshRenderer__Dispose__);
+    (const MethodInfo_322C9A0 *)Method_System_Collections_Generic_List_Enumerator_SkinnedMeshRenderer__Dispose__);
 }
 
 
@@ -416,15 +416,15 @@ void __fastcall BattleModelObjectVisibleControlComponent___c___cctor(const Metho
   int32_t v3; // w2
   int32_t v4; // w3
 
-  if ( (byte_49FD971 & 1) == 0 )
+  if ( (byte_49FDF91 & 1) == 0 )
   {
-    sub_1B64870(&BattleModelObjectVisibleControlComponent___c_TypeInfo, v1);
-    byte_49FD971 = 1;
+    sub_1B64A00(&BattleModelObjectVisibleControlComponent___c_TypeInfo, v1);
+    byte_49FDF91 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B64ABC(BattleModelObjectVisibleControlComponent___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B64C4C(BattleModelObjectVisibleControlComponent___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   BattleModelObjectVisibleControlComponent___c_TypeInfo->static_fields->__9 = (struct BattleModelObjectVisibleControlComponent___c_o *)v2;
-  sub_1B64814(
+  sub_1B649A4(
     (ServantStatusBattleListViewItem_o *)BattleModelObjectVisibleControlComponent___c_TypeInfo->static_fields,
     (int32_t)v2,
     v3,
@@ -446,7 +446,7 @@ void __fastcall BattleModelObjectVisibleControlComponent___c___Awake_b__5_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B64ACC(this, 0LL);
+    sub_1B64C5C(this, 0LL);
   BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct__Initialize(x, (const MethodInfo *)x);
 }
 
@@ -467,7 +467,7 @@ void __fastcall BattleModelObjectVisibleControlComponent___c__DisplayClass9_0___
   bool isSkinned; // w20
 
   if ( !x )
-    sub_1B64ACC(this, 0LL);
+    sub_1B64C5C(this, 0LL);
   isSkinned = this->fields.isSkinned;
   this->fields.isSkinned = isSkinned | BattleModelObjectVisibleControlComponent_ServantObjVisibleCtrCompStruct__IsSkinnedMesh(
                                          x,

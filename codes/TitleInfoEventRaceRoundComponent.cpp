@@ -72,36 +72,36 @@ void __fastcall TitleInfoEventRaceRoundComponent__Setup(
 
   v29 = termId;
   v30 = eventId;
-  if ( (byte_49FC5FB & 1) == 0 )
+  if ( (byte_49FCC1B & 1) == 0 )
   {
-    sub_1B64870(&AtlasManager_TypeInfo, *(_QWORD *)&eventId);
-    sub_1B64870(&Method_DataManager_GetMasterData_MapCondMaster___, v11);
-    sub_1B64870(&Method_DataManager_GetMasterData_MapMaster___, v12);
-    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
-    sub_1B64870(&StringLiteral_22659/*"race_mapname_round_"*/, v14);
-    sub_1B64870(&StringLiteral_16056/*"_"*/, v15);
-    sub_1B64870(&StringLiteral_22658/*"race_mapname_bg_"*/, v16);
-    byte_49FC5FB = 1;
+    sub_1B64A00(&AtlasManager_TypeInfo, *(_QWORD *)&eventId);
+    sub_1B64A00(&Method_DataManager_GetMasterData_MapCondMaster___, v11);
+    sub_1B64A00(&Method_DataManager_GetMasterData_MapMaster___, v12);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
+    sub_1B64A00(&StringLiteral_22659/*"race_mapname_round_"*/, v14);
+    sub_1B64A00(&StringLiteral_16057/*"_"*/, v15);
+    sub_1B64A00(&StringLiteral_22658/*"race_mapname_bg_"*/, v16);
+    byte_49FCC1B = 1;
   }
   this->fields.effectAssetData = effectAssetData;
-  sub_1B64814(
+  sub_1B649A4(
     (ServantStatusBattleListViewItem_o *)&this->fields.effectAssetData,
     (int32_t)effectAssetData,
     warId,
     mapId);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)Instance,
-                              (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_MapCondMaster___),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
+                              (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_MapCondMaster___),
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_MapMaster___)) == 0LL
+                     (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_MapMaster___)) == 0LL
     || (Instance = MapMaster__GetEntity((MapMaster_o *)Instance, mapId, warId, 0LL)) == 0LL
     || !MasterData_object )
   {
-    sub_1B64ACC(Instance, v18);
+    sub_1B64C5C(Instance, v18);
   }
   PrioredID = MapCondMaster__GetPrioredID(
                 (MapCondMaster_o *)MasterData_object,
@@ -114,7 +114,7 @@ void __fastcall TitleInfoEventRaceRoundComponent__Setup(
   baseWindow = this->fields.baseWindow;
   this->fields.nowHeaderId = PrioredID;
   v22 = System_Int32__ToString((int32_t)&v30, 0LL);
-  v23 = System_String__Concat_61383576((System_String_o *)StringLiteral_22658/*"race_mapname_bg_"*/, v22, 0LL);
+  v23 = System_String__Concat_61385136((System_String_o *)StringLiteral_22658/*"race_mapname_bg_"*/, v22, 0LL);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   AtlasManager__SetEventUI(baseWindow, v23, 0LL);
@@ -122,10 +122,10 @@ void __fastcall TitleInfoEventRaceRoundComponent__Setup(
   roundNumSpr = this->fields.roundNumSpr;
   v26 = System_Int32__ToString((int32_t)&v30, 0LL);
   v27 = System_Int32__ToString((int32_t)&v29, 0LL);
-  v28 = System_String__Concat_61396840(
+  v28 = System_String__Concat_61398400(
           (System_String_o *)StringLiteral_22659/*"race_mapname_round_"*/,
           v26,
-          (System_String_o *)StringLiteral_16056/*"_"*/,
+          (System_String_o *)StringLiteral_16057/*"_"*/,
           v27,
           0LL);
   AtlasManager__SetEventUI(roundNumSpr, v28, 0LL);
@@ -163,15 +163,15 @@ void __fastcall TitleInfoEventRaceRoundComponent__setHeaderImg(
   int32_t v8; // [xsp+Ch] [xbp-24h] BYREF
 
   v8 = headerId;
-  if ( (byte_49FC5FC & 1) == 0 )
+  if ( (byte_49FCC1C & 1) == 0 )
   {
-    sub_1B64870(&AtlasManager_TypeInfo, *(_QWORD *)&headerId);
-    sub_1B64870(&StringLiteral_22657/*"race_mapname_"*/, v4);
-    byte_49FC5FC = 1;
+    sub_1B64A00(&AtlasManager_TypeInfo, *(_QWORD *)&headerId);
+    sub_1B64A00(&StringLiteral_22657/*"race_mapname_"*/, v4);
+    byte_49FCC1C = 1;
   }
   mapNameSpr = this->fields.mapNameSpr;
   v6 = System_Int32__ToString((int32_t)&v8, 0LL);
-  v7 = System_String__Concat_61383576((System_String_o *)StringLiteral_22657/*"race_mapname_"*/, v6, 0LL);
+  v7 = System_String__Concat_61385136((System_String_o *)StringLiteral_22657/*"race_mapname_"*/, v6, 0LL);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   AtlasManager__SetEventUI(mapNameSpr, v7, 0LL);
@@ -194,7 +194,7 @@ void __fastcall TitleInfoEventRaceRoundComponent__setupNameChangeEffect(
   AssetData_o *effectAssetData; // x21
   System_String_o *v13; // x0
   System_String_o *v14; // x0
-  UnityEngine_Object_o *Object_37459800; // x0
+  UnityEngine_Object_o *Object_37460152; // x0
   Il2CppObject *v16; // x21
   const MethodInfo *v17; // x2
   Il2CppObject *v18; // x0
@@ -209,27 +209,27 @@ void __fastcall TitleInfoEventRaceRoundComponent__setupNameChangeEffect(
   int32_t v27; // [xsp+Ch] [xbp-34h] BYREF
 
   v27 = event_id;
-  if ( (byte_49FC5FD & 1) == 0 )
+  if ( (byte_49FCC1D & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, *(_QWORD *)&event_id);
-    sub_1B64870(&Method_UnityEngine_GameObject_GetComponent_TitleInfoEventOpenHeaderEffect___, v6);
-    sub_1B64870(&UnityEngine_GameObject_TypeInfo, v7);
-    sub_1B64870(&Method_UnityEngine_Object_Instantiate_GameObject___, v8);
-    sub_1B64870(&UnityEngine_Object_TypeInfo, v9);
-    sub_1B64870(&Method_TitleInfoEventRaceRoundComponent__setupNameChangeEffect_b__13_0__, v10);
-    sub_1B64870(&StringLiteral_18769/*"ef_mapnamechange_"*/, v11);
-    byte_49FC5FD = 1;
+    sub_1B64A00(&System_Action_TypeInfo, *(_QWORD *)&event_id);
+    sub_1B64A00(&Method_UnityEngine_GameObject_GetComponent_TitleInfoEventOpenHeaderEffect___, v6);
+    sub_1B64A00(&UnityEngine_GameObject_TypeInfo, v7);
+    sub_1B64A00(&Method_UnityEngine_Object_Instantiate_GameObject___, v8);
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, v9);
+    sub_1B64A00(&Method_TitleInfoEventRaceRoundComponent__setupNameChangeEffect_b__13_0__, v10);
+    sub_1B64A00(&StringLiteral_18770/*"ef_mapnamechange_"*/, v11);
+    byte_49FCC1D = 1;
   }
   effectAssetData = this->fields.effectAssetData;
   if ( effectAssetData )
   {
     v13 = System_Int32__ToString((int32_t)&v27, 0LL);
-    v14 = System_String__Concat_61383576((System_String_o *)StringLiteral_18769/*"ef_mapnamechange_"*/, v13, 0LL);
-    Object_37459800 = AssetData__GetObject_37459800(effectAssetData, v14, 0LL);
-    if ( Object_37459800 )
+    v14 = System_String__Concat_61385136((System_String_o *)StringLiteral_18770/*"ef_mapnamechange_"*/, v13, 0LL);
+    Object_37460152 = AssetData__GetObject_37460152(effectAssetData, v14, 0LL);
+    if ( Object_37460152 )
     {
-      if ( (UnityEngine_GameObject_c *)Object_37459800->klass == UnityEngine_GameObject_TypeInfo )
-        v16 = (Il2CppObject *)Object_37459800;
+      if ( (UnityEngine_GameObject_c *)Object_37460152->klass == UnityEngine_GameObject_TypeInfo )
+        v16 = (Il2CppObject *)Object_37460152;
       else
         v16 = 0LL;
     }
@@ -250,18 +250,18 @@ void __fastcall TitleInfoEventRaceRoundComponent__setupNameChangeEffect(
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v18 = UnityEngine_Object__Instantiate_object_(
               v16,
-              (const MethodInfo_2EBDF7C *)Method_UnityEngine_Object_Instantiate_GameObject___);
+              (const MethodInfo_2EBE594 *)Method_UnityEngine_Object_Instantiate_GameObject___);
       if ( !v18 )
         goto LABEL_20;
       v20 = (UnityEngine_GameObject_o *)v18;
       gameObject = UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)v18, 0LL);
-      GameObjectExtensions__SafeSetParent_33382288(gameObject, this->fields.effectAttachRoot, 0LL);
+      GameObjectExtensions__SafeSetParent_33382640(gameObject, this->fields.effectAttachRoot, 0LL);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            v20,
-                           (const MethodInfo_2E8A1B4 *)Method_UnityEngine_GameObject_GetComponent_TitleInfoEventOpenHeaderEffect___);
+                           (const MethodInfo_2E8A7CC *)Method_UnityEngine_GameObject_GetComponent_TitleInfoEventOpenHeaderEffect___);
       v23 = v27;
       v24 = (TitleInfoEventOpenHeaderEffect_o *)Component_object;
-      v25 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+      v25 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
       System_Action___ctor(
         v25,
         (Il2CppObject *)this,
@@ -269,7 +269,7 @@ void __fastcall TitleInfoEventRaceRoundComponent__setupNameChangeEffect(
         0LL);
       if ( !v24 )
 LABEL_20:
-        sub_1B64ACC(v18, v19);
+        sub_1B64C5C(v18, v19);
       TitleInfoEventOpenHeaderEffect__setup(v24, v23, v25, endCallback, v26);
       CommonEffectComponent__ForceStart((CommonEffectComponent_o *)v24, 0LL);
     }

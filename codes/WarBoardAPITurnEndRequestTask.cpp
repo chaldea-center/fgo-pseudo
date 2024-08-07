@@ -4,7 +4,7 @@ void __fastcall WarBoardAPITurnEndRequestTask___ctor(
         bool onStartBeginRequest,
         const MethodInfo *method)
 {
-  WarBoardAPIRequestTask___ctor_35379100((WarBoardAPIRequestTask_o *)this, resultCallback, onStartBeginRequest, 0LL);
+  WarBoardAPIRequestTask___ctor_35379452((WarBoardAPIRequestTask_o *)this, resultCallback, onStartBeginRequest, 0LL);
 }
 
 
@@ -21,15 +21,15 @@ void __fastcall WarBoardAPITurnEndRequestTask__SetRequest(
   int32_t v9; // w2
   int32_t v10; // w3
 
-  if ( (byte_49FC405 & 1) == 0 )
+  if ( (byte_49FCA25 & 1) == 0 )
   {
-    sub_1B64870(&Method_NetworkManager_getRequest_WarBoardTurnEndRequest___, method);
-    sub_1B64870(&NetworkManager_TypeInfo, v3);
-    sub_1B64870(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
-    byte_49FC405 = 1;
+    sub_1B64A00(&Method_NetworkManager_getRequest_WarBoardTurnEndRequest___, method);
+    sub_1B64A00(&NetworkManager_TypeInfo, v3);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
+    byte_49FCA25 = 1;
   }
   WarBoardAPIRequestTask__SetRequest((WarBoardAPIRequestTask_o *)this, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_9;
   monitor = (WarBoardData_o *)Instance[27].monitor;
@@ -37,14 +37,14 @@ void __fastcall WarBoardAPITurnEndRequestTask__SetRequest(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = NetworkManager__getRequest_object_(
                0LL,
-               (const MethodInfo_2EBCCAC *)Method_NetworkManager_getRequest_WarBoardTurnEndRequest___);
+               (const MethodInfo_2EBD2C4 *)Method_NetworkManager_getRequest_WarBoardTurnEndRequest___);
   if ( !monitor
     || (v8 = (WarBoardTurnEndRequest_o *)Instance, Instance = (Il2CppObject *)WarBoardData__get_id(monitor, 0LL), !v8) )
   {
 LABEL_9:
-    sub_1B64ACC(Instance, v6);
+    sub_1B64C5C(Instance, v6);
   }
   WarBoardTurnEndRequest__beginRequest(v8, (int32_t)Instance, monitor, 0LL);
   this->fields.request = (struct RequestBase_o *)v8;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.request, (int32_t)v8, v9, v10);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.request, (int32_t)v8, v9, v10);
 }

@@ -8,25 +8,25 @@ void __fastcall BattleFieldData___ctor(BattleFieldData_o *this, const MethodInfo
   int32_t v8; // w2
   int32_t v9; // w3
 
-  if ( (byte_4A00A80 & 1) == 0 )
+  if ( (byte_4A010A1 & 1) == 0 )
   {
-    sub_1B64870(&double___TypeInfo, method);
-    sub_1B64870(&BattleFieldData_SaveData_TypeInfo, v3);
-    byte_4A00A80 = 1;
+    sub_1B64A00(&double___TypeInfo, method);
+    sub_1B64A00(&BattleFieldData_SaveData_TypeInfo, v3);
+    byte_4A010A1 = 1;
   }
-  v4 = (Il2CppObject *)sub_1B64ABC(BattleFieldData_SaveData_TypeInfo);
+  v4 = (Il2CppObject *)sub_1B64C4C(BattleFieldData_SaveData_TypeInfo);
   System_Object___ctor(v4, 0LL);
   this->fields.tmpsave = (struct BattleFieldData_SaveData_o *)v4;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.tmpsave, (int32_t)v4, v5, v6);
-  v7 = (struct System_Double_array *)sub_1B64918(double___TypeInfo, 1LL);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.tmpsave, (int32_t)v4, v5, v6);
+  v7 = (struct System_Double_array *)sub_1B64AA8(double___TypeInfo, 1LL);
   this->fields.wkZeroParam = v7;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.wkZeroParam, (int32_t)v7, v8, v9);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.wkZeroParam, (int32_t)v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall BattleFieldData___ctor_42405956(
+void __fastcall BattleFieldData___ctor_42406440(
         BattleFieldData_o *this,
         int32_t inIndex,
         Il2CppObject *obj,
@@ -68,35 +68,35 @@ void __fastcall BattleFieldData___ctor_42405956(
   BattleFieldData_AiField_o *v40; // x0
   const MethodInfo *v41; // x1
 
-  if ( (byte_4A00A81 & 1) == 0 )
+  if ( (byte_4A010A2 & 1) == 0 )
   {
-    sub_1B64870(&BattleFieldData_AiField_TypeInfo, *(_QWORD *)&inIndex);
-    sub_1B64870(&AiState_TypeInfo, v7);
-    sub_1B64870(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v8);
-    sub_1B64870(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v9);
-    sub_1B64870(&System_Collections_Generic_Dictionary_string__object__TypeInfo, v10);
-    sub_1B64870(&double___TypeInfo, v11);
-    sub_1B64870(&long_TypeInfo, v12);
-    sub_1B64870(&BattleFieldData_SaveData_TypeInfo, v13);
-    sub_1B64870(&StringLiteral_22666/*"raid"*/, v14);
-    sub_1B64870(&StringLiteral_20123/*"id"*/, v15);
-    byte_4A00A81 = 1;
+    sub_1B64A00(&BattleFieldData_AiField_TypeInfo, *(_QWORD *)&inIndex);
+    sub_1B64A00(&AiState_TypeInfo, v7);
+    sub_1B64A00(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v8);
+    sub_1B64A00(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v9);
+    sub_1B64A00(&System_Collections_Generic_Dictionary_string__object__TypeInfo, v10);
+    sub_1B64A00(&double___TypeInfo, v11);
+    sub_1B64A00(&long_TypeInfo, v12);
+    sub_1B64A00(&BattleFieldData_SaveData_TypeInfo, v13);
+    sub_1B64A00(&StringLiteral_22666/*"raid"*/, v14);
+    sub_1B64A00(&StringLiteral_20123/*"id"*/, v15);
+    byte_4A010A2 = 1;
   }
-  v16 = (Il2CppObject *)sub_1B64ABC(BattleFieldData_SaveData_TypeInfo);
+  v16 = (Il2CppObject *)sub_1B64C4C(BattleFieldData_SaveData_TypeInfo);
   System_Object___ctor(v16, 0LL);
   this->fields.tmpsave = (struct BattleFieldData_SaveData_o *)v16;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.tmpsave, (int32_t)v16, v17, v18);
-  v19 = (struct System_Double_array *)sub_1B64918(double___TypeInfo, 1LL);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.tmpsave, (int32_t)v16, v17, v18);
+  v19 = (struct System_Double_array *)sub_1B64AA8(double___TypeInfo, 1LL);
   this->fields.wkZeroParam = v19;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.wkZeroParam, (int32_t)v19, v20, v21);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.wkZeroParam, (int32_t)v19, v20, v21);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.index = inIndex;
   this->fields.uniqueId = -1;
-  v22 = (Il2CppObject *)sub_1B64ABC(BattleFieldData_AiField_TypeInfo);
+  v22 = (Il2CppObject *)sub_1B64C4C(BattleFieldData_AiField_TypeInfo);
   System_Object___ctor(v22, 0LL);
   this->fields.aiField = (struct BattleFieldData_AiField_o *)v22;
   p_aiField = &this->fields.aiField;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.aiField, (int32_t)v22, v24, v25);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.aiField, (int32_t)v22, v24, v25);
   if ( !obj )
     goto LABEL_19;
   methodPtr_low = LOBYTE(System_Collections_Generic_Dictionary_string__object__TypeInfo->vtable._0_Equals.methodPtr);
@@ -109,13 +109,13 @@ void __fastcall BattleFieldData___ctor_42405956(
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)obj,
          (Il2CppObject *)StringLiteral_22666/*"raid"*/,
-         (const MethodInfo_317B8C8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (const MethodInfo_317BEE0 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     v29 = *p_aiField;
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              (System_Collections_Generic_Dictionary_object__object__o *)obj,
              (Il2CppObject *)StringLiteral_22666/*"raid"*/,
-             (const MethodInfo_317B654 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (const MethodInfo_317BC6C *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !v29 || !Item )
       goto LABEL_19;
     if ( Item->klass->_1.element_class != long_TypeInfo->_1.element_class )
@@ -125,14 +125,14 @@ void __fastcall BattleFieldData___ctor_42405956(
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)obj,
           (Il2CppObject *)StringLiteral_20123/*"id"*/,
-          (const MethodInfo_317B8C8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_317BEE0 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
 LABEL_16:
-    v35 = (AiState_o *)sub_1B64ABC(AiState_TypeInfo);
+    v35 = (AiState_o *)sub_1B64C4C(AiState_TypeInfo);
     AiState___ctor(v35, 0LL);
     this->fields.aiState = v35;
     p_aiState = (ServantStatusBattleListViewItem_o *)&this->fields.aiState;
-    sub_1B64814(p_aiState, (int32_t)v35, v37, v38);
+    sub_1B649A4(p_aiState, (int32_t)v35, v37, v38);
     monitor = p_aiState->monitor;
     if ( monitor )
     {
@@ -144,13 +144,13 @@ LABEL_16:
       }
     }
 LABEL_19:
-    sub_1B64ACC(Item, v27);
+    sub_1B64C5C(Item, v27);
   }
   v32 = *p_aiField;
   Item = System_Collections_Generic_Dictionary_object__object___get_Item(
            (System_Collections_Generic_Dictionary_object__object__o *)obj,
            (Il2CppObject *)StringLiteral_20123/*"id"*/,
-           (const MethodInfo_317B654 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+           (const MethodInfo_317BC6C *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !v32 || !Item )
     goto LABEL_19;
   if ( Item->klass->_1.element_class == long_TypeInfo->_1.element_class )
@@ -159,7 +159,7 @@ LABEL_19:
     goto LABEL_16;
   }
 LABEL_21:
-  sub_1B64D8C(Item);
+  sub_1B64F1C(Item);
   BattleFieldData_AiField___ctor(v40, v41);
 }
 
@@ -184,16 +184,16 @@ System_Double_array *__fastcall BattleFieldData__getAiParam(
   BattleRaidInfo_o *v18; // x20
 
   v11 = this;
-  if ( (byte_4A00A82 & 1) == 0 )
+  if ( (byte_4A010A3 & 1) == 0 )
   {
-    this = (BattleFieldData_o *)sub_1B64870(&double___TypeInfo, bData);
-    byte_4A00A82 = 1;
+    this = (BattleFieldData_o *)sub_1B64A00(&double___TypeInfo, bData);
+    byte_4A010A3 = 1;
   }
   if ( param <= 16 )
   {
     if ( param == 1 )
     {
-      this = (BattleFieldData_o *)sub_1B64918(double___TypeInfo, 1LL);
+      this = (BattleFieldData_o *)sub_1B64AA8(double___TypeInfo, 1LL);
       if ( this )
       {
         if ( LODWORD(this->fields.aiState) )
@@ -204,7 +204,7 @@ System_Double_array *__fastcall BattleFieldData__getAiParam(
         goto LABEL_27;
       }
 LABEL_26:
-      sub_1B64ACC(this, bData);
+      sub_1B64C5C(this, bData);
     }
     if ( param != 16 )
       return v11->fields.wkZeroParam;
@@ -220,7 +220,7 @@ LABEL_15:
     if ( RaidInfo )
     {
       v18 = RaidInfo;
-      this = (BattleFieldData_o *)sub_1B64918(double___TypeInfo, 1LL);
+      this = (BattleFieldData_o *)sub_1B64AA8(double___TypeInfo, 1LL);
       if ( this )
       {
         if ( LODWORD(this->fields.aiState) )
@@ -229,7 +229,7 @@ LABEL_15:
           goto LABEL_25;
         }
 LABEL_27:
-        sub_1B64AD4(this, bData);
+        sub_1B64C64(this, bData);
       }
       goto LABEL_26;
     }
@@ -244,7 +244,7 @@ LABEL_27:
   if ( !v13 )
     return v11->fields.wkZeroParam;
   v14 = v13;
-  this = (BattleFieldData_o *)sub_1B64918(double___TypeInfo, 1LL);
+  this = (BattleFieldData_o *)sub_1B64AA8(double___TypeInfo, 1LL);
   if ( !this )
     goto LABEL_26;
   if ( !LODWORD(this->fields.aiState) )
@@ -277,9 +277,9 @@ BattleFieldData_SaveData_o *__fastcall BattleFieldData__getSaveData(BattleFieldD
 
   aiState = this->fields.aiState;
   if ( !aiState || (tmpsave = this->fields.tmpsave, aiState = (AiState_o *)AiState__getSaveData(aiState, 0LL), !tmpsave) )
-    sub_1B64ACC(aiState, method);
+    sub_1B64C5C(aiState, method);
   tmpsave->fields.aistateSave = (struct AiState_SaveData_o *)aiState;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&tmpsave->fields, (int32_t)aiState, v5, v6);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&tmpsave->fields, (int32_t)aiState, v5, v6);
   return this->fields.tmpsave;
 }
 
@@ -307,7 +307,7 @@ void __fastcall BattleFieldData__setSaveData(
         const MethodInfo *method)
 {
   if ( !save || (this = (BattleFieldData_o *)this->fields.aiState) == 0LL )
-    sub_1B64ACC(this, save);
+    sub_1B64C5C(this, save);
   AiState__setSaveData((AiState_o *)this, save->fields.aistateSave, 0LL);
 }
 

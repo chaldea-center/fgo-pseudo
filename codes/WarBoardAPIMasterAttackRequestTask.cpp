@@ -11,11 +11,11 @@ void __fastcall WarBoardAPIMasterAttackRequestTask___ctor(
   int32_t v11; // w2
   int32_t v12; // w3
 
-  WarBoardAPIRequestTask___ctor_35379100((WarBoardAPIRequestTask_o *)this, resultCallback, onStartBeginRequest, 0LL);
+  WarBoardAPIRequestTask___ctor_35379452((WarBoardAPIRequestTask_o *)this, resultCallback, onStartBeginRequest, 0LL);
   this->fields.attackPieceData = attacker;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.attackPieceData, (int32_t)attacker, v9, v10);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.attackPieceData, (int32_t)attacker, v9, v10);
   this->fields.targetPieceData = target;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.targetPieceData, (int32_t)target, v11, v12);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.targetPieceData, (int32_t)target, v11, v12);
 }
 
 
@@ -34,15 +34,15 @@ void __fastcall WarBoardAPIMasterAttackRequestTask__SetRequest(
   int32_t v11; // w2
   int32_t v12; // w3
 
-  if ( (byte_49FC403 & 1) == 0 )
+  if ( (byte_49FCA23 & 1) == 0 )
   {
-    sub_1B64870(&Method_NetworkManager_getRequest_WarBoardMasterAttackRequest___, method);
-    sub_1B64870(&NetworkManager_TypeInfo, v3);
-    sub_1B64870(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
-    byte_49FC403 = 1;
+    sub_1B64A00(&Method_NetworkManager_getRequest_WarBoardMasterAttackRequest___, method);
+    sub_1B64A00(&NetworkManager_TypeInfo, v3);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
+    byte_49FCA23 = 1;
   }
   WarBoardAPIRequestTask__SetRequest((WarBoardAPIRequestTask_o *)this, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
   warBoardData = (WarBoardData_o *)Instance[27].monitor;
@@ -50,7 +50,7 @@ void __fastcall WarBoardAPIMasterAttackRequestTask__SetRequest(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = NetworkManager__getRequest_object_(
                0LL,
-               (const MethodInfo_2EBCCAC *)Method_NetworkManager_getRequest_WarBoardMasterAttackRequest___);
+               (const MethodInfo_2EBD2C4 *)Method_NetworkManager_getRequest_WarBoardMasterAttackRequest___);
   if ( !warBoardData
     || (v8 = (WarBoardMasterAttackRequest_o *)Instance,
         Instance = (Il2CppObject *)WarBoardData__get_id(warBoardData, 0LL),
@@ -59,7 +59,7 @@ void __fastcall WarBoardAPIMasterAttackRequestTask__SetRequest(
     || !v8 )
   {
 LABEL_11:
-    sub_1B64ACC(Instance, v6);
+    sub_1B64C5C(Instance, v6);
   }
   WarBoardMasterAttackRequest__beginRequest(
     v8,
@@ -75,5 +75,5 @@ LABEL_11:
     warBoardData,
     0LL);
   this->fields.request = (struct RequestBase_o *)v8;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.request, (int32_t)v8, v11, v12);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.request, (int32_t)v8, v11, v12);
 }

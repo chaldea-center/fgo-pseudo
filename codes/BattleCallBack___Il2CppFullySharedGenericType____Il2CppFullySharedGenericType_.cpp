@@ -3,7 +3,7 @@ void __fastcall BattleCallBack___Il2CppFullySharedGenericType____Il2CppFullyShar
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg1,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg2,
         System_Action_T1__T2__o *callBack,
-        const MethodInfo_304EA44 *method)
+        const MethodInfo_304F05C *method)
 {
   _QWORD *monitor; // x20
   void **v6; // x23
@@ -36,7 +36,7 @@ void __fastcall BattleCallBack___Il2CppFullySharedGenericType____Il2CppFullyShar
   else
     v13 = v7;
   memcpy((char *)&klass - ((v10 + 15) & 0x1FFFFFFF0LL), v13, v10);
-  sub_1B64898(
+  sub_1B64A28(
     this,
     *(_QWORD *)(*(_QWORD *)(*(_QWORD *)(v12 + 192) + 8LL) + 128LL),
     (char *)&klass - ((v10 + 15) & 0x1FFFFFFF0LL),
@@ -47,18 +47,18 @@ void __fastcall BattleCallBack___Il2CppFullySharedGenericType____Il2CppFullyShar
   else
     v15 = v6;
   memcpy((char *)&klass - ((v11 + 15) & 0x1FFFFFFF0LL), v15, v11);
-  sub_1B64898(
+  sub_1B64A28(
     this,
     *(_QWORD *)(*(_QWORD *)(*(_QWORD *)(v14 + 192) + 8LL) + 128LL) + 32LL,
     (char *)&klass - ((v11 + 15) & 0x1FFFFFFF0LL),
     (unsigned int)v11);
-  sub_19B6A4C(this, *(_QWORD *)(*(_QWORD *)(*(_QWORD *)(monitor[4] + 192LL) + 8LL) + 128LL) + 64LL, klass);
+  sub_19B6BDC(this, *(_QWORD *)(*(_QWORD *)(*(_QWORD *)(monitor[4] + 192LL) + 8LL) + 128LL) + 64LL, klass);
 }
 
 
 void __fastcall BattleCallBack___Il2CppFullySharedGenericType____Il2CppFullySharedGenericType___call(
         BattleCallBack_T1__T2__o *this,
-        const MethodInfo_304EBB0 *method)
+        const MethodInfo_304F1C8 *method)
 {
   BattleCallBack_T1__T2__RGCTXs *rgctx_data; // x8
   __int64 native_size; // x22
@@ -79,10 +79,10 @@ void __fastcall BattleCallBack___Il2CppFullySharedGenericType____Il2CppFullyShar
   v6 = (unsigned int)rgctx_data->_2_T2->_2.native_size;
   v7 = (__int64 *)((char *)v15 - ((native_size + 15) & 0x1FFFFFFF0LL));
   v8 = (__int64 *)((char *)v15 - ((v6 + 15) & 0x1FFFFFFF0LL));
-  v9 = *(_QWORD *)sub_1B64894(this, (char *)rgctx_data->_1_BattleCallBack_T1__T2_->_1.fields + 64);
-  v10 = (const void *)sub_1B64894(this, method->klass->rgctx_data->_1_BattleCallBack_T1__T2_->_1.fields);
+  v9 = *(_QWORD *)sub_1B64A24(this, (char *)rgctx_data->_1_BattleCallBack_T1__T2_->_1.fields + 64);
+  v10 = (const void *)sub_1B64A24(this, method->klass->rgctx_data->_1_BattleCallBack_T1__T2_->_1.fields);
   memcpy(v7, v10, native_size);
-  v11 = (const void *)sub_1B64894(this, (char *)method->klass->rgctx_data->_1_BattleCallBack_T1__T2_->_1.fields + 32);
+  v11 = (const void *)sub_1B64A24(this, (char *)method->klass->rgctx_data->_1_BattleCallBack_T1__T2_->_1.fields + 32);
   memcpy(v8, v11, v6);
   v12 = method->klass->rgctx_data;
   _4_ActionExtensions_Call_T1__T2 = v12->_4_ActionExtensions_Call_T1__T2_;

@@ -1,16 +1,16 @@
 void __fastcall MapGimmickPathReleaseMaster___ctor(MapGimmickPathReleaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FE867 & 1) == 0 )
+  if ( (byte_49FEE87 & 1) == 0 )
   {
-    sub_1B64870(
+    sub_1B64A00(
       &Method_DataMasterBase_MapGimmickPathReleaseMaster__MapGimmickPathReleaseEntity__string___ctor__,
       method);
-    byte_49FE867 = 1;
+    byte_49FEE87 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     475,
-    (const MethodInfo_30D6498 *)Method_DataMasterBase_MapGimmickPathReleaseMaster__MapGimmickPathReleaseEntity__string___ctor__);
+    (const MethodInfo_30D6AB0 *)Method_DataMasterBase_MapGimmickPathReleaseMaster__MapGimmickPathReleaseEntity__string___ctor__);
 }
 
 
@@ -23,18 +23,18 @@ MapGimmickPathReleaseEntity_o *__fastcall MapGimmickPathReleaseMaster__GetEntity
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_49FE868 & 1) == 0 )
+  if ( (byte_49FEE88 & 1) == 0 )
   {
-    sub_1B64870(
+    sub_1B64A00(
       &Method_DataMasterBase_MapGimmickPathReleaseMaster__MapGimmickPathReleaseEntity__string__GetEntity__,
       *(_QWORD *)&mapGimmickId);
-    byte_49FE868 = 1;
+    byte_49FEE88 = 1;
   }
   PK = (Il2CppObject *)MapGimmickPathReleaseEntity__CreatePK(mapGimmickId, priority, 0LL);
   return (MapGimmickPathReleaseEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                             (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                             PK,
-                                            (const MethodInfo_30D64D8 *)Method_DataMasterBase_MapGimmickPathReleaseMaster__MapGimmickPathReleaseEntity__string__GetEntity__);
+                                            (const MethodInfo_30D6AF0 *)Method_DataMasterBase_MapGimmickPathReleaseMaster__MapGimmickPathReleaseEntity__string__GetEntity__);
 }
 
 
@@ -77,34 +77,34 @@ MapGimmickPathReleaseEntity_o *__fastcall MapGimmickPathReleaseMaster__GetMapGim
   int32_t v35; // w2
   int32_t v36; // w3
 
-  if ( (byte_49FE866 & 1) == 0 )
+  if ( (byte_49FEE86 & 1) == 0 )
   {
-    sub_1B64870(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&mapGimmickId);
-    sub_1B64870(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
-    sub_1B64870(&System_Comparison_MapGimmickPathReleaseEntity__TypeInfo, v6);
-    sub_1B64870(&Method_DataManager_GetMaster_CommonReleaseMaster___, v7);
-    sub_1B64870(&DataManager_TypeInfo, v8);
-    sub_1B64870(&Method_System_Collections_Generic_List_MapGimmickPathReleaseEntity__Add__, v9);
-    sub_1B64870(&Method_System_Collections_Generic_List_MapGimmickPathReleaseEntity__Sort__, v10);
-    sub_1B64870(&Method_System_Collections_Generic_List_MapGimmickPathReleaseEntity___ctor__, v11);
-    sub_1B64870(&Method_System_Collections_Generic_List_MapGimmickPathReleaseEntity__get_Count__, v12);
-    sub_1B64870(&Method_System_Collections_Generic_List_MapGimmickPathReleaseEntity__get_Item__, v13);
-    sub_1B64870(&System_Collections_Generic_List_MapGimmickPathReleaseEntity__TypeInfo, v14);
-    sub_1B64870(&MapGimmickPathReleaseEntity_TypeInfo, v15);
-    sub_1B64870(&Method_MapGimmickPathReleaseMaster___c__GetMapGimmickPathLimitEntity_b__1_0__, v16);
-    sub_1B64870(&MapGimmickPathReleaseMaster___c_TypeInfo, v17);
-    byte_49FE866 = 1;
+    sub_1B64A00(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&mapGimmickId);
+    sub_1B64A00(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
+    sub_1B64A00(&System_Comparison_MapGimmickPathReleaseEntity__TypeInfo, v6);
+    sub_1B64A00(&Method_DataManager_GetMaster_CommonReleaseMaster___, v7);
+    sub_1B64A00(&DataManager_TypeInfo, v8);
+    sub_1B64A00(&Method_System_Collections_Generic_List_MapGimmickPathReleaseEntity__Add__, v9);
+    sub_1B64A00(&Method_System_Collections_Generic_List_MapGimmickPathReleaseEntity__Sort__, v10);
+    sub_1B64A00(&Method_System_Collections_Generic_List_MapGimmickPathReleaseEntity___ctor__, v11);
+    sub_1B64A00(&Method_System_Collections_Generic_List_MapGimmickPathReleaseEntity__get_Count__, v12);
+    sub_1B64A00(&Method_System_Collections_Generic_List_MapGimmickPathReleaseEntity__get_Item__, v13);
+    sub_1B64A00(&System_Collections_Generic_List_MapGimmickPathReleaseEntity__TypeInfo, v14);
+    sub_1B64A00(&MapGimmickPathReleaseEntity_TypeInfo, v15);
+    sub_1B64A00(&Method_MapGimmickPathReleaseMaster___c__GetMapGimmickPathLimitEntity_b__1_0__, v16);
+    sub_1B64A00(&MapGimmickPathReleaseMaster___c_TypeInfo, v17);
+    byte_49FEE86 = 1;
   }
-  v18 = (System_Collections_Generic_List_object__o *)sub_1B64ABC(System_Collections_Generic_List_MapGimmickPathReleaseEntity__TypeInfo);
+  v18 = (System_Collections_Generic_List_object__o *)sub_1B64C4C(System_Collections_Generic_List_MapGimmickPathReleaseEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v18,
-    (const MethodInfo_34AF17C *)Method_System_Collections_Generic_List_MapGimmickPathReleaseEntity___ctor__);
+    (const MethodInfo_34AF794 *)Method_System_Collections_Generic_List_MapGimmickPathReleaseEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_31;
   list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Count(
                                                              list,
-                                                             (const MethodInfo_3072DE4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+                                                             (const MethodInfo_30733FC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( (int)list >= 1 )
   {
     v21 = (int)list;
@@ -117,7 +117,7 @@ MapGimmickPathReleaseEntity_o *__fastcall MapGimmickPathReleaseMaster__GetMapGim
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
                                                                  v22,
-                                                                 (const MethodInfo_3072E74 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                                                 (const MethodInfo_307348C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( !list )
         break;
       v23 = (Il2CppObject *)list;
@@ -131,7 +131,7 @@ MapGimmickPathReleaseEntity_o *__fastcall MapGimmickPathReleaseMaster__GetMapGim
       {
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        list = (System_Collections_ObjectModel_Collection_T__o *)DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+        list = (System_Collections_ObjectModel_Collection_T__o *)DataManager__GetMaster_object_((const MethodInfo_2E3BC8C *)Method_DataManager_GetMaster_CommonReleaseMaster___);
         if ( !list )
           break;
         list = (System_Collections_ObjectModel_Collection_T__o *)CommonReleaseMaster__IsOpen(
@@ -155,14 +155,14 @@ MapGimmickPathReleaseEntity_o *__fastcall MapGimmickPathReleaseMaster__GetMapGim
             System_Collections_Generic_List_object___AddWithResize(
               v18,
               v23,
-              *(const MethodInfo_34AF9B0 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+              *(const MethodInfo_34AFFC8 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
           }
           else
           {
             v30 = &items->obj.klass + size;
             v18->fields._size = size + 1;
             v30[4] = (Il2CppClass *)v23;
-            sub_1B64814((ServantStatusBattleListViewItem_o *)(v30 + 4), (int32_t)v23, v25, v26);
+            sub_1B649A4((ServantStatusBattleListViewItem_o *)(v30 + 4), (int32_t)v23, v25, v26);
           }
         }
       }
@@ -170,7 +170,7 @@ MapGimmickPathReleaseEntity_o *__fastcall MapGimmickPathReleaseMaster__GetMapGim
         goto LABEL_21;
     }
 LABEL_31:
-    sub_1B64ACC(list, v19);
+    sub_1B64C5C(list, v19);
   }
 LABEL_21:
   if ( !v18 )
@@ -192,7 +192,7 @@ LABEL_21:
       v31 = MapGimmickPathReleaseMaster___c_TypeInfo;
     }
     v33 = (Il2CppObject *)v31->static_fields->__9;
-    _9__1_0 = (System_Comparison_T__o *)sub_1B64ABC(System_Comparison_MapGimmickPathReleaseEntity__TypeInfo);
+    _9__1_0 = (System_Comparison_T__o *)sub_1B64C4C(System_Comparison_MapGimmickPathReleaseEntity__TypeInfo);
     System_Comparison_object____ctor(
       _9__1_0,
       v33,
@@ -200,16 +200,16 @@ LABEL_21:
       0LL);
     static_fields = MapGimmickPathReleaseMaster___c_TypeInfo->static_fields;
     static_fields->__9__1_0 = (struct System_Comparison_MapGimmickPathReleaseEntity__o *)_9__1_0;
-    sub_1B64814((ServantStatusBattleListViewItem_o *)&static_fields->__9__1_0, (int32_t)_9__1_0, v35, v36);
+    sub_1B649A4((ServantStatusBattleListViewItem_o *)&static_fields->__9__1_0, (int32_t)_9__1_0, v35, v36);
   }
-  System_Collections_Generic_List_object___Sort_55252244(
+  System_Collections_Generic_List_object___Sort_55253804(
     v18,
     _9__1_0,
-    (const MethodInfo_34B1514 *)Method_System_Collections_Generic_List_MapGimmickPathReleaseEntity__Sort__);
+    (const MethodInfo_34B1B2C *)Method_System_Collections_Generic_List_MapGimmickPathReleaseEntity__Sort__);
   return (MapGimmickPathReleaseEntity_o *)System_Collections_Generic_List_object___get_Item(
                                             v18,
                                             0,
-                                            (const MethodInfo_34AF6E0 *)Method_System_Collections_Generic_List_MapGimmickPathReleaseEntity__get_Item__);
+                                            (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_MapGimmickPathReleaseEntity__get_Item__);
 }
 
 
@@ -237,19 +237,19 @@ bool __fastcall MapGimmickPathReleaseMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_49FE869 & 1) == 0 )
+  if ( (byte_49FEE89 & 1) == 0 )
   {
-    sub_1B64870(
+    sub_1B64A00(
       &Method_DataMasterBase_MapGimmickPathReleaseMaster__MapGimmickPathReleaseEntity__string__TryGetEntity__,
       entity);
-    byte_49FE869 = 1;
+    byte_49FEE89 = 1;
   }
   PK = (Il2CppObject *)MapGimmickPathReleaseEntity__CreatePK(mapGimmickId, priority, 0LL);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_30D6528 *)Method_DataMasterBase_MapGimmickPathReleaseMaster__MapGimmickPathReleaseEntity__string__TryGetEntity__);
+           (const MethodInfo_30D6B40 *)Method_DataMasterBase_MapGimmickPathReleaseMaster__MapGimmickPathReleaseEntity__string__TryGetEntity__);
 }
 
 
@@ -260,15 +260,15 @@ void __fastcall MapGimmickPathReleaseMaster___c___cctor(const MethodInfo *method
   int32_t v3; // w2
   int32_t v4; // w3
 
-  if ( (byte_49FE86A & 1) == 0 )
+  if ( (byte_49FEE8A & 1) == 0 )
   {
-    sub_1B64870(&MapGimmickPathReleaseMaster___c_TypeInfo, v1);
-    byte_49FE86A = 1;
+    sub_1B64A00(&MapGimmickPathReleaseMaster___c_TypeInfo, v1);
+    byte_49FEE8A = 1;
   }
-  v2 = (Il2CppObject *)sub_1B64ABC(MapGimmickPathReleaseMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B64C4C(MapGimmickPathReleaseMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   MapGimmickPathReleaseMaster___c_TypeInfo->static_fields->__9 = (struct MapGimmickPathReleaseMaster___c_o *)v2;
-  sub_1B64814(
+  sub_1B649A4(
     (ServantStatusBattleListViewItem_o *)MapGimmickPathReleaseMaster___c_TypeInfo->static_fields,
     (int32_t)v2,
     v3,
@@ -291,6 +291,6 @@ int32_t __fastcall MapGimmickPathReleaseMaster___c___GetMapGimmickPathLimitEntit
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1B64ACC(this, a);
+    sub_1B64C5C(this, a);
   return b->fields.priority - a->fields.priority;
 }

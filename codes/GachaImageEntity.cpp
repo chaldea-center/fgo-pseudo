@@ -1,28 +1,28 @@
 void __fastcall GachaImageEntity___ctor(GachaImageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FE795 & 1) == 0 )
+  if ( (byte_49FEDB5 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataEntityBase_string___ctor__, method);
-    byte_49FE795 = 1;
+    sub_1B64A00(&Method_DataEntityBase_string___ctor__, method);
+    byte_49FEDB5 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30D5FF8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D6610 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall GachaImageEntity__CreatePK(int32_t gachaId, int32_t areaId, const MethodInfo *method)
 {
-  if ( (byte_49FE794 & 1) == 0 )
+  if ( (byte_49FEDB4 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&areaId);
-    byte_49FE794 = 1;
+    sub_1B64A00(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&areaId);
+    byte_49FEDB4 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            gachaId,
            areaId,
-           (const MethodInfo_2E398EC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2E39F04 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

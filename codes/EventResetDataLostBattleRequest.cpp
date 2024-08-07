@@ -18,13 +18,13 @@ void __fastcall EventResetDataLostBattleRequest__beginRequest(
   const MethodInfo *v8; // x3
   const MethodInfo *v9; // x1
 
-  if ( (byte_49FFD6B & 1) == 0 )
+  if ( (byte_4A0038C & 1) == 0 )
   {
-    sub_1B64870(&StringLiteral_18397/*"dataLostBattleId"*/, *(_QWORD *)&dataLostBattleId);
-    sub_1B64870(&StringLiteral_20137/*"idx"*/, v7);
-    byte_49FFD6B = 1;
+    sub_1B64A00(&StringLiteral_18398/*"dataLostBattleId"*/, *(_QWORD *)&dataLostBattleId);
+    sub_1B64A00(&StringLiteral_20137/*"idx"*/, v7);
+    byte_4A0038C = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18397/*"dataLostBattleId"*/, dataLostBattleId, method);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18398/*"dataLostBattleId"*/, dataLostBattleId, method);
   RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20137/*"idx"*/, resetIdx, v8);
   RequestBase__beginRequest((RequestBase_o *)this, v9);
 }
@@ -37,16 +37,16 @@ System_String_o *__fastcall EventResetDataLostBattleRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_49FFD6A & 1) == 0 )
+  if ( (byte_4A0038B & 1) == 0 )
   {
-    sub_1B64870(&NetworkManager_TypeInfo, method);
-    sub_1B64870(&StringLiteral_19050/*"event/resetDataLostBattle"*/, v2);
-    byte_49FFD6A = 1;
+    sub_1B64A00(&NetworkManager_TypeInfo, method);
+    sub_1B64A00(&StringLiteral_19051/*"event/resetDataLostBattle"*/, v2);
+    byte_4A0038B = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61383576(BaseUrl, (System_String_o *)StringLiteral_19050/*"event/resetDataLostBattle"*/, 0LL);
+  return System_String__Concat_61385136(BaseUrl, (System_String_o *)StringLiteral_19051/*"event/resetDataLostBattle"*/, 0LL);
 }
 
 
@@ -65,12 +65,12 @@ void __fastcall EventResetDataLostBattleRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v13; // x8
 
-  if ( (byte_49FFD6C & 1) == 0 )
+  if ( (byte_4A0038D & 1) == 0 )
   {
-    sub_1B64870(&JsonManager_TypeInfo, responseList);
-    sub_1B64870(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B64870(&StringLiteral_21971/*"ng"*/, v6);
-    byte_49FFD6C = 1;
+    sub_1B64A00(&JsonManager_TypeInfo, responseList);
+    sub_1B64A00(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B64A00(&StringLiteral_21971/*"ng"*/, v6);
+    byte_4A0038D = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);

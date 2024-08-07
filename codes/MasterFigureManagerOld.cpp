@@ -1,13 +1,13 @@
 void __fastcall MasterFigureManagerOld___ctor(MasterFigureManagerOld_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FD77C & 1) == 0 )
+  if ( (byte_49FDD9C & 1) == 0 )
   {
-    sub_1B64870(&Method_SingletonMonoBehaviour_MasterFigureManagerOld___ctor__, method);
-    byte_49FD77C = 1;
+    sub_1B64A00(&Method_SingletonMonoBehaviour_MasterFigureManagerOld___ctor__, method);
+    byte_49FDD9C = 1;
   }
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_36EE730 *)Method_SingletonMonoBehaviour_MasterFigureManagerOld___ctor__);
+    (const MethodInfo_36EED48 *)Method_SingletonMonoBehaviour_MasterFigureManagerOld___ctor__);
 }
 
 
@@ -31,11 +31,11 @@ UIMasterFigureTextureOld_o *__fastcall MasterFigureManagerOld__CreateEnemyLocal(
   System_Nullable_Vector3__o v20; // 0:x2.16
 
   enemyFaceIda = enemyFaceId;
-  if ( (byte_49FD77B & 1) == 0 )
+  if ( (byte_49FDD9B & 1) == 0 )
   {
-    sub_1B64870(&StringLiteral_14664/*"UIMasterFigureOld-Enemy("*/, parent);
-    sub_1B64870(&StringLiteral_815/*")"*/, v12);
-    byte_49FD77B = 1;
+    sub_1B64A00(&StringLiteral_14665/*"UIMasterFigureOld-Enemy("*/, parent);
+    sub_1B64A00(&StringLiteral_815/*")"*/, v12);
+    byte_49FDD9B = 1;
   }
   *(_QWORD *)&v20.fields.hasValue = 0LL;
   *(_QWORD *)&v20.fields.value.fields.y = 0LL;
@@ -48,14 +48,14 @@ UIMasterFigureTextureOld_o *__fastcall MasterFigureManagerOld__CreateEnemyLocal(
     || (v15 = (UIMasterFigureTextureOld_o *)Local,
         gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(Local, 0LL),
         v17 = System_Int32__ToString((int32_t)&enemyFaceIda, 0LL),
-        Local = (UnityEngine_Component_o *)System_String__Concat_61394836(
-                                             (System_String_o *)StringLiteral_14664/*"UIMasterFigureOld-Enemy("*/,
+        Local = (UnityEngine_Component_o *)System_String__Concat_61396396(
+                                             (System_String_o *)StringLiteral_14665/*"UIMasterFigureOld-Enemy("*/,
                                              v17,
                                              (System_String_o *)StringLiteral_815/*")"*/,
                                              0LL),
         !gameObject) )
   {
-    sub_1B64ACC(Local, v14);
+    sub_1B64C5C(Local, v14);
   }
   UnityEngine_Object__set_name(gameObject, (System_String_o *)Local, 0LL);
   UIMasterFigureTextureOld__SetEnemy(v15, enemyFaceIda, enemyBattleId, callbackFunc, 0LL);
@@ -77,14 +77,14 @@ UIMasterFigureTextureOld_o *__fastcall MasterFigureManagerOld__CreateEnemyPrefab
   __int64 v12; // x1
   const MethodInfo *v13; // x6
 
-  if ( (byte_49FD778 & 1) == 0 )
+  if ( (byte_49FDD98 & 1) == 0 )
   {
-    sub_1B64870(&Method_SingletonMonoBehaviour_MasterFigureManagerOld__get_Instance__, *(_QWORD *)&enemyFaceId);
-    byte_49FD778 = 1;
+    sub_1B64A00(&Method_SingletonMonoBehaviour_MasterFigureManagerOld__get_Instance__, *(_QWORD *)&enemyFaceId);
+    byte_49FDD98 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_MasterFigureManagerOld__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_MasterFigureManagerOld__get_Instance__);
   if ( !Instance )
-    sub_1B64ACC(0LL, v12);
+    sub_1B64C5C(0LL, v12);
   return MasterFigureManagerOld__CreateEnemyLocal(
            (MasterFigureManagerOld_o *)Instance,
            parent,
@@ -130,28 +130,28 @@ UIMasterFigureTextureOld_o *__fastcall MasterFigureManagerOld__CreateLocal(
 
   v4 = *(_QWORD *)&offset.fields.value.fields.y;
   v5 = *(_QWORD *)&offset.fields.hasValue;
-  if ( (byte_49FD779 & 1) == 0 )
+  if ( (byte_49FDD99 & 1) == 0 )
   {
-    sub_1B64870(&Method_UnityEngine_GameObject_GetComponent_UIMasterFigureTextureOld___, parent);
-    sub_1B64870(&Method_System_Nullable_Vector3__GetValueOrDefault__, v8);
-    sub_1B64870(&Method_System_Nullable_Vector3__get_HasValue__, v9);
-    sub_1B64870(&Method_UnityEngine_Object_Instantiate_GameObject___, v10);
-    sub_1B64870(&UnityEngine_Object_TypeInfo, v11);
-    sub_1B64870(&StringLiteral_14662/*"UIMasterFigureOld"*/, v12);
-    byte_49FD779 = 1;
+    sub_1B64A00(&Method_UnityEngine_GameObject_GetComponent_UIMasterFigureTextureOld___, parent);
+    sub_1B64A00(&Method_System_Nullable_Vector3__GetValueOrDefault__, v8);
+    sub_1B64A00(&Method_System_Nullable_Vector3__get_HasValue__, v9);
+    sub_1B64A00(&Method_UnityEngine_Object_Instantiate_GameObject___, v10);
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, v11);
+    sub_1B64A00(&StringLiteral_14663/*"UIMasterFigureOld"*/, v12);
+    byte_49FDD99 = 1;
   }
   masterFigurePrefab = (Il2CppObject *)this->fields.masterFigurePrefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                              masterFigurePrefab,
-                                             (const MethodInfo_2EBDF7C *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                             (const MethodInfo_2EBE594 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !gameObject )
     goto LABEL_19;
   v16 = gameObject;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        gameObject,
-                       (const MethodInfo_2E8A1B4 *)Method_UnityEngine_GameObject_GetComponent_UIMasterFigureTextureOld___);
+                       (const MethodInfo_2E8A7CC *)Method_UnityEngine_GameObject_GetComponent_UIMasterFigureTextureOld___);
   transform = UnityEngine_GameObject__get_transform(v16, 0LL);
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v16, 0LL);
   if ( !gameObject )
@@ -160,7 +160,7 @@ UIMasterFigureTextureOld_o *__fastcall MasterFigureManagerOld__CreateLocal(
   x = localScale.fields.x;
   y = localScale.fields.y;
   z = localScale.fields.z;
-  UnityEngine_Object__set_name((UnityEngine_Object_o *)v16, (System_String_o *)StringLiteral_14662/*"UIMasterFigureOld"*/, 0LL);
+  UnityEngine_Object__set_name((UnityEngine_Object_o *)v16, (System_String_o *)StringLiteral_14663/*"UIMasterFigureOld"*/, 0LL);
   if ( !parent )
     goto LABEL_19;
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(parent, 0LL);
@@ -175,10 +175,10 @@ UIMasterFigureTextureOld_o *__fastcall MasterFigureManagerOld__CreateLocal(
   }
   else
   {
-    if ( !byte_49F9201 )
+    if ( !byte_49F9821 )
     {
-      sub_1B64870(&UnityEngine_Vector3_TypeInfo, v22);
-      byte_49F9201 = 1;
+      sub_1B64A00(&UnityEngine_Vector3_TypeInfo, v22);
+      byte_49F9821 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     v25 = static_fields->zeroVector.fields.x;
@@ -186,10 +186,10 @@ UIMasterFigureTextureOld_o *__fastcall MasterFigureManagerOld__CreateLocal(
     v23 = static_fields->zeroVector.fields.z;
   }
   UnityEngine_Transform__set_localPosition(transform, *(UnityEngine_Vector3_o *)&v25, 0LL);
-  if ( !byte_49F9207 )
+  if ( !byte_49F9827 )
   {
-    sub_1B64870(&UnityEngine_Quaternion_TypeInfo, v27);
-    byte_49F9207 = 1;
+    sub_1B64A00(&UnityEngine_Quaternion_TypeInfo, v27);
+    byte_49F9827 = 1;
   }
   UnityEngine_Transform__set_localRotation(
     transform,
@@ -204,7 +204,7 @@ UIMasterFigureTextureOld_o *__fastcall MasterFigureManagerOld__CreateLocal(
     || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_layer(gameObject, 0LL), !Component_object) )
   {
 LABEL_19:
-    sub_1B64ACC(gameObject, v15);
+    sub_1B64C5C(gameObject, v15);
   }
   UIMasterFigureRenderOld__SetLayer((UIMasterFigureRenderOld_o *)Component_object, (int32_t)gameObject, 0LL);
   return (UIMasterFigureTextureOld_o *)Component_object;
@@ -212,7 +212,7 @@ LABEL_19:
 
 
 // local variable allocation has failed, the output may be wrong!
-UIMasterFigureTextureOld_o *__fastcall MasterFigureManagerOld__CreateLocal_37608560(
+UIMasterFigureTextureOld_o *__fastcall MasterFigureManagerOld__CreateLocal_37608912(
         MasterFigureManagerOld_o *this,
         UnityEngine_GameObject_o *parent,
         int32_t dispType,
@@ -250,53 +250,53 @@ UIMasterFigureTextureOld_o *__fastcall MasterFigureManagerOld__CreateLocal_37608
 
   v38 = equipId;
   v39 = genderType;
-  if ( (byte_49FD77A & 1) == 0 )
+  if ( (byte_49FDD9A & 1) == 0 )
   {
-    sub_1B64870(&string___TypeInfo, parent);
-    sub_1B64870(&StringLiteral_920/*"-"*/, v16);
-    sub_1B64870(&StringLiteral_815/*")"*/, v17);
-    sub_1B64870(&StringLiteral_14663/*"UIMasterFigureOld("*/, v18);
-    byte_49FD77A = 1;
+    sub_1B64A00(&string___TypeInfo, parent);
+    sub_1B64A00(&StringLiteral_920/*"-"*/, v16);
+    sub_1B64A00(&StringLiteral_815/*")"*/, v17);
+    sub_1B64A00(&StringLiteral_14664/*"UIMasterFigureOld("*/, v18);
+    byte_49FDD9A = 1;
   }
   Local = (char *)MasterFigureManagerOld__CreateLocal(this, parent, offset, *(const MethodInfo **)&equipId);
   if ( !Local )
     goto LABEL_13;
   v21 = (UIMasterFigureTextureOld_o *)Local;
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Local, 0LL);
-  Local = (char *)sub_1B64918(string___TypeInfo, 5LL);
+  Local = (char *)sub_1B64AA8(string___TypeInfo, 5LL);
   if ( !Local )
     goto LABEL_13;
   v25 = Local;
   if ( !*((_DWORD *)Local + 6) )
     goto LABEL_12;
-  v26 = StringLiteral_14663/*"UIMasterFigureOld("*/;
-  *((_QWORD *)Local + 4) = StringLiteral_14663/*"UIMasterFigureOld("*/;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)(Local + 32), v26, v23, v24);
+  v26 = StringLiteral_14664/*"UIMasterFigureOld("*/;
+  *((_QWORD *)Local + 4) = StringLiteral_14664/*"UIMasterFigureOld("*/;
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)(Local + 32), v26, v23, v24);
   Local = (char *)System_Int32__ToString((int32_t)&v39, 0LL);
   if ( *((_DWORD *)v25 + 6) <= 1u )
     goto LABEL_12;
   *((_QWORD *)v25 + 5) = Local;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)(v25 + 40), (int32_t)Local, v27, v28);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v25 + 40), (int32_t)Local, v27, v28);
   if ( *((_DWORD *)v25 + 6) <= 2u
     || (v31 = (int)StringLiteral_920/*"-"*/,
         *((_QWORD *)v25 + 6) = StringLiteral_920/*"-"*/,
-        sub_1B64814((ServantStatusBattleListViewItem_o *)(v25 + 48), v31, v29, v30),
+        sub_1B649A4((ServantStatusBattleListViewItem_o *)(v25 + 48), v31, v29, v30),
         Local = (char *)System_Int32__ToString((int32_t)&v38, 0LL),
         *((_DWORD *)v25 + 6) <= 3u)
     || (*((_QWORD *)v25 + 7) = Local,
-        sub_1B64814((ServantStatusBattleListViewItem_o *)(v25 + 56), (int32_t)Local, v32, v33),
+        sub_1B649A4((ServantStatusBattleListViewItem_o *)(v25 + 56), (int32_t)Local, v32, v33),
         *((_DWORD *)v25 + 6) <= 4u) )
   {
 LABEL_12:
-    sub_1B64AD4(Local, v20);
+    sub_1B64C64(Local, v20);
   }
   v36 = StringLiteral_815/*")"*/;
   *((_QWORD *)v25 + 8) = StringLiteral_815/*")"*/;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)(v25 + 64), v36, v34, v35);
-  Local = (char *)System_String__Concat_61397104((System_String_array *)v25, 0LL);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v25 + 64), v36, v34, v35);
+  Local = (char *)System_String__Concat_61398664((System_String_array *)v25, 0LL);
   if ( !gameObject )
 LABEL_13:
-    sub_1B64ACC(Local, v20);
+    sub_1B64C5C(Local, v20);
   UnityEngine_Object__set_name(gameObject, (System_String_o *)Local, 0LL);
   UIMasterFigureTextureOld__SetCharacter(v21, dispType, v39, v38, callbackFunc, overWriteEquipId, 0LL);
   UIMasterFigureTextureOld__SetDepth(v21, depth, 0LL);
@@ -313,14 +313,14 @@ UIMasterFigureTextureOld_o *__fastcall MasterFigureManagerOld__CreatePrefab(
   const MethodInfo *v5; // x4
   System_Nullable_Vector3__o v7; // 0:x2.16
 
-  if ( (byte_49FD776 & 1) == 0 )
+  if ( (byte_49FDD96 & 1) == 0 )
   {
-    sub_1B64870(&Method_SingletonMonoBehaviour_MasterFigureManagerOld__get_Instance__, method);
-    byte_49FD776 = 1;
+    sub_1B64A00(&Method_SingletonMonoBehaviour_MasterFigureManagerOld__get_Instance__, method);
+    byte_49FDD96 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_MasterFigureManagerOld__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_MasterFigureManagerOld__get_Instance__);
   if ( !Instance )
-    sub_1B64ACC(0LL, v4);
+    sub_1B64C5C(0LL, v4);
   *(_QWORD *)&v7.fields.hasValue = 0LL;
   *(_QWORD *)&v7.fields.value.fields.y = 0LL;
   return MasterFigureManagerOld__CreateLocal((MasterFigureManagerOld_o *)Instance, parent, v7, v5);
@@ -328,7 +328,7 @@ UIMasterFigureTextureOld_o *__fastcall MasterFigureManagerOld__CreatePrefab(
 
 
 // local variable allocation has failed, the output may be wrong!
-UIMasterFigureTextureOld_o *__fastcall MasterFigureManagerOld__CreatePrefab_37608388(
+UIMasterFigureTextureOld_o *__fastcall MasterFigureManagerOld__CreatePrefab_37608740(
         UnityEngine_GameObject_o *parent,
         int32_t dispType,
         int32_t genderType,
@@ -342,15 +342,15 @@ UIMasterFigureTextureOld_o *__fastcall MasterFigureManagerOld__CreatePrefab_3760
   Il2CppObject *Instance; // x0
   __int64 v17; // x1
 
-  if ( (byte_49FD777 & 1) == 0 )
+  if ( (byte_49FDD97 & 1) == 0 )
   {
-    sub_1B64870(&Method_SingletonMonoBehaviour_MasterFigureManagerOld__get_Instance__, *(_QWORD *)&dispType);
-    byte_49FD777 = 1;
+    sub_1B64A00(&Method_SingletonMonoBehaviour_MasterFigureManagerOld__get_Instance__, *(_QWORD *)&dispType);
+    byte_49FDD97 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_MasterFigureManagerOld__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_MasterFigureManagerOld__get_Instance__);
   if ( !Instance )
-    sub_1B64ACC(0LL, v17);
-  return MasterFigureManagerOld__CreateLocal_37608560(
+    sub_1B64C5C(0LL, v17);
+  return MasterFigureManagerOld__CreateLocal_37608912(
            (MasterFigureManagerOld_o *)Instance,
            parent,
            dispType,
@@ -373,15 +373,15 @@ void __fastcall MasterFigureManagerOld__DownloadAsset(
 {
   System_String_array *AssetName; // x20
 
-  if ( (byte_49FD773 & 1) == 0 )
+  if ( (byte_49FDD93 & 1) == 0 )
   {
-    sub_1B64870(&AssetManager_TypeInfo, *(_QWORD *)&equipId);
-    byte_49FD773 = 1;
+    sub_1B64A00(&AssetManager_TypeInfo, *(_QWORD *)&equipId);
+    byte_49FDD93 = 1;
   }
   AssetName = MasterFigureManagerOld__GetAssetName(genderType, equipId, (const MethodInfo *)callback);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__downloadAssetStorage_37486300(AssetName, callback, 0LL);
+  AssetManager__downloadAssetStorage_37486652(AssetName, callback, 0LL);
 }
 
 
@@ -391,10 +391,10 @@ System_String_array *__fastcall MasterFigureManagerOld__GetAssetName(
         int32_t equipId,
         const MethodInfo *method)
 {
-  if ( (byte_49FD772 & 1) == 0 )
+  if ( (byte_49FDD92 & 1) == 0 )
   {
-    sub_1B64870(&UIMasterFigureRenderOld_TypeInfo, *(_QWORD *)&equipId);
-    byte_49FD772 = 1;
+    sub_1B64A00(&UIMasterFigureRenderOld_TypeInfo, *(_QWORD *)&equipId);
+    byte_49FDD92 = 1;
   }
   if ( !UIMasterFigureRenderOld_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UIMasterFigureRenderOld_TypeInfo);
@@ -411,15 +411,15 @@ void __fastcall MasterFigureManagerOld__LoadAsset(
 {
   System_String_array *AssetName; // x20
 
-  if ( (byte_49FD774 & 1) == 0 )
+  if ( (byte_49FDD94 & 1) == 0 )
   {
-    sub_1B64870(&AssetManager_TypeInfo, *(_QWORD *)&equipId);
-    byte_49FD774 = 1;
+    sub_1B64A00(&AssetManager_TypeInfo, *(_QWORD *)&equipId);
+    byte_49FDD94 = 1;
   }
   AssetName = MasterFigureManagerOld__GetAssetName(genderType, equipId, (const MethodInfo *)callback);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage_37488476(AssetName, callback, 1, 0LL);
+  AssetManager__loadAssetStorage_37488828(AssetName, callback, 1, 0LL);
 }
 
 
@@ -428,13 +428,13 @@ void __fastcall MasterFigureManagerOld__ReleaseAsset(int32_t genderType, int32_t
 {
   System_String_array *AssetName; // x19
 
-  if ( (byte_49FD775 & 1) == 0 )
+  if ( (byte_49FDD95 & 1) == 0 )
   {
-    sub_1B64870(&AssetManager_TypeInfo, *(_QWORD *)&equipId);
-    byte_49FD775 = 1;
+    sub_1B64A00(&AssetManager_TypeInfo, *(_QWORD *)&equipId);
+    byte_49FDD95 = 1;
   }
   AssetName = MasterFigureManagerOld__GetAssetName(genderType, equipId, method);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__releaseAssetStorage_37490820(AssetName, 0LL);
+  AssetManager__releaseAssetStorage_37491172(AssetName, 0LL);
 }

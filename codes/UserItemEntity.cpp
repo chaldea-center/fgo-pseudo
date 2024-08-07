@@ -1,30 +1,30 @@
 void __fastcall UserItemEntity___ctor(UserItemEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FF224 & 1) == 0 )
+  if ( (byte_49FF844 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataEntityBase_string___ctor__, method);
-    byte_49FF224 = 1;
+    sub_1B64A00(&Method_DataEntityBase_string___ctor__, method);
+    byte_49FF844 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30D5FF8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D6610 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-void __fastcall UserItemEntity___ctor_39809448(
+void __fastcall UserItemEntity___ctor_39809800(
         UserItemEntity_o *this,
         int64_t userId,
         int32_t itemId,
         const MethodInfo *method)
 {
-  if ( (byte_49FF225 & 1) == 0 )
+  if ( (byte_49FF845 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataEntityBase_string___ctor__, userId);
-    byte_49FF225 = 1;
+    sub_1B64A00(&Method_DataEntityBase_string___ctor__, userId);
+    byte_49FF845 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30D5FF8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30D6610 *)Method_DataEntityBase_string___ctor__);
   this->fields.userId = userId;
   this->fields.itemId = itemId;
   this->fields.num = 0;
@@ -34,15 +34,15 @@ void __fastcall UserItemEntity___ctor_39809448(
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall UserItemEntity__CreatePK(int64_t userId, int32_t itemId, const MethodInfo *method)
 {
-  if ( (byte_49FF223 & 1) == 0 )
+  if ( (byte_49FF843 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&itemId);
-    byte_49FF223 = 1;
+    sub_1B64A00(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&itemId);
+    byte_49FF843 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            itemId,
-           (const MethodInfo_2E399F4 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_2E3A00C *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -60,19 +60,19 @@ ItemEntity_o *__fastcall UserItemEntity__getItemInfo(UserItemEntity_o *this, con
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_49FF226 & 1) == 0 )
+  if ( (byte_49FF846 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataManager_GetMasterData_ItemMaster___, method);
-    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_49FF226 = 1;
+    sub_1B64A00(&Method_DataManager_GetMasterData_ItemMaster___, method);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_49FF846 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_ItemMaster___)) == 0LL )
+                     (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ItemMaster___)) == 0LL )
   {
-    sub_1B64ACC(Instance, v5);
+    sub_1B64C5C(Instance, v5);
   }
   return ItemMaster__GetItemData((ItemMaster_o *)Instance, this->fields.itemId, 0LL);
 }

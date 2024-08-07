@@ -2,12 +2,12 @@ void __fastcall CombineExpUpInfo___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4A01E82 & 1) == 0 )
+  if ( (byte_4A024A3 & 1) == 0 )
   {
-    sub_1B64870(&CombineExpUpInfo_TypeInfo, v1);
-    byte_4A01E82 = 1;
+    sub_1B64A00(&CombineExpUpInfo_TypeInfo, v1);
+    byte_4A024A3 = 1;
   }
-  *CombineExpUpInfo_TypeInfo->static_fields = (struct CombineExpUpInfo_StaticFields)xmmword_BA2870;
+  *CombineExpUpInfo_TypeInfo->static_fields = (struct CombineExpUpInfo_StaticFields)xmmword_BA28B0;
 }
 
 
@@ -47,42 +47,42 @@ void __fastcall CombineExpUpInfo___ctor(CombineExpUpInfo_o *this, const MethodIn
   __int64 v34; // x10
   __int64 v35; // x10
 
-  if ( (byte_4A01E81 & 1) == 0 )
+  if ( (byte_4A024A2 & 1) == 0 )
   {
-    sub_1B64870(&Method_System_Collections_Generic_List_SvtClassAttri_TYPE__Add__, method);
-    sub_1B64870(&Method_System_Collections_Generic_List_SvtClassAttri_TYPE___ctor__, v3);
-    sub_1B64870(&System_Collections_Generic_List_SvtClassAttri_TYPE__TypeInfo, v4);
-    sub_1B64870(&string___TypeInfo, v5);
-    sub_1B64870(&StringLiteral_17445/*"btn_hp_"*/, v6);
-    sub_1B64870(&StringLiteral_17395/*"btn_atk_"*/, v7);
-    sub_1B64870(&StringLiteral_17441/*"btn_experience_"*/, v8);
-    byte_4A01E81 = 1;
+    sub_1B64A00(&Method_System_Collections_Generic_List_SvtClassAttri_TYPE__Add__, method);
+    sub_1B64A00(&Method_System_Collections_Generic_List_SvtClassAttri_TYPE___ctor__, v3);
+    sub_1B64A00(&System_Collections_Generic_List_SvtClassAttri_TYPE__TypeInfo, v4);
+    sub_1B64A00(&string___TypeInfo, v5);
+    sub_1B64A00(&StringLiteral_17446/*"btn_hp_"*/, v6);
+    sub_1B64A00(&StringLiteral_17396/*"btn_atk_"*/, v7);
+    sub_1B64A00(&StringLiteral_17442/*"btn_experience_"*/, v8);
+    byte_4A024A2 = 1;
   }
-  v9 = sub_1B64918(string___TypeInfo, 3LL);
+  v9 = sub_1B64AA8(string___TypeInfo, 3LL);
   if ( !v9 )
     goto LABEL_34;
   v13 = v9;
   if ( !*(_DWORD *)(v9 + 24)
-    || (v14 = StringLiteral_17441/*"btn_experience_"*/,
-        *(_QWORD *)(v9 + 32) = StringLiteral_17441/*"btn_experience_"*/,
-        sub_1B64814((ServantStatusBattleListViewItem_o *)(v9 + 32), v14, v11, v12),
+    || (v14 = StringLiteral_17442/*"btn_experience_"*/,
+        *(_QWORD *)(v9 + 32) = StringLiteral_17442/*"btn_experience_"*/,
+        sub_1B649A4((ServantStatusBattleListViewItem_o *)(v9 + 32), v14, v11, v12),
         *(_DWORD *)(v13 + 24) <= 1u)
-    || (v17 = StringLiteral_17395/*"btn_atk_"*/,
-        *(_QWORD *)(v13 + 40) = StringLiteral_17395/*"btn_atk_"*/,
-        sub_1B64814((ServantStatusBattleListViewItem_o *)(v13 + 40), v17, v15, v16),
+    || (v17 = StringLiteral_17396/*"btn_atk_"*/,
+        *(_QWORD *)(v13 + 40) = StringLiteral_17396/*"btn_atk_"*/,
+        sub_1B649A4((ServantStatusBattleListViewItem_o *)(v13 + 40), v17, v15, v16),
         *(_DWORD *)(v13 + 24) <= 2u) )
   {
-    sub_1B64AD4(v9, v10);
+    sub_1B64C64(v9, v10);
   }
-  v20 = StringLiteral_17445/*"btn_hp_"*/;
-  *(_QWORD *)(v13 + 48) = StringLiteral_17445/*"btn_hp_"*/;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)(v13 + 48), v20, v18, v19);
+  v20 = StringLiteral_17446/*"btn_hp_"*/;
+  *(_QWORD *)(v13 + 48) = StringLiteral_17446/*"btn_hp_"*/;
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v13 + 48), v20, v18, v19);
   this->fields.btnSpriteNameList = (struct System_String_array *)v13;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.btnSpriteNameList, v13, v21, v22);
-  v23 = (System_Collections_Generic_List_T__o *)sub_1B64ABC(System_Collections_Generic_List_SvtClassAttri_TYPE__TypeInfo);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.btnSpriteNameList, v13, v21, v22);
+  v23 = (System_Collections_Generic_List_T__o *)sub_1B64C4C(System_Collections_Generic_List_SvtClassAttri_TYPE__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v23,
-    (const MethodInfo_3494230 *)Method_System_Collections_Generic_List_SvtClassAttri_TYPE___ctor__);
+    (const MethodInfo_3494848 *)Method_System_Collections_Generic_List_SvtClassAttri_TYPE___ctor__);
   if ( !v23 )
     goto LABEL_34;
   items = v23->fields._items;
@@ -96,7 +96,7 @@ void __fastcall CombineExpUpInfo___ctor(CombineExpUpInfo_o *this, const MethodIn
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v23,
       1,
-      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+      *(const MethodInfo_349509C **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
     items = v23->fields._items;
     v27 = Method_System_Collections_Generic_List_SvtClassAttri_TYPE__Add__;
     ++v23->fields._version;
@@ -115,7 +115,7 @@ void __fastcall CombineExpUpInfo___ctor(CombineExpUpInfo_o *this, const MethodIn
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v23,
       2,
-      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+      *(const MethodInfo_349509C **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
     items = v23->fields._items;
     v27 = Method_System_Collections_Generic_List_SvtClassAttri_TYPE__Add__;
     ++v23->fields._version;
@@ -134,7 +134,7 @@ void __fastcall CombineExpUpInfo___ctor(CombineExpUpInfo_o *this, const MethodIn
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v23,
       3,
-      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+      *(const MethodInfo_349509C **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
     items = v23->fields._items;
     v27 = Method_System_Collections_Generic_List_SvtClassAttri_TYPE__Add__;
     ++v23->fields._version;
@@ -153,7 +153,7 @@ void __fastcall CombineExpUpInfo___ctor(CombineExpUpInfo_o *this, const MethodIn
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v23,
       4,
-      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+      *(const MethodInfo_349509C **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
     items = v23->fields._items;
     v27 = Method_System_Collections_Generic_List_SvtClassAttri_TYPE__Add__;
     ++v23->fields._version;
@@ -172,7 +172,7 @@ void __fastcall CombineExpUpInfo___ctor(CombineExpUpInfo_o *this, const MethodIn
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v23,
       5,
-      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+      *(const MethodInfo_349509C **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
     items = v23->fields._items;
     v27 = Method_System_Collections_Generic_List_SvtClassAttri_TYPE__Add__;
     ++v23->fields._version;
@@ -191,7 +191,7 @@ void __fastcall CombineExpUpInfo___ctor(CombineExpUpInfo_o *this, const MethodIn
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v23,
       6,
-      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+      *(const MethodInfo_349509C **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
     items = v23->fields._items;
     v27 = Method_System_Collections_Generic_List_SvtClassAttri_TYPE__Add__;
     ++v23->fields._version;
@@ -215,13 +215,13 @@ void __fastcall CombineExpUpInfo___ctor(CombineExpUpInfo_o *this, const MethodIn
   System_Collections_Generic_List_Int32Enum___AddWithResize(
     v23,
     7,
-    *(const MethodInfo_3494A84 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+    *(const MethodInfo_349509C **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
   items = v23->fields._items;
   v27 = Method_System_Collections_Generic_List_SvtClassAttri_TYPE__Add__;
   ++v23->fields._version;
   if ( !items )
 LABEL_34:
-    sub_1B64ACC(v9, v10);
+    sub_1B64C5C(v9, v10);
 LABEL_30:
   v35 = v23->fields._size;
   if ( (unsigned int)v35 >= items->max_length )
@@ -229,7 +229,7 @@ LABEL_30:
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v23,
       1001,
-      *(const MethodInfo_3494A84 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+      *(const MethodInfo_349509C **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
   }
   else
   {
@@ -237,7 +237,7 @@ LABEL_30:
     *((_DWORD *)items->m_Items + v35) = 1001;
   }
   this->fields.SortClassOrder = (struct System_Collections_Generic_List_SvtClassAttri_TYPE__o *)v23;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.SortClassOrder, (int32_t)v23, v24, v25);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.SortClassOrder, (int32_t)v23, v24, v25);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -303,29 +303,29 @@ bool __fastcall CombineExpUpInfo__ExpUpInfoSet(
   System_Int32_array *v60; // x2
   System_Int32_array *v61; // x3
 
-  if ( (byte_4A01E79 & 1) == 0 )
+  if ( (byte_4A0249A & 1) == 0 )
   {
-    sub_1B64870(&Method_DataManager_GetMasterData_UserServantMaster___, *(_QWORD *)&kind);
-    sub_1B64870(&Method_DataManager_GetMasterData_UserServantStorageMaster___, v11);
-    sub_1B64870(&int___TypeInfo, v12);
-    sub_1B64870(&Method_System_Collections_Generic_List_UserServantEntity__AddRange__, v13);
-    sub_1B64870(&Method_System_Collections_Generic_List_UserServantEntity__ToArray__, v14);
-    sub_1B64870(&Method_System_Collections_Generic_List_int_____ctor__, v15);
-    sub_1B64870(&Method_System_Collections_Generic_List_UserServantEntity___ctor___75681680, v16);
-    sub_1B64870(&Method_System_Collections_Generic_List_SvtClassAttri_TYPE__get_Count__, v17);
-    sub_1B64870(&Method_System_Collections_Generic_List_SvtClassAttri_TYPE__get_Item__, v18);
-    sub_1B64870(&System_Collections_Generic_List_UserServantEntity__TypeInfo, v19);
-    sub_1B64870(&System_Collections_Generic_List_int____TypeInfo, v20);
-    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v21);
-    sub_1B64870(&SvtClassAttri_TypeInfo, v22);
-    byte_4A01E79 = 1;
+    sub_1B64A00(&Method_DataManager_GetMasterData_UserServantMaster___, *(_QWORD *)&kind);
+    sub_1B64A00(&Method_DataManager_GetMasterData_UserServantStorageMaster___, v11);
+    sub_1B64A00(&int___TypeInfo, v12);
+    sub_1B64A00(&Method_System_Collections_Generic_List_UserServantEntity__AddRange__, v13);
+    sub_1B64A00(&Method_System_Collections_Generic_List_UserServantEntity__ToArray__, v14);
+    sub_1B64A00(&Method_System_Collections_Generic_List_int_____ctor__, v15);
+    sub_1B64A00(&Method_System_Collections_Generic_List_UserServantEntity___ctor___75683232, v16);
+    sub_1B64A00(&Method_System_Collections_Generic_List_SvtClassAttri_TYPE__get_Count__, v17);
+    sub_1B64A00(&Method_System_Collections_Generic_List_SvtClassAttri_TYPE__get_Item__, v18);
+    sub_1B64A00(&System_Collections_Generic_List_UserServantEntity__TypeInfo, v19);
+    sub_1B64A00(&System_Collections_Generic_List_int____TypeInfo, v20);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v21);
+    sub_1B64A00(&SvtClassAttri_TypeInfo, v22);
+    byte_4A0249A = 1;
   }
   this->fields.nowKind = kind;
   this->fields.nowType = type;
   if ( afterAction )
   {
     this->fields.changeAction = afterAction;
-    sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.changeAction, (int32_t)afterAction, type, isFirst);
+    sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.changeAction, (int32_t)afterAction, type, isFirst);
   }
   changeAction = this->fields.changeAction;
   if ( changeAction )
@@ -336,18 +336,18 @@ bool __fastcall CombineExpUpInfo__ExpUpInfoSet(
       *(_QWORD *)&changeAction->fields.extra_arg,
       afterAction,
       method);
-  v24 = (System_Collections_Generic_List_object__o *)sub_1B64ABC(System_Collections_Generic_List_int____TypeInfo);
+  v24 = (System_Collections_Generic_List_object__o *)sub_1B64C4C(System_Collections_Generic_List_int____TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v24,
-    (const MethodInfo_34AF17C *)Method_System_Collections_Generic_List_int_____ctor__);
+    (const MethodInfo_34AF794 *)Method_System_Collections_Generic_List_int_____ctor__);
   v25 = SvtClassAttri_TypeInfo;
   if ( !SvtClassAttri_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(SvtClassAttri_TypeInfo);
     v25 = SvtClassAttri_TypeInfo;
   }
-  v26 = sub_1B64918(int___TypeInfo, v25->static_fields->MAX_EXP_UP_RARITY);
-  Instance = (DataManager_o *)sub_1B64918(int___TypeInfo, SvtClassAttri_TypeInfo->static_fields->MAX_EXP_UP_RARITY);
+  v26 = sub_1B64AA8(int___TypeInfo, v25->static_fields->MAX_EXP_UP_RARITY);
+  Instance = (DataManager_o *)sub_1B64AA8(int___TypeInfo, SvtClassAttri_TypeInfo->static_fields->MAX_EXP_UP_RARITY);
   SortClassOrder = this->fields.SortClassOrder;
   if ( !SortClassOrder )
     goto LABEL_76;
@@ -357,29 +357,29 @@ bool __fastcall CombineExpUpInfo__ExpUpInfoSet(
   switch ( nowKind )
   {
     case 2:
-      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_76;
       MasterData_object = DataManager__GetMasterData_object_(
                             Instance,
-                            (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_UserServantMaster___);
-      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                            (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_UserServantMaster___);
+      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_76;
       Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                     Instance,
-                                    (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_UserServantStorageMaster___);
+                                    (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_UserServantStorageMaster___);
       if ( !MasterData_object )
         goto LABEL_76;
       v36 = (UserServantStorageMaster_o *)Instance;
       CombineMaterialList = (System_Collections_Generic_IEnumerable_T__o *)UserServantMaster__getCombineMaterialList(
                                                                              (UserServantMaster_o *)MasterData_object,
                                                                              0LL);
-      v38 = (System_Collections_Generic_List_object__o *)sub_1B64ABC(System_Collections_Generic_List_UserServantEntity__TypeInfo);
-      System_Collections_Generic_List_object____ctor_55243428(
+      v38 = (System_Collections_Generic_List_object__o *)sub_1B64C4C(System_Collections_Generic_List_UserServantEntity__TypeInfo);
+      System_Collections_Generic_List_object____ctor_55244988(
         v38,
         CombineMaterialList,
-        (const MethodInfo_34AF2A4 *)Method_System_Collections_Generic_List_UserServantEntity___ctor___75681680);
+        (const MethodInfo_34AF8BC *)Method_System_Collections_Generic_List_UserServantEntity___ctor___75683232);
       if ( !v36 )
         goto LABEL_76;
       Instance = (DataManager_o *)UserServantStorageMaster__getList(v36, 0LL);
@@ -388,29 +388,29 @@ bool __fastcall CombineExpUpInfo__ExpUpInfoSet(
       System_Collections_Generic_List_object___AddRange(
         v38,
         (System_Collections_Generic_IEnumerable_T__o *)Instance,
-        (const MethodInfo_34AFBBC *)Method_System_Collections_Generic_List_UserServantEntity__AddRange__);
+        (const MethodInfo_34B01D4 *)Method_System_Collections_Generic_List_UserServantEntity__AddRange__);
       List = (UserServantEntity_array *)System_Collections_Generic_List_object___ToArray(
                                           v38,
-                                          (const MethodInfo_34B15A8 *)Method_System_Collections_Generic_List_UserServantEntity__ToArray__);
+                                          (const MethodInfo_34B1BC0 *)Method_System_Collections_Generic_List_UserServantEntity__ToArray__);
       goto LABEL_25;
     case 1:
-      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_76;
       Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                     Instance,
-                                    (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_UserServantStorageMaster___);
+                                    (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_UserServantStorageMaster___);
       if ( !Instance )
         goto LABEL_76;
       List = UserServantStorageMaster__getList((UserServantStorageMaster_o *)Instance, 0LL);
       goto LABEL_25;
     case 0:
-      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_76;
       Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                     Instance,
-                                    (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                                    (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_UserServantMaster___);
       if ( !Instance )
         goto LABEL_76;
       List = UserServantMaster__getCombineMaterialList((UserServantMaster_o *)Instance, 0LL);
@@ -430,7 +430,7 @@ LABEL_27:
       Item = System_Collections_Generic_List_Int32Enum___get_Item(
                (System_Collections_Generic_List_T__o *)Instance,
                i,
-               (const MethodInfo_3494794 *)Method_System_Collections_Generic_List_SvtClassAttri_TYPE__get_Item__);
+               (const MethodInfo_3494DAC *)Method_System_Collections_Generic_List_SvtClassAttri_TYPE__get_Item__);
       if ( !SvtClassAttri_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(SvtClassAttri_TypeInfo);
       ClassId = (CombineExpUpInfo_o *)SvtClassAttri__getClassId(Item, 0LL);
@@ -482,7 +482,7 @@ LABEL_39:
             goto LABEL_48;
         }
 LABEL_76:
-        sub_1B64ACC(Instance, v28);
+        sub_1B64C5C(Instance, v28);
       }
 LABEL_48:
       if ( isFirst )
@@ -532,7 +532,7 @@ LABEL_71:
             goto LABEL_76;
           if ( i >= v59->max_length )
 LABEL_77:
-            sub_1B64AD4(Instance, v28);
+            sub_1B64C64(Instance, v28);
           Instance = (DataManager_o *)v59->m_Items[i];
           if ( !Instance )
             goto LABEL_76;
@@ -552,7 +552,7 @@ LABEL_77:
       Instance = (DataManager_o *)v58->m_Items[i];
       if ( !Instance )
         goto LABEL_76;
-      CombineExpUpClassInfo__Set_44755116((CombineExpUpClassInfo_o *)Instance, v33, v47);
+      CombineExpUpClassInfo__Set_44756676((CombineExpUpClassInfo_o *)Instance, v33, v47);
     }
   }
   CombineExpUpInfo__SetBtnState(this, this->fields.nowKind, this->fields.nowType, v29);
@@ -601,14 +601,14 @@ CombineExpUpInfo_MaterialData_array *__fastcall CombineExpUpInfo__GetTargetClass
   CombineExpUpInfo_MaterialData_o *v38; // x8
   __int64 v39; // x0
 
-  if ( (byte_4A01E7A & 1) == 0 )
+  if ( (byte_4A0249B & 1) == 0 )
   {
-    sub_1B64870(&Method_DataManager_GetMasterData_ServantMaster___, svtList);
-    sub_1B64870(&CombineExpUpInfo_MaterialData___TypeInfo, v6);
-    sub_1B64870(&CombineExpUpInfo_MaterialData_TypeInfo, v7);
-    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    sub_1B64870(&SvtClassAttri_TypeInfo, v9);
-    byte_4A01E7A = 1;
+    sub_1B64A00(&Method_DataManager_GetMasterData_ServantMaster___, svtList);
+    sub_1B64A00(&CombineExpUpInfo_MaterialData___TypeInfo, v6);
+    sub_1B64A00(&CombineExpUpInfo_MaterialData_TypeInfo, v7);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    sub_1B64A00(&SvtClassAttri_TypeInfo, v9);
+    byte_4A0249B = 1;
   }
   v10 = SvtClassAttri_TypeInfo;
   if ( !SvtClassAttri_TypeInfo->_2.cctor_finished )
@@ -616,15 +616,15 @@ CombineExpUpInfo_MaterialData_array *__fastcall CombineExpUpInfo__GetTargetClass
     j_il2cpp_runtime_class_init_0(SvtClassAttri_TypeInfo);
     v10 = SvtClassAttri_TypeInfo;
   }
-  v11 = (CombineExpUpInfo_MaterialData_array *)sub_1B64918(
+  v11 = (CombineExpUpInfo_MaterialData_array *)sub_1B64AA8(
                                                  CombineExpUpInfo_MaterialData___TypeInfo,
                                                  v10->static_fields->MAX_EXP_UP_RARITY);
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_47;
   Instance = (__int64)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_ServantMaster___);
+                        (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( !Instance )
     goto LABEL_47;
   TargetClassMaterialSvtIdList = ServantMaster__GetTargetClassMaterialSvtIdList(
@@ -650,23 +650,23 @@ CombineExpUpInfo_MaterialData_array *__fastcall CombineExpUpInfo__GetTargetClass
     v19 = **(int **)(Instance + 184);
     if ( (__int64)v17 >= v19 )
       break;
-    v20 = (Il2CppObject *)sub_1B64ABC(CombineExpUpInfo_MaterialData_TypeInfo);
+    v20 = (Il2CppObject *)sub_1B64C4C(CombineExpUpInfo_MaterialData_TypeInfo);
     System_Object___ctor(v20, 0LL);
     if ( !v11 )
       goto LABEL_47;
     if ( v20 )
     {
-      Instance = sub_1B649AC(v20, v11->obj.klass->_1.element_class);
+      Instance = sub_1B64B3C(v20, v11->obj.klass->_1.element_class);
       if ( !Instance )
       {
-        v39 = sub_1B64AF0(0LL);
-        sub_1B64998(v39, 0LL);
+        v39 = sub_1B64C80(0LL);
+        sub_1B64B28(v39, 0LL);
       }
     }
     if ( v17 >= v11->max_length )
       goto LABEL_46;
     m_Items[v17] = (CombineExpUpInfo_MaterialData_o *)v20;
-    sub_1B64814((ServantStatusBattleListViewItem_o *)&m_Items[v16], (int32_t)v20, v21, v22);
+    sub_1B649A4((ServantStatusBattleListViewItem_o *)&m_Items[v16], (int32_t)v20, v21, v22);
     ++v17;
     ++v16;
   }
@@ -695,10 +695,10 @@ CombineExpUpInfo_MaterialData_array *__fastcall CombineExpUpInfo__GetTargetClass
           goto LABEL_32;
       }
 LABEL_46:
-      sub_1B64AD4(Instance, v13);
+      sub_1B64C64(Instance, v13);
     }
 LABEL_47:
-    sub_1B64ACC(Instance, v13);
+    sub_1B64C5C(Instance, v13);
   }
 LABEL_32:
   if ( !svtList )
@@ -790,23 +790,23 @@ CombineExpUpInfo_MaterialData_array *__fastcall CombineExpUpInfo__GetTargetClass
   CombineExpUpInfo_MaterialData_o *v40; // x8
   __int64 v42; // x0
 
-  if ( (byte_4A01E7B & 1) == 0 )
+  if ( (byte_4A0249C & 1) == 0 )
   {
-    sub_1B64870(&Method_DataManager_GetMasterData_ServantMaster___, svtList);
-    sub_1B64870(&int___TypeInfo, v8);
-    sub_1B64870(&CombineExpUpInfo_MaterialData___TypeInfo, v9);
-    sub_1B64870(&CombineExpUpInfo_MaterialData_TypeInfo, v10);
-    sub_1B64870(&ServantLeaderInfo_TypeInfo, v11);
-    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
-    sub_1B64870(&SvtClassAttri_TypeInfo, v13);
-    byte_4A01E7B = 1;
+    sub_1B64A00(&Method_DataManager_GetMasterData_ServantMaster___, svtList);
+    sub_1B64A00(&int___TypeInfo, v8);
+    sub_1B64A00(&CombineExpUpInfo_MaterialData___TypeInfo, v9);
+    sub_1B64A00(&CombineExpUpInfo_MaterialData_TypeInfo, v10);
+    sub_1B64A00(&ServantLeaderInfo_TypeInfo, v11);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
+    sub_1B64A00(&SvtClassAttri_TypeInfo, v13);
+    byte_4A0249C = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_59;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_ServantMaster___);
+               (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( !Instance )
     goto LABEL_59;
   TargetClassStatusUpSvtIdList = ServantMaster__GetTargetClassStatusUpSvtIdList(
@@ -820,7 +820,7 @@ CombineExpUpInfo_MaterialData_array *__fastcall CombineExpUpInfo__GetTargetClass
     j_il2cpp_runtime_class_init_0(SvtClassAttri_TypeInfo);
     v17 = SvtClassAttri_TypeInfo;
   }
-  Instance = (Il2CppObject *)sub_1B64918(int___TypeInfo, v17->static_fields->MAX_EXP_UP_RARITY);
+  Instance = (Il2CppObject *)sub_1B64AA8(int___TypeInfo, v17->static_fields->MAX_EXP_UP_RARITY);
   if ( !v18 )
     goto LABEL_59;
   v19 = *(_QWORD *)&v18->max_length;
@@ -834,10 +834,10 @@ CombineExpUpInfo_MaterialData_array *__fastcall CombineExpUpInfo__GetTargetClass
   {
     if ( v22 >= (unsigned int)v19 )
 LABEL_56:
-      sub_1B64AD4(Instance, v15);
+      sub_1B64C64(Instance, v15);
     v24 = v23[v22];
-    v25 = (ServantLeaderInfo_o *)sub_1B64ABC(ServantLeaderInfo_TypeInfo);
-    ServantLeaderInfo___ctor_40155148(v25, v24, 0, 1, 0LL);
+    v25 = (ServantLeaderInfo_o *)sub_1B64C4C(ServantLeaderInfo_TypeInfo);
+    ServantLeaderInfo___ctor_40155660(v25, v24, 0, 1, 0LL);
     if ( type == 2 )
     {
       if ( !v25 )
@@ -869,24 +869,24 @@ LABEL_24:
   while ( (__int64)v22 < (int)v19 );
   if ( !v21 )
     return 0LL;
-  Instance = (Il2CppObject *)sub_1B64918(CombineExpUpInfo_MaterialData___TypeInfo, (unsigned int)v21);
+  Instance = (Il2CppObject *)sub_1B64AA8(CombineExpUpInfo_MaterialData___TypeInfo, (unsigned int)v21);
   v27 = (CombineExpUpInfo_MaterialData_array *)Instance;
   if ( v21 >= 1 )
   {
     v28 = 0;
     while ( 1 )
     {
-      v29 = (Il2CppObject *)sub_1B64ABC(CombineExpUpInfo_MaterialData_TypeInfo);
+      v29 = (Il2CppObject *)sub_1B64C4C(CombineExpUpInfo_MaterialData_TypeInfo);
       System_Object___ctor(v29, 0LL);
       if ( !v27 )
         break;
       if ( v29 )
       {
-        Instance = (Il2CppObject *)sub_1B649AC(v29, v27->obj.klass->_1.element_class);
+        Instance = (Il2CppObject *)sub_1B64B3C(v29, v27->obj.klass->_1.element_class);
         if ( !Instance )
         {
-          v42 = sub_1B64AF0(0LL);
-          sub_1B64998(v42, 0LL);
+          v42 = sub_1B64C80(0LL);
+          sub_1B64B28(v42, 0LL);
         }
       }
       if ( v28 >= v27->max_length )
@@ -895,7 +895,7 @@ LABEL_24:
       v33 = &v27->obj.klass + (int)v28;
       v33[4] = (Il2CppClass *)v29;
       v34 = (ServantStatusBattleListViewItem_o *)(v33 + 4);
-      sub_1B64814(v34, (int32_t)v29, v30, v31);
+      sub_1B649A4(v34, (int32_t)v29, v30, v31);
       if ( v28 >= v27->max_length )
         goto LABEL_56;
       if ( !v20 )
@@ -910,7 +910,7 @@ LABEL_24:
         goto LABEL_37;
     }
 LABEL_59:
-    sub_1B64ACC(Instance, v15);
+    sub_1B64C5C(Instance, v15);
   }
 LABEL_37:
   if ( !svtList )
@@ -970,17 +970,17 @@ void __fastcall CombineExpUpInfo__OnClickCenter(CombineExpUpInfo_o *this, const 
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x5
 
-  if ( (byte_4A01E7E & 1) == 0 )
+  if ( (byte_4A0249F & 1) == 0 )
   {
-    sub_1B64870(&Method_CombineExpUpInfo_OnClickCenter__, method);
-    byte_4A01E7E = 1;
+    sub_1B64A00(&Method_CombineExpUpInfo_OnClickCenter__, method);
+    byte_4A0249F = 1;
   }
   if ( this->fields.nowType != 1 )
   {
     v3 = Method_CombineExpUpInfo_OnClickCenter__;
     if ( (*((_BYTE *)Method_CombineExpUpInfo_OnClickCenter__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B64888(Method_CombineExpUpInfo_OnClickCenter__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64A18(Method_CombineExpUpInfo_OnClickCenter__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B649E4(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     CombineExpUpInfo__ExpUpInfoSet(this, this->fields.nowKind, 1, 1, 0LL, v5);
   }
@@ -995,15 +995,15 @@ void __fastcall CombineExpUpInfo__OnClickChangeButton(CombineExpUpInfo_o *this, 
   int32_t nowKind; // w8
   int32_t v7; // w1
 
-  if ( (byte_4A01E80 & 1) == 0 )
+  if ( (byte_4A024A1 & 1) == 0 )
   {
-    sub_1B64870(&Method_CombineExpUpInfo_OnClickChangeButton__, method);
-    byte_4A01E80 = 1;
+    sub_1B64A00(&Method_CombineExpUpInfo_OnClickChangeButton__, method);
+    byte_4A024A1 = 1;
   }
   v3 = Method_CombineExpUpInfo_OnClickChangeButton__;
   if ( (*((_BYTE *)Method_CombineExpUpInfo_OnClickChangeButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1B64888(Method_CombineExpUpInfo_OnClickChangeButton__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
+    v3 = (_QWORD *)sub_1B64A18(Method_CombineExpUpInfo_OnClickChangeButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1B649E4(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
   nowKind = this->fields.nowKind;
   if ( nowKind )
@@ -1020,17 +1020,17 @@ void __fastcall CombineExpUpInfo__OnClickLeft(CombineExpUpInfo_o *this, const Me
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x5
 
-  if ( (byte_4A01E7D & 1) == 0 )
+  if ( (byte_4A0249E & 1) == 0 )
   {
-    sub_1B64870(&Method_CombineExpUpInfo_OnClickLeft__, method);
-    byte_4A01E7D = 1;
+    sub_1B64A00(&Method_CombineExpUpInfo_OnClickLeft__, method);
+    byte_4A0249E = 1;
   }
   if ( this->fields.nowType )
   {
     v3 = Method_CombineExpUpInfo_OnClickLeft__;
     if ( (*((_BYTE *)Method_CombineExpUpInfo_OnClickLeft__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B64888(Method_CombineExpUpInfo_OnClickLeft__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64A18(Method_CombineExpUpInfo_OnClickLeft__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B649E4(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     CombineExpUpInfo__ExpUpInfoSet(this, this->fields.nowKind, 0, 1, 0LL, v5);
   }
@@ -1043,17 +1043,17 @@ void __fastcall CombineExpUpInfo__OnClickRight(CombineExpUpInfo_o *this, const M
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x5
 
-  if ( (byte_4A01E7F & 1) == 0 )
+  if ( (byte_4A024A0 & 1) == 0 )
   {
-    sub_1B64870(&Method_CombineExpUpInfo_OnClickRight__, method);
-    byte_4A01E7F = 1;
+    sub_1B64A00(&Method_CombineExpUpInfo_OnClickRight__, method);
+    byte_4A024A0 = 1;
   }
   if ( this->fields.nowType != 2 )
   {
     v3 = Method_CombineExpUpInfo_OnClickRight__;
     if ( (*((_BYTE *)Method_CombineExpUpInfo_OnClickRight__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B64888(Method_CombineExpUpInfo_OnClickRight__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64A18(Method_CombineExpUpInfo_OnClickRight__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B649E4(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     CombineExpUpInfo__ExpUpInfoSet(this, this->fields.nowKind, 2, 1, 0LL, v5);
   }
@@ -1094,17 +1094,17 @@ void __fastcall CombineExpUpInfo__SetBtnState(
   __int64 *v30; // x8
 
   v6 = this;
-  if ( (byte_4A01E7C & 1) == 0 )
+  if ( (byte_4A0249D & 1) == 0 )
   {
-    sub_1B64870(&CombineExpUpInfo_TypeInfo, *(_QWORD *)&kind);
-    sub_1B64870(&StringLiteral_22120/*"off"*/, v7);
-    sub_1B64870(&StringLiteral_17401/*"btn_bg_02_on"*/, v8);
-    sub_1B64870(&StringLiteral_22150/*"on"*/, v9);
-    sub_1B64870(&StringLiteral_17598/*"button_total"*/, v10);
-    sub_1B64870(&StringLiteral_17597/*"button_storage"*/, v11);
-    sub_1B64870(&StringLiteral_17592/*"button_possess"*/, v12);
-    this = (CombineExpUpInfo_o *)sub_1B64870(&StringLiteral_17400/*"btn_bg_02_off"*/, v13);
-    byte_4A01E7C = 1;
+    sub_1B64A00(&CombineExpUpInfo_TypeInfo, *(_QWORD *)&kind);
+    sub_1B64A00(&StringLiteral_22120/*"off"*/, v7);
+    sub_1B64A00(&StringLiteral_17402/*"btn_bg_02_on"*/, v8);
+    sub_1B64A00(&StringLiteral_22150/*"on"*/, v9);
+    sub_1B64A00(&StringLiteral_17599/*"button_total"*/, v10);
+    sub_1B64A00(&StringLiteral_17598/*"button_storage"*/, v11);
+    sub_1B64A00(&StringLiteral_17593/*"button_possess"*/, v12);
+    this = (CombineExpUpInfo_o *)sub_1B64A00(&StringLiteral_17401/*"btn_bg_02_off"*/, v13);
+    byte_4A0249D = 1;
   }
   v14 = 0LL;
   v15 = (unsigned int)type;
@@ -1129,7 +1129,7 @@ void __fastcall CombineExpUpInfo__SetBtnState(
       this = (CombineExpUpInfo_o *)btnSpriteList->m_Items[v15];
       if ( !this )
         goto LABEL_47;
-      UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)StringLiteral_17401/*"btn_bg_02_on"*/, 0LL);
+      UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)StringLiteral_17402/*"btn_bg_02_on"*/, 0LL);
       v18 = v6->fields.btnSpriteList;
       if ( !v18 )
         goto LABEL_47;
@@ -1171,11 +1171,11 @@ void __fastcall CombineExpUpInfo__SetBtnState(
         goto LABEL_47;
       if ( v14 >= v25->max_length )
 LABEL_48:
-        sub_1B64AD4(this, *(_QWORD *)&kind);
+        sub_1B64C64(this, *(_QWORD *)&kind);
       this = (CombineExpUpInfo_o *)v25->m_Items[v14];
       if ( !this )
         goto LABEL_47;
-      UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)StringLiteral_17400/*"btn_bg_02_off"*/, 0LL);
+      UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)StringLiteral_17401/*"btn_bg_02_off"*/, 0LL);
       v26 = v6->fields.btnSpriteList;
       if ( !v26 )
         goto LABEL_47;
@@ -1209,7 +1209,7 @@ LABEL_48:
       v23 = v29->m_Items[v14];
       v24 = (System_String_o *)StringLiteral_22120/*"off"*/;
     }
-    this = (CombineExpUpInfo_o *)System_String__Concat_61383576(v23, v24, 0LL);
+    this = (CombineExpUpInfo_o *)System_String__Concat_61385136(v23, v24, 0LL);
     if ( !v22 )
       goto LABEL_47;
     UISprite__set_spriteName(v22, (System_String_o *)this, 0LL);
@@ -1222,16 +1222,16 @@ LABEL_48:
       this = (CombineExpUpInfo_o *)v6->fields.btnChangeSprite;
       if ( this )
       {
-        v30 = &StringLiteral_17598/*"button_total"*/;
+        v30 = &StringLiteral_17599/*"button_total"*/;
         goto LABEL_45;
       }
 LABEL_47:
-      sub_1B64ACC(this, *(_QWORD *)&kind);
+      sub_1B64C5C(this, *(_QWORD *)&kind);
     case 1:
       this = (CombineExpUpInfo_o *)v6->fields.btnChangeSprite;
       if ( this )
       {
-        v30 = &StringLiteral_17597/*"button_storage"*/;
+        v30 = &StringLiteral_17598/*"button_storage"*/;
         goto LABEL_45;
       }
       goto LABEL_47;
@@ -1239,7 +1239,7 @@ LABEL_47:
       this = (CombineExpUpInfo_o *)v6->fields.btnChangeSprite;
       if ( this )
       {
-        v30 = &StringLiteral_17592/*"button_possess"*/;
+        v30 = &StringLiteral_17593/*"button_possess"*/;
 LABEL_45:
         UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v30, 0LL);
         return;

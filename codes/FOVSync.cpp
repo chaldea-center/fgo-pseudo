@@ -15,15 +15,15 @@ void __fastcall FOVSync__LateUpdate(FOVSync_o *this, const MethodInfo *method)
   float fieldOfView; // s0
   float v10; // s0
 
-  if ( (byte_49FD9E8 & 1) == 0 )
+  if ( (byte_49FE008 & 1) == 0 )
   {
-    sub_1B64870(&Method_UnityEngine_Component_GetComponent_Camera___, method);
-    sub_1B64870(&UnityEngine_Object_TypeInfo, v3);
-    byte_49FD9E8 = 1;
+    sub_1B64A00(&Method_UnityEngine_Component_GetComponent_Camera___, method);
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, v3);
+    byte_49FE008 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2E3216C *)Method_UnityEngine_Component_GetComponent_Camera___);
+                       (const MethodInfo_2E32784 *)Method_UnityEngine_Component_GetComponent_Camera___);
   observeCamera = (UnityEngine_Object_o *)this->fields.observeCamera;
   v6 = (UnityEngine_Camera_o *)Component_object;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -50,7 +50,7 @@ void __fastcall FOVSync__LateUpdate(FOVSync_o *this, const MethodInfo *method)
           return;
         }
 LABEL_15:
-        sub_1B64ACC(v8, v7);
+        sub_1B64C5C(v8, v7);
       }
     }
   }

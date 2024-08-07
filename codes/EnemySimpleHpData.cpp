@@ -8,7 +8,7 @@ void __fastcall EnemySimpleHpData___ctor(
 
   SimpleHpData___ctor((SimpleHpData_o *)this, svtData, method);
   if ( !svtData )
-    sub_1B64ACC(v5, v6);
+    sub_1B64C5C(v5, v6);
   *(int32x2_t *)&this->fields._NextTpTurn_k__BackingField = vrev64_s32(*(int32x2_t *)&svtData->fields.maxtpturn);
 }
 

@@ -20,16 +20,16 @@ void __fastcall IndividualityTargetDetector___ctor(
   struct IWarBoardObjectData_IndivGetArgs_o *v21; // x21
   struct IWarBoardObjectData_IndivGetArgs_o *v22; // x20
 
-  if ( (byte_49FC198 & 1) == 0 )
+  if ( (byte_49FC7B8 & 1) == 0 )
   {
-    sub_1B64870(&IWarBoardObjectData_IndivGetArgs_TypeInfo, entity);
-    byte_49FC198 = 1;
+    sub_1B64A00(&IWarBoardObjectData_IndivGetArgs_TypeInfo, entity);
+    byte_49FC7B8 = 1;
   }
-  v9 = (Il2CppObject *)sub_1B64ABC(IWarBoardObjectData_IndivGetArgs_TypeInfo);
+  v9 = (Il2CppObject *)sub_1B64C4C(IWarBoardObjectData_IndivGetArgs_TypeInfo);
   System_Object___ctor(v9, 0LL);
   this->fields.indivGetArgs = (struct IWarBoardObjectData_IndivGetArgs_o *)v9;
   p_indivGetArgs = &this->fields.indivGetArgs;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.indivGetArgs, (int32_t)v9, v11, v12);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.indivGetArgs, (int32_t)v9, v11, v12);
   TargetDetector___ctor((TargetDetector_o *)this, root, v13);
   this->fields.teamCondType = teamCond;
   if ( !entity )
@@ -37,7 +37,7 @@ void __fastcall IndividualityTargetDetector___ctor(
   SortedMultiIndividuality = WarBoardActionTrendConditionEntity__GetSortedMultiIndividuality(entity, 0LL);
   this->fields.multiIndividuality = SortedMultiIndividuality;
   p_multiIndividuality = (ServantStatusBattleListViewItem_o *)&this->fields.multiIndividuality;
-  sub_1B64814(p_multiIndividuality, (int32_t)SortedMultiIndividuality, v18, v19);
+  sub_1B649A4(p_multiIndividuality, (int32_t)SortedMultiIndividuality, v18, v19);
   monitor = p_multiIndividuality->monitor;
   IsIncludeIgnoreIndividuality = WarBoardActionTrendConditionEntity__IsIncludeIgnoreIndividuality(entity, 0LL);
   if ( !monitor
@@ -51,7 +51,7 @@ void __fastcall IndividualityTargetDetector___ctor(
         !v22) )
   {
 LABEL_8:
-    sub_1B64ACC(IsIncludeIgnoreIndividuality, v15);
+    sub_1B64C5C(IsIncludeIgnoreIndividuality, v15);
   }
   v22->fields.IsIgnoreIndivUnreleasable = IsIncludeIgnoreIndividuality;
 }
@@ -85,23 +85,23 @@ void __fastcall IndividualityTargetDetector__AggregateTargetObject(
   System_Int32_array *v24; // x0
 
   v4 = this;
-  if ( (byte_49FC199 & 1) == 0 )
+  if ( (byte_49FC7B9 & 1) == 0 )
   {
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_IWarBoardObjectData__Add__, objectArray);
-    sub_1B64870(&IWarBoardObjectData_TypeInfo, v5);
-    this = (IndividualityTargetDetector_o *)sub_1B64870(&WarBoardPieceData_TypeInfo, v6);
-    byte_49FC199 = 1;
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_IWarBoardObjectData__Add__, objectArray);
+    sub_1B64A00(&IWarBoardObjectData_TypeInfo, v5);
+    this = (IndividualityTargetDetector_o *)sub_1B64A00(&WarBoardPieceData_TypeInfo, v6);
+    byte_49FC7B9 = 1;
   }
   if ( !objectArray )
 LABEL_47:
-    sub_1B64ACC(this, objectArray);
+    sub_1B64C5C(this, objectArray);
   max_length = objectArray->max_length;
   if ( max_length >= 1 )
   {
     for ( i = 0; i < max_length; ++i )
     {
       if ( i >= (unsigned int)max_length )
-        sub_1B64AD4(this, objectArray);
+        sub_1B64C64(this, objectArray);
       v9 = (Il2CppObject *)objectArray->m_Items[i];
       if ( !v9 )
         goto LABEL_47;
@@ -122,7 +122,7 @@ LABEL_47:
       else
       {
 LABEL_12:
-        p_method = sub_1BB6850(v9, IWarBoardObjectData_TypeInfo, 2LL);
+        p_method = sub_1BB69E0(v9, IWarBoardObjectData_TypeInfo, 2LL);
       }
       this = (IndividualityTargetDetector_o *)(*(__int64 (__fastcall **)(Il2CppObject *, _QWORD))p_method)(
                                                 v9,
@@ -196,7 +196,7 @@ LABEL_36:
         else
         {
 LABEL_40:
-          v23 = sub_1BB6850(v9, IWarBoardObjectData_TypeInfo, 6LL);
+          v23 = sub_1BB69E0(v9, IWarBoardObjectData_TypeInfo, 6LL);
         }
         v24 = (System_Int32_array *)(*(__int64 (__fastcall **)(Il2CppObject *, struct IWarBoardObjectData_IndivGetArgs_o *, _QWORD))v23)(
                                       v9,
@@ -214,7 +214,7 @@ LABEL_40:
           this = (IndividualityTargetDetector_o *)System_Collections_Generic_HashSet_object___Add(
                                                     (System_Collections_Generic_HashSet_T__o *)this,
                                                     v9,
-                                                    (const MethodInfo_336D290 *)Method_System_Collections_Generic_HashSet_IWarBoardObjectData__Add__);
+                                                    (const MethodInfo_336D8A8 *)Method_System_Collections_Generic_HashSet_IWarBoardObjectData__Add__);
         }
       }
 LABEL_45:
@@ -243,11 +243,11 @@ bool __fastcall IndividualityTargetDetector__IsSameCondition(
   TargetDetector_c *v16; // x9
   __int64 v17; // x10
 
-  if ( (byte_49FC19A & 1) == 0 )
+  if ( (byte_49FC7BA & 1) == 0 )
   {
-    sub_1B64870(&Method_System_Linq_Enumerable_SequenceEqual_int___, t);
-    sub_1B64870(&IndividualityTargetDetector_TypeInfo, v5);
-    byte_49FC19A = 1;
+    sub_1B64A00(&Method_System_Linq_Enumerable_SequenceEqual_int___, t);
+    sub_1B64A00(&IndividualityTargetDetector_TypeInfo, v5);
+    byte_49FC7BA = 1;
   }
   if ( !t )
     return 0;
@@ -271,7 +271,7 @@ bool __fastcall IndividualityTargetDetector__IsSameCondition(
   indivGetArgs = this->fields.indivGetArgs;
   if ( !indivGetArgs || (monitor = (unsigned __int8 *)t[1].monitor) == 0LL )
 LABEL_27:
-    sub_1B64ACC(IsNullOrEmpty, v8);
+    sub_1B64C5C(IsNullOrEmpty, v8);
   if ( indivGetArgs->fields.IsIncludeIgnoreIndividuality != monitor[16]
     || indivGetArgs->fields.IsIncludePassiveIndividuality != monitor[17]
     || indivGetArgs->fields.IsIgnoreIndivUnreleasable != monitor[18]
@@ -292,11 +292,11 @@ LABEL_27:
         goto LABEL_27;
       if ( v15 - 4 >= (unsigned __int64)LODWORD(v16->_1.namespaze) )
 LABEL_28:
-        sub_1B64AD4(IsNullOrEmpty, v8);
+        sub_1B64C64(IsNullOrEmpty, v8);
       IsNullOrEmpty = System_Linq_Enumerable__SequenceEqual_int_(
                         *((System_Collections_Generic_IEnumerable_TSource__o **)&multiIndividuality->obj.klass + v15),
                         *((System_Collections_Generic_IEnumerable_TSource__o **)&v16->_1.image + v15),
-                        (const MethodInfo_2E6E044 *)Method_System_Linq_Enumerable_SequenceEqual_int___);
+                        (const MethodInfo_2E6E65C *)Method_System_Linq_Enumerable_SequenceEqual_int___);
       if ( !IsNullOrEmpty )
         break;
       multiIndividuality = this->fields.multiIndividuality;

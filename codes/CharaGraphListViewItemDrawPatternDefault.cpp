@@ -15,10 +15,10 @@ void __fastcall CharaGraphListViewItemDrawPatternDefault__SetActive(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v7; // x1
 
-  if ( (byte_49FD8D8 & 1) == 0 )
+  if ( (byte_49FDEF8 & 1) == 0 )
   {
-    sub_1B64870(&UnityEngine_Object_TypeInfo, obj);
-    byte_49FD8D8 = 1;
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, obj);
+    byte_49FDEF8 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -26,7 +26,7 @@ void __fastcall CharaGraphListViewItemDrawPatternDefault__SetActive(
   if ( ((unsigned __int8)gameObject & 1) != 0 )
   {
     if ( !obj || (gameObject = UnityEngine_Component__get_gameObject(obj, 0LL)) == 0LL )
-      sub_1B64ACC(gameObject, v7);
+      sub_1B64C5C(gameObject, v7);
     UnityEngine_GameObject__SetActive(gameObject, value, 0LL);
   }
 }
@@ -44,11 +44,11 @@ void __fastcall CharaGraphListViewItemDrawPatternDefault__SetInput(
   UnityEngine_Object_o *baseButton; // x23
 
   v8 = this;
-  if ( (byte_49FD8D7 & 1) == 0 )
+  if ( (byte_49FDEF7 & 1) == 0 )
   {
-    sub_1B64870(&Method_UnityEngine_Component_GetComponent_Collider___, itemDraw);
-    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1B64870(&UnityEngine_Object_TypeInfo, v9);
-    byte_49FD8D7 = 1;
+    sub_1B64A00(&Method_UnityEngine_Component_GetComponent_Collider___, itemDraw);
+    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1B64A00(&UnityEngine_Object_TypeInfo, v9);
+    byte_49FDEF7 = 1;
   }
   if ( !itemDraw )
     goto LABEL_12;
@@ -62,7 +62,7 @@ void __fastcall CharaGraphListViewItemDrawPatternDefault__SetInput(
     {
       this = (CharaGraphListViewItemDrawPatternDefault_o *)UnityEngine_Component__GetComponent_object_(
                                                              (UnityEngine_Component_o *)this,
-                                                             (const MethodInfo_2E3216C *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                             (const MethodInfo_2E32784 *)Method_UnityEngine_Component_GetComponent_Collider___);
       if ( this )
       {
         UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)this, isInput, 0LL);
@@ -79,7 +79,7 @@ void __fastcall CharaGraphListViewItemDrawPatternDefault__SetInput(
       }
     }
 LABEL_12:
-    sub_1B64ACC(this, itemDraw);
+    sub_1B64C5C(this, itemDraw);
   }
 LABEL_11:
   ((void (__fastcall *)(CharaGraphListViewItemDrawPatternDefault_o *, CharaGraphListViewItemDraw_o *, CharaGraphListViewItemBase_o *, Il2CppMethodPointer))v8->klass->vtable._6_SetupAccessories.method)(
@@ -169,7 +169,7 @@ void __fastcall CharaGraphListViewItemDrawPatternDefault__SetupAccessories(
           v21),
         (servantFaceIcon = (CharaGraphListViewItemDrawPatternDefault_o *)itemDraw->fields.servantFaceIcon) == 0LL) )
   {
-    sub_1B64ACC(servantFaceIcon, v12);
+    sub_1B64C5C(servantFaceIcon, v12);
   }
   ServantFaceIconComponent__ResetIconLabelScale((ServantFaceIconComponent_o *)servantFaceIcon, 0LL);
   CharaGraphListViewItemDrawPatternDefault__SetupMaterialTd(v22, itemDraw, item, v23);
@@ -195,12 +195,12 @@ void __fastcall CharaGraphListViewItemDrawPatternDefault__SetupFaceIcon(
   __int64 v11; // x11
   __int64 v12; // x11
 
-  if ( (byte_49FD8D9 & 1) == 0 )
+  if ( (byte_49FDEF9 & 1) == 0 )
   {
-    sub_1B64870(&CharaGraphCommandCodeListViewItem_TypeInfo, itemDraw);
-    sub_1B64870(&CharaGraphServantCollectionListViewItem_TypeInfo, v6);
-    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1B64870(&CharaGraphServantListViewItem_TypeInfo, v7);
-    byte_49FD8D9 = 1;
+    sub_1B64A00(&CharaGraphCommandCodeListViewItem_TypeInfo, itemDraw);
+    sub_1B64A00(&CharaGraphServantCollectionListViewItem_TypeInfo, v6);
+    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1B64A00(&CharaGraphServantListViewItem_TypeInfo, v7);
+    byte_49FDEF9 = 1;
   }
   if ( item )
   {
@@ -215,7 +215,7 @@ void __fastcall CharaGraphListViewItemDrawPatternDefault__SetupFaceIcon(
         this = (CharaGraphListViewItemDrawPatternDefault_o *)itemDraw->fields.servantFaceIcon;
         if ( this )
         {
-          ServantFaceIconComponent__Set_37909280(
+          ServantFaceIconComponent__Set_37909632(
             (ServantFaceIconComponent_o *)this,
             (UserServantEntity_o *)item[1].monitor,
             item->fields._IconInfo1_k__BackingField,
@@ -236,7 +236,7 @@ void __fastcall CharaGraphListViewItemDrawPatternDefault__SetupFaceIcon(
           this = (CharaGraphListViewItemDrawPatternDefault_o *)itemDraw->fields.servantFaceIcon;
           if ( this )
           {
-            ServantFaceIconComponent__Set_37915992(
+            ServantFaceIconComponent__Set_37916344(
               (ServantFaceIconComponent_o *)this,
               (UserCommandCodeEntity_o *)item[1].klass,
               item->fields._IconInfo1_k__BackingField,
@@ -259,7 +259,7 @@ void __fastcall CharaGraphListViewItemDrawPatternDefault__SetupFaceIcon(
           this = (CharaGraphListViewItemDrawPatternDefault_o *)itemDraw->fields.servantFaceIcon;
           if ( this )
           {
-            ServantFaceIconComponent__Set_37911840(
+            ServantFaceIconComponent__Set_37912192(
               (ServantFaceIconComponent_o *)this,
               (UserServantCollectionEntity_o *)item[1].klass,
               item->fields._IconInfo1_k__BackingField,
@@ -271,7 +271,7 @@ void __fastcall CharaGraphListViewItemDrawPatternDefault__SetupFaceIcon(
         }
       }
     }
-    sub_1B64ACC(this, itemDraw);
+    sub_1B64C5C(this, itemDraw);
   }
 }
 
@@ -289,12 +289,12 @@ void __fastcall CharaGraphListViewItemDrawPatternDefault__SetupMaterialTd(
   UISprite_o *v10; // x21
   UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_49FD8DD & 1) == 0 )
+  if ( (byte_49FDEFD & 1) == 0 )
   {
-    sub_1B64870(&AtlasManager_TypeInfo, itemDraw);
-    sub_1B64870(&UnityEngine_Object_TypeInfo, v6);
-    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1B64870(&StringLiteral_22844/*"ribbon_noblephantasmup_01"*/, v7);
-    byte_49FD8DD = 1;
+    sub_1B64A00(&AtlasManager_TypeInfo, itemDraw);
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, v6);
+    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1B64A00(&StringLiteral_22844/*"ribbon_noblephantasmup_01"*/, v7);
+    byte_49FDEFD = 1;
   }
   if ( !itemDraw )
     goto LABEL_15;
@@ -329,7 +329,7 @@ void __fastcall CharaGraphListViewItemDrawPatternDefault__SetupMaterialTd(
           return;
         }
 LABEL_15:
-        sub_1B64ACC(this, itemDraw);
+        sub_1B64C5C(this, itemDraw);
       }
     }
   }
@@ -348,11 +348,11 @@ void __fastcall CharaGraphListViewItemDrawPatternDefault__SetupPartyIcon(
   __int64 methodPtr_low; // x10
 
   v5 = itemDraw;
-  if ( (byte_49FD8DA & 1) == 0 )
+  if ( (byte_49FDEFA & 1) == 0 )
   {
-    sub_1B64870(&CharaGraphPartyServantListViewItem_TypeInfo, itemDraw);
-    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1B64870(&UnityEngine_Object_TypeInfo, v6);
-    byte_49FD8DA = 1;
+    sub_1B64A00(&CharaGraphPartyServantListViewItem_TypeInfo, itemDraw);
+    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1B64A00(&UnityEngine_Object_TypeInfo, v6);
+    byte_49FDEFA = 1;
   }
   if ( !v5 )
     goto LABEL_17;
@@ -387,12 +387,12 @@ void __fastcall CharaGraphListViewItemDrawPatternDefault__SetupPartyIcon(
       {
         LOBYTE(itemDraw) = 0;
 LABEL_12:
-        FlashingIconComponent__Set_37815968((FlashingIconComponent_o *)this, (bool)itemDraw, 0LL);
+        FlashingIconComponent__Set_37816320((FlashingIconComponent_o *)this, (bool)itemDraw, 0LL);
         return;
       }
     }
 LABEL_17:
-    sub_1B64ACC(this, itemDraw);
+    sub_1B64C5C(this, itemDraw);
   }
 }
 
@@ -404,7 +404,7 @@ void __fastcall CharaGraphListViewItemDrawPatternDefault__SetupStatusLabel(
         const MethodInfo *method)
 {
   if ( !itemDraw )
-    sub_1B64ACC(this, 0LL);
+    sub_1B64C5C(this, 0LL);
   CharaGraphListViewItemDrawPatternDefault__SetActive(
     this,
     (UnityEngine_Component_o *)itemDraw->fields.statusLb,
@@ -427,13 +427,13 @@ void __fastcall CharaGraphListViewItemDrawPatternDefault__SetupUseSprite(
   __int64 methodPtr_low; // x11
   __int64 *v12; // x8
 
-  if ( (byte_49FD8DB & 1) == 0 )
+  if ( (byte_49FDEFB & 1) == 0 )
   {
-    sub_1B64870(&CharaGraphCommandCodeListViewItem_TypeInfo, itemDraw);
-    sub_1B64870(&UnityEngine_Object_TypeInfo, v6);
-    sub_1B64870(&StringLiteral_20063/*"icon_equip"*/, v7);
-    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1B64870(&StringLiteral_20064/*"icon_equip_cc"*/, v8);
-    byte_49FD8DB = 1;
+    sub_1B64A00(&CharaGraphCommandCodeListViewItem_TypeInfo, itemDraw);
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, v6);
+    sub_1B64A00(&StringLiteral_20063/*"icon_equip"*/, v7);
+    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1B64A00(&StringLiteral_20064/*"icon_equip_cc"*/, v8);
+    byte_49FDEFB = 1;
   }
   if ( !itemDraw )
     goto LABEL_15;
@@ -466,7 +466,7 @@ void __fastcall CharaGraphListViewItemDrawPatternDefault__SetupUseSprite(
         return;
       }
 LABEL_15:
-      sub_1B64ACC(this, itemDraw);
+      sub_1B64C5C(this, itemDraw);
     }
   }
 }
@@ -489,13 +489,13 @@ void __fastcall CharaGraphListViewItemDrawPatternDefault__SetupWarningAndMask(
   System_String_o *v14; // x20
 
   v6 = this;
-  if ( (byte_49FD8DC & 1) == 0 )
+  if ( (byte_49FDEFC & 1) == 0 )
   {
-    sub_1B64870(&LocalizationManager_TypeInfo, itemDraw);
-    sub_1B64870(&StringLiteral_11444/*"SELECT_CANNOT"*/, v7);
-    sub_1B64870(&StringLiteral_11468/*"SELECT_SERVANT_EVENT_JOIN"*/, v8);
-    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1B64870(&StringLiteral_1/*""*/, v9);
-    byte_49FD8DC = 1;
+    sub_1B64A00(&LocalizationManager_TypeInfo, itemDraw);
+    sub_1B64A00(&StringLiteral_11445/*"SELECT_CANNOT"*/, v7);
+    sub_1B64A00(&StringLiteral_11469/*"SELECT_SERVANT_EVENT_JOIN"*/, v8);
+    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1B64A00(&StringLiteral_1/*""*/, v9);
+    byte_49FDEFC = 1;
   }
   if ( !itemDraw )
     goto LABEL_18;
@@ -526,9 +526,9 @@ void __fastcall CharaGraphListViewItemDrawPatternDefault__SetupWarningAndMask(
   {
     warningLabel = itemDraw->fields.warningLabel;
     if ( item->fields._IsEventJoin_k__BackingField )
-      v13 = &StringLiteral_11468/*"SELECT_SERVANT_EVENT_JOIN"*/;
+      v13 = &StringLiteral_11469/*"SELECT_SERVANT_EVENT_JOIN"*/;
     else
-      v13 = &StringLiteral_11444/*"SELECT_CANNOT"*/;
+      v13 = &StringLiteral_11445/*"SELECT_CANNOT"*/;
     v14 = (System_String_o *)*v13;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -539,6 +539,6 @@ void __fastcall CharaGraphListViewItemDrawPatternDefault__SetupWarningAndMask(
       return;
     }
 LABEL_18:
-    sub_1B64ACC(this, itemDraw);
+    sub_1B64C5C(this, itemDraw);
   }
 }

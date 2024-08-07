@@ -3,10 +3,10 @@ void __fastcall ServantStatusListViewItemDrawClassSkill___cctor(const MethodInfo
   __int64 v1; // x1
   struct ServantStatusListViewItemDrawClassSkill_StaticFields *static_fields; // x8
 
-  if ( (byte_49FB357 & 1) == 0 )
+  if ( (byte_49FB977 & 1) == 0 )
   {
-    sub_1B64870(&ServantStatusListViewItemDrawClassSkill_TypeInfo, v1);
-    byte_49FB357 = 1;
+    sub_1B64A00(&ServantStatusListViewItemDrawClassSkill_TypeInfo, v1);
+    byte_49FB977 = 1;
   }
   static_fields = ServantStatusListViewItemDrawClassSkill_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->DETAIL_FONT_SIZE = 0x1F400000012LL;
@@ -36,14 +36,14 @@ void __fastcall ServantStatusListViewItemDrawClassSkill___ctor(
   int32_t v18; // w2
   int32_t v19; // w3
 
-  if ( (byte_49FB356 & 1) == 0 )
+  if ( (byte_49FB976 & 1) == 0 )
   {
-    sub_1B64870(&BalanceConfig_TypeInfo, method);
-    sub_1B64870(&UnityEngine_GameObject___TypeInfo, v3);
-    sub_1B64870(&SkillIconComponent___TypeInfo, v4);
-    sub_1B64870(&UILabel___TypeInfo, v5);
-    sub_1B64870(&UIRangeLabel___TypeInfo, v6);
-    byte_49FB356 = 1;
+    sub_1B64A00(&BalanceConfig_TypeInfo, method);
+    sub_1B64A00(&UnityEngine_GameObject___TypeInfo, v3);
+    sub_1B64A00(&SkillIconComponent___TypeInfo, v4);
+    sub_1B64A00(&UILabel___TypeInfo, v5);
+    sub_1B64A00(&UIRangeLabel___TypeInfo, v6);
+    byte_49FB976 = 1;
   }
   v7 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -51,26 +51,26 @@ void __fastcall ServantStatusListViewItemDrawClassSkill___ctor(
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v7 = BalanceConfig_TypeInfo;
   }
-  v8 = (struct UnityEngine_GameObject_array *)sub_1B64918(
+  v8 = (struct UnityEngine_GameObject_array *)sub_1B64AA8(
                                                 UnityEngine_GameObject___TypeInfo,
                                                 (unsigned int)v7->static_fields->SvtSkillListMax);
   this->fields.skillBaseList = v8;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.skillBaseList, (int32_t)v8, v9, v10);
-  v11 = (struct SkillIconComponent_array *)sub_1B64918(
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.skillBaseList, (int32_t)v8, v9, v10);
+  v11 = (struct SkillIconComponent_array *)sub_1B64AA8(
                                              SkillIconComponent___TypeInfo,
                                              (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtSkillListMax);
   this->fields.skillIconList = v11;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.skillIconList, (int32_t)v11, v12, v13);
-  v14 = (struct UIRangeLabel_array *)sub_1B64918(
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.skillIconList, (int32_t)v11, v12, v13);
+  v14 = (struct UIRangeLabel_array *)sub_1B64AA8(
                                        UIRangeLabel___TypeInfo,
                                        (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtSkillListMax);
   this->fields.skillTitleRangeLabelList = v14;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.skillTitleRangeLabelList, (int32_t)v14, v15, v16);
-  v17 = (struct UILabel_array *)sub_1B64918(
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.skillTitleRangeLabelList, (int32_t)v14, v15, v16);
+  v17 = (struct UILabel_array *)sub_1B64AA8(
                                   UILabel___TypeInfo,
                                   (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtSkillListMax);
   this->fields.skillExplanationLabelList = v17;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.skillExplanationLabelList, (int32_t)v17, v18, v19);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.skillExplanationLabelList, (int32_t)v17, v18, v19);
   this->fields.transformNameAddHeight = 34;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
@@ -164,10 +164,10 @@ void __fastcall ServantStatusListViewItemDrawClassSkill__Awake(
   v3->fields.titleBasePosition.fields.z = v16;
   if ( !v17 )
 LABEL_27:
-    sub_1B64ACC(this, method);
+    sub_1B64C5C(this, method);
   if ( !v17->max_length )
 LABEL_28:
-    sub_1B64AD4(this, method);
+    sub_1B64C64(this, method);
   this = (ServantStatusListViewItemDrawClassSkill_o *)v17->m_Items[0];
   if ( !this )
     goto LABEL_27;
@@ -259,13 +259,13 @@ void __fastcall ServantStatusListViewItemDrawClassSkill__SetItem(
   UnityEngine_Vector3_o v66; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v67; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_49FB355 & 1) == 0 )
+  if ( (byte_49FB975 & 1) == 0 )
   {
-    sub_1B64870(&LocalizationManager_TypeInfo, item);
-    sub_1B64870(&UnityEngine_Object_TypeInfo, v7);
-    sub_1B64870(&ServantStatusListViewItemDrawClassSkill_TypeInfo, v8);
-    sub_1B64870(&StringLiteral_11827/*"SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE"*/, v9);
-    byte_49FB355 = 1;
+    sub_1B64A00(&LocalizationManager_TypeInfo, item);
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, v7);
+    sub_1B64A00(&ServantStatusListViewItemDrawClassSkill_TypeInfo, v8);
+    sub_1B64A00(&StringLiteral_11828/*"SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE"*/, v9);
+    byte_49FB975 = 1;
   }
   idList = 0LL;
   v62 = 0LL;
@@ -277,7 +277,7 @@ void __fastcall ServantStatusListViewItemDrawClassSkill__SetItem(
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   transformNameSprite = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                      (System_String_o *)StringLiteral_11827/*"SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE"*/,
+                                                      (System_String_o *)StringLiteral_11828/*"SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE"*/,
                                                       0LL);
   if ( !explanationLabel )
     goto LABEL_95;
@@ -308,7 +308,7 @@ void __fastcall ServantStatusListViewItemDrawClassSkill__SetItem(
       {
         if ( v16 >= max_length )
 LABEL_97:
-          sub_1B64AD4(transformNameSprite, v12);
+          sub_1B64C64(transformNameSprite, v12);
         v18 = idList->m_Items[++v16];
         if ( v18 >= 1 )
           v17 = v16;
@@ -447,7 +447,7 @@ LABEL_97:
         (v49 = this->fields.skillBaseList) == 0LL) )
   {
 LABEL_95:
-    sub_1B64ACC(transformNameSprite, v12);
+    sub_1B64C5C(transformNameSprite, v12);
   }
   v50 = this->fields.skillBasePosition.fields.z;
   v51 = this->fields.skillBasePosition.fields.x;

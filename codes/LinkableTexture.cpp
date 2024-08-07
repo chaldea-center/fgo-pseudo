@@ -18,7 +18,7 @@ void __fastcall LinkableTexture__MakePixelPerfect(LinkableTexture_o *this, const
         (v4 = this->fields.mUiTexture) == 0LL)
     || (mUiTexture = this->fields.mCollider) == 0LL )
   {
-    sub_1B64ACC(mUiTexture, method);
+    sub_1B64C5C(mUiTexture, method);
   }
   v5.fields.y = (float)v4->fields.mHeight;
   v5.fields.x = (float)v4->fields.mWidth;
@@ -38,7 +38,7 @@ void __fastcall LinkableTexture__SetSize(LinkableTexture_o *this, int32_t w, int
     || (UIWidget__set_width(mUiTexture, w, 0LL), (mUiTexture = (UIWidget_o *)this->fields.mUiTexture) == 0LL)
     || (UIWidget__set_height(mUiTexture, h, 0LL), (mUiTexture = (UIWidget_o *)this->fields.mCollider) == 0LL) )
   {
-    sub_1B64ACC(mUiTexture, *(_QWORD *)&w);
+    sub_1B64C5C(mUiTexture, *(_QWORD *)&w);
   }
   v8.fields.y = (float)h;
   v8.fields.x = (float)w;
@@ -56,7 +56,7 @@ void __fastcall LinkableTexture__SetTexture(
 
   mUiTexture = this->fields.mUiTexture;
   if ( !mUiTexture )
-    sub_1B64ACC(0LL, tex);
+    sub_1B64C5C(0LL, tex);
   ((void (__fastcall *)(struct UITexture_o *, UnityEngine_Texture_o *, Il2CppMethodPointer))mUiTexture->klass->vtable._27_set_mainTexture.method)(
     mUiTexture,
     tex,
@@ -75,5 +75,5 @@ void __fastcall LinkableTexture__SetUp(
   this->fields.linkUrl = lnkUrl;
   p_linkUrl = &this->fields.linkUrl;
   *((_DWORD *)p_linkUrl - 2) = lnkType;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)p_linkUrl, (int32_t)lnkUrl, (int32_t)lnkUrl, (int32_t)method);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)p_linkUrl, (int32_t)lnkUrl, (int32_t)lnkUrl, (int32_t)method);
 }

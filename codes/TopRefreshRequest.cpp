@@ -1,9 +1,9 @@
 System_String_o *__fastcall TopRefreshRequest__getMockData(TopRefreshRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FFE5D & 1) == 0 )
+  if ( (byte_4A0047E & 1) == 0 )
   {
-    sub_1B64870(&StringLiteral_1/*""*/, method);
-    byte_49FFE5D = 1;
+    sub_1B64A00(&StringLiteral_1/*""*/, method);
+    byte_4A0047E = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -14,16 +14,16 @@ System_String_o *__fastcall TopRefreshRequest__getURL(TopRefreshRequest_o *this,
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_49FFE5C & 1) == 0 )
+  if ( (byte_4A0047D & 1) == 0 )
   {
-    sub_1B64870(&NetworkManager_TypeInfo, method);
-    sub_1B64870(&StringLiteral_22741/*"refresh/top"*/, v2);
-    byte_49FFE5C = 1;
+    sub_1B64A00(&NetworkManager_TypeInfo, method);
+    sub_1B64A00(&StringLiteral_22741/*"refresh/top"*/, v2);
+    byte_4A0047D = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61383576(BaseUrl, (System_String_o *)StringLiteral_22741/*"refresh/top"*/, 0LL);
+  return System_String__Concat_61385136(BaseUrl, (System_String_o *)StringLiteral_22741/*"refresh/top"*/, 0LL);
 }
 
 
@@ -39,17 +39,17 @@ void __fastcall TopRefreshRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v10; // x9
 
-  if ( (byte_49FFE5E & 1) == 0 )
+  if ( (byte_4A0047F & 1) == 0 )
   {
-    sub_1B64870(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1B64870(&StringLiteral_22140/*"ok"*/, v5);
-    sub_1B64870(&StringLiteral_21971/*"ng"*/, v6);
-    byte_49FFE5E = 1;
+    sub_1B64A00(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1B64A00(&StringLiteral_22140/*"ok"*/, v5);
+    sub_1B64A00(&StringLiteral_21971/*"ng"*/, v6);
+    byte_4A0047F = 1;
   }
-  if ( (byte_49FFE49 & 1) == 0 )
+  if ( (byte_4A0046A & 1) == 0 )
   {
-    sub_1B64870(&TopHomeRequest_TypeInfo, responseList);
-    byte_49FFE49 = 1;
+    sub_1B64A00(&TopHomeRequest_TypeInfo, responseList);
+    byte_4A0046A = 1;
   }
   TopHomeRequest_TypeInfo->static_fields->accessTime = 0LL;
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )

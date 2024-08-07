@@ -34,36 +34,36 @@ void __fastcall TranslucentActorVisualInfo__UpdateByBuffs(
   float value; // s0
   char IsDrawShadowDespiteBattleCharaInvisible; // w8
 
-  if ( (byte_4A011B8 & 1) == 0 )
+  if ( (byte_4A017D9 & 1) == 0 )
   {
-    sub_1B64870(&Method_BasicHelper_IndexValue_BattleBuffData_BuffData___, buffDataArray);
-    sub_1B64870(&Method_DataManager_GetMasterData_BuffMaster___, v5);
-    sub_1B64870(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v6);
-    sub_1B64870(&Method_System_Nullable_float__GetValueOrDefault__, v7);
-    sub_1B64870(&Method_System_Nullable_float__get_HasValue__, v8);
-    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    byte_4A011B8 = 1;
+    sub_1B64A00(&Method_BasicHelper_IndexValue_BattleBuffData_BuffData___, buffDataArray);
+    sub_1B64A00(&Method_DataManager_GetMasterData_BuffMaster___, v5);
+    sub_1B64A00(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v6);
+    sub_1B64A00(&Method_System_Nullable_float__GetValueOrDefault__, v7);
+    sub_1B64A00(&Method_System_Nullable_float__get_HasValue__, v8);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    byte_4A017D9 = 1;
   }
   v10 = BasicHelper__IndexValue_object_(
           (System_Object_array *)buffDataArray,
           0,
           0LL,
-          (const MethodInfo_2E2A514 *)Method_BasicHelper_IndexValue_BattleBuffData_BuffData___);
+          (const MethodInfo_2E2AB2C *)Method_BasicHelper_IndexValue_BattleBuffData_BuffData___);
   if ( !v10 )
     goto LABEL_10;
   v11 = v10;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_BuffMaster___)) == 0LL )
+                     (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_BuffMaster___)) == 0LL )
   {
-    sub_1B64ACC(Instance, v13);
+    sub_1B64C5C(Instance, v13);
   }
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              (int32_t)v11[1].klass,
-             (const MethodInfo_30D6180 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+             (const MethodInfo_30D6798 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
   if ( Entity )
   {
     v15 = (BuffEntity_o *)Entity;

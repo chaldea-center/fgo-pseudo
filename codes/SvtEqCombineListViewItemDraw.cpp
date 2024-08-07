@@ -28,14 +28,14 @@ void __fastcall SvtEqCombineListViewItemDraw__SetInput(
   uint32_t cctor_finished; // w8
   System_String_o *v22; // x1
 
-  if ( (byte_4A0206A & 1) == 0 )
+  if ( (byte_4A0268B & 1) == 0 )
   {
-    sub_1B64870(&LocalizationManager_TypeInfo, item);
-    sub_1B64870(&UnityEngine_Object_TypeInfo, v6);
-    sub_1B64870(&StringLiteral_9217/*"NONSELECT_MATERIAL"*/, v7);
-    sub_1B64870(&StringLiteral_9218/*"NONSELECT_MATERIAL_BASE_LVMAX"*/, v8);
-    sub_1B64870(&StringLiteral_1/*""*/, v9);
-    byte_4A0206A = 1;
+    sub_1B64A00(&LocalizationManager_TypeInfo, item);
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, v6);
+    sub_1B64A00(&StringLiteral_9218/*"NONSELECT_MATERIAL"*/, v7);
+    sub_1B64A00(&StringLiteral_9219/*"NONSELECT_MATERIAL_BASE_LVMAX"*/, v8);
+    sub_1B64A00(&StringLiteral_1/*""*/, v9);
+    byte_4A0268B = 1;
   }
   if ( !item )
     goto LABEL_7;
@@ -95,7 +95,7 @@ LABEL_10:
         maskLabel = this->fields.maskLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v19 = &StringLiteral_9218/*"NONSELECT_MATERIAL_BASE_LVMAX"*/;
+        v19 = &StringLiteral_9219/*"NONSELECT_MATERIAL_BASE_LVMAX"*/;
 LABEL_46:
         maskSprite = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)*v19, 0LL);
         if ( maskLabel )
@@ -179,7 +179,7 @@ LABEL_59:
           maskLabel = this->fields.maskLabel;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v19 = &StringLiteral_9217/*"NONSELECT_MATERIAL"*/;
+          v19 = &StringLiteral_9218/*"NONSELECT_MATERIAL"*/;
           goto LABEL_46;
         }
       }
@@ -231,7 +231,7 @@ LABEL_59:
             }
           }
 LABEL_61:
-          sub_1B64ACC(maskSprite, v15);
+          sub_1B64C5C(maskSprite, v15);
         }
       }
     }
@@ -294,19 +294,19 @@ void __fastcall SvtEqCombineListViewItemDraw__SetItem(
 
   v7 = item;
   v8 = this;
-  if ( (byte_4A02069 & 1) == 0 )
+  if ( (byte_4A0268A & 1) == 0 )
   {
-    sub_1B64870(&LocalizationManager_TypeInfo, item);
-    sub_1B64870(&UnityEngine_Object_TypeInfo, v9);
-    sub_1B64870(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v10);
-    sub_1B64870(&StringLiteral_9217/*"NONSELECT_MATERIAL"*/, v11);
-    sub_1B64870(&StringLiteral_9218/*"NONSELECT_MATERIAL_BASE_LVMAX"*/, v12);
-    sub_1B64870(&StringLiteral_8714/*"MSG_ABLED_SVTEP_LIMITUP"*/, v13);
-    sub_1B64870(&StringLiteral_8253/*"LOCKMODE_SELECTED_SERVANT"*/, v14);
-    sub_1B64870(&StringLiteral_3442/*"CHOICE_SERVANT"*/, v15);
-    sub_1B64870(&StringLiteral_1/*""*/, v16);
-    this = (SvtEqCombineListViewItemDraw_o *)sub_1B64870(&StringLiteral_8254/*"LOCK_SERVANT"*/, v17);
-    byte_4A02069 = 1;
+    sub_1B64A00(&LocalizationManager_TypeInfo, item);
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, v9);
+    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v10);
+    sub_1B64A00(&StringLiteral_9218/*"NONSELECT_MATERIAL"*/, v11);
+    sub_1B64A00(&StringLiteral_9219/*"NONSELECT_MATERIAL_BASE_LVMAX"*/, v12);
+    sub_1B64A00(&StringLiteral_8715/*"MSG_ABLED_SVTEP_LIMITUP"*/, v13);
+    sub_1B64A00(&StringLiteral_8254/*"LOCKMODE_SELECTED_SERVANT"*/, v14);
+    sub_1B64A00(&StringLiteral_3443/*"CHOICE_SERVANT"*/, v15);
+    sub_1B64A00(&StringLiteral_1/*""*/, v16);
+    this = (SvtEqCombineListViewItemDraw_o *)sub_1B64A00(&StringLiteral_8255/*"LOCK_SERVANT"*/, v17);
+    byte_4A0268A = 1;
   }
   if ( v7 && mode )
   {
@@ -322,12 +322,12 @@ void __fastcall SvtEqCombineListViewItemDraw__SetItem(
       if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
       v47 = v49;
-      this = (SvtEqCombineListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46184056(
+      this = (SvtEqCombineListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46185616(
                                                  &v47,
                                                  0LL);
       if ( !servantface )
         goto LABEL_178;
-      ServantFaceIconComponent__Set_37909072(
+      ServantFaceIconComponent__Set_37909424(
         servantface,
         (int64_t)this,
         v7->fields.iconLabelInfo1,
@@ -339,7 +339,7 @@ void __fastcall SvtEqCombineListViewItemDraw__SetItem(
       this = (SvtEqCombineListViewItemDraw_o *)v8->fields.subIconLabel;
       if ( !this )
         goto LABEL_178;
-      UIIconLabel__Set_37925528(
+      UIIconLabel__Set_37925880(
         (UIIconLabel_o *)this,
         36,
         v7->fields.rarity,
@@ -359,12 +359,12 @@ void __fastcall SvtEqCombineListViewItemDraw__SetItem(
       if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
       v48 = v49;
-      this = (SvtEqCombineListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46184056(
+      this = (SvtEqCombineListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46185616(
                                                  &v48,
                                                  0LL);
       if ( !servantface )
         goto LABEL_178;
-      ServantFaceIconComponent__Set_37909072(servantface, (int64_t)this, v7->fields.iconLabelInfo1, 0LL, 0LL);
+      ServantFaceIconComponent__Set_37909424(servantface, (int64_t)this, v7->fields.iconLabelInfo1, 0LL, 0LL);
       this = (SvtEqCombineListViewItemDraw_o *)v7->fields.iconLabelInfo2;
       if ( !this )
         goto LABEL_178;
@@ -375,7 +375,7 @@ void __fastcall SvtEqCombineListViewItemDraw__SetItem(
         v24 = v7->fields.userSvtEntity;
         if ( !v24 || !subIconLabel )
           goto LABEL_178;
-        UIIconLabel__Set_37925528(subIconLabel, 36, v7->fields.rarity, v24->fields.exceedCount, 0, 0LL, 0, 0, 0, 0LL);
+        UIIconLabel__Set_37925880(subIconLabel, 36, v7->fields.rarity, v24->fields.exceedCount, 0, 0LL, 0, 0, 0, 0LL);
       }
       else
       {
@@ -485,7 +485,7 @@ LABEL_78:
         statusTextLabel = v8->fields.statusTextLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        this = (SvtEqCombineListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8714/*"MSG_ABLED_SVTEP_LIMITUP"*/, 0LL);
+        this = (SvtEqCombineListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8715/*"MSG_ABLED_SVTEP_LIMITUP"*/, 0LL);
         if ( !statusTextLabel )
           goto LABEL_178;
         UILabel__set_text(statusTextLabel, (System_String_o *)this, 0LL);
@@ -525,7 +525,7 @@ LABEL_78:
         maskLabel = v8->fields.maskLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        this = (SvtEqCombineListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8254/*"LOCK_SERVANT"*/, 0LL);
+        this = (SvtEqCombineListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8255/*"LOCK_SERVANT"*/, 0LL);
         if ( !maskLabel )
           goto LABEL_178;
         UILabel__set_text(maskLabel, (System_String_o *)this, 0LL);
@@ -544,7 +544,7 @@ LABEL_78:
         v35 = v8->fields.maskLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        this = (SvtEqCombineListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9217/*"NONSELECT_MATERIAL"*/, 0LL);
+        this = (SvtEqCombineListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9218/*"NONSELECT_MATERIAL"*/, 0LL);
         if ( !v35 )
           goto LABEL_178;
         UILabel__set_text(v35, (System_String_o *)this, 0LL);
@@ -563,7 +563,7 @@ LABEL_78:
         v37 = v8->fields.maskLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        this = (SvtEqCombineListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3442/*"CHOICE_SERVANT"*/, 0LL);
+        this = (SvtEqCombineListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3443/*"CHOICE_SERVANT"*/, 0LL);
         if ( !v37 )
           goto LABEL_178;
         UILabel__set_text(v37, (System_String_o *)this, 0LL);
@@ -623,7 +623,7 @@ LABEL_78:
         v42 = (SvtEqCombineListViewItemDraw_o *)v8->fields.maskLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v43 = &StringLiteral_9218/*"NONSELECT_MATERIAL_BASE_LVMAX"*/;
+        v43 = &StringLiteral_9219/*"NONSELECT_MATERIAL_BASE_LVMAX"*/;
         goto LABEL_153;
       }
       if ( v41 )
@@ -697,7 +697,7 @@ LABEL_78:
           v42 = (SvtEqCombineListViewItemDraw_o *)v8->fields.maskLabel;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v43 = &StringLiteral_9217/*"NONSELECT_MATERIAL"*/;
+          v43 = &StringLiteral_9218/*"NONSELECT_MATERIAL"*/;
 LABEL_153:
           this = (SvtEqCombineListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)*v43, 0LL);
           if ( !v42 )
@@ -770,7 +770,7 @@ LABEL_167:
           {
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            item = (SvtEqCombineListViewItem_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8253/*"LOCKMODE_SELECTED_SERVANT"*/, 0LL);
+            item = (SvtEqCombineListViewItem_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8254/*"LOCKMODE_SELECTED_SERVANT"*/, 0LL);
           }
           else
           {
@@ -785,7 +785,7 @@ LABEL_167:
         }
       }
 LABEL_178:
-      sub_1B64ACC(this, item);
+      sub_1B64C5C(this, item);
     }
     this = (SvtEqCombineListViewItemDraw_o *)v8->fields.limitCountIcon;
     if ( !this )
@@ -856,7 +856,7 @@ LABEL_178:
         v31 = (SvtEqCombineListViewItemDraw_o *)v8->fields.maskLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        this = (SvtEqCombineListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9218/*"NONSELECT_MATERIAL_BASE_LVMAX"*/, 0LL);
+        this = (SvtEqCombineListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9219/*"NONSELECT_MATERIAL_BASE_LVMAX"*/, 0LL);
         if ( !v31 )
           goto LABEL_178;
         v32 = this;
@@ -926,10 +926,10 @@ void __fastcall SvtEqCombineListViewItemDraw__SetSelectDisp(
   int32_t dragSelectNum; // w2
   int32_t selectNum; // w1
 
-  if ( (byte_4A0206B & 1) == 0 )
+  if ( (byte_4A0268C & 1) == 0 )
   {
-    sub_1B64870(&UnityEngine_Object_TypeInfo, item);
-    byte_4A0206B = 1;
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, item);
+    byte_4A0268C = 1;
   }
   dragSelect = (UnityEngine_Object_o *)this->fields.dragSelect;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -954,6 +954,6 @@ LABEL_11:
       dragSelectNum = -1;
       goto LABEL_11;
     }
-    sub_1B64ACC(v7, v6);
+    sub_1B64C5C(v7, v6);
   }
 }

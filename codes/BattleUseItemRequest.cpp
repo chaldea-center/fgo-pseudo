@@ -16,15 +16,15 @@ void __fastcall BattleUseItemRequest__beginRequest(
   __int64 v10; // x1
   __int64 v11; // x1
 
-  if ( (byte_49FFBFC & 1) == 0 )
+  if ( (byte_4A0021D & 1) == 0 )
   {
-    sub_1B64870(&NetworkManager_TypeInfo, *(_QWORD *)&itemId);
-    sub_1B64870(&StringLiteral_22093/*"num"*/, v9);
-    sub_1B64870(&StringLiteral_19061/*"eventId"*/, v10);
-    sub_1B64870(&StringLiteral_24263/*"useItemId"*/, v11);
-    byte_49FFBFC = 1;
+    sub_1B64A00(&NetworkManager_TypeInfo, *(_QWORD *)&itemId);
+    sub_1B64A00(&StringLiteral_22093/*"num"*/, v9);
+    sub_1B64A00(&StringLiteral_19062/*"eventId"*/, v10);
+    sub_1B64A00(&StringLiteral_24263/*"useItemId"*/, v11);
+    byte_4A0021D = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19061/*"eventId"*/, eventId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19062/*"eventId"*/, eventId, 0LL);
   RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24263/*"useItemId"*/, itemId, 0LL);
   RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22093/*"num"*/, num, 0LL);
   RequestBase__addBaseField((RequestBase_o *)this, 0LL);
@@ -44,12 +44,12 @@ System_String_o *__fastcall BattleUseItemRequest__getParameterFileName(
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_49FFBFB & 1) == 0 )
+  if ( (byte_4A0021C & 1) == 0 )
   {
-    sub_1B64870(&AndroidUtil_TypeInfo, method);
-    sub_1B64870(&DatFileName_TypeInfo, v2);
-    sub_1B64870(&StringLiteral_1124/*"/"*/, v3);
-    byte_49FFBFB = 1;
+    sub_1B64A00(&AndroidUtil_TypeInfo, method);
+    sub_1B64A00(&DatFileName_TypeInfo, v2);
+    sub_1B64A00(&StringLiteral_1124/*"/"*/, v3);
+    byte_4A0021C = 1;
   }
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -57,7 +57,7 @@ System_String_o *__fastcall BattleUseItemRequest__getParameterFileName(
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(30, 0LL);
-  return System_String__Concat_61394836(DatFileSavePath, (System_String_o *)StringLiteral_1124/*"/"*/, FileName, 0LL);
+  return System_String__Concat_61396396(DatFileSavePath, (System_String_o *)StringLiteral_1124/*"/"*/, FileName, 0LL);
 }
 
 
@@ -66,16 +66,16 @@ System_String_o *__fastcall BattleUseItemRequest__getURL(BattleUseItemRequest_o 
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_49FFBFA & 1) == 0 )
+  if ( (byte_4A0021B & 1) == 0 )
   {
-    sub_1B64870(&NetworkManager_TypeInfo, method);
-    sub_1B64870(&StringLiteral_17036/*"battle/useItem"*/, v2);
-    byte_49FFBFA = 1;
+    sub_1B64A00(&NetworkManager_TypeInfo, method);
+    sub_1B64A00(&StringLiteral_17037/*"battle/useItem"*/, v2);
+    byte_4A0021B = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61383576(BaseUrl, (System_String_o *)StringLiteral_17036/*"battle/useItem"*/, 0LL);
+  return System_String__Concat_61385136(BaseUrl, (System_String_o *)StringLiteral_17037/*"battle/useItem"*/, 0LL);
 }
 
 
@@ -91,17 +91,17 @@ void __fastcall BattleUseItemRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v10; // x1
 
-  if ( (byte_49FFBFD & 1) == 0 )
+  if ( (byte_4A0021E & 1) == 0 )
   {
-    sub_1B64870(&JsonManager_TypeInfo, responseList);
-    sub_1B64870(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B64870(&StringLiteral_21971/*"ng"*/, v6);
-    byte_49FFBFD = 1;
+    sub_1B64A00(&JsonManager_TypeInfo, responseList);
+    sub_1B64A00(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B64A00(&StringLiteral_21971/*"ng"*/, v6);
+    byte_4A0021E = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(107, responseList, 0LL);
-  if ( v7 && (v8 = v7, ResponseData__checkError_40851148(v7, 0LL)) )
+  if ( v7 && (v8 = v7, ResponseData__checkError_40851660(v7, 0LL)) )
   {
     success = (Il2CppObject *)v8->fields.success;
     if ( !success )

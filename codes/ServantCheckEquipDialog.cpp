@@ -1,9 +1,9 @@
 void __fastcall ServantCheckEquipDialog___ctor(ServantCheckEquipDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FA8F1 & 1) == 0 )
+  if ( (byte_49FAF11 & 1) == 0 )
   {
-    sub_1B64870(&BaseDialog_TypeInfo, method);
-    byte_49FA8F1 = 1;
+    sub_1B64A00(&BaseDialog_TypeInfo, method);
+    byte_49FAF11 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -15,11 +15,11 @@ void __fastcall ServantCheckEquipDialog__Close(ServantCheckEquipDialog_o *this, 
 {
   const MethodInfo *v2; // x2
 
-  ServantCheckEquipDialog__Close_32304356(this, 0LL, v2);
+  ServantCheckEquipDialog__Close_32304764(this, 0LL, v2);
 }
 
 
-void __fastcall ServantCheckEquipDialog__Close_32304356(
+void __fastcall ServantCheckEquipDialog__Close_32304764(
         ServantCheckEquipDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -30,22 +30,22 @@ void __fastcall ServantCheckEquipDialog__Close_32304356(
   int32_t v8; // w3
   System_Action_o *v9; // x20
 
-  if ( (byte_49FA8ED & 1) == 0 )
+  if ( (byte_49FAF0D & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, callback);
-    sub_1B64870(&Method_ServantCheckEquipDialog_EndClose__, v6);
-    byte_49FA8ED = 1;
+    sub_1B64A00(&System_Action_TypeInfo, callback);
+    sub_1B64A00(&Method_ServantCheckEquipDialog_EndClose__, v6);
+    byte_49FAF0D = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1B64814(
+  sub_1B649A4(
     (ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)callback,
     (int32_t)method,
     v3);
   this->fields.state = 3;
   this->fields.closeFunc = 0LL;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.closeFunc, 0, v7, v8);
-  v9 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.closeFunc, 0, v7, v8);
+  v9 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
   System_Action___ctor(v9, (Il2CppObject *)this, Method_ServantCheckEquipDialog_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v9, 0LL);
 }
@@ -66,7 +66,7 @@ void __fastcall ServantCheckEquipDialog__EndClose(ServantCheckEquipDialog_o *thi
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1B64814(p_closeCallbackFunc, 0, v3, v4);
+    sub_1B649A4(p_closeCallbackFunc, 0, v3, v4);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v6->fields.m_target)(
       v6->fields.original_method_info,
       *(_QWORD *)&v6->fields.extra_arg);
@@ -84,10 +84,10 @@ void __fastcall ServantCheckEquipDialog__Init(ServantCheckEquipDialog_o *this, c
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_49FA8E9 & 1) == 0 )
+  if ( (byte_49FAF09 & 1) == 0 )
   {
-    sub_1B64870(&StringLiteral_1/*""*/, method);
-    byte_49FA8E9 = 1;
+    sub_1B64A00(&StringLiteral_1/*""*/, method);
+    byte_49FAF09 = 1;
   }
   titleLabel = this->fields.titleLabel;
   this->fields.state = 0;
@@ -108,7 +108,7 @@ void __fastcall ServantCheckEquipDialog__Init(ServantCheckEquipDialog_o *this, c
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
 LABEL_10:
-    sub_1B64ACC(titleLabel, method);
+    sub_1B64C5C(titleLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -123,21 +123,21 @@ void __fastcall ServantCheckEquipDialog__OnClickCancel(ServantCheckEquipDialog_o
   __int64 v6; // x1
   struct ServantCheckEquipDialog_ClickDelegate_o *closeFunc; // x8
 
-  if ( (byte_49FA8EF & 1) == 0 )
+  if ( (byte_49FAF0F & 1) == 0 )
   {
-    sub_1B64870(&Method_ServantCheckEquipDialog_OnClickCancel__, method);
-    byte_49FA8EF = 1;
+    sub_1B64A00(&Method_ServantCheckEquipDialog_OnClickCancel__, method);
+    byte_49FAF0F = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_ServantCheckEquipDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_ServantCheckEquipDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B64888(Method_ServantCheckEquipDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64A18(Method_ServantCheckEquipDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B649E4(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     closeFunc = this->fields.closeFunc;
     if ( !closeFunc )
-      sub_1B64ACC(v5, v6);
+      sub_1B64C5C(v5, v6);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))closeFunc->fields.m_target)(
       closeFunc->fields.original_method_info,
       0LL,
@@ -154,21 +154,21 @@ void __fastcall ServantCheckEquipDialog__OnClickDecide(ServantCheckEquipDialog_o
   __int64 v6; // x1
   struct ServantCheckEquipDialog_ClickDelegate_o *closeFunc; // x8
 
-  if ( (byte_49FA8EE & 1) == 0 )
+  if ( (byte_49FAF0E & 1) == 0 )
   {
-    sub_1B64870(&Method_ServantCheckEquipDialog_OnClickDecide__, method);
-    byte_49FA8EE = 1;
+    sub_1B64A00(&Method_ServantCheckEquipDialog_OnClickDecide__, method);
+    byte_49FAF0E = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_ServantCheckEquipDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_ServantCheckEquipDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B64888(Method_ServantCheckEquipDialog_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B64A18(Method_ServantCheckEquipDialog_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B649E4(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     closeFunc = this->fields.closeFunc;
     if ( !closeFunc )
-      sub_1B64ACC(v5, v6);
+      sub_1B64C5C(v5, v6);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))closeFunc->fields.m_target)(
       closeFunc->fields.original_method_info,
       1LL,
@@ -181,13 +181,13 @@ void __fastcall ServantCheckEquipDialog__OnEnable(ServantCheckEquipDialog_o *thi
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_49FA8F0 & 1) == 0 )
+  if ( (byte_49FAF10 & 1) == 0 )
   {
-    sub_1B64870(&StringLiteral_15583/*"Window/Objects/Buttons/CancelButton"*/, method);
-    byte_49FA8F0 = 1;
+    sub_1B64A00(&StringLiteral_15584/*"Window/Objects/Buttons/CancelButton"*/, method);
+    byte_49FAF10 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  AndroidBackKeyManager__AddBackBtn_41451800(transform, (System_String_o *)StringLiteral_15583/*"Window/Objects/Buttons/CancelButton"*/, 0LL);
+  AndroidBackKeyManager__AddBackBtn_41452312(transform, (System_String_o *)StringLiteral_15584/*"Window/Objects/Buttons/CancelButton"*/, 0LL);
 }
 
 
@@ -223,34 +223,34 @@ void __fastcall ServantCheckEquipDialog__Open(
   const MethodInfo *v31; // x2
   System_Action_o *v32; // x20
 
-  if ( (byte_49FA8EA & 1) == 0 )
+  if ( (byte_49FAF0A & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, materialList);
-    sub_1B64870(&LocalizationManager_TypeInfo, v9);
-    sub_1B64870(&Method_ServantCheckEquipDialog_EndOpen__, v10);
-    sub_1B64870(&StringLiteral_11502/*"SERVANT_CHECK_EQUIP_COMBINE_WARNING_MESSAGE"*/, v11);
-    sub_1B64870(&StringLiteral_3734/*"COMMON_CONFIRM_DECIDE"*/, v12);
-    sub_1B64870(&StringLiteral_11500/*"SERVANT_CHECK_COMBINE_DIALOG_TITLE"*/, v13);
-    sub_1B64870(&StringLiteral_3732/*"COMMON_CONFIRM_CANCEL"*/, v14);
-    sub_1B64870(&StringLiteral_11501/*"SERVANT_CHECK_EQUIP_COMBINE_TITLE"*/, v15);
-    sub_1B64870(&StringLiteral_11499/*"SERVANT_CHECK_COMBINE_DIALOG_MESSAGE"*/, v16);
-    byte_49FA8EA = 1;
+    sub_1B64A00(&System_Action_TypeInfo, materialList);
+    sub_1B64A00(&LocalizationManager_TypeInfo, v9);
+    sub_1B64A00(&Method_ServantCheckEquipDialog_EndOpen__, v10);
+    sub_1B64A00(&StringLiteral_11503/*"SERVANT_CHECK_EQUIP_COMBINE_WARNING_MESSAGE"*/, v11);
+    sub_1B64A00(&StringLiteral_3735/*"COMMON_CONFIRM_DECIDE"*/, v12);
+    sub_1B64A00(&StringLiteral_11501/*"SERVANT_CHECK_COMBINE_DIALOG_TITLE"*/, v13);
+    sub_1B64A00(&StringLiteral_3733/*"COMMON_CONFIRM_CANCEL"*/, v14);
+    sub_1B64A00(&StringLiteral_11502/*"SERVANT_CHECK_EQUIP_COMBINE_TITLE"*/, v15);
+    sub_1B64A00(&StringLiteral_11500/*"SERVANT_CHECK_COMBINE_DIALOG_MESSAGE"*/, v16);
+    byte_49FAF0A = 1;
   }
   this->fields.closeFunc = closeCallback;
-  sub_1B64814(
+  sub_1B649A4(
     (ServantStatusBattleListViewItem_o *)&this->fields.closeFunc,
     (int32_t)closeCallback,
     isLastCheck,
     (int32_t)closeCallback);
   if ( isLastCheck )
-    v17 = (System_String_o **)&StringLiteral_11500/*"SERVANT_CHECK_COMBINE_DIALOG_TITLE"*/;
+    v17 = (System_String_o **)&StringLiteral_11501/*"SERVANT_CHECK_COMBINE_DIALOG_TITLE"*/;
   else
-    v17 = (System_String_o **)&StringLiteral_11501/*"SERVANT_CHECK_EQUIP_COMBINE_TITLE"*/;
+    v17 = (System_String_o **)&StringLiteral_11502/*"SERVANT_CHECK_EQUIP_COMBINE_TITLE"*/;
   v18 = *v17;
   if ( isLastCheck )
-    v19 = (System_String_o **)&StringLiteral_11499/*"SERVANT_CHECK_COMBINE_DIALOG_MESSAGE"*/;
+    v19 = (System_String_o **)&StringLiteral_11500/*"SERVANT_CHECK_COMBINE_DIALOG_MESSAGE"*/;
   else
-    v19 = (System_String_o **)&StringLiteral_11502/*"SERVANT_CHECK_EQUIP_COMBINE_WARNING_MESSAGE"*/;
+    v19 = (System_String_o **)&StringLiteral_11503/*"SERVANT_CHECK_EQUIP_COMBINE_WARNING_MESSAGE"*/;
   v20 = *v19;
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -270,7 +270,7 @@ void __fastcall ServantCheckEquipDialog__Open(
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)servantEquipListViewManager, 0LL);
   if ( isLastCheck )
   {
-    GameObjectExtensions__SetLocalPosition_33376496(gameObject, 9.0, 250.0, 0LL);
+    GameObjectExtensions__SetLocalPosition_33376848(gameObject, 9.0, 250.0, 0LL);
     servantEquipListViewManager = (System_String_o *)this->fields.warningLabel;
     if ( !servantEquipListViewManager )
       goto LABEL_27;
@@ -278,23 +278,23 @@ void __fastcall ServantCheckEquipDialog__Open(
   }
   else
   {
-    GameObjectExtensions__SetLocalPosition_33376496(gameObject, 1.0, 250.0, 0LL);
+    GameObjectExtensions__SetLocalPosition_33376848(gameObject, 1.0, 250.0, 0LL);
     servantEquipListViewManager = (System_String_o *)this->fields.warningLabel;
     if ( !servantEquipListViewManager )
       goto LABEL_27;
     v26 = 7.0;
   }
   v27 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)servantEquipListViewManager, 0LL);
-  GameObjectExtensions__SetLocalPosition_33376496(v27, v26, -151.0, 0LL);
+  GameObjectExtensions__SetLocalPosition_33376848(v27, v26, -151.0, 0LL);
   decideButtonLabel = this->fields.decideButtonLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  servantEquipListViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_3734/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
+  servantEquipListViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_3735/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideButtonLabel )
     goto LABEL_27;
   UILabel__set_text(decideButtonLabel, servantEquipListViewManager, 0LL);
   cancelButtonLabel = this->fields.cancelButtonLabel;
-  servantEquipListViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_3732/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
+  servantEquipListViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_3733/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelButtonLabel
     || (UILabel__set_text(cancelButtonLabel, servantEquipListViewManager, 0LL),
         (servantEquipListViewManager = (System_String_o *)UnityEngine_Component__get_gameObject(
@@ -309,13 +309,13 @@ void __fastcall ServantCheckEquipDialog__Open(
         (servantEquipListViewManager = (System_String_o *)this->fields.servantEquipListViewManager) == 0LL) )
   {
 LABEL_27:
-    sub_1B64ACC(servantEquipListViewManager, v23);
+    sub_1B64C5C(servantEquipListViewManager, v23);
   }
-  ServantCheckEquipListViewManager__SetMode_32302896(
+  ServantCheckEquipListViewManager__SetMode_32303304(
     (ServantCheckEquipListViewManager_o *)servantEquipListViewManager,
     3,
     v31);
-  v32 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  v32 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
   System_Action___ctor(v32, (Il2CppObject *)this, Method_ServantCheckEquipDialog_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v32, 0, 0LL);
 }
@@ -337,39 +337,39 @@ void __fastcall ServantCheckEquipDialog__OpenShopLastCheck(
   int32_t v13; // w2
   int32_t v14; // w3
 
-  if ( (byte_49FA8EC & 1) == 0 )
+  if ( (byte_49FAF0C & 1) == 0 )
   {
-    sub_1B64870(&LocalizationManager_TypeInfo, closeCallback);
-    sub_1B64870(&StringLiteral_11506/*"SERVANT_CHECK_SELL_DIALOG_TITLE"*/, v5);
-    sub_1B64870(&StringLiteral_11505/*"SERVANT_CHECK_SELL_DIALOG_MESSAGE"*/, v6);
-    byte_49FA8EC = 1;
+    sub_1B64A00(&LocalizationManager_TypeInfo, closeCallback);
+    sub_1B64A00(&StringLiteral_11507/*"SERVANT_CHECK_SELL_DIALOG_TITLE"*/, v5);
+    sub_1B64A00(&StringLiteral_11506/*"SERVANT_CHECK_SELL_DIALOG_MESSAGE"*/, v6);
+    byte_49FAF0C = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_11506/*"SERVANT_CHECK_SELL_DIALOG_TITLE"*/, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_11507/*"SERVANT_CHECK_SELL_DIALOG_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_10;
   UILabel__set_text(titleLabel, v8, 0LL);
   warningLabel = this->fields.warningLabel;
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_11505/*"SERVANT_CHECK_SELL_DIALOG_MESSAGE"*/, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_11506/*"SERVANT_CHECK_SELL_DIALOG_MESSAGE"*/, 0LL);
   if ( !warningLabel
     || (UILabel__set_text(warningLabel, v8, 0LL), (v8 = (System_String_o *)this->fields.titleLabel) == 0LL)
     || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v8, 0LL),
-        GameObjectExtensions__SetLocalPosition_33376496(gameObject, 9.0, 250.0, 0LL),
+        GameObjectExtensions__SetLocalPosition_33376848(gameObject, 9.0, 250.0, 0LL),
         (v8 = (System_String_o *)this->fields.warningLabel) == 0LL) )
   {
 LABEL_10:
-    sub_1B64ACC(v8, v9);
+    sub_1B64C5C(v8, v9);
   }
   v12 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v8, 0LL);
-  GameObjectExtensions__SetLocalPosition_33376496(v12, 0.0, -151.0, 0LL);
+  GameObjectExtensions__SetLocalPosition_33376848(v12, 0.0, -151.0, 0LL);
   this->fields.closeFunc = closeCallback;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.closeFunc, (int32_t)closeCallback, v13, v14);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.closeFunc, (int32_t)closeCallback, v13, v14);
 }
 
 
-void __fastcall ServantCheckEquipDialog__Open_32303000(
+void __fastcall ServantCheckEquipDialog__Open_32303408(
         ServantCheckEquipDialog_o *this,
         System_Collections_Generic_List_ServantOperationListViewItem__o *materialList,
         ServantCheckEquipDialog_ClickDelegate_o *closeCallback,
@@ -393,19 +393,19 @@ void __fastcall ServantCheckEquipDialog__Open_32303000(
   const MethodInfo *v22; // x2
   System_Action_o *v23; // x20
 
-  if ( (byte_49FA8EB & 1) == 0 )
+  if ( (byte_49FAF0B & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, materialList);
-    sub_1B64870(&LocalizationManager_TypeInfo, v7);
-    sub_1B64870(&Method_ServantCheckEquipDialog_EndOpen__, v8);
-    sub_1B64870(&StringLiteral_11504/*"SERVANT_CHECK_EQUIP_SELL_WARNING_MESSAGE"*/, v9);
-    sub_1B64870(&StringLiteral_3734/*"COMMON_CONFIRM_DECIDE"*/, v10);
-    sub_1B64870(&StringLiteral_3732/*"COMMON_CONFIRM_CANCEL"*/, v11);
-    sub_1B64870(&StringLiteral_11503/*"SERVANT_CHECK_EQUIP_SELL_TITLE"*/, v12);
-    byte_49FA8EB = 1;
+    sub_1B64A00(&System_Action_TypeInfo, materialList);
+    sub_1B64A00(&LocalizationManager_TypeInfo, v7);
+    sub_1B64A00(&Method_ServantCheckEquipDialog_EndOpen__, v8);
+    sub_1B64A00(&StringLiteral_11505/*"SERVANT_CHECK_EQUIP_SELL_WARNING_MESSAGE"*/, v9);
+    sub_1B64A00(&StringLiteral_3735/*"COMMON_CONFIRM_DECIDE"*/, v10);
+    sub_1B64A00(&StringLiteral_3733/*"COMMON_CONFIRM_CANCEL"*/, v11);
+    sub_1B64A00(&StringLiteral_11504/*"SERVANT_CHECK_EQUIP_SELL_TITLE"*/, v12);
+    byte_49FAF0B = 1;
   }
   this->fields.closeFunc = closeCallback;
-  sub_1B64814(
+  sub_1B649A4(
     (ServantStatusBattleListViewItem_o *)&this->fields.closeFunc,
     (int32_t)closeCallback,
     (int32_t)closeCallback,
@@ -413,12 +413,12 @@ void __fastcall ServantCheckEquipDialog__Open_32303000(
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  servantEquipListViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_11503/*"SERVANT_CHECK_EQUIP_SELL_TITLE"*/, 0LL);
+  servantEquipListViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_11504/*"SERVANT_CHECK_EQUIP_SELL_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_15;
   UILabel__set_text(titleLabel, servantEquipListViewManager, 0LL);
   warningLabel = this->fields.warningLabel;
-  servantEquipListViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_11504/*"SERVANT_CHECK_EQUIP_SELL_WARNING_MESSAGE"*/, 0LL);
+  servantEquipListViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_11505/*"SERVANT_CHECK_EQUIP_SELL_WARNING_MESSAGE"*/, 0LL);
   if ( !warningLabel )
     goto LABEL_15;
   UILabel__set_text(warningLabel, servantEquipListViewManager, 0LL);
@@ -426,19 +426,19 @@ void __fastcall ServantCheckEquipDialog__Open_32303000(
   if ( !servantEquipListViewManager )
     goto LABEL_15;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)servantEquipListViewManager, 0LL);
-  GameObjectExtensions__SetLocalPosition_33376496(gameObject, 1.0, 250.0, 0LL);
+  GameObjectExtensions__SetLocalPosition_33376848(gameObject, 1.0, 250.0, 0LL);
   servantEquipListViewManager = (System_String_o *)this->fields.warningLabel;
   if ( !servantEquipListViewManager )
     goto LABEL_15;
   v18 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)servantEquipListViewManager, 0LL);
-  GameObjectExtensions__SetLocalPosition_33376496(v18, 7.0, -151.0, 0LL);
+  GameObjectExtensions__SetLocalPosition_33376848(v18, 7.0, -151.0, 0LL);
   decideButtonLabel = this->fields.decideButtonLabel;
-  servantEquipListViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_3734/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
+  servantEquipListViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_3735/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideButtonLabel )
     goto LABEL_15;
   UILabel__set_text(decideButtonLabel, servantEquipListViewManager, 0LL);
   cancelButtonLabel = this->fields.cancelButtonLabel;
-  servantEquipListViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_3732/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
+  servantEquipListViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_3733/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelButtonLabel
     || (UILabel__set_text(cancelButtonLabel, servantEquipListViewManager, 0LL),
         (servantEquipListViewManager = (System_String_o *)UnityEngine_Component__get_gameObject(
@@ -446,20 +446,20 @@ void __fastcall ServantCheckEquipDialog__Open_32303000(
                                                             0LL)) == 0LL)
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantEquipListViewManager, 1, 0LL),
         (servantEquipListViewManager = (System_String_o *)this->fields.servantEquipListViewManager) == 0LL)
-    || (ServantCheckEquipListViewManager__CreateList_32303568(
+    || (ServantCheckEquipListViewManager__CreateList_32303976(
           (ServantCheckEquipListViewManager_o *)servantEquipListViewManager,
           materialList,
           v21),
         (servantEquipListViewManager = (System_String_o *)this->fields.servantEquipListViewManager) == 0LL) )
   {
 LABEL_15:
-    sub_1B64ACC(servantEquipListViewManager, v15);
+    sub_1B64C5C(servantEquipListViewManager, v15);
   }
-  ServantCheckEquipListViewManager__SetMode_32302896(
+  ServantCheckEquipListViewManager__SetMode_32303304(
     (ServantCheckEquipListViewManager_o *)servantEquipListViewManager,
     3,
     v22);
-  v23 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  v23 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
   System_Action___ctor(v23, (Il2CppObject *)this, Method_ServantCheckEquipDialog_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v23, 0, 0LL);
 }
@@ -483,15 +483,15 @@ void __fastcall ServantCheckEquipDialog_ClickDelegate___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B64930(v6) & 1) == 0 )
+  if ( (sub_1B64AC0(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B64AE8(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B64998(v10, 0LL);
+      v10 = sub_1B64C78(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B64B28(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -503,9 +503,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19A7D10;
+  this->fields.m_target = (Il2CppObject *)sub_19A7EA0;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19A7CC8;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19A7E58;
 }
 
 
@@ -521,14 +521,14 @@ System_IAsyncResult_o *__fastcall ServantCheckEquipDialog_ClickDelegate__BeginIn
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isDecide;
-  if ( (byte_49FA8F2 & 1) == 0 )
+  if ( (byte_49FAF12 & 1) == 0 )
   {
-    sub_1B64870(&bool_TypeInfo, isDecide);
-    byte_49FA8F2 = 1;
+    sub_1B64A00(&bool_TypeInfo, isDecide);
+    byte_49FAF12 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1B64824(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1B649B4(this, v9, callback, object);
 }
 
 
@@ -537,7 +537,7 @@ void __fastcall ServantCheckEquipDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B64828(result, 0LL, method);
+  sub_1B649B8(result, 0LL, method);
 }
 
 

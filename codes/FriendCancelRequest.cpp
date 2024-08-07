@@ -6,12 +6,12 @@ void __fastcall FriendCancelRequest__beginRequest(
   const MethodInfo *v3; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_49FFDA6 & 1) == 0 )
+  if ( (byte_4A003C7 & 1) == 0 )
   {
-    sub_1B64870(&StringLiteral_23764/*"targetUserId"*/, targetUserId);
-    byte_49FFDA6 = 1;
+    sub_1B64A00(&StringLiteral_23764/*"targetUserId"*/, targetUserId);
+    byte_4A003C7 = 1;
   }
-  RequestBase__addField_40854504((RequestBase_o *)this, (System_String_o *)StringLiteral_23764/*"targetUserId"*/, targetUserId, v3);
+  RequestBase__addField_40855016((RequestBase_o *)this, (System_String_o *)StringLiteral_23764/*"targetUserId"*/, targetUserId, v3);
   RequestBase__beginRequest((RequestBase_o *)this, v6);
 }
 
@@ -21,16 +21,16 @@ System_String_o *__fastcall FriendCancelRequest__getURL(FriendCancelRequest_o *t
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_49FFDA5 & 1) == 0 )
+  if ( (byte_4A003C6 & 1) == 0 )
   {
-    sub_1B64870(&NetworkManager_TypeInfo, method);
-    sub_1B64870(&StringLiteral_19559/*"friend/cancel"*/, v2);
-    byte_49FFDA5 = 1;
+    sub_1B64A00(&NetworkManager_TypeInfo, method);
+    sub_1B64A00(&StringLiteral_19559/*"friend/cancel"*/, v2);
+    byte_4A003C6 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61383576(BaseUrl, (System_String_o *)StringLiteral_19559/*"friend/cancel"*/, 0LL);
+  return System_String__Concat_61385136(BaseUrl, (System_String_o *)StringLiteral_19559/*"friend/cancel"*/, 0LL);
 }
 
 
@@ -49,12 +49,12 @@ void __fastcall FriendCancelRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v13; // x8
 
-  if ( (byte_49FFDA7 & 1) == 0 )
+  if ( (byte_4A003C8 & 1) == 0 )
   {
-    sub_1B64870(&JsonManager_TypeInfo, responseList);
-    sub_1B64870(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B64870(&StringLiteral_21971/*"ng"*/, v6);
-    byte_49FFDA7 = 1;
+    sub_1B64A00(&JsonManager_TypeInfo, responseList);
+    sub_1B64A00(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B64A00(&StringLiteral_21971/*"ng"*/, v6);
+    byte_4A003C8 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);

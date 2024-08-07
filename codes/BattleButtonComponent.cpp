@@ -11,24 +11,24 @@ bool __fastcall BattleButtonComponent__get_isHide(BattleButtonComponent_o *this,
   _BOOL8 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4A01288 & 1) == 0 )
+  if ( (byte_4A018A9 & 1) == 0 )
   {
-    sub_1B64870(&Method_UnityEngine_Component_GetComponent_Collider___, method);
-    sub_1B64870(&UnityEngine_Object_TypeInfo, v3);
-    byte_4A01288 = 1;
+    sub_1B64A00(&Method_UnityEngine_Component_GetComponent_Collider___, method);
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, v3);
+    byte_4A018A9 = 1;
   }
   if ( !UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0LL) )
     return 0;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2E3216C *)Method_UnityEngine_Component_GetComponent_Collider___);
+                       (const MethodInfo_2E32784 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v5 = UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)Component_object, 0LL);
   if ( !v5 )
     return 0;
   if ( !Component_object )
-    sub_1B64ACC(v5, v6);
+    sub_1B64C5C(v5, v6);
   return UnityEngine_Collider__get_enabled((UnityEngine_Collider_o *)Component_object, 0LL);
 }
 
@@ -41,22 +41,22 @@ void __fastcall BattleButtonComponent__set_isHide(BattleButtonComponent_o *this,
   _BOOL8 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4A01289 & 1) == 0 )
+  if ( (byte_4A018AA & 1) == 0 )
   {
-    sub_1B64870(&Method_UnityEngine_Component_GetComponent_Collider___, value);
-    sub_1B64870(&UnityEngine_Object_TypeInfo, v5);
-    byte_4A01289 = 1;
+    sub_1B64A00(&Method_UnityEngine_Component_GetComponent_Collider___, value);
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, v5);
+    byte_4A018AA = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2E3216C *)Method_UnityEngine_Component_GetComponent_Collider___);
+                       (const MethodInfo_2E32784 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
   if ( v7 )
   {
     if ( !Component_object )
-      sub_1B64ACC(v7, v8);
+      sub_1B64C5C(v7, v8);
     UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, value, 0LL);
   }
   else

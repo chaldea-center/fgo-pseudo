@@ -8,7 +8,7 @@ void __fastcall SkillValueUpApplierBase___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.data = data;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)data, v5, v6);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)data, v5, v6);
 }
 
 

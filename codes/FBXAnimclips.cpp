@@ -2,10 +2,10 @@ void __fastcall FBXAnimclips___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_49FD9E0 & 1) == 0 )
+  if ( (byte_49FE000 & 1) == 0 )
   {
-    sub_1B64870(&FBXAnimclips_TypeInfo, v1);
-    byte_49FD9E0 = 1;
+    sub_1B64A00(&FBXAnimclips_TypeInfo, v1);
+    byte_49FE000 = 1;
   }
   LODWORD(FBXAnimclips_TypeInfo->static_fields->animFps) = (struct FBXAnimclips_StaticFields)1106247680;
 }
@@ -56,35 +56,35 @@ void __fastcall FBXAnimclips__loadAnimationEvents(
   System_RuntimeTypeHandle_o v22; // 0:w0.4
 
   v21 = svtId;
-  if ( (byte_49FD9DF & 1) == 0 )
+  if ( (byte_49FDFFF & 1) == 0 )
   {
-    sub_1B64870(&Method_DataManager_GetMasterData_ServantMaster___, *(_QWORD *)&svtId);
-    sub_1B64870(&Method_UnityEngine_Resources_Load_GameObject___, v4);
-    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_1B64870(&UnityEngine_TextAsset_var, v6);
-    sub_1B64870(&UnityEngine_TextAsset_TypeInfo, v7);
-    sub_1B64870(&System_Type_TypeInfo, v8);
-    sub_1B64870(&StringLiteral_1180/*"/fbxevent"*/, v9);
-    sub_1B64870(&StringLiteral_12595/*"Servants/"*/, v10);
-    sub_1B64870(&StringLiteral_1173/*"/chr"*/, v11);
-    byte_49FD9DF = 1;
+    sub_1B64A00(&Method_DataManager_GetMasterData_ServantMaster___, *(_QWORD *)&svtId);
+    sub_1B64A00(&Method_UnityEngine_Resources_Load_GameObject___, v4);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    sub_1B64A00(&UnityEngine_TextAsset_var, v6);
+    sub_1B64A00(&UnityEngine_TextAsset_TypeInfo, v7);
+    sub_1B64A00(&System_Type_TypeInfo, v8);
+    sub_1B64A00(&StringLiteral_1180/*"/fbxevent"*/, v9);
+    sub_1B64A00(&StringLiteral_12596/*"Servants/"*/, v10);
+    sub_1B64A00(&StringLiteral_1173/*"/chr"*/, v11);
+    byte_49FDFFF = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1B64ACC(0LL, v13);
+    sub_1B64C5C(0LL, v13);
   DataManager__GetMasterData_object_(
     (DataManager_o *)Instance,
-    (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_ServantMaster___);
+    (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantMaster___);
   v14 = System_Int32__ToString((int32_t)&v21, 0LL);
-  v15 = System_String__Concat_61394836(
-          (System_String_o *)StringLiteral_12595/*"Servants/"*/,
+  v15 = System_String__Concat_61396396(
+          (System_String_o *)StringLiteral_12596/*"Servants/"*/,
           v14,
           (System_String_o *)StringLiteral_1173/*"/chr"*/,
           0LL);
-  UnityEngine_Resources__Load_object_(v15, (const MethodInfo_2ECE384 *)Method_UnityEngine_Resources_Load_GameObject___);
+  UnityEngine_Resources__Load_object_(v15, (const MethodInfo_2ECE99C *)Method_UnityEngine_Resources_Load_GameObject___);
   v16 = System_Int32__ToString((int32_t)&v21, 0LL);
-  v17 = System_String__Concat_61394836(
-          (System_String_o *)StringLiteral_12595/*"Servants/"*/,
+  v17 = System_String__Concat_61396396(
+          (System_String_o *)StringLiteral_12596/*"Servants/"*/,
           v16,
           (System_String_o *)StringLiteral_1180/*"/fbxevent"*/,
           0LL);
@@ -94,5 +94,5 @@ void __fastcall FBXAnimclips__loadAnimationEvents(
     j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
   v22.fields.value = v18;
   TypeFromHandle = System_Type__GetTypeFromHandle(v22, 0LL);
-  UnityEngine_Resources__Load_69095844(v19, TypeFromHandle, 0LL);
+  UnityEngine_Resources__Load_69097404(v19, TypeFromHandle, 0LL);
 }

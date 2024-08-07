@@ -1,17 +1,17 @@
 void __fastcall UserCommandCodeEntity___ctor(UserCommandCodeEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FEFDF & 1) == 0 )
+  if ( (byte_49FF5FF & 1) == 0 )
   {
-    sub_1B64870(&Method_DataEntityBase_long___ctor__, method);
-    byte_49FEFDF = 1;
+    sub_1B64A00(&Method_DataEntityBase_long___ctor__, method);
+    byte_49FF5FF = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_30D5FC8 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_30D65E0 *)Method_DataEntityBase_long___ctor__);
 }
 
 
-void __fastcall UserCommandCodeEntity___ctor_39635080(
+void __fastcall UserCommandCodeEntity___ctor_39635432(
         UserCommandCodeEntity_o *this,
         UserCommandCodeEntity_o *e,
         const MethodInfo *method)
@@ -21,16 +21,16 @@ void __fastcall UserCommandCodeEntity___ctor_39635080(
   __int128 v7; // q0
   __int128 v8; // q0
 
-  if ( (byte_49FEFE0 & 1) == 0 )
+  if ( (byte_49FF600 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataEntityBase_long___ctor__, e);
-    byte_49FEFE0 = 1;
+    sub_1B64A00(&Method_DataEntityBase_long___ctor__, e);
+    byte_49FF600 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_30D5FC8 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_30D65E0 *)Method_DataEntityBase_long___ctor__);
   if ( !e )
-    sub_1B64ACC(v5, v6);
+    sub_1B64C5C(v5, v6);
   v7 = *(_OWORD *)&e->fields.id.fields.fakeValue;
   *(_OWORD *)&this->fields.id.fields.currentCryptoKey = *(_OWORD *)&e->fields.id.fields.currentCryptoKey;
   *(_OWORD *)&this->fields.id.fields.fakeValue = v7;
@@ -49,10 +49,10 @@ int64_t __fastcall UserCommandCodeEntity__CreatePrimaryKey(UserCommandCodeEntity
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v5; // [xsp+0h] [xbp-60h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v6; // [xsp+20h] [xbp-40h]
 
-  if ( (byte_49FEFDE & 1) == 0 )
+  if ( (byte_49FF5FE & 1) == 0 )
   {
-    sub_1B64870(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method);
-    byte_49FEFDE = 1;
+    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method);
+    byte_49FF5FE = 1;
   }
   v3 = *(_OWORD *)&this->fields.id.fields.fakeValue;
   *(_OWORD *)&v6.fields.currentCryptoKey = *(_OWORD *)&this->fields.id.fields.currentCryptoKey;
@@ -60,7 +60,7 @@ int64_t __fastcall UserCommandCodeEntity__CreatePrimaryKey(UserCommandCodeEntity
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v5 = v6;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46184056(&v5, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46185616(&v5, 0LL);
 }
 
 
@@ -126,41 +126,41 @@ System_Int32_array *__fastcall UserCommandCodeEntity__GetCategoryIdList(
   Il2CppObject *entity; // [xsp+58h] [xbp-68h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v60; // 0:x0.16
 
-  if ( (byte_49FEFE1 & 1) == 0 )
+  if ( (byte_49FF601 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataManager_GetMasterData_CommandCodeSkillMaster___, method);
-    sub_1B64870(&Method_DataManager_GetMasterData_FunctionMaster___, v3);
-    sub_1B64870(&Method_DataManager_GetMasterData_SkillLvMaster___, v4);
-    sub_1B64870(&Method_DataMasterBase_FunctionMaster__FunctionEntity__int__TryGetEntity__, v5);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_Enumerator_int__Dispose__, v6);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_Enumerator_int__MoveNext__, v7);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_Enumerator_int__get_Current__, v8);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_int__Add__, v9);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_int__CopyTo__, v10);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_int__GetEnumerator__, v11);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_int__UnionWith__, v12);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_int___ctor__, v13);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_int__get_Count__, v14);
-    sub_1B64870(&System_Collections_Generic_HashSet_int__TypeInfo, v15);
-    sub_1B64870(&int___TypeInfo, v16);
-    sub_1B64870(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v17);
-    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v18);
-    byte_49FEFE1 = 1;
+    sub_1B64A00(&Method_DataManager_GetMasterData_CommandCodeSkillMaster___, method);
+    sub_1B64A00(&Method_DataManager_GetMasterData_FunctionMaster___, v3);
+    sub_1B64A00(&Method_DataManager_GetMasterData_SkillLvMaster___, v4);
+    sub_1B64A00(&Method_DataMasterBase_FunctionMaster__FunctionEntity__int__TryGetEntity__, v5);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_Enumerator_int__Dispose__, v6);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_Enumerator_int__MoveNext__, v7);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_Enumerator_int__get_Current__, v8);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_int__Add__, v9);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_int__CopyTo__, v10);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_int__GetEnumerator__, v11);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_int__UnionWith__, v12);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_int___ctor__, v13);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_int__get_Count__, v14);
+    sub_1B64A00(&System_Collections_Generic_HashSet_int__TypeInfo, v15);
+    sub_1B64A00(&int___TypeInfo, v16);
+    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v17);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v18);
+    byte_49FF601 = 1;
   }
   v58 = 0LL;
   entity = 0LL;
   memset(&v57, 0, sizeof(v57));
   v56 = 0LL;
-  v19 = (System_Collections_Generic_HashSet_int__o *)sub_1B64ABC(System_Collections_Generic_HashSet_int__TypeInfo);
+  v19 = (System_Collections_Generic_HashSet_int__o *)sub_1B64C4C(System_Collections_Generic_HashSet_int__TypeInfo);
   System_Collections_Generic_HashSet_int____ctor(
     v19,
-    (const MethodInfo_3365C88 *)Method_System_Collections_Generic_HashSet_int___ctor__);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    (const MethodInfo_33662A0 *)Method_System_Collections_Generic_HashSet_int___ctor__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_57;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_CommandCodeSkillMaster___);
+                        (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_CommandCodeSkillMaster___);
   v24 = *(_QWORD *)&this->fields.commandCodeId.fields.currentCryptoKey;
   v23 = *(_QWORD *)&this->fields.commandCodeId.fields.fakeValue;
   v25 = (CommandCodeSkillMaster_o *)MasterData_object;
@@ -168,23 +168,23 @@ System_Int32_array *__fastcall UserCommandCodeEntity__GetCategoryIdList(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v60.fields.currentCryptoKey = v24;
   *(_QWORD *)&v60.fields.fakeValue = v23;
-  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46180532(v60, 0LL);
+  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v60, 0LL);
   if ( !v25 )
     goto LABEL_57;
   CommandCodeSkillList = CommandCodeSkillMaster__getCommandCodeSkillList(v25, (int32_t)Instance, 0LL);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_57;
   v54 = v19;
   v27 = DataManager__GetMasterData_object_(
           Instance,
-          (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_SkillLvMaster___);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_SkillLvMaster___);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_57;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_FunctionMaster___);
+                                (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_FunctionMaster___);
   if ( !CommandCodeSkillList )
     goto LABEL_57;
   v29 = *(_QWORD *)&CommandCodeSkillList->max_length;
@@ -196,7 +196,7 @@ System_Int32_array *__fastcall UserCommandCodeEntity__GetCategoryIdList(
     {
       if ( v31 >= (unsigned int)v29 )
 LABEL_58:
-        sub_1B64AD4(Instance, skillId);
+        sub_1B64C64(Instance, skillId);
       v32 = CommandCodeSkillList->m_Items[v31];
       if ( v32 )
       {
@@ -218,7 +218,7 @@ LABEL_58:
               System_Collections_Generic_HashSet_int___UnionWith(
                 v54,
                 skillId,
-                (const MethodInfo_3366E9C *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+                (const MethodInfo_33674B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
               Instance = (DataManager_o *)SkillLvEntity__getDataValsList(v33, v34);
               funcId = v33->fields.funcId;
               if ( !funcId )
@@ -239,7 +239,7 @@ LABEL_58:
                                               v30,
                                               &entity,
                                               funcId->m_Items[v37 + 1],
-                                              (const MethodInfo_30D61D4 *)Method_DataMasterBase_FunctionMaster__FunctionEntity__int__TryGetEntity__);
+                                              (const MethodInfo_30D67EC *)Method_DataMasterBase_FunctionMaster__FunctionEntity__int__TryGetEntity__);
                 if ( ((unsigned __int8)Instance & 1) != 0 )
                 {
                   if ( !entity )
@@ -286,7 +286,7 @@ LABEL_58:
                         System_Collections_Generic_HashSet_int___UnionWith(
                           v54,
                           skillId,
-                          (const MethodInfo_3366E9C *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+                          (const MethodInfo_33674B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
                     }
                   }
                 }
@@ -303,58 +303,58 @@ LABEL_58:
     }
     while ( (__int64)++v31 < (int)v29 );
   }
-  v46 = (System_Collections_Generic_HashSet_int__o *)sub_1B64ABC(System_Collections_Generic_HashSet_int__TypeInfo);
+  v46 = (System_Collections_Generic_HashSet_int__o *)sub_1B64C4C(System_Collections_Generic_HashSet_int__TypeInfo);
   System_Collections_Generic_HashSet_int____ctor(
     v46,
-    (const MethodInfo_3365C88 *)Method_System_Collections_Generic_HashSet_int___ctor__);
+    (const MethodInfo_33662A0 *)Method_System_Collections_Generic_HashSet_int___ctor__);
   Instance = (DataManager_o *)v54;
   if ( !v54 )
     goto LABEL_57;
   System_Collections_Generic_HashSet_int___GetEnumerator(
     &v55,
     v54,
-    (const MethodInfo_3366810 *)Method_System_Collections_Generic_HashSet_int__GetEnumerator__);
+    (const MethodInfo_3366E28 *)Method_System_Collections_Generic_HashSet_int__GetEnumerator__);
   v57 = v55;
   while ( 1 )
   {
     v47 = System_Collections_Generic_HashSet_Enumerator_int___MoveNext(
             &v57,
-            (const MethodInfo_3228058 *)Method_System_Collections_Generic_HashSet_Enumerator_int__MoveNext__);
+            (const MethodInfo_3228670 *)Method_System_Collections_Generic_HashSet_Enumerator_int__MoveNext__);
     if ( !v47 )
       break;
     if ( !v30 )
-      sub_1B64ACC(v47, v48);
+      sub_1B64C5C(v47, v48);
     v49 = DataMasterBase_object__object__int___TryGetEntity(
             v30,
             &v56,
             (int32_t)v57.fields._current,
-            (const MethodInfo_30D61D4 *)Method_DataMasterBase_FunctionMaster__FunctionEntity__int__TryGetEntity__);
+            (const MethodInfo_30D67EC *)Method_DataMasterBase_FunctionMaster__FunctionEntity__int__TryGetEntity__);
     if ( v49 )
     {
       if ( !v56 )
-        sub_1B64ACC(v49, v50);
+        sub_1B64C5C(v49, v50);
       if ( !v46 )
-        sub_1B64ACC(v49, v50);
+        sub_1B64C5C(v49, v50);
       System_Collections_Generic_HashSet_int___Add(
         v46,
         HIDWORD(v56[4].monitor),
-        (const MethodInfo_3366E8C *)Method_System_Collections_Generic_HashSet_int__Add__);
+        (const MethodInfo_33674A4 *)Method_System_Collections_Generic_HashSet_int__Add__);
     }
   }
   System_Collections_Generic_HashSet_Enumerator_int___Dispose(
     &v57,
-    (const MethodInfo_3228054 *)Method_System_Collections_Generic_HashSet_Enumerator_int__Dispose__);
+    (const MethodInfo_322866C *)Method_System_Collections_Generic_HashSet_Enumerator_int__Dispose__);
   if ( !v46 )
 LABEL_57:
-    sub_1B64ACC(Instance, skillId);
+    sub_1B64C5C(Instance, skillId);
   count = (unsigned int)v46->fields._count;
   if ( (int)count <= 0 )
     return 0LL;
-  v52 = (System_Int32_array *)sub_1B64918(int___TypeInfo, count);
-  System_Collections_Generic_HashSet_int___CopyTo_53899716(
+  v52 = (System_Int32_array *)sub_1B64AA8(int___TypeInfo, count);
+  System_Collections_Generic_HashSet_int___CopyTo_53901276(
     v46,
     v52,
-    (const MethodInfo_33671C4 *)Method_System_Collections_Generic_HashSet_int__CopyTo__);
+    (const MethodInfo_33677DC *)Method_System_Collections_Generic_HashSet_int__CopyTo__);
   return v52;
 }
 
@@ -372,20 +372,20 @@ int32_t __fastcall UserCommandCodeEntity__GetRarity(UserCommandCodeEntity_o *thi
   DataMasterBase_TMaster__TEntity__PKType__o *v11; // x19
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v13; // 0:x0.16
 
-  if ( (byte_49FEFE5 & 1) == 0 )
+  if ( (byte_49FF605 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataManager_GetMasterData_CommandCodeMaster___, method);
-    sub_1B64870(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__, v3);
-    sub_1B64870(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
-    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_49FEFE5 = 1;
+    sub_1B64A00(&Method_DataManager_GetMasterData_CommandCodeMaster___, method);
+    sub_1B64A00(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__, v3);
+    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_49FF605 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_9;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_CommandCodeMaster___);
+                        (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_CommandCodeMaster___);
   v10 = *(_QWORD *)&this->fields.commandCodeId.fields.currentCryptoKey;
   v9 = *(_QWORD *)&this->fields.commandCodeId.fields.fakeValue;
   v11 = (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object;
@@ -393,15 +393,15 @@ int32_t __fastcall UserCommandCodeEntity__GetRarity(UserCommandCodeEntity_o *thi
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v13.fields.currentCryptoKey = v10;
   *(_QWORD *)&v13.fields.fakeValue = v9;
-  Instance = (Il2CppObject *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46180532(v13, 0LL);
+  Instance = (Il2CppObject *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v13, 0LL);
   if ( !v11
     || (Instance = DataMasterBase_object__object__int___GetEntity(
                      v11,
                      (int32_t)Instance,
-                     (const MethodInfo_30D6180 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__)) == 0LL )
+                     (const MethodInfo_30D6798 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__)) == 0LL )
   {
 LABEL_9:
-    sub_1B64ACC(Instance, v7);
+    sub_1B64C5C(Instance, v7);
   }
   return (int32_t)Instance[4].klass;
 }
@@ -420,20 +420,20 @@ int32_t __fastcall UserCommandCodeEntity__GetSellMana(UserCommandCodeEntity_o *t
   DataMasterBase_TMaster__TEntity__PKType__o *v11; // x19
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v13; // 0:x0.16
 
-  if ( (byte_49FEFE7 & 1) == 0 )
+  if ( (byte_49FF607 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataManager_GetMasterData_CommandCodeMaster___, method);
-    sub_1B64870(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__, v3);
-    sub_1B64870(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
-    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_49FEFE7 = 1;
+    sub_1B64A00(&Method_DataManager_GetMasterData_CommandCodeMaster___, method);
+    sub_1B64A00(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__, v3);
+    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_49FF607 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_9;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_CommandCodeMaster___);
+                        (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_CommandCodeMaster___);
   v10 = *(_QWORD *)&this->fields.commandCodeId.fields.currentCryptoKey;
   v9 = *(_QWORD *)&this->fields.commandCodeId.fields.fakeValue;
   v11 = (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object;
@@ -441,15 +441,15 @@ int32_t __fastcall UserCommandCodeEntity__GetSellMana(UserCommandCodeEntity_o *t
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v13.fields.currentCryptoKey = v10;
   *(_QWORD *)&v13.fields.fakeValue = v9;
-  Instance = (Il2CppObject *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46180532(v13, 0LL);
+  Instance = (Il2CppObject *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v13, 0LL);
   if ( !v11
     || (Instance = DataMasterBase_object__object__int___GetEntity(
                      v11,
                      (int32_t)Instance,
-                     (const MethodInfo_30D6180 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__)) == 0LL )
+                     (const MethodInfo_30D6798 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__)) == 0LL )
   {
 LABEL_9:
-    sub_1B64ACC(Instance, v7);
+    sub_1B64C5C(Instance, v7);
   }
   return (int32_t)Instance[4].monitor;
 }
@@ -468,20 +468,20 @@ int32_t __fastcall UserCommandCodeEntity__GetSellQp(UserCommandCodeEntity_o *thi
   DataMasterBase_TMaster__TEntity__PKType__o *v11; // x19
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v13; // 0:x0.16
 
-  if ( (byte_49FEFE6 & 1) == 0 )
+  if ( (byte_49FF606 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataManager_GetMasterData_CommandCodeMaster___, method);
-    sub_1B64870(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__, v3);
-    sub_1B64870(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
-    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_49FEFE6 = 1;
+    sub_1B64A00(&Method_DataManager_GetMasterData_CommandCodeMaster___, method);
+    sub_1B64A00(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__, v3);
+    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_49FF606 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_9;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_CommandCodeMaster___);
+                        (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_CommandCodeMaster___);
   v10 = *(_QWORD *)&this->fields.commandCodeId.fields.currentCryptoKey;
   v9 = *(_QWORD *)&this->fields.commandCodeId.fields.fakeValue;
   v11 = (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object;
@@ -489,15 +489,15 @@ int32_t __fastcall UserCommandCodeEntity__GetSellQp(UserCommandCodeEntity_o *thi
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v13.fields.currentCryptoKey = v10;
   *(_QWORD *)&v13.fields.fakeValue = v9;
-  Instance = (Il2CppObject *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46180532(v13, 0LL);
+  Instance = (Il2CppObject *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v13, 0LL);
   if ( !v11
     || (Instance = DataMasterBase_object__object__int___GetEntity(
                      v11,
                      (int32_t)Instance,
-                     (const MethodInfo_30D6180 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__)) == 0LL )
+                     (const MethodInfo_30D6798 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__)) == 0LL )
   {
 LABEL_9:
-    sub_1B64ACC(Instance, v7);
+    sub_1B64C5C(Instance, v7);
   }
   return HIDWORD(Instance[4].klass);
 }
@@ -516,20 +516,20 @@ int32_t __fastcall UserCommandCodeEntity__GetSellRarePri(UserCommandCodeEntity_o
   DataMasterBase_TMaster__TEntity__PKType__o *v11; // x19
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v13; // 0:x0.16
 
-  if ( (byte_49FEFE8 & 1) == 0 )
+  if ( (byte_49FF608 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataManager_GetMasterData_CommandCodeMaster___, method);
-    sub_1B64870(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__, v3);
-    sub_1B64870(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
-    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_49FEFE8 = 1;
+    sub_1B64A00(&Method_DataManager_GetMasterData_CommandCodeMaster___, method);
+    sub_1B64A00(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__, v3);
+    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_49FF608 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_9;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_CommandCodeMaster___);
+                        (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_CommandCodeMaster___);
   v10 = *(_QWORD *)&this->fields.commandCodeId.fields.currentCryptoKey;
   v9 = *(_QWORD *)&this->fields.commandCodeId.fields.fakeValue;
   v11 = (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object;
@@ -537,15 +537,15 @@ int32_t __fastcall UserCommandCodeEntity__GetSellRarePri(UserCommandCodeEntity_o
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v13.fields.currentCryptoKey = v10;
   *(_QWORD *)&v13.fields.fakeValue = v9;
-  Instance = (Il2CppObject *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46180532(v13, 0LL);
+  Instance = (Il2CppObject *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v13, 0LL);
   if ( !v11
     || (Instance = DataMasterBase_object__object__int___GetEntity(
                      v11,
                      (int32_t)Instance,
-                     (const MethodInfo_30D6180 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__)) == 0LL )
+                     (const MethodInfo_30D6798 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__)) == 0LL )
   {
 LABEL_9:
-    sub_1B64ACC(Instance, v7);
+    sub_1B64C5C(Instance, v7);
   }
   return HIDWORD(Instance[4].monitor);
 }
@@ -570,26 +570,26 @@ void __fastcall UserCommandCodeEntity__GetSkillInfo(
   DataMasterBase_TMaster__TEntity__PKType__o *v18; // x22
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v19; // 0:x0.16
 
-  if ( (byte_49FEFE2 & 1) == 0 )
+  if ( (byte_49FF602 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataManager_GetMasterData_CommandCodeMaster___, idList);
-    sub_1B64870(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__, v9);
-    sub_1B64870(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v10);
-    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v11);
-    byte_49FEFE2 = 1;
+    sub_1B64A00(&Method_DataManager_GetMasterData_CommandCodeMaster___, idList);
+    sub_1B64A00(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__, v9);
+    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v10);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v11);
+    byte_49FF602 = 1;
   }
   v12 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
   if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
-    v12 = sub_1BB674C(v12);
+    v12 = sub_1BB68DC(v12);
   v13 = *(_QWORD *)(*(_QWORD *)(v12 + 192) + 16LL);
   if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
-    v13 = sub_1BB674C(v13);
+    v13 = sub_1BB68DC(v13);
   Entity = **(Il2CppObject ***)(v13 + 184);
   if ( !Entity )
     goto LABEL_13;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Entity,
-                        (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_CommandCodeMaster___);
+                        (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_CommandCodeMaster___);
   v17 = *(_QWORD *)&this->fields.commandCodeId.fields.currentCryptoKey;
   v16 = *(_QWORD *)&this->fields.commandCodeId.fields.fakeValue;
   v18 = (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object;
@@ -597,15 +597,15 @@ void __fastcall UserCommandCodeEntity__GetSkillInfo(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v19.fields.currentCryptoKey = v17;
   *(_QWORD *)&v19.fields.fakeValue = v16;
-  Entity = (Il2CppObject *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46180532(v19, 0LL);
+  Entity = (Il2CppObject *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v19, 0LL);
   if ( !v18
     || (Entity = DataMasterBase_object__object__int___GetEntity(
                    v18,
                    (int32_t)Entity,
-                   (const MethodInfo_30D6180 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__)) == 0LL )
+                   (const MethodInfo_30D6798 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__)) == 0LL )
   {
 LABEL_13:
-    sub_1B64ACC(Entity, idList);
+    sub_1B64C5C(Entity, idList);
   }
   CommandCodeEntity__GetSkillInfo((CommandCodeEntity_o *)Entity, idList, titleList, explanationList, 0LL);
 }
@@ -663,12 +663,12 @@ bool __fastcall UserCommandCodeEntity__IsNew(UserCommandCodeEntity_o *this, cons
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v13; // [xsp+20h] [xbp-60h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v14; // [xsp+40h] [xbp-40h]
 
-  if ( (byte_49FEFE3 & 1) == 0 )
+  if ( (byte_49FF603 & 1) == 0 )
   {
-    sub_1B64870(&NetworkManager_TypeInfo, method);
-    sub_1B64870(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v3);
-    sub_1B64870(&UserCommandCodeNewManager_TypeInfo, v4);
-    byte_49FEFE3 = 1;
+    sub_1B64A00(&NetworkManager_TypeInfo, method);
+    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v3);
+    sub_1B64A00(&UserCommandCodeNewManager_TypeInfo, v4);
+    byte_49FF603 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -680,7 +680,7 @@ bool __fastcall UserCommandCodeEntity__IsNew(UserCommandCodeEntity_o *this, cons
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v13 = v14;
-  if ( v7 == CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46184056(&v13, 0LL) )
+  if ( v7 == CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46185616(&v13, 0LL) )
   {
     v8 = *(_OWORD *)&this->fields.id.fields.fakeValue;
     *(_OWORD *)&v14.fields.currentCryptoKey = *(_OWORD *)&this->fields.id.fields.currentCryptoKey;
@@ -688,7 +688,7 @@ bool __fastcall UserCommandCodeEntity__IsNew(UserCommandCodeEntity_o *this, cons
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
     v12 = v14;
-    v9 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46184056(&v12, 0LL);
+    v9 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46185616(&v12, 0LL);
     if ( !UserCommandCodeNewManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UserCommandCodeNewManager_TypeInfo);
     return UserCommandCodeNewManager__IsNew(v9, 0LL);
@@ -708,11 +708,11 @@ void __fastcall UserCommandCodeEntity__SetOld(UserCommandCodeEntity_o *this, con
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v6; // [xsp+0h] [xbp-60h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v7; // [xsp+20h] [xbp-40h]
 
-  if ( (byte_49FEFE4 & 1) == 0 )
+  if ( (byte_49FF604 & 1) == 0 )
   {
-    sub_1B64870(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method);
-    sub_1B64870(&UserCommandCodeNewManager_TypeInfo, v3);
-    byte_49FEFE4 = 1;
+    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method);
+    sub_1B64A00(&UserCommandCodeNewManager_TypeInfo, v3);
+    byte_49FF604 = 1;
   }
   v4 = *(_OWORD *)&this->fields.id.fields.fakeValue;
   *(_OWORD *)&v7.fields.currentCryptoKey = *(_OWORD *)&this->fields.id.fields.currentCryptoKey;
@@ -720,7 +720,7 @@ void __fastcall UserCommandCodeEntity__SetOld(UserCommandCodeEntity_o *this, con
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v6 = v7;
-  v5 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46184056(&v6, 0LL);
+  v5 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46185616(&v6, 0LL);
   if ( !UserCommandCodeNewManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UserCommandCodeNewManager_TypeInfo);
   UserCommandCodeNewManager__SetOld(v5, 0LL);

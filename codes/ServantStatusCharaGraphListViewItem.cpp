@@ -10,10 +10,10 @@ void __fastcall ServantStatusCharaGraphListViewItem___ctor(
   int32_t v9; // w3
 
   v7 = this;
-  ListViewItem___ctor_40375592((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_40376104((ListViewItem_o *)this, index, 0LL);
   v7->fields.mainInfo = mainInfo;
   v7 = (ServantStatusCharaGraphListViewItem_o *)((char *)v7 + 112);
-  sub_1B64814((ServantStatusBattleListViewItem_o *)v7, (int32_t)mainInfo, v8, v9);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)v7, (int32_t)mainInfo, v8, v9);
   LODWORD(v7->monitor) = imageLimitCount;
 }
 

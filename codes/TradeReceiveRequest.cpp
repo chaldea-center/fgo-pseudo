@@ -15,26 +15,26 @@ void __fastcall TradeReceiveRequest__beginRequest(
   const MethodInfo *v16; // x3
   const MethodInfo *v17; // x1
 
-  if ( (byte_49FFE63 & 1) == 0 )
+  if ( (byte_4A00484 & 1) == 0 )
   {
-    sub_1B64870(&StringLiteral_19061/*"eventId"*/, *(_QWORD *)&eventId);
-    sub_1B64870(&StringLiteral_17661/*"cancelTradeFlag"*/, v11);
-    sub_1B64870(&StringLiteral_22713/*"receiveNum"*/, v12);
-    sub_1B64870(&StringLiteral_23937/*"tradeStoreIdxs"*/, v13);
-    byte_49FFE63 = 1;
+    sub_1B64A00(&StringLiteral_19062/*"eventId"*/, *(_QWORD *)&eventId);
+    sub_1B64A00(&StringLiteral_17662/*"cancelTradeFlag"*/, v11);
+    sub_1B64A00(&StringLiteral_22713/*"receiveNum"*/, v12);
+    sub_1B64A00(&StringLiteral_23937/*"tradeStoreIdxs"*/, v13);
+    byte_4A00484 = 1;
   }
   RequestBase__addField(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_19061/*"eventId"*/,
+    (System_String_o *)StringLiteral_19062/*"eventId"*/,
     eventId,
     *(const MethodInfo **)&receiveNum);
-  RequestBase__addField_40853908(
+  RequestBase__addField_40854420(
     (RequestBase_o *)this,
     (System_String_o *)StringLiteral_23937/*"tradeStoreIdxs"*/,
     &tradeStoreIdxs->obj,
     v14);
   RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22713/*"receiveNum"*/, receiveNum, v15);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17661/*"cancelTradeFlag"*/, cancelTradeFlag, v16);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17662/*"cancelTradeFlag"*/, cancelTradeFlag, v16);
   RequestBase__beginRequest((RequestBase_o *)this, v17);
 }
 
@@ -44,16 +44,16 @@ System_String_o *__fastcall TradeReceiveRequest__getURL(TradeReceiveRequest_o *t
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_49FFE62 & 1) == 0 )
+  if ( (byte_4A00483 & 1) == 0 )
   {
-    sub_1B64870(&NetworkManager_TypeInfo, method);
-    sub_1B64870(&StringLiteral_19054/*"event/tradeReceive"*/, v2);
-    byte_49FFE62 = 1;
+    sub_1B64A00(&NetworkManager_TypeInfo, method);
+    sub_1B64A00(&StringLiteral_19055/*"event/tradeReceive"*/, v2);
+    byte_4A00483 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61383576(BaseUrl, (System_String_o *)StringLiteral_19054/*"event/tradeReceive"*/, 0LL);
+  return System_String__Concat_61385136(BaseUrl, (System_String_o *)StringLiteral_19055/*"event/tradeReceive"*/, 0LL);
 }
 
 
@@ -72,12 +72,12 @@ void __fastcall TradeReceiveRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v13; // x8
 
-  if ( (byte_49FFE64 & 1) == 0 )
+  if ( (byte_4A00485 & 1) == 0 )
   {
-    sub_1B64870(&JsonManager_TypeInfo, responseList);
-    sub_1B64870(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B64870(&StringLiteral_21971/*"ng"*/, v6);
-    byte_49FFE64 = 1;
+    sub_1B64A00(&JsonManager_TypeInfo, responseList);
+    sub_1B64A00(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B64A00(&StringLiteral_21971/*"ng"*/, v6);
+    byte_4A00485 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);

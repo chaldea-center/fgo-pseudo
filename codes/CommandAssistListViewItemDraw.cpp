@@ -50,21 +50,21 @@ void __fastcall CommandAssistListViewItemDraw__UpdateUi(
   int32_t lv; // [xsp+18h] [xbp-48h] BYREF
   int32_t IconImageId_k__BackingField; // [xsp+1Ch] [xbp-44h] BYREF
 
-  if ( (byte_49F9625 & 1) == 0 )
+  if ( (byte_49F9C45 & 1) == 0 )
   {
-    sub_1B64870(&AtlasManager_TypeInfo, item);
-    sub_1B64870(&Method_DataManager_GetMaster_EventCommandAssistMaster___, v5);
-    sub_1B64870(&DataManager_TypeInfo, v6);
-    sub_1B64870(&int_TypeInfo, v7);
-    sub_1B64870(&LocalizationManager_TypeInfo, v8);
-    sub_1B64870(&StringLiteral_8199/*"LEVEL_INFO"*/, v9);
-    sub_1B64870(&StringLiteral_5553/*"EVENT_COMMAND_ASSIST_DIALOG_MAX_LEVEL_FORMAT"*/, v10);
-    sub_1B64870(&StringLiteral_5552/*"EVENT_COMMAND_ASSIST_DIALOG_LEVEL_FORMAT"*/, v11);
-    byte_49F9625 = 1;
+    sub_1B64A00(&AtlasManager_TypeInfo, item);
+    sub_1B64A00(&Method_DataManager_GetMaster_EventCommandAssistMaster___, v5);
+    sub_1B64A00(&DataManager_TypeInfo, v6);
+    sub_1B64A00(&int_TypeInfo, v7);
+    sub_1B64A00(&LocalizationManager_TypeInfo, v8);
+    sub_1B64A00(&StringLiteral_8200/*"LEVEL_INFO"*/, v9);
+    sub_1B64A00(&StringLiteral_5554/*"EVENT_COMMAND_ASSIST_DIALOG_MAX_LEVEL_FORMAT"*/, v10);
+    sub_1B64A00(&StringLiteral_5553/*"EVENT_COMMAND_ASSIST_DIALOG_LEVEL_FORMAT"*/, v11);
+    byte_49F9C45 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (EventCommandAssistMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
+  Master_object = (EventCommandAssistMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2E3BC8C *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
   if ( !item )
     goto LABEL_19;
   v14 = Master_object;
@@ -95,10 +95,10 @@ void __fastcall CommandAssistListViewItemDraw__UpdateUi(
   UILabel__set_text((UILabel_o *)Master_object, item->fields._Name_k__BackingField, 0LL);
   if ( !CurrentEntity || !v18 )
     goto LABEL_19;
-  v20 = (System_String_o **)&StringLiteral_5553/*"EVENT_COMMAND_ASSIST_DIALOG_MAX_LEVEL_FORMAT"*/;
+  v20 = (System_String_o **)&StringLiteral_5554/*"EVENT_COMMAND_ASSIST_DIALOG_MAX_LEVEL_FORMAT"*/;
   levelLabel = this->fields.levelLabel;
   if ( CurrentEntity->fields.lv != v18->fields.lv )
-    v20 = (System_String_o **)&StringLiteral_5552/*"EVENT_COMMAND_ASSIST_DIALOG_LEVEL_FORMAT"*/;
+    v20 = (System_String_o **)&StringLiteral_5553/*"EVENT_COMMAND_ASSIST_DIALOG_LEVEL_FORMAT"*/;
   v22 = *v20;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -107,13 +107,13 @@ void __fastcall CommandAssistListViewItemDraw__UpdateUi(
   v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv, v24, v25, v26);
   v42 = v18->fields.lv;
   v31 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v42, v28, v29, v30);
-  Master_object = (EventCommandAssistMaster_o *)System_String__Format_61397948(v23, v27, v31, 0LL);
+  Master_object = (EventCommandAssistMaster_o *)System_String__Format_61399508(v23, v27, v31, 0LL);
   if ( !levelLabel )
     goto LABEL_19;
   UILabel__set_text(levelLabel, (System_String_o *)Master_object, 0LL);
   detailLabel = this->fields.detailLabel;
   Detail_k__BackingField = item->fields._Detail_k__BackingField;
-  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_8199/*"LEVEL_INFO"*/, 0LL);
+  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_8200/*"LEVEL_INFO"*/, 0LL);
   v41 = CurrentEntity->fields.lv;
   v38 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v41, v35, v36, v37);
   v39 = (Il2CppObject *)System_String__Format(v34, v38, 0LL);
@@ -122,7 +122,7 @@ void __fastcall CommandAssistListViewItemDraw__UpdateUi(
   Master_object = (EventCommandAssistMaster_o *)this->fields.line;
   if ( !Master_object )
 LABEL_19:
-    sub_1B64ACC(Master_object, v13);
+    sub_1B64C5C(Master_object, v13);
   UnityEngine_Behaviour__set_enabled(
     (UnityEngine_Behaviour_o *)Master_object,
     !item->fields._IsLast_k__BackingField,

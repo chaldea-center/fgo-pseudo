@@ -1,14 +1,14 @@
 void __fastcall ClassRelationMaster___ctor(ClassRelationMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FE2B0 & 1) == 0 )
+  if ( (byte_49FE8D0 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataMasterBase_ClassRelationMaster__ClassRelationEntity__string___ctor__, method);
-    byte_49FE2B0 = 1;
+    sub_1B64A00(&Method_DataMasterBase_ClassRelationMaster__ClassRelationEntity__string___ctor__, method);
+    byte_49FE8D0 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     109,
-    (const MethodInfo_30D6498 *)Method_DataMasterBase_ClassRelationMaster__ClassRelationEntity__string___ctor__);
+    (const MethodInfo_30D6AB0 *)Method_DataMasterBase_ClassRelationMaster__ClassRelationEntity__string___ctor__);
 }
 
 
@@ -21,18 +21,18 @@ ClassRelationEntity_o *__fastcall ClassRelationMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_49FE2AE & 1) == 0 )
+  if ( (byte_49FE8CE & 1) == 0 )
   {
-    sub_1B64870(
+    sub_1B64A00(
       &Method_DataMasterBase_ClassRelationMaster__ClassRelationEntity__string__GetEntity__,
       *(_QWORD *)&atkClass);
-    byte_49FE2AE = 1;
+    byte_49FE8CE = 1;
   }
   PK = (Il2CppObject *)ClassRelationEntity__CreatePK(atkClass, defClass, *(const MethodInfo **)&defClass);
   return (ClassRelationEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                     PK,
-                                    (const MethodInfo_30D64D8 *)Method_DataMasterBase_ClassRelationMaster__ClassRelationEntity__string__GetEntity__);
+                                    (const MethodInfo_30D6AF0 *)Method_DataMasterBase_ClassRelationMaster__ClassRelationEntity__string__GetEntity__);
 }
 
 
@@ -46,17 +46,17 @@ bool __fastcall ClassRelationMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_49FE2AF & 1) == 0 )
+  if ( (byte_49FE8CF & 1) == 0 )
   {
-    sub_1B64870(&Method_DataMasterBase_ClassRelationMaster__ClassRelationEntity__string__TryGetEntity__, entity);
-    byte_49FE2AF = 1;
+    sub_1B64A00(&Method_DataMasterBase_ClassRelationMaster__ClassRelationEntity__string__TryGetEntity__, entity);
+    byte_49FE8CF = 1;
   }
   PK = (Il2CppObject *)ClassRelationEntity__CreatePK(atkClass, defClass, *(const MethodInfo **)&atkClass);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_30D6528 *)Method_DataMasterBase_ClassRelationMaster__ClassRelationEntity__string__TryGetEntity__);
+           (const MethodInfo_30D6B40 *)Method_DataMasterBase_ClassRelationMaster__ClassRelationEntity__string__TryGetEntity__);
 }
 
 
@@ -71,19 +71,19 @@ float __fastcall ClassRelationMaster__getRate(int32_t atk, int32_t def, const Me
   float v10; // s8
   ClassRelationEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_49FE2B1 & 1) == 0 )
+  if ( (byte_49FE8D1 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataManager_GetMasterData_ClassRelationMaster___, *(_QWORD *)&def);
-    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_49FE2B1 = 1;
+    sub_1B64A00(&Method_DataManager_GetMasterData_ClassRelationMaster___, *(_QWORD *)&def);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_49FE8D1 = 1;
   }
   entity = 0LL;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_9;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_ClassRelationMaster___);
+                        (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ClassRelationMaster___);
   v10 = 1.0;
   if ( MasterData_object )
   {
@@ -98,7 +98,7 @@ float __fastcall ClassRelationMaster__getRate(int32_t atk, int32_t def, const Me
       if ( entity )
         return (float)entity->fields.attackRate / 1000.0;
 LABEL_9:
-      sub_1B64ACC(Instance, v7);
+      sub_1B64C5C(Instance, v7);
     }
   }
   return v10;

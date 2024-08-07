@@ -1,14 +1,14 @@
 void __fastcall ServantCardMaster___ctor(ServantCardMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FEB46 & 1) == 0 )
+  if ( (byte_49FF166 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataMasterBase_ServantCardMaster__ServantCardEntity__string___ctor__, method);
-    byte_49FEB46 = 1;
+    sub_1B64A00(&Method_DataMasterBase_ServantCardMaster__ServantCardEntity__string___ctor__, method);
+    byte_49FF166 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     11,
-    (const MethodInfo_30D6498 *)Method_DataMasterBase_ServantCardMaster__ServantCardEntity__string___ctor__);
+    (const MethodInfo_30D6AB0 *)Method_DataMasterBase_ServantCardMaster__ServantCardEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ ServantCardEntity_o *__fastcall ServantCardMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_49FEB44 & 1) == 0 )
+  if ( (byte_49FF164 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataMasterBase_ServantCardMaster__ServantCardEntity__string__GetEntity__, *(_QWORD *)&svtId);
-    byte_49FEB44 = 1;
+    sub_1B64A00(&Method_DataMasterBase_ServantCardMaster__ServantCardEntity__string__GetEntity__, *(_QWORD *)&svtId);
+    byte_49FF164 = 1;
   }
   PK = (Il2CppObject *)ServantCardEntity__CreatePK(svtId, cardId, *(const MethodInfo **)&cardId);
   return (ServantCardEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                   PK,
-                                  (const MethodInfo_30D64D8 *)Method_DataMasterBase_ServantCardMaster__ServantCardEntity__string__GetEntity__);
+                                  (const MethodInfo_30D6AF0 *)Method_DataMasterBase_ServantCardMaster__ServantCardEntity__string__GetEntity__);
 }
 
 
@@ -44,15 +44,15 @@ bool __fastcall ServantCardMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_49FEB45 & 1) == 0 )
+  if ( (byte_49FF165 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataMasterBase_ServantCardMaster__ServantCardEntity__string__TryGetEntity__, entity);
-    byte_49FEB45 = 1;
+    sub_1B64A00(&Method_DataMasterBase_ServantCardMaster__ServantCardEntity__string__TryGetEntity__, entity);
+    byte_49FF165 = 1;
   }
   PK = (Il2CppObject *)ServantCardEntity__CreatePK(svtId, cardId, *(const MethodInfo **)&svtId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_30D6528 *)Method_DataMasterBase_ServantCardMaster__ServantCardEntity__string__TryGetEntity__);
+           (const MethodInfo_30D6B40 *)Method_DataMasterBase_ServantCardMaster__ServantCardEntity__string__TryGetEntity__);
 }

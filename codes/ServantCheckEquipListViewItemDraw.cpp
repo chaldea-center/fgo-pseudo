@@ -44,16 +44,16 @@ void __fastcall ServantCheckEquipListViewItemDraw__SetItem(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v26; // [xsp+20h] [xbp-60h]
 
   v6 = this;
-  if ( (byte_49FA8F5 & 1) == 0 )
+  if ( (byte_49FAF15 & 1) == 0 )
   {
-    sub_1B64870(&AtlasManager_TypeInfo, item);
-    sub_1B64870(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v7);
-    sub_1B64870(&Rarity_TypeInfo, v8);
-    sub_1B64870(&StringLiteral_22844/*"ribbon_noblephantasmup_01"*/, v9);
-    sub_1B64870(&StringLiteral_20092/*"icon_reinforced"*/, v10);
-    sub_1B64870(&StringLiteral_20081/*"icon_noblephantasmup"*/, v11);
-    this = (ServantCheckEquipListViewItemDraw_o *)sub_1B64870(&StringLiteral_20091/*"icon_rarity5"*/, v12);
-    byte_49FA8F5 = 1;
+    sub_1B64A00(&AtlasManager_TypeInfo, item);
+    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v7);
+    sub_1B64A00(&Rarity_TypeInfo, v8);
+    sub_1B64A00(&StringLiteral_22844/*"ribbon_noblephantasmup_01"*/, v9);
+    sub_1B64A00(&StringLiteral_20092/*"icon_reinforced"*/, v10);
+    sub_1B64A00(&StringLiteral_20081/*"icon_noblephantasmup"*/, v11);
+    this = (ServantCheckEquipListViewItemDraw_o *)sub_1B64A00(&StringLiteral_20091/*"icon_rarity5"*/, v12);
+    byte_49FAF15 = 1;
   }
   if ( item && mode )
   {
@@ -67,11 +67,11 @@ void __fastcall ServantCheckEquipListViewItemDraw__SetItem(
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
     v25 = v26;
-    this = (ServantCheckEquipListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46184056(
+    this = (ServantCheckEquipListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46185616(
                                                     &v25,
                                                     0LL);
     if ( !servantEquipIcon
-      || (ServantFaceIconComponent__Set_37909072(
+      || (ServantFaceIconComponent__Set_37909424(
             servantEquipIcon,
             (int64_t)this,
             item->fields.materialIconLabelInfo,
@@ -80,7 +80,7 @@ void __fastcall ServantCheckEquipListViewItemDraw__SetItem(
           (v16 = item->fields.materialUserServantEntity) == 0LL) )
     {
 LABEL_48:
-      sub_1B64ACC(this, item);
+      sub_1B64C5C(this, item);
     }
     subInfo = v6->fields.subInfo;
     rarity = item->fields.rarity;

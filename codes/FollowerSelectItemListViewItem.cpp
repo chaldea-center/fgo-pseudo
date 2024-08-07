@@ -43,26 +43,26 @@ void __fastcall FollowerSelectItemListViewItem___ctor(
   System_Collections_Generic_Dictionary_int__int__o *v42; // x22
   const MethodInfo *v43; // x2
 
-  if ( (byte_4A02886 & 1) == 0 )
+  if ( (byte_4A02EA7 & 1) == 0 )
   {
-    sub_1B64870(&Method_System_Collections_Generic_Dictionary_int__int___ctor___75618408, *(_QWORD *)&index);
-    sub_1B64870(&System_Collections_Generic_Dictionary_int__int__TypeInfo, v24);
-    sub_1B64870(&IconLabelInfo_TypeInfo, v25);
-    byte_4A02886 = 1;
+    sub_1B64A00(&Method_System_Collections_Generic_Dictionary_int__int___ctor___75619960, *(_QWORD *)&index);
+    sub_1B64A00(&System_Collections_Generic_Dictionary_int__int__TypeInfo, v24);
+    sub_1B64A00(&IconLabelInfo_TypeInfo, v25);
+    byte_4A02EA7 = 1;
   }
-  v26 = (IconLabelInfo_o *)sub_1B64ABC(IconLabelInfo_TypeInfo);
+  v26 = (IconLabelInfo_o *)sub_1B64C4C(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v26, 0LL);
   this->fields.iconLabelInfo1 = v26;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.iconLabelInfo1, (int32_t)v26, v27, v28);
-  v29 = (IconLabelInfo_o *)sub_1B64ABC(IconLabelInfo_TypeInfo);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.iconLabelInfo1, (int32_t)v26, v27, v28);
+  v29 = (IconLabelInfo_o *)sub_1B64C4C(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v29, 0LL);
   this->fields.iconLabelInfo2 = v29;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.iconLabelInfo2, (int32_t)v29, v30, v31);
-  ListViewItem___ctor_40375592((ListViewItem_o *)this, index, 0LL);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.iconLabelInfo2, (int32_t)v29, v30, v31);
+  ListViewItem___ctor_40376104((ListViewItem_o *)this, index, 0LL);
   this->fields.friendPointUpVal = friendPointUpVal;
   this->fields.friendPointUpMaxVal = friendPointUpMaxVal;
   this->fields.friendPointCampaignEntityList = friendPointCampaignEntityList;
-  sub_1B64814(
+  sub_1B649A4(
     (ServantStatusBattleListViewItem_o *)&this->fields.friendPointCampaignEntityList,
     (int32_t)friendPointCampaignEntityList,
     v32,
@@ -72,33 +72,33 @@ void __fastcall FollowerSelectItemListViewItem___ctor(
   this->fields.isServantEquipBonusFilterEnable = isServantEquipBonusFilterEnable;
   this->fields.isRecommended = isRecommended;
   this->fields.setupInfo = setupInfo;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.setupInfo, (int32_t)setupInfo, v34, v35);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.setupInfo, (int32_t)setupInfo, v34, v35);
   this->fields.questRestrictionInfo = questRestrictionInfo;
-  sub_1B64814(
+  sub_1B649A4(
     (ServantStatusBattleListViewItem_o *)&this->fields.questRestrictionInfo,
     (int32_t)questRestrictionInfo,
     v36,
     v37);
   this->fields.followerInfo = followerInfo;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.followerInfo, (int32_t)followerInfo, v38, v39);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.followerInfo, (int32_t)followerInfo, v38, v39);
   this->fields._isRecommendedUser_k__BackingField = isRecommendedUser;
   this->fields.classIndex = index2;
   this->fields.supportDeckId = supportDeckId;
   this->fields.deckPriority = deckPriority;
   if ( classBoardMaxNumDictionary )
   {
-    v42 = (System_Collections_Generic_Dictionary_int__int__o *)sub_1B64ABC(System_Collections_Generic_Dictionary_int__int__TypeInfo);
-    System_Collections_Generic_Dictionary_int__int____ctor_51497132(
+    v42 = (System_Collections_Generic_Dictionary_int__int__o *)sub_1B64C4C(System_Collections_Generic_Dictionary_int__int__TypeInfo);
+    System_Collections_Generic_Dictionary_int__int____ctor_51498692(
       v42,
       (System_Collections_Generic_IDictionary_TKey__TValue__o *)classBoardMaxNumDictionary,
-      (const MethodInfo_311C8AC *)Method_System_Collections_Generic_Dictionary_int__int___ctor___75618408);
+      (const MethodInfo_311CEC4 *)Method_System_Collections_Generic_Dictionary_int__int___ctor___75619960);
   }
   else
   {
     v42 = 0LL;
   }
   this->fields.classBoardMaxNumDictionary = v42;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.classBoardMaxNumDictionary, (int32_t)v42, v40, v41);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.classBoardMaxNumDictionary, (int32_t)v42, v40, v41);
   this->fields._IsReleasedClassBoard_k__BackingField = isReleasedClassBoard;
   this->fields._IsRecommendFollower_k__BackingField = isRecommendFollower;
   FollowerSelectItemListViewItem__AnalyzeEntity(this, followerClassId, v43);
@@ -178,33 +178,33 @@ void __fastcall FollowerSelectItemListViewItem__AnalyzeEntity(
   struct System_Int32_array *squareIds; // x8
   UserEventDataLostEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4A02887 & 1) == 0 )
+  if ( (byte_4A02EA8 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataManager_GetMasterData_ServantMaster___, *(_QWORD *)&followerClassId);
-    sub_1B64870(&Method_DataManager_GetMasterData_TblFriendMaster___, v6);
-    sub_1B64870(&Method_DataManager_GetMaster_ClassBoardClassMaster___, v7);
-    sub_1B64870(&Method_DataManager_GetMaster_ServantMaster___, v8);
-    sub_1B64870(&Method_DataManager_GetMaster_UserEventDataLostMaster___, v9);
-    sub_1B64870(&DataManager_TypeInfo, v10);
-    sub_1B64870(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v11);
-    sub_1B64870(&Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__, v12);
-    sub_1B64870(&Method_System_Collections_Generic_Dictionary_int__int__get_Item__, v13);
-    sub_1B64870(&NetworkManager_TypeInfo, v14);
-    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    byte_4A02887 = 1;
+    sub_1B64A00(&Method_DataManager_GetMasterData_ServantMaster___, *(_QWORD *)&followerClassId);
+    sub_1B64A00(&Method_DataManager_GetMasterData_TblFriendMaster___, v6);
+    sub_1B64A00(&Method_DataManager_GetMaster_ClassBoardClassMaster___, v7);
+    sub_1B64A00(&Method_DataManager_GetMaster_ServantMaster___, v8);
+    sub_1B64A00(&Method_DataManager_GetMaster_UserEventDataLostMaster___, v9);
+    sub_1B64A00(&DataManager_TypeInfo, v10);
+    sub_1B64A00(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v11);
+    sub_1B64A00(&Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__, v12);
+    sub_1B64A00(&Method_System_Collections_Generic_Dictionary_int__int__get_Item__, v13);
+    sub_1B64A00(&NetworkManager_TypeInfo, v14);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
+    byte_4A02EA8 = 1;
   }
   entity = 0LL;
   this->fields.isNpc = 0;
   this->fields.followerClassId = followerClassId;
   this->fields.servantEntity = 0LL;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.servantEntity, 0, (int32_t)method, v3);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.servantEntity, 0, (int32_t)method, v3);
   *(_WORD *)&this->fields.isUniqueSvtRestriction = 0;
   *(_WORD *)&this->fields.isServantEventUpVal = 0;
   this->fields.isEventUpVal = 0;
   this->fields.eventUpValItemList = 0LL;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.eventUpValItemList, 0, v16, v17);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.eventUpValItemList, 0, v16, v17);
   this->fields.friendPointCampaignEntity = 0LL;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.friendPointCampaignEntity, 0, v18, v19);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.friendPointCampaignEntity, 0, v18, v19);
   followerInfo = this->fields.followerInfo;
   this->fields._IsDataLost_k__BackingField = 0;
   this->fields._TimesToRestart_k__BackingField = 0;
@@ -253,25 +253,25 @@ void __fastcall FollowerSelectItemListViewItem__AnalyzeEntity(
       this->fields.isNpc = Follower__IsNpc(v30->fields.type, 0LL);
       EnableFriendPointCampaign = FollowerSelectItemListViewItem__GetEnableFriendPointCampaign(this, v32);
       this->fields.friendPointCampaignEntity = EnableFriendPointCampaign;
-      sub_1B64814(
+      sub_1B649A4(
         (ServantStatusBattleListViewItem_o *)&this->fields.friendPointCampaignEntity,
         (int32_t)EnableFriendPointCampaign,
         v34,
         v35);
-      Index = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Index = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Index )
         goto LABEL_84;
       Index = (int64_t)DataManager__GetMasterData_object_(
                          (DataManager_o *)Index,
-                         (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_ServantMaster___);
+                         (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantMaster___);
       if ( !Index )
         goto LABEL_84;
       v36 = DataMasterBase_object__object__int___GetEntity(
               (DataMasterBase_TMaster__TEntity__PKType__o *)Index,
               v31,
-              (const MethodInfo_30D6180 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+              (const MethodInfo_30D6798 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
       this->fields.servantEntity = (struct ServantEntity_o *)v36;
-      sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.servantEntity, (int32_t)v36, v37, v38);
+      sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.servantEntity, (int32_t)v36, v37, v38);
       v39 = this->fields.followerInfo;
       v40 = this->fields.questRestrictionInfo;
       followerIndex = this->fields.followerIndex;
@@ -337,7 +337,7 @@ void __fastcall FollowerSelectItemListViewItem__AnalyzeEntity(
       {
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_UserEventDataLostMaster___);
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_2E3BC8C *)Method_DataManager_GetMaster_UserEventDataLostMaster___);
         if ( !NetworkManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
         Index = NetworkManager__get_UserId(0LL);
@@ -371,17 +371,17 @@ void __fastcall FollowerSelectItemListViewItem__AnalyzeEntity(
       {
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        Index = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_ServantMaster___);
+        Index = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2E3BC8C *)Method_DataManager_GetMaster_ServantMaster___);
         if ( !Index )
           goto LABEL_84;
         Index = (int64_t)DataMasterBase_object__object__int___GetEntity(
                            (DataMasterBase_TMaster__TEntity__PKType__o *)Index,
                            v31,
-                           (const MethodInfo_30D6180 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                           (const MethodInfo_30D6798 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
         if ( !Index )
           goto LABEL_84;
         v57 = *(_DWORD *)(Index + 80);
-        Index = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_ClassBoardClassMaster___);
+        Index = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2E3BC8C *)Method_DataManager_GetMaster_ClassBoardClassMaster___);
         if ( !Index )
           goto LABEL_84;
         Index = ClassBoardClassMaster__GetClassBoardBaseId((ClassBoardClassMaster_o *)Index, v57, 0LL);
@@ -405,7 +405,7 @@ LABEL_65:
           while ( 1 )
           {
             if ( v62 >= max_length )
-              sub_1B64AD4(Index, v25);
+              sub_1B64C64(Index, v25);
             v63 = userClassBoardInfo->m_Items[v62];
             if ( !v63 )
               goto LABEL_84;
@@ -417,7 +417,7 @@ LABEL_65:
               Index = System_Collections_Generic_Dictionary_int__int___ContainsKey(
                         (System_Collections_Generic_Dictionary_int__int__o *)Index,
                         v61,
-                        (const MethodInfo_311D37C *)Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__);
+                        (const MethodInfo_311D994 *)Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__);
               if ( (Index & 1) != 0 )
               {
                 Index = ClassBoardInfo__IsReleasedClassId(v63, v57, 0LL);
@@ -435,7 +435,7 @@ LABEL_65:
           Index = System_Collections_Generic_Dictionary_int__int___get_Item(
                     (System_Collections_Generic_Dictionary_int__int__o *)Index,
                     v61,
-                    (const MethodInfo_311D0F4 *)Method_System_Collections_Generic_Dictionary_int__int__get_Item__);
+                    (const MethodInfo_311D70C *)Method_System_Collections_Generic_Dictionary_int__int__get_Item__);
           squareIds = v63->fields.squareIds;
           if ( !squareIds )
             goto LABEL_84;
@@ -445,12 +445,12 @@ LABEL_65:
         this->fields._IsMaxOpenClassBoard_k__BackingField = (int)Index > 0 && v64 >= (int)Index;
       }
     }
-    Index = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Index = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Index )
     {
       Index = (int64_t)DataManager__GetMasterData_object_(
                          (DataManager_o *)Index,
-                         (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_TblFriendMaster___);
+                         (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_TblFriendMaster___);
       v65 = this->fields.followerInfo;
       if ( v65 )
       {
@@ -488,7 +488,7 @@ LABEL_65:
       }
     }
 LABEL_84:
-    sub_1B64ACC(Index, v25);
+    sub_1B64C5C(Index, v25);
   }
   v23 = this->fields.questRestrictionInfo;
   this->fields.followerIndex = 0;
@@ -525,13 +525,13 @@ bool __fastcall FollowerSelectItemListViewItem__CheckSlotRestriction(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v23; // 0:x0.16
 
   v2 = this;
-  if ( (byte_4A02888 & 1) == 0 )
+  if ( (byte_4A02EA9 & 1) == 0 )
   {
-    sub_1B64870(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-    this = (FollowerSelectItemListViewItem_o *)sub_1B64870(
+    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
+    this = (FollowerSelectItemListViewItem_o *)sub_1B64A00(
                                                  &Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__,
                                                  v3);
-    byte_4A02888 = 1;
+    byte_4A02EA9 = 1;
   }
   followerInfo = v2->fields.followerInfo;
   questRestrictionInfo = v2->fields.questRestrictionInfo;
@@ -558,11 +558,11 @@ bool __fastcall FollowerSelectItemListViewItem__CheckSlotRestriction(
     goto LABEL_28;
   if ( QuestRestrictionInfo__IsUseOldMaster((QuestRestrictionInfo_o *)this, 0LL) )
     return 0;
-  this = (FollowerSelectItemListViewItem_o *)SingletonTemplate_object___get_Instance((const MethodInfo_36EE738 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+  this = (FollowerSelectItemListViewItem_o *)SingletonTemplate_object___get_Instance((const MethodInfo_36EED50 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
   if ( !this )
     goto LABEL_28;
   sortValue1 = this->fields.sortValue1;
-  this = (FollowerSelectItemListViewItem_o *)SingletonTemplate_object___get_Instance((const MethodInfo_36EE738 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+  this = (FollowerSelectItemListViewItem_o *)SingletonTemplate_object___get_Instance((const MethodInfo_36EED50 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
   if ( !this )
     goto LABEL_28;
   v8 = 0;
@@ -571,7 +571,7 @@ bool __fastcall FollowerSelectItemListViewItem__CheckSlotRestriction(
   if ( !v2->fields.questRestrictionInfo )
     goto LABEL_28;
   sortValue1_high = HIDWORD(this->fields.sortValue1);
-  this = (FollowerSelectItemListViewItem_o *)QuestRestrictionInfo__IsMyServantOrNpcRestriction_40123220(
+  this = (FollowerSelectItemListViewItem_o *)QuestRestrictionInfo__IsMyServantOrNpcRestriction_40123732(
                                                v2->fields.questRestrictionInfo,
                                                sortValue1_high,
                                                0LL);
@@ -602,13 +602,13 @@ bool __fastcall FollowerSelectItemListViewItem__CheckSlotRestriction(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v23.fields.currentCryptoKey = v19;
   *(_QWORD *)&v23.fields.fakeValue = sortStr1;
-  v20 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46180532(v23, 0LL);
+  v20 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v23, 0LL);
   limitCount = v16->fields.limitCount;
   v22 = v20;
   this = (FollowerSelectItemListViewItem_o *)ServantLeaderInfo__getDispLimitCount(v16, 0LL);
   if ( !v17 )
 LABEL_28:
-    sub_1B64ACC(this, method);
+    sub_1B64C5C(this, method);
   return QuestRestrictionInfo__IsRestrictionServantIndividuality(
            v17,
            v22,
@@ -626,7 +626,7 @@ bool __fastcall FollowerSelectItemListViewItem__ChkWholeFilter(
         const MethodInfo *method)
 {
   if ( !sort )
-    sub_1B64ACC(this, 0LL);
+    sub_1B64C5C(this, 0LL);
   if ( !ListViewSort__GetFilter(sort, 19, 0LL) && !ListViewSort__GetFilter(sort, 18, 0LL)
     || this->fields.isEquipEventUpVal && ListViewSort__GetFilter(sort, 19, 0LL) )
   {
@@ -662,11 +662,11 @@ bool __fastcall FollowerSelectItemListViewItem__GetAppendSkillInfo(
   int32_t v14; // w2
   int32_t v15; // w3
 
-  if ( (byte_4A02891 & 1) == 0 )
+  if ( (byte_4A02EB2 & 1) == 0 )
   {
-    sub_1B64870(&BalanceConfig_TypeInfo, skillInfoList);
-    sub_1B64870(&SkillInfo___TypeInfo, v7);
-    byte_4A02891 = 1;
+    sub_1B64A00(&BalanceConfig_TypeInfo, skillInfoList);
+    sub_1B64A00(&SkillInfo___TypeInfo, v7);
+    byte_4A02EB2 = 1;
   }
   followerInfo = this->fields.followerInfo;
   if ( followerInfo )
@@ -687,11 +687,11 @@ bool __fastcall FollowerSelectItemListViewItem__GetAppendSkillInfo(
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
       v12 = BalanceConfig_TypeInfo;
     }
-    v13 = (SkillInfo_array *)sub_1B64918(
+    v13 = (SkillInfo_array *)sub_1B64AA8(
                                SkillInfo___TypeInfo,
                                (unsigned int)v12->static_fields->SvtAppendPassiveSkillListMax);
     *skillInfoList = v13;
-    sub_1B64814((ServantStatusBattleListViewItem_o *)skillInfoList, (int32_t)v13, v14, v15);
+    sub_1B649A4((ServantStatusBattleListViewItem_o *)skillInfoList, (int32_t)v13, v14, v15);
   }
   return followerInfo != 0LL;
 }
@@ -721,7 +721,7 @@ EventCampaignEntity_o *__fastcall FollowerSelectItemListViewItem__GetEnableFrien
   friendPointCampaignEntityList = this->fields.friendPointCampaignEntityList;
   if ( !friendPointCampaignEntityList )
 LABEL_30:
-    sub_1B64ACC(SvtId, v4);
+    sub_1B64C5C(SvtId, v4);
   max_length = friendPointCampaignEntityList->max_length;
   if ( max_length >= 1 )
   {
@@ -731,7 +731,7 @@ LABEL_30:
     while ( 1 )
     {
       if ( v7 == max_length )
-        sub_1B64AD4(SvtId, v4);
+        sub_1B64C64(SvtId, v4);
       v10 = friendPointCampaignEntityList->m_Items[v7];
       if ( !v10 )
         goto LABEL_30;
@@ -789,22 +789,22 @@ System_String_o *__fastcall FollowerSelectItemListViewItem__GetFriendPointCampai
   Il2CppObject *v13; // x0
   int v15; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_4A02890 & 1) == 0 )
+  if ( (byte_4A02EB1 & 1) == 0 )
   {
-    sub_1B64870(&int_TypeInfo, method);
-    sub_1B64870(&LocalizationManager_TypeInfo, v3);
-    sub_1B64870(&StringLiteral_1/*""*/, v4);
-    sub_1B64870(&StringLiteral_6387/*"FOLLOWER_SELECT_FRIEND_POINT_CAMPAIGN"*/, v5);
-    byte_4A02890 = 1;
+    sub_1B64A00(&int_TypeInfo, method);
+    sub_1B64A00(&LocalizationManager_TypeInfo, v3);
+    sub_1B64A00(&StringLiteral_1/*""*/, v4);
+    sub_1B64A00(&StringLiteral_6388/*"FOLLOWER_SELECT_FRIEND_POINT_CAMPAIGN"*/, v5);
+    byte_4A02EB1 = 1;
   }
   if ( !this->fields.friendPointCampaignEntity )
     return (System_String_o *)StringLiteral_1/*""*/;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_6387/*"FOLLOWER_SELECT_FRIEND_POINT_CAMPAIGN"*/, 0LL);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_6388/*"FOLLOWER_SELECT_FRIEND_POINT_CAMPAIGN"*/, 0LL);
   friendPointCampaignEntity = this->fields.friendPointCampaignEntity;
   if ( !friendPointCampaignEntity )
-    sub_1B64ACC(v6, v7);
+    sub_1B64C5C(v6, v7);
   v12 = v6;
   v15 = friendPointCampaignEntity->fields.value / 1000;
   v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15, v8, v9, v10);
@@ -866,7 +866,7 @@ int32_t __fastcall FollowerSelectItemListViewItem__GetFriendPointUpVal(
     if ( v10 )
       goto LABEL_8;
 LABEL_15:
-    sub_1B64ACC(FriendPointUpVal, v9);
+    sub_1B64C5C(FriendPointUpVal, v9);
   }
   FriendPointUpVal = FollowerInfo__GetReturnTypeByQuestId(v11->fields.questId, 0LL);
   v14 = FriendPointUpVal;
@@ -900,10 +900,10 @@ bool __fastcall FollowerSelectItemListViewItem__GetNpInfo(
   int32_t v10; // w2
   int32_t v11; // w3
 
-  if ( (byte_4A0288F & 1) == 0 )
+  if ( (byte_4A02EB0 & 1) == 0 )
   {
-    sub_1B64870(&TreasureDvcInfo_TypeInfo, tdInfo);
-    byte_4A0288F = 1;
+    sub_1B64A00(&TreasureDvcInfo_TypeInfo, tdInfo);
+    byte_4A02EB0 = 1;
   }
   followerInfo = this->fields.followerInfo;
   if ( followerInfo )
@@ -918,10 +918,10 @@ bool __fastcall FollowerSelectItemListViewItem__GetNpInfo(
   }
   else
   {
-    v9 = (TreasureDvcInfo_o *)sub_1B64ABC(TreasureDvcInfo_TypeInfo);
+    v9 = (TreasureDvcInfo_o *)sub_1B64C4C(TreasureDvcInfo_TypeInfo);
     TreasureDvcInfo___ctor(v9, 0LL);
     *tdInfo = v9;
-    sub_1B64814((ServantStatusBattleListViewItem_o *)tdInfo, (int32_t)v9, v10, v11);
+    sub_1B649A4((ServantStatusBattleListViewItem_o *)tdInfo, (int32_t)v9, v10, v11);
     return 0;
   }
 }
@@ -942,11 +942,11 @@ bool __fastcall FollowerSelectItemListViewItem__GetSkillInfo(
   int32_t v12; // w2
   int32_t v13; // w3
 
-  if ( (byte_4A0288E & 1) == 0 )
+  if ( (byte_4A02EAF & 1) == 0 )
   {
-    sub_1B64870(&BalanceConfig_TypeInfo, skillInfoList);
-    sub_1B64870(&SkillInfo___TypeInfo, v5);
-    byte_4A0288E = 1;
+    sub_1B64A00(&BalanceConfig_TypeInfo, skillInfoList);
+    sub_1B64A00(&SkillInfo___TypeInfo, v5);
+    byte_4A02EAF = 1;
   }
   followerInfo = this->fields.followerInfo;
   if ( followerInfo )
@@ -967,9 +967,9 @@ bool __fastcall FollowerSelectItemListViewItem__GetSkillInfo(
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
       v10 = BalanceConfig_TypeInfo;
     }
-    v11 = (SkillInfo_array *)sub_1B64918(SkillInfo___TypeInfo, (unsigned int)v10->static_fields->SvtSkillListMax);
+    v11 = (SkillInfo_array *)sub_1B64AA8(SkillInfo___TypeInfo, (unsigned int)v10->static_fields->SvtSkillListMax);
     *skillInfoList = v11;
-    sub_1B64814((ServantStatusBattleListViewItem_o *)skillInfoList, (int32_t)v11, v12, v13);
+    sub_1B649A4((ServantStatusBattleListViewItem_o *)skillInfoList, (int32_t)v11, v12, v13);
   }
   return followerInfo != 0LL;
 }
@@ -1045,18 +1045,18 @@ System_Collections_Generic_Dictionary_string__int__o *__fastcall FollowerSelectI
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v44; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v45; // 0:x0.16
 
-  if ( (byte_4A0288A & 1) == 0 )
+  if ( (byte_4A02EAB & 1) == 0 )
   {
-    sub_1B64870(&Method_DataManager_GetMaster_FunctionMaster___, *(_QWORD *)&kind);
-    sub_1B64870(&Method_DataManager_GetMaster_ServantSkillMaster___, v5);
-    sub_1B64870(&Method_DataManager_GetMaster_SkillLvMaster___, v6);
-    sub_1B64870(&DataManager_TypeInfo, v7);
-    sub_1B64870(&Method_DataMasterBase_FunctionMaster__FunctionEntity__int__TryGetEntity__, v8);
-    sub_1B64870(&Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__, v9);
-    sub_1B64870(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__, v10);
-    sub_1B64870(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v11);
-    sub_1B64870(&StringLiteral_1476/*"3"*/, v12);
-    byte_4A0288A = 1;
+    sub_1B64A00(&Method_DataManager_GetMaster_FunctionMaster___, *(_QWORD *)&kind);
+    sub_1B64A00(&Method_DataManager_GetMaster_ServantSkillMaster___, v5);
+    sub_1B64A00(&Method_DataManager_GetMaster_SkillLvMaster___, v6);
+    sub_1B64A00(&DataManager_TypeInfo, v7);
+    sub_1B64A00(&Method_DataMasterBase_FunctionMaster__FunctionEntity__int__TryGetEntity__, v8);
+    sub_1B64A00(&Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__, v9);
+    sub_1B64A00(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__, v10);
+    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v11);
+    sub_1B64A00(&StringLiteral_1476/*"3"*/, v12);
+    byte_4A02EAB = 1;
   }
   v42 = 0LL;
   entity = 0LL;
@@ -1076,11 +1076,11 @@ System_Collections_Generic_Dictionary_string__int__o *__fastcall FollowerSelectI
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v44.fields.currentCryptoKey = keys;
     *(_QWORD *)&v44.fields.fakeValue = values;
-    if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46180532(v44, 0LL) >= 1 )
+    if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v44, 0LL) >= 1 )
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_ServantSkillMaster___);
+      Master_object = DataManager__GetMaster_object_((const MethodInfo_2E3BC8C *)Method_DataManager_GetMaster_ServantSkillMaster___);
       result = (System_Collections_Generic_Dictionary_string__int__o *)FollowerSelectItemListViewItem__get_EquipInfo(
                                                                          this,
                                                                          v19);
@@ -1092,7 +1092,7 @@ System_Collections_Generic_Dictionary_string__int__o *__fastcall FollowerSelectI
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v45.fields.currentCryptoKey = v21;
       *(_QWORD *)&v45.fields.fakeValue = v20;
-      result = (System_Collections_Generic_Dictionary_string__int__o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46180532(
+      result = (System_Collections_Generic_Dictionary_string__int__o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(
                                                                          v45,
                                                                          0LL);
       if ( !Master_object )
@@ -1101,8 +1101,8 @@ System_Collections_Generic_Dictionary_string__int__o *__fastcall FollowerSelectI
                            (ServantSkillMaster_o *)Master_object,
                            (int32_t)result,
                            0LL);
-      v23 = DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_SkillLvMaster___);
-      v24 = DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_FunctionMaster___);
+      v23 = DataManager__GetMaster_object_((const MethodInfo_2E3BC8C *)Method_DataManager_GetMaster_SkillLvMaster___);
+      v24 = DataManager__GetMaster_object_((const MethodInfo_2E3BC8C *)Method_DataManager_GetMaster_FunctionMaster___);
       result = (System_Collections_Generic_Dictionary_string__int__o *)FollowerSelectItemListViewItem__get_EquipInfo(
                                                                          this,
                                                                          v25);
@@ -1141,7 +1141,7 @@ System_Collections_Generic_Dictionary_string__int__o *__fastcall FollowerSelectI
                 goto LABEL_27;
             }
 LABEL_75:
-            sub_1B64AD4(result, v15);
+            sub_1B64C64(result, v15);
           }
 LABEL_27:
           if ( !v23 )
@@ -1179,7 +1179,7 @@ LABEL_71:
                                                                                  (DataMasterBase_TMaster__TEntity__PKType__o *)v24,
                                                                                  &v42,
                                                                                  funcId->m_Items[v35 + 1],
-                                                                                 (const MethodInfo_30D61D4 *)Method_DataMasterBase_FunctionMaster__FunctionEntity__int__TryGetEntity__);
+                                                                                 (const MethodInfo_30D67EC *)Method_DataMasterBase_FunctionMaster__FunctionEntity__int__TryGetEntity__);
               if ( ((unsigned __int8)result & 1) != 0 )
               {
                 switch ( v29 )
@@ -1240,12 +1240,12 @@ LABEL_71:
                     if ( System_Collections_Generic_Dictionary_object__int___ContainsKey(
                            v41,
                            (Il2CppObject *)StringLiteral_1476/*"3"*/,
-                           (const MethodInfo_3172B80 *)Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__) )
+                           (const MethodInfo_3173198 *)Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__) )
                     {
                       result = (System_Collections_Generic_Dictionary_string__int__o *)System_Collections_Generic_Dictionary_object__int___get_Item(
                                                                                          v41,
                                                                                          (Il2CppObject *)StringLiteral_1476/*"3"*/,
-                                                                                         (const MethodInfo_317290C *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
+                                                                                         (const MethodInfo_3172F24 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
                       if ( (_DWORD)result )
                         break;
                     }
@@ -1287,7 +1287,7 @@ LABEL_52:
           }
         }
 LABEL_74:
-        sub_1B64ACC(result, v15);
+        sub_1B64C5C(result, v15);
       }
     }
     return 0LL;
@@ -1365,7 +1365,7 @@ void __fastcall FollowerSelectItemListViewItem__Modify(
       v12 = (int)this;
       if ( !v9 )
 LABEL_15:
-        sub_1B64ACC(this, *(_QWORD *)&friendPointUpVal);
+        sub_1B64C5C(this, *(_QWORD *)&friendPointUpVal);
     }
     else
     {
@@ -1496,26 +1496,26 @@ void __fastcall FollowerSelectItemListViewItem__SetEventUpInfo(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v88; // 0:x0.16
 
   v4 = this;
-  if ( (byte_4A02889 & 1) == 0 )
+  if ( (byte_4A02EAA & 1) == 0 )
   {
-    sub_1B64870(&Method_DataManager_GetMaster_EventServantPointRankMaster___, method);
-    sub_1B64870(&DataManager_TypeInfo, v5);
-    sub_1B64870(&Method_System_Linq_Enumerable_Distinct_int___, v6);
-    sub_1B64870(&Method_System_Linq_Enumerable_Select_EventDropUpValInfo__int___, v7);
-    sub_1B64870(&Method_System_Linq_Enumerable_ToArray_int___, v8);
-    sub_1B64870(&EventMargeItemUpValInfo_TypeInfo, v9);
-    sub_1B64870(&EventPersonalMargeUpValInfo_TypeInfo, v10);
-    sub_1B64870(&System_Func_EventDropUpValInfo__int__TypeInfo, v11);
-    sub_1B64870(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Add__, v12);
-    sub_1B64870(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Insert__, v13);
-    sub_1B64870(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__ToArray__, v14);
-    sub_1B64870(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo___ctor__, v15);
-    sub_1B64870(&System_Collections_Generic_List_EventMargeItemUpValInfo__TypeInfo, v16);
-    sub_1B64870(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v17);
-    sub_1B64870(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v18);
-    sub_1B64870(&Method_FollowerSelectItemListViewItem___c__SetEventUpInfo_b__72_0__, v19);
-    this = (FollowerSelectItemListViewItem_o *)sub_1B64870(&FollowerSelectItemListViewItem___c_TypeInfo, v20);
-    byte_4A02889 = 1;
+    sub_1B64A00(&Method_DataManager_GetMaster_EventServantPointRankMaster___, method);
+    sub_1B64A00(&DataManager_TypeInfo, v5);
+    sub_1B64A00(&Method_System_Linq_Enumerable_Distinct_int___, v6);
+    sub_1B64A00(&Method_System_Linq_Enumerable_Select_EventDropUpValInfo__int___, v7);
+    sub_1B64A00(&Method_System_Linq_Enumerable_ToArray_int___, v8);
+    sub_1B64A00(&EventMargeItemUpValInfo_TypeInfo, v9);
+    sub_1B64A00(&EventPersonalMargeUpValInfo_TypeInfo, v10);
+    sub_1B64A00(&System_Func_EventDropUpValInfo__int__TypeInfo, v11);
+    sub_1B64A00(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Add__, v12);
+    sub_1B64A00(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Insert__, v13);
+    sub_1B64A00(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__ToArray__, v14);
+    sub_1B64A00(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo___ctor__, v15);
+    sub_1B64A00(&System_Collections_Generic_List_EventMargeItemUpValInfo__TypeInfo, v16);
+    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v17);
+    sub_1B64A00(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v18);
+    sub_1B64A00(&Method_FollowerSelectItemListViewItem___c__SetEventUpInfo_b__72_0__, v19);
+    this = (FollowerSelectItemListViewItem_o *)sub_1B64A00(&FollowerSelectItemListViewItem___c_TypeInfo, v20);
+    byte_4A02EAA = 1;
   }
   skillName = 0LL;
   actMaxRarity = 0;
@@ -1530,7 +1530,7 @@ void __fastcall FollowerSelectItemListViewItem__SetEventUpInfo(
       *(_WORD *)&v4->fields.isServantEventUpVal = 0;
       v4->fields.isEventUpVal = 0;
       v4->fields.eventUpValItemList = 0LL;
-      sub_1B64814((ServantStatusBattleListViewItem_o *)&v4->fields.eventUpValItemList, 0, v2, v3);
+      sub_1B649A4((ServantStatusBattleListViewItem_o *)&v4->fields.eventUpValItemList, 0, v2, v3);
       followerInfo = v4->fields.followerInfo;
       v25 = v4->fields.setupInfo;
       questRestrictionInfo = v4->fields.questRestrictionInfo;
@@ -1551,7 +1551,7 @@ void __fastcall FollowerSelectItemListViewItem__SetEventUpInfo(
           goto LABEL_73;
       }
       p_isEquipEventUpVal = &v4->fields.isEquipEventUpVal;
-      FollowerInfo__getEventUpVal_38606288(
+      FollowerInfo__getEventUpVal_38606640(
         followerInfo,
         &v4->fields.eventUpValInfo,
         &v4->fields.isServantEventUpVal,
@@ -1570,7 +1570,7 @@ void __fastcall FollowerSelectItemListViewItem__SetEventUpInfo(
         iconLabelInfo2 = this->fields.iconLabelInfo2;
         if ( iconLabelInfo2 )
         {
-          Instance = SingletonTemplate_object___get_Instance((const MethodInfo_36EE738 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+          Instance = SingletonTemplate_object___get_Instance((const MethodInfo_36EED50 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
           this = (FollowerSelectItemListViewItem_o *)FollowerSelectItemListViewItem__get_ServantLeader(v4, v33);
           if ( !this )
             goto LABEL_73;
@@ -1580,7 +1580,7 @@ void __fastcall FollowerSelectItemListViewItem__SetEventUpInfo(
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
           *(_QWORD *)&v87.fields.currentCryptoKey = sortValue1;
           *(_QWORD *)&v87.fields.fakeValue = sortStr1;
-          v36 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46180532(v87, 0LL);
+          v36 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v87, 0LL);
           this = (FollowerSelectItemListViewItem_o *)FollowerSelectItemListViewItem__get_ServantLeader(v4, v37);
           if ( !this )
             goto LABEL_73;
@@ -1591,7 +1591,7 @@ void __fastcall FollowerSelectItemListViewItem__SetEventUpInfo(
           v40 = this->fields.iconLabelInfo2;
           if ( !v40 )
             goto LABEL_73;
-          this = (FollowerSelectItemListViewItem_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46180532(
+          this = (FollowerSelectItemListViewItem_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(
                                                        *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)&v40[1].monitor,
                                                        0LL);
           if ( !Instance )
@@ -1621,10 +1621,10 @@ void __fastcall FollowerSelectItemListViewItem__SetEventUpInfo(
         v41 = *p_isEquipEventUpVal;
       }
       v4->fields.isEventUpVal = v41 || v4->fields.isServantEventUpVal;
-      v42 = (System_Collections_Generic_List_object__o *)sub_1B64ABC(System_Collections_Generic_List_EventMargeItemUpValInfo__TypeInfo);
+      v42 = (System_Collections_Generic_List_object__o *)sub_1B64C4C(System_Collections_Generic_List_EventMargeItemUpValInfo__TypeInfo);
       System_Collections_Generic_List_object____ctor(
         v42,
-        (const MethodInfo_34AF17C *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo___ctor__);
+        (const MethodInfo_34AF794 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo___ctor__);
       eventUpValInfo = v4->fields.eventUpValInfo;
       if ( eventUpValInfo )
       {
@@ -1645,7 +1645,7 @@ void __fastcall FollowerSelectItemListViewItem__SetEventUpInfo(
             v45 = FollowerSelectItemListViewItem___c_TypeInfo;
           }
           v47 = (Il2CppObject *)v45->static_fields->__9;
-          _9__72_0 = (System_Func_object__int__o *)sub_1B64ABC(System_Func_EventDropUpValInfo__int__TypeInfo);
+          _9__72_0 = (System_Func_object__int__o *)sub_1B64C4C(System_Func_EventDropUpValInfo__int__TypeInfo);
           System_Func_object__int____ctor(
             _9__72_0,
             v47,
@@ -1653,18 +1653,18 @@ void __fastcall FollowerSelectItemListViewItem__SetEventUpInfo(
             0LL);
           static_fields = FollowerSelectItemListViewItem___c_TypeInfo->static_fields;
           static_fields->__9__72_0 = (struct System_Func_EventDropUpValInfo__int__o *)_9__72_0;
-          sub_1B64814((ServantStatusBattleListViewItem_o *)&static_fields->__9__72_0, (int32_t)_9__72_0, v49, v50);
+          sub_1B649A4((ServantStatusBattleListViewItem_o *)&static_fields->__9__72_0, (int32_t)_9__72_0, v49, v50);
         }
         v51 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                      dropList,
                                                                      (System_Func_TSource__TResult__o *)_9__72_0,
-                                                                     (const MethodInfo_2E6ADAC *)Method_System_Linq_Enumerable_Select_EventDropUpValInfo__int___);
+                                                                     (const MethodInfo_2E6B3C4 *)Method_System_Linq_Enumerable_Select_EventDropUpValInfo__int___);
         v52 = System_Linq_Enumerable__Distinct_int_(
                 v51,
-                (const MethodInfo_2E5A07C *)Method_System_Linq_Enumerable_Distinct_int___);
+                (const MethodInfo_2E5A694 *)Method_System_Linq_Enumerable_Distinct_int___);
         this = (FollowerSelectItemListViewItem_o *)System_Linq_Enumerable__ToArray_int_(
                                                      v52,
-                                                     (const MethodInfo_2E73508 *)Method_System_Linq_Enumerable_ToArray_int___);
+                                                     (const MethodInfo_2E73B20 *)Method_System_Linq_Enumerable_ToArray_int___);
         actMaxRarity = 0;
         if ( this )
         {
@@ -1681,7 +1681,7 @@ void __fastcall FollowerSelectItemListViewItem__SetEventUpInfo(
                 goto LABEL_74;
               servantEntity = v4->fields.servantEntity;
               v58 = *((_DWORD *)&v54->fields.sortValue0 + v56);
-              v59 = (EventPersonalMargeUpValInfo_o *)sub_1B64ABC(*v55);
+              v59 = (EventPersonalMargeUpValInfo_o *)sub_1B64C4C(*v55);
               EventPersonalMargeUpValInfo___ctor(v59, v58, servantEntity, 0LL);
               this = (FollowerSelectItemListViewItem_o *)v4->fields.eventUpValInfo;
               if ( !this )
@@ -1712,7 +1712,7 @@ LABEL_51:
                 {
                   if ( !DataManager_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-                  this = (FollowerSelectItemListViewItem_o *)DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_EventServantPointRankMaster___);
+                  this = (FollowerSelectItemListViewItem_o *)DataManager__GetMaster_object_((const MethodInfo_2E3BC8C *)Method_DataManager_GetMaster_EventServantPointRankMaster___);
                   if ( !this )
                     goto LABEL_73;
                   v69 = (EventServantPointRankMaster_o *)this;
@@ -1741,12 +1741,12 @@ LABEL_51:
                       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
                     *(_QWORD *)&v88.fields.currentCryptoKey = v74;
                     *(_QWORD *)&v88.fields.fakeValue = v73;
-                    v75 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46180532(v88, 0LL);
+                    v75 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v88, 0LL);
                     EnableEntity = EventServantPointRankMaster__GetEnableEntity(v69, v58, eventUpValItemList, v75, 0LL);
                     v77 = EnableEntity ? EnableEntity->fields.svtPointRank : 0;
                     v55 = v72;
-                    v78 = (EventMargeItemUpValInfo_o *)sub_1B64ABC(EventMargeItemUpValInfo_TypeInfo);
-                    EventMargeItemUpValInfo___ctor_38577364(v78, v58, 0LL);
+                    v78 = (EventMargeItemUpValInfo_o *)sub_1B64C4C(EventMargeItemUpValInfo_TypeInfo);
+                    EventMargeItemUpValInfo___ctor_38577716(v78, v58, 0LL);
                     v4 = v84;
                     this = (FollowerSelectItemListViewItem_o *)FollowerSelectItemListViewItem__get_ServantLeader(
                                                                  v84,
@@ -1767,7 +1767,7 @@ LABEL_51:
                       v42,
                       0,
                       (Il2CppObject *)v78,
-                      (const MethodInfo_34B0800 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Insert__);
+                      (const MethodInfo_34B0E18 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Insert__);
                   }
                 }
               }
@@ -1794,36 +1794,36 @@ LABEL_51:
                 System_Collections_Generic_List_object___AddWithResize(
                   v42,
                   (Il2CppObject *)method,
-                  *(const MethodInfo_34AF9B0 **)(*(_QWORD *)(v66[4] + 192LL) + 112LL));
+                  *(const MethodInfo_34AFFC8 **)(*(_QWORD *)(v66[4] + 192LL) + 112LL));
               }
               else
               {
                 v68 = &items->obj.klass + size;
                 v42->fields._size = size + 1;
                 v68[4] = (Il2CppClass *)method;
-                sub_1B64814((ServantStatusBattleListViewItem_o *)(v68 + 4), (int32_t)method, v60, v61);
+                sub_1B649A4((ServantStatusBattleListViewItem_o *)(v68 + 4), (int32_t)method, v60, v61);
               }
               LODWORD(v62) = v63->fields.sortIndex;
               if ( (__int64)++v64 >= (int)v62 )
                 goto LABEL_51;
             }
 LABEL_74:
-            sub_1B64AD4(this, method);
+            sub_1B64C64(this, method);
           }
 LABEL_70:
           if ( v42 )
           {
             v80 = System_Collections_Generic_List_object___ToArray(
                     v42,
-                    (const MethodInfo_34B15A8 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__ToArray__);
+                    (const MethodInfo_34B1BC0 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__ToArray__);
             p_eventUpValItemList->klass = (ServantStatusBattleListViewItem_c *)v80;
-            sub_1B64814(p_eventUpValItemList, (int32_t)v80, v81, v82);
+            sub_1B649A4(p_eventUpValItemList, (int32_t)v80, v81, v82);
             return;
           }
         }
       }
 LABEL_73:
-      sub_1B64ACC(this, method);
+      sub_1B64C5C(this, method);
     }
   }
 }
@@ -1885,7 +1885,7 @@ bool __fastcall FollowerSelectItemListViewItem__SetSortValue(
   System_String_o *v43; // x0
   System_String_o *v44; // x0
   System_String_o *v45; // x0
-  int32_t Int_69093624; // w26
+  int32_t Int_69095184; // w26
   const MethodInfo *v47; // x1
   int64_t v48; // x27
   struct System_String_o *v49; // x28
@@ -2002,21 +2002,21 @@ bool __fastcall FollowerSelectItemListViewItem__SetSortValue(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v161; // 0:x0.16
 
   v4 = this;
-  if ( (byte_4A0288B & 1) == 0 )
+  if ( (byte_4A02EAC & 1) == 0 )
   {
-    sub_1B64870(&BalanceConfig_TypeInfo, sort);
-    sub_1B64870(&Method_DataManager_GetMasterData_EventBonusFilterGroupMemberMaster___, v5);
-    sub_1B64870(&Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__, v6);
-    sub_1B64870(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__, v7);
-    sub_1B64870(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v8);
-    sub_1B64870(&ServantBonusFilterSelectMenu_TypeInfo, v9);
-    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_1B64870(&StringLiteral_1414/*"2"*/, v11);
-    sub_1B64870(&StringLiteral_3287/*"BonusFilterEquipId"*/, v12);
-    sub_1B64870(&StringLiteral_3289/*"BonusFilterGroupId"*/, v13);
-    sub_1B64870(&StringLiteral_1267/*"1"*/, v14);
-    this = (FollowerSelectItemListViewItem_o *)sub_1B64870(&StringLiteral_1213/*"0"*/, v15);
-    byte_4A0288B = 1;
+    sub_1B64A00(&BalanceConfig_TypeInfo, sort);
+    sub_1B64A00(&Method_DataManager_GetMasterData_EventBonusFilterGroupMemberMaster___, v5);
+    sub_1B64A00(&Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__, v6);
+    sub_1B64A00(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__, v7);
+    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v8);
+    sub_1B64A00(&ServantBonusFilterSelectMenu_TypeInfo, v9);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
+    sub_1B64A00(&StringLiteral_1414/*"2"*/, v11);
+    sub_1B64A00(&StringLiteral_3288/*"BonusFilterEquipId"*/, v12);
+    sub_1B64A00(&StringLiteral_3290/*"BonusFilterGroupId"*/, v13);
+    sub_1B64A00(&StringLiteral_1267/*"1"*/, v14);
+    this = (FollowerSelectItemListViewItem_o *)sub_1B64A00(&StringLiteral_1213/*"0"*/, v15);
+    byte_4A02EAC = 1;
   }
   v157 = 0;
   entity = 0LL;
@@ -2071,7 +2071,7 @@ LABEL_201:
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v159.fields.currentCryptoKey = sortStr1;
       *(_QWORD *)&v159.fields.fakeValue = sortValue1B;
-      this = (FollowerSelectItemListViewItem_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46180532(
+      this = (FollowerSelectItemListViewItem_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(
                                                    v159,
                                                    0LL);
       if ( (int)this < 1 )
@@ -2080,14 +2080,14 @@ LABEL_201:
         goto LABEL_198;
       if ( ListViewSort__GetFilter(sort, 41, 0LL) )
         goto LABEL_53;
-      v37 = (System_String_o *)StringLiteral_3287/*"BonusFilterEquipId"*/;
-      v38 = (System_String_o *)StringLiteral_3289/*"BonusFilterGroupId"*/;
-      this = (FollowerSelectItemListViewItem_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      v37 = (System_String_o *)StringLiteral_3288/*"BonusFilterEquipId"*/;
+      v38 = (System_String_o *)StringLiteral_3290/*"BonusFilterGroupId"*/;
+      this = (FollowerSelectItemListViewItem_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !this )
         goto LABEL_198;
       MasterData_object = DataManager__GetMasterData_object_(
                             (DataManager_o *)this,
-                            (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_EventBonusFilterGroupMemberMaster___);
+                            (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_EventBonusFilterGroupMemberMaster___);
       if ( !ServantBonusFilterSelectMenu_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(ServantBonusFilterSelectMenu_TypeInfo);
       MaxIndividualFilter = ServantBonusFilterSelectMenu__GetMaxIndividualFilter(0LL);
@@ -2105,12 +2105,12 @@ LABEL_53:
         while ( 1 )
         {
           v42 = System_Int32__ToString((int32_t)&v157, 0LL);
-          v43 = System_String__Concat_61383576(v37, v42, 0LL);
+          v43 = System_String__Concat_61385136(v37, v42, 0LL);
           if ( UnityEngine_PlayerPrefs__HasKey(v43, 0LL) )
           {
             v44 = System_Int32__ToString((int32_t)&v157, 0LL);
-            v45 = System_String__Concat_61383576(v37, v44, 0LL);
-            Int_69093624 = UnityEngine_PlayerPrefs__GetInt_69093624(v45, 0LL);
+            v45 = System_String__Concat_61385136(v37, v44, 0LL);
+            Int_69095184 = UnityEngine_PlayerPrefs__GetInt_69095184(v45, 0LL);
             this = (FollowerSelectItemListViewItem_o *)FollowerSelectItemListViewItem__get_EquipInfo(v4, v47);
             if ( !this )
               goto LABEL_198;
@@ -2121,16 +2121,16 @@ LABEL_53:
             *(_QWORD *)&v160.fields.currentCryptoKey = v49;
             *(_QWORD *)&v160.fields.fakeValue = v48;
             type = v41;
-            if ( Int_69093624 == CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46180532(v160, 0LL) )
+            if ( Int_69095184 == CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v160, 0LL) )
               break;
           }
           v50 = System_Int32__ToString((int32_t)&v157, 0LL);
-          v51 = System_String__Concat_61383576(v38, v50, 0LL);
+          v51 = System_String__Concat_61385136(v38, v50, 0LL);
           if ( UnityEngine_PlayerPrefs__HasKey(v51, 0LL) )
           {
             v52 = System_Int32__ToString((int32_t)&v157, 0LL);
-            v53 = System_String__Concat_61383576(v38, v52, 0LL);
-            v54 = UnityEngine_PlayerPrefs__GetInt_69093624(v53, 0LL);
+            v53 = System_String__Concat_61385136(v38, v52, 0LL);
+            v54 = UnityEngine_PlayerPrefs__GetInt_69095184(v53, 0LL);
             this = (FollowerSelectItemListViewItem_o *)FollowerSelectItemListViewItem__get_EquipInfo(v4, v55);
             if ( !this )
               goto LABEL_198;
@@ -2140,7 +2140,7 @@ LABEL_53:
               j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
             *(_QWORD *)&v161.fields.currentCryptoKey = v57;
             *(_QWORD *)&v161.fields.fakeValue = v56;
-            v58 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46180532(v161, 0LL);
+            v58 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v161, 0LL);
             this = (FollowerSelectItemListViewItem_o *)MasterData_object;
             if ( !MasterData_object )
               goto LABEL_198;
@@ -2188,7 +2188,7 @@ LABEL_9:
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v158.fields.currentCryptoKey = v28;
     *(_QWORD *)&v158.fields.fakeValue = v27;
-    this = (FollowerSelectItemListViewItem_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46180532(
+    this = (FollowerSelectItemListViewItem_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(
                                                  v158,
                                                  0LL);
     if ( ValuesDictionary )
@@ -2210,14 +2210,14 @@ LABEL_9:
           this = (FollowerSelectItemListViewItem_o *)System_Collections_Generic_Dictionary_object__int___ContainsKey(
                                                        (System_Collections_Generic_Dictionary_object__int__o *)ValuesDictionary,
                                                        (Il2CppObject *)*v60,
-                                                       (const MethodInfo_3172B80 *)Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__);
+                                                       (const MethodInfo_3173198 *)Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__);
           if ( ((unsigned __int8)this & 1) != 0 )
           {
             v61 = 100000LL
                 * System_Collections_Generic_Dictionary_object__int___get_Item(
                     (System_Collections_Generic_Dictionary_object__int__o *)ValuesDictionary,
                     (Il2CppObject *)*v60,
-                    (const MethodInfo_317290C *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
+                    (const MethodInfo_3172F24 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
             v4->fields.sortValue0 = v61;
             this = (FollowerSelectItemListViewItem_o *)FollowerSelectItemListViewItem__get_EquipInfo(v4, v62);
             if ( !this )
@@ -2247,24 +2247,24 @@ LABEL_9:
           this = (FollowerSelectItemListViewItem_o *)System_Collections_Generic_Dictionary_object__int___ContainsKey(
                                                        (System_Collections_Generic_Dictionary_object__int__o *)ValuesDictionary,
                                                        (Il2CppObject *)StringLiteral_1213/*"0"*/,
-                                                       (const MethodInfo_3172B80 *)Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__);
+                                                       (const MethodInfo_3173198 *)Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__);
           if ( ((unsigned __int8)this & 1) != 0 )
           {
             this = (FollowerSelectItemListViewItem_o *)System_Collections_Generic_Dictionary_object__int___ContainsKey(
                                                          (System_Collections_Generic_Dictionary_object__int__o *)ValuesDictionary,
                                                          (Il2CppObject *)StringLiteral_1267/*"1"*/,
-                                                         (const MethodInfo_3172B80 *)Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__);
+                                                         (const MethodInfo_3173198 *)Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__);
             if ( ((unsigned __int8)this & 1) != 0 )
             {
               if ( System_Collections_Generic_Dictionary_object__int___get_Item(
                      (System_Collections_Generic_Dictionary_object__int__o *)ValuesDictionary,
                      (Il2CppObject *)StringLiteral_1213/*"0"*/,
-                     (const MethodInfo_317290C *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__) == 1 )
+                     (const MethodInfo_3172F24 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__) == 1 )
               {
                 Item = System_Collections_Generic_Dictionary_object__int___get_Item(
                          (System_Collections_Generic_Dictionary_object__int__o *)ValuesDictionary,
                          (Il2CppObject *)StringLiteral_1267/*"1"*/,
-                         (const MethodInfo_317290C *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
+                         (const MethodInfo_3172F24 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
                 v31 = 100000;
               }
               else
@@ -2272,7 +2272,7 @@ LABEL_9:
                 if ( System_Collections_Generic_Dictionary_object__int___get_Item(
                        (System_Collections_Generic_Dictionary_object__int__o *)ValuesDictionary,
                        (Il2CppObject *)StringLiteral_1213/*"0"*/,
-                       (const MethodInfo_317290C *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__) != 2 )
+                       (const MethodInfo_3172F24 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__) != 2 )
                 {
                   v67 = *p_sortValue0;
 LABEL_70:
@@ -2306,7 +2306,7 @@ LABEL_78:
                 Item = System_Collections_Generic_Dictionary_object__int___get_Item(
                          (System_Collections_Generic_Dictionary_object__int__o *)ValuesDictionary,
                          (Il2CppObject *)StringLiteral_1267/*"1"*/,
-                         (const MethodInfo_317290C *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
+                         (const MethodInfo_3172F24 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
                 v31 = 100000000;
               }
               v67 = Item * (__int64)v31;
@@ -2376,7 +2376,7 @@ LABEL_79:
       this = (FollowerSelectItemListViewItem_o *)FollowerInfo__getMaxLv(v83, v85, v87, 0LL);
       if ( !iconLabelInfo1 )
         goto LABEL_198;
-      IconLabelInfo__Set_37829740(iconLabelInfo1, 2, v86, (int32_t)this, 0, 0, 0, 0, 0LL);
+      IconLabelInfo__Set_37830092(iconLabelInfo1, 2, v86, (int32_t)this, 0, 0, 0, 0, 0LL);
     }
     classIndex = (unsigned int)v4->fields.classIndex;
     if ( (int)classIndex >= 1 )
@@ -2507,7 +2507,7 @@ LABEL_114:
                     v143 = (int)this;
                     v144 = 5;
 LABEL_173:
-                    IconLabelInfo__Set_37829740(v116, v144, v128, v137, v143, 0, 0, 0, 0LL);
+                    IconLabelInfo__Set_37830092(v116, v144, v128, v137, v143, 0, 0, 0, 0LL);
                     iconLabelInfo2 = v4->fields.iconLabelInfo2;
                     v101 = v4->fields.followerInfo;
                     v102 = v4->fields.questRestrictionInfo;
@@ -2551,7 +2551,7 @@ LABEL_175:
                     this = (FollowerSelectItemListViewItem_o *)FollowerInfo__getMaxLv(v145, v147, v149, 0LL);
                     if ( !iconLabelInfo2 )
                       goto LABEL_198;
-                    IconLabelInfo__Set_37829740(iconLabelInfo2, 2, v148, (int32_t)this, 0, 0, 0, 0, 0LL);
+                    IconLabelInfo__Set_37830092(iconLabelInfo2, 2, v148, (int32_t)this, 0, 0, 0, 0, 0LL);
                     LODWORD(servantEntity) = v4->fields.classIndex;
                     if ( (int)servantEntity <= 0 )
                     {
@@ -2601,7 +2601,7 @@ LABEL_190:
           }
         }
 LABEL_198:
-        sub_1B64ACC(this, sort);
+        sub_1B64C5C(this, sort);
       }
       if ( v72 != 29 )
         goto LABEL_120;
@@ -2842,7 +2842,7 @@ void __fastcall FollowerSelectItemListViewItem__UpdateRestriction(
           v12 = QuestRestriction;
           if ( !v9 )
 LABEL_16:
-            sub_1B64ACC(QuestRestriction, v8);
+            sub_1B64C5C(QuestRestriction, v8);
         }
         else
         {
@@ -2925,7 +2925,7 @@ EquipTargetInfo_o *__fastcall FollowerSelectItemListViewItem__get_EquipInfo(
     if ( followerInfo )
       goto LABEL_3;
 LABEL_6:
-    sub_1B64ACC(this, method);
+    sub_1B64C5C(this, method);
   }
   v6 = 0;
   if ( !followerInfo )
@@ -3156,16 +3156,16 @@ System_String_o *__fastcall FollowerSelectItemListViewItem__get_PlayerNameText(
   struct FollowerInfo_o *followerInfo; // x8
   System_String_o **p_userName; // x8
 
-  if ( (byte_4A0288C & 1) == 0 )
+  if ( (byte_4A02EAD & 1) == 0 )
   {
-    sub_1B64870(&StringLiteral_18981/*"error"*/, method);
-    byte_4A0288C = 1;
+    sub_1B64A00(&StringLiteral_18982/*"error"*/, method);
+    byte_4A02EAD = 1;
   }
   followerInfo = this->fields.followerInfo;
   if ( followerInfo )
     p_userName = &followerInfo->fields.userName;
   else
-    p_userName = (System_String_o **)&StringLiteral_18981/*"error"*/;
+    p_userName = (System_String_o **)&StringLiteral_18982/*"error"*/;
   return *p_userName;
 }
 
@@ -3255,10 +3255,10 @@ System_String_o *__fastcall FollowerSelectItemListViewItem__get_SvtNameText(
   int32_t v10; // w21
   int32_t v11; // w1
 
-  if ( (byte_4A0288D & 1) == 0 )
+  if ( (byte_4A02EAE & 1) == 0 )
   {
-    sub_1B64870(&ImageLimitCount_TypeInfo, method);
-    byte_4A0288D = 1;
+    sub_1B64A00(&ImageLimitCount_TypeInfo, method);
+    byte_4A02EAE = 1;
   }
   followerInfo = this->fields.followerInfo;
   if ( followerInfo && this->fields.isNpc )
@@ -3274,7 +3274,7 @@ System_String_o *__fastcall FollowerSelectItemListViewItem__get_SvtNameText(
       return ServantEntity__getName((ServantEntity_o *)servantEntity, v11, -1, 0LL);
     }
 LABEL_21:
-    sub_1B64ACC(servantEntity, v5);
+    sub_1B64C5C(servantEntity, v5);
   }
   servantEntity = FollowerSelectItemListViewItem__get_ServantLeader(this, v5);
   if ( !servantEntity )
@@ -3394,15 +3394,15 @@ void __fastcall FollowerSelectItemListViewItem___c___cctor(const MethodInfo *met
   __int64 v1; // x1
   Il2CppObject *v2; // x19
 
-  if ( (byte_49F988F & 1) == 0 )
+  if ( (byte_49F9EAF & 1) == 0 )
   {
-    sub_1B64870(&FollowerSelectItemListViewItem___c_TypeInfo, v1);
-    byte_49F988F = 1;
+    sub_1B64A00(&FollowerSelectItemListViewItem___c_TypeInfo, v1);
+    byte_49F9EAF = 1;
   }
-  v2 = (Il2CppObject *)sub_1B64ABC(FollowerSelectItemListViewItem___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B64C4C(FollowerSelectItemListViewItem___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   FollowerSelectItemListViewItem___c_TypeInfo->static_fields->__9 = (struct FollowerSelectItemListViewItem___c_o *)v2;
-  sub_1B64814(FollowerSelectItemListViewItem___c_TypeInfo->static_fields);
+  sub_1B649A4(FollowerSelectItemListViewItem___c_TypeInfo->static_fields);
 }
 
 
@@ -3420,6 +3420,6 @@ int32_t __fastcall FollowerSelectItemListViewItem___c___SetEventUpInfo_b__72_0(
         const MethodInfo *method)
 {
   if ( !drop )
-    sub_1B64ACC(this, 0LL);
+    sub_1B64C5C(this, 0LL);
   return drop->fields.eventId;
 }

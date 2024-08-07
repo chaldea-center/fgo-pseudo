@@ -13,16 +13,16 @@ void __fastcall EventExpeditionFinishRequest__beginRequest(
 {
   __int64 v7; // x1
 
-  if ( (byte_49FFC8C & 1) == 0 )
+  if ( (byte_4A002AD & 1) == 0 )
   {
-    sub_1B64870(&StringLiteral_19061/*"eventId"*/, *(_QWORD *)&eventId);
-    sub_1B64870(&StringLiteral_19235/*"expeditionIdxs"*/, v7);
-    byte_49FFC8C = 1;
+    sub_1B64A00(&StringLiteral_19062/*"eventId"*/, *(_QWORD *)&eventId);
+    sub_1B64A00(&StringLiteral_19236/*"expeditionIdxs"*/, v7);
+    byte_4A002AD = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19061/*"eventId"*/, eventId, 0LL);
-  RequestBase__addField_40853908(
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19062/*"eventId"*/, eventId, 0LL);
+  RequestBase__addField_40854420(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_19235/*"expeditionIdxs"*/,
+    (System_String_o *)StringLiteral_19236/*"expeditionIdxs"*/,
     &expeditionIdxs->obj,
     0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
@@ -36,16 +36,16 @@ System_String_o *__fastcall EventExpeditionFinishRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_49FFC8B & 1) == 0 )
+  if ( (byte_4A002AC & 1) == 0 )
   {
-    sub_1B64870(&NetworkManager_TypeInfo, method);
-    sub_1B64870(&StringLiteral_19044/*"event/expeditionFinish"*/, v2);
-    byte_49FFC8B = 1;
+    sub_1B64A00(&NetworkManager_TypeInfo, method);
+    sub_1B64A00(&StringLiteral_19045/*"event/expeditionFinish"*/, v2);
+    byte_4A002AC = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61383576(BaseUrl, (System_String_o *)StringLiteral_19044/*"event/expeditionFinish"*/, 0LL);
+  return System_String__Concat_61385136(BaseUrl, (System_String_o *)StringLiteral_19045/*"event/expeditionFinish"*/, 0LL);
 }
 
 
@@ -61,11 +61,11 @@ void __fastcall EventExpeditionFinishRequest__requestCompleted(
   System_String_o *v9; // x1
   Il2CppObject *success; // x20
 
-  if ( (byte_49FFC8D & 1) == 0 )
+  if ( (byte_4A002AE & 1) == 0 )
   {
-    sub_1B64870(&JsonManager_TypeInfo, responseList);
-    sub_1B64870(&ResponseCommandKind_TypeInfo, v5);
-    byte_49FFC8D = 1;
+    sub_1B64A00(&JsonManager_TypeInfo, responseList);
+    sub_1B64A00(&ResponseCommandKind_TypeInfo, v5);
+    byte_4A002AE = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -73,7 +73,7 @@ void __fastcall EventExpeditionFinishRequest__requestCompleted(
   if ( v6 )
   {
     v7 = v6;
-    v8 = ResponseData__checkError_40851148(v6, 0LL);
+    v8 = ResponseData__checkError_40851660(v6, 0LL);
     v9 = 0LL;
     if ( v8 )
     {

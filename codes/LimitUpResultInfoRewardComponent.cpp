@@ -2,12 +2,12 @@ void __fastcall LimitUpResultInfoRewardComponent___cctor(const MethodInfo *metho
 {
   __int64 v1; // x1
 
-  if ( (byte_4A01D94 & 1) == 0 )
+  if ( (byte_4A023B5 & 1) == 0 )
   {
-    sub_1B64870(&LimitUpResultInfoRewardComponent_TypeInfo, v1);
-    byte_4A01D94 = 1;
+    sub_1B64A00(&LimitUpResultInfoRewardComponent_TypeInfo, v1);
+    byte_4A023B5 = 1;
   }
-  *LimitUpResultInfoRewardComponent_TypeInfo->static_fields = (struct LimitUpResultInfoRewardComponent_StaticFields)xmmword_BA37B0;
+  *LimitUpResultInfoRewardComponent_TypeInfo->static_fields = (struct LimitUpResultInfoRewardComponent_StaticFields)xmmword_BA3800;
 }
 
 
@@ -50,12 +50,12 @@ void __fastcall LimitUpResultInfoRewardComponent__Setup(
   UnityEngine_Color_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v23; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4A01D93 & 1) == 0 )
+  if ( (byte_4A023B4 & 1) == 0 )
   {
-    sub_1B64870(&AtlasManager_TypeInfo, *(_QWORD *)&iconImageId);
-    sub_1B64870(&LimitUpResultInfoRewardComponent_TypeInfo, v11);
-    sub_1B64870(&StringLiteral_20094/*"icon_reward_get"*/, v12);
-    byte_4A01D93 = 1;
+    sub_1B64A00(&AtlasManager_TypeInfo, *(_QWORD *)&iconImageId);
+    sub_1B64A00(&LimitUpResultInfoRewardComponent_TypeInfo, v11);
+    sub_1B64A00(&StringLiteral_20094/*"icon_reward_get"*/, v12);
+    byte_4A023B4 = 1;
   }
   rewardInfoGetIcon = this->fields.rewardInfoGetIcon;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -105,7 +105,7 @@ void __fastcall LimitUpResultInfoRewardComponent__Setup(
       }
     }
 LABEL_22:
-    sub_1B64ACC(rewardInfoIcon, v14);
+    sub_1B64C5C(rewardInfoIcon, v14);
   }
   if ( !rewardInfoIcon )
     goto LABEL_22;

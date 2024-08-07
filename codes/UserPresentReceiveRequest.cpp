@@ -19,24 +19,24 @@ void __fastcall UserPresentReceiveRequest__beginRequest(
   const MethodInfo *v20; // x3
   const MethodInfo *v21; // x1
 
-  if ( (byte_49FFE86 & 1) == 0 )
+  if ( (byte_4A004A7 & 1) == 0 )
   {
-    sub_1B64870(&System_Convert_TypeInfo, presentIds);
-    sub_1B64870(&MiniMessagePack_MiniMessagePacker_TypeInfo, v9);
-    sub_1B64870(&StringLiteral_20805/*"itemSelectIdx"*/, v10);
-    sub_1B64870(&StringLiteral_22503/*"presentIds"*/, v11);
-    sub_1B64870(&StringLiteral_20806/*"itemSelectNum"*/, v12);
-    byte_49FFE86 = 1;
+    sub_1B64A00(&System_Convert_TypeInfo, presentIds);
+    sub_1B64A00(&MiniMessagePack_MiniMessagePacker_TypeInfo, v9);
+    sub_1B64A00(&StringLiteral_20805/*"itemSelectIdx"*/, v10);
+    sub_1B64A00(&StringLiteral_22503/*"presentIds"*/, v11);
+    sub_1B64A00(&StringLiteral_20806/*"itemSelectNum"*/, v12);
+    byte_4A004A7 = 1;
   }
-  v13 = (MiniMessagePack_MiniMessagePacker_o *)sub_1B64ABC(MiniMessagePack_MiniMessagePacker_TypeInfo);
+  v13 = (MiniMessagePack_MiniMessagePacker_o *)sub_1B64C4C(MiniMessagePack_MiniMessagePacker_TypeInfo);
   MiniMessagePack_MiniMessagePacker___ctor(v13, 0LL);
   if ( !v13 )
-    sub_1B64ACC(v14, v15);
+    sub_1B64C5C(v14, v15);
   v16 = MiniMessagePack_MiniMessagePacker__PackClass(v13, &presentIds->obj, 0LL);
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   v17 = System_Convert__ToBase64String(v16, 0LL);
-  RequestBase__addField_40856068((RequestBase_o *)this, (System_String_o *)StringLiteral_22503/*"presentIds"*/, v17, v18);
+  RequestBase__addField_40856580((RequestBase_o *)this, (System_String_o *)StringLiteral_22503/*"presentIds"*/, v17, v18);
   RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20805/*"itemSelectIdx"*/, itemSelectIdx, v19);
   RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20806/*"itemSelectNum"*/, itemSelectNum, v20);
   RequestBase__beginRequest((RequestBase_o *)this, v21);
@@ -49,15 +49,15 @@ System_String_o *__fastcall UserPresentReceiveRequest__getMockData(
 {
   __int64 v2; // x1
 
-  if ( (byte_49FFE85 & 1) == 0 )
+  if ( (byte_4A004A6 & 1) == 0 )
   {
-    sub_1B64870(&NetworkManager_TypeInfo, method);
-    sub_1B64870(&StringLiteral_9073/*"MockUserPresentReceiveResponse"*/, v2);
-    byte_49FFE85 = 1;
+    sub_1B64A00(&NetworkManager_TypeInfo, method);
+    sub_1B64A00(&StringLiteral_9074/*"MockUserPresentReceiveResponse"*/, v2);
+    byte_4A004A6 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9073/*"MockUserPresentReceiveResponse"*/, 0LL);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9074/*"MockUserPresentReceiveResponse"*/, 0LL);
 }
 
 
@@ -68,16 +68,16 @@ System_String_o *__fastcall UserPresentReceiveRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_49FFE84 & 1) == 0 )
+  if ( (byte_4A004A5 & 1) == 0 )
   {
-    sub_1B64870(&NetworkManager_TypeInfo, method);
-    sub_1B64870(&StringLiteral_22501/*"present/receive"*/, v2);
-    byte_49FFE84 = 1;
+    sub_1B64A00(&NetworkManager_TypeInfo, method);
+    sub_1B64A00(&StringLiteral_22501/*"present/receive"*/, v2);
+    byte_4A004A5 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61383576(BaseUrl, (System_String_o *)StringLiteral_22501/*"present/receive"*/, 0LL);
+  return System_String__Concat_61385136(BaseUrl, (System_String_o *)StringLiteral_22501/*"present/receive"*/, 0LL);
 }
 
 
@@ -96,12 +96,12 @@ void __fastcall UserPresentReceiveRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v13; // x8
 
-  if ( (byte_49FFE87 & 1) == 0 )
+  if ( (byte_4A004A8 & 1) == 0 )
   {
-    sub_1B64870(&JsonManager_TypeInfo, responseList);
-    sub_1B64870(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B64870(&StringLiteral_21971/*"ng"*/, v6);
-    byte_49FFE87 = 1;
+    sub_1B64A00(&JsonManager_TypeInfo, responseList);
+    sub_1B64A00(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B64A00(&StringLiteral_21971/*"ng"*/, v6);
+    byte_4A004A8 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);

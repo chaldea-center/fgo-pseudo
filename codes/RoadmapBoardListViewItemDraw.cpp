@@ -11,18 +11,18 @@ void __fastcall RoadmapBoardListViewItemDraw__Awake(RoadmapBoardListViewItemDraw
   System_String_o *v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4A0203A & 1) == 0 )
+  if ( (byte_4A0265B & 1) == 0 )
   {
-    sub_1B64870(&LocalizationManager_TypeInfo, method);
-    sub_1B64870(&StringLiteral_11074/*"ROADMAP_BOARD_UNIMPLEMENTED"*/, v3);
-    byte_4A0203A = 1;
+    sub_1B64A00(&LocalizationManager_TypeInfo, method);
+    sub_1B64A00(&StringLiteral_11075/*"ROADMAP_BOARD_UNIMPLEMENTED"*/, v3);
+    byte_4A0265B = 1;
   }
   unimplementedLabel = this->fields.unimplementedLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_11074/*"ROADMAP_BOARD_UNIMPLEMENTED"*/, 0LL);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_11075/*"ROADMAP_BOARD_UNIMPLEMENTED"*/, 0LL);
   if ( !unimplementedLabel )
-    sub_1B64ACC(v5, v6);
+    sub_1B64C5C(v5, v6);
   UILabel__set_text(unimplementedLabel, v5, 0LL);
 }
 
@@ -60,7 +60,7 @@ void __fastcall RoadmapBoardListViewItemDraw__UpdateBoard(
         (unimplementedLabel = (UnityEngine_Component_o *)this->fields.boardSprite) == 0LL) )
   {
 LABEL_8:
-    sub_1B64ACC(unimplementedLabel, item);
+    sub_1B64C5C(unimplementedLabel, item);
   }
   UISprite__set_spriteName((UISprite_o *)unimplementedLabel, item->fields._SpriteName_k__BackingField, 0LL);
 }

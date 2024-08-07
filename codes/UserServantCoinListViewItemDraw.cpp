@@ -16,10 +16,10 @@ void __fastcall UserServantCoinListViewItemDraw__SetInput(
   __int64 v6; // x1
   struct UICommonButton_o *v7; // x0
 
-  if ( (byte_49FA042 & 1) == 0 )
+  if ( (byte_49FA662 & 1) == 0 )
   {
-    sub_1B64870(&UnityEngine_Object_TypeInfo, item);
-    byte_49FA042 = 1;
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, item);
+    byte_49FA662 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -34,7 +34,7 @@ void __fastcall UserServantCoinListViewItemDraw__SetInput(
             v7->klass->vtable._6_OnInit.methodPtr),
           (v7 = this->fields.baseButton) == 0LL) )
     {
-      sub_1B64ACC(v7, v6);
+      sub_1B64C5C(v7, v6);
     }
     ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, __int64, Il2CppMethodPointer))v7->klass->vtable._14_SetState.method)(
       v7,
@@ -63,11 +63,11 @@ void __fastcall UserServantCoinListViewItemDraw__SetItem(
   Il2CppObject *v16; // x0
   int v17; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_49FA041 & 1) == 0 )
+  if ( (byte_49FA661 & 1) == 0 )
   {
-    sub_1B64870(&int_TypeInfo, item);
-    sub_1B64870(&StringLiteral_24838/*"{0:#,0}"*/, v7);
-    byte_49FA041 = 1;
+    sub_1B64A00(&int_TypeInfo, item);
+    sub_1B64A00(&StringLiteral_24838/*"{0:#,0}"*/, v7);
+    byte_49FA661 = 1;
   }
   if ( item && mode )
   {
@@ -99,7 +99,7 @@ void __fastcall UserServantCoinListViewItemDraw__SetItem(
     itemIcon = (ItemIconComponent_o *)System_String__Format((System_String_o *)StringLiteral_24838/*"{0:#,0}"*/, v16, 0LL);
     if ( !possessionNum )
 LABEL_15:
-      sub_1B64ACC(itemIcon, itemId);
+      sub_1B64C5C(itemIcon, itemId);
     UILabel__set_text(possessionNum, (System_String_o *)itemIcon, 0LL);
   }
 }

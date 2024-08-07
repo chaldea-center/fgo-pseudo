@@ -16,25 +16,25 @@ void __fastcall SetSpoilerProtectionControl__Init(SetSpoilerProtectionControl_o 
   UILabel_o *infoLabel; // x20
   const MethodInfo *v10; // x1
 
-  if ( (byte_49F9B66 & 1) == 0 )
+  if ( (byte_49FA186 & 1) == 0 )
   {
-    sub_1B64870(&LocalizationManager_TypeInfo, method);
-    sub_1B64870(&OptionManager_TypeInfo, v3);
-    sub_1B64870(&StringLiteral_9660/*"OPTION_SPOILER_PROTECTION_INFO"*/, v4);
-    sub_1B64870(&StringLiteral_9661/*"OPTION_SPOILER_PROTECTION_TITLE"*/, v5);
-    byte_49F9B66 = 1;
+    sub_1B64A00(&LocalizationManager_TypeInfo, method);
+    sub_1B64A00(&OptionManager_TypeInfo, v3);
+    sub_1B64A00(&StringLiteral_9661/*"OPTION_SPOILER_PROTECTION_INFO"*/, v4);
+    sub_1B64A00(&StringLiteral_9662/*"OPTION_SPOILER_PROTECTION_TITLE"*/, v5);
+    byte_49FA186 = 1;
   }
   btnTitle = this->fields.btnTitle;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9661/*"OPTION_SPOILER_PROTECTION_TITLE"*/, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9662/*"OPTION_SPOILER_PROTECTION_TITLE"*/, 0LL);
   if ( !btnTitle
     || (UILabel__set_text(btnTitle, v7, 0LL),
         infoLabel = this->fields.infoLabel,
-        v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9660/*"OPTION_SPOILER_PROTECTION_INFO"*/, 0LL),
+        v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9661/*"OPTION_SPOILER_PROTECTION_INFO"*/, 0LL),
         !infoLabel) )
   {
-    sub_1B64ACC(v7, v8);
+    sub_1B64C5C(v7, v8);
   }
   UILabel__set_text(infoLabel, v7, 0LL);
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -54,16 +54,16 @@ void __fastcall SetSpoilerProtectionControl__OnClickSpoilerProtection(
   int v6; // w20
   const MethodInfo *v7; // x1
 
-  if ( (byte_49F9B69 & 1) == 0 )
+  if ( (byte_49FA189 & 1) == 0 )
   {
-    sub_1B64870(&Method_SetSpoilerProtectionControl_OnClickSpoilerProtection__, method);
-    byte_49F9B69 = 1;
+    sub_1B64A00(&Method_SetSpoilerProtectionControl_OnClickSpoilerProtection__, method);
+    byte_49FA189 = 1;
   }
   v3 = Method_SetSpoilerProtectionControl_OnClickSpoilerProtection__;
   isSpoilerSetting = this->fields.isSpoilerSetting;
   if ( (*((_BYTE *)Method_SetSpoilerProtectionControl_OnClickSpoilerProtection__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1B64888(Method_SetSpoilerProtectionControl_OnClickSpoilerProtection__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1B64854(v3, v3[4]);
+    v3 = (_QWORD *)sub_1B64A18(Method_SetSpoilerProtectionControl_OnClickSpoilerProtection__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1B649E4(v3, v3[4]);
   v6 = !isSpoilerSetting;
   OverwriteAssetSoundName__PlaySystemSe(v5, v6, 0LL);
   this->fields.isSpoilerSetting = v6;
@@ -75,10 +75,10 @@ void __fastcall SetSpoilerProtectionControl__Reflection(SetSpoilerProtectionCont
 {
   _BOOL4 isSpoilerSetting; // w19
 
-  if ( (byte_49F9B68 & 1) == 0 )
+  if ( (byte_49FA188 & 1) == 0 )
   {
-    sub_1B64870(&OptionManager_TypeInfo, method);
-    byte_49F9B68 = 1;
+    sub_1B64A00(&OptionManager_TypeInfo, method);
+    byte_49FA188 = 1;
   }
   isSpoilerSetting = this->fields.isSpoilerSetting;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -95,18 +95,18 @@ void __fastcall SetSpoilerProtectionControl__SetSpoilerProtectionDispValue(
   UIButton_o *settingBtn; // x0
   __int64 *v5; // x8
 
-  if ( (byte_49F9B67 & 1) == 0 )
+  if ( (byte_49FA187 & 1) == 0 )
   {
-    sub_1B64870(&StringLiteral_17458/*"btn_on"*/, method);
-    sub_1B64870(&StringLiteral_17457/*"btn_off"*/, v3);
-    byte_49F9B67 = 1;
+    sub_1B64A00(&StringLiteral_17459/*"btn_on"*/, method);
+    sub_1B64A00(&StringLiteral_17458/*"btn_off"*/, v3);
+    byte_49FA187 = 1;
   }
   settingBtn = this->fields.settingBtn;
   if ( !settingBtn )
-    sub_1B64ACC(0LL, method);
+    sub_1B64C5C(0LL, method);
   if ( this->fields.isSpoilerSetting )
-    v5 = &StringLiteral_17457/*"btn_off"*/;
+    v5 = &StringLiteral_17458/*"btn_off"*/;
   else
-    v5 = &StringLiteral_17458/*"btn_on"*/;
+    v5 = &StringLiteral_17459/*"btn_on"*/;
   UIButton__set_normalSprite(settingBtn, (System_String_o *)*v5, 0LL);
 }

@@ -12,7 +12,7 @@ void __fastcall CharaGraphSortManageUnitBase__SetSortSaveKeyPrefix(
   int32_t v3; // w3
 
   this->fields._SortSaveKeyPrefix_k__BackingField = sortSaveKeyPrefix;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)sortSaveKeyPrefix, (int32_t)method, v3);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)sortSaveKeyPrefix, (int32_t)method, v3);
 }
 
 
@@ -30,10 +30,10 @@ ListViewSort_o *__fastcall CharaGraphSortManageUnitBase__get_SortInfo(
   int32_t v10; // w2
   int32_t v11; // w3
 
-  if ( (byte_49FD916 & 1) == 0 )
+  if ( (byte_49FDF36 & 1) == 0 )
   {
-    sub_1B64870(&ListViewSort_TypeInfo, method);
-    byte_49FD916 = 1;
+    sub_1B64A00(&ListViewSort_TypeInfo, method);
+    byte_49FDF36 = 1;
   }
   sortInfo = this->fields.sortInfo;
   if ( !sortInfo )
@@ -42,20 +42,20 @@ ListViewSort_o *__fastcall CharaGraphSortManageUnitBase__get_SortInfo(
     v5 = (System_String_o *)((__int64 (__fastcall *)(CharaGraphSortManageUnitBase_o *, const char *))this->klass[1]._1.gc_desc)(
                               this,
                               this->klass[1]._1.name);
-    v6 = System_String__Concat_61383576(SortSaveKeyPrefix_k__BackingField, v5, 0LL);
+    v6 = System_String__Concat_61385136(SortSaveKeyPrefix_k__BackingField, v5, 0LL);
     v7 = ((__int64 (__fastcall *)(CharaGraphSortManageUnitBase_o *, void *))this->klass[1]._1.namespaze)(
            this,
            this->klass[1]._1.byval_arg.data);
-    sortInfo = (struct ListViewSort_o *)sub_1B64ABC(ListViewSort_TypeInfo);
-    ListViewSort___ctor_40431268(sortInfo, v6, v7, 0, 0LL);
+    sortInfo = (struct ListViewSort_o *)sub_1B64C4C(ListViewSort_TypeInfo);
+    ListViewSort___ctor_40431780(sortInfo, v6, v7, 0, 0LL);
     v8 = (*(__int64 (__fastcall **)(CharaGraphSortManageUnitBase_o *, void *))&this->klass[1]._1.byval_arg.bits)(
            this,
            this->klass[1]._1.this_arg.data);
     if ( !sortInfo )
-      sub_1B64ACC(v8, v9);
+      sub_1B64C5C(v8, v9);
     sortInfo->fields.listViewKind = v8;
     this->fields.sortInfo = sortInfo;
-    sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.sortInfo, (int32_t)sortInfo, v10, v11);
+    sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.sortInfo, (int32_t)sortInfo, v10, v11);
   }
   return sortInfo;
 }
@@ -77,5 +77,5 @@ void __fastcall CharaGraphSortManageUnitBase__set_SortSaveKeyPrefix(
   int32_t v3; // w3
 
   this->fields._SortSaveKeyPrefix_k__BackingField = value;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }

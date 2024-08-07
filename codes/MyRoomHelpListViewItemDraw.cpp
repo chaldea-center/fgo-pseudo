@@ -40,13 +40,13 @@ void __fastcall MyRoomHelpListViewItemDraw__SetItem(
   float v33; // s9
   UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_49FA0E6 & 1) == 0 )
+  if ( (byte_49FA706 & 1) == 0 )
   {
-    sub_1B64870(&UnityEngine_Object_TypeInfo, item);
-    sub_1B64870(&StringLiteral_20284/*"img_menuboard_01"*/, v7);
-    sub_1B64870(&StringLiteral_1/*""*/, v8);
-    sub_1B64870(&StringLiteral_20412/*"img_tutorial_txtbg"*/, v9);
-    byte_49FA0E6 = 1;
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, item);
+    sub_1B64A00(&StringLiteral_20284/*"img_menuboard_01"*/, v7);
+    sub_1B64A00(&StringLiteral_1/*""*/, v8);
+    sub_1B64A00(&StringLiteral_20412/*"img_tutorial_txtbg"*/, v9);
+    byte_49FA706 = 1;
   }
   if ( item )
   {
@@ -197,7 +197,7 @@ void __fastcall MyRoomHelpListViewItemDraw__SetItem(
         }
       }
 LABEL_41:
-      sub_1B64ACC(gameObject, v12);
+      sub_1B64C5C(gameObject, v12);
     }
   }
 }

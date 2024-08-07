@@ -1,14 +1,14 @@
 void __fastcall WarBoardStageNpcMaster___ctor(WarBoardStageNpcMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FF516 & 1) == 0 )
+  if ( (byte_49FFB37 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataMasterBase_WarBoardStageNpcMaster__WarBoardStageNpcEntity__string___ctor__, method);
-    byte_49FF516 = 1;
+    sub_1B64A00(&Method_DataMasterBase_WarBoardStageNpcMaster__WarBoardStageNpcEntity__string___ctor__, method);
+    byte_49FFB37 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     327,
-    (const MethodInfo_30D6498 *)Method_DataMasterBase_WarBoardStageNpcMaster__WarBoardStageNpcEntity__string___ctor__);
+    (const MethodInfo_30D6AB0 *)Method_DataMasterBase_WarBoardStageNpcMaster__WarBoardStageNpcEntity__string___ctor__);
 }
 
 
@@ -22,18 +22,18 @@ WarBoardStageNpcEntity_o *__fastcall WarBoardStageNpcMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_49FF514 & 1) == 0 )
+  if ( (byte_49FFB35 & 1) == 0 )
   {
-    sub_1B64870(
+    sub_1B64A00(
       &Method_DataMasterBase_WarBoardStageNpcMaster__WarBoardStageNpcEntity__string__GetEntity__,
       *(_QWORD *)&stageId);
-    byte_49FF514 = 1;
+    byte_49FFB35 = 1;
   }
   PK = (Il2CppObject *)WarBoardStageNpcEntity__CreatePK(stageId, forceId, groupId, *(const MethodInfo **)&groupId);
   return (WarBoardStageNpcEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                        (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                        PK,
-                                       (const MethodInfo_30D64D8 *)Method_DataMasterBase_WarBoardStageNpcMaster__WarBoardStageNpcEntity__string__GetEntity__);
+                                       (const MethodInfo_30D6AF0 *)Method_DataMasterBase_WarBoardStageNpcMaster__WarBoardStageNpcEntity__string__GetEntity__);
 }
 
 
@@ -47,17 +47,17 @@ System_Collections_Generic_IEnumerable_WarBoardStageNpcEntity__o *__fastcall War
   int32_t v6; // w2
   int32_t v7; // w3
 
-  if ( (byte_49FF517 & 1) == 0 )
+  if ( (byte_49FFB38 & 1) == 0 )
   {
-    sub_1B64870(&WarBoardStageNpcMaster__GetWarBoardStageEntities_d__3_TypeInfo, *(_QWORD *)&stageId);
-    byte_49FF517 = 1;
+    sub_1B64A00(&WarBoardStageNpcMaster__GetWarBoardStageEntities_d__3_TypeInfo, *(_QWORD *)&stageId);
+    byte_49FFB38 = 1;
   }
-  v5 = sub_1B64ABC(WarBoardStageNpcMaster__GetWarBoardStageEntities_d__3_TypeInfo);
+  v5 = sub_1B64C4C(WarBoardStageNpcMaster__GetWarBoardStageEntities_d__3_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0LL);
   *(_DWORD *)(v5 + 16) = -2;
   *(_DWORD *)(v5 + 32) = System_Environment__get_CurrentManagedThreadId(0LL);
   *(_QWORD *)(v5 + 40) = this;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)(v5 + 40), (int32_t)this, v6, v7);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v5 + 40), (int32_t)this, v6, v7);
   *(_DWORD *)(v5 + 52) = stageId;
   return (System_Collections_Generic_IEnumerable_WarBoardStageNpcEntity__o *)v5;
 }
@@ -74,17 +74,17 @@ bool __fastcall WarBoardStageNpcMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_49FF515 & 1) == 0 )
+  if ( (byte_49FFB36 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataMasterBase_WarBoardStageNpcMaster__WarBoardStageNpcEntity__string__TryGetEntity__, entity);
-    byte_49FF515 = 1;
+    sub_1B64A00(&Method_DataMasterBase_WarBoardStageNpcMaster__WarBoardStageNpcEntity__string__TryGetEntity__, entity);
+    byte_49FFB36 = 1;
   }
   PK = (Il2CppObject *)WarBoardStageNpcEntity__CreatePK(stageId, forceId, groupId, *(const MethodInfo **)&forceId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_30D6528 *)Method_DataMasterBase_WarBoardStageNpcMaster__WarBoardStageNpcEntity__string__TryGetEntity__);
+           (const MethodInfo_30D6B40 *)Method_DataMasterBase_WarBoardStageNpcMaster__WarBoardStageNpcEntity__string__TryGetEntity__);
 }
 
 
@@ -116,12 +116,12 @@ bool __fastcall WarBoardStageNpcMaster__GetWarBoardStageEntities_d__3__MoveNext(
   ServantStatusBattleListViewItem_o *p__2__current; // x19
 
   v2 = this;
-  if ( (byte_49FF518 & 1) == 0 )
+  if ( (byte_49FFB39 & 1) == 0 )
   {
-    sub_1B64870(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, method);
-    sub_1B64870(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v3);
-    this = (WarBoardStageNpcMaster__GetWarBoardStageEntities_d__3_o *)sub_1B64870(&WarBoardStageNpcEntity_TypeInfo, v4);
-    byte_49FF518 = 1;
+    sub_1B64A00(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, method);
+    sub_1B64A00(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v3);
+    this = (WarBoardStageNpcMaster__GetWarBoardStageEntities_d__3_o *)sub_1B64A00(&WarBoardStageNpcEntity_TypeInfo, v4);
+    byte_49FFB39 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -135,10 +135,10 @@ bool __fastcall WarBoardStageNpcMaster__GetWarBoardStageEntities_d__3__MoveNext(
     v2->fields.__1__state = -1;
     if ( !_4__this || (this = (WarBoardStageNpcMaster__GetWarBoardStageEntities_d__3_o *)_4__this->fields.list) == 0LL )
 LABEL_19:
-      sub_1B64ACC(this, method);
+      sub_1B64C5C(this, method);
     this = (WarBoardStageNpcMaster__GetWarBoardStageEntities_d__3_o *)System_Collections_ObjectModel_Collection_object___get_Count(
                                                                         (System_Collections_ObjectModel_Collection_T__o *)this,
-                                                                        (const MethodInfo_3072DE4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+                                                                        (const MethodInfo_30733FC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
     method = 0LL;
     *(_QWORD *)&v2->fields._count_5__2 = (unsigned int)this;
     while ( (int)method < (int)this )
@@ -151,7 +151,7 @@ LABEL_19:
       Item = System_Collections_ObjectModel_Collection_object___get_Item(
                (System_Collections_ObjectModel_Collection_T__o *)this,
                (int32_t)method,
-               (const MethodInfo_3072E74 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+               (const MethodInfo_307348C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( Item )
       {
         methodPtr_low = LOBYTE(WarBoardStageNpcEntity_TypeInfo->vtable._0_Equals.methodPtr);
@@ -161,7 +161,7 @@ LABEL_19:
         {
           v2->fields.__2__current = (struct WarBoardStageNpcEntity_o *)Item;
           p__2__current = (ServantStatusBattleListViewItem_o *)&v2->fields.__2__current;
-          sub_1B64814(p__2__current, (int32_t)Item, v8, v9);
+          sub_1B649A4(p__2__current, (int32_t)Item, v8, v9);
           result = 1;
           *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
           return result;
@@ -188,10 +188,10 @@ System_Collections_Generic_IEnumerator_WarBoardStageNpcEntity__o *__fastcall War
   int32_t v7; // w3
   System_Collections_Generic_IEnumerator_WarBoardStageNpcEntity__o *result; // x0
 
-  if ( (byte_49FF519 & 1) == 0 )
+  if ( (byte_49FFB3A & 1) == 0 )
   {
-    sub_1B64870(&WarBoardStageNpcMaster__GetWarBoardStageEntities_d__3_TypeInfo, method);
-    byte_49FF519 = 1;
+    sub_1B64A00(&WarBoardStageNpcMaster__GetWarBoardStageEntities_d__3_TypeInfo, method);
+    byte_49FFB3A = 1;
   }
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
@@ -202,13 +202,13 @@ System_Collections_Generic_IEnumerator_WarBoardStageNpcEntity__o *__fastcall War
   }
   else
   {
-    v4 = (WarBoardStageNpcMaster__GetWarBoardStageEntities_d__3_o *)sub_1B64ABC(WarBoardStageNpcMaster__GetWarBoardStageEntities_d__3_TypeInfo);
+    v4 = (WarBoardStageNpcMaster__GetWarBoardStageEntities_d__3_o *)sub_1B64C4C(WarBoardStageNpcMaster__GetWarBoardStageEntities_d__3_TypeInfo);
     System_Object___ctor((Il2CppObject *)v4, 0LL);
     v4->fields.__1__state = 0;
     v4->fields.__l__initialThreadId = System_Environment__get_CurrentManagedThreadId(0LL);
     _4__this = this->fields.__4__this;
     v4->fields.__4__this = _4__this;
-    sub_1B64814((ServantStatusBattleListViewItem_o *)&v4->fields.__4__this, (int32_t)_4__this, v6, v7);
+    sub_1B649A4((ServantStatusBattleListViewItem_o *)&v4->fields.__4__this, (int32_t)_4__this, v6, v7);
   }
   result = (System_Collections_Generic_IEnumerator_WarBoardStageNpcEntity__o *)v4;
   v4->fields.stageId = this->fields.__3__stageId;
@@ -232,11 +232,11 @@ void __fastcall __noreturn WarBoardStageNpcMaster__GetWarBoardStageEntities_d__3
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B64884(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B64ABC(v2);
+  v2 = sub_1B64A14(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B64C4C(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B64884(&Method_WarBoardStageNpcMaster__GetWarBoardStageEntities_d__3_System_Collections_IEnumerator_Reset__);
-  sub_1B64998(v3, v4);
+  v4 = sub_1B64A14(&Method_WarBoardStageNpcMaster__GetWarBoardStageEntities_d__3_System_Collections_IEnumerator_Reset__);
+  sub_1B64B28(v3, v4);
 }
 
 

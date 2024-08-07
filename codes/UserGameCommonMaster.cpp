@@ -1,14 +1,14 @@
 void __fastcall UserGameCommonMaster___ctor(UserGameCommonMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FF5C4 & 1) == 0 )
+  if ( (byte_49FFBE5 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataMasterBase_UserGameCommonMaster__UserGameCommonEntity__string___ctor__, method);
-    byte_49FF5C4 = 1;
+    sub_1B64A00(&Method_DataMasterBase_UserGameCommonMaster__UserGameCommonEntity__string___ctor__, method);
+    byte_49FFBE5 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     481,
-    (const MethodInfo_30D6498 *)Method_DataMasterBase_UserGameCommonMaster__UserGameCommonEntity__string___ctor__);
+    (const MethodInfo_30D6AB0 *)Method_DataMasterBase_UserGameCommonMaster__UserGameCommonEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ UserGameCommonEntity_o *__fastcall UserGameCommonMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_49FF5C5 & 1) == 0 )
+  if ( (byte_49FFBE6 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataMasterBase_UserGameCommonMaster__UserGameCommonEntity__string__GetEntity__, userId);
-    byte_49FF5C5 = 1;
+    sub_1B64A00(&Method_DataMasterBase_UserGameCommonMaster__UserGameCommonEntity__string__GetEntity__, userId);
+    byte_49FFBE6 = 1;
   }
   PK = (Il2CppObject *)UserGameCommonEntity__CreatePK(userId, no, *(const MethodInfo **)&no);
   return (UserGameCommonEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      PK,
-                                     (const MethodInfo_30D64D8 *)Method_DataMasterBase_UserGameCommonMaster__UserGameCommonEntity__string__GetEntity__);
+                                     (const MethodInfo_30D6AF0 *)Method_DataMasterBase_UserGameCommonMaster__UserGameCommonEntity__string__GetEntity__);
 }
 
 
@@ -43,15 +43,15 @@ bool __fastcall UserGameCommonMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_49FF5C6 & 1) == 0 )
+  if ( (byte_49FFBE7 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataMasterBase_UserGameCommonMaster__UserGameCommonEntity__string__TryGetEntity__, entity);
-    byte_49FF5C6 = 1;
+    sub_1B64A00(&Method_DataMasterBase_UserGameCommonMaster__UserGameCommonEntity__string__TryGetEntity__, entity);
+    byte_49FFBE7 = 1;
   }
   PK = (Il2CppObject *)UserGameCommonEntity__CreatePK(userId, no, (const MethodInfo *)userId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_30D6528 *)Method_DataMasterBase_UserGameCommonMaster__UserGameCommonEntity__string__TryGetEntity__);
+           (const MethodInfo_30D6B40 *)Method_DataMasterBase_UserGameCommonMaster__UserGameCommonEntity__string__TryGetEntity__);
 }

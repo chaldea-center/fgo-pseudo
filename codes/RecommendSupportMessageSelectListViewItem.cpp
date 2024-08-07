@@ -10,16 +10,16 @@ void __fastcall RecommendSupportMessageSelectListViewItem___ctor(
   const MethodInfo *v9; // x1
   struct RecommendAdviceMessageEntity_o *RecommendAdviceMessageEntity_k__BackingField; // x8
 
-  ListViewItem___ctor_40375592((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_40376104((ListViewItem_o *)this, index, 0LL);
   this->fields._RecommendAdviceMessageEntity_k__BackingField = entity;
-  sub_1B64814(
+  sub_1B649A4(
     (ServantStatusBattleListViewItem_o *)&this->fields._RecommendAdviceMessageEntity_k__BackingField,
     (int32_t)entity,
     v6,
     v7);
   RecommendAdviceMessageEntity_k__BackingField = this->fields._RecommendAdviceMessageEntity_k__BackingField;
   if ( !RecommendAdviceMessageEntity_k__BackingField )
-    sub_1B64ACC(v8, v9);
+    sub_1B64C5C(v8, v9);
   this->fields._Category_k__BackingField = RecommendAdviceMessageEntity_k__BackingField->fields.category;
   RecommendSupportMessageSelectListViewItem__UpdateProperties(this, v9);
 }
@@ -35,26 +35,26 @@ void __fastcall RecommendSupportMessageSelectListViewItem__UpdateProperties(
   __int64 v6; // x1
   struct RecommendAdviceMessageEntity_o *RecommendAdviceMessageEntity_k__BackingField; // x8
 
-  if ( (byte_49FA7E7 & 1) == 0 )
+  if ( (byte_49FAE07 & 1) == 0 )
   {
-    sub_1B64870(&Method_System_Linq_Enumerable_Contains_int___, method);
-    sub_1B64870(&Method_RecommendSupportSelectControl_GetDialog_RecommendSupportMessageSelectDialog___, v3);
-    sub_1B64870(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v4);
-    byte_49FA7E7 = 1;
+    sub_1B64A00(&Method_System_Linq_Enumerable_Contains_int___, method);
+    sub_1B64A00(&Method_RecommendSupportSelectControl_GetDialog_RecommendSupportMessageSelectDialog___, v3);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v4);
+    byte_49FAE07 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !Instance
     || (Instance = RecommendSupportSelectControl__GetDialog_object_(
                      (RecommendSupportSelectControl_o *)Instance,
-                     (const MethodInfo_2ECB8C4 *)Method_RecommendSupportSelectControl_GetDialog_RecommendSupportMessageSelectDialog___)) == 0LL
+                     (const MethodInfo_2ECBEDC *)Method_RecommendSupportSelectControl_GetDialog_RecommendSupportMessageSelectDialog___)) == 0LL
     || (RecommendAdviceMessageEntity_k__BackingField = this->fields._RecommendAdviceMessageEntity_k__BackingField) == 0LL )
   {
-    sub_1B64ACC(Instance, v6);
+    sub_1B64C5C(Instance, v6);
   }
   this->fields._IsUse_k__BackingField = System_Linq_Enumerable__Contains_int_(
                                           (System_Collections_Generic_IEnumerable_TSource__o *)Instance[12].monitor,
                                           RecommendAdviceMessageEntity_k__BackingField->fields.id,
-                                          (const MethodInfo_2E54F84 *)Method_System_Linq_Enumerable_Contains_int___);
+                                          (const MethodInfo_2E5559C *)Method_System_Linq_Enumerable_Contains_int___);
 }
 
 
@@ -82,7 +82,7 @@ int32_t __fastcall RecommendSupportMessageSelectListViewItem__get_ObjectId(
 
   RecommendAdviceMessageEntity_k__BackingField = this->fields._RecommendAdviceMessageEntity_k__BackingField;
   if ( !RecommendAdviceMessageEntity_k__BackingField )
-    sub_1B64ACC(this, method);
+    sub_1B64C5C(this, method);
   return RecommendAdviceMessageEntity_k__BackingField->fields.id;
 }
 
@@ -121,7 +121,7 @@ void __fastcall RecommendSupportMessageSelectListViewItem__set_RecommendAdviceMe
   int32_t v3; // w3
 
   this->fields._RecommendAdviceMessageEntity_k__BackingField = value;
-  sub_1B64814(
+  sub_1B649A4(
     (ServantStatusBattleListViewItem_o *)&this->fields._RecommendAdviceMessageEntity_k__BackingField,
     (int32_t)value,
     (int32_t)method,

@@ -2,10 +2,10 @@ void __fastcall AppendSkillListComponent___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_49FD94E & 1) == 0 )
+  if ( (byte_49FDF6E & 1) == 0 )
   {
-    sub_1B64870(&AppendSkillListComponent_TypeInfo, v1);
-    byte_49FD94E = 1;
+    sub_1B64A00(&AppendSkillListComponent_TypeInfo, v1);
+    byte_49FDF6E = 1;
   }
   AppendSkillListComponent_TypeInfo->static_fields->SKILL_LEVEL_LABEL_MAX_LENGTH = 122;
 }
@@ -21,17 +21,17 @@ void __fastcall AppendSkillListComponent__Clear(AppendSkillListComponent_o *this
 {
   UILabel_o *skillLevelListLabel; // x0
 
-  if ( (byte_49FD94C & 1) == 0 )
+  if ( (byte_49FDF6C & 1) == 0 )
   {
-    sub_1B64870(&StringLiteral_1/*""*/, method);
-    byte_49FD94C = 1;
+    sub_1B64A00(&StringLiteral_1/*""*/, method);
+    byte_49FDF6C = 1;
   }
   skillLevelListLabel = this->fields.skillLevelListLabel;
   if ( !skillLevelListLabel
     || (UILabel__set_text(skillLevelListLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (skillLevelListLabel = (UILabel_o *)this->fields.skillIconSprite) == 0LL) )
   {
-    sub_1B64ACC(skillLevelListLabel, method);
+    sub_1B64C5C(skillLevelListLabel, method);
   }
   UISprite__set_spriteName((UISprite_o *)skillLevelListLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
@@ -49,12 +49,12 @@ void __fastcall AppendSkillListComponent__Set(
   UILabel_o *v9; // x20
   UISprite_o *skillIconSprite; // x20
 
-  if ( (byte_49FD94D & 1) == 0 )
+  if ( (byte_49FDF6D & 1) == 0 )
   {
-    sub_1B64870(&AppendSkillListComponent_TypeInfo, skillLevelListText);
-    sub_1B64870(&AtlasManager_TypeInfo, v5);
-    sub_1B64870(&StringLiteral_20007/*"icon_append_mini"*/, v6);
-    byte_49FD94D = 1;
+    sub_1B64A00(&AppendSkillListComponent_TypeInfo, skillLevelListText);
+    sub_1B64A00(&AtlasManager_TypeInfo, v5);
+    sub_1B64A00(&StringLiteral_20007/*"icon_append_mini"*/, v6);
+    byte_49FDF6D = 1;
   }
   if ( System_String__IsNullOrEmpty(skillLevelListText, 0LL) )
   {
@@ -80,7 +80,7 @@ void __fastcall AppendSkillListComponent__Set(
     skillLevelListLabel = (UILabel_o *)this->fields.skillIconSprite;
     if ( !skillLevelListLabel )
 LABEL_13:
-      sub_1B64ACC(skillLevelListLabel, v7);
+      sub_1B64C5C(skillLevelListLabel, v7);
     ((void (__fastcall *)(UILabel_o *, Il2CppMethodPointer))skillLevelListLabel->klass->vtable._33_MakePixelPerfect.method)(
       skillLevelListLabel,
       skillLevelListLabel->klass->vtable._34_get_minWidth.methodPtr);

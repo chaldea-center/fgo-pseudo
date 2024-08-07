@@ -8,11 +8,11 @@ System_String_o *__fastcall StrengthStatus__GetIconName(int32_t strengthStatus, 
 {
   __int64 v3; // x1
 
-  if ( (byte_49FD551 & 1) == 0 )
+  if ( (byte_49FDB71 & 1) == 0 )
   {
-    sub_1B64870(&StringLiteral_20110/*"icon_stateup_on"*/, method);
-    sub_1B64870(&StringLiteral_20109/*"icon_stateup_off"*/, v3);
-    byte_49FD551 = 1;
+    sub_1B64A00(&StringLiteral_20110/*"icon_stateup_on"*/, method);
+    sub_1B64A00(&StringLiteral_20109/*"icon_stateup_off"*/, v3);
+    byte_49FDB71 = 1;
   }
   if ( !strengthStatus )
     return 0LL;
@@ -35,12 +35,12 @@ System_String_o *__fastcall StrengthStatus__GetTreasureDeviceIconName(
   __int64 *v7; // x8
   unsigned int v8; // w8
 
-  if ( (byte_49FD552 & 1) == 0 )
+  if ( (byte_49FDB72 & 1) == 0 )
   {
-    sub_1B64870(&System_Math_TypeInfo, *(_QWORD *)&treasureDeviceNum);
-    sub_1B64870(&StringLiteral_20083/*"icon_np_off"*/, v5);
-    sub_1B64870(&StringLiteral_20084/*"icon_np_on"*/, v6);
-    byte_49FD552 = 1;
+    sub_1B64A00(&System_Math_TypeInfo, *(_QWORD *)&treasureDeviceNum);
+    sub_1B64A00(&StringLiteral_20083/*"icon_np_off"*/, v5);
+    sub_1B64A00(&StringLiteral_20084/*"icon_np_on"*/, v6);
+    byte_49FDB72 = 1;
   }
   if ( !strengthStatus )
     return 0LL;
@@ -77,10 +77,10 @@ int32_t __fastcall StrengthStatus__GetTreasureDeviceStrengthAdjustData(
   int32_t result; // w0
   int32_t v6; // w8
 
-  if ( (byte_49FD550 & 1) == 0 )
+  if ( (byte_49FDB70 & 1) == 0 )
   {
-    sub_1B64870(&System_Math_TypeInfo, *(_QWORD *)&treasureDeviceNum);
-    byte_49FD550 = 1;
+    sub_1B64A00(&System_Math_TypeInfo, *(_QWORD *)&treasureDeviceNum);
+    byte_49FDB70 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);

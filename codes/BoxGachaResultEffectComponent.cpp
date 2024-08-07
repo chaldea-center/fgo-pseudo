@@ -25,12 +25,12 @@ void __fastcall BoxGachaResultEffectComponent__CheckAutoResetEnable(
   System_Action_o *v15; // x22
   UnityEngine_Vector2_o v16; // 0:s0.4,4:s1.4
 
-  if ( (byte_4A023BE & 1) == 0 )
+  if ( (byte_4A029DF & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, method);
-    sub_1B64870(&Method_BoxGachaResultEffectComponent__CheckAutoResetEnable_b__71_0__, v3);
-    sub_1B64870(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
-    byte_4A023BE = 1;
+    sub_1B64A00(&System_Action_TypeInfo, method);
+    sub_1B64A00(&Method_BoxGachaResultEffectComponent__CheckAutoResetEnable_b__71_0__, v3);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
+    byte_4A029DF = 1;
   }
   multiGachaButton = this->fields.multiGachaButton;
   if ( !multiGachaButton )
@@ -48,10 +48,10 @@ void __fastcall BoxGachaResultEffectComponent__CheckAutoResetEnable(
     if ( !this->fields.isDispAutoResetDlg )
     {
       this->fields.isDispAutoResetDlg = 1;
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       resetBoxMsg = this->fields.resetBoxMsg;
       v14 = (CommonUI_o *)Instance;
-      v15 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+      v15 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
       System_Action___ctor(
         v15,
         (Il2CppObject *)this,
@@ -73,7 +73,7 @@ void __fastcall BoxGachaResultEffectComponent__CheckAutoResetEnable(
         (multiGachaButton = (UICommonButton_o *)this->fields.resourcesPanel) == 0LL) )
   {
 LABEL_17:
-    sub_1B64ACC(multiGachaButton, method);
+    sub_1B64C5C(multiGachaButton, method);
   }
   multiGachaButton = (UICommonButton_o *)UnityEngine_Component__get_gameObject(
                                            (UnityEngine_Component_o *)multiGachaButton,
@@ -111,7 +111,7 @@ void __fastcall BoxGachaResultEffectComponent__EndAction(
   BoxGachaResultEffectComponent__EndMessage(this, isAfter, method);
   endVoiceAction = this->fields.endVoiceAction;
   if ( !endVoiceAction )
-    sub_1B64ACC(v4, v5);
+    sub_1B64C5C(v4, v5);
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))endVoiceAction->fields.m_target)(
     endVoiceAction->fields.original_method_info,
     *(_QWORD *)&endVoiceAction->fields.extra_arg);
@@ -138,13 +138,13 @@ void __fastcall BoxGachaResultEffectComponent__EndMessage(
   int32_t v16; // w2
   int32_t v17; // w3
 
-  if ( (byte_4A023B7 & 1) == 0 )
+  if ( (byte_4A029D8 & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, isAfter);
-    sub_1B64870(&Method_BoxGachaResultEffectComponent___c__EndMessage_b__61_0__, v5);
-    sub_1B64870(&BoxGachaResultEffectComponent___c_TypeInfo, v6);
-    sub_1B64870(&StringLiteral_5452/*"END_MSG"*/, v7);
-    byte_4A023B7 = 1;
+    sub_1B64A00(&System_Action_TypeInfo, isAfter);
+    sub_1B64A00(&Method_BoxGachaResultEffectComponent___c__EndMessage_b__61_0__, v5);
+    sub_1B64A00(&BoxGachaResultEffectComponent___c_TypeInfo, v6);
+    sub_1B64A00(&StringLiteral_5453/*"END_MSG"*/, v7);
+    byte_4A029D8 = 1;
   }
   BoxGachaResultEffectComponent__setFigureFace(this, this->fields.normalFace, 0.0, method);
   messageManager = this->fields.messageManager;
@@ -170,11 +170,11 @@ LABEL_8:
     messageManager = (CommonMessageManager_o *)this->fields.targetFSM;
     if ( messageManager )
     {
-      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)messageManager, (System_String_o *)StringLiteral_5452/*"END_MSG"*/, 0LL);
+      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)messageManager, (System_String_o *)StringLiteral_5453/*"END_MSG"*/, 0LL);
       return;
     }
 LABEL_19:
-    sub_1B64ACC(messageManager, v8);
+    sub_1B64C5C(messageManager, v8);
   }
   v12 = BoxGachaResultEffectComponent___c_TypeInfo;
   if ( !BoxGachaResultEffectComponent___c_TypeInfo->_2.cctor_finished )
@@ -191,11 +191,11 @@ LABEL_19:
       v12 = BoxGachaResultEffectComponent___c_TypeInfo;
     }
     v14 = (Il2CppObject *)v12->static_fields->__9;
-    _9__61_0 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+    _9__61_0 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
     System_Action___ctor(_9__61_0, v14, Method_BoxGachaResultEffectComponent___c__EndMessage_b__61_0__, 0LL);
     static_fields = BoxGachaResultEffectComponent___c_TypeInfo->static_fields;
     static_fields->__9__61_0 = _9__61_0;
-    sub_1B64814((ServantStatusBattleListViewItem_o *)&static_fields->__9__61_0, (int32_t)_9__61_0, v16, v17);
+    sub_1B649A4((ServantStatusBattleListViewItem_o *)&static_fields->__9__61_0, (int32_t)_9__61_0, v16, v17);
   }
   BoxGachaResultEffectComponent__OpenCompensationItemDialog(this, _9__61_0, v10);
 }
@@ -219,7 +219,7 @@ bool __fastcall BoxGachaResultEffectComponent__IsResultPanelActive(
     if ( gameObject )
       return ScriptMessageCommonManager__IsRootActive(gameObject, 0LL);
 LABEL_6:
-    sub_1B64ACC(gameObject, v4);
+    sub_1B64C5C(gameObject, v4);
   }
   return 0;
 }
@@ -249,16 +249,16 @@ void __fastcall BoxGachaResultEffectComponent__OnClickBackBtn(
   _QWORD *v4; // x0
   System_Reflection_MethodBase_o *v5; // x0
 
-  if ( (byte_4A023C1 & 1) == 0 )
+  if ( (byte_4A029E2 & 1) == 0 )
   {
-    sub_1B64870(&Method_BoxGachaResultEffectComponent_OnClickBackBtn__, method);
-    byte_4A023C1 = 1;
+    sub_1B64A00(&Method_BoxGachaResultEffectComponent_OnClickBackBtn__, method);
+    byte_4A029E2 = 1;
   }
   BoxGachaResultEffectComponent__EndAction(this, 1, v2);
   v4 = Method_BoxGachaResultEffectComponent_OnClickBackBtn__;
   if ( (*((_BYTE *)Method_BoxGachaResultEffectComponent_OnClickBackBtn__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1B64888(Method_BoxGachaResultEffectComponent_OnClickBackBtn__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1B64854(v4, v4[4]);
+    v4 = (_QWORD *)sub_1B64A18(Method_BoxGachaResultEffectComponent_OnClickBackBtn__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1B649E4(v4, v4[4]);
   OverwriteAssetSoundName__PlaySystemSe(v5, 1, 0LL);
 }
 
@@ -284,14 +284,14 @@ void __fastcall BoxGachaResultEffectComponent__OnClickMultiGachaButton(
   struct System_Action_Action__float__o *endPerformanceAction; // x21
   System_Action_o *v18; // x20
 
-  if ( (byte_4A023C2 & 1) == 0 )
+  if ( (byte_4A029E3 & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, method);
-    sub_1B64870(&Method_BoxGachaResultEffectComponent_OnClickMultiGachaButton__, v3);
-    sub_1B64870(&Method_BoxGachaResultEffectComponent__OnClickMultiGachaButton_b__79_0__, v4);
-    sub_1B64870(&Method_BoxGachaResultEffectComponent__OnClickMultiGachaButton_b__79_1__, v5);
-    sub_1B64870(&StringLiteral_5728/*"EXE_GACHA"*/, v6);
-    byte_4A023C2 = 1;
+    sub_1B64A00(&System_Action_TypeInfo, method);
+    sub_1B64A00(&Method_BoxGachaResultEffectComponent_OnClickMultiGachaButton__, v3);
+    sub_1B64A00(&Method_BoxGachaResultEffectComponent__OnClickMultiGachaButton_b__79_0__, v4);
+    sub_1B64A00(&Method_BoxGachaResultEffectComponent__OnClickMultiGachaButton_b__79_1__, v5);
+    sub_1B64A00(&StringLiteral_5729/*"EXE_GACHA"*/, v6);
+    byte_4A029E3 = 1;
   }
   isUnSkippable = this->fields.isUnSkippable;
   if ( (!isUnSkippable
@@ -308,7 +308,7 @@ void __fastcall BoxGachaResultEffectComponent__OnClickMultiGachaButton(
         if ( *(_QWORD *)&compensationMsgIds->max_length )
         {
           *(_WORD *)&this->fields.isOpenCompensationDlg = 257;
-          v15 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+          v15 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
           System_Action___ctor(
             v15,
             (Il2CppObject *)this,
@@ -321,8 +321,8 @@ void __fastcall BoxGachaResultEffectComponent__OnClickMultiGachaButton(
     }
     v8 = Method_BoxGachaResultEffectComponent_OnClickMultiGachaButton__;
     if ( (*((_BYTE *)Method_BoxGachaResultEffectComponent_OnClickMultiGachaButton__ + 83) & 2) != 0 )
-      v8 = (_QWORD *)sub_1B64888(Method_BoxGachaResultEffectComponent_OnClickMultiGachaButton__);
-    v9 = (System_Reflection_MethodBase_o *)sub_1B64854(v8, v8[4]);
+      v8 = (_QWORD *)sub_1B64A18(Method_BoxGachaResultEffectComponent_OnClickMultiGachaButton__);
+    v9 = (System_Reflection_MethodBase_o *)sub_1B649E4(v8, v8[4]);
     OverwriteAssetSoundName__PlaySystemSe(v9, 8, 0LL);
     BoxGachaResultEffectComponent__setFigureFace(this, this->fields.normalFace, 0.0, v10);
     messageManager = this->fields.messageManager;
@@ -348,14 +348,14 @@ void __fastcall BoxGachaResultEffectComponent__OnClickMultiGachaButton(
               messageManager = (CommonMessageManager_o *)this->fields.targetFSM;
               if ( messageManager )
               {
-                PlayMakerFSM__SendEvent((PlayMakerFSM_o *)messageManager, (System_String_o *)StringLiteral_5728/*"EXE_GACHA"*/, 0LL);
+                PlayMakerFSM__SendEvent((PlayMakerFSM_o *)messageManager, (System_String_o *)StringLiteral_5729/*"EXE_GACHA"*/, 0LL);
                 return;
               }
             }
             else
             {
               endPerformanceAction = this->fields.endPerformanceAction;
-              v18 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+              v18 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
               System_Action___ctor(
                 v18,
                 (Il2CppObject *)this,
@@ -375,7 +375,7 @@ void __fastcall BoxGachaResultEffectComponent__OnClickMultiGachaButton(
         }
       }
     }
-    sub_1B64ACC(messageManager, v11);
+    sub_1B64C5C(messageManager, v11);
   }
 }
 
@@ -394,23 +394,23 @@ void __fastcall BoxGachaResultEffectComponent__OpenCompensationItemDialog(
   __int64 v11; // x0
   __int64 v12; // x1
 
-  if ( (byte_4A023B8 & 1) == 0 )
+  if ( (byte_4A029D9 & 1) == 0 )
   {
-    sub_1B64870(&Method_System_Collections_Generic_List_int___ctor___75665656, endCallBack);
-    sub_1B64870(&System_Collections_Generic_List_int__TypeInfo, v5);
-    sub_1B64870(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    byte_4A023B8 = 1;
+    sub_1B64A00(&Method_System_Collections_Generic_List_int___ctor___75667208, endCallBack);
+    sub_1B64A00(&System_Collections_Generic_List_int__TypeInfo, v5);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    byte_4A029D9 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   compensationMsgIds = (System_Collections_Generic_IEnumerable_T__o *)this->fields.compensationMsgIds;
   v9 = (CommonUI_o *)Instance;
-  v10 = (System_Collections_Generic_List_int__o *)sub_1B64ABC(System_Collections_Generic_List_int__TypeInfo);
-  System_Collections_Generic_List_int____ctor_55122572(
+  v10 = (System_Collections_Generic_List_int__o *)sub_1B64C4C(System_Collections_Generic_List_int__TypeInfo);
+  System_Collections_Generic_List_int____ctor_55124132(
     v10,
     compensationMsgIds,
-    (const MethodInfo_3491A8C *)Method_System_Collections_Generic_List_int___ctor___75665656);
+    (const MethodInfo_34920A4 *)Method_System_Collections_Generic_List_int___ctor___75667208);
   if ( !v9 )
-    sub_1B64ACC(v11, v12);
+    sub_1B64C5C(v11, v12);
   CommonUI__OpenCompensationItemDialog(v9, v10, endCallBack, 0LL);
 }
 
@@ -423,7 +423,7 @@ void __fastcall BoxGachaResultEffectComponent__SetAfterAutoResetCallBack(
   int32_t v3; // w3
 
   this->fields.afterAutoReset = callback;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.afterAutoReset, (int32_t)callback, (int32_t)method, v3);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.afterAutoReset, (int32_t)callback, (int32_t)method, v3);
 }
 
 
@@ -450,19 +450,19 @@ void __fastcall BoxGachaResultEffectComponent__SetAutoResetMessage(
   int32_t v21; // w3
 
   v9 = isLastLimitBox;
-  if ( (byte_4A023BF & 1) == 0 )
+  if ( (byte_4A029E0 & 1) == 0 )
   {
-    sub_1B64870(&LocalizationManager_TypeInfo, isLimit);
-    sub_1B64870(&string_TypeInfo, v10);
-    sub_1B64870(&StringLiteral_3065/*"BOX_GACHA_LIMIT_AUTO_RESET_INFO"*/, v11);
-    sub_1B64870(&StringLiteral_3062/*"BOX_GACHA_AUTO_RESET_INFO"*/, v12);
-    byte_4A023BF = 1;
+    sub_1B64A00(&LocalizationManager_TypeInfo, isLimit);
+    sub_1B64A00(&string_TypeInfo, v10);
+    sub_1B64A00(&StringLiteral_3066/*"BOX_GACHA_LIMIT_AUTO_RESET_INFO"*/, v11);
+    sub_1B64A00(&StringLiteral_3063/*"BOX_GACHA_AUTO_RESET_INFO"*/, v12);
+    byte_4A029E0 = 1;
   }
   static_fields = string_TypeInfo->static_fields;
   Empty = static_fields->Empty;
   this->fields.resetBoxMsg = static_fields->Empty;
   p_resetBoxMsg = &this->fields.resetBoxMsg;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)p_resetBoxMsg, (int32_t)Empty, isLastLimitBox, (int32_t)prizeName);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)p_resetBoxMsg, (int32_t)Empty, isLastLimitBox, (int32_t)prizeName);
   v16 = *((unsigned __int8 *)p_resetBoxMsg + 83);
   *((_BYTE *)p_resetBoxMsg + 84) = v9;
   if ( v16 && !isLastLimitBox )
@@ -470,13 +470,13 @@ void __fastcall BoxGachaResultEffectComponent__SetAutoResetMessage(
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     if ( isLimit )
-      v17 = (System_String_o **)&StringLiteral_3065/*"BOX_GACHA_LIMIT_AUTO_RESET_INFO"*/;
+      v17 = (System_String_o **)&StringLiteral_3066/*"BOX_GACHA_LIMIT_AUTO_RESET_INFO"*/;
     else
-      v17 = (System_String_o **)&StringLiteral_3062/*"BOX_GACHA_AUTO_RESET_INFO"*/;
+      v17 = (System_String_o **)&StringLiteral_3063/*"BOX_GACHA_AUTO_RESET_INFO"*/;
     v18 = LocalizationManager__Get(*v17, 0LL);
     v19 = System_String__Format(v18, (Il2CppObject *)prizeName, 0LL);
     *p_resetBoxMsg = v19;
-    sub_1B64814((ServantStatusBattleListViewItem_o *)p_resetBoxMsg, (int32_t)v19, v20, v21);
+    sub_1B649A4((ServantStatusBattleListViewItem_o *)p_resetBoxMsg, (int32_t)v19, v20, v21);
   }
 }
 
@@ -516,12 +516,12 @@ void __fastcall BoxGachaResultEffectComponent__SetCurrentResultInfo(
   int32_t v22; // [xsp+8h] [xbp-48h] BYREF
   int32_t v23; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4A023B1 & 1) == 0 )
+  if ( (byte_4A029D2 & 1) == 0 )
   {
-    sub_1B64870(&int_TypeInfo, *(_QWORD *)&boxNo);
-    sub_1B64870(&LocalizationManager_TypeInfo, v9);
-    sub_1B64870(&StringLiteral_3079/*"BOX_GACHA_RESULT_CURRENT_INFO"*/, v10);
-    byte_4A023B1 = 1;
+    sub_1B64A00(&int_TypeInfo, *(_QWORD *)&boxNo);
+    sub_1B64A00(&LocalizationManager_TypeInfo, v9);
+    sub_1B64A00(&StringLiteral_3080/*"BOX_GACHA_RESULT_CURRENT_INFO"*/, v10);
+    byte_4A029D2 = 1;
   }
   currentResultInfo = this->fields.currentResultInfo;
   if ( !currentResultInfo )
@@ -530,12 +530,12 @@ void __fastcall BoxGachaResultEffectComponent__SetCurrentResultInfo(
   currentResultLabel = this->fields.currentResultLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_3079/*"BOX_GACHA_RESULT_CURRENT_INFO"*/, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_3080/*"BOX_GACHA_RESULT_CURRENT_INFO"*/, 0LL);
   v23 = boxNo;
   v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v23, v14, v15, v16);
   v22 = boxCurrentNum;
   v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v22, v18, v19, v20);
-  currentResultInfo = (UnityEngine_GameObject_o *)System_String__Format_61398016(
+  currentResultInfo = (UnityEngine_GameObject_o *)System_String__Format_61399576(
                                                     v13,
                                                     v17,
                                                     (Il2CppObject *)prizeName,
@@ -543,7 +543,7 @@ void __fastcall BoxGachaResultEffectComponent__SetCurrentResultInfo(
                                                     0LL);
   if ( !currentResultLabel )
 LABEL_8:
-    sub_1B64ACC(currentResultInfo, *(_QWORD *)&boxNo);
+    sub_1B64C5C(currentResultInfo, *(_QWORD *)&boxNo);
   UILabel__set_text(currentResultLabel, (System_String_o *)currentResultInfo, 0LL);
 }
 
@@ -556,7 +556,7 @@ void __fastcall BoxGachaResultEffectComponent__SetEnableBackBtnAction(
   int32_t v3; // w3
 
   this->fields.onEnableBackBtn = onEnableBackBtn;
-  sub_1B64814(
+  sub_1B649A4(
     (ServantStatusBattleListViewItem_o *)&this->fields.onEnableBackBtn,
     (int32_t)onEnableBackBtn,
     (int32_t)method,
@@ -586,11 +586,11 @@ void __fastcall BoxGachaResultEffectComponent__SetGachaButtonStatus(
   UnityEngine_Color_o v18; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v19; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4A023B2 & 1) == 0 )
+  if ( (byte_4A029D3 & 1) == 0 )
   {
-    sub_1B64870(&UnityEngine_Object_TypeInfo, isEnble);
-    sub_1B64870(&StringLiteral_442/*"#4C4C4C"*/, v5);
-    byte_4A023B2 = 1;
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, isEnble);
+    sub_1B64A00(&StringLiteral_442/*"#4C4C4C"*/, v5);
+    byte_4A029D3 = 1;
   }
   *(_QWORD *)&v13.fields.r = 0LL;
   *(_QWORD *)&v13.fields.b = 0LL;
@@ -657,7 +657,7 @@ void __fastcall BoxGachaResultEffectComponent__SetGachaButtonStatus(
           (multiGachaBgSprite = (UnityEngine_Behaviour_o *)this->fields.multiGacha3DigitNumSprite) == 0LL) )
     {
 LABEL_17:
-      sub_1B64ACC(multiGachaBgSprite, v7);
+      sub_1B64C5C(multiGachaBgSprite, v7);
     }
     v19.fields.r = r;
     v19.fields.g = g;
@@ -697,13 +697,13 @@ void __fastcall BoxGachaResultEffectComponent__SetUserGachaResource(
 
   v8 = enableNum;
   v25 = eventId;
-  if ( (byte_4A023B0 & 1) == 0 )
+  if ( (byte_4A029D1 & 1) == 0 )
   {
-    sub_1B64870(&BoxGachaUtility_TypeInfo, *(_QWORD *)&enableNum);
-    sub_1B64870(&EventRewardRootComponent_TypeInfo, v10);
-    sub_1B64870(&StringLiteral_20467/*"img_txt_getpresent_"*/, v11);
-    sub_1B64870(&StringLiteral_20244/*"img_gachatxt_"*/, v12);
-    byte_4A023B0 = 1;
+    sub_1B64A00(&BoxGachaUtility_TypeInfo, *(_QWORD *)&enableNum);
+    sub_1B64A00(&EventRewardRootComponent_TypeInfo, v10);
+    sub_1B64A00(&StringLiteral_20467/*"img_txt_getpresent_"*/, v11);
+    sub_1B64A00(&StringLiteral_20244/*"img_gachatxt_"*/, v12);
+    byte_4A029D1 = 1;
   }
   enableBoxGachaInfo = this->fields.enableBoxGachaInfo;
   v14 = v8 > 0;
@@ -726,9 +726,9 @@ void __fastcall BoxGachaResultEffectComponent__SetUserGachaResource(
     multiGacha3DigitNumSprite,
     0LL);
   v19 = System_Int32__ToString((int32_t)&v25, 0LL);
-  v20 = System_String__Concat_61383576((System_String_o *)StringLiteral_20244/*"img_gachatxt_"*/, v19, 0LL);
+  v20 = System_String__Concat_61385136((System_String_o *)StringLiteral_20244/*"img_gachatxt_"*/, v19, 0LL);
   v21 = System_Int32__ToString((int32_t)&v25, 0LL);
-  v22 = System_String__Concat_61383576((System_String_o *)StringLiteral_20467/*"img_txt_getpresent_"*/, v21, 0LL);
+  v22 = System_String__Concat_61385136((System_String_o *)StringLiteral_20467/*"img_txt_getpresent_"*/, v21, 0LL);
   multiGachaTimeSprite = this->fields.multiGachaTimeSprite;
   v24 = v22;
   if ( !EventRewardRootComponent_TypeInfo->_2.cctor_finished )
@@ -738,7 +738,7 @@ void __fastcall BoxGachaResultEffectComponent__SetUserGachaResource(
   enableBoxGachaInfo = (BoxGachaItemComponent_o *)this->fields.itemResourceComponent;
   if ( !enableBoxGachaInfo )
 LABEL_12:
-    sub_1B64ACC(enableBoxGachaInfo, *(_QWORD *)&enableNum);
+    sub_1B64C5C(enableBoxGachaInfo, *(_QWORD *)&enableNum);
   EventItemComponent__Set((EventItemComponent_o *)enableBoxGachaInfo, payTargetId, 0LL);
 }
 
@@ -752,10 +752,10 @@ void __fastcall BoxGachaResultEffectComponent__UpdateBackBtnStatus(
   struct System_Func_bool__o *isUnSkippable; // x8
   char v6; // w8
 
-  if ( (byte_4A023BC & 1) == 0 )
+  if ( (byte_4A029DD & 1) == 0 )
   {
-    sub_1B64870(&Method_ActionExtensions_Call_bool__bool___, method);
-    byte_4A023BC = 1;
+    sub_1B64A00(&Method_ActionExtensions_Call_bool__bool___, method);
+    byte_4A029DD = 1;
   }
   onEnableBackBtn = (System_Action_T1__T2__o *)this->fields.onEnableBackBtn;
   v4 = !this->fields.isBoxItemEmpty || this->fields.isLastLimitBox;
@@ -770,7 +770,7 @@ void __fastcall BoxGachaResultEffectComponent__UpdateBackBtnStatus(
     onEnableBackBtn,
     v4,
     v6 & 1,
-    (const MethodInfo_2D92F38 *)Method_ActionExtensions_Call_bool__bool___);
+    (const MethodInfo_2D93550 *)Method_ActionExtensions_Call_bool__bool___);
 }
 
 
@@ -793,15 +793,15 @@ void __fastcall BoxGachaResultEffectComponent___CheckAutoResetEnable_b__71_0(
   UnityEngine_GameObject_o *v15; // x19
   char v16; // w8
 
-  if ( (byte_4A023C6 & 1) == 0 )
+  if ( (byte_4A029E7 & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, method);
-    sub_1B64870(&Method_BoxGachaResultEffectComponent__CheckAutoResetEnable_b__71_1__, v3);
-    byte_4A023C6 = 1;
+    sub_1B64A00(&System_Action_TypeInfo, method);
+    sub_1B64A00(&Method_BoxGachaResultEffectComponent__CheckAutoResetEnable_b__71_1__, v3);
+    byte_4A029E7 = 1;
   }
   afterAutoReset = (System_Delegate_o *)this->fields.afterAutoReset;
   p_afterAutoReset = &this->fields.afterAutoReset;
-  v6 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
   System_Action___ctor(
     v6,
     (Il2CppObject *)this,
@@ -815,11 +815,11 @@ void __fastcall BoxGachaResultEffectComponent___CheckAutoResetEnable_b__71_0(
   if ( (System_Action_c *)v7->klass != System_Action_TypeInfo
     || (*p_afterAutoReset = (struct System_Action_o *)v7, (System_Action_c *)v7->klass != v11) )
   {
-    sub_1B64D8C(v7);
+    sub_1B64F1C(v7);
 LABEL_7:
     *p_afterAutoReset = (struct System_Action_o *)v10;
   }
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.afterAutoReset, (int32_t)v10, v8, v9);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.afterAutoReset, (int32_t)v10, v8, v9);
   ActionExtensions__Call(this->fields.afterAutoReset, 0LL);
   resourcesPanel = (UnityEngine_Component_o *)this->fields.resourcesPanel;
   if ( !resourcesPanel )
@@ -833,7 +833,7 @@ LABEL_7:
     if ( resourcesPanel )
       goto LABEL_11;
 LABEL_13:
-    sub_1B64ACC(resourcesPanel, v12);
+    sub_1B64C5C(resourcesPanel, v12);
   }
   resourcesPanel = (UnityEngine_Component_o *)((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))isUnSkippable->fields.m_target)(
                                                 isUnSkippable->fields.original_method_info,
@@ -855,7 +855,7 @@ void __fastcall BoxGachaResultEffectComponent___CheckAutoResetEnable_b__71_1(
   *(_WORD *)&this->fields.isEndAfterMsg = 0;
   messageManager = (ScriptMessageCommonManager_o *)this->fields.messageManager;
   if ( !messageManager )
-    sub_1B64ACC(0LL, method);
+    sub_1B64C5C(0LL, method);
   ScriptMessageCommonManager__SetMessageWindowCollider(messageManager, 0, 0LL);
 }
 
@@ -878,15 +878,15 @@ void __fastcall BoxGachaResultEffectComponent___OnClickMultiGachaButton_b__79_1(
 {
   PlayMakerFSM_o *targetFSM; // x0
 
-  if ( (byte_4A023C7 & 1) == 0 )
+  if ( (byte_4A029E8 & 1) == 0 )
   {
-    sub_1B64870(&StringLiteral_5728/*"EXE_GACHA"*/, method);
-    byte_4A023C7 = 1;
+    sub_1B64A00(&StringLiteral_5729/*"EXE_GACHA"*/, method);
+    byte_4A029E8 = 1;
   }
   targetFSM = this->fields.targetFSM;
   if ( !targetFSM )
-    sub_1B64ACC(0LL, method);
-  PlayMakerFSM__SendEvent(targetFSM, (System_String_o *)StringLiteral_5728/*"EXE_GACHA"*/, 0LL);
+    sub_1B64C5C(0LL, method);
+  PlayMakerFSM__SendEvent(targetFSM, (System_String_o *)StringLiteral_5729/*"EXE_GACHA"*/, 0LL);
 }
 
 
@@ -917,13 +917,13 @@ void __fastcall BoxGachaResultEffectComponent___dispMsgAftResultList_b__70_0(
   __int128 v23; // [xsp+30h] [xbp-60h] BYREF
   __int128 v24[2]; // [xsp+40h] [xbp-50h] BYREF
 
-  if ( (byte_4A023C4 & 1) == 0 )
+  if ( (byte_4A029E5 & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, method);
-    sub_1B64870(&Method_BoxGachaResultEffectComponent__dispMsgAftResultList_b__70_1__, v3);
-    sub_1B64870(&Method_BoxGachaResultEffectComponent__dispMsgAftResultList_b__70_2__, v4);
-    sub_1B64870(&Method_UnityEngine_Component_GetComponent_TweenAlpha___, v5);
-    byte_4A023C4 = 1;
+    sub_1B64A00(&System_Action_TypeInfo, method);
+    sub_1B64A00(&Method_BoxGachaResultEffectComponent__dispMsgAftResultList_b__70_1__, v3);
+    sub_1B64A00(&Method_BoxGachaResultEffectComponent__dispMsgAftResultList_b__70_2__, v4);
+    sub_1B64A00(&Method_UnityEngine_Component_GetComponent_TweenAlpha___, v5);
+    byte_4A029E5 = 1;
   }
   *((_QWORD *)&v22 + 1) = 0LL;
   v23 = 0uLL;
@@ -932,11 +932,11 @@ void __fastcall BoxGachaResultEffectComponent___dispMsgAftResultList_b__70_0(
     goto LABEL_12;
   resourcesPanel = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                 resourcesPanel,
-                                                (const MethodInfo_2E3216C *)Method_UnityEngine_Component_GetComponent_TweenAlpha___);
+                                                (const MethodInfo_2E32784 *)Method_UnityEngine_Component_GetComponent_TweenAlpha___);
   if ( !resourcesPanel )
     goto LABEL_12;
   v7 = (UITweener_o *)resourcesPanel;
-  UITweener__Play_46696136((UITweener_o *)resourcesPanel, 1, 0LL);
+  UITweener__Play_46697696((UITweener_o *)resourcesPanel, 1, 0LL);
   UITweener__ResetToBeginning(v7, 0LL);
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)v7, 1, 0LL);
   resourcesPanel = (UnityEngine_Component_o *)this->fields.messageManager;
@@ -944,11 +944,11 @@ void __fastcall BoxGachaResultEffectComponent___dispMsgAftResultList_b__70_0(
     goto LABEL_12;
   resourcesPanel = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                 resourcesPanel,
-                                                (const MethodInfo_2E3216C *)Method_UnityEngine_Component_GetComponent_TweenAlpha___);
+                                                (const MethodInfo_2E32784 *)Method_UnityEngine_Component_GetComponent_TweenAlpha___);
   if ( !resourcesPanel )
     goto LABEL_12;
   v8 = (UITweener_o *)resourcesPanel;
-  UITweener__Play_46696136((UITweener_o *)resourcesPanel, 1, 0LL);
+  UITweener__Play_46697696((UITweener_o *)resourcesPanel, 1, 0LL);
   UITweener__ResetToBeginning(v8, 0LL);
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)v8, 1, 0LL);
   resourcesPanel = (UnityEngine_Component_o *)this->fields.messageManager;
@@ -967,28 +967,28 @@ void __fastcall BoxGachaResultEffectComponent___dispMsgAftResultList_b__70_0(
                       (BoxGachaTalkInfo_o *)resourcesPanel,
                       this->fields.randomTalkIdx,
                       0LL);
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&v22, v22, v11, v12);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&v22, v22, v11, v12);
   BYTE8(v22) = this->fields.isShortCut;
-  v13 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  v13 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
   System_Action___ctor(
     v13,
     (Il2CppObject *)this,
     Method_BoxGachaResultEffectComponent__dispMsgAftResultList_b__70_1__,
     0LL);
   *(_QWORD *)&v23 = v13;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&v23, (int32_t)v13, v14, v15);
-  v16 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&v23, (int32_t)v13, v14, v15);
+  v16 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
   System_Action___ctor(
     v16,
     (Il2CppObject *)this,
     Method_BoxGachaResultEffectComponent__dispMsgAftResultList_b__70_2__,
     0LL);
   *((_QWORD *)&v23 + 1) = v16;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)((char *)&v23 + 8), (int32_t)v16, v17, v18);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)((char *)&v23 + 8), (int32_t)v16, v17, v18);
   playVoiceAction = this->fields.playVoiceAction;
   if ( !playVoiceAction )
 LABEL_12:
-    sub_1B64ACC(resourcesPanel, method);
+    sub_1B64C5C(resourcesPanel, method);
   m_target = playVoiceAction->fields.m_target;
   original_method_info = playVoiceAction->fields.original_method_info;
   v24[0] = v22;
@@ -1013,11 +1013,11 @@ void __fastcall BoxGachaResultEffectComponent___dispMsgAftResultList_b__70_1(
   struct System_Func_bool__o *v9; // x8
   System_Action_o *v10; // x20
 
-  if ( (byte_4A023C5 & 1) == 0 )
+  if ( (byte_4A029E6 & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, method);
-    sub_1B64870(&Method_BoxGachaResultEffectComponent_CheckAutoResetEnable__, v3);
-    byte_4A023C5 = 1;
+    sub_1B64A00(&System_Action_TypeInfo, method);
+    sub_1B64A00(&Method_BoxGachaResultEffectComponent_CheckAutoResetEnable__, v3);
+    byte_4A029E6 = 1;
   }
   BoxGachaResultEffectComponent__UpdateBackBtnStatus(this, method);
   resourcesPanel = (UnityEngine_Component_o *)this->fields.resourcesPanel;
@@ -1052,13 +1052,13 @@ void __fastcall BoxGachaResultEffectComponent___dispMsgAftResultList_b__70_1(
   }
   else
   {
-    v10 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+    v10 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
     System_Action___ctor(v10, (Il2CppObject *)this, Method_BoxGachaResultEffectComponent_CheckAutoResetEnable__, 0LL);
   }
   resourcesPanel = (UnityEngine_Component_o *)this->fields.messageManager;
   if ( !resourcesPanel )
 LABEL_14:
-    sub_1B64ACC(resourcesPanel, v4);
+    sub_1B64C5C(resourcesPanel, v4);
   CommonMessageManager__SetMessageBlock((CommonMessageManager_o *)resourcesPanel, this->fields.aftMsg, 0, v10, 0LL);
 }
 
@@ -1092,12 +1092,12 @@ void __fastcall BoxGachaResultEffectComponent___dispMsgBefResultList_b__60_0(
   int32_t v12; // w3
   const MethodInfo *v13; // x2
 
-  if ( (byte_4A023C3 & 1) == 0 )
+  if ( (byte_4A029E4 & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, method);
-    sub_1B64870(&Method_BoxGachaResultEffectComponent___c__dispMsgBefResultList_b__60_3__, v3);
-    sub_1B64870(&BoxGachaResultEffectComponent___c_TypeInfo, v4);
-    byte_4A023C3 = 1;
+    sub_1B64A00(&System_Action_TypeInfo, method);
+    sub_1B64A00(&Method_BoxGachaResultEffectComponent___c__dispMsgBefResultList_b__60_3__, v3);
+    sub_1B64A00(&BoxGachaResultEffectComponent___c_TypeInfo, v4);
+    byte_4A029E4 = 1;
   }
   isUnSkippable = this->fields.isUnSkippable;
   if ( !isUnSkippable
@@ -1122,14 +1122,14 @@ void __fastcall BoxGachaResultEffectComponent___dispMsgBefResultList_b__60_0(
         v7 = BoxGachaResultEffectComponent___c_TypeInfo;
       }
       v9 = (Il2CppObject *)v7->static_fields->__9;
-      _9__60_3 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+      _9__60_3 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
       System_Action___ctor(_9__60_3, v9, Method_BoxGachaResultEffectComponent___c__dispMsgBefResultList_b__60_3__, 0LL);
       static_fields = BoxGachaResultEffectComponent___c_TypeInfo->static_fields;
       static_fields->__9__60_3 = _9__60_3;
-      sub_1B64814((ServantStatusBattleListViewItem_o *)&static_fields->__9__60_3, (int32_t)_9__60_3, v11, v12);
+      sub_1B649A4((ServantStatusBattleListViewItem_o *)&static_fields->__9__60_3, (int32_t)_9__60_3, v11, v12);
     }
     if ( !endPerformanceAction )
-      sub_1B64ACC(v7, method);
+      sub_1B64C5C(v7, method);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_Action_o *, _QWORD, float))endPerformanceAction->fields.m_target)(
       endPerformanceAction->fields.original_method_info,
       _9__60_3,
@@ -1158,7 +1158,7 @@ void __fastcall BoxGachaResultEffectComponent___dispMsgBefResultList_b__60_1(
     if ( messageManager )
       goto LABEL_3;
 LABEL_5:
-    sub_1B64ACC(this, method);
+    sub_1B64C5C(this, method);
   }
   this = (BoxGachaResultEffectComponent_o *)((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))isUnSkippable->fields.m_target)(
                                               isUnSkippable->fields.original_method_info,
@@ -1192,7 +1192,7 @@ void __fastcall BoxGachaResultEffectComponent___endloadEffect_b__58_0(
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B64ACC(0LL, v4);
+    sub_1B64C5C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
   if ( this->fields.isShortCut )
     BoxGachaResultEffectComponent__EndAction(this, 0, v6);
@@ -1214,7 +1214,7 @@ void __fastcall BoxGachaResultEffectComponent__clearResultList(
 
   p_closeCallBack = &this->fields.closeCallBack;
   this->fields.closeCallBack = callBack;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.closeCallBack, (int32_t)callBack, (int32_t)method, v3);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.closeCallBack, (int32_t)callBack, (int32_t)method, v3);
   resultWindow = this->fields.resultWindow;
   if ( !resultWindow )
     goto LABEL_6;
@@ -1223,11 +1223,11 @@ void __fastcall BoxGachaResultEffectComponent__clearResultList(
     resultWindow = this->fields.resultWindow;
     if ( resultWindow )
     {
-      ResultListWindow__Close_45406620(resultWindow, *p_closeCallBack, v8);
+      ResultListWindow__Close_45408180(resultWindow, *p_closeCallBack, v8);
       return;
     }
 LABEL_6:
-    sub_1B64ACC(resultWindow, v6);
+    sub_1B64C5C(resultWindow, v6);
   }
   ActionExtensions__Call(*p_closeCallBack, 0LL);
 }
@@ -1251,20 +1251,20 @@ void __fastcall BoxGachaResultEffectComponent__dispMsgAftResultList(
   System_Action_o *v13; // x21
 
   v4 = (Il2CppObject *)this;
-  if ( (byte_4A023BD & 1) == 0 )
+  if ( (byte_4A029DE & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, method);
-    sub_1B64870(&AvalonSceneManager_TypeInfo, v5);
-    sub_1B64870(&Method_BoxGachaResultEffectComponent__dispMsgAftResultList_b__70_0__, v6);
-    this = (BoxGachaResultEffectComponent_o *)sub_1B64870(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
-    byte_4A023BD = 1;
+    sub_1B64A00(&System_Action_TypeInfo, method);
+    sub_1B64A00(&AvalonSceneManager_TypeInfo, v5);
+    sub_1B64A00(&Method_BoxGachaResultEffectComponent__dispMsgAftResultList_b__70_0__, v6);
+    this = (BoxGachaResultEffectComponent_o *)sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
+    byte_4A029DE = 1;
   }
   monitor = (char *)v4[2].monitor;
   if ( !monitor )
     goto LABEL_8;
   *((_QWORD *)monitor + 70) = 0LL;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)(monitor + 560), 0, v2, v3);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)(monitor + 560), 0, v2, v3);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v10 = AvalonSceneManager_TypeInfo;
   v11 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -1273,11 +1273,11 @@ void __fastcall BoxGachaResultEffectComponent__dispMsgAftResultList(
     v10 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v10->static_fields->DEFAULT_FADE_TIME;
-  v13 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  v13 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
   System_Action___ctor(v13, v4, Method_BoxGachaResultEffectComponent__dispMsgAftResultList_b__70_0__, 0LL);
   if ( !v11 )
 LABEL_8:
-    sub_1B64ACC(this, method);
+    sub_1B64C5C(this, method);
   CommonUI__maskFadein(v11, DEFAULT_FADE_TIME, v13, 0LL);
 }
 
@@ -1310,14 +1310,14 @@ void __fastcall BoxGachaResultEffectComponent__dispMsgBefResultList(
   __int128 v24; // [xsp+30h] [xbp-60h] BYREF
   __int128 v25[2]; // [xsp+40h] [xbp-50h] BYREF
 
-  if ( (byte_4A023B6 & 1) == 0 )
+  if ( (byte_4A029D7 & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, method);
-    sub_1B64870(&Method_BoxGachaResultEffectComponent__dispMsgBefResultList_b__60_0__, v3);
-    sub_1B64870(&Method_BoxGachaResultEffectComponent__dispMsgBefResultList_b__60_1__, v4);
-    sub_1B64870(&Method_BoxGachaResultEffectComponent__dispMsgBefResultList_b__60_2__, v5);
-    sub_1B64870(&Method_UnityEngine_Component_GetComponent_TweenAlpha___, v6);
-    byte_4A023B6 = 1;
+    sub_1B64A00(&System_Action_TypeInfo, method);
+    sub_1B64A00(&Method_BoxGachaResultEffectComponent__dispMsgBefResultList_b__60_0__, v3);
+    sub_1B64A00(&Method_BoxGachaResultEffectComponent__dispMsgBefResultList_b__60_1__, v4);
+    sub_1B64A00(&Method_BoxGachaResultEffectComponent__dispMsgBefResultList_b__60_2__, v5);
+    sub_1B64A00(&Method_UnityEngine_Component_GetComponent_TweenAlpha___, v6);
+    byte_4A029D7 = 1;
   }
   *((_QWORD *)&v23 + 1) = 0LL;
   v24 = 0uLL;
@@ -1326,7 +1326,7 @@ void __fastcall BoxGachaResultEffectComponent__dispMsgBefResultList(
     goto LABEL_10;
   messageManager = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                 messageManager,
-                                                (const MethodInfo_2E3216C *)Method_UnityEngine_Component_GetComponent_TweenAlpha___);
+                                                (const MethodInfo_2E32784 *)Method_UnityEngine_Component_GetComponent_TweenAlpha___);
   if ( !messageManager )
     goto LABEL_10;
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)messageManager, 0, 0LL);
@@ -1335,7 +1335,7 @@ void __fastcall BoxGachaResultEffectComponent__dispMsgBefResultList(
     goto LABEL_10;
   CommonMessageManager__Init((CommonMessageManager_o *)messageManager, 0LL);
   v8 = this->fields.messageManager;
-  v9 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  v9 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
   System_Action___ctor(
     v9,
     (Il2CppObject *)this,
@@ -1344,7 +1344,7 @@ void __fastcall BoxGachaResultEffectComponent__dispMsgBefResultList(
   if ( !v8 )
     goto LABEL_10;
   v8->fields.touchCallbackFunc = v9;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&v8->fields.touchCallbackFunc, (int32_t)v9, v10, v11);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&v8->fields.touchCallbackFunc, (int32_t)v9, v10, v11);
   messageManager = (UnityEngine_Component_o *)this->fields.info;
   if ( !messageManager )
     goto LABEL_10;
@@ -1352,28 +1352,28 @@ void __fastcall BoxGachaResultEffectComponent__dispMsgBefResultList(
                       (BoxGachaTalkInfo_o *)messageManager,
                       this->fields.randomTalkIdx,
                       0LL);
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&v23, v23, v12, v13);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&v23, v23, v12, v13);
   BYTE8(v23) = this->fields.isShortCut;
-  v14 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  v14 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
   System_Action___ctor(
     v14,
     (Il2CppObject *)this,
     Method_BoxGachaResultEffectComponent__dispMsgBefResultList_b__60_1__,
     0LL);
   *(_QWORD *)&v24 = v14;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&v24, (int32_t)v14, v15, v16);
-  v17 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&v24, (int32_t)v14, v15, v16);
+  v17 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
   System_Action___ctor(
     v17,
     (Il2CppObject *)this,
     Method_BoxGachaResultEffectComponent__dispMsgBefResultList_b__60_2__,
     0LL);
   *((_QWORD *)&v24 + 1) = v17;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)((char *)&v24 + 8), (int32_t)v17, v18, v19);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)((char *)&v24 + 8), (int32_t)v17, v18, v19);
   playVoiceAction = this->fields.playVoiceAction;
   if ( !playVoiceAction )
 LABEL_10:
-    sub_1B64ACC(messageManager, method);
+    sub_1B64C5C(messageManager, method);
   m_target = playVoiceAction->fields.m_target;
   original_method_info = playVoiceAction->fields.original_method_info;
   v25[0] = v23;
@@ -1403,24 +1403,24 @@ void __fastcall BoxGachaResultEffectComponent__endloadEffect(
   __int64 v15; // x0
   __int64 v16; // x1
 
-  if ( (byte_4A023B4 & 1) == 0 )
+  if ( (byte_4A029D5 & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, data);
-    sub_1B64870(&AvalonSceneManager_TypeInfo, v6);
-    sub_1B64870(&Method_BoxGachaResultEffectComponent__endloadEffect_b__58_0__, v7);
-    sub_1B64870(&BoxGachaResultEffectComponent_TypeInfo, v8);
-    sub_1B64870(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
-    byte_4A023B4 = 1;
+    sub_1B64A00(&System_Action_TypeInfo, data);
+    sub_1B64A00(&AvalonSceneManager_TypeInfo, v6);
+    sub_1B64A00(&Method_BoxGachaResultEffectComponent__endloadEffect_b__58_0__, v7);
+    sub_1B64A00(&BoxGachaResultEffectComponent_TypeInfo, v8);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
+    byte_4A029D5 = 1;
   }
   if ( data )
   {
     BoxGachaResultEffectComponent_TypeInfo->static_fields->effectAssetData = data;
-    sub_1B64814(
+    sub_1B649A4(
       (ServantStatusBattleListViewItem_o *)BoxGachaResultEffectComponent_TypeInfo->static_fields,
       (int32_t)data,
       (int32_t)method,
       v3);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v11 = AvalonSceneManager_TypeInfo;
     v12 = (CommonUI_o *)Instance;
     if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -1429,10 +1429,10 @@ void __fastcall BoxGachaResultEffectComponent__endloadEffect(
       v11 = AvalonSceneManager_TypeInfo;
     }
     DEFAULT_FADE_TIME = v11->static_fields->DEFAULT_FADE_TIME;
-    v14 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+    v14 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
     System_Action___ctor(v14, (Il2CppObject *)this, Method_BoxGachaResultEffectComponent__endloadEffect_b__58_0__, 0LL);
     if ( !v12 )
-      sub_1B64ACC(v15, v16);
+      sub_1B64C5C(v15, v16);
     CommonUI__maskFadein(v12, DEFAULT_FADE_TIME, v14, 0LL);
   }
 }
@@ -1447,31 +1447,31 @@ UnityEngine_GameObject_o *__fastcall BoxGachaResultEffectComponent__getEffect(
   __int64 v6; // x1
   __int64 v7; // x1
   AssetData_o *effectAssetData; // x0
-  Il2CppObject *Object_object__48356600; // x19
+  Il2CppObject *Object_object__48358160; // x19
   UnityEngine_GameObject_o *v10; // x19
   UnityEngine_Transform_o *v11; // x20
   UnityEngine_Transform_o *v12; // x20
 
-  if ( (byte_4A023B5 & 1) == 0 )
+  if ( (byte_4A029D6 & 1) == 0 )
   {
-    sub_1B64870(&Method_AssetData_GetObject_GameObject____75714440, parentTr);
-    sub_1B64870(&BoxGachaResultEffectComponent_TypeInfo, v5);
-    sub_1B64870(&Method_UnityEngine_Object_Instantiate_GameObject___, v6);
-    sub_1B64870(&UnityEngine_Object_TypeInfo, v7);
-    byte_4A023B5 = 1;
+    sub_1B64A00(&Method_AssetData_GetObject_GameObject____75715992, parentTr);
+    sub_1B64A00(&BoxGachaResultEffectComponent_TypeInfo, v5);
+    sub_1B64A00(&Method_UnityEngine_Object_Instantiate_GameObject___, v6);
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, v7);
+    byte_4A029D6 = 1;
   }
   effectAssetData = BoxGachaResultEffectComponent_TypeInfo->static_fields->effectAssetData;
   if ( !effectAssetData )
     goto LABEL_15;
-  Object_object__48356600 = AssetData__GetObject_object__48356600(
+  Object_object__48358160 = AssetData__GetObject_object__48358160(
                               effectAssetData,
                               name,
-                              (const MethodInfo_2E1DCF8 *)Method_AssetData_GetObject_GameObject____75714440);
+                              (const MethodInfo_2E1E310 *)Method_AssetData_GetObject_GameObject____75715992);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   effectAssetData = (AssetData_o *)UnityEngine_Object__Instantiate_object_(
-                                     Object_object__48356600,
-                                     (const MethodInfo_2EBDF7C *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                     Object_object__48358160,
+                                     (const MethodInfo_2EBE594 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !effectAssetData )
     goto LABEL_15;
   v10 = (UnityEngine_GameObject_o *)effectAssetData;
@@ -1483,24 +1483,24 @@ UnityEngine_GameObject_o *__fastcall BoxGachaResultEffectComponent__getEffect(
   UnityEngine_Transform__set_parent((UnityEngine_Transform_o *)effectAssetData, parentTr, 0LL);
   effectAssetData = (AssetData_o *)UnityEngine_GameObject__get_transform(v10, 0LL);
   v11 = (UnityEngine_Transform_o *)effectAssetData;
-  if ( !byte_49F9201 )
+  if ( !byte_49F9821 )
   {
-    effectAssetData = (AssetData_o *)sub_1B64870(&UnityEngine_Vector3_TypeInfo, parentTr);
-    byte_49F9201 = 1;
+    effectAssetData = (AssetData_o *)sub_1B64A00(&UnityEngine_Vector3_TypeInfo, parentTr);
+    byte_49F9821 = 1;
   }
   if ( !v11 )
     goto LABEL_15;
   UnityEngine_Transform__set_localPosition(v11, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
   effectAssetData = (AssetData_o *)UnityEngine_GameObject__get_transform(v10, 0LL);
   v12 = (UnityEngine_Transform_o *)effectAssetData;
-  if ( !byte_49F9206 )
+  if ( !byte_49F9826 )
   {
-    effectAssetData = (AssetData_o *)sub_1B64870(&UnityEngine_Vector3_TypeInfo, parentTr);
-    byte_49F9206 = 1;
+    effectAssetData = (AssetData_o *)sub_1B64A00(&UnityEngine_Vector3_TypeInfo, parentTr);
+    byte_49F9826 = 1;
   }
   if ( !v12 )
 LABEL_15:
-    sub_1B64ACC(effectAssetData, parentTr);
+    sub_1B64C5C(effectAssetData, parentTr);
   UnityEngine_Transform__set_localScale(v12, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
   return v10;
 }
@@ -1580,31 +1580,31 @@ void __fastcall BoxGachaResultEffectComponent__init(
   int32_t v68; // w3
   const MethodInfo *v69; // x1
 
-  if ( (byte_4A023AF & 1) == 0 )
+  if ( (byte_4A029D0 & 1) == 0 )
   {
-    sub_1B64870(&Method_DataManager_GetMasterData_ServantMaster___, *(_QWORD *)&svtId);
-    sub_1B64870(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v28);
-    sub_1B64870(&LocalizationManager_TypeInfo, v29);
-    sub_1B64870(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v30);
-    sub_1B64870(&StringLiteral_43/*"\n"*/, v31);
-    sub_1B64870(&StringLiteral_15930/*"[k]"*/, v32);
-    sub_1B64870(&StringLiteral_25370/*"＠"*/, v33);
-    sub_1B64870(&StringLiteral_11417/*"SCRIPT_ACTION_CODE_TALK"*/, v34);
-    byte_4A023AF = 1;
+    sub_1B64A00(&Method_DataManager_GetMasterData_ServantMaster___, *(_QWORD *)&svtId);
+    sub_1B64A00(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v28);
+    sub_1B64A00(&LocalizationManager_TypeInfo, v29);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v30);
+    sub_1B64A00(&StringLiteral_43/*"\n"*/, v31);
+    sub_1B64A00(&StringLiteral_15931/*"[k]"*/, v32);
+    sub_1B64A00(&StringLiteral_25370/*"＠"*/, v33);
+    sub_1B64A00(&StringLiteral_11418/*"SCRIPT_ACTION_CODE_TALK"*/, v34);
+    byte_4A029D0 = 1;
   }
   this->fields.currentSvtId = svtId;
   this->fields.resultIdList = resultIds;
-  sub_1B64814(
+  sub_1B649A4(
     (ServantStatusBattleListViewItem_o *)&this->fields.resultIdList,
     (int32_t)resultIds,
     (int32_t)talkInfo,
     (int32_t)resultIds);
   this->fields.rareIdxList = rareIdxs;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.rareIdxList, (int32_t)rareIdxs, v35, v36);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.rareIdxList, (int32_t)rareIdxs, v35, v36);
   this->fields.resultNoList = baseNos;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.resultNoList, (int32_t)baseNos, v37, v38);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.resultNoList, (int32_t)baseNos, v37, v38);
   this->fields.standFigure = currentFigure;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.standFigure, (int32_t)currentFigure, v39, v40);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.standFigure, (int32_t)currentFigure, v39, v40);
   this->fields.normalFace = face;
   this->fields.currentBaseId = baseId;
   this->fields.currentEventId = eventId;
@@ -1616,42 +1616,42 @@ void __fastcall BoxGachaResultEffectComponent__init(
     this->fields.isShortCut = 0;
   this->fields.isDischargeGetEffectItem = isDischargeGetEffectItem;
   this->fields.playVoiceAction = playVoice;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.playVoiceAction, (int32_t)playVoice, v43, v44);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.playVoiceAction, (int32_t)playVoice, v43, v44);
   this->fields.endVoiceAction = endVoice;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.endVoiceAction, (int32_t)endVoice, v46, v47);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.endVoiceAction, (int32_t)endVoice, v46, v47);
   this->fields.compensationMsgIds = messageIdList;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.compensationMsgIds, (int32_t)messageIdList, v48, v49);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.compensationMsgIds, (int32_t)messageIdList, v48, v49);
   this->fields.info = talkInfo;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.info, (int32_t)talkInfo, v50, v51);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.info, (int32_t)talkInfo, v50, v51);
   this->fields.isUnSkippable = unskippable;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.isUnSkippable, (int32_t)unskippable, v52, v53);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.isUnSkippable, (int32_t)unskippable, v52, v53);
   this->fields.endPerformanceAction = endPerformanceAction;
-  sub_1B64814(
+  sub_1B649A4(
     (ServantStatusBattleListViewItem_o *)&this->fields.endPerformanceAction,
     (int32_t)endPerformanceAction,
     v54,
     v55);
   if ( System_String__IsNullOrEmpty(displayName, 0LL) )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_25;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_2E3B6C8 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                  (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantMaster___);
     if ( !Instance )
       goto LABEL_25;
     Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                   this->fields.currentSvtId,
-                                  (const MethodInfo_30D6180 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                                  (const MethodInfo_30D6798 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
     if ( !Instance )
       goto LABEL_25;
     displayName = ServantEntity__getName((ServantEntity_o *)Instance, -1, -1, 0LL);
   }
   this->fields.currentSvtName = displayName;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.currentSvtName, (int32_t)displayName, v56, v57);
-  Instance = (DataManager_o *)System_String__Concat_61394836(
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.currentSvtName, (int32_t)displayName, v56, v57);
+  Instance = (DataManager_o *)System_String__Concat_61396396(
                                 (System_String_o *)StringLiteral_25370/*"＠"*/,
                                 this->fields.currentSvtName,
                                 (System_String_o *)StringLiteral_43/*"\n"*/,
@@ -1662,35 +1662,35 @@ void __fastcall BoxGachaResultEffectComponent__init(
     goto LABEL_25;
   v58 = (System_String_o *)Instance;
   v59 = BoxGachaTalkInfo__getBeforeTalkMessage(talkInfo, randomTalkIdx, 0LL);
-  v60 = System_String__Concat_61383576(v59, (System_String_o *)StringLiteral_15930/*"[k]"*/, 0LL);
+  v60 = System_String__Concat_61385136(v59, (System_String_o *)StringLiteral_15931/*"[k]"*/, 0LL);
   v61 = BoxGachaTalkInfo__getAfterTalkMessage(talkInfo, this->fields.randomTalkIdx, 0LL);
-  v62 = System_String__Concat_61383576(v61, (System_String_o *)StringLiteral_15930/*"[k]"*/, 0LL);
+  v62 = System_String__Concat_61385136(v61, (System_String_o *)StringLiteral_15931/*"[k]"*/, 0LL);
   v63 = BoxGachaTalkInfo__getBeforeTalkMessage(talkInfo, this->fields.randomTalkIdx, 0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11417/*"SCRIPT_ACTION_CODE_TALK"*/, 0LL);
+  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11418/*"SCRIPT_ACTION_CODE_TALK"*/, 0LL);
   if ( !v63 )
     goto LABEL_25;
   if ( !System_String__StartsWith(v63, (System_String_o *)Instance, 0LL) )
-    v60 = System_String__Concat_61383576(v58, v60, 0LL);
+    v60 = System_String__Concat_61385136(v58, v60, 0LL);
   this->fields.befMsg = v60;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.befMsg, (int32_t)v60, v64, v65);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.befMsg, (int32_t)v60, v64, v65);
   v66 = BoxGachaTalkInfo__getAfterTalkMessage(talkInfo, this->fields.randomTalkIdx, 0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11417/*"SCRIPT_ACTION_CODE_TALK"*/, 0LL);
+  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11418/*"SCRIPT_ACTION_CODE_TALK"*/, 0LL);
   if ( !v66 )
     goto LABEL_25;
   if ( !System_String__StartsWith(v66, (System_String_o *)Instance, 0LL) )
-    v62 = System_String__Concat_61383576(v58, v62, 0LL);
+    v62 = System_String__Concat_61385136(v58, v62, 0LL);
   this->fields.aftMsg = v62;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.aftMsg, (int32_t)v62, v67, v68);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.aftMsg, (int32_t)v62, v67, v68);
   Instance = (DataManager_o *)this->fields.resourcesPanel;
   if ( !Instance
     || (Instance = (DataManager_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL)) == 0LL )
   {
 LABEL_25:
-    sub_1B64ACC(Instance, v42);
+    sub_1B64C5C(Instance, v42);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 0, 0LL);
   *(_DWORD *)&this->fields.isEndAfterMsg = 0;
@@ -1707,15 +1707,15 @@ void __fastcall BoxGachaResultEffectComponent__loadBoxGachaEffect(
   __int64 v5; // x1
   AssetLoader_LoadEndDataHandler_o *v6; // x20
 
-  if ( (byte_4A023B3 & 1) == 0 )
+  if ( (byte_4A029D4 & 1) == 0 )
   {
-    sub_1B64870(&AssetManager_TypeInfo, method);
-    sub_1B64870(&Method_BoxGachaResultEffectComponent_endloadEffect__, v3);
-    sub_1B64870(&AssetLoader_LoadEndDataHandler_TypeInfo, v4);
-    sub_1B64870(&StringLiteral_5808/*"Effect/BoxGacha"*/, v5);
-    byte_4A023B3 = 1;
+    sub_1B64A00(&AssetManager_TypeInfo, method);
+    sub_1B64A00(&Method_BoxGachaResultEffectComponent_endloadEffect__, v3);
+    sub_1B64A00(&AssetLoader_LoadEndDataHandler_TypeInfo, v4);
+    sub_1B64A00(&StringLiteral_5809/*"Effect/BoxGacha"*/, v5);
+    byte_4A029D4 = 1;
   }
-  v6 = (AssetLoader_LoadEndDataHandler_o *)sub_1B64ABC(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v6 = (AssetLoader_LoadEndDataHandler_o *)sub_1B64C4C(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v6,
     (Il2CppObject *)this,
@@ -1723,7 +1723,7 @@ void __fastcall BoxGachaResultEffectComponent__loadBoxGachaEffect(
     0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_5808/*"Effect/BoxGacha"*/, v6, 1, 0LL);
+  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_5809/*"Effect/BoxGacha"*/, v6, 1, 0LL);
 }
 
 
@@ -1735,23 +1735,23 @@ void __fastcall BoxGachaResultEffectComponent__openResultCallback(
   UnityEngine_GameObject_o *resultWindowTouchBlock; // x0
   System_String_o **v5; // x8
 
-  if ( (byte_4A023BB & 1) == 0 )
+  if ( (byte_4A029DC & 1) == 0 )
   {
-    sub_1B64870(&StringLiteral_12190/*"START_ITEM_GET_EFFECT"*/, method);
-    sub_1B64870(&StringLiteral_5447/*"END_DISP"*/, v3);
-    byte_4A023BB = 1;
+    sub_1B64A00(&StringLiteral_12191/*"START_ITEM_GET_EFFECT"*/, method);
+    sub_1B64A00(&StringLiteral_5448/*"END_DISP"*/, v3);
+    byte_4A029DC = 1;
   }
   resultWindowTouchBlock = this->fields.resultWindowTouchBlock;
   if ( !resultWindowTouchBlock
     || (UnityEngine_GameObject__SetActive(resultWindowTouchBlock, 0, 0LL),
         (resultWindowTouchBlock = (UnityEngine_GameObject_o *)this->fields.targetFSM) == 0LL) )
   {
-    sub_1B64ACC(resultWindowTouchBlock, method);
+    sub_1B64C5C(resultWindowTouchBlock, method);
   }
   if ( this->fields.isDischargeGetEffectItem )
-    v5 = (System_String_o **)&StringLiteral_12190/*"START_ITEM_GET_EFFECT"*/;
+    v5 = (System_String_o **)&StringLiteral_12191/*"START_ITEM_GET_EFFECT"*/;
   else
-    v5 = (System_String_o **)&StringLiteral_5447/*"END_DISP"*/;
+    v5 = (System_String_o **)&StringLiteral_5448/*"END_DISP"*/;
   PlayMakerFSM__SendEvent((PlayMakerFSM_o *)resultWindowTouchBlock, *v5, 0LL);
 }
 
@@ -1772,11 +1772,11 @@ void __fastcall BoxGachaResultEffectComponent__openResultListWindow(
   System_Action_o *v12; // x26
   const MethodInfo *v13; // [xsp+0h] [xbp-70h]
 
-  if ( (byte_4A023BA & 1) == 0 )
+  if ( (byte_4A029DB & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, method);
-    sub_1B64870(&Method_BoxGachaResultEffectComponent_openResultCallback__, v3);
-    byte_4A023BA = 1;
+    sub_1B64A00(&System_Action_TypeInfo, method);
+    sub_1B64A00(&Method_BoxGachaResultEffectComponent_openResultCallback__, v3);
+    byte_4A029DB = 1;
   }
   resultWindowTouchBlock = this->fields.resultWindowTouchBlock;
   if ( !resultWindowTouchBlock )
@@ -1789,11 +1789,11 @@ void __fastcall BoxGachaResultEffectComponent__openResultListWindow(
   currentBaseId = this->fields.currentBaseId;
   currentEventId = this->fields.currentEventId;
   isDischargeGetEffectItem = this->fields.isDischargeGetEffectItem;
-  v12 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+  v12 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
   System_Action___ctor(v12, (Il2CppObject *)this, Method_BoxGachaResultEffectComponent_openResultCallback__, 0LL);
   if ( !resultWindow )
 LABEL_6:
-    sub_1B64ACC(resultWindowTouchBlock, method);
+    sub_1B64C5C(resultWindowTouchBlock, method);
   ResultListWindow__OpenResultList(
     resultWindow,
     resultIdList,
@@ -1818,10 +1818,10 @@ void __fastcall BoxGachaResultEffectComponent__setFigureFace(
   __int64 v8; // x1
   UIStandFigureR_o *v9; // x0
 
-  if ( (byte_4A023C0 & 1) == 0 )
+  if ( (byte_4A029E1 & 1) == 0 )
   {
-    sub_1B64870(&UnityEngine_Object_TypeInfo, *(_QWORD *)&type);
-    byte_4A023C0 = 1;
+    sub_1B64A00(&UnityEngine_Object_TypeInfo, *(_QWORD *)&type);
+    byte_4A029E1 = 1;
   }
   standFigure = (UnityEngine_Object_o *)this->fields.standFigure;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1830,7 +1830,7 @@ void __fastcall BoxGachaResultEffectComponent__setFigureFace(
   {
     v9 = this->fields.standFigure;
     if ( !v9 )
-      sub_1B64ACC(0LL, v8);
+      sub_1B64C5C(0LL, v8);
     UIStandFigureR__SetFace(v9, type, fadeTime, 0LL);
   }
 }
@@ -1852,19 +1852,19 @@ void __fastcall BoxGachaResultEffectComponent__showResultList(
   float OffsetX; // s0
   UnityEngine_Vector3_o v13; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A023B9 & 1) == 0 )
+  if ( (byte_4A029DA & 1) == 0 )
   {
-    sub_1B64870(&FSUtility_TypeInfo, method);
-    sub_1B64870(&Method_UnityEngine_GameObject_GetComponent_EffectComponent___, v3);
-    sub_1B64870(&StringLiteral_18741/*"ef_boxitem_start"*/, v4);
-    sub_1B64870(&StringLiteral_22234/*"openResultListWindow"*/, v5);
-    byte_4A023B9 = 1;
+    sub_1B64A00(&FSUtility_TypeInfo, method);
+    sub_1B64A00(&Method_UnityEngine_GameObject_GetComponent_EffectComponent___, v3);
+    sub_1B64A00(&StringLiteral_18742/*"ef_boxitem_start"*/, v4);
+    sub_1B64A00(&StringLiteral_22234/*"openResultListWindow"*/, v5);
+    byte_4A029DA = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     goto LABEL_9;
   transform = UnityEngine_GameObject__get_transform(gameObject, 0LL);
-  gameObject = BoxGachaResultEffectComponent__getEffect((System_String_o *)StringLiteral_18741/*"ef_boxitem_start"*/, transform, v9);
+  gameObject = BoxGachaResultEffectComponent__getEffect((System_String_o *)StringLiteral_18742/*"ef_boxitem_start"*/, transform, v9);
   if ( !gameObject )
     goto LABEL_9;
   v10 = gameObject;
@@ -1874,14 +1874,14 @@ void __fastcall BoxGachaResultEffectComponent__showResultList(
   OffsetX = FSUtility__GetOffsetX(68.0, 1, 0LL);
   if ( !v11 )
 LABEL_9:
-    sub_1B64ACC(gameObject, v7);
+    sub_1B64C5C(gameObject, v7);
   v13.fields.x = OffsetX + 200.0;
   v13.fields.z = 0.0;
   v13.fields.y = 70.0;
   UnityEngine_Transform__set_localPosition(v11, v13, 0LL);
   UnityEngine_GameObject__GetComponent_object_(
     v10,
-    (const MethodInfo_2E8A1B4 *)Method_UnityEngine_GameObject_GetComponent_EffectComponent___);
+    (const MethodInfo_2E8A7CC *)Method_UnityEngine_GameObject_GetComponent_EffectComponent___);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
     (System_String_o *)StringLiteral_22234/*"openResultListWindow"*/,
@@ -1897,15 +1897,15 @@ void __fastcall BoxGachaResultEffectComponent___c___cctor(const MethodInfo *meth
   int32_t v3; // w2
   int32_t v4; // w3
 
-  if ( (byte_4A023C8 & 1) == 0 )
+  if ( (byte_4A029E9 & 1) == 0 )
   {
-    sub_1B64870(&BoxGachaResultEffectComponent___c_TypeInfo, v1);
-    byte_4A023C8 = 1;
+    sub_1B64A00(&BoxGachaResultEffectComponent___c_TypeInfo, v1);
+    byte_4A029E9 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B64ABC(BoxGachaResultEffectComponent___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B64C4C(BoxGachaResultEffectComponent___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   BoxGachaResultEffectComponent___c_TypeInfo->static_fields->__9 = (struct BoxGachaResultEffectComponent___c_o *)v2;
-  sub_1B64814(
+  sub_1B649A4(
     (ServantStatusBattleListViewItem_o *)BoxGachaResultEffectComponent___c_TypeInfo->static_fields,
     (int32_t)v2,
     v3,

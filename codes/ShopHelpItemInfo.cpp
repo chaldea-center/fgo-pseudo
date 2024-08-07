@@ -16,10 +16,10 @@ void __fastcall ShopHelpItemInfo___ctor(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v10->fields._Kind_k__BackingField = kind;
   v10->fields._TextCode_k__BackingField = textCode;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&v10->fields._TextCode_k__BackingField, (int32_t)textCode, v11, v12);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&v10->fields._TextCode_k__BackingField, (int32_t)textCode, v11, v12);
   v10->fields._ImageName_k__BackingField = imageName;
   v10 = (ShopHelpItemInfo_o *)((char *)v10 + 32);
-  sub_1B64814((ServantStatusBattleListViewItem_o *)v10, (int32_t)imageName, v13, v14);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)v10, (int32_t)imageName, v13, v14);
   LODWORD(v10->monitor) = line;
 }
 
@@ -62,7 +62,7 @@ void __fastcall ShopHelpItemInfo__set_ImageName(
   int32_t v3; // w3
 
   this->fields._ImageName_k__BackingField = value;
-  sub_1B64814(
+  sub_1B649A4(
     (ServantStatusBattleListViewItem_o *)&this->fields._ImageName_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -90,7 +90,7 @@ void __fastcall ShopHelpItemInfo__set_TextCode(
   int32_t v3; // w3
 
   this->fields._TextCode_k__BackingField = value;
-  sub_1B64814(
+  sub_1B649A4(
     (ServantStatusBattleListViewItem_o *)&this->fields._TextCode_k__BackingField,
     (int32_t)value,
     (int32_t)method,

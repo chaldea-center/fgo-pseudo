@@ -12,20 +12,20 @@ System_Collections_IEnumerator_o *__fastcall LostAssetLoadCompensateLogic__Corou
   int32_t v12; // w2
   int32_t v13; // w3
 
-  if ( (byte_4A00585 & 1) == 0 )
+  if ( (byte_4A00BA6 & 1) == 0 )
   {
-    sub_1B64870(&LostAssetLoadCompensateLogic__CoroutineLoad_d__1_TypeInfo, argForShowAll);
-    byte_4A00585 = 1;
+    sub_1B64A00(&LostAssetLoadCompensateLogic__CoroutineLoad_d__1_TypeInfo, argForShowAll);
+    byte_4A00BA6 = 1;
   }
-  v7 = sub_1B64ABC(LostAssetLoadCompensateLogic__CoroutineLoad_d__1_TypeInfo);
+  v7 = sub_1B64C4C(LostAssetLoadCompensateLogic__CoroutineLoad_d__1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0LL);
   *(_DWORD *)(v7 + 16) = 0;
   *(_QWORD *)(v7 + 32) = effectIdHashSet;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)(v7 + 32), (int32_t)effectIdHashSet, v8, v9);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v7 + 32), (int32_t)effectIdHashSet, v8, v9);
   *(_QWORD *)(v7 + 40) = argForShowAll;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)(v7 + 40), (int32_t)argForShowAll, v10, v11);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v7 + 40), (int32_t)argForShowAll, v10, v11);
   *(_QWORD *)(v7 + 56) = finishCallback;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)(v7 + 56), (int32_t)finishCallback, v12, v13);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v7 + 56), (int32_t)finishCallback, v12, v13);
   return (System_Collections_IEnumerator_o *)v7;
 }
 
@@ -43,33 +43,33 @@ System_Collections_Generic_IEnumerable_int__o *__fastcall LostAssetLoadCompensat
   const MethodInfo *v9; // x1
   System_Collections_Generic_IEnumerable_T__o *EffectIdsForShowBuff; // x0
 
-  if ( (byte_4A00586 & 1) == 0 )
+  if ( (byte_4A00BA7 & 1) == 0 )
   {
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_int__UnionWith__, method);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_int___ctor__, v3);
-    sub_1B64870(&System_Collections_Generic_HashSet_int__TypeInfo, v4);
-    byte_4A00586 = 1;
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_int__UnionWith__, method);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_int___ctor__, v3);
+    sub_1B64A00(&System_Collections_Generic_HashSet_int__TypeInfo, v4);
+    byte_4A00BA7 = 1;
   }
-  v5 = (System_Collections_Generic_HashSet_int__o *)sub_1B64ABC(System_Collections_Generic_HashSet_int__TypeInfo);
+  v5 = (System_Collections_Generic_HashSet_int__o *)sub_1B64C4C(System_Collections_Generic_HashSet_int__TypeInfo);
   System_Collections_Generic_HashSet_int____ctor(
     v5,
-    (const MethodInfo_3365C88 *)Method_System_Collections_Generic_HashSet_int___ctor__);
+    (const MethodInfo_33662A0 *)Method_System_Collections_Generic_HashSet_int___ctor__);
   EffectIdsForShowHeal = (System_Collections_Generic_IEnumerable_T__o *)LostAssetLoadCompensateLogic__ExtractEffectIdsForShowHeal(
                                                                           actionData,
                                                                           v6);
   if ( !v5 )
-    sub_1B64ACC(EffectIdsForShowHeal, v8);
+    sub_1B64C5C(EffectIdsForShowHeal, v8);
   System_Collections_Generic_HashSet_int___UnionWith(
     v5,
     EffectIdsForShowHeal,
-    (const MethodInfo_3366E9C *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+    (const MethodInfo_33674B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
   EffectIdsForShowBuff = (System_Collections_Generic_IEnumerable_T__o *)LostAssetLoadCompensateLogic__ExtractEffectIdsForShowBuff(
                                                                           actionData,
                                                                           v9);
   System_Collections_Generic_HashSet_int___UnionWith(
     v5,
     EffectIdsForShowBuff,
-    (const MethodInfo_3366E9C *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+    (const MethodInfo_33674B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
   return (System_Collections_Generic_IEnumerable_int__o *)v5;
 }
 
@@ -155,37 +155,37 @@ System_Collections_Generic_IEnumerable_int__o *__fastcall LostAssetLoadCompensat
   __int64 v77; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4A00589 & 1) == 0 )
+  if ( (byte_4A00BAA & 1) == 0 )
   {
-    sub_1B64870(&Method_DataManager_GetMaster_AuraEffectMaster___, method);
-    sub_1B64870(&DataManager_TypeInfo, v3);
-    sub_1B64870(&Method_DataMasterBase_AuraEffectMaster__AuraEffectEntity__int__TryGetEntity__, v4);
-    sub_1B64870(&Method_System_Linq_Enumerable_SelectMany_BattleActionData_BuffData__int___, v5);
-    sub_1B64870(&Method_System_Linq_Enumerable_Select_BattleActionData_BuffData__int___, v6);
-    sub_1B64870(&Method_System_Linq_Enumerable_Where_int___, v7);
-    sub_1B64870(&System_Func_BattleActionData_BuffData__IEnumerable_int___TypeInfo, v8);
-    sub_1B64870(&System_Func_int__bool__TypeInfo, v9);
-    sub_1B64870(&System_Func_BattleActionData_BuffData__int__TypeInfo, v10);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_int__Add__, v11);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_int__UnionWith__, v12);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_int___ctor___75645664, v13);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_int___ctor__, v14);
-    sub_1B64870(&System_Collections_Generic_HashSet_int__TypeInfo, v15);
-    sub_1B64870(&System_IDisposable_TypeInfo, v16);
-    sub_1B64870(&System_Collections_Generic_IEnumerable_int__TypeInfo, v17);
-    sub_1B64870(&System_Collections_Generic_IEnumerator_int__TypeInfo, v18);
-    sub_1B64870(&System_Collections_IEnumerator_TypeInfo, v19);
-    sub_1B64870(&Method_LostAssetLoadCompensateLogic___c__ExtractEffectIdsForShowBuff_b__5_0__, v20);
-    sub_1B64870(&Method_LostAssetLoadCompensateLogic___c__ExtractEffectIdsForShowBuff_b__5_1__, v21);
-    sub_1B64870(&Method_LostAssetLoadCompensateLogic___c__ExtractEffectIdsForShowBuff_b__5_2__, v22);
-    sub_1B64870(&LostAssetLoadCompensateLogic___c_TypeInfo, v23);
-    byte_4A00589 = 1;
+    sub_1B64A00(&Method_DataManager_GetMaster_AuraEffectMaster___, method);
+    sub_1B64A00(&DataManager_TypeInfo, v3);
+    sub_1B64A00(&Method_DataMasterBase_AuraEffectMaster__AuraEffectEntity__int__TryGetEntity__, v4);
+    sub_1B64A00(&Method_System_Linq_Enumerable_SelectMany_BattleActionData_BuffData__int___, v5);
+    sub_1B64A00(&Method_System_Linq_Enumerable_Select_BattleActionData_BuffData__int___, v6);
+    sub_1B64A00(&Method_System_Linq_Enumerable_Where_int___, v7);
+    sub_1B64A00(&System_Func_BattleActionData_BuffData__IEnumerable_int___TypeInfo, v8);
+    sub_1B64A00(&System_Func_int__bool__TypeInfo, v9);
+    sub_1B64A00(&System_Func_BattleActionData_BuffData__int__TypeInfo, v10);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_int__Add__, v11);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_int__UnionWith__, v12);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_int___ctor___75647216, v13);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_int___ctor__, v14);
+    sub_1B64A00(&System_Collections_Generic_HashSet_int__TypeInfo, v15);
+    sub_1B64A00(&System_IDisposable_TypeInfo, v16);
+    sub_1B64A00(&System_Collections_Generic_IEnumerable_int__TypeInfo, v17);
+    sub_1B64A00(&System_Collections_Generic_IEnumerator_int__TypeInfo, v18);
+    sub_1B64A00(&System_Collections_IEnumerator_TypeInfo, v19);
+    sub_1B64A00(&Method_LostAssetLoadCompensateLogic___c__ExtractEffectIdsForShowBuff_b__5_0__, v20);
+    sub_1B64A00(&Method_LostAssetLoadCompensateLogic___c__ExtractEffectIdsForShowBuff_b__5_1__, v21);
+    sub_1B64A00(&Method_LostAssetLoadCompensateLogic___c__ExtractEffectIdsForShowBuff_b__5_2__, v22);
+    sub_1B64A00(&LostAssetLoadCompensateLogic___c_TypeInfo, v23);
+    byte_4A00BAA = 1;
   }
   entity = 0LL;
-  v24 = (System_Collections_Generic_HashSet_int__o *)sub_1B64ABC(System_Collections_Generic_HashSet_int__TypeInfo);
+  v24 = (System_Collections_Generic_HashSet_int__o *)sub_1B64C4C(System_Collections_Generic_HashSet_int__TypeInfo);
   System_Collections_Generic_HashSet_int____ctor(
     v24,
-    (const MethodInfo_3365C88 *)Method_System_Collections_Generic_HashSet_int___ctor__);
+    (const MethodInfo_33662A0 *)Method_System_Collections_Generic_HashSet_int___ctor__);
   if ( actionData )
   {
     SideEffectList = (System_Collections_Generic_IEnumerable_T__o *)BattleActionData__getSideEffectList(
@@ -202,7 +202,7 @@ System_Collections_Generic_IEnumerable_int__o *__fastcall LostAssetLoadCompensat
       while ( 1 )
       {
         if ( v31 >= (unsigned int)monitor )
-          sub_1B64AD4(SideEffectList, v27);
+          sub_1B64C64(SideEffectList, v27);
         SideEffectList = (System_Collections_Generic_IEnumerable_T__o *)LostAssetLoadCompensateLogic__ExtractEffectIdsForShowAll(
                                                                           *((BattleActionData_o **)&v30[2].klass + v31),
                                                                           v27);
@@ -211,13 +211,13 @@ System_Collections_Generic_IEnumerable_int__o *__fastcall LostAssetLoadCompensat
         System_Collections_Generic_HashSet_int___UnionWith(
           v24,
           SideEffectList,
-          (const MethodInfo_3366E9C *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+          (const MethodInfo_33674B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
         LODWORD(monitor) = v30[1].monitor;
         if ( (__int64)++v31 >= (int)monitor )
           goto LABEL_10;
       }
 LABEL_65:
-      sub_1B64ACC(SideEffectList, v27);
+      sub_1B64C5C(SideEffectList, v27);
     }
 LABEL_10:
     BuffList = (System_Collections_Generic_IEnumerable_TSource__o *)BattleActionData__getBuffList(actionData, -1, v28);
@@ -238,7 +238,7 @@ LABEL_10:
           v33 = LostAssetLoadCompensateLogic___c_TypeInfo;
         }
         v35 = (Il2CppObject *)v33->static_fields->__9;
-        _9__5_0 = (System_Func_object__object__o *)sub_1B64ABC(System_Func_BattleActionData_BuffData__IEnumerable_int___TypeInfo);
+        _9__5_0 = (System_Func_object__object__o *)sub_1B64C4C(System_Func_BattleActionData_BuffData__IEnumerable_int___TypeInfo);
         System_Func_object__object____ctor(
           _9__5_0,
           v35,
@@ -246,21 +246,21 @@ LABEL_10:
           0LL);
         static_fields = LostAssetLoadCompensateLogic___c_TypeInfo->static_fields;
         static_fields->__9__5_0 = (struct System_Func_BattleActionData_BuffData__IEnumerable_int___o *)_9__5_0;
-        sub_1B64814((ServantStatusBattleListViewItem_o *)&static_fields->__9__5_0, (int32_t)_9__5_0, v37, v38);
+        sub_1B649A4((ServantStatusBattleListViewItem_o *)&static_fields->__9__5_0, (int32_t)_9__5_0, v37, v38);
       }
       SideEffectList = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__SelectMany_object__int_(
                                                                         BuffList,
                                                                         (System_Func_TSource__IEnumerable_TResult___o *)_9__5_0,
-                                                                        (const MethodInfo_2E6DB9C *)Method_System_Linq_Enumerable_SelectMany_BattleActionData_BuffData__int___);
+                                                                        (const MethodInfo_2E6E1B4 *)Method_System_Linq_Enumerable_SelectMany_BattleActionData_BuffData__int___);
       if ( !v24 )
         goto LABEL_65;
       System_Collections_Generic_HashSet_int___UnionWith(
         v24,
         SideEffectList,
-        (const MethodInfo_3366E9C *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+        (const MethodInfo_33674B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_AuraEffectMaster___);
+      Master_object = DataManager__GetMaster_object_((const MethodInfo_2E3BC8C *)Method_DataManager_GetMaster_AuraEffectMaster___);
       v40 = LostAssetLoadCompensateLogic___c_TypeInfo;
       v41 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
       if ( !LostAssetLoadCompensateLogic___c_TypeInfo->_2.cctor_finished )
@@ -277,7 +277,7 @@ LABEL_10:
           v40 = LostAssetLoadCompensateLogic___c_TypeInfo;
         }
         v43 = (Il2CppObject *)v40->static_fields->__9;
-        _9__5_1 = (System_Func_object__int__o *)sub_1B64ABC(System_Func_BattleActionData_BuffData__int__TypeInfo);
+        _9__5_1 = (System_Func_object__int__o *)sub_1B64C4C(System_Func_BattleActionData_BuffData__int__TypeInfo);
         System_Func_object__int____ctor(
           _9__5_1,
           v43,
@@ -285,17 +285,17 @@ LABEL_10:
           0LL);
         v44 = LostAssetLoadCompensateLogic___c_TypeInfo->static_fields;
         v44->__9__5_1 = (struct System_Func_BattleActionData_BuffData__int__o *)_9__5_1;
-        sub_1B64814((ServantStatusBattleListViewItem_o *)&v44->__9__5_1, (int32_t)_9__5_1, v45, v46);
+        sub_1B649A4((ServantStatusBattleListViewItem_o *)&v44->__9__5_1, (int32_t)_9__5_1, v45, v46);
       }
       v47 = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__Select_object__int_(
                                                              BuffList,
                                                              (System_Func_TSource__TResult__o *)_9__5_1,
-                                                             (const MethodInfo_2E6ADAC *)Method_System_Linq_Enumerable_Select_BattleActionData_BuffData__int___);
-      v48 = (System_Collections_Generic_HashSet_int__o *)sub_1B64ABC(System_Collections_Generic_HashSet_int__TypeInfo);
-      System_Collections_Generic_HashSet_int____ctor_53894520(
+                                                             (const MethodInfo_2E6B3C4 *)Method_System_Linq_Enumerable_Select_BattleActionData_BuffData__int___);
+      v48 = (System_Collections_Generic_HashSet_int__o *)sub_1B64C4C(System_Collections_Generic_HashSet_int__TypeInfo);
+      System_Collections_Generic_HashSet_int____ctor_53896080(
         v48,
         v47,
-        (const MethodInfo_3365D78 *)Method_System_Collections_Generic_HashSet_int___ctor___75645664);
+        (const MethodInfo_3366390 *)Method_System_Collections_Generic_HashSet_int___ctor___75647216);
       v49 = LostAssetLoadCompensateLogic___c_TypeInfo;
       if ( !LostAssetLoadCompensateLogic___c_TypeInfo->_2.cctor_finished )
       {
@@ -311,7 +311,7 @@ LABEL_10:
           v49 = LostAssetLoadCompensateLogic___c_TypeInfo;
         }
         v51 = (Il2CppObject *)v49->static_fields->__9;
-        _9__5_2 = (System_Func_int__bool__o *)sub_1B64ABC(System_Func_int__bool__TypeInfo);
+        _9__5_2 = (System_Func_int__bool__o *)sub_1B64C4C(System_Func_int__bool__TypeInfo);
         System_Func_int__bool____ctor(
           _9__5_2,
           v51,
@@ -319,12 +319,12 @@ LABEL_10:
           0LL);
         v52 = LostAssetLoadCompensateLogic___c_TypeInfo->static_fields;
         v52->__9__5_2 = _9__5_2;
-        sub_1B64814((ServantStatusBattleListViewItem_o *)&v52->__9__5_2, (int32_t)_9__5_2, v53, v54);
+        sub_1B649A4((ServantStatusBattleListViewItem_o *)&v52->__9__5_2, (int32_t)_9__5_2, v53, v54);
       }
       SideEffectList = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__Where_int_(
                                                                         (System_Collections_Generic_IEnumerable_TSource__o *)v48,
                                                                         (System_Func_TSource__bool__o *)_9__5_2,
-                                                                        (const MethodInfo_2E790A4 *)Method_System_Linq_Enumerable_Where_int___);
+                                                                        (const MethodInfo_2E796BC *)Method_System_Linq_Enumerable_Where_int___);
       if ( !SideEffectList )
         goto LABEL_65;
       klass = SideEffectList->klass;
@@ -345,13 +345,13 @@ LABEL_10:
       else
       {
 LABEL_37:
-        p_method = sub_1BB6850(SideEffectList, System_Collections_Generic_IEnumerable_int__TypeInfo, 0LL);
+        p_method = sub_1BB69E0(SideEffectList, System_Collections_Generic_IEnumerable_int__TypeInfo, 0LL);
       }
       v61 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_T__o *, _QWORD))p_method)(
               v56,
               *(_QWORD *)(p_method + 8));
       if ( !v61 )
-        sub_1B64ACC(0LL, v60);
+        sub_1B64C5C(0LL, v60);
       while ( 1 )
       {
         v62 = *(_QWORD *)v61;
@@ -371,7 +371,7 @@ LABEL_37:
         else
         {
 LABEL_44:
-          v65 = sub_1BB6850(v61, System_Collections_IEnumerator_TypeInfo, 0LL);
+          v65 = sub_1BB69E0(v61, System_Collections_IEnumerator_TypeInfo, 0LL);
         }
         if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v65)(v61, *(_QWORD *)(v65 + 8)) & 1) == 0 )
           break;
@@ -392,24 +392,24 @@ LABEL_44:
         else
         {
 LABEL_51:
-          v69 = sub_1BB6850(v61, System_Collections_Generic_IEnumerator_int__TypeInfo, 0LL);
+          v69 = sub_1BB69E0(v61, System_Collections_Generic_IEnumerator_int__TypeInfo, 0LL);
         }
         v70 = (*(__int64 (__fastcall **)(__int64, _QWORD))v69)(v61, *(_QWORD *)(v69 + 8));
         if ( !v41 )
-          sub_1B64ACC(v70, v71);
+          sub_1B64C5C(v70, v71);
         v72 = DataMasterBase_object__object__int___TryGetEntity(
                 v41,
                 &entity,
                 v70,
-                (const MethodInfo_30D61D4 *)Method_DataMasterBase_AuraEffectMaster__AuraEffectEntity__int__TryGetEntity__);
+                (const MethodInfo_30D67EC *)Method_DataMasterBase_AuraEffectMaster__AuraEffectEntity__int__TryGetEntity__);
         if ( v72 )
         {
           if ( !entity )
-            sub_1B64ACC(v72, v73);
+            sub_1B64C5C(v72, v73);
           System_Collections_Generic_HashSet_int___Add(
             v24,
             HIDWORD(entity[1].klass),
-            (const MethodInfo_3366E8C *)Method_System_Collections_Generic_HashSet_int__Add__);
+            (const MethodInfo_33674A4 *)Method_System_Collections_Generic_HashSet_int__Add__);
         }
       }
       v74 = *(_QWORD *)v61;
@@ -429,7 +429,7 @@ LABEL_51:
       else
       {
 LABEL_61:
-        v77 = sub_1BB6850(v61, System_IDisposable_TypeInfo, 0LL);
+        v77 = sub_1BB69E0(v61, System_IDisposable_TypeInfo, 0LL);
       }
       (*(void (__fastcall **)(__int64, _QWORD))v77)(v61, *(_QWORD *)(v77 + 8));
     }
@@ -490,32 +490,32 @@ System_Collections_Generic_IEnumerable_int__o *__fastcall LostAssetLoadCompensat
   const MethodInfo *v48; // x1
   System_Collections_Generic_List_Enumerator_object__o v50; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4A00587 & 1) == 0 )
+  if ( (byte_4A00BA8 & 1) == 0 )
   {
-    sub_1B64870(&Method_System_Linq_Enumerable_SelectMany_BattleActionData_DamageData__int___, method);
-    sub_1B64870(&Method_System_Linq_Enumerable_Select_BattleActionData_DamageData__int___, v3);
-    sub_1B64870(&Method_System_Linq_Enumerable_Where_BattleActionData_DamageData___, v4);
-    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_BattleActionData__Dispose__, v5);
-    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_BattleActionData__MoveNext__, v6);
-    sub_1B64870(&Method_System_Collections_Generic_List_Enumerator_BattleActionData__get_Current__, v7);
-    sub_1B64870(&System_Func_BattleActionData_DamageData__bool__TypeInfo, v8);
-    sub_1B64870(&System_Func_BattleActionData_DamageData__int__TypeInfo, v9);
-    sub_1B64870(&System_Func_BattleActionData_DamageData__IEnumerable_int___TypeInfo, v10);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_int__UnionWith__, v11);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_int___ctor__, v12);
-    sub_1B64870(&System_Collections_Generic_HashSet_int__TypeInfo, v13);
-    sub_1B64870(&Method_System_Collections_Generic_List_BattleActionData__GetEnumerator__, v14);
-    sub_1B64870(&Method_LostAssetLoadCompensateLogic___c__ExtractEffectIdsForShowDamage_b__3_0__, v15);
-    sub_1B64870(&Method_LostAssetLoadCompensateLogic___c__ExtractEffectIdsForShowDamage_b__3_1__, v16);
-    sub_1B64870(&Method_LostAssetLoadCompensateLogic___c__ExtractEffectIdsForShowDamage_b__3_2__, v17);
-    sub_1B64870(&LostAssetLoadCompensateLogic___c_TypeInfo, v18);
-    byte_4A00587 = 1;
+    sub_1B64A00(&Method_System_Linq_Enumerable_SelectMany_BattleActionData_DamageData__int___, method);
+    sub_1B64A00(&Method_System_Linq_Enumerable_Select_BattleActionData_DamageData__int___, v3);
+    sub_1B64A00(&Method_System_Linq_Enumerable_Where_BattleActionData_DamageData___, v4);
+    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_BattleActionData__Dispose__, v5);
+    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_BattleActionData__MoveNext__, v6);
+    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_BattleActionData__get_Current__, v7);
+    sub_1B64A00(&System_Func_BattleActionData_DamageData__bool__TypeInfo, v8);
+    sub_1B64A00(&System_Func_BattleActionData_DamageData__int__TypeInfo, v9);
+    sub_1B64A00(&System_Func_BattleActionData_DamageData__IEnumerable_int___TypeInfo, v10);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_int__UnionWith__, v11);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_int___ctor__, v12);
+    sub_1B64A00(&System_Collections_Generic_HashSet_int__TypeInfo, v13);
+    sub_1B64A00(&Method_System_Collections_Generic_List_BattleActionData__GetEnumerator__, v14);
+    sub_1B64A00(&Method_LostAssetLoadCompensateLogic___c__ExtractEffectIdsForShowDamage_b__3_0__, v15);
+    sub_1B64A00(&Method_LostAssetLoadCompensateLogic___c__ExtractEffectIdsForShowDamage_b__3_1__, v16);
+    sub_1B64A00(&Method_LostAssetLoadCompensateLogic___c__ExtractEffectIdsForShowDamage_b__3_2__, v17);
+    sub_1B64A00(&LostAssetLoadCompensateLogic___c_TypeInfo, v18);
+    byte_4A00BA8 = 1;
   }
   memset(&v50, 0, sizeof(v50));
-  v19 = (System_Collections_Generic_HashSet_int__o *)sub_1B64ABC(System_Collections_Generic_HashSet_int__TypeInfo);
+  v19 = (System_Collections_Generic_HashSet_int__o *)sub_1B64C4C(System_Collections_Generic_HashSet_int__TypeInfo);
   System_Collections_Generic_HashSet_int____ctor(
     v19,
-    (const MethodInfo_3365C88 *)Method_System_Collections_Generic_HashSet_int___ctor__);
+    (const MethodInfo_33662A0 *)Method_System_Collections_Generic_HashSet_int___ctor__);
   if ( actionData )
   {
     DamageList = (System_Collections_Generic_IEnumerable_TSource__o *)BattleActionData__getDamageList(
@@ -539,7 +539,7 @@ System_Collections_Generic_IEnumerable_int__o *__fastcall LostAssetLoadCompensat
           v23 = LostAssetLoadCompensateLogic___c_TypeInfo;
         }
         v25 = (Il2CppObject *)v23->static_fields->__9;
-        _9__3_0 = (System_Func_object__object__o *)sub_1B64ABC(System_Func_BattleActionData_DamageData__IEnumerable_int___TypeInfo);
+        _9__3_0 = (System_Func_object__object__o *)sub_1B64C4C(System_Func_BattleActionData_DamageData__IEnumerable_int___TypeInfo);
         System_Func_object__object____ctor(
           _9__3_0,
           v25,
@@ -547,18 +547,18 @@ System_Collections_Generic_IEnumerable_int__o *__fastcall LostAssetLoadCompensat
           0LL);
         static_fields = LostAssetLoadCompensateLogic___c_TypeInfo->static_fields;
         static_fields->__9__3_0 = (struct System_Func_BattleActionData_DamageData__IEnumerable_int___o *)_9__3_0;
-        sub_1B64814((ServantStatusBattleListViewItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v27, v28);
+        sub_1B649A4((ServantStatusBattleListViewItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v27, v28);
       }
       sideEffectList = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__SelectMany_object__int_(
                                                                         DamageList,
                                                                         (System_Func_TSource__IEnumerable_TResult___o *)_9__3_0,
-                                                                        (const MethodInfo_2E6DB9C *)Method_System_Linq_Enumerable_SelectMany_BattleActionData_DamageData__int___);
+                                                                        (const MethodInfo_2E6E1B4 *)Method_System_Linq_Enumerable_SelectMany_BattleActionData_DamageData__int___);
       if ( !v19 )
         goto LABEL_36;
       System_Collections_Generic_HashSet_int___UnionWith(
         v19,
         sideEffectList,
-        (const MethodInfo_3366E9C *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+        (const MethodInfo_33674B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
       v30 = LostAssetLoadCompensateLogic___c_TypeInfo;
       if ( !LostAssetLoadCompensateLogic___c_TypeInfo->_2.cctor_finished )
       {
@@ -574,7 +574,7 @@ System_Collections_Generic_IEnumerable_int__o *__fastcall LostAssetLoadCompensat
           v30 = LostAssetLoadCompensateLogic___c_TypeInfo;
         }
         v32 = (Il2CppObject *)v30->static_fields->__9;
-        _9__3_1 = (System_Func_object__bool__o *)sub_1B64ABC(System_Func_BattleActionData_DamageData__bool__TypeInfo);
+        _9__3_1 = (System_Func_object__bool__o *)sub_1B64C4C(System_Func_BattleActionData_DamageData__bool__TypeInfo);
         System_Func_object__bool____ctor(
           _9__3_1,
           v32,
@@ -582,12 +582,12 @@ System_Collections_Generic_IEnumerable_int__o *__fastcall LostAssetLoadCompensat
           0LL);
         v33 = LostAssetLoadCompensateLogic___c_TypeInfo->static_fields;
         v33->__9__3_1 = (struct System_Func_BattleActionData_DamageData__bool__o *)_9__3_1;
-        sub_1B64814((ServantStatusBattleListViewItem_o *)&v33->__9__3_1, (int32_t)_9__3_1, v34, v35);
+        sub_1B649A4((ServantStatusBattleListViewItem_o *)&v33->__9__3_1, (int32_t)_9__3_1, v34, v35);
       }
       v36 = System_Linq_Enumerable__Where_object_(
               DamageList,
               (System_Func_TSource__bool__o *)_9__3_1,
-              (const MethodInfo_2E79378 *)Method_System_Linq_Enumerable_Where_BattleActionData_DamageData___);
+              (const MethodInfo_2E79990 *)Method_System_Linq_Enumerable_Where_BattleActionData_DamageData___);
       v37 = LostAssetLoadCompensateLogic___c_TypeInfo;
       v38 = v36;
       if ( !LostAssetLoadCompensateLogic___c_TypeInfo->_2.cctor_finished )
@@ -604,7 +604,7 @@ System_Collections_Generic_IEnumerable_int__o *__fastcall LostAssetLoadCompensat
           v37 = LostAssetLoadCompensateLogic___c_TypeInfo;
         }
         v40 = (Il2CppObject *)v37->static_fields->__9;
-        _9__3_2 = (System_Func_object__int__o *)sub_1B64ABC(System_Func_BattleActionData_DamageData__int__TypeInfo);
+        _9__3_2 = (System_Func_object__int__o *)sub_1B64C4C(System_Func_BattleActionData_DamageData__int__TypeInfo);
         System_Func_object__int____ctor(
           _9__3_2,
           v40,
@@ -612,16 +612,16 @@ System_Collections_Generic_IEnumerable_int__o *__fastcall LostAssetLoadCompensat
           0LL);
         v41 = LostAssetLoadCompensateLogic___c_TypeInfo->static_fields;
         v41->__9__3_2 = (struct System_Func_BattleActionData_DamageData__int__o *)_9__3_2;
-        sub_1B64814((ServantStatusBattleListViewItem_o *)&v41->__9__3_2, (int32_t)_9__3_2, v42, v43);
+        sub_1B649A4((ServantStatusBattleListViewItem_o *)&v41->__9__3_2, (int32_t)_9__3_2, v42, v43);
       }
       v44 = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__Select_object__int_(
                                                              v38,
                                                              (System_Func_TSource__TResult__o *)_9__3_2,
-                                                             (const MethodInfo_2E6ADAC *)Method_System_Linq_Enumerable_Select_BattleActionData_DamageData__int___);
+                                                             (const MethodInfo_2E6B3C4 *)Method_System_Linq_Enumerable_Select_BattleActionData_DamageData__int___);
       System_Collections_Generic_HashSet_int___UnionWith(
         v19,
         v44,
-        (const MethodInfo_3366E9C *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+        (const MethodInfo_33674B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
     }
     sideEffectList = (System_Collections_Generic_IEnumerable_T__o *)actionData->fields.sideEffectList;
     if ( !sideEffectList )
@@ -629,24 +629,24 @@ System_Collections_Generic_IEnumerable_int__o *__fastcall LostAssetLoadCompensat
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v50,
       (System_Collections_Generic_List_object__o *)sideEffectList,
-      (const MethodInfo_34B0548 *)Method_System_Collections_Generic_List_BattleActionData__GetEnumerator__);
+      (const MethodInfo_34B0B60 *)Method_System_Collections_Generic_List_BattleActionData__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v50,
-              (const MethodInfo_322C38C *)Method_System_Collections_Generic_List_Enumerator_BattleActionData__MoveNext__) )
+              (const MethodInfo_322C9A4 *)Method_System_Collections_Generic_List_Enumerator_BattleActionData__MoveNext__) )
     {
       EffectIdsForShowAll = (System_Collections_Generic_IEnumerable_T__o *)LostAssetLoadCompensateLogic__ExtractEffectIdsForShowAll(
                                                                              (BattleActionData_o *)v50.fields._current,
                                                                              v45);
       if ( !v19 )
-        sub_1B64ACC(EffectIdsForShowAll, EffectIdsForShowAll);
+        sub_1B64C5C(EffectIdsForShowAll, EffectIdsForShowAll);
       System_Collections_Generic_HashSet_int___UnionWith(
         v19,
         EffectIdsForShowAll,
-        (const MethodInfo_3366E9C *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+        (const MethodInfo_33674B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v50,
-      (const MethodInfo_322C388 *)Method_System_Collections_Generic_List_Enumerator_BattleActionData__Dispose__);
+      (const MethodInfo_322C9A0 *)Method_System_Collections_Generic_List_Enumerator_BattleActionData__Dispose__);
     if ( BattleActionData__isCommandAttack(actionData, v47) || (actionData->fields.type & 0xFFFFFFFE) == 10 )
     {
       sideEffectList = (System_Collections_Generic_IEnumerable_T__o *)LostAssetLoadCompensateLogic__ExtractEffectIdsForShowAll(
@@ -657,11 +657,11 @@ System_Collections_Generic_IEnumerable_int__o *__fastcall LostAssetLoadCompensat
         System_Collections_Generic_HashSet_int___UnionWith(
           v19,
           sideEffectList,
-          (const MethodInfo_3366E9C *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+          (const MethodInfo_33674B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
         return (System_Collections_Generic_IEnumerable_int__o *)v19;
       }
 LABEL_36:
-      sub_1B64ACC(sideEffectList, v22);
+      sub_1B64C5C(sideEffectList, v22);
     }
   }
   return (System_Collections_Generic_IEnumerable_int__o *)v19;
@@ -694,21 +694,21 @@ System_Collections_Generic_IEnumerable_int__o *__fastcall LostAssetLoadCompensat
   int32_t v22; // w2
   int32_t v23; // w3
 
-  if ( (byte_4A00588 & 1) == 0 )
+  if ( (byte_4A00BA9 & 1) == 0 )
   {
-    sub_1B64870(&Method_System_Linq_Enumerable_SelectMany_BattleActionData_HealData__int___, method);
-    sub_1B64870(&System_Func_BattleActionData_HealData__IEnumerable_int___TypeInfo, v3);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_int__UnionWith__, v4);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_int___ctor__, v5);
-    sub_1B64870(&System_Collections_Generic_HashSet_int__TypeInfo, v6);
-    sub_1B64870(&Method_LostAssetLoadCompensateLogic___c__ExtractEffectIdsForShowHeal_b__4_0__, v7);
-    sub_1B64870(&LostAssetLoadCompensateLogic___c_TypeInfo, v8);
-    byte_4A00588 = 1;
+    sub_1B64A00(&Method_System_Linq_Enumerable_SelectMany_BattleActionData_HealData__int___, method);
+    sub_1B64A00(&System_Func_BattleActionData_HealData__IEnumerable_int___TypeInfo, v3);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_int__UnionWith__, v4);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_int___ctor__, v5);
+    sub_1B64A00(&System_Collections_Generic_HashSet_int__TypeInfo, v6);
+    sub_1B64A00(&Method_LostAssetLoadCompensateLogic___c__ExtractEffectIdsForShowHeal_b__4_0__, v7);
+    sub_1B64A00(&LostAssetLoadCompensateLogic___c_TypeInfo, v8);
+    byte_4A00BA9 = 1;
   }
-  v9 = (System_Collections_Generic_HashSet_int__o *)sub_1B64ABC(System_Collections_Generic_HashSet_int__TypeInfo);
+  v9 = (System_Collections_Generic_HashSet_int__o *)sub_1B64C4C(System_Collections_Generic_HashSet_int__TypeInfo);
   System_Collections_Generic_HashSet_int____ctor(
     v9,
-    (const MethodInfo_3365C88 *)Method_System_Collections_Generic_HashSet_int___ctor__);
+    (const MethodInfo_33662A0 *)Method_System_Collections_Generic_HashSet_int___ctor__);
   if ( actionData )
   {
     HealList = (System_Collections_Generic_IEnumerable_TSource__o *)BattleActionData__getHealList(actionData, -1, v10);
@@ -726,7 +726,7 @@ System_Collections_Generic_IEnumerable_int__o *__fastcall LostAssetLoadCompensat
       while ( 1 )
       {
         if ( v17 >= (unsigned int)monitor )
-          sub_1B64AD4(SideEffectList, v14);
+          sub_1B64C64(SideEffectList, v14);
         SideEffectList = (System_Collections_Generic_IEnumerable_T__o *)LostAssetLoadCompensateLogic__ExtractEffectIdsForShowAll(
                                                                           *((BattleActionData_o **)&v16[2].klass + v17),
                                                                           v14);
@@ -735,13 +735,13 @@ System_Collections_Generic_IEnumerable_int__o *__fastcall LostAssetLoadCompensat
         System_Collections_Generic_HashSet_int___UnionWith(
           v9,
           SideEffectList,
-          (const MethodInfo_3366E9C *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+          (const MethodInfo_33674B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
         LODWORD(monitor) = v16[1].monitor;
         if ( (__int64)++v17 >= (int)monitor )
           goto LABEL_10;
       }
 LABEL_21:
-      sub_1B64ACC(SideEffectList, v14);
+      sub_1B64C5C(SideEffectList, v14);
     }
 LABEL_10:
     if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)HealList, 0LL) )
@@ -761,7 +761,7 @@ LABEL_10:
           v18 = LostAssetLoadCompensateLogic___c_TypeInfo;
         }
         v20 = (Il2CppObject *)v18->static_fields->__9;
-        _9__4_0 = (System_Func_object__object__o *)sub_1B64ABC(System_Func_BattleActionData_HealData__IEnumerable_int___TypeInfo);
+        _9__4_0 = (System_Func_object__object__o *)sub_1B64C4C(System_Func_BattleActionData_HealData__IEnumerable_int___TypeInfo);
         System_Func_object__object____ctor(
           _9__4_0,
           v20,
@@ -769,18 +769,18 @@ LABEL_10:
           0LL);
         static_fields = LostAssetLoadCompensateLogic___c_TypeInfo->static_fields;
         static_fields->__9__4_0 = (struct System_Func_BattleActionData_HealData__IEnumerable_int___o *)_9__4_0;
-        sub_1B64814((ServantStatusBattleListViewItem_o *)&static_fields->__9__4_0, (int32_t)_9__4_0, v22, v23);
+        sub_1B649A4((ServantStatusBattleListViewItem_o *)&static_fields->__9__4_0, (int32_t)_9__4_0, v22, v23);
       }
       SideEffectList = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__SelectMany_object__int_(
                                                                         HealList,
                                                                         (System_Func_TSource__IEnumerable_TResult___o *)_9__4_0,
-                                                                        (const MethodInfo_2E6DB9C *)Method_System_Linq_Enumerable_SelectMany_BattleActionData_HealData__int___);
+                                                                        (const MethodInfo_2E6E1B4 *)Method_System_Linq_Enumerable_SelectMany_BattleActionData_HealData__int___);
       if ( !v9 )
         goto LABEL_21;
       System_Collections_Generic_HashSet_int___UnionWith(
         v9,
         SideEffectList,
-        (const MethodInfo_3366E9C *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+        (const MethodInfo_33674B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
     }
   }
   return (System_Collections_Generic_IEnumerable_int__o *)v9;
@@ -825,35 +825,35 @@ void __fastcall LostAssetLoadCompensateLogic__SearchAndLoad(
 
   v5 = argForShowAll;
   v6 = fsmStateAction;
-  if ( (byte_4A00584 & 1) == 0 )
+  if ( (byte_4A00BA5 & 1) == 0 )
   {
-    sub_1B64870(&Method_System_Array_Empty_int___, argForShowAll);
-    sub_1B64870(&Method_BitValue_CompensateArgForShowAll_EffectType__Check__, v7);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_int__RemoveWhere__, v8);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_int__UnionWith__, v9);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_int___ctor__, v10);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_int__get_Count__, v11);
-    sub_1B64870(&System_Collections_Generic_HashSet_int__TypeInfo, v12);
-    sub_1B64870(&System_Predicate_int__TypeInfo, v13);
-    sub_1B64870(&Method_LostAssetLoadCompensateLogic___c__SearchAndLoad_b__0_0__, v14);
-    fsmStateAction = (HutongGames_PlayMaker_FsmStateAction_o *)sub_1B64870(
+    sub_1B64A00(&Method_System_Array_Empty_int___, argForShowAll);
+    sub_1B64A00(&Method_BitValue_CompensateArgForShowAll_EffectType__Check__, v7);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_int__RemoveWhere__, v8);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_int__UnionWith__, v9);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_int___ctor__, v10);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_int__get_Count__, v11);
+    sub_1B64A00(&System_Collections_Generic_HashSet_int__TypeInfo, v12);
+    sub_1B64A00(&System_Predicate_int__TypeInfo, v13);
+    sub_1B64A00(&Method_LostAssetLoadCompensateLogic___c__SearchAndLoad_b__0_0__, v14);
+    fsmStateAction = (HutongGames_PlayMaker_FsmStateAction_o *)sub_1B64A00(
                                                                  &LostAssetLoadCompensateLogic___c_TypeInfo,
                                                                  v15);
-    byte_4A00584 = 1;
+    byte_4A00BA5 = 1;
   }
   if ( !v5 )
     goto LABEL_37;
   EffectTypeBit_k__BackingField = (BitValue_T__o *)v5->fields._EffectTypeBit_k__BackingField;
-  v17 = (System_Collections_Generic_HashSet_int__o *)sub_1B64ABC(System_Collections_Generic_HashSet_int__TypeInfo);
+  v17 = (System_Collections_Generic_HashSet_int__o *)sub_1B64C4C(System_Collections_Generic_HashSet_int__TypeInfo);
   System_Collections_Generic_HashSet_int____ctor(
     v17,
-    (const MethodInfo_3365C88 *)Method_System_Collections_Generic_HashSet_int___ctor__);
+    (const MethodInfo_33662A0 *)Method_System_Collections_Generic_HashSet_int___ctor__);
   if ( !EffectTypeBit_k__BackingField )
     goto LABEL_37;
   fsmStateAction = (HutongGames_PlayMaker_FsmStateAction_o *)BitValue_Int32Enum___Check(
                                                                EffectTypeBit_k__BackingField,
                                                                1,
-                                                               (const MethodInfo_305AB84 *)Method_BitValue_CompensateArgForShowAll_EffectType__Check__);
+                                                               (const MethodInfo_305B19C *)Method_BitValue_CompensateArgForShowAll_EffectType__Check__);
   if ( ((unsigned __int8)fsmStateAction & 1) != 0 )
   {
     fsmStateAction = (HutongGames_PlayMaker_FsmStateAction_o *)v5->fields._Perf_k__BackingField;
@@ -871,7 +871,7 @@ void __fastcall LostAssetLoadCompensateLogic__SearchAndLoad(
     System_Collections_Generic_HashSet_int___UnionWith(
       v17,
       (System_Collections_Generic_IEnumerable_T__o *)fsmStateAction,
-      (const MethodInfo_3366E9C *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+      (const MethodInfo_33674B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
   }
   Perf_k__BackingField = v5->fields._Perf_k__BackingField;
   if ( !Perf_k__BackingField )
@@ -880,7 +880,7 @@ void __fastcall LostAssetLoadCompensateLogic__SearchAndLoad(
   if ( BitValue_Int32Enum___Check(
          EffectTypeBit_k__BackingField,
          2,
-         (const MethodInfo_305AB84 *)Method_BitValue_CompensateArgForShowAll_EffectType__Check__) )
+         (const MethodInfo_305B19C *)Method_BitValue_CompensateArgForShowAll_EffectType__Check__) )
   {
     fsmStateAction = (HutongGames_PlayMaker_FsmStateAction_o *)LostAssetLoadCompensateLogic__ExtractEffectIdsForShowHeal(
                                                                  nowAction,
@@ -890,12 +890,12 @@ void __fastcall LostAssetLoadCompensateLogic__SearchAndLoad(
     System_Collections_Generic_HashSet_int___UnionWith(
       v17,
       (System_Collections_Generic_IEnumerable_T__o *)fsmStateAction,
-      (const MethodInfo_3366E9C *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+      (const MethodInfo_33674B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
   }
   fsmStateAction = (HutongGames_PlayMaker_FsmStateAction_o *)BitValue_Int32Enum___Check(
                                                                EffectTypeBit_k__BackingField,
                                                                4,
-                                                               (const MethodInfo_305AB84 *)Method_BitValue_CompensateArgForShowAll_EffectType__Check__);
+                                                               (const MethodInfo_305B19C *)Method_BitValue_CompensateArgForShowAll_EffectType__Check__);
   if ( ((unsigned __int8)fsmStateAction & 1) != 0 )
   {
     fsmStateAction = (HutongGames_PlayMaker_FsmStateAction_o *)LostAssetLoadCompensateLogic__ExtractEffectIdsForShowBuff(
@@ -906,7 +906,7 @@ void __fastcall LostAssetLoadCompensateLogic__SearchAndLoad(
     System_Collections_Generic_HashSet_int___UnionWith(
       v17,
       (System_Collections_Generic_IEnumerable_T__o *)fsmStateAction,
-      (const MethodInfo_3366E9C *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+      (const MethodInfo_33674B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
   }
   argForShowAll = (CompensateArgForShowAll_o *)v5->fields._ExtraEffectIdArray_k__BackingField;
   if ( !argForShowAll )
@@ -915,26 +915,26 @@ void __fastcall LostAssetLoadCompensateLogic__SearchAndLoad(
     v25 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
     if ( !v25 )
     {
-      sub_1BB67A8(Method_System_Array_Empty_int___);
+      sub_1BB6938(Method_System_Array_Empty_int___);
       v25 = v24[7];
     }
     v26 = *(_QWORD *)(v25 + 16);
     if ( (*(_BYTE *)(v26 + 309) & 1) == 0 )
-      v26 = sub_1BB674C(v26);
+      v26 = sub_1BB68DC(v26);
     if ( !*(_DWORD *)(v26 + 224) )
       j_il2cpp_runtime_class_init_0(v26);
     fsmStateAction = *(HutongGames_PlayMaker_FsmStateAction_o **)(v24[7] + 16LL);
     if ( (BYTE5(fsmStateAction[3].fields._DisplayName_k__BackingField) & 1) == 0 )
-      fsmStateAction = (HutongGames_PlayMaker_FsmStateAction_o *)sub_1BB674C(fsmStateAction);
+      fsmStateAction = (HutongGames_PlayMaker_FsmStateAction_o *)sub_1BB68DC(fsmStateAction);
     argForShowAll = **(CompensateArgForShowAll_o ***)&fsmStateAction[2].fields.enabled;
   }
   if ( !v17 )
 LABEL_37:
-    sub_1B64ACC(fsmStateAction, argForShowAll);
+    sub_1B64C5C(fsmStateAction, argForShowAll);
   System_Collections_Generic_HashSet_int___UnionWith(
     v17,
     (System_Collections_Generic_IEnumerable_T__o *)argForShowAll,
-    (const MethodInfo_3366E9C *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+    (const MethodInfo_33674B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
   v27 = LostAssetLoadCompensateLogic___c_TypeInfo;
   if ( !LostAssetLoadCompensateLogic___c_TypeInfo->_2.cctor_finished )
   {
@@ -950,16 +950,16 @@ LABEL_37:
       v27 = LostAssetLoadCompensateLogic___c_TypeInfo;
     }
     v29 = (Il2CppObject *)v27->static_fields->__9;
-    _9__0_0 = (System_Predicate_int__o *)sub_1B64ABC(System_Predicate_int__TypeInfo);
+    _9__0_0 = (System_Predicate_int__o *)sub_1B64C4C(System_Predicate_int__TypeInfo);
     System_Predicate_int____ctor(_9__0_0, v29, Method_LostAssetLoadCompensateLogic___c__SearchAndLoad_b__0_0__, 0LL);
     static_fields = LostAssetLoadCompensateLogic___c_TypeInfo->static_fields;
     static_fields->__9__0_0 = _9__0_0;
-    sub_1B64814((ServantStatusBattleListViewItem_o *)&static_fields->__9__0_0, (int32_t)_9__0_0, v31, v32);
+    sub_1B649A4((ServantStatusBattleListViewItem_o *)&static_fields->__9__0_0, (int32_t)_9__0_0, v31, v32);
   }
   System_Collections_Generic_HashSet_int___RemoveWhere(
     v17,
     (System_Predicate_T__o *)_9__0_0,
-    (const MethodInfo_33673C0 *)Method_System_Collections_Generic_HashSet_int__RemoveWhere__);
+    (const MethodInfo_33679D8 *)Method_System_Collections_Generic_HashSet_int__RemoveWhere__);
   if ( v17->fields._count > 0 )
   {
     fsmStateAction = (HutongGames_PlayMaker_FsmStateAction_o *)LostAssetLoadCompensateLogic__CoroutineLoad(
@@ -1023,19 +1023,19 @@ bool __fastcall LostAssetLoadCompensateLogic__CoroutineLoad_d__1__MoveNext(
   System_Collections_Generic_HashSet_Enumerator_T__o v30; // [xsp+20h] [xbp-80h] BYREF
 
   v4 = this;
-  if ( (byte_4A0058F & 1) == 0 )
+  if ( (byte_4A00BB0 & 1) == 0 )
   {
-    sub_1B64870(&System_Action_TypeInfo, method);
-    sub_1B64870(&BattleEffectUtility_TypeInfo, v5);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_Enumerator_int__Dispose__, v6);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_Enumerator_int__MoveNext__, v7);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_Enumerator_int__get_Current__, v8);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_int__GetEnumerator__, v9);
-    sub_1B64870(&Method_LostAssetLoadCompensateLogic___c__DisplayClass1_0__CoroutineLoad_b__0__, v10);
-    this = (LostAssetLoadCompensateLogic__CoroutineLoad_d__1_o *)sub_1B64870(
+    sub_1B64A00(&System_Action_TypeInfo, method);
+    sub_1B64A00(&BattleEffectUtility_TypeInfo, v5);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_Enumerator_int__Dispose__, v6);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_Enumerator_int__MoveNext__, v7);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_Enumerator_int__get_Current__, v8);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_int__GetEnumerator__, v9);
+    sub_1B64A00(&Method_LostAssetLoadCompensateLogic___c__DisplayClass1_0__CoroutineLoad_b__0__, v10);
+    this = (LostAssetLoadCompensateLogic__CoroutineLoad_d__1_o *)sub_1B64A00(
                                                                    &LostAssetLoadCompensateLogic___c__DisplayClass1_0_TypeInfo,
                                                                    v11);
-    byte_4A0058F = 1;
+    byte_4A00BB0 = 1;
   }
   memset(&v30, 0, sizeof(v30));
   _1__state = v4->fields.__1__state;
@@ -1048,50 +1048,50 @@ bool __fastcall LostAssetLoadCompensateLogic__CoroutineLoad_d__1__MoveNext(
     if ( _1__state )
       return 0;
     v4->fields.__1__state = -1;
-    v13 = (Il2CppObject *)sub_1B64ABC(LostAssetLoadCompensateLogic___c__DisplayClass1_0_TypeInfo);
+    v13 = (Il2CppObject *)sub_1B64C4C(LostAssetLoadCompensateLogic___c__DisplayClass1_0_TypeInfo);
     System_Object___ctor(v13, 0LL);
     v4->fields.__8__1 = (struct LostAssetLoadCompensateLogic___c__DisplayClass1_0_o *)v13;
     p__8__1 = &v4->fields.__8__1;
-    sub_1B64814((ServantStatusBattleListViewItem_o *)&v4->fields.__8__1, (int32_t)v13, v15, v16);
+    sub_1B649A4((ServantStatusBattleListViewItem_o *)&v4->fields.__8__1, (int32_t)v13, v15, v16);
     if ( !v4->fields.__8__1
       || (v4->fields.__8__1->fields.checkCount = 0,
           (this = (LostAssetLoadCompensateLogic__CoroutineLoad_d__1_o *)v4->fields.effectIdHashSet) == 0LL) )
     {
 LABEL_26:
-      sub_1B64ACC(this, method);
+      sub_1B64C5C(this, method);
     }
     System_Collections_Generic_HashSet_int___GetEnumerator(
       &v29,
       (System_Collections_Generic_HashSet_int__o *)this,
-      (const MethodInfo_3366810 *)Method_System_Collections_Generic_HashSet_int__GetEnumerator__);
+      (const MethodInfo_3366E28 *)Method_System_Collections_Generic_HashSet_int__GetEnumerator__);
     v30 = v29;
     while ( 1 )
     {
       v17 = System_Collections_Generic_HashSet_Enumerator_int___MoveNext(
               &v30,
-              (const MethodInfo_3228058 *)Method_System_Collections_Generic_HashSet_Enumerator_int__MoveNext__);
+              (const MethodInfo_3228670 *)Method_System_Collections_Generic_HashSet_Enumerator_int__MoveNext__);
       if ( !v17 )
         break;
       v19 = *p__8__1;
       if ( !*p__8__1 )
-        sub_1B64ACC(v17, v18);
+        sub_1B64C5C(v17, v18);
       current = (int32_t)v30.fields._current;
       _9__0 = v19->fields.__9__0;
       ++v19->fields.checkCount;
       if ( !_9__0 )
       {
-        _9__0 = (System_Action_o *)sub_1B64ABC(System_Action_TypeInfo);
+        _9__0 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
         System_Action___ctor(
           _9__0,
           (Il2CppObject *)v19,
           Method_LostAssetLoadCompensateLogic___c__DisplayClass1_0__CoroutineLoad_b__0__,
           0LL);
         v19->fields.__9__0 = _9__0;
-        sub_1B64814((ServantStatusBattleListViewItem_o *)&v19->fields.__9__0, (int32_t)_9__0, v22, v23);
+        sub_1B649A4((ServantStatusBattleListViewItem_o *)&v19->fields.__9__0, (int32_t)_9__0, v22, v23);
       }
       argForShowAll = v4->fields.argForShowAll;
       if ( !argForShowAll )
-        sub_1B64ACC(v17, v18);
+        sub_1B64C5C(v17, v18);
       Perf_k__BackingField = argForShowAll->fields._Perf_k__BackingField;
       if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(BattleEffectUtility_TypeInfo);
@@ -1099,7 +1099,7 @@ LABEL_26:
     }
     System_Collections_Generic_HashSet_Enumerator_int___Dispose(
       &v30,
-      (const MethodInfo_3228054 *)Method_System_Collections_Generic_HashSet_Enumerator_int__Dispose__);
+      (const MethodInfo_322866C *)Method_System_Collections_Generic_HashSet_Enumerator_int__Dispose__);
   }
   _8__1 = v4->fields.__8__1;
   if ( !_8__1 )
@@ -1108,7 +1108,7 @@ LABEL_26:
   {
     v4->fields.__2__current = 0LL;
     p__2__current = (ServantStatusBattleListViewItem_o *)&v4->fields.__2__current;
-    sub_1B64814(p__2__current, 0, v2, v3);
+    sub_1B649A4(p__2__current, 0, v2, v3);
     result = 1;
     *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
     return result;
@@ -1134,11 +1134,11 @@ void __fastcall __noreturn LostAssetLoadCompensateLogic__CoroutineLoad_d__1__Sys
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B64884(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B64ABC(v2);
+  v2 = sub_1B64A14(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B64C4C(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B64884(&Method_LostAssetLoadCompensateLogic__CoroutineLoad_d__1_System_Collections_IEnumerator_Reset__);
-  sub_1B64998(v3, v4);
+  v4 = sub_1B64A14(&Method_LostAssetLoadCompensateLogic__CoroutineLoad_d__1_System_Collections_IEnumerator_Reset__);
+  sub_1B64B28(v3, v4);
 }
 
 
@@ -1165,15 +1165,15 @@ void __fastcall LostAssetLoadCompensateLogic___c___cctor(const MethodInfo *metho
   int32_t v3; // w2
   int32_t v4; // w3
 
-  if ( (byte_4A0058A & 1) == 0 )
+  if ( (byte_4A00BAB & 1) == 0 )
   {
-    sub_1B64870(&LostAssetLoadCompensateLogic___c_TypeInfo, v1);
-    byte_4A0058A = 1;
+    sub_1B64A00(&LostAssetLoadCompensateLogic___c_TypeInfo, v1);
+    byte_4A00BAB = 1;
   }
-  v2 = (Il2CppObject *)sub_1B64ABC(LostAssetLoadCompensateLogic___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B64C4C(LostAssetLoadCompensateLogic___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   LostAssetLoadCompensateLogic___c_TypeInfo->static_fields->__9 = (struct LostAssetLoadCompensateLogic___c_o *)v2;
-  sub_1B64814(
+  sub_1B649A4(
     (ServantStatusBattleListViewItem_o *)LostAssetLoadCompensateLogic___c_TypeInfo->static_fields,
     (int32_t)v2,
     v3,
@@ -1200,13 +1200,13 @@ System_Collections_Generic_IEnumerable_int__o *__fastcall LostAssetLoadCompensat
   __int64 v7; // x0
   __int64 v8; // x0
 
-  if ( (byte_4A0058E & 1) == 0 )
+  if ( (byte_4A00BAF & 1) == 0 )
   {
-    this = (LostAssetLoadCompensateLogic___c_o *)sub_1B64870(&Method_System_Array_Empty_int___, x);
-    byte_4A0058E = 1;
+    this = (LostAssetLoadCompensateLogic___c_o *)sub_1B64A00(&Method_System_Array_Empty_int___, x);
+    byte_4A00BAF = 1;
   }
   if ( !x )
-    sub_1B64ACC(this, x);
+    sub_1B64C5C(this, x);
   result = (System_Collections_Generic_IEnumerable_int__o *)x->fields.effectList;
   if ( !result )
   {
@@ -1214,17 +1214,17 @@ System_Collections_Generic_IEnumerable_int__o *__fastcall LostAssetLoadCompensat
     v6 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
     if ( !v6 )
     {
-      sub_1BB67A8(Method_System_Array_Empty_int___);
+      sub_1BB6938(Method_System_Array_Empty_int___);
       v6 = v5[7];
     }
     v7 = *(_QWORD *)(v6 + 16);
     if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-      v7 = sub_1BB674C(v7);
+      v7 = sub_1BB68DC(v7);
     if ( !*(_DWORD *)(v7 + 224) )
       j_il2cpp_runtime_class_init_0(v7);
     v8 = *(_QWORD *)(v5[7] + 16LL);
     if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-      v8 = sub_1BB674C(v8);
+      v8 = sub_1BB68DC(v8);
     return **(System_Collections_Generic_IEnumerable_int__o ***)(v8 + 184);
   }
   return result;
@@ -1237,7 +1237,7 @@ int32_t __fastcall LostAssetLoadCompensateLogic___c___ExtractEffectIdsForShowBuf
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B64ACC(this, 0LL);
+    sub_1B64C5C(this, 0LL);
   return x->fields.auraEffectId;
 }
 
@@ -1262,13 +1262,13 @@ System_Collections_Generic_IEnumerable_int__o *__fastcall LostAssetLoadCompensat
   __int64 v7; // x0
   __int64 v8; // x0
 
-  if ( (byte_4A0058C & 1) == 0 )
+  if ( (byte_4A00BAD & 1) == 0 )
   {
-    this = (LostAssetLoadCompensateLogic___c_o *)sub_1B64870(&Method_System_Array_Empty_int___, x);
-    byte_4A0058C = 1;
+    this = (LostAssetLoadCompensateLogic___c_o *)sub_1B64A00(&Method_System_Array_Empty_int___, x);
+    byte_4A00BAD = 1;
   }
   if ( !x )
-    sub_1B64ACC(this, x);
+    sub_1B64C5C(this, x);
   result = (System_Collections_Generic_IEnumerable_int__o *)x->fields.damageValueEffectIds;
   if ( !result )
   {
@@ -1276,17 +1276,17 @@ System_Collections_Generic_IEnumerable_int__o *__fastcall LostAssetLoadCompensat
     v6 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
     if ( !v6 )
     {
-      sub_1BB67A8(Method_System_Array_Empty_int___);
+      sub_1BB6938(Method_System_Array_Empty_int___);
       v6 = v5[7];
     }
     v7 = *(_QWORD *)(v6 + 16);
     if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-      v7 = sub_1BB674C(v7);
+      v7 = sub_1BB68DC(v7);
     if ( !*(_DWORD *)(v7 + 224) )
       j_il2cpp_runtime_class_init_0(v7);
     v8 = *(_QWORD *)(v5[7] + 16LL);
     if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-      v8 = sub_1BB674C(v8);
+      v8 = sub_1BB68DC(v8);
     return **(System_Collections_Generic_IEnumerable_int__o ***)(v8 + 184);
   }
   return result;
@@ -1299,7 +1299,7 @@ bool __fastcall LostAssetLoadCompensateLogic___c___ExtractEffectIdsForShowDamage
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B64ACC(this, 0LL);
+    sub_1B64C5C(this, 0LL);
   return x->fields.sphit;
 }
 
@@ -1310,7 +1310,7 @@ int32_t __fastcall LostAssetLoadCompensateLogic___c___ExtractEffectIdsForShowDam
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B64ACC(this, 0LL);
+    sub_1B64C5C(this, 0LL);
   return x->fields.sphitEffectId;
 }
 
@@ -1327,13 +1327,13 @@ System_Collections_Generic_IEnumerable_int__o *__fastcall LostAssetLoadCompensat
   __int64 v8; // x0
   __int64 v9; // x0
 
-  if ( (byte_4A0058D & 1) == 0 )
+  if ( (byte_4A00BAE & 1) == 0 )
   {
-    this = (LostAssetLoadCompensateLogic___c_o *)sub_1B64870(&Method_System_Array_Empty_int___, x);
-    byte_4A0058D = 1;
+    this = (LostAssetLoadCompensateLogic___c_o *)sub_1B64A00(&Method_System_Array_Empty_int___, x);
+    byte_4A00BAE = 1;
   }
   if ( !x )
-    sub_1B64ACC(this, x);
+    sub_1B64C5C(this, x);
   effect = x->fields.effect;
   if ( !effect || (result = (System_Collections_Generic_IEnumerable_int__o *)effect->fields.effectList) == 0LL )
   {
@@ -1341,17 +1341,17 @@ System_Collections_Generic_IEnumerable_int__o *__fastcall LostAssetLoadCompensat
     v7 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
     if ( !v7 )
     {
-      sub_1BB67A8(Method_System_Array_Empty_int___);
+      sub_1BB6938(Method_System_Array_Empty_int___);
       v7 = v6[7];
     }
     v8 = *(_QWORD *)(v7 + 16);
     if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-      v8 = sub_1BB674C(v8);
+      v8 = sub_1BB68DC(v8);
     if ( !*(_DWORD *)(v8 + 224) )
       j_il2cpp_runtime_class_init_0(v8);
     v9 = *(_QWORD *)(v6[7] + 16LL);
     if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-      v9 = sub_1BB674C(v9);
+      v9 = sub_1BB68DC(v9);
     return **(System_Collections_Generic_IEnumerable_int__o ***)(v9 + 184);
   }
   return result;
@@ -1366,10 +1366,10 @@ bool __fastcall LostAssetLoadCompensateLogic___c___SearchAndLoad_b__0_0(
 {
   System_String_o *effectPath; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A0058B & 1) == 0 )
+  if ( (byte_4A00BAC & 1) == 0 )
   {
-    sub_1B64870(&BattleEffectUtility_TypeInfo, *(_QWORD *)&x);
-    byte_4A0058B = 1;
+    sub_1B64A00(&BattleEffectUtility_TypeInfo, *(_QWORD *)&x);
+    byte_4A00BAC = 1;
   }
   effectPath = 0LL;
   if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )

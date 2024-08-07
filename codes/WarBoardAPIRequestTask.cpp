@@ -25,23 +25,23 @@ void __fastcall WarBoardAPIRequestTask___ctor(
   int32_t v26; // w3
   NetworkManager_ResultCallbackFunc_c *v27; // x1
 
-  if ( (byte_49FC3FC & 1) == 0 )
+  if ( (byte_49FCA1C & 1) == 0 )
   {
-    sub_1B64870(&NetworkManager_ResultCallbackFunc_TypeInfo, request);
-    sub_1B64870(&Method_WarBoardAPIRequestTask_requestComplete__, v9);
-    byte_49FC3FC = 1;
+    sub_1B64A00(&NetworkManager_ResultCallbackFunc_TypeInfo, request);
+    sub_1B64A00(&Method_WarBoardAPIRequestTask_requestComplete__, v9);
+    byte_49FCA1C = 1;
   }
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, 0LL);
   this->fields.request = request;
   this->fields.onStartBeginRequest = onStartBeginRequest;
   this->fields.requestDone = 0;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.request, (int32_t)request, v10, v11);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.request, (int32_t)request, v10, v11);
   v14 = this->fields.request;
   if ( !v14 )
-    sub_1B64ACC(v12, v13);
+    sub_1B64C5C(v12, v13);
   CallBack = (System_Delegate_o *)v14->fields.CallBack;
   p_fields = (ServantStatusBattleListViewItem_o *)&v14->fields;
-  v17 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64ABC(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v17 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64C4C(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v17,
     (Il2CppObject *)this,
@@ -62,7 +62,7 @@ void __fastcall WarBoardAPIRequestTask___ctor(
   {
     p_fields->klass = 0LL;
   }
-  sub_1B64814(p_fields, (int32_t)v18, v19, v20);
+  sub_1B649A4(p_fields, (int32_t)v18, v19, v20);
   v23 = (System_Delegate_o *)this->fields.resultCallback;
   this = (WarBoardAPIRequestTask_o *)((char *)this + 72);
   v24 = (WarBoardAPIRequestTask_c *)System_Delegate__Combine(v23, (System_Delegate_o *)resultCallback, 0LL);
@@ -77,15 +77,15 @@ LABEL_13:
   if ( v24->_1.image != NetworkManager_ResultCallbackFunc_TypeInfo || (this->klass = v24, v24->_1.image != v27) )
   {
 LABEL_12:
-    sub_1B64D8C(v21);
+    sub_1B64F1C(v21);
     goto LABEL_13;
   }
 LABEL_14:
-  sub_1B64814((ServantStatusBattleListViewItem_o *)this, (int32_t)v21, v25, v26);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)this, (int32_t)v21, v25, v26);
 }
 
 
-void __fastcall WarBoardAPIRequestTask___ctor_35379100(
+void __fastcall WarBoardAPIRequestTask___ctor_35379452(
         WarBoardAPIRequestTask_o *this,
         NetworkManager_ResultCallbackFunc_o *resultCallback,
         bool onStartBeginRequest,
@@ -99,10 +99,10 @@ void __fastcall WarBoardAPIRequestTask___ctor_35379100(
   System_Delegate_o *v12; // x8
   NetworkManager_ResultCallbackFunc_c *v13; // x1
 
-  if ( (byte_49FC3FD & 1) == 0 )
+  if ( (byte_49FCA1D & 1) == 0 )
   {
-    sub_1B64870(&NetworkManager_ResultCallbackFunc_TypeInfo, resultCallback);
-    byte_49FC3FD = 1;
+    sub_1B64A00(&NetworkManager_ResultCallbackFunc_TypeInfo, resultCallback);
+    byte_49FCA1D = 1;
   }
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, 0LL);
   v8 = (System_Delegate_o *)this->fields.resultCallback;
@@ -118,11 +118,11 @@ void __fastcall WarBoardAPIRequestTask___ctor_35379100(
     || (p_resultCallback->klass = (ServantStatusBattleListViewItem_c *)v9,
         (NetworkManager_ResultCallbackFunc_c *)v9->klass != v13) )
   {
-    sub_1B64D8C(v9);
+    sub_1B64F1C(v9);
 LABEL_7:
     p_resultCallback->klass = (ServantStatusBattleListViewItem_c *)v12;
   }
-  sub_1B64814(p_resultCallback, (int32_t)v12, v10, v11);
+  sub_1B649A4(p_resultCallback, (int32_t)v12, v10, v11);
 }
 
 
@@ -136,17 +136,17 @@ System_Collections_IEnumerator_o *__fastcall WarBoardAPIRequestTask__Execute(
   int32_t v6; // w2
   int32_t v7; // w3
 
-  if ( (byte_49FC3FF & 1) == 0 )
+  if ( (byte_49FCA1F & 1) == 0 )
   {
-    sub_1B64870(&WarBoardAPIRequestTask__Execute_d__11_TypeInfo, method);
-    byte_49FC3FF = 1;
+    sub_1B64A00(&WarBoardAPIRequestTask__Execute_d__11_TypeInfo, method);
+    byte_49FCA1F = 1;
   }
-  v3 = sub_1B64ABC(WarBoardAPIRequestTask__Execute_d__11_TypeInfo);
+  v3 = sub_1B64C4C(WarBoardAPIRequestTask__Execute_d__11_TypeInfo);
   WarBoardAPIRequestTask__Execute_d__11___ctor((WarBoardAPIRequestTask__Execute_d__11_o *)v3, 0, 0LL);
   if ( !v3 )
-    sub_1B64ACC(v4, v5);
+    sub_1B64C5C(v4, v5);
   *(_QWORD *)(v3 + 32) = this;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v6, v7);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v6, v7);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -157,10 +157,10 @@ void __fastcall WarBoardAPIRequestTask__OnEnd(WarBoardAPIRequestTask_o *this, co
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_49FC400 & 1) == 0 )
+  if ( (byte_49FCA20 & 1) == 0 )
   {
-    sub_1B64870(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    byte_49FC400 = 1;
+    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    byte_49FCA20 = 1;
   }
   resultCallback = this->fields.resultCallback;
   if ( resultCallback )
@@ -170,9 +170,9 @@ void __fastcall WarBoardAPIRequestTask__OnEnd(WarBoardAPIRequestTask_o *this, co
       *(_QWORD *)&resultCallback->fields.extra_arg);
   if ( this->fields.isShowConnect )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
-      sub_1B64ACC(0LL, v5);
+      sub_1B64C5C(0LL, v5);
     CommonUI__SetConnect((CommonUI_o *)Instance, 0, 0LL);
   }
   WarBoardTaskBase__OnEnd((WarBoardTaskBase_o *)this, 0LL);
@@ -195,12 +195,12 @@ void __fastcall WarBoardAPIRequestTask__OnStart(WarBoardAPIRequestTask_o *this, 
   __int64 v14; // x1
   RequestBase_o *Instance; // x0
 
-  if ( (byte_49FC3FE & 1) == 0 )
+  if ( (byte_49FCA1E & 1) == 0 )
   {
-    sub_1B64870(&NetworkManager_ResultCallbackFunc_TypeInfo, method);
-    sub_1B64870(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    sub_1B64870(&Method_WarBoardAPIRequestTask_requestComplete__, v4);
-    byte_49FC3FE = 1;
+    sub_1B64A00(&NetworkManager_ResultCallbackFunc_TypeInfo, method);
+    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
+    sub_1B64A00(&Method_WarBoardAPIRequestTask_requestComplete__, v4);
+    byte_49FCA1E = 1;
   }
   WarBoardTaskBase__OnStart((WarBoardTaskBase_o *)this, 0LL);
   ((void (__fastcall *)(WarBoardAPIRequestTask_o *, void *))this->klass->vtable._9_SetRequest.method)(
@@ -211,7 +211,7 @@ void __fastcall WarBoardAPIRequestTask__OnStart(WarBoardAPIRequestTask_o *this, 
     goto LABEL_8;
   CallBack = (System_Delegate_o *)request->fields.CallBack;
   p_fields = (ServantStatusBattleListViewItem_o *)&request->fields;
-  v9 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64ABC(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v9 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64C4C(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v9,
     (Il2CppObject *)this,
@@ -225,7 +225,7 @@ void __fastcall WarBoardAPIRequestTask__OnStart(WarBoardAPIRequestTask_o *this, 
       || (p_fields->klass = (ServantStatusBattleListViewItem_c *)v10,
           (NetworkManager_ResultCallbackFunc_c *)v10->klass != v13) )
     {
-      v5 = sub_1B64D8C(v10);
+      v5 = sub_1B64F1C(v10);
 LABEL_8:
       ((void (__fastcall *)(WarBoardAPIRequestTask_o *, Il2CppMethodPointer, long double))this->klass->vtable._6_OnEnd.method)(
         this,
@@ -238,7 +238,7 @@ LABEL_8:
   {
     p_fields->klass = 0LL;
   }
-  sub_1B64814(p_fields, (int32_t)v10, v11, v12);
+  sub_1B649A4(p_fields, (int32_t)v10, v11, v12);
   if ( !this->fields.requestDone )
   {
     Instance = this->fields.request;
@@ -262,14 +262,14 @@ LABEL_8:
         return;
     }
     this->fields.isShowConnect = 1;
-    Instance = (RequestBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE318 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = (RequestBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( Instance )
     {
       CommonUI__SetConnect((CommonUI_o *)Instance, 1, 0LL);
       return;
     }
 LABEL_20:
-    sub_1B64ACC(Instance, v14);
+    sub_1B64C5C(Instance, v14);
   }
 }
 
@@ -297,7 +297,7 @@ void __fastcall WarBoardAPIRequestTask__requestComplete(
   this->fields.responseStr = result;
   p_responseStr = &this->fields.responseStr;
   *((_BYTE *)p_responseStr - 15) = 1;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)p_responseStr, (int32_t)result, (int32_t)method, v3);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)p_responseStr, (int32_t)result, (int32_t)method, v3);
 }
 
 
@@ -326,12 +326,12 @@ bool __fastcall WarBoardAPIRequestTask__Execute_d__11__MoveNext(
   int32_t v11; // w3
   int32_t v12; // w8
 
-  if ( (byte_49FC402 & 1) == 0 )
+  if ( (byte_49FCA22 & 1) == 0 )
   {
-    sub_1B64870(&System_Func_bool__TypeInfo, method);
-    sub_1B64870(&UnityEngine_WaitUntil_TypeInfo, v3);
-    sub_1B64870(&Method_WarBoardAPIRequestTask__Execute_b__11_0__, v4);
-    byte_49FC402 = 1;
+    sub_1B64A00(&System_Func_bool__TypeInfo, method);
+    sub_1B64A00(&UnityEngine_WaitUntil_TypeInfo, v3);
+    sub_1B64A00(&Method_WarBoardAPIRequestTask__Execute_b__11_0__, v4);
+    byte_49FCA22 = 1;
   }
   _1__state = this->fields.__1__state;
   result = 0;
@@ -345,12 +345,12 @@ bool __fastcall WarBoardAPIRequestTask__Execute_d__11__MoveNext(
       return result;
     this->fields.__1__state = -1;
     _4__this = (Il2CppObject *)this->fields.__4__this;
-    v8 = (System_Func_bool__o *)sub_1B64ABC(System_Func_bool__TypeInfo);
+    v8 = (System_Func_bool__o *)sub_1B64C4C(System_Func_bool__TypeInfo);
     System_Func_bool____ctor(v8, _4__this, Method_WarBoardAPIRequestTask__Execute_b__11_0__, 0LL);
-    v9 = (UnityEngine_WaitUntil_o *)sub_1B64ABC(UnityEngine_WaitUntil_TypeInfo);
+    v9 = (UnityEngine_WaitUntil_o *)sub_1B64C4C(UnityEngine_WaitUntil_TypeInfo);
     UnityEngine_WaitUntil___ctor(v9, v8, 0LL);
     this->fields.__2__current = (Il2CppObject *)v9;
-    sub_1B64814((ServantStatusBattleListViewItem_o *)&this->fields.__2__current, (int32_t)v9, v10, v11);
+    sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.__2__current, (int32_t)v9, v10, v11);
     v12 = 1;
     result = 1;
   }
@@ -375,11 +375,11 @@ void __fastcall __noreturn WarBoardAPIRequestTask__Execute_d__11__System_Collect
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B64884(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B64ABC(v2);
+  v2 = sub_1B64A14(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B64C4C(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B64884(&Method_WarBoardAPIRequestTask__Execute_d__11_System_Collections_IEnumerator_Reset__);
-  sub_1B64998(v3, v4);
+  v4 = sub_1B64A14(&Method_WarBoardAPIRequestTask__Execute_d__11_System_Collections_IEnumerator_Reset__);
+  sub_1B64B28(v3, v4);
 }
 
 

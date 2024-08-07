@@ -7,33 +7,33 @@ void __fastcall BlankEarthSpotMaster___cctor(const MethodInfo *method)
   int32_t v5; // w2
   int32_t v6; // w3
 
-  if ( (byte_49FE1EC & 1) == 0 )
+  if ( (byte_49FE80C & 1) == 0 )
   {
-    sub_1B64870(&BlankEarthSpotMaster_TypeInfo, v1);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_int___ctor__, v2);
-    sub_1B64870(&System_Collections_Generic_HashSet_int__TypeInfo, v3);
-    byte_49FE1EC = 1;
+    sub_1B64A00(&BlankEarthSpotMaster_TypeInfo, v1);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_int___ctor__, v2);
+    sub_1B64A00(&System_Collections_Generic_HashSet_int__TypeInfo, v3);
+    byte_49FE80C = 1;
   }
-  v4 = (System_Collections_Generic_HashSet_int__o *)sub_1B64ABC(System_Collections_Generic_HashSet_int__TypeInfo);
+  v4 = (System_Collections_Generic_HashSet_int__o *)sub_1B64C4C(System_Collections_Generic_HashSet_int__TypeInfo);
   System_Collections_Generic_HashSet_int____ctor(
     v4,
-    (const MethodInfo_3365C88 *)Method_System_Collections_Generic_HashSet_int___ctor__);
+    (const MethodInfo_33662A0 *)Method_System_Collections_Generic_HashSet_int___ctor__);
   BlankEarthSpotMaster_TypeInfo->static_fields->targetMapIdHashSet = v4;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)BlankEarthSpotMaster_TypeInfo->static_fields, (int32_t)v4, v5, v6);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)BlankEarthSpotMaster_TypeInfo->static_fields, (int32_t)v4, v5, v6);
 }
 
 
 void __fastcall BlankEarthSpotMaster___ctor(BlankEarthSpotMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FE1EB & 1) == 0 )
+  if ( (byte_49FE80B & 1) == 0 )
   {
-    sub_1B64870(&Method_DataMasterBase_BlankEarthSpotMaster__BlankEarthSpotEntity__int___ctor__, method);
-    byte_49FE1EB = 1;
+    sub_1B64A00(&Method_DataMasterBase_BlankEarthSpotMaster__BlankEarthSpotEntity__int___ctor__, method);
+    byte_49FE80B = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     18,
-    (const MethodInfo_30D6140 *)Method_DataMasterBase_BlankEarthSpotMaster__BlankEarthSpotEntity__int___ctor__);
+    (const MethodInfo_30D6758 *)Method_DataMasterBase_BlankEarthSpotMaster__BlankEarthSpotEntity__int___ctor__);
 }
 
 
@@ -43,11 +43,11 @@ bool __fastcall BlankEarthSpotMaster__ContainsMapId(int32_t mapId, const MethodI
   BlankEarthSpotMaster_c *v4; // x0
   System_Collections_Generic_HashSet_int__o *targetMapIdHashSet; // x0
 
-  if ( (byte_49FE1E4 & 1) == 0 )
+  if ( (byte_49FE804 & 1) == 0 )
   {
-    sub_1B64870(&BlankEarthSpotMaster_TypeInfo, method);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_int__Contains__, v3);
-    byte_49FE1E4 = 1;
+    sub_1B64A00(&BlankEarthSpotMaster_TypeInfo, method);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_int__Contains__, v3);
+    byte_49FE804 = 1;
   }
   v4 = BlankEarthSpotMaster_TypeInfo;
   if ( !BlankEarthSpotMaster_TypeInfo->_2.cctor_finished )
@@ -57,11 +57,11 @@ bool __fastcall BlankEarthSpotMaster__ContainsMapId(int32_t mapId, const MethodI
   }
   targetMapIdHashSet = v4->static_fields->targetMapIdHashSet;
   if ( !targetMapIdHashSet )
-    sub_1B64ACC(0LL, method);
+    sub_1B64C5C(0LL, method);
   return System_Collections_Generic_HashSet_int___Contains(
            targetMapIdHashSet,
            mapId,
-           (const MethodInfo_336637C *)Method_System_Collections_Generic_HashSet_int__Contains__);
+           (const MethodInfo_3366994 *)Method_System_Collections_Generic_HashSet_int__Contains__);
 }
 
 
@@ -69,14 +69,14 @@ System_Collections_Generic_IEnumerable_BlankEarthSpotEntity__o *__fastcall Blank
         BlankEarthSpotMaster_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_49FE1E8 & 1) == 0 )
+  if ( (byte_49FE808 & 1) == 0 )
   {
-    sub_1B64870(&Method_System_Linq_Enumerable_OfType_BlankEarthSpotEntity___, method);
-    byte_49FE1E8 = 1;
+    sub_1B64A00(&Method_System_Linq_Enumerable_OfType_BlankEarthSpotEntity___, method);
+    byte_49FE808 = 1;
   }
   return (System_Collections_Generic_IEnumerable_BlankEarthSpotEntity__o *)System_Linq_Enumerable__OfType_object_(
                                                                              (System_Collections_IEnumerable_o *)this->fields.list,
-                                                                             (const MethodInfo_2E64EFC *)Method_System_Linq_Enumerable_OfType_BlankEarthSpotEntity___);
+                                                                             (const MethodInfo_2E65514 *)Method_System_Linq_Enumerable_OfType_BlankEarthSpotEntity___);
 }
 
 
@@ -86,15 +86,15 @@ BlankEarthSpotEntity_array *__fastcall BlankEarthSpotMaster__GetAll(
 {
   System_Collections_Generic_IEnumerable_BlankEarthSpotEntity__o *v3; // x0
 
-  if ( (byte_49FE1E6 & 1) == 0 )
+  if ( (byte_49FE806 & 1) == 0 )
   {
-    sub_1B64870(&Method_System_Linq_Enumerable_ToArray_BlankEarthSpotEntity___, method);
-    byte_49FE1E6 = 1;
+    sub_1B64A00(&Method_System_Linq_Enumerable_ToArray_BlankEarthSpotEntity___, method);
+    byte_49FE806 = 1;
   }
   v3 = BlankEarthSpotMaster__EnumerateOwns(this, method);
   return (BlankEarthSpotEntity_array *)System_Linq_Enumerable__ToArray_object_(
                                          (System_Collections_Generic_IEnumerable_TSource__o *)v3,
-                                         (const MethodInfo_2E736A0 *)Method_System_Linq_Enumerable_ToArray_BlankEarthSpotEntity___);
+                                         (const MethodInfo_2E73CB8 *)Method_System_Linq_Enumerable_ToArray_BlankEarthSpotEntity___);
 }
 
 
@@ -115,22 +115,22 @@ BlankEarthSpotEntity_array *__fastcall BlankEarthSpotMaster__GetByMapId(
   System_Func_object__bool__o *v13; // x20
   System_Collections_Generic_IEnumerable_TSource__o *v14; // x0
 
-  if ( (byte_49FE1E7 & 1) == 0 )
+  if ( (byte_49FE807 & 1) == 0 )
   {
-    sub_1B64870(&Method_System_Linq_Enumerable_ToArray_BlankEarthSpotEntity___, *(_QWORD *)&mapId);
-    sub_1B64870(&Method_System_Linq_Enumerable_Where_BlankEarthSpotEntity___, v5);
-    sub_1B64870(&System_Func_BlankEarthSpotEntity__bool__TypeInfo, v6);
-    sub_1B64870(&Method_BlankEarthSpotMaster___c__DisplayClass4_0__GetByMapId_b__0__, v7);
-    sub_1B64870(&BlankEarthSpotMaster___c__DisplayClass4_0_TypeInfo, v8);
-    byte_49FE1E7 = 1;
+    sub_1B64A00(&Method_System_Linq_Enumerable_ToArray_BlankEarthSpotEntity___, *(_QWORD *)&mapId);
+    sub_1B64A00(&Method_System_Linq_Enumerable_Where_BlankEarthSpotEntity___, v5);
+    sub_1B64A00(&System_Func_BlankEarthSpotEntity__bool__TypeInfo, v6);
+    sub_1B64A00(&Method_BlankEarthSpotMaster___c__DisplayClass4_0__GetByMapId_b__0__, v7);
+    sub_1B64A00(&BlankEarthSpotMaster___c__DisplayClass4_0_TypeInfo, v8);
+    byte_49FE807 = 1;
   }
-  v9 = sub_1B64ABC(BlankEarthSpotMaster___c__DisplayClass4_0_TypeInfo);
+  v9 = sub_1B64C4C(BlankEarthSpotMaster___c__DisplayClass4_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   if ( !v9 )
-    sub_1B64ACC(v10, v11);
+    sub_1B64C5C(v10, v11);
   *(_DWORD *)(v9 + 16) = mapId;
   v12 = BlankEarthSpotMaster__EnumerateOwns(this, v11);
-  v13 = (System_Func_object__bool__o *)sub_1B64ABC(System_Func_BlankEarthSpotEntity__bool__TypeInfo);
+  v13 = (System_Func_object__bool__o *)sub_1B64C4C(System_Func_BlankEarthSpotEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v13,
     (Il2CppObject *)v9,
@@ -139,10 +139,10 @@ BlankEarthSpotEntity_array *__fastcall BlankEarthSpotMaster__GetByMapId(
   v14 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)v12,
           (System_Func_TSource__bool__o *)v13,
-          (const MethodInfo_2E79378 *)Method_System_Linq_Enumerable_Where_BlankEarthSpotEntity___);
+          (const MethodInfo_2E79990 *)Method_System_Linq_Enumerable_Where_BlankEarthSpotEntity___);
   return (BlankEarthSpotEntity_array *)System_Linq_Enumerable__ToArray_object_(
                                          v14,
-                                         (const MethodInfo_2E736A0 *)Method_System_Linq_Enumerable_ToArray_BlankEarthSpotEntity___);
+                                         (const MethodInfo_2E73CB8 *)Method_System_Linq_Enumerable_ToArray_BlankEarthSpotEntity___);
 }
 
 
@@ -163,33 +163,33 @@ bool __fastcall BlankEarthSpotMaster__HasAnyIds(
   System_Collections_Generic_IEnumerable_BlankEarthSpotEntity__o *v14; // x19
   System_Func_object__bool__o *v15; // x20
 
-  if ( (byte_49FE1E9 & 1) == 0 )
+  if ( (byte_49FE809 & 1) == 0 )
   {
-    sub_1B64870(&Method_System_Linq_Enumerable_Any_BlankEarthSpotEntity___, targetIds);
-    sub_1B64870(&System_Func_BlankEarthSpotEntity__bool__TypeInfo, v5);
-    sub_1B64870(&Method_BlankEarthSpotMaster___c__DisplayClass6_0__HasAnyIds_b__0__, v6);
-    sub_1B64870(&BlankEarthSpotMaster___c__DisplayClass6_0_TypeInfo, v7);
-    byte_49FE1E9 = 1;
+    sub_1B64A00(&Method_System_Linq_Enumerable_Any_BlankEarthSpotEntity___, targetIds);
+    sub_1B64A00(&System_Func_BlankEarthSpotEntity__bool__TypeInfo, v5);
+    sub_1B64A00(&Method_BlankEarthSpotMaster___c__DisplayClass6_0__HasAnyIds_b__0__, v6);
+    sub_1B64A00(&BlankEarthSpotMaster___c__DisplayClass6_0_TypeInfo, v7);
+    byte_49FE809 = 1;
   }
-  v8 = sub_1B64ABC(BlankEarthSpotMaster___c__DisplayClass6_0_TypeInfo);
+  v8 = sub_1B64C4C(BlankEarthSpotMaster___c__DisplayClass6_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
-    sub_1B64ACC(v9, v10);
+    sub_1B64C5C(v9, v10);
   *(_QWORD *)(v8 + 16) = targetIds;
-  sub_1B64814((ServantStatusBattleListViewItem_o *)(v8 + 16), (int32_t)targetIds, v11, v12);
+  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v8 + 16), (int32_t)targetIds, v11, v12);
   if ( !*(_QWORD *)(v8 + 16) )
     return 0;
   v14 = BlankEarthSpotMaster__EnumerateOwns(this, v13);
-  v15 = (System_Func_object__bool__o *)sub_1B64ABC(System_Func_BlankEarthSpotEntity__bool__TypeInfo);
+  v15 = (System_Func_object__bool__o *)sub_1B64C4C(System_Func_BlankEarthSpotEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v15,
     (Il2CppObject *)v8,
     Method_BlankEarthSpotMaster___c__DisplayClass6_0__HasAnyIds_b__0__,
     0LL);
-  return System_Linq_Enumerable__Any_object__48540740(
+  return System_Linq_Enumerable__Any_object__48542300(
            (System_Collections_Generic_IEnumerable_TSource__o *)v14,
            (System_Func_TSource__bool__o *)v15,
-           (const MethodInfo_2E4AC44 *)Method_System_Linq_Enumerable_Any_BlankEarthSpotEntity___);
+           (const MethodInfo_2E4B25C *)Method_System_Linq_Enumerable_Any_BlankEarthSpotEntity___);
 }
 
 
@@ -201,24 +201,24 @@ bool __fastcall BlankEarthSpotMaster__IsBlankEarthSpot(int32_t spotId, const Met
   __int64 v6; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_49FE1EA & 1) == 0 )
+  if ( (byte_49FE80A & 1) == 0 )
   {
-    sub_1B64870(&Method_DataManager_GetMaster_BlankEarthSpotMaster___, method);
-    sub_1B64870(&DataManager_TypeInfo, v3);
-    sub_1B64870(&Method_DataMasterBase_BlankEarthSpotMaster__BlankEarthSpotEntity__int__TryGetEntity__, v4);
-    byte_49FE1EA = 1;
+    sub_1B64A00(&Method_DataManager_GetMaster_BlankEarthSpotMaster___, method);
+    sub_1B64A00(&DataManager_TypeInfo, v3);
+    sub_1B64A00(&Method_DataMasterBase_BlankEarthSpotMaster__BlankEarthSpotEntity__int__TryGetEntity__, v4);
+    byte_49FE80A = 1;
   }
   entity = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E3B674 *)Method_DataManager_GetMaster_BlankEarthSpotMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E3BC8C *)Method_DataManager_GetMaster_BlankEarthSpotMaster___);
   if ( !Master_object )
-    sub_1B64ACC(0LL, v6);
+    sub_1B64C5C(0LL, v6);
   return DataMasterBase_object__object__int___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
            &entity,
            spotId,
-           (const MethodInfo_30D61D4 *)Method_DataMasterBase_BlankEarthSpotMaster__BlankEarthSpotEntity__int__TryGetEntity__);
+           (const MethodInfo_30D67EC *)Method_DataMasterBase_BlankEarthSpotMaster__BlankEarthSpotEntity__int__TryGetEntity__);
 }
 
 
@@ -243,16 +243,16 @@ bool __fastcall BlankEarthSpotMaster__preProcess(BlankEarthSpotMaster_o *this, c
   int32_t v19; // w2
   int32_t v20; // w3
 
-  if ( (byte_49FE1E5 & 1) == 0 )
+  if ( (byte_49FE805 & 1) == 0 )
   {
-    sub_1B64870(&BlankEarthSpotMaster_TypeInfo, method);
-    sub_1B64870(&Method_System_Linq_Enumerable_Select_BlankEarthSpotEntity__int___, v3);
-    sub_1B64870(&System_Func_BlankEarthSpotEntity__int__TypeInfo, v4);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_int__Clear__, v5);
-    sub_1B64870(&Method_System_Collections_Generic_HashSet_int__UnionWith__, v6);
-    sub_1B64870(&Method_BlankEarthSpotMaster___c__preProcess_b__2_0__, v7);
-    sub_1B64870(&BlankEarthSpotMaster___c_TypeInfo, v8);
-    byte_49FE1E5 = 1;
+    sub_1B64A00(&BlankEarthSpotMaster_TypeInfo, method);
+    sub_1B64A00(&Method_System_Linq_Enumerable_Select_BlankEarthSpotEntity__int___, v3);
+    sub_1B64A00(&System_Func_BlankEarthSpotEntity__int__TypeInfo, v4);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_int__Clear__, v5);
+    sub_1B64A00(&Method_System_Collections_Generic_HashSet_int__UnionWith__, v6);
+    sub_1B64A00(&Method_BlankEarthSpotMaster___c__preProcess_b__2_0__, v7);
+    sub_1B64A00(&BlankEarthSpotMaster___c_TypeInfo, v8);
+    byte_49FE805 = 1;
   }
   v9 = BlankEarthSpotMaster_TypeInfo;
   if ( !BlankEarthSpotMaster_TypeInfo->_2.cctor_finished )
@@ -265,7 +265,7 @@ bool __fastcall BlankEarthSpotMaster__preProcess(BlankEarthSpotMaster_o *this, c
     goto LABEL_14;
   System_Collections_Generic_HashSet_int___Clear(
     targetMapIdHashSet,
-    (const MethodInfo_336631C *)Method_System_Collections_Generic_HashSet_int__Clear__);
+    (const MethodInfo_3366934 *)Method_System_Collections_Generic_HashSet_int__Clear__);
   v11 = BlankEarthSpotMaster_TypeInfo->static_fields->targetMapIdHashSet;
   v13 = BlankEarthSpotMaster__EnumerateOwns(this, v12);
   v14 = BlankEarthSpotMaster___c_TypeInfo;
@@ -284,23 +284,23 @@ bool __fastcall BlankEarthSpotMaster__preProcess(BlankEarthSpotMaster_o *this, c
       v14 = BlankEarthSpotMaster___c_TypeInfo;
     }
     v17 = (Il2CppObject *)v14->static_fields->__9;
-    _9__2_0 = (System_Func_object__int__o *)sub_1B64ABC(System_Func_BlankEarthSpotEntity__int__TypeInfo);
+    _9__2_0 = (System_Func_object__int__o *)sub_1B64C4C(System_Func_BlankEarthSpotEntity__int__TypeInfo);
     System_Func_object__int____ctor(_9__2_0, v17, Method_BlankEarthSpotMaster___c__preProcess_b__2_0__, 0LL);
     static_fields = BlankEarthSpotMaster___c_TypeInfo->static_fields;
     static_fields->__9__2_0 = (struct System_Func_BlankEarthSpotEntity__int__o *)_9__2_0;
-    sub_1B64814((ServantStatusBattleListViewItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v19, v20);
+    sub_1B649A4((ServantStatusBattleListViewItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v19, v20);
   }
   targetMapIdHashSet = (System_Collections_Generic_HashSet_int__o *)System_Linq_Enumerable__Select_object__int_(
                                                                       v15,
                                                                       (System_Func_TSource__TResult__o *)_9__2_0,
-                                                                      (const MethodInfo_2E6ADAC *)Method_System_Linq_Enumerable_Select_BlankEarthSpotEntity__int___);
+                                                                      (const MethodInfo_2E6B3C4 *)Method_System_Linq_Enumerable_Select_BlankEarthSpotEntity__int___);
   if ( !v11 )
 LABEL_14:
-    sub_1B64ACC(targetMapIdHashSet, method);
+    sub_1B64C5C(targetMapIdHashSet, method);
   System_Collections_Generic_HashSet_int___UnionWith(
     v11,
     (System_Collections_Generic_IEnumerable_T__o *)targetMapIdHashSet,
-    (const MethodInfo_3366E9C *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+    (const MethodInfo_33674B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
   return 1;
 }
 
@@ -312,15 +312,15 @@ void __fastcall BlankEarthSpotMaster___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   int32_t v4; // w3
 
-  if ( (byte_49FE1ED & 1) == 0 )
+  if ( (byte_49FE80D & 1) == 0 )
   {
-    sub_1B64870(&BlankEarthSpotMaster___c_TypeInfo, v1);
-    byte_49FE1ED = 1;
+    sub_1B64A00(&BlankEarthSpotMaster___c_TypeInfo, v1);
+    byte_49FE80D = 1;
   }
-  v2 = (Il2CppObject *)sub_1B64ABC(BlankEarthSpotMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B64C4C(BlankEarthSpotMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   BlankEarthSpotMaster___c_TypeInfo->static_fields->__9 = (struct BlankEarthSpotMaster___c_o *)v2;
-  sub_1B64814(
+  sub_1B649A4(
     (ServantStatusBattleListViewItem_o *)BlankEarthSpotMaster___c_TypeInfo->static_fields,
     (int32_t)v2,
     v3,
@@ -340,7 +340,7 @@ int32_t __fastcall BlankEarthSpotMaster___c___preProcess_b__2_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B64ACC(this, 0LL);
+    sub_1B64C5C(this, 0LL);
   return x->fields.mapId;
 }
 
@@ -359,7 +359,7 @@ bool __fastcall BlankEarthSpotMaster___c__DisplayClass4_0___GetByMapId_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B64ACC(this, 0LL);
+    sub_1B64C5C(this, 0LL);
   return x->fields.mapId == this->fields.mapId;
 }
 
@@ -380,17 +380,17 @@ bool __fastcall BlankEarthSpotMaster___c__DisplayClass6_0___HasAnyIds_b__0(
   BlankEarthSpotMaster___c__DisplayClass6_0_o *v4; // x20
 
   v4 = this;
-  if ( (byte_49FE1EE & 1) == 0 )
+  if ( (byte_49FE80E & 1) == 0 )
   {
-    this = (BlankEarthSpotMaster___c__DisplayClass6_0_o *)sub_1B64870(
+    this = (BlankEarthSpotMaster___c__DisplayClass6_0_o *)sub_1B64A00(
                                                             &Method_System_Collections_Generic_HashSet_int__Contains__,
                                                             x);
-    byte_49FE1EE = 1;
+    byte_49FE80E = 1;
   }
   if ( !x || (this = (BlankEarthSpotMaster___c__DisplayClass6_0_o *)v4->fields.targetIds) == 0LL )
-    sub_1B64ACC(this, x);
+    sub_1B64C5C(this, x);
   return System_Collections_Generic_HashSet_int___Contains(
            (System_Collections_Generic_HashSet_int__o *)this,
            x->fields.id,
-           (const MethodInfo_336637C *)Method_System_Collections_Generic_HashSet_int__Contains__);
+           (const MethodInfo_3366994 *)Method_System_Collections_Generic_HashSet_int__Contains__);
 }
