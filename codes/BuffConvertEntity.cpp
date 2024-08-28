@@ -1,13 +1,13 @@
 void __fastcall BuffConvertEntity___ctor(BuffConvertEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A08988 & 1) == 0 )
+  if ( (byte_4A1F7F4 & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataEntityBase_int___ctor__, method);
-    byte_4A08988 = 1;
+    sub_1B715CC(&Method_DataEntityBase_int___ctor__, method);
+    byte_4A1F7F4 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_30E42C0 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_30F8560 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -28,22 +28,22 @@ BuffEntity_o *__fastcall BuffConvertEntity__GetBuffEntity(
   Il2CppObject *Master_object; // x0
   __int64 v7; // x1
 
-  if ( (byte_4A08985 & 1) == 0 )
+  if ( (byte_4A1F7F1 & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataManager_GetMaster_BuffMaster___, *(_QWORD *)&buffId);
-    sub_1B686D4(&DataManager_TypeInfo, v4);
-    sub_1B686D4(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v5);
-    byte_4A08985 = 1;
+    sub_1B715CC(&Method_DataManager_GetMaster_BuffMaster___, *(_QWORD *)&buffId);
+    sub_1B715CC(&DataManager_TypeInfo, v4);
+    sub_1B715CC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v5);
+    byte_4A1F7F1 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E49CFC *)Method_DataManager_GetMaster_BuffMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E5B394 *)Method_DataManager_GetMaster_BuffMaster___);
   if ( !Master_object )
-    sub_1B68930(0LL, v7);
+    sub_1B71828(0LL, v7);
   return (BuffEntity_o *)DataMasterBase_object__object__int___GetEntity(
                            (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                            buffId,
-                           (const MethodInfo_30E44C0 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+                           (const MethodInfo_30F8760 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
 }
 
 
@@ -60,12 +60,12 @@ int32_t __fastcall BuffConvertEntity__GetConvertBuffIdFromIndex(
     return 0;
   convertBuffIds = this->fields.convertBuffIds;
   if ( !convertBuffIds )
-    sub_1B68930(this, index);
+    sub_1B71828(this, index);
   max_length = convertBuffIds->max_length;
   if ( (int)(max_length - 1) < index )
     return 0;
   if ( max_length <= index )
-    sub_1B68938(this, *(_QWORD *)&index);
+    sub_1B71830(this, *(_QWORD *)&index);
   return convertBuffIds->m_Items[index + 1];
 }
 
@@ -80,19 +80,19 @@ System_Int32_array *__fastcall BuffConvertEntity__GetEffectList(
   __int64 v6; // x1
 
   v3 = defs;
-  if ( (byte_4A08984 & 1) == 0 )
+  if ( (byte_4A1F7F0 & 1) == 0 )
   {
-    sub_1B686D4(&int___TypeInfo, defs);
-    byte_4A08984 = 1;
+    sub_1B715CC(&int___TypeInfo, defs);
+    byte_4A1F7F0 = 1;
   }
   if ( this->fields.effectId )
   {
-    v5 = sub_1B6877C(int___TypeInfo, 1LL);
+    v5 = sub_1B71674(int___TypeInfo, 1LL);
     if ( !v5 )
-      sub_1B68930(0LL, v6);
+      sub_1B71828(0LL, v6);
     v3 = (System_Int32_array *)v5;
     if ( !*(_DWORD *)(v5 + 24) )
-      sub_1B68938(v5, v6);
+      sub_1B71830(v5, v6);
     *(_DWORD *)(v5 + 32) = this->fields.effectId;
   }
   return v3;
@@ -109,18 +109,18 @@ int32_t __fastcall BuffConvertEntity__GetOverwritePopupColorFromIndex(
   __int64 v7; // x1
   int32_t result; // w0
 
-  if ( (byte_4A08987 & 1) == 0 )
+  if ( (byte_4A1F7F3 & 1) == 0 )
   {
-    sub_1B686D4(&Method_BuffConvertEntity_GetParamFromIndex_int___, *(_QWORD *)&index);
-    sub_1B686D4(&StringLiteral_10064/*"OverwritePopupColor"*/, v7);
-    byte_4A08987 = 1;
+    sub_1B715CC(&Method_BuffConvertEntity_GetParamFromIndex_int___, *(_QWORD *)&index);
+    sub_1B715CC(&StringLiteral_10072/*"OverwritePopupColor"*/, v7);
+    byte_4A1F7F3 = 1;
   }
   result = BuffConvertEntity__GetParamFromIndex_int_(
              this,
-             (System_String_o *)StringLiteral_10064/*"OverwritePopupColor"*/,
+             (System_String_o *)StringLiteral_10072/*"OverwritePopupColor"*/,
              index,
              def,
-             (const MethodInfo_2E3C2E4 *)Method_BuffConvertEntity_GetParamFromIndex_int___);
+             (const MethodInfo_2E4D97C *)Method_BuffConvertEntity_GetParamFromIndex_int___);
   if ( !result )
     return def;
   return result;
@@ -137,18 +137,18 @@ System_String_o *__fastcall BuffConvertEntity__GetOverwritePopupTextFromIndex(
   __int64 v7; // x1
   Il2CppObject *ParamFromIndex_object; // x20
 
-  if ( (byte_4A08986 & 1) == 0 )
+  if ( (byte_4A1F7F2 & 1) == 0 )
   {
-    sub_1B686D4(&Method_BuffConvertEntity_GetParamFromIndex_string___, *(_QWORD *)&index);
-    sub_1B686D4(&StringLiteral_10065/*"OverwritePopupText"*/, v7);
-    byte_4A08986 = 1;
+    sub_1B715CC(&Method_BuffConvertEntity_GetParamFromIndex_string___, *(_QWORD *)&index);
+    sub_1B715CC(&StringLiteral_10073/*"OverwritePopupText"*/, v7);
+    byte_4A1F7F2 = 1;
   }
   ParamFromIndex_object = BuffConvertEntity__GetParamFromIndex_object_(
                             this,
-                            (System_String_o *)StringLiteral_10065/*"OverwritePopupText"*/,
+                            (System_String_o *)StringLiteral_10073/*"OverwritePopupText"*/,
                             index,
                             (Il2CppObject *)def,
-                            (const MethodInfo_2E3C550 *)Method_BuffConvertEntity_GetParamFromIndex_string___);
+                            (const MethodInfo_2E4DBE8 *)Method_BuffConvertEntity_GetParamFromIndex_string___);
   if ( System_String__IsNullOrEmpty((System_String_o *)ParamFromIndex_object, 0LL) )
     return def;
   else
@@ -162,11 +162,11 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o __fastcall BuffConvertEnt
         System_String_o *key,
         int32_t index,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o def,
-        const MethodInfo_2E3C730 *method)
+        const MethodInfo_2E4DDC8 *method)
 {
   void *monitor; // x19
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x23
-  const MethodInfo_2E3C730_RGCTXs *rgctx_data; // x8
+  const MethodInfo_2E4DDC8_RGCTXs *rgctx_data; // x8
   __int64 v12; // x1
   __int64 v13; // x1
   __int64 v14; // x1
@@ -186,7 +186,7 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o __fastcall BuffConvertEnt
   Il2CppType *_1_T; // x24
   System_Type_o *TypeFromHandle; // x24
   Il2CppObject *v30; // x0
-  const MethodInfo_2E3C730_RGCTXs *v31; // x8
+  const MethodInfo_2E4DDC8_RGCTXs *v31; // x8
   Il2CppObject *v32; // x22
   __int64 _0_T; // x1
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v34; // x0 OVERLAPPED
@@ -202,15 +202,15 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o __fastcall BuffConvertEnt
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1B686D4(&System_Convert_TypeInfo, key);
-    sub_1B686D4(&Method_System_Collections_Generic_List_object__get_Count__, v12);
-    sub_1B686D4(&Method_System_Collections_Generic_List_object__get_Item__, v13);
-    sub_1B686D4(&System_Collections_Generic_List_object__TypeInfo, v14);
-    sub_1B686D4(&System_Type_TypeInfo, v15);
+    sub_1B715CC(&System_Convert_TypeInfo, key);
+    sub_1B715CC(&Method_System_Collections_Generic_List_object__get_Count__, v12);
+    sub_1B715CC(&Method_System_Collections_Generic_List_object__get_Item__, v13);
+    sub_1B715CC(&System_Collections_Generic_List_object__TypeInfo, v14);
+    sub_1B715CC(&System_Type_TypeInfo, v15);
     rgctx_data = method->rgctx_data;
     if ( !rgctx_data )
     {
-      sub_1BBA60C(method);
+      sub_1BC3504(method);
       rgctx_data = method->rgctx_data;
     }
   }
@@ -233,7 +233,7 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o __fastcall BuffConvertEnt
   if ( IsNullOrEmpty )
     goto LABEL_11;
   if ( !v19 )
-    sub_1B68930(IsNullOrEmpty, v21);
+    sub_1B71828(IsNullOrEmpty, v21);
   if ( LODWORD(v19[1].monitor) == 1 )
   {
     v25 = (System_Collections_Generic_List_object__o *)v19;
@@ -259,7 +259,7 @@ LABEL_11:
   Item = System_Collections_Generic_List_object___get_Item(
            v25,
            v26,
-           (const MethodInfo_34BBFA8 *)Method_System_Collections_Generic_List_object__get_Item__);
+           (const MethodInfo_34CFF90 *)Method_System_Collections_Generic_List_object__get_Item__);
   _1_T = method->rgctx_data->_1_T;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
@@ -267,13 +267,13 @@ LABEL_11:
   TypeFromHandle = System_Type__GetTypeFromHandle(v37, 0LL);
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  v30 = System_Convert__ChangeType_62063080(Item, TypeFromHandle, 0LL);
+  v30 = System_Convert__ChangeType_62149116(Item, TypeFromHandle, 0LL);
   v31 = method->rgctx_data;
   v32 = v30;
   _0_T = (__int64)v31->_0_T;
   if ( (BYTE5(v31->_0_T->vtable[0].methodPtr) & 1) == 0 )
-    _0_T = sub_1BBA5B0(_0_T);
-  v24 = (char *)sub_1B68820(v32, _0_T, (char *)v36 - ((native_size + 15) & 0x1FFFFFFF0LL));
+    _0_T = sub_1BC34A8(_0_T);
+  v24 = (char *)sub_1B71718(v32, _0_T, (char *)v36 - ((native_size + 15) & 0x1FFFFFFF0LL));
   v23 = monitor;
 LABEL_28:
   v34 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(v23, v24, native_size);
@@ -288,7 +288,7 @@ int32_t __fastcall BuffConvertEntity__GetParamFromIndex_int_(
         System_String_o *key,
         int32_t index,
         int32_t def,
-        const MethodInfo_2E3C2E4 *method)
+        const MethodInfo_2E4D97C *method)
 {
   __int64 v10; // x1
   __int64 v11; // x1
@@ -304,29 +304,29 @@ int32_t __fastcall BuffConvertEntity__GetParamFromIndex_int_(
   System_Type_o *v21; // x21
   __int64 v22; // x2
   __int64 v23; // x3
-  const MethodInfo_2E3C2E4_RGCTXs *v24; // x8
+  const MethodInfo_2E4D97C_RGCTXs *v24; // x8
   Il2CppObject *v25; // x19
   Il2CppObject *Item; // x20
   Il2CppType *_1_T; // x21
   System_Type_o *TypeFromHandle; // x21
-  const MethodInfo_2E3C2E4_RGCTXs *rgctx_data; // x8
+  const MethodInfo_2E4D97C_RGCTXs *rgctx_data; // x8
   BuffConvertEntity_o *v31; // x0
   System_String_o *v32; // x1
   int32_t v33; // w2
   Il2CppObject *v34; // x3
-  const MethodInfo_2E3C550 *v35; // x4
+  const MethodInfo_2E4DBE8 *v35; // x4
   System_RuntimeTypeHandle_o v36; // 0:w0.4
   System_RuntimeTypeHandle_o v37; // 0:w0.4
 
   if ( !method->rgctx_data )
   {
-    sub_1B686D4(&System_Convert_TypeInfo, key);
-    sub_1B686D4(&Method_System_Collections_Generic_List_object__get_Count__, v10);
-    sub_1B686D4(&Method_System_Collections_Generic_List_object__get_Item__, v11);
-    sub_1B686D4(&System_Collections_Generic_List_object__TypeInfo, v12);
-    sub_1B686D4(&System_Type_TypeInfo, v13);
+    sub_1B715CC(&System_Convert_TypeInfo, key);
+    sub_1B715CC(&Method_System_Collections_Generic_List_object__get_Count__, v10);
+    sub_1B715CC(&Method_System_Collections_Generic_List_object__get_Item__, v11);
+    sub_1B715CC(&System_Collections_Generic_List_object__TypeInfo, v12);
+    sub_1B715CC(&System_Type_TypeInfo, v13);
     if ( !method->rgctx_data )
-      sub_1BBA60C(method);
+      sub_1BC3504(method);
   }
   ScriptObject = BuffConvertEntity__GetScriptObject(this, key, 0LL);
   if ( ScriptObject
@@ -354,7 +354,7 @@ int32_t __fastcall BuffConvertEntity__GetParamFromIndex_int_(
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)v16,
              index,
-             (const MethodInfo_34BBFA8 *)Method_System_Collections_Generic_List_object__get_Item__);
+             (const MethodInfo_34CFF90 *)Method_System_Collections_Generic_List_object__get_Item__);
     _1_T = method->rgctx_data->_1_T;
     if ( !System_Type_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
@@ -362,24 +362,24 @@ int32_t __fastcall BuffConvertEntity__GetParamFromIndex_int_(
     TypeFromHandle = System_Type__GetTypeFromHandle(v37, 0LL);
     if ( !System_Convert_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-    IsNullOrEmpty = System_Convert__ChangeType_62063080(Item, TypeFromHandle, 0LL);
+    IsNullOrEmpty = System_Convert__ChangeType_62149116(Item, TypeFromHandle, 0LL);
     rgctx_data = method->rgctx_data;
     v25 = IsNullOrEmpty;
     _0_T = rgctx_data->_0_T;
     if ( (BYTE5(rgctx_data->_0_T->vtable[0].methodPtr) & 1) == 0 )
     {
-      IsNullOrEmpty = (Il2CppObject *)sub_1BBA5B0(_0_T);
+      IsNullOrEmpty = (Il2CppObject *)sub_1BC34A8(_0_T);
       _0_T = (Il2CppClass *)IsNullOrEmpty;
     }
     if ( v25 )
       goto LABEL_20;
 LABEL_32:
-    sub_1B68930(IsNullOrEmpty, _0_T);
+    sub_1B71828(IsNullOrEmpty, _0_T);
   }
   v19 = System_Collections_Generic_List_object___get_Item(
           (System_Collections_Generic_List_object__o *)v16,
           0,
-          (const MethodInfo_34BBFA8 *)Method_System_Collections_Generic_List_object__get_Item__);
+          (const MethodInfo_34CFF90 *)Method_System_Collections_Generic_List_object__get_Item__);
   v20 = method->rgctx_data->_1_T;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
@@ -387,13 +387,13 @@ LABEL_32:
   v21 = System_Type__GetTypeFromHandle(v36, 0LL);
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  IsNullOrEmpty = System_Convert__ChangeType_62063080(v19, v21, 0LL);
+  IsNullOrEmpty = System_Convert__ChangeType_62149116(v19, v21, 0LL);
   v24 = method->rgctx_data;
   v25 = IsNullOrEmpty;
   _0_T = v24->_0_T;
   if ( (BYTE5(v24->_0_T->vtable[0].methodPtr) & 1) == 0 )
   {
-    IsNullOrEmpty = (Il2CppObject *)sub_1BBA5B0(_0_T);
+    IsNullOrEmpty = (Il2CppObject *)sub_1BC34A8(_0_T);
     _0_T = (Il2CppClass *)IsNullOrEmpty;
   }
   if ( !v25 )
@@ -401,7 +401,7 @@ LABEL_32:
 LABEL_20:
   if ( v25->klass->_1.element_class == _0_T->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(v25, _0_T, v22, v23);
-  sub_1B68BF0(v25);
+  sub_1B71AE8(v25);
   return (unsigned int)BuffConvertEntity__GetParamFromIndex_object_(v31, v32, v33, v34, v35);
 }
 
@@ -411,7 +411,7 @@ Il2CppObject *__fastcall BuffConvertEntity__GetParamFromIndex_object_(
         System_String_o *key,
         int32_t index,
         Il2CppObject *def,
-        const MethodInfo_2E3C550 *method)
+        const MethodInfo_2E4DBE8 *method)
 {
   __int64 v10; // x1
   __int64 v11; // x1
@@ -433,13 +433,13 @@ Il2CppObject *__fastcall BuffConvertEntity__GetParamFromIndex_object_(
 
   if ( !method->rgctx_data )
   {
-    sub_1B686D4(&System_Convert_TypeInfo, key);
-    sub_1B686D4(&Method_System_Collections_Generic_List_object__get_Count__, v10);
-    sub_1B686D4(&Method_System_Collections_Generic_List_object__get_Item__, v11);
-    sub_1B686D4(&System_Collections_Generic_List_object__TypeInfo, v12);
-    sub_1B686D4(&System_Type_TypeInfo, v13);
+    sub_1B715CC(&System_Convert_TypeInfo, key);
+    sub_1B715CC(&Method_System_Collections_Generic_List_object__get_Count__, v10);
+    sub_1B715CC(&Method_System_Collections_Generic_List_object__get_Item__, v11);
+    sub_1B715CC(&System_Collections_Generic_List_object__TypeInfo, v12);
+    sub_1B715CC(&System_Type_TypeInfo, v13);
     if ( !method->rgctx_data )
-      sub_1BBA60C(method);
+      sub_1BC3504(method);
   }
   ScriptObject = BuffConvertEntity__GetScriptObject(this, key, 0LL);
   if ( ScriptObject
@@ -459,7 +459,7 @@ Il2CppObject *__fastcall BuffConvertEntity__GetParamFromIndex_object_(
   if ( !IsNullOrEmpty )
   {
     if ( !v16 )
-      sub_1B68930(IsNullOrEmpty, v18);
+      sub_1B71828(IsNullOrEmpty, v18);
     if ( LODWORD(v16[1].monitor) == 1 )
     {
       v19 = (System_Collections_Generic_List_object__o *)v16;
@@ -475,7 +475,7 @@ Il2CppObject *__fastcall BuffConvertEntity__GetParamFromIndex_object_(
     Item = System_Collections_Generic_List_object___get_Item(
              v19,
              v20,
-             (const MethodInfo_34BBFA8 *)Method_System_Collections_Generic_List_object__get_Item__);
+             (const MethodInfo_34CFF90 *)Method_System_Collections_Generic_List_object__get_Item__);
     _1_T = method->rgctx_data->_1_T;
     if ( !System_Type_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
@@ -483,16 +483,16 @@ Il2CppObject *__fastcall BuffConvertEntity__GetParamFromIndex_object_(
     TypeFromHandle = System_Type__GetTypeFromHandle(v27, 0LL);
     if ( !System_Convert_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-    v24 = System_Convert__ChangeType_62063080(Item, TypeFromHandle, 0LL);
+    v24 = System_Convert__ChangeType_62149116(Item, TypeFromHandle, 0LL);
     _0_T = method->rgctx_data->_0_T;
     if ( (BYTE5(_0_T->vtable[0].methodPtr) & 1) == 0 )
-      _0_T = (Il2CppClass *)sub_1BBA5B0(_0_T);
+      _0_T = (Il2CppClass *)sub_1BC34A8(_0_T);
     if ( !v24 )
       return 0LL;
-    def = (Il2CppObject *)sub_1B68810(v24, _0_T);
+    def = (Il2CppObject *)sub_1B71708(v24, _0_T);
     if ( !def )
     {
-      sub_1B68BF0(v24);
+      sub_1B71AE8(v24);
       return 0LL;
     }
   }
@@ -508,10 +508,10 @@ Il2CppObject *__fastcall BuffConvertEntity__GetScriptObject(
   Il2CppObject *result; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A08982 & 1) == 0 )
+  if ( (byte_4A1F7EE & 1) == 0 )
   {
-    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
-    byte_4A08982 = 1;
+    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
+    byte_4A1F7EE = 1;
   }
   value = 0LL;
   result = (Il2CppObject *)this->fields.script;
@@ -521,7 +521,7 @@ Il2CppObject *__fastcall BuffConvertEntity__GetScriptObject(
            (System_Collections_Generic_Dictionary_object__object__o *)result,
            (Il2CppObject *)key,
            &value,
-           (const MethodInfo_318B374 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_31A051C *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
       return value;
     }
@@ -580,21 +580,21 @@ bool __fastcall BuffConvertEntity__TryGetConvertBuffIndex(
   int32_t v27; // w2
   int32_t v28; // w3
 
-  if ( (byte_4A08983 & 1) == 0 )
+  if ( (byte_4A1F7EF & 1) == 0 )
   {
-    sub_1B686D4(&Method_System_Array_IndexOf_int___, convertBuffIndex);
-    sub_1B686D4(&Method_BasicHelper_Any_int____75758640, v9);
-    sub_1B686D4(&System_Func_int__bool__TypeInfo, v10);
-    sub_1B686D4(&Method_BuffConvertEntity___c__DisplayClass13_0__TryGetConvertBuffIndex_b__0__, v11);
-    sub_1B686D4(&BuffConvertEntity___c__DisplayClass13_0_TypeInfo, v12);
-    byte_4A08983 = 1;
+    sub_1B715CC(&Method_System_Array_IndexOf_int___, convertBuffIndex);
+    sub_1B715CC(&Method_BasicHelper_Any_int____75850432, v9);
+    sub_1B715CC(&System_Func_int__bool__TypeInfo, v10);
+    sub_1B715CC(&Method_BuffConvertEntity___c__DisplayClass13_0__TryGetConvertBuffIndex_b__0__, v11);
+    sub_1B715CC(&BuffConvertEntity___c__DisplayClass13_0_TypeInfo, v12);
+    byte_4A1F7EF = 1;
   }
-  v13 = sub_1B68920(BuffConvertEntity___c__DisplayClass13_0_TypeInfo);
+  v13 = sub_1B71818(BuffConvertEntity___c__DisplayClass13_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0LL);
   if ( !v13 )
     goto LABEL_15;
   *(_QWORD *)(v13 + 16) = this;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)(v13 + 16), (int32_t)this, v16, v17);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)(v13 + 16), (int32_t)this, v16, v17);
   v20 = -1;
   *convertBuffIndex = -1;
   convertType = this->fields.convertType;
@@ -605,7 +605,7 @@ bool __fastcall BuffConvertEntity__TryGetConvertBuffIndex(
       v20 = System_Array__IndexOf_int_(
               this->fields.targetIds,
               buffId,
-              (const MethodInfo_2F428E0 *)Method_System_Array_IndexOf_int___);
+              (const MethodInfo_2F55B10 *)Method_System_Array_IndexOf_int___);
       *convertBuffIndex = v20;
     }
     return v20 >= 0;
@@ -617,7 +617,7 @@ bool __fastcall BuffConvertEntity__TryGetConvertBuffIndex(
         (targetIds = this->fields.targetIds) == 0LL) )
   {
 LABEL_15:
-    sub_1B68930(BuffEntity, v15);
+    sub_1B71828(BuffEntity, v15);
   }
   v23 = (System_Int32_array *)BuffEntity;
   v24 = 0;
@@ -632,19 +632,19 @@ LABEL_15:
     v26 = *v25;
     if ( !*v25 )
     {
-      v26 = (System_Func_int__bool__o *)sub_1B68920(System_Func_int__bool__TypeInfo);
+      v26 = (System_Func_int__bool__o *)sub_1B71818(System_Func_int__bool__TypeInfo);
       System_Func_int__bool____ctor(
         v26,
         (Il2CppObject *)v13,
         Method_BuffConvertEntity___c__DisplayClass13_0__TryGetConvertBuffIndex_b__0__,
         0LL);
       *(_QWORD *)(v13 + 32) = v26;
-      sub_1B68678((ServantStatusBattleListViewItem_o *)(v13 + 32), (int32_t)v26, v27, v28);
+      sub_1B71570((ServantStatusBattleListViewItem_o *)(v13 + 32), (int32_t)v26, v27, v28);
     }
-    BuffEntity = (System_Int32_array **)BasicHelper__Any_int__48451280(
+    BuffEntity = (System_Int32_array **)BasicHelper__Any_int__48522544(
                                           v23,
                                           (System_Func_T__bool__o *)v26,
-                                          (const MethodInfo_2E34ED0 *)Method_BasicHelper_Any_int____75758640);
+                                          (const MethodInfo_2E46530 *)Method_BasicHelper_Any_int____75850432);
     v20 = *(_DWORD *)(v13 + 24);
     if ( ((unsigned __int8)BuffEntity & 1) != 0 )
       break;
@@ -679,9 +679,9 @@ bool __fastcall BuffConvertEntity___c__DisplayClass13_0___TryGetConvertBuffIndex
 
   _4__this = this->fields.__4__this;
   if ( !_4__this || (targetIds = _4__this->fields.targetIds) == 0LL )
-    sub_1B68930(this, sf);
+    sub_1B71828(this, sf);
   i = this->fields.i;
   if ( (unsigned int)i >= targetIds->max_length )
-    sub_1B68938(this, *(_QWORD *)&sf);
+    sub_1B71830(this, *(_QWORD *)&sf);
   return targetIds->m_Items[i + 1] == sf;
 }

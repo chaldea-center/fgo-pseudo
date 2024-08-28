@@ -4,10 +4,10 @@ void __fastcall FortificationOrganizationPanelComponent___ctor(
 {
   MapZoom_c *v3; // x0
 
-  if ( (byte_4A0C9F1 & 1) == 0 )
+  if ( (byte_4A2388D & 1) == 0 )
   {
-    sub_1B686D4(&MapZoom_TypeInfo, method);
-    byte_4A0C9F1 = 1;
+    sub_1B715CC(&MapZoom_TypeInfo, method);
+    byte_4A2388D = 1;
   }
   v3 = MapZoom_TypeInfo;
   if ( !MapZoom_TypeInfo->_2.cctor_finished )
@@ -57,7 +57,7 @@ void __fastcall FortificationOrganizationPanelComponent__Close(
     || (MapScroll__Stop((MapScroll_o *)mZoom, 1, 0LL), (v7 = this->fields.orgCamera) == 0LL)
     || (mZoom = v7->fields.mZoom) == 0LL )
   {
-    sub_1B68930(mZoom, v4);
+    sub_1B71828(mZoom, v4);
   }
   this->fields.zoomSize = MapZoom__GetZoomSize(mZoom, 0LL);
   FortificationOrganizationPanelComponent__SetActiveForOrgObj(this, 0, v8);
@@ -103,23 +103,23 @@ void __fastcall FortificationOrganizationPanelComponent__Open(
   CTouch_c *v26; // x0
   struct CTouch_StaticFields *static_fields; // x0
 
-  if ( (byte_4A0C9F0 & 1) == 0 )
+  if ( (byte_4A2388C & 1) == 0 )
   {
-    sub_1B686D4(&CTouch_TypeInfo, *(_QWORD *)&eventId);
-    sub_1B686D4(&StringLiteral_2223/*"ActivationTouchFlag"*/, v14);
-    byte_4A0C9F0 = 1;
+    sub_1B715CC(&CTouch_TypeInfo, *(_QWORD *)&eventId);
+    sub_1B715CC(&StringLiteral_2228/*"ActivationTouchFlag"*/, v14);
+    byte_4A2388C = 1;
   }
   this->fields.mainPanel = mainPanel;
-  sub_1B68678(
+  sub_1B71570(
     (ServantStatusBattleListViewItem_o *)&this->fields.mainPanel,
     (int32_t)mainPanel,
     (int32_t)orgBgTexture,
     (int32_t)mainPanel);
   this->fields.eventRoot = eventRoot;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.eventRoot, (int32_t)eventRoot, v15, v16);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.eventRoot, (int32_t)eventRoot, v15, v16);
   this->fields.orgCamera = orgCamera;
   p_orgCamera = &this->fields.orgCamera;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.orgCamera, (int32_t)orgCamera, v18, v19);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.orgCamera, (int32_t)orgCamera, v18, v19);
   FortificationOrganizationPanelComponent__SetActiveForOrgObj(this, 1, v20);
   organizationBg = (MapCamera_o *)this->fields.organizationBg;
   if ( !organizationBg )
@@ -131,10 +131,10 @@ void __fastcall FortificationOrganizationPanelComponent__Open(
   if ( !CTouch_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
   CTouch__init(0LL);
-  if ( !byte_4A06B49 )
+  if ( !byte_4A1D9AD )
   {
-    sub_1B686D4(&CTouch_TypeInfo, v23);
-    byte_4A06B49 = 1;
+    sub_1B715CC(&CTouch_TypeInfo, v23);
+    byte_4A1D9AD = 1;
   }
   v26 = CTouch_TypeInfo;
   if ( !CTouch_TypeInfo->_2.cctor_finished )
@@ -144,7 +144,7 @@ void __fastcall FortificationOrganizationPanelComponent__Open(
   }
   static_fields = v26->static_fields;
   static_fields->mScreenCam = mainCamera;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&static_fields->mScreenCam, (int32_t)mainCamera, v24, v25);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&static_fields->mScreenCam, (int32_t)mainCamera, v24, v25);
   organizationBg = *p_orgCamera;
   if ( !*p_orgCamera
     || (MapCamera__Init(organizationBg, 0LL), (organizationBg = *p_orgCamera) == 0LL)
@@ -154,12 +154,12 @@ void __fastcall FortificationOrganizationPanelComponent__Open(
     || (organizationBg = (MapCamera_o *)(*p_orgCamera)->fields.mZoom) == 0LL )
   {
 LABEL_16:
-    sub_1B68930(organizationBg, v21);
+    sub_1B71828(organizationBg, v21);
   }
   MapZoom__SetZoomSize((MapZoom_o *)organizationBg, this->fields.zoomSize, 1, 0, 0LL);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_2223/*"ActivationTouchFlag"*/,
+    (System_String_o *)StringLiteral_2228/*"ActivationTouchFlag"*/,
     0.05,
     0LL);
 }
@@ -188,7 +188,7 @@ void __fastcall FortificationOrganizationPanelComponent__SetActiveForOrgObj(
     || (mainPanel = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)mainPanel, 0LL)) == 0LL )
   {
 LABEL_7:
-    sub_1B68930(mainPanel, isActive);
+    sub_1B71828(mainPanel, isActive);
   }
   UnityEngine_GameObject__SetActive(mainPanel, isActive, 0LL);
 }
@@ -203,10 +203,10 @@ void __fastcall FortificationOrganizationPanelComponent__Update(
   _BOOL4 isTouchEnabled; // w8
   MapCamera_o *orgCamera; // x19
 
-  if ( (byte_4A0C9EF & 1) == 0 )
+  if ( (byte_4A2388B & 1) == 0 )
   {
-    sub_1B686D4(&CTouch_TypeInfo, method);
-    byte_4A0C9EF = 1;
+    sub_1B715CC(&CTouch_TypeInfo, method);
+    byte_4A2388B = 1;
   }
   if ( !CTouch_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
@@ -219,6 +219,6 @@ void __fastcall FortificationOrganizationPanelComponent__Update(
     LOBYTE(isTouchEnabled) = !IsEnableOutSideCollider;
   }
   if ( !orgCamera )
-    sub_1B68930(IsEnableOutSideCollider, v4);
+    sub_1B71828(IsEnableOutSideCollider, v4);
   MapCamera__Process(orgCamera, isTouchEnabled, 0LL);
 }

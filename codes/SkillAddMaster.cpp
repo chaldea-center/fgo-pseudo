@@ -1,14 +1,14 @@
 void __fastcall SkillAddMaster___ctor(SkillAddMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A0956F & 1) == 0 )
+  if ( (byte_4A203E3 & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataMasterBase_SkillAddMaster__SkillAddEntity__string___ctor__, method);
-    byte_4A0956F = 1;
+    sub_1B715CC(&Method_DataMasterBase_SkillAddMaster__SkillAddEntity__string___ctor__, method);
+    byte_4A203E3 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     364,
-    (const MethodInfo_30E47D8 *)Method_DataMasterBase_SkillAddMaster__SkillAddEntity__string___ctor__);
+    (const MethodInfo_30F8A78 *)Method_DataMasterBase_SkillAddMaster__SkillAddEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ SkillAddEntity_o *__fastcall SkillAddMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A09570 & 1) == 0 )
+  if ( (byte_4A203E4 & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataMasterBase_SkillAddMaster__SkillAddEntity__string__GetEntity__, *(_QWORD *)&skillId);
-    byte_4A09570 = 1;
+    sub_1B715CC(&Method_DataMasterBase_SkillAddMaster__SkillAddEntity__string__GetEntity__, *(_QWORD *)&skillId);
+    byte_4A203E4 = 1;
   }
   PK = (Il2CppObject *)SkillAddEntity__CreatePK(skillId, priority, *(const MethodInfo **)&priority);
   return (SkillAddEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                PK,
-                               (const MethodInfo_30E4818 *)Method_DataMasterBase_SkillAddMaster__SkillAddEntity__string__GetEntity__);
+                               (const MethodInfo_30F8AB8 *)Method_DataMasterBase_SkillAddMaster__SkillAddEntity__string__GetEntity__);
 }
 
 
@@ -44,15 +44,15 @@ bool __fastcall SkillAddMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A09571 & 1) == 0 )
+  if ( (byte_4A203E5 & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataMasterBase_SkillAddMaster__SkillAddEntity__string__TryGetEntity__, entity);
-    byte_4A09571 = 1;
+    sub_1B715CC(&Method_DataMasterBase_SkillAddMaster__SkillAddEntity__string__TryGetEntity__, entity);
+    byte_4A203E5 = 1;
   }
   PK = (Il2CppObject *)SkillAddEntity__CreatePK(skillId, priority, *(const MethodInfo **)&skillId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_30E4868 *)Method_DataMasterBase_SkillAddMaster__SkillAddEntity__string__TryGetEntity__);
+           (const MethodInfo_30F8B08 *)Method_DataMasterBase_SkillAddMaster__SkillAddEntity__string__TryGetEntity__);
 }

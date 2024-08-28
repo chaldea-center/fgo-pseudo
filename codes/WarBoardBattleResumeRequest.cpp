@@ -1,3 +1,9 @@
+void __fastcall WarBoardBattleResumeRequest___ctor(WarBoardBattleResumeRequest_o *this, const MethodInfo *method)
+{
+  RequestBase___ctor((RequestBase_o *)this, 0LL);
+}
+
+
 // local variable allocation has failed, the output may be wrong!
 void __fastcall WarBoardBattleResumeRequest__beginRequest(
         WarBoardBattleResumeRequest_o *this,
@@ -6,18 +12,16 @@ void __fastcall WarBoardBattleResumeRequest__beginRequest(
         const MethodInfo *method)
 {
   __int64 v7; // x1
-  const MethodInfo *v8; // x3
-  const MethodInfo *v9; // x1
 
-  if ( (byte_4A0A602 & 1) == 0 )
+  if ( (byte_4A21477 & 1) == 0 )
   {
-    sub_1B686D4(&StringLiteral_23396/*"stageId"*/, *(_QWORD *)&stageId);
-    sub_1B686D4(&StringLiteral_17048/*"battleId"*/, v7);
-    byte_4A0A602 = 1;
+    sub_1B715CC(&StringLiteral_23419/*"stageId"*/, *(_QWORD *)&stageId);
+    sub_1B715CC(&StringLiteral_17063/*"battleId"*/, v7);
+    byte_4A21477 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23396/*"stageId"*/, stageId, method);
-  RequestBase__addField_40919284((RequestBase_o *)this, (System_String_o *)StringLiteral_17048/*"battleId"*/, battleId, v8);
-  RequestBase__beginRequest((RequestBase_o *)this, v9);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23419/*"stageId"*/, stageId, 0LL);
+  RequestBase__addField_40922716((RequestBase_o *)this, (System_String_o *)StringLiteral_17063/*"battleId"*/, battleId, 0LL);
+  RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
 
@@ -28,14 +32,14 @@ System_String_o *__fastcall WarBoardBattleResumeRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A0A601 & 1) == 0 )
+  if ( (byte_4A21476 & 1) == 0 )
   {
-    sub_1B686D4(&NetworkManager_TypeInfo, method);
-    sub_1B686D4(&StringLiteral_24528/*"warBoard/battleResume"*/, v2);
-    byte_4A0A601 = 1;
+    sub_1B715CC(&NetworkManager_TypeInfo, method);
+    sub_1B715CC(&StringLiteral_24552/*"warBoard/battleResume"*/, v2);
+    byte_4A21476 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61419468(BaseUrl, (System_String_o *)StringLiteral_24528/*"warBoard/battleResume"*/, 0LL);
+  return System_String__Concat_61505504(BaseUrl, (System_String_o *)StringLiteral_24552/*"warBoard/battleResume"*/, 0LL);
 }

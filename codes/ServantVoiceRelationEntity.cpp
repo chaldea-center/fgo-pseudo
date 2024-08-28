@@ -1,13 +1,13 @@
 void __fastcall ServantVoiceRelationEntity___ctor(ServantVoiceRelationEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A094E4 & 1) == 0 )
+  if ( (byte_4A20358 & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A094E4 = 1;
+    sub_1B715CC(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A20358 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30E4338 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30F85D8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall ServantVoiceRelationEntity__CreatePK(
         int32_t relationSvtId,
         const MethodInfo *method)
 {
-  if ( (byte_4A094E3 & 1) == 0 )
+  if ( (byte_4A20357 & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&relationSvtId);
-    byte_4A094E3 = 1;
+    sub_1B715CC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&relationSvtId);
+    byte_4A20357 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            relationSvtId,
-           (const MethodInfo_2E47F74 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2E5960C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -43,10 +43,10 @@ System_String_o *__fastcall ServantVoiceRelationEntity__CreatePrimaryKey(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v11; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v12; // 0:x0.16
 
-  if ( (byte_4A094E2 & 1) == 0 )
+  if ( (byte_4A20356 & 1) == 0 )
   {
-    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-    byte_4A094E2 = 1;
+    sub_1B715CC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
+    byte_4A20356 = 1;
   }
   v4 = *(_QWORD *)&this->fields.svtId.fields.currentCryptoKey;
   v3 = *(_QWORD *)&this->fields.svtId.fields.fakeValue;
@@ -54,11 +54,11 @@ System_String_o *__fastcall ServantVoiceRelationEntity__CreatePrimaryKey(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v11.fields.currentCryptoKey = v4;
   *(_QWORD *)&v11.fields.fakeValue = v3;
-  v5 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v11, 0LL);
+  v5 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46308268(v11, 0LL);
   v6 = *(_QWORD *)&this->fields.relationSvtId.fields.currentCryptoKey;
   *(_QWORD *)&v12.fields.fakeValue = *(_QWORD *)&this->fields.relationSvtId.fields.fakeValue;
   v7 = v5;
   *(_QWORD *)&v12.fields.currentCryptoKey = v6;
-  v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v12, 0LL);
+  v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46308268(v12, 0LL);
   return ServantVoiceRelationEntity__CreatePK(v7, v8, v9);
 }

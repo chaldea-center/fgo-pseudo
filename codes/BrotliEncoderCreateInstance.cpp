@@ -18,15 +18,15 @@ char *__fastcall BrotliEncoderCreateInstance(__int64 (__fastcall *a1)(__int64, _
   v7 = v6;
   if ( v6 )
   {
-    sub_1B7765C(v6 + 144, a1, a2, a3);
+    sub_1B80554(v6 + 144, a1, a2, a3);
     *((_DWORD *)v7 + 9) = 0;
     *(_QWORD *)(v7 + 12) = 0LL;
     *((_DWORD *)v7 + 2) = 22;
     *(_QWORD *)v7 = 0xB00000000LL;
     *(_OWORD *)(v7 + 20) = 0u;
-    sub_1BDDEE0(v7 + 88);
+    sub_1BE6DD8(v7 + 88);
     *((_QWORD *)v7 + 10) = 67108860LL;
-    *((_OWORD *)v7 + 4) = xmmword_BA6340;
+    *((_OWORD *)v7 + 4) = xmmword_BAAB60;
     *((_QWORD *)v7 + 21) = 0LL;
     *((_WORD *)v7 + 178) = 0;
     *(_QWORD *)(v7 + 6548) = 0LL;
@@ -34,7 +34,7 @@ char *__fastcall BrotliEncoderCreateInstance(__int64 (__fastcall *a1)(__int64, _
     *((_OWORD *)v7 + 12) = 0u;
     *((_OWORD *)v7 + 13) = 0u;
     *((_OWORD *)v7 + 16) = 0u;
-    *((_OWORD *)v7 + 17) = xmmword_BA6010;
+    *((_OWORD *)v7 + 17) = xmmword_BAA830;
     v8 = *((_OWORD *)v7 + 17);
     *((_OWORD *)v7 + 14) = 0u;
     *((_OWORD *)v7 + 15) = 0u;

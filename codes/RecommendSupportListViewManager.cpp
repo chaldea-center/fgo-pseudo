@@ -12,12 +12,12 @@ void __fastcall RecommendSupportListViewManager___ctor(
   int32_t v10; // w2
   int32_t v11; // w3
 
-  if ( (byte_4A04F6D & 1) == 0 )
+  if ( (byte_4A1BDCC & 1) == 0 )
   {
-    sub_1B686D4(&BalanceConfig_TypeInfo, method);
-    sub_1B686D4(&RecommendSupportSelectListViewObject___TypeInfo, v3);
-    sub_1B686D4(&UIPanel___TypeInfo, v4);
-    byte_4A04F6D = 1;
+    sub_1B715CC(&BalanceConfig_TypeInfo, method);
+    sub_1B715CC(&RecommendSupportSelectListViewObject___TypeInfo, v3);
+    sub_1B715CC(&UIPanel___TypeInfo, v4);
+    byte_4A1BDCC = 1;
   }
   v5 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -25,16 +25,16 @@ void __fastcall RecommendSupportListViewManager___ctor(
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v5 = BalanceConfig_TypeInfo;
   }
-  v6 = (struct UIPanel_array *)sub_1B6877C(
+  v6 = (struct UIPanel_array *)sub_1B71674(
                                  UIPanel___TypeInfo,
                                  (unsigned int)v5->static_fields->RecommendSupportMemberMax);
   this->fields.objectPanels = v6;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.objectPanels, (int32_t)v6, v7, v8);
-  v9 = (struct RecommendSupportSelectListViewObject_array *)sub_1B6877C(
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.objectPanels, (int32_t)v6, v7, v8);
+  v9 = (struct RecommendSupportSelectListViewObject_array *)sub_1B71674(
                                                               RecommendSupportSelectListViewObject___TypeInfo,
                                                               (unsigned int)BalanceConfig_TypeInfo->static_fields->RecommendSupportMemberMax);
   this->fields.objectArray = v9;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.objectArray, (int32_t)v9, v10, v11);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.objectArray, (int32_t)v9, v10, v11);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -62,13 +62,13 @@ void __fastcall RecommendSupportListViewManager__ClearItem(
   int32_t v11; // w2
   int32_t v12; // w3
 
-  if ( (byte_4A04F6A & 1) == 0 )
+  if ( (byte_4A1BDC9 & 1) == 0 )
   {
-    sub_1B686D4(&System_Action_RecommendSupportSelectListViewObject__TypeInfo, method);
-    sub_1B686D4(&Method_BasicHelper_ForEach_RecommendSupportSelectListViewObject___, v3);
-    sub_1B686D4(&Method_RecommendSupportListViewManager___c__ClearItem_b__7_0__, v4);
-    sub_1B686D4(&RecommendSupportListViewManager___c_TypeInfo, v5);
-    byte_4A04F6A = 1;
+    sub_1B715CC(&System_Action_RecommendSupportSelectListViewObject__TypeInfo, method);
+    sub_1B715CC(&Method_BasicHelper_ForEach_RecommendSupportSelectListViewObject___, v3);
+    sub_1B715CC(&Method_RecommendSupportListViewManager___c__ClearItem_b__7_0__, v4);
+    sub_1B715CC(&RecommendSupportListViewManager___c_TypeInfo, v5);
+    byte_4A1BDC9 = 1;
   }
   v6 = RecommendSupportListViewManager___c_TypeInfo;
   objectArray = (System_Collections_Generic_IEnumerable_T__o *)this->fields.objectArray;
@@ -86,50 +86,50 @@ void __fastcall RecommendSupportListViewManager__ClearItem(
       v6 = RecommendSupportListViewManager___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__7_0 = (System_Action_object__o *)sub_1B68920(System_Action_RecommendSupportSelectListViewObject__TypeInfo);
+    _9__7_0 = (System_Action_object__o *)sub_1B71818(System_Action_RecommendSupportSelectListViewObject__TypeInfo);
     System_Action_object____ctor(_9__7_0, v9, Method_RecommendSupportListViewManager___c__ClearItem_b__7_0__, 0LL);
     static_fields = RecommendSupportListViewManager___c_TypeInfo->static_fields;
     static_fields->__9__7_0 = (struct System_Action_RecommendSupportSelectListViewObject__o *)_9__7_0;
-    sub_1B68678((ServantStatusBattleListViewItem_o *)&static_fields->__9__7_0, (int32_t)_9__7_0, v11, v12);
+    sub_1B71570((ServantStatusBattleListViewItem_o *)&static_fields->__9__7_0, (int32_t)_9__7_0, v11, v12);
   }
   BasicHelper__ForEach_object_(
     objectArray,
     (System_Action_T__o *)_9__7_0,
-    (const MethodInfo_2E37140 *)Method_BasicHelper_ForEach_RecommendSupportSelectListViewObject___);
+    (const MethodInfo_2E487A0 *)Method_BasicHelper_ForEach_RecommendSupportSelectListViewObject___);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall RecommendSupportListViewManager__ClearItem_32279136(
+void __fastcall RecommendSupportListViewManager__ClearItem_32321768(
         RecommendSupportListViewManager_o *this,
         int32_t index,
         const MethodInfo *method)
 {
-  RecommendSupportSelectListViewObject_o *IsValidIndex_object__48467788; // x0
+  RecommendSupportSelectListViewObject_o *IsValidIndex_object__48539108; // x0
   const MethodInfo *v6; // x1
   struct RecommendSupportSelectListViewObject_array *objectArray; // x8
 
-  if ( (byte_4A04F6B & 1) == 0 )
+  if ( (byte_4A1BDCA & 1) == 0 )
   {
-    sub_1B686D4(&Method_BasicHelper_IsValidIndex_RecommendSupportSelectListViewObject___, *(_QWORD *)&index);
-    byte_4A04F6B = 1;
+    sub_1B715CC(&Method_BasicHelper_IsValidIndex_RecommendSupportSelectListViewObject___, *(_QWORD *)&index);
+    byte_4A1BDCA = 1;
   }
-  IsValidIndex_object__48467788 = (RecommendSupportSelectListViewObject_o *)BasicHelper__IsValidIndex_object__48467788(
+  IsValidIndex_object__48539108 = (RecommendSupportSelectListViewObject_o *)BasicHelper__IsValidIndex_object__48539108(
                                                                               (System_Object_array *)this->fields.objectArray,
                                                                               index,
-                                                                              (const MethodInfo_2E38F4C *)Method_BasicHelper_IsValidIndex_RecommendSupportSelectListViewObject___);
-  if ( ((unsigned __int8)IsValidIndex_object__48467788 & 1) != 0 )
+                                                                              (const MethodInfo_2E4A5E4 *)Method_BasicHelper_IsValidIndex_RecommendSupportSelectListViewObject___);
+  if ( ((unsigned __int8)IsValidIndex_object__48539108 & 1) != 0 )
   {
     objectArray = this->fields.objectArray;
     if ( !objectArray )
       goto LABEL_9;
     if ( objectArray->max_length <= index )
-      sub_1B68938(IsValidIndex_object__48467788, v6);
-    IsValidIndex_object__48467788 = objectArray->m_Items[index];
-    if ( !IsValidIndex_object__48467788 )
+      sub_1B71830(IsValidIndex_object__48539108, v6);
+    IsValidIndex_object__48539108 = objectArray->m_Items[index];
+    if ( !IsValidIndex_object__48539108 )
 LABEL_9:
-      sub_1B68930(IsValidIndex_object__48467788, v6);
-    RecommendSupportSelectListViewObject__ClearItem(IsValidIndex_object__48467788, v6);
+      sub_1B71828(IsValidIndex_object__48539108, v6);
+    RecommendSupportSelectListViewObject__ClearItem(IsValidIndex_object__48539108, v6);
   }
 }
 
@@ -167,17 +167,17 @@ void __fastcall RecommendSupportListViewManager__CreateList(
   int32_t v29; // w2
   int32_t v30; // w3
 
-  if ( (byte_4A04F6C & 1) == 0 )
+  if ( (byte_4A1BDCB & 1) == 0 )
   {
-    sub_1B686D4(&System_Action_int__RecommendSupportSelectListViewObject__TypeInfo, *(_QWORD *)&maskPanelDepth);
-    sub_1B686D4(&Method_BasicHelper_ForEach_RecommendSupportSelectListViewObject____75759968, v5);
-    sub_1B686D4(&Method_System_Linq_Enumerable_Select_UIPanel__int___, v6);
-    sub_1B686D4(&Method_System_Linq_Enumerable_ToArray_int___, v7);
-    sub_1B686D4(&System_Func_UIPanel__int__TypeInfo, v8);
-    sub_1B686D4(&Method_RecommendSupportListViewManager___c__CreateList_b__9_0__, v9);
-    sub_1B686D4(&Method_RecommendSupportListViewManager___c__CreateList_b__9_1__, v10);
-    sub_1B686D4(&RecommendSupportListViewManager___c_TypeInfo, v11);
-    byte_4A04F6C = 1;
+    sub_1B715CC(&System_Action_int__RecommendSupportSelectListViewObject__TypeInfo, *(_QWORD *)&maskPanelDepth);
+    sub_1B715CC(&Method_BasicHelper_ForEach_RecommendSupportSelectListViewObject____75851760, v5);
+    sub_1B715CC(&Method_System_Linq_Enumerable_Select_UIPanel__int___, v6);
+    sub_1B715CC(&Method_System_Linq_Enumerable_ToArray_int___, v7);
+    sub_1B715CC(&System_Func_UIPanel__int__TypeInfo, v8);
+    sub_1B715CC(&Method_RecommendSupportListViewManager___c__CreateList_b__9_0__, v9);
+    sub_1B715CC(&Method_RecommendSupportListViewManager___c__CreateList_b__9_1__, v10);
+    sub_1B715CC(&RecommendSupportListViewManager___c_TypeInfo, v11);
+    byte_4A1BDCB = 1;
   }
   this->fields.cashedEditMaskPanelDepth = maskPanelDepth;
   v12 = RecommendSupportListViewManager___c_TypeInfo;
@@ -196,22 +196,22 @@ void __fastcall RecommendSupportListViewManager__CreateList(
       v12 = RecommendSupportListViewManager___c_TypeInfo;
     }
     v15 = (Il2CppObject *)v12->static_fields->__9;
-    _9__9_0 = (System_Func_object__int__o *)sub_1B68920(System_Func_UIPanel__int__TypeInfo);
+    _9__9_0 = (System_Func_object__int__o *)sub_1B71818(System_Func_UIPanel__int__TypeInfo);
     System_Func_object__int____ctor(_9__9_0, v15, Method_RecommendSupportListViewManager___c__CreateList_b__9_0__, 0LL);
     static_fields = RecommendSupportListViewManager___c_TypeInfo->static_fields;
     static_fields->__9__9_0 = (struct System_Func_UIPanel__int__o *)_9__9_0;
-    sub_1B68678((ServantStatusBattleListViewItem_o *)&static_fields->__9__9_0, (int32_t)_9__9_0, v17, v18);
+    sub_1B71570((ServantStatusBattleListViewItem_o *)&static_fields->__9__9_0, (int32_t)_9__9_0, v17, v18);
   }
   v19 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                objectPanels,
                                                                (System_Func_TSource__TResult__o *)_9__9_0,
-                                                               (const MethodInfo_2E79760 *)Method_System_Linq_Enumerable_Select_UIPanel__int___);
+                                                               (const MethodInfo_2E8B610 *)Method_System_Linq_Enumerable_Select_UIPanel__int___);
   v20 = System_Linq_Enumerable__ToArray_int_(
           v19,
-          (const MethodInfo_2E81CA4 *)Method_System_Linq_Enumerable_ToArray_int___);
+          (const MethodInfo_2E93CEC *)Method_System_Linq_Enumerable_ToArray_int___);
   this->fields.cashedObjectPanelDepth = v20;
   p_cashedObjectPanelDepth = &this->fields.cashedObjectPanelDepth;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)p_cashedObjectPanelDepth, (int32_t)v20, v22, v23);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)p_cashedObjectPanelDepth, (int32_t)v20, v22, v23);
   v24 = RecommendSupportListViewManager___c_TypeInfo;
   v25 = (System_Collections_Generic_IEnumerable_T__o *)*(p_cashedObjectPanelDepth - 2);
   if ( !RecommendSupportListViewManager___c_TypeInfo->_2.cctor_finished )
@@ -228,7 +228,7 @@ void __fastcall RecommendSupportListViewManager__CreateList(
       v24 = RecommendSupportListViewManager___c_TypeInfo;
     }
     v27 = (Il2CppObject *)v24->static_fields->__9;
-    _9__9_1 = (System_Action_T1__T2__o *)sub_1B68920(System_Action_int__RecommendSupportSelectListViewObject__TypeInfo);
+    _9__9_1 = (System_Action_T1__T2__o *)sub_1B71818(System_Action_int__RecommendSupportSelectListViewObject__TypeInfo);
     System_Action_int__object____ctor(
       _9__9_1,
       v27,
@@ -236,12 +236,12 @@ void __fastcall RecommendSupportListViewManager__CreateList(
       0LL);
     v28 = RecommendSupportListViewManager___c_TypeInfo->static_fields;
     v28->__9__9_1 = (struct System_Action_int__RecommendSupportSelectListViewObject__o *)_9__9_1;
-    sub_1B68678((ServantStatusBattleListViewItem_o *)&v28->__9__9_1, (int32_t)_9__9_1, v29, v30);
+    sub_1B71570((ServantStatusBattleListViewItem_o *)&v28->__9__9_1, (int32_t)_9__9_1, v29, v30);
   }
-  BasicHelper__ForEach_object__48460864(
+  BasicHelper__ForEach_object__48532128(
     v25,
     (System_Action_int__T__o *)_9__9_1,
-    (const MethodInfo_2E37440 *)Method_BasicHelper_ForEach_RecommendSupportSelectListViewObject____75759968);
+    (const MethodInfo_2E48AA0 *)Method_BasicHelper_ForEach_RecommendSupportSelectListViewObject____75851760);
 }
 
 
@@ -274,42 +274,42 @@ void __fastcall RecommendSupportListViewManager__SetItem(
   int32_t v25; // w2
   int32_t v26; // w3
 
-  if ( (byte_4A04F68 & 1) == 0 )
+  if ( (byte_4A1BDC7 & 1) == 0 )
   {
-    sub_1B686D4(&System_Action_RecommendSupportSelectListViewObject__TypeInfo, *(_QWORD *)&index);
-    sub_1B686D4(&System_Action_int__UIPanel__TypeInfo, v5);
-    sub_1B686D4(&Method_BasicHelper_ForEach_RecommendSupportSelectListViewObject___, v6);
-    sub_1B686D4(&Method_BasicHelper_ForEach_UIPanel___, v7);
-    sub_1B686D4(&Method_BasicHelper_IsValidIndex_RecommendSupportSelectListViewObject___, v8);
-    sub_1B686D4(&Method_RecommendSupportListViewManager___c__SetItem_b__5_1__, v9);
-    sub_1B686D4(&Method_RecommendSupportListViewManager___c__DisplayClass5_0__SetItem_b__0__, v10);
-    sub_1B686D4(&RecommendSupportListViewManager___c__DisplayClass5_0_TypeInfo, v11);
-    sub_1B686D4(&RecommendSupportListViewManager___c_TypeInfo, v12);
-    byte_4A04F68 = 1;
+    sub_1B715CC(&System_Action_RecommendSupportSelectListViewObject__TypeInfo, *(_QWORD *)&index);
+    sub_1B715CC(&System_Action_int__UIPanel__TypeInfo, v5);
+    sub_1B715CC(&Method_BasicHelper_ForEach_RecommendSupportSelectListViewObject___, v6);
+    sub_1B715CC(&Method_BasicHelper_ForEach_UIPanel___, v7);
+    sub_1B715CC(&Method_BasicHelper_IsValidIndex_RecommendSupportSelectListViewObject___, v8);
+    sub_1B715CC(&Method_RecommendSupportListViewManager___c__SetItem_b__5_1__, v9);
+    sub_1B715CC(&Method_RecommendSupportListViewManager___c__DisplayClass5_0__SetItem_b__0__, v10);
+    sub_1B715CC(&RecommendSupportListViewManager___c__DisplayClass5_0_TypeInfo, v11);
+    sub_1B715CC(&RecommendSupportListViewManager___c_TypeInfo, v12);
+    byte_4A1BDC7 = 1;
   }
-  v13 = sub_1B68920(RecommendSupportListViewManager___c__DisplayClass5_0_TypeInfo);
+  v13 = sub_1B71818(RecommendSupportListViewManager___c__DisplayClass5_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0LL);
   if ( !v13 )
-    sub_1B68930(v14, v15);
+    sub_1B71828(v14, v15);
   *(_QWORD *)(v13 + 16) = this;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)(v13 + 16), (int32_t)this, v16, v17);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)(v13 + 16), (int32_t)this, v16, v17);
   *(_DWORD *)(v13 + 24) = index;
-  if ( BasicHelper__IsValidIndex_object__48467788(
+  if ( BasicHelper__IsValidIndex_object__48539108(
          (System_Object_array *)this->fields.objectArray,
          index,
-         (const MethodInfo_2E38F4C *)Method_BasicHelper_IsValidIndex_RecommendSupportSelectListViewObject___) )
+         (const MethodInfo_2E4A5E4 *)Method_BasicHelper_IsValidIndex_RecommendSupportSelectListViewObject___) )
   {
     objectPanels = (System_Collections_Generic_IEnumerable_T__o *)this->fields.objectPanels;
-    v19 = (System_Action_T1__T2__o *)sub_1B68920(System_Action_int__UIPanel__TypeInfo);
+    v19 = (System_Action_T1__T2__o *)sub_1B71818(System_Action_int__UIPanel__TypeInfo);
     System_Action_int__object____ctor(
       v19,
       (Il2CppObject *)v13,
       Method_RecommendSupportListViewManager___c__DisplayClass5_0__SetItem_b__0__,
       0LL);
-    BasicHelper__ForEach_object__48460864(
+    BasicHelper__ForEach_object__48532128(
       objectPanels,
       (System_Action_int__T__o *)v19,
-      (const MethodInfo_2E37440 *)Method_BasicHelper_ForEach_UIPanel___);
+      (const MethodInfo_2E48AA0 *)Method_BasicHelper_ForEach_UIPanel___);
   }
   v20 = RecommendSupportListViewManager___c_TypeInfo;
   objectArray = (System_Collections_Generic_IEnumerable_T__o *)this->fields.objectArray;
@@ -327,16 +327,16 @@ void __fastcall RecommendSupportListViewManager__SetItem(
       v20 = RecommendSupportListViewManager___c_TypeInfo;
     }
     v23 = (Il2CppObject *)v20->static_fields->__9;
-    _9__5_1 = (System_Action_object__o *)sub_1B68920(System_Action_RecommendSupportSelectListViewObject__TypeInfo);
+    _9__5_1 = (System_Action_object__o *)sub_1B71818(System_Action_RecommendSupportSelectListViewObject__TypeInfo);
     System_Action_object____ctor(_9__5_1, v23, Method_RecommendSupportListViewManager___c__SetItem_b__5_1__, 0LL);
     static_fields = RecommendSupportListViewManager___c_TypeInfo->static_fields;
     static_fields->__9__5_1 = (struct System_Action_RecommendSupportSelectListViewObject__o *)_9__5_1;
-    sub_1B68678((ServantStatusBattleListViewItem_o *)&static_fields->__9__5_1, (int32_t)_9__5_1, v25, v26);
+    sub_1B71570((ServantStatusBattleListViewItem_o *)&static_fields->__9__5_1, (int32_t)_9__5_1, v25, v26);
   }
   BasicHelper__ForEach_object_(
     objectArray,
     (System_Action_T__o *)_9__5_1,
-    (const MethodInfo_2E37140 *)Method_BasicHelper_ForEach_RecommendSupportSelectListViewObject___);
+    (const MethodInfo_2E487A0 *)Method_BasicHelper_ForEach_RecommendSupportSelectListViewObject___);
 }
 
 
@@ -346,31 +346,31 @@ void __fastcall RecommendSupportListViewManager__SetItemSub(
         int32_t index,
         const MethodInfo *method)
 {
-  RecommendSupportSelectListViewObject_o *IsValidIndex_object__48467788; // x0
+  RecommendSupportSelectListViewObject_o *IsValidIndex_object__48539108; // x0
   const MethodInfo *v6; // x1
   struct RecommendSupportSelectListViewObject_array *objectArray; // x8
 
-  if ( (byte_4A04F69 & 1) == 0 )
+  if ( (byte_4A1BDC8 & 1) == 0 )
   {
-    sub_1B686D4(&Method_BasicHelper_IsValidIndex_RecommendSupportSelectListViewObject___, *(_QWORD *)&index);
-    byte_4A04F69 = 1;
+    sub_1B715CC(&Method_BasicHelper_IsValidIndex_RecommendSupportSelectListViewObject___, *(_QWORD *)&index);
+    byte_4A1BDC8 = 1;
   }
-  IsValidIndex_object__48467788 = (RecommendSupportSelectListViewObject_o *)BasicHelper__IsValidIndex_object__48467788(
+  IsValidIndex_object__48539108 = (RecommendSupportSelectListViewObject_o *)BasicHelper__IsValidIndex_object__48539108(
                                                                               (System_Object_array *)this->fields.objectArray,
                                                                               index,
-                                                                              (const MethodInfo_2E38F4C *)Method_BasicHelper_IsValidIndex_RecommendSupportSelectListViewObject___);
-  if ( ((unsigned __int8)IsValidIndex_object__48467788 & 1) != 0 )
+                                                                              (const MethodInfo_2E4A5E4 *)Method_BasicHelper_IsValidIndex_RecommendSupportSelectListViewObject___);
+  if ( ((unsigned __int8)IsValidIndex_object__48539108 & 1) != 0 )
   {
     objectArray = this->fields.objectArray;
     if ( !objectArray )
       goto LABEL_9;
     if ( objectArray->max_length <= index )
-      sub_1B68938(IsValidIndex_object__48467788, v6);
-    IsValidIndex_object__48467788 = objectArray->m_Items[index];
-    if ( !IsValidIndex_object__48467788 )
+      sub_1B71830(IsValidIndex_object__48539108, v6);
+    IsValidIndex_object__48539108 = objectArray->m_Items[index];
+    if ( !IsValidIndex_object__48539108 )
 LABEL_9:
-      sub_1B68930(IsValidIndex_object__48467788, v6);
-    RecommendSupportSelectListViewObject__SetItem(IsValidIndex_object__48467788, v6);
+      sub_1B71828(IsValidIndex_object__48539108, v6);
+    RecommendSupportSelectListViewObject__SetItem(IsValidIndex_object__48539108, v6);
   }
 }
 
@@ -382,15 +382,15 @@ void __fastcall RecommendSupportListViewManager___c___cctor(const MethodInfo *me
   int32_t v3; // w2
   int32_t v4; // w3
 
-  if ( (byte_4A04F6E & 1) == 0 )
+  if ( (byte_4A1BDCD & 1) == 0 )
   {
-    sub_1B686D4(&RecommendSupportListViewManager___c_TypeInfo, v1);
-    byte_4A04F6E = 1;
+    sub_1B715CC(&RecommendSupportListViewManager___c_TypeInfo, v1);
+    byte_4A1BDCD = 1;
   }
-  v2 = (Il2CppObject *)sub_1B68920(RecommendSupportListViewManager___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B71818(RecommendSupportListViewManager___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   RecommendSupportListViewManager___c_TypeInfo->static_fields->__9 = (struct RecommendSupportListViewManager___c_o *)v2;
-  sub_1B68678(
+  sub_1B71570(
     (ServantStatusBattleListViewItem_o *)RecommendSupportListViewManager___c_TypeInfo->static_fields,
     (int32_t)v2,
     v3,
@@ -412,7 +412,7 @@ void __fastcall RecommendSupportListViewManager___c___ClearItem_b__7_0(
         const MethodInfo *method)
 {
   if ( !obj )
-    sub_1B68930(this, 0LL);
+    sub_1B71828(this, 0LL);
   RecommendSupportSelectListViewObject__ClearItem(obj, (const MethodInfo *)obj);
 }
 
@@ -423,7 +423,7 @@ int32_t __fastcall RecommendSupportListViewManager___c___CreateList_b__9_0(
         const MethodInfo *method)
 {
   if ( !panel )
-    sub_1B68930(this, 0LL);
+    sub_1B71828(this, 0LL);
   return panel->fields.mDepth;
 }
 
@@ -437,7 +437,7 @@ void __fastcall RecommendSupportListViewManager___c___CreateList_b__9_1(
   const MethodInfo *v5; // x1
 
   if ( !obj )
-    sub_1B68930(this, index);
+    sub_1B71828(this, index);
   RecommendSupportSelectListViewObject__Init(obj, index, (const MethodInfo *)obj);
   RecommendSupportSelectListViewObject__SetItem(obj, v5);
 }
@@ -449,7 +449,7 @@ void __fastcall RecommendSupportListViewManager___c___SetItem_b__5_1(
         const MethodInfo *method)
 {
   if ( !obj )
-    sub_1B68930(this, 0LL);
+    sub_1B71828(this, 0LL);
   RecommendSupportSelectListViewObject__SetItem(obj, (const MethodInfo *)obj);
 }
 
@@ -478,13 +478,13 @@ void __fastcall RecommendSupportListViewManager___c__DisplayClass5_0___SetItem_b
   bool v12; // w20
 
   v6 = this;
-  if ( (byte_4A04F6F & 1) == 0 )
+  if ( (byte_4A1BDCE & 1) == 0 )
   {
-    sub_1B686D4(&System_Convert_TypeInfo, *(_QWORD *)&i);
-    this = (RecommendSupportListViewManager___c__DisplayClass5_0_o *)sub_1B686D4(
+    sub_1B715CC(&System_Convert_TypeInfo, *(_QWORD *)&i);
+    this = (RecommendSupportListViewManager___c__DisplayClass5_0_o *)sub_1B715CC(
                                                                        &Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__,
                                                                        v7);
-    byte_4A04F6F = 1;
+    byte_4A1BDCE = 1;
   }
   _4__this = v6->fields.__4__this;
   if ( !_4__this )
@@ -493,18 +493,18 @@ void __fastcall RecommendSupportListViewManager___c__DisplayClass5_0___SetItem_b
   if ( !cashedObjectPanelDepth )
     goto LABEL_14;
   if ( cashedObjectPanelDepth->max_length <= i )
-    sub_1B68938(this, *(_QWORD *)&i);
+    sub_1B71830(this, *(_QWORD *)&i);
   cashedEditMaskPanelDepth = _4__this->fields.cashedEditMaskPanelDepth;
   v11 = cashedObjectPanelDepth->m_Items[i + 1];
-  this = (RecommendSupportListViewManager___c__DisplayClass5_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  this = (RecommendSupportListViewManager___c__DisplayClass5_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !this )
     goto LABEL_14;
   v12 = *((_BYTE *)&this[3].fields.index + 4) && v6->fields.index == i;
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  this = (RecommendSupportListViewManager___c__DisplayClass5_0_o *)System_Convert__ToInt32_62041804(v12, 0LL);
+  this = (RecommendSupportListViewManager___c__DisplayClass5_0_o *)System_Convert__ToInt32_62127840(v12, 0LL);
   if ( !panel )
 LABEL_14:
-    sub_1B68930(this, *(_QWORD *)&i);
+    sub_1B71828(this, *(_QWORD *)&i);
   UIPanel__set_depth(panel, v11 + (_DWORD)this * cashedEditMaskPanelDepth, 0LL);
 }

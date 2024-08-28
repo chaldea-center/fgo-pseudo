@@ -1,13 +1,13 @@
 void __fastcall UserFriendRequestHistoryEntity___ctor(UserFriendRequestHistoryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A09943 & 1) == 0 )
+  if ( (byte_4A207BA & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataEntityBase_int___ctor__, method);
-    byte_4A09943 = 1;
+    sub_1B715CC(&Method_DataEntityBase_int___ctor__, method);
+    byte_4A207BA = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_30E42C0 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_30F8560 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -27,10 +27,10 @@ int64_t __fastcall UserFriendRequestHistoryEntity__getOtherUserId(
   int64_t v4; // x0
   __int64 v5; // x8
 
-  if ( (byte_4A09942 & 1) == 0 )
+  if ( (byte_4A207B9 & 1) == 0 )
   {
-    sub_1B686D4(&NetworkManager_TypeInfo, method);
-    byte_4A09942 = 1;
+    sub_1B715CC(&NetworkManager_TypeInfo, method);
+    byte_4A207B9 = 1;
   }
   userId = this->fields.userId;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )

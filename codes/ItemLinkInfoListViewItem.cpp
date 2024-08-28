@@ -19,32 +19,32 @@ void __fastcall ItemLinkInfoListViewItem___ctor(
   int32_t v17; // w2
   int32_t v18; // w3
 
-  if ( (byte_4A0AE87 & 1) == 0 )
+  if ( (byte_4A21C25 & 1) == 0 )
   {
-    sub_1B686D4(&StringLiteral_1/*""*/, *(_QWORD *)&index);
-    byte_4A0AE87 = 1;
+    sub_1B715CC(&StringLiteral_1/*""*/, *(_QWORD *)&index);
+    byte_4A21C25 = 1;
   }
-  ListViewItem___ctor_40440732((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_40493632((ListViewItem_o *)this, index, 0LL);
   v5 = (int)StringLiteral_1/*""*/;
   this->fields._IconName_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields._IconName_k__BackingField, v5, v6, v7);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields._IconName_k__BackingField, v5, v6, v7);
   v8 = (int)StringLiteral_1/*""*/;
   this->fields._Name_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields._Name_k__BackingField, v8, v9, v10);
-  this->fields._ItemDropEfficiencyPriority_k__BackingField = 0;
-  *(_WORD *)&this->fields._IsLocked_k__BackingField = 0;
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields._Name_k__BackingField, v8, v9, v10);
   this->fields._ItemEnt_k__BackingField = 0LL;
   *(_QWORD *)&this->fields._TargetId_k__BackingField = 0LL;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields._ItemEnt_k__BackingField, 0, v11, v12);
+  this->fields._ItemDropEfficiencyPriority_k__BackingField = 0;
+  *(int32_t *)((char *)&this->fields._ItemDropEfficiencyPriority_k__BackingField + 3) = 0;
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields._ItemEnt_k__BackingField, 0, v11, v12);
   this->fields._ItemNeedNum_k__BackingField = 0;
   this->fields._IsItemGetInfoList_k__BackingField = 0;
   v13 = (int)StringLiteral_1/*""*/;
   this->fields._ClosedMessage_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields._ClosedMessage_k__BackingField, v13, v14, v15);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields._ClosedMessage_k__BackingField, v13, v14, v15);
   this->fields._LinkAction_k__BackingField = 0LL;
   p_LinkAction_k__BackingField = &this->fields._LinkAction_k__BackingField;
   *((_DWORD *)p_LinkAction_k__BackingField + 2) = 0;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)p_LinkAction_k__BackingField, 0, v17, v18);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)p_LinkAction_k__BackingField, 0, v17, v18);
   *((_BYTE *)p_LinkAction_k__BackingField + 12) = 0;
 }
 
@@ -82,6 +82,14 @@ bool __fastcall ItemLinkInfoListViewItem__get_IsItemGetInfoList(
 bool __fastcall ItemLinkInfoListViewItem__get_IsLocked(ItemLinkInfoListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._IsLocked_k__BackingField;
+}
+
+
+bool __fastcall ItemLinkInfoListViewItem__get_IsNotDisplayQuestInfo(
+        ItemLinkInfoListViewItem_o *this,
+        const MethodInfo *method)
+{
+  return this->fields._IsNotDisplayQuestInfo_k__BackingField;
 }
 
 
@@ -171,7 +179,7 @@ void __fastcall ItemLinkInfoListViewItem__set_ClosedMessage(
   int32_t v3; // w3
 
   this->fields._ClosedMessage_k__BackingField = value;
-  sub_1B68678(
+  sub_1B71570(
     (ServantStatusBattleListViewItem_o *)&this->fields._ClosedMessage_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -187,7 +195,7 @@ void __fastcall ItemLinkInfoListViewItem__set_IconName(
   int32_t v3; // w3
 
   this->fields._IconName_k__BackingField = value;
-  sub_1B68678(
+  sub_1B71570(
     (ServantStatusBattleListViewItem_o *)&this->fields._IconName_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -222,6 +230,15 @@ void __fastcall ItemLinkInfoListViewItem__set_IsLocked(
 }
 
 
+void __fastcall ItemLinkInfoListViewItem__set_IsNotDisplayQuestInfo(
+        ItemLinkInfoListViewItem_o *this,
+        bool value,
+        const MethodInfo *method)
+{
+  this->fields._IsNotDisplayQuestInfo_k__BackingField = value;
+}
+
+
 void __fastcall ItemLinkInfoListViewItem__set_IsRecommend(
         ItemLinkInfoListViewItem_o *this,
         bool value,
@@ -248,7 +265,7 @@ void __fastcall ItemLinkInfoListViewItem__set_ItemEnt(
   int32_t v3; // w3
 
   this->fields._ItemEnt_k__BackingField = value;
-  sub_1B68678(
+  sub_1B71570(
     (ServantStatusBattleListViewItem_o *)&this->fields._ItemEnt_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -273,7 +290,7 @@ void __fastcall ItemLinkInfoListViewItem__set_LinkAction(
   int32_t v3; // w3
 
   this->fields._LinkAction_k__BackingField = value;
-  sub_1B68678(
+  sub_1B71570(
     (ServantStatusBattleListViewItem_o *)&this->fields._LinkAction_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -289,7 +306,7 @@ void __fastcall ItemLinkInfoListViewItem__set_Name(
   int32_t v3; // w3
 
   this->fields._Name_k__BackingField = value;
-  sub_1B68678(
+  sub_1B71570(
     (ServantStatusBattleListViewItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)value,
     (int32_t)method,

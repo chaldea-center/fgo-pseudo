@@ -1,9 +1,9 @@
 void __fastcall EventBoardGameTokenInfoDialog___ctor(EventBoardGameTokenInfoDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A0C8BC & 1) == 0 )
+  if ( (byte_4A23758 & 1) == 0 )
   {
-    sub_1B686D4(&BaseDialog_TypeInfo, method);
-    byte_4A0C8BC = 1;
+    sub_1B715CC(&BaseDialog_TypeInfo, method);
+    byte_4A23758 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -24,23 +24,23 @@ void __fastcall EventBoardGameTokenInfoDialog__Close(
   int32_t v10; // w3
   System_Action_o *v11; // x20
 
-  if ( (byte_4A0C8BB & 1) == 0 )
+  if ( (byte_4A23757 & 1) == 0 )
   {
-    sub_1B686D4(&System_Action_TypeInfo, callback);
-    sub_1B686D4(&Method_EventBoardGameTokenInfoDialog_Close__, v5);
-    sub_1B686D4(&Method_EventBoardGameTokenInfoDialog_EndClose__, v6);
-    byte_4A0C8BB = 1;
+    sub_1B715CC(&System_Action_TypeInfo, callback);
+    sub_1B715CC(&Method_EventBoardGameTokenInfoDialog_Close__, v5);
+    sub_1B715CC(&Method_EventBoardGameTokenInfoDialog_EndClose__, v6);
+    byte_4A23757 = 1;
   }
   if ( this->fields.state == 1 )
     this->fields.state = 0;
   v7 = Method_EventBoardGameTokenInfoDialog_Close__;
   if ( (*((_BYTE *)Method_EventBoardGameTokenInfoDialog_Close__ + 83) & 2) != 0 )
-    v7 = (_QWORD *)sub_1B686EC(Method_EventBoardGameTokenInfoDialog_Close__);
-  v8 = (System_Reflection_MethodBase_o *)sub_1B686B8(v7, v7[4]);
+    v7 = (_QWORD *)sub_1B715E4(Method_EventBoardGameTokenInfoDialog_Close__);
+  v8 = (System_Reflection_MethodBase_o *)sub_1B715B0(v7, v7[4]);
   OverwriteAssetSoundName__PlaySystemSe(v8, 1, 0LL);
   this->fields.closeCallbackFunc = callback;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, v9, v10);
-  v11 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, v9, v10);
+  v11 = (System_Action_o *)sub_1B71818(System_Action_TypeInfo);
   System_Action___ctor(v11, (Il2CppObject *)this, Method_EventBoardGameTokenInfoDialog_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v11, 0LL);
 }
@@ -60,7 +60,7 @@ void __fastcall EventBoardGameTokenInfoDialog__EndClose(
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B68930(0LL, v4);
+    sub_1B71828(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = (ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc;
@@ -68,7 +68,7 @@ void __fastcall EventBoardGameTokenInfoDialog__EndClose(
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1B68678(p_closeCallbackFunc, 0, v5, v6);
+    sub_1B71570(p_closeCallbackFunc, 0, v5, v6);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v8->fields.m_target)(
       v8->fields.original_method_info,
       *(_QWORD *)&v8->fields.extra_arg);
@@ -83,19 +83,19 @@ void __fastcall EventBoardGameTokenInfoDialog__Init(EventBoardGameTokenInfoDialo
   __int64 v5; // x1
   UILabel_o *tokenNameLabel; // x0
 
-  if ( (byte_4A0C8B9 & 1) == 0 )
+  if ( (byte_4A23755 & 1) == 0 )
   {
-    sub_1B686D4(&StringLiteral_1/*""*/, method);
-    byte_4A0C8B9 = 1;
+    sub_1B715CC(&StringLiteral_1/*""*/, method);
+    byte_4A23755 = 1;
   }
   this->fields.eventAtlas = 0LL;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.eventAtlas, 0, v2, v3);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.eventAtlas, 0, v2, v3);
   tokenNameLabel = this->fields.tokenNameLabel;
   if ( !tokenNameLabel
     || (UILabel__set_text(tokenNameLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (tokenNameLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1B68930(tokenNameLabel, v5);
+    sub_1B71828(tokenNameLabel, v5);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)tokenNameLabel, 0, 0LL);
   this->fields.state = 0;
@@ -113,11 +113,11 @@ void __fastcall EventBoardGameTokenInfoDialog__OpenInfo(
   __int64 v7; // x1
   const MethodInfo *v8; // x3
 
-  if ( (byte_4A0C8BA & 1) == 0 )
+  if ( (byte_4A23756 & 1) == 0 )
   {
-    sub_1B686D4(&Method_UnityEngine_GameObject_GetComponentInChildren_EventBoardGameTokenItem___, item);
-    sub_1B686D4(&StringLiteral_23893/*"token_balloon"*/, v5);
-    byte_4A0C8BA = 1;
+    sub_1B715CC(&Method_UnityEngine_GameObject_GetComponentInChildren_EventBoardGameTokenItem___, item);
+    sub_1B715CC(&StringLiteral_23917/*"token_balloon"*/, v5);
+    byte_4A23756 = 1;
   }
   if ( !this->fields.state )
   {
@@ -129,16 +129,16 @@ void __fastcall EventBoardGameTokenInfoDialog__OpenInfo(
     if ( !gameObject
       || (UISprite__set_atlas((UISprite_o *)gameObject, this->fields.eventAtlas, 0LL),
           (gameObject = (UnityEngine_GameObject_o *)this->fields.bgImage) == 0LL)
-      || (UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)StringLiteral_23893/*"token_balloon"*/, 0LL), !item)
+      || (UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)StringLiteral_23917/*"token_balloon"*/, 0LL), !item)
       || (gameObject = (UnityEngine_GameObject_o *)this->fields.tokenNameLabel) == 0LL
       || (UILabel__set_text((UILabel_o *)gameObject, item->fields.tokenName, 0LL),
           (gameObject = this->fields.tokenPrefab) == 0LL)
       || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponentInChildren_object_(
                                                      gameObject,
-                                                     (const MethodInfo_2E98BB4 *)Method_UnityEngine_GameObject_GetComponentInChildren_EventBoardGameTokenItem___)) == 0LL )
+                                                     (const MethodInfo_2EAABFC *)Method_UnityEngine_GameObject_GetComponentInChildren_EventBoardGameTokenItem___)) == 0LL )
     {
 LABEL_12:
-      sub_1B68930(gameObject, v7);
+      sub_1B71828(gameObject, v7);
     }
     EventBoardGameTokenItem__SetTokenInfo((EventBoardGameTokenItem_o *)gameObject, item, 1, v8);
     this->fields.state = 1;

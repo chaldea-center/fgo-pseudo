@@ -15,6 +15,6 @@ void __fastcall PlayFieldMotionBattleLogicTask___ctor(
   v5->fields.motionName = motionName;
   v5 = (PlayFieldMotionBattleLogicTask_o *)((char *)v5 + 104);
   v5[-1].fields._AiTimingPriority_k__BackingField = 44;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)v5, (int32_t)motionName, v7, v8);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)v5, (int32_t)motionName, v7, v8);
   LOBYTE(v5->fields.command) = v6;
 }

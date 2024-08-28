@@ -8,10 +8,10 @@ void __fastcall EventInfoUISpriteControl__Initialization(
   System_String_o *v6; // x21
 
   v4 = this;
-  if ( (byte_4A0AE19 & 1) == 0 )
+  if ( (byte_4A21BB7 & 1) == 0 )
   {
-    this = (EventInfoUISpriteControl_o *)sub_1B686D4(&AtlasManager_TypeInfo, entity);
-    byte_4A0AE19 = 1;
+    this = (EventInfoUISpriteControl_o *)sub_1B715CC(&AtlasManager_TypeInfo, entity);
+    byte_4A21BB7 = 1;
   }
   if ( !entity )
     goto LABEL_8;
@@ -23,7 +23,7 @@ void __fastcall EventInfoUISpriteControl__Initialization(
   this = (EventInfoUISpriteControl_o *)v4->fields.mainSprite;
   if ( !this )
 LABEL_8:
-    sub_1B68930(this, entity);
+    sub_1B71828(this, entity);
   (*(void (__fastcall **)(EventInfoUISpriteControl_o *, _QWORD))&this->klass[1]._2.field_count)(
     this,
     *(_QWORD *)&this->klass[1]._2.interfaces_count);

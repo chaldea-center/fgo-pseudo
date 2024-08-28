@@ -6,17 +6,17 @@ void __fastcall UpdateViewIntervalBuffActionData___ctor(
   int32_t v5; // w2
   int32_t v6; // w3
 
-  if ( (byte_4A0ADBE & 1) == 0 )
+  if ( (byte_4A21D2D & 1) == 0 )
   {
-    sub_1B686D4(&BattleActionData_TypeInfo, actData);
-    byte_4A0ADBE = 1;
+    sub_1B715CC(&BattleActionData_TypeInfo, actData);
+    byte_4A21D2D = 1;
   }
   if ( !BattleActionData_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleActionData_TypeInfo);
   BattleActionData___ctor((BattleActionData_o *)this, (const MethodInfo *)actData);
   this->fields.state = 7;
   this->fields.targetActionData = actData;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.targetActionData, (int32_t)actData, v5, v6);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.targetActionData, (int32_t)actData, v5, v6);
 }
 
 

@@ -11,7 +11,7 @@ void __fastcall NotificationPluginScript__ClearAll(const MethodInfo *method)
 
   v1 = NotificationPluginScript__Setup(method);
   if ( !v1 )
-    sub_1B68930(0LL, v2);
+    sub_1B71828(0LL, v2);
   ((void (__fastcall *)(LocalNotificationService_o *, void *))v1->klass->vtable._6_CancelAll.method)(
     v1,
     v1->klass[1]._1.image);
@@ -25,7 +25,7 @@ void __fastcall NotificationPluginScript__ClearLocalNotification(System_String_o
 
   v3 = NotificationPluginScript__Setup((const MethodInfo *)key);
   if ( !v3 )
-    sub_1B68930(0LL, v4);
+    sub_1B71828(0LL, v4);
   ((void (__fastcall *)(LocalNotificationService_o *, System_String_o *, Il2CppMethodPointer))v3->klass->vtable._5_Cancel.method)(
     v3,
     key,
@@ -45,7 +45,7 @@ void __fastcall NotificationPluginScript__SetLocalNotification(
 
   v7 = NotificationPluginScript__Setup(*(const MethodInfo **)&interval);
   if ( !v7 )
-    sub_1B68930(0LL, v8);
+    sub_1B71828(0LL, v8);
   ((void (__fastcall *)(LocalNotificationService_o *, System_String_o *, System_String_o *, _QWORD, Il2CppMethodPointer))v7->klass->vtable._4_Schedule.method)(
     v7,
     key,
@@ -65,19 +65,19 @@ LocalNotificationService_o *__fastcall NotificationPluginScript__Setup(const Met
   int32_t v6; // w2
   int32_t v7; // w3
 
-  if ( (byte_4A0A31D & 1) == 0 )
+  if ( (byte_4A2125B & 1) == 0 )
   {
-    sub_1B686D4(&LocalNotificationServiceAndroid_TypeInfo, v1);
-    sub_1B686D4(&NotificationPluginScript_TypeInfo, v2);
-    byte_4A0A31D = 1;
+    sub_1B715CC(&LocalNotificationServiceAndroid_TypeInfo, v1);
+    sub_1B715CC(&NotificationPluginScript_TypeInfo, v2);
+    byte_4A2125B = 1;
   }
   result = NotificationPluginScript_TypeInfo->static_fields->_service;
   if ( !result )
   {
-    v4 = (LocalNotificationServiceAndroid_o *)sub_1B68920(LocalNotificationServiceAndroid_TypeInfo);
+    v4 = (LocalNotificationServiceAndroid_o *)sub_1B71818(LocalNotificationServiceAndroid_TypeInfo);
     LocalNotificationServiceAndroid___ctor(v4, v5);
     NotificationPluginScript_TypeInfo->static_fields->_service = (struct LocalNotificationService_o *)v4;
-    sub_1B68678(
+    sub_1B71570(
       (ServantStatusBattleListViewItem_o *)NotificationPluginScript_TypeInfo->static_fields,
       (int32_t)v4,
       v6,

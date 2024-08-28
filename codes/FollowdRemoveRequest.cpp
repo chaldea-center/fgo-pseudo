@@ -6,12 +6,12 @@ void __fastcall FollowdRemoveRequest__beginRequest(
   const MethodInfo *v3; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4A0A511 & 1) == 0 )
+  if ( (byte_4A21386 & 1) == 0 )
   {
-    sub_1B686D4(&StringLiteral_19427/*"followId"*/, followId);
-    byte_4A0A511 = 1;
+    sub_1B715CC(&StringLiteral_19445/*"followId"*/, followId);
+    byte_4A21386 = 1;
   }
-  RequestBase__addField_40919284((RequestBase_o *)this, (System_String_o *)StringLiteral_19427/*"followId"*/, followId, v3);
+  RequestBase__addField_40922716((RequestBase_o *)this, (System_String_o *)StringLiteral_19445/*"followId"*/, followId, v3);
   RequestBase__beginRequest((RequestBase_o *)this, v6);
 }
 
@@ -21,16 +21,16 @@ System_String_o *__fastcall FollowdRemoveRequest__getURL(FollowdRemoveRequest_o 
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A0A510 & 1) == 0 )
+  if ( (byte_4A21385 & 1) == 0 )
   {
-    sub_1B686D4(&NetworkManager_TypeInfo, method);
-    sub_1B686D4(&StringLiteral_19426/*"follow/remove"*/, v2);
-    byte_4A0A510 = 1;
+    sub_1B715CC(&NetworkManager_TypeInfo, method);
+    sub_1B715CC(&StringLiteral_19444/*"follow/remove"*/, v2);
+    byte_4A21385 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61419468(BaseUrl, (System_String_o *)StringLiteral_19426/*"follow/remove"*/, 0LL);
+  return System_String__Concat_61505504(BaseUrl, (System_String_o *)StringLiteral_19444/*"follow/remove"*/, 0LL);
 }
 
 
@@ -49,12 +49,12 @@ void __fastcall FollowdRemoveRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v13; // x8
 
-  if ( (byte_4A0A512 & 1) == 0 )
+  if ( (byte_4A21387 & 1) == 0 )
   {
-    sub_1B686D4(&JsonManager_TypeInfo, responseList);
-    sub_1B686D4(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B686D4(&StringLiteral_21981/*"ng"*/, v6);
-    byte_4A0A512 = 1;
+    sub_1B715CC(&JsonManager_TypeInfo, responseList);
+    sub_1B715CC(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B715CC(&StringLiteral_22000/*"ng"*/, v6);
+    byte_4A21387 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -78,7 +78,7 @@ void __fastcall FollowdRemoveRequest__requestCompleted(
     if ( v13 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v13->fields.m_target)(
         v13->fields.original_method_info,
-        StringLiteral_21981/*"ng"*/,
+        StringLiteral_22000/*"ng"*/,
         *(_QWORD *)&v13->fields.extra_arg);
   }
 }

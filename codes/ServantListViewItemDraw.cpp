@@ -35,17 +35,17 @@ void __fastcall ServantListViewItemDraw__SetInput(
   UISprite_o *v29; // x21
   UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A05059 & 1) == 0 )
+  if ( (byte_4A1BEB8 & 1) == 0 )
   {
-    sub_1B686D4(&AtlasManager_TypeInfo, item);
-    sub_1B686D4(&Method_UnityEngine_Component_GetComponent_Collider___, v7);
-    sub_1B686D4(&LocalizationManager_TypeInfo, v8);
-    sub_1B686D4(&UnityEngine_Object_TypeInfo, v9);
-    sub_1B686D4(&StringLiteral_22857/*"ribbon_noblephantasmup_01"*/, v10);
-    sub_1B686D4(&StringLiteral_11446/*"SELECT_CANNOT"*/, v11);
-    sub_1B686D4(&StringLiteral_11470/*"SELECT_SERVANT_EVENT_JOIN"*/, v12);
-    sub_1B686D4(&StringLiteral_1/*""*/, v13);
-    byte_4A05059 = 1;
+    sub_1B715CC(&AtlasManager_TypeInfo, item);
+    sub_1B715CC(&Method_UnityEngine_Component_GetComponent_Collider___, v7);
+    sub_1B715CC(&LocalizationManager_TypeInfo, v8);
+    sub_1B715CC(&UnityEngine_Object_TypeInfo, v9);
+    sub_1B715CC(&StringLiteral_22879/*"ribbon_noblephantasmup_01"*/, v10);
+    sub_1B715CC(&StringLiteral_11455/*"SELECT_CANNOT"*/, v11);
+    sub_1B715CC(&StringLiteral_11479/*"SELECT_SERVANT_EVENT_JOIN"*/, v12);
+    sub_1B715CC(&StringLiteral_1/*""*/, v13);
+    byte_4A1BEB8 = 1;
   }
   if ( !item )
     return;
@@ -59,7 +59,7 @@ void __fastcall ServantListViewItemDraw__SetInput(
       goto LABEL_72;
     Component_object = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                     Component_object,
-                                                    (const MethodInfo_2E407F4 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                    (const MethodInfo_2E51E8C *)Method_UnityEngine_Component_GetComponent_Collider___);
     if ( !Component_object )
       goto LABEL_72;
     UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0LL);
@@ -164,7 +164,7 @@ void __fastcall ServantListViewItemDraw__SetInput(
       if ( item->fields.isEventJoin )
       {
 LABEL_42:
-        v25 = &StringLiteral_11470/*"SELECT_SERVANT_EVENT_JOIN"*/;
+        v25 = &StringLiteral_11479/*"SELECT_SERVANT_EVENT_JOIN"*/;
 LABEL_50:
         Component_object = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)*v25, 0LL);
         if ( !warningLabel )
@@ -182,7 +182,7 @@ LABEL_52:
       if ( isEventJoin )
         goto LABEL_42;
     }
-    v25 = &StringLiteral_11446/*"SELECT_CANNOT"*/;
+    v25 = &StringLiteral_11455/*"SELECT_CANNOT"*/;
     goto LABEL_50;
   }
 LABEL_53:
@@ -220,7 +220,7 @@ LABEL_53:
       v29 = this->fields.materialTdSprite;
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      AtlasManager__SetEventSprite(v29, (System_String_o *)StringLiteral_22857/*"ribbon_noblephantasmup_01"*/, 0LL);
+      AtlasManager__SetEventSprite(v29, (System_String_o *)StringLiteral_22879/*"ribbon_noblephantasmup_01"*/, 0LL);
       if ( item->fields.isNeedAdjustIconLabelScale )
       {
         Component_object = (UnityEngine_Component_o *)this->fields.servantFaceIcon;
@@ -233,7 +233,7 @@ LABEL_53:
           return;
         }
 LABEL_72:
-        sub_1B68930(Component_object, v15);
+        sub_1B71828(Component_object, v15);
       }
     }
   }
@@ -276,18 +276,18 @@ void __fastcall ServantListViewItemDraw__SetItem(
   UISprite_o *v34; // x21
   UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A05058 & 1) == 0 )
+  if ( (byte_4A1BEB7 & 1) == 0 )
   {
-    sub_1B686D4(&AtlasManager_TypeInfo, item);
-    sub_1B686D4(&LocalizationManager_TypeInfo, v7);
-    sub_1B686D4(&UnityEngine_Object_TypeInfo, v8);
-    sub_1B686D4(&StringLiteral_22857/*"ribbon_noblephantasmup_01"*/, v9);
-    sub_1B686D4(&StringLiteral_11446/*"SELECT_CANNOT"*/, v10);
-    sub_1B686D4(&StringLiteral_11470/*"SELECT_SERVANT_EVENT_JOIN"*/, v11);
-    sub_1B686D4(&StringLiteral_20070/*"icon_equip"*/, v12);
-    sub_1B686D4(&StringLiteral_1/*""*/, v13);
-    sub_1B686D4(&StringLiteral_20071/*"icon_equip_cc"*/, v14);
-    byte_4A05058 = 1;
+    sub_1B715CC(&AtlasManager_TypeInfo, item);
+    sub_1B715CC(&LocalizationManager_TypeInfo, v7);
+    sub_1B715CC(&UnityEngine_Object_TypeInfo, v8);
+    sub_1B715CC(&StringLiteral_22879/*"ribbon_noblephantasmup_01"*/, v9);
+    sub_1B715CC(&StringLiteral_11455/*"SELECT_CANNOT"*/, v10);
+    sub_1B715CC(&StringLiteral_11479/*"SELECT_SERVANT_EVENT_JOIN"*/, v11);
+    sub_1B715CC(&StringLiteral_20088/*"icon_equip"*/, v12);
+    sub_1B715CC(&StringLiteral_1/*""*/, v13);
+    sub_1B715CC(&StringLiteral_20089/*"icon_equip_cc"*/, v14);
+    byte_4A1BEB7 = 1;
   }
   if ( !item || !mode )
     return;
@@ -297,7 +297,7 @@ void __fastcall ServantListViewItemDraw__SetItem(
   {
     if ( !servantFaceIcon )
       goto LABEL_91;
-    ServantFaceIconComponent__Set_37973600(
+    ServantFaceIconComponent__Set_38021480(
       servantFaceIcon,
       userCommandCodeEntity,
       item->fields.iconLabelInfo1,
@@ -308,7 +308,7 @@ void __fastcall ServantListViewItemDraw__SetItem(
   {
     if ( !servantFaceIcon )
       goto LABEL_91;
-    ServantFaceIconComponent__Set_37966888(
+    ServantFaceIconComponent__Set_38014768(
       servantFaceIcon,
       item->fields.userSvtEntity,
       item->fields.iconLabelInfo1,
@@ -335,7 +335,7 @@ void __fastcall ServantListViewItemDraw__SetItem(
       if ( !v18 )
         goto LABEL_91;
     }
-    FlashingIconComponent__Set_37873576(v18, (bool)userCommandCodeEntity, 0LL);
+    FlashingIconComponent__Set_37921456(v18, (bool)userCommandCodeEntity, 0LL);
   }
   useSprite = (UnityEngine_Object_o *)this->fields.useSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -358,9 +358,9 @@ void __fastcall ServantListViewItemDraw__SetItem(
       if ( !servantFaceIcon )
         goto LABEL_91;
       if ( item->fields.userCommandCodeEntity )
-        v21 = &StringLiteral_20071/*"icon_equip_cc"*/;
+        v21 = &StringLiteral_20089/*"icon_equip_cc"*/;
       else
-        v21 = &StringLiteral_20070/*"icon_equip"*/;
+        v21 = &StringLiteral_20088/*"icon_equip"*/;
       UISprite__set_spriteName((UISprite_o *)servantFaceIcon, (System_String_o *)*v21, 0LL);
     }
     else
@@ -468,7 +468,7 @@ void __fastcall ServantListViewItemDraw__SetItem(
       if ( item->fields.isEventJoin )
       {
 LABEL_61:
-        v30 = &StringLiteral_11470/*"SELECT_SERVANT_EVENT_JOIN"*/;
+        v30 = &StringLiteral_11479/*"SELECT_SERVANT_EVENT_JOIN"*/;
 LABEL_69:
         servantFaceIcon = (ServantFaceIconComponent_o *)LocalizationManager__Get((System_String_o *)*v30, 0LL);
         if ( !warningLabel )
@@ -486,7 +486,7 @@ LABEL_71:
       if ( isEventJoin )
         goto LABEL_61;
     }
-    v30 = &StringLiteral_11446/*"SELECT_CANNOT"*/;
+    v30 = &StringLiteral_11455/*"SELECT_CANNOT"*/;
     goto LABEL_69;
   }
 LABEL_72:
@@ -521,7 +521,7 @@ LABEL_72:
                                                           0LL)) == 0LL )
   {
 LABEL_91:
-    sub_1B68930(servantFaceIcon, userCommandCodeEntity);
+    sub_1B71828(servantFaceIcon, userCommandCodeEntity);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, item->fields.isMaterialTdSvt, 0LL);
   if ( item->fields.isMaterialTdSvt )
@@ -529,7 +529,7 @@ LABEL_91:
     v34 = this->fields.materialTdSprite;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetEventSprite(v34, (System_String_o *)StringLiteral_22857/*"ribbon_noblephantasmup_01"*/, 0LL);
+    AtlasManager__SetEventSprite(v34, (System_String_o *)StringLiteral_22879/*"ribbon_noblephantasmup_01"*/, 0LL);
     if ( item->fields.isNeedAdjustIconLabelScale )
     {
       servantFaceIcon = this->fields.servantFaceIcon;

@@ -2,10 +2,10 @@ void __fastcall EventTradeSweetsWithdrawalConfirmDialogComponent___ctor(
         EventTradeSweetsWithdrawalConfirmDialogComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A0CF92 & 1) == 0 )
+  if ( (byte_4A23E2E & 1) == 0 )
   {
-    sub_1B686D4(&BaseDialog_TypeInfo, method);
-    byte_4A0CF92 = 1;
+    sub_1B715CC(&BaseDialog_TypeInfo, method);
+    byte_4A23E2E = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -27,7 +27,7 @@ void __fastcall EventTradeSweetsWithdrawalConfirmDialogComponent__CallOnDecide(
   {
     p_onDecide = (ServantStatusBattleListViewItem_o *)&this->fields.onDecide;
     p_onDecide->klass = 0LL;
-    sub_1B68678(p_onDecide, 0, (int32_t)method, v3);
+    sub_1B71570(p_onDecide, 0, (int32_t)method, v3);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, bool, _QWORD))onDecide->fields.m_target)(
       onDecide->fields.original_method_info,
       result,
@@ -43,14 +43,14 @@ void __fastcall EventTradeSweetsWithdrawalConfirmDialogComponent__Close(
   __int64 v3; // x1
   System_Action_o *v4; // x20
 
-  if ( (byte_4A0CF90 & 1) == 0 )
+  if ( (byte_4A23E2C & 1) == 0 )
   {
-    sub_1B686D4(&System_Action_TypeInfo, method);
-    sub_1B686D4(&Method_EventTradeSweetsWithdrawalConfirmDialogComponent__Close_b__45_0__, v3);
-    byte_4A0CF90 = 1;
+    sub_1B715CC(&System_Action_TypeInfo, method);
+    sub_1B715CC(&Method_EventTradeSweetsWithdrawalConfirmDialogComponent__Close_b__45_0__, v3);
+    byte_4A23E2C = 1;
   }
   this->fields.state = 4;
-  v4 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1B71818(System_Action_TypeInfo);
   System_Action___ctor(
     v4,
     (Il2CppObject *)this,
@@ -81,12 +81,12 @@ void __fastcall EventTradeSweetsWithdrawalConfirmDialogComponent__Init(
   EventTradeListViewItemManager__CheckIsSerializeFieldNotNull((Il2CppObject *)this, 0LL);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B68930(0LL, v6);
+    sub_1B71828(0LL, v6);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   this->fields.state = 0;
   this->fields.eventId = eventId;
   this->fields.tradeGoodsEntity = 0LL;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.tradeGoodsEntity, 0, v7, v8);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.tradeGoodsEntity, 0, v7, v8);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
 
@@ -99,18 +99,18 @@ void __fastcall EventTradeSweetsWithdrawalConfirmDialogComponent__OnClickCancel(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4A0CF8F & 1) == 0 )
+  if ( (byte_4A23E2B & 1) == 0 )
   {
-    sub_1B686D4(&Method_EventTradeSweetsWithdrawalConfirmDialogComponent_OnClickCancel__, method);
-    byte_4A0CF8F = 1;
+    sub_1B715CC(&Method_EventTradeSweetsWithdrawalConfirmDialogComponent_OnClickCancel__, method);
+    byte_4A23E2B = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_EventTradeSweetsWithdrawalConfirmDialogComponent_OnClickCancel__;
     if ( (*((_BYTE *)Method_EventTradeSweetsWithdrawalConfirmDialogComponent_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B686EC(Method_EventTradeSweetsWithdrawalConfirmDialogComponent_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B686B8(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B715E4(Method_EventTradeSweetsWithdrawalConfirmDialogComponent_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B715B0(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     EventTradeSweetsWithdrawalConfirmDialogComponent__Close(this, v5);
   }
@@ -125,18 +125,18 @@ void __fastcall EventTradeSweetsWithdrawalConfirmDialogComponent__OnClickDecide(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4A0CF8E & 1) == 0 )
+  if ( (byte_4A23E2A & 1) == 0 )
   {
-    sub_1B686D4(&Method_EventTradeSweetsWithdrawalConfirmDialogComponent_OnClickDecide__, method);
-    byte_4A0CF8E = 1;
+    sub_1B715CC(&Method_EventTradeSweetsWithdrawalConfirmDialogComponent_OnClickDecide__, method);
+    byte_4A23E2A = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_EventTradeSweetsWithdrawalConfirmDialogComponent_OnClickDecide__;
     if ( (*((_BYTE *)Method_EventTradeSweetsWithdrawalConfirmDialogComponent_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B686EC(Method_EventTradeSweetsWithdrawalConfirmDialogComponent_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B686B8(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B715E4(Method_EventTradeSweetsWithdrawalConfirmDialogComponent_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B715B0(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     EventTradeSweetsWithdrawalConfirmDialogComponent__CallOnDecide(this, 1, v5);
   }
@@ -152,17 +152,17 @@ void __fastcall EventTradeSweetsWithdrawalConfirmDialogComponent__Open(
   __int64 v7; // x1
   System_Action_o *v8; // x20
 
-  if ( (byte_4A0CF8A & 1) == 0 )
+  if ( (byte_4A23E26 & 1) == 0 )
   {
-    sub_1B686D4(&System_Action_TypeInfo, item);
-    sub_1B686D4(&Method_EventTradeSweetsWithdrawalConfirmDialogComponent_EndOpen__, v7);
-    byte_4A0CF8A = 1;
+    sub_1B715CC(&System_Action_TypeInfo, item);
+    sub_1B715CC(&Method_EventTradeSweetsWithdrawalConfirmDialogComponent_EndOpen__, v7);
+    byte_4A23E26 = 1;
   }
   if ( !this->fields.state )
   {
     EventTradeSweetsWithdrawalConfirmDialogComponent__SetUp(this, item, onDecide, method);
     this->fields.state = 1;
-    v8 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
+    v8 = (System_Action_o *)sub_1B71818(System_Action_TypeInfo);
     System_Action___ctor(
       v8,
       (Il2CppObject *)this,
@@ -239,15 +239,15 @@ void __fastcall EventTradeSweetsWithdrawalConfirmDialogComponent__SetExchangeBas
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A0CF8C & 1) == 0 )
+  if ( (byte_4A23E28 & 1) == 0 )
   {
-    sub_1B686D4(&AtlasManager_TypeInfo, method);
-    sub_1B686D4(&Method_DataManager_GetMaster_UserItemMaster___, v3);
-    sub_1B686D4(&DataManager_TypeInfo, v4);
-    sub_1B686D4(&LocalizationManager_TypeInfo, v5);
-    sub_1B686D4(&NetworkManager_TypeInfo, v6);
-    sub_1B686D4(&StringLiteral_13348/*"TRADE_EVENT_WITHDRAWAL_DIALOG_COUNT_KIND"*/, v7);
-    byte_4A0CF8C = 1;
+    sub_1B715CC(&AtlasManager_TypeInfo, method);
+    sub_1B715CC(&Method_DataManager_GetMaster_UserItemMaster___, v3);
+    sub_1B715CC(&DataManager_TypeInfo, v4);
+    sub_1B715CC(&LocalizationManager_TypeInfo, v5);
+    sub_1B715CC(&NetworkManager_TypeInfo, v6);
+    sub_1B715CC(&StringLiteral_13363/*"TRADE_EVENT_WITHDRAWAL_DIALOG_COUNT_KIND"*/, v7);
+    byte_4A23E28 = 1;
   }
   exchangeOriginLb = (int64_t)this->fields.exchangeOriginLb;
   if ( !exchangeOriginLb )
@@ -260,7 +260,7 @@ void __fastcall EventTradeSweetsWithdrawalConfirmDialogComponent__SetExchangeBas
   z = localPosition.fields.z;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  exchangeOriginLb = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2E49CFC *)Method_DataManager_GetMaster_UserItemMaster___);
+  exchangeOriginLb = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2E5B394 *)Method_DataManager_GetMaster_UserItemMaster___);
   exchangeOriginItemList = this->fields.exchangeOriginItemList;
   if ( !exchangeOriginItemList )
     goto LABEL_67;
@@ -293,7 +293,7 @@ LABEL_61:
           break;
         if ( v27 >= exchangeOriginItemIcon2->max_length || v27 >= (unsigned int)v12 )
 LABEL_68:
-          sub_1B68938(exchangeOriginLb, method);
+          sub_1B71830(exchangeOriginLb, method);
         v29 = exchangeOriginItemList->m_Items[v27];
         if ( !v29 )
           break;
@@ -341,7 +341,7 @@ LABEL_68:
         if ( v27 >= exchangeOriginCountKinds2->max_length )
           goto LABEL_68;
         v38 = exchangeOriginCountKinds2->m_Items[v27];
-        exchangeOriginLb = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13348/*"TRADE_EVENT_WITHDRAWAL_DIALOG_COUNT_KIND"*/, 0LL);
+        exchangeOriginLb = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13363/*"TRADE_EVENT_WITHDRAWAL_DIALOG_COUNT_KIND"*/, 0LL);
         if ( !v38 )
           break;
         UILabel__set_text(v38, (System_String_o *)exchangeOriginLb, 0LL);
@@ -354,7 +354,7 @@ LABEL_68:
       }
     }
 LABEL_67:
-    sub_1B68930(exchangeOriginLb, method);
+    sub_1B71828(exchangeOriginLb, method);
   }
   v14 = 0;
   do
@@ -407,7 +407,7 @@ LABEL_67:
     if ( v14 >= exchangeOriginCountKinds->max_length )
       goto LABEL_68;
     v25 = exchangeOriginCountKinds->m_Items[v14];
-    exchangeOriginLb = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13348/*"TRADE_EVENT_WITHDRAWAL_DIALOG_COUNT_KIND"*/, 0LL);
+    exchangeOriginLb = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13363/*"TRADE_EVENT_WITHDRAWAL_DIALOG_COUNT_KIND"*/, 0LL);
     if ( !v25 )
       goto LABEL_67;
     UILabel__set_text(v25, (System_String_o *)exchangeOriginLb, 0LL);
@@ -494,15 +494,15 @@ void __fastcall EventTradeSweetsWithdrawalConfirmDialogComponent__SetExchangeBas
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v49; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A0CF8D & 1) == 0 )
+  if ( (byte_4A23E29 & 1) == 0 )
   {
-    sub_1B686D4(&AtlasManager_TypeInfo, *(_QWORD *)&completeNum);
-    sub_1B686D4(&Method_DataManager_GetMaster_UserItemMaster___, v5);
-    sub_1B686D4(&DataManager_TypeInfo, v6);
-    sub_1B686D4(&LocalizationManager_TypeInfo, v7);
-    sub_1B686D4(&NetworkManager_TypeInfo, v8);
-    sub_1B686D4(&StringLiteral_13348/*"TRADE_EVENT_WITHDRAWAL_DIALOG_COUNT_KIND"*/, v9);
-    byte_4A0CF8D = 1;
+    sub_1B715CC(&AtlasManager_TypeInfo, *(_QWORD *)&completeNum);
+    sub_1B715CC(&Method_DataManager_GetMaster_UserItemMaster___, v5);
+    sub_1B715CC(&DataManager_TypeInfo, v6);
+    sub_1B715CC(&LocalizationManager_TypeInfo, v7);
+    sub_1B715CC(&NetworkManager_TypeInfo, v8);
+    sub_1B715CC(&StringLiteral_13363/*"TRADE_EVENT_WITHDRAWAL_DIALOG_COUNT_KIND"*/, v9);
+    byte_4A23E29 = 1;
   }
   exchangeOriginLbAfter = (int64_t)this->fields.exchangeOriginLbAfter;
   if ( !exchangeOriginLbAfter )
@@ -517,7 +517,7 @@ void __fastcall EventTradeSweetsWithdrawalConfirmDialogComponent__SetExchangeBas
   z = localPosition.fields.z;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  exchangeOriginLbAfter = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2E49CFC *)Method_DataManager_GetMaster_UserItemMaster___);
+  exchangeOriginLbAfter = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2E5B394 *)Method_DataManager_GetMaster_UserItemMaster___);
   exchangeOriginItemList = this->fields.exchangeOriginItemList;
   if ( !exchangeOriginItemList )
     goto LABEL_73;
@@ -550,7 +550,7 @@ LABEL_67:
           break;
         if ( v32 >= exchangeOriginItemIcon2After->max_length || v32 >= (unsigned int)v14 )
 LABEL_74:
-          sub_1B68938(exchangeOriginLbAfter, *(_QWORD *)&completeNum);
+          sub_1B71830(exchangeOriginLbAfter, *(_QWORD *)&completeNum);
         v34 = exchangeOriginItemList->m_Items[v32];
         if ( !v34 )
           break;
@@ -607,7 +607,7 @@ LABEL_74:
         if ( v32 >= exchangeOriginCountKinds2After->max_length )
           goto LABEL_74;
         v46 = exchangeOriginCountKinds2After->m_Items[v32];
-        exchangeOriginLbAfter = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13348/*"TRADE_EVENT_WITHDRAWAL_DIALOG_COUNT_KIND"*/, 0LL);
+        exchangeOriginLbAfter = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13363/*"TRADE_EVENT_WITHDRAWAL_DIALOG_COUNT_KIND"*/, 0LL);
         if ( !v46 )
           break;
         UILabel__set_text(v46, (System_String_o *)exchangeOriginLbAfter, 0LL);
@@ -620,7 +620,7 @@ LABEL_74:
       }
     }
 LABEL_73:
-    sub_1B68930(exchangeOriginLbAfter, *(_QWORD *)&completeNum);
+    sub_1B71828(exchangeOriginLbAfter, *(_QWORD *)&completeNum);
   }
   v16 = 0;
   do
@@ -686,7 +686,7 @@ LABEL_73:
     if ( v16 >= exchangeOriginCountKindsAfter->max_length )
       goto LABEL_74;
     v30 = exchangeOriginCountKindsAfter->m_Items[v16];
-    exchangeOriginLbAfter = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13348/*"TRADE_EVENT_WITHDRAWAL_DIALOG_COUNT_KIND"*/, 0LL);
+    exchangeOriginLbAfter = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13363/*"TRADE_EVENT_WITHDRAWAL_DIALOG_COUNT_KIND"*/, 0LL);
     if ( !v30 )
       goto LABEL_73;
     UILabel__set_text(v30, (System_String_o *)exchangeOriginLbAfter, 0LL);
@@ -763,33 +763,33 @@ void __fastcall EventTradeSweetsWithdrawalConfirmDialogComponent__SetUp(
   int32_t v37; // w21
 
   v6 = this;
-  if ( (byte_4A0CF8B & 1) == 0 )
+  if ( (byte_4A23E27 & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataManager_GetMaster_CommonConsumeMaster___, item);
-    sub_1B686D4(&DataManager_TypeInfo, v7);
-    sub_1B686D4(&LocalizationManager_TypeInfo, v8);
-    sub_1B686D4(&StringLiteral_13347/*"TRADE_EVENT_WITHDRAWAL_DIALOG_BEFORE_LABEL"*/, v9);
-    sub_1B686D4(&StringLiteral_13352/*"TRADE_EVENT_WITHDRAWAL_DIALOG_RETURN_ITEMS_NONE"*/, v10);
-    sub_1B686D4(&StringLiteral_13353/*"TRADE_EVENT_WITHDRAWAL_DIALOG_TITLE"*/, v11);
-    sub_1B686D4(&StringLiteral_3731/*"COMMON_CONFIRM_CANCEL"*/, v12);
-    sub_1B686D4(&StringLiteral_13350/*"TRADE_EVENT_WITHDRAWAL_DIALOG_MESSAGE"*/, v13);
-    sub_1B686D4(&StringLiteral_13346/*"TRADE_EVENT_WITHDRAWAL_DIALOG_AFTER_LABEL"*/, v14);
-    sub_1B686D4(&StringLiteral_13349/*"TRADE_EVENT_WITHDRAWAL_DIALOG_EXECUTE"*/, v15);
-    this = (EventTradeSweetsWithdrawalConfirmDialogComponent_o *)sub_1B686D4(&StringLiteral_13351/*"TRADE_EVENT_WITHDRAWAL_DIALOG_RETURN_ITEMS"*/, v16);
-    byte_4A0CF8B = 1;
+    sub_1B715CC(&Method_DataManager_GetMaster_CommonConsumeMaster___, item);
+    sub_1B715CC(&DataManager_TypeInfo, v7);
+    sub_1B715CC(&LocalizationManager_TypeInfo, v8);
+    sub_1B715CC(&StringLiteral_13362/*"TRADE_EVENT_WITHDRAWAL_DIALOG_BEFORE_LABEL"*/, v9);
+    sub_1B715CC(&StringLiteral_13367/*"TRADE_EVENT_WITHDRAWAL_DIALOG_RETURN_ITEMS_NONE"*/, v10);
+    sub_1B715CC(&StringLiteral_13368/*"TRADE_EVENT_WITHDRAWAL_DIALOG_TITLE"*/, v11);
+    sub_1B715CC(&StringLiteral_3737/*"COMMON_CONFIRM_CANCEL"*/, v12);
+    sub_1B715CC(&StringLiteral_13365/*"TRADE_EVENT_WITHDRAWAL_DIALOG_MESSAGE"*/, v13);
+    sub_1B715CC(&StringLiteral_13361/*"TRADE_EVENT_WITHDRAWAL_DIALOG_AFTER_LABEL"*/, v14);
+    sub_1B715CC(&StringLiteral_13364/*"TRADE_EVENT_WITHDRAWAL_DIALOG_EXECUTE"*/, v15);
+    this = (EventTradeSweetsWithdrawalConfirmDialogComponent_o *)sub_1B715CC(&StringLiteral_13366/*"TRADE_EVENT_WITHDRAWAL_DIALOG_RETURN_ITEMS"*/, v16);
+    byte_4A23E27 = 1;
   }
   if ( !item )
     goto LABEL_29;
   TradeGoodsEntity_k__BackingField = item->fields._TradeGoodsEntity_k__BackingField;
   p_tradeGoodsEntity = &v6->fields.tradeGoodsEntity;
   v6->fields.tradeGoodsEntity = TradeGoodsEntity_k__BackingField;
-  sub_1B68678(
+  sub_1B71570(
     (ServantStatusBattleListViewItem_o *)&v6->fields.tradeGoodsEntity,
     (int32_t)TradeGoodsEntity_k__BackingField,
     (int32_t)onDecide,
     (int32_t)method);
   v6->fields.onDecide = onDecide;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&v6->fields.onDecide, (int32_t)onDecide, v19, v20);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&v6->fields.onDecide, (int32_t)onDecide, v19, v20);
   this = (EventTradeSweetsWithdrawalConfirmDialogComponent_o *)UnityEngine_Component__get_gameObject(
                                                                  (UnityEngine_Component_o *)v6,
                                                                  0LL);
@@ -800,63 +800,63 @@ void __fastcall EventTradeSweetsWithdrawalConfirmDialogComponent__SetUp(
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   this = (EventTradeSweetsWithdrawalConfirmDialogComponent_o *)LocalizationManager__Get(
-                                                                 (System_String_o *)StringLiteral_13353/*"TRADE_EVENT_WITHDRAWAL_DIALOG_TITLE"*/,
+                                                                 (System_String_o *)StringLiteral_13368/*"TRADE_EVENT_WITHDRAWAL_DIALOG_TITLE"*/,
                                                                  0LL);
   if ( !titleLabel )
     goto LABEL_29;
   UILabel__set_text(titleLabel, (System_String_o *)this, 0LL);
   detailLabel = v6->fields.detailLabel;
   this = (EventTradeSweetsWithdrawalConfirmDialogComponent_o *)LocalizationManager__Get(
-                                                                 (System_String_o *)StringLiteral_13350/*"TRADE_EVENT_WITHDRAWAL_DIALOG_MESSAGE"*/,
+                                                                 (System_String_o *)StringLiteral_13365/*"TRADE_EVENT_WITHDRAWAL_DIALOG_MESSAGE"*/,
                                                                  0LL);
   if ( !detailLabel )
     goto LABEL_29;
   UILabel__set_text(detailLabel, (System_String_o *)this, 0LL);
   exchangeOriginLb = v6->fields.exchangeOriginLb;
   this = (EventTradeSweetsWithdrawalConfirmDialogComponent_o *)LocalizationManager__Get(
-                                                                 (System_String_o *)StringLiteral_13347/*"TRADE_EVENT_WITHDRAWAL_DIALOG_BEFORE_LABEL"*/,
+                                                                 (System_String_o *)StringLiteral_13362/*"TRADE_EVENT_WITHDRAWAL_DIALOG_BEFORE_LABEL"*/,
                                                                  0LL);
   if ( !exchangeOriginLb )
     goto LABEL_29;
   UILabel__set_text(exchangeOriginLb, (System_String_o *)this, 0LL);
   exchangeOriginLbAfter = v6->fields.exchangeOriginLbAfter;
   this = (EventTradeSweetsWithdrawalConfirmDialogComponent_o *)LocalizationManager__Get(
-                                                                 (System_String_o *)StringLiteral_13346/*"TRADE_EVENT_WITHDRAWAL_DIALOG_AFTER_LABEL"*/,
+                                                                 (System_String_o *)StringLiteral_13361/*"TRADE_EVENT_WITHDRAWAL_DIALOG_AFTER_LABEL"*/,
                                                                  0LL);
   if ( !exchangeOriginLbAfter )
     goto LABEL_29;
   UILabel__set_text(exchangeOriginLbAfter, (System_String_o *)this, 0LL);
   cancelButtonLb = v6->fields.cancelButtonLb;
   this = (EventTradeSweetsWithdrawalConfirmDialogComponent_o *)LocalizationManager__Get(
-                                                                 (System_String_o *)StringLiteral_3731/*"COMMON_CONFIRM_CANCEL"*/,
+                                                                 (System_String_o *)StringLiteral_3737/*"COMMON_CONFIRM_CANCEL"*/,
                                                                  0LL);
   if ( !cancelButtonLb )
     goto LABEL_29;
   UILabel__set_text(cancelButtonLb, (System_String_o *)this, 0LL);
   decideButtonLb = v6->fields.decideButtonLb;
   this = (EventTradeSweetsWithdrawalConfirmDialogComponent_o *)LocalizationManager__Get(
-                                                                 (System_String_o *)StringLiteral_13349/*"TRADE_EVENT_WITHDRAWAL_DIALOG_EXECUTE"*/,
+                                                                 (System_String_o *)StringLiteral_13364/*"TRADE_EVENT_WITHDRAWAL_DIALOG_EXECUTE"*/,
                                                                  0LL);
   if ( !decideButtonLb )
     goto LABEL_29;
   UILabel__set_text(decideButtonLb, (System_String_o *)this, 0LL);
   returnItemsLabel = v6->fields.returnItemsLabel;
   this = (EventTradeSweetsWithdrawalConfirmDialogComponent_o *)LocalizationManager__Get(
-                                                                 (System_String_o *)StringLiteral_13351/*"TRADE_EVENT_WITHDRAWAL_DIALOG_RETURN_ITEMS"*/,
+                                                                 (System_String_o *)StringLiteral_13366/*"TRADE_EVENT_WITHDRAWAL_DIALOG_RETURN_ITEMS"*/,
                                                                  0LL);
   if ( !returnItemsLabel )
     goto LABEL_29;
   UILabel__set_text(returnItemsLabel, (System_String_o *)this, 0LL);
   returnItemsNoneLabel = v6->fields.returnItemsNoneLabel;
   this = (EventTradeSweetsWithdrawalConfirmDialogComponent_o *)LocalizationManager__Get(
-                                                                 (System_String_o *)StringLiteral_13352/*"TRADE_EVENT_WITHDRAWAL_DIALOG_RETURN_ITEMS_NONE"*/,
+                                                                 (System_String_o *)StringLiteral_13367/*"TRADE_EVENT_WITHDRAWAL_DIALOG_RETURN_ITEMS_NONE"*/,
                                                                  0LL);
   if ( !returnItemsNoneLabel )
     goto LABEL_29;
   UILabel__set_text(returnItemsNoneLabel, (System_String_o *)this, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  this = (EventTradeSweetsWithdrawalConfirmDialogComponent_o *)DataManager__GetMaster_object_((const MethodInfo_2E49CFC *)Method_DataManager_GetMaster_CommonConsumeMaster___);
+  this = (EventTradeSweetsWithdrawalConfirmDialogComponent_o *)DataManager__GetMaster_object_((const MethodInfo_2E5B394 *)Method_DataManager_GetMaster_CommonConsumeMaster___);
   if ( !*p_tradeGoodsEntity )
     goto LABEL_29;
   if ( !this )
@@ -866,7 +866,7 @@ void __fastcall EventTradeSweetsWithdrawalConfirmDialogComponent__SetUp(
                        (*p_tradeGoodsEntity)->fields.commonConsumeId,
                        0LL);
   v6->fields.exchangeOriginItemList = SortedEntityList;
-  sub_1B68678(
+  sub_1B71570(
     (ServantStatusBattleListViewItem_o *)&v6->fields.exchangeOriginItemList,
     (int32_t)SortedEntityList,
     v30,
@@ -898,7 +898,7 @@ void __fastcall EventTradeSweetsWithdrawalConfirmDialogComponent__SetUp(
         (this = (EventTradeSweetsWithdrawalConfirmDialogComponent_o *)v6->fields.listViewItemDraw) == 0LL) )
   {
 LABEL_29:
-    sub_1B68930(this, item);
+    sub_1B71828(this, item);
   }
   EventTradeListViewItemDraw__UpdateItem((EventTradeListViewItemDraw_o *)this, item, v37, 0LL);
 }
@@ -922,10 +922,10 @@ UnityEngine_GameObject_o *__fastcall EventTradeSweetsWithdrawalConfirmDialogComp
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4A0CF91 & 1) == 0 )
+  if ( (byte_4A23E2D & 1) == 0 )
   {
-    sub_1B686D4(&UnityEngine_Object_TypeInfo, method);
-    byte_4A0CF91 = 1;
+    sub_1B715CC(&UnityEngine_Object_TypeInfo, method);
+    byte_4A23E2D = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -934,6 +934,6 @@ UnityEngine_GameObject_o *__fastcall EventTradeSweetsWithdrawalConfirmDialogComp
     return 0LL;
   v6 = (UnityEngine_Component_o *)this->fields.cancelButton;
   if ( !v6 )
-    sub_1B68930(0LL, v4);
+    sub_1B71828(0LL, v4);
   return UnityEngine_Component__get_gameObject(v6, 0LL);
 }

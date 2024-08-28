@@ -32,15 +32,15 @@ void __fastcall BuffDataExtension_GeneralParamAccessorsBase__Assertion(
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4A06DD7 & 1) == 0 )
+  if ( (byte_4A1DC3B & 1) == 0 )
   {
-    sub_1B686D4(&System_Diagnostics_StackFrame_TypeInfo, *(_QWORD *)&stackBackCount);
-    byte_4A06DD7 = 1;
+    sub_1B715CC(&System_Diagnostics_StackFrame_TypeInfo, *(_QWORD *)&stackBackCount);
+    byte_4A1DC3B = 1;
   }
-  v4 = (System_Diagnostics_StackFrame_o *)sub_1B68920(System_Diagnostics_StackFrame_TypeInfo);
-  System_Diagnostics_StackFrame___ctor_61931532(v4, stackBackCount, 1, 0LL);
+  v4 = (System_Diagnostics_StackFrame_o *)sub_1B71818(System_Diagnostics_StackFrame_TypeInfo);
+  System_Diagnostics_StackFrame___ctor_62017568(v4, stackBackCount, 1, 0LL);
   if ( !v4 )
-    sub_1B68930(v5, v6);
+    sub_1B71828(v5, v6);
   ((void (__fastcall *)(System_Diagnostics_StackFrame_o *, Il2CppMethodPointer))v4->klass->vtable._8_GetMethod.method)(
     v4,
     v4->klass->vtable._9_GetNativeOffset.methodPtr);
@@ -63,7 +63,7 @@ void __fastcall BuffDataExtension_GeneralParamAccessorsBase__SetGeneralParams(
   int32_t v3; // w3
 
   this->fields.generalParams = inputGeneralParams;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)inputGeneralParams, (int32_t)method, v3);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)inputGeneralParams, (int32_t)method, v3);
 }
 
 
@@ -84,16 +84,16 @@ System_Int32_array *__fastcall BuffDataExtension_GeneralParamContinueFunction__M
   __int64 v5; // x1
   System_Int32_array *v6; // x20
 
-  if ( (byte_4A06DD9 & 1) == 0 )
+  if ( (byte_4A1DC3D & 1) == 0 )
   {
-    sub_1B686D4(&int___TypeInfo, dataVals);
-    byte_4A06DD9 = 1;
+    sub_1B715CC(&int___TypeInfo, dataVals);
+    byte_4A1DC3D = 1;
   }
-  Param = sub_1B6877C(int___TypeInfo, 1LL);
+  Param = sub_1B71674(int___TypeInfo, 1LL);
   if ( !dataVals || (v6 = (System_Int32_array *)Param, Param = DataVals__GetParam(dataVals, 150, 0, 0LL), !v6) )
-    sub_1B68930(Param, v5);
+    sub_1B71828(Param, v5);
   if ( !v6->max_length )
-    sub_1B68938(Param, v5);
+    sub_1B71830(Param, v5);
   v6->m_Items[1] = Param;
   return v6;
 }
@@ -103,14 +103,14 @@ bool __fastcall BuffDataExtension_GeneralParamContinueFunction__get_NotExecFunct
         BuffDataExtension_GeneralParamContinueFunction_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A06DD8 & 1) == 0 )
+  if ( (byte_4A1DC3C & 1) == 0 )
   {
-    sub_1B686D4(&Method_BasicHelper_IndexValue_int____75760472, method);
-    byte_4A06DD8 = 1;
+    sub_1B715CC(&Method_BasicHelper_IndexValue_int____75852288, method);
+    byte_4A1DC3C = 1;
   }
   return BasicHelper__IndexValue_int_(
            this->fields.generalParams,
            0,
            0,
-           (const MethodInfo_2E38AB8 *)Method_BasicHelper_IndexValue_int____75760472) > 0;
+           (const MethodInfo_2E4A150 *)Method_BasicHelper_IndexValue_int____75852288) > 0;
 }

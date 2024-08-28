@@ -21,11 +21,11 @@ void __fastcall EventDropItemUpValInfo___ctor(
   int32_t v21; // w3
   int32_t baseFuncId; // w2
 
-  if ( (byte_4A08816 & 1) == 0 )
+  if ( (byte_4A1F683 & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataManager_GetMasterData_FunctionGroupMaster___, *(_QWORD *)&member);
-    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    byte_4A08816 = 1;
+    sub_1B715CC(&Method_DataManager_GetMasterData_FunctionGroupMaster___, *(_QWORD *)&member);
+    sub_1B715CC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    byte_4A1F683 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !dropInfo )
@@ -34,7 +34,7 @@ void __fastcall EventDropItemUpValInfo___ctor(
   this->fields.member = member;
   funcEntity = dropInfo->fields.funcEntity;
   this->fields.funcEntity = funcEntity;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.funcEntity, (int32_t)funcEntity, v12, v13);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.funcEntity, (int32_t)funcEntity, v12, v13);
   v15 = this->fields.funcEntity;
   if ( !v15 )
     goto LABEL_24;
@@ -48,12 +48,12 @@ void __fastcall EventDropItemUpValInfo___ctor(
     targetType = v15->fields.targetType;
   }
   this->fields.targetType = targetType;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_24;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_FunctionGroupMaster___);
+               (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_FunctionGroupMaster___);
   v18 = this->fields.funcEntity;
   if ( !v18 )
     goto LABEL_24;
@@ -94,7 +94,7 @@ LABEL_22:
       else
       {
         this->fields.baseFuncGroupEntity = funcGroupEntity;
-        sub_1B68678(
+        sub_1B71570(
           (ServantStatusBattleListViewItem_o *)&this->fields.baseFuncGroupEntity,
           (int32_t)funcGroupEntity,
           baseFuncId,
@@ -105,7 +105,7 @@ LABEL_22:
       }
     }
 LABEL_24:
-    sub_1B68930(Instance, funcGroupEntity);
+    sub_1B71828(Instance, funcGroupEntity);
   }
 LABEL_23:
   this->fields.isEquipUp = dropInfo->fields.isEquipUp;
@@ -115,7 +115,7 @@ LABEL_23:
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall EventDropItemUpValInfo___ctor_38634936(
+void __fastcall EventDropItemUpValInfo___ctor_38683900(
         EventDropItemUpValInfo_o *this,
         int32_t member,
         EventDropUpValInfo_o *dropInfo,
@@ -142,11 +142,11 @@ void __fastcall EventDropItemUpValInfo___ctor_38634936(
   int32_t v26; // w3
   int32_t baseFuncId; // w2
 
-  if ( (byte_4A08817 & 1) == 0 )
+  if ( (byte_4A1F684 & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataManager_GetMasterData_FunctionGroupMaster___, *(_QWORD *)&member);
-    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    byte_4A08817 = 1;
+    sub_1B715CC(&Method_DataManager_GetMasterData_FunctionGroupMaster___, *(_QWORD *)&member);
+    sub_1B715CC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    byte_4A1F684 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !dropInfo )
@@ -156,7 +156,7 @@ void __fastcall EventDropItemUpValInfo___ctor_38634936(
   funcEntity = dropInfo->fields.funcEntity;
   this->fields.funcEntity = funcEntity;
   p_funcEntity = &this->fields.funcEntity;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.funcEntity, (int32_t)funcEntity, v12, v13);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.funcEntity, (int32_t)funcEntity, v12, v13);
   v18 = this->fields.funcEntity;
   if ( !v18 )
     goto LABEL_18;
@@ -164,13 +164,13 @@ void __fastcall EventDropItemUpValInfo___ctor_38634936(
   funcType = v18->fields.funcType;
   this->fields.itemEntity = itemEntity;
   *(_QWORD *)&this->fields.baseFuncType = funcType;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.itemEntity, (int32_t)itemEntity, v16, v17);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.itemEntity, (int32_t)itemEntity, v16, v17);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_18;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_FunctionGroupMaster___);
+               (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_FunctionGroupMaster___);
   if ( !*p_funcEntity )
     goto LABEL_18;
   v20 = (FunctionGroupMaster_o *)Instance;
@@ -183,7 +183,7 @@ void __fastcall EventDropItemUpValInfo___ctor_38634936(
              0LL);
   this->fields.funcGroupEntity = Entity;
   p_funcGroupEntity = &this->fields.funcGroupEntity;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.funcGroupEntity, (int32_t)Entity, v23, v24);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.funcGroupEntity, (int32_t)Entity, v23, v24);
   v25 = this->fields.funcEntity;
   if ( !v25 )
     goto LABEL_18;
@@ -220,7 +220,7 @@ LABEL_16:
       else
       {
         this->fields.baseFuncGroupEntity = funcGroupEntity;
-        sub_1B68678(
+        sub_1B71570(
           (ServantStatusBattleListViewItem_o *)&this->fields.baseFuncGroupEntity,
           (int32_t)funcGroupEntity,
           baseFuncId,
@@ -231,7 +231,7 @@ LABEL_16:
       }
     }
 LABEL_18:
-    sub_1B68930(Instance, funcGroupEntity);
+    sub_1B71828(Instance, funcGroupEntity);
   }
 LABEL_17:
   this->fields.isEquipUp = dropInfo->fields.isEquipUp;

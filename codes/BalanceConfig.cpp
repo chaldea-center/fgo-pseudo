@@ -110,7 +110,7 @@ void __fastcall BalanceConfig___cctor(const MethodInfo *method)
   int32_t v113; // w2
   int32_t v114; // w3
   int namespaze; // w8
-  ServantStatusBattleListViewItem_o *p_AvailableValidIds; // x0
+  ServantStatusBattleListViewItem_o *p_PlayableBeastClassIds; // x0
   BalanceConfig_c *v117; // x8
   struct BalanceConfig_StaticFields *v118; // x9
   struct BalanceConfig_StaticFields *v119; // x8
@@ -119,30 +119,30 @@ void __fastcall BalanceConfig___cctor(const MethodInfo *method)
   System_RuntimeFieldHandle_o v122; // 0:w1.4
   System_RuntimeFieldHandle_o v123; // 0:w1.4
 
-  if ( (byte_4A0827F & 1) == 0 )
+  if ( (byte_4A1F0E7 & 1) == 0 )
   {
-    sub_1B686D4(&BalanceConfig_TypeInfo, v1);
-    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_string__int___ctor__, v4);
-    sub_1B686D4(&System_Collections_Generic_Dictionary_string__int__TypeInfo, v5);
-    sub_1B686D4(&int___TypeInfo, v6);
-    sub_1B686D4(
+    sub_1B715CC(&BalanceConfig_TypeInfo, v1);
+    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_string__int___ctor__, v4);
+    sub_1B715CC(&System_Collections_Generic_Dictionary_string__int__TypeInfo, v5);
+    sub_1B715CC(&int___TypeInfo, v6);
+    sub_1B715CC(
       &Field__PrivateImplementationDetails__0576E2463551A09802222B33A5BA38F57896D9DD406B6DB32A10299A54B4B5BC,
       v7);
-    sub_1B686D4(
+    sub_1B715CC(
       &Field__PrivateImplementationDetails__829FEE660E2799B8814849BCC3884998BB3651E975AC0C0D659AD53227033DBC,
       v8);
-    sub_1B686D4(
+    sub_1B715CC(
       &Field__PrivateImplementationDetails__96039A68C58EBF2F40B99A5B8F9F313745D9C4E02164BB0FCE39159471432F4B,
       v9);
-    sub_1B686D4(
+    sub_1B715CC(
       &Field__PrivateImplementationDetails__ED0B1052171B7B497721747C13B3FA78DABBC3D49393EEB78155642A20EACDCA,
       v10);
-    sub_1B686D4(&StringLiteral_3006/*"BGM_TITLE_5"*/, v11);
-    byte_4A0827F = 1;
+    sub_1B715CC(&StringLiteral_3013/*"BGM_TITLE_5"*/, v11);
+    byte_4A1F0E7 = 1;
   }
   v12 = BalanceConfig_TypeInfo;
   static_fields = BalanceConfig_TypeInfo->static_fields;
-  *(_OWORD *)&static_fields->ServantLimitMax = xmmword_BA6C80;
+  *(_OWORD *)&static_fields->ServantLimitMax = xmmword_BAB4A0;
   *(_QWORD *)&static_fields->SvtEquipSkillListMax = 0x500000014LL;
   *(int64x2_t *)&static_fields->UserPointEventMax = vdupq_n_s64(0x3B9AC9FFuLL);
   *(int64x2_t *)&static_fields->UserRaidDamagePointMax = vdupq_n_s64(0xE8D4A50FFFuLL);
@@ -155,7 +155,7 @@ void __fastcall BalanceConfig___cctor(const MethodInfo *method)
   static_fields->ServantCombineMax = 5;
   static_fields->RequestTopHomeExpirationDateSec = 600;
   static_fields->SupportDeckMemberMax = 9;
-  *(_OWORD *)&static_fields->FixMainSupportDeckNum = xmmword_BA7620;
+  *(_OWORD *)&static_fields->FixMainSupportDeckNum = xmmword_BABE60;
   static_fields->ServerTimeOverLimit = 3600LL;
   static_fields->CriticalRateToAddByQuickFirstBonus = 0;
   *(_QWORD *)&static_fields->SpendApRecvItemNum = 0x3E700000001LL;
@@ -166,71 +166,71 @@ void __fastcall BalanceConfig___cctor(const MethodInfo *method)
   static_fields->VtReleaseAt = 0LL;
   *(_QWORD *)&static_fields->MashuTdGradeUpQuestId = 0LL;
   *(_QWORD *)&static_fields->ServantIdOberonChoco = 0LL;
-  *(_OWORD *)&static_fields->LvExceedItemId = xmmword_BA7630;
+  *(_OWORD *)&static_fields->LvExceedItemId = xmmword_BABE70;
   *(_QWORD *)&static_fields->ApSeedItemId = 0x6800000067LL;
   *(_QWORD *)&static_fields->FollowerRefreshRestTime = 0xAFFFFFFFFLL;
   static_fields->itemIdForShop15 = 48;
-  *(_OWORD *)&static_fields->DefaultFontSize = xmmword_BA72D0;
+  *(_OWORD *)&static_fields->DefaultFontSize = xmmword_BABB10;
   static_fields->MstMissionAlertTime = 259200;
   *(_QWORD *)&static_fields->raceRewardRankMax = 0x700000003LL;
-  *(_OWORD *)&static_fields->ScenarioSpeedStep = xmmword_BA7860;
-  *(_OWORD *)&static_fields->ScenarioTextWaitStep = xmmword_BA6BD0;
-  *(_OWORD *)&static_fields->ScenarioTextWaitDefaultSt = xmmword_BA7870;
-  *(_OWORD *)&static_fields->ScenarioTextSpeedDefault = xmmword_BA67B0;
-  *(_OWORD *)&static_fields->ScenarioScrollSpeedDefault = xmmword_BA6F80;
+  *(_OWORD *)&static_fields->ScenarioSpeedStep = xmmword_BAC0A0;
+  *(_OWORD *)&static_fields->ScenarioTextWaitStep = xmmword_BAB3F0;
+  *(_OWORD *)&static_fields->ScenarioTextWaitDefaultSt = xmmword_BAC0B0;
+  *(_OWORD *)&static_fields->ScenarioTextSpeedDefault = xmmword_BAAFD0;
+  *(_OWORD *)&static_fields->ScenarioScrollSpeedDefault = xmmword_BAB7A0;
   *(_QWORD *)&static_fields->ScenarioAutoWaitTimeDefault = 0x3E4CCCCD00000000LL;
   *(_QWORD *)&static_fields->PowerUpQuestWarId = 0x3C000003E9LL;
   static_fields->ShopNewItemAddDays = 9.0;
   static_fields->EquipGetEffectId = 0;
-  static_fields->MaskColor = (struct UnityEngine_Color_o)xmmword_BA6560;
+  static_fields->MaskColor = (struct UnityEngine_Color_o)xmmword_BAAD80;
   v14 = v12->static_fields;
   *(_QWORD *)&v14->CommandCodeDetachingItemId = 0x3F7FFFFEFFFFFFFFLL;
   *(_QWORD *)&v14->FollowNum = 0x1900000003LL;
   v14->PresentBoxFilterSvtEquipMaterial = 0LL;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&v14->PresentBoxFilterSvtEquipMaterial, 0, v2, v3);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&v14->PresentBoxFilterSvtEquipMaterial, 0, v2, v3);
   v15 = BalanceConfig_TypeInfo->static_fields;
-  *(_OWORD *)&v15->DisableFriendshipExceed = xmmword_BA5AA0;
-  *(_OWORD *)&v15->FriendShipExceedItemId = xmmword_BA6140;
+  *(_OWORD *)&v15->DisableFriendshipExceed = xmmword_BAA2C0;
+  *(_OWORD *)&v15->FriendShipExceedItemId = xmmword_BAA960;
   *(_QWORD *)&v15->Torch2ItemId = 0x3500000034LL;
   v15->ReprintLastWarRaidEventIdList = 0LL;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&v15->ReprintLastWarRaidEventIdList, 0, v16, v17);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&v15->ReprintLastWarRaidEventIdList, 0, v16, v17);
   v18 = BalanceConfig_TypeInfo->static_fields;
   v18->CommandCardParamUpMax = 500;
   v18->EventTowerFadeOutDelayTime = 0LL;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&v18->EventTowerFadeOutDelayTime, 0, v19, v20);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&v18->EventTowerFadeOutDelayTime, 0, v19, v20);
   v21 = BalanceConfig_TypeInfo->static_fields;
   v21->EventTowerFadeOutPlayTime = 3.0;
   *(_QWORD *)&v21->MaxFriendChocolateUse = 0x300000003LL;
   v21->MainInterludeWarId = 1004;
   v21->MainInterludeWarIdOnMaterial = 0LL;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&v21->MainInterludeWarIdOnMaterial, 0, v22, v23);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&v21->MainInterludeWarIdOnMaterial, 0, v22, v23);
   p_EventBoardGameDiceButtonPostion = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->EventBoardGameDiceButtonPostion;
   p_EventBoardGameDiceButtonPostion->klass = 0LL;
-  sub_1B68678(p_EventBoardGameDiceButtonPostion, 0, v25, v26);
+  sub_1B71570(p_EventBoardGameDiceButtonPostion, 0, v25, v26);
   p_EventBoardGameMapIdList = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->EventBoardGameMapIdList;
   p_EventBoardGameMapIdList->klass = 0LL;
-  sub_1B68678(p_EventBoardGameMapIdList, 0, v28, v29);
+  sub_1B71570(p_EventBoardGameMapIdList, 0, v28, v29);
   v30 = BalanceConfig_TypeInfo->static_fields;
   *(_QWORD *)&v30->TitleFlowOld = 0x3EB00000000LL;
   v30->OrdealCallWarId = 401;
-  v31 = StringLiteral_3006/*"BGM_TITLE_5"*/;
-  v30->OrdealCallClearBgmName = (struct System_String_o *)StringLiteral_3006/*"BGM_TITLE_5"*/;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&v30->OrdealCallClearBgmName, v31, v32, v33);
+  v31 = StringLiteral_3013/*"BGM_TITLE_5"*/;
+  v30->OrdealCallClearBgmName = (struct System_String_o *)StringLiteral_3013/*"BGM_TITLE_5"*/;
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&v30->OrdealCallClearBgmName, v31, v32, v33);
   p_consumeStormPodSpotId = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->consumeStormPodSpotId;
   p_consumeStormPodSpotId->klass = 0LL;
-  sub_1B68678(p_consumeStormPodSpotId, 0, v35, v36);
+  sub_1B71570(p_consumeStormPodSpotId, 0, v35, v36);
   p_StormPodHelpIds = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->StormPodHelpIds;
   p_StormPodHelpIds->klass = 0LL;
-  sub_1B68678(p_StormPodHelpIds, 0, v38, v39);
+  sub_1B71570(p_StormPodHelpIds, 0, v38, v39);
   p_legacyAspectMovies = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->legacyAspectMovies;
   p_legacyAspectMovies->klass = 0LL;
-  sub_1B68678(p_legacyAspectMovies, 0, v41, v42);
+  sub_1B71570(p_legacyAspectMovies, 0, v41, v42);
   p_UIStandFigureROffsetEffectNames = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->UIStandFigureROffsetEffectNames;
   p_UIStandFigureROffsetEffectNames->klass = 0LL;
-  sub_1B68678(p_UIStandFigureROffsetEffectNames, 0, v44, v45);
+  sub_1B71570(p_UIStandFigureROffsetEffectNames, 0, v44, v45);
   p_UIStandFigureROffsetImages = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->UIStandFigureROffsetImages;
   p_UIStandFigureROffsetImages->klass = 0LL;
-  sub_1B68678(p_UIStandFigureROffsetImages, 0, v47, v48);
+  sub_1B71570(p_UIStandFigureROffsetImages, 0, v47, v48);
   v49 = BalanceConfig_TypeInfo->static_fields;
   v49->IsWarBoardAiCalcEvalSum = 0;
   v49->WarBoardEvalFactorsAffectRatio = 10000;
@@ -238,7 +238,7 @@ void __fastcall BalanceConfig___cctor(const MethodInfo *method)
   *(_QWORD *)&v49->MapCameraMoveTimeConstant = 0x3FD9999A00000000LL;
   *(_QWORD *)&v49->MapCameraMoveTimeLogarithmBase = 0xF00002AF8LL;
   v49->Camera2DResetDuration = 0.644;
-  v50 = (ServantStatusBattleListViewItem_c *)sub_1B6877C(int___TypeInfo, 1LL);
+  v50 = (ServantStatusBattleListViewItem_c *)sub_1B71674(int___TypeInfo, 1LL);
   if ( !v50 )
     goto LABEL_21;
   v54 = v50;
@@ -247,8 +247,8 @@ void __fastcall BalanceConfig___cctor(const MethodInfo *method)
   LODWORD(v50->_1.byval_arg.data) = 311;
   p_MainChaptersWithEventId = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->MainChaptersWithEventId;
   p_MainChaptersWithEventId->klass = v54;
-  sub_1B68678(p_MainChaptersWithEventId, (int32_t)v54, v52, v53);
-  v50 = (ServantStatusBattleListViewItem_c *)sub_1B6877C(int___TypeInfo, 1LL);
+  sub_1B71570(p_MainChaptersWithEventId, (int32_t)v54, v52, v53);
+  v50 = (ServantStatusBattleListViewItem_c *)sub_1B71674(int___TypeInfo, 1LL);
   if ( !v50 )
     goto LABEL_21;
   v54 = v50;
@@ -257,8 +257,8 @@ void __fastcall BalanceConfig___cctor(const MethodInfo *method)
   LODWORD(v50->_1.byval_arg.data) = 2800502;
   p_TreasureDevicesForcedOpenEffect = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->TreasureDevicesForcedOpenEffect;
   p_TreasureDevicesForcedOpenEffect->klass = v54;
-  sub_1B68678(p_TreasureDevicesForcedOpenEffect, (int32_t)v54, v56, v57);
-  v50 = (ServantStatusBattleListViewItem_c *)sub_1B6877C(int___TypeInfo, 1LL);
+  sub_1B71570(p_TreasureDevicesForcedOpenEffect, (int32_t)v54, v56, v57);
+  v50 = (ServantStatusBattleListViewItem_c *)sub_1B71674(int___TypeInfo, 1LL);
   if ( !v50 )
     goto LABEL_21;
   v54 = v50;
@@ -267,31 +267,31 @@ void __fastcall BalanceConfig___cctor(const MethodInfo *method)
   LODWORD(v50->_1.byval_arg.data) = 800106;
   p_HeroineTreasureDeviceRankUpEffects = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->HeroineTreasureDeviceRankUpEffects;
   p_HeroineTreasureDeviceRankUpEffects->klass = v54;
-  sub_1B68678(p_HeroineTreasureDeviceRankUpEffects, (int32_t)v54, v59, v60);
+  sub_1B71570(p_HeroineTreasureDeviceRankUpEffects, (int32_t)v54, v59, v60);
   *(_QWORD *)&BalanceConfig_TypeInfo->static_fields->HeroineLimitCountOrtinaxRefurbished = 0x3D09640000000DLL;
-  v62 = (System_Array_o *)sub_1B6877C(int___TypeInfo, 4LL);
+  v62 = (System_Array_o *)sub_1B71674(int___TypeInfo, 4LL);
   v120.fields.value = Field__PrivateImplementationDetails__0576E2463551A09802222B33A5BA38F57896D9DD406B6DB32A10299A54B4B5BC;
   v63 = (ServantStatusBattleListViewItem_c *)v62;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61327548(v62, v120, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61413584(v62, v120, 0LL);
   p_Extra1SortOrderClassIds = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->Extra1SortOrderClassIds;
   p_Extra1SortOrderClassIds->klass = v63;
-  sub_1B68678(p_Extra1SortOrderClassIds, (int32_t)v63, v65, v66);
-  v67 = (System_Array_o *)sub_1B6877C(int___TypeInfo, 4LL);
+  sub_1B71570(p_Extra1SortOrderClassIds, (int32_t)v63, v65, v66);
+  v67 = (System_Array_o *)sub_1B71674(int___TypeInfo, 4LL);
   v121.fields.value = Field__PrivateImplementationDetails__ED0B1052171B7B497721747C13B3FA78DABBC3D49393EEB78155642A20EACDCA;
   v68 = (ServantStatusBattleListViewItem_c *)v67;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61327548(v67, v121, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61413584(v67, v121, 0LL);
   p_Extra2SortOrderClassIds = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->Extra2SortOrderClassIds;
   p_Extra2SortOrderClassIds->klass = v68;
-  sub_1B68678(p_Extra2SortOrderClassIds, (int32_t)v68, v70, v71);
+  sub_1B71570(p_Extra2SortOrderClassIds, (int32_t)v68, v70, v71);
   v72 = BalanceConfig_TypeInfo->static_fields;
   v72->ClassBoardCameraSelectMoveMaxDistance = 1024;
   *(_QWORD *)&v72->ClassBoardCameraSelectSecMin = 0x3F8000003DCCCCCDLL;
   *(_QWORD *)&v72->ClassBoardCameraSelectEasingType = 0x3FD9999A00000005LL;
-  v73 = sub_1B6877C(int___TypeInfo, 0LL);
+  v73 = sub_1B71674(int___TypeInfo, 0LL);
   p_NotUIChangeMapIds = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->NotUIChangeMapIds;
   p_NotUIChangeMapIds->klass = (ServantStatusBattleListViewItem_c *)v73;
-  sub_1B68678(p_NotUIChangeMapIds, v73, v75, v76);
-  v50 = (ServantStatusBattleListViewItem_c *)sub_1B6877C(int___TypeInfo, 1LL);
+  sub_1B71570(p_NotUIChangeMapIds, v73, v75, v76);
+  v50 = (ServantStatusBattleListViewItem_c *)sub_1B71674(int___TypeInfo, 1LL);
   if ( !v50 )
     goto LABEL_21;
   v54 = v50;
@@ -300,8 +300,8 @@ void __fastcall BalanceConfig___cctor(const MethodInfo *method)
   LODWORD(v50->_1.byval_arg.data) = 3300100;
   p_LimitSealedDialogMaxLimitOpenIds = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->LimitSealedDialogMaxLimitOpenIds;
   p_LimitSealedDialogMaxLimitOpenIds->klass = v54;
-  sub_1B68678(p_LimitSealedDialogMaxLimitOpenIds, (int32_t)v54, v77, v78);
-  v50 = (ServantStatusBattleListViewItem_c *)sub_1B6877C(int___TypeInfo, 1LL);
+  sub_1B71570(p_LimitSealedDialogMaxLimitOpenIds, (int32_t)v54, v77, v78);
+  v50 = (ServantStatusBattleListViewItem_c *)sub_1B71674(int___TypeInfo, 1LL);
   if ( !v50 )
     goto LABEL_21;
   v54 = v50;
@@ -310,8 +310,8 @@ void __fastcall BalanceConfig___cctor(const MethodInfo *method)
   LODWORD(v50->_1.byval_arg.data) = 402;
   p_OrdealCallChapterFolderEventUIDispWarIds = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->OrdealCallChapterFolderEventUIDispWarIds;
   p_OrdealCallChapterFolderEventUIDispWarIds->klass = v54;
-  sub_1B68678(p_OrdealCallChapterFolderEventUIDispWarIds, (int32_t)v54, v80, v81);
-  v50 = (ServantStatusBattleListViewItem_c *)sub_1B6877C(int___TypeInfo, 1LL);
+  sub_1B71570(p_OrdealCallChapterFolderEventUIDispWarIds, (int32_t)v54, v80, v81);
+  v50 = (ServantStatusBattleListViewItem_c *)sub_1B71674(int___TypeInfo, 1LL);
   if ( !v50 )
     goto LABEL_21;
   v54 = v50;
@@ -320,8 +320,8 @@ void __fastcall BalanceConfig___cctor(const MethodInfo *method)
   LODWORD(v50->_1.byval_arg.data) = 80432;
   p_RecoveryFatigueDelayedChangeBgEvents = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->RecoveryFatigueDelayedChangeBgEvents;
   p_RecoveryFatigueDelayedChangeBgEvents->klass = v54;
-  sub_1B68678(p_RecoveryFatigueDelayedChangeBgEvents, (int32_t)v54, v83, v84);
-  v50 = (ServantStatusBattleListViewItem_c *)sub_1B6877C(int___TypeInfo, 1LL);
+  sub_1B71570(p_RecoveryFatigueDelayedChangeBgEvents, (int32_t)v54, v83, v84);
+  v50 = (ServantStatusBattleListViewItem_c *)sub_1B71674(int___TypeInfo, 1LL);
   if ( !v50 )
     goto LABEL_21;
   v54 = v50;
@@ -330,56 +330,56 @@ void __fastcall BalanceConfig___cctor(const MethodInfo *method)
   LODWORD(v50->_1.byval_arg.data) = 94086401;
   p_noneDisplayFreeQuestMaterial = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->noneDisplayFreeQuestMaterial;
   p_noneDisplayFreeQuestMaterial->klass = v54;
-  sub_1B68678(p_noneDisplayFreeQuestMaterial, (int32_t)v54, v86, v87);
-  v89 = (System_Array_o *)sub_1B6877C(int___TypeInfo, 5LL);
+  sub_1B71570(p_noneDisplayFreeQuestMaterial, (int32_t)v54, v86, v87);
+  v89 = (System_Array_o *)sub_1B71674(int___TypeInfo, 5LL);
   v122.fields.value = Field__PrivateImplementationDetails__829FEE660E2799B8814849BCC3884998BB3651E975AC0C0D659AD53227033DBC;
   v90 = (ServantStatusBattleListViewItem_c *)v89;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61327548(v89, v122, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61413584(v89, v122, 0LL);
   p_NotSendTrackEventAtWarIds = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->NotSendTrackEventAtWarIds;
   p_NotSendTrackEventAtWarIds->klass = v90;
-  sub_1B68678(p_NotSendTrackEventAtWarIds, (int32_t)v90, v92, v93);
+  sub_1B71570(p_NotSendTrackEventAtWarIds, (int32_t)v90, v92, v93);
   BalanceConfig_TypeInfo->static_fields->StartingMemberFriendshipRate = 0;
-  v94 = (System_Array_o *)sub_1B6877C(int___TypeInfo, 6LL);
+  v94 = (System_Array_o *)sub_1B71674(int___TypeInfo, 6LL);
   v123.fields.value = Field__PrivateImplementationDetails__96039A68C58EBF2F40B99A5B8F9F313745D9C4E02164BB0FCE39159471432F4B;
   v95 = (ServantStatusBattleListViewItem_c *)v94;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61327548(v94, v123, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61413584(v94, v123, 0LL);
   p_NotRequiredPlayWarIds = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->NotRequiredPlayWarIds;
   p_NotRequiredPlayWarIds->klass = v95;
-  sub_1B68678(p_NotRequiredPlayWarIds, (int32_t)v95, v97, v98);
+  sub_1B71570(p_NotRequiredPlayWarIds, (int32_t)v95, v97, v98);
   *(_WORD *)&BalanceConfig_TypeInfo->static_fields->IsEnableOldBlockShortestRoute = 0;
-  v99 = sub_1B6877C(int___TypeInfo, 0LL);
+  v99 = sub_1B71674(int___TypeInfo, 0LL);
   p_EventItemNotDispItemGetEffect = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->EventItemNotDispItemGetEffect;
   p_EventItemNotDispItemGetEffect->klass = (ServantStatusBattleListViewItem_c *)v99;
-  sub_1B68678(p_EventItemNotDispItemGetEffect, v99, v101, v102);
+  sub_1B71570(p_EventItemNotDispItemGetEffect, v99, v101, v102);
   BalanceConfig_TypeInfo->static_fields->IsEnableFadeRerunSkipped = 1;
-  v103 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1B68920(System_Collections_Generic_Dictionary_string__int__TypeInfo);
+  v103 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1B71818(System_Collections_Generic_Dictionary_string__int__TypeInfo);
   System_Collections_Generic_Dictionary_object__int____ctor(
     v103,
-    (const MethodInfo_318046C *)Method_System_Collections_Generic_Dictionary_string__int___ctor__);
+    (const MethodInfo_3195544 *)Method_System_Collections_Generic_Dictionary_string__int___ctor__);
   p_MissionIconDisplayMsDictionary = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->MissionIconDisplayMsDictionary;
   p_MissionIconDisplayMsDictionary->klass = (ServantStatusBattleListViewItem_c *)v103;
-  sub_1B68678(p_MissionIconDisplayMsDictionary, (int32_t)v103, v105, v106);
+  sub_1B71570(p_MissionIconDisplayMsDictionary, (int32_t)v103, v105, v106);
   __asm { FMOV            V0.2S, #1.0 }
   v112 = BalanceConfig_TypeInfo->static_fields;
   *(_QWORD *)&v112->DisableBackMaskTime = _D0;
   v112->IsMissionNaviAutoClassify = 0;
-  v50 = (ServantStatusBattleListViewItem_c *)sub_1B6877C(int___TypeInfo, 2LL);
+  v50 = (ServantStatusBattleListViewItem_c *)sub_1B71674(int___TypeInfo, 2LL);
   if ( !v50 )
 LABEL_21:
-    sub_1B68930(v50, v51);
+    sub_1B71828(v50, v51);
   namespaze = (int)v50->_1.namespaze;
   v54 = v50;
   if ( !namespaze || (LODWORD(v50->_1.byval_arg.data) = 33, namespaze == 1) )
 LABEL_22:
-    sub_1B68938(v50, v54);
+    sub_1B71830(v50, v54);
   HIDWORD(v50->_1.byval_arg.data) = 38;
-  p_AvailableValidIds = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->AvailableValidIds;
-  p_AvailableValidIds->klass = v54;
-  sub_1B68678(p_AvailableValidIds, (int32_t)v54, v113, v114);
+  p_PlayableBeastClassIds = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->PlayableBeastClassIds;
+  p_PlayableBeastClassIds->klass = v54;
+  sub_1B71570(p_PlayableBeastClassIds, (int32_t)v54, v113, v114);
   v117 = BalanceConfig_TypeInfo;
   v118 = BalanceConfig_TypeInfo->static_fields;
   v118->CLASS_BOARD_BUTTON_POS.fields.y = -44.0;
-  *(_QWORD *)&v118->AvailableValidBaseId = 0x4389000000000021LL;
+  *(_QWORD *)&v118->PlayableBeastBaseClassId = 0x4389000000000021LL;
   v117->static_fields->CLASS_BOARD_LABEL_POS = (struct UnityEngine_Vector2_o)0x40A00000BF800000LL;
   v119 = v117->static_fields;
   v119->CLASS_BOARD_LABEL_SCALE_X = 0.85;
@@ -609,902 +609,909 @@ void __fastcall BalanceConfig__Initialize(const MethodInfo *method)
   __int64 v211; // x1
   __int64 v212; // x1
   __int64 v213; // x1
+  __int64 v214; // x1
   Il2CppObject *Instance; // x0
-  __int64 v215; // x1
+  __int64 v216; // x1
   Il2CppObject *MasterData_object; // x19
-  Il2CppObject *v217; // x21
-  ConstantStrMaster_o *v218; // x20
-  int32_t Value_38796200; // w0
-  BalanceConfig_c *v220; // x8
-  int32_t v221; // w22
+  Il2CppObject *v218; // x21
+  ConstantStrMaster_o *v219; // x20
+  int32_t Value_38846256; // w0
+  BalanceConfig_c *v221; // x8
+  int32_t v222; // w22
   struct BalanceConfig_StaticFields *static_fields; // x8
-  int64_t Value_38795644; // x0
-  struct BalanceConfig_StaticFields *v224; // x8
+  int64_t Value_38845700; // x0
+  struct BalanceConfig_StaticFields *v225; // x8
   int32_t Value; // w0
-  struct BalanceConfig_StaticFields *v226; // x8
+  struct BalanceConfig_StaticFields *v227; // x8
   int32_t SupportDeckMax; // w9
   int32_t SupportDeckMemberMax; // w10
-  int64_t v229; // x21
-  ManagerConfig_c *v230; // x0
+  int64_t v230; // x21
+  ManagerConfig_c *v231; // x0
   int64_t SERVER_TIME_OVER_LIMIT; // x23
-  BalanceConfig_c *v232; // x0
-  int32_t v233; // w21
-  int32_t v234; // w0
-  BalanceConfig_c *v235; // x8
-  int32_t v236; // w21
-  int32_t v237; // w0
-  System_String_o *v238; // x1
+  BalanceConfig_c *v233; // x0
+  int32_t v234; // w21
+  int32_t v235; // w0
+  BalanceConfig_c *v236; // x8
+  int32_t v237; // w21
+  int32_t v238; // w0
+  System_String_o *v239; // x1
   ServantStatusBattleListViewItem_o *p_UseTermsAgreementRequiredAppVersion; // x0
-  int32_t v240; // w2
-  int32_t v241; // w3
-  System_String_o *v242; // x1
+  int32_t v241; // w2
+  int32_t v242; // w3
+  System_String_o *v243; // x1
   ServantStatusBattleListViewItem_o *p_UseTermsLatestVersion; // x0
-  int32_t v244; // w2
-  int32_t v245; // w3
-  bool v246; // w9
+  int32_t v245; // w2
+  int32_t v246; // w3
+  bool v247; // w9
   int monitor; // w9
   System_Int32_array *ValueArray; // x1
   ServantStatusBattleListViewItem_o *p_CombineServantSkillIds; // x0
-  int32_t v250; // w2
-  int32_t v251; // w3
-  System_String_o *v252; // x0
-  System_Int32_array *v253; // x1
+  int32_t v251; // w2
+  int32_t v252; // w3
+  System_String_o *v253; // x0
+  System_Int32_array *v254; // x1
   ServantStatusBattleListViewItem_o *p_ServantIdsBirthdayBeforeValentine; // x0
-  int32_t v255; // w2
-  int32_t v256; // w3
-  System_String_o *v257; // x0
-  System_Int32_array *v258; // x0
-  int32_t v259; // w2
-  int32_t v260; // w3
-  BalanceConfig_c *v261; // x8
-  ServantStatusBattleListViewItem_c *v262; // x21
+  int32_t v256; // w2
+  int32_t v257; // w3
+  System_String_o *v258; // x0
+  System_Int32_array *v259; // x0
+  int32_t v260; // w2
+  int32_t v261; // w3
+  BalanceConfig_c *v262; // x8
+  ServantStatusBattleListViewItem_c *v263; // x21
   ServantStatusBattleListViewItem_o *p_ServantIdsIgnoreFormChange; // x0
-  int32_t v264; // w0
-  BalanceConfig_c *v265; // x8
-  int32_t v266; // w21
-  int32_t v267; // w0
-  int v268; // w9
-  int32_t v269; // w0
-  struct BalanceConfig_StaticFields *v270; // x8
-  System_String_o *v271; // x0
-  BalanceConfig_c *v272; // x0
-  float v273; // s8
-  System_String_o *v274; // x0
-  BalanceConfig_c *v275; // x0
-  float v276; // s8
-  System_String_o *v277; // x0
-  BalanceConfig_c *v278; // x0
-  float v279; // s8
-  System_String_o *v280; // x0
-  BalanceConfig_c *v281; // x0
-  float v282; // s8
-  int32_t v283; // w0
-  struct BalanceConfig_StaticFields *v284; // x8
-  int32_t v285; // w0
-  struct BalanceConfig_StaticFields *v286; // x8
-  System_String_o *v287; // x0
-  System_String_array *v288; // x0
-  BalanceConfig___c_c *v289; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v290; // x21
+  int32_t v265; // w0
+  BalanceConfig_c *v266; // x8
+  int32_t v267; // w21
+  int32_t v268; // w0
+  int v269; // w9
+  int32_t v270; // w0
+  struct BalanceConfig_StaticFields *v271; // x8
+  System_String_o *v272; // x0
+  BalanceConfig_c *v273; // x0
+  float v274; // s8
+  System_String_o *v275; // x0
+  BalanceConfig_c *v276; // x0
+  float v277; // s8
+  System_String_o *v278; // x0
+  BalanceConfig_c *v279; // x0
+  float v280; // s8
+  System_String_o *v281; // x0
+  BalanceConfig_c *v282; // x0
+  float v283; // s8
+  int32_t v284; // w0
+  struct BalanceConfig_StaticFields *v285; // x8
+  int32_t v286; // w0
+  struct BalanceConfig_StaticFields *v287; // x8
+  System_String_o *v288; // x0
+  System_String_array *v289; // x0
+  BalanceConfig___c_c *v290; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v291; // x21
   System_Func_object__int__o *_9__240_0; // x22
-  Il2CppObject *v292; // x23
-  struct BalanceConfig___c_StaticFields *v293; // x0
-  int32_t v294; // w2
-  int32_t v295; // w3
-  System_Collections_Generic_IEnumerable_TSource__o *v296; // x0
-  System_Int32_array *v297; // x0
-  int32_t v298; // w2
-  int32_t v299; // w3
-  BalanceConfig_c *v300; // x8
-  ServantStatusBattleListViewItem_c *v301; // x21
+  Il2CppObject *v293; // x23
+  struct BalanceConfig___c_StaticFields *v294; // x0
+  int32_t v295; // w2
+  int32_t v296; // w3
+  System_Collections_Generic_IEnumerable_TSource__o *v297; // x0
+  System_Int32_array *v298; // x0
+  int32_t v299; // w2
+  int32_t v300; // w3
+  BalanceConfig_c *v301; // x8
+  ServantStatusBattleListViewItem_c *v302; // x21
   ServantStatusBattleListViewItem_o *p_PresentBoxFilterSvtEquipMaterial; // x0
-  int32_t v303; // w0
-  int32_t v304; // w21
-  BalanceConfig_c *v305; // x0
-  int32_t v306; // w0
-  int32_t v307; // w21
-  BalanceConfig_c *v308; // x0
-  int32_t v309; // w0
-  BalanceConfig_c *v310; // x8
-  int32_t v311; // w21
-  System_Int32_array *v312; // x1
+  int32_t v304; // w0
+  int32_t v305; // w21
+  BalanceConfig_c *v306; // x0
+  int32_t v307; // w0
+  int32_t v308; // w21
+  BalanceConfig_c *v309; // x0
+  int32_t v310; // w0
+  BalanceConfig_c *v311; // x8
+  int32_t v312; // w21
+  System_Int32_array *v313; // x1
   ServantStatusBattleListViewItem_o *p_ReprintLastWarRaidEventIdList; // x0
-  int32_t v314; // w2
-  int32_t v315; // w3
-  System_Int32_array *v316; // x1
+  int32_t v315; // w2
+  int32_t v316; // w3
+  System_Int32_array *v317; // x1
   ServantStatusBattleListViewItem_o *p_EventTowerFadeOutDelayTime; // x0
-  int32_t v318; // w2
-  int32_t v319; // w3
-  System_Array_o *v320; // x21
-  int32_t v321; // w2
-  int32_t v322; // w3
-  BalanceConfig_c *v323; // x0
-  ServantStatusBattleListViewItem_o *v324; // x0
-  int32_t v325; // w0
-  BalanceConfig_c *v326; // x8
-  int v327; // w21
-  System_Int32_array *v328; // x1
+  int32_t v319; // w2
+  int32_t v320; // w3
+  System_Array_o *v321; // x21
+  int32_t v322; // w2
+  int32_t v323; // w3
+  BalanceConfig_c *v324; // x0
+  ServantStatusBattleListViewItem_o *v325; // x0
+  int32_t v326; // w0
+  BalanceConfig_c *v327; // x8
+  int v328; // w21
+  System_Int32_array *v329; // x1
   ServantStatusBattleListViewItem_o *p_EventBoardGameDiceButtonPostion; // x0
-  int32_t v330; // w2
-  int32_t v331; // w3
-  int32_t v332; // w2
-  int32_t v333; // w3
-  unsigned int v334; // w8
-  ServantStatusBattleListViewItem_c *v335; // x21
-  BalanceConfig_c *v336; // x0
-  ServantStatusBattleListViewItem_o *v337; // x0
-  System_Int32_array *v338; // x0
-  int32_t v339; // w2
-  int32_t v340; // w3
-  BalanceConfig_c *v341; // x8
-  ServantStatusBattleListViewItem_c *v342; // x21
+  int32_t v331; // w2
+  int32_t v332; // w3
+  int32_t v333; // w2
+  int32_t v334; // w3
+  unsigned int v335; // w8
+  ServantStatusBattleListViewItem_c *v336; // x21
+  BalanceConfig_c *v337; // x0
+  ServantStatusBattleListViewItem_o *v338; // x0
+  System_Int32_array *v339; // x0
+  int32_t v340; // w2
+  int32_t v341; // w3
+  BalanceConfig_c *v342; // x8
+  ServantStatusBattleListViewItem_c *v343; // x21
   ServantStatusBattleListViewItem_o *p_MainInterludeWarIdOnMaterial; // x0
-  int32_t v344; // w2
-  int32_t v345; // w3
-  ServantStatusBattleListViewItem_c *v346; // x21
-  BalanceConfig_c *v347; // x0
-  ServantStatusBattleListViewItem_o *v348; // x0
-  System_Int32_array *v349; // x0
-  int32_t v350; // w2
-  int32_t v351; // w3
-  BalanceConfig_c *v352; // x8
-  ServantStatusBattleListViewItem_c *v353; // x21
+  int32_t v345; // w2
+  int32_t v346; // w3
+  ServantStatusBattleListViewItem_c *v347; // x21
+  BalanceConfig_c *v348; // x0
+  ServantStatusBattleListViewItem_o *v349; // x0
+  System_Int32_array *v350; // x0
+  int32_t v351; // w2
+  int32_t v352; // w3
+  BalanceConfig_c *v353; // x8
+  ServantStatusBattleListViewItem_c *v354; // x21
   ServantStatusBattleListViewItem_o *p_EventBoardGameMapIdList; // x0
-  System_String_o *v355; // x21
-  int32_t v356; // w2
-  int32_t v357; // w3
-  BalanceConfig_c *v358; // x0
+  System_String_o *v356; // x21
+  int32_t v357; // w2
+  int32_t v358; // w3
+  BalanceConfig_c *v359; // x0
   ServantStatusBattleListViewItem_o *p_OrdealCallClearBgmName; // x0
-  System_Array_o *v360; // x0
-  System_Int32_array *v361; // x21
-  System_Int32_array *v362; // x0
-  int32_t v363; // w2
-  int32_t v364; // w3
-  BalanceConfig_c *v365; // x8
-  ServantStatusBattleListViewItem_c *v366; // x21
+  System_Array_o *v361; // x0
+  System_Int32_array *v362; // x21
+  System_Int32_array *v363; // x0
+  int32_t v364; // w2
+  int32_t v365; // w3
+  BalanceConfig_c *v366; // x8
+  ServantStatusBattleListViewItem_c *v367; // x21
   ServantStatusBattleListViewItem_o *p_consumeStormPodSpotId; // x0
-  System_Int32_array *v368; // x1
+  System_Int32_array *v369; // x1
   ServantStatusBattleListViewItem_o *p_StormPodHelpIds; // x0
-  int32_t v370; // w2
-  int32_t v371; // w3
+  int32_t v371; // w2
+  int32_t v372; // w3
   System_String_array *ValueStringArray; // x1
   ServantStatusBattleListViewItem_o *p_legacyAspectMovies; // x0
-  int32_t v374; // w2
-  int32_t v375; // w3
-  System_String_o *v376; // x1
+  int32_t v375; // w2
+  int32_t v376; // w3
+  System_String_o *v377; // x1
   ServantStatusBattleListViewItem_o *p_IOS_ExaminationNewsUrl; // x0
-  int32_t v378; // w2
-  int32_t v379; // w3
-  int32_t v380; // w2
-  int32_t v381; // w3
-  struct BalanceConfig_StaticFields *v382; // x8
-  int32_t v383; // w1
-  int32_t v384; // w0
-  BalanceConfig_c *v385; // x8
-  int32_t v386; // w21
-  System_String_array *v387; // x1
+  int32_t v379; // w2
+  int32_t v380; // w3
+  int32_t v381; // w2
+  int32_t v382; // w3
+  struct BalanceConfig_StaticFields *v383; // x8
+  int32_t v384; // w1
+  int32_t v385; // w0
+  BalanceConfig_c *v386; // x8
+  int32_t v387; // w21
+  System_String_array *v388; // x1
   ServantStatusBattleListViewItem_o *p_UIStandFigureROffsetEffectNames; // x0
-  int32_t v389; // w2
-  int32_t v390; // w3
-  System_String_array *v391; // x1
+  int32_t v390; // w2
+  int32_t v391; // w3
+  System_String_array *v392; // x1
   ServantStatusBattleListViewItem_o *p_UIStandFigureROffsetImages; // x0
-  int32_t v393; // w2
-  int32_t v394; // w3
-  BalanceConfig_c *v395; // x0
-  int32_t v396; // w2
-  int32_t v397; // w3
-  Il2CppObject *v398; // x21
-  int32_t v399; // w1
-  int32_t v400; // w2
-  int32_t v401; // w3
-  int32_t v402; // w1
-  int32_t v403; // w2
-  int32_t v404; // w3
-  int32_t v405; // w1
-  int32_t v406; // w2
-  int32_t v407; // w3
-  int32_t v408; // w1
-  int32_t v409; // w2
-  int32_t v410; // w3
-  int32_t v411; // w1
-  int32_t v412; // w2
-  int32_t v413; // w3
-  int32_t v414; // w1
-  int32_t v415; // w2
-  int32_t v416; // w3
-  int32_t v417; // w1
-  int32_t v418; // w2
-  int32_t v419; // w3
-  BalanceConfig_c *v420; // x0
-  ServantStatusBattleListViewItem_o *v421; // x0
-  int32_t v422; // w2
-  int32_t v423; // w3
-  Il2CppObject *v424; // x21
-  int32_t v425; // w1
-  int32_t v426; // w2
-  int32_t v427; // w3
-  int32_t v428; // w1
-  int32_t v429; // w2
-  int32_t v430; // w3
-  int32_t v431; // w1
-  int32_t v432; // w2
-  int32_t v433; // w3
-  int32_t v434; // w1
-  int32_t v435; // w2
-  int32_t v436; // w3
-  int32_t v437; // w1
-  int32_t v438; // w2
-  int32_t v439; // w3
-  int32_t v440; // w1
-  int32_t v441; // w2
-  int32_t v442; // w3
-  int32_t v443; // w1
-  int32_t v444; // w2
-  int32_t v445; // w3
-  int32_t v446; // w1
-  int32_t v447; // w2
-  int32_t v448; // w3
-  int32_t v449; // w1
-  int32_t v450; // w2
-  int32_t v451; // w3
-  int32_t v452; // w1
-  int32_t v453; // w2
-  int32_t v454; // w3
-  int32_t v455; // w1
-  int32_t v456; // w2
-  int32_t v457; // w3
-  int32_t v458; // w1
-  int32_t v459; // w2
-  int32_t v460; // w3
-  int32_t v461; // w1
-  int32_t v462; // w2
-  int32_t v463; // w3
-  int32_t v464; // w1
-  int32_t v465; // w2
-  int32_t v466; // w3
-  int32_t v467; // w1
-  int32_t v468; // w2
-  int32_t v469; // w3
-  int32_t v470; // w1
-  int32_t v471; // w2
-  int32_t v472; // w3
-  int32_t v473; // w1
-  int32_t v474; // w2
-  int32_t v475; // w3
-  int32_t v476; // w1
-  int32_t v477; // w2
-  int32_t v478; // w3
-  BalanceConfig_c *v479; // x0
-  ServantStatusBattleListViewItem_o *v480; // x0
-  int32_t v481; // w0
-  BalanceConfig_c *v482; // x8
-  int32_t v483; // w21
-  bool v484; // w9
+  int32_t v394; // w2
+  int32_t v395; // w3
+  BalanceConfig_c *v396; // x0
+  int32_t v397; // w2
+  int32_t v398; // w3
+  Il2CppObject *v399; // x21
+  int32_t v400; // w1
+  int32_t v401; // w2
+  int32_t v402; // w3
+  int32_t v403; // w1
+  int32_t v404; // w2
+  int32_t v405; // w3
+  int32_t v406; // w1
+  int32_t v407; // w2
+  int32_t v408; // w3
+  int32_t v409; // w1
+  int32_t v410; // w2
+  int32_t v411; // w3
+  int32_t v412; // w1
+  int32_t v413; // w2
+  int32_t v414; // w3
+  int32_t v415; // w1
+  int32_t v416; // w2
+  int32_t v417; // w3
+  int32_t v418; // w1
+  int32_t v419; // w2
+  int32_t v420; // w3
+  BalanceConfig_c *v421; // x0
+  ServantStatusBattleListViewItem_o *v422; // x0
+  int32_t v423; // w2
+  int32_t v424; // w3
+  Il2CppObject *v425; // x21
+  int32_t v426; // w1
+  int32_t v427; // w2
+  int32_t v428; // w3
+  int32_t v429; // w1
+  int32_t v430; // w2
+  int32_t v431; // w3
+  int32_t v432; // w1
+  int32_t v433; // w2
+  int32_t v434; // w3
+  int32_t v435; // w1
+  int32_t v436; // w2
+  int32_t v437; // w3
+  int32_t v438; // w1
+  int32_t v439; // w2
+  int32_t v440; // w3
+  int32_t v441; // w1
+  int32_t v442; // w2
+  int32_t v443; // w3
+  int32_t v444; // w1
+  int32_t v445; // w2
+  int32_t v446; // w3
+  int32_t v447; // w1
+  int32_t v448; // w2
+  int32_t v449; // w3
+  int32_t v450; // w1
+  int32_t v451; // w2
+  int32_t v452; // w3
+  int32_t v453; // w1
+  int32_t v454; // w2
+  int32_t v455; // w3
+  int32_t v456; // w1
+  int32_t v457; // w2
+  int32_t v458; // w3
+  int32_t v459; // w1
+  int32_t v460; // w2
+  int32_t v461; // w3
+  int32_t v462; // w1
+  int32_t v463; // w2
+  int32_t v464; // w3
+  int32_t v465; // w1
+  int32_t v466; // w2
+  int32_t v467; // w3
+  int32_t v468; // w1
+  int32_t v469; // w2
+  int32_t v470; // w3
+  int32_t v471; // w1
+  int32_t v472; // w2
+  int32_t v473; // w3
+  int32_t v474; // w1
+  int32_t v475; // w2
+  int32_t v476; // w3
+  int32_t v477; // w1
+  int32_t v478; // w2
+  int32_t v479; // w3
+  BalanceConfig_c *v480; // x0
+  ServantStatusBattleListViewItem_o *v481; // x0
+  int32_t v482; // w0
+  BalanceConfig_c *v483; // x8
+  int32_t v484; // w21
   bool v485; // w9
-  struct BalanceConfig_StaticFields *v486; // x8
-  int32_t v487; // w0
-  struct BalanceConfig_StaticFields *v488; // x8
-  int32_t v489; // w0
-  struct BalanceConfig_StaticFields *v490; // x8
-  int32_t v491; // w0
-  struct BalanceConfig_StaticFields *v492; // x8
-  System_Int32_array *v493; // x1
+  bool v486; // w9
+  struct BalanceConfig_StaticFields *v487; // x8
+  int32_t v488; // w0
+  struct BalanceConfig_StaticFields *v489; // x8
+  int32_t v490; // w0
+  struct BalanceConfig_StaticFields *v491; // x8
+  int32_t v492; // w0
+  struct BalanceConfig_StaticFields *v493; // x8
+  System_Int32_array *v494; // x1
   ServantStatusBattleListViewItem_o *p_MainChaptersWithEventId; // x0
-  int32_t v495; // w2
-  int32_t v496; // w3
-  int32_t v497; // w0
-  struct BalanceConfig_StaticFields *v498; // x8
-  System_Int32_array *v499; // x1
+  int32_t v496; // w2
+  int32_t v497; // w3
+  int32_t v498; // w0
+  struct BalanceConfig_StaticFields *v499; // x8
+  System_Int32_array *v500; // x1
   ServantStatusBattleListViewItem_o *p_TreasureDevicesForcedOpenEffect; // x0
-  int32_t v501; // w2
-  int32_t v502; // w3
-  System_Int32_array *v503; // x1
+  int32_t v502; // w2
+  int32_t v503; // w3
+  System_Int32_array *v504; // x1
   ServantStatusBattleListViewItem_o *p_HeroineTreasureDeviceRankUpEffects; // x0
-  int32_t v505; // w2
-  int32_t v506; // w3
-  int32_t v507; // w0
-  struct BalanceConfig_StaticFields *v508; // x8
-  int32_t v509; // w0
-  struct BalanceConfig_StaticFields *v510; // x8
-  System_Int32_array *v511; // x1
+  int32_t v506; // w2
+  int32_t v507; // w3
+  int32_t v508; // w0
+  struct BalanceConfig_StaticFields *v509; // x8
+  int32_t v510; // w0
+  struct BalanceConfig_StaticFields *v511; // x8
+  System_Int32_array *v512; // x1
   ServantStatusBattleListViewItem_o *p_Extra1SortOrderClassIds; // x0
-  int32_t v513; // w2
-  int32_t v514; // w3
-  System_Int32_array *v515; // x1
+  int32_t v514; // w2
+  int32_t v515; // w3
+  System_Int32_array *v516; // x1
   ServantStatusBattleListViewItem_o *p_Extra2SortOrderClassIds; // x0
-  int32_t v517; // w2
-  int32_t v518; // w3
-  int32_t v519; // w0
-  struct BalanceConfig_StaticFields *v520; // x8
-  int32_t v521; // w0
-  struct BalanceConfig_StaticFields *v522; // x8
-  System_Int32_array *v523; // x1
+  int32_t v518; // w2
+  int32_t v519; // w3
+  int32_t v520; // w0
+  struct BalanceConfig_StaticFields *v521; // x8
+  int32_t v522; // w0
+  struct BalanceConfig_StaticFields *v523; // x8
+  System_Int32_array *v524; // x1
   ServantStatusBattleListViewItem_o *p_NotUIChangeMapIds; // x0
-  int32_t v525; // w2
-  int32_t v526; // w3
-  System_Int32_array *v527; // x1
+  int32_t v526; // w2
+  int32_t v527; // w3
+  System_Int32_array *v528; // x1
   ServantStatusBattleListViewItem_o *p_LimitSealedDialogMaxLimitOpenIds; // x0
-  int32_t v529; // w2
-  int32_t v530; // w3
-  System_Int32_array *v531; // x1
+  int32_t v530; // w2
+  int32_t v531; // w3
+  System_Int32_array *v532; // x1
   ServantStatusBattleListViewItem_o *p_OrdealCallChapterFolderEventUIDispWarIds; // x0
-  int32_t v533; // w2
-  int32_t v534; // w3
-  System_Int32_array *v535; // x1
+  int32_t v534; // w2
+  int32_t v535; // w3
+  System_Int32_array *v536; // x1
   ServantStatusBattleListViewItem_o *p_RecoveryFatigueDelayedChangeBgEvents; // x0
-  int32_t v537; // w2
-  int32_t v538; // w3
-  System_Int32_array *v539; // x1
+  int32_t v538; // w2
+  int32_t v539; // w3
+  System_Int32_array *v540; // x1
   ServantStatusBattleListViewItem_o *p_noneDisplayFreeQuestMaterial; // x0
-  int32_t v541; // w2
-  int32_t v542; // w3
-  System_Int32_array *v543; // x1
+  int32_t v542; // w2
+  int32_t v543; // w3
+  System_Int32_array *v544; // x1
   ServantStatusBattleListViewItem_o *p_NotSendTrackEventAtWarIds; // x0
-  int32_t v545; // w2
-  int32_t v546; // w3
-  int32_t v547; // w0
-  struct BalanceConfig_StaticFields *v548; // x8
-  System_Int32_array *v549; // x1
+  int32_t v546; // w2
+  int32_t v547; // w3
+  int32_t v548; // w0
+  struct BalanceConfig_StaticFields *v549; // x8
+  System_Int32_array *v550; // x1
   ServantStatusBattleListViewItem_o *p_NotRequiredPlayWarIds; // x0
-  int32_t v551; // w2
-  int32_t v552; // w3
-  bool v553; // w9
+  int32_t v552; // w2
+  int32_t v553; // w3
   bool v554; // w9
-  System_String_o *v555; // x1
+  bool v555; // w9
+  System_String_o *v556; // x1
   ServantStatusBattleListViewItem_o *p_LoginQuestReturnTerminalDialogMessage; // x0
-  int32_t v557; // w2
-  int32_t v558; // w3
-  System_Int32_array *v559; // x1
+  int32_t v558; // w2
+  int32_t v559; // w3
+  System_Int32_array *v560; // x1
   ServantStatusBattleListViewItem_o *p_EventItemNotDispItemGetEffect; // x0
-  int32_t v561; // w2
-  int32_t v562; // w3
-  bool v563; // w9
-  System_Collections_Generic_Dictionary_object__int__o *v564; // x20
-  MstMissionEntity_c *v565; // x0
-  TitleInfoControl_c *v566; // x8
-  System_String_o *MISSION_ICON_DISPLAY_MS_GROUP_NORMAL; // x21
+  int32_t v562; // w2
+  int32_t v563; // w3
+  bool v564; // w9
+  System_Collections_Generic_Dictionary_object__int__o *v565; // x21
+  MstMissionEntity_c *v566; // x0
+  TitleInfoControl_c *v567; // x8
+  System_String_o *MISSION_ICON_DISPLAY_MS_GROUP_NORMAL; // x22
   float EVENT_ALPHA_ANIM_TIME_INTERVAL; // s0
-  int32_t v569; // w2
-  struct MstMissionEntity_StaticFields *v570; // x9
-  float v571; // s0
-  Il2CppObject *MISSION_ICON_DISPLAY_MS_GROUP_LIMITED; // x21
+  int32_t v570; // w2
+  Il2CppObject *MISSION_ICON_DISPLAY_MS_GROUP_LIMITED; // x22
+  float v572; // s0
   int32_t v573; // w2
   int32_t v574; // w0
   ServantStatusBattleListViewItem_o *p_MissionIconDisplayMsDictionary; // x0
   int32_t v576; // w2
   int32_t v577; // w3
+  bool v578; // w9
+  struct BalanceConfig_StaticFields *v579; // x8
+  System_Int32_array *v580; // x1
+  ServantStatusBattleListViewItem_o *p_PlayableBeastClassIds; // x0
+  int32_t v582; // w2
+  int32_t v583; // w3
   float result; // [xsp+Ch] [xbp-64h] BYREF
-  System_RuntimeFieldHandle_o v579; // 0:w1.4
-  System_RuntimeFieldHandle_o v580; // 0:w1.4
+  System_RuntimeFieldHandle_o v585; // 0:w1.4
+  System_RuntimeFieldHandle_o v586; // 0:w1.4
 
-  if ( (byte_4A0827E & 1) == 0 )
+  if ( (byte_4A1F0E6 & 1) == 0 )
   {
-    sub_1B686D4(&BalanceConfig_TypeInfo, v1);
-    sub_1B686D4(&Method_DataManager_GetMasterData_ConstantLongMaster___, v2);
-    sub_1B686D4(&Method_DataManager_GetMasterData_ConstantMaster___, v3);
-    sub_1B686D4(&Method_DataManager_GetMasterData_ConstantStrMaster___, v4);
-    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_string__int___ctor__, v5);
-    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_string__int__set_Item__, v6);
-    sub_1B686D4(&System_Collections_Generic_Dictionary_string__int__TypeInfo, v7);
-    sub_1B686D4(&Method_System_Linq_Enumerable_Select_string__int___, v8);
-    sub_1B686D4(&Method_System_Linq_Enumerable_ToArray_int___, v9);
-    sub_1B686D4(&System_Func_string__int__TypeInfo, v10);
-    sub_1B686D4(&int___TypeInfo, v11);
-    sub_1B686D4(&ManagerConfig_TypeInfo, v12);
-    sub_1B686D4(&System_Math_TypeInfo, v13);
-    sub_1B686D4(&MstMissionEntity_TypeInfo, v14);
-    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    sub_1B686D4(&string___TypeInfo, v16);
-    sub_1B686D4(&TitleInfoControl_TypeInfo, v17);
-    sub_1B686D4(
+    sub_1B715CC(&BalanceConfig_TypeInfo, v1);
+    sub_1B715CC(&Method_DataManager_GetMasterData_ConstantLongMaster___, v2);
+    sub_1B715CC(&Method_DataManager_GetMasterData_ConstantMaster___, v3);
+    sub_1B715CC(&Method_DataManager_GetMasterData_ConstantStrMaster___, v4);
+    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_string__int___ctor__, v5);
+    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_string__int__set_Item__, v6);
+    sub_1B715CC(&System_Collections_Generic_Dictionary_string__int__TypeInfo, v7);
+    sub_1B715CC(&Method_System_Linq_Enumerable_Select_string__int___, v8);
+    sub_1B715CC(&Method_System_Linq_Enumerable_ToArray_int___, v9);
+    sub_1B715CC(&System_Func_string__int__TypeInfo, v10);
+    sub_1B715CC(&int___TypeInfo, v11);
+    sub_1B715CC(&ManagerConfig_TypeInfo, v12);
+    sub_1B715CC(&System_Math_TypeInfo, v13);
+    sub_1B715CC(&MstMissionEntity_TypeInfo, v14);
+    sub_1B715CC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
+    sub_1B715CC(&string___TypeInfo, v16);
+    sub_1B715CC(&TitleInfoControl_TypeInfo, v17);
+    sub_1B715CC(
       &Field__PrivateImplementationDetails__84DF4B72A51E01473BC25693E526BC603A140C4300062B4A7F64A9F7D00ABB95,
       v18);
-    sub_1B686D4(
+    sub_1B715CC(
       &Field__PrivateImplementationDetails__A1FBA00A0F8840358C0A54605FFD365F75E3A3D7AFF25F48F474C4E89BB0B37D,
       v19);
-    sub_1B686D4(&Method_BalanceConfig___c__Initialize_b__240_0__, v20);
-    sub_1B686D4(&BalanceConfig___c_TypeInfo, v21);
-    sub_1B686D4(&StringLiteral_8563/*"MAX_USER_ITEM"*/, v22);
-    sub_1B686D4(&StringLiteral_8089/*"JEKYLL_SVT_ID"*/, v23);
-    sub_1B686D4(&StringLiteral_1402/*"1053912:100:0"*/, v24);
-    sub_1B686D4(&StringLiteral_13370/*"TREASURE_DEVICES_FORCED_OPEN_EFFECT"*/, v25);
-    sub_1B686D4(&StringLiteral_11984/*"SHOP_DETAIL_CHECK_DIALOG_FONT_SIZE"*/, v26);
-    sub_1B686D4(&StringLiteral_8226/*"LIMIT_SEALED_DIALOG_MAX_LIMIT_OPEN_IDS"*/, v27);
-    sub_1B686D4(&StringLiteral_8562/*"MAX_USER_COMMAND_CODE"*/, v28);
-    sub_1B686D4(&StringLiteral_9690/*"OTHER_IMAGE_LIMIT_COUNT"*/, v29);
-    sub_1B686D4(&StringLiteral_8478/*"MASHU_SVT_ID3"*/, v30);
-    sub_1B686D4(&StringLiteral_5022/*"DISABLE_FRIENDSHIP_EXCEED"*/, v31);
-    sub_1B686D4(&StringLiteral_12257/*"STORMPOD_HELP_IDS"*/, v32);
-    sub_1B686D4(&StringLiteral_2998/*"BGM_FADE_OUT_TIME_BEFORE_BATTLE"*/, v33);
-    sub_1B686D4(&StringLiteral_11008/*"REPRINT_LAST_WAR_RAID_EVENT_ID_LIST"*/, v34);
-    sub_1B686D4(&StringLiteral_17211/*"bit_result_bond"*/, v35);
-    sub_1B686D4(&StringLiteral_8551/*"MAX_MANA"*/, v36);
-    sub_1B686D4(&StringLiteral_5533/*"EVENT_BOARD_GAME_DICE_BUTTON_POS"*/, v37);
-    sub_1B686D4(&StringLiteral_1517/*"5047002:100:0"*/, v38);
-    sub_1B686D4(&StringLiteral_5608/*"EVENT_ITEM_NOT_DISP_ITEM_GET_EFFECT"*/, v39);
-    sub_1B686D4(&StringLiteral_8558/*"MAX_RECOMMEND_ADVICE_MESSAGE_NUM"*/, v40);
-    sub_1B686D4(&StringLiteral_5707/*"EVENT_TOWER_FADEOUT_PLAY_TIME"*/, v41);
-    sub_1B686D4(&StringLiteral_9215/*"NONE_DISPLAY_FREE_QUEST_MATERIAL"*/, v42);
-    sub_1B686D4(&StringLiteral_1401/*"1053911:100:0"*/, v43);
-    sub_1B686D4(&StringLiteral_1400/*"1053910:100:0"*/, v44);
-    sub_1B686D4(&StringLiteral_7392/*"IS_WAR_BOARD_AI_FILTER_WASTE_ROUTE"*/, v45);
-    sub_1B686D4(&StringLiteral_19970/*"https://view.fate-go.jp/"*/, v46);
-    sub_1B686D4(&StringLiteral_7144/*"HYDE_SVT_ID"*/, v47);
-    sub_1B686D4(&StringLiteral_9569/*"OBERON_CHOCO_SVT_ID"*/, v48);
-    sub_1B686D4(&StringLiteral_6357/*"FIX_MAIN_SUPPORT_DECK_NUM"*/, v49);
-    sub_1B686D4(&StringLiteral_8476/*"MASHU_SVT_ID1"*/, v50);
-    sub_1B686D4(&StringLiteral_3669/*"COMBINE_SERVANT_SKILL_IDS"*/, v51);
-    sub_1B686D4(&StringLiteral_1397/*"1053900:100:0"*/, v52);
-    sub_1B686D4(&StringLiteral_9680/*"ORT_FIRST_QUEST_ID"*/, v53);
-    sub_1B686D4(&StringLiteral_8575/*"MEMORY_DECK_LIMIT_BY_QUEST"*/, v54);
-    sub_1B686D4(&StringLiteral_5536/*"EVENT_BOARD_GAME_MAP_ID_LIST"*/, v55);
-    sub_1B686D4(&StringLiteral_8267/*"LOGIN_QUEST_RETURN_TERMINAL_DIALOG_MESSAGE"*/, v56);
-    sub_1B686D4(&StringLiteral_9275/*"NPC_FRIEND_POINT"*/, v57);
-    sub_1B686D4(&StringLiteral_3448/*"CLASS_BOARD_2D_CAMERA_DEFAULT_SIZE"*/, v58);
-    sub_1B686D4(&StringLiteral_1515/*"5047000:100:0"*/, v59);
-    sub_1B686D4(&StringLiteral_5021/*"DISABLE_BACK_MASK_TIME"*/, v60);
-    sub_1B686D4(&StringLiteral_11370/*"SAME_CLASS_MULI_EXP"*/, v61);
-    sub_1B686D4(&StringLiteral_8545/*"MAX_EVENT_ACTIVITY_POINT"*/, v62);
-    sub_1B686D4(&StringLiteral_1485/*"3D_MAP_CAMERA_MOVE_EASING_TYPE"*/, v63);
-    sub_1B686D4(&StringLiteral_9176/*"NEED_REBOOT_TIME"*/, v64);
-    sub_1B686D4(&StringLiteral_9677/*"ORDEAL_CALL_CHAPTER_FOLDER_EVENT_UI_DISP_WAR_IDS"*/, v65);
-    sub_1B686D4(&StringLiteral_6458/*"FREE_GACHA_RESET_AT"*/, v66);
-    sub_1B686D4(&StringLiteral_8566/*"MAX_USER_SVT_EQUIP"*/, v67);
-    sub_1B686D4(&StringLiteral_11403/*"SCENARIO_SPEED_HIGH"*/, v68);
-    sub_1B686D4(&StringLiteral_6492/*"FRIEND_POINT"*/, v69);
-    sub_1B686D4(&StringLiteral_1394/*"1053000:100:0"*/, v70);
-    sub_1B686D4(&StringLiteral_17226/*"bit_result_servant"*/, v71);
-    sub_1B686D4(&StringLiteral_5725/*"EXCLUSIVE_NPC_SERVANT_ID_START"*/, v72);
-    sub_1B686D4(&StringLiteral_8552/*"MAX_NEAR_PRESENT_OFFSET_NUM"*/, v73);
-    sub_1B686D4(&StringLiteral_10996/*"RECOVERY_FATIGUE_DELAYED_CHANGE_BG_EVENTS"*/, v74);
-    sub_1B686D4(&StringLiteral_10361/*"POWERUP_QUEST_WAR_ID"*/, v75);
-    sub_1B686D4(&StringLiteral_1516/*"5047001:100:0"*/, v76);
-    sub_1B686D4(&StringLiteral_12172/*"STAND_FIGURE_R_OFFSET_EFFECT_IMAGES"*/, v77);
-    sub_1B686D4(&StringLiteral_3693/*"COMMAND_CARD_PRM_UP_MAX"*/, v78);
-    sub_1B686D4(&StringLiteral_12175/*"STARTING_MEMBER_FRIENDSHIP_RATE"*/, v79);
-    sub_1B686D4(&StringLiteral_9686/*"ORT_THIRD_FORM_ID"*/, v80);
-    sub_1B686D4(&StringLiteral_12173/*"STAND_FIGURE_R_OFFSET_EFFECT_NAMES"*/, v81);
-    sub_1B686D4(&StringLiteral_7388/*"IS_MISSION_NAVI_AUTO_CLASSIFY"*/, v82);
-    sub_1B686D4(&StringLiteral_1399/*"1053902:100:0"*/, v83);
-    sub_1B686D4(&StringLiteral_8479/*"MASHU_TD_GRADE_UP_QUEST_ID"*/, v84);
-    sub_1B686D4(&StringLiteral_8561/*"MAX_STONE"*/, v85);
-    sub_1B686D4(&StringLiteral_8547/*"MAX_FRIENDPOINT"*/, v86);
-    sub_1B686D4(&StringLiteral_9257/*"NOT_UI_CHANGE_MAP_IDS"*/, v87);
-    sub_1B686D4(&StringLiteral_6338/*"FES_WAR_ID"*/, v88);
-    sub_1B686D4(&StringLiteral_9684/*"ORT_LATE_QUEST_ID"*/, v89);
-    sub_1B686D4(&StringLiteral_17227/*"bit_result_skill"*/, v90);
-    sub_1B686D4(&StringLiteral_9681/*"ORT_LATE_PHASE_BREAK"*/, v91);
-    sub_1B686D4(&StringLiteral_17212/*"bit_result_command_card_exceed"*/, v92);
-    sub_1B686D4(&StringLiteral_3453/*"CLASS_BOARD_CAMERA_SELECT_MOVE_MAX_DISTANCE"*/, v93);
-    sub_1B686D4(&StringLiteral_3454/*"CLASS_BOARD_CAMERA_SELECT_SEC_MAX"*/, v94);
-    sub_1B686D4(&StringLiteral_8565/*"MAX_USER_SVT"*/, v95);
-    sub_1B686D4(&StringLiteral_9580/*"ONE_ACT"*/, v96);
-    sub_1B686D4(&StringLiteral_6356/*"FIX_EVENT_SUPPORT_DECK_NUM"*/, v97);
-    sub_1B686D4(&StringLiteral_15418/*"WAR_BOARD_EVAL_FACTORS_AFFECT_RATIO"*/, v98);
-    sub_1B686D4(&StringLiteral_6460/*"FRIENDPOINT_BOOST_ITEM_EFFECT_ID"*/, v99);
-    sub_1B686D4(&StringLiteral_17216/*"bit_result_friendship_exceed"*/, v100);
-    sub_1B686D4(&StringLiteral_8480/*"MASHU_TD_GRADE_UP_QUEST_PHASE"*/, v101);
-    sub_1B686D4(&StringLiteral_11014/*"REQUEST_TOP_HOME_EXPIRATION_DATE_SEC_UPDATE_EVENT_MAP"*/, v102);
-    sub_1B686D4(&StringLiteral_3452/*"CLASS_BOARD_CAMERA_SELECT_EASING_TYPE"*/, v103);
-    sub_1B686D4(&StringLiteral_7385/*"IS_ENABLE_OLD_BLOCK_SHORTEST_ROUTE"*/, v104);
-    sub_1B686D4(&StringLiteral_8455/*"MAIN_CHAPTERS_WITH_EVENT_ID"*/, v105);
-    sub_1B686D4(&StringLiteral_1398/*"1053901:100:0"*/, v106);
-    sub_1B686D4(&StringLiteral_17213/*"bit_result_extraskill"*/, v107);
-    sub_1B686D4(&StringLiteral_1518/*"5047900:100:0"*/, v108);
-    sub_1B686D4(&StringLiteral_9582/*"ONE_RP"*/, v109);
-    sub_1B686D4(&StringLiteral_8568/*"MAX_USER_SVT_STORAGE"*/, v110);
-    sub_1B686D4(&StringLiteral_9683/*"ORT_LATE_PHASE_SECOND_FORM"*/, v111);
-    sub_1B686D4(&StringLiteral_3830/*"CONSUME_STORMPOD_SPOT_ID"*/, v112);
-    sub_1B686D4(&StringLiteral_2985/*"BEFORE_CHANGE_FREE_DRAW_NUM"*/, v113);
-    sub_1B686D4(&StringLiteral_7391/*"IS_WAR_BOARD_AI_FILTER_NOT_ACTION"*/, v114);
-    sub_1B686D4(&StringLiteral_3372/*"CAMPAIGN_RESET_AT"*/, v115);
-    sub_1B686D4(&StringLiteral_10895/*"RAID_DEFEATED_EFFECT_TIME"*/, v116);
-    sub_1B686D4(&StringLiteral_10968/*"RECOMMEND_SUPPORT_FRIEND_POINT"*/, v117);
-    sub_1B686D4(&StringLiteral_6379/*"FOLLOWER_REFRESH_RESET_TIME"*/, v118);
-    sub_1B686D4(&StringLiteral_3490/*"CLASS_BOARD_RELEASE_QUEST_ID"*/, v119);
-    sub_1B686D4(&StringLiteral_6412/*"FOLLOW_NUM"*/, v120);
-    sub_1B686D4(&StringLiteral_3368/*"CAMERA_2D_RESET_DURATION"*/, v121);
-    sub_1B686D4(&StringLiteral_12222/*"STONE_FRAGMENT_EXCHANGE_NOTICE_MAX"*/, v122);
-    sub_1B686D4(&StringLiteral_7394/*"ITEM_ID_QP"*/, v123);
-    sub_1B686D4(&StringLiteral_12423/*"SWIMSUIT_MELT_SVT_ID"*/, v124);
-    sub_1B686D4(&StringLiteral_8559/*"MAX_RECOMMEND_SUPPORT_DECK_NUM"*/, v125);
-    sub_1B686D4(&StringLiteral_7089/*"HEROINE_LIMIT_COUNT_ORTINAX_REFURBISHED"*/, v126);
-    sub_1B686D4(&StringLiteral_17223/*"bit_result_noble"*/, v127);
-    sub_1B686D4(&StringLiteral_5490/*"EQUIP_GET_EFFECT_ID"*/, v128);
-    sub_1B686D4(&StringLiteral_9244/*"NOT_FRIEND_POINT"*/, v129);
-    sub_1B686D4(&StringLiteral_5538/*"EVENT_BOARD_GAME_NEXT_BOARD_QUEST_ID"*/, v130);
-    sub_1B686D4(&StringLiteral_9682/*"ORT_LATE_PHASE_DEAD"*/, v131);
-    sub_1B686D4(&StringLiteral_8543/*"MAX_BLACK_LIST_NUM"*/, v132);
-    sub_1B686D4(&StringLiteral_8555/*"MAX_PRESENT_RECEIVE_NUM"*/, v133);
-    sub_1B686D4(&StringLiteral_15168/*"VALENTINE_RELEASE_AT"*/, v134);
-    sub_1B686D4(&StringLiteral_8505/*"MASTER_MISSION_SVT_ID1"*/, v135);
-    sub_1B686D4(&StringLiteral_8275/*"LOSTBELT6_CLEAR_QUEST_ID"*/, v136);
-    sub_1B686D4(&StringLiteral_5539/*"EVENT_BOARD_GAME_NEXT_ROUND_QUEST_ID"*/, v137);
-    sub_1B686D4(&StringLiteral_11013/*"REQUEST_RAID_UPDATE_EVENT_MAP"*/, v138);
-    sub_1B686D4(&StringLiteral_12214/*"STATUS_UP_ADJUST_ATK"*/, v139);
-    sub_1B686D4(&StringLiteral_2056/*"AFTRE_CHANGE_FREE_DRAW_NUM"*/, v140);
-    sub_1B686D4(&StringLiteral_1487/*"3D_MAP_CAMERA_MOVE_TIME_CONSTANT"*/, v141);
-    sub_1B686D4(&StringLiteral_6409/*"FOLLOW_FRIEND_POINT"*/, v142);
-    sub_1B686D4(&StringLiteral_7390/*"IS_WAR_BOARD_AI_CALC_EVAL_SUM"*/, v143);
-    sub_1B686D4(&StringLiteral_8549/*"MAX_FRIEND_HISTORY_NUM"*/, v144);
-    sub_1B686D4(&StringLiteral_11405/*"SCENARIO_SPEED_STEP"*/, v145);
-    sub_1B686D4(&StringLiteral_5706/*"EVENT_TOWER_FADEOUT_DELAY_TIME"*/, v146);
-    sub_1B686D4(&StringLiteral_8266/*"LOGIN_DAY"*/, v147);
-    sub_1B686D4(&StringLiteral_5436/*"ENABLE_SERIAL_CODE"*/, v148);
-    sub_1B686D4(&StringLiteral_8518/*"MATERIAL_MAIN_INTERLUDE_WAR_ID"*/, v149);
-    sub_1B686D4(&StringLiteral_5766/*"EXTRA2_SORT_ORDER_CLASS_IDS"*/, v150);
-    sub_1B686D4(&StringLiteral_6840/*"GACHA_DAILY_MAX_DRAW_NUM_RESET_AT"*/, v151);
-    sub_1B686D4(&StringLiteral_13358/*"TREASUREDEVICE_ID_MASHU3"*/, v152);
-    sub_1B686D4(&StringLiteral_8268/*"LOGIN_RESET_AT"*/, v153);
-    sub_1B686D4(&StringLiteral_1519/*"5047901:100:0"*/, v154);
-    sub_1B686D4(&StringLiteral_1968/*"ACCOUNTING_INITIALIZE_TIMEOUT"*/, v155);
-    sub_1B686D4(&StringLiteral_1522/*"5047911:100:0"*/, v156);
-    sub_1B686D4(&StringLiteral_7386/*"IS_EVENT_POINT_MENU"*/, v157);
-    sub_1B686D4(&StringLiteral_10385/*"PRESENT_BOX_FILTER_SVT_EQUIP_MATERIAL"*/, v158);
-    sub_1B686D4(&StringLiteral_10893/*"RACE_REWARD_RANK_MAX"*/, v159);
-    sub_1B686D4(&StringLiteral_9256/*"NOT_SEND_TRACK_EVENT_AT_WAR_IDS"*/, v160);
-    sub_1B686D4(&StringLiteral_8477/*"MASHU_SVT_ID2"*/, v161);
-    sub_1B686D4(&StringLiteral_11404/*"SCENARIO_SPEED_LOW"*/, v162);
-    sub_1B686D4(&StringLiteral_9678/*"ORDEAL_CALL_CLEAR_BGM_NAME"*/, v163);
-    sub_1B686D4(&StringLiteral_8557/*"MAX_RARE_PRI"*/, v164);
-    sub_1B686D4(&StringLiteral_5765/*"EXTRA1_SORT_ORDER_CLASS_IDS"*/, v165);
-    sub_1B686D4(&StringLiteral_3081/*"BP_EXPRESSION"*/, v166);
-    sub_1B686D4(&StringLiteral_8560/*"MAX_RP"*/, v167);
-    sub_1B686D4(&StringLiteral_12215/*"STATUS_UP_ADJUST_HP"*/, v168);
-    sub_1B686D4(&StringLiteral_9581/*"ONE_COMMAND_SPELL"*/, v169);
-    sub_1B686D4(&StringLiteral_14787/*"USE_TERMS_LATEST_VERSION"*/, v170);
-    sub_1B686D4(&StringLiteral_3573/*"CLOSE_SECRET_TREASURE_DEVICE_QUEST_CLEAR"*/, v171);
-    sub_1B686D4(&StringLiteral_10421/*"PRESENT_VALID_TIME"*/, v172);
-    sub_1B686D4(&StringLiteral_8492/*"MASTER_MISSION_ALERT_TIME"*/, v173);
-    sub_1B686D4(&StringLiteral_3011/*"BIRTHDAY_BEFORE_VALENTINE_SVT_ID"*/, v174);
-    sub_1B686D4(&StringLiteral_8546/*"MAX_EVENT_POINT"*/, v175);
-    sub_1B686D4(&StringLiteral_8254/*"LOCATION_REWARD_DLG_COLUMN"*/, v176);
-    sub_1B686D4(&StringLiteral_8544/*"MAX_COMMAND_SPELL"*/, v177);
-    sub_1B686D4(&StringLiteral_8457/*"MAIN_INTERLUDE_WAR_ID"*/, v178);
-    sub_1B686D4(&StringLiteral_7361/*"IOS_EXAMINATION_NEWS_URL"*/, v179);
-    sub_1B686D4(&StringLiteral_1395/*"1053001:100:0"*/, v180);
-    sub_1B686D4(&StringLiteral_12342/*"SUPPORT_DECK_MAX"*/, v181);
-    sub_1B686D4(&StringLiteral_9685/*"ORT_SECONDE_FORM_ID"*/, v182);
-    sub_1B686D4(&StringLiteral_1486/*"3D_MAP_CAMERA_MOVE_TIME_COEFFICIENT"*/, v183);
-    sub_1B686D4(&StringLiteral_7312/*"IGNORE_FORM_CHANGE_SVT_ID"*/, v184);
-    sub_1B686D4(&StringLiteral_8564/*"MAX_USER_LV"*/, v185);
-    sub_1B686D4(&StringLiteral_7384/*"IS_ENABLE_FADE_RERUN_SKIPPED"*/, v186);
-    sub_1B686D4(&StringLiteral_14786/*"USE_TERMS_AGREEMENT_REQUIERD_APP_VERSION"*/, v187);
-    sub_1B686D4(&StringLiteral_8548/*"MAX_FRIENDPOINT_BOOST_ITEM_USE"*/, v188);
-    sub_1B686D4(&StringLiteral_8567/*"MAX_USER_SVT_EQUIP_STORAGE"*/, v189);
-    sub_1B686D4(&StringLiteral_1521/*"5047910:100:0"*/, v190);
-    sub_1B686D4(&StringLiteral_8556/*"MAX_QP"*/, v191);
-    sub_1B686D4(&StringLiteral_7387/*"IS_IOS_EXAMINATION"*/, v192);
-    sub_1B686D4(&StringLiteral_9251/*"NOT_REQUIRED_WAR_IDS"*/, v193);
-    sub_1B686D4(&StringLiteral_3455/*"CLASS_BOARD_CAMERA_SELECT_SEC_MIN"*/, v194);
-    sub_1B686D4(&StringLiteral_6457/*"FREE_DRAW_NUM_CHANGE_AT"*/, v195);
-    sub_1B686D4(&StringLiteral_5576/*"EVENT_DAILY_POINT_RESET_AT"*/, v196);
-    sub_1B686D4(&StringLiteral_1523/*"5047912:100:0"*/, v197);
-    sub_1B686D4(&StringLiteral_1396/*"1053002:100:0"*/, v198);
-    sub_1B686D4(&StringLiteral_4984/*"DECK_MAX"*/, v199);
-    sub_1B686D4(&StringLiteral_10433/*"PROLOGUE_QUEST_ID"*/, v200);
-    sub_1B686D4(&StringLiteral_3574/*"CLOSE_SECRET_TREASURE_DEVICE_SVT_GET"*/, v201);
-    sub_1B686D4(&StringLiteral_12259/*"STORY_WAR_ID"*/, v202);
-    sub_1B686D4(&StringLiteral_8554/*"MAX_PRESENT_BOX_NUM"*/, v203);
-    sub_1B686D4(&StringLiteral_11402/*"SCENARIO_SPEED_DEFAULT"*/, v204);
-    sub_1B686D4(&StringLiteral_13297/*"TITLE_FLOW_OLD"*/, v205);
-    sub_1B686D4(&StringLiteral_1488/*"3D_MAP_CAMERA_MOVE_TIME_LOGARITHM_BASE"*/, v206);
-    sub_1B686D4(&StringLiteral_1466/*"20220731_BOOST_RATE_1"*/, v207);
-    sub_1B686D4(&StringLiteral_8196/*"LEGACY_ASPECT_MOVIES"*/, v208);
-    sub_1B686D4(&StringLiteral_3694/*"COMMAND_CODE_DETACHING_ITEM_ID"*/, v209);
-    sub_1B686D4(&StringLiteral_1520/*"5047902:100:0"*/, v210);
-    sub_1B686D4(&StringLiteral_5761/*"EXPIRATION_DATE"*/, v211);
-    sub_1B686D4(&StringLiteral_9679/*"ORDEAL_CALL_WAR_ID"*/, v212);
-    sub_1B686D4(&StringLiteral_7090/*"HEROINE_TREASURE_DEVICE_RANKUP_EFFECTS"*/, v213);
-    byte_4A0827E = 1;
+    sub_1B715CC(&Method_BalanceConfig___c__Initialize_b__240_0__, v20);
+    sub_1B715CC(&BalanceConfig___c_TypeInfo, v21);
+    sub_1B715CC(&StringLiteral_8568/*"MAX_USER_ITEM"*/, v22);
+    sub_1B715CC(&StringLiteral_8094/*"JEKYLL_SVT_ID"*/, v23);
+    sub_1B715CC(&StringLiteral_1402/*"1053912:100:0"*/, v24);
+    sub_1B715CC(&StringLiteral_13385/*"TREASURE_DEVICES_FORCED_OPEN_EFFECT"*/, v25);
+    sub_1B715CC(&StringLiteral_11993/*"SHOP_DETAIL_CHECK_DIALOG_FONT_SIZE"*/, v26);
+    sub_1B715CC(&StringLiteral_8231/*"LIMIT_SEALED_DIALOG_MAX_LIMIT_OPEN_IDS"*/, v27);
+    sub_1B715CC(&StringLiteral_8567/*"MAX_USER_COMMAND_CODE"*/, v28);
+    sub_1B715CC(&StringLiteral_9697/*"OTHER_IMAGE_LIMIT_COUNT"*/, v29);
+    sub_1B715CC(&StringLiteral_8483/*"MASHU_SVT_ID3"*/, v30);
+    sub_1B715CC(&StringLiteral_5027/*"DISABLE_FRIENDSHIP_EXCEED"*/, v31);
+    sub_1B715CC(&StringLiteral_12266/*"STORMPOD_HELP_IDS"*/, v32);
+    sub_1B715CC(&StringLiteral_3005/*"BGM_FADE_OUT_TIME_BEFORE_BATTLE"*/, v33);
+    sub_1B715CC(&StringLiteral_11016/*"REPRINT_LAST_WAR_RAID_EVENT_ID_LIST"*/, v34);
+    sub_1B715CC(&StringLiteral_17226/*"bit_result_bond"*/, v35);
+    sub_1B715CC(&StringLiteral_8556/*"MAX_MANA"*/, v36);
+    sub_1B715CC(&StringLiteral_5538/*"EVENT_BOARD_GAME_DICE_BUTTON_POS"*/, v37);
+    sub_1B715CC(&StringLiteral_1518/*"5047002:100:0"*/, v38);
+    sub_1B715CC(&StringLiteral_5613/*"EVENT_ITEM_NOT_DISP_ITEM_GET_EFFECT"*/, v39);
+    sub_1B715CC(&StringLiteral_8563/*"MAX_RECOMMEND_ADVICE_MESSAGE_NUM"*/, v40);
+    sub_1B715CC(&StringLiteral_5712/*"EVENT_TOWER_FADEOUT_PLAY_TIME"*/, v41);
+    sub_1B715CC(&StringLiteral_9220/*"NONE_DISPLAY_FREE_QUEST_MATERIAL"*/, v42);
+    sub_1B715CC(&StringLiteral_1401/*"1053911:100:0"*/, v43);
+    sub_1B715CC(&StringLiteral_1400/*"1053910:100:0"*/, v44);
+    sub_1B715CC(&StringLiteral_7397/*"IS_WAR_BOARD_AI_FILTER_WASTE_ROUTE"*/, v45);
+    sub_1B715CC(&StringLiteral_19988/*"https://view.fate-go.jp/"*/, v46);
+    sub_1B715CC(&StringLiteral_7149/*"HYDE_SVT_ID"*/, v47);
+    sub_1B715CC(&StringLiteral_9574/*"OBERON_CHOCO_SVT_ID"*/, v48);
+    sub_1B715CC(&StringLiteral_6362/*"FIX_MAIN_SUPPORT_DECK_NUM"*/, v49);
+    sub_1B715CC(&StringLiteral_8481/*"MASHU_SVT_ID1"*/, v50);
+    sub_1B715CC(&StringLiteral_3675/*"COMBINE_SERVANT_SKILL_IDS"*/, v51);
+    sub_1B715CC(&StringLiteral_1397/*"1053900:100:0"*/, v52);
+    sub_1B715CC(&StringLiteral_9687/*"ORT_FIRST_QUEST_ID"*/, v53);
+    sub_1B715CC(&StringLiteral_8580/*"MEMORY_DECK_LIMIT_BY_QUEST"*/, v54);
+    sub_1B715CC(&StringLiteral_5541/*"EVENT_BOARD_GAME_MAP_ID_LIST"*/, v55);
+    sub_1B715CC(&StringLiteral_8272/*"LOGIN_QUEST_RETURN_TERMINAL_DIALOG_MESSAGE"*/, v56);
+    sub_1B715CC(&StringLiteral_9280/*"NPC_FRIEND_POINT"*/, v57);
+    sub_1B715CC(&StringLiteral_3454/*"CLASS_BOARD_2D_CAMERA_DEFAULT_SIZE"*/, v58);
+    sub_1B715CC(&StringLiteral_1516/*"5047000:100:0"*/, v59);
+    sub_1B715CC(&StringLiteral_5026/*"DISABLE_BACK_MASK_TIME"*/, v60);
+    sub_1B715CC(&StringLiteral_11378/*"SAME_CLASS_MULI_EXP"*/, v61);
+    sub_1B715CC(&StringLiteral_8550/*"MAX_EVENT_ACTIVITY_POINT"*/, v62);
+    sub_1B715CC(&StringLiteral_1486/*"3D_MAP_CAMERA_MOVE_EASING_TYPE"*/, v63);
+    sub_1B715CC(&StringLiteral_9181/*"NEED_REBOOT_TIME"*/, v64);
+    sub_1B715CC(&StringLiteral_9684/*"ORDEAL_CALL_CHAPTER_FOLDER_EVENT_UI_DISP_WAR_IDS"*/, v65);
+    sub_1B715CC(&StringLiteral_6463/*"FREE_GACHA_RESET_AT"*/, v66);
+    sub_1B715CC(&StringLiteral_8571/*"MAX_USER_SVT_EQUIP"*/, v67);
+    sub_1B715CC(&StringLiteral_11411/*"SCENARIO_SPEED_HIGH"*/, v68);
+    sub_1B715CC(&StringLiteral_6497/*"FRIEND_POINT"*/, v69);
+    sub_1B715CC(&StringLiteral_1394/*"1053000:100:0"*/, v70);
+    sub_1B715CC(&StringLiteral_17241/*"bit_result_servant"*/, v71);
+    sub_1B715CC(&StringLiteral_5730/*"EXCLUSIVE_NPC_SERVANT_ID_START"*/, v72);
+    sub_1B715CC(&StringLiteral_8557/*"MAX_NEAR_PRESENT_OFFSET_NUM"*/, v73);
+    sub_1B715CC(&StringLiteral_11004/*"RECOVERY_FATIGUE_DELAYED_CHANGE_BG_EVENTS"*/, v74);
+    sub_1B715CC(&StringLiteral_10370/*"POWERUP_QUEST_WAR_ID"*/, v75);
+    sub_1B715CC(&StringLiteral_1517/*"5047001:100:0"*/, v76);
+    sub_1B715CC(&StringLiteral_12181/*"STAND_FIGURE_R_OFFSET_EFFECT_IMAGES"*/, v77);
+    sub_1B715CC(&StringLiteral_3699/*"COMMAND_CARD_PRM_UP_MAX"*/, v78);
+    sub_1B715CC(&StringLiteral_12184/*"STARTING_MEMBER_FRIENDSHIP_RATE"*/, v79);
+    sub_1B715CC(&StringLiteral_9693/*"ORT_THIRD_FORM_ID"*/, v80);
+    sub_1B715CC(&StringLiteral_12182/*"STAND_FIGURE_R_OFFSET_EFFECT_NAMES"*/, v81);
+    sub_1B715CC(&StringLiteral_7393/*"IS_MISSION_NAVI_AUTO_CLASSIFY"*/, v82);
+    sub_1B715CC(&StringLiteral_1399/*"1053902:100:0"*/, v83);
+    sub_1B715CC(&StringLiteral_8484/*"MASHU_TD_GRADE_UP_QUEST_ID"*/, v84);
+    sub_1B715CC(&StringLiteral_8566/*"MAX_STONE"*/, v85);
+    sub_1B715CC(&StringLiteral_8552/*"MAX_FRIENDPOINT"*/, v86);
+    sub_1B715CC(&StringLiteral_9262/*"NOT_UI_CHANGE_MAP_IDS"*/, v87);
+    sub_1B715CC(&StringLiteral_6343/*"FES_WAR_ID"*/, v88);
+    sub_1B715CC(&StringLiteral_9691/*"ORT_LATE_QUEST_ID"*/, v89);
+    sub_1B715CC(&StringLiteral_17242/*"bit_result_skill"*/, v90);
+    sub_1B715CC(&StringLiteral_9688/*"ORT_LATE_PHASE_BREAK"*/, v91);
+    sub_1B715CC(&StringLiteral_17227/*"bit_result_command_card_exceed"*/, v92);
+    sub_1B715CC(&StringLiteral_3459/*"CLASS_BOARD_CAMERA_SELECT_MOVE_MAX_DISTANCE"*/, v93);
+    sub_1B715CC(&StringLiteral_3460/*"CLASS_BOARD_CAMERA_SELECT_SEC_MAX"*/, v94);
+    sub_1B715CC(&StringLiteral_8570/*"MAX_USER_SVT"*/, v95);
+    sub_1B715CC(&StringLiteral_9585/*"ONE_ACT"*/, v96);
+    sub_1B715CC(&StringLiteral_6361/*"FIX_EVENT_SUPPORT_DECK_NUM"*/, v97);
+    sub_1B715CC(&StringLiteral_15434/*"WAR_BOARD_EVAL_FACTORS_AFFECT_RATIO"*/, v98);
+    sub_1B715CC(&StringLiteral_6465/*"FRIENDPOINT_BOOST_ITEM_EFFECT_ID"*/, v99);
+    sub_1B715CC(&StringLiteral_17231/*"bit_result_friendship_exceed"*/, v100);
+    sub_1B715CC(&StringLiteral_8485/*"MASHU_TD_GRADE_UP_QUEST_PHASE"*/, v101);
+    sub_1B715CC(&StringLiteral_11022/*"REQUEST_TOP_HOME_EXPIRATION_DATE_SEC_UPDATE_EVENT_MAP"*/, v102);
+    sub_1B715CC(&StringLiteral_3458/*"CLASS_BOARD_CAMERA_SELECT_EASING_TYPE"*/, v103);
+    sub_1B715CC(&StringLiteral_7390/*"IS_ENABLE_OLD_BLOCK_SHORTEST_ROUTE"*/, v104);
+    sub_1B715CC(&StringLiteral_8460/*"MAIN_CHAPTERS_WITH_EVENT_ID"*/, v105);
+    sub_1B715CC(&StringLiteral_1398/*"1053901:100:0"*/, v106);
+    sub_1B715CC(&StringLiteral_17228/*"bit_result_extraskill"*/, v107);
+    sub_1B715CC(&StringLiteral_1519/*"5047900:100:0"*/, v108);
+    sub_1B715CC(&StringLiteral_9587/*"ONE_RP"*/, v109);
+    sub_1B715CC(&StringLiteral_8573/*"MAX_USER_SVT_STORAGE"*/, v110);
+    sub_1B715CC(&StringLiteral_9690/*"ORT_LATE_PHASE_SECOND_FORM"*/, v111);
+    sub_1B715CC(&StringLiteral_3836/*"CONSUME_STORMPOD_SPOT_ID"*/, v112);
+    sub_1B715CC(&StringLiteral_2992/*"BEFORE_CHANGE_FREE_DRAW_NUM"*/, v113);
+    sub_1B715CC(&StringLiteral_7396/*"IS_WAR_BOARD_AI_FILTER_NOT_ACTION"*/, v114);
+    sub_1B715CC(&StringLiteral_3378/*"CAMPAIGN_RESET_AT"*/, v115);
+    sub_1B715CC(&StringLiteral_10903/*"RAID_DEFEATED_EFFECT_TIME"*/, v116);
+    sub_1B715CC(&StringLiteral_10976/*"RECOMMEND_SUPPORT_FRIEND_POINT"*/, v117);
+    sub_1B715CC(&StringLiteral_6384/*"FOLLOWER_REFRESH_RESET_TIME"*/, v118);
+    sub_1B715CC(&StringLiteral_3496/*"CLASS_BOARD_RELEASE_QUEST_ID"*/, v119);
+    sub_1B715CC(&StringLiteral_6417/*"FOLLOW_NUM"*/, v120);
+    sub_1B715CC(&StringLiteral_10349/*"PLAYABLE_BEAST_CLASS_IDS"*/, v121);
+    sub_1B715CC(&StringLiteral_3374/*"CAMERA_2D_RESET_DURATION"*/, v122);
+    sub_1B715CC(&StringLiteral_12231/*"STONE_FRAGMENT_EXCHANGE_NOTICE_MAX"*/, v123);
+    sub_1B715CC(&StringLiteral_7399/*"ITEM_ID_QP"*/, v124);
+    sub_1B715CC(&StringLiteral_12432/*"SWIMSUIT_MELT_SVT_ID"*/, v125);
+    sub_1B715CC(&StringLiteral_8564/*"MAX_RECOMMEND_SUPPORT_DECK_NUM"*/, v126);
+    sub_1B715CC(&StringLiteral_7094/*"HEROINE_LIMIT_COUNT_ORTINAX_REFURBISHED"*/, v127);
+    sub_1B715CC(&StringLiteral_17238/*"bit_result_noble"*/, v128);
+    sub_1B715CC(&StringLiteral_5495/*"EQUIP_GET_EFFECT_ID"*/, v129);
+    sub_1B715CC(&StringLiteral_9249/*"NOT_FRIEND_POINT"*/, v130);
+    sub_1B715CC(&StringLiteral_5543/*"EVENT_BOARD_GAME_NEXT_BOARD_QUEST_ID"*/, v131);
+    sub_1B715CC(&StringLiteral_9689/*"ORT_LATE_PHASE_DEAD"*/, v132);
+    sub_1B715CC(&StringLiteral_8548/*"MAX_BLACK_LIST_NUM"*/, v133);
+    sub_1B715CC(&StringLiteral_8560/*"MAX_PRESENT_RECEIVE_NUM"*/, v134);
+    sub_1B715CC(&StringLiteral_15184/*"VALENTINE_RELEASE_AT"*/, v135);
+    sub_1B715CC(&StringLiteral_8510/*"MASTER_MISSION_SVT_ID1"*/, v136);
+    sub_1B715CC(&StringLiteral_8280/*"LOSTBELT6_CLEAR_QUEST_ID"*/, v137);
+    sub_1B715CC(&StringLiteral_5544/*"EVENT_BOARD_GAME_NEXT_ROUND_QUEST_ID"*/, v138);
+    sub_1B715CC(&StringLiteral_11021/*"REQUEST_RAID_UPDATE_EVENT_MAP"*/, v139);
+    sub_1B715CC(&StringLiteral_12223/*"STATUS_UP_ADJUST_ATK"*/, v140);
+    sub_1B715CC(&StringLiteral_2057/*"AFTRE_CHANGE_FREE_DRAW_NUM"*/, v141);
+    sub_1B715CC(&StringLiteral_1488/*"3D_MAP_CAMERA_MOVE_TIME_CONSTANT"*/, v142);
+    sub_1B715CC(&StringLiteral_6414/*"FOLLOW_FRIEND_POINT"*/, v143);
+    sub_1B715CC(&StringLiteral_7395/*"IS_WAR_BOARD_AI_CALC_EVAL_SUM"*/, v144);
+    sub_1B715CC(&StringLiteral_8554/*"MAX_FRIEND_HISTORY_NUM"*/, v145);
+    sub_1B715CC(&StringLiteral_11413/*"SCENARIO_SPEED_STEP"*/, v146);
+    sub_1B715CC(&StringLiteral_5711/*"EVENT_TOWER_FADEOUT_DELAY_TIME"*/, v147);
+    sub_1B715CC(&StringLiteral_8271/*"LOGIN_DAY"*/, v148);
+    sub_1B715CC(&StringLiteral_5441/*"ENABLE_SERIAL_CODE"*/, v149);
+    sub_1B715CC(&StringLiteral_8523/*"MATERIAL_MAIN_INTERLUDE_WAR_ID"*/, v150);
+    sub_1B715CC(&StringLiteral_5771/*"EXTRA2_SORT_ORDER_CLASS_IDS"*/, v151);
+    sub_1B715CC(&StringLiteral_6845/*"GACHA_DAILY_MAX_DRAW_NUM_RESET_AT"*/, v152);
+    sub_1B715CC(&StringLiteral_13373/*"TREASUREDEVICE_ID_MASHU3"*/, v153);
+    sub_1B715CC(&StringLiteral_8273/*"LOGIN_RESET_AT"*/, v154);
+    sub_1B715CC(&StringLiteral_1520/*"5047901:100:0"*/, v155);
+    sub_1B715CC(&StringLiteral_1969/*"ACCOUNTING_INITIALIZE_TIMEOUT"*/, v156);
+    sub_1B715CC(&StringLiteral_1523/*"5047911:100:0"*/, v157);
+    sub_1B715CC(&StringLiteral_7391/*"IS_EVENT_POINT_MENU"*/, v158);
+    sub_1B715CC(&StringLiteral_10394/*"PRESENT_BOX_FILTER_SVT_EQUIP_MATERIAL"*/, v159);
+    sub_1B715CC(&StringLiteral_10901/*"RACE_REWARD_RANK_MAX"*/, v160);
+    sub_1B715CC(&StringLiteral_9261/*"NOT_SEND_TRACK_EVENT_AT_WAR_IDS"*/, v161);
+    sub_1B715CC(&StringLiteral_8482/*"MASHU_SVT_ID2"*/, v162);
+    sub_1B715CC(&StringLiteral_11412/*"SCENARIO_SPEED_LOW"*/, v163);
+    sub_1B715CC(&StringLiteral_9685/*"ORDEAL_CALL_CLEAR_BGM_NAME"*/, v164);
+    sub_1B715CC(&StringLiteral_8562/*"MAX_RARE_PRI"*/, v165);
+    sub_1B715CC(&StringLiteral_5770/*"EXTRA1_SORT_ORDER_CLASS_IDS"*/, v166);
+    sub_1B715CC(&StringLiteral_3088/*"BP_EXPRESSION"*/, v167);
+    sub_1B715CC(&StringLiteral_8565/*"MAX_RP"*/, v168);
+    sub_1B715CC(&StringLiteral_12224/*"STATUS_UP_ADJUST_HP"*/, v169);
+    sub_1B715CC(&StringLiteral_9586/*"ONE_COMMAND_SPELL"*/, v170);
+    sub_1B715CC(&StringLiteral_14803/*"USE_TERMS_LATEST_VERSION"*/, v171);
+    sub_1B715CC(&StringLiteral_3579/*"CLOSE_SECRET_TREASURE_DEVICE_QUEST_CLEAR"*/, v172);
+    sub_1B715CC(&StringLiteral_10430/*"PRESENT_VALID_TIME"*/, v173);
+    sub_1B715CC(&StringLiteral_8497/*"MASTER_MISSION_ALERT_TIME"*/, v174);
+    sub_1B715CC(&StringLiteral_3018/*"BIRTHDAY_BEFORE_VALENTINE_SVT_ID"*/, v175);
+    sub_1B715CC(&StringLiteral_8551/*"MAX_EVENT_POINT"*/, v176);
+    sub_1B715CC(&StringLiteral_8259/*"LOCATION_REWARD_DLG_COLUMN"*/, v177);
+    sub_1B715CC(&StringLiteral_8549/*"MAX_COMMAND_SPELL"*/, v178);
+    sub_1B715CC(&StringLiteral_8462/*"MAIN_INTERLUDE_WAR_ID"*/, v179);
+    sub_1B715CC(&StringLiteral_7366/*"IOS_EXAMINATION_NEWS_URL"*/, v180);
+    sub_1B715CC(&StringLiteral_1395/*"1053001:100:0"*/, v181);
+    sub_1B715CC(&StringLiteral_12351/*"SUPPORT_DECK_MAX"*/, v182);
+    sub_1B715CC(&StringLiteral_9692/*"ORT_SECONDE_FORM_ID"*/, v183);
+    sub_1B715CC(&StringLiteral_1487/*"3D_MAP_CAMERA_MOVE_TIME_COEFFICIENT"*/, v184);
+    sub_1B715CC(&StringLiteral_7317/*"IGNORE_FORM_CHANGE_SVT_ID"*/, v185);
+    sub_1B715CC(&StringLiteral_8569/*"MAX_USER_LV"*/, v186);
+    sub_1B715CC(&StringLiteral_7389/*"IS_ENABLE_FADE_RERUN_SKIPPED"*/, v187);
+    sub_1B715CC(&StringLiteral_14802/*"USE_TERMS_AGREEMENT_REQUIERD_APP_VERSION"*/, v188);
+    sub_1B715CC(&StringLiteral_8553/*"MAX_FRIENDPOINT_BOOST_ITEM_USE"*/, v189);
+    sub_1B715CC(&StringLiteral_8572/*"MAX_USER_SVT_EQUIP_STORAGE"*/, v190);
+    sub_1B715CC(&StringLiteral_1522/*"5047910:100:0"*/, v191);
+    sub_1B715CC(&StringLiteral_8561/*"MAX_QP"*/, v192);
+    sub_1B715CC(&StringLiteral_7392/*"IS_IOS_EXAMINATION"*/, v193);
+    sub_1B715CC(&StringLiteral_9256/*"NOT_REQUIRED_WAR_IDS"*/, v194);
+    sub_1B715CC(&StringLiteral_3461/*"CLASS_BOARD_CAMERA_SELECT_SEC_MIN"*/, v195);
+    sub_1B715CC(&StringLiteral_6462/*"FREE_DRAW_NUM_CHANGE_AT"*/, v196);
+    sub_1B715CC(&StringLiteral_5581/*"EVENT_DAILY_POINT_RESET_AT"*/, v197);
+    sub_1B715CC(&StringLiteral_1524/*"5047912:100:0"*/, v198);
+    sub_1B715CC(&StringLiteral_1396/*"1053002:100:0"*/, v199);
+    sub_1B715CC(&StringLiteral_4989/*"DECK_MAX"*/, v200);
+    sub_1B715CC(&StringLiteral_10441/*"PROLOGUE_QUEST_ID"*/, v201);
+    sub_1B715CC(&StringLiteral_3580/*"CLOSE_SECRET_TREASURE_DEVICE_SVT_GET"*/, v202);
+    sub_1B715CC(&StringLiteral_12268/*"STORY_WAR_ID"*/, v203);
+    sub_1B715CC(&StringLiteral_8559/*"MAX_PRESENT_BOX_NUM"*/, v204);
+    sub_1B715CC(&StringLiteral_11410/*"SCENARIO_SPEED_DEFAULT"*/, v205);
+    sub_1B715CC(&StringLiteral_13312/*"TITLE_FLOW_OLD"*/, v206);
+    sub_1B715CC(&StringLiteral_1489/*"3D_MAP_CAMERA_MOVE_TIME_LOGARITHM_BASE"*/, v207);
+    sub_1B715CC(&StringLiteral_1467/*"20220731_BOOST_RATE_1"*/, v208);
+    sub_1B715CC(&StringLiteral_8201/*"LEGACY_ASPECT_MOVIES"*/, v209);
+    sub_1B715CC(&StringLiteral_3700/*"COMMAND_CODE_DETACHING_ITEM_ID"*/, v210);
+    sub_1B715CC(&StringLiteral_1521/*"5047902:100:0"*/, v211);
+    sub_1B715CC(&StringLiteral_5766/*"EXPIRATION_DATE"*/, v212);
+    sub_1B715CC(&StringLiteral_9686/*"ORDEAL_CALL_WAR_ID"*/, v213);
+    sub_1B715CC(&StringLiteral_7095/*"HEROINE_TREASURE_DEVICE_RANKUP_EFFECTS"*/, v214);
+    byte_4A1F0E6 = 1;
   }
   result = 0.0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_165;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_ConstantMaster___);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                        (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_ConstantMaster___);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_165;
-  v217 = DataManager__GetMasterData_object_(
+  v218 = DataManager__GetMasterData_object_(
            (DataManager_o *)Instance,
-           (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_ConstantLongMaster___);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+           (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_ConstantLongMaster___);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_165;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_ConstantStrMaster___);
+               (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_ConstantStrMaster___);
   if ( !MasterData_object )
     goto LABEL_165;
-  v218 = (ConstantStrMaster_o *)Instance;
-  Value_38796200 = ConstantMaster__GetValue_38796200(
+  v219 = (ConstantStrMaster_o *)Instance;
+  Value_38846256 = ConstantMaster__GetValue_38846256(
                      (ConstantMaster_o *)MasterData_object,
-                     (System_String_o *)StringLiteral_1466/*"20220731_BOOST_RATE_1"*/,
+                     (System_String_o *)StringLiteral_1467/*"20220731_BOOST_RATE_1"*/,
                      200,
                      0LL);
-  v220 = BalanceConfig_TypeInfo;
-  v221 = Value_38796200;
+  v221 = BalanceConfig_TypeInfo;
+  v222 = Value_38846256;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v220 = BalanceConfig_TypeInfo;
+    v221 = BalanceConfig_TypeInfo;
   }
-  v220->static_fields->CriticalRateToAddByQuickFirstBonus = v221;
+  v221->static_fields->CriticalRateToAddByQuickFirstBonus = v222;
   BalanceConfig_TypeInfo->static_fields->QpMax = ConstantMaster__GetValue(
                                                    (ConstantMaster_o *)MasterData_object,
-                                                   (System_String_o *)StringLiteral_8556/*"MAX_QP"*/,
+                                                   (System_String_o *)StringLiteral_8561/*"MAX_QP"*/,
                                                    0LL);
   BalanceConfig_TypeInfo->static_fields->ManaMax = ConstantMaster__GetValue(
                                                      (ConstantMaster_o *)MasterData_object,
-                                                     (System_String_o *)StringLiteral_8551/*"MAX_MANA"*/,
+                                                     (System_String_o *)StringLiteral_8556/*"MAX_MANA"*/,
                                                      0LL);
   BalanceConfig_TypeInfo->static_fields->RarePriMax = ConstantMaster__GetValue(
                                                         (ConstantMaster_o *)MasterData_object,
-                                                        (System_String_o *)StringLiteral_8557/*"MAX_RARE_PRI"*/,
+                                                        (System_String_o *)StringLiteral_8562/*"MAX_RARE_PRI"*/,
                                                         0LL);
   BalanceConfig_TypeInfo->static_fields->StoneMax = ConstantMaster__GetValue(
                                                       (ConstantMaster_o *)MasterData_object,
-                                                      (System_String_o *)StringLiteral_8561/*"MAX_STONE"*/,
+                                                      (System_String_o *)StringLiteral_8566/*"MAX_STONE"*/,
                                                       0LL);
   BalanceConfig_TypeInfo->static_fields->FriendPointMax = ConstantMaster__GetValue(
                                                             (ConstantMaster_o *)MasterData_object,
-                                                            (System_String_o *)StringLiteral_8547/*"MAX_FRIENDPOINT"*/,
+                                                            (System_String_o *)StringLiteral_8552/*"MAX_FRIENDPOINT"*/,
                                                             0LL);
   BalanceConfig_TypeInfo->static_fields->UserLevelMax = ConstantMaster__GetValue(
                                                           (ConstantMaster_o *)MasterData_object,
-                                                          (System_String_o *)StringLiteral_8564/*"MAX_USER_LV"*/,
+                                                          (System_String_o *)StringLiteral_8569/*"MAX_USER_LV"*/,
                                                           0LL);
   BalanceConfig_TypeInfo->static_fields->UserItemMax = ConstantMaster__GetValue(
                                                          (ConstantMaster_o *)MasterData_object,
-                                                         (System_String_o *)StringLiteral_8563/*"MAX_USER_ITEM"*/,
+                                                         (System_String_o *)StringLiteral_8568/*"MAX_USER_ITEM"*/,
                                                          0LL);
   Instance = (Il2CppObject *)ConstantMaster__GetValue(
                                (ConstantMaster_o *)MasterData_object,
-                               (System_String_o *)StringLiteral_8563/*"MAX_USER_ITEM"*/,
+                               (System_String_o *)StringLiteral_8568/*"MAX_USER_ITEM"*/,
                                0LL);
   static_fields = BalanceConfig_TypeInfo->static_fields;
   static_fields->UserEventItemMax = (int)Instance;
-  if ( !v217 )
+  if ( !v218 )
     goto LABEL_165;
-  Value_38795644 = ConstantLongMaster__GetValue_38795644(
-                     (ConstantLongMaster_o *)v217,
-                     (System_String_o *)StringLiteral_8546/*"MAX_EVENT_POINT"*/,
+  Value_38845700 = ConstantLongMaster__GetValue_38845700(
+                     (ConstantLongMaster_o *)v218,
+                     (System_String_o *)StringLiteral_8551/*"MAX_EVENT_POINT"*/,
                      static_fields->UserPointEventMax,
                      0LL);
-  v224 = BalanceConfig_TypeInfo->static_fields;
-  v224->UserPointEventMax = Value_38795644;
-  BalanceConfig_TypeInfo->static_fields->UserEventActivityPointMax = ConstantLongMaster__GetValue_38795644(
-                                                                       (ConstantLongMaster_o *)v217,
-                                                                       (System_String_o *)StringLiteral_8545/*"MAX_EVENT_ACTIVITY_POINT"*/,
-                                                                       v224->UserEventActivityPointMax,
+  v225 = BalanceConfig_TypeInfo->static_fields;
+  v225->UserPointEventMax = Value_38845700;
+  BalanceConfig_TypeInfo->static_fields->UserEventActivityPointMax = ConstantLongMaster__GetValue_38845700(
+                                                                       (ConstantLongMaster_o *)v218,
+                                                                       (System_String_o *)StringLiteral_8550/*"MAX_EVENT_ACTIVITY_POINT"*/,
+                                                                       v225->UserEventActivityPointMax,
                                                                        0LL);
   BalanceConfig_TypeInfo->static_fields->PresentBoxMax = ConstantMaster__GetValue(
                                                            (ConstantMaster_o *)MasterData_object,
-                                                           (System_String_o *)StringLiteral_8554/*"MAX_PRESENT_BOX_NUM"*/,
+                                                           (System_String_o *)StringLiteral_8559/*"MAX_PRESENT_BOX_NUM"*/,
                                                            0LL);
   BalanceConfig_TypeInfo->static_fields->PresentBoxCheckMax = ConstantMaster__GetValue(
                                                                 (ConstantMaster_o *)MasterData_object,
-                                                                (System_String_o *)StringLiteral_8555/*"MAX_PRESENT_RECEIVE_NUM"*/,
+                                                                (System_String_o *)StringLiteral_8560/*"MAX_PRESENT_RECEIVE_NUM"*/,
                                                                 0LL);
   BalanceConfig_TypeInfo->static_fields->PresentBoxValidTime = ConstantMaster__GetValue(
                                                                  (ConstantMaster_o *)MasterData_object,
-                                                                 (System_String_o *)StringLiteral_10421/*"PRESENT_VALID_TIME"*/,
+                                                                 (System_String_o *)StringLiteral_10430/*"PRESENT_VALID_TIME"*/,
                                                                  0LL);
   BalanceConfig_TypeInfo->static_fields->PresentBoxNearMaxOffset = ConstantMaster__GetValue(
                                                                      (ConstantMaster_o *)MasterData_object,
-                                                                     (System_String_o *)StringLiteral_8552/*"MAX_NEAR_PRESENT_OFFSET_NUM"*/,
+                                                                     (System_String_o *)StringLiteral_8557/*"MAX_NEAR_PRESENT_OFFSET_NUM"*/,
                                                                      0LL);
-  BalanceConfig_TypeInfo->static_fields->RecommendSupportMemberMax = ConstantMaster__GetValue_38796200(
+  BalanceConfig_TypeInfo->static_fields->RecommendSupportMemberMax = ConstantMaster__GetValue_38846256(
                                                                        (ConstantMaster_o *)MasterData_object,
-                                                                       (System_String_o *)StringLiteral_8559/*"MAX_RECOMMEND_SUPPORT_DECK_NUM"*/,
+                                                                       (System_String_o *)StringLiteral_8564/*"MAX_RECOMMEND_SUPPORT_DECK_NUM"*/,
                                                                        3,
                                                                        0LL);
-  BalanceConfig_TypeInfo->static_fields->RecommendSupportAdviceMessageMax = ConstantMaster__GetValue_38796200(
+  BalanceConfig_TypeInfo->static_fields->RecommendSupportAdviceMessageMax = ConstantMaster__GetValue_38846256(
                                                                               (ConstantMaster_o *)MasterData_object,
-                                                                              (System_String_o *)StringLiteral_8558/*"MAX_RECOMMEND_ADVICE_MESSAGE_NUM"*/,
+                                                                              (System_String_o *)StringLiteral_8563/*"MAX_RECOMMEND_ADVICE_MESSAGE_NUM"*/,
                                                                               3,
                                                                               0LL);
   BalanceConfig_TypeInfo->static_fields->ServantFrameMax = ConstantMaster__GetValue(
                                                              (ConstantMaster_o *)MasterData_object,
-                                                             (System_String_o *)StringLiteral_8565/*"MAX_USER_SVT"*/,
+                                                             (System_String_o *)StringLiteral_8570/*"MAX_USER_SVT"*/,
                                                              0LL);
   BalanceConfig_TypeInfo->static_fields->ServantEquipFrameMax = ConstantMaster__GetValue(
                                                                   (ConstantMaster_o *)MasterData_object,
-                                                                  (System_String_o *)StringLiteral_8566/*"MAX_USER_SVT_EQUIP"*/,
+                                                                  (System_String_o *)StringLiteral_8571/*"MAX_USER_SVT_EQUIP"*/,
                                                                   0LL);
   BalanceConfig_TypeInfo->static_fields->CommandCodeFrameMax = ConstantMaster__GetValue(
                                                                  (ConstantMaster_o *)MasterData_object,
-                                                                 (System_String_o *)StringLiteral_8562/*"MAX_USER_COMMAND_CODE"*/,
+                                                                 (System_String_o *)StringLiteral_8567/*"MAX_USER_COMMAND_CODE"*/,
                                                                  0LL);
   BalanceConfig_TypeInfo->static_fields->DeckMax = ConstantMaster__GetValue(
                                                      (ConstantMaster_o *)MasterData_object,
-                                                     (System_String_o *)StringLiteral_4984/*"DECK_MAX"*/,
+                                                     (System_String_o *)StringLiteral_4989/*"DECK_MAX"*/,
                                                      0LL);
   BalanceConfig_TypeInfo->static_fields->SupportDeckMax = ConstantMaster__GetValue(
                                                             (ConstantMaster_o *)MasterData_object,
-                                                            (System_String_o *)StringLiteral_12342/*"SUPPORT_DECK_MAX"*/,
+                                                            (System_String_o *)StringLiteral_12351/*"SUPPORT_DECK_MAX"*/,
                                                             0LL);
   BalanceConfig_TypeInfo->static_fields->FixMainSupportDeckNum = ConstantMaster__GetValue(
                                                                    (ConstantMaster_o *)MasterData_object,
-                                                                   (System_String_o *)StringLiteral_6357/*"FIX_MAIN_SUPPORT_DECK_NUM"*/,
+                                                                   (System_String_o *)StringLiteral_6362/*"FIX_MAIN_SUPPORT_DECK_NUM"*/,
                                                                    0LL);
-  Value = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, (System_String_o *)StringLiteral_6356/*"FIX_EVENT_SUPPORT_DECK_NUM"*/, 0LL);
-  v226 = BalanceConfig_TypeInfo->static_fields;
-  SupportDeckMax = v226->SupportDeckMax;
-  SupportDeckMemberMax = v226->SupportDeckMemberMax;
-  v226->FixEventSupportDeckNum = Value;
-  v226->SupportMemberMax = SupportDeckMemberMax * SupportDeckMax;
+  Value = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, (System_String_o *)StringLiteral_6361/*"FIX_EVENT_SUPPORT_DECK_NUM"*/, 0LL);
+  v227 = BalanceConfig_TypeInfo->static_fields;
+  SupportDeckMax = v227->SupportDeckMax;
+  SupportDeckMemberMax = v227->SupportDeckMemberMax;
+  v227->FixEventSupportDeckNum = Value;
+  v227->SupportMemberMax = SupportDeckMemberMax * SupportDeckMax;
   BalanceConfig_TypeInfo->static_fields->UserServantStorageMax = ConstantMaster__GetValue(
                                                                    (ConstantMaster_o *)MasterData_object,
-                                                                   (System_String_o *)StringLiteral_8568/*"MAX_USER_SVT_STORAGE"*/,
+                                                                   (System_String_o *)StringLiteral_8573/*"MAX_USER_SVT_STORAGE"*/,
                                                                    0LL);
   BalanceConfig_TypeInfo->static_fields->UserServantEquipStorageMax = ConstantMaster__GetValue(
                                                                         (ConstantMaster_o *)MasterData_object,
-                                                                        (System_String_o *)StringLiteral_8567/*"MAX_USER_SVT_EQUIP_STORAGE"*/,
+                                                                        (System_String_o *)StringLiteral_8572/*"MAX_USER_SVT_EQUIP_STORAGE"*/,
                                                                         0LL);
   BalanceConfig_TypeInfo->static_fields->UerGameActRecoverCost = ConstantMaster__GetValue(
                                                                    (ConstantMaster_o *)MasterData_object,
-                                                                   (System_String_o *)StringLiteral_9580/*"ONE_ACT"*/,
+                                                                   (System_String_o *)StringLiteral_9585/*"ONE_ACT"*/,
                                                                    0LL);
   BalanceConfig_TypeInfo->static_fields->UerGameRpRecoverCost = ConstantMaster__GetValue(
                                                                   (ConstantMaster_o *)MasterData_object,
-                                                                  (System_String_o *)StringLiteral_9582/*"ONE_RP"*/,
+                                                                  (System_String_o *)StringLiteral_9587/*"ONE_RP"*/,
                                                                   0LL);
   BalanceConfig_TypeInfo->static_fields->UerGameRpMax = ConstantMaster__GetValue(
                                                           (ConstantMaster_o *)MasterData_object,
-                                                          (System_String_o *)StringLiteral_8560/*"MAX_RP"*/,
+                                                          (System_String_o *)StringLiteral_8565/*"MAX_RP"*/,
                                                           0LL);
   BalanceConfig_TypeInfo->static_fields->FollowerPointFriend = ConstantMaster__GetValue(
                                                                  (ConstantMaster_o *)MasterData_object,
-                                                                 (System_String_o *)StringLiteral_6492/*"FRIEND_POINT"*/,
+                                                                 (System_String_o *)StringLiteral_6497/*"FRIEND_POINT"*/,
                                                                  0LL);
   BalanceConfig_TypeInfo->static_fields->FollowerPointNotFriend = ConstantMaster__GetValue(
                                                                     (ConstantMaster_o *)MasterData_object,
-                                                                    (System_String_o *)StringLiteral_9244/*"NOT_FRIEND_POINT"*/,
+                                                                    (System_String_o *)StringLiteral_9249/*"NOT_FRIEND_POINT"*/,
                                                                     0LL);
   BalanceConfig_TypeInfo->static_fields->FollowerPointNpc = ConstantMaster__GetValue(
                                                               (ConstantMaster_o *)MasterData_object,
-                                                              (System_String_o *)StringLiteral_9275/*"NPC_FRIEND_POINT"*/,
+                                                              (System_String_o *)StringLiteral_9280/*"NPC_FRIEND_POINT"*/,
                                                               0LL);
   BalanceConfig_TypeInfo->static_fields->FollowerPointRecommend = ConstantMaster__GetValue(
                                                                     (ConstantMaster_o *)MasterData_object,
-                                                                    (System_String_o *)StringLiteral_10968/*"RECOMMEND_SUPPORT_FRIEND_POINT"*/,
+                                                                    (System_String_o *)StringLiteral_10976/*"RECOMMEND_SUPPORT_FRIEND_POINT"*/,
                                                                     0LL);
   BalanceConfig_TypeInfo->static_fields->RequestTopLoginResetTime1 = ConstantMaster__GetValue(
                                                                        (ConstantMaster_o *)MasterData_object,
-                                                                       (System_String_o *)StringLiteral_8268/*"LOGIN_RESET_AT"*/,
+                                                                       (System_String_o *)StringLiteral_8273/*"LOGIN_RESET_AT"*/,
                                                                        0LL);
   BalanceConfig_TypeInfo->static_fields->RequestTopLoginResetTime2 = ConstantMaster__GetValue(
                                                                        (ConstantMaster_o *)MasterData_object,
-                                                                       (System_String_o *)StringLiteral_3372/*"CAMPAIGN_RESET_AT"*/,
+                                                                       (System_String_o *)StringLiteral_3378/*"CAMPAIGN_RESET_AT"*/,
                                                                        0LL);
   BalanceConfig_TypeInfo->static_fields->DailyFreeGachaResetTime = ConstantMaster__GetValue(
                                                                      (ConstantMaster_o *)MasterData_object,
-                                                                     (System_String_o *)StringLiteral_6458/*"FREE_GACHA_RESET_AT"*/,
+                                                                     (System_String_o *)StringLiteral_6463/*"FREE_GACHA_RESET_AT"*/,
                                                                      0LL);
   BalanceConfig_TypeInfo->static_fields->RequestTopLoginDay = ConstantMaster__GetValue(
                                                                 (ConstantMaster_o *)MasterData_object,
-                                                                (System_String_o *)StringLiteral_8266/*"LOGIN_DAY"*/,
+                                                                (System_String_o *)StringLiteral_8271/*"LOGIN_DAY"*/,
                                                                 0LL);
-  v229 = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, (System_String_o *)StringLiteral_9176/*"NEED_REBOOT_TIME"*/, 0LL);
-  BalanceConfig_TypeInfo->static_fields->ServerTimeOverLimit = v229;
-  v230 = ManagerConfig_TypeInfo;
+  v230 = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, (System_String_o *)StringLiteral_9181/*"NEED_REBOOT_TIME"*/, 0LL);
+  BalanceConfig_TypeInfo->static_fields->ServerTimeOverLimit = v230;
+  v231 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v230 = ManagerConfig_TypeInfo;
+    v231 = ManagerConfig_TypeInfo;
   }
-  SERVER_TIME_OVER_LIMIT = v230->static_fields->SERVER_TIME_OVER_LIMIT;
-  if ( SERVER_TIME_OVER_LIMIT > v229 )
+  SERVER_TIME_OVER_LIMIT = v231->static_fields->SERVER_TIME_OVER_LIMIT;
+  if ( SERVER_TIME_OVER_LIMIT > v230 )
   {
-    if ( !v230->_2.cctor_finished )
+    if ( !v231->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v230);
+      j_il2cpp_runtime_class_init_0(v231);
       SERVER_TIME_OVER_LIMIT = ManagerConfig_TypeInfo->static_fields->SERVER_TIME_OVER_LIMIT;
     }
-    v232 = BalanceConfig_TypeInfo;
+    v233 = BalanceConfig_TypeInfo;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v232 = BalanceConfig_TypeInfo;
+      v233 = BalanceConfig_TypeInfo;
     }
-    v232->static_fields->ServerTimeOverLimit = SERVER_TIME_OVER_LIMIT;
+    v233->static_fields->ServerTimeOverLimit = SERVER_TIME_OVER_LIMIT;
   }
-  v233 = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, (System_String_o *)StringLiteral_11014/*"REQUEST_TOP_HOME_EXPIRATION_DATE_SEC_UPDATE_EVENT_MAP"*/, 0LL);
+  v234 = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, (System_String_o *)StringLiteral_11022/*"REQUEST_TOP_HOME_EXPIRATION_DATE_SEC_UPDATE_EVENT_MAP"*/, 0LL);
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v234 = System_Math__Max_62238116(1, v233, 0LL);
-  v235 = BalanceConfig_TypeInfo;
-  v236 = v234;
+  v235 = System_Math__Max_62324152(1, v234, 0LL);
+  v236 = BalanceConfig_TypeInfo;
+  v237 = v235;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v235 = BalanceConfig_TypeInfo;
+    v236 = BalanceConfig_TypeInfo;
   }
-  v235->static_fields->RequestTopHomeExpirationDateSecUpdateEventMap = v236;
-  v237 = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, (System_String_o *)StringLiteral_11013/*"REQUEST_RAID_UPDATE_EVENT_MAP"*/, 0LL);
-  BalanceConfig_TypeInfo->static_fields->RequestRaidUpdateEventMap = System_Math__Max_62238116(1, v237, 0LL);
+  v236->static_fields->RequestTopHomeExpirationDateSecUpdateEventMap = v237;
+  v238 = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, (System_String_o *)StringLiteral_11021/*"REQUEST_RAID_UPDATE_EVENT_MAP"*/, 0LL);
+  BalanceConfig_TypeInfo->static_fields->RequestRaidUpdateEventMap = System_Math__Max_62324152(1, v238, 0LL);
   BalanceConfig_TypeInfo->static_fields->RaidDefeatedEffectTime = ConstantMaster__GetValue(
                                                                     (ConstantMaster_o *)MasterData_object,
-                                                                    (System_String_o *)StringLiteral_10895/*"RAID_DEFEATED_EFFECT_TIME"*/,
+                                                                    (System_String_o *)StringLiteral_10903/*"RAID_DEFEATED_EFFECT_TIME"*/,
                                                                     0LL);
   BalanceConfig_TypeInfo->static_fields->CommandSpellMax = ConstantMaster__GetValue(
                                                              (ConstantMaster_o *)MasterData_object,
-                                                             (System_String_o *)StringLiteral_8544/*"MAX_COMMAND_SPELL"*/,
+                                                             (System_String_o *)StringLiteral_8549/*"MAX_COMMAND_SPELL"*/,
                                                              0LL);
   Instance = (Il2CppObject *)ConstantMaster__GetValue(
                                (ConstantMaster_o *)MasterData_object,
-                               (System_String_o *)StringLiteral_9581/*"ONE_COMMAND_SPELL"*/,
+                               (System_String_o *)StringLiteral_9586/*"ONE_COMMAND_SPELL"*/,
                                0LL);
   BalanceConfig_TypeInfo->static_fields->CommandSpellRecoverCost = (int)Instance;
-  if ( !v218 )
+  if ( !v219 )
     goto LABEL_165;
-  v238 = ConstantStrMaster__GetValue(v218, (System_String_o *)StringLiteral_14786/*"USE_TERMS_AGREEMENT_REQUIERD_APP_VERSION"*/, 0LL);
+  v239 = ConstantStrMaster__GetValue(v219, (System_String_o *)StringLiteral_14802/*"USE_TERMS_AGREEMENT_REQUIERD_APP_VERSION"*/, 0LL);
   p_UseTermsAgreementRequiredAppVersion = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->UseTermsAgreementRequiredAppVersion;
-  p_UseTermsAgreementRequiredAppVersion->klass = (ServantStatusBattleListViewItem_c *)v238;
-  sub_1B68678(p_UseTermsAgreementRequiredAppVersion, (int32_t)v238, v240, v241);
-  v242 = ConstantStrMaster__GetValue(v218, (System_String_o *)StringLiteral_14787/*"USE_TERMS_LATEST_VERSION"*/, 0LL);
+  p_UseTermsAgreementRequiredAppVersion->klass = (ServantStatusBattleListViewItem_c *)v239;
+  sub_1B71570(p_UseTermsAgreementRequiredAppVersion, (int32_t)v239, v241, v242);
+  v243 = ConstantStrMaster__GetValue(v219, (System_String_o *)StringLiteral_14803/*"USE_TERMS_LATEST_VERSION"*/, 0LL);
   p_UseTermsLatestVersion = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->UseTermsLatestVersion;
-  p_UseTermsLatestVersion->klass = (ServantStatusBattleListViewItem_c *)v242;
-  sub_1B68678(p_UseTermsLatestVersion, (int32_t)v242, v244, v245);
-  v246 = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, (System_String_o *)StringLiteral_7387/*"IS_IOS_EXAMINATION"*/, 0LL) != 0;
-  BalanceConfig_TypeInfo->static_fields->IsIOS_Examination = v246;
+  p_UseTermsLatestVersion->klass = (ServantStatusBattleListViewItem_c *)v243;
+  sub_1B71570(p_UseTermsLatestVersion, (int32_t)v243, v245, v246);
+  v247 = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, (System_String_o *)StringLiteral_7392/*"IS_IOS_EXAMINATION"*/, 0LL) != 0;
+  BalanceConfig_TypeInfo->static_fields->IsIOS_Examination = v247;
   BalanceConfig_TypeInfo->static_fields->SerialCodeMenuDispFlg = ConstantMaster__GetValue(
                                                                    (ConstantMaster_o *)MasterData_object,
-                                                                   (System_String_o *)StringLiteral_5436/*"ENABLE_SERIAL_CODE"*/,
+                                                                   (System_String_o *)StringLiteral_5441/*"ENABLE_SERIAL_CODE"*/,
                                                                    0LL);
   BalanceConfig_TypeInfo->static_fields->StatusUpAdjustAtk = ConstantMaster__GetValue(
                                                                (ConstantMaster_o *)MasterData_object,
-                                                               (System_String_o *)StringLiteral_12214/*"STATUS_UP_ADJUST_ATK"*/,
+                                                               (System_String_o *)StringLiteral_12223/*"STATUS_UP_ADJUST_ATK"*/,
                                                                0LL);
   BalanceConfig_TypeInfo->static_fields->StatusUpAdjustHp = ConstantMaster__GetValue(
                                                               (ConstantMaster_o *)MasterData_object,
-                                                              (System_String_o *)StringLiteral_12215/*"STATUS_UP_ADJUST_HP"*/,
+                                                              (System_String_o *)StringLiteral_12224/*"STATUS_UP_ADJUST_HP"*/,
                                                               0LL);
   BalanceConfig_TypeInfo->static_fields->SameClassMultiExp = ConstantMaster__getRateValue(
-                                                               (System_String_o *)StringLiteral_11370/*"SAME_CLASS_MULI_EXP"*/,
+                                                               (System_String_o *)StringLiteral_11378/*"SAME_CLASS_MULI_EXP"*/,
                                                                0LL);
   BalanceConfig_TypeInfo->static_fields->SameClassExp = ConstantMaster__GetValue(
                                                           (ConstantMaster_o *)MasterData_object,
-                                                          (System_String_o *)StringLiteral_11370/*"SAME_CLASS_MULI_EXP"*/,
+                                                          (System_String_o *)StringLiteral_11378/*"SAME_CLASS_MULI_EXP"*/,
                                                           0LL);
   BalanceConfig_TypeInfo->static_fields->ServantIdJekyll = ConstantMaster__GetValue(
                                                              (ConstantMaster_o *)MasterData_object,
-                                                             (System_String_o *)StringLiteral_8089/*"JEKYLL_SVT_ID"*/,
+                                                             (System_String_o *)StringLiteral_8094/*"JEKYLL_SVT_ID"*/,
                                                              0LL);
   BalanceConfig_TypeInfo->static_fields->ServantIdHyde = ConstantMaster__GetValue(
                                                            (ConstantMaster_o *)MasterData_object,
-                                                           (System_String_o *)StringLiteral_7144/*"HYDE_SVT_ID"*/,
+                                                           (System_String_o *)StringLiteral_7149/*"HYDE_SVT_ID"*/,
                                                            0LL);
   BalanceConfig_TypeInfo->static_fields->ServantIdSwimsuitMelt = ConstantMaster__GetValue(
                                                                    (ConstantMaster_o *)MasterData_object,
-                                                                   (System_String_o *)StringLiteral_12423/*"SWIMSUIT_MELT_SVT_ID"*/,
+                                                                   (System_String_o *)StringLiteral_12432/*"SWIMSUIT_MELT_SVT_ID"*/,
                                                                    0LL);
   BalanceConfig_TypeInfo->static_fields->ServantIdMashu1 = ConstantMaster__GetValue(
                                                              (ConstantMaster_o *)MasterData_object,
-                                                             (System_String_o *)StringLiteral_8476/*"MASHU_SVT_ID1"*/,
+                                                             (System_String_o *)StringLiteral_8481/*"MASHU_SVT_ID1"*/,
                                                              0LL);
   BalanceConfig_TypeInfo->static_fields->ServantIdMashu2 = ConstantMaster__GetValue(
                                                              (ConstantMaster_o *)MasterData_object,
-                                                             (System_String_o *)StringLiteral_8477/*"MASHU_SVT_ID2"*/,
+                                                             (System_String_o *)StringLiteral_8482/*"MASHU_SVT_ID2"*/,
                                                              0LL);
-  BalanceConfig_TypeInfo->static_fields->ServantIdMashu3 = ConstantMaster__GetValue_38796200(
+  BalanceConfig_TypeInfo->static_fields->ServantIdMashu3 = ConstantMaster__GetValue_38846256(
                                                              (ConstantMaster_o *)MasterData_object,
-                                                             (System_String_o *)StringLiteral_8478/*"MASHU_SVT_ID3"*/,
+                                                             (System_String_o *)StringLiteral_8483/*"MASHU_SVT_ID3"*/,
                                                              800102,
                                                              0LL);
   BalanceConfig_TypeInfo->static_fields->ServantIdMission1 = ConstantMaster__GetValue(
                                                                (ConstantMaster_o *)MasterData_object,
-                                                               (System_String_o *)StringLiteral_8505/*"MASTER_MISSION_SVT_ID1"*/,
+                                                               (System_String_o *)StringLiteral_8510/*"MASTER_MISSION_SVT_ID1"*/,
                                                                0LL);
   BalanceConfig_TypeInfo->static_fields->TreasureDeviceIdMashu3 = ConstantMaster__GetValue(
                                                                     (ConstantMaster_o *)MasterData_object,
-                                                                    (System_String_o *)StringLiteral_13358/*"TREASUREDEVICE_ID_MASHU3"*/,
+                                                                    (System_String_o *)StringLiteral_13373/*"TREASUREDEVICE_ID_MASHU3"*/,
                                                                     0LL);
-  Instance = (Il2CppObject *)sub_1B6877C(int___TypeInfo, 2LL);
+  Instance = (Il2CppObject *)sub_1B71674(int___TypeInfo, 2LL);
   if ( !Instance )
     goto LABEL_165;
   monitor = (int)Instance[1].monitor;
@@ -1515,704 +1522,704 @@ void __fastcall BalanceConfig__Initialize(const MethodInfo *method)
     goto LABEL_164;
   HIDWORD(Instance[2].klass) = 744452;
   ValueArray = ConstantStrMaster__GetValueArray(
-                 v218,
-                 (System_String_o *)StringLiteral_3669/*"COMBINE_SERVANT_SKILL_IDS"*/,
+                 v219,
+                 (System_String_o *)StringLiteral_3675/*"COMBINE_SERVANT_SKILL_IDS"*/,
                  (System_Int32_array *)Instance,
                  0LL);
   p_CombineServantSkillIds = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->CombineServantSkillIds;
   p_CombineServantSkillIds->klass = (ServantStatusBattleListViewItem_c *)ValueArray;
-  sub_1B68678(p_CombineServantSkillIds, (int32_t)ValueArray, v250, v251);
-  BalanceConfig_TypeInfo->static_fields->MashuTdGradeUpQuestId = ConstantMaster__GetValue_38796200(
+  sub_1B71570(p_CombineServantSkillIds, (int32_t)ValueArray, v251, v252);
+  BalanceConfig_TypeInfo->static_fields->MashuTdGradeUpQuestId = ConstantMaster__GetValue_38846256(
                                                                    (ConstantMaster_o *)MasterData_object,
-                                                                   (System_String_o *)StringLiteral_8479/*"MASHU_TD_GRADE_UP_QUEST_ID"*/,
+                                                                   (System_String_o *)StringLiteral_8484/*"MASHU_TD_GRADE_UP_QUEST_ID"*/,
                                                                    4000100,
                                                                    0LL);
-  BalanceConfig_TypeInfo->static_fields->MashuTdGradeUpQuestPhase = ConstantMaster__GetValue_38796200(
+  BalanceConfig_TypeInfo->static_fields->MashuTdGradeUpQuestPhase = ConstantMaster__GetValue_38846256(
                                                                       (ConstantMaster_o *)MasterData_object,
-                                                                      (System_String_o *)StringLiteral_8480/*"MASHU_TD_GRADE_UP_QUEST_PHASE"*/,
+                                                                      (System_String_o *)StringLiteral_8485/*"MASHU_TD_GRADE_UP_QUEST_PHASE"*/,
                                                                       3,
                                                                       0LL);
-  BalanceConfig_TypeInfo->static_fields->ServantIdOberonChoco = ConstantMaster__GetValue_38796200(
+  BalanceConfig_TypeInfo->static_fields->ServantIdOberonChoco = ConstantMaster__GetValue_38846256(
                                                                   (ConstantMaster_o *)MasterData_object,
-                                                                  (System_String_o *)StringLiteral_9569/*"OBERON_CHOCO_SVT_ID"*/,
+                                                                  (System_String_o *)StringLiteral_9574/*"OBERON_CHOCO_SVT_ID"*/,
                                                                   9808130,
                                                                   0LL);
-  BalanceConfig_TypeInfo->static_fields->Lostbelt6ClearQuestId = ConstantMaster__GetValue_38796200(
+  BalanceConfig_TypeInfo->static_fields->Lostbelt6ClearQuestId = ConstantMaster__GetValue_38846256(
                                                                    (ConstantMaster_o *)MasterData_object,
-                                                                   (System_String_o *)StringLiteral_8275/*"LOSTBELT6_CLEAR_QUEST_ID"*/,
+                                                                   (System_String_o *)StringLiteral_8280/*"LOSTBELT6_CLEAR_QUEST_ID"*/,
                                                                    3001009,
                                                                    0LL);
-  v252 = ConstantStrMaster__GetValue(v218, (System_String_o *)StringLiteral_3011/*"BIRTHDAY_BEFORE_VALENTINE_SVT_ID"*/, 0LL);
-  v253 = BasicHelper__Convert2IntArray(v252, 0x2Cu, 0LL);
+  v253 = ConstantStrMaster__GetValue(v219, (System_String_o *)StringLiteral_3018/*"BIRTHDAY_BEFORE_VALENTINE_SVT_ID"*/, 0LL);
+  v254 = BasicHelper__Convert2IntArray(v253, 0x2Cu, 0LL);
   p_ServantIdsBirthdayBeforeValentine = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->ServantIdsBirthdayBeforeValentine;
-  p_ServantIdsBirthdayBeforeValentine->klass = (ServantStatusBattleListViewItem_c *)v253;
-  sub_1B68678(p_ServantIdsBirthdayBeforeValentine, (int32_t)v253, v255, v256);
-  v257 = ConstantStrMaster__GetValue(v218, (System_String_o *)StringLiteral_7312/*"IGNORE_FORM_CHANGE_SVT_ID"*/, 0LL);
-  if ( v257 )
+  p_ServantIdsBirthdayBeforeValentine->klass = (ServantStatusBattleListViewItem_c *)v254;
+  sub_1B71570(p_ServantIdsBirthdayBeforeValentine, (int32_t)v254, v256, v257);
+  v258 = ConstantStrMaster__GetValue(v219, (System_String_o *)StringLiteral_7317/*"IGNORE_FORM_CHANGE_SVT_ID"*/, 0LL);
+  if ( v258 )
   {
-    v258 = BasicHelper__Convert2IntArray(v257, 0x2Cu, 0LL);
-    v261 = BalanceConfig_TypeInfo;
-    v262 = (ServantStatusBattleListViewItem_c *)v258;
+    v259 = BasicHelper__Convert2IntArray(v258, 0x2Cu, 0LL);
+    v262 = BalanceConfig_TypeInfo;
+    v263 = (ServantStatusBattleListViewItem_c *)v259;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v261 = BalanceConfig_TypeInfo;
+      v262 = BalanceConfig_TypeInfo;
     }
-    p_ServantIdsIgnoreFormChange = (ServantStatusBattleListViewItem_o *)&v261->static_fields->ServantIdsIgnoreFormChange;
-    p_ServantIdsIgnoreFormChange->klass = v262;
-    sub_1B68678(p_ServantIdsIgnoreFormChange, (int32_t)v262, v259, v260);
+    p_ServantIdsIgnoreFormChange = (ServantStatusBattleListViewItem_o *)&v262->static_fields->ServantIdsIgnoreFormChange;
+    p_ServantIdsIgnoreFormChange->klass = v263;
+    sub_1B71570(p_ServantIdsIgnoreFormChange, (int32_t)v263, v260, v261);
   }
-  v264 = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, (System_String_o *)StringLiteral_15168/*"VALENTINE_RELEASE_AT"*/, 0LL);
-  v265 = BalanceConfig_TypeInfo;
-  v266 = v264;
+  v265 = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, (System_String_o *)StringLiteral_15184/*"VALENTINE_RELEASE_AT"*/, 0LL);
+  v266 = BalanceConfig_TypeInfo;
+  v267 = v265;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v265 = BalanceConfig_TypeInfo;
+    v266 = BalanceConfig_TypeInfo;
   }
-  v265->static_fields->VtReleaseAt = v266;
+  v266->static_fields->VtReleaseAt = v267;
   BalanceConfig_TypeInfo->static_fields->BefFreeDrawNum = ConstantMaster__GetValue(
                                                             (ConstantMaster_o *)MasterData_object,
-                                                            (System_String_o *)StringLiteral_2985/*"BEFORE_CHANGE_FREE_DRAW_NUM"*/,
+                                                            (System_String_o *)StringLiteral_2992/*"BEFORE_CHANGE_FREE_DRAW_NUM"*/,
                                                             0LL);
   BalanceConfig_TypeInfo->static_fields->AftFreeDrawNum = ConstantMaster__GetValue(
                                                             (ConstantMaster_o *)MasterData_object,
-                                                            (System_String_o *)StringLiteral_2056/*"AFTRE_CHANGE_FREE_DRAW_NUM"*/,
+                                                            (System_String_o *)StringLiteral_2057/*"AFTRE_CHANGE_FREE_DRAW_NUM"*/,
                                                             0LL);
   BalanceConfig_TypeInfo->static_fields->DrawNumChangeTime = ConstantMaster__GetValue(
                                                                (ConstantMaster_o *)MasterData_object,
-                                                               (System_String_o *)StringLiteral_6457/*"FREE_DRAW_NUM_CHANGE_AT"*/,
+                                                               (System_String_o *)StringLiteral_6462/*"FREE_DRAW_NUM_CHANGE_AT"*/,
                                                                0LL);
   BalanceConfig_TypeInfo->static_fields->FollowerRefreshRestTime = ConstantMaster__GetValue(
                                                                      (ConstantMaster_o *)MasterData_object,
-                                                                     (System_String_o *)StringLiteral_6379/*"FOLLOWER_REFRESH_RESET_TIME"*/,
+                                                                     (System_String_o *)StringLiteral_6384/*"FOLLOWER_REFRESH_RESET_TIME"*/,
                                                                      0LL);
   BalanceConfig_TypeInfo->static_fields->FesWarId = ConstantMaster__GetValue(
                                                       (ConstantMaster_o *)MasterData_object,
-                                                      (System_String_o *)StringLiteral_6338/*"FES_WAR_ID"*/,
+                                                      (System_String_o *)StringLiteral_6343/*"FES_WAR_ID"*/,
                                                       0LL);
   BalanceConfig_TypeInfo->static_fields->NoneExpireTime = ConstantMaster__GetValue(
                                                             (ConstantMaster_o *)MasterData_object,
-                                                            (System_String_o *)StringLiteral_5761/*"EXPIRATION_DATE"*/,
+                                                            (System_String_o *)StringLiteral_5766/*"EXPIRATION_DATE"*/,
                                                             0LL);
-  v267 = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, (System_String_o *)StringLiteral_3081/*"BP_EXPRESSION"*/, 0LL);
-  if ( v267 >= 1 )
-    v268 = 1;
+  v268 = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, (System_String_o *)StringLiteral_3088/*"BP_EXPRESSION"*/, 0LL);
+  if ( v268 >= 1 )
+    v269 = 1;
   else
-    v268 = v267;
-  BalanceConfig_TypeInfo->static_fields->BpExpresssionType = v268 & ~(v268 >> 31);
+    v269 = v268;
+  BalanceConfig_TypeInfo->static_fields->BpExpresssionType = v269 & ~(v269 >> 31);
   BalanceConfig_TypeInfo->static_fields->MaxFriendHistoryNum = ConstantMaster__GetValue(
                                                                  (ConstantMaster_o *)MasterData_object,
-                                                                 (System_String_o *)StringLiteral_8549/*"MAX_FRIEND_HISTORY_NUM"*/,
+                                                                 (System_String_o *)StringLiteral_8554/*"MAX_FRIEND_HISTORY_NUM"*/,
                                                                  0LL);
   BalanceConfig_TypeInfo->static_fields->MaxBlackListNum = ConstantMaster__GetValue(
                                                              (ConstantMaster_o *)MasterData_object,
-                                                             (System_String_o *)StringLiteral_8543/*"MAX_BLACK_LIST_NUM"*/,
+                                                             (System_String_o *)StringLiteral_8548/*"MAX_BLACK_LIST_NUM"*/,
                                                              0LL);
   BalanceConfig_TypeInfo->static_fields->raceRewardRankMax = ConstantMaster__GetValue(
                                                                (ConstantMaster_o *)MasterData_object,
-                                                               (System_String_o *)StringLiteral_10893/*"RACE_REWARD_RANK_MAX"*/,
+                                                               (System_String_o *)StringLiteral_10901/*"RACE_REWARD_RANK_MAX"*/,
                                                                0LL);
-  v269 = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, (System_String_o *)StringLiteral_8492/*"MASTER_MISSION_ALERT_TIME"*/, 0LL);
-  v270 = BalanceConfig_TypeInfo->static_fields;
-  v270->MstMissionAlertTime = v269;
-  BalanceConfig_TypeInfo->static_fields->LocationRewardDlgColumn = ConstantMaster__GetValue_38796200(
+  v270 = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, (System_String_o *)StringLiteral_8497/*"MASTER_MISSION_ALERT_TIME"*/, 0LL);
+  v271 = BalanceConfig_TypeInfo->static_fields;
+  v271->MstMissionAlertTime = v270;
+  BalanceConfig_TypeInfo->static_fields->LocationRewardDlgColumn = ConstantMaster__GetValue_38846256(
                                                                      (ConstantMaster_o *)MasterData_object,
-                                                                     (System_String_o *)StringLiteral_8254/*"LOCATION_REWARD_DLG_COLUMN"*/,
-                                                                     v270->LocationRewardDlgColumn,
+                                                                     (System_String_o *)StringLiteral_8259/*"LOCATION_REWARD_DLG_COLUMN"*/,
+                                                                     v271->LocationRewardDlgColumn,
                                                                      0LL);
   BalanceConfig_TypeInfo->static_fields->CloseSecretTreasureDeviceQuestClear = ConstantMaster__GetValue(
                                                                                  (ConstantMaster_o *)MasterData_object,
-                                                                                 (System_String_o *)StringLiteral_3573/*"CLOSE_SECRET_TREASURE_DEVICE_QUEST_CLEAR"*/,
+                                                                                 (System_String_o *)StringLiteral_3579/*"CLOSE_SECRET_TREASURE_DEVICE_QUEST_CLEAR"*/,
                                                                                  0LL);
   BalanceConfig_TypeInfo->static_fields->CloseSecretTreasureDeviceSvtGet = ConstantMaster__GetValue(
                                                                              (ConstantMaster_o *)MasterData_object,
-                                                                             (System_String_o *)StringLiteral_3574/*"CLOSE_SECRET_TREASURE_DEVICE_SVT_GET"*/,
+                                                                             (System_String_o *)StringLiteral_3580/*"CLOSE_SECRET_TREASURE_DEVICE_SVT_GET"*/,
                                                                              0LL);
   BalanceConfig_TypeInfo->static_fields->ItemIdQp = ConstantMaster__GetValue(
                                                       (ConstantMaster_o *)MasterData_object,
-                                                      (System_String_o *)StringLiteral_7394/*"ITEM_ID_QP"*/,
+                                                      (System_String_o *)StringLiteral_7399/*"ITEM_ID_QP"*/,
                                                       0LL);
-  BalanceConfig_TypeInfo->static_fields->ShopDetailCheckDialogFontSize = ConstantMaster__GetValue_38796200(
+  BalanceConfig_TypeInfo->static_fields->ShopDetailCheckDialogFontSize = ConstantMaster__GetValue_38846256(
                                                                            (ConstantMaster_o *)MasterData_object,
-                                                                           (System_String_o *)StringLiteral_11984/*"SHOP_DETAIL_CHECK_DIALOG_FONT_SIZE"*/,
+                                                                           (System_String_o *)StringLiteral_11993/*"SHOP_DETAIL_CHECK_DIALOG_FONT_SIZE"*/,
                                                                            21,
                                                                            0LL);
-  v271 = ConstantStrMaster__GetValue(v218, (System_String_o *)StringLiteral_11405/*"SCENARIO_SPEED_STEP"*/, 0LL);
-  if ( System_Single__TryParse(v271, &result, 0LL) )
+  v272 = ConstantStrMaster__GetValue(v219, (System_String_o *)StringLiteral_11413/*"SCENARIO_SPEED_STEP"*/, 0LL);
+  if ( System_Single__TryParse(v272, &result, 0LL) )
   {
-    v272 = BalanceConfig_TypeInfo;
-    v273 = result;
+    v273 = BalanceConfig_TypeInfo;
+    v274 = result;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v272 = BalanceConfig_TypeInfo;
+      v273 = BalanceConfig_TypeInfo;
     }
-    v272->static_fields->ScenarioSpeedStep = v273;
+    v273->static_fields->ScenarioSpeedStep = v274;
   }
-  v274 = ConstantStrMaster__GetValue(v218, (System_String_o *)StringLiteral_11404/*"SCENARIO_SPEED_LOW"*/, 0LL);
-  if ( System_Single__TryParse(v274, &result, 0LL) )
+  v275 = ConstantStrMaster__GetValue(v219, (System_String_o *)StringLiteral_11412/*"SCENARIO_SPEED_LOW"*/, 0LL);
+  if ( System_Single__TryParse(v275, &result, 0LL) )
   {
-    v275 = BalanceConfig_TypeInfo;
-    v276 = result;
+    v276 = BalanceConfig_TypeInfo;
+    v277 = result;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v275 = BalanceConfig_TypeInfo;
+      v276 = BalanceConfig_TypeInfo;
     }
-    v275->static_fields->ScenarioSpeedLow = v276;
+    v276->static_fields->ScenarioSpeedLow = v277;
   }
-  v277 = ConstantStrMaster__GetValue(v218, (System_String_o *)StringLiteral_11403/*"SCENARIO_SPEED_HIGH"*/, 0LL);
-  if ( System_Single__TryParse(v277, &result, 0LL) )
+  v278 = ConstantStrMaster__GetValue(v219, (System_String_o *)StringLiteral_11411/*"SCENARIO_SPEED_HIGH"*/, 0LL);
+  if ( System_Single__TryParse(v278, &result, 0LL) )
   {
-    v278 = BalanceConfig_TypeInfo;
-    v279 = result;
+    v279 = BalanceConfig_TypeInfo;
+    v280 = result;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v278 = BalanceConfig_TypeInfo;
+      v279 = BalanceConfig_TypeInfo;
     }
-    v278->static_fields->ScenarioSpeedHigh = v279;
+    v279->static_fields->ScenarioSpeedHigh = v280;
   }
-  v280 = ConstantStrMaster__GetValue(v218, (System_String_o *)StringLiteral_11402/*"SCENARIO_SPEED_DEFAULT"*/, 0LL);
-  if ( System_Single__TryParse(v280, &result, 0LL) )
+  v281 = ConstantStrMaster__GetValue(v219, (System_String_o *)StringLiteral_11410/*"SCENARIO_SPEED_DEFAULT"*/, 0LL);
+  if ( System_Single__TryParse(v281, &result, 0LL) )
   {
-    v281 = BalanceConfig_TypeInfo;
-    v282 = result;
+    v282 = BalanceConfig_TypeInfo;
+    v283 = result;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v281 = BalanceConfig_TypeInfo;
+      v282 = BalanceConfig_TypeInfo;
     }
-    v281->static_fields->ScenarioSpeedDefault = v282;
+    v282->static_fields->ScenarioSpeedDefault = v283;
   }
   else
   {
-    v281 = BalanceConfig_TypeInfo;
+    v282 = BalanceConfig_TypeInfo;
   }
-  if ( !v281->_2.cctor_finished )
+  if ( !v282->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v281);
-    v281 = BalanceConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v282);
+    v282 = BalanceConfig_TypeInfo;
   }
-  v283 = ConstantMaster__GetValue_38796200(
+  v284 = ConstantMaster__GetValue_38846256(
            (ConstantMaster_o *)MasterData_object,
-           (System_String_o *)StringLiteral_10361/*"POWERUP_QUEST_WAR_ID"*/,
-           v281->static_fields->PowerUpQuestWarId,
+           (System_String_o *)StringLiteral_10370/*"POWERUP_QUEST_WAR_ID"*/,
+           v282->static_fields->PowerUpQuestWarId,
            0LL);
-  v284 = BalanceConfig_TypeInfo->static_fields;
-  v284->PowerUpQuestWarId = v283;
-  v285 = ConstantMaster__GetValue_38796200(
+  v285 = BalanceConfig_TypeInfo->static_fields;
+  v285->PowerUpQuestWarId = v284;
+  v286 = ConstantMaster__GetValue_38846256(
            (ConstantMaster_o *)MasterData_object,
-           (System_String_o *)StringLiteral_1968/*"ACCOUNTING_INITIALIZE_TIMEOUT"*/,
-           v284->AccountingInitializeTimeOut,
+           (System_String_o *)StringLiteral_1969/*"ACCOUNTING_INITIALIZE_TIMEOUT"*/,
+           v285->AccountingInitializeTimeOut,
            0LL);
-  v286 = BalanceConfig_TypeInfo->static_fields;
-  v286->AccountingInitializeTimeOut = v285;
-  BalanceConfig_TypeInfo->static_fields->EquipGetEffectId = ConstantMaster__GetValue_38796200(
+  v287 = BalanceConfig_TypeInfo->static_fields;
+  v287->AccountingInitializeTimeOut = v286;
+  BalanceConfig_TypeInfo->static_fields->EquipGetEffectId = ConstantMaster__GetValue_38846256(
                                                               (ConstantMaster_o *)MasterData_object,
-                                                              (System_String_o *)StringLiteral_5490/*"EQUIP_GET_EFFECT_ID"*/,
-                                                              v286->EquipGetEffectId,
+                                                              (System_String_o *)StringLiteral_5495/*"EQUIP_GET_EFFECT_ID"*/,
+                                                              v287->EquipGetEffectId,
                                                               0LL);
-  BalanceConfig_TypeInfo->static_fields->CommandCodeDetachingItemId = ConstantMaster__GetValue_38796200(
+  BalanceConfig_TypeInfo->static_fields->CommandCodeDetachingItemId = ConstantMaster__GetValue_38846256(
                                                                         (ConstantMaster_o *)MasterData_object,
-                                                                        (System_String_o *)StringLiteral_3694/*"COMMAND_CODE_DETACHING_ITEM_ID"*/,
+                                                                        (System_String_o *)StringLiteral_3700/*"COMMAND_CODE_DETACHING_ITEM_ID"*/,
                                                                         -1,
                                                                         0LL);
-  v287 = ConstantStrMaster__GetValue(v218, (System_String_o *)StringLiteral_10385/*"PRESENT_BOX_FILTER_SVT_EQUIP_MATERIAL"*/, 0LL);
-  if ( v287 )
+  v288 = ConstantStrMaster__GetValue(v219, (System_String_o *)StringLiteral_10394/*"PRESENT_BOX_FILTER_SVT_EQUIP_MATERIAL"*/, 0LL);
+  if ( v288 )
   {
-    v288 = System_String__Split(v287, 0x2Cu, 0, 0LL);
-    v289 = BalanceConfig___c_TypeInfo;
-    v290 = (System_Collections_Generic_IEnumerable_TSource__o *)v288;
+    v289 = System_String__Split(v288, 0x2Cu, 0, 0LL);
+    v290 = BalanceConfig___c_TypeInfo;
+    v291 = (System_Collections_Generic_IEnumerable_TSource__o *)v289;
     if ( !BalanceConfig___c_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig___c_TypeInfo);
-      v289 = BalanceConfig___c_TypeInfo;
+      v290 = BalanceConfig___c_TypeInfo;
     }
-    _9__240_0 = (System_Func_object__int__o *)v289->static_fields->__9__240_0;
+    _9__240_0 = (System_Func_object__int__o *)v290->static_fields->__9__240_0;
     if ( !_9__240_0 )
     {
-      if ( !v289->_2.cctor_finished )
+      if ( !v290->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v289);
-        v289 = BalanceConfig___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v290);
+        v290 = BalanceConfig___c_TypeInfo;
       }
-      v292 = (Il2CppObject *)v289->static_fields->__9;
-      _9__240_0 = (System_Func_object__int__o *)sub_1B68920(System_Func_string__int__TypeInfo);
-      System_Func_object__int____ctor(_9__240_0, v292, Method_BalanceConfig___c__Initialize_b__240_0__, 0LL);
-      v293 = BalanceConfig___c_TypeInfo->static_fields;
-      v293->__9__240_0 = (struct System_Func_string__int__o *)_9__240_0;
-      sub_1B68678((ServantStatusBattleListViewItem_o *)&v293->__9__240_0, (int32_t)_9__240_0, v294, v295);
+      v293 = (Il2CppObject *)v290->static_fields->__9;
+      _9__240_0 = (System_Func_object__int__o *)sub_1B71818(System_Func_string__int__TypeInfo);
+      System_Func_object__int____ctor(_9__240_0, v293, Method_BalanceConfig___c__Initialize_b__240_0__, 0LL);
+      v294 = BalanceConfig___c_TypeInfo->static_fields;
+      v294->__9__240_0 = (struct System_Func_string__int__o *)_9__240_0;
+      sub_1B71570((ServantStatusBattleListViewItem_o *)&v294->__9__240_0, (int32_t)_9__240_0, v295, v296);
     }
-    v296 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
-                                                                  v290,
+    v297 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
+                                                                  v291,
                                                                   (System_Func_TSource__TResult__o *)_9__240_0,
-                                                                  (const MethodInfo_2E79760 *)Method_System_Linq_Enumerable_Select_string__int___);
-    v297 = System_Linq_Enumerable__ToArray_int_(
-             v296,
-             (const MethodInfo_2E81CA4 *)Method_System_Linq_Enumerable_ToArray_int___);
-    v300 = BalanceConfig_TypeInfo;
-    v301 = (ServantStatusBattleListViewItem_c *)v297;
+                                                                  (const MethodInfo_2E8B610 *)Method_System_Linq_Enumerable_Select_string__int___);
+    v298 = System_Linq_Enumerable__ToArray_int_(
+             v297,
+             (const MethodInfo_2E93CEC *)Method_System_Linq_Enumerable_ToArray_int___);
+    v301 = BalanceConfig_TypeInfo;
+    v302 = (ServantStatusBattleListViewItem_c *)v298;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v300 = BalanceConfig_TypeInfo;
+      v301 = BalanceConfig_TypeInfo;
     }
-    p_PresentBoxFilterSvtEquipMaterial = (ServantStatusBattleListViewItem_o *)&v300->static_fields->PresentBoxFilterSvtEquipMaterial;
-    p_PresentBoxFilterSvtEquipMaterial->klass = v301;
-    sub_1B68678(p_PresentBoxFilterSvtEquipMaterial, (int32_t)v301, v298, v299);
+    p_PresentBoxFilterSvtEquipMaterial = (ServantStatusBattleListViewItem_o *)&v301->static_fields->PresentBoxFilterSvtEquipMaterial;
+    p_PresentBoxFilterSvtEquipMaterial->klass = v302;
+    sub_1B71570(p_PresentBoxFilterSvtEquipMaterial, (int32_t)v302, v299, v300);
   }
-  v303 = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, (System_String_o *)StringLiteral_6412/*"FOLLOW_NUM"*/, 0LL);
-  if ( v303 >= 1 )
+  v304 = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, (System_String_o *)StringLiteral_6417/*"FOLLOW_NUM"*/, 0LL);
+  if ( v304 >= 1 )
   {
-    v304 = v303;
-    v305 = BalanceConfig_TypeInfo;
+    v305 = v304;
+    v306 = BalanceConfig_TypeInfo;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v305 = BalanceConfig_TypeInfo;
+      v306 = BalanceConfig_TypeInfo;
     }
-    v305->static_fields->FollowNum = v304;
+    v306->static_fields->FollowNum = v305;
   }
-  v306 = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, (System_String_o *)StringLiteral_6409/*"FOLLOW_FRIEND_POINT"*/, 0LL);
-  if ( v306 >= 1 )
+  v307 = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, (System_String_o *)StringLiteral_6414/*"FOLLOW_FRIEND_POINT"*/, 0LL);
+  if ( v307 >= 1 )
   {
-    v307 = v306;
-    v308 = BalanceConfig_TypeInfo;
+    v308 = v307;
+    v309 = BalanceConfig_TypeInfo;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v308 = BalanceConfig_TypeInfo;
+      v309 = BalanceConfig_TypeInfo;
     }
-    v308->static_fields->FollowFriendPoint = v307;
+    v309->static_fields->FollowFriendPoint = v308;
   }
-  v309 = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, (System_String_o *)StringLiteral_5022/*"DISABLE_FRIENDSHIP_EXCEED"*/, 0LL);
-  v310 = BalanceConfig_TypeInfo;
-  v311 = v309;
+  v310 = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, (System_String_o *)StringLiteral_5027/*"DISABLE_FRIENDSHIP_EXCEED"*/, 0LL);
+  v311 = BalanceConfig_TypeInfo;
+  v312 = v310;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v310 = BalanceConfig_TypeInfo;
+    v311 = BalanceConfig_TypeInfo;
   }
-  v310->static_fields->DisableFriendshipExceed = v311;
+  v311->static_fields->DisableFriendshipExceed = v312;
   BalanceConfig_TypeInfo->static_fields->EventDailyPointResetAt = ConstantMaster__GetValue(
                                                                     (ConstantMaster_o *)MasterData_object,
-                                                                    (System_String_o *)StringLiteral_5576/*"EVENT_DAILY_POINT_RESET_AT"*/,
+                                                                    (System_String_o *)StringLiteral_5581/*"EVENT_DAILY_POINT_RESET_AT"*/,
                                                                     0LL);
-  v312 = ConstantStrMaster__GetValueArray(v218, (System_String_o *)StringLiteral_11008/*"REPRINT_LAST_WAR_RAID_EVENT_ID_LIST"*/, 0LL, 0LL);
+  v313 = ConstantStrMaster__GetValueArray(v219, (System_String_o *)StringLiteral_11016/*"REPRINT_LAST_WAR_RAID_EVENT_ID_LIST"*/, 0LL, 0LL);
   p_ReprintLastWarRaidEventIdList = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->ReprintLastWarRaidEventIdList;
-  p_ReprintLastWarRaidEventIdList->klass = (ServantStatusBattleListViewItem_c *)v312;
-  sub_1B68678(p_ReprintLastWarRaidEventIdList, (int32_t)v312, v314, v315);
+  p_ReprintLastWarRaidEventIdList->klass = (ServantStatusBattleListViewItem_c *)v313;
+  sub_1B71570(p_ReprintLastWarRaidEventIdList, (int32_t)v313, v315, v316);
   BalanceConfig_TypeInfo->static_fields->PrologueQuestId = ConstantMaster__GetValue(
                                                              (ConstantMaster_o *)MasterData_object,
-                                                             (System_String_o *)StringLiteral_10433/*"PROLOGUE_QUEST_ID"*/,
+                                                             (System_String_o *)StringLiteral_10441/*"PROLOGUE_QUEST_ID"*/,
                                                              0LL);
   BalanceConfig_TypeInfo->static_fields->CommandCardParamUpMax = ConstantMaster__GetValue(
                                                                    (ConstantMaster_o *)MasterData_object,
-                                                                   (System_String_o *)StringLiteral_3693/*"COMMAND_CARD_PRM_UP_MAX"*/,
+                                                                   (System_String_o *)StringLiteral_3699/*"COMMAND_CARD_PRM_UP_MAX"*/,
                                                                    0LL);
-  v316 = ConstantStrMaster__GetValueArray(v218, (System_String_o *)StringLiteral_5706/*"EVENT_TOWER_FADEOUT_DELAY_TIME"*/, 0LL, 0LL);
+  v317 = ConstantStrMaster__GetValueArray(v219, (System_String_o *)StringLiteral_5711/*"EVENT_TOWER_FADEOUT_DELAY_TIME"*/, 0LL, 0LL);
   p_EventTowerFadeOutDelayTime = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->EventTowerFadeOutDelayTime;
-  p_EventTowerFadeOutDelayTime->klass = (ServantStatusBattleListViewItem_c *)v316;
-  sub_1B68678(p_EventTowerFadeOutDelayTime, (int32_t)v316, v318, v319);
+  p_EventTowerFadeOutDelayTime->klass = (ServantStatusBattleListViewItem_c *)v317;
+  sub_1B71570(p_EventTowerFadeOutDelayTime, (int32_t)v317, v319, v320);
   if ( !BalanceConfig_TypeInfo->static_fields->EventTowerFadeOutDelayTime )
   {
-    v320 = (System_Array_o *)sub_1B6877C(int___TypeInfo, 3LL);
-    v579.fields.value = Field__PrivateImplementationDetails__84DF4B72A51E01473BC25693E526BC603A140C4300062B4A7F64A9F7D00ABB95;
-    System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61327548(v320, v579, 0LL);
-    v323 = BalanceConfig_TypeInfo;
+    v321 = (System_Array_o *)sub_1B71674(int___TypeInfo, 3LL);
+    v585.fields.value = Field__PrivateImplementationDetails__84DF4B72A51E01473BC25693E526BC603A140C4300062B4A7F64A9F7D00ABB95;
+    System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61413584(v321, v585, 0LL);
+    v324 = BalanceConfig_TypeInfo;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v323 = BalanceConfig_TypeInfo;
+      v324 = BalanceConfig_TypeInfo;
     }
-    v324 = (ServantStatusBattleListViewItem_o *)&v323->static_fields->EventTowerFadeOutDelayTime;
-    v324->klass = (ServantStatusBattleListViewItem_c *)v320;
-    sub_1B68678(v324, (int32_t)v320, v321, v322);
+    v325 = (ServantStatusBattleListViewItem_o *)&v324->static_fields->EventTowerFadeOutDelayTime;
+    v325->klass = (ServantStatusBattleListViewItem_c *)v321;
+    sub_1B71570(v325, (int32_t)v321, v322, v323);
   }
-  v325 = ConstantMaster__GetValue_38796200(
+  v326 = ConstantMaster__GetValue_38846256(
            (ConstantMaster_o *)MasterData_object,
-           (System_String_o *)StringLiteral_5707/*"EVENT_TOWER_FADEOUT_PLAY_TIME"*/,
+           (System_String_o *)StringLiteral_5712/*"EVENT_TOWER_FADEOUT_PLAY_TIME"*/,
            3000,
            0LL);
-  v326 = BalanceConfig_TypeInfo;
-  v327 = v325;
+  v327 = BalanceConfig_TypeInfo;
+  v328 = v326;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v326 = BalanceConfig_TypeInfo;
+    v327 = BalanceConfig_TypeInfo;
   }
-  v326->static_fields->EventTowerFadeOutPlayTime = (float)v327 / 1000.0;
+  v327->static_fields->EventTowerFadeOutPlayTime = (float)v328 / 1000.0;
   BalanceConfig_TypeInfo->static_fields->MaxFriendChocolateUse = ConstantMaster__GetValue(
                                                                    (ConstantMaster_o *)MasterData_object,
-                                                                   (System_String_o *)StringLiteral_8548/*"MAX_FRIENDPOINT_BOOST_ITEM_USE"*/,
+                                                                   (System_String_o *)StringLiteral_8553/*"MAX_FRIENDPOINT_BOOST_ITEM_USE"*/,
                                                                    0LL);
-  BalanceConfig_TypeInfo->static_fields->FriendPointBoostItemEfffectId = ConstantMaster__GetValue_38796200(
+  BalanceConfig_TypeInfo->static_fields->FriendPointBoostItemEfffectId = ConstantMaster__GetValue_38846256(
                                                                            (ConstantMaster_o *)MasterData_object,
-                                                                           (System_String_o *)StringLiteral_6460/*"FRIENDPOINT_BOOST_ITEM_EFFECT_ID"*/,
+                                                                           (System_String_o *)StringLiteral_6465/*"FRIENDPOINT_BOOST_ITEM_EFFECT_ID"*/,
                                                                            3,
                                                                            0LL);
-  BalanceConfig_TypeInfo->static_fields->MainInterludeWarId = ConstantMaster__GetValue_38796200(
+  BalanceConfig_TypeInfo->static_fields->MainInterludeWarId = ConstantMaster__GetValue_38846256(
                                                                 (ConstantMaster_o *)MasterData_object,
-                                                                (System_String_o *)StringLiteral_8457/*"MAIN_INTERLUDE_WAR_ID"*/,
+                                                                (System_String_o *)StringLiteral_8462/*"MAIN_INTERLUDE_WAR_ID"*/,
                                                                 1004,
                                                                 0LL);
-  v328 = ConstantStrMaster__GetValueArray(v218, (System_String_o *)StringLiteral_5533/*"EVENT_BOARD_GAME_DICE_BUTTON_POS"*/, 0LL, 0LL);
+  v329 = ConstantStrMaster__GetValueArray(v219, (System_String_o *)StringLiteral_5538/*"EVENT_BOARD_GAME_DICE_BUTTON_POS"*/, 0LL, 0LL);
   p_EventBoardGameDiceButtonPostion = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->EventBoardGameDiceButtonPostion;
-  p_EventBoardGameDiceButtonPostion->klass = (ServantStatusBattleListViewItem_c *)v328;
-  sub_1B68678(p_EventBoardGameDiceButtonPostion, (int32_t)v328, v330, v331);
+  p_EventBoardGameDiceButtonPostion->klass = (ServantStatusBattleListViewItem_c *)v329;
+  sub_1B71570(p_EventBoardGameDiceButtonPostion, (int32_t)v329, v331, v332);
   if ( !BalanceConfig_TypeInfo->static_fields->EventBoardGameDiceButtonPostion )
   {
-    Instance = (Il2CppObject *)sub_1B6877C(int___TypeInfo, 3LL);
+    Instance = (Il2CppObject *)sub_1B71674(int___TypeInfo, 3LL);
     if ( !Instance )
       goto LABEL_165;
-    v334 = (unsigned int)Instance[1].monitor;
-    v335 = (ServantStatusBattleListViewItem_c *)Instance;
-    if ( v334 <= 1 )
+    v335 = (unsigned int)Instance[1].monitor;
+    v336 = (ServantStatusBattleListViewItem_c *)Instance;
+    if ( v335 <= 1 )
       goto LABEL_164;
     HIDWORD(Instance[2].klass) = -59;
-    if ( v334 == 2 )
+    if ( v335 == 2 )
       goto LABEL_164;
     LODWORD(Instance[2].monitor) = -500;
-    v336 = BalanceConfig_TypeInfo;
+    v337 = BalanceConfig_TypeInfo;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v336 = BalanceConfig_TypeInfo;
+      v337 = BalanceConfig_TypeInfo;
     }
-    v337 = (ServantStatusBattleListViewItem_o *)&v336->static_fields->EventBoardGameDiceButtonPostion;
-    v337->klass = v335;
-    sub_1B68678(v337, (int32_t)v335, v332, v333);
+    v338 = (ServantStatusBattleListViewItem_o *)&v337->static_fields->EventBoardGameDiceButtonPostion;
+    v338->klass = v336;
+    sub_1B71570(v338, (int32_t)v336, v333, v334);
   }
-  v338 = ConstantStrMaster__GetValueArray(v218, (System_String_o *)StringLiteral_8518/*"MATERIAL_MAIN_INTERLUDE_WAR_ID"*/, 0LL, 0LL);
-  v341 = BalanceConfig_TypeInfo;
-  v342 = (ServantStatusBattleListViewItem_c *)v338;
+  v339 = ConstantStrMaster__GetValueArray(v219, (System_String_o *)StringLiteral_8523/*"MATERIAL_MAIN_INTERLUDE_WAR_ID"*/, 0LL, 0LL);
+  v342 = BalanceConfig_TypeInfo;
+  v343 = (ServantStatusBattleListViewItem_c *)v339;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v341 = BalanceConfig_TypeInfo;
+    v342 = BalanceConfig_TypeInfo;
   }
-  p_MainInterludeWarIdOnMaterial = (ServantStatusBattleListViewItem_o *)&v341->static_fields->MainInterludeWarIdOnMaterial;
-  p_MainInterludeWarIdOnMaterial->klass = v342;
-  sub_1B68678(p_MainInterludeWarIdOnMaterial, (int32_t)v342, v339, v340);
+  p_MainInterludeWarIdOnMaterial = (ServantStatusBattleListViewItem_o *)&v342->static_fields->MainInterludeWarIdOnMaterial;
+  p_MainInterludeWarIdOnMaterial->klass = v343;
+  sub_1B71570(p_MainInterludeWarIdOnMaterial, (int32_t)v343, v340, v341);
   if ( !BalanceConfig_TypeInfo->static_fields->MainInterludeWarIdOnMaterial )
   {
-    Instance = (Il2CppObject *)sub_1B6877C(int___TypeInfo, 1LL);
+    Instance = (Il2CppObject *)sub_1B71674(int___TypeInfo, 1LL);
     if ( !Instance )
       goto LABEL_165;
-    v346 = (ServantStatusBattleListViewItem_c *)Instance;
+    v347 = (ServantStatusBattleListViewItem_c *)Instance;
     if ( !LODWORD(Instance[1].monitor) )
       goto LABEL_164;
     LODWORD(Instance[2].klass) = 307;
-    v347 = BalanceConfig_TypeInfo;
+    v348 = BalanceConfig_TypeInfo;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v347 = BalanceConfig_TypeInfo;
+      v348 = BalanceConfig_TypeInfo;
     }
-    v348 = (ServantStatusBattleListViewItem_o *)&v347->static_fields->MainInterludeWarIdOnMaterial;
-    v348->klass = v346;
-    sub_1B68678(v348, (int32_t)v346, v344, v345);
+    v349 = (ServantStatusBattleListViewItem_o *)&v348->static_fields->MainInterludeWarIdOnMaterial;
+    v349->klass = v347;
+    sub_1B71570(v349, (int32_t)v347, v345, v346);
   }
-  v349 = ConstantStrMaster__GetValueArray(v218, (System_String_o *)StringLiteral_5536/*"EVENT_BOARD_GAME_MAP_ID_LIST"*/, 0LL, 0LL);
-  v352 = BalanceConfig_TypeInfo;
-  v353 = (ServantStatusBattleListViewItem_c *)v349;
+  v350 = ConstantStrMaster__GetValueArray(v219, (System_String_o *)StringLiteral_5541/*"EVENT_BOARD_GAME_MAP_ID_LIST"*/, 0LL, 0LL);
+  v353 = BalanceConfig_TypeInfo;
+  v354 = (ServantStatusBattleListViewItem_c *)v350;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v352 = BalanceConfig_TypeInfo;
+    v353 = BalanceConfig_TypeInfo;
   }
-  p_EventBoardGameMapIdList = (ServantStatusBattleListViewItem_o *)&v352->static_fields->EventBoardGameMapIdList;
-  p_EventBoardGameMapIdList->klass = v353;
-  sub_1B68678(p_EventBoardGameMapIdList, (int32_t)v353, v350, v351);
-  BalanceConfig_TypeInfo->static_fields->EventBoardGameNextBoardQuestId = ConstantMaster__GetValue_38796200(
+  p_EventBoardGameMapIdList = (ServantStatusBattleListViewItem_o *)&v353->static_fields->EventBoardGameMapIdList;
+  p_EventBoardGameMapIdList->klass = v354;
+  sub_1B71570(p_EventBoardGameMapIdList, (int32_t)v354, v351, v352);
+  BalanceConfig_TypeInfo->static_fields->EventBoardGameNextBoardQuestId = ConstantMaster__GetValue_38846256(
                                                                             (ConstantMaster_o *)MasterData_object,
-                                                                            (System_String_o *)StringLiteral_5538/*"EVENT_BOARD_GAME_NEXT_BOARD_QUEST_ID"*/,
+                                                                            (System_String_o *)StringLiteral_5543/*"EVENT_BOARD_GAME_NEXT_BOARD_QUEST_ID"*/,
                                                                             94047745,
                                                                             0LL);
-  BalanceConfig_TypeInfo->static_fields->EventBoardGameNextRoundQuestId = ConstantMaster__GetValue_38796200(
+  BalanceConfig_TypeInfo->static_fields->EventBoardGameNextRoundQuestId = ConstantMaster__GetValue_38846256(
                                                                             (ConstantMaster_o *)MasterData_object,
-                                                                            (System_String_o *)StringLiteral_5539/*"EVENT_BOARD_GAME_NEXT_ROUND_QUEST_ID"*/,
+                                                                            (System_String_o *)StringLiteral_5544/*"EVENT_BOARD_GAME_NEXT_ROUND_QUEST_ID"*/,
                                                                             94047744,
                                                                             0LL);
-  BalanceConfig_TypeInfo->static_fields->TitleFlowOld = ConstantMaster__GetValue_38796200(
+  BalanceConfig_TypeInfo->static_fields->TitleFlowOld = ConstantMaster__GetValue_38846256(
                                                           (ConstantMaster_o *)MasterData_object,
-                                                          (System_String_o *)StringLiteral_13297/*"TITLE_FLOW_OLD"*/,
+                                                          (System_String_o *)StringLiteral_13312/*"TITLE_FLOW_OLD"*/,
                                                           0,
                                                           0LL);
-  BalanceConfig_TypeInfo->static_fields->StoryWarId = ConstantMaster__GetValue_38796200(
+  BalanceConfig_TypeInfo->static_fields->StoryWarId = ConstantMaster__GetValue_38846256(
                                                         (ConstantMaster_o *)MasterData_object,
-                                                        (System_String_o *)StringLiteral_12259/*"STORY_WAR_ID"*/,
+                                                        (System_String_o *)StringLiteral_12268/*"STORY_WAR_ID"*/,
                                                         1003,
                                                         0LL);
-  BalanceConfig_TypeInfo->static_fields->OrdealCallWarId = ConstantMaster__GetValue_38796200(
+  BalanceConfig_TypeInfo->static_fields->OrdealCallWarId = ConstantMaster__GetValue_38846256(
                                                              (ConstantMaster_o *)MasterData_object,
-                                                             (System_String_o *)StringLiteral_9679/*"ORDEAL_CALL_WAR_ID"*/,
+                                                             (System_String_o *)StringLiteral_9686/*"ORDEAL_CALL_WAR_ID"*/,
                                                              401,
                                                              0LL);
-  v355 = ConstantStrMaster__GetValue(v218, (System_String_o *)StringLiteral_9678/*"ORDEAL_CALL_CLEAR_BGM_NAME"*/, 0LL);
-  if ( !System_String__IsNullOrEmpty(v355, 0LL) )
+  v356 = ConstantStrMaster__GetValue(v219, (System_String_o *)StringLiteral_9685/*"ORDEAL_CALL_CLEAR_BGM_NAME"*/, 0LL);
+  if ( !System_String__IsNullOrEmpty(v356, 0LL) )
   {
-    v358 = BalanceConfig_TypeInfo;
+    v359 = BalanceConfig_TypeInfo;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v358 = BalanceConfig_TypeInfo;
+      v359 = BalanceConfig_TypeInfo;
     }
-    p_OrdealCallClearBgmName = (ServantStatusBattleListViewItem_o *)&v358->static_fields->OrdealCallClearBgmName;
-    p_OrdealCallClearBgmName->klass = (ServantStatusBattleListViewItem_c *)v355;
-    sub_1B68678(p_OrdealCallClearBgmName, (int32_t)v355, v356, v357);
+    p_OrdealCallClearBgmName = (ServantStatusBattleListViewItem_o *)&v359->static_fields->OrdealCallClearBgmName;
+    p_OrdealCallClearBgmName->klass = (ServantStatusBattleListViewItem_c *)v356;
+    sub_1B71570(p_OrdealCallClearBgmName, (int32_t)v356, v357, v358);
   }
-  v360 = (System_Array_o *)sub_1B6877C(int___TypeInfo, 5LL);
-  v580.fields.value = Field__PrivateImplementationDetails__A1FBA00A0F8840358C0A54605FFD365F75E3A3D7AFF25F48F474C4E89BB0B37D;
-  v361 = (System_Int32_array *)v360;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61327548(v360, v580, 0LL);
-  v362 = ConstantStrMaster__GetValueArray(v218, (System_String_o *)StringLiteral_3830/*"CONSUME_STORMPOD_SPOT_ID"*/, v361, 0LL);
-  v365 = BalanceConfig_TypeInfo;
-  v366 = (ServantStatusBattleListViewItem_c *)v362;
+  v361 = (System_Array_o *)sub_1B71674(int___TypeInfo, 5LL);
+  v586.fields.value = Field__PrivateImplementationDetails__A1FBA00A0F8840358C0A54605FFD365F75E3A3D7AFF25F48F474C4E89BB0B37D;
+  v362 = (System_Int32_array *)v361;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61413584(v361, v586, 0LL);
+  v363 = ConstantStrMaster__GetValueArray(v219, (System_String_o *)StringLiteral_3836/*"CONSUME_STORMPOD_SPOT_ID"*/, v362, 0LL);
+  v366 = BalanceConfig_TypeInfo;
+  v367 = (ServantStatusBattleListViewItem_c *)v363;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v365 = BalanceConfig_TypeInfo;
+    v366 = BalanceConfig_TypeInfo;
   }
-  p_consumeStormPodSpotId = (ServantStatusBattleListViewItem_o *)&v365->static_fields->consumeStormPodSpotId;
-  p_consumeStormPodSpotId->klass = v366;
-  sub_1B68678(p_consumeStormPodSpotId, (int32_t)v366, v363, v364);
-  Instance = (Il2CppObject *)sub_1B6877C(int___TypeInfo, 1LL);
+  p_consumeStormPodSpotId = (ServantStatusBattleListViewItem_o *)&v366->static_fields->consumeStormPodSpotId;
+  p_consumeStormPodSpotId->klass = v367;
+  sub_1B71570(p_consumeStormPodSpotId, (int32_t)v367, v364, v365);
+  Instance = (Il2CppObject *)sub_1B71674(int___TypeInfo, 1LL);
   if ( !Instance )
 LABEL_165:
-    sub_1B68930(Instance, v215);
+    sub_1B71828(Instance, v216);
   if ( !LODWORD(Instance[1].monitor) )
     goto LABEL_164;
   LODWORD(Instance[2].klass) = 71;
-  v368 = ConstantStrMaster__GetValueArray(
-           v218,
-           (System_String_o *)StringLiteral_12257/*"STORMPOD_HELP_IDS"*/,
+  v369 = ConstantStrMaster__GetValueArray(
+           v219,
+           (System_String_o *)StringLiteral_12266/*"STORMPOD_HELP_IDS"*/,
            (System_Int32_array *)Instance,
            0LL);
   p_StormPodHelpIds = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->StormPodHelpIds;
-  p_StormPodHelpIds->klass = (ServantStatusBattleListViewItem_c *)v368;
-  sub_1B68678(p_StormPodHelpIds, (int32_t)v368, v370, v371);
-  ValueStringArray = ConstantStrMaster__GetValueStringArray(v218, (System_String_o *)StringLiteral_8196/*"LEGACY_ASPECT_MOVIES"*/, 0LL);
+  p_StormPodHelpIds->klass = (ServantStatusBattleListViewItem_c *)v369;
+  sub_1B71570(p_StormPodHelpIds, (int32_t)v369, v371, v372);
+  ValueStringArray = ConstantStrMaster__GetValueStringArray(v219, (System_String_o *)StringLiteral_8201/*"LEGACY_ASPECT_MOVIES"*/, 0LL);
   p_legacyAspectMovies = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->legacyAspectMovies;
   p_legacyAspectMovies->klass = (ServantStatusBattleListViewItem_c *)ValueStringArray;
-  sub_1B68678(p_legacyAspectMovies, (int32_t)ValueStringArray, v374, v375);
-  BalanceConfig_TypeInfo->static_fields->GachaDailyMaxDrawNumResetAt = ConstantMaster__GetValue_38796200(
+  sub_1B71570(p_legacyAspectMovies, (int32_t)ValueStringArray, v375, v376);
+  BalanceConfig_TypeInfo->static_fields->GachaDailyMaxDrawNumResetAt = ConstantMaster__GetValue_38846256(
                                                                          (ConstantMaster_o *)MasterData_object,
-                                                                         (System_String_o *)StringLiteral_6840/*"GACHA_DAILY_MAX_DRAW_NUM_RESET_AT"*/,
+                                                                         (System_String_o *)StringLiteral_6845/*"GACHA_DAILY_MAX_DRAW_NUM_RESET_AT"*/,
                                                                          4,
                                                                          0LL);
-  BalanceConfig_TypeInfo->static_fields->MemoryDeckLimitByQuest = ConstantMaster__GetValue_38796200(
+  BalanceConfig_TypeInfo->static_fields->MemoryDeckLimitByQuest = ConstantMaster__GetValue_38846256(
                                                                     (ConstantMaster_o *)MasterData_object,
-                                                                    (System_String_o *)StringLiteral_8575/*"MEMORY_DECK_LIMIT_BY_QUEST"*/,
+                                                                    (System_String_o *)StringLiteral_8580/*"MEMORY_DECK_LIMIT_BY_QUEST"*/,
                                                                     100,
                                                                     0LL);
-  v376 = ConstantStrMaster__GetValue(v218, (System_String_o *)StringLiteral_7361/*"IOS_EXAMINATION_NEWS_URL"*/, 0LL);
+  v377 = ConstantStrMaster__GetValue(v219, (System_String_o *)StringLiteral_7366/*"IOS_EXAMINATION_NEWS_URL"*/, 0LL);
   p_IOS_ExaminationNewsUrl = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->IOS_ExaminationNewsUrl;
-  p_IOS_ExaminationNewsUrl->klass = (ServantStatusBattleListViewItem_c *)v376;
-  sub_1B68678(p_IOS_ExaminationNewsUrl, (int32_t)v376, v378, v379);
-  v382 = BalanceConfig_TypeInfo->static_fields;
-  if ( !v382->IOS_ExaminationNewsUrl )
+  p_IOS_ExaminationNewsUrl->klass = (ServantStatusBattleListViewItem_c *)v377;
+  sub_1B71570(p_IOS_ExaminationNewsUrl, (int32_t)v377, v379, v380);
+  v383 = BalanceConfig_TypeInfo->static_fields;
+  if ( !v383->IOS_ExaminationNewsUrl )
   {
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v382 = BalanceConfig_TypeInfo->static_fields;
+      v383 = BalanceConfig_TypeInfo->static_fields;
     }
-    v383 = StringLiteral_19970/*"https://view.fate-go.jp/"*/;
-    v382->IOS_ExaminationNewsUrl = (struct System_String_o *)StringLiteral_19970/*"https://view.fate-go.jp/"*/;
-    sub_1B68678((ServantStatusBattleListViewItem_o *)&v382->IOS_ExaminationNewsUrl, v383, v380, v381);
+    v384 = StringLiteral_19988/*"https://view.fate-go.jp/"*/;
+    v383->IOS_ExaminationNewsUrl = (struct System_String_o *)StringLiteral_19988/*"https://view.fate-go.jp/"*/;
+    sub_1B71570((ServantStatusBattleListViewItem_o *)&v383->IOS_ExaminationNewsUrl, v384, v381, v382);
   }
-  v384 = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, (System_String_o *)StringLiteral_9690/*"OTHER_IMAGE_LIMIT_COUNT"*/, 0LL);
-  v385 = BalanceConfig_TypeInfo;
-  v386 = v384;
+  v385 = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, (System_String_o *)StringLiteral_9697/*"OTHER_IMAGE_LIMIT_COUNT"*/, 0LL);
+  v386 = BalanceConfig_TypeInfo;
+  v387 = v385;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v385 = BalanceConfig_TypeInfo;
+    v386 = BalanceConfig_TypeInfo;
   }
-  v385->static_fields->OtherImageLimitCount = v386;
-  BalanceConfig_TypeInfo->static_fields->ExclusiveNpcServantIdStart = ConstantMaster__GetValue_38796200(
+  v386->static_fields->OtherImageLimitCount = v387;
+  BalanceConfig_TypeInfo->static_fields->ExclusiveNpcServantIdStart = ConstantMaster__GetValue_38846256(
                                                                         (ConstantMaster_o *)MasterData_object,
-                                                                        (System_String_o *)StringLiteral_5725/*"EXCLUSIVE_NPC_SERVANT_ID_START"*/,
+                                                                        (System_String_o *)StringLiteral_5730/*"EXCLUSIVE_NPC_SERVANT_ID_START"*/,
                                                                         9937100,
                                                                         0LL);
-  v387 = ConstantStrMaster__GetValueStringArray(v218, (System_String_o *)StringLiteral_12173/*"STAND_FIGURE_R_OFFSET_EFFECT_NAMES"*/, 0LL);
+  v388 = ConstantStrMaster__GetValueStringArray(v219, (System_String_o *)StringLiteral_12182/*"STAND_FIGURE_R_OFFSET_EFFECT_NAMES"*/, 0LL);
   p_UIStandFigureROffsetEffectNames = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->UIStandFigureROffsetEffectNames;
-  p_UIStandFigureROffsetEffectNames->klass = (ServantStatusBattleListViewItem_c *)v387;
-  sub_1B68678(p_UIStandFigureROffsetEffectNames, (int32_t)v387, v389, v390);
-  v391 = ConstantStrMaster__GetValueStringArray(v218, (System_String_o *)StringLiteral_12172/*"STAND_FIGURE_R_OFFSET_EFFECT_IMAGES"*/, 0LL);
+  p_UIStandFigureROffsetEffectNames->klass = (ServantStatusBattleListViewItem_c *)v388;
+  sub_1B71570(p_UIStandFigureROffsetEffectNames, (int32_t)v388, v390, v391);
+  v392 = ConstantStrMaster__GetValueStringArray(v219, (System_String_o *)StringLiteral_12181/*"STAND_FIGURE_R_OFFSET_EFFECT_IMAGES"*/, 0LL);
   p_UIStandFigureROffsetImages = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->UIStandFigureROffsetImages;
-  p_UIStandFigureROffsetImages->klass = (ServantStatusBattleListViewItem_c *)v391;
-  sub_1B68678(p_UIStandFigureROffsetImages, (int32_t)v391, v393, v394);
-  v395 = BalanceConfig_TypeInfo;
+  p_UIStandFigureROffsetImages->klass = (ServantStatusBattleListViewItem_c *)v392;
+  sub_1B71570(p_UIStandFigureROffsetImages, (int32_t)v392, v394, v395);
+  v396 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->static_fields->UIStandFigureROffsetEffectNames )
   {
-    Instance = (Il2CppObject *)sub_1B6877C(string___TypeInfo, 7LL);
+    Instance = (Il2CppObject *)sub_1B71674(string___TypeInfo, 7LL);
     if ( !Instance )
       goto LABEL_165;
-    v398 = Instance;
+    v399 = Instance;
     if ( !LODWORD(Instance[1].monitor) )
       goto LABEL_164;
-    v399 = StringLiteral_17211/*"bit_result_bond"*/;
-    Instance[2].klass = (Il2CppClass *)StringLiteral_17211/*"bit_result_bond"*/;
-    sub_1B68678((ServantStatusBattleListViewItem_o *)&Instance[2], v399, v396, v397);
-    if ( LODWORD(v398[1].monitor) <= 1 )
+    v400 = StringLiteral_17226/*"bit_result_bond"*/;
+    Instance[2].klass = (Il2CppClass *)StringLiteral_17226/*"bit_result_bond"*/;
+    sub_1B71570((ServantStatusBattleListViewItem_o *)&Instance[2], v400, v397, v398);
+    if ( LODWORD(v399[1].monitor) <= 1 )
       goto LABEL_164;
-    v402 = StringLiteral_17223/*"bit_result_noble"*/;
-    v398[2].monitor = (void *)StringLiteral_17223/*"bit_result_noble"*/;
-    sub_1B68678((ServantStatusBattleListViewItem_o *)&v398[2].monitor, v402, v400, v401);
-    if ( LODWORD(v398[1].monitor) <= 2 )
+    v403 = StringLiteral_17238/*"bit_result_noble"*/;
+    v399[2].monitor = (void *)StringLiteral_17238/*"bit_result_noble"*/;
+    sub_1B71570((ServantStatusBattleListViewItem_o *)&v399[2].monitor, v403, v401, v402);
+    if ( LODWORD(v399[1].monitor) <= 2 )
       goto LABEL_164;
-    v405 = StringLiteral_17226/*"bit_result_servant"*/;
-    v398[3].klass = (Il2CppClass *)StringLiteral_17226/*"bit_result_servant"*/;
-    sub_1B68678((ServantStatusBattleListViewItem_o *)&v398[3], v405, v403, v404);
-    if ( LODWORD(v398[1].monitor) <= 3 )
+    v406 = StringLiteral_17241/*"bit_result_servant"*/;
+    v399[3].klass = (Il2CppClass *)StringLiteral_17241/*"bit_result_servant"*/;
+    sub_1B71570((ServantStatusBattleListViewItem_o *)&v399[3], v406, v404, v405);
+    if ( LODWORD(v399[1].monitor) <= 3 )
       goto LABEL_164;
-    v408 = StringLiteral_17227/*"bit_result_skill"*/;
-    v398[3].monitor = (void *)StringLiteral_17227/*"bit_result_skill"*/;
-    sub_1B68678((ServantStatusBattleListViewItem_o *)&v398[3].monitor, v408, v406, v407);
-    if ( LODWORD(v398[1].monitor) <= 4 )
+    v409 = StringLiteral_17242/*"bit_result_skill"*/;
+    v399[3].monitor = (void *)StringLiteral_17242/*"bit_result_skill"*/;
+    sub_1B71570((ServantStatusBattleListViewItem_o *)&v399[3].monitor, v409, v407, v408);
+    if ( LODWORD(v399[1].monitor) <= 4 )
       goto LABEL_164;
-    v411 = StringLiteral_17212/*"bit_result_command_card_exceed"*/;
-    v398[4].klass = (Il2CppClass *)StringLiteral_17212/*"bit_result_command_card_exceed"*/;
-    sub_1B68678((ServantStatusBattleListViewItem_o *)&v398[4], v411, v409, v410);
-    if ( LODWORD(v398[1].monitor) <= 5 )
+    v412 = StringLiteral_17227/*"bit_result_command_card_exceed"*/;
+    v399[4].klass = (Il2CppClass *)StringLiteral_17227/*"bit_result_command_card_exceed"*/;
+    sub_1B71570((ServantStatusBattleListViewItem_o *)&v399[4], v412, v410, v411);
+    if ( LODWORD(v399[1].monitor) <= 5 )
       goto LABEL_164;
-    v414 = StringLiteral_17213/*"bit_result_extraskill"*/;
-    v398[4].monitor = (void *)StringLiteral_17213/*"bit_result_extraskill"*/;
-    sub_1B68678((ServantStatusBattleListViewItem_o *)&v398[4].monitor, v414, v412, v413);
-    if ( LODWORD(v398[1].monitor) <= 6 )
+    v415 = StringLiteral_17228/*"bit_result_extraskill"*/;
+    v399[4].monitor = (void *)StringLiteral_17228/*"bit_result_extraskill"*/;
+    sub_1B71570((ServantStatusBattleListViewItem_o *)&v399[4].monitor, v415, v413, v414);
+    if ( LODWORD(v399[1].monitor) <= 6 )
       goto LABEL_164;
-    v417 = StringLiteral_17216/*"bit_result_friendship_exceed"*/;
-    v398[5].klass = (Il2CppClass *)StringLiteral_17216/*"bit_result_friendship_exceed"*/;
-    sub_1B68678((ServantStatusBattleListViewItem_o *)&v398[5], v417, v415, v416);
-    v420 = BalanceConfig_TypeInfo;
+    v418 = StringLiteral_17231/*"bit_result_friendship_exceed"*/;
+    v399[5].klass = (Il2CppClass *)StringLiteral_17231/*"bit_result_friendship_exceed"*/;
+    sub_1B71570((ServantStatusBattleListViewItem_o *)&v399[5], v418, v416, v417);
+    v421 = BalanceConfig_TypeInfo;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v420 = BalanceConfig_TypeInfo;
+      v421 = BalanceConfig_TypeInfo;
     }
-    v421 = (ServantStatusBattleListViewItem_o *)&v420->static_fields->UIStandFigureROffsetEffectNames;
-    v421->klass = (ServantStatusBattleListViewItem_c *)v398;
-    sub_1B68678(v421, (int32_t)v398, v418, v419);
-    v395 = BalanceConfig_TypeInfo;
+    v422 = (ServantStatusBattleListViewItem_o *)&v421->static_fields->UIStandFigureROffsetEffectNames;
+    v422->klass = (ServantStatusBattleListViewItem_c *)v399;
+    sub_1B71570(v422, (int32_t)v399, v419, v420);
+    v396 = BalanceConfig_TypeInfo;
   }
-  if ( !v395->_2.cctor_finished )
+  if ( !v396->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v395);
-    v395 = BalanceConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v396);
+    v396 = BalanceConfig_TypeInfo;
   }
-  if ( !v395->static_fields->UIStandFigureROffsetImages )
+  if ( !v396->static_fields->UIStandFigureROffsetImages )
   {
-    Instance = (Il2CppObject *)sub_1B6877C(string___TypeInfo, 18LL);
+    Instance = (Il2CppObject *)sub_1B71674(string___TypeInfo, 18LL);
     if ( !Instance )
       goto LABEL_165;
-    v424 = Instance;
+    v425 = Instance;
     if ( LODWORD(Instance[1].monitor) )
     {
-      v425 = StringLiteral_1397/*"1053900:100:0"*/;
+      v426 = StringLiteral_1397/*"1053900:100:0"*/;
       Instance[2].klass = (Il2CppClass *)StringLiteral_1397/*"1053900:100:0"*/;
-      sub_1B68678((ServantStatusBattleListViewItem_o *)&Instance[2], v425, v422, v423);
-      if ( LODWORD(v424[1].monitor) > 1 )
+      sub_1B71570((ServantStatusBattleListViewItem_o *)&Instance[2], v426, v423, v424);
+      if ( LODWORD(v425[1].monitor) > 1 )
       {
-        v428 = StringLiteral_1400/*"1053910:100:0"*/;
-        v424[2].monitor = (void *)StringLiteral_1400/*"1053910:100:0"*/;
-        sub_1B68678((ServantStatusBattleListViewItem_o *)&v424[2].monitor, v428, v426, v427);
-        if ( LODWORD(v424[1].monitor) > 2 )
+        v429 = StringLiteral_1400/*"1053910:100:0"*/;
+        v425[2].monitor = (void *)StringLiteral_1400/*"1053910:100:0"*/;
+        sub_1B71570((ServantStatusBattleListViewItem_o *)&v425[2].monitor, v429, v427, v428);
+        if ( LODWORD(v425[1].monitor) > 2 )
         {
-          v431 = StringLiteral_1398/*"1053901:100:0"*/;
-          v424[3].klass = (Il2CppClass *)StringLiteral_1398/*"1053901:100:0"*/;
-          sub_1B68678((ServantStatusBattleListViewItem_o *)&v424[3], v431, v429, v430);
-          if ( LODWORD(v424[1].monitor) > 3 )
+          v432 = StringLiteral_1398/*"1053901:100:0"*/;
+          v425[3].klass = (Il2CppClass *)StringLiteral_1398/*"1053901:100:0"*/;
+          sub_1B71570((ServantStatusBattleListViewItem_o *)&v425[3], v432, v430, v431);
+          if ( LODWORD(v425[1].monitor) > 3 )
           {
-            v434 = StringLiteral_1401/*"1053911:100:0"*/;
-            v424[3].monitor = (void *)StringLiteral_1401/*"1053911:100:0"*/;
-            sub_1B68678((ServantStatusBattleListViewItem_o *)&v424[3].monitor, v434, v432, v433);
-            if ( LODWORD(v424[1].monitor) > 4 )
+            v435 = StringLiteral_1401/*"1053911:100:0"*/;
+            v425[3].monitor = (void *)StringLiteral_1401/*"1053911:100:0"*/;
+            sub_1B71570((ServantStatusBattleListViewItem_o *)&v425[3].monitor, v435, v433, v434);
+            if ( LODWORD(v425[1].monitor) > 4 )
             {
-              v437 = StringLiteral_1399/*"1053902:100:0"*/;
-              v424[4].klass = (Il2CppClass *)StringLiteral_1399/*"1053902:100:0"*/;
-              sub_1B68678((ServantStatusBattleListViewItem_o *)&v424[4], v437, v435, v436);
-              if ( LODWORD(v424[1].monitor) > 5 )
+              v438 = StringLiteral_1399/*"1053902:100:0"*/;
+              v425[4].klass = (Il2CppClass *)StringLiteral_1399/*"1053902:100:0"*/;
+              sub_1B71570((ServantStatusBattleListViewItem_o *)&v425[4], v438, v436, v437);
+              if ( LODWORD(v425[1].monitor) > 5 )
               {
-                v440 = StringLiteral_1402/*"1053912:100:0"*/;
-                v424[4].monitor = (void *)StringLiteral_1402/*"1053912:100:0"*/;
-                sub_1B68678((ServantStatusBattleListViewItem_o *)&v424[4].monitor, v440, v438, v439);
-                if ( LODWORD(v424[1].monitor) > 6 )
+                v441 = StringLiteral_1402/*"1053912:100:0"*/;
+                v425[4].monitor = (void *)StringLiteral_1402/*"1053912:100:0"*/;
+                sub_1B71570((ServantStatusBattleListViewItem_o *)&v425[4].monitor, v441, v439, v440);
+                if ( LODWORD(v425[1].monitor) > 6 )
                 {
-                  v443 = StringLiteral_1394/*"1053000:100:0"*/;
-                  v424[5].klass = (Il2CppClass *)StringLiteral_1394/*"1053000:100:0"*/;
-                  sub_1B68678((ServantStatusBattleListViewItem_o *)&v424[5], v443, v441, v442);
-                  if ( LODWORD(v424[1].monitor) > 7 )
+                  v444 = StringLiteral_1394/*"1053000:100:0"*/;
+                  v425[5].klass = (Il2CppClass *)StringLiteral_1394/*"1053000:100:0"*/;
+                  sub_1B71570((ServantStatusBattleListViewItem_o *)&v425[5], v444, v442, v443);
+                  if ( LODWORD(v425[1].monitor) > 7 )
                   {
-                    v446 = StringLiteral_1395/*"1053001:100:0"*/;
-                    v424[5].monitor = (void *)StringLiteral_1395/*"1053001:100:0"*/;
-                    sub_1B68678((ServantStatusBattleListViewItem_o *)&v424[5].monitor, v446, v444, v445);
-                    if ( LODWORD(v424[1].monitor) > 8 )
+                    v447 = StringLiteral_1395/*"1053001:100:0"*/;
+                    v425[5].monitor = (void *)StringLiteral_1395/*"1053001:100:0"*/;
+                    sub_1B71570((ServantStatusBattleListViewItem_o *)&v425[5].monitor, v447, v445, v446);
+                    if ( LODWORD(v425[1].monitor) > 8 )
                     {
-                      v449 = StringLiteral_1396/*"1053002:100:0"*/;
-                      v424[6].klass = (Il2CppClass *)StringLiteral_1396/*"1053002:100:0"*/;
-                      sub_1B68678((ServantStatusBattleListViewItem_o *)&v424[6], v449, v447, v448);
-                      if ( LODWORD(v424[1].monitor) > 9 )
+                      v450 = StringLiteral_1396/*"1053002:100:0"*/;
+                      v425[6].klass = (Il2CppClass *)StringLiteral_1396/*"1053002:100:0"*/;
+                      sub_1B71570((ServantStatusBattleListViewItem_o *)&v425[6], v450, v448, v449);
+                      if ( LODWORD(v425[1].monitor) > 9 )
                       {
-                        v452 = StringLiteral_1518/*"5047900:100:0"*/;
-                        v424[6].monitor = (void *)StringLiteral_1518/*"5047900:100:0"*/;
-                        sub_1B68678((ServantStatusBattleListViewItem_o *)&v424[6].monitor, v452, v450, v451);
-                        if ( LODWORD(v424[1].monitor) > 0xA )
+                        v453 = StringLiteral_1519/*"5047900:100:0"*/;
+                        v425[6].monitor = (void *)StringLiteral_1519/*"5047900:100:0"*/;
+                        sub_1B71570((ServantStatusBattleListViewItem_o *)&v425[6].monitor, v453, v451, v452);
+                        if ( LODWORD(v425[1].monitor) > 0xA )
                         {
-                          v455 = StringLiteral_1521/*"5047910:100:0"*/;
-                          v424[7].klass = (Il2CppClass *)StringLiteral_1521/*"5047910:100:0"*/;
-                          sub_1B68678((ServantStatusBattleListViewItem_o *)&v424[7], v455, v453, v454);
-                          if ( LODWORD(v424[1].monitor) > 0xB )
+                          v456 = StringLiteral_1522/*"5047910:100:0"*/;
+                          v425[7].klass = (Il2CppClass *)StringLiteral_1522/*"5047910:100:0"*/;
+                          sub_1B71570((ServantStatusBattleListViewItem_o *)&v425[7], v456, v454, v455);
+                          if ( LODWORD(v425[1].monitor) > 0xB )
                           {
-                            v458 = StringLiteral_1519/*"5047901:100:0"*/;
-                            v424[7].monitor = (void *)StringLiteral_1519/*"5047901:100:0"*/;
-                            sub_1B68678((ServantStatusBattleListViewItem_o *)&v424[7].monitor, v458, v456, v457);
-                            if ( LODWORD(v424[1].monitor) > 0xC )
+                            v459 = StringLiteral_1520/*"5047901:100:0"*/;
+                            v425[7].monitor = (void *)StringLiteral_1520/*"5047901:100:0"*/;
+                            sub_1B71570((ServantStatusBattleListViewItem_o *)&v425[7].monitor, v459, v457, v458);
+                            if ( LODWORD(v425[1].monitor) > 0xC )
                             {
-                              v461 = StringLiteral_1522/*"5047911:100:0"*/;
-                              v424[8].klass = (Il2CppClass *)StringLiteral_1522/*"5047911:100:0"*/;
-                              sub_1B68678((ServantStatusBattleListViewItem_o *)&v424[8], v461, v459, v460);
-                              if ( LODWORD(v424[1].monitor) > 0xD )
+                              v462 = StringLiteral_1523/*"5047911:100:0"*/;
+                              v425[8].klass = (Il2CppClass *)StringLiteral_1523/*"5047911:100:0"*/;
+                              sub_1B71570((ServantStatusBattleListViewItem_o *)&v425[8], v462, v460, v461);
+                              if ( LODWORD(v425[1].monitor) > 0xD )
                               {
-                                v464 = StringLiteral_1520/*"5047902:100:0"*/;
-                                v424[8].monitor = (void *)StringLiteral_1520/*"5047902:100:0"*/;
-                                sub_1B68678((ServantStatusBattleListViewItem_o *)&v424[8].monitor, v464, v462, v463);
-                                if ( LODWORD(v424[1].monitor) > 0xE )
+                                v465 = StringLiteral_1521/*"5047902:100:0"*/;
+                                v425[8].monitor = (void *)StringLiteral_1521/*"5047902:100:0"*/;
+                                sub_1B71570((ServantStatusBattleListViewItem_o *)&v425[8].monitor, v465, v463, v464);
+                                if ( LODWORD(v425[1].monitor) > 0xE )
                                 {
-                                  v467 = StringLiteral_1523/*"5047912:100:0"*/;
-                                  v424[9].klass = (Il2CppClass *)StringLiteral_1523/*"5047912:100:0"*/;
-                                  sub_1B68678((ServantStatusBattleListViewItem_o *)&v424[9], v467, v465, v466);
-                                  if ( LODWORD(v424[1].monitor) > 0xF )
+                                  v468 = StringLiteral_1524/*"5047912:100:0"*/;
+                                  v425[9].klass = (Il2CppClass *)StringLiteral_1524/*"5047912:100:0"*/;
+                                  sub_1B71570((ServantStatusBattleListViewItem_o *)&v425[9], v468, v466, v467);
+                                  if ( LODWORD(v425[1].monitor) > 0xF )
                                   {
-                                    v470 = StringLiteral_1515/*"5047000:100:0"*/;
-                                    v424[9].monitor = (void *)StringLiteral_1515/*"5047000:100:0"*/;
-                                    sub_1B68678((ServantStatusBattleListViewItem_o *)&v424[9].monitor, v470, v468, v469);
-                                    if ( LODWORD(v424[1].monitor) > 0x10 )
+                                    v471 = StringLiteral_1516/*"5047000:100:0"*/;
+                                    v425[9].monitor = (void *)StringLiteral_1516/*"5047000:100:0"*/;
+                                    sub_1B71570((ServantStatusBattleListViewItem_o *)&v425[9].monitor, v471, v469, v470);
+                                    if ( LODWORD(v425[1].monitor) > 0x10 )
                                     {
-                                      v473 = StringLiteral_1516/*"5047001:100:0"*/;
-                                      v424[10].klass = (Il2CppClass *)StringLiteral_1516/*"5047001:100:0"*/;
-                                      sub_1B68678((ServantStatusBattleListViewItem_o *)&v424[10], v473, v471, v472);
-                                      if ( LODWORD(v424[1].monitor) > 0x11 )
+                                      v474 = StringLiteral_1517/*"5047001:100:0"*/;
+                                      v425[10].klass = (Il2CppClass *)StringLiteral_1517/*"5047001:100:0"*/;
+                                      sub_1B71570((ServantStatusBattleListViewItem_o *)&v425[10], v474, v472, v473);
+                                      if ( LODWORD(v425[1].monitor) > 0x11 )
                                       {
-                                        v476 = StringLiteral_1517/*"5047002:100:0"*/;
-                                        v424[10].monitor = (void *)StringLiteral_1517/*"5047002:100:0"*/;
-                                        sub_1B68678(
-                                          (ServantStatusBattleListViewItem_o *)&v424[10].monitor,
-                                          v476,
-                                          v474,
-                                          v475);
-                                        v479 = BalanceConfig_TypeInfo;
+                                        v477 = StringLiteral_1518/*"5047002:100:0"*/;
+                                        v425[10].monitor = (void *)StringLiteral_1518/*"5047002:100:0"*/;
+                                        sub_1B71570(
+                                          (ServantStatusBattleListViewItem_o *)&v425[10].monitor,
+                                          v477,
+                                          v475,
+                                          v476);
+                                        v480 = BalanceConfig_TypeInfo;
                                         if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
                                         {
                                           j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-                                          v479 = BalanceConfig_TypeInfo;
+                                          v480 = BalanceConfig_TypeInfo;
                                         }
-                                        v480 = (ServantStatusBattleListViewItem_o *)&v479->static_fields->UIStandFigureROffsetImages;
-                                        v480->klass = (ServantStatusBattleListViewItem_c *)v424;
-                                        sub_1B68678(v480, (int32_t)v424, v477, v478);
+                                        v481 = (ServantStatusBattleListViewItem_o *)&v480->static_fields->UIStandFigureROffsetImages;
+                                        v481->klass = (ServantStatusBattleListViewItem_c *)v425;
+                                        sub_1B71570(v481, (int32_t)v425, v478, v479);
                                         goto LABEL_148;
                                       }
                                     }
@@ -2233,356 +2240,365 @@ LABEL_165:
       }
     }
 LABEL_164:
-    sub_1B68938(Instance, v215);
+    sub_1B71830(Instance, v216);
   }
 LABEL_148:
-  v481 = ConstantMaster__GetValue_38796200(
+  v482 = ConstantMaster__GetValue_38846256(
            (ConstantMaster_o *)MasterData_object,
-           (System_String_o *)StringLiteral_7390/*"IS_WAR_BOARD_AI_CALC_EVAL_SUM"*/,
+           (System_String_o *)StringLiteral_7395/*"IS_WAR_BOARD_AI_CALC_EVAL_SUM"*/,
            0,
            0LL);
-  v482 = BalanceConfig_TypeInfo;
-  v483 = v481;
+  v483 = BalanceConfig_TypeInfo;
+  v484 = v482;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v482 = BalanceConfig_TypeInfo;
+    v483 = BalanceConfig_TypeInfo;
   }
-  v482->static_fields->IsWarBoardAiCalcEvalSum = v483 != 0;
-  BalanceConfig_TypeInfo->static_fields->WarBoardEvalFactorsAffectRatio = ConstantMaster__GetValue_38796200(
+  v483->static_fields->IsWarBoardAiCalcEvalSum = v484 != 0;
+  BalanceConfig_TypeInfo->static_fields->WarBoardEvalFactorsAffectRatio = ConstantMaster__GetValue_38846256(
                                                                             (ConstantMaster_o *)MasterData_object,
-                                                                            (System_String_o *)StringLiteral_15418/*"WAR_BOARD_EVAL_FACTORS_AFFECT_RATIO"*/,
+                                                                            (System_String_o *)StringLiteral_15434/*"WAR_BOARD_EVAL_FACTORS_AFFECT_RATIO"*/,
                                                                             10000,
                                                                             0LL);
-  v484 = ConstantMaster__GetValue_38796200(
+  v485 = ConstantMaster__GetValue_38846256(
            (ConstantMaster_o *)MasterData_object,
-           (System_String_o *)StringLiteral_7391/*"IS_WAR_BOARD_AI_FILTER_NOT_ACTION"*/,
+           (System_String_o *)StringLiteral_7396/*"IS_WAR_BOARD_AI_FILTER_NOT_ACTION"*/,
            1,
            0LL) != 0;
-  BalanceConfig_TypeInfo->static_fields->IsWarBoardAiFilterNotAction = v484;
-  v485 = ConstantMaster__GetValue_38796200(
+  BalanceConfig_TypeInfo->static_fields->IsWarBoardAiFilterNotAction = v485;
+  v486 = ConstantMaster__GetValue_38846256(
            (ConstantMaster_o *)MasterData_object,
-           (System_String_o *)StringLiteral_7392/*"IS_WAR_BOARD_AI_FILTER_WASTE_ROUTE"*/,
+           (System_String_o *)StringLiteral_7397/*"IS_WAR_BOARD_AI_FILTER_WASTE_ROUTE"*/,
            0,
            0LL) != 0;
-  v486 = BalanceConfig_TypeInfo->static_fields;
-  v486->IsWarBoardAiFilterWasteRoute = v485;
-  BalanceConfig_TypeInfo->static_fields->StoneFragmentExchangeNoticeDispMax = ConstantMaster__GetValue_38796200(
+  v487 = BalanceConfig_TypeInfo->static_fields;
+  v487->IsWarBoardAiFilterWasteRoute = v486;
+  BalanceConfig_TypeInfo->static_fields->StoneFragmentExchangeNoticeDispMax = ConstantMaster__GetValue_38846256(
                                                                                 (ConstantMaster_o *)MasterData_object,
-                                                                                (System_String_o *)StringLiteral_12222/*"STONE_FRAGMENT_EXCHANGE_NOTICE_MAX"*/,
-                                                                                v486->StoneFragmentExchangeNoticeDispMax,
+                                                                                (System_String_o *)StringLiteral_12231/*"STONE_FRAGMENT_EXCHANGE_NOTICE_MAX"*/,
+                                                                                v487->StoneFragmentExchangeNoticeDispMax,
                                                                                 0LL);
-  BalanceConfig_TypeInfo->static_fields->MapCameraMoveTimeConstant = (float)ConstantMaster__GetValue_38796200(
+  BalanceConfig_TypeInfo->static_fields->MapCameraMoveTimeConstant = (float)ConstantMaster__GetValue_38846256(
                                                                               (ConstantMaster_o *)MasterData_object,
-                                                                              (System_String_o *)StringLiteral_1487/*"3D_MAP_CAMERA_MOVE_TIME_CONSTANT"*/,
+                                                                              (System_String_o *)StringLiteral_1488/*"3D_MAP_CAMERA_MOVE_TIME_CONSTANT"*/,
                                                                               0,
                                                                               0LL)
                                                                    / 1000.0;
-  v487 = ConstantMaster__GetValue_38796200(
+  v488 = ConstantMaster__GetValue_38846256(
            (ConstantMaster_o *)MasterData_object,
-           (System_String_o *)StringLiteral_1486/*"3D_MAP_CAMERA_MOVE_TIME_COEFFICIENT"*/,
+           (System_String_o *)StringLiteral_1487/*"3D_MAP_CAMERA_MOVE_TIME_COEFFICIENT"*/,
            1700,
            0LL);
-  v488 = BalanceConfig_TypeInfo->static_fields;
-  v488->MapCameraMoveTimeCoefficient = (float)v487 / 1000.0;
-  v489 = ConstantMaster__GetValue_38796200(
+  v489 = BalanceConfig_TypeInfo->static_fields;
+  v489->MapCameraMoveTimeCoefficient = (float)v488 / 1000.0;
+  v490 = ConstantMaster__GetValue_38846256(
            (ConstantMaster_o *)MasterData_object,
-           (System_String_o *)StringLiteral_1488/*"3D_MAP_CAMERA_MOVE_TIME_LOGARITHM_BASE"*/,
-           v488->MapCameraMoveTimeLogarithmBase,
+           (System_String_o *)StringLiteral_1489/*"3D_MAP_CAMERA_MOVE_TIME_LOGARITHM_BASE"*/,
+           v489->MapCameraMoveTimeLogarithmBase,
            0LL);
-  v490 = BalanceConfig_TypeInfo->static_fields;
-  v490->MapCameraMoveTimeLogarithmBase = v489;
-  BalanceConfig_TypeInfo->static_fields->MapCameraMoveEasingType = ConstantMaster__GetValue_38796200(
+  v491 = BalanceConfig_TypeInfo->static_fields;
+  v491->MapCameraMoveTimeLogarithmBase = v490;
+  BalanceConfig_TypeInfo->static_fields->MapCameraMoveEasingType = ConstantMaster__GetValue_38846256(
                                                                      (ConstantMaster_o *)MasterData_object,
-                                                                     (System_String_o *)StringLiteral_1485/*"3D_MAP_CAMERA_MOVE_EASING_TYPE"*/,
-                                                                     v490->MapCameraMoveEasingType,
+                                                                     (System_String_o *)StringLiteral_1486/*"3D_MAP_CAMERA_MOVE_EASING_TYPE"*/,
+                                                                     v491->MapCameraMoveEasingType,
                                                                      0LL);
-  v491 = ConstantMaster__GetValue_38796200(
+  v492 = ConstantMaster__GetValue_38846256(
            (ConstantMaster_o *)MasterData_object,
-           (System_String_o *)StringLiteral_3368/*"CAMERA_2D_RESET_DURATION"*/,
+           (System_String_o *)StringLiteral_3374/*"CAMERA_2D_RESET_DURATION"*/,
            644,
            0LL);
-  v492 = BalanceConfig_TypeInfo->static_fields;
-  v492->Camera2DResetDuration = (float)v491 / 1000.0;
-  v493 = ConstantStrMaster__GetValueArray(
-           v218,
-           (System_String_o *)StringLiteral_8455/*"MAIN_CHAPTERS_WITH_EVENT_ID"*/,
-           v492->MainChaptersWithEventId,
+  v493 = BalanceConfig_TypeInfo->static_fields;
+  v493->Camera2DResetDuration = (float)v492 / 1000.0;
+  v494 = ConstantStrMaster__GetValueArray(
+           v219,
+           (System_String_o *)StringLiteral_8460/*"MAIN_CHAPTERS_WITH_EVENT_ID"*/,
+           v493->MainChaptersWithEventId,
            0LL);
   p_MainChaptersWithEventId = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->MainChaptersWithEventId;
-  p_MainChaptersWithEventId->klass = (ServantStatusBattleListViewItem_c *)v493;
-  sub_1B68678(p_MainChaptersWithEventId, (int32_t)v493, v495, v496);
-  BalanceConfig_TypeInfo->static_fields->OrtSecondFormId = ConstantMaster__GetValue_38796200(
+  p_MainChaptersWithEventId->klass = (ServantStatusBattleListViewItem_c *)v494;
+  sub_1B71570(p_MainChaptersWithEventId, (int32_t)v494, v496, v497);
+  BalanceConfig_TypeInfo->static_fields->OrtSecondFormId = ConstantMaster__GetValue_38846256(
                                                              (ConstantMaster_o *)MasterData_object,
-                                                             (System_String_o *)StringLiteral_9685/*"ORT_SECONDE_FORM_ID"*/,
+                                                             (System_String_o *)StringLiteral_9692/*"ORT_SECONDE_FORM_ID"*/,
                                                              1,
                                                              0LL);
-  BalanceConfig_TypeInfo->static_fields->OrtThirdFormId = ConstantMaster__GetValue_38796200(
+  BalanceConfig_TypeInfo->static_fields->OrtThirdFormId = ConstantMaster__GetValue_38846256(
                                                             (ConstantMaster_o *)MasterData_object,
-                                                            (System_String_o *)StringLiteral_9686/*"ORT_THIRD_FORM_ID"*/,
+                                                            (System_String_o *)StringLiteral_9693/*"ORT_THIRD_FORM_ID"*/,
                                                             2,
                                                             0LL);
-  BalanceConfig_TypeInfo->static_fields->OrtFirstQuestId = ConstantMaster__GetValue_38796200(
+  BalanceConfig_TypeInfo->static_fields->OrtFirstQuestId = ConstantMaster__GetValue_38846256(
                                                              (ConstantMaster_o *)MasterData_object,
-                                                             (System_String_o *)StringLiteral_9680/*"ORT_FIRST_QUEST_ID"*/,
+                                                             (System_String_o *)StringLiteral_9687/*"ORT_FIRST_QUEST_ID"*/,
                                                              3001324,
                                                              0LL);
-  BalanceConfig_TypeInfo->static_fields->OrtLateQuestId = ConstantMaster__GetValue_38796200(
+  BalanceConfig_TypeInfo->static_fields->OrtLateQuestId = ConstantMaster__GetValue_38846256(
                                                             (ConstantMaster_o *)MasterData_object,
-                                                            (System_String_o *)StringLiteral_9684/*"ORT_LATE_QUEST_ID"*/,
+                                                            (System_String_o *)StringLiteral_9691/*"ORT_LATE_QUEST_ID"*/,
                                                             3001325,
                                                             0LL);
-  BalanceConfig_TypeInfo->static_fields->OrtLatePhaseBreak = ConstantMaster__GetValue_38796200(
+  BalanceConfig_TypeInfo->static_fields->OrtLatePhaseBreak = ConstantMaster__GetValue_38846256(
                                                                (ConstantMaster_o *)MasterData_object,
-                                                               (System_String_o *)StringLiteral_9681/*"ORT_LATE_PHASE_BREAK"*/,
+                                                               (System_String_o *)StringLiteral_9688/*"ORT_LATE_PHASE_BREAK"*/,
                                                                5,
                                                                0LL);
-  BalanceConfig_TypeInfo->static_fields->OrtLatePhaseSecondForm = ConstantMaster__GetValue_38796200(
+  BalanceConfig_TypeInfo->static_fields->OrtLatePhaseSecondForm = ConstantMaster__GetValue_38846256(
                                                                     (ConstantMaster_o *)MasterData_object,
-                                                                    (System_String_o *)StringLiteral_9683/*"ORT_LATE_PHASE_SECOND_FORM"*/,
+                                                                    (System_String_o *)StringLiteral_9690/*"ORT_LATE_PHASE_SECOND_FORM"*/,
                                                                     6,
                                                                     0LL);
-  v497 = ConstantMaster__GetValue_38796200(
+  v498 = ConstantMaster__GetValue_38846256(
            (ConstantMaster_o *)MasterData_object,
-           (System_String_o *)StringLiteral_9682/*"ORT_LATE_PHASE_DEAD"*/,
+           (System_String_o *)StringLiteral_9689/*"ORT_LATE_PHASE_DEAD"*/,
            7,
            0LL);
-  v498 = BalanceConfig_TypeInfo->static_fields;
-  v498->OrtLatePhaseDead = v497;
-  v499 = ConstantStrMaster__GetValueArray(
-           v218,
-           (System_String_o *)StringLiteral_13370/*"TREASURE_DEVICES_FORCED_OPEN_EFFECT"*/,
-           v498->TreasureDevicesForcedOpenEffect,
+  v499 = BalanceConfig_TypeInfo->static_fields;
+  v499->OrtLatePhaseDead = v498;
+  v500 = ConstantStrMaster__GetValueArray(
+           v219,
+           (System_String_o *)StringLiteral_13385/*"TREASURE_DEVICES_FORCED_OPEN_EFFECT"*/,
+           v499->TreasureDevicesForcedOpenEffect,
            0LL);
   p_TreasureDevicesForcedOpenEffect = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->TreasureDevicesForcedOpenEffect;
-  p_TreasureDevicesForcedOpenEffect->klass = (ServantStatusBattleListViewItem_c *)v499;
-  sub_1B68678(p_TreasureDevicesForcedOpenEffect, (int32_t)v499, v501, v502);
-  v503 = ConstantStrMaster__GetValueArray(
-           v218,
-           (System_String_o *)StringLiteral_7090/*"HEROINE_TREASURE_DEVICE_RANKUP_EFFECTS"*/,
+  p_TreasureDevicesForcedOpenEffect->klass = (ServantStatusBattleListViewItem_c *)v500;
+  sub_1B71570(p_TreasureDevicesForcedOpenEffect, (int32_t)v500, v502, v503);
+  v504 = ConstantStrMaster__GetValueArray(
+           v219,
+           (System_String_o *)StringLiteral_7095/*"HEROINE_TREASURE_DEVICE_RANKUP_EFFECTS"*/,
            BalanceConfig_TypeInfo->static_fields->HeroineTreasureDeviceRankUpEffects,
            0LL);
   p_HeroineTreasureDeviceRankUpEffects = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->HeroineTreasureDeviceRankUpEffects;
-  p_HeroineTreasureDeviceRankUpEffects->klass = (ServantStatusBattleListViewItem_c *)v503;
-  sub_1B68678(p_HeroineTreasureDeviceRankUpEffects, (int32_t)v503, v505, v506);
-  v507 = ConstantMaster__GetValue_38796200(
+  p_HeroineTreasureDeviceRankUpEffects->klass = (ServantStatusBattleListViewItem_c *)v504;
+  sub_1B71570(p_HeroineTreasureDeviceRankUpEffects, (int32_t)v504, v506, v507);
+  v508 = ConstantMaster__GetValue_38846256(
            (ConstantMaster_o *)MasterData_object,
-           (System_String_o *)StringLiteral_7089/*"HEROINE_LIMIT_COUNT_ORTINAX_REFURBISHED"*/,
+           (System_String_o *)StringLiteral_7094/*"HEROINE_LIMIT_COUNT_ORTINAX_REFURBISHED"*/,
            BalanceConfig_TypeInfo->static_fields->HeroineLimitCountOrtinaxRefurbished,
            0LL);
-  v508 = BalanceConfig_TypeInfo->static_fields;
-  v508->HeroineLimitCountOrtinaxRefurbished = v507;
-  v509 = ConstantMaster__GetValue_38796200(
+  v509 = BalanceConfig_TypeInfo->static_fields;
+  v509->HeroineLimitCountOrtinaxRefurbished = v508;
+  v510 = ConstantMaster__GetValue_38846256(
            (ConstantMaster_o *)MasterData_object,
-           (System_String_o *)StringLiteral_3490/*"CLASS_BOARD_RELEASE_QUEST_ID"*/,
-           v508->ClassBoardReleaseQuestId,
+           (System_String_o *)StringLiteral_3496/*"CLASS_BOARD_RELEASE_QUEST_ID"*/,
+           v509->ClassBoardReleaseQuestId,
            0LL);
-  v510 = BalanceConfig_TypeInfo->static_fields;
-  v510->ClassBoardReleaseQuestId = v509;
-  v511 = ConstantStrMaster__GetValueArray(
-           v218,
-           (System_String_o *)StringLiteral_5765/*"EXTRA1_SORT_ORDER_CLASS_IDS"*/,
-           v510->Extra1SortOrderClassIds,
+  v511 = BalanceConfig_TypeInfo->static_fields;
+  v511->ClassBoardReleaseQuestId = v510;
+  v512 = ConstantStrMaster__GetValueArray(
+           v219,
+           (System_String_o *)StringLiteral_5770/*"EXTRA1_SORT_ORDER_CLASS_IDS"*/,
+           v511->Extra1SortOrderClassIds,
            0LL);
   p_Extra1SortOrderClassIds = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->Extra1SortOrderClassIds;
-  p_Extra1SortOrderClassIds->klass = (ServantStatusBattleListViewItem_c *)v511;
-  sub_1B68678(p_Extra1SortOrderClassIds, (int32_t)v511, v513, v514);
-  v515 = ConstantStrMaster__GetValueArray(
-           v218,
-           (System_String_o *)StringLiteral_5766/*"EXTRA2_SORT_ORDER_CLASS_IDS"*/,
+  p_Extra1SortOrderClassIds->klass = (ServantStatusBattleListViewItem_c *)v512;
+  sub_1B71570(p_Extra1SortOrderClassIds, (int32_t)v512, v514, v515);
+  v516 = ConstantStrMaster__GetValueArray(
+           v219,
+           (System_String_o *)StringLiteral_5771/*"EXTRA2_SORT_ORDER_CLASS_IDS"*/,
            BalanceConfig_TypeInfo->static_fields->Extra2SortOrderClassIds,
            0LL);
   p_Extra2SortOrderClassIds = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->Extra2SortOrderClassIds;
-  p_Extra2SortOrderClassIds->klass = (ServantStatusBattleListViewItem_c *)v515;
-  sub_1B68678(p_Extra2SortOrderClassIds, (int32_t)v515, v517, v518);
-  BalanceConfig_TypeInfo->static_fields->ClassBoardCameraSelectMoveMaxDistance = ConstantMaster__GetValue_38796200(
+  p_Extra2SortOrderClassIds->klass = (ServantStatusBattleListViewItem_c *)v516;
+  sub_1B71570(p_Extra2SortOrderClassIds, (int32_t)v516, v518, v519);
+  BalanceConfig_TypeInfo->static_fields->ClassBoardCameraSelectMoveMaxDistance = ConstantMaster__GetValue_38846256(
                                                                                    (ConstantMaster_o *)MasterData_object,
-                                                                                   (System_String_o *)StringLiteral_3453/*"CLASS_BOARD_CAMERA_SELECT_MOVE_MAX_DISTANCE"*/,
+                                                                                   (System_String_o *)StringLiteral_3459/*"CLASS_BOARD_CAMERA_SELECT_MOVE_MAX_DISTANCE"*/,
                                                                                    BalanceConfig_TypeInfo->static_fields->ClassBoardCameraSelectMoveMaxDistance,
                                                                                    0LL);
-  BalanceConfig_TypeInfo->static_fields->ClassBoardCameraSelectSecMin = (float)ConstantMaster__GetValue_38796200(
+  BalanceConfig_TypeInfo->static_fields->ClassBoardCameraSelectSecMin = (float)ConstantMaster__GetValue_38846256(
                                                                                  (ConstantMaster_o *)MasterData_object,
-                                                                                 (System_String_o *)StringLiteral_3455/*"CLASS_BOARD_CAMERA_SELECT_SEC_MIN"*/,
+                                                                                 (System_String_o *)StringLiteral_3461/*"CLASS_BOARD_CAMERA_SELECT_SEC_MIN"*/,
                                                                                  100,
                                                                                  0LL)
                                                                       / 1000.0;
-  v519 = ConstantMaster__GetValue_38796200(
+  v520 = ConstantMaster__GetValue_38846256(
            (ConstantMaster_o *)MasterData_object,
-           (System_String_o *)StringLiteral_3454/*"CLASS_BOARD_CAMERA_SELECT_SEC_MAX"*/,
+           (System_String_o *)StringLiteral_3460/*"CLASS_BOARD_CAMERA_SELECT_SEC_MAX"*/,
            1000,
            0LL);
-  v520 = BalanceConfig_TypeInfo->static_fields;
-  v520->ClassBoardCameraSelectSecMax = (float)v519 / 1000.0;
-  BalanceConfig_TypeInfo->static_fields->ClassBoardCameraSelectEasingType = ConstantMaster__GetValue_38796200(
+  v521 = BalanceConfig_TypeInfo->static_fields;
+  v521->ClassBoardCameraSelectSecMax = (float)v520 / 1000.0;
+  BalanceConfig_TypeInfo->static_fields->ClassBoardCameraSelectEasingType = ConstantMaster__GetValue_38846256(
                                                                               (ConstantMaster_o *)MasterData_object,
-                                                                              (System_String_o *)StringLiteral_3452/*"CLASS_BOARD_CAMERA_SELECT_EASING_TYPE"*/,
-                                                                              v520->ClassBoardCameraSelectEasingType,
+                                                                              (System_String_o *)StringLiteral_3458/*"CLASS_BOARD_CAMERA_SELECT_EASING_TYPE"*/,
+                                                                              v521->ClassBoardCameraSelectEasingType,
                                                                               0LL);
-  v521 = ConstantMaster__GetValue_38796200(
+  v522 = ConstantMaster__GetValue_38846256(
            (ConstantMaster_o *)MasterData_object,
-           (System_String_o *)StringLiteral_3448/*"CLASS_BOARD_2D_CAMERA_DEFAULT_SIZE"*/,
+           (System_String_o *)StringLiteral_3454/*"CLASS_BOARD_2D_CAMERA_DEFAULT_SIZE"*/,
            1700,
            0LL);
-  v522 = BalanceConfig_TypeInfo->static_fields;
-  v522->ClassBoard2DCameraDefaultSize = (float)v521 / 1000.0;
-  v523 = ConstantStrMaster__GetValueArray(v218, (System_String_o *)StringLiteral_9257/*"NOT_UI_CHANGE_MAP_IDS"*/, v522->NotUIChangeMapIds, 0LL);
+  v523 = BalanceConfig_TypeInfo->static_fields;
+  v523->ClassBoard2DCameraDefaultSize = (float)v522 / 1000.0;
+  v524 = ConstantStrMaster__GetValueArray(v219, (System_String_o *)StringLiteral_9262/*"NOT_UI_CHANGE_MAP_IDS"*/, v523->NotUIChangeMapIds, 0LL);
   p_NotUIChangeMapIds = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->NotUIChangeMapIds;
-  p_NotUIChangeMapIds->klass = (ServantStatusBattleListViewItem_c *)v523;
-  sub_1B68678(p_NotUIChangeMapIds, (int32_t)v523, v525, v526);
-  v527 = ConstantStrMaster__GetValueArray(
-           v218,
-           (System_String_o *)StringLiteral_8226/*"LIMIT_SEALED_DIALOG_MAX_LIMIT_OPEN_IDS"*/,
+  p_NotUIChangeMapIds->klass = (ServantStatusBattleListViewItem_c *)v524;
+  sub_1B71570(p_NotUIChangeMapIds, (int32_t)v524, v526, v527);
+  v528 = ConstantStrMaster__GetValueArray(
+           v219,
+           (System_String_o *)StringLiteral_8231/*"LIMIT_SEALED_DIALOG_MAX_LIMIT_OPEN_IDS"*/,
            BalanceConfig_TypeInfo->static_fields->LimitSealedDialogMaxLimitOpenIds,
            0LL);
   p_LimitSealedDialogMaxLimitOpenIds = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->LimitSealedDialogMaxLimitOpenIds;
-  p_LimitSealedDialogMaxLimitOpenIds->klass = (ServantStatusBattleListViewItem_c *)v527;
-  sub_1B68678(p_LimitSealedDialogMaxLimitOpenIds, (int32_t)v527, v529, v530);
-  v531 = ConstantStrMaster__GetValueArray(
-           v218,
-           (System_String_o *)StringLiteral_9677/*"ORDEAL_CALL_CHAPTER_FOLDER_EVENT_UI_DISP_WAR_IDS"*/,
+  p_LimitSealedDialogMaxLimitOpenIds->klass = (ServantStatusBattleListViewItem_c *)v528;
+  sub_1B71570(p_LimitSealedDialogMaxLimitOpenIds, (int32_t)v528, v530, v531);
+  v532 = ConstantStrMaster__GetValueArray(
+           v219,
+           (System_String_o *)StringLiteral_9684/*"ORDEAL_CALL_CHAPTER_FOLDER_EVENT_UI_DISP_WAR_IDS"*/,
            BalanceConfig_TypeInfo->static_fields->OrdealCallChapterFolderEventUIDispWarIds,
            0LL);
   p_OrdealCallChapterFolderEventUIDispWarIds = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->OrdealCallChapterFolderEventUIDispWarIds;
-  p_OrdealCallChapterFolderEventUIDispWarIds->klass = (ServantStatusBattleListViewItem_c *)v531;
-  sub_1B68678(p_OrdealCallChapterFolderEventUIDispWarIds, (int32_t)v531, v533, v534);
-  v535 = ConstantStrMaster__GetValueArray(
-           v218,
-           (System_String_o *)StringLiteral_10996/*"RECOVERY_FATIGUE_DELAYED_CHANGE_BG_EVENTS"*/,
+  p_OrdealCallChapterFolderEventUIDispWarIds->klass = (ServantStatusBattleListViewItem_c *)v532;
+  sub_1B71570(p_OrdealCallChapterFolderEventUIDispWarIds, (int32_t)v532, v534, v535);
+  v536 = ConstantStrMaster__GetValueArray(
+           v219,
+           (System_String_o *)StringLiteral_11004/*"RECOVERY_FATIGUE_DELAYED_CHANGE_BG_EVENTS"*/,
            BalanceConfig_TypeInfo->static_fields->RecoveryFatigueDelayedChangeBgEvents,
            0LL);
   p_RecoveryFatigueDelayedChangeBgEvents = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->RecoveryFatigueDelayedChangeBgEvents;
-  p_RecoveryFatigueDelayedChangeBgEvents->klass = (ServantStatusBattleListViewItem_c *)v535;
-  sub_1B68678(p_RecoveryFatigueDelayedChangeBgEvents, (int32_t)v535, v537, v538);
-  Instance = (Il2CppObject *)sub_1B6877C(int___TypeInfo, 1LL);
+  p_RecoveryFatigueDelayedChangeBgEvents->klass = (ServantStatusBattleListViewItem_c *)v536;
+  sub_1B71570(p_RecoveryFatigueDelayedChangeBgEvents, (int32_t)v536, v538, v539);
+  Instance = (Il2CppObject *)sub_1B71674(int___TypeInfo, 1LL);
   if ( !Instance )
     goto LABEL_165;
   if ( !LODWORD(Instance[1].monitor) )
     goto LABEL_164;
   LODWORD(Instance[2].klass) = 94086401;
-  v539 = ConstantStrMaster__GetValueArray(
-           v218,
-           (System_String_o *)StringLiteral_9215/*"NONE_DISPLAY_FREE_QUEST_MATERIAL"*/,
+  v540 = ConstantStrMaster__GetValueArray(
+           v219,
+           (System_String_o *)StringLiteral_9220/*"NONE_DISPLAY_FREE_QUEST_MATERIAL"*/,
            (System_Int32_array *)Instance,
            0LL);
   p_noneDisplayFreeQuestMaterial = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->noneDisplayFreeQuestMaterial;
-  p_noneDisplayFreeQuestMaterial->klass = (ServantStatusBattleListViewItem_c *)v539;
-  sub_1B68678(p_noneDisplayFreeQuestMaterial, (int32_t)v539, v541, v542);
-  v543 = ConstantStrMaster__GetValueArray(
-           v218,
-           (System_String_o *)StringLiteral_9256/*"NOT_SEND_TRACK_EVENT_AT_WAR_IDS"*/,
+  p_noneDisplayFreeQuestMaterial->klass = (ServantStatusBattleListViewItem_c *)v540;
+  sub_1B71570(p_noneDisplayFreeQuestMaterial, (int32_t)v540, v542, v543);
+  v544 = ConstantStrMaster__GetValueArray(
+           v219,
+           (System_String_o *)StringLiteral_9261/*"NOT_SEND_TRACK_EVENT_AT_WAR_IDS"*/,
            BalanceConfig_TypeInfo->static_fields->NotSendTrackEventAtWarIds,
            0LL);
   p_NotSendTrackEventAtWarIds = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->NotSendTrackEventAtWarIds;
-  p_NotSendTrackEventAtWarIds->klass = (ServantStatusBattleListViewItem_c *)v543;
-  sub_1B68678(p_NotSendTrackEventAtWarIds, (int32_t)v543, v545, v546);
-  v547 = ConstantMaster__GetValue_38796200(
+  p_NotSendTrackEventAtWarIds->klass = (ServantStatusBattleListViewItem_c *)v544;
+  sub_1B71570(p_NotSendTrackEventAtWarIds, (int32_t)v544, v546, v547);
+  v548 = ConstantMaster__GetValue_38846256(
            (ConstantMaster_o *)MasterData_object,
-           (System_String_o *)StringLiteral_12175/*"STARTING_MEMBER_FRIENDSHIP_RATE"*/,
+           (System_String_o *)StringLiteral_12184/*"STARTING_MEMBER_FRIENDSHIP_RATE"*/,
            0,
            0LL);
-  v548 = BalanceConfig_TypeInfo->static_fields;
-  v548->StartingMemberFriendshipRate = v547;
-  v549 = ConstantStrMaster__GetValueArray(v218, (System_String_o *)StringLiteral_9251/*"NOT_REQUIRED_WAR_IDS"*/, v548->NotRequiredPlayWarIds, 0LL);
+  v549 = BalanceConfig_TypeInfo->static_fields;
+  v549->StartingMemberFriendshipRate = v548;
+  v550 = ConstantStrMaster__GetValueArray(v219, (System_String_o *)StringLiteral_9256/*"NOT_REQUIRED_WAR_IDS"*/, v549->NotRequiredPlayWarIds, 0LL);
   p_NotRequiredPlayWarIds = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->NotRequiredPlayWarIds;
-  p_NotRequiredPlayWarIds->klass = (ServantStatusBattleListViewItem_c *)v549;
-  sub_1B68678(p_NotRequiredPlayWarIds, (int32_t)v549, v551, v552);
-  v553 = ConstantMaster__GetValue_38796200(
+  p_NotRequiredPlayWarIds->klass = (ServantStatusBattleListViewItem_c *)v550;
+  sub_1B71570(p_NotRequiredPlayWarIds, (int32_t)v550, v552, v553);
+  v554 = ConstantMaster__GetValue_38846256(
            (ConstantMaster_o *)MasterData_object,
-           (System_String_o *)StringLiteral_7385/*"IS_ENABLE_OLD_BLOCK_SHORTEST_ROUTE"*/,
+           (System_String_o *)StringLiteral_7390/*"IS_ENABLE_OLD_BLOCK_SHORTEST_ROUTE"*/,
            0,
            0LL) != 0;
-  BalanceConfig_TypeInfo->static_fields->IsEnableOldBlockShortestRoute = v553;
-  v554 = ConstantMaster__GetValue_38796200(
+  BalanceConfig_TypeInfo->static_fields->IsEnableOldBlockShortestRoute = v554;
+  v555 = ConstantMaster__GetValue_38846256(
            (ConstantMaster_o *)MasterData_object,
-           (System_String_o *)StringLiteral_7386/*"IS_EVENT_POINT_MENU"*/,
+           (System_String_o *)StringLiteral_7391/*"IS_EVENT_POINT_MENU"*/,
            0,
            0LL) != 0;
-  BalanceConfig_TypeInfo->static_fields->IsEventPointMenu = v554;
-  v555 = ConstantStrMaster__GetValue(v218, (System_String_o *)StringLiteral_8267/*"LOGIN_QUEST_RETURN_TERMINAL_DIALOG_MESSAGE"*/, 0LL);
+  BalanceConfig_TypeInfo->static_fields->IsEventPointMenu = v555;
+  v556 = ConstantStrMaster__GetValue(v219, (System_String_o *)StringLiteral_8272/*"LOGIN_QUEST_RETURN_TERMINAL_DIALOG_MESSAGE"*/, 0LL);
   p_LoginQuestReturnTerminalDialogMessage = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->LoginQuestReturnTerminalDialogMessage;
-  p_LoginQuestReturnTerminalDialogMessage->klass = (ServantStatusBattleListViewItem_c *)v555;
-  sub_1B68678(p_LoginQuestReturnTerminalDialogMessage, (int32_t)v555, v557, v558);
-  v559 = ConstantStrMaster__GetValueArray(v218, (System_String_o *)StringLiteral_5608/*"EVENT_ITEM_NOT_DISP_ITEM_GET_EFFECT"*/, 0LL, 0LL);
+  p_LoginQuestReturnTerminalDialogMessage->klass = (ServantStatusBattleListViewItem_c *)v556;
+  sub_1B71570(p_LoginQuestReturnTerminalDialogMessage, (int32_t)v556, v558, v559);
+  v560 = ConstantStrMaster__GetValueArray(v219, (System_String_o *)StringLiteral_5613/*"EVENT_ITEM_NOT_DISP_ITEM_GET_EFFECT"*/, 0LL, 0LL);
   p_EventItemNotDispItemGetEffect = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->EventItemNotDispItemGetEffect;
-  p_EventItemNotDispItemGetEffect->klass = (ServantStatusBattleListViewItem_c *)v559;
-  sub_1B68678(p_EventItemNotDispItemGetEffect, (int32_t)v559, v561, v562);
-  v563 = ConstantMaster__GetValue_38796200(
+  p_EventItemNotDispItemGetEffect->klass = (ServantStatusBattleListViewItem_c *)v560;
+  sub_1B71570(p_EventItemNotDispItemGetEffect, (int32_t)v560, v562, v563);
+  v564 = ConstantMaster__GetValue_38846256(
            (ConstantMaster_o *)MasterData_object,
-           (System_String_o *)StringLiteral_7384/*"IS_ENABLE_FADE_RERUN_SKIPPED"*/,
+           (System_String_o *)StringLiteral_7389/*"IS_ENABLE_FADE_RERUN_SKIPPED"*/,
            1,
            0LL) != 0;
-  BalanceConfig_TypeInfo->static_fields->IsEnableFadeRerunSkipped = v563;
-  BalanceConfig_TypeInfo->static_fields->DisableBackMaskTime = (float)ConstantMaster__GetValue_38796200(
+  BalanceConfig_TypeInfo->static_fields->IsEnableFadeRerunSkipped = v564;
+  BalanceConfig_TypeInfo->static_fields->DisableBackMaskTime = (float)ConstantMaster__GetValue_38846256(
                                                                         (ConstantMaster_o *)MasterData_object,
-                                                                        (System_String_o *)StringLiteral_5021/*"DISABLE_BACK_MASK_TIME"*/,
+                                                                        (System_String_o *)StringLiteral_5026/*"DISABLE_BACK_MASK_TIME"*/,
                                                                         1000,
                                                                         0LL)
                                                              / 1000.0;
-  v564 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1B68920(System_Collections_Generic_Dictionary_string__int__TypeInfo);
+  v565 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1B71818(System_Collections_Generic_Dictionary_string__int__TypeInfo);
   System_Collections_Generic_Dictionary_object__int____ctor(
-    v564,
-    (const MethodInfo_318046C *)Method_System_Collections_Generic_Dictionary_string__int___ctor__);
-  v565 = MstMissionEntity_TypeInfo;
+    v565,
+    (const MethodInfo_3195544 *)Method_System_Collections_Generic_Dictionary_string__int___ctor__);
+  v566 = MstMissionEntity_TypeInfo;
   if ( !MstMissionEntity_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MstMissionEntity_TypeInfo);
-    v565 = MstMissionEntity_TypeInfo;
+    v566 = MstMissionEntity_TypeInfo;
   }
-  v566 = TitleInfoControl_TypeInfo;
-  MISSION_ICON_DISPLAY_MS_GROUP_NORMAL = v565->static_fields->MISSION_ICON_DISPLAY_MS_GROUP_NORMAL;
+  v567 = TitleInfoControl_TypeInfo;
+  MISSION_ICON_DISPLAY_MS_GROUP_NORMAL = v566->static_fields->MISSION_ICON_DISPLAY_MS_GROUP_NORMAL;
   if ( !TitleInfoControl_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TitleInfoControl_TypeInfo);
-    v566 = TitleInfoControl_TypeInfo;
+    v567 = TitleInfoControl_TypeInfo;
   }
-  EVENT_ALPHA_ANIM_TIME_INTERVAL = v566->static_fields->EVENT_ALPHA_ANIM_TIME_INTERVAL;
+  EVENT_ALPHA_ANIM_TIME_INTERVAL = v567->static_fields->EVENT_ALPHA_ANIM_TIME_INTERVAL;
   if ( EVENT_ALPHA_ANIM_TIME_INTERVAL == INFINITY )
-    v569 = 0;
+    v570 = 0;
   else
-    v569 = 1000 * (int)EVENT_ALPHA_ANIM_TIME_INTERVAL;
-  Instance = (Il2CppObject *)ConstantMaster__GetValue_38796200(
+    v570 = 1000 * (int)EVENT_ALPHA_ANIM_TIME_INTERVAL;
+  Instance = (Il2CppObject *)ConstantMaster__GetValue_38846256(
                                (ConstantMaster_o *)MasterData_object,
                                MISSION_ICON_DISPLAY_MS_GROUP_NORMAL,
-                               v569,
+                               v570,
                                0LL);
-  if ( !v564 )
+  if ( !v565 )
     goto LABEL_165;
   System_Collections_Generic_Dictionary_object__int___set_Item(
-    v564,
+    v565,
     (Il2CppObject *)MISSION_ICON_DISPLAY_MS_GROUP_NORMAL,
     (int32_t)Instance,
-    (const MethodInfo_3180E0C *)Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
-  v570 = MstMissionEntity_TypeInfo->static_fields;
-  v571 = TitleInfoControl_TypeInfo->static_fields->EVENT_ALPHA_ANIM_TIME_INTERVAL;
-  MISSION_ICON_DISPLAY_MS_GROUP_LIMITED = (Il2CppObject *)v570->MISSION_ICON_DISPLAY_MS_GROUP_LIMITED;
-  if ( v571 == INFINITY )
+    (const MethodInfo_3195EE4 *)Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
+  MISSION_ICON_DISPLAY_MS_GROUP_LIMITED = (Il2CppObject *)MstMissionEntity_TypeInfo->static_fields->MISSION_ICON_DISPLAY_MS_GROUP_LIMITED;
+  v572 = TitleInfoControl_TypeInfo->static_fields->EVENT_ALPHA_ANIM_TIME_INTERVAL;
+  if ( v572 == INFINITY )
     v573 = 0;
   else
-    v573 = 1000 * (int)v571;
-  v574 = ConstantMaster__GetValue_38796200(
+    v573 = 1000 * (int)v572;
+  v574 = ConstantMaster__GetValue_38846256(
            (ConstantMaster_o *)MasterData_object,
-           v570->MISSION_ICON_DISPLAY_MS_GROUP_LIMITED,
+           MstMissionEntity_TypeInfo->static_fields->MISSION_ICON_DISPLAY_MS_GROUP_LIMITED,
            v573,
            0LL);
   System_Collections_Generic_Dictionary_object__int___set_Item(
-    v564,
+    v565,
     MISSION_ICON_DISPLAY_MS_GROUP_LIMITED,
     v574,
-    (const MethodInfo_3180E0C *)Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
+    (const MethodInfo_3195EE4 *)Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
   p_MissionIconDisplayMsDictionary = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->MissionIconDisplayMsDictionary;
-  p_MissionIconDisplayMsDictionary->klass = (ServantStatusBattleListViewItem_c *)v564;
-  sub_1B68678(p_MissionIconDisplayMsDictionary, (int32_t)v564, v576, v577);
-  BalanceConfig_TypeInfo->static_fields->BgmFadeOutTimeBeforeBattle = (float)ConstantMaster__GetValue_38796200(
+  p_MissionIconDisplayMsDictionary->klass = (ServantStatusBattleListViewItem_c *)v565;
+  sub_1B71570(p_MissionIconDisplayMsDictionary, (int32_t)v565, v576, v577);
+  BalanceConfig_TypeInfo->static_fields->BgmFadeOutTimeBeforeBattle = (float)ConstantMaster__GetValue_38846256(
                                                                                (ConstantMaster_o *)MasterData_object,
-                                                                               (System_String_o *)StringLiteral_2998/*"BGM_FADE_OUT_TIME_BEFORE_BATTLE"*/,
+                                                                               (System_String_o *)StringLiteral_3005/*"BGM_FADE_OUT_TIME_BEFORE_BATTLE"*/,
                                                                                1000,
                                                                                0LL)
                                                                     / 1000.0;
-  BalanceConfig_TypeInfo->static_fields->IsMissionNaviAutoClassify = ConstantMaster__GetValue_38796200(
-                                                                       (ConstantMaster_o *)MasterData_object,
-                                                                       (System_String_o *)StringLiteral_7388/*"IS_MISSION_NAVI_AUTO_CLASSIFY"*/,
-                                                                       0,
-                                                                       0LL) != 0;
+  v578 = ConstantMaster__GetValue_38846256(
+           (ConstantMaster_o *)MasterData_object,
+           (System_String_o *)StringLiteral_7393/*"IS_MISSION_NAVI_AUTO_CLASSIFY"*/,
+           0,
+           0LL) != 0;
+  v579 = BalanceConfig_TypeInfo->static_fields;
+  v579->IsMissionNaviAutoClassify = v578;
+  v580 = ConstantStrMaster__GetValueArray(
+           v219,
+           (System_String_o *)StringLiteral_10349/*"PLAYABLE_BEAST_CLASS_IDS"*/,
+           v579->PlayableBeastClassIds,
+           0LL);
+  p_PlayableBeastClassIds = (ServantStatusBattleListViewItem_o *)&BalanceConfig_TypeInfo->static_fields->PlayableBeastClassIds;
+  p_PlayableBeastClassIds->klass = (ServantStatusBattleListViewItem_c *)v580;
+  sub_1B71570(p_PlayableBeastClassIds, (int32_t)v580, v582, v583);
 }
 
 
@@ -2593,15 +2609,15 @@ void __fastcall BalanceConfig___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   int32_t v4; // w3
 
-  if ( (byte_4A08280 & 1) == 0 )
+  if ( (byte_4A1F0E8 & 1) == 0 )
   {
-    sub_1B686D4(&BalanceConfig___c_TypeInfo, v1);
-    byte_4A08280 = 1;
+    sub_1B715CC(&BalanceConfig___c_TypeInfo, v1);
+    byte_4A1F0E8 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B68920(BalanceConfig___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B71818(BalanceConfig___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   BalanceConfig___c_TypeInfo->static_fields->__9 = (struct BalanceConfig___c_o *)v2;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)BalanceConfig___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)BalanceConfig___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 

@@ -1,7 +1,7 @@
 jint JNI_OnLoad(JavaVM *vm, void *reserved)
 {
   __android_log_print(4, "IL2CPP", "JNI_OnLoad");
-  qword_4A1C0F0 = (__int64)vm;
-  il2cpp_set_find_plugin_callback_0_0(sub_1BBF4C8);
+  qword_4A32F90 = (__int64)vm;
+  il2cpp_set_find_plugin_callback_0_0(sub_1BC83C0);
   return 65542;
 }

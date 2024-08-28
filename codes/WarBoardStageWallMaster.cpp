@@ -1,14 +1,14 @@
 void __fastcall WarBoardStageWallMaster___ctor(WarBoardStageWallMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A09C9E & 1) == 0 )
+  if ( (byte_4A20B14 & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataMasterBase_WarBoardStageWallMaster__WarBoardStageWallEntity__string___ctor__, method);
-    byte_4A09C9E = 1;
+    sub_1B715CC(&Method_DataMasterBase_WarBoardStageWallMaster__WarBoardStageWallEntity__string___ctor__, method);
+    byte_4A20B14 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     328,
-    (const MethodInfo_30E47D8 *)Method_DataMasterBase_WarBoardStageWallMaster__WarBoardStageWallEntity__string___ctor__);
+    (const MethodInfo_30F8A78 *)Method_DataMasterBase_WarBoardStageWallMaster__WarBoardStageWallEntity__string___ctor__);
 }
 
 
@@ -21,18 +21,18 @@ WarBoardStageWallEntity_o *__fastcall WarBoardStageWallMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A09C9F & 1) == 0 )
+  if ( (byte_4A20B15 & 1) == 0 )
   {
-    sub_1B686D4(
+    sub_1B715CC(
       &Method_DataMasterBase_WarBoardStageWallMaster__WarBoardStageWallEntity__string__GetEntity__,
       *(_QWORD *)&stageId);
-    byte_4A09C9F = 1;
+    byte_4A20B15 = 1;
   }
   PK = (Il2CppObject *)WarBoardStageWallEntity__CreatePK(stageId, id, *(const MethodInfo **)&id);
   return (WarBoardStageWallEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                         (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                         PK,
-                                        (const MethodInfo_30E4818 *)Method_DataMasterBase_WarBoardStageWallMaster__WarBoardStageWallEntity__string__GetEntity__);
+                                        (const MethodInfo_30F8AB8 *)Method_DataMasterBase_WarBoardStageWallMaster__WarBoardStageWallEntity__string__GetEntity__);
 }
 
 
@@ -46,15 +46,15 @@ bool __fastcall WarBoardStageWallMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A09CA0 & 1) == 0 )
+  if ( (byte_4A20B16 & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataMasterBase_WarBoardStageWallMaster__WarBoardStageWallEntity__string__TryGetEntity__, entity);
-    byte_4A09CA0 = 1;
+    sub_1B715CC(&Method_DataMasterBase_WarBoardStageWallMaster__WarBoardStageWallEntity__string__TryGetEntity__, entity);
+    byte_4A20B16 = 1;
   }
   PK = (Il2CppObject *)WarBoardStageWallEntity__CreatePK(stageId, id, *(const MethodInfo **)&stageId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_30E4868 *)Method_DataMasterBase_WarBoardStageWallMaster__WarBoardStageWallEntity__string__TryGetEntity__);
+           (const MethodInfo_30F8B08 *)Method_DataMasterBase_WarBoardStageWallMaster__WarBoardStageWallEntity__string__TryGetEntity__);
 }

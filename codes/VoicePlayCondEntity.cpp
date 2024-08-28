@@ -1,13 +1,13 @@
 void __fastcall VoicePlayCondEntity___ctor(VoicePlayCondEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A09B74 & 1) == 0 )
+  if ( (byte_4A209EA & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A09B74 = 1;
+    sub_1B715CC(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A209EA = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30E4338 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30F85D8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -19,17 +19,17 @@ System_String_o *__fastcall VoicePlayCondEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4A09B6E & 1) == 0 )
+  if ( (byte_4A209E4 & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataEntityBase_CreateMultiplePK_long__long__string__long___, *(_QWORD *)&voicePrefix);
-    byte_4A09B6E = 1;
+    sub_1B715CC(&Method_DataEntityBase_CreateMultiplePK_long__long__string__long___, *(_QWORD *)&voicePrefix);
+    byte_4A209E4 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__long__object__long_(
            svtId,
            voicePrefix,
            (Il2CppObject *)voiceId,
            idx,
-           (const MethodInfo_2E48A98 *)Method_DataEntityBase_CreateMultiplePK_long__long__string__long___);
+           (const MethodInfo_2E5A130 *)Method_DataEntityBase_CreateMultiplePK_long__long__string__long___);
 }
 
 
@@ -48,11 +48,11 @@ System_String_o *__fastcall VoicePlayCondEntity__CreatePrimaryKey(
   const MethodInfo *v11; // x4
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v13; // 0:x0.16
 
-  if ( (byte_4A09B6D & 1) == 0 )
+  if ( (byte_4A209E3 & 1) == 0 )
   {
-    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v3);
-    byte_4A09B6D = 1;
+    sub_1B715CC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
+    sub_1B715CC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v3);
+    byte_4A209E3 = 1;
   }
   v5 = *(_QWORD *)&this->fields.svtId.fields.currentCryptoKey;
   v4 = *(_QWORD *)&this->fields.svtId.fields.fakeValue;
@@ -60,13 +60,13 @@ System_String_o *__fastcall VoicePlayCondEntity__CreatePrimaryKey(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v13.fields.currentCryptoKey = v5;
   *(_QWORD *)&v13.fields.fakeValue = v4;
-  v6 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v13, 0LL);
+  v6 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46308268(v13, 0LL);
   voicePrefix = this->fields.voicePrefix;
   voiceId = this->fields.voiceId;
   v9 = v6;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-  v10 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_46275260(voiceId, 0LL);
+  v10 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_46344112(voiceId, 0LL);
   return VoicePlayCondEntity__CreatePK(v9, voicePrefix, v10, this->fields.idx, v11);
 }
 
@@ -92,14 +92,14 @@ System_Int32_array *__fastcall VoicePlayCondEntity__GetScriptIntArrayParam(
   System_Collections_Generic_List_int__o *v19; // x0
   __int64 v20; // x1
 
-  if ( (byte_4A09B72 & 1) == 0 )
+  if ( (byte_4A209E8 & 1) == 0 )
   {
-    sub_1B686D4(&System_Converter_object__int__TypeInfo, key);
-    sub_1B686D4(&Method_System_Collections_Generic_List_object__ConvertAll_int___, v7);
-    sub_1B686D4(&Method_System_Collections_Generic_List_int__ToArray__, v8);
-    sub_1B686D4(&Method_VoicePlayCondEntity___c__GetScriptIntArrayParam_b__16_0__, v9);
-    sub_1B686D4(&VoicePlayCondEntity___c_TypeInfo, v10);
-    byte_4A09B72 = 1;
+    sub_1B715CC(&System_Converter_object__int__TypeInfo, key);
+    sub_1B715CC(&Method_System_Collections_Generic_List_object__ConvertAll_int___, v7);
+    sub_1B715CC(&Method_System_Collections_Generic_List_int__ToArray__, v8);
+    sub_1B715CC(&Method_VoicePlayCondEntity___c__GetScriptIntArrayParam_b__16_0__, v9);
+    sub_1B715CC(&VoicePlayCondEntity___c_TypeInfo, v10);
+    byte_4A209E8 = 1;
   }
   ScriptObjListParam = VoicePlayCondEntity__GetScriptObjListParam(this, key, (const MethodInfo *)defVal);
   if ( !ScriptObjListParam )
@@ -120,7 +120,7 @@ System_Int32_array *__fastcall VoicePlayCondEntity__GetScriptIntArrayParam(
       v13 = VoicePlayCondEntity___c_TypeInfo;
     }
     v15 = (Il2CppObject *)v13->static_fields->__9;
-    _9__16_0 = (System_Converter_object__int__o *)sub_1B68920(System_Converter_object__int__TypeInfo);
+    _9__16_0 = (System_Converter_object__int__o *)sub_1B71818(System_Converter_object__int__TypeInfo);
     System_Converter_object__int____ctor(
       _9__16_0,
       v15,
@@ -128,17 +128,17 @@ System_Int32_array *__fastcall VoicePlayCondEntity__GetScriptIntArrayParam(
       0LL);
     static_fields = VoicePlayCondEntity___c_TypeInfo->static_fields;
     static_fields->__9__16_0 = _9__16_0;
-    sub_1B68678((ServantStatusBattleListViewItem_o *)&static_fields->__9__16_0, (int32_t)_9__16_0, v17, v18);
+    sub_1B71570((ServantStatusBattleListViewItem_o *)&static_fields->__9__16_0, (int32_t)_9__16_0, v17, v18);
   }
   v19 = (System_Collections_Generic_List_int__o *)System_Collections_Generic_List_object___ConvertAll_int_(
                                                     v12,
                                                     (System_Converter_T__TOutput__o *)_9__16_0,
-                                                    (const MethodInfo_2D7FA80 *)Method_System_Collections_Generic_List_object__ConvertAll_int___);
+                                                    (const MethodInfo_2D90774 *)Method_System_Collections_Generic_List_object__ConvertAll_int___);
   if ( !v19 )
-    sub_1B68930(0LL, v20);
+    sub_1B71828(0LL, v20);
   return System_Collections_Generic_List_int___ToArray(
            v19,
-           (const MethodInfo_34A0D0C *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_34B4CF4 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -158,17 +158,17 @@ int32_t __fastcall VoicePlayCondEntity__GetScriptIntParam(
   const MethodInfo *v13; // x2
 
   v4 = defVal;
-  if ( (byte_4A09B70 & 1) == 0 )
+  if ( (byte_4A209E6 & 1) == 0 )
   {
-    sub_1B686D4(&long_TypeInfo, key);
-    byte_4A09B70 = 1;
+    sub_1B715CC(&long_TypeInfo, key);
+    byte_4A209E6 = 1;
   }
   ScriptObj = VoicePlayCondEntity__GetScriptObj(this, key, *(const MethodInfo **)&defVal);
   if ( !ScriptObj )
     return v4;
   if ( ScriptObj->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(ScriptObj, long_TypeInfo, v8, v9);
-  sub_1B68BF0(ScriptObj);
+  sub_1B71AE8(ScriptObj);
   return (unsigned int)VoicePlayCondEntity__GetScriptObjListParam(v11, v12, v13);
 }
 
@@ -181,10 +181,10 @@ Il2CppObject *__fastcall VoicePlayCondEntity__GetScriptObj(
   Il2CppObject *result; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A09B6F & 1) == 0 )
+  if ( (byte_4A209E5 & 1) == 0 )
   {
-    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
-    byte_4A09B6F = 1;
+    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
+    byte_4A209E5 = 1;
   }
   result = (Il2CppObject *)this->fields.script;
   if ( result )
@@ -194,7 +194,7 @@ Il2CppObject *__fastcall VoicePlayCondEntity__GetScriptObj(
            (System_Collections_Generic_Dictionary_object__object__o *)result,
            (Il2CppObject *)key,
            &value,
-           (const MethodInfo_318B374 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_31A051C *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
       return value;
     }
@@ -219,10 +219,10 @@ System_Collections_Generic_List_object__o *__fastcall VoicePlayCondEntity__GetSc
   System_Int32_array *v9; // x2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4A09B71 & 1) == 0 )
+  if ( (byte_4A209E7 & 1) == 0 )
   {
-    sub_1B686D4(&System_Collections_Generic_List_object__TypeInfo, key);
-    byte_4A09B71 = 1;
+    sub_1B715CC(&System_Collections_Generic_List_object__TypeInfo, key);
+    byte_4A209E7 = 1;
   }
   result = (System_Collections_Generic_List_object__o *)VoicePlayCondEntity__GetScriptObj(this, key, method);
   if ( result )
@@ -231,7 +231,7 @@ System_Collections_Generic_List_object__o *__fastcall VoicePlayCondEntity__GetSc
     if ( LOBYTE(result->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
       || (System_Collections_Generic_List_object__c *)result->klass->_2.typeHierarchy[methodPtr_low - 1] != System_Collections_Generic_List_object__TypeInfo )
     {
-      sub_1B68BF0(result);
+      sub_1B71AE8(result);
       return (System_Collections_Generic_List_object__o *)VoicePlayCondEntity__GetScriptIntArrayParam(v7, v8, v9, v10);
     }
   }
@@ -247,12 +247,12 @@ int32_t __fastcall VoicePlayCondEntity__GetWeight(
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_4A09B73 & 1) == 0 )
+  if ( (byte_4A209E9 & 1) == 0 )
   {
-    sub_1B686D4(&StringLiteral_24597/*"weight"*/, *(_QWORD *)&defVal);
-    byte_4A09B73 = 1;
+    sub_1B715CC(&StringLiteral_24621/*"weight"*/, *(_QWORD *)&defVal);
+    byte_4A209E9 = 1;
   }
-  return VoicePlayCondEntity__GetScriptIntParam(this, (System_String_o *)StringLiteral_24597/*"weight"*/, defVal, v3);
+  return VoicePlayCondEntity__GetScriptIntParam(this, (System_String_o *)StringLiteral_24621/*"weight"*/, defVal, v3);
 }
 
 
@@ -269,12 +269,12 @@ int32_t __fastcall VoicePlayCondEntity__getCondValue(VoicePlayCondEntity_o *this
 
   condValues = this->fields.condValues;
   if ( !condValues )
-    sub_1B68930(this, method);
+    sub_1B71828(this, method);
   v3 = *(_QWORD *)&condValues->max_length;
   if ( !v3 )
     return 0;
   if ( !(_DWORD)v3 )
-    sub_1B68938(this, method);
+    sub_1B71830(this, method);
   return condValues->m_Items[1];
 }
 
@@ -286,15 +286,15 @@ void __fastcall VoicePlayCondEntity___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   int32_t v4; // w3
 
-  if ( (byte_4A09B75 & 1) == 0 )
+  if ( (byte_4A209EB & 1) == 0 )
   {
-    sub_1B686D4(&VoicePlayCondEntity___c_TypeInfo, v1);
-    byte_4A09B75 = 1;
+    sub_1B715CC(&VoicePlayCondEntity___c_TypeInfo, v1);
+    byte_4A209EB = 1;
   }
-  v2 = (Il2CppObject *)sub_1B68920(VoicePlayCondEntity___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B71818(VoicePlayCondEntity___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   VoicePlayCondEntity___c_TypeInfo->static_fields->__9 = (struct VoicePlayCondEntity___c_o *)v2;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)VoicePlayCondEntity___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)VoicePlayCondEntity___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -311,10 +311,10 @@ int32_t __fastcall VoicePlayCondEntity___c___GetScriptIntArrayParam_b__16_0(
 {
   System_String_o *v4; // x0
 
-  if ( (byte_4A09B76 & 1) == 0 )
+  if ( (byte_4A209EC & 1) == 0 )
   {
-    sub_1B686D4(&StringLiteral_1/*""*/, x);
-    byte_4A09B76 = 1;
+    sub_1B715CC(&StringLiteral_1/*""*/, x);
+    byte_4A209EC = 1;
   }
   if ( x )
     v4 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer, const MethodInfo *))x->klass->vtable[3].method)(

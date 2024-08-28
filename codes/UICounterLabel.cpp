@@ -12,16 +12,16 @@ System_Collections_IEnumerator_o *__fastcall UICounterLabel__ExecAnimation(
   int32_t v4; // w2
   int32_t v5; // w3
 
-  if ( (byte_4A0822D & 1) == 0 )
+  if ( (byte_4A1F095 & 1) == 0 )
   {
-    sub_1B686D4(&UICounterLabel__ExecAnimation_d__16_TypeInfo, method);
-    byte_4A0822D = 1;
+    sub_1B715CC(&UICounterLabel__ExecAnimation_d__16_TypeInfo, method);
+    byte_4A1F095 = 1;
   }
-  v3 = sub_1B68920(UICounterLabel__ExecAnimation_d__16_TypeInfo);
+  v3 = sub_1B71818(UICounterLabel__ExecAnimation_d__16_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -33,7 +33,7 @@ void __fastcall UICounterLabel__PlayAnimation(UICounterLabel_o *this, const Meth
   if ( this->fields._AddCount_k__BackingField )
   {
     v3 = UICounterLabel__ExecAnimation(this, method);
-    UnityEngine_MonoBehaviour__StartCoroutine_69157088((UnityEngine_MonoBehaviour_o *)this, v3, 0LL);
+    UnityEngine_MonoBehaviour__StartCoroutine_69243124((UnityEngine_MonoBehaviour_o *)this, v3, 0LL);
   }
 }
 
@@ -55,10 +55,10 @@ void __fastcall UICounterLabel__SetCountLabel(UICounterLabel_o *this, int32_t co
 
   v4 = this;
   v14 = count;
-  if ( (byte_4A0822E & 1) == 0 )
+  if ( (byte_4A1F096 & 1) == 0 )
   {
-    this = (UICounterLabel_o *)sub_1B686D4(&int_TypeInfo, *(_QWORD *)&count);
-    byte_4A0822E = 1;
+    this = (UICounterLabel_o *)sub_1B715CC(&int_TypeInfo, *(_QWORD *)&count);
+    byte_4A1F096 = 1;
   }
   countLabel = v4->fields.countLabel;
   if ( !countLabel )
@@ -85,7 +85,7 @@ void __fastcall UICounterLabel__SetCountLabel(UICounterLabel_o *this, int32_t co
       return;
     }
 LABEL_11:
-    sub_1B68930(this, *(_QWORD *)&count);
+    sub_1B71828(this, *(_QWORD *)&count);
   }
 }
 
@@ -106,7 +106,7 @@ void __fastcall UICounterLabel__Setup(
   this->fields._MainCount_k__BackingField = count;
   v7 = isFixedWidth;
   this->fields.animTime = animTime;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.format, (int32_t)format, (int32_t)format, isFixedWidth);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.format, (int32_t)format, (int32_t)format, isFixedWidth);
   *((_BYTE *)p_format + 16) = v7;
 }
 
@@ -156,35 +156,28 @@ bool __fastcall UICounterLabel__ExecAnimation_d__16__MoveNext(
         const MethodInfo *method)
 {
   UICounterLabel__ExecAnimation_d__16_o *v2; // x19
-  __int64 v3; // x1
   int32_t _1__state; // w8
   UICounterLabel_o *_4__this; // x20
   int AddCount_k__BackingField; // w23
-  int v7; // w22
+  int v6; // w22
   int32_t i_5__3; // w8
-  const MethodInfo *v9; // x2
-  float v10; // s0
+  const MethodInfo *v8; // x2
+  float v9; // s0
   int32_t MainCount_k__BackingField; // w8
-  int v12; // w10
-  float v13; // s0
-  int v14; // w9
-  __int64 v15; // x2
-  __int64 v16; // x3
-  __int64 v17; // x4
-  __int64 v18; // x0
+  int v11; // w10
+  float v12; // s0
+  int v13; // w9
   ServantStatusBattleListViewItem_o *p__2__current; // x19
-  int32_t v20; // w2
-  int32_t v21; // w3
+  int32_t v15; // w2
+  int32_t v16; // w3
   bool result; // w0
-  int32_t v23; // w19
-  int v24; // [xsp+Ch] [xbp-34h] BYREF
+  int32_t v18; // w19
 
   v2 = this;
-  if ( (byte_4A0822F & 1) == 0 )
+  if ( (byte_4A1F097 & 1) == 0 )
   {
-    sub_1B686D4(&UnityEngine_Application_TypeInfo, method);
-    this = (UICounterLabel__ExecAnimation_d__16_o *)sub_1B686D4(&int_TypeInfo, v3);
-    byte_4A0822F = 1;
+    this = (UICounterLabel__ExecAnimation_d__16_o *)sub_1B715CC(&UnityEngine_Application_TypeInfo, method);
+    byte_4A1F097 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -192,7 +185,7 @@ bool __fastcall UICounterLabel__ExecAnimation_d__16__MoveNext(
   {
     i_5__3 = v2->fields._i_5__3;
     v2->fields.__1__state = -1;
-    v7 = i_5__3 + 1;
+    v6 = i_5__3 + 1;
     v2->fields._i_5__3 = i_5__3 + 1;
   }
   else
@@ -201,12 +194,12 @@ bool __fastcall UICounterLabel__ExecAnimation_d__16__MoveNext(
       return 0;
     v2->fields.__1__state = -1;
     if ( !_4__this )
-LABEL_23:
-      sub_1B68930(this, method);
+LABEL_22:
+      sub_1B71828(this, method);
     AddCount_k__BackingField = _4__this->fields._AddCount_k__BackingField;
     if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
-    v7 = 0;
+    v6 = 0;
     v2->fields._add_5__2 = (float)AddCount_k__BackingField
                          / (float)(_4__this->fields.animTime * (float)UnityEngine_Application__get_targetFrameRate(0LL));
     v2->fields._i_5__3 = 0;
@@ -215,33 +208,31 @@ LABEL_23:
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
   this = (UICounterLabel__ExecAnimation_d__16_o *)UnityEngine_Application__get_targetFrameRate(0LL);
   if ( !_4__this )
-    goto LABEL_23;
-  v10 = _4__this->fields.animTime * (float)(int)this;
+    goto LABEL_22;
+  v9 = _4__this->fields.animTime * (float)(int)this;
   MainCount_k__BackingField = _4__this->fields._MainCount_k__BackingField;
-  v12 = (int)v10;
-  if ( v10 == INFINITY )
-    v12 = 0x80000000;
-  if ( v7 >= v12 )
+  v11 = (int)v9;
+  if ( v9 == INFINITY )
+    v11 = 0x80000000;
+  if ( v6 >= v11 )
   {
-    v23 = _4__this->fields._AddCount_k__BackingField + MainCount_k__BackingField;
-    UICounterLabel__SetCountLabel(_4__this, v23, v9);
+    v18 = _4__this->fields._AddCount_k__BackingField + MainCount_k__BackingField;
+    UICounterLabel__SetCountLabel(_4__this, v18, v8);
     result = 0;
-    _4__this->fields._MainCount_k__BackingField = v23;
+    _4__this->fields._MainCount_k__BackingField = v18;
     _4__this->fields._AddCount_k__BackingField = 0;
   }
   else
   {
-    v13 = v2->fields._add_5__2 * (float)v2->fields._i_5__3;
-    if ( v13 == INFINITY )
-      v14 = 0x80000000;
+    v12 = v2->fields._add_5__2 * (float)v2->fields._i_5__3;
+    if ( v12 == INFINITY )
+      v13 = 0x80000000;
     else
-      v14 = (int)v13;
-    UICounterLabel__SetCountLabel(_4__this, v14 + MainCount_k__BackingField, v9);
-    v24 = 0;
-    v18 = j_il2cpp_value_box_0(int_TypeInfo, &v24, v15, v16, v17);
-    v2->fields.__2__current = (Il2CppObject *)v18;
+      v13 = (int)v12;
+    UICounterLabel__SetCountLabel(_4__this, v13 + MainCount_k__BackingField, v8);
+    v2->fields.__2__current = 0LL;
     p__2__current = (ServantStatusBattleListViewItem_o *)&v2->fields.__2__current;
-    sub_1B68678(p__2__current, v18, v20, v21);
+    sub_1B71570(p__2__current, 0, v15, v16);
     result = 1;
     *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
   }
@@ -265,11 +256,11 @@ void __fastcall __noreturn UICounterLabel__ExecAnimation_d__16__System_Collectio
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B686E8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B68920(v2);
+  v2 = sub_1B715E0(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B71818(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B686E8(&Method_UICounterLabel__ExecAnimation_d__16_System_Collections_IEnumerator_Reset__);
-  sub_1B687FC(v3, v4);
+  v4 = sub_1B715E0(&Method_UICounterLabel__ExecAnimation_d__16_System_Collections_IEnumerator_Reset__);
+  sub_1B716F4(v3, v4);
 }
 
 

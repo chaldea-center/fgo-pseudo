@@ -25,46 +25,46 @@ void __fastcall WarBoardAIManager___cctor(const MethodInfo *method)
   int32_t v23; // w2
   int32_t v24; // w3
 
-  if ( (byte_4A06878 & 1) == 0 )
+  if ( (byte_4A1D6DC & 1) == 0 )
   {
-    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_int__WarBoardPieceData___ctor__, v1);
-    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_int__WarBoardItemData___ctor__, v2);
-    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_int__WarBoardSquareData___ctor__, v3);
-    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_uint__WarBoardPieceData___ctor__, v4);
-    sub_1B686D4(&System_Collections_Generic_Dictionary_int__WarBoardPieceData__TypeInfo, v5);
-    sub_1B686D4(&System_Collections_Generic_Dictionary_int__WarBoardSquareData__TypeInfo, v6);
-    sub_1B686D4(&System_Collections_Generic_Dictionary_int__WarBoardItemData__TypeInfo, v7);
-    sub_1B686D4(&System_Collections_Generic_Dictionary_uint__WarBoardPieceData__TypeInfo, v8);
-    sub_1B686D4(&WarBoardAIManager_TypeInfo, v9);
-    byte_4A06878 = 1;
+    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_int__WarBoardPieceData___ctor__, v1);
+    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_int__WarBoardItemData___ctor__, v2);
+    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_int__WarBoardSquareData___ctor__, v3);
+    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_uint__WarBoardPieceData___ctor__, v4);
+    sub_1B715CC(&System_Collections_Generic_Dictionary_int__WarBoardPieceData__TypeInfo, v5);
+    sub_1B715CC(&System_Collections_Generic_Dictionary_int__WarBoardSquareData__TypeInfo, v6);
+    sub_1B715CC(&System_Collections_Generic_Dictionary_int__WarBoardItemData__TypeInfo, v7);
+    sub_1B715CC(&System_Collections_Generic_Dictionary_uint__WarBoardPieceData__TypeInfo, v8);
+    sub_1B715CC(&WarBoardAIManager_TypeInfo, v9);
+    byte_4A1D6DC = 1;
   }
-  v10 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1B68920(System_Collections_Generic_Dictionary_int__WarBoardPieceData__TypeInfo);
+  v10 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1B71818(System_Collections_Generic_Dictionary_int__WarBoardPieceData__TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
     v10,
-    (const MethodInfo_31335CC *)Method_System_Collections_Generic_Dictionary_int__WarBoardPieceData___ctor__);
+    (const MethodInfo_3147E80 *)Method_System_Collections_Generic_Dictionary_int__WarBoardPieceData___ctor__);
   WarBoardAIManager_TypeInfo->static_fields->dicSquareIndexEnemyPiece = (struct System_Collections_Generic_Dictionary_int__WarBoardPieceData__o *)v10;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)WarBoardAIManager_TypeInfo->static_fields, (int32_t)v10, v11, v12);
-  v13 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1B68920(System_Collections_Generic_Dictionary_uint__WarBoardPieceData__TypeInfo);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)WarBoardAIManager_TypeInfo->static_fields, (int32_t)v10, v11, v12);
+  v13 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1B71818(System_Collections_Generic_Dictionary_uint__WarBoardPieceData__TypeInfo);
   System_Collections_Generic_Dictionary_uint__object____ctor(
     v13,
-    (const MethodInfo_31C1ECC *)Method_System_Collections_Generic_Dictionary_uint__WarBoardPieceData___ctor__);
+    (const MethodInfo_31D6FA4 *)Method_System_Collections_Generic_Dictionary_uint__WarBoardPieceData___ctor__);
   static_fields = WarBoardAIManager_TypeInfo->static_fields;
   static_fields->dicUniqueIndexPiece = (struct System_Collections_Generic_Dictionary_uint__WarBoardPieceData__o *)v13;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&static_fields->dicUniqueIndexPiece, (int32_t)v13, v15, v16);
-  v17 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1B68920(System_Collections_Generic_Dictionary_int__WarBoardSquareData__TypeInfo);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&static_fields->dicUniqueIndexPiece, (int32_t)v13, v15, v16);
+  v17 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1B71818(System_Collections_Generic_Dictionary_int__WarBoardSquareData__TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
     v17,
-    (const MethodInfo_31335CC *)Method_System_Collections_Generic_Dictionary_int__WarBoardSquareData___ctor__);
+    (const MethodInfo_3147E80 *)Method_System_Collections_Generic_Dictionary_int__WarBoardSquareData___ctor__);
   v18 = WarBoardAIManager_TypeInfo->static_fields;
   v18->dicIndexSquare = (struct System_Collections_Generic_Dictionary_int__WarBoardSquareData__o *)v17;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&v18->dicIndexSquare, (int32_t)v17, v19, v20);
-  v21 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1B68920(System_Collections_Generic_Dictionary_int__WarBoardItemData__TypeInfo);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&v18->dicIndexSquare, (int32_t)v17, v19, v20);
+  v21 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1B71818(System_Collections_Generic_Dictionary_int__WarBoardItemData__TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
     v21,
-    (const MethodInfo_31335CC *)Method_System_Collections_Generic_Dictionary_int__WarBoardItemData___ctor__);
+    (const MethodInfo_3147E80 *)Method_System_Collections_Generic_Dictionary_int__WarBoardItemData___ctor__);
   v22 = WarBoardAIManager_TypeInfo->static_fields;
   v22->dicIndexItem = (struct System_Collections_Generic_Dictionary_int__WarBoardItemData__o *)v21;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&v22->dicIndexItem, (int32_t)v21, v23, v24);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&v22->dicIndexItem, (int32_t)v21, v23, v24);
 }
 
 
@@ -75,18 +75,18 @@ void __fastcall WarBoardAIManager___ctor(WarBoardAIManager_o *this, const Method
   int32_t v5; // w2
   int32_t v6; // w3
 
-  if ( (byte_4A06877 & 1) == 0 )
+  if ( (byte_4A1D6DB & 1) == 0 )
   {
-    sub_1B686D4(&Method_System_Collections_Generic_List_WarBoardAI___ctor__, method);
-    sub_1B686D4(&System_Collections_Generic_List_WarBoardAI__TypeInfo, v3);
-    byte_4A06877 = 1;
+    sub_1B715CC(&Method_System_Collections_Generic_List_WarBoardAI___ctor__, method);
+    sub_1B715CC(&System_Collections_Generic_List_WarBoardAI__TypeInfo, v3);
+    byte_4A1D6DB = 1;
   }
-  v4 = (System_Collections_Generic_List_object__o *)sub_1B68920(System_Collections_Generic_List_WarBoardAI__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1B71818(System_Collections_Generic_List_WarBoardAI__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_34BBA44 *)Method_System_Collections_Generic_List_WarBoardAI___ctor__);
+    (const MethodInfo_34CFA2C *)Method_System_Collections_Generic_List_WarBoardAI___ctor__);
   this->fields.warBoardAIList = (struct System_Collections_Generic_List_WarBoardAI__o *)v4;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)v4, v5, v6);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)v4, v5, v6);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -100,13 +100,13 @@ void __fastcall WarBoardAIManager__AIEnd(WarBoardAIManager_o *this, const Method
   int v7; // w8
   unsigned int v8; // w20
 
-  if ( (byte_4A06869 & 1) == 0 )
+  if ( (byte_4A1D6CD & 1) == 0 )
   {
-    sub_1B686D4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
-    byte_4A06869 = 1;
+    sub_1B715CC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
+    byte_4A1D6CD = 1;
   }
   this->fields.exec = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   monitor = Instance[27].monitor;
@@ -122,7 +122,7 @@ void __fastcall WarBoardAIManager__AIEnd(WarBoardAIManager_o *this, const Method
     while ( 1 )
     {
       if ( v8 >= v7 )
-        sub_1B68938(Instance, v4);
+        sub_1B71830(Instance, v4);
       Instance = *(Il2CppObject **)(v6 + 8LL * (int)v8 + 32);
       if ( !Instance )
         break;
@@ -132,7 +132,7 @@ void __fastcall WarBoardAIManager__AIEnd(WarBoardAIManager_o *this, const Method
         return;
     }
 LABEL_12:
-    sub_1B68930(Instance, v4);
+    sub_1B71828(Instance, v4);
   }
 }
 
@@ -157,31 +157,31 @@ void __fastcall WarBoardAIManager__AddReinforcementsAI(
   Il2CppObject *v19; // x0
   const MethodInfo *v20; // x3
 
-  if ( (byte_4A06875 & 1) == 0 )
+  if ( (byte_4A1D6D9 & 1) == 0 )
   {
-    sub_1B686D4(&Method_System_Linq_Enumerable_FirstOrDefault_WarBoardAI___, *(_QWORD *)&forceId);
-    sub_1B686D4(&System_Func_WarBoardAI__bool__TypeInfo, v11);
-    sub_1B686D4(&Method_WarBoardAIManager___c__DisplayClass28_0__AddReinforcementsAI_b__0__, v12);
-    sub_1B686D4(&WarBoardAIManager___c__DisplayClass28_0_TypeInfo, v13);
-    byte_4A06875 = 1;
+    sub_1B715CC(&Method_System_Linq_Enumerable_FirstOrDefault_WarBoardAI___, *(_QWORD *)&forceId);
+    sub_1B715CC(&System_Func_WarBoardAI__bool__TypeInfo, v11);
+    sub_1B715CC(&Method_WarBoardAIManager___c__DisplayClass28_0__AddReinforcementsAI_b__0__, v12);
+    sub_1B715CC(&WarBoardAIManager___c__DisplayClass28_0_TypeInfo, v13);
+    byte_4A1D6D9 = 1;
   }
-  v14 = sub_1B68920(WarBoardAIManager___c__DisplayClass28_0_TypeInfo);
+  v14 = sub_1B71818(WarBoardAIManager___c__DisplayClass28_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v14, 0LL);
   if ( !v14 )
     goto LABEL_8;
   *(_DWORD *)(v14 + 16) = forceId;
   *(_DWORD *)(v14 + 20) = groupId;
   warBoardAIList = this->fields.warBoardAIList;
-  v18 = (System_Func_object__bool__o *)sub_1B68920(System_Func_WarBoardAI__bool__TypeInfo);
+  v18 = (System_Func_object__bool__o *)sub_1B71818(System_Func_WarBoardAI__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v18,
     (Il2CppObject *)v14,
     Method_WarBoardAIManager___c__DisplayClass28_0__AddReinforcementsAI_b__0__,
     0LL);
-  v19 = System_Linq_Enumerable__FirstOrDefault_object__48686452(
+  v19 = System_Linq_Enumerable__FirstOrDefault_object__48759088(
           (System_Collections_Generic_IEnumerable_TSource__o *)warBoardAIList,
           (System_Func_TSource__bool__o *)v18,
-          (const MethodInfo_2E6E574 *)Method_System_Linq_Enumerable_FirstOrDefault_WarBoardAI___);
+          (const MethodInfo_2E80130 *)Method_System_Linq_Enumerable_FirstOrDefault_WarBoardAI___);
   if ( v19 )
   {
     klass = (WarBoardAIRoute_o *)v19[1].klass;
@@ -191,7 +191,7 @@ void __fastcall WarBoardAIManager__AddReinforcementsAI(
       return;
     }
 LABEL_8:
-    sub_1B68930(klass, v16);
+    sub_1B71828(klass, v16);
   }
 }
 
@@ -213,13 +213,13 @@ void __fastcall WarBoardAIManager__CreateAI(
   __int64 size; // x10
   Il2CppClass **v15; // x8
 
-  if ( (byte_4A06868 & 1) == 0 )
+  if ( (byte_4A1D6CC & 1) == 0 )
   {
-    sub_1B686D4(&Method_System_Collections_Generic_List_WarBoardAI__Add__, npc);
-    sub_1B686D4(&WarBoardAI_TypeInfo, v5);
-    byte_4A06868 = 1;
+    sub_1B715CC(&Method_System_Collections_Generic_List_WarBoardAI__Add__, npc);
+    sub_1B715CC(&WarBoardAI_TypeInfo, v5);
+    byte_4A1D6CC = 1;
   }
-  v6 = (WarBoardAI_o *)sub_1B68920(WarBoardAI_TypeInfo);
+  v6 = (WarBoardAI_o *)sub_1B71818(WarBoardAI_TypeInfo);
   WarBoardAI___ctor(v6, npc, v7);
   warBoardAIList = (System_Collections_Generic_List_object__o *)this->fields.warBoardAIList;
   if ( !warBoardAIList
@@ -228,7 +228,7 @@ void __fastcall WarBoardAIManager__CreateAI(
         ++warBoardAIList->fields._version,
         !items) )
   {
-    sub_1B68930(warBoardAIList, v8);
+    sub_1B71828(warBoardAIList, v8);
   }
   size = warBoardAIList->fields._size;
   if ( (unsigned int)size >= items->max_length )
@@ -236,14 +236,14 @@ void __fastcall WarBoardAIManager__CreateAI(
     System_Collections_Generic_List_object___AddWithResize(
       warBoardAIList,
       (Il2CppObject *)v6,
-      *(const MethodInfo_34BC278 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+      *(const MethodInfo_34D0260 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
   }
   else
   {
     v15 = &items->obj.klass + size;
     warBoardAIList->fields._size = size + 1;
     v15[4] = (Il2CppClass *)v6;
-    sub_1B68678((ServantStatusBattleListViewItem_o *)(v15 + 4), (int32_t)v6, v9, v10);
+    sub_1B71570((ServantStatusBattleListViewItem_o *)(v15 + 4), (int32_t)v6, v9, v10);
   }
 }
 
@@ -259,16 +259,16 @@ System_Collections_IEnumerator_o *__fastcall WarBoardAIManager__Execute(
   int32_t v8; // w2
   int32_t v9; // w3
 
-  if ( (byte_4A0686D & 1) == 0 )
+  if ( (byte_4A1D6D1 & 1) == 0 )
   {
-    sub_1B686D4(&WarBoardAIManager__Execute_d__12_TypeInfo, *(_QWORD *)&forceId);
-    byte_4A0686D = 1;
+    sub_1B715CC(&WarBoardAIManager__Execute_d__12_TypeInfo, *(_QWORD *)&forceId);
+    byte_4A1D6D1 = 1;
   }
-  v7 = sub_1B68920(WarBoardAIManager__Execute_d__12_TypeInfo);
+  v7 = sub_1B71818(WarBoardAIManager__Execute_d__12_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0LL);
   *(_DWORD *)(v7 + 16) = 0;
   *(_QWORD *)(v7 + 40) = this;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)(v7 + 40), (int32_t)this, v8, v9);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)(v7 + 40), (int32_t)this, v8, v9);
   *(_DWORD *)(v7 + 32) = forceId;
   *(_DWORD *)(v7 + 36) = groupId;
   return (System_Collections_IEnumerator_o *)v7;
@@ -278,7 +278,7 @@ System_Collections_IEnumerator_o *__fastcall WarBoardAIManager__Execute(
 float __fastcall WarBoardAIManager__GetBreakPoint(WarBoardPieceData_o *piece, const MethodInfo *method)
 {
   if ( !piece )
-    sub_1B68930(0LL, method);
+    sub_1B71828(0LL, method);
   return (float)(piece->fields._breakPoint_k__BackingField + 1)
        / (float)(piece->fields._breakPointMax_k__BackingField + 1);
 }
@@ -290,10 +290,10 @@ System_Collections_Generic_Dictionary_int__WarBoardPieceData__o *__fastcall WarB
   __int64 v1; // x1
   WarBoardAIManager_c *v2; // x0
 
-  if ( (byte_4A0686F & 1) == 0 )
+  if ( (byte_4A1D6D3 & 1) == 0 )
   {
-    sub_1B686D4(&WarBoardAIManager_TypeInfo, v1);
-    byte_4A0686F = 1;
+    sub_1B715CC(&WarBoardAIManager_TypeInfo, v1);
+    byte_4A1D6D3 = 1;
   }
   v2 = WarBoardAIManager_TypeInfo;
   if ( !WarBoardAIManager_TypeInfo->_2.cctor_finished )
@@ -314,11 +314,11 @@ WarBoardPieceData_o *__fastcall WarBoardAIManager__GetEnemyPieceSquareIndex(
   System_Collections_Generic_Dictionary_int__object__o *dicSquareIndexEnemyPiece; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A06870 & 1) == 0 )
+  if ( (byte_4A1D6D4 & 1) == 0 )
   {
-    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_int__WarBoardPieceData__TryGetValue__, method);
-    sub_1B686D4(&WarBoardAIManager_TypeInfo, v3);
-    byte_4A06870 = 1;
+    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_int__WarBoardPieceData__TryGetValue__, method);
+    sub_1B715CC(&WarBoardAIManager_TypeInfo, v3);
+    byte_4A1D6D4 = 1;
   }
   v4 = WarBoardAIManager_TypeInfo;
   value = 0LL;
@@ -329,12 +329,12 @@ WarBoardPieceData_o *__fastcall WarBoardAIManager__GetEnemyPieceSquareIndex(
   }
   dicSquareIndexEnemyPiece = (System_Collections_Generic_Dictionary_int__object__o *)v4->static_fields->dicSquareIndexEnemyPiece;
   if ( !dicSquareIndexEnemyPiece )
-    sub_1B68930(0LL, method);
+    sub_1B71828(0LL, method);
   if ( System_Collections_Generic_Dictionary_int__object___TryGetValue(
          dicSquareIndexEnemyPiece,
          squareIndex,
          &value,
-         (const MethodInfo_313572C *)Method_System_Collections_Generic_Dictionary_int__WarBoardPieceData__TryGetValue__) )
+         (const MethodInfo_3149FE0 *)Method_System_Collections_Generic_Dictionary_int__WarBoardPieceData__TryGetValue__) )
   {
     return (WarBoardPieceData_o *)value;
   }
@@ -352,11 +352,11 @@ WarBoardItemData_o *__fastcall WarBoardAIManager__GetItem(int32_t squareIndex, c
   System_Collections_Generic_Dictionary_int__object__o *dicIndexItem; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A06873 & 1) == 0 )
+  if ( (byte_4A1D6D7 & 1) == 0 )
   {
-    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_int__WarBoardItemData__TryGetValue__, method);
-    sub_1B686D4(&WarBoardAIManager_TypeInfo, v3);
-    byte_4A06873 = 1;
+    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_int__WarBoardItemData__TryGetValue__, method);
+    sub_1B715CC(&WarBoardAIManager_TypeInfo, v3);
+    byte_4A1D6D7 = 1;
   }
   v4 = WarBoardAIManager_TypeInfo;
   value = 0LL;
@@ -367,12 +367,12 @@ WarBoardItemData_o *__fastcall WarBoardAIManager__GetItem(int32_t squareIndex, c
   }
   dicIndexItem = (System_Collections_Generic_Dictionary_int__object__o *)v4->static_fields->dicIndexItem;
   if ( !dicIndexItem )
-    sub_1B68930(0LL, method);
+    sub_1B71828(0LL, method);
   if ( System_Collections_Generic_Dictionary_int__object___TryGetValue(
          dicIndexItem,
          squareIndex,
          &value,
-         (const MethodInfo_313572C *)Method_System_Collections_Generic_Dictionary_int__WarBoardItemData__TryGetValue__) )
+         (const MethodInfo_3149FE0 *)Method_System_Collections_Generic_Dictionary_int__WarBoardItemData__TryGetValue__) )
   {
     return (WarBoardItemData_o *)value;
   }
@@ -390,11 +390,11 @@ WarBoardPieceData_o *__fastcall WarBoardAIManager__GetPieceUnique(uint32_t uniqu
   System_Collections_Generic_Dictionary_TKey__TValue__o *dicUniqueIndexPiece; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A06871 & 1) == 0 )
+  if ( (byte_4A1D6D5 & 1) == 0 )
   {
-    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_uint__WarBoardPieceData__TryGetValue__, method);
-    sub_1B686D4(&WarBoardAIManager_TypeInfo, v3);
-    byte_4A06871 = 1;
+    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_uint__WarBoardPieceData__TryGetValue__, method);
+    sub_1B715CC(&WarBoardAIManager_TypeInfo, v3);
+    byte_4A1D6D5 = 1;
   }
   v4 = WarBoardAIManager_TypeInfo;
   value = 0LL;
@@ -405,12 +405,12 @@ WarBoardPieceData_o *__fastcall WarBoardAIManager__GetPieceUnique(uint32_t uniqu
   }
   dicUniqueIndexPiece = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v4->static_fields->dicUniqueIndexPiece;
   if ( !dicUniqueIndexPiece )
-    sub_1B68930(0LL, method);
+    sub_1B71828(0LL, method);
   if ( System_Collections_Generic_Dictionary_uint__object___TryGetValue(
          dicUniqueIndexPiece,
          uniqueIndex,
          &value,
-         (const MethodInfo_31C402C *)Method_System_Collections_Generic_Dictionary_uint__WarBoardPieceData__TryGetValue__) )
+         (const MethodInfo_31D9104 *)Method_System_Collections_Generic_Dictionary_uint__WarBoardPieceData__TryGetValue__) )
   {
     return (WarBoardPieceData_o *)value;
   }
@@ -428,11 +428,11 @@ WarBoardSquareData_o *__fastcall WarBoardAIManager__GetSquare(int32_t squareInde
   System_Collections_Generic_Dictionary_int__object__o *dicIndexSquare; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A06872 & 1) == 0 )
+  if ( (byte_4A1D6D6 & 1) == 0 )
   {
-    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_int__WarBoardSquareData__TryGetValue__, method);
-    sub_1B686D4(&WarBoardAIManager_TypeInfo, v3);
-    byte_4A06872 = 1;
+    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_int__WarBoardSquareData__TryGetValue__, method);
+    sub_1B715CC(&WarBoardAIManager_TypeInfo, v3);
+    byte_4A1D6D6 = 1;
   }
   v4 = WarBoardAIManager_TypeInfo;
   value = 0LL;
@@ -443,12 +443,12 @@ WarBoardSquareData_o *__fastcall WarBoardAIManager__GetSquare(int32_t squareInde
   }
   dicIndexSquare = (System_Collections_Generic_Dictionary_int__object__o *)v4->static_fields->dicIndexSquare;
   if ( !dicIndexSquare )
-    sub_1B68930(0LL, method);
+    sub_1B71828(0LL, method);
   if ( System_Collections_Generic_Dictionary_int__object___TryGetValue(
          dicIndexSquare,
          squareIndex,
          &value,
-         (const MethodInfo_313572C *)Method_System_Collections_Generic_Dictionary_int__WarBoardSquareData__TryGetValue__) )
+         (const MethodInfo_3149FE0 *)Method_System_Collections_Generic_Dictionary_int__WarBoardSquareData__TryGetValue__) )
   {
     return (WarBoardSquareData_o *)value;
   }
@@ -478,16 +478,16 @@ void __fastcall WarBoardAIManager__Initialize(
   System_Collections_Generic_List_Enumerator_object__o v15; // [xsp+8h] [xbp-48h] BYREF
 
   v4 = this;
-  if ( (byte_4A06867 & 1) == 0 )
+  if ( (byte_4A1D6CB & 1) == 0 )
   {
-    sub_1B686D4(&Method_System_Collections_Generic_List_Enumerator_WarBoardStageNpcEntity__Dispose__, npcList);
-    sub_1B686D4(&Method_System_Collections_Generic_List_Enumerator_WarBoardStageNpcEntity__MoveNext__, v5);
-    sub_1B686D4(&Method_System_Collections_Generic_List_Enumerator_WarBoardStageNpcEntity__get_Current__, v6);
-    sub_1B686D4(&Method_System_Collections_Generic_List_WarBoardAI__Clear__, v7);
-    this = (WarBoardAIManager_o *)sub_1B686D4(
+    sub_1B715CC(&Method_System_Collections_Generic_List_Enumerator_WarBoardStageNpcEntity__Dispose__, npcList);
+    sub_1B715CC(&Method_System_Collections_Generic_List_Enumerator_WarBoardStageNpcEntity__MoveNext__, v5);
+    sub_1B715CC(&Method_System_Collections_Generic_List_Enumerator_WarBoardStageNpcEntity__get_Current__, v6);
+    sub_1B715CC(&Method_System_Collections_Generic_List_WarBoardAI__Clear__, v7);
+    this = (WarBoardAIManager_o *)sub_1B715CC(
                                     &Method_System_Collections_Generic_List_WarBoardStageNpcEntity__GetEnumerator__,
                                     v8);
-    byte_4A06867 = 1;
+    byte_4A1D6CB = 1;
   }
   memset(&v15, 0, sizeof(v15));
   warBoardAIList = v4->fields.warBoardAIList;
@@ -501,26 +501,26 @@ void __fastcall WarBoardAIManager__Initialize(
     System_Array__Clear((System_Array_o *)warBoardAIList->fields._items, 0, size, 0LL);
   if ( !npcList )
 LABEL_15:
-    sub_1B68930(this, npcList);
+    sub_1B71828(this, npcList);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v15,
     (System_Collections_Generic_List_object__o *)npcList,
-    (const MethodInfo_34BCD70 *)Method_System_Collections_Generic_List_WarBoardStageNpcEntity__GetEnumerator__);
+    (const MethodInfo_34D0D58 *)Method_System_Collections_Generic_List_WarBoardStageNpcEntity__GetEnumerator__);
   while ( 1 )
   {
     v12 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v15,
-            (const MethodInfo_323A820 *)Method_System_Collections_Generic_List_Enumerator_WarBoardStageNpcEntity__MoveNext__);
+            (const MethodInfo_324F8B8 *)Method_System_Collections_Generic_List_Enumerator_WarBoardStageNpcEntity__MoveNext__);
     if ( !v12 )
       break;
     if ( !v15.fields._current )
-      sub_1B68930(v12, v13);
+      sub_1B71828(v12, v13);
     if ( HIDWORD(v15.fields._current[1].klass) || LODWORD(v15.fields._current[1].monitor) )
       WarBoardAIManager__CreateAI(v4, (WarBoardStageNpcEntity_o *)v15.fields._current, v14);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v15,
-    (const MethodInfo_323A81C *)Method_System_Collections_Generic_List_Enumerator_WarBoardStageNpcEntity__Dispose__);
+    (const MethodInfo_324F8B4 *)Method_System_Collections_Generic_List_Enumerator_WarBoardStageNpcEntity__Dispose__);
 }
 
 
@@ -530,17 +530,17 @@ bool __fastcall WarBoardAIManager__IsAllyPiece(
         const MethodInfo *method)
 {
   if ( !one || !two )
-    sub_1B68930(one, two);
+    sub_1B71828(one, two);
   return one->fields._forceId_k__BackingField == two->fields._forceId_k__BackingField;
 }
 
 
 bool __fastcall WarBoardAIManager__IsEnemyBlock(int32_t squareIndex, const MethodInfo *method)
 {
-  if ( (byte_4A06874 & 1) == 0 )
+  if ( (byte_4A1D6D8 & 1) == 0 )
   {
-    sub_1B686D4(&WarBoardAIManager_TypeInfo, method);
-    byte_4A06874 = 1;
+    sub_1B715CC(&WarBoardAIManager_TypeInfo, method);
+    byte_4A1D6D8 = 1;
   }
   if ( !WarBoardAIManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo);
@@ -554,7 +554,7 @@ bool __fastcall WarBoardAIManager__IsEnemyPiece(
         const MethodInfo *method)
 {
   if ( !one || !two )
-    sub_1B68930(one, two);
+    sub_1B71828(one, two);
   return one->fields._forceId_k__BackingField != two->fields._forceId_k__BackingField;
 }
 
@@ -565,7 +565,7 @@ bool __fastcall WarBoardAIManager__IsEqualPiece(
         const MethodInfo *method)
 {
   if ( !one || !two )
-    sub_1B68930(one, two);
+    sub_1B71828(one, two);
   return one->fields._forceId_k__BackingField == two->fields._forceId_k__BackingField
       && one->fields._index_k__BackingField == two->fields._index_k__BackingField;
 }
@@ -602,32 +602,32 @@ void __fastcall WarBoardAIManager__StartAIPhase(
   Il2CppObject *v16; // x0
   const MethodInfo *v17; // x3
 
-  if ( (byte_4A0686B & 1) == 0 )
+  if ( (byte_4A1D6CF & 1) == 0 )
   {
-    sub_1B686D4(&AStarSearch_TypeInfo, *(_QWORD *)&forceId);
-    sub_1B686D4(&Method_System_Linq_Enumerable_FirstOrDefault_WarBoardAI___, v7);
-    sub_1B686D4(&System_Func_WarBoardAI__bool__TypeInfo, v8);
-    sub_1B686D4(&Method_WarBoardAIManager___c__DisplayClass9_0__StartAIPhase_b__0__, v9);
-    sub_1B686D4(&WarBoardAIManager___c__DisplayClass9_0_TypeInfo, v10);
-    byte_4A0686B = 1;
+    sub_1B715CC(&AStarSearch_TypeInfo, *(_QWORD *)&forceId);
+    sub_1B715CC(&Method_System_Linq_Enumerable_FirstOrDefault_WarBoardAI___, v7);
+    sub_1B715CC(&System_Func_WarBoardAI__bool__TypeInfo, v8);
+    sub_1B715CC(&Method_WarBoardAIManager___c__DisplayClass9_0__StartAIPhase_b__0__, v9);
+    sub_1B715CC(&WarBoardAIManager___c__DisplayClass9_0_TypeInfo, v10);
+    byte_4A1D6CF = 1;
   }
-  v11 = sub_1B68920(WarBoardAIManager___c__DisplayClass9_0_TypeInfo);
+  v11 = sub_1B71818(WarBoardAIManager___c__DisplayClass9_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v11, 0LL);
   if ( !v11 )
-    sub_1B68930(v12, v13);
+    sub_1B71828(v12, v13);
   *(_DWORD *)(v11 + 16) = forceId;
   *(_DWORD *)(v11 + 20) = groupId;
   warBoardAIList = this->fields.warBoardAIList;
-  v15 = (System_Func_object__bool__o *)sub_1B68920(System_Func_WarBoardAI__bool__TypeInfo);
+  v15 = (System_Func_object__bool__o *)sub_1B71818(System_Func_WarBoardAI__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v15,
     (Il2CppObject *)v11,
     Method_WarBoardAIManager___c__DisplayClass9_0__StartAIPhase_b__0__,
     0LL);
-  v16 = System_Linq_Enumerable__FirstOrDefault_object__48686452(
+  v16 = System_Linq_Enumerable__FirstOrDefault_object__48759088(
           (System_Collections_Generic_IEnumerable_TSource__o *)warBoardAIList,
           (System_Func_TSource__bool__o *)v15,
-          (const MethodInfo_2E6E574 *)Method_System_Linq_Enumerable_FirstOrDefault_WarBoardAI___);
+          (const MethodInfo_2E80130 *)Method_System_Linq_Enumerable_FirstOrDefault_WarBoardAI___);
   if ( v16 )
   {
     this->fields.exec = 1;
@@ -691,41 +691,41 @@ void __fastcall WarBoardAIManager__StartThink(
   int32_t v48; // w2
   int32_t v49; // w3
 
-  if ( (byte_4A0686C & 1) == 0 )
+  if ( (byte_4A1D6D0 & 1) == 0 )
   {
-    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_uint__WarBoardPieceData__Add__, *(_QWORD *)&forceId);
-    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_int__WarBoardPieceData__Add__, v7);
-    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_int__WarBoardSquareData__Add__, v8);
-    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_int__WarBoardItemData__Add__, v9);
-    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_int__WarBoardPieceData__Clear__, v10);
-    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_int__WarBoardSquareData__Clear__, v11);
-    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_uint__WarBoardPieceData__Clear__, v12);
-    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_int__WarBoardItemData__Clear__, v13);
-    sub_1B686D4(&Method_System_Linq_Enumerable_SingleOrDefault_WarBoardAI___, v14);
-    sub_1B686D4(&System_Func_WarBoardAI__bool__TypeInfo, v15);
-    sub_1B686D4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v16);
-    sub_1B686D4(&Method_WarBoardAIManager___c__DisplayClass11_0__StartThink_b__0__, v17);
-    sub_1B686D4(&WarBoardAIManager___c__DisplayClass11_0_TypeInfo, v18);
-    sub_1B686D4(&WarBoardAIManager_TypeInfo, v19);
-    byte_4A0686C = 1;
+    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_uint__WarBoardPieceData__Add__, *(_QWORD *)&forceId);
+    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_int__WarBoardPieceData__Add__, v7);
+    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_int__WarBoardSquareData__Add__, v8);
+    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_int__WarBoardItemData__Add__, v9);
+    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_int__WarBoardPieceData__Clear__, v10);
+    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_int__WarBoardSquareData__Clear__, v11);
+    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_uint__WarBoardPieceData__Clear__, v12);
+    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_int__WarBoardItemData__Clear__, v13);
+    sub_1B715CC(&Method_System_Linq_Enumerable_SingleOrDefault_WarBoardAI___, v14);
+    sub_1B715CC(&System_Func_WarBoardAI__bool__TypeInfo, v15);
+    sub_1B715CC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v16);
+    sub_1B715CC(&Method_WarBoardAIManager___c__DisplayClass11_0__StartThink_b__0__, v17);
+    sub_1B715CC(&WarBoardAIManager___c__DisplayClass11_0_TypeInfo, v18);
+    sub_1B715CC(&WarBoardAIManager_TypeInfo, v19);
+    byte_4A1D6D0 = 1;
   }
-  v20 = sub_1B68920(WarBoardAIManager___c__DisplayClass11_0_TypeInfo);
+  v20 = sub_1B71818(WarBoardAIManager___c__DisplayClass11_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v20, 0LL);
   if ( !v20 )
     goto LABEL_58;
   *(_DWORD *)(v20 + 16) = forceId;
   *(_DWORD *)(v20 + 20) = groupId;
   warBoardAIList = this->fields.warBoardAIList;
-  v24 = (System_Func_object__bool__o *)sub_1B68920(System_Func_WarBoardAI__bool__TypeInfo);
+  v24 = (System_Func_object__bool__o *)sub_1B71818(System_Func_WarBoardAI__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v24,
     (Il2CppObject *)v20,
     Method_WarBoardAIManager___c__DisplayClass11_0__StartThink_b__0__,
     0LL);
-  v25 = System_Linq_Enumerable__SingleOrDefault_object__48758248(
+  v25 = System_Linq_Enumerable__SingleOrDefault_object__48831640(
           (System_Collections_Generic_IEnumerable_TSource__o *)warBoardAIList,
           (System_Func_TSource__bool__o *)v24,
-          (const MethodInfo_2E7FDE8 *)Method_System_Linq_Enumerable_SingleOrDefault_WarBoardAI___);
+          (const MethodInfo_2E91C98 *)Method_System_Linq_Enumerable_SingleOrDefault_WarBoardAI___);
   if ( !v25 )
     return;
   this->fields.isPause = 0;
@@ -744,14 +744,14 @@ void __fastcall WarBoardAIManager__StartThink(
     goto LABEL_58;
   System_Collections_Generic_Dictionary_uint__object___Clear(
     (System_Collections_Generic_Dictionary_TKey__TValue__o *)klass,
-    (const MethodInfo_31C2A28 *)Method_System_Collections_Generic_Dictionary_uint__WarBoardPieceData__Clear__);
+    (const MethodInfo_31D7B00 *)Method_System_Collections_Generic_Dictionary_uint__WarBoardPieceData__Clear__);
   klass = (WarBoardAIRoute_o *)WarBoardAIManager_TypeInfo->static_fields->dicSquareIndexEnemyPiece;
   if ( !klass )
     goto LABEL_58;
   System_Collections_Generic_Dictionary_int__object___Clear(
     (System_Collections_Generic_Dictionary_int__object__o *)klass,
-    (const MethodInfo_3134128 *)Method_System_Collections_Generic_Dictionary_int__WarBoardPieceData__Clear__);
-  klass = (WarBoardAIRoute_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    (const MethodInfo_31489DC *)Method_System_Collections_Generic_Dictionary_int__WarBoardPieceData__Clear__);
+  klass = (WarBoardAIRoute_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !klass )
     goto LABEL_58;
   aiRouteMasterData = klass[1].fields.aiRouteMasterData;
@@ -784,7 +784,7 @@ void __fastcall WarBoardAIManager__StartThink(
           (System_Collections_Generic_Dictionary_TKey__TValue__o *)klass,
           *(_DWORD *)(v31 + 44),
           (Il2CppObject *)v31,
-          (const MethodInfo_31C28A0 *)Method_System_Collections_Generic_Dictionary_uint__WarBoardPieceData__Add__);
+          (const MethodInfo_31D7978 *)Method_System_Collections_Generic_Dictionary_uint__WarBoardPieceData__Add__);
         if ( *(_DWORD *)(v31 + 20) != *(_DWORD *)(v20 + 16) )
         {
           v33 = WarBoardAIManager_TypeInfo;
@@ -800,7 +800,7 @@ void __fastcall WarBoardAIManager__StartThink(
             (System_Collections_Generic_Dictionary_int__object__o *)klass,
             *(_DWORD *)(v31 + 64),
             (Il2CppObject *)v31,
-            (const MethodInfo_3133FA0 *)Method_System_Collections_Generic_Dictionary_int__WarBoardPieceData__Add__);
+            (const MethodInfo_3148854 *)Method_System_Collections_Generic_Dictionary_int__WarBoardPieceData__Add__);
         }
       }
       namespaze = (int)v28->_1.namespaze;
@@ -808,7 +808,7 @@ void __fastcall WarBoardAIManager__StartThink(
         goto LABEL_27;
     }
 LABEL_59:
-    sub_1B68938(klass, v22);
+    sub_1B71830(klass, v22);
   }
 LABEL_27:
   v34 = WarBoardAIManager_TypeInfo;
@@ -822,8 +822,8 @@ LABEL_27:
     goto LABEL_58;
   System_Collections_Generic_Dictionary_int__object___Clear(
     (System_Collections_Generic_Dictionary_int__object__o *)klass,
-    (const MethodInfo_3134128 *)Method_System_Collections_Generic_Dictionary_int__WarBoardSquareData__Clear__);
-  klass = (WarBoardAIRoute_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    (const MethodInfo_31489DC *)Method_System_Collections_Generic_Dictionary_int__WarBoardSquareData__Clear__);
+  klass = (WarBoardAIRoute_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !klass )
     goto LABEL_58;
   v35 = klass[1].fields.aiRouteMasterData;
@@ -854,7 +854,7 @@ LABEL_27:
         (System_Collections_Generic_Dictionary_int__object__o *)klass,
         *(_DWORD *)(v39 + 16),
         (Il2CppObject *)v39,
-        (const MethodInfo_3133FA0 *)Method_System_Collections_Generic_Dictionary_int__WarBoardSquareData__Add__);
+        (const MethodInfo_3148854 *)Method_System_Collections_Generic_Dictionary_int__WarBoardSquareData__Add__);
       v37 = monitor[6];
       if ( (int)++v38 >= v37 )
         goto LABEL_41;
@@ -872,13 +872,13 @@ LABEL_41:
   if ( !klass
     || (System_Collections_Generic_Dictionary_int__object___Clear(
           (System_Collections_Generic_Dictionary_int__object__o *)klass,
-          (const MethodInfo_3134128 *)Method_System_Collections_Generic_Dictionary_int__WarBoardItemData__Clear__),
-        (klass = (WarBoardAIRoute_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__)) == 0LL)
+          (const MethodInfo_31489DC *)Method_System_Collections_Generic_Dictionary_int__WarBoardItemData__Clear__),
+        (klass = (WarBoardAIRoute_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__)) == 0LL)
     || (v42 = klass[1].fields.aiRouteMasterData) == 0LL
     || (v43 = *(_QWORD *)&v42[1].fields.masterUniqueIndex) == 0 )
   {
 LABEL_58:
-    sub_1B68930(klass, v22);
+    sub_1B71828(klass, v22);
   }
   v44 = *(_DWORD *)(v43 + 24);
   if ( v44 >= 1 )
@@ -902,7 +902,7 @@ LABEL_58:
         (System_Collections_Generic_Dictionary_int__object__o *)klass,
         *(_DWORD *)(v46 + 16),
         (Il2CppObject *)v46,
-        (const MethodInfo_3133FA0 *)Method_System_Collections_Generic_Dictionary_int__WarBoardItemData__Add__);
+        (const MethodInfo_3148854 *)Method_System_Collections_Generic_Dictionary_int__WarBoardItemData__Add__);
       v44 = *(_DWORD *)(v43 + 24);
       if ( (int)++v45 >= v44 )
         goto LABEL_55;
@@ -914,7 +914,7 @@ LABEL_55:
   {
     v47 = WarBoardAIManager__Execute(this, *(_DWORD *)(v20 + 16), *(_DWORD *)(v20 + 20), v41);
     this->fields.executeTask = v47;
-    sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.executeTask, (int32_t)v47, v48, v49);
+    sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.executeTask, (int32_t)v47, v48, v49);
   }
 }
 
@@ -927,10 +927,10 @@ void __fastcall WarBoardAIManager__Update(WarBoardAIManager_o *this, const Metho
   int32_t v6; // w2
   int32_t v7; // w3
 
-  if ( (byte_4A0686E & 1) == 0 )
+  if ( (byte_4A1D6D2 & 1) == 0 )
   {
-    sub_1B686D4(&WarBoardManager_TypeInfo, method);
-    byte_4A0686E = 1;
+    sub_1B715CC(&WarBoardManager_TypeInfo, method);
+    byte_4A1D6D2 = 1;
   }
   executeTask = this->fields.executeTask;
   p_executeTask = (ServantStatusBattleListViewItem_o *)&this->fields.executeTask;
@@ -942,7 +942,7 @@ void __fastcall WarBoardAIManager__Update(WarBoardAIManager_o *this, const Metho
     if ( !WarBoardManager__IEnumeratorExecute(v4, 0LL) )
     {
       p_executeTask->klass = 0LL;
-      sub_1B68678(p_executeTask, 0, v6, v7);
+      sub_1B71570(p_executeTask, 0, v6, v7);
     }
   }
 }
@@ -968,31 +968,31 @@ void __fastcall WarBoardAIManager__UpdateAiId(
   Il2CppObject *v19; // x0
   const MethodInfo *v20; // x3
 
-  if ( (byte_4A06876 & 1) == 0 )
+  if ( (byte_4A1D6DA & 1) == 0 )
   {
-    sub_1B686D4(&Method_System_Linq_Enumerable_FirstOrDefault_WarBoardAI___, *(_QWORD *)&forceId);
-    sub_1B686D4(&System_Func_WarBoardAI__bool__TypeInfo, v11);
-    sub_1B686D4(&Method_WarBoardAIManager___c__DisplayClass29_0__UpdateAiId_b__0__, v12);
-    sub_1B686D4(&WarBoardAIManager___c__DisplayClass29_0_TypeInfo, v13);
-    byte_4A06876 = 1;
+    sub_1B715CC(&Method_System_Linq_Enumerable_FirstOrDefault_WarBoardAI___, *(_QWORD *)&forceId);
+    sub_1B715CC(&System_Func_WarBoardAI__bool__TypeInfo, v11);
+    sub_1B715CC(&Method_WarBoardAIManager___c__DisplayClass29_0__UpdateAiId_b__0__, v12);
+    sub_1B715CC(&WarBoardAIManager___c__DisplayClass29_0_TypeInfo, v13);
+    byte_4A1D6DA = 1;
   }
-  v14 = sub_1B68920(WarBoardAIManager___c__DisplayClass29_0_TypeInfo);
+  v14 = sub_1B71818(WarBoardAIManager___c__DisplayClass29_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v14, 0LL);
   if ( !v14 )
     goto LABEL_8;
   *(_DWORD *)(v14 + 16) = forceId;
   *(_DWORD *)(v14 + 20) = groupId;
   warBoardAIList = this->fields.warBoardAIList;
-  v18 = (System_Func_object__bool__o *)sub_1B68920(System_Func_WarBoardAI__bool__TypeInfo);
+  v18 = (System_Func_object__bool__o *)sub_1B71818(System_Func_WarBoardAI__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v18,
     (Il2CppObject *)v14,
     Method_WarBoardAIManager___c__DisplayClass29_0__UpdateAiId_b__0__,
     0LL);
-  v19 = System_Linq_Enumerable__FirstOrDefault_object__48686452(
+  v19 = System_Linq_Enumerable__FirstOrDefault_object__48759088(
           (System_Collections_Generic_IEnumerable_TSource__o *)warBoardAIList,
           (System_Func_TSource__bool__o *)v18,
-          (const MethodInfo_2E6E574 *)Method_System_Linq_Enumerable_FirstOrDefault_WarBoardAI___);
+          (const MethodInfo_2E80130 *)Method_System_Linq_Enumerable_FirstOrDefault_WarBoardAI___);
   if ( v19 )
   {
     klass = (WarBoardAIRoute_o *)v19[1].klass;
@@ -1002,7 +1002,7 @@ void __fastcall WarBoardAIManager__UpdateAiId(
       return;
     }
 LABEL_8:
-    sub_1B68930(klass, v16);
+    sub_1B71828(klass, v16);
   }
 }
 
@@ -1015,16 +1015,16 @@ System_Collections_IEnumerator_o *__fastcall WarBoardAIManager__Wait(
   int32_t v4; // w2
   int32_t v5; // w3
 
-  if ( (byte_4A0686A & 1) == 0 )
+  if ( (byte_4A1D6CE & 1) == 0 )
   {
-    sub_1B686D4(&WarBoardAIManager__Wait_d__8_TypeInfo, method);
-    byte_4A0686A = 1;
+    sub_1B715CC(&WarBoardAIManager__Wait_d__8_TypeInfo, method);
+    byte_4A1D6CE = 1;
   }
-  v3 = sub_1B68920(WarBoardAIManager__Wait_d__8_TypeInfo);
+  v3 = sub_1B71818(WarBoardAIManager__Wait_d__8_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -1174,41 +1174,41 @@ bool __fastcall WarBoardAIManager__Execute_d__12__MoveNext(
   const MethodInfo *v124; // x1
 
   v4 = this;
-  if ( (byte_4A0687B & 1) == 0 )
+  if ( (byte_4A1D6DF & 1) == 0 )
   {
-    sub_1B686D4(&System_Action_WarBoardPieceData__TypeInfo, method);
-    sub_1B686D4(&Method_BasicHelper_ForEach_WarBoardPieceData___, v5);
-    sub_1B686D4(&bool_TypeInfo, v6);
-    sub_1B686D4(&DefenseAreaData_TypeInfo, v7);
-    sub_1B686D4(&Method_System_Linq_Enumerable_FirstOrDefault_WarBoardAI___, v8);
-    sub_1B686D4(&Method_System_Linq_Enumerable_ToArray_WarBoardPieceData___, v9);
-    sub_1B686D4(&Method_System_Linq_Enumerable_Where_WarBoardPieceData___, v10);
-    sub_1B686D4(&System_Func_bool__TypeInfo, v11);
-    sub_1B686D4(&System_Func_WarBoardAI__bool__TypeInfo, v12);
-    sub_1B686D4(&System_Func_WarBoardPieceData__bool__TypeInfo, v13);
-    sub_1B686D4(&System_Collections_IEnumerator_TypeInfo, v14);
-    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v15);
-    sub_1B686D4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v16);
-    sub_1B686D4(&Method_WarBoardAIManager___c__Execute_b__12_1__, v17);
-    sub_1B686D4(&Method_WarBoardAIManager___c__Execute_b__12_3__, v18);
-    sub_1B686D4(&Method_WarBoardAIManager___c__Execute_b__12_4__, v19);
-    sub_1B686D4(&Method_WarBoardAIManager___c__DisplayClass12_0__Execute_b__0__, v20);
-    sub_1B686D4(&Method_WarBoardAIManager___c__DisplayClass12_0__Execute_b__2__, v21);
-    sub_1B686D4(&WarBoardAIManager___c__DisplayClass12_0_TypeInfo, v22);
-    sub_1B686D4(&WarBoardAIManager___c_TypeInfo, v23);
-    sub_1B686D4(&UnityEngine_WaitWhile_TypeInfo, v24);
-    this = (WarBoardAIManager__Execute_d__12_o *)sub_1B686D4(&WarBoardManager_TypeInfo, v25);
-    byte_4A0687B = 1;
+    sub_1B715CC(&System_Action_WarBoardPieceData__TypeInfo, method);
+    sub_1B715CC(&Method_BasicHelper_ForEach_WarBoardPieceData___, v5);
+    sub_1B715CC(&bool_TypeInfo, v6);
+    sub_1B715CC(&DefenseAreaData_TypeInfo, v7);
+    sub_1B715CC(&Method_System_Linq_Enumerable_FirstOrDefault_WarBoardAI___, v8);
+    sub_1B715CC(&Method_System_Linq_Enumerable_ToArray_WarBoardPieceData___, v9);
+    sub_1B715CC(&Method_System_Linq_Enumerable_Where_WarBoardPieceData___, v10);
+    sub_1B715CC(&System_Func_bool__TypeInfo, v11);
+    sub_1B715CC(&System_Func_WarBoardAI__bool__TypeInfo, v12);
+    sub_1B715CC(&System_Func_WarBoardPieceData__bool__TypeInfo, v13);
+    sub_1B715CC(&System_Collections_IEnumerator_TypeInfo, v14);
+    sub_1B715CC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v15);
+    sub_1B715CC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v16);
+    sub_1B715CC(&Method_WarBoardAIManager___c__Execute_b__12_1__, v17);
+    sub_1B715CC(&Method_WarBoardAIManager___c__Execute_b__12_3__, v18);
+    sub_1B715CC(&Method_WarBoardAIManager___c__Execute_b__12_4__, v19);
+    sub_1B715CC(&Method_WarBoardAIManager___c__DisplayClass12_0__Execute_b__0__, v20);
+    sub_1B715CC(&Method_WarBoardAIManager___c__DisplayClass12_0__Execute_b__2__, v21);
+    sub_1B715CC(&WarBoardAIManager___c__DisplayClass12_0_TypeInfo, v22);
+    sub_1B715CC(&WarBoardAIManager___c_TypeInfo, v23);
+    sub_1B715CC(&UnityEngine_WaitWhile_TypeInfo, v24);
+    this = (WarBoardAIManager__Execute_d__12_o *)sub_1B715CC(&WarBoardManager_TypeInfo, v25);
+    byte_4A1D6DF = 1;
   }
   _4__this = v4->fields.__4__this;
   switch ( v4->fields.__1__state )
   {
     case 0:
       v4->fields.__1__state = -1;
-      v27 = (Il2CppObject *)sub_1B68920(WarBoardAIManager___c__DisplayClass12_0_TypeInfo);
+      v27 = (Il2CppObject *)sub_1B71818(WarBoardAIManager___c__DisplayClass12_0_TypeInfo);
       System_Object___ctor(v27, 0LL);
       v4->fields.__8__1 = (struct WarBoardAIManager___c__DisplayClass12_0_o *)v27;
-      sub_1B68678((ServantStatusBattleListViewItem_o *)&v4->fields.__8__1, (int32_t)v27, v28, v29);
+      sub_1B71570((ServantStatusBattleListViewItem_o *)&v4->fields.__8__1, (int32_t)v27, v28, v29);
       _8__1 = (Il2CppObject *)v4->fields.__8__1;
       if ( !_8__1 )
         goto LABEL_123;
@@ -1216,14 +1216,14 @@ bool __fastcall WarBoardAIManager__Execute_d__12__MoveNext(
       if ( !_4__this )
         goto LABEL_123;
       warBoardAIList = (System_Collections_Generic_IEnumerable_TSource__o *)_4__this->fields.warBoardAIList;
-      v32 = (System_Func_object__bool__o *)sub_1B68920(System_Func_WarBoardAI__bool__TypeInfo);
+      v32 = (System_Func_object__bool__o *)sub_1B71818(System_Func_WarBoardAI__bool__TypeInfo);
       System_Func_object__bool____ctor(v32, _8__1, Method_WarBoardAIManager___c__DisplayClass12_0__Execute_b__0__, 0LL);
-      v33 = System_Linq_Enumerable__FirstOrDefault_object__48686452(
+      v33 = System_Linq_Enumerable__FirstOrDefault_object__48759088(
               warBoardAIList,
               (System_Func_TSource__bool__o *)v32,
-              (const MethodInfo_2E6E574 *)Method_System_Linq_Enumerable_FirstOrDefault_WarBoardAI___);
+              (const MethodInfo_2E80130 *)Method_System_Linq_Enumerable_FirstOrDefault_WarBoardAI___);
       v4->fields._ai_5__2 = (struct WarBoardAI_o *)v33;
-      sub_1B68678((ServantStatusBattleListViewItem_o *)&v4->fields._ai_5__2, (int32_t)v33, v34, v35);
+      sub_1B71570((ServantStatusBattleListViewItem_o *)&v4->fields._ai_5__2, (int32_t)v33, v34, v35);
       if ( !v4->fields._ai_5__2 )
         return 0;
       goto LABEL_102;
@@ -1260,7 +1260,7 @@ bool __fastcall WarBoardAIManager__Execute_d__12__MoveNext(
       goto LABEL_123;
     if ( !ai_5__2->fields.isEndPhase )
     {
-      this = (WarBoardAIManager__Execute_d__12_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+      this = (WarBoardAIManager__Execute_d__12_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
       if ( this )
       {
         this = (WarBoardAIManager__Execute_d__12_o *)this[4].fields.__2__current;
@@ -1268,7 +1268,7 @@ bool __fastcall WarBoardAIManager__Execute_d__12__MoveNext(
         {
           if ( WarBoardData__IsWin((WarBoardData_o *)this, 0LL) )
             return 0;
-          this = (WarBoardAIManager__Execute_d__12_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+          this = (WarBoardAIManager__Execute_d__12_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
           if ( !this )
             goto LABEL_123;
           this = (WarBoardAIManager__Execute_d__12_o *)this[4].fields.__2__current;
@@ -1284,7 +1284,7 @@ bool __fastcall WarBoardAIManager__Execute_d__12__MoveNext(
             {
               v4->fields.__2__current = 0LL;
               p__2__current = &v4->fields.__2__current;
-              sub_1B68678((ServantStatusBattleListViewItem_o *)p__2__current, 0, v106, (int32_t)v107);
+              sub_1B71570((ServantStatusBattleListViewItem_o *)p__2__current, 0, v106, (int32_t)v107);
               v92 = 5;
               goto LABEL_65;
             }
@@ -1298,19 +1298,19 @@ bool __fastcall WarBoardAIManager__Execute_d__12__MoveNext(
         }
       }
 LABEL_123:
-      sub_1B68930(this, method);
+      sub_1B71828(this, method);
     }
     do
     {
 LABEL_101:
       v4->fields._actPieces_5__4 = 0LL;
-      sub_1B68678((ServantStatusBattleListViewItem_o *)&v4->fields._actPieces_5__4, 0, v2, (int32_t)v3);
+      sub_1B71570((ServantStatusBattleListViewItem_o *)&v4->fields._actPieces_5__4, 0, v2, (int32_t)v3);
       v4->fields._exe_5__5 = 0LL;
-      sub_1B68678((ServantStatusBattleListViewItem_o *)&v4->fields._exe_5__5, 0, v110, v111);
+      sub_1B71570((ServantStatusBattleListViewItem_o *)&v4->fields._exe_5__5, 0, v110, v111);
 LABEL_102:
       if ( !_4__this->fields.exec )
         return 0;
-      this = (WarBoardAIManager__Execute_d__12_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+      this = (WarBoardAIManager__Execute_d__12_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
       if ( !this )
         goto LABEL_123;
       if ( WarBoardManager__HasSchedule((WarBoardManager_o *)this, 0LL) )
@@ -1330,32 +1330,32 @@ LABEL_102:
             v57 = WarBoardAIManager___c_TypeInfo;
           }
           v59 = (Il2CppObject *)v57->static_fields->__9;
-          _9__12_1 = (System_Func_bool__o *)sub_1B68920(System_Func_bool__TypeInfo);
+          _9__12_1 = (System_Func_bool__o *)sub_1B71818(System_Func_bool__TypeInfo);
           System_Func_bool____ctor(_9__12_1, v59, Method_WarBoardAIManager___c__Execute_b__12_1__, 0LL);
           static_fields = WarBoardAIManager___c_TypeInfo->static_fields;
           static_fields->__9__12_1 = _9__12_1;
-          sub_1B68678((ServantStatusBattleListViewItem_o *)&static_fields->__9__12_1, (int32_t)_9__12_1, v61, v62);
+          sub_1B71570((ServantStatusBattleListViewItem_o *)&static_fields->__9__12_1, (int32_t)_9__12_1, v61, v62);
         }
-        v63 = (UnityEngine_WaitWhile_o *)sub_1B68920(UnityEngine_WaitWhile_TypeInfo);
+        v63 = (UnityEngine_WaitWhile_o *)sub_1B71818(UnityEngine_WaitWhile_TypeInfo);
         UnityEngine_WaitWhile___ctor(v63, _9__12_1, 0LL);
         v4->fields.__2__current = (Il2CppObject *)v63;
         v64 = (ServantStatusBattleListViewItem_o *)&v4->fields.__2__current;
-        sub_1B68678(v64, (int32_t)v63, v65, v66);
+        sub_1B71570(v64, (int32_t)v63, v65, v66);
         result = 1;
         *(_DWORD *)&v64[-1].fields.isMine = 1;
         return result;
       }
 LABEL_19:
       v4->fields._isNextPhase_5__3 = 0;
-      this = (WarBoardAIManager__Execute_d__12_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (WarBoardAIManager__Execute_d__12_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !this )
         goto LABEL_123;
       CommonUI__SetConnect((CommonUI_o *)this, 1, 0LL);
-      this = (WarBoardAIManager__Execute_d__12_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (WarBoardAIManager__Execute_d__12_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !this )
         goto LABEL_123;
       CommonUI__SetLoadMode((CommonUI_o *)this, 10, 0LL);
-      this = (WarBoardAIManager__Execute_d__12_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+      this = (WarBoardAIManager__Execute_d__12_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
       if ( !this )
         goto LABEL_123;
       this = (WarBoardAIManager__Execute_d__12_o *)this[4].fields.__2__current;
@@ -1369,24 +1369,24 @@ LABEL_19:
       v39 = this;
       if ( !_9__2 )
       {
-        _9__2 = (System_Func_object__bool__o *)sub_1B68920(System_Func_WarBoardPieceData__bool__TypeInfo);
+        _9__2 = (System_Func_object__bool__o *)sub_1B71818(System_Func_WarBoardPieceData__bool__TypeInfo);
         System_Func_object__bool____ctor(
           _9__2,
           (Il2CppObject *)v37,
           Method_WarBoardAIManager___c__DisplayClass12_0__Execute_b__2__,
           0LL);
         v37->fields.__9__2 = (struct System_Func_WarBoardPieceData__bool__o *)_9__2;
-        sub_1B68678((ServantStatusBattleListViewItem_o *)&v37->fields.__9__2, (int32_t)_9__2, v40, v41);
+        sub_1B71570((ServantStatusBattleListViewItem_o *)&v37->fields.__9__2, (int32_t)_9__2, v40, v41);
       }
       v42 = System_Linq_Enumerable__Where_object_(
               (System_Collections_Generic_IEnumerable_TSource__o *)v39,
               (System_Func_TSource__bool__o *)_9__2,
-              (const MethodInfo_2E87B14 *)Method_System_Linq_Enumerable_Where_WarBoardPieceData___);
+              (const MethodInfo_2E99B5C *)Method_System_Linq_Enumerable_Where_WarBoardPieceData___);
       v43 = System_Linq_Enumerable__ToArray_object_(
               v42,
-              (const MethodInfo_2E81E3C *)Method_System_Linq_Enumerable_ToArray_WarBoardPieceData___);
+              (const MethodInfo_2E93E84 *)Method_System_Linq_Enumerable_ToArray_WarBoardPieceData___);
       v4->fields._actPieces_5__4 = (struct WarBoardPieceData_array *)v43;
-      sub_1B68678((ServantStatusBattleListViewItem_o *)&v4->fields._actPieces_5__4, (int32_t)v43, v44, v45);
+      sub_1B71570((ServantStatusBattleListViewItem_o *)&v4->fields._actPieces_5__4, (int32_t)v43, v44, v45);
       v46 = WarBoardAIManager___c_TypeInfo;
       actPieces_5__4 = (System_Collections_Generic_IEnumerable_T__o *)v4->fields._actPieces_5__4;
       if ( !WarBoardAIManager___c_TypeInfo->_2.cctor_finished )
@@ -1403,16 +1403,16 @@ LABEL_19:
           v46 = WarBoardAIManager___c_TypeInfo;
         }
         v49 = (Il2CppObject *)v46->static_fields->__9;
-        _9__12_3 = (System_Action_object__o *)sub_1B68920(System_Action_WarBoardPieceData__TypeInfo);
+        _9__12_3 = (System_Action_object__o *)sub_1B71818(System_Action_WarBoardPieceData__TypeInfo);
         System_Action_object____ctor(_9__12_3, v49, Method_WarBoardAIManager___c__Execute_b__12_3__, 0LL);
         v50 = WarBoardAIManager___c_TypeInfo->static_fields;
         v50->__9__12_3 = (struct System_Action_WarBoardPieceData__o *)_9__12_3;
-        sub_1B68678((ServantStatusBattleListViewItem_o *)&v50->__9__12_3, (int32_t)_9__12_3, v51, v52);
+        sub_1B71570((ServantStatusBattleListViewItem_o *)&v50->__9__12_3, (int32_t)_9__12_3, v51, v52);
       }
       BasicHelper__ForEach_object_(
         actPieces_5__4,
         (System_Action_T__o *)_9__12_3,
-        (const MethodInfo_2E37140 *)Method_BasicHelper_ForEach_WarBoardPieceData___);
+        (const MethodInfo_2E487A0 *)Method_BasicHelper_ForEach_WarBoardPieceData___);
       v53 = DefenseAreaData_TypeInfo;
       if ( !DefenseAreaData_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DefenseAreaData_TypeInfo);
@@ -1422,7 +1422,7 @@ LABEL_19:
         goto LABEL_123;
       v54 = WarBoardAI__Think((WarBoardAI_o *)this, method);
       v4->fields._exe_5__5 = v54;
-      sub_1B68678((ServantStatusBattleListViewItem_o *)&v4->fields._exe_5__5, (int32_t)v54, v55, v56);
+      sub_1B71570((ServantStatusBattleListViewItem_o *)&v4->fields._exe_5__5, (int32_t)v54, v55, v56);
       v4->fields._prevTime_5__6 = UnityEngine_Time__get_realtimeSinceStartup(0LL);
       while ( 1 )
       {
@@ -1447,7 +1447,7 @@ LABEL_68:
         else
         {
 LABEL_73:
-          p_method = sub_1BBA6B4(v4->fields._exe_5__5, System_Collections_IEnumerator_TypeInfo, 0LL);
+          p_method = sub_1BC35AC(v4->fields._exe_5__5, System_Collections_IEnumerator_TypeInfo, 0LL);
         }
         this = (WarBoardAIManager__Execute_d__12_o *)(*(__int64 (__fastcall **)(struct System_Collections_IEnumerator_o *, _QWORD))p_method)(
                                                        exe_5__5,
@@ -1474,12 +1474,12 @@ LABEL_73:
         else
         {
 LABEL_48:
-          v72 = sub_1BBA6B4(v4->fields._exe_5__5, System_Collections_IEnumerator_TypeInfo, 1LL);
+          v72 = sub_1BC35AC(v4->fields._exe_5__5, System_Collections_IEnumerator_TypeInfo, 1LL);
         }
         v73 = (*(__int64 (__fastcall **)(struct System_Collections_IEnumerator_o *, _QWORD))v72)(
                 v68,
                 *(_QWORD *)(v72 + 8));
-        this = (WarBoardAIManager__Execute_d__12_o *)sub_1B68810(v73, System_Collections_IEnumerator_TypeInfo);
+        this = (WarBoardAIManager__Execute_d__12_o *)sub_1B71708(v73, System_Collections_IEnumerator_TypeInfo);
         v74 = v4->fields._exe_5__5;
         if ( !v74 )
           goto LABEL_123;
@@ -1501,7 +1501,7 @@ LABEL_48:
         else
         {
 LABEL_55:
-          v79 = sub_1BBA6B4(v4->fields._exe_5__5, System_Collections_IEnumerator_TypeInfo, 1LL);
+          v79 = sub_1BC35AC(v4->fields._exe_5__5, System_Collections_IEnumerator_TypeInfo, 1LL);
         }
         this = (WarBoardAIManager__Execute_d__12_o *)(*(__int64 (__fastcall **)(struct System_Collections_IEnumerator_o *, _QWORD))v79)(
                                                        v74,
@@ -1509,11 +1509,11 @@ LABEL_55:
         v80 = this;
         if ( v76 )
         {
-          v4->fields._enumeratorChild_5__7 = (struct System_Collections_IEnumerator_o *)sub_1B68810(
+          v4->fields._enumeratorChild_5__7 = (struct System_Collections_IEnumerator_o *)sub_1B71708(
                                                                                           this,
                                                                                           System_Collections_IEnumerator_TypeInfo);
-          v81 = sub_1B68810(v80, System_Collections_IEnumerator_TypeInfo);
-          sub_1B68678((ServantStatusBattleListViewItem_o *)&v4->fields._enumeratorChild_5__7, v81, v82, v83);
+          v81 = sub_1B71708(v80, System_Collections_IEnumerator_TypeInfo);
+          sub_1B71570((ServantStatusBattleListViewItem_o *)&v4->fields._enumeratorChild_5__7, v81, v82, v83);
 LABEL_59:
           p_enumeratorChild_5__7 = &v4->fields._enumeratorChild_5__7;
           while ( 1 )
@@ -1529,13 +1529,13 @@ LABEL_59:
               v4->fields.__2__current = 0LL;
               p__2__current = &v4->fields.__2__current;
               *((float *)p__2__current + 16) = realtimeSinceStartup;
-              sub_1B68678((ServantStatusBattleListViewItem_o *)p__2__current, 0, v90, v91);
+              sub_1B71570((ServantStatusBattleListViewItem_o *)p__2__current, 0, v90, v91);
               v92 = 2;
               goto LABEL_65;
             }
           }
           *p_enumeratorChild_5__7 = 0LL;
-          sub_1B68678((ServantStatusBattleListViewItem_o *)&v4->fields._enumeratorChild_5__7, 0, v86, v87);
+          sub_1B71570((ServantStatusBattleListViewItem_o *)&v4->fields._enumeratorChild_5__7, 0, v86, v87);
           goto LABEL_67;
         }
         if ( this && (System_Boolean_c *)this->klass == bool_TypeInfo )
@@ -1547,7 +1547,7 @@ LABEL_67:
           v4->fields.__2__current = 0LL;
           p__2__current = &v4->fields.__2__current;
           *((float *)p__2__current + 16) = v117;
-          sub_1B68678((ServantStatusBattleListViewItem_o *)p__2__current, 0, v118, v119);
+          sub_1B71570((ServantStatusBattleListViewItem_o *)p__2__current, 0, v118, v119);
           v92 = 3;
           goto LABEL_65;
         }
@@ -1572,7 +1572,7 @@ LABEL_67:
       else
       {
 LABEL_111:
-        v116 = sub_1BBA6B4(v4->fields._exe_5__5, System_Collections_IEnumerator_TypeInfo, 1LL);
+        v116 = sub_1BC35AC(v4->fields._exe_5__5, System_Collections_IEnumerator_TypeInfo, 1LL);
       }
       this = (WarBoardAIManager__Execute_d__12_o *)(*(__int64 (__fastcall **)(struct System_Collections_IEnumerator_o *, _QWORD))v116)(
                                                      v112,
@@ -1581,7 +1581,7 @@ LABEL_111:
         goto LABEL_123;
       if ( this->klass->_1.element_class != bool_TypeInfo->_1.element_class )
       {
-        sub_1B68BF0(this);
+        sub_1B71AE8(this);
         return (unsigned __int8)WarBoardAIManager__Execute_d__12__System_Collections_Generic_IEnumerator_System_Object__get_Current(
                                   v123,
                                   v124);
@@ -1604,27 +1604,27 @@ LABEL_76:
           v98 = WarBoardAIManager___c_TypeInfo;
         }
         v101 = (Il2CppObject *)v98->static_fields->__9;
-        _9__12_4 = (System_Action_object__o *)sub_1B68920(System_Action_WarBoardPieceData__TypeInfo);
+        _9__12_4 = (System_Action_object__o *)sub_1B71818(System_Action_WarBoardPieceData__TypeInfo);
         System_Action_object____ctor(_9__12_4, v101, Method_WarBoardAIManager___c__Execute_b__12_4__, 0LL);
         v102 = WarBoardAIManager___c_TypeInfo->static_fields;
         v102->__9__12_4 = (struct System_Action_WarBoardPieceData__o *)_9__12_4;
-        sub_1B68678((ServantStatusBattleListViewItem_o *)&v102->__9__12_4, (int32_t)_9__12_4, v103, v104);
+        sub_1B71570((ServantStatusBattleListViewItem_o *)&v102->__9__12_4, (int32_t)_9__12_4, v103, v104);
       }
       BasicHelper__ForEach_object_(
         v99,
         (System_Action_T__o *)_9__12_4,
-        (const MethodInfo_2E37140 *)Method_BasicHelper_ForEach_WarBoardPieceData___);
-      this = (WarBoardAIManager__Execute_d__12_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        (const MethodInfo_2E487A0 *)Method_BasicHelper_ForEach_WarBoardPieceData___);
+      this = (WarBoardAIManager__Execute_d__12_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !this )
         goto LABEL_123;
       CommonUI__SetLoadMode((CommonUI_o *)this, 0, 0LL);
-      this = (WarBoardAIManager__Execute_d__12_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (WarBoardAIManager__Execute_d__12_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !this )
         goto LABEL_123;
       CommonUI__SetConnect((CommonUI_o *)this, 0, 0LL);
       if ( v4->fields._isNextPhase_5__3 )
       {
-        this = (WarBoardAIManager__Execute_d__12_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+        this = (WarBoardAIManager__Execute_d__12_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
         if ( this )
         {
           WarBoardManager__NextTurn((WarBoardManager_o *)this, 0LL);
@@ -1652,7 +1652,7 @@ LABEL_85:
   v120 = WarBoardAIManager__Wait(_4__this, method);
   v4->fields.__2__current = (Il2CppObject *)v120;
   p__2__current = &v4->fields.__2__current;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)p__2__current, (int32_t)v120, v121, v122);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)p__2__current, (int32_t)v120, v121, v122);
   v92 = 4;
 LABEL_65:
   *((_DWORD *)p__2__current - 2) = v92;
@@ -1676,11 +1676,11 @@ void __fastcall __noreturn WarBoardAIManager__Execute_d__12__System_Collections_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B686E8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B68920(v2);
+  v2 = sub_1B715E0(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B71818(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B686E8(&Method_WarBoardAIManager__Execute_d__12_System_Collections_IEnumerator_Reset__);
-  sub_1B687FC(v3, v4);
+  v4 = sub_1B715E0(&Method_WarBoardAIManager__Execute_d__12_System_Collections_IEnumerator_Reset__);
+  sub_1B716F4(v3, v4);
 }
 
 
@@ -1723,12 +1723,12 @@ bool __fastcall WarBoardAIManager__Wait_d__8__MoveNext(WarBoardAIManager__Wait_d
   int32_t v11; // w3
   int32_t v12; // w8
 
-  if ( (byte_4A0687C & 1) == 0 )
+  if ( (byte_4A1D6E0 & 1) == 0 )
   {
-    sub_1B686D4(&System_Func_bool__TypeInfo, method);
-    sub_1B686D4(&UnityEngine_WaitWhile_TypeInfo, v3);
-    sub_1B686D4(&Method_WarBoardAIManager__Wait_b__8_0__, v4);
-    byte_4A0687C = 1;
+    sub_1B715CC(&System_Func_bool__TypeInfo, method);
+    sub_1B715CC(&UnityEngine_WaitWhile_TypeInfo, v3);
+    sub_1B715CC(&Method_WarBoardAIManager__Wait_b__8_0__, v4);
+    byte_4A1D6E0 = 1;
   }
   _1__state = this->fields.__1__state;
   result = 0;
@@ -1742,12 +1742,12 @@ bool __fastcall WarBoardAIManager__Wait_d__8__MoveNext(WarBoardAIManager__Wait_d
       return result;
     this->fields.__1__state = -1;
     _4__this = (Il2CppObject *)this->fields.__4__this;
-    v8 = (System_Func_bool__o *)sub_1B68920(System_Func_bool__TypeInfo);
+    v8 = (System_Func_bool__o *)sub_1B71818(System_Func_bool__TypeInfo);
     System_Func_bool____ctor(v8, _4__this, Method_WarBoardAIManager__Wait_b__8_0__, 0LL);
-    v9 = (UnityEngine_WaitWhile_o *)sub_1B68920(UnityEngine_WaitWhile_TypeInfo);
+    v9 = (UnityEngine_WaitWhile_o *)sub_1B71818(UnityEngine_WaitWhile_TypeInfo);
     UnityEngine_WaitWhile___ctor(v9, v8, 0LL);
     this->fields.__2__current = (Il2CppObject *)v9;
-    sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.__2__current, (int32_t)v9, v10, v11);
+    sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.__2__current, (int32_t)v9, v10, v11);
     v12 = 1;
     result = 1;
   }
@@ -1772,11 +1772,11 @@ void __fastcall __noreturn WarBoardAIManager__Wait_d__8__System_Collections_IEnu
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B686E8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B68920(v2);
+  v2 = sub_1B715E0(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B71818(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B686E8(&Method_WarBoardAIManager__Wait_d__8_System_Collections_IEnumerator_Reset__);
-  sub_1B687FC(v3, v4);
+  v4 = sub_1B715E0(&Method_WarBoardAIManager__Wait_d__8_System_Collections_IEnumerator_Reset__);
+  sub_1B716F4(v3, v4);
 }
 
 
@@ -1803,15 +1803,15 @@ void __fastcall WarBoardAIManager___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   int32_t v4; // w3
 
-  if ( (byte_4A06879 & 1) == 0 )
+  if ( (byte_4A1D6DD & 1) == 0 )
   {
-    sub_1B686D4(&WarBoardAIManager___c_TypeInfo, v1);
-    byte_4A06879 = 1;
+    sub_1B715CC(&WarBoardAIManager___c_TypeInfo, v1);
+    byte_4A1D6DD = 1;
   }
-  v2 = (Il2CppObject *)sub_1B68920(WarBoardAIManager___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B71818(WarBoardAIManager___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   WarBoardAIManager___c_TypeInfo->static_fields->__9 = (struct WarBoardAIManager___c_o *)v2;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)WarBoardAIManager___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)WarBoardAIManager___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -1826,14 +1826,14 @@ bool __fastcall WarBoardAIManager___c___Execute_b__12_1(WarBoardAIManager___c_o 
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4A0687A & 1) == 0 )
+  if ( (byte_4A1D6DE & 1) == 0 )
   {
-    sub_1B686D4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
-    byte_4A0687A = 1;
+    sub_1B715CC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
+    byte_4A1D6DE = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
-    sub_1B68930(0LL, v3);
+    sub_1B71828(0LL, v3);
   return WarBoardManager__HasSchedule((WarBoardManager_o *)Instance, 0LL);
 }
 
@@ -1844,7 +1844,7 @@ void __fastcall WarBoardAIManager___c___Execute_b__12_3(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B68930(this, 0LL);
+    sub_1B71828(this, 0LL);
   WarBoardPieceData__ActivateCacheMode(x, 1, 0LL);
 }
 
@@ -1855,7 +1855,7 @@ void __fastcall WarBoardAIManager___c___Execute_b__12_4(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B68930(this, 0LL);
+    sub_1B71828(this, 0LL);
   WarBoardPieceData__ActivateCacheMode(x, 0, 0LL);
 }
 
@@ -1876,7 +1876,7 @@ bool __fastcall WarBoardAIManager___c__DisplayClass11_0___StartThink_b__0(
   struct WarBoardAIRoute_o *routeClass; // x8
 
   if ( !x || (routeClass = x->fields.routeClass) == 0LL )
-    sub_1B68930(this, x);
+    sub_1B71828(this, x);
   return routeClass->fields.forceId == this->fields.forceId && routeClass->fields.groupId == this->fields.groupId;
 }
 
@@ -1897,7 +1897,7 @@ bool __fastcall WarBoardAIManager___c__DisplayClass12_0___Execute_b__0(
   struct WarBoardAIRoute_o *routeClass; // x8
 
   if ( !x || (routeClass = x->fields.routeClass) == 0LL )
-    sub_1B68930(this, x);
+    sub_1B71828(this, x);
   return routeClass->fields.forceId == this->fields.forceId && routeClass->fields.groupId == this->fields.groupId;
 }
 
@@ -1908,7 +1908,7 @@ bool __fastcall WarBoardAIManager___c__DisplayClass12_0___Execute_b__2(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B68930(this, 0LL);
+    sub_1B71828(this, 0LL);
   return x->fields._forceId_k__BackingField == this->fields.forceId
       && x->fields._groupId_k__BackingField == this->fields.groupId;
 }
@@ -1930,7 +1930,7 @@ bool __fastcall WarBoardAIManager___c__DisplayClass28_0___AddReinforcementsAI_b_
   struct WarBoardAIRoute_o *routeClass; // x8
 
   if ( !x || (routeClass = x->fields.routeClass) == 0LL )
-    sub_1B68930(this, x);
+    sub_1B71828(this, x);
   return routeClass->fields.forceId == this->fields.forceId && routeClass->fields.groupId == this->fields.groupId;
 }
 
@@ -1951,7 +1951,7 @@ bool __fastcall WarBoardAIManager___c__DisplayClass29_0___UpdateAiId_b__0(
   struct WarBoardAIRoute_o *routeClass; // x8
 
   if ( !x || (routeClass = x->fields.routeClass) == 0LL )
-    sub_1B68930(this, x);
+    sub_1B71828(this, x);
   return routeClass->fields.forceId == this->fields.forceId && routeClass->fields.groupId == this->fields.groupId;
 }
 
@@ -1972,6 +1972,6 @@ bool __fastcall WarBoardAIManager___c__DisplayClass9_0___StartAIPhase_b__0(
   struct WarBoardAIRoute_o *routeClass; // x8
 
   if ( !x || (routeClass = x->fields.routeClass) == 0LL )
-    sub_1B68930(this, x);
+    sub_1B71828(this, x);
   return routeClass->fields.forceId == this->fields.forceId && routeClass->fields.groupId == this->fields.groupId;
 }

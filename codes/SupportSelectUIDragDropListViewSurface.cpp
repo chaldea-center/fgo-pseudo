@@ -22,5 +22,5 @@ void __fastcall SupportSelectUIDragDropListViewSurface__set_DropObject(
   int32_t v3; // w3
 
   this->fields.dropObject = value;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.dropObject, (int32_t)value, (int32_t)method, v3);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.dropObject, (int32_t)value, (int32_t)method, v3);
 }

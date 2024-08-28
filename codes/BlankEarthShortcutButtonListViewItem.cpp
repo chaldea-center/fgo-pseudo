@@ -1,44 +1,59 @@
 void __fastcall BlankEarthShortcutButtonListViewItem___ctor(
         BlankEarthShortcutButtonListViewItem_o *this,
+        BlankEarthSpotNavimenuEntity_o *ent,
         int32_t index,
-        int32_t iconId,
-        System_String_o *name,
         UIAtlas_o *commonUiAtlas,
         UIAtlas_o *iconAtlas,
         System_Action_o *onClickAction,
         const MethodInfo *method)
 {
-  int32_t v14; // w2
-  int32_t v15; // w3
+  int32_t v12; // w2
+  int32_t v13; // w3
+  __int64 v14; // x0
+  __int64 v15; // x1
   int32_t v16; // w2
   int32_t v17; // w3
-  int32_t v18; // w2
-  int32_t v19; // w3
+  struct BlankEarthSpotNavimenuEntity_o *blankEarthSpotNavimenuEntity_k__BackingField; // x8
+  struct System_String_o *name; // x1
   int32_t v20; // w2
   int32_t v21; // w3
+  int32_t v22; // w2
+  int32_t v23; // w3
+  int32_t v24; // w2
+  int32_t v25; // w3
 
-  ListViewItem___ctor_40440732((ListViewItem_o *)this, index, 0LL);
-  this->fields._IconId_k__BackingField = iconId;
+  ListViewItem___ctor_40493632((ListViewItem_o *)this, index, 0LL);
+  this->fields._blankEarthSpotNavimenuEntity_k__BackingField = ent;
+  sub_1B71570(
+    (ServantStatusBattleListViewItem_o *)&this->fields._blankEarthSpotNavimenuEntity_k__BackingField,
+    (int32_t)ent,
+    v12,
+    v13);
+  blankEarthSpotNavimenuEntity_k__BackingField = this->fields._blankEarthSpotNavimenuEntity_k__BackingField;
+  if ( !blankEarthSpotNavimenuEntity_k__BackingField )
+    sub_1B71828(v14, v15);
+  this->fields._IconId_k__BackingField = blankEarthSpotNavimenuEntity_k__BackingField->fields.iconId;
+  name = blankEarthSpotNavimenuEntity_k__BackingField->fields.name;
   this->fields._Name_k__BackingField = name;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields._Name_k__BackingField, (int32_t)name, v14, v15);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields._Name_k__BackingField, (int32_t)name, v16, v17);
   this->fields._CommonUiAtlas_k__BackingField = commonUiAtlas;
-  sub_1B68678(
+  sub_1B71570(
     (ServantStatusBattleListViewItem_o *)&this->fields._CommonUiAtlas_k__BackingField,
     (int32_t)commonUiAtlas,
-    v16,
-    v17);
-  this->fields._IconAtlas_k__BackingField = iconAtlas;
-  sub_1B68678(
-    (ServantStatusBattleListViewItem_o *)&this->fields._IconAtlas_k__BackingField,
-    (int32_t)iconAtlas,
-    v18,
-    v19);
-  this->fields._OnClickAction_k__BackingField = onClickAction;
-  sub_1B68678(
-    (ServantStatusBattleListViewItem_o *)&this->fields._OnClickAction_k__BackingField,
-    (int32_t)onClickAction,
     v20,
     v21);
+  this->fields._IconAtlas_k__BackingField = iconAtlas;
+  sub_1B71570(
+    (ServantStatusBattleListViewItem_o *)&this->fields._IconAtlas_k__BackingField,
+    (int32_t)iconAtlas,
+    v22,
+    v23);
+  this->fields._OnClickAction_k__BackingField = onClickAction;
+  sub_1B71570(
+    (ServantStatusBattleListViewItem_o *)&this->fields._OnClickAction_k__BackingField,
+    (int32_t)onClickAction,
+    v24,
+    v25);
 }
 
 
@@ -82,6 +97,14 @@ System_Action_o *__fastcall BlankEarthShortcutButtonListViewItem__get_OnClickAct
 }
 
 
+BlankEarthSpotNavimenuEntity_o *__fastcall BlankEarthShortcutButtonListViewItem__get_blankEarthSpotNavimenuEntity(
+        BlankEarthShortcutButtonListViewItem_o *this,
+        const MethodInfo *method)
+{
+  return this->fields._blankEarthSpotNavimenuEntity_k__BackingField;
+}
+
+
 void __fastcall BlankEarthShortcutButtonListViewItem__set_CommonUiAtlas(
         BlankEarthShortcutButtonListViewItem_o *this,
         UIAtlas_o *value,
@@ -90,7 +113,7 @@ void __fastcall BlankEarthShortcutButtonListViewItem__set_CommonUiAtlas(
   int32_t v3; // w3
 
   this->fields._CommonUiAtlas_k__BackingField = value;
-  sub_1B68678(
+  sub_1B71570(
     (ServantStatusBattleListViewItem_o *)&this->fields._CommonUiAtlas_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -106,7 +129,7 @@ void __fastcall BlankEarthShortcutButtonListViewItem__set_IconAtlas(
   int32_t v3; // w3
 
   this->fields._IconAtlas_k__BackingField = value;
-  sub_1B68678(
+  sub_1B71570(
     (ServantStatusBattleListViewItem_o *)&this->fields._IconAtlas_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -131,7 +154,7 @@ void __fastcall BlankEarthShortcutButtonListViewItem__set_Name(
   int32_t v3; // w3
 
   this->fields._Name_k__BackingField = value;
-  sub_1B68678(
+  sub_1B71570(
     (ServantStatusBattleListViewItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -147,8 +170,24 @@ void __fastcall BlankEarthShortcutButtonListViewItem__set_OnClickAction(
   int32_t v3; // w3
 
   this->fields._OnClickAction_k__BackingField = value;
-  sub_1B68678(
+  sub_1B71570(
     (ServantStatusBattleListViewItem_o *)&this->fields._OnClickAction_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
+}
+
+
+void __fastcall BlankEarthShortcutButtonListViewItem__set_blankEarthSpotNavimenuEntity(
+        BlankEarthShortcutButtonListViewItem_o *this,
+        BlankEarthSpotNavimenuEntity_o *value,
+        const MethodInfo *method)
+{
+  int32_t v3; // w3
+
+  this->fields._blankEarthSpotNavimenuEntity_k__BackingField = value;
+  sub_1B71570(
+    (ServantStatusBattleListViewItem_o *)&this->fields._blankEarthSpotNavimenuEntity_k__BackingField,
     (int32_t)value,
     (int32_t)method,
     v3);

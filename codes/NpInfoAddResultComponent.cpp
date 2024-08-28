@@ -10,131 +10,155 @@ void __fastcall NpInfoAddResultComponent__SetDisplay(
         int32_t index,
         System_String_o *titleText,
         bool isRankUp,
+        int32_t transformCount,
         const MethodInfo *method)
 {
-  __int64 v11; // x1
-  __int64 v12; // x1
   __int64 v13; // x1
   __int64 v14; // x1
-  void *Instance; // x0
+  __int64 v15; // x1
   __int64 v16; // x1
-  DataManager_o *v17; // x26
+  void *Instance; // x0
+  __int64 v18; // x1
+  DataManager_o *v19; // x27
   Il2CppObject *MasterData_object; // x23
-  Il2CppObject *v19; // x22
-  _DWORD *v20; // x26
-  System_String_o **v21; // x24
-  TreasureDvcLvEntity_o *v22; // x25
-  int32_t v23; // w27
+  Il2CppObject *v21; // x22
+  _DWORD *v22; // x26
+  System_String_o **v23; // x24
+  TreasureDvcLvEntity_o *v24; // x25
+  int32_t v25; // w27
   UILabel_o *beforeLvLabel; // x26
   UILabel_o *beforeDetailLabel; // x24
-  struct UILabel_o *v26; // x8
-  _DWORD *v27; // x24
+  struct UILabel_o *v28; // x8
+  _DWORD *v29; // x24
   Il2CppObject *Entity; // x21
-  TreasureDvcLvEntity_o *v29; // x0
+  TreasureDvcLvEntity_o *v31; // x0
   UILabel_o *afterLvLabel; // x22
-  TreasureDvcLvEntity_o *v31; // x20
+  TreasureDvcLvEntity_o *v33; // x20
   UILabel_o *afterDetailLabel; // x21
-  struct UILabel_o *v33; // x8
+  struct UILabel_o *v35; // x8
 
-  if ( (byte_4A0C50F & 1) == 0 )
+  if ( (byte_4A233AB & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataManager_GetMasterData_ServantMaster___, npAddManager);
-    sub_1B686D4(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___, v11);
-    sub_1B686D4(&Method_DataManager_GetMasterData_TreasureDvcMaster___, v12);
-    sub_1B686D4(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__, v13);
-    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
-    byte_4A0C50F = 1;
+    sub_1B715CC(&Method_DataManager_GetMasterData_ServantMaster___, npAddManager);
+    sub_1B715CC(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___, v13);
+    sub_1B715CC(&Method_DataManager_GetMasterData_TreasureDvcMaster___, v14);
+    sub_1B715CC(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__, v15);
+    sub_1B715CC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
+    byte_4A233AB = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_25;
-  v17 = (DataManager_o *)Instance;
+    goto LABEL_30;
+  v19 = (DataManager_o *)Instance;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_TreasureDvcMaster___);
-  v19 = DataManager__GetMasterData_object_(
-          v17,
-          (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
-  DataManager__GetMasterData_object_(v17, (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_ServantMaster___);
+                        (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_TreasureDvcMaster___);
+  v21 = DataManager__GetMasterData_object_(
+          v19,
+          (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
+  DataManager__GetMasterData_object_(v19, (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_ServantMaster___);
+  if ( transformCount >= 2 )
+  {
+    Instance = this->fields.transformTitle;
+    if ( Instance )
+    {
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0LL);
+      Instance = this->fields.transformTitleLabel;
+      if ( Instance )
+        goto LABEL_10;
+    }
+LABEL_30:
+    sub_1B71828(Instance, v18);
+  }
+  Instance = this->fields.title;
+  if ( !Instance )
+    goto LABEL_30;
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0LL);
   Instance = this->fields.titleLabel;
   if ( !Instance )
-    goto LABEL_25;
+    goto LABEL_30;
+LABEL_10:
   UILabel__set_text((UILabel_o *)Instance, titleText, 0LL);
   Instance = this->fields.lvInfo;
   if ( !Instance )
-    goto LABEL_25;
+    goto LABEL_30;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, !isRankUp, 0LL);
   Instance = this->fields.rankInfo;
   if ( !Instance )
-    goto LABEL_25;
+    goto LABEL_30;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, isRankUp, 0LL);
   if ( !npAddManager )
-    goto LABEL_25;
+    goto LABEL_30;
   Instance = Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__GetBeforeNp(npAddManager, index, 0LL);
   if ( !Instance )
-    goto LABEL_25;
+    goto LABEL_30;
   if ( !MasterData_object )
-    goto LABEL_25;
-  v20 = Instance;
+    goto LABEL_30;
+  v22 = Instance;
   Instance = DataMasterBase_object__object__int___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                *((_DWORD *)Instance + 6),
-               (const MethodInfo_30E44C0 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
-  if ( !v19 )
-    goto LABEL_25;
-  v21 = (System_String_o **)Instance;
-  Instance = TreasureDvcLvMaster__GetEntity((TreasureDvcLvMaster_o *)v19, v20[6], v20[7], 0LL);
+               (const MethodInfo_30F8760 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
   if ( !v21 )
-    goto LABEL_25;
-  v22 = (TreasureDvcLvEntity_o *)Instance;
+    goto LABEL_30;
+  v23 = (System_String_o **)Instance;
+  Instance = TreasureDvcLvMaster__GetEntity((TreasureDvcLvMaster_o *)v21, v22[6], v22[7], 0LL);
+  if ( !v23 )
+    goto LABEL_30;
+  v24 = (TreasureDvcLvEntity_o *)Instance;
   Instance = this->fields.rubyLabel;
   if ( !Instance )
-    goto LABEL_25;
-  UILabel__set_text((UILabel_o *)Instance, v21[4], 0LL);
+    goto LABEL_30;
+  UILabel__set_text((UILabel_o *)Instance, v23[4], 0LL);
   Instance = this->fields.nameLabel;
   if ( !Instance )
-    goto LABEL_25;
-  v23 = (_DWORD)v20 + 28;
-  UILabel__set_text((UILabel_o *)Instance, v21[3], 0LL);
+    goto LABEL_30;
+  v25 = (_DWORD)v22 + 28;
+  UILabel__set_text((UILabel_o *)Instance, v23[3], 0LL);
   beforeLvLabel = this->fields.beforeLvLabel;
-  Instance = System_Int32__ToString(v23, 0LL);
+  Instance = System_Int32__ToString(v25, 0LL);
   if ( !beforeLvLabel )
-    goto LABEL_25;
+    goto LABEL_30;
   UILabel__set_text(beforeLvLabel, (System_String_o *)Instance, 0LL);
   Instance = this->fields.beforeRankLabel;
   if ( !Instance )
-    goto LABEL_25;
-  UILabel__set_text((UILabel_o *)Instance, v21[5], 0LL);
-  if ( !v22 )
-    goto LABEL_25;
+    goto LABEL_30;
+  UILabel__set_text((UILabel_o *)Instance, v23[5], 0LL);
+  if ( !v24 )
+    goto LABEL_30;
   beforeDetailLabel = this->fields.beforeDetailLabel;
-  Instance = TreasureDvcLvEntity__getDetalShort(v22, 0LL);
-  v26 = this->fields.beforeDetailLabel;
-  if ( !v26 )
-    goto LABEL_25;
-  WrapControlText__textAdjust(beforeDetailLabel, (System_String_o *)Instance, v26->fields.mFontSize, 0, 0, 0LL);
+  Instance = TreasureDvcLvEntity__getDetalShort(v24, 0LL);
+  v28 = this->fields.beforeDetailLabel;
+  if ( !v28 )
+    goto LABEL_30;
+  WrapControlText__textAdjust(beforeDetailLabel, (System_String_o *)Instance, v28->fields.mFontSize, 0, 0, 0LL);
   Instance = Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__GetAfterNp(npAddManager, index, 0LL);
   if ( !Instance )
-    goto LABEL_25;
-  v27 = Instance;
+    goto LABEL_30;
+  v29 = Instance;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
              *((_DWORD *)Instance + 6),
-             (const MethodInfo_30E44C0 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
-  v29 = TreasureDvcLvMaster__GetEntity((TreasureDvcLvMaster_o *)v19, v27[6], v27[7], 0LL);
+             (const MethodInfo_30F8760 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+  v31 = TreasureDvcLvMaster__GetEntity((TreasureDvcLvMaster_o *)v21, v29[6], v29[7], 0LL);
   afterLvLabel = this->fields.afterLvLabel;
-  v31 = v29;
-  Instance = System_Int32__ToString((int)v27 + 28, 0LL);
-  if ( !afterLvLabel
-    || (UILabel__set_text(afterLvLabel, (System_String_o *)Instance, 0LL), !Entity)
-    || (Instance = this->fields.afterRankLabel) == 0LL
-    || (UILabel__set_text((UILabel_o *)Instance, (System_String_o *)Entity[2].monitor, 0LL), !v31)
-    || (afterDetailLabel = this->fields.afterDetailLabel,
-        Instance = TreasureDvcLvEntity__getDetalShort(v31, 0LL),
-        (v33 = this->fields.afterDetailLabel) == 0LL) )
-  {
-LABEL_25:
-    sub_1B68930(Instance, v16);
-  }
-  WrapControlText__textAdjust(afterDetailLabel, (System_String_o *)Instance, v33->fields.mFontSize, 0, 0, 0LL);
+  v33 = v31;
+  Instance = System_Int32__ToString((int)v29 + 28, 0LL);
+  if ( !afterLvLabel )
+    goto LABEL_30;
+  UILabel__set_text(afterLvLabel, (System_String_o *)Instance, 0LL);
+  if ( !Entity )
+    goto LABEL_30;
+  Instance = this->fields.afterRankLabel;
+  if ( !Instance )
+    goto LABEL_30;
+  UILabel__set_text((UILabel_o *)Instance, (System_String_o *)Entity[2].monitor, 0LL);
+  if ( !v33 )
+    goto LABEL_30;
+  afterDetailLabel = this->fields.afterDetailLabel;
+  Instance = TreasureDvcLvEntity__getDetalShort(v33, 0LL);
+  v35 = this->fields.afterDetailLabel;
+  if ( !v35 )
+    goto LABEL_30;
+  WrapControlText__textAdjust(afterDetailLabel, (System_String_o *)Instance, v35->fields.mFontSize, 0, 0, 0LL);
 }

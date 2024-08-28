@@ -15,25 +15,25 @@ void __fastcall SetSvtRandOptionControl__Init(SetSvtRandOptionControl_o *this, c
   UILabel_o *svtRandDispInfoLb; // x20
   const MethodInfo *v10; // x1
 
-  if ( (byte_4A04279 & 1) == 0 )
+  if ( (byte_4A1B0CE & 1) == 0 )
   {
-    sub_1B686D4(&LocalizationManager_TypeInfo, method);
-    sub_1B686D4(&OptionManager_TypeInfo, v3);
-    sub_1B686D4(&StringLiteral_9666/*"OPTION_SVT_RAND_DISP"*/, v4);
-    sub_1B686D4(&StringLiteral_9665/*"OPTION_SVT_EXPLANATION"*/, v5);
-    byte_4A04279 = 1;
+    sub_1B715CC(&LocalizationManager_TypeInfo, method);
+    sub_1B715CC(&OptionManager_TypeInfo, v3);
+    sub_1B715CC(&StringLiteral_9673/*"OPTION_SVT_RAND_DISP"*/, v4);
+    sub_1B715CC(&StringLiteral_9672/*"OPTION_SVT_EXPLANATION"*/, v5);
+    byte_4A1B0CE = 1;
   }
   svtRandDispTitle = this->fields.svtRandDispTitle;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9666/*"OPTION_SVT_RAND_DISP"*/, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9673/*"OPTION_SVT_RAND_DISP"*/, 0LL);
   if ( !svtRandDispTitle
     || (UILabel__set_text(svtRandDispTitle, v7, 0LL),
         svtRandDispInfoLb = this->fields.svtRandDispInfoLb,
-        v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9665/*"OPTION_SVT_EXPLANATION"*/, 0LL),
+        v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9672/*"OPTION_SVT_EXPLANATION"*/, 0LL),
         !svtRandDispInfoLb) )
   {
-    sub_1B68930(v7, v8);
+    sub_1B71828(v7, v8);
   }
   UILabel__set_text(svtRandDispInfoLb, v7, 0LL);
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -49,15 +49,15 @@ void __fastcall SetSvtRandOptionControl__OnChangeBtn(SetSvtRandOptionControl_o *
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4A0427C & 1) == 0 )
+  if ( (byte_4A1B0D1 & 1) == 0 )
   {
-    sub_1B686D4(&Method_SetSvtRandOptionControl_OnChangeBtn__, method);
-    byte_4A0427C = 1;
+    sub_1B715CC(&Method_SetSvtRandOptionControl_OnChangeBtn__, method);
+    byte_4A1B0D1 = 1;
   }
   v3 = Method_SetSvtRandOptionControl_OnChangeBtn__;
   if ( (*((_BYTE *)Method_SetSvtRandOptionControl_OnChangeBtn__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1B686EC(Method_SetSvtRandOptionControl_OnChangeBtn__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1B686B8(v3, v3[4]);
+    v3 = (_QWORD *)sub_1B715E4(Method_SetSvtRandOptionControl_OnChangeBtn__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1B715B0(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, this->fields.isSvtRand, 0LL);
   this->fields.isSvtRand ^= 1u;
   SetSvtRandOptionControl__setDispValue(this, v5);
@@ -68,10 +68,10 @@ void __fastcall SetSvtRandOptionControl__Reflection(SetSvtRandOptionControl_o *t
 {
   _BOOL4 isSvtRand; // w19
 
-  if ( (byte_4A0427B & 1) == 0 )
+  if ( (byte_4A1B0D0 & 1) == 0 )
   {
-    sub_1B686D4(&OptionManager_TypeInfo, method);
-    byte_4A0427B = 1;
+    sub_1B715CC(&OptionManager_TypeInfo, method);
+    byte_4A1B0D0 = 1;
   }
   isSvtRand = this->fields.isSvtRand;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -86,18 +86,18 @@ void __fastcall SetSvtRandOptionControl__setDispValue(SetSvtRandOptionControl_o 
   UIButton_o *svtRandDispBtn; // x0
   __int64 *v5; // x8
 
-  if ( (byte_4A0427A & 1) == 0 )
+  if ( (byte_4A1B0CF & 1) == 0 )
   {
-    sub_1B686D4(&StringLiteral_17461/*"btn_on"*/, method);
-    sub_1B686D4(&StringLiteral_17460/*"btn_off"*/, v3);
-    byte_4A0427A = 1;
+    sub_1B715CC(&StringLiteral_17476/*"btn_on"*/, method);
+    sub_1B715CC(&StringLiteral_17475/*"btn_off"*/, v3);
+    byte_4A1B0CF = 1;
   }
   svtRandDispBtn = this->fields.svtRandDispBtn;
   if ( !svtRandDispBtn )
-    sub_1B68930(0LL, method);
+    sub_1B71828(0LL, method);
   if ( this->fields.isSvtRand )
-    v5 = &StringLiteral_17461/*"btn_on"*/;
+    v5 = &StringLiteral_17476/*"btn_on"*/;
   else
-    v5 = &StringLiteral_17460/*"btn_off"*/;
+    v5 = &StringLiteral_17475/*"btn_off"*/;
   UIButton__set_normalSprite(svtRandDispBtn, (System_String_o *)*v5, 0LL);
 }

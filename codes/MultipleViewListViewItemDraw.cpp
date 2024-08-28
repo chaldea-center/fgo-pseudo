@@ -22,11 +22,11 @@ void __fastcall MultipleViewListViewItemDraw__SetInput(
   UnityEngine_Object_o *removeObject; // x21
   const MethodInfo *v17; // x2
 
-  if ( (byte_4A0447C & 1) == 0 )
+  if ( (byte_4A1B2D1 & 1) == 0 )
   {
-    sub_1B686D4(&Method_UnityEngine_Component_GetComponent_Collider___, item);
-    sub_1B686D4(&UnityEngine_Object_TypeInfo, v7);
-    byte_4A0447C = 1;
+    sub_1B715CC(&Method_UnityEngine_Component_GetComponent_Collider___, item);
+    sub_1B715CC(&UnityEngine_Object_TypeInfo, v7);
+    byte_4A1B2D1 = 1;
   }
   if ( item )
   {
@@ -47,7 +47,7 @@ void __fastcall MultipleViewListViewItemDraw__SetInput(
             goto LABEL_50;
           maskLb = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                 maskLb,
-                                                (const MethodInfo_2E407F4 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                (const MethodInfo_2E51E8C *)Method_UnityEngine_Component_GetComponent_Collider___);
           if ( !maskLb )
             goto LABEL_50;
           UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)maskLb, isInput, 0LL);
@@ -136,7 +136,7 @@ LABEL_48:
       }
     }
 LABEL_50:
-    sub_1B68930(maskLb, item);
+    sub_1B71828(maskLb, item);
   }
 }
 
@@ -158,17 +158,17 @@ void __fastcall MultipleViewListViewItemDraw__SetItem(
   UnityEngine_Object_o *removeObject; // x21
   const MethodInfo *v16; // x2
 
-  if ( (byte_4A0447B & 1) == 0 )
+  if ( (byte_4A1B2D0 & 1) == 0 )
   {
-    sub_1B686D4(&UnityEngine_Object_TypeInfo, item);
-    byte_4A0447B = 1;
+    sub_1B715CC(&UnityEngine_Object_TypeInfo, item);
+    byte_4A1B2D0 = 1;
   }
   if ( item && mode )
   {
     servantFaceIcon = this->fields.servantFaceIcon;
     if ( servantFaceIcon )
     {
-      ServantFaceIconComponent__Set_37966888(
+      ServantFaceIconComponent__Set_38014768(
         servantFaceIcon,
         item->fields.userSvtEntity,
         item->fields.iconLabelInfo1,
@@ -200,7 +200,7 @@ void __fastcall MultipleViewListViewItemDraw__SetItem(
                 servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.partyIcon;
                 if ( !servantFaceIcon )
                   goto LABEL_52;
-                FlashingIconComponent__Set_37873576(
+                FlashingIconComponent__Set_37921456(
                   (FlashingIconComponent_o *)servantFaceIcon,
                   item->fields.partyIndex >= 0,
                   0LL);
@@ -295,7 +295,7 @@ LABEL_50:
       }
     }
 LABEL_52:
-    sub_1B68930(servantFaceIcon, item);
+    sub_1B71828(servantFaceIcon, item);
   }
 }
 
@@ -318,13 +318,13 @@ void __fastcall MultipleViewListViewItemDraw__SetMaskInfo(
   int32_t selectNum; // [xsp+Ch] [xbp-24h] BYREF
 
   v4 = this;
-  if ( (byte_4A0447D & 1) == 0 )
+  if ( (byte_4A1B2D2 & 1) == 0 )
   {
-    sub_1B686D4(&LocalizationManager_TypeInfo, item);
-    sub_1B686D4(&StringLiteral_11446/*"SELECT_CANNOT"*/, v5);
-    sub_1B686D4(&StringLiteral_11470/*"SELECT_SERVANT_EVENT_JOIN"*/, v6);
-    this = (MultipleViewListViewItemDraw_o *)sub_1B686D4(&StringLiteral_8740/*"MULTIPLE_SERVANT_SELECTED_SERVANT_"*/, v7);
-    byte_4A0447D = 1;
+    sub_1B715CC(&LocalizationManager_TypeInfo, item);
+    sub_1B715CC(&StringLiteral_11455/*"SELECT_CANNOT"*/, v5);
+    sub_1B715CC(&StringLiteral_11479/*"SELECT_SERVANT_EVENT_JOIN"*/, v6);
+    this = (MultipleViewListViewItemDraw_o *)sub_1B715CC(&StringLiteral_8745/*"MULTIPLE_SERVANT_SELECTED_SERVANT_"*/, v7);
+    byte_4A1B2D2 = 1;
   }
   if ( !item )
     goto LABEL_39;
@@ -354,7 +354,7 @@ void __fastcall MultipleViewListViewItemDraw__SetMaskInfo(
       maskLb = v4->fields.maskLb;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v10 = &StringLiteral_11470/*"SELECT_SERVANT_EVENT_JOIN"*/;
+      v10 = &StringLiteral_11479/*"SELECT_SERVANT_EVENT_JOIN"*/;
 LABEL_24:
       v11 = (System_String_o *)*v10;
 LABEL_25:
@@ -365,7 +365,7 @@ LABEL_25:
         return;
       }
 LABEL_39:
-      sub_1B68930(this, item);
+      sub_1B71828(this, item);
     }
     if ( !MultipleViewListViewItem__get_IsHerioneReave(item, (const MethodInfo *)item) )
       return;
@@ -387,7 +387,7 @@ LABEL_17:
     maskLb = v4->fields.maskLb;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v10 = &StringLiteral_11446/*"SELECT_CANNOT"*/;
+    v10 = &StringLiteral_11455/*"SELECT_CANNOT"*/;
     goto LABEL_24;
   }
   if ( MultipleViewListViewItem__get_IsHerioneReave(item, (const MethodInfo *)item) )
@@ -411,7 +411,7 @@ LABEL_17:
     maskLb = v4->fields.maskLb;
     selectNum = item->fields.selectNum;
     v12 = System_Int32__ToString((int32_t)&selectNum, 0LL);
-    v13 = System_String__Concat_61419468((System_String_o *)StringLiteral_8740/*"MULTIPLE_SERVANT_SELECTED_SERVANT_"*/, v12, 0LL);
+    v13 = System_String__Concat_61505504((System_String_o *)StringLiteral_8745/*"MULTIPLE_SERVANT_SELECTED_SERVANT_"*/, v12, 0LL);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     v11 = v13;

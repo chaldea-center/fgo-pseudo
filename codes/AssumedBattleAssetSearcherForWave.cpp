@@ -4,12 +4,12 @@ AssumedBattleAssetSearcherForWave_o *__fastcall AssumedBattleAssetSearcherForWav
   AssumedBattleAssetSearcherBase_o *v2; // x19
   const MethodInfo *v3; // x1
 
-  if ( (byte_4A0ACD7 & 1) == 0 )
+  if ( (byte_4A21B54 & 1) == 0 )
   {
-    sub_1B686D4(&AssumedBattleAssetSearcherForWave_TypeInfo, v1);
-    byte_4A0ACD7 = 1;
+    sub_1B715CC(&AssumedBattleAssetSearcherForWave_TypeInfo, v1);
+    byte_4A21B54 = 1;
   }
-  v2 = (AssumedBattleAssetSearcherBase_o *)sub_1B68920(AssumedBattleAssetSearcherForWave_TypeInfo);
+  v2 = (AssumedBattleAssetSearcherBase_o *)sub_1B71818(AssumedBattleAssetSearcherForWave_TypeInfo);
   AssumedBattleAssetSearcherBase___ctor(v2, v3);
   return (AssumedBattleAssetSearcherForWave_o *)v2;
 }
@@ -25,26 +25,25 @@ AssumedBattleAssetLoadManager_AnalyzedResultParam_o *__fastcall AssumedBattleAss
   StageEntity_o *StageEntity; // x19
   AssumedBattleAssetLoadManager_AnalyzedResultParam_o *v6; // x20
   const MethodInfo *v7; // x1
-  const MethodInfo *v8; // x2
 
   v2 = this;
-  if ( (byte_4A0ACD6 & 1) == 0 )
+  if ( (byte_4A21B53 & 1) == 0 )
   {
-    this = (AssumedBattleAssetSearcherForWave_o *)sub_1B686D4(
+    this = (AssumedBattleAssetSearcherForWave_o *)sub_1B715CC(
                                                     &AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo,
                                                     method);
-    byte_4A0ACD6 = 1;
+    byte_4A21B53 = 1;
   }
   manager = v2->fields.manager;
   if ( !manager
     || (Perf_k__BackingField = manager->fields._Perf_k__BackingField) == 0LL
     || (this = (AssumedBattleAssetSearcherForWave_o *)Perf_k__BackingField->fields.data) == 0LL )
   {
-    sub_1B68930(this, method);
+    sub_1B71828(this, method);
   }
   StageEntity = BattleData__getStageEntity((BattleData_o *)this, 0LL);
-  v6 = (AssumedBattleAssetLoadManager_AnalyzedResultParam_o *)sub_1B68920(AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo);
+  v6 = (AssumedBattleAssetLoadManager_AnalyzedResultParam_o *)sub_1B71818(AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo);
   AssumedBattleAssetLoadManager_AnalyzedResultParam___ctor(v6, v7);
-  AssumedEffectExtractLogic__FromStage(StageEntity, v6, v8);
+  AssumedEffectExtractLogic__FromStage(StageEntity, v6, 0LL);
   return v6;
 }

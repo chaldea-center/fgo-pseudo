@@ -4,7 +4,7 @@ void __fastcall QuestBoardListViewItem___ctor(QuestBoardListViewItem_o *this, co
 }
 
 
-void __fastcall QuestBoardListViewItem___ctor_33730272(
+void __fastcall QuestBoardListViewItem___ctor_33777224(
         QuestBoardListViewItem_o *this,
         int32_t index,
         int32_t ikind,
@@ -24,19 +24,19 @@ void __fastcall QuestBoardListViewItem___ctor_33730272(
   int32_t v21; // w3
 
   v15 = this;
-  ListViewItem___ctor_40440732((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_40493632((ListViewItem_o *)this, index, 0LL);
   v15->fields._info_kind_k__BackingField = ikind;
   v15->fields._quest_info_k__BackingField = qinf;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&v15->fields._quest_info_k__BackingField, (int32_t)qinf, v16, v17);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&v15->fields._quest_info_k__BackingField, (int32_t)qinf, v16, v17);
   v15->fields._black_mark_prefab_k__BackingField = blackMarkPrefab;
-  sub_1B68678(
+  sub_1B71570(
     (ServantStatusBattleListViewItem_o *)&v15->fields._black_mark_prefab_k__BackingField,
     (int32_t)blackMarkPrefab,
     v18,
     v19);
   v15->fields._white_mark_prefab_k__BackingField = whiteMarkPrefab;
   v15 = (QuestBoardListViewItem_o *)((char *)v15 + 136);
-  sub_1B68678((ServantStatusBattleListViewItem_o *)v15, (int32_t)whiteMarkPrefab, v20, v21);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)v15, (int32_t)whiteMarkPrefab, v20, v21);
   LODWORD(v15->monitor) = overwriteBannerId;
   HIDWORD(v15->monitor) = recollectionWarId;
 }
@@ -55,12 +55,12 @@ bool __fastcall QuestBoardListViewItem__IsDisplayableRoadmapButton(
   __int64 v9; // x1
   Il2CppObject *Entity; // x0
 
-  if ( (byte_4A05BFF & 1) == 0 )
+  if ( (byte_4A1CA71 & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataManager_GetMaster_WarMaster___, method);
-    sub_1B686D4(&DataManager_TypeInfo, v3);
-    sub_1B686D4(&Method_DataMasterBase_WarMaster__WarEntity__int__GetEntity__, v4);
-    byte_4A05BFF = 1;
+    sub_1B715CC(&Method_DataManager_GetMaster_WarMaster___, method);
+    sub_1B715CC(&DataManager_TypeInfo, v3);
+    sub_1B715CC(&Method_DataMasterBase_WarMaster__WarEntity__int__GetEntity__, v4);
+    byte_4A1CA71 = 1;
   }
   quest_info_k__BackingField = this->fields._quest_info_k__BackingField;
   if ( quest_info_k__BackingField )
@@ -73,13 +73,13 @@ bool __fastcall QuestBoardListViewItem__IsDisplayableRoadmapButton(
       goto LABEL_12;
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2E49CFC *)Method_DataManager_GetMaster_WarMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2E5B394 *)Method_DataManager_GetMaster_WarMaster___);
     if ( !Master_object )
-      sub_1B68930(0LL, v9);
+      sub_1B71828(0LL, v9);
     Entity = DataMasterBase_object__object__int___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                warId,
-               (const MethodInfo_30E44C0 *)Method_DataMasterBase_WarMaster__WarEntity__int__GetEntity__);
+               (const MethodInfo_30F8760 *)Method_DataMasterBase_WarMaster__WarEntity__int__GetEntity__);
     LOBYTE(quest_info_k__BackingField) = 0;
     if ( Entity )
     {
@@ -173,7 +173,7 @@ void __fastcall QuestBoardListViewItem__set_black_mark_prefab(
   int32_t v3; // w3
 
   this->fields._black_mark_prefab_k__BackingField = value;
-  sub_1B68678(
+  sub_1B71570(
     (ServantStatusBattleListViewItem_o *)&this->fields._black_mark_prefab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -198,7 +198,7 @@ void __fastcall QuestBoardListViewItem__set_quest_info(
   int32_t v3; // w3
 
   this->fields._quest_info_k__BackingField = value;
-  sub_1B68678(
+  sub_1B71570(
     (ServantStatusBattleListViewItem_o *)&this->fields._quest_info_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -214,7 +214,7 @@ void __fastcall QuestBoardListViewItem__set_white_mark_prefab(
   int32_t v3; // w3
 
   this->fields._white_mark_prefab_k__BackingField = value;
-  sub_1B68678(
+  sub_1B71570(
     (ServantStatusBattleListViewItem_o *)&this->fields._white_mark_prefab_k__BackingField,
     (int32_t)value,
     (int32_t)method,

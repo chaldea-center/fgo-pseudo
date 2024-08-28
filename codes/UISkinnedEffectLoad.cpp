@@ -20,21 +20,21 @@ System_String_array *__fastcall UISkinnedEffectLoad__GetEffectNames(
   struct UISkinnedEffectLoad_skinEffect_array *skinEffects; // x8
   System_Collections_Generic_List_string__o *EffectNameList; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A07B65 & 1) == 0 )
+  if ( (byte_4A1E9CA & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataManager_GetMasterData_TerminalOverwriteMaster___, *(_QWORD *)&uiChangeType);
-    sub_1B686D4(&Method_System_Collections_Generic_List_string__ToArray__, v5);
-    sub_1B686D4(&ServantCommentManager_TypeInfo, v6);
-    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    byte_4A07B65 = 1;
+    sub_1B715CC(&Method_DataManager_GetMasterData_TerminalOverwriteMaster___, *(_QWORD *)&uiChangeType);
+    sub_1B715CC(&Method_System_Collections_Generic_List_string__ToArray__, v5);
+    sub_1B715CC(&ServantCommentManager_TypeInfo, v6);
+    sub_1B715CC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    byte_4A1E9CA = 1;
   }
   EffectNameList = 0LL;
-  result = (System_String_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  result = (System_String_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !result )
     goto LABEL_16;
   result = (System_String_array *)DataManager__GetMasterData_object_(
                                     (DataManager_o *)result,
-                                    (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_TerminalOverwriteMaster___);
+                                    (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_TerminalOverwriteMaster___);
   if ( result )
   {
     result = (System_String_array *)TerminalOverwriteMaster__TryGetOverwriteEffectNames(
@@ -48,9 +48,9 @@ System_String_array *__fastcall UISkinnedEffectLoad__GetEffectNames(
       if ( EffectNameList )
         return (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                         (System_Collections_Generic_List_object__o *)EffectNameList,
-                                        (const MethodInfo_34BDDD0 *)Method_System_Collections_Generic_List_string__ToArray__);
+                                        (const MethodInfo_34D1DB8 *)Method_System_Collections_Generic_List_string__ToArray__);
 LABEL_16:
-      sub_1B68930(result, v9);
+      sub_1B71828(result, v9);
     }
   }
   if ( this->fields.skinType != 7 )
@@ -66,7 +66,7 @@ LABEL_12:
     if ( !skinEffects )
       goto LABEL_16;
     if ( skinEffects->max_length <= uiChangeType )
-      sub_1B68938(result, v9);
+      sub_1B71830(result, v9);
     return skinEffects->m_Items[uiChangeType].fields.EffectName;
   }
   return result;
@@ -95,7 +95,7 @@ System_String_array *__fastcall UISkinnedEffectLoad__GetReplaceEffectnames(
   {
     v7 = replaceDatas->m_Items[v6];
     if ( !v7 )
-      sub_1B68930(this, uiChangeType);
+      sub_1B71828(this, uiChangeType);
     if ( v7->fields.UiChangeType == uiChangeType && v7->fields.Version == version )
       break;
     if ( max_length == ++v6 )
@@ -127,11 +127,11 @@ void __fastcall UISkinnedEffectLoad__SetEffects(UISkinnedEffectLoad_o *this, con
   _BOOL4 SetDepthZero; // w21
   UnityEngine_GameObject_o *v11; // x19
 
-  if ( (byte_4A07B64 & 1) == 0 )
+  if ( (byte_4A1E9C9 & 1) == 0 )
   {
-    sub_1B686D4(&CommonEffectManager_TypeInfo, method);
-    sub_1B686D4(&ServantCommentManager_TypeInfo, v3);
-    byte_4A07B64 = 1;
+    sub_1B715CC(&CommonEffectManager_TypeInfo, method);
+    sub_1B715CC(&ServantCommentManager_TypeInfo, v3);
+    byte_4A1E9C9 = 1;
   }
   if ( this->fields.skinEffects )
   {
@@ -140,7 +140,7 @@ void __fastcall UISkinnedEffectLoad__SetEffects(UISkinnedEffectLoad_o *this, con
     UiFlag = ServantCommentManager__GetUiFlag(0LL);
     skinEffects = this->fields.skinEffects;
     if ( !skinEffects )
-      sub_1B68930(UiFlag, v5);
+      sub_1B71828(UiFlag, v5);
     if ( (int)UiFlag < (signed int)skinEffects->max_length )
     {
       EffectNames = UISkinnedEffectLoad__GetEffectNames(this, UiFlag, v6);

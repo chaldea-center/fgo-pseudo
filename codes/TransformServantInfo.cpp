@@ -4,20 +4,20 @@ void __fastcall TransformServantInfo___ctor(TransformServantInfo_o *this, const 
   int32_t v4; // w2
   int32_t v5; // w3
 
-  if ( (byte_4A09E72 & 1) == 0 )
+  if ( (byte_4A20CE7 & 1) == 0 )
   {
-    sub_1B686D4(&StringLiteral_1/*""*/, method);
-    byte_4A09E72 = 1;
+    sub_1B715CC(&StringLiteral_1/*""*/, method);
+    byte_4A20CE7 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   *(_QWORD *)&this->fields.svtId = 0LL;
   v3 = (int)StringLiteral_1/*""*/;
   this->fields.titleText = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.titleText, v3, v4, v5);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.titleText, v3, v4, v5);
 }
 
 
-void __fastcall TransformServantInfo___ctor_40265968(
+void __fastcall TransformServantInfo___ctor_40318388(
         TransformServantInfo_o *this,
         int32_t svtId,
         int32_t dispLimitCount,
@@ -34,7 +34,7 @@ void __fastcall TransformServantInfo___ctor_40265968(
   v8 = (TransformServantInfo_o *)((char *)v8 + 24);
   LODWORD(v8[-1].fields.titleText) = svtId;
   HIDWORD(v8[-1].fields.titleText) = dispLimitCount;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)v8, (int32_t)titleText, v9, v10);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)v8, (int32_t)titleText, v9, v10);
 }
 
 
@@ -48,10 +48,10 @@ int32_t __fastcall TransformServantInfo__GetDispLimitCount(
   bool v6; // vf
   int32_t svtId; // w20
 
-  if ( (byte_4A09E73 & 1) == 0 )
+  if ( (byte_4A20CE8 & 1) == 0 )
   {
-    sub_1B686D4(&ImageLimitCount_TypeInfo, *(_QWORD *)&limitCount);
-    byte_4A09E73 = 1;
+    sub_1B715CC(&ImageLimitCount_TypeInfo, *(_QWORD *)&limitCount);
+    byte_4A20CE8 = 1;
   }
   result = this->fields.dispLimitCount;
   if ( result <= 10 )

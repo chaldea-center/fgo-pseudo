@@ -15,10 +15,10 @@ void __fastcall BattleCommandParamComponent__resetComboGuid(
   UnityEngine_Object_o *v6; // x20
 
   v2 = this;
-  if ( (byte_4A0B5C7 & 1) == 0 )
+  if ( (byte_4A2244C & 1) == 0 )
   {
-    this = (BattleCommandParamComponent_o *)sub_1B686D4(&UnityEngine_Object_TypeInfo, method);
-    byte_4A0B5C7 = 1;
+    this = (BattleCommandParamComponent_o *)sub_1B715CC(&UnityEngine_Object_TypeInfo, method);
+    byte_4A2244C = 1;
   }
   yakuobj = v2->fields.yakuobj;
   if ( yakuobj )
@@ -29,14 +29,14 @@ void __fastcall BattleCommandParamComponent__resetComboGuid(
       if ( (__int64)i >= (int)max_length )
         break;
       if ( i >= max_length )
-        sub_1B68938(this, method);
+        sub_1B71830(this, method);
       v6 = (UnityEngine_Object_o *)yakuobj->m_Items[i];
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_69171816(v6, 0LL);
+      UnityEngine_Object__Destroy_69257852(v6, 0LL);
       yakuobj = v2->fields.yakuobj;
       if ( !yakuobj )
-        sub_1B68930(this, method);
+        sub_1B71828(this, method);
     }
   }
 }
@@ -47,10 +47,10 @@ void __fastcall BattleCommandParamComponent__resetNo(BattleCommandParamComponent
   UnityEngine_Object_o *numberobj; // x20
   UnityEngine_Object_o *v4; // x19
 
-  if ( (byte_4A0B5C5 & 1) == 0 )
+  if ( (byte_4A2244A & 1) == 0 )
   {
-    sub_1B686D4(&UnityEngine_Object_TypeInfo, method);
-    byte_4A0B5C5 = 1;
+    sub_1B715CC(&UnityEngine_Object_TypeInfo, method);
+    byte_4A2244A = 1;
   }
   numberobj = (UnityEngine_Object_o *)this->fields.numberobj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -60,7 +60,7 @@ void __fastcall BattleCommandParamComponent__resetNo(BattleCommandParamComponent
     v4 = (UnityEngine_Object_o *)this->fields.numberobj;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_69171816(v4, 0LL);
+    UnityEngine_Object__Destroy_69257852(v4, 0LL);
   }
 }
 
@@ -76,7 +76,7 @@ void __fastcall BattleCommandParamComponent__setComboGuid(
   __int64 v8; // x1
   __int64 v9; // x1
   __int64 v10; // x1
-  UnityEngine_GameObject_o *Object_38056628; // x0
+  UnityEngine_GameObject_o *Object_38104540; // x0
   __int64 v12; // x1
   struct System_Boolean_array *sameflg; // x8
   unsigned int max_length; // w9
@@ -87,14 +87,14 @@ void __fastcall BattleCommandParamComponent__setComboGuid(
   int32_t v19; // w2
   int32_t v20; // w3
 
-  if ( (byte_4A0B5C8 & 1) == 0 )
+  if ( (byte_4A2244D & 1) == 0 )
   {
-    sub_1B686D4(&StringLiteral_18820/*"effect/ef_cardcombo_u2"*/, *(_QWORD *)&index);
-    sub_1B686D4(&StringLiteral_18821/*"effect/ef_cardcombo_u3"*/, v7);
-    sub_1B686D4(&StringLiteral_18819/*"effect/ef_cardcombo_3a"*/, v8);
-    sub_1B686D4(&StringLiteral_18822/*"effect/ef_cardcombo_ua"*/, v9);
-    sub_1B686D4(&StringLiteral_18818/*"effect/ef_cardcombo_2a"*/, v10);
-    byte_4A0B5C8 = 1;
+    sub_1B715CC(&StringLiteral_18837/*"effect/ef_cardcombo_u2"*/, *(_QWORD *)&index);
+    sub_1B715CC(&StringLiteral_18838/*"effect/ef_cardcombo_u3"*/, v7);
+    sub_1B715CC(&StringLiteral_18836/*"effect/ef_cardcombo_3a"*/, v8);
+    sub_1B715CC(&StringLiteral_18839/*"effect/ef_cardcombo_ua"*/, v9);
+    sub_1B715CC(&StringLiteral_18835/*"effect/ef_cardcombo_2a"*/, v10);
+    byte_4A2244D = 1;
   }
   BattleCommandParamComponent__resetComboGuid(this, *(const MethodInfo **)&index);
   if ( !combo )
@@ -112,18 +112,18 @@ void __fastcall BattleCommandParamComponent__setComboGuid(
       samecount = combo->fields.samecount;
       if ( samecount == 2 )
       {
-        v16 = &StringLiteral_18820/*"effect/ef_cardcombo_u2"*/;
+        v16 = &StringLiteral_18837/*"effect/ef_cardcombo_u2"*/;
       }
       else
       {
         if ( samecount != 3 )
           return;
-        v16 = &StringLiteral_18821/*"effect/ef_cardcombo_u3"*/;
+        v16 = &StringLiteral_18838/*"effect/ef_cardcombo_u3"*/;
       }
     }
     else
     {
-      v16 = &StringLiteral_18822/*"effect/ef_cardcombo_ua"*/;
+      v16 = &StringLiteral_18839/*"effect/ef_cardcombo_ua"*/;
     }
   }
   else
@@ -135,19 +135,19 @@ void __fastcall BattleCommandParamComponent__setComboGuid(
     v17 = combo->fields.samecount;
     if ( v17 == 2 )
     {
-      v16 = &StringLiteral_18818/*"effect/ef_cardcombo_2a"*/;
+      v16 = &StringLiteral_18835/*"effect/ef_cardcombo_2a"*/;
     }
     else
     {
       if ( v17 != 3 )
         return;
-      v16 = &StringLiteral_18819/*"effect/ef_cardcombo_3a"*/;
+      v16 = &StringLiteral_18836/*"effect/ef_cardcombo_3a"*/;
     }
   }
   if ( *v16 )
   {
     yakuobj = this->fields.yakuobj;
-    Object_38056628 = BaseMonoBehaviour__createObject_38056628(
+    Object_38104540 = BaseMonoBehaviour__createObject_38104540(
                         (BaseMonoBehaviour_o *)this,
                         (System_String_o *)*v16,
                         this->fields.YakuTr,
@@ -157,15 +157,15 @@ void __fastcall BattleCommandParamComponent__setComboGuid(
     {
       if ( yakuobj->max_length )
       {
-        yakuobj->m_Items[0] = Object_38056628;
-        sub_1B68678((ServantStatusBattleListViewItem_o *)yakuobj->m_Items, (int32_t)Object_38056628, v19, v20);
+        yakuobj->m_Items[0] = Object_38104540;
+        sub_1B71570((ServantStatusBattleListViewItem_o *)yakuobj->m_Items, (int32_t)Object_38104540, v19, v20);
         return;
       }
 LABEL_25:
-      sub_1B68938(Object_38056628, v12);
+      sub_1B71830(Object_38104540, v12);
     }
 LABEL_24:
-    sub_1B68930(Object_38056628, v12);
+    sub_1B71828(Object_38104540, v12);
   }
 }
 
@@ -187,11 +187,11 @@ void __fastcall BattleCommandParamComponent__setInit(BattleCommandParamComponent
   int32_t v15; // w2
   int32_t v16; // w3
 
-  if ( (byte_4A0B5C4 & 1) == 0 )
+  if ( (byte_4A22449 & 1) == 0 )
   {
-    sub_1B686D4(&UnityEngine_GameObject___TypeInfo, method);
-    sub_1B686D4(&UnityEngine_Object_TypeInfo, v3);
-    byte_4A0B5C4 = 1;
+    sub_1B715CC(&UnityEngine_GameObject___TypeInfo, method);
+    sub_1B715CC(&UnityEngine_Object_TypeInfo, v3);
+    byte_4A22449 = 1;
   }
   numberobj = (UnityEngine_Object_o *)this->fields.numberobj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -202,7 +202,7 @@ void __fastcall BattleCommandParamComponent__setInit(BattleCommandParamComponent
     v7 = (UnityEngine_Object_o *)this->fields.numberobj;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_69171816(v7, 0LL);
+    UnityEngine_Object__Destroy_69257852(v7, 0LL);
   }
   yakuobj = this->fields.yakuobj;
   p_yakuobj = (ServantStatusBattleListViewItem_o *)&this->fields.yakuobj;
@@ -215,19 +215,19 @@ void __fastcall BattleCommandParamComponent__setInit(BattleCommandParamComponent
       if ( (__int64)i >= (int)v12 )
         break;
       if ( i >= v12 )
-        sub_1B68938(v5, v6);
+        sub_1B71830(v5, v6);
       v13 = (UnityEngine_Object_o *)p_klass[i + 4];
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_69171816(v13, 0LL);
+      UnityEngine_Object__Destroy_69257852(v13, 0LL);
       p_klass = &p_yakuobj->klass->_1.image;
       if ( !p_yakuobj->klass )
-        sub_1B68930(v5, v6);
+        sub_1B71828(v5, v6);
     }
   }
-  v14 = sub_1B6877C(UnityEngine_GameObject___TypeInfo, 2LL);
+  v14 = sub_1B71674(UnityEngine_GameObject___TypeInfo, 2LL);
   p_yakuobj->klass = (ServantStatusBattleListViewItem_c *)v14;
-  sub_1B68678(p_yakuobj, v14, v15, v16);
+  sub_1B71570(p_yakuobj, v14, v15, v16);
 }
 
 
@@ -242,26 +242,26 @@ void __fastcall BattleCommandParamComponent__setNo(
   __int64 v7; // x1
   Il2CppObject *v8; // x0
   System_String_o *v9; // x0
-  struct UnityEngine_GameObject_o *Object_38056628; // x0
+  struct UnityEngine_GameObject_o *Object_38104540; // x0
   int32_t v11; // w2
   int32_t v12; // w3
   int32_t v13; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4A0B5C6 & 1) == 0 )
+  if ( (byte_4A2244B & 1) == 0 )
   {
-    sub_1B686D4(&int_TypeInfo, *(_QWORD *)&count);
-    sub_1B686D4(&StringLiteral_18824/*"effect/ef_command_{0:00}"*/, v7);
-    byte_4A0B5C6 = 1;
+    sub_1B715CC(&int_TypeInfo, *(_QWORD *)&count);
+    sub_1B715CC(&StringLiteral_18841/*"effect/ef_command_{0:00}"*/, v7);
+    byte_4A2244B = 1;
   }
   v13 = count;
   v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v13, method, v3, v4);
-  v9 = System_String__Format((System_String_o *)StringLiteral_18824/*"effect/ef_command_{0:00}"*/, v8, 0LL);
-  Object_38056628 = BaseMonoBehaviour__createObject_38056628(
+  v9 = System_String__Format((System_String_o *)StringLiteral_18841/*"effect/ef_command_{0:00}"*/, v8, 0LL);
+  Object_38104540 = BaseMonoBehaviour__createObject_38104540(
                       (BaseMonoBehaviour_o *)this,
                       v9,
                       this->fields.NumberTr,
                       0LL,
                       0LL);
-  this->fields.numberobj = Object_38056628;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.numberobj, (int32_t)Object_38056628, v11, v12);
+  this->fields.numberobj = Object_38104540;
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.numberobj, (int32_t)Object_38104540, v11, v12);
 }

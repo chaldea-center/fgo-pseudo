@@ -15,26 +15,26 @@ void __fastcall BoostSupportRequsetItemListViewItem___ctor(
   __int64 v16; // x1
   bool v17; // w0
 
-  if ( (byte_4A03CDD & 1) == 0 )
+  if ( (byte_4A1AB2D & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataManager_GetMasterData_CommonConsumeMaster___, *(_QWORD *)&index);
-    sub_1B686D4(&Method_DataManager_GetMasterData_CommonReleaseMaster___, v11);
-    sub_1B686D4(&Method_System_Linq_Enumerable_Contains_int___, v12);
-    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
-    byte_4A03CDD = 1;
+    sub_1B715CC(&Method_DataManager_GetMasterData_CommonConsumeMaster___, *(_QWORD *)&index);
+    sub_1B715CC(&Method_DataManager_GetMasterData_CommonReleaseMaster___, v11);
+    sub_1B715CC(&Method_System_Linq_Enumerable_Contains_int___, v12);
+    sub_1B715CC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
+    byte_4A1AB2D = 1;
   }
-  ListViewItem___ctor_40440732((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_40493632((ListViewItem_o *)this, index, 0LL);
   this->fields.boostEntity = boostEntity;
   p_boostEntity = &this->fields.boostEntity;
-  sub_1B68678(&this->fields.boostEntity);
+  sub_1B71570(&this->fields.boostEntity);
   this->fields.usrItemEntityList = usrItemEntityList;
-  sub_1B68678(&this->fields.usrItemEntityList);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1B71570(&this->fields.usrItemEntityList);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
+               (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
   if ( !*p_boostEntity )
     goto LABEL_14;
   if ( !Instance )
@@ -43,13 +43,13 @@ void __fastcall BoostSupportRequsetItemListViewItem___ctor(
                                        (CommonConsumeMaster_o *)Instance,
                                        (*p_boostEntity)->fields.commonConsumeId,
                                        0LL);
-  sub_1B68678(&this->fields.commonConsumeEntity);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1B71570(&this->fields.commonConsumeEntity);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
+               (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
   if ( !*p_boostEntity || !Instance )
     goto LABEL_14;
   Instance = (Il2CppObject *)CommonReleaseMaster__IsOpen(
@@ -66,11 +66,11 @@ void __fastcall BoostSupportRequsetItemListViewItem___ctor(
   }
   if ( !boostEntity )
 LABEL_14:
-    sub_1B68930(Instance, v16);
+    sub_1B71828(Instance, v16);
   v17 = System_Linq_Enumerable__Contains_int_(
           (System_Collections_Generic_IEnumerable_TSource__o *)recommendedBoostIds,
           boostEntity->fields.id,
-          (const MethodInfo_2E63938 *)Method_System_Linq_Enumerable_Contains_int___);
+          (const MethodInfo_2E754F4 *)Method_System_Linq_Enumerable_Contains_int___);
 LABEL_13:
   this->fields.isRecommended = v17;
 }

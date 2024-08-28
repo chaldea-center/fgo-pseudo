@@ -12,7 +12,7 @@ void __fastcall UserRecommendSupportInfo__ChangeLimitCountBySpoilerProtection(
 
   userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
   if ( userSvtLeaderInfo )
-    ServantLeaderInfo__ChangeLimitCountBySpoilerProtection(userSvtLeaderInfo, method);
+    ServantLeaderInfo__ChangeLimitCountBySpoilerProtection(userSvtLeaderInfo, 0LL);
 }
 
 
@@ -27,7 +27,7 @@ void __fastcall UserRecommendSupportInfo__Finalize(UserRecommendSupportInfo_o *t
   if ( userSvtLeaderInfo )
   {
     userSvtLeaderInfo->fields.equipTarget1 = 0LL;
-    sub_1B68678((ServantStatusBattleListViewItem_o *)&userSvtLeaderInfo->fields.equipTarget1, 0, v2, v3);
+    sub_1B71570((ServantStatusBattleListViewItem_o *)&userSvtLeaderInfo->fields.equipTarget1, 0, v2, v3);
   }
   System_Object__Finalize((Il2CppObject *)this, 0LL);
 }
@@ -67,7 +67,7 @@ int32_t __fastcall UserRecommendSupportInfo__GetFriendNpNameDispLimitCount(
 
   userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
   if ( userSvtLeaderInfo )
-    return ServantLeaderInfo__GetFriendNpNameDispLimitCount(userSvtLeaderInfo, method);
+    return ServantLeaderInfo__GetFriendNpNameDispLimitCount(userSvtLeaderInfo, 0LL);
   else
     return -1;
 }
@@ -81,7 +81,7 @@ int32_t __fastcall UserRecommendSupportInfo__GetIconLimitCount(
 
   userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
   if ( userSvtLeaderInfo )
-    return ServantLeaderInfo__getIconLimitCount(userSvtLeaderInfo, method);
+    return ServantLeaderInfo__getIconLimitCount(userSvtLeaderInfo, 0LL);
   else
     return -1;
 }
@@ -117,10 +117,10 @@ System_String_o *__fastcall UserRecommendSupportInfo__GetOverWriteServantName(
 {
   System_String_o *userSvtLeaderInfo; // x9
 
-  if ( (byte_4A09EBF & 1) == 0 )
+  if ( (byte_4A20D34 & 1) == 0 )
   {
-    sub_1B686D4(&StringLiteral_1/*""*/, method);
-    byte_4A09EBF = 1;
+    sub_1B715CC(&StringLiteral_1/*""*/, method);
+    byte_4A20D34 = 1;
   }
   userSvtLeaderInfo = (System_String_o *)this->fields.userSvtLeaderInfo;
   if ( userSvtLeaderInfo )
@@ -139,17 +139,17 @@ System_Int32_array *__fastcall UserRecommendSupportInfo__GetRandomLimitCountTarg
   struct ServantLeaderInfo_o *userSvtLeaderInfo; // x8
   System_Int32_array *result; // x0
 
-  if ( (byte_4A09EC1 & 1) == 0 )
+  if ( (byte_4A20D36 & 1) == 0 )
   {
-    sub_1B686D4(&int___TypeInfo, method);
-    byte_4A09EC1 = 1;
+    sub_1B715CC(&int___TypeInfo, method);
+    byte_4A20D36 = 1;
   }
   userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
   if ( !userSvtLeaderInfo )
-    return (System_Int32_array *)sub_1B6877C(int___TypeInfo, 0LL);
+    return (System_Int32_array *)sub_1B71674(int___TypeInfo, 0LL);
   result = userSvtLeaderInfo->fields.randomLimitCountTargets;
   if ( !result )
-    return (System_Int32_array *)sub_1B6877C(int___TypeInfo, 0LL);
+    return (System_Int32_array *)sub_1B71674(int___TypeInfo, 0LL);
   return result;
 }
 
@@ -162,10 +162,10 @@ int32_t __fastcall UserRecommendSupportInfo__GetServantId(UserRecommendSupportIn
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v6; // kr00_16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v8; // 0:x0.16
 
-  if ( (byte_4A09EBE & 1) == 0 )
+  if ( (byte_4A20D33 & 1) == 0 )
   {
-    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-    byte_4A09EBE = 1;
+    sub_1B715CC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
+    byte_4A20D33 = 1;
   }
   userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
   if ( userSvtLeaderInfo )
@@ -185,7 +185,7 @@ int32_t __fastcall UserRecommendSupportInfo__GetServantId(UserRecommendSupportIn
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v8.fields.currentCryptoKey = v4;
   *(_QWORD *)&v8.fields.fakeValue = v5;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v8, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46308268(v8, 0LL);
 }
 
 
@@ -198,26 +198,25 @@ bool __fastcall UserRecommendSupportInfo__GetTreasureDeviceInfo(
   const MethodInfo *v6; // x1
   int32_t v7; // w2
   int32_t v8; // w3
-  const MethodInfo *v9; // x2
   ServantLeaderInfo_o *userSvtLeaderInfo; // x0
 
-  if ( (byte_4A09EC0 & 1) == 0 )
+  if ( (byte_4A20D35 & 1) == 0 )
   {
-    sub_1B686D4(&TreasureDvcInfo_TypeInfo, tdInfo);
-    byte_4A09EC0 = 1;
+    sub_1B715CC(&TreasureDvcInfo_TypeInfo, tdInfo);
+    byte_4A20D35 = 1;
   }
-  v5 = (TreasureDvcInfo_o *)sub_1B68920(TreasureDvcInfo_TypeInfo);
+  v5 = (TreasureDvcInfo_o *)sub_1B71818(TreasureDvcInfo_TypeInfo);
   TreasureDvcInfo___ctor(v5, v6);
   *tdInfo = v5;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)tdInfo, (int32_t)v5, v7, v8);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)tdInfo, (int32_t)v5, v7, v8);
   userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
   if ( userSvtLeaderInfo )
-    LOBYTE(userSvtLeaderInfo) = ServantLeaderInfo__getTreasureDeviceInfo(userSvtLeaderInfo, tdInfo, v9);
+    LOBYTE(userSvtLeaderInfo) = ServantLeaderInfo__getTreasureDeviceInfo(userSvtLeaderInfo, tdInfo, 0LL);
   return (char)userSvtLeaderInfo;
 }
 
 
-bool __fastcall UserRecommendSupportInfo__GetTreasureDeviceInfo_40293736(
+bool __fastcall UserRecommendSupportInfo__GetTreasureDeviceInfo_40346292(
         UserRecommendSupportInfo_o *this,
         int32_t *tdLv,
         int32_t *tdMaxLv,
@@ -229,11 +228,7 @@ bool __fastcall UserRecommendSupportInfo__GetTreasureDeviceInfo_40293736(
   *tdMaxLv = 1;
   userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
   if ( userSvtLeaderInfo )
-    LOBYTE(userSvtLeaderInfo) = ServantLeaderInfo__getTreasureDeviceInfo_40232356(
-                                  userSvtLeaderInfo,
-                                  tdLv,
-                                  tdMaxLv,
-                                  method);
+    LOBYTE(userSvtLeaderInfo) = ServantLeaderInfo__getTreasureDeviceInfo_40284652(userSvtLeaderInfo, tdLv, tdMaxLv, 0LL);
   return (char)userSvtLeaderInfo;
 }
 
@@ -246,7 +241,7 @@ int32_t __fastcall UserRecommendSupportInfo__GetTreasureDeviceLevelIcon(
 
   userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
   if ( userSvtLeaderInfo )
-    LODWORD(userSvtLeaderInfo) = ServantLeaderInfo__getTreasureDeviceLevelIcon(userSvtLeaderInfo, method);
+    LODWORD(userSvtLeaderInfo) = ServantLeaderInfo__getTreasureDeviceLevelIcon(userSvtLeaderInfo, 0LL);
   return (int)userSvtLeaderInfo;
 }
 

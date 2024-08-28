@@ -1,14 +1,14 @@
 void __fastcall QuestRacePointMaster___ctor(QuestRacePointMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A091B2 & 1) == 0 )
+  if ( (byte_4A20023 & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string___ctor__, method);
-    byte_4A091B2 = 1;
+    sub_1B715CC(&Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string___ctor__, method);
+    byte_4A20023 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     213,
-    (const MethodInfo_30E47D8 *)Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string___ctor__);
+    (const MethodInfo_30F8A78 *)Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string___ctor__);
 }
 
 
@@ -22,13 +22,13 @@ QuestRacePointEntity_o *__fastcall QuestRacePointMaster__GetEntity(
   __int64 v7; // x1
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A091B0 & 1) == 0 )
+  if ( (byte_4A20021 & 1) == 0 )
   {
-    sub_1B686D4(
+    sub_1B715CC(
       &Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string__GetEntity__,
       *(_QWORD *)&questId);
-    sub_1B686D4(&QuestRacePointEntity_TypeInfo, v7);
-    byte_4A091B0 = 1;
+    sub_1B715CC(&QuestRacePointEntity_TypeInfo, v7);
+    byte_4A20021 = 1;
   }
   if ( !QuestRacePointEntity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(QuestRacePointEntity_TypeInfo);
@@ -36,7 +36,7 @@ QuestRacePointEntity_o *__fastcall QuestRacePointMaster__GetEntity(
   return (QuestRacePointEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      PK,
-                                     (const MethodInfo_30E4818 *)Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string__GetEntity__);
+                                     (const MethodInfo_30F8AB8 *)Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string__GetEntity__);
 }
 
 
@@ -51,11 +51,11 @@ bool __fastcall QuestRacePointMaster__TryGetEntity(
   __int64 v9; // x1
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A091B1 & 1) == 0 )
+  if ( (byte_4A20022 & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string__TryGetEntity__, entity);
-    sub_1B686D4(&QuestRacePointEntity_TypeInfo, v9);
-    byte_4A091B1 = 1;
+    sub_1B715CC(&Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string__TryGetEntity__, entity);
+    sub_1B715CC(&QuestRacePointEntity_TypeInfo, v9);
+    byte_4A20022 = 1;
   }
   if ( !QuestRacePointEntity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(QuestRacePointEntity_TypeInfo);
@@ -64,5 +64,5 @@ bool __fastcall QuestRacePointMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_30E4868 *)Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string__TryGetEntity__);
+           (const MethodInfo_30F8B08 *)Method_DataMasterBase_QuestRacePointMaster__QuestRacePointEntity__string__TryGetEntity__);
 }

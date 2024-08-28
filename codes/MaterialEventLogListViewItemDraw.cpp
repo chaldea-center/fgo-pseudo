@@ -6,22 +6,22 @@ void __fastcall MaterialEventLogListViewItemDraw___cctor(const MethodInfo *metho
   struct MaterialEventLogListViewItemDraw_StaticFields *static_fields; // x0
   struct MaterialEventLogListViewItemDraw_StaticFields *v5; // x8
 
-  if ( (byte_4A04410 & 1) == 0 )
+  if ( (byte_4A1B265 & 1) == 0 )
   {
-    sub_1B686D4(&MaterialEventLogListViewItemDraw_TypeInfo, v1);
-    sub_1B686D4(&StringLiteral_20292/*"img_menuboard_03"*/, v2);
-    sub_1B686D4(&StringLiteral_20291/*"img_menuboard_01"*/, v3);
-    byte_4A04410 = 1;
+    sub_1B715CC(&MaterialEventLogListViewItemDraw_TypeInfo, v1);
+    sub_1B715CC(&StringLiteral_20310/*"img_menuboard_03"*/, v2);
+    sub_1B715CC(&StringLiteral_20309/*"img_menuboard_01"*/, v3);
+    byte_4A1B265 = 1;
   }
-  MaterialEventLogListViewItemDraw_TypeInfo->static_fields->BASE_SP_NAME_DEFAULT = (struct System_String_o *)StringLiteral_20291/*"img_menuboard_01"*/;
-  sub_1B68678(MaterialEventLogListViewItemDraw_TypeInfo->static_fields);
+  MaterialEventLogListViewItemDraw_TypeInfo->static_fields->BASE_SP_NAME_DEFAULT = (struct System_String_o *)StringLiteral_20309/*"img_menuboard_01"*/;
+  sub_1B71570(MaterialEventLogListViewItemDraw_TypeInfo->static_fields);
   static_fields = MaterialEventLogListViewItemDraw_TypeInfo->static_fields;
-  static_fields->BASE_SP_NAME_SVT = (struct System_String_o *)StringLiteral_20292/*"img_menuboard_03"*/;
-  sub_1B68678(&static_fields->BASE_SP_NAME_SVT);
+  static_fields->BASE_SP_NAME_SVT = (struct System_String_o *)StringLiteral_20310/*"img_menuboard_03"*/;
+  sub_1B71570(&static_fields->BASE_SP_NAME_SVT);
   v5 = MaterialEventLogListViewItemDraw_TypeInfo->static_fields;
   *(_QWORD *)&v5->LABEL_X_DEFAULT = 0x4230000040000000LL;
-  *(_OWORD *)&v5->LABEL_W_DEFAULT = xmmword_BA77F0;
-  *(_OWORD *)&v5->LABEL_MAX_LINE_SVT = xmmword_BA6C60;
+  *(_OWORD *)&v5->LABEL_W_DEFAULT = xmmword_BAC030;
+  *(_OWORD *)&v5->LABEL_MAX_LINE_SVT = xmmword_BAB480;
 }
 
 
@@ -41,7 +41,7 @@ bool __fastcall MaterialEventLogListViewItemDraw__IsEnableSelect(
 
   notSelectObj = this->fields.notSelectObj;
   if ( !notSelectObj )
-    sub_1B68930(0LL, method);
+    sub_1B71828(0LL, method);
   return !UnityEngine_GameObject__get_activeSelf(notSelectObj, 0LL);
 }
 
@@ -82,7 +82,7 @@ void __fastcall MaterialEventLogListViewItemDraw__LateUpdateItem(
     this = (MaterialEventLogListViewItemDraw_o *)v5->fields.mFaceMaskSp;
     if ( !this )
 LABEL_9:
-      sub_1B68930(this, item);
+      sub_1B71828(this, item);
     v11.fields.b = b;
     v11.fields.a = a;
     v11.fields.r = r;
@@ -101,7 +101,7 @@ void __fastcall MaterialEventLogListViewItemDraw__SetEnableSelect(
 
   notSelectObj = this->fields.notSelectObj;
   if ( !notSelectObj )
-    sub_1B68930(0LL, isSelect);
+    sub_1B71828(0LL, isSelect);
   UnityEngine_GameObject__SetActive(notSelectObj, !isSelect, 0LL);
 }
 
@@ -117,10 +117,10 @@ void __fastcall MaterialEventLogListViewItemDraw__SetFaceImage(
   MaterialEventLogListViewItemDraw_o *v8; // x19
 
   v6 = (MaterialEventLogListViewItemDraw_o **)this;
-  if ( (byte_4A0440E & 1) == 0 )
+  if ( (byte_4A1B263 & 1) == 0 )
   {
-    this = (MaterialEventLogListViewItemDraw_o *)sub_1B686D4(&MaterialEventLogListViewItemDraw_TypeInfo, item);
-    byte_4A0440E = 1;
+    this = (MaterialEventLogListViewItemDraw_o *)sub_1B715CC(&MaterialEventLogListViewItemDraw_TypeInfo, item);
+    byte_4A1B263 = 1;
   }
   if ( !item )
     goto LABEL_14;
@@ -153,7 +153,7 @@ void __fastcall MaterialEventLogListViewItemDraw__SetFaceImage(
     j_il2cpp_runtime_class_init_0(MaterialEventLogListViewItemDraw_TypeInfo);
   if ( !v8 )
 LABEL_14:
-    sub_1B68930(this, item);
+    sub_1B71828(this, item);
   LODWORD(v8->fields.mBaseSp) = MaterialEventLogListViewItemDraw_TypeInfo->static_fields->FACE_MASK_SP_W - 1;
 }
 
@@ -222,15 +222,15 @@ void __fastcall MaterialEventLogListViewItemDraw__SetItem(
   const MethodInfo *v53; // x2
   __int64 v54; // x10
 
-  if ( (byte_4A0440D & 1) == 0 )
+  if ( (byte_4A1B262 & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataManager_GetMasterData_VoiceMaterialCondMaster___, item);
-    sub_1B686D4(&LocalizationManager_TypeInfo, v9);
-    sub_1B686D4(&MaterialEventLogListViewItemDraw_TypeInfo, v10);
-    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v11);
-    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
-    sub_1B686D4(&StringLiteral_8525/*"MATERIAL_PROGRESS_SUFFIX"*/, v13);
-    byte_4A0440D = 1;
+    sub_1B715CC(&Method_DataManager_GetMasterData_VoiceMaterialCondMaster___, item);
+    sub_1B715CC(&LocalizationManager_TypeInfo, v9);
+    sub_1B715CC(&MaterialEventLogListViewItemDraw_TypeInfo, v10);
+    sub_1B715CC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v11);
+    sub_1B715CC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
+    sub_1B715CC(&StringLiteral_8530/*"MATERIAL_PROGRESS_SUFFIX"*/, v13);
+    byte_4A1B262 = 1;
   }
   if ( item )
   {
@@ -240,10 +240,10 @@ void __fastcall MaterialEventLogListViewItemDraw__SetItem(
       if ( mode )
       {
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-        if ( !byte_4A03906 )
+        if ( !byte_4A1A756 )
         {
-          sub_1B686D4(&UnityEngine_Vector3_TypeInfo, v15);
-          byte_4A03906 = 1;
+          sub_1B715CC(&UnityEngine_Vector3_TypeInfo, v15);
+          byte_4A1A756 = 1;
         }
         GameObjectExtensions__SetLocalScale(gameObject, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
         flag = info_k__BackingField->fields.flag;
@@ -355,8 +355,8 @@ LABEL_29:
                   mText = v35->fields.mText;
                   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_8525/*"MATERIAL_PROGRESS_SUFFIX"*/, 0LL);
-                  v38 = System_String__Concat_61419468(mText, v37, 0LL);
+                  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_8530/*"MATERIAL_PROGRESS_SUFFIX"*/, 0LL);
+                  v38 = System_String__Concat_61505504(mText, v37, 0LL);
                   UILabel__set_text(v35, v38, 0LL);
                 }
               }
@@ -369,17 +369,17 @@ LABEL_29:
                 if ( mLabel )
                 {
                   UILabel__SetCondensedScale(mLabel, v30, 0LL);
-                  mLabel = (UILabel_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                  mLabel = (UILabel_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
                   if ( mLabel )
                   {
                     MasterData_object = DataManager__GetMasterData_object_(
                                           (DataManager_o *)mLabel,
-                                          (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_VoiceMaterialCondMaster___);
+                                          (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_VoiceMaterialCondMaster___);
                     voiceId = info_k__BackingField->fields.voiceId;
                     v42 = (VoiceMaterialCondMaster_o *)MasterData_object;
                     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
                       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-                    v43 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_46275260(voiceId, 0LL);
+                    v43 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_46344112(voiceId, 0LL);
                     mLabel = (UILabel_o *)System_String__IsNullOrEmpty(v43, 0LL);
                     if ( ((unsigned __int8)mLabel & 1) != 0 )
                       goto LABEL_58;
@@ -388,7 +388,7 @@ LABEL_29:
                     v46 = info_k__BackingField->fields.voiceId;
                     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
                       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-                    mLabel = (UILabel_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_46275260(
+                    mLabel = (UILabel_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_46344112(
                                             v46,
                                             0LL);
                     if ( !v42 )
@@ -454,16 +454,16 @@ LABEL_58:
           }
         }
 LABEL_74:
-        sub_1B68930(mLabel, v17);
+        sub_1B71828(mLabel, v17);
       }
     }
     else
     {
       v27 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-      if ( !byte_4A03901 )
+      if ( !byte_4A1A751 )
       {
-        sub_1B686D4(&UnityEngine_Vector3_TypeInfo, v26);
-        byte_4A03901 = 1;
+        sub_1B715CC(&UnityEngine_Vector3_TypeInfo, v26);
+        byte_4A1A751 = 1;
       }
       GameObjectExtensions__SetLocalScale(v27, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
     }
@@ -539,30 +539,30 @@ void __fastcall MaterialEventLogListViewItemDraw__SetLastTimeIcon(
   System_String_o *name; // x20
   System_String_o *v66; // x0
 
-  if ( (byte_4A0440F & 1) == 0 )
+  if ( (byte_4A1B264 & 1) == 0 )
   {
-    sub_1B686D4(&BalanceConfig_TypeInfo, item);
-    sub_1B686D4(&Method_BasicHelper_Any_int____75758640, v5);
-    sub_1B686D4(&System_Func_int__bool__TypeInfo, v6);
-    sub_1B686D4(&Method_System_Collections_Generic_List_int__Contains__, v7);
-    sub_1B686D4(&LocalizationManager_TypeInfo, v8);
-    sub_1B686D4(&MyRoomParamsManager_TypeInfo, v9);
-    sub_1B686D4(&Method_MaterialEventLogListViewItemDraw___c__SetLastTimeIcon_b__26_0__, v10);
-    sub_1B686D4(&Method_MaterialEventLogListViewItemDraw___c__DisplayClass26_0__SetLastTimeIcon_b__1__, v11);
-    sub_1B686D4(&MaterialEventLogListViewItemDraw___c__DisplayClass26_0_TypeInfo, v12);
-    sub_1B686D4(&MaterialEventLogListViewItemDraw___c_TypeInfo, v13);
-    sub_1B686D4(&StringLiteral_13450/*"TUTORIAL_QUEST_ID1"*/, v14);
-    sub_1B686D4(&StringLiteral_6338/*"FES_WAR_ID"*/, v15);
-    sub_1B686D4(&StringLiteral_8522/*"MATERIAL_MAP_EPILOGUE_TITLE"*/, v16);
-    byte_4A0440F = 1;
+    sub_1B715CC(&BalanceConfig_TypeInfo, item);
+    sub_1B715CC(&Method_BasicHelper_Any_int____75850432, v5);
+    sub_1B715CC(&System_Func_int__bool__TypeInfo, v6);
+    sub_1B715CC(&Method_System_Collections_Generic_List_int__Contains__, v7);
+    sub_1B715CC(&LocalizationManager_TypeInfo, v8);
+    sub_1B715CC(&MyRoomParamsManager_TypeInfo, v9);
+    sub_1B715CC(&Method_MaterialEventLogListViewItemDraw___c__SetLastTimeIcon_b__26_0__, v10);
+    sub_1B715CC(&Method_MaterialEventLogListViewItemDraw___c__DisplayClass26_0__SetLastTimeIcon_b__1__, v11);
+    sub_1B715CC(&MaterialEventLogListViewItemDraw___c__DisplayClass26_0_TypeInfo, v12);
+    sub_1B715CC(&MaterialEventLogListViewItemDraw___c_TypeInfo, v13);
+    sub_1B715CC(&StringLiteral_13465/*"TUTORIAL_QUEST_ID1"*/, v14);
+    sub_1B715CC(&StringLiteral_6343/*"FES_WAR_ID"*/, v15);
+    sub_1B715CC(&StringLiteral_8527/*"MATERIAL_MAP_EPILOGUE_TITLE"*/, v16);
+    byte_4A1B264 = 1;
   }
-  v17 = (Il2CppObject *)sub_1B68920(MaterialEventLogListViewItemDraw___c__DisplayClass26_0_TypeInfo);
+  v17 = (Il2CppObject *)sub_1B71818(MaterialEventLogListViewItemDraw___c__DisplayClass26_0_TypeInfo);
   System_Object___ctor(v17, 0LL);
   if ( !v17 )
     goto LABEL_212;
   v17[1].klass = (Il2CppClass *)item;
   v20 = v17 + 1;
-  sub_1B68678(&v17[1]);
+  sub_1B71570(&v17[1]);
   mLastTimeIcon = (UnityEngine_Component_o *)this->fields.mLastTimeIcon;
   if ( !mLastTimeIcon )
     goto LABEL_212;
@@ -601,7 +601,7 @@ void __fastcall MaterialEventLogListViewItemDraw__SetLastTimeIcon(
         v34 = MaterialEventLogListViewItemDraw___c_TypeInfo;
       }
       v37 = (Il2CppObject *)v34->static_fields->__9;
-      _9__26_0 = (System_Func_int__bool__o *)sub_1B68920(System_Func_int__bool__TypeInfo);
+      _9__26_0 = (System_Func_int__bool__o *)sub_1B71818(System_Func_int__bool__TypeInfo);
       System_Func_int__bool____ctor(
         _9__26_0,
         v37,
@@ -609,12 +609,12 @@ void __fastcall MaterialEventLogListViewItemDraw__SetLastTimeIcon(
         0LL);
       static_fields = MaterialEventLogListViewItemDraw___c_TypeInfo->static_fields;
       static_fields->__9__26_0 = _9__26_0;
-      sub_1B68678(&static_fields->__9__26_0);
+      sub_1B71570(&static_fields->__9__26_0);
     }
-    mLastTimeIcon = (UnityEngine_Component_o *)BasicHelper__Any_int__48451280(
+    mLastTimeIcon = (UnityEngine_Component_o *)BasicHelper__Any_int__48522544(
                                                  MainInterludeWarIdOnMaterial,
                                                  (System_Func_T__bool__o *)_9__26_0,
-                                                 (const MethodInfo_2E34ED0 *)Method_BasicHelper_Any_int____75758640);
+                                                 (const MethodInfo_2E46530 *)Method_BasicHelper_Any_int____75850432);
     if ( ((unsigned __int8)mLastTimeIcon & 1) != 0 )
       return;
     v39 = v20->klass;
@@ -627,10 +627,10 @@ void __fastcall MaterialEventLogListViewItemDraw__SetLastTimeIcon(
     {
       if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-      if ( !byte_4A04567 )
+      if ( !byte_4A1B3BC )
       {
-        sub_1B686D4(&MyRoomParamsManager_TypeInfo, v19);
-        byte_4A04567 = 1;
+        sub_1B715CC(&MyRoomParamsManager_TypeInfo, v19);
+        byte_4A1B3BC = 1;
       }
       mLastTimeIcon = (UnityEngine_Component_o *)MyRoomParamsManager_TypeInfo;
       if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -667,17 +667,17 @@ void __fastcall MaterialEventLogListViewItemDraw__SetLastTimeIcon(
       if ( System_Collections_Generic_List_int___Contains(
              (System_Collections_Generic_List_int__o *)mLastTimeIcon,
              v41->_1.byval_arg.bits,
-             (const MethodInfo_349F5CC *)Method_System_Collections_Generic_List_int__Contains__) )
+             (const MethodInfo_34B35B4 *)Method_System_Collections_Generic_List_int__Contains__) )
       {
         goto LABEL_203;
       }
     }
     if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-    if ( !byte_4A04408 )
+    if ( !byte_4A1B25D )
     {
-      sub_1B686D4(&MyRoomParamsManager_TypeInfo, v19);
-      byte_4A04408 = 1;
+      sub_1B715CC(&MyRoomParamsManager_TypeInfo, v19);
+      byte_4A1B25D = 1;
     }
     v42 = MyRoomParamsManager_TypeInfo;
     if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -686,7 +686,7 @@ void __fastcall MaterialEventLogListViewItemDraw__SetLastTimeIcon(
       v42 = MyRoomParamsManager_TypeInfo;
     }
     LastPlayQuestId_k__BackingField = v42->static_fields->_LastPlayQuestId_k__BackingField;
-    mLastTimeIcon = (UnityEngine_Component_o *)ConstantMaster__getValue((System_String_o *)StringLiteral_13450/*"TUTORIAL_QUEST_ID1"*/, 0LL);
+    mLastTimeIcon = (UnityEngine_Component_o *)ConstantMaster__getValue((System_String_o *)StringLiteral_13465/*"TUTORIAL_QUEST_ID1"*/, 0LL);
     if ( LastPlayQuestId_k__BackingField == (_DWORD)mLastTimeIcon )
     {
       if ( !v20->klass )
@@ -707,10 +707,10 @@ void __fastcall MaterialEventLogListViewItemDraw__SetLastTimeIcon(
     }
     if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-    if ( !byte_4A04409 )
+    if ( !byte_4A1B25E )
     {
-      sub_1B686D4(&MyRoomParamsManager_TypeInfo, v19);
-      byte_4A04409 = 1;
+      sub_1B715CC(&MyRoomParamsManager_TypeInfo, v19);
+      byte_4A1B25E = 1;
     }
     mLastTimeIcon = (UnityEngine_Component_o *)MyRoomParamsManager_TypeInfo;
     if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -720,7 +720,7 @@ void __fastcall MaterialEventLogListViewItemDraw__SetLastTimeIcon(
     }
     if ( !v20->klass || (v45 = v20->klass->_1.klass) == 0LL )
 LABEL_212:
-      sub_1B68930(mLastTimeIcon, v19);
+      sub_1B71828(mLastTimeIcon, v19);
     bits = v45->_1.byval_arg.bits;
     if ( *(_DWORD *)(*(_QWORD *)&mLastTimeIcon[7].fields.m_CachedPtr + 16LL) != bits )
     {
@@ -728,10 +728,10 @@ LABEL_212:
         return;
       if ( !LODWORD(mLastTimeIcon[9].monitor) )
         j_il2cpp_runtime_class_init_0(mLastTimeIcon);
-      if ( !byte_4A04409 )
+      if ( !byte_4A1B25E )
       {
-        sub_1B686D4(&MyRoomParamsManager_TypeInfo, v19);
-        byte_4A04409 = 1;
+        sub_1B715CC(&MyRoomParamsManager_TypeInfo, v19);
+        byte_4A1B25E = 1;
       }
       mLastTimeIcon = (UnityEngine_Component_o *)MyRoomParamsManager_TypeInfo;
       if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -774,10 +774,10 @@ LABEL_155:
     {
       if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-      if ( !byte_4A04568 )
+      if ( !byte_4A1B3BD )
       {
-        sub_1B686D4(&MyRoomParamsManager_TypeInfo, v19);
-        byte_4A04568 = 1;
+        sub_1B715CC(&MyRoomParamsManager_TypeInfo, v19);
+        byte_4A1B3BD = 1;
       }
       mLastTimeIcon = (UnityEngine_Component_o *)MyRoomParamsManager_TypeInfo;
       if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -818,7 +818,7 @@ LABEL_155:
     mLastTimeIcon = (UnityEngine_Component_o *)System_Collections_Generic_List_int___Contains(
                                                  (System_Collections_Generic_List_int__o *)mLastTimeIcon,
                                                  v52->_1.byval_arg.bits,
-                                                 (const MethodInfo_349F5CC *)Method_System_Collections_Generic_List_int__Contains__);
+                                                 (const MethodInfo_34B35B4 *)Method_System_Collections_Generic_List_int__Contains__);
     if ( ((unsigned __int8)mLastTimeIcon & 1) != 0 )
       goto LABEL_203;
     if ( !v20->klass )
@@ -830,10 +830,10 @@ LABEL_155:
     {
       if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-      if ( !byte_4A04567 )
+      if ( !byte_4A1B3BC )
       {
-        sub_1B686D4(&MyRoomParamsManager_TypeInfo, v19);
-        byte_4A04567 = 1;
+        sub_1B715CC(&MyRoomParamsManager_TypeInfo, v19);
+        byte_4A1B3BC = 1;
       }
       mLastTimeIcon = (UnityEngine_Component_o *)MyRoomParamsManager_TypeInfo;
       if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -856,23 +856,23 @@ LABEL_155:
       v55 = BalanceConfig_TypeInfo;
     }
     v56 = v55->static_fields->MainInterludeWarIdOnMaterial;
-    v57 = (System_Func_int__bool__o *)sub_1B68920(System_Func_int__bool__TypeInfo);
+    v57 = (System_Func_int__bool__o *)sub_1B71818(System_Func_int__bool__TypeInfo);
     System_Func_int__bool____ctor(
       v57,
       v17,
       Method_MaterialEventLogListViewItemDraw___c__DisplayClass26_0__SetLastTimeIcon_b__1__,
       0LL);
-    if ( !BasicHelper__Any_int__48451280(
+    if ( !BasicHelper__Any_int__48522544(
             v56,
             (System_Func_T__bool__o *)v57,
-            (const MethodInfo_2E34ED0 *)Method_BasicHelper_Any_int____75758640) )
+            (const MethodInfo_2E46530 *)Method_BasicHelper_Any_int____75850432) )
       return;
     if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-    if ( !byte_4A04409 )
+    if ( !byte_4A1B25E )
     {
-      sub_1B686D4(&MyRoomParamsManager_TypeInfo, v19);
-      byte_4A04409 = 1;
+      sub_1B715CC(&MyRoomParamsManager_TypeInfo, v19);
+      byte_4A1B25E = 1;
     }
     mLastTimeIcon = (UnityEngine_Component_o *)MyRoomParamsManager_TypeInfo;
     if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -892,7 +892,7 @@ LABEL_155:
   }
   if ( interopData != 5 )
     return;
-  mLastTimeIcon = (UnityEngine_Component_o *)ConstantMaster__getValue((System_String_o *)StringLiteral_6338/*"FES_WAR_ID"*/, 0LL);
+  mLastTimeIcon = (UnityEngine_Component_o *)ConstantMaster__getValue((System_String_o *)StringLiteral_6343/*"FES_WAR_ID"*/, 0LL);
   v24 = v20->klass;
   if ( !v20->klass )
     goto LABEL_212;
@@ -905,10 +905,10 @@ LABEL_155:
     {
       if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-      if ( !byte_4A04567 )
+      if ( !byte_4A1B3BC )
       {
-        sub_1B686D4(&MyRoomParamsManager_TypeInfo, v19);
-        byte_4A04567 = 1;
+        sub_1B715CC(&MyRoomParamsManager_TypeInfo, v19);
+        byte_4A1B3BC = 1;
       }
       mLastTimeIcon = (UnityEngine_Component_o *)MyRoomParamsManager_TypeInfo;
       if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -930,10 +930,10 @@ LABEL_155:
 LABEL_174:
       if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-      if ( !byte_4A04408 )
+      if ( !byte_4A1B25D )
       {
-        sub_1B686D4(&MyRoomParamsManager_TypeInfo, v19);
-        byte_4A04408 = 1;
+        sub_1B715CC(&MyRoomParamsManager_TypeInfo, v19);
+        byte_4A1B25D = 1;
       }
       mLastTimeIcon = (UnityEngine_Component_o *)MyRoomParamsManager_TypeInfo;
       if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -950,10 +950,10 @@ LABEL_174:
       {
         if ( !LODWORD(mLastTimeIcon[9].monitor) )
           j_il2cpp_runtime_class_init_0(mLastTimeIcon);
-        if ( !byte_4A04409 )
+        if ( !byte_4A1B25E )
         {
-          sub_1B686D4(&MyRoomParamsManager_TypeInfo, v19);
-          byte_4A04409 = 1;
+          sub_1B715CC(&MyRoomParamsManager_TypeInfo, v19);
+          byte_4A1B25E = 1;
         }
         mLastTimeIcon = (UnityEngine_Component_o *)MyRoomParamsManager_TypeInfo;
         if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -972,10 +972,10 @@ LABEL_174:
       }
       if ( !LODWORD(mLastTimeIcon[9].monitor) )
         j_il2cpp_runtime_class_init_0(mLastTimeIcon);
-      if ( !byte_4A0440B )
+      if ( !byte_4A1B260 )
       {
-        sub_1B686D4(&MyRoomParamsManager_TypeInfo, v19);
-        byte_4A0440B = 1;
+        sub_1B715CC(&MyRoomParamsManager_TypeInfo, v19);
+        byte_4A1B260 = 1;
       }
       mLastTimeIcon = (UnityEngine_Component_o *)MyRoomParamsManager_TypeInfo;
       if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1010,7 +1010,7 @@ LABEL_174:
         if ( System_Collections_Generic_List_int___Contains(
                (System_Collections_Generic_List_int__o *)mLastTimeIcon,
                v59->_1.byval_arg.bits,
-               (const MethodInfo_349F5CC *)Method_System_Collections_Generic_List_int__Contains__) )
+               (const MethodInfo_34B35B4 *)Method_System_Collections_Generic_List_int__Contains__) )
         {
           goto LABEL_203;
         }
@@ -1021,10 +1021,10 @@ LABEL_174:
   }
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-  if ( !byte_4A04408 )
+  if ( !byte_4A1B25D )
   {
-    sub_1B686D4(&MyRoomParamsManager_TypeInfo, v19);
-    byte_4A04408 = 1;
+    sub_1B715CC(&MyRoomParamsManager_TypeInfo, v19);
+    byte_4A1B25D = 1;
   }
   mLastTimeIcon = (UnityEngine_Component_o *)MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1041,10 +1041,10 @@ LABEL_174:
   {
     if ( !LODWORD(mLastTimeIcon[9].monitor) )
       j_il2cpp_runtime_class_init_0(mLastTimeIcon);
-    if ( !byte_4A04409 )
+    if ( !byte_4A1B25E )
     {
-      sub_1B686D4(&MyRoomParamsManager_TypeInfo, v19);
-      byte_4A04409 = 1;
+      sub_1B715CC(&MyRoomParamsManager_TypeInfo, v19);
+      byte_4A1B25E = 1;
     }
     mLastTimeIcon = (UnityEngine_Component_o *)MyRoomParamsManager_TypeInfo;
     if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1062,10 +1062,10 @@ LABEL_174:
     {
       if ( !LODWORD(mLastTimeIcon[9].monitor) )
         j_il2cpp_runtime_class_init_0(mLastTimeIcon);
-      if ( !byte_4A0440A )
+      if ( !byte_4A1B25F )
       {
-        sub_1B686D4(&MyRoomParamsManager_TypeInfo, v19);
-        byte_4A0440A = 1;
+        sub_1B715CC(&MyRoomParamsManager_TypeInfo, v19);
+        byte_4A1B25F = 1;
       }
       v29 = MyRoomParamsManager_TypeInfo;
       if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1076,16 +1076,16 @@ LABEL_174:
       LastPlayTitle_k__BackingField = v29->static_fields->_LastPlayTitle_k__BackingField;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v31 = LocalizationManager__Get((System_String_o *)StringLiteral_8522/*"MATERIAL_MAP_EPILOGUE_TITLE"*/, 0LL);
+      v31 = LocalizationManager__Get((System_String_o *)StringLiteral_8527/*"MATERIAL_MAP_EPILOGUE_TITLE"*/, 0LL);
       mLastTimeIcon = (UnityEngine_Component_o *)System_String__op_Equality(LastPlayTitle_k__BackingField, v31, 0LL);
       if ( ((unsigned __int8)mLastTimeIcon & 1) != 0 )
       {
         if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-        if ( !byte_4A0440A )
+        if ( !byte_4A1B25F )
         {
-          sub_1B686D4(&MyRoomParamsManager_TypeInfo, v19);
-          byte_4A0440A = 1;
+          sub_1B715CC(&MyRoomParamsManager_TypeInfo, v19);
+          byte_4A1B25F = 1;
         }
         mLastTimeIcon = (UnityEngine_Component_o *)MyRoomParamsManager_TypeInfo;
         if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1113,7 +1113,7 @@ LABEL_174:
       name = (System_String_o *)v64->_1.name;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v66 = LocalizationManager__Get((System_String_o *)StringLiteral_8522/*"MATERIAL_MAP_EPILOGUE_TITLE"*/, 0LL);
+      v66 = LocalizationManager__Get((System_String_o *)StringLiteral_8527/*"MATERIAL_MAP_EPILOGUE_TITLE"*/, 0LL);
       if ( System_String__op_Inequality(name, v66, 0LL) )
         goto LABEL_203;
     }
@@ -1126,15 +1126,15 @@ void __fastcall MaterialEventLogListViewItemDraw___c___cctor(const MethodInfo *m
   __int64 v1; // x1
   Il2CppObject *v2; // x19
 
-  if ( (byte_4A04411 & 1) == 0 )
+  if ( (byte_4A1B266 & 1) == 0 )
   {
-    sub_1B686D4(&MaterialEventLogListViewItemDraw___c_TypeInfo, v1);
-    byte_4A04411 = 1;
+    sub_1B715CC(&MaterialEventLogListViewItemDraw___c_TypeInfo, v1);
+    byte_4A1B266 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B68920(MaterialEventLogListViewItemDraw___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B71818(MaterialEventLogListViewItemDraw___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   MaterialEventLogListViewItemDraw___c_TypeInfo->static_fields->__9 = (struct MaterialEventLogListViewItemDraw___c_o *)v2;
-  sub_1B68678(MaterialEventLogListViewItemDraw___c_TypeInfo->static_fields);
+  sub_1B71570(MaterialEventLogListViewItemDraw___c_TypeInfo->static_fields);
 }
 
 
@@ -1154,17 +1154,17 @@ bool __fastcall MaterialEventLogListViewItemDraw___c___SetLastTimeIcon_b__26_0(
 {
   MyRoomParamsManager_c *v4; // x0
 
-  if ( (byte_4A04412 & 1) == 0 )
+  if ( (byte_4A1B267 & 1) == 0 )
   {
-    sub_1B686D4(&MyRoomParamsManager_TypeInfo, *(_QWORD *)&interludeWarId);
-    byte_4A04412 = 1;
+    sub_1B715CC(&MyRoomParamsManager_TypeInfo, *(_QWORD *)&interludeWarId);
+    byte_4A1B267 = 1;
   }
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-  if ( !byte_4A04409 )
+  if ( !byte_4A1B25E )
   {
-    sub_1B686D4(&MyRoomParamsManager_TypeInfo, *(_QWORD *)&interludeWarId);
-    byte_4A04409 = 1;
+    sub_1B715CC(&MyRoomParamsManager_TypeInfo, *(_QWORD *)&interludeWarId);
+    byte_4A1B25E = 1;
   }
   v4 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -1194,6 +1194,6 @@ bool __fastcall MaterialEventLogListViewItemDraw___c__DisplayClass26_0___SetLast
 
   item = this->fields.item;
   if ( !item || (info_k__BackingField = item->fields._info_k__BackingField) == 0LL )
-    sub_1B68930(this, interludeWarId);
+    sub_1B71828(this, interludeWarId);
   return info_k__BackingField->fields.war_id == interludeWarId;
 }

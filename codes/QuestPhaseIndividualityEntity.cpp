@@ -1,13 +1,13 @@
 void __fastcall QuestPhaseIndividualityEntity___ctor(QuestPhaseIndividualityEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A09186 & 1) == 0 )
+  if ( (byte_4A1FFF7 & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A09186 = 1;
+    sub_1B715CC(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A1FFF7 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30E4338 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30F85D8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall QuestPhaseIndividualityEntity__CreatePK(
         int32_t phase,
         const MethodInfo *method)
 {
-  if ( (byte_4A09185 & 1) == 0 )
+  if ( (byte_4A1FFF6 & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&phase);
-    byte_4A09185 = 1;
+    sub_1B715CC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&phase);
+    byte_4A1FFF6 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            questId,
            phase,
-           (const MethodInfo_2E47F74 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2E5960C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -63,21 +63,21 @@ System_Int32_array *__fastcall QuestPhaseIndividualityEntity__GetAddAndDelAfterI
   System_Int32_array *addIndividuality; // [xsp+8h] [xbp-28h] BYREF
 
   v3 = (System_Collections_ICollection_o *)baseIndividuality;
-  if ( (byte_4A09183 & 1) == 0 )
+  if ( (byte_4A1FFF4 & 1) == 0 )
   {
-    sub_1B686D4(&Method_System_Linq_Enumerable_Distinct_int___, baseIndividuality);
-    sub_1B686D4(&Method_System_Linq_Enumerable_ToArray_int___, v5);
-    sub_1B686D4(&Method_System_Collections_Generic_List_int__AddRange__, v6);
-    sub_1B686D4(&Method_System_Collections_Generic_List_int__RemoveAll__, v7);
-    sub_1B686D4(&Method_System_Collections_Generic_List_int___ctor__, v8);
-    sub_1B686D4(&System_Collections_Generic_List_int__TypeInfo, v9);
-    sub_1B686D4(&System_Predicate_int__TypeInfo, v10);
-    sub_1B686D4(&Method_QuestPhaseIndividualityEntity___c__DisplayClass0_0__GetAddAndDelAfterIndividuality_b__0__, v11);
-    sub_1B686D4(&QuestPhaseIndividualityEntity___c__DisplayClass0_0_TypeInfo, v12);
-    byte_4A09183 = 1;
+    sub_1B715CC(&Method_System_Linq_Enumerable_Distinct_int___, baseIndividuality);
+    sub_1B715CC(&Method_System_Linq_Enumerable_ToArray_int___, v5);
+    sub_1B715CC(&Method_System_Collections_Generic_List_int__AddRange__, v6);
+    sub_1B715CC(&Method_System_Collections_Generic_List_int__RemoveAll__, v7);
+    sub_1B715CC(&Method_System_Collections_Generic_List_int___ctor__, v8);
+    sub_1B715CC(&System_Collections_Generic_List_int__TypeInfo, v9);
+    sub_1B715CC(&System_Predicate_int__TypeInfo, v10);
+    sub_1B715CC(&Method_QuestPhaseIndividualityEntity___c__DisplayClass0_0__GetAddAndDelAfterIndividuality_b__0__, v11);
+    sub_1B715CC(&QuestPhaseIndividualityEntity___c__DisplayClass0_0_TypeInfo, v12);
+    byte_4A1FFF4 = 1;
   }
   addIndividuality = 0LL;
-  v13 = sub_1B68920(QuestPhaseIndividualityEntity___c__DisplayClass0_0_TypeInfo);
+  v13 = sub_1B71818(QuestPhaseIndividualityEntity___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0LL);
   if ( !v13 )
     goto LABEL_16;
@@ -87,10 +87,10 @@ System_Int32_array *__fastcall QuestPhaseIndividualityEntity__GetAddAndDelAfterI
          (System_Int32_array **)(v13 + 16),
          v16) )
   {
-    v17 = (System_Collections_Generic_List_int__o *)sub_1B68920(System_Collections_Generic_List_int__TypeInfo);
+    v17 = (System_Collections_Generic_List_int__o *)sub_1B71818(System_Collections_Generic_List_int__TypeInfo);
     System_Collections_Generic_List_int____ctor(
       v17,
-      (const MethodInfo_349EA00 *)Method_System_Collections_Generic_List_int___ctor__);
+      (const MethodInfo_34B29E8 *)Method_System_Collections_Generic_List_int___ctor__);
     IsNullOrEmpty = BasicHelper__IsNullOrEmpty(v3, 0LL);
     if ( !IsNullOrEmpty )
     {
@@ -99,7 +99,7 @@ System_Int32_array *__fastcall QuestPhaseIndividualityEntity__GetAddAndDelAfterI
       System_Collections_Generic_List_int___AddRange(
         v17,
         (System_Collections_Generic_IEnumerable_T__o *)v3,
-        (const MethodInfo_349F460 *)Method_System_Collections_Generic_List_int__AddRange__);
+        (const MethodInfo_34B3448 *)Method_System_Collections_Generic_List_int__AddRange__);
     }
     IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)addIndividuality, 0LL);
     if ( !IsNullOrEmpty )
@@ -109,19 +109,19 @@ System_Int32_array *__fastcall QuestPhaseIndividualityEntity__GetAddAndDelAfterI
       System_Collections_Generic_List_int___AddRange(
         v17,
         (System_Collections_Generic_IEnumerable_T__o *)addIndividuality,
-        (const MethodInfo_349F460 *)Method_System_Collections_Generic_List_int__AddRange__);
+        (const MethodInfo_34B3448 *)Method_System_Collections_Generic_List_int__AddRange__);
     }
     if ( BasicHelper__IsNullOrEmpty(*(System_Collections_ICollection_o **)(v13 + 16), 0LL) )
     {
 LABEL_14:
       v19 = System_Linq_Enumerable__Distinct_int_(
               (System_Collections_Generic_IEnumerable_TSource__o *)v17,
-              (const MethodInfo_2E68A30 *)Method_System_Linq_Enumerable_Distinct_int___);
+              (const MethodInfo_2E7A5EC *)Method_System_Linq_Enumerable_Distinct_int___);
       return System_Linq_Enumerable__ToArray_int_(
                v19,
-               (const MethodInfo_2E81CA4 *)Method_System_Linq_Enumerable_ToArray_int___);
+               (const MethodInfo_2E93CEC *)Method_System_Linq_Enumerable_ToArray_int___);
     }
-    v18 = (System_Predicate_int__o *)sub_1B68920(System_Predicate_int__TypeInfo);
+    v18 = (System_Predicate_int__o *)sub_1B71818(System_Predicate_int__TypeInfo);
     System_Predicate_int____ctor(
       v18,
       (Il2CppObject *)v13,
@@ -132,11 +132,11 @@ LABEL_14:
       System_Collections_Generic_List_int___RemoveAll(
         v17,
         (System_Predicate_T__o *)v18,
-        (const MethodInfo_34A087C *)Method_System_Collections_Generic_List_int__RemoveAll__);
+        (const MethodInfo_34B4864 *)Method_System_Collections_Generic_List_int__RemoveAll__);
       goto LABEL_14;
     }
 LABEL_16:
-    sub_1B68930(IsNullOrEmpty, v15);
+    sub_1B71828(IsNullOrEmpty, v15);
   }
   return (System_Int32_array *)v3;
 }
@@ -192,46 +192,46 @@ bool __fastcall QuestPhaseIndividualityEntity__GetAddDelIndividuality(
   int32_t v48; // w2
   int32_t v49; // w3
 
-  if ( (byte_4A09184 & 1) == 0 )
+  if ( (byte_4A1FFF5 & 1) == 0 )
   {
-    sub_1B686D4(&Method_System_Array_Empty_int___, addIndividuality);
-    sub_1B686D4(&Method_System_Linq_Enumerable_Select_int__int___, v7);
-    sub_1B686D4(&Method_System_Linq_Enumerable_ToArray_int___, v8);
-    sub_1B686D4(&Method_System_Linq_Enumerable_Where_int___, v9);
-    sub_1B686D4(&System_Func_int__int__TypeInfo, v10);
-    sub_1B686D4(&System_Func_int__bool__TypeInfo, v11);
-    sub_1B686D4(&Method_System_Math_Abs__, v12);
-    sub_1B686D4(&Method_QuestPhaseIndividualityEntity___c__GetAddDelIndividuality_b__1_0__, v13);
-    sub_1B686D4(&Method_QuestPhaseIndividualityEntity___c__GetAddDelIndividuality_b__1_1__, v14);
-    sub_1B686D4(&QuestPhaseIndividualityEntity___c_TypeInfo, v15);
-    byte_4A09184 = 1;
+    sub_1B715CC(&Method_System_Array_Empty_int___, addIndividuality);
+    sub_1B715CC(&Method_System_Linq_Enumerable_Select_int__int___, v7);
+    sub_1B715CC(&Method_System_Linq_Enumerable_ToArray_int___, v8);
+    sub_1B715CC(&Method_System_Linq_Enumerable_Where_int___, v9);
+    sub_1B715CC(&System_Func_int__int__TypeInfo, v10);
+    sub_1B715CC(&System_Func_int__bool__TypeInfo, v11);
+    sub_1B715CC(&Method_System_Math_Abs__, v12);
+    sub_1B715CC(&Method_QuestPhaseIndividualityEntity___c__GetAddDelIndividuality_b__1_0__, v13);
+    sub_1B715CC(&Method_QuestPhaseIndividualityEntity___c__GetAddDelIndividuality_b__1_1__, v14);
+    sub_1B715CC(&QuestPhaseIndividualityEntity___c_TypeInfo, v15);
+    byte_4A1FFF5 = 1;
   }
   v16 = Method_System_Array_Empty_int___;
   v17 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
   if ( !v17 )
   {
-    sub_1BBA60C(Method_System_Array_Empty_int___);
+    sub_1BC3504(Method_System_Array_Empty_int___);
     v17 = v16[7];
   }
   v18 = *(_QWORD *)(v17 + 16);
   if ( (*(_BYTE *)(v18 + 309) & 1) == 0 )
-    v18 = sub_1BBA5B0(v18);
+    v18 = sub_1BC34A8(v18);
   if ( !*(_DWORD *)(v18 + 224) )
     j_il2cpp_runtime_class_init_0(v18);
   v19 = *(_QWORD *)(v16[7] + 16LL);
   if ( (*(_BYTE *)(v19 + 309) & 1) == 0 )
-    v19 = sub_1BBA5B0(v19);
+    v19 = sub_1BC34A8(v19);
   v20 = *(System_Int32_array ***)(v19 + 184);
   v21 = *v20;
   v22 = *v20;
   *delIndividuality = *v20;
-  sub_1B68678(
+  sub_1B71570(
     (ServantStatusBattleListViewItem_o *)delIndividuality,
     (int32_t)v22,
     (int32_t)delIndividuality,
     (int32_t)method);
   *addIndividuality = v21;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)addIndividuality, (int32_t)v21, v23, v24);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)addIndividuality, (int32_t)v21, v23, v24);
   IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.individuality, 0LL);
   if ( !IsNullOrEmpty )
   {
@@ -251,7 +251,7 @@ bool __fastcall QuestPhaseIndividualityEntity__GetAddDelIndividuality(
         v27 = QuestPhaseIndividualityEntity___c_TypeInfo;
       }
       v29 = (Il2CppObject *)v27->static_fields->__9;
-      _9__1_0 = (System_Func_int__bool__o *)sub_1B68920(System_Func_int__bool__TypeInfo);
+      _9__1_0 = (System_Func_int__bool__o *)sub_1B71818(System_Func_int__bool__TypeInfo);
       System_Func_int__bool____ctor(
         _9__1_0,
         v29,
@@ -259,17 +259,17 @@ bool __fastcall QuestPhaseIndividualityEntity__GetAddDelIndividuality(
         0LL);
       static_fields = QuestPhaseIndividualityEntity___c_TypeInfo->static_fields;
       static_fields->__9__1_0 = _9__1_0;
-      sub_1B68678((ServantStatusBattleListViewItem_o *)&static_fields->__9__1_0, (int32_t)_9__1_0, v31, v32);
+      sub_1B71570((ServantStatusBattleListViewItem_o *)&static_fields->__9__1_0, (int32_t)_9__1_0, v31, v32);
     }
     v33 = System_Linq_Enumerable__Where_int_(
             individuality,
             (System_Func_TSource__bool__o *)_9__1_0,
-            (const MethodInfo_2E87840 *)Method_System_Linq_Enumerable_Where_int___);
+            (const MethodInfo_2E99888 *)Method_System_Linq_Enumerable_Where_int___);
     v34 = System_Linq_Enumerable__ToArray_int_(
             v33,
-            (const MethodInfo_2E81CA4 *)Method_System_Linq_Enumerable_ToArray_int___);
+            (const MethodInfo_2E93CEC *)Method_System_Linq_Enumerable_ToArray_int___);
     *addIndividuality = v34;
-    sub_1B68678((ServantStatusBattleListViewItem_o *)addIndividuality, (int32_t)v34, v35, v36);
+    sub_1B71570((ServantStatusBattleListViewItem_o *)addIndividuality, (int32_t)v34, v35, v36);
     v37 = QuestPhaseIndividualityEntity___c_TypeInfo;
     v38 = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.individuality;
     if ( !QuestPhaseIndividualityEntity___c_TypeInfo->_2.cctor_finished )
@@ -286,7 +286,7 @@ bool __fastcall QuestPhaseIndividualityEntity__GetAddDelIndividuality(
         v37 = QuestPhaseIndividualityEntity___c_TypeInfo;
       }
       v40 = (Il2CppObject *)v37->static_fields->__9;
-      _9__1_1 = (System_Func_int__bool__o *)sub_1B68920(System_Func_int__bool__TypeInfo);
+      _9__1_1 = (System_Func_int__bool__o *)sub_1B71818(System_Func_int__bool__TypeInfo);
       System_Func_int__bool____ctor(
         _9__1_1,
         v40,
@@ -294,23 +294,23 @@ bool __fastcall QuestPhaseIndividualityEntity__GetAddDelIndividuality(
         0LL);
       v41 = QuestPhaseIndividualityEntity___c_TypeInfo->static_fields;
       v41->__9__1_1 = _9__1_1;
-      sub_1B68678((ServantStatusBattleListViewItem_o *)&v41->__9__1_1, (int32_t)_9__1_1, v42, v43);
+      sub_1B71570((ServantStatusBattleListViewItem_o *)&v41->__9__1_1, (int32_t)_9__1_1, v42, v43);
     }
     v44 = System_Linq_Enumerable__Where_int_(
             v38,
             (System_Func_TSource__bool__o *)_9__1_1,
-            (const MethodInfo_2E87840 *)Method_System_Linq_Enumerable_Where_int___);
-    v45 = (System_Func_int__int__o *)sub_1B68920(System_Func_int__int__TypeInfo);
+            (const MethodInfo_2E99888 *)Method_System_Linq_Enumerable_Where_int___);
+    v45 = (System_Func_int__int__o *)sub_1B71818(System_Func_int__int__TypeInfo);
     System_Func_int__int____ctor(v45, 0LL, Method_System_Math_Abs__, 0LL);
     v46 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_int__int_(
                                                                  v44,
                                                                  (System_Func_TSource__TResult__o *)v45,
-                                                                 (const MethodInfo_2E77604 *)Method_System_Linq_Enumerable_Select_int__int___);
+                                                                 (const MethodInfo_2E891C0 *)Method_System_Linq_Enumerable_Select_int__int___);
     v47 = System_Linq_Enumerable__ToArray_int_(
             v46,
-            (const MethodInfo_2E81CA4 *)Method_System_Linq_Enumerable_ToArray_int___);
+            (const MethodInfo_2E93CEC *)Method_System_Linq_Enumerable_ToArray_int___);
     *delIndividuality = v47;
-    sub_1B68678((ServantStatusBattleListViewItem_o *)delIndividuality, (int32_t)v47, v48, v49);
+    sub_1B71570((ServantStatusBattleListViewItem_o *)delIndividuality, (int32_t)v47, v48, v49);
   }
   return !IsNullOrEmpty;
 }
@@ -323,15 +323,15 @@ void __fastcall QuestPhaseIndividualityEntity___c___cctor(const MethodInfo *meth
   int32_t v3; // w2
   int32_t v4; // w3
 
-  if ( (byte_4A09187 & 1) == 0 )
+  if ( (byte_4A1FFF8 & 1) == 0 )
   {
-    sub_1B686D4(&QuestPhaseIndividualityEntity___c_TypeInfo, v1);
-    byte_4A09187 = 1;
+    sub_1B715CC(&QuestPhaseIndividualityEntity___c_TypeInfo, v1);
+    byte_4A1FFF8 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B68920(QuestPhaseIndividualityEntity___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B71818(QuestPhaseIndividualityEntity___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   QuestPhaseIndividualityEntity___c_TypeInfo->static_fields->__9 = (struct QuestPhaseIndividualityEntity___c_o *)v2;
-  sub_1B68678(
+  sub_1B71570(
     (ServantStatusBattleListViewItem_o *)QuestPhaseIndividualityEntity___c_TypeInfo->static_fields,
     (int32_t)v2,
     v3,
@@ -379,13 +379,13 @@ bool __fastcall QuestPhaseIndividualityEntity___c__DisplayClass0_0___GetAddAndDe
         int32_t x,
         const MethodInfo *method)
 {
-  if ( (byte_4A09188 & 1) == 0 )
+  if ( (byte_4A1FFF9 & 1) == 0 )
   {
-    sub_1B686D4(&Method_System_Linq_Enumerable_Contains_int___, *(_QWORD *)&x);
-    byte_4A09188 = 1;
+    sub_1B715CC(&Method_System_Linq_Enumerable_Contains_int___, *(_QWORD *)&x);
+    byte_4A1FFF9 = 1;
   }
   return System_Linq_Enumerable__Contains_int_(
            (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.delIndividuality,
            x,
-           (const MethodInfo_2E63938 *)Method_System_Linq_Enumerable_Contains_int___);
+           (const MethodInfo_2E754F4 *)Method_System_Linq_Enumerable_Contains_int___);
 }

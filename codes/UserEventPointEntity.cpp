@@ -1,31 +1,31 @@
 void __fastcall UserEventPointEntity___ctor(UserEventPointEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A098C6 & 1) == 0 )
+  if ( (byte_4A2073D & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A098C6 = 1;
+    sub_1B715CC(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A2073D = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30E4338 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30F85D8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-void __fastcall UserEventPointEntity___ctor_39826952(
+void __fastcall UserEventPointEntity___ctor_39879532(
         UserEventPointEntity_o *this,
         int64_t userId,
         int32_t eventId,
         int32_t groupId,
         const MethodInfo *method)
 {
-  if ( (byte_4A098C7 & 1) == 0 )
+  if ( (byte_4A2073E & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataEntityBase_string___ctor__, userId);
-    byte_4A098C7 = 1;
+    sub_1B715CC(&Method_DataEntityBase_string___ctor__, userId);
+    byte_4A2073E = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30E4338 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30F85D8 *)Method_DataEntityBase_string___ctor__);
   this->fields.userId = userId;
   this->fields.eventId = eventId;
   this->fields.groupId = groupId;
@@ -33,7 +33,7 @@ void __fastcall UserEventPointEntity___ctor_39826952(
 }
 
 
-void __fastcall UserEventPointEntity___ctor_39827068(
+void __fastcall UserEventPointEntity___ctor_39879648(
         UserEventPointEntity_o *this,
         int64_t userId,
         int32_t eventId,
@@ -41,14 +41,14 @@ void __fastcall UserEventPointEntity___ctor_39827068(
         int64_t value,
         const MethodInfo *method)
 {
-  if ( (byte_4A098C8 & 1) == 0 )
+  if ( (byte_4A2073F & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataEntityBase_string___ctor__, userId);
-    byte_4A098C8 = 1;
+    sub_1B715CC(&Method_DataEntityBase_string___ctor__, userId);
+    byte_4A2073F = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30E4338 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30F85D8 *)Method_DataEntityBase_string___ctor__);
   this->fields.userId = userId;
   this->fields.eventId = eventId;
   this->fields.groupId = groupId;
@@ -63,16 +63,16 @@ System_String_o *__fastcall UserEventPointEntity__CreatePK(
         int32_t groupId,
         const MethodInfo *method)
 {
-  if ( (byte_4A098C5 & 1) == 0 )
+  if ( (byte_4A2073C & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataEntityBase_CreateMultiplePK_long__int__int___, *(_QWORD *)&eventId);
-    byte_4A098C5 = 1;
+    sub_1B715CC(&Method_DataEntityBase_CreateMultiplePK_long__int__int___, *(_QWORD *)&eventId);
+    byte_4A2073C = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            userId,
            eventId,
            groupId,
-           (const MethodInfo_2E485C0 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_2E59C58 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 

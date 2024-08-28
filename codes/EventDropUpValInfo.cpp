@@ -13,12 +13,12 @@ void __fastcall EventDropUpValInfo___ctor(
   v6->fields.funcEntity = funcEntity;
   v6 = (EventDropUpValInfo_o *)((char *)v6 + 24);
   *(_DWORD *)&v6[-1].fields.isInvalid = eventId;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)v6, (int32_t)funcEntity, v7, v8);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)v6, (int32_t)funcEntity, v7, v8);
   LODWORD(v6->monitor) = 0;
 }
 
 
-void __fastcall EventDropUpValInfo___ctor_38635424(
+void __fastcall EventDropUpValInfo___ctor_38684388(
         EventDropUpValInfo_o *this,
         int32_t eventId,
         FunctionEntity_o *funcEntity,
@@ -34,7 +34,7 @@ void __fastcall EventDropUpValInfo___ctor_38635424(
   v8->fields.funcEntity = funcEntity;
   v8 = (EventDropUpValInfo_o *)((char *)v8 + 24);
   *(_DWORD *)&v8[-1].fields.isInvalid = eventId;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)v8, (int32_t)funcEntity, v9, v10);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)v8, (int32_t)funcEntity, v9, v10);
   LODWORD(v8->monitor) = individuality;
 }
 
@@ -45,7 +45,7 @@ int32_t __fastcall EventDropUpValInfo__GetFuncType(EventDropUpValInfo_o *this, c
 
   funcEntity = this->fields.funcEntity;
   if ( !funcEntity )
-    sub_1B68930(this, method);
+    sub_1B71828(this, method);
   return funcEntity->fields.funcType;
 }
 

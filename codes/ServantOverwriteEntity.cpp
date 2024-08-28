@@ -1,13 +1,13 @@
 void __fastcall ServantOverwriteEntity___ctor(ServantOverwriteEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A093F6 & 1) == 0 )
+  if ( (byte_4A20268 & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A093F6 = 1;
+    sub_1B715CC(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A20268 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30E4338 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30F85D8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,16 +18,16 @@ System_String_o *__fastcall ServantOverwriteEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4A093F5 & 1) == 0 )
+  if ( (byte_4A20267 & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&type);
-    byte_4A093F5 = 1;
+    sub_1B715CC(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&type);
+    byte_4A20267 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            svtId,
            type,
            priority,
-           (const MethodInfo_2E48404 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2E59A9C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -47,14 +47,14 @@ int32_t __fastcall ServantOverwriteEntity__GetOverwriteTreasureDeviceId(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4A093F4 & 1) == 0 )
+  if ( (byte_4A20266 & 1) == 0 )
   {
-    sub_1B686D4(&StringLiteral_22338/*"overwriteTreasureDeviceId"*/, *(_QWORD *)&defaultValue);
-    byte_4A093F4 = 1;
+    sub_1B715CC(&StringLiteral_22359/*"overwriteTreasureDeviceId"*/, *(_QWORD *)&defaultValue);
+    byte_4A20266 = 1;
   }
   return EntityScriptUtil__GetIntValue(
            this->fields.overwriteValue,
-           (System_String_o *)StringLiteral_22338/*"overwriteTreasureDeviceId"*/,
+           (System_String_o *)StringLiteral_22359/*"overwriteTreasureDeviceId"*/,
            defaultValue,
            0LL);
 }

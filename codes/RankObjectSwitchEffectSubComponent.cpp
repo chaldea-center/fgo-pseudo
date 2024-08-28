@@ -2,7 +2,7 @@ void __fastcall RankObjectSwitchEffectSubComponent___ctor(
         RankObjectSwitchEffectSubComponent_o *this,
         const MethodInfo *method)
 {
-  EffectSubComponent___ctor((EffectSubComponent_o *)this, 0LL);
+  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
 
 
@@ -22,10 +22,10 @@ void __fastcall RankObjectSwitchEffectSubComponent__RecvParam(
   il2cpp_array_size_t v12; // w21
 
   v4 = this;
-  if ( (byte_4A0A018 & 1) == 0 )
+  if ( (byte_4A20E8D & 1) == 0 )
   {
-    this = (RankObjectSwitchEffectSubComponent_o *)sub_1B686D4(&RaceResultEffectParam_TypeInfo, param);
-    byte_4A0A018 = 1;
+    this = (RankObjectSwitchEffectSubComponent_o *)sub_1B715CC(&RaceResultEffectParam_TypeInfo, param);
+    byte_4A20E8D = 1;
   }
   if ( param
     && (methodPtr_low = LOBYTE(RaceResultEffectParam_TypeInfo->vtable._0_Equals.methodPtr),
@@ -43,7 +43,7 @@ void __fastcall RankObjectSwitchEffectSubComponent__RecvParam(
   switchObjectList = v4->fields.switchObjectList;
   if ( !switchObjectList )
 LABEL_27:
-    sub_1B68930(this, param);
+    sub_1B71828(this, param);
   max_length = switchObjectList->max_length;
   if ( v6
     && (monitor = v6[1].monitor) != 0LL
@@ -85,6 +85,6 @@ LABEL_27:
         goto LABEL_27;
     }
 LABEL_29:
-    sub_1B68938(this, param);
+    sub_1B71830(this, param);
   }
 }

@@ -5,7 +5,7 @@ void __fastcall ServantWaveTurnEvent___ctor(ServantWaveTurnEvent_o *this, Battle
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !data )
-    sub_1B68930(v5, v6);
+    sub_1B71828(v5, v6);
   this->fields = *(ServantWaveTurnEvent_Fields *)&data->fields.wavecount;
 }
 

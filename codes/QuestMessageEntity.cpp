@@ -1,13 +1,13 @@
 void __fastcall QuestMessageEntity___ctor(QuestMessageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A090E2 & 1) == 0 )
+  if ( (byte_4A1FF53 & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A090E2 = 1;
+    sub_1B715CC(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A1FF53 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30E4338 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30F85D8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,10 +17,10 @@ bool __fastcall QuestMessageEntity__CheckValid(QuestMessageEntity_o *this, const
   int32_t condType; // w21
   int64_t targetNum; // x19
 
-  if ( (byte_4A090E1 & 1) == 0 )
+  if ( (byte_4A1FF52 & 1) == 0 )
   {
-    sub_1B686D4(&CondType_TypeInfo, method);
-    byte_4A090E1 = 1;
+    sub_1B715CC(&CondType_TypeInfo, method);
+    byte_4A1FF52 = 1;
   }
   condType = this->fields.condType;
   targetId = this->fields.targetId;
@@ -38,16 +38,16 @@ System_String_o *__fastcall QuestMessageEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4A090E0 & 1) == 0 )
+  if ( (byte_4A1FF51 & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&phase);
-    byte_4A090E0 = 1;
+    sub_1B715CC(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&phase);
+    byte_4A1FF51 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            questId,
            phase,
            idx,
-           (const MethodInfo_2E48404 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2E59A9C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

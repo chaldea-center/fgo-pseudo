@@ -17,7 +17,7 @@ void __fastcall ServantAssetArgs___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !svtData )
-    sub_1B68930(v5, v6);
+    sub_1B71828(v5, v6);
   this->fields._SvtId_k__BackingField = BattleServantData__getSvtId(svtData, 0LL);
   this->fields._CommandImageSvtId_k__BackingField = BattleServantData__GetCommandImageSvtId(svtData, 0LL);
   this->fields._DispImageSvtId_k__BackingField = BattleServantData__GetDispImageSvtId(svtData, 0LL);
@@ -31,25 +31,25 @@ void __fastcall ServantAssetArgs___ctor(
   this->fields._AppearanceId_k__BackingField = BattleServantData__getAppearanceId(svtData, 0LL);
   CommandCodeIds = BattleServantData__GetCommandCodeIds(svtData, 0LL);
   this->fields._CommandCodeIds_k__BackingField = CommandCodeIds;
-  sub_1B68678(
+  sub_1B71570(
     (ServantStatusBattleListViewItem_o *)&this->fields._CommandCodeIds_k__BackingField,
     (int32_t)CommandCodeIds,
     v8,
     v9);
   skillInfoList = svtData->fields.skillInfoList;
   this->fields._skillList_k__BackingField = skillInfoList;
-  sub_1B68678(
+  sub_1B71570(
     (ServantStatusBattleListViewItem_o *)&this->fields._skillList_k__BackingField,
     (int32_t)skillInfoList,
     v11,
     v12);
   deckSvt = svtData->fields.deckSvt;
   this->fields._deckSvt_k__BackingField = deckSvt;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields._deckSvt_k__BackingField, (int32_t)deckSvt, v14, v15);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields._deckSvt_k__BackingField, (int32_t)deckSvt, v14, v15);
 }
 
 
-void __fastcall ServantAssetArgs___ctor_42947884(
+void __fastcall ServantAssetArgs___ctor_43011224(
         ServantAssetArgs_o *this,
         int32_t svtId,
         int32_t limitCount,
@@ -74,12 +74,12 @@ System_String_o *__fastcall ServantAssetArgs__GenerateUniqueKey(
         System_String_array *para,
         const MethodInfo *method)
 {
-  if ( (byte_4A0B5F9 & 1) == 0 )
+  if ( (byte_4A2247E & 1) == 0 )
   {
-    sub_1B686D4(&StringLiteral_16056/*"_"*/, para);
-    byte_4A0B5F9 = 1;
+    sub_1B715CC(&StringLiteral_16073/*"_"*/, para);
+    byte_4A2247E = 1;
   }
-  return System_String__Join((System_String_o *)StringLiteral_16056/*"_"*/, para, 0LL);
+  return System_String__Join((System_String_o *)StringLiteral_16073/*"_"*/, para, 0LL);
 }
 
 
@@ -168,58 +168,58 @@ System_String_o *__fastcall ServantAssetArgs__get_UniqueKey(ServantAssetArgs_o *
   int32_t v23; // w3
   int32_t SvtId_k__BackingField; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4A0B5F8 & 1) == 0 )
+  if ( (byte_4A2247D & 1) == 0 )
   {
-    sub_1B686D4(&string___TypeInfo, method);
-    byte_4A0B5F8 = 1;
+    sub_1B715CC(&string___TypeInfo, method);
+    byte_4A2247D = 1;
   }
   p_uniqueKey = &this->fields.uniqueKey;
   if ( System_String__IsNullOrEmpty(this->fields.uniqueKey, 0LL) )
   {
-    v4 = sub_1B6877C(string___TypeInfo, 6LL);
+    v4 = sub_1B71674(string___TypeInfo, 6LL);
     SvtId_k__BackingField = this->fields._SvtId_k__BackingField;
     v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0LL);
     if ( !v4 )
-      sub_1B68930(v5, v6);
+      sub_1B71828(v5, v6);
     if ( !*(_DWORD *)(v4 + 24) )
       goto LABEL_13;
     *(_QWORD *)(v4 + 32) = v5;
-    sub_1B68678((ServantStatusBattleListViewItem_o *)(v4 + 32), (int32_t)v5, v7, v8);
+    sub_1B71570((ServantStatusBattleListViewItem_o *)(v4 + 32), (int32_t)v5, v7, v8);
     SvtId_k__BackingField = this->fields._CommandImageSvtId_k__BackingField;
     v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0LL);
     if ( *(_DWORD *)(v4 + 24) <= 1u )
       goto LABEL_13;
     *(_QWORD *)(v4 + 40) = v5;
-    sub_1B68678((ServantStatusBattleListViewItem_o *)(v4 + 40), (int32_t)v5, v9, v10);
+    sub_1B71570((ServantStatusBattleListViewItem_o *)(v4 + 40), (int32_t)v5, v9, v10);
     SvtId_k__BackingField = this->fields._DispImageSvtId_k__BackingField;
     v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0LL);
     if ( *(_DWORD *)(v4 + 24) <= 2u )
       goto LABEL_13;
     *(_QWORD *)(v4 + 48) = v5;
-    sub_1B68678((ServantStatusBattleListViewItem_o *)(v4 + 48), (int32_t)v5, v11, v12);
+    sub_1B71570((ServantStatusBattleListViewItem_o *)(v4 + 48), (int32_t)v5, v11, v12);
     SvtId_k__BackingField = this->fields._DispLimitCount_k__BackingField;
     v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0LL);
     if ( *(_DWORD *)(v4 + 24) <= 3u )
       goto LABEL_13;
     *(_QWORD *)(v4 + 56) = v5;
-    sub_1B68678((ServantStatusBattleListViewItem_o *)(v4 + 56), (int32_t)v5, v13, v14);
+    sub_1B71570((ServantStatusBattleListViewItem_o *)(v4 + 56), (int32_t)v5, v13, v14);
     SvtId_k__BackingField = this->fields._OverwriteSvtVoiceId_k__BackingField;
     v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0LL);
     if ( *(_DWORD *)(v4 + 24) <= 4u
       || (*(_QWORD *)(v4 + 64) = v5,
-          sub_1B68678((ServantStatusBattleListViewItem_o *)(v4 + 64), (int32_t)v5, v15, v16),
+          sub_1B71570((ServantStatusBattleListViewItem_o *)(v4 + 64), (int32_t)v5, v15, v16),
           SvtId_k__BackingField = this->fields._AppearanceId_k__BackingField,
           v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0LL),
           *(_DWORD *)(v4 + 24) <= 5u) )
     {
 LABEL_13:
-      sub_1B68938(v5, v6);
+      sub_1B71830(v5, v6);
     }
     *(_QWORD *)(v4 + 72) = v5;
-    sub_1B68678((ServantStatusBattleListViewItem_o *)(v4 + 72), (int32_t)v5, v17, v18);
+    sub_1B71570((ServantStatusBattleListViewItem_o *)(v4 + 72), (int32_t)v5, v17, v18);
     UniqueKey = ServantAssetArgs__GenerateUniqueKey(v19, (System_String_array *)v4, v20);
     *p_uniqueKey = UniqueKey;
-    sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.uniqueKey, (int32_t)UniqueKey, v22, v23);
+    sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.uniqueKey, (int32_t)UniqueKey, v22, v23);
   }
   return *p_uniqueKey;
 }
@@ -277,7 +277,7 @@ void __fastcall ServantAssetArgs__set_CommandCodeIds(
   int32_t v3; // w3
 
   this->fields._CommandCodeIds_k__BackingField = value;
-  sub_1B68678(
+  sub_1B71570(
     (ServantStatusBattleListViewItem_o *)&this->fields._CommandCodeIds_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -359,7 +359,7 @@ void __fastcall ServantAssetArgs__set_deckSvt(
   int32_t v3; // w3
 
   this->fields._deckSvt_k__BackingField = value;
-  sub_1B68678(
+  sub_1B71570(
     (ServantStatusBattleListViewItem_o *)&this->fields._deckSvt_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -375,7 +375,7 @@ void __fastcall ServantAssetArgs__set_skillList(
   int32_t v3; // w3
 
   this->fields._skillList_k__BackingField = value;
-  sub_1B68678(
+  sub_1B71570(
     (ServantStatusBattleListViewItem_o *)&this->fields._skillList_k__BackingField,
     (int32_t)value,
     (int32_t)method,

@@ -1,13 +1,13 @@
 void __fastcall QuestBehaviorEntity___ctor(QuestBehaviorEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A0908E & 1) == 0 )
+  if ( (byte_4A1FEFF & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A0908E = 1;
+    sub_1B715CC(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A1FEFF = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30E4338 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30F85D8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -19,17 +19,17 @@ System_String_o *__fastcall QuestBehaviorEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4A0908B & 1) == 0 )
+  if ( (byte_4A1FEFC & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&phase);
-    byte_4A0908B = 1;
+    sub_1B715CC(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&phase);
+    byte_4A1FEFC = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            questId,
            phase,
            num,
            priority,
-           (const MethodInfo_2E488C4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_2E59F5C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -53,10 +53,10 @@ int64_t __fastcall QuestBehaviorEntity__GetUniqueId(QuestBehaviorEntity_o *this,
   int32_t phase; // w19
   int32_t questId; // w20
 
-  if ( (byte_4A0908C & 1) == 0 )
+  if ( (byte_4A1FEFD & 1) == 0 )
   {
-    sub_1B686D4(&BattleDataDefine_TypeInfo, method);
-    byte_4A0908C = 1;
+    sub_1B715CC(&BattleDataDefine_TypeInfo, method);
+    byte_4A1FEFD = 1;
   }
   questId = this->fields.questId;
   phase = this->fields.phase;
@@ -89,24 +89,24 @@ bool __fastcall QuestBehaviorEntity__checkConditions(QuestBehaviorEntity_o *this
   int64_t condNum; // x19
   UserItemEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A0908D & 1) == 0 )
+  if ( (byte_4A1FEFE & 1) == 0 )
   {
-    sub_1B686D4(&CondType_TypeInfo, method);
-    sub_1B686D4(&Method_DataManager_GetMasterData_UserItemMaster___, v3);
-    sub_1B686D4(&NetworkManager_TypeInfo, v4);
-    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_4A0908D = 1;
+    sub_1B715CC(&CondType_TypeInfo, method);
+    sub_1B715CC(&Method_DataManager_GetMasterData_UserItemMaster___, v3);
+    sub_1B715CC(&NetworkManager_TypeInfo, v4);
+    sub_1B715CC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_4A1FEFE = 1;
   }
   entity = 0LL;
   condType = this->fields.condType;
   if ( condType == 2 )
   {
-    Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
     {
       MasterData_object = DataManager__GetMasterData_object_(
                             (DataManager_o *)Instance,
-                            (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                            (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_UserItemMaster___);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       Instance = NetworkManager__get_UserId(0LL);
@@ -130,7 +130,7 @@ bool __fastcall QuestBehaviorEntity__checkConditions(QuestBehaviorEntity_o *this
         }
       }
     }
-    sub_1B68930(Instance, v8);
+    sub_1B71828(Instance, v8);
   }
   condTargetId = this->fields.condTargetId;
   condNum = this->fields.condNum;
@@ -146,9 +146,9 @@ int32_t __fastcall QuestBehaviorEntity__getskillId(QuestBehaviorEntity_o *this, 
 
   behaviorValues = this->fields.behaviorValues;
   if ( !behaviorValues )
-    sub_1B68930(this, method);
+    sub_1B71828(this, method);
   if ( !behaviorValues->max_length )
-    sub_1B68938(this, method);
+    sub_1B71830(this, method);
   return behaviorValues->m_Items[1];
 }
 
@@ -159,8 +159,8 @@ int32_t __fastcall QuestBehaviorEntity__getskillLv(QuestBehaviorEntity_o *this, 
 
   behaviorValues = this->fields.behaviorValues;
   if ( !behaviorValues )
-    sub_1B68930(this, method);
+    sub_1B71828(this, method);
   if ( behaviorValues->max_length <= 1 )
-    sub_1B68938(this, method);
+    sub_1B71830(this, method);
   return behaviorValues->m_Items[2];
 }

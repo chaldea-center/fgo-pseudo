@@ -9,12 +9,12 @@ void __fastcall MapFogAttacher__Attach(MapFogAttacher_o *this, const MethodInfo 
   Il2CppObject *Instance; // x0
   const MethodInfo *v4; // x2
 
-  if ( (byte_4A05ADD & 1) == 0 )
+  if ( (byte_4A1C941 & 1) == 0 )
   {
-    sub_1B686D4(&Method_SingletonMonoBehaviour_MapFogManager__get_Instance__, method);
-    byte_4A05ADD = 1;
+    sub_1B715CC(&Method_SingletonMonoBehaviour_MapFogManager__get_Instance__, method);
+    byte_4A1C941 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_MapFogManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_MapFogManager__get_Instance__);
   if ( Instance )
     MapFogManager__Attach((MapFogManager_o *)Instance, this->fields.fogData, v4);
 }
@@ -33,18 +33,18 @@ void __fastcall MapFogAttacher__OnDestroy(MapFogAttacher_o *this, const MethodIn
   const MethodInfo *v10; // x2
 
   v2 = this;
-  if ( (byte_4A05ADC & 1) == 0 )
+  if ( (byte_4A1C940 & 1) == 0 )
   {
-    sub_1B686D4(&UnityEngine_Object_TypeInfo, method);
-    this = (MapFogAttacher_o *)sub_1B686D4(&Method_SingletonMonoBehaviour_MapFogManager__get_Instance__, v3);
-    byte_4A05ADC = 1;
+    sub_1B715CC(&UnityEngine_Object_TypeInfo, method);
+    this = (MapFogAttacher_o *)sub_1B715CC(&Method_SingletonMonoBehaviour_MapFogManager__get_Instance__, v3);
+    byte_4A1C940 = 1;
   }
   fogData = v2->fields.fogData;
   if ( !fogData
     || (this = (MapFogAttacher_o *)fogData->fields.renderer) == 0LL
     || (this = (MapFogAttacher_o *)UnityEngine_Renderer__get_materials((UnityEngine_Renderer_o *)this, 0LL)) == 0LL )
   {
-    sub_1B68930(this, method);
+    sub_1B71828(this, method);
   }
   m_CancellationTokenSource = this->fields.m_CancellationTokenSource;
   v6 = this;
@@ -54,17 +54,17 @@ void __fastcall MapFogAttacher__OnDestroy(MapFogAttacher_o *this, const MethodIn
     do
     {
       if ( v7 >= (unsigned int)m_CancellationTokenSource )
-        sub_1B68938(this, method);
+        sub_1B71830(this, method);
       v8 = (UnityEngine_Object_o *)*((_QWORD *)&v6->fields.fogData + v7);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_69171816(v8, 0LL);
+      UnityEngine_Object__Destroy_69257852(v8, 0LL);
       LODWORD(m_CancellationTokenSource) = v6->fields.m_CancellationTokenSource;
       ++v7;
     }
     while ( (__int64)v7 < (int)m_CancellationTokenSource );
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_MapFogManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_MapFogManager__get_Instance__);
   if ( Instance )
     MapFogManager__Detach((MapFogManager_o *)Instance, v2->fields.fogData, v10);
 }

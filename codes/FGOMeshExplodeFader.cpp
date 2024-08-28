@@ -13,16 +13,16 @@ System_Collections_IEnumerator_o *__fastcall FGOMeshExplodeFader__FadeOut(
   int32_t v4; // w2
   int32_t v5; // w3
 
-  if ( (byte_4A07B3A & 1) == 0 )
+  if ( (byte_4A1E99F & 1) == 0 )
   {
-    sub_1B686D4(&FGOMeshExplodeFader__FadeOut_d__2_TypeInfo, method);
-    byte_4A07B3A = 1;
+    sub_1B715CC(&FGOMeshExplodeFader__FadeOut_d__2_TypeInfo, method);
+    byte_4A1E99F = 1;
   }
-  v3 = sub_1B68920(FGOMeshExplodeFader__FadeOut_d__2_TypeInfo);
+  v3 = sub_1B71818(FGOMeshExplodeFader__FadeOut_d__2_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -32,7 +32,7 @@ void __fastcall FGOMeshExplodeFader__Start(FGOMeshExplodeFader_o *this, const Me
   System_Collections_IEnumerator_o *v3; // x1
 
   v3 = FGOMeshExplodeFader__FadeOut(this, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_69157088((UnityEngine_MonoBehaviour_o *)this, v3, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_69243124((UnityEngine_MonoBehaviour_o *)this, v3, 0LL);
 }
 
 
@@ -63,11 +63,11 @@ bool __fastcall FGOMeshExplodeFader__FadeOut_d__2__MoveNext(
   UnityEngine_Object_o *gameObject; // x19
 
   v2 = this;
-  if ( (byte_4A07B3B & 1) == 0 )
+  if ( (byte_4A1E9A0 & 1) == 0 )
   {
-    sub_1B686D4(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
-    this = (FGOMeshExplodeFader__FadeOut_d__2_o *)sub_1B686D4(&UnityEngine_Object_TypeInfo, v3);
-    byte_4A07B3B = 1;
+    sub_1B715CC(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
+    this = (FGOMeshExplodeFader__FadeOut_d__2_o *)sub_1B715CC(&UnityEngine_Object_TypeInfo, v3);
+    byte_4A1E9A0 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -80,7 +80,7 @@ bool __fastcall FGOMeshExplodeFader__FadeOut_d__2__MoveNext(
     if ( _4__this )
       goto LABEL_8;
 LABEL_14:
-    sub_1B68930(this, method);
+    sub_1B71828(this, method);
   }
   if ( _1__state )
     return 0;
@@ -89,7 +89,7 @@ LABEL_14:
     goto LABEL_14;
   UnityEngine_Component__GetComponent_object_(
     (UnityEngine_Component_o *)_4__this,
-    (const MethodInfo_2E407F4 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+    (const MethodInfo_2E51E8C *)Method_UnityEngine_Component_GetComponent_Renderer___);
   v2->fields._t_5__2 = 0.0;
   v8 = 0.0;
 LABEL_8:
@@ -97,7 +97,7 @@ LABEL_8:
   {
     v2->fields.__2__current = 0LL;
     p__2__current = (ServantStatusBattleListViewItem_o *)&v2->fields.__2__current;
-    sub_1B68678(p__2__current, 0, v6, v7);
+    sub_1B71570(p__2__current, 0, v6, v7);
     result = 1;
     *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
     return result;
@@ -105,7 +105,7 @@ LABEL_8:
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)_4__this, 0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_69171816(gameObject, 0LL);
+  UnityEngine_Object__Destroy_69257852(gameObject, 0LL);
   return 0;
 }
 
@@ -126,11 +126,11 @@ void __fastcall __noreturn FGOMeshExplodeFader__FadeOut_d__2__System_Collections
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B686E8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B68920(v2);
+  v2 = sub_1B715E0(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B71818(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B686E8(&Method_FGOMeshExplodeFader__FadeOut_d__2_System_Collections_IEnumerator_Reset__);
-  sub_1B687FC(v3, v4);
+  v4 = sub_1B715E0(&Method_FGOMeshExplodeFader__FadeOut_d__2_System_Collections_IEnumerator_Reset__);
+  sub_1B716F4(v3, v4);
 }
 
 

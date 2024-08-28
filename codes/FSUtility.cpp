@@ -31,57 +31,57 @@ void __fastcall FSUtility___cctor(const MethodInfo *method)
   int32_t v29; // w2
   int32_t v30; // w3
 
-  if ( (byte_4A0A2ED & 1) == 0 )
+  if ( (byte_4A21162 & 1) == 0 )
   {
-    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_int__float___ctor__, v1);
-    sub_1B686D4(&System_Collections_Generic_Dictionary_int__float__TypeInfo, v4);
-    sub_1B686D4(&FSUtility_TypeInfo, v5);
-    sub_1B686D4(&int___TypeInfo, v6);
-    sub_1B686D4(&string___TypeInfo, v7);
-    sub_1B686D4(&StringLiteral_6832/*"FullScreen/FSUtilityList"*/, v8);
-    byte_4A0A2ED = 1;
+    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_int__float___ctor__, v1);
+    sub_1B715CC(&System_Collections_Generic_Dictionary_int__float__TypeInfo, v4);
+    sub_1B715CC(&FSUtility_TypeInfo, v5);
+    sub_1B715CC(&int___TypeInfo, v6);
+    sub_1B715CC(&string___TypeInfo, v7);
+    sub_1B715CC(&StringLiteral_6837/*"FullScreen/FSUtilityList"*/, v8);
+    byte_4A21162 = 1;
   }
   static_fields = FSUtility_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->RATIO_VISTA = 0x4015555540000000LL;
-  v10 = StringLiteral_6832/*"FullScreen/FSUtilityList"*/;
-  static_fields->FS_UTILITY_LIST_PATH = (struct System_String_o *)StringLiteral_6832/*"FullScreen/FSUtilityList"*/;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&static_fields->FS_UTILITY_LIST_PATH, v10, v2, v3);
-  v11 = sub_1B6877C(int___TypeInfo, 0LL);
+  v10 = StringLiteral_6837/*"FullScreen/FSUtilityList"*/;
+  static_fields->FS_UTILITY_LIST_PATH = (struct System_String_o *)StringLiteral_6837/*"FullScreen/FSUtilityList"*/;
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&static_fields->FS_UTILITY_LIST_PATH, v10, v2, v3);
+  v11 = sub_1B71674(int___TypeInfo, 0LL);
   v12 = FSUtility_TypeInfo->static_fields;
   v12->legacyBacks = (struct System_Int32_array *)v11;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&v12->legacyBacks, v11, v13, v14);
-  v15 = sub_1B6877C(string___TypeInfo, 0LL);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&v12->legacyBacks, v11, v13, v14);
+  v15 = sub_1B71674(string___TypeInfo, 0LL);
   v16 = FSUtility_TypeInfo->static_fields;
   v16->fullScreenImages = (struct System_String_array *)v15;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&v16->fullScreenImages, v15, v17, v18);
-  v19 = (System_Collections_Generic_Dictionary_int__float__o *)sub_1B68920(System_Collections_Generic_Dictionary_int__float__TypeInfo);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&v16->fullScreenImages, v15, v17, v18);
+  v19 = (System_Collections_Generic_Dictionary_int__float__o *)sub_1B71818(System_Collections_Generic_Dictionary_int__float__TypeInfo);
   System_Collections_Generic_Dictionary_int__float____ctor(
     v19,
-    (const MethodInfo_3139504 *)Method_System_Collections_Generic_Dictionary_int__float___ctor__);
+    (const MethodInfo_314DDB8 *)Method_System_Collections_Generic_Dictionary_int__float___ctor__);
   v20 = FSUtility_TypeInfo->static_fields;
   v20->trimBackRatioY = v19;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&v20->trimBackRatioY, (int32_t)v19, v21, v22);
-  v23 = sub_1B6877C(string___TypeInfo, 0LL);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&v20->trimBackRatioY, (int32_t)v19, v21, v22);
+  v23 = sub_1B71674(string___TypeInfo, 0LL);
   v24 = FSUtility_TypeInfo->static_fields;
   v24->legacyMovies = (struct System_String_array *)v23;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&v24->legacyMovies, v23, v25, v26);
-  v27 = sub_1B6877C(int___TypeInfo, 0LL);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&v24->legacyMovies, v23, v25, v26);
+  v27 = sub_1B71674(int___TypeInfo, 0LL);
   v28 = FSUtility_TypeInfo->static_fields;
   v28->notFullScreenNpChrs = (struct System_Int32_array *)v27;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&v28->notFullScreenNpChrs, v27, v29, v30);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&v28->notFullScreenNpChrs, v27, v29, v30);
 }
 
 
 void __fastcall FSUtility___ctor(FSUtility_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A0A2EC & 1) == 0 )
+  if ( (byte_4A21161 & 1) == 0 )
   {
-    sub_1B686D4(&Method_SingletonMonoBehaviour_FSUtility___ctor__, method);
-    byte_4A0A2EC = 1;
+    sub_1B715CC(&Method_SingletonMonoBehaviour_FSUtility___ctor__, method);
+    byte_4A21161 = 1;
   }
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_36F7AB4 *)Method_SingletonMonoBehaviour_FSUtility___ctor__);
+    (const MethodInfo_370B620 *)Method_SingletonMonoBehaviour_FSUtility___ctor__);
 }
 
 
@@ -96,10 +96,10 @@ float __fastcall FSUtility__CalculateNotchWidth(const MethodInfo *method)
   int HEIGHT; // s10
   UnityEngine_Rect_o safeArea; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4A0A2EB & 1) == 0 )
+  if ( (byte_4A21160 & 1) == 0 )
   {
-    sub_1B686D4(&ManagerConfig_TypeInfo, v1);
-    byte_4A0A2EB = 1;
+    sub_1B715CC(&ManagerConfig_TypeInfo, v1);
+    byte_4A21160 = 1;
   }
   safeArea = UnityEngine_Screen__get_safeArea(0LL);
   m_XMin = safeArea.fields.m_XMin;
@@ -138,16 +138,16 @@ UnityEngine_Vector2_o __fastcall FSUtility__GetAddOffset(
   float v15; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  if ( (byte_4A0A2EA & 1) == 0 )
+  if ( (byte_4A2115F & 1) == 0 )
   {
-    sub_1B686D4(&FSUtility_TypeInfo, calcNotch);
-    sub_1B686D4(&UnityEngine_Object_TypeInfo, v5);
-    byte_4A0A2EA = 1;
+    sub_1B715CC(&FSUtility_TypeInfo, calcNotch);
+    sub_1B715CC(&UnityEngine_Object_TypeInfo, v5);
+    byte_4A2115F = 1;
   }
-  if ( !byte_4A037FA )
+  if ( !byte_4A1A64A )
   {
-    sub_1B686D4(&UnityEngine_Vector2_TypeInfo, calcNotch);
-    byte_4A037FA = 1;
+    sub_1B715CC(&UnityEngine_Vector2_TypeInfo, calcNotch);
+    byte_4A1A64A = 1;
   }
   v6 = FSUtility_TypeInfo;
   static_fields = UnityEngine_Vector2_TypeInfo->static_fields;
@@ -163,7 +163,7 @@ UnityEngine_Vector2_o __fastcall FSUtility__GetAddOffset(
     if ( v10 )
     {
       if ( !refOffset )
-        sub_1B68930(v10, v11);
+        sub_1B71828(v10, v11);
       if ( refOffset->fields.enableAddOffsetX )
       {
         subMarginX = refOffset->fields.subMarginX;
@@ -200,21 +200,21 @@ float __fastcall FSUtility__GetBackFSOffsetY(System_String_o *fileName, const Me
   int32_t result; // [xsp+Ch] [xbp-24h] BYREF
 
   v2 = fileName;
-  if ( (byte_4A0A2E2 & 1) == 0 )
+  if ( (byte_4A21157 & 1) == 0 )
   {
-    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_int__float__ContainsKey__, method);
-    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_int__float__get_Item__, v3);
-    sub_1B686D4(&FSUtility_TypeInfo, v4);
-    sub_1B686D4(&StringLiteral_3110/*"Back/back"*/, v5);
-    fileName = (System_String_o *)sub_1B686D4(&StringLiteral_1/*""*/, v6);
-    byte_4A0A2E2 = 1;
+    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_int__float__ContainsKey__, method);
+    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_int__float__get_Item__, v3);
+    sub_1B715CC(&FSUtility_TypeInfo, v4);
+    sub_1B715CC(&StringLiteral_3116/*"Back/back"*/, v5);
+    fileName = (System_String_o *)sub_1B715CC(&StringLiteral_1/*""*/, v6);
+    byte_4A21157 = 1;
   }
   result = -1;
   if ( !v2 )
     goto LABEL_14;
-  v7 = System_String__Replace_61439096(
+  v7 = System_String__Replace_61525132(
          v2,
-         (System_String_o *)StringLiteral_3110/*"Back/back"*/,
+         (System_String_o *)StringLiteral_3116/*"Back/back"*/,
          (System_String_o *)StringLiteral_1/*""*/,
          0LL);
   v8 = 0.0;
@@ -232,7 +232,7 @@ float __fastcall FSUtility__GetBackFSOffsetY(System_String_o *fileName, const Me
     if ( System_Collections_Generic_Dictionary_int__float___ContainsKey(
            (System_Collections_Generic_Dictionary_int__float__o *)fileName,
            result,
-           (const MethodInfo_313A0C8 *)Method_System_Collections_Generic_Dictionary_int__float__ContainsKey__) )
+           (const MethodInfo_314E97C *)Method_System_Collections_Generic_Dictionary_int__float__ContainsKey__) )
     {
       v10 = FSUtility_TypeInfo;
       if ( !FSUtility_TypeInfo->_2.cctor_finished )
@@ -245,9 +245,9 @@ float __fastcall FSUtility__GetBackFSOffsetY(System_String_o *fileName, const Me
         return System_Collections_Generic_Dictionary_int__float___get_Item(
                  (System_Collections_Generic_Dictionary_int__float__o *)fileName,
                  result,
-                 (const MethodInfo_3139E34 *)Method_System_Collections_Generic_Dictionary_int__float__get_Item__);
+                 (const MethodInfo_314E6E8 *)Method_System_Collections_Generic_Dictionary_int__float__get_Item__);
 LABEL_14:
-      sub_1B68930(fileName, method);
+      sub_1B71828(fileName, method);
     }
   }
   return v8;
@@ -276,10 +276,10 @@ float __fastcall FSUtility__GetForceOffsetX(float subMarginX, bool calcNotch, co
   FSUtility_c *v5; // x0
   FSUtility_c *v6; // x0
 
-  if ( (byte_4A0A2E9 & 1) == 0 )
+  if ( (byte_4A2115E & 1) == 0 )
   {
-    sub_1B686D4(&FSUtility_TypeInfo, method);
-    byte_4A0A2E9 = 1;
+    sub_1B715CC(&FSUtility_TypeInfo, method);
+    byte_4A2115E = 1;
   }
   if ( calcNotch )
   {
@@ -301,10 +301,10 @@ float __fastcall FSUtility__GetNotchSubMarginX(float subMarginX, const MethodInf
   FSUtility_c *v4; // x0
   float v5; // s0
 
-  if ( (byte_4A0A2E7 & 1) == 0 )
+  if ( (byte_4A2115C & 1) == 0 )
   {
-    sub_1B686D4(&FSUtility_TypeInfo, v2);
-    byte_4A0A2E7 = 1;
+    sub_1B715CC(&FSUtility_TypeInfo, v2);
+    byte_4A2115C = 1;
   }
   v4 = FSUtility_TypeInfo;
   if ( !FSUtility_TypeInfo->_2.cctor_finished )
@@ -322,10 +322,10 @@ float __fastcall FSUtility__GetOffsetX(float subMarginX, bool calcNotch, const M
   FSUtility_c *v7; // x0
   FSUtility_c *v8; // x0
 
-  if ( (byte_4A0A2E8 & 1) == 0 )
+  if ( (byte_4A2115D & 1) == 0 )
   {
-    sub_1B686D4(&FSUtility_TypeInfo, method);
-    byte_4A0A2E8 = 1;
+    sub_1B715CC(&FSUtility_TypeInfo, method);
+    byte_4A2115D = 1;
   }
   v5 = FSUtility_TypeInfo;
   if ( !FSUtility_TypeInfo->_2.cctor_finished )
@@ -354,20 +354,20 @@ void __fastcall FSUtility__Initialize(const MethodInfo *method)
   _BOOL8 v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4A0A2DA & 1) == 0 )
+  if ( (byte_4A2114F & 1) == 0 )
   {
-    sub_1B686D4(&UnityEngine_Object_TypeInfo, v1);
-    sub_1B686D4(&Method_SingletonMonoBehaviour_FSUtility__get_Instance__, v2);
-    byte_4A0A2DA = 1;
+    sub_1B715CC(&UnityEngine_Object_TypeInfo, v1);
+    sub_1B715CC(&Method_SingletonMonoBehaviour_FSUtility__get_Instance__, v2);
+    byte_4A2114F = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_FSUtility__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_FSUtility__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
   if ( !v4 )
   {
     if ( !Instance )
-      sub_1B68930(v4, v5);
+      sub_1B71828(v4, v5);
     FSUtility__InitializeLocal((FSUtility_o *)Instance, v5);
   }
 }
@@ -379,10 +379,10 @@ void __fastcall FSUtility__InitializeLocal(FSUtility_o *this, const MethodInfo *
   _BOOL8 v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4A0A2DB & 1) == 0 )
+  if ( (byte_4A21150 & 1) == 0 )
   {
-    sub_1B686D4(&UnityEngine_Object_TypeInfo, method);
-    byte_4A0A2DB = 1;
+    sub_1B715CC(&UnityEngine_Object_TypeInfo, method);
+    byte_4A21150 = 1;
   }
   FSUtilityList = (UnityEngine_Object_o *)this->fields.FSUtilityList;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -398,10 +398,10 @@ bool __fastcall FSUtility__IsBusySetAssetData(const MethodInfo *method)
   __int64 v1; // x1
   FSUtility_c *v2; // x0
 
-  if ( (byte_4A0A2D9 & 1) == 0 )
+  if ( (byte_4A2114E & 1) == 0 )
   {
-    sub_1B686D4(&FSUtility_TypeInfo, v1);
-    byte_4A0A2D9 = 1;
+    sub_1B715CC(&FSUtility_TypeInfo, v1);
+    byte_4A2114E = 1;
   }
   v2 = FSUtility_TypeInfo;
   if ( !FSUtility_TypeInfo->_2.cctor_finished )
@@ -424,19 +424,19 @@ bool __fastcall FSUtility__IsFullScreenBack(System_String_o *fileName, const Met
   int32_t result; // [xsp+Ch] [xbp-14h] BYREF
 
   v2 = fileName;
-  if ( (byte_4A0A2E0 & 1) == 0 )
+  if ( (byte_4A21155 & 1) == 0 )
   {
-    sub_1B686D4(&FSUtility_TypeInfo, method);
-    sub_1B686D4(&StringLiteral_3110/*"Back/back"*/, v3);
-    fileName = (System_String_o *)sub_1B686D4(&StringLiteral_1/*""*/, v4);
-    byte_4A0A2E0 = 1;
+    sub_1B715CC(&FSUtility_TypeInfo, method);
+    sub_1B715CC(&StringLiteral_3116/*"Back/back"*/, v3);
+    fileName = (System_String_o *)sub_1B715CC(&StringLiteral_1/*""*/, v4);
+    byte_4A21155 = 1;
   }
   result = -1;
   if ( !v2 )
-    sub_1B68930(fileName, method);
-  v5 = System_String__Replace_61439096(
+    sub_1B71828(fileName, method);
+  v5 = System_String__Replace_61525132(
          v2,
-         (System_String_o *)StringLiteral_3110/*"Back/back"*/,
+         (System_String_o *)StringLiteral_3116/*"Back/back"*/,
          (System_String_o *)StringLiteral_1/*""*/,
          0LL);
   if ( System_Int32__TryParse(v5, &result, 0LL) )
@@ -444,7 +444,7 @@ bool __fastcall FSUtility__IsFullScreenBack(System_String_o *fileName, const Met
     v7 = result;
     if ( !FSUtility_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
-    return FSUtility__IsFullScreenBack_40763844(v7, v6);
+    return FSUtility__IsFullScreenBack_40815276(v7, v6);
   }
   else
   {
@@ -453,7 +453,7 @@ bool __fastcall FSUtility__IsFullScreenBack(System_String_o *fileName, const Met
 }
 
 
-bool __fastcall FSUtility__IsFullScreenBack_40763844(int32_t id, const MethodInfo *method)
+bool __fastcall FSUtility__IsFullScreenBack_40815276(int32_t id, const MethodInfo *method)
 {
   FSUtility_c *v3; // x0
   signed int v4; // w8
@@ -463,10 +463,10 @@ bool __fastcall FSUtility__IsFullScreenBack_40763844(int32_t id, const MethodInf
   struct System_Int32_array *v8; // x8
   bool v9; // zf
 
-  if ( (byte_4A0A2E1 & 1) == 0 )
+  if ( (byte_4A21156 & 1) == 0 )
   {
-    sub_1B686D4(&FSUtility_TypeInfo, method);
-    byte_4A0A2E1 = 1;
+    sub_1B715CC(&FSUtility_TypeInfo, method);
+    byte_4A21156 = 1;
   }
   v3 = FSUtility_TypeInfo;
   v4 = 0;
@@ -492,9 +492,9 @@ bool __fastcall FSUtility__IsFullScreenBack_40763844(int32_t id, const MethodInf
     v8 = v3->static_fields->legacyBacks;
     if ( !v8 )
 LABEL_15:
-      sub_1B68930(v3, method);
+      sub_1B71828(v3, method);
     if ( v5 >= v8->max_length )
-      sub_1B68938(v3, method);
+      sub_1B71830(v3, method);
     v9 = v8->m_Items[v5 + 1] == id;
     v4 = v5 + 1;
   }
@@ -512,10 +512,10 @@ bool __fastcall FSUtility__IsFullScreenImage(System_String_o *imageName, const M
   signed __int64 max_length; // x22
   bool v8; // w0
 
-  if ( (byte_4A0A2DF & 1) == 0 )
+  if ( (byte_4A21154 & 1) == 0 )
   {
-    sub_1B686D4(&FSUtility_TypeInfo, method);
-    byte_4A0A2DF = 1;
+    sub_1B715CC(&FSUtility_TypeInfo, method);
+    byte_4A21154 = 1;
   }
   v3 = 0LL;
   do
@@ -539,10 +539,10 @@ bool __fastcall FSUtility__IsFullScreenImage(System_String_o *imageName, const M
       fullScreenImages = FSUtility_TypeInfo->static_fields->fullScreenImages;
       if ( !fullScreenImages )
 LABEL_13:
-        sub_1B68930(v4, method);
+        sub_1B71828(v4, method);
     }
     if ( v5 >= (unsigned __int64)fullScreenImages->max_length )
-      sub_1B68938(v4, method);
+      sub_1B71830(v4, method);
     v8 = System_String__op_Equality(fullScreenImages->m_Items[v5], imageName, 0LL);
     v3 = v5 + 1;
   }
@@ -557,7 +557,7 @@ bool __fastcall FSUtility__IsFullScreenMovie(System_String_o *fileName, const Me
   __int64 v4; // x1
   __int64 v5; // x1
   __int64 v6; // x1
-  __int64 Item_67958736; // x0
+  __int64 Item_68044772; // x0
   __int64 v8; // x1
   __int64 v9; // x19
   System_String_o *Value; // x19
@@ -569,61 +569,61 @@ bool __fastcall FSUtility__IsFullScreenMovie(System_String_o *fileName, const Me
   bool v18; // w21
   unsigned __int64 v19; // x22
 
-  if ( (byte_4A0A2E4 & 1) == 0 )
+  if ( (byte_4A21159 & 1) == 0 )
   {
-    sub_1B686D4(&BalanceConfig_TypeInfo, method);
-    sub_1B686D4(&FSUtility_TypeInfo, v3);
-    sub_1B686D4(&System_Text_RegularExpressions_Regex_TypeInfo, v4);
-    sub_1B686D4(&StringLiteral_1124/*"/(?<name>[^/]*?)\\.[Uu][Ss][Mm]$"*/, v5);
-    sub_1B686D4(&StringLiteral_21908/*"name"*/, v6);
-    byte_4A0A2E4 = 1;
+    sub_1B715CC(&BalanceConfig_TypeInfo, method);
+    sub_1B715CC(&FSUtility_TypeInfo, v3);
+    sub_1B715CC(&System_Text_RegularExpressions_Regex_TypeInfo, v4);
+    sub_1B715CC(&StringLiteral_1124/*"/(?<name>[^/]*?)\\.[Uu][Ss][Mm]$"*/, v5);
+    sub_1B715CC(&StringLiteral_21927/*"name"*/, v6);
+    byte_4A21159 = 1;
   }
   if ( !System_Text_RegularExpressions_Regex_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Text_RegularExpressions_Regex_TypeInfo);
-  Item_67958736 = (__int64)System_Text_RegularExpressions_Regex__Match(
+  Item_68044772 = (__int64)System_Text_RegularExpressions_Regex__Match(
                              fileName,
                              (System_String_o *)StringLiteral_1124/*"/(?<name>[^/]*?)\\.[Uu][Ss][Mm]$"*/,
                              0LL);
-  if ( !Item_67958736 )
+  if ( !Item_68044772 )
     goto LABEL_32;
-  v9 = Item_67958736;
-  if ( !System_Text_RegularExpressions_Group__get_Success((System_Text_RegularExpressions_Group_o *)Item_67958736, 0LL) )
+  v9 = Item_68044772;
+  if ( !System_Text_RegularExpressions_Group__get_Success((System_Text_RegularExpressions_Group_o *)Item_68044772, 0LL) )
   {
 LABEL_18:
     v14 = 0;
     return v14 & 1;
   }
-  Item_67958736 = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)v9 + 392LL))(
+  Item_68044772 = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)v9 + 392LL))(
                     v9,
                     *(_QWORD *)(*(_QWORD *)v9 + 400LL));
-  if ( !Item_67958736 )
+  if ( !Item_68044772 )
     goto LABEL_32;
-  Item_67958736 = (__int64)System_Text_RegularExpressions_GroupCollection__get_Item_67958736(
-                             (System_Text_RegularExpressions_GroupCollection_o *)Item_67958736,
-                             (System_String_o *)StringLiteral_21908/*"name"*/,
+  Item_68044772 = (__int64)System_Text_RegularExpressions_GroupCollection__get_Item_68044772(
+                             (System_Text_RegularExpressions_GroupCollection_o *)Item_68044772,
+                             (System_String_o *)StringLiteral_21927/*"name"*/,
                              0LL);
-  if ( !Item_67958736 )
+  if ( !Item_68044772 )
     goto LABEL_32;
   Value = System_Text_RegularExpressions_Capture__get_Value(
-            (System_Text_RegularExpressions_Capture_o *)Item_67958736,
+            (System_Text_RegularExpressions_Capture_o *)Item_68044772,
             0LL);
   v11 = 0LL;
   while ( 1 )
   {
-    Item_67958736 = (__int64)FSUtility_TypeInfo;
+    Item_68044772 = (__int64)FSUtility_TypeInfo;
     if ( !FSUtility_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
-      Item_67958736 = (__int64)FSUtility_TypeInfo;
+      Item_68044772 = (__int64)FSUtility_TypeInfo;
     }
-    legacyMovies = *(struct System_String_array **)(*(_QWORD *)(Item_67958736 + 184) + 48LL);
+    legacyMovies = *(struct System_String_array **)(*(_QWORD *)(Item_68044772 + 184) + 48LL);
     if ( !legacyMovies )
       goto LABEL_32;
     if ( (__int64)v11 >= (int)legacyMovies->max_length )
       break;
-    if ( !*(_DWORD *)(Item_67958736 + 224) )
+    if ( !*(_DWORD *)(Item_68044772 + 224) )
     {
-      j_il2cpp_runtime_class_init_0(Item_67958736);
+      j_il2cpp_runtime_class_init_0(Item_68044772);
       legacyMovies = FSUtility_TypeInfo->static_fields->legacyMovies;
       if ( !legacyMovies )
         goto LABEL_32;
@@ -633,25 +633,25 @@ LABEL_18:
     if ( System_String__op_Equality(legacyMovies->m_Items[v11++], Value, 0LL) )
       goto LABEL_18;
   }
-  Item_67958736 = (__int64)BalanceConfig_TypeInfo;
+  Item_68044772 = (__int64)BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    Item_67958736 = (__int64)BalanceConfig_TypeInfo;
+    Item_68044772 = (__int64)BalanceConfig_TypeInfo;
   }
-  legacyAspectMovies = *(struct System_String_array **)(*(_QWORD *)(Item_67958736 + 184) + 832LL);
+  legacyAspectMovies = *(struct System_String_array **)(*(_QWORD *)(Item_68044772 + 184) + 832LL);
   if ( !legacyAspectMovies )
   {
     v14 = 1;
     return v14 & 1;
   }
-  if ( !*(_DWORD *)(Item_67958736 + 224) )
+  if ( !*(_DWORD *)(Item_68044772 + 224) )
   {
-    j_il2cpp_runtime_class_init_0(Item_67958736);
+    j_il2cpp_runtime_class_init_0(Item_68044772);
     legacyAspectMovies = BalanceConfig_TypeInfo->static_fields->legacyAspectMovies;
     if ( !legacyAspectMovies )
 LABEL_32:
-      sub_1B68930(Item_67958736, v8);
+      sub_1B71828(Item_68044772, v8);
   }
   v17 = *(_QWORD *)&legacyAspectMovies->max_length;
   v18 = (int)v17 > 0;
@@ -660,8 +660,8 @@ LABEL_32:
     v19 = 0LL;
     while ( v19 < (unsigned int)v17 )
     {
-      Item_67958736 = System_String__op_Equality(legacyAspectMovies->m_Items[v19], Value, 0LL);
-      if ( (Item_67958736 & 1) == 0 )
+      Item_68044772 = System_String__op_Equality(legacyAspectMovies->m_Items[v19], Value, 0LL);
+      if ( (Item_68044772 & 1) == 0 )
       {
         LODWORD(v17) = legacyAspectMovies->max_length;
         v18 = (__int64)++v19 < (int)v17;
@@ -671,7 +671,7 @@ LABEL_32:
       goto LABEL_30;
     }
 LABEL_33:
-    sub_1B68938(Item_67958736, v8);
+    sub_1B71830(Item_68044772, v8);
   }
 LABEL_30:
   v14 = !v18;
@@ -689,10 +689,10 @@ bool __fastcall FSUtility__IsFullScreenNP(int32_t chrId, const MethodInfo *metho
   struct System_Int32_array *v8; // x8
   bool v9; // zf
 
-  if ( (byte_4A0A2E3 & 1) == 0 )
+  if ( (byte_4A21158 & 1) == 0 )
   {
-    sub_1B686D4(&FSUtility_TypeInfo, method);
-    byte_4A0A2E3 = 1;
+    sub_1B715CC(&FSUtility_TypeInfo, method);
+    byte_4A21158 = 1;
   }
   v3 = FSUtility_TypeInfo;
   v4 = 0;
@@ -718,9 +718,9 @@ bool __fastcall FSUtility__IsFullScreenNP(int32_t chrId, const MethodInfo *metho
     v8 = v3->static_fields->notFullScreenNpChrs;
     if ( !v8 )
 LABEL_15:
-      sub_1B68930(v3, method);
+      sub_1B71828(v3, method);
     if ( v5 >= v8->max_length )
-      sub_1B68938(v3, method);
+      sub_1B71830(v3, method);
     v9 = v8->m_Items[v5 + 1] == chrId;
     v4 = v5 + 1;
   }
@@ -737,10 +737,10 @@ bool __fastcall FSUtility__IsOverScope(const MethodInfo *method)
   FSUtility_c *v4; // x8
   int v5; // w20
 
-  if ( (byte_4A0A2E6 & 1) == 0 )
+  if ( (byte_4A2115B & 1) == 0 )
   {
-    sub_1B686D4(&FSUtility_TypeInfo, v1);
-    byte_4A0A2E6 = 1;
+    sub_1B715CC(&FSUtility_TypeInfo, v1);
+    byte_4A2115B = 1;
   }
   width = UnityEngine_Screen__get_width(0LL);
   height = UnityEngine_Screen__get_height(0LL);
@@ -772,10 +772,10 @@ bool __fastcall FSUtility__IsUnderVista(const MethodInfo *method)
   FSUtility_c *v4; // x8
   int v5; // w20
 
-  if ( (byte_4A0A2E5 & 1) == 0 )
+  if ( (byte_4A2115A & 1) == 0 )
   {
-    sub_1B686D4(&FSUtility_TypeInfo, v1);
-    byte_4A0A2E5 = 1;
+    sub_1B715CC(&FSUtility_TypeInfo, v1);
+    byte_4A2115A = 1;
   }
   width = UnityEngine_Screen__get_width(0LL);
   height = UnityEngine_Screen__get_height(0LL);
@@ -810,24 +810,24 @@ void __fastcall FSUtility__LoadAssetData(const MethodInfo *method)
   System_String_o *FS_UTILITY_LIST_PATH; // x20
   AssetLoader_LoadEndDataHandler_o *v17; // x21
 
-  if ( (byte_4A0A2DC & 1) == 0 )
+  if ( (byte_4A21151 & 1) == 0 )
   {
-    sub_1B686D4(&AssetManager_TypeInfo, v1);
-    sub_1B686D4(&FSUtility_TypeInfo, v2);
-    sub_1B686D4(&AssetLoader_LoadEndDataHandler_TypeInfo, v3);
-    sub_1B686D4(&UnityEngine_Object_TypeInfo, v4);
-    sub_1B686D4(&Method_SingletonMonoBehaviour_FSUtility__get_Instance__, v5);
-    sub_1B686D4(&Method_FSUtility___c__DisplayClass14_0__LoadAssetData_b__0__, v6);
-    sub_1B686D4(&FSUtility___c__DisplayClass14_0_TypeInfo, v7);
-    byte_4A0A2DC = 1;
+    sub_1B715CC(&AssetManager_TypeInfo, v1);
+    sub_1B715CC(&FSUtility_TypeInfo, v2);
+    sub_1B715CC(&AssetLoader_LoadEndDataHandler_TypeInfo, v3);
+    sub_1B715CC(&UnityEngine_Object_TypeInfo, v4);
+    sub_1B715CC(&Method_SingletonMonoBehaviour_FSUtility__get_Instance__, v5);
+    sub_1B715CC(&Method_FSUtility___c__DisplayClass14_0__LoadAssetData_b__0__, v6);
+    sub_1B715CC(&FSUtility___c__DisplayClass14_0_TypeInfo, v7);
+    byte_4A21151 = 1;
   }
-  v8 = sub_1B68920(FSUtility___c__DisplayClass14_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v8, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_FSUtility__get_Instance__);
+  v8 = sub_1B71818(FSUtility___c__DisplayClass14_0_TypeInfo);
+  FSUtility___c__DisplayClass14_0___ctor((FSUtility___c__DisplayClass14_0_o *)v8, 0LL);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_FSUtility__get_Instance__);
   if ( !v8 )
-    sub_1B68930(Instance, v10);
+    sub_1B71828(Instance, v10);
   *(_QWORD *)(v8 + 16) = Instance;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)(v8 + 16), (int32_t)Instance, v11, v12);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)(v8 + 16), (int32_t)Instance, v11, v12);
   v13 = *(UnityEngine_Object_o **)(v8 + 16);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -842,7 +842,7 @@ void __fastcall FSUtility__LoadAssetData(const MethodInfo *method)
     static_fields = v14->static_fields;
     static_fields->isBusySetAssetData = 1;
     FS_UTILITY_LIST_PATH = static_fields->FS_UTILITY_LIST_PATH;
-    v17 = (AssetLoader_LoadEndDataHandler_o *)sub_1B68920(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v17 = (AssetLoader_LoadEndDataHandler_o *)sub_1B71818(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
       v17,
       (Il2CppObject *)v8,
@@ -883,11 +883,11 @@ void __fastcall FSUtility__ReadFSUtilityList(
   struct System_Int32_array *notFullScreenNpChrs; // x19
   struct FSUtility_StaticFields *v25; // x0
 
-  if ( (byte_4A0A2DD & 1) == 0 )
+  if ( (byte_4A21152 & 1) == 0 )
   {
-    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_int__float__Add__, fsUtilityList);
-    this = (FSUtility_o *)sub_1B686D4(&FSUtility_TypeInfo, v5);
-    byte_4A0A2DD = 1;
+    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_int__float__Add__, fsUtilityList);
+    this = (FSUtility_o *)sub_1B715CC(&FSUtility_TypeInfo, v5);
+    byte_4A21152 = 1;
   }
   if ( !fsUtilityList )
     goto LABEL_18;
@@ -900,7 +900,7 @@ void __fastcall FSUtility__ReadFSUtilityList(
   }
   static_fields = v7->static_fields;
   static_fields->legacyBacks = legacyBacks;
-  sub_1B68678(
+  sub_1B71570(
     (ServantStatusBattleListViewItem_o *)&static_fields->legacyBacks,
     (int32_t)legacyBacks,
     (int32_t)method,
@@ -908,11 +908,11 @@ void __fastcall FSUtility__ReadFSUtilityList(
   legacyMovies = fsUtilityList->fields.legacyMovies;
   v10 = FSUtility_TypeInfo->static_fields;
   v10->legacyMovies = legacyMovies;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&v10->legacyMovies, (int32_t)legacyMovies, v11, v12);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&v10->legacyMovies, (int32_t)legacyMovies, v11, v12);
   fullScreenImages = fsUtilityList->fields.fullScreenImages;
   v14 = FSUtility_TypeInfo->static_fields;
   v14->fullScreenImages = fullScreenImages;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&v14->fullScreenImages, (int32_t)fullScreenImages, v15, v16);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&v14->fullScreenImages, (int32_t)fullScreenImages, v15, v16);
   trimBackRatioY = fsUtilityList->fields.trimBackRatioY;
   if ( !trimBackRatioY )
     goto LABEL_18;
@@ -923,7 +923,7 @@ void __fastcall FSUtility__ReadFSUtilityList(
     while ( 1 )
     {
       if ( v21 >= max_length )
-        sub_1B68938(this, fsUtilityList);
+        sub_1B71830(this, fsUtilityList);
       this = (FSUtility_o *)FSUtility_TypeInfo;
       v22 = trimBackRatioY->m_Items[v21];
       if ( !FSUtility_TypeInfo->_2.cctor_finished )
@@ -940,13 +940,13 @@ void __fastcall FSUtility__ReadFSUtilityList(
         (System_Collections_Generic_Dictionary_int__float__o *)this,
         v22->fields.id,
         v22->fields.offsetY,
-        (const MethodInfo_3139ED0 *)Method_System_Collections_Generic_Dictionary_int__float__Add__);
+        (const MethodInfo_314E784 *)Method_System_Collections_Generic_Dictionary_int__float__Add__);
       max_length = trimBackRatioY->max_length;
       if ( (int)++v21 >= max_length )
         goto LABEL_15;
     }
 LABEL_18:
-    sub_1B68930(this, fsUtilityList);
+    sub_1B71828(this, fsUtilityList);
   }
 LABEL_15:
   v23 = FSUtility_TypeInfo;
@@ -958,7 +958,7 @@ LABEL_15:
   }
   v25 = v23->static_fields;
   v25->notFullScreenNpChrs = notFullScreenNpChrs;
-  sub_1B68678((ServantStatusBattleListViewItem_o *)&v25->notFullScreenNpChrs, (int32_t)notFullScreenNpChrs, v17, v18);
+  sub_1B71570((ServantStatusBattleListViewItem_o *)&v25->notFullScreenNpChrs, (int32_t)notFullScreenNpChrs, v17, v18);
 }
 
 
@@ -971,16 +971,16 @@ void __fastcall FSUtility__SetUpBackTextureSize(
   __int64 v6; // x1
   int32_t v7; // w1
 
-  if ( (byte_4A0A2DE & 1) == 0 )
+  if ( (byte_4A21153 & 1) == 0 )
   {
-    sub_1B686D4(&FSUtility_TypeInfo, bgName);
-    byte_4A0A2DE = 1;
+    sub_1B715CC(&FSUtility_TypeInfo, bgName);
+    byte_4A21153 = 1;
   }
   if ( !FSUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
   IsFullScreenBack = FSUtility__IsFullScreenBack(bgName, (const MethodInfo *)bgName);
   if ( !backTexture )
-    sub_1B68930(IsFullScreenBack, v6);
+    sub_1B71828(IsFullScreenBack, v6);
   if ( IsFullScreenBack )
     v7 = 576;
   else
@@ -1005,25 +1005,25 @@ void __fastcall FSUtility___c__DisplayClass14_0___LoadAssetData_b__0(
 {
   FSUtility___c__DisplayClass14_0_o *v4; // x19
   __int64 v5; // x1
-  const MethodInfo *v6; // x2
+  FSUtility_o *ins; // x8
   FSUtility_c *v7; // x0
 
   v4 = this;
-  if ( (byte_4A0A2EE & 1) == 0 )
+  if ( (byte_4A2122C & 1) == 0 )
   {
-    sub_1B686D4(&Method_AssetData_GetObject_FSUtilityList___, assetData);
-    this = (FSUtility___c__DisplayClass14_0_o *)sub_1B686D4(&FSUtility_TypeInfo, v5);
-    byte_4A0A2EE = 1;
+    sub_1B715CC(&Method_AssetData_GetObject_FSUtilityList___, assetData);
+    this = (FSUtility___c__DisplayClass14_0_o *)sub_1B715CC(&FSUtility_TypeInfo, v5);
+    byte_4A2122C = 1;
   }
   if ( !assetData
     || (this = (FSUtility___c__DisplayClass14_0_o *)AssetData__GetObject_object_(
                                                       assetData,
-                                                      (const MethodInfo_2E2C1F4 *)Method_AssetData_GetObject_FSUtilityList___),
-        !v4->fields.ins) )
+                                                      (const MethodInfo_2E3D854 *)Method_AssetData_GetObject_FSUtilityList___),
+        (ins = v4->fields.ins) == 0LL) )
   {
-    sub_1B68930(this, assetData);
+    sub_1B71828(this, assetData);
   }
-  FSUtility__ReadFSUtilityList((FSUtility_o *)this, (FSUtilityList_o *)this, v6);
+  FSUtility__ReadFSUtilityList(ins, (FSUtilityList_o *)this, 0LL);
   v7 = FSUtility_TypeInfo;
   if ( !FSUtility_TypeInfo->_2.cctor_finished )
   {

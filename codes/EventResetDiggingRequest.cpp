@@ -1,10 +1,3 @@
-// attributes: thunk
-void __fastcall EventResetDiggingRequest___ctor(EventResetDiggingRequest_o *this, const MethodInfo *method)
-{
-  RequestBase___ctor((RequestBase_o *)this, method);
-}
-
-
 // local variable allocation has failed, the output may be wrong!
 void __fastcall EventResetDiggingRequest__beginRequest(
         EventResetDiggingRequest_o *this,
@@ -16,14 +9,14 @@ void __fastcall EventResetDiggingRequest__beginRequest(
   const MethodInfo *v8; // x3
   const MethodInfo *v9; // x1
 
-  if ( (byte_4A0A4DF & 1) == 0 )
+  if ( (byte_4A21354 & 1) == 0 )
   {
-    sub_1B686D4(&StringLiteral_19064/*"eventId"*/, *(_QWORD *)&eventId);
-    sub_1B686D4(&StringLiteral_16821/*"areaNum"*/, v7);
-    byte_4A0A4DF = 1;
+    sub_1B715CC(&StringLiteral_19081/*"eventId"*/, *(_QWORD *)&eventId);
+    sub_1B715CC(&StringLiteral_16837/*"areaNum"*/, v7);
+    byte_4A21354 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19064/*"eventId"*/, eventId, method);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16821/*"areaNum"*/, areaNum, v8);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19081/*"eventId"*/, eventId, method);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16837/*"areaNum"*/, areaNum, v8);
   RequestBase__beginRequest((RequestBase_o *)this, v9);
 }
 
@@ -35,16 +28,16 @@ System_String_o *__fastcall EventResetDiggingRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A0A4DE & 1) == 0 )
+  if ( (byte_4A21353 & 1) == 0 )
   {
-    sub_1B686D4(&NetworkManager_TypeInfo, method);
-    sub_1B686D4(&StringLiteral_19054/*"event/resetDigging"*/, v2);
-    byte_4A0A4DE = 1;
+    sub_1B715CC(&NetworkManager_TypeInfo, method);
+    sub_1B715CC(&StringLiteral_19071/*"event/resetDigging"*/, v2);
+    byte_4A21353 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61419468(BaseUrl, (System_String_o *)StringLiteral_19054/*"event/resetDigging"*/, 0LL);
+  return System_String__Concat_61505504(BaseUrl, (System_String_o *)StringLiteral_19071/*"event/resetDigging"*/, 0LL);
 }
 
 
@@ -62,11 +55,11 @@ void __fastcall EventResetDiggingRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v12; // x8
 
-  if ( (byte_4A0A4E0 & 1) == 0 )
+  if ( (byte_4A21355 & 1) == 0 )
   {
-    sub_1B686D4(&JsonManager_TypeInfo, responseList);
-    sub_1B686D4(&ResponseCommandKind_TypeInfo, v5);
-    byte_4A0A4E0 = 1;
+    sub_1B715CC(&JsonManager_TypeInfo, responseList);
+    sub_1B715CC(&ResponseCommandKind_TypeInfo, v5);
+    byte_4A21355 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);

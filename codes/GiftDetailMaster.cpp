@@ -1,14 +1,14 @@
 void __fastcall GiftDetailMaster___ctor(GiftDetailMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A08F35 & 1) == 0 )
+  if ( (byte_4A1FDA1 & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataMasterBase_GiftDetailMaster__GiftDetailEntity__int___ctor__, method);
-    byte_4A08F35 = 1;
+    sub_1B715CC(&Method_DataMasterBase_GiftDetailMaster__GiftDetailEntity__int___ctor__, method);
+    byte_4A1FDA1 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     421,
-    (const MethodInfo_30E4480 *)Method_DataMasterBase_GiftDetailMaster__GiftDetailEntity__int___ctor__);
+    (const MethodInfo_30F8720 *)Method_DataMasterBase_GiftDetailMaster__GiftDetailEntity__int___ctor__);
 }
 
 
@@ -22,20 +22,20 @@ System_String_o *__fastcall GiftDetailMaster__GetOverwriteImageIdByQuestPhaseRew
   const MethodInfo *v6; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A08F36 & 1) == 0 )
+  if ( (byte_4A1FDA2 & 1) == 0 )
   {
-    sub_1B686D4(&Method_DataMasterBase_GiftDetailMaster__GiftDetailEntity__int__TryGetEntity__, *(_QWORD *)&giftId);
-    sub_1B686D4(&StringLiteral_1/*""*/, v5);
-    byte_4A08F36 = 1;
+    sub_1B715CC(&Method_DataMasterBase_GiftDetailMaster__GiftDetailEntity__int__TryGetEntity__, *(_QWORD *)&giftId);
+    sub_1B715CC(&StringLiteral_1/*""*/, v5);
+    byte_4A1FDA2 = 1;
   }
   entity = 0LL;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
           &entity,
           giftId,
-          (const MethodInfo_30E4514 *)Method_DataMasterBase_GiftDetailMaster__GiftDetailEntity__int__TryGetEntity__) )
+          (const MethodInfo_30F87B4 *)Method_DataMasterBase_GiftDetailMaster__GiftDetailEntity__int__TryGetEntity__) )
     return (System_String_o *)StringLiteral_1/*""*/;
   if ( !entity )
-    sub_1B68930(0LL, v6);
+    sub_1B71828(0LL, v6);
   return GiftDetailEntity__GetOverwritePhaseRewardImageId((GiftDetailEntity_o *)entity, v6);
 }
