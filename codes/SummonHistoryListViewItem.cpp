@@ -10,15 +10,15 @@ void __fastcall SummonHistoryListViewItem___ctor(
   int32_t v9; // w3
 
   v7 = this;
-  ListViewItem___ctor_40376104((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_40440732((ListViewItem_o *)this, index, 0LL);
   v7->fields._Message_k__BackingField = message;
   v7 = (SummonHistoryListViewItem_o *)((char *)v7 + 112);
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)v7, (int32_t)message, v8, v9);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)v7, (int32_t)message, v8, v9);
   LODWORD(v7->monitor) = layout;
 }
 
 
-void __fastcall SummonHistoryListViewItem___ctor_32770212(
+void __fastcall SummonHistoryListViewItem___ctor_32798676(
         SummonHistoryListViewItem_o *this,
         int32_t index,
         System_String_o *message,
@@ -34,13 +34,13 @@ void __fastcall SummonHistoryListViewItem___ctor_32770212(
   int32_t v15; // w3
 
   v11 = this;
-  ListViewItem___ctor_40376104((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_40440732((ListViewItem_o *)this, index, 0LL);
   v11->fields._Message_k__BackingField = message;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&v11->fields._Message_k__BackingField, (int32_t)message, v12, v13);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&v11->fields._Message_k__BackingField, (int32_t)message, v12, v13);
   v11->fields._Title_k__BackingField = title;
   v11 = (SummonHistoryListViewItem_o *)((char *)v11 + 128);
   v11[-1].fields._itemID_k__BackingField = layout;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)v11, (int32_t)title, v14, v15);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)v11, (int32_t)title, v14, v15);
   LODWORD(v11->monitor) = objectId;
 }
 
@@ -90,7 +90,7 @@ void __fastcall SummonHistoryListViewItem__set_Message(
   int32_t v3; // w3
 
   this->fields._Message_k__BackingField = value;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields._Message_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -106,7 +106,7 @@ void __fastcall SummonHistoryListViewItem__set_Title(
   int32_t v3; // w3
 
   this->fields._Title_k__BackingField = value;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields._Title_k__BackingField,
     (int32_t)value,
     (int32_t)method,

@@ -45,25 +45,25 @@ System_String_o *__fastcall EventInfoRaidTimeComponent__GetRestTime(
   System_TimeSpan_o v38; // 0:x0.8
   System_DateTime_o v39; // 0:x1.8
 
-  if ( (byte_4A00329 & 1) == 0 )
+  if ( (byte_4A0A480 & 1) == 0 )
   {
-    sub_1B64A00(&System_DateTime_TypeInfo, at);
-    sub_1B64A00(&int_TypeInfo, v4);
-    sub_1B64A00(&NetworkManager_TypeInfo, v5);
-    sub_1B64A00(&System_TimeSpan_TypeInfo, v6);
-    sub_1B64A00(&StringLiteral_24853/*"{0:D2}:{1:D2}:{2:D2}[-]"*/, v7);
-    byte_4A00329 = 1;
+    sub_1B686D4(&System_DateTime_TypeInfo, at);
+    sub_1B686D4(&int_TypeInfo, v4);
+    sub_1B686D4(&NetworkManager_TypeInfo, v5);
+    sub_1B686D4(&System_TimeSpan_TypeInfo, v6);
+    sub_1B686D4(&StringLiteral_24866/*"{0:D2}:{1:D2}:{2:D2}[-]"*/, v7);
+    byte_4A0A480 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0LL);
-  dateData = NetworkManager__getDateTime_38078128(Time, 0LL).fields._dateData;
-  v10 = NetworkManager__getDateTime_38078128(at, 0LL).fields._dateData;
+  dateData = NetworkManager__getDateTime_38135136(Time, 0LL).fields._dateData;
+  v10 = NetworkManager__getDateTime_38135136(at, 0LL).fields._dateData;
   if ( !System_DateTime_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
   v34.fields._dateData = v10;
   v39.fields._dateData = dateData;
-  ticks = System_DateTime__op_Subtraction_62078020(v34, v39, 0LL).fields._ticks;
+  ticks = System_DateTime__op_Subtraction_62112360(v34, v39, 0LL).fields._ticks;
   if ( !System_TimeSpan_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo);
   v35.fields._ticks = (int64_t)&ticks;
@@ -72,7 +72,7 @@ System_String_o *__fastcall EventInfoRaidTimeComponent__GetRestTime(
   Days = (EventInfoRaidTimeComponent_o *)System_TimeSpan__get_Days(v36, 0LL);
   v13 = Hours + 24 * (_DWORD)Days;
   RestTimeColorStr = EventInfoRaidTimeComponent__GetRestTimeColorStr(Days, v13, v14);
-  v16 = System_String__Concat_61385136(RestTimeColorStr, (System_String_o *)StringLiteral_24853/*"{0:D2}:{1:D2}:{2:D2}[-]"*/, 0LL);
+  v16 = System_String__Concat_61419468(RestTimeColorStr, (System_String_o *)StringLiteral_24866/*"{0:D2}:{1:D2}:{2:D2}[-]"*/, 0LL);
   v32 = v13;
   v20 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v32, v17, v18, v19);
   v37.fields._ticks = (int64_t)&ticks;
@@ -81,7 +81,7 @@ System_String_o *__fastcall EventInfoRaidTimeComponent__GetRestTime(
   v38.fields._ticks = (int64_t)&ticks;
   Seconds = System_TimeSpan__get_Seconds(v38, 0LL);
   v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Seconds, v25, v26, v27);
-  return System_String__Format_61399576(v16, v20, v24, v28, 0LL);
+  return System_String__Format_61433908(v16, v20, v24, v28, 0LL);
 }
 
 
@@ -95,19 +95,19 @@ System_String_o *__fastcall EventInfoRaidTimeComponent__GetRestTimeColorStr(
   __int64 v5; // x1
   __int64 *v6; // x8
 
-  if ( (byte_4A0032A & 1) == 0 )
+  if ( (byte_4A0A481 & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_15868/*"[FF0000]"*/, *(_QWORD *)&restHours);
-    sub_1B64A00(&StringLiteral_15874/*"[FFFFFF]"*/, v4);
-    sub_1B64A00(&StringLiteral_15871/*"[FFFF00]"*/, v5);
-    byte_4A0032A = 1;
+    sub_1B686D4(&StringLiteral_15867/*"[FF0000]"*/, *(_QWORD *)&restHours);
+    sub_1B686D4(&StringLiteral_15873/*"[FFFFFF]"*/, v4);
+    sub_1B686D4(&StringLiteral_15870/*"[FFFF00]"*/, v5);
+    byte_4A0A481 = 1;
   }
   if ( restHours <= 4 )
-    v6 = &StringLiteral_15871/*"[FFFF00]"*/;
+    v6 = &StringLiteral_15870/*"[FFFF00]"*/;
   else
-    v6 = (__int64 *)&StringLiteral_15874/*"[FFFFFF]"*/;
+    v6 = (__int64 *)&StringLiteral_15873/*"[FFFFFF]"*/;
   if ( restHours <= 0 )
-    v6 = &StringLiteral_15868/*"[FF0000]"*/;
+    v6 = &StringLiteral_15867/*"[FF0000]"*/;
   return (System_String_o *)*v6;
 }
 
@@ -131,17 +131,17 @@ void __fastcall EventInfoRaidTimeComponent__Initialization(
   UILabel_o *titleText; // x8
   const MethodInfo *v17; // x1
 
-  if ( (byte_4A00327 & 1) == 0 )
+  if ( (byte_4A0A47E & 1) == 0 )
   {
-    sub_1B64A00(&AtlasManager_TypeInfo, entity);
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, v6);
-    sub_1B64A00(&TerminalSceneComponent_TypeInfo, v7);
-    sub_1B64A00(&StringLiteral_1/*""*/, v8);
-    byte_4A00327 = 1;
+    sub_1B686D4(&AtlasManager_TypeInfo, entity);
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, v6);
+    sub_1B686D4(&TerminalSceneComponent_TypeInfo, v7);
+    sub_1B686D4(&StringLiteral_1/*""*/, v8);
+    byte_4A0A47E = 1;
   }
   this->fields.eventUiEntity = entity;
   p_eventUiEntity = &this->fields.eventUiEntity;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.eventUiEntity, (int32_t)entity, (int32_t)method, v3);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.eventUiEntity, (int32_t)entity, (int32_t)method, v3);
   if ( !System_String__IsNullOrEmpty(this->fields.bgSpriteName, 0LL) )
   {
     bgSprite = (UnityEngine_Object_o *)this->fields.bgSprite;
@@ -157,7 +157,7 @@ void __fastcall EventInfoRaidTimeComponent__Initialization(
       TimeLimitAt = (ScrTerminalMap_o *)this->fields.bgSprite;
       if ( !TimeLimitAt )
 LABEL_24:
-        sub_1B64C5C(TimeLimitAt, v10);
+        sub_1B68930(TimeLimitAt, v10);
       ((void (__fastcall *)(ScrTerminalMap_o *, void *))TimeLimitAt->klass[2]._1.typeMetadataHandle)(
         TimeLimitAt,
         TimeLimitAt->klass[2]._1.interopData);
@@ -165,10 +165,10 @@ LABEL_24:
   }
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_49F9DCD )
+  if ( !byte_4A03EAD )
   {
-    sub_1B64A00(&TerminalSceneComponent_TypeInfo, v10);
-    byte_49F9DCD = 1;
+    sub_1B686D4(&TerminalSceneComponent_TypeInfo, v10);
+    byte_4A03EAD = 1;
   }
   TimeLimitAt = (ScrTerminalMap_o *)TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -213,19 +213,19 @@ bool __fastcall EventInfoRaidTimeComponent__OnMoveRaidBoss(
   Il2CppObject *Instance; // x0
   __int64 v6; // x1
 
-  if ( (byte_4A0032B & 1) == 0 )
+  if ( (byte_4A0A482 & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataManager_GetMasterData_EventRaidMaster___, *(_QWORD *)&eventId);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    byte_4A0032B = 1;
+    sub_1B686D4(&Method_DataManager_GetMasterData_EventRaidMaster___, *(_QWORD *)&eventId);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_4A0A482 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_EventRaidMaster___)) == 0LL )
+                     (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_EventRaidMaster___)) == 0LL )
   {
-    sub_1B64C5C(Instance, v6);
+    sub_1B68930(Instance, v6);
   }
   return EventRaidMaster__IsEventRaidAliveAny((EventRaidMaster_o *)Instance, eventId, 0LL);
 }
@@ -274,17 +274,17 @@ void __fastcall EventInfoRaidTimeComponent__UpdateDisp(EventInfoRaidTimeComponen
   const MethodInfo *v34; // x2
   System_String_o *RestTimeColorStr; // x0
 
-  if ( (byte_4A00328 & 1) == 0 )
+  if ( (byte_4A0A47F & 1) == 0 )
   {
-    sub_1B64A00(&LocalizationManager_TypeInfo, method);
-    sub_1B64A00(&NetworkManager_TypeInfo, v3);
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, v4);
-    sub_1B64A00(&StringLiteral_5661/*"EVENT_RAID_TIME_OVER_TXT_"*/, v5);
-    sub_1B64A00(&StringLiteral_1230/*"00:00:00[-]"*/, v6);
-    sub_1B64A00(&StringLiteral_5660/*"EVENT_RAID_TIME_OVER_TXT"*/, v7);
-    sub_1B64A00(&StringLiteral_5658/*"EVENT_RAID_TIME_LIMIT_TXT_"*/, v8);
-    sub_1B64A00(&StringLiteral_5657/*"EVENT_RAID_TIME_LIMIT_TXT"*/, v9);
-    byte_4A00328 = 1;
+    sub_1B686D4(&LocalizationManager_TypeInfo, method);
+    sub_1B686D4(&NetworkManager_TypeInfo, v3);
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, v4);
+    sub_1B686D4(&StringLiteral_5661/*"EVENT_RAID_TIME_OVER_TXT_"*/, v5);
+    sub_1B686D4(&StringLiteral_1229/*"00:00:00[-]"*/, v6);
+    sub_1B686D4(&StringLiteral_5660/*"EVENT_RAID_TIME_OVER_TXT"*/, v7);
+    sub_1B686D4(&StringLiteral_5658/*"EVENT_RAID_TIME_LIMIT_TXT_"*/, v8);
+    sub_1B686D4(&StringLiteral_5657/*"EVENT_RAID_TIME_LIMIT_TXT"*/, v9);
+    byte_4A0A47F = 1;
   }
   if ( this->fields.isUpdate )
   {
@@ -304,7 +304,7 @@ void __fastcall EventInfoRaidTimeComponent__UpdateDisp(EventInfoRaidTimeComponen
         {
           v15 = Time;
           v16 = System_Int32__ToString((int)eventUiEntity + 24, 0LL);
-          Time = (UnityEngine_GameObject_o *)System_String__Concat_61385136(
+          Time = (UnityEngine_GameObject_o *)System_String__Concat_61419468(
                                                (System_String_o *)StringLiteral_5658/*"EVENT_RAID_TIME_LIMIT_TXT_"*/,
                                                v16,
                                                0LL);
@@ -313,7 +313,7 @@ void __fastcall EventInfoRaidTimeComponent__UpdateDisp(EventInfoRaidTimeComponen
           {
             v18 = (System_String_o *)Time;
             v19 = System_Int32__ToString((int)v17 + 24, 0LL);
-            v20 = System_String__Concat_61385136((System_String_o *)StringLiteral_5661/*"EVENT_RAID_TIME_OVER_TXT_"*/, v19, 0LL);
+            v20 = System_String__Concat_61419468((System_String_o *)StringLiteral_5661/*"EVENT_RAID_TIME_OVER_TXT_"*/, v19, 0LL);
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             v21 = LocalizationManager__ContainsKey(v18, 0LL);
@@ -346,10 +346,10 @@ void __fastcall EventInfoRaidTimeComponent__UpdateDisp(EventInfoRaidTimeComponen
                   UnityEngine_GameObject__SetActive(Time, 1, 0LL);
                   if ( reidTimeLimit - (__int64)v15 < 1 )
                   {
-                    if ( !byte_49FBF09 )
+                    if ( !byte_4A06084 )
                     {
-                      sub_1B64A00(&RaidAutoUpdateRequest_TypeInfo, v13);
-                      byte_49FBF09 = 1;
+                      sub_1B686D4(&RaidAutoUpdateRequest_TypeInfo, v13);
+                      byte_4A06084 = 1;
                     }
                     if ( RaidAutoUpdateRequest_TypeInfo->static_fields->accessCompletedTimeEventMap >= this->fields.reidTimeLimit )
                     {
@@ -396,9 +396,9 @@ void __fastcall EventInfoRaidTimeComponent__UpdateDisp(EventInfoRaidTimeComponen
                               UILabel__set_text((UILabel_o *)Time, v23, 0LL);
                               v32 = this->fields.timeText;
                               RestTimeColorStr = EventInfoRaidTimeComponent__GetRestTimeColorStr(v33, 0, v34);
-                              Time = (UnityEngine_GameObject_o *)System_String__Concat_61385136(
+                              Time = (UnityEngine_GameObject_o *)System_String__Concat_61419468(
                                                                    RestTimeColorStr,
-                                                                   (System_String_o *)StringLiteral_1230/*"00:00:00[-]"*/,
+                                                                   (System_String_o *)StringLiteral_1229/*"00:00:00[-]"*/,
                                                                    0LL);
                               if ( v32 )
                               {
@@ -463,7 +463,7 @@ LABEL_53:
             }
           }
         }
-        sub_1B64C5C(Time, v13);
+        sub_1B68930(Time, v13);
       }
     }
   }

@@ -15,42 +15,42 @@ void __fastcall EffectMovieMaster___cctor(const MethodInfo *method)
   int32_t v13; // w2
   int32_t v14; // w3
 
-  if ( (byte_49FE9AF & 1) == 0 )
+  if ( (byte_4A08AEE & 1) == 0 )
   {
-    sub_1B64A00(&EffectMovieMaster_TypeInfo, v1);
-    sub_1B64A00(&StringLiteral_5842/*"Effect/weapon/{0}/usm/"*/, v4);
-    sub_1B64A00(&StringLiteral_5789/*"Effect/BattleCommon/usm/"*/, v5);
-    sub_1B64A00(&StringLiteral_9464/*"NoblePhantasm/{0}/usm/"*/, v6);
-    byte_49FE9AF = 1;
+    sub_1B686D4(&EffectMovieMaster_TypeInfo, v1);
+    sub_1B686D4(&StringLiteral_5842/*"Effect/weapon/{0}/usm/"*/, v4);
+    sub_1B686D4(&StringLiteral_5789/*"Effect/BattleCommon/usm/"*/, v5);
+    sub_1B686D4(&StringLiteral_9466/*"NoblePhantasm/{0}/usm/"*/, v6);
+    byte_4A08AEE = 1;
   }
-  EffectMovieMaster_TypeInfo->static_fields->NOBLE_PATH = (struct System_String_o *)StringLiteral_9464/*"NoblePhantasm/{0}/usm/"*/;
-  sub_1B649A4(
+  EffectMovieMaster_TypeInfo->static_fields->NOBLE_PATH = (struct System_String_o *)StringLiteral_9466/*"NoblePhantasm/{0}/usm/"*/;
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)EffectMovieMaster_TypeInfo->static_fields,
-    StringLiteral_9464/*"NoblePhantasm/{0}/usm/"*/,
+    StringLiteral_9466/*"NoblePhantasm/{0}/usm/"*/,
     v2,
     v3);
   v7 = StringLiteral_5842/*"Effect/weapon/{0}/usm/"*/;
   static_fields = EffectMovieMaster_TypeInfo->static_fields;
   static_fields->WEAPON_PATH = (struct System_String_o *)StringLiteral_5842/*"Effect/weapon/{0}/usm/"*/;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&static_fields->WEAPON_PATH, v7, v9, v10);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&static_fields->WEAPON_PATH, v7, v9, v10);
   v11 = StringLiteral_5789/*"Effect/BattleCommon/usm/"*/;
   v12 = EffectMovieMaster_TypeInfo->static_fields;
   v12->BATTLECOMMON_PATH = (struct System_String_o *)StringLiteral_5789/*"Effect/BattleCommon/usm/"*/;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&v12->BATTLECOMMON_PATH, v11, v13, v14);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&v12->BATTLECOMMON_PATH, v11, v13, v14);
 }
 
 
 void __fastcall EffectMovieMaster___ctor(EffectMovieMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FE9AE & 1) == 0 )
+  if ( (byte_4A08AED & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataMasterBase_EffectMovieMaster__EffectMovieEntity__int___ctor__, method);
-    byte_49FE9AE = 1;
+    sub_1B686D4(&Method_DataMasterBase_EffectMovieMaster__EffectMovieEntity__int___ctor__, method);
+    byte_4A08AED = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     507,
-    (const MethodInfo_30D6758 *)Method_DataMasterBase_EffectMovieMaster__EffectMovieEntity__int___ctor__);
+    (const MethodInfo_30E4480 *)Method_DataMasterBase_EffectMovieMaster__EffectMovieEntity__int___ctor__);
 }
 
 
@@ -85,74 +85,74 @@ System_String_array *__fastcall EffectMovieMaster__GetFilePaths(
   System_Collections_Generic_List_Enumerator_int__o v29; // [xsp+8h] [xbp-88h] BYREF
   System_Collections_Generic_List_Enumerator_int__o v30; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_49FE9AD & 1) == 0 )
+  if ( (byte_4A08AEC & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataMasterBase_EffectMovieMaster__EffectMovieEntity__int__GetEntity__, effectMovieIdList);
-    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__, v5);
-    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__, v6);
-    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__, v7);
-    sub_1B64A00(&Method_System_Collections_Generic_List_string__Add__, v8);
-    sub_1B64A00(&Method_System_Collections_Generic_List_int__GetEnumerator__, v9);
-    sub_1B64A00(&Method_System_Collections_Generic_List_string__ToArray__, v10);
-    sub_1B64A00(&Method_System_Collections_Generic_List_string___ctor__, v11);
-    sub_1B64A00(&System_Collections_Generic_List_string__TypeInfo, v12);
-    byte_49FE9AD = 1;
+    sub_1B686D4(&Method_DataMasterBase_EffectMovieMaster__EffectMovieEntity__int__GetEntity__, effectMovieIdList);
+    sub_1B686D4(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__, v5);
+    sub_1B686D4(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__, v6);
+    sub_1B686D4(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__, v7);
+    sub_1B686D4(&Method_System_Collections_Generic_List_string__Add__, v8);
+    sub_1B686D4(&Method_System_Collections_Generic_List_int__GetEnumerator__, v9);
+    sub_1B686D4(&Method_System_Collections_Generic_List_string__ToArray__, v10);
+    sub_1B686D4(&Method_System_Collections_Generic_List_string___ctor__, v11);
+    sub_1B686D4(&System_Collections_Generic_List_string__TypeInfo, v12);
+    byte_4A08AEC = 1;
   }
   memset(&v30, 0, sizeof(v30));
-  v13 = (System_Collections_Generic_List_object__o *)sub_1B64C4C(System_Collections_Generic_List_string__TypeInfo);
+  v13 = (System_Collections_Generic_List_object__o *)sub_1B68920(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v13,
-    (const MethodInfo_34AF794 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_34BBA44 *)Method_System_Collections_Generic_List_string___ctor__);
   if ( !effectMovieIdList )
     goto LABEL_17;
   System_Collections_Generic_List_int___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v29,
     effectMovieIdList,
-    (const MethodInfo_3493344 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+    (const MethodInfo_349FD28 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
   v30 = v29;
   while ( System_Collections_Generic_List_Enumerator_int___MoveNext(
             &v30,
-            (const MethodInfo_32288D8 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
+            (const MethodInfo_3236754 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
   {
     current = v30.fields._current;
     Entity = DataMasterBase_object__object__int___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                v30.fields._current,
-               (const MethodInfo_30D6798 *)Method_DataMasterBase_EffectMovieMaster__EffectMovieEntity__int__GetEntity__);
+               (const MethodInfo_30E44C0 *)Method_DataMasterBase_EffectMovieMaster__EffectMovieEntity__int__GetEntity__);
     if ( !Entity )
-      sub_1B64C5C(0LL, v18);
+      sub_1B68930(0LL, v18);
     FilePath = (Il2CppObject *)EffectMovieEntity__GetFilePath((EffectMovieEntity_o *)Entity, current, v19);
     v23 = FilePath;
     if ( !v13 )
-      sub_1B64C5C(FilePath, FilePath);
+      sub_1B68930(FilePath, FilePath);
     items = v13->fields._items;
     v25 = Method_System_Collections_Generic_List_string__Add__;
     ++v13->fields._version;
     if ( !items )
-      sub_1B64C5C(FilePath, FilePath);
+      sub_1B68930(FilePath, FilePath);
     size = v13->fields._size;
     if ( (unsigned int)size >= items->max_length )
     {
       System_Collections_Generic_List_object___AddWithResize(
         v13,
         FilePath,
-        *(const MethodInfo_34AFFC8 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+        *(const MethodInfo_34BC278 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
     }
     else
     {
       v27 = &items->obj.klass + size;
       v13->fields._size = size + 1;
       v27[4] = (Il2CppClass *)v23;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)(v27 + 4), (int32_t)v23, v21, v22);
+      sub_1B68678((ServantStatusBattleListViewItem_o *)(v27 + 4), (int32_t)v23, v21, v22);
     }
   }
   System_Collections_Generic_List_Enumerator_int___Dispose(
     &v30,
-    (const MethodInfo_32288D4 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    (const MethodInfo_3236750 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
   if ( !v13 )
 LABEL_17:
-    sub_1B64C5C(v14, v15);
+    sub_1B68930(v14, v15);
   return (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                   v13,
-                                  (const MethodInfo_34B1BC0 *)Method_System_Collections_Generic_List_string__ToArray__);
+                                  (const MethodInfo_34BDDD0 *)Method_System_Collections_Generic_List_string__ToArray__);
 }

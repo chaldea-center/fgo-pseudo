@@ -15,7 +15,7 @@ void __fastcall EventInfoAssistLevelCounterComponent__Setup(
   const MethodInfo *v5; // x1
 
   this->fields.assistData = assistData;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.assistData, (int32_t)assistData, (int32_t)method, v3);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.assistData, (int32_t)assistData, (int32_t)method, v3);
   EventInfoAssistLevelCounterComponent__UpdateDisp(this, v5);
 }
 
@@ -73,26 +73,26 @@ void __fastcall EventInfoAssistLevelCounterComponent__UpdateDisp(
   int32_t lv; // [xsp+18h] [xbp-38h] BYREF
   int32_t imageId; // [xsp+1Ch] [xbp-34h] BYREF
 
-  if ( (byte_49FF638 & 1) == 0 )
+  if ( (byte_4A0977C & 1) == 0 )
   {
-    sub_1B64A00(&AtlasManager_TypeInfo, method);
-    sub_1B64A00(&Method_DataManager_GetMasterData_AssistMaster___, v3);
-    sub_1B64A00(&int_TypeInfo, v4);
-    sub_1B64A00(&LocalizationManager_TypeInfo, v5);
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, v6);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_1B64A00(&StringLiteral_5526/*"EVENT_ASSIST_SKILL_MAX_LEVEL_FORMAT"*/, v8);
-    sub_1B64A00(&StringLiteral_5525/*"EVENT_ASSIST_SKILL_LEVEL_FORMAT"*/, v9);
-    byte_49FF638 = 1;
+    sub_1B686D4(&AtlasManager_TypeInfo, method);
+    sub_1B686D4(&Method_DataManager_GetMasterData_AssistMaster___, v3);
+    sub_1B686D4(&int_TypeInfo, v4);
+    sub_1B686D4(&LocalizationManager_TypeInfo, v5);
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, v6);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    sub_1B686D4(&StringLiteral_5526/*"EVENT_ASSIST_SKILL_MAX_LEVEL_FORMAT"*/, v8);
+    sub_1B686D4(&StringLiteral_5525/*"EVENT_ASSIST_SKILL_LEVEL_FORMAT"*/, v9);
+    byte_4A0977C = 1;
   }
   if ( this->fields.assistData )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_46;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_AssistMaster___);
+                                  (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_AssistMaster___);
     assistData = this->fields.assistData;
     if ( !assistData )
       goto LABEL_46;
@@ -110,7 +110,7 @@ void __fastcall EventInfoAssistLevelCounterComponent__UpdateDisp(
     v16 = this->fields.assistData;
     if ( !v16 )
       goto LABEL_46;
-    GameObjectExtensions__SetLocalPosition_33376744(
+    GameObjectExtensions__SetLocalPosition_33415288(
       (UnityEngine_GameObject_o *)Instance,
       v16->fields.objectPosition,
       0LL);
@@ -140,7 +140,7 @@ void __fastcall EventInfoAssistLevelCounterComponent__UpdateDisp(
       v26 = this->fields.assistData;
       if ( !v26 )
         goto LABEL_46;
-      GameObjectExtensions__SetLocalPosition_33376744(
+      GameObjectExtensions__SetLocalPosition_33415288(
         (UnityEngine_GameObject_o *)Instance,
         v26->fields.iconPosition,
         0LL);
@@ -162,7 +162,7 @@ void __fastcall EventInfoAssistLevelCounterComponent__UpdateDisp(
       v30 = this->fields.assistData;
       if ( !v30 )
         goto LABEL_46;
-      GameObjectExtensions__SetLocalPosition_33376744(
+      GameObjectExtensions__SetLocalPosition_33415288(
         (UnityEngine_GameObject_o *)Instance,
         v30->fields.levelPosition,
         0LL);
@@ -189,7 +189,7 @@ void __fastcall EventInfoAssistLevelCounterComponent__UpdateDisp(
         v38 = this->fields.assistData;
         if ( v38 )
         {
-          GameObjectExtensions__SetLocalPosition_33376744(
+          GameObjectExtensions__SetLocalPosition_33415288(
             (UnityEngine_GameObject_o *)Instance,
             v38->fields.maxLevelPosition,
             0LL);
@@ -214,7 +214,7 @@ void __fastcall EventInfoAssistLevelCounterComponent__UpdateDisp(
         }
       }
 LABEL_46:
-      sub_1B64C5C(Instance, v11);
+      sub_1B68930(Instance, v11);
     }
   }
 }

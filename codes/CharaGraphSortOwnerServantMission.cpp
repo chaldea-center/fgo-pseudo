@@ -6,16 +6,16 @@ void __fastcall CharaGraphSortOwnerServantMission___ctor(
   int32_t v4; // w2
   int32_t v5; // w3
 
-  if ( (byte_49FAF9C & 1) == 0 )
+  if ( (byte_4A0508B & 1) == 0 )
   {
-    sub_1B64A00(&CharaGraphSortManageUnitServantMission_TypeInfo, method);
-    byte_49FAF9C = 1;
+    sub_1B686D4(&CharaGraphSortManageUnitServantMission_TypeInfo, method);
+    byte_4A0508B = 1;
   }
   CharaGraphSortOwnerBase___ctor((CharaGraphSortOwnerBase_o *)this, 0LL);
-  v3 = (CharaGraphSortManageUnitSvtCollection_o *)sub_1B64C4C(CharaGraphSortManageUnitServantMission_TypeInfo);
+  v3 = (CharaGraphSortManageUnitSvtCollection_o *)sub_1B68920(CharaGraphSortManageUnitServantMission_TypeInfo);
   CharaGraphSortManageUnitSvtCollection___ctor(v3, 0LL);
   this->fields._ServantCollectionSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v3;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields._ServantCollectionSortManageUnit_k__BackingField,
     (int32_t)v3,
     v4,
@@ -27,10 +27,10 @@ System_String_o *__fastcall CharaGraphSortOwnerServantMission__get_SortSaveKeyPr
         CharaGraphSortOwnerServantMission_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_49FAF9B & 1) == 0 )
+  if ( (byte_4A0508A & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_4414/*"CharaGraphSort_SvtMission_"*/, method);
-    byte_49FAF9B = 1;
+    sub_1B686D4(&StringLiteral_4412/*"CharaGraphSort_SvtMission_"*/, method);
+    byte_4A0508A = 1;
   }
-  return (System_String_o *)StringLiteral_4414/*"CharaGraphSort_SvtMission_"*/;
+  return (System_String_o *)StringLiteral_4412/*"CharaGraphSort_SvtMission_"*/;
 }

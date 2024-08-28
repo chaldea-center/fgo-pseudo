@@ -15,7 +15,7 @@ void __fastcall CombineListItemInfo___ctor(
   this->fields.kind = kind;
   this->fields.type = type;
   this->fields.spriteName = spriteName;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.spriteName, (int32_t)spriteName, v11, v12);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.spriteName, (int32_t)spriteName, v11, v12);
   this->fields.eventData = eventData;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.eventData, (int32_t)eventData, v13, v14);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.eventData, (int32_t)eventData, v13, v14);
 }

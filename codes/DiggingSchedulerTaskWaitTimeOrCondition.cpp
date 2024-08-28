@@ -13,7 +13,7 @@ void __fastcall DiggingSchedulerTaskWaitTimeOrCondition___ctor(
   v6->fields.sortValue1 = (int64_t)cond;
   v6 = (ServantStatusBattleListViewItem_o *)((char *)v6 + 48);
   *((float *)&v6[-1].fields.isMine + 1) = waitTime;
-  sub_1B649A4(v6, (int32_t)cond, v7, v8);
+  sub_1B68678(v6, (int32_t)cond, v7, v8);
 }
 
 
@@ -25,16 +25,16 @@ System_Collections_IEnumerator_o *__fastcall DiggingSchedulerTaskWaitTimeOrCondi
   int32_t v4; // w2
   int32_t v5; // w3
 
-  if ( (byte_4A02C79 & 1) == 0 )
+  if ( (byte_4A0CDD2 & 1) == 0 )
   {
-    sub_1B64A00(&DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3_TypeInfo, method);
-    byte_4A02C79 = 1;
+    sub_1B686D4(&DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3_TypeInfo, method);
+    byte_4A0CDD2 = 1;
   }
-  v3 = sub_1B64C4C(DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3_TypeInfo);
+  v3 = sub_1B68920(DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -80,7 +80,7 @@ bool __fastcall DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3__MoveNext(
   this->fields.__1__state = -1;
   if ( !_4__this )
 LABEL_12:
-    sub_1B64C5C(this, method);
+    sub_1B68930(this, method);
   if ( *(float *)(&_4__this->fields._IsPause_k__BackingField + 3) < 0.0 )
     return 0;
   this->fields._espTime_5__2 = 0.0;
@@ -96,7 +96,7 @@ LABEL_7:
   }
   this->fields.__2__current = 0LL;
   p__2__current = &this->fields.__2__current;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)p__2__current, 0, v2, v3);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)p__2__current, 0, v2, v3);
   result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
   return result;
@@ -119,11 +119,11 @@ void __fastcall __noreturn DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B64A14(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B64C4C(v2);
+  v2 = sub_1B686E8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B68920(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B64A14(&Method_DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3_System_Collections_IEnumerator_Reset__);
-  sub_1B64B28(v3, v4);
+  v4 = sub_1B686E8(&Method_DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3_System_Collections_IEnumerator_Reset__);
+  sub_1B687FC(v3, v4);
 }
 
 

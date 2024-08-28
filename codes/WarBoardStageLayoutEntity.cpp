@@ -1,13 +1,13 @@
 void __fastcall WarBoardStageLayoutEntity___ctor(WarBoardStageLayoutEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FFB23 & 1) == 0 )
+  if ( (byte_4A09C6A & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataEntityBase_string___ctor__, method);
-    byte_49FFB23 = 1;
+    sub_1B686D4(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A09C6A = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30D6610 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30E4338 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall WarBoardStageLayoutEntity__CreatePK(
         int32_t squareIndex,
         const MethodInfo *method)
 {
-  if ( (byte_49FFB21 & 1) == 0 )
+  if ( (byte_4A09C68 & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&squareIndex);
-    byte_49FFB21 = 1;
+    sub_1B686D4(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&squareIndex);
+    byte_4A09C68 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            stageId,
            squareIndex,
-           (const MethodInfo_2E39F04 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2E47F74 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -49,10 +49,10 @@ System_Int32_array *__fastcall WarBoardStageLayoutEntity__GetIndividuality(
   __int64 v6; // x0
   __int64 v7; // x0
 
-  if ( (byte_49FFB22 & 1) == 0 )
+  if ( (byte_4A09C69 & 1) == 0 )
   {
-    sub_1B64A00(&Method_System_Array_Empty_int___, method);
-    byte_49FFB22 = 1;
+    sub_1B686D4(&Method_System_Array_Empty_int___, method);
+    byte_4A09C69 = 1;
   }
   result = this->fields.individuality;
   if ( !result )
@@ -61,17 +61,17 @@ System_Int32_array *__fastcall WarBoardStageLayoutEntity__GetIndividuality(
     v5 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
     if ( !v5 )
     {
-      sub_1BB6938(Method_System_Array_Empty_int___);
+      sub_1BBA60C(Method_System_Array_Empty_int___);
       v5 = v4[7];
     }
     v6 = *(_QWORD *)(v5 + 16);
     if ( (*(_BYTE *)(v6 + 309) & 1) == 0 )
-      v6 = sub_1BB68DC(v6);
+      v6 = sub_1BBA5B0(v6);
     if ( !*(_DWORD *)(v6 + 224) )
       j_il2cpp_runtime_class_init_0(v6);
     v7 = *(_QWORD *)(v4[7] + 16LL);
     if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-      v7 = sub_1BB68DC(v7);
+      v7 = sub_1BBA5B0(v7);
     return **(System_Int32_array ***)(v7 + 184);
   }
   return result;

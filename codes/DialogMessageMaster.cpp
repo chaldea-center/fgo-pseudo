@@ -10,37 +10,37 @@ void __fastcall DialogMessageMaster___cctor(const MethodInfo *method)
   int32_t v8; // w2
   int32_t v9; // w3
 
-  if ( (byte_49FE9A7 & 1) == 0 )
+  if ( (byte_4A08AE6 & 1) == 0 )
   {
-    sub_1B64A00(&DialogMessageMaster_TypeInfo, v1);
-    sub_1B64A00(&StringLiteral_18542/*"dialogMessage_{0}_{1}"*/, v4);
-    sub_1B64A00(&StringLiteral_22764/*"remindDialogMessage_{0}_{1}"*/, v5);
-    byte_49FE9A7 = 1;
+    sub_1B686D4(&DialogMessageMaster_TypeInfo, v1);
+    sub_1B686D4(&StringLiteral_18544/*"dialogMessage_{0}_{1}"*/, v4);
+    sub_1B686D4(&StringLiteral_22777/*"remindDialogMessage_{0}_{1}"*/, v5);
+    byte_4A08AE6 = 1;
   }
-  DialogMessageMaster_TypeInfo->static_fields->SAVE_KEY = (struct System_String_o *)StringLiteral_18542/*"dialogMessage_{0}_{1}"*/;
-  sub_1B649A4(
+  DialogMessageMaster_TypeInfo->static_fields->SAVE_KEY = (struct System_String_o *)StringLiteral_18544/*"dialogMessage_{0}_{1}"*/;
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)DialogMessageMaster_TypeInfo->static_fields,
-    StringLiteral_18542/*"dialogMessage_{0}_{1}"*/,
+    StringLiteral_18544/*"dialogMessage_{0}_{1}"*/,
     v2,
     v3);
-  v6 = StringLiteral_22764/*"remindDialogMessage_{0}_{1}"*/;
+  v6 = StringLiteral_22777/*"remindDialogMessage_{0}_{1}"*/;
   static_fields = DialogMessageMaster_TypeInfo->static_fields;
-  static_fields->SAVE_REMIND_KEY = (struct System_String_o *)StringLiteral_22764/*"remindDialogMessage_{0}_{1}"*/;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&static_fields->SAVE_REMIND_KEY, v6, v8, v9);
+  static_fields->SAVE_REMIND_KEY = (struct System_String_o *)StringLiteral_22777/*"remindDialogMessage_{0}_{1}"*/;
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&static_fields->SAVE_REMIND_KEY, v6, v8, v9);
 }
 
 
 void __fastcall DialogMessageMaster___ctor(DialogMessageMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FE9A0 & 1) == 0 )
+  if ( (byte_4A08ADF & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataMasterBase_DialogMessageMaster__DialogMessageEntity__int___ctor__, method);
-    byte_49FE9A0 = 1;
+    sub_1B686D4(&Method_DataMasterBase_DialogMessageMaster__DialogMessageEntity__int___ctor__, method);
+    byte_4A08ADF = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     228,
-    (const MethodInfo_30D6758 *)Method_DataMasterBase_DialogMessageMaster__DialogMessageEntity__int___ctor__);
+    (const MethodInfo_30E4480 *)Method_DataMasterBase_DialogMessageMaster__DialogMessageEntity__int___ctor__);
 }
 
 
@@ -97,25 +97,25 @@ void __fastcall DialogMessageMaster__DeleteContinueData(DialogMessageMaster_o *t
   int v51; // [xsp+18h] [xbp-58h] BYREF
   int v52; // [xsp+1Ch] [xbp-54h] BYREF
 
-  if ( (byte_49FE9A1 & 1) == 0 )
+  if ( (byte_4A08AE0 & 1) == 0 )
   {
-    sub_1B64A00(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, method);
-    sub_1B64A00(&DialogMessageEntity_TypeInfo, v3);
-    sub_1B64A00(&DialogMessageMaster_TypeInfo, v4);
-    sub_1B64A00(&System_IDisposable_TypeInfo, v5);
-    sub_1B64A00(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v6);
-    sub_1B64A00(&System_Collections_IEnumerator_TypeInfo, v7);
-    sub_1B64A00(&int_TypeInfo, v8);
-    byte_49FE9A1 = 1;
+    sub_1B686D4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, method);
+    sub_1B686D4(&DialogMessageEntity_TypeInfo, v3);
+    sub_1B686D4(&DialogMessageMaster_TypeInfo, v4);
+    sub_1B686D4(&System_IDisposable_TypeInfo, v5);
+    sub_1B686D4(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v6);
+    sub_1B686D4(&System_Collections_IEnumerator_TypeInfo, v7);
+    sub_1B686D4(&int_TypeInfo, v8);
+    byte_4A08AE0 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1B64C5C(0LL, method);
+    sub_1B68930(0LL, method);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_30739D4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_30816FC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_1B64C5C(0LL, v10);
+    sub_1B68930(0LL, v10);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -135,7 +135,7 @@ void __fastcall DialogMessageMaster__DeleteContinueData(DialogMessageMaster_o *t
     else
     {
 LABEL_9:
-      p_method = sub_1BB69E0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1BBA6B4(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -158,7 +158,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v19 = sub_1BB69E0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v19 = sub_1BBA6B4(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
     v20 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v19)(
             Enumerator,
@@ -183,20 +183,20 @@ LABEL_16:
       v27 = DialogMessageMaster_TypeInfo;
     }
     if ( !v26 )
-      sub_1B64C5C(v27, v21);
+      sub_1B68930(v27, v21);
     SAVE_KEY = v27->static_fields->SAVE_KEY;
     v52 = v26[4];
     v29 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v52, v22, v23, v24);
     v51 = v26[17];
     v33 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v51, v30, v31, v32);
-    v34 = System_String__Format_61399508(SAVE_KEY, v29, v33, 0LL);
+    v34 = System_String__Format_61433840(SAVE_KEY, v29, v33, 0LL);
     UnityEngine_PlayerPrefs__DeleteKey(v34, 0LL);
     SAVE_REMIND_KEY = DialogMessageMaster_TypeInfo->static_fields->SAVE_REMIND_KEY;
     v50 = v26[4];
     v39 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v50, v36, v37, v38);
     v49 = v26[19];
     v43 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v49, v40, v41, v42);
-    v44 = System_String__Format_61399508(SAVE_REMIND_KEY, v39, v43, 0LL);
+    v44 = System_String__Format_61433840(SAVE_REMIND_KEY, v39, v43, 0LL);
     UnityEngine_PlayerPrefs__DeleteKey(v44, 0LL);
   }
   v45 = Enumerator->klass;
@@ -216,7 +216,7 @@ LABEL_16:
   else
   {
 LABEL_32:
-    v48 = sub_1BB69E0(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v48 = sub_1BBA6B4(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v48)(Enumerator, *(_QWORD *)(v48 + 8));
 }
@@ -286,41 +286,41 @@ DialogMessageEntity_array *__fastcall DialogMessageMaster__GetDialogList(
   int32_t v60; // w2
   int32_t v61; // w3
 
-  if ( (byte_49FE9A2 & 1) == 0 )
+  if ( (byte_4A08AE1 & 1) == 0 )
   {
-    sub_1B64A00(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, *(_QWORD *)&openType);
-    sub_1B64A00(&System_Comparison_DialogMessageEntity__TypeInfo, v5);
-    sub_1B64A00(&DialogMessageEntity_TypeInfo, v6);
-    sub_1B64A00(&System_IDisposable_TypeInfo, v7);
-    sub_1B64A00(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v8);
-    sub_1B64A00(&System_Collections_IEnumerator_TypeInfo, v9);
-    sub_1B64A00(&Method_System_Collections_Generic_List_DialogMessageEntity__Add__, v10);
-    sub_1B64A00(&Method_System_Collections_Generic_List_DialogMessageEntity__Sort__, v11);
-    sub_1B64A00(&Method_System_Collections_Generic_List_DialogMessageEntity__ToArray__, v12);
-    sub_1B64A00(&Method_System_Collections_Generic_List_DialogMessageEntity___ctor__, v13);
-    sub_1B64A00(&System_Collections_Generic_List_DialogMessageEntity__TypeInfo, v14);
-    sub_1B64A00(&NetworkManager_TypeInfo, v15);
-    sub_1B64A00(&Method_DialogMessageMaster___c__GetDialogList_b__6_0__, v16);
-    sub_1B64A00(&DialogMessageMaster___c_TypeInfo, v17);
-    byte_49FE9A2 = 1;
+    sub_1B686D4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, *(_QWORD *)&openType);
+    sub_1B686D4(&System_Comparison_DialogMessageEntity__TypeInfo, v5);
+    sub_1B686D4(&DialogMessageEntity_TypeInfo, v6);
+    sub_1B686D4(&System_IDisposable_TypeInfo, v7);
+    sub_1B686D4(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v8);
+    sub_1B686D4(&System_Collections_IEnumerator_TypeInfo, v9);
+    sub_1B686D4(&Method_System_Collections_Generic_List_DialogMessageEntity__Add__, v10);
+    sub_1B686D4(&Method_System_Collections_Generic_List_DialogMessageEntity__Sort__, v11);
+    sub_1B686D4(&Method_System_Collections_Generic_List_DialogMessageEntity__ToArray__, v12);
+    sub_1B686D4(&Method_System_Collections_Generic_List_DialogMessageEntity___ctor__, v13);
+    sub_1B686D4(&System_Collections_Generic_List_DialogMessageEntity__TypeInfo, v14);
+    sub_1B686D4(&NetworkManager_TypeInfo, v15);
+    sub_1B686D4(&Method_DialogMessageMaster___c__GetDialogList_b__6_0__, v16);
+    sub_1B686D4(&DialogMessageMaster___c_TypeInfo, v17);
+    byte_4A08AE1 = 1;
   }
-  v18 = (System_Collections_Generic_List_object__o *)sub_1B64C4C(System_Collections_Generic_List_DialogMessageEntity__TypeInfo);
+  v18 = (System_Collections_Generic_List_object__o *)sub_1B68920(System_Collections_Generic_List_DialogMessageEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v18,
-    (const MethodInfo_34AF794 *)Method_System_Collections_Generic_List_DialogMessageEntity___ctor__);
+    (const MethodInfo_34BBA44 *)Method_System_Collections_Generic_List_DialogMessageEntity___ctor__);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0LL);
-  v20 = (DialogMessageEntity_o *)sub_1B64C4C(DialogMessageEntity_TypeInfo);
+  v20 = (DialogMessageEntity_o *)sub_1B68920(DialogMessageEntity_TypeInfo);
   DialogMessageEntity___ctor(v20, v21);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_46;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_30739D4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_30816FC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_1B64C5C(0LL, v24);
+    sub_1B68930(0LL, v24);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -340,7 +340,7 @@ DialogMessageEntity_array *__fastcall DialogMessageMaster__GetDialogList(
     else
     {
 LABEL_11:
-      p_method = sub_1BB69E0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1BBA6B4(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -363,7 +363,7 @@ LABEL_11:
     else
     {
 LABEL_18:
-      v33 = sub_1BB69E0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v33 = sub_1BBA6B4(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
     v34 = (DialogMessageEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v33)(
                                      Enumerator,
@@ -382,26 +382,26 @@ LABEL_18:
         if ( IsOpenCondition )
         {
           if ( !v18 )
-            sub_1B64C5C(IsOpenCondition, v45);
+            sub_1B68930(IsOpenCondition, v45);
           items = v18->fields._items;
           v49 = Method_System_Collections_Generic_List_DialogMessageEntity__Add__;
           ++v18->fields._version;
           if ( !items )
-            sub_1B64C5C(IsOpenCondition, v45);
+            sub_1B68930(IsOpenCondition, v45);
           size = v18->fields._size;
           if ( (unsigned int)size >= items->max_length )
           {
             System_Collections_Generic_List_object___AddWithResize(
               v18,
               (Il2CppObject *)v36,
-              *(const MethodInfo_34AFFC8 **)(*(_QWORD *)(v49[4] + 192LL) + 112LL));
+              *(const MethodInfo_34BC278 **)(*(_QWORD *)(v49[4] + 192LL) + 112LL));
           }
           else
           {
             v51 = &items->obj.klass + size;
             v18->fields._size = size + 1;
             v51[4] = (Il2CppClass *)v36;
-            sub_1B649A4((ServantStatusBattleListViewItem_o *)(v51 + 4), (int32_t)v36, v46, v47);
+            sub_1B68678((ServantStatusBattleListViewItem_o *)(v51 + 4), (int32_t)v36, v46, v47);
           }
         }
       }
@@ -424,7 +424,7 @@ LABEL_18:
   else
   {
 LABEL_36:
-    v55 = sub_1BB69E0(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v55 = sub_1BBA6B4(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v55)(
                                                              Enumerator,
@@ -444,22 +444,22 @@ LABEL_36:
       v56 = DialogMessageMaster___c_TypeInfo;
     }
     v58 = (Il2CppObject *)v56->static_fields->__9;
-    _9__6_0 = (System_Comparison_T__o *)sub_1B64C4C(System_Comparison_DialogMessageEntity__TypeInfo);
+    _9__6_0 = (System_Comparison_T__o *)sub_1B68920(System_Comparison_DialogMessageEntity__TypeInfo);
     System_Comparison_object____ctor(_9__6_0, v58, Method_DialogMessageMaster___c__GetDialogList_b__6_0__, 0LL);
     static_fields = DialogMessageMaster___c_TypeInfo->static_fields;
     static_fields->__9__6_0 = (struct System_Comparison_DialogMessageEntity__o *)_9__6_0;
-    sub_1B649A4((ServantStatusBattleListViewItem_o *)&static_fields->__9__6_0, (int32_t)_9__6_0, v60, v61);
+    sub_1B68678((ServantStatusBattleListViewItem_o *)&static_fields->__9__6_0, (int32_t)_9__6_0, v60, v61);
   }
   if ( !v18 )
 LABEL_46:
-    sub_1B64C5C(list, v22);
-  System_Collections_Generic_List_object___Sort_55253804(
+    sub_1B68930(list, v22);
+  System_Collections_Generic_List_object___Sort_55303484(
     v18,
     _9__6_0,
-    (const MethodInfo_34B1B2C *)Method_System_Collections_Generic_List_DialogMessageEntity__Sort__);
+    (const MethodInfo_34BDD3C *)Method_System_Collections_Generic_List_DialogMessageEntity__Sort__);
   return (DialogMessageEntity_array *)System_Collections_Generic_List_object___ToArray(
                                         v18,
-                                        (const MethodInfo_34B1BC0 *)Method_System_Collections_Generic_List_DialogMessageEntity__ToArray__);
+                                        (const MethodInfo_34BDDD0 *)Method_System_Collections_Generic_List_DialogMessageEntity__ToArray__);
 }
 
 
@@ -548,16 +548,16 @@ bool __fastcall DialogMessageMaster__IsSavedAsSeen(
   int32_t id; // [xsp+Ch] [xbp-34h] BYREF
 
   v6 = this;
-  if ( (byte_49FE9A6 & 1) == 0 )
+  if ( (byte_4A08AE5 & 1) == 0 )
   {
-    sub_1B64A00(&DialogMessageMaster_TypeInfo, entity);
-    sub_1B64A00(&int_TypeInfo, v7);
-    sub_1B64A00(&Method_System_Collections_Generic_List_int__Contains__, v8);
-    this = (DialogMessageMaster_o *)sub_1B64A00(&NetworkManager_TypeInfo, v9);
-    byte_49FE9A6 = 1;
+    sub_1B686D4(&DialogMessageMaster_TypeInfo, entity);
+    sub_1B686D4(&int_TypeInfo, v7);
+    sub_1B686D4(&Method_System_Collections_Generic_List_int__Contains__, v8);
+    this = (DialogMessageMaster_o *)sub_1B686D4(&NetworkManager_TypeInfo, v9);
+    byte_4A08AE5 = 1;
   }
   if ( !entity )
-    sub_1B64C5C(this, entity);
+    sub_1B68930(this, entity);
   frequencyType = entity->fields.frequencyType;
   if ( frequencyType == 7 )
   {
@@ -572,7 +572,7 @@ bool __fastcall DialogMessageMaster__IsSavedAsSeen(
     v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &id, method, v3, v4);
     openedAt = entity->fields.openedAt;
     v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &openedAt, v23, v24, v25);
-    v27 = System_String__Format_61399508(SAVE_KEY, v22, v26, 0LL);
+    v27 = System_String__Format_61433840(SAVE_KEY, v22, v26, 0LL);
     Int = UnityEngine_PlayerPrefs__GetInt(v27, 0, 0LL);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -598,7 +598,7 @@ bool __fastcall DialogMessageMaster__IsSavedAsSeen(
       v48 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &id, v32, v33, v34);
       openedAt = entity->fields.remindAt;
       v52 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &openedAt, v49, v50, v51);
-      v53 = System_String__Format_61399508(SAVE_REMIND_KEY, v48, v52, 0LL);
+      v53 = System_String__Format_61433840(SAVE_REMIND_KEY, v48, v52, 0LL);
       if ( UnityEngine_PlayerPrefs__GetInt(v53, 0, 0LL) > 0 )
         goto LABEL_34;
       v57 = DialogMessageMaster_TypeInfo;
@@ -629,7 +629,7 @@ bool __fastcall DialogMessageMaster__IsSavedAsSeen(
       v37 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &id, v32, v33, v34);
       openedAt = entity->fields.remindAt;
       v41 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &openedAt, v38, v39, v40);
-      v42 = System_String__Format_61399508(v36, v37, v41, 0LL);
+      v42 = System_String__Format_61433840(v36, v37, v41, 0LL);
       if ( UnityEngine_PlayerPrefs__GetInt(v42, 0, 0LL) > 0 )
       {
 LABEL_22:
@@ -647,7 +647,7 @@ LABEL_22:
       v67 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &id, v43, v44, v45);
       openedAt = entity->fields.openedAt;
       v71 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &openedAt, v68, v69, v70);
-      v72 = System_String__Format_61399508(v66, v67, v71, 0LL);
+      v72 = System_String__Format_61433840(v66, v67, v71, 0LL);
       UnityEngine_PlayerPrefs__DeleteKey(v72, 0LL);
       v58 = DialogMessageMaster_TypeInfo->static_fields->SAVE_REMIND_KEY;
       v80 = entity->fields.id;
@@ -657,7 +657,7 @@ LABEL_22:
       remindAt = entity->fields.remindAt;
     }
     v76 = (Il2CppObject *)j_il2cpp_value_box_0(v63, p_openedAt, v59, v60, v61);
-    v77 = System_String__Format_61399508(v58, v62, v76, 0LL);
+    v77 = System_String__Format_61433840(v58, v62, v76, 0LL);
     UnityEngine_PlayerPrefs__SetInt(v77, 1, 0LL);
 LABEL_34:
     LOBYTE(seenList) = 0;
@@ -678,7 +678,7 @@ LABEL_34:
     v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &id, method, v3, v4);
     openedAt = entity->fields.openedAt;
     v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &openedAt, v14, v15, v16);
-    v18 = System_String__Format_61399508(v12, v13, v17, 0LL);
+    v18 = System_String__Format_61433840(v12, v13, v17, 0LL);
     if ( UnityEngine_PlayerPrefs__GetInt(v18, 0, 0LL) < 1 )
       goto LABEL_34;
     goto LABEL_22;
@@ -688,7 +688,7 @@ LABEL_34:
     LOBYTE(seenList) = System_Collections_Generic_List_int___Contains(
                          seenList,
                          entity->fields.id,
-                         (const MethodInfo_3492B48 *)Method_System_Collections_Generic_List_int__Contains__);
+                         (const MethodInfo_349F5CC *)Method_System_Collections_Generic_List_int__Contains__);
   return (char)seenList;
 }
 
@@ -728,14 +728,14 @@ void __fastcall DialogMessageMaster__SaveAsSeen(
 
   v5 = entity;
   v6 = this;
-  if ( (byte_49FE9A5 & 1) == 0 )
+  if ( (byte_4A08AE4 & 1) == 0 )
   {
-    sub_1B64A00(&DialogMessageMaster_TypeInfo, entity);
-    sub_1B64A00(&int_TypeInfo, v7);
-    sub_1B64A00(&Method_System_Collections_Generic_List_int__Add__, v8);
-    sub_1B64A00(&Method_System_Collections_Generic_List_int___ctor__, v9);
-    this = (DialogMessageMaster_o *)sub_1B64A00(&System_Collections_Generic_List_int__TypeInfo, v10);
-    byte_49FE9A5 = 1;
+    sub_1B686D4(&DialogMessageMaster_TypeInfo, entity);
+    sub_1B686D4(&int_TypeInfo, v7);
+    sub_1B686D4(&Method_System_Collections_Generic_List_int__Add__, v8);
+    sub_1B686D4(&Method_System_Collections_Generic_List_int___ctor__, v9);
+    this = (DialogMessageMaster_o *)sub_1B686D4(&System_Collections_Generic_List_int__TypeInfo, v10);
+    byte_4A08AE4 = 1;
   }
   if ( !v5 )
     goto LABEL_17;
@@ -752,12 +752,12 @@ void __fastcall DialogMessageMaster__SaveAsSeen(
     p_seenList = (ServantStatusBattleListViewItem_o *)&v6->fields.seenList;
     this = seenList;
     if ( seenList
-      || (v22 = (System_Collections_Generic_List_int__o *)sub_1B64C4C(System_Collections_Generic_List_int__TypeInfo),
+      || (v22 = (System_Collections_Generic_List_int__o *)sub_1B68920(System_Collections_Generic_List_int__TypeInfo),
           System_Collections_Generic_List_int____ctor(
             v22,
-            (const MethodInfo_3491F7C *)Method_System_Collections_Generic_List_int___ctor__),
+            (const MethodInfo_349EA00 *)Method_System_Collections_Generic_List_int___ctor__),
           p_seenList->klass = (ServantStatusBattleListViewItem_c *)v22,
-          sub_1B649A4(p_seenList, (int32_t)v22, v23, v24),
+          sub_1B68678(p_seenList, (int32_t)v22, v23, v24),
           (this = (DialogMessageMaster_o *)p_seenList->klass) != 0LL) )
     {
       entity = (DialogMessageEntity_o *)(unsigned int)v5->fields.id;
@@ -772,7 +772,7 @@ void __fastcall DialogMessageMaster__SaveAsSeen(
           System_Collections_Generic_List_int___AddWithResize(
             (System_Collections_Generic_List_int__o *)this,
             (int32_t)entity,
-            *(const MethodInfo_34927D0 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+            *(const MethodInfo_349F254 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
         }
         else
         {
@@ -783,7 +783,7 @@ void __fastcall DialogMessageMaster__SaveAsSeen(
       }
     }
 LABEL_17:
-    sub_1B64C5C(this, entity);
+    sub_1B68930(this, entity);
   }
 LABEL_7:
   v12 = DialogMessageMaster_TypeInfo;
@@ -797,7 +797,7 @@ LABEL_7:
   v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &id, method, v3, v4);
   openedAt = v5->fields.openedAt;
   v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &openedAt, v15, v16, v17);
-  v19 = System_String__Format_61399508(SAVE_KEY, v14, v18, 0LL);
+  v19 = System_String__Format_61433840(SAVE_KEY, v14, v18, 0LL);
   UnityEngine_PlayerPrefs__SetInt(v19, 1, 0LL);
 }
 
@@ -853,32 +853,32 @@ void __fastcall DialogMessageMaster__ShowAvailables(
   System_Object_array *v48; // x1
   const MethodInfo *v49; // x4
 
-  if ( (byte_49FE9A3 & 1) == 0 )
+  if ( (byte_4A08AE2 & 1) == 0 )
   {
-    sub_1B64A00(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&opType);
-    sub_1B64A00(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v11);
-    sub_1B64A00(&System_Comparison_DialogMessageEntity__TypeInfo, v12);
-    sub_1B64A00(&DialogMessageEntity_TypeInfo, v13);
-    sub_1B64A00(&Method_System_Collections_Generic_List_DialogMessageEntity__Add__, v14);
-    sub_1B64A00(&Method_System_Collections_Generic_List_DialogMessageEntity__Sort__, v15);
-    sub_1B64A00(&Method_System_Collections_Generic_List_DialogMessageEntity__ToArray__, v16);
-    sub_1B64A00(&Method_System_Collections_Generic_List_DialogMessageEntity___ctor__, v17);
-    sub_1B64A00(&System_Collections_Generic_List_DialogMessageEntity__TypeInfo, v18);
-    sub_1B64A00(&NetworkManager_TypeInfo, v19);
-    sub_1B64A00(&Method_DialogMessageMaster___c__ShowAvailables_b__7_0__, v20);
-    sub_1B64A00(&DialogMessageMaster___c_TypeInfo, v21);
-    byte_49FE9A3 = 1;
+    sub_1B686D4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&opType);
+    sub_1B686D4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v11);
+    sub_1B686D4(&System_Comparison_DialogMessageEntity__TypeInfo, v12);
+    sub_1B686D4(&DialogMessageEntity_TypeInfo, v13);
+    sub_1B686D4(&Method_System_Collections_Generic_List_DialogMessageEntity__Add__, v14);
+    sub_1B686D4(&Method_System_Collections_Generic_List_DialogMessageEntity__Sort__, v15);
+    sub_1B686D4(&Method_System_Collections_Generic_List_DialogMessageEntity__ToArray__, v16);
+    sub_1B686D4(&Method_System_Collections_Generic_List_DialogMessageEntity___ctor__, v17);
+    sub_1B686D4(&System_Collections_Generic_List_DialogMessageEntity__TypeInfo, v18);
+    sub_1B686D4(&NetworkManager_TypeInfo, v19);
+    sub_1B686D4(&Method_DialogMessageMaster___c__ShowAvailables_b__7_0__, v20);
+    sub_1B686D4(&DialogMessageMaster___c_TypeInfo, v21);
+    byte_4A08AE2 = 1;
   }
   list = this->fields.list;
   if ( !list )
     goto LABEL_30;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)list,
-            (const MethodInfo_30733FC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-  v24 = (System_Collections_Generic_List_object__o *)sub_1B64C4C(System_Collections_Generic_List_DialogMessageEntity__TypeInfo);
+            (const MethodInfo_3081124 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+  v24 = (System_Collections_Generic_List_object__o *)sub_1B68920(System_Collections_Generic_List_DialogMessageEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v24,
-    (const MethodInfo_34AF794 *)Method_System_Collections_Generic_List_DialogMessageEntity___ctor__);
+    (const MethodInfo_34BBA44 *)Method_System_Collections_Generic_List_DialogMessageEntity___ctor__);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0LL);
@@ -894,7 +894,7 @@ void __fastcall DialogMessageMaster__ShowAvailables(
       Item = System_Collections_ObjectModel_Collection_object___get_Item(
                (System_Collections_ObjectModel_Collection_T__o *)list,
                v27,
-               (const MethodInfo_307348C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+               (const MethodInfo_30811B4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( Item )
       {
         v30 = (DialogMessageEntity_o *)Item;
@@ -921,14 +921,14 @@ void __fastcall DialogMessageMaster__ShowAvailables(
               System_Collections_Generic_List_object___AddWithResize(
                 v24,
                 (Il2CppObject *)v30,
-                *(const MethodInfo_34AFFC8 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
+                *(const MethodInfo_34BC278 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
             }
             else
             {
               v42 = &items->obj.klass + size;
               v24->fields._size = size + 1;
               v42[4] = (Il2CppClass *)v30;
-              sub_1B649A4((ServantStatusBattleListViewItem_o *)(v42 + 4), (int32_t)v30, v37, v38);
+              sub_1B68678((ServantStatusBattleListViewItem_o *)(v42 + 4), (int32_t)v30, v37, v38);
             }
           }
         }
@@ -937,7 +937,7 @@ void __fastcall DialogMessageMaster__ShowAvailables(
         goto LABEL_22;
     }
 LABEL_30:
-    sub_1B64C5C(list, *(_QWORD *)&opType);
+    sub_1B68930(list, *(_QWORD *)&opType);
   }
 LABEL_22:
   list = DialogMessageMaster___c_TypeInfo;
@@ -955,21 +955,21 @@ LABEL_22:
       list = DialogMessageMaster___c_TypeInfo;
     }
     v44 = (Il2CppObject *)**((_QWORD **)list + 23);
-    v43 = (System_Comparison_T__o *)sub_1B64C4C(System_Comparison_DialogMessageEntity__TypeInfo);
+    v43 = (System_Comparison_T__o *)sub_1B68920(System_Comparison_DialogMessageEntity__TypeInfo);
     System_Comparison_object____ctor(v43, v44, Method_DialogMessageMaster___c__ShowAvailables_b__7_0__, 0LL);
     static_fields = DialogMessageMaster___c_TypeInfo->static_fields;
     static_fields->__9__7_0 = (struct System_Comparison_DialogMessageEntity__o *)v43;
-    sub_1B649A4((ServantStatusBattleListViewItem_o *)&static_fields->__9__7_0, (int32_t)v43, v46, v47);
+    sub_1B68678((ServantStatusBattleListViewItem_o *)&static_fields->__9__7_0, (int32_t)v43, v46, v47);
   }
   if ( !v24 )
     goto LABEL_30;
-  System_Collections_Generic_List_object___Sort_55253804(
+  System_Collections_Generic_List_object___Sort_55303484(
     v24,
     v43,
-    (const MethodInfo_34B1B2C *)Method_System_Collections_Generic_List_DialogMessageEntity__Sort__);
+    (const MethodInfo_34BDD3C *)Method_System_Collections_Generic_List_DialogMessageEntity__Sort__);
   v48 = System_Collections_Generic_List_object___ToArray(
           v24,
-          (const MethodInfo_34B1BC0 *)Method_System_Collections_Generic_List_DialogMessageEntity__ToArray__);
+          (const MethodInfo_34BDDD0 *)Method_System_Collections_Generic_List_DialogMessageEntity__ToArray__);
   DialogMessageMaster__ShowChain(this, (DialogMessageEntity_array *)v48, 0, callback, v49);
 }
 
@@ -1000,25 +1000,25 @@ void __fastcall DialogMessageMaster__ShowChain(
   System_Action_o *v25; // x21
   const MethodInfo *v26; // x2
 
-  if ( (byte_49FE9A4 & 1) == 0 )
+  if ( (byte_4A08AE3 & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, entitys);
-    sub_1B64A00(&Method_DialogMessageMaster___c__DisplayClass8_0__ShowChain_b__0__, v9);
-    sub_1B64A00(&DialogMessageMaster___c__DisplayClass8_0_TypeInfo, v10);
-    byte_49FE9A4 = 1;
+    sub_1B686D4(&System_Action_TypeInfo, entitys);
+    sub_1B686D4(&Method_DialogMessageMaster___c__DisplayClass8_0__ShowChain_b__0__, v9);
+    sub_1B686D4(&DialogMessageMaster___c__DisplayClass8_0_TypeInfo, v10);
+    byte_4A08AE3 = 1;
   }
-  v11 = sub_1B64C4C(DialogMessageMaster___c__DisplayClass8_0_TypeInfo);
+  v11 = sub_1B68920(DialogMessageMaster___c__DisplayClass8_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v11, 0LL);
   if ( !v11 )
     goto LABEL_11;
   *(_QWORD *)(v11 + 16) = this;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v11 + 16), (int32_t)this, v14, v15);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)(v11 + 16), (int32_t)this, v14, v15);
   *(_QWORD *)(v11 + 24) = entitys;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v11 + 24), (int32_t)entitys, v16, v17);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)(v11 + 24), (int32_t)entitys, v16, v17);
   *(_QWORD *)(v11 + 40) = callBack;
   v18 = v11 + 40;
   *(_DWORD *)(v11 + 32) = idx;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v11 + 40), (int32_t)callBack, v19, v20);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)(v11 + 40), (int32_t)callBack, v19, v20);
   v21 = *(_QWORD *)(v11 + 24);
   if ( !v21 )
     goto LABEL_11;
@@ -1027,9 +1027,9 @@ void __fastcall DialogMessageMaster__ShowChain(
   if ( (int)v22 < v23 )
   {
     if ( (unsigned int)v22 >= v23 )
-      sub_1B64C64(v12, v13);
+      sub_1B68938(v12, v13);
     v24 = *(DialogMessageEntity_o **)(v21 + 8 * v22 + 32);
-    v25 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+    v25 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
     System_Action___ctor(
       v25,
       (Il2CppObject *)v11,
@@ -1041,7 +1041,7 @@ void __fastcall DialogMessageMaster__ShowChain(
       return;
     }
 LABEL_11:
-    sub_1B64C5C(v12, v13);
+    sub_1B68930(v12, v13);
   }
   if ( !*(_QWORD *)v18 )
     goto LABEL_11;
@@ -1058,15 +1058,15 @@ void __fastcall DialogMessageMaster___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   int32_t v4; // w3
 
-  if ( (byte_49FE9A8 & 1) == 0 )
+  if ( (byte_4A08AE7 & 1) == 0 )
   {
-    sub_1B64A00(&DialogMessageMaster___c_TypeInfo, v1);
-    byte_49FE9A8 = 1;
+    sub_1B686D4(&DialogMessageMaster___c_TypeInfo, v1);
+    byte_4A08AE7 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B64C4C(DialogMessageMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B68920(DialogMessageMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   DialogMessageMaster___c_TypeInfo->static_fields->__9 = (struct DialogMessageMaster___c_o *)v2;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)DialogMessageMaster___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)DialogMessageMaster___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -1083,7 +1083,7 @@ int32_t __fastcall DialogMessageMaster___c___GetDialogList_b__6_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1B64C5C(this, a);
+    sub_1B68930(this, a);
   return b->fields.priority - a->fields.priority;
 }
 
@@ -1095,7 +1095,7 @@ int32_t __fastcall DialogMessageMaster___c___ShowAvailables_b__7_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1B64C5C(this, a);
+    sub_1B68930(this, a);
   return b->fields.priority - a->fields.priority;
 }
 
@@ -1124,14 +1124,14 @@ void __fastcall DialogMessageMaster___c__DisplayClass8_0___ShowChain_b__0(
   idx = this->fields.idx;
   v5 = this;
   if ( (unsigned int)idx >= entitys->max_length )
-    sub_1B64C64(this, method);
+    sub_1B68938(this, method);
   this = (DialogMessageMaster___c__DisplayClass8_0_o *)this->fields.__4__this;
   if ( !this
     || (DialogMessageMaster__SaveAsSeen((DialogMessageMaster_o *)this, entitys->m_Items[idx], v2),
         (this = (DialogMessageMaster___c__DisplayClass8_0_o *)v5->fields.__4__this) == 0LL) )
   {
 LABEL_6:
-    sub_1B64C5C(this, method);
+    sub_1B68930(this, method);
   }
   DialogMessageMaster__ShowChain(
     (DialogMessageMaster_o *)this,

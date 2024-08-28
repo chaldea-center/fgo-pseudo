@@ -1,13 +1,13 @@
 void __fastcall UserEventMissionEntity___ctor(UserEventMissionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FF771 & 1) == 0 )
+  if ( (byte_4A098B8 & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataEntityBase_string___ctor__, method);
-    byte_49FF771 = 1;
+    sub_1B686D4(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A098B8 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30D6610 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30E4338 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall UserEventMissionEntity__CreatePK(
         int32_t missionId,
         const MethodInfo *method)
 {
-  if ( (byte_49FF76F & 1) == 0 )
+  if ( (byte_4A098B6 & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&missionId);
-    byte_49FF76F = 1;
+    sub_1B686D4(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&missionId);
+    byte_4A098B6 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            missionId,
-           (const MethodInfo_2E3A00C *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_2E4807C *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -44,10 +44,10 @@ bool __fastcall UserEventMissionEntity__IsTodayMissionData(UserEventMissionEntit
   int64_t TodayStartTime; // x0
   int64_t updatedAt; // x19
 
-  if ( (byte_49FF770 & 1) == 0 )
+  if ( (byte_4A098B7 & 1) == 0 )
   {
-    sub_1B64A00(&NetworkManager_TypeInfo, method);
-    byte_49FF770 = 1;
+    sub_1B686D4(&NetworkManager_TypeInfo, method);
+    byte_4A098B7 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);

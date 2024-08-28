@@ -5,14 +5,14 @@ void __fastcall OpeningMovieData___cctor(const MethodInfo *method)
   int32_t v3; // w3
   __int64 v4; // x1
 
-  if ( (byte_49FE078 & 1) == 0 )
+  if ( (byte_4A081A7 & 1) == 0 )
   {
-    sub_1B64A00(&OpeningMovieData_TypeInfo, v1);
-    sub_1B64A00(&StringLiteral_3429/*"CHAPTER{0}_PROLOGUE_WAR_ID"*/, v4);
-    byte_49FE078 = 1;
+    sub_1B686D4(&OpeningMovieData_TypeInfo, v1);
+    sub_1B686D4(&StringLiteral_3427/*"CHAPTER{0}_PROLOGUE_WAR_ID"*/, v4);
+    byte_4A081A7 = 1;
   }
-  OpeningMovieData_TypeInfo->static_fields->ChapterPrologueWarKey = (struct System_String_o *)StringLiteral_3429/*"CHAPTER{0}_PROLOGUE_WAR_ID"*/;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)OpeningMovieData_TypeInfo->static_fields, StringLiteral_3429/*"CHAPTER{0}_PROLOGUE_WAR_ID"*/, v2, v3);
+  OpeningMovieData_TypeInfo->static_fields->ChapterPrologueWarKey = (struct System_String_o *)StringLiteral_3427/*"CHAPTER{0}_PROLOGUE_WAR_ID"*/;
+  sub_1B68678((ServantStatusBattleListViewItem_o *)OpeningMovieData_TypeInfo->static_fields, StringLiteral_3427/*"CHAPTER{0}_PROLOGUE_WAR_ID"*/, v2, v3);
   OpeningMovieData_TypeInfo->static_fields->FirstWarID = -1;
 }
 
@@ -32,7 +32,7 @@ void __fastcall OpeningMovieData___ctor(
 }
 
 
-void __fastcall OpeningMovieData___ctor_37892804(
+void __fastcall OpeningMovieData___ctor_37950060(
         OpeningMovieData_o *this,
         System_String_o *movieFileName,
         bool isCanSkip,
@@ -48,7 +48,7 @@ void __fastcall OpeningMovieData___ctor_37892804(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v5->fields.sortValue0B = (int64_t)movieFileName;
   v5 = (ServantStatusBattleListViewItem_o *)((char *)v5 + 40);
-  sub_1B649A4(v5, (int32_t)movieFileName, v7, v8);
+  sub_1B68678(v5, (int32_t)movieFileName, v7, v8);
   v5[-1].fields.isMine = v6;
 }
 
@@ -59,10 +59,10 @@ int32_t __fastcall OpeningMovieData__GetFirstWarId(const MethodInfo *method)
   OpeningMovieData_c *v2; // x8
   int32_t PrologueWarId; // w0
 
-  if ( (byte_49FE077 & 1) == 0 )
+  if ( (byte_4A081A6 & 1) == 0 )
   {
-    sub_1B64A00(&OpeningMovieData_TypeInfo, v1);
-    byte_49FE077 = 1;
+    sub_1B686D4(&OpeningMovieData_TypeInfo, v1);
+    byte_4A081A6 = 1;
   }
   v2 = OpeningMovieData_TypeInfo;
   if ( !OpeningMovieData_TypeInfo->_2.cctor_finished )
@@ -98,16 +98,16 @@ System_String_o *__fastcall OpeningMovieData__GetMaterialString(OpeningMovieData
   System_String_o *v9; // x19
   int32_t warId; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_49FE075 & 1) == 0 )
+  if ( (byte_4A081A4 & 1) == 0 )
   {
-    sub_1B64A00(&int_TypeInfo, method);
-    sub_1B64A00(&LocalizationManager_TypeInfo, v6);
-    sub_1B64A00(&StringLiteral_8535/*"MATERIAL_TOP_OPENING_{0:00000}"*/, v7);
-    byte_49FE075 = 1;
+    sub_1B686D4(&int_TypeInfo, method);
+    sub_1B686D4(&LocalizationManager_TypeInfo, v6);
+    sub_1B686D4(&StringLiteral_8537/*"MATERIAL_TOP_OPENING_{0:00000}"*/, v7);
+    byte_4A081A4 = 1;
   }
   warId = this->fields.warId;
   v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &warId, v2, v3, v4);
-  v9 = System_String__Format((System_String_o *)StringLiteral_8535/*"MATERIAL_TOP_OPENING_{0:00000}"*/, v8, 0LL);
+  v9 = System_String__Format((System_String_o *)StringLiteral_8537/*"MATERIAL_TOP_OPENING_{0:00000}"*/, v8, 0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   return LocalizationManager__Get(v9, 0LL);
@@ -126,11 +126,11 @@ int32_t __fastcall OpeningMovieData__GetPrologueWarId(int32_t idx, const MethodI
   System_String_o *v10; // x0
   int32_t v12; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_49FE076 & 1) == 0 )
+  if ( (byte_4A081A5 & 1) == 0 )
   {
-    sub_1B64A00(&int_TypeInfo, method);
-    sub_1B64A00(&OpeningMovieData_TypeInfo, v6);
-    byte_49FE076 = 1;
+    sub_1B686D4(&int_TypeInfo, method);
+    sub_1B686D4(&OpeningMovieData_TypeInfo, v6);
+    byte_4A081A5 = 1;
   }
   v7 = OpeningMovieData_TypeInfo;
   if ( !OpeningMovieData_TypeInfo->_2.cctor_finished )
@@ -157,12 +157,12 @@ void __fastcall OpeningMovieData__OnEndDownload(OpeningMovieData_o *this, AssetD
   struct System_String_o *name; // x21
   System_String_o *Path; // x0
 
-  if ( (byte_49FE074 & 1) == 0 )
+  if ( (byte_4A081A3 & 1) == 0 )
   {
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, data);
-    byte_49FE074 = 1;
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, data);
+    byte_4A081A3 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_8;
   CommonUI__SetLoadMode((CommonUI_o *)Instance, 0, 0LL);
@@ -171,7 +171,7 @@ void __fastcall OpeningMovieData__OnEndDownload(OpeningMovieData_o *this, AssetD
   if ( action )
   {
     p_action->klass = 0LL;
-    sub_1B649A4(p_action, 0, v7, v8);
+    sub_1B68678(p_action, 0, v7, v8);
     if ( data )
     {
       name = data->fields.name;
@@ -185,7 +185,7 @@ void __fastcall OpeningMovieData__OnEndDownload(OpeningMovieData_o *this, AssetD
       return;
     }
 LABEL_8:
-    sub_1B64C5C(Instance, v6);
+    sub_1B68930(Instance, v6);
   }
 }
 
@@ -211,26 +211,26 @@ void __fastcall OpeningMovieData__OnStart(
   AssetLoader_LoadEndDataHandler_o *v18; // x21
   int32_t warId; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_49FE072 & 1) == 0 )
+  if ( (byte_4A081A1 & 1) == 0 )
   {
-    sub_1B64A00(&AssetManager_TypeInfo, action);
-    sub_1B64A00(&int_TypeInfo, v6);
-    sub_1B64A00(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
-    sub_1B64A00(&Method_OpeningMovieData_OnEndDownload__, v8);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
-    sub_1B64A00(&StringLiteral_9110/*"Movie/ops{0:00000}.usm"*/, v10);
-    byte_49FE072 = 1;
+    sub_1B686D4(&AssetManager_TypeInfo, action);
+    sub_1B686D4(&int_TypeInfo, v6);
+    sub_1B686D4(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
+    sub_1B686D4(&Method_OpeningMovieData_OnEndDownload__, v8);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
+    sub_1B686D4(&StringLiteral_9112/*"Movie/ops{0:00000}.usm"*/, v10);
+    byte_4A081A1 = 1;
   }
   this->fields.action = action;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.action, (int32_t)action, (int32_t)method, v3);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.action, (int32_t)action, (int32_t)method, v3);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1B64C5C(0LL, v12);
+    sub_1B68930(0LL, v12);
   CommonUI__SetLoadMode((CommonUI_o *)Instance, 1, 0LL);
   warId = this->fields.warId;
   v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &warId, v13, v14, v15);
-  v17 = System_String__Format((System_String_o *)StringLiteral_9110/*"Movie/ops{0:00000}.usm"*/, v16, 0LL);
-  v18 = (AssetLoader_LoadEndDataHandler_o *)sub_1B64C4C(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v17 = System_String__Format((System_String_o *)StringLiteral_9112/*"Movie/ops{0:00000}.usm"*/, v16, 0LL);
+  v18 = (AssetLoader_LoadEndDataHandler_o *)sub_1B68920(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(v18, (Il2CppObject *)this, Method_OpeningMovieData_OnEndDownload__, 0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -253,23 +253,23 @@ void __fastcall OpeningMovieData__OnStartBootMovie(
   System_String_o *v12; // x20
   AssetLoader_LoadEndDataHandler_o *v13; // x21
 
-  if ( (byte_49FE073 & 1) == 0 )
+  if ( (byte_4A081A2 & 1) == 0 )
   {
-    sub_1B64A00(&AssetManager_TypeInfo, action);
-    sub_1B64A00(&AssetLoader_LoadEndDataHandler_TypeInfo, v6);
-    sub_1B64A00(&Method_OpeningMovieData_OnEndDownload__, v7);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
-    sub_1B64A00(&StringLiteral_9112/*"Movie/{0}.usm"*/, v9);
-    byte_49FE073 = 1;
+    sub_1B686D4(&AssetManager_TypeInfo, action);
+    sub_1B686D4(&AssetLoader_LoadEndDataHandler_TypeInfo, v6);
+    sub_1B686D4(&Method_OpeningMovieData_OnEndDownload__, v7);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
+    sub_1B686D4(&StringLiteral_9114/*"Movie/{0}.usm"*/, v9);
+    byte_4A081A2 = 1;
   }
   this->fields.action = action;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.action, (int32_t)action, (int32_t)method, v3);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.action, (int32_t)action, (int32_t)method, v3);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1B64C5C(0LL, v11);
+    sub_1B68930(0LL, v11);
   CommonUI__SetLoadMode((CommonUI_o *)Instance, 1, 0LL);
-  v12 = System_String__Format((System_String_o *)StringLiteral_9112/*"Movie/{0}.usm"*/, (Il2CppObject *)this->fields.movieFileName, 0LL);
-  v13 = (AssetLoader_LoadEndDataHandler_o *)sub_1B64C4C(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v12 = System_String__Format((System_String_o *)StringLiteral_9114/*"Movie/{0}.usm"*/, (Il2CppObject *)this->fields.movieFileName, 0LL);
+  v13 = (AssetLoader_LoadEndDataHandler_o *)sub_1B68920(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(v13, (Il2CppObject *)this, Method_OpeningMovieData_OnEndDownload__, 0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);

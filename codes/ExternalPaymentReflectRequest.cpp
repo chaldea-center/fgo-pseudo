@@ -5,16 +5,16 @@ System_String_o *__fastcall ExternalPaymentReflectRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A00397 & 1) == 0 )
+  if ( (byte_4A0A4E7 & 1) == 0 )
   {
-    sub_1B64A00(&NetworkManager_TypeInfo, method);
-    sub_1B64A00(&StringLiteral_19246/*"externalPayment/reflect"*/, v2);
-    byte_4A00397 = 1;
+    sub_1B686D4(&NetworkManager_TypeInfo, method);
+    sub_1B686D4(&StringLiteral_19252/*"externalPayment/reflect"*/, v2);
+    byte_4A0A4E7 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61385136(BaseUrl, (System_String_o *)StringLiteral_19246/*"externalPayment/reflect"*/, 0LL);
+  return System_String__Concat_61419468(BaseUrl, (System_String_o *)StringLiteral_19252/*"externalPayment/reflect"*/, 0LL);
 }
 
 
@@ -34,20 +34,20 @@ void __fastcall ExternalPaymentReflectRequest__requestCompleted(
   struct System_Reflection_MethodInfo_o *original_method_info; // x0
 
   v4 = this;
-  if ( (byte_4A00398 & 1) == 0 )
+  if ( (byte_4A0A4E8 & 1) == 0 )
   {
-    sub_1B64A00(&JsonManager_TypeInfo, responseList);
-    this = (ExternalPaymentReflectRequest_o *)sub_1B64A00(&StringLiteral_21971/*"ng"*/, v5);
-    byte_4A00398 = 1;
+    sub_1B686D4(&JsonManager_TypeInfo, responseList);
+    this = (ExternalPaymentReflectRequest_o *)sub_1B686D4(&StringLiteral_21981/*"ng"*/, v5);
+    byte_4A0A4E8 = 1;
   }
   if ( !responseList )
     goto LABEL_15;
   if ( !responseList->max_length )
-    sub_1B64C64(this, responseList);
+    sub_1B68938(this, responseList);
   v6 = responseList->m_Items[0];
   if ( !v6 )
 LABEL_15:
-    sub_1B64C5C(this, responseList);
+    sub_1B68930(this, responseList);
   if ( ResponseData__checkError((ResponseData_o *)this, v6->fields.resCode, method) )
   {
     success = (Il2CppObject *)v6->fields.success;
@@ -74,7 +74,7 @@ LABEL_13:
     {
       m_target = CallBack->fields.m_target;
       original_method_info = CallBack->fields.original_method_info;
-      v10 = StringLiteral_21971/*"ng"*/;
+      v10 = StringLiteral_21981/*"ng"*/;
       goto LABEL_13;
     }
   }

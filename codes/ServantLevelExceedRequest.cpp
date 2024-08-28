@@ -6,12 +6,12 @@ void __fastcall ServantLevelExceedRequest__beginRequest(
   const MethodInfo *v3; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4A0044F & 1) == 0 )
+  if ( (byte_4A0A59F & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_17019/*"baseUserSvtId"*/, baseUsrSvtId);
-    byte_4A0044F = 1;
+    sub_1B686D4(&StringLiteral_17019/*"baseUserSvtId"*/, baseUsrSvtId);
+    byte_4A0A59F = 1;
   }
-  RequestBase__addField_40855016((RequestBase_o *)this, (System_String_o *)StringLiteral_17019/*"baseUserSvtId"*/, baseUsrSvtId, v3);
+  RequestBase__addField_40919284((RequestBase_o *)this, (System_String_o *)StringLiteral_17019/*"baseUserSvtId"*/, baseUsrSvtId, v3);
   RequestBase__beginRequest((RequestBase_o *)this, v6);
 }
 
@@ -23,16 +23,16 @@ System_String_o *__fastcall ServantLevelExceedRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A0044E & 1) == 0 )
+  if ( (byte_4A0A59E & 1) == 0 )
   {
-    sub_1B64A00(&NetworkManager_TypeInfo, method);
-    sub_1B64A00(&StringLiteral_17680/*"card/combineExceed"*/, v2);
-    byte_4A0044E = 1;
+    sub_1B686D4(&NetworkManager_TypeInfo, method);
+    sub_1B686D4(&StringLiteral_17682/*"card/combineExceed"*/, v2);
+    byte_4A0A59E = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61385136(BaseUrl, (System_String_o *)StringLiteral_17680/*"card/combineExceed"*/, 0LL);
+  return System_String__Concat_61419468(BaseUrl, (System_String_o *)StringLiteral_17682/*"card/combineExceed"*/, 0LL);
 }
 
 
@@ -51,12 +51,12 @@ void __fastcall ServantLevelExceedRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v13; // x8
 
-  if ( (byte_4A00450 & 1) == 0 )
+  if ( (byte_4A0A5A0 & 1) == 0 )
   {
-    sub_1B64A00(&JsonManager_TypeInfo, responseList);
-    sub_1B64A00(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B64A00(&StringLiteral_21971/*"ng"*/, v6);
-    byte_4A00450 = 1;
+    sub_1B686D4(&JsonManager_TypeInfo, responseList);
+    sub_1B686D4(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B686D4(&StringLiteral_21981/*"ng"*/, v6);
+    byte_4A0A5A0 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -80,7 +80,7 @@ void __fastcall ServantLevelExceedRequest__requestCompleted(
     if ( v13 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v13->fields.m_target)(
         v13->fields.original_method_info,
-        StringLiteral_21971/*"ng"*/,
+        StringLiteral_21981/*"ng"*/,
         *(_QWORD *)&v13->fields.extra_arg);
   }
 }

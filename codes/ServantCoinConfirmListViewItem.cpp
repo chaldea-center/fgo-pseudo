@@ -5,7 +5,7 @@ void __fastcall ServantCoinConfirmListViewItem___ctor(
         int32_t num,
         const MethodInfo *method)
 {
-  ListViewItem___ctor_40376104((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_40440732((ListViewItem_o *)this, index, 0LL);
   this->fields._ItemId_k__BackingField = itemId;
   this->fields._Num_k__BackingField = num;
 }

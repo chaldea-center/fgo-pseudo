@@ -1,28 +1,28 @@
 void __fastcall RoadmapEntity___ctor(RoadmapEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FF12C & 1) == 0 )
+  if ( (byte_4A09271 & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataEntityBase_string___ctor__, method);
-    byte_49FF12C = 1;
+    sub_1B686D4(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A09271 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30D6610 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30E4338 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall RoadmapEntity__CreatePK(int32_t tabGroup, int32_t groupIndex, const MethodInfo *method)
 {
-  if ( (byte_49FF12B & 1) == 0 )
+  if ( (byte_4A09270 & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&groupIndex);
-    byte_49FF12B = 1;
+    sub_1B686D4(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&groupIndex);
+    byte_4A09270 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            tabGroup,
            groupIndex,
-           (const MethodInfo_2E39F04 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2E47F74 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

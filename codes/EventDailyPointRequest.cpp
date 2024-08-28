@@ -10,12 +10,12 @@ void __fastcall EventDailyPointRequest__beginRequest(
         int32_t eventId,
         const MethodInfo *method)
 {
-  if ( (byte_4A002A3 & 1) == 0 )
+  if ( (byte_4A0A3F2 & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_19062/*"eventId"*/, *(_QWORD *)&eventId);
-    byte_4A002A3 = 1;
+    sub_1B686D4(&StringLiteral_19064/*"eventId"*/, *(_QWORD *)&eventId);
+    byte_4A0A3F2 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19062/*"eventId"*/, eventId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19064/*"eventId"*/, eventId, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -25,16 +25,16 @@ System_String_o *__fastcall EventDailyPointRequest__getURL(EventDailyPointReques
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A002A2 & 1) == 0 )
+  if ( (byte_4A0A3F1 & 1) == 0 )
   {
-    sub_1B64A00(&NetworkManager_TypeInfo, method);
-    sub_1B64A00(&StringLiteral_19043/*"event/dailyPoint"*/, v2);
-    byte_4A002A2 = 1;
+    sub_1B686D4(&NetworkManager_TypeInfo, method);
+    sub_1B686D4(&StringLiteral_19045/*"event/dailyPoint"*/, v2);
+    byte_4A0A3F1 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61385136(BaseUrl, (System_String_o *)StringLiteral_19043/*"event/dailyPoint"*/, 0LL);
+  return System_String__Concat_61419468(BaseUrl, (System_String_o *)StringLiteral_19045/*"event/dailyPoint"*/, 0LL);
 }
 
 
@@ -50,18 +50,18 @@ void __fastcall EventDailyPointRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v10; // x1
 
-  if ( (byte_4A002A4 & 1) == 0 )
+  if ( (byte_4A0A3F3 & 1) == 0 )
   {
-    sub_1B64A00(&JsonManager_TypeInfo, responseList);
-    sub_1B64A00(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B64A00(&StringLiteral_21971/*"ng"*/, v6);
-    byte_4A002A4 = 1;
+    sub_1B686D4(&JsonManager_TypeInfo, responseList);
+    sub_1B686D4(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B686D4(&StringLiteral_21981/*"ng"*/, v6);
+    byte_4A0A3F3 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(83, responseList, 0LL);
   if ( v7
-    && (v8 = v7, ResponseData__checkError_40851660(v7, 0LL))
+    && (v8 = v7, ResponseData__checkError_40916448(v7, 0LL))
     && (success = (Il2CppObject *)v8->fields.success) != 0LL )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -70,7 +70,7 @@ void __fastcall EventDailyPointRequest__requestCompleted(
   }
   else
   {
-    v10 = (System_String_o *)StringLiteral_21971/*"ng"*/;
+    v10 = (System_String_o *)StringLiteral_21981/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v10, 0LL);
 }

@@ -10,7 +10,7 @@ void __fastcall ShiningIconComponent__Awake(ShiningIconComponent_o *this, const 
 
   widget = (UnityEngine_Behaviour_o *)this->fields.widget;
   if ( !widget )
-    sub_1B64C5C(0LL, method);
+    sub_1B68930(0LL, method);
   UnityEngine_Behaviour__set_enabled(widget, 0, 0LL);
 }
 
@@ -31,7 +31,7 @@ void __fastcall ShiningIconComponent__Clear(ShiningIconComponent_o *this, const 
       return;
     }
 LABEL_6:
-    sub_1B64C5C(widget, method);
+    sub_1B68930(widget, method);
   }
 }
 
@@ -48,12 +48,12 @@ void __fastcall ShiningIconComponent__Set(ShiningIconComponent_o *this, const Me
   widget = (UnityEngine_Behaviour_o *)this->fields.widget;
   if ( !widget )
 LABEL_5:
-    sub_1B64C5C(widget, method);
+    sub_1B68930(widget, method);
   UnityEngine_Behaviour__set_enabled(widget, 1, 0LL);
 }
 
 
-void __fastcall ShiningIconComponent__Set_37920448(
+void __fastcall ShiningIconComponent__Set_37977704(
         ShiningIconComponent_o *this,
         System_String_o *spriteName,
         const MethodInfo *method)
@@ -62,10 +62,10 @@ void __fastcall ShiningIconComponent__Set_37920448(
   struct UIWidget_o *v6; // x20
   __int64 methodPtr_low; // x10
 
-  if ( (byte_49FE0C6 & 1) == 0 )
+  if ( (byte_4A081F5 & 1) == 0 )
   {
-    sub_1B64A00(&UISprite_TypeInfo, spriteName);
-    byte_49FE0C6 = 1;
+    sub_1B686D4(&UISprite_TypeInfo, spriteName);
+    byte_4A081F5 = 1;
   }
   widget = (UnityEngine_Behaviour_o *)this->fields.widget;
   if ( !widget )
@@ -79,7 +79,7 @@ void __fastcall ShiningIconComponent__Set_37920448(
       goto LABEL_7;
     }
 LABEL_13:
-    sub_1B64C5C(widget, spriteName);
+    sub_1B68930(widget, spriteName);
   }
 LABEL_7:
   v6 = this->fields.widget;
@@ -100,7 +100,7 @@ LABEL_7:
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ShiningIconComponent__Set_37924600(ShiningIconComponent_o *this, bool isDisp, const MethodInfo *method)
+void __fastcall ShiningIconComponent__Set_37981856(ShiningIconComponent_o *this, bool isDisp, const MethodInfo *method)
 {
   if ( isDisp )
     ShiningIconComponent__Set(this, (const MethodInfo *)isDisp);

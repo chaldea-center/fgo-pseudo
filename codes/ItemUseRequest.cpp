@@ -12,20 +12,20 @@ void __fastcall ItemUseRequest__beginRequest(
   const MethodInfo *v12; // x3
   const MethodInfo *v13; // x1
 
-  if ( (byte_4A003E3 & 1) == 0 )
+  if ( (byte_4A0A533 & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_22093/*"num"*/, *(_QWORD *)&itemId);
-    sub_1B64A00(&StringLiteral_19062/*"eventId"*/, v9);
-    sub_1B64A00(&StringLiteral_24263/*"useItemId"*/, v10);
-    byte_4A003E3 = 1;
+    sub_1B686D4(&StringLiteral_22103/*"num"*/, *(_QWORD *)&itemId);
+    sub_1B686D4(&StringLiteral_19064/*"eventId"*/, v9);
+    sub_1B686D4(&StringLiteral_24275/*"useItemId"*/, v10);
+    byte_4A0A533 = 1;
   }
   RequestBase__addField(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_19062/*"eventId"*/,
+    (System_String_o *)StringLiteral_19064/*"eventId"*/,
     eventId,
     *(const MethodInfo **)&eventId);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24263/*"useItemId"*/, itemId, v11);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22093/*"num"*/, num, v12);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24275/*"useItemId"*/, itemId, v11);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22103/*"num"*/, num, v12);
   RequestBase__beginRequest((RequestBase_o *)this, v13);
 }
 
@@ -35,16 +35,16 @@ System_String_o *__fastcall ItemUseRequest__getURL(ItemUseRequest_o *this, const
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A003E2 & 1) == 0 )
+  if ( (byte_4A0A532 & 1) == 0 )
   {
-    sub_1B64A00(&NetworkManager_TypeInfo, method);
-    sub_1B64A00(&StringLiteral_20800/*"item/use"*/, v2);
-    byte_4A003E2 = 1;
+    sub_1B686D4(&NetworkManager_TypeInfo, method);
+    sub_1B686D4(&StringLiteral_20808/*"item/use"*/, v2);
+    byte_4A0A532 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61385136(BaseUrl, (System_String_o *)StringLiteral_20800/*"item/use"*/, 0LL);
+  return System_String__Concat_61419468(BaseUrl, (System_String_o *)StringLiteral_20808/*"item/use"*/, 0LL);
 }
 
 
@@ -63,12 +63,12 @@ void __fastcall ItemUseRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v13; // x8
 
-  if ( (byte_4A003E4 & 1) == 0 )
+  if ( (byte_4A0A534 & 1) == 0 )
   {
-    sub_1B64A00(&JsonManager_TypeInfo, responseList);
-    sub_1B64A00(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B64A00(&StringLiteral_21971/*"ng"*/, v6);
-    byte_4A003E4 = 1;
+    sub_1B686D4(&JsonManager_TypeInfo, responseList);
+    sub_1B686D4(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B686D4(&StringLiteral_21981/*"ng"*/, v6);
+    byte_4A0A534 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -95,7 +95,7 @@ void __fastcall ItemUseRequest__requestCompleted(
     if ( v13 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v13->fields.m_target)(
         v13->fields.original_method_info,
-        StringLiteral_21971/*"ng"*/,
+        StringLiteral_21981/*"ng"*/,
         *(_QWORD *)&v13->fields.extra_arg);
   }
 }

@@ -34,29 +34,29 @@ System_String_o *__fastcall BonusSelectSummonPartyServantListViewItemDraw__GetSu
   int32_t SummonCategoryId; // w0
   __int64 *v9; // x8
 
-  if ( (byte_49FB322 & 1) == 0 )
+  if ( (byte_4A05411 & 1) == 0 )
   {
-    sub_1B64A00(&string_TypeInfo, lineupEntity);
-    sub_1B64A00(&StringLiteral_23472/*"story"*/, v4);
-    sub_1B64A00(&StringLiteral_20360/*"img_ribbon_{0}"*/, v5);
-    sub_1B64A00(&StringLiteral_18146/*"constant"*/, v6);
-    this = (BonusSelectSummonPartyServantListViewItemDraw_o *)sub_1B64A00(&StringLiteral_21028/*"limited"*/, v7);
-    byte_49FB322 = 1;
+    sub_1B686D4(&string_TypeInfo, lineupEntity);
+    sub_1B686D4(&StringLiteral_23484/*"story"*/, v4);
+    sub_1B686D4(&StringLiteral_20367/*"img_ribbon_{0}"*/, v5);
+    sub_1B686D4(&StringLiteral_18148/*"constant"*/, v6);
+    this = (BonusSelectSummonPartyServantListViewItemDraw_o *)sub_1B686D4(&StringLiteral_21036/*"limited"*/, v7);
+    byte_4A05411 = 1;
   }
   if ( !lineupEntity )
-    sub_1B64C5C(this, lineupEntity);
+    sub_1B68930(this, lineupEntity);
   SummonCategoryId = GachaBonusSelectLineupEntity__GetSummonCategoryId(lineupEntity, -1, 0LL);
   switch ( SummonCategoryId )
   {
     case 2:
-      v9 = &StringLiteral_23472/*"story"*/;
-      return System_String__Format((System_String_o *)StringLiteral_20360/*"img_ribbon_{0}"*/, (Il2CppObject *)*v9, 0LL);
+      v9 = &StringLiteral_23484/*"story"*/;
+      return System_String__Format((System_String_o *)StringLiteral_20367/*"img_ribbon_{0}"*/, (Il2CppObject *)*v9, 0LL);
     case 1:
-      v9 = &StringLiteral_21028/*"limited"*/;
-      return System_String__Format((System_String_o *)StringLiteral_20360/*"img_ribbon_{0}"*/, (Il2CppObject *)*v9, 0LL);
+      v9 = &StringLiteral_21036/*"limited"*/;
+      return System_String__Format((System_String_o *)StringLiteral_20367/*"img_ribbon_{0}"*/, (Il2CppObject *)*v9, 0LL);
     case 0:
-      v9 = &StringLiteral_18146/*"constant"*/;
-      return System_String__Format((System_String_o *)StringLiteral_20360/*"img_ribbon_{0}"*/, (Il2CppObject *)*v9, 0LL);
+      v9 = &StringLiteral_18148/*"constant"*/;
+      return System_String__Format((System_String_o *)StringLiteral_20367/*"img_ribbon_{0}"*/, (Il2CppObject *)*v9, 0LL);
   }
   return string_TypeInfo->static_fields->Empty;
 }
@@ -75,10 +75,10 @@ void __fastcall BonusSelectSummonPartyServantListViewItemDraw__SetInput(
   struct BonusSelectSummonPartyOrganizationListViewItem_o *baseItem; // x9
 
   v5 = item;
-  if ( (byte_49FB31F & 1) == 0 )
+  if ( (byte_4A0540E & 1) == 0 )
   {
-    sub_1B64A00(&Method_UnityEngine_Component_GetComponent_Collider___, item);
-    byte_49FB31F = 1;
+    sub_1B686D4(&Method_UnityEngine_Component_GetComponent_Collider___, item);
+    byte_4A0540E = 1;
   }
   if ( v5 )
   {
@@ -87,7 +87,7 @@ void __fastcall BonusSelectSummonPartyServantListViewItemDraw__SetInput(
       goto LABEL_14;
     baseButton = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                               baseButton,
-                                              (const MethodInfo_2E32784 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                              (const MethodInfo_2E407F4 *)Method_UnityEngine_Component_GetComponent_Collider___);
     if ( !baseButton )
       goto LABEL_14;
     UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)baseButton, isInput, 0LL);
@@ -108,7 +108,7 @@ void __fastcall BonusSelectSummonPartyServantListViewItemDraw__SetInput(
       item = 0LL;
     if ( !baseButton )
 LABEL_14:
-      sub_1B64C5C(baseButton, item);
+      sub_1B68930(baseButton, item);
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)baseButton, (bool)item, 0LL);
   }
 }
@@ -152,17 +152,17 @@ void __fastcall BonusSelectSummonPartyServantListViewItemDraw__SetItem(
 
   v5 = item;
   v6 = this;
-  if ( (byte_49FB320 & 1) == 0 )
+  if ( (byte_4A0540F & 1) == 0 )
   {
-    sub_1B64A00(&AtlasManager_TypeInfo, item);
-    sub_1B64A00(&Method_DataManager_GetMaster_UserServantCollectionMaster___, v7);
-    sub_1B64A00(&DataManager_TypeInfo, v8);
-    sub_1B64A00(&NetworkManager_TypeInfo, v9);
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, v10);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v11);
-    sub_1B64A00(&StringLiteral_20248/*"img_icon_summoned"*/, v12);
-    this = (BonusSelectSummonPartyServantListViewItemDraw_o *)sub_1B64A00(&StringLiteral_20247/*"img_icon_not_summoned"*/, v13);
-    byte_49FB320 = 1;
+    sub_1B686D4(&AtlasManager_TypeInfo, item);
+    sub_1B686D4(&Method_DataManager_GetMaster_UserServantCollectionMaster___, v7);
+    sub_1B686D4(&DataManager_TypeInfo, v8);
+    sub_1B686D4(&NetworkManager_TypeInfo, v9);
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, v10);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v11);
+    sub_1B686D4(&StringLiteral_20255/*"img_icon_summoned"*/, v12);
+    this = (BonusSelectSummonPartyServantListViewItemDraw_o *)sub_1B686D4(&StringLiteral_20254/*"img_icon_not_summoned"*/, v13);
+    byte_4A0540F = 1;
   }
   entity = 0LL;
   if ( !v5 || !mode )
@@ -177,12 +177,12 @@ void __fastcall BonusSelectSummonPartyServantListViewItemDraw__SetItem(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v33.fields.currentCryptoKey = v17;
   *(_QWORD *)&v33.fields.fakeValue = v16;
-  this = (BonusSelectSummonPartyServantListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(
+  this = (BonusSelectSummonPartyServantListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(
                                                               v33,
                                                               0LL);
   if ( !servantFaceIcon )
     goto LABEL_37;
-  ServantFaceIconComponent__Set_37906796(
+  ServantFaceIconComponent__Set_37964052(
     servantFaceIcon,
     (int32_t)this,
     0,
@@ -217,7 +217,7 @@ void __fastcall BonusSelectSummonPartyServantListViewItemDraw__SetItem(
   AtlasManager__SetEventSprite(summonCategorySprite, SummonCategorySpriteName, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E3BC8C *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E49CFC *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   this = (BonusSelectSummonPartyServantListViewItemDraw_o *)NetworkManager__get_UserId(0LL);
@@ -225,7 +225,7 @@ void __fastcall BonusSelectSummonPartyServantListViewItemDraw__SetItem(
   if ( !v23 )
     goto LABEL_37;
   v24 = this;
-  this = (BonusSelectSummonPartyServantListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(
+  this = (BonusSelectSummonPartyServantListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(
                                                               v23[1],
                                                               0LL);
   if ( !Master_object )
@@ -243,7 +243,7 @@ void __fastcall BonusSelectSummonPartyServantListViewItemDraw__SetItem(
     summonInfoSprite = v6->fields.summonInfoSprite;
     if ( entity->fields.status == 2 )
     {
-      v26 = &StringLiteral_20248/*"img_icon_summoned"*/;
+      v26 = &StringLiteral_20255/*"img_icon_summoned"*/;
       goto LABEL_25;
     }
   }
@@ -251,7 +251,7 @@ void __fastcall BonusSelectSummonPartyServantListViewItemDraw__SetItem(
   {
     summonInfoSprite = v6->fields.summonInfoSprite;
   }
-  v26 = &StringLiteral_20247/*"img_icon_not_summoned"*/;
+  v26 = &StringLiteral_20254/*"img_icon_not_summoned"*/;
 LABEL_25:
   v27 = (System_String_o *)*v26;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -275,7 +275,7 @@ LABEL_25:
       return;
     }
 LABEL_37:
-    sub_1B64C5C(this, item);
+    sub_1B68930(this, item);
   }
 }
 
@@ -296,12 +296,12 @@ void __fastcall BonusSelectSummonPartyServantListViewItemDraw__SetMessageLabel(
 
   v3 = item;
   v4 = this;
-  if ( (byte_49FB321 & 1) == 0 )
+  if ( (byte_4A05410 & 1) == 0 )
   {
-    sub_1B64A00(&LocalizationManager_TypeInfo, item);
-    sub_1B64A00(&string_TypeInfo, v5);
-    this = (BonusSelectSummonPartyServantListViewItemDraw_o *)sub_1B64A00(&StringLiteral_12278/*"SUMMON_BONUS_SELECT_MENU_MASK_MESSAGE"*/, v6);
-    byte_49FB321 = 1;
+    sub_1B686D4(&LocalizationManager_TypeInfo, item);
+    sub_1B686D4(&string_TypeInfo, v5);
+    this = (BonusSelectSummonPartyServantListViewItemDraw_o *)sub_1B686D4(&StringLiteral_12279/*"SUMMON_BONUS_SELECT_MENU_MASK_MESSAGE"*/, v6);
+    byte_4A05410 = 1;
   }
   if ( !v3 )
     goto LABEL_19;
@@ -318,14 +318,14 @@ LABEL_13:
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     this = (BonusSelectSummonPartyServantListViewItemDraw_o *)LocalizationManager__Get(
-                                                                (System_String_o *)StringLiteral_12278/*"SUMMON_BONUS_SELECT_MENU_MASK_MESSAGE"*/,
+                                                                (System_String_o *)StringLiteral_12279/*"SUMMON_BONUS_SELECT_MENU_MASK_MESSAGE"*/,
                                                                 0LL);
     item = (BonusSelectSummonPartyServantListViewItem_o *)this;
     v8 = 1;
     if ( maskMessageLabel )
       goto LABEL_16;
 LABEL_19:
-    sub_1B64C5C(this, item);
+    sub_1B68930(this, item);
   }
   maskMessageLabel = v4->fields.maskMessageLabel;
   if ( servantEntity != baseItem->fields.servantEntity )

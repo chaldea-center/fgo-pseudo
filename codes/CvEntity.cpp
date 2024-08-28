@@ -1,13 +1,13 @@
 void __fastcall CvEntity___ctor(CvEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FE98F & 1) == 0 )
+  if ( (byte_4A08ACE & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataEntityBase_int___ctor__, method);
-    byte_49FE98F = 1;
+    sub_1B686D4(&Method_DataEntityBase_int___ctor__, method);
+    byte_4A08ACE = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_30D6598 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_30E42C0 *)Method_DataEntityBase_int___ctor__);
 }
 
 

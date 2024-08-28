@@ -1,16 +1,16 @@
 void __fastcall AuraEffectPosOverwriteMaster___ctor(AuraEffectPosOverwriteMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FE78D & 1) == 0 )
+  if ( (byte_4A088C1 & 1) == 0 )
   {
-    sub_1B64A00(
+    sub_1B686D4(
       &Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string___ctor__,
       method);
-    byte_49FE78D = 1;
+    byte_4A088C1 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     241,
-    (const MethodInfo_30D6AB0 *)Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string___ctor__);
+    (const MethodInfo_30E47D8 *)Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string___ctor__);
 }
 
 
@@ -24,12 +24,12 @@ AuraEffectPosOverwriteEntity_o *__fastcall AuraEffectPosOverwriteMaster__GetEnti
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_49FE78B & 1) == 0 )
+  if ( (byte_4A088BF & 1) == 0 )
   {
-    sub_1B64A00(
+    sub_1B686D4(
       &Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__GetEntity__,
       *(_QWORD *)&auraEffectId);
-    byte_49FE78B = 1;
+    byte_4A088BF = 1;
   }
   PK = (Il2CppObject *)AuraEffectPosOverwriteEntity__CreatePK(
                          auraEffectId,
@@ -39,7 +39,7 @@ AuraEffectPosOverwriteEntity_o *__fastcall AuraEffectPosOverwriteMaster__GetEnti
   return (AuraEffectPosOverwriteEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                              (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                              PK,
-                                             (const MethodInfo_30D6AF0 *)Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__GetEntity__);
+                                             (const MethodInfo_30E4818 *)Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__GetEntity__);
 }
 
 
@@ -51,7 +51,7 @@ bool __fastcall AuraEffectPosOverwriteMaster__IsExistAuraPosOverwriteSettings(
         const MethodInfo *method)
 {
   if ( !ent )
-    sub_1B64C5C(svtId, limitCount);
+    sub_1B68930(svtId, limitCount);
   return ent->fields.auraEffectId == effectId && ent->fields.svtId == svtId && ent->fields.svtLimitCount == limitCount;
 }
 
@@ -67,12 +67,12 @@ bool __fastcall AuraEffectPosOverwriteMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_49FE78C & 1) == 0 )
+  if ( (byte_4A088C0 & 1) == 0 )
   {
-    sub_1B64A00(
+    sub_1B686D4(
       &Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__TryGetEntity__,
       entity);
-    byte_49FE78C = 1;
+    byte_4A088C0 = 1;
   }
   PK = (Il2CppObject *)AuraEffectPosOverwriteEntity__CreatePK(
                          auraEffectId,
@@ -83,5 +83,5 @@ bool __fastcall AuraEffectPosOverwriteMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_30D6B40 *)Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__TryGetEntity__);
+           (const MethodInfo_30E4868 *)Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__TryGetEntity__);
 }

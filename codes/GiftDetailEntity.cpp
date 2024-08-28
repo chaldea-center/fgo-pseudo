@@ -1,13 +1,13 @@
 void __fastcall GiftDetailEntity___ctor(GiftDetailEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FEDF1 & 1) == 0 )
+  if ( (byte_4A08F34 & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataEntityBase_int___ctor__, method);
-    byte_49FEDF1 = 1;
+    sub_1B686D4(&Method_DataEntityBase_int___ctor__, method);
+    byte_4A08F34 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_30D6598 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_30E42C0 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -17,25 +17,62 @@ int32_t __fastcall GiftDetailEntity__CreatePrimaryKey(GiftDetailEntity_o *this, 
 }
 
 
+System_Int32_array *__fastcall GiftDetailEntity__GetIgnoreQuestBoardRewardIconItemIds(
+        GiftDetailEntity_o *this,
+        const MethodInfo *method)
+{
+  if ( (byte_4A08F31 & 1) == 0 )
+  {
+    sub_1B686D4(&StringLiteral_7432/*"IgnoreQuestBoardRewardIconItemIds"*/, method);
+    byte_4A08F31 = 1;
+  }
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_7432/*"IgnoreQuestBoardRewardIconItemIds"*/, 0LL, 0LL);
+}
+
+
+System_Int32_array *__fastcall GiftDetailEntity__GetIgnoreQuestClearRewardItemIds(
+        GiftDetailEntity_o *this,
+        const MethodInfo *method)
+{
+  if ( (byte_4A08F32 & 1) == 0 )
+  {
+    sub_1B686D4(&StringLiteral_7433/*"IgnoreQuestClearRewardItemIds"*/, method);
+    byte_4A08F32 = 1;
+  }
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_7433/*"IgnoreQuestClearRewardItemIds"*/, 0LL, 0LL);
+}
+
+
+System_Int32_array *__fastcall GiftDetailEntity__GetIgnoreQuestPhaseClearRewardItemIds(
+        GiftDetailEntity_o *this,
+        const MethodInfo *method)
+{
+  if ( (byte_4A08F33 & 1) == 0 )
+  {
+    sub_1B686D4(&StringLiteral_7434/*"IgnoreQuestPhaseClearRewardItemIds"*/, method);
+    byte_4A08F33 = 1;
+  }
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_7434/*"IgnoreQuestPhaseClearRewardItemIds"*/, 0LL, 0LL);
+}
+
+
 System_String_o *__fastcall GiftDetailEntity__GetOverwritePhaseRewardImageId(
         GiftDetailEntity_o *this,
         const MethodInfo *method)
 {
-  const MethodInfo *v2; // x2
-  Il2CppObject *ScriptValue; // x0
-  __int64 v5; // x1
+  __int64 v3; // x1
 
-  if ( (byte_49FEDF0 & 1) == 0 )
+  if ( (byte_4A08F30 & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_22427/*"phaseRewardImageId"*/, method);
-    byte_49FEDF0 = 1;
+    sub_1B686D4(&string_TypeInfo, method);
+    sub_1B686D4(&StringLiteral_22438/*"phaseRewardImageId"*/, v3);
+    byte_4A08F30 = 1;
   }
-  ScriptValue = GiftDetailEntity__GetScriptValue(this, (System_String_o *)StringLiteral_22427/*"phaseRewardImageId"*/, v2);
-  if ( !ScriptValue )
-    sub_1B64C5C(0LL, v5);
-  return (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))ScriptValue->klass->vtable[3].method)(
-                              ScriptValue,
-                              ScriptValue->klass->vtable[4].methodPtr);
+  return EntityScriptUtil__GetStringValue(
+           this->fields.script,
+           (System_String_o *)StringLiteral_22438/*"phaseRewardImageId"*/,
+           string_TypeInfo->static_fields->Empty,
+           0LL);
 }
 
 
@@ -47,10 +84,10 @@ Il2CppObject *__fastcall GiftDetailEntity__GetScriptValue(
   Il2CppObject *result; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_49FEDEF & 1) == 0 )
+  if ( (byte_4A08F2F & 1) == 0 )
   {
-    sub_1B64A00(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
-    byte_49FEDEF = 1;
+    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
+    byte_4A08F2F = 1;
   }
   value = 0LL;
   result = (Il2CppObject *)this->fields.script;
@@ -60,7 +97,7 @@ Il2CppObject *__fastcall GiftDetailEntity__GetScriptValue(
            (System_Collections_Generic_Dictionary_object__object__o *)result,
            (Il2CppObject *)key,
            &value,
-           (const MethodInfo_317D4F8 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_318B374 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
       return value;
     }

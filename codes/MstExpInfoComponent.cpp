@@ -1,9 +1,9 @@
 void __fastcall MstExpInfoComponent___ctor(MstExpInfoComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FA1FF & 1) == 0 )
+  if ( (byte_4A042EE & 1) == 0 )
   {
-    sub_1B64A00(&BaseDialog_TypeInfo, method);
-    byte_49FA1FF = 1;
+    sub_1B686D4(&BaseDialog_TypeInfo, method);
+    byte_4A042EE = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -19,22 +19,22 @@ void __fastcall MstExpInfoComponent__Close(MstExpInfoComponent_o *this, const Me
   System_Reflection_MethodBase_o *v6; // x0
   System_Action_o *v7; // x20
 
-  if ( (byte_49FA1FE & 1) == 0 )
+  if ( (byte_4A042ED & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, method);
-    sub_1B64A00(&Method_MstExpInfoComponent_Close__, v3);
-    sub_1B64A00(&Method_MstExpInfoComponent_EndClose__, v4);
-    byte_49FA1FE = 1;
+    sub_1B686D4(&System_Action_TypeInfo, method);
+    sub_1B686D4(&Method_MstExpInfoComponent_Close__, v3);
+    sub_1B686D4(&Method_MstExpInfoComponent_EndClose__, v4);
+    byte_4A042ED = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v5 = Method_MstExpInfoComponent_Close__;
     if ( (*((_BYTE *)Method_MstExpInfoComponent_Close__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B64A18(Method_MstExpInfoComponent_Close__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B649E4(v5, v5[4]);
+      v5 = (_QWORD *)sub_1B686EC(Method_MstExpInfoComponent_Close__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1B686B8(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 1, 0LL);
     this->fields.isButtonEnable = 0;
-    v7 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
     System_Action___ctor(v7, (Il2CppObject *)this, Method_MstExpInfoComponent_EndClose__, 0LL);
     BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
   }
@@ -61,22 +61,22 @@ void __fastcall MstExpInfoComponent__OnClickClose(MstExpInfoComponent_o *this, c
   System_Reflection_MethodBase_o *v6; // x0
   System_Action_o *v7; // x20
 
-  if ( (byte_49FA1FD & 1) == 0 )
+  if ( (byte_4A042EC & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, method);
-    sub_1B64A00(&Method_MstExpInfoComponent_EndClose__, v3);
-    sub_1B64A00(&Method_MstExpInfoComponent_OnClickClose__, v4);
-    byte_49FA1FD = 1;
+    sub_1B686D4(&System_Action_TypeInfo, method);
+    sub_1B686D4(&Method_MstExpInfoComponent_EndClose__, v3);
+    sub_1B686D4(&Method_MstExpInfoComponent_OnClickClose__, v4);
+    byte_4A042EC = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v5 = Method_MstExpInfoComponent_OnClickClose__;
     if ( (*((_BYTE *)Method_MstExpInfoComponent_OnClickClose__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B64A18(Method_MstExpInfoComponent_OnClickClose__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B649E4(v5, v5[4]);
+      v5 = (_QWORD *)sub_1B686EC(Method_MstExpInfoComponent_OnClickClose__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1B686B8(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 1, 0LL);
     this->fields.isButtonEnable = 0;
-    v7 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
     System_Action___ctor(v7, (Il2CppObject *)this, Method_MstExpInfoComponent_EndClose__, 0LL);
     BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
   }
@@ -101,33 +101,33 @@ void __fastcall MstExpInfoComponent__openExpInfo(MstExpInfoComponent_o *this, in
   System_Action_o *v18; // x20
   int64_t v19; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_49FA1FC & 1) == 0 )
+  if ( (byte_4A042EB & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, exp);
-    sub_1B64A00(&long_TypeInfo, v5);
-    sub_1B64A00(&LocalizationManager_TypeInfo, v6);
-    sub_1B64A00(&Method_MstExpInfoComponent_EndOpen__, v7);
-    sub_1B64A00(&StringLiteral_24875/*"{0:N0}"*/, v8);
-    sub_1B64A00(&StringLiteral_8509/*"MASTER_TOTAL_EXP"*/, v9);
-    byte_49FA1FC = 1;
+    sub_1B686D4(&System_Action_TypeInfo, exp);
+    sub_1B686D4(&long_TypeInfo, v5);
+    sub_1B686D4(&LocalizationManager_TypeInfo, v6);
+    sub_1B686D4(&Method_MstExpInfoComponent_EndOpen__, v7);
+    sub_1B686D4(&StringLiteral_24888/*"{0:N0}"*/, v8);
+    sub_1B686D4(&StringLiteral_8511/*"MASTER_TOTAL_EXP"*/, v9);
+    byte_4A042EB = 1;
   }
   expInfoTitleLb = this->fields.expInfoTitleLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_8509/*"MASTER_TOTAL_EXP"*/, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_8511/*"MASTER_TOTAL_EXP"*/, 0LL);
   if ( !expInfoTitleLb
     || (UILabel__set_text(expInfoTitleLb, v11, 0LL),
         expInfoLb = this->fields.expInfoLb,
         v19 = exp,
         v17 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v19, v14, v15, v16),
-        v11 = System_String__Format((System_String_o *)StringLiteral_24875/*"{0:N0}"*/, v17, 0LL),
+        v11 = System_String__Format((System_String_o *)StringLiteral_24888/*"{0:N0}"*/, v17, 0LL),
         !expInfoLb) )
   {
-    sub_1B64C5C(v11, v12);
+    sub_1B68930(v11, v12);
   }
   UILabel__set_text(expInfoLb, v11, 0LL);
   this->fields.isButtonEnable = 0;
-  v18 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+  v18 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
   System_Action___ctor(v18, (Il2CppObject *)this, Method_MstExpInfoComponent_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v18, 0, 0LL);
 }

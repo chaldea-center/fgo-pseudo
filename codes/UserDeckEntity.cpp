@@ -5,22 +5,22 @@ void __fastcall UserDeckEntity___ctor(UserDeckEntity_o *this, const MethodInfo *
   __int64 v5; // x1
   int32_t v6; // w1
 
-  if ( (byte_49FF6E9 & 1) == 0 )
+  if ( (byte_4A09830 & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataEntityBase_long___ctor__, method);
-    sub_1B64A00(&StringLiteral_1/*""*/, v5);
-    byte_49FF6E9 = 1;
+    sub_1B686D4(&Method_DataEntityBase_long___ctor__, method);
+    sub_1B686D4(&StringLiteral_1/*""*/, v5);
+    byte_4A09830 = 1;
   }
   v6 = (int)StringLiteral_1/*""*/;
   this->fields.name = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.name, v6, v2, v3);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.name, v6, v2, v3);
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_30D65E0 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_30E4308 *)Method_DataEntityBase_long___ctor__);
 }
 
 
-void __fastcall UserDeckEntity___ctor_39724764(
+void __fastcall UserDeckEntity___ctor_39787136(
         UserDeckEntity_o *this,
         int64_t userId,
         int64_t deckId,
@@ -38,20 +38,20 @@ void __fastcall UserDeckEntity___ctor_39724764(
   int32_t v18; // w2
   int32_t v19; // w3
 
-  if ( (byte_49FF6EA & 1) == 0 )
+  if ( (byte_4A09831 & 1) == 0 )
   {
-    sub_1B64A00(&BalanceConfig_TypeInfo, userId);
-    sub_1B64A00(&Method_DataEntityBase_long___ctor__, v11);
-    sub_1B64A00(&DeckServant_TypeInfo, v12);
-    sub_1B64A00(&StringLiteral_1/*""*/, v13);
-    byte_49FF6EA = 1;
+    sub_1B686D4(&BalanceConfig_TypeInfo, userId);
+    sub_1B686D4(&Method_DataEntityBase_long___ctor__, v11);
+    sub_1B686D4(&DeckServant_TypeInfo, v12);
+    sub_1B686D4(&StringLiteral_1/*""*/, v13);
+    byte_4A09831 = 1;
   }
   v14 = (int)StringLiteral_1/*""*/;
   this->fields.name = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.name, v14, deckId, deckNo);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.name, v14, deckId, deckNo);
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_30D65E0 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_30E4308 *)Method_DataEntityBase_long___ctor__);
   this->fields.id = deckId;
   this->fields.userId = userId;
   this->fields.deckNo = deckNo;
@@ -62,10 +62,10 @@ void __fastcall UserDeckEntity___ctor_39724764(
     v15 = BalanceConfig_TypeInfo;
   }
   DeckMemberMax = v15->static_fields->DeckMemberMax;
-  v17 = (DeckServant_o *)sub_1B64C4C(DeckServant_TypeInfo);
-  DeckServant___ctor_38558956(v17, DeckMemberMax, userEquipId, 0LL);
+  v17 = (DeckServant_o *)sub_1B68920(DeckServant_TypeInfo);
+  DeckServant___ctor_38617348(v17, DeckMemberMax, userEquipId, 0LL);
   this->fields.deckInfo = v17;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.deckInfo, (int32_t)v17, v18, v19);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.deckInfo, (int32_t)v17, v18, v19);
 }
 
 
@@ -85,11 +85,11 @@ System_Int64_array *__fastcall UserDeckEntity__GetEquipList(
   DeckServant_o *deckInfo; // x0
   BalanceConfig_c *v8; // x0
 
-  if ( (byte_49FF6EB & 1) == 0 )
+  if ( (byte_4A09832 & 1) == 0 )
   {
-    sub_1B64A00(&BalanceConfig_TypeInfo, *(_QWORD *)&menber);
-    sub_1B64A00(&long___TypeInfo, v5);
-    byte_49FF6EB = 1;
+    sub_1B686D4(&BalanceConfig_TypeInfo, *(_QWORD *)&menber);
+    sub_1B686D4(&long___TypeInfo, v5);
+    byte_4A09832 = 1;
   }
   deckInfo = this->fields.deckInfo;
   if ( deckInfo )
@@ -100,11 +100,11 @@ System_Int64_array *__fastcall UserDeckEntity__GetEquipList(
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v8 = BalanceConfig_TypeInfo;
   }
-  return (System_Int64_array *)sub_1B64AA8(long___TypeInfo, (unsigned int)v8->static_fields->SvtEquipMax);
+  return (System_Int64_array *)sub_1B6877C(long___TypeInfo, (unsigned int)v8->static_fields->SvtEquipMax);
 }
 
 
-System_Int64_array *__fastcall UserDeckEntity__GetEquipList_39725208(
+System_Int64_array *__fastcall UserDeckEntity__GetEquipList_39787580(
         UserDeckEntity_o *this,
         int64_t userSvtId,
         const MethodInfo *method)
@@ -113,22 +113,22 @@ System_Int64_array *__fastcall UserDeckEntity__GetEquipList_39725208(
   DeckServant_o *deckInfo; // x0
   BalanceConfig_c *v8; // x0
 
-  if ( (byte_49FF6EC & 1) == 0 )
+  if ( (byte_4A09833 & 1) == 0 )
   {
-    sub_1B64A00(&BalanceConfig_TypeInfo, userSvtId);
-    sub_1B64A00(&long___TypeInfo, v5);
-    byte_49FF6EC = 1;
+    sub_1B686D4(&BalanceConfig_TypeInfo, userSvtId);
+    sub_1B686D4(&long___TypeInfo, v5);
+    byte_4A09833 = 1;
   }
   deckInfo = this->fields.deckInfo;
   if ( deckInfo )
-    return DeckServant__GetEquipList_38561900(deckInfo, userSvtId, 0, 0LL);
+    return DeckServant__GetEquipList_38620292(deckInfo, userSvtId, 0, 0LL);
   v8 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v8 = BalanceConfig_TypeInfo;
   }
-  return (System_Int64_array *)sub_1B64AA8(long___TypeInfo, (unsigned int)v8->static_fields->SvtEquipMax);
+  return (System_Int64_array *)sub_1B6877C(long___TypeInfo, (unsigned int)v8->static_fields->SvtEquipMax);
 }
 
 
@@ -143,15 +143,15 @@ int32_t __fastcall UserDeckEntity__GetFollowerIndex(UserDeckEntity_o *this, cons
   int id; // w23
 
   v2 = this;
-  if ( (byte_49FF6EE & 1) == 0 )
+  if ( (byte_4A09835 & 1) == 0 )
   {
-    this = (UserDeckEntity_o *)sub_1B64A00(&BalanceConfig_TypeInfo, method);
-    byte_49FF6EE = 1;
+    this = (UserDeckEntity_o *)sub_1B686D4(&BalanceConfig_TypeInfo, method);
+    byte_4A09835 = 1;
   }
   deckInfo = v2->fields.deckInfo;
   if ( !deckInfo )
 LABEL_15:
-    sub_1B64C5C(this, method);
+    sub_1B68930(this, method);
   v4 = 0LL;
   while ( 1 )
   {
@@ -162,7 +162,7 @@ LABEL_15:
     if ( (int)v4 >= max_length )
       return 0;
     if ( (unsigned int)v4 >= max_length )
-      sub_1B64C64(this, method);
+      sub_1B68938(this, method);
     v7 = svts->m_Items[v4];
     if ( !v7 )
       goto LABEL_15;
@@ -223,21 +223,21 @@ UserServantEntity_array *__fastcall UserDeckEntity__GetUserServantList(
   int64_t userSvtId; // x2
   int v20; // w8
 
-  if ( (byte_49FF6ED & 1) == 0 )
+  if ( (byte_4A09834 & 1) == 0 )
   {
-    sub_1B64A00(&BalanceConfig_TypeInfo, method);
-    sub_1B64A00(&Method_DataManager_GetMasterData_UserServantMaster___, v3);
-    sub_1B64A00(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__, v4);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_1B64A00(&UserServantEntity___TypeInfo, v6);
-    byte_49FF6ED = 1;
+    sub_1B686D4(&BalanceConfig_TypeInfo, method);
+    sub_1B686D4(&Method_DataManager_GetMasterData_UserServantMaster___, v3);
+    sub_1B686D4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__, v4);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    sub_1B686D4(&UserServantEntity___TypeInfo, v6);
+    byte_4A09834 = 1;
   }
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_23;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                        (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_UserServantMaster___);
   v10 = BalanceConfig_TypeInfo;
   v11 = (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -245,11 +245,11 @@ UserServantEntity_array *__fastcall UserDeckEntity__GetUserServantList(
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v10 = BalanceConfig_TypeInfo;
   }
-  Instance = sub_1B64AA8(UserServantEntity___TypeInfo, (unsigned int)v10->static_fields->DeckMemberMax);
+  Instance = sub_1B6877C(UserServantEntity___TypeInfo, (unsigned int)v10->static_fields->DeckMemberMax);
   deckInfo = this->fields.deckInfo;
   if ( !deckInfo )
 LABEL_23:
-    sub_1B64C5C(Instance, v8);
+    sub_1B68930(Instance, v8);
   v13 = (UserServantEntity_array *)Instance;
   v14 = 0LL;
   while ( 1 )
@@ -284,12 +284,12 @@ LABEL_23:
           v20 = v17->fields.id - 1;
           if ( v20 >= v13->max_length )
 LABEL_25:
-            sub_1B64C64(Instance, v8);
+            sub_1B68938(Instance, v8);
           Instance = DataMasterBase_object__object__long___TryGetEntity(
                        v11,
                        (Il2CppObject **)&v13->m_Items[v20],
                        userSvtId,
-                       (const MethodInfo_30D6998 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+                       (const MethodInfo_30E46C0 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
         }
       }
     }

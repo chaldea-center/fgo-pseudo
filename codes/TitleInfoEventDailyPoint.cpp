@@ -21,23 +21,23 @@ void __fastcall TitleInfoEventDailyPoint__Close(TitleInfoEventDailyPoint_o *this
   System_Action_o *v15; // x20
   struct System_Action_o *endCallback; // t1
 
-  if ( (byte_49FCBDF & 1) == 0 )
+  if ( (byte_4A06C6E & 1) == 0 )
   {
-    sub_1B64A00(&SoundManager_TypeInfo, method);
-    byte_49FCBDF = 1;
+    sub_1B686D4(&SoundManager_TypeInfo, method);
+    byte_4A06C6E = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B64C5C(0LL, v4);
+    sub_1B68930(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   if ( this->fields.voicePlayer )
   {
     voiceName = this->fields.voiceName;
     if ( !SoundManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    SoundManager__stopVoice_38392272(voiceName, 0.0, 0LL);
+    SoundManager__stopVoice_38449280(voiceName, 0.0, 0LL);
     this->fields.voicePlayer = 0LL;
-    sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.voicePlayer, 0, v6, v7);
+    sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.voicePlayer, 0, v6, v7);
   }
   p_voiceAssetName = &this->fields.voiceAssetName;
   if ( !System_String__IsNullOrEmpty(this->fields.voiceAssetName, 0LL) )
@@ -47,7 +47,7 @@ void __fastcall TitleInfoEventDailyPoint__Close(TitleInfoEventDailyPoint_o *this
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
     SoundManager__releaseAudioAssetStorage(v11, 0LL);
     *p_voiceAssetName = 0LL;
-    sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.voiceAssetName, 0, v12, v13);
+    sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.voiceAssetName, 0, v12, v13);
   }
   endCallback = this->fields.endCallback;
   p_endCallback = &this->fields.endCallback;
@@ -57,7 +57,7 @@ void __fastcall TitleInfoEventDailyPoint__Close(TitleInfoEventDailyPoint_o *this
   if ( endCallback )
   {
     *p_endCallback = 0LL;
-    sub_1B649A4((ServantStatusBattleListViewItem_o *)p_endCallback, 0, v9, v10);
+    sub_1B68678((ServantStatusBattleListViewItem_o *)p_endCallback, 0, v9, v10);
     ActionExtensions__Call(v15, 0LL);
   }
 }
@@ -70,11 +70,11 @@ void __fastcall TitleInfoEventDailyPoint__EndPlayVoice(TitleInfoEventDailyPoint_
   __int64 playCnt; // x8
   __int64 v6; // x8
 
-  if ( (byte_49FCBDC & 1) == 0 )
+  if ( (byte_4A06C6B & 1) == 0 )
   {
-    sub_1B64A00(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__, method);
-    sub_1B64A00(&StringLiteral_10620/*"PlayVoice"*/, v3);
-    byte_49FCBDC = 1;
+    sub_1B686D4(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__, method);
+    sub_1B686D4(&StringLiteral_10623/*"PlayVoice"*/, v3);
+    byte_4A06C6B = 1;
   }
   if ( this->fields.playCnt < this->fields.maxPlayCnt )
   {
@@ -84,18 +84,18 @@ void __fastcall TitleInfoEventDailyPoint__EndPlayVoice(TitleInfoEventDailyPoint_
       voiceList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                  voiceList,
                                                                  this->fields.selectVoiceIndex,
-                                                                 (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
+                                                                 (const MethodInfo_34BBFA8 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
       if ( voiceList )
       {
         playCnt = this->fields.playCnt;
         if ( (unsigned int)playCnt >= voiceList->fields._size )
-          sub_1B64C64(voiceList, method);
+          sub_1B68938(voiceList, method);
         v6 = *((_QWORD *)&voiceList->fields._syncRoot + playCnt);
         if ( v6 )
         {
           UnityEngine_MonoBehaviour__Invoke(
             (UnityEngine_MonoBehaviour_o *)this,
-            (System_String_o *)StringLiteral_10620/*"PlayVoice"*/,
+            (System_String_o *)StringLiteral_10623/*"PlayVoice"*/,
             *(float *)(v6 + 24),
             0LL);
           return;
@@ -103,7 +103,7 @@ void __fastcall TitleInfoEventDailyPoint__EndPlayVoice(TitleInfoEventDailyPoint_
       }
     }
 LABEL_12:
-    sub_1B64C5C(voiceList, method);
+    sub_1B68930(voiceList, method);
   }
   voiceList = (System_Collections_Generic_List_object__o *)this->fields.screenTouchInfo;
   if ( !voiceList )
@@ -158,44 +158,44 @@ void __fastcall TitleInfoEventDailyPoint__OnLoadSvtVoice(TitleInfoEventDailyPoin
   TitleInfoEventDailyPoint_o *v37; // x1
   Il2CppClass **v38; // x0
   struct EventPointBehavior_o *v39; // x8
-  System_String_o *VoiceAssetName_39441356; // x0
+  System_String_o *VoiceAssetName_39502944; // x0
   int32_t v41; // w2
   int32_t v42; // w3
   System_String_o *voiceAssetName; // x20
   System_Action_o *v44; // x21
 
   v2 = this;
-  if ( (byte_49FCBD9 & 1) == 0 )
+  if ( (byte_4A06C68 & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, method);
-    sub_1B64A00(&Method_DataManager_GetMasterData_ServantVoiceMaster___, v3);
-    sub_1B64A00(&Method_DataManager_GetMasterData_VoicePlayCondMaster___, v4);
-    sub_1B64A00(&Method_System_Collections_Generic_List_ServantVoiceData____AddRange__, v5);
-    sub_1B64A00(&Method_System_Collections_Generic_List_ServantVoiceData____Add__, v6);
-    sub_1B64A00(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__, v7);
-    sub_1B64A00(&Method_System_Collections_Generic_List_ServantVoiceData____get_Count__, v8);
-    sub_1B64A00(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__, v9);
-    sub_1B64A00(&System_Collections_Generic_List_ServantVoiceData____TypeInfo, v10);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    sub_1B64A00(&SoundManager_TypeInfo, v12);
-    this = (TitleInfoEventDailyPoint_o *)sub_1B64A00(&Method_TitleInfoEventDailyPoint__OnLoadSvtVoice_b__26_0__, v13);
-    byte_49FCBD9 = 1;
+    sub_1B686D4(&System_Action_TypeInfo, method);
+    sub_1B686D4(&Method_DataManager_GetMasterData_ServantVoiceMaster___, v3);
+    sub_1B686D4(&Method_DataManager_GetMasterData_VoicePlayCondMaster___, v4);
+    sub_1B686D4(&Method_System_Collections_Generic_List_ServantVoiceData____AddRange__, v5);
+    sub_1B686D4(&Method_System_Collections_Generic_List_ServantVoiceData____Add__, v6);
+    sub_1B686D4(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__, v7);
+    sub_1B686D4(&Method_System_Collections_Generic_List_ServantVoiceData____get_Count__, v8);
+    sub_1B686D4(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__, v9);
+    sub_1B686D4(&System_Collections_Generic_List_ServantVoiceData____TypeInfo, v10);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
+    sub_1B686D4(&SoundManager_TypeInfo, v12);
+    this = (TitleInfoEventDailyPoint_o *)sub_1B686D4(&Method_TitleInfoEventDailyPoint__OnLoadSvtVoice_b__26_0__, v13);
+    byte_4A06C68 = 1;
   }
   eventPointBehavior = v2->fields.eventPointBehavior;
   if ( !eventPointBehavior )
     goto LABEL_39;
   if ( eventPointBehavior->fields.voiceIds )
   {
-    v15 = (System_Collections_Generic_List_object__o *)sub_1B64C4C(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+    v15 = (System_Collections_Generic_List_object__o *)sub_1B68920(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v15,
-      (const MethodInfo_34AF794 *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
-    this = (TitleInfoEventDailyPoint_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      (const MethodInfo_34BBA44 *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+    this = (TitleInfoEventDailyPoint_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !this )
       goto LABEL_39;
     this = (TitleInfoEventDailyPoint_o *)DataManager__GetMasterData_object_(
                                            (DataManager_o *)this,
-                                           (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantVoiceMaster___);
+                                           (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_ServantVoiceMaster___);
     v16 = v2->fields.eventPointBehavior;
     if ( !v16 )
       goto LABEL_39;
@@ -204,12 +204,12 @@ void __fastcall TitleInfoEventDailyPoint__OnLoadSvtVoice(TitleInfoEventDailyPoin
       goto LABEL_39;
     v18 = this;
     v19 = *(_QWORD *)&voiceIds->max_length;
-    v20 = (System_Collections_Generic_List_object__o *)sub_1B64C4C(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+    v20 = (System_Collections_Generic_List_object__o *)sub_1B68920(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v20,
-      (const MethodInfo_34AF794 *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+      (const MethodInfo_34BBA44 *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
     v2->fields.voiceList = (struct System_Collections_Generic_List_ServantVoiceData____o *)v20;
-    sub_1B649A4((ServantStatusBattleListViewItem_o *)&v2->fields.voiceList, (int32_t)v20, v21, v22);
+    sub_1B68678((ServantStatusBattleListViewItem_o *)&v2->fields.voiceList, (int32_t)v20, v21, v22);
     if ( (int)v19 >= 1 )
     {
       v23 = 0LL;
@@ -223,10 +223,10 @@ void __fastcall TitleInfoEventDailyPoint__OnLoadSvtVoice(TitleInfoEventDailyPoin
           break;
         if ( v23 >= v25->max_length )
 LABEL_40:
-          sub_1B64C64(this, method);
+          sub_1B68938(this, method);
         if ( !v18 )
           break;
-        this = (TitleInfoEventDailyPoint_o *)ServantVoiceMaster__getEntity_39463192(
+        this = (TitleInfoEventDailyPoint_o *)ServantVoiceMaster__getEntity_39524888(
                                                (ServantVoiceMaster_o *)v18,
                                                16,
                                                v24->fields.svtId,
@@ -240,21 +240,21 @@ LABEL_40:
           System_Collections_Generic_List_object___AddRange(
             v15,
             (System_Collections_Generic_IEnumerable_T__o *)this,
-            (const MethodInfo_34B01D4 *)Method_System_Collections_Generic_List_ServantVoiceData____AddRange__);
+            (const MethodInfo_34BC484 *)Method_System_Collections_Generic_List_ServantVoiceData____AddRange__);
         }
         if ( (unsigned int)v19 == ++v23 )
           goto LABEL_18;
       }
 LABEL_39:
-      sub_1B64C5C(this, method);
+      sub_1B68930(this, method);
     }
 LABEL_18:
-    this = (TitleInfoEventDailyPoint_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    this = (TitleInfoEventDailyPoint_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !this )
       goto LABEL_39;
     this = (TitleInfoEventDailyPoint_o *)DataManager__GetMasterData_object_(
                                            (DataManager_o *)this,
-                                           (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_VoicePlayCondMaster___);
+                                           (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_VoicePlayCondMaster___);
     if ( !v15 )
       goto LABEL_39;
     size = v15->fields._size;
@@ -267,7 +267,7 @@ LABEL_18:
         this = (TitleInfoEventDailyPoint_o *)System_Collections_Generic_List_object___get_Item(
                                                v15,
                                                v28,
-                                               (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
+                                               (const MethodInfo_34BBFA8 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
         if ( !this )
           goto LABEL_39;
         if ( !LODWORD(this->fields.m_CancellationTokenSource) )
@@ -286,6 +286,7 @@ LABEL_18:
                                                -1LL,
                                                -1,
                                                0LL,
+                                               0LL,
                                                0LL);
         if ( ((unsigned __int8)this & 1) != 0 )
         {
@@ -293,7 +294,7 @@ LABEL_18:
           this = (TitleInfoEventDailyPoint_o *)System_Collections_Generic_List_object___get_Item(
                                                  v15,
                                                  v28,
-                                                 (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
+                                                 (const MethodInfo_34BBFA8 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
           if ( !voiceList )
             goto LABEL_39;
           items = voiceList->fields._items;
@@ -308,14 +309,14 @@ LABEL_18:
             System_Collections_Generic_List_object___AddWithResize(
               voiceList,
               (Il2CppObject *)this,
-              *(const MethodInfo_34AFFC8 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
+              *(const MethodInfo_34BC278 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
           }
           else
           {
             v38 = &items->obj.klass + v36;
             voiceList->fields._size = v36 + 1;
             v38[4] = (Il2CppClass *)v37;
-            sub_1B649A4((ServantStatusBattleListViewItem_o *)(v38 + 4), (int32_t)v37, v32, v33);
+            sub_1B68678((ServantStatusBattleListViewItem_o *)(v38 + 4), (int32_t)v37, v32, v33);
           }
         }
       }
@@ -324,15 +325,15 @@ LABEL_18:
     v39 = v2->fields.eventPointBehavior;
     if ( !v39 )
       goto LABEL_39;
-    VoiceAssetName_39441356 = ServantVoiceEntity__getVoiceAssetName_39441356(v39->fields.svtId, 0LL);
-    v2->fields.voiceAssetName = VoiceAssetName_39441356;
-    sub_1B649A4(
+    VoiceAssetName_39502944 = ServantVoiceEntity__getVoiceAssetName_39502944(v39->fields.svtId, 0LL);
+    v2->fields.voiceAssetName = VoiceAssetName_39502944;
+    sub_1B68678(
       (ServantStatusBattleListViewItem_o *)&v2->fields.voiceAssetName,
-      (int32_t)VoiceAssetName_39441356,
+      (int32_t)VoiceAssetName_39502944,
       v41,
       v42);
     voiceAssetName = v2->fields.voiceAssetName;
-    v44 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+    v44 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
     System_Action___ctor(v44, (Il2CppObject *)v2, Method_TitleInfoEventDailyPoint__OnLoadSvtVoice_b__26_0__, 0LL);
     if ( !SoundManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
@@ -356,14 +357,14 @@ void __fastcall TitleInfoEventDailyPoint__OnTouchDisp(TitleInfoEventDailyPoint_o
   float DEFAULT_FADE_TIME; // s8
   System_Action_o *v14; // x21
 
-  if ( (byte_49FCBDE & 1) == 0 )
+  if ( (byte_4A06C6D & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, method);
-    sub_1B64A00(&AvalonSceneManager_TypeInfo, v3);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
-    sub_1B64A00(&Method_TitleInfoEventDailyPoint_OnTouchDisp__, v5);
-    sub_1B64A00(&Method_TitleInfoEventDailyPoint__OnTouchDisp_b__31_0__, v6);
-    byte_49FCBDE = 1;
+    sub_1B686D4(&System_Action_TypeInfo, method);
+    sub_1B686D4(&AvalonSceneManager_TypeInfo, v3);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
+    sub_1B686D4(&Method_TitleInfoEventDailyPoint_OnTouchDisp__, v5);
+    sub_1B686D4(&Method_TitleInfoEventDailyPoint__OnTouchDisp_b__31_0__, v6);
+    byte_4A06C6D = 1;
   }
   screenTouchInfo = (UnityEngine_Component_o *)this->fields.screenTouchInfo;
   if ( !screenTouchInfo )
@@ -374,10 +375,10 @@ void __fastcall TitleInfoEventDailyPoint__OnTouchDisp(TitleInfoEventDailyPoint_o
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)screenTouchInfo, 0, 0LL);
   v8 = Method_TitleInfoEventDailyPoint_OnTouchDisp__;
   if ( (*((_BYTE *)Method_TitleInfoEventDailyPoint_OnTouchDisp__ + 83) & 2) != 0 )
-    v8 = (_QWORD *)sub_1B64A18(Method_TitleInfoEventDailyPoint_OnTouchDisp__);
-  v9 = (System_Reflection_MethodBase_o *)sub_1B649E4(v8, v8[4]);
+    v8 = (_QWORD *)sub_1B686EC(Method_TitleInfoEventDailyPoint_OnTouchDisp__);
+  v9 = (System_Reflection_MethodBase_o *)sub_1B686B8(v8, v8[4]);
   OverwriteAssetSoundName__PlaySystemSe(v9, 0, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v11 = AvalonSceneManager_TypeInfo;
   v12 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -386,11 +387,11 @@ void __fastcall TitleInfoEventDailyPoint__OnTouchDisp(TitleInfoEventDailyPoint_o
     v11 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v11->static_fields->DEFAULT_FADE_TIME;
-  v14 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+  v14 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
   System_Action___ctor(v14, (Il2CppObject *)this, Method_TitleInfoEventDailyPoint__OnTouchDisp_b__31_0__, 0LL);
   if ( !v12 )
 LABEL_11:
-    sub_1B64C5C(screenTouchInfo, method);
+    sub_1B68930(screenTouchInfo, method);
   CommonUI__maskFadeout(v12, 2, DEFAULT_FADE_TIME, v14, 0LL);
   this->fields.state = 0;
 }
@@ -457,26 +458,26 @@ void __fastcall TitleInfoEventDailyPoint__Open(
   const MethodInfo *v58; // x1
   int32_t effectId; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_49FCBD8 & 1) == 0 )
+  if ( (byte_4A06C67 & 1) == 0 )
   {
-    sub_1B64A00(&Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___, callback);
-    sub_1B64A00(&Method_UnityEngine_GameObject_GetComponent_UILabel___, v6);
-    sub_1B64A00(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v7);
-    sub_1B64A00(&int_TypeInfo, v8);
-    sub_1B64A00(&LocalizationManager_TypeInfo, v9);
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, v10);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v11);
-    sub_1B64A00(&SimpleAnimation_State_TypeInfo, v12);
-    sub_1B64A00(&TerminalPramsManager_TypeInfo, v13);
-    sub_1B64A00(&StringLiteral_17157/*"bit_dedicate_reward_"*/, v14);
-    byte_49FCBD8 = 1;
+    sub_1B686D4(&Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___, callback);
+    sub_1B686D4(&Method_UnityEngine_GameObject_GetComponent_UILabel___, v6);
+    sub_1B686D4(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v7);
+    sub_1B686D4(&int_TypeInfo, v8);
+    sub_1B686D4(&LocalizationManager_TypeInfo, v9);
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, v10);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v11);
+    sub_1B686D4(&SimpleAnimation_State_TypeInfo, v12);
+    sub_1B686D4(&TerminalPramsManager_TypeInfo, v13);
+    sub_1B686D4(&StringLiteral_17157/*"bit_dedicate_reward_"*/, v14);
+    byte_4A06C67 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_49FCC52 )
+  if ( !byte_4A06CE1 )
   {
-    sub_1B64A00(&TerminalPramsManager_TypeInfo, callback);
-    byte_49FCC52 = 1;
+    sub_1B686D4(&TerminalPramsManager_TypeInfo, callback);
+    byte_4A06CE1 = 1;
   }
   v15 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -487,7 +488,7 @@ void __fastcall TitleInfoEventDailyPoint__Open(
   eventDailyPoint_k__BackingField = v15->static_fields->_eventDailyPoint_k__BackingField;
   this->fields.eventDailyPoint = eventDailyPoint_k__BackingField;
   p_eventDailyPoint = &this->fields.eventDailyPoint;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.eventDailyPoint,
     (int32_t)eventDailyPoint_k__BackingField,
     (int32_t)method,
@@ -501,17 +502,17 @@ void __fastcall TitleInfoEventDailyPoint__Open(
   if ( !eventPointBehavior )
     goto LABEL_64;
   if ( !eventPointBehavior->max_length )
-    sub_1B64C64(transform, v19);
+    sub_1B68938(transform, v19);
   v23 = eventPointBehavior->m_Items[0];
   this->fields.eventPointBehavior = v23;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.eventPointBehavior, (int32_t)v23, v20, v21);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.eventPointBehavior, (int32_t)v23, v20, v21);
   p_screenTouchInfo = &this->fields.screenTouchInfo;
   screenTouchInfo = (UnityEngine_Object_o *)this->fields.screenTouchInfo;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(screenTouchInfo, 0LL, 0LL) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     transform = (__int64 *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
     if ( !Instance )
       goto LABEL_64;
@@ -524,9 +525,9 @@ void __fastcall TitleInfoEventDailyPoint__Open(
       goto LABEL_64;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)transform,
-                         (const MethodInfo_2E8A7CC *)Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
+                         (const MethodInfo_2E98950 *)Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
     *p_screenTouchInfo = (struct ScreenTouchInformationComponent_o *)Component_object;
-    sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.screenTouchInfo, (int32_t)Component_object, v28, v29);
+    sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.screenTouchInfo, (int32_t)Component_object, v28, v29);
   }
   transform = (__int64 *)*p_screenTouchInfo;
   if ( !*p_screenTouchInfo )
@@ -540,7 +541,7 @@ void __fastcall TitleInfoEventDailyPoint__Open(
     goto LABEL_64;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)transform, 1, 0LL);
   this->fields.endCallback = callback;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.endCallback, (int32_t)callback, v30, v31);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.endCallback, (int32_t)callback, v30, v31);
   v35 = this->fields.eventPointBehavior;
   this->fields.state = 0;
   if ( !v35 )
@@ -578,7 +579,7 @@ void __fastcall TitleInfoEventDailyPoint__Open(
         else
         {
 LABEL_31:
-          v44 = sub_1BB69E0(transform, SimpleAnimation_State_TypeInfo, 14LL);
+          v44 = sub_1BBA6B4(transform, SimpleAnimation_State_TypeInfo, 14LL);
         }
         transform = (__int64 *)(*(__int64 (__fastcall **)(void *, _QWORD))v44)(v41, *(_QWORD *)(v44 + 8));
         if ( this->fields.simpleAnimation )
@@ -595,7 +596,7 @@ LABEL_43:
       }
     }
 LABEL_64:
-    sub_1B64C5C(transform, v19);
+    sub_1B68930(transform, v19);
   }
   animation = (UnityEngine_Object_o *)this->fields.animation;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -618,10 +619,10 @@ LABEL_44:
   itemIcon = this->fields.itemIcon;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_49FCC53 )
+  if ( !byte_4A06CE2 )
   {
-    sub_1B64A00(&TerminalPramsManager_TypeInfo, v19);
-    byte_49FCC53 = 1;
+    sub_1B686D4(&TerminalPramsManager_TypeInfo, v19);
+    byte_4A06CE2 = 1;
   }
   transform = (__int64 *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -668,7 +669,7 @@ LABEL_44:
   v53 = v52;
   transform = (__int64 *)UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)transform,
-                           (const MethodInfo_2E8A7CC *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                           (const MethodInfo_2E98950 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   if ( !transform )
     goto LABEL_64;
   v54 = *((_DWORD *)transform + 42);
@@ -680,7 +681,7 @@ LABEL_44:
   v57 = v56;
   transform = (__int64 *)UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)transform,
-                           (const MethodInfo_2E8A7CC *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                           (const MethodInfo_2E98950 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
   if ( !transform )
     goto LABEL_64;
   GameObjectExtensions__SetLocalPositionX(
@@ -706,7 +707,7 @@ void __fastcall TitleInfoEventDailyPoint__PlayVoice(TitleInfoEventDailyPoint_o *
   __int64 v11; // x8
   struct System_String_o *v12; // x1
   struct EventPointBehavior_o *eventPointBehavior; // x8
-  System_String_o *VoiceAssetName_39441356; // x0
+  System_String_o *VoiceAssetName_39502944; // x0
   SeManager_c *v15; // x8
   System_String_o *voiceName; // x20
   System_String_o *v17; // x21
@@ -717,14 +718,14 @@ void __fastcall TitleInfoEventDailyPoint__PlayVoice(TitleInfoEventDailyPoint_o *
   int32_t v22; // w2
   int32_t v23; // w3
 
-  if ( (byte_49FCBDB & 1) == 0 )
+  if ( (byte_4A06C6A & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, method);
-    sub_1B64A00(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__, v3);
-    sub_1B64A00(&SeManager_TypeInfo, v4);
-    sub_1B64A00(&SoundManager_TypeInfo, v5);
-    sub_1B64A00(&Method_TitleInfoEventDailyPoint_EndPlayVoice__, v6);
-    byte_49FCBDB = 1;
+    sub_1B686D4(&System_Action_TypeInfo, method);
+    sub_1B686D4(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__, v3);
+    sub_1B686D4(&SeManager_TypeInfo, v4);
+    sub_1B686D4(&SoundManager_TypeInfo, v5);
+    sub_1B686D4(&Method_TitleInfoEventDailyPoint_EndPlayVoice__, v6);
+    byte_4A06C6A = 1;
   }
   voiceList = (System_Collections_Generic_List_object__o *)this->fields.voiceList;
   if ( !voiceList )
@@ -732,40 +733,40 @@ void __fastcall TitleInfoEventDailyPoint__PlayVoice(TitleInfoEventDailyPoint_o *
   voiceList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                              voiceList,
                                                              this->fields.selectVoiceIndex,
-                                                             (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
+                                                             (const MethodInfo_34BBFA8 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
   if ( !voiceList )
     goto LABEL_13;
   playCnt = this->fields.playCnt;
   if ( (unsigned int)playCnt >= voiceList->fields._size )
-    sub_1B64C64(voiceList, method);
+    sub_1B68938(voiceList, method);
   v11 = *((_QWORD *)&voiceList->fields._syncRoot + playCnt);
   if ( !v11
     || (v12 = *(struct System_String_o **)(v11 + 16),
         this->fields.voiceName = v12,
-        sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.voiceName, (int32_t)v12, v8, v9),
+        sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.voiceName, (int32_t)v12, v8, v9),
         (eventPointBehavior = this->fields.eventPointBehavior) == 0LL) )
   {
 LABEL_13:
-    sub_1B64C5C(voiceList, method);
+    sub_1B68930(voiceList, method);
   }
-  VoiceAssetName_39441356 = ServantVoiceEntity__getVoiceAssetName_39441356(eventPointBehavior->fields.svtId, 0LL);
+  VoiceAssetName_39502944 = ServantVoiceEntity__getVoiceAssetName_39502944(eventPointBehavior->fields.svtId, 0LL);
   v15 = SeManager_TypeInfo;
   voiceName = this->fields.voiceName;
-  v17 = VoiceAssetName_39441356;
+  v17 = VoiceAssetName_39502944;
   if ( !SeManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
     v15 = SeManager_TypeInfo;
   }
   DEFAULT_VOLUME = v15->static_fields->DEFAULT_VOLUME;
-  v19 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+  v19 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
   System_Action___ctor(v19, (Il2CppObject *)this, Method_TitleInfoEventDailyPoint_EndPlayVoice__, 0LL);
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  v20 = SoundManager__playVoice_38391896(v17, voiceName, DEFAULT_VOLUME, v19, 0LL);
+  v20 = SoundManager__playVoice_38448904(v17, voiceName, DEFAULT_VOLUME, v19, 0LL);
   this->fields.voicePlayer = v20;
   p_voicePlayer = (ServantStatusBattleListViewItem_o *)&this->fields.voicePlayer;
-  sub_1B649A4(p_voicePlayer, (int32_t)v20, v22, v23);
+  sub_1B68678(p_voicePlayer, (int32_t)v20, v22, v23);
   ++p_voicePlayer->fields.selectNum;
 }
 
@@ -781,19 +782,19 @@ void __fastcall TitleInfoEventDailyPoint__StartVoice(TitleInfoEventDailyPoint_o 
   System_Collections_Generic_List_object__o *v8; // x8
 
   v2 = this;
-  if ( (byte_49FCBDA & 1) == 0 )
+  if ( (byte_4A06C69 & 1) == 0 )
   {
-    sub_1B64A00(&Method_System_Collections_Generic_List_ServantVoiceData____get_Count__, method);
-    sub_1B64A00(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__, v3);
-    this = (TitleInfoEventDailyPoint_o *)sub_1B64A00(&System_Random_TypeInfo, v4);
-    byte_49FCBDA = 1;
+    sub_1B686D4(&Method_System_Collections_Generic_List_ServantVoiceData____get_Count__, method);
+    sub_1B686D4(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__, v3);
+    this = (TitleInfoEventDailyPoint_o *)sub_1B686D4(&System_Random_TypeInfo, v4);
+    byte_4A06C69 = 1;
   }
   voiceList = v2->fields.voiceList;
   if ( !voiceList )
     goto LABEL_11;
   if ( voiceList->fields._size )
   {
-    v6 = (System_Random_o *)sub_1B64C4C(System_Random_TypeInfo);
+    v6 = (System_Random_o *)sub_1B68920(System_Random_TypeInfo);
     System_Random___ctor(v6, 0LL);
     v7 = v2->fields.voiceList;
     if ( v7 )
@@ -811,7 +812,7 @@ void __fastcall TitleInfoEventDailyPoint__StartVoice(TitleInfoEventDailyPoint_o 
           this = (TitleInfoEventDailyPoint_o *)System_Collections_Generic_List_object___get_Item(
                                                  v8,
                                                  (int32_t)this,
-                                                 (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
+                                                 (const MethodInfo_34BBFA8 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
           if ( this )
           {
             *(_QWORD *)&v2->fields.maxPlayCnt = (unsigned int)this->fields.m_CancellationTokenSource;
@@ -822,7 +823,7 @@ void __fastcall TitleInfoEventDailyPoint__StartVoice(TitleInfoEventDailyPoint_o 
       }
     }
 LABEL_11:
-    sub_1B64C5C(this, method);
+    sub_1B68930(this, method);
   }
 }
 
@@ -831,10 +832,10 @@ void __fastcall TitleInfoEventDailyPoint__Update(TitleInfoEventDailyPoint_o *thi
 {
   const MethodInfo *v3; // x1
 
-  if ( (byte_49FCBDD & 1) == 0 )
+  if ( (byte_4A06C6C & 1) == 0 )
   {
-    sub_1B64A00(&CTouch_TypeInfo, method);
-    byte_49FCBDD = 1;
+    sub_1B686D4(&CTouch_TypeInfo, method);
+    byte_4A06C6C = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -873,19 +874,19 @@ void __fastcall TitleInfoEventDailyPoint___OnLoadSvtVoice_b__26_0(
   UnityEngine_Animation_o *v23; // x20
   System_String_o *v24; // x0
 
-  if ( (byte_49FCBE0 & 1) == 0 )
+  if ( (byte_4A06C6F & 1) == 0 )
   {
-    sub_1B64A00(&AvalonSceneManager_TypeInfo, method);
-    sub_1B64A00(&Method_DataManager_GetMasterData_BgmMaster___, v3);
-    sub_1B64A00(&Method_DataMasterBase_BgmMaster__BgmEntity__int__GetEntity__, v4);
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, v5);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_1B64A00(&SoundManager_TypeInfo, v8);
-    sub_1B64A00(&StringLiteral_12907/*"StartVoice"*/, v9);
-    byte_49FCBE0 = 1;
+    sub_1B686D4(&AvalonSceneManager_TypeInfo, method);
+    sub_1B686D4(&Method_DataManager_GetMasterData_BgmMaster___, v3);
+    sub_1B686D4(&Method_DataMasterBase_BgmMaster__BgmEntity__int__GetEntity__, v4);
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, v5);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    sub_1B686D4(&SoundManager_TypeInfo, v8);
+    sub_1B686D4(&StringLiteral_12908/*"StartVoice"*/, v9);
+    byte_4A06C6F = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v12 = Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
@@ -894,7 +895,7 @@ void __fastcall TitleInfoEventDailyPoint___OnLoadSvtVoice_b__26_0(
   CommonUI__maskFadein(v12, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0LL, 0LL);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_12907/*"StartVoice"*/,
+    (System_String_o *)StringLiteral_12908/*"StartVoice"*/,
     this->fields.voiceStartTime,
     0LL);
   eventPointBehavior = this->fields.eventPointBehavior;
@@ -902,12 +903,12 @@ void __fastcall TitleInfoEventDailyPoint___OnLoadSvtVoice_b__26_0(
     goto LABEL_38;
   if ( eventPointBehavior->fields.bgmId >= 1 )
   {
-    Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_38;
     Instance = (CommonUI_o *)DataManager__GetMasterData_object_(
                                (DataManager_o *)Instance,
-                               (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_BgmMaster___);
+                               (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_BgmMaster___);
     v14 = this->fields.eventPointBehavior;
     if ( !v14 )
       goto LABEL_38;
@@ -916,7 +917,7 @@ void __fastcall TitleInfoEventDailyPoint___OnLoadSvtVoice_b__26_0(
     Instance = (CommonUI_o *)DataMasterBase_object__object__int___GetEntity(
                                (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                v14->fields.bgmId,
-                               (const MethodInfo_30D6798 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__GetEntity__);
+                               (const MethodInfo_30E44C0 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__GetEntity__);
     if ( !Instance )
       goto LABEL_38;
     m_CancellationTokenSource = (System_String_o *)Instance->fields.m_CancellationTokenSource;
@@ -949,12 +950,12 @@ void __fastcall TitleInfoEventDailyPoint___OnLoadSvtVoice_b__26_0(
         if ( Instance )
         {
           name = UnityEngine_Object__get_name((UnityEngine_Object_o *)Instance, 0LL);
-          SimpleAnimation__Play_63522800(v19, name, 0LL);
+          SimpleAnimation__Play_63557140(v19, name, 0LL);
           goto LABEL_37;
         }
       }
 LABEL_38:
-      sub_1B64C5C(Instance, v11);
+      sub_1B68930(Instance, v11);
     }
   }
   else
@@ -984,7 +985,7 @@ LABEL_38:
           if ( Instance )
           {
             v24 = UnityEngine_Object__get_name((UnityEngine_Object_o *)Instance, 0LL);
-            UnityEngine_Animation__Play_68882568(v23, v24, 0LL);
+            UnityEngine_Animation__Play_68916908(v23, v24, 0LL);
             goto LABEL_37;
           }
         }

@@ -22,14 +22,14 @@ void __fastcall LapTimeEffectSubComponent__RecvParam(
   void *monitor; // x8
   int64_t v16; // x20
 
-  if ( (byte_49FFEAA & 1) == 0 )
+  if ( (byte_4A09FFA & 1) == 0 )
   {
-    sub_1B64A00(&LocalizationManager_TypeInfo, param);
-    sub_1B64A00(&RaceResultEffectParam_TypeInfo, v5);
-    sub_1B64A00(&StringLiteral_10891/*"RACE_TARGET_GOAL_RANK"*/, v6);
-    sub_1B64A00(&StringLiteral_1/*""*/, v7);
-    sub_1B64A00(&StringLiteral_5651/*"EVENT_RACE_RESULT_TIME_NONE"*/, v8);
-    byte_49FFEAA = 1;
+    sub_1B686D4(&LocalizationManager_TypeInfo, param);
+    sub_1B686D4(&RaceResultEffectParam_TypeInfo, v5);
+    sub_1B686D4(&StringLiteral_10894/*"RACE_TARGET_GOAL_RANK"*/, v6);
+    sub_1B686D4(&StringLiteral_1/*""*/, v7);
+    sub_1B686D4(&StringLiteral_5651/*"EVENT_RACE_RESULT_TIME_NONE"*/, v8);
+    byte_4A09FFA = 1;
   }
   if ( param
     && (methodPtr_low = LOBYTE(RaceResultEffectParam_TypeInfo->vtable._0_Equals.methodPtr),
@@ -39,14 +39,14 @@ void __fastcall LapTimeEffectSubComponent__RecvParam(
     && v12[6] >= 5 )
   {
     v13 = *((_QWORD *)v12 + 7);
-    Value = (System_String_o *)ConstantMaster__getValue((System_String_o *)StringLiteral_10891/*"RACE_TARGET_GOAL_RANK"*/, 0LL);
+    Value = (System_String_o *)ConstantMaster__getValue((System_String_o *)StringLiteral_10894/*"RACE_TARGET_GOAL_RANK"*/, 0LL);
     if ( v13 <= (int)Value )
     {
       monitor = param[1].monitor;
       if ( !monitor )
         goto LABEL_22;
       if ( *((_DWORD *)monitor + 6) <= 4u )
-        sub_1B64C64(Value, param);
+        sub_1B68938(Value, param);
       v16 = *((_QWORD *)monitor + 8);
       label = this->fields.label;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -54,7 +54,7 @@ void __fastcall LapTimeEffectSubComponent__RecvParam(
       Value = LocalizationManager__GetLapTime(v16, 0LL);
       if ( !label )
 LABEL_22:
-        sub_1B64C5C(Value, param);
+        sub_1B68930(Value, param);
     }
     else
     {

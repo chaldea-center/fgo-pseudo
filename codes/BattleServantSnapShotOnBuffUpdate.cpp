@@ -13,7 +13,7 @@ void __fastcall BattleServantSnapShotOnBuffUpdate___ctor(
         this->fields._MaxHp_k__BackingField = BattleServantData__getMaxHp(svtData, 0LL),
         (AuraIdList = BattleServantData__getAuraIdList(svtData, 0LL)) == 0LL) )
   {
-    sub_1B64C5C(AuraIdList, v6);
+    sub_1B68930(AuraIdList, v6);
   }
   this->fields._AuraSum_k__BackingField = *(_QWORD *)&AuraIdList->max_length;
 }

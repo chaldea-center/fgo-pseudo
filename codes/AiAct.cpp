@@ -76,7 +76,7 @@ bool __fastcall AiAct__isThinkEnd(int32_t intype, const MethodInfo *method)
 }
 
 
-bool __fastcall AiAct__isThinkEnd_37254744(int32_t type, const MethodInfo *method)
+bool __fastcall AiAct__isThinkEnd_37311584(int32_t type, const MethodInfo *method)
 {
   return type != 99;
 }

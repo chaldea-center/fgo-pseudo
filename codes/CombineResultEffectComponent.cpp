@@ -39,104 +39,104 @@ void __fastcall CombineResultEffectComponent___ctor(CombineResultEffectComponent
   int32_t v39; // w2
   int32_t v40; // w3
 
-  if ( (byte_4A02380 & 1) == 0 )
+  if ( (byte_4A0C4D8 & 1) == 0 )
   {
-    sub_1B64A00(&Method_System_Collections_Generic_HashSet_CombineResultEffectComponent_Kind__Add__, method);
-    sub_1B64A00(&Method_System_Collections_Generic_HashSet_CombineResultEffectComponent_Kind___ctor__, v3);
-    sub_1B64A00(&System_Collections_Generic_HashSet_CombineResultEffectComponent_Kind__TypeInfo, v4);
-    sub_1B64A00(&int___TypeInfo, v5);
-    sub_1B64A00(&Method_System_Collections_Generic_List_StandFigureCollect___ctor__, v6);
-    sub_1B64A00(&System_Collections_Generic_List_StandFigureCollect__TypeInfo, v7);
-    sub_1B64A00(&string___TypeInfo, v8);
-    sub_1B64A00(&StringLiteral_17203/*"bit_result02"*/, v9);
-    sub_1B64A00(&StringLiteral_17204/*"bit_result03"*/, v10);
-    sub_1B64A00(&StringLiteral_17205/*"bit_result04"*/, v11);
-    sub_1B64A00(&StringLiteral_17202/*"bit_result01"*/, v12);
-    byte_4A02380 = 1;
+    sub_1B686D4(&Method_System_Collections_Generic_HashSet_CombineResultEffectComponent_Kind__Add__, method);
+    sub_1B686D4(&Method_System_Collections_Generic_HashSet_CombineResultEffectComponent_Kind___ctor__, v3);
+    sub_1B686D4(&System_Collections_Generic_HashSet_CombineResultEffectComponent_Kind__TypeInfo, v4);
+    sub_1B686D4(&int___TypeInfo, v5);
+    sub_1B686D4(&Method_System_Collections_Generic_List_StandFigureCollect___ctor__, v6);
+    sub_1B686D4(&System_Collections_Generic_List_StandFigureCollect__TypeInfo, v7);
+    sub_1B686D4(&string___TypeInfo, v8);
+    sub_1B686D4(&StringLiteral_17204/*"bit_result02"*/, v9);
+    sub_1B686D4(&StringLiteral_17205/*"bit_result03"*/, v10);
+    sub_1B686D4(&StringLiteral_17206/*"bit_result04"*/, v11);
+    sub_1B686D4(&StringLiteral_17203/*"bit_result01"*/, v12);
+    byte_4A0C4D8 = 1;
   }
-  v13 = sub_1B64AA8(string___TypeInfo, 3LL);
+  v13 = sub_1B6877C(string___TypeInfo, 3LL);
   if ( !v13 )
     goto LABEL_12;
   v17 = v13;
   if ( !*(_DWORD *)(v13 + 24) )
     goto LABEL_11;
-  v18 = StringLiteral_17202/*"bit_result01"*/;
-  *(_QWORD *)(v13 + 32) = StringLiteral_17202/*"bit_result01"*/;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v13 + 32), v18, v15, v16);
+  v18 = StringLiteral_17203/*"bit_result01"*/;
+  *(_QWORD *)(v13 + 32) = StringLiteral_17203/*"bit_result01"*/;
+  sub_1B68678((ServantStatusBattleListViewItem_o *)(v13 + 32), v18, v15, v16);
   if ( *(_DWORD *)(v17 + 24) <= 1u )
     goto LABEL_11;
-  v21 = StringLiteral_17203/*"bit_result02"*/;
-  *(_QWORD *)(v17 + 40) = StringLiteral_17203/*"bit_result02"*/;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v17 + 40), v21, v19, v20);
+  v21 = StringLiteral_17204/*"bit_result02"*/;
+  *(_QWORD *)(v17 + 40) = StringLiteral_17204/*"bit_result02"*/;
+  sub_1B68678((ServantStatusBattleListViewItem_o *)(v17 + 40), v21, v19, v20);
   if ( *(_DWORD *)(v17 + 24) <= 2u )
     goto LABEL_11;
-  v24 = StringLiteral_17204/*"bit_result03"*/;
-  *(_QWORD *)(v17 + 48) = StringLiteral_17204/*"bit_result03"*/;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v17 + 48), v24, v22, v23);
+  v24 = StringLiteral_17205/*"bit_result03"*/;
+  *(_QWORD *)(v17 + 48) = StringLiteral_17205/*"bit_result03"*/;
+  sub_1B68678((ServantStatusBattleListViewItem_o *)(v17 + 48), v24, v22, v23);
   this->fields.startAniName = (struct System_String_array *)v17;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.startAniName, v17, v25, v26);
-  v27 = StringLiteral_17205/*"bit_result04"*/;
-  this->fields.LimitAnimName = (struct System_String_o *)StringLiteral_17205/*"bit_result04"*/;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.LimitAnimName, v27, v28, v29);
-  *(_OWORD *)&this->fields.NAME_REVEAL_INVOKE_TIME = xmmword_BA3EE0;
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.startAniName, v17, v25, v26);
+  v27 = StringLiteral_17206/*"bit_result04"*/;
+  this->fields.LimitAnimName = (struct System_String_o *)StringLiteral_17206/*"bit_result04"*/;
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.LimitAnimName, v27, v28, v29);
+  *(_OWORD *)&this->fields.NAME_REVEAL_INVOKE_TIME = xmmword_BA6FB0;
   *(_QWORD *)&this->fields.NAME_REVEAL_EMISSION_BASE_BOX_X = 0x3DF5C28F3FE66666LL;
-  v30 = (System_Collections_Generic_List_object__o *)sub_1B64C4C(System_Collections_Generic_List_StandFigureCollect__TypeInfo);
+  v30 = (System_Collections_Generic_List_object__o *)sub_1B68920(System_Collections_Generic_List_StandFigureCollect__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v30,
-    (const MethodInfo_34AF794 *)Method_System_Collections_Generic_List_StandFigureCollect___ctor__);
+    (const MethodInfo_34BBA44 *)Method_System_Collections_Generic_List_StandFigureCollect___ctor__);
   this->fields.currentFigureCollectList = (struct System_Collections_Generic_List_StandFigureCollect__o *)v30;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.currentFigureCollectList, (int32_t)v30, v31, v32);
-  v33 = (System_Collections_Generic_List_object__o *)sub_1B64C4C(System_Collections_Generic_List_StandFigureCollect__TypeInfo);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.currentFigureCollectList, (int32_t)v30, v31, v32);
+  v33 = (System_Collections_Generic_List_object__o *)sub_1B68920(System_Collections_Generic_List_StandFigureCollect__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v33,
-    (const MethodInfo_34AF794 *)Method_System_Collections_Generic_List_StandFigureCollect___ctor__);
+    (const MethodInfo_34BBA44 *)Method_System_Collections_Generic_List_StandFigureCollect___ctor__);
   this->fields.afterFigureCollectList = (struct System_Collections_Generic_List_StandFigureCollect__o *)v33;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.afterFigureCollectList, (int32_t)v33, v34, v35);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.afterFigureCollectList, (int32_t)v33, v34, v35);
   this->fields.combineStatusDisp = 1;
   *(_QWORD *)&this->fields.voiceSvtId = -1LL;
-  v13 = sub_1B64AA8(int___TypeInfo, 1LL);
+  v13 = sub_1B6877C(int___TypeInfo, 1LL);
   if ( !v13 )
     goto LABEL_12;
   v14 = v13;
   if ( !*(_DWORD *)(v13 + 24) )
 LABEL_11:
-    sub_1B64C64(v13, v14);
+    sub_1B68938(v13, v14);
   *(_DWORD *)(v13 + 32) = 100;
   this->fields.ChangeCardEffectLvList = (struct System_Int32_array *)v13;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.ChangeCardEffectLvList, v13, v36, v37);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.ChangeCardEffectLvList, v13, v36, v37);
   this->fields.standBasePosition.fields.z = 0.0;
   this->fields.volume = 1.0;
   *(_QWORD *)&this->fields.standBasePosition.fields.x = 0x43BE0000C3990000LL;
   this->fields.autoFadeout = 1;
-  v38 = (System_Collections_Generic_HashSet_T__o *)sub_1B64C4C(System_Collections_Generic_HashSet_CombineResultEffectComponent_Kind__TypeInfo);
+  v38 = (System_Collections_Generic_HashSet_T__o *)sub_1B68920(System_Collections_Generic_HashSet_CombineResultEffectComponent_Kind__TypeInfo);
   System_Collections_Generic_HashSet_Int32Enum____ctor(
     v38,
-    (const MethodInfo_3368424 *)Method_System_Collections_Generic_HashSet_CombineResultEffectComponent_Kind___ctor__);
+    (const MethodInfo_3376C70 *)Method_System_Collections_Generic_HashSet_CombineResultEffectComponent_Kind___ctor__);
   if ( !v38 )
 LABEL_12:
-    sub_1B64C5C(v13, v14);
+    sub_1B68930(v13, v14);
   System_Collections_Generic_HashSet_Int32Enum___Add(
     v38,
     1,
-    (const MethodInfo_3369628 *)Method_System_Collections_Generic_HashSet_CombineResultEffectComponent_Kind__Add__);
+    (const MethodInfo_3377E74 *)Method_System_Collections_Generic_HashSet_CombineResultEffectComponent_Kind__Add__);
   System_Collections_Generic_HashSet_Int32Enum___Add(
     v38,
     10,
-    (const MethodInfo_3369628 *)Method_System_Collections_Generic_HashSet_CombineResultEffectComponent_Kind__Add__);
+    (const MethodInfo_3377E74 *)Method_System_Collections_Generic_HashSet_CombineResultEffectComponent_Kind__Add__);
   System_Collections_Generic_HashSet_Int32Enum___Add(
     v38,
     26,
-    (const MethodInfo_3369628 *)Method_System_Collections_Generic_HashSet_CombineResultEffectComponent_Kind__Add__);
+    (const MethodInfo_3377E74 *)Method_System_Collections_Generic_HashSet_CombineResultEffectComponent_Kind__Add__);
   System_Collections_Generic_HashSet_Int32Enum___Add(
     v38,
     19,
-    (const MethodInfo_3369628 *)Method_System_Collections_Generic_HashSet_CombineResultEffectComponent_Kind__Add__);
+    (const MethodInfo_3377E74 *)Method_System_Collections_Generic_HashSet_CombineResultEffectComponent_Kind__Add__);
   System_Collections_Generic_HashSet_Int32Enum___Add(
     v38,
     24,
-    (const MethodInfo_3369628 *)Method_System_Collections_Generic_HashSet_CombineResultEffectComponent_Kind__Add__);
+    (const MethodInfo_3377E74 *)Method_System_Collections_Generic_HashSet_CombineResultEffectComponent_Kind__Add__);
   this->fields.limitUpKinds = (struct System_Collections_Generic_HashSet_CombineResultEffectComponent_Kind__o *)v38;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.limitUpKinds, (int32_t)v38, v39, v40);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.limitUpKinds, (int32_t)v38, v39, v40);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -153,25 +153,25 @@ void __fastcall CombineResultEffectComponent__Awake(CombineResultEffectComponent
   int32_t v10; // w2
   int32_t v11; // w3
 
-  if ( (byte_4A02332 & 1) == 0 )
+  if ( (byte_4A0C48A & 1) == 0 )
   {
-    sub_1B64A00(&Method_UnityEngine_Component_GetComponent_CheckCombineResStatus___, method);
-    sub_1B64A00(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___, v3);
-    byte_4A02332 = 1;
+    sub_1B686D4(&Method_UnityEngine_Component_GetComponent_CheckCombineResStatus___, method);
+    sub_1B686D4(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___, v3);
+    byte_4A0C48A = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2E32784 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
+                       (const MethodInfo_2E407F4 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
   this->fields.fsm = (struct PlayMakerFSM_o *)Component_object;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.fsm, (int32_t)Component_object, v5, v6);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.fsm, (int32_t)Component_object, v5, v6);
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
-    sub_1B64C5C(0LL, v8);
+    sub_1B68930(0LL, v8);
   v9 = UnityEngine_Component__GetComponent_object_(
          transform,
-         (const MethodInfo_2E32784 *)Method_UnityEngine_Component_GetComponent_CheckCombineResStatus___);
+         (const MethodInfo_2E407F4 *)Method_UnityEngine_Component_GetComponent_CheckCombineResStatus___);
   this->fields.combineResStatus = (struct CheckCombineResStatus_o *)v9;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.combineResStatus, (int32_t)v9, v10, v11);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.combineResStatus, (int32_t)v9, v10, v11);
 }
 
 
@@ -190,19 +190,19 @@ bool __fastcall CombineResultEffectComponent__CheckCombineLimit(
   ServantLvDetailEntity_o *HighestData; // x21
   int32_t v13; // w8
 
-  if ( (byte_4A02346 & 1) == 0 )
+  if ( (byte_4A0C49E & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataManager_GetMasterData_ServantLvDetailMaster___, *(_QWORD *)&oldLv);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    byte_4A02346 = 1;
+    sub_1B686D4(&Method_DataManager_GetMasterData_ServantLvDetailMaster___, *(_QWORD *)&oldLv);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    byte_4A0C49E = 1;
   }
   this->fields.combineLimitLv = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantLvDetailMaster___);
+               (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_ServantLvDetailMaster___);
   if ( !Instance )
     return (char)Instance;
   v10 = (ServantLvDetailMaster_o *)Instance;
@@ -227,7 +227,7 @@ LABEL_12:
       return (char)Instance;
     }
 LABEL_14:
-    sub_1B64C5C(Instance, v9);
+    sub_1B68930(Instance, v9);
   }
 LABEL_11:
   LOBYTE(Instance) = 0;
@@ -239,19 +239,12 @@ bool __fastcall CombineResultEffectComponent__CheckFinishedLimitUpChangeInfo(
         CombineResultEffectComponent_o *this,
         const MethodInfo *method)
 {
-  struct LimitUpResultCheckComponent_o *limitUpResultCheck; // x19
-  struct System_Collections_Generic_List_GameObject__o *resInfoList; // x8
+  LimitUpResultCheckComponent_o *limitUpResultCheck; // x0
 
   limitUpResultCheck = this->fields.limitUpResultCheck;
   if ( !limitUpResultCheck )
-    sub_1B64C5C(this, method);
-  if ( (byte_4A023AC & 1) == 0 )
-  {
-    sub_1B64A00(&Method_System_Collections_Generic_List_GameObject__get_Count__, method);
-    byte_4A023AC = 1;
-  }
-  resInfoList = limitUpResultCheck->fields.resInfoList;
-  return !resInfoList || resInfoList->fields._size <= 0;
+    sub_1B68930(0LL, method);
+  return LimitUpResultCheckComponent__CheckFinishedResultLimitUp(limitUpResultCheck, 0LL);
 }
 
 
@@ -266,30 +259,30 @@ bool __fastcall CombineResultEffectComponent__CheckSaintGraphProfileChange(
   Il2CppObject *Master_object; // x0
   __int64 v8; // x1
 
-  if ( (byte_4A0237D & 1) == 0 )
+  if ( (byte_4A0C4D5 & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataManager_GetMaster_ServantCommentMaster___, *(_QWORD *)&svtId);
-    sub_1B64A00(&DataManager_TypeInfo, v6);
-    byte_4A0237D = 1;
+    sub_1B686D4(&Method_DataManager_GetMaster_ServantCommentMaster___, *(_QWORD *)&svtId);
+    sub_1B686D4(&DataManager_TypeInfo, v6);
+    byte_4A0C4D5 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E3BC8C *)Method_DataManager_GetMaster_ServantCommentMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E49CFC *)Method_DataManager_GetMaster_ServantCommentMaster___);
   if ( !Master_object )
-    sub_1B64C5C(0LL, v8);
+    sub_1B68930(0LL, v8);
   return ServantCommentMaster__IsOpenImageLimitProfile((ServantCommentMaster_o *)Master_object, svtId, limitCount, 0LL);
 }
 
 
 void __fastcall CombineResultEffectComponent__Close(CombineResultEffectComponent_o *this, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x1
+  __int64 v3; // x1
   UnityEngine_Component_o *svtResultInfoWindow; // x0
 
-  if ( (byte_4A0237A & 1) == 0 )
+  if ( (byte_4A0C4D2 & 1) == 0 )
   {
-    sub_1B64A00(&System_GC_TypeInfo, method);
-    byte_4A0237A = 1;
+    sub_1B686D4(&System_GC_TypeInfo, method);
+    byte_4A0C4D2 = 1;
   }
   this->fields.skillShowIndex = 0;
   this->fields.tdShowIndex = 0;
@@ -318,17 +311,17 @@ void __fastcall CombineResultEffectComponent__Close(CombineResultEffectComponent
     svtResultInfoWindow = (UnityEngine_Component_o *)this->fields.skillResultInfoWindow;
     if ( !svtResultInfoWindow )
       goto LABEL_17;
-    SkillUpResultWindowComponent__Close((SkillUpResultWindowComponent_o *)svtResultInfoWindow, v3);
+    SkillUpResultWindowComponent__Close((SkillUpResultWindowComponent_o *)svtResultInfoWindow, 0LL);
   }
   if ( !System_GC_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_GC_TypeInfo);
-  System_GC__Collect_62431196(0LL);
+  System_GC__Collect_62465536(0LL);
   svtResultInfoWindow = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(
                                                      (UnityEngine_Component_o *)this,
                                                      0LL);
   if ( !svtResultInfoWindow )
 LABEL_17:
-    sub_1B64C5C(svtResultInfoWindow, v3);
+    sub_1B68930(svtResultInfoWindow, v3);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)svtResultInfoWindow, 0, 0LL);
 }
 
@@ -345,30 +338,29 @@ void __fastcall CombineResultEffectComponent__CloseLimitCountSealDialog(
   System_Action_o *v8; // x21
   __int64 v9; // x0
   __int64 v10; // x1
-  const MethodInfo *v11; // x2
 
-  if ( (byte_4A0237C & 1) == 0 )
+  if ( (byte_4A0C4D4 & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, method);
-    sub_1B64A00(&Method_CombineResultEffectComponent_CloseLimitCountSealDialog__, v3);
-    sub_1B64A00(&Method_CombineResultEffectComponent__CloseLimitCountSealDialog_b__171_0__, v4);
-    byte_4A0237C = 1;
+    sub_1B686D4(&System_Action_TypeInfo, method);
+    sub_1B686D4(&Method_CombineResultEffectComponent_CloseLimitCountSealDialog__, v3);
+    sub_1B686D4(&Method_CombineResultEffectComponent__CloseLimitCountSealDialog_b__171_0__, v4);
+    byte_4A0C4D4 = 1;
   }
   v5 = Method_CombineResultEffectComponent_CloseLimitCountSealDialog__;
   if ( (*((_BYTE *)Method_CombineResultEffectComponent_CloseLimitCountSealDialog__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1B64A18(Method_CombineResultEffectComponent_CloseLimitCountSealDialog__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1B649E4(v5, v5[4]);
+    v5 = (_QWORD *)sub_1B686EC(Method_CombineResultEffectComponent_CloseLimitCountSealDialog__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1B686B8(v5, v5[4]);
   OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0LL);
   limitCountSealDialog = this->fields.limitCountSealDialog;
-  v8 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+  v8 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
   System_Action___ctor(
     v8,
     (Il2CppObject *)this,
     Method_CombineResultEffectComponent__CloseLimitCountSealDialog_b__171_0__,
     0LL);
   if ( !limitCountSealDialog )
-    sub_1B64C5C(v9, v10);
-  LimitCountSealDialogComponent__Close(limitCountSealDialog, v8, v11);
+    sub_1B68930(v9, v10);
+  LimitCountSealDialogComponent__Close(limitCountSealDialog, v8, 0LL);
 }
 
 
@@ -439,35 +431,35 @@ void __fastcall CombineResultEffectComponent__CreateAfterFigurePrefab(
   System_Collections_Generic_List_Enumerator_object__o v66; // [xsp+18h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v67; // [xsp+30h] [xbp-80h] BYREF
 
-  if ( (byte_4A0235E & 1) == 0 )
+  if ( (byte_4A0C4B6 & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, *(_QWORD *)&svtId);
-    sub_1B64A00(&Method_DataManager_GetMasterData_SvtMultiPortraitMaster___, v10);
-    sub_1B64A00(&Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___, v11);
-    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__, v12);
-    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__, v13);
-    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__get_Current__, v14);
-    sub_1B64A00(&Method_System_Collections_Generic_List_StandFigureCollect__Add__, v15);
-    sub_1B64A00(&Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__, v16);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    sub_1B64A00(&StandFigureCollect_TypeInfo, v18);
-    byte_4A0235E = 1;
+    sub_1B686D4(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, *(_QWORD *)&svtId);
+    sub_1B686D4(&Method_DataManager_GetMasterData_SvtMultiPortraitMaster___, v10);
+    sub_1B686D4(&Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___, v11);
+    sub_1B686D4(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__, v12);
+    sub_1B686D4(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__, v13);
+    sub_1B686D4(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__get_Current__, v14);
+    sub_1B686D4(&Method_System_Collections_Generic_List_StandFigureCollect__Add__, v15);
+    sub_1B686D4(&Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__, v16);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
+    sub_1B686D4(&StandFigureCollect_TypeInfo, v18);
+    byte_4A0C4B6 = 1;
   }
   memset(&v67, 0, sizeof(v67));
   StandFigureNode = (UnityEngine_Component_o *)CombineResultEffectComponent__GetStandFigureNode(
                                                  this,
                                                  nodeName,
                                                  *(const MethodInfo **)&imageLimitCount);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_47;
   v22 = Instance;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+                        (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 v22,
-                                (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_SvtMultiPortraitMaster___);
+                                (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_SvtMultiPortraitMaster___);
   if ( !MasterData_object )
     goto LABEL_47;
   v24 = (SvtMultiPortraitMaster_o *)Instance;
@@ -484,13 +476,13 @@ void __fastcall CombineResultEffectComponent__CreateAfterFigurePrefab(
     || (v26 = (System_Collections_Generic_List_object__o *)Instance,
         Instance = (DataManager_o *)System_Linq_Enumerable__Any_object_(
                                       (System_Collections_Generic_IEnumerable_TSource__o *)Instance,
-                                      (const MethodInfo_2E49388 *)Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___),
+                                      (const MethodInfo_2E57724 *)Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___),
         ((unsigned __int8)Instance & 1) == 0) )
   {
     if ( StandFigureNode )
     {
       gameObject = UnityEngine_Component__get_gameObject(StandFigureNode, 0LL);
-      Instance = (DataManager_o *)StandFigureManager__CreateRenderPrefab_37612660(
+      Instance = (DataManager_o *)StandFigureManager__CreateRenderPrefab_37669908(
                                     gameObject,
                                     svtId,
                                     v25,
@@ -512,7 +504,7 @@ void __fastcall CombineResultEffectComponent__CreateAfterFigurePrefab(
             this->fields.standBasePosition,
             0LL);
           afterFigureCollectList = (System_Collections_Generic_List_object__o *)this->fields.afterFigureCollectList;
-          v58 = (StandFigureCollect_o *)sub_1B64C4C(StandFigureCollect_TypeInfo);
+          v58 = (StandFigureCollect_o *)sub_1B68920(StandFigureCollect_TypeInfo);
           StandFigureCollect___ctor(v58, 0LL, v56, 0LL);
           if ( afterFigureCollectList )
           {
@@ -527,14 +519,14 @@ void __fastcall CombineResultEffectComponent__CreateAfterFigurePrefab(
                 System_Collections_Generic_List_object___AddWithResize(
                   afterFigureCollectList,
                   (Il2CppObject *)v58,
-                  *(const MethodInfo_34AFFC8 **)(*(_QWORD *)(v62[4] + 192LL) + 112LL));
+                  *(const MethodInfo_34BC278 **)(*(_QWORD *)(v62[4] + 192LL) + 112LL));
               }
               else
               {
                 v64 = &items->obj.klass + size;
                 afterFigureCollectList->fields._size = size + 1;
                 v64[4] = (Il2CppClass *)v58;
-                sub_1B649A4((ServantStatusBattleListViewItem_o *)(v64 + 4), (int32_t)v58, v59, v60);
+                sub_1B68678((ServantStatusBattleListViewItem_o *)(v64 + 4), (int32_t)v58, v59, v60);
               }
               return;
             }
@@ -543,30 +535,30 @@ void __fastcall CombineResultEffectComponent__CreateAfterFigurePrefab(
       }
     }
 LABEL_47:
-    sub_1B64C5C(Instance, v21);
+    sub_1B68930(Instance, v21);
   }
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v66,
     v26,
-    (const MethodInfo_34B0B60 *)Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__);
+    (const MethodInfo_34BCD70 *)Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__);
   v67 = v66;
   while ( 1 )
   {
     v27 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v67,
-            (const MethodInfo_322C9A4 *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__);
+            (const MethodInfo_323A820 *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__);
     if ( !v27 )
       break;
     current = (SvtMultiPortraitEntity_o *)v67.fields._current;
     if ( !v67.fields._current )
-      sub_1B64C5C(v27, v28);
+      sub_1B68930(v27, v28);
     klass_high = HIDWORD(v67.fields._current[2].klass);
     if ( klass_high >= 1 )
       v31 = klass_high + 1;
     else
       v31 = 1;
     if ( !StandFigureNode )
-      sub_1B64C5C(v27, v28);
+      sub_1B68930(v27, v28);
     v32 = UnityEngine_Component__get_gameObject(StandFigureNode, 0LL);
     PrefabForImageId = StandFigureManager__CreatePrefabForImageId(
                          v32,
@@ -580,16 +572,16 @@ LABEL_47:
                          0LL);
     v37 = (UnityEngine_Component_o *)PrefabForImageId;
     if ( !PrefabForImageId )
-      sub_1B64C5C(0LL, v34);
+      sub_1B68930(0LL, v34);
     PrefabForImageId->fields.svtMultiPortraitEntity = current;
-    sub_1B649A4(
+    sub_1B68678(
       (ServantStatusBattleListViewItem_o *)&PrefabForImageId->fields.svtMultiPortraitEntity,
       (int32_t)current,
       v35,
       v36);
     transform = UnityEngine_Component__get_transform(v37, 0LL);
     if ( !transform )
-      sub_1B64C5C(0LL, v39);
+      sub_1B68930(0LL, v39);
     UnityEngine_Transform__set_localPosition(transform, this->fields.standBasePosition, 0LL);
     commonPosition = current->fields.commonPosition;
     if ( commonPosition && (int)commonPosition->max_length >= 2 )
@@ -597,43 +589,43 @@ LABEL_47:
       v41 = UnityEngine_Component__get_gameObject(v37, 0LL);
       v43 = current->fields.commonPosition;
       if ( !v43 )
-        sub_1B64C5C(v41, v42);
+        sub_1B68930(v41, v42);
       max_length = v43->max_length;
       if ( max_length == 1 )
-        sub_1B64C64(v41, v42);
+        sub_1B68938(v41, v42);
       if ( !max_length )
-        sub_1B64C64(v41, v42);
-      GameObjectExtensions__AddLocalPosition_33377784(v41, (float)v43->m_Items[1], (float)v43->m_Items[2], 0LL);
+        sub_1B68938(v41, v42);
+      GameObjectExtensions__AddLocalPosition_33416328(v41, (float)v43->m_Items[1], (float)v43->m_Items[2], 0LL);
     }
     v45 = (System_Collections_Generic_List_object__o *)this->fields.afterFigureCollectList;
-    v46 = (StandFigureCollect_o *)sub_1B64C4C(StandFigureCollect_TypeInfo);
+    v46 = (StandFigureCollect_o *)sub_1B68920(StandFigureCollect_TypeInfo);
     StandFigureCollect___ctor(v46, current, (UIStandFigureR_o *)v37, 0LL);
     if ( !v45 )
-      sub_1B64C5C(v47, v48);
+      sub_1B68930(v47, v48);
     v51 = v45->fields._items;
     v52 = Method_System_Collections_Generic_List_StandFigureCollect__Add__;
     ++v45->fields._version;
     if ( !v51 )
-      sub_1B64C5C(v47, v48);
+      sub_1B68930(v47, v48);
     v53 = v45->fields._size;
     if ( (unsigned int)v53 >= v51->max_length )
     {
       System_Collections_Generic_List_object___AddWithResize(
         v45,
         (Il2CppObject *)v46,
-        *(const MethodInfo_34AFFC8 **)(*(_QWORD *)(v52[4] + 192LL) + 112LL));
+        *(const MethodInfo_34BC278 **)(*(_QWORD *)(v52[4] + 192LL) + 112LL));
     }
     else
     {
       v54 = &v51->obj.klass + v53;
       v45->fields._size = v53 + 1;
       v54[4] = (Il2CppClass *)v46;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)(v54 + 4), (int32_t)v46, v49, v50);
+      sub_1B68678((ServantStatusBattleListViewItem_o *)(v54 + 4), (int32_t)v46, v49, v50);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v67,
-    (const MethodInfo_322C9A0 *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__);
+    (const MethodInfo_323A81C *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__);
 }
 
 
@@ -716,36 +708,36 @@ void __fastcall CombineResultEffectComponent__CreateBaseFigurePrefab(
   System_Collections_Generic_List_Enumerator_object__o v80; // [xsp+40h] [xbp-80h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v81; // 0:x0.16
 
-  if ( (byte_4A02355 & 1) == 0 )
+  if ( (byte_4A0C4AD & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, *(_QWORD *)&formId);
-    sub_1B64A00(&Method_DataManager_GetMasterData_SvtMultiPortraitMaster___, v13);
-    sub_1B64A00(&Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___, v14);
-    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__, v15);
-    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__, v16);
-    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__get_Current__, v17);
-    sub_1B64A00(&Method_System_Collections_Generic_List_StandFigureCollect__Add__, v18);
-    sub_1B64A00(&Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__, v19);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v20);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v21);
-    sub_1B64A00(&StandFigureCollect_TypeInfo, v22);
-    byte_4A02355 = 1;
+    sub_1B686D4(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, *(_QWORD *)&formId);
+    sub_1B686D4(&Method_DataManager_GetMasterData_SvtMultiPortraitMaster___, v13);
+    sub_1B686D4(&Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___, v14);
+    sub_1B686D4(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__, v15);
+    sub_1B686D4(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__, v16);
+    sub_1B686D4(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__get_Current__, v17);
+    sub_1B686D4(&Method_System_Collections_Generic_List_StandFigureCollect__Add__, v18);
+    sub_1B686D4(&Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__, v19);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v20);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v21);
+    sub_1B686D4(&StandFigureCollect_TypeInfo, v22);
+    byte_4A0C4AD = 1;
   }
   memset(&v80, 0, sizeof(v80));
   StandFigureNode = (UnityEngine_Component_o *)CombineResultEffectComponent__GetStandFigureNode(
                                                  this,
                                                  nodeName,
                                                  *(const MethodInfo **)&imageLimitCount);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_61;
   v26 = Instance;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+                        (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 v26,
-                                (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_SvtMultiPortraitMaster___);
+                                (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_SvtMultiPortraitMaster___);
   baseUsrSvtData = this->fields.baseUsrSvtData;
   if ( !baseUsrSvtData )
     goto LABEL_61;
@@ -756,7 +748,7 @@ void __fastcall CombineResultEffectComponent__CreateBaseFigurePrefab(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v81.fields.currentCryptoKey = v31;
   *(_QWORD *)&v81.fields.fakeValue = v30;
-  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v81, 0LL);
+  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v81, 0LL);
   if ( !MasterData_object )
     goto LABEL_61;
   v32 = (int)Instance;
@@ -787,14 +779,14 @@ void __fastcall CombineResultEffectComponent__CreateBaseFigurePrefab(
     || (v36 = (System_Collections_Generic_List_object__o *)Instance,
         Instance = (DataManager_o *)System_Linq_Enumerable__Any_object_(
                                       (System_Collections_Generic_IEnumerable_TSource__o *)Instance,
-                                      (const MethodInfo_2E49388 *)Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___),
+                                      (const MethodInfo_2E57724 *)Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___),
         ((unsigned __int8)Instance & 1) == 0) )
   {
     if ( StandFigureNode )
     {
       gameObject = UnityEngine_Component__get_gameObject(StandFigureNode, 0LL);
       Instance = (DataManager_o *)(ignoreFormChangeCheck | ((unsigned int)formId >> 31)
-                                 ? StandFigureManager__CreateRenderPrefab_37612660(
+                                 ? StandFigureManager__CreateRenderPrefab_37669908(
                                      gameObject,
                                      svtId,
                                      v34,
@@ -805,7 +797,7 @@ void __fastcall CombineResultEffectComponent__CreateBaseFigurePrefab(
                                      v35 & 1,
                                      friendshipNum,
                                      0LL)
-                                 : StandFigureManager__CreateRenderPrefab_37668236(
+                                 : StandFigureManager__CreateRenderPrefab_37725492(
                                      gameObject,
                                      svtId,
                                      v34,
@@ -828,7 +820,7 @@ void __fastcall CombineResultEffectComponent__CreateBaseFigurePrefab(
             this->fields.standBasePosition,
             0LL);
           currentFigureCollectList = (System_Collections_Generic_List_object__o *)this->fields.currentFigureCollectList;
-          v69 = (StandFigureCollect_o *)sub_1B64C4C(StandFigureCollect_TypeInfo);
+          v69 = (StandFigureCollect_o *)sub_1B68920(StandFigureCollect_TypeInfo);
           StandFigureCollect___ctor(v69, 0LL, v67, 0LL);
           if ( currentFigureCollectList )
           {
@@ -843,14 +835,14 @@ void __fastcall CombineResultEffectComponent__CreateBaseFigurePrefab(
                 System_Collections_Generic_List_object___AddWithResize(
                   currentFigureCollectList,
                   (Il2CppObject *)v69,
-                  *(const MethodInfo_34AFFC8 **)(*(_QWORD *)(v73[4] + 192LL) + 112LL));
+                  *(const MethodInfo_34BC278 **)(*(_QWORD *)(v73[4] + 192LL) + 112LL));
               }
               else
               {
                 v75 = &items->obj.klass + size;
                 currentFigureCollectList->fields._size = size + 1;
                 v75[4] = (Il2CppClass *)v69;
-                sub_1B649A4((ServantStatusBattleListViewItem_o *)(v75 + 4), (int32_t)v69, v70, v71);
+                sub_1B68678((ServantStatusBattleListViewItem_o *)(v75 + 4), (int32_t)v69, v70, v71);
               }
               return;
             }
@@ -859,23 +851,23 @@ void __fastcall CombineResultEffectComponent__CreateBaseFigurePrefab(
       }
     }
 LABEL_61:
-    sub_1B64C5C(Instance, v25);
+    sub_1B68930(Instance, v25);
   }
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v79,
     v36,
-    (const MethodInfo_34B0B60 *)Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__);
+    (const MethodInfo_34BCD70 *)Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__);
   v80 = v79;
   while ( 1 )
   {
     v37 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v80,
-            (const MethodInfo_322C9A4 *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__);
+            (const MethodInfo_323A820 *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__);
     if ( !v37 )
       break;
     current = (SvtMultiPortraitEntity_o *)v80.fields._current;
     if ( !v80.fields._current )
-      sub_1B64C5C(v37, v38);
+      sub_1B68930(v37, v38);
     klass_high = HIDWORD(v80.fields._current[2].klass);
     if ( klass_high >= 1 )
       v41 = klass_high + 1;
@@ -884,7 +876,7 @@ LABEL_61:
     if ( ignoreFormChangeCheck | ((unsigned int)formId >> 31) )
     {
       if ( !StandFigureNode )
-        sub_1B64C5C(v37, v38);
+        sub_1B68930(v37, v38);
       v42 = UnityEngine_Component__get_gameObject(StandFigureNode, 0LL);
       PrefabForImageId = StandFigureManager__CreatePrefabForImageId(
                            v42,
@@ -900,7 +892,7 @@ LABEL_61:
     else
     {
       if ( !StandFigureNode )
-        sub_1B64C5C(v37, v38);
+        sub_1B68930(v37, v38);
       v47 = UnityEngine_Component__get_gameObject(StandFigureNode, 0LL);
       PrefabForImageId = StandFigureManager__CreatePrefabForImageIdAndForm(
                            v47,
@@ -914,16 +906,16 @@ LABEL_61:
     }
     v48 = (UnityEngine_Component_o *)PrefabForImageId;
     if ( !PrefabForImageId )
-      sub_1B64C5C(0LL, v44);
+      sub_1B68930(0LL, v44);
     PrefabForImageId->fields.svtMultiPortraitEntity = current;
-    sub_1B649A4(
+    sub_1B68678(
       (ServantStatusBattleListViewItem_o *)&PrefabForImageId->fields.svtMultiPortraitEntity,
       (int32_t)current,
       v45,
       v46);
     transform = UnityEngine_Component__get_transform(v48, 0LL);
     if ( !transform )
-      sub_1B64C5C(0LL, v50);
+      sub_1B68930(0LL, v50);
     UnityEngine_Transform__set_localPosition(transform, this->fields.standBasePosition, 0LL);
     commonPosition = current->fields.commonPosition;
     if ( commonPosition && (int)commonPosition->max_length >= 2 )
@@ -931,43 +923,43 @@ LABEL_61:
       v52 = UnityEngine_Component__get_gameObject(v48, 0LL);
       v54 = current->fields.commonPosition;
       if ( !v54 )
-        sub_1B64C5C(v52, v53);
+        sub_1B68930(v52, v53);
       max_length = v54->max_length;
       if ( max_length == 1 )
-        sub_1B64C64(v52, v53);
+        sub_1B68938(v52, v53);
       if ( !max_length )
-        sub_1B64C64(v52, v53);
-      GameObjectExtensions__AddLocalPosition_33377784(v52, (float)v54->m_Items[1], (float)v54->m_Items[2], 0LL);
+        sub_1B68938(v52, v53);
+      GameObjectExtensions__AddLocalPosition_33416328(v52, (float)v54->m_Items[1], (float)v54->m_Items[2], 0LL);
     }
     v56 = (System_Collections_Generic_List_object__o *)this->fields.currentFigureCollectList;
-    v57 = (StandFigureCollect_o *)sub_1B64C4C(StandFigureCollect_TypeInfo);
+    v57 = (StandFigureCollect_o *)sub_1B68920(StandFigureCollect_TypeInfo);
     StandFigureCollect___ctor(v57, current, (UIStandFigureR_o *)v48, 0LL);
     if ( !v56 )
-      sub_1B64C5C(v58, v59);
+      sub_1B68930(v58, v59);
     v62 = v56->fields._items;
     v63 = Method_System_Collections_Generic_List_StandFigureCollect__Add__;
     ++v56->fields._version;
     if ( !v62 )
-      sub_1B64C5C(v58, v59);
+      sub_1B68930(v58, v59);
     v64 = v56->fields._size;
     if ( (unsigned int)v64 >= v62->max_length )
     {
       System_Collections_Generic_List_object___AddWithResize(
         v56,
         (Il2CppObject *)v57,
-        *(const MethodInfo_34AFFC8 **)(*(_QWORD *)(v63[4] + 192LL) + 112LL));
+        *(const MethodInfo_34BC278 **)(*(_QWORD *)(v63[4] + 192LL) + 112LL));
     }
     else
     {
       v65 = &v62->obj.klass + v64;
       v56->fields._size = v64 + 1;
       v65[4] = (Il2CppClass *)v57;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)(v65 + 4), (int32_t)v57, v60, v61);
+      sub_1B68678((ServantStatusBattleListViewItem_o *)(v65 + 4), (int32_t)v57, v60, v61);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v80,
-    (const MethodInfo_322C9A0 *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__);
+    (const MethodInfo_323A81C *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__);
 }
 
 
@@ -1008,15 +1000,15 @@ void __fastcall CombineResultEffectComponent__DestroySvtFigure(
   System_Collections_Generic_List_Enumerator_object__o v33; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v34; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4A02379 & 1) == 0 )
+  if ( (byte_4A0C4D1 & 1) == 0 )
   {
-    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__, method);
-    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__, v3);
-    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__, v4);
-    sub_1B64A00(&Method_System_Collections_Generic_List_StandFigureCollect__Clear__, v5);
-    sub_1B64A00(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__, v6);
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, v7);
-    byte_4A02379 = 1;
+    sub_1B686D4(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__, method);
+    sub_1B686D4(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__, v3);
+    sub_1B686D4(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__, v4);
+    sub_1B686D4(&Method_System_Collections_Generic_List_StandFigureCollect__Clear__, v5);
+    sub_1B686D4(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__, v6);
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, v7);
+    byte_4A0C4D1 = 1;
   }
   memset(&v34, 0, sizeof(v34));
   currentFigureCollectList = (System_Collections_Generic_List_object__o *)this->fields.currentFigureCollectList;
@@ -1025,18 +1017,18 @@ void __fastcall CombineResultEffectComponent__DestroySvtFigure(
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v33,
     currentFigureCollectList,
-    (const MethodInfo_34B0B60 *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+    (const MethodInfo_34BCD70 *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
   v34 = v33;
   while ( 1 )
   {
     v9 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v34,
-           (const MethodInfo_322C9A4 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+           (const MethodInfo_323A820 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
     if ( !v9 )
       break;
     current = v34.fields._current;
     if ( !v34.fields._current )
-      sub_1B64C5C(v9, v10);
+      sub_1B68930(v9, v10);
     monitor = (UnityEngine_Object_o *)v34.fields._current[1].monitor;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1044,20 +1036,20 @@ void __fastcall CombineResultEffectComponent__DestroySvtFigure(
     {
       v14 = (UIStandFigureR_o *)current[1].monitor;
       if ( !v14 )
-        sub_1B64C5C(0LL, v13);
+        sub_1B68930(0LL, v13);
       UIStandFigureR__ReleaseCharacter(v14, 0LL);
       v16 = (UnityEngine_Component_o *)current[1].monitor;
       if ( !v16 )
-        sub_1B64C5C(0LL, v15);
+        sub_1B68930(0LL, v15);
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v16, 0LL);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__DestroyImmediate_69137664(gameObject, 0LL);
+      UnityEngine_Object__DestroyImmediate_69172004(gameObject, 0LL);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v34,
-    (const MethodInfo_322C9A0 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+    (const MethodInfo_323A81C *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
   v18 = this->fields.currentFigureCollectList;
   if ( !v18 )
     goto LABEL_40;
@@ -1073,18 +1065,18 @@ void __fastcall CombineResultEffectComponent__DestroySvtFigure(
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v33,
     currentFigureCollectList,
-    (const MethodInfo_34B0B60 *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+    (const MethodInfo_34BCD70 *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
   v34 = v33;
   while ( 1 )
   {
     v21 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v34,
-            (const MethodInfo_322C9A4 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+            (const MethodInfo_323A820 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
     if ( !v21 )
       break;
     v23 = v34.fields._current;
     if ( !v34.fields._current )
-      sub_1B64C5C(v21, v22);
+      sub_1B68930(v21, v22);
     v24 = (UnityEngine_Object_o *)v34.fields._current[1].monitor;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1092,24 +1084,24 @@ void __fastcall CombineResultEffectComponent__DestroySvtFigure(
     {
       v26 = (UIStandFigureR_o *)v23[1].monitor;
       if ( !v26 )
-        sub_1B64C5C(0LL, v25);
+        sub_1B68930(0LL, v25);
       UIStandFigureR__ReleaseCharacter(v26, 0LL);
       v28 = (UnityEngine_Component_o *)v23[1].monitor;
       if ( !v28 )
-        sub_1B64C5C(0LL, v27);
+        sub_1B68930(0LL, v27);
       v29 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v28, 0LL);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__DestroyImmediate_69137664(v29, 0LL);
+      UnityEngine_Object__DestroyImmediate_69172004(v29, 0LL);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v34,
-    (const MethodInfo_322C9A0 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+    (const MethodInfo_323A81C *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
   afterFigureCollectList = this->fields.afterFigureCollectList;
   if ( !afterFigureCollectList )
 LABEL_40:
-    sub_1B64C5C(currentFigureCollectList, method);
+    sub_1B68930(currentFigureCollectList, method);
   v31 = afterFigureCollectList->fields._size;
   v32 = afterFigureCollectList->fields._version + 1;
   afterFigureCollectList->fields._size = 0;
@@ -1128,7 +1120,7 @@ void __fastcall CombineResultEffectComponent__EndDisp(CombineResultEffectCompone
     || (UnityEngine_Collider__set_enabled(bgCollider, 1, 0LL),
         (bgCollider = (UnityEngine_Collider_o *)this->fields.touchInfo) == 0LL) )
   {
-    sub_1B64C5C(bgCollider, method);
+    sub_1B68930(bgCollider, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bgCollider, 1, 0LL);
 }
@@ -1147,15 +1139,15 @@ void __fastcall CombineResultEffectComponent__EndLoad(CombineResultEffectCompone
   __int64 v11; // x0
   __int64 v12; // x1
 
-  if ( (byte_4A02368 & 1) == 0 )
+  if ( (byte_4A0C4C0 & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, method);
-    sub_1B64A00(&AvalonSceneManager_TypeInfo, v3);
-    sub_1B64A00(&Method_CombineResultEffectComponent__EndLoad_b__146_0__, v4);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    byte_4A02368 = 1;
+    sub_1B686D4(&System_Action_TypeInfo, method);
+    sub_1B686D4(&AvalonSceneManager_TypeInfo, v3);
+    sub_1B686D4(&Method_CombineResultEffectComponent__EndLoad_b__146_0__, v4);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    byte_4A0C4C0 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v7 = AvalonSceneManager_TypeInfo;
   v8 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -1164,10 +1156,10 @@ void __fastcall CombineResultEffectComponent__EndLoad(CombineResultEffectCompone
     v7 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v7->static_fields->DEFAULT_FADE_TIME;
-  v10 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_CombineResultEffectComponent__EndLoad_b__146_0__, 0LL);
   if ( !v8 )
-    sub_1B64C5C(v11, v12);
+    sub_1B68930(v11, v12);
   CommonUI__maskFadein(v8, DEFAULT_FADE_TIME, v10, 0LL);
 }
 
@@ -1190,38 +1182,37 @@ void __fastcall CombineResultEffectComponent__EndPlay(CombineResultEffectCompone
   ServantVoiceData_o *v15; // x8
   LimitUpResultCheckComponent_o *limitUpResultCheck; // x20
   System_Action_o *v17; // x21
-  const MethodInfo *v18; // x3
+  const MethodInfo *v18; // x1
   const MethodInfo *v19; // x1
-  const MethodInfo *v20; // x1
-  const MethodInfo *v21; // x2
+  const MethodInfo *v20; // x2
   int32_t costumeId; // w20
-  BalanceConfig_c *v23; // x0
+  BalanceConfig_c *v22; // x0
   unsigned int kind; // w8
   struct UserServantEntity_o *baseUsrSvtData; // x8
-  __int64 v26; // x20
-  __int64 v27; // x21
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v28; // x8
-  int32_t v29; // w20
-  CombineResultEffectComponent_o *v30; // x0
-  int32_t v31; // w21
-  const MethodInfo *v32; // x3
-  ServantCommentMaster_ProfileChangeDecideDelegate_o *v33; // x22
-  System_Action_o *v34; // x23
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v35; // 0:x0.16
+  __int64 v25; // x20
+  __int64 v26; // x21
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v27; // x8
+  int32_t v28; // w20
+  CombineResultEffectComponent_o *v29; // x0
+  int32_t v30; // w21
+  const MethodInfo *v31; // x3
+  ServantCommentMaster_ProfileChangeDecideDelegate_o *v32; // x22
+  System_Action_o *v33; // x23
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v34; // 0:x0.16
 
   v4 = this;
-  if ( (byte_4A02371 & 1) == 0 )
+  if ( (byte_4A0C4C9 & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, method);
-    sub_1B64A00(&BalanceConfig_TypeInfo, v5);
-    sub_1B64A00(&Method_CombineResultEffectComponent_ProfileChangeDecideAction__, v6);
-    sub_1B64A00(&Method_CombineResultEffectComponent__EndPlay_b__156_0__, v7);
-    sub_1B64A00(&Method_CombineResultEffectComponent__EndPlay_b__156_1__, v8);
-    sub_1B64A00(&Method_System_Collections_Generic_HashSet_CombineResultEffectComponent_Kind__Contains__, v9);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v10);
-    sub_1B64A00(&ServantCommentMaster_ProfileChangeDecideDelegate_TypeInfo, v11);
-    this = (CombineResultEffectComponent_o *)sub_1B64A00(&StringLiteral_22464/*"playVoice"*/, v12);
-    byte_4A02371 = 1;
+    sub_1B686D4(&System_Action_TypeInfo, method);
+    sub_1B686D4(&BalanceConfig_TypeInfo, v5);
+    sub_1B686D4(&Method_CombineResultEffectComponent_ProfileChangeDecideAction__, v6);
+    sub_1B686D4(&Method_CombineResultEffectComponent__EndPlay_b__156_0__, v7);
+    sub_1B686D4(&Method_CombineResultEffectComponent__EndPlay_b__156_1__, v8);
+    sub_1B686D4(&Method_System_Collections_Generic_HashSet_CombineResultEffectComponent_Kind__Contains__, v9);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v10);
+    sub_1B686D4(&ServantCommentMaster_ProfileChangeDecideDelegate_TypeInfo, v11);
+    this = (CombineResultEffectComponent_o *)sub_1B686D4(&StringLiteral_22475/*"playVoice"*/, v12);
+    byte_4A0C4C9 = 1;
   }
   playCnt = v4->fields.playCnt;
   if ( (int)playCnt < v4->fields.maxPlayCnt )
@@ -1230,33 +1221,33 @@ void __fastcall CombineResultEffectComponent__EndPlay(CombineResultEffectCompone
     if ( playVoiceList )
     {
       if ( (unsigned int)playCnt >= playVoiceList->max_length )
-        sub_1B64C64(this, method);
+        sub_1B68938(this, method);
       v15 = playVoiceList->m_Items[playCnt];
       if ( v15 )
       {
         UnityEngine_MonoBehaviour__Invoke(
           (UnityEngine_MonoBehaviour_o *)v4,
-          (System_String_o *)StringLiteral_22464/*"playVoice"*/,
+          (System_String_o *)StringLiteral_22475/*"playVoice"*/,
           v15->fields.delay,
           0LL);
         return;
       }
     }
 LABEL_33:
-    sub_1B64C5C(this, method);
+    sub_1B68930(this, method);
   }
   if ( v4->fields.player )
     CombineResultEffectComponent__stopVoice(v4, method);
   v4->fields.playCnt = 0;
   v4->fields.playVoiceList = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&v4->fields.playVoiceList, 0, v2, v3);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&v4->fields.playVoiceList, 0, v2, v3);
   this = (CombineResultEffectComponent_o *)v4->fields.limitUpKinds;
   if ( !this )
     goto LABEL_33;
   this = (CombineResultEffectComponent_o *)System_Collections_Generic_HashSet_Int32Enum___Contains(
                                              (System_Collections_Generic_HashSet_T__o *)this,
                                              v4->fields.kind,
-                                             (const MethodInfo_3368B18 *)Method_System_Collections_Generic_HashSet_CombineResultEffectComponent_Kind__Contains__);
+                                             (const MethodInfo_3377364 *)Method_System_Collections_Generic_HashSet_CombineResultEffectComponent_Kind__Contains__);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
     if ( v4->fields.isLimitUpSuppression )
@@ -1267,69 +1258,69 @@ LABEL_33:
     baseUsrSvtData = v4->fields.baseUsrSvtData;
     if ( !baseUsrSvtData )
       goto LABEL_33;
-    v27 = *(_QWORD *)&baseUsrSvtData->fields.svtId.fields.currentCryptoKey;
-    v26 = *(_QWORD *)&baseUsrSvtData->fields.svtId.fields.fakeValue;
+    v26 = *(_QWORD *)&baseUsrSvtData->fields.svtId.fields.currentCryptoKey;
+    v25 = *(_QWORD *)&baseUsrSvtData->fields.svtId.fields.fakeValue;
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    *(_QWORD *)&v35.fields.currentCryptoKey = v27;
-    *(_QWORD *)&v35.fields.fakeValue = v26;
-    this = (CombineResultEffectComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(
-                                               v35,
+    *(_QWORD *)&v34.fields.currentCryptoKey = v26;
+    *(_QWORD *)&v34.fields.fakeValue = v25;
+    this = (CombineResultEffectComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(
+                                               v34,
                                                0LL);
-    v28 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)v4->fields.baseUsrSvtData;
-    if ( !v28 )
+    v27 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)v4->fields.baseUsrSvtData;
+    if ( !v27 )
       goto LABEL_33;
-    v29 = (int)this;
-    v30 = (CombineResultEffectComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(
-                                              v28[6],
+    v28 = (int)this;
+    v29 = (CombineResultEffectComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(
+                                              v27[6],
                                               0LL);
-    v31 = (_DWORD)v30 + 1;
-    if ( CombineResultEffectComponent__CheckSaintGraphProfileChange(v30, v29, (_DWORD)v30 + 1, v32) )
+    v30 = (_DWORD)v29 + 1;
+    if ( CombineResultEffectComponent__CheckSaintGraphProfileChange(v29, v28, (_DWORD)v29 + 1, v31) )
     {
-      v33 = (ServantCommentMaster_ProfileChangeDecideDelegate_o *)sub_1B64C4C(ServantCommentMaster_ProfileChangeDecideDelegate_TypeInfo);
+      v32 = (ServantCommentMaster_ProfileChangeDecideDelegate_o *)sub_1B68920(ServantCommentMaster_ProfileChangeDecideDelegate_TypeInfo);
       ServantCommentMaster_ProfileChangeDecideDelegate___ctor(
-        v33,
+        v32,
         (Il2CppObject *)v4,
         Method_CombineResultEffectComponent_ProfileChangeDecideAction__,
         0LL);
-      v34 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
-      System_Action___ctor(v34, (Il2CppObject *)v4, Method_CombineResultEffectComponent__EndPlay_b__156_1__, 0LL);
-      ServantCommentMaster__OpenSaintGraphProfileChange(v29, v31, v33, v34, 0LL);
+      v33 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
+      System_Action___ctor(v33, (Il2CppObject *)v4, Method_CombineResultEffectComponent__EndPlay_b__156_1__, 0LL);
+      ServantCommentMaster__OpenSaintGraphProfileChange(v28, v30, v32, v33, 0LL);
     }
     else
     {
 LABEL_13:
       limitUpResultCheck = v4->fields.limitUpResultCheck;
-      v17 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+      v17 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
       System_Action___ctor(v17, (Il2CppObject *)v4, Method_CombineResultEffectComponent__EndPlay_b__156_0__, 0LL);
       if ( !limitUpResultCheck )
         goto LABEL_33;
-      LimitUpResultCheckComponent__DispResultLimitUp(limitUpResultCheck, v17, 1, v18);
+      LimitUpResultCheckComponent__DispResultLimitUp(limitUpResultCheck, v17, 1, 0LL);
     }
   }
   else if ( v4->fields.kind == 15 )
   {
     CombineResultEffectComponent__InitChangeInfoOnCostume(v4, method);
-    if ( CombineResultEffectComponent__IsShowSkillInfoOnCostume(v4, v19) )
+    if ( CombineResultEffectComponent__IsShowSkillInfoOnCostume(v4, v18) )
     {
       this = (CombineResultEffectComponent_o *)v4->fields.touchInfo;
       if ( !this )
         goto LABEL_33;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
       costumeId = v4->fields.costumeId;
-      v23 = BalanceConfig_TypeInfo;
+      v22 = BalanceConfig_TypeInfo;
       if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-        v23 = BalanceConfig_TypeInfo;
+        v22 = BalanceConfig_TypeInfo;
       }
-      if ( costumeId == v23->static_fields->CostumeIdMashu )
+      if ( costumeId == v22->static_fields->CostumeIdMashu )
       {
-        CombineResultEffectComponent__ShowSkillChangeMessage(v4, v20);
+        CombineResultEffectComponent__ShowSkillChangeMessage(v4, v19);
       }
       else
       {
-        CombineResultEffectComponent__ShowSkillChangeInfo(v4, v4->fields.skillShowIndex, v21);
+        CombineResultEffectComponent__ShowSkillChangeInfo(v4, v4->fields.skillShowIndex, v20);
         ++v4->fields.skillShowIndex;
       }
     }
@@ -1356,20 +1347,20 @@ void __fastcall CombineResultEffectComponent__FadeoutProcess(
   __int64 v11; // x0
   __int64 v12; // x1
 
-  if ( (byte_4A02376 & 1) == 0 )
+  if ( (byte_4A0C4CE & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, method);
-    sub_1B64A00(&AvalonSceneManager_TypeInfo, v3);
-    sub_1B64A00(&Method_CombineResultEffectComponent__FadeoutProcess_b__165_0__, v4);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    byte_4A02376 = 1;
+    sub_1B686D4(&System_Action_TypeInfo, method);
+    sub_1B686D4(&AvalonSceneManager_TypeInfo, v3);
+    sub_1B686D4(&Method_CombineResultEffectComponent__FadeoutProcess_b__165_0__, v4);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    byte_4A0C4CE = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   if ( this->fields.autoFadeout )
   {
     if ( callbackFunc )
     {
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       v8 = AvalonSceneManager_TypeInfo;
       if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
       {
@@ -1377,14 +1368,14 @@ void __fastcall CombineResultEffectComponent__FadeoutProcess(
         v8 = AvalonSceneManager_TypeInfo;
       }
       DEFAULT_FADE_TIME = v8->static_fields->DEFAULT_FADE_TIME;
-      v10 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+      v10 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
       System_Action___ctor(
         v10,
         (Il2CppObject *)this,
         Method_CombineResultEffectComponent__FadeoutProcess_b__165_0__,
         0LL);
       if ( !Instance )
-        sub_1B64C5C(v11, v12);
+        sub_1B68930(v11, v12);
       CommonUI__maskFadeout((CommonUI_o *)Instance, 1, DEFAULT_FADE_TIME, v10, 0LL);
     }
   }
@@ -1410,10 +1401,10 @@ bool __fastcall CombineResultEffectComponent__GetIsIgnoreFormChange(
   int max_length; // w9
   int v9; // w10
 
-  if ( (byte_4A0235D & 1) == 0 )
+  if ( (byte_4A0C4B5 & 1) == 0 )
   {
-    sub_1B64A00(&BalanceConfig_TypeInfo, *(_QWORD *)&svtId);
-    byte_4A0235D = 1;
+    sub_1B686D4(&BalanceConfig_TypeInfo, *(_QWORD *)&svtId);
+    byte_4A0C4B5 = 1;
   }
   v6 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -1423,7 +1414,7 @@ bool __fastcall CombineResultEffectComponent__GetIsIgnoreFormChange(
   }
   ServantIdsIgnoreFormChange = v6->static_fields->ServantIdsIgnoreFormChange;
   if ( !ServantIdsIgnoreFormChange )
-    sub_1B64C5C(v6, *(_QWORD *)&svtId);
+    sub_1B68930(v6, *(_QWORD *)&svtId);
   max_length = ServantIdsIgnoreFormChange->max_length;
   if ( max_length < 1 )
     return 0;
@@ -1431,7 +1422,7 @@ bool __fastcall CombineResultEffectComponent__GetIsIgnoreFormChange(
   while ( 1 )
   {
     if ( max_length == v9 )
-      sub_1B64C64(v6, *(_QWORD *)&svtId);
+      sub_1B68938(v6, *(_QWORD *)&svtId);
     if ( ServantIdsIgnoreFormChange->m_Items[v9 + 1] == svtId )
       break;
     if ( max_length == ++v9 )
@@ -1468,26 +1459,26 @@ System_String_o *__fastcall CombineResultEffectComponent__GetNameFromMessageId(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v25; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v26; // 0:x0.16
 
-  if ( (byte_4A02377 & 1) == 0 )
+  if ( (byte_4A0C4CF & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataManager_GetMasterData_ServantCostumeMaster___, *(_QWORD *)&messageId);
-    sub_1B64A00(&Method_DataManager_GetMasterData_ServantMaster___, v7);
-    sub_1B64A00(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v8);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v9);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_1B64A00(&StringLiteral_1/*""*/, v11);
-    byte_4A02377 = 1;
+    sub_1B686D4(&Method_DataManager_GetMasterData_ServantCostumeMaster___, *(_QWORD *)&messageId);
+    sub_1B686D4(&Method_DataManager_GetMasterData_ServantMaster___, v7);
+    sub_1B686D4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v8);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v9);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
+    sub_1B686D4(&StringLiteral_1/*""*/, v11);
+    byte_4A0C4CF = 1;
   }
   v23 = 0LL;
   entity = 0LL;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_21;
   if ( messageId == 2 )
   {
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
+                                  (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
     resUsrSvtData = this->fields.resUsrSvtData;
     if ( !resUsrSvtData )
       goto LABEL_21;
@@ -1498,7 +1489,7 @@ System_String_o *__fastcall CombineResultEffectComponent__GetNameFromMessageId(
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v25.fields.currentCryptoKey = v17;
     *(_QWORD *)&v25.fields.fakeValue = v16;
-    Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v25, 0LL);
+    Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v25, 0LL);
     if ( !v15 )
       goto LABEL_21;
     if ( ServantCostumeMaster__TryGetEntity(v15, &entity, (int32_t)Instance, limitCount, 0LL) )
@@ -1507,13 +1498,13 @@ System_String_o *__fastcall CombineResultEffectComponent__GetNameFromMessageId(
       if ( entity )
         return ServantCostumeEntity__getShortName(entity, 0LL);
 LABEL_21:
-      sub_1B64C5C(Instance, v13);
+      sub_1B68930(Instance, v13);
     }
     return (System_String_o *)StringLiteral_1/*""*/;
   }
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_ServantMaster___);
   v19 = this->fields.resUsrSvtData;
   if ( !v19 )
     goto LABEL_21;
@@ -1524,14 +1515,14 @@ LABEL_21:
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v26.fields.currentCryptoKey = v22;
   *(_QWORD *)&v26.fields.fakeValue = v21;
-  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v26, 0LL);
+  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v26, 0LL);
   if ( !v20 )
     goto LABEL_21;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           v20,
           (Il2CppObject **)&v23,
           (int32_t)Instance,
-          (const MethodInfo_30D67EC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
+          (const MethodInfo_30E4514 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
     return (System_String_o *)StringLiteral_1/*""*/;
   Instance = (DataManager_o *)v23;
   if ( !v23 )
@@ -1550,10 +1541,10 @@ UIPanel_o *__fastcall CombineResultEffectComponent__GetStandFigureNode(
   System_String_o *v7; // x19
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4A02358 & 1) == 0 )
+  if ( (byte_4A0C4B0 & 1) == 0 )
   {
-    sub_1B64A00(&Method_UnityEngine_Component_GetComponent_UIPanel___, fmsString);
-    byte_4A02358 = 1;
+    sub_1B686D4(&Method_UnityEngine_Component_GetComponent_UIPanel___, fmsString);
+    byte_4A0C4B0 = 1;
   }
   fsm = this->fields.fsm;
   if ( !fsm
@@ -1570,11 +1561,11 @@ UIPanel_o *__fastcall CombineResultEffectComponent__GetStandFigureNode(
         transform = UnityEngine_GameObject__get_transform(effect, 0LL),
         (fsm = (PlayMakerFSM_o *)TransformHelper__getNodeFromName(transform, v7, 1, 0LL)) == 0LL) )
   {
-    sub_1B64C5C(fsm, fmsString);
+    sub_1B68930(fsm, fmsString);
   }
   return (UIPanel_o *)UnityEngine_Component__GetComponent_object_(
                         (UnityEngine_Component_o *)fsm,
-                        (const MethodInfo_2E32784 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                        (const MethodInfo_2E407F4 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
 }
 
 
@@ -1589,7 +1580,7 @@ TransformServantInfo_o *__fastcall CombineResultEffectComponent__GetTransformedS
   transformInfo = 0LL;
   baseUsrSvtData = this->fields.baseUsrSvtData;
   if ( !baseUsrSvtData )
-    sub_1B64C5C(0LL, transformCount);
+    sub_1B68930(0LL, transformCount);
   UserServantEntity__GetTransformedServantInfo(baseUsrSvtData, &transformInfo, transformCount, 0LL);
   return transformInfo;
 }
@@ -1631,14 +1622,14 @@ void __fastcall CombineResultEffectComponent__InitChangeInfoOnCostume(
   SkillInfo_array *v32; // [xsp+70h] [xbp-50h] BYREF
   SkillInfo_array *skillInfoList; // [xsp+78h] [xbp-48h] BYREF
 
-  if ( (byte_4A0236B & 1) == 0 )
+  if ( (byte_4A0C4C3 & 1) == 0 )
   {
-    sub_1B64A00(&BalanceConfig_TypeInfo, method);
-    sub_1B64A00(&Method_DataManager_GetMasterData_UserServantMaster___, v3);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v4);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v5);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_4A0236B = 1;
+    sub_1B686D4(&BalanceConfig_TypeInfo, method);
+    sub_1B686D4(&Method_DataManager_GetMasterData_UserServantMaster___, v3);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v4);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v5);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_4A0C4C3 = 1;
   }
   v32 = 0LL;
   skillInfoList = 0LL;
@@ -1646,17 +1637,17 @@ void __fastcall CombineResultEffectComponent__InitChangeInfoOnCostume(
   tdInfo = 0LL;
   if ( this->fields.baseUsrSvtData )
   {
-    Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
     if ( Instance )
     {
       if ( AvalonSceneManager__checkNowScene((AvalonSceneManager_o *)Instance, 30, 0LL) )
         return;
-      Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( Instance )
       {
         Instance = (int64_t)DataManager__GetMasterData_object_(
                               (DataManager_o *)Instance,
-                              (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                              (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_UserServantMaster___);
         if ( Instance )
         {
           Instance = (int64_t)UserServantMaster__getAllList((UserServantMaster_o *)Instance, 0LL);
@@ -1680,24 +1671,24 @@ void __fastcall CombineResultEffectComponent__InitChangeInfoOnCostume(
                 if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
                 v28 = v29;
-                Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46185616(&v28, 0LL);
+                Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46242940(&v28, 0LL);
                 if ( !v15 )
                   goto LABEL_52;
                 v16 = *(_OWORD *)(v15 + 32);
                 v17 = Instance;
                 *(_OWORD *)&v27.fields.currentCryptoKey = *(_OWORD *)(v15 + 16);
                 *(_OWORD *)&v27.fields.fakeValue = v16;
-                Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46185616(&v27, 0LL);
+                Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46242940(&v27, 0LL);
                 if ( v17 == Instance )
                   break;
                 if ( v11 == v12 )
                   goto LABEL_20;
                 if ( (unsigned int)++v12 >= *(_DWORD *)(v10 + 24) )
 LABEL_18:
-                  sub_1B64C64(Instance, id);
+                  sub_1B68938(Instance, id);
               }
               this->fields.resUsrSvtData = (struct UserServantEntity_o *)v15;
-              sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, v15, v18, v19);
+              sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, v15, v18, v19);
             }
 LABEL_20:
             Instance = (int64_t)this->fields.baseUsrSvtData;
@@ -1792,7 +1783,7 @@ LABEL_50:
       }
     }
 LABEL_52:
-    sub_1B64C5C(Instance, id);
+    sub_1B68930(Instance, id);
   }
 }
 
@@ -1819,14 +1810,14 @@ void __fastcall CombineResultEffectComponent__InitCombineEffect(
   System_Action_o *v18; // x21
   const MethodInfo *v19; // x1
 
-  if ( (byte_4A02348 & 1) == 0 )
+  if ( (byte_4A0C4A0 & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, method);
-    sub_1B64A00(&AvalonSceneManager_TypeInfo, v3);
-    sub_1B64A00(&Method_CombineResultEffectComponent__InitCombineEffect_b__112_0__, v4);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_1B64A00(&StringLiteral_11304/*"ResultEffect"*/, v6);
-    byte_4A02348 = 1;
+    sub_1B686D4(&System_Action_TypeInfo, method);
+    sub_1B686D4(&AvalonSceneManager_TypeInfo, v3);
+    sub_1B686D4(&Method_CombineResultEffectComponent__InitCombineEffect_b__112_0__, v4);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    sub_1B686D4(&StringLiteral_11305/*"ResultEffect"*/, v6);
+    byte_4A0C4A0 = 1;
   }
   fsm = this->fields.fsm;
   if ( !fsm )
@@ -1836,22 +1827,22 @@ void __fastcall CombineResultEffectComponent__InitCombineEffect(
     goto LABEL_21;
   fsm = (PlayMakerFSM_o *)HutongGames_PlayMaker_FsmVariables__GetFsmGameObject(
                             (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                            (System_String_o *)StringLiteral_11304/*"ResultEffect"*/,
+                            (System_String_o *)StringLiteral_11305/*"ResultEffect"*/,
                             0LL);
   if ( !fsm )
     goto LABEL_21;
   Value = HutongGames_PlayMaker_FsmGameObject__get_Value((HutongGames_PlayMaker_FsmGameObject_o *)fsm, 0LL);
   this->fields.effect = Value;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.effect, (int32_t)Value, v9, v10);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.effect, (int32_t)Value, v9, v10);
   fsm = (PlayMakerFSM_o *)this->fields.effect;
   if ( !fsm )
     goto LABEL_21;
   fsm = (PlayMakerFSM_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)fsm, 0LL);
   v11 = (UnityEngine_Transform_o *)fsm;
-  if ( !byte_49F9826 )
+  if ( !byte_4A03906 )
   {
-    fsm = (PlayMakerFSM_o *)sub_1B64A00(&UnityEngine_Vector3_TypeInfo, method);
-    byte_49F9826 = 1;
+    fsm = (PlayMakerFSM_o *)sub_1B686D4(&UnityEngine_Vector3_TypeInfo, method);
+    byte_4A03906 = 1;
   }
   if ( !v11 )
     goto LABEL_21;
@@ -1867,7 +1858,7 @@ void __fastcall CombineResultEffectComponent__InitCombineEffect(
   kind = this->fields.kind;
   if ( kind == 16 || kind == 14 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v15 = AvalonSceneManager_TypeInfo;
     v16 = (CommonUI_o *)Instance;
     if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -1876,7 +1867,7 @@ void __fastcall CombineResultEffectComponent__InitCombineEffect(
       v15 = AvalonSceneManager_TypeInfo;
     }
     DEFAULT_FADE_TIME = v15->static_fields->DEFAULT_FADE_TIME;
-    v18 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+    v18 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
     System_Action___ctor(
       v18,
       (Il2CppObject *)this,
@@ -1888,7 +1879,7 @@ void __fastcall CombineResultEffectComponent__InitCombineEffect(
       return;
     }
 LABEL_21:
-    sub_1B64C5C(fsm, method);
+    sub_1B68930(fsm, method);
   }
   CombineResultEffectComponent__SetResultUserServantData(this, v12);
   if ( this->fields.kind == 6 )
@@ -1902,7 +1893,12 @@ bool __fastcall CombineResultEffectComponent__IsShowLimitUpInfo(
         CombineResultEffectComponent_o *this,
         const MethodInfo *method)
 {
-  return !CombineResultEffectComponent__CheckFinishedLimitUpChangeInfo(this, method);
+  LimitUpResultCheckComponent_o *limitUpResultCheck; // x0
+
+  limitUpResultCheck = this->fields.limitUpResultCheck;
+  if ( !limitUpResultCheck )
+    sub_1B68930(0LL, method);
+  return !LimitUpResultCheckComponent__CheckFinishedResultLimitUp(limitUpResultCheck, 0LL);
 }
 
 
@@ -1915,7 +1911,7 @@ bool __fastcall CombineResultEffectComponent__IsShowNextNpInfo(
 
   npInfoAddManager = this->fields.npInfoAddManager;
   if ( !npInfoAddManager )
-    sub_1B64C5C(0LL, method);
+    sub_1B68930(0LL, method);
   v4 = Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__GetAfterNpCount(npInfoAddManager, 0LL);
   return v4 >= 1 && this->fields.tdShowIndex < v4;
 }
@@ -1939,26 +1935,26 @@ bool __fastcall CombineResultEffectComponent__IsShowSkillInfoOnCostume(
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v16; // 0:x0.16
 
-  if ( (byte_4A02372 & 1) == 0 )
+  if ( (byte_4A0C4CA & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataManager_GetMasterData_ServantMaster___, method);
-    sub_1B64A00(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v3);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v5);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_4A02372 = 1;
+    sub_1B686D4(&Method_DataManager_GetMasterData_ServantMaster___, method);
+    sub_1B686D4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v3);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v5);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_4A0C4CA = 1;
   }
   entity = 0LL;
   costumeSkillInfoManager = this->fields.costumeSkillInfoManager;
   if ( !costumeSkillInfoManager )
     goto LABEL_19;
   v8 = CombineResultEffectComponent_CostumeSkillInfoManager__GetAfterSkillCount(costumeSkillInfoManager, method);
-  costumeSkillInfoManager = (CombineResultEffectComponent_CostumeSkillInfoManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  costumeSkillInfoManager = (CombineResultEffectComponent_CostumeSkillInfoManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !costumeSkillInfoManager )
     goto LABEL_19;
   costumeSkillInfoManager = (CombineResultEffectComponent_CostumeSkillInfoManager_o *)DataManager__GetMasterData_object_(
                                                                                         (DataManager_o *)costumeSkillInfoManager,
-                                                                                        (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                                                                        (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_ServantMaster___);
   baseUsrSvtData = this->fields.baseUsrSvtData;
   if ( !baseUsrSvtData )
     goto LABEL_19;
@@ -1969,7 +1965,7 @@ bool __fastcall CombineResultEffectComponent__IsShowSkillInfoOnCostume(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v16.fields.currentCryptoKey = v12;
   *(_QWORD *)&v16.fields.fakeValue = v11;
-  costumeSkillInfoManager = (CombineResultEffectComponent_CostumeSkillInfoManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(
+  costumeSkillInfoManager = (CombineResultEffectComponent_CostumeSkillInfoManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(
                                                                                         v16,
                                                                                         0LL);
   if ( !v10 )
@@ -1978,17 +1974,17 @@ bool __fastcall CombineResultEffectComponent__IsShowSkillInfoOnCostume(
           v10,
           &entity,
           (int32_t)costumeSkillInfoManager,
-          (const MethodInfo_30D67EC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
+          (const MethodInfo_30E4514 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
     return 0;
   costumeSkillInfoManager = (CombineResultEffectComponent_CostumeSkillInfoManager_o *)entity;
   if ( !entity )
     goto LABEL_19;
   if ( !ServantEntity__checkIsHeroineSvt((ServantEntity_o *)entity, 0LL) )
     return 0;
-  costumeSkillInfoManager = (CombineResultEffectComponent_CostumeSkillInfoManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  costumeSkillInfoManager = (CombineResultEffectComponent_CostumeSkillInfoManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !costumeSkillInfoManager )
 LABEL_19:
-    sub_1B64C5C(costumeSkillInfoManager, method);
+    sub_1B68930(costumeSkillInfoManager, method);
   v13 = AvalonSceneManager__checkNowScene((AvalonSceneManager_o *)costumeSkillInfoManager, 30, 0LL);
   return v8 >= 1 && !v13 && this->fields.skillShowIndex < v8;
 }
@@ -2010,7 +2006,7 @@ void __fastcall CombineResultEffectComponent__NameRevealCrossFade(
 
   nameRevealCard = this->fields.nameRevealCard;
   if ( !nameRevealCard )
-    sub_1B64C5C(0LL, method);
+    sub_1B68930(0LL, method);
   UICharaGraphTexture__ExecuteNameCrossFade(nameRevealCard, this->fields.NAME_REVEAL_FADE_TIME, 0LL);
 }
 
@@ -2021,17 +2017,17 @@ void __fastcall CombineResultEffectComponent__OnClickResultEffectSkip(
 {
   PlayMakerFSM_o *fsm; // x0
 
-  if ( (byte_4A0237F & 1) == 0 )
+  if ( (byte_4A0C4D7 & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_5444/*"END_ANIMATION"*/, method);
-    byte_4A0237F = 1;
+    sub_1B686D4(&StringLiteral_5444/*"END_ANIMATION"*/, method);
+    byte_4A0C4D7 = 1;
   }
   if ( !this->fields.isResultEffectSkipped )
   {
     fsm = this->fields.fsm;
     this->fields.isResultEffectSkipped = 1;
     if ( !fsm )
-      sub_1B64C5C(0LL, method);
+      sub_1B68930(0LL, method);
     PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_5444/*"END_ANIMATION"*/, 0LL);
   }
 }
@@ -2059,21 +2055,19 @@ void __fastcall CombineResultEffectComponent__OpenLimitCountSealDialog(
   System_String_o *v17; // x20
   System_String_o *v18; // x22
   LimitCountSealDialogComponent_CallbackFunc_o *v19; // x23
-  const MethodInfo *v20; // x3
-  const MethodInfo *v21; // x4
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v22; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v20; // 0:x0.16
 
   v2 = (Il2CppObject *)this;
-  if ( (byte_4A0237B & 1) == 0 )
+  if ( (byte_4A0C4D3 & 1) == 0 )
   {
-    sub_1B64A00(&LimitCountSealDialogComponent_CallbackFunc_TypeInfo, method);
-    sub_1B64A00(&Method_CombineResultEffectComponent_CloseLimitCountSealDialog__, v3);
-    sub_1B64A00(&Method_DataManager_GetMaster_ServantLimitImageMaster___, v4);
-    sub_1B64A00(&DataManager_TypeInfo, v5);
-    sub_1B64A00(&LocalizationManager_TypeInfo, v6);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v7);
-    this = (CombineResultEffectComponent_o *)sub_1B64A00(&StringLiteral_8211/*"LIMIT_COUNT_SEALED_TITLE"*/, v8);
-    byte_4A0237B = 1;
+    sub_1B686D4(&LimitCountSealDialogComponent_CallbackFunc_TypeInfo, method);
+    sub_1B686D4(&Method_CombineResultEffectComponent_CloseLimitCountSealDialog__, v3);
+    sub_1B686D4(&Method_DataManager_GetMaster_ServantLimitImageMaster___, v4);
+    sub_1B686D4(&DataManager_TypeInfo, v5);
+    sub_1B686D4(&LocalizationManager_TypeInfo, v6);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v7);
+    this = (CombineResultEffectComponent_o *)sub_1B686D4(&StringLiteral_8213/*"LIMIT_COUNT_SEALED_TITLE"*/, v8);
+    byte_4A0C4D3 = 1;
   }
   monitor = v2[12].monitor;
   if ( !monitor )
@@ -2082,17 +2076,17 @@ void __fastcall CombineResultEffectComponent__OpenLimitCountSealDialog(
   v10 = monitor[11];
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v22.fields.currentCryptoKey = v11;
-  *(_QWORD *)&v22.fields.fakeValue = v10;
-  this = (CombineResultEffectComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v22, 0LL);
+  *(_QWORD *)&v20.fields.currentCryptoKey = v11;
+  *(_QWORD *)&v20.fields.fakeValue = v10;
+  this = (CombineResultEffectComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v20, 0LL);
   v12 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)v2[12].monitor;
   if ( !v12 )
     goto LABEL_14;
   v13 = (int)this;
-  v14 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v12[6], 0LL);
+  v14 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v12[6], 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  this = (CombineResultEffectComponent_o *)DataManager__GetMaster_object_((const MethodInfo_2E3BC8C *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+  this = (CombineResultEffectComponent_o *)DataManager__GetMaster_object_((const MethodInfo_2E49CFC *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
   if ( !this )
     goto LABEL_14;
   LimitCountSealedDialogMessage = ServantLimitImageMaster__GetLimitCountSealedDialogMessage(
@@ -2104,17 +2098,17 @@ void __fastcall CombineResultEffectComponent__OpenLimitCountSealDialog(
   v17 = LimitCountSealedDialogMessage;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_8211/*"LIMIT_COUNT_SEALED_TITLE"*/, 0LL);
-  v19 = (LimitCountSealDialogComponent_CallbackFunc_o *)sub_1B64C4C(LimitCountSealDialogComponent_CallbackFunc_TypeInfo);
+  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_8213/*"LIMIT_COUNT_SEALED_TITLE"*/, 0LL);
+  v19 = (LimitCountSealDialogComponent_CallbackFunc_o *)sub_1B68920(LimitCountSealDialogComponent_CallbackFunc_TypeInfo);
   LimitCountSealDialogComponent_CallbackFunc___ctor(
     v19,
     v2,
     (intptr_t)Method_CombineResultEffectComponent_CloseLimitCountSealDialog__,
-    v20);
+    0LL);
   if ( !v16 )
 LABEL_14:
-    sub_1B64C5C(this, method);
-  LimitCountSealDialogComponent__OpenLimitCountSealDialog(v16, v18, v17, v19, v21);
+    sub_1B68930(this, method);
+  LimitCountSealDialogComponent__OpenLimitCountSealDialog(v16, v18, v17, v19, 0LL);
 }
 
 
@@ -2164,25 +2158,25 @@ bool __fastcall CombineResultEffectComponent__OpenNotification(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v43; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v44; // 0:x0.16
 
-  if ( (byte_4A02378 & 1) == 0 )
+  if ( (byte_4A0C4D0 & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, method);
-    sub_1B64A00(&LocalizationManager_TypeInfo, v3);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
-    sub_1B64A00(&ServantCharaGraphEXOpenManager_TypeInfo, v5);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_1B64A00(&Method_CombineResultEffectComponent___c__DisplayClass167_0__OpenNotification_b__0__, v7);
-    sub_1B64A00(&CombineResultEffectComponent___c__DisplayClass167_0_TypeInfo, v8);
-    sub_1B64A00(&StringLiteral_11499/*"SERVANT_CHARA_GRAPH_EX_OPEN_MANAGER_"*/, v9);
-    sub_1B64A00(&StringLiteral_1/*""*/, v10);
-    byte_4A02378 = 1;
+    sub_1B686D4(&System_Action_TypeInfo, method);
+    sub_1B686D4(&LocalizationManager_TypeInfo, v3);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
+    sub_1B686D4(&ServantCharaGraphEXOpenManager_TypeInfo, v5);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    sub_1B686D4(&Method_CombineResultEffectComponent___c__DisplayClass167_0__OpenNotification_b__0__, v7);
+    sub_1B686D4(&CombineResultEffectComponent___c__DisplayClass167_0_TypeInfo, v8);
+    sub_1B686D4(&StringLiteral_11500/*"SERVANT_CHARA_GRAPH_EX_OPEN_MANAGER_"*/, v9);
+    sub_1B686D4(&StringLiteral_1/*""*/, v10);
+    byte_4A0C4D0 = 1;
   }
-  v11 = sub_1B64C4C(CombineResultEffectComponent___c__DisplayClass167_0_TypeInfo);
+  v11 = sub_1B68920(CombineResultEffectComponent___c__DisplayClass167_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v11, 0LL);
   if ( !v11 )
     goto LABEL_28;
   *(_QWORD *)(v11 + 16) = this;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v11 + 16), (int32_t)this, v14, v15);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)(v11 + 16), (int32_t)this, v14, v15);
   if ( this->fields.isLimitUpSuppression )
     return 0;
   kind = this->fields.kind;
@@ -2198,7 +2192,7 @@ bool __fastcall CombineResultEffectComponent__OpenNotification(
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v42.fields.currentCryptoKey = v21;
       *(_QWORD *)&v42.fields.fakeValue = v20;
-      AscensionAfterDialogId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v42, 0LL);
+      AscensionAfterDialogId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v42, 0LL);
       *(_DWORD *)(v11 + 24) = AscensionAfterDialogId;
       if ( this->fields.kind == 15 )
         *(_DWORD *)(v11 + 24) = this->fields.costumeId;
@@ -2211,7 +2205,7 @@ bool __fastcall CombineResultEffectComponent__OpenNotification(
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v43.fields.currentCryptoKey = v24;
         *(_QWORD *)&v43.fields.fakeValue = v23;
-        v25 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v43, 0LL);
+        v25 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v43, 0LL);
         AscensionAfterDialogId = ServantLimitMaster__GetAscensionAfterDialogId(v25, *(_DWORD *)(v11 + 24), 0LL);
         v41 = AscensionAfterDialogId;
         if ( (_DWORD)AscensionAfterDialogId == -1 )
@@ -2226,7 +2220,7 @@ bool __fastcall CombineResultEffectComponent__OpenNotification(
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
           *(_QWORD *)&v44.fields.currentCryptoKey = v29;
           *(_QWORD *)&v44.fields.fakeValue = v28;
-          v30 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v44, 0LL);
+          v30 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v44, 0LL);
           v31 = *(_DWORD *)(v11 + 24);
           v32 = v30;
           if ( !ServantCharaGraphEXOpenManager_TypeInfo->_2.cctor_finished )
@@ -2238,14 +2232,14 @@ bool __fastcall CombineResultEffectComponent__OpenNotification(
                                                 v27,
                                                 *(_DWORD *)(v11 + 24),
                                                 v33);
-          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
           v36 = System_Int32__ToString((int32_t)&v41, 0LL);
-          v37 = System_String__Concat_61385136((System_String_o *)StringLiteral_11499/*"SERVANT_CHARA_GRAPH_EX_OPEN_MANAGER_"*/, v36, 0LL);
+          v37 = System_String__Concat_61419468((System_String_o *)StringLiteral_11500/*"SERVANT_CHARA_GRAPH_EX_OPEN_MANAGER_"*/, v36, 0LL);
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           v38 = LocalizationManager__Get(v37, 0LL);
           v39 = System_String__Format(v38, NameFromMessageId, 0LL);
-          v40 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+          v40 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
           System_Action___ctor(
             v40,
             (Il2CppObject *)v11,
@@ -2276,7 +2270,7 @@ bool __fastcall CombineResultEffectComponent__OpenNotification(
       }
     }
 LABEL_28:
-    sub_1B64C5C(AscensionAfterDialogId, v13);
+    sub_1B68930(AscensionAfterDialogId, v13);
   }
   return v16;
 }
@@ -2307,39 +2301,38 @@ void __fastcall CombineResultEffectComponent__ProfileChangeDecideAction(
   int32_t v24; // w3
   Il2CppObject *Master_object; // x23
   CommonUI_o *v26; // x22
-  const MethodInfo *v27; // x2
   Il2CppObject *Instance; // x0
-  UserServantCollectionEntity_o *v29; // x20
-  CommonUI_o *v30; // x22
-  ServantStatusDialog_EndDelegate_o *v31; // x23
+  UserServantCollectionEntity_o *v28; // x20
+  CommonUI_o *v29; // x22
+  ServantStatusDialog_EndDelegate_o *v30; // x23
   UserServantCollectionEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4A0237E & 1) == 0 )
+  if ( (byte_4A0C4D6 & 1) == 0 )
   {
-    sub_1B64A00(&AvalonSceneManager_TypeInfo, *(_QWORD *)&svtId);
-    sub_1B64A00(&Method_DataManager_GetMaster_UserServantCollectionMaster___, v11);
-    sub_1B64A00(&DataManager_TypeInfo, v12);
-    sub_1B64A00(&ServantStatusDialog_EndDelegate_TypeInfo, v13);
-    sub_1B64A00(&NetworkManager_TypeInfo, v14);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v15);
-    sub_1B64A00(&Method_CombineResultEffectComponent___c__DisplayClass173_0__ProfileChangeDecideAction_b__0__, v16);
-    sub_1B64A00(&CombineResultEffectComponent___c__DisplayClass173_0_TypeInfo, v17);
-    byte_4A0237E = 1;
+    sub_1B686D4(&AvalonSceneManager_TypeInfo, *(_QWORD *)&svtId);
+    sub_1B686D4(&Method_DataManager_GetMaster_UserServantCollectionMaster___, v11);
+    sub_1B686D4(&DataManager_TypeInfo, v12);
+    sub_1B686D4(&ServantStatusDialog_EndDelegate_TypeInfo, v13);
+    sub_1B686D4(&NetworkManager_TypeInfo, v14);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v15);
+    sub_1B686D4(&Method_CombineResultEffectComponent___c__DisplayClass173_0__ProfileChangeDecideAction_b__0__, v16);
+    sub_1B686D4(&CombineResultEffectComponent___c__DisplayClass173_0_TypeInfo, v17);
+    byte_4A0C4D6 = 1;
   }
   entity = 0LL;
-  v18 = sub_1B64C4C(CombineResultEffectComponent___c__DisplayClass173_0_TypeInfo);
+  v18 = sub_1B68920(CombineResultEffectComponent___c__DisplayClass173_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v18, 0LL);
   if ( !v18 )
     goto LABEL_20;
   *(_QWORD *)(v18 + 16) = this;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v18 + 16), (int32_t)this, v21, v22);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)(v18 + 16), (int32_t)this, v21, v22);
   *(_QWORD *)(v18 + 24) = finishCallback;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v18 + 24), (int32_t)finishCallback, v23, v24);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)(v18 + 24), (int32_t)finishCallback, v23, v24);
   if ( isDecide )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2E3BC8C *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2E49CFC *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     UserId = (CommonUI_o *)NetworkManager__get_UserId(0LL);
@@ -2352,46 +2345,46 @@ void __fastcall CombineResultEffectComponent__ProfileChangeDecideAction(
            svtId,
            0LL) )
     {
-      UserId = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      UserId = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       v26 = UserId;
       if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
       if ( v26 )
       {
         CommonUI__maskFadein(v26, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0LL, 0LL);
-        UserId = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        UserId = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( UserId )
         {
           CommonUI__CloseConfirmDialog(UserId, 0LL);
           UserId = (CommonUI_o *)this->fields.limitUpResultCheck;
           if ( UserId )
           {
-            LimitUpResultCheckComponent__SetActiveInfoWindow((LimitUpResultCheckComponent_o *)UserId, 0, v27);
-            Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-            v29 = entity;
-            v30 = (CommonUI_o *)Instance;
-            v31 = (ServantStatusDialog_EndDelegate_o *)sub_1B64C4C(ServantStatusDialog_EndDelegate_TypeInfo);
+            LimitUpResultCheckComponent__SetActiveInfoWindow((LimitUpResultCheckComponent_o *)UserId, 0, 0LL);
+            Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+            v28 = entity;
+            v29 = (CommonUI_o *)Instance;
+            v30 = (ServantStatusDialog_EndDelegate_o *)sub_1B68920(ServantStatusDialog_EndDelegate_TypeInfo);
             ServantStatusDialog_EndDelegate___ctor(
-              v31,
+              v30,
               (Il2CppObject *)v18,
               Method_CombineResultEffectComponent___c__DisplayClass173_0__ProfileChangeDecideAction_b__0__,
               0LL);
-            if ( v30 )
+            if ( v29 )
             {
-              CommonUI__OpenServantStatusDialog_30359380(v30, 33, v29, limitCount, v31, 0LL);
+              CommonUI__OpenServantStatusDialog_30374940(v29, 33, v28, limitCount, v30, 0LL);
               return;
             }
           }
         }
       }
 LABEL_20:
-      sub_1B64C5C(UserId, v20);
+      sub_1B68930(UserId, v20);
     }
   }
-  UserId = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  UserId = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !UserId )
     goto LABEL_20;
-  CommonUI__CloseConfirmDialog_30348004(UserId, *(System_Action_o **)(v18 + 24), 0LL);
+  CommonUI__CloseConfirmDialog_30363564(UserId, *(System_Action_o **)(v18 + 24), 0LL);
 }
 
 
@@ -2404,19 +2397,19 @@ void __fastcall CombineResultEffectComponent__ReleaseVoiceData(
   Il2CppObject *Instance; // x0
   __int64 v6; // x1
 
-  if ( (byte_4A02374 & 1) == 0 )
+  if ( (byte_4A0C4CC & 1) == 0 )
   {
-    sub_1B64A00(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__, method);
-    byte_4A02374 = 1;
+    sub_1B686D4(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__, method);
+    byte_4A0C4CC = 1;
   }
   *(_QWORD *)&this->fields.maxPlayCnt = 0LL;
   this->fields.playVoiceList = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.playVoiceList, 0, v2, v3);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.playVoiceList, 0, v2, v3);
   if ( !System_String__IsNullOrEmpty(this->fields.asstName, 0LL) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
     if ( !Instance )
-      sub_1B64C5C(0LL, v6);
+      sub_1B68930(0LL, v6);
     SoundManager__ReleaseAudioAssetStorage((SoundManager_o *)Instance, this->fields.asstName, 0LL);
   }
 }
@@ -2529,47 +2522,47 @@ void __fastcall CombineResultEffectComponent__SetAfterLimitUpSvtFigure(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v103; // 0:x0.16
   UnityEngine_Vector3_o v104; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A0235B & 1) == 0 )
+  if ( (byte_4A0C4B3 & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataManager_GetMasterData_ServantLimitAddMaster___, isForceNormalFace);
-    sub_1B64A00(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, v4);
-    sub_1B64A00(&Method_DataManager_GetMasterData_SvtMultiPortraitMaster___, v5);
-    sub_1B64A00(&Method_DataManager_GetMaster_ServantLimitImageMaster___, v6);
-    sub_1B64A00(&DataManager_TypeInfo, v7);
-    sub_1B64A00(&Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___, v8);
-    sub_1B64A00(&Method_System_Linq_Enumerable_Count_StandFigureCollect___, v9);
-    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__, v10);
-    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__, v11);
-    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__get_Current__, v12);
-    sub_1B64A00(&ImageLimitCount_TypeInfo, v13);
-    sub_1B64A00(&Method_System_Collections_Generic_List_StandFigureCollect__Add__, v14);
-    sub_1B64A00(&Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__, v15);
-    sub_1B64A00(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__, v16);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v17);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v18);
-    sub_1B64A00(&StandFigureCollect_TypeInfo, v19);
-    sub_1B64A00(&StringLiteral_8370/*"LimitUpResSvtNodeName"*/, v20);
-    byte_4A0235B = 1;
+    sub_1B686D4(&Method_DataManager_GetMasterData_ServantLimitAddMaster___, isForceNormalFace);
+    sub_1B686D4(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, v4);
+    sub_1B686D4(&Method_DataManager_GetMasterData_SvtMultiPortraitMaster___, v5);
+    sub_1B686D4(&Method_DataManager_GetMaster_ServantLimitImageMaster___, v6);
+    sub_1B686D4(&DataManager_TypeInfo, v7);
+    sub_1B686D4(&Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___, v8);
+    sub_1B686D4(&Method_System_Linq_Enumerable_Count_StandFigureCollect___, v9);
+    sub_1B686D4(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__, v10);
+    sub_1B686D4(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__, v11);
+    sub_1B686D4(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__get_Current__, v12);
+    sub_1B686D4(&ImageLimitCount_TypeInfo, v13);
+    sub_1B686D4(&Method_System_Collections_Generic_List_StandFigureCollect__Add__, v14);
+    sub_1B686D4(&Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__, v15);
+    sub_1B686D4(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__, v16);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v17);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v18);
+    sub_1B686D4(&StandFigureCollect_TypeInfo, v19);
+    sub_1B686D4(&StringLiteral_8372/*"LimitUpResSvtNodeName"*/, v20);
+    byte_4A0C4B3 = 1;
   }
   entity = 0LL;
   memset(&v100, 0, sizeof(v100));
   StandFigureNode = (UnityEngine_Component_o *)CombineResultEffectComponent__GetStandFigureNode(
                                                  this,
-                                                 (System_String_o *)StringLiteral_8370/*"LimitUpResSvtNodeName"*/,
+                                                 (System_String_o *)StringLiteral_8372/*"LimitUpResSvtNodeName"*/,
                                                  method);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_75;
   v24 = Instance;
   DataManager__GetMasterData_object_(
     Instance,
-    (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+    (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
   MasterData_object = DataManager__GetMasterData_object_(
                         v24,
-                        (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_SvtMultiPortraitMaster___);
+                        (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_SvtMultiPortraitMaster___);
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 v24,
-                                (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantLimitAddMaster___);
+                                (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_ServantLimitAddMaster___);
   resUsrSvtData = this->fields.resUsrSvtData;
   if ( !resUsrSvtData )
     goto LABEL_75;
@@ -2580,12 +2573,12 @@ void __fastcall CombineResultEffectComponent__SetAfterLimitUpSvtFigure(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v102.fields.currentCryptoKey = v29;
   *(_QWORD *)&v102.fields.fakeValue = v28;
-  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v102, 0LL);
+  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v102, 0LL);
   v30 = this->fields.resUsrSvtData;
   if ( !v30 )
     goto LABEL_75;
   v31 = (int)Instance;
-  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(
+  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(
                                 v30->fields.limitCount,
                                 0LL);
   if ( !v27 )
@@ -2602,7 +2595,7 @@ void __fastcall CombineResultEffectComponent__SetAfterLimitUpSvtFigure(
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_2E3BC8C *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+  Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_2E49CFC *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
   if ( !Instance )
     goto LABEL_75;
   ServantLimitCountSealAfter = ServantLimitImageMaster__GetServantLimitCountSealAfter(
@@ -2623,11 +2616,11 @@ void __fastcall CombineResultEffectComponent__SetAfterLimitUpSvtFigure(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v103.fields.currentCryptoKey = v38;
   *(_QWORD *)&v103.fields.fakeValue = v37;
-  v39 = (CombineResultEffectComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v103, 0LL);
+  v39 = (CombineResultEffectComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v103, 0LL);
   Instance = (DataManager_o *)CombineResultEffectComponent__GetIsIgnoreFormChange(v39, (int32_t)v39, v36, v40);
   if ( !MasterData_object )
 LABEL_75:
-    sub_1B64C5C(Instance, v23);
+    sub_1B68930(Instance, v23);
   v41 = (char)Instance;
   Instance = (DataManager_o *)SvtMultiPortraitMaster__GetEntityListOrderBy(
                                 (SvtMultiPortraitMaster_o *)MasterData_object,
@@ -2639,27 +2632,27 @@ LABEL_75:
     && (v42 = (System_Collections_Generic_List_object__o *)Instance,
         Instance = (DataManager_o *)System_Linq_Enumerable__Any_object_(
                                       (System_Collections_Generic_IEnumerable_TSource__o *)Instance,
-                                      (const MethodInfo_2E49388 *)Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___),
+                                      (const MethodInfo_2E57724 *)Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___),
         ((unsigned __int8)Instance & 1) != 0) )
   {
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v99,
       v42,
-      (const MethodInfo_34B0B60 *)Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__);
+      (const MethodInfo_34BCD70 *)Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__);
     v100 = v99;
     while ( 1 )
     {
       v43 = System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v100,
-              (const MethodInfo_322C9A4 *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__);
+              (const MethodInfo_323A820 *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__);
       if ( !v43 )
         break;
       if ( !StandFigureNode )
-        sub_1B64C5C(v43, v44);
+        sub_1B68930(v43, v44);
       current = (SvtMultiPortraitEntity_o *)v100.fields._current;
       gameObject = UnityEngine_Component__get_gameObject(StandFigureNode, 0LL);
       if ( !current )
-        sub_1B64C5C(gameObject, v47);
+        sub_1B68930(gameObject, v47);
       PrefabForImageId = StandFigureManager__CreatePrefabForImageId(
                            gameObject,
                            current->fields.portraitImageId,
@@ -2672,32 +2665,32 @@ LABEL_75:
                            0LL);
       v52 = (UnityEngine_Component_o *)PrefabForImageId;
       if ( !PrefabForImageId )
-        sub_1B64C5C(0LL, v49);
+        sub_1B68930(0LL, v49);
       PrefabForImageId->fields.svtMultiPortraitEntity = current;
-      sub_1B649A4(
+      sub_1B68678(
         (ServantStatusBattleListViewItem_o *)&PrefabForImageId->fields.svtMultiPortraitEntity,
         (int32_t)current,
         v50,
         v51);
       transform = UnityEngine_Component__get_transform(v52, 0LL);
       if ( !transform )
-        sub_1B64C5C(0LL, v54);
+        sub_1B68930(0LL, v54);
       UnityEngine_Transform__set_localPosition(transform, this->fields.standBasePosition, 0LL);
       commonPosition = current->fields.commonPosition;
       if ( commonPosition && (int)commonPosition->max_length >= 2 )
       {
         v56 = UnityEngine_Component__get_transform(v52, 0LL);
         if ( !v56 )
-          sub_1B64C5C(0LL, v57);
+          sub_1B68930(0LL, v57);
         *(UnityEngine_Vector3_o *)&v60 = UnityEngine_Transform__get_localPosition(v56, 0LL);
         v63 = current->fields.commonPosition;
         if ( !v63 )
-          sub_1B64C5C(v58, v59);
+          sub_1B68930(v58, v59);
         max_length = v63->max_length;
         if ( !max_length )
-          sub_1B64C64(v58, v59);
+          sub_1B68938(v58, v59);
         if ( max_length == 1 )
-          sub_1B64C64(v58, v59);
+          sub_1B68938(v58, v59);
         v66 = v63->m_Items[1];
         v65 = v63->m_Items[2];
         v67 = v60;
@@ -2705,7 +2698,7 @@ LABEL_75:
         v69 = v62;
         v70 = UnityEngine_Component__get_transform(v52, 0LL);
         if ( !v70 )
-          sub_1B64C5C(0LL, v71);
+          sub_1B68930(0LL, v71);
         v104.fields.x = v67 + (float)v66;
         v104.fields.y = v68 + (float)v65;
         v104.fields.z = v69;
@@ -2716,41 +2709,41 @@ LABEL_75:
         current->fields.displayPriority & ~(current->fields.displayPriority >> 31),
         0LL);
       afterFigureCollectList = (System_Collections_Generic_List_object__o *)this->fields.afterFigureCollectList;
-      v73 = (StandFigureCollect_o *)sub_1B64C4C(StandFigureCollect_TypeInfo);
+      v73 = (StandFigureCollect_o *)sub_1B68920(StandFigureCollect_TypeInfo);
       StandFigureCollect___ctor(v73, current, (UIStandFigureR_o *)v52, 0LL);
       if ( !afterFigureCollectList )
-        sub_1B64C5C(v74, v75);
+        sub_1B68930(v74, v75);
       items = afterFigureCollectList->fields._items;
       v79 = Method_System_Collections_Generic_List_StandFigureCollect__Add__;
       ++afterFigureCollectList->fields._version;
       if ( !items )
-        sub_1B64C5C(v74, v75);
+        sub_1B68930(v74, v75);
       size = afterFigureCollectList->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
           afterFigureCollectList,
           (Il2CppObject *)v73,
-          *(const MethodInfo_34AFFC8 **)(*(_QWORD *)(v79[4] + 192LL) + 112LL));
+          *(const MethodInfo_34BC278 **)(*(_QWORD *)(v79[4] + 192LL) + 112LL));
       }
       else
       {
         v81 = &items->obj.klass + size;
         afterFigureCollectList->fields._size = size + 1;
         v81[4] = (Il2CppClass *)v73;
-        sub_1B649A4((ServantStatusBattleListViewItem_o *)(v81 + 4), (int32_t)v73, v76, v77);
+        sub_1B68678((ServantStatusBattleListViewItem_o *)(v81 + 4), (int32_t)v73, v76, v77);
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v100,
-      (const MethodInfo_322C9A0 *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__);
+      (const MethodInfo_323A81C *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__);
   }
   else
   {
     if ( !StandFigureNode )
       goto LABEL_75;
     v83 = UnityEngine_Component__get_gameObject(StandFigureNode, 0LL);
-    Instance = (DataManager_o *)StandFigureManager__CreateRenderPrefab_37612660(
+    Instance = (DataManager_o *)StandFigureManager__CreateRenderPrefab_37669908(
                                   v83,
                                   v31,
                                   v36,
@@ -2769,7 +2762,7 @@ LABEL_75:
       goto LABEL_75;
     UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Instance, this->fields.standBasePosition, 0LL);
     v85 = (System_Collections_Generic_List_object__o *)this->fields.afterFigureCollectList;
-    v86 = (StandFigureCollect_o *)sub_1B64C4C(StandFigureCollect_TypeInfo);
+    v86 = (StandFigureCollect_o *)sub_1B68920(StandFigureCollect_TypeInfo);
     StandFigureCollect___ctor(v86, 0LL, v84, 0LL);
     if ( !v85 )
       goto LABEL_75;
@@ -2784,14 +2777,14 @@ LABEL_75:
       System_Collections_Generic_List_object___AddWithResize(
         v85,
         (Il2CppObject *)v86,
-        *(const MethodInfo_34AFFC8 **)(*(_QWORD *)(v90[4] + 192LL) + 112LL));
+        *(const MethodInfo_34BC278 **)(*(_QWORD *)(v90[4] + 192LL) + 112LL));
     }
     else
     {
       v92 = &v89->obj.klass + v91;
       v85->fields._size = v91 + 1;
       v92[4] = (Il2CppClass *)v86;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)(v92 + 4), (int32_t)v86, v87, v88);
+      sub_1B68678((ServantStatusBattleListViewItem_o *)(v92 + 4), (int32_t)v86, v87, v88);
     }
   }
   LimitUpSvtVoiceList = CombineResultEffectComponent__getLimitUpSvtVoiceList(this, 0, v82);
@@ -2801,7 +2794,7 @@ LABEL_75:
   if ( LimitUpSvtVoiceList && !isForceNormalFace )
   {
     if ( !LimitUpSvtVoiceList->max_length )
-      sub_1B64C64(LimitUpSvtVoiceList, v23);
+      sub_1B68938(LimitUpSvtVoiceList, v23);
     Instance = (DataManager_o *)LimitUpSvtVoiceList->m_Items[0];
     if ( !Instance )
       goto LABEL_75;
@@ -2811,7 +2804,7 @@ LABEL_75:
   }
   if ( System_Linq_Enumerable__Count_object_(
          (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.afterFigureCollectList,
-         (const MethodInfo_2E585A8 *)Method_System_Linq_Enumerable_Count_StandFigureCollect___) >= 1 )
+         (const MethodInfo_2E66944 *)Method_System_Linq_Enumerable_Count_StandFigureCollect___) >= 1 )
   {
     v97 = 0;
     while ( 1 )
@@ -2822,13 +2815,13 @@ LABEL_75:
       Instance = (DataManager_o *)System_Collections_Generic_List_object___get_Item(
                                     (System_Collections_Generic_List_object__o *)Instance,
                                     v97,
-                                    (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
+                                    (const MethodInfo_34BBFA8 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
       if ( !Instance )
         break;
       Instance = (DataManager_o *)Instance->fields.m_CancellationTokenSource;
       if ( !Instance )
         break;
-      UIStandFigureR__SetFace_40651944(
+      UIStandFigureR__SetFace_40716228(
         (UIStandFigureR_o *)Instance,
         m_CancellationTokenSource_high,
         masterDataBytes,
@@ -2837,7 +2830,7 @@ LABEL_75:
         0LL);
       if ( ++v97 >= System_Linq_Enumerable__Count_object_(
                       (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.afterFigureCollectList,
-                      (const MethodInfo_2E585A8 *)Method_System_Linq_Enumerable_Count_StandFigureCollect___) )
+                      (const MethodInfo_2E66944 *)Method_System_Linq_Enumerable_Count_StandFigureCollect___) )
         return;
     }
     goto LABEL_75;
@@ -2864,27 +2857,27 @@ void __fastcall CombineResultEffectComponent__SetAppendSkillCombineInfo(
   System_String_o *COMBINE_ASSET_PATH; // x20
   AssetLoader_LoadEndDataHandler_o *v20; // x21
 
-  if ( (byte_4A02344 & 1) == 0 )
+  if ( (byte_4A0C49C & 1) == 0 )
   {
-    sub_1B64A00(&AssetManager_TypeInfo, usrSvtData);
-    sub_1B64A00(&Method_CombineResultEffectComponent__SetAppendSkillCombineInfo_b__108_0__, v11);
-    sub_1B64A00(&CombineRootComponent_TypeInfo, v12);
-    sub_1B64A00(&AssetLoader_LoadEndDataHandler_TypeInfo, v13);
-    byte_4A02344 = 1;
+    sub_1B686D4(&AssetManager_TypeInfo, usrSvtData);
+    sub_1B686D4(&Method_CombineResultEffectComponent__SetAppendSkillCombineInfo_b__108_0__, v11);
+    sub_1B686D4(&CombineRootComponent_TypeInfo, v12);
+    sub_1B686D4(&AssetLoader_LoadEndDataHandler_TypeInfo, v13);
+    byte_4A0C49C = 1;
   }
   this->fields.kind = 25;
   this->fields.baseUsrSvtData = usrSvtData;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.baseUsrSvtData,
     (int32_t)usrSvtData,
     currentSkillId,
     currentSkillLv);
   this->fields.resUsrSvtData = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v14, v15);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v14, v15);
   this->fields.setResUsrSvtData = 0;
   this->fields.autoFadeout = 1;
   this->fields.callbackFunc = callback;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v16, v17);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v16, v17);
   this->fields.targetId = currentSkillId;
   this->fields.targetIdOld = currentSkillId;
   this->fields.targetLv = currentSkillLv + 1;
@@ -2896,7 +2889,7 @@ void __fastcall CombineResultEffectComponent__SetAppendSkillCombineInfo(
     v18 = CombineRootComponent_TypeInfo;
   }
   COMBINE_ASSET_PATH = v18->static_fields->COMBINE_ASSET_PATH;
-  v20 = (AssetLoader_LoadEndDataHandler_o *)sub_1B64C4C(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v20 = (AssetLoader_LoadEndDataHandler_o *)sub_1B68920(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v20,
     (Il2CppObject *)this,
@@ -2919,21 +2912,21 @@ void __fastcall CombineResultEffectComponent__SetBaseSvtFigure(
   int32_t FigureImageLimitCount; // w0
   const MethodInfo *v9; // x7
 
-  if ( (byte_4A02354 & 1) == 0 )
+  if ( (byte_4A0C4AC & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_3162/*"BaseSvtNodeName"*/, *(_QWORD *)&formId);
-    byte_4A02354 = 1;
+    sub_1B686D4(&StringLiteral_3160/*"BaseSvtNodeName"*/, *(_QWORD *)&formId);
+    byte_4A0C4AC = 1;
   }
   baseUsrSvtData = this->fields.baseUsrSvtData;
   if ( !baseUsrSvtData )
-    sub_1B64C5C(0LL, *(_QWORD *)&formId);
+    sub_1B68930(0LL, *(_QWORD *)&formId);
   FigureImageLimitCount = UserServantEntity__getFigureImageLimitCount(baseUsrSvtData, 0, 0LL);
   CombineResultEffectComponent__CreateBaseFigurePrefab(
     this,
     formId,
     FigureImageLimitCount,
     this->fields.friendship,
-    (System_String_o *)StringLiteral_3162/*"BaseSvtNodeName"*/,
+    (System_String_o *)StringLiteral_3160/*"BaseSvtNodeName"*/,
     0,
     overwriteType,
     v9);
@@ -2958,12 +2951,12 @@ void __fastcall CombineResultEffectComponent__SetBeforeLimitUpSvtFigure(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v13; // 0:x0.16
 
   v2 = this;
-  if ( (byte_4A02359 & 1) == 0 )
+  if ( (byte_4A0C4B1 & 1) == 0 )
   {
-    sub_1B64A00(&ImageLimitCount_TypeInfo, method);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v3);
-    this = (CombineResultEffectComponent_o *)sub_1B64A00(&StringLiteral_8369/*"LimitUpBaseSvtNodeName"*/, v4);
-    byte_4A02359 = 1;
+    sub_1B686D4(&ImageLimitCount_TypeInfo, method);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v3);
+    this = (CombineResultEffectComponent_o *)sub_1B686D4(&StringLiteral_8371/*"LimitUpBaseSvtNodeName"*/, v4);
+    byte_4A0C4B1 = 1;
   }
   baseUsrSvtData = v2->fields.baseUsrSvtData;
   if ( !baseUsrSvtData )
@@ -2974,13 +2967,13 @@ void __fastcall CombineResultEffectComponent__SetBeforeLimitUpSvtFigure(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v13.fields.currentCryptoKey = v7;
   *(_QWORD *)&v13.fields.fakeValue = v6;
-  this = (CombineResultEffectComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v13, 0LL);
+  this = (CombineResultEffectComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v13, 0LL);
   v8 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)v2->fields.baseUsrSvtData;
   if ( !v8 )
 LABEL_10:
-    sub_1B64C5C(this, method);
+    sub_1B68930(this, method);
   v9 = (int)this;
-  v10 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v8[6], 0LL);
+  v10 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v8[6], 0LL);
   if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
   ImageLimitCount = ImageLimitCount__GetImageLimitCount(v9, v10, 0LL);
@@ -2989,7 +2982,7 @@ LABEL_10:
     0,
     ImageLimitCount,
     -1,
-    (System_String_o *)StringLiteral_8369/*"LimitUpBaseSvtNodeName"*/,
+    (System_String_o *)StringLiteral_8371/*"LimitUpBaseSvtNodeName"*/,
     1,
     2,
     v12);
@@ -3138,45 +3131,45 @@ void __fastcall CombineResultEffectComponent__SetCardParam(
   UnityEngine_Vector3_o v138; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v139; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A0234C & 1) == 0 )
+  if ( (byte_4A0C4A4 & 1) == 0 )
   {
-    sub_1B64A00(&EventDelegate_Callback_TypeInfo, method);
-    sub_1B64A00(&Method_CombineResultEffectComponent__SetCardParam_b__116_0__, v4);
-    sub_1B64A00(&Method_UnityEngine_Component_GetComponent_UIExtrusionLabel___, v5);
-    sub_1B64A00(&Method_UnityEngine_Component_GetComponent_UILabel___, v6);
-    sub_1B64A00(&Method_System_Linq_Enumerable_Count_StandFigureCollect___, v7);
-    sub_1B64A00(&EventDelegate_TypeInfo, v8);
-    sub_1B64A00(&Method_UnityEngine_GameObject_AddComponent_UITouchPress___, v9);
-    sub_1B64A00(&ImageLimitCount_TypeInfo, v10);
-    sub_1B64A00(&Method_System_Collections_Generic_List_EventDelegate__Add__, v11);
-    sub_1B64A00(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__, v12);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v13);
-    sub_1B64A00(&StringLiteral_4761/*"CostumeName"*/, v14);
-    sub_1B64A00(&StringLiteral_3162/*"BaseSvtNodeName"*/, v15);
-    sub_1B64A00(&StringLiteral_17207/*"bit_result_120"*/, v16);
-    sub_1B64A00(&StringLiteral_17214/*"bit_result_extraskill02"*/, v17);
-    sub_1B64A00(&StringLiteral_17223/*"bit_result_nobledeliverance"*/, v18);
-    sub_1B64A00(&StringLiteral_12177/*"START_ANIMATION"*/, v19);
-    sub_1B64A00(&StringLiteral_17211/*"bit_result_command_card_exceed"*/, v20);
-    sub_1B64A00(&StringLiteral_17220/*"bit_result_limitbreak"*/, v21);
-    sub_1B64A00(&StringLiteral_17215/*"bit_result_friendship_exceed"*/, v22);
-    sub_1B64A00(&StringLiteral_11274/*"ResMaxLvExceedNodeName"*/, v23);
-    sub_1B64A00(&StringLiteral_17228/*"bit_result_skillrank"*/, v24);
-    sub_1B64A00(&StringLiteral_17209/*"bit_result_advent02"*/, v25);
-    sub_1B64A00(&StringLiteral_17218/*"bit_result_grail_02"*/, v26);
-    sub_1B64A00(&StringLiteral_17229/*"bit_result_skillup"*/, v27);
-    sub_1B64A00(&StringLiteral_4900/*"CrtMaxLvExceedNodeName"*/, v28);
-    sub_1B64A00(&StringLiteral_17224/*"bit_result_powerup"*/, v29);
-    sub_1B64A00(&StringLiteral_12888/*"StartAnimationName"*/, v30);
-    sub_1B64A00(&StringLiteral_17217/*"bit_result_grail_01"*/, v31);
-    sub_1B64A00(&StringLiteral_17208/*"bit_result_advent01"*/, v32);
-    sub_1B64A00(&StringLiteral_17213/*"bit_result_extraskill01"*/, v33);
-    sub_1B64A00(&StringLiteral_17227/*"bit_result_skilldeliverance"*/, v34);
-    sub_1B64A00(&StringLiteral_17230/*"bit_result_skinchange01"*/, v35);
-    sub_1B64A00(&StringLiteral_4901/*"CrtMaxLvNodeName"*/, v36);
-    sub_1B64A00(&StringLiteral_11275/*"ResMaxLvNodeName"*/, v37);
-    sub_1B64A00(&StringLiteral_13036/*"SvtEqCardScale"*/, v38);
-    byte_4A0234C = 1;
+    sub_1B686D4(&EventDelegate_Callback_TypeInfo, method);
+    sub_1B686D4(&Method_CombineResultEffectComponent__SetCardParam_b__116_0__, v4);
+    sub_1B686D4(&Method_UnityEngine_Component_GetComponent_UIExtrusionLabel___, v5);
+    sub_1B686D4(&Method_UnityEngine_Component_GetComponent_UILabel___, v6);
+    sub_1B686D4(&Method_System_Linq_Enumerable_Count_StandFigureCollect___, v7);
+    sub_1B686D4(&EventDelegate_TypeInfo, v8);
+    sub_1B686D4(&Method_UnityEngine_GameObject_AddComponent_UITouchPress___, v9);
+    sub_1B686D4(&ImageLimitCount_TypeInfo, v10);
+    sub_1B686D4(&Method_System_Collections_Generic_List_EventDelegate__Add__, v11);
+    sub_1B686D4(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__, v12);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v13);
+    sub_1B686D4(&StringLiteral_4759/*"CostumeName"*/, v14);
+    sub_1B686D4(&StringLiteral_3160/*"BaseSvtNodeName"*/, v15);
+    sub_1B686D4(&StringLiteral_17208/*"bit_result_120"*/, v16);
+    sub_1B686D4(&StringLiteral_17215/*"bit_result_extraskill02"*/, v17);
+    sub_1B686D4(&StringLiteral_17224/*"bit_result_nobledeliverance"*/, v18);
+    sub_1B686D4(&StringLiteral_12178/*"START_ANIMATION"*/, v19);
+    sub_1B686D4(&StringLiteral_17212/*"bit_result_command_card_exceed"*/, v20);
+    sub_1B686D4(&StringLiteral_17221/*"bit_result_limitbreak"*/, v21);
+    sub_1B686D4(&StringLiteral_17216/*"bit_result_friendship_exceed"*/, v22);
+    sub_1B686D4(&StringLiteral_11275/*"ResMaxLvExceedNodeName"*/, v23);
+    sub_1B686D4(&StringLiteral_17229/*"bit_result_skillrank"*/, v24);
+    sub_1B686D4(&StringLiteral_17210/*"bit_result_advent02"*/, v25);
+    sub_1B686D4(&StringLiteral_17219/*"bit_result_grail_02"*/, v26);
+    sub_1B686D4(&StringLiteral_17230/*"bit_result_skillup"*/, v27);
+    sub_1B686D4(&StringLiteral_4898/*"CrtMaxLvExceedNodeName"*/, v28);
+    sub_1B686D4(&StringLiteral_17225/*"bit_result_powerup"*/, v29);
+    sub_1B686D4(&StringLiteral_12889/*"StartAnimationName"*/, v30);
+    sub_1B686D4(&StringLiteral_17218/*"bit_result_grail_01"*/, v31);
+    sub_1B686D4(&StringLiteral_17209/*"bit_result_advent01"*/, v32);
+    sub_1B686D4(&StringLiteral_17214/*"bit_result_extraskill01"*/, v33);
+    sub_1B686D4(&StringLiteral_17228/*"bit_result_skilldeliverance"*/, v34);
+    sub_1B686D4(&StringLiteral_17231/*"bit_result_skinchange01"*/, v35);
+    sub_1B686D4(&StringLiteral_4899/*"CrtMaxLvNodeName"*/, v36);
+    sub_1B686D4(&StringLiteral_11276/*"ResMaxLvNodeName"*/, v37);
+    sub_1B686D4(&StringLiteral_13037/*"SvtEqCardScale"*/, v38);
+    byte_4A0C4A4 = 1;
   }
   v136 = 0LL;
   v135 = 0LL;
@@ -3218,12 +3211,12 @@ LABEL_175:
           {
             resUsrSvtData = HutongGames_PlayMaker_FsmVariables__GetFsmString(
                               (HutongGames_PlayMaker_FsmVariables_o *)resUsrSvtData,
-                              (System_String_o *)StringLiteral_12888/*"StartAnimationName"*/,
+                              (System_String_o *)StringLiteral_12889/*"StartAnimationName"*/,
                               0LL);
             if ( resUsrSvtData )
             {
               *((_QWORD *)resUsrSvtData + 7) = v131;
-              sub_1B649A4((ServantStatusBattleListViewItem_o *)((char *)resUsrSvtData + 56), (int32_t)v131, v132, v133);
+              sub_1B68678((ServantStatusBattleListViewItem_o *)((char *)resUsrSvtData + 56), (int32_t)v131, v132, v133);
               CombineResultEffectComponent__SetLevelUpSvtFigure(this, v134);
               resUsrSvtData = this->fields.svtResultInfoWindow;
               if ( resUsrSvtData )
@@ -3250,7 +3243,7 @@ LABEL_175:
           }
         }
 LABEL_182:
-        sub_1B64C5C(resUsrSvtData, method);
+        sub_1B68930(resUsrSvtData, method);
       }
       goto LABEL_183;
     case 1:
@@ -3267,7 +3260,7 @@ LABEL_182:
         goto LABEL_182;
       resUsrSvtData = HutongGames_PlayMaker_FsmVariables__GetFsmString(
                         (HutongGames_PlayMaker_FsmVariables_o *)resUsrSvtData,
-                        (System_String_o *)StringLiteral_4901/*"CrtMaxLvNodeName"*/,
+                        (System_String_o *)StringLiteral_4899/*"CrtMaxLvNodeName"*/,
                         0LL);
       if ( !resUsrSvtData )
         goto LABEL_182;
@@ -3283,7 +3276,7 @@ LABEL_182:
         goto LABEL_182;
       resUsrSvtData = UnityEngine_Component__GetComponent_object_(
                         (UnityEngine_Component_o *)resUsrSvtData,
-                        (const MethodInfo_2E32784 *)Method_UnityEngine_Component_GetComponent_UIExtrusionLabel___);
+                        (const MethodInfo_2E407F4 *)Method_UnityEngine_Component_GetComponent_UIExtrusionLabel___);
       if ( !this->fields.baseUsrSvtData )
         goto LABEL_182;
       v42 = (UIExtrusionLabel_o *)resUsrSvtData;
@@ -3300,7 +3293,7 @@ LABEL_182:
         goto LABEL_182;
       resUsrSvtData = HutongGames_PlayMaker_FsmVariables__GetFsmString(
                         (HutongGames_PlayMaker_FsmVariables_o *)resUsrSvtData,
-                        (System_String_o *)StringLiteral_11275/*"ResMaxLvNodeName"*/,
+                        (System_String_o *)StringLiteral_11276/*"ResMaxLvNodeName"*/,
                         0LL);
       if ( !resUsrSvtData )
         goto LABEL_182;
@@ -3316,7 +3309,7 @@ LABEL_182:
         goto LABEL_182;
       resUsrSvtData = UnityEngine_Component__GetComponent_object_(
                         (UnityEngine_Component_o *)resUsrSvtData,
-                        (const MethodInfo_2E32784 *)Method_UnityEngine_Component_GetComponent_UIExtrusionLabel___);
+                        (const MethodInfo_2E407F4 *)Method_UnityEngine_Component_GetComponent_UIExtrusionLabel___);
       if ( !this->fields.resUsrSvtData )
         goto LABEL_182;
       v45 = (UIExtrusionLabel_o *)resUsrSvtData;
@@ -3334,12 +3327,12 @@ LABEL_182:
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v137.fields.currentCryptoKey = v48;
       *(_QWORD *)&v137.fields.fakeValue = v47;
-      resUsrSvtData = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v137, 0LL);
+      resUsrSvtData = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v137, 0LL);
       v49 = this->fields.baseUsrSvtData;
       if ( !v49 )
         goto LABEL_182;
       v50 = (int)resUsrSvtData;
-      v51 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v49->fields.limitCount, 0LL);
+      v51 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v49->fields.limitCount, 0LL);
       if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
       resUsrSvtData = (void *)ImageLimitCount__GetImageLimitCount(v50, v51, 0LL);
@@ -3347,14 +3340,14 @@ LABEL_182:
       this->fields.oldImgLimitCnt = (int)resUsrSvtData;
       if ( !v52 )
         goto LABEL_182;
-      resUsrSvtData = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(
+      resUsrSvtData = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(
                                 v52->fields.svtId,
                                 0LL);
       v53 = this->fields.resUsrSvtData;
       if ( !v53 )
         goto LABEL_182;
       v54 = (int)resUsrSvtData;
-      v55 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v53->fields.limitCount, 0LL);
+      v55 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v53->fields.limitCount, 0LL);
       ImageLimitCount = ImageLimitCount__GetImageLimitCount(v54, v55, 0LL);
       resSvtNameData = this->fields.resSvtNameData;
       isLimitUpSuppression = this->fields.isLimitUpSuppression;
@@ -3375,7 +3368,7 @@ LABEL_67:
         CombineResultEffectComponent__SetAfterLimitUpSvtFigure(this, 0, v57);
         CombineResultEffectComponent__setBaseSvtGraphCard(this, v61, v79);
         CombineResultEffectComponent__setResultSvtGraphCard(this, v61, v80);
-        v66 = &StringLiteral_17209/*"bit_result_advent02"*/;
+        v66 = &StringLiteral_17210/*"bit_result_advent02"*/;
 LABEL_159:
         resUsrSvtData = this->fields.fsm;
         if ( !resUsrSvtData )
@@ -3407,19 +3400,19 @@ LABEL_27:
 LABEL_28:
         v65 = System_Linq_Enumerable__Count_object_(
                 (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.currentFigureCollectList,
-                (const MethodInfo_2E585A8 *)Method_System_Linq_Enumerable_Count_StandFigureCollect___);
+                (const MethodInfo_2E66944 *)Method_System_Linq_Enumerable_Count_StandFigureCollect___);
         if ( v62 )
         {
-          v66 = &StringLiteral_17208/*"bit_result_advent01"*/;
+          v66 = &StringLiteral_17209/*"bit_result_advent01"*/;
           if ( v65 != *(_DWORD *)(v62 + 24) || v65 <= 0 )
             goto LABEL_159;
         }
         else if ( v65 < 1 )
         {
-          v66 = &StringLiteral_17208/*"bit_result_advent01"*/;
+          v66 = &StringLiteral_17209/*"bit_result_advent01"*/;
           goto LABEL_159;
         }
-        v66 = &StringLiteral_17208/*"bit_result_advent01"*/;
+        v66 = &StringLiteral_17209/*"bit_result_advent01"*/;
         v81 = 0LL;
         if ( v65 <= 1 )
           v82 = 1LL;
@@ -3433,7 +3426,7 @@ LABEL_28:
           resUsrSvtData = System_Collections_Generic_List_object___get_Item(
                             (System_Collections_Generic_List_object__o *)resUsrSvtData,
                             v81,
-                            (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
+                            (const MethodInfo_34BBFA8 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
           if ( !resUsrSvtData )
             goto LABEL_182;
           resUsrSvtData = (void *)*((_QWORD *)resUsrSvtData + 3);
@@ -3451,7 +3444,7 @@ LABEL_28:
             if ( !resUsrSvtData )
               goto LABEL_182;
           }
-          UIStandFigureR__SetFace_40651944((UIStandFigureR_o *)resUsrSvtData, (int32_t)method, v63, 0LL, v60, 0LL);
+          UIStandFigureR__SetFace_40716228((UIStandFigureR_o *)resUsrSvtData, (int32_t)method, v63, 0LL, v60, 0LL);
           if ( v82 == ++v81 )
             goto LABEL_159;
         }
@@ -3460,18 +3453,18 @@ LABEL_28:
     case 2:
       v88 = 1;
       v89 = this;
-      v90 = (System_String_o *)StringLiteral_17229/*"bit_result_skillup"*/;
+      v90 = (System_String_o *)StringLiteral_17230/*"bit_result_skillup"*/;
       goto LABEL_92;
     case 3:
-      v68 = &StringLiteral_17227/*"bit_result_skilldeliverance"*/;
+      v68 = &StringLiteral_17228/*"bit_result_skilldeliverance"*/;
       goto LABEL_91;
     case 4:
       v91 = 1;
       v92 = this;
-      v93 = (System_String_o *)StringLiteral_17229/*"bit_result_skillup"*/;
+      v93 = (System_String_o *)StringLiteral_17230/*"bit_result_skillup"*/;
       goto LABEL_96;
     case 5:
-      v67 = &StringLiteral_17223/*"bit_result_nobledeliverance"*/;
+      v67 = &StringLiteral_17224/*"bit_result_nobledeliverance"*/;
       goto LABEL_95;
     case 6:
       resUsrSvtData = this->fields.fsm;
@@ -3482,7 +3475,7 @@ LABEL_28:
         goto LABEL_182;
       resUsrSvtData = HutongGames_PlayMaker_FsmVariables__GetFsmString(
                         (HutongGames_PlayMaker_FsmVariables_o *)resUsrSvtData,
-                        (System_String_o *)StringLiteral_3162/*"BaseSvtNodeName"*/,
+                        (System_String_o *)StringLiteral_3160/*"BaseSvtNodeName"*/,
                         0LL);
       if ( !resUsrSvtData )
         goto LABEL_182;
@@ -3502,7 +3495,7 @@ LABEL_28:
         goto LABEL_182;
       resUsrSvtData = HutongGames_PlayMaker_FsmVariables__GetFsmFloat(
                         (HutongGames_PlayMaker_FsmVariables_o *)resUsrSvtData,
-                        (System_String_o *)StringLiteral_13036/*"SvtEqCardScale"*/,
+                        (System_String_o *)StringLiteral_13037/*"SvtEqCardScale"*/,
                         0LL);
       if ( !resUsrSvtData )
         goto LABEL_182;
@@ -3511,7 +3504,7 @@ LABEL_28:
         goto LABEL_182;
       v98 = Value;
       gameObject = UnityEngine_Component__get_gameObject(v96, 0LL);
-      resUsrSvtData = CharaGraphManager__CreateTexturePrefab_37596212(
+      resUsrSvtData = CharaGraphManager__CreateTexturePrefab_37653460(
                         gameObject,
                         this->fields.resUsrSvtData,
                         10,
@@ -3567,7 +3560,7 @@ LABEL_28:
         v127 = this->fields.successInfo - 1;
         if ( v127 >= v126->max_length )
 LABEL_183:
-          sub_1B64C64(resUsrSvtData, method);
+          sub_1B68938(resUsrSvtData, method);
         v78 = (__int64 *)&v126->m_Items[v127];
       }
       resUsrSvtData = this->fields.fsm;
@@ -3578,7 +3571,7 @@ LABEL_157:
       goto LABEL_161;
     case 7:
     case 0x15:
-      v68 = &StringLiteral_17228/*"bit_result_skillrank"*/;
+      v68 = &StringLiteral_17229/*"bit_result_skillrank"*/;
 LABEL_91:
       v90 = (System_String_o *)*v68;
       v89 = this;
@@ -3589,7 +3582,7 @@ LABEL_92:
     case 8:
     case 0x12:
     case 0x1B:
-      v67 = &StringLiteral_17228/*"bit_result_skillrank"*/;
+      v67 = &StringLiteral_17229/*"bit_result_skillrank"*/;
 LABEL_95:
       v93 = (System_String_o *)*v67;
       v92 = this;
@@ -3607,11 +3600,11 @@ LABEL_96:
         goto LABEL_182;
       resUsrSvtData = HutongGames_PlayMaker_FsmVariables__GetFsmString(
                         (HutongGames_PlayMaker_FsmVariables_o *)resUsrSvtData,
-                        (System_String_o *)StringLiteral_12888/*"StartAnimationName"*/,
+                        (System_String_o *)StringLiteral_12889/*"StartAnimationName"*/,
                         0LL);
       if ( !resUsrSvtData )
         goto LABEL_182;
-      v103 = &StringLiteral_17229/*"bit_result_skillup"*/;
+      v103 = &StringLiteral_17230/*"bit_result_skillup"*/;
       goto LABEL_122;
     case 0xB:
       CombineResultEffectComponent__SetBaseSvtFigure(this, 0, 0, v2);
@@ -3623,11 +3616,11 @@ LABEL_96:
         goto LABEL_182;
       resUsrSvtData = HutongGames_PlayMaker_FsmVariables__GetFsmString(
                         (HutongGames_PlayMaker_FsmVariables_o *)resUsrSvtData,
-                        (System_String_o *)StringLiteral_12888/*"StartAnimationName"*/,
+                        (System_String_o *)StringLiteral_12889/*"StartAnimationName"*/,
                         0LL);
       if ( !resUsrSvtData )
         goto LABEL_182;
-      v103 = &StringLiteral_17224/*"bit_result_powerup"*/;
+      v103 = &StringLiteral_17225/*"bit_result_powerup"*/;
 LABEL_122:
       v104 = *v103;
       *((_QWORD *)resUsrSvtData + 7) = *v103;
@@ -3645,7 +3638,7 @@ LABEL_122:
         goto LABEL_182;
       resUsrSvtData = HutongGames_PlayMaker_FsmVariables__GetFsmString(
                         (HutongGames_PlayMaker_FsmVariables_o *)resUsrSvtData,
-                        (System_String_o *)StringLiteral_4900/*"CrtMaxLvExceedNodeName"*/,
+                        (System_String_o *)StringLiteral_4898/*"CrtMaxLvExceedNodeName"*/,
                         0LL);
       if ( !resUsrSvtData )
         goto LABEL_182;
@@ -3661,7 +3654,7 @@ LABEL_122:
         goto LABEL_182;
       resUsrSvtData = UnityEngine_Component__GetComponent_object_(
                         (UnityEngine_Component_o *)resUsrSvtData,
-                        (const MethodInfo_2E32784 *)Method_UnityEngine_Component_GetComponent_UIExtrusionLabel___);
+                        (const MethodInfo_2E407F4 *)Method_UnityEngine_Component_GetComponent_UIExtrusionLabel___);
       if ( !this->fields.baseUsrSvtData )
         goto LABEL_182;
       v71 = (UIExtrusionLabel_o *)resUsrSvtData;
@@ -3678,7 +3671,7 @@ LABEL_122:
         goto LABEL_182;
       resUsrSvtData = HutongGames_PlayMaker_FsmVariables__GetFsmString(
                         (HutongGames_PlayMaker_FsmVariables_o *)resUsrSvtData,
-                        (System_String_o *)StringLiteral_11274/*"ResMaxLvExceedNodeName"*/,
+                        (System_String_o *)StringLiteral_11275/*"ResMaxLvExceedNodeName"*/,
                         0LL);
       if ( !resUsrSvtData )
         goto LABEL_182;
@@ -3694,7 +3687,7 @@ LABEL_122:
         goto LABEL_182;
       resUsrSvtData = UnityEngine_Component__GetComponent_object_(
                         (UnityEngine_Component_o *)resUsrSvtData,
-                        (const MethodInfo_2E32784 *)Method_UnityEngine_Component_GetComponent_UIExtrusionLabel___);
+                        (const MethodInfo_2E407F4 *)Method_UnityEngine_Component_GetComponent_UIExtrusionLabel___);
       if ( !this->fields.resUsrSvtData )
         goto LABEL_182;
       v74 = (UIExtrusionLabel_o *)resUsrSvtData;
@@ -3729,7 +3722,7 @@ LABEL_53:
         this->fields.isChangeCardImg = 1;
       if ( this->fields.kind == 22 )
       {
-        v77 = &StringLiteral_17220/*"bit_result_limitbreak"*/;
+        v77 = &StringLiteral_17221/*"bit_result_limitbreak"*/;
 LABEL_144:
         CombineResultEffectComponent__setBaseSvtGraphCard(this, 0, v76);
         CombineResultEffectComponent__setResultSvtGraphCard(this, 0, v124);
@@ -3737,10 +3730,10 @@ LABEL_144:
       }
       if ( this->fields.isChangeCardImg )
       {
-        v77 = &StringLiteral_17218/*"bit_result_grail_02"*/;
+        v77 = &StringLiteral_17219/*"bit_result_grail_02"*/;
         goto LABEL_144;
       }
-      v77 = &StringLiteral_17217/*"bit_result_grail_01"*/;
+      v77 = &StringLiteral_17218/*"bit_result_grail_01"*/;
 LABEL_145:
       resUsrSvtData = this->fields.fsm;
       if ( !resUsrSvtData )
@@ -3752,7 +3745,7 @@ LABEL_161:
         goto LABEL_182;
       resUsrSvtData = HutongGames_PlayMaker_FsmVariables__GetFsmString(
                         (HutongGames_PlayMaker_FsmVariables_o *)resUsrSvtData,
-                        (System_String_o *)StringLiteral_12888/*"StartAnimationName"*/,
+                        (System_String_o *)StringLiteral_12889/*"StartAnimationName"*/,
                         0LL);
       if ( !resUsrSvtData )
         goto LABEL_182;
@@ -3760,12 +3753,12 @@ LABEL_161:
       v105 = (ServantStatusBattleListViewItem_o *)((char *)resUsrSvtData + 56);
       LODWORD(v104) = v125;
 LABEL_164:
-      sub_1B649A4(v105, v104, v101, v102);
+      sub_1B68678(v105, v104, v101, v102);
 LABEL_165:
       resUsrSvtData = this->fields.fsm;
       if ( !resUsrSvtData )
         goto LABEL_182;
-      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)resUsrSvtData, (System_String_o *)StringLiteral_12177/*"START_ANIMATION"*/, 0LL);
+      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)resUsrSvtData, (System_String_o *)StringLiteral_12178/*"START_ANIMATION"*/, 0LL);
       return;
     case 0xD:
     case 0x17:
@@ -3773,7 +3766,7 @@ LABEL_165:
       resUsrSvtData = this->fields.fsm;
       if ( !resUsrSvtData )
         goto LABEL_182;
-      v78 = &StringLiteral_17215/*"bit_result_friendship_exceed"*/;
+      v78 = &StringLiteral_17216/*"bit_result_friendship_exceed"*/;
       goto LABEL_157;
     case 0xF:
       CombineResultEffectComponent__setLimitUpBaseSvtFigure(this, method);
@@ -3785,7 +3778,7 @@ LABEL_165:
         goto LABEL_182;
       resUsrSvtData = HutongGames_PlayMaker_FsmVariables__GetFsmString(
                         (HutongGames_PlayMaker_FsmVariables_o *)resUsrSvtData,
-                        (System_String_o *)StringLiteral_4761/*"CostumeName"*/,
+                        (System_String_o *)StringLiteral_4759/*"CostumeName"*/,
                         0LL);
       if ( !resUsrSvtData )
         goto LABEL_182;
@@ -3801,7 +3794,7 @@ LABEL_165:
         goto LABEL_182;
       resUsrSvtData = UnityEngine_Component__GetComponent_object_(
                         (UnityEngine_Component_o *)resUsrSvtData,
-                        (const MethodInfo_2E32784 *)Method_UnityEngine_Component_GetComponent_UILabel___);
+                        (const MethodInfo_2E407F4 *)Method_UnityEngine_Component_GetComponent_UILabel___);
       if ( !resUsrSvtData )
         goto LABEL_182;
       UILabel__set_text((UILabel_o *)resUsrSvtData, this->fields.costumeName, 0LL);
@@ -3812,14 +3805,14 @@ LABEL_165:
       resUsrSvtData = this->fields.fsm;
       if ( !resUsrSvtData )
         goto LABEL_182;
-      v78 = &StringLiteral_17230/*"bit_result_skinchange01"*/;
+      v78 = &StringLiteral_17231/*"bit_result_skinchange01"*/;
       goto LABEL_157;
     case 0x14:
       CombineResultEffectComponent__SetBaseSvtFigure(this, 0, 1, v2);
       resUsrSvtData = this->fields.fsm;
       if ( !resUsrSvtData )
         goto LABEL_182;
-      v78 = &StringLiteral_17211/*"bit_result_command_card_exceed"*/;
+      v78 = &StringLiteral_17212/*"bit_result_command_card_exceed"*/;
       goto LABEL_157;
     case 0x18:
       CombineResultEffectComponent__setLimitUpBaseSvtFigure(this, method);
@@ -3829,7 +3822,7 @@ LABEL_165:
       resUsrSvtData = this->fields.fsm;
       if ( !resUsrSvtData )
         goto LABEL_182;
-      v78 = &StringLiteral_17207/*"bit_result_120"*/;
+      v78 = &StringLiteral_17208/*"bit_result_120"*/;
       goto LABEL_157;
     case 0x19:
       resUsrSvtData = this->fields.effect;
@@ -3840,15 +3833,15 @@ LABEL_165:
         goto LABEL_182;
       v114 = UnityEngine_GameObject__AddComponent_object_(
                (UnityEngine_GameObject_o *)resUsrSvtData,
-               (const MethodInfo_2E8A6E4 *)Method_UnityEngine_GameObject_AddComponent_UITouchPress___);
-      v115 = (EventDelegate_Callback_o *)sub_1B64C4C(EventDelegate_Callback_TypeInfo);
+               (const MethodInfo_2E98868 *)Method_UnityEngine_GameObject_AddComponent_UITouchPress___);
+      v115 = (EventDelegate_Callback_o *)sub_1B68920(EventDelegate_Callback_TypeInfo);
       EventDelegate_Callback___ctor(
         v115,
         (Il2CppObject *)this,
         Method_CombineResultEffectComponent__SetCardParam_b__116_0__,
         0LL);
-      v116 = (EventDelegate_o *)sub_1B64C4C(EventDelegate_TypeInfo);
-      EventDelegate___ctor_46519028(v116, v115, 0LL);
+      v116 = (EventDelegate_o *)sub_1B68920(EventDelegate_TypeInfo);
+      EventDelegate___ctor_46576352(v116, v115, 0LL);
       if ( !v114 )
         goto LABEL_182;
       resUsrSvtData = v114[2].klass;
@@ -3865,18 +3858,18 @@ LABEL_165:
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)resUsrSvtData,
           (Il2CppObject *)v116,
-          *(const MethodInfo_34AFFC8 **)(*(_QWORD *)(v120[4] + 192LL) + 112LL));
+          *(const MethodInfo_34BC278 **)(*(_QWORD *)(v120[4] + 192LL) + 112LL));
       }
       else
       {
         v122 = v119 + 8 * v121;
         *((_DWORD *)resUsrSvtData + 6) = v121 + 1;
         *(_QWORD *)(v122 + 32) = v116;
-        sub_1B649A4((ServantStatusBattleListViewItem_o *)(v122 + 32), (int32_t)v116, v117, v118);
+        sub_1B68678((ServantStatusBattleListViewItem_o *)(v122 + 32), (int32_t)v116, v117, v118);
       }
       CombineResultEffectComponent__SetBaseSvtFigure(this, 0, 1, v123);
       resUsrSvtData = this->fields.fsm;
-      v78 = (__int64 *)(this->fields.targetLvOld ? &StringLiteral_17214/*"bit_result_extraskill02"*/ : &StringLiteral_17213/*"bit_result_extraskill01"*/);
+      v78 = (__int64 *)(this->fields.targetLvOld ? &StringLiteral_17215/*"bit_result_extraskill02"*/ : &StringLiteral_17214/*"bit_result_extraskill01"*/);
       if ( !resUsrSvtData )
         goto LABEL_182;
       goto LABEL_157;
@@ -3912,16 +3905,16 @@ void __fastcall CombineResultEffectComponent__SetCardParam_Skill(
   int32_t v24; // w2
   int32_t v25; // w3
 
-  if ( (byte_4A0234F & 1) == 0 )
+  if ( (byte_4A0C4A7 & 1) == 0 )
   {
-    sub_1B64A00(&EventDelegate_Callback_TypeInfo, startName);
-    sub_1B64A00(&Method_CombineResultEffectComponent__SetCardParam_Skill_b__119_0__, v7);
-    sub_1B64A00(&EventDelegate_TypeInfo, v8);
-    sub_1B64A00(&Method_UnityEngine_GameObject_AddComponent_UITouchPress___, v9);
-    sub_1B64A00(&Method_System_Collections_Generic_List_EventDelegate__Add__, v10);
-    sub_1B64A00(&StringLiteral_12177/*"START_ANIMATION"*/, v11);
-    sub_1B64A00(&StringLiteral_12888/*"StartAnimationName"*/, v12);
-    byte_4A0234F = 1;
+    sub_1B686D4(&EventDelegate_Callback_TypeInfo, startName);
+    sub_1B686D4(&Method_CombineResultEffectComponent__SetCardParam_Skill_b__119_0__, v7);
+    sub_1B686D4(&EventDelegate_TypeInfo, v8);
+    sub_1B686D4(&Method_UnityEngine_GameObject_AddComponent_UITouchPress___, v9);
+    sub_1B686D4(&Method_System_Collections_Generic_List_EventDelegate__Add__, v10);
+    sub_1B686D4(&StringLiteral_12178/*"START_ANIMATION"*/, v11);
+    sub_1B686D4(&StringLiteral_12889/*"StartAnimationName"*/, v12);
+    byte_4A0C4A7 = 1;
   }
   CombineResultEffectComponent__SetBaseSvtFigure(this, 0, 1, method);
   if ( isSkip )
@@ -3934,15 +3927,15 @@ void __fastcall CombineResultEffectComponent__SetCardParam_Skill(
       goto LABEL_17;
     v15 = UnityEngine_GameObject__AddComponent_object_(
             (UnityEngine_GameObject_o *)effect,
-            (const MethodInfo_2E8A6E4 *)Method_UnityEngine_GameObject_AddComponent_UITouchPress___);
-    v16 = (EventDelegate_Callback_o *)sub_1B64C4C(EventDelegate_Callback_TypeInfo);
+            (const MethodInfo_2E98868 *)Method_UnityEngine_GameObject_AddComponent_UITouchPress___);
+    v16 = (EventDelegate_Callback_o *)sub_1B68920(EventDelegate_Callback_TypeInfo);
     EventDelegate_Callback___ctor(
       v16,
       (Il2CppObject *)this,
       Method_CombineResultEffectComponent__SetCardParam_Skill_b__119_0__,
       0LL);
-    v17 = (EventDelegate_o *)sub_1B64C4C(EventDelegate_TypeInfo);
-    EventDelegate___ctor_46519028(v17, v16, 0LL);
+    v17 = (EventDelegate_o *)sub_1B68920(EventDelegate_TypeInfo);
+    EventDelegate___ctor_46576352(v17, v16, 0LL);
     if ( !v15
       || (effect = (int *)v15[2].klass) == 0LL
       || (v20 = *((_QWORD *)effect + 2),
@@ -3951,7 +3944,7 @@ void __fastcall CombineResultEffectComponent__SetCardParam_Skill(
           !v20) )
     {
 LABEL_17:
-      sub_1B64C5C(effect, v13);
+      sub_1B68930(effect, v13);
     }
     v22 = effect[6];
     if ( (unsigned int)v22 >= *(_DWORD *)(v20 + 24) )
@@ -3959,14 +3952,14 @@ LABEL_17:
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)effect,
         (Il2CppObject *)v17,
-        *(const MethodInfo_34AFFC8 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+        *(const MethodInfo_34BC278 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
     }
     else
     {
       v23 = v20 + 8 * v22;
       effect[6] = v22 + 1;
       *(_QWORD *)(v23 + 32) = v17;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)(v23 + 32), (int32_t)v17, v18, v19);
+      sub_1B68678((ServantStatusBattleListViewItem_o *)(v23 + 32), (int32_t)v17, v18, v19);
     }
   }
   effect = (int *)this->fields.fsm;
@@ -3977,16 +3970,16 @@ LABEL_17:
     goto LABEL_17;
   effect = (int *)HutongGames_PlayMaker_FsmVariables__GetFsmString(
                     (HutongGames_PlayMaker_FsmVariables_o *)effect,
-                    (System_String_o *)StringLiteral_12888/*"StartAnimationName"*/,
+                    (System_String_o *)StringLiteral_12889/*"StartAnimationName"*/,
                     0LL);
   if ( !effect )
     goto LABEL_17;
   *((_QWORD *)effect + 7) = startName;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)(effect + 14), (int32_t)startName, v24, v25);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)(effect + 14), (int32_t)startName, v24, v25);
   effect = (int *)this->fields.fsm;
   if ( !effect )
     goto LABEL_17;
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)effect, (System_String_o *)StringLiteral_12177/*"START_ANIMATION"*/, 0LL);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)effect, (System_String_o *)StringLiteral_12178/*"START_ANIMATION"*/, 0LL);
 }
 
 
@@ -4015,16 +4008,16 @@ void __fastcall CombineResultEffectComponent__SetCardParam_TreasureDvc(
   int32_t v23; // w2
   int32_t v24; // w3
 
-  if ( (byte_4A02350 & 1) == 0 )
+  if ( (byte_4A0C4A8 & 1) == 0 )
   {
-    sub_1B64A00(&EventDelegate_Callback_TypeInfo, startName);
-    sub_1B64A00(&Method_CombineResultEffectComponent__SetCardParam_TreasureDvc_b__120_0__, v7);
-    sub_1B64A00(&EventDelegate_TypeInfo, v8);
-    sub_1B64A00(&Method_UnityEngine_GameObject_AddComponent_UITouchPress___, v9);
-    sub_1B64A00(&Method_System_Collections_Generic_List_EventDelegate__Add__, v10);
-    sub_1B64A00(&StringLiteral_12177/*"START_ANIMATION"*/, v11);
-    sub_1B64A00(&StringLiteral_12888/*"StartAnimationName"*/, v12);
-    byte_4A02350 = 1;
+    sub_1B686D4(&EventDelegate_Callback_TypeInfo, startName);
+    sub_1B686D4(&Method_CombineResultEffectComponent__SetCardParam_TreasureDvc_b__120_0__, v7);
+    sub_1B686D4(&EventDelegate_TypeInfo, v8);
+    sub_1B686D4(&Method_UnityEngine_GameObject_AddComponent_UITouchPress___, v9);
+    sub_1B686D4(&Method_System_Collections_Generic_List_EventDelegate__Add__, v10);
+    sub_1B686D4(&StringLiteral_12178/*"START_ANIMATION"*/, v11);
+    sub_1B686D4(&StringLiteral_12889/*"StartAnimationName"*/, v12);
+    byte_4A0C4A8 = 1;
   }
   if ( isSkip )
   {
@@ -4036,15 +4029,15 @@ void __fastcall CombineResultEffectComponent__SetCardParam_TreasureDvc(
       goto LABEL_20;
     v14 = UnityEngine_GameObject__AddComponent_object_(
             (UnityEngine_GameObject_o *)effect,
-            (const MethodInfo_2E8A6E4 *)Method_UnityEngine_GameObject_AddComponent_UITouchPress___);
-    v15 = (EventDelegate_Callback_o *)sub_1B64C4C(EventDelegate_Callback_TypeInfo);
+            (const MethodInfo_2E98868 *)Method_UnityEngine_GameObject_AddComponent_UITouchPress___);
+    v15 = (EventDelegate_Callback_o *)sub_1B68920(EventDelegate_Callback_TypeInfo);
     EventDelegate_Callback___ctor(
       v15,
       (Il2CppObject *)this,
       Method_CombineResultEffectComponent__SetCardParam_TreasureDvc_b__120_0__,
       0LL);
-    v16 = (EventDelegate_o *)sub_1B64C4C(EventDelegate_TypeInfo);
-    EventDelegate___ctor_46519028(v16, v15, 0LL);
+    v16 = (EventDelegate_o *)sub_1B68920(EventDelegate_TypeInfo);
+    EventDelegate___ctor_46576352(v16, v15, 0LL);
     if ( !v14 )
       goto LABEL_20;
     effect = (int *)v14[2].klass;
@@ -4061,14 +4054,14 @@ void __fastcall CombineResultEffectComponent__SetCardParam_TreasureDvc(
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)effect,
         (Il2CppObject *)v16,
-        *(const MethodInfo_34AFFC8 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+        *(const MethodInfo_34BC278 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
     }
     else
     {
       v22 = v19 + 8 * v21;
       effect[6] = v21 + 1;
       *(_QWORD *)(v22 + 32) = v16;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)(v22 + 32), (int32_t)v16, v17, v18);
+      sub_1B68678((ServantStatusBattleListViewItem_o *)(v22 + 32), (int32_t)v16, v17, v18);
     }
   }
   if ( this->fields.kind == 18 )
@@ -4080,16 +4073,16 @@ void __fastcall CombineResultEffectComponent__SetCardParam_TreasureDvc(
     || (effect = (int *)PlayMakerFSM__get_FsmVariables((PlayMakerFSM_o *)effect, 0LL)) == 0LL
     || (effect = (int *)HutongGames_PlayMaker_FsmVariables__GetFsmString(
                           (HutongGames_PlayMaker_FsmVariables_o *)effect,
-                          (System_String_o *)StringLiteral_12888/*"StartAnimationName"*/,
+                          (System_String_o *)StringLiteral_12889/*"StartAnimationName"*/,
                           0LL)) == 0LL
     || (*((_QWORD *)effect + 7) = startName,
-        sub_1B649A4((ServantStatusBattleListViewItem_o *)(effect + 14), (int32_t)startName, v23, v24),
+        sub_1B68678((ServantStatusBattleListViewItem_o *)(effect + 14), (int32_t)startName, v23, v24),
         (effect = (int *)this->fields.fsm) == 0LL) )
   {
 LABEL_20:
-    sub_1B64C5C(effect, startName);
+    sub_1B68930(effect, startName);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)effect, (System_String_o *)StringLiteral_12177/*"START_ANIMATION"*/, 0LL);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)effect, (System_String_o *)StringLiteral_12178/*"START_ANIMATION"*/, 0LL);
 }
 
 
@@ -4114,34 +4107,34 @@ void __fastcall CombineResultEffectComponent__SetCombineLimit(
   System_String_o *EXCEED_ASSET_PATH; // x20
   AssetLoader_LoadEndDataHandler_o *v21; // x21
 
-  if ( (byte_4A02347 & 1) == 0 )
+  if ( (byte_4A0C49F & 1) == 0 )
   {
-    sub_1B64A00(&AssetManager_TypeInfo, baseData);
-    sub_1B64A00(&Method_CombineResultEffectComponent__SetCombineLimit_b__111_0__, v9);
-    sub_1B64A00(&CombineRootComponent_TypeInfo, v10);
-    sub_1B64A00(&AssetLoader_LoadEndDataHandler_TypeInfo, v11);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v12);
-    byte_4A02347 = 1;
+    sub_1B686D4(&AssetManager_TypeInfo, baseData);
+    sub_1B686D4(&Method_CombineResultEffectComponent__SetCombineLimit_b__111_0__, v9);
+    sub_1B686D4(&CombineRootComponent_TypeInfo, v10);
+    sub_1B686D4(&AssetLoader_LoadEndDataHandler_TypeInfo, v11);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v12);
+    byte_4A0C49F = 1;
   }
   this->fields.kind = 24;
   this->fields.baseUsrSvtData = baseData;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.baseUsrSvtData,
     (int32_t)baseData,
     (int32_t)callback,
     autoFadeout);
   this->fields.resUsrSvtData = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v13, v14);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v13, v14);
   this->fields.setResUsrSvtData = 0;
   this->fields.autoFadeout = autoFadeout;
   this->fields.callbackFunc = callback;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v15, v16);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v15, v16);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject
     || (UnityEngine_GameObject__SetActive(gameObject, 1, 0LL),
-        (gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
+        (gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
   {
-    sub_1B64C5C(gameObject, v18);
+    sub_1B68930(gameObject, v18);
   }
   CommonUI__SetLoadMode((CommonUI_o *)gameObject, 1, 0LL);
   v19 = CombineRootComponent_TypeInfo;
@@ -4151,7 +4144,7 @@ void __fastcall CombineResultEffectComponent__SetCombineLimit(
     v19 = CombineRootComponent_TypeInfo;
   }
   EXCEED_ASSET_PATH = v19->static_fields->EXCEED_ASSET_PATH;
-  v21 = (AssetLoader_LoadEndDataHandler_o *)sub_1B64C4C(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v21 = (AssetLoader_LoadEndDataHandler_o *)sub_1B68920(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v21,
     (Il2CppObject *)this,
@@ -4184,33 +4177,33 @@ void __fastcall CombineResultEffectComponent__SetCommandCardExceedInfo(
   AssetData_o *effectAssetData; // x0
   __int64 v22; // x1
   CombineRootComponent_c *v23; // x0
-  Il2CppObject *Object_object__48358160; // x20
+  Il2CppObject *Object_object__48415484; // x20
   UnityEngine_GameObject_o *v25; // x20
   UnityEngine_Transform_o *v26; // x21
 
-  if ( (byte_4A02341 & 1) == 0 )
+  if ( (byte_4A0C499 & 1) == 0 )
   {
-    sub_1B64A00(&Method_AssetData_GetObject_GameObject____75715992, userServantEntity);
-    sub_1B64A00(&CombineRootComponent_TypeInfo, v11);
-    sub_1B64A00(&Method_UnityEngine_Object_Instantiate_GameObject___, v12);
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, v13);
-    sub_1B64A00(&StringLiteral_17211/*"bit_result_command_card_exceed"*/, v14);
-    sub_1B64A00(&StringLiteral_11304/*"ResultEffect"*/, v15);
-    sub_1B64A00(&StringLiteral_12182/*"START_COMMAND_CARD_EXCEED_EFFECT"*/, v16);
-    byte_4A02341 = 1;
+    sub_1B686D4(&Method_AssetData_GetObject_GameObject____75755192, userServantEntity);
+    sub_1B686D4(&CombineRootComponent_TypeInfo, v11);
+    sub_1B686D4(&Method_UnityEngine_Object_Instantiate_GameObject___, v12);
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, v13);
+    sub_1B686D4(&StringLiteral_17212/*"bit_result_command_card_exceed"*/, v14);
+    sub_1B686D4(&StringLiteral_11305/*"ResultEffect"*/, v15);
+    sub_1B686D4(&StringLiteral_12183/*"START_COMMAND_CARD_EXCEED_EFFECT"*/, v16);
+    byte_4A0C499 = 1;
   }
   this->fields.kind = 20;
   this->fields.baseUsrSvtData = userServantEntity;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.baseUsrSvtData,
     (int32_t)userServantEntity,
     cardIndex,
     exceedCount);
   this->fields.autoFadeout = 1;
   this->fields.callbackFunc = callback;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v17, v18);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v17, v18);
   this->fields.resUsrSvtData = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v19, v20);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v19, v20);
   this->fields.setResUsrSvtData = 0;
   this->fields.commandCardIndex = cardIndex;
   this->fields.commandCardExceedCount = exceedCount;
@@ -4226,15 +4219,15 @@ void __fastcall CombineResultEffectComponent__SetCommandCardExceedInfo(
   effectAssetData = v23->static_fields->effectAssetData;
   if ( !effectAssetData )
     goto LABEL_18;
-  Object_object__48358160 = AssetData__GetObject_object__48358160(
+  Object_object__48415484 = AssetData__GetObject_object__48415484(
                               effectAssetData,
-                              (System_String_o *)StringLiteral_17211/*"bit_result_command_card_exceed"*/,
-                              (const MethodInfo_2E1E310 *)Method_AssetData_GetObject_GameObject____75715992);
+                              (System_String_o *)StringLiteral_17212/*"bit_result_command_card_exceed"*/,
+                              (const MethodInfo_2E2C2FC *)Method_AssetData_GetObject_GameObject____75755192);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   effectAssetData = (AssetData_o *)UnityEngine_Object__Instantiate_object_(
-                                     Object_object__48358160,
-                                     (const MethodInfo_2EBE594 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                     Object_object__48415484,
+                                     (const MethodInfo_2ECC718 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !effectAssetData )
     goto LABEL_18;
   v25 = (UnityEngine_GameObject_o *)effectAssetData;
@@ -4242,10 +4235,10 @@ void __fastcall CombineResultEffectComponent__SetCommandCardExceedInfo(
                                      (UnityEngine_GameObject_o *)effectAssetData,
                                      0LL);
   v26 = (UnityEngine_Transform_o *)effectAssetData;
-  if ( !byte_49F9826 )
+  if ( !byte_4A03906 )
   {
-    effectAssetData = (AssetData_o *)sub_1B64A00(&UnityEngine_Vector3_TypeInfo, v22);
-    byte_49F9826 = 1;
+    effectAssetData = (AssetData_o *)sub_1B686D4(&UnityEngine_Vector3_TypeInfo, v22);
+    byte_4A03906 = 1;
   }
   if ( !v26
     || (UnityEngine_Transform__set_localScale(v26, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL),
@@ -4253,7 +4246,7 @@ void __fastcall CombineResultEffectComponent__SetCommandCardExceedInfo(
     || (effectAssetData = (AssetData_o *)PlayMakerFSM__get_FsmVariables((PlayMakerFSM_o *)effectAssetData, 0LL)) == 0LL
     || (effectAssetData = (AssetData_o *)HutongGames_PlayMaker_FsmVariables__FindFsmGameObject(
                                            (HutongGames_PlayMaker_FsmVariables_o *)effectAssetData,
-                                           (System_String_o *)StringLiteral_11304/*"ResultEffect"*/,
+                                           (System_String_o *)StringLiteral_11305/*"ResultEffect"*/,
                                            0LL)) == 0LL
     || (HutongGames_PlayMaker_FsmGameObject__set_Value(
           (HutongGames_PlayMaker_FsmGameObject_o *)effectAssetData,
@@ -4262,9 +4255,9 @@ void __fastcall CombineResultEffectComponent__SetCommandCardExceedInfo(
         (effectAssetData = (AssetData_o *)this->fields.fsm) == 0LL) )
   {
 LABEL_18:
-    sub_1B64C5C(effectAssetData, v22);
+    sub_1B68930(effectAssetData, v22);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)effectAssetData, (System_String_o *)StringLiteral_12182/*"START_COMMAND_CARD_EXCEED_EFFECT"*/, 0LL);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)effectAssetData, (System_String_o *)StringLiteral_12183/*"START_COMMAND_CARD_EXCEED_EFFECT"*/, 0LL);
 }
 
 
@@ -4290,41 +4283,41 @@ void __fastcall CombineResultEffectComponent__SetCostumeCombineInfo(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v23; // x1
 
-  if ( (byte_4A0233B & 1) == 0 )
+  if ( (byte_4A0C493 & 1) == 0 )
   {
-    sub_1B64A00(&CombineResultEffectComponent_CostumeSkillInfoManager_TypeInfo, userSvtEntity);
-    sub_1B64A00(&StringLiteral_12186/*"START_COSTUME_EFFECT"*/, v11);
-    byte_4A0233B = 1;
+    sub_1B686D4(&CombineResultEffectComponent_CostumeSkillInfoManager_TypeInfo, userSvtEntity);
+    sub_1B686D4(&StringLiteral_12187/*"START_COSTUME_EFFECT"*/, v11);
+    byte_4A0C493 = 1;
   }
   this->fields.kind = 15;
   this->fields.baseUsrSvtData = userSvtEntity;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.baseUsrSvtData,
     (int32_t)userSvtEntity,
     costumeId,
     (int32_t)costumeName);
   this->fields.costumeId = costumeId;
   this->fields.costumeName = costumeName;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.costumeName, (int32_t)costumeName, v12, v13);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.costumeName, (int32_t)costumeName, v12, v13);
   this->fields.skillShowIndex = 0;
   *(_WORD *)&this->fields.treasureDeviceEnabled = 256;
   this->fields.callbackFunc = callback;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v14, v15);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v14, v15);
   this->fields.resUsrSvtData = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v16, v17);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v16, v17);
   this->fields.setResUsrSvtData = 0;
-  v18 = (CombineResultEffectComponent_CostumeSkillInfoManager_o *)sub_1B64C4C(CombineResultEffectComponent_CostumeSkillInfoManager_TypeInfo);
+  v18 = (CombineResultEffectComponent_CostumeSkillInfoManager_o *)sub_1B68920(CombineResultEffectComponent_CostumeSkillInfoManager_TypeInfo);
   CombineResultEffectComponent_CostumeSkillInfoManager___ctor(v18, v19);
   this->fields.costumeSkillInfoManager = v18;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.costumeSkillInfoManager, (int32_t)v18, v20, v21);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.costumeSkillInfoManager, (int32_t)v18, v20, v21);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject
     || (UnityEngine_GameObject__SetActive(gameObject, 1, 0LL),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.fsm) == 0LL) )
   {
-    sub_1B64C5C(gameObject, v23);
+    sub_1B68930(gameObject, v23);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)gameObject, (System_String_o *)StringLiteral_12186/*"START_COSTUME_EFFECT"*/, 0LL);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)gameObject, (System_String_o *)StringLiteral_12187/*"START_COSTUME_EFFECT"*/, 0LL);
 }
 
 
@@ -4347,33 +4340,33 @@ void __fastcall CombineResultEffectComponent__SetFriendshipCombineInfo(
   __int64 v17; // x1
   CombineRootComponent_c *v18; // x0
   AssetData_o *effectAssetData; // x0
-  Il2CppObject *Object_object__48358160; // x20
+  Il2CppObject *Object_object__48415484; // x20
   UnityEngine_GameObject_o *v21; // x20
   UnityEngine_Transform_o *v22; // x21
 
-  if ( (byte_4A0233F & 1) == 0 )
+  if ( (byte_4A0C497 & 1) == 0 )
   {
-    sub_1B64A00(&Method_AssetData_GetObject_GameObject____75715992, userSvtData);
-    sub_1B64A00(&CombineRootComponent_TypeInfo, v7);
-    sub_1B64A00(&Method_UnityEngine_Object_Instantiate_GameObject___, v8);
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, v9);
-    sub_1B64A00(&StringLiteral_17215/*"bit_result_friendship_exceed"*/, v10);
-    sub_1B64A00(&StringLiteral_11304/*"ResultEffect"*/, v11);
-    sub_1B64A00(&StringLiteral_12189/*"START_FRIENDSHIP_EXCEED_EFFECT"*/, v12);
-    byte_4A0233F = 1;
+    sub_1B686D4(&Method_AssetData_GetObject_GameObject____75755192, userSvtData);
+    sub_1B686D4(&CombineRootComponent_TypeInfo, v7);
+    sub_1B686D4(&Method_UnityEngine_Object_Instantiate_GameObject___, v8);
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, v9);
+    sub_1B686D4(&StringLiteral_17216/*"bit_result_friendship_exceed"*/, v10);
+    sub_1B686D4(&StringLiteral_11305/*"ResultEffect"*/, v11);
+    sub_1B686D4(&StringLiteral_12190/*"START_FRIENDSHIP_EXCEED_EFFECT"*/, v12);
+    byte_4A0C497 = 1;
   }
   this->fields.kind = 13;
   this->fields.baseUsrSvtData = userSvtData;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.baseUsrSvtData,
     (int32_t)userSvtData,
     (int32_t)callback,
     (int32_t)method);
   this->fields.autoFadeout = 1;
   this->fields.callbackFunc = callback;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v13, v14);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v13, v14);
   this->fields.resUsrSvtData = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v15, v16);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v15, v16);
   this->fields.setResUsrSvtData = 0;
   v18 = CombineRootComponent_TypeInfo;
   if ( !CombineRootComponent_TypeInfo->_2.cctor_finished )
@@ -4384,15 +4377,15 @@ void __fastcall CombineResultEffectComponent__SetFriendshipCombineInfo(
   effectAssetData = v18->static_fields->effectAssetData;
   if ( !effectAssetData )
     goto LABEL_17;
-  Object_object__48358160 = AssetData__GetObject_object__48358160(
+  Object_object__48415484 = AssetData__GetObject_object__48415484(
                               effectAssetData,
-                              (System_String_o *)StringLiteral_17215/*"bit_result_friendship_exceed"*/,
-                              (const MethodInfo_2E1E310 *)Method_AssetData_GetObject_GameObject____75715992);
+                              (System_String_o *)StringLiteral_17216/*"bit_result_friendship_exceed"*/,
+                              (const MethodInfo_2E2C2FC *)Method_AssetData_GetObject_GameObject____75755192);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   effectAssetData = (AssetData_o *)UnityEngine_Object__Instantiate_object_(
-                                     Object_object__48358160,
-                                     (const MethodInfo_2EBE594 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                     Object_object__48415484,
+                                     (const MethodInfo_2ECC718 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !effectAssetData )
     goto LABEL_17;
   v21 = (UnityEngine_GameObject_o *)effectAssetData;
@@ -4400,10 +4393,10 @@ void __fastcall CombineResultEffectComponent__SetFriendshipCombineInfo(
                                      (UnityEngine_GameObject_o *)effectAssetData,
                                      0LL);
   v22 = (UnityEngine_Transform_o *)effectAssetData;
-  if ( !byte_49F9826 )
+  if ( !byte_4A03906 )
   {
-    effectAssetData = (AssetData_o *)sub_1B64A00(&UnityEngine_Vector3_TypeInfo, v17);
-    byte_49F9826 = 1;
+    effectAssetData = (AssetData_o *)sub_1B686D4(&UnityEngine_Vector3_TypeInfo, v17);
+    byte_4A03906 = 1;
   }
   if ( !v22
     || (UnityEngine_Transform__set_localScale(v22, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL),
@@ -4411,7 +4404,7 @@ void __fastcall CombineResultEffectComponent__SetFriendshipCombineInfo(
     || (effectAssetData = (AssetData_o *)PlayMakerFSM__get_FsmVariables((PlayMakerFSM_o *)effectAssetData, 0LL)) == 0LL
     || (effectAssetData = (AssetData_o *)HutongGames_PlayMaker_FsmVariables__FindFsmGameObject(
                                            (HutongGames_PlayMaker_FsmVariables_o *)effectAssetData,
-                                           (System_String_o *)StringLiteral_11304/*"ResultEffect"*/,
+                                           (System_String_o *)StringLiteral_11305/*"ResultEffect"*/,
                                            0LL)) == 0LL
     || (HutongGames_PlayMaker_FsmGameObject__set_Value(
           (HutongGames_PlayMaker_FsmGameObject_o *)effectAssetData,
@@ -4420,9 +4413,9 @@ void __fastcall CombineResultEffectComponent__SetFriendshipCombineInfo(
         (effectAssetData = (AssetData_o *)this->fields.fsm) == 0LL) )
   {
 LABEL_17:
-    sub_1B64C5C(effectAssetData, v17);
+    sub_1B68930(effectAssetData, v17);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)effectAssetData, (System_String_o *)StringLiteral_12189/*"START_FRIENDSHIP_EXCEED_EFFECT"*/, 0LL);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)effectAssetData, (System_String_o *)StringLiteral_12190/*"START_FRIENDSHIP_EXCEED_EFFECT"*/, 0LL);
 }
 
 
@@ -4447,32 +4440,32 @@ void __fastcall CombineResultEffectComponent__SetFriendshipCombineInfoForOtherRo
   System_String_o *COMBINE_ASSET_PATH; // x20
   AssetLoader_LoadEndDataHandler_o *v21; // x21
 
-  if ( (byte_4A02340 & 1) == 0 )
+  if ( (byte_4A0C498 & 1) == 0 )
   {
-    sub_1B64A00(&AssetManager_TypeInfo, userSvtData);
-    sub_1B64A00(&Method_CombineResultEffectComponent__SetFriendshipCombineInfoForOtherRoot_b__104_0__, v9);
-    sub_1B64A00(&CombineRootComponent_TypeInfo, v10);
-    sub_1B64A00(&AssetLoader_LoadEndDataHandler_TypeInfo, v11);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v12);
-    byte_4A02340 = 1;
+    sub_1B686D4(&AssetManager_TypeInfo, userSvtData);
+    sub_1B686D4(&Method_CombineResultEffectComponent__SetFriendshipCombineInfoForOtherRoot_b__104_0__, v9);
+    sub_1B686D4(&CombineRootComponent_TypeInfo, v10);
+    sub_1B686D4(&AssetLoader_LoadEndDataHandler_TypeInfo, v11);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v12);
+    byte_4A0C498 = 1;
   }
   this->fields.kind = 23;
   this->fields.baseUsrSvtData = userSvtData;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.baseUsrSvtData,
     (int32_t)userSvtData,
     oldFriendShipRank,
     (int32_t)callback);
   this->fields.autoFadeout = 1;
   this->fields.callbackFunc = callback;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v13, v14);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v13, v14);
   this->fields.resUsrSvtData = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v15, v16);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v15, v16);
   this->fields.setResUsrSvtData = 0;
   this->fields.oldFriendShipRank = oldFriendShipRank;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1B64C5C(0LL, v18);
+    sub_1B68930(0LL, v18);
   CommonUI__SetLoadMode((CommonUI_o *)Instance, 1, 0LL);
   v19 = CombineRootComponent_TypeInfo;
   if ( !CombineRootComponent_TypeInfo->_2.cctor_finished )
@@ -4481,7 +4474,7 @@ void __fastcall CombineResultEffectComponent__SetFriendshipCombineInfoForOtherRo
     v19 = CombineRootComponent_TypeInfo;
   }
   COMBINE_ASSET_PATH = v19->static_fields->COMBINE_ASSET_PATH;
-  v21 = (AssetLoader_LoadEndDataHandler_o *)sub_1B64C4C(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v21 = (AssetLoader_LoadEndDataHandler_o *)sub_1B68920(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v21,
     (Il2CppObject *)this,
@@ -4507,35 +4500,35 @@ void __fastcall CombineResultEffectComponent__SetFriendshipUpInfo(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v14; // x1
 
-  if ( (byte_4A02335 & 1) == 0 )
+  if ( (byte_4A0C48D & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_12188/*"START_FRIENDSHIPUP_EFFECT"*/, usrSvtData);
-    byte_4A02335 = 1;
+    sub_1B686D4(&StringLiteral_12189/*"START_FRIENDSHIPUP_EFFECT"*/, usrSvtData);
+    byte_4A0C48D = 1;
   }
   this->fields.kind = 9;
   this->fields.baseUsrSvtData = usrSvtData;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.baseUsrSvtData,
     (int32_t)usrSvtData,
     oldFriendShipRank,
     (int32_t)callback);
   this->fields.resUsrSvtData = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v9, v10);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v9, v10);
   this->fields.setResUsrSvtData = 0;
   this->fields.targetId = 0;
   this->fields.targetLv = 0;
   this->fields.oldFriendShipRank = oldFriendShipRank;
   this->fields.autoFadeout = 1;
   this->fields.callbackFunc = callback;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v11, v12);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v11, v12);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject
     || (UnityEngine_GameObject__SetActive(gameObject, 1, 0LL),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.fsm) == 0LL) )
   {
-    sub_1B64C5C(gameObject, v14);
+    sub_1B68930(gameObject, v14);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)gameObject, (System_String_o *)StringLiteral_12188/*"START_FRIENDSHIPUP_EFFECT"*/, 0LL);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)gameObject, (System_String_o *)StringLiteral_12189/*"START_FRIENDSHIPUP_EFFECT"*/, 0LL);
 }
 
 
@@ -4554,7 +4547,7 @@ void __fastcall CombineResultEffectComponent__SetLevelUpSvtFigure(
   int32_t v10; // w20
   int32_t FigureImageLimitCount; // w0
   int32_t Id; // w20
-  ServantScriptEntity_o *Entity_39411344; // x0
+  ServantScriptEntity_o *Entity_39472924; // x0
   struct UserServantEntity_o *resUsrSvtData; // x8
   System_String_o *combineVoiceId; // x2
   ServantVoiceData_array *v16; // x0
@@ -4597,14 +4590,14 @@ void __fastcall CombineResultEffectComponent__SetLevelUpSvtFigure(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v53; // 0:x0.16
 
   v2 = this;
-  if ( (byte_4A02356 & 1) == 0 )
+  if ( (byte_4A0C4AE & 1) == 0 )
   {
-    sub_1B64A00(&CombineResultFormManager_TypeInfo, method);
-    sub_1B64A00(&Method_DataManager_GetMasterData_ServantScriptMaster___, v3);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    this = (CombineResultEffectComponent_o *)sub_1B64A00(&string___TypeInfo, v6);
-    byte_4A02356 = 1;
+    sub_1B686D4(&CombineResultFormManager_TypeInfo, method);
+    sub_1B686D4(&Method_DataManager_GetMasterData_ServantScriptMaster___, v3);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    this = (CombineResultEffectComponent_o *)sub_1B686D4(&string___TypeInfo, v6);
+    byte_4A0C4AE = 1;
   }
   baseUsrSvtData = v2->fields.baseUsrSvtData;
   if ( !baseUsrSvtData )
@@ -4615,24 +4608,24 @@ void __fastcall CombineResultEffectComponent__SetLevelUpSvtFigure(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v51.fields.currentCryptoKey = v9;
   *(_QWORD *)&v51.fields.fakeValue = v8;
-  this = (CombineResultEffectComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v51, 0LL);
+  this = (CombineResultEffectComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v51, 0LL);
   if ( !v2->fields.baseUsrSvtData )
     goto LABEL_48;
   v10 = (int)this;
   FigureImageLimitCount = UserServantEntity__getFigureImageLimitCount(v2->fields.baseUsrSvtData, 0, 0LL);
   Id = ServantScriptMaster__getId(v10, FigureImageLimitCount, 0LL);
-  this = (CombineResultEffectComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (CombineResultEffectComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_48;
   this = (CombineResultEffectComponent_o *)DataManager__GetMasterData_object_(
                                              (DataManager_o *)this,
-                                             (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantScriptMaster___);
+                                             (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_ServantScriptMaster___);
   if ( !this )
     goto LABEL_48;
-  Entity_39411344 = ServantScriptMaster__GetEntity_39411344((ServantScriptMaster_o *)this, Id, 0LL);
-  if ( Entity_39411344 && v2->fields.svtVoiceEntity )
+  Entity_39472924 = ServantScriptMaster__GetEntity_39472924((ServantScriptMaster_o *)this, Id, 0LL);
+  if ( Entity_39472924 && v2->fields.svtVoiceEntity )
   {
-    this = (CombineResultEffectComponent_o *)ServantScriptEntity__isMultipleForm(Entity_39411344, 0LL);
+    this = (CombineResultEffectComponent_o *)ServantScriptEntity__isMultipleForm(Entity_39472924, 0LL);
     if ( ((unsigned __int8)this & 1) == 0 )
     {
       this = (CombineResultEffectComponent_o *)v2->fields.svtVoiceEntity;
@@ -4641,7 +4634,7 @@ void __fastcall CombineResultEffectComponent__SetLevelUpSvtFigure(
       combineVoiceId = v2->fields.combineVoiceId;
       method = (const MethodInfo *)v2->fields.baseUsrSvtData;
 LABEL_19:
-      v16 = ServantVoiceEntity__lotteryLevelUpVoice_39450084(
+      v16 = ServantVoiceEntity__lotteryLevelUpVoice_39511756(
               (ServantVoiceEntity_o *)this,
               (UserServantEntity_o *)method,
               combineVoiceId,
@@ -4667,7 +4660,7 @@ LABEL_20:
             goto LABEL_48;
           goto LABEL_19;
         }
-        if ( System_Int32__Equals_62190236((int32_t)&v50, resUsrSvtData->fields.lv, 0LL) )
+        if ( System_Int32__Equals_62224576((int32_t)&v50, resUsrSvtData->fields.lv, 0LL) )
         {
           v25 = v2;
           form = 0;
@@ -4675,7 +4668,7 @@ LABEL_25:
           CombineResultEffectComponent__SetBaseSvtFigure(v25, form, 1, v21);
           return;
         }
-        this = (CombineResultEffectComponent_o *)sub_1B64AA8(string___TypeInfo, 1LL);
+        this = (CombineResultEffectComponent_o *)sub_1B6877C(string___TypeInfo, 1LL);
         v27 = v2->fields.baseUsrSvtData;
         if ( v27 )
         {
@@ -4691,9 +4684,9 @@ LABEL_25:
             if ( !LODWORD(v28->fields.m_CancellationTokenSource) )
               goto LABEL_49;
             v28->fields.svtResultInfoWindow = (struct SvtCombineResultWindowComponent_o *)this;
-            sub_1B649A4((ServantStatusBattleListViewItem_o *)&v28->fields.svtResultInfoWindow, (int32_t)this, v30, v31);
-            v32 = System_String__Concat_61398664((System_String_array *)v28, 0LL);
-            if ( UnityEngine_PlayerPrefs__GetInt_69095184(v32, 0LL) == 1 )
+            sub_1B68678((ServantStatusBattleListViewItem_o *)&v28->fields.svtResultInfoWindow, (int32_t)this, v30, v31);
+            v32 = System_String__Concat_61432996((System_String_array *)v28, 0LL);
+            if ( UnityEngine_PlayerPrefs__GetInt_69129524(v32, 0LL) == 1 )
             {
               svtVoiceEntity = v2->fields.svtVoiceEntity;
               v35 = v2->fields.baseUsrSvtData;
@@ -4702,7 +4695,7 @@ LABEL_25:
               v16 = CombineResultFormManager__lotteryCombineResult(svtVoiceEntity, v35, v33);
               goto LABEL_20;
             }
-            this = (CombineResultEffectComponent_o *)sub_1B64AA8(string___TypeInfo, 1LL);
+            this = (CombineResultEffectComponent_o *)sub_1B6877C(string___TypeInfo, 1LL);
             v37 = v2->fields.baseUsrSvtData;
             if ( v37 )
             {
@@ -4718,12 +4711,12 @@ LABEL_25:
                 if ( !LODWORD(v38->fields.m_CancellationTokenSource) )
                   goto LABEL_49;
                 v38->fields.svtResultInfoWindow = (struct SvtCombineResultWindowComponent_o *)this;
-                sub_1B649A4(
+                sub_1B68678(
                   (ServantStatusBattleListViewItem_o *)&v38->fields.svtResultInfoWindow,
                   (int32_t)this,
                   v40,
                   v41);
-                v42 = System_String__Concat_61398664((System_String_array *)v38, 0LL);
+                v42 = System_String__Concat_61432996((System_String_array *)v38, 0LL);
                 UnityEngine_PlayerPrefs__SetInt(v42, 1, 0LL);
                 v44 = v2->fields.svtVoiceEntity;
                 v45 = v2->fields.baseUsrSvtData;
@@ -4731,7 +4724,7 @@ LABEL_25:
                   j_il2cpp_runtime_class_init_0(CombineResultFormManager_TypeInfo);
                 v46 = CombineResultFormManager__lotteryCombineResultInit(v44, v45, v43);
                 v2->fields.playVoiceList = v46;
-                sub_1B649A4((ServantStatusBattleListViewItem_o *)&v2->fields.playVoiceList, (int32_t)v46, v47, v48);
+                sub_1B68678((ServantStatusBattleListViewItem_o *)&v2->fields.playVoiceList, (int32_t)v46, v47, v48);
                 playVoiceList = v2->fields.playVoiceList;
                 if ( playVoiceList )
                 {
@@ -4746,12 +4739,12 @@ LABEL_22:
                     goto LABEL_25;
                   }
 LABEL_49:
-                  sub_1B64C64(this, method);
+                  sub_1B68938(this, method);
                 }
                 this = (CombineResultEffectComponent_o *)v2->fields.svtVoiceEntity;
                 if ( !this )
                   goto LABEL_48;
-                v49 = ServantVoiceEntity__lotteryLevelUpVoice_39450084(
+                v49 = ServantVoiceEntity__lotteryLevelUpVoice_39511756(
                         (ServantVoiceEntity_o *)this,
                         v2->fields.baseUsrSvtData,
                         v2->fields.combineVoiceId,
@@ -4760,7 +4753,7 @@ LABEL_49:
                 v2->fields.playVoiceList = v49;
                 p_playVoiceList = (ServantStatusBattleListViewItem_o *)&v2->fields.playVoiceList;
 LABEL_21:
-                sub_1B649A4(p_playVoiceList, (int32_t)v19, v17, v18);
+                sub_1B68678(p_playVoiceList, (int32_t)v19, v17, v18);
                 playVoiceList = v2->fields.playVoiceList;
                 if ( !playVoiceList )
                   goto LABEL_48;
@@ -4772,7 +4765,7 @@ LABEL_21:
       }
     }
 LABEL_48:
-    sub_1B64C5C(this, method);
+    sub_1B68930(this, method);
   }
 }
 
@@ -4803,14 +4796,14 @@ void __fastcall CombineResultEffectComponent__SetLimitUpAfterSvtFigure(
   ServantLimitAddEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v23; // 0:x0.16
 
-  if ( (byte_4A0235C & 1) == 0 )
+  if ( (byte_4A0C4B4 & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataManager_GetMasterData_ServantLimitAddMaster___, isForceNormalFace);
-    sub_1B64A00(&ImageLimitCount_TypeInfo, v5);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v6);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_1B64A00(&StringLiteral_8370/*"LimitUpResSvtNodeName"*/, v8);
-    byte_4A0235C = 1;
+    sub_1B686D4(&Method_DataManager_GetMasterData_ServantLimitAddMaster___, isForceNormalFace);
+    sub_1B686D4(&ImageLimitCount_TypeInfo, v5);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v6);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    sub_1B686D4(&StringLiteral_8372/*"LimitUpResSvtNodeName"*/, v8);
+    byte_4A0C4B4 = 1;
   }
   entity = 0LL;
   LimitUpSvtVoiceList = CombineResultEffectComponent__getLimitUpSvtVoiceList(this, 0, method);
@@ -4818,7 +4811,7 @@ void __fastcall CombineResultEffectComponent__SetLimitUpAfterSvtFigure(
   if ( LimitUpSvtVoiceList && !isForceNormalFace )
   {
     if ( !*((_DWORD *)LimitUpSvtVoiceList + 6) )
-      sub_1B64C64(LimitUpSvtVoiceList, v10);
+      sub_1B68938(LimitUpSvtVoiceList, v10);
     v12 = *((_QWORD *)LimitUpSvtVoiceList + 4);
     if ( !v12 )
       goto LABEL_21;
@@ -4833,18 +4826,18 @@ void __fastcall CombineResultEffectComponent__SetLimitUpAfterSvtFigure(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v23.fields.currentCryptoKey = v15;
   *(_QWORD *)&v23.fields.fakeValue = v14;
-  LimitUpSvtVoiceList = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v23, 0LL);
+  LimitUpSvtVoiceList = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v23, 0LL);
   v16 = this->fields.resUsrSvtData;
   if ( !v16 )
     goto LABEL_21;
   v17 = (int)LimitUpSvtVoiceList;
-  v18 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v16->fields.limitCount, 0LL);
-  LimitUpSvtVoiceList = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v18 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v16->fields.limitCount, 0LL);
+  LimitUpSvtVoiceList = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !LimitUpSvtVoiceList )
     goto LABEL_21;
   LimitUpSvtVoiceList = DataManager__GetMasterData_object_(
                           (DataManager_o *)LimitUpSvtVoiceList,
-                          (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantLimitAddMaster___);
+                          (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_ServantLimitAddMaster___);
   if ( !LimitUpSvtVoiceList )
     goto LABEL_21;
   if ( !ServantLimitAddMaster__TryGetEntity((ServantLimitAddMaster_o *)LimitUpSvtVoiceList, &entity, v17, v18, 0LL) )
@@ -4852,7 +4845,7 @@ void __fastcall CombineResultEffectComponent__SetLimitUpAfterSvtFigure(
   LimitUpSvtVoiceList = entity;
   if ( !entity )
 LABEL_21:
-    sub_1B64C5C(LimitUpSvtVoiceList, v10);
+    sub_1B68930(LimitUpSvtVoiceList, v10);
   LimitCountUpResultServantLimitCount = ServantLimitAddEntity__GetLimitCountUpResultServantLimitCount(entity, 0LL);
   if ( LimitCountUpResultServantLimitCount >= 0 )
     v18 = LimitCountUpResultServantLimitCount;
@@ -4865,7 +4858,7 @@ LABEL_18:
     v17,
     ImageLimitCount,
     v11,
-    (System_String_o *)StringLiteral_8370/*"LimitUpResSvtNodeName"*/,
+    (System_String_o *)StringLiteral_8372/*"LimitUpResSvtNodeName"*/,
     v21);
 }
 
@@ -4912,41 +4905,41 @@ void __fastcall CombineResultEffectComponent__SetLimitUpCombineInfo(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v43; // 0:x0.16
 
   v18 = autoFadeout;
-  if ( (byte_4A02339 & 1) == 0 )
+  if ( (byte_4A0C491 & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, *(_QWORD *)&kind);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v19);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v20);
-    sub_1B64A00(&StringLiteral_12192/*"START_LIMITUP_EFFECT"*/, v21);
-    byte_4A02339 = 1;
+    sub_1B686D4(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, *(_QWORD *)&kind);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v19);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v20);
+    sub_1B686D4(&StringLiteral_12193/*"START_LIMITUP_EFFECT"*/, v21);
+    byte_4A0C491 = 1;
   }
   this->fields.kind = kind;
   this->fields.baseUsrSvtData = baseData;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.baseUsrSvtData,
     (int32_t)baseData,
     (int32_t)baseData,
     baseCollectionLimitCnt);
   this->fields.baseUsrSvtCollectionLimitCnt = baseCollectionLimitCnt;
   this->fields.resSvtNameData = servantChange;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.resSvtNameData, (int32_t)servantChange, v22, v23);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.resSvtNameData, (int32_t)servantChange, v22, v23);
   this->fields.resUsrSvtData = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v24, v25);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v24, v25);
   this->fields.setResUsrSvtData = 0;
   this->fields.autoFadeout = v18;
   this->fields.displayType = displayType;
   this->fields.callbackFunc = callback;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v26, v27);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v26, v27);
   if ( genderType >= 1 )
     this->fields.genderType = genderType;
   this->fields.limitUpPlayVoiceLabel = playVoiceLabel;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.limitUpPlayVoiceLabel,
     (int32_t)playVoiceLabel,
     v28,
     v29);
   this->fields.limitUpRewardGiftDataList = rewardGiftDataList;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.limitUpRewardGiftDataList,
     (int32_t)rewardGiftDataList,
     v30,
@@ -4963,18 +4956,18 @@ void __fastcall CombineResultEffectComponent__SetLimitUpCombineInfo(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v42.fields.currentCryptoKey = v35;
   *(_QWORD *)&v42.fields.fakeValue = v34;
-  v36 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v42, 0LL);
-  gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v36 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v42, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !gameObject )
     goto LABEL_13;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)gameObject,
-                        (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+                        (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
   v38 = *(_QWORD *)&baseData->fields.svtId.fields.currentCryptoKey;
   *(_QWORD *)&v43.fields.fakeValue = *(_QWORD *)&baseData->fields.svtId.fields.fakeValue;
   v39 = (ServantLimitImageMaster_o *)MasterData_object;
   *(_QWORD *)&v43.fields.currentCryptoKey = v38;
-  gameObject = (UnityEngine_GameObject_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v43, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v43, 0LL);
   if ( !v39
     || (gameObject = (UnityEngine_GameObject_o *)ServantLimitImageMaster__IsServantLimitCountSeal(
                                                    v39,
@@ -4986,9 +4979,9 @@ void __fastcall CombineResultEffectComponent__SetLimitUpCombineInfo(
         !fsm) )
   {
 LABEL_13:
-    sub_1B64C5C(gameObject, v33);
+    sub_1B68930(gameObject, v33);
   }
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_12192/*"START_LIMITUP_EFFECT"*/, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_12193/*"START_LIMITUP_EFFECT"*/, 0LL);
 }
 
 
@@ -5012,7 +5005,7 @@ void __fastcall CombineResultEffectComponent__SetLvExceedCombineInfo(
   int32_t v18; // w3
   int32_t v19; // w2
   int32_t v20; // w3
-  __int64 Int_69095184; // x0
+  __int64 Int_69129524; // x0
   __int64 v22; // x1
   const MethodInfo *v23; // x2
   __int64 v24; // x21
@@ -5029,81 +5022,81 @@ void __fastcall CombineResultEffectComponent__SetLvExceedCombineInfo(
   const MethodInfo *v35; // x1
   UserServantEntity_o *v36; // x20
   CombineRootComponent_c *v37; // x0
-  Il2CppObject *Object_object__48358160; // x20
+  Il2CppObject *Object_object__48415484; // x20
   UnityEngine_GameObject_o *v39; // x20
   UnityEngine_Transform_o *v40; // x21
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v41; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v42; // 0:x0.16
 
-  if ( (byte_4A0233D & 1) == 0 )
+  if ( (byte_4A0C495 & 1) == 0 )
   {
-    sub_1B64A00(&Method_AssetData_GetObject_GameObject____75715992, usrSvtData);
-    sub_1B64A00(&CombineResultFormManager_TypeInfo, v7);
-    sub_1B64A00(&CombineRootComponent_TypeInfo, v8);
-    sub_1B64A00(&Method_UnityEngine_Object_Instantiate_GameObject___, v9);
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, v10);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v11);
-    sub_1B64A00(&string___TypeInfo, v12);
-    sub_1B64A00(&StringLiteral_12193/*"START_LVEXCEED_EFFECT"*/, v13);
-    sub_1B64A00(&StringLiteral_17216/*"bit_result_grail"*/, v14);
-    sub_1B64A00(&StringLiteral_11304/*"ResultEffect"*/, v15);
-    byte_4A0233D = 1;
+    sub_1B686D4(&Method_AssetData_GetObject_GameObject____75755192, usrSvtData);
+    sub_1B686D4(&CombineResultFormManager_TypeInfo, v7);
+    sub_1B686D4(&CombineRootComponent_TypeInfo, v8);
+    sub_1B686D4(&Method_UnityEngine_Object_Instantiate_GameObject___, v9);
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, v10);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v11);
+    sub_1B686D4(&string___TypeInfo, v12);
+    sub_1B686D4(&StringLiteral_12194/*"START_LVEXCEED_EFFECT"*/, v13);
+    sub_1B686D4(&StringLiteral_17217/*"bit_result_grail"*/, v14);
+    sub_1B686D4(&StringLiteral_11305/*"ResultEffect"*/, v15);
+    byte_4A0C495 = 1;
   }
   this->fields.kind = 12;
   this->fields.baseUsrSvtData = usrSvtData;
   p_baseUsrSvtData = &this->fields.baseUsrSvtData;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.baseUsrSvtData,
     (int32_t)usrSvtData,
     (int32_t)callback,
     (int32_t)method);
   this->fields.resUsrSvtData = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v17, v18);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v17, v18);
   this->fields.setResUsrSvtData = 0;
   this->fields.autoFadeout = 1;
   this->fields.callbackFunc = callback;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v19, v20);
-  Int_69095184 = sub_1B64AA8(string___TypeInfo, 1LL);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v19, v20);
+  Int_69129524 = sub_1B6877C(string___TypeInfo, 1LL);
   if ( !this->fields.baseUsrSvtData )
     goto LABEL_33;
-  v24 = Int_69095184;
+  v24 = Int_69129524;
   p_svtId = &this->fields.baseUsrSvtData->fields.svtId;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v41.fields.currentCryptoKey = p_svtId;
   *(_QWORD *)&v41.fields.fakeValue = 0LL;
-  Int_69095184 = (__int64)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__ToString(v41, v23);
+  Int_69129524 = (__int64)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__ToString(v41, v23);
   if ( !v24 )
     goto LABEL_33;
   if ( !*(_DWORD *)(v24 + 24) )
     goto LABEL_34;
-  *(_QWORD *)(v24 + 32) = Int_69095184;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v24 + 32), Int_69095184, v26, v27);
-  v28 = System_String__Concat_61398664((System_String_array *)v24, 0LL);
-  Int_69095184 = UnityEngine_PlayerPrefs__GetInt_69095184(v28, 0LL);
-  if ( (_DWORD)Int_69095184 == 1 )
+  *(_QWORD *)(v24 + 32) = Int_69129524;
+  sub_1B68678((ServantStatusBattleListViewItem_o *)(v24 + 32), Int_69129524, v26, v27);
+  v28 = System_String__Concat_61432996((System_String_array *)v24, 0LL);
+  Int_69129524 = UnityEngine_PlayerPrefs__GetInt_69129524(v28, 0LL);
+  if ( (_DWORD)Int_69129524 == 1 )
   {
     if ( !*p_baseUsrSvtData )
       goto LABEL_33;
     if ( !(*p_baseUsrSvtData)->fields.exceedCount )
     {
-      Int_69095184 = sub_1B64AA8(string___TypeInfo, 1LL);
+      Int_69129524 = sub_1B6877C(string___TypeInfo, 1LL);
       if ( *p_baseUsrSvtData )
       {
-        v30 = Int_69095184;
+        v30 = Int_69129524;
         v31 = (__int64)&(*p_baseUsrSvtData)->fields.svtId;
         if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v42.fields.currentCryptoKey = v31;
         *(_QWORD *)&v42.fields.fakeValue = 0LL;
-        Int_69095184 = (__int64)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__ToString(v42, v29);
+        Int_69129524 = (__int64)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__ToString(v42, v29);
         if ( v30 )
         {
           if ( *(_DWORD *)(v30 + 24) )
           {
-            *(_QWORD *)(v30 + 32) = Int_69095184;
-            sub_1B649A4((ServantStatusBattleListViewItem_o *)(v30 + 32), Int_69095184, v32, v33);
-            v34 = System_String__Concat_61398664((System_String_array *)v30, 0LL);
+            *(_QWORD *)(v30 + 32) = Int_69129524;
+            sub_1B68678((ServantStatusBattleListViewItem_o *)(v30 + 32), Int_69129524, v32, v33);
+            v34 = System_String__Concat_61432996((System_String_array *)v30, 0LL);
             UnityEngine_PlayerPrefs__SetInt(v34, 0, 0LL);
             v36 = *p_baseUsrSvtData;
             if ( !CombineResultFormManager_TypeInfo->_2.cctor_finished )
@@ -5112,11 +5105,11 @@ void __fastcall CombineResultEffectComponent__SetLvExceedCombineInfo(
             goto LABEL_19;
           }
 LABEL_34:
-          sub_1B64C64(Int_69095184, v22);
+          sub_1B68938(Int_69129524, v22);
         }
       }
 LABEL_33:
-      sub_1B64C5C(Int_69095184, v22);
+      sub_1B68930(Int_69129524, v22);
     }
   }
 LABEL_19:
@@ -5126,48 +5119,48 @@ LABEL_19:
     j_il2cpp_runtime_class_init_0(CombineRootComponent_TypeInfo);
     v37 = CombineRootComponent_TypeInfo;
   }
-  Int_69095184 = (__int64)v37->static_fields->effectAssetData;
-  if ( !Int_69095184 )
+  Int_69129524 = (__int64)v37->static_fields->effectAssetData;
+  if ( !Int_69129524 )
     goto LABEL_33;
-  Object_object__48358160 = AssetData__GetObject_object__48358160(
-                              (AssetData_o *)Int_69095184,
-                              (System_String_o *)StringLiteral_17216/*"bit_result_grail"*/,
-                              (const MethodInfo_2E1E310 *)Method_AssetData_GetObject_GameObject____75715992);
+  Object_object__48415484 = AssetData__GetObject_object__48415484(
+                              (AssetData_o *)Int_69129524,
+                              (System_String_o *)StringLiteral_17217/*"bit_result_grail"*/,
+                              (const MethodInfo_2E2C2FC *)Method_AssetData_GetObject_GameObject____75755192);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  Int_69095184 = (__int64)UnityEngine_Object__Instantiate_object_(
-                            Object_object__48358160,
-                            (const MethodInfo_2EBE594 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-  if ( !Int_69095184 )
+  Int_69129524 = (__int64)UnityEngine_Object__Instantiate_object_(
+                            Object_object__48415484,
+                            (const MethodInfo_2ECC718 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+  if ( !Int_69129524 )
     goto LABEL_33;
-  v39 = (UnityEngine_GameObject_o *)Int_69095184;
-  Int_69095184 = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Int_69095184, 0LL);
-  v40 = (UnityEngine_Transform_o *)Int_69095184;
-  if ( !byte_49F9826 )
+  v39 = (UnityEngine_GameObject_o *)Int_69129524;
+  Int_69129524 = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Int_69129524, 0LL);
+  v40 = (UnityEngine_Transform_o *)Int_69129524;
+  if ( !byte_4A03906 )
   {
-    Int_69095184 = sub_1B64A00(&UnityEngine_Vector3_TypeInfo, v22);
-    byte_49F9826 = 1;
+    Int_69129524 = sub_1B686D4(&UnityEngine_Vector3_TypeInfo, v22);
+    byte_4A03906 = 1;
   }
   if ( !v40 )
     goto LABEL_33;
   UnityEngine_Transform__set_localScale(v40, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
-  Int_69095184 = (__int64)this->fields.fsm;
-  if ( !Int_69095184 )
+  Int_69129524 = (__int64)this->fields.fsm;
+  if ( !Int_69129524 )
     goto LABEL_33;
-  Int_69095184 = (__int64)PlayMakerFSM__get_FsmVariables((PlayMakerFSM_o *)Int_69095184, 0LL);
-  if ( !Int_69095184 )
+  Int_69129524 = (__int64)PlayMakerFSM__get_FsmVariables((PlayMakerFSM_o *)Int_69129524, 0LL);
+  if ( !Int_69129524 )
     goto LABEL_33;
-  Int_69095184 = (__int64)HutongGames_PlayMaker_FsmVariables__FindFsmGameObject(
-                            (HutongGames_PlayMaker_FsmVariables_o *)Int_69095184,
-                            (System_String_o *)StringLiteral_11304/*"ResultEffect"*/,
+  Int_69129524 = (__int64)HutongGames_PlayMaker_FsmVariables__FindFsmGameObject(
+                            (HutongGames_PlayMaker_FsmVariables_o *)Int_69129524,
+                            (System_String_o *)StringLiteral_11305/*"ResultEffect"*/,
                             0LL);
-  if ( !Int_69095184 )
+  if ( !Int_69129524 )
     goto LABEL_33;
-  HutongGames_PlayMaker_FsmGameObject__set_Value((HutongGames_PlayMaker_FsmGameObject_o *)Int_69095184, v39, 0LL);
-  Int_69095184 = (__int64)this->fields.fsm;
-  if ( !Int_69095184 )
+  HutongGames_PlayMaker_FsmGameObject__set_Value((HutongGames_PlayMaker_FsmGameObject_o *)Int_69129524, v39, 0LL);
+  Int_69129524 = (__int64)this->fields.fsm;
+  if ( !Int_69129524 )
     goto LABEL_33;
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Int_69095184, (System_String_o *)StringLiteral_12193/*"START_LVEXCEED_EFFECT"*/, 0LL);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Int_69129524, (System_String_o *)StringLiteral_12194/*"START_LVEXCEED_EFFECT"*/, 0LL);
 }
 
 
@@ -5191,31 +5184,31 @@ void __fastcall CombineResultEffectComponent__SetLvExceedInfoForOtherRoot(
   System_String_o *EXCEED_ASSET_PATH; // x20
   AssetLoader_LoadEndDataHandler_o *v19; // x21
 
-  if ( (byte_4A0233E & 1) == 0 )
+  if ( (byte_4A0C496 & 1) == 0 )
   {
-    sub_1B64A00(&AssetManager_TypeInfo, usrSvtData);
-    sub_1B64A00(&Method_CombineResultEffectComponent__SetLvExceedInfoForOtherRoot_b__102_0__, v7);
-    sub_1B64A00(&CombineRootComponent_TypeInfo, v8);
-    sub_1B64A00(&AssetLoader_LoadEndDataHandler_TypeInfo, v9);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v10);
-    byte_4A0233E = 1;
+    sub_1B686D4(&AssetManager_TypeInfo, usrSvtData);
+    sub_1B686D4(&Method_CombineResultEffectComponent__SetLvExceedInfoForOtherRoot_b__102_0__, v7);
+    sub_1B686D4(&CombineRootComponent_TypeInfo, v8);
+    sub_1B686D4(&AssetLoader_LoadEndDataHandler_TypeInfo, v9);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v10);
+    byte_4A0C496 = 1;
   }
   this->fields.kind = 22;
   this->fields.baseUsrSvtData = usrSvtData;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.baseUsrSvtData,
     (int32_t)usrSvtData,
     (int32_t)callback,
     (int32_t)method);
   this->fields.resUsrSvtData = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v11, v12);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v11, v12);
   this->fields.setResUsrSvtData = 0;
   this->fields.autoFadeout = 1;
   this->fields.callbackFunc = callback;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v13, v14);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v13, v14);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1B64C5C(0LL, v16);
+    sub_1B68930(0LL, v16);
   CommonUI__SetLoadMode((CommonUI_o *)Instance, 1, 0LL);
   v17 = CombineRootComponent_TypeInfo;
   if ( !CombineRootComponent_TypeInfo->_2.cctor_finished )
@@ -5224,7 +5217,7 @@ void __fastcall CombineResultEffectComponent__SetLvExceedInfoForOtherRoot(
     v17 = CombineRootComponent_TypeInfo;
   }
   EXCEED_ASSET_PATH = v17->static_fields->EXCEED_ASSET_PATH;
-  v19 = (AssetLoader_LoadEndDataHandler_o *)sub_1B64C4C(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v19 = (AssetLoader_LoadEndDataHandler_o *)sub_1B68920(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v19,
     (Il2CppObject *)this,
@@ -5289,38 +5282,38 @@ void __fastcall CombineResultEffectComponent__SetNameRevealInfo(
   UnityEngine_ParticleSystem_ShapeModule_o v52; // 0:x0.8
   UnityEngine_Vector3_o v53; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A0233A & 1) == 0 )
+  if ( (byte_4A0C492 & 1) == 0 )
   {
-    sub_1B64A00(&Method_UnityEngine_Component_GetComponent_ParticleSystem___, before);
-    sub_1B64A00(&Method_UnityEngine_Component_GetComponent_UIExtrusionLabel___, v9);
-    sub_1B64A00(&Method_DataManager_GetMasterData_ServantMaster___, v10);
-    sub_1B64A00(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v11);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
-    sub_1B64A00(&StringLiteral_11276/*"ResNameNodeName"*/, v13);
-    sub_1B64A00(&StringLiteral_12194/*"START_NAME_REVEAL_EFFECT"*/, v14);
-    sub_1B64A00(&StringLiteral_9316/*"NameRevealCrossFade"*/, v15);
-    sub_1B64A00(&StringLiteral_4902/*"CrtNameNodeName"*/, v16);
-    sub_1B64A00(&StringLiteral_17221/*"bit_result_name_reveal"*/, v17);
-    sub_1B64A00(&StringLiteral_12888/*"StartAnimationName"*/, v18);
-    sub_1B64A00(&StringLiteral_1/*""*/, v19);
-    sub_1B64A00(&StringLiteral_9317/*"NameRevealParticleNodeName"*/, v20);
-    byte_4A0233A = 1;
+    sub_1B686D4(&Method_UnityEngine_Component_GetComponent_ParticleSystem___, before);
+    sub_1B686D4(&Method_UnityEngine_Component_GetComponent_UIExtrusionLabel___, v9);
+    sub_1B686D4(&Method_DataManager_GetMasterData_ServantMaster___, v10);
+    sub_1B686D4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v11);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
+    sub_1B686D4(&StringLiteral_11277/*"ResNameNodeName"*/, v13);
+    sub_1B686D4(&StringLiteral_12195/*"START_NAME_REVEAL_EFFECT"*/, v14);
+    sub_1B686D4(&StringLiteral_9318/*"NameRevealCrossFade"*/, v15);
+    sub_1B686D4(&StringLiteral_4900/*"CrtNameNodeName"*/, v16);
+    sub_1B686D4(&StringLiteral_17222/*"bit_result_name_reveal"*/, v17);
+    sub_1B686D4(&StringLiteral_12889/*"StartAnimationName"*/, v18);
+    sub_1B686D4(&StringLiteral_1/*""*/, v19);
+    sub_1B686D4(&StringLiteral_9319/*"NameRevealParticleNodeName"*/, v20);
+    byte_4A0C492 = 1;
   }
   v49 = 0LL;
   m_ParticleSystem = 0LL;
   this->fields.kind = 14;
   this->fields.crtSvtNameData = before;
   p_crtSvtNameData = &this->fields.crtSvtNameData;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.crtSvtNameData,
     (int32_t)before,
     (int32_t)after,
     (int32_t)callback);
   this->fields.resSvtNameData = after;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.resSvtNameData, (int32_t)after, v22, v23);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.resSvtNameData, (int32_t)after, v22, v23);
   this->fields.autoFadeout = 1;
   this->fields.callbackFunc = callback;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v24, v25);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v24, v25);
   gameObject = (char *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     goto LABEL_40;
@@ -5328,7 +5321,7 @@ void __fastcall CombineResultEffectComponent__SetNameRevealInfo(
   gameObject = (char *)this->fields.fsm;
   if ( !gameObject )
     goto LABEL_40;
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)gameObject, (System_String_o *)StringLiteral_12194/*"START_NAME_REVEAL_EFFECT"*/, 0LL);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)gameObject, (System_String_o *)StringLiteral_12195/*"START_NAME_REVEAL_EFFECT"*/, 0LL);
   resSvtNameData = this->fields.resSvtNameData;
   this->fields.isChangeCardImg = 0;
   if ( resSvtNameData )
@@ -5337,12 +5330,12 @@ void __fastcall CombineResultEffectComponent__SetNameRevealInfo(
   }
   else
   {
-    gameObject = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    gameObject = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !gameObject )
       goto LABEL_40;
     gameObject = (char *)DataManager__GetMasterData_object_(
                            (DataManager_o *)gameObject,
-                           (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                           (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_ServantMaster___);
     if ( !*p_crtSvtNameData )
       goto LABEL_40;
     if ( !gameObject )
@@ -5350,7 +5343,7 @@ void __fastcall CombineResultEffectComponent__SetNameRevealInfo(
     gameObject = (char *)DataMasterBase_object__object__int___GetEntity(
                            (DataMasterBase_TMaster__TEntity__PKType__o *)gameObject,
                            (*p_crtSvtNameData)->fields.svtId,
-                           (const MethodInfo_30D6798 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                           (const MethodInfo_30E44C0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
     if ( !gameObject )
       goto LABEL_40;
     name = ServantEntity__getTrueName((ServantEntity_o *)gameObject, -1, 0LL);
@@ -5363,7 +5356,7 @@ void __fastcall CombineResultEffectComponent__SetNameRevealInfo(
     goto LABEL_40;
   gameObject = (char *)HutongGames_PlayMaker_FsmVariables__GetFsmString(
                          (HutongGames_PlayMaker_FsmVariables_o *)gameObject,
-                         (System_String_o *)StringLiteral_4902/*"CrtNameNodeName"*/,
+                         (System_String_o *)StringLiteral_4900/*"CrtNameNodeName"*/,
                          0LL);
   if ( !gameObject )
     goto LABEL_40;
@@ -5377,7 +5370,7 @@ void __fastcall CombineResultEffectComponent__SetNameRevealInfo(
     goto LABEL_40;
   gameObject = (char *)UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)gameObject,
-                         (const MethodInfo_2E32784 *)Method_UnityEngine_Component_GetComponent_UIExtrusionLabel___);
+                         (const MethodInfo_2E407F4 *)Method_UnityEngine_Component_GetComponent_UIExtrusionLabel___);
   if ( !*p_crtSvtNameData )
     goto LABEL_40;
   if ( !gameObject )
@@ -5391,7 +5384,7 @@ void __fastcall CombineResultEffectComponent__SetNameRevealInfo(
     goto LABEL_40;
   gameObject = (char *)HutongGames_PlayMaker_FsmVariables__GetFsmString(
                          (HutongGames_PlayMaker_FsmVariables_o *)gameObject,
-                         (System_String_o *)StringLiteral_11276/*"ResNameNodeName"*/,
+                         (System_String_o *)StringLiteral_11277/*"ResNameNodeName"*/,
                          0LL);
   if ( !gameObject )
     goto LABEL_40;
@@ -5405,7 +5398,7 @@ void __fastcall CombineResultEffectComponent__SetNameRevealInfo(
     goto LABEL_40;
   gameObject = (char *)UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)gameObject,
-                         (const MethodInfo_2E32784 *)Method_UnityEngine_Component_GetComponent_UIExtrusionLabel___);
+                         (const MethodInfo_2E407F4 *)Method_UnityEngine_Component_GetComponent_UIExtrusionLabel___);
   if ( !gameObject )
     goto LABEL_40;
   v34 = (int *)gameObject;
@@ -5418,7 +5411,7 @@ void __fastcall CombineResultEffectComponent__SetNameRevealInfo(
     goto LABEL_40;
   gameObject = (char *)HutongGames_PlayMaker_FsmVariables__GetFsmString(
                          (HutongGames_PlayMaker_FsmVariables_o *)gameObject,
-                         (System_String_o *)StringLiteral_9317/*"NameRevealParticleNodeName"*/,
+                         (System_String_o *)StringLiteral_9319/*"NameRevealParticleNodeName"*/,
                          0LL);
   if ( !gameObject )
     goto LABEL_40;
@@ -5432,7 +5425,7 @@ void __fastcall CombineResultEffectComponent__SetNameRevealInfo(
     goto LABEL_40;
   gameObject = (char *)UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)gameObject,
-                         (const MethodInfo_2E32784 *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
+                         (const MethodInfo_2E407F4 *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
   if ( !gameObject )
     goto LABEL_40;
   v37 = (UnityEngine_ParticleSystem_o *)gameObject;
@@ -5469,18 +5462,18 @@ void __fastcall CombineResultEffectComponent__SetNameRevealInfo(
     || (gameObject = (char *)PlayMakerFSM__get_FsmVariables((PlayMakerFSM_o *)gameObject, 0LL)) == 0LL
     || (gameObject = (char *)HutongGames_PlayMaker_FsmVariables__GetFsmString(
                                (HutongGames_PlayMaker_FsmVariables_o *)gameObject,
-                               (System_String_o *)StringLiteral_12888/*"StartAnimationName"*/,
+                               (System_String_o *)StringLiteral_12889/*"StartAnimationName"*/,
                                0LL)) == 0LL )
   {
 LABEL_40:
-    sub_1B64C5C(gameObject, v27);
+    sub_1B68930(gameObject, v27);
   }
-  v46 = StringLiteral_17221/*"bit_result_name_reveal"*/;
-  *((_QWORD *)gameObject + 7) = StringLiteral_17221/*"bit_result_name_reveal"*/;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)(gameObject + 56), v46, v44, v45);
+  v46 = StringLiteral_17222/*"bit_result_name_reveal"*/;
+  *((_QWORD *)gameObject + 7) = StringLiteral_17222/*"bit_result_name_reveal"*/;
+  sub_1B68678((ServantStatusBattleListViewItem_o *)(gameObject + 56), v46, v44, v45);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_9316/*"NameRevealCrossFade"*/,
+    (System_String_o *)StringLiteral_9318/*"NameRevealCrossFade"*/,
     this->fields.NAME_REVEAL_INVOKE_TIME,
     0LL);
 }
@@ -5561,31 +5554,31 @@ void __fastcall CombineResultEffectComponent__SetNobleCombineInfo(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v77; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v78; // 0:x0.16
 
-  if ( (byte_4A02334 & 1) == 0 )
+  if ( (byte_4A0C48C & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataManager_GetMaster_ServantTreasureDeviceAddMaster___, *(_QWORD *)&kind);
-    sub_1B64A00(&DataManager_TypeInfo, v17);
-    sub_1B64A00(&Method_System_Linq_Enumerable_Count_int___, v18);
-    sub_1B64A00(&LocalizationManager_TypeInfo, v19);
-    sub_1B64A00(&Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager_TypeInfo, v20);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v21);
-    sub_1B64A00(&TerminalPramsManager_TypeInfo, v22);
-    sub_1B64A00(&StringLiteral_12195/*"START_NOBLEUP_EFFECT"*/, v23);
-    sub_1B64A00(&StringLiteral_13370/*"TREASURE_DEVICE_COMBINE_EFFECT_UNSUMMON"*/, v24);
-    sub_1B64A00(&StringLiteral_13371/*"TREASURE_DEVICE_COMBINE_EFFECT_UNSUMMON_DETAIL"*/, v25);
-    byte_4A02334 = 1;
+    sub_1B686D4(&Method_DataManager_GetMaster_ServantTreasureDeviceAddMaster___, *(_QWORD *)&kind);
+    sub_1B686D4(&DataManager_TypeInfo, v17);
+    sub_1B686D4(&Method_System_Linq_Enumerable_Count_int___, v18);
+    sub_1B686D4(&LocalizationManager_TypeInfo, v19);
+    sub_1B686D4(&Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager_TypeInfo, v20);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v21);
+    sub_1B686D4(&TerminalPramsManager_TypeInfo, v22);
+    sub_1B686D4(&StringLiteral_12196/*"START_NOBLEUP_EFFECT"*/, v23);
+    sub_1B686D4(&StringLiteral_13371/*"TREASURE_DEVICE_COMBINE_EFFECT_UNSUMMON"*/, v24);
+    sub_1B686D4(&StringLiteral_13372/*"TREASURE_DEVICE_COMBINE_EFFECT_UNSUMMON_DETAIL"*/, v25);
+    byte_4A0C48C = 1;
   }
   v74 = 0LL;
   tdInfo = 0LL;
   this->fields.kind = kind;
   this->fields.baseUsrSvtData = usrSvtData;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.baseUsrSvtData,
     (int32_t)usrSvtData,
     (int32_t)usrSvtData,
     targetId);
   this->fields.resUsrSvtData = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v26, v27);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v26, v27);
   this->fields.setResUsrSvtData = 0;
   this->fields.tdShowIndex = 0;
   this->fields.targetId = targetId;
@@ -5594,10 +5587,10 @@ void __fastcall CombineResultEffectComponent__SetNobleCombineInfo(
   this->fields.targetLvOld = targetLvOld;
   this->fields.autoFadeout = 1;
   this->fields.callbackFunc = callback;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v28, v29);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v28, v29);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (ServantTreasureDeviceAddMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2E3BC8C *)Method_DataManager_GetMaster_ServantTreasureDeviceAddMaster___);
+  Master_object = (ServantTreasureDeviceAddMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2E49CFC *)Method_DataManager_GetMaster_ServantTreasureDeviceAddMaster___);
   if ( !usrSvtData )
     goto LABEL_72;
   v32 = Master_object;
@@ -5607,18 +5600,18 @@ void __fastcall CombineResultEffectComponent__SetNobleCombineInfo(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v76.fields.currentCryptoKey = v34;
   *(_QWORD *)&v76.fields.fakeValue = v33;
-  v35 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v76, 0LL);
-  Master_object = (ServantTreasureDeviceAddMaster_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(
+  v35 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v76, 0LL);
+  Master_object = (ServantTreasureDeviceAddMaster_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(
                                                         usrSvtData->fields.limitCount,
                                                         0LL);
   if ( !v32 )
     goto LABEL_72;
   EnableEntity = ServantTreasureDeviceAddMaster__GetEnableEntity(v32, v35, (int32_t)Master_object, 0, 0LL);
-  v37 = (Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager_o *)sub_1B64C4C(Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager_TypeInfo);
+  v37 = (Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager_o *)sub_1B68920(Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager_TypeInfo);
   Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager___ctor(v37, 0LL);
   p_npInfoAddManager = &this->fields.npInfoAddManager;
   this->fields.npInfoAddManager = v37;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.npInfoAddManager, (int32_t)v37, v39, v40);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.npInfoAddManager, (int32_t)v37, v39, v40);
   if ( EnableEntity )
   {
     Master_object = (ServantTreasureDeviceAddMaster_o *)*p_npInfoAddManager;
@@ -5632,7 +5625,7 @@ void __fastcall CombineResultEffectComponent__SetNobleCombineInfo(
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      v41 = DataManager__GetMaster_object_((const MethodInfo_2E3BC8C *)Method_DataManager_GetMaster_ServantTreasureDeviceAddMaster___);
+      v41 = DataManager__GetMaster_object_((const MethodInfo_2E49CFC *)Method_DataManager_GetMaster_ServantTreasureDeviceAddMaster___);
       v43 = *(_QWORD *)&usrSvtData->fields.svtId.fields.currentCryptoKey;
       v42 = *(_QWORD *)&usrSvtData->fields.svtId.fields.fakeValue;
       v44 = (ServantTreasureDeviceAddMaster_o *)v41;
@@ -5640,18 +5633,18 @@ void __fastcall CombineResultEffectComponent__SetNobleCombineInfo(
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v77.fields.currentCryptoKey = v43;
       *(_QWORD *)&v77.fields.fakeValue = v42;
-      v45 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v77, 0LL);
+      v45 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v77, 0LL);
       v46 = *(_QWORD *)&usrSvtData->fields.limitCount.fields.currentCryptoKey;
       *(_QWORD *)&v78.fields.fakeValue = *(_QWORD *)&usrSvtData->fields.limitCount.fields.fakeValue;
       v47 = v45;
       *(_QWORD *)&v78.fields.currentCryptoKey = v46;
-      v48 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v78, 0LL);
+      v48 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v78, 0LL);
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_49FB754 )
+      if ( !byte_4A058F6 )
       {
-        sub_1B64A00(&TerminalPramsManager_TypeInfo, v31);
-        byte_49FB754 = 1;
+        sub_1B686D4(&TerminalPramsManager_TypeInfo, v31);
+        byte_4A058F6 = 1;
       }
       Master_object = (ServantTreasureDeviceAddMaster_o *)TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -5665,11 +5658,11 @@ void __fastcall CombineResultEffectComponent__SetNobleCombineInfo(
                                        v44,
                                        v47,
                                        v48,
-                                       Master_object[2].fields._MasterName_k__BackingField->fields._stringLength,
+                                       *(_DWORD *)&Master_object[2].fields._MasterName_k__BackingField->fields._firstChar,
                                        0LL);
       Master_object = (ServantTreasureDeviceAddMaster_o *)System_Linq_Enumerable__Count_int_(
                                                             (System_Collections_Generic_IEnumerable_TSource__o *)EnableEntity->fields.treasureDeviceIds,
-                                                            (const MethodInfo_2E581DC *)Method_System_Linq_Enumerable_Count_int___);
+                                                            (const MethodInfo_2E66578 *)Method_System_Linq_Enumerable_Count_int___);
       if ( (int)Master_object >= 1 )
       {
         if ( EnableEntityBeforeClearQuest )
@@ -5707,7 +5700,7 @@ void __fastcall CombineResultEffectComponent__SetNobleCombineInfo(
               0LL);
             Master_object = (ServantTreasureDeviceAddMaster_o *)System_Linq_Enumerable__Count_int_(
                                                                   (System_Collections_Generic_IEnumerable_TSource__o *)EnableEntity->fields.treasureDeviceIds,
-                                                                  (const MethodInfo_2E581DC *)Method_System_Linq_Enumerable_Count_int___);
+                                                                  (const MethodInfo_2E66578 *)Method_System_Linq_Enumerable_Count_int___);
             v53 = v50 - 7;
             ++v50;
             if ( v53 >= (int)Master_object )
@@ -5721,7 +5714,7 @@ void __fastcall CombineResultEffectComponent__SetNobleCombineInfo(
     {
       Master_object = (ServantTreasureDeviceAddMaster_o *)System_Linq_Enumerable__Count_int_(
                                                             (System_Collections_Generic_IEnumerable_TSource__o *)EnableEntity->fields.treasureDeviceIds,
-                                                            (const MethodInfo_2E581DC *)Method_System_Linq_Enumerable_Count_int___);
+                                                            (const MethodInfo_2E66578 *)Method_System_Linq_Enumerable_Count_int___);
       if ( (int)Master_object >= 1 )
       {
         v68 = 8LL;
@@ -5746,7 +5739,7 @@ void __fastcall CombineResultEffectComponent__SetNobleCombineInfo(
             break;
           if ( v68 - 8 >= (unsigned __int64)v70->max_length )
 LABEL_73:
-            sub_1B64C64(Master_object, v31);
+            sub_1B68938(Master_object, v31);
           Master_object = (ServantTreasureDeviceAddMaster_o *)*p_npInfoAddManager;
           if ( !*p_npInfoAddManager )
             break;
@@ -5758,14 +5751,14 @@ LABEL_73:
             0LL);
           Master_object = (ServantTreasureDeviceAddMaster_o *)System_Linq_Enumerable__Count_int_(
                                                                 (System_Collections_Generic_IEnumerable_TSource__o *)EnableEntity->fields.treasureDeviceIds,
-                                                                (const MethodInfo_2E581DC *)Method_System_Linq_Enumerable_Count_int___);
+                                                                (const MethodInfo_2E66578 *)Method_System_Linq_Enumerable_Count_int___);
           v71 = v68 - 7;
           ++v68;
           if ( v71 >= (int)Master_object )
             goto LABEL_63;
         }
 LABEL_72:
-        sub_1B64C5C(Master_object, v31);
+        sub_1B68930(Master_object, v31);
       }
     }
   }
@@ -5791,10 +5784,10 @@ LABEL_72:
         {
           if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-          if ( !byte_49FB754 )
+          if ( !byte_4A058F6 )
           {
-            sub_1B64A00(&TerminalPramsManager_TypeInfo, v31);
-            byte_49FB754 = 1;
+            sub_1B686D4(&TerminalPramsManager_TypeInfo, v31);
+            byte_4A058F6 = 1;
           }
           v57 = TerminalPramsManager_TypeInfo;
           if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -5879,14 +5872,14 @@ LABEL_64:
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   Master_object = (ServantTreasureDeviceAddMaster_o *)LocalizationManager__Get(
-                                                        (System_String_o *)StringLiteral_13370/*"TREASURE_DEVICE_COMBINE_EFFECT_UNSUMMON"*/,
+                                                        (System_String_o *)StringLiteral_13371/*"TREASURE_DEVICE_COMBINE_EFFECT_UNSUMMON"*/,
                                                         0LL);
   if ( !unSummonLabel )
     goto LABEL_72;
   UILabel__set_text(unSummonLabel, (System_String_o *)Master_object, 0LL);
   unSummonDetail = this->fields.unSummonDetail;
   Master_object = (ServantTreasureDeviceAddMaster_o *)LocalizationManager__Get(
-                                                        (System_String_o *)StringLiteral_13371/*"TREASURE_DEVICE_COMBINE_EFFECT_UNSUMMON_DETAIL"*/,
+                                                        (System_String_o *)StringLiteral_13372/*"TREASURE_DEVICE_COMBINE_EFFECT_UNSUMMON_DETAIL"*/,
                                                         0LL);
   if ( !unSummonDetail )
     goto LABEL_72;
@@ -5894,7 +5887,7 @@ LABEL_64:
   Master_object = (ServantTreasureDeviceAddMaster_o *)this->fields.fsm;
   if ( !Master_object )
     goto LABEL_72;
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Master_object, (System_String_o *)StringLiteral_12195/*"START_NOBLEUP_EFFECT"*/, 0LL);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Master_object, (System_String_o *)StringLiteral_12196/*"START_NOBLEUP_EFFECT"*/, 0LL);
 }
 
 
@@ -5911,34 +5904,34 @@ void __fastcall CombineResultEffectComponent__SetPowerUpInfo(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v12; // x1
 
-  if ( (byte_4A0233C & 1) == 0 )
+  if ( (byte_4A0C494 & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_12198/*"START_POWERUP_EFFECT"*/, usrSvtData);
-    byte_4A0233C = 1;
+    sub_1B686D4(&StringLiteral_12199/*"START_POWERUP_EFFECT"*/, usrSvtData);
+    byte_4A0C494 = 1;
   }
   this->fields.kind = 11;
   this->fields.baseUsrSvtData = usrSvtData;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.baseUsrSvtData,
     (int32_t)usrSvtData,
     (int32_t)callback,
     (int32_t)method);
   this->fields.resUsrSvtData = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v7, v8);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v7, v8);
   this->fields.setResUsrSvtData = 0;
   this->fields.targetId = 0;
   this->fields.targetLv = 0;
   this->fields.autoFadeout = 1;
   this->fields.callbackFunc = callback;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v9, v10);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v9, v10);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject
     || (UnityEngine_GameObject__SetActive(gameObject, 1, 0LL),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.fsm) == 0LL) )
   {
-    sub_1B64C5C(gameObject, v12);
+    sub_1B68930(gameObject, v12);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)gameObject, (System_String_o *)StringLiteral_12198/*"START_POWERUP_EFFECT"*/, 0LL);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)gameObject, (System_String_o *)StringLiteral_12199/*"START_POWERUP_EFFECT"*/, 0LL);
 }
 
 
@@ -5961,11 +5954,11 @@ void __fastcall CombineResultEffectComponent__SetResultServantVoiceData(
   int32_t v15; // w20
   const MethodInfo *v16; // x1
 
-  if ( (byte_4A0234E & 1) == 0 )
+  if ( (byte_4A0C4A6 & 1) == 0 )
   {
-    sub_1B64A00(&ImageLimitCount_TypeInfo, method);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    byte_4A0234E = 1;
+    sub_1B686D4(&ImageLimitCount_TypeInfo, method);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
+    byte_4A0C4A6 = 1;
   }
   kind = this->fields.kind;
   if ( kind <= 10 )
@@ -5976,7 +5969,7 @@ void __fastcall CombineResultEffectComponent__SetResultServantVoiceData(
         goto LABEL_14;
       goto LABEL_11;
     }
-    Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
       goto LABEL_32;
     CommonUI__SetLoadMode(Instance, 1, 0LL);
@@ -6008,7 +6001,7 @@ LABEL_14:
         return;
       }
 LABEL_11:
-      Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( Instance )
       {
         CommonUI__SetLoadMode(Instance, 1, 0LL);
@@ -6023,9 +6016,9 @@ LABEL_11:
         goto LABEL_31;
       }
 LABEL_32:
-      sub_1B64C5C(Instance, v6);
+      sub_1B68930(Instance, v6);
     }
-    Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
       goto LABEL_32;
     CommonUI__SetLoadMode(Instance, 1, 0LL);
@@ -6108,18 +6101,18 @@ void __fastcall CombineResultEffectComponent__SetResultUserServantData(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v59; // 0:x0.16
 
   v2 = this;
-  if ( (byte_4A0234D & 1) == 0 )
+  if ( (byte_4A0C4A5 & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataManager_GetMasterData_ServantLimitMaster___, method);
-    sub_1B64A00(&Method_DataManager_GetMasterData_UserServantMaster___, v3);
-    sub_1B64A00(&Method_DataManager_GetMasterData_UserServantStorageMaster___, v4);
-    sub_1B64A00(&Method_DataMasterBase_UserServantStorageMaster__UserServantEntity__long__TryGetEntity__, v5);
-    sub_1B64A00(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__, v6);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v7);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v8);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    this = (CombineResultEffectComponent_o *)sub_1B64A00(&UserServantEntity_TypeInfo, v10);
-    byte_4A0234D = 1;
+    sub_1B686D4(&Method_DataManager_GetMasterData_ServantLimitMaster___, method);
+    sub_1B686D4(&Method_DataManager_GetMasterData_UserServantMaster___, v3);
+    sub_1B686D4(&Method_DataManager_GetMasterData_UserServantStorageMaster___, v4);
+    sub_1B686D4(&Method_DataMasterBase_UserServantStorageMaster__UserServantEntity__long__TryGetEntity__, v5);
+    sub_1B686D4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__, v6);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v7);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v8);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    this = (CombineResultEffectComponent_o *)sub_1B686D4(&UserServantEntity_TypeInfo, v10);
+    byte_4A0C4A5 = 1;
   }
   *(_QWORD *)afterAtk = 0LL;
   if ( !v2->fields.setResUsrSvtData )
@@ -6133,14 +6126,14 @@ void __fastcall CombineResultEffectComponent__SetResultUserServantData(
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
     v54 = v55;
-    if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46185616(&v54, 0LL) < 1 )
+    if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46242940(&v54, 0LL) < 1 )
     {
       v43 = v2->fields.baseUsrSvtData;
-      v44 = (UserServantEntity_o *)sub_1B64C4C(UserServantEntity_TypeInfo);
-      UserServantEntity___ctor_39863812(v44, v43, 0LL);
+      v44 = (UserServantEntity_o *)sub_1B68920(UserServantEntity_TypeInfo);
+      UserServantEntity___ctor_39926184(v44, v43, 0LL);
       v2->fields.resUsrSvtData = v44;
       p_resUsrSvtData = (ServantStatusBattleListViewItem_o *)&v2->fields.resUsrSvtData;
-      sub_1B649A4(p_resUsrSvtData, (int32_t)v44, v46, v47);
+      sub_1B68678(p_resUsrSvtData, (int32_t)v44, v46, v47);
       if ( (p_resUsrSvtData[-1].fields.dispLimitCount.fields.fakeValue | 0x10) != 26 )
         return;
       klass = p_resUsrSvtData->klass;
@@ -6152,7 +6145,7 @@ void __fastcall CombineResultEffectComponent__SetResultUserServantData(
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v59.fields.currentCryptoKey = generic_class;
         *(_QWORD *)&v59.fields.fakeValue = typeMetadataHandle;
-        v51 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v59, 0LL);
+        v51 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v59, 0LL);
         *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)&klass->_1.generic_class = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit(
                                                                                          v51 + 1,
                                                                                          0LL);
@@ -6161,12 +6154,12 @@ void __fastcall CombineResultEffectComponent__SetResultUserServantData(
     }
     else
     {
-      this = (CombineResultEffectComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      this = (CombineResultEffectComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( this )
       {
         this = (CombineResultEffectComponent_o *)DataManager__GetMasterData_object_(
                                                    (DataManager_o *)this,
-                                                   (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                                                   (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_UserServantMaster___);
         v13 = v2->fields.baseUsrSvtData;
         if ( v13 )
         {
@@ -6177,7 +6170,7 @@ void __fastcall CombineResultEffectComponent__SetResultUserServantData(
           if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
           v53 = v55;
-          this = (CombineResultEffectComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46185616(
+          this = (CombineResultEffectComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46242940(
                                                      &v53,
                                                      0LL);
           if ( v15 )
@@ -6187,15 +6180,15 @@ void __fastcall CombineResultEffectComponent__SetResultUserServantData(
                                                        v15,
                                                        (Il2CppObject **)&v2->fields.resUsrSvtData,
                                                        (int64_t)this,
-                                                       (const MethodInfo_30D6998 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+                                                       (const MethodInfo_30E46C0 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
             if ( ((unsigned __int8)this & 1) == 0 )
             {
-              this = (CombineResultEffectComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+              this = (CombineResultEffectComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
               if ( !this )
                 goto LABEL_46;
               this = (CombineResultEffectComponent_o *)DataManager__GetMasterData_object_(
                                                          (DataManager_o *)this,
-                                                         (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_UserServantStorageMaster___);
+                                                         (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_UserServantStorageMaster___);
               v17 = v2->fields.baseUsrSvtData;
               if ( !v17 )
                 goto LABEL_46;
@@ -6206,7 +6199,7 @@ void __fastcall CombineResultEffectComponent__SetResultUserServantData(
               if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
               v52 = v55;
-              this = (CombineResultEffectComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46185616(
+              this = (CombineResultEffectComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46242940(
                                                          &v52,
                                                          0LL);
               if ( !v19 )
@@ -6215,14 +6208,14 @@ void __fastcall CombineResultEffectComponent__SetResultUserServantData(
                                                          v19,
                                                          (Il2CppObject **)&v2->fields.resUsrSvtData,
                                                          (int64_t)this,
-                                                         (const MethodInfo_30D6998 *)Method_DataMasterBase_UserServantStorageMaster__UserServantEntity__long__TryGetEntity__);
+                                                         (const MethodInfo_30E46C0 *)Method_DataMasterBase_UserServantStorageMaster__UserServantEntity__long__TryGetEntity__);
               if ( ((unsigned __int8)this & 1) == 0 )
               {
                 v20 = v2->fields.baseUsrSvtData;
-                v21 = (UserServantEntity_o *)sub_1B64C4C(UserServantEntity_TypeInfo);
-                UserServantEntity___ctor_39863812(v21, v20, 0LL);
+                v21 = (UserServantEntity_o *)sub_1B68920(UserServantEntity_TypeInfo);
+                UserServantEntity___ctor_39926184(v21, v20, 0LL);
                 v2->fields.resUsrSvtData = v21;
-                sub_1B649A4((ServantStatusBattleListViewItem_o *)&v2->fields.resUsrSvtData, (int32_t)v21, v22, v23);
+                sub_1B68678((ServantStatusBattleListViewItem_o *)&v2->fields.resUsrSvtData, (int32_t)v21, v22, v23);
               }
             }
             if ( v2->fields.kind != 19 )
@@ -6236,7 +6229,7 @@ void __fastcall CombineResultEffectComponent__SetResultUserServantData(
                 j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
               *(_QWORD *)&v57.fields.currentCryptoKey = v26;
               *(_QWORD *)&v57.fields.fakeValue = v25;
-              this = (CombineResultEffectComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(
+              this = (CombineResultEffectComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(
                                                          v57,
                                                          0LL);
               if ( v2->fields.baseUsrSvtData )
@@ -6244,10 +6237,10 @@ void __fastcall CombineResultEffectComponent__SetResultUserServantData(
                 if ( (int)this >= UserServantEntity__getLimitCntMax(v2->fields.baseUsrSvtData, 0LL) - 1 )
                   return;
                 resUsrSvtData = v2->fields.resUsrSvtData;
-                v28 = (UserServantEntity_o *)sub_1B64C4C(UserServantEntity_TypeInfo);
-                UserServantEntity___ctor_39863812(v28, resUsrSvtData, 0LL);
+                v28 = (UserServantEntity_o *)sub_1B68920(UserServantEntity_TypeInfo);
+                UserServantEntity___ctor_39926184(v28, resUsrSvtData, 0LL);
                 v2->fields.resUsrSvtData = v28;
-                sub_1B649A4((ServantStatusBattleListViewItem_o *)&v2->fields.resUsrSvtData, (int32_t)v28, v29, v30);
+                sub_1B68678((ServantStatusBattleListViewItem_o *)&v2->fields.resUsrSvtData, (int32_t)v28, v29, v30);
                 v31 = v2->fields.baseUsrSvtData;
                 if ( v31 )
                 {
@@ -6258,7 +6251,7 @@ void __fastcall CombineResultEffectComponent__SetResultUserServantData(
                     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
                   *(_QWORD *)&v58.fields.currentCryptoKey = v34;
                   *(_QWORD *)&v58.fields.fakeValue = v33;
-                  v35 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v58, 0LL);
+                  v35 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v58, 0LL);
                   v36 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit(v35 + 1, 0LL);
                   method = *(const MethodInfo **)&v36.fields.fakeValue;
                   this = *(CombineResultEffectComponent_o **)&v36.fields.currentCryptoKey;
@@ -6271,22 +6264,22 @@ void __fastcall CombineResultEffectComponent__SetResultUserServantData(
                       hp = v37->fields.hp;
                       afterAtk[0] = v37->fields.atk;
                       afterAtk[1] = hp;
-                      this = (CombineResultEffectComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                      this = (CombineResultEffectComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
                       if ( this )
                       {
                         this = (CombineResultEffectComponent_o *)DataManager__GetMasterData_object_(
                                                                    (DataManager_o *)this,
-                                                                   (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
+                                                                   (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
                         if ( *v16 )
                         {
                           v39 = (ServantLimitMaster_o *)this;
-                          this = (CombineResultEffectComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(
+                          this = (CombineResultEffectComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(
                                                                      (*v16)[5],
                                                                      0LL);
                           if ( *v16 )
                           {
                             v40 = (int)this;
-                            this = (CombineResultEffectComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(
+                            this = (CombineResultEffectComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(
                                                                        (*v16)[6],
                                                                        0LL);
                             if ( v39 )
@@ -6332,7 +6325,7 @@ void __fastcall CombineResultEffectComponent__SetResultUserServantData(
       }
     }
 LABEL_46:
-    sub_1B64C5C(this, method);
+    sub_1B68930(this, method);
   }
 }
 
@@ -6399,59 +6392,59 @@ void __fastcall CombineResultEffectComponent__SetSecretTreasureDeviceInfoForQues
   struct CombineResultEffectComponent_ClickDelegate_o **p_callbackFunc; // [xsp+8h] [xbp-78h]
   struct CombineResultEffectComponent_MessageDelegate_o *v62; // [xsp+18h] [xbp-68h]
 
-  if ( (byte_4A02342 & 1) == 0 )
+  if ( (byte_4A0C49A & 1) == 0 )
   {
-    sub_1B64A00(&BalanceConfig_TypeInfo, *(_QWORD *)&questId);
-    sub_1B64A00(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, v11);
-    sub_1B64A00(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v12);
-    sub_1B64A00(&System_Comparison_ServantTreasureDvcEntity__TypeInfo, v13);
-    sub_1B64A00(&Method_DataManager_GetMasterData_ServantTreasureDvcMaster___, v14);
-    sub_1B64A00(&Method_System_Collections_Generic_List_ServantTreasureDvcEntity__Add__, v15);
-    sub_1B64A00(&Method_System_Collections_Generic_List_ServantTreasureDvcEntity__Sort__, v16);
-    sub_1B64A00(&Method_System_Collections_Generic_List_ServantTreasureDvcEntity___ctor__, v17);
-    sub_1B64A00(&Method_System_Collections_Generic_List_ServantTreasureDvcEntity__get_Count__, v18);
-    sub_1B64A00(&Method_System_Collections_Generic_List_ServantTreasureDvcEntity__get_Item__, v19);
-    sub_1B64A00(&System_Collections_Generic_List_ServantTreasureDvcEntity__TypeInfo, v20);
-    sub_1B64A00(&ServantTreasureDvcEntity_TypeInfo, v21);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v22);
-    sub_1B64A00(&TerminalSceneComponent_TypeInfo, v23);
-    sub_1B64A00(&Method_CombineResultEffectComponent___c__SetSecretTreasureDeviceInfoForQuestClear_b__106_0__, v24);
-    sub_1B64A00(&CombineResultEffectComponent___c_TypeInfo, v25);
-    sub_1B64A00(&StringLiteral_12199/*"START_SECRET_TREASURE_DEVICE_EFFECT"*/, v26);
-    sub_1B64A00(&StringLiteral_17231/*"bit_result_ultimate_anim"*/, v27);
-    sub_1B64A00(&StringLiteral_12888/*"StartAnimationName"*/, v28);
-    byte_4A02342 = 1;
+    sub_1B686D4(&BalanceConfig_TypeInfo, *(_QWORD *)&questId);
+    sub_1B686D4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, v11);
+    sub_1B686D4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v12);
+    sub_1B686D4(&System_Comparison_ServantTreasureDvcEntity__TypeInfo, v13);
+    sub_1B686D4(&Method_DataManager_GetMasterData_ServantTreasureDvcMaster___, v14);
+    sub_1B686D4(&Method_System_Collections_Generic_List_ServantTreasureDvcEntity__Add__, v15);
+    sub_1B686D4(&Method_System_Collections_Generic_List_ServantTreasureDvcEntity__Sort__, v16);
+    sub_1B686D4(&Method_System_Collections_Generic_List_ServantTreasureDvcEntity___ctor__, v17);
+    sub_1B686D4(&Method_System_Collections_Generic_List_ServantTreasureDvcEntity__get_Count__, v18);
+    sub_1B686D4(&Method_System_Collections_Generic_List_ServantTreasureDvcEntity__get_Item__, v19);
+    sub_1B686D4(&System_Collections_Generic_List_ServantTreasureDvcEntity__TypeInfo, v20);
+    sub_1B686D4(&ServantTreasureDvcEntity_TypeInfo, v21);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v22);
+    sub_1B686D4(&TerminalSceneComponent_TypeInfo, v23);
+    sub_1B686D4(&Method_CombineResultEffectComponent___c__SetSecretTreasureDeviceInfoForQuestClear_b__106_0__, v24);
+    sub_1B686D4(&CombineResultEffectComponent___c_TypeInfo, v25);
+    sub_1B686D4(&StringLiteral_12200/*"START_SECRET_TREASURE_DEVICE_EFFECT"*/, v26);
+    sub_1B686D4(&StringLiteral_17232/*"bit_result_ultimate_anim"*/, v27);
+    sub_1B686D4(&StringLiteral_12889/*"StartAnimationName"*/, v28);
+    byte_4A0C49A = 1;
   }
   this->fields.kind = 16;
   this->fields.autoFadeout = 1;
   this->fields.callbackFunc = callback;
   p_callbackFunc = &this->fields.callbackFunc;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     phase,
     (int32_t)msgCallBack);
   this->fields.messageCallback = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.messageCallback, 0, v29, v30);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.messageCallback, 0, v29, v30);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_59;
   v62 = msgCallBack;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantTreasureDvcMaster___);
+               (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_ServantTreasureDvcMaster___);
   if ( !Instance )
     goto LABEL_59;
   v33 = (System_Collections_ObjectModel_Collection_T__o *)*((_QWORD *)Instance + 4);
-  v34 = (System_Collections_Generic_List_object__o *)sub_1B64C4C(System_Collections_Generic_List_ServantTreasureDvcEntity__TypeInfo);
+  v34 = (System_Collections_Generic_List_object__o *)sub_1B68920(System_Collections_Generic_List_ServantTreasureDvcEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v34,
-    (const MethodInfo_34AF794 *)Method_System_Collections_Generic_List_ServantTreasureDvcEntity___ctor__);
+    (const MethodInfo_34BBA44 *)Method_System_Collections_Generic_List_ServantTreasureDvcEntity___ctor__);
   if ( !v33 )
     goto LABEL_59;
   if ( System_Collections_ObjectModel_Collection_object___get_Count(
          v33,
-         (const MethodInfo_30733FC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) >= 1 )
+         (const MethodInfo_3081124 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) >= 1 )
   {
     v35 = 0;
     while ( 1 )
@@ -6459,7 +6452,7 @@ void __fastcall CombineResultEffectComponent__SetSecretTreasureDeviceInfoForQues
       Instance = System_Collections_ObjectModel_Collection_object___get_Item(
                    v33,
                    v35,
-                   (const MethodInfo_307348C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                   (const MethodInfo_30811B4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( !Instance )
         break;
       v36 = (Il2CppObject *)Instance;
@@ -6491,25 +6484,25 @@ void __fastcall CombineResultEffectComponent__SetSecretTreasureDeviceInfoForQues
               System_Collections_Generic_List_object___AddWithResize(
                 v34,
                 v36,
-                *(const MethodInfo_34AFFC8 **)(*(_QWORD *)(v43[4] + 192LL) + 112LL));
+                *(const MethodInfo_34BC278 **)(*(_QWORD *)(v43[4] + 192LL) + 112LL));
             }
             else
             {
               v45 = &items->obj.klass + size;
               v34->fields._size = size + 1;
               v45[4] = (Il2CppClass *)v36;
-              sub_1B649A4((ServantStatusBattleListViewItem_o *)(v45 + 4), (int32_t)v36, v40, v41);
+              sub_1B68678((ServantStatusBattleListViewItem_o *)(v45 + 4), (int32_t)v36, v40, v41);
             }
           }
         }
       }
       if ( ++v35 >= System_Collections_ObjectModel_Collection_object___get_Count(
                       v33,
-                      (const MethodInfo_30733FC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
+                      (const MethodInfo_3081124 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
         goto LABEL_22;
     }
 LABEL_59:
-    sub_1B64C5C(Instance, v32);
+    sub_1B68930(Instance, v32);
   }
 LABEL_22:
   Instance = CombineResultEffectComponent___c_TypeInfo;
@@ -6527,7 +6520,7 @@ LABEL_22:
       Instance = CombineResultEffectComponent___c_TypeInfo;
     }
     v47 = (Il2CppObject *)**((_QWORD **)Instance + 23);
-    v46 = (System_Comparison_T__o *)sub_1B64C4C(System_Comparison_ServantTreasureDvcEntity__TypeInfo);
+    v46 = (System_Comparison_T__o *)sub_1B68920(System_Comparison_ServantTreasureDvcEntity__TypeInfo);
     System_Comparison_object____ctor(
       v46,
       v47,
@@ -6535,21 +6528,21 @@ LABEL_22:
       0LL);
     static_fields = CombineResultEffectComponent___c_TypeInfo->static_fields;
     static_fields->__9__106_0 = (struct System_Comparison_ServantTreasureDvcEntity__o *)v46;
-    sub_1B649A4((ServantStatusBattleListViewItem_o *)&static_fields->__9__106_0, (int32_t)v46, v49, v50);
+    sub_1B68678((ServantStatusBattleListViewItem_o *)&static_fields->__9__106_0, (int32_t)v46, v49, v50);
   }
   if ( !v34 )
     goto LABEL_59;
-  System_Collections_Generic_List_object___Sort_55253804(
+  System_Collections_Generic_List_object___Sort_55303484(
     v34,
     v46,
-    (const MethodInfo_34B1B2C *)Method_System_Collections_Generic_List_ServantTreasureDvcEntity__Sort__);
+    (const MethodInfo_34BDD3C *)Method_System_Collections_Generic_List_ServantTreasureDvcEntity__Sort__);
   v51 = v34->fields._size;
   if ( v51 >= 1 )
   {
     Instance = System_Collections_Generic_List_object___get_Item(
                  v34,
                  0,
-                 (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_ServantTreasureDvcEntity__get_Item__);
+                 (const MethodInfo_34BBFA8 *)Method_System_Collections_Generic_List_ServantTreasureDvcEntity__get_Item__);
     if ( !Instance )
       goto LABEL_59;
     this->fields.targetSvtId = *((_DWORD *)Instance + 4);
@@ -6568,7 +6561,7 @@ LABEL_22:
       Instance = System_Collections_Generic_List_object___get_Item(
                    v34,
                    v59,
-                   (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_ServantTreasureDvcEntity__get_Item__);
+                   (const MethodInfo_34BBFA8 *)Method_System_Collections_Generic_List_ServantTreasureDvcEntity__get_Item__);
       if ( !Instance )
         goto LABEL_59;
       if ( CombineResultEffectComponent__checkSecretTreasureDeviceData(this, *((_DWORD *)Instance + 4), v60) )
@@ -6579,7 +6572,7 @@ LABEL_22:
     Instance = System_Collections_Generic_List_object___get_Item(
                  v34,
                  v59,
-                 (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_ServantTreasureDvcEntity__get_Item__);
+                 (const MethodInfo_34BBFA8 *)Method_System_Collections_Generic_List_ServantTreasureDvcEntity__get_Item__);
     if ( !Instance )
       goto LABEL_59;
     this->fields.targetSvtId = *((_DWORD *)Instance + 4);
@@ -6597,10 +6590,10 @@ LABEL_35:
   {
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    if ( !byte_49F9DCD )
+    if ( !byte_4A03EAD )
     {
-      sub_1B64A00(&TerminalSceneComponent_TypeInfo, v32);
-      byte_49F9DCD = 1;
+      sub_1B686D4(&TerminalSceneComponent_TypeInfo, v32);
+      byte_4A03EAD = 1;
     }
     v53 = TerminalSceneComponent_TypeInfo;
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -6613,7 +6606,7 @@ LABEL_35:
       goto LABEL_59;
     TerminalSceneComponent__CheckLastPlayBgm((TerminalSceneComponent_o *)Instance, 0LL);
     this->fields.messageCallback = v62;
-    sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.messageCallback, (int32_t)v62, v54, v55);
+    sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.messageCallback, (int32_t)v62, v54, v55);
     Instance = this->fields.fsm;
     if ( !Instance )
       goto LABEL_59;
@@ -6622,17 +6615,17 @@ LABEL_35:
       goto LABEL_59;
     Instance = HutongGames_PlayMaker_FsmVariables__GetFsmString(
                  (HutongGames_PlayMaker_FsmVariables_o *)Instance,
-                 (System_String_o *)StringLiteral_12888/*"StartAnimationName"*/,
+                 (System_String_o *)StringLiteral_12889/*"StartAnimationName"*/,
                  0LL);
     if ( !Instance )
       goto LABEL_59;
-    v58 = StringLiteral_17231/*"bit_result_ultimate_anim"*/;
-    *((_QWORD *)Instance + 7) = StringLiteral_17231/*"bit_result_ultimate_anim"*/;
-    sub_1B649A4((ServantStatusBattleListViewItem_o *)((char *)Instance + 56), v58, v56, v57);
+    v58 = StringLiteral_17232/*"bit_result_ultimate_anim"*/;
+    *((_QWORD *)Instance + 7) = StringLiteral_17232/*"bit_result_ultimate_anim"*/;
+    sub_1B68678((ServantStatusBattleListViewItem_o *)((char *)Instance + 56), v58, v56, v57);
     Instance = this->fields.fsm;
     if ( !Instance )
       goto LABEL_59;
-    PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)StringLiteral_12199/*"START_SECRET_TREASURE_DEVICE_EFFECT"*/, 0LL);
+    PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)StringLiteral_12200/*"START_SECRET_TREASURE_DEVICE_EFFECT"*/, 0LL);
   }
 }
 
@@ -6656,19 +6649,19 @@ void __fastcall CombineResultEffectComponent__SetSecretTreasureDeviceInfoForSvtG
   int32_t v16; // w3
   int32_t v17; // w1
 
-  if ( (byte_4A02343 & 1) == 0 )
+  if ( (byte_4A0C49B & 1) == 0 )
   {
-    sub_1B64A00(&BalanceConfig_TypeInfo, *(_QWORD *)&svtId);
-    sub_1B64A00(&StringLiteral_12199/*"START_SECRET_TREASURE_DEVICE_EFFECT"*/, v7);
-    sub_1B64A00(&StringLiteral_17231/*"bit_result_ultimate_anim"*/, v8);
-    sub_1B64A00(&StringLiteral_12888/*"StartAnimationName"*/, v9);
-    byte_4A02343 = 1;
+    sub_1B686D4(&BalanceConfig_TypeInfo, *(_QWORD *)&svtId);
+    sub_1B686D4(&StringLiteral_12200/*"START_SECRET_TREASURE_DEVICE_EFFECT"*/, v7);
+    sub_1B686D4(&StringLiteral_17232/*"bit_result_ultimate_anim"*/, v8);
+    sub_1B686D4(&StringLiteral_12889/*"StartAnimationName"*/, v9);
+    byte_4A0C49B = 1;
   }
   p_callbackFunc = &this->fields.callbackFunc;
   this->fields.kind = 17;
   this->fields.autoFadeout = 1;
   this->fields.callbackFunc = callback;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     (int32_t)callback,
@@ -6696,16 +6689,16 @@ void __fastcall CombineResultEffectComponent__SetSecretTreasureDeviceInfoForSvtG
       || (fsm = (char *)PlayMakerFSM__get_FsmVariables((PlayMakerFSM_o *)fsm, 0LL)) == 0LL
       || (fsm = (char *)HutongGames_PlayMaker_FsmVariables__GetFsmString(
                           (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                          (System_String_o *)StringLiteral_12888/*"StartAnimationName"*/,
+                          (System_String_o *)StringLiteral_12889/*"StartAnimationName"*/,
                           0LL)) == 0LL
-      || (v17 = StringLiteral_17231/*"bit_result_ultimate_anim"*/,
-          *((_QWORD *)fsm + 7) = StringLiteral_17231/*"bit_result_ultimate_anim"*/,
-          sub_1B649A4((ServantStatusBattleListViewItem_o *)(fsm + 56), v17, v15, v16),
+      || (v17 = StringLiteral_17232/*"bit_result_ultimate_anim"*/,
+          *((_QWORD *)fsm + 7) = StringLiteral_17232/*"bit_result_ultimate_anim"*/,
+          sub_1B68678((ServantStatusBattleListViewItem_o *)(fsm + 56), v17, v15, v16),
           (fsm = (char *)this->fields.fsm) == 0LL) )
     {
-      sub_1B64C5C(fsm, v13);
+      sub_1B68930(fsm, v13);
     }
-    PlayMakerFSM__SendEvent((PlayMakerFSM_o *)fsm, (System_String_o *)StringLiteral_12199/*"START_SECRET_TREASURE_DEVICE_EFFECT"*/, 0LL);
+    PlayMakerFSM__SendEvent((PlayMakerFSM_o *)fsm, (System_String_o *)StringLiteral_12200/*"START_SECRET_TREASURE_DEVICE_EFFECT"*/, 0LL);
   }
 }
 
@@ -6732,17 +6725,17 @@ void __fastcall CombineResultEffectComponent__SetSkillCombineInfo(
   UILabel_o *unSummonLabel; // x20
   UILabel_o *unSummonDetail; // x20
 
-  if ( (byte_4A02333 & 1) == 0 )
+  if ( (byte_4A0C48B & 1) == 0 )
   {
-    sub_1B64A00(&LocalizationManager_TypeInfo, *(_QWORD *)&kind);
-    sub_1B64A00(&StringLiteral_12201/*"START_SKILLUP_EFFECT"*/, v17);
-    sub_1B64A00(&StringLiteral_12094/*"SKILL_COMBINE_EFFFECT_UNSUMMON"*/, v18);
-    sub_1B64A00(&StringLiteral_12095/*"SKILL_COMBINE_EFFFECT_UNSUMMON_DETAIL"*/, v19);
-    byte_4A02333 = 1;
+    sub_1B686D4(&LocalizationManager_TypeInfo, *(_QWORD *)&kind);
+    sub_1B686D4(&StringLiteral_12202/*"START_SKILLUP_EFFECT"*/, v17);
+    sub_1B686D4(&StringLiteral_12095/*"SKILL_COMBINE_EFFFECT_UNSUMMON"*/, v18);
+    sub_1B686D4(&StringLiteral_12096/*"SKILL_COMBINE_EFFFECT_UNSUMMON_DETAIL"*/, v19);
+    byte_4A0C48B = 1;
   }
   this->fields.baseUsrSvtData = usrSvtData;
   this->fields.kind = kind;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.baseUsrSvtData,
     (int32_t)usrSvtData,
     (int32_t)usrSvtData,
@@ -6753,7 +6746,7 @@ void __fastcall CombineResultEffectComponent__SetSkillCombineInfo(
   this->fields.targetLvOld = targetLvOld;
   this->fields.autoFadeout = 1;
   this->fields.callbackFunc = callback;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v20, v21);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v20, v21);
   if ( !usrSvtData )
     goto LABEL_12;
   this->fields.displayCount = UserServantEntity__GetTransformCount(usrSvtData, 0, 0LL);
@@ -6768,19 +6761,19 @@ void __fastcall CombineResultEffectComponent__SetSkillCombineInfo(
   unSummonLabel = this->fields.unSummonLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12094/*"SKILL_COMBINE_EFFFECT_UNSUMMON"*/, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12095/*"SKILL_COMBINE_EFFFECT_UNSUMMON"*/, 0LL);
   if ( !unSummonLabel
     || (UILabel__set_text(unSummonLabel, (System_String_o *)gameObject, 0LL),
         unSummonDetail = this->fields.unSummonDetail,
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12095/*"SKILL_COMBINE_EFFFECT_UNSUMMON_DETAIL"*/, 0LL),
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12096/*"SKILL_COMBINE_EFFFECT_UNSUMMON_DETAIL"*/, 0LL),
         !unSummonDetail)
     || (UILabel__set_text(unSummonDetail, (System_String_o *)gameObject, 0LL),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.fsm) == 0LL) )
   {
 LABEL_12:
-    sub_1B64C5C(gameObject, v23);
+    sub_1B68930(gameObject, v23);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)gameObject, (System_String_o *)StringLiteral_12201/*"START_SKILLUP_EFFECT"*/, 0LL);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)gameObject, (System_String_o *)StringLiteral_12202/*"START_SKILLUP_EFFECT"*/, 0LL);
 }
 
 
@@ -6808,15 +6801,15 @@ void __fastcall CombineResultEffectComponent__SetStandFigureFace(
   int32_t v23; // w21
   int32_t v24; // w22
 
-  if ( (byte_4A02369 & 1) == 0 )
+  if ( (byte_4A0C4C1 & 1) == 0 )
   {
-    sub_1B64A00(&Method_System_Linq_Enumerable_Count_StandFigureCollect___, *(_QWORD *)&faceType);
-    sub_1B64A00(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__, v13);
-    byte_4A02369 = 1;
+    sub_1B686D4(&Method_System_Linq_Enumerable_Count_StandFigureCollect___, *(_QWORD *)&faceType);
+    sub_1B686D4(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__, v13);
+    byte_4A0C4C1 = 1;
   }
   Item = (UIStandFigureR_o *)System_Linq_Enumerable__Count_object_(
                                (System_Collections_Generic_IEnumerable_TSource__o *)standFigureCollects,
-                               (const MethodInfo_2E585A8 *)Method_System_Linq_Enumerable_Count_StandFigureCollect___);
+                               (const MethodInfo_2E66944 *)Method_System_Linq_Enumerable_Count_StandFigureCollect___);
   if ( (int)Item < 2 )
   {
     if ( standFigureCollects )
@@ -6824,19 +6817,19 @@ void __fastcall CombineResultEffectComponent__SetStandFigureFace(
       Item = (UIStandFigureR_o *)System_Collections_Generic_List_object___get_Item(
                                    (System_Collections_Generic_List_object__o *)standFigureCollects,
                                    0,
-                                   (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
+                                   (const MethodInfo_34BBFA8 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
       if ( Item )
       {
         Item = (UIStandFigureR_o *)Item->fields.m_CancellationTokenSource;
         if ( Item )
         {
-          UIStandFigureR__SetFace_40651944(Item, faceType, formId, 0LL, fadeTime, 0LL);
+          UIStandFigureR__SetFace_40716228(Item, faceType, formId, 0LL, fadeTime, 0LL);
           return;
         }
       }
     }
 LABEL_25:
-    sub_1B64C5C(Item, v15);
+    sub_1B68930(Item, v15);
   }
   v16 = this->fields.playVoiceList;
   if ( !v16 )
@@ -6844,7 +6837,7 @@ LABEL_25:
   playCnt = this->fields.playCnt;
   if ( (unsigned int)playCnt >= v16->max_length )
 LABEL_23:
-    sub_1B64C64(Item, v15);
+    sub_1B68938(Item, v15);
   v18 = v16->m_Items[playCnt];
   if ( !v18 )
     goto LABEL_25;
@@ -6871,13 +6864,13 @@ LABEL_23:
             Item = (UIStandFigureR_o *)System_Collections_Generic_List_object___get_Item(
                                          (System_Collections_Generic_List_object__o *)standFigureCollects,
                                          v21,
-                                         (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
+                                         (const MethodInfo_34BBFA8 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
             if ( !Item )
               goto LABEL_25;
             Item = (UIStandFigureR_o *)Item->fields.m_CancellationTokenSource;
             if ( !Item )
               goto LABEL_25;
-            UIStandFigureR__SetFace_40651944(Item, v23, v24, 0LL, fadeTime, 0LL);
+            UIStandFigureR__SetFace_40716228(Item, v23, v24, 0LL, fadeTime, 0LL);
             if ( v22 == v21 )
               return;
             ++v21;
@@ -6910,43 +6903,43 @@ void __fastcall CombineResultEffectComponent__SetSvtCombineInfo(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v20; // x1
 
-  if ( (byte_4A02336 & 1) == 0 )
+  if ( (byte_4A0C48E & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_12203/*"START_SVTCOMBINE_EFFECT"*/, *(_QWORD *)&kind);
-    byte_4A02336 = 1;
+    sub_1B686D4(&StringLiteral_12204/*"START_SVTCOMBINE_EFFECT"*/, *(_QWORD *)&kind);
+    byte_4A0C48E = 1;
   }
   this->fields.kind = kind;
   this->fields.successInfo = infoIdx;
   this->fields.baseUsrSvtData = baseData;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.baseUsrSvtData,
     (int32_t)baseData,
     infoIdx,
     (int32_t)baseData);
   this->fields.baseUsrSvtCollictionLv = baseCollectionLv;
   this->fields.resUsrSvtData = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v13, v14);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v13, v14);
   this->fields.setResUsrSvtData = 0;
   this->fields.combineVoiceId = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.combineVoiceId, 0, v15, v16);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.combineVoiceId, 0, v15, v16);
   this->fields.combineStatusDisp = 1;
   *(_QWORD *)&this->fields.voiceSvtId = -1LL;
   this->fields.autoFadeout = 1;
   this->fields.callbackFunc = callback;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v17, v18);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v17, v18);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject
     || (UnityEngine_GameObject__SetActive(gameObject, 1, 0LL),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.fsm) == 0LL) )
   {
-    sub_1B64C5C(gameObject, v20);
+    sub_1B68930(gameObject, v20);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)gameObject, (System_String_o *)StringLiteral_12203/*"START_SVTCOMBINE_EFFECT"*/, 0LL);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)gameObject, (System_String_o *)StringLiteral_12204/*"START_SVTCOMBINE_EFFECT"*/, 0LL);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall CombineResultEffectComponent__SetSvtCombineInfo_44572908(
+void __fastcall CombineResultEffectComponent__SetSvtCombineInfo_44641176(
         CombineResultEffectComponent_o *this,
         int32_t kind,
         int32_t infoIdx,
@@ -6968,42 +6961,42 @@ void __fastcall CombineResultEffectComponent__SetSvtCombineInfo_44572908(
   int32_t v25; // w2
   int32_t v26; // w3
 
-  if ( (byte_4A02337 & 1) == 0 )
+  if ( (byte_4A0C48F & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_12203/*"START_SVTCOMBINE_EFFECT"*/, *(_QWORD *)&kind);
-    byte_4A02337 = 1;
+    sub_1B686D4(&StringLiteral_12204/*"START_SVTCOMBINE_EFFECT"*/, *(_QWORD *)&kind);
+    byte_4A0C48F = 1;
   }
   this->fields.kind = kind;
   this->fields.successInfo = infoIdx;
   this->fields.baseUsrSvtData = baseData;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.baseUsrSvtData,
     (int32_t)baseData,
     infoIdx,
     (int32_t)baseData);
   this->fields.resUsrSvtData = resData;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, (int32_t)resData, v19, v20);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, (int32_t)resData, v19, v20);
   this->fields.setResUsrSvtData = 1;
   if ( !baseData )
     goto LABEL_7;
   this->fields.baseUsrSvtCollictionLv = baseData->fields.lv;
   this->fields.combineVoiceId = voiceId;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.combineVoiceId, (int32_t)voiceId, v23, v24);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.combineVoiceId, (int32_t)voiceId, v23, v24);
   this->fields.combineStatusDisp = statusDisp;
   this->fields.voiceSvtId = svtId;
   this->fields.friendship = friendship;
   this->fields.autoFadeout = 1;
   this->fields.callbackFunc = callback;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v25, v26);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v25, v26);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject
     || (UnityEngine_GameObject__SetActive(gameObject, 1, 0LL),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.fsm) == 0LL) )
   {
 LABEL_7:
-    sub_1B64C5C(gameObject, v22);
+    sub_1B68930(gameObject, v22);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)gameObject, (System_String_o *)StringLiteral_12203/*"START_SVTCOMBINE_EFFECT"*/, 0LL);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)gameObject, (System_String_o *)StringLiteral_12204/*"START_SVTCOMBINE_EFFECT"*/, 0LL);
 }
 
 
@@ -7026,32 +7019,32 @@ void __fastcall CombineResultEffectComponent__SetSvtEqCombineInfo(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v22; // x1
 
-  if ( (byte_4A02338 & 1) == 0 )
+  if ( (byte_4A0C490 & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_12203/*"START_SVTCOMBINE_EFFECT"*/, *(_QWORD *)&kind);
-    byte_4A02338 = 1;
+    sub_1B686D4(&StringLiteral_12204/*"START_SVTCOMBINE_EFFECT"*/, *(_QWORD *)&kind);
+    byte_4A0C490 = 1;
   }
   this->fields.kind = kind;
   this->fields.successInfo = infoIdx;
   this->fields.normalExp = normalExp;
   this->fields.addTotalExp = addExp;
   this->fields.baseUsrSvtData = baseData;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.baseUsrSvtData, (int32_t)baseData, infoIdx, normalExp);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.baseUsrSvtData, (int32_t)baseData, infoIdx, normalExp);
   this->fields.baseUsrSvtCollictionLv = baseCollectionLv;
   this->fields.resUsrSvtData = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v17, v18);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, 0, v17, v18);
   this->fields.setResUsrSvtData = 0;
   this->fields.autoFadeout = 1;
   this->fields.callbackFunc = callback;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v19, v20);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callback, v19, v20);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject
     || (UnityEngine_GameObject__SetActive(gameObject, 1, 0LL),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.fsm) == 0LL) )
   {
-    sub_1B64C5C(gameObject, v22);
+    sub_1B68930(gameObject, v22);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)gameObject, (System_String_o *)StringLiteral_12203/*"START_SVTCOMBINE_EFFECT"*/, 0LL);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)gameObject, (System_String_o *)StringLiteral_12204/*"START_SVTCOMBINE_EFFECT"*/, 0LL);
 }
 
 
@@ -7063,19 +7056,18 @@ void __fastcall CombineResultEffectComponent__ShowLimitUpChangeInfo(
   UnityEngine_Collider_o *bgCollider; // x0
   LimitUpResultCheckComponent_o *limitUpResultCheck; // x20
   System_Action_o *v6; // x21
-  const MethodInfo *v7; // x3
 
-  if ( (byte_4A0236F & 1) == 0 )
+  if ( (byte_4A0C4C7 & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, method);
-    sub_1B64A00(&Method_CombineResultEffectComponent__ShowLimitUpChangeInfo_b__153_0__, v3);
-    byte_4A0236F = 1;
+    sub_1B686D4(&System_Action_TypeInfo, method);
+    sub_1B686D4(&Method_CombineResultEffectComponent__ShowLimitUpChangeInfo_b__153_0__, v3);
+    byte_4A0C4C7 = 1;
   }
   bgCollider = this->fields.bgCollider;
   if ( !bgCollider
     || (UnityEngine_Collider__set_enabled(bgCollider, 0, 0LL),
         limitUpResultCheck = this->fields.limitUpResultCheck,
-        v6 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo),
+        v6 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo),
         System_Action___ctor(
           v6,
           (Il2CppObject *)this,
@@ -7083,9 +7075,9 @@ void __fastcall CombineResultEffectComponent__ShowLimitUpChangeInfo(
           0LL),
         !limitUpResultCheck) )
   {
-    sub_1B64C5C(bgCollider, method);
+    sub_1B68930(bgCollider, method);
   }
-  LimitUpResultCheckComponent__DispResultLimitUp(limitUpResultCheck, v6, 0, v7);
+  LimitUpResultCheckComponent__DispResultLimitUp(limitUpResultCheck, v6, 0, 0LL);
 }
 
 
@@ -7104,14 +7096,13 @@ void __fastcall CombineResultEffectComponent__ShowNpChangeInfo(
   SkillUpResultWindowComponent_o *skillResultInfoWindow; // x23
   int32_t kind; // w25
   System_Action_o *v13; // x24
-  const MethodInfo *v14; // x6
   TransformServantInfo_o *transformInfo; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4A0236D & 1) == 0 )
+  if ( (byte_4A0C4C5 & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, *(_QWORD *)&index);
-    sub_1B64A00(&Method_CombineResultEffectComponent__ShowNpChangeInfo_b__151_0__, v5);
-    byte_4A0236D = 1;
+    sub_1B686D4(&System_Action_TypeInfo, *(_QWORD *)&index);
+    sub_1B686D4(&Method_CombineResultEffectComponent__ShowNpChangeInfo_b__151_0__, v5);
+    byte_4A0C4C5 = 1;
   }
   transformInfo = 0LL;
   bgCollider = this->fields.bgCollider;
@@ -7136,7 +7127,7 @@ void __fastcall CombineResultEffectComponent__ShowNpChangeInfo(
   if ( !titles )
     goto LABEL_10;
   if ( titles->max_length <= index )
-    sub_1B64C64(bgCollider, *(_QWORD *)&index);
+    sub_1B68938(bgCollider, *(_QWORD *)&index);
   titleText = titles->m_Items[index];
   if ( !titleText )
   {
@@ -7147,11 +7138,11 @@ LABEL_10:
   }
   skillResultInfoWindow = this->fields.skillResultInfoWindow;
   kind = this->fields.kind;
-  v13 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+  v13 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
   System_Action___ctor(v13, (Il2CppObject *)this, Method_CombineResultEffectComponent__ShowNpChangeInfo_b__151_0__, 0LL);
   if ( !skillResultInfoWindow )
 LABEL_14:
-    sub_1B64C5C(bgCollider, *(_QWORD *)&index);
+    sub_1B68930(bgCollider, *(_QWORD *)&index);
   SkillUpResultWindowComponent__OpenNextNpUpResultInfo(
     skillResultInfoWindow,
     npInfoAddManager,
@@ -7159,7 +7150,7 @@ LABEL_14:
     titleText,
     kind == 8,
     v13,
-    v14);
+    0LL);
 }
 
 
@@ -7181,13 +7172,12 @@ void __fastcall CombineResultEffectComponent__ShowSkillChangeInfo(
   int32_t v14; // w22
   System_String_o *costumeName; // x25
   System_Action_o *v16; // x26
-  const MethodInfo *v17; // x7
 
-  if ( (byte_4A0236E & 1) == 0 )
+  if ( (byte_4A0C4C6 & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, *(_QWORD *)&index);
-    sub_1B64A00(&Method_CombineResultEffectComponent__ShowSkillChangeInfo_b__152_0__, v5);
-    byte_4A0236E = 1;
+    sub_1B686D4(&System_Action_TypeInfo, *(_QWORD *)&index);
+    sub_1B686D4(&Method_CombineResultEffectComponent__ShowSkillChangeInfo_b__152_0__, v5);
+    byte_4A0C4C6 = 1;
   }
   bgCollider = this->fields.bgCollider;
   if ( !bgCollider )
@@ -7217,7 +7207,7 @@ void __fastcall CombineResultEffectComponent__ShowSkillChangeInfo(
   v13 = v9[4];
   v14 = v9[5];
   costumeName = this->fields.costumeName;
-  v16 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+  v16 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
   System_Action___ctor(
     v16,
     (Il2CppObject *)this,
@@ -7225,7 +7215,7 @@ void __fastcall CombineResultEffectComponent__ShowSkillChangeInfo(
     0LL);
   if ( !skillResultInfoWindow )
 LABEL_10:
-    sub_1B64C5C(bgCollider, *(_QWORD *)&index);
+    sub_1B68930(bgCollider, *(_QWORD *)&index);
   SkillUpResultWindowComponent__OpenSkillChangeResultInfo(
     skillResultInfoWindow,
     v13,
@@ -7234,7 +7224,7 @@ LABEL_10:
     v11,
     costumeName,
     v16,
-    v17);
+    0LL);
 }
 
 
@@ -7251,15 +7241,14 @@ void __fastcall CombineResultEffectComponent__ShowSkillChangeMessage(
   __int64 v9; // x22
   int32_t v10; // w21
   System_Action_o *v11; // x22
-  const MethodInfo *v12; // x3
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v13; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v12; // 0:x0.16
 
-  if ( (byte_4A0236C & 1) == 0 )
+  if ( (byte_4A0C4C4 & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, method);
-    sub_1B64A00(&Method_CombineResultEffectComponent__ShowSkillChangeMessage_b__150_0__, v3);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
-    byte_4A0236C = 1;
+    sub_1B686D4(&System_Action_TypeInfo, method);
+    sub_1B686D4(&Method_CombineResultEffectComponent__ShowSkillChangeMessage_b__150_0__, v3);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
+    byte_4A0C4C4 = 1;
   }
   bgCollider = this->fields.bgCollider;
   if ( !bgCollider )
@@ -7273,10 +7262,10 @@ void __fastcall CombineResultEffectComponent__ShowSkillChangeMessage(
   v8 = *(_QWORD *)&baseUsrSvtData->fields.svtId.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v13.fields.currentCryptoKey = v9;
-  *(_QWORD *)&v13.fields.fakeValue = v8;
-  v10 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v13, 0LL);
-  v11 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+  *(_QWORD *)&v12.fields.currentCryptoKey = v9;
+  *(_QWORD *)&v12.fields.fakeValue = v8;
+  v10 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v12, 0LL);
+  v11 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
   System_Action___ctor(
     v11,
     (Il2CppObject *)this,
@@ -7284,8 +7273,8 @@ void __fastcall CombineResultEffectComponent__ShowSkillChangeMessage(
     0LL);
   if ( !skillResultInfoWindow )
 LABEL_9:
-    sub_1B64C5C(bgCollider, method);
-  SkillUpResultWindowComponent__OpenSkillChangeMessage(skillResultInfoWindow, v10, v11, v12);
+    sub_1B68930(bgCollider, method);
+  SkillUpResultWindowComponent__OpenSkillChangeMessage(skillResultInfoWindow, v10, v11, 0LL);
 }
 
 
@@ -7309,63 +7298,62 @@ void __fastcall CombineResultEffectComponent__ShowTreasureDeviceChangeInfo(
   int32_t v16; // w23
   int32_t v17; // w24
   System_Action_o *v18; // x25
-  const MethodInfo *v19; // x6
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v20; // [xsp+0h] [xbp-90h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v21; // [xsp+20h] [xbp-70h]
-  TreasureDvcInfo_o *v22; // [xsp+40h] [xbp-50h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v19; // [xsp+0h] [xbp-90h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v20; // [xsp+20h] [xbp-70h]
+  TreasureDvcInfo_o *v21; // [xsp+40h] [xbp-50h] BYREF
   TreasureDvcInfo_o *tdInfo; // [xsp+48h] [xbp-48h] BYREF
 
-  if ( (byte_4A02370 & 1) == 0 )
+  if ( (byte_4A0C4C8 & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, method);
-    sub_1B64A00(&Method_CombineResultEffectComponent__ShowTreasureDeviceChangeInfo_b__155_0__, v3);
-    sub_1B64A00(&Method_DataManager_GetMasterData_UserServantMaster___, v4);
-    sub_1B64A00(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v5);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v6);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    byte_4A02370 = 1;
+    sub_1B686D4(&System_Action_TypeInfo, method);
+    sub_1B686D4(&Method_CombineResultEffectComponent__ShowTreasureDeviceChangeInfo_b__155_0__, v3);
+    sub_1B686D4(&Method_DataManager_GetMasterData_UserServantMaster___, v4);
+    sub_1B686D4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v5);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v6);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    byte_4A0C4C8 = 1;
   }
-  v22 = 0LL;
+  v21 = 0LL;
   tdInfo = 0LL;
   bgCollider = (int64_t)this->fields.bgCollider;
   if ( !bgCollider )
     goto LABEL_14;
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)bgCollider, 0, 0LL);
   baseUsrSvtData = this->fields.baseUsrSvtData;
-  bgCollider = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  bgCollider = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !bgCollider )
     goto LABEL_14;
   bgCollider = (int64_t)DataManager__GetMasterData_object_(
                           (DataManager_o *)bgCollider,
-                          (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                          (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_UserServantMaster___);
   if ( !baseUsrSvtData )
     goto LABEL_14;
   v10 = *(_OWORD *)&baseUsrSvtData->fields.id.fields.fakeValue;
   v11 = (DataMasterBase_TMaster__TEntity__PKType__o *)bgCollider;
-  *(_OWORD *)&v21.fields.currentCryptoKey = *(_OWORD *)&baseUsrSvtData->fields.id.fields.currentCryptoKey;
-  *(_OWORD *)&v21.fields.fakeValue = v10;
+  *(_OWORD *)&v20.fields.currentCryptoKey = *(_OWORD *)&baseUsrSvtData->fields.id.fields.currentCryptoKey;
+  *(_OWORD *)&v20.fields.fakeValue = v10;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  v20 = v21;
-  bgCollider = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46185616(&v20, 0LL);
+  v19 = v20;
+  bgCollider = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46242940(&v19, 0LL);
   if ( !v11 )
     goto LABEL_14;
   Entity = DataMasterBase_object__object__long___GetEntity(
              v11,
              bgCollider,
-             (const MethodInfo_30D6944 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+             (const MethodInfo_30E466C *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
   bgCollider = UserServantEntity__getTreasureDeviceInfo(baseUsrSvtData, &tdInfo, -1, -1, 0, 0LL);
   if ( !Entity )
     goto LABEL_14;
-  bgCollider = UserServantEntity__getTreasureDeviceInfo((UserServantEntity_o *)Entity, &v22, -1, -1, 0, 0LL);
+  bgCollider = UserServantEntity__getTreasureDeviceInfo((UserServantEntity_o *)Entity, &v21, -1, -1, 0, 0LL);
   if ( !tdInfo
-    || !v22
+    || !v21
     || (skillResultInfoWindow = this->fields.skillResultInfoWindow,
         id = tdInfo->fields.id,
         lv = tdInfo->fields.lv,
-        v16 = v22->fields.id,
-        v17 = v22->fields.lv,
-        v18 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo),
+        v16 = v21->fields.id,
+        v17 = v21->fields.lv,
+        v18 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo),
         System_Action___ctor(
           v18,
           (Il2CppObject *)this,
@@ -7374,9 +7362,9 @@ void __fastcall CombineResultEffectComponent__ShowTreasureDeviceChangeInfo(
         !skillResultInfoWindow) )
   {
 LABEL_14:
-    sub_1B64C5C(bgCollider, method);
+    sub_1B68930(bgCollider, method);
   }
-  SkillUpResultWindowComponent__OpenNpUpResultInfo(skillResultInfoWindow, id, lv, v16, v17, v18, v19);
+  SkillUpResultWindowComponent__OpenNpUpResultInfo(skillResultInfoWindow, id, lv, v16, v17, v18, 0LL);
 }
 
 
@@ -7389,24 +7377,23 @@ void __fastcall CombineResultEffectComponent___CloseLimitCountSealDialog_b__171_
   System_Action_o *v5; // x21
   __int64 v6; // x0
   __int64 v7; // x1
-  const MethodInfo *v8; // x3
 
-  if ( (byte_4A0238A & 1) == 0 )
+  if ( (byte_4A0C4E2 & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, method);
-    sub_1B64A00(&Method_CombineResultEffectComponent__CloseLimitCountSealDialog_b__171_1__, v3);
-    byte_4A0238A = 1;
+    sub_1B686D4(&System_Action_TypeInfo, method);
+    sub_1B686D4(&Method_CombineResultEffectComponent__CloseLimitCountSealDialog_b__171_1__, v3);
+    byte_4A0C4E2 = 1;
   }
   limitUpResultCheck = this->fields.limitUpResultCheck;
-  v5 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
   System_Action___ctor(
     v5,
     (Il2CppObject *)this,
     Method_CombineResultEffectComponent__CloseLimitCountSealDialog_b__171_1__,
     0LL);
   if ( !limitUpResultCheck )
-    sub_1B64C5C(v6, v7);
-  LimitUpResultCheckComponent__DispResultLimitUp(limitUpResultCheck, v5, 1, v8);
+    sub_1B68930(v6, v7);
+  LimitUpResultCheckComponent__DispResultLimitUp(limitUpResultCheck, v5, 1, 0LL);
 }
 
 
@@ -7418,15 +7405,15 @@ void __fastcall CombineResultEffectComponent___EndLoad_b__146_0(
   CommonUI_o *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_4A02388 & 1) == 0 )
+  if ( (byte_4A0C4E0 & 1) == 0 )
   {
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    sub_1B64A00(&StringLiteral_5451/*"END_LOAD"*/, v3);
-    byte_4A02388 = 1;
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    sub_1B686D4(&StringLiteral_5451/*"END_LOAD"*/, v3);
+    byte_4A0C4E0 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance || (CommonUI__SetLoadMode(Instance, 0, 0LL), (Instance = (CommonUI_o *)this->fields.fsm) == 0LL) )
-    sub_1B64C5C(Instance, v5);
+    sub_1B68930(Instance, v5);
   PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)StringLiteral_5451/*"END_LOAD"*/, 0LL);
 }
 
@@ -7440,20 +7427,19 @@ void __fastcall CombineResultEffectComponent___EndPlay_b__156_1(
   System_Action_o *v5; // x21
   __int64 v6; // x0
   __int64 v7; // x1
-  const MethodInfo *v8; // x3
 
-  if ( (byte_4A02389 & 1) == 0 )
+  if ( (byte_4A0C4E1 & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, method);
-    sub_1B64A00(&Method_CombineResultEffectComponent__EndPlay_b__156_2__, v3);
-    byte_4A02389 = 1;
+    sub_1B686D4(&System_Action_TypeInfo, method);
+    sub_1B686D4(&Method_CombineResultEffectComponent__EndPlay_b__156_2__, v3);
+    byte_4A0C4E1 = 1;
   }
   limitUpResultCheck = this->fields.limitUpResultCheck;
-  v5 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_CombineResultEffectComponent__EndPlay_b__156_2__, 0LL);
   if ( !limitUpResultCheck )
-    sub_1B64C5C(v6, v7);
-  LimitUpResultCheckComponent__DispResultLimitUp(limitUpResultCheck, v5, 1, v8);
+    sub_1B68930(v6, v7);
+  LimitUpResultCheckComponent__DispResultLimitUp(limitUpResultCheck, v5, 1, 0LL);
 }
 
 
@@ -7465,7 +7451,7 @@ void __fastcall CombineResultEffectComponent___FadeoutProcess_b__165_0(
 
   callbackFunc = this->fields.callbackFunc;
   if ( !callbackFunc )
-    sub_1B64C5C(this, method);
+    sub_1B68930(this, method);
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))callbackFunc->fields.m_target)(
     callbackFunc->fields.original_method_info,
     1LL,
@@ -7479,14 +7465,14 @@ void __fastcall CombineResultEffectComponent___InitCombineEffect_b__112_0(
 {
   PlayMakerFSM_o *fsm; // x0
 
-  if ( (byte_4A02385 & 1) == 0 )
+  if ( (byte_4A0C4DD & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_5451/*"END_LOAD"*/, method);
-    byte_4A02385 = 1;
+    sub_1B686D4(&StringLiteral_5451/*"END_LOAD"*/, method);
+    byte_4A0C4DD = 1;
   }
   fsm = this->fields.fsm;
   if ( !fsm )
-    sub_1B64C5C(0LL, method);
+    sub_1B68930(0LL, method);
   PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_5451/*"END_LOAD"*/, 0LL);
 }
 
@@ -7502,43 +7488,43 @@ void __fastcall CombineResultEffectComponent___SetAppendSkillCombineInfo_b__108_
   __int64 v8; // x1
   __int64 v9; // x1
   __int64 v10; // x1
-  Il2CppObject *Object_object__48358160; // x20
+  Il2CppObject *Object_object__48415484; // x20
   UnityEngine_GameObject_o *transform; // x0
   __int64 v13; // x1
   UnityEngine_GameObject_o *v14; // x20
   UnityEngine_Transform_o *v15; // x21
 
-  if ( (byte_4A02383 & 1) == 0 )
+  if ( (byte_4A0C4DB & 1) == 0 )
   {
-    sub_1B64A00(&Method_AssetData_GetObject_GameObject____75715992, data);
-    sub_1B64A00(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, v6);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
-    sub_1B64A00(&StringLiteral_12193/*"START_LVEXCEED_EFFECT"*/, v8);
-    sub_1B64A00(&StringLiteral_17212/*"bit_result_extraskill"*/, v9);
-    sub_1B64A00(&StringLiteral_11304/*"ResultEffect"*/, v10);
-    byte_4A02383 = 1;
+    sub_1B686D4(&Method_AssetData_GetObject_GameObject____75755192, data);
+    sub_1B686D4(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, v6);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
+    sub_1B686D4(&StringLiteral_12194/*"START_LVEXCEED_EFFECT"*/, v8);
+    sub_1B686D4(&StringLiteral_17213/*"bit_result_extraskill"*/, v9);
+    sub_1B686D4(&StringLiteral_11305/*"ResultEffect"*/, v10);
+    byte_4A0C4DB = 1;
   }
   if ( data )
   {
-    Object_object__48358160 = AssetData__GetObject_object__48358160(
+    Object_object__48415484 = AssetData__GetObject_object__48415484(
                                 data,
-                                (System_String_o *)StringLiteral_17212/*"bit_result_extraskill"*/,
-                                (const MethodInfo_2E1E310 *)Method_AssetData_GetObject_GameObject____75715992);
+                                (System_String_o *)StringLiteral_17213/*"bit_result_extraskill"*/,
+                                (const MethodInfo_2E2C2FC *)Method_AssetData_GetObject_GameObject____75755192);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     transform = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
-                                              Object_object__48358160,
-                                              (const MethodInfo_2EBE594 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                              Object_object__48415484,
+                                              (const MethodInfo_2ECC718 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !transform )
       goto LABEL_17;
     v14 = transform;
     transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0LL);
     v15 = (UnityEngine_Transform_o *)transform;
-    if ( !byte_49F9826 )
+    if ( !byte_4A03906 )
     {
-      transform = (UnityEngine_GameObject_o *)sub_1B64A00(&UnityEngine_Vector3_TypeInfo, v13);
-      byte_49F9826 = 1;
+      transform = (UnityEngine_GameObject_o *)sub_1B686D4(&UnityEngine_Vector3_TypeInfo, v13);
+      byte_4A03906 = 1;
     }
     if ( !v15 )
       goto LABEL_17;
@@ -7548,17 +7534,17 @@ void __fastcall CombineResultEffectComponent___SetAppendSkillCombineInfo_b__108_
       || (transform = (UnityEngine_GameObject_o *)PlayMakerFSM__get_FsmVariables((PlayMakerFSM_o *)transform, 0LL)) == 0LL
       || (transform = (UnityEngine_GameObject_o *)HutongGames_PlayMaker_FsmVariables__FindFsmGameObject(
                                                     (HutongGames_PlayMaker_FsmVariables_o *)transform,
-                                                    (System_String_o *)StringLiteral_11304/*"ResultEffect"*/,
+                                                    (System_String_o *)StringLiteral_11305/*"ResultEffect"*/,
                                                     0LL)) == 0LL
       || (HutongGames_PlayMaker_FsmGameObject__set_Value((HutongGames_PlayMaker_FsmGameObject_o *)transform, v14, 0LL),
-          (transform = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL)
+          (transform = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL)
       || (CommonUI__SetLoadMode((CommonUI_o *)transform, 0, 0LL),
           (transform = (UnityEngine_GameObject_o *)this->fields.fsm) == 0LL) )
     {
 LABEL_17:
-      sub_1B64C5C(transform, v13);
+      sub_1B68930(transform, v13);
     }
-    PlayMakerFSM__SendEvent((PlayMakerFSM_o *)transform, (System_String_o *)StringLiteral_12193/*"START_LVEXCEED_EFFECT"*/, 0LL);
+    PlayMakerFSM__SendEvent((PlayMakerFSM_o *)transform, (System_String_o *)StringLiteral_12194/*"START_LVEXCEED_EFFECT"*/, 0LL);
   }
 }
 
@@ -7582,55 +7568,55 @@ void __fastcall CombineResultEffectComponent___SetCombineLimit_b__111_0(
   int32_t v16; // w2
   int32_t v17; // w3
   System_String_o *v18; // x0
-  Il2CppObject *Object_object__48358160; // x20
+  Il2CppObject *Object_object__48415484; // x20
   UnityEngine_GameObject_o *v20; // x20
   UnityEngine_Transform_o *v21; // x21
 
-  if ( (byte_4A02384 & 1) == 0 )
+  if ( (byte_4A0C4DC & 1) == 0 )
   {
-    sub_1B64A00(&Method_AssetData_GetObject_GameObject____75715992, data);
-    sub_1B64A00(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, v6);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
-    sub_1B64A00(&string___TypeInfo, v8);
-    sub_1B64A00(&StringLiteral_11304/*"ResultEffect"*/, v9);
-    sub_1B64A00(&StringLiteral_12181/*"START_COMBINE_LIMIT"*/, v10);
-    sub_1B64A00(&StringLiteral_17206/*"bit_result_"*/, v11);
-    byte_4A02384 = 1;
+    sub_1B686D4(&Method_AssetData_GetObject_GameObject____75755192, data);
+    sub_1B686D4(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, v6);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
+    sub_1B686D4(&string___TypeInfo, v8);
+    sub_1B686D4(&StringLiteral_11305/*"ResultEffect"*/, v9);
+    sub_1B686D4(&StringLiteral_12182/*"START_COMBINE_LIMIT"*/, v10);
+    sub_1B686D4(&StringLiteral_17207/*"bit_result_"*/, v11);
+    byte_4A0C4DC = 1;
   }
   if ( data )
   {
-    v12 = sub_1B64AA8(string___TypeInfo, 1LL);
+    v12 = sub_1B6877C(string___TypeInfo, 1LL);
     v13 = System_Int32__ToString((int)this + 328, 0LL);
-    transform = (UnityEngine_GameObject_o *)System_String__Concat_61385136(
-                                              (System_String_o *)StringLiteral_17206/*"bit_result_"*/,
+    transform = (UnityEngine_GameObject_o *)System_String__Concat_61419468(
+                                              (System_String_o *)StringLiteral_17207/*"bit_result_"*/,
                                               v13,
                                               0LL);
     if ( !v12 )
       goto LABEL_19;
     if ( !*(_DWORD *)(v12 + 24) )
-      sub_1B64C64(transform, v15);
+      sub_1B68938(transform, v15);
     *(_QWORD *)(v12 + 32) = transform;
-    sub_1B649A4((ServantStatusBattleListViewItem_o *)(v12 + 32), (int32_t)transform, v16, v17);
-    v18 = System_String__Concat_61398664((System_String_array *)v12, 0LL);
-    Object_object__48358160 = AssetData__GetObject_object__48358160(
+    sub_1B68678((ServantStatusBattleListViewItem_o *)(v12 + 32), (int32_t)transform, v16, v17);
+    v18 = System_String__Concat_61432996((System_String_array *)v12, 0LL);
+    Object_object__48415484 = AssetData__GetObject_object__48415484(
                                 data,
                                 v18,
-                                (const MethodInfo_2E1E310 *)Method_AssetData_GetObject_GameObject____75715992);
+                                (const MethodInfo_2E2C2FC *)Method_AssetData_GetObject_GameObject____75755192);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     transform = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
-                                              Object_object__48358160,
-                                              (const MethodInfo_2EBE594 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                              Object_object__48415484,
+                                              (const MethodInfo_2ECC718 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !transform )
       goto LABEL_19;
     v20 = transform;
     transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0LL);
     v21 = (UnityEngine_Transform_o *)transform;
-    if ( !byte_49F9826 )
+    if ( !byte_4A03906 )
     {
-      transform = (UnityEngine_GameObject_o *)sub_1B64A00(&UnityEngine_Vector3_TypeInfo, v15);
-      byte_49F9826 = 1;
+      transform = (UnityEngine_GameObject_o *)sub_1B686D4(&UnityEngine_Vector3_TypeInfo, v15);
+      byte_4A03906 = 1;
     }
     if ( !v21 )
       goto LABEL_19;
@@ -7640,17 +7626,17 @@ void __fastcall CombineResultEffectComponent___SetCombineLimit_b__111_0(
       || (transform = (UnityEngine_GameObject_o *)PlayMakerFSM__get_FsmVariables((PlayMakerFSM_o *)transform, 0LL)) == 0LL
       || (transform = (UnityEngine_GameObject_o *)HutongGames_PlayMaker_FsmVariables__FindFsmGameObject(
                                                     (HutongGames_PlayMaker_FsmVariables_o *)transform,
-                                                    (System_String_o *)StringLiteral_11304/*"ResultEffect"*/,
+                                                    (System_String_o *)StringLiteral_11305/*"ResultEffect"*/,
                                                     0LL)) == 0LL
       || (HutongGames_PlayMaker_FsmGameObject__set_Value((HutongGames_PlayMaker_FsmGameObject_o *)transform, v20, 0LL),
-          (transform = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL)
+          (transform = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL)
       || (CommonUI__SetLoadMode((CommonUI_o *)transform, 0, 0LL),
           (transform = (UnityEngine_GameObject_o *)this->fields.fsm) == 0LL) )
     {
 LABEL_19:
-      sub_1B64C5C(transform, v15);
+      sub_1B68930(transform, v15);
     }
-    PlayMakerFSM__SendEvent((PlayMakerFSM_o *)transform, (System_String_o *)StringLiteral_12181/*"START_COMBINE_LIMIT"*/, 0LL);
+    PlayMakerFSM__SendEvent((PlayMakerFSM_o *)transform, (System_String_o *)StringLiteral_12182/*"START_COMBINE_LIMIT"*/, 0LL);
   }
 }
 
@@ -7666,43 +7652,43 @@ void __fastcall CombineResultEffectComponent___SetFriendshipCombineInfoForOtherR
   __int64 v8; // x1
   __int64 v9; // x1
   __int64 v10; // x1
-  Il2CppObject *Object_object__48358160; // x20
+  Il2CppObject *Object_object__48415484; // x20
   UnityEngine_GameObject_o *transform; // x0
   __int64 v13; // x1
   UnityEngine_GameObject_o *v14; // x20
   UnityEngine_Transform_o *v15; // x21
 
-  if ( (byte_4A02382 & 1) == 0 )
+  if ( (byte_4A0C4DA & 1) == 0 )
   {
-    sub_1B64A00(&Method_AssetData_GetObject_GameObject____75715992, data);
-    sub_1B64A00(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, v6);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
-    sub_1B64A00(&StringLiteral_17215/*"bit_result_friendship_exceed"*/, v8);
-    sub_1B64A00(&StringLiteral_11304/*"ResultEffect"*/, v9);
-    sub_1B64A00(&StringLiteral_12189/*"START_FRIENDSHIP_EXCEED_EFFECT"*/, v10);
-    byte_4A02382 = 1;
+    sub_1B686D4(&Method_AssetData_GetObject_GameObject____75755192, data);
+    sub_1B686D4(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, v6);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
+    sub_1B686D4(&StringLiteral_17216/*"bit_result_friendship_exceed"*/, v8);
+    sub_1B686D4(&StringLiteral_11305/*"ResultEffect"*/, v9);
+    sub_1B686D4(&StringLiteral_12190/*"START_FRIENDSHIP_EXCEED_EFFECT"*/, v10);
+    byte_4A0C4DA = 1;
   }
   if ( data )
   {
-    Object_object__48358160 = AssetData__GetObject_object__48358160(
+    Object_object__48415484 = AssetData__GetObject_object__48415484(
                                 data,
-                                (System_String_o *)StringLiteral_17215/*"bit_result_friendship_exceed"*/,
-                                (const MethodInfo_2E1E310 *)Method_AssetData_GetObject_GameObject____75715992);
+                                (System_String_o *)StringLiteral_17216/*"bit_result_friendship_exceed"*/,
+                                (const MethodInfo_2E2C2FC *)Method_AssetData_GetObject_GameObject____75755192);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     transform = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
-                                              Object_object__48358160,
-                                              (const MethodInfo_2EBE594 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                              Object_object__48415484,
+                                              (const MethodInfo_2ECC718 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !transform )
       goto LABEL_17;
     v14 = transform;
     transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0LL);
     v15 = (UnityEngine_Transform_o *)transform;
-    if ( !byte_49F9826 )
+    if ( !byte_4A03906 )
     {
-      transform = (UnityEngine_GameObject_o *)sub_1B64A00(&UnityEngine_Vector3_TypeInfo, v13);
-      byte_49F9826 = 1;
+      transform = (UnityEngine_GameObject_o *)sub_1B686D4(&UnityEngine_Vector3_TypeInfo, v13);
+      byte_4A03906 = 1;
     }
     if ( !v15 )
       goto LABEL_17;
@@ -7712,17 +7698,17 @@ void __fastcall CombineResultEffectComponent___SetFriendshipCombineInfoForOtherR
       || (transform = (UnityEngine_GameObject_o *)PlayMakerFSM__get_FsmVariables((PlayMakerFSM_o *)transform, 0LL)) == 0LL
       || (transform = (UnityEngine_GameObject_o *)HutongGames_PlayMaker_FsmVariables__FindFsmGameObject(
                                                     (HutongGames_PlayMaker_FsmVariables_o *)transform,
-                                                    (System_String_o *)StringLiteral_11304/*"ResultEffect"*/,
+                                                    (System_String_o *)StringLiteral_11305/*"ResultEffect"*/,
                                                     0LL)) == 0LL
       || (HutongGames_PlayMaker_FsmGameObject__set_Value((HutongGames_PlayMaker_FsmGameObject_o *)transform, v14, 0LL),
-          (transform = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL)
+          (transform = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL)
       || (CommonUI__SetLoadMode((CommonUI_o *)transform, 0, 0LL),
           (transform = (UnityEngine_GameObject_o *)this->fields.fsm) == 0LL) )
     {
 LABEL_17:
-      sub_1B64C5C(transform, v13);
+      sub_1B68930(transform, v13);
     }
-    PlayMakerFSM__SendEvent((PlayMakerFSM_o *)transform, (System_String_o *)StringLiteral_12189/*"START_FRIENDSHIP_EXCEED_EFFECT"*/, 0LL);
+    PlayMakerFSM__SendEvent((PlayMakerFSM_o *)transform, (System_String_o *)StringLiteral_12190/*"START_FRIENDSHIP_EXCEED_EFFECT"*/, 0LL);
   }
 }
 
@@ -7738,43 +7724,43 @@ void __fastcall CombineResultEffectComponent___SetLvExceedInfoForOtherRoot_b__10
   __int64 v8; // x1
   __int64 v9; // x1
   __int64 v10; // x1
-  Il2CppObject *Object_object__48358160; // x20
+  Il2CppObject *Object_object__48415484; // x20
   UnityEngine_GameObject_o *transform; // x0
   __int64 v13; // x1
   UnityEngine_GameObject_o *v14; // x20
   UnityEngine_Transform_o *v15; // x21
 
-  if ( (byte_4A02381 & 1) == 0 )
+  if ( (byte_4A0C4D9 & 1) == 0 )
   {
-    sub_1B64A00(&Method_AssetData_GetObject_GameObject____75715992, data);
-    sub_1B64A00(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, v6);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
-    sub_1B64A00(&StringLiteral_12193/*"START_LVEXCEED_EFFECT"*/, v8);
-    sub_1B64A00(&StringLiteral_17220/*"bit_result_limitbreak"*/, v9);
-    sub_1B64A00(&StringLiteral_11304/*"ResultEffect"*/, v10);
-    byte_4A02381 = 1;
+    sub_1B686D4(&Method_AssetData_GetObject_GameObject____75755192, data);
+    sub_1B686D4(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, v6);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
+    sub_1B686D4(&StringLiteral_12194/*"START_LVEXCEED_EFFECT"*/, v8);
+    sub_1B686D4(&StringLiteral_17221/*"bit_result_limitbreak"*/, v9);
+    sub_1B686D4(&StringLiteral_11305/*"ResultEffect"*/, v10);
+    byte_4A0C4D9 = 1;
   }
   if ( data )
   {
-    Object_object__48358160 = AssetData__GetObject_object__48358160(
+    Object_object__48415484 = AssetData__GetObject_object__48415484(
                                 data,
-                                (System_String_o *)StringLiteral_17220/*"bit_result_limitbreak"*/,
-                                (const MethodInfo_2E1E310 *)Method_AssetData_GetObject_GameObject____75715992);
+                                (System_String_o *)StringLiteral_17221/*"bit_result_limitbreak"*/,
+                                (const MethodInfo_2E2C2FC *)Method_AssetData_GetObject_GameObject____75755192);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     transform = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
-                                              Object_object__48358160,
-                                              (const MethodInfo_2EBE594 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                              Object_object__48415484,
+                                              (const MethodInfo_2ECC718 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !transform )
       goto LABEL_17;
     v14 = transform;
     transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0LL);
     v15 = (UnityEngine_Transform_o *)transform;
-    if ( !byte_49F9826 )
+    if ( !byte_4A03906 )
     {
-      transform = (UnityEngine_GameObject_o *)sub_1B64A00(&UnityEngine_Vector3_TypeInfo, v13);
-      byte_49F9826 = 1;
+      transform = (UnityEngine_GameObject_o *)sub_1B686D4(&UnityEngine_Vector3_TypeInfo, v13);
+      byte_4A03906 = 1;
     }
     if ( !v15 )
       goto LABEL_17;
@@ -7784,17 +7770,17 @@ void __fastcall CombineResultEffectComponent___SetLvExceedInfoForOtherRoot_b__10
       || (transform = (UnityEngine_GameObject_o *)PlayMakerFSM__get_FsmVariables((PlayMakerFSM_o *)transform, 0LL)) == 0LL
       || (transform = (UnityEngine_GameObject_o *)HutongGames_PlayMaker_FsmVariables__FindFsmGameObject(
                                                     (HutongGames_PlayMaker_FsmVariables_o *)transform,
-                                                    (System_String_o *)StringLiteral_11304/*"ResultEffect"*/,
+                                                    (System_String_o *)StringLiteral_11305/*"ResultEffect"*/,
                                                     0LL)) == 0LL
       || (HutongGames_PlayMaker_FsmGameObject__set_Value((HutongGames_PlayMaker_FsmGameObject_o *)transform, v14, 0LL),
-          (transform = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL)
+          (transform = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL)
       || (CommonUI__SetLoadMode((CommonUI_o *)transform, 0, 0LL),
           (transform = (UnityEngine_GameObject_o *)this->fields.fsm) == 0LL) )
     {
 LABEL_17:
-      sub_1B64C5C(transform, v13);
+      sub_1B68930(transform, v13);
     }
-    PlayMakerFSM__SendEvent((PlayMakerFSM_o *)transform, (System_String_o *)StringLiteral_12193/*"START_LVEXCEED_EFFECT"*/, 0LL);
+    PlayMakerFSM__SendEvent((PlayMakerFSM_o *)transform, (System_String_o *)StringLiteral_12194/*"START_LVEXCEED_EFFECT"*/, 0LL);
   }
 }
 
@@ -7807,7 +7793,7 @@ void __fastcall CombineResultEffectComponent___ShowLimitUpChangeInfo_b__153_0(
 
   bgCollider = this->fields.bgCollider;
   if ( !bgCollider )
-    sub_1B64C5C(0LL, method);
+    sub_1B68930(0LL, method);
   UnityEngine_Collider__set_enabled(bgCollider, 1, 0LL);
 }
 
@@ -7820,7 +7806,7 @@ void __fastcall CombineResultEffectComponent___ShowNpChangeInfo_b__151_0(
 
   bgCollider = this->fields.bgCollider;
   if ( !bgCollider )
-    sub_1B64C5C(0LL, method);
+    sub_1B68930(0LL, method);
   UnityEngine_Collider__set_enabled(bgCollider, 1, 0LL);
 }
 
@@ -7833,7 +7819,7 @@ void __fastcall CombineResultEffectComponent___ShowSkillChangeInfo_b__152_0(
 
   bgCollider = this->fields.bgCollider;
   if ( !bgCollider )
-    sub_1B64C5C(0LL, method);
+    sub_1B68930(0LL, method);
   UnityEngine_Collider__set_enabled(bgCollider, 1, 0LL);
 }
 
@@ -7846,7 +7832,7 @@ void __fastcall CombineResultEffectComponent___ShowSkillChangeMessage_b__150_0(
 
   bgCollider = this->fields.bgCollider;
   if ( !bgCollider )
-    sub_1B64C5C(0LL, method);
+    sub_1B68930(0LL, method);
   UnityEngine_Collider__set_enabled(bgCollider, 1, 0LL);
 }
 
@@ -7859,7 +7845,7 @@ void __fastcall CombineResultEffectComponent___ShowTreasureDeviceChangeInfo_b__1
 
   bgCollider = this->fields.bgCollider;
   if ( !bgCollider )
-    sub_1B64C5C(0LL, method);
+    sub_1B68930(0LL, method);
   UnityEngine_Collider__set_enabled(bgCollider, 1, 0LL);
 }
 
@@ -7870,14 +7856,14 @@ void __fastcall CombineResultEffectComponent___endloadEffect_b__114_0(
 {
   PlayMakerFSM_o *fsm; // x0
 
-  if ( (byte_4A02386 & 1) == 0 )
+  if ( (byte_4A0C4DE & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_5451/*"END_LOAD"*/, method);
-    byte_4A02386 = 1;
+    sub_1B686D4(&StringLiteral_5451/*"END_LOAD"*/, method);
+    byte_4A0C4DE = 1;
   }
   fsm = this->fields.fsm;
   if ( !fsm )
-    sub_1B64C5C(0LL, method);
+    sub_1B68930(0LL, method);
   PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_5451/*"END_LOAD"*/, 0LL);
 }
 
@@ -7919,32 +7905,32 @@ void __fastcall CombineResultEffectComponent___setSkillResultInfo_b__145_0(
   const MethodInfo *v33; // x3
   struct CombineResultEffectComponent_ClickDelegate_o *v34; // x8
 
-  if ( (byte_4A02387 & 1) == 0 )
+  if ( (byte_4A0C4DF & 1) == 0 )
   {
-    sub_1B64A00(&CombineResultEffectComponent_ClickDelegate_TypeInfo, method);
-    sub_1B64A00(&Method_DataManager_GetMasterData_UserServantCollectionMaster___, v3);
-    sub_1B64A00(&NetworkManager_TypeInfo, v4);
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, v5);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_1B64A00(&Method_CombineResultEffectComponent___c__DisplayClass145_2__setSkillResultInfo_b__6__, v8);
-    sub_1B64A00(&CombineResultEffectComponent___c__DisplayClass145_2_TypeInfo, v9);
-    sub_1B64A00(&UserServantEntity_TypeInfo, v10);
-    byte_4A02387 = 1;
+    sub_1B686D4(&CombineResultEffectComponent_ClickDelegate_TypeInfo, method);
+    sub_1B686D4(&Method_DataManager_GetMasterData_UserServantCollectionMaster___, v3);
+    sub_1B686D4(&NetworkManager_TypeInfo, v4);
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, v5);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    sub_1B686D4(&Method_CombineResultEffectComponent___c__DisplayClass145_2__setSkillResultInfo_b__6__, v8);
+    sub_1B686D4(&CombineResultEffectComponent___c__DisplayClass145_2_TypeInfo, v9);
+    sub_1B686D4(&UserServantEntity_TypeInfo, v10);
+    byte_4A0C4DF = 1;
   }
   effect = (UnityEngine_Object_o *)this->fields.effect;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__DestroyImmediate_69137664(effect, 0LL);
+  UnityEngine_Object__DestroyImmediate_69172004(effect, 0LL);
   this->fields.effect = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.effect, 0, v12, v13);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.effect, 0, v12, v13);
   CombineResultEffectComponent__Close(this, v14);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+                        (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = (DataManager_o *)NetworkManager__get_UserId(0LL);
@@ -7958,26 +7944,26 @@ void __fastcall CombineResultEffectComponent___setSkillResultInfo_b__145_0(
   if ( EntityDefinitely )
   {
     v19 = EntityDefinitely;
-    v20 = sub_1B64C4C(CombineResultEffectComponent___c__DisplayClass145_2_TypeInfo);
+    v20 = sub_1B68920(CombineResultEffectComponent___c__DisplayClass145_2_TypeInfo);
     System_Object___ctor((Il2CppObject *)v20, 0LL);
     if ( v20 )
     {
       *(_QWORD *)(v20 + 24) = this;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)(v20 + 24), (int32_t)this, v21, v22);
-      v23 = (UserServantEntity_o *)sub_1B64C4C(UserServantEntity_TypeInfo);
-      UserServantEntity___ctor_39864044(v23, v19, 0LL);
+      sub_1B68678((ServantStatusBattleListViewItem_o *)(v20 + 24), (int32_t)this, v21, v22);
+      v23 = (UserServantEntity_o *)sub_1B68920(UserServantEntity_TypeInfo);
+      UserServantEntity___ctor_39926416(v23, v19, 0LL);
       callbackFunc = this->fields.callbackFunc;
       *(_QWORD *)(v20 + 16) = callbackFunc;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)(v20 + 16), (int32_t)callbackFunc, v25, v26);
+      sub_1B68678((ServantStatusBattleListViewItem_o *)(v20 + 16), (int32_t)callbackFunc, v25, v26);
       this->fields.callbackFunc = 0LL;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, 0, v27, v28);
-      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, 0, v27, v28);
+      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( v23 )
       {
         v29 = (CommonUI_o *)Instance;
         targetId = this->fields.targetId;
         treasureDeviceLv1 = v23->fields.treasureDeviceLv1;
-        v32 = (CombineResultEffectComponent_ClickDelegate_o *)sub_1B64C4C(CombineResultEffectComponent_ClickDelegate_TypeInfo);
+        v32 = (CombineResultEffectComponent_ClickDelegate_o *)sub_1B68920(CombineResultEffectComponent_ClickDelegate_TypeInfo);
         CombineResultEffectComponent_ClickDelegate___ctor(
           v32,
           (Il2CppObject *)v20,
@@ -8000,7 +7986,7 @@ void __fastcall CombineResultEffectComponent___setSkillResultInfo_b__145_0(
       }
     }
 LABEL_17:
-    sub_1B64C5C(Instance, v16);
+    sub_1B68930(Instance, v16);
   }
   v34 = this->fields.callbackFunc;
   if ( v34 )
@@ -8019,7 +8005,7 @@ void __fastcall CombineResultEffectComponent___setSkillResultInfo_b__145_1(
 
   callbackFunc = this->fields.callbackFunc;
   if ( !callbackFunc )
-    sub_1B64C5C(this, method);
+    sub_1B68930(this, method);
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))callbackFunc->fields.m_target)(
     callbackFunc->fields.original_method_info,
     1LL,
@@ -8043,23 +8029,23 @@ bool __fastcall CombineResultEffectComponent__checkSecretTreasureDeviceData(
   int32_t v12; // w8
   ServantFlagEntity_o *svtFlagEntity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A02345 & 1) == 0 )
+  if ( (byte_4A0C49D & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataManager_GetMasterData_ServantFlagReleaseMaster___, *(_QWORD *)&svtId);
-    sub_1B64A00(&Method_DataManager_GetMasterData_UserServantMaster___, v5);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_4A02345 = 1;
+    sub_1B686D4(&Method_DataManager_GetMasterData_ServantFlagReleaseMaster___, *(_QWORD *)&svtId);
+    sub_1B686D4(&Method_DataManager_GetMasterData_UserServantMaster___, v5);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_4A0C49D = 1;
   }
   svtFlagEntity = 0LL;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantFlagReleaseMaster___);
+               (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_ServantFlagReleaseMaster___);
   if ( !Instance )
     goto LABEL_15;
-  if ( !ServantFlagReleaseMaster__isSecretTreasureDevice_39349604(
+  if ( !ServantFlagReleaseMaster__isSecretTreasureDevice_39411164(
           (ServantFlagReleaseMaster_o *)Instance,
           svtId,
           &svtFlagEntity,
@@ -8073,14 +8059,14 @@ LABEL_13:
     this->fields.targetId = 0;
     goto LABEL_14;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0LL )
+                     (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0LL )
   {
 LABEL_15:
-    sub_1B64C5C(Instance, v8);
+    sub_1B68930(Instance, v8);
   }
   Instance = (Il2CppObject *)UserServantMaster__IsServantHaving((UserServantMaster_o *)Instance, svtId, 0, 0LL);
   if ( ((unsigned __int8)Instance & 1) == 0 )
@@ -8094,7 +8080,7 @@ LABEL_15:
   if ( !args )
     goto LABEL_15;
   if ( args->max_length <= 1 )
-    sub_1B64C64(Instance, v8);
+    sub_1B68938(Instance, v8);
   result = 1;
   this->fields.targetId = args->m_Items[2];
   v12 = args->m_Items[1];
@@ -8119,44 +8105,42 @@ void __fastcall CombineResultEffectComponent__clickNext(CombineResultEffectCompo
   _QWORD *v13; // x0
   System_Reflection_MethodBase_o *v14; // x0
   const MethodInfo *v15; // x1
-  const MethodInfo *v16; // x1
-  int32_t v17; // w0
-  int32_t v18; // w9
-  int32_t v19; // w8
-  int32_t v20; // w21
-  System_Int32_array *v21; // x20
+  int32_t TransformCount; // w0
+  int32_t displayCount; // w9
+  int32_t v18; // w8
+  int32_t v19; // w21
+  System_Int32_array *v20; // x20
   int32_t TransformedSameSlotSkillId; // w0
-  int32_t v23; // w8
-  int32_t v24; // w22
+  int32_t v22; // w8
+  int32_t v23; // w22
   UserServantEntity_o *baseUsrSvtData; // x23
   SkillUpResultWindowComponent_o *skillResultInfoWindow; // x21
   int32_t targetId; // w22
   int32_t targetLv; // w23
-  System_Action_o *v29; // x24
-  int32_t TransformCount; // w0
-  int32_t displayCount; // w9
-  int32_t v32; // w8
-  _QWORD *v33; // x0
-  System_Reflection_MethodBase_o *v34; // x0
+  System_Action_o *v28; // x24
+  int32_t v29; // w0
+  int32_t v30; // w9
+  int32_t v31; // w8
+  _QWORD *v32; // x0
+  System_Reflection_MethodBase_o *v33; // x0
+  const MethodInfo *v34; // x1
   const MethodInfo *v35; // x1
-  const MethodInfo *v36; // x1
-  const MethodInfo *v37; // [xsp+20h] [xbp-60h]
-  TransformServantInfo_o *v38; // [xsp+30h] [xbp-50h] BYREF
+  TransformServantInfo_o *v36; // [xsp+30h] [xbp-50h] BYREF
   TransformServantInfo_o *transformInfo; // [xsp+38h] [xbp-48h] BYREF
 
-  if ( (byte_4A02375 & 1) == 0 )
+  if ( (byte_4A0C4CD & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, method);
-    sub_1B64A00(&Method_CombineResultEffectComponent_EndDisp__, v3);
-    sub_1B64A00(&Method_CombineResultEffectComponent_clickNext__, v4);
-    sub_1B64A00(&TerminalPramsManager_TypeInfo, v5);
-    byte_4A02375 = 1;
+    sub_1B686D4(&System_Action_TypeInfo, method);
+    sub_1B686D4(&Method_CombineResultEffectComponent_EndDisp__, v3);
+    sub_1B686D4(&Method_CombineResultEffectComponent_clickNext__, v4);
+    sub_1B686D4(&TerminalPramsManager_TypeInfo, v5);
+    byte_4A0C4CD = 1;
   }
-  v38 = 0LL;
+  v36 = 0LL;
   transformInfo = 0LL;
   bgCollider = this->fields.bgCollider;
   if ( !bgCollider )
-    goto LABEL_64;
+    goto LABEL_65;
   if ( !UnityEngine_Collider__get_enabled(bgCollider, 0LL) )
     return;
   kind = this->fields.kind;
@@ -8175,7 +8159,7 @@ void __fastcall CombineResultEffectComponent__clickNext(CombineResultEffectCompo
                 method);
         goto LABEL_17;
       }
-      goto LABEL_64;
+      goto LABEL_65;
     }
     kind = this->fields.kind;
     if ( kind == 15 )
@@ -8184,11 +8168,11 @@ void __fastcall CombineResultEffectComponent__clickNext(CombineResultEffectCompo
       {
         CombineResultEffectComponent__ShowTreasureDeviceChangeInfo(this, method);
         this->fields.treasureDeviceEnabled = 0;
-LABEL_31:
+LABEL_27:
         CombineResultEffectComponent__EndDisp(this, v11);
         return;
       }
-      goto LABEL_58;
+      goto LABEL_59;
     }
   }
   if ( (unsigned int)kind <= 0x1B && ((1 << kind) & 0x8000110) != 0 )
@@ -8207,186 +8191,187 @@ LABEL_31:
 LABEL_17:
         if ( v9 < v10 )
           return;
-        goto LABEL_31;
+        goto LABEL_27;
       }
-      goto LABEL_64;
+      goto LABEL_65;
     }
     kind = this->fields.kind;
   }
-  if ( (unsigned int)kind > 0x1A || ((1 << kind) & 0x4080402) == 0 )
+  if ( (unsigned int)kind <= 0x1A && ((1 << kind) & 0x4080402) != 0 )
   {
-LABEL_24:
-    if ( kind > 6 )
+    if ( CombineResultEffectComponent__IsShowLimitUpInfo(this, method) )
     {
-      if ( kind == 20 )
+      v13 = Method_CombineResultEffectComponent_clickNext__;
+      if ( (*((_BYTE *)Method_CombineResultEffectComponent_clickNext__ + 83) & 2) != 0 )
+        v13 = (_QWORD *)sub_1B686EC(Method_CombineResultEffectComponent_clickNext__);
+      v14 = (System_Reflection_MethodBase_o *)sub_1B686B8(v13, v13[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v14, 0, 0LL);
+      CombineResultEffectComponent__ShowLimitUpChangeInfo(this, v15);
+      bgCollider = (UnityEngine_Collider_o *)this->fields.limitUpResultCheck;
+      if ( bgCollider )
       {
-        if ( this->fields.displayCount >= 1 )
-        {
-          bgCollider = (UnityEngine_Collider_o *)this->fields.baseUsrSvtData;
-          if ( bgCollider )
-          {
-            TransformCount = UserServantEntity__GetTransformCount((UserServantEntity_o *)bgCollider, 1, 0LL);
-            displayCount = this->fields.displayCount;
-            v32 = TransformCount;
-            bgCollider = (UnityEngine_Collider_o *)this->fields.baseUsrSvtData;
-            this->fields.displayCount = displayCount - 1;
-            if ( bgCollider )
-            {
-              bgCollider = (UnityEngine_Collider_o *)UserServantEntity__GetTransformedServantInfo(
-                                                       (UserServantEntity_o *)bgCollider,
-                                                       &v38,
-                                                       v32 - displayCount,
-                                                       0LL);
-              if ( v38 )
-              {
-                bgCollider = (UnityEngine_Collider_o *)this->fields.commandCardExceedResultWindow;
-                if ( bgCollider )
-                {
-                  CommandCardExceedResultWindowComponent__SetCommandCardExceedInfo(
-                    (CommandCardExceedResultWindowComponent_o *)bgCollider,
-                    this->fields.baseUsrSvtData,
-                    this->fields.commandCardIndex,
-                    this->fields.commandCardExceedCount,
-                    v38->fields.svtId,
-                    v38->fields.titleText,
-                    0LL);
-                  return;
-                }
-              }
-            }
-          }
-          goto LABEL_64;
-        }
-        goto LABEL_58;
+        if ( !LimitUpResultCheckComponent__CheckFinishedResultLimitUp((LimitUpResultCheckComponent_o *)bgCollider, 0LL) )
+          return;
+        goto LABEL_27;
       }
-      if ( kind != 7 )
-      {
-LABEL_58:
-        v33 = Method_CombineResultEffectComponent_clickNext__;
-        if ( (*((_BYTE *)Method_CombineResultEffectComponent_clickNext__ + 83) & 2) != 0 )
-          v33 = (_QWORD *)sub_1B64A18(Method_CombineResultEffectComponent_clickNext__);
-        v34 = (System_Reflection_MethodBase_o *)sub_1B649E4(v33, v33[4]);
-        OverwriteAssetSoundName__PlaySystemSe(v34, 0, 0LL);
-        if ( this->fields.kind != 24 )
-          CombineResultEffectComponent__ReleaseVoiceData(this, v35);
-        if ( !CombineResultEffectComponent__OpenNotification(this, v35) )
-          CombineResultEffectComponent__FadeoutProcess(this, v36);
-        return;
-      }
+      goto LABEL_65;
     }
-    else if ( (unsigned int)(kind - 2) >= 2 )
+    kind = this->fields.kind;
+  }
+  if ( kind <= 6 )
+  {
+    if ( (unsigned int)(kind - 2) >= 2 )
     {
       if ( !kind )
         CombineResultEffectComponent__stopVoice(this, method);
-      goto LABEL_58;
+      goto LABEL_59;
     }
-    if ( this->fields.displayCount >= 1 )
+LABEL_36:
+    if ( this->fields.displayCount < 1 )
+      goto LABEL_59;
+    bgCollider = (UnityEngine_Collider_o *)this->fields.baseUsrSvtData;
+    if ( !bgCollider )
+      goto LABEL_65;
+    TransformCount = UserServantEntity__GetTransformCount((UserServantEntity_o *)bgCollider, 1, 0LL);
+    displayCount = this->fields.displayCount;
+    v18 = TransformCount;
+    bgCollider = (UnityEngine_Collider_o *)this->fields.baseUsrSvtData;
+    this->fields.displayCount = displayCount - 1;
+    if ( !bgCollider )
+      goto LABEL_65;
+    v19 = v18 - displayCount;
+    bgCollider = (UnityEngine_Collider_o *)UserServantEntity__GetTransformedSkillIdList(
+                                             (UserServantEntity_o *)bgCollider,
+                                             v18 - displayCount,
+                                             -1,
+                                             -1,
+                                             1,
+                                             -1,
+                                             0LL);
+    if ( !this->fields.baseUsrSvtData )
+      goto LABEL_65;
+    v20 = (System_Int32_array *)bgCollider;
+    TransformedSameSlotSkillId = UserServantEntity__GetTransformedSameSlotSkillId(
+                                   this->fields.baseUsrSvtData,
+                                   this->fields.targetId,
+                                   v19 - 1,
+                                   v19,
+                                   0LL);
+    v22 = this->fields.kind;
+    this->fields.targetId = TransformedSameSlotSkillId;
+    if ( v22 == 7 )
     {
-      bgCollider = (UnityEngine_Collider_o *)this->fields.baseUsrSvtData;
-      if ( !bgCollider )
-        goto LABEL_64;
-      v17 = UserServantEntity__GetTransformCount((UserServantEntity_o *)bgCollider, 1, 0LL);
-      v18 = this->fields.displayCount;
-      v19 = v17;
-      bgCollider = (UnityEngine_Collider_o *)this->fields.baseUsrSvtData;
-      this->fields.displayCount = v18 - 1;
-      if ( !bgCollider )
-        goto LABEL_64;
-      v20 = v19 - v18;
-      bgCollider = (UnityEngine_Collider_o *)UserServantEntity__GetTransformedSkillIdList(
-                                               (UserServantEntity_o *)bgCollider,
-                                               v19 - v18,
-                                               -1,
-                                               -1,
-                                               1,
-                                               -1,
-                                               0LL);
-      if ( !this->fields.baseUsrSvtData )
-        goto LABEL_64;
-      v21 = (System_Int32_array *)bgCollider;
-      TransformedSameSlotSkillId = UserServantEntity__GetTransformedSameSlotSkillId(
-                                     this->fields.baseUsrSvtData,
-                                     this->fields.targetId,
-                                     v20 - 1,
-                                     v20,
-                                     0LL);
-      v23 = this->fields.kind;
-      this->fields.targetId = TransformedSameSlotSkillId;
-      if ( v23 == 7 )
+      v23 = TransformedSameSlotSkillId;
+      baseUsrSvtData = this->fields.baseUsrSvtData;
+      if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
+      if ( !byte_4A058F6 )
       {
-        v24 = TransformedSameSlotSkillId;
-        baseUsrSvtData = this->fields.baseUsrSvtData;
-        if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-        if ( !byte_49FB754 )
-        {
-          sub_1B64A00(&TerminalPramsManager_TypeInfo, method);
-          byte_49FB754 = 1;
-        }
-        bgCollider = (UnityEngine_Collider_o *)TerminalPramsManager_TypeInfo;
-        if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-          bgCollider = (UnityEngine_Collider_o *)TerminalPramsManager_TypeInfo;
-        }
-        if ( !baseUsrSvtData )
-          goto LABEL_64;
-        this->fields.targetIdOld = UserServantEntity__GetTransformedOldSkillId(
-                                     baseUsrSvtData,
-                                     v24,
-                                     *(_DWORD *)(*(_QWORD *)&bgCollider[7].fields.m_CachedPtr + 16LL),
-                                     v20,
-                                     0LL);
+        sub_1B686D4(&TerminalPramsManager_TypeInfo, method);
+        byte_4A058F6 = 1;
       }
+      bgCollider = (UnityEngine_Collider_o *)TerminalPramsManager_TypeInfo;
+      if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
+      {
+        j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
+        bgCollider = (UnityEngine_Collider_o *)TerminalPramsManager_TypeInfo;
+      }
+      if ( !baseUsrSvtData )
+        goto LABEL_65;
+      this->fields.targetIdOld = UserServantEntity__GetTransformedOldSkillId(
+                                   baseUsrSvtData,
+                                   v23,
+                                   *(_DWORD *)(*(_QWORD *)&bgCollider[7].fields.m_CachedPtr + 20LL),
+                                   v19,
+                                   0LL);
+    }
+    bgCollider = (UnityEngine_Collider_o *)this->fields.baseUsrSvtData;
+    if ( bgCollider )
+    {
+      UserServantEntity__GetTransformedServantInfo((UserServantEntity_o *)bgCollider, &transformInfo, v19, 0LL);
+      skillResultInfoWindow = this->fields.skillResultInfoWindow;
+      targetId = this->fields.targetId;
+      targetLv = this->fields.targetLv;
+      v28 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
+      System_Action___ctor(v28, (Il2CppObject *)this, Method_CombineResultEffectComponent_EndDisp__, 0LL);
+      if ( transformInfo )
+      {
+        if ( skillResultInfoWindow )
+        {
+          SkillUpResultWindowComponent__OpenSkillUpResultInfo(
+            skillResultInfoWindow,
+            targetId,
+            targetLv,
+            v28,
+            this->fields.targetIdOld,
+            this->fields.targetLvOld,
+            transformInfo->fields.svtId,
+            v20,
+            this->fields.kind == 3,
+            1,
+            0,
+            transformInfo->fields.titleText,
+            0LL);
+          return;
+        }
+      }
+    }
+LABEL_65:
+    sub_1B68930(bgCollider, method);
+  }
+  if ( kind != 20 )
+  {
+    if ( kind != 7 )
+      goto LABEL_59;
+    goto LABEL_36;
+  }
+  if ( this->fields.displayCount >= 1 )
+  {
+    bgCollider = (UnityEngine_Collider_o *)this->fields.baseUsrSvtData;
+    if ( bgCollider )
+    {
+      v29 = UserServantEntity__GetTransformCount((UserServantEntity_o *)bgCollider, 1, 0LL);
+      v30 = this->fields.displayCount;
+      v31 = v29;
       bgCollider = (UnityEngine_Collider_o *)this->fields.baseUsrSvtData;
+      this->fields.displayCount = v30 - 1;
       if ( bgCollider )
       {
-        UserServantEntity__GetTransformedServantInfo((UserServantEntity_o *)bgCollider, &transformInfo, v20, 0LL);
-        skillResultInfoWindow = this->fields.skillResultInfoWindow;
-        targetId = this->fields.targetId;
-        targetLv = this->fields.targetLv;
-        v29 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
-        System_Action___ctor(v29, (Il2CppObject *)this, Method_CombineResultEffectComponent_EndDisp__, 0LL);
-        if ( transformInfo )
+        bgCollider = (UnityEngine_Collider_o *)UserServantEntity__GetTransformedServantInfo(
+                                                 (UserServantEntity_o *)bgCollider,
+                                                 &v36,
+                                                 v31 - v30,
+                                                 0LL);
+        if ( v36 )
         {
-          if ( skillResultInfoWindow )
+          bgCollider = (UnityEngine_Collider_o *)this->fields.commandCardExceedResultWindow;
+          if ( bgCollider )
           {
-            SkillUpResultWindowComponent__OpenSkillUpResultInfo(
-              skillResultInfoWindow,
-              targetId,
-              targetLv,
-              v29,
-              this->fields.targetIdOld,
-              this->fields.targetLvOld,
-              transformInfo->fields.svtId,
-              v21,
-              this->fields.kind == 3,
-              1,
-              0,
-              transformInfo->fields.titleText,
-              v37);
+            CommandCardExceedResultWindowComponent__SetCommandCardExceedInfo(
+              (CommandCardExceedResultWindowComponent_o *)bgCollider,
+              this->fields.baseUsrSvtData,
+              this->fields.commandCardIndex,
+              this->fields.commandCardExceedCount,
+              v36->fields.svtId,
+              v36->fields.titleText,
+              0LL);
             return;
           }
         }
       }
-LABEL_64:
-      sub_1B64C5C(bgCollider, method);
     }
-    goto LABEL_58;
+    goto LABEL_65;
   }
-  if ( CombineResultEffectComponent__CheckFinishedLimitUpChangeInfo(this, method) )
-  {
-    kind = this->fields.kind;
-    goto LABEL_24;
-  }
-  v13 = Method_CombineResultEffectComponent_clickNext__;
+LABEL_59:
+  v32 = Method_CombineResultEffectComponent_clickNext__;
   if ( (*((_BYTE *)Method_CombineResultEffectComponent_clickNext__ + 83) & 2) != 0 )
-    v13 = (_QWORD *)sub_1B64A18(Method_CombineResultEffectComponent_clickNext__);
-  v14 = (System_Reflection_MethodBase_o *)sub_1B649E4(v13, v13[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v14, 0, 0LL);
-  CombineResultEffectComponent__ShowLimitUpChangeInfo(this, v15);
-  if ( CombineResultEffectComponent__CheckFinishedLimitUpChangeInfo(this, v16) )
-    goto LABEL_31;
+    v32 = (_QWORD *)sub_1B686EC(Method_CombineResultEffectComponent_clickNext__);
+  v33 = (System_Reflection_MethodBase_o *)sub_1B686B8(v32, v32[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v33, 0, 0LL);
+  if ( this->fields.kind != 24 )
+    CombineResultEffectComponent__ReleaseVoiceData(this, v34);
+  if ( !CombineResultEffectComponent__OpenNotification(this, v34) )
+    CombineResultEffectComponent__FadeoutProcess(this, v35);
 }
 
 
@@ -8408,24 +8393,24 @@ void __fastcall CombineResultEffectComponent__endloadEffect(
   __int64 v15; // x0
   __int64 v16; // x1
 
-  if ( (byte_4A0234A & 1) == 0 )
+  if ( (byte_4A0C4A2 & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, data);
-    sub_1B64A00(&AvalonSceneManager_TypeInfo, v6);
-    sub_1B64A00(&Method_CombineResultEffectComponent__endloadEffect_b__114_0__, v7);
-    sub_1B64A00(&CombineResultEffectComponent_TypeInfo, v8);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
-    byte_4A0234A = 1;
+    sub_1B686D4(&System_Action_TypeInfo, data);
+    sub_1B686D4(&AvalonSceneManager_TypeInfo, v6);
+    sub_1B686D4(&Method_CombineResultEffectComponent__endloadEffect_b__114_0__, v7);
+    sub_1B686D4(&CombineResultEffectComponent_TypeInfo, v8);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
+    byte_4A0C4A2 = 1;
   }
   if ( data )
   {
     CombineResultEffectComponent_TypeInfo->static_fields->effectAssetData = data;
-    sub_1B649A4(
+    sub_1B68678(
       (ServantStatusBattleListViewItem_o *)CombineResultEffectComponent_TypeInfo->static_fields,
       (int32_t)data,
       (int32_t)method,
       v3);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v11 = AvalonSceneManager_TypeInfo;
     v12 = (CommonUI_o *)Instance;
     if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -8434,10 +8419,10 @@ void __fastcall CombineResultEffectComponent__endloadEffect(
       v11 = AvalonSceneManager_TypeInfo;
     }
     DEFAULT_FADE_TIME = v11->static_fields->DEFAULT_FADE_TIME;
-    v14 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+    v14 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
     System_Action___ctor(v14, (Il2CppObject *)this, Method_CombineResultEffectComponent__endloadEffect_b__114_0__, 0LL);
     if ( !v12 )
-      sub_1B64C5C(v15, v16);
+      sub_1B68930(v15, v16);
     CommonUI__maskFadein(v12, DEFAULT_FADE_TIME, v14, 0LL);
   }
 }
@@ -8471,18 +8456,18 @@ void __fastcall CombineResultEffectComponent__getCostumeSvtVoiceData(
   int32_t v24; // w3
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v25; // 0:x0.16
 
-  if ( (byte_4A02352 & 1) == 0 )
+  if ( (byte_4A0C4AA & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataManager_GetMasterData_ServantVoiceMaster___, method);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v5);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_4A02352 = 1;
+    sub_1B686D4(&Method_DataManager_GetMasterData_ServantVoiceMaster___, method);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v5);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_4A0C4AA = 1;
   }
   *(_QWORD *)&this->fields.maxPlayCnt = 0LL;
   this->fields.asstName = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.asstName, 0, v2, v3);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.asstName, 0, v2, v3);
   this->fields.playVoiceList = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.playVoiceList, 0, v7, v8);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.playVoiceList, 0, v7, v8);
   resUsrSvtData = this->fields.resUsrSvtData;
   if ( !resUsrSvtData )
     goto LABEL_12;
@@ -8492,32 +8477,32 @@ void __fastcall CombineResultEffectComponent__getCostumeSvtVoiceData(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v25.fields.currentCryptoKey = v13;
   *(_QWORD *)&v25.fields.fakeValue = v12;
-  v14 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v25, 0LL);
+  v14 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v25, 0LL);
   SvtVoiceId = ServantVoiceMaster__getSvtVoiceId(v14, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantVoiceMaster___),
+                     (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_ServantVoiceMaster___),
         (v16 = this->fields.resUsrSvtData) == 0LL)
     || (v17 = (ServantVoiceMaster_o *)Instance,
-        Instance = (Il2CppObject *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(
+        Instance = (Il2CppObject *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(
                                      v16->fields.limitCount,
                                      0LL),
         !v17) )
   {
 LABEL_12:
-    sub_1B64C5C(Instance, v10);
+    sub_1B68930(Instance, v10);
   }
   Entity = ServantVoiceMaster__getEntity(v17, 2, SvtVoiceId, (int32_t)Instance, 0LL);
   this->fields.svtVoiceEntity = Entity;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.svtVoiceEntity, (int32_t)Entity, v19, v20);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.svtVoiceEntity, (int32_t)Entity, v19, v20);
   svtVoiceEntity = this->fields.svtVoiceEntity;
   if ( svtVoiceEntity )
   {
     VoiceAssetName = ServantVoiceEntity__getVoiceAssetName(svtVoiceEntity, 0LL);
     this->fields.asstName = VoiceAssetName;
-    sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.asstName, (int32_t)VoiceAssetName, v23, v24);
+    sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.asstName, (int32_t)VoiceAssetName, v23, v24);
   }
 }
 
@@ -8530,11 +8515,11 @@ ServantVoiceData_array *__fastcall CombineResultEffectComponent__getCostumeSvtVo
   ServantVoiceEntity_o *svtVoiceEntity; // x0
   System_Collections_Generic_List_object__o *CostumeCombineVoiceList; // x0
 
-  if ( (byte_4A02366 & 1) == 0 )
+  if ( (byte_4A0C4BE & 1) == 0 )
   {
-    sub_1B64A00(&Method_System_Collections_Generic_List_ServantVoiceData____get_Count__, method);
-    sub_1B64A00(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__, v3);
-    byte_4A02366 = 1;
+    sub_1B686D4(&Method_System_Collections_Generic_List_ServantVoiceData____get_Count__, method);
+    sub_1B686D4(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__, v3);
+    byte_4A0C4BE = 1;
   }
   if ( this->fields.isChangeCardImg
     && (svtVoiceEntity = this->fields.svtVoiceEntity) != 0LL
@@ -8547,7 +8532,7 @@ ServantVoiceData_array *__fastcall CombineResultEffectComponent__getCostumeSvtVo
     return (ServantVoiceData_array *)System_Collections_Generic_List_object___get_Item(
                                        CostumeCombineVoiceList,
                                        0,
-                                       (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
+                                       (const MethodInfo_34BBFA8 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
   }
   else
   {
@@ -8565,31 +8550,31 @@ UnityEngine_GameObject_o *__fastcall CombineResultEffectComponent__getEffect(
   __int64 v6; // x1
   __int64 v7; // x1
   AssetData_o *effectAssetData; // x0
-  Il2CppObject *Object_object__48358160; // x19
+  Il2CppObject *Object_object__48415484; // x19
   UnityEngine_GameObject_o *v10; // x19
   UnityEngine_Transform_o *v11; // x20
   UnityEngine_Transform_o *v12; // x20
 
-  if ( (byte_4A0234B & 1) == 0 )
+  if ( (byte_4A0C4A3 & 1) == 0 )
   {
-    sub_1B64A00(&Method_AssetData_GetObject_GameObject____75715992, parentTr);
-    sub_1B64A00(&CombineResultEffectComponent_TypeInfo, v5);
-    sub_1B64A00(&Method_UnityEngine_Object_Instantiate_GameObject___, v6);
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, v7);
-    byte_4A0234B = 1;
+    sub_1B686D4(&Method_AssetData_GetObject_GameObject____75755192, parentTr);
+    sub_1B686D4(&CombineResultEffectComponent_TypeInfo, v5);
+    sub_1B686D4(&Method_UnityEngine_Object_Instantiate_GameObject___, v6);
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, v7);
+    byte_4A0C4A3 = 1;
   }
   effectAssetData = CombineResultEffectComponent_TypeInfo->static_fields->effectAssetData;
   if ( !effectAssetData )
     goto LABEL_15;
-  Object_object__48358160 = AssetData__GetObject_object__48358160(
+  Object_object__48415484 = AssetData__GetObject_object__48415484(
                               effectAssetData,
                               name,
-                              (const MethodInfo_2E1E310 *)Method_AssetData_GetObject_GameObject____75715992);
+                              (const MethodInfo_2E2C2FC *)Method_AssetData_GetObject_GameObject____75755192);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   effectAssetData = (AssetData_o *)UnityEngine_Object__Instantiate_object_(
-                                     Object_object__48358160,
-                                     (const MethodInfo_2EBE594 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                     Object_object__48415484,
+                                     (const MethodInfo_2ECC718 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !effectAssetData )
     goto LABEL_15;
   v10 = (UnityEngine_GameObject_o *)effectAssetData;
@@ -8601,24 +8586,24 @@ UnityEngine_GameObject_o *__fastcall CombineResultEffectComponent__getEffect(
   UnityEngine_Transform__set_parent((UnityEngine_Transform_o *)effectAssetData, parentTr, 0LL);
   effectAssetData = (AssetData_o *)UnityEngine_GameObject__get_transform(v10, 0LL);
   v11 = (UnityEngine_Transform_o *)effectAssetData;
-  if ( !byte_49F9821 )
+  if ( !byte_4A03901 )
   {
-    effectAssetData = (AssetData_o *)sub_1B64A00(&UnityEngine_Vector3_TypeInfo, parentTr);
-    byte_49F9821 = 1;
+    effectAssetData = (AssetData_o *)sub_1B686D4(&UnityEngine_Vector3_TypeInfo, parentTr);
+    byte_4A03901 = 1;
   }
   if ( !v11 )
     goto LABEL_15;
   UnityEngine_Transform__set_localPosition(v11, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
   effectAssetData = (AssetData_o *)UnityEngine_GameObject__get_transform(v10, 0LL);
   v12 = (UnityEngine_Transform_o *)effectAssetData;
-  if ( !byte_49F9826 )
+  if ( !byte_4A03906 )
   {
-    effectAssetData = (AssetData_o *)sub_1B64A00(&UnityEngine_Vector3_TypeInfo, parentTr);
-    byte_49F9826 = 1;
+    effectAssetData = (AssetData_o *)sub_1B686D4(&UnityEngine_Vector3_TypeInfo, parentTr);
+    byte_4A03906 = 1;
   }
   if ( !v12 )
 LABEL_15:
-    sub_1B64C5C(effectAssetData, parentTr);
+    sub_1B68930(effectAssetData, parentTr);
   UnityEngine_Transform__set_localScale(v12, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
   return v10;
 }
@@ -8642,12 +8627,12 @@ ServantVoiceData_array *__fastcall CombineResultEffectComponent__getLimitUpSvtVo
   int32_t v14; // w0
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v16; // 0:x0.16
 
-  if ( (byte_4A02365 & 1) == 0 )
+  if ( (byte_4A0C4BD & 1) == 0 )
   {
-    sub_1B64A00(&Method_System_Collections_Generic_List_ServantVoiceData____get_Count__, isPlayVoice);
-    sub_1B64A00(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__, v5);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v6);
-    byte_4A02365 = 1;
+    sub_1B686D4(&Method_System_Collections_Generic_List_ServantVoiceData____get_Count__, isPlayVoice);
+    sub_1B686D4(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__, v5);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v6);
+    byte_4A0C4BD = 1;
   }
   if ( this->fields.isChangeCardImg )
   {
@@ -8676,14 +8661,14 @@ ServantVoiceData_array *__fastcall CombineResultEffectComponent__getLimitUpSvtVo
     v11 = this->fields.resUsrSvtData;
     if ( !v11 )
 LABEL_20:
-      sub_1B64C5C(resUsrSvtData, isPlayVoice);
+      sub_1B68930(resUsrSvtData, isPlayVoice);
     v13 = *(_QWORD *)&v11->fields.limitCount.fields.currentCryptoKey;
     v12 = *(_QWORD *)&v11->fields.limitCount.fields.fakeValue;
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v16.fields.currentCryptoKey = v13;
     *(_QWORD *)&v16.fields.fakeValue = v12;
-    v14 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v16, 0LL);
+    v14 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v16, 0LL);
     CntStopVoiceList = (System_Collections_Generic_List_object__o *)ServantVoiceEntity__getSpecificLimitCntUpVoiceList(
                                                                       svtVoiceEntity,
                                                                       v14,
@@ -8711,7 +8696,7 @@ LABEL_17:
     return (ServantVoiceData_array *)System_Collections_Generic_List_object___get_Item(
                                        CntStopVoiceList,
                                        0,
-                                       (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
+                                       (const MethodInfo_34BBFA8 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
   return 0LL;
 }
 
@@ -8756,20 +8741,20 @@ void __fastcall CombineResultEffectComponent__getSvtVoiceData(
 
   v6 = costumeId;
   SvtVoiceId = voiceId;
-  if ( (byte_4A02351 & 1) == 0 )
+  if ( (byte_4A0C4A9 & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataManager_GetMasterData_ServantVoiceMaster___, *(_QWORD *)&voiceId);
-    sub_1B64A00(&Method_DataManager_GetMaster_ServantLimitImageMaster___, v9);
-    sub_1B64A00(&DataManager_TypeInfo, v10);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v11);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
-    byte_4A02351 = 1;
+    sub_1B686D4(&Method_DataManager_GetMasterData_ServantVoiceMaster___, *(_QWORD *)&voiceId);
+    sub_1B686D4(&Method_DataManager_GetMaster_ServantLimitImageMaster___, v9);
+    sub_1B686D4(&DataManager_TypeInfo, v10);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v11);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
+    byte_4A0C4A9 = 1;
   }
   *(_QWORD *)&this->fields.maxPlayCnt = 0LL;
   this->fields.asstName = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.asstName, 0, costumeId, isLimitUp);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.asstName, 0, costumeId, isLimitUp);
   this->fields.playVoiceList = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.playVoiceList, 0, v13, v14);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.playVoiceList, 0, v13, v14);
   if ( SvtVoiceId <= 0 )
   {
     resUsrSvtData = this->fields.resUsrSvtData;
@@ -8781,7 +8766,7 @@ void __fastcall CombineResultEffectComponent__getSvtVoiceData(
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v34.fields.currentCryptoKey = v19;
     *(_QWORD *)&v34.fields.fakeValue = v18;
-    v20 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v34, 0LL);
+    v20 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v34, 0LL);
     SvtVoiceId = ServantVoiceMaster__getSvtVoiceId(v20, 0LL);
   }
   if ( v6 <= 0 )
@@ -8790,7 +8775,7 @@ void __fastcall CombineResultEffectComponent__getSvtVoiceData(
     if ( !Master_object )
       goto LABEL_26;
     if ( isLimitUp )
-      CombineVoiceLimitCount = BasicHelper__DecryptValue_40704340(Master_object->fields.limitCount, 0LL);
+      CombineVoiceLimitCount = BasicHelper__DecryptValue_40768152(Master_object->fields.limitCount, 0LL);
     else
       CombineVoiceLimitCount = UserServantEntity__getCombineVoiceLimitCount(Master_object, 0, 0LL);
     v6 = CombineVoiceLimitCount;
@@ -8799,7 +8784,7 @@ void __fastcall CombineResultEffectComponent__getSvtVoiceData(
     return;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (UserServantEntity_o *)DataManager__GetMaster_object_((const MethodInfo_2E3BC8C *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+  Master_object = (UserServantEntity_o *)DataManager__GetMaster_object_((const MethodInfo_2E49CFC *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
   v22 = this->fields.resUsrSvtData;
   if ( !v22 )
     goto LABEL_26;
@@ -8810,20 +8795,20 @@ void __fastcall CombineResultEffectComponent__getSvtVoiceData(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v35.fields.currentCryptoKey = v25;
   *(_QWORD *)&v35.fields.fakeValue = v24;
-  Master_object = (UserServantEntity_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v35, 0LL);
+  Master_object = (UserServantEntity_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v35, 0LL);
   if ( !v23
     || (ServantLimitCountSealAfter = ServantLimitImageMaster__GetServantLimitCountSealAfter(
                                        v23,
                                        (int32_t)Master_object,
                                        v6,
                                        0LL),
-        (Master_object = (UserServantEntity_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
+        (Master_object = (UserServantEntity_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
     || (Master_object = (UserServantEntity_o *)DataManager__GetMasterData_object_(
                                                  (DataManager_o *)Master_object,
-                                                 (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantVoiceMaster___)) == 0LL )
+                                                 (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_ServantVoiceMaster___)) == 0LL )
   {
 LABEL_26:
-    sub_1B64C5C(Master_object, v16);
+    sub_1B68930(Master_object, v16);
   }
   Entity = ServantVoiceMaster__getEntity(
              (ServantVoiceMaster_o *)Master_object,
@@ -8832,13 +8817,13 @@ LABEL_26:
              ServantLimitCountSealAfter,
              0LL);
   this->fields.svtVoiceEntity = Entity;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.svtVoiceEntity, (int32_t)Entity, v28, v29);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.svtVoiceEntity, (int32_t)Entity, v28, v29);
   svtVoiceEntity = this->fields.svtVoiceEntity;
   if ( svtVoiceEntity )
   {
     VoiceAssetName = ServantVoiceEntity__getVoiceAssetName(svtVoiceEntity, 0LL);
     this->fields.asstName = VoiceAssetName;
-    sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.asstName, (int32_t)VoiceAssetName, v32, v33);
+    sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.asstName, (int32_t)VoiceAssetName, v32, v33);
   }
 }
 
@@ -8852,15 +8837,15 @@ void __fastcall CombineResultEffectComponent__loadBoxGachaEffect(
   __int64 v5; // x1
   AssetLoader_LoadEndDataHandler_o *v6; // x20
 
-  if ( (byte_4A02349 & 1) == 0 )
+  if ( (byte_4A0C4A1 & 1) == 0 )
   {
-    sub_1B64A00(&AssetManager_TypeInfo, method);
-    sub_1B64A00(&Method_CombineResultEffectComponent_endloadEffect__, v3);
-    sub_1B64A00(&AssetLoader_LoadEndDataHandler_TypeInfo, v4);
-    sub_1B64A00(&StringLiteral_5810/*"Effect/Combine"*/, v5);
-    byte_4A02349 = 1;
+    sub_1B686D4(&AssetManager_TypeInfo, method);
+    sub_1B686D4(&Method_CombineResultEffectComponent_endloadEffect__, v3);
+    sub_1B686D4(&AssetLoader_LoadEndDataHandler_TypeInfo, v4);
+    sub_1B686D4(&StringLiteral_5810/*"Effect/Combine"*/, v5);
+    byte_4A0C4A1 = 1;
   }
-  v6 = (AssetLoader_LoadEndDataHandler_o *)sub_1B64C4C(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v6 = (AssetLoader_LoadEndDataHandler_o *)sub_1B68920(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v6,
     (Il2CppObject *)this,
@@ -8885,22 +8870,22 @@ void __fastcall CombineResultEffectComponent__loadVoiceData(
   __int64 v9; // x0
   __int64 v10; // x1
 
-  if ( (byte_4A02353 & 1) == 0 )
+  if ( (byte_4A0C4AB & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, method);
-    sub_1B64A00(&Method_CombineResultEffectComponent_EndLoad__, v3);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__, v4);
-    byte_4A02353 = 1;
+    sub_1B686D4(&System_Action_TypeInfo, method);
+    sub_1B686D4(&Method_CombineResultEffectComponent_EndLoad__, v3);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__, v4);
+    byte_4A0C4AB = 1;
   }
   if ( this->fields.asstName )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
     asstName = this->fields.asstName;
     v7 = (SoundManager_o *)Instance;
-    v8 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+    v8 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
     System_Action___ctor(v8, (Il2CppObject *)this, Method_CombineResultEffectComponent_EndLoad__, 0LL);
     if ( !v7 )
-      sub_1B64C5C(v9, v10);
+      sub_1B68930(v9, v10);
     SoundManager__LoadAudioAssetStorage(v7, asstName, v8, 1, 0LL);
   }
   else
@@ -8943,13 +8928,13 @@ void __fastcall CombineResultEffectComponent__playVoice(CombineResultEffectCompo
   int32_t v30; // w3
 
   v4 = this;
-  if ( (byte_4A0236A & 1) == 0 )
+  if ( (byte_4A0C4C2 & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, method);
-    sub_1B64A00(&Method_CombineResultEffectComponent_EndPlay__, v5);
-    sub_1B64A00(&Method_System_Linq_Enumerable_Any_StandFigureCollect___, v6);
-    this = (CombineResultEffectComponent_o *)sub_1B64A00(&SoundManager_TypeInfo, v7);
-    byte_4A0236A = 1;
+    sub_1B686D4(&System_Action_TypeInfo, method);
+    sub_1B686D4(&Method_CombineResultEffectComponent_EndPlay__, v5);
+    sub_1B686D4(&Method_System_Linq_Enumerable_Any_StandFigureCollect___, v6);
+    this = (CombineResultEffectComponent_o *)sub_1B686D4(&SoundManager_TypeInfo, v7);
+    byte_4A0C4C2 = 1;
   }
   if ( v4->fields.asstName && v4->fields.maxPlayCnt )
   {
@@ -8967,7 +8952,7 @@ void __fastcall CombineResultEffectComponent__playVoice(CombineResultEffectCompo
         goto LABEL_23;
       id = v11->fields.id;
       v4->fields.vcName = id;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)&v4->fields.vcName, (int32_t)id, v2, v3);
+      sub_1B68678((ServantStatusBattleListViewItem_o *)&v4->fields.vcName, (int32_t)id, v2, v3);
       v13 = v4->fields.playVoiceList;
       if ( !v13 )
         goto LABEL_23;
@@ -8986,14 +8971,14 @@ void __fastcall CombineResultEffectComponent__playVoice(CombineResultEffectCompo
             v19 = FadeTime;
             if ( System_Linq_Enumerable__Any_object_(
                    currentFigureCollectList,
-                   (const MethodInfo_2E49388 *)Method_System_Linq_Enumerable_Any_StandFigureCollect___) )
+                   (const MethodInfo_2E57724 *)Method_System_Linq_Enumerable_Any_StandFigureCollect___) )
             {
               if ( System_Linq_Enumerable__Any_object_(
                      (System_Collections_Generic_IEnumerable_TSource__o *)v4->fields.afterFigureCollectList,
-                     (const MethodInfo_2E49388 *)Method_System_Linq_Enumerable_Any_StandFigureCollect___)
+                     (const MethodInfo_2E57724 *)Method_System_Linq_Enumerable_Any_StandFigureCollect___)
                 && System_Linq_Enumerable__Any_object_(
                      (System_Collections_Generic_IEnumerable_TSource__o *)v4->fields.afterFigureCollectList,
-                     (const MethodInfo_2E49388 *)Method_System_Linq_Enumerable_Any_StandFigureCollect___) )
+                     (const MethodInfo_2E57724 *)Method_System_Linq_Enumerable_Any_StandFigureCollect___) )
               {
                 afterFigureCollectList = v4->fields.afterFigureCollectList;
               }
@@ -9015,21 +9000,21 @@ void __fastcall CombineResultEffectComponent__playVoice(CombineResultEffectCompo
           asstName = v4->fields.asstName;
           vcName = v4->fields.vcName;
           volume = v4->fields.volume;
-          v27 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+          v27 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
           System_Action___ctor(v27, (Il2CppObject *)v4, Method_CombineResultEffectComponent_EndPlay__, 0LL);
           if ( !SoundManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-          v28 = SoundManager__playVoice_38391896(asstName, vcName, volume, v27, 0LL);
+          v28 = SoundManager__playVoice_38448904(asstName, vcName, volume, v27, 0LL);
           v4->fields.player = v28;
-          sub_1B649A4((ServantStatusBattleListViewItem_o *)&v4->fields.player, (int32_t)v28, v29, v30);
+          sub_1B68678((ServantStatusBattleListViewItem_o *)&v4->fields.player, (int32_t)v28, v29, v30);
           ++v4->fields.playCnt;
           return;
         }
 LABEL_23:
-        sub_1B64C5C(this, method);
+        sub_1B68930(this, method);
       }
     }
-    sub_1B64C64(this, method);
+    sub_1B68938(this, method);
   }
 }
 
@@ -9052,12 +9037,12 @@ void __fastcall CombineResultEffectComponent__setBaseSecretTreasureDvcSvtFigure(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v13; // 0:x0.16
 
   v2 = this;
-  if ( (byte_4A02357 & 1) == 0 )
+  if ( (byte_4A0C4AF & 1) == 0 )
   {
-    sub_1B64A00(&ImageLimitCount_TypeInfo, method);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v3);
-    this = (CombineResultEffectComponent_o *)sub_1B64A00(&StringLiteral_3162/*"BaseSvtNodeName"*/, v4);
-    byte_4A02357 = 1;
+    sub_1B686D4(&ImageLimitCount_TypeInfo, method);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v3);
+    this = (CombineResultEffectComponent_o *)sub_1B686D4(&StringLiteral_3160/*"BaseSvtNodeName"*/, v4);
+    byte_4A0C4AF = 1;
   }
   baseUsrSvtData = v2->fields.baseUsrSvtData;
   if ( !baseUsrSvtData )
@@ -9068,13 +9053,13 @@ void __fastcall CombineResultEffectComponent__setBaseSecretTreasureDvcSvtFigure(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v13.fields.currentCryptoKey = v7;
   *(_QWORD *)&v13.fields.fakeValue = v6;
-  this = (CombineResultEffectComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v13, 0LL);
+  this = (CombineResultEffectComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v13, 0LL);
   v8 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)v2->fields.baseUsrSvtData;
   if ( !v8 )
 LABEL_10:
-    sub_1B64C5C(this, method);
+    sub_1B68930(this, method);
   v9 = (int)this;
-  v10 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v8[6], 0LL);
+  v10 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v8[6], 0LL);
   if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
   ImageLimitCount = ImageLimitCount__GetImageLimitCount(v9, v10, 0LL);
@@ -9083,7 +9068,7 @@ LABEL_10:
     0,
     ImageLimitCount,
     -1,
-    (System_String_o *)StringLiteral_3162/*"BaseSvtNodeName"*/,
+    (System_String_o *)StringLiteral_3160/*"BaseSvtNodeName"*/,
     0,
     1,
     v12);
@@ -9121,15 +9106,15 @@ void __fastcall CombineResultEffectComponent__setBaseSvtGraphCard(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v27; // 0:x0.16
   UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A02361 & 1) == 0 )
+  if ( (byte_4A0C4B9 & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, *(_QWORD *)&changeNameType);
-    sub_1B64A00(&ImageLimitCount_TypeInfo, v5);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v6);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_1B64A00(&StringLiteral_4363/*"CardScale"*/, v8);
-    sub_1B64A00(&StringLiteral_3161/*"BaseSvtCardNodeName"*/, v9);
-    byte_4A02361 = 1;
+    sub_1B686D4(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, *(_QWORD *)&changeNameType);
+    sub_1B686D4(&ImageLimitCount_TypeInfo, v5);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v6);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    sub_1B686D4(&StringLiteral_4361/*"CardScale"*/, v8);
+    sub_1B686D4(&StringLiteral_3159/*"BaseSvtCardNodeName"*/, v9);
+    byte_4A0C4B9 = 1;
   }
   fsm = (__int64)this->fields.fsm;
   if ( !fsm )
@@ -9139,7 +9124,7 @@ void __fastcall CombineResultEffectComponent__setBaseSvtGraphCard(
     goto LABEL_25;
   fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
                    (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_3161/*"BaseSvtCardNodeName"*/,
+                   (System_String_o *)StringLiteral_3159/*"BaseSvtCardNodeName"*/,
                    0LL);
   if ( !fsm )
     goto LABEL_25;
@@ -9157,7 +9142,7 @@ void __fastcall CombineResultEffectComponent__setBaseSvtGraphCard(
     goto LABEL_25;
   fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmFloat(
                    (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_4363/*"CardScale"*/,
+                   (System_String_o *)StringLiteral_4361/*"CardScale"*/,
                    0LL);
   if ( !fsm )
     goto LABEL_25;
@@ -9172,18 +9157,18 @@ void __fastcall CombineResultEffectComponent__setBaseSvtGraphCard(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v27.fields.currentCryptoKey = v17;
   *(_QWORD *)&v27.fields.fakeValue = v16;
-  v19 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v27, 0LL);
-  fsm = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v19 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v27, 0LL);
+  fsm = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !fsm )
     goto LABEL_25;
   fsm = (__int64)DataManager__GetMasterData_object_(
                    (DataManager_o *)fsm,
-                   (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+                   (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
   v20 = this->fields.baseUsrSvtData;
   if ( !v20 )
     goto LABEL_25;
   v21 = (ServantLimitImageMaster_o *)fsm;
-  fsm = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v20->fields.limitCount, 0LL);
+  fsm = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v20->fields.limitCount, 0LL);
   if ( !v21 )
     goto LABEL_25;
   ServantLimitCountSealAfter = ServantLimitImageMaster__GetServantLimitCountSealAfter(v21, v19, fsm, 0LL);
@@ -9194,7 +9179,7 @@ void __fastcall CombineResultEffectComponent__setBaseSvtGraphCard(
     goto LABEL_25;
   v23 = fsm;
   gameObject = UnityEngine_Component__get_gameObject(v13, 0LL);
-  fsm = (__int64)CharaGraphManager__CreateTexturePrefab_37596336(
+  fsm = (__int64)CharaGraphManager__CreateTexturePrefab_37653584(
                    gameObject,
                    this->fields.baseUsrSvtData,
                    v23,
@@ -9207,17 +9192,17 @@ void __fastcall CombineResultEffectComponent__setBaseSvtGraphCard(
   v25 = (UnityEngine_Component_o *)fsm;
   fsm = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)fsm, 0LL);
   v26 = (UnityEngine_Transform_o *)fsm;
-  if ( !byte_49F9821 )
+  if ( !byte_4A03901 )
   {
-    fsm = sub_1B64A00(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&changeNameType);
-    byte_49F9821 = 1;
+    fsm = sub_1B686D4(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&changeNameType);
+    byte_4A03901 = 1;
   }
   if ( !v26
     || (UnityEngine_Transform__set_localPosition(v26, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL),
         (fsm = (__int64)UnityEngine_Component__get_transform(v25, 0LL)) == 0) )
   {
 LABEL_25:
-    sub_1B64C5C(fsm, *(_QWORD *)&changeNameType);
+    sub_1B68930(fsm, *(_QWORD *)&changeNameType);
   }
   v28.fields.x = v18;
   v28.fields.y = v18;
@@ -9243,21 +9228,21 @@ void __fastcall CombineResultEffectComponent__setCostumeCombineResSvtFigure(
   const MethodInfo *v13; // x5
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v14; // 0:x0.16
 
-  if ( (byte_4A0235F & 1) == 0 )
+  if ( (byte_4A0C4B7 & 1) == 0 )
   {
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-    sub_1B64A00(&StringLiteral_8370/*"LimitUpResSvtNodeName"*/, v3);
-    byte_4A0235F = 1;
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
+    sub_1B686D4(&StringLiteral_8372/*"LimitUpResSvtNodeName"*/, v3);
+    byte_4A0C4B7 = 1;
   }
   CostumeSvtVoiceList = CombineResultEffectComponent__getCostumeSvtVoiceList(this, method);
   if ( CostumeSvtVoiceList )
   {
     if ( !CostumeSvtVoiceList->max_length )
-      sub_1B64C64(CostumeSvtVoiceList, v5);
+      sub_1B68938(CostumeSvtVoiceList, v5);
     v6 = CostumeSvtVoiceList->m_Items[0];
     if ( !v6 )
 LABEL_13:
-      sub_1B64C5C(CostumeSvtVoiceList, v5);
+      sub_1B68930(CostumeSvtVoiceList, v5);
     face = v6->fields.face;
   }
   else
@@ -9273,7 +9258,7 @@ LABEL_13:
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v14.fields.currentCryptoKey = v10;
   *(_QWORD *)&v14.fields.fakeValue = v9;
-  CostumeSvtVoiceList = (ServantVoiceData_array *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(
+  CostumeSvtVoiceList = (ServantVoiceData_array *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(
                                                     v14,
                                                     0LL);
   if ( !this->fields.resUsrSvtData )
@@ -9285,7 +9270,7 @@ LABEL_13:
     v11,
     FigureImageLimitCount,
     face,
-    (System_String_o *)StringLiteral_8370/*"LimitUpResSvtNodeName"*/,
+    (System_String_o *)StringLiteral_8372/*"LimitUpResSvtNodeName"*/,
     v13);
 }
 
@@ -9298,7 +9283,7 @@ void __fastcall CombineResultEffectComponent__setEffectEnable(
 
   effect = this->fields.effect;
   if ( !effect )
-    sub_1B64C5C(0LL, method);
+    sub_1B68930(0LL, method);
   UnityEngine_GameObject__SetActive(effect, 1, 0LL);
 }
 
@@ -9321,12 +9306,12 @@ void __fastcall CombineResultEffectComponent__setLimitUpBaseSvtFigure(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v13; // 0:x0.16
 
   v2 = this;
-  if ( (byte_4A0235A & 1) == 0 )
+  if ( (byte_4A0C4B2 & 1) == 0 )
   {
-    sub_1B64A00(&ImageLimitCount_TypeInfo, method);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v3);
-    this = (CombineResultEffectComponent_o *)sub_1B64A00(&StringLiteral_8369/*"LimitUpBaseSvtNodeName"*/, v4);
-    byte_4A0235A = 1;
+    sub_1B686D4(&ImageLimitCount_TypeInfo, method);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v3);
+    this = (CombineResultEffectComponent_o *)sub_1B686D4(&StringLiteral_8371/*"LimitUpBaseSvtNodeName"*/, v4);
+    byte_4A0C4B2 = 1;
   }
   baseUsrSvtData = v2->fields.baseUsrSvtData;
   if ( !baseUsrSvtData )
@@ -9337,13 +9322,13 @@ void __fastcall CombineResultEffectComponent__setLimitUpBaseSvtFigure(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v13.fields.currentCryptoKey = v7;
   *(_QWORD *)&v13.fields.fakeValue = v6;
-  this = (CombineResultEffectComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v13, 0LL);
+  this = (CombineResultEffectComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v13, 0LL);
   v8 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)v2->fields.baseUsrSvtData;
   if ( !v8 )
 LABEL_10:
-    sub_1B64C5C(this, method);
+    sub_1B68930(this, method);
   v9 = (int)this;
-  v10 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v8[6], 0LL);
+  v10 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v8[6], 0LL);
   if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
   ImageLimitCount = ImageLimitCount__GetImageLimitCount(v9, v10, 0LL);
@@ -9352,7 +9337,7 @@ LABEL_10:
     0,
     ImageLimitCount,
     -1,
-    (System_String_o *)StringLiteral_8369/*"LimitUpBaseSvtNodeName"*/,
+    (System_String_o *)StringLiteral_8371/*"LimitUpBaseSvtNodeName"*/,
     1,
     2,
     v12);
@@ -9374,20 +9359,20 @@ void __fastcall CombineResultEffectComponent__setNameRevealSvtFigure(
   int32_t ImageLimitCount; // w2
   const MethodInfo *v13; // x5
 
-  if ( (byte_4A02360 & 1) == 0 )
+  if ( (byte_4A0C4B8 & 1) == 0 )
   {
-    sub_1B64A00(&ImageLimitCount_TypeInfo, *(_QWORD *)&svtId);
-    sub_1B64A00(&StringLiteral_8369/*"LimitUpBaseSvtNodeName"*/, v7);
-    byte_4A02360 = 1;
+    sub_1B686D4(&ImageLimitCount_TypeInfo, *(_QWORD *)&svtId);
+    sub_1B686D4(&StringLiteral_8371/*"LimitUpBaseSvtNodeName"*/, v7);
+    byte_4A0C4B8 = 1;
   }
   LimitUpSvtVoiceList = CombineResultEffectComponent__getLimitUpSvtVoiceList(this, 0, *(const MethodInfo **)&limitCnt);
   if ( LimitUpSvtVoiceList )
   {
     if ( !LimitUpSvtVoiceList->max_length )
-      sub_1B64C64(LimitUpSvtVoiceList, v9);
+      sub_1B68938(LimitUpSvtVoiceList, v9);
     v10 = LimitUpSvtVoiceList->m_Items[0];
     if ( !v10 )
-      sub_1B64C5C(LimitUpSvtVoiceList, v9);
+      sub_1B68930(LimitUpSvtVoiceList, v9);
     face = v10->fields.face;
   }
   else
@@ -9402,7 +9387,7 @@ void __fastcall CombineResultEffectComponent__setNameRevealSvtFigure(
     svtId,
     ImageLimitCount,
     face,
-    (System_String_o *)StringLiteral_8369/*"LimitUpBaseSvtNodeName"*/,
+    (System_String_o *)StringLiteral_8371/*"LimitUpBaseSvtNodeName"*/,
     v13);
 }
 
@@ -9430,11 +9415,11 @@ void __fastcall CombineResultEffectComponent__setNameRevealSvtGraphCard(
   UnityEngine_Transform_o *v21; // x19
   UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A02363 & 1) == 0 )
+  if ( (byte_4A0C4BB & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_4363/*"CardScale"*/, *(_QWORD *)&svtId);
-    sub_1B64A00(&StringLiteral_3161/*"BaseSvtCardNodeName"*/, v9);
-    byte_4A02363 = 1;
+    sub_1B686D4(&StringLiteral_4361/*"CardScale"*/, *(_QWORD *)&svtId);
+    sub_1B686D4(&StringLiteral_3159/*"BaseSvtCardNodeName"*/, v9);
+    byte_4A0C4BB = 1;
   }
   fsm = this->fields.fsm;
   if ( !fsm )
@@ -9444,7 +9429,7 @@ void __fastcall CombineResultEffectComponent__setNameRevealSvtGraphCard(
     goto LABEL_18;
   fsm = (PlayMakerFSM_o *)HutongGames_PlayMaker_FsmVariables__GetFsmString(
                             (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                            (System_String_o *)StringLiteral_3161/*"BaseSvtCardNodeName"*/,
+                            (System_String_o *)StringLiteral_3159/*"BaseSvtCardNodeName"*/,
                             0LL);
   if ( !fsm )
     goto LABEL_18;
@@ -9462,7 +9447,7 @@ void __fastcall CombineResultEffectComponent__setNameRevealSvtGraphCard(
     goto LABEL_18;
   fsm = (PlayMakerFSM_o *)HutongGames_PlayMaker_FsmVariables__GetFsmFloat(
                             (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                            (System_String_o *)StringLiteral_4363/*"CardScale"*/,
+                            (System_String_o *)StringLiteral_4361/*"CardScale"*/,
                             0LL);
   if ( !fsm )
     goto LABEL_18;
@@ -9483,16 +9468,16 @@ void __fastcall CombineResultEffectComponent__setNameRevealSvtGraphCard(
                     0LL);
   p_nameRevealCard = &this->fields.nameRevealCard;
   this->fields.nameRevealCard = TexturePrefab;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.nameRevealCard, (int32_t)TexturePrefab, v19, v20);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.nameRevealCard, (int32_t)TexturePrefab, v19, v20);
   fsm = (PlayMakerFSM_o *)this->fields.nameRevealCard;
   if ( !fsm )
     goto LABEL_18;
   fsm = (PlayMakerFSM_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)fsm, 0LL);
   v21 = (UnityEngine_Transform_o *)fsm;
-  if ( !byte_49F9821 )
+  if ( !byte_4A03901 )
   {
-    fsm = (PlayMakerFSM_o *)sub_1B64A00(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&svtId);
-    byte_49F9821 = 1;
+    fsm = (PlayMakerFSM_o *)sub_1B686D4(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&svtId);
+    byte_4A03901 = 1;
   }
   if ( !v21
     || (UnityEngine_Transform__set_localPosition(v21, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL),
@@ -9500,7 +9485,7 @@ void __fastcall CombineResultEffectComponent__setNameRevealSvtGraphCard(
     || (fsm = (PlayMakerFSM_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)fsm, 0LL)) == 0LL )
   {
 LABEL_18:
-    sub_1B64C5C(fsm, *(_QWORD *)&svtId);
+    sub_1B68930(fsm, *(_QWORD *)&svtId);
   }
   v22.fields.x = v15;
   v22.fields.y = v15;
@@ -9529,11 +9514,11 @@ void __fastcall CombineResultEffectComponent__setResultCostumeSvtGraphCard(
   UnityEngine_Transform_o *v16; // x20
   UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A02364 & 1) == 0 )
+  if ( (byte_4A0C4BC & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_4363/*"CardScale"*/, *(_QWORD *)&changeNameType);
-    sub_1B64A00(&StringLiteral_11305/*"ResultSvtCardNodeName"*/, v5);
-    byte_4A02364 = 1;
+    sub_1B686D4(&StringLiteral_4361/*"CardScale"*/, *(_QWORD *)&changeNameType);
+    sub_1B686D4(&StringLiteral_11306/*"ResultSvtCardNodeName"*/, v5);
+    byte_4A0C4BC = 1;
   }
   fsm = this->fields.fsm;
   if ( !fsm )
@@ -9543,7 +9528,7 @@ void __fastcall CombineResultEffectComponent__setResultCostumeSvtGraphCard(
     goto LABEL_18;
   fsm = (PlayMakerFSM_o *)HutongGames_PlayMaker_FsmVariables__GetFsmString(
                             (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                            (System_String_o *)StringLiteral_11305/*"ResultSvtCardNodeName"*/,
+                            (System_String_o *)StringLiteral_11306/*"ResultSvtCardNodeName"*/,
                             0LL);
   if ( !fsm )
     goto LABEL_18;
@@ -9561,7 +9546,7 @@ void __fastcall CombineResultEffectComponent__setResultCostumeSvtGraphCard(
     goto LABEL_18;
   fsm = (PlayMakerFSM_o *)HutongGames_PlayMaker_FsmVariables__GetFsmFloat(
                             (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                            (System_String_o *)StringLiteral_4363/*"CardScale"*/,
+                            (System_String_o *)StringLiteral_4361/*"CardScale"*/,
                             0LL);
   if ( !fsm )
     goto LABEL_18;
@@ -9575,7 +9560,7 @@ void __fastcall CombineResultEffectComponent__setResultCostumeSvtGraphCard(
     goto LABEL_18;
   v13 = (UnityEngine_GameObject_o *)fsm;
   FigureImageLimitCount = UserServantEntity__getFigureImageLimitCount(resUsrSvtData, 0, 0LL);
-  fsm = (PlayMakerFSM_o *)CharaGraphManager__CreateTexturePrefab_37596336(
+  fsm = (PlayMakerFSM_o *)CharaGraphManager__CreateTexturePrefab_37653584(
                             v13,
                             resUsrSvtData,
                             FigureImageLimitCount,
@@ -9588,17 +9573,17 @@ void __fastcall CombineResultEffectComponent__setResultCostumeSvtGraphCard(
   v15 = (UnityEngine_Component_o *)fsm;
   fsm = (PlayMakerFSM_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)fsm, 0LL);
   v16 = (UnityEngine_Transform_o *)fsm;
-  if ( !byte_49F9821 )
+  if ( !byte_4A03901 )
   {
-    fsm = (PlayMakerFSM_o *)sub_1B64A00(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&changeNameType);
-    byte_49F9821 = 1;
+    fsm = (PlayMakerFSM_o *)sub_1B686D4(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&changeNameType);
+    byte_4A03901 = 1;
   }
   if ( !v16
     || (UnityEngine_Transform__set_localPosition(v16, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL),
         (fsm = (PlayMakerFSM_o *)UnityEngine_Component__get_transform(v15, 0LL)) == 0LL) )
   {
 LABEL_18:
-    sub_1B64C5C(fsm, *(_QWORD *)&changeNameType);
+    sub_1B68930(fsm, *(_QWORD *)&changeNameType);
   }
   v17.fields.x = v11;
   v17.fields.y = v11;
@@ -9639,15 +9624,15 @@ void __fastcall CombineResultEffectComponent__setResultSvtGraphCard(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v27; // 0:x0.16
   UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A02362 & 1) == 0 )
+  if ( (byte_4A0C4BA & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, *(_QWORD *)&changeNameType);
-    sub_1B64A00(&ImageLimitCount_TypeInfo, v5);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v6);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_1B64A00(&StringLiteral_4363/*"CardScale"*/, v8);
-    sub_1B64A00(&StringLiteral_11305/*"ResultSvtCardNodeName"*/, v9);
-    byte_4A02362 = 1;
+    sub_1B686D4(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, *(_QWORD *)&changeNameType);
+    sub_1B686D4(&ImageLimitCount_TypeInfo, v5);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v6);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    sub_1B686D4(&StringLiteral_4361/*"CardScale"*/, v8);
+    sub_1B686D4(&StringLiteral_11306/*"ResultSvtCardNodeName"*/, v9);
+    byte_4A0C4BA = 1;
   }
   fsm = (__int64)this->fields.fsm;
   if ( !fsm )
@@ -9657,7 +9642,7 @@ void __fastcall CombineResultEffectComponent__setResultSvtGraphCard(
     goto LABEL_25;
   fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
                    (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_11305/*"ResultSvtCardNodeName"*/,
+                   (System_String_o *)StringLiteral_11306/*"ResultSvtCardNodeName"*/,
                    0LL);
   if ( !fsm )
     goto LABEL_25;
@@ -9675,7 +9660,7 @@ void __fastcall CombineResultEffectComponent__setResultSvtGraphCard(
     goto LABEL_25;
   fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmFloat(
                    (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_4363/*"CardScale"*/,
+                   (System_String_o *)StringLiteral_4361/*"CardScale"*/,
                    0LL);
   if ( !fsm )
     goto LABEL_25;
@@ -9690,18 +9675,18 @@ void __fastcall CombineResultEffectComponent__setResultSvtGraphCard(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v27.fields.currentCryptoKey = v17;
   *(_QWORD *)&v27.fields.fakeValue = v16;
-  v19 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v27, 0LL);
-  fsm = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v19 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v27, 0LL);
+  fsm = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !fsm )
     goto LABEL_25;
   fsm = (__int64)DataManager__GetMasterData_object_(
                    (DataManager_o *)fsm,
-                   (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+                   (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
   v20 = this->fields.resUsrSvtData;
   if ( !v20 )
     goto LABEL_25;
   v21 = (ServantLimitImageMaster_o *)fsm;
-  fsm = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v20->fields.limitCount, 0LL);
+  fsm = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v20->fields.limitCount, 0LL);
   if ( !v21 )
     goto LABEL_25;
   ServantLimitCountSealAfter = ServantLimitImageMaster__GetServantLimitCountSealAfter(v21, v19, fsm, 0LL);
@@ -9712,7 +9697,7 @@ void __fastcall CombineResultEffectComponent__setResultSvtGraphCard(
     goto LABEL_25;
   v23 = fsm;
   gameObject = UnityEngine_Component__get_gameObject(v13, 0LL);
-  fsm = (__int64)CharaGraphManager__CreateTexturePrefab_37596336(
+  fsm = (__int64)CharaGraphManager__CreateTexturePrefab_37653584(
                    gameObject,
                    this->fields.resUsrSvtData,
                    v23,
@@ -9725,17 +9710,17 @@ void __fastcall CombineResultEffectComponent__setResultSvtGraphCard(
   v25 = (UnityEngine_Component_o *)fsm;
   fsm = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)fsm, 0LL);
   v26 = (UnityEngine_Transform_o *)fsm;
-  if ( !byte_49F9821 )
+  if ( !byte_4A03901 )
   {
-    fsm = sub_1B64A00(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&changeNameType);
-    byte_49F9821 = 1;
+    fsm = sub_1B686D4(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&changeNameType);
+    byte_4A03901 = 1;
   }
   if ( !v26
     || (UnityEngine_Transform__set_localPosition(v26, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL),
         (fsm = (__int64)UnityEngine_Component__get_transform(v25, 0LL)) == 0) )
   {
 LABEL_25:
-    sub_1B64C5C(fsm, *(_QWORD *)&changeNameType);
+    sub_1B68930(fsm, *(_QWORD *)&changeNameType);
   }
   v28.fields.x = v18;
   v28.fields.y = v18;
@@ -9811,309 +9796,303 @@ void __fastcall CombineResultEffectComponent__setSkillResultInfo(
   int32_t v62; // w2
   int32_t v63; // w3
   System_String_o *v64; // x0
-  const MethodInfo *v65; // x6
-  const MethodInfo *v66; // x2
-  struct UserServantEntity_o *v67; // x8
-  __int64 v68; // x20
-  struct CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v69; // x21
-  int32_t v70; // w2
-  int32_t v71; // w3
-  System_String_o *v72; // x0
-  const MethodInfo *v73; // x1
-  UserServantEntity_o *v74; // x20
-  const MethodInfo *v75; // x2
-  int32_t v76; // w3
+  const MethodInfo *v65; // x2
+  struct UserServantEntity_o *v66; // x8
+  __int64 v67; // x20
+  struct CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v68; // x21
+  int32_t v69; // w2
+  int32_t v70; // w3
+  System_String_o *v71; // x0
+  const MethodInfo *v72; // x1
+  UserServantEntity_o *v73; // x20
+  const MethodInfo *v74; // x2
+  int32_t v75; // w3
   struct ServantVoiceData_array **p_playVoiceList; // x0
   struct ServantVoiceData_array *LimitUpSvtVoiceList; // x1
   System_Int32_array *SkillIdList; // x0
   SkillUpResultWindowComponent_o *skillResultInfoWindow; // x21
   int32_t targetId; // w22
   int32_t targetLv; // w23
-  System_Int32_array *v83; // x20
-  System_Action_o *v84; // x24
+  System_Int32_array *v82; // x20
+  System_Action_o *v83; // x24
   int32_t targetIdOld; // w25
   int32_t targetLvOld; // w26
+  const MethodInfo *v86; // x2
   const MethodInfo *v87; // x2
-  const MethodInfo *v88; // x2
-  int32_t v89; // w27
-  int32_t v90; // w28
+  int32_t v88; // w27
+  int32_t v89; // w28
+  __int64 v90; // x0
   __int64 v91; // x0
-  __int64 v92; // x0
   Il2CppObject *MasterData_object; // x21
-  System_Collections_Generic_List_int__o *v94; // x20
-  __int64 v95; // x28
-  int32_t v96; // w22
-  struct UserServantEntity_o *v97; // x8
-  __int64 v98; // x23
-  __int64 v99; // x24
-  int v100; // w8
-  int v101; // w9
-  __int64 v102; // x23
-  struct UserServantEntity_o *v103; // x8
-  __int64 v104; // x23
-  __int64 v105; // x24
-  int32_t v106; // w0
+  System_Collections_Generic_List_int__o *v93; // x20
+  __int64 v94; // x28
+  int32_t v95; // w22
+  struct UserServantEntity_o *v96; // x8
+  __int64 v97; // x23
+  __int64 v98; // x24
+  int v99; // w8
+  int v100; // w9
+  __int64 v101; // x23
+  struct UserServantEntity_o *v102; // x8
+  __int64 v103; // x23
+  __int64 v104; // x24
+  int32_t v105; // w0
   struct System_Int32_array *items; // x8
-  _QWORD *v108; // x9
+  _QWORD *v107; // x9
   __int64 size; // x10
-  int32_t v110; // w22
-  Il2CppObject *v111; // x23
-  struct UserServantEntity_o *v112; // x8
-  int64_t v113; // x24
-  __int64 v114; // x25
-  __int64 v115; // x26
+  int32_t v109; // w22
+  Il2CppObject *v110; // x23
+  struct UserServantEntity_o *v111; // x8
+  int64_t v112; // x24
+  __int64 v113; // x25
+  __int64 v114; // x26
   struct System_Int32_array *costumeIds; // x8
-  System_Collections_Generic_List_int__o *v117; // x23
-  struct UserServantEntity_o *v118; // x8
-  __int64 v119; // x23
-  __int64 v120; // x24
-  _BOOL8 v121; // x0
-  __int64 v122; // x1
+  System_Collections_Generic_List_int__o *v116; // x23
+  struct UserServantEntity_o *v117; // x8
+  __int64 v118; // x23
+  __int64 v119; // x24
+  _BOOL8 v120; // x0
+  __int64 v121; // x1
   Il2CppObject *current; // x21
   int64_t UserId; // x0
-  __int64 v125; // x1
-  struct UserServantEntity_o *v126; // x8
-  int64_t v127; // x23
-  int32_t v128; // w24
-  __int64 v129; // x25
-  __int64 v130; // x26
-  int32_t v131; // w3
-  int v132; // w21
-  struct ServantVoiceData_array *v133; // x8
-  struct UserServantEntity_o *v134; // x8
-  __int64 v135; // x20
-  __int64 v136; // x21
-  struct UserServantEntity_o *v137; // x8
-  int v138; // w21
-  int v139; // w20
-  struct UserServantEntity_o *v140; // x8
-  __int64 v141; // x22
-  __int64 v142; // x23
-  System_Collections_Generic_IEnumerable_TSource__o *v143; // x21
-  int32_t v144; // w0
+  __int64 v124; // x1
+  struct UserServantEntity_o *v125; // x8
+  int64_t v126; // x23
+  int32_t v127; // w24
+  __int64 v128; // x25
+  __int64 v129; // x26
+  int32_t v130; // w3
+  int v131; // w21
+  struct ServantVoiceData_array *v132; // x8
+  struct UserServantEntity_o *v133; // x8
+  __int64 v134; // x20
+  __int64 v135; // x21
+  struct UserServantEntity_o *v136; // x8
+  int v137; // w21
+  int v138; // w20
+  struct UserServantEntity_o *v139; // x8
+  __int64 v140; // x22
+  __int64 v141; // x23
+  System_Collections_Generic_IEnumerable_TSource__o *v142; // x21
+  int32_t v143; // w0
   _BOOL4 isLimitUpSuppression; // w8
-  int32_t v146; // w8
-  SkillUpResultWindowComponent_o *v147; // x20
-  UserServantEntity_o *v148; // x21
-  System_Action_o *v149; // x22
-  const MethodInfo *v150; // x3
+  int32_t v145; // w8
+  SkillUpResultWindowComponent_o *v146; // x20
+  UserServantEntity_o *v147; // x21
+  System_Action_o *v148; // x22
   struct ServantVoiceData_array *CostumeSvtVoiceList; // x0
-  int32_t v152; // w2
-  int32_t v153; // w3
+  int32_t v150; // w2
+  int32_t v151; // w3
   struct CombineResultEffectComponent_MessageDelegate_o *messageCallback; // x23
+  Il2CppObject *v153; // x20
+  Il2CppObject *v154; // x21
   Il2CppObject *v155; // x20
-  Il2CppObject *v156; // x21
-  Il2CppObject *v157; // x20
-  BalanceConfig_c *v158; // x8
+  BalanceConfig_c *v156; // x8
   int32_t CloseSecretTreasureDeviceQuestClear; // w22
-  System_String_o *v160; // x21
+  System_String_o *v158; // x21
   Il2CppObject *Name; // x0
-  System_String_o *v162; // x0
-  System_Int32_array *v163; // x20
-  SkillUpResultWindowComponent_o *v164; // x21
-  int32_t v165; // w22
-  int32_t v166; // w23
-  System_Action_o *v167; // x24
-  struct UserServantEntity_o *v168; // x8
-  int32_t v169; // w26
-  int32_t v170; // w25
-  __int64 v171; // x27
-  __int64 v172; // x28
-  SkillUpResultWindowComponent_o *v173; // x20
-  UserServantEntity_o *v174; // x21
+  System_String_o *v160; // x0
+  System_Int32_array *v161; // x20
+  SkillUpResultWindowComponent_o *v162; // x21
+  int32_t v163; // w22
+  int32_t v164; // w23
+  System_Action_o *v165; // x24
+  struct UserServantEntity_o *v166; // x8
+  int32_t v167; // w26
+  int32_t v168; // w25
+  __int64 v169; // x27
+  __int64 v170; // x28
+  SkillUpResultWindowComponent_o *v171; // x20
+  UserServantEntity_o *v172; // x21
   int32_t oldFriendShipRank; // w22
-  System_Action_o *v176; // x23
-  const MethodInfo *v177; // x4
+  System_Action_o *v174; // x23
   struct UserServantEntity_o *baseUsrSvtData; // x8
-  __int128 v179; // q1
-  DataMasterBase_TMaster__TEntity__PKType__o *v180; // x21
-  Il2CppObject *v181; // x0
-  int32_t v182; // w2
-  int32_t v183; // w3
-  struct UserServantEntity_o *v184; // x8
+  __int128 v176; // q1
+  DataMasterBase_TMaster__TEntity__PKType__o *v177; // x21
+  Il2CppObject *v178; // x0
+  int32_t v179; // w2
+  int32_t v180; // w3
+  struct UserServantEntity_o *v181; // x8
   struct UserServantEntity_o *resUsrSvtData; // x8
   int32_t lv; // w21
-  const MethodInfo *v187; // x1
-  int32_t v188; // w2
-  int32_t v189; // w3
+  const MethodInfo *v184; // x1
+  int32_t v185; // w2
+  int32_t v186; // w3
   struct ServantVoiceData_array *playVoiceList; // x8
-  const MethodInfo *v191; // x3
-  __int64 v192; // x22
+  const MethodInfo *v188; // x3
+  __int64 v189; // x22
+  int32_t v190; // w2
+  int32_t v191; // w3
+  struct CombineResultEffectComponent_ClickDelegate_o *callbackFunc; // x1
   int32_t v193; // w2
   int32_t v194; // w3
-  struct CombineResultEffectComponent_ClickDelegate_o *callbackFunc; // x1
-  int32_t v196; // w2
-  int32_t v197; // w3
-  int32_t v198; // w2
-  int32_t v199; // w3
-  __int64 v200; // x23
-  System_Action_o *v201; // x24
-  int32_t v202; // w2
-  int32_t v203; // w3
-  Il2CppObject *v204; // x21
-  CombineResultEffectComponent_ClickDelegate_o *v205; // x22
-  const MethodInfo *v206; // x3
-  int32_t v207; // w2
-  int32_t v208; // w3
+  int32_t v195; // w2
+  int32_t v196; // w3
+  __int64 v197; // x23
+  System_Action_o *v198; // x24
+  int32_t v199; // w2
+  int32_t v200; // w3
+  Il2CppObject *v201; // x21
+  CombineResultEffectComponent_ClickDelegate_o *v202; // x22
+  const MethodInfo *v203; // x3
+  int32_t v204; // w2
+  int32_t v205; // w3
   struct SvtCombineResultWindowComponent_o *svtResultInfoWindow; // x20
-  struct UserServantEntity_o *v210; // x21
+  struct UserServantEntity_o *v207; // x21
   int32_t baseUsrSvtCollictionLv; // w22
-  System_Action_o *v212; // x23
-  System_Action_o *v213; // x24
-  SvtCombineResultWindowComponent_o *v214; // x0
-  UserServantEntity_o *v215; // x1
-  int32_t v216; // w2
-  System_Action_o *v217; // x3
-  System_Action_o *v218; // x4
-  struct UserServantEntity_o *v219; // x8
-  __int128 v220; // q1
-  DataMasterBase_TMaster__TEntity__PKType__o *v221; // x20
-  Il2CppObject *v222; // x0
-  int32_t v223; // w2
-  int32_t v224; // w3
-  struct SvtCombineResultWindowComponent_o *v225; // x20
-  struct UserServantEntity_o *v226; // x21
-  int32_t v227; // w22
-  System_Action_o *v228; // x23
+  System_Action_o *v209; // x23
+  System_Action_o *v210; // x24
+  SvtCombineResultWindowComponent_o *v211; // x0
+  UserServantEntity_o *v212; // x1
+  int32_t v213; // w2
+  System_Action_o *v214; // x3
+  System_Action_o *v215; // x4
+  struct UserServantEntity_o *v216; // x8
+  __int128 v217; // q1
+  DataMasterBase_TMaster__TEntity__PKType__o *v218; // x20
+  Il2CppObject *v219; // x0
+  int32_t v220; // w2
+  int32_t v221; // w3
+  struct SvtCombineResultWindowComponent_o *v222; // x20
+  struct UserServantEntity_o *v223; // x21
+  int32_t v224; // w22
+  System_Action_o *v225; // x23
   CommandCardExceedResultWindowComponent_o *commandCardExceedResultWindow; // x20
-  UserServantEntity_o *v230; // x21
+  UserServantEntity_o *v227; // x21
   int32_t commandCardIndex; // w22
   int32_t commandCardExceedCount; // w23
-  Il2CppObject *v233; // x20
-  AvalonSceneManager_c *v234; // x8
+  Il2CppObject *v230; // x20
+  AvalonSceneManager_c *v231; // x8
   float DEFAULT_FADE_TIME; // s8
-  System_Action_o *v236; // x0
-  __int64 *v237; // x8
-  bool v238; // w28
-  const MethodInfo *v239; // x2
-  const MethodInfo *v240; // x2
+  System_Action_o *v233; // x0
+  __int64 *v234; // x8
+  bool v235; // w28
+  const MethodInfo *v236; // x2
+  const MethodInfo *v237; // x2
   LimitUpResultCheckComponent_o *limitUpResultCheck; // x20
-  System_Action_o *v242; // x21
-  const MethodInfo *v243; // x3
-  System_String_o *v244; // x22
-  Il2CppObject *v245; // x21
-  Il2CppObject *v246; // x0
-  AvalonSceneManager_c *v247; // x8
-  System_Action_o *v248; // x21
+  System_Action_o *v239; // x21
+  System_String_o *v240; // x22
+  Il2CppObject *v241; // x21
+  Il2CppObject *v242; // x0
+  AvalonSceneManager_c *v243; // x8
+  System_Action_o *v244; // x21
   bool kind; // [xsp+0h] [xbp-120h]
-  const MethodInfo *isRelease; // [xsp+8h] [xbp-118h]
-  char isReleasea; // [xsp+8h] [xbp-118h]
+  bool methoda; // [xsp+8h] [xbp-118h]
   System_String_o *dispBattleName; // [xsp+18h] [xbp-108h]
-  const MethodInfo *v253; // [xsp+20h] [xbp-100h]
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v254; // [xsp+30h] [xbp-F0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v255; // [xsp+50h] [xbp-D0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v256; // [xsp+70h] [xbp-B0h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v257; // [xsp+90h] [xbp-90h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v248; // [xsp+30h] [xbp-F0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v249; // [xsp+50h] [xbp-D0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v250; // [xsp+70h] [xbp-B0h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v251; // [xsp+90h] [xbp-90h] BYREF
   UserServantCollectionEntity_o *entity; // [xsp+A8h] [xbp-78h] BYREF
   int32_t oldLv; // [xsp+BCh] [xbp-64h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v254; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v255; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v256; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v257; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v258; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v259; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v260; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v261; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v262; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v263; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v264; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v265; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v266; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v267; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v268; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v269; // 0:x0.16
 
-  if ( (byte_4A02367 & 1) == 0 )
+  if ( (byte_4A0C4BF & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, method);
-    sub_1B64A00(&AvalonSceneManager_TypeInfo, v3);
-    sub_1B64A00(&BalanceConfig_TypeInfo, v4);
-    sub_1B64A00(&CombineResultEffectComponent_ClickDelegate_TypeInfo, v5);
-    sub_1B64A00(&Method_CombineResultEffectComponent_EndDisp__, v6);
-    sub_1B64A00(&Method_CombineResultEffectComponent__setSkillResultInfo_b__145_0__, v7);
-    sub_1B64A00(&Method_CombineResultEffectComponent__setSkillResultInfo_b__145_1__, v8);
-    sub_1B64A00(&Method_CombineResultEffectComponent__setSkillResultInfo_b__145_5__, v9);
-    sub_1B64A00(&Method_CombineResultEffectComponent_clickNext__, v10);
-    sub_1B64A00(&CombineResultFormManager_TypeInfo, v11);
-    sub_1B64A00(&Method_DataManager_GetMasterData_QuestMaster___, v12);
-    sub_1B64A00(&Method_DataManager_GetMasterData_ServantMaster___, v13);
-    sub_1B64A00(&Method_DataManager_GetMasterData_ServantSkillMaster___, v14);
-    sub_1B64A00(&Method_DataManager_GetMasterData_UserServantCollectionMaster___, v15);
-    sub_1B64A00(&Method_DataManager_GetMasterData_UserServantMaster___, v16);
-    sub_1B64A00(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__, v17);
-    sub_1B64A00(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v18);
-    sub_1B64A00(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v19);
-    sub_1B64A00(&Method_System_Linq_Enumerable_Any_int___, v20);
-    sub_1B64A00(&Method_System_Linq_Enumerable_Contains_int___, v21);
-    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_ServantSkillEntity__Dispose__, v22);
-    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_ServantSkillEntity__MoveNext__, v23);
-    sub_1B64A00(&Method_System_Collections_Generic_List_Enumerator_ServantSkillEntity__get_Current__, v24);
-    sub_1B64A00(&Method_System_Collections_Generic_List_int__Add__, v25);
-    sub_1B64A00(&Method_System_Collections_Generic_List_ServantSkillEntity__GetEnumerator__, v26);
-    sub_1B64A00(&Method_System_Collections_Generic_List_int__ToArray__, v27);
-    sub_1B64A00(&Method_System_Collections_Generic_List_int___ctor__, v28);
-    sub_1B64A00(&System_Collections_Generic_List_int__TypeInfo, v29);
-    sub_1B64A00(&LocalizationManager_TypeInfo, v30);
-    sub_1B64A00(&NetworkManager_TypeInfo, v31);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v32);
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v33);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v34);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v35);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v36);
-    sub_1B64A00(&string___TypeInfo, v37);
-    sub_1B64A00(&TerminalPramsManager_TypeInfo, v38);
-    sub_1B64A00(&Method_CombineResultEffectComponent___c__DisplayClass145_0__setSkillResultInfo_b__3__, v39);
-    sub_1B64A00(&CombineResultEffectComponent___c__DisplayClass145_0_TypeInfo, v40);
-    sub_1B64A00(&Method_CombineResultEffectComponent___c__DisplayClass145_1__setSkillResultInfo_b__2__, v41);
-    sub_1B64A00(&CombineResultEffectComponent___c__DisplayClass145_1_TypeInfo, v42);
-    sub_1B64A00(&StringLiteral_10774/*"QUEST_AFTER_MESSAGE_SECRET_TREASURE_DEVICE"*/, v43);
-    sub_1B64A00(&StringLiteral_10775/*"QUEST_AFTER_MESSAGE_SECRET_TREASURE_DEVICE_2"*/, v44);
-    sub_1B64A00(&StringLiteral_1/*""*/, v45);
-    byte_4A02367 = 1;
+    sub_1B686D4(&System_Action_TypeInfo, method);
+    sub_1B686D4(&AvalonSceneManager_TypeInfo, v3);
+    sub_1B686D4(&BalanceConfig_TypeInfo, v4);
+    sub_1B686D4(&CombineResultEffectComponent_ClickDelegate_TypeInfo, v5);
+    sub_1B686D4(&Method_CombineResultEffectComponent_EndDisp__, v6);
+    sub_1B686D4(&Method_CombineResultEffectComponent__setSkillResultInfo_b__145_0__, v7);
+    sub_1B686D4(&Method_CombineResultEffectComponent__setSkillResultInfo_b__145_1__, v8);
+    sub_1B686D4(&Method_CombineResultEffectComponent__setSkillResultInfo_b__145_5__, v9);
+    sub_1B686D4(&Method_CombineResultEffectComponent_clickNext__, v10);
+    sub_1B686D4(&CombineResultFormManager_TypeInfo, v11);
+    sub_1B686D4(&Method_DataManager_GetMasterData_QuestMaster___, v12);
+    sub_1B686D4(&Method_DataManager_GetMasterData_ServantMaster___, v13);
+    sub_1B686D4(&Method_DataManager_GetMasterData_ServantSkillMaster___, v14);
+    sub_1B686D4(&Method_DataManager_GetMasterData_UserServantCollectionMaster___, v15);
+    sub_1B686D4(&Method_DataManager_GetMasterData_UserServantMaster___, v16);
+    sub_1B686D4(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__, v17);
+    sub_1B686D4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v18);
+    sub_1B686D4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v19);
+    sub_1B686D4(&Method_System_Linq_Enumerable_Any_int___, v20);
+    sub_1B686D4(&Method_System_Linq_Enumerable_Contains_int___, v21);
+    sub_1B686D4(&Method_System_Collections_Generic_List_Enumerator_ServantSkillEntity__Dispose__, v22);
+    sub_1B686D4(&Method_System_Collections_Generic_List_Enumerator_ServantSkillEntity__MoveNext__, v23);
+    sub_1B686D4(&Method_System_Collections_Generic_List_Enumerator_ServantSkillEntity__get_Current__, v24);
+    sub_1B686D4(&Method_System_Collections_Generic_List_int__Add__, v25);
+    sub_1B686D4(&Method_System_Collections_Generic_List_ServantSkillEntity__GetEnumerator__, v26);
+    sub_1B686D4(&Method_System_Collections_Generic_List_int__ToArray__, v27);
+    sub_1B686D4(&Method_System_Collections_Generic_List_int___ctor__, v28);
+    sub_1B686D4(&System_Collections_Generic_List_int__TypeInfo, v29);
+    sub_1B686D4(&LocalizationManager_TypeInfo, v30);
+    sub_1B686D4(&NetworkManager_TypeInfo, v31);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v32);
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v33);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v34);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v35);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v36);
+    sub_1B686D4(&string___TypeInfo, v37);
+    sub_1B686D4(&TerminalPramsManager_TypeInfo, v38);
+    sub_1B686D4(&Method_CombineResultEffectComponent___c__DisplayClass145_0__setSkillResultInfo_b__3__, v39);
+    sub_1B686D4(&CombineResultEffectComponent___c__DisplayClass145_0_TypeInfo, v40);
+    sub_1B686D4(&Method_CombineResultEffectComponent___c__DisplayClass145_1__setSkillResultInfo_b__2__, v41);
+    sub_1B686D4(&CombineResultEffectComponent___c__DisplayClass145_1_TypeInfo, v42);
+    sub_1B686D4(&StringLiteral_10777/*"QUEST_AFTER_MESSAGE_SECRET_TREASURE_DEVICE"*/, v43);
+    sub_1B686D4(&StringLiteral_10778/*"QUEST_AFTER_MESSAGE_SECRET_TREASURE_DEVICE_2"*/, v44);
+    sub_1B686D4(&StringLiteral_1/*""*/, v45);
+    byte_4A0C4BF = 1;
   }
   oldLv = 0;
   entity = 0LL;
-  memset(&v257, 0, sizeof(v257));
-  v46 = sub_1B64C4C(CombineResultEffectComponent___c__DisplayClass145_0_TypeInfo);
+  memset(&v251, 0, sizeof(v251));
+  v46 = sub_1B68920(CombineResultEffectComponent___c__DisplayClass145_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v46, 0LL);
   if ( !v46 )
     goto LABEL_212;
   *(_QWORD *)(v46 + 24) = this;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v46 + 24), (int32_t)this, v49, v50);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)(v46 + 24), (int32_t)this, v49, v50);
   switch ( this->fields.kind )
   {
     case 0:
       if ( this->fields.setResUsrSvtData )
         goto LABEL_155;
-      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_212;
       Instance = (__int64)DataManager__GetMasterData_object_(
                             (DataManager_o *)Instance,
-                            (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                            (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_UserServantMaster___);
       baseUsrSvtData = this->fields.baseUsrSvtData;
       if ( !baseUsrSvtData )
         goto LABEL_212;
-      v179 = *(_OWORD *)&baseUsrSvtData->fields.id.fields.fakeValue;
-      v180 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
-      *(_OWORD *)&v256.fields.currentCryptoKey = *(_OWORD *)&baseUsrSvtData->fields.id.fields.currentCryptoKey;
-      *(_OWORD *)&v256.fields.fakeValue = v179;
+      v176 = *(_OWORD *)&baseUsrSvtData->fields.id.fields.fakeValue;
+      v177 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
+      *(_OWORD *)&v250.fields.currentCryptoKey = *(_OWORD *)&baseUsrSvtData->fields.id.fields.currentCryptoKey;
+      *(_OWORD *)&v250.fields.fakeValue = v176;
       if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-      v255 = v256;
-      Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46185616(&v255, 0LL);
-      if ( !v180 )
+      v249 = v250;
+      Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46242940(&v249, 0LL);
+      if ( !v177 )
         goto LABEL_212;
-      v181 = DataMasterBase_object__object__long___GetEntity(
-               v180,
+      v178 = DataMasterBase_object__object__long___GetEntity(
+               v177,
                Instance,
-               (const MethodInfo_30D6944 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-      this->fields.resUsrSvtData = (struct UserServantEntity_o *)v181;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, (int32_t)v181, v182, v183);
+               (const MethodInfo_30E466C *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+      this->fields.resUsrSvtData = (struct UserServantEntity_o *)v178;
+      sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, (int32_t)v178, v179, v180);
 LABEL_155:
-      v184 = this->fields.baseUsrSvtData;
-      if ( !v184 )
+      v181 = this->fields.baseUsrSvtData;
+      if ( !v181 )
         goto LABEL_212;
-      oldLv = v184->fields.lv;
+      oldLv = v181->fields.lv;
       resUsrSvtData = this->fields.resUsrSvtData;
       if ( !resUsrSvtData )
         goto LABEL_212;
       lv = resUsrSvtData->fields.lv;
-      if ( !System_Int32__Equals_62190236((int32_t)&oldLv, lv, 0LL) )
+      if ( !System_Int32__Equals_62224576((int32_t)&oldLv, lv, 0LL) )
       {
         if ( this->fields.asstName )
         {
@@ -10123,46 +10102,46 @@ LABEL_155:
             if ( playVoiceList )
             {
               this->fields.maxPlayCnt = *(_QWORD *)&playVoiceList->max_length;
-              CombineResultEffectComponent__playVoice(this, v187);
+              CombineResultEffectComponent__playVoice(this, v184);
             }
           }
         }
       }
       *(_QWORD *)(v46 + 16) = 0LL;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)(v46 + 16), 0, v188, v189);
-      if ( !CombineResultEffectComponent__CheckCombineLimit(this, oldLv, lv, v191) )
+      sub_1B68678((ServantStatusBattleListViewItem_o *)(v46 + 16), 0, v185, v186);
+      if ( !CombineResultEffectComponent__CheckCombineLimit(this, oldLv, lv, v188) )
         goto LABEL_166;
-      v192 = sub_1B64C4C(CombineResultEffectComponent___c__DisplayClass145_1_TypeInfo);
-      System_Object___ctor((Il2CppObject *)v192, 0LL);
-      if ( !v192 )
+      v189 = sub_1B68920(CombineResultEffectComponent___c__DisplayClass145_1_TypeInfo);
+      System_Object___ctor((Il2CppObject *)v189, 0LL);
+      if ( !v189 )
         goto LABEL_212;
-      *(_QWORD *)(v192 + 24) = v46;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)(v192 + 24), v46, v193, v194);
+      *(_QWORD *)(v189 + 24) = v46;
+      sub_1B68678((ServantStatusBattleListViewItem_o *)(v189 + 24), v46, v190, v191);
       callbackFunc = this->fields.callbackFunc;
-      *(_QWORD *)(v192 + 16) = callbackFunc;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)(v192 + 16), (int32_t)callbackFunc, v196, v197);
+      *(_QWORD *)(v189 + 16) = callbackFunc;
+      sub_1B68678((ServantStatusBattleListViewItem_o *)(v189 + 16), (int32_t)callbackFunc, v193, v194);
       this->fields.callbackFunc = 0LL;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, 0, v198, v199);
-      v200 = *(_QWORD *)(v192 + 24);
-      v201 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+      sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, 0, v195, v196);
+      v197 = *(_QWORD *)(v189 + 24);
+      v198 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
       System_Action___ctor(
-        v201,
-        (Il2CppObject *)v192,
+        v198,
+        (Il2CppObject *)v189,
         Method_CombineResultEffectComponent___c__DisplayClass145_1__setSkillResultInfo_b__2__,
         0LL);
-      if ( !v200 )
+      if ( !v197 )
         goto LABEL_212;
-      *(_QWORD *)(v200 + 16) = v201;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)(v200 + 16), (int32_t)v201, v202, v203);
-      v204 = *(Il2CppObject **)(v192 + 24);
-      v205 = (CombineResultEffectComponent_ClickDelegate_o *)sub_1B64C4C(CombineResultEffectComponent_ClickDelegate_TypeInfo);
+      *(_QWORD *)(v197 + 16) = v198;
+      sub_1B68678((ServantStatusBattleListViewItem_o *)(v197 + 16), (int32_t)v198, v199, v200);
+      v201 = *(Il2CppObject **)(v189 + 24);
+      v202 = (CombineResultEffectComponent_ClickDelegate_o *)sub_1B68920(CombineResultEffectComponent_ClickDelegate_TypeInfo);
       CombineResultEffectComponent_ClickDelegate___ctor(
-        v205,
-        v204,
+        v202,
+        v201,
         Method_CombineResultEffectComponent___c__DisplayClass145_0__setSkillResultInfo_b__3__,
-        v206);
-      this->fields.callbackFunc = v205;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)v205, v207, v208);
+        v203);
+      this->fields.callbackFunc = v202;
+      sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)v202, v204, v205);
 LABEL_166:
       if ( !this->fields.combineStatusDisp )
       {
@@ -10171,27 +10150,27 @@ LABEL_186:
         return;
       }
       svtResultInfoWindow = this->fields.svtResultInfoWindow;
-      v210 = this->fields.resUsrSvtData;
+      v207 = this->fields.resUsrSvtData;
       baseUsrSvtCollictionLv = this->fields.baseUsrSvtCollictionLv;
-      v212 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
-      System_Action___ctor(v212, (Il2CppObject *)this, Method_CombineResultEffectComponent_EndDisp__, 0LL);
-      v213 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
-      System_Action___ctor(v213, (Il2CppObject *)this, (intptr_t)Method_CombineResultEffectComponent_clickNext__, 0LL);
+      v209 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
+      System_Action___ctor(v209, (Il2CppObject *)this, Method_CombineResultEffectComponent_EndDisp__, 0LL);
+      v210 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
+      System_Action___ctor(v210, (Il2CppObject *)this, (intptr_t)Method_CombineResultEffectComponent_clickNext__, 0LL);
       if ( !svtResultInfoWindow )
         goto LABEL_212;
-      v214 = svtResultInfoWindow;
+      v211 = svtResultInfoWindow;
+      v212 = v207;
+      v213 = baseUsrSvtCollictionLv;
+      v214 = v209;
       v215 = v210;
-      v216 = baseUsrSvtCollictionLv;
-      v217 = v212;
-      v218 = v213;
 LABEL_176:
-      SvtCombineResultWindowComponent__setAfterSvtResultState(v214, v215, v216, v217, v218, 0LL);
+      SvtCombineResultWindowComponent__setAfterSvtResultState(v211, v212, v213, v214, v215, 0LL);
       return;
     case 1:
     case 0xA:
     case 0x13:
     case 0x1A:
-      Instance = sub_1B64AA8(string___TypeInfo, 1LL);
+      Instance = sub_1B6877C(string___TypeInfo, 1LL);
       v59 = this->fields.baseUsrSvtData;
       if ( !v59 )
         goto LABEL_212;
@@ -10199,41 +10178,41 @@ LABEL_176:
       p_svtId = &v59->fields.svtId;
       if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-      *(_QWORD *)&v260.fields.currentCryptoKey = p_svtId;
-      *(_QWORD *)&v260.fields.fakeValue = 0LL;
-      Instance = (__int64)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__ToString(v260, v58);
+      *(_QWORD *)&v254.fields.currentCryptoKey = p_svtId;
+      *(_QWORD *)&v254.fields.fakeValue = 0LL;
+      Instance = (__int64)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__ToString(v254, v58);
       if ( !v60 )
         goto LABEL_212;
       if ( !*(_DWORD *)(v60 + 24) )
         goto LABEL_213;
       *(_QWORD *)(v60 + 32) = Instance;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)(v60 + 32), Instance, v62, v63);
-      v64 = System_String__Concat_61398664((System_String_array *)v60, 0LL);
-      if ( UnityEngine_PlayerPrefs__GetInt_69095184(v64, 0LL) != 1 || (this->fields.kind | 0x10) == 26 )
+      sub_1B68678((ServantStatusBattleListViewItem_o *)(v60 + 32), Instance, v62, v63);
+      v64 = System_String__Concat_61432996((System_String_array *)v60, 0LL);
+      if ( UnityEngine_PlayerPrefs__GetInt_69129524(v64, 0LL) != 1 || (this->fields.kind | 0x10) == 26 )
         goto LABEL_22;
-      Instance = sub_1B64AA8(string___TypeInfo, 1LL);
-      v67 = this->fields.baseUsrSvtData;
-      if ( !v67 )
+      Instance = sub_1B6877C(string___TypeInfo, 1LL);
+      v66 = this->fields.baseUsrSvtData;
+      if ( !v66 )
         goto LABEL_212;
-      v68 = Instance;
-      v69 = &v67->fields.svtId;
+      v67 = Instance;
+      v68 = &v66->fields.svtId;
       if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-      *(_QWORD *)&v261.fields.currentCryptoKey = v69;
-      *(_QWORD *)&v261.fields.fakeValue = 0LL;
-      Instance = (__int64)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__ToString(v261, v66);
-      if ( !v68 )
+      *(_QWORD *)&v255.fields.currentCryptoKey = v68;
+      *(_QWORD *)&v255.fields.fakeValue = 0LL;
+      Instance = (__int64)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__ToString(v255, v65);
+      if ( !v67 )
         goto LABEL_212;
-      if ( !*(_DWORD *)(v68 + 24) )
+      if ( !*(_DWORD *)(v67 + 24) )
         goto LABEL_213;
-      *(_QWORD *)(v68 + 32) = Instance;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)(v68 + 32), Instance, v70, v71);
-      v72 = System_String__Concat_61398664((System_String_array *)v68, 0LL);
-      UnityEngine_PlayerPrefs__SetInt(v72, 0, 0LL);
-      v74 = this->fields.baseUsrSvtData;
+      *(_QWORD *)(v67 + 32) = Instance;
+      sub_1B68678((ServantStatusBattleListViewItem_o *)(v67 + 32), Instance, v69, v70);
+      v71 = System_String__Concat_61432996((System_String_array *)v67, 0LL);
+      UnityEngine_PlayerPrefs__SetInt(v71, 0, 0LL);
+      v73 = this->fields.baseUsrSvtData;
       if ( !CombineResultFormManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CombineResultFormManager_TypeInfo);
-      CombineResultFormManager__ResetVoiceList(v74, v73);
+      CombineResultFormManager__ResetVoiceList(v73, v72);
 LABEL_22:
       Instance = (__int64)this->fields.limitUpResultCheck;
       if ( !Instance )
@@ -10245,7 +10224,7 @@ LABEL_22:
         this->fields.resUsrSvtData,
         this->fields.baseUsrSvtCollectionLimitCnt,
         this->fields.limitUpRewardGiftDataList,
-        v65);
+        0LL);
       if ( this->fields.isLimitUpSuppression )
       {
         p_playVoiceList = &this->fields.playVoiceList;
@@ -10254,30 +10233,30 @@ LABEL_22:
       }
       else
       {
-        LimitUpSvtVoiceList = CombineResultEffectComponent__getLimitUpSvtVoiceList(this, 1, v75);
+        LimitUpSvtVoiceList = CombineResultEffectComponent__getLimitUpSvtVoiceList(this, 1, v74);
         p_playVoiceList = &this->fields.playVoiceList;
         this->fields.playVoiceList = LimitUpSvtVoiceList;
       }
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)p_playVoiceList, (int32_t)LimitUpSvtVoiceList, (int32_t)v75, v76);
-      v133 = this->fields.playVoiceList;
-      if ( !v133 )
+      sub_1B68678((ServantStatusBattleListViewItem_o *)p_playVoiceList, (int32_t)LimitUpSvtVoiceList, (int32_t)v74, v75);
+      v132 = this->fields.playVoiceList;
+      if ( !v132 )
       {
-        v134 = this->fields.baseUsrSvtData;
-        if ( v134 )
+        v133 = this->fields.baseUsrSvtData;
+        if ( v133 )
         {
-          v136 = *(_QWORD *)&v134->fields.limitCount.fields.currentCryptoKey;
-          v135 = *(_QWORD *)&v134->fields.limitCount.fields.fakeValue;
+          v135 = *(_QWORD *)&v133->fields.limitCount.fields.currentCryptoKey;
+          v134 = *(_QWORD *)&v133->fields.limitCount.fields.fakeValue;
           if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-          *(_QWORD *)&v267.fields.currentCryptoKey = v136;
-          *(_QWORD *)&v267.fields.fakeValue = v135;
-          Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v267, 0LL);
-          v137 = this->fields.baseUsrSvtData;
-          v138 = Instance == 2;
-          if ( v137 )
+          *(_QWORD *)&v261.fields.currentCryptoKey = v135;
+          *(_QWORD *)&v261.fields.fakeValue = v134;
+          Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v261, 0LL);
+          v136 = this->fields.baseUsrSvtData;
+          v137 = Instance == 2;
+          if ( v136 )
           {
-            v139 = Instance;
-            if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v137->fields.limitCount, 0LL) == 3 )
+            v138 = Instance;
+            if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v136->fields.limitCount, 0LL) == 3 )
             {
               Instance = (__int64)BalanceConfig_TypeInfo;
               if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -10285,43 +10264,43 @@ LABEL_22:
                 j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
                 Instance = (__int64)BalanceConfig_TypeInfo;
               }
-              v140 = this->fields.baseUsrSvtData;
-              if ( !v140 )
+              v139 = this->fields.baseUsrSvtData;
+              if ( !v139 )
                 goto LABEL_212;
-              v142 = *(_QWORD *)&v140->fields.svtId.fields.currentCryptoKey;
-              v141 = *(_QWORD *)&v140->fields.svtId.fields.fakeValue;
-              v143 = *(System_Collections_Generic_IEnumerable_TSource__o **)(*(_QWORD *)(Instance + 184) + 1048LL);
+              v141 = *(_QWORD *)&v139->fields.svtId.fields.currentCryptoKey;
+              v140 = *(_QWORD *)&v139->fields.svtId.fields.fakeValue;
+              v142 = *(System_Collections_Generic_IEnumerable_TSource__o **)(*(_QWORD *)(Instance + 184) + 1032LL);
               if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-              *(_QWORD *)&v268.fields.currentCryptoKey = v142;
-              *(_QWORD *)&v268.fields.fakeValue = v141;
-              v144 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v268, 0LL);
-              v138 = (v139 == 2) | System_Linq_Enumerable__Contains_int_(
+              *(_QWORD *)&v262.fields.currentCryptoKey = v141;
+              *(_QWORD *)&v262.fields.fakeValue = v140;
+              v143 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v262, 0LL);
+              v137 = (v138 == 2) | System_Linq_Enumerable__Contains_int_(
+                                     v142,
                                      v143,
-                                     v144,
-                                     (const MethodInfo_2E5559C *)Method_System_Linq_Enumerable_Contains_int___);
+                                     (const MethodInfo_2E63938 *)Method_System_Linq_Enumerable_Contains_int___);
             }
             isLimitUpSuppression = this->fields.isLimitUpSuppression;
             if ( this->fields.isLimitUpSuppression )
             {
-              v146 = this->fields.kind;
-              isLimitUpSuppression = v146 != 10 && v146 != 26;
+              v145 = this->fields.kind;
+              isLimitUpSuppression = v145 != 10 && v145 != 26;
             }
-            if ( (v138 & isLimitUpSuppression) != 0 )
+            if ( (v137 & isLimitUpSuppression) != 0 )
             {
               CombineResultEffectComponent__OpenLimitCountSealDialog(this, v48);
               return;
             }
             limitUpResultCheck = this->fields.limitUpResultCheck;
-            v242 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+            v239 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
             System_Action___ctor(
-              v242,
+              v239,
               (Il2CppObject *)this,
               Method_CombineResultEffectComponent__setSkillResultInfo_b__145_5__,
               0LL);
             if ( limitUpResultCheck )
             {
-              LimitUpResultCheckComponent__DispResultLimitUp(limitUpResultCheck, v242, 1, v243);
+              LimitUpResultCheckComponent__DispResultLimitUp(limitUpResultCheck, v239, 1, 0LL);
               return;
             }
           }
@@ -10331,7 +10310,7 @@ LABEL_22:
 LABEL_118:
       if ( this->fields.asstName )
       {
-        this->fields.maxPlayCnt = *(_QWORD *)&v133->max_length;
+        this->fields.maxPlayCnt = *(_QWORD *)&v132->max_length;
         CombineResultEffectComponent__playVoice(this, v48);
       }
       break;
@@ -10344,22 +10323,22 @@ LABEL_118:
       skillResultInfoWindow = this->fields.skillResultInfoWindow;
       targetId = this->fields.targetId;
       targetLv = this->fields.targetLv;
-      v83 = SkillIdList;
-      v84 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
-      System_Action___ctor(v84, (Il2CppObject *)this, Method_CombineResultEffectComponent_EndDisp__, 0LL);
+      v82 = SkillIdList;
+      v83 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
+      System_Action___ctor(v83, (Il2CppObject *)this, Method_CombineResultEffectComponent_EndDisp__, 0LL);
       targetIdOld = this->fields.targetIdOld;
       targetLvOld = this->fields.targetLvOld;
-      Instance = (__int64)CombineResultEffectComponent__GetTransformedServantInfo(this, 0, v87);
+      Instance = (__int64)CombineResultEffectComponent__GetTransformedServantInfo(this, 0, v86);
       if ( !Instance )
         goto LABEL_212;
-      v89 = *(_DWORD *)(Instance + 16);
-      v90 = this->fields.kind;
-      Instance = (__int64)CombineResultEffectComponent__GetTransformedServantInfo(this, 0, v88);
+      v88 = *(_DWORD *)(Instance + 16);
+      v89 = this->fields.kind;
+      Instance = (__int64)CombineResultEffectComponent__GetTransformedServantInfo(this, 0, v87);
       if ( !Instance || !skillResultInfoWindow )
         goto LABEL_212;
       dispBattleName = *(System_String_o **)(Instance + 24);
-      isReleasea = 1;
-      kind = v90 == 3;
+      methoda = 1;
+      kind = v89 == 3;
       goto LABEL_195;
     case 4:
     case 5:
@@ -10370,11 +10349,11 @@ LABEL_118:
       v54 = this->fields.baseUsrSvtData;
       v55 = this->fields.targetId;
       v56 = this->fields.targetLv;
-      v57 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+      v57 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
       System_Action___ctor(v57, (Il2CppObject *)this, Method_CombineResultEffectComponent_EndDisp__, 0LL);
       if ( !v53 )
         goto LABEL_212;
-      SkillUpResultWindowComponent__OpenNpUpResultInfo_44612832(
+      SkillUpResultWindowComponent__OpenNpUpResultInfo_44717936(
         v53,
         v54,
         v55,
@@ -10384,67 +10363,67 @@ LABEL_118:
         this->fields.targetLvOld,
         this->fields.npInfoAddManager,
         this->fields.kind,
-        isRelease);
+        0LL);
       return;
     case 6:
-      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_212;
       Instance = (__int64)DataManager__GetMasterData_object_(
                             (DataManager_o *)Instance,
-                            (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_UserServantMaster___);
-      v219 = this->fields.baseUsrSvtData;
-      if ( !v219 )
+                            (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_UserServantMaster___);
+      v216 = this->fields.baseUsrSvtData;
+      if ( !v216 )
         goto LABEL_212;
-      v220 = *(_OWORD *)&v219->fields.id.fields.fakeValue;
-      v221 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
-      *(_OWORD *)&v256.fields.currentCryptoKey = *(_OWORD *)&v219->fields.id.fields.currentCryptoKey;
-      *(_OWORD *)&v256.fields.fakeValue = v220;
+      v217 = *(_OWORD *)&v216->fields.id.fields.fakeValue;
+      v218 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
+      *(_OWORD *)&v250.fields.currentCryptoKey = *(_OWORD *)&v216->fields.id.fields.currentCryptoKey;
+      *(_OWORD *)&v250.fields.fakeValue = v217;
       if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-      v254 = v256;
-      Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46185616(&v254, 0LL);
-      if ( !v221 )
+      v248 = v250;
+      Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46242940(&v248, 0LL);
+      if ( !v218 )
         goto LABEL_212;
-      v222 = DataMasterBase_object__object__long___GetEntity(
-               v221,
+      v219 = DataMasterBase_object__object__long___GetEntity(
+               v218,
                Instance,
-               (const MethodInfo_30D6944 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-      this->fields.resUsrSvtData = (struct UserServantEntity_o *)v222;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, (int32_t)v222, v223, v224);
-      v225 = this->fields.svtResultInfoWindow;
-      v226 = this->fields.resUsrSvtData;
-      v227 = this->fields.baseUsrSvtCollictionLv;
-      v228 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
-      System_Action___ctor(v228, (Il2CppObject *)this, Method_CombineResultEffectComponent_EndDisp__, 0LL);
-      if ( !v225 )
+               (const MethodInfo_30E466C *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+      this->fields.resUsrSvtData = (struct UserServantEntity_o *)v219;
+      sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.resUsrSvtData, (int32_t)v219, v220, v221);
+      v222 = this->fields.svtResultInfoWindow;
+      v223 = this->fields.resUsrSvtData;
+      v224 = this->fields.baseUsrSvtCollictionLv;
+      v225 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
+      System_Action___ctor(v225, (Il2CppObject *)this, Method_CombineResultEffectComponent_EndDisp__, 0LL);
+      if ( !v222 )
         goto LABEL_212;
+      v211 = v222;
+      v212 = v223;
+      v213 = v224;
       v214 = v225;
-      v215 = v226;
-      v216 = v227;
-      v217 = v228;
-      v218 = 0LL;
+      v215 = 0LL;
       goto LABEL_176;
     case 7:
     case 0x15:
-      v91 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
+      v90 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
+      if ( (*(_BYTE *)(v90 + 309) & 1) == 0 )
+        v90 = sub_1BBA5B0(v90);
+      v91 = *(_QWORD *)(*(_QWORD *)(v90 + 192) + 16LL);
       if ( (*(_BYTE *)(v91 + 309) & 1) == 0 )
-        v91 = sub_1BB68DC(v91);
-      v92 = *(_QWORD *)(*(_QWORD *)(v91 + 192) + 16LL);
-      if ( (*(_BYTE *)(v92 + 309) & 1) == 0 )
-        v92 = sub_1BB68DC(v92);
-      Instance = **(_QWORD **)(v92 + 184);
+        v91 = sub_1BBA5B0(v91);
+      Instance = **(_QWORD **)(v91 + 184);
       if ( !Instance )
         goto LABEL_212;
       MasterData_object = DataManager__GetMasterData_object_(
                             (DataManager_o *)Instance,
-                            (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantSkillMaster___);
-      v94 = (System_Collections_Generic_List_int__o *)sub_1B64C4C(System_Collections_Generic_List_int__TypeInfo);
+                            (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_ServantSkillMaster___);
+      v93 = (System_Collections_Generic_List_int__o *)sub_1B68920(System_Collections_Generic_List_int__TypeInfo);
       System_Collections_Generic_List_int____ctor(
-        v94,
-        (const MethodInfo_3491F7C *)Method_System_Collections_Generic_List_int___ctor__);
-      v95 = 0LL;
-      v96 = 1;
+        v93,
+        (const MethodInfo_349EA00 *)Method_System_Collections_Generic_List_int___ctor__);
+      v94 = 0LL;
+      v95 = 1;
       while ( 2 )
       {
         Instance = (__int64)BalanceConfig_TypeInfo;
@@ -10453,98 +10432,98 @@ LABEL_118:
           j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
           Instance = (__int64)BalanceConfig_TypeInfo;
         }
-        if ( v96 <= *(_DWORD *)(*(_QWORD *)(Instance + 184) + 32LL) )
+        if ( v95 <= *(_DWORD *)(*(_QWORD *)(Instance + 184) + 32LL) )
         {
-          v97 = this->fields.baseUsrSvtData;
-          if ( !v97 )
+          v96 = this->fields.baseUsrSvtData;
+          if ( !v96 )
             goto LABEL_212;
-          v99 = *(_QWORD *)&v97->fields.svtId.fields.currentCryptoKey;
-          v98 = *(_QWORD *)&v97->fields.svtId.fields.fakeValue;
+          v98 = *(_QWORD *)&v96->fields.svtId.fields.currentCryptoKey;
+          v97 = *(_QWORD *)&v96->fields.svtId.fields.fakeValue;
           if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-          *(_QWORD *)&v262.fields.currentCryptoKey = v99;
-          *(_QWORD *)&v262.fields.fakeValue = v98;
-          Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v262, 0LL);
+          *(_QWORD *)&v256.fields.currentCryptoKey = v98;
+          *(_QWORD *)&v256.fields.fakeValue = v97;
+          Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v256, 0LL);
           if ( !MasterData_object )
             goto LABEL_212;
           Instance = (__int64)ServantSkillMaster__getEntityListFromIdNum(
                                 (ServantSkillMaster_o *)MasterData_object,
                                 Instance,
-                                v96,
+                                v95,
                                 0LL);
           if ( !Instance )
             goto LABEL_212;
-          v100 = *(_DWORD *)(Instance + 24);
-          if ( v100 < 1 )
+          v99 = *(_DWORD *)(Instance + 24);
+          if ( v99 < 1 )
           {
 LABEL_50:
-            v103 = this->fields.baseUsrSvtData;
-            if ( !v103 )
+            v102 = this->fields.baseUsrSvtData;
+            if ( !v102 )
               goto LABEL_212;
-            v105 = *(_QWORD *)&v103->fields.svtId.fields.currentCryptoKey;
-            v104 = *(_QWORD *)&v103->fields.svtId.fields.fakeValue;
+            v104 = *(_QWORD *)&v102->fields.svtId.fields.currentCryptoKey;
+            v103 = *(_QWORD *)&v102->fields.svtId.fields.fakeValue;
             if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-            *(_QWORD *)&v263.fields.currentCryptoKey = v105;
-            *(_QWORD *)&v263.fields.fakeValue = v104;
-            v106 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v263, 0LL);
+            *(_QWORD *)&v257.fields.currentCryptoKey = v104;
+            *(_QWORD *)&v257.fields.fakeValue = v103;
+            v105 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v257, 0LL);
             Instance = (__int64)ServantSkillMaster__GetEntity(
                                   (ServantSkillMaster_o *)MasterData_object,
-                                  v106,
-                                  v96,
+                                  v105,
+                                  v95,
                                   1,
                                   0LL);
             if ( Instance )
             {
               v48 = (const MethodInfo *)*(unsigned int *)(Instance + 28);
-              v102 = v95;
+              v101 = v94;
 LABEL_55:
-              if ( !v94 )
+              if ( !v93 )
                 goto LABEL_212;
-              items = v94->fields._items;
-              v108 = Method_System_Collections_Generic_List_int__Add__;
-              ++v94->fields._version;
+              items = v93->fields._items;
+              v107 = Method_System_Collections_Generic_List_int__Add__;
+              ++v93->fields._version;
               if ( !items )
                 goto LABEL_212;
-              size = v94->fields._size;
+              size = v93->fields._size;
               if ( (unsigned int)size >= items->max_length )
               {
                 System_Collections_Generic_List_int___AddWithResize(
-                  v94,
+                  v93,
                   (int32_t)v48,
-                  *(const MethodInfo_34927D0 **)(*(_QWORD *)(v108[4] + 192LL) + 112LL));
+                  *(const MethodInfo_349F254 **)(*(_QWORD *)(v107[4] + 192LL) + 112LL));
               }
               else
               {
-                v94->fields._size = size + 1;
+                v93->fields._size = size + 1;
                 items->m_Items[size + 1] = (int)v48;
               }
             }
             else
             {
-              v102 = v95;
+              v101 = v94;
             }
-            ++v96;
-            v95 = v102;
+            ++v95;
+            v94 = v101;
             continue;
           }
-          v101 = 0;
+          v100 = 0;
           while ( 1 )
           {
-            if ( v100 == v101 )
+            if ( v99 == v100 )
 LABEL_213:
-              sub_1B64C64(Instance, v48);
-            v102 = *(_QWORD *)(Instance + 8LL * v101 + 32);
-            if ( !v102 )
+              sub_1B68938(Instance, v48);
+            v101 = *(_QWORD *)(Instance + 8LL * v100 + 32);
+            if ( !v101 )
               break;
-            v48 = (const MethodInfo *)*(unsigned int *)(v102 + 28);
+            v48 = (const MethodInfo *)*(unsigned int *)(v101 + 28);
             if ( (_DWORD)v48 == this->fields.targetId )
               goto LABEL_55;
-            if ( v100 == ++v101 )
+            if ( v99 == ++v100 )
               goto LABEL_50;
           }
 LABEL_212:
-          sub_1B64C5C(Instance, v48);
+          sub_1B68930(Instance, v48);
         }
         break;
       }
@@ -10556,36 +10535,36 @@ LABEL_212:
         Instance = UserServantEntity__getDispLimitCount((UserServantEntity_o *)Instance, 0, 0LL);
         if ( !this->fields.baseUsrSvtData )
           goto LABEL_212;
-        v110 = Instance;
+        v109 = Instance;
         Instance = UserServantEntity__IsHeroine(this->fields.baseUsrSvtData, 0LL);
         if ( (Instance & 1) != 0 )
         {
-          Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( !Instance )
             goto LABEL_212;
-          v111 = DataManager__GetMasterData_object_(
+          v110 = DataManager__GetMasterData_object_(
                    (DataManager_o *)Instance,
-                   (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+                   (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
           if ( !NetworkManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
           Instance = NetworkManager__get_UserId(0LL);
-          v112 = this->fields.baseUsrSvtData;
-          if ( !v112 )
-            goto LABEL_212;
-          v113 = Instance;
-          v115 = *(_QWORD *)&v112->fields.svtId.fields.currentCryptoKey;
-          v114 = *(_QWORD *)&v112->fields.svtId.fields.fakeValue;
-          if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-          *(_QWORD *)&v264.fields.currentCryptoKey = v115;
-          *(_QWORD *)&v264.fields.fakeValue = v114;
-          Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v264, 0LL);
+          v111 = this->fields.baseUsrSvtData;
           if ( !v111 )
             goto LABEL_212;
+          v112 = Instance;
+          v114 = *(_QWORD *)&v111->fields.svtId.fields.currentCryptoKey;
+          v113 = *(_QWORD *)&v111->fields.svtId.fields.fakeValue;
+          if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
+            j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+          *(_QWORD *)&v258.fields.currentCryptoKey = v114;
+          *(_QWORD *)&v258.fields.fakeValue = v113;
+          Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v258, 0LL);
+          if ( !v110 )
+            goto LABEL_212;
           Instance = UserServantCollectionMaster__TryGetEntity(
-                       (UserServantCollectionMaster_o *)v111,
+                       (UserServantCollectionMaster_o *)v110,
                        &entity,
-                       v113,
+                       v112,
                        Instance,
                        0LL);
           if ( (Instance & 1) != 0 )
@@ -10598,111 +10577,111 @@ LABEL_212:
               goto LABEL_212;
             if ( *(_QWORD *)&costumeIds->max_length )
             {
-              v117 = UserServantCollectionEntity__GetSkillChangeCostumeList(entity, 0LL);
+              v116 = UserServantCollectionEntity__GetSkillChangeCostumeList(entity, 0LL);
               Instance = System_Linq_Enumerable__Any_int_(
-                           (System_Collections_Generic_IEnumerable_TSource__o *)v117,
-                           (const MethodInfo_2E48E58 *)Method_System_Linq_Enumerable_Any_int___);
+                           (System_Collections_Generic_IEnumerable_TSource__o *)v116,
+                           (const MethodInfo_2E571F4 *)Method_System_Linq_Enumerable_Any_int___);
               if ( (Instance & 1) != 0 )
               {
-                Instance = System_Linq_Enumerable__Max((System_Collections_Generic_IEnumerable_int__o *)v117, 0LL);
-                v110 = Instance;
+                Instance = System_Linq_Enumerable__Max((System_Collections_Generic_IEnumerable_int__o *)v116, 0LL);
+                v109 = Instance;
               }
             }
           }
         }
-        v118 = this->fields.baseUsrSvtData;
-        if ( !v118 )
+        v117 = this->fields.baseUsrSvtData;
+        if ( !v117 )
           goto LABEL_212;
-        v120 = *(_QWORD *)&v118->fields.svtId.fields.currentCryptoKey;
-        v119 = *(_QWORD *)&v118->fields.svtId.fields.fakeValue;
+        v119 = *(_QWORD *)&v117->fields.svtId.fields.currentCryptoKey;
+        v118 = *(_QWORD *)&v117->fields.svtId.fields.fakeValue;
         if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-        *(_QWORD *)&v265.fields.currentCryptoKey = v120;
-        *(_QWORD *)&v265.fields.fakeValue = v119;
-        Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v265, 0LL);
-        if ( !v95 )
+        *(_QWORD *)&v259.fields.currentCryptoKey = v119;
+        *(_QWORD *)&v259.fields.fakeValue = v118;
+        Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v259, 0LL);
+        if ( !v94 )
           goto LABEL_212;
         if ( !MasterData_object )
           goto LABEL_212;
         Instance = (__int64)ServantSkillMaster__getEntityListFromSkillId(
                               (ServantSkillMaster_o *)MasterData_object,
                               Instance,
-                              *(_DWORD *)(v95 + 20),
+                              *(_DWORD *)(v94 + 20),
                               this->fields.targetIdOld,
                               0LL);
         if ( !Instance )
           goto LABEL_212;
         System_Collections_Generic_List_object___GetEnumerator(
-          (System_Collections_Generic_List_Enumerator_T__o *)&v256,
+          (System_Collections_Generic_List_Enumerator_T__o *)&v250,
           (System_Collections_Generic_List_object__o *)Instance,
-          (const MethodInfo_34B0B60 *)Method_System_Collections_Generic_List_ServantSkillEntity__GetEnumerator__);
-        *(_OWORD *)&v257.fields._list = *(_OWORD *)&v256.fields.currentCryptoKey;
-        v257.fields._current = (Il2CppObject *)v256.fields.fakeValue;
+          (const MethodInfo_34BCD70 *)Method_System_Collections_Generic_List_ServantSkillEntity__GetEnumerator__);
+        *(_OWORD *)&v251.fields._list = *(_OWORD *)&v250.fields.currentCryptoKey;
+        v251.fields._current = (Il2CppObject *)v250.fields.fakeValue;
         while ( 1 )
         {
-          v121 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-                   &v257,
-                   (const MethodInfo_322C9A4 *)Method_System_Collections_Generic_List_Enumerator_ServantSkillEntity__MoveNext__);
-          if ( !v121 )
+          v120 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+                   &v251,
+                   (const MethodInfo_323A820 *)Method_System_Collections_Generic_List_Enumerator_ServantSkillEntity__MoveNext__);
+          if ( !v120 )
             break;
-          current = v257.fields._current;
-          if ( !v257.fields._current )
-            sub_1B64C5C(v121, v122);
-          if ( ServantSkillEntity__isEnable((ServantSkillEntity_o *)v257.fields._current, 0, 0LL) )
+          current = v251.fields._current;
+          if ( !v251.fields._current )
+            sub_1B68930(v120, v121);
+          if ( ServantSkillEntity__isEnable((ServantSkillEntity_o *)v251.fields._current, 0, 0LL) )
           {
             if ( !NetworkManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
             UserId = NetworkManager__get_UserId(0LL);
-            v126 = this->fields.baseUsrSvtData;
-            if ( !v126 )
-              sub_1B64C5C(UserId, v125);
-            v127 = UserId;
-            v128 = v126->fields.lv;
-            v130 = *(_QWORD *)&v126->fields.limitCount.fields.currentCryptoKey;
-            v129 = *(_QWORD *)&v126->fields.limitCount.fields.fakeValue;
+            v125 = this->fields.baseUsrSvtData;
+            if ( !v125 )
+              sub_1B68930(UserId, v124);
+            v126 = UserId;
+            v127 = v125->fields.lv;
+            v129 = *(_QWORD *)&v125->fields.limitCount.fields.currentCryptoKey;
+            v128 = *(_QWORD *)&v125->fields.limitCount.fields.fakeValue;
             if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-            *(_QWORD *)&v266.fields.currentCryptoKey = v130;
-            *(_QWORD *)&v266.fields.fakeValue = v129;
-            v131 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v266, 0LL);
-            if ( ServantSkillEntity__isUse((ServantSkillEntity_o *)current, v127, v128, v131, v110, -1, -1, -1LL, 0LL) )
+            *(_QWORD *)&v260.fields.currentCryptoKey = v129;
+            *(_QWORD *)&v260.fields.fakeValue = v128;
+            v130 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v260, 0LL);
+            if ( ServantSkillEntity__isUse((ServantSkillEntity_o *)current, v126, v127, v130, v109, -1, -1, -1LL, 0LL) )
             {
-              v132 = 1;
+              v131 = 1;
               goto LABEL_189;
             }
           }
         }
-        v132 = 0;
+        v131 = 0;
 LABEL_189:
         System_Collections_Generic_List_Enumerator_object___Dispose(
-          &v257,
-          (const MethodInfo_322C9A0 *)Method_System_Collections_Generic_List_Enumerator_ServantSkillEntity__Dispose__);
-        v238 = v132 != 0;
+          &v251,
+          (const MethodInfo_323A81C *)Method_System_Collections_Generic_List_Enumerator_ServantSkillEntity__Dispose__);
+        v235 = v131 != 0;
       }
       else
       {
-        v238 = 0;
+        v235 = 0;
       }
       skillResultInfoWindow = this->fields.skillResultInfoWindow;
       targetId = this->fields.targetId;
       targetLv = this->fields.targetLv;
-      v84 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
-      System_Action___ctor(v84, (Il2CppObject *)this, Method_CombineResultEffectComponent_EndDisp__, 0LL);
+      v83 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
+      System_Action___ctor(v83, (Il2CppObject *)this, Method_CombineResultEffectComponent_EndDisp__, 0LL);
       targetIdOld = this->fields.targetIdOld;
       targetLvOld = this->fields.targetLvOld;
-      Instance = (__int64)CombineResultEffectComponent__GetTransformedServantInfo(this, 0, v239);
+      Instance = (__int64)CombineResultEffectComponent__GetTransformedServantInfo(this, 0, v236);
       if ( !Instance )
         goto LABEL_212;
-      if ( !v94 )
+      if ( !v93 )
         goto LABEL_212;
-      v89 = *(_DWORD *)(Instance + 16);
-      v83 = System_Collections_Generic_List_int___ToArray(
-              v94,
-              (const MethodInfo_3494328 *)Method_System_Collections_Generic_List_int__ToArray__);
-      Instance = (__int64)CombineResultEffectComponent__GetTransformedServantInfo(this, 0, v240);
+      v88 = *(_DWORD *)(Instance + 16);
+      v82 = System_Collections_Generic_List_int___ToArray(
+              v93,
+              (const MethodInfo_34A0D0C *)Method_System_Collections_Generic_List_int__ToArray__);
+      Instance = (__int64)CombineResultEffectComponent__GetTransformedServantInfo(this, 0, v237);
       if ( !Instance || !skillResultInfoWindow )
         goto LABEL_212;
-      isReleasea = v238;
+      methoda = v235;
       kind = 0;
       dispBattleName = *(System_String_o **)(Instance + 24);
 LABEL_195:
@@ -10710,35 +10689,35 @@ LABEL_195:
         skillResultInfoWindow,
         targetId,
         targetLv,
-        v84,
+        v83,
         targetIdOld,
         targetLvOld,
-        v89,
-        v83,
+        v88,
+        v82,
         kind,
-        isReleasea,
+        methoda,
         0,
         dispBattleName,
-        v253);
+        0LL);
       break;
     case 9:
-      v173 = this->fields.skillResultInfoWindow;
-      v174 = this->fields.baseUsrSvtData;
+      v171 = this->fields.skillResultInfoWindow;
+      v172 = this->fields.baseUsrSvtData;
       oldFriendShipRank = this->fields.oldFriendShipRank;
-      v176 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
-      System_Action___ctor(v176, (Il2CppObject *)this, Method_CombineResultEffectComponent_EndDisp__, 0LL);
-      if ( !v173 )
+      v174 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
+      System_Action___ctor(v174, (Il2CppObject *)this, Method_CombineResultEffectComponent_EndDisp__, 0LL);
+      if ( !v171 )
         goto LABEL_212;
-      SkillUpResultWindowComponent__OpenFriendshipUpResultInfo(v173, v174, oldFriendShipRank, v176, v177);
+      SkillUpResultWindowComponent__OpenFriendshipUpResultInfo(v171, v172, oldFriendShipRank, v174, 0LL);
       return;
     case 0xB:
-      v147 = this->fields.skillResultInfoWindow;
-      v148 = this->fields.baseUsrSvtData;
-      v149 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
-      System_Action___ctor(v149, (Il2CppObject *)this, Method_CombineResultEffectComponent_EndDisp__, 0LL);
-      if ( !v147 )
+      v146 = this->fields.skillResultInfoWindow;
+      v147 = this->fields.baseUsrSvtData;
+      v148 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
+      System_Action___ctor(v148, (Il2CppObject *)this, Method_CombineResultEffectComponent_EndDisp__, 0LL);
+      if ( !v146 )
         goto LABEL_212;
-      SkillUpResultWindowComponent__OpenPowerUpResultInfo(v147, v148, v149, v150);
+      SkillUpResultWindowComponent__OpenPowerUpResultInfo(v146, v147, v148, 0LL);
       return;
     case 0xC:
     case 0xE:
@@ -10757,13 +10736,13 @@ LABEL_195:
     case 0xF:
       CostumeSvtVoiceList = CombineResultEffectComponent__getCostumeSvtVoiceList(this, v48);
       this->fields.playVoiceList = CostumeSvtVoiceList;
-      sub_1B649A4(
+      sub_1B68678(
         (ServantStatusBattleListViewItem_o *)&this->fields.playVoiceList,
         (int32_t)CostumeSvtVoiceList,
-        v152,
-        v153);
-      v133 = this->fields.playVoiceList;
-      if ( v133 )
+        v150,
+        v151);
+      v132 = this->fields.playVoiceList;
+      if ( v132 )
         goto LABEL_118;
       goto LABEL_186;
     case 0x10:
@@ -10773,19 +10752,19 @@ LABEL_195:
       if ( !messageCallback )
         goto LABEL_205;
       this->fields.messageCallback = 0LL;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.messageCallback, 0, (int32_t)v51, v52);
-      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.messageCallback, 0, (int32_t)v51, v52);
+      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_212;
-      v155 = DataManager__GetMasterData_object_(
+      v153 = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_QuestMaster___);
+               (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_QuestMaster___);
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_49FB754 )
+      if ( !byte_4A058F6 )
       {
-        sub_1B64A00(&TerminalPramsManager_TypeInfo, v48);
-        byte_49FB754 = 1;
+        sub_1B686D4(&TerminalPramsManager_TypeInfo, v48);
+        byte_4A058F6 = 1;
       }
       Instance = (__int64)TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10793,97 +10772,97 @@ LABEL_195:
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
         Instance = (__int64)TerminalPramsManager_TypeInfo;
       }
-      if ( !v155 )
+      if ( !v153 )
         goto LABEL_212;
-      v156 = DataMasterBase_object__object__int___GetEntity(
-               (DataMasterBase_TMaster__TEntity__PKType__o *)v155,
-               *(_DWORD *)(*(_QWORD *)(Instance + 184) + 16LL),
-               (const MethodInfo_30D6798 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
-      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      v154 = DataMasterBase_object__object__int___GetEntity(
+               (DataMasterBase_TMaster__TEntity__PKType__o *)v153,
+               *(_DWORD *)(*(_QWORD *)(Instance + 184) + 20LL),
+               (const MethodInfo_30E44C0 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
+      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_212;
       Instance = (__int64)DataManager__GetMasterData_object_(
                             (DataManager_o *)Instance,
-                            (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                            (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_ServantMaster___);
       if ( !Instance )
         goto LABEL_212;
-      v157 = DataMasterBase_object__object__int___GetEntity(
+      v155 = DataMasterBase_object__object__int___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                this->fields.targetSvtId,
-               (const MethodInfo_30D6798 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-      v158 = BalanceConfig_TypeInfo;
+               (const MethodInfo_30E44C0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+      v156 = BalanceConfig_TypeInfo;
       if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-        v158 = BalanceConfig_TypeInfo;
+        v156 = BalanceConfig_TypeInfo;
       }
-      CloseSecretTreasureDeviceQuestClear = v158->static_fields->CloseSecretTreasureDeviceQuestClear;
+      CloseSecretTreasureDeviceQuestClear = v156->static_fields->CloseSecretTreasureDeviceQuestClear;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       if ( CloseSecretTreasureDeviceQuestClear )
       {
-        Instance = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_10775/*"QUEST_AFTER_MESSAGE_SECRET_TREASURE_DEVICE_2"*/, 0LL);
-        if ( !v157 )
+        Instance = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_10778/*"QUEST_AFTER_MESSAGE_SECRET_TREASURE_DEVICE_2"*/, 0LL);
+        if ( !v155 )
           goto LABEL_212;
-        v160 = (System_String_o *)Instance;
-        Name = (Il2CppObject *)ServantEntity__getName((ServantEntity_o *)v157, -1, -1, 0LL);
-        v162 = System_String__Format(v160, Name, 0LL);
+        v158 = (System_String_o *)Instance;
+        Name = (Il2CppObject *)ServantEntity__getName((ServantEntity_o *)v155, -1, -1, 0LL);
+        v160 = System_String__Format(v158, Name, 0LL);
       }
       else
       {
-        Instance = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_10774/*"QUEST_AFTER_MESSAGE_SECRET_TREASURE_DEVICE"*/, 0LL);
-        if ( !v156 )
+        Instance = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_10777/*"QUEST_AFTER_MESSAGE_SECRET_TREASURE_DEVICE"*/, 0LL);
+        if ( !v154 )
           goto LABEL_212;
-        v244 = (System_String_o *)Instance;
-        Instance = (__int64)QuestEntity__getQuestName((QuestEntity_o *)v156, 0LL);
-        if ( !v157 )
+        v240 = (System_String_o *)Instance;
+        Instance = (__int64)QuestEntity__getQuestName((QuestEntity_o *)v154, 0LL);
+        if ( !v155 )
           goto LABEL_212;
-        v245 = (Il2CppObject *)Instance;
-        v246 = (Il2CppObject *)ServantEntity__getName((ServantEntity_o *)v157, -1, -1, 0LL);
-        v162 = System_String__Format_61399508(v244, v245, v246, 0LL);
+        v241 = (Il2CppObject *)Instance;
+        v242 = (Il2CppObject *)ServantEntity__getName((ServantEntity_o *)v155, -1, -1, 0LL);
+        v160 = System_String__Format_61433840(v240, v241, v242, 0LL);
       }
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))messageCallback->fields.m_target)(
         messageCallback->fields.original_method_info,
-        v162,
+        v160,
         *(_QWORD *)&messageCallback->fields.extra_arg);
 LABEL_205:
       if ( !this->fields.callbackFunc )
         return;
-      v233 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-      v247 = AvalonSceneManager_TypeInfo;
+      v230 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v243 = AvalonSceneManager_TypeInfo;
       if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
-        v247 = AvalonSceneManager_TypeInfo;
+        v243 = AvalonSceneManager_TypeInfo;
       }
-      DEFAULT_FADE_TIME = v247->static_fields->DEFAULT_FADE_TIME;
-      v236 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
-      v237 = &Method_CombineResultEffectComponent__setSkillResultInfo_b__145_1__;
+      DEFAULT_FADE_TIME = v243->static_fields->DEFAULT_FADE_TIME;
+      v233 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
+      v234 = &Method_CombineResultEffectComponent__setSkillResultInfo_b__145_1__;
 LABEL_209:
-      v248 = v236;
-      System_Action___ctor(v236, (Il2CppObject *)this, *v237, 0LL);
-      if ( !v233 )
+      v244 = v233;
+      System_Action___ctor(v233, (Il2CppObject *)this, *v234, 0LL);
+      if ( !v230 )
         goto LABEL_212;
-      CommonUI__maskFadeout((CommonUI_o *)v233, 1, DEFAULT_FADE_TIME, v248, 0LL);
+      CommonUI__maskFadeout((CommonUI_o *)v230, 1, DEFAULT_FADE_TIME, v244, 0LL);
       return;
     case 0x11:
       if ( !this->fields.isSecretTreasureDeviceRankUpAnim )
         goto LABEL_205;
 LABEL_181:
-      v233 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-      v234 = AvalonSceneManager_TypeInfo;
+      v230 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v231 = AvalonSceneManager_TypeInfo;
       if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
-        v234 = AvalonSceneManager_TypeInfo;
+        v231 = AvalonSceneManager_TypeInfo;
       }
-      DEFAULT_FADE_TIME = v234->static_fields->DEFAULT_FADE_TIME;
-      v236 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
-      v237 = &Method_CombineResultEffectComponent__setSkillResultInfo_b__145_0__;
+      DEFAULT_FADE_TIME = v231->static_fields->DEFAULT_FADE_TIME;
+      v233 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
+      v234 = &Method_CombineResultEffectComponent__setSkillResultInfo_b__145_0__;
       goto LABEL_209;
     case 0x14:
       commandCardExceedResultWindow = this->fields.commandCardExceedResultWindow;
-      v230 = this->fields.baseUsrSvtData;
+      v227 = this->fields.baseUsrSvtData;
       commandCardIndex = this->fields.commandCardIndex;
       commandCardExceedCount = this->fields.commandCardExceedCount;
       Instance = (__int64)CombineResultEffectComponent__GetTransformedServantInfo(this, 0, v51);
@@ -10891,7 +10870,7 @@ LABEL_181:
         goto LABEL_212;
       CommandCardExceedResultWindowComponent__SetCommandCardExceedInfo(
         commandCardExceedResultWindow,
-        v230,
+        v227,
         commandCardIndex,
         commandCardExceedCount,
         0,
@@ -10902,7 +10881,7 @@ LABEL_181:
       Instance = (__int64)this->fields.friendshipExceedResultWindow;
       if ( !Instance )
         goto LABEL_212;
-      FriendshipExceedResultWindowComponent__SetFriendshipExceedInfo_44512876(
+      FriendshipExceedResultWindowComponent__SetFriendshipExceedInfo_44581172(
         (FriendshipExceedResultWindowComponent_o *)Instance,
         this->fields.baseUsrSvtData,
         this->fields.oldFriendShipRank,
@@ -10915,40 +10894,40 @@ LABEL_181:
       Instance = (__int64)UserServantEntity__getAppendSkillInfo((UserServantEntity_o *)Instance, 0LL);
       if ( !Instance )
         goto LABEL_212;
-      v163 = *(System_Int32_array **)(Instance + 16);
-      v164 = this->fields.skillResultInfoWindow;
-      v165 = this->fields.targetId;
-      v166 = this->fields.targetLv;
-      v167 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
-      System_Action___ctor(v167, (Il2CppObject *)this, Method_CombineResultEffectComponent_EndDisp__, 0LL);
-      v168 = this->fields.baseUsrSvtData;
-      if ( !v168 )
+      v161 = *(System_Int32_array **)(Instance + 16);
+      v162 = this->fields.skillResultInfoWindow;
+      v163 = this->fields.targetId;
+      v164 = this->fields.targetLv;
+      v165 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
+      System_Action___ctor(v165, (Il2CppObject *)this, Method_CombineResultEffectComponent_EndDisp__, 0LL);
+      v166 = this->fields.baseUsrSvtData;
+      if ( !v166 )
         goto LABEL_212;
-      v169 = this->fields.targetIdOld;
-      v170 = this->fields.targetLvOld;
-      v172 = *(_QWORD *)&v168->fields.svtId.fields.currentCryptoKey;
-      v171 = *(_QWORD *)&v168->fields.svtId.fields.fakeValue;
+      v167 = this->fields.targetIdOld;
+      v168 = this->fields.targetLvOld;
+      v170 = *(_QWORD *)&v166->fields.svtId.fields.currentCryptoKey;
+      v169 = *(_QWORD *)&v166->fields.svtId.fields.fakeValue;
       if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-      *(_QWORD *)&v269.fields.currentCryptoKey = v172;
-      *(_QWORD *)&v269.fields.fakeValue = v171;
-      Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v269, 0LL);
-      if ( !v164 )
+      *(_QWORD *)&v263.fields.currentCryptoKey = v170;
+      *(_QWORD *)&v263.fields.fakeValue = v169;
+      Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v263, 0LL);
+      if ( !v162 )
         goto LABEL_212;
       SkillUpResultWindowComponent__OpenSkillUpResultInfo(
+        v162,
+        v163,
         v164,
         v165,
-        v166,
         v167,
-        v169,
-        v170,
+        v168,
         Instance,
-        v163,
+        v161,
         this->fields.targetLvOld == 0,
         1,
         1,
         (System_String_o *)StringLiteral_1/*""*/,
-        v253);
+        0LL);
       return;
     default:
       return;
@@ -10964,10 +10943,10 @@ void __fastcall CombineResultEffectComponent__stopVoice(CombineResultEffectCompo
   int32_t v6; // w2
   int32_t v7; // w3
 
-  if ( (byte_4A02373 & 1) == 0 )
+  if ( (byte_4A0C4CB & 1) == 0 )
   {
-    sub_1B64A00(&SoundManager_TypeInfo, method);
-    byte_4A02373 = 1;
+    sub_1B686D4(&SoundManager_TypeInfo, method);
+    byte_4A0C4CB = 1;
   }
   if ( this->fields.player )
   {
@@ -10978,7 +10957,7 @@ void __fastcall CombineResultEffectComponent__stopVoice(CombineResultEffectCompo
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
     SoundManager__stopVoice(asstName, vcName, 0.0, 0LL);
     p_player->klass = 0LL;
-    sub_1B649A4(p_player, 0, v6, v7);
+    sub_1B68678(p_player, 0, v6, v7);
   }
 }
 
@@ -11001,15 +10980,15 @@ void __fastcall CombineResultEffectComponent_ClickDelegate___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B64AC0(v6) & 1) == 0 )
+  if ( (sub_1B68794(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B64C78(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B64B28(v10, 0LL);
+      v10 = sub_1B6894C(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B687FC(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -11021,9 +11000,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19B0E80;
+  this->fields.m_target = (Il2CppObject *)sub_19B4AE8;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19B0E38;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19B4AA0;
 }
 
 
@@ -11039,14 +11018,14 @@ System_IAsyncResult_o *__fastcall CombineResultEffectComponent_ClickDelegate__Be
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isDecide;
-  if ( (byte_4A0238B & 1) == 0 )
+  if ( (byte_4A0C4E3 & 1) == 0 )
   {
-    sub_1B64A00(&bool_TypeInfo, isDecide);
-    byte_4A0238B = 1;
+    sub_1B686D4(&bool_TypeInfo, isDecide);
+    byte_4A0C4E3 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1B649B4(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1B68688(this, v9, callback, object);
 }
 
 
@@ -11055,7 +11034,7 @@ void __fastcall CombineResultEffectComponent_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B649B8(result, 0LL, method);
+  sub_1B6868C(result, 0LL, method);
 }
 
 
@@ -11091,25 +11070,25 @@ void __fastcall CombineResultEffectComponent_CostumeSkillInfoManager___ctor(
   int32_t v8; // w2
   int32_t v9; // w3
 
-  if ( (byte_4A0238C & 1) == 0 )
+  if ( (byte_4A0C4E4 & 1) == 0 )
   {
-    sub_1B64A00(&Method_System_Collections_Generic_List_CombineResultEffectComponent_CostumeSkillInfo___ctor__, method);
-    sub_1B64A00(&System_Collections_Generic_List_CombineResultEffectComponent_CostumeSkillInfo__TypeInfo, v3);
-    byte_4A0238C = 1;
+    sub_1B686D4(&Method_System_Collections_Generic_List_CombineResultEffectComponent_CostumeSkillInfo___ctor__, method);
+    sub_1B686D4(&System_Collections_Generic_List_CombineResultEffectComponent_CostumeSkillInfo__TypeInfo, v3);
+    byte_4A0C4E4 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v4 = (System_Collections_Generic_List_object__o *)sub_1B64C4C(System_Collections_Generic_List_CombineResultEffectComponent_CostumeSkillInfo__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1B68920(System_Collections_Generic_List_CombineResultEffectComponent_CostumeSkillInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_34AF794 *)Method_System_Collections_Generic_List_CombineResultEffectComponent_CostumeSkillInfo___ctor__);
+    (const MethodInfo_34BBA44 *)Method_System_Collections_Generic_List_CombineResultEffectComponent_CostumeSkillInfo___ctor__);
   this->fields.beforeSkillList = (struct System_Collections_Generic_List_CombineResultEffectComponent_CostumeSkillInfo__o *)v4;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)v4, v5, v6);
-  v7 = (System_Collections_Generic_List_object__o *)sub_1B64C4C(System_Collections_Generic_List_CombineResultEffectComponent_CostumeSkillInfo__TypeInfo);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)v4, v5, v6);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1B68920(System_Collections_Generic_List_CombineResultEffectComponent_CostumeSkillInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_34AF794 *)Method_System_Collections_Generic_List_CombineResultEffectComponent_CostumeSkillInfo___ctor__);
+    (const MethodInfo_34BBA44 *)Method_System_Collections_Generic_List_CombineResultEffectComponent_CostumeSkillInfo___ctor__);
   this->fields.afterSkillList = (struct System_Collections_Generic_List_CombineResultEffectComponent_CostumeSkillInfo__o *)v7;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.afterSkillList, (int32_t)v7, v8, v9);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.afterSkillList, (int32_t)v7, v8, v9);
 }
 
 
@@ -11131,13 +11110,13 @@ void __fastcall CombineResultEffectComponent_CostumeSkillInfoManager__AddAfterSk
   __int64 size; // x10
   Il2CppClass **v16; // x8
 
-  if ( (byte_4A0238E & 1) == 0 )
+  if ( (byte_4A0C4E6 & 1) == 0 )
   {
-    sub_1B64A00(&CombineResultEffectComponent_CostumeSkillInfo_TypeInfo, *(_QWORD *)&id);
-    sub_1B64A00(&Method_System_Collections_Generic_List_CombineResultEffectComponent_CostumeSkillInfo__Add__, v7);
-    byte_4A0238E = 1;
+    sub_1B686D4(&CombineResultEffectComponent_CostumeSkillInfo_TypeInfo, *(_QWORD *)&id);
+    sub_1B686D4(&Method_System_Collections_Generic_List_CombineResultEffectComponent_CostumeSkillInfo__Add__, v7);
+    byte_4A0C4E6 = 1;
   }
-  v8 = sub_1B64C4C(CombineResultEffectComponent_CostumeSkillInfo_TypeInfo);
+  v8 = sub_1B68920(CombineResultEffectComponent_CostumeSkillInfo_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8
     || (*(_DWORD *)(v8 + 16) = id,
@@ -11148,7 +11127,7 @@ void __fastcall CombineResultEffectComponent_CostumeSkillInfoManager__AddAfterSk
         ++afterSkillList->fields._version,
         !items) )
   {
-    sub_1B64C5C(afterSkillList, v10);
+    sub_1B68930(afterSkillList, v10);
   }
   size = afterSkillList->fields._size;
   if ( (unsigned int)size >= items->max_length )
@@ -11156,14 +11135,14 @@ void __fastcall CombineResultEffectComponent_CostumeSkillInfoManager__AddAfterSk
     System_Collections_Generic_List_object___AddWithResize(
       afterSkillList,
       (Il2CppObject *)v8,
-      *(const MethodInfo_34AFFC8 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+      *(const MethodInfo_34BC278 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
   }
   else
   {
     v16 = &items->obj.klass + size;
     afterSkillList->fields._size = size + 1;
     v16[4] = (Il2CppClass *)v8;
-    sub_1B649A4((ServantStatusBattleListViewItem_o *)(v16 + 4), v8, v11, v12);
+    sub_1B68678((ServantStatusBattleListViewItem_o *)(v16 + 4), v8, v11, v12);
   }
 }
 
@@ -11186,13 +11165,13 @@ void __fastcall CombineResultEffectComponent_CostumeSkillInfoManager__AddBeforeS
   __int64 size; // x10
   Il2CppClass **v16; // x8
 
-  if ( (byte_4A0238D & 1) == 0 )
+  if ( (byte_4A0C4E5 & 1) == 0 )
   {
-    sub_1B64A00(&CombineResultEffectComponent_CostumeSkillInfo_TypeInfo, *(_QWORD *)&id);
-    sub_1B64A00(&Method_System_Collections_Generic_List_CombineResultEffectComponent_CostumeSkillInfo__Add__, v7);
-    byte_4A0238D = 1;
+    sub_1B686D4(&CombineResultEffectComponent_CostumeSkillInfo_TypeInfo, *(_QWORD *)&id);
+    sub_1B686D4(&Method_System_Collections_Generic_List_CombineResultEffectComponent_CostumeSkillInfo__Add__, v7);
+    byte_4A0C4E5 = 1;
   }
-  v8 = sub_1B64C4C(CombineResultEffectComponent_CostumeSkillInfo_TypeInfo);
+  v8 = sub_1B68920(CombineResultEffectComponent_CostumeSkillInfo_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8
     || (*(_DWORD *)(v8 + 16) = id,
@@ -11203,7 +11182,7 @@ void __fastcall CombineResultEffectComponent_CostumeSkillInfoManager__AddBeforeS
         ++beforeSkillList->fields._version,
         !items) )
   {
-    sub_1B64C5C(beforeSkillList, v10);
+    sub_1B68930(beforeSkillList, v10);
   }
   size = beforeSkillList->fields._size;
   if ( (unsigned int)size >= items->max_length )
@@ -11211,14 +11190,14 @@ void __fastcall CombineResultEffectComponent_CostumeSkillInfoManager__AddBeforeS
     System_Collections_Generic_List_object___AddWithResize(
       beforeSkillList,
       (Il2CppObject *)v8,
-      *(const MethodInfo_34AFFC8 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+      *(const MethodInfo_34BC278 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
   }
   else
   {
     v16 = &items->obj.klass + size;
     beforeSkillList->fields._size = size + 1;
     v16[4] = (Il2CppClass *)v8;
-    sub_1B649A4((ServantStatusBattleListViewItem_o *)(v16 + 4), v8, v11, v12);
+    sub_1B68678((ServantStatusBattleListViewItem_o *)(v16 + 4), v8, v11, v12);
   }
 }
 
@@ -11231,20 +11210,20 @@ CombineResultEffectComponent_CostumeSkillInfo_o *__fastcall CombineResultEffectC
 {
   System_Collections_Generic_List_object__o *afterSkillList; // x0
 
-  if ( (byte_4A02390 & 1) == 0 )
+  if ( (byte_4A0C4E8 & 1) == 0 )
   {
-    sub_1B64A00(
+    sub_1B686D4(
       &Method_System_Collections_Generic_List_CombineResultEffectComponent_CostumeSkillInfo__get_Item__,
       *(_QWORD *)&index);
-    byte_4A02390 = 1;
+    byte_4A0C4E8 = 1;
   }
   afterSkillList = (System_Collections_Generic_List_object__o *)this->fields.afterSkillList;
   if ( !afterSkillList )
-    sub_1B64C5C(0LL, *(_QWORD *)&index);
+    sub_1B68930(0LL, *(_QWORD *)&index);
   return (CombineResultEffectComponent_CostumeSkillInfo_o *)System_Collections_Generic_List_object___get_Item(
                                                               afterSkillList,
                                                               index,
-                                                              (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_CombineResultEffectComponent_CostumeSkillInfo__get_Item__);
+                                                              (const MethodInfo_34BBFA8 *)Method_System_Collections_Generic_List_CombineResultEffectComponent_CostumeSkillInfo__get_Item__);
 }
 
 
@@ -11256,16 +11235,16 @@ int32_t __fastcall CombineResultEffectComponent_CostumeSkillInfoManager__GetAfte
   struct System_Collections_Generic_List_CombineResultEffectComponent_CostumeSkillInfo__o *afterSkillList; // x8
 
   v2 = this;
-  if ( (byte_4A02391 & 1) == 0 )
+  if ( (byte_4A0C4E9 & 1) == 0 )
   {
-    this = (CombineResultEffectComponent_CostumeSkillInfoManager_o *)sub_1B64A00(
+    this = (CombineResultEffectComponent_CostumeSkillInfoManager_o *)sub_1B686D4(
                                                                        &Method_System_Collections_Generic_List_CombineResultEffectComponent_CostumeSkillInfo__get_Count__,
                                                                        method);
-    byte_4A02391 = 1;
+    byte_4A0C4E9 = 1;
   }
   afterSkillList = v2->fields.afterSkillList;
   if ( !afterSkillList )
-    sub_1B64C5C(this, method);
+    sub_1B68930(this, method);
   return afterSkillList->fields._size;
 }
 
@@ -11278,20 +11257,20 @@ CombineResultEffectComponent_CostumeSkillInfo_o *__fastcall CombineResultEffectC
 {
   System_Collections_Generic_List_object__o *beforeSkillList; // x0
 
-  if ( (byte_4A0238F & 1) == 0 )
+  if ( (byte_4A0C4E7 & 1) == 0 )
   {
-    sub_1B64A00(
+    sub_1B686D4(
       &Method_System_Collections_Generic_List_CombineResultEffectComponent_CostumeSkillInfo__get_Item__,
       *(_QWORD *)&index);
-    byte_4A0238F = 1;
+    byte_4A0C4E7 = 1;
   }
   beforeSkillList = (System_Collections_Generic_List_object__o *)this->fields.beforeSkillList;
   if ( !beforeSkillList )
-    sub_1B64C5C(0LL, *(_QWORD *)&index);
+    sub_1B68930(0LL, *(_QWORD *)&index);
   return (CombineResultEffectComponent_CostumeSkillInfo_o *)System_Collections_Generic_List_object___get_Item(
                                                               beforeSkillList,
                                                               index,
-                                                              (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_CombineResultEffectComponent_CostumeSkillInfo__get_Item__);
+                                                              (const MethodInfo_34BBFA8 *)Method_System_Collections_Generic_List_CombineResultEffectComponent_CostumeSkillInfo__get_Item__);
 }
 
 
@@ -11314,14 +11293,14 @@ void __fastcall CombineResultEffectComponent_MessageDelegate___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B64AC0(v6) & 1) != 0 )
+  if ( (sub_1B68794(v6) & 1) != 0 )
   {
     if ( v8 == 1 )
     {
-      v9 = (Il2CppObject *)sub_19B0F04;
+      v9 = (Il2CppObject *)sub_19B4B6C;
 LABEL_8:
       this->fields.m_target = v9;
       goto LABEL_9;
@@ -11331,20 +11310,20 @@ LABEL_8:
   {
     if ( !v8 )
     {
-      v9 = (Il2CppObject *)sub_19B0EE4;
+      v9 = (Il2CppObject *)sub_19B4B4C;
       goto LABEL_8;
     }
     if ( !object )
     {
-      v11 = sub_1B64C78(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B64B28(v11, 0LL);
+      v11 = sub_1B6894C(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B687FC(v11, 0LL);
     }
   }
   v10 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
   this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
   this->fields.original_method_info = v10;
 LABEL_9:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19B0E9C;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19B4B04;
 }
 
 
@@ -11358,7 +11337,7 @@ System_IAsyncResult_o *__fastcall CombineResultEffectComponent_MessageDelegate__
   System_String_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = message;
-  return (System_IAsyncResult_o *)sub_1B649B4(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_1B68688(this, &v6, callback, object);
 }
 
 
@@ -11367,7 +11346,7 @@ void __fastcall CombineResultEffectComponent_MessageDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B649B8(result, 0LL, method);
+  sub_1B6868C(result, 0LL, method);
 }
 
 
@@ -11390,15 +11369,15 @@ void __fastcall CombineResultEffectComponent___c___cctor(const MethodInfo *metho
   int32_t v3; // w2
   int32_t v4; // w3
 
-  if ( (byte_4A02392 & 1) == 0 )
+  if ( (byte_4A0C4EA & 1) == 0 )
   {
-    sub_1B64A00(&CombineResultEffectComponent___c_TypeInfo, v1);
-    byte_4A02392 = 1;
+    sub_1B686D4(&CombineResultEffectComponent___c_TypeInfo, v1);
+    byte_4A0C4EA = 1;
   }
-  v2 = (Il2CppObject *)sub_1B64C4C(CombineResultEffectComponent___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B68920(CombineResultEffectComponent___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   CombineResultEffectComponent___c_TypeInfo->static_fields->__9 = (struct CombineResultEffectComponent___c_o *)v2;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)CombineResultEffectComponent___c_TypeInfo->static_fields,
     (int32_t)v2,
     v3,
@@ -11421,8 +11400,8 @@ int32_t __fastcall CombineResultEffectComponent___c___SetSecretTreasureDeviceInf
         const MethodInfo *method)
 {
   if ( !a || !b )
-    sub_1B64C5C(this, a);
-  return System_Int32__CompareTo_62190088((_DWORD)a + 24, b->fields.priority, 0LL);
+    sub_1B68930(this, a);
+  return System_Int32__CompareTo_62224428((_DWORD)a + 24, b->fields.priority, 0LL);
 }
 
 
@@ -11478,15 +11457,15 @@ void __fastcall CombineResultEffectComponent___c__DisplayClass145_1___setSkillRe
   struct CombineResultEffectComponent_ClickDelegate_o *callback; // x8
 
   v2 = this;
-  if ( (byte_4A02393 & 1) == 0 )
+  if ( (byte_4A0C4EB & 1) == 0 )
   {
-    sub_1B64A00(&CombineResultEffectComponent_ClickDelegate_TypeInfo, method);
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, v3);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
-    this = (CombineResultEffectComponent___c__DisplayClass145_1_o *)sub_1B64A00(
+    sub_1B686D4(&CombineResultEffectComponent_ClickDelegate_TypeInfo, method);
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, v3);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
+    this = (CombineResultEffectComponent___c__DisplayClass145_1_o *)sub_1B686D4(
                                                                       &Method_CombineResultEffectComponent___c__DisplayClass145_1__setSkillResultInfo_b__4__,
                                                                       v5);
-    byte_4A02393 = 1;
+    byte_4A0C4EB = 1;
   }
   CS___8__locals1 = v2->fields.CS___8__locals1;
   if ( !CS___8__locals1 )
@@ -11497,7 +11476,7 @@ void __fastcall CombineResultEffectComponent___c__DisplayClass145_1___setSkillRe
   effect = (UnityEngine_Object_o *)_4__this->fields.effect;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__DestroyImmediate_69137664(effect, 0LL);
+  UnityEngine_Object__DestroyImmediate_69172004(effect, 0LL);
   v11 = v2->fields.CS___8__locals1;
   if ( !v11 )
     goto LABEL_24;
@@ -11505,7 +11484,7 @@ void __fastcall CombineResultEffectComponent___c__DisplayClass145_1___setSkillRe
   if ( !this )
     goto LABEL_24;
   this[4].monitor = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this[4].monitor, 0, v9, v10);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this[4].monitor, 0, v9, v10);
   v12 = v2->fields.CS___8__locals1;
   if ( !v12 )
     goto LABEL_24;
@@ -11521,7 +11500,7 @@ void __fastcall CombineResultEffectComponent___c__DisplayClass145_1___setSkillRe
     goto LABEL_24;
   if ( this[5].klass )
   {
-    this = (CombineResultEffectComponent___c__DisplayClass145_1_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    this = (CombineResultEffectComponent___c__DisplayClass145_1_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v14 = v2->fields.CS___8__locals1;
     if ( v14 )
     {
@@ -11533,14 +11512,14 @@ void __fastcall CombineResultEffectComponent___c__DisplayClass145_1___setSkillRe
         v18 = (CommonUI_o *)this;
         if ( !_9__4 )
         {
-          _9__4 = (CombineResultEffectComponent_ClickDelegate_o *)sub_1B64C4C(CombineResultEffectComponent_ClickDelegate_TypeInfo);
+          _9__4 = (CombineResultEffectComponent_ClickDelegate_o *)sub_1B68920(CombineResultEffectComponent_ClickDelegate_TypeInfo);
           CombineResultEffectComponent_ClickDelegate___ctor(
             _9__4,
             (Il2CppObject *)v2,
             Method_CombineResultEffectComponent___c__DisplayClass145_1__setSkillResultInfo_b__4__,
             v19);
           v2->fields.__9__4 = _9__4;
-          sub_1B649A4((ServantStatusBattleListViewItem_o *)&v2->fields.__9__4, (int32_t)_9__4, v20, v21);
+          sub_1B68678((ServantStatusBattleListViewItem_o *)&v2->fields.__9__4, (int32_t)_9__4, v20, v21);
         }
         if ( v18 )
         {
@@ -11550,7 +11529,7 @@ void __fastcall CombineResultEffectComponent___c__DisplayClass145_1___setSkillRe
       }
     }
 LABEL_24:
-    sub_1B64C5C(this, method);
+    sub_1B68930(this, method);
   }
   if ( this[9].monitor )
   {
@@ -11581,7 +11560,7 @@ void __fastcall CombineResultEffectComponent___c__DisplayClass145_1___setSkillRe
     || (v4 = this,
         (this = (CombineResultEffectComponent___c__DisplayClass145_1_o *)CS___8__locals1->fields.__4__this) == 0LL) )
   {
-    sub_1B64C5C(this, decide);
+    sub_1B68930(this, decide);
   }
   LODWORD(this[8].monitor) = 0;
   CombineResultEffectComponent__EndDisp((CombineResultEffectComponent_o *)this, (const MethodInfo *)decide);
@@ -11619,15 +11598,15 @@ void __fastcall CombineResultEffectComponent___c__DisplayClass145_2___setSkillRe
   struct CombineResultEffectComponent_o *v11; // x8
 
   v3 = this;
-  if ( (byte_4A02394 & 1) == 0 )
+  if ( (byte_4A0C4EC & 1) == 0 )
   {
-    sub_1B64A00(&Method_NetworkManager_getRequest_CardServantFlagRequest___, decide);
-    sub_1B64A00(&NetworkManager_TypeInfo, v4);
-    sub_1B64A00(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
-    this = (CombineResultEffectComponent___c__DisplayClass145_2_o *)sub_1B64A00(
+    sub_1B686D4(&Method_NetworkManager_getRequest_CardServantFlagRequest___, decide);
+    sub_1B686D4(&NetworkManager_TypeInfo, v4);
+    sub_1B686D4(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
+    this = (CombineResultEffectComponent___c__DisplayClass145_2_o *)sub_1B686D4(
                                                                       &Method_CombineResultEffectComponent___c__DisplayClass145_2__setSkillResultInfo_b__7__,
                                                                       v6);
-    byte_4A02394 = 1;
+    byte_4A0C4EC = 1;
   }
   _4__this = v3->fields.__4__this;
   if ( !_4__this )
@@ -11636,24 +11615,24 @@ void __fastcall CombineResultEffectComponent___c__DisplayClass145_2___setSkillRe
   _9__7 = v3->fields.__9__7;
   if ( !_9__7 )
   {
-    _9__7 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64C4C(NetworkManager_ResultCallbackFunc_TypeInfo);
+    _9__7 = (NetworkManager_ResultCallbackFunc_o *)sub_1B68920(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
       _9__7,
       (Il2CppObject *)v3,
       Method_CombineResultEffectComponent___c__DisplayClass145_2__setSkillResultInfo_b__7__,
       0LL);
     v3->fields.__9__7 = _9__7;
-    sub_1B649A4((ServantStatusBattleListViewItem_o *)&v3->fields.__9__7, (int32_t)_9__7, v9, v10);
+    sub_1B68678((ServantStatusBattleListViewItem_o *)&v3->fields.__9__7, (int32_t)_9__7, v9, v10);
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   this = (CombineResultEffectComponent___c__DisplayClass145_2_o *)NetworkManager__getRequest_object_(
                                                                     _9__7,
-                                                                    (const MethodInfo_2EBD2C4 *)Method_NetworkManager_getRequest_CardServantFlagRequest___);
+                                                                    (const MethodInfo_2ECB448 *)Method_NetworkManager_getRequest_CardServantFlagRequest___);
   v11 = v3->fields.__4__this;
   if ( !v11 || !this )
 LABEL_11:
-    sub_1B64C5C(this, decide);
+    sub_1B68930(this, decide);
   CardServantFlagRequest__beginRequest(
     (CardServantFlagRequest_o *)this,
     v11->fields.targetSvtId,
@@ -11702,13 +11681,13 @@ void __fastcall CombineResultEffectComponent___c__DisplayClass167_0___OpenNotifi
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v11; // 0:x0.16
 
   v2 = this;
-  if ( (byte_4A02395 & 1) == 0 )
+  if ( (byte_4A0C4ED & 1) == 0 )
   {
-    sub_1B64A00(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-    this = (CombineResultEffectComponent___c__DisplayClass167_0_o *)sub_1B64A00(
+    sub_1B686D4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
+    this = (CombineResultEffectComponent___c__DisplayClass167_0_o *)sub_1B686D4(
                                                                       &ServantCharaGraphEXOpenManager_TypeInfo,
                                                                       v3);
-    byte_4A02395 = 1;
+    byte_4A0C4ED = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -11722,7 +11701,7 @@ void __fastcall CombineResultEffectComponent___c__DisplayClass167_0___OpenNotifi
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v11.fields.currentCryptoKey = v7;
   *(_QWORD *)&v11.fields.fakeValue = v6;
-  v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46182092(v11, 0LL);
+  v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46239416(v11, 0LL);
   limitCount = v2->fields.limitCount;
   v10 = v8;
   if ( !ServantCharaGraphEXOpenManager_TypeInfo->_2.cctor_finished )
@@ -11732,7 +11711,7 @@ void __fastcall CombineResultEffectComponent___c__DisplayClass167_0___OpenNotifi
   this = (CombineResultEffectComponent___c__DisplayClass167_0_o *)v2->fields.__4__this;
   if ( !this )
 LABEL_11:
-    sub_1B64C5C(this, method);
+    sub_1B68930(this, method);
   CombineResultEffectComponent__FadeoutProcess((CombineResultEffectComponent_o *)this, method);
 }
 
@@ -11763,15 +11742,15 @@ void __fastcall CombineResultEffectComponent___c__DisplayClass173_0___ProfileCha
   int32_t v13; // w2
   int32_t v14; // w3
 
-  if ( (byte_4A02396 & 1) == 0 )
+  if ( (byte_4A0C4EE & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, isDcd);
-    sub_1B64A00(&AvalonSceneManager_TypeInfo, v4);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_1B64A00(&Method_CombineResultEffectComponent___c__DisplayClass173_0__ProfileChangeDecideAction_b__1__, v6);
-    byte_4A02396 = 1;
+    sub_1B686D4(&System_Action_TypeInfo, isDcd);
+    sub_1B686D4(&AvalonSceneManager_TypeInfo, v4);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    sub_1B686D4(&Method_CombineResultEffectComponent___c__DisplayClass173_0__ProfileChangeDecideAction_b__1__, v6);
+    byte_4A0C4EE = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v9 = AvalonSceneManager_TypeInfo;
   v10 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -11783,17 +11762,17 @@ void __fastcall CombineResultEffectComponent___c__DisplayClass173_0___ProfileCha
   _9__1 = this->fields.__9__1;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)this,
       Method_CombineResultEffectComponent___c__DisplayClass173_0__ProfileChangeDecideAction_b__1__,
       0LL);
     this->fields.__9__1 = _9__1;
-    sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.__9__1, (int32_t)_9__1, v13, v14);
+    sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.__9__1, (int32_t)_9__1, v13, v14);
   }
   if ( !v10 )
-    sub_1B64C5C(Instance, v8);
+    sub_1B68930(Instance, v8);
   CommonUI__maskFadeout(v10, 1, DEFAULT_FADE_TIME, _9__1, 0LL);
 }
 
@@ -11805,17 +11784,16 @@ void __fastcall CombineResultEffectComponent___c__DisplayClass173_0___ProfileCha
   __int64 v3; // x1
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
-  const MethodInfo *v6; // x2
   struct CombineResultEffectComponent_o *_4__this; // x8
-  CommonUI_o *v8; // x20
+  CommonUI_o *v7; // x20
 
-  if ( (byte_4A02397 & 1) == 0 )
+  if ( (byte_4A0C4EF & 1) == 0 )
   {
-    sub_1B64A00(&AvalonSceneManager_TypeInfo, method);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    byte_4A02397 = 1;
+    sub_1B686D4(&AvalonSceneManager_TypeInfo, method);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
+    byte_4A0C4EF = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   CommonUI__CloseServantStatusDialog((CommonUI_o *)Instance, 0LL, 0LL);
@@ -11825,14 +11803,14 @@ void __fastcall CombineResultEffectComponent___c__DisplayClass173_0___ProfileCha
   Instance = (Il2CppObject *)_4__this->fields.limitUpResultCheck;
   if ( !Instance )
     goto LABEL_10;
-  LimitUpResultCheckComponent__SetActiveInfoWindow((LimitUpResultCheckComponent_o *)Instance, 1, v6);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v8 = (CommonUI_o *)Instance;
+  LimitUpResultCheckComponent__SetActiveInfoWindow((LimitUpResultCheckComponent_o *)Instance, 1, 0LL);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v7 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
-  if ( !v8 )
+  if ( !v7 )
 LABEL_10:
-    sub_1B64C5C(Instance, v5);
-  CommonUI__maskFadein(v8, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0LL, 0LL);
+    sub_1B68930(Instance, v5);
+  CommonUI__maskFadein(v7, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0LL, 0LL);
   ActionExtensions__Call(this->fields.finishCallback, 0LL);
 }

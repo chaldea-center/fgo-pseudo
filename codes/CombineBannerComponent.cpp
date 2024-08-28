@@ -14,16 +14,16 @@ void __fastcall CombineBannerComponent__onOpenWebView(CombineBannerComponent_o *
   System_String_o *WebViewAddress; // x19
 
   v2 = this;
-  if ( (byte_4A02066 & 1) == 0 )
+  if ( (byte_4A0C1C0 & 1) == 0 )
   {
-    sub_1B64A00(&NetworkManager_TypeInfo, method);
-    sub_1B64A00(&WebViewManager_TypeInfo, v3);
-    this = (CombineBannerComponent_o *)sub_1B64A00(&StringLiteral_1/*""*/, v4);
-    byte_4A02066 = 1;
+    sub_1B686D4(&NetworkManager_TypeInfo, method);
+    sub_1B686D4(&WebViewManager_TypeInfo, v3);
+    this = (CombineBannerComponent_o *)sub_1B686D4(&StringLiteral_1/*""*/, v4);
+    byte_4A0C1C0 = 1;
   }
   eventEntity = v2->fields.eventEntity;
   if ( !eventEntity )
-    sub_1B64C5C(this, method);
+    sub_1B68930(this, method);
   linkBody = eventEntity->fields.linkBody;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -43,15 +43,15 @@ void __fastcall CombineBannerComponent__setBannerInfo(
   int32_t v6; // w2
   int32_t v7; // w3
 
-  if ( (byte_4A02065 & 1) == 0 )
+  if ( (byte_4A0C1BF & 1) == 0 )
   {
-    sub_1B64A00(&AtlasManager_TypeInfo, eventData);
-    byte_4A02065 = 1;
+    sub_1B686D4(&AtlasManager_TypeInfo, eventData);
+    byte_4A0C1BF = 1;
   }
   bannerSprite = this->fields.bannerSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetBanner_37547444(bannerSprite, eventData, 0LL);
+  AtlasManager__SetBanner_37604692(bannerSprite, eventData, 0LL);
   this->fields.eventEntity = eventData;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.eventEntity, (int32_t)eventData, v6, v7);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.eventEntity, (int32_t)eventData, v6, v7);
 }

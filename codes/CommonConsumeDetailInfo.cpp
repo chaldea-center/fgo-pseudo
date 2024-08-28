@@ -21,22 +21,22 @@ void __fastcall CommonConsumeDetailInfo___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.CommonConsumeEntity = commonConsumeEntity;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)commonConsumeEntity, v9, v10);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)commonConsumeEntity, v9, v10);
   this->fields.targetEntity = targetEntity;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.targetEntity, (int32_t)targetEntity, v11, v12);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.targetEntity, (int32_t)targetEntity, v11, v12);
   this->fields.userOwnStatusEntity = userOwnStatusEntity;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.userOwnStatusEntity,
     (int32_t)userOwnStatusEntity,
     v13,
     v14);
   v17 = this->fields.CommonConsumeEntity;
   if ( !v17 )
-    sub_1B64C5C(v15, v16);
+    sub_1B68930(v15, v16);
   this->fields._Num_k__BackingField = v17->fields.num;
   TargetName = CommonConsumeDetailInfo__GetTargetName(this, v16);
   this->fields._Name_k__BackingField = TargetName;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields._Name_k__BackingField, (int32_t)TargetName, v19, v20);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields._Name_k__BackingField, (int32_t)TargetName, v19, v20);
   this->fields._IsOwnedEnoughly_k__BackingField = CommonConsumeDetailInfo__CheckIsOwnedEnoughly(this, v21);
 }
 
@@ -52,11 +52,11 @@ bool __fastcall CommonConsumeDetailInfo__CheckIsOwnedEnoughly(
   Il2CppObject *userOwnStatusEntity; // x8
   __int64 v8; // x11
 
-  if ( (byte_49FE64D & 1) == 0 )
+  if ( (byte_4A0877D & 1) == 0 )
   {
-    sub_1B64A00(&ItemEntity_TypeInfo, method);
-    sub_1B64A00(&UserItemEntity_TypeInfo, v3);
-    byte_49FE64D = 1;
+    sub_1B686D4(&ItemEntity_TypeInfo, method);
+    sub_1B686D4(&UserItemEntity_TypeInfo, v3);
+    byte_4A0877D = 1;
   }
   targetEntity = this->fields.targetEntity;
   result = targetEntity
@@ -81,11 +81,11 @@ System_String_o *__fastcall CommonConsumeDetailInfo__GetTargetName(
   __int64 methodPtr_low; // x11
   System_String_o **p_monitor; // x8
 
-  if ( (byte_49FE64C & 1) == 0 )
+  if ( (byte_4A0877C & 1) == 0 )
   {
-    sub_1B64A00(&ItemEntity_TypeInfo, method);
-    sub_1B64A00(&StringLiteral_1/*""*/, v3);
-    byte_49FE64C = 1;
+    sub_1B686D4(&ItemEntity_TypeInfo, method);
+    sub_1B686D4(&StringLiteral_1/*""*/, v3);
+    byte_4A0877C = 1;
   }
   targetEntity = this->fields.targetEntity;
   if ( targetEntity
@@ -140,7 +140,7 @@ void __fastcall CommonConsumeDetailInfo__set_Name(
   int32_t v3; // w3
 
   this->fields._Name_k__BackingField = value;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)value,
     (int32_t)method,

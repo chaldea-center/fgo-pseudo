@@ -8,33 +8,56 @@ void __fastcall RoadmapBoardListViewItem___ctor(
         System_String_o *spriteName,
         const MethodInfo *method)
 {
-  RoadmapBoardListViewItem_o *v13; // x24
   int32_t v14; // w2
   int32_t v15; // w3
   int32_t v16; // w2
   int32_t v17; // w3
+  int32_t v18; // w2
+  int32_t v19; // w3
 
-  v13 = this;
-  ListViewItem___ctor_40376104((ListViewItem_o *)this, index, 0LL);
-  v13->fields._TabGroup_k__BackingField = tabGroup;
-  v13->fields._GroupIndex_k__BackingField = groupIndex;
-  v13->fields._BoardId_k__BackingField = boardId;
-  v13->fields._Atlas_k__BackingField = atlas;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&v13->fields._Atlas_k__BackingField, (int32_t)atlas, v14, v15);
-  v13->fields._SpriteName_k__BackingField = spriteName;
-  v13 = (RoadmapBoardListViewItem_o *)((char *)v13 + 136);
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)v13, (int32_t)spriteName, v16, v17);
-  LOBYTE(v13->monitor) = 0;
+  ListViewItem___ctor_40440732((ListViewItem_o *)this, index, 0LL);
+  this->fields._TabGroup_k__BackingField = tabGroup;
+  this->fields._GroupIndex_k__BackingField = groupIndex;
+  this->fields._BoardId_k__BackingField = boardId;
+  this->fields._Atlas_k__BackingField = atlas;
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields._Atlas_k__BackingField, (int32_t)atlas, v14, v15);
+  this->fields._SpriteName_k__BackingField = spriteName;
+  sub_1B68678(
+    (ServantStatusBattleListViewItem_o *)&this->fields._SpriteName_k__BackingField,
+    (int32_t)spriteName,
+    v16,
+    v17);
+  this->fields._BoardPrefab_k__BackingField = 0LL;
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields._BoardPrefab_k__BackingField, 0, v18, v19);
 }
 
 
-void __fastcall RoadmapBoardListViewItem___ctor_45025648(
+void __fastcall RoadmapBoardListViewItem___ctor_45076780(
         RoadmapBoardListViewItem_o *this,
         int32_t index,
+        int32_t tabGroup,
+        int32_t groupIndex,
+        int32_t boardId,
+        UnityEngine_GameObject_o *boardPrefab,
         const MethodInfo *method)
 {
-  ListViewItem___ctor_40376104((ListViewItem_o *)this, index, 0LL);
-  this->fields._IsDisplayUnimplementedLabel_k__BackingField = 1;
+  int32_t v12; // w2
+  int32_t v13; // w3
+  int32_t v14; // w2
+  int32_t v15; // w3
+
+  ListViewItem___ctor_40440732((ListViewItem_o *)this, index, 0LL);
+  this->fields._TabGroup_k__BackingField = tabGroup;
+  this->fields._GroupIndex_k__BackingField = groupIndex;
+  this->fields._BoardId_k__BackingField = boardId;
+  this->fields._BoardPrefab_k__BackingField = boardPrefab;
+  sub_1B68678(
+    (ServantStatusBattleListViewItem_o *)&this->fields._BoardPrefab_k__BackingField,
+    (int32_t)boardPrefab,
+    v12,
+    v13);
+  this->fields._Atlas_k__BackingField = 0LL;
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields._Atlas_k__BackingField, 0, v14, v15);
 }
 
 
@@ -50,17 +73,17 @@ int32_t __fastcall RoadmapBoardListViewItem__get_BoardId(RoadmapBoardListViewIte
 }
 
 
-int32_t __fastcall RoadmapBoardListViewItem__get_GroupIndex(RoadmapBoardListViewItem_o *this, const MethodInfo *method)
-{
-  return this->fields._GroupIndex_k__BackingField;
-}
-
-
-bool __fastcall RoadmapBoardListViewItem__get_IsDisplayUnimplementedLabel(
+UnityEngine_GameObject_o *__fastcall RoadmapBoardListViewItem__get_BoardPrefab(
         RoadmapBoardListViewItem_o *this,
         const MethodInfo *method)
 {
-  return this->fields._IsDisplayUnimplementedLabel_k__BackingField;
+  return this->fields._BoardPrefab_k__BackingField;
+}
+
+
+int32_t __fastcall RoadmapBoardListViewItem__get_GroupIndex(RoadmapBoardListViewItem_o *this, const MethodInfo *method)
+{
+  return this->fields._GroupIndex_k__BackingField;
 }
 
 
@@ -86,7 +109,7 @@ void __fastcall RoadmapBoardListViewItem__set_Atlas(
   int32_t v3; // w3
 
   this->fields._Atlas_k__BackingField = value;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields._Atlas_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -103,21 +126,28 @@ void __fastcall RoadmapBoardListViewItem__set_BoardId(
 }
 
 
+void __fastcall RoadmapBoardListViewItem__set_BoardPrefab(
+        RoadmapBoardListViewItem_o *this,
+        UnityEngine_GameObject_o *value,
+        const MethodInfo *method)
+{
+  int32_t v3; // w3
+
+  this->fields._BoardPrefab_k__BackingField = value;
+  sub_1B68678(
+    (ServantStatusBattleListViewItem_o *)&this->fields._BoardPrefab_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
+}
+
+
 void __fastcall RoadmapBoardListViewItem__set_GroupIndex(
         RoadmapBoardListViewItem_o *this,
         int32_t value,
         const MethodInfo *method)
 {
   this->fields._GroupIndex_k__BackingField = value;
-}
-
-
-void __fastcall RoadmapBoardListViewItem__set_IsDisplayUnimplementedLabel(
-        RoadmapBoardListViewItem_o *this,
-        bool value,
-        const MethodInfo *method)
-{
-  this->fields._IsDisplayUnimplementedLabel_k__BackingField = value;
 }
 
 
@@ -129,7 +159,7 @@ void __fastcall RoadmapBoardListViewItem__set_SpriteName(
   int32_t v3; // w3
 
   this->fields._SpriteName_k__BackingField = value;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields._SpriteName_k__BackingField,
     (int32_t)value,
     (int32_t)method,

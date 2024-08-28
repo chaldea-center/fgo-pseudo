@@ -30,25 +30,25 @@ float __fastcall ShortestDistanceFromAllyServant__GetRatingBase(
   struct WarBoardRatingBaseEntity_o *ratingBase; // x8
 
   v11 = this;
-  if ( (byte_49FC720 & 1) == 0 )
+  if ( (byte_4A06848 & 1) == 0 )
   {
-    sub_1B64A00(&AStarSearch_TypeInfo, *(_QWORD *)&forceId);
-    sub_1B64A00(&Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__, v12);
-    sub_1B64A00(&Method_System_Collections_Generic_Dictionary_int__uint__get_Item__, v13);
-    this = (ShortestDistanceFromAllyServant_o *)sub_1B64A00(&WarBoardAIManager_TypeInfo, v14);
-    byte_49FC720 = 1;
+    sub_1B686D4(&AStarSearch_TypeInfo, *(_QWORD *)&forceId);
+    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__, v12);
+    sub_1B686D4(&Method_System_Collections_Generic_Dictionary_int__uint__get_Item__, v13);
+    this = (ShortestDistanceFromAllyServant_o *)sub_1B686D4(&WarBoardAIManager_TypeInfo, v14);
+    byte_4A06848 = 1;
   }
   if ( !targetSquare || !dicPiecePlaceData )
     goto LABEL_20;
   if ( System_Collections_Generic_Dictionary_int__uint___ContainsKey(
          dicPiecePlaceData,
          targetSquare->fields._squareIndex_k__BackingField,
-         (const MethodInfo_31320C8 *)Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__) )
+         (const MethodInfo_313FDF0 *)Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_int__uint___get_Item(
              dicPiecePlaceData,
              targetSquare->fields._squareIndex_k__BackingField,
-             (const MethodInfo_3131E40 *)Method_System_Collections_Generic_Dictionary_int__uint__get_Item__);
+             (const MethodInfo_313FB68 *)Method_System_Collections_Generic_Dictionary_int__uint__get_Item__);
     if ( !WarBoardAIManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo);
     PieceUnique = WarBoardAIManager__GetPieceUnique(Item, v15);
@@ -88,7 +88,7 @@ float __fastcall ShortestDistanceFromAllyServant__GetRatingBase(
                              - ratingBase->fields.adjustmentValueA2 * ((int)klass - 1)),
                        0.0);
 LABEL_20:
-            sub_1B64C5C(this, *(_QWORD *)&forceId);
+            sub_1B68930(this, *(_QWORD *)&forceId);
           }
         }
       }

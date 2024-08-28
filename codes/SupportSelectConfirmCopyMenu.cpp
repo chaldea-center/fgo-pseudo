@@ -1,9 +1,9 @@
 void __fastcall SupportSelectConfirmCopyMenu___ctor(SupportSelectConfirmCopyMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FB4F8 & 1) == 0 )
+  if ( (byte_4A055E9 & 1) == 0 )
   {
-    sub_1B64A00(&BaseDialog_TypeInfo, method);
-    byte_49FB4F8 = 1;
+    sub_1B686D4(&BaseDialog_TypeInfo, method);
+    byte_4A055E9 = 1;
   }
   this->fields.currentState = 2;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
@@ -17,14 +17,14 @@ void __fastcall SupportSelectConfirmCopyMenu__Close(SupportSelectConfirmCopyMenu
   __int64 v3; // x1
   System_Action_o *v4; // x20
 
-  if ( (byte_49FB4F4 & 1) == 0 )
+  if ( (byte_4A055E5 & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, method);
-    sub_1B64A00(&Method_SupportSelectConfirmCopyMenu_OnFinishedClose__, v3);
-    byte_49FB4F4 = 1;
+    sub_1B686D4(&System_Action_TypeInfo, method);
+    sub_1B686D4(&Method_SupportSelectConfirmCopyMenu_OnFinishedClose__, v3);
+    byte_4A055E5 = 1;
   }
   this->fields.currentState = 2;
-  v4 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_SupportSelectConfirmCopyMenu_OnFinishedClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v4, 0LL);
 }
@@ -38,17 +38,17 @@ void __fastcall SupportSelectConfirmCopyMenu__OnClickCancel(
   System_Reflection_MethodBase_o *v4; // x0
   struct SupportSelectConfirmCopyMenu_OnClickButtonEvent_o *onClickButton; // x8
 
-  if ( (byte_49FB4F6 & 1) == 0 )
+  if ( (byte_4A055E7 & 1) == 0 )
   {
-    sub_1B64A00(&Method_SupportSelectConfirmCopyMenu_OnClickCancel__, method);
-    byte_49FB4F6 = 1;
+    sub_1B686D4(&Method_SupportSelectConfirmCopyMenu_OnClickCancel__, method);
+    byte_4A055E7 = 1;
   }
   if ( this->fields.currentState == 1 )
   {
     v3 = Method_SupportSelectConfirmCopyMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_SupportSelectConfirmCopyMenu_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B64A18(Method_SupportSelectConfirmCopyMenu_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B649E4(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B686EC(Method_SupportSelectConfirmCopyMenu_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B686B8(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     onClickButton = this->fields.onClickButton;
     if ( onClickButton )
@@ -68,17 +68,17 @@ void __fastcall SupportSelectConfirmCopyMenu__OnClickDecide(
   System_Reflection_MethodBase_o *v4; // x0
   struct SupportSelectConfirmCopyMenu_OnClickButtonEvent_o *onClickButton; // x8
 
-  if ( (byte_49FB4F5 & 1) == 0 )
+  if ( (byte_4A055E6 & 1) == 0 )
   {
-    sub_1B64A00(&Method_SupportSelectConfirmCopyMenu_OnClickDecide__, method);
-    byte_49FB4F5 = 1;
+    sub_1B686D4(&Method_SupportSelectConfirmCopyMenu_OnClickDecide__, method);
+    byte_4A055E6 = 1;
   }
   if ( this->fields.currentState == 1 )
   {
     v3 = Method_SupportSelectConfirmCopyMenu_OnClickDecide__;
     if ( (*((_BYTE *)Method_SupportSelectConfirmCopyMenu_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B64A18(Method_SupportSelectConfirmCopyMenu_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B649E4(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B686EC(Method_SupportSelectConfirmCopyMenu_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B686B8(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0LL);
     onClickButton = this->fields.onClickButton;
     if ( onClickButton )
@@ -98,7 +98,7 @@ void __fastcall SupportSelectConfirmCopyMenu__OnFinishedClose(
   int32_t v3; // w3
 
   this->fields.onClickButton = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.onClickButton, 0, v2, v3);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.onClickButton, 0, v2, v3);
 }
 
 
@@ -139,18 +139,18 @@ void __fastcall SupportSelectConfirmCopyMenu__Open(
   int32_t v28; // w3
   System_Action_o *v29; // x20
 
-  if ( (byte_49FB4F3 & 1) == 0 )
+  if ( (byte_4A055E4 & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, baseDeckData);
-    sub_1B64A00(&LocalizationManager_TypeInfo, v9);
-    sub_1B64A00(&Method_SupportSelectConfirmCopyMenu_OnFinishedOpen__, v10);
-    sub_1B64A00(&StringLiteral_12368/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_TARGET_DECK"*/, v11);
-    sub_1B64A00(&StringLiteral_12367/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_MESSAGE"*/, v12);
-    sub_1B64A00(&StringLiteral_12369/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_TITLE"*/, v13);
-    sub_1B64A00(&StringLiteral_12364/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_BASE_DECK"*/, v14);
-    sub_1B64A00(&StringLiteral_12365/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_CANCEL"*/, v15);
-    sub_1B64A00(&StringLiteral_12366/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_DECIDE"*/, v16);
-    byte_49FB4F3 = 1;
+    sub_1B686D4(&System_Action_TypeInfo, baseDeckData);
+    sub_1B686D4(&LocalizationManager_TypeInfo, v9);
+    sub_1B686D4(&Method_SupportSelectConfirmCopyMenu_OnFinishedOpen__, v10);
+    sub_1B686D4(&StringLiteral_12369/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_TARGET_DECK"*/, v11);
+    sub_1B686D4(&StringLiteral_12368/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_MESSAGE"*/, v12);
+    sub_1B686D4(&StringLiteral_12370/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_TITLE"*/, v13);
+    sub_1B686D4(&StringLiteral_12365/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_BASE_DECK"*/, v14);
+    sub_1B686D4(&StringLiteral_12366/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_CANCEL"*/, v15);
+    sub_1B686D4(&StringLiteral_12367/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_DECIDE"*/, v16);
+    byte_4A055E4 = 1;
   }
   if ( this->fields.currentState == 2 )
   {
@@ -158,31 +158,31 @@ void __fastcall SupportSelectConfirmCopyMenu__Open(
     titleLabel = this->fields.titleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    baseDeckObj = LocalizationManager__Get((System_String_o *)StringLiteral_12369/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_TITLE"*/, 0LL);
+    baseDeckObj = LocalizationManager__Get((System_String_o *)StringLiteral_12370/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_TITLE"*/, 0LL);
     if ( !titleLabel )
       goto LABEL_16;
     UILabel__set_text(titleLabel, baseDeckObj, 0LL);
     messageLabel = this->fields.messageLabel;
-    baseDeckObj = LocalizationManager__Get((System_String_o *)StringLiteral_12367/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_MESSAGE"*/, 0LL);
+    baseDeckObj = LocalizationManager__Get((System_String_o *)StringLiteral_12368/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_MESSAGE"*/, 0LL);
     if ( !messageLabel )
       goto LABEL_16;
     UILabel__set_text(messageLabel, baseDeckObj, 0LL);
     baseDeckTitleLabel = this->fields.baseDeckTitleLabel;
-    baseDeckObj = LocalizationManager__Get((System_String_o *)StringLiteral_12364/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_BASE_DECK"*/, 0LL);
+    baseDeckObj = LocalizationManager__Get((System_String_o *)StringLiteral_12365/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_BASE_DECK"*/, 0LL);
     if ( !baseDeckTitleLabel )
       goto LABEL_16;
     UILabel__set_text(baseDeckTitleLabel, baseDeckObj, 0LL);
     targetDeckTitleLabel = this->fields.targetDeckTitleLabel;
-    baseDeckObj = LocalizationManager__Get((System_String_o *)StringLiteral_12368/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_TARGET_DECK"*/, 0LL);
+    baseDeckObj = LocalizationManager__Get((System_String_o *)StringLiteral_12369/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_TARGET_DECK"*/, 0LL);
     if ( !targetDeckTitleLabel )
       goto LABEL_16;
     UILabel__set_text(targetDeckTitleLabel, baseDeckObj, 0LL);
     decideButtonLabel = this->fields.decideButtonLabel;
-    baseDeckObj = LocalizationManager__Get((System_String_o *)StringLiteral_12366/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_DECIDE"*/, 0LL);
+    baseDeckObj = LocalizationManager__Get((System_String_o *)StringLiteral_12367/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_DECIDE"*/, 0LL);
     if ( !decideButtonLabel
       || (UILabel__set_text(decideButtonLabel, baseDeckObj, 0LL),
           cancelButtonLabel = this->fields.cancelButtonLabel,
-          baseDeckObj = LocalizationManager__Get((System_String_o *)StringLiteral_12365/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_CANCEL"*/, 0LL),
+          baseDeckObj = LocalizationManager__Get((System_String_o *)StringLiteral_12366/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_CANCEL"*/, 0LL),
           !cancelButtonLabel)
       || (UILabel__set_text(cancelButtonLabel, baseDeckObj, 0LL),
           (baseDeckObj = (System_String_o *)this->fields.baseDeckObj) == 0LL)
@@ -195,7 +195,7 @@ void __fastcall SupportSelectConfirmCopyMenu__Open(
           (baseDeckObj = (System_String_o *)this->fields.targetDeckObj) == 0LL) )
     {
 LABEL_16:
-      sub_1B64C5C(baseDeckObj, v19);
+      sub_1B68930(baseDeckObj, v19);
     }
     SupportSelectDeckListViewItemDraw__SetSupportData(
       (SupportSelectDeckListViewItemDraw_o *)baseDeckObj,
@@ -204,8 +204,8 @@ LABEL_16:
       1,
       v26);
     this->fields.onClickButton = onClickButton;
-    sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.onClickButton, (int32_t)onClickButton, v27, v28);
-    v29 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+    sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.onClickButton, (int32_t)onClickButton, v27, v28);
+    v29 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
     System_Action___ctor(v29, (Il2CppObject *)this, Method_SupportSelectConfirmCopyMenu_OnFinishedOpen__, 0LL);
     BaseDialog__Open((BaseDialog_o *)this, v29, 0, 0LL);
   }
@@ -227,10 +227,10 @@ void __fastcall SupportSelectConfirmCopyMenu__add_onClickButton(
   SupportSelectConfirmCopyMenu_OnClickButtonEvent_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_49FB4F1 & 1) == 0 )
+  if ( (byte_4A055E2 & 1) == 0 )
   {
-    sub_1B64A00(&SupportSelectConfirmCopyMenu_OnClickButtonEvent_TypeInfo, value);
-    byte_49FB4F1 = 1;
+    sub_1B686D4(&SupportSelectConfirmCopyMenu_OnClickButtonEvent_TypeInfo, value);
+    byte_4A055E2 = 1;
   }
   onClickButton = this->fields.onClickButton;
   p_onClickButton = &this->fields.onClickButton;
@@ -243,13 +243,13 @@ void __fastcall SupportSelectConfirmCopyMenu__add_onClickButton(
       if ( (SupportSelectConfirmCopyMenu_OnClickButtonEvent_c *)v8->klass != SupportSelectConfirmCopyMenu_OnClickButtonEvent_TypeInfo )
         break;
     }
-    v9 = sub_1B9FEF0(p_onClickButton, v8, v6);
+    v9 = sub_1BA3BC4(p_onClickButton, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B64F1C(v8);
+  sub_1B68BF0(v8);
   SupportSelectConfirmCopyMenu__remove_onClickButton(v11, v12, v13);
 }
 
@@ -258,12 +258,12 @@ System_String_o *__fastcall SupportSelectConfirmCopyMenu__get_closeBtnPath(
         SupportSelectConfirmCopyMenu_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_49FB4F7 & 1) == 0 )
+  if ( (byte_4A055E8 & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_4655/*"ConfirmWindow/CancelButton"*/, method);
-    byte_49FB4F7 = 1;
+    sub_1B686D4(&StringLiteral_4653/*"ConfirmWindow/CancelButton"*/, method);
+    byte_4A055E8 = 1;
   }
-  return (System_String_o *)StringLiteral_4655/*"ConfirmWindow/CancelButton"*/;
+  return (System_String_o *)StringLiteral_4653/*"ConfirmWindow/CancelButton"*/;
 }
 
 
@@ -284,10 +284,10 @@ void __fastcall SupportSelectConfirmCopyMenu__remove_onClickButton(
   SupportSelectConfirmCopyMenu_OnClickButtonEvent_o *v14; // x3
   const MethodInfo *v15; // x4
 
-  if ( (byte_49FB4F2 & 1) == 0 )
+  if ( (byte_4A055E3 & 1) == 0 )
   {
-    sub_1B64A00(&SupportSelectConfirmCopyMenu_OnClickButtonEvent_TypeInfo, value);
-    byte_49FB4F2 = 1;
+    sub_1B686D4(&SupportSelectConfirmCopyMenu_OnClickButtonEvent_TypeInfo, value);
+    byte_4A055E3 = 1;
   }
   onClickButton = this->fields.onClickButton;
   p_onClickButton = &this->fields.onClickButton;
@@ -300,13 +300,13 @@ void __fastcall SupportSelectConfirmCopyMenu__remove_onClickButton(
       if ( (SupportSelectConfirmCopyMenu_OnClickButtonEvent_c *)v8->klass != SupportSelectConfirmCopyMenu_OnClickButtonEvent_TypeInfo )
         break;
     }
-    v9 = sub_1B9FEF0(p_onClickButton, v8, v6);
+    v9 = sub_1BA3BC4(p_onClickButton, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B64F1C(v8);
+  sub_1B68BF0(v8);
   SupportSelectConfirmCopyMenu__Open(v11, v12, v13, v14, v15);
 }
 
@@ -329,15 +329,15 @@ void __fastcall SupportSelectConfirmCopyMenu_OnClickButtonEvent___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B64AC0(v6) & 1) == 0 )
+  if ( (sub_1B68794(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B64C78(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B64B28(v10, 0LL);
+      v10 = sub_1B6894C(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B687FC(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -349,9 +349,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19A9130;
+  this->fields.m_target = (Il2CppObject *)sub_19ACD98;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19A90E8;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19ACD50;
 }
 
 
@@ -367,14 +367,14 @@ System_IAsyncResult_o *__fastcall SupportSelectConfirmCopyMenu_OnClickButtonEven
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isDecide;
-  if ( (byte_49FB4F9 & 1) == 0 )
+  if ( (byte_4A055EA & 1) == 0 )
   {
-    sub_1B64A00(&bool_TypeInfo, isDecide);
-    byte_49FB4F9 = 1;
+    sub_1B686D4(&bool_TypeInfo, isDecide);
+    byte_4A055EA = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1B649B4(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1B68688(this, v9, callback, object);
 }
 
 
@@ -383,7 +383,7 @@ void __fastcall SupportSelectConfirmCopyMenu_OnClickButtonEvent__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B649B8(result, 0LL, method);
+  sub_1B6868C(result, 0LL, method);
 }
 
 

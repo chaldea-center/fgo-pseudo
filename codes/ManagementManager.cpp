@@ -20,48 +20,48 @@ void __fastcall ManagementManager___cctor(const MethodInfo *method)
   int32_t v18; // w2
   int32_t v19; // w3
 
-  if ( (byte_49FE2D2 & 1) == 0 )
+  if ( (byte_4A08402 & 1) == 0 )
   {
-    sub_1B64A00(&ManagementManager_TypeInfo, v1);
-    sub_1B64A00(&StringLiteral_7996/*"IsNotificationStatusSend"*/, v4);
-    sub_1B64A00(&StringLiteral_8008/*"IsReBootCacheClearKey"*/, v5);
-    sub_1B64A00(&StringLiteral_20826/*"ja-JP"*/, v6);
-    sub_1B64A00(&StringLiteral_24799/*"yyyy年MM月dd日HH時mm分"*/, v7);
-    byte_49FE2D2 = 1;
+    sub_1B686D4(&ManagementManager_TypeInfo, v1);
+    sub_1B686D4(&StringLiteral_7998/*"IsNotificationStatusSend"*/, v4);
+    sub_1B686D4(&StringLiteral_8010/*"IsReBootCacheClearKey"*/, v5);
+    sub_1B686D4(&StringLiteral_20834/*"ja-JP"*/, v6);
+    sub_1B686D4(&StringLiteral_24811/*"yyyy年MM月dd日HH時mm分"*/, v7);
+    byte_4A08402 = 1;
   }
-  ManagementManager_TypeInfo->static_fields->PushStateSendedKey = (struct System_String_o *)StringLiteral_7996/*"IsNotificationStatusSend"*/;
-  sub_1B649A4(
+  ManagementManager_TypeInfo->static_fields->PushStateSendedKey = (struct System_String_o *)StringLiteral_7998/*"IsNotificationStatusSend"*/;
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)ManagementManager_TypeInfo->static_fields,
-    StringLiteral_7996/*"IsNotificationStatusSend"*/,
+    StringLiteral_7998/*"IsNotificationStatusSend"*/,
     v2,
     v3);
-  v8 = StringLiteral_8008/*"IsReBootCacheClearKey"*/;
+  v8 = StringLiteral_8010/*"IsReBootCacheClearKey"*/;
   static_fields = ManagementManager_TypeInfo->static_fields;
-  static_fields->RebootCacheClearKey = (struct System_String_o *)StringLiteral_8008/*"IsReBootCacheClearKey"*/;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&static_fields->RebootCacheClearKey, v8, v10, v11);
-  v12 = StringLiteral_24799/*"yyyy年MM月dd日HH時mm分"*/;
+  static_fields->RebootCacheClearKey = (struct System_String_o *)StringLiteral_8010/*"IsReBootCacheClearKey"*/;
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&static_fields->RebootCacheClearKey, v8, v10, v11);
+  v12 = StringLiteral_24811/*"yyyy年MM月dd日HH時mm分"*/;
   v13 = ManagementManager_TypeInfo->static_fields;
-  v13->DATE_TIME_DISP_FORMAT = (struct System_String_o *)StringLiteral_24799/*"yyyy年MM月dd日HH時mm分"*/;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&v13->DATE_TIME_DISP_FORMAT, v12, v14, v15);
-  v16 = StringLiteral_20826/*"ja-JP"*/;
+  v13->DATE_TIME_DISP_FORMAT = (struct System_String_o *)StringLiteral_24811/*"yyyy年MM月dd日HH時mm分"*/;
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&v13->DATE_TIME_DISP_FORMAT, v12, v14, v15);
+  v16 = StringLiteral_20834/*"ja-JP"*/;
   v17 = ManagementManager_TypeInfo->static_fields;
-  v17->DEFAULT_CULTURE_NAME = (struct System_String_o *)StringLiteral_20826/*"ja-JP"*/;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&v17->DEFAULT_CULTURE_NAME, v16, v18, v19);
+  v17->DEFAULT_CULTURE_NAME = (struct System_String_o *)StringLiteral_20834/*"ja-JP"*/;
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&v17->DEFAULT_CULTURE_NAME, v16, v18, v19);
   ManagementManager_TypeInfo->static_fields->isDuringStartup = 1;
 }
 
 
 void __fastcall ManagementManager___ctor(ManagementManager_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FE2D1 & 1) == 0 )
+  if ( (byte_4A08401 & 1) == 0 )
   {
-    sub_1B64A00(&Method_SingletonMonoBehaviour_ManagementManager___ctor__, method);
-    byte_49FE2D1 = 1;
+    sub_1B686D4(&Method_SingletonMonoBehaviour_ManagementManager___ctor__, method);
+    byte_4A08401 = 1;
   }
   this->fields.downloadParallelMax = 3;
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_36EED48 *)Method_SingletonMonoBehaviour_ManagementManager___ctor__);
+    (const MethodInfo_36F7AB4 *)Method_SingletonMonoBehaviour_ManagementManager___ctor__);
 }
 
 
@@ -95,63 +95,63 @@ void __fastcall ManagementManager__AdManagerInitializeErrorLogOutputRatio(
   float v28; // [xsp+Ch] [xbp-34h] BYREF
 
   v28 = ratio;
-  if ( (byte_49FE2BC & 1) == 0 )
+  if ( (byte_4A083EC & 1) == 0 )
   {
-    sub_1B64A00(&UnityEngine_Debug_TypeInfo, errorText);
-    sub_1B64A00(&string___TypeInfo, v8);
-    sub_1B64A00(&StringLiteral_838/*"):"*/, v9);
-    sub_1B64A00(&StringLiteral_6698/*"Firebase.FirebaseApp"*/, v10);
-    this = (ManagementManager_o *)sub_1B64A00(&StringLiteral_797/*"(ratio: "*/, v11);
-    byte_49FE2BC = 1;
+    sub_1B686D4(&UnityEngine_Debug_TypeInfo, errorText);
+    sub_1B686D4(&string___TypeInfo, v8);
+    sub_1B686D4(&StringLiteral_837/*"):"*/, v9);
+    sub_1B686D4(&StringLiteral_6697/*"Firebase.FirebaseApp"*/, v10);
+    this = (ManagementManager_o *)sub_1B686D4(&StringLiteral_796/*"(ratio: "*/, v11);
+    byte_4A083EC = 1;
   }
   if ( !exceptionMessage )
     goto LABEL_19;
-  if ( System_String__Contains(exceptionMessage, (System_String_o *)StringLiteral_6698/*"Firebase.FirebaseApp"*/, 0LL) )
+  if ( System_String__Contains(exceptionMessage, (System_String_o *)StringLiteral_6697/*"Firebase.FirebaseApp"*/, 0LL) )
   {
     if ( UnityEngine_Random__Range(0.0, 1.0, 0LL) >= ratio )
       return;
-    this = (ManagementManager_o *)sub_1B64AA8(string___TypeInfo, 5LL);
+    this = (ManagementManager_o *)sub_1B6877C(string___TypeInfo, 5LL);
     if ( this )
     {
       v14 = this;
       if ( !LODWORD(this->fields.m_CancellationTokenSource) )
         goto LABEL_20;
       *(_QWORD *)&this->fields.isInitializingData = errorText;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.isInitializingData, (int32_t)errorText, v12, v13);
+      sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.isInitializingData, (int32_t)errorText, v12, v13);
       if ( LODWORD(v14->fields.m_CancellationTokenSource) <= 1 )
         goto LABEL_20;
-      v17 = StringLiteral_797/*"(ratio: "*/;
-      v14->fields.AvalonSceneManager = (struct AvalonSceneManager_o *)StringLiteral_797/*"(ratio: "*/;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)&v14->fields.AvalonSceneManager, v17, v15, v16);
+      v17 = StringLiteral_796/*"(ratio: "*/;
+      v14->fields.AvalonSceneManager = (struct AvalonSceneManager_o *)StringLiteral_796/*"(ratio: "*/;
+      sub_1B68678((ServantStatusBattleListViewItem_o *)&v14->fields.AvalonSceneManager, v17, v15, v16);
       this = (ManagementManager_o *)System_Single__ToString(v18, (const MethodInfo *)&v28);
       if ( LODWORD(v14->fields.m_CancellationTokenSource) <= 2
         || (v14->fields.debugInfoRootObject = (struct UnityEngine_GameObject_o *)this,
-            sub_1B649A4((ServantStatusBattleListViewItem_o *)&v14->fields.debugInfoRootObject, (int32_t)this, v19, v20),
+            sub_1B68678((ServantStatusBattleListViewItem_o *)&v14->fields.debugInfoRootObject, (int32_t)this, v19, v20),
             LODWORD(v14->fields.m_CancellationTokenSource) <= 3)
-        || (v23 = StringLiteral_838/*"):"*/,
-            v14->fields.statusLabel = (struct UILabel_o *)StringLiteral_838/*"):"*/,
-            sub_1B649A4((ServantStatusBattleListViewItem_o *)&v14->fields.statusLabel, v23, v21, v22),
+        || (v23 = StringLiteral_837/*"):"*/,
+            v14->fields.statusLabel = (struct UILabel_o *)StringLiteral_837/*"):"*/,
+            sub_1B68678((ServantStatusBattleListViewItem_o *)&v14->fields.statusLabel, v23, v21, v22),
             LODWORD(v14->fields.m_CancellationTokenSource) <= 4) )
       {
 LABEL_20:
-        sub_1B64C64(this, errorText);
+        sub_1B68938(this, errorText);
       }
       v14->fields._videoPlayer_k__BackingField = (struct AvalonVideoPlayer_o *)exceptionMessage;
-      sub_1B649A4(
+      sub_1B68678(
         (ServantStatusBattleListViewItem_o *)&v14->fields._videoPlayer_k__BackingField,
         (int32_t)exceptionMessage,
         v24,
         v25);
-      v26 = (Il2CppObject *)System_String__Concat_61398664((System_String_array *)v14, 0LL);
+      v26 = (Il2CppObject *)System_String__Concat_61432996((System_String_array *)v14, 0LL);
       if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
       UnityEngine_Debug__LogError(v26, 0LL);
       return;
     }
 LABEL_19:
-    sub_1B64C5C(this, errorText);
+    sub_1B68930(this, errorText);
   }
-  v27 = (Il2CppObject *)System_String__Concat_61385136(errorText, exceptionMessage, 0LL);
+  v27 = (Il2CppObject *)System_String__Concat_61419468(errorText, exceptionMessage, 0LL);
   if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
   UnityEngine_Debug__LogError(v27, 0LL);
@@ -163,20 +163,20 @@ void __fastcall ManagementManager__Awake(ManagementManager_o *this, const Method
   __int64 v3; // x1
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_49FE2B8 & 1) == 0 )
+  if ( (byte_4A083E8 & 1) == 0 )
   {
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, method);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_ManagementManager__CheckInstance__, v3);
-    byte_49FE2B8 = 1;
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, method);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_ManagementManager__CheckInstance__, v3);
+    byte_4A083E8 = 1;
   }
   if ( !SingletonMonoBehaviour_object___CheckInstance(
           (SingletonMonoBehaviour_T__o *)this,
-          (const MethodInfo_36EEC9C *)Method_SingletonMonoBehaviour_ManagementManager__CheckInstance__) )
+          (const MethodInfo_36F7A08 *)Method_SingletonMonoBehaviour_ManagementManager__CheckInstance__) )
   {
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_69137476(gameObject, 0LL);
+    UnityEngine_Object__Destroy_69171816(gameObject, 0LL);
   }
 }
 
@@ -186,10 +186,10 @@ void __fastcall ManagementManager__BuildInfoDisp(ManagementManager_o *this, bool
 {
   const MethodInfo *v4; // x1
 
-  if ( (byte_49FE2CF & 1) == 0 )
+  if ( (byte_4A083FF & 1) == 0 )
   {
-    sub_1B64A00(&TerminalPramsManager_TypeInfo, boot);
-    byte_49FE2CF = 1;
+    sub_1B686D4(&TerminalPramsManager_TypeInfo, boot);
+    byte_4A083FF = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
@@ -202,10 +202,10 @@ void __fastcall ManagementManager__BuildInfoOff(ManagementManager_o *this, const
 {
   UnityEngine_GameObject_o *debugInfoRootObject; // x0
 
-  if ( (byte_49FE2CE & 1) == 0 )
+  if ( (byte_4A083FE & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_1/*""*/, method);
-    byte_49FE2CE = 1;
+    sub_1B686D4(&StringLiteral_1/*""*/, method);
+    byte_4A083FE = 1;
   }
   debugInfoRootObject = this->fields.debugInfoRootObject;
   if ( !debugInfoRootObject
@@ -213,7 +213,7 @@ void __fastcall ManagementManager__BuildInfoOff(ManagementManager_o *this, const
     || (UnityEngine_GameObject__SetActive(debugInfoRootObject, 0, 0LL),
         (debugInfoRootObject = (UnityEngine_GameObject_o *)this->fields.statusLabel) == 0LL) )
   {
-    sub_1B64C5C(debugInfoRootObject, method);
+    sub_1B68930(debugInfoRootObject, method);
   }
   UILabel__set_text((UILabel_o *)debugInfoRootObject, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
@@ -224,10 +224,10 @@ void __fastcall ManagementManager__CompletionStartup(const MethodInfo *method)
   __int64 v1; // x1
   ManagementManager_c *v2; // x0
 
-  if ( (byte_49FE2B6 & 1) == 0 )
+  if ( (byte_4A083E6 & 1) == 0 )
   {
-    sub_1B64A00(&ManagementManager_TypeInfo, v1);
-    byte_49FE2B6 = 1;
+    sub_1B686D4(&ManagementManager_TypeInfo, v1);
+    byte_4A083E6 = 1;
   }
   v2 = ManagementManager_TypeInfo;
   if ( !ManagementManager_TypeInfo->_2.cctor_finished )
@@ -248,14 +248,14 @@ void __fastcall ManagementManager__EndDifferentCreateUserServerDialog(
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_49FE2C4 & 1) == 0 )
+  if ( (byte_4A083F4 & 1) == 0 )
   {
-    sub_1B64A00(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, isDecide);
-    byte_49FE2C4 = 1;
+    sub_1B686D4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, isDecide);
+    byte_4A083F4 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1B64C5C(0LL, v4);
+    sub_1B68930(0LL, v4);
   AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, 4, 1, 0LL, 0LL);
 }
 
@@ -269,21 +269,21 @@ void __fastcall ManagementManager__EndLogDialog(ManagementManager_o *this, bool 
 // local variable allocation has failed, the output may be wrong!
 void __fastcall ManagementManager__EndQuitDialog(ManagementManager_o *this, bool isDecide, const MethodInfo *method)
 {
-  if ( (byte_49FE2C3 & 1) == 0 )
+  if ( (byte_4A083F3 & 1) == 0 )
   {
-    sub_1B64A00(&UnityEngine_Application_TypeInfo, isDecide);
-    byte_49FE2C3 = 1;
+    sub_1B686D4(&UnityEngine_Application_TypeInfo, isDecide);
+    byte_4A083F3 = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
-  UnityEngine_Application__Quit_68931432(0LL);
+  UnityEngine_Application__Quit_68965772(0LL);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 void __fastcall ManagementManager__EndRetryDialog(ManagementManager_o *this, bool isDecide, const MethodInfo *method)
 {
-  if ( (byte_49FE2C2 & 1) != 0 )
+  if ( (byte_4A083F2 & 1) != 0 )
   {
     if ( isDecide )
     {
@@ -294,14 +294,14 @@ LABEL_3:
   }
   else
   {
-    sub_1B64A00(&UnityEngine_Application_TypeInfo, isDecide);
-    byte_49FE2C2 = 1;
+    sub_1B686D4(&UnityEngine_Application_TypeInfo, isDecide);
+    byte_4A083F2 = 1;
     if ( isDecide )
       goto LABEL_3;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
-  UnityEngine_Application__Quit_68931432(0LL);
+  UnityEngine_Application__Quit_68965772(0LL);
 }
 
 
@@ -313,16 +313,16 @@ System_Collections_IEnumerator_o *__fastcall ManagementManager__InitializeAdMana
   int32_t v4; // w2
   int32_t v5; // w3
 
-  if ( (byte_49FE2BF & 1) == 0 )
+  if ( (byte_4A083EF & 1) == 0 )
   {
-    sub_1B64A00(&ManagementManager__InitializeAdManagerAndFirebase_d__34_TypeInfo, method);
-    byte_49FE2BF = 1;
+    sub_1B686D4(&ManagementManager__InitializeAdManagerAndFirebase_d__34_TypeInfo, method);
+    byte_4A083EF = 1;
   }
-  v3 = sub_1B64C4C(ManagementManager__InitializeAdManagerAndFirebase_d__34_TypeInfo);
+  v3 = sub_1B68920(ManagementManager__InitializeAdManagerAndFirebase_d__34_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -331,17 +331,17 @@ bool __fastcall ManagementManager__IsInitialized(ManagementManager_o *this, cons
 {
   ManagementManager_c *v2; // x0
 
-  if ( (byte_49FE2CB & 1) == 0 )
+  if ( (byte_4A083FB & 1) == 0 )
   {
-    sub_1B64A00(&ManagementManager_TypeInfo, method);
-    byte_49FE2CB = 1;
+    sub_1B686D4(&ManagementManager_TypeInfo, method);
+    byte_4A083FB = 1;
   }
   if ( !ManagementManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-  if ( !byte_49FDBC3 )
+  if ( !byte_4A07CF2 )
   {
-    sub_1B64A00(&ManagementManager_TypeInfo, method);
-    byte_49FDBC3 = 1;
+    sub_1B686D4(&ManagementManager_TypeInfo, method);
+    byte_4A07CF2 = 1;
   }
   v2 = ManagementManager_TypeInfo;
   if ( !ManagementManager_TypeInfo->_2.cctor_finished )
@@ -361,12 +361,12 @@ bool __fastcall ManagementManager__IsLoading(ManagementManager_o *this, const Me
   Il2CppObject *Instance; // x0
   __int64 v7; // x1
 
-  if ( (byte_49FE2CC & 1) == 0 )
+  if ( (byte_4A083FC & 1) == 0 )
   {
-    sub_1B64A00(&AssetManager_TypeInfo, method);
-    sub_1B64A00(&NetworkManager_TypeInfo, v2);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_WebViewManager__get_Instance__, v3);
-    byte_49FE2CC = 1;
+    sub_1B686D4(&AssetManager_TypeInfo, method);
+    sub_1B686D4(&NetworkManager_TypeInfo, v2);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_WebViewManager__get_Instance__, v3);
+    byte_4A083FC = 1;
   }
   v4 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -377,9 +377,9 @@ bool __fastcall ManagementManager__IsLoading(ManagementManager_o *this, const Me
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   if ( AssetManager__LoadIsBusy(0LL) )
     return 1;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_WebViewManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_WebViewManager__get_Instance__);
   if ( !Instance )
-    sub_1B64C5C(0LL, v7);
+    sub_1B68930(0LL, v7);
   return WebViewManager__get_IsBusy((WebViewManager_o *)Instance, 0LL);
 }
 
@@ -389,13 +389,13 @@ void __fastcall ManagementManager__NotifyRequestPermissionsResultFromPlugin(
         System_String_o *message,
         const MethodInfo *method)
 {
-  if ( (byte_49FE2BD & 1) == 0 )
+  if ( (byte_4A083ED & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_23984/*"true"*/, message);
-    byte_49FE2BD = 1;
+    sub_1B686D4(&StringLiteral_23996/*"true"*/, message);
+    byte_4A083ED = 1;
   }
   this->fields.isPermissionRequesting = 0;
-  if ( !System_String__op_Inequality(message, (System_String_o *)StringLiteral_23984/*"true"*/, 0LL) )
+  if ( !System_String__op_Inequality(message, (System_String_o *)StringLiteral_23996/*"true"*/, 0LL) )
     this->fields.isPermissionGranted = 1;
 }
 
@@ -408,11 +408,11 @@ void __fastcall ManagementManager__OnRuntimeMethodLoad(const MethodInfo *method)
   System_String_o *DEFAULT_CULTURE_NAME; // x19
   System_Globalization_CultureInfo_o *SpecificCulture; // x0
 
-  if ( (byte_49FE2D0 & 1) == 0 )
+  if ( (byte_4A08400 & 1) == 0 )
   {
-    sub_1B64A00(&System_Globalization_CultureInfo_TypeInfo, v1);
-    sub_1B64A00(&ManagementManager_TypeInfo, v2);
-    byte_49FE2D0 = 1;
+    sub_1B686D4(&System_Globalization_CultureInfo_TypeInfo, v1);
+    sub_1B686D4(&ManagementManager_TypeInfo, v2);
+    byte_4A08400 = 1;
   }
   v3 = ManagementManager_TypeInfo;
   if ( !ManagementManager_TypeInfo->_2.cctor_finished )
@@ -434,10 +434,10 @@ void __fastcall ManagementManager__RebootCacheClear(const MethodInfo *method)
   ManagementManager_c *v2; // x0
   ManagementManager_c *v3; // x0
 
-  if ( (byte_49FE2B7 & 1) == 0 )
+  if ( (byte_4A083E7 & 1) == 0 )
   {
-    sub_1B64A00(&ManagementManager_TypeInfo, v1);
-    byte_49FE2B7 = 1;
+    sub_1B686D4(&ManagementManager_TypeInfo, v1);
+    byte_4A083E7 = 1;
   }
   v2 = ManagementManager_TypeInfo;
   if ( !ManagementManager_TypeInfo->_2.cctor_finished )
@@ -473,14 +473,14 @@ void __fastcall ManagementManager__Start(ManagementManager_o *this, const Method
   System_Collections_IEnumerator_o *v12; // x1
   System_RuntimeTypeHandle_o v13; // 0:w0.4
 
-  if ( (byte_49FE2B9 & 1) == 0 )
+  if ( (byte_4A083E9 & 1) == 0 )
   {
-    sub_1B64A00(&AndroidUtil_TypeInfo, method);
-    sub_1B64A00(&UnityEngine_Application_TypeInfo, v3);
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, v4);
-    sub_1B64A00(&System_Type_TypeInfo, v5);
-    sub_1B64A00(&UnityGamingServicesBehaviour_var, v6);
-    byte_49FE2B9 = 1;
+    sub_1B686D4(&AndroidUtil_TypeInfo, method);
+    sub_1B686D4(&UnityEngine_Application_TypeInfo, v3);
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, v4);
+    sub_1B686D4(&System_Type_TypeInfo, v5);
+    sub_1B686D4(&UnityGamingServicesBehaviour_var, v6);
+    byte_4A083E9 = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -503,11 +503,11 @@ void __fastcall ManagementManager__Start(ManagementManager_o *this, const Method
   v13.fields.value = v8;
   TypeFromHandle = System_Type__GetTypeFromHandle(v13, 0LL);
   if ( !gameObject )
-    sub_1B64C5C(TypeFromHandle, TypeFromHandle);
+    sub_1B68930(TypeFromHandle, TypeFromHandle);
   UnityEngine_GameObject__AddComponent(gameObject, TypeFromHandle, 0LL);
   ManagementManager__createMovieObj(this, v10);
   v12 = ManagementManager__startCheckAll(this, 0, 0, v11);
-  UnityEngine_MonoBehaviour__StartCoroutine_69122748((UnityEngine_MonoBehaviour_o *)this, v12, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_69157088((UnityEngine_MonoBehaviour_o *)this, v12, 0LL);
 }
 
 
@@ -518,10 +518,10 @@ void __fastcall ManagementManager__Update(ManagementManager_o *this, const Metho
   const MethodInfo *v4; // x1
 
   v2 = this;
-  if ( (byte_49FE2CD & 1) == 0 )
+  if ( (byte_4A083FD & 1) == 0 )
   {
-    this = (ManagementManager_o *)sub_1B64A00(&UnityEngine_Application_TypeInfo, method);
-    byte_49FE2CD = 1;
+    this = (ManagementManager_o *)sub_1B686D4(&UnityEngine_Application_TypeInfo, method);
+    byte_4A083FD = 1;
   }
   if ( v2->fields.IsQuitFlag )
   {
@@ -530,7 +530,7 @@ void __fastcall ManagementManager__Update(ManagementManager_o *this, const Metho
     {
       if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
-      UnityEngine_Application__Quit_68931432(0LL);
+      UnityEngine_Application__Quit_68965772(0LL);
     }
   }
 }
@@ -561,11 +561,11 @@ void __fastcall ManagementManager__callbackTerminalTopHome(
   Il2CppObject *Instance; // x0
   __int64 v6; // x1
 
-  if ( (byte_49FE2CA & 1) == 0 )
+  if ( (byte_4A083FA & 1) == 0 )
   {
-    sub_1B64A00(&ManagementManager_TypeInfo, result);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v3);
-    byte_49FE2CA = 1;
+    sub_1B686D4(&ManagementManager_TypeInfo, result);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v3);
+    byte_4A083FA = 1;
   }
   v4 = ManagementManager_TypeInfo;
   if ( !ManagementManager_TypeInfo->_2.cctor_finished )
@@ -574,9 +574,9 @@ void __fastcall ManagementManager__callbackTerminalTopHome(
     v4 = ManagementManager_TypeInfo;
   }
   v4->static_fields->isDuringStartup = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1B64C5C(0LL, v6);
+    sub_1B68930(0LL, v6);
   AvalonSceneManager__transitionSceneRefresh((AvalonSceneManager_o *)Instance, 34, 1, 0LL, 0, 0LL);
 }
 
@@ -592,22 +592,22 @@ void __fastcall ManagementManager__callbackTerminalTopLogin(
   __int64 v7; // x1
   __int64 v8; // x1
   ManagerConfig_c *v9; // x0
-  _BOOL8 _37381564; // x0
+  _BOOL8 _37438804; // x0
   System_String_o *v11; // x1
   const MethodInfo *v12; // x2
   NetworkManager_ResultCallbackFunc_o *v13; // x20
   Il2CppObject *Request_object; // x0
   __int64 v15; // x1
 
-  if ( (byte_49FE2C9 & 1) == 0 )
+  if ( (byte_4A083F9 & 1) == 0 )
   {
-    sub_1B64A00(&Method_ManagementManager_callbackTerminalTopHome__, result);
-    sub_1B64A00(&ManagerConfig_TypeInfo, v4);
-    sub_1B64A00(&Method_NetworkManager_getRequest_TopHomeRequest___, v5);
-    sub_1B64A00(&NetworkManager_TypeInfo, v6);
-    sub_1B64A00(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
-    sub_1B64A00(&TutorialFlag_TypeInfo, v8);
-    byte_49FE2C9 = 1;
+    sub_1B686D4(&Method_ManagementManager_callbackTerminalTopHome__, result);
+    sub_1B686D4(&ManagerConfig_TypeInfo, v4);
+    sub_1B686D4(&Method_NetworkManager_getRequest_TopHomeRequest___, v5);
+    sub_1B686D4(&NetworkManager_TypeInfo, v6);
+    sub_1B686D4(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
+    sub_1B686D4(&TutorialFlag_TypeInfo, v8);
+    byte_4A083F9 = 1;
   }
   v9 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -619,11 +619,11 @@ void __fastcall ManagementManager__callbackTerminalTopLogin(
     goto LABEL_9;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  _37381564 = TutorialFlag__Get_37381564(102, 0LL);
-  if ( _37381564 )
+  _37438804 = TutorialFlag__Get_37438804(102, 0LL);
+  if ( _37438804 )
   {
 LABEL_9:
-    v13 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64C4C(NetworkManager_ResultCallbackFunc_TypeInfo);
+    v13 = (NetworkManager_ResultCallbackFunc_o *)sub_1B68920(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
       v13,
       (Il2CppObject *)this,
@@ -633,14 +633,14 @@ LABEL_9:
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     Request_object = NetworkManager__getRequest_object_(
                        v13,
-                       (const MethodInfo_2EBD2C4 *)Method_NetworkManager_getRequest_TopHomeRequest___);
+                       (const MethodInfo_2ECB448 *)Method_NetworkManager_getRequest_TopHomeRequest___);
     if ( !Request_object )
-      sub_1B64C5C(0LL, v15);
+      sub_1B68930(0LL, v15);
     RequestBase__beginRequest((RequestBase_o *)Request_object, 0LL);
   }
   else
   {
-    ManagementManager__callbackTerminalTopHome((ManagementManager_o *)_37381564, v11, v12);
+    ManagementManager__callbackTerminalTopHome((ManagementManager_o *)_37438804, v11, v12);
   }
 }
 
@@ -664,11 +664,11 @@ void __fastcall ManagementManager__callbackTopHome(
   Il2CppObject *Instance; // x0
   __int64 v7; // x1
 
-  if ( (byte_49FE2C7 & 1) == 0 )
+  if ( (byte_4A083F7 & 1) == 0 )
   {
-    sub_1B64A00(&ManagementManager_TypeInfo, result);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v4);
-    byte_49FE2C7 = 1;
+    sub_1B686D4(&ManagementManager_TypeInfo, result);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v4);
+    byte_4A083F7 = 1;
   }
   v5 = ManagementManager_TypeInfo;
   if ( !ManagementManager_TypeInfo->_2.cctor_finished )
@@ -677,9 +677,9 @@ void __fastcall ManagementManager__callbackTopHome(
     v5 = ManagementManager_TypeInfo;
   }
   v5->static_fields->isDuringStartup = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1B64C5C(0LL, v7);
+    sub_1B68930(0LL, v7);
   AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, this->fields.scenetype, 0, 0LL, 0LL);
 }
 
@@ -701,15 +701,15 @@ void __fastcall ManagementManager__callbackTopLogin(
   Il2CppObject *Request_object; // x0
   __int64 v14; // x1
 
-  if ( (byte_49FE2C6 & 1) == 0 )
+  if ( (byte_4A083F6 & 1) == 0 )
   {
-    sub_1B64A00(&Method_ManagementManager_callbackTopHome__, result);
-    sub_1B64A00(&ManagerConfig_TypeInfo, v4);
-    sub_1B64A00(&Method_NetworkManager_getRequest_TopHomeRequest___, v5);
-    sub_1B64A00(&NetworkManager_TypeInfo, v6);
-    sub_1B64A00(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
-    sub_1B64A00(&TutorialFlag_TypeInfo, v8);
-    byte_49FE2C6 = 1;
+    sub_1B686D4(&Method_ManagementManager_callbackTopHome__, result);
+    sub_1B686D4(&ManagerConfig_TypeInfo, v4);
+    sub_1B686D4(&Method_NetworkManager_getRequest_TopHomeRequest___, v5);
+    sub_1B686D4(&NetworkManager_TypeInfo, v6);
+    sub_1B686D4(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
+    sub_1B686D4(&TutorialFlag_TypeInfo, v8);
+    byte_4A083F6 = 1;
   }
   v9 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -721,18 +721,18 @@ void __fastcall ManagementManager__callbackTopLogin(
     goto LABEL_9;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  if ( TutorialFlag__Get_37381564(102, 0LL) )
+  if ( TutorialFlag__Get_37438804(102, 0LL) )
   {
 LABEL_9:
-    v12 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64C4C(NetworkManager_ResultCallbackFunc_TypeInfo);
+    v12 = (NetworkManager_ResultCallbackFunc_o *)sub_1B68920(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(v12, (Il2CppObject *)this, Method_ManagementManager_callbackTopHome__, 0LL);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     Request_object = NetworkManager__getRequest_object_(
                        v12,
-                       (const MethodInfo_2EBD2C4 *)Method_NetworkManager_getRequest_TopHomeRequest___);
+                       (const MethodInfo_2ECB448 *)Method_NetworkManager_getRequest_TopHomeRequest___);
     if ( !Request_object )
-      sub_1B64C5C(0LL, v14);
+      sub_1B68930(0LL, v14);
     RequestBase__beginRequest((RequestBase_o *)Request_object, 0LL);
   }
   else
@@ -761,15 +761,15 @@ void __fastcall ManagementManager__createMovieObj(ManagementManager_o *this, con
   AvalonVideoPlayer_o *v17; // x20
   UnityEngine_GameObject_o *gameObject; // x1
 
-  if ( (byte_49FE2BA & 1) == 0 )
+  if ( (byte_4A083EA & 1) == 0 )
   {
-    sub_1B64A00(&Method_UnityEngine_GameObject_AddComponent_AvalonVideoPlayer___, method);
-    sub_1B64A00(&Method_UnityEngine_GameObject_GetComponent_Camera___, v3);
-    sub_1B64A00(&UnityEngine_GameObject_TypeInfo, v4);
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, v5);
-    sub_1B64A00(&StringLiteral_4622/*"CommonUI/UI Root/SystemUICamera"*/, v6);
-    sub_1B64A00(&StringLiteral_9113/*"MovieRoot"*/, v7);
-    byte_49FE2BA = 1;
+    sub_1B686D4(&Method_UnityEngine_GameObject_AddComponent_AvalonVideoPlayer___, method);
+    sub_1B686D4(&Method_UnityEngine_GameObject_GetComponent_Camera___, v3);
+    sub_1B686D4(&UnityEngine_GameObject_TypeInfo, v4);
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, v5);
+    sub_1B686D4(&StringLiteral_4620/*"CommonUI/UI Root/SystemUICamera"*/, v6);
+    sub_1B686D4(&StringLiteral_9115/*"MovieRoot"*/, v7);
+    byte_4A083EA = 1;
   }
   p_videoPlayer_k__BackingField = &this->fields._videoPlayer_k__BackingField;
   videoPlayer_k__BackingField = (UnityEngine_Object_o *)this->fields._videoPlayer_k__BackingField;
@@ -777,15 +777,15 @@ void __fastcall ManagementManager__createMovieObj(ManagementManager_o *this, con
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Inequality(videoPlayer_k__BackingField, 0LL, 0LL) )
   {
-    v10 = UnityEngine_GameObject__Find((System_String_o *)StringLiteral_4622/*"CommonUI/UI Root/SystemUICamera"*/, 0LL);
-    v11 = (UnityEngine_GameObject_o *)sub_1B64C4C(UnityEngine_GameObject_TypeInfo);
-    UnityEngine_GameObject___ctor(v11, (System_String_o *)StringLiteral_9113/*"MovieRoot"*/, 0LL);
+    v10 = UnityEngine_GameObject__Find((System_String_o *)StringLiteral_4620/*"CommonUI/UI Root/SystemUICamera"*/, 0LL);
+    v11 = (UnityEngine_GameObject_o *)sub_1B68920(UnityEngine_GameObject_TypeInfo);
+    UnityEngine_GameObject___ctor(v11, (System_String_o *)StringLiteral_9115/*"MovieRoot"*/, 0LL);
     if ( !v11
       || (v14 = UnityEngine_GameObject__AddComponent_object_(
                   v11,
-                  (const MethodInfo_2E8A6E4 *)Method_UnityEngine_GameObject_AddComponent_AvalonVideoPlayer___),
+                  (const MethodInfo_2E98868 *)Method_UnityEngine_GameObject_AddComponent_AvalonVideoPlayer___),
           *p_videoPlayer_k__BackingField = (struct AvalonVideoPlayer_o *)v14,
-          sub_1B649A4(
+          sub_1B68678(
             (ServantStatusBattleListViewItem_o *)&this->fields._videoPlayer_k__BackingField,
             (int32_t)v14,
             v15,
@@ -794,14 +794,14 @@ void __fastcall ManagementManager__createMovieObj(ManagementManager_o *this, con
       || (v17 = *p_videoPlayer_k__BackingField,
           Component_object = UnityEngine_GameObject__GetComponent_object_(
                                v10,
-                               (const MethodInfo_2E8A7CC *)Method_UnityEngine_GameObject_GetComponent_Camera___),
+                               (const MethodInfo_2E98950 *)Method_UnityEngine_GameObject_GetComponent_Camera___),
           !v17) )
     {
-      sub_1B64C5C(Component_object, v13);
+      sub_1B68930(Component_object, v13);
     }
     AvalonVideoPlayer__initialize(v17, (UnityEngine_Camera_o *)Component_object, 0LL);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-    GameObjectExtensions__SafeSetParent_33382640(v11, gameObject, 0LL);
+    GameObjectExtensions__SafeSetParent_33421184(v11, gameObject, 0LL);
   }
 }
 
@@ -812,14 +812,14 @@ int32_t __fastcall ManagementManager__get_DownloadParallelMax(const MethodInfo *
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_49FE2B4 & 1) == 0 )
+  if ( (byte_4A083E4 & 1) == 0 )
   {
-    sub_1B64A00(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__, v1);
-    byte_49FE2B4 = 1;
+    sub_1B686D4(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__, v1);
+    byte_4A083E4 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
   if ( !Instance )
-    sub_1B64C5C(0LL, v3);
+    sub_1B68930(0LL, v3);
   return HIDWORD(Instance[4].monitor);
 }
 
@@ -829,10 +829,10 @@ bool __fastcall ManagementManager__get_IsDuringStartup(const MethodInfo *method)
   __int64 v1; // x1
   ManagementManager_c *v2; // x0
 
-  if ( (byte_49FE2B5 & 1) == 0 )
+  if ( (byte_4A083E5 & 1) == 0 )
   {
-    sub_1B64A00(&ManagementManager_TypeInfo, v1);
-    byte_49FE2B5 = 1;
+    sub_1B686D4(&ManagementManager_TypeInfo, v1);
+    byte_4A083E5 = 1;
   }
   v2 = ManagementManager_TypeInfo;
   if ( !ManagementManager_TypeInfo->_2.cctor_finished )
@@ -880,24 +880,24 @@ void __fastcall ManagementManager__reboot(
   const MethodInfo *v27; // x3
   System_Collections_IEnumerator_o *v28; // x1
 
-  if ( (byte_49FE2BB & 1) == 0 )
+  if ( (byte_4A083EB & 1) == 0 )
   {
-    sub_1B64A00(&AtlasManager_TypeInfo, isLogin);
-    sub_1B64A00(&CTouch_TypeInfo, v7);
-    sub_1B64A00(&CommonEffectManager_TypeInfo, v8);
-    sub_1B64A00(&System_GC_TypeInfo, v9);
-    sub_1B64A00(&ManagementManager_TypeInfo, v10);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__, v11);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v12);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_AdManager__get_Instance__, v13);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__, v14);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v15);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__, v16);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__, v17);
-    sub_1B64A00(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v18);
-    sub_1B64A00(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v19);
-    sub_1B64A00(&SoundManager_TypeInfo, v20);
-    byte_49FE2BB = 1;
+    sub_1B686D4(&AtlasManager_TypeInfo, isLogin);
+    sub_1B686D4(&CTouch_TypeInfo, v7);
+    sub_1B686D4(&CommonEffectManager_TypeInfo, v8);
+    sub_1B686D4(&System_GC_TypeInfo, v9);
+    sub_1B686D4(&ManagementManager_TypeInfo, v10);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__, v11);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v12);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_AdManager__get_Instance__, v13);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__, v14);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v15);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__, v16);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__, v17);
+    sub_1B686D4(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v18);
+    sub_1B686D4(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v19);
+    sub_1B686D4(&SoundManager_TypeInfo, v20);
+    byte_4A083EB = 1;
   }
   if ( !this->fields.isInitializingData )
   {
@@ -909,30 +909,30 @@ void __fastcall ManagementManager__reboot(
       v21 = ManagementManager_TypeInfo;
     }
     v21->static_fields->isDuringStartup = 1;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
     if ( !Instance )
       goto LABEL_27;
     ScriptManager__reboot((ScriptManager_o *)Instance, 1, 0LL);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
     if ( !Instance )
       goto LABEL_27;
     AvalonSceneManager__reboot((AvalonSceneManager_o *)Instance, 0LL);
-    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_36EED50 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_36F7ABC *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
     if ( !Instance )
       goto LABEL_27;
     MissionNotifyManager__Reboot((MissionNotifyManager_o *)Instance, 0LL);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
       goto LABEL_27;
     CommonUI__Reboot((CommonUI_o *)Instance, isFadeInit, 0LL);
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     AtlasManager__Reboot(0LL);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__);
     if ( !Instance )
       goto LABEL_27;
     FlashingIconManager__Reboot((FlashingIconManager_o *)Instance, 0LL);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
     if ( !Instance )
       goto LABEL_27;
     SwitchParameterDisplayManager__Reboot((SwitchParameterDisplayManager_o *)Instance, 0LL);
@@ -945,25 +945,25 @@ void __fastcall ManagementManager__reboot(
     if ( !CTouch_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
     CTouch__reboot(0LL);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
     if ( !Instance
       || (ServantAssetLoadManager__EndRetryTransition((ServantAssetLoadManager_o *)Instance, 0LL),
-          (Instance = SingletonTemplate_object___get_Instance((const MethodInfo_36EED50 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__)) == 0LL) )
+          (Instance = SingletonTemplate_object___get_Instance((const MethodInfo_36F7ABC *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__)) == 0LL) )
     {
 LABEL_27:
-      sub_1B64C5C(Instance, v23);
+      sub_1B68930(Instance, v23);
     }
     PartyOrganizationUtility__ClearTemporaryPartyInfo((PartyOrganizationUtility_o *)Instance, 0LL);
     if ( !System_GC_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_GC_TypeInfo);
-    System_GC__Collect_62431196(0LL);
-    v24 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+    System_GC__Collect_62465536(0LL);
+    v24 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
     if ( !v24 )
-      sub_1B64C5C(0LL, v25);
+      sub_1B68930(0LL, v25);
     AdManager__Initialize((AdManager_o *)v24, 2, 0LL);
     FirebaseScript__Initialize(v26);
     v28 = ManagementManager__startCheckAll(this, 1, isLogin, v27);
-    UnityEngine_MonoBehaviour__StartCoroutine_69122748((UnityEngine_MonoBehaviour_o *)this, v28, 0LL);
+    UnityEngine_MonoBehaviour__StartCoroutine_69157088((UnityEngine_MonoBehaviour_o *)this, v28, 0LL);
   }
 }
 
@@ -978,18 +978,18 @@ void __fastcall ManagementManager__requestLogin(ManagementManager_o *this, const
   __int64 v8; // x1
   const MethodInfo *v9; // x3
 
-  if ( (byte_49FE2C5 & 1) == 0 )
+  if ( (byte_4A083F5 & 1) == 0 )
   {
-    sub_1B64A00(&NetworkManager_LoginCallbackFunc_TypeInfo, method);
-    sub_1B64A00(&Method_ManagementManager_callbackTopLogin__, v3);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, v4);
-    byte_49FE2C5 = 1;
+    sub_1B686D4(&NetworkManager_LoginCallbackFunc_TypeInfo, method);
+    sub_1B686D4(&Method_ManagementManager_callbackTopLogin__, v3);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, v4);
+    byte_4A083F5 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
-  v6 = (NetworkManager_LoginCallbackFunc_o *)sub_1B64C4C(NetworkManager_LoginCallbackFunc_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  v6 = (NetworkManager_LoginCallbackFunc_o *)sub_1B68920(NetworkManager_LoginCallbackFunc_TypeInfo);
   NetworkManager_LoginCallbackFunc___ctor(v6, (Il2CppObject *)this, Method_ManagementManager_callbackTopLogin__, 0LL);
   if ( !Instance )
-    sub_1B64C5C(v7, v8);
+    sub_1B68930(v7, v8);
   NetworkManager__RequestLogin((NetworkManager_o *)Instance, v6, 1, v9);
 }
 
@@ -1004,22 +1004,22 @@ void __fastcall ManagementManager__requestTerminalLogin(ManagementManager_o *thi
   __int64 v8; // x1
   const MethodInfo *v9; // x3
 
-  if ( (byte_49FE2C8 & 1) == 0 )
+  if ( (byte_4A083F8 & 1) == 0 )
   {
-    sub_1B64A00(&NetworkManager_LoginCallbackFunc_TypeInfo, method);
-    sub_1B64A00(&Method_ManagementManager_callbackTerminalTopLogin__, v3);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, v4);
-    byte_49FE2C8 = 1;
+    sub_1B686D4(&NetworkManager_LoginCallbackFunc_TypeInfo, method);
+    sub_1B686D4(&Method_ManagementManager_callbackTerminalTopLogin__, v3);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, v4);
+    byte_4A083F8 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
-  v6 = (NetworkManager_LoginCallbackFunc_o *)sub_1B64C4C(NetworkManager_LoginCallbackFunc_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  v6 = (NetworkManager_LoginCallbackFunc_o *)sub_1B68920(NetworkManager_LoginCallbackFunc_TypeInfo);
   NetworkManager_LoginCallbackFunc___ctor(
     v6,
     (Il2CppObject *)this,
     Method_ManagementManager_callbackTerminalTopLogin__,
     0LL);
   if ( !Instance )
-    sub_1B64C5C(v7, v8);
+    sub_1B68930(v7, v8);
   NetworkManager__RequestLogin((NetworkManager_o *)Instance, v6, 1, v9);
 }
 
@@ -1032,7 +1032,7 @@ void __fastcall ManagementManager__set_videoPlayer(
   int32_t v3; // w3
 
   this->fields._videoPlayer_k__BackingField = value;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields._videoPlayer_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -1052,17 +1052,17 @@ System_Collections_IEnumerator_o *__fastcall ManagementManager__startCheckAll(
   int32_t v9; // w2
   int32_t v10; // w3
 
-  if ( (byte_49FE2BE & 1) == 0 )
+  if ( (byte_4A083EE & 1) == 0 )
   {
-    sub_1B64A00(&ManagementManager__startCheckAll_d__33_TypeInfo, isReboot);
-    byte_49FE2BE = 1;
+    sub_1B686D4(&ManagementManager__startCheckAll_d__33_TypeInfo, isReboot);
+    byte_4A083EE = 1;
   }
   v7 = isLogin;
-  v8 = sub_1B64C4C(ManagementManager__startCheckAll_d__33_TypeInfo);
+  v8 = sub_1B68920(ManagementManager__startCheckAll_d__33_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   *(_DWORD *)(v8 + 16) = 0;
   *(_QWORD *)(v8 + 40) = this;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v8 + 40), (int32_t)this, v9, v10);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)(v8 + 40), (int32_t)this, v9, v10);
   *(_BYTE *)(v8 + 32) = isReboot;
   *(_BYTE *)(v8 + 56) = v7;
   return (System_Collections_IEnumerator_o *)v8;
@@ -1071,10 +1071,10 @@ System_Collections_IEnumerator_o *__fastcall ManagementManager__startCheckAll(
 
 void __fastcall ManagementManager__startUpCacheClear(ManagementManager_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FE2C0 & 1) == 0 )
+  if ( (byte_4A083F0 & 1) == 0 )
   {
-    sub_1B64A00(&DataManager_TypeInfo, method);
-    byte_49FE2C0 = 1;
+    sub_1B686D4(&DataManager_TypeInfo, method);
+    byte_4A083F0 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
@@ -1091,15 +1091,15 @@ void __fastcall ManagementManager__titleCacheClear(ManagementManager_o *this, co
   __int64 v6; // x1
   TerminalPramsManager_c *v7; // x0
 
-  if ( (byte_49FE2C1 & 1) == 0 )
+  if ( (byte_4A083F1 & 1) == 0 )
   {
-    sub_1B64A00(&DataManager_TypeInfo, method);
-    sub_1B64A00(&ScrTerminalListTop_TypeInfo, v2);
-    sub_1B64A00(&ServantCommentManager_TypeInfo, v3);
-    sub_1B64A00(&TerminalPramsManager_TypeInfo, v4);
-    byte_49FE2C1 = 1;
+    sub_1B686D4(&DataManager_TypeInfo, method);
+    sub_1B686D4(&ScrTerminalListTop_TypeInfo, v2);
+    sub_1B686D4(&ServantCommentManager_TypeInfo, v3);
+    sub_1B686D4(&TerminalPramsManager_TypeInfo, v4);
+    byte_4A083F1 = 1;
   }
-  MovieFileMerge__Delete_37440216(0LL);
+  MovieFileMerge__Delete_37497464(0LL);
   v5 = ScrTerminalListTop_TypeInfo;
   if ( !ScrTerminalListTop_TypeInfo->_2.cctor_finished )
   {
@@ -1109,10 +1109,10 @@ void __fastcall ManagementManager__titleCacheClear(ManagementManager_o *this, co
   UnityEngine_PlayerPrefs__DeleteKey(v5->static_fields->NOTICE_LAST_MODIFIED_KEY, 0LL);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_49FBD77 )
+  if ( !byte_4A05E9F )
   {
-    sub_1B64A00(&TerminalPramsManager_TypeInfo, v6);
-    byte_49FBD77 = 1;
+    sub_1B686D4(&TerminalPramsManager_TypeInfo, v6);
+    byte_4A05E9F = 1;
   }
   v7 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1157,33 +1157,33 @@ bool __fastcall ManagementManager__InitializeAdManagerAndFirebase_d__34__MoveNex
   __int64 v12; // x1
   const MethodInfo *v13; // x0
 
-  if ( (byte_49FE2D4 & 1) == 0 )
+  if ( (byte_4A08404 & 1) == 0 )
   {
-    sub_1B64A00(&Method_SingletonMonoBehaviour_AdManager__get_Instance__, method);
-    sub_1B64A00(&UnityEngine_WaitForEndOfFrame_TypeInfo, v3);
-    byte_49FE2D4 = 1;
+    sub_1B686D4(&Method_SingletonMonoBehaviour_AdManager__get_Instance__, method);
+    sub_1B686D4(&UnityEngine_WaitForEndOfFrame_TypeInfo, v3);
+    byte_4A08404 = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
   {
     this->fields.__1__state = -1;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
     if ( !Instance )
-      sub_1B64C5C(0LL, v10);
+      sub_1B68930(0LL, v10);
     AdManager__Initialize((AdManager_o *)Instance, 0, 0LL);
-    v11 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+    v11 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
     if ( !v11 )
-      sub_1B64C5C(0LL, v12);
+      sub_1B68930(0LL, v12);
     AdManager__Initialize((AdManager_o *)v11, 1, 0LL);
     FirebaseScript__Initialize(v13);
   }
   else if ( !_1__state )
   {
     this->fields.__1__state = -1;
-    v5 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+    v5 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
     UnityEngine_WaitForEndOfFrame___ctor(v5, 0LL);
     this->fields.__2__current = (Il2CppObject *)v5;
-    sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.__2__current, (int32_t)v5, v6, v7);
+    sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.__2__current, (int32_t)v5, v6, v7);
     result = 1;
     this->fields.__1__state = 1;
     return result;
@@ -1208,11 +1208,11 @@ void __fastcall __noreturn ManagementManager__InitializeAdManagerAndFirebase_d__
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B64A14(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B64C4C(v2);
+  v2 = sub_1B686E8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B68920(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B64A14(&Method_ManagementManager__InitializeAdManagerAndFirebase_d__34_System_Collections_IEnumerator_Reset__);
-  sub_1B64B28(v3, v4);
+  v4 = sub_1B686E8(&Method_ManagementManager__InitializeAdManagerAndFirebase_d__34_System_Collections_IEnumerator_Reset__);
+  sub_1B687FC(v3, v4);
 }
 
 
@@ -1257,22 +1257,22 @@ void __fastcall ManagementManager___c__DisplayClass33_0___startCheckAll_b__0(
   Il2CppObject *Instance; // x19
   System_Action_o *v14; // x20
 
-  if ( (byte_49FE2D3 & 1) == 0 )
+  if ( (byte_4A08403 & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, flag);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_1B64A00(&Method_ManagementManager___c__DisplayClass33_1__startCheckAll_b__1__, v6);
-    sub_1B64A00(&ManagementManager___c__DisplayClass33_1_TypeInfo, v7);
-    byte_49FE2D3 = 1;
+    sub_1B686D4(&System_Action_TypeInfo, flag);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    sub_1B686D4(&Method_ManagementManager___c__DisplayClass33_1__startCheckAll_b__1__, v6);
+    sub_1B686D4(&ManagementManager___c__DisplayClass33_1_TypeInfo, v7);
+    byte_4A08403 = 1;
   }
-  v8 = sub_1B64C4C(ManagementManager___c__DisplayClass33_1_TypeInfo);
+  v8 = sub_1B68920(ManagementManager___c__DisplayClass33_1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8
     || (*(_QWORD *)(v8 + 24) = this,
-        sub_1B649A4((ServantStatusBattleListViewItem_o *)(v8 + 24), (int32_t)this, v11, v12),
+        sub_1B68678((ServantStatusBattleListViewItem_o *)(v8 + 24), (int32_t)this, v11, v12),
         *(_BYTE *)(v8 + 16) = flag,
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-        v14 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo),
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+        v14 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo),
         System_Action___ctor(
           v14,
           (Il2CppObject *)v8,
@@ -1280,9 +1280,9 @@ void __fastcall ManagementManager___c__DisplayClass33_0___startCheckAll_b__0(
           0LL),
         !Instance) )
   {
-    sub_1B64C5C(v9, v10);
+    sub_1B68930(v9, v10);
   }
-  CommonUI__CloseConfirmDialog_30348004((CommonUI_o *)Instance, v14, 0LL);
+  CommonUI__CloseConfirmDialog_30363564((CommonUI_o *)Instance, v14, 0LL);
 }
 
 
@@ -1303,7 +1303,7 @@ void __fastcall ManagementManager___c__DisplayClass33_1___startCheckAll_b__1(
 
   CS___8__locals1 = this->fields.CS___8__locals1;
   if ( !CS___8__locals1 )
-    sub_1B64C5C(this, method);
+    sub_1B68930(this, method);
   flag = this->fields.flag;
   CS___8__locals1->fields.confirmed = 1;
   CS___8__locals1->fields.isDecide = flag;
@@ -1396,7 +1396,7 @@ bool __fastcall ManagementManager__startCheckAll_d__33__MoveNext(
   __int64 v71; // x1
   __int64 v72; // x1
   ManagementManager__startCheckAll_d__33_Fields *p_fields; // x8
-  const MethodInfo_36EE930 **v74; // x23
+  const MethodInfo_36F769C **v74; // x23
   struct ManagementManager_o *_4__this; // x20
   _BOOL4 isReboot; // w8
   UnityEngine_AsyncOperation_o *v77; // x0
@@ -1573,7 +1573,7 @@ bool __fastcall ManagementManager__startCheckAll_d__33__MoveNext(
   System_String_o *DatFileSavePath; // x0
   int64_t v249; // x0
   ManagerConfig_c *v250; // x0
-  const MethodInfo_36EE930 **v251; // x26
+  const MethodInfo_36F769C **v251; // x26
   const MethodInfo *v252; // x1
   Il2CppObject *Instance; // x21
   System_String_o *v254; // x22
@@ -1592,7 +1592,7 @@ bool __fastcall ManagementManager__startCheckAll_d__33__MoveNext(
   ServantStatusBattleListViewItem_o *p__8__1; // x24
   int32_t v268; // w2
   int32_t v269; // w3
-  const MethodInfo_36EE930 **v270; // x28
+  const MethodInfo_36F769C **v270; // x28
   const MethodInfo *v271; // x1
   Il2CppObject *v272; // x21
   System_String_o *v273; // x22
@@ -1628,80 +1628,80 @@ bool __fastcall ManagementManager__startCheckAll_d__33__MoveNext(
   int32_t v303; // [xsp+58h] [xbp-68h]
 
   v5 = this;
-  if ( (byte_49FE2D5 & 1) == 0 )
+  if ( (byte_4A08405 & 1) == 0 )
   {
-    sub_1B64A00(&AndroidUtil_TypeInfo, method);
-    sub_1B64A00(&UnityEngine_Application_TypeInfo, v6);
-    sub_1B64A00(&AssetManager_TypeInfo, v7);
-    sub_1B64A00(&AtlasManager_TypeInfo, v8);
-    sub_1B64A00(&CommonConfirmDialog_ClickDelegate_TypeInfo, v9);
-    sub_1B64A00(&ErrorDialog_ClickDelegate_TypeInfo, v10);
-    sub_1B64A00(&CommonServicePluginScript_TypeInfo, v11);
-    sub_1B64A00(&DataManager_TypeInfo, v12);
-    sub_1B64A00(&EncryptedPlayerPrefs_TypeInfo, v13);
-    sub_1B64A00(&FSUtility_TypeInfo, v14);
-    sub_1B64A00(&ImageLimitCount_TypeInfo, v15);
-    sub_1B64A00(&int_TypeInfo, v16);
-    sub_1B64A00(&LocalizationManager_TypeInfo, v17);
-    sub_1B64A00(&LogoMain_TypeInfo, v18);
-    sub_1B64A00(&Method_ManagementManager_EndLogDialog__, v19);
-    sub_1B64A00(&Method_ManagementManager_EndQuitDialog__, v20);
-    sub_1B64A00(&Method_ManagementManager_EndRetryDialog__, v21);
-    sub_1B64A00(&Method_ManagementManager_callbackAccountRegist__, v22);
-    sub_1B64A00(&Method_ManagementManager_callbackTopGameData__, v23);
-    sub_1B64A00(&ManagementManager_TypeInfo, v24);
-    sub_1B64A00(&ManagerConfig_TypeInfo, v25);
-    sub_1B64A00(&Method_NetworkManager_getRequest_AccountRegistRequest___, v26);
-    sub_1B64A00(&Method_NetworkManager_getRequest_TopGameDataRequest___, v27);
-    sub_1B64A00(&NetworkManager_TypeInfo, v28);
-    sub_1B64A00(&OptionManager_TypeInfo, v29);
-    sub_1B64A00(&PurchaseBehaviour_TypeInfo, v30);
-    sub_1B64A00(&NetworkManager_ReadResult_TypeInfo, v31);
-    sub_1B64A00(&ResolutionManager_TypeInfo, v32);
-    sub_1B64A00(&NetworkManager_ResultCallbackFunc_TypeInfo, v33);
-    sub_1B64A00(&ServantCommentManager_TypeInfo, v34);
-    sub_1B64A00(&SignedData_TypeInfo, v35);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__, v36);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v37);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v38);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v39);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__, v40);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__, v41);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, v42);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__, v43);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__, v44);
-    sub_1B64A00(&Method_SingletonTemplate_LocalNotificationManagerAndroid__get_Instance__, v45);
-    sub_1B64A00(&SoundManager_TypeInfo, v46);
-    sub_1B64A00(&string___TypeInfo, v47);
-    sub_1B64A00(&TerminalPramsManager_TypeInfo, v48);
-    sub_1B64A00(&Method_ManagementManager___c__DisplayClass33_0__startCheckAll_b__0__, v49);
-    sub_1B64A00(&ManagementManager___c__DisplayClass33_0_TypeInfo, v50);
-    sub_1B64A00(&Method_ManagementManager__startCheckAll_d__33_MoveNext__, v51);
-    sub_1B64A00(&UnityEngine_WaitForEndOfFrame_TypeInfo, v52);
-    sub_1B64A00(&UnityEngine_WaitForSeconds_TypeInfo, v53);
-    sub_1B64A00(&StringLiteral_7341/*"INIT_CACHE_CLEAR_CONFIRM_DECIDE"*/, v54);
-    sub_1B64A00(&StringLiteral_9257/*"NOW_LOADING"*/, v55);
-    sub_1B64A00(&StringLiteral_9187/*"NETWORK_ERROR_DISK_FULL"*/, v56);
-    sub_1B64A00(&StringLiteral_6325/*"F39UThNh"*/, v57);
-    sub_1B64A00(&StringLiteral_7344/*"INIT_CACHE_CLEAR_CONFIRM_TITLE_1"*/, v58);
-    sub_1B64A00(&StringLiteral_8808/*"Management"*/, v59);
-    sub_1B64A00(&StringLiteral_7342/*"INIT_CACHE_CLEAR_CONFIRM_MESSAGE_1"*/, v60);
-    sub_1B64A00(&StringLiteral_9529/*"NotifyRequestPermissionsResultFromPlugin"*/, v61);
-    sub_1B64A00(&StringLiteral_7340/*"INIT_CACHE_CLEAR_CONFIRM_CANCEL"*/, v62);
-    sub_1B64A00(&StringLiteral_5098/*"DataServerFolderName"*/, v63);
-    sub_1B64A00(&StringLiteral_16696/*"android.permission.POST_NOTIFICATIONS"*/, v64);
-    sub_1B64A00(&StringLiteral_9195/*"NETWORK_ERROR_SERVER_PARAMETER_MESSAGE"*/, v65);
-    sub_1B64A00(&StringLiteral_9188/*"NETWORK_ERROR_FIEND_CODE"*/, v66);
-    sub_1B64A00(&StringLiteral_12424/*"SYSTEM"*/, v67);
-    sub_1B64A00(&StringLiteral_1/*""*/, v68);
-    sub_1B64A00(&StringLiteral_20689/*"ioqrk4Om"*/, v69);
-    sub_1B64A00(&StringLiteral_1475/*"2pC0bIYM"*/, v70);
-    sub_1B64A00(&StringLiteral_9189/*"NETWORK_ERROR_READ_AUTH"*/, v71);
-    this = (ManagementManager__startCheckAll_d__33_o *)sub_1B64A00(&StringLiteral_9196/*"NETWORK_ERROR_TIME_OVER_MESSAGE"*/, v72);
-    byte_49FE2D5 = 1;
+    sub_1B686D4(&AndroidUtil_TypeInfo, method);
+    sub_1B686D4(&UnityEngine_Application_TypeInfo, v6);
+    sub_1B686D4(&AssetManager_TypeInfo, v7);
+    sub_1B686D4(&AtlasManager_TypeInfo, v8);
+    sub_1B686D4(&CommonConfirmDialog_ClickDelegate_TypeInfo, v9);
+    sub_1B686D4(&ErrorDialog_ClickDelegate_TypeInfo, v10);
+    sub_1B686D4(&CommonServicePluginScript_TypeInfo, v11);
+    sub_1B686D4(&DataManager_TypeInfo, v12);
+    sub_1B686D4(&EncryptedPlayerPrefs_TypeInfo, v13);
+    sub_1B686D4(&FSUtility_TypeInfo, v14);
+    sub_1B686D4(&ImageLimitCount_TypeInfo, v15);
+    sub_1B686D4(&int_TypeInfo, v16);
+    sub_1B686D4(&LocalizationManager_TypeInfo, v17);
+    sub_1B686D4(&LogoMain_TypeInfo, v18);
+    sub_1B686D4(&Method_ManagementManager_EndLogDialog__, v19);
+    sub_1B686D4(&Method_ManagementManager_EndQuitDialog__, v20);
+    sub_1B686D4(&Method_ManagementManager_EndRetryDialog__, v21);
+    sub_1B686D4(&Method_ManagementManager_callbackAccountRegist__, v22);
+    sub_1B686D4(&Method_ManagementManager_callbackTopGameData__, v23);
+    sub_1B686D4(&ManagementManager_TypeInfo, v24);
+    sub_1B686D4(&ManagerConfig_TypeInfo, v25);
+    sub_1B686D4(&Method_NetworkManager_getRequest_AccountRegistRequest___, v26);
+    sub_1B686D4(&Method_NetworkManager_getRequest_TopGameDataRequest___, v27);
+    sub_1B686D4(&NetworkManager_TypeInfo, v28);
+    sub_1B686D4(&OptionManager_TypeInfo, v29);
+    sub_1B686D4(&PurchaseBehaviour_TypeInfo, v30);
+    sub_1B686D4(&NetworkManager_ReadResult_TypeInfo, v31);
+    sub_1B686D4(&ResolutionManager_TypeInfo, v32);
+    sub_1B686D4(&NetworkManager_ResultCallbackFunc_TypeInfo, v33);
+    sub_1B686D4(&ServantCommentManager_TypeInfo, v34);
+    sub_1B686D4(&SignedData_TypeInfo, v35);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__, v36);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v37);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v38);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v39);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__, v40);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__, v41);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, v42);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__, v43);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__, v44);
+    sub_1B686D4(&Method_SingletonTemplate_LocalNotificationManagerAndroid__get_Instance__, v45);
+    sub_1B686D4(&SoundManager_TypeInfo, v46);
+    sub_1B686D4(&string___TypeInfo, v47);
+    sub_1B686D4(&TerminalPramsManager_TypeInfo, v48);
+    sub_1B686D4(&Method_ManagementManager___c__DisplayClass33_0__startCheckAll_b__0__, v49);
+    sub_1B686D4(&ManagementManager___c__DisplayClass33_0_TypeInfo, v50);
+    sub_1B686D4(&Method_ManagementManager__startCheckAll_d__33_MoveNext__, v51);
+    sub_1B686D4(&UnityEngine_WaitForEndOfFrame_TypeInfo, v52);
+    sub_1B686D4(&UnityEngine_WaitForSeconds_TypeInfo, v53);
+    sub_1B686D4(&StringLiteral_7340/*"INIT_CACHE_CLEAR_CONFIRM_DECIDE"*/, v54);
+    sub_1B686D4(&StringLiteral_9259/*"NOW_LOADING"*/, v55);
+    sub_1B686D4(&StringLiteral_9189/*"NETWORK_ERROR_DISK_FULL"*/, v56);
+    sub_1B686D4(&StringLiteral_6326/*"F39UThNh"*/, v57);
+    sub_1B686D4(&StringLiteral_7343/*"INIT_CACHE_CLEAR_CONFIRM_TITLE_1"*/, v58);
+    sub_1B686D4(&StringLiteral_8810/*"Management"*/, v59);
+    sub_1B686D4(&StringLiteral_7341/*"INIT_CACHE_CLEAR_CONFIRM_MESSAGE_1"*/, v60);
+    sub_1B686D4(&StringLiteral_9531/*"NotifyRequestPermissionsResultFromPlugin"*/, v61);
+    sub_1B686D4(&StringLiteral_7339/*"INIT_CACHE_CLEAR_CONFIRM_CANCEL"*/, v62);
+    sub_1B686D4(&StringLiteral_5096/*"DataServerFolderName"*/, v63);
+    sub_1B686D4(&StringLiteral_16696/*"android.permission.POST_NOTIFICATIONS"*/, v64);
+    sub_1B686D4(&StringLiteral_9197/*"NETWORK_ERROR_SERVER_PARAMETER_MESSAGE"*/, v65);
+    sub_1B686D4(&StringLiteral_9190/*"NETWORK_ERROR_FIEND_CODE"*/, v66);
+    sub_1B686D4(&StringLiteral_12425/*"SYSTEM"*/, v67);
+    sub_1B686D4(&StringLiteral_1/*""*/, v68);
+    sub_1B686D4(&StringLiteral_20696/*"ioqrk4Om"*/, v69);
+    sub_1B686D4(&StringLiteral_1474/*"2pC0bIYM"*/, v70);
+    sub_1B686D4(&StringLiteral_9191/*"NETWORK_ERROR_READ_AUTH"*/, v71);
+    this = (ManagementManager__startCheckAll_d__33_o *)sub_1B686D4(&StringLiteral_9198/*"NETWORK_ERROR_TIME_OVER_MESSAGE"*/, v72);
+    byte_4A08405 = 1;
   }
   p_fields = &v5->fields;
-  v74 = (const MethodInfo_36EE930 **)&Method_SingletonMonoBehaviour_CommonUI__get_Instance__;
+  v74 = (const MethodInfo_36F769C **)&Method_SingletonMonoBehaviour_CommonUI__get_Instance__;
   _4__this = v5->fields.__4__this;
   switch ( v5->fields.__1__state )
   {
@@ -1713,7 +1713,7 @@ bool __fastcall ManagementManager__startCheckAll_d__33__MoveNext(
       v77 = UnityEngine_Resources__UnloadUnusedAssets(0LL);
       v5->fields.__2__current = (Il2CppObject *)v77;
       p__2__current = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-      sub_1B649A4(p__2__current, (int32_t)v77, v79, v80);
+      sub_1B68678(p__2__current, (int32_t)v77, v79, v80);
       result = 1;
       *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
       return result;
@@ -1735,23 +1735,23 @@ LABEL_7:
       v83 = ManagementManager__InitializeAdManagerAndFirebase(_4__this, method);
       v5->fields.__2__current = (Il2CppObject *)v83;
       v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-      sub_1B649A4(v84, (int32_t)v83, v85, v86);
+      sub_1B68678(v84, (int32_t)v83, v85, v86);
       v87 = 2;
       goto LABEL_414;
     case 2:
       p_fields->__1__state = -1;
-      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
       if ( !this )
         goto LABEL_416;
       v88 = NetworkManager__Initialize((NetworkManager_o *)this, method);
       v5->fields.__2__current = (Il2CppObject *)v88;
       v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-      sub_1B649A4(v84, (int32_t)v88, v89, v90);
+      sub_1B68678(v84, (int32_t)v88, v89, v90);
       v87 = 3;
       goto LABEL_414;
     case 3:
       p_fields->__1__state = -1;
-      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
       if ( !this )
         goto LABEL_416;
       AssetManager__Initialize((AssetManager_o *)this, 0LL);
@@ -1764,7 +1764,7 @@ LABEL_7:
       if ( !FSUtility_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
       FSUtility__Initialize(0LL);
-      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
       if ( !this )
         goto LABEL_416;
       AtlasManager__setupBootSkin((AtlasManager_o *)this, 0LL);
@@ -1777,25 +1777,25 @@ LABEL_7:
       if ( !v5->fields.isReboot )
       {
 LABEL_30:
-        this = (ManagementManager__startCheckAll_d__33_o *)sub_1B64AA8(string___TypeInfo, 3LL);
+        this = (ManagementManager__startCheckAll_d__33_o *)sub_1B6877C(string___TypeInfo, 3LL);
         if ( !this )
           goto LABEL_416;
         v96 = this;
         if ( !LODWORD(this->fields.__2__current)
-          || (v97 = StringLiteral_1475/*"2pC0bIYM"*/,
-              *(_QWORD *)&this->fields.isReboot = StringLiteral_1475/*"2pC0bIYM"*/,
-              sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.isReboot, v97, v94, v95),
+          || (v97 = StringLiteral_1474/*"2pC0bIYM"*/,
+              *(_QWORD *)&this->fields.isReboot = StringLiteral_1474/*"2pC0bIYM"*/,
+              sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.isReboot, v97, v94, v95),
               LODWORD(v96->fields.__2__current) <= 1)
-          || (v100 = StringLiteral_6325/*"F39UThNh"*/,
-              v96->fields.__4__this = (struct ManagementManager_o *)StringLiteral_6325/*"F39UThNh"*/,
-              sub_1B649A4((ServantStatusBattleListViewItem_o *)&v96->fields.__4__this, v100, v98, v99),
+          || (v100 = StringLiteral_6326/*"F39UThNh"*/,
+              v96->fields.__4__this = (struct ManagementManager_o *)StringLiteral_6326/*"F39UThNh"*/,
+              sub_1B68678((ServantStatusBattleListViewItem_o *)&v96->fields.__4__this, v100, v98, v99),
               LODWORD(v96->fields.__2__current) <= 2) )
         {
-          sub_1B64C64(this, method);
+          sub_1B68938(this, method);
         }
-        v103 = StringLiteral_20689/*"ioqrk4Om"*/;
-        v96->fields.__8__1 = (struct ManagementManager___c__DisplayClass33_0_o *)StringLiteral_20689/*"ioqrk4Om"*/;
-        sub_1B649A4((ServantStatusBattleListViewItem_o *)&v96->fields.__8__1, v103, v101, v102);
+        v103 = StringLiteral_20696/*"ioqrk4Om"*/;
+        v96->fields.__8__1 = (struct ManagementManager___c__DisplayClass33_0_o *)StringLiteral_20696/*"ioqrk4Om"*/;
+        sub_1B68678((ServantStatusBattleListViewItem_o *)&v96->fields.__8__1, v103, v101, v102);
         v106 = EncryptedPlayerPrefs_TypeInfo;
         if ( !EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished )
         {
@@ -1804,7 +1804,7 @@ LABEL_30:
         }
         static_fields = v106->static_fields;
         static_fields->keys = (struct System_String_array *)v96;
-        sub_1B649A4((ServantStatusBattleListViewItem_o *)&static_fields->keys, (int32_t)v96, v104, v105);
+        sub_1B68678((ServantStatusBattleListViewItem_o *)&static_fields->keys, (int32_t)v96, v104, v105);
         if ( !v5->fields.isReboot )
         {
           this = (ManagementManager__startCheckAll_d__33_o *)AndroidPermissionManager__EnabledRuntimePermission(0LL);
@@ -1825,17 +1825,17 @@ LABEL_30:
               _4__this->fields.isPermissionRequesting = 1;
               AndroidPermissionManager__RequestPermission(
                 (System_String_o *)StringLiteral_16696/*"android.permission.POST_NOTIFICATIONS"*/,
-                (System_String_o *)StringLiteral_8808/*"Management"*/,
-                (System_String_o *)StringLiteral_9529/*"NotifyRequestPermissionsResultFromPlugin"*/,
+                (System_String_o *)StringLiteral_8810/*"Management"*/,
+                (System_String_o *)StringLiteral_9531/*"NotifyRequestPermissionsResultFromPlugin"*/,
                 0LL);
 LABEL_44:
               if ( _4__this->fields.isPermissionRequesting )
               {
-                v108 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+                v108 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
                 UnityEngine_WaitForEndOfFrame___ctor(v108, 0LL);
                 v5->fields.__2__current = (Il2CppObject *)v108;
                 v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-                sub_1B649A4(v84, (int32_t)v108, v109, v110);
+                sub_1B68678(v84, (int32_t)v108, v109, v110);
                 v87 = 5;
                 goto LABEL_414;
               }
@@ -1848,22 +1848,22 @@ LABEL_41:
               goto LABEL_416;
             _4__this->fields.isPermissionGranted = 1;
           }
-          this = (ManagementManager__startCheckAll_d__33_o *)SingletonTemplate_object___get_Instance((const MethodInfo_36EED50 *)Method_SingletonTemplate_LocalNotificationManagerAndroid__get_Instance__);
+          this = (ManagementManager__startCheckAll_d__33_o *)SingletonTemplate_object___get_Instance((const MethodInfo_36F7ABC *)Method_SingletonTemplate_LocalNotificationManagerAndroid__get_Instance__);
           if ( this )
           {
             LocalNotificationManagerAndroid__RegisterNotificationChannel((LocalNotificationManagerAndroid_o *)this, 0LL);
-            v243 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+            v243 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
             UnityEngine_WaitForEndOfFrame___ctor(v243, 0LL);
             v5->fields.__2__current = (Il2CppObject *)v243;
             v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-            sub_1B649A4(v84, (int32_t)v243, v244, v245);
+            sub_1B68678(v84, (int32_t)v243, v244, v245);
             v87 = 6;
             goto LABEL_414;
           }
           goto LABEL_416;
         }
 LABEL_47:
-        this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+        this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
         if ( !this )
           goto LABEL_416;
         this = (ManagementManager__startCheckAll_d__33_o *)NetworkManager__ReadAuth((NetworkManager_o *)this, method);
@@ -1913,8 +1913,8 @@ LABEL_47:
           Instance = SingletonMonoBehaviour_object___get_Instance(*v74);
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v254 = LocalizationManager__Get((System_String_o *)StringLiteral_9187/*"NETWORK_ERROR_DISK_FULL"*/, v252);
-          v255 = (ErrorDialog_ClickDelegate_o *)sub_1B64C4C(ErrorDialog_ClickDelegate_TypeInfo);
+          v254 = LocalizationManager__Get((System_String_o *)StringLiteral_9189/*"NETWORK_ERROR_DISK_FULL"*/, v252);
+          v255 = (ErrorDialog_ClickDelegate_o *)sub_1B68920(ErrorDialog_ClickDelegate_TypeInfo);
           ErrorDialog_ClickDelegate___ctor(
             v255,
             (Il2CppObject *)_4__this,
@@ -1927,11 +1927,11 @@ LABEL_47:
 LABEL_364:
           if ( _4__this->fields.isErrorDialog )
           {
-            v256 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+            v256 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
             UnityEngine_WaitForEndOfFrame___ctor(v256, 0LL);
             v301->fields.__2__current = (Il2CppObject *)v256;
             v227 = &v301->fields.__2__current;
-            sub_1B649A4((ServantStatusBattleListViewItem_o *)&v301->fields.__2__current, (int32_t)v256, v257, v258);
+            sub_1B68678((ServantStatusBattleListViewItem_o *)&v301->fields.__2__current, (int32_t)v256, v257, v258);
             v230 = 7;
             goto LABEL_373;
           }
@@ -1942,7 +1942,7 @@ LABEL_364:
           if ( readResult_5__2 == 1 )
           {
             _4__this->fields.isReadAuth = 0;
-            v260 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64C4C(NetworkManager_ResultCallbackFunc_TypeInfo);
+            v260 = (NetworkManager_ResultCallbackFunc_o *)sub_1B68920(NetworkManager_ResultCallbackFunc_TypeInfo);
             NetworkManager_ResultCallbackFunc___ctor(
               v260,
               (Il2CppObject *)_4__this,
@@ -1952,16 +1952,16 @@ LABEL_364:
               j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
             this = (ManagementManager__startCheckAll_d__33_o *)NetworkManager__getRequest_object_(
                                                                  v260,
-                                                                 (const MethodInfo_2EBD2C4 *)Method_NetworkManager_getRequest_AccountRegistRequest___);
+                                                                 (const MethodInfo_2ECB448 *)Method_NetworkManager_getRequest_AccountRegistRequest___);
             if ( this )
             {
               AccountRegistRequest__beginRequest((AccountRegistRequest_o *)this, 0LL);
 LABEL_372:
-              v261 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+              v261 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
               UnityEngine_WaitForEndOfFrame___ctor(v261, 0LL);
               v301->fields.__2__current = (Il2CppObject *)v261;
               v227 = &v301->fields.__2__current;
-              sub_1B649A4((ServantStatusBattleListViewItem_o *)&v301->fields.__2__current, (int32_t)v261, v262, v263);
+              sub_1B68678((ServantStatusBattleListViewItem_o *)&v301->fields.__2__current, (int32_t)v261, v262, v263);
               v230 = 8;
 LABEL_373:
               *((_DWORD *)v227 - 2) = v230;
@@ -1970,15 +1970,15 @@ LABEL_373:
             goto LABEL_416;
           }
           v283 = (Il2CppObject *)StringLiteral_1/*""*/;
-          this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+          this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
           if ( !this )
             goto LABEL_416;
           if ( NetworkManager__ReadFriendCode((NetworkManager_o *)this, method) )
           {
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            v285 = LocalizationManager__Get((System_String_o *)StringLiteral_9188/*"NETWORK_ERROR_FIEND_CODE"*/, v284);
-            this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+            v285 = LocalizationManager__Get((System_String_o *)StringLiteral_9190/*"NETWORK_ERROR_FIEND_CODE"*/, v284);
+            this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
             if ( !this )
               goto LABEL_416;
             DispFriendCode = NetworkManager__GetDispFriendCode((NetworkManager_o *)this, method);
@@ -1994,7 +1994,7 @@ LABEL_399:
               v289 = SingletonMonoBehaviour_object___get_Instance(*v74);
               if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-              v290 = LocalizationManager__Get((System_String_o *)StringLiteral_9189/*"NETWORK_ERROR_READ_AUTH"*/, v288);
+              v290 = LocalizationManager__Get((System_String_o *)StringLiteral_9191/*"NETWORK_ERROR_READ_AUTH"*/, v288);
               v302.klass = (System_Enum_c *)NetworkManager_ReadResult_TypeInfo;
               v302.monitor = (void *)-1LL;
               v303 = v301->fields._readResult_5__2;
@@ -2004,8 +2004,8 @@ LABEL_399:
                 v293 = (Il2CppObject *)v291;
               else
                 v293 = (Il2CppObject *)StringLiteral_1/*""*/;
-              v294 = System_String__Format_61399508(v290, v283, v293, 0LL);
-              v295 = (ErrorDialog_ClickDelegate_o *)sub_1B64C4C(ErrorDialog_ClickDelegate_TypeInfo);
+              v294 = System_String__Format_61433840(v290, v283, v293, 0LL);
+              v295 = (ErrorDialog_ClickDelegate_o *)sub_1B68920(ErrorDialog_ClickDelegate_TypeInfo);
               ErrorDialog_ClickDelegate___ctor(
                 v295,
                 (Il2CppObject *)_4__this,
@@ -2020,7 +2020,7 @@ LABEL_399:
             }
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            v285 = LocalizationManager__Get((System_String_o *)StringLiteral_9188/*"NETWORK_ERROR_FIEND_CODE"*/, v287);
+            v285 = LocalizationManager__Get((System_String_o *)StringLiteral_9190/*"NETWORK_ERROR_FIEND_CODE"*/, v287);
           }
           v283 = (Il2CppObject *)System_String__Format(v285, (Il2CppObject *)DispFriendCode, 0LL);
           goto LABEL_399;
@@ -2029,7 +2029,7 @@ LABEL_374:
         v5 = v301;
         v301->fields._isCacheCheck_5__3 = 0;
 LABEL_375:
-        this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !this )
           goto LABEL_416;
         DataManager__Initialize((DataManager_o *)this, 0LL);
@@ -2044,12 +2044,12 @@ LABEL_375:
           }
           if ( UnityEngine_PlayerPrefs__HasKey(v264->static_fields->RebootCacheClearKey, 0LL) )
           {
-            v265 = (Il2CppObject *)sub_1B64C4C(ManagementManager___c__DisplayClass33_0_TypeInfo);
+            v265 = (Il2CppObject *)sub_1B68920(ManagementManager___c__DisplayClass33_0_TypeInfo);
             System_Object___ctor(v265, 0LL);
             v266 = v5;
             v5->fields.__8__1 = (struct ManagementManager___c__DisplayClass33_0_o *)v265;
             p__8__1 = (ServantStatusBattleListViewItem_o *)&v5->fields.__8__1;
-            sub_1B649A4(p__8__1, (int32_t)v265, v268, v269);
+            sub_1B68678(p__8__1, (int32_t)v265, v268, v269);
             if ( !p__8__1->klass )
               goto LABEL_416;
             LOWORD(p__8__1->klass->_1.name) = 0;
@@ -2057,13 +2057,13 @@ LABEL_375:
             v272 = SingletonMonoBehaviour_object___get_Instance(*v74);
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            v273 = LocalizationManager__Get((System_String_o *)StringLiteral_7344/*"INIT_CACHE_CLEAR_CONFIRM_TITLE_1"*/, v271);
-            v275 = LocalizationManager__Get((System_String_o *)StringLiteral_7342/*"INIT_CACHE_CLEAR_CONFIRM_MESSAGE_1"*/, v274);
-            v277 = LocalizationManager__Get((System_String_o *)StringLiteral_7341/*"INIT_CACHE_CLEAR_CONFIRM_DECIDE"*/, v276);
-            v279 = LocalizationManager__Get((System_String_o *)StringLiteral_7340/*"INIT_CACHE_CLEAR_CONFIRM_CANCEL"*/, v278);
+            v273 = LocalizationManager__Get((System_String_o *)StringLiteral_7343/*"INIT_CACHE_CLEAR_CONFIRM_TITLE_1"*/, v271);
+            v275 = LocalizationManager__Get((System_String_o *)StringLiteral_7341/*"INIT_CACHE_CLEAR_CONFIRM_MESSAGE_1"*/, v274);
+            v277 = LocalizationManager__Get((System_String_o *)StringLiteral_7340/*"INIT_CACHE_CLEAR_CONFIRM_DECIDE"*/, v276);
+            v279 = LocalizationManager__Get((System_String_o *)StringLiteral_7339/*"INIT_CACHE_CLEAR_CONFIRM_CANCEL"*/, v278);
             klass = (Il2CppObject *)p__8__1->klass;
             v281 = v279;
-            v282 = (CommonConfirmDialog_ClickDelegate_o *)sub_1B64C4C(CommonConfirmDialog_ClickDelegate_TypeInfo);
+            v282 = (CommonConfirmDialog_ClickDelegate_o *)sub_1B68920(CommonConfirmDialog_ClickDelegate_TypeInfo);
             CommonConfirmDialog_ClickDelegate___ctor(
               v282,
               klass,
@@ -2097,11 +2097,11 @@ LABEL_60:
               goto LABEL_416;
             if ( !_8__1->fields.confirmed )
             {
-              v222 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+              v222 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
               UnityEngine_WaitForEndOfFrame___ctor(v222, 0LL);
               v5->fields.__2__current = (Il2CppObject *)v222;
               v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-              sub_1B649A4(v84, (int32_t)v222, v223, v224);
+              sub_1B68678(v84, (int32_t)v222, v223, v224);
               v87 = 9;
               goto LABEL_414;
             }
@@ -2112,7 +2112,7 @@ LABEL_60:
               ManagementManager__startUpCacheClear((ManagementManager_o *)this, method);
             }
             v5->fields.__8__1 = 0LL;
-            sub_1B649A4((ServantStatusBattleListViewItem_o *)&v5->fields.__8__1, 0, v2, v3);
+            sub_1B68678((ServantStatusBattleListViewItem_o *)&v5->fields.__8__1, 0, v2, v3);
           }
           else
           {
@@ -2130,7 +2130,7 @@ LABEL_60:
         if ( this )
         {
           CommonUI__SetConnect((CommonUI_o *)this, 1, 0LL);
-          this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( this )
           {
             this = (ManagementManager__startCheckAll_d__33_o *)DataManager__readMasterVersion(
@@ -2138,26 +2138,26 @@ LABEL_60:
                                                                  0LL);
             if ( _4__this )
             {
-              started = UnityEngine_MonoBehaviour__StartCoroutine_69122748(
+              started = UnityEngine_MonoBehaviour__StartCoroutine_69157088(
                           (UnityEngine_MonoBehaviour_o *)_4__this,
                           (System_Collections_IEnumerator_o *)this,
                           0LL);
               v5->fields.__2__current = (Il2CppObject *)started;
               v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-              sub_1B649A4(v84, (int32_t)started, v298, v299);
+              sub_1B68678(v84, (int32_t)started, v298, v299);
               v87 = 10;
               goto LABEL_414;
             }
           }
         }
 LABEL_416:
-        sub_1B64C5C(this, method);
+        sub_1B68930(this, method);
       }
-      v91 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+      v91 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
       UnityEngine_WaitForEndOfFrame___ctor(v91, 0LL);
       v5->fields.__2__current = (Il2CppObject *)v91;
       v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-      sub_1B649A4(v84, (int32_t)v91, v92, v93);
+      sub_1B68678(v84, (int32_t)v91, v92, v93);
       v87 = 4;
 LABEL_414:
       *(_DWORD *)&v84[-1].fields.isMine = v87;
@@ -2192,13 +2192,13 @@ LABEL_414:
       goto LABEL_60;
     case 0xA:
       p_fields->__1__state = -1;
-      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !this )
         goto LABEL_416;
-      if ( !byte_49FE369 )
+      if ( !byte_4A08499 )
       {
-        sub_1B64A00(&DataManager_TypeInfo, method);
-        byte_49FE369 = 1;
+        sub_1B686D4(&DataManager_TypeInfo, method);
+        byte_4A08499 = 1;
       }
       this = (ManagementManager__startCheckAll_d__33_o *)DataManager_TypeInfo;
       if ( !DataManager_TypeInfo->_2.cctor_finished )
@@ -2217,7 +2217,7 @@ LABEL_414:
       if ( !_4__this )
         goto LABEL_416;
       _4__this->fields.isReadGameData = 0;
-      v114 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64C4C(NetworkManager_ResultCallbackFunc_TypeInfo);
+      v114 = (NetworkManager_ResultCallbackFunc_o *)sub_1B68920(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
         v114,
         (Il2CppObject *)_4__this,
@@ -2227,15 +2227,15 @@ LABEL_414:
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       this = (ManagementManager__startCheckAll_d__33_o *)NetworkManager__getRequest_object_(
                                                            v114,
-                                                           (const MethodInfo_2EBD2C4 *)Method_NetworkManager_getRequest_TopGameDataRequest___);
+                                                           (const MethodInfo_2ECB448 *)Method_NetworkManager_getRequest_TopGameDataRequest___);
       if ( !this )
         goto LABEL_416;
       LOBYTE(this->fields.__4__this) = 1;
       RequestBase__beginRequest((RequestBase_o *)this, 0LL);
-      v115 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+      v115 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
       UnityEngine_WaitForEndOfFrame___ctor(v115, 0LL);
       v5->fields._waitForServerTime_5__7 = v115;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)&v5->fields._waitForServerTime_5__7, (int32_t)v115, v116, v117);
+      sub_1B68678((ServantStatusBattleListViewItem_o *)&v5->fields._waitForServerTime_5__7, (int32_t)v115, v116, v117);
       goto LABEL_86;
     case 0xB:
       p_fields->__1__state = -1;
@@ -2247,12 +2247,12 @@ LABEL_86:
         waitForServerTime_5__7 = (Il2CppObject *)v5->fields._waitForServerTime_5__7;
         v5->fields.__2__current = waitForServerTime_5__7;
         v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-        sub_1B649A4(v84, (int32_t)waitForServerTime_5__7, v2, v3);
+        sub_1B68678(v84, (int32_t)waitForServerTime_5__7, v2, v3);
         v87 = 11;
         goto LABEL_414;
       }
       _4__this->fields.isReadGameData = 0;
-      v118 = (NetworkManager_ResultCallbackFunc_o *)sub_1B64C4C(NetworkManager_ResultCallbackFunc_TypeInfo);
+      v118 = (NetworkManager_ResultCallbackFunc_o *)sub_1B68920(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
         v118,
         (Il2CppObject *)_4__this,
@@ -2262,19 +2262,19 @@ LABEL_86:
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       this = (ManagementManager__startCheckAll_d__33_o *)NetworkManager__getRequest_object_(
                                                            v118,
-                                                           (const MethodInfo_2EBD2C4 *)Method_NetworkManager_getRequest_TopGameDataRequest___);
+                                                           (const MethodInfo_2ECB448 *)Method_NetworkManager_getRequest_TopGameDataRequest___);
       if ( this )
       {
         RequestBase__beginRequest((RequestBase_o *)this, 0LL);
-        v119 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+        v119 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
         UnityEngine_WaitForEndOfFrame___ctor(v119, 0LL);
         v5->fields._wait_5__8 = v119;
-        sub_1B649A4((ServantStatusBattleListViewItem_o *)&v5->fields._wait_5__8, (int32_t)v119, v120, v121);
+        sub_1B68678((ServantStatusBattleListViewItem_o *)&v5->fields._wait_5__8, (int32_t)v119, v120, v121);
 LABEL_200:
         wait_5__8 = (Il2CppObject *)v5->fields._wait_5__8;
         v5->fields.__2__current = wait_5__8;
         v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-        sub_1B649A4(v84, (int32_t)wait_5__8, v2, v3);
+        sub_1B68678(v84, (int32_t)wait_5__8, v2, v3);
         v87 = 12;
         goto LABEL_414;
       }
@@ -2285,13 +2285,13 @@ LABEL_200:
         goto LABEL_416;
       if ( !_4__this->fields.isReadGameData )
         goto LABEL_200;
-      v123 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+      v123 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_49FC31C )
+      if ( !byte_4A063A7 )
       {
-        sub_1B64A00(&NetworkManager_TypeInfo, method);
-        byte_49FC31C = 1;
+        sub_1B686D4(&NetworkManager_TypeInfo, method);
+        byte_4A063A7 = 1;
       }
       this = (ManagementManager__startCheckAll_d__33_o *)NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -2303,22 +2303,22 @@ LABEL_200:
         goto LABEL_416;
       CrashReporter__AddCustomKey(
         (CrashReporter_o *)v123,
-        (System_String_o *)StringLiteral_5098/*"DataServerFolderName"*/,
+        (System_String_o *)StringLiteral_5096/*"DataServerFolderName"*/,
         (System_String_o *)this[1].fields._waitForServerTime_5__7[13].klass,
         0LL);
       if ( v5->fields._readMasterVersionResult_5__6 == 1 )
       {
-        this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( this )
         {
           MasterData = DataManager__readMasterData((DataManager_o *)this, 0LL);
-          v125 = UnityEngine_MonoBehaviour__StartCoroutine_69122748(
+          v125 = UnityEngine_MonoBehaviour__StartCoroutine_69157088(
                    (UnityEngine_MonoBehaviour_o *)_4__this,
                    MasterData,
                    0LL);
           v5->fields.__2__current = (Il2CppObject *)v125;
           v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-          sub_1B649A4(v84, (int32_t)v125, v126, v127);
+          sub_1B68678(v84, (int32_t)v125, v126, v127);
           v87 = 13;
           goto LABEL_414;
         }
@@ -2326,7 +2326,7 @@ LABEL_200:
       else
       {
 LABEL_105:
-        this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( this )
         {
           this = (ManagementManager__startCheckAll_d__33_o *)DataManager__updateMasterData(
@@ -2335,13 +2335,13 @@ LABEL_105:
                                                                0LL);
           if ( _4__this )
           {
-            v129 = UnityEngine_MonoBehaviour__StartCoroutine_69122748(
+            v129 = UnityEngine_MonoBehaviour__StartCoroutine_69157088(
                      (UnityEngine_MonoBehaviour_o *)_4__this,
                      (System_Collections_IEnumerator_o *)this,
                      0LL);
             v5->fields.__2__current = (Il2CppObject *)v129;
             v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-            sub_1B649A4(v84, (int32_t)v129, v130, v131);
+            sub_1B68678(v84, (int32_t)v129, v130, v131);
             v87 = 15;
             goto LABEL_414;
           }
@@ -2350,13 +2350,13 @@ LABEL_105:
       goto LABEL_416;
     case 0xD:
       p_fields->__1__state = -1;
-      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !this )
         goto LABEL_416;
-      if ( !byte_49FE36A )
+      if ( !byte_4A0849A )
       {
-        sub_1B64A00(&DataManager_TypeInfo, method);
-        byte_49FE36A = 1;
+        sub_1B686D4(&DataManager_TypeInfo, method);
+        byte_4A0849A = 1;
       }
       v128 = DataManager_TypeInfo;
       if ( !DataManager_TypeInfo->_2.cctor_finished )
@@ -2369,15 +2369,15 @@ LABEL_105:
       if ( !v128->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(v128);
       DataManager__ClearCacheAll(0LL);
-      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !this )
         goto LABEL_416;
       CommonUI__SetConnect((CommonUI_o *)this, 0, 0LL);
-      v206 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+      v206 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
       UnityEngine_WaitForEndOfFrame___ctor(v206, 0LL);
       v5->fields.__2__current = (Il2CppObject *)v206;
       v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-      sub_1B649A4(v84, (int32_t)v206, v207, v208);
+      sub_1B68678(v84, (int32_t)v206, v207, v208);
       v87 = 14;
       goto LABEL_414;
     case 0xE:
@@ -2385,13 +2385,13 @@ LABEL_105:
       goto LABEL_375;
     case 0xF:
       p_fields->__1__state = -1;
-      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !this )
         goto LABEL_416;
-      if ( !byte_49FE36B )
+      if ( !byte_4A0849B )
       {
-        sub_1B64A00(&DataManager_TypeInfo, method);
-        byte_49FE36B = 1;
+        sub_1B686D4(&DataManager_TypeInfo, method);
+        byte_4A0849B = 1;
       }
       v132 = DataManager_TypeInfo;
       if ( !DataManager_TypeInfo->_2.cctor_finished )
@@ -2403,7 +2403,7 @@ LABEL_105:
       if ( !ServantCommentManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(ServantCommentManager_TypeInfo);
       ServantCommentManager__checkUIChange(1, 0LL);
-      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !this )
         goto LABEL_416;
       CommonUI__SetConnect((CommonUI_o *)this, 0, 0LL);
@@ -2413,15 +2413,15 @@ LABEL_105:
       updateMasterResult_5__9 = v5->fields._updateMasterResult_5__9;
       if ( updateMasterResult_5__9 == 1 )
       {
-        this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+        this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
         if ( this )
         {
-          NetworkManager__SetServerSetting_38144236((NetworkManager_o *)this, method);
+          NetworkManager__SetServerSetting_38201244((NetworkManager_o *)this, method);
           v225 = ManagementManager_TypeInfo;
           if ( !ManagementManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
           ManagementManager__RebootCacheClear((const MethodInfo *)v225);
-          this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( this )
           {
             this = (ManagementManager__startCheckAll_d__33_o *)DataManager__updateWebViewData(
@@ -2429,13 +2429,13 @@ LABEL_105:
                                                                  0LL);
             if ( _4__this )
             {
-              v226 = UnityEngine_MonoBehaviour__StartCoroutine_69122748(
+              v226 = UnityEngine_MonoBehaviour__StartCoroutine_69157088(
                        (UnityEngine_MonoBehaviour_o *)_4__this,
                        (System_Collections_IEnumerator_o *)this,
                        0LL);
               v5->fields.__2__current = (Il2CppObject *)v226;
               v227 = &v5->fields.__2__current;
-              sub_1B649A4((ServantStatusBattleListViewItem_o *)&v5->fields.__2__current, (int32_t)v226, v228, v229);
+              sub_1B68678((ServantStatusBattleListViewItem_o *)&v5->fields.__2__current, (int32_t)v226, v228, v229);
               v230 = 18;
               goto LABEL_373;
             }
@@ -2448,11 +2448,11 @@ LABEL_105:
         if ( !_4__this )
           goto LABEL_416;
         _4__this->fields.isErrorDialog = 1;
-        v135 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        v135 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v136 = LocalizationManager__Get((System_String_o *)StringLiteral_9195/*"NETWORK_ERROR_SERVER_PARAMETER_MESSAGE"*/, v134);
-        v137 = (ErrorDialog_ClickDelegate_o *)sub_1B64C4C(ErrorDialog_ClickDelegate_TypeInfo);
+        v136 = LocalizationManager__Get((System_String_o *)StringLiteral_9197/*"NETWORK_ERROR_SERVER_PARAMETER_MESSAGE"*/, v134);
+        v137 = (ErrorDialog_ClickDelegate_o *)sub_1B68920(ErrorDialog_ClickDelegate_TypeInfo);
         ErrorDialog_ClickDelegate___ctor(v137, (Il2CppObject *)_4__this, Method_ManagementManager_EndLogDialog__, 0LL);
         if ( !v135 )
           goto LABEL_416;
@@ -2469,15 +2469,15 @@ LABEL_105:
           1,
           effectDistance,
           0LL);
-        v74 = (const MethodInfo_36EE930 **)&Method_SingletonMonoBehaviour_CommonUI__get_Instance__;
+        v74 = (const MethodInfo_36F769C **)&Method_SingletonMonoBehaviour_CommonUI__get_Instance__;
 LABEL_127:
         if ( _4__this->fields.isErrorDialog )
         {
-          v138 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+          v138 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
           UnityEngine_WaitForEndOfFrame___ctor(v138, 0LL);
           v5->fields.__2__current = (Il2CppObject *)v138;
           v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-          sub_1B649A4(v84, (int32_t)v138, v139, v140);
+          sub_1B68678(v84, (int32_t)v138, v139, v140);
           v87 = 16;
           goto LABEL_414;
         }
@@ -2489,32 +2489,32 @@ LABEL_127:
         goto LABEL_416;
       }
       _4__this->fields.isErrorDialog = 1;
-      v232 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v232 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v233 = LocalizationManager__Get((System_String_o *)StringLiteral_9196/*"NETWORK_ERROR_TIME_OVER_MESSAGE"*/, v231);
-      v234 = (ErrorDialog_ClickDelegate_o *)sub_1B64C4C(ErrorDialog_ClickDelegate_TypeInfo);
+      v233 = LocalizationManager__Get((System_String_o *)StringLiteral_9198/*"NETWORK_ERROR_TIME_OVER_MESSAGE"*/, v231);
+      v234 = (ErrorDialog_ClickDelegate_o *)sub_1B68920(ErrorDialog_ClickDelegate_TypeInfo);
       ErrorDialog_ClickDelegate___ctor(v234, (Il2CppObject *)_4__this, Method_ManagementManager_EndRetryDialog__, 0LL);
       if ( !v232 )
         goto LABEL_416;
       CommonUI__OpenRetryDialog((CommonUI_o *)v232, (System_String_o *)StringLiteral_1/*""*/, v233, v234, 0, 0LL);
-      v74 = (const MethodInfo_36EE930 **)&Method_SingletonMonoBehaviour_CommonUI__get_Instance__;
+      v74 = (const MethodInfo_36F769C **)&Method_SingletonMonoBehaviour_CommonUI__get_Instance__;
 LABEL_334:
       if ( _4__this->fields.isErrorDialog )
       {
-        v235 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+        v235 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
         UnityEngine_WaitForEndOfFrame___ctor(v235, 0LL);
         v5->fields.__2__current = (Il2CppObject *)v235;
         v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-        sub_1B649A4(v84, (int32_t)v235, v236, v237);
+        sub_1B68678(v84, (int32_t)v235, v236, v237);
         v87 = 17;
         goto LABEL_414;
       }
 LABEL_336:
       v5->fields._waitForServerTime_5__7 = 0LL;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)&v5->fields._waitForServerTime_5__7, 0, v2, v3);
+      sub_1B68678((ServantStatusBattleListViewItem_o *)&v5->fields._waitForServerTime_5__7, 0, v2, v3);
       v5->fields._wait_5__8 = 0LL;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)&v5->fields._wait_5__8, 0, v238, v239);
+      sub_1B68678((ServantStatusBattleListViewItem_o *)&v5->fields._wait_5__8, 0, v238, v239);
       goto LABEL_375;
     case 0x10:
       p_fields->__1__state = -1;
@@ -2531,7 +2531,7 @@ LABEL_336:
       LODWORD(v302.klass) = 0;
       v141 = j_il2cpp_value_box_0(int_TypeInfo, &v302, v2, v3, v4);
       v5->fields.__2__current = (Il2CppObject *)v141;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)&v5->fields.__2__current, v141, v142, v143);
+      sub_1B68678((ServantStatusBattleListViewItem_o *)&v5->fields.__2__current, v141, v142, v143);
       v5->fields.__1__state = 19;
       return 1;
     case 0x13:
@@ -2548,11 +2548,11 @@ LABEL_137:
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
       if ( AssetManager__getDownloadSize(0LL) >= 1 )
       {
-        v144 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+        v144 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
         UnityEngine_WaitForEndOfFrame___ctor(v144, 0LL);
         v5->fields.__2__current = (Il2CppObject *)v144;
         v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-        sub_1B649A4(v84, (int32_t)v144, v145, v146);
+        sub_1B68678(v84, (int32_t)v144, v145, v146);
         v87 = 20;
         goto LABEL_414;
       }
@@ -2567,41 +2567,41 @@ LABEL_204:
           j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
         if ( AssetManager__get_IsOnline(0LL) )
         {
-          this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+          this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
           if ( this )
           {
             AssetManager__InitializeAssetStorage((AssetManager_o *)this, 0LL);
 LABEL_209:
-            this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+            this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
             if ( this )
             {
               if ( !BYTE2(this->fields.__8__1) )
               {
-                v203 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+                v203 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
                 UnityEngine_WaitForEndOfFrame___ctor(v203, 0LL);
                 v5->fields.__2__current = (Il2CppObject *)v203;
                 v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-                sub_1B649A4(v84, (int32_t)v203, v204, v205);
+                sub_1B68678(v84, (int32_t)v203, v204, v205);
                 v87 = 25;
                 goto LABEL_414;
               }
-              this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+              this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
               if ( _4__this )
               {
                 if ( this )
                 {
                   v165 = AssetManager__DownloadAssetStorageAttributeWithCheckDialog(
                            (AssetManager_o *)this,
-                           (System_String_o *)StringLiteral_12424/*"SYSTEM"*/,
+                           (System_String_o *)StringLiteral_12425/*"SYSTEM"*/,
                            _4__this->fields.downloadParallelMax,
                            0LL);
-                  v166 = UnityEngine_MonoBehaviour__StartCoroutine_69122748(
+                  v166 = UnityEngine_MonoBehaviour__StartCoroutine_69157088(
                            (UnityEngine_MonoBehaviour_o *)_4__this,
                            v165,
                            0LL);
                   v5->fields.__2__current = (Il2CppObject *)v166;
                   v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-                  sub_1B649A4(v84, (int32_t)v166, v167, v168);
+                  sub_1B68678(v84, (int32_t)v166, v167, v168);
                   v87 = 26;
                   goto LABEL_414;
                 }
@@ -2619,10 +2619,10 @@ LABEL_214:
 LABEL_217:
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          if ( !byte_49FE36D )
+          if ( !byte_4A0849D )
           {
-            sub_1B64A00(&LocalizationManager_TypeInfo, method);
-            byte_49FE36D = 1;
+            sub_1B686D4(&LocalizationManager_TypeInfo, method);
+            byte_4A0849D = 1;
           }
           v170 = LocalizationManager_TypeInfo;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -2632,11 +2632,11 @@ LABEL_217:
           }
           if ( v170->static_fields->isBusySetAssetData )
           {
-            v171 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+            v171 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
             UnityEngine_WaitForEndOfFrame___ctor(v171, 0LL);
             v5->fields.__2__current = (Il2CppObject *)v171;
             v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-            sub_1B649A4(v84, (int32_t)v171, v172, v173);
+            sub_1B68678(v84, (int32_t)v171, v172, v173);
             v87 = 29;
             goto LABEL_414;
           }
@@ -2646,10 +2646,10 @@ LABEL_217:
 LABEL_228:
           if ( !FSUtility_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
-          if ( !byte_49FE36E )
+          if ( !byte_4A0849E )
           {
-            sub_1B64A00(&FSUtility_TypeInfo, method);
-            byte_49FE36E = 1;
+            sub_1B686D4(&FSUtility_TypeInfo, method);
+            byte_4A0849E = 1;
           }
           v174 = FSUtility_TypeInfo;
           if ( !FSUtility_TypeInfo->_2.cctor_finished )
@@ -2659,11 +2659,11 @@ LABEL_228:
           }
           if ( v174->static_fields->isBusySetAssetData )
           {
-            v175 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+            v175 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
             UnityEngine_WaitForEndOfFrame___ctor(v175, 0LL);
             v5->fields.__2__current = (Il2CppObject *)v175;
             v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-            sub_1B649A4(v84, (int32_t)v175, v176, v177);
+            sub_1B68678(v84, (int32_t)v175, v176, v177);
             v87 = 30;
             goto LABEL_414;
           }
@@ -2684,11 +2684,11 @@ LABEL_244:
               j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
             if ( AtlasManager__IsBusyInitialize(0LL) )
             {
-              v178 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+              v178 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
               UnityEngine_WaitForEndOfFrame___ctor(v178, 0LL);
               v5->fields.__2__current = (Il2CppObject *)v178;
               v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-              sub_1B649A4(v84, (int32_t)v178, v179, v180);
+              sub_1B68678(v84, (int32_t)v178, v179, v180);
               v87 = 31;
               goto LABEL_414;
             }
@@ -2705,30 +2705,30 @@ LABEL_249:
                 v5->fields._overrideAssetSoundNameWaitCount_5__5 = overrideAssetSoundNameWaitCount_5__5 + 1;
                 if ( overrideAssetSoundNameWaitCount_5__5 < 60 )
                 {
-                  v182 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+                  v182 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
                   UnityEngine_WaitForEndOfFrame___ctor(v182, 0LL);
                   v5->fields.__2__current = (Il2CppObject *)v182;
                   v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-                  sub_1B649A4(v84, (int32_t)v182, v183, v184);
+                  sub_1B68678(v84, (int32_t)v182, v183, v184);
                   v87 = 32;
                   goto LABEL_414;
                 }
               }
-              this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+              this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
               if ( this )
               {
                 CommonUI__InitializeCommonUIAsset((CommonUI_o *)this, 0LL);
 LABEL_257:
-                this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+                this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
                 if ( this )
                 {
                   if ( LOBYTE(this[9].fields.__2__current) )
                   {
-                    v185 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+                    v185 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
                     UnityEngine_WaitForEndOfFrame___ctor(v185, 0LL);
                     v5->fields.__2__current = (Il2CppObject *)v185;
                     v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-                    sub_1B649A4(v84, (int32_t)v185, v186, v187);
+                    sub_1B68678(v84, (int32_t)v185, v186, v187);
                     v87 = 33;
                     goto LABEL_414;
                   }
@@ -2736,34 +2736,34 @@ LABEL_257:
                     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
                   SoundManager__initializeAssetStorage(0LL);
 LABEL_263:
-                  this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+                  this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
                   if ( this )
                   {
                     if ( SoundManager__get_IsBusy((SoundManager_o *)this, 0LL) )
                     {
-                      v188 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+                      v188 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
                       UnityEngine_WaitForEndOfFrame___ctor(v188, 0LL);
                       v5->fields.__2__current = (Il2CppObject *)v188;
                       v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-                      sub_1B649A4(v84, (int32_t)v188, v189, v190);
+                      sub_1B68678(v84, (int32_t)v188, v189, v190);
                       v87 = 34;
                       goto LABEL_414;
                     }
-                    this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+                    this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
                     if ( this )
                     {
                       ScriptManager__Initialize((ScriptManager_o *)this, 0LL);
 LABEL_268:
-                      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+                      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
                       if ( this )
                       {
                         if ( LOBYTE(this[5].fields._updateMasterResult_5__9) )
                         {
-                          v191 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+                          v191 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
                           UnityEngine_WaitForEndOfFrame___ctor(v191, 0LL);
                           v5->fields.__2__current = (Il2CppObject *)v191;
                           v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-                          sub_1B649A4(v84, (int32_t)v191, v192, v193);
+                          sub_1B68678(v84, (int32_t)v191, v192, v193);
                           v87 = 35;
                           goto LABEL_414;
                         }
@@ -2779,28 +2779,28 @@ LABEL_268:
                         {
                           if ( !SoundManager_TypeInfo->_2.cctor_finished )
                             j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-                          if ( SoundManager__isPlayBgm((System_String_o *)StringLiteral_9257/*"NOW_LOADING"*/, 0LL) )
+                          if ( SoundManager__isPlayBgm((System_String_o *)StringLiteral_9259/*"NOW_LOADING"*/, 0LL) )
                           {
                             if ( !SoundManager_TypeInfo->_2.cctor_finished )
                               j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
                             SoundManager__fadeoutBgm(1.0, 0LL);
-                            v194 = (UnityEngine_WaitForSeconds_o *)sub_1B64C4C(UnityEngine_WaitForSeconds_TypeInfo);
+                            v194 = (UnityEngine_WaitForSeconds_o *)sub_1B68920(UnityEngine_WaitForSeconds_TypeInfo);
                             UnityEngine_WaitForSeconds___ctor(v194, 1.0, 0LL);
                             v5->fields.__2__current = (Il2CppObject *)v194;
                             v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-                            sub_1B649A4(v84, (int32_t)v194, v195, v196);
+                            sub_1B68678(v84, (int32_t)v194, v195, v196);
                             v87 = 36;
                             goto LABEL_414;
                           }
 LABEL_284:
-                          this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+                          this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
                           if ( !this )
                             goto LABEL_416;
                           CommonUI__SetLoadMode((CommonUI_o *)this, 0, 0LL);
                         }
                         else
                         {
-                          this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+                          this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
                           if ( !this )
                             goto LABEL_416;
                           this = (ManagementManager__startCheckAll_d__33_o *)CommonUI__IsLoadMode(
@@ -2809,16 +2809,16 @@ LABEL_284:
                                                                                0LL);
                           if ( ((unsigned __int8)this & 1) != 0 )
                           {
-                            this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+                            this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
                             if ( this )
                             {
                               CommonUI__InitMaskClick((CommonUI_o *)this, 0LL);
 LABEL_341:
-                              v240 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+                              v240 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
                               UnityEngine_WaitForEndOfFrame___ctor(v240, 0LL);
                               v5->fields.__2__current = (Il2CppObject *)v240;
                               v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-                              sub_1B649A4(v84, (int32_t)v240, v241, v242);
+                              sub_1B68678(v84, (int32_t)v240, v241, v242);
                               v87 = 37;
                               goto LABEL_414;
                             }
@@ -2832,7 +2832,7 @@ LABEL_341:
                           v200 = j_il2cpp_value_box_0(int_TypeInfo, &v302, v197, v198, v199);
                           v5->fields.__2__current = (Il2CppObject *)v200;
                           v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-                          sub_1B649A4(v84, v200, v201, v202);
+                          sub_1B68678(v84, v200, v201, v202);
                           v87 = 38;
                           goto LABEL_414;
                         }
@@ -2847,32 +2847,32 @@ LABEL_341:
       }
       else
       {
-        this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+        this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
         if ( this )
         {
           AssetManager__InitializeAssetStorage((AssetManager_o *)this, 0LL);
 LABEL_300:
-          this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+          this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
           if ( this )
           {
             if ( !BYTE2(this->fields.__8__1) )
             {
-              v219 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+              v219 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
               UnityEngine_WaitForEndOfFrame___ctor(v219, 0LL);
               v5->fields.__2__current = (Il2CppObject *)v219;
               v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-              sub_1B649A4(v84, (int32_t)v219, v220, v221);
+              sub_1B68678(v84, (int32_t)v219, v220, v221);
               v87 = 21;
               goto LABEL_414;
             }
-            this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+            this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
             if ( _4__this )
             {
               if ( this )
               {
                 AssetManager__DownloadAssetStorageAttribute(
                   (AssetManager_o *)this,
-                  (System_String_o *)StringLiteral_12424/*"SYSTEM"*/,
+                  (System_String_o *)StringLiteral_12425/*"SYSTEM"*/,
                   _4__this->fields.downloadParallelMax,
                   0LL);
                 if ( !AssetManager_TypeInfo->_2.cctor_finished )
@@ -2890,17 +2890,17 @@ LABEL_300:
                     v5->fields._isLoad_5__4 = 1;
                     if ( !SoundManager_TypeInfo->_2.cctor_finished )
                       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-                    SoundManager__playBgm((System_String_o *)StringLiteral_9257/*"NOW_LOADING"*/, 0LL);
-                    this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+                    SoundManager__playBgm((System_String_o *)StringLiteral_9259/*"NOW_LOADING"*/, 0LL);
+                    this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
                     if ( this )
                     {
                       CommonUI__SetLoadMode((CommonUI_o *)this, 7, 0LL);
 LABEL_314:
-                      v213 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+                      v213 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
                       UnityEngine_WaitForEndOfFrame___ctor(v213, 0LL);
                       v5->fields.__2__current = (Il2CppObject *)v213;
                       v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-                      sub_1B649A4(v84, (int32_t)v213, v214, v215);
+                      sub_1B68678(v84, (int32_t)v213, v214, v215);
                       v87 = 22;
                       goto LABEL_414;
                     }
@@ -2911,11 +2911,11 @@ LABEL_146:
                     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
                   if ( AssetManager__getDownloadSize(0LL) >= 1 )
                   {
-                    v147 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+                    v147 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
                     UnityEngine_WaitForEndOfFrame___ctor(v147, 0LL);
                     v5->fields.__2__current = (Il2CppObject *)v147;
                     v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-                    sub_1B649A4(v84, (int32_t)v147, v148, v149);
+                    sub_1B68678(v84, (int32_t)v147, v148, v149);
                     v87 = 23;
                     goto LABEL_414;
                   }
@@ -2924,15 +2924,15 @@ LABEL_315:
                 if ( !AssetManager_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
                 AssetManager__SetOnlineStatus(0LL);
-                this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+                this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
                 if ( this )
                 {
-                  NetworkManager__SetServerSetting_38144236((NetworkManager_o *)this, method);
-                  v216 = (UnityEngine_WaitForSeconds_o *)sub_1B64C4C(UnityEngine_WaitForSeconds_TypeInfo);
+                  NetworkManager__SetServerSetting_38201244((NetworkManager_o *)this, method);
+                  v216 = (UnityEngine_WaitForSeconds_o *)sub_1B68920(UnityEngine_WaitForSeconds_TypeInfo);
                   UnityEngine_WaitForSeconds___ctor(v216, 0.1, 0LL);
                   v5->fields.__2__current = (Il2CppObject *)v216;
                   v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-                  sub_1B649A4(v84, (int32_t)v216, v217, v218);
+                  sub_1B68678(v84, (int32_t)v216, v217, v218);
                   v87 = 24;
                   goto LABEL_414;
                 }
@@ -2947,7 +2947,7 @@ LABEL_315:
       goto LABEL_300;
     case 0x16:
       p_fields->__1__state = -1;
-      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !this )
         goto LABEL_416;
       if ( CommonUI__IsBusyLoad((CommonUI_o *)this, 0LL) )
@@ -2971,10 +2971,10 @@ LABEL_315:
       v5->fields._isLoad_5__4 = 1;
       if ( !LogoMain_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo);
-      if ( !byte_49FE36C )
+      if ( !byte_4A0849C )
       {
-        sub_1B64A00(&LogoMain_TypeInfo, v150);
-        byte_49FE36C = 1;
+        sub_1B686D4(&LogoMain_TypeInfo, v150);
+        byte_4A0849C = 1;
       }
       v151 = LogoMain_TypeInfo;
       if ( !LogoMain_TypeInfo->_2.cctor_finished )
@@ -2986,52 +2986,52 @@ LABEL_315:
       {
         if ( !SoundManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-        SoundManager__playBgm((System_String_o *)StringLiteral_9257/*"NOW_LOADING"*/, 0LL);
+        SoundManager__playBgm((System_String_o *)StringLiteral_9259/*"NOW_LOADING"*/, 0LL);
       }
-      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !this )
         goto LABEL_416;
       CommonUI__SetLoadMode((CommonUI_o *)this, 7, 0LL);
 LABEL_169:
-      v152 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+      v152 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
       UnityEngine_WaitForEndOfFrame___ctor(v152, 0LL);
       v5->fields.__2__current = (Il2CppObject *)v152;
       v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-      sub_1B649A4(v84, (int32_t)v152, v153, v154);
+      sub_1B68678(v84, (int32_t)v152, v153, v154);
       v87 = 27;
       goto LABEL_414;
     case 0x1B:
       p_fields->__1__state = -1;
-      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !this )
         goto LABEL_416;
       if ( CommonUI__IsBusyLoad((CommonUI_o *)this, 0LL) )
         goto LABEL_169;
-      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !this )
         goto LABEL_416;
       CommonUI__InitMaskClick((CommonUI_o *)this, 0LL);
 LABEL_295:
-      v209 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B64C4C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+      v209 = (UnityEngine_WaitForEndOfFrame_o *)sub_1B68920(UnityEngine_WaitForEndOfFrame_TypeInfo);
       UnityEngine_WaitForEndOfFrame___ctor(v209, 0LL);
       v5->fields.__2__current = (Il2CppObject *)v209;
       v84 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-      sub_1B649A4(v84, (int32_t)v209, v210, v211);
+      sub_1B68678(v84, (int32_t)v209, v210, v211);
       v87 = 28;
       goto LABEL_414;
     case 0x1C:
       p_fields->__1__state = -1;
-      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !this )
         goto LABEL_416;
       if ( !CommonUI__IsMaskClick((CommonUI_o *)this, 0LL) )
         goto LABEL_295;
       v155 = Method_ManagementManager__startCheckAll_d__33_MoveNext__;
       if ( (*((_BYTE *)Method_ManagementManager__startCheckAll_d__33_MoveNext__ + 83) & 2) != 0 )
-        v155 = (_QWORD *)sub_1B64A18(Method_ManagementManager__startCheckAll_d__33_MoveNext__);
-      v156 = (System_Reflection_MethodBase_o *)sub_1B649E4(v155, v155[4]);
+        v155 = (_QWORD *)sub_1B686EC(Method_ManagementManager__startCheckAll_d__33_MoveNext__);
+      v156 = (System_Reflection_MethodBase_o *)sub_1B686B8(v155, v155[4]);
       OverwriteAssetSoundName__PlaySystemSe(v156, 0, 0LL);
-      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !this )
         goto LABEL_416;
       CommonUI__SetLoadMode((CommonUI_o *)this, 0, 0LL);
@@ -3062,15 +3062,15 @@ LABEL_295:
       goto LABEL_284;
     case 0x25:
       p_fields->__1__state = -1;
-      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !this )
         goto LABEL_416;
       if ( !CommonUI__IsMaskClick((CommonUI_o *)this, 0LL) )
         goto LABEL_341;
       v157 = Method_ManagementManager__startCheckAll_d__33_MoveNext__;
       if ( (*((_BYTE *)Method_ManagementManager__startCheckAll_d__33_MoveNext__ + 83) & 2) != 0 )
-        v157 = (_QWORD *)sub_1B64A18(Method_ManagementManager__startCheckAll_d__33_MoveNext__);
-      v158 = (System_Reflection_MethodBase_o *)sub_1B649E4(v157, v157[4]);
+        v157 = (_QWORD *)sub_1B686EC(Method_ManagementManager__startCheckAll_d__33_MoveNext__);
+      v158 = (System_Reflection_MethodBase_o *)sub_1B686B8(v157, v157[4]);
       OverwriteAssetSoundName__PlaySystemSe(v158, 0, 0LL);
       goto LABEL_284;
     case 0x26:
@@ -3111,7 +3111,7 @@ LABEL_295:
       }
       else
       {
-        this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+        this = (ManagementManager__startCheckAll_d__33_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
         if ( !this )
           goto LABEL_416;
         AvalonSceneManager__transitionScene((AvalonSceneManager_o *)this, 9, 1, 0LL, 0LL);
@@ -3139,11 +3139,11 @@ void __fastcall __noreturn ManagementManager__startCheckAll_d__33__System_Collec
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B64A14(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B64C4C(v2);
+  v2 = sub_1B686E8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B68920(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B64A14(&Method_ManagementManager__startCheckAll_d__33_System_Collections_IEnumerator_Reset__);
-  sub_1B64B28(v3, v4);
+  v4 = sub_1B686E8(&Method_ManagementManager__startCheckAll_d__33_System_Collections_IEnumerator_Reset__);
+  sub_1B687FC(v3, v4);
 }
 
 

@@ -8,18 +8,18 @@ void __fastcall BattlePerformancePlayer___ctor(BattlePerformancePlayer_o *this, 
   int32_t v8; // w2
   int32_t v9; // w3
 
-  if ( (byte_4A01A63 & 1) == 0 )
+  if ( (byte_4A0BBBD & 1) == 0 )
   {
-    sub_1B64A00(&int___TypeInfo, method);
-    sub_1B64A00(&UnityEngine_Vector3___TypeInfo, v3);
-    byte_4A01A63 = 1;
+    sub_1B686D4(&int___TypeInfo, method);
+    sub_1B686D4(&UnityEngine_Vector3___TypeInfo, v3);
+    byte_4A0BBBD = 1;
   }
-  v4 = (struct System_Int32_array *)sub_1B64AA8(int___TypeInfo, 3LL);
+  v4 = (struct System_Int32_array *)sub_1B6877C(int___TypeInfo, 3LL);
   this->fields.list_ID = v4;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.list_ID, (int32_t)v4, v5, v6);
-  v7 = (struct UnityEngine_Vector3_array *)sub_1B64AA8(UnityEngine_Vector3___TypeInfo, 3LL);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.list_ID, (int32_t)v4, v5, v6);
+  v7 = (struct UnityEngine_Vector3_array *)sub_1B6877C(UnityEngine_Vector3___TypeInfo, 3LL);
   this->fields.list_pos = v7;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.list_pos, (int32_t)v7, v8, v9);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.list_pos, (int32_t)v7, v8, v9);
   this->fields.isPlayCommandSpellEffectStartAnim = 1;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
@@ -29,17 +29,17 @@ void __fastcall BattlePerformancePlayer__CloseSkillConfComp(BattlePerformancePla
 {
   PlayMakerFSM_o *myfsm; // x0
 
-  if ( (byte_4A01A4B & 1) == 0 )
+  if ( (byte_4A0BBA5 & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_5464/*"END_PROC"*/, method);
-    byte_4A01A4B = 1;
+    sub_1B686D4(&StringLiteral_5464/*"END_PROC"*/, method);
+    byte_4A0BBA5 = 1;
   }
   myfsm = this->fields.myfsm;
   if ( !myfsm
     || (PlayMakerFSM__SendEvent(myfsm, (System_String_o *)StringLiteral_5464/*"END_PROC"*/, 0LL),
         (myfsm = this->fields.otherFsm) == 0LL) )
   {
-    sub_1B64C5C(myfsm, method);
+    sub_1B68930(myfsm, method);
   }
   PlayMakerFSM__SendEvent(myfsm, (System_String_o *)StringLiteral_5464/*"END_PROC"*/, 0LL);
 }
@@ -80,15 +80,15 @@ void __fastcall BattlePerformancePlayer__Initialize(
 
   this->fields.perf = inperf;
   p_perf = &this->fields.perf;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.perf,
     (int32_t)inperf,
     (int32_t)indata,
     (int32_t)inlogic);
   this->fields.data = indata;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.data, (int32_t)indata, v9, v10);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.data, (int32_t)indata, v9, v10);
   this->fields.logic = inlogic;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.logic, (int32_t)inlogic, v11, v12);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.logic, (int32_t)inlogic, v11, v12);
   list_param = this->fields.list_param;
   if ( !list_param )
     goto LABEL_25;
@@ -144,13 +144,13 @@ void __fastcall BattlePerformancePlayer__Initialize(
                   {
                     v30 = *p_perf;
                     *(_QWORD *)(v29 + 272) = *p_perf;
-                    sub_1B649A4((ServantStatusBattleListViewItem_o *)(v29 + 272), (int32_t)v30, v26, v27);
+                    sub_1B68678((ServantStatusBattleListViewItem_o *)(v29 + 272), (int32_t)v30, v26, v27);
                     v31 = this->fields.list_param;
                     if ( v31 )
                     {
                       if ( v19 >= v31->max_length )
 LABEL_26:
-                        sub_1B64C64(gameObject, v14);
+                        sub_1B68938(gameObject, v14);
                       gameObject = (UnityEngine_Component_o *)*((_QWORD *)&v31->obj.klass + v17);
                       if ( gameObject )
                       {
@@ -185,7 +185,7 @@ LABEL_26:
         (gameObject = (UnityEngine_Component_o *)this->fields.skillConfWindow) == 0LL) )
   {
 LABEL_25:
-    sub_1B64C5C(gameObject, v14);
+    sub_1B68930(gameObject, v14);
   }
   ((void (__fastcall *)(UnityEngine_Component_o *, void *))gameObject->klass[1]._1.parent)(
     gameObject,
@@ -201,7 +201,7 @@ void __fastcall BattlePerformancePlayer__OpenSkillConfComplete(
 
   skillConfWindow = this->fields.skillConfWindow;
   if ( !skillConfWindow )
-    sub_1B64C5C(0LL, method);
+    sub_1B68930(0LL, method);
   BattleSkillConfComponent__ToEnableLabelCollider(skillConfWindow, 0LL);
 }
 
@@ -219,12 +219,12 @@ bool __fastcall BattlePerformancePlayer__OpenSkillSelectAddFuncConfWindow(
   int32_t v10; // w2
   int32_t v11; // w3
 
-  if ( (byte_4A01A51 & 1) == 0 )
+  if ( (byte_4A0BBAB & 1) == 0 )
   {
-    sub_1B64A00(&Method_BattlePerformancePlayer_SkillSelectedAddFunc__, skillInfo);
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, v5);
-    sub_1B64A00(&BattleSkillSelectAddFuncConfComponent_SelectCallBack_TypeInfo, v6);
-    byte_4A01A51 = 1;
+    sub_1B686D4(&Method_BattlePerformancePlayer_SkillSelectedAddFunc__, skillInfo);
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, v5);
+    sub_1B686D4(&BattleSkillSelectAddFuncConfComponent_SelectCallBack_TypeInfo, v6);
+    byte_4A0BBAB = 1;
   }
   perf = this->fields.perf;
   if ( !perf )
@@ -240,17 +240,17 @@ bool __fastcall BattlePerformancePlayer__OpenSkillSelectAddFuncConfWindow(
     return 0;
   if ( !SkillSelectAddFuncConfWindow )
 LABEL_11:
-    sub_1B64C5C(perf, skillInfo);
+    sub_1B68930(perf, skillInfo);
   if ( BattleSkillSelectAddFuncConfComponent__SetPreOpenInfo(SkillSelectAddFuncConfWindow, skillInfo, 0LL) )
   {
-    v9 = (BattleSkillSelectAddFuncConfComponent_SelectCallBack_o *)sub_1B64C4C(BattleSkillSelectAddFuncConfComponent_SelectCallBack_TypeInfo);
+    v9 = (BattleSkillSelectAddFuncConfComponent_SelectCallBack_o *)sub_1B68920(BattleSkillSelectAddFuncConfComponent_SelectCallBack_TypeInfo);
     BattleSkillSelectAddFuncConfComponent_SelectCallBack___ctor(
       v9,
       (Il2CppObject *)this,
       Method_BattlePerformancePlayer_SkillSelectedAddFunc__,
       0LL);
     SkillSelectAddFuncConfWindow->fields.selectCallBack = v9;
-    sub_1B649A4(
+    sub_1B68678(
       (ServantStatusBattleListViewItem_o *)&SkillSelectAddFuncConfWindow->fields.selectCallBack,
       (int32_t)v9,
       v10,
@@ -278,11 +278,11 @@ void __fastcall BattlePerformancePlayer__SkillSelectedAddFunc(
   bool isOpenOtherWindow; // [xsp+Ch] [xbp-24h] BYREF
 
   v6 = this;
-  if ( (byte_4A01A52 & 1) == 0 )
+  if ( (byte_4A0BBAC & 1) == 0 )
   {
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, skillInfo);
-    this = (BattlePerformancePlayer_o *)sub_1B64A00(&StringLiteral_3375/*"CANCEL"*/, v7);
-    byte_4A01A52 = 1;
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, skillInfo);
+    this = (BattlePerformancePlayer_o *)sub_1B686D4(&StringLiteral_3373/*"CANCEL"*/, v7);
+    byte_4A0BBAC = 1;
   }
   isOpenOtherWindow = 0;
   if ( selIndex == -1 )
@@ -290,7 +290,7 @@ void __fastcall BattlePerformancePlayer__SkillSelectedAddFunc(
     this = (BattlePerformancePlayer_o *)v6->fields.myfsm;
     if ( !this )
       goto LABEL_16;
-    PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)StringLiteral_3375/*"CANCEL"*/, 0LL);
+    PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)StringLiteral_3373/*"CANCEL"*/, 0LL);
   }
   else
   {
@@ -323,7 +323,7 @@ void __fastcall BattlePerformancePlayer__SkillSelectedAddFunc(
           }
         }
 LABEL_16:
-        sub_1B64C5C(this, skillInfo);
+        sub_1B68930(this, skillInfo);
       }
     }
   }
@@ -343,17 +343,17 @@ void __fastcall BattlePerformancePlayer__UpdateClassIconEffect(
   UnityEngine_Object_c *klass; // x8
 
   v4 = this;
-  if ( (byte_4A01A62 & 1) == 0 )
+  if ( (byte_4A0BBBC & 1) == 0 )
   {
-    this = (BattlePerformancePlayer_o *)sub_1B64A00(&UnityEngine_Object_TypeInfo, servantData);
-    byte_4A01A62 = 1;
+    this = (BattlePerformancePlayer_o *)sub_1B686D4(&UnityEngine_Object_TypeInfo, servantData);
+    byte_4A0BBBC = 1;
   }
   if ( servantData )
   {
     list_param = v4->fields.list_param;
     if ( !list_param )
 LABEL_18:
-      sub_1B64C5C(this, servantData);
+      sub_1B68930(this, servantData);
     v6 = *(_QWORD *)&list_param->max_length;
     if ( (int)v6 >= 1 )
     {
@@ -361,7 +361,7 @@ LABEL_18:
       do
       {
         if ( v7 >= (unsigned int)v6 )
-          sub_1B64C64(this, servantData);
+          sub_1B68938(this, servantData);
         v8 = (UnityEngine_Object_o *)list_param->m_Items[v7];
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -423,30 +423,30 @@ void __fastcall BattlePerformancePlayer__UseSkill(
   bool isOpenOtherWindow; // [xsp+34h] [xbp-4Ch] BYREF
   System_String_o *text; // [xsp+38h] [xbp-48h] BYREF
 
-  if ( (byte_4A01A4F & 1) == 0 )
+  if ( (byte_4A0BBA9 & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, playSe);
-    sub_1B64A00(&Method_BattlePerformancePlayer_UseSkill__, v6);
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, v7);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
-    sub_1B64A00(&Method_BattlePerformancePlayer___c__UseSkill_b__39_0__, v9);
-    sub_1B64A00(&BattlePerformancePlayer___c_TypeInfo, v10);
-    sub_1B64A00(&StringLiteral_3375/*"CANCEL"*/, v11);
-    sub_1B64A00(&StringLiteral_1/*""*/, v12);
-    byte_4A01A4F = 1;
+    sub_1B686D4(&System_Action_TypeInfo, playSe);
+    sub_1B686D4(&Method_BattlePerformancePlayer_UseSkill__, v6);
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, v7);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
+    sub_1B686D4(&Method_BattlePerformancePlayer___c__UseSkill_b__39_0__, v9);
+    sub_1B686D4(&BattlePerformancePlayer___c_TypeInfo, v10);
+    sub_1B686D4(&StringLiteral_3373/*"CANCEL"*/, v11);
+    sub_1B686D4(&StringLiteral_1/*""*/, v12);
+    byte_4A0BBA9 = 1;
   }
   isOpenOtherWindow = 0;
   if ( playSe )
   {
     v13 = Method_BattlePerformancePlayer_UseSkill__;
     if ( (*((_BYTE *)Method_BattlePerformancePlayer_UseSkill__ + 83) & 2) != 0 )
-      v13 = (_QWORD *)sub_1B64A18(Method_BattlePerformancePlayer_UseSkill__);
-    v14 = (System_Reflection_MethodBase_o *)sub_1B649E4(v13, v13[4]);
+      v13 = (_QWORD *)sub_1B686EC(Method_BattlePerformancePlayer_UseSkill__);
+    v14 = (System_Reflection_MethodBase_o *)sub_1B686B8(v13, v13[4]);
     OverwriteAssetSoundName__PlaySystemSe(v14, 8, 0LL);
   }
   useSkillObject = this->fields.useSkillObject;
   this->fields.actSkillObject = useSkillObject;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.actSkillObject,
     (int32_t)useSkillObject,
     (int32_t)method,
@@ -493,14 +493,14 @@ void __fastcall BattlePerformancePlayer__UseSkill(
             }
           }
 LABEL_31:
-          sub_1B64C5C(logicSkill, v17);
+          sub_1B68930(logicSkill, v17);
         }
       }
     }
   }
   else
   {
-    logicSkill = (BattlePerformance_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    logicSkill = (BattlePerformance_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v24 = text;
     v25 = (CommonUI_o *)logicSkill;
     v26 = BattlePerformancePlayer___c_TypeInfo;
@@ -519,11 +519,11 @@ LABEL_31:
         v26 = BattlePerformancePlayer___c_TypeInfo;
       }
       v29 = (Il2CppObject *)v26->static_fields->__9;
-      _9__39_0 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+      _9__39_0 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
       System_Action___ctor(_9__39_0, v29, Method_BattlePerformancePlayer___c__UseSkill_b__39_0__, 0LL);
       static_fields = BattlePerformancePlayer___c_TypeInfo->static_fields;
       static_fields->__9__39_0 = _9__39_0;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)&static_fields->__9__39_0, (int32_t)_9__39_0, v31, v32);
+      sub_1B68678((ServantStatusBattleListViewItem_o *)&static_fields->__9__39_0, (int32_t)_9__39_0, v31, v32);
     }
     if ( !v25 )
       goto LABEL_31;
@@ -531,7 +531,7 @@ LABEL_31:
     logicSkill = (BattlePerformance_o *)this->fields.myfsm;
     if ( !logicSkill )
       goto LABEL_31;
-    PlayMakerFSM__SendEvent((PlayMakerFSM_o *)logicSkill, (System_String_o *)StringLiteral_3375/*"CANCEL"*/, 0LL);
+    PlayMakerFSM__SendEvent((PlayMakerFSM_o *)logicSkill, (System_String_o *)StringLiteral_3373/*"CANCEL"*/, 0LL);
   }
 }
 
@@ -556,31 +556,31 @@ void __fastcall BattlePerformancePlayer__WantUseSkill(
   bool v17; // w8
 
   v6 = this;
-  if ( (byte_4A01A50 & 1) == 0 )
+  if ( (byte_4A0BBAA & 1) == 0 )
   {
-    sub_1B64A00(&Method_BasicHelper_Any_int____75719440, skillInfo);
-    sub_1B64A00(&System_Func_int__bool__TypeInfo, v7);
-    sub_1B64A00(&Method_Target_isChoose__, v8);
-    sub_1B64A00(&Method_Target_isCommandType__, v9);
-    this = (BattlePerformancePlayer_o *)sub_1B64A00(&StringLiteral_5464/*"END_PROC"*/, v10);
-    byte_4A01A50 = 1;
+    sub_1B686D4(&Method_BasicHelper_Any_int____75758640, skillInfo);
+    sub_1B686D4(&System_Func_int__bool__TypeInfo, v7);
+    sub_1B686D4(&Method_Target_isChoose__, v8);
+    sub_1B686D4(&Method_Target_isCommandType__, v9);
+    this = (BattlePerformancePlayer_o *)sub_1B686D4(&StringLiteral_5464/*"END_PROC"*/, v10);
+    byte_4A0BBAA = 1;
   }
   if ( !skillInfo )
     goto LABEL_13;
   ValidTargetTypeArray = BattleSkillInfoData__get_ValidTargetTypeArray(skillInfo, 0LL);
-  v12 = (System_Func_int__bool__o *)sub_1B64C4C(System_Func_int__bool__TypeInfo);
+  v12 = (System_Func_int__bool__o *)sub_1B68920(System_Func_int__bool__TypeInfo);
   System_Func_int__bool____ctor(v12, 0LL, Method_Target_isCommandType__, 0LL);
-  if ( !BasicHelper__Any_int__48393956(
+  if ( !BasicHelper__Any_int__48451280(
           ValidTargetTypeArray,
           (System_Func_T__bool__o *)v12,
-          (const MethodInfo_2E26EE4 *)Method_BasicHelper_Any_int____75719440) )
+          (const MethodInfo_2E34ED0 *)Method_BasicHelper_Any_int____75758640) )
   {
-    v14 = (System_Func_int__bool__o *)sub_1B64C4C(System_Func_int__bool__TypeInfo);
+    v14 = (System_Func_int__bool__o *)sub_1B68920(System_Func_int__bool__TypeInfo);
     System_Func_int__bool____ctor(v14, 0LL, Method_Target_isChoose__, 0LL);
-    if ( BasicHelper__Any_int__48393956(
+    if ( BasicHelper__Any_int__48451280(
            ValidTargetTypeArray,
            (System_Func_T__bool__o *)v14,
-           (const MethodInfo_2E26EE4 *)Method_BasicHelper_Any_int____75719440) )
+           (const MethodInfo_2E34ED0 *)Method_BasicHelper_Any_int____75758640) )
     {
       v15 = ((__int64 (__fastcall *)(BattleSkillInfoData_o *, Il2CppMethodPointer))skillInfo->klass->vtable._5_get_skillId.method)(
               skillInfo,
@@ -601,7 +601,7 @@ void __fastcall BattlePerformancePlayer__WantUseSkill(
       }
     }
 LABEL_13:
-    sub_1B64C5C(this, skillInfo);
+    sub_1B68930(this, skillInfo);
   }
   BattlePerformancePlayer__openSelectCommandTypeWindow(v6, v13);
 LABEL_8:
@@ -629,13 +629,13 @@ void __fastcall BattlePerformancePlayer__checkSkipFlg(BattlePerformancePlayer_o 
   struct BattleLogic_UseSkillObject_o *v16; // x1
   struct BattleLogic_UseSkillObject_o **p_useSkillObject; // x19
 
-  if ( (byte_4A01A48 & 1) == 0 )
+  if ( (byte_4A0BBA2 & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_9575/*"OK"*/, method);
-    sub_1B64A00(&StringLiteral_3375/*"CANCEL"*/, v3);
-    sub_1B64A00(&StringLiteral_5464/*"END_PROC"*/, v4);
-    sub_1B64A00(&StringLiteral_12103/*"SKIP"*/, v5);
-    byte_4A01A48 = 1;
+    sub_1B686D4(&StringLiteral_9577/*"OK"*/, method);
+    sub_1B686D4(&StringLiteral_3373/*"CANCEL"*/, v3);
+    sub_1B686D4(&StringLiteral_5464/*"END_PROC"*/, v4);
+    sub_1B686D4(&StringLiteral_12104/*"SKIP"*/, v5);
+    byte_4A0BBA2 = 1;
   }
   perf = (BattleWindowComponent_o *)this->fields.perf;
   if ( !perf )
@@ -692,11 +692,11 @@ void __fastcall BattlePerformancePlayer__checkSkipFlg(BattlePerformancePlayer_o 
                         v16 = this->fields.tmp_useSkill;
                         this->fields.useSkillObject = v16;
                         p_useSkillObject = &this->fields.useSkillObject;
-                        sub_1B649A4((ServantStatusBattleListViewItem_o *)p_useSkillObject, (int32_t)v16, v13, v14);
+                        sub_1B68678((ServantStatusBattleListViewItem_o *)p_useSkillObject, (int32_t)v16, v13, v14);
                         perf = (BattleWindowComponent_o *)*(p_useSkillObject - 14);
                         if ( perf )
                         {
-                          v7 = &StringLiteral_12103/*"SKIP"*/;
+                          v7 = &StringLiteral_12104/*"SKIP"*/;
                           goto LABEL_9;
                         }
                       }
@@ -705,7 +705,7 @@ void __fastcall BattlePerformancePlayer__checkSkipFlg(BattlePerformancePlayer_o 
                         perf = (BattleWindowComponent_o *)this->fields.myfsm;
                         if ( perf )
                         {
-                          v7 = &StringLiteral_9575/*"OK"*/;
+                          v7 = &StringLiteral_9577/*"OK"*/;
                           goto LABEL_9;
                         }
                       }
@@ -728,13 +728,13 @@ LABEL_25:
         }
       }
 LABEL_29:
-      sub_1B64C5C(perf, method);
+      sub_1B68930(perf, method);
     }
   }
   perf = (BattleWindowComponent_o *)this->fields.myfsm;
   if ( !perf )
     goto LABEL_29;
-  v7 = &StringLiteral_3375/*"CANCEL"*/;
+  v7 = &StringLiteral_3373/*"CANCEL"*/;
 LABEL_9:
   PlayMakerFSM__SendEvent((PlayMakerFSM_o *)perf, (System_String_o *)*v7, 0LL);
 }
@@ -750,11 +750,11 @@ void __fastcall BattlePerformancePlayer__checkTutorial(BattlePerformancePlayer_o
   int32_t turnCount; // w9
 
   v2 = this;
-  if ( (byte_4A01A5D & 1) == 0 )
+  if ( (byte_4A0BBB7 & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_5464/*"END_PROC"*/, method);
-    this = (BattlePerformancePlayer_o *)sub_1B64A00(&StringLiteral_13454/*"TUTORIAL_SKILL"*/, v3);
-    byte_4A01A5D = 1;
+    sub_1B686D4(&StringLiteral_5464/*"END_PROC"*/, method);
+    this = (BattlePerformancePlayer_o *)sub_1B686D4(&StringLiteral_13455/*"TUTORIAL_SKILL"*/, v3);
+    byte_4A0BBB7 = 1;
   }
   data = v2->fields.data;
   if ( !data )
@@ -783,11 +783,11 @@ LABEL_8:
         this = (BattlePerformancePlayer_o *)v2->fields.myfsm;
         if ( this )
         {
-          v6 = &StringLiteral_13454/*"TUTORIAL_SKILL"*/;
+          v6 = &StringLiteral_13455/*"TUTORIAL_SKILL"*/;
           goto LABEL_8;
         }
 LABEL_15:
-        sub_1B64C5C(this, method);
+        sub_1B68930(this, method);
       }
     }
   }
@@ -808,7 +808,7 @@ void __fastcall BattlePerformancePlayer__closeSvtConfWindow(
 
   confwindowComp = this->fields.confwindowComp;
   if ( !confwindowComp )
-    sub_1B64C5C(0LL, endCall);
+    sub_1B68930(0LL, endCall);
   BattleServantConfConponent__Close(confwindowComp, endCall, method);
 }
 
@@ -828,10 +828,10 @@ void __fastcall BattlePerformancePlayer__deleteStatus(
   struct System_Int32_array *list_ID; // x8
 
   v4 = this;
-  if ( (byte_4A01A3B & 1) == 0 )
+  if ( (byte_4A0BB95 & 1) == 0 )
   {
-    this = (BattlePerformancePlayer_o *)sub_1B64A00(&UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
-    byte_4A01A3B = 1;
+    this = (BattlePerformancePlayer_o *)sub_1B686D4(&UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
+    byte_4A0BB95 = 1;
   }
   list_param = v4->fields.list_param;
   if ( !list_param )
@@ -876,14 +876,14 @@ void __fastcall BattlePerformancePlayer__deleteStatus(
                 return;
               }
 LABEL_20:
-              sub_1B64C64(this, *(_QWORD *)&index);
+              sub_1B68938(this, *(_QWORD *)&index);
             }
           }
         }
       }
     }
 LABEL_19:
-    sub_1B64C5C(this, *(_QWORD *)&index);
+    sub_1B68930(this, *(_QWORD *)&index);
   }
 }
 
@@ -892,14 +892,14 @@ void __fastcall BattlePerformancePlayer__endSkill(BattlePerformancePlayer_o *thi
 {
   PlayMakerFSM_o *myfsm; // x0
 
-  if ( (byte_4A01A56 & 1) == 0 )
+  if ( (byte_4A0BBB0 & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_5467/*"END_SKILL"*/, method);
-    byte_4A01A56 = 1;
+    sub_1B686D4(&StringLiteral_5467/*"END_SKILL"*/, method);
+    byte_4A0BBB0 = 1;
   }
   myfsm = this->fields.myfsm;
   if ( !myfsm )
-    sub_1B64C5C(0LL, method);
+    sub_1B68930(0LL, method);
   PlayMakerFSM__SendEvent(myfsm, (System_String_o *)StringLiteral_5467/*"END_SKILL"*/, 0LL);
 }
 
@@ -911,15 +911,14 @@ void __fastcall BattlePerformancePlayer__initSvtConfWindow(BattlePerformancePlay
   BattleServantConfConponent_o *confwindowComp; // x0
   struct BattleServantConfConponent_o *v6; // x20
   BattleServantConfConponent_CloseButtonCallBack_o *v7; // x21
-  const MethodInfo *v8; // x3
-  int32_t v9; // w2
-  int32_t v10; // w3
+  int32_t v8; // w2
+  int32_t v9; // w3
 
-  if ( (byte_4A01A5A & 1) == 0 )
+  if ( (byte_4A0BBB4 & 1) == 0 )
   {
-    sub_1B64A00(&Method_BattlePerformancePlayer_onClickConfClose__, method);
-    sub_1B64A00(&BattleServantConfConponent_CloseButtonCallBack_TypeInfo, v4);
-    byte_4A01A5A = 1;
+    sub_1B686D4(&Method_BattlePerformancePlayer_onClickConfClose__, method);
+    sub_1B686D4(&BattleServantConfConponent_CloseButtonCallBack_TypeInfo, v4);
+    byte_4A0BBB4 = 1;
   }
   confwindowComp = this->fields.confwindowComp;
   if ( !confwindowComp )
@@ -935,19 +934,19 @@ void __fastcall BattlePerformancePlayer__initSvtConfWindow(BattlePerformancePlay
           confwindowComp,
           confwindowComp->klass->vtable._10_Open.methodPtr),
         v6 = this->fields.confwindowComp,
-        v7 = (BattleServantConfConponent_CloseButtonCallBack_o *)sub_1B64C4C(BattleServantConfConponent_CloseButtonCallBack_TypeInfo),
+        v7 = (BattleServantConfConponent_CloseButtonCallBack_o *)sub_1B68920(BattleServantConfConponent_CloseButtonCallBack_TypeInfo),
         BattleServantConfConponent_CloseButtonCallBack___ctor(
           v7,
           (Il2CppObject *)this,
           Method_BattlePerformancePlayer_onClickConfClose__,
-          v8),
+          0LL),
         !v6) )
   {
 LABEL_8:
-    sub_1B64C5C(confwindowComp, method);
+    sub_1B68930(confwindowComp, method);
   }
   v6->fields.callback_close = v7;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&v6->fields.callback_close, (int32_t)v7, v9, v10);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&v6->fields.callback_close, (int32_t)v7, v8, v9);
 }
 
 
@@ -957,7 +956,7 @@ bool __fastcall BattlePerformancePlayer__isOpenSvtConf(BattlePerformancePlayer_o
 
   confwindowComp = (BattleWindowComponent_o *)this->fields.confwindowComp;
   if ( !confwindowComp )
-    sub_1B64C5C(0LL, method);
+    sub_1B68930(0LL, method);
   return BattleWindowComponent__isOpen(confwindowComp, 0LL);
 }
 
@@ -988,11 +987,11 @@ void __fastcall BattlePerformancePlayer__modeComPlayerStatus(BattlePerformancePl
   UnityEngine_Color_o v25; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v3 = this;
-  if ( (byte_4A01A46 & 1) == 0 )
+  if ( (byte_4A0BBA0 & 1) == 0 )
   {
-    sub_1B64A00(&Method_UnityEngine_Component_GetComponent_UIWidget___, method);
-    this = (BattlePerformancePlayer_o *)sub_1B64A00(&UnityEngine_Object_TypeInfo, v4);
-    byte_4A01A46 = 1;
+    sub_1B686D4(&Method_UnityEngine_Component_GetComponent_UIWidget___, method);
+    this = (BattlePerformancePlayer_o *)sub_1B686D4(&UnityEngine_Object_TypeInfo, v4);
+    byte_4A0BBA0 = 1;
   }
   list_param = v3->fields.list_param;
   if ( !list_param )
@@ -1012,7 +1011,7 @@ void __fastcall BattlePerformancePlayer__modeComPlayerStatus(BattlePerformancePl
     {
       this = (BattlePerformancePlayer_o *)UnityEngine_Component__GetComponent_object_(
                                             (UnityEngine_Component_o *)this,
-                                            (const MethodInfo_2E32784 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                                            (const MethodInfo_2E407F4 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
       if ( this )
       {
         v25.fields.r = 1.0;
@@ -1047,7 +1046,7 @@ void __fastcall BattlePerformancePlayer__modeComPlayerStatus(BattlePerformancePl
                 {
                   if ( v9 >= v12->max_length )
 LABEL_38:
-                    sub_1B64C64(this, method);
+                    sub_1B68938(this, method);
                   this = (BattlePerformancePlayer_o *)*((_QWORD *)&v12->obj.klass + v7);
                   if ( this )
                   {
@@ -1088,7 +1087,7 @@ LABEL_38:
         (v18 = v3->fields.list_param) == 0LL) )
   {
 LABEL_36:
-    sub_1B64C5C(this, method);
+    sub_1B68930(this, method);
   }
   v19 = 4LL;
   while ( 1 )
@@ -1134,16 +1133,16 @@ void __fastcall BattlePerformancePlayer__modeTacPlayerStatus(BattlePerformancePl
   UnityEngine_Object_o *v9; // x20
   struct BattleServantParamComponent_array *v10; // x8
 
-  if ( (byte_4A01A3E & 1) == 0 )
+  if ( (byte_4A0BB98 & 1) == 0 )
   {
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, method);
-    byte_4A01A3E = 1;
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, method);
+    byte_4A0BB98 = 1;
   }
   BattlePerformancePlayer__updateView(this, method);
   list_param = this->fields.list_param;
   if ( !list_param )
 LABEL_15:
-    sub_1B64C5C(v3, v4);
+    sub_1B68930(v3, v4);
   v6 = 4LL;
   while ( 1 )
   {
@@ -1164,7 +1163,7 @@ LABEL_15:
         goto LABEL_15;
       if ( v8 >= v10->max_length )
 LABEL_17:
-        sub_1B64C64(v3, v4);
+        sub_1B68938(v3, v4);
       v3 = (BattleServantParamComponent_o *)*((_QWORD *)&v10->obj.klass + v6);
       if ( !v3 )
         goto LABEL_15;
@@ -1183,15 +1182,15 @@ void __fastcall BattlePerformancePlayer__onClickConfClose(BattlePerformancePlaye
 {
   PlayMakerFSM_o *myfsm; // x0
 
-  if ( (byte_4A01A41 & 1) == 0 )
+  if ( (byte_4A0BB9B & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_3515/*"CLICK_CLOSE"*/, method);
-    byte_4A01A41 = 1;
+    sub_1B686D4(&StringLiteral_3513/*"CLICK_CLOSE"*/, method);
+    byte_4A0BB9B = 1;
   }
   myfsm = this->fields.myfsm;
   if ( !myfsm )
-    sub_1B64C5C(0LL, method);
-  PlayMakerFSM__SendEvent(myfsm, (System_String_o *)StringLiteral_3515/*"CLICK_CLOSE"*/, 0LL);
+    sub_1B68930(0LL, method);
+  PlayMakerFSM__SendEvent(myfsm, (System_String_o *)StringLiteral_3513/*"CLICK_CLOSE"*/, 0LL);
 }
 
 
@@ -1208,11 +1207,11 @@ void __fastcall BattlePerformancePlayer__onClickServant(
   __int64 *v8; // x8
 
   v4 = this;
-  if ( (byte_4A01A3F & 1) == 0 )
+  if ( (byte_4A0BB99 & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_3549/*"CLICK_SVTWINDOW"*/, *(_QWORD *)&uniqueID);
-    this = (BattlePerformancePlayer_o *)sub_1B64A00(&StringLiteral_3515/*"CLICK_CLOSE"*/, v5);
-    byte_4A01A3F = 1;
+    sub_1B686D4(&StringLiteral_3547/*"CLICK_SVTWINDOW"*/, *(_QWORD *)&uniqueID);
+    this = (BattlePerformancePlayer_o *)sub_1B686D4(&StringLiteral_3513/*"CLICK_CLOSE"*/, v5);
+    byte_4A0BB99 = 1;
   }
   confwindowComp = v4->fields.confwindowComp;
   if ( !confwindowComp )
@@ -1224,16 +1223,16 @@ void __fastcall BattlePerformancePlayer__onClickServant(
     v4->fields.tmp_uniqueId = uniqueID;
     if ( this )
     {
-      v8 = &StringLiteral_3549/*"CLICK_SVTWINDOW"*/;
+      v8 = &StringLiteral_3547/*"CLICK_SVTWINDOW"*/;
       goto LABEL_10;
     }
 LABEL_11:
-    sub_1B64C5C(this, *(_QWORD *)&uniqueID);
+    sub_1B68930(this, *(_QWORD *)&uniqueID);
   }
   this = (BattlePerformancePlayer_o *)v4->fields.myfsm;
   if ( !this )
     goto LABEL_11;
-  v8 = &StringLiteral_3515/*"CLICK_CLOSE"*/;
+  v8 = &StringLiteral_3513/*"CLICK_CLOSE"*/;
 LABEL_10:
   PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)*v8, 0LL);
 }
@@ -1243,15 +1242,15 @@ void __fastcall BattlePerformancePlayer__onClickSkillCancel(BattlePerformancePla
 {
   PlayMakerFSM_o *myfsm; // x0
 
-  if ( (byte_4A01A4E & 1) == 0 )
+  if ( (byte_4A0BBA8 & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_3375/*"CANCEL"*/, method);
-    byte_4A01A4E = 1;
+    sub_1B686D4(&StringLiteral_3373/*"CANCEL"*/, method);
+    byte_4A0BBA8 = 1;
   }
   myfsm = this->fields.myfsm;
   if ( !myfsm )
-    sub_1B64C5C(0LL, method);
-  PlayMakerFSM__SendEvent(myfsm, (System_String_o *)StringLiteral_3375/*"CANCEL"*/, 0LL);
+    sub_1B68930(0LL, method);
+  PlayMakerFSM__SendEvent(myfsm, (System_String_o *)StringLiteral_3373/*"CANCEL"*/, 0LL);
 }
 
 
@@ -1274,13 +1273,13 @@ void __fastcall BattlePerformancePlayer__onClickSkillIcon(
   struct BattleLogic_UseSkillObject_o **p_tmp_useSkill; // x19
 
   v6 = isLong;
-  if ( (byte_4A01A47 & 1) == 0 )
+  if ( (byte_4A0BBA1 & 1) == 0 )
   {
-    sub_1B64A00(&BattleLogic_UseSkillObject_TypeInfo, skillInfo);
-    sub_1B64A00(&StringLiteral_3544/*"CLICK_SKILLICON"*/, v7);
-    byte_4A01A47 = 1;
+    sub_1B686D4(&BattleLogic_UseSkillObject_TypeInfo, skillInfo);
+    sub_1B686D4(&StringLiteral_3542/*"CLICK_SKILLICON"*/, v7);
+    byte_4A0BBA1 = 1;
   }
-  v8 = (BattleLogic_UseSkillObject_o *)sub_1B64C4C(BattleLogic_UseSkillObject_TypeInfo);
+  v8 = (BattleLogic_UseSkillObject_o *)sub_1B68920(BattleLogic_UseSkillObject_TypeInfo);
   BattleLogic_UseSkillObject___ctor(v8, skillInfo, 0LL);
   data = this->fields.data;
   this->fields.isLongTap = v6;
@@ -1317,15 +1316,15 @@ LABEL_16:
       {
         this->fields.tmp_useSkill = v8;
         p_tmp_useSkill = &this->fields.tmp_useSkill;
-        sub_1B649A4((ServantStatusBattleListViewItem_o *)p_tmp_useSkill, (int32_t)v8, v14, v15);
+        sub_1B68678((ServantStatusBattleListViewItem_o *)p_tmp_useSkill, (int32_t)v8, v14, v15);
         data = (BattleData_o *)*(p_tmp_useSkill - 13);
         if ( data )
         {
-          PlayMakerFSM__SendEvent((PlayMakerFSM_o *)data, (System_String_o *)StringLiteral_3544/*"CLICK_SKILLICON"*/, 0LL);
+          PlayMakerFSM__SendEvent((PlayMakerFSM_o *)data, (System_String_o *)StringLiteral_3542/*"CLICK_SKILLICON"*/, 0LL);
           return;
         }
 LABEL_20:
-        sub_1B64C5C(data, v9);
+        sub_1B68930(data, v9);
       }
     }
   }
@@ -1345,21 +1344,21 @@ void __fastcall BattlePerformancePlayer__onClickSkillOK(
   __int64 v10; // x1
   PlayMakerFSM_o *v11; // x0
 
-  if ( (byte_4A01A4D & 1) == 0 )
+  if ( (byte_4A0BBA7 & 1) == 0 )
   {
-    sub_1B64A00(&BattleLogic_UseSkillObject_TypeInfo, skillInfo);
-    sub_1B64A00(&StringLiteral_9575/*"OK"*/, v5);
-    byte_4A01A4D = 1;
+    sub_1B686D4(&BattleLogic_UseSkillObject_TypeInfo, skillInfo);
+    sub_1B686D4(&StringLiteral_9577/*"OK"*/, v5);
+    byte_4A0BBA7 = 1;
   }
-  v6 = (BattleLogic_UseSkillObject_o *)sub_1B64C4C(BattleLogic_UseSkillObject_TypeInfo);
+  v6 = (BattleLogic_UseSkillObject_o *)sub_1B68920(BattleLogic_UseSkillObject_TypeInfo);
   BattleLogic_UseSkillObject___ctor(v6, skillInfo, 0LL);
   this->fields.useSkillObject = v6;
   p_useSkillObject = &this->fields.useSkillObject;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)p_useSkillObject, (int32_t)v6, v8, v9);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)p_useSkillObject, (int32_t)v6, v8, v9);
   v11 = (PlayMakerFSM_o *)*(p_useSkillObject - 14);
   if ( !v11 )
-    sub_1B64C5C(0LL, v10);
-  PlayMakerFSM__SendEvent(v11, (System_String_o *)StringLiteral_9575/*"OK"*/, 0LL);
+    sub_1B68930(0LL, v10);
+  PlayMakerFSM__SendEvent(v11, (System_String_o *)StringLiteral_9577/*"OK"*/, 0LL);
 }
 
 
@@ -1371,10 +1370,10 @@ void __fastcall BattlePerformancePlayer__onCloseConfComplete(BattlePerformancePl
   __int64 v6; // x21
   int max_length; // w9
 
-  if ( (byte_4A01A43 & 1) == 0 )
+  if ( (byte_4A0BB9D & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_5464/*"END_PROC"*/, method);
-    byte_4A01A43 = 1;
+    sub_1B686D4(&StringLiteral_5464/*"END_PROC"*/, method);
+    byte_4A0BB9D = 1;
   }
   confwindowComp = (UnityEngine_Component_o *)this->fields.confwindowComp;
   if ( !confwindowComp )
@@ -1397,7 +1396,7 @@ void __fastcall BattlePerformancePlayer__onCloseConfComplete(BattlePerformancePl
     if ( (int)v6 >= max_length )
       break;
     if ( (unsigned int)v6 >= max_length )
-      sub_1B64C64(confwindowComp, method);
+      sub_1B68938(confwindowComp, method);
     confwindowComp = (UnityEngine_Component_o *)list_param->m_Items[v6];
     if ( confwindowComp )
     {
@@ -1415,7 +1414,7 @@ void __fastcall BattlePerformancePlayer__onCloseConfComplete(BattlePerformancePl
         (confwindowComp = (UnityEngine_Component_o *)this->fields.myfsm) == 0LL) )
   {
 LABEL_12:
-    sub_1B64C5C(confwindowComp, method);
+    sub_1B68930(confwindowComp, method);
   }
   PlayMakerFSM__SendEvent((PlayMakerFSM_o *)confwindowComp, (System_String_o *)StringLiteral_5464/*"END_PROC"*/, 0LL);
 }
@@ -1425,14 +1424,14 @@ void __fastcall BattlePerformancePlayer__onOpenConfComplete(BattlePerformancePla
 {
   PlayMakerFSM_o *myfsm; // x0
 
-  if ( (byte_4A01A5C & 1) == 0 )
+  if ( (byte_4A0BBB6 & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_5464/*"END_PROC"*/, method);
-    byte_4A01A5C = 1;
+    sub_1B686D4(&StringLiteral_5464/*"END_PROC"*/, method);
+    byte_4A0BBB6 = 1;
   }
   myfsm = this->fields.myfsm;
   if ( !myfsm )
-    sub_1B64C5C(0LL, method);
+    sub_1B68930(0LL, method);
   PlayMakerFSM__SendEvent(myfsm, (System_String_o *)StringLiteral_5464/*"END_PROC"*/, 0LL);
 }
 
@@ -1455,11 +1454,11 @@ void __fastcall BattlePerformancePlayer__openSelectCommandTypeWindow(
   struct BattleSkillInfoData_o *skillInfo; // x8
   BattleSelectCommandTypeWindow_o *v15; // x19
 
-  if ( (byte_4A01A57 & 1) == 0 )
+  if ( (byte_4A0BBB1 & 1) == 0 )
   {
-    sub_1B64A00(&Method_BattlePerformancePlayer_selectedCommandType__, method);
-    sub_1B64A00(&BattleSelectCommandTypeWindow_SelectServantCallBack_TypeInfo, v3);
-    byte_4A01A57 = 1;
+    sub_1B686D4(&Method_BattlePerformancePlayer_selectedCommandType__, method);
+    sub_1B686D4(&BattleSelectCommandTypeWindow_SelectServantCallBack_TypeInfo, v3);
+    byte_4A0BBB1 = 1;
   }
   perf = this->fields.perf;
   if ( !perf )
@@ -1481,13 +1480,13 @@ void __fastcall BattlePerformancePlayer__openSelectCommandTypeWindow(
   SelectCommandTypeWindow = BattlePerformance__getSelectCommandTypeWindow(perf, 0LL);
   this->fields.selectCommandTypeWindow = SelectCommandTypeWindow;
   p_selectCommandTypeWindow = &this->fields.selectCommandTypeWindow;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.selectCommandTypeWindow,
     (int32_t)SelectCommandTypeWindow,
     v7,
     v8);
   v9 = this->fields.selectCommandTypeWindow;
-  v10 = (BattleSelectCommandTypeWindow_SelectServantCallBack_o *)sub_1B64C4C(BattleSelectCommandTypeWindow_SelectServantCallBack_TypeInfo);
+  v10 = (BattleSelectCommandTypeWindow_SelectServantCallBack_o *)sub_1B68920(BattleSelectCommandTypeWindow_SelectServantCallBack_TypeInfo);
   BattleSelectCommandTypeWindow_SelectServantCallBack___ctor(
     v10,
     (Il2CppObject *)this,
@@ -1496,7 +1495,7 @@ void __fastcall BattlePerformancePlayer__openSelectCommandTypeWindow(
   if ( !v9 )
     goto LABEL_15;
   v9->fields.selectCallBack = v10;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&v9->fields.selectCallBack, (int32_t)v10, v11, v12);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&v9->fields.selectCallBack, (int32_t)v10, v11, v12);
   tmp_useSkill = this->fields.tmp_useSkill;
   if ( !tmp_useSkill
     || (skillInfo = tmp_useSkill->fields.skillInfo) == 0LL
@@ -1511,7 +1510,7 @@ void __fastcall BattlePerformancePlayer__openSelectCommandTypeWindow(
         (perf = (BattlePerformance_o *)*p_selectCommandTypeWindow) == 0LL) )
   {
 LABEL_15:
-    sub_1B64C5C(perf, method);
+    sub_1B68930(perf, method);
   }
   ((void (__fastcall *)(BattlePerformance_o *, _QWORD, void *))perf->klass[1]._1.typeMetadataHandle)(
     perf,
@@ -1543,11 +1542,11 @@ void __fastcall BattlePerformancePlayer__openSelectSvtWindow(
   const MethodInfo *v19; // x5
   struct BattleData_o *data; // x8
 
-  if ( (byte_4A01A53 & 1) == 0 )
+  if ( (byte_4A0BBAD & 1) == 0 )
   {
-    sub_1B64A00(&Method_BattlePerformancePlayer_selectedSvt__, *(_QWORD *)&skillId);
-    sub_1B64A00(&BattleSelectServantWindow_SelectServantCallBack_TypeInfo, v5);
-    byte_4A01A53 = 1;
+    sub_1B686D4(&Method_BattlePerformancePlayer_selectedSvt__, *(_QWORD *)&skillId);
+    sub_1B686D4(&BattleSelectServantWindow_SelectServantCallBack_TypeInfo, v5);
+    byte_4A0BBAD = 1;
   }
   perf = this->fields.perf;
   if ( !perf )
@@ -1569,7 +1568,7 @@ void __fastcall BattlePerformancePlayer__openSelectSvtWindow(
   SelectSvtWindow = BattlePerformance__getSelectSvtWindow(perf, 0LL);
   this->fields.selectSvtWindow = SelectSvtWindow;
   p_selectSvtWindow = &this->fields.selectSvtWindow;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.selectSvtWindow, (int32_t)SelectSvtWindow, v9, v10);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.selectSvtWindow, (int32_t)SelectSvtWindow, v9, v10);
   perf = (BattlePerformance_o *)this->fields.data;
   if ( !perf )
     goto LABEL_23;
@@ -1590,7 +1589,7 @@ void __fastcall BattlePerformancePlayer__openSelectSvtWindow(
   }
   BattleSelectServantWindow__setUseClose((BattleSelectServantWindow_o *)perf, v12, v11);
   v13 = this->fields.selectSvtWindow;
-  v14 = (BattleSelectServantWindow_SelectServantCallBack_o *)sub_1B64C4C(BattleSelectServantWindow_SelectServantCallBack_TypeInfo);
+  v14 = (BattleSelectServantWindow_SelectServantCallBack_o *)sub_1B68920(BattleSelectServantWindow_SelectServantCallBack_TypeInfo);
   BattleSelectServantWindow_SelectServantCallBack___ctor(
     v14,
     (Il2CppObject *)this,
@@ -1599,7 +1598,7 @@ void __fastcall BattlePerformancePlayer__openSelectSvtWindow(
   if ( !v13 )
     goto LABEL_23;
   v13->fields.selectCallBack = v14;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&v13->fields.selectCallBack, (int32_t)v14, v16, v17);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&v13->fields.selectCallBack, (int32_t)v14, v16, v17);
   perf = (BattlePerformance_o *)this->fields.data;
   if ( !perf )
     goto LABEL_23;
@@ -1623,7 +1622,7 @@ void __fastcall BattlePerformancePlayer__openSelectSvtWindow(
   perf = (BattlePerformance_o *)*p_selectSvtWindow;
   if ( !*p_selectSvtWindow )
 LABEL_23:
-    sub_1B64C5C(perf, *(_QWORD *)&skillId);
+    sub_1B68930(perf, *(_QWORD *)&skillId);
   ((void (__fastcall *)(BattlePerformance_o *, _QWORD, void *))perf->klass[1]._1.typeMetadataHandle)(
     perf,
     0LL,
@@ -1643,21 +1642,21 @@ void __fastcall BattlePerformancePlayer__openSvtConfWindow(
   __int64 v8; // x1
   const MethodInfo *v9; // x2
 
-  if ( (byte_4A01A5B & 1) == 0 )
+  if ( (byte_4A0BBB5 & 1) == 0 )
   {
-    sub_1B64A00(&Method_BattlePerformancePlayer_onOpenConfComplete__, method);
-    sub_1B64A00(&BattleWindowComponent_EndCall_TypeInfo, v4);
-    byte_4A01A5B = 1;
+    sub_1B686D4(&Method_BattlePerformancePlayer_onOpenConfComplete__, method);
+    sub_1B686D4(&BattleWindowComponent_EndCall_TypeInfo, v4);
+    byte_4A0BBB5 = 1;
   }
   confwindowComp = this->fields.confwindowComp;
-  v6 = (BattleWindowComponent_EndCall_o *)sub_1B64C4C(BattleWindowComponent_EndCall_TypeInfo);
+  v6 = (BattleWindowComponent_EndCall_o *)sub_1B68920(BattleWindowComponent_EndCall_TypeInfo);
   BattleWindowComponent_EndCall___ctor(
     v6,
     (Il2CppObject *)this,
     Method_BattlePerformancePlayer_onOpenConfComplete__,
     0LL);
   if ( !confwindowComp )
-    sub_1B64C5C(v7, v8);
+    sub_1B68930(v7, v8);
   BattleServantConfConponent__Open(confwindowComp, v6, v9);
 }
 
@@ -1677,7 +1676,7 @@ void __fastcall BattlePerformancePlayer__playAttackEffect(
   list_ID = this->fields.list_ID;
   if ( !list_ID )
 LABEL_11:
-    sub_1B64C5C(this, *(_QWORD *)&uniqueID);
+    sub_1B68930(this, *(_QWORD *)&uniqueID);
   v4 = this;
   v6 = 0LL;
   while ( 1 )
@@ -1694,7 +1693,7 @@ LABEL_11:
         goto LABEL_11;
       if ( v6 >= list_param->max_length )
 LABEL_13:
-        sub_1B64C64(this, *(_QWORD *)&uniqueID);
+        sub_1B68938(this, *(_QWORD *)&uniqueID);
       this = (BattlePerformancePlayer_o *)list_param->m_Items[v6];
       if ( !this )
         goto LABEL_11;
@@ -1716,10 +1715,10 @@ void __fastcall BattlePerformancePlayer__procCloseAll(BattlePerformancePlayer_o 
   struct BattlePerformance_o *perf; // x8
   struct BattlePerformanceStatus_o *statusPerf; // x8
 
-  if ( (byte_4A01A44 & 1) == 0 )
+  if ( (byte_4A0BB9E & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_5464/*"END_PROC"*/, method);
-    byte_4A01A44 = 1;
+    sub_1B686D4(&StringLiteral_5464/*"END_PROC"*/, method);
+    byte_4A0BB9E = 1;
   }
   BattlePerformancePlayer__procCloseConf(this, 0, v2);
   perf = this->fields.perf;
@@ -1732,7 +1731,7 @@ void __fastcall BattlePerformancePlayer__procCloseAll(BattlePerformancePlayer_o 
           buffConfWindow->klass[1]._1.interopData),
         (buffConfWindow = this->fields.myfsm) == 0LL) )
   {
-    sub_1B64C5C(buffConfWindow, v5);
+    sub_1B68930(buffConfWindow, v5);
   }
   PlayMakerFSM__SendEvent(buffConfWindow, (System_String_o *)StringLiteral_5464/*"END_PROC"*/, 0LL);
 }
@@ -1758,19 +1757,19 @@ void __fastcall BattlePerformancePlayer__procCloseConf(
   const MethodInfo *v15; // x2
 
   v4 = this;
-  if ( (byte_4A01A42 & 1) == 0 )
+  if ( (byte_4A0BB9C & 1) == 0 )
   {
-    sub_1B64A00(&Method_BattlePerformancePlayer_onCloseConfComplete__, flg);
-    sub_1B64A00(&Method_BattlePerformancePlayer_procCloseConf__, v5);
-    this = (BattlePerformancePlayer_o *)sub_1B64A00(&BattleWindowComponent_EndCall_TypeInfo, v6);
-    byte_4A01A42 = 1;
+    sub_1B686D4(&Method_BattlePerformancePlayer_onCloseConfComplete__, flg);
+    sub_1B686D4(&Method_BattlePerformancePlayer_procCloseConf__, v5);
+    this = (BattlePerformancePlayer_o *)sub_1B686D4(&BattleWindowComponent_EndCall_TypeInfo, v6);
+    byte_4A0BB9C = 1;
   }
   if ( flg )
   {
     v7 = Method_BattlePerformancePlayer_procCloseConf__;
     if ( (*((_BYTE *)Method_BattlePerformancePlayer_procCloseConf__ + 83) & 2) != 0 )
-      v7 = (_QWORD *)sub_1B64A18(Method_BattlePerformancePlayer_procCloseConf__);
-    v8 = (System_Reflection_MethodBase_o *)sub_1B649E4(v7, v7[4]);
+      v7 = (_QWORD *)sub_1B686EC(Method_BattlePerformancePlayer_procCloseConf__);
+    v8 = (System_Reflection_MethodBase_o *)sub_1B686B8(v7, v7[4]);
     OverwriteAssetSoundName__PlayCommonSe(v8, 12, 0LL);
   }
   list_param = v4->fields.list_param;
@@ -1783,7 +1782,7 @@ void __fastcall BattlePerformancePlayer__procCloseConf(
     if ( (int)v10 >= max_length )
       break;
     if ( (unsigned int)v10 >= max_length )
-      sub_1B64C64(this, flg);
+      sub_1B68938(this, flg);
     this = (BattlePerformancePlayer_o *)list_param->m_Items[v10];
     if ( this )
     {
@@ -1807,7 +1806,7 @@ void __fastcall BattlePerformancePlayer__procCloseConf(
           this->klass[1]._1.properties),
         (this = (BattlePerformancePlayer_o *)v4->fields.perf) == 0LL)
     || (BattlePerformance__changeAttackButton((BattlePerformance_o *)this, 1, 0, 1, 0LL),
-        v14 = (BattleWindowComponent_EndCall_o *)sub_1B64C4C(BattleWindowComponent_EndCall_TypeInfo),
+        v14 = (BattleWindowComponent_EndCall_o *)sub_1B68920(BattleWindowComponent_EndCall_TypeInfo),
         BattleWindowComponent_EndCall___ctor(
           v14,
           (Il2CppObject *)v4,
@@ -1816,7 +1815,7 @@ void __fastcall BattlePerformancePlayer__procCloseConf(
         (this = (BattlePerformancePlayer_o *)v4->fields.confwindowComp) == 0LL) )
   {
 LABEL_13:
-    sub_1B64C5C(this, flg);
+    sub_1B68930(this, flg);
   }
   BattleServantConfConponent__Close((BattleServantConfConponent_o *)this, v14, v15);
 }
@@ -1833,20 +1832,20 @@ void __fastcall BattlePerformancePlayer__procCloseSkillConf(BattlePerformancePla
   BattlePerformance_o *perf; // x0
   __int64 v10; // x1
 
-  if ( (byte_4A01A4A & 1) == 0 )
+  if ( (byte_4A0BBA4 & 1) == 0 )
   {
-    sub_1B64A00(&Method_BattlePerformancePlayer_CloseSkillConfComp__, method);
-    sub_1B64A00(&Method_BattlePerformancePlayer_procCloseSkillConf__, v3);
-    sub_1B64A00(&BattleWindowComponent_EndCall_TypeInfo, v4);
-    byte_4A01A4A = 1;
+    sub_1B686D4(&Method_BattlePerformancePlayer_CloseSkillConfComp__, method);
+    sub_1B686D4(&Method_BattlePerformancePlayer_procCloseSkillConf__, v3);
+    sub_1B686D4(&BattleWindowComponent_EndCall_TypeInfo, v4);
+    byte_4A0BBA4 = 1;
   }
   v5 = Method_BattlePerformancePlayer_procCloseSkillConf__;
   if ( (*((_BYTE *)Method_BattlePerformancePlayer_procCloseSkillConf__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1B64A18(Method_BattlePerformancePlayer_procCloseSkillConf__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1B649E4(v5, v5[4]);
+    v5 = (_QWORD *)sub_1B686EC(Method_BattlePerformancePlayer_procCloseSkillConf__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1B686B8(v5, v5[4]);
   OverwriteAssetSoundName__PlayCommonSe(v6, 10, 0LL);
   skillConfWindow = this->fields.skillConfWindow;
-  v8 = (BattleWindowComponent_EndCall_o *)sub_1B64C4C(BattleWindowComponent_EndCall_TypeInfo);
+  v8 = (BattleWindowComponent_EndCall_o *)sub_1B68920(BattleWindowComponent_EndCall_TypeInfo);
   BattleWindowComponent_EndCall___ctor(
     v8,
     (Il2CppObject *)this,
@@ -1859,7 +1858,7 @@ void __fastcall BattlePerformancePlayer__procCloseSkillConf(BattlePerformancePla
           skillConfWindow->klass->vtable._13_CompClose.methodPtr),
         (perf = this->fields.perf) == 0LL) )
   {
-    sub_1B64C5C(perf, v10);
+    sub_1B68930(perf, v10);
   }
   BattlePerformance__CloseSkillSelectAddFuncConfWindow(perf, 0LL, 0LL);
 }
@@ -1881,23 +1880,23 @@ void __fastcall BattlePerformancePlayer__procOpenSkillConf(
   struct BattleSkillConfComponent_o *v12; // x20
   BattleWindowComponent_EndCall_o *v13; // x21
 
-  if ( (byte_4A01A49 & 1) == 0 )
+  if ( (byte_4A0BBA3 & 1) == 0 )
   {
-    sub_1B64A00(&Method_BattlePerformancePlayer_OpenSkillConfComplete__, cancelFlg);
-    sub_1B64A00(&BattleWindowComponent_EndCall_TypeInfo, v5);
-    sub_1B64A00(&StringLiteral_15317/*"WAIT_OTHER_SKILL"*/, v6);
-    byte_4A01A49 = 1;
+    sub_1B686D4(&Method_BattlePerformancePlayer_OpenSkillConfComplete__, cancelFlg);
+    sub_1B686D4(&BattleWindowComponent_EndCall_TypeInfo, v5);
+    sub_1B686D4(&StringLiteral_15316/*"WAIT_OTHER_SKILL"*/, v6);
+    byte_4A0BBA3 = 1;
   }
   otherFsm = this->fields.otherFsm;
   if ( !otherFsm )
     goto LABEL_9;
   tmp_useSkill = this->fields.tmp_useSkill;
-  PlayMakerFSM__SendEvent(otherFsm, (System_String_o *)StringLiteral_15317/*"WAIT_OTHER_SKILL"*/, 0LL);
+  PlayMakerFSM__SendEvent(otherFsm, (System_String_o *)StringLiteral_15316/*"WAIT_OTHER_SKILL"*/, 0LL);
   skillConfWindow = this->fields.skillConfWindow;
   otherFsm = (PlayMakerFSM_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !skillConfWindow
     || (skillConfWindow->fields.target = (struct UnityEngine_GameObject_o *)otherFsm,
-        sub_1B649A4((ServantStatusBattleListViewItem_o *)&skillConfWindow->fields.target, (int32_t)otherFsm, v10, v11),
+        sub_1B68678((ServantStatusBattleListViewItem_o *)&skillConfWindow->fields.target, (int32_t)otherFsm, v10, v11),
         !tmp_useSkill)
     || (otherFsm = (PlayMakerFSM_o *)this->fields.skillConfWindow) == 0LL
     || (BattleSkillConfComponent__SetSkillConf(
@@ -1907,7 +1906,7 @@ void __fastcall BattlePerformancePlayer__procOpenSkillConf(
           1,
           0LL),
         v12 = this->fields.skillConfWindow,
-        v13 = (BattleWindowComponent_EndCall_o *)sub_1B64C4C(BattleWindowComponent_EndCall_TypeInfo),
+        v13 = (BattleWindowComponent_EndCall_o *)sub_1B68920(BattleWindowComponent_EndCall_TypeInfo),
         BattleWindowComponent_EndCall___ctor(
           v13,
           (Il2CppObject *)this,
@@ -1916,7 +1915,7 @@ void __fastcall BattlePerformancePlayer__procOpenSkillConf(
         !v12) )
   {
 LABEL_9:
-    sub_1B64C5C(otherFsm, cancelFlg);
+    sub_1B68930(otherFsm, cancelFlg);
   }
   ((void (__fastcall *)(struct BattleSkillConfComponent_o *, BattleWindowComponent_EndCall_o *, Il2CppMethodPointer))v12->klass->vtable._10_Open.method)(
     v12,
@@ -1945,11 +1944,11 @@ void __fastcall BattlePerformancePlayer__procSelectServant(BattlePerformancePlay
   float v18; // s0
   const MethodInfo *v19; // x1
 
-  if ( (byte_4A01A40 & 1) == 0 )
+  if ( (byte_4A0BB9A & 1) == 0 )
   {
-    sub_1B64A00(&Method_BattlePerformancePlayer_procSelectServant__, method);
-    sub_1B64A00(&StringLiteral_12179/*"START_CLOSE"*/, v3);
-    byte_4A01A40 = 1;
+    sub_1B686D4(&Method_BattlePerformancePlayer_procSelectServant__, method);
+    sub_1B686D4(&StringLiteral_12180/*"START_CLOSE"*/, v3);
+    byte_4A0BB9A = 1;
   }
   data = this->fields.data;
   if ( !data )
@@ -1967,11 +1966,11 @@ LABEL_9:
     if ( data )
     {
       tmp_uniqueId = this->fields.tmp_uniqueId;
-      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)data, (System_String_o *)StringLiteral_12179/*"START_CLOSE"*/, 0LL);
+      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)data, (System_String_o *)StringLiteral_12180/*"START_CLOSE"*/, 0LL);
       v7 = Method_BattlePerformancePlayer_procSelectServant__;
       if ( (*((_BYTE *)Method_BattlePerformancePlayer_procSelectServant__ + 83) & 2) != 0 )
-        v7 = (_QWORD *)sub_1B64A18(Method_BattlePerformancePlayer_procSelectServant__);
-      v8 = (System_Reflection_MethodBase_o *)sub_1B649E4(v7, v7[4]);
+        v7 = (_QWORD *)sub_1B686EC(Method_BattlePerformancePlayer_procSelectServant__);
+      v8 = (System_Reflection_MethodBase_o *)sub_1B686B8(v7, v7[4]);
       OverwriteAssetSoundName__PlayCommonSe(v8, 11, 0LL);
       list_param = this->fields.list_param;
       if ( list_param )
@@ -1998,7 +1997,7 @@ LABEL_9:
               goto LABEL_33;
             if ( (unsigned int)v10 >= v14->max_length )
 LABEL_34:
-              sub_1B64C64(data, method);
+              sub_1B68938(data, method);
             v15 = v14->m_Items[v10];
             if ( !v15 )
               goto LABEL_33;
@@ -2048,7 +2047,7 @@ LABEL_34:
       }
     }
 LABEL_33:
-    sub_1B64C5C(data, method);
+    sub_1B68930(data, method);
   }
 }
 
@@ -2070,13 +2069,13 @@ void __fastcall BattlePerformancePlayer__procTurorial(
   System_Action_o *v12; // x21
 
   v4 = (Il2CppObject *)this;
-  if ( (byte_4A01A5E & 1) == 0 )
+  if ( (byte_4A0BBB8 & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, *(_QWORD *)&param);
-    sub_1B64A00(&Method_BattlePerformancePlayer_tutorialSetSelectSvt__, v5);
-    sub_1B64A00(&Method_BattlePerformancePlayer_tutorialSetSelect__, v6);
-    this = (BattlePerformancePlayer_o *)sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
-    byte_4A01A5E = 1;
+    sub_1B686D4(&System_Action_TypeInfo, *(_QWORD *)&param);
+    sub_1B686D4(&Method_BattlePerformancePlayer_tutorialSetSelectSvt__, v5);
+    sub_1B686D4(&Method_BattlePerformancePlayer_tutorialSetSelect__, v6);
+    this = (BattlePerformancePlayer_o *)sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
+    byte_4A0BBB8 = 1;
   }
   switch ( param )
   {
@@ -2085,13 +2084,13 @@ void __fastcall BattlePerformancePlayer__procTurorial(
       if ( !monitor )
         goto LABEL_14;
       monitor[273] = 5;
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-      v10 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v10 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
       v11 = &Method_BattlePerformancePlayer_tutorialSetSelectSvt__;
       goto LABEL_11;
     case 2:
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-      v10 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v10 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
       v11 = &Method_BattlePerformancePlayer_tutorialSetSelect__;
 LABEL_11:
       v12 = v10;
@@ -2101,14 +2100,14 @@ LABEL_11:
       CommonUI__CloseTutorialArrowMark((CommonUI_o *)Instance, v12, 0LL);
       return;
     case 0:
-      this = (BattlePerformancePlayer_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (BattlePerformancePlayer_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( this )
       {
         CommonUI__CloseTutorialNotificationDialogArrow((CommonUI_o *)this, 0LL);
         return;
       }
 LABEL_14:
-      sub_1B64C5C(this, *(_QWORD *)&param);
+      sub_1B68930(this, *(_QWORD *)&param);
   }
 }
 
@@ -2127,11 +2126,11 @@ void __fastcall BattlePerformancePlayer__selectedCommandType(
   __int64 *v10; // x8
 
   v5 = uniqueId;
-  if ( (byte_4A01A58 & 1) == 0 )
+  if ( (byte_4A0BBB2 & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_3375/*"CANCEL"*/, *(_QWORD *)&uniqueId);
-    sub_1B64A00(&StringLiteral_5464/*"END_PROC"*/, v7);
-    byte_4A01A58 = 1;
+    sub_1B686D4(&StringLiteral_3373/*"CANCEL"*/, *(_QWORD *)&uniqueId);
+    sub_1B686D4(&StringLiteral_5464/*"END_PROC"*/, v7);
+    byte_4A0BBB2 = 1;
   }
   selectCommandTypeWindow = (BattleLogic_o *)this->fields.selectCommandTypeWindow;
   if ( !selectCommandTypeWindow )
@@ -2175,11 +2174,11 @@ LABEL_14:
     selectCommandTypeWindow = (BattleLogic_o *)this->fields.myfsm;
     if ( selectCommandTypeWindow )
     {
-      v10 = &StringLiteral_3375/*"CANCEL"*/;
+      v10 = &StringLiteral_3373/*"CANCEL"*/;
       goto LABEL_14;
     }
 LABEL_16:
-    sub_1B64C5C(selectCommandTypeWindow, *(_QWORD *)&uniqueId);
+    sub_1B68930(selectCommandTypeWindow, *(_QWORD *)&uniqueId);
   }
 }
 
@@ -2218,21 +2217,21 @@ void __fastcall BattlePerformancePlayer__selectedSvt(
   int32_t v30; // w2
   int32_t v31; // w3
 
-  if ( (byte_4A01A54 & 1) == 0 )
+  if ( (byte_4A0BBAE & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, *(_QWORD *)&uniqueId);
-    sub_1B64A00(&Method_DataManager_GetMasterData_SkillMaster___, v5);
-    sub_1B64A00(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v6);
-    sub_1B64A00(&LocalizationManager_TypeInfo, v7);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_1B64A00(&Method_BattlePerformancePlayer___c__selectedSvt_b__45_0__, v10);
-    sub_1B64A00(&BattlePerformancePlayer___c_TypeInfo, v11);
-    sub_1B64A00(&StringLiteral_3375/*"CANCEL"*/, v12);
-    sub_1B64A00(&StringLiteral_5464/*"END_PROC"*/, v13);
-    sub_1B64A00(&StringLiteral_1/*""*/, v14);
-    sub_1B64A00(&StringLiteral_2892/*"BATTLE_INVALID_SELECT_TARGET"*/, v15);
-    byte_4A01A54 = 1;
+    sub_1B686D4(&System_Action_TypeInfo, *(_QWORD *)&uniqueId);
+    sub_1B686D4(&Method_DataManager_GetMasterData_SkillMaster___, v5);
+    sub_1B686D4(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v6);
+    sub_1B686D4(&LocalizationManager_TypeInfo, v7);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    sub_1B686D4(&Method_BattlePerformancePlayer___c__selectedSvt_b__45_0__, v10);
+    sub_1B686D4(&BattlePerformancePlayer___c_TypeInfo, v11);
+    sub_1B686D4(&StringLiteral_3373/*"CANCEL"*/, v12);
+    sub_1B686D4(&StringLiteral_5464/*"END_PROC"*/, v13);
+    sub_1B686D4(&StringLiteral_1/*""*/, v14);
+    sub_1B686D4(&StringLiteral_2890/*"BATTLE_INVALID_SELECT_TARGET"*/, v15);
+    byte_4A0BBAE = 1;
   }
   selectSvtWindow = this->fields.selectSvtWindow;
   if ( !selectSvtWindow )
@@ -2247,12 +2246,12 @@ void __fastcall BattlePerformancePlayer__selectedSvt(
     if ( !actSkillObject )
       goto LABEL_35;
     skillInfo = actSkillObject->fields.skillInfo;
-    selectSvtWindow = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    selectSvtWindow = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !selectSvtWindow )
       goto LABEL_35;
     selectSvtWindow = DataManager__GetMasterData_object_(
                         (DataManager_o *)selectSvtWindow,
-                        (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_SkillMaster___);
+                        (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_SkillMaster___);
     if ( !skillInfo )
       goto LABEL_35;
     v19 = (DataMasterBase_TMaster__TEntity__PKType__o *)selectSvtWindow;
@@ -2264,7 +2263,7 @@ void __fastcall BattlePerformancePlayer__selectedSvt(
     selectSvtWindow = DataMasterBase_object__object__int___GetEntity(
                         v19,
                         (int32_t)selectSvtWindow,
-                        (const MethodInfo_30D6798 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+                        (const MethodInfo_30E44C0 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
     if ( !this->fields.data )
       goto LABEL_35;
     v20 = (SkillEntity_o *)selectSvtWindow;
@@ -2288,10 +2287,10 @@ LABEL_34:
       }
       goto LABEL_35;
     }
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    selectSvtWindow = LocalizationManager__Get((System_String_o *)StringLiteral_2892/*"BATTLE_INVALID_SELECT_TARGET"*/, 0LL);
+    selectSvtWindow = LocalizationManager__Get((System_String_o *)StringLiteral_2890/*"BATTLE_INVALID_SELECT_TARGET"*/, 0LL);
     v24 = (System_String_o *)selectSvtWindow;
     v25 = BattlePerformancePlayer___c_TypeInfo;
     if ( !BattlePerformancePlayer___c_TypeInfo->_2.cctor_finished )
@@ -2309,11 +2308,11 @@ LABEL_34:
         v25 = BattlePerformancePlayer___c_TypeInfo;
       }
       v28 = (Il2CppObject *)v25->static_fields->__9;
-      _9__45_0 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+      _9__45_0 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
       System_Action___ctor(_9__45_0, v28, Method_BattlePerformancePlayer___c__selectedSvt_b__45_0__, 0LL);
       static_fields = BattlePerformancePlayer___c_TypeInfo->static_fields;
       static_fields->__9__45_0 = _9__45_0;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)&static_fields->__9__45_0, (int32_t)_9__45_0, v30, v31);
+      sub_1B68678((ServantStatusBattleListViewItem_o *)&static_fields->__9__45_0, (int32_t)_9__45_0, v30, v31);
     }
     if ( !Instance )
       goto LABEL_35;
@@ -2322,11 +2321,11 @@ LABEL_32:
     selectSvtWindow = this->fields.myfsm;
     if ( selectSvtWindow )
     {
-      v21 = &StringLiteral_3375/*"CANCEL"*/;
+      v21 = &StringLiteral_3373/*"CANCEL"*/;
       goto LABEL_34;
     }
 LABEL_35:
-    sub_1B64C5C(selectSvtWindow, *(_QWORD *)&uniqueId);
+    sub_1B68930(selectSvtWindow, *(_QWORD *)&uniqueId);
   }
   data = this->fields.data;
   if ( !data )
@@ -2359,10 +2358,10 @@ void __fastcall BattlePerformancePlayer__setParam(
   struct System_Int32_array *list_ID; // x8
 
   v6 = this;
-  if ( (byte_4A01A3C & 1) == 0 )
+  if ( (byte_4A0BB96 & 1) == 0 )
   {
-    this = (BattlePerformancePlayer_o *)sub_1B64A00(&UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
-    byte_4A01A3C = 1;
+    this = (BattlePerformancePlayer_o *)sub_1B686D4(&UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
+    byte_4A0BB96 = 1;
   }
   list_param = v6->fields.list_param;
   if ( !list_param )
@@ -2419,7 +2418,7 @@ void __fastcall BattlePerformancePlayer__setParam(
                       return;
                     }
 LABEL_23:
-                    sub_1B64C64(this, *(_QWORD *)&index);
+                    sub_1B68938(this, *(_QWORD *)&index);
                   }
                 }
               }
@@ -2429,7 +2428,7 @@ LABEL_23:
       }
     }
 LABEL_22:
-    sub_1B64C5C(this, *(_QWORD *)&index);
+    sub_1B68930(this, *(_QWORD *)&index);
   }
 }
 
@@ -2480,11 +2479,11 @@ bool __fastcall BattlePerformancePlayer__showSideEffect(
     goto LABEL_9;
   if ( v8 >= v9->max_length )
 LABEL_15:
-    sub_1B64C64(this, buffData);
+    sub_1B68938(this, buffData);
   this = (BattlePerformancePlayer_o *)*((_QWORD *)&v9->obj.klass + v6);
   if ( !this )
 LABEL_9:
-    sub_1B64C5C(this, buffData);
+    sub_1B68930(this, buffData);
   BattleServantParamComponent__showSideEffect((BattleServantParamComponent_o *)this, buffData, 0LL);
   return v8 < max_length;
 }
@@ -2494,15 +2493,15 @@ void __fastcall BattlePerformancePlayer__startCommand(BattlePerformancePlayer_o 
 {
   PlayMakerFSM_o *myfsm; // x0
 
-  if ( (byte_4A01A45 & 1) == 0 )
+  if ( (byte_4A0BB9F & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_12180/*"START_COM"*/, method);
-    byte_4A01A45 = 1;
+    sub_1B686D4(&StringLiteral_12181/*"START_COM"*/, method);
+    byte_4A0BB9F = 1;
   }
   myfsm = this->fields.myfsm;
   if ( !myfsm )
-    sub_1B64C5C(0LL, method);
-  PlayMakerFSM__SendEvent(myfsm, (System_String_o *)StringLiteral_12180/*"START_COM"*/, 0LL);
+    sub_1B68930(0LL, method);
+  PlayMakerFSM__SendEvent(myfsm, (System_String_o *)StringLiteral_12181/*"START_COM"*/, 0LL);
 }
 
 
@@ -2510,15 +2509,15 @@ void __fastcall BattlePerformancePlayer__startSkill(BattlePerformancePlayer_o *t
 {
   PlayMakerFSM_o *myfsm; // x0
 
-  if ( (byte_4A01A55 & 1) == 0 )
+  if ( (byte_4A0BBAF & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_12200/*"START_SKILL"*/, method);
-    byte_4A01A55 = 1;
+    sub_1B686D4(&StringLiteral_12201/*"START_SKILL"*/, method);
+    byte_4A0BBAF = 1;
   }
   myfsm = this->fields.myfsm;
   if ( !myfsm )
-    sub_1B64C5C(0LL, method);
-  PlayMakerFSM__SendEvent(myfsm, (System_String_o *)StringLiteral_12200/*"START_SKILL"*/, 0LL);
+    sub_1B68930(0LL, method);
+  PlayMakerFSM__SendEvent(myfsm, (System_String_o *)StringLiteral_12201/*"START_SKILL"*/, 0LL);
 }
 
 
@@ -2526,15 +2525,15 @@ void __fastcall BattlePerformancePlayer__startTac(BattlePerformancePlayer_o *thi
 {
   PlayMakerFSM_o *myfsm; // x0
 
-  if ( (byte_4A01A3D & 1) == 0 )
+  if ( (byte_4A0BB97 & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_12204/*"START_TAC"*/, method);
-    byte_4A01A3D = 1;
+    sub_1B686D4(&StringLiteral_12205/*"START_TAC"*/, method);
+    byte_4A0BB97 = 1;
   }
   myfsm = this->fields.myfsm;
   if ( !myfsm )
-    sub_1B64C5C(0LL, method);
-  PlayMakerFSM__SendEvent(myfsm, (System_String_o *)StringLiteral_12204/*"START_TAC"*/, 0LL);
+    sub_1B68930(0LL, method);
+  PlayMakerFSM__SendEvent(myfsm, (System_String_o *)StringLiteral_12205/*"START_TAC"*/, 0LL);
 }
 
 
@@ -2547,14 +2546,14 @@ void __fastcall BattlePerformancePlayer__tutorialSetArrowIcon(
   UnityEngine_Vector2_o v4; // 0:s0.4,4:s1.4
   UnityEngine_Rect_o v5; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
 
-  if ( (byte_4A01A5F & 1) == 0 )
+  if ( (byte_4A0BBB9 & 1) == 0 )
   {
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    byte_4A01A5F = 1;
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    byte_4A0BBB9 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1B64C5C(0LL, v3);
+    sub_1B68930(0LL, v3);
   v5.fields.m_Width = 90.0;
   v4.fields.x = -378.0;
   v4.fields.y = -151.0;
@@ -2572,14 +2571,14 @@ void __fastcall BattlePerformancePlayer__tutorialSetSelect(BattlePerformancePlay
   UnityEngine_Vector2_o v4; // 0:s0.4,4:s1.4
   UnityEngine_Rect_o v5; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
 
-  if ( (byte_4A01A60 & 1) == 0 )
+  if ( (byte_4A0BBBA & 1) == 0 )
   {
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    byte_4A01A60 = 1;
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    byte_4A0BBBA = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1B64C5C(0LL, v3);
+    sub_1B68930(0LL, v3);
   v4.fields.x = 310.0;
   v4.fields.y = -50.0;
   v5.fields.m_XMin = -410.0;
@@ -2599,14 +2598,14 @@ void __fastcall BattlePerformancePlayer__tutorialSetSelectSvt(
   UnityEngine_Vector2_o v4; // 0:s0.4,4:s1.4
   UnityEngine_Rect_o v5; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
 
-  if ( (byte_4A01A61 & 1) == 0 )
+  if ( (byte_4A0BBBB & 1) == 0 )
   {
-    sub_1B64A00(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    byte_4A01A61 = 1;
+    sub_1B686D4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    byte_4A0BBBB = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1B64C5C(0LL, v3);
+    sub_1B68930(0LL, v3);
   v4.fields.x = -0.0;
   v5.fields.m_XMin = -200.0;
   v5.fields.m_YMin = -175.0;
@@ -2634,15 +2633,15 @@ void __fastcall BattlePerformancePlayer__updateView(BattlePerformancePlayer_o *t
   struct BattleServantParamComponent_array *v8; // x8
 
   v2 = this;
-  if ( (byte_4A01A59 & 1) == 0 )
+  if ( (byte_4A0BBB3 & 1) == 0 )
   {
-    this = (BattlePerformancePlayer_o *)sub_1B64A00(&UnityEngine_Object_TypeInfo, method);
-    byte_4A01A59 = 1;
+    this = (BattlePerformancePlayer_o *)sub_1B686D4(&UnityEngine_Object_TypeInfo, method);
+    byte_4A0BBB3 = 1;
   }
   list_param = v2->fields.list_param;
   if ( !list_param )
 LABEL_15:
-    sub_1B64C5C(this, method);
+    sub_1B68930(this, method);
   v4 = 4LL;
   while ( 1 )
   {
@@ -2663,7 +2662,7 @@ LABEL_15:
         goto LABEL_15;
       if ( v6 >= v8->max_length )
 LABEL_17:
-        sub_1B64C64(this, method);
+        sub_1B68938(this, method);
       this = (BattlePerformancePlayer_o *)*((_QWORD *)&v8->obj.klass + v4);
       if ( !this )
         goto LABEL_15;
@@ -2690,21 +2689,21 @@ void __fastcall BattlePerformancePlayer__useSkillIcon(
   __int64 v10; // x1
   PlayMakerFSM_o *v11; // x0
 
-  if ( (byte_4A01A4C & 1) == 0 )
+  if ( (byte_4A0BBA6 & 1) == 0 )
   {
-    sub_1B64A00(&BattleLogic_UseSkillObject_TypeInfo, skillInfo);
-    sub_1B64A00(&StringLiteral_3544/*"CLICK_SKILLICON"*/, v5);
-    byte_4A01A4C = 1;
+    sub_1B686D4(&BattleLogic_UseSkillObject_TypeInfo, skillInfo);
+    sub_1B686D4(&StringLiteral_3542/*"CLICK_SKILLICON"*/, v5);
+    byte_4A0BBA6 = 1;
   }
-  v6 = (BattleLogic_UseSkillObject_o *)sub_1B64C4C(BattleLogic_UseSkillObject_TypeInfo);
+  v6 = (BattleLogic_UseSkillObject_o *)sub_1B68920(BattleLogic_UseSkillObject_TypeInfo);
   BattleLogic_UseSkillObject___ctor(v6, skillInfo, 0LL);
   this->fields.useSkillObject = v6;
   p_useSkillObject = &this->fields.useSkillObject;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)p_useSkillObject, (int32_t)v6, v8, v9);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)p_useSkillObject, (int32_t)v6, v8, v9);
   v11 = (PlayMakerFSM_o *)*(p_useSkillObject - 14);
   if ( !v11 )
-    sub_1B64C5C(0LL, v10);
-  PlayMakerFSM__SendEvent(v11, (System_String_o *)StringLiteral_3544/*"CLICK_SKILLICON"*/, 0LL);
+    sub_1B68930(0LL, v10);
+  PlayMakerFSM__SendEvent(v11, (System_String_o *)StringLiteral_3542/*"CLICK_SKILLICON"*/, 0LL);
 }
 
 
@@ -2715,15 +2714,15 @@ void __fastcall BattlePerformancePlayer___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   int32_t v4; // w3
 
-  if ( (byte_4A01A64 & 1) == 0 )
+  if ( (byte_4A0BBBE & 1) == 0 )
   {
-    sub_1B64A00(&BattlePerformancePlayer___c_TypeInfo, v1);
-    byte_4A01A64 = 1;
+    sub_1B686D4(&BattlePerformancePlayer___c_TypeInfo, v1);
+    byte_4A0BBBE = 1;
   }
-  v2 = (Il2CppObject *)sub_1B64C4C(BattlePerformancePlayer___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B68920(BattlePerformancePlayer___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   BattlePerformancePlayer___c_TypeInfo->static_fields->__9 = (struct BattlePerformancePlayer___c_o *)v2;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)BattlePerformancePlayer___c_TypeInfo->static_fields,
     (int32_t)v2,
     v3,

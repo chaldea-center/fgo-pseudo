@@ -1,9 +1,9 @@
 void __fastcall ExecInActionData___ctor(ExecInActionData_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A00C74 & 1) == 0 )
+  if ( (byte_4A0ADC5 & 1) == 0 )
   {
-    sub_1B64A00(&BattleActionData_TypeInfo, method);
-    byte_4A00C74 = 1;
+    sub_1B686D4(&BattleActionData_TypeInfo, method);
+    byte_4A0ADC5 = 1;
   }
   if ( !BattleActionData_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleActionData_TypeInfo);

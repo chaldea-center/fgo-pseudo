@@ -19,23 +19,23 @@ void __fastcall ClientApiErrorDialogRequest__beginRequest(
   __int64 v15; // x1
   System_String_o *v16; // x2
 
-  if ( (byte_4A00254 & 1) == 0 )
+  if ( (byte_4A0A3A3 & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_18988/*"errorMessage"*/, errorTitle);
-    sub_1B64A00(&StringLiteral_21121/*"logDetail"*/, v11);
-    sub_1B64A00(&StringLiteral_18989/*"errorTitle"*/, v12);
-    sub_1B64A00(&StringLiteral_1/*""*/, v13);
-    byte_4A00254 = 1;
+    sub_1B686D4(&StringLiteral_18990/*"errorMessage"*/, errorTitle);
+    sub_1B686D4(&StringLiteral_21129/*"logDetail"*/, v11);
+    sub_1B686D4(&StringLiteral_18991/*"errorTitle"*/, v12);
+    sub_1B686D4(&StringLiteral_1/*""*/, v13);
+    byte_4A0A3A3 = 1;
   }
-  RequestBase__addField_40856580((RequestBase_o *)this, (System_String_o *)StringLiteral_18989/*"errorTitle"*/, errorTitle, 0LL);
-  RequestBase__addField_40856580((RequestBase_o *)this, (System_String_o *)StringLiteral_18988/*"errorMessage"*/, errorMessage, 0LL);
+  RequestBase__addField_40920848((RequestBase_o *)this, (System_String_o *)StringLiteral_18991/*"errorTitle"*/, errorTitle, 0LL);
+  RequestBase__addField_40920848((RequestBase_o *)this, (System_String_o *)StringLiteral_18990/*"errorMessage"*/, errorMessage, 0LL);
   if ( !this )
-    sub_1B64C5C(v14, v15);
+    sub_1B68930(v14, v15);
   if ( isSendLogDetail )
     v16 = logDetail;
   else
     v16 = (System_String_o *)StringLiteral_1/*""*/;
-  RequestBase__addField_40856580((RequestBase_o *)this, (System_String_o *)StringLiteral_21121/*"logDetail"*/, v16, 0LL);
+  RequestBase__addField_40920848((RequestBase_o *)this, (System_String_o *)StringLiteral_21129/*"logDetail"*/, v16, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -44,10 +44,10 @@ System_String_o *__fastcall ClientApiErrorDialogRequest__getMockData(
         ClientApiErrorDialogRequest_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A00253 & 1) == 0 )
+  if ( (byte_4A0A3A2 & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_1/*""*/, method);
-    byte_4A00253 = 1;
+    sub_1B686D4(&StringLiteral_1/*""*/, method);
+    byte_4A0A3A2 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -60,16 +60,16 @@ System_String_o *__fastcall ClientApiErrorDialogRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A00252 & 1) == 0 )
+  if ( (byte_4A0A3A1 & 1) == 0 )
   {
-    sub_1B64A00(&NetworkManager_TypeInfo, method);
-    sub_1B64A00(&StringLiteral_4508/*"ClientApi/ErrorDialog"*/, v2);
-    byte_4A00252 = 1;
+    sub_1B686D4(&NetworkManager_TypeInfo, method);
+    sub_1B686D4(&StringLiteral_4506/*"ClientApi/ErrorDialog"*/, v2);
+    byte_4A0A3A1 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61385136(BaseUrl, (System_String_o *)StringLiteral_4508/*"ClientApi/ErrorDialog"*/, 0LL);
+  return System_String__Concat_61419468(BaseUrl, (System_String_o *)StringLiteral_4506/*"ClientApi/ErrorDialog"*/, 0LL);
 }
 
 
@@ -83,19 +83,19 @@ void __fastcall ClientApiErrorDialogRequest__requestCompleted(
   ResponseData_o *v7; // x0
   __int64 *v8; // x8
 
-  if ( (byte_4A00255 & 1) == 0 )
+  if ( (byte_4A0A3A4 & 1) == 0 )
   {
-    sub_1B64A00(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1B64A00(&StringLiteral_22140/*"ok"*/, v5);
-    sub_1B64A00(&StringLiteral_21971/*"ng"*/, v6);
-    byte_4A00255 = 1;
+    sub_1B686D4(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1B686D4(&StringLiteral_22150/*"ok"*/, v5);
+    sub_1B686D4(&StringLiteral_21981/*"ng"*/, v6);
+    byte_4A0A3A4 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(118, responseList, 0LL);
-  if ( v7 && ResponseData__checkError_40851660(v7, 0LL) )
-    v8 = &StringLiteral_22140/*"ok"*/;
+  if ( v7 && ResponseData__checkError_40916448(v7, 0LL) )
+    v8 = &StringLiteral_22150/*"ok"*/;
   else
-    v8 = &StringLiteral_21971/*"ng"*/;
+    v8 = &StringLiteral_21981/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v8, 0LL);
 }

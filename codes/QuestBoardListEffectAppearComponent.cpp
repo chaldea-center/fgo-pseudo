@@ -5,10 +5,10 @@ void __fastcall QuestBoardListEffectAppearComponent___ctor(
   QuestBoardListViewItemDraw_c *v8; // x0
   int32_t POS_Y_ITVL_AREA; // w8
 
-  if ( (byte_49FBAE8 & 1) == 0 )
+  if ( (byte_4A05BEE & 1) == 0 )
   {
-    sub_1B64A00(&QuestBoardListViewItemDraw_TypeInfo, method);
-    byte_49FBAE8 = 1;
+    sub_1B686D4(&QuestBoardListViewItemDraw_TypeInfo, method);
+    byte_4A05BEE = 1;
   }
   __asm { FMOV            V0.2S, #1.0 }
   *(_QWORD *)&this->fields.boardMovingStartTime = _D0;

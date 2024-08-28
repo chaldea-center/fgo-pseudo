@@ -1,9 +1,9 @@
 void __fastcall MapGimmickEffectComponent___ctor(MapGimmickEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_49FBA02 & 1) == 0 )
+  if ( (byte_4A05B02 & 1) == 0 )
   {
-    sub_1B64A00(&CommonEffectComponent_TypeInfo, method);
-    byte_49FBA02 = 1;
+    sub_1B686D4(&CommonEffectComponent_TypeInfo, method);
+    byte_4A05B02 = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -38,11 +38,11 @@ void __fastcall MapGimmickEffectComponent__ForceLoop(
   UnityEngine_TrackedReference_o *v23; // x20
   UnityEngine_Object_o *animationComponent; // x20
 
-  if ( (byte_49FBA00 & 1) == 0 )
+  if ( (byte_4A05B00 & 1) == 0 )
   {
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, isOverWrite);
-    sub_1B64A00(&SimpleAnimation_State_TypeInfo, v5);
-    byte_49FBA00 = 1;
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, isOverWrite);
+    sub_1B686D4(&SimpleAnimation_State_TypeInfo, v5);
+    byte_4A05B00 = 1;
   }
   status = this->fields.status;
   if ( !status )
@@ -112,7 +112,7 @@ LABEL_41:
           else
           {
 LABEL_21:
-            p_method = sub_1BB69E0(Item, SimpleAnimation_State_TypeInfo, 18LL);
+            p_method = sub_1BBA6B4(Item, SimpleAnimation_State_TypeInfo, 18LL);
           }
           (*(void (__fastcall **)(SimpleAnimation_State_o *, __int64, _QWORD))p_method)(
             v15,
@@ -157,13 +157,13 @@ LABEL_40:
           this->fields.totaltime = 0.0;
           this->fields.loop = 1;
           this->fields.playAnimation = 0LL;
-          sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.playAnimation, 0, (int32_t)v20, v21);
+          sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.playAnimation, 0, (int32_t)v20, v21);
           goto LABEL_41;
         }
       }
     }
 LABEL_42:
-    sub_1B64C5C(AnimationName, v8);
+    sub_1B68930(AnimationName, v8);
   }
 }
 
@@ -195,11 +195,11 @@ void __fastcall MapGimmickEffectComponent__ForceStart(
   UnityEngine_TrackedReference_o *v24; // x20
   UnityEngine_Object_o *animationComponent; // x20
 
-  if ( (byte_49FB9FF & 1) == 0 )
+  if ( (byte_4A05AFF & 1) == 0 )
   {
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, isOverWrite);
-    sub_1B64A00(&SimpleAnimation_State_TypeInfo, v7);
-    byte_49FB9FF = 1;
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, isOverWrite);
+    sub_1B686D4(&SimpleAnimation_State_TypeInfo, v7);
+    byte_4A05AFF = 1;
   }
   if ( this->fields.status == 2 )
   {
@@ -207,7 +207,7 @@ void __fastcall MapGimmickEffectComponent__ForceStart(
     return;
   }
   this->fields.callAfterStart = callback;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.callAfterStart,
     (int32_t)callback,
     (int32_t)callback,
@@ -273,7 +273,7 @@ void __fastcall MapGimmickEffectComponent__ForceStart(
         else
         {
 LABEL_15:
-          p_method = sub_1BB69E0(Item, SimpleAnimation_State_TypeInfo, 18LL);
+          p_method = sub_1BBA6B4(Item, SimpleAnimation_State_TypeInfo, 18LL);
         }
         (*(void (__fastcall **)(SimpleAnimation_State_o *, __int64, _QWORD))p_method)(
           v15,
@@ -309,13 +309,13 @@ LABEL_15:
   AnimationName = (SimpleAnimation_o *)this->fields.animationComponent;
   if ( !AnimationName )
 LABEL_42:
-    sub_1B64C5C(AnimationName, v12);
+    sub_1B68930(AnimationName, v12);
   UnityEngine_Animation__Stop((UnityEngine_Animation_o *)AnimationName, 0LL);
 LABEL_41:
   this->fields.totaltime = 0.0;
   this->fields.loop = 1;
   this->fields.playAnimation = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.playAnimation, 0, (int32_t)v21, v22);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.playAnimation, 0, (int32_t)v21, v22);
   ((void (__fastcall *)(MapGimmickEffectComponent_o *, __int64, Il2CppMethodPointer))this->klass->vtable._5_NextPlayAnimation.method)(
     this,
     3LL,
@@ -347,14 +347,14 @@ System_String_o *__fastcall MapGimmickEffectComponent__GetAnimationName(
   System_String_o *baseName; // x0
   __int64 *v22; // x8
 
-  if ( (byte_49FB9FD & 1) == 0 )
+  if ( (byte_4A05AFD & 1) == 0 )
   {
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, *(_QWORD *)&status);
-    sub_1B64A00(&string_TypeInfo, v5);
-    sub_1B64A00(&StringLiteral_16486/*"_loop"*/, v6);
-    sub_1B64A00(&StringLiteral_16507/*"_start"*/, v7);
-    sub_1B64A00(&StringLiteral_16471/*"_end"*/, v8);
-    byte_49FB9FD = 1;
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, *(_QWORD *)&status);
+    sub_1B686D4(&string_TypeInfo, v5);
+    sub_1B686D4(&StringLiteral_16485/*"_loop"*/, v6);
+    sub_1B686D4(&StringLiteral_16506/*"_start"*/, v7);
+    sub_1B686D4(&StringLiteral_16470/*"_end"*/, v8);
+    byte_4A05AFD = 1;
   }
   if ( status == 6 )
   {
@@ -388,8 +388,8 @@ System_String_o *__fastcall MapGimmickEffectComponent__GetAnimationName(
       }
     }
     baseName = this->fields.baseName;
-    v22 = &StringLiteral_16471/*"_end"*/;
-    return System_String__Concat_61385136(baseName, (System_String_o *)*v22, 0LL);
+    v22 = &StringLiteral_16470/*"_end"*/;
+    return System_String__Concat_61419468(baseName, (System_String_o *)*v22, 0LL);
   }
   if ( status == 4 )
   {
@@ -423,8 +423,8 @@ System_String_o *__fastcall MapGimmickEffectComponent__GetAnimationName(
       }
     }
     baseName = this->fields.baseName;
-    v22 = &StringLiteral_16486/*"_loop"*/;
-    return System_String__Concat_61385136(baseName, (System_String_o *)*v22, 0LL);
+    v22 = &StringLiteral_16485/*"_loop"*/;
+    return System_String__Concat_61419468(baseName, (System_String_o *)*v22, 0LL);
   }
   if ( status != 3 )
     return string_TypeInfo->static_fields->Empty;
@@ -455,12 +455,12 @@ System_String_o *__fastcall MapGimmickEffectComponent__GetAnimationName(
       goto LABEL_43;
     }
 LABEL_47:
-    sub_1B64C5C(v11, v10);
+    sub_1B68930(v11, v10);
   }
 LABEL_43:
   baseName = this->fields.baseName;
-  v22 = &StringLiteral_16507/*"_start"*/;
-  return System_String__Concat_61385136(baseName, (System_String_o *)*v22, 0LL);
+  v22 = &StringLiteral_16506/*"_start"*/;
+  return System_String__Concat_61419468(baseName, (System_String_o *)*v22, 0LL);
 }
 
 
@@ -501,12 +501,12 @@ void __fastcall MapGimmickEffectComponent__NextPlayAnimation(
   struct System_String_o *v32; // x1
 
   v3 = next;
-  if ( (byte_49FB9FE & 1) == 0 )
+  if ( (byte_4A05AFE & 1) == 0 )
   {
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, *(_QWORD *)&next);
-    sub_1B64A00(&SimpleAnimation_State_TypeInfo, v5);
-    sub_1B64A00(&StringLiteral_1/*""*/, v6);
-    byte_49FB9FE = 1;
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, *(_QWORD *)&next);
+    sub_1B686D4(&SimpleAnimation_State_TypeInfo, v5);
+    sub_1B686D4(&StringLiteral_1/*""*/, v6);
+    byte_4A05AFE = 1;
   }
   simpleAnimationComponent = (UnityEngine_Object_o *)this->fields.simpleAnimationComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -543,7 +543,7 @@ LABEL_13:
       if ( callAfterStart )
       {
         p_callAfterStart->klass = 0LL;
-        sub_1B649A4(p_callAfterStart, 0, (int32_t)v8, v9);
+        sub_1B68678(p_callAfterStart, 0, (int32_t)v8, v9);
         ActionExtensions__Call(callAfterStart, 0LL);
       }
       if ( this->fields.loop )
@@ -587,14 +587,14 @@ LABEL_36:
       else
       {
 LABEL_40:
-        p_method = sub_1BB69E0(Item, SimpleAnimation_State_TypeInfo, 9LL);
+        p_method = sub_1BBA6B4(Item, SimpleAnimation_State_TypeInfo, 9LL);
       }
       AnimationName = (System_String_o *)(*(__int64 (__fastcall **)(SimpleAnimation_State_o *, _QWORD))p_method)(
                                            Item,
                                            *(_QWORD *)(p_method + 8));
       if ( !this )
 LABEL_66:
-        sub_1B64C5C(AnimationName, v12);
+        sub_1B68930(AnimationName, v12);
       goto LABEL_63;
     }
 LABEL_64:
@@ -613,7 +613,7 @@ LABEL_64:
       if ( v18 )
       {
         v17->klass = 0LL;
-        sub_1B649A4(v17, 0, (int32_t)v8, v9);
+        sub_1B68678(v17, 0, (int32_t)v8, v9);
         ActionExtensions__Call(v18, 0LL);
       }
       v3 = 3;
@@ -667,7 +667,7 @@ LABEL_64:
   if ( v29 )
   {
     v28->klass = 0LL;
-    sub_1B649A4(v28, 0, (int32_t)v8, v9);
+    sub_1B68678(v28, 0, (int32_t)v8, v9);
     ActionExtensions__Call(v29, 0LL);
   }
   if ( this->fields.loop )
@@ -701,7 +701,7 @@ LABEL_63:
   v32 = AnimationName;
 LABEL_65:
   this->fields.requestAnimation = v32;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.requestAnimation, (int32_t)v32, (int32_t)v8, v9);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.requestAnimation, (int32_t)v32, (int32_t)v8, v9);
   this->fields.status = v3;
 }
 
@@ -730,11 +730,11 @@ void __fastcall MapGimmickEffectComponent__Stop(
   UnityEngine_Animation_o *v21; // x20
   UnityEngine_TrackedReference_o *Item; // x19
 
-  if ( (byte_49FBA01 & 1) == 0 )
+  if ( (byte_4A05B01 & 1) == 0 )
   {
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, isDestroy);
-    sub_1B64A00(&SimpleAnimation_State_TypeInfo, v7);
-    byte_49FBA01 = 1;
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, isDestroy);
+    sub_1B686D4(&SimpleAnimation_State_TypeInfo, v7);
+    byte_4A05B01 = 1;
   }
   if ( this->fields.status == 2 )
   {
@@ -744,7 +744,7 @@ void __fastcall MapGimmickEffectComponent__Stop(
   this->fields.callAfterStop = callback;
   this->fields.loop = 0;
   this->fields.isDestroy = isDestroy;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.callAfterStop,
     (int32_t)callback,
     (int32_t)callback,
@@ -774,7 +774,7 @@ void __fastcall MapGimmickEffectComponent__Stop(
       }
     }
 LABEL_25:
-    sub_1B64C5C(AnimationName, v12);
+    sub_1B68930(AnimationName, v12);
   }
   v10 = this->fields.simpleAnimationComponent;
   AnimationName = MapGimmickEffectComponent__GetAnimationName(this, 4, v9);
@@ -801,7 +801,7 @@ LABEL_25:
     else
     {
 LABEL_14:
-      p_method = sub_1BB69E0(v13, SimpleAnimation_State_TypeInfo, 18LL);
+      p_method = sub_1BBA6B4(v13, SimpleAnimation_State_TypeInfo, 18LL);
     }
     (*(void (__fastcall **)(SimpleAnimation_State_o *, __int64, _QWORD))p_method)(v15, 1LL, *(_QWORD *)(p_method + 8));
   }

@@ -8,24 +8,24 @@ void __fastcall FGOEdgeBlur___ctor(FGOEdgeBlur_o *this, const MethodInfo *method
   int32_t v13; // w2
   int32_t v14; // w3
 
-  if ( (byte_49FDA09 & 1) == 0 )
+  if ( (byte_4A07B37 & 1) == 0 )
   {
-    sub_1B64A00(&UnityEngine_RenderTexture___TypeInfo, method);
-    sub_1B64A00(&float___TypeInfo, v3);
-    byte_49FDA09 = 1;
+    sub_1B686D4(&UnityEngine_RenderTexture___TypeInfo, method);
+    sub_1B686D4(&float___TypeInfo, v3);
+    byte_4A07B37 = 1;
   }
   __asm { FMOV            V2.4S, #1.0 }
   this->fields._iteration = 4;
-  this->fields._Rect = (struct UnityEngine_Rect_o)xmmword_BA2F90;
-  *(_OWORD *)&this->fields._thickness = xmmword_BA4780;
+  this->fields._Rect = (struct UnityEngine_Rect_o)xmmword_BA6070;
+  *(_OWORD *)&this->fields._thickness = xmmword_BA7850;
   this->fields._color = _Q2;
   this->fields._particleColor = _Q2;
-  v9 = (struct UnityEngine_RenderTexture_array *)sub_1B64AA8(UnityEngine_RenderTexture___TypeInfo, 6LL);
+  v9 = (struct UnityEngine_RenderTexture_array *)sub_1B6877C(UnityEngine_RenderTexture___TypeInfo, 6LL);
   this->fields._renderTextures = v9;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields._renderTextures, (int32_t)v9, v10, v11);
-  v12 = (struct System_Single_array *)sub_1B64AA8(float___TypeInfo, 10LL);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields._renderTextures, (int32_t)v9, v10, v11);
+  v12 = (struct System_Single_array *)sub_1B6877C(float___TypeInfo, 10LL);
   this->fields._weights = v12;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields._weights, (int32_t)v12, v13, v14);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields._weights, (int32_t)v12, v13, v14);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -83,7 +83,7 @@ void __fastcall FGOEdgeBlur__Blur(FGOEdgeBlur_o *this, const MethodInfo *method)
   UnityEngine_Material_o *v43; // x22
   UnityEngine_Shader_o *drawShader; // x21
   UnityEngine_Material_o *v45; // x20
-  bool HasProperty_69003744; // w0
+  bool HasProperty_69038084; // w0
   float r; // s0
   float g; // s1
   float b; // s2
@@ -112,20 +112,20 @@ void __fastcall FGOEdgeBlur__Blur(FGOEdgeBlur_o *this, const MethodInfo *method)
   UnityEngine_Vector4_o v72; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v73; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_49FDA08 & 1) == 0 )
+  if ( (byte_4A07B36 & 1) == 0 )
   {
-    sub_1B64A00(&UnityEngine_Graphics_TypeInfo, method);
-    sub_1B64A00(&UnityEngine_Material_TypeInfo, v3);
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, v4);
-    sub_1B64A00(&UnityEngine_Texture2D_TypeInfo, v5);
-    sub_1B64A00(&StringLiteral_16338/*"_Weights"*/, v6);
-    sub_1B64A00(&StringLiteral_16305/*"_Threshold"*/, v7);
-    sub_1B64A00(&StringLiteral_16180/*"_Intensity"*/, v8);
-    sub_1B64A00(&StringLiteral_16469/*"_customColor0"*/, v9);
-    sub_1B64A00(&StringLiteral_16249/*"_Rect"*/, v10);
-    sub_1B64A00(&StringLiteral_16302/*"_Thickness"*/, v11);
-    sub_1B64A00(&StringLiteral_16214/*"_Offset"*/, v12);
-    byte_49FDA08 = 1;
+    sub_1B686D4(&UnityEngine_Graphics_TypeInfo, method);
+    sub_1B686D4(&UnityEngine_Material_TypeInfo, v3);
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, v4);
+    sub_1B686D4(&UnityEngine_Texture2D_TypeInfo, v5);
+    sub_1B686D4(&StringLiteral_16337/*"_Weights"*/, v6);
+    sub_1B686D4(&StringLiteral_16304/*"_Threshold"*/, v7);
+    sub_1B686D4(&StringLiteral_16179/*"_Intensity"*/, v8);
+    sub_1B686D4(&StringLiteral_16468/*"_customColor0"*/, v9);
+    sub_1B686D4(&StringLiteral_16248/*"_Rect"*/, v10);
+    sub_1B686D4(&StringLiteral_16301/*"_Thickness"*/, v11);
+    sub_1B686D4(&StringLiteral_16213/*"_Offset"*/, v12);
+    byte_4A07B36 = 1;
   }
   m_ParticleSystem = 0LL;
   v68 = 0LL;
@@ -145,7 +145,7 @@ void __fastcall FGOEdgeBlur__Blur(FGOEdgeBlur_o *this, const MethodInfo *method)
     v72.fields.z = v72.fields.x + this->fields._Rect.fields.m_Width;
     UnityEngine_Material__SetVector(
       (UnityEngine_Material_o *)material,
-      (System_String_o *)StringLiteral_16249/*"_Rect"*/,
+      (System_String_o *)StringLiteral_16248/*"_Rect"*/,
       v72,
       0LL);
     material = (__int64)this->fields._material;
@@ -153,7 +153,7 @@ void __fastcall FGOEdgeBlur__Blur(FGOEdgeBlur_o *this, const MethodInfo *method)
       goto LABEL_82;
     UnityEngine_Material__SetFloat(
       (UnityEngine_Material_o *)material,
-      (System_String_o *)StringLiteral_16302/*"_Thickness"*/,
+      (System_String_o *)StringLiteral_16301/*"_Thickness"*/,
       this->fields._thickness,
       0LL);
     material = (__int64)this->fields._material;
@@ -161,7 +161,7 @@ void __fastcall FGOEdgeBlur__Blur(FGOEdgeBlur_o *this, const MethodInfo *method)
       goto LABEL_82;
     UnityEngine_Material__SetFloat(
       (UnityEngine_Material_o *)material,
-      (System_String_o *)StringLiteral_16305/*"_Threshold"*/,
+      (System_String_o *)StringLiteral_16304/*"_Threshold"*/,
       this->fields._threshold,
       0LL);
     material = (__int64)this->fields._material;
@@ -169,7 +169,7 @@ void __fastcall FGOEdgeBlur__Blur(FGOEdgeBlur_o *this, const MethodInfo *method)
       goto LABEL_82;
     UnityEngine_Material__SetFloat(
       (UnityEngine_Material_o *)material,
-      (System_String_o *)StringLiteral_16180/*"_Intensity"*/,
+      (System_String_o *)StringLiteral_16179/*"_Intensity"*/,
       this->fields._intensity,
       0LL);
     material = (__int64)this->fields._material;
@@ -177,15 +177,15 @@ void __fastcall FGOEdgeBlur__Blur(FGOEdgeBlur_o *this, const MethodInfo *method)
       goto LABEL_82;
     UnityEngine_Material__SetFloat(
       (UnityEngine_Material_o *)material,
-      (System_String_o *)StringLiteral_16214/*"_Offset"*/,
+      (System_String_o *)StringLiteral_16213/*"_Offset"*/,
       this->fields._offset,
       0LL);
     material = (__int64)this->fields._material;
     if ( !material )
       goto LABEL_82;
-    UnityEngine_Material__SetFloatArray_69007896(
+    UnityEngine_Material__SetFloatArray_69042236(
       (UnityEngine_Material_o *)material,
-      (System_String_o *)StringLiteral_16338/*"_Weights"*/,
+      (System_String_o *)StringLiteral_16337/*"_Weights"*/,
       this->fields._weights,
       0LL);
     v16 = this->fields._texture;
@@ -193,7 +193,7 @@ void __fastcall FGOEdgeBlur__Blur(FGOEdgeBlur_o *this, const MethodInfo *method)
     v18 = this->fields._material;
     if ( !UnityEngine_Graphics_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo);
-    UnityEngine_Graphics__Blit_68983364(v16, rt0, v18, 0, 0LL);
+    UnityEngine_Graphics__Blit_69017704(v16, rt0, v18, 0, 0LL);
     material = (__int64)this->fields._rt0;
     if ( !material )
       goto LABEL_82;
@@ -226,27 +226,27 @@ void __fastcall FGOEdgeBlur__Blur(FGOEdgeBlur_o *this, const MethodInfo *method)
         v20 = v25 >> 1;
         v22 = v26 >> 1;
         format = UnityEngine_RenderTexture__get_format((UnityEngine_RenderTexture_o *)material, 0LL);
-        material = (__int64)UnityEngine_RenderTexture__GetTemporary_69045760(v20, v22, 0, format, 0LL);
+        material = (__int64)UnityEngine_RenderTexture__GetTemporary_69080100(v20, v22, 0, format, 0LL);
         if ( !renderTextures )
           goto LABEL_82;
         v31 = (UnityEngine_RenderTexture_o *)material;
         if ( material )
         {
-          material = sub_1B64B3C(material, renderTextures->obj.klass->_1.element_class);
+          material = sub_1B68810(material, renderTextures->obj.klass->_1.element_class);
           if ( !material )
           {
-            v65 = sub_1B64C80(0LL);
-            sub_1B64B28(v65, 0LL);
+            v65 = sub_1B68954(0LL);
+            sub_1B687FC(v65, 0LL);
           }
         }
         if ( v23 >= renderTextures->max_length )
           goto LABEL_83;
         *(Il2CppClass **)((char *)&renderTextures->obj.klass + v24) = (Il2CppClass *)v31;
-        sub_1B649A4((ServantStatusBattleListViewItem_o *)((char *)renderTextures + v24), (int32_t)v31, v29, v30);
+        sub_1B68678((ServantStatusBattleListViewItem_o *)((char *)renderTextures + v24), (int32_t)v31, v29, v30);
         v32 = this->fields._material;
         if ( !UnityEngine_Graphics_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo);
-        UnityEngine_Graphics__Blit_68983364(v21, v31, v32, 1, 0LL);
+        UnityEngine_Graphics__Blit_69017704(v21, v31, v32, 1, 0LL);
         ++v23;
         v24 += 8LL;
         v21 = (UnityEngine_Texture_o *)v31;
@@ -270,7 +270,7 @@ void __fastcall FGOEdgeBlur__Blur(FGOEdgeBlur_o *this, const MethodInfo *method)
           v36 = this->fields._material;
           if ( !UnityEngine_Graphics_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo);
-          UnityEngine_Graphics__Blit_68983364(v21, v35, v36, 2, 0LL);
+          UnityEngine_Graphics__Blit_69017704(v21, v35, v36, 2, 0LL);
           v39 = this->fields._renderTextures;
           if ( !v39 )
             goto LABEL_82;
@@ -278,7 +278,7 @@ void __fastcall FGOEdgeBlur__Blur(FGOEdgeBlur_o *this, const MethodInfo *method)
             goto LABEL_83;
           v40 = &v39->obj.klass + v33;
           v40[4] = 0LL;
-          sub_1B649A4((ServantStatusBattleListViewItem_o *)(v40 + 4), 0, v37, v38);
+          sub_1B68678((ServantStatusBattleListViewItem_o *)(v40 + 4), 0, v37, v38);
           UnityEngine_RenderTexture__ReleaseTemporary((UnityEngine_RenderTexture_o *)v21, 0LL);
           v41 = (__int64)v33-- <= 0;
           v21 = (UnityEngine_Texture_o *)v35;
@@ -293,21 +293,21 @@ LABEL_49:
     v43 = this->fields._material;
     if ( !UnityEngine_Graphics_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo);
-    UnityEngine_Graphics__Blit_68983364((UnityEngine_Texture_o *)v35, v42, v43, 3, 0LL);
+    UnityEngine_Graphics__Blit_69017704((UnityEngine_Texture_o *)v35, v42, v43, 3, 0LL);
     UnityEngine_RenderTexture__ReleaseTemporary(v35, 0LL);
     drawShader = this->fields._drawShader;
-    v45 = (UnityEngine_Material_o *)sub_1B64C4C(UnityEngine_Material_TypeInfo);
+    v45 = (UnityEngine_Material_o *)sub_1B68920(UnityEngine_Material_TypeInfo);
     UnityEngine_Material___ctor(v45, drawShader, 0LL);
     if ( !v45 )
       goto LABEL_82;
     UnityEngine_Material__set_mainTexture(v45, (UnityEngine_Texture_o *)this->fields._rt0, 0LL);
-    HasProperty_69003744 = UnityEngine_Material__HasProperty_69003744(v45, (System_String_o *)StringLiteral_16469/*"_customColor0"*/, 0LL);
+    HasProperty_69038084 = UnityEngine_Material__HasProperty_69038084(v45, (System_String_o *)StringLiteral_16468/*"_customColor0"*/, 0LL);
     r = this->fields._color.fields.r;
     g = this->fields._color.fields.g;
     b = this->fields._color.fields.b;
     a = this->fields._color.fields.a;
-    if ( HasProperty_69003744 )
-      UnityEngine_Material__SetColor(v45, (System_String_o *)StringLiteral_16469/*"_customColor0"*/, *(UnityEngine_Color_o *)&r, 0LL);
+    if ( HasProperty_69038084 )
+      UnityEngine_Material__SetColor(v45, (System_String_o *)StringLiteral_16468/*"_customColor0"*/, *(UnityEngine_Color_o *)&r, 0LL);
     else
       UnityEngine_Material__set_color(v45, *(UnityEngine_Color_o *)&r, 0LL);
     material = (__int64)this->fields._renderer;
@@ -327,8 +327,8 @@ LABEL_49:
     v53 = ((__int64 (__fastcall *)(struct UnityEngine_RenderTexture_o *, Il2CppMethodPointer))v51->klass->vtable._6_get_height.method)(
             this->fields._rt0,
             v51->klass->vtable._7_set_height.methodPtr);
-    v54 = (UnityEngine_Texture2D_o *)sub_1B64C4C(UnityEngine_Texture2D_TypeInfo);
-    UnityEngine_Texture2D___ctor_69025548(v54, v52, v53, 3, 0, 0, 0LL);
+    v54 = (UnityEngine_Texture2D_o *)sub_1B68920(UnityEngine_Texture2D_TypeInfo);
+    UnityEngine_Texture2D___ctor_69059888(v54, v52, v53, 3, 0, 0, 0LL);
     UnityEngine_RenderTexture__set_active(this->fields._rt0, 0LL);
     material = (__int64)this->fields._rt0;
     if ( !material
@@ -343,14 +343,14 @@ LABEL_49:
           !v54) )
     {
 LABEL_82:
-      sub_1B64C5C(material, v14);
+      sub_1B68930(material, v14);
     }
     v73.fields.m_Height = (float)(int)material;
     v73.fields.m_Width = (float)v56;
     v73.fields.m_XMin = 0.0;
     v73.fields.m_YMin = 0.0;
-    UnityEngine_Texture2D__ReadPixels_69028012(v54, v73, 0, 0, 0LL);
-    UnityEngine_Texture2D__Apply_69027592(v54, 0LL);
+    UnityEngine_Texture2D__ReadPixels_69062352(v54, v73, 0, 0, 0LL);
+    UnityEngine_Texture2D__Apply_69061932(v54, 0LL);
     UnityEngine_RenderTexture__set_active(0LL, 0LL);
     shapeSettingParticles = this->fields._shapeSettingParticles;
     if ( shapeSettingParticles )
@@ -378,7 +378,7 @@ LABEL_82:
             goto LABEL_71;
         }
 LABEL_83:
-        sub_1B64C64(material, v14);
+        sub_1B68938(material, v14);
       }
     }
 LABEL_71:
@@ -456,15 +456,15 @@ void __fastcall FGOEdgeBlur__Initialize(FGOEdgeBlur_o *this, const MethodInfo *m
   struct UnityEngine_Renderer_o **p_renderer; // x8
   System_RuntimeTypeHandle_o v39; // 0:w0.4
 
-  if ( (byte_49FDA07 & 1) == 0 )
+  if ( (byte_4A07B35 & 1) == 0 )
   {
-    sub_1B64A00(&UnityEngine_Material_TypeInfo, method);
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, v3);
-    sub_1B64A00(&UnityEngine_RenderTexture_TypeInfo, v4);
-    sub_1B64A00(&UnityEngine_Renderer_var, v5);
-    sub_1B64A00(&UnityEngine_Renderer_TypeInfo, v6);
-    sub_1B64A00(&System_Type_TypeInfo, v7);
-    byte_49FDA07 = 1;
+    sub_1B686D4(&UnityEngine_Material_TypeInfo, method);
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, v3);
+    sub_1B686D4(&UnityEngine_RenderTexture_TypeInfo, v4);
+    sub_1B686D4(&UnityEngine_Renderer_var, v5);
+    sub_1B686D4(&UnityEngine_Renderer_TypeInfo, v6);
+    sub_1B686D4(&System_Type_TypeInfo, v7);
+    byte_4A07B35 = 1;
   }
   if ( !this->fields._isInitialized )
   {
@@ -487,7 +487,7 @@ void __fastcall FGOEdgeBlur__Initialize(FGOEdgeBlur_o *this, const MethodInfo *m
               goto LABEL_12;
           }
 LABEL_36:
-          sub_1B64C64(v9, v10);
+          sub_1B68938(v9, v10);
         }
       }
 LABEL_12:
@@ -508,10 +508,10 @@ LABEL_12:
       }
 LABEL_17:
       edgeShader = this->fields._edgeShader;
-      v18 = (UnityEngine_Material_o *)sub_1B64C4C(UnityEngine_Material_TypeInfo);
+      v18 = (UnityEngine_Material_o *)sub_1B68920(UnityEngine_Material_TypeInfo);
       UnityEngine_Material___ctor(v18, edgeShader, 0LL);
       this->fields._material = v18;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields._material, (int32_t)v18, v19, v20);
+      sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields._material, (int32_t)v18, v19, v20);
       material = (UnityEngine_Object_o *)this->fields._material;
       if ( !material
         || (UnityEngine_Object__set_hideFlags(material, 61, 0LL),
@@ -521,16 +521,16 @@ LABEL_17:
                                                  material->klass[1]._1.name),
             (v23 = this->fields._texture) == 0LL) )
       {
-        sub_1B64C5C(material, v21);
+        sub_1B68930(material, v21);
       }
       v24 = (int)material;
       v25 = ((__int64 (__fastcall *)(struct UnityEngine_Texture_o *, Il2CppMethodPointer))v23->klass->vtable._6_get_height.method)(
               this->fields._texture,
               v23->klass->vtable._7_set_height.methodPtr);
-      v26 = (UnityEngine_RenderTexture_o *)sub_1B64C4C(UnityEngine_RenderTexture_TypeInfo);
-      UnityEngine_RenderTexture___ctor_69044144(v26, v24, v25, 0, 0, 0LL);
+      v26 = (UnityEngine_RenderTexture_o *)sub_1B68920(UnityEngine_RenderTexture_TypeInfo);
+      UnityEngine_RenderTexture___ctor_69078484(v26, v24, v25, 0, 0, 0LL);
       this->fields._rt0 = v26;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields._rt0, (int32_t)v26, v27, v28);
+      sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields._rt0, (int32_t)v26, v27, v28);
       v29 = (int)UnityEngine_Renderer_var;
       if ( !System_Type_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
@@ -572,7 +572,7 @@ LABEL_17:
         this->fields._renderer = 0LL;
         p_renderer = &this->fields._renderer;
       }
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)p_renderer, v37, v32, v33);
+      sub_1B68678((ServantStatusBattleListViewItem_o *)p_renderer, v37, v32, v33);
       this->fields._isInitialized = 1;
     }
   }
@@ -589,10 +589,10 @@ void __fastcall FGOEdgeBlur__OnDestroy(FGOEdgeBlur_o *this, const MethodInfo *me
 
   v4 = this;
   this->fields._material = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields._material, 0, v2, v3);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields._material, 0, v2, v3);
   v4->fields._rt0 = 0LL;
   v4 = (FGOEdgeBlur_o *)((char *)v4 + 160);
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)v4, 0, v5, v6);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)v4, 0, v5, v6);
   LOBYTE(v4->fields.m_CancellationTokenSource) = 0;
 }
 
@@ -703,12 +703,12 @@ void __fastcall FGOEdgeBlur__setMaskImagePosition(
       do
       {
         if ( (unsigned int)v8 >= max_length )
-          sub_1B64C64(this, method);
+          sub_1B68938(this, method);
         transform = (UnityEngine_Component_o *)shapeSettingParticles->m_Items[v8];
         if ( !transform
           || (transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(transform, 0LL)) == 0LL )
         {
-          sub_1B64C5C(transform, method);
+          sub_1B68930(transform, method);
         }
         v10.fields.x = x;
         v10.fields.y = y;
@@ -762,7 +762,7 @@ void __fastcall FGOEdgeBlur__set_Texture(FGOEdgeBlur_o *this, UnityEngine_Textur
   const MethodInfo *v5; // x1
 
   this->fields._texture = value;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields._texture, (int32_t)value, (int32_t)method, v3);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields._texture, (int32_t)value, (int32_t)method, v3);
   FGOEdgeBlur__Blur(this, v5);
 }
 

@@ -16,19 +16,19 @@ void __fastcall MasterMissionReceiveConfirmListViewObject__Awake(
   int32_t v6; // w3
   const MethodInfo *v7; // x1
 
-  if ( (byte_4A01DD2 & 1) == 0 )
+  if ( (byte_4A0BF22 & 1) == 0 )
   {
-    sub_1B64A00(&Method_UnityEngine_GameObject_GetComponent_MasterMissionReceiveConfirmListViewItemDraw___, method);
-    byte_4A01DD2 = 1;
+    sub_1B686D4(&Method_UnityEngine_GameObject_GetComponent_MasterMissionReceiveConfirmListViewItemDraw___, method);
+    byte_4A0BF22 = 1;
   }
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1B64C5C(0LL, method);
+    sub_1B68930(0LL, method);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_2E8A7CC *)Method_UnityEngine_GameObject_GetComponent_MasterMissionReceiveConfirmListViewItemDraw___);
+                       (const MethodInfo_2E98950 *)Method_UnityEngine_GameObject_GetComponent_MasterMissionReceiveConfirmListViewItemDraw___);
   this->fields.itemDraw = (struct MasterMissionReceiveConfirmListViewItemDraw_o *)Component_object;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v5, v6);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v5, v6);
   MasterMissionReceiveConfirmListViewObject__SetBaseTransform(this, v7);
 }
 
@@ -47,16 +47,16 @@ int32_t __fastcall MasterMissionReceiveConfirmListViewObject__GetSize(
   __int64 v9; // x1
   float v10; // s1
 
-  if ( (byte_4A01DD5 & 1) == 0 )
+  if ( (byte_4A0BF25 & 1) == 0 )
   {
-    sub_1B64A00(&UnityEngine_BoxCollider_TypeInfo, method);
-    sub_1B64A00(&Method_UnityEngine_Component_GetComponent_Collider___, v3);
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, v4);
-    byte_4A01DD5 = 1;
+    sub_1B686D4(&UnityEngine_BoxCollider_TypeInfo, method);
+    sub_1B686D4(&Method_UnityEngine_Component_GetComponent_Collider___, v3);
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, v4);
+    byte_4A0BF25 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2E32784 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                       (const MethodInfo_2E407F4 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( Component_object
     && (methodPtr_low = LOBYTE(UnityEngine_BoxCollider_TypeInfo->vtable._0_Equals.methodPtr),
         LOBYTE(Component_object->klass->vtable[0].methodPtr) >= (unsigned int)methodPtr_low) )
@@ -76,7 +76,7 @@ int32_t __fastcall MasterMissionReceiveConfirmListViewObject__GetSize(
   if ( !v8 )
     return 0;
   if ( !v7 )
-    sub_1B64C5C(v8, v9);
+    sub_1B68930(v8, v9);
   *(UnityEngine_Vector3_o *)(&v10 - 1) = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)v7, 0LL);
   if ( v10 == INFINITY )
     return 0x80000000;
@@ -103,13 +103,13 @@ void __fastcall MasterMissionReceiveConfirmListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1B64C5C(transform, v7);
+    sub_1B68930(transform, v7);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   if ( (unsigned int)initMode <= 3 )
   {
-    v9 = dword_BA2960[initMode];
-    this->fields.dispMode = *((_DWORD *)&xmmword_BA3590 + initMode);
+    v9 = dword_BA5A40[initMode];
+    this->fields.dispMode = *((_DWORD *)&xmmword_BA6660 + initMode);
     this->fields.state = v9;
   }
   MasterMissionReceiveConfirmListViewObject__SetupDisp(this, v8);
@@ -138,12 +138,12 @@ void __fastcall MasterMissionReceiveConfirmListViewObject__SetBaseTransform(
   if ( !transform
     || (parent = UnityEngine_Transform__get_parent(transform, 0LL),
         this->fields.baseParent = parent,
-        sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.baseParent, (int32_t)parent, v6, v7),
+        sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.baseParent, (int32_t)parent, v6, v7),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL)
     || (this->fields.basePosition = UnityEngine_Transform__get_localPosition(transform, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1B64C5C(transform, v4);
+    sub_1B68930(transform, v4);
   }
   this->fields.baseScale = UnityEngine_Transform__get_localScale(transform, 0LL);
 }
@@ -160,22 +160,22 @@ void __fastcall MasterMissionReceiveConfirmListViewObject__SetInput(
   _BOOL8 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4A01DD3 & 1) == 0 )
+  if ( (byte_4A0BF23 & 1) == 0 )
   {
-    sub_1B64A00(&Method_UnityEngine_Component_GetComponent_Collider___, isInput);
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, v5);
-    byte_4A01DD3 = 1;
+    sub_1B686D4(&Method_UnityEngine_Component_GetComponent_Collider___, isInput);
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, v5);
+    byte_4A0BF23 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2E32784 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                       (const MethodInfo_2E407F4 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
   if ( v7 )
   {
     if ( !Component_object )
-      sub_1B64C5C(v7, v8);
+      sub_1B68930(v7, v8);
     UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0LL);
   }
 }
@@ -193,7 +193,7 @@ void __fastcall MasterMissionReceiveConfirmListViewObject__SetItem(
 
   this->fields.messageText = message;
   v7 = lineDisp;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.messageText, (int32_t)message, giftId, lineDisp);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.messageText, (int32_t)message, giftId, lineDisp);
   this->fields.giftId = giftId;
   this->fields.isLineDisp = v7;
   MasterMissionReceiveConfirmListViewObject__Init(this, 2, v8);
@@ -211,7 +211,7 @@ void __fastcall MasterMissionReceiveConfirmListViewObject__SetManager(
 
   this->fields.manager = manager;
   p_manager = &this->fields.manager;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.manager, (int32_t)manager, (int32_t)method, v3);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.manager, (int32_t)manager, (int32_t)method, v3);
   if ( !*((_DWORD *)p_manager + 11) )
     MasterMissionReceiveConfirmListViewObject__Init(this, 2, v6);
 }
@@ -235,7 +235,7 @@ void __fastcall MasterMissionReceiveConfirmListViewObject__SetTransform(
   x = position.fields.x;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
-    sub_1B64C5C(0LL, v8);
+    sub_1B68930(0LL, v8);
   v9.fields.x = x;
   v9.fields.y = y;
   v9.fields.z = z;
@@ -256,10 +256,10 @@ void __fastcall MasterMissionReceiveConfirmListViewObject__SetVisible(
   __int64 v6; // x1
   UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_4A01DD4 & 1) == 0 )
+  if ( (byte_4A0BF24 & 1) == 0 )
   {
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, isVisible);
-    byte_4A01DD4 = 1;
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, isVisible);
+    byte_4A0BF24 = 1;
   }
   dispObject = (UnityEngine_Object_o *)this->fields.dispObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -268,7 +268,7 @@ void __fastcall MasterMissionReceiveConfirmListViewObject__SetVisible(
   {
     v7 = this->fields.dispObject;
     if ( !v7 )
-      sub_1B64C5C(0LL, v6);
+      sub_1B68930(0LL, v6);
     UnityEngine_GameObject__SetActive(v7, isVisible, 0LL);
   }
 }
@@ -283,10 +283,10 @@ void __fastcall MasterMissionReceiveConfirmListViewObject__SetupDisp(
   __int64 v5; // x1
   struct MasterMissionReceiveConfirmListViewItemDraw_o *v6; // x0
 
-  if ( (byte_4A01DD6 & 1) == 0 )
+  if ( (byte_4A0BF26 & 1) == 0 )
   {
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, method);
-    byte_4A01DD6 = 1;
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, method);
+    byte_4A0BF26 = 1;
   }
   MasterMissionReceiveConfirmListViewObject__SetVisible(this, this->fields.dispMode != 0, v2);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -296,7 +296,7 @@ void __fastcall MasterMissionReceiveConfirmListViewObject__SetupDisp(
   {
     v6 = this->fields.itemDraw;
     if ( !v6 )
-      sub_1B64C5C(0LL, v5);
+      sub_1B68930(0LL, v5);
     ((void (__fastcall *)(struct MasterMissionReceiveConfirmListViewItemDraw_o *, struct System_String_o *, _QWORD, _QWORD, bool, void *))v6->klass->vtable._4_SetItem.method)(
       v6,
       this->fields.messageText,

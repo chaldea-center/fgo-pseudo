@@ -8,14 +8,14 @@ void __fastcall FollowerEditNameRequest__beginRequest(
   const MethodInfo *v8; // x3
   const MethodInfo *v9; // x1
 
-  if ( (byte_4A003A3 & 1) == 0 )
+  if ( (byte_4A0A4F3 & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_23595/*"supportDeckId"*/, supportDeckId);
-    sub_1B64A00(&StringLiteral_18454/*"deckName"*/, v7);
-    byte_4A003A3 = 1;
+    sub_1B686D4(&StringLiteral_23607/*"supportDeckId"*/, supportDeckId);
+    sub_1B686D4(&StringLiteral_18456/*"deckName"*/, v7);
+    byte_4A0A4F3 = 1;
   }
-  RequestBase__addField_40855016((RequestBase_o *)this, (System_String_o *)StringLiteral_23595/*"supportDeckId"*/, supportDeckId, method);
-  RequestBase__addField_40856580((RequestBase_o *)this, (System_String_o *)StringLiteral_18454/*"deckName"*/, deckName, v8);
+  RequestBase__addField_40919284((RequestBase_o *)this, (System_String_o *)StringLiteral_23607/*"supportDeckId"*/, supportDeckId, method);
+  RequestBase__addField_40920848((RequestBase_o *)this, (System_String_o *)StringLiteral_18456/*"deckName"*/, deckName, v8);
   RequestBase__beginRequest((RequestBase_o *)this, v9);
 }
 
@@ -24,10 +24,10 @@ System_String_o *__fastcall FollowerEditNameRequest__getMockData(
         FollowerEditNameRequest_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A003A2 & 1) == 0 )
+  if ( (byte_4A0A4F2 & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_1/*""*/, method);
-    byte_4A003A2 = 1;
+    sub_1B686D4(&StringLiteral_1/*""*/, method);
+    byte_4A0A4F2 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -38,16 +38,16 @@ System_String_o *__fastcall FollowerEditNameRequest__getURL(FollowerEditNameRequ
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A003A1 & 1) == 0 )
+  if ( (byte_4A0A4F1 & 1) == 0 )
   {
-    sub_1B64A00(&NetworkManager_TypeInfo, method);
-    sub_1B64A00(&StringLiteral_19424/*"follower/editName"*/, v2);
-    byte_4A003A1 = 1;
+    sub_1B686D4(&NetworkManager_TypeInfo, method);
+    sub_1B686D4(&StringLiteral_19430/*"follower/editName"*/, v2);
+    byte_4A0A4F1 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61385136(BaseUrl, (System_String_o *)StringLiteral_19424/*"follower/editName"*/, 0LL);
+  return System_String__Concat_61419468(BaseUrl, (System_String_o *)StringLiteral_19430/*"follower/editName"*/, 0LL);
 }
 
 
@@ -63,12 +63,12 @@ void __fastcall FollowerEditNameRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v10; // x9
 
-  if ( (byte_4A003A4 & 1) == 0 )
+  if ( (byte_4A0A4F4 & 1) == 0 )
   {
-    sub_1B64A00(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1B64A00(&StringLiteral_22140/*"ok"*/, v5);
-    sub_1B64A00(&StringLiteral_21971/*"ng"*/, v6);
-    byte_4A003A4 = 1;
+    sub_1B686D4(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1B686D4(&StringLiteral_22150/*"ok"*/, v5);
+    sub_1B686D4(&StringLiteral_21981/*"ng"*/, v6);
+    byte_4A0A4F4 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -78,14 +78,14 @@ void __fastcall FollowerEditNameRequest__requestCompleted(
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v10 = &StringLiteral_22140/*"ok"*/;
+    v10 = &StringLiteral_22150/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v10 = &StringLiteral_21971/*"ng"*/;
+    v10 = &StringLiteral_21981/*"ng"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,

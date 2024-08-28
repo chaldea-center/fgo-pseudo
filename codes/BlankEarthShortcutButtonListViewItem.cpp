@@ -17,24 +17,24 @@ void __fastcall BlankEarthShortcutButtonListViewItem___ctor(
   int32_t v20; // w2
   int32_t v21; // w3
 
-  ListViewItem___ctor_40376104((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_40440732((ListViewItem_o *)this, index, 0LL);
   this->fields._IconId_k__BackingField = iconId;
   this->fields._Name_k__BackingField = name;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields._Name_k__BackingField, (int32_t)name, v14, v15);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields._Name_k__BackingField, (int32_t)name, v14, v15);
   this->fields._CommonUiAtlas_k__BackingField = commonUiAtlas;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields._CommonUiAtlas_k__BackingField,
     (int32_t)commonUiAtlas,
     v16,
     v17);
   this->fields._IconAtlas_k__BackingField = iconAtlas;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields._IconAtlas_k__BackingField,
     (int32_t)iconAtlas,
     v18,
     v19);
   this->fields._OnClickAction_k__BackingField = onClickAction;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields._OnClickAction_k__BackingField,
     (int32_t)onClickAction,
     v20,
@@ -90,7 +90,7 @@ void __fastcall BlankEarthShortcutButtonListViewItem__set_CommonUiAtlas(
   int32_t v3; // w3
 
   this->fields._CommonUiAtlas_k__BackingField = value;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields._CommonUiAtlas_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -106,7 +106,7 @@ void __fastcall BlankEarthShortcutButtonListViewItem__set_IconAtlas(
   int32_t v3; // w3
 
   this->fields._IconAtlas_k__BackingField = value;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields._IconAtlas_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -131,7 +131,7 @@ void __fastcall BlankEarthShortcutButtonListViewItem__set_Name(
   int32_t v3; // w3
 
   this->fields._Name_k__BackingField = value;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -147,7 +147,7 @@ void __fastcall BlankEarthShortcutButtonListViewItem__set_OnClickAction(
   int32_t v3; // w3
 
   this->fields._OnClickAction_k__BackingField = value;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields._OnClickAction_k__BackingField,
     (int32_t)value,
     (int32_t)method,

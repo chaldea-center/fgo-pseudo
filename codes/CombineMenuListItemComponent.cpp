@@ -30,14 +30,14 @@ void __fastcall CombineMenuListItemComponent__InitButton(
   UnityEngine_Color_o v14; // [xsp+10h] [xbp-50h] BYREF
   UnityEngine_Color_o color; // [xsp+20h] [xbp-40h] BYREF
 
-  if ( (byte_4A021AE & 1) == 0 )
+  if ( (byte_4A0C306 & 1) == 0 )
   {
-    sub_1B64A00(&LocalizationManager_TypeInfo, method);
-    sub_1B64A00(&StringLiteral_3667/*"COMBINE_PREPARATION"*/, v3);
-    sub_1B64A00(&StringLiteral_444/*"#6B6B6B"*/, v4);
-    sub_1B64A00(&StringLiteral_451/*"#E1C896"*/, v5);
-    sub_1B64A00(&StringLiteral_449/*"#B7A37B"*/, v6);
-    byte_4A021AE = 1;
+    sub_1B686D4(&LocalizationManager_TypeInfo, method);
+    sub_1B686D4(&StringLiteral_3665/*"COMBINE_PREPARATION"*/, v3);
+    sub_1B686D4(&StringLiteral_443/*"#6B6B6B"*/, v4);
+    sub_1B686D4(&StringLiteral_450/*"#E1C896"*/, v5);
+    sub_1B686D4(&StringLiteral_448/*"#B7A37B"*/, v6);
+    byte_4A0C306 = 1;
   }
   *(_QWORD *)&color.fields.r = 0LL;
   *(_QWORD *)&color.fields.b = 0LL;
@@ -47,14 +47,14 @@ void __fastcall CombineMenuListItemComponent__InitButton(
   preparationLabel = this->fields.preparationLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3667/*"COMBINE_PREPARATION"*/, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3665/*"COMBINE_PREPARATION"*/, 0LL);
   if ( !preparationLabel )
     goto LABEL_10;
   UILabel__set_text(preparationLabel, v8, 0LL);
-  UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_451/*"#E1C896"*/, &color, 0LL);
-  UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_449/*"#B7A37B"*/, &v14, 0LL);
+  UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_450/*"#E1C896"*/, &color, 0LL);
+  UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_448/*"#B7A37B"*/, &v14, 0LL);
   v8 = (System_String_o *)UnityEngine_ColorUtility__TryParseHtmlString(
-                            (System_String_o *)StringLiteral_444/*"#6B6B6B"*/,
+                            (System_String_o *)StringLiteral_443/*"#6B6B6B"*/,
                             (UnityEngine_Color_o *)&v13,
                             0LL);
   button = this->fields.button;
@@ -63,7 +63,7 @@ void __fastcall CombineMenuListItemComponent__InitButton(
     || (v11->fields.specifyPressedColor = v14, (v12 = this->fields.button) == 0LL) )
   {
 LABEL_10:
-    sub_1B64C5C(v8, v9);
+    sub_1B68930(v8, v9);
   }
   v12->fields.specifyDisabledColor = (struct UnityEngine_Color_o)v13;
 }
@@ -79,7 +79,7 @@ void __fastcall CombineMenuListItemComponent__ResetDisableState(
   {
     button = this->fields.button;
     if ( !button )
-      sub_1B64C5C(0LL, method);
+      sub_1B68930(0LL, method);
     ((void (__fastcall *)(struct UICommonButton_o *, __int64, __int64, Il2CppMethodPointer))button->klass->vtable._14_SetState.method)(
       button,
       3LL,
@@ -110,7 +110,7 @@ void __fastcall CombineMenuListItemComponent__SetButtonState(
 LABEL_5:
   button = this->fields.button;
   if ( !button )
-    sub_1B64C5C(0LL, *(_QWORD *)&state);
+    sub_1B68930(0LL, *(_QWORD *)&state);
   ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, bool, Il2CppMethodPointer))button->klass->vtable._14_SetState.method)(
     button,
     v5,
@@ -129,7 +129,7 @@ void __fastcall CombineMenuListItemComponent__SetDisableMessage(
 
   disableMessageLabel = this->fields.disableMessageLabel;
   if ( !disableMessageLabel )
-    sub_1B64C5C(0LL, disableMessage);
+    sub_1B68930(0LL, disableMessage);
   UILabel__set_text(disableMessageLabel, disableMessage, 0LL);
 }
 
@@ -149,7 +149,7 @@ void __fastcall CombineMenuListItemComponent__SetDisableUiActivity(
         (preparationLabel = (UnityEngine_Component_o *)this->fields.disableMessageLabel) == 0LL)
     || (preparationLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(preparationLabel, 0LL)) == 0LL )
   {
-    sub_1B64C5C(preparationLabel, isActive);
+    sub_1B68930(preparationLabel, isActive);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)preparationLabel, isActive, 0LL);
 }
@@ -162,10 +162,10 @@ void __fastcall CombineMenuListItemComponent__SetEventSprite(
 {
   UISprite_o *baseSprite; // x20
 
-  if ( (byte_4A021AF & 1) == 0 )
+  if ( (byte_4A0C307 & 1) == 0 )
   {
-    sub_1B64A00(&AtlasManager_TypeInfo, spriteName);
-    byte_4A021AF = 1;
+    sub_1B686D4(&AtlasManager_TypeInfo, spriteName);
+    byte_4A0C307 = 1;
   }
   baseSprite = this->fields.baseSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )

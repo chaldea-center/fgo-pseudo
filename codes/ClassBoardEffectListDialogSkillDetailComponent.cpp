@@ -2,7 +2,7 @@ void __fastcall ClassBoardEffectListDialogSkillDetailComponent___ctor(
         ClassBoardEffectListDialogSkillDetailComponent_o *this,
         const MethodInfo *method)
 {
-  *(_OWORD *)&this->fields.detailMinHeight = xmmword_BA2FC0;
+  *(_OWORD *)&this->fields.detailMinHeight = xmmword_BA60A0;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -23,7 +23,7 @@ void __fastcall ClassBoardEffectListDialogSkillDetailComponent__Init(
   int32_t v3; // w3
 
   this->fields.listComponent = listComponent;
-  sub_1B649A4(
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)&this->fields.listComponent,
     (int32_t)listComponent,
     (int32_t)method,
@@ -50,10 +50,10 @@ float __fastcall ClassBoardEffectListDialogSkillDetailComponent__SetDetail(
   struct ClassBoardEffectListDialogSkillListComponent_o *listComponent; // x8
   System_String_o *v21; // x2
 
-  if ( (byte_4A01EBF & 1) == 0 )
+  if ( (byte_4A0C019 & 1) == 0 )
   {
-    sub_1B64A00(&ClassBoardUtility_TypeInfo, name);
-    byte_4A01EBF = 1;
+    sub_1B686D4(&ClassBoardUtility_TypeInfo, name);
+    byte_4A0C019 = 1;
   }
   effectNameLabel = this->fields.effectNameLabel;
   if ( !effectNameLabel )
@@ -94,7 +94,7 @@ float __fastcall ClassBoardEffectListDialogSkillDetailComponent__SetDetail(
       }
     }
 LABEL_16:
-    sub_1B64C5C(effectNameLabel, name);
+    sub_1B68930(effectNameLabel, name);
   }
   return v16 + (float)this->fields.adjustSetPosY;
 }
@@ -127,7 +127,7 @@ float __fastcall ClassBoardEffectListDialogSkillDetailComponent__SetDetailTextAn
         LocalPositionY = GameObjectExtensions__GetLocalPositionY(gameObject, 0LL),
         (v8 = this->fields.effectDetailLabel) == 0LL) )
   {
-    sub_1B64C5C(effectDetailLabel, detail);
+    sub_1B68930(effectDetailLabel, detail);
   }
   detailMinHeight = this->fields.detailMinHeight;
   result = (float)(fabsf(LocalPositionY) + (float)v8->fields.mHeight) + (float)this->fields.detailUnderMargin;
@@ -144,6 +144,6 @@ void __fastcall ClassBoardEffectListDialogSkillDetailComponent__SetIconFromBattl
         const MethodInfo *method)
 {
   if ( !atlasManagerUnit )
-    sub_1B64C5C(this, 0LL);
+    sub_1B68930(this, 0LL);
   AtlasManagerUnit__SetUI(atlasManagerUnit, this->fields.effectIcon, spriteName, 0LL);
 }

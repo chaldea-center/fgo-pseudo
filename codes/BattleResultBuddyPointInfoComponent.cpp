@@ -35,19 +35,19 @@ void __fastcall BattleResultBuddyPointInfoComponent__FinishUpdateBuddyPoint(
   int v24; // [xsp+8h] [xbp-38h] BYREF
   int v25; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4A01C0C & 1) == 0 )
+  if ( (byte_4A0BD66 & 1) == 0 )
   {
-    sub_1B64A00(&int_TypeInfo, method);
-    sub_1B64A00(&StringLiteral_25024/*"{0}（＋{1}）"*/, v3);
-    sub_1B64A00(&iTween_TypeInfo, v4);
-    byte_4A01C0C = 1;
+    sub_1B686D4(&int_TypeInfo, method);
+    sub_1B686D4(&StringLiteral_25038/*"{0}（＋{1}）"*/, v3);
+    sub_1B686D4(&iTween_TypeInfo, v4);
+    byte_4A0BD66 = 1;
   }
   if ( this->fields.resultBuddyPointInfo )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !iTween_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-    iTween__Stop_60033808(gameObject, 0LL);
+    iTween__Stop_60068140(gameObject, 0LL);
     resultBuddyPointInfo = this->fields.resultBuddyPointInfo;
     if ( !resultBuddyPointInfo )
       goto LABEL_16;
@@ -59,14 +59,14 @@ void __fastcall BattleResultBuddyPointInfoComponent__FinishUpdateBuddyPoint(
     v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v25, v8, v9, v10);
     v24 = v14;
     v20 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v24, v17, v18, v19);
-    v6 = System_String__Format_61399508((System_String_o *)StringLiteral_25024/*"{0}（＋{1}）"*/, v16, v20, 0LL);
+    v6 = System_String__Format_61433840((System_String_o *)StringLiteral_25038/*"{0}（＋{1}）"*/, v16, v20, 0LL);
     if ( !buddyPointLabel
       || (UILabel__set_text(buddyPointLabel, v6, 0LL), (v6 = (System_String_o *)this->fields.buddyPointLabel) == 0LL)
       || (UILabel__SetCondensedScale((UILabel_o *)v6, this->fields.pointLabelMaxWidth, 0LL),
           (v22 = this->fields.resultBuddyPointInfo) == 0LL) )
     {
 LABEL_16:
-      sub_1B64C5C(v6, v7);
+      sub_1B68930(v6, v7);
     }
     if ( BattleResultBuddyPointInfoComponent__IsRankUpBuddyRank(this, v22->fields.aftBuddyPoint, v21) )
       BattleResultBuddyPointInfoComponent__PlayBuddyRankUp(this, v23);
@@ -90,11 +90,11 @@ bool __fastcall BattleResultBuddyPointInfoComponent__IsRankUpBuddyRank(
   EventServantPointRankEntity_o *EnableEntity; // x0
   int32_t svtPointRank; // w8
 
-  if ( (byte_4A01C0B & 1) == 0 )
+  if ( (byte_4A0BD65 & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataManager_GetMaster_EventServantPointRankMaster___, *(_QWORD *)&buddyPoint);
-    sub_1B64A00(&DataManager_TypeInfo, v5);
-    byte_4A01C0B = 1;
+    sub_1B686D4(&Method_DataManager_GetMaster_EventServantPointRankMaster___, *(_QWORD *)&buddyPoint);
+    sub_1B686D4(&DataManager_TypeInfo, v5);
+    byte_4A0BD65 = 1;
   }
   p_rankMaster = &this->fields.rankMaster;
   rankMaster = this->fields.rankMaster;
@@ -102,14 +102,14 @@ bool __fastcall BattleResultBuddyPointInfoComponent__IsRankUpBuddyRank(
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2E3BC8C *)Method_DataManager_GetMaster_EventServantPointRankMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2E49CFC *)Method_DataManager_GetMaster_EventServantPointRankMaster___);
     *p_rankMaster = (struct EventServantPointRankMaster_o *)Master_object;
-    sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.rankMaster, (int32_t)Master_object, v9, v10);
+    sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.rankMaster, (int32_t)Master_object, v9, v10);
     rankMaster = *p_rankMaster;
   }
   resultBuddyPointInfo = this->fields.resultBuddyPointInfo;
   if ( !resultBuddyPointInfo || !rankMaster )
-    sub_1B64C5C(rankMaster, *(_QWORD *)&buddyPoint);
+    sub_1B68930(rankMaster, *(_QWORD *)&buddyPoint);
   EnableEntity = EventServantPointRankMaster__GetEnableEntity(
                    rankMaster,
                    this->fields.buddyPointEventId,
@@ -153,7 +153,7 @@ void __fastcall BattleResultBuddyPointInfoComponent__PlayBuddyRankUp(
   __int64 v16; // x4
   Il2CppObject *v17; // x0
   System_String_o *v18; // x20
-  Il2CppObject *Object_object__48358160; // x20
+  Il2CppObject *Object_object__48415484; // x20
   UnityEngine_GameObject_o *v20; // x20
   UnityEngine_Transform_o *v21; // x21
   __int64 v22; // x1
@@ -170,20 +170,20 @@ void __fastcall BattleResultBuddyPointInfoComponent__PlayBuddyRankUp(
   int32_t beforeBuddyRank; // [xsp+8h] [xbp-58h] BYREF
   int32_t buddyPointEventId; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4A01C0D & 1) == 0 )
+  if ( (byte_4A0BD67 & 1) == 0 )
   {
-    sub_1B64A00(&Method_AssetData_GetObject_GameObject____75715992, method);
-    sub_1B64A00(&AssetManager_TypeInfo, v3);
-    sub_1B64A00(&Method_UnityEngine_GameObject_GetComponent_Animation___, v4);
-    sub_1B64A00(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___, v5);
-    sub_1B64A00(&int_TypeInfo, v6);
-    sub_1B64A00(&LocalizationManager_TypeInfo, v7);
-    sub_1B64A00(&Method_UnityEngine_Object_Instantiate_GameObject___, v8);
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, v9);
-    sub_1B64A00(&StringLiteral_5791/*"Effect/BattleResult/{0}"*/, v10);
-    sub_1B64A00(&StringLiteral_17142/*"bit_buddy_rankup"*/, v11);
-    sub_1B64A00(&StringLiteral_2798/*"BATTLE_BUDDY_POINT_RANK_{0}"*/, v12);
-    byte_4A01C0D = 1;
+    sub_1B686D4(&Method_AssetData_GetObject_GameObject____75755192, method);
+    sub_1B686D4(&AssetManager_TypeInfo, v3);
+    sub_1B686D4(&Method_UnityEngine_GameObject_GetComponent_Animation___, v4);
+    sub_1B686D4(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___, v5);
+    sub_1B686D4(&int_TypeInfo, v6);
+    sub_1B686D4(&LocalizationManager_TypeInfo, v7);
+    sub_1B686D4(&Method_UnityEngine_Object_Instantiate_GameObject___, v8);
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, v9);
+    sub_1B686D4(&StringLiteral_5791/*"Effect/BattleResult/{0}"*/, v10);
+    sub_1B686D4(&StringLiteral_17142/*"bit_buddy_rankup"*/, v11);
+    sub_1B686D4(&StringLiteral_2796/*"BATTLE_BUDDY_POINT_RANK_{0}"*/, v12);
+    byte_4A0BD67 = 1;
   }
   buddyPointRankUpObject = this->fields.buddyPointRankUpObject;
   if ( !buddyPointRankUpObject )
@@ -197,15 +197,15 @@ void __fastcall BattleResultBuddyPointInfoComponent__PlayBuddyRankUp(
   buddyPointRankUpObject = (UnityEngine_GameObject_o *)AssetManager__getAssetStorage(v18, 0LL);
   if ( !buddyPointRankUpObject )
     goto LABEL_29;
-  Object_object__48358160 = AssetData__GetObject_object__48358160(
+  Object_object__48415484 = AssetData__GetObject_object__48415484(
                               (AssetData_o *)buddyPointRankUpObject,
                               (System_String_o *)StringLiteral_17142/*"bit_buddy_rankup"*/,
-                              (const MethodInfo_2E1E310 *)Method_AssetData_GetObject_GameObject____75715992);
+                              (const MethodInfo_2E2C2FC *)Method_AssetData_GetObject_GameObject____75755192);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   buddyPointRankUpObject = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
-                                                         Object_object__48358160,
-                                                         (const MethodInfo_2EBE594 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                                         Object_object__48415484,
+                                                         (const MethodInfo_2ECC718 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !buddyPointRankUpObject )
     goto LABEL_29;
   v20 = buddyPointRankUpObject;
@@ -221,24 +221,24 @@ void __fastcall BattleResultBuddyPointInfoComponent__PlayBuddyRankUp(
   if ( !v21 )
     goto LABEL_29;
   UnityEngine_Transform__SetParent(v21, (UnityEngine_Transform_o *)buddyPointRankUpObject, 0LL);
-  if ( !byte_49F9821 )
+  if ( !byte_4A03901 )
   {
-    sub_1B64A00(&UnityEngine_Vector3_TypeInfo, v22);
-    byte_49F9821 = 1;
+    sub_1B686D4(&UnityEngine_Vector3_TypeInfo, v22);
+    byte_4A03901 = 1;
   }
   UnityEngine_Transform__set_localPosition(v21, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
-  if ( !byte_49F9826 )
+  if ( !byte_4A03906 )
   {
-    sub_1B64A00(&UnityEngine_Vector3_TypeInfo, v23);
-    byte_49F9826 = 1;
+    sub_1B686D4(&UnityEngine_Vector3_TypeInfo, v23);
+    byte_4A03906 = 1;
   }
   UnityEngine_Transform__set_localScale(v21, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        v20,
-                       (const MethodInfo_2E8A7CC *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+                       (const MethodInfo_2E98950 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
   v25 = UnityEngine_GameObject__GetComponent_object_(
           v20,
-          (const MethodInfo_2E8A7CC *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+          (const MethodInfo_2E98950 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
   buddyPointRankUpObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
                                                          (UnityEngine_Object_o *)Component_object,
                                                          0LL,
@@ -247,7 +247,7 @@ void __fastcall BattleResultBuddyPointInfoComponent__PlayBuddyRankUp(
   {
     if ( !Component_object )
       goto LABEL_29;
-    UnityEngine_Animation__Play_68882568(
+    UnityEngine_Animation__Play_68916908(
       (UnityEngine_Animation_o *)Component_object,
       (System_String_o *)StringLiteral_17142/*"bit_buddy_rankup"*/,
       0LL);
@@ -264,12 +264,12 @@ void __fastcall BattleResultBuddyPointInfoComponent__PlayBuddyRankUp(
     {
       if ( !v25 )
         goto LABEL_29;
-      SimpleAnimation__Play_63522800((SimpleAnimation_o *)v25, (System_String_o *)StringLiteral_17142/*"bit_buddy_rankup"*/, 0LL);
+      SimpleAnimation__Play_63557140((SimpleAnimation_o *)v25, (System_String_o *)StringLiteral_17142/*"bit_buddy_rankup"*/, 0LL);
     }
   }
   beforeBuddyRank = this->fields.beforeBuddyRank;
   v29 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &beforeBuddyRank, v26, v27, v28);
-  v30 = System_String__Format((System_String_o *)StringLiteral_2798/*"BATTLE_BUDDY_POINT_RANK_{0}"*/, v29, 0LL);
+  v30 = System_String__Format((System_String_o *)StringLiteral_2796/*"BATTLE_BUDDY_POINT_RANK_{0}"*/, v29, 0LL);
   buddyPointRankLabel = this->fields.buddyPointRankLabel;
   v32 = v30;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -280,7 +280,7 @@ void __fastcall BattleResultBuddyPointInfoComponent__PlayBuddyRankUp(
         (buddyPointRankUpObject = (UnityEngine_GameObject_o *)this->fields.buddyPointRankLabel) == 0LL) )
   {
 LABEL_29:
-    sub_1B64C5C(buddyPointRankUpObject, method);
+    sub_1B68930(buddyPointRankUpObject, method);
   }
   UILabel__SetCondensedScale((UILabel_o *)buddyPointRankUpObject, this->fields.pointLabelMaxWidth, 0LL);
 }
@@ -304,31 +304,31 @@ void __fastcall BattleResultBuddyPointInfoComponent__SetBuddyPointInfo(
   EventServantPointRankEntity_o *EnableEntity; // x0
   int32_t svtPointRank; // w8
 
-  if ( (byte_4A01C08 & 1) == 0 )
+  if ( (byte_4A0BD62 & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataManager_GetMaster_EventServantPointRankMaster___, buddyPointInfo);
-    sub_1B64A00(&DataManager_TypeInfo, v7);
-    byte_4A01C08 = 1;
+    sub_1B686D4(&Method_DataManager_GetMaster_EventServantPointRankMaster___, buddyPointInfo);
+    sub_1B686D4(&DataManager_TypeInfo, v7);
+    byte_4A0BD62 = 1;
   }
   buddyPointRankUpObject = this->fields.buddyPointRankUpObject;
   if ( !buddyPointRankUpObject )
     goto LABEL_14;
   UnityEngine_GameObject__SetActive(buddyPointRankUpObject, 0, 0LL);
   this->fields.resultBuddyPointInfo = buddyPointInfo;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.resultBuddyPointInfo, (int32_t)buddyPointInfo, v9, v10);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.resultBuddyPointInfo, (int32_t)buddyPointInfo, v9, v10);
   if ( !this->fields.resultBuddyPointInfo )
     return;
   this->fields.buddyPointEventId = eventId;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E3BC8C *)Method_DataManager_GetMaster_EventServantPointRankMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E49CFC *)Method_DataManager_GetMaster_EventServantPointRankMaster___);
   this->fields.rankMaster = (struct EventServantPointRankMaster_o *)Master_object;
   p_rankMaster = &this->fields.rankMaster;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.rankMaster, (int32_t)Master_object, v13, v14);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.rankMaster, (int32_t)Master_object, v13, v14);
   resultBuddyPointInfo = this->fields.resultBuddyPointInfo;
   if ( !resultBuddyPointInfo || (buddyPointRankUpObject = (UnityEngine_GameObject_o *)*p_rankMaster) == 0LL )
 LABEL_14:
-    sub_1B64C5C(buddyPointRankUpObject, buddyPointInfo);
+    sub_1B68930(buddyPointRankUpObject, buddyPointInfo);
   EnableEntity = EventServantPointRankMaster__GetEnableEntity(
                    (EventServantPointRankMaster_o *)buddyPointRankUpObject,
                    this->fields.buddyPointEventId,
@@ -400,34 +400,34 @@ void __fastcall BattleResultBuddyPointInfoComponent__StartUpdateBuddyPoint(
   int v53; // [xsp+8h] [xbp-38h] BYREF
   int v54; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4A01C09 & 1) == 0 )
+  if ( (byte_4A0BD63 & 1) == 0 )
   {
-    sub_1B64A00(&object___TypeInfo, method);
-    sub_1B64A00(&float_TypeInfo, v3);
-    sub_1B64A00(&StringLiteral_19580/*"from"*/, v4);
-    sub_1B64A00(&StringLiteral_23834/*"time"*/, v5);
-    sub_1B64A00(&StringLiteral_22196/*"onupdate"*/, v6);
-    sub_1B64A00(&StringLiteral_23874/*"to"*/, v7);
-    sub_1B64A00(&StringLiteral_6671/*"FinishUpdateBuddyPoint"*/, v8);
-    sub_1B64A00(&StringLiteral_22188/*"oncomplete"*/, v9);
-    sub_1B64A00(&StringLiteral_15113/*"UpdateBuddyPointInfo"*/, v10);
-    sub_1B64A00(&iTween_TypeInfo, v11);
-    byte_4A01C09 = 1;
+    sub_1B686D4(&object___TypeInfo, method);
+    sub_1B686D4(&float_TypeInfo, v3);
+    sub_1B686D4(&StringLiteral_19587/*"from"*/, v4);
+    sub_1B686D4(&StringLiteral_23846/*"time"*/, v5);
+    sub_1B686D4(&StringLiteral_22206/*"onupdate"*/, v6);
+    sub_1B686D4(&StringLiteral_23886/*"to"*/, v7);
+    sub_1B686D4(&StringLiteral_6670/*"FinishUpdateBuddyPoint"*/, v8);
+    sub_1B686D4(&StringLiteral_22198/*"oncomplete"*/, v9);
+    sub_1B686D4(&StringLiteral_15114/*"UpdateBuddyPointInfo"*/, v10);
+    sub_1B686D4(&iTween_TypeInfo, v11);
+    byte_4A0BD63 = 1;
   }
   if ( this->fields.resultBuddyPointInfo )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-    v13 = sub_1B64AA8(object___TypeInfo, 10LL);
+    v13 = sub_1B6877C(object___TypeInfo, 10LL);
     if ( !v13 )
-      sub_1B64C5C(0LL, v14);
+      sub_1B68930(0LL, v14);
     v17 = (System_Object_array *)v13;
-    v18 = StringLiteral_19580/*"from"*/;
-    if ( StringLiteral_19580/*"from"*/ )
+    v18 = StringLiteral_19587/*"from"*/;
+    if ( StringLiteral_19587/*"from"*/ )
     {
-      v18 = sub_1B64B3C(StringLiteral_19580/*"from"*/, v17->obj.klass->_1.element_class);
+      v18 = sub_1B68810(StringLiteral_19587/*"from"*/, v17->obj.klass->_1.element_class);
       if ( !v18 )
         goto LABEL_54;
-      v19 = StringLiteral_19580/*"from"*/;
+      v19 = StringLiteral_19587/*"from"*/;
     }
     else
     {
@@ -436,23 +436,23 @@ void __fastcall BattleResultBuddyPointInfoComponent__StartUpdateBuddyPoint(
     if ( !v17->max_length )
       goto LABEL_53;
     v17->m_Items[0] = (Il2CppObject *)v19;
-    sub_1B649A4((ServantStatusBattleListViewItem_o *)v17->m_Items, v19, v15, v16);
+    sub_1B68678((ServantStatusBattleListViewItem_o *)v17->m_Items, v19, v15, v16);
     v54 = 0;
     v18 = j_il2cpp_value_box_0(float_TypeInfo, &v54, v20, v21, v22);
     v25 = (Il2CppObject *)v18;
-    if ( !v18 || (v18 = sub_1B64B3C(v18, v17->obj.klass->_1.element_class)) != 0 )
+    if ( !v18 || (v18 = sub_1B68810(v18, v17->obj.klass->_1.element_class)) != 0 )
     {
       if ( v17->max_length <= 1 )
         goto LABEL_53;
       v17->m_Items[1] = v25;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)&v17->m_Items[1], (int32_t)v25, v23, v24);
-      v18 = StringLiteral_23874/*"to"*/;
-      if ( StringLiteral_23874/*"to"*/ )
+      sub_1B68678((ServantStatusBattleListViewItem_o *)&v17->m_Items[1], (int32_t)v25, v23, v24);
+      v18 = StringLiteral_23886/*"to"*/;
+      if ( StringLiteral_23886/*"to"*/ )
       {
-        v18 = sub_1B64B3C(StringLiteral_23874/*"to"*/, v17->obj.klass->_1.element_class);
+        v18 = sub_1B68810(StringLiteral_23886/*"to"*/, v17->obj.klass->_1.element_class);
         if ( !v18 )
           goto LABEL_54;
-        v19 = StringLiteral_23874/*"to"*/;
+        v19 = StringLiteral_23886/*"to"*/;
       }
       else
       {
@@ -461,23 +461,23 @@ void __fastcall BattleResultBuddyPointInfoComponent__StartUpdateBuddyPoint(
       if ( v17->max_length <= 2 )
         goto LABEL_53;
       v17->m_Items[2] = (Il2CppObject *)v19;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)&v17->m_Items[2], v19, v26, v27);
+      sub_1B68678((ServantStatusBattleListViewItem_o *)&v17->m_Items[2], v19, v26, v27);
       v53 = 1065353216;
       v18 = j_il2cpp_value_box_0(float_TypeInfo, &v53, v28, v29, v30);
       v33 = (Il2CppObject *)v18;
-      if ( !v18 || (v18 = sub_1B64B3C(v18, v17->obj.klass->_1.element_class)) != 0 )
+      if ( !v18 || (v18 = sub_1B68810(v18, v17->obj.klass->_1.element_class)) != 0 )
       {
         if ( v17->max_length <= 3 )
           goto LABEL_53;
         v17->m_Items[3] = v33;
-        sub_1B649A4((ServantStatusBattleListViewItem_o *)&v17->m_Items[3], (int32_t)v33, v31, v32);
-        v18 = StringLiteral_22196/*"onupdate"*/;
-        if ( StringLiteral_22196/*"onupdate"*/ )
+        sub_1B68678((ServantStatusBattleListViewItem_o *)&v17->m_Items[3], (int32_t)v33, v31, v32);
+        v18 = StringLiteral_22206/*"onupdate"*/;
+        if ( StringLiteral_22206/*"onupdate"*/ )
         {
-          v18 = sub_1B64B3C(StringLiteral_22196/*"onupdate"*/, v17->obj.klass->_1.element_class);
+          v18 = sub_1B68810(StringLiteral_22206/*"onupdate"*/, v17->obj.klass->_1.element_class);
           if ( !v18 )
             goto LABEL_54;
-          v19 = StringLiteral_22196/*"onupdate"*/;
+          v19 = StringLiteral_22206/*"onupdate"*/;
         }
         else
         {
@@ -486,14 +486,14 @@ void __fastcall BattleResultBuddyPointInfoComponent__StartUpdateBuddyPoint(
         if ( v17->max_length <= 4 )
           goto LABEL_53;
         v17->m_Items[4] = (Il2CppObject *)v19;
-        sub_1B649A4((ServantStatusBattleListViewItem_o *)&v17->m_Items[4], v19, v34, v35);
-        v18 = StringLiteral_15113/*"UpdateBuddyPointInfo"*/;
-        if ( StringLiteral_15113/*"UpdateBuddyPointInfo"*/ )
+        sub_1B68678((ServantStatusBattleListViewItem_o *)&v17->m_Items[4], v19, v34, v35);
+        v18 = StringLiteral_15114/*"UpdateBuddyPointInfo"*/;
+        if ( StringLiteral_15114/*"UpdateBuddyPointInfo"*/ )
         {
-          v18 = sub_1B64B3C(StringLiteral_15113/*"UpdateBuddyPointInfo"*/, v17->obj.klass->_1.element_class);
+          v18 = sub_1B68810(StringLiteral_15114/*"UpdateBuddyPointInfo"*/, v17->obj.klass->_1.element_class);
           if ( !v18 )
             goto LABEL_54;
-          v19 = StringLiteral_15113/*"UpdateBuddyPointInfo"*/;
+          v19 = StringLiteral_15114/*"UpdateBuddyPointInfo"*/;
         }
         else
         {
@@ -502,14 +502,14 @@ void __fastcall BattleResultBuddyPointInfoComponent__StartUpdateBuddyPoint(
         if ( v17->max_length <= 5 )
           goto LABEL_53;
         v17->m_Items[5] = (Il2CppObject *)v19;
-        sub_1B649A4((ServantStatusBattleListViewItem_o *)&v17->m_Items[5], v19, v36, v37);
-        v18 = StringLiteral_22188/*"oncomplete"*/;
-        if ( StringLiteral_22188/*"oncomplete"*/ )
+        sub_1B68678((ServantStatusBattleListViewItem_o *)&v17->m_Items[5], v19, v36, v37);
+        v18 = StringLiteral_22198/*"oncomplete"*/;
+        if ( StringLiteral_22198/*"oncomplete"*/ )
         {
-          v18 = sub_1B64B3C(StringLiteral_22188/*"oncomplete"*/, v17->obj.klass->_1.element_class);
+          v18 = sub_1B68810(StringLiteral_22198/*"oncomplete"*/, v17->obj.klass->_1.element_class);
           if ( !v18 )
             goto LABEL_54;
-          v19 = StringLiteral_22188/*"oncomplete"*/;
+          v19 = StringLiteral_22198/*"oncomplete"*/;
         }
         else
         {
@@ -518,14 +518,14 @@ void __fastcall BattleResultBuddyPointInfoComponent__StartUpdateBuddyPoint(
         if ( v17->max_length <= 6 )
           goto LABEL_53;
         v17->m_Items[6] = (Il2CppObject *)v19;
-        sub_1B649A4((ServantStatusBattleListViewItem_o *)&v17->m_Items[6], v19, v38, v39);
-        v18 = StringLiteral_6671/*"FinishUpdateBuddyPoint"*/;
-        if ( StringLiteral_6671/*"FinishUpdateBuddyPoint"*/ )
+        sub_1B68678((ServantStatusBattleListViewItem_o *)&v17->m_Items[6], v19, v38, v39);
+        v18 = StringLiteral_6670/*"FinishUpdateBuddyPoint"*/;
+        if ( StringLiteral_6670/*"FinishUpdateBuddyPoint"*/ )
         {
-          v18 = sub_1B64B3C(StringLiteral_6671/*"FinishUpdateBuddyPoint"*/, v17->obj.klass->_1.element_class);
+          v18 = sub_1B68810(StringLiteral_6670/*"FinishUpdateBuddyPoint"*/, v17->obj.klass->_1.element_class);
           if ( !v18 )
             goto LABEL_54;
-          v19 = StringLiteral_6671/*"FinishUpdateBuddyPoint"*/;
+          v19 = StringLiteral_6670/*"FinishUpdateBuddyPoint"*/;
         }
         else
         {
@@ -534,14 +534,14 @@ void __fastcall BattleResultBuddyPointInfoComponent__StartUpdateBuddyPoint(
         if ( v17->max_length <= 7 )
           goto LABEL_53;
         v17->m_Items[7] = (Il2CppObject *)v19;
-        sub_1B649A4((ServantStatusBattleListViewItem_o *)&v17->m_Items[7], v19, v40, v41);
-        v18 = StringLiteral_23834/*"time"*/;
-        if ( StringLiteral_23834/*"time"*/ )
+        sub_1B68678((ServantStatusBattleListViewItem_o *)&v17->m_Items[7], v19, v40, v41);
+        v18 = StringLiteral_23846/*"time"*/;
+        if ( StringLiteral_23846/*"time"*/ )
         {
-          v18 = sub_1B64B3C(StringLiteral_23834/*"time"*/, v17->obj.klass->_1.element_class);
+          v18 = sub_1B68810(StringLiteral_23846/*"time"*/, v17->obj.klass->_1.element_class);
           if ( !v18 )
             goto LABEL_54;
-          v19 = StringLiteral_23834/*"time"*/;
+          v19 = StringLiteral_23846/*"time"*/;
         }
         else
         {
@@ -550,16 +550,16 @@ void __fastcall BattleResultBuddyPointInfoComponent__StartUpdateBuddyPoint(
         if ( v17->max_length <= 8 )
           goto LABEL_53;
         v17->m_Items[8] = (Il2CppObject *)v19;
-        sub_1B649A4((ServantStatusBattleListViewItem_o *)&v17->m_Items[8], v19, v42, v43);
+        sub_1B68678((ServantStatusBattleListViewItem_o *)&v17->m_Items[8], v19, v42, v43);
         v52 = 1072064102;
         v18 = j_il2cpp_value_box_0(float_TypeInfo, &v52, v44, v45, v46);
         v49 = (Il2CppObject *)v18;
-        if ( !v18 || (v18 = sub_1B64B3C(v18, v17->obj.klass->_1.element_class)) != 0 )
+        if ( !v18 || (v18 = sub_1B68810(v18, v17->obj.klass->_1.element_class)) != 0 )
         {
           if ( v17->max_length > 9 )
           {
             v17->m_Items[9] = v49;
-            sub_1B649A4((ServantStatusBattleListViewItem_o *)&v17->m_Items[9], (int32_t)v49, v47, v48);
+            sub_1B68678((ServantStatusBattleListViewItem_o *)&v17->m_Items[9], (int32_t)v49, v47, v48);
             if ( !iTween_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
             v50 = iTween__Hash(v17, 0LL);
@@ -567,13 +567,13 @@ void __fastcall BattleResultBuddyPointInfoComponent__StartUpdateBuddyPoint(
             return;
           }
 LABEL_53:
-          sub_1B64C64(v18, v19);
+          sub_1B68938(v18, v19);
         }
       }
     }
 LABEL_54:
-    v51 = sub_1B64C80(v18);
-    sub_1B64B28(v51, 0LL);
+    v51 = sub_1B68954(v18);
+    sub_1B687FC(v51, 0LL);
   }
 }
 
@@ -615,14 +615,14 @@ void __fastcall BattleResultBuddyPointInfoComponent__UpdateBuddyPointInfo(
   int32_t beforeBuddyRank; // [xsp+18h] [xbp-48h] BYREF
   int v35; // [xsp+1Ch] [xbp-44h] BYREF
 
-  if ( (byte_4A01C0A & 1) == 0 )
+  if ( (byte_4A0BD64 & 1) == 0 )
   {
-    sub_1B64A00(&int_TypeInfo, method);
-    sub_1B64A00(&long_TypeInfo, v5);
-    sub_1B64A00(&LocalizationManager_TypeInfo, v6);
-    sub_1B64A00(&StringLiteral_2798/*"BATTLE_BUDDY_POINT_RANK_{0}"*/, v7);
-    sub_1B64A00(&StringLiteral_25024/*"{0}（＋{1}）"*/, v8);
-    byte_4A01C0A = 1;
+    sub_1B686D4(&int_TypeInfo, method);
+    sub_1B686D4(&long_TypeInfo, v5);
+    sub_1B686D4(&LocalizationManager_TypeInfo, v6);
+    sub_1B686D4(&StringLiteral_2796/*"BATTLE_BUDDY_POINT_RANK_{0}"*/, v7);
+    sub_1B686D4(&StringLiteral_25038/*"{0}（＋{1}）"*/, v8);
+    byte_4A0BD64 = 1;
   }
   resultBuddyPointInfo = this->fields.resultBuddyPointInfo;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -645,8 +645,8 @@ void __fastcall BattleResultBuddyPointInfoComponent__UpdateBuddyPointInfo(
       v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v35, v16, v17, v18);
       v33 = v15;
       v25 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v33, v22, v23, v24);
-      gameObject = (UnityEngine_GameObject_o *)System_String__Format_61399508(
-                                                 (System_String_o *)StringLiteral_25024/*"{0}（＋{1}）"*/,
+      gameObject = (UnityEngine_GameObject_o *)System_String__Format_61433840(
+                                                 (System_String_o *)StringLiteral_25038/*"{0}（＋{1}）"*/,
                                                  v21,
                                                  v25,
                                                  0LL);
@@ -659,7 +659,7 @@ void __fastcall BattleResultBuddyPointInfoComponent__UpdateBuddyPointInfo(
           UILabel__SetCondensedScale((UILabel_o *)gameObject, this->fields.pointLabelMaxWidth, 0LL);
           beforeBuddyRank = this->fields.beforeBuddyRank;
           v29 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &beforeBuddyRank, v26, v27, v28);
-          v30 = System_String__Format((System_String_o *)StringLiteral_2798/*"BATTLE_BUDDY_POINT_RANK_{0}"*/, v29, 0LL);
+          v30 = System_String__Format((System_String_o *)StringLiteral_2796/*"BATTLE_BUDDY_POINT_RANK_{0}"*/, v29, 0LL);
           buddyPointRankLabel = this->fields.buddyPointRankLabel;
           v32 = v30;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -674,7 +674,7 @@ void __fastcall BattleResultBuddyPointInfoComponent__UpdateBuddyPointInfo(
       }
     }
 LABEL_15:
-    sub_1B64C5C(gameObject, v11);
+    sub_1B68930(gameObject, v11);
   }
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
 }

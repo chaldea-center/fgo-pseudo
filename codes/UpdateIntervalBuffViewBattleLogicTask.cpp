@@ -12,7 +12,7 @@ void __fastcall UpdateIntervalBuffViewBattleLogicTask___ctor(
   v4[1].fields.sortValue2 = (int64_t)actData;
   v4 = (ServantStatusBattleListViewItem_o *)((char *)v4 + 240);
   *(_DWORD *)&v4[-2].fields.isEnabled = 58;
-  sub_1B649A4(v4, (int32_t)actData, v5, v6);
+  sub_1B68678(v4, (int32_t)actData, v5, v6);
   BYTE2(v4[-1].fields.dispLimitCount.fields.fakeValue) = 1;
 }
 
@@ -25,13 +25,13 @@ BattleActionData_o *__fastcall UpdateIntervalBuffViewBattleLogicTask__MakeAction
   BattleActionData_o *baseActData; // x19
   UpdateViewIntervalBuffActionData_o *v5; // x20
 
-  if ( (byte_4A0176F & 1) == 0 )
+  if ( (byte_4A0B8C8 & 1) == 0 )
   {
-    sub_1B64A00(&UpdateViewIntervalBuffActionData_TypeInfo, logic);
-    byte_4A0176F = 1;
+    sub_1B686D4(&UpdateViewIntervalBuffActionData_TypeInfo, logic);
+    byte_4A0B8C8 = 1;
   }
   baseActData = this->fields.baseActData;
-  v5 = (UpdateViewIntervalBuffActionData_o *)sub_1B64C4C(UpdateViewIntervalBuffActionData_TypeInfo);
+  v5 = (UpdateViewIntervalBuffActionData_o *)sub_1B68920(UpdateViewIntervalBuffActionData_TypeInfo);
   UpdateViewIntervalBuffActionData___ctor(v5, baseActData, 0LL);
   return (BattleActionData_o *)v5;
 }

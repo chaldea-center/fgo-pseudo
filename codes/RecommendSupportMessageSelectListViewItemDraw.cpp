@@ -35,25 +35,25 @@ void __fastcall RecommendSupportMessageSelectListViewItemDraw__Init(
   UICommonButton_o *button; // x0
   UISprite_o *frameSprite; // x19
 
-  if ( (byte_49FAE08 & 1) == 0 )
+  if ( (byte_4A04EF7 & 1) == 0 )
   {
-    sub_1B64A00(&AtlasManager_TypeInfo, method);
-    sub_1B64A00(&StringLiteral_20241/*"img_frameselect"*/, v4);
-    sub_1B64A00(&StringLiteral_1/*""*/, v5);
-    byte_49FAE08 = 1;
+    sub_1B686D4(&AtlasManager_TypeInfo, method);
+    sub_1B686D4(&StringLiteral_20248/*"img_frameselect"*/, v4);
+    sub_1B686D4(&StringLiteral_1/*""*/, v5);
+    byte_4A04EF7 = 1;
   }
   RecommendSupportMessageSelectListViewItemDraw__SetButtonState(this, 0, 0, v2);
   button = this->fields.button;
   if ( !button
     || (UICommonButton__SetEnable(button, 1, 0LL), (button = (UICommonButton_o *)this->fields.wordLabel) == 0LL) )
   {
-    sub_1B64C5C(button, v6);
+    sub_1B68930(button, v6);
   }
   UILabel__set_text((UILabel_o *)button, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   frameSprite = this->fields.frameSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetPartyOrganizationImage(frameSprite, (System_String_o *)StringLiteral_20241/*"img_frameselect"*/, 0LL);
+  AtlasManager__SetPartyOrganizationImage(frameSprite, (System_String_o *)StringLiteral_20248/*"img_frameselect"*/, 0LL);
 }
 
 
@@ -95,7 +95,7 @@ LABEL_8:
       goto LABEL_10;
     }
 LABEL_11:
-    sub_1B64C5C(button, isUse);
+    sub_1B68930(button, isUse);
   }
   UICommonButton__SetEnable(button, 0, 0LL);
   RecommendSupportMessageSelectListViewItemDraw__SetHighlight(this, 0, v9);
@@ -120,7 +120,7 @@ void __fastcall RecommendSupportMessageSelectListViewItemDraw__SetHighlight(
   if ( !frameSprite
     || (frameSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(frameSprite, 0LL)) == 0LL )
   {
-    sub_1B64C5C(frameSprite, isActive);
+    sub_1B68930(frameSprite, isActive);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)frameSprite, isActive, 0LL);
 }
@@ -140,10 +140,10 @@ void __fastcall RecommendSupportMessageSelectListViewItemDraw__SetInput(
   if ( item )
   {
     IsUse_k__BackingField = item->fields._IsUse_k__BackingField;
-    if ( !byte_49FAEB7 )
+    if ( !byte_4A04FA6 )
     {
-      sub_1B64A00(&RecommendSupportMessageSelectDialog_TypeInfo, item);
-      byte_49FAEB7 = 1;
+      sub_1B686D4(&RecommendSupportMessageSelectDialog_TypeInfo, item);
+      byte_4A04FA6 = 1;
     }
     RecommendSupportMessageSelectListViewItemDraw__SetButtonState(
       this,
@@ -152,7 +152,7 @@ void __fastcall RecommendSupportMessageSelectListViewItemDraw__SetInput(
       method);
     RecommendAdviceMessageEntity_k__BackingField = item->fields._RecommendAdviceMessageEntity_k__BackingField;
     if ( !RecommendAdviceMessageEntity_k__BackingField || (wordLabel = this->fields.wordLabel) == 0LL )
-      sub_1B64C5C(wordLabel, v8);
+      sub_1B68930(wordLabel, v8);
     UILabel__set_text(wordLabel, RecommendAdviceMessageEntity_k__BackingField->fields.message, 0LL);
   }
 }
@@ -172,10 +172,10 @@ void __fastcall RecommendSupportMessageSelectListViewItemDraw__SetItem(
   if ( item )
   {
     IsUse_k__BackingField = item->fields._IsUse_k__BackingField;
-    if ( !byte_49FAEB7 )
+    if ( !byte_4A04FA6 )
     {
-      sub_1B64A00(&RecommendSupportMessageSelectDialog_TypeInfo, item);
-      byte_49FAEB7 = 1;
+      sub_1B686D4(&RecommendSupportMessageSelectDialog_TypeInfo, item);
+      byte_4A04FA6 = 1;
     }
     RecommendSupportMessageSelectListViewItemDraw__SetButtonState(
       this,
@@ -184,7 +184,7 @@ void __fastcall RecommendSupportMessageSelectListViewItemDraw__SetItem(
       v3);
     RecommendAdviceMessageEntity_k__BackingField = item->fields._RecommendAdviceMessageEntity_k__BackingField;
     if ( !RecommendAdviceMessageEntity_k__BackingField || (wordLabel = this->fields.wordLabel) == 0LL )
-      sub_1B64C5C(wordLabel, v8);
+      sub_1B68930(wordLabel, v8);
     UILabel__set_text(wordLabel, RecommendAdviceMessageEntity_k__BackingField->fields.message, 0LL);
   }
 }
@@ -199,6 +199,6 @@ void __fastcall RecommendSupportMessageSelectListViewItemDraw__SetMask(
 
   mask = this->fields.mask;
   if ( !mask )
-    sub_1B64C5C(0LL, isActive);
+    sub_1B68930(0LL, isActive);
   UnityEngine_GameObject__SetActive(mask, isActive, 0LL);
 }

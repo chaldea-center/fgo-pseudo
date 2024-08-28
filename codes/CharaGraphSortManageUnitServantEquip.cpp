@@ -12,12 +12,12 @@ CharaGraphFilterLogicBase_o *__fastcall CharaGraphSortManageUnitServantEquip__Cr
 {
   ServantCharaGraphFilterLogic_o *v2; // x19
 
-  if ( (byte_49FDF3C & 1) == 0 )
+  if ( (byte_4A0806B & 1) == 0 )
   {
-    sub_1B64A00(&ServantCharaGraphEquipFilterLogic_TypeInfo, method);
-    byte_49FDF3C = 1;
+    sub_1B686D4(&ServantCharaGraphEquipFilterLogic_TypeInfo, method);
+    byte_4A0806B = 1;
   }
-  v2 = (ServantCharaGraphFilterLogic_o *)sub_1B64C4C(ServantCharaGraphEquipFilterLogic_TypeInfo);
+  v2 = (ServantCharaGraphFilterLogic_o *)sub_1B68920(ServantCharaGraphEquipFilterLogic_TypeInfo);
   ServantCharaGraphFilterLogic___ctor(v2, 0LL);
   return (CharaGraphFilterLogicBase_o *)v2;
 }
@@ -30,12 +30,12 @@ CharaGraphSortLogicBase_o *__fastcall CharaGraphSortManageUnitServantEquip__Crea
   CharaGraphSortLogicBase_o *v2; // x19
   const MethodInfo *v3; // x1
 
-  if ( (byte_49FDF3B & 1) == 0 )
+  if ( (byte_4A0806A & 1) == 0 )
   {
-    sub_1B64A00(&ServantEquipCharaGraphSortLogic_TypeInfo, method);
-    byte_49FDF3B = 1;
+    sub_1B686D4(&ServantEquipCharaGraphSortLogic_TypeInfo, method);
+    byte_4A0806A = 1;
   }
-  v2 = (CharaGraphSortLogicBase_o *)sub_1B64C4C(ServantEquipCharaGraphSortLogic_TypeInfo);
+  v2 = (CharaGraphSortLogicBase_o *)sub_1B68920(ServantEquipCharaGraphSortLogic_TypeInfo);
   CharaGraphSortLogicBase___ctor(v2, v3);
   return v2;
 }
@@ -77,10 +77,10 @@ System_String_o *__fastcall CharaGraphSortManageUnitServantEquip__get_SortSaveKe
         CharaGraphSortManageUnitServantEquip_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_49FDF3A & 1) == 0 )
+  if ( (byte_4A08069 & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_1414/*"2"*/, method);
-    byte_49FDF3A = 1;
+    sub_1B686D4(&StringLiteral_1413/*"2"*/, method);
+    byte_4A08069 = 1;
   }
-  return (System_String_o *)StringLiteral_1414/*"2"*/;
+  return (System_String_o *)StringLiteral_1413/*"2"*/;
 }

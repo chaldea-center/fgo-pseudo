@@ -11,28 +11,28 @@ void __fastcall UserServantLockManager___cctor(const MethodInfo *method)
   int32_t v9; // w2
   int32_t v10; // w3
 
-  if ( (byte_49FFD84 & 1) == 0 )
+  if ( (byte_4A09ED4 & 1) == 0 )
   {
-    sub_1B64A00(&Method_System_Collections_Generic_List_long___ctor__, v1);
-    sub_1B64A00(&System_Collections_Generic_List_long__TypeInfo, v4);
-    sub_1B64A00(&UserServantLockManager_TypeInfo, v5);
-    sub_1B64A00(&StringLiteral_6608/*"Fgo_20150511"*/, v6);
-    byte_49FFD84 = 1;
+    sub_1B686D4(&Method_System_Collections_Generic_List_long___ctor__, v1);
+    sub_1B686D4(&System_Collections_Generic_List_long__TypeInfo, v4);
+    sub_1B686D4(&UserServantLockManager_TypeInfo, v5);
+    sub_1B686D4(&StringLiteral_6607/*"Fgo_20150511"*/, v6);
+    byte_4A09ED4 = 1;
   }
-  UserServantLockManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6608/*"Fgo_20150511"*/;
-  sub_1B649A4(
+  UserServantLockManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6607/*"Fgo_20150511"*/;
+  sub_1B68678(
     (ServantStatusBattleListViewItem_o *)UserServantLockManager_TypeInfo->static_fields,
-    StringLiteral_6608/*"Fgo_20150511"*/,
+    StringLiteral_6607/*"Fgo_20150511"*/,
     v2,
     v3);
   UserServantLockManager_TypeInfo->static_fields->isModfiy = 0;
-  v7 = (System_Collections_Generic_List_long__o *)sub_1B64C4C(System_Collections_Generic_List_long__TypeInfo);
+  v7 = (System_Collections_Generic_List_long__o *)sub_1B68920(System_Collections_Generic_List_long__TypeInfo);
   System_Collections_Generic_List_long____ctor(
     v7,
-    (const MethodInfo_3497114 *)Method_System_Collections_Generic_List_long___ctor__);
+    (const MethodInfo_34A3A58 *)Method_System_Collections_Generic_List_long___ctor__);
   static_fields = UserServantLockManager_TypeInfo->static_fields;
   static_fields->lockList = v7;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&static_fields->lockList, (int32_t)v7, v9, v10);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&static_fields->lockList, (int32_t)v7, v9, v10);
 }
 
 
@@ -52,12 +52,12 @@ void __fastcall UserServantLockManager__ClearSaveDataList(const MethodInfo *meth
   struct System_Collections_Generic_List_long__o *lockList; // x9
   int v7; // w10
 
-  if ( (byte_49FFD80 & 1) == 0 )
+  if ( (byte_4A09ED0 & 1) == 0 )
   {
-    sub_1B64A00(&Method_System_Collections_Generic_List_long__Clear__, v1);
-    sub_1B64A00(&Method_System_Collections_Generic_List_long__get_Count__, v2);
-    sub_1B64A00(&UserServantLockManager_TypeInfo, v3);
-    byte_49FFD80 = 1;
+    sub_1B686D4(&Method_System_Collections_Generic_List_long__Clear__, v1);
+    sub_1B686D4(&Method_System_Collections_Generic_List_long__get_Count__, v2);
+    sub_1B686D4(&UserServantLockManager_TypeInfo, v3);
+    byte_4A09ED0 = 1;
   }
   v4 = UserServantLockManager_TypeInfo;
   if ( !UserServantLockManager_TypeInfo->_2.cctor_finished )
@@ -78,7 +78,7 @@ void __fastcall UserServantLockManager__ClearSaveDataList(const MethodInfo *meth
     lockList = static_fields->lockList;
     if ( !lockList )
 LABEL_11:
-      sub_1B64C5C(v4, v1);
+      sub_1B68930(v4, v1);
   }
   v7 = lockList->fields._version + 1;
   lockList->fields._size = 0;
@@ -93,10 +93,10 @@ void __fastcall UserServantLockManager__DeleteSaveData(const MethodInfo *method)
   UserServantLockManager_c *v2; // x0
   System_String_o *SaveFileName; // x19
 
-  if ( (byte_49FFD7F & 1) == 0 )
+  if ( (byte_4A09ECF & 1) == 0 )
   {
-    sub_1B64A00(&UserServantLockManager_TypeInfo, v1);
-    byte_49FFD7F = 1;
+    sub_1B686D4(&UserServantLockManager_TypeInfo, v1);
+    byte_4A09ECF = 1;
   }
   v2 = UserServantLockManager_TypeInfo;
   if ( !UserServantLockManager_TypeInfo->_2.cctor_finished )
@@ -132,30 +132,30 @@ System_Int64_array *__fastcall UserServantLockManager__GetLockList(const MethodI
   _QWORD *v21; // x9
   __int64 size; // x10
 
-  if ( (byte_49FFD83 & 1) == 0 )
+  if ( (byte_4A09ED3 & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataManager_GetMasterData_UserServantMaster___, v1);
-    sub_1B64A00(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v2);
-    sub_1B64A00(&Method_System_Collections_Generic_List_long__Add__, v3);
-    sub_1B64A00(&Method_System_Collections_Generic_List_long__ToArray__, v4);
-    sub_1B64A00(&Method_System_Collections_Generic_List_long___ctor__, v5);
-    sub_1B64A00(&Method_System_Collections_Generic_List_long__get_Count__, v6);
-    sub_1B64A00(&Method_System_Collections_Generic_List_long__get_Item__, v7);
-    sub_1B64A00(&System_Collections_Generic_List_long__TypeInfo, v8);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_1B64A00(&UserServantLockManager_TypeInfo, v10);
-    byte_49FFD83 = 1;
+    sub_1B686D4(&Method_DataManager_GetMasterData_UserServantMaster___, v1);
+    sub_1B686D4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v2);
+    sub_1B686D4(&Method_System_Collections_Generic_List_long__Add__, v3);
+    sub_1B686D4(&Method_System_Collections_Generic_List_long__ToArray__, v4);
+    sub_1B686D4(&Method_System_Collections_Generic_List_long___ctor__, v5);
+    sub_1B686D4(&Method_System_Collections_Generic_List_long__get_Count__, v6);
+    sub_1B686D4(&Method_System_Collections_Generic_List_long__get_Item__, v7);
+    sub_1B686D4(&System_Collections_Generic_List_long__TypeInfo, v8);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    sub_1B686D4(&UserServantLockManager_TypeInfo, v10);
+    byte_4A09ED3 = 1;
   }
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_23;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2E3BCE0 *)Method_DataManager_GetMasterData_UserServantMaster___);
-  v14 = (System_Collections_Generic_List_long__o *)sub_1B64C4C(System_Collections_Generic_List_long__TypeInfo);
+                        (const MethodInfo_2E49D50 *)Method_DataManager_GetMasterData_UserServantMaster___);
+  v14 = (System_Collections_Generic_List_long__o *)sub_1B68920(System_Collections_Generic_List_long__TypeInfo);
   System_Collections_Generic_List_long____ctor(
     v14,
-    (const MethodInfo_3497114 *)Method_System_Collections_Generic_List_long___ctor__);
+    (const MethodInfo_34A3A58 *)Method_System_Collections_Generic_List_long___ctor__);
   Instance = (int64_t)UserServantLockManager_TypeInfo;
   if ( !UserServantLockManager_TypeInfo->_2.cctor_finished )
   {
@@ -182,14 +182,14 @@ System_Int64_array *__fastcall UserServantLockManager__GetLockList(const MethodI
       Instance = System_Collections_Generic_List_long___get_Item(
                    (System_Collections_Generic_List_long__o *)Instance,
                    i,
-                   (const MethodInfo_3497678 *)Method_System_Collections_Generic_List_long__get_Item__);
+                   (const MethodInfo_34A3FBC *)Method_System_Collections_Generic_List_long__get_Item__);
       if ( !MasterData_object )
         break;
       v19 = Instance;
       Instance = (int64_t)DataMasterBase_object__object__long___GetEntity(
                             (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                             Instance,
-                            (const MethodInfo_30D6944 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+                            (const MethodInfo_30E466C *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
       if ( Instance )
       {
         if ( !v14 )
@@ -205,7 +205,7 @@ System_Int64_array *__fastcall UserServantLockManager__GetLockList(const MethodI
           System_Collections_Generic_List_long___AddWithResize(
             v14,
             v19,
-            *(const MethodInfo_3497968 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+            *(const MethodInfo_34A42AC **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
         }
         else
         {
@@ -218,14 +218,14 @@ System_Int64_array *__fastcall UserServantLockManager__GetLockList(const MethodI
       Instance = (int64_t)UserServantLockManager_TypeInfo;
     }
 LABEL_23:
-    sub_1B64C5C(Instance, v12);
+    sub_1B68930(Instance, v12);
   }
 LABEL_21:
   if ( !v14 )
     goto LABEL_23;
   return System_Collections_Generic_List_long___ToArray(
            v14,
-           (const MethodInfo_34994C0 *)Method_System_Collections_Generic_List_long__ToArray__);
+           (const MethodInfo_34A5D64 *)Method_System_Collections_Generic_List_long__ToArray__);
 }
 
 
@@ -237,12 +237,12 @@ System_String_o *__fastcall UserServantLockManager__GetSaveFileName(const Method
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_49FFD7E & 1) == 0 )
+  if ( (byte_4A09ECE & 1) == 0 )
   {
-    sub_1B64A00(&AndroidUtil_TypeInfo, v1);
-    sub_1B64A00(&DatFileName_TypeInfo, v2);
-    sub_1B64A00(&StringLiteral_1124/*"/"*/, v3);
-    byte_49FFD7E = 1;
+    sub_1B686D4(&AndroidUtil_TypeInfo, v1);
+    sub_1B686D4(&DatFileName_TypeInfo, v2);
+    sub_1B686D4(&StringLiteral_1123/*"/"*/, v3);
+    byte_4A09ECE = 1;
   }
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -250,7 +250,7 @@ System_String_o *__fastcall UserServantLockManager__GetSaveFileName(const Method
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(6, 0LL);
-  return System_String__Concat_61396396(DatFileSavePath, (System_String_o *)StringLiteral_1124/*"/"*/, FileName, 0LL);
+  return System_String__Concat_61430728(DatFileSavePath, (System_String_o *)StringLiteral_1123/*"/"*/, FileName, 0LL);
 }
 
 
@@ -270,12 +270,12 @@ bool __fastcall UserServantLockManager__IsLock(int64_t userSvtId, const MethodIn
   int v8; // w24
   bool v9; // w23
 
-  if ( (byte_49FFD81 & 1) == 0 )
+  if ( (byte_4A09ED1 & 1) == 0 )
   {
-    sub_1B64A00(&Method_System_Collections_Generic_List_long__get_Count__, method);
-    sub_1B64A00(&Method_System_Collections_Generic_List_long__get_Item__, v3);
-    sub_1B64A00(&UserServantLockManager_TypeInfo, v4);
-    byte_49FFD81 = 1;
+    sub_1B686D4(&Method_System_Collections_Generic_List_long__get_Count__, method);
+    sub_1B686D4(&Method_System_Collections_Generic_List_long__get_Item__, v3);
+    sub_1B686D4(&UserServantLockManager_TypeInfo, v4);
+    byte_4A09ED1 = 1;
   }
   v5 = UserServantLockManager_TypeInfo;
   if ( !UserServantLockManager_TypeInfo->_2.cctor_finished )
@@ -304,7 +304,7 @@ bool __fastcall UserServantLockManager__IsLock(int64_t userSvtId, const MethodIn
       if ( System_Collections_Generic_List_long___get_Item(
              (System_Collections_Generic_List_long__o *)v5,
              v8 - 1,
-             (const MethodInfo_3497678 *)Method_System_Collections_Generic_List_long__get_Item__) == userSvtId )
+             (const MethodInfo_34A3FBC *)Method_System_Collections_Generic_List_long__get_Item__) == userSvtId )
         return v9;
       v9 = v8 < size;
       if ( size == v8 )
@@ -313,7 +313,7 @@ bool __fastcall UserServantLockManager__IsLock(int64_t userSvtId, const MethodIn
       ++v8;
     }
 LABEL_16:
-    sub_1B64C5C(v5, method);
+    sub_1B68930(v5, method);
   }
   return 0;
 }
@@ -352,14 +352,14 @@ bool __fastcall UserServantLockManager__ReadData(const MethodInfo *method)
   __int64 v30; // x0
   UserServantLockManager_c *v31; // x0
 
-  if ( (byte_49FFD82 & 1) == 0 )
+  if ( (byte_4A09ED2 & 1) == 0 )
   {
-    sub_1B64A00(&System_IO_BinaryReader_TypeInfo, v1);
-    sub_1B64A00(&System_IDisposable_TypeInfo, v2);
-    sub_1B64A00(&Method_System_Collections_Generic_List_long__Add__, v3);
-    sub_1B64A00(&ManagerConfig_TypeInfo, v4);
-    sub_1B64A00(&UserServantLockManager_TypeInfo, v5);
-    byte_49FFD82 = 1;
+    sub_1B686D4(&System_IO_BinaryReader_TypeInfo, v1);
+    sub_1B686D4(&System_IDisposable_TypeInfo, v2);
+    sub_1B686D4(&Method_System_Collections_Generic_List_long__Add__, v3);
+    sub_1B686D4(&ManagerConfig_TypeInfo, v4);
+    sub_1B686D4(&UserServantLockManager_TypeInfo, v5);
+    byte_4A09ED2 = 1;
   }
   v6 = UserServantLockManager_TypeInfo;
   if ( !UserServantLockManager_TypeInfo->_2.cctor_finished )
@@ -387,10 +387,10 @@ bool __fastcall UserServantLockManager__ReadData(const MethodInfo *method)
         j_il2cpp_runtime_class_init_0(UserServantLockManager_TypeInfo);
       UserServantLockManager__ClearSaveDataList((const MethodInfo *)v11);
       v12 = (System_IO_Stream_o *)System_IO_File__OpenRead(SaveFileName, 0LL);
-      v13 = (System_IO_BinaryReader_o *)sub_1B64C4C(System_IO_BinaryReader_TypeInfo);
+      v13 = (System_IO_BinaryReader_o *)sub_1B68920(System_IO_BinaryReader_TypeInfo);
       System_IO_BinaryReader___ctor(v13, v12, 0LL);
       if ( !v13 )
-        sub_1B64C5C(v14, v15);
+        sub_1B68930(v14, v15);
       v16 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v13->klass->vtable._22_ReadString.method)(
                                  v13,
                                  v13->klass->vtable._23_ReadChars.methodPtr);
@@ -424,19 +424,19 @@ bool __fastcall UserServantLockManager__ReadData(const MethodInfo *method)
             }
             lockList = v22->static_fields->lockList;
             if ( !lockList )
-              sub_1B64C5C(0LL, v20);
+              sub_1B68930(0LL, v20);
             items = lockList->fields._items;
             v25 = Method_System_Collections_Generic_List_long__Add__;
             ++lockList->fields._version;
             if ( !items )
-              sub_1B64C5C(lockList, v20);
+              sub_1B68930(lockList, v20);
             size = lockList->fields._size;
             if ( (unsigned int)size >= items->max_length )
             {
               System_Collections_Generic_List_long___AddWithResize(
                 lockList,
                 v21,
-                *(const MethodInfo_3497968 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+                *(const MethodInfo_34A42AC **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
             }
             else
             {
@@ -466,7 +466,7 @@ bool __fastcall UserServantLockManager__ReadData(const MethodInfo *method)
       else
       {
 LABEL_33:
-        v30 = sub_1BB69E0(v13, System_IDisposable_TypeInfo, 0LL);
+        v30 = sub_1BBA6B4(v13, System_IDisposable_TypeInfo, 0LL);
       }
       (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v30)(v13, *(_QWORD *)(v30 + 8));
       if ( (v18 | 8) == 8 )

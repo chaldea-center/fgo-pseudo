@@ -12,7 +12,7 @@ void __fastcall FieldBuffDeleteProcess__Init(
   int32_t v3; // w3
 
   this->fields._FieldEnvData_k__BackingField = fieldEnvData;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)fieldEnvData, (int32_t)method, v3);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)fieldEnvData, (int32_t)method, v3);
 }
 
 
@@ -32,5 +32,5 @@ void __fastcall FieldBuffDeleteProcess__set_FieldEnvData(
   int32_t v3; // w3
 
   this->fields._FieldEnvData_k__BackingField = value;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }

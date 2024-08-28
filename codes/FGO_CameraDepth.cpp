@@ -11,18 +11,18 @@ void __fastcall FGO_CameraDepth__Start(FGO_CameraDepth_o *this, const MethodInfo
   UnityEngine_Camera_o *v5; // x19
   int v6; // w1
 
-  if ( (byte_49FDA1D & 1) == 0 )
+  if ( (byte_4A07B4B & 1) == 0 )
   {
-    sub_1B64A00(&Method_UnityEngine_GameObject_GetComponent_Camera___, method);
-    byte_49FDA1D = 1;
+    sub_1B686D4(&Method_UnityEngine_GameObject_GetComponent_Camera___, method);
+    byte_4A07B4B = 1;
   }
   Component_object = UnityEngine_GameObject__Find(this->fields._TargetCameraName, 0LL);
   if ( !Component_object
     || (Component_object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                          Component_object,
-                                                         (const MethodInfo_2E8A7CC *)Method_UnityEngine_GameObject_GetComponent_Camera___)) == 0LL )
+                                                         (const MethodInfo_2E98950 *)Method_UnityEngine_GameObject_GetComponent_Camera___)) == 0LL )
   {
-    sub_1B64C5C(Component_object, v4);
+    sub_1B68930(Component_object, v4);
   }
   v5 = (UnityEngine_Camera_o *)Component_object;
   v6 = UnityEngine_Camera__get_depthTextureMode((UnityEngine_Camera_o *)Component_object, 0LL) | 1;

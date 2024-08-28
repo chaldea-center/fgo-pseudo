@@ -13,14 +13,14 @@ bool __fastcall CardServantFlagRequest__beginRequest(
 {
   __int64 v7; // x1
 
-  if ( (byte_4A00244 & 1) == 0 )
+  if ( (byte_4A0A393 & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_23614/*"svtId"*/, *(_QWORD *)&svtId);
-    sub_1B64A00(&StringLiteral_19381/*"flagId"*/, v7);
-    byte_4A00244 = 1;
+    sub_1B686D4(&StringLiteral_23626/*"svtId"*/, *(_QWORD *)&svtId);
+    sub_1B686D4(&StringLiteral_19387/*"flagId"*/, v7);
+    byte_4A0A393 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23614/*"svtId"*/, svtId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19381/*"flagId"*/, flagId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23626/*"svtId"*/, svtId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19387/*"flagId"*/, flagId, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
   return 1;
 }
@@ -30,10 +30,10 @@ System_String_o *__fastcall CardServantFlagRequest__getMockData(
         CardServantFlagRequest_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A00243 & 1) == 0 )
+  if ( (byte_4A0A392 & 1) == 0 )
   {
-    sub_1B64A00(&StringLiteral_1/*""*/, method);
-    byte_4A00243 = 1;
+    sub_1B686D4(&StringLiteral_1/*""*/, method);
+    byte_4A0A392 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -44,16 +44,16 @@ System_String_o *__fastcall CardServantFlagRequest__getURL(CardServantFlagReques
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A00242 & 1) == 0 )
+  if ( (byte_4A0A391 & 1) == 0 )
   {
-    sub_1B64A00(&NetworkManager_TypeInfo, method);
-    sub_1B64A00(&StringLiteral_17691/*"card/svtFlag"*/, v2);
-    byte_4A00242 = 1;
+    sub_1B686D4(&NetworkManager_TypeInfo, method);
+    sub_1B686D4(&StringLiteral_17693/*"card/svtFlag"*/, v2);
+    byte_4A0A391 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61385136(BaseUrl, (System_String_o *)StringLiteral_17691/*"card/svtFlag"*/, 0LL);
+  return System_String__Concat_61419468(BaseUrl, (System_String_o *)StringLiteral_17693/*"card/svtFlag"*/, 0LL);
 }
 
 
@@ -67,19 +67,19 @@ void __fastcall CardServantFlagRequest__requestCompleted(
   ResponseData_o *v7; // x0
   __int64 *v8; // x8
 
-  if ( (byte_4A00245 & 1) == 0 )
+  if ( (byte_4A0A394 & 1) == 0 )
   {
-    sub_1B64A00(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1B64A00(&StringLiteral_22140/*"ok"*/, v5);
-    sub_1B64A00(&StringLiteral_21971/*"ng"*/, v6);
-    byte_4A00245 = 1;
+    sub_1B686D4(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1B686D4(&StringLiteral_22150/*"ok"*/, v5);
+    sub_1B686D4(&StringLiteral_21981/*"ng"*/, v6);
+    byte_4A0A394 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(68, responseList, 0LL);
-  if ( v7 && ResponseData__checkError_40851660(v7, 0LL) )
-    v8 = &StringLiteral_22140/*"ok"*/;
+  if ( v7 && ResponseData__checkError_40916448(v7, 0LL) )
+    v8 = &StringLiteral_22150/*"ok"*/;
   else
-    v8 = &StringLiteral_21971/*"ng"*/;
+    v8 = &StringLiteral_21981/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v8, 0LL);
 }

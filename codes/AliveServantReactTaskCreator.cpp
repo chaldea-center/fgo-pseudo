@@ -7,13 +7,13 @@ BattleLogicTask_o *__fastcall AliveServantReactTaskCreator__Create(
   int32_t ProcState_k__BackingField; // w21
   AliveServantAiTask_o *v8; // x22
 
-  if ( (byte_4A01729 & 1) == 0 )
+  if ( (byte_4A0B882 & 1) == 0 )
   {
-    sub_1B64A00(&AliveServantAiTask_TypeInfo, svtData);
-    byte_4A01729 = 1;
+    sub_1B686D4(&AliveServantAiTask_TypeInfo, svtData);
+    byte_4A0B882 = 1;
   }
   ProcState_k__BackingField = this->fields._ProcState_k__BackingField;
-  v8 = (AliveServantAiTask_o *)sub_1B64C4C(AliveServantAiTask_TypeInfo);
+  v8 = (AliveServantAiTask_o *)sub_1B68920(AliveServantAiTask_TypeInfo);
   AliveServantAiTask___ctor(v8, ProcState_k__BackingField, svtData, logic, 0LL);
   return (BattleLogicTask_o *)v8;
 }
@@ -27,6 +27,6 @@ bool __fastcall AliveServantReactTaskCreator__IsCreatable(
         const MethodInfo *method)
 {
   if ( !svtData )
-    sub_1B64C5C(this, logic);
+    sub_1B68930(this, logic);
   return BattleServantData__get_IsNormalStatus(svtData, 0LL) && BattleServantData__isAlive(svtData, 0, 0LL);
 }

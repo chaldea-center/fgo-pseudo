@@ -2,12 +2,12 @@ void __fastcall LimitUpResultInfoRewardComponent___cctor(const MethodInfo *metho
 {
   __int64 v1; // x1
 
-  if ( (byte_4A023B5 & 1) == 0 )
+  if ( (byte_4A0C50D & 1) == 0 )
   {
-    sub_1B64A00(&LimitUpResultInfoRewardComponent_TypeInfo, v1);
-    byte_4A023B5 = 1;
+    sub_1B686D4(&LimitUpResultInfoRewardComponent_TypeInfo, v1);
+    byte_4A0C50D = 1;
   }
-  *LimitUpResultInfoRewardComponent_TypeInfo->static_fields = (struct LimitUpResultInfoRewardComponent_StaticFields)xmmword_BA3800;
+  *LimitUpResultInfoRewardComponent_TypeInfo->static_fields = (struct LimitUpResultInfoRewardComponent_StaticFields)xmmword_BA68D0;
 }
 
 
@@ -50,17 +50,17 @@ void __fastcall LimitUpResultInfoRewardComponent__Setup(
   UnityEngine_Color_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v23; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4A023B4 & 1) == 0 )
+  if ( (byte_4A0C50C & 1) == 0 )
   {
-    sub_1B64A00(&AtlasManager_TypeInfo, *(_QWORD *)&iconImageId);
-    sub_1B64A00(&LimitUpResultInfoRewardComponent_TypeInfo, v11);
-    sub_1B64A00(&StringLiteral_20094/*"icon_reward_get"*/, v12);
-    byte_4A023B4 = 1;
+    sub_1B686D4(&AtlasManager_TypeInfo, *(_QWORD *)&iconImageId);
+    sub_1B686D4(&LimitUpResultInfoRewardComponent_TypeInfo, v11);
+    sub_1B686D4(&StringLiteral_20101/*"icon_reward_get"*/, v12);
+    byte_4A0C50C = 1;
   }
   rewardInfoGetIcon = this->fields.rewardInfoGetIcon;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI(rewardInfoGetIcon, (System_String_o *)StringLiteral_20094/*"icon_reward_get"*/, 0LL);
+  AtlasManager__SetEventUI(rewardInfoGetIcon, (System_String_o *)StringLiteral_20101/*"icon_reward_get"*/, 0LL);
   rewardInfoIcon = this->fields.rewardInfoIcon;
   if ( !rewardInfoIcon )
     goto LABEL_22;
@@ -105,7 +105,7 @@ void __fastcall LimitUpResultInfoRewardComponent__Setup(
       }
     }
 LABEL_22:
-    sub_1B64C5C(rewardInfoIcon, v14);
+    sub_1B68930(rewardInfoIcon, v14);
   }
   if ( !rewardInfoIcon )
     goto LABEL_22;

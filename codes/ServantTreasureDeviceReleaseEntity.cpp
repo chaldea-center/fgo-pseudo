@@ -2,14 +2,14 @@ void __fastcall ServantTreasureDeviceReleaseEntity___ctor(
         ServantTreasureDeviceReleaseEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_49FF350 & 1) == 0 )
+  if ( (byte_4A09495 & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataEntityBase_string___ctor__, method);
-    byte_49FF350 = 1;
+    sub_1B686D4(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A09495 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30D6610 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30E4338 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -21,17 +21,17 @@ System_String_o *__fastcall ServantTreasureDeviceReleaseEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_49FF34E & 1) == 0 )
+  if ( (byte_4A09493 & 1) == 0 )
   {
-    sub_1B64A00(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&num);
-    byte_49FF34E = 1;
+    sub_1B686D4(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&num);
+    byte_4A09493 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            svtId,
            num,
            priority,
            idx,
-           (const MethodInfo_2E3A854 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_2E488C4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -88,52 +88,52 @@ System_String_o *__fastcall ServantTreasureDeviceReleaseEntity__getCreatePrimary
   v30 = svtId;
   v27 = idx;
   v28 = priority;
-  if ( (byte_49FF34D & 1) == 0 )
+  if ( (byte_4A09492 & 1) == 0 )
   {
-    sub_1B64A00(&string___TypeInfo, *(_QWORD *)&num);
-    sub_1B64A00(&StringLiteral_1546/*":"*/, v5);
-    byte_49FF34D = 1;
+    sub_1B686D4(&string___TypeInfo, *(_QWORD *)&num);
+    sub_1B686D4(&StringLiteral_1544/*":"*/, v5);
+    byte_4A09492 = 1;
   }
-  v6 = sub_1B64AA8(string___TypeInfo, 7LL);
+  v6 = sub_1B6877C(string___TypeInfo, 7LL);
   v7 = System_Int32__ToString((int32_t)&v30, 0LL);
   if ( !v6 )
-    sub_1B64C5C(v7, v8);
+    sub_1B68930(v7, v8);
   if ( !*(_DWORD *)(v6 + 24) )
     goto LABEL_12;
   *(_QWORD *)(v6 + 32) = v7;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v6 + 32), (int32_t)v7, v9, v10);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)(v6 + 32), (int32_t)v7, v9, v10);
   if ( *(_DWORD *)(v6 + 24) <= 1u )
     goto LABEL_12;
-  v13 = StringLiteral_1546/*":"*/;
-  *(_QWORD *)(v6 + 40) = StringLiteral_1546/*":"*/;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v6 + 40), v13, v11, v12);
+  v13 = StringLiteral_1544/*":"*/;
+  *(_QWORD *)(v6 + 40) = StringLiteral_1544/*":"*/;
+  sub_1B68678((ServantStatusBattleListViewItem_o *)(v6 + 40), v13, v11, v12);
   v7 = System_Int32__ToString((int32_t)&v29, 0LL);
   if ( *(_DWORD *)(v6 + 24) <= 2u )
     goto LABEL_12;
   *(_QWORD *)(v6 + 48) = v7;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v6 + 48), (int32_t)v7, v14, v15);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)(v6 + 48), (int32_t)v7, v14, v15);
   if ( *(_DWORD *)(v6 + 24) <= 3u )
     goto LABEL_12;
-  v18 = StringLiteral_1546/*":"*/;
-  *(_QWORD *)(v6 + 56) = StringLiteral_1546/*":"*/;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v6 + 56), v18, v16, v17);
+  v18 = StringLiteral_1544/*":"*/;
+  *(_QWORD *)(v6 + 56) = StringLiteral_1544/*":"*/;
+  sub_1B68678((ServantStatusBattleListViewItem_o *)(v6 + 56), v18, v16, v17);
   v7 = System_Int32__ToString((int32_t)&v28, 0LL);
   if ( *(_DWORD *)(v6 + 24) <= 4u
     || (*(_QWORD *)(v6 + 64) = v7,
-        sub_1B649A4((ServantStatusBattleListViewItem_o *)(v6 + 64), (int32_t)v7, v19, v20),
+        sub_1B68678((ServantStatusBattleListViewItem_o *)(v6 + 64), (int32_t)v7, v19, v20),
         *(_DWORD *)(v6 + 24) <= 5u)
-    || (v23 = StringLiteral_1546/*":"*/,
-        *(_QWORD *)(v6 + 72) = StringLiteral_1546/*":"*/,
-        sub_1B649A4((ServantStatusBattleListViewItem_o *)(v6 + 72), v23, v21, v22),
+    || (v23 = StringLiteral_1544/*":"*/,
+        *(_QWORD *)(v6 + 72) = StringLiteral_1544/*":"*/,
+        sub_1B68678((ServantStatusBattleListViewItem_o *)(v6 + 72), v23, v21, v22),
         v7 = System_Int32__ToString((int32_t)&v27, 0LL),
         *(_DWORD *)(v6 + 24) <= 6u) )
   {
 LABEL_12:
-    sub_1B64C64(v7, v8);
+    sub_1B68938(v7, v8);
   }
   *(_QWORD *)(v6 + 80) = v7;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)(v6 + 80), (int32_t)v7, v24, v25);
-  return System_String__Concat_61398664((System_String_array *)v6, 0LL);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)(v6 + 80), (int32_t)v7, v24, v25);
+  return System_String__Concat_61432996((System_String_array *)v6, 0LL);
 }
 
 
@@ -154,11 +154,11 @@ bool __fastcall ServantTreasureDeviceReleaseEntity__isUse(
   int32_t v15; // w21
   int64_t v16; // x19
 
-  if ( (byte_49FF34F & 1) == 0 )
+  if ( (byte_4A09494 & 1) == 0 )
   {
-    sub_1B64A00(&CondType_TypeInfo, *(_QWORD *)&dispLimitCount);
-    sub_1B64A00(&NetworkManager_TypeInfo, v7);
-    byte_49FF34F = 1;
+    sub_1B686D4(&CondType_TypeInfo, *(_QWORD *)&dispLimitCount);
+    sub_1B686D4(&NetworkManager_TypeInfo, v7);
+    byte_4A09494 = 1;
   }
   condType = this->fields.condType;
   if ( condType == 1 )
@@ -187,6 +187,6 @@ bool __fastcall ServantTreasureDeviceReleaseEntity__isUse(
     v16 = this->fields.condNum;
     if ( !CondType_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-    return CondType__IsOpen(condType, v15, v16, 0, 0LL);
+    return CondType__IsOpen(condType, v15, v16, 0, 0LL, 0LL);
   }
 }

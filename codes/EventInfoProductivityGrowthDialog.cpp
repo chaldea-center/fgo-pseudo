@@ -2,10 +2,10 @@ void __fastcall EventInfoProductivityGrowthDialog___ctor(
         EventInfoProductivityGrowthDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A00316 & 1) == 0 )
+  if ( (byte_4A0A46D & 1) == 0 )
   {
-    sub_1B64A00(&BaseDialog_TypeInfo, method);
-    byte_4A00316 = 1;
+    sub_1B686D4(&BaseDialog_TypeInfo, method);
+    byte_4A0A46D = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -28,12 +28,12 @@ void __fastcall EventInfoProductivityGrowthDialog__Init(
   int max_length; // w8
   unsigned int v12; // w21
 
-  if ( (byte_4A00313 & 1) == 0 )
+  if ( (byte_4A0A46A & 1) == 0 )
   {
-    sub_1B64A00(&LocalizationManager_TypeInfo, method);
-    sub_1B64A00(&StringLiteral_3734/*"COMMON_CONFIRM_CLOSE"*/, v3);
-    sub_1B64A00(&StringLiteral_1/*""*/, v4);
-    byte_4A00313 = 1;
+    sub_1B686D4(&LocalizationManager_TypeInfo, method);
+    sub_1B686D4(&StringLiteral_3732/*"COMMON_CONFIRM_CLOSE"*/, v3);
+    sub_1B686D4(&StringLiteral_1/*""*/, v4);
+    byte_4A0A46A = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
   titleLabel = this->fields.titleLabel;
@@ -43,7 +43,7 @@ void __fastcall EventInfoProductivityGrowthDialog__Init(
   closeLabel = this->fields.closeLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3734/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3732/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !closeLabel )
     goto LABEL_14;
   UILabel__set_text(closeLabel, (System_String_o *)titleLabel, 0LL);
@@ -57,7 +57,7 @@ void __fastcall EventInfoProductivityGrowthDialog__Init(
     while ( 1 )
     {
       if ( v12 >= max_length )
-        sub_1B64C64(titleLabel, v5);
+        sub_1B68938(titleLabel, v5);
       titleLabel = (UILabel_o *)dispObjList->m_Items[v12];
       if ( !titleLabel )
         break;
@@ -67,11 +67,11 @@ void __fastcall EventInfoProductivityGrowthDialog__Init(
         goto LABEL_13;
     }
 LABEL_14:
-    sub_1B64C5C(titleLabel, v5);
+    sub_1B68930(titleLabel, v5);
   }
 LABEL_13:
   this->fields.closeAction = 0LL;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.closeAction, 0, v8, v9);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.closeAction, 0, v8, v9);
 }
 
 
@@ -85,19 +85,19 @@ void __fastcall EventInfoProductivityGrowthDialog__OnClickCloseButton(
   System_Reflection_MethodBase_o *v6; // x0
   System_Action_o *v7; // x20
 
-  if ( (byte_4A00315 & 1) == 0 )
+  if ( (byte_4A0A46C & 1) == 0 )
   {
-    sub_1B64A00(&System_Action_TypeInfo, method);
-    sub_1B64A00(&Method_EventInfoProductivityGrowthDialog_OnClickCloseButton__, v3);
-    sub_1B64A00(&Method_EventInfoProductivityGrowthDialog__OnClickCloseButton_b__17_0__, v4);
-    byte_4A00315 = 1;
+    sub_1B686D4(&System_Action_TypeInfo, method);
+    sub_1B686D4(&Method_EventInfoProductivityGrowthDialog_OnClickCloseButton__, v3);
+    sub_1B686D4(&Method_EventInfoProductivityGrowthDialog__OnClickCloseButton_b__17_0__, v4);
+    byte_4A0A46C = 1;
   }
   v5 = Method_EventInfoProductivityGrowthDialog_OnClickCloseButton__;
   if ( (*((_BYTE *)Method_EventInfoProductivityGrowthDialog_OnClickCloseButton__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1B64A18(Method_EventInfoProductivityGrowthDialog_OnClickCloseButton__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1B649E4(v5, v5[4]);
+    v5 = (_QWORD *)sub_1B686EC(Method_EventInfoProductivityGrowthDialog_OnClickCloseButton__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1B686B8(v5, v5[4]);
   OverwriteAssetSoundName__PlaySystemSe(v6, 1, 0LL);
-  v7 = (System_Action_o *)sub_1B64C4C(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1B68920(System_Action_TypeInfo);
   System_Action___ctor(
     v7,
     (Il2CppObject *)this,
@@ -192,27 +192,27 @@ void __fastcall EventInfoProductivityGrowthDialog__Open(
   int32_t productAdd; // [xsp+28h] [xbp-68h] BYREF
   int32_t productNum; // [xsp+2Ch] [xbp-64h] BYREF
 
-  if ( (byte_4A00314 & 1) == 0 )
+  if ( (byte_4A0A46B & 1) == 0 )
   {
-    sub_1B64A00(&GiftEntity_TypeInfo, closeAction);
-    sub_1B64A00(&int_TypeInfo, v5);
-    sub_1B64A00(&Method_System_Collections_Generic_List_GiftEntity__Add__, v6);
-    sub_1B64A00(&Method_System_Collections_Generic_List_string__Add__, v7);
-    sub_1B64A00(&Method_System_Collections_Generic_List_GiftEntity___ctor__, v8);
-    sub_1B64A00(&Method_System_Collections_Generic_List_string___ctor__, v9);
-    sub_1B64A00(&Method_System_Collections_Generic_List_GiftEntity__get_Count__, v10);
-    sub_1B64A00(&Method_System_Collections_Generic_List_GiftEntity__get_Item__, v11);
-    sub_1B64A00(&Method_System_Collections_Generic_List_string__get_Item__, v12);
-    sub_1B64A00(&System_Collections_Generic_List_GiftEntity__TypeInfo, v13);
-    sub_1B64A00(&System_Collections_Generic_List_string__TypeInfo, v14);
-    sub_1B64A00(&LocalizationManager_TypeInfo, v15);
-    sub_1B64A00(&System_Text_StringBuilder_TypeInfo, v16);
-    sub_1B64A00(&TerminalPramsManager_TypeInfo, v17);
-    sub_1B64A00(&StringLiteral_5572/*"EVENT_CONQUEST_UP_MESSAGE"*/, v18);
-    sub_1B64A00(&StringLiteral_5571/*"EVENT_CONQUEST_UP_ITEM_FORMAT"*/, v19);
-    sub_1B64A00(&StringLiteral_5570/*"EVENT_CONQUEST_UP_ITEM_ADD_FORMAT"*/, v20);
-    sub_1B64A00(&StringLiteral_5573/*"EVENT_CONQUEST_UP_TITLE"*/, v21);
-    byte_4A00314 = 1;
+    sub_1B686D4(&GiftEntity_TypeInfo, closeAction);
+    sub_1B686D4(&int_TypeInfo, v5);
+    sub_1B686D4(&Method_System_Collections_Generic_List_GiftEntity__Add__, v6);
+    sub_1B686D4(&Method_System_Collections_Generic_List_string__Add__, v7);
+    sub_1B686D4(&Method_System_Collections_Generic_List_GiftEntity___ctor__, v8);
+    sub_1B686D4(&Method_System_Collections_Generic_List_string___ctor__, v9);
+    sub_1B686D4(&Method_System_Collections_Generic_List_GiftEntity__get_Count__, v10);
+    sub_1B686D4(&Method_System_Collections_Generic_List_GiftEntity__get_Item__, v11);
+    sub_1B686D4(&Method_System_Collections_Generic_List_string__get_Item__, v12);
+    sub_1B686D4(&System_Collections_Generic_List_GiftEntity__TypeInfo, v13);
+    sub_1B686D4(&System_Collections_Generic_List_string__TypeInfo, v14);
+    sub_1B686D4(&LocalizationManager_TypeInfo, v15);
+    sub_1B686D4(&System_Text_StringBuilder_TypeInfo, v16);
+    sub_1B686D4(&TerminalPramsManager_TypeInfo, v17);
+    sub_1B686D4(&StringLiteral_5572/*"EVENT_CONQUEST_UP_MESSAGE"*/, v18);
+    sub_1B686D4(&StringLiteral_5571/*"EVENT_CONQUEST_UP_ITEM_FORMAT"*/, v19);
+    sub_1B686D4(&StringLiteral_5570/*"EVENT_CONQUEST_UP_ITEM_ADD_FORMAT"*/, v20);
+    sub_1B686D4(&StringLiteral_5573/*"EVENT_CONQUEST_UP_TITLE"*/, v21);
+    byte_4A0A46B = 1;
   }
   v22 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -225,14 +225,14 @@ void __fastcall EventInfoProductivityGrowthDialog__Open(
   {
     action = closeAction;
     v81 = this;
-    v24 = (System_Collections_Generic_List_object__o *)sub_1B64C4C(System_Collections_Generic_List_GiftEntity__TypeInfo);
+    v24 = (System_Collections_Generic_List_object__o *)sub_1B68920(System_Collections_Generic_List_GiftEntity__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v24,
-      (const MethodInfo_34AF794 *)Method_System_Collections_Generic_List_GiftEntity___ctor__);
-    v25 = (System_Collections_Generic_List_object__o *)sub_1B64C4C(System_Collections_Generic_List_string__TypeInfo);
+      (const MethodInfo_34BBA44 *)Method_System_Collections_Generic_List_GiftEntity___ctor__);
+    v25 = (System_Collections_Generic_List_object__o *)sub_1B68920(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v25,
-      (const MethodInfo_34AF794 *)Method_System_Collections_Generic_List_string___ctor__);
+      (const MethodInfo_34BBA44 *)Method_System_Collections_Generic_List_string___ctor__);
     max_length = eventConquestInfos->max_length;
     if ( max_length >= 1 )
     {
@@ -241,9 +241,9 @@ void __fastcall EventInfoProductivityGrowthDialog__Open(
       {
         if ( (unsigned int)v31 >= max_length )
 LABEL_64:
-          sub_1B64C64(Item, v27);
+          sub_1B68938(Item, v27);
         v32 = eventConquestInfos->m_Items[v31];
-        v33 = sub_1B64C4C(GiftEntity_TypeInfo);
+        v33 = sub_1B68920(GiftEntity_TypeInfo);
         GiftEntity___ctor((GiftEntity_o *)v33, 0LL);
         if ( !v32 )
           break;
@@ -264,16 +264,16 @@ LABEL_64:
           System_Collections_Generic_List_object___AddWithResize(
             v24,
             (Il2CppObject *)v33,
-            *(const MethodInfo_34AFFC8 **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
+            *(const MethodInfo_34BC278 **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
         }
         else
         {
           v39 = &items->obj.klass + size;
           v24->fields._size = size + 1;
           v39[4] = (Il2CppClass *)v33;
-          sub_1B649A4((ServantStatusBattleListViewItem_o *)(v39 + 4), v33, v34, v35);
+          sub_1B68678((ServantStatusBattleListViewItem_o *)(v39 + 4), v33, v34, v35);
         }
-        v40 = (System_Text_StringBuilder_o *)sub_1B64C4C(System_Text_StringBuilder_TypeInfo);
+        v40 = (System_Text_StringBuilder_o *)sub_1B68920(System_Text_StringBuilder_TypeInfo);
         System_Text_StringBuilder___ctor(v40, 0LL);
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -309,21 +309,21 @@ LABEL_64:
           System_Collections_Generic_List_object___AddWithResize(
             v25,
             (Il2CppObject *)Item,
-            *(const MethodInfo_34AFFC8 **)(*(_QWORD *)(v53[4] + 192LL) + 112LL));
+            *(const MethodInfo_34BC278 **)(*(_QWORD *)(v53[4] + 192LL) + 112LL));
         }
         else
         {
           v56 = &v52->obj.klass + v54;
           v25->fields._size = v54 + 1;
           v56[4] = v55;
-          sub_1B649A4((ServantStatusBattleListViewItem_o *)(v56 + 4), (int32_t)v55, v50, v51);
+          sub_1B68678((ServantStatusBattleListViewItem_o *)(v56 + 4), (int32_t)v55, v50, v51);
         }
         max_length = eventConquestInfos->max_length;
         if ( (int)++v31 >= max_length )
           goto LABEL_32;
       }
 LABEL_63:
-      sub_1B64C5C(Item, v27);
+      sub_1B68930(Item, v27);
     }
     if ( !v24 )
       goto LABEL_63;
@@ -376,7 +376,7 @@ LABEL_39:
           v59->fields.messageLabel = v65;
           p_messageLabel = &v59->fields.messageLabel;
           v79 = v66;
-          sub_1B649A4((ServantStatusBattleListViewItem_o *)&v59->fields.messageLabel, (int32_t)v65, v28, v29);
+          sub_1B68678((ServantStatusBattleListViewItem_o *)&v59->fields.messageLabel, (int32_t)v65, v28, v29);
           v68 = 0;
           break;
         default:
@@ -384,7 +384,7 @@ LABEL_39:
       }
       do
       {
-        v69 = (System_Text_StringBuilder_o *)sub_1B64C4C(System_Text_StringBuilder_TypeInfo);
+        v69 = (System_Text_StringBuilder_o *)sub_1B68920(System_Text_StringBuilder_TypeInfo);
         System_Text_StringBuilder___ctor(v69, 0LL);
         if ( !v64 )
           goto LABEL_63;
@@ -394,7 +394,7 @@ LABEL_39:
         Item = System_Collections_Generic_List_object___get_Item(
                  v24,
                  v68,
-                 (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_GiftEntity__get_Item__);
+                 (const MethodInfo_34BBFA8 *)Method_System_Collections_Generic_List_GiftEntity__get_Item__);
         if ( !v67 )
           goto LABEL_63;
         if ( v68 >= v67->max_length )
@@ -403,13 +403,13 @@ LABEL_39:
           goto LABEL_63;
         v71 = v67->m_Items[v68];
         v72 = *((int *)Item + 7) <= 1 ? -1 : *((_DWORD *)Item + 7);
-        ItemIconComponent__SetGift_37834024(v70, *((_DWORD *)Item + 5), *((_DWORD *)Item + 6), v72, 0, 0LL);
+        ItemIconComponent__SetGift_37891280(v70, *((_DWORD *)Item + 5), *((_DWORD *)Item + 6), v72, 0, 0LL);
         if ( !v25 )
           goto LABEL_63;
         Item = System_Collections_Generic_List_object___get_Item(
                  v25,
                  v68,
-                 (const MethodInfo_34AFCF8 *)Method_System_Collections_Generic_List_string__get_Item__);
+                 (const MethodInfo_34BBFA8 *)Method_System_Collections_Generic_List_string__get_Item__);
         if ( !v71 )
           goto LABEL_63;
         UILabel__set_text(v71, (System_String_o *)Item, 0LL);
@@ -435,7 +435,7 @@ LABEL_39:
         goto LABEL_63;
       UILabel__set_text(v75, (System_String_o *)Item, 0LL);
       v81->fields.closeAction = action;
-      sub_1B649A4((ServantStatusBattleListViewItem_o *)&v81->fields.closeAction, (int32_t)action, v76, v77);
+      sub_1B68678((ServantStatusBattleListViewItem_o *)&v81->fields.closeAction, (int32_t)action, v76, v77);
     }
   }
   else

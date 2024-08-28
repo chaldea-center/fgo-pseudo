@@ -5,7 +5,7 @@ void __fastcall WarBoardAPIContinueRequestTask___ctor(
         bool onStartBeginRequest,
         const MethodInfo *method)
 {
-  WarBoardAPIRequestTask___ctor_35379452((WarBoardAPIRequestTask_o *)this, resultCallback, onStartBeginRequest, 0LL);
+  WarBoardAPIRequestTask___ctor_35432612((WarBoardAPIRequestTask_o *)this, resultCallback, onStartBeginRequest, 0LL);
   this->fields.consumeType = consume;
 }
 
@@ -24,15 +24,15 @@ void __fastcall WarBoardAPIContinueRequestTask__SetRequest(
   int32_t v10; // w3
   int32_t id; // w0
 
-  if ( (byte_49FCA2A & 1) == 0 )
+  if ( (byte_4A06B52 & 1) == 0 )
   {
-    sub_1B64A00(&Method_NetworkManager_getRequest_WarBoardContinueRequest___, method);
-    sub_1B64A00(&NetworkManager_TypeInfo, v3);
-    sub_1B64A00(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
-    byte_49FCA2A = 1;
+    sub_1B686D4(&Method_NetworkManager_getRequest_WarBoardContinueRequest___, method);
+    sub_1B686D4(&NetworkManager_TypeInfo, v3);
+    sub_1B686D4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
+    byte_4A06B52 = 1;
   }
   WarBoardAPIRequestTask__SetRequest((WarBoardAPIRequestTask_o *)this, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36EE930 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_36F769C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
   monitor = (WarBoardData_o *)Instance[27].monitor;
@@ -40,7 +40,7 @@ void __fastcall WarBoardAPIContinueRequestTask__SetRequest(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = NetworkManager__getRequest_object_(
                0LL,
-               (const MethodInfo_2EBD2C4 *)Method_NetworkManager_getRequest_WarBoardContinueRequest___);
+               (const MethodInfo_2ECB448 *)Method_NetworkManager_getRequest_WarBoardContinueRequest___);
   if ( !Instance )
     goto LABEL_11;
   v8 = (WarBoardContinueRequest_o *)Instance;
@@ -54,9 +54,9 @@ void __fastcall WarBoardAPIContinueRequestTask__SetRequest(
       goto LABEL_10;
     }
 LABEL_11:
-    sub_1B64C5C(Instance, v6);
+    sub_1B68930(Instance, v6);
   }
 LABEL_10:
   this->fields.request = (struct RequestBase_o *)v8;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields.request, (int32_t)v8, v9, v10);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields.request, (int32_t)v8, v9, v10);
 }

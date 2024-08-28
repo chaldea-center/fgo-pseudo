@@ -14,32 +14,32 @@ void __fastcall SelectedUserSvtCoin___ctor(
   __int64 v14; // x0
   __int64 v15; // x1
 
-  if ( (byte_4A02003 & 1) == 0 )
+  if ( (byte_4A0C15D & 1) == 0 )
   {
-    sub_1B64A00(&CoinRoomCoinIconItem_TypeInfo, iconObject);
-    byte_4A02003 = 1;
+    sub_1B686D4(&CoinRoomCoinIconItem_TypeInfo, iconObject);
+    byte_4A0C15D = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !iconObject )
 LABEL_9:
-    sub_1B64C5C(v7, v8);
+    sub_1B68930(v7, v8);
   linkItem = iconObject->fields.linkItem;
   if ( !linkItem )
   {
     this->fields.iconObject = iconObject;
-    sub_1B649A4((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)iconObject, v9, v10);
-    sub_1B64C5C(v14, v15);
+    sub_1B68678((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)iconObject, v9, v10);
+    sub_1B68930(v14, v15);
   }
   methodPtr_low = LOBYTE(CoinRoomCoinIconItem_TypeInfo->vtable._0_Equals.methodPtr);
   if ( LOBYTE(linkItem->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
     || (CoinRoomCoinIconItem_c *)linkItem->klass->_2.typeHierarchy[methodPtr_low - 1] != CoinRoomCoinIconItem_TypeInfo )
   {
-    sub_1B64F1C(iconObject->fields.linkItem);
+    sub_1B68BF0(iconObject->fields.linkItem);
     goto LABEL_9;
   }
   this->fields.iconObject = iconObject;
   p_fields = &this->fields;
-  sub_1B649A4((ServantStatusBattleListViewItem_o *)p_fields, (int32_t)iconObject, v9, v10);
+  sub_1B68678((ServantStatusBattleListViewItem_o *)p_fields, (int32_t)iconObject, v9, v10);
   p_fields->_itemId_k__BackingField = HIDWORD(linkItem[1].klass);
   p_fields->_num_k__BackingField = num;
 }

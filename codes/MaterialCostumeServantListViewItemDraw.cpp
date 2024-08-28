@@ -17,10 +17,10 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetButtonState(
   struct UICommonButton_o *v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_49FA2D6 & 1) == 0 )
+  if ( (byte_4A043C0 & 1) == 0 )
   {
-    sub_1B64A00(&UnityEngine_Object_TypeInfo, isEnable);
-    byte_49FA2D6 = 1;
+    sub_1B686D4(&UnityEngine_Object_TypeInfo, isEnable);
+    byte_4A043C0 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -35,7 +35,7 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetButtonState(
             v7->klass->vtable._6_OnInit.methodPtr),
           (v7 = this->fields.baseButton) == 0LL) )
     {
-      sub_1B64C5C(v7, v6);
+      sub_1B68930(v7, v6);
     }
     if ( isEnable )
       v8 = 0LL;
@@ -78,20 +78,20 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetItem(
   UILabel_o *maskLabel; // x20
   __int64 *v16; // x8
 
-  if ( (byte_49FA2D5 & 1) == 0 )
+  if ( (byte_4A043BF & 1) == 0 )
   {
-    sub_1B64A00(&LocalizationManager_TypeInfo, item);
-    sub_1B64A00(&StringLiteral_1/*""*/, v7);
-    sub_1B64A00(&StringLiteral_8514/*"MATERIAL_FIND_SERVANT"*/, v8);
-    sub_1B64A00(&StringLiteral_8513/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/, v9);
-    byte_49FA2D5 = 1;
+    sub_1B686D4(&LocalizationManager_TypeInfo, item);
+    sub_1B686D4(&StringLiteral_1/*""*/, v7);
+    sub_1B686D4(&StringLiteral_8516/*"MATERIAL_FIND_SERVANT"*/, v8);
+    sub_1B686D4(&StringLiteral_8515/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/, v9);
+    byte_4A043BF = 1;
   }
   if ( item && mode )
   {
     servantFaceIcon = this->fields.servantFaceIcon;
     if ( !servantFaceIcon )
       goto LABEL_33;
-    ServantFaceIconComponent__Set_37913708(
+    ServantFaceIconComponent__Set_37970964(
       servantFaceIcon,
       item->fields._userSvtCollectionEntity_k__BackingField,
       item->fields._svtCostumeEntity_k__BackingField,
@@ -121,7 +121,7 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetItem(
       maskLabel = this->fields.maskLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v16 = &StringLiteral_8514/*"MATERIAL_FIND_SERVANT"*/;
+      v16 = &StringLiteral_8516/*"MATERIAL_FIND_SERVANT"*/;
     }
     else
     {
@@ -166,7 +166,7 @@ LABEL_13:
       maskLabel = this->fields.maskLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v16 = &StringLiteral_8513/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/;
+      v16 = &StringLiteral_8515/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/;
     }
     servantFaceIcon = (ServantFaceIconComponent_o *)LocalizationManager__Get((System_String_o *)*v16, 0LL);
     if ( maskLabel )
@@ -180,6 +180,6 @@ LABEL_13:
       }
     }
 LABEL_33:
-    sub_1B64C5C(servantFaceIcon, item);
+    sub_1B68930(servantFaceIcon, item);
   }
 }
